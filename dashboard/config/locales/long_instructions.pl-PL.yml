@@ -447,6 +447,10 @@ pl:
         bridget\".  Zawiera ona cały kod potrzebny do przekroczenia rzeki! \r\n \r\nUmieść
         zielony bloczek dwukrotnie w polu roboczym, aby naprawić ścieżkę, by doprowadzić
         {currentPlayerName} do pochodni z czerwonego kamienia [redstone_torch]."
+      Function intro Ryan_2019: "W Twoim polu roboczym znajduje się funkcja o nazwie
+        \"build bridget\".  Zawiera ona cały kod potrzebny do przekroczenia rzeki!
+        \r\n \r\nUmieść zielony bloczek dwukrotnie w polu roboczym, aby naprawić ścieżkę,
+        by doprowadzić {currentPlayerName} do pochodni z czerwonego kamienia [redstone_torch]."
       K-1 Bee Loops 2: Użyj pętli "powtórz", aby przesunąć się a później zebrać nektar
         i zrobić miód!
       K-1 Bee Loops 3: Użyj trzech pętli "powtórz", aby zebrać nektar i zrobić miód!
@@ -482,10 +486,19 @@ pl:
         roboczym, aby przenieść Agenta na płytę naciskową [PressurePlate_Up], a następnie
         naciśnij przycisk \"Uruchom\", użyj klawiszy strzałek i wyjdź z domu, aby
         zebrać skrzynię [chest]."
+      MC_HOC_2017_01_RETRY_2019: "Drzwi są zamknięte, ale Agent jest, by Ci pomóc!
+        \r \r Przenieś blok \"idź do przodu\" poniżej bloku \"po uruchomieniu\" w
+        obszarze roboczym, aby przenieść Agenta na płytę naciskową [PressurePlate_Up],
+        a następnie naciśnij przycisk \"Uruchom\", użyj klawiszy strzałek i wyjdź
+        z domu, aby zebrać skrzynię [chest]."
       MC_HOC_2017_02: Gracz musi dostać się do Tajemnego Zagajnika.  Pomóż Agentowi
         otworzyć bramę pisząc kod, dzięki któremu dotrze do płyty naciskowej.
       MC_HOC_2017_02_Cole: "{currentPlayerName} wyrusza na spotkanie z przygodą! Możesz
         w tym pomóc – trzeba zdobyć mapę [map_empty] znajdującą się za zamkniętymi
+        drzwiami po prawej. \r\n \r\nUtwórz kod w polu roboczym, aby doprowadzić Agenta
+        do płyty naciskowej [PressurePlate_Up] tak, aby {currentPlayerName} mógł przejść. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} wyrusza na spotkanie z przygodą!
+        Możesz w tym pomóc – trzeba zdobyć mapę [map_empty] znajdującą się za zamkniętymi
         drzwiami po prawej. \r\n \r\nUtwórz kod w polu roboczym, aby doprowadzić Agenta
         do płyty naciskowej [PressurePlate_Up] tak, aby {currentPlayerName} mógł przejść. "
       MC_HOC_2017_02_Kiki: "Gracz wyrusza na spotkanie przygody, ale najpierw musi
@@ -499,6 +512,9 @@ pl:
       MC_HOC_2017_03_Cole: "{currentPlayerName} kontynuuje podróż i potrzebuje jeszcze
         kompasu [compass], aby przygotować się do podróży.  \r\n   \r\nZakoduj Agenta,
         aby otworzył bramę. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} kontynuuje podróż i potrzebuje
+        jeszcze kompasu [compass], aby przygotować się do podróży.  \r\n   \r\nZakoduj
+        Agenta, aby otworzył bramę. "
       MC_HOC_2017_03_Kiki: "Przygoda gracza zaczyna się w Tajemnym Zagajniku za zamkniętymi
         drzwiami!  \r\n\r\n\r\nPomóż Agentowi je otworzyć: napisz dla niego kod, aby
         dotarł do płyty naciskowej."
@@ -510,9 +526,14 @@ pl:
         dwie pierwsze płyty naciskowe."
       MC_HOC_2017_04POINT5_RYAN: "Udało Ci się! \r\n\r\nTeraz przeprowadź {currentPlayerName}
         bezpiecznie przez labirynt, aby zdobył siekierę [diamond_axe]"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Udało Ci się! \r\n\r\nTeraz przeprowadź {currentPlayerName}
+        bezpiecznie przez labirynt, aby zdobył siekierę [diamond_axe]"
       MC_HOC_2017_04_Cole: "Agent może przechodzić przez wodę!  \r\n \r\nUżyj pętli
         \"powtórz\", aby rozwiązać tę łamigłówkę i pomóż {currentPlayerName} dostać
         się do wiadra [bucket_empty] schowanego za drzwiami. "
+      MC_HOC_2017_04_Cole_2019: "Agent może przechodzić przez wodę!  \r\n \r\nUżyj
+        pętli \"powtórz\", aby rozwiązać tę łamigłówkę i pomóż {currentPlayerName}
+        dostać się do wiadra [bucket_empty] schowanego za drzwiami. "
       MC_HOC_2017_04_Kiki: "Wejście do Tajemnego Zagajnika prowadzi do tej pięknej
         Oazy!  Aby przejść ten poziom, gracza musi dostać się na pomarańczowy kwadrat
         w altance.  \r\n\r\nUżyj pętli \"powtórz\", aby pomóc Agentowi dostać się
@@ -524,6 +545,9 @@ pl:
       MC_HOC_2017_05_Cole: "Ojej, nie ma mostu! \r\n\r\nZakoduj Agenta, aby go odbudował
         używając bloku \"umieść\" tak, że {currentPlayerName} może dostać się do łopaty
         [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "Ojej, nie ma mostu! \r\n\r\nZakoduj Agenta, aby go
+        odbudował używając bloku \"umieść\" tak, że {currentPlayerName} może dostać
+        się do łopaty [diamond_shovel]."
       MC_HOC_2017_05_Josh: "Ojej, nie ma mostu! \r\n\r\nPomóż Agentowi odbudować most,
         aby gracz mógł dostać się do łopaty."
       MC_HOC_2017_05_Kiki: "Pora, by gracz opuścił Tajemny Zagajnik i ruszyć w dalszą
@@ -532,12 +556,17 @@ pl:
       MC_HOC_2017_06_Cole: "Kolejna rzeka, tym razem znacznie szersza! \r\n \r\nPopraw
         ten kod, aby pomóc Agentowi zbudować most tak, że {currentPlayerName} będzie
         mógł dostać się do kilofa [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2019: "Kolejna rzeka, tym razem znacznie szersza! \r\n \r\nPopraw
+        ten kod, aby pomóc Agentowi zbudować most tak, że {currentPlayerName} będzie
+        mógł dostać się do kilofa [diamond_pickaxe]. "
       MC_HOC_2017_06_Josh: "Kolejna rzeka, tym razem znacznie szersza!  \r\n\r\nPopraw
         ten kod, aby pomóc Agentowi przerzucić most przez rzekę."
       MC_HOC_2017_06_Kiki: "Kolejna rzeka, tym razem znacznie szersza!  \r\n\r\nPopraw
         ten kod, aby pomóc Agentowi zbudować most przez rzekę."
       MC_HOC_2017_07_Cole: "Drogę skuwa lód!  \r\n \r\nFunkcja \"clear path\" pomoże
         Ci usunąć lód i dostać się {currentPlayerName} do Minecart [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2019: "Drogę skuwa lód!  \r\n \r\nFunkcja \"clear path\"
+        pomoże Ci usunąć lód i dostać się {currentPlayerName} do Minecart [minecart_normal]! "
       MC_HOC_2017_07_Kiki: "Pętle nie są jedynym sposobem powtórzenia kodu!  \r\n\r\nDajemy
         Ci tutaj funkcję \"clear cacti\", która za każdym użyciem usuwa trzy kaktusy.
         Użyj dwa takie bloki, aby oczyścić ścieżkę prowadzącą do pomarańczowego kwadratu. "
@@ -569,6 +598,10 @@ pl:
       MC_HOC_2017_10_RETRY: "Czy widzisz, czym się różnią te dwie funkcje w polu roboczym?
         \r\n \r\nUżyj ich wraz z innym kodem ze skrzynki z narzędziami, aby oczyścić
         drogę dla Minecart a następnie zabrać krzesiwo [flint_and_steel]. \r\n "
+      MC_HOC_2017_10_RETRY_2019: "Czy widzisz, czym się różnią te dwie funkcje w polu
+        roboczym? \r\n \r\nUżyj ich wraz z innym kodem ze skrzynki z narzędziami,
+        aby oczyścić drogę dla Minecart a następnie zabrać krzesiwo [flint_and_steel].
+        \r\n "
       MC_HOC_2017_10_RYAN: Spróbuj utworzyć od podstaw takie funkcje, które ułatwią
         Agentowi ukończenie wagonika i pomogą graczowi dostać się na pomarańczowy
         kwadrat.
@@ -585,6 +618,8 @@ pl:
         płyty naciskowe."
       MC_HOC_2017_Ali: 'Spójrz na funkcje poniżej.  Jak je użyjesz, aby uniknąć Ghasts
         i pomóc {currentPlayerName}, by bezpiecznie dotarł do Zaklętej Księgi  [book_enchanted]?  '
+      MC_HOC_2017_Ali_2019: 'Spójrz na funkcje poniżej.  Jak je użyjesz, aby uniknąć
+        Ghasts i pomóc {currentPlayerName}, by bezpiecznie dotarł do Zaklętej Księgi  [book_enchanted]?  '
       MC_HOC_2017_FP10x10: 'Czas na zabawę: Czy podejmiesz wyzwanie, by zebrać wszystkie
         diamenty znajdujące się na tym poziomie?
 
@@ -595,6 +630,8 @@ pl:
 '
       MC_HOC_2017_FP20x20: 'Czas na zabawę: Użyj kodu Agenta, aby ułatwić sobie eksplorację
         tego świata.'
+      MC_HOC_2017_FP20x20_2019: 'Czas na zabawę: Użyj kodu Agenta, aby ułatwić sobie
+        eksplorację tego świata.'
       MC_HOC_2017_Ryan_03: "Czy wiesz, że można umieścić więcej niż jeden fragment
         kodu w pętli?  \r\n\r\nUżyj pętli \"powtórz\", aby pomóc Agentowi przerzucić
         most przez rzekę umieszczając bloki w rzece."
@@ -747,6 +784,9 @@ pl:
       courseC_artist_prog_challenge1_2018: Narysuj pomieszczenia dla każdego ze zwierząt.
         Istnieje wiele sposobów, aby rozwiązać tą zagadkę, więc zabaw się! Każdy kwadrat
         ma bok o długości 100 pikseli.
+      courseC_artist_prog_challenge1_2019: Narysuj pomieszczenia dla każdego ze zwierząt.
+        Istnieje wiele sposobów, aby rozwiązać tą zagadkę, więc zabaw się! Każdy kwadrat
+        ma bok o długości 100 pikseli.
       courseC_artist_prog_challenge2: "*Pomóż mi narysować żółte linie na tej drodze!*"
       courseC_collector_prog9: '*"Zbierzmy cały skarb!"*'
       courseC_collector_prog9_2018: '*"Zbierzmy cały skarb!"*'
@@ -810,15 +850,21 @@ pl:
         jak najmniejszej liczby bloków.
       courseD_bee_nestedLoops2_2018: Tym raze, pomóż pszczołom zebrać cały nektar
         używając jak najmniejszej liczby bloków.
+      courseD_bee_nestedLoops2_2019: Tym raze, pomóż pszczołom zebrać cały nektar
+        używając jak najmniejszej liczby bloków.
       courseD_bee_nestedLoops2_predict1: Tym raze, pomóż pszczołom zebrać cały nektar
         używając jak najmniejszej liczby bloków.
       courseD_bee_nestedLoops2_predict1_2018: Tym raze, pomóż pszczołom zebrać cały
+        nektar używając jak najmniejszej liczby bloków.
+      courseD_bee_nestedLoops2_predict1_2019: Tym raze, pomóż pszczołom zebrać cały
         nektar używając jak najmniejszej liczby bloków.
       courseD_bee_nestedLoops5: "Zbierz cały nektar z każdego kwiatka i zrób miód
         na plastrze miodu. \r \r Użyj zagnieżdżonej pętli. "
       courseD_bee_nestedLoops8: "Zbierz cały nektar z każdego kwiatka i zrób miód
         na plastrze miodu. \r \r Użyj zagnieżdżonej pętli. "
       courseD_bee_nestedLoops8_2018: "Zbierz cały nektar z każdego kwiatka i zrób
+        miód na plastrze miodu. \r \r Użyj zagnieżdżonej pętli. "
+      courseD_bee_nestedLoops8_2019: "Zbierz cały nektar z każdego kwiatka i zrób
         miód na plastrze miodu. \r \r Użyj zagnieżdżonej pętli. "
       courseD_bounce_events1: Osiągnij flagę! Dołącz blok do bloku "kiedy strzałka
         w lewo" i naciśnij "Uruchom", aby przesunąć gracza ku fladze.
@@ -856,6 +902,9 @@ pl:
       courseD_maze_nestedLoops4_2018: "Doprowadź mnie do słonecznika używając możliwie
         najmniejszej liczby bloków! \r \r Spróbuj użyć pętli \"powtórz\" wewnątrz
         innej pętli, aby zmniejszyć liczbę potrzebnych bloków."
+      courseD_maze_nestedLoops4_2019: "Doprowadź mnie do słonecznika używając możliwie
+        najmniejszej liczby bloków! \r \r Spróbuj użyć pętli \"powtórz\" wewnątrz
+        innej pętli, aby zmniejszyć liczbę potrzebnych bloków."
       courseD_maze_until_challenge1: Bez podpowiedzi, po prostu wyzwanie. Doprowadź
         zombie do słonecznika.
       courseD_maze_until_challenge1_2018: Bez podpowiedzi, po prostu wyzwanie. Doprowadź
@@ -880,6 +929,8 @@ pl:
       courseF_bee_for_challenge2: Rozwiąż tę łamigłówkę używając jak najmniejszej
         liczby bloków.
       courseF_bee_for_challenge2_2018: Rozwiąż tę łamigłówkę używając jak najmniejszej
+        liczby bloków.
+      courseF_bee_for_challenge2_2019: Rozwiąż tę łamigłówkę używając jak najmniejszej
         liczby bloków.
       courseF_bee_functions4: "Czy wiedziałeś, że możesz wywołać funkcję wewnątrz
         innej funkcji? \r\n\r\nUżyj funkcji `check nectar or honey` wewnątrz nowej

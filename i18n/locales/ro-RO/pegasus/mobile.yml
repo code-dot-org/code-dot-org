@@ -411,7 +411,7 @@
   mc_gradelevel: "Varsta: peste 6 ani"
   mc_platformtext: "Browsere web moderne, smartphone-uri, tablete"
   mc_specs: "Mai multe limbi |B rowsere moderne si tablete | Varstele 6+"
-  minecraft_agent: 'Minecraft: Călătoria eroului'
+  minecraft_agent: "Minecraft: Călătoria eroului"
   minecraft_designer: "Minecraft Designer"
   minecraft_adventurer: "Minecraft Adventurer"
   minecraft_tutorials: "Tutoriale Hour of Code Minecraft"
@@ -663,7 +663,7 @@
   dashboard_sections_table_stage_extras: "Etapa extra"
   dashboard_sections_table_students: "Elevi"
   dashboard_sections_table_code: "Cod de Secţiune"
-  dashboard_sections_name: "Numele secţiunii"
+  dashboard_sections_name: 'Numele secţiunii'
   dashboard_sections_choose_secret: "Dacă dorești să oferi conturi elevilor tăi, selectează un tip secret de <b>cuvânt</b> sau <b>imagine</b> pentru acea secțiune."
   dashboard_sections_secret_word: "Un <b>cuvânt</b> îți permite să setezi un cuvânt secret pentru fiecare student."
   dashboard_sections_secret_picture: "O <b>imagine</b> îți permite să setezi o poză secretă pentru fiecare student, ideal în cazul elevilor mai mici, care nu pot încă să tasteze."
@@ -689,7 +689,7 @@
   dashboard_students_add_multiple: 'Tastează sau adaugă cu "paste" numele elevilor tăi, câte unul pe linie:'
   dashboard_students_new_google_classroom_section: "Pentru a adăuga elevi, utilizaţi <a href='http://classroom.google.com' target='_blank'>Clasa Google</a> şi apoi faceţi clic pe butonul <b>Sincronizare elevi din Clasa Google</b> de mai sus."
   dashboard_students_new_section: "Ai creat o nouă secţiune! Acum, adaugă elevii tăi utilizând butoanele <b>Adăugare elev</b> şi <b>Adăugare mai mulți elevi</b> de mai sus."
-  dashboard_students_name: "Nume"
+  dashboard_students_name: 'Nume'
   dashboard_students_progress: "Progres"
   dashboard_students_male: "De sex masculin"
   dashboard_students_female: "De sex feminin"
@@ -1463,6 +1463,7 @@
   hoc2018_creativity_create: "Crează"
   hoc2018_mc_page_title: "Tutoriale Hour of Code Minecraft"
   hoc2018_mc_details: "Mai multe limbi | Browsere moderne și tablete | Clasele 2+"
+  hoc2018_mc_hero_title: "Minecraft: Călătoria eroului"
   hoc2018_mc_designer_title: "Minecraft Designer"
   hoc2018_mc_designer_description: "Programeaza animale şi alte creaturi Minecraft în propria ta versiune a jocului."
   hoc2018_mc_adventurer_title: "Minecraft Adventurer"
@@ -1489,3 +1490,8 @@
   hoc2018_mc_video_title_my_name_is_aracely: "Numele meu este Aracely"
   hoc2018_mc_homepage_join_us: "Alatura-ni-te"
   hoc2018_mc_homepage_try_it: "Încearcă"
+  hoc2018_dance_party_button: "Începe"
+  hoc2018_dance_teacher_resources_tile1_button: "Plan de lecţie"
+  hoc2018_dance_teacher_resources_tile2_button: "Activitate fără Calculator"
+  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "Află mai mult"
+  hoc2018_dance_amazon_apply_now_button_text: "Înscrieți-vă acum"

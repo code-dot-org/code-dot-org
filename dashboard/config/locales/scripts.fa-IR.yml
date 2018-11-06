@@ -1478,3 +1478,13 @@ fa:
           stages:
             Artist:
               name: هنرمند
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: ساختن بنیان
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+            Envelope Variables:
+              name: متغیرهای پاکت
+            For Loop Fun:
+              name: برای تفریح حلقه ای

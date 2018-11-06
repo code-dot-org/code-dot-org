@@ -1455,3 +1455,12 @@ ja:
           stages:
             Artist:
               name: アーティスト
+        coursef-2019:
+          description_short: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
+          stages:
+            Building a Foundation:
+              name: ピラミッドをたてよう
+            Loops in Artist:
+              name: アーティストくりかえし
+            Conditionals with Cards:
+              name: カードと条件

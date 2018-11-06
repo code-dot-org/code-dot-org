@@ -270,6 +270,8 @@ hr:
         Ova kuća treba krov! Nacrtaj trokut.  Savjet: sve tri strane su iste dužine.
       courseC_artist_prog5_2018: |-
         Ova kuća treba krov! Nacrtaj trokut.  Savjet: sve tri strane su iste dužine.
+      courseC_artist_prog5_2019: |-
+        Ova kuća treba krov! Nacrtaj trokut.  Savjet: sve tri strane su iste dužine.
       courseD_bee_nestedLoops6_2018: Odvedi me do suncokreta!
       courseD_bounce_events10: Sada je gol na vrhu. Dodaj blokove "dodaj bod" i "dodaj bod protivniku" na blokove "kada je lopta u golu" i "kada lopta promaši reket" da bi napravio igru. Isprobaj koliko bodova možeš skupiti prije nego tvoj protivnik skupi dva boda.
       courseD_bounce_events11: Sada možeš blokove prikačiti na blok "pri pokretanju". Trebaš dodati novi blok "ubaci novu loptu" na više mjesta. Također, pokušaj promijeniti scenu ili brzinu reketa i lopte te isprobaj koliko bodova možeš skupiti prije nego tvoj protivnik skupi dva boda.
@@ -284,8 +286,10 @@ hr:
       courseD_bounce_events7: Dodaj blokove na svaki "kada" blok. Odbijaj lopticu dok god ne pogodi cilj.
       courseD_maze_nestedLoops4: 'Odvedi me do suncokreta!'
       courseD_maze_nestedLoops4_2018: 'Odvedi me do suncokreta!'
+      courseD_maze_nestedLoops4_2019: 'Odvedi me do suncokreta!'
       courseD_maze_nestedLoops6: Odvedi me do suncokreta!
       courseD_maze_nestedLoops6_2018: Odvedi me do suncokreta!
+      courseD_maze_nestedLoops6_2019: Odvedi me do suncokreta!
       courseE_artist_functions1: "Pozdrav. Ja zombi umjetnik. Ja voljeti crtati! Pomozi mi nacrtati kvadratne naočale.  Savjet: most između čaše je kraći od kvadrata duljine 25 piksela."
       courseE_artist_functions1_2018: "Pozdrav. Ja zombi umjetnik. Ja voljeti crtati! Pomozi mi nacrtati kvadratne naočale.  Savjet: most između čaše je kraći od kvadrata duljine 25 piksela."
       flappy_1: Bloku "na klik" prikači odgovarajući blok pa klikni na "Pokreni". Klikni ili dodirni ekran da pomakneš Flappyja prema meti.

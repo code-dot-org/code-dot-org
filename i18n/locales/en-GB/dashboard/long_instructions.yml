@@ -67,6 +67,7 @@ en-GB:
       2-3 Maze Loops 18: "Get me to the sunflower using the fewest blocks\npossible!  \\r\n\\r\nTry using one `repeat` loop inside of another to cut down\non the amount of code you need."
       Artist Autorun Test: "Now, put the function inside of a loop\nto draw these three squares."
       Function intro Ryan: "A **function** named `build bridge` is in your workspace.  All the code you need to cross the river is built in! \\r\n \\r\nSnap the small, green block twice into your workspace to fix the path and get {currentPlayerName} to the Redstone Torch [redstone_torch]."
+      Function intro Ryan_2019: "A **function** named `build bridge` is in your workspace.  All the code you need to cross the river is built in! \\r\n \\r\nSnap the small, green block twice into your workspace to fix the path and get {currentPlayerName} to the Redstone Torch [redstone_torch]."
       HOC 2018 Level_4: Let's feed the cod to the **dolphin** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png). Use a repeat block to get across the ocean quicker.
       HOC 2018 Level_6: It looks freezing out there! Catch a **salmon** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) on your way to the underwater ruins.
       MC Agent Freeplay: "**Freeplay:** Now it's up to you! Use the Agent's code to help you explore this world."
@@ -74,16 +75,23 @@ en-GB:
       MC_HOC_2017_01: "Click \"Run\" to move the player using the **arrow keys**.  \\r\n\\r\nTo pass this level, you will need to get to the door and open it (using the **space bar**) so you can get to the orange square inside."
       MC_HOC_2017_01_Cole: You need to collect all the tools on this journey. Move around using the **arrow keys**, and get to the chest on the path to win
       MC_HOC_2017_01_Kiki: 'To play this level, click the orange "Run" button beneath the play space, then move the player around using the **arrow keys**.  '
-      MC_HOC_2017_01_RETRY: |2
+      MC_HOC_2017_01_RETRY: |-
+        {currentPlayerName} is trapped inside the house, but the Agent is here to help!   \r
+         \r
+           \r
+        Snap a `move forwards` block onto the `when run` block in the workspace to get the Agent to the pressure plate [PressurePlate_Up], then press "Run" and use the arrow keys to move {currentPlayerName} out of the house to collect the **chest** [chest].  
+      MC_HOC_2017_01_RETRY_2019: |-
         {currentPlayerName} is trapped inside the house, but the Agent is here to help!   \r
          \r
            \r
         Snap a `move forwards` block onto the `when run` block in the workspace to get the Agent to the pressure plate [PressurePlate_Up], then press "Run" and use the arrow keys to move {currentPlayerName} out of the house to collect the **chest** [chest].  
       MC_HOC_2017_02: The player needs to get into that secret grove.  Help The Agent to open the gate by writing code to get him to the pressure plate.
       MC_HOC_2017_02_Cole: "{currentPlayerName} is off on an adventure! To help, get the **map** [map_empty] behind the locked door on the right. \\r\n \\r\nSnap the code into the workspace to move the Agent to the pressure plate [PressurePlate_Up] so that {currentPlayerName} can get through. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} is off on an adventure! To help, get the **map** [map_empty] behind the locked door on the right. \\r\n \\r\nSnap the code into the workspace to move the Agent to the pressure plate [PressurePlate_Up] so that {currentPlayerName} can get through. "
       MC_HOC_2017_02_Kiki: "The player is going on an adventure, but first they have to get the torch that is hidden on the other side of that locked door. \\r\n\\r\nProgram the Agent to move forwards twice to follow the white path and get to the pressure plate so he can open the door for the player."
       MC_HOC_2017_02_Will: "To finish this level, the player needs to get to the orange square inside of the Secret Grove, which is behind the locked door.  \\r\n\\r\nThe code in the workspace will make the Agent move forwards twice to get to the pressure plate and open the door for Alex or Steve."
       MC_HOC_2017_03_Cole: "{currentPlayerName} continues on the adventure and needs the **compass** [compass] to prepare for the trip.  \\r\n   \\r\nCode the Agent to open the gate. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} continues on the adventure and needs the **compass** [compass] to prepare for the trip.  \\r\n   \\r\nCode the Agent to open the gate. "
       MC_HOC_2017_03_Kiki: "The player's adventure will begin behind the locked door, in the Secret Grove!  \\r\n\\r\n\\r\nHelp The Agent to open the door by writing code to get him to the pressure plate."
       MC_HOC_2017_04: Change the loop from the last puzzle to help the Agent make a path over the wider part of this river.
       MC_HOC_2017_04POINT5_Cole: |-
@@ -92,7 +100,9 @@ en-GB:
         
         Help The Agent clear the path by finding a simple pattern and using loops to cross the first two pressure plates.
       MC_HOC_2017_04POINT5_RYAN: "You made it across! \\r\n\\r\nNow, get {currentPlayerName} safely through the maze to collect the **axe** [diamond_axe]\\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "You made it across! \\r\n\\r\nNow, get {currentPlayerName} safely through the maze to collect the **axe** [diamond_axe]\\r\n"
       MC_HOC_2017_04_Cole: "The Agent can move across water!  \\r\n \\r\nUse a `repeat` loop to solve this puzzle and help {currentPlayerName} get to the **bucket** [bucket_empty] behind the door. "
+      MC_HOC_2017_04_Cole_2019: "The Agent can move across water!  \\r\n \\r\nUse a `repeat` loop to solve this puzzle and help {currentPlayerName} get to the **bucket** [bucket_empty] behind the door. "
       MC_HOC_2017_04_Kiki: "The entry to the Secret Grove led to this beautiful Oasis!  To pass this level, the player needs to get to the orange square in the cabana.  \\r\n\\r\nUse a `repeat` loop to help the Agent get all the way up to the pressure plate, which opens the cabana door."
       MC_HOC_2017_05: |-
         Loops are not always helpful. 
@@ -100,6 +110,7 @@ en-GB:
         
         These cacti are not growing in an obvious pattern, so a loop would not clear them correctly.  Instead, we've given you a function called `destroy and move` that will do the hard work for you each time the Agent gets to an obstacle.
       MC_HOC_2017_05_Cole: "Oh no, the bridge is out! \\r\n\\r\nCode the Agent to rebuild the bridge using the `place` block so that {currentPlayerName} can get to the **shovel** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "Oh no, the bridge is out! \\r\n\\r\nCode the Agent to rebuild the bridge using the `place` block so that {currentPlayerName} can get to the **shovel** [diamond_shovel]."
       MC_HOC_2017_05_Josh: |-
         Oh no, the bridge is out! 
         
@@ -107,9 +118,11 @@ en-GB:
         Help the Agent rebuild the bridge so that the player can get to the **shovel**.
       MC_HOC_2017_05_Kiki: "It's time for the player to leave the Secret Grove and continue the adventure, but the bridge is out! \\r\n\\r\nHelp the Agent rebuild the bridge, then move to the wooden plank so that the player can get to the orange square."
       MC_HOC_2017_06_Cole: "Another river, but this one is much wider! \\r\n \\r\nFix this code to help the Agent build a bridge so that {currentPlayerName} can get to the **pickaxe** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2019: "Another river, but this one is much wider! \\r\n \\r\nFix this code to help the Agent build a bridge so that {currentPlayerName} can get to the **pickaxe** [diamond_pickaxe]. "
       MC_HOC_2017_06_Josh: "Another river, but this one is much wider!  \\r\n\\r\nFix this code to help the Agent build a bridge across this river."
       MC_HOC_2017_06_Kiki: "Another river, but this one is much wider!  \\r\n\\r\nFix this code to help the Agent build a bridge across the water."
       MC_HOC_2017_07_Cole: "There's ice in the way!  \\r\n \\r\nThe `clear path` function can help you destroy the ice and get {currentPlayerName} to the minecart [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2019: "There's ice in the way!  \\r\n \\r\nThe `clear path` function can help you destroy the ice and get {currentPlayerName} to the minecart [minecart_normal]! "
       MC_HOC_2017_07_Kiki: "Loops are not the only way to repeat code!  \\r\n\\r\nHere, we've given you a function called `clear cacti` that will do the hard work of clearing three cacti every time you use it.  Use two `clear cacti` blocks to clear the path to the orange square. "
       MC_HOC_2017_07a_Kiki: Now, edit this loop to help the Agent clear a path to the orange square.
       MC_HOC_2017_08_Cole: "Now, instead of destroying before you move, you will need to place a block.  \\r\n\\r\nChange the provided function to work for the desert."
@@ -131,6 +144,7 @@ en-GB:
       MC_HOC_2017_10_Cole_old: Try building a function from the beginning that will make it easier for the Agent to finish this minecart and get the player to the orange square.
       MC_HOC_2017_10_Kiki: Try building a function from the beginning that will make it easier for the Agent to finish this minecart and get the player to the orange square.
       MC_HOC_2017_10_RETRY: "Can you spot the difference between the two functions in your workspace? \\r\n \\r\nUse these functions with other code from the toolbox to clear a path for the minecart, then collect the **Flint and Steel** [flint_and_steel]. \\r\n "
+      MC_HOC_2017_10_RETRY_2019: "Can you spot the difference between the two functions in your workspace? \\r\n \\r\nUse these functions with other code from the toolbox to clear a path for the minecart, then collect the **Flint and Steel** [flint_and_steel]. \\r\n "
       MC_HOC_2017_10_RYAN: Try building functions from the beginning that will make it easier for the Agent to finish this minecart and get the player to the orange square.
       MC_HOC_2017_10_RYAN2: Try building functions from the beginning that will make it easier for the Agent to finish this minecart and get the player to the orange square.
       MC_HOC_2017_11_Kiki: Now it's up to you! See what you can create around this frozen lake.
@@ -141,9 +155,11 @@ en-GB:
         
         Help The Agent clear the path by finding a simple pattern and using loops to cross the first two pressure plates.
       MC_HOC_2017_Ali: 'Look at the functions below.  How can you use them to avoid the Ghasts and help {currentPlayerName} make it safely to the **Enchanted Book** [book_enchanted]?  '
+      MC_HOC_2017_Ali_2019: 'Look at the functions below.  How can you use them to avoid the Ghasts and help {currentPlayerName} make it safely to the **Enchanted Book** [book_enchanted]?  '
       MC_HOC_2017_FP10x10: "**Freeplay:** Now it's up to you! Can you challenge yourself to collect all of the diamonds in this level? "
       MC_HOC_2017_FP10x10_RE: "**Freeplay:** Now it's up to you! Can you challenge yourself to collect all of the diamonds in this level? "
       MC_HOC_2017_FP20x20: "**Freeplay:** Now it's up to you! Use the Agent's code to help you explore this world."
+      MC_HOC_2017_FP20x20_2019: "**Freeplay:** Now it's up to you! Use the Agent's code to help you explore this world."
       MC_HOC_2017_Ryan_03: "Did you know that you can put more than one piece of code into a loop?  \\r\n\\r\nUse a `repeat` loop to help the Agent build a bridge over the river by placing blocks in the water."
       MC_HOC_2017_Ryan_05: "Sometimes you need to knock down things that get in the way of your player.  \\r\nUse the `destroy` block to clear all of the cacti between the Agent and the pressure plate."
       MC_HOC_Kiki_02: Someone needs to be on the pressure plate before the side door will open.  Help the Agent get to the plate so the player can leave the house.

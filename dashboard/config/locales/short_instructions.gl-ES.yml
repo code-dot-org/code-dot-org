@@ -1350,7 +1350,7 @@ gl:
         aniñado dentro dun bucle  máis. Proba a  alterar os valores das\ntúas dúas
         variábeis para debuxar padróns interesantes.\r\n\r\nPara conseguir máis efecto,
         proba a xogar coas\n cores! Use cores aleatorias dentro dos bucles para ver
-        como isto muda o teu debuxo.\n"
+        como isto muda o teu debuxo."
       Course 4 Artist Vars 2: |-
         Ao revés de usar "avance por 150,"
         o bloque "mova" está referenciando agora unha variábel chamada "lonxitude." Podes definir "lonxitude" como 150 para debuxar este novo triángulo?
@@ -2529,6 +2529,8 @@ gl:
         todos os 3 lados teñen a mesma lonxitude.'
       courseC_artist_prog5_2018: 'Esta casa precisa dun tellado! Debuxa o triángulo.
         Pista: todos os 3 lados teñen a mesma lonxitude.'
+      courseC_artist_prog5_2019: 'Esta casa precisa dun tellado! Debuxa o triángulo.
+        Pista: todos os 3 lados teñen a mesma lonxitude.'
       courseC_maze_debugging10: |-
         Depura este nivel reorganizando e agregando
         bloques para me levar até o porco!
@@ -2581,6 +2583,8 @@ gl:
         en cada colmea. Usa un bucle aniñado. "
       courseD_bee_nestedLoops8_2018: "Recolle todo o néctar de cada flor\ne produce
         mel en cada colmea. Usa un bucle aniñado. "
+      courseD_bee_nestedLoops8_2019: "Recolle todo o néctar de cada flor\ne produce
+        mel en cada colmea. Usa un bucle aniñado. "
       courseD_bounce_events10: Agora hai un obxetivo na parte de cima. Conecte os
         bloques "marque un punto" e "marque un punto para o oponente" aos bloques
         "cando a bóla atinxir o obxetivo" e "cando a bóla non acertar a raqueta" para
@@ -2617,8 +2621,10 @@ gl:
         erro(s) para recoller todo o néctar e producir todo o mel.
       courseD_maze_nestedLoops4: Lévame até o xirasol!
       courseD_maze_nestedLoops4_2018: Lévame até o xirasol!
+      courseD_maze_nestedLoops4_2019: Lévame até o xirasol!
       courseD_maze_nestedLoops6: Lévame até o xirasol!
       courseD_maze_nestedLoops6_2018: Lévame até o xirasol!
+      courseD_maze_nestedLoops6_2019: Lévame até o xirasol!
       courseE_artist_functions1: |-
         Olá. Min artista zumbi. Min ama debuxar!
         Axúdame a debuxar os lentes cadrados. Pista: a tira entre as lentes é
@@ -2655,12 +2661,19 @@ gl:
       courseF_artist_for7_2018: |-
         Fai tres pequenas alteracións no
         código do último nivel para conseguilo!
+      courseF_artist_for7_2019: |-
+        Fai tres pequenas alteracións no
+        código do último nivel para conseguilo!
       courseF_artist_for_challenge1: Consegues descobrir como recrear este debuxo?
       courseF_artist_for_challenge1_2018: Consegues descobrir como recrear este debuxo?
+      courseF_artist_for_challenge1_2019: Consegues descobrir como recrear este debuxo?
       courseF_artist_for_challenge2: |-
         Consegues descobrir como recrear este debuxo
         cun único bucle?
       courseF_artist_for_challenge2_2018: |-
+        Consegues descobrir como recrear este debuxo
+        cun único bucle?
+      courseF_artist_for_challenge2_2019: |-
         Consegues descobrir como recrear este debuxo
         cun único bucle?
       courseF_bee_for8: "Conseguido! Cal debe ser o teu incremento\npara recoller
@@ -2669,10 +2682,16 @@ gl:
       courseF_bee_for8_2018: "Conseguido! Cal debe ser o teu incremento\npara recoller
         3, 6, 9, 12, 15 néctares?\r\nPista: canto precisas\nagregar a cada número
         para obter o número seguinte?"
+      courseF_bee_for8_2019: "Conseguido! Cal debe ser o teu incremento\npara recoller
+        3, 6, 9, 12, 15 néctares?\r\nPista: canto precisas\nagregar a cada número
+        para obter o número seguinte?"
       courseF_bee_for_challenge2: |-
         Resolve este desafío usando o menor número
         de bloques posíbel.
       courseF_bee_for_challenge2_2018: |-
+        Resolve este desafío usando o menor número
+        de bloques posíbel.
+      courseF_bee_for_challenge2_2019: |-
         Resolve este desafío usando o menor número
         de bloques posíbel.
       courseF_bee_for_challenge3: |-
@@ -3299,7 +3318,7 @@ gl:
         algoritmo\nestá aniñado dentro dun bucle  máis. Proba a  alterar os valores
         das\ntúas dúas variábeis para debuxar padróns interesantes.\r\n\r\nPara conseguir
         máis efecto, proba a xogar coas\n cores! Use cores aleatorias dentro dos bucles
-        para ver como isto muda o teu debuxo.\n"
+        para ver como isto muda o teu debuxo."
       grade5_artist_variables_freeplay15: "Queres botar unha segunda ollada ao debuxo
         de exemplo ou ás\nIndicacións? Clica aquí!\r\n\r\nNo caso contrario, crea
         un debuxo ti mesmo!"

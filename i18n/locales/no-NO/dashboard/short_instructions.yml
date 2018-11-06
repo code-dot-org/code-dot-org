@@ -764,6 +764,7 @@
       FoodFight: Dette er et eksempel på hva du kan lage i laben.
       FoodFight_2018: Dette er et eksempel på hva du kan lage i laben.
       Function intro Ryan: Bruk funksjonen `build bridge` to ganger for å lage en vei til redstonefakkelen.
+      Function intro Ryan_2019: Bruk funksjonen `build bridge` to ganger for å lage en vei til redstonefakkelen.
       Get To The Goal: Bygg hva enn du vil. Dette er et eksempel på et siffergjettingsspill!
       Guess The Number 2: Bygg hva enn du vil. Dette er et eksempel på et siffergjettingsspill!
       Guess The Number: Bygg hva enn du vil. Dette er et eksempel på et siffergjettingsspill!
@@ -783,6 +784,7 @@
       Inspirational Artwork: "Inspirasjon til fritt spill: Du har nå lært alt du trenger å vite for å lage et mønster som dette! Hvis dette bildet inspirerer deg, kan du prøve å lage noe lignende, ellers du kan skape noe helt eget. \\r \\r Vil du vite hvordan vårt inspirasjonsmønster ble laget? "
       InspirationalArtwork: Hvis dette bildet inspirerer deg kan du prøve å lage noe lignende. Ellers kan du prøve å lage noe helt selv.
       InspirationalArtwork_2018: Hvis dette bildet inspirerer deg kan du prøve å lage noe lignende. Ellers kan du prøve å lage noe helt selv.
+      InspirationalArtwork_2019: Hvis dette bildet inspirerer deg kan du prøve å lage noe lignende. Ellers kan du prøve å lage noe helt selv.
       K-1 Artist 1 Assessment 1: Tegn en kort linje oppover og en lang linje mot høyre!
       K-1 Artist Loops 1: Tegn denne linja ved å flytte øst fire ganger.
       K-1 Artist Loops 2: Kan du tegne samme linje ved å bruke en løkke?
@@ -929,25 +931,33 @@
       MC_HOC_2017_01_Cole: Du må samle alle verktøyene på denne reisen. Beveg deg ved å bruke **piltastene** og vinn ved å komme til skattekisten
       MC_HOC_2017_01_Kiki: Klikk på "Kjør" for å flytte spilleren til det oransje feltet inni huset.
       MC_HOC_2017_01_RETRY: 'Få agenten til trykkplaten, deretter klikk "kjør" og bruk piltastene for å bevege spilleren ut av huset for å komme til kisten. '
+      MC_HOC_2017_01_RETRY_2019: 'Få agenten til trykkplaten, deretter klikk "kjør" og bruk piltastene for å bevege spilleren ut av huset for å komme til kisten. '
       MC_HOC_2017_02: Få agenten til trykkplaten.
       MC_HOC_2017_02_Cole: 'Beveg agenten til trykkplaten slik at {currentPlayerName} kan komme til kartet. '
+      MC_HOC_2017_02_Cole_2019: 'Beveg agenten til trykkplaten slik at {currentPlayerName} kan komme til kartet. '
       MC_HOC_2017_02_Kiki: Få agenten til trykkplaten, deretter få spilleren til den oransje firkanten.
       MC_HOC_2017_02_Will: Få agenten til trykkplaten.
       MC_HOC_2017_03_Cole: 'Programmer agenten til å åpne porten. '
+      MC_HOC_2017_03_Cole_2019: 'Programmer agenten til å åpne porten. '
       MC_HOC_2017_03_Kiki: Få agenten til trykkplaten.
       MC_HOC_2017_04: Endre løkka fra forrige oppgave for å hjelpe agenten med å lage en sti over den vide delen av elva.
       MC_HOC_2017_04POINT5_Cole: Få agenten til trykkplaten.
       MC_HOC_2017_04POINT5_RYAN: Få agenten til trykkplaten.
+      MC_HOC_2017_04POINT5_RYAN_2019: Få agenten til trykkplaten.
       MC_HOC_2017_04_Cole: Få agenten til trykkplaten.
+      MC_HOC_2017_04_Cole_2019: Få agenten til trykkplaten.
       MC_HOC_2017_04_Kiki: Få agenten til trykkplaten.
       MC_HOC_2017_05: Bruk en funksjon for å få agenten bort til trykkplaten.
       MC_HOC_2017_05_Cole: Få spilleren bort til spaden.
+      MC_HOC_2017_05_Cole_2019: Få spilleren bort til spaden.
       MC_HOC_2017_05_Josh: Få spilleren bort til spaden.
       MC_HOC_2017_05_Kiki: Få spilleren bort til den oransje platen.
       MC_HOC_2017_06_Cole: Fiks denne koden slik at agenten bygger en bro over elva.
+      MC_HOC_2017_06_Cole_2019: Fiks denne koden slik at agenten bygger en bro over elva.
       MC_HOC_2017_06_Josh: Fiks denne koden slik at agenten bygger en bro over elva.
       MC_HOC_2017_06_Kiki: Fiks denne koden slik at agenten bygger en bro over elva.
       MC_HOC_2017_07_Cole: Ødelegg isen og få {currentPlayerName} til Minecarten.
+      MC_HOC_2017_07_Cole_2019: Ødelegg isen og få {currentPlayerName} til Minecarten.
       MC_HOC_2017_07_Kiki: Bruk en funksjon for å rydde vei til den oransje platen.
       MC_HOC_2017_07a_Kiki: Rydd veien til den oransje platen.
       MC_HOC_2017_08_Cole: Endre denne funksjonen slik at den fungerer for dette biomet.
@@ -960,14 +970,17 @@
       MC_HOC_2017_10_Cole_old: Lag en funksjon for å fullføre minecarten.
       MC_HOC_2017_10_Kiki: Lag en funksjon for å fullføre minecarten.
       MC_HOC_2017_10_RETRY: Bruk funksjoner til å fullføre sporet til denne minecarten.
+      MC_HOC_2017_10_RETRY_2019: Bruk funksjoner til å fullføre sporet til denne minecarten.
       MC_HOC_2017_10_RYAN: Lag en funksjon for å fullføre minecarten.
       MC_HOC_2017_10_RYAN2: Lag en funksjon for å fullføre minecarten.
       MC_HOC_2017_13_Cole: "**Fritt spill:** Utforsk på egenhånd!"
       MC_HOC_2017_4.5v2: Få agenten til trykkplaten.
       MC_HOC_2017_Ali: Bruk funksjoner til å komme deg over lavaen.
+      MC_HOC_2017_Ali_2019: Bruk funksjoner til å komme deg over lavaen.
       MC_HOC_2017_FP10x10: "**Fritt spill:** Utfordring! Samle alle diamantene! "
       MC_HOC_2017_FP10x10_RE: "**Fritt spill:** Utfordring! Samle alle diamantene! "
       MC_HOC_2017_FP20x20: "**Fritt spill:** Utforsk på egenhånd!"
+      MC_HOC_2017_FP20x20_2019: "**Fritt spill:** Utforsk på egenhånd!"
       MC_HOC_2017_Ryan_03: Bruk løkker for å hjelpe agenten til å bygge en bro over elva ved å plassere blokker i vannet.
       MC_HOC_2017_Ryan_05: Ødelegg kaktusene slik at spilleren kan komme seg til målet.
       Mike Test Bee Conditionals 1: Bien ser ikke forskjell på blomst og bikube. Bare samle inn nektar fra blomstene men sjekk først om det er blomst eller bikube.
@@ -1183,6 +1196,8 @@
         Dette huset trenger ett tak. Tegn trekanten. Hint: alle de tre sidene skal være like lange.
       courseC_artist_prog5_2018: |-
         Dette huset trenger ett tak. Tegn trekanten. Hint: alle de tre sidene skal være like lange.
+      courseC_artist_prog5_2019: |-
+        Dette huset trenger ett tak. Tegn trekanten. Hint: alle de tre sidene skal være like lange.
       courseC_maze_debugging10: Feilsøk denne levelen ved å flytte rundt på brikkene og å legge til brikker, slik at jeg kommer meg bort til grisen!
       courseD_artist_binary1: "Binær er en måte å representere informasjon ved å bare bruke to alternativer. Vi skal bruke alternativene \"av\" (representert av tallet 0) og \"på\" (representert av tallet 1). \\r\n\\r\nVi har gitt deg et rutenett av \"piksler\" som du kan gå igjennom og lage mønstre ved å skru på spesifikke ruter. Kan du få artisten til å tegne \"01010101\" i binært i første rad?"
       courseD_artist_binary1_2018: "Binær er en måte å representere informasjon ved å bare bruke to alternativer. Vi skal bruke alternativene \"av\" (representert av tallet 0) og \"på\" (representert av tallet 1). \\r\n\\r\nVi har gitt deg et rutenett av \"piksler\" som du kan gå igjennom og lage mønstre ved å skru på spesifikke ruter. Kan du få artisten til å tegne \"01010101\" i binært i første rad?"
@@ -1201,6 +1216,7 @@
       courseD_bee_nestedLoops6_2018: Få meg til solsikken!
       courseD_bee_nestedLoops8: 'Samle inn all nektaren fra hver blomst og lag honning i alle bikubene. Bruk løkke i løkke.'
       courseD_bee_nestedLoops8_2018: 'Samle inn all nektaren fra hver blomst og lag honning i alle bikubene. Bruk løkke i løkke.'
+      courseD_bee_nestedLoops8_2019: 'Samle inn all nektaren fra hver blomst og lag honning i alle bikubene. Bruk løkke i løkke.'
       courseD_bounce_events10: Det er nå et mål på toppen. Fest «skår et poeng» og «skår motstanderen et poeng» blokkene til «når en ball i mål» og «når en ball bommer på åren» blokkene for å lage et spill. Se hvor mange poeng du greier å skåre før motstanderen din skårer to ganger.
       courseD_bounce_events11: Du kan nå feste blokker til «når den kjører» blokken. Du må feste den nye «kast ny ball» blokken på mer enn en plass. Også, prøv å skifte scenen eller farten på kontrolleren og ballen og se hvor mange poeng du kan skåre før motstanderen din har skåret to ganger.
       courseD_bounce_events12: Opprett ditt eget Sprett spill. Du kan endre alle bilder og reglene. Når du er ferdig, klikk Fullfør for å la venner prøve spillet på sine telefoner.
@@ -1221,8 +1237,10 @@
       courseD_farmer_while_challenge2_2018: Fyll inn alle hullene og fjern alle haugene.
       courseD_maze_nestedLoops4: 'Få meg til solsikken!'
       courseD_maze_nestedLoops4_2018: 'Få meg til solsikken!'
+      courseD_maze_nestedLoops4_2019: 'Få meg til solsikken!'
       courseD_maze_nestedLoops6: Få meg til solsikken!
       courseD_maze_nestedLoops6_2018: Få meg til solsikken!
+      courseD_maze_nestedLoops6_2019: Få meg til solsikken!
       courseE_artist_functions1: "Hallo. Meg zombie artist. Meg tegne elsker! Hjelp meg med å tegne de firkantete brillene. Hint: mellomrommet mellom brilleglassene er 25 piksler kortere enn lengden på firkantene."
       courseE_artist_functions1_2018: "Hallo. Meg zombie artist. Meg tegne elsker! Hjelp meg med å tegne de firkantete brillene. Hint: mellomrommet mellom brilleglassene er 25 piksler kortere enn lengden på firkantene."
       courseE_bee_concept1: Samle inn all nektaren fra alle blomstene. Bruk løkke i løkke.
@@ -1236,18 +1254,25 @@
       courseE_farmer_concept4: "La oss ta dette videre!\nVi har nøstet hele kodeblokken inni en annen løkke, men du må få artisten tilbake på plassen sin for å tegne den neste linja. Hvilken av disse kodeblokkene kan du plassere på slutten av den ytterste løkka for å tegne hele mønsteret?"
       courseE_farmer_ramp11a: Så lenge det er en haug, fjern jord.
       courseE_farmer_ramp11a_2018: Så lenge det er en haug, fjern jord.
+      courseE_farmer_ramp11a_2019: Så lenge det er en haug, fjern jord.
       courseE_farmer_ramp11b: Så lenge det er en haug, fjern jord.
       courseE_farmer_ramp11b_2018: Så lenge det er en haug, fjern jord.
+      courseE_farmer_ramp11b_2019: Så lenge det er en haug, fjern jord.
       courseF_artist_for7: Gjør tre små endringer i koden fra forrige nivå for å få til dette!
       courseF_artist_for7_2018: Gjør tre små endringer i koden fra forrige nivå for å få til dette!
+      courseF_artist_for7_2019: Gjør tre små endringer i koden fra forrige nivå for å få til dette!
       courseF_artist_for_challenge1: Finner du ut hvordan du kan gjenskape denne tegningen?
       courseF_artist_for_challenge1_2018: Finner du ut hvordan du kan gjenskape denne tegningen?
+      courseF_artist_for_challenge1_2019: Finner du ut hvordan du kan gjenskape denne tegningen?
       courseF_artist_for_challenge2: Kan du finne ut hvordan du kan lage denne tegningen med en enkelt løkke?
       courseF_artist_for_challenge2_2018: Kan du finne ut hvordan du kan lage denne tegningen med en enkelt løkke?
+      courseF_artist_for_challenge2_2019: Kan du finne ut hvordan du kan lage denne tegningen med en enkelt løkke?
       courseF_bee_for8: "Du har forstått dette! Hva må økningen være for å samle 3, 6, 9, 12 og 15 nektar? \\r\n"
       courseF_bee_for8_2018: "Du har forstått dette! Hva må økningen være for å samle 3, 6, 9, 12 og 15 nektar? \\r\n"
+      courseF_bee_for8_2019: "Du har forstått dette! Hva må økningen være for å samle 3, 6, 9, 12 og 15 nektar? \\r\n"
       courseF_bee_for_challenge2: Løs denne oppgaven med færrest mulig brikker.
       courseF_bee_for_challenge2_2018: Løs denne oppgaven med færrest mulig brikker.
+      courseF_bee_for_challenge2_2019: Løs denne oppgaven med færrest mulig brikker.
       courseF_bee_for_challenge3: Løs denne oppgaven med færrest mulig brikker.
       courseF_bee_functions4: Funksjonen "flytt og hent nektar" snur bien, samleren inn nektar og returnerer til der den startet. Bruk denne funksjonen til å samle inn all nektaren.
       courseF_bee_functions4_2018: Funksjonen "flytt og hent nektar" snur bien, samleren inn nektar og returnerer til der den startet. Bruk denne funksjonen til å samle inn all nektaren.

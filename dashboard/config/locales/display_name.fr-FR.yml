@@ -102,16 +102,21 @@ fr:
       'Internet Simulator: Sending Text_2018': 'Simulateur d’Internet : envoi de texte'
       MC_HOC_2017_01: Prologue
       MC_HOC_2017_02_Cole: La ferme
+      MC_HOC_2017_02_Cole_2019: La ferme
       MC_HOC_2017_02_Kiki: La ferme
       MC_HOC_2017_02_Will: La ferme
       MC_HOC_2017_03: Une rivière...
       MC_HOC_2017_03_Cole: Les bois
+      MC_HOC_2017_03_Cole_2019: Les bois
       MC_HOC_2017_03_Kiki: Les bois
       MC_HOC_2017_04POINT5_Cole: Les bois
       MC_HOC_2017_04POINT5_RYAN: Le désert
+      MC_HOC_2017_04POINT5_RYAN_2019: Le désert
       MC_HOC_2017_04_Cole: Le marais
+      MC_HOC_2017_04_Cole_2019: Le marais
       MC_HOC_2017_04_Kiki: Le marais
       MC_HOC_2017_05_Cole: La rivière
+      MC_HOC_2017_05_Cole_2019: La rivière
       MC_HOC_2017_05_Josh: La rivière
       MC_HOC_2017_05_Kiki: La rivière
       MC_HOC_2017_09_Cole: La grotte
@@ -121,6 +126,7 @@ fr:
       MC_HOC_2017_10_Cole_old: La grotte
       MC_HOC_2017_10_Kiki: La grotte
       MC_HOC_2017_10_RETRY: La grotte
+      MC_HOC_2017_10_RETRY_2019: La grotte
       MC_HOC_2017_10_RYAN: La grotte
       MC_HOC_2017_10_RYAN2: La grotte
       MC_HOC_2017_11_Cole: Le lac gelé

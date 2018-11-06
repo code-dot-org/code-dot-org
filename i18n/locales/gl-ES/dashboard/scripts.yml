@@ -1355,3 +1355,13 @@ gl:
           stages:
             Artist:
               name: Artista
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Construíndo unha base
+            Conditionals with Cards:
+              name: Condicionais con cartas
+            Envelope Variables:
+              name: Variábeis de sobre
+            For Loop Fun:
+              name: Diversión con bucles "para" (for)

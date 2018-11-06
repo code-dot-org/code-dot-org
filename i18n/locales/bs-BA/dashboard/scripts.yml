@@ -1902,3 +1902,13 @@ bs:
           stages:
             Artist:
               name: Umjetnik
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Izrada Temelja
+            Conditionals with Cards:
+              name: Uvjeti s Kartama
+            Build Your Project:
+              name: Napravite Vaš projekat
+            Present Your Project:
+              name: Predstavite Vaš projekat

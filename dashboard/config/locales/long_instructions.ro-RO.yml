@@ -374,11 +374,15 @@ ro:
         miere la fiecare fagure. Folosește o buclă imbricată. '
       courseD_bee_nestedLoops8_2018: 'Colectează tot nectarul din fiecare floare și
         fă miere la fiecare fagure. Folosește o buclă imbricată. '
+      courseD_bee_nestedLoops8_2019: 'Colectează tot nectarul din fiecare floare și
+        fă miere la fiecare fagure. Folosește o buclă imbricată. '
       courseD_bounce_events1: Trebuie sa ajungi la steag! Ataseaza un bloc "cand sageata
         stanga" si apasa "Ruleaza" pentru a misca jucatorul catre steag.
       courseD_maze_nestedLoops4: Du-mă la floarea-soarelui! Foloseste bucla "repeta"
         pentru a folosi mai putine blocuri.
       courseD_maze_nestedLoops4_2018: Du-mă la floarea-soarelui! Foloseste bucla "repeta"
+        pentru a folosi mai putine blocuri.
+      courseD_maze_nestedLoops4_2019: Du-mă la floarea-soarelui! Foloseste bucla "repeta"
         pentru a folosi mai putine blocuri.
       courseE_bee_functions3: "Funcţiile sunt blocuri de cod care efectuează \no activitate.
         Utilizează funcţia \"obţine 5\" pentru a colecta 5 nectare dintr-o data. De
@@ -392,6 +396,8 @@ ro:
       courseF_bee_for_challenge2: Rezolva acest puzzle cu cel mai mic număr de blocuri
         posibil.
       courseF_bee_for_challenge2_2018: Rezolva acest puzzle cu cel mai mic număr de
+        blocuri posibil.
+      courseF_bee_for_challenge2_2019: Rezolva acest puzzle cu cel mai mic număr de
         blocuri posibil.
       frozen circle function in circle: Acum haideți să creăm 20 de cercuri suprapuse,
         rotind 18 grade după fiecare cerc.

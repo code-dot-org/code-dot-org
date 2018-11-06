@@ -407,7 +407,7 @@
   mc_gradelevel: "6歳以上"
   mc_platformtext: "最新ブラウザ、スマート フォン、タブレット"
   mc_specs: "多言語対応 | 最新ブラウザ、タブレット | 6才以上"
-  minecraft_agent: 'Minecraft: 主人公の旅'
+  minecraft_agent: "Minecraft: 主人公の旅"
   minecraft_designer: "Minecraftデザイナー"
   minecraft_adventurer: "Minecraftアドベンチャー"
   minecraft_tutorials: "MinecraftのHour of Codeチュートリアル"
@@ -657,7 +657,7 @@
   dashboard_sections_table_stage_extras: "追加ステージ"
   dashboard_sections_table_students: "生徒"
   dashboard_sections_table_code: "セクション・コード"
-  dashboard_sections_name: "セクション名"
+  dashboard_sections_name: 'セクション名'
   dashboard_sections_choose_secret: "生徒用にアカウントを用意する場合、そのセクション用の秘密のタイプに<b>単語</b>か<b>画像</b>を選んでください。"
   dashboard_sections_secret_word: "<b>単語</b>を選んだ場合、全ての生徒用に秘密の単語を設定します。"
   dashboard_sections_secret_picture: "<b>写真</b>を選んだ場合、全ての生徒用に秘密の画像を設定します。タイピングのできない学年の生徒に適しています。"
@@ -683,7 +683,7 @@
   dashboard_students_add_multiple: '１行について１人の生徒の名前をタイプまたはペーストします。'
   dashboard_students_new_google_classroom_section: "生徒の追加には <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> へ行き、上部の<b>Sync students from Google Classroom</b> をクリックしてください。"
   dashboard_students_new_section: "新しいセクションを作成しました！<b>生徒を追加</b>、<b>複数の生徒を追加</b>ボタンをつかって、生徒を追加してください。"
-  dashboard_students_name: "名前"
+  dashboard_students_name: '名前'
   dashboard_students_progress: "進行状況"
   dashboard_students_male: "男性"
   dashboard_students_female: "女性"
@@ -1479,6 +1479,7 @@
   hoc2018_creativity_create: "つくる"
   hoc2018_mc_page_title: "MinecraftのHour of Codeチュートリアル"
   hoc2018_mc_details: "多言語対応 | 最新ブラウザ、タブレット | 小学校2年生以上"
+  hoc2018_mc_hero_title: "Minecraft: 主人公の旅"
   hoc2018_mc_designer_title: "Minecraftデザイナー"
   hoc2018_mc_designer_description: "ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。"
   hoc2018_mc_adventurer_title: "Minecraftアドベンチャー"
@@ -1506,3 +1507,8 @@
   hoc2018_mc_homepage_join_us: "参加しませんか"
   hoc2018_mc_homepage_try_it: "挑戦してみる"
   hoc2018_mc_continue_learning: "マインクラフトで学習をつづける"
+  hoc2018_dance_party_button: "始める"
+  hoc2018_dance_teacher_resources_tile1_button: "学習計画"
+  hoc2018_dance_teacher_resources_tile2_button: "アンプラグド　アクティビティ"
+  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "もっと詳しく知る"
+  hoc2018_dance_amazon_apply_now_button_text: "今すぐ申し込む"

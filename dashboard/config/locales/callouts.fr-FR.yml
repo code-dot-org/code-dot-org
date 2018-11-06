@@ -99,6 +99,9 @@ fr:
       Function intro Ryan_callout:
         Function_intro_Ryan_1: Cette petite instruction indique à l'ordinateur d'exécuter
           un GROS morceau de code avec le même nom dans l'espace de travail.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Cette petite instruction indique à l'ordinateur d'exécuter
+          un GROS morceau de code avec le même nom dans l'espace de travail.
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Joue un son lorsque cet événement se produit.
       Infinity_move_directions_callout:
@@ -118,13 +121,22 @@ fr:
       MC_HOC_2017_03_Cole_callout:
         MC_HOC_2017_03_Cole_1: Ceci est une boucle « répéter » !  Cliquez dessus dans
           l'espace de travail et ajoutez le code que vous voulez exécuter en boucle.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Ceci est une boucle « répéter » !  Cliquez dessus dans
+          l'espace de travail et ajoutez le code que vous voulez exécuter en boucle.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: L'Agent peut survoler l'eau, mais votre joueur ne le
+          peut pas !
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: L'Agent peut survoler l'eau, mais votre joueur ne le
           peut pas !
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Cliquez dessus dans l'espace de travail et ajoutez
           du code pour le répéter en boucle !
       MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Vous ne pouvez pas jeter ces blocs, mais vous pouvez
+          les modifier !
+      MC_HOC_2017_06_Cole_2019_callout:
         MC_HOC_2017_06_Cole_1: Vous ne pouvez pas jeter ces blocs, mais vous pouvez
           les modifier !
       MC_HOC_2017_08_RY_callout:
@@ -134,6 +146,9 @@ fr:
         MC_HOC_2017_08_RY_1: 'L''Agent peut survoler la lave, mais votre joueur ne
           le peut pas !  '
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'L''Agent peut survoler la lave, mais votre joueur ne
+          le peut pas !  '
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'L''Agent peut survoler la lave, mais votre joueur ne
           le peut pas !  '
       NEW Course 4 Artist Functions 5_callout:

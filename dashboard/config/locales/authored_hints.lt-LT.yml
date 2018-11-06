@@ -420,6 +420,11 @@ lt:
           pixelių', aš linija nupiešiu automatiškai.
         courseC_artist_prog2_b: Problemos pasukant? Panaudok 'pasukti 90 laipsnių
           dešinėn bloką.
+      courseC_artist_prog2_2019_authored_hint:
+        courseC_artist_prog2_a: Jei panaudosi bloką kad aš 'pajudėčiau į priekį 100
+          pixelių', aš linija nupiešiu automatiškai.
+        courseC_artist_prog2_b: Problemos pasukant? Panaudok 'pasukti 90 laipsnių
+          dešinėn bloką.
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!

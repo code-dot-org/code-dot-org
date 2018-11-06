@@ -69,6 +69,9 @@ da:
       Function intro Ryan_callout:
         Function_intro_Ryan_1: Denne lille instruktion fortæller computeren, at den
           skal køre et STORT kodestykke med det samme navn i arbejdsområdet.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Denne lille instruktion fortæller computeren, at den
+          skal køre et STORT kodestykke med det samme navn i arbejdsområdet.
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Afspil en lyd, når denne event indtræffer.
       Infinity_move_directions_callout:
@@ -87,7 +90,12 @@ da:
       MC_HOC_2017_03_Cole_callout:
         MC_HOC_2017_03_Cole_1: Dette er et gentagelsesloop!  Træk det ind i arbejdsområdet,
           og fyld det med den kode, du vil køre igen og igen.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Dette er et gentagelsesloop!  Træk det ind i arbejdsområdet,
+          og fyld det med den kode, du vil køre igen og igen.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Agenten kan svæve over vand, men spilleren kan ikke!
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: Agenten kan svæve over vand, men spilleren kan ikke!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Træk det ind i arbejdsområdet, og fyld det med den
@@ -95,11 +103,16 @@ da:
       MC_HOC_2017_06_Cole_callout:
         MC_HOC_2017_06_Cole_1: Du kan ikke smide disse blokke væk, men du kan redigere
           dem!
+      MC_HOC_2017_06_Cole_2019_callout:
+        MC_HOC_2017_06_Cole_1: Du kan ikke smide disse blokke væk, men du kan redigere
+          dem!
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: 'Agenten kan svæve over lava, men spilleren kan ikke!  '
       MC_HOC_2017_08_Will_callout:
         MC_HOC_2017_08_RY_1: 'Agenten kan svæve over lava, men spilleren kan ikke!  '
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'Agenten kan svæve over lava, men spilleren kan ikke!  '
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'Agenten kan svæve over lava, men spilleren kan ikke!  '
       NEW Course 4 Artist Functions 5_callout:
         edit_function: Klik her for at redigere din funktion.

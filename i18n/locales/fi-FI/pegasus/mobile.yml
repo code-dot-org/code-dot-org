@@ -544,7 +544,7 @@
   dashboard_sections_table_pairing_allowed: "Pariohjelmointi"
   dashboard_sections_table_students: "Oppilaat"
   dashboard_sections_table_code: "Ryhmän tunnus"
-  dashboard_sections_name: "Ryhmän nimi"
+  dashboard_sections_name: 'Ryhmän nimi'
   dashboard_sections_choose_secret: "Jos haluat antaa tunnukset oppilaillesi, valitse ryhmän salaisuustyypiksi joko <b>sana</b> tai <b>kuva</b>."
   dashboard_sections_secret_word: "<b>Sana</b> antaa sinun asettaa salaisen sanan jokaiselle oppilaalle."
   dashboard_sections_secret_picture: "<b>Kuva</b> antaa sinun asettaa salaisen kuvan jokaiselle oppilaalle, sopii erityisesti nuoremmille oppilaille, jotka eivät osaa vielä kirjoittaa."
@@ -558,7 +558,7 @@
   dashboard_sections_other_section: "Muu opettaja"
   dashboard_students_add_multiple: 'Lisää oppilaidesi nimet, yksi kullekin riville:'
   dashboard_students_new_section: "Olet luonut uuden ryhmän! Lisää nyt oppilaat käyttäen <b>Lisää oppilas</b> ja <b>Lisää useita oppilaita</b> -painikkeita yllä."
-  dashboard_students_name: "Nimi"
+  dashboard_students_name: 'Nimi'
   dashboard_students_progress: "Edistyminen"
   dashboard_students_male: "Mies"
   dashboard_students_female: "Nainen"
@@ -1123,3 +1123,8 @@
   hoc2018_mc_homepage_join_us: "Liity joukkoomme"
   hoc2018_mc_homepage_try_it: "Kokeile"
   hoc2018_mc_minecraft_education: "Minecraft koulutus"
+  hoc2018_dance_party_button: "Aloita"
+  hoc2018_dance_teacher_resources_tile1_button: "Tuntisuunnitelma"
+  hoc2018_dance_teacher_resources_tile2_button: "Tietokoneeton tekeminen"
+  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "Lue lisää"
+  hoc2018_dance_amazon_apply_now_button_text: "Liity nyt"

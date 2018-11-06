@@ -409,7 +409,7 @@
   mc_gradelevel: "Usia 6 Keatas"
   mc_platformtext: "Browser modern, smartphone, tablet"
   mc_specs: "Berbagai bahasa | Situs pencarian | Ages 6-106"
-  minecraft_agent: 'Minecraft: Perjalanan Pahlawan'
+  minecraft_agent: "Minecraft: Perjalanan Pahlawan"
   minecraft_designer: "Perancang Minecraft"
   minecraft_adventurer: "Petualang Minecraft"
   minecraft_tutorials: "Tutorial Minecraft Jam Kode"
@@ -614,7 +614,7 @@
   dashboard_sections_table_stage_extras: "Tahapan Tambahan"
   dashboard_sections_table_students: "Siswa"
   dashboard_sections_table_code: "Kode Sesi"
-  dashboard_sections_name: "Nama kelompok"
+  dashboard_sections_name: 'Nama kelompok'
   dashboard_sections_choose_secret: "Jika Anda ingin memberikan akun kepada murid Anda, pilih <b>kata</b> atau <b>gambar</b> rahasia untuk bagian tersebut."
   dashboard_sections_secret_word: "<b>Kata</b> memungkinkan Anda untuk menetapkan kata rahasia yang berbeda untuk setiap siswa."
   dashboard_sections_secret_picture: "<b>Gambar</b> yang memungkinkan Anda untuk menetapkan gambar rahasia untuk setiap siswa, ideal untuk siswa yang lebih muda yang belum bisa mengetik."
@@ -637,7 +637,7 @@
   dashboard_error_other_section: "Jika anda memindahkan siswa di antara bagian anda sendiri, pilih bagian dari dropdown. Hanya pilih bagian lainnya untuk memindahkan siswa anda ke bagian guru lainnya."
   dashboard_students_add_multiple: 'Ketik atau sisipkan nama siswa Anda, satu siswa setiap baris:'
   dashboard_students_new_section: "Anda telah membuat bagian yang baru! Sekarang tambahkan siswa Anda menggunakan tombol <b>Tambahkan siswa</b> dan <b>Tambahkan beberapa siswa</b> di atas."
-  dashboard_students_name: "Nama"
+  dashboard_students_name: 'Nama'
   dashboard_students_progress: "Perkembangan"
   dashboard_students_male: "Laki-laki"
   dashboard_students_female: "Wanita"
@@ -1312,6 +1312,7 @@
   hoc2018_creativity_create: "Buat"
   hoc2018_mc_page_title: "Tutorial Minecraft Jam Kode"
   hoc2018_mc_details: "Berbagai bahasa | Browser terbaru dan tablet | Tingkat 2+"
+  hoc2018_mc_hero_title: "Minecraft: Perjalanan Pahlawan"
   hoc2018_mc_designer_title: "Perancang Minecraft"
   hoc2018_mc_designer_description: "Program animal dan objek - objek Minecraft lainnya dalam versi Minecraft Anda sendiri."
   hoc2018_mc_adventurer_title: "Petualang Minecraft"
@@ -1335,3 +1336,8 @@
   hoc2018_mc_minecraft_education: "Pendidikan Minecraft"
   hoc2018_mc_continue_learning: "Lanjutkan pembelajaran dengan Minecraft."
   hoc2018_mc_go_to_mc_education: "Pergi ke pendidikan Minecraft"
+  hoc2018_dance_party_button: "Mulai"
+  hoc2018_dance_teacher_resources_tile1_button: "Rencana Pelajaran"
+  hoc2018_dance_teacher_resources_tile2_button: "Kegiatan tanpa komputer"
+  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "Pelajari lebih banyak"
+  hoc2018_dance_amazon_apply_now_button_text: "Daftar sekarang"
