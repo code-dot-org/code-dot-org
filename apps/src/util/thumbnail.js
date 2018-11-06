@@ -90,6 +90,27 @@ export function captureThumbnailFromCanvas(canvas) {
 }
 
 /**
+ * Copies the image from the canvas, shrinks it to a width equal to
+ * THUMBNAIL_WIDTH preserving aspect ratio, and returns the thumbnail blob
+ * to a callback method.
+ * @param {HTMLCanvasElement} canvas
+ * @param {func} onComplete
+ */
+export function getThumbnailFromCanvas(canvas, onComplete) {
+  if (!canvas) {
+    console.warn(`Thumbnail capture failed: canvas element not found.`);
+    onComplete(null);
+  }
+  if (!shouldCapture()) {
+    onComplete(null);
+  }
+  lastCaptureTimeMs = Date.now();
+
+  const thumbnailCanvas = createThumbnail(canvas);
+  canvasToBlob(thumbnailCanvas).then(onComplete);
+}
+
+/**
  * @type {boolean} Whether a screenshot capture is pending.
  * Used only by captureThumbnailFromElement.
  */

@@ -16,7 +16,7 @@ import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
-import {captureThumbnailFromCanvas} from '../util/thumbnail';
+import {getThumbnailFromCanvas} from '../util/thumbnail';
 import SignInOrAgeDialog from "../templates/SignInOrAgeDialog";
 import project from "../code-studio/initApp/project";
 import {
@@ -86,6 +86,7 @@ Dance.prototype.init = function (config) {
   this.studioApp_.labUserId = config.labUserId;
   this.level.softButtons = this.level.softButtons || {};
   this.tickCount = 0;
+  this.thumbnailBlob = null;
 
   config.afterClearPuzzle = function () {
     this.studioApp_.resetButtonClick();
@@ -294,8 +295,6 @@ Dance.prototype.reset = function () {
   Sounds.getSingleton().stopAllAudio();
 
   this.nativeAPI.reset();
-
-  this.initialCaptureComplete = false;
 
   var softButtonCount = 0;
   for (var i = 0; i < this.level.softButtons.length; i++) {
@@ -586,25 +585,19 @@ Dance.prototype.getAppReducers = function () {
 const CAPTURE_TICK_COUNT = 5;
 
 /**
- * Determines whether we should capture a thumbnail image of the current play scene.
- * We _should_ capture a thumbnail image if:
- * 1. The current level is a free play or project-backed level.
- * 2. We haven't captured an image for this scene yet.
- * 3. We have met or surpassed the minimum CAPTURE_TICK_COUNT.
+ * Capture a thumbnail image of the play space every CAPTURE_TICK_COUNT ticks.
  */
-Dance.prototype.shouldCaptureImage = function () {
-  return (this.level.freePlay || this.level.isProjectLevel) &&
-    !this.initialCaptureComplete &&
-    this.tickCount >= CAPTURE_TICK_COUNT;
+Dance.prototype.captureInitialImage = function () {
+  if (this.tickCount % CAPTURE_TICK_COUNT !== 0) {
+    return;
+  }
+  const callback = (pngBlob) => this.onThumbnailCapture(pngBlob);
+  getThumbnailFromCanvas(document.getElementById('defaultCanvas0'), callback);
 };
 
 /**
- * Capture a thumbnail image of the play space if shouldCaptureImage() is true.
+ * TODO: (madelynkasula) add description
  */
-Dance.prototype.captureInitialImage = function () {
-  if (!this.shouldCaptureImage()) {
-    return;
-  }
-  this.initialCaptureComplete = true;
-  captureThumbnailFromCanvas(document.getElementById('defaultCanvas0'));
+Dance.prototype.onThumbnailCapture = function (pngBlob) {
+  this.thumbnailBlob = pngBlob;
 };
