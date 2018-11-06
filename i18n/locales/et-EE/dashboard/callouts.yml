@@ -140,6 +140,8 @@ et:
         snowflake_dropdown: Kasuta seda rippmenüüd erinevate lumehelveste loomiseks.
       Function intro Ryan_callout:
         Function_intro_Ryan_1: See väike juhend ütleb arvutile, et käivita SUUR kogus koodi sama nimega, mis töölaual.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: See väike juhend ütleb arvutile, et käivita SUUR kogus koodi sama nimega, mis töölaual.
       Geometric Pattern_callout:
         4-5_Artist_Patterns_Free_Play_1: Kõik teie lemmikplokid on nüüd jaotatud kategooriatesse.  Klõpsake neid sõnu, et näha, kuhu kõik läksid!
       Geometric Sun_callout:
@@ -165,17 +167,25 @@ et:
         MC_HOC_2017_02_Cole_1: Teie mängijal on nüüd sõber!  Saate kirjutada koodi Agendile, mis aitab läbi tasemete liikuda.
       MC_HOC_2017_03_Cole_callout:
         MC_HOC_2017_03_Cole_1: See on "korrata" tsükkel!  Klõpsake seda töölauale ja lisage kood, mida soovite korduvalt kasutada.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: See on "korrata" tsükkel!  Klõpsake seda töölauale ja lisage kood, mida soovite korduvalt kasutada.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Agent saab hõljuda üle vee aga mängija ei saa!
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: Agent saab hõljuda üle vee aga mängija ei saa!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Klõpsake seda töölauale ja lisage natukene koodi, et see kordaks ikka ja jälle!
       MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Sa ei saa neid plokke ära visata aga sa saad neid muuta!
+      MC_HOC_2017_06_Cole_2019_callout:
         MC_HOC_2017_06_Cole_1: Sa ei saa neid plokke ära visata aga sa saad neid muuta!
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: 'Agent saab hõljuda üle laava aga mängija ei saa!  '
       MC_HOC_2017_08_Will_callout:
         MC_HOC_2017_08_RY_1: 'Agent saab hõljuda üle laava aga mängija ei saa!  '
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'Agent saab hõljuda üle laava aga Steve ja Alex ei saa!  '
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'Agent saab hõljuda üle laava aga Steve ja Alex ei saa!  '
       NEW Course 4 Artist Functions 5_callout:
         edit_function: Funktsiooni muutmiseks kliki siin.
