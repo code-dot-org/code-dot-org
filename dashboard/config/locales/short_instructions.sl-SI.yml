@@ -831,6 +831,13 @@ sl:
       Crack Random Substitution_2018: Navodila
       Crack a Caesar Cipher: Navodila
       Crack a Caesar Cipher_2018: Navodila
+      HOC 2018 Level_1: Vzemi čoln iz zaboja.
+      HOC 2018 Level_10: Pridi do vhoda v ta morski spomenik.
+      HOC 2018 Level_11: Izgradi strugo s pomočjo prismarina v sredini morskega spomenika.
+      HOC 2018 Level_12: Izoblikuj si svoj podvodni svet, kakor želiš.
+      HOC 2018 Level_3: Odveslaj na odprto morje proti ribi.
+      HOC 2018 Level_6: Pojdi po ledu do lososa.
+      HOC 2018 Level_9b: Korale uporabi kot navigacijski točki, da prideš do zaklada.
       Infinity_catch: |-
         Ali lahko naredis tako, da bo Elsa ("igralka 2") dohitela
         Ano, z uporabo tipk s puščicami?
@@ -1290,6 +1297,8 @@ sl:
         3 strani so enako dolge.'
       courseC_artist_prog5_2018: 'Ta hiša potrebuje streho! Nariši trikotnik. Namig:
         vse 3 strani so enako dolge.'
+      courseC_artist_prog5_2019: 'Ta hiša potrebuje streho! Nariši trikotnik. Namig:
+        vse 3 strani so enako dolge.'
       courseC_maze_debugging10: Razhrošči ta nivo s preurejanjem in spreminjanjem
         blokov, da pridem do prašička!
       courseD_bee_debugging3: Vsi ti bloki me resnično motijo. Uredi kodo tako, da
@@ -1301,6 +1310,8 @@ sl:
       courseD_bee_nestedLoops8: 'Dobi ves nektar iz vsakega cveta in naredi med v
         satovju. Uporabi ugnezdeno zanko. '
       courseD_bee_nestedLoops8_2018: 'Dobi ves nektar iz vsakega cveta in naredi med
+        v satovju. Uporabi ugnezdeno zanko. '
+      courseD_bee_nestedLoops8_2019: 'Dobi ves nektar iz vsakega cveta in naredi med
         v satovju. Uporabi ugnezdeno zanko. '
       courseD_bounce_events10: Zdaj je na vrhu gol. Dodaj bloke "dosežena točka" in
         "nasprotnik doseže točko" na bloka "ko je žoga v golu" in "ko žoga zgreši
@@ -1358,9 +1369,13 @@ sl:
         narišeš tole!
       courseF_artist_for7_2018: Naredi tri majhne sprememb v kodi iz prejšnje naloge,
         da narišeš tole!
+      courseF_artist_for7_2019: Naredi tri majhne sprememb v kodi iz prejšnje naloge,
+        da narišeš tole!
       courseF_bee_for8: Obvladaš! Kakšen bi moral biti tvoj prirastek, da bi čebelica
         dobila 3, 6, 9, 12, 15 nektarjev?
       courseF_bee_for8_2018: Obvladaš! Kakšen bi moral biti tvoj prirastek, da bi
+        čebelica dobila 3, 6, 9, 12, 15 nektarjev?
+      courseF_bee_for8_2019: Obvladaš! Kakšen bi moral biti tvoj prirastek, da bi
         čebelica dobila 3, 6, 9, 12, 15 nektarjev?
       flappy_1: Dodaj blok pod `ko kliknjen` blok ter pritisni "Zaženi". Klikni ali
         tapni na zaslon, da premakneš Flappya do cilja.
