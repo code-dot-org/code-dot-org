@@ -50,7 +50,7 @@
           ],
           [
             "(Random)",
-            "['disco', 'rainbow', 'diamonds','splatter','swirl','spiral'][randomInt(0,5)]"
+            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','splatter','swirl','spiral'][randomInt(0,7)]"
           ]
         ]
       }
