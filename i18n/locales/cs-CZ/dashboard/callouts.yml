@@ -3,6 +3,14 @@ cs:
     callouts:
       2-3 Artist Debugging 1_callout:
         2-3_Artist_Debugging_1_a: Umělec nemá tlačítko "Krok". Můžete však potáhnout posuvník rychlosti doleva, abyste mohli pečlivěji sledovat průběh programu.
+      CSD U3 Variables Predict Where XY Embed_callout:
+        grid: K zobrazení mřížky klikněte zde.
+      CSD U3 Variables Predict Where XY Embed_2018_callout:
+        grid: K zobrazení mřížky klikněte zde.
+      CSD U3 Variables Predict Where XY_callout:
+        grid: K zobrazení mřížky klikněte zde.
+      CSD U3 Variables Predict Where XY_2018_callout:
+        grid: K zobrazení mřížky klikněte zde.
       Course 4 Artist 4_callout:
         repeat_full_circle: Zadej počet zombie k přemístění, aby vytvořily celý kruh
       Course 4 Artist 7_callout:
@@ -59,6 +67,8 @@ cs:
         snowflake_dropdown: Použij tento drop-down k vytváření různých sněhových vloček!
       Function intro Ryan_callout:
         Function_intro_Ryan_1: Tento malý pokyn říká počítači, aby spustil VELKÝ kus kódu se stejným názvem v pracovním prostoru.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Tento malý pokyn říká počítači, aby spustil VELKÝ kus kódu se stejným názvem v pracovním prostoru.
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Přehraj zvuk, když dojde k této události.
       Infinity_move_directions_callout:
@@ -74,17 +84,25 @@ cs:
         MC_HOC_2017_02_Cole_1: Váš hráč si našel kamaráda! Můžete psát kód pro agenta, aby vám pomohl projít další úrovně.
       MC_HOC_2017_03_Cole_callout:
         MC_HOC_2017_03_Cole_1: Toto je cyklus „opakovat“! Klikněte na pracovní prostor a vložte kód, který chcete pořád opakovat.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Toto je cyklus „opakovat“! Klikněte na pracovní prostor a vložte kód, který chcete pořád opakovat.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Agent se dokáže vznášet nad vodou, ale hráč ne!
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: Agent se dokáže vznášet nad vodou, ale hráč ne!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Umístěte tento blok do pracovního prostoru a vložte do něj nějaký kód. Bude se opakovat pořád dokola!
       MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Tyto bloky nemůžete zahodit, ale můžete je upravit.
+      MC_HOC_2017_06_Cole_2019_callout:
         MC_HOC_2017_06_Cole_1: Tyto bloky nemůžete zahodit, ale můžete je upravit.
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: 'Agent se dokáže vznášet nad lávou, ale hráč ne!'
       MC_HOC_2017_08_Will_callout:
         MC_HOC_2017_08_RY_1: 'Agent se dokáže vznášet nad lávou, ale hráč ne!'
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'Agent se dokáže vznášet nad lávou, ale hráč ne!'
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'Agent se dokáže vznášet nad lávou, ale hráč ne!'
       NEW Course 4 Artist Functions 5_callout:
         edit_function: Klepnutím sem upravíš svou funkci.
@@ -120,6 +138,12 @@ cs:
         craft_inside_repeat: Opakuj akce umístěním bloků zde
       Overworld Place Wall_2018_callout:
         craft_inside_repeat: Opakuj akce umístěním bloků zde
+      PS clone CSD U3 Variables Predict Where XY_callout:
+        grid: K zobrazení mřížky klikněte zde.
+      PS copy - CSD U3 Variables Predict Where XY Embed_callout:
+        grid: K zobrazení mřížky klikněte zde.
+      PS copy CSD U3 Variables Predict Where XY_callout:
+        grid: K zobrazení mřížky klikněte zde.
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Tento kód kontroluje za lavu, umíš přidat povel k posunu dopředu?
       Underground Avoiding Lava_2018_callout:

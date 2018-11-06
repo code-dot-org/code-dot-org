@@ -1,3 +1,13 @@
 {
-
+  "danceFeedbackNeedNewDancer": "",
+  "danceFeedbackNoDancers": "ダンサーがありません。",
+  "danceFeedbackNoBackground": "",
+  "danceFeedbackTooManyDancers": "",
+  "danceFeedbackUseSetSize": "",
+  "danceFeedbackUseSetTint": "",
+  "danceFeedbackUseStartMapping": "",
+  "danceFeedbackStartNewMove": "",
+  "danceFeedbackNeedDifferentDance": "",
+  "danceFeedbackNeedEveryTwoMeasures": "",
+  "danceFeedbackNeedMakeANewDancer": ""
 }

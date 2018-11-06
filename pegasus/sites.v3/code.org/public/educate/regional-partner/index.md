@@ -11,13 +11,11 @@ video_player: true
 Code.org is selecting United States-based organizations, as partners, to help spread computer science in a local, sustainable fashion. The goal of the Regional Partner program is to help each organization establish itself as a K-12 computer science hub for their region, offering professional learning opportunities for teachers and building a strong local community. In the long run, the expectation is that each partner organization can sustain this work independently of Code.org.
 
 To begin the partnership, each partner's Program Manager will attend a 5-day Regional Partner Program Manager Onboarding Program in the Summer 2019
-to experience Code.org teacher professional devleopment first-hand and host or support a 5-day local summer workhop for teachers. In the fall, the partner will attend our Regional Partner Summit, an experience designed to welcome Regional Partners to the extended Code.org family. In addition, we will provide funding based on demonstrated need to help each organization establish itself as a local Code.org Regional Partner.
+to experience Code.org teacher professional development first-hand and host or support a 5-day local summer workshop for teachers. In the fall, the partner will attend our Regional Partner Summit, an experience designed to welcome Regional Partners to the extended Code.org family. In addition, we will provide funding based on demonstrated need to help each organization establish itself as a local Code.org Regional Partner.
 
 The ideal Regional Partner is a U.S. based regional education unit, a nonprofit, or a university with existing, positive relationships with nearby school districts and the local education community.
 
-Check the map below to see if your region needs a partner. If it does, please submit an Interest Form. We will notify you when applications are open.
-
-[<button>Interest Form</button>](https://docs.google.com/forms/d/e/1FAIpQLSfuwUxlfQ7HFJ2q_X0NkZvwm-1MxNpxybrM3I2SicA-XvHmIA/viewform)
+[<button>APPLY NOW!</button>](/educate/regional-partner/apply)
 
 
 [col-50]

@@ -146,7 +146,7 @@ vi:
       2-3 Artist Nested Loops Free Play: chơi tự do, hãy vẽ cai gì đó thật dễ thương
         với các vòng lặp lồng vào nhau.
       2-3 Bee Conditionals 11: Thu thập phấn hoa từ những bông có phấn.
-      2-3 Bee Conditionals 13: |
+      2-3 Bee Conditionals 13: |-
         Hút mật hoa để làm mật ong.
         Gợi ý: điều gì sẽ xảy ra nếu sử dụng hàm "if" để hút mật ở bông hoa đỏ?
                    bạn có thể dùng vòng lặp để hoàn thành không?
@@ -216,12 +216,21 @@ vi:
         trong khu vực làm việc để đưa Đặc vụ đến tấm áp lực [PressurePlate_Up], sau
         đó nhấn \"Chạy\" và sử dụng các phím mũi tên để di chuyển người chơi ra khỏi
         nhà và thu thập các ** thùng kho báu ** [chest]."
+      MC_HOC_2017_01_RETRY_2019: "Cửa bị khóa, nhưng Đặc vụ đang ở đây để giúp đỡ!
+        \nDi chuyển một khối 'di chuyển về phía trước' xuống phía dưới khối 'khi chạy'
+        trong khu vực làm việc để đưa Đặc vụ đến tấm áp lực [PressurePlate_Up], sau
+        đó nhấn \"Chạy\" và sử dụng các phím mũi tên để di chuyển người chơi ra khỏi
+        nhà và thu thập các ** thùng kho báu ** [chest]."
       MC_HOC_2017_02: "Người chơi cần phải vào được khu rừng bí mật.  \nGiúp Đặc vụ
         mở cánh cửa bằng cách viết mã lệnh để đưa Đặc vụ đến tấm áp lực."
       MC_HOC_2017_02_Cole: "{currentPlayerName} đang dẫn đầu cuộc phiêu lưu! Để giúp
         đỡ, lấy ** bản đồ ** [map_empty] đằng sau cánh cửa đã bị khóa ở bên phải.
         \r \r \nĐưa mã lệnh vào khu vực làm việc để đưa Đặc vụ đến tấm áp lực [PressurePlate_Up],
         từ đó {currentPlayerName} có thể đi qua. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} đang dẫn đầu cuộc phiêu lưu!
+        Để giúp đỡ, lấy ** bản đồ ** [map_empty] đằng sau cánh cửa đã bị khóa ở bên
+        phải. \r \r \nĐưa mã lệnh vào khu vực làm việc để đưa Đặc vụ đến tấm áp lực
+        [PressurePlate_Up], từ đó {currentPlayerName} có thể đi qua. "
       MC_HOC_2017_02_Kiki: "Người chơi đang dẫn đầu trong cuộc phiêu lưu, nhưng đầu
         tiên họ phải đi đến ngọn đuốc ẩn bên kia cánh cửa bị khóa. \r \r \nLập trình
         cho Đặc vụ di chuyển về phía trước hai lần để đi theo con đường màu trắng
@@ -232,6 +241,9 @@ vi:
         hai lần để đến được tấm áp lực và mở cửa cho Alex hoặc Steve."
       MC_HOC_2017_03_Cole: "{currentPlayerName} tiếp tục cuộc phiêu lưu và cần **
         la bàn ** [compass] để chuẩn bị cho chuyến đi.  \r \r \nLập trình cho Đặc
+        vụ để mở cổng. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} tiếp tục cuộc phiêu lưu và cần
+        ** la bàn ** [compass] để chuẩn bị cho chuyến đi.  \r \r \nLập trình cho Đặc
         vụ để mở cổng. "
       MC_HOC_2017_03_Kiki: "Cuộc phiêu lưu của người chơi sẽ bắt đầu đằng sau cánh
         cửa bị khóa, bên trong khu rừng bí mật!  \r \r \r \nGiúp đỡ Đặc vụ mở cửa
@@ -244,9 +256,14 @@ vi:
         qua hai tấm áp lực đầu tiên."
       MC_HOC_2017_04POINT5_RYAN: "Bạn đã vượt qua nó! \r \r \nBây giờ, đưa {currentPlayerName}
         đến mê cung một cách an toàn để thu thập ** cái rìu ** [diamond_axe]"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Bạn đã vượt qua nó! \r \r \nBây giờ, đưa {currentPlayerName}
+        đến mê cung một cách an toàn để thu thập ** cái rìu ** [diamond_axe]"
       MC_HOC_2017_04_Cole: "Đặc vụ có thể vượt qua dòng nước!  \r \r \nSử dụng một
         vòng lặp 'lặp lại' để giải quyết các câu đố và giúp {currentPlayerName} đi
         đến ** cái xô ** [bucket_empty] đằng sau cánh cửa. "
+      MC_HOC_2017_04_Cole_2019: "Đặc vụ có thể vượt qua dòng nước!  \r \r \nSử dụng
+        một vòng lặp 'lặp lại' để giải quyết các câu đố và giúp {currentPlayerName}
+        đi đến ** cái xô ** [bucket_empty] đằng sau cánh cửa. "
       MC_HOC_2017_04_Kiki: "Cánh cửa đi vào khu rừng bí mật dẫn đến ốc đảo xinh đẹp
         này!  Để vượt qua cấp độ này, người chơi cần tới được hình vuông màu da cam
         trong nhà chòi.  \r \r \nSử dụng một vòng lặp 'lặp lại' để giúp Đặc vụ đến
@@ -259,6 +276,9 @@ vi:
       MC_HOC_2017_05_Cole: "Ôi không, cây cầu đã biến mất! \r \r \nLập trình cho Đặc
         vụ xây lại cây cầu bằng cách sử dụng các khối 'vị trí' để {currentPlayerName}
         có thể lấy được ** cái xẻng ** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "Ôi không, cây cầu đã biến mất! \r \r \nLập trình
+        cho Đặc vụ xây lại cây cầu bằng cách sử dụng các khối 'vị trí' để {currentPlayerName}
+        có thể lấy được ** cái xẻng ** [diamond_shovel]."
       MC_HOC_2017_05_Josh: "Ôi không, cây cầu đã biến mất! \r \r \nGiúp đỡ Đặc vụ
         xây dựng lại cây cầu để người chơi có thể lấy được ** cái xẻng **."
       MC_HOC_2017_05_Kiki: "Đã đến lúc người chơi rời khỏi khu rừng bí mật và tiếp
@@ -268,6 +288,9 @@ vi:
       MC_HOC_2017_06_Cole: "Một con sông nữa, nhưng con sông này còn rộng lớn hơn
         nhiều! \r \r \nSửa lại mã lệnh này để giúp Đặc vụ xây dựng một cây cầu để
         {currentPlayerName} có thể lấy được ** cái cúp ** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2019: "Một con sông nữa, nhưng con sông này còn rộng lớn
+        hơn nhiều! \r \r \nSửa lại mã lệnh này để giúp Đặc vụ xây dựng một cây cầu
+        để {currentPlayerName} có thể lấy được ** cái cúp ** [diamond_pickaxe]. "
       MC_HOC_2017_06_Josh: "Một con sông nữa, nhưng con sông này còn rộng lớn hơn
         nhiều! \r \r \nSửa lại mã lệnh này để giúp Đặc vụ xây dựng một cây cầu vượt
         qua sông."
@@ -276,6 +299,8 @@ vi:
         qua dòng nước"
       MC_HOC_2017_07_Cole: "Có băng trong nước!  \r \r \nSử dụng chức năng 'dọn đường'
         để tiêu diệt băng và đưa {currentPlayerName} đến Minecart [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2019: "Có băng trong nước!  \r \r \nSử dụng chức năng 'dọn
+        đường' để tiêu diệt băng và đưa {currentPlayerName} đến Minecart [minecart_normal]! "
       MC_HOC_2017_07_Kiki: "Vòng lặp không phải là cách duy nhất để lặp lại mã lệnh!
         \ \r \r \nChúng tôi cung cấp cho bạn một chức năng là 'dọn xương rồng' giúp
         xóa bỏ ba cây xương rồng trong một lần sử dụng. Sử dụng hai khối 'dọn xương
@@ -314,6 +339,10 @@ vi:
         năng (hàm) dưới đây không? \r\n \r Sử dụng những nhóm lệnh chức năng này kết
         hợp với những lệnh khác trong khung lệnh bên trái để xóa đường dẫn tới xe
         đẩy quặng, sau đó thu thập **đá lửa và thép** [flint_and_steel]. \r "
+      MC_HOC_2017_10_RETRY_2019: "Bạn có thể tìm ra điểm khác biệt giữa hai nhóm lệnh
+        chức năng (hàm) dưới đây không? \r\n \r Sử dụng những nhóm lệnh chức năng
+        này kết hợp với những lệnh khác trong khung lệnh bên trái để xóa đường dẫn
+        tới xe đẩy quặng, sau đó thu thập **đá lửa và thép** [flint_and_steel]. \r "
       MC_HOC_2017_10_RYAN: Thử xây dựng một nhóm lệnh chức năng từ đầu để giúp nhân
         vật đặc vụ hoàn thành nhiệm vụ xe đẩy quặng dễ dàng hơn và giúp người chơi
         đi đến ô vuông màu da cam.
@@ -331,6 +360,9 @@ vi:
       MC_HOC_2017_Ali: 'Xem xét các nhóm lệnh chức năng dưới đây.  Làm thế nào bạn
         có thể sử dụng chúng để tránh các Ghasts và giúp {currentPlayerName}  **lấy
         được quyển sách** [book_enchanted] một cách an toàn?  '
+      MC_HOC_2017_Ali_2019: 'Xem xét các nhóm lệnh chức năng dưới đây.  Làm thế nào
+        bạn có thể sử dụng chúng để tránh các Ghasts và giúp {currentPlayerName}  **lấy
+        được quyển sách** [book_enchanted] một cách an toàn?  '
       MC_HOC_2017_FP10x10: "**Chơi tự do:** Bây giờ bạn có thể thỏa sức sáng tạo!
         Bạn có thể thử thách bản thân thu thập hết các viên kim cương trong cấp độ
         này không?\n"
@@ -339,6 +371,8 @@ vi:
         này không?\n"
       MC_HOC_2017_FP20x20: "**Chơi tự do:** Bây giờ bạn có thể thỏa sức sáng tạo!
         Hãy lập trình cho Đặc vụ để giúp bạn khám phá thế giới."
+      MC_HOC_2017_FP20x20_2019: "**Chơi tự do:** Bây giờ bạn có thể thỏa sức sáng
+        tạo! Hãy lập trình cho Đặc vụ để giúp bạn khám phá thế giới."
       MC_HOC_2017_Ryan_03: "Bạn có biết rằng bạn có thể thêm nhiều hơn một câu lệnh
         vào trong vòng lặp? \r \r Sử dụng một vòng lặp`lặp lại` để giúp Đặc vụ xây
         một cây cầu bắc qua dòng sông bằng cách đặt các khối đá trong nước."
@@ -418,7 +452,7 @@ vi:
         mỗi chiếc ria dài bằng nhau."
       grade2_PuppyLoops_9: "Có vẻ như chữ C trong từ \"code\" bị viết ngược \r\n\r\nBạn
         có thể sửa lại nó không?"
-      grade3_Conditionals_10: |
+      grade3_Conditionals_10: |-
         Hút mật hoa để làm mật ong.
         Gợi ý: điều gì sẽ xảy ra nếu sử dụng hàm "if" để hút mật ở bông hoa đỏ?
                    bạn có thể dùng vòng lặp để hoàn thành không?

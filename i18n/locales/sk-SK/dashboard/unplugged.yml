@@ -282,3 +282,9 @@ sk:
       RelayProgramming_2018:
         title: Štafetové programovanie
         desc: Táto aktivita začne krátkym školením o hľadaní a opravovaní chýb a o potrebe vytrvalosti. Následne sa študenti rozdelia do skupín, v ktorých, pretekajúc s časom, postupne po jednotlivých príkazoch vytvoria program.
+      courseB_unplugged_MRF_2019:
+        title: Moji robotickí priatelia
+        desc: Naučte sa programovať napísaním kódu pre Vašich priateľov!
+      Conditionals_2019:
+        title: Podmienky
+        desc: Pre naučenie sa o podmieňovacích spôsoboch si študenti zahrajú kartovú hru a vytvoria pravidlá ako "ak zahrám červenú kartu, dostanem bod" a "ak zahrám čiernu kartu, ty dostaneš bod."

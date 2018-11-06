@@ -13,6 +13,6 @@ hr:
       Text: tekst
       Start: Početak
       Booleans: Logičke varijable
-      test: uvjet
+      test: provjera
       Name: Ime
       Function: Funkcija

@@ -32,6 +32,7 @@ sr:
   next_page: Следећа страница
   cancel: "Откажи"
   okay: "У реду"
+  or: "или"
   add_teacher_form:
     code:
       label: 'Додај наставника:'
@@ -105,6 +106,7 @@ sr:
     user_type_student: "студент"
     field_is_required: "је обавезан"
     accept_terms: "Морате се сложити да бисте креирали свој налог"
+    email_preference_privacy: "(Погледајте нашу политику приватности)"
     email_preference_yes: "Да"
     email_preference_no: "не"
   school_info:

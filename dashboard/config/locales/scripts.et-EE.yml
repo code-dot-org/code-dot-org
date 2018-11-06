@@ -1687,3 +1687,13 @@ et:
           stages:
             Artist:
               name: Kunstnik
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            Envelope Variables:
+              name: Ümbriku muutujad
+            For Loop Fun:
+              name: For Loop Fun

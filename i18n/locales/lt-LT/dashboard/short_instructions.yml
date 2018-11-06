@@ -403,6 +403,8 @@ lt:
         Šiam namui trūksta stogo! Nupiešk trikampį. Sufleris: visos trys kraštinės yra tokio pat ilgio.
       courseC_artist_prog5_2018: |-
         Šiam namui trūksta stogo! Nupiešk trikampį. Sufleris: visos trys kraštinės yra tokio pat ilgio.
+      courseC_artist_prog5_2019: |-
+        Šiam namui trūksta stogo! Nupiešk trikampį. Sufleris: visos trys kraštinės yra tokio pat ilgio.
       courseC_maze_debugging10: Surask ir ištaisyk klaidas, kad galėčiau pasiekti kiaulę!
       courseD_bee_nestedLoops6_2018: Nuvesk mane prie saulėgrąžų!
       courseD_bounce_events10: Dabar viršuje yra taikinys. Pridėk „pelnyti tašką“ ir „pelnyti tašką priešininkui“  komandas  prie „kai kamuolys pataiko į tikslą“ ir „kai kamuolys nepataiko į raketę“, kad sukurtum žaidimą. Išbandyk, kiek taškų surinksi, kol "priešininkas" surinks dvigubai daugiau.
@@ -418,6 +420,7 @@ lt:
       courseD_bounce_events7: Prikabink blokelius prie kiekvieno „kai“ blokelio. Kamuolis tol turi judėti, kol palies finišą.
       courseD_maze_nestedLoops6: Nuvesk mane prie saulėgrąžų!
       courseD_maze_nestedLoops6_2018: Nuvesk mane prie saulėgrąžų!
+      courseD_maze_nestedLoops6_2019: Nuvesk mane prie saulėgrąžų!
       courseE_artist_functions1: "Labas. Aš zombis menininkas. Aš mėgstu piešti!\nPadėk man nupiešti kvadratinius akinius. Sufleris: atstumas tarp stiklų yra 25 pikseliais trumpesnis nei kvadrato kraštinės ilgis."
       courseE_artist_functions1_2018: "Labas. Aš zombis menininkas. Aš mėgstu piešti!\nPadėk man nupiešti kvadratinius akinius. Sufleris: atstumas tarp stiklų yra 25 pikseliais trumpesnis nei kvadrato kraštinės ilgis."
       courseE_bee_functions1: Surink visą nektarą iš kiekvienos gėlės.

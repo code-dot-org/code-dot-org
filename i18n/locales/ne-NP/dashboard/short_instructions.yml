@@ -1099,14 +1099,19 @@ ne:
       courseE_farmer_concept4: "Now let's go one level deeper! We've\nnested that whole block of code into another loop, but you need to get the\nartist back in place to draw the next line. Which of these code blocks can\nyou place at the end of the outermost loop to draw the whole grid?"
       courseF_artist_for7: "Make three small changes to the\ncode from the last level to get this!"
       courseF_artist_for7_2018: "Make three small changes to the\ncode from the last level to get this!"
+      courseF_artist_for7_2019: "Make three small changes to the\ncode from the last level to get this!"
       courseF_artist_for_challenge1: Can you figure out how to re-create this drawing?
       courseF_artist_for_challenge1_2018: Can you figure out how to re-create this drawing?
+      courseF_artist_for_challenge1_2019: Can you figure out how to re-create this drawing?
       courseF_artist_for_challenge2: "Can you figure out how to re-create this drawing\nwith a single loop?"
       courseF_artist_for_challenge2_2018: "Can you figure out how to re-create this drawing\nwith a single loop?"
+      courseF_artist_for_challenge2_2019: "Can you figure out how to re-create this drawing\nwith a single loop?"
       courseF_bee_for8: "You've got this! What should your\nincrement be to collect 3, 6, 9, 12, 15 nectar?"
       courseF_bee_for8_2018: "You've got this! What should your\nincrement be to collect 3, 6, 9, 12, 15 nectar?"
+      courseF_bee_for8_2019: "You've got this! What should your\nincrement be to collect 3, 6, 9, 12, 15 nectar?"
       courseF_bee_for_challenge2: "Solve this puzzle using the fewest number of\nblocks possible."
       courseF_bee_for_challenge2_2018: "Solve this puzzle using the fewest number of\nblocks possible."
+      courseF_bee_for_challenge2_2019: "Solve this puzzle using the fewest number of\nblocks possible."
       courseF_bee_for_challenge3: "Solve this puzzle using the fewest number of\nblocks possible."
       flappy_1: Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.
       flappy_11: Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones.

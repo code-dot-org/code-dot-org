@@ -101,7 +101,7 @@ it:
             '8': Nessuno
             '9': Roll
             '10': This or That
-            '11': Thiller
+            '11': Thriller
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -483,20 +483,100 @@ it:
         options:
           PROPERTY:
             "'shapeColor'": colore
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': dimensione
+            '"rotation"': rotazione
+            '"x"': posizione x
+            '"y"': posizione y
+            '"direction"': direzione di movimento
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': dimensione
+            '"x"': posizione x
+            '"y"': posizione y
+            '"costume"': costume
+            '"direction"': direzione di movimento
+            '"rotation"': rotazione o direzione
+            '"tint"': tinta
       craft_ifPath:
+        text: |-
+          Se c'è un sentiero a {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": davanti
+            "'right'": a destra
+            "'left'": a sinistra
       craft_ifStandingOn:
+        text: |-
+          Se è sopra {TYPE}
+          {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": corallo blu
+            "'redCoralBlock'": corallo rosso
             "'sand'": sabbia
+            "'wool_blue'": acqua profonda
             "'planksOak'": assi di quercia
+            "'seaLantern'": lanterna marina
       craft_ifStandingOnLimit:
+        text: |-
+          Se è sopra {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": sabbia
+            "'darkPrismarine'": prismarino cupo
+            "'seaLantern'": lanterna marina
       craft_moveForward:
         text: vai avanti
+      craft_placeBlock:
+        text: colloca {blockType}
+        options:
+          blockType:
+            '"strippedOak"': quercia scortecciata
+            '"strippedDarkOak"': rovere scortecciato
+            '"stoneBricks"': mattoni di pietra
+            '"mossyStoneBricks"': mattoni di pietra muschiosi
+            '"crackedStoneBricks"': mattoni di pietra lesionati
+            '"decorativeStoneBricks"': mattoni di pietra cesellati
+            '"blueCoralBlock"': blocco di corallo blu
+            '"pinkCoralBlock"': blocco di corallo rosa
+            '"magentaCoralBlock"': blocco di corallo magenta
+            '"redCoralBlock"': blocco di corallo rosso
+            '"yellowCoralBlock"': blocco di corallo giallo
+            '"blueDeadCoralBlock"': blocco di corallo blu morto
+            '"pinkDeadCoralBlock"': blocco di corallo rosa morto
+            '"magentaDeadCoralBlock"': blocco di corallo magenta morto
+            '"readDeadCoralBlock"': blocco di corallo rosso morto
+            '"yellowDeadCoralBlock"': blocco di corallo giallo morto
+            '"prismarine"': prismarino
+            '"darkPrismarine"': prismarino cupo
+            '"seaLantern"': lanterna marina
+            '"packedIce"': ghiaccio compatto
+            '"blueIce"': ghiaccio blu
+            '"blackConcrete"': calcestruzzo nero
+            '"seaGrass"': prateria di mare
+            '"kelp"': alga
+            '"polishedGranite"': granito levigato
       craft_placeTorch:
         text: metti una torcia
+      craft_repeatUntilConduit:
+        text: |-
+          ripeti fino al completamento del condotto
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          ripeti fino all'obbiettivo
+          {STATEMENT}
+      craft_spawnEntity:
+        text: Uovo {ENTITY}
+      craft_turn:
+        text: gira a {DIR}
+        options:
+          DIR:
+            right: destra ↻
+            left: sinistra ↺
