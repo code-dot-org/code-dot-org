@@ -15,7 +15,7 @@ nav: how_to_nav
 
 Code.org lehetőséget kínál a vállalatok alkalmazottjainak arra, hogy [kapcsolatba lépjenek](<%= codeorg_url('/volunteer') %>) a helyi iskolákkal, hogy ott megosszák szakmai tapasztalataikat, valamint a tanulókat arra inspirálják, hogy foglalkozzanak a számítástechnikával.
 
-[<button>Sign up to volunteer!</button>](<%= codeorg_url('/volunteer') %>) <br /> <br />
+[<button>Jelentkezz önkéntesnek!</button>](<%= codeorg_url('/volunteer') %>) <br /> <br />
 
 További információkért, hogy hogyan csatlakozhatnak az alkalmazottak az iskolához, nézze meg az alábbi[ útmutatót](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>), melyet kifejezetten vállalatoknak szántunk.
 
