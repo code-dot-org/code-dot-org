@@ -1660,3 +1660,13 @@ de:
           stages:
             Artist:
               name: Künstler
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Grundlagen aufbauen
+            Conditionals with Cards:
+              name: Bedingungen mit Karten
+            Envelope Variables:
+              name: Umschlag-Variablen
+            For Loop Fun:
+              name: '„Zähle mit“-Schleifenspaß'
