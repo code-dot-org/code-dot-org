@@ -110,7 +110,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   end
 
   def percent_string(count, total)
-    return 'No data' unless count && total
+    return 'N/A' unless count && total
 
     "#{(100.0 * count / total).round(2)}%"
   end
