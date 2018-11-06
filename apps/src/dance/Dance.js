@@ -270,6 +270,7 @@ Dance.prototype.afterInject_ = function () {
     },
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
+    i18n: danceMsg,
   });
   /** Expose for testing **/
   window.__DanceTestInterface = this.nativeAPI.getTestInterface();
