@@ -14,6 +14,7 @@ class ShareDialog extends Component {
     const { signInState, isProjectLevel, ...otherProps } = this.props;
     // If we're on a project level (i.e. /projects/appname), always show signed
     // in version of the dialog
+
     if (signInState === SignInState.SignedIn || isProjectLevel) {
       return (
         <ShareAllowedDialog {...otherProps}/>
