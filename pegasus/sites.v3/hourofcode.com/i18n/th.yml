@@ -17,11 +17,14 @@ th:
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
   codeorg_homepage_hoc2018_video: 'Watch our video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
   front_header_banner: 'เข้าร่วมเป็นส่วนหนึ่งของกิจกรรมการเรียนรู้ที่ใหญ่ที่สุดในประวัติศาสตร์ ณ วันที่ %{campaign_date}'
   front_intro_default: 'The Hour of Code คือการเคลื่อนไหวทางสังคมที่มีนักเรียนเข้าร่วมกว่าสิบล้านคนในมากกว่า 180 ประเทศ ทุกๆ คนสามารถเข้าร่วมกิจกรรม Hour of Code ได้ทุกที่ ตัวอย่างเล็กๆใน 1 ชั่วโมงพร้อมใช้งานแล้วในกว่า 45 ภาษา ไม้ต้องมีประสบการณ์มาก่อนก็สามารถเข้าร่วมได้ <strong>เข้าร่วมได้ตั้งแต่อายุ 4 - 104 ปี</strong>'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: 'ดูวิดีโอใหม่'
   front_watch_regular_video: 'ดูวิดีโอ'
   front_volunteers: 'ต้องการอาสาสมัครด้านเทคนิค'
@@ -233,7 +236,7 @@ th:
   front_join_us_support: "สนับสนุน"
   front_join_us_more_info: "สำหรับข้อมูลเพิ่มเติม กรุณาเยี่ยมชม <a href='https://code.org'>code.org</a>"
   front_join_us_code_info: "สำหรับข้อมูลเพิ่มเติม กรุณาเยี่ยมชม code.org"
-  front_join_us_n_students_served: "# served"
+  front_join_us_n_students_served: "# served."
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "เรียน​รู้​เพิ่ม​เติม"
   signup_closed: 'ตอนนี้ปิดการลงทะเบียนสำหรับ Hour of Code แล้ว กรุณาตรวจสอบอีกครั้งในเดือนตุลาคมสำหรับการลงทะเบียน Hour of Code ถัดไป'
@@ -292,7 +295,7 @@ th:
   social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "Hour of Code map"
   map_header: '# events registered for Hour of Code 2017'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} events registered in %{year}'
   see_all_events: 'See all events'
   map_header_company: '# by company organizers'
   map_header_country: '# in %{country}'
@@ -420,6 +423,7 @@ th:
   title_stats: Blurbs and Stats
   title_partners: Partners
   title_resources: ทรัพยากร
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Thanks for signing up to host an Hour of Code!
   title_tutorial_guidelines: Activity Guidelines
   title_whole_school: Whole School Participation

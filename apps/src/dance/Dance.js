@@ -11,12 +11,20 @@ import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import {DanceParty} from '@code-dot-org/dance-party';
 import danceMsg from './locale';
-import {reducers, setSong} from './redux';
+import {reducers, setSelectedSong, setSongData} from './redux';
 import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
-
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
+import SignInOrAgeDialog from "../templates/SignInOrAgeDialog";
+import project from "../code-studio/initApp/project";
+import {
+  getSongManifest,
+  getSelectedSong,
+  loadSong,
+  loadSongMetadata,
+  parseSongOptions,
+} from './songs';
 
 const ButtonState = {
   UP: 0,
@@ -62,7 +70,7 @@ Dance.prototype.injectStudioApp = function (studioApp) {
  * @param {!AppOptionsConfig} config
  * @param {!GameLabLevel} config.level
  */
-Dance.prototype.init = async function (config) {
+Dance.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error("GameLab requires a StudioApp");
   }
@@ -101,79 +109,57 @@ Dance.prototype.init = async function (config) {
 
   const showFinishButton = this.level.freePlay || (!this.level.isProjectLevel && !this.level.validationCode);
 
-  const songManifest = await getSongManifest(config.useRestrictedSongs);
-
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
     isProjectLevel: !!config.level.isProjectLevel,
-    songManifest,
   });
 
-  // Pre-register all audio preloads with our Sounds API, which will load
-  // them into memory so they can play immediately:
-  $("link[as=fetch][rel=preload]").each((i, { href }) => {
-    const soundConfig = { id: href };
-    soundConfig[Sounds.getExtensionFromUrl(href)] = href;
-    Sounds.getSingleton().register(soundConfig);
-  });
-
-  const selectedSong = getSelectedSong(songManifest, config);
-  getStore().dispatch(setSong(selectedSong));
-
-  this.updateSongMetadata(getStore().getState().selectedSong);
+  this.initSongsPromise = this.initSongs(config);
 
   ReactDOM.render((
     <Provider store={getStore()}>
-      <AppView
-        visualizationColumn={
-          <DanceVisualizationColumn
-            showFinishButton={showFinishButton}
-            retrieveMetadata={this.updateSongMetadata.bind(this)}
-          />
-        }
-        onMount={onMount}
-      />
+      <div>
+        <SignInOrAgeDialog useDancePartyStyle={true}/>
+        <AppView
+          visualizationColumn={
+            <DanceVisualizationColumn
+              showFinishButton={showFinishButton}
+              setSong={this.setSongCallback.bind(this)}
+            />
+          }
+          onMount={onMount}
+        />
+      </div>
     </Provider>
   ), document.getElementById(config.containerId));
 };
 
-function getSelectedSong(songManifest, config) {
-  // The selectedSong and defaultSong might not be present in the songManifest
-  // in development mode, so just select the first song in the list instead.
-  const songs = songManifest.map(song => song.id);
-  const {selectedSong, defaultSong, isProjectLevel, freePlay} = config.level;
-  if ((isProjectLevel || freePlay) && selectedSong && songs.includes(selectedSong)) {
-    return selectedSong;
-  } else if (defaultSong && songs.includes(defaultSong)) {
-    return defaultSong;
-  } else if (songManifest[0]) {
-    return songManifest[0].id;
+Dance.prototype.initSongs = async function (config) {
+  const songManifest = await getSongManifest(config.useRestrictedSongs);
+  const songData = parseSongOptions(songManifest);
+  const selectedSong = getSelectedSong(songManifest, config);
+
+  // Set selectedSong first, so we don't initially show the wrong song.
+  getStore().dispatch(setSelectedSong(selectedSong));
+  getStore().dispatch(setSongData(songData));
+
+  loadSong(selectedSong, songData);
+  this.updateSongMetadata(selectedSong);
+};
+
+Dance.prototype.setSongCallback = function (songId) {
+  getStore().dispatch(setSelectedSong(songId));
+
+  const songData = getStore().getState().songs.songData;
+  loadSong(songId, songData);
+
+  this.updateSongMetadata(songId);
+
+  const hasChannel = !!getStore().getState().pageConstants.channelId;
+  if (hasChannel) {
+    project.saveSelectedSong(songId);
   }
-}
-
-async function getSongManifest(useRestrictedSongs) {
-  const manifestFilename = useRestrictedSongs ? 'songManifest.json' : 'testManifest.json';
-  const songManifestPromise = fetch(`/api/v1/sound-library/hoc_song_meta/${manifestFilename}`)
-    .then(response => response.json());
-  const promises = [songManifestPromise];
-
-  // We must obtain signed cookies before accessing restricted content.
-  if (useRestrictedSongs) {
-    const signedCookiesPromise = fetch('/dashboardapi/sign_cookies', {credentials: 'same-origin'});
-    promises.push(signedCookiesPromise);
-  }
-
-  const result = await Promise.all(promises);
-  const songManifest = result[0].songs;
-
-  const songPathPrefix = useRestrictedSongs ?
-    '/restricted/' : 'https://curriculum.code.org/media/uploads/';
-
-  return songManifest.map(song => ({
-    ...song,
-    url: `${songPathPrefix}${song.url}.mp3`,
-  }));
-}
+};
 
 Dance.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.winSound, 'win');
@@ -263,19 +249,24 @@ Dance.prototype.afterInject_ = function () {
     ].join(','));
   }
 
-  const recordReplayLog = this.shouldShowSharing();
+  // record a replay log (and generate a video) for both project levels and any
+  // course levels that have sharing enabled
+  const recordReplayLog = this.shouldShowSharing() || this.level.isProjectLevel;
   this.nativeAPI = new DanceParty({
     onPuzzleComplete: this.onPuzzleComplete.bind(this),
     playSound: audioCommands.playSound,
     recordReplayLog,
+    showMeasureLabel: !this.share,
     onHandleEvents: this.onHandleEvents.bind(this),
     onInit: () => {
       this.danceReadyPromiseResolve();
       // Log this so we can learn about how long it is taking for DanceParty to
       // load of all of its assets in the wild (will use the timeSinceLoad attribute)
+      const logSampleRate = 1;
       logToCloud.addPageAction(logToCloud.PageAction.DancePartyOnInit, {
+        logSampleRate,
         share: this.share
-      }, 1 / 20);
+      }, logSampleRate);
     },
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
@@ -363,15 +354,31 @@ Dance.prototype.onReportComplete = function (response) {
  * Click the run button.  Start the program.
  */
 Dance.prototype.runButtonClick = async function () {
+  // Block re-entrancy since starting a run is async
+  // (not strictly needed since we disable the run button,
+  // but better to be safe)
+  if (this.runIsStarting) {
+    return;
+  }
+  // Disable the run button now to give some visual feedback
+  // that the button was pressed. toggleRunReset() will
+  // eventually execute down below, but there are some long-running
+  // tasks that need to complete first
+  const runButton = document.getElementById('runButton');
+  runButton.disabled = true;
+  this.runIsStarting = true;
   await this.danceReadyPromise;
 
   //Log song count in Dance Lab
-  trackEvent('HoC_Song', 'Play', getStore().getState().selectedSong);
+  trackEvent('HoC_Song', 'Play', getStore().getState().songs.selectedSong);
 
-  this.studioApp_.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;
-  this.execute();
+  await this.execute();
+
+  this.studioApp_.toggleRunReset('reset');
+  // Safe to allow normal run/reset behavior now
+  this.runIsStarting = false;
 
   // Enable the Finish button if is present:
   const shareCell = document.getElementById('share-cell');
@@ -402,8 +409,17 @@ Dance.prototype.execute = async function () {
   const validationCallback = new Function('World', 'nativeAPI', 'sprites', this.level.validationCode);
   this.nativeAPI.registerValidation(validationCallback);
 
-  const songData = await this.songMetadataPromise;
-  this.nativeAPI.play(songData);
+  // songMetadataPromise will resolve immediately if the request which populates
+  // it has not yet been initiated. Therefore we must first wait for song init
+  // to complete before awaiting songMetadataPromise.
+  await this.initSongsPromise;
+
+  const songMetadata = await this.songMetadataPromise;
+  return new Promise(resolve => {
+    this.nativeAPI.play(songMetadata, () => {
+      resolve();
+    });
+  });
 };
 
 Dance.prototype.initInterpreter = function () {
@@ -520,13 +536,7 @@ Dance.prototype.shouldShowSharing = function () {
 };
 
 Dance.prototype.updateSongMetadata = function (id) {
-  this.songMetadataPromise = this.loadSongMetadata(id);
-};
-
-Dance.prototype.loadSongMetadata = async function (id) {
-  let songDataPath = '/api/v1/sound-library/hoc_song_meta';
-  const response = await fetch(`${songDataPath}/${id}.json`);
-  return await response.json();
+  this.songMetadataPromise = loadSongMetadata(id);
 };
 
 /**

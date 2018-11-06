@@ -17,11 +17,14 @@ ky:
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
   codeorg_homepage_hoc2018_video: 'Watch our video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
   front_header_banner: '%{campaign_date} тарыхтагы эң чоң үйрөтүү иш-чарасына катыш'
   front_intro_default: 'Код сааты - 180+ өлкөдөн ондогон миллион окуучулар катышкан глобалдык кыймыл. Каалаган киши, каалаган жерде Код сааты иш-чарасын уюштура алат. Бир сааттык үйрөтмөлөр 45тен ашык тилде жеткиликтүү. Тажрыйбанын кереги жок. <strong>4төн 104 жашка чейин.</strong>'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: 'Жаңы видео көргүлө'
   front_watch_regular_video: 'Видео көргүлө'
   front_volunteers: 'Техникалык ыктыярчылар керек'
@@ -292,7 +295,7 @@ ky:
   social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "Код саатынын картасы"
   map_header: 'Дүйнө жүзүндөгү #Код сааты иш-чаралары'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} events registered in %{year}'
   see_all_events: 'Бардык иш-чараларды көрүү'
   map_header_company: '# компаниянын уюштуруучулары тарабынан'
   map_header_country: '# %{country}'
@@ -420,6 +423,7 @@ ky:
   title_stats: Жарыялар жана пайдалуу стаститика
   title_partners: Өнөктөр
   title_resources: Булактар
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Код саатын кабыл алуу үчүн катталганыңызга ырахмат!
   title_tutorial_guidelines: Иш-аракет жетектемелери
   title_whole_school: Мектептин толук катышуусу

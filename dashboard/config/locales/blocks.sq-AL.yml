@@ -247,6 +247,14 @@ sq:
         text: kthehu majtas
       RyanLab_turnRight:
         text: kthehu djathtas
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
       craft_ifPath:
         options:
           DIR:

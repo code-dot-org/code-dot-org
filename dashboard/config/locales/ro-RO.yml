@@ -50,6 +50,7 @@ ro:
   next_resource: Următoarea resursă
   cancel: Revocare
   okay: Bine
+  or: sau
   heading_x_of_y: "%{heading} (pagina%{x} din %{y})"
   add_teacher_form:
     code:
@@ -206,7 +207,7 @@ ro:
     remember: Ține-mă minte
     submit: Loghează-te
   signin:
-    try_heading: Dorești să încerci să programezi fără a te înregistra?
+    try_heading: Dorești să încerci să programezi fără înscriere?
     try_hoc: Încearcă prima dată o Oră de Programare
     try_20hours: Încearcă cele 20 de ore ale noastre de Introducere în Informatică
   signinsection:
@@ -311,7 +312,7 @@ ro:
           (%{username}) şi parola dvs.
   nav:
     header:
-      finished_hoc: Am terminat Ora mea de Programare
+      finished_hoc: Am terminat Ora mea de Cod
       sign_in_to_save: Loghează-te pentru a salva progresul
       free_play:
         playlab: Creează o aplicație "Play Lab"
@@ -831,6 +832,8 @@ ro:
       title: Minecraft
       body: Programeaza animale şi alte creaturi Minecraft în propria ta versiune
         a jocului.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     sports:

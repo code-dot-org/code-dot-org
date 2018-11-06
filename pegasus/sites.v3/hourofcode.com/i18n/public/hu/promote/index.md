@@ -12,15 +12,15 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# Get your community involved in the Hour of Code
+# Vond be a közösségedet a "Hour of Code" kezdeményezésbe
 
 ## 1. Mondd el másoknak
 
-Tell your friends about the **#HourOfCode**!
+Mesélj a barátaidnak a **#HourOfCode** kezdeményezésről!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Javasold, hogy az egész iskola tartsa meg a Kódolás Óráját
+## 2. Javasold, hogy az egész iskola tartsa meg a "Hour of Code" eseményt
 
 [Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up.
 

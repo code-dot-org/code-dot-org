@@ -44,6 +44,26 @@ module LevelsHelper
     view_options(callouts: [])
   end
 
+  # Provide a presigned URL that can upload the video log to S3 for processing
+  # in to a video. Currently only used by Dance, in both project mode and for
+  # the last level of the progression.
+  # NOTE: any client that has this value set will be able to upload a log and
+  # regenerate the share video. Make sure this is only provided to views with
+  # edit permission (ie, the project creator, but not the sharing view)
+  def replay_video_view_options
+    signed_url = AWS::S3.presigned_upload_url(
+      # TODO: elijah point to our custom CloudFront domain so we don't have to
+      # worry about whitelists
+      # "dance-api.code.org",
+      "cdo-p5-replay-source-staging.s3.amazonaws.com",
+      "source/#{@view_options['channel']}",
+      virtual_host: true
+      # manually force https since the AWS SDK assumes all virtual hosts are
+      # http-only
+    ).sub('http://', 'https://')
+    view_options(signed_replay_log_url: signed_url)
+  end
+
   # If given a user, find the channel associated with the given level/user.
   # Otherwise, gets the storage_id associated with the (potentially signed out)
   # current user, and either finds or creates a channel for the level

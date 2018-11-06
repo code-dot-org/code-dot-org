@@ -1,6 +1,10 @@
 ---
 en:
   data:
+    contract_match:
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        Big Triangle: Triángulo grande
+        Big Triangle|Image|Number|String: Triángulo grande|Imagen|Número|Cadena
     evaluation_multi:
       U5 evaluation q1:
         'No': 'No'
@@ -1025,6 +1029,8 @@ en:
         Image: Imagen
         Number: Número
         String: Cadena
+      PDK5 Pair programming match:
+        Pair programming: Programación de pares
       PDK5 What is unplugged:
         Question: Pregunta
       'U2L06 - Matching: Label the Diagram':

@@ -17,11 +17,14 @@ ta:
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
   codeorg_homepage_hoc2018_video: 'Watch our video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
   front_header_banner: '%{campaign_date} வரலாற்றில் மிகப் பெரிய கற்றல் நிகழ்வு சேர'
   front_intro_default: 'கோட் ஆஃப் ஹவர் 180+ நாடுகளில் பல்லாயிரக்கணக்கான மாணவர்களை அடையும் ஒரு உலகளாவிய இயக்கமாகும். எவரும் எங்கு வேண்டுமானாலும் கோடீஸ் நிகழ்வு ஏற்பாடு செய்யலாம். ஒரு மணி நேர பயிற்சிகள் 45 மொழிகளில் கிடைக்கின்றன. அனுபவம் தேவை இல்லை. <strong> வயது 4 முதல் 104 வரை. </ strong>'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: 'புதிய வீடியோ'
   front_watch_regular_video: 'வீடியோ பார்க்க'
   front_volunteers: 'தொழில்நுட்ப தொண்டர்கள் தேவை'
@@ -292,7 +295,7 @@ ta:
   social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "மணி குறியீடு வரைபடம்"
   map_header: '# நிகழ்வுகளை பதிவு குறியீடு 2017 மணி'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} events registered in %{year}'
   see_all_events: 'எல்லா நிகழ்வுகளையும் காட்டு'
   map_header_company: '# நிறுவனம் அமைப்பாளர்கள்'
   map_header_country: '%{country}+ இல்'
@@ -420,6 +423,7 @@ ta:
   title_stats: Blurbs and Stats
   title_partners: Partners
   title_resources: வளங்கள்
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Thanks for signing up to host an Hour of Code!
   title_tutorial_guidelines: Activity Guidelines
   title_whole_school: Whole School Participation
