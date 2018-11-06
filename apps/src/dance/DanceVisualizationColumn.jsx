@@ -69,7 +69,8 @@ class DanceVisualizationColumn extends React.Component {
     //            'student_y', age < 13. 'unknown', signed out users
     const signedInOver13 = this.props.userType === 'teacher' || this.props.userType === 'student';
     const teacherOverride = queryString.parse(window.location.search).songfilter === 'on';
-    const filterOff = (signedInOver13 || sessionStorage.getItem('anon_over13')) && !teacherOverride;
+    const signedOutAge = sessionStorage.getItem('anon_over13') ? sessionStorage.getItem('anon_over13') : false;
+    const filterOff = (signedInOver13 || signedOutAge) && !teacherOverride;
 
     return (
       <span>
