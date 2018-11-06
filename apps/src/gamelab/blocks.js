@@ -47,7 +47,7 @@ const customInputTypes = {
       currentInputRow.appendTitle(button, inputConfig.name);
     },
     generateCode(block, arg) {
-      return block.getTitleValue(arg.name);
+      return Blockly.JavaScript.translateVarName(block.getTitleValue(arg.name));
     },
   },
   locationVariableDropdown: {
@@ -91,7 +91,7 @@ const customInputTypes = {
         .appendTitle(new Blockly.FieldImageDropdown(sprites(), 32, 32), inputConfig.name);
     },
     generateCode(block, arg) {
-      return block.getTitleValue(arg.name);
+      return Blockly.JavaScript.translateVarName(block.getTitleValue(arg.name));
     },
   },
   spritePicker: {
@@ -126,7 +126,7 @@ const customInputTypes = {
         .appendTitle(new Blockly.FieldVariable(null, null, null, Blockly.BlockValueType.SPRITE), inputConfig.name);
     },
     generateCode(block, arg) {
-      return block.getTitleValue(arg.name);
+      return Blockly.JavaScript.translateVarName(block.getTitleValue(arg.name));
     },
   },
 };
