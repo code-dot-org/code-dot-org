@@ -554,7 +554,8 @@ Dance.prototype.updateSongMetadata = function (id) {
 Dance.prototype.onHandleEvents = function (currentFrameEvents) {
   this.hooks.find(v => v.name === 'runUserEvents').func(currentFrameEvents);
   this.tickCount += 1;
-  this.captureInitialImage();
+  // TODO: doesn't fire on every draw?
+  this.captureThumbnailImage();
 };
 
 /**
@@ -582,22 +583,21 @@ Dance.prototype.getAppReducers = function () {
 };
 
 // Number of ticks after which to capture a thumbnail image of the play space.
-const CAPTURE_TICK_COUNT = 5;
+const CAPTURE_TICK_INTERVAL = 5;
 
 /**
- * Capture a thumbnail image of the play space every CAPTURE_TICK_COUNT ticks.
+ * Capture a thumbnail image of the play space every CAPTURE_TICK_INTERVAL ticks.
  */
-Dance.prototype.captureInitialImage = function () {
-  if (this.tickCount % CAPTURE_TICK_COUNT !== 0) {
+Dance.prototype.captureThumbnailImage = function () {
+  if (this.tickCount % CAPTURE_TICK_INTERVAL !== 0) {
     return;
   }
-  const callback = (pngBlob) => this.onThumbnailCapture(pngBlob);
-  getThumbnailFromCanvas(document.getElementById('defaultCanvas0'), callback);
-};
 
-/**
- * TODO: (madelynkasula) add description
- */
-Dance.prototype.onThumbnailCapture = function (pngBlob) {
-  this.thumbnailBlob = pngBlob;
+  // Overwrite thumbnailBlob if we receive a blob from getThumbnailFromCanvas
+  const onComplete = (pngBlob) => {
+    if (pngBlob) {
+      this.thumbnailBlob = pngBlob;
+    }
+  };
+  getThumbnailFromCanvas(document.getElementById('defaultCanvas0'), onComplete);
 };
