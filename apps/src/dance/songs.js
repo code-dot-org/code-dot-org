@@ -65,6 +65,11 @@ export function loadSong(songId, songData) {
   Sounds.getSingleton().register(options);
 }
 
+export function unloadSong(songId, songData) {
+  const url = songData[songId].url;
+  Sounds.getSingleton().unload(url);
+}
+
 export async function loadSongMetadata(id) {
   let songDataPath = '/api/v1/sound-library/hoc_song_meta';
   const response = await fetch(`${songDataPath}/${id}.json`);
