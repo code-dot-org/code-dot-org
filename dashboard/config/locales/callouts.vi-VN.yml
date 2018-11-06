@@ -162,13 +162,22 @@ vi:
       MC_HOC_2017_03_Cole_callout:
         MC_HOC_2017_03_Cole_1: Đây là vòng lặp 'lặp lại'!  Đưa nó vào khu vực làm
           việc và thêm mã lệnh mà bạn muốn thực hiện nhiều lần.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Đây là vòng lặp 'lặp lại'!  Đưa nó vào khu vực làm
+          việc và thêm mã lệnh mà bạn muốn thực hiện nhiều lần.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex
+          thì không thể!
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex
           thì không thể!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Di chuyển vào phần khu vực làm việc và thêm một số
           mã lệnh để lặp lại nhiều lần!
       MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Bạn không thể ném các khối lệnh đi, nhưng bạn có thể
+          chỉnh sửa chúng!
+      MC_HOC_2017_06_Cole_2019_callout:
         MC_HOC_2017_06_Cole_1: Bạn không thể ném các khối lệnh đi, nhưng bạn có thể
           chỉnh sửa chúng!
       MC_HOC_2017_08_RY_callout:
@@ -178,6 +187,9 @@ vi:
         MC_HOC_2017_08_RY_1: Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex
           thì không thể!
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex
+          thì không thể!
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex
           thì không thể!
       Mike Playlab Project_callout:

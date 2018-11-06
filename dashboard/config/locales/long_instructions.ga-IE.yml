@@ -458,9 +458,13 @@ ga:
         go léir a bhailiú leis an líon is lú blocanna agus is féidir.
       courseD_bee_nestedLoops2_2018: An uair seo, cabhraigh leis an mbeach an neachtar
         go léir a bhailiú leis an líon is lú blocanna agus is féidir.
+      courseD_bee_nestedLoops2_2019: An uair seo, cabhraigh leis an mbeach an neachtar
+        go léir a bhailiú leis an líon is lú blocanna agus is féidir.
       courseD_bee_nestedLoops2_predict1: An uair seo, cabhraigh leis an mbeach an
         neachtar go léir a bhailiú leis an líon is lú blocanna agus is féidir.
       courseD_bee_nestedLoops2_predict1_2018: An uair seo, cabhraigh leis an mbeach
+        an neachtar go léir a bhailiú leis an líon is lú blocanna agus is féidir.
+      courseD_bee_nestedLoops2_predict1_2019: An uair seo, cabhraigh leis an mbeach
         an neachtar go léir a bhailiú leis an líon is lú blocanna agus is féidir.
       courseD_bee_nestedLoops5: 'Bailigh an neachtar go léir ó gach bláth agus déan
         mil ag an gcíor mheala. Úsáid lúb neadaithe. '
@@ -469,10 +473,14 @@ ga:
         mil ag an gcíor mheala. Úsáid lúb neadaithe. '
       courseD_bee_nestedLoops8_2018: 'Bailigh an neachtar go léir ó gach bláth agus
         déan mil ag an gcíor mheala. Úsáid lúb neadaithe. '
+      courseD_bee_nestedLoops8_2019: 'Bailigh an neachtar go léir ó gach bláth agus
+        déan mil ag an gcíor mheala. Úsáid lúb neadaithe. '
       courseD_bee_nestedLoops9: Déan an mhil go léir.
       courseD_bee_nestedLoops9_2018: Déan an mhil go léir.
+      courseD_bee_nestedLoops9_2019: Déan an mhil go léir.
       courseD_bee_nestedLoops9_predict2: Déan an mhil go léir.
       courseD_bee_nestedLoops9_predict2_2018: Déan an mhil go léir.
+      courseD_bee_nestedLoops9_predict2_2019: Déan an mhil go léir.
       courseD_bee_nested_loops_challenge1: Téimis ag tóraíocht taisce - le lúba! Cabhraigh
         leis an mbailitheoir ar a laghad dhá charn maoine a shroicheadh gan ach na
         blocanna sa mbosca uirlisí a úsáid.
@@ -511,14 +519,21 @@ ga:
       courseD_maze_nestedLoops4_2018: Treoraigh go dtí an lus gréine mé leis an líon
         is lú blocanna agus is féidir! Déan iarracht bloc "athdhéan" amháín a chur
         isteach i gceann eile, chun an méid cóid a laghdú.
+      courseD_maze_nestedLoops4_2019: Treoraigh go dtí an lus gréine mé leis an líon
+        is lú blocanna agus is féidir! Déan iarracht bloc "athdhéan" amháín a chur
+        isteach i gceann eile, chun an méid cóid a laghdú.
       courseD_maze_ramp1: Sa dúshlán seo, ceangail na blocanna go léir le chéile agus
         cliceáil "Rith" lena chur ar siúl!
       courseD_maze_ramp1_2018: Sa dúshlán seo, ceangail na blocanna go léir le chéile
         agus cliceáil "Rith" lena chur ar siúl!
+      courseD_maze_ramp1_2019: Sa dúshlán seo, ceangail na blocanna go léir le chéile
+        agus cliceáil "Rith" lena chur ar siúl!
       courseD_maze_ramp5c: Cabhraigh leis an éan an mhuc a bhaint amach.
       courseD_maze_ramp5c_2018: Cabhraigh leis an éan an mhuc a bhaint amach.
+      courseD_maze_ramp5c_2019: Cabhraigh leis an éan an mhuc a bhaint amach.
       courseD_maze_ramp5d: Cabhraigh leis an éan an mhuc a bhaint amach.
       courseD_maze_ramp5d_2018: Cabhraigh leis an éan an mhuc a bhaint amach.
+      courseD_maze_ramp5d_2019: Cabhraigh leis an éan an mhuc a bhaint amach.
       courseD_maze_until10: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until10_2018: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until10_predict2: Cabhraigh leis an zombaí an lus gréine a fháil.
@@ -567,12 +582,17 @@ ga:
       courseF_artist_variablesFP_2018: "**Saorimirt:** Úsáid ar fhoghlaim tú go dtí
         seo chun do phictiúr féin a dhéanamh. \n\nConas is féidir leat athróga a úsáid
         le cearnóga, peinteagáin, nó heicseagáin?"
+      courseF_artist_variablesFP_2019: "**Saorimirt:** Úsáid ar fhoghlaim tú go dtí
+        seo chun do phictiúr féin a dhéanamh. \n\nConas is féidir leat athróga a úsáid
+        le cearnóga, peinteagáin, nó heicseagáin?"
       courseF_artist_variables_FP: "**Saorimirt:** Úsáid ar fhoghlaim tú go dtí seo
         chun do phictiúr féin a dhéanamh. \n\nConas is féidir leat athróga a úsáid
         le cearnóga, peinteagáin, nó heicseagáin?"
       courseF_bee_for_challenge2: Réitigh an dúshlán seo leis an líon is lú blocanna
         agus is féidir.
       courseF_bee_for_challenge2_2018: Réitigh an dúshlán seo leis an líon is lú blocanna
+        agus is féidir.
+      courseF_bee_for_challenge2_2019: Réitigh an dúshlán seo leis an líon is lú blocanna
         agus is féidir.
       frozen circle function in circle: Anois déanaimis fiche ciorcal forluite, ag
         casadh ocht gcéim déag tar éis gach ciorcal.

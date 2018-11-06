@@ -1505,19 +1505,26 @@ cs:
       Crack a Caesar Cipher: Pokyny
       Crack a Caesar Cipher_2018: Pokyny
       Dance Party 1-validated: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
+      Dance Party 1-validated_2019: 'Co si myslíte, že se stane, když kliknete na
+        mimozemšťana?  '
       Dance Party 1-validated_simple: 'Co si myslíte, že se stane, když kliknete na
         mimozemšťana?  '
       Dance Party 2: Změňte chování uvnitř bloku "___ begins ___" tak, aby se mimozemšťan
         roztočil.
+      Dance Party 2_2019: Změňte chování uvnitř bloku "___ begins ___" tak, aby se
+        mimozemšťan roztočil.
       Dance Party 2_simple: Změňte chování uvnitř bloku "___ begins ___" tak, aby
         se mimozemšťan roztočil.
       Dance Party 3 - Validated: 'Vytvořit nový sprite pojmenovaný "alien2", který
         bude po kliknutí dělat různé taneční pohyby.  '
       Dance Party 3: 'Vytvořit nový sprite pojmenovaný "alien2", který bude po kliknutí
         dělat různé taneční pohyby.  '
+      Dance Party 3_2019: 'Vytvořit nový sprite pojmenovaný "alien2", který bude po
+        kliknutí dělat různé taneční pohyby.  '
       Dance Party 3_simple: 'Vytvořit nový sprite pojmenovaný "alien2", který bude
         po kliknutí dělat různé taneční pohyby.  '
       Dance Party Predict: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
+      Dance Party Predict_2019: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
       Dance Party Predict_simple: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
       Eval Define Funcs 2: Pojďme se podívat dovnitř funkce "zelený trojúhelník" abychom
         viděli, jak funguje. Můžete ji upravit tak, aby funkce "zelený trojúhelník"
@@ -1536,6 +1543,8 @@ cs:
       FoodFight_2018: Toto je příklad hry jakou můžete vytvořit v play lab.
       Function intro Ryan: Použijte dvakrát funkci „postavit most“ a udělejte cestu
         k pochodni.
+      Function intro Ryan_2019: Použijte dvakrát funkci „postavit most“ a udělejte
+        cestu k pochodni.
       Get To The Goal: Vytvořte, co chcete. Toto je příklad hry kde hádáte čísla!
       Guess The Number 2: Vytvořte, co chcete. Toto je příklad hry kde hádáte čísla!
       Guess The Number: Vytvořte, co chcete. Toto je příklad hry kde hádáte čísla!
@@ -1753,30 +1762,42 @@ cs:
         se pomocí **kláves se šipkami** a vítězství získáte, když se dostanete k truhle.
       MC_HOC_2017_01_RETRY: Přesuňte agenta na nášlapnou desku, stiskněte tlačítko
         „Spustit“ a pomocí kláves se šipkami přemístěte hráče z domu, aby sebral truhlu.
+      MC_HOC_2017_01_RETRY_2019: Přesuňte agenta na nášlapnou desku, stiskněte tlačítko
+        „Spustit“ a pomocí kláves se šipkami přemístěte hráče z domu, aby sebral truhlu.
       MC_HOC_2017_02: Přesuňte agenta na nášlapnou desku.
       MC_HOC_2017_02_Cole: Přesuňte agenta na nášlapnou desku, aby se hráč {currentPlayerName}
+        mohl dostat k mapě.
+      MC_HOC_2017_02_Cole_2019: Přesuňte agenta na nášlapnou desku, aby se hráč {currentPlayerName}
         mohl dostat k mapě.
       MC_HOC_2017_02_Kiki: Přesuňte agenta na nášlapnou desku a poté přesuňte hráče
         na oranžové políčko.
       MC_HOC_2017_02_Will: Přesuňte agenta na nášlapnou desku.
       MC_HOC_2017_03_Cole: Napište kód, aby agent otevřel bránu.
+      MC_HOC_2017_03_Cole_2019: Napište kód, aby agent otevřel bránu.
       MC_HOC_2017_03_Kiki: Přesuňte agenta na nášlapnou desku.
       MC_HOC_2017_04: Upravte cyklus z poslední hádanky tak, abyste pomohli agentovi
         udělat cestu přes širší část této řeky.
       MC_HOC_2017_04POINT5_Cole: Přesuňte agenta na nášlapnou desku.
       MC_HOC_2017_04POINT5_RYAN: Přesuňte agenta na nášlapnou desku.
+      MC_HOC_2017_04POINT5_RYAN_2019: Přesuňte agenta na nášlapnou desku.
       MC_HOC_2017_04_Cole: Přesuňte agenta na nášlapnou desku.
+      MC_HOC_2017_04_Cole_2019: Přesuňte agenta na nášlapnou desku.
       MC_HOC_2017_04_Kiki: Přesuňte agenta na nášlapnou desku.
       MC_HOC_2017_05: Pomozte pomocí funkce agentovi přesunout se na nášlapnou desku.
       MC_HOC_2017_05_Cole: Přesuňte hráče k lopatě.
+      MC_HOC_2017_05_Cole_2019: Přesuňte hráče k lopatě.
       MC_HOC_2017_05_Josh: Přesuňte hráče k lopatě.
       MC_HOC_2017_05_Kiki: Přesuňte hráče na oranžové políčko.
       MC_HOC_2017_06_Cole: Opravte tento kód, aby agent postavil most přes tuto řeku.
+      MC_HOC_2017_06_Cole_2019: Opravte tento kód, aby agent postavil most přes tuto
+        řeku.
       MC_HOC_2017_06_Josh: Opravte tento kód, abyste pomohli agentovi postavit most
         přes tuto řeku.
       MC_HOC_2017_06_Kiki: Opravte tento kód, abyste pomohli agentovi postavit most
         přes tuto řeku.
       MC_HOC_2017_07_Cole: Zničte led a dostaňte hráče {currentPlayerName} k vozíku.
+      MC_HOC_2017_07_Cole_2019: Zničte led a dostaňte hráče {currentPlayerName} k
+        vozíku.
       MC_HOC_2017_07_Kiki: Uvolněte pomocí funkce cestu k oranžovému políčku.
       MC_HOC_2017_07a_Kiki: Uvolněte cestu k oranžovému políčku.
       MC_HOC_2017_08_Cole: Upravte uvedenou funkci tak, aby fungovala v tomto biomu.
@@ -1790,16 +1811,20 @@ cs:
       MC_HOC_2017_10_Cole_old: Vytvořte funkci pro dokončení tohoto vozíku.
       MC_HOC_2017_10_Kiki: Vytvořte funkci pro dokončení tohoto vozíku.
       MC_HOC_2017_10_RETRY: Použijte funkce pro dokončení kolejí pro vozík.
+      MC_HOC_2017_10_RETRY_2019: Použijte funkce pro dokončení kolejí pro vozík.
       MC_HOC_2017_10_RYAN: Vytvořte funkci pro dokončení tohoto vozíku.
       MC_HOC_2017_10_RYAN2: Vytvořte funkci pro dokončení tohoto vozíku.
       MC_HOC_2017_13_Cole: "**Volná hra:** A teď můžete objevovat na vlastní pěst!"
       MC_HOC_2017_4.5v2: Přesuňte agenta na nášlapnou desku.
       MC_HOC_2017_Ali: Najděte pomocí funkcí cestu přes lávu.
+      MC_HOC_2017_Ali_2019: Najděte pomocí funkcí cestu přes lávu.
       MC_HOC_2017_FP10x10: "**Volná hra:** Dokážete sebrat všechny diamanty v této
         úrovni?"
       MC_HOC_2017_FP10x10_RE: "**Volná hra:** Dokážete sebrat všechny diamanty v této
         úrovni?"
       MC_HOC_2017_FP20x20: "**Volná hra:** A teď můžete objevovat na vlastní pěst!"
+      MC_HOC_2017_FP20x20_2019: "**Volná hra:** A teď můžete objevovat na vlastní
+        pěst!"
       MC_HOC_2017_Ryan_03: Nyní pomozte pomocí cyklů agentovi postavit most přes řeku
         tím, že umístíte bloky do vody.
       MC_HOC_2017_Ryan_05: Zničte tyto kaktusy, aby se mohl hráč dostat do cíle.
@@ -2169,6 +2194,7 @@ cs:
       Underground Mining Coal_2018: Nejcennější suroviny najdeš v podzemí, ale je
         tam tma. Rozmísti alespoň dvě pochodně a natěž nejméně 2 kusy uhlí.
       Virtual Pet 1 Predict: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
+      Virtual Pet 1 Predict_2019: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
       Virtual Pet 1 Predict_simple: 'Co si myslíte, že se stane, když kliknete na
         mimozemšťana?  '
       aE7: Když zkopíruješ tento cyklus a otočíš vlevo místo vpravo, co se stane?
@@ -2312,6 +2338,8 @@ cs:
         Tip: všechny tři strany jsou stejně dlouhé.'
       courseC_artist_prog5_2018: 'Tenhle domek potřebuje střechu! Nakresli trojúhelník.
         Tip: všechny tři strany jsou stejně dlouhé.'
+      courseC_artist_prog5_2019: 'Tenhle domek potřebuje střechu! Nakresli trojúhelník.
+        Tip: všechny tři strany jsou stejně dlouhé.'
       courseC_collector_prog_challenge1: Podívejte se pozorně! Můžete získat všech
         **10** kousků pokladu?
       courseC_collector_prog_challenge1_2018: Podívejte se pozorně! Můžete získat
@@ -2379,6 +2407,8 @@ cs:
         med na každé plástvi. Použij vnořené cykly. '
       courseD_bee_nestedLoops8_2018: 'Sesbírej všechen nektar z každého květu a udělej
         med na každé plástvi. Použij vnořené cykly. '
+      courseD_bee_nestedLoops8_2019: 'Sesbírej všechen nektar z každého květu a udělej
+        med na každé plástvi. Použij vnořené cykly. '
       courseD_bounce_events10: Nyní je cíl na vrcholu. Spoj bloky "skóre" a "skóre
         protihráče" s bloky "když je míč v cíli" a "když míč mine pálku", abys vytvořil
         hru. Podívej se, kolik bodů můžeš získat předtím, než tvůj protihráč skóruje
@@ -2413,8 +2443,10 @@ cs:
         všechen med.'
       courseD_maze_nestedLoops4: Dostaň mě ke slunečnici!
       courseD_maze_nestedLoops4_2018: Dostaň mě ke slunečnici!
+      courseD_maze_nestedLoops4_2019: Dostaň mě ke slunečnici!
       courseD_maze_nestedLoops6: Dostaň mě ke slunečnici!
       courseD_maze_nestedLoops6_2018: Dostaň mě ke slunečnici!
+      courseD_maze_nestedLoops6_2019: Dostaň mě ke slunečnici!
       courseE_artist_functions1: 'Nazdar. Já jsem zombie umělec. Mám rád kreslení!
         Pomoz mi nakreslit hranaté brýle.  Rada: můstek mezi skly je kratší o 25 pixelů
         než strana čtverce.'
@@ -2446,12 +2478,18 @@ cs:
         dosáhl!
       courseF_artist_for7_2018: Udělej tři malé změny do kódu z poslední úrovni, abys
         to dosáhl!
+      courseF_artist_for7_2019: Udělej tři malé změny do kódu z poslední úrovni, abys
+        to dosáhl!
       courseF_artist_for_challenge1: Umíš zjistit, jak znovu se vytvoří tato kresba?
       courseF_artist_for_challenge1_2018: Umíš zjistit, jak znovu se vytvoří tato
+        kresba?
+      courseF_artist_for_challenge1_2019: Umíš zjistit, jak znovu se vytvoří tato
         kresba?
       courseF_artist_for_challenge2: Umíš zjistit, jak znovu vytvořit tuto kresbu
         pomocí jediného cyklu?
       courseF_artist_for_challenge2_2018: Umíš zjistit, jak znovu vytvořit tuto kresbu
+        pomocí jediného cyklu?
+      courseF_artist_for_challenge2_2019: Umíš zjistit, jak znovu vytvořit tuto kresbu
         pomocí jediného cyklu?
       courseF_bee_conditionals10: Sesbírej všechen nektar a vyrob všechen med.
       courseF_bee_conditionals10_2018: Sesbírej všechen nektar a vyrob všechen med.
@@ -2459,9 +2497,13 @@ cs:
         9, 12, 15? \r\n"
       courseF_bee_for8_2018: "Máš to! Jak by být tvůj přírůstek ke sběru nektaru 3,
         6, 9, 12, 15? \r\n"
+      courseF_bee_for8_2019: "Máš to! Jak by být tvůj přírůstek ke sběru nektaru 3,
+        6, 9, 12, 15? \r\n"
       courseF_bee_for_challenge2: Vyřeš tento puzzle s co nejmenším možným počtem
         bloků.
       courseF_bee_for_challenge2_2018: Vyřeš tento puzzle s co nejmenším možným počtem
+        bloků.
+      courseF_bee_for_challenge2_2019: Vyřeš tento puzzle s co nejmenším možným počtem
         bloků.
       courseF_bee_for_challenge3: Vyřeš tento puzzle s co nejmenším možným počtem
         bloků.

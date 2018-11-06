@@ -5,15 +5,48 @@ pl:
       Loops: Pętle
       Functions: Funkcje
       Color: Kolor
+      Brushes: Pędzle
       Math: Matematyka
       Logic: Logika
       Variables: Zmienne
+      Number: Liczba
+      String: Tekst
+      Image: Obraz
+      Boolean: Wartość logiczna
       Conditionals: Warunkowe
       Events: Zdarzenia
+      Games/Score: Gry/Punkty
+      Comments: Komentarze
+      Category: Kategoria
       Text: Tekst
+      Picker: Selektor
+      Comment: Komentarz
+      'Variables ': 'Zmienne '
+      everythingelse: pozostałe
+      numbers: liczby
+      Numbers: Liczby
+      Default: Domyślne
+      World: Świat
+      Behaviors: Zachowanie
+      Advanced: Zaawansowane
       Start: Start
+      Locations: Położenie
+      Dancing: Taniec
+      Dancers: Tancerze
+      Groups: Grupy
+      Sprite: Obiekt
+      Brush: Pędzel
+      Make Sprite: Utwórz obiekt
+      Movement: Ruch
       Booleans: Wartości logiczne
+      Sprite Properties: Właściwości obiektu
+      While Events: Podczas zdarzenia
+      Predefined: Wstępnie zdefiniowane
       test: test
+      test2: test2
       Foo: Foo
       Name: Imię/Nazwisko
+      NEW BLOCKS: NOWE BLOKI
+      'Functions ': 'Funkcje '
+      Game/Score: Gra/Punkty
       Function: Funkcja

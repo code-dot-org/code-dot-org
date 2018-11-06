@@ -1620,3 +1620,17 @@ he:
           stages:
             Dance Party:
               name: מסיבת ריקודים
+        coursef-2019:
+          stages:
+            Sequence in Maze:
+              name: רצף במבוך
+            Debugging with Scrat:
+              name: ניפוי שגיאות עם סקראט
+            Conditionals with Cards:
+              name: התניות עם כרטיסים
+            For Loop Fun:
+              name: כיף עם לולאת "עבור"
+            For Loops in Bee:
+              name: לולאות עבור עם הדבורה
+            For Loops in Artist:
+              name: לולאות עבור עם האמן

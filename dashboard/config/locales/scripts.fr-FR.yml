@@ -2696,3 +2696,13 @@ fr:
           stages:
             Artist:
               name: Artiste
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Construire une fondation
+            Conditionals with Cards:
+              name: Instructions conditionnelles avec des cartes
+            Envelope Variables:
+              name: Les variables de l'enveloppe
+            For Loop Fun:
+              name: Jouons avec les boucles « Pour »

@@ -39,6 +39,8 @@ pl:
       CSD U3 L7 Freeplay_2018: Czas na zabawę
       CSD U3 L9 Freeplay: Czas na zabawę
       CSD U3 L9 Freeplay_2018: Czas na zabawę
+      CSD U3 Sprite Properties Map: Właściwości obiektu
+      CSD U3 Sprite Properties Map_2018: Właściwości obiektu
       CSD U3 Variables Map: Zmienne
       CSD U3 Variables Map_2018: Zmienne
       CSD U3 collisions build isTouching: Wykrywanie kolizji
@@ -54,6 +56,7 @@ pl:
       CSD U6 functions paramters video: Funkcje z parametrami
       CSD U6 functions paramters video_2018: Funkcje z parametrami
       CourseEF_video_IntroSpriteLab: To jest Laboratorium Duszków
+      CourseEF_video_IntroSpriteLab_2019: To jest Laboratorium Duszków
       MC_HOC_2017_FP10x10: Czas na zabawę
       MC_HOC_2017_FP10x10_RE: Czas na zabawę
       SG U3L07 More Subgoals: Dokumentacja

@@ -558,6 +558,8 @@ ka:
         courseC_maze_debugging5_1: ნაცრისფერი ბლოკების წაშლა შეუძლებელია!
       courseC_maze_debugging5_2018_callout:
         courseC_maze_debugging5_1: ეს ბლოკები ფიქსირებულია და მათი წაშლა შეუძლებელია!
+      courseC_maze_debugging5_2019_callout:
+        courseC_maze_debugging5_1: ეს ბლოკები ფიქსირებულია და მათი წაშლა შეუძლებელია!
       courseC_maze_programming7_callout:
         courseC_maze_programming7_2: ნაცრისფერი ბლოკები ქვისგანაა დამზადებული და მათი
           გადაგდება შეუძლებელია.

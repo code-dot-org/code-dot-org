@@ -405,7 +405,7 @@
   mc_gradelevel: "年齡 6-106"
   mc_platformtext: "瀏覽器, 智慧手機, 平板"
   mc_specs: "多種語言 | 現代瀏覽器和平板電腦 | 年齡 6-106"
-  minecraft_agent: 'Minecraft：英雄之旅'
+  minecraft_agent: "Minecraft：英雄之旅"
   minecraft_designer: "Minecraft 設計師"
   minecraft_adventurer: "Minecraft 探險家"
   minecraft_tutorials: "一小時玩 Minecraft 教程"
@@ -660,7 +660,7 @@
   dashboard_sections_table_stage_extras: "階段額外資源"
   dashboard_sections_table_students: "所有學生"
   dashboard_sections_table_code: "學習小組代碼"
-  dashboard_sections_name: "學習小組名稱"
+  dashboard_sections_name: '學習小組名稱'
   dashboard_sections_choose_secret: "如果您想要提供帳號給學生使用，請為該學習小組選擇一個 <b>通關文字</b> 或 <b>通關圖片</b> 做為進入密鑰。"
   dashboard_sections_secret_word: "<b>通關文字</b> 允許您為每個學生設置一個機密文字。"
   dashboard_sections_secret_picture: "<b>通關圖片</b> 是針對年紀小到無法輸入文字的學生，由您為他們設置秘密圖片作為通關密鑰。"
@@ -686,7 +686,7 @@
   dashboard_students_add_multiple: '輸入或貼上學生的姓名，一個學生一行：'
   dashboard_students_new_google_classroom_section: "若要添加學生，請先登入 <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> 然後點擊下方的<b>從 Google Classroom 同步學生資料</b>按鈕。"
   dashboard_students_new_section: "你已經創建新的學習小組了！現在用下方的<b>新增一個學生</b>和<b>新增多個學生</b>按鈕來添加學生到小組中。"
-  dashboard_students_name: "你的名字"
+  dashboard_students_name: '你的名字'
   dashboard_students_progress: "進度"
   dashboard_students_male: "男性"
   dashboard_students_female: "女性"
@@ -1483,6 +1483,7 @@
   hoc2018_mc_page_title: "一小時玩 Minecraft 教程"
   hoc2018_mc_details: "多種語言 | 最新瀏覽器或平板電腦 | 年級 2+"
   hoc2018_mc_aquatic_description: "全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。"
+  hoc2018_mc_hero_title: "Minecraft：英雄之旅"
   hoc2018_mc_hero_description: "全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。"
   hoc2018_mc_designer_title: "Minecraft 設計師"
   hoc2018_mc_designer_description: "在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。"
@@ -1513,3 +1514,8 @@
   hoc2018_mc_homepage_try_it: "試一試"
   hoc2018_mc_back_journey: "全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。"
   hoc2018_mc_go_to_mc_education: "連結到 Minecraft Education"
+  hoc2018_dance_party_button: "開始"
+  hoc2018_dance_teacher_resources_tile1_button: "教學計畫"
+  hoc2018_dance_teacher_resources_tile2_button: "不插電的活動"
+  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "進一步了解"
+  hoc2018_dance_amazon_apply_now_button_text: "立即申請"

@@ -377,6 +377,11 @@ pt:
         incorporado! \r\n \r\nEncaixa o pequeno bloco verde duas vezes no teu espaço
         de trabalho para arranjar o caminho e levar {currentPlayerName} até à Tocha
         de Redstone [redstone_torch]."
+      Function intro Ryan_2019: "Uma **função** chamada \"construir ponte\" está no
+        teu espaço de trabalho.  Todo o código de que precisas para atravessar o rio
+        está incorporado! \r\n \r\nEncaixa o pequeno bloco verde duas vezes no teu
+        espaço de trabalho para arranjar o caminho e levar {currentPlayerName} até
+        à Tocha de Redstone [redstone_torch]."
       HOC 2018 Level_1: "Precisas de abastecimentos para a viagem que se avizinha.
         Coleciona um **barco** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         do **baú** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
@@ -438,13 +443,23 @@ pt:
         no bloco \"quando executado\" no espaço de trabalho, para levar o Agent até
         à placa de pressão [PressurePlate_Up]. Prime \"Executar\" e utiliza as teclas
         de seta para tirar {currentPlayerName} da casa e recolher o **baú** [chest].
-        \ \n"
+        \ "
+      MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} está preso dentro da casa, mas
+        o Agent está aqui para ajudar!   \r\n \r\n   \r\nEncaixa um bloco \"avançar\"
+        no bloco \"quando executado\" no espaço de trabalho, para levar o Agent até
+        à placa de pressão [PressurePlate_Up]. Prime \"Executar\" e utiliza as teclas
+        de seta para tirar {currentPlayerName} da casa e recolher o **baú** [chest].
+        \ "
       MC_HOC_2017_02: O jogador precisa de entrar naquele bosque secreto.  Ajuda o
         Agent a abrir o portão, escrevendo código que o leve até à placa de pressão.
       MC_HOC_2017_02_Cole: "{currentPlayerName} embarcou numa aventura! Para o ajudar,
         chega ao **mapa** [map_empty] atrás da porta fechada à direita. \r\n \r\nEncaixa
         o código no espaço de trabalho para mover o Agent para a placa de pressão
         [PressurePlate_Up] e {currentPlayerName} conseguir passar. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} embarcou numa aventura! Para
+        o ajudar, chega ao **mapa** [map_empty] atrás da porta fechada à direita.
+        \r\n \r\nEncaixa o código no espaço de trabalho para mover o Agent para a
+        placa de pressão [PressurePlate_Up] e {currentPlayerName} conseguir passar. "
       MC_HOC_2017_02_Kiki: "O jogador embarcou numa aventura, mas primeiro tem de
         chegar à tocha que está escondida do outro lado daquela porta fechada. \r\n\r\nPrograma
         o Agent para avançar duas vezes e seguir o caminho branco para chegar à placa
@@ -454,6 +469,9 @@ pt:
         código no espaço de trabalho faz com que o Agent avance duas vezes, chegando
         à placa de pressão e abrindo a porta a Alex ou Steve."
       MC_HOC_2017_03_Cole: "{currentPlayerName} continua na sua aventura e precisa
+        da **bússola** [compass] para se preparar para a viagem.  \r\n   \r\nPrograma
+        o Agent para abrir o portão. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} continua na sua aventura e precisa
         da **bússola** [compass] para se preparar para a viagem.  \r\n   \r\nPrograma
         o Agent para abrir o portão. "
       MC_HOC_2017_03_Kiki: "A aventura do jogador começa atrás da porta fechada, no
@@ -467,7 +485,12 @@ pt:
         pelas duas primeiras placas de pressão."
       MC_HOC_2017_04POINT5_RYAN: "Conseguiste passar! \r\n\r\nAgora, leva {currentPlayerName}
         em segurança pelo labirinto para recolher o **machado** [diamond_axe]\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Conseguiste passar! \r\n\r\nAgora, leva {currentPlayerName}
+        em segurança pelo labirinto para recolher o **machado** [diamond_axe]\r\n"
       MC_HOC_2017_04_Cole: "O Agent consegue mover-se pela água!  \r\n \r\nUtiliza
+        uma ação circular \"repetir\" para resolver este quebra-cabeças e ajudar {currentPlayerName}
+        a chegar ao **balde** [bucket_empty] atrás da porta. "
+      MC_HOC_2017_04_Cole_2019: "O Agent consegue mover-se pela água!  \r\n \r\nUtiliza
         uma ação circular \"repetir\" para resolver este quebra-cabeças e ajudar {currentPlayerName}
         a chegar ao **balde** [bucket_empty] atrás da porta. "
       MC_HOC_2017_04_Kiki: "A entrada para o Bosque Secreto levou-te a este maravilhoso
@@ -482,6 +505,9 @@ pt:
       MC_HOC_2017_05_Cole: "Oh não, a ponte foi destruída! \r\n\r\nPrograma o Agent
         para reconstruir a ponte com um bloco \"colocar\", para {currentPlayerName}
         conseguir chegar à **pá** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "Oh não, a ponte foi destruída! \r\n\r\nPrograma o
+        Agent para reconstruir a ponte com um bloco \"colocar\", para {currentPlayerName}
+        conseguir chegar à **pá** [diamond_shovel]."
       MC_HOC_2017_05_Josh: "Oh não, a ponte foi destruída! \n\n\nAjuda o Agent a reconstruir
         a ponte para o jogador conseguir chegar à **pá**."
       MC_HOC_2017_05_Kiki: "Está na hora de o jogador sair do Bosque Secreto e continuar
@@ -491,11 +517,17 @@ pt:
       MC_HOC_2017_06_Cole: "Encontrámos outro rio, mas este é muito mais largo! \r\n
         \r\nCorrige o código e ajuda o Agent a construir uma ponte para {currentPlayerName}
         chegar à **picareta** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2019: "Encontrámos outro rio, mas este é muito mais largo!
+        \r\n \r\nCorrige o código e ajuda o Agent a construir uma ponte para {currentPlayerName}
+        chegar à **picareta** [diamond_pickaxe]. "
       MC_HOC_2017_06_Josh: "Encontrámos outro rio, mas este é muito mais largo! \r\n\r\nCorrige
         o código para ajudar o Agent a construir uma ponte sobre este rio."
       MC_HOC_2017_06_Kiki: "Encontrámos outro rio, mas este é muito mais largo! \r\n\r\nCorrige
         o código para ajudar o Agent a construir uma ponte sobre a água."
       MC_HOC_2017_07_Cole: "O caminho tem gelo!  \r\n \r\nA função \"abrir caminho\"
+        pode ajudar-te a destruir o gelo e a levar {currentPlayerName} até à vagoneta
+        [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2019: "O caminho tem gelo!  \r\n \r\nA função \"abrir caminho\"
         pode ajudar-te a destruir o gelo e a levar {currentPlayerName} até à vagoneta
         [minecart_normal]! "
       MC_HOC_2017_07_Kiki: "As ações circulares não são a única forma de repetir código!
@@ -534,6 +566,10 @@ pt:
         no teu espaço de trabalho? \r\n \r\nUtiliza-as com outro código da caixa de
         ferramentas para abrir caminho até a Vagoneta e recolher **Sílex e Aço** [flint_and_steel].
         \r\n "
+      MC_HOC_2017_10_RETRY_2019: "Consegues descobrir a diferença entre as duas funções
+        no teu espaço de trabalho? \r\n \r\nUtiliza-as com outro código da caixa de
+        ferramentas para abrir caminho até a Vagoneta e recolher **Sílex e Aço** [flint_and_steel].
+        \r\n "
       MC_HOC_2017_10_RYAN: Experimenta construir funções desde o início para que seja
         mais fácil para o Agent terminar esta vagoneta e levar o jogador até ao quadrado
         cor de laranja.
@@ -551,12 +587,17 @@ pt:
       MC_HOC_2017_Ali: 'Examina as funções abaixo.  Como é que as podes utilizar para
         evitar os Ghasts e ajudar {currentPlayerName} a chegar em segurança ao **Livro
         de Encantamentos** [book_enchanted]?  '
+      MC_HOC_2017_Ali_2019: 'Examina as funções abaixo.  Como é que as podes utilizar
+        para evitar os Ghasts e ajudar {currentPlayerName} a chegar em segurança ao
+        **Livro de Encantamentos** [book_enchanted]?  '
       MC_HOC_2017_FP10x10: "**Jogo livre:** Agora tudo depende de ti! És capaz de
         recolher todos os diamantes neste nível? "
       MC_HOC_2017_FP10x10_RE: "**Jogo livre:** Agora tudo depende de ti! És capaz
         de recolher todos os diamantes neste nível? "
       MC_HOC_2017_FP20x20: "**Jogo livre:** Agora tudo depende de ti! Utiliza o código
         do Agent para te ajudar a explorar este mundo."
+      MC_HOC_2017_FP20x20_2019: "**Jogo livre:** Agora tudo depende de ti! Utiliza
+        o código do Agent para te ajudar a explorar este mundo."
       MC_HOC_2017_Ryan_03: "Sabias que podes colocar mais do que um bloco de código
         numa ação circular?  \r\n\r\nUtiliza a ação circular \"repetir\" para ajudar
         o Agent a construir uma ponte sobre o rio, colocando blocos na água."
@@ -610,8 +651,12 @@ pt:
       courseD_bee_nestedLoops8_2018: |-
         Colete todo o néctar de cada flor
         e produza mel em cada colmeia. Use um laço aninhado.
+      courseD_bee_nestedLoops8_2019: |-
+        Colete todo o néctar de cada flor
+        e produza mel em cada colmeia. Use um laço aninhado.
       courseD_maze_nestedLoops4: Leve-me até o girassol!
       courseD_maze_nestedLoops4_2018: Leve-me até o girassol!
+      courseD_maze_nestedLoops4_2019: Leve-me até o girassol!
       courseE_bee_functions3: |-
         Funções são blocos de código que realizam
         uma tarefa. Use a função "obtenha 5" para coletar 5 néctares de uma vez. Lembre-se também

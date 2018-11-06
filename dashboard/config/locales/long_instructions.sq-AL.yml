@@ -431,10 +431,13 @@ sq:
         tek çdo koshere. Përdor një cikël të mbivendosur. "
       courseD_bee_nestedLoops8_2018: "Mblidh gjithë nektarin nga secila lule\ndhe
         bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
+      courseD_bee_nestedLoops8_2019: "Mblidh gjithë nektarin nga secila lule\ndhe
+        bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
       courseD_bounce_events1: Shko te flamuri! Bashkangjit një bllok te blloku "kur
         shigjeta majtas" dhe shtypni "Run" për të lëvizur lojtarin te flamuri.
       courseD_maze_nestedLoops4: Më ço tek luledielli!
       courseD_maze_nestedLoops4_2018: Më ço tek luledielli!
+      courseD_maze_nestedLoops4_2019: Më ço tek luledielli!
       courseE_bee_functions3: |-
         Funksionet janë blloqe kodi që performojnë
         një detyrë. Përdor funksionin "merr 5" për të marrë 5 nektarë në një kohë. Sigurohu të
@@ -451,6 +454,9 @@ sq:
         Zgjidhe këtë puzzle duke përdorur numrin
         më të pakët të mundshëm të blloqeve.
       courseF_bee_for_challenge2_2018: |-
+        Zgjidhe këtë puzzle duke përdorur numrin
+        më të pakët të mundshëm të blloqeve.
+      courseF_bee_for_challenge2_2019: |-
         Zgjidhe këtë puzzle duke përdorur numrin
         më të pakët të mundshëm të blloqeve.
       frozen circle function in circle: Tani le të krijojmë 20 rrathë të mbivendosur,
@@ -656,7 +662,7 @@ sq:
         Kliko këtu."
       grade5_artist_for_loops5: "Vetëm një ndryshim i vogël në kod nga figura e fundit
         mund të ndryshoj këtë vizatim. Mund ta zbulosh se çfarë është \nai ndryshim?
-        \r\n \r\nUdhëzim: Duhet të heqësh diçka!\n"
+        \r\n \r\nUdhëzim: Duhet të heqësh diçka!"
       grade5_artist_parameters_triangles2a: A vure re diçka ndryshe te keto blloqe
         funksionesh? Kliko "Lësho" për të parë se çfarë ndodh.
       grade5_artist_variables_hexagons1: 'Le ta provojme serish. A mundeni të vendosni

@@ -1406,3 +1406,13 @@ kk:
           stages:
             Artist:
               name: Кейіпкер
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Ғимарат Салу
+            Conditionals with Cards:
+              name: Картаға қатысты шартты белгілер
+            Envelope Variables:
+              name: Конверт Айнымалылары
+            For Loop Fun:
+              name: Көңілді For циклі

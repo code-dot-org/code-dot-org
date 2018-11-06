@@ -868,3 +868,7 @@ bn:
           stages:
             Artist:
               name: শিল্পী
+        coursef-2019:
+          stages:
+            Conditionals with Cards:
+              name: কার্ড সঙ্গে শর্ত

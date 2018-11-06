@@ -701,6 +701,8 @@ it:
               name: Compressione del Testo
             Web Lab:
               name: Sviluppo Web
+            Sprite Lab:
+              name: Laboratorio dei Personaggi
         algebraPD2b:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
@@ -3682,3 +3684,141 @@ it:
           stages:
             Artist:
               name: Artista
+        coursef-2019:
+          description: Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni
+            condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi
+            e discuti sull'impatto sociale dell'informatica e di Internet. Nella seconda
+            parte di questo corso, pianifica e crea un progetto di fine corso che
+            puoi condividere con amici ed familiari.
+          description_short: Impara tutti i concetti dei corsi di Fondamenti di Informatica
+            e crea una tua opera d'arte, una tua storia o un tuo gioco.
+          description_audience: Da 9 a 13 anni
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programmazione: I Miei Amici Robotici'
+            Sequence in Maze:
+              name: Sequenze di Istruzioni con il Labirinto
+            Building a Foundation:
+              name: Costruire le Fondamenta
+            Debugging with Scrat:
+              name: Debugging con Scrat
+            Programming in Artist:
+              name: Programmare l'Artista
+            'Loops: My Loopy Robotic Friends':
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
+            Loops in Artist:
+              name: Cicli con l'Artista
+            Nested Loops in Bee/Zombie:
+              name: Cicli Annidati con l'Ape e lo Zombie
+            Nested Loops with Frozen:
+              name: Cicli Annidati con Frozen
+            Conditionals with Cards:
+              name: Istruzioni condizionali con le Carte da Gioco
+            Conditionals in Farmer:
+              name: Istruzioni Condizionali con la Contadina
+            Functions in Minecraft:
+              name: Funzioni con Minecraft
+            The Power of Words:
+              name: Cittadinanza Digitale - Il Potere delle Parole
+              description_student: Il bullismo non va mai bene. In questa lezione
+                imparerai cosa si può dire online e cosa deve essere evitato.
+              description_teacher: "Gli studenti sanno che mentre si divertono con
+                i loro siti web preferiti potrebbero ricevere messaggi di altri bambini
+                che possono farli sentire arrabbiati, feriti, tristi o spaventati.
+                Esplorano le corrette modalità per gestire il cyberbullismo e come
+                reagire al linguaggio violento o volgare online.\n\nGli studenti discutono
+                i vari modi in cui usano la tecnologia per comunicare ed esplorano
+                le somiglianze e le differenze tra la comunicazione di persona e quella
+                online. Gli studenti quindi discutono diversi modi per reagire al
+                cyberbullismo. "
+            Envelope Variables:
+              name: Variabili e Buste
+              description_student: 'Buste e variabili hanno qualcosa in comune: entrambe
+                contengono cose importanti. In questa lezione impari cosa sono le
+                variabili e quante cose importante puoi fare con esse.'
+              description_teacher: Le variabili sono usate come contenitori per valori
+                quali numeri o parole. Le variabili consentono molta libertà al programmatore.
+                Invece di dover scrivere una frase molte volte o di ricordarsi un
+                numero complicato, gli informatici usano le variabili per far riferimento
+                a queste informazione. Questa lezione spiega cosa sono le variabili
+                e come possiamo usarle in molti modi differenti. Il concetto di "variabile"
+                non è facile da comprendere, pertanto raccomandiamo di assegnare parecchio
+                tempo per la discussione alla fine della lezione.
+            For Loop Fun:
+              name: Divertiti usando i Cicli con Contatore
+              description_student: Ti divertirai moltissimo imparando i cicli con
+                contatore!
+              description_teacher: 'Sappiamo che i cicli ci permettono di ripetere
+                più e più volte le stesse azioni, ma ora impareremo come usare i cicli
+                con strutture aggiuntive. Queste nuove strutture permetteranno agli
+                studenti di creare un codice più potente e dinamico. '
+            For Loops in Bee:
+              description_student: Zzz Zzz. In questi esercizi guiderai l'ape fino
+                al nettare e al miele usando i cicli con contatore!
+              description_teacher: Questa lezione con l'Ape è dedicata ai cicli con
+                contatore e l'uso di una variabile incrementale per risolvere esercizi
+                più complicati. Gli studenti inizieranno ripassando i cicli delle
+                lezioni precedenti, poi proseguiranno usando i cicli con contatore
+                per risolvere più efficacemente problemi più complicati.
+            For Loops in Artist:
+              description_student: Preparati a creare il tuo prossimo capolavoro.
+                Qui userai i cicli con contatore per creare immagini sbalorditive.
+              description_teacher: In questa lezione, gli studenti continuano ad esercitarsi
+                con i cicli, questa volta con l'Artista. Gli studenti completeranno
+                gli esercizi combinando i concetti di variabili, cicli e cicli con
+                contatore per creare progetti complessi. Alla fine avranno la possibilità
+                di creare il proprio progetto in un esercizio libero.
+            Explore Project Ideas:
+              name: Idee di Progetto
+              description_student: È tempo di trovare l'ispirazione! Questi esercizi
+                ti mostreranno una serie di illustrazioni e giochi già pronti per
+                aiutarti a sviluppare un piano per il tuo GRANDE progetto.
+              description_teacher: |-
+                Le prossime cinque lezioni forniscono agli studenti l'opportunità di utilizzare le proprie capacità di programmazione in un progetto di fine corso. Questo progetto li aiuterà ad acquisire esperienza con la programmazione, producendo una realizzazione da condividere con compagni, amici e parenti. È un percorso pensato per essere distribuito su più lezioni, gli studenti trascorreranno del tempo ragionando insieme, imparando a conoscere il processo di progettazione, costruendo e presentando il loro lavoro finale.
+
+                Nella lezione di esplorazione, gli studenti potranno osservare degli esempi già pronti ai quali ispirarsi sia per l'Artista che per il Laboratorio. Successivamente, gli studenti impareranno il processo di progettazione e come implementarlo nei propri progetti. A loro verrà quindi dato uno spazio per creare il proprio progetto nell'Artista o nel Laboratorio (questa è probabilmente la parte più lunga del progetto). Quindi gli studenti potranno migliorare i loro progetti, dopo test ed ulteriori riflessioni. Infine, gli studenti potranno presentare il lavoro finito ai compagni.
+            The Design Process:
+              name: Il Processo di Progettazione
+              description_student: I progetti cosi grandi richiedono tempo e molta
+                pianificazione. Qui, imparerai il processo di progettazione che utilizzerai
+                per realizzare la tua creazione.
+              description_teacher: Nel corso delle cinque lezioni, gli studenti si
+                dedicheranno alla realizzazione di un progetto di loro ideazione,
+                usando come ambienti di programmazione sia il Laboratorio che l'Artista.
+                In questa fase, gli studenti apprenderanno il processo di progettazione
+                e come implementarlo nei propri progetti. La guida alle lezioni che
+                descrive tutte e cinque le fasi del processo si trova all'inizio del
+                percorso, [here](https://curriculum.code.org/csf-18/coursef/24/).
+            Build Your Project:
+              name: Realizza il Tuo Progetto
+              description_student: Finalmente puoi iniziare a costruire il tuo progetto!
+              description_teacher: Nel corso delle cinque lezioni, gli studenti si
+                dedicheranno alla realizzazione di un progetto di loro ideazione,
+                usando come ambienti di programmazione sia il Laboratorio che l'Artista.
+                Ora agli studenti verrà dato il proprio spazio per creare il loro
+                progetto con l'Artista o il Laboratorio. Questa sarà la fase più lunga
+                del percorso di creazione. La guida alle lezioni che descrive tutte
+                e cinque le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursef/24/).
+            Revise Your Project:
+              name: Riesamina il Tuo Progetto
+              description_student: Roma non è stata costruita in un giorno e neanche
+                il tuo progetto dovrebbe esserlo. Prenditi del tempo per modificare
+                e rivedere il tuo progetto in modo da renderlo il migliore possibile.
+              description_teacher: Nel corso delle cinque lezioni, gli studenti si
+                dedicheranno alla realizzazione di un progetto di loro ideazione,
+                usando come ambienti di programmazione sia il Laboratorio che l'Artista.
+                Ora che i progetti sono pronti, agli studenti viene data l'opportunità
+                di ricevere commenti dai compagni e migliorare i loro progetti. La
+                guida alle lezioni che descrive tutte e cinque le fasi del processo
+                si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursef/24/).
+            Present Your Project:
+              name: Presenta il Tuo Progetto
+              description_student: È ora di mostrare il tuo lavoro! Qui presenterai
+                il tuo fantastico progetto ai tuoi compagni.
+              description_teacher: Nel corso delle cinque lezioni, gli studenti si
+                dedicheranno alla realizzazione di un progetto di loro ideazione,
+                usando come ambienti di programmazione sia il Laboratorio che l'Artista.
+                Infine, gli studenti saranno messi nella condizione di presentare
+                i lavori completati ai loro compagni o di condividerli con amici e
+                parenti con un apposito link. La guida alle lezioni che descrive tutte
+                e cinque le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursef/24/).

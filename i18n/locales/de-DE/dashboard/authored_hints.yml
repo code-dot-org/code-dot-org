@@ -28,6 +28,10 @@ de:
         step_size: Jeder Schritt ist 100 Pixel breit und 100 Pixel hoch.
       2-3 Artist 9_authored_hint:
         2-3_Artist_9_a: Diese Raute ist eigentlich nur ein um 45 Grad gedrehtes Quadrat.
+        2-3_Artist_9_b: |-
+          Vergiss nicht den Künstler um 45 Grad nach links zu drehen ehe du anfängst zu zeichnen!
+          
+          ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
         2-3_Artist_Debugging_10_b: "**Die Versuch-und-Irrtum-Methode ist hier völlig Ok!**\nFang an, eine einzelne Zahl zu ändern.\nWelche Nummern machen was?\nWenn du dich zu sehr verirrst, drück einfach \"Neu starten\" und dein Code wird zurückgesetzt."
       2-3 Artist Debugging 2_authored_hint:
@@ -81,6 +85,8 @@ de:
         Course_4_SCFL_1b_a: Versuch's mal mit einer "für"-Schleife.
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Du kannst eine Funktion mehrmals in deinem Programm aufrufen.  Versuche, sie zweimal aufzurufen, um diese Aufgabe zu lösen.
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_a: Du kannst eine Funktion mehrmals in deinem Programm aufrufen.  Versuche, sie zweimal aufzurufen, um diese Aufgabe zu lösen.
       HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: "Die **Seelaternen**![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Kannst du mit ihnen eine Bedingung verwenden, um das Ozeanmonument zu erreichen?\n\n"
       HOC 2018 Level_9b_authored_hint:
@@ -93,7 +99,17 @@ de:
         MC_HOC_2017_01_RETRY_a: Ziehe einen "vorwärts bewegen"-Block aus der Werkzeugkiste in den Arbeitsbereich und füge ihn unter dem "beim Ausführen"-Block an.
         MC_HOC_2017_01_RETRY_b: Klicke auf "Ausführen", um den Code für den Agenten auszuführen.
         MC_HOC_2017_01_RETRY_c: Nachdem der Agent seinen gesamten Code ausgeführt hat, kannst du den Spieler mit den Pfeiltasten bewegen.
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Ziehe einen "vorwärts bewegen"-Block aus der Werkzeugkiste in den Arbeitsbereich und füge ihn unter dem "beim Ausführen"-Block an.
+        MC_HOC_2017_01_RETRY_b: Klicke auf "Ausführen", um den Code für den Agenten auszuführen.
+        MC_HOC_2017_01_RETRY_c: Nachdem der Agent seinen gesamten Code ausgeführt hat, kannst du den Spieler mit den Pfeiltasten bewegen.
       MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Bewege den Agenten zwei Felder vorwärts, bis er auf der Druckplatte steht.  Dadurch wird die Tür für deinen Spieler geöffnet.
+        MC_HOC_2017_02_Cole_b: |-
+          Wähle "Ausführen" aus! 
+          Du kannst deinen Code auch dann ausführen, wenn er falsch ist.  Setze deinen Code zurück und führe ihn so oft erneut aus, bis du den Fehler gefunden hast.
+        MC_HOC_2017_02_Cole_c: Bewege den Spieler mit den Pfeiltasten zur Karte, sobald der Agent die Tür geöffnet hat.
+      MC_HOC_2017_02_Cole_2019_authored_hint:
         MC_HOC_2017_02_Cole_a: Bewege den Agenten zwei Felder vorwärts, bis er auf der Druckplatte steht.  Dadurch wird die Tür für deinen Spieler geöffnet.
         MC_HOC_2017_02_Cole_b: |-
           Wähle "Ausführen" aus! 
@@ -108,11 +124,17 @@ de:
       MC_HOC_2017_03_Cole_authored_hint:
         MC_HOC_2017_03_Cole_a: Sobald der Agent auf der Druckplatte steht, kannst du den Spieler mit den Pfeiltasten zum Kompass steuern.
         MC_HOC_2017_03_Cole_b: Ist dir der Code zu lang?  Versuche, ihn mit einer "wiederholen"-Schleife zu verkürzen.
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_a: Sobald der Agent auf der Druckplatte steht, kannst du den Spieler mit den Pfeiltasten zum Kompass steuern.
+        MC_HOC_2017_03_Cole_b: Ist dir der Code zu lang?  Versuche, ihn mit einer "wiederholen"-Schleife zu verkürzen.
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
           Das Überqueren dieser beiden Druckplatten öffnet den Weg für den Spieler. 
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Verwende den "nach rechts drehen"-Block, um die Richtung des Agenten zu ändern. '
+        MC_HOC_2017_04POINT5_RYAN_a: Der Agent muss nur die erste Druckplatte erreichen, um Alex oder Steve durchzulassen.
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
         MC_HOC_2017_04POINT5_RYAN_b: 'Verwende den "nach rechts drehen"-Block, um die Richtung des Agenten zu ändern. '
         MC_HOC_2017_04POINT5_RYAN_a: Der Agent muss nur die erste Druckplatte erreichen, um Alex oder Steve durchzulassen.
       MC_HOC_2017_04_Cole_authored_hint:
@@ -121,15 +143,28 @@ de:
           Wähle "Ausführen" aus! 
           Du kannst deinen Code auch dann ausführen, wenn er falsch ist.  Setze deinen Code zurück und führe ihn so oft erneut aus, bis du den Fehler gefunden hast.
         MC_HOC_2017_04_Cole_b: Sobald der Agent die Druckplatte erreicht hat, öffnet er dem Spieler die Tür.
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_a: Der Agent muss 7 Mal "vorwärts bewegen" verwenden. Kannst du das mit einer "wiederholen"-Schleife erledigen?
+        MC_HOC_2017_04_Cole_c: |-
+          Wähle "Ausführen" aus! 
+          Du kannst deinen Code auch dann ausführen, wenn er falsch ist.  Setze deinen Code zurück und führe ihn so oft erneut aus, bis du den Fehler gefunden hast.
+        MC_HOC_2017_04_Cole_b: Sobald der Agent die Druckplatte erreicht hat, öffnet er dem Spieler die Tür.
       MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Wusstest du, dass du mehrere Code-Stücke in eine Schleife packen kannst?  Versuche, in einem "wiederholen"-Block ein Brett zu platzieren **und** dich vorwärts zu bewegen, um diese Aufgabe abzuschließen.
+      MC_HOC_2017_05_Cole_2019_authored_hint:
         MC_HOC_2017_05_Cole_a: Wusstest du, dass du mehrere Code-Stücke in eine Schleife packen kannst?  Versuche, in einem "wiederholen"-Block ein Brett zu platzieren **und** dich vorwärts zu bewegen, um diese Aufgabe abzuschließen.
       MC_HOC_2017_05_Josh_authored_hint:
         MC_HOC_2017_05_Cole_a: Wusstest du, dass du mehrere Code-Stücke in eine Schleife packen kannst?  Versuche, in einem "wiederholen"-Block ein Brett zu platzieren **und** dich vorwärts zu bewegen, um diese Aufgabe abzuschließen.
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: Wie oft wird diese Schleife ausgeführt?  Wie oft *sollte* sie ausgeführt werden?
+      MC_HOC_2017_06_Cole_2019_authored_hint:
+        MC_HOC_2017_06_Cole_a: Wie oft wird diese Schleife ausgeführt?  Wie oft *sollte* sie ausgeführt werden?
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Versuche, mehr als eine Anweisung in eine "wiederholen"-Schleife zu packen!
       MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_a: Um diese Aufgabe zu lösen, musst du herausfinden, was die "Weg räumen"-Funktion macht, und diese mit dem kleinen, grünen "Weg räumen"-Block aus der Werkzeugkiste so oft wie nötig aufrufen.
+        MC_HOC_2017_07_Cole_b: Versuche, Funktionsblöcke mit anderen Blöcken aus der Werkzeugkiste zu kombinieren. So löst du diese Aufgabe.
+      MC_HOC_2017_07_Cole_2019_authored_hint:
         MC_HOC_2017_07_Cole_a: Um diese Aufgabe zu lösen, musst du herausfinden, was die "Weg räumen"-Funktion macht, und diese mit dem kleinen, grünen "Weg räumen"-Block aus der Werkzeugkiste so oft wie nötig aufrufen.
         MC_HOC_2017_07_Cole_b: Versuche, Funktionsblöcke mit anderen Blöcken aus der Werkzeugkiste zu kombinieren. So löst du diese Aufgabe.
       MC_HOC_2017_08_RY_authored_hint:
@@ -146,6 +181,8 @@ de:
         MC_HOC_2017_10_Cole_a: Verwende Funktionen, um diese Aufgabe einfacher zu lösen.
       MC_HOC_2017_10_RETRY_authored_hint:
         MC_HOC_2017_10_Cole_a: Verwende Funktionen, um diese Aufgabe einfacher zu lösen.
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_a: Verwende Funktionen, um diese Aufgabe einfacher zu lösen.
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Versuche, den Agenten einige Brücken bauen zu lassen, damit Alex oder Steve auf der Karte weiterlaufen können.
       MC_HOC_2017_4.5v2_authored_hint:
@@ -157,7 +194,14 @@ de:
           Wähle "Ausführen" aus! 
           Du kannst deinen Code auch dann ausführen, wenn er falsch ist.  Setze deinen Code zurück und führe ihn so oft erneut aus, bis du den Fehler gefunden hast.
         MC_HOC_2017_08_RY_b: Es gibt eine MENGE Möglichkeiten, um diese Aufgabe zu lösen.  Probiere ein paar aus!
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: |-
+          Wähle "Ausführen" aus! 
+          Du kannst deinen Code auch dann ausführen, wenn er falsch ist.  Setze deinen Code zurück und führe ihn so oft erneut aus, bis du den Fehler gefunden hast.
+        MC_HOC_2017_08_RY_b: Es gibt eine MENGE Möglichkeiten, um diese Aufgabe zu lösen.  Probiere ein paar aus!
       MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Versuche, den Agenten einige Brücken bauen zu lassen, damit Alex oder Steve auf der Karte weiterlaufen können.
+      MC_HOC_2017_FP20x20_2019_authored_hint:
         MC_HOC_2017_13_Cole_a: Versuche, den Agenten einige Brücken bauen zu lassen, damit Alex oder Steve auf der Karte weiterlaufen können.
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Versuche, den Agenten einige Brücken bauen zu lassen, damit Alex oder Steve auf der Karte weiterlaufen können.
