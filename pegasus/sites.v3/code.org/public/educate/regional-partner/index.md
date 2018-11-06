@@ -15,7 +15,7 @@ to experience Code.org teacher professional development first-hand and host or s
 
 The ideal Regional Partner is a U.S. based regional education unit, a nonprofit, or a university with existing, positive relationships with nearby school districts and the local education community.
 
-[<button>APPLY NOW!</button>](https:https://code.org/educate/regional-partner/apply)
+[<button>APPLY NOW!</button>](/educate/regional-partner/apply)
 
 
 [col-50]
