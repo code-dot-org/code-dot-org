@@ -4804,3 +4804,30 @@ id:
           stages:
             Artist:
               name: Artis
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Membangun dasar
+            Conditionals with Cards:
+              name: Bersyarat dengan kartu
+            The Power of Words:
+              name: Kekuatan kata-Kata
+              description_student: Bullying tidak pernah baik-baik saja. Pelajaran
+                ini akan mengajarkan anda tentang apa yang bisa dan tidak apa-apa
+                untuk mengatakan secara online.
+            Envelope Variables:
+              name: Sampul Variabel
+            For Loop Fun:
+              name: Untuk Loop Fun
+            The Design Process:
+              description_student: Proyek besar ini memakan waktu dan banyak perencanaan.
+                Di sini, anda akan belajar tentang proses desain yang akan anda gunakan
+                untuk membangun kreasi anda sendiri.
+            Build Your Project:
+              description_student: Akhirnya anda dapat mulai membangun proyek anda!
+            Revise Your Project:
+              name: Merevisi Proyek Anda
+            Present Your Project:
+              name: Menyajikan Proyek Anda
+              description_student: Waktu untuk menunjukkan pekerjaan anda! Di sini
+                anda akan menyajikan proyek mengagumkan untuk teman-teman anda.

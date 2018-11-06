@@ -1416,3 +1416,13 @@ si:
           stages:
             Artist:
               name: කලාකරු
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: පදනමක් තැනීම
+            Conditionals with Cards:
+              name: කාඩ්පත් සමඟ කොන්දේසික
+            Envelope Variables:
+              name: ආවරණය කරන ලද විචල්‍ය
+            For Loop Fun:
+              name: For ලුපයේ සතුට

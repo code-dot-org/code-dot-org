@@ -160,11 +160,15 @@ fr:
         2-3_Bee_Loops_7_a: La première action sera un tournant, plutôt que d’un mouvement.
       4-5 Artist 7_authored_hint:
         4-5_Artist_7_a: 'Quel angle est le plus petit?  À quel angle l’artiste est-il debout? '
+      4-5 Nested Loops 12_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Chaque élément devra sa propre boucle « while ».
       Artist Autorun Test_authored_hint:
         2-3_Artist_Functions_4_a: L'artiste doit tourner de 120 degrés entre chaque carré pour compléer ce design.
       Function intro Ryan_authored_hint:
+        Function_intro_Ryan_a: Dans votre programme, vous pouvez appeler une fonction autant de fois que vous le voulez !  Essayez de l'appeler deux fois pour résoudre ce casse-tête.
+      Function intro Ryan_2019_authored_hint:
         Function_intro_Ryan_a: Dans votre programme, vous pouvez appeler une fonction autant de fois que vous le voulez !  Essayez de l'appeler deux fois pour résoudre ce casse-tête.
       HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: "Vous voyez les **lanternes aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ? Comment les combiner à un bloc conditionnel pour traverser le monument sous-marin ?\n\n"
@@ -178,7 +182,17 @@ fr:
         MC_HOC_2017_01_RETRY_a: Faites glisser un bloc « avancer » depuis la boîte à outils vers l'espace de travail et placez-le en dessous du bloc « après exécution ».
         MC_HOC_2017_01_RETRY_b: N'oubliez pas de cliquer sur « Démarrer » pour que l'Agent exécute le code.
         MC_HOC_2017_01_RETRY_c: Une fois que l'Agent a exécuté tout le code, vous pouvez déplacer le joueur avec les touches de direction !
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Faites glisser un bloc « avancer » depuis la boîte à outils vers l'espace de travail et placez-le en dessous du bloc « après exécution ».
+        MC_HOC_2017_01_RETRY_b: N'oubliez pas de cliquer sur « Démarrer » pour que l'Agent exécute le code.
+        MC_HOC_2017_01_RETRY_c: Une fois que l'Agent a exécuté tout le code, vous pouvez déplacer le joueur avec les touches de direction !
       MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Faites avancer l'Agent de deux cases en avant pour qu'il se tienne sur la plaque de détection.  Cela ouvrira la porte pour votre joueur.
+        MC_HOC_2017_02_Cole_b: |-
+          Appuyez sur « Démarrer » ! 
+          Vous pouvez exécuter votre code même si ce n'est pas correct.  Exécutez et recommencez votre code jusqu'à trouver ce qui ne va pas.
+        MC_HOC_2017_02_Cole_c: Une fois que l'Agent a ouvert la porte, utilisez les touches de direction pour déplacer le joueur sur la carte !
+      MC_HOC_2017_02_Cole_2019_authored_hint:
         MC_HOC_2017_02_Cole_a: Faites avancer l'Agent de deux cases en avant pour qu'il se tienne sur la plaque de détection.  Cela ouvrira la porte pour votre joueur.
         MC_HOC_2017_02_Cole_b: |-
           Appuyez sur « Démarrer » ! 
@@ -193,11 +207,17 @@ fr:
       MC_HOC_2017_03_Cole_authored_hint:
         MC_HOC_2017_03_Cole_a: Une fois que l'Agent est placé sur la plaque de détection, utilisez les touches de direction pour déplacer le joueur jusqu'à la boussole !
         MC_HOC_2017_03_Cole_b: Le code semble trop long ?  Essayez de le raccourcir en utilisant une boucle « répéter » !
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_a: Une fois que l'Agent est placé sur la plaque de détection, utilisez les touches de direction pour déplacer le joueur jusqu'à la boussole !
+        MC_HOC_2017_03_Cole_b: Le code semble trop long ?  Essayez de le raccourcir en utilisant une boucle « répéter » !
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
           Traverser ces deux plaques de détection ouvrira le chemin pour le joueur. 
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Utilisez le bloc « tourner à droite » pour changer l''orientation de l''Agent '
+        MC_HOC_2017_04POINT5_RYAN_a: Pour permettre à Alex ou Steve d'atteindre la hache, il suffit que l'Agent soit sur la première plaque de détection.
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
         MC_HOC_2017_04POINT5_RYAN_b: 'Utilisez le bloc « tourner à droite » pour changer l''orientation de l''Agent '
         MC_HOC_2017_04POINT5_RYAN_a: Pour permettre à Alex ou Steve d'atteindre la hache, il suffit que l'Agent soit sur la première plaque de détection.
       MC_HOC_2017_04_Cole_authored_hint:
@@ -206,15 +226,28 @@ fr:
           Appuyez sur « Démarrer » ! 
           Vous pouvez exécuter votre code même si ce n'est pas correct.  Exécutez et recommencez votre code jusqu'à trouver ce qui ne va pas.
         MC_HOC_2017_04_Cole_b: Une fois que l'Agent est sur la plaque de détection, cela ouvrira la porte pour le joueur.
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_a: L'Agent a besoin d'« avancer » 7 fois.  Comment pouvez-vous faire cela en utilisant une boucle « répéter » ?
+        MC_HOC_2017_04_Cole_c: |-
+          Appuyez sur « Démarrer » ! 
+          Vous pouvez exécuter votre code même si ce n'est pas correct.  Exécutez et recommencez votre code jusqu'à trouver ce qui ne va pas.
+        MC_HOC_2017_04_Cole_b: Une fois que l'Agent est sur la plaque de détection, cela ouvrira la porte pour le joueur.
       MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Saviez-vous que vous pouvez placer plusieurs bouts de code à l'intérieur d'une boucle ?  Essayez de placer une planche **et** avancer à l'intérieur d'une boucle « répéter » pour résoudre ce casse-tête.
+      MC_HOC_2017_05_Cole_2019_authored_hint:
         MC_HOC_2017_05_Cole_a: Saviez-vous que vous pouvez placer plusieurs bouts de code à l'intérieur d'une boucle ?  Essayez de placer une planche **et** avancer à l'intérieur d'une boucle « répéter » pour résoudre ce casse-tête.
       MC_HOC_2017_05_Josh_authored_hint:
         MC_HOC_2017_05_Cole_a: Saviez-vous que vous pouvez placer plusieurs bouts de code à l'intérieur d'une boucle ?  Essayez de placer une planche **et** avancer à l'intérieur d'une boucle « répéter » pour résoudre ce casse-tête.
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: Combien de fois cette boucle va-t-elle se répéter ?  Combien de fois *devrait*-elle se répéter ?
+      MC_HOC_2017_06_Cole_2019_authored_hint:
+        MC_HOC_2017_06_Cole_a: Combien de fois cette boucle va-t-elle se répéter ?  Combien de fois *devrait*-elle se répéter ?
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Essayez de placer plusieurs instructions à l'intérieur d'une boucle « répéter » !
       MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_a: Pour résoudre ce casse-tête, découvrez à quoi sert la fonction « supprimer obstacle ». Appelez-la autant de fois que nécessaire en utilisant le petit bloc vert « supprimer obstacle » depuis la boîte à outils.
+        MC_HOC_2017_07_Cole_b: Essayez de mélanger les blocs de fonctions avec d'autres blocs de la boîte à outils pour résoudre ce casse-tête.
+      MC_HOC_2017_07_Cole_2019_authored_hint:
         MC_HOC_2017_07_Cole_a: Pour résoudre ce casse-tête, découvrez à quoi sert la fonction « supprimer obstacle ». Appelez-la autant de fois que nécessaire en utilisant le petit bloc vert « supprimer obstacle » depuis la boîte à outils.
         MC_HOC_2017_07_Cole_b: Essayez de mélanger les blocs de fonctions avec d'autres blocs de la boîte à outils pour résoudre ce casse-tête.
       MC_HOC_2017_08_RY_authored_hint:
@@ -231,6 +264,8 @@ fr:
         MC_HOC_2017_10_Cole_a: Utilisez des fonctions pour résoudre plus facilement ce casse-tête !
       MC_HOC_2017_10_RETRY_authored_hint:
         MC_HOC_2017_10_Cole_a: Utilisez des fonctions pour résoudre plus facilement ce casse-tête !
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_a: Utilisez des fonctions pour résoudre plus facilement ce casse-tête !
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Essayez de faire construire des ponts à l'Agent afin qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte.
       MC_HOC_2017_4.5v2_authored_hint:
@@ -242,7 +277,14 @@ fr:
           Appuyez sur « Démarrer » ! 
           Vous pouvez exécuter votre code même si ce n'est pas correct.  Exécutez et recommencez votre code jusqu'à trouver ce qui ne va pas.
         MC_HOC_2017_08_RY_b: Il existe de NOMBREUSES manières de résoudre ce casse-tête.  Essayez-en quelques-unes !
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: |-
+          Appuyez sur « Démarrer » ! 
+          Vous pouvez exécuter votre code même si ce n'est pas correct.  Exécutez et recommencez votre code jusqu'à trouver ce qui ne va pas.
+        MC_HOC_2017_08_RY_b: Il existe de NOMBREUSES manières de résoudre ce casse-tête.  Essayez-en quelques-unes !
       MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Essayez de faire construire des ponts à l'Agent afin qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte.
+      MC_HOC_2017_FP20x20_2019_authored_hint:
         MC_HOC_2017_13_Cole_a: Essayez de faire construire des ponts à l'Agent afin qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte.
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Essayez de faire construire des ponts à l'Agent afin qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte.
@@ -465,6 +507,9 @@ fr:
       courseC_artist_prog2_2018_authored_hint:
         courseC_artist_prog2_a: 'Si vous utilisez le bloc pour me faire "avancer de 100 pixels", je tracerais une ligne automatiquement.'
         courseC_artist_prog2_b: Vous avez des problèmes pour tourner ? Utilisez le bloc "tourner de 90° à droite".
+      courseC_artist_prog2_2019_authored_hint:
+        courseC_artist_prog2_a: 'Si vous utilisez le bloc pour me faire "avancer de 100 pixels", je tracerais une ligne automatiquement.'
+        courseC_artist_prog2_b: Vous avez des problèmes pour tourner ? Utilisez le bloc "tourner de 90° à droite".
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
       courseD_artist_functions2_authored_hint:
@@ -578,6 +623,8 @@ fr:
         2-3_Bee_Loops_2_a: Vous devriez avoir quatre blocs à l’intérieur de la boucle.
       grade3_Loops_9_authored_hint:
         2-3_Bee_Loops_3_a: Vous devriez avoir 6 blocs à l’intérieur de la boucle.
+      grade4_arist_nested_loop_triangles6_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       grade4_artist_functions1_authored_hint:
         2-3_Artist_Functions_1_a: Les carrés ont chacun des côtés de 100 pixels, ce qui signifie que vous devrez avancer de 175 pixels avant de dessiner votre deuxième carré.
         2-3_Artist_Functions_1_b: C'est ok de dessiner des lignes qui se superposent pour dessiner les lunettes.
@@ -587,6 +634,8 @@ fr:
           - Utiliser une fonction
           - Avancer de 100 + 75 pixels
           - Utiliser une fonction
+      grade4_artist_nested_loop_triangles6_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       grade4_bee_functions7_authored_hint:
         2-3_Bee_Functions_8_a: "Si le puzzle semble difficile, essaye de construire ta fonction petit à peit.\n\nAjoutes quelques blocs, puis essaye-les. Ajoutes-en d’autres, puis réessaye. Bientôt, ,\n tu y arriveras !\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       grade4_bee_functions8_authored_hint:

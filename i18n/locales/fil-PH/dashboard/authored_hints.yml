@@ -3327,6 +3327,9 @@ fil:
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: Kung tatawagin mo ang mga functions nang tamo, ito ang landas na lalakbayin mo...
         Function_intro_Ryan_a: Maaari kang magtawag ng function na napakaraming beses sa loob ng iyong programa! Subukang tawagin ito nang makalawa para malutas ang palaisipang ito.
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_b: Kung tatawagin mo ang mga functions nang tamo, ito ang landas na lalakbayin mo...
+        Function_intro_Ryan_a: Maaari kang magtawag ng function na napakaraming beses sa loob ng iyong programa! Subukang tawagin ito nang makalawa para malutas ang palaisipang ito.
       Harvesting_authored_hint:
         pointer_harvester_test: Anong uri ng bloke ang maaari kung gamitin para masuri ang isa bagay at makagawa ng desisyon?
       Inspirational Artwork_authored_hint:
@@ -3362,7 +3365,19 @@ fil:
         MC_HOC_2017_01_RETRY_a: Kaladkarin ang isang `move forward` na bloke mula sa toolbox papunta sa workspace, at i-snap ito sa lugar sa ilalim ng `when run` na bloke.
         MC_HOC_2017_01_RETRY_b: Huwag kalimutang i-click ang "Run" para patakbuhin ang code para sa Ahente.
         MC_HOC_2017_01_RETRY_c: Kapag ang Ahente ay napatakbo ang lahat ng code nito, maaari mong pagalawin ang manlalaro gamit ang mga arrow keys!
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Kaladkarin ang isang `move forward` na bloke mula sa toolbox papunta sa workspace, at i-snap ito sa lugar sa ilalim ng `when run` na bloke.
+        MC_HOC_2017_01_RETRY_b: Huwag kalimutang i-click ang "Run" para patakbuhin ang code para sa Ahente.
+        MC_HOC_2017_01_RETRY_c: Kapag ang Ahente ay napatakbo ang lahat ng code nito, maaari mong pagalawin ang manlalaro gamit ang mga arrow keys!
       MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Ilipat ang Ahente pasulong nang dalawang puwang para makatayo sa pressure plate. Ito ay magbubukas sa pintuan para sa iyong manlalaro.
+        MC_HOC_2017_02_Cole_b: |-
+          Pindutin ang "Run"!
+          
+          Maaari mong patakbuhin ang iyong code kahit hindi ito tama.  Patakbuhin at i-reset ang iyong code nang paulit-ulit hangga't matukot mo kung saan ang pagkakamali.
+        MC_HOC_2017_02_Cole_c: Kapag nabuksa na ng Ahente ang pintuan, gamitin ang mga arrow key para mapagalaw ang manlalaro papunta sa mapa!
+        MC_HOC_2017_02_Cole_d: Tiyakin na ang Ahente ay sumusunod sa landas na nakabalangkas sa mapa!
+      MC_HOC_2017_02_Cole_2019_authored_hint:
         MC_HOC_2017_02_Cole_a: Ilipat ang Ahente pasulong nang dalawang puwang para makatayo sa pressure plate. Ito ay magbubukas sa pintuan para sa iyong manlalaro.
         MC_HOC_2017_02_Cole_b: |-
           Pindutin ang "Run"!
@@ -3372,12 +3387,15 @@ fil:
         MC_HOC_2017_02_Cole_d: Tiyakin na ang Ahente ay sumusunod sa landas na nakabalangkas sa mapa!
       MC_HOC_2017_02_Will_authored_hint:
         MC_HOC_2017_02_Cole_a: Ilipat ang Ahente pasulong nang dalawang puwang para makatayo sa pressure plate. Ito ay magbubukas sa pintuan para sa iyong manlalaro.
-        MC_HOC_2017_02_Cole_b: |2
+        MC_HOC_2017_02_Cole_b: |-
           Pindutin ang "Run Agent"!
           
            Maari mong patakbuhin ang iyong code kahit hindi ito tama. Patakbuhin at i-reset ang iyong code nang paulit-ulit hanggang sa matukoy mo ang pagkakamali.
         MC_HOC_2017_02_Cole_c: Kapag nabuksan na ng Ahente ang pintuan, gamitin ang mga arrow key para mapagalaw ang manlalaro sa dalandan na bulaklak.
       MC_HOC_2017_03_Cole_authored_hint:
+        MC_HOC_2017_03_Cole_a: Kapag napapunta mo na ang Ahente sa pressure plate, maaari mo nang gamitin ang mga arrow keys para mapalakad ang manlalaro sa compass!
+        MC_HOC_2017_03_Cole_b: Pakiramdam mo ba na medyo mahaba ang code? Subukang gumamit ng `repeat` na loop at tingnan kung matukoy kung paano mapakli ito!
+      MC_HOC_2017_03_Cole_2019_authored_hint:
         MC_HOC_2017_03_Cole_a: Kapag napapunta mo na ang Ahente sa pressure plate, maaari mo nang gamitin ang mga arrow keys para mapalakad ang manlalaro sa compass!
         MC_HOC_2017_03_Cole_b: Pakiramdam mo ba na medyo mahaba ang code? Subukang gumamit ng `repeat` na loop at tingnan kung matukoy kung paano mapakli ito!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
@@ -3388,7 +3406,17 @@ fil:
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
         MC_HOC_2017_04POINT5_RYAN_b: 'Gamitin ang `turn right` na bloke para baguhin ang direksyon ng ahente '
         MC_HOC_2017_04POINT5_RYAN_a: Ang Ahente ay nangangailangan lang makapunta sa unang pressure plate para hayaan si Alex o Steve na makalampas sa palakol.
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Gamitin ang `turn right` na bloke para baguhin ang direksyon ng ahente '
+        MC_HOC_2017_04POINT5_RYAN_a: Ang Ahente ay nangangailangan lang makapunta sa unang pressure plate para hayaan si Alex o Steve na makalampas sa palakol.
       MC_HOC_2017_04_Cole_authored_hint:
+        MC_HOC_2017_04_Cole_a: Ang Ahente ay nangangailangang `gumalaw pasulong` nang 7 beses. Paano mo magagamit ang `repeat` na loop para mangyari iyan?
+        MC_HOC_2017_04_Cole_c: |-
+          Pindutin ang "Run"!
+          
+          Maaari mong patakbuhin ang iyong code kahit hindi ito tama.  Patakbuhin at i-reset ang iyong code nang paulit-ulit hangga't matukot mo kung saan ang pagkakamali.
+        MC_HOC_2017_04_Cole_b: Kapag ang Ahente ay nakapunta sa pressure plate, ang Ahente ay magbubukas sa pintuan para sa iyong manlalaro.
+      MC_HOC_2017_04_Cole_2019_authored_hint:
         MC_HOC_2017_04_Cole_a: Ang Ahente ay nangangailangang `gumalaw pasulong` nang 7 beses. Paano mo magagamit ang `repeat` na loop para mangyari iyan?
         MC_HOC_2017_04_Cole_c: |-
           Pindutin ang "Run"!
@@ -3398,9 +3426,15 @@ fil:
       MC_HOC_2017_05_Cole_authored_hint:
         MC_HOC_2017_05_Cole_a: Alam mo ba na maaari kang maglagay ng higit sa isang piraso ng code sa loob ng isang loop? Subukang gumalaw pasulong **at** paglalagay ng tabla sa loob ng `repeat` para makumpleto ang palaisipang ito.
         MC_HOC_2017_05_Cole_b: Dalhin ang Ahente patawid sa ilog, pagtatayo ng tulay habang tumatawid ka.
+      MC_HOC_2017_05_Cole_2019_authored_hint:
+        MC_HOC_2017_05_Cole_a: Alam mo ba na maaari kang maglagay ng higit sa isang piraso ng code sa loob ng isang loop? Subukang gumalaw pasulong **at** paglalagay ng tabla sa loob ng `repeat` para makumpleto ang palaisipang ito.
+        MC_HOC_2017_05_Cole_b: Dalhin ang Ahente patawid sa ilog, pagtatayo ng tulay habang tumatawid ka.
       MC_HOC_2017_05_Josh_authored_hint:
         MC_HOC_2017_05_Cole_a: Alam mo ba na maaari kang maglagay ng higit sa isang piraso ng code sa loob ng loop? Subukang maglagay ng tabla **at** gumalaw pasulong sa loob ng `repeat` para makumpleto ang palaisipang ito.
       MC_HOC_2017_06_Cole_authored_hint:
+        MC_HOC_2017_06_Cole_a: Ilang beses ba ipapatakbo ang loop na ito? Ilang beses ba *dapat* ito tumatakbo?
+        MC_HOC_2017_06_Cole_b: 'Tulungan ang Ahente na bumuo ng tulay patawid sa tubig! '
+      MC_HOC_2017_06_Cole_2019_authored_hint:
         MC_HOC_2017_06_Cole_a: Ilang beses ba ipapatakbo ang loop na ito? Ilang beses ba *dapat* ito tumatakbo?
         MC_HOC_2017_06_Cole_b: 'Tulungan ang Ahente na bumuo ng tulay patawid sa tubig! '
       MC_HOC_2017_06_Josh_authored_hint:
@@ -3409,14 +3443,18 @@ fil:
         MC_HOC_2017_07_Cole_c: Lahat ng kailangan mo lang ipagawa sa Ahente ay linimawin ang landas patungo sa Minecart.
         MC_HOC_2017_07_Cole_a: Para malutas ang palaisipang ito, alamin kung ano ang ginagawa ng `clear path` na function at tagawin ito nang maraming beses hangga't kailangan mo gamit ang maliit na berdeng `clear path` na bloke mula sa toolbox.
         MC_HOC_2017_07_Cole_b: Subukang paghaloin ang mga function na bloke sa iba pang mga bloke mula sa toolbox para matulungan kang lutasin ang palaisipang ito.
+      MC_HOC_2017_07_Cole_2019_authored_hint:
+        MC_HOC_2017_07_Cole_c: Lahat ng kailangan mo lang ipagawa sa Ahente ay linimawin ang landas patungo sa Minecart.
+        MC_HOC_2017_07_Cole_a: Para malutas ang palaisipang ito, alamin kung ano ang ginagawa ng `clear path` na function at tagawin ito nang maraming beses hangga't kailangan mo gamit ang maliit na berdeng `clear path` na bloke mula sa toolbox.
+        MC_HOC_2017_07_Cole_b: Subukang paghaloin ang mga function na bloke sa iba pang mga bloke mula sa toolbox para matulungan kang lutasin ang palaisipang ito.
       MC_HOC_2017_08_RY_authored_hint:
-        MC_HOC_2017_08_RY_a: |2
+        MC_HOC_2017_08_RY_a: |-
           Pindutin ang "Run Agent"!
           
            Maari mong patakbuhin ang iyong code kahit hindi ito tama. Patakbuhin at i-reset ang iyong code nang paulit-ulit hanggang sa matukoy mo ang pagkakamali.
         MC_HOC_2017_08_RY_b: Mayroong NAPAKARAMING pamamaraan para malutas ang palaisipang ito. Subukan ang iilan!
       MC_HOC_2017_08_Will_authored_hint:
-        MC_HOC_2017_08_RY_a: |2
+        MC_HOC_2017_08_RY_a: |-
           Pindutin ang "Run Agent"!
           
            Maari mong patakbuhin ang iyong code kahit hindi ito tama. Patakbuhin at i-reset ang iyong code nang paulit-ulit hanggang sa matukoy mo ang pagkakamali.
@@ -3424,6 +3462,9 @@ fil:
       MC_HOC_2017_10_Cole_authored_hint:
         MC_HOC_2017_10_Cole_a: Gamitin ang mga function para mapadali ang paglutas sa palaisipang ito!
       MC_HOC_2017_10_RETRY_authored_hint:
+        MC_HOC_2017_10_Cole_b: Hindi alam kung saan pupunta? Tingnan kung mahanap mo ba ang tuldok-tuldok na linya!
+        MC_HOC_2017_10_Cole_a: Gamitin ang mga function para mapadali ang paglutas sa palaisipang ito!
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
         MC_HOC_2017_10_Cole_b: Hindi alam kung saan pupunta? Tingnan kung mahanap mo ba ang tuldok-tuldok na linya!
         MC_HOC_2017_10_Cole_a: Gamitin ang mga function para mapadali ang paglutas sa palaisipang ito!
       MC_HOC_2017_13_Cole_authored_hint:
@@ -3440,7 +3481,16 @@ fil:
           Maaari mong patakbuhin ang iyong code kahit hindi ito tama.  Patakbuhin at i-reset ang iyong code nang paulit-ulit hangga't matukot mo kung saan ang pagkakamali.
         MC_HOC_2017_08_RY_b: Mayroong NAPAKARAMING pamamaraan para malutas ang palaisipang ito. Subukan ang iilan!
         MC_HOC_2017_08_RY_c: Subukang sundin ang tuldo-tuldok na linya para sa isang simpleng landas patawid sa laba.
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: |-
+          Pindutin ang "Run"!
+          
+          Maaari mong patakbuhin ang iyong code kahit hindi ito tama.  Patakbuhin at i-reset ang iyong code nang paulit-ulit hangga't matukot mo kung saan ang pagkakamali.
+        MC_HOC_2017_08_RY_b: Mayroong NAPAKARAMING pamamaraan para malutas ang palaisipang ito. Subukan ang iilan!
+        MC_HOC_2017_08_RY_c: Subukang sundin ang tuldo-tuldok na linya para sa isang simpleng landas patawid sa laba.
       MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Subukan pabuuin ng iilang mga minecart na riles ang Ahente para maaari mong matuklas ang mundo!
+      MC_HOC_2017_FP20x20_2019_authored_hint:
         MC_HOC_2017_13_Cole_a: Subukan pabuuin ng iilang mga minecart na riles ang Ahente para maaari mong matuklas ang mundo!
       NEW Course 4 Artist Functions 13_authored_hint:
         NEW_Course_4_Artist_Functions_13_a: Subukang mag-edit sa `draw a line of squares` na function para hindi mo na kailangang tawagin ito nang dalawang beses.
@@ -4952,9 +5002,13 @@ fil:
         courseC_maze_debugging2_c: Matukoy mo ba kung ano ang mali? Subukang patakbuhin ang code nang ilang beses para makita kung ano ang nangyayari.
       courseC_maze_debugging2_2018_authored_hint:
         courseC_maze_debugging2_c: Matukoy mo ba kung ano ang mali? Subukang patakbuhin ang code nang ilang beses para makita kung ano ang nangyayari.
+      courseC_maze_debugging2_2019_authored_hint:
+        courseC_maze_debugging2_c: Matukoy mo ba kung ano ang mali? Subukang patakbuhin ang code nang ilang beses para makita kung ano ang nangyayari.
       courseC_maze_debugging3_authored_hint:
         courseC_maze_debugging3_b: Matukoy mo ba kung ano ang mali? Subukang patakbuhin ang code nang ilang beses para makita kung ano ang nangyayari.
       courseC_maze_debugging3_2018_authored_hint:
+        courseC_maze_debugging3_b: Matukoy mo ba kung ano ang mali? Subukang patakbuhin ang code nang ilang beses para makita kung ano ang nangyayari.
+      courseC_maze_debugging3_2019_authored_hint:
         courseC_maze_debugging3_b: Matukoy mo ba kung ano ang mali? Subukang patakbuhin ang code nang ilang beses para makita kung ano ang nangyayari.
       courseC_maze_loops6_authored_hint:
         courseC_maze_loops6_b: "Para makalagay ng maraming mga bloke sa loob ng isang `repeat` na loop. Kaladkarin lang ang loop palabas sa workspace, pagkatapos ay kaladkarin ang lahat ng mga bloke mula sa panimulang programa sa loob nito.  \n\nIkonekta ang lahat ng ito sa `when run` na bloke at pwede na!"
@@ -5058,6 +5112,8 @@ fil:
       courseF_artist_for4_authored_hint:
         courseF_artist_for4_a: "**Ano ang pinakamaliit na numero na kakailanganin mo?  \nAno ang pinakamalaking numero?  \nGaano kalaki ang paglaki as bawat beses?**\n\nIyon ay ang mga katanungan na kailangan mung tanungin para mapunan ang mga puwang ng `for` na loop."
       courseF_artist_for4_2018_authored_hint:
+        courseF_artist_for4_a: "**Ano ang pinakamaliit na numero na kakailanganin mo?  \nAno ang pinakamalaking numero?  \nGaano kalaki ang paglaki as bawat beses?**\n\nIyon ay ang mga katanungan na kailangan mung tanungin para mapunan ang mga puwang ng `for` na loop."
+      courseF_artist_for4_2019_authored_hint:
         courseF_artist_for4_a: "**Ano ang pinakamaliit na numero na kakailanganin mo?  \nAno ang pinakamalaking numero?  \nGaano kalaki ang paglaki as bawat beses?**\n\nIyon ay ang mga katanungan na kailangan mung tanungin para mapunan ang mga puwang ng `for` na loop."
       courseF_artist_for_challenge1_authored_hint:
         courseF_artist_for_challenge1_a: Ang `pen width` ay 1. Ang unang parisukat ay mayroong 50 pixel na mga gilid, at bawat parisukay ay mas malapad nang 50 pixels kaysa sa huli.
@@ -5333,10 +5389,150 @@ fil:
           </next>
           </block>
           </xml>
+      courseF_artist_for_challenge1_2019_authored_hint:
+        courseF_artist_for_challenge1_a: Ang `pen width` ay 1. Ang unang parisukat ay mayroong 50 pixel na mga gilid, at bawat parisukay ay mas malapad nang 50 pixels kaysa sa huli.
+        courseF_artist_for_challenge1_b: Ang opacity na nasa brush ay parating `counter`/2.
+        courseF_artist_for_challenge1_c: Pagkatapos mong magawa ang bawat parisukat, huwag kalimutang tumalon patalikod, lumiko, tumalon ulit, pagkatapos ay babalik!
+        courseF_artist_for_challenge1_d: |-
+          **Solusyon:**
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_picker">
+          <title name="COLOUR">#0000cd</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">50</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">350</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">50</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="alpha" inline="true" id="alpha">
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">4</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">jumpBackward</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">25</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">jumpBackward</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">25</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseF_artist_for_challenge2_authored_hint:
         courseF_artist_for_challenge2_c: 'Ang `for loop` ay magdadagdag ng 2 mula sa 5 hanggang sa 250. '
         courseF_artist_for_challenge2_a: Ang pagbabago ng kulay ay nangyayari gamit ang `set color with red, gree, blue` na bloke. Ang red ay hindi nagbabago na 255, ang green ay palaging may halaga na `counter`, at blue ay palaging `255 - counter`.
       courseF_artist_for_challenge2_2018_authored_hint:
+        courseF_artist_for_challenge2_c: 'Ang `for loop` ay magdadagdag ng 2 mula sa 5 hanggang sa 250. '
+        courseF_artist_for_challenge2_a: Ang pagbabago ng kulay ay nangyayari gamit ang `set color with red, gree, blue` na bloke. Ang red ay hindi nagbabago na 255, ang green ay palaging may halaga na `counter`, at blue ay palaging `255 - counter`.
+      courseF_artist_for_challenge2_2019_authored_hint:
         courseF_artist_for_challenge2_c: 'Ang `for loop` ay magdadagdag ng 2 mula sa 5 hanggang sa 250. '
         courseF_artist_for_challenge2_a: Ang pagbabago ng kulay ay nangyayari gamit ang `set color with red, gree, blue` na bloke. Ang red ay hindi nagbabago na 255, ang green ay palaging may halaga na `counter`, at blue ay palaging `255 - counter`.
       courseF_artist_fwp_challenge2_authored_hint:
@@ -5497,6 +5693,143 @@ fil:
           </block>
           </xml>
       courseF_bee_for_challenge2_2018_authored_hint:
+        courseF_bee_for_challenge2_a: "Tingnan ang opsyon na ito para sa paggalaw: \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
+        courseF_bee_for_challenge2_b: 'Subukang gamitin ang dalawang `for` na mga loops: Isa para sa pag-akyat sa taas at pagkuha ng nektar, at isa pa para sa pag-akyat pababa at paggawa ng pulot.'
+        courseF_bee_for_challenge2_c: "Bigyang-pansin na ang isang `for` na loop ay nangangailangan ng iilang mga karaniwang mga loop sa loob ng repeat na `counter` na beses para magawa ang pataas na hagdanang pattern. \nAng isa pang `for` na loop ay nangangailangan lang ng isang karaniwang loop para makagawa na `counter` na halaga ng pulot."
+        courseF_bee_for_challenge2_d: |-
+          **Solusyon:**
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">3</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_moveForward"/>
+          </statement>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_moveForward"/>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_moveForward">
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="maze_moveForward">
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_honey"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseF_bee_for_challenge2_2019_authored_hint:
         courseF_bee_for_challenge2_a: "Tingnan ang opsyon na ito para sa paggalaw: \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
         courseF_bee_for_challenge2_b: 'Subukang gamitin ang dalawang `for` na mga loops: Isa para sa pag-akyat sa taas at pagkuha ng nektar, at isa pa para sa pag-akyat pababa at paggawa ng pulot.'
         courseF_bee_for_challenge2_c: "Bigyang-pansin na ang isang `for` na loop ay nangangailangan ng iilang mga karaniwang mga loop sa loob ng repeat na `counter` na beses para magawa ang pataas na hagdanang pattern. \nAng isa pang `for` na loop ay nangangailangan lang ng isang karaniwang loop para makagawa na `counter` na halaga ng pulot."

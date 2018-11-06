@@ -1211,3 +1211,9 @@ ca:
           stages:
             Artist:
               name: Artista
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Posant les bases
+            Conditionals with Cards:
+              name: Condicionals amb targetes

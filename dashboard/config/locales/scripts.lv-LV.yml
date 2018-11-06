@@ -1227,3 +1227,13 @@ lv:
           stages:
             Artist:
               name: Mākslinieks
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Veidot pamatus
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            Envelope Variables:
+              name: Aplokšņu mainīgie
+            For Loop Fun:
+              name: Jautrība ar "For" Cikliem

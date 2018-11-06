@@ -277,6 +277,10 @@ sv:
         \ All kod du behöver för att korsa floden är inbyggd i den!\r\n \r\nFäst två
         av de små, gröna blocken i arbetsytan för att fixa vägen och ta {currentPlayerName}
         till rödstensfacklan [redstone_torch]."
+      Function intro Ryan_2019: "Du har en **funktion** som heter \"bygg bro\" i arbetsytan.
+        \ All kod du behöver för att korsa floden är inbyggd i den!\r\n \r\nFäst två
+        av de små, gröna blocken i arbetsytan för att fixa vägen och ta {currentPlayerName}
+        till rödstensfacklan [redstone_torch]."
       K-1 Bee Loops 2: Använd en slinga för att flytta och sedan få nektar och gör
         honung!
       K-1 Bee Loops 3: Använd loopar att få nektar och göra honung!
@@ -304,11 +308,20 @@ sv:
         för att hjälpa till!\r\n\r\n   \r\nFäst ett \"gå framåt\"-block i det breda
         \"vid körning\"-blocket i arbetsytan för att ställa agenten på tryckplattan
         [PressurePlate_Up], tryck sedan på \"Kör\" och använd piltangenterna för att
-        styra {currentPlayerName} ut ur huset och öppna **kistan** [chest].\n"
+        styra {currentPlayerName} ut ur huset och öppna **kistan** [chest]."
+      MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} är fast i huset, men agenten
+        är här för att hjälpa till!\r\n\r\n   \r\nFäst ett \"gå framåt\"-block i det
+        breda \"vid körning\"-blocket i arbetsytan för att ställa agenten på tryckplattan
+        [PressurePlate_Up], tryck sedan på \"Kör\" och använd piltangenterna för att
+        styra {currentPlayerName} ut ur huset och öppna **kistan** [chest]."
       MC_HOC_2017_02: Spelaren måste ta sig in i den hemliga lunden.  Hjälp agenten
         öppna porten genom att skriva kod som ställer honom på tryckplattan.
       MC_HOC_2017_02_Cole: "{currentPlayerName} ska ut på äventyr! Hjälp till genom
         att hämta **kartan** [map_empty] bakom den låsta dörren på höger sida.\r\n
+        \r\nFäst koden i arbetsytan för att flytta agenten till tryckplattan [PressurePlate_Up]
+        så att {currentPlayerName} kan ta sig förbi. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} ska ut på äventyr! Hjälp till
+        genom att hämta **kartan** [map_empty] bakom den låsta dörren på höger sida.\r\n
         \r\nFäst koden i arbetsytan för att flytta agenten till tryckplattan [PressurePlate_Up]
         så att {currentPlayerName} kan ta sig förbi. "
       MC_HOC_2017_02_Kiki: "Spelaren ska ut på äventyr, men först behövs en fackla
@@ -322,6 +335,9 @@ sv:
       MC_HOC_2017_03_Cole: "{currentPlayerName} fortsätter sitt äventyr och behöver
         **kompassen** [compass] för att förbereda sig för resan.\r\n   \r\nProgrammera
         agenten att öppna porten. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} fortsätter sitt äventyr och behöver
+        **kompassen** [compass] för att förbereda sig för resan.\r\n   \r\nProgrammera
+        agenten att öppna porten. "
       MC_HOC_2017_03_Kiki: "Spelarens äventyr börjar bakom den låsta dörren i den
         hemliga lunden! \n\n\n\n\nHjälp agenten öppna dörren genom att skriva kod
         som ställer honom på tryckplattan."
@@ -332,9 +348,14 @@ sv:
         och loopar för att gå över de två första tryckplattorna."
       MC_HOC_2017_04POINT5_RYAN: "Du tog dig över! \n\n\nHjälp {currentPlayerName}
         ta sig genom labyrinten för att plocka upp **yxan** [diamond_axe]."
+      MC_HOC_2017_04POINT5_RYAN_2019: "Du tog dig över! \n\n\nHjälp {currentPlayerName}
+        ta sig genom labyrinten för att plocka upp **yxan** [diamond_axe]."
       MC_HOC_2017_04_Cole: "Agenten kan sväva över vatten!\r\n \r\nAnvänd en \"upprepa\"-loop
         för att lösa det här pusslet och hjälpa {currentPlayerName} ta sig till **hinken**
         [bucket_empty] bakom dörren. "
+      MC_HOC_2017_04_Cole_2019: "Agenten kan sväva över vatten!\r\n \r\nAnvänd en
+        \"upprepa\"-loop för att lösa det här pusslet och hjälpa {currentPlayerName}
+        ta sig till **hinken** [bucket_empty] bakom dörren. "
       MC_HOC_2017_04_Kiki: "Ingången till den hemliga lunden ledde till en vacker
         oas!  För att klara av den här banan måste spelaren ta sig till den orangefärgade
         rutan i hyddan. \n\n\nAnvänd en \"upprepa\"-loop för att hjälpa agenten hela
@@ -346,6 +367,9 @@ sv:
       MC_HOC_2017_05_Cole: "Åh nej, bron är trasig! \n\n\nProgrammera agenten att
         laga bron med \"placera\"-blocket så att {currentPlayerName} kan ta sig till
         **spaden** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "Åh nej, bron är trasig! \n\n\nProgrammera agenten
+        att laga bron med \"placera\"-blocket så att {currentPlayerName} kan ta sig
+        till **spaden** [diamond_shovel]."
       MC_HOC_2017_05_Josh: "Åh nej, bron är trasig! \n\n\nHjälp agenten laga bron
         så att spelaren kan ta sig till **spaden**."
       MC_HOC_2017_05_Kiki: "Det har blivit dags för spelaren att lämna den hemliga
@@ -355,12 +379,18 @@ sv:
       MC_HOC_2017_06_Cole: "Ännu en flod, men mycket bredare!\r\n \r\nFixa koden för
         att hjälpa agenten bygga en bro så att {currentPlayerName} kan ta sig till
         **spetshackan** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2019: "Ännu en flod, men mycket bredare!\r\n \r\nFixa koden
+        för att hjälpa agenten bygga en bro så att {currentPlayerName} kan ta sig
+        till **spetshackan** [diamond_pickaxe]. "
       MC_HOC_2017_06_Josh: "Ännu en flod, men mycket bredare! \n\n\nFixa koden för
         att hjälpa agenten bygga en bro över floden."
       MC_HOC_2017_06_Kiki: "Ännu en flod, men mycket bredare! \n\n\nFixa koden för
         att hjälpa agenten bygga en bro över vattnet."
       MC_HOC_2017_07_Cole: "Det är is i vägen!\r\n \r\nFunktionen \"rensa väg\" kan
         hjälpa dig förstöra isen så {currentPlayerName} kan ta sig till gruvvagnen
+        [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2019: "Det är is i vägen!\r\n \r\nFunktionen \"rensa väg\"
+        kan hjälpa dig förstöra isen så {currentPlayerName} kan ta sig till gruvvagnen
         [minecart_normal]! "
       MC_HOC_2017_07_Kiki: "Loopar är inte enda sättet att upprepa kod!\r\n\r\nHär
         har vi gett dig en funktion som heter \"rensa kaktusar\" som rensar bort de
@@ -396,6 +426,9 @@ sv:
       MC_HOC_2017_10_RETRY: "Ser du skillnaden mellan de två funktionerna i arbetsytan?\r\n
         \r\nAnvänd funktionerna med annan kod från verktygslådan för att rensa vägen
         åt gruvvagnen, hämta sedan **flinta och stål** [flint_and_steel].\r\n "
+      MC_HOC_2017_10_RETRY_2019: "Ser du skillnaden mellan de två funktionerna i arbetsytan?\r\n
+        \r\nAnvänd funktionerna med annan kod från verktygslådan för att rensa vägen
+        åt gruvvagnen, hämta sedan **flinta och stål** [flint_and_steel].\r\n "
       MC_HOC_2017_10_RYAN: Försök att bygga funktioner från början som gör det enklare
         för agenten att bygga färdigt gruvvagnen och ta spelaren till den orangefärgade
         rutan.
@@ -412,11 +445,16 @@ sv:
       MC_HOC_2017_Ali: Titta på funktionerna nedan.  Hur kan du använda dem för att
         undvika gastarna och hjälpa {currentPlayerName} ta sig till den **förtrollade
         boken** [book_enchanted]?
+      MC_HOC_2017_Ali_2019: Titta på funktionerna nedan.  Hur kan du använda dem för
+        att undvika gastarna och hjälpa {currentPlayerName} ta sig till den **förtrollade
+        boken** [book_enchanted]?
       MC_HOC_2017_FP10x10: "**Spela fritt:** Nu är det upp till dig! Klarar du av
         att samla alla diamanter på den här banan? "
       MC_HOC_2017_FP10x10_RE: "**Spela fritt:** Nu är det upp till dig! Klarar du
         av att samla alla diamanter på den här banan? "
       MC_HOC_2017_FP20x20: "**Spela fritt:** Nu är det upp till dig! Använd agentens
+        kod för att utforska världen."
+      MC_HOC_2017_FP20x20_2019: "**Spela fritt:** Nu är det upp till dig! Använd agentens
         kod för att utforska världen."
       MC_HOC_2017_Ryan_03: "Visste du att man kan ha mer än ett kodblock i en loop?
         \n\n\nAnvänd en \"upprepa\"-loop för att hjälpa agenten placera block i vattnet
@@ -467,8 +505,11 @@ sv:
         vid varje bivaxkaka. Använd en nästlad loop. '
       courseD_bee_nestedLoops8_2018: 'Samla all nektar från varje blomma och gör honung
         vid varje bivaxkaka. Använd en nästlad loop. '
+      courseD_bee_nestedLoops8_2019: 'Samla all nektar från varje blomma och gör honung
+        vid varje bivaxkaka. Använd en nästlad loop. '
       courseD_maze_nestedLoops4: Få mig till Solrosen!
       courseD_maze_nestedLoops4_2018: Få mig till Solrosen!
+      courseD_maze_nestedLoops4_2019: Få mig till Solrosen!
       courseE_bee_functions3: Funktioner är block av kod som utför en uppgift. Använd
         funktionen "få 5" för att få 5 nektar i taget. Se till att använda en loop
         för att få ett perfekt antal block också.
@@ -481,6 +522,7 @@ sv:
         av den yttersta loppen för att rita hela rutnätet?
       courseF_bee_for_challenge2: Lös detta pussel med minsta möjliga antal block.
       courseF_bee_for_challenge2_2018: Lös detta pussel med minsta möjliga antal block.
+      courseF_bee_for_challenge2_2019: Lös detta pussel med minsta möjliga antal block.
       frozen circle function in circle: Låt oss nu skapa 20 överlappande cirklar.
         Vrid 18 grader mellan varje cirkel.
       frozen circle function with parameter: Här är ett "Skapa cirkel"-block som kan

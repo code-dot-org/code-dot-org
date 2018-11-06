@@ -43,7 +43,7 @@ fi:
         step_size: Jokainen askel on 100 kuvapistettä leveä ja 100 kuvapistettä korkea.
       2-3 Artist 9_authored_hint:
         2-3_Artist_9_a: Tämä timantti on oikeastaan vain neliö käännettynä 45 astetta.
-        2-3_Artist_9_b: |
+        2-3_Artist_9_b: |-
           Älä unohda kääntää taiteilijaa vasemmalle 45 astetta ennenkuin aloitat piirtämään neliötä!
 
            [] (https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
@@ -152,6 +152,9 @@ fi:
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Voit kutsua toimintoa ohjelmassasi monta kertaa! Kokeile
           tehtävän selvittämistä kutsumalla sitä kaksi kertaa.
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_a: Voit kutsua toimintoa ohjelmassasi monta kertaa! Kokeile
+          tehtävän selvittämistä kutsumalla sitä kaksi kertaa.
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Kokeile laittaa Agent rakentamaan siltoja, jotta Alex
           tai Steve voi tehdä tutkimusmatkoja kartan reunojen ulkopuolelle.
@@ -165,7 +168,22 @@ fi:
           Agentia varten.
         MC_HOC_2017_01_RETRY_c: Kun Agent on suorittanut koodinsa loppuun, voit liikuttaa
           pelaajaa nuolinäppäimillä!
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Vie yksi liiku eteenpäin -lohko työkalupakista työtilaan
+          ja napsauta se paikalleen kun suoritetaan -lohkon alle.
+        MC_HOC_2017_01_RETRY_b: Älä unohda napsauttaa Suorita, jotta koodi suoritetaan
+          Agentia varten.
+        MC_HOC_2017_01_RETRY_c: Kun Agent on suorittanut koodinsa loppuun, voit liikuttaa
+          pelaajaa nuolinäppäimillä!
       MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Liikuta Agentia kaksi ruutua eteenpäin seisomaan painelaatalla.
+          Tämä avaa pelaajalle oven.
+        MC_HOC_2017_02_Cole_b: "Paina Suorita! \nVoit suorittaa koodisi, vaikka se
+          ei olisi oikein. Suorita koodisi ja korjaa sitä yhä uudelleen, kunnes saat
+          selville, mikä on pielessä."
+        MC_HOC_2017_02_Cole_c: Kun Agent on avannut oven, liikuta pelaaja kartalle
+          nuolinäppäinten avulla!
+      MC_HOC_2017_02_Cole_2019_authored_hint:
         MC_HOC_2017_02_Cole_a: Liikuta Agentia kaksi ruutua eteenpäin seisomaan painelaatalla.
           Tämä avaa pelaajalle oven.
         MC_HOC_2017_02_Cole_b: "Paina Suorita! \nVoit suorittaa koodisi, vaikka se
@@ -186,10 +204,20 @@ fi:
           kompassille nuolinäppäinten avulla!
         MC_HOC_2017_03_Cole_b: Tuntuuko koodi hieman pitkältä? Kokeile toisto-silmukan
           käyttöä ja katso, osaatko tehdä siitä lyhyemmän!
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_a: Kun saat Agentin painelaatalle, voit liikuttaa pelaajan
+          kompassille nuolinäppäinten avulla!
+        MC_HOC_2017_03_Cole_b: Tuntuuko koodi hieman pitkältä? Kokeile toisto-silmukan
+          käyttöä ja katso, osaatko tehdä siitä lyhyemmän!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: "Näiden kahden painelaatan ylittäminen avaa tien
           pelaajalle. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Muuta Agentin suuntaa käyttämällä käänny oikealle
+          -lohkoa. '
+        MC_HOC_2017_04POINT5_RYAN_a: Agentin on päästävä vain ensimmäiselle painelaatalle,
+          jotta Alex tai Steve pääsee kirveen luokse.
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
         MC_HOC_2017_04POINT5_RYAN_b: 'Muuta Agentin suuntaa käyttämällä käänny oikealle
           -lohkoa. '
         MC_HOC_2017_04POINT5_RYAN_a: Agentin on päästävä vain ensimmäiselle painelaatalle,
@@ -201,7 +229,18 @@ fi:
           ei olisi oikein. Suorita koodisi ja korjaa sitä yhä uudelleen, kunnes saat
           selville, mikä on pielessä."
         MC_HOC_2017_04_Cole_b: Kun Agent on painelaatalla, hän avaa oven pelaajalle.
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_a: Agentin on saatava liiku eteenpäin -komento 7 kertaa.
+          Miten voit käyttää toisto-silmukkaa siihen?
+        MC_HOC_2017_04_Cole_c: "Paina Suorita! \nVoit suorittaa koodisi, vaikka se
+          ei olisi oikein. Suorita koodisi ja korjaa sitä yhä uudelleen, kunnes saat
+          selville, mikä on pielessä."
+        MC_HOC_2017_04_Cole_b: Kun Agent on painelaatalla, hän avaa oven pelaajalle.
       MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Tiesitkö, että voit laittaa silmukkaan enemmän kuin
+          yhden koodijonon? Kokeile laudan asettamista **ja** eteenpäin liikkumista
+          toisto-silmukassa tämän tehtävän suorittamiseksi.
+      MC_HOC_2017_05_Cole_2019_authored_hint:
         MC_HOC_2017_05_Cole_a: Tiesitkö, että voit laittaa silmukkaan enemmän kuin
           yhden koodijonon? Kokeile laudan asettamista **ja** eteenpäin liikkumista
           toisto-silmukassa tämän tehtävän suorittamiseksi.
@@ -212,9 +251,18 @@ fi:
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: Kuinka monta kertaa silmukka suoritetaan? Kuinka monta
           kertaa se *pitäisi* suorittaa?
+      MC_HOC_2017_06_Cole_2019_authored_hint:
+        MC_HOC_2017_06_Cole_a: Kuinka monta kertaa silmukka suoritetaan? Kuinka monta
+          kertaa se *pitäisi* suorittaa?
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Kokeile usean ohjeen laittamista toisto-silmukkaan!
       MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_a: Ratkaise tämä tehtävä ottamalla selville, mitä raivaa
+          polku -toiminto tekee ja kutsu sitä riittävän monta kertaa työkalupakin
+          pienen vihreän raivaa polku -lohkon avulla.
+        MC_HOC_2017_07_Cole_b: Kokeile toimintolohkojen sekoittamista muiden työkalupakin
+          lohkojen kanssa, jotta pääset eteenpäin tämän tehtävän ratkaisemisessa.
+      MC_HOC_2017_07_Cole_2019_authored_hint:
         MC_HOC_2017_07_Cole_a: Ratkaise tämä tehtävä ottamalla selville, mitä raivaa
           polku -toiminto tekee ja kutsu sitä riittävän monta kertaa työkalupakin
           pienen vihreän raivaa polku -lohkon avulla.
@@ -236,6 +284,8 @@ fi:
         MC_HOC_2017_10_Cole_a: Käytä toimintoja helpottamaan tämän tehtävän ratkaisemista!
       MC_HOC_2017_10_RETRY_authored_hint:
         MC_HOC_2017_10_Cole_a: Käytä toimintoja helpottamaan tämän tehtävän ratkaisemista!
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_a: Käytä toimintoja helpottamaan tämän tehtävän ratkaisemista!
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Kokeile laittaa Agent rakentamaan siltoja, jotta Alex
           tai Steve voi tehdä tutkimusmatkoja kartan reunojen ulkopuolelle.
@@ -248,7 +298,16 @@ fi:
           selville, mikä on pielessä."
         MC_HOC_2017_08_RY_b: Tämän tehtävän ratkaisemiseen on todella MONTA tapaa.
           Kokeile niistä muutamia!
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: "Paina Suorita! \nVoit suorittaa koodisi, vaikka se ei
+          olisi oikein. Suorita koodisi ja korjaa sitä yhä uudelleen, kunnes saat
+          selville, mikä on pielessä."
+        MC_HOC_2017_08_RY_b: Tämän tehtävän ratkaisemiseen on todella MONTA tapaa.
+          Kokeile niistä muutamia!
       MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Kokeile laittaa Agent rakentamaan siltoja, jotta Alex
+          tai Steve voi tehdä tutkimusmatkoja kartan reunojen ulkopuolelle.
+      MC_HOC_2017_FP20x20_2019_authored_hint:
         MC_HOC_2017_13_Cole_a: Kokeile laittaa Agent rakentamaan siltoja, jotta Alex
           tai Steve voi tehdä tutkimusmatkoja kartan reunojen ulkopuolelle.
       New Minecraft Hero Project_authored_hint:

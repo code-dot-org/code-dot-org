@@ -409,7 +409,7 @@
   mc_gradelevel: "6 yaş ve üzeri"
   mc_platformtext: "Modern tarayıcılar, akıllı telefonlar, tabletler"
   mc_specs: "Bir çok dil seçeneği | Modern tarayıcılar, akıllı telefonlar, tabletler | 6-106 yaş"
-  minecraft_agent: 'Minecraft: Kahramanın yolculuğu'
+  minecraft_agent: "Minecraft: Kahramanın yolculuğu"
   minecraft_designer: "Minecraft Tasarımcısı"
   minecraft_adventurer: "Minecraft Maceracısı"
   minecraft_tutorials: "Minecraft Kodlama Saati Eğitimleri"
@@ -653,7 +653,7 @@
   dashboard_sections_table_stage_extras: "Ekstralar"
   dashboard_sections_table_students: "Öğrenciler"
   dashboard_sections_table_code: "Bölge Kodu"
-  dashboard_sections_name: "Bölüm İsmi"
+  dashboard_sections_name: 'Bölüm İsmi'
   dashboard_sections_choose_secret: "Öğrencilerinize hesap açmak istiyorsanız, o bölüm için gizli bir \n<b>kelime</b> veya <b>resim</b> seçin."
   dashboard_sections_secret_word: "<b>kelime</b> her bir öğrenci için gizli bir kelime ayarlamanızı sağlar."
   dashboard_sections_secret_picture: "<b>resim</b> size her bir öğrenci için gizli resim ayarlamanızı sağlar. Bu özellikle klavyeyle yazmayı henüz bilmeyen öğrenciler için idealdir."
@@ -679,7 +679,7 @@
   dashboard_students_add_multiple: 'Yazın veya öğrencilerinzin isimlerini, her satırda bir tane olacak şekilde yapştırın:'
   dashboard_students_new_google_classroom_section: "Öğrenci eklemek için, <a href='http://classroom.google.com' target='_blank'>Google Classroom'a</a> gidin ve sonra yukarıdaki <b>Google Classroom'dan öğrencileri senkronize edin</b> butonuna basın."
   dashboard_students_new_section: "Yeni bir bölüm oluşturdunuz. Şimdi yukarıdaki <b>öğrenci ekle</b> ve <b>birden fazla öğrenci Ekle</b> düğmelerini kullanarak öğrencilerinizi ekleyin."
-  dashboard_students_name: "İsim"
+  dashboard_students_name: 'İsim'
   dashboard_students_progress: "İlerleme Durumu"
   dashboard_students_male: "Erkek"
   dashboard_students_female: "Kadın"
@@ -1436,6 +1436,7 @@
   hoc2018_creativity_create: "Oluştur"
   hoc2018_mc_page_title: "Minecraft Kodlama Saati Eğitimleri"
   hoc2018_mc_details: "Bir çok dil seçeneği | Modern tarayıcılar, akıllı telefonlar, tabletler | 2. sınıf ve üstü"
+  hoc2018_mc_hero_title: "Minecraft: Kahramanın yolculuğu"
   hoc2018_mc_designer_title: "Minecraft Tasarımcısı"
   hoc2018_mc_designer_description: "Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın sana ait sürümünde programla."
   hoc2018_mc_adventurer_title: "Minecraft Maceracısı"
@@ -1463,3 +1464,8 @@
   hoc2018_mc_minecraft_education: "Minecraft eğitim"
   hoc2018_mc_continue_learning: "Minecraft'la öğrenin."
   hoc2018_mc_go_to_mc_education: "Minecraft Eğitime gidin"
+  hoc2018_dance_party_button: "Başlayın"
+  hoc2018_dance_teacher_resources_tile1_button: "Ders Planı"
+  hoc2018_dance_teacher_resources_tile2_button: "Bilgisayarsız Etkinlik"
+  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "Daha fazlasını öğren"
+  hoc2018_dance_amazon_apply_now_button_text: "Şimdi uygula"

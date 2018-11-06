@@ -455,7 +455,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/:key/:channel_id/embed_video
   def embed_video
-    video_src = "https://cdo-p5-replay-destination.s3.amazonaws.com/videos/video-#{params[:channel_id]}.mp4"
+    video_src = "https://dance-api.code.org/videos/video-#{params[:channel_id]}.mp4"
     render template: "projects/embed_video", layout: false, locals: {video_src: video_src}
   end
 

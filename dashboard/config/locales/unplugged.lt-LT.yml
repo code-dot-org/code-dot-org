@@ -274,3 +274,10 @@ lt:
         title: Judėk, judėk
       RelayProgramming_2018:
         title: Programavimas komandoje
+      courseB_unplugged_MRF_2019:
+        title: Mano draugai robotai
+      Conditionals_2019:
+        title: Sąlyginiai sakiniai
+        desc: Tam, kad išmoktų sąlyginius sakinius, mokiniai žais kortų žaidimą ir
+          sukurs taisykles, tokias kaip „jeigu ištrauksiu raudoną kortą, gausiu tašką“
+          arba „jei ištrauksiu juodą kortą, tu gausi tašką“.

@@ -163,7 +163,7 @@ pl:
         2-3_Artist_Nested_Loops_7_a: "Jaki powinien być Twój ruch w każdej pętli?
           \  \n\nIle to jest 360/10?"
       2-3 Artist Nested Loops 9_authored_hint:
-        2-3_Artist_Nested_Loops_9_a: |
+        2-3_Artist_Nested_Loops_9_a: |-
           Potrzebujesz pomocy w znalezieniu odpowiedniego kąta?
 
            ** 360 / 12 = 30 **
@@ -925,6 +925,11 @@ pl:
           będziesz się przemieszczać...
         Function_intro_Ryan_a: W swoim programie możesz wywołać jedną funkcję wielokrotnie!  Spróbuj
           wywołać ją dwukrotnie, aby rozwiązać tę łamigłówkę.
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_b: Jeśli wywołasz funkcję poprawnie, to jest ścieżką którą
+          będziesz się przemieszczać...
+        Function_intro_Ryan_a: W swoim programie możesz wywołać jedną funkcję wielokrotnie!  Spróbuj
+          wywołać ją dwukrotnie, aby rozwiązać tę łamigłówkę.
       Harvesting_authored_hint:
         pointer_harvester_test: Jaki rodzaj bloku mogę użyć, aby coś sprawdzić i podjąć
           decyzję?
@@ -952,7 +957,24 @@ pl:
           dla Agenta.
         MC_HOC_2017_01_RETRY_c: Po wykonaniu całego kodu przez Agenta, możesz poruszać
           się graczem przy użyciu klawiszy strzałek!
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Przeciągnij jeden blok "idź do przodu" ze skrzynki
+          z narzędziami do obszaru roboczego i umieść pod blokiem "po uruchomieniu".
+        MC_HOC_2017_01_RETRY_b: Nie zapomnij kliknąć na "Uruchom", aby uruchomić kod
+          dla Agenta.
+        MC_HOC_2017_01_RETRY_c: Po wykonaniu całego kodu przez Agenta, możesz poruszać
+          się graczem przy użyciu klawiszy strzałek!
       MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Przesuń Agenta o dwa pola do przodu, aby stanął na
+          płycie naciskowej.  Dzięki temu przed graczem otworzą się drzwi.
+        MC_HOC_2017_02_Cole_b: "Naciśnij przycisk \"Uruchom\"! \nMożesz uruchomić
+          swój kod, nawet jeśli nie jest poprawny. Wykonuj i resetuj swój kod, aż
+          zobaczysz, co dzieje się źle."
+        MC_HOC_2017_02_Cole_c: Gdy Agent otworzy drzwi, użyj klawiszy strzałek, aby
+          gracz dotarł do mapy!
+        MC_HOC_2017_02_Cole_d: Upewnij się, że Agent podąża ścieżką nakreśloną na
+          mapie!
+      MC_HOC_2017_02_Cole_2019_authored_hint:
         MC_HOC_2017_02_Cole_a: Przesuń Agenta o dwa pola do przodu, aby stanął na
           płycie naciskowej.  Dzięki temu przed graczem otworzą się drzwi.
         MC_HOC_2017_02_Cole_b: "Naciśnij przycisk \"Uruchom\"! \nMożesz uruchomić
@@ -975,10 +997,20 @@ pl:
           strzałek, aby gracz dotarł do kompasu!
         MC_HOC_2017_03_Cole_b: Czy uważasz, że kod jest trochę za długi?  Spróbuj
           użyć pętli "powtórze", aby zobaczyć, czy da się go skrócić!
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_a: Gdy Agent dotrze do płyty naciskowej, możesz użyć klawiszy
+          strzałek, aby gracz dotarł do kompasu!
+        MC_HOC_2017_03_Cole_b: Czy uważasz, że kod jest trochę za długi?  Spróbuj
+          użyć pętli "powtórze", aby zobaczyć, czy da się go skrócić!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: "Przekroczenie tych dwóch płyt naciskowych otworzy
           przejście dla gracza. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Aby Agent się obrócił, Użyj bloku "skręć w prawo",
+          aby Agent się obrócił '
+        MC_HOC_2017_04POINT5_RYAN_a: Wystarczy, że Agent dotrze do pierwszej płyty
+          naciskowej, aby Alex lub Steve mogli dotrzeć do siekiery.
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
         MC_HOC_2017_04POINT5_RYAN_b: 'Aby Agent się obrócił, Użyj bloku "skręć w prawo",
           aby Agent się obrócił '
         MC_HOC_2017_04POINT5_RYAN_a: Wystarczy, że Agent dotrze do pierwszej płyty
@@ -991,7 +1023,20 @@ pl:
           zobaczysz, co dzieje się źle."
         MC_HOC_2017_04_Cole_b: Gdy Agent dotrze do płyty naciskowej, otworzy drzwi
           dla gracza.
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_a: Agent musi wykonać "idź do przodu" siedem razy.  Jak
+          użyjesz pętli "powtórz", aby to zrobił?
+        MC_HOC_2017_04_Cole_c: "Naciśnij przycisk \"Uruchom\"! \nMożesz uruchomić
+          swój kod, nawet jeśli nie jest poprawny. Wykonuj i resetuj swój kod, aż
+          zobaczysz, co dzieje się źle."
+        MC_HOC_2017_04_Cole_b: Gdy Agent dotrze do płyty naciskowej, otworzy drzwi
+          dla gracza.
       MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Czy wiesz, że w pętli możesz umieścić więcej niż jeden
+          fragment kodu?  Spróbuj umieścić w pętli "powtórz" deskę oraz "idź do przodu",
+          aby ukończyć tę łamigłówkę.
+        MC_HOC_2017_05_Cole_b: Przeprowadź Agenta przez rzekę, budując stopniowo most.
+      MC_HOC_2017_05_Cole_2019_authored_hint:
         MC_HOC_2017_05_Cole_a: Czy wiesz, że w pętli możesz umieścić więcej niż jeden
           fragment kodu?  Spróbuj umieścić w pętli "powtórz" deskę oraz "idź do przodu",
           aby ukończyć tę łamigłówkę.
@@ -1004,10 +1049,22 @@ pl:
         MC_HOC_2017_06_Cole_a: Ile razy powtarza się ta pętla, a ile razy powinna
           się powtórzyć?
         MC_HOC_2017_06_Cole_b: 'Pomóż Agentowi zbudować most przez calutką wodę! '
+      MC_HOC_2017_06_Cole_2019_authored_hint:
+        MC_HOC_2017_06_Cole_a: Ile razy powtarza się ta pętla, a ile razy powinna
+          się powtórzyć?
+        MC_HOC_2017_06_Cole_b: 'Pomóż Agentowi zbudować most przez calutką wodę! '
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Spróbuj umieścić w pętli "powtórz" więcej niż jedną
           instrukcję!
       MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_c: Wszystko, co Agent musi zrobić, to wyczyścić ścieżkę
+          do Minecartu.
+        MC_HOC_2017_07_Cole_a: Aby rozwiązać tę łamigłówkę, musisz zrozumieć działanie
+          funkcji "clear path". Można ją wywołać wiele razy, używając zielonego bloczku
+          "clear path" znajdującego się w skrzynce z narzędziami.
+        MC_HOC_2017_07_Cole_b: Spróbuj użyć bloków funkcyjnych jednocześnie z innymi
+          blokami, aby ułatwić sobie rozwiązanie tej łamigłówki.
+      MC_HOC_2017_07_Cole_2019_authored_hint:
         MC_HOC_2017_07_Cole_c: Wszystko, co Agent musi zrobić, to wyczyścić ścieżkę
           do Minecartu.
         MC_HOC_2017_07_Cole_a: Aby rozwiązać tę łamigłówkę, musisz zrozumieć działanie
@@ -1033,6 +1090,10 @@ pl:
         MC_HOC_2017_10_Cole_b: Nie wiesz, gdzie iść? Sprawdź, czy możesz znaleźć wykropkowaną
           linię!
         MC_HOC_2017_10_Cole_a: Użycie funkcji ułatwi rozwiązanie tej łamigłówki!
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_b: Nie wiesz, gdzie iść? Sprawdź, czy możesz znaleźć wykropkowaną
+          linię!
+        MC_HOC_2017_10_Cole_a: Użycie funkcji ułatwi rozwiązanie tej łamigłówki!
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Spróbuj tak pokierować Agentem, aby wybudował kilka
           mostów. Dzięki temu Alex lub Steve będą mogli wyjść poza granice mapy.
@@ -1046,7 +1107,17 @@ pl:
         MC_HOC_2017_08_RY_b: Tę łamigłówkę można rozwiązać na WIELE różnych sposobów.  Wypróbuj
           kilka z nich!
         MC_HOC_2017_08_RY_c: Wykropkowana linia wskaże ci prostą ścieżkę poprzez lawę.
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: "Naciśnij przycisk \"Uruchom\"! \nMożesz uruchomić swój
+          kod, nawet jeśli nie jest poprawny. Wykonuj i resetuj swój kod, aż zobaczysz,
+          co dzieje się źle."
+        MC_HOC_2017_08_RY_b: Tę łamigłówkę można rozwiązać na WIELE różnych sposobów.  Wypróbuj
+          kilka z nich!
+        MC_HOC_2017_08_RY_c: Wykropkowana linia wskaże ci prostą ścieżkę poprzez lawę.
       MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Spróbuj tak pokierować Agentem tak, aby zbudował kilka
+          dróg dla minicart, dzięki temu będziesz mógł wyruszyć w świat!
+      MC_HOC_2017_FP20x20_2019_authored_hint:
         MC_HOC_2017_13_Cole_a: Spróbuj tak pokierować Agentem tak, aby zbudował kilka
           dróg dla minicart, dzięki temu będziesz mógł wyruszyć w świat!
       NEW Course 4 Artist Functions 13_authored_hint:
@@ -1911,12 +1982,22 @@ pl:
           narysuję linię automatycznie.
         courseC_artist_prog2_b: Masz problem z zakrętem? Użyj bloku "skręć w prawo
           o 90 stopni".
+      courseC_artist_prog2_2019_authored_hint:
+        courseC_artist_prog2_a: Jeżeli użyjesz bloku "idź do przodu o 100 pikseli",
+          narysuję linię automatycznie.
+        courseC_artist_prog2_b: Masz problem z zakrętem? Użyj bloku "skręć w prawo
+          o 90 stopni".
       courseC_artist_prog_challenge2a_authored_hint:
         courseC_artist_prog_challenge2_a: Po narysowaniu pierwszej linii, obróć się
           w lewo zanim narysujesz drugą linię.
         courseC_artist_prog_challenge2_b: Po narysowaniu drugiej linii, obróć się
           w prawo zanim narysujesz 3 linię.
       courseC_artist_prog_challenge2a_2018_authored_hint:
+        courseC_artist_prog_challenge2_a: Po narysowaniu pierwszej linii, obróć się
+          w lewo zanim narysujesz drugą linię.
+        courseC_artist_prog_challenge2_b: Po narysowaniu drugiej linii, obróć się
+          w prawo zanim narysujesz 3 linię.
+      courseC_artist_prog_challenge2a_2019_authored_hint:
         courseC_artist_prog_challenge2_a: Po narysowaniu pierwszej linii, obróć się
           w lewo zanim narysujesz drugą linię.
         courseC_artist_prog_challenge2_b: Po narysowaniu drugiej linii, obróć się
@@ -2007,16 +2088,25 @@ pl:
       courseC_maze_debugging1_2018_authored_hint:
         courseC_maze_debugging1_b: Jest jeden blok, który musisz dodać aby skończyć
           tą zagadkę.
+      courseC_maze_debugging1_2019_authored_hint:
+        courseC_maze_debugging1_b: Jest jeden blok, który musisz dodać aby skończyć
+          tą zagadkę.
       courseC_maze_debugging2_authored_hint:
         courseC_maze_debugging2_c: Nie możesz dowiedzieć się do jest źle? Spróbuj
           uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseC_maze_debugging2_2018_authored_hint:
         courseC_maze_debugging2_c: Nie możesz dowiedzieć się do jest źle? Spróbuj
           uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
+      courseC_maze_debugging2_2019_authored_hint:
+        courseC_maze_debugging2_c: Nie możesz dowiedzieć się do jest źle? Spróbuj
+          uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseC_maze_debugging3_authored_hint:
         courseC_maze_debugging3_b: Nie możesz dowiedzieć się do jest źle? Spróbuj
           uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseC_maze_debugging3_2018_authored_hint:
+        courseC_maze_debugging3_b: Nie możesz dowiedzieć się do jest źle? Spróbuj
+          uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
+      courseC_maze_debugging3_2019_authored_hint:
         courseC_maze_debugging3_b: Nie możesz dowiedzieć się do jest źle? Spróbuj
           uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseC_maze_loops6_authored_hint:
@@ -2317,11 +2407,22 @@ pl:
           O jaką wielkość zmienia się ta liczba za każdym razem?**
 
           Te pytania musisz zadać aby wypełnić puste pola w pętli `for`.
+      courseF_artist_for4_2019_authored_hint:
+        courseF_artist_for4_a: |-
+          **Jaka jest najmniejsza liczba, którą będziesz potrzebował?
+          Jak jest największa liczba?
+          O jaką wielkość zmienia się ta liczba za każdym razem?**
+
+          Te pytania musisz zadać aby wypełnić puste pola w pętli `for`.
       courseF_artist_for_challenge1_authored_hint:
         courseF_artist_for_challenge1_a: "`pen width` wynosi 1. Pierwszy kwadrat ma
           boki o szerokości 50 pikseli, kolejny kwadrat jest o 50 pikseli szerszy
           od poprzedniego."
       courseF_artist_for_challenge1_2018_authored_hint:
+        courseF_artist_for_challenge1_a: "`pen width` wynosi 1. Pierwszy kwadrat ma
+          boki o szerokości 50 pikseli, kolejny kwadrat jest o 50 pikseli szerszy
+          od poprzedniego."
+      courseF_artist_for_challenge1_2019_authored_hint:
         courseF_artist_for_challenge1_a: "`pen width` wynosi 1. Pierwszy kwadrat ma
           boki o szerokości 50 pikseli, kolejny kwadrat jest o 50 pikseli szerszy
           od poprzedniego."
@@ -2332,6 +2433,12 @@ pl:
           `ustaw kolor z kolorem czerwonym, zielonym, niebieskim`. Czerwony ma stałą
           wartość 255, zielony jest zawsze wartością `licznik`, a niebieski to `255-licznik`.
       courseF_artist_for_challenge2_2018_authored_hint:
+        courseF_artist_for_challenge2_c: "`pętla for` zmienia się od 5 do 250 z krokiem
+          równym 2. "
+        courseF_artist_for_challenge2_a: Zmiana koloru odbywa się poprzez użycie bloku
+          `ustaw kolor z kolorem czerwonym, zielonym, niebieskim`. Czerwony ma stałą
+          wartość 255, zielony jest zawsze wartością `licznik`, a niebieski to `255-licznik`.
+      courseF_artist_for_challenge2_2019_authored_hint:
         courseF_artist_for_challenge2_c: "`pętla for` zmienia się od 5 do 250 z krokiem
           równym 2. "
         courseF_artist_for_challenge2_a: Zmiana koloru odbywa się poprzez użycie bloku
@@ -2365,6 +2472,12 @@ pl:
           `długość` czyni kod czystszym, ponieważ możesz zapętlać ten sam kod wiele
           razy, zamiast tworzyć nowej kopi dla każdego zestawu liczb.
       courseF_artist_variables_challenge2_2018_authored_hint:
+        courseF_artist_variables_challenge2_a: Zmienne są pomocne, ponieważ można
+          do nich dodawać w każdym kroku pętli.
+        courseF_artist_variables_challenge2_c: Użycie zmiennej dla `boki` oraz dla
+          `długość` czyni kod czystszym, ponieważ możesz zapętlać ten sam kod wiele
+          razy, zamiast tworzyć nowej kopi dla każdego zestawu liczb.
+      courseF_artist_variables_challenge2_2019_authored_hint:
         courseF_artist_variables_challenge2_a: Zmienne są pomocne, ponieważ można
           do nich dodawać w każdym kroku pętli.
         courseF_artist_variables_challenge2_c: Użycie zmiennej dla `boki` oraz dla
@@ -2420,6 +2533,15 @@ pl:
           ![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)
 
           Jak te liczby są ze sobą powiązane?
+      courseF_bee_for10_2019_authored_hint:
+        courseF_bee_for10_c: |-
+          W zagadce pierwszy zestaw ma **14** kwiatów, drugi zestaw ma **10** kwiatów, trzeci zestaw ma **6** kwiatów a czwarty zestaw ma **2** kwiaty.
+
+          Zauważ, że na obrazku jest **7** czerwonych kwadratów, **5** pomarańczowych kwadratów, **3** zielone kwadraty i **1** niebieski blok.
+
+          ![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)
+
+          Jak te liczby są ze sobą powiązane?
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_a: Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
         courseF_bee_for_challenge2_b: 'Spróbuj użyć dwóch pętlach "dla": jednej dla
@@ -2429,6 +2551,14 @@ pl:
           wznoszących się schodów. Inna pętla "dla" potrzebuje tylko jednej zwykłej
           pętli, aby zrobić 'licznik' miodu.
       courseF_bee_for_challenge2_2018_authored_hint:
+        courseF_bee_for_challenge2_a: Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
+        courseF_bee_for_challenge2_b: 'Spróbuj użyć dwóch pętlach "dla": jednej dla
+          wznoszenia się by zebrać nektar, a drugiej dla schodzenia i robienia miodu.'
+        courseF_bee_for_challenge2_c: Zauważ, że jedna pętla "dla" potrzebuje wewnątrz
+          wielu zwykłych pętli, które powtarzaj się 'licznik' razy, aby utworzyć wzór
+          wznoszących się schodów. Inna pętla "dla" potrzebuje tylko jednej zwykłej
+          pętli, aby zrobić 'licznik' miodu.
+      courseF_bee_for_challenge2_2019_authored_hint:
         courseF_bee_for_challenge2_a: Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
         courseF_bee_for_challenge2_b: 'Spróbuj użyć dwóch pętlach "dla": jednej dla
           wznoszenia się by zebrać nektar, a drugiej dla schodzenia i robienia miodu.'
@@ -3132,6 +3262,12 @@ pl:
         grade5_artist_variables_triangles1_c: Wewnątrz pętli musisz pójść do przodu
           50 pikseli, a następnie skręcić w lewo o 120 stopni.
       grade5_artist_variables_triangles1_2018_authored_hint:
+        grade5_artist_variables_triangles1_a: Musisz pamiętać, że aby utworzyć wewnętrzny
+          kąt o 60 stopniach w tym trójkącie artysta musi się obrócić o 120 stopni.
+        grade5_artist_variables_triangles1_b: Aby skrócić swój kod użyj pętli 'powtórz'.
+        grade5_artist_variables_triangles1_c: Wewnątrz pętli musisz pójść do przodu
+          50 pikseli, a następnie skręcić w lewo o 120 stopni.
+      grade5_artist_variables_triangles1_2019_authored_hint:
         grade5_artist_variables_triangles1_a: Musisz pamiętać, że aby utworzyć wewnętrzny
           kąt o 60 stopniach w tym trójkącie artysta musi się obrócić o 120 stopni.
         grade5_artist_variables_triangles1_b: Aby skrócić swój kod użyj pętli 'powtórz'.

@@ -1597,3 +1597,13 @@ ko:
           stages:
             Artist:
               name: 화가
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: 건물 기초 만들기
+            Conditionals with Cards:
+              name: 조건선택 카드
+            Envelope Variables:
+              name: 변수들 함께 묶기
+            For Loop Fun:
+              name: 재미있는 반복
