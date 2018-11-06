@@ -1,4 +1,5 @@
 require File.join(File.expand_path(__FILE__), '../../../deployment')
+require 'cdo/aws/metrics'
 
 if CDO.pegasus_sock
   bind "unix://#{CDO.pegasus_sock}"
@@ -40,10 +41,34 @@ end
 
 on_worker_shutdown do
   puts "Worker about to shut down"
+  Cdo::Metrics.push(
+    'App Server',
+    [
+      {
+        metric_name: :WorkerShutDown,
+        dimensions: [
+          {name: "Host", value: CDO.dashboard_hostname}
+        ],
+        value: 1
+      }
+    ]
+  )
 end
 
 on_worker_boot do |_index|
   puts "Worker starting up"
+  Cdo::Metrics.push(
+    'App Server',
+    [
+      {
+        metric_name: :WorkerBoot,
+        dimensions: [
+          {name: "Host", value: CDO.dashboard_hostname}
+        ],
+        value: 1
+      }
+    ]
+  )
   require 'dynamic_config/gatekeeper'
   require 'dynamic_config/dcdo'
   Gatekeeper.after_fork
