@@ -71,7 +71,7 @@ sq:
       2-3 Artist Loops 6: Shto një lëvizje më tepër dhe një tjetër kthehu brenda ciklit dhe shiko si ndryshon dizenjimi jot.
       2-3 Artist Loops 7: Ne mund të përdorim cikle për të bërë gjithë llojet e poligonëve. A mund të krijosh një romb brenda këtij gjashtëkëndëshi?
       2-3 Artist Loops 8: Le të vendosim të dy elementet brenda një cikli.
-      2-3 Artist Loops 9: |2
+      2-3 Artist Loops 9: |-
         Ne do të ciklojmë elementet e njëjtë, por
          tani ne do të shtojmë distancë midis tyre.\r
         Përdor të njëjtin kod si më përpara, por shto një hap përpara në fund të ciklit të jashtëm.
@@ -578,7 +578,7 @@ sq:
       Course 4 Artist For Loops 6: Lojë e Lirë! Provo të përdorësh një "cikël for" për të vizatuar një model me formë në zmadhim për dezajnin tënd.
       Course 4 Artist For Loops 6a: "Bëjë tre ndryshime të vogla në\nkod nga niveli i fundit për të marrë këtë!\n !"
       Course 4 Artist For Loops 7: Çfarë ndodh nëse e fshin "Persërit 3" nga algoritmi, duke mbajtur blloqet "lëviz" dhe "kthe" në "për lopatën"? Në këtë trekëndësh spiral, secila anë është 20 piksel më e madhe se e fundit.
-      Course 4 Artist For Loops 8: |2
+      Course 4 Artist For Loops 8: |-
         Vetëm një ndryshim i vogël në kod nga figura e fundit mund të ndryshoj këtë vizatim. Mund ta zbulosh se çfarë është 
         ai ndryshim? \r
          \r
@@ -737,7 +737,7 @@ sq:
       Course 4 Play Labs For Loops 4: Të ndryshosh rritësin mund të jetë një ndihmë e madhe, por akoma po numërojmë në mënyrë lineare (çdo numër me të njëjtën distancë nga i fundit) Po sikur të numëroja në mënyrë eksponentiale? Pa ndryshuar ndonjëgjë në këtë cikël, mund të numërosh 1, 4, 9 , 16, 25... (numëruesi në katror)?
       Course 4 Play Labs For Loops 4a: "Tani, të përziejmë variablat nga Shkalla e 7-të sëbashku më \"numëruesin\" e variblave tua për të krijuar pak magji.\\r\\r\nNë këtë puzzle, Qeni do të numërojë nga 0 në 1000 nga \"rritja\". Vendos \"rritjen\" me variabël deri në 10 në fillim të kodimit tënd për të parë ç'ndodh.\n"
       Course 4 Play Labs For Loops 5: Në fazën e kaluar numëruam çdo numër në katror. Po sikur të ndryshojmë nga "numëruesi^2" në "numëruesi^3" për të llogaritur çdo numër në kub (1, 8, 27, 64, 216, 343...)
-      Course 4 Play Labs For Loops 5a: |2
+      Course 4 Play Labs For Loops 5a: |-
         Në këtë puzzle, Qeni do të jetë 
         kujdestari yt.\r
         \r
@@ -1181,6 +1181,9 @@ sq:
       courseC_artist_prog5_2018: |-
         Kjo shtëpi ka nevojë për një çati! Vizato trekëndëshin. Ndihmë:
         të treja brinjët janë të së njëjtës gjatësi.
+      courseC_artist_prog5_2019: |-
+        Kjo shtëpi ka nevojë për një çati! Vizato trekëndëshin. Ndihmë:
+        të treja brinjët janë të së njëjtës gjatësi.
       courseC_maze_debugging10: Korigjo këtë nivel duke rregulluar dhe shtuar blloqet për të më çuar te derrkuci!
       courseD_artist_binary1: "Binar është një mënyrë për të përfaqësuar informacion\nduke përdorur vetëm dy opsione. Këtu, ne do të përdorim mundësitë \"off\" (përfaqësuar\nme numrin 0) dhe \"on\" (përfaqësuar nga numri 1).\\r\n\\r\nNe ju kemi \nsiguruar një rrjet  \"pikselash\" ku ju mund të ecni  dhe të bëni figura duke i kthyer në vetëm disa katrorë. A mund të bëni që artisti të vizatojë \"01010101\" \n në binar në rreshtin e parë?"
       courseD_artist_binary1_2018: "Binar është një mënyrë për të përfaqësuar informacion\nduke përdorur vetëm dy opsione. Këtu, ne do të përdorim mundësitë \"off\" (përfaqësuar\nme numrin 0) dhe \"on\" (përfaqësuar nga numri 1).\\r\n\\r\nNe ju kemi \nsiguruar një rrjet  \"pikselash\" ku ju mund të ecni  dhe të bëni figura duke i kthyer në vetëm disa katrorë. A mund të bëni që artisti të vizatojë \"01010101\" \n në binar në rreshtin e parë?"
@@ -1199,6 +1202,7 @@ sq:
       courseD_bee_nestedLoops6_2018: Më ço tek luledielli!
       courseD_bee_nestedLoops8: "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
       courseD_bee_nestedLoops8_2018: "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
+      courseD_bee_nestedLoops8_2019: "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
       courseD_bounce_events10: Tani është një shënjestër në krye! Bashkangjisni blloqet "pikët e shënuara " dhe "pikët e shënuara të kundërshtarit" me blloqet "kur topi është në shënjestër" dhe " kur topi humbet raketën" për të bërë një lojë. Shih se sa shumë pikë ju mund të shënoni para se kundërshtari juaj të shënoj dy herë.
       courseD_bounce_events11: Ti, tani, mund të bashkangjitësh blloqe tek blloku "when run". Ti duhet të bashkangjitësh bllokun e ri "launch new ball" në më shumë se një vend. Gjithashtu, përpiqu të ndryshosh vendngjarjen ose shpejtësinë e lopatës dhe topit dhe shiko se sa shumë pikë mund të shënosh përpara se kundërshtari jot të shënojë dy herë.
       courseD_bounce_events12: Krijo lojën tënde Bounce. Ti mund të ndryshosh të gjithë pamjet dhe rregullat. Kur të mbarosh, kliko Përfundova për të lejuar shokët të provojnë lojën tënde në telefonat e tyre.
@@ -1213,8 +1217,10 @@ sq:
       courseD_debugging_3: "Këto blloqet janë duke më bezdisur vërtet. Rregullo\ngabimin (et) për të mbledhur gjithë nektarin dhe bëj gjithë mjaltin."
       courseD_maze_nestedLoops4: 'Më ço tek luledielli!'
       courseD_maze_nestedLoops4_2018: 'Më ço tek luledielli!'
+      courseD_maze_nestedLoops4_2019: 'Më ço tek luledielli!'
       courseD_maze_nestedLoops6: Më ço tek luledielli!
       courseD_maze_nestedLoops6_2018: Më ço tek luledielli!
+      courseD_maze_nestedLoops6_2019: Më ço tek luledielli!
       courseE_artist_functions1: "Përshëndetje. Unë artisti zombi. Më pëlqen të vizatoj!\nMë ndihmo të vizatoj xhamat katrorë. Ndihmë: ura midis xhamave është \n25 piksela më e shkurtër sesa gjatësia e katrorit."
       courseE_artist_functions1_2018: "Përshëndetje. Unë artisti zombi. Më pëlqen të vizatoj!\nMë ndihmo të vizatoj xhamat katrorë. Ndihmë: ura midis xhamave është \n25 piksela më e shkurtër sesa gjatësia e katrorit."
       courseE_bee_concept1: "Mblidh gjithë nektarin nga secila lule.\nPërdor një cikël të mbivendosur. "
@@ -1228,14 +1234,19 @@ sq:
       courseE_farmer_concept4: "Tani le të shkojmë një nivel më thellë! Ne kemi\nmbivendosur gjithë bllokun e kodit në një cikël tjetër, por ti ke nevojë të arrish \nartistin mbrapsht për të vizatuar rreshtin tjetër. Cilin nga këto blloqe kodi mund \ntë vendosësh në fund të pozicionit për të vizatuar gjithë rrejtën?"
       courseF_artist_for7: "Bëjë tre ndryshime të vogla në\nkod nga niveli i fundit për të marrë këtë!\n !"
       courseF_artist_for7_2018: "Bëjë tre ndryshime të vogla në\nkod nga niveli i fundit për të marrë këtë!\n !"
+      courseF_artist_for7_2019: "Bëjë tre ndryshime të vogla në\nkod nga niveli i fundit për të marrë këtë!\n !"
       courseF_artist_for_challenge1: A mund të kuptoni se si të rikrijoni këtë vizatim?
       courseF_artist_for_challenge1_2018: A mund të kuptoni se si të rikrijoni këtë vizatim?
+      courseF_artist_for_challenge1_2019: A mund të kuptoni se si të rikrijoni këtë vizatim?
       courseF_artist_for_challenge2: A mund të kuptoni se si të rikrijoni këtë vizatim me një cikël të thjeshtë?
       courseF_artist_for_challenge2_2018: A mund të kuptoni se si të rikrijoni këtë vizatim me një cikël të thjeshtë?
+      courseF_artist_for_challenge2_2019: A mund të kuptoni se si të rikrijoni këtë vizatim me një cikël të thjeshtë?
       courseF_bee_for8: "Çfarë do të bëje nëse do të hiqnim disa blloqe? A mund t'i shtosh përsëri për të ndihmuar bletën të mbledhi nektar?\\r\nMos harro:\nNëse cikli numëron për sipër, rritësi i shtohet variablës së numëruesit sa herë i shkon. Sa duhet të jetë rritësi për të mbledhur 3, 6, 9 nektar? \\r\n"
       courseF_bee_for8_2018: "Çfarë do të bëje nëse do të hiqnim disa blloqe? A mund t'i shtosh përsëri për të ndihmuar bletën të mbledhi nektar?\\r\nMos harro:\nNëse cikli numëron për sipër, rritësi i shtohet variablës së numëruesit sa herë i shkon. Sa duhet të jetë rritësi për të mbledhur 3, 6, 9 nektar? \\r\n"
+      courseF_bee_for8_2019: "Çfarë do të bëje nëse do të hiqnim disa blloqe? A mund t'i shtosh përsëri për të ndihmuar bletën të mbledhi nektar?\\r\nMos harro:\nNëse cikli numëron për sipër, rritësi i shtohet variablës së numëruesit sa herë i shkon. Sa duhet të jetë rritësi për të mbledhur 3, 6, 9 nektar? \\r\n"
       courseF_bee_for_challenge2: "Zgjidhe këtë puzzle duke përdorur numrin\nmë të pakët të mundshëm të blloqeve."
       courseF_bee_for_challenge2_2018: "Zgjidhe këtë puzzle duke përdorur numrin\nmë të pakët të mundshëm të blloqeve."
+      courseF_bee_for_challenge2_2019: "Zgjidhe këtë puzzle duke përdorur numrin\nmë të pakët të mundshëm të blloqeve."
       courseF_bee_for_challenge3: "Zgjidhe këtë puzzle duke përdorur numrin\nmë të pakët të mundshëm të blloqeve."
       courseF_bee_functions4: "Funksioni \"lëviz dhe merr nektar\" kthen\nbletën, mbledh nektarin, dhe rikthen bletën ku filloi. Përdor\nfunksionin për të mbledhur gjithë nektarin."
       courseF_bee_functions4_2018: "Funksioni \"lëviz dhe merr nektar\" kthen\nbletën, mbledh nektarin, dhe rikthen bletën ku filloi. Përdor\nfunksionin për të mbledhur gjithë nektarin."
@@ -1495,7 +1506,7 @@ sq:
         \r
         Ju duhet
         një informacion? Kliko këtu.
-      grade5_artist_for_loops5: |2
+      grade5_artist_for_loops5: |-
         Vetëm një ndryshim i vogël në kod nga figura e fundit mund të ndryshoj këtë vizatim. Mund ta zbulosh se çfarë është 
         ai ndryshim? \r
          \r
