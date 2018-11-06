@@ -40,7 +40,7 @@ before_fork do
 end
 
 on_worker_shutdown do
-  puts "Worker about to shut down"
+  # This method posts metrics asynchronously to AWS, so this metric is unlikely to be published before worker shutdown.
   Cdo::Metrics.push(
     'App Server',
     [
@@ -56,7 +56,6 @@ on_worker_shutdown do
 end
 
 on_worker_boot do |_index|
-  puts "Worker starting up"
   Cdo::Metrics.push(
     'App Server',
     [
