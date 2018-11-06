@@ -1514,3 +1514,31 @@ sk:
           stages:
             Artist:
               name: Umelec
+        coursef-2019:
+          description_short: Naučme sa všetky pojmy zo základov informatiky a vytvorme si vlastné umenelecké diela, príbeh alebo hru.
+          stages:
+            Building a Foundation:
+              name: Stavanie základov
+            Programming in Artist:
+              name: Programovanie s Umelecom
+            Nested Loops with Frozen:
+              name: Vnorené cykly s Frozen
+            Conditionals with Cards:
+              name: Podmienky s kartami
+            Envelope Variables:
+              name: Obálkové premenné
+            For Loop Fun:
+              name: Zábavné opakovanie
+            For Loops in Artist:
+              description_student: Priprav sa na tvoje ďalsie majstrovské dielo. Budeš používať "pre" slučky. Všetkým padne sánka dolu z tých obrázkov.
+              description_teacher: V tejto lekcii, použitím Umelca, študenti pokračujú v precvičovaní slučiek. Študenti dokončujú úlohy spájaním možností premenných i slučiek, a v slučkách aj pre tvorbu zložitejších dizajnov. Na koniec, vo volnej hre, budú mať možnosť vytvoriť vlastné diela.
+            Explore Project Ideas:
+              description_teacher: "V záverečnom projekte, nasledujúce štyri lekcie, dostávajú študenti možnosť overiť svoje kódovacie zručnosti v praxi. Projekt umožní jednotlivcom získať skúsenosť s kódovaním tak, že vytvoria exemplár, ktorý môžu zdielať s rovesníkmi a blízkymi. Ide o viac-kurzový alebo viac-týždenný projekt kde majú študenti čas na brainstorming, učia sa o procese dizajnu, stavaní a nakoniec svoju prácu prezentujú.\n\nVo fáze prieskumu môžu študenti vidieť pre-postavené príklady projektov v Umelcovi a aj v Play Labe. Ďalej sa študenti oboznámia s procesom dizajnu a ako ho implementovať do vlastných projektov. Dostanú priestor tvoriť vlastné projekty buď v Umelcovi alebo v Play Labe (toto je pravdepodobne najdlhšia časť projektu). Následne si študenti revidujú a testujú vlastnú tvorbu. Nakoniec, budú študenti schopní prezentovať svoje projekty rovesníkom.\n"
+            The Design Process:
+              description_teacher: "V priebehu piatich lekcií budú študenti pracovať na programovaní dizajnu vlastného projektu v kurze Play Lab alebo Umelec. V tejto časti sa študenti dozvedia o procese dizajnu a ako ho použiť vo vlastných projektoch. Príručku kurzu pre všetkých päť úrovní procesu nájdeme v prvom [here]\n(https://curriculum.code.org/csf/coursef/15/)."
+            Build Your Project:
+              description_teacher: V priebehu piatich lekcií budú študenti pracovať na programovaní dizajnu vlastného projektu v kurze Play Lab alebo Umelec. Študenti dostanú priestor vytvoriť vlastný projekt v kurzoch Umelec či Play Lab. Toto bude pravdepodovne najdlhšia časť kurzu. Príručku kurzu pre všetkćh päť úrovní procesu nájdeme v prvom [here](https://curriculum.code.org/csf/coursef/15/).
+            Revise Your Project:
+              description_teacher: "V priebehu piatich lekcií budú študenti pracovať na programovaní dizajnu vlastného projektu v kurze Play Lab alebo Umelec. Keďže sú už projekty postavené, získavajú tu spätnú väzbu a majú priestor si projekty zrevidovať. Príručku kurzu pre všetkých päť úrovní procesu nájdeme v prvom [here]\n(https://curriculum.code.org/csf/coursef/15/)."
+            Present Your Project:
+              description_teacher: V priebehu piatich lekcií budú študenti pracovať na programovaní dizajnu vlastného projektu v kurze Play Lab alebo Umelec. Študenti dostanú priestor vytvoriť vlastný projekt v kurzoch Umelec či Play Lab. Nakoniec, študenti dostanú priesto rprezentovať svoje práce rovesníkom alebo ich zdielať s blízkymi. Príručku kurzu pre všetkých päť úrovní procesu nájdeme v prvom [here](https://curriculum.code.org/csf/coursef/15/).
