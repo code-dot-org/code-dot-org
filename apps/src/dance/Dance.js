@@ -262,7 +262,7 @@ Dance.prototype.afterInject_ = function () {
   const recordReplayLog = this.shouldShowSharing() || this.level.isProjectLevel;
   this.nativeAPI = new DanceParty({
     onPuzzleComplete: this.onPuzzleComplete.bind(this),
-    playSound: audioCommands.playSound,
+    playSound: this.playSong.bind(this),
     recordReplayLog,
     showMeasureLabel: !this.share,
     onHandleEvents: this.onHandleEvents.bind(this),
@@ -285,6 +285,13 @@ Dance.prototype.afterInject_ = function () {
   if (recordReplayLog) {
     getStore().dispatch(saveReplayLog(this.nativeAPI.getReplayLog()));
   }
+};
+
+Dance.prototype.playSong = function (url, callback, onEnded) {
+  audioCommands.playSound({url: url, callback: callback, onEnded: () => {
+    onEnded();
+    this.studioApp_.toggleRunReset('run');
+  }});
 };
 
 /**
