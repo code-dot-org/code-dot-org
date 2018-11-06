@@ -221,6 +221,9 @@ bs:
       courseC_artist_prog2_2018_authored_hint:
         courseC_artist_prog2_a: 'Koristite li blok ''kreni naprijed za 100 piksela'', sam će povući liniju automatski.'
         courseC_artist_prog2_b: Imate problema sa skretanjem? Upotrijebite 'okreni za 90 stepeni' blok.
+      courseC_artist_prog2_2019_authored_hint:
+        courseC_artist_prog2_a: 'Koristite li blok ''kreni naprijed za 100 piksela'', sam će povući liniju automatski.'
+        courseC_artist_prog2_b: Imate problema sa skretanjem? Upotrijebite 'okreni za 90 stepeni' blok.
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
       courseD_scrat_ramp5_authored_hint:
