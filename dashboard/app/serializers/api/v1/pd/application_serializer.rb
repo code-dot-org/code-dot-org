@@ -31,7 +31,8 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :attending_teachercon,
     :principal_approval_state,
     :meets_scholarship_criteria,
-    :school_stats
+    :school_stats,
+    :scholarship_status
   )
 
   def email
