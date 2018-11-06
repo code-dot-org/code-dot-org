@@ -549,7 +549,7 @@ module LevelsHelper
       sublevelCallback: @sublevel_callback,
     }
     dev_with_s3_credentials = rack_env?(:development) && (!!CDO.aws_access_key || !!CDO.aws_role)
-    use_restricted_songs = CDO.cdn_enabled || dev_with_s3_credentials || ENV['CI']
+    use_restricted_songs = CDO.cdn_enabled || dev_with_s3_credentials || (rack_env?(:test) && ENV['CI'])
     app_options[:useRestrictedSongs] = use_restricted_songs if @game == Game.dance
 
     if params[:blocks]
