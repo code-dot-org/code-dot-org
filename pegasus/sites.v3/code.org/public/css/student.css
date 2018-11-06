@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.full-resource-image { 
+  width: 100%; 
+}
+
 .description {
   background-color: #00adbc;
   color: #fff;
@@ -28,6 +32,7 @@
   .col-50-student img { width: 485px; height: 244px; }
 
   .full-resource-block { flex-direction: row; }
+  .full-resource-block > * { width: 50%; }
 }
 
 @media screen and (min-width: 513px) and (max-width: 970px)

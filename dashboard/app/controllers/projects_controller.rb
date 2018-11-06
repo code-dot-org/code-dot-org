@@ -320,13 +320,17 @@ class ProjectsController < ApplicationController
       no_header: sharing,
       small_footer: !no_footer && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
-      game_display_name: data_t("game.name", @game.name)
+      game_display_name: data_t("game.name", @game.name),
     )
+
     if params[:key] == 'artist'
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/_share_image.png", 'https:'
     elsif params[:key] == 'dance'
-      @project_video = "https://cdo-p5-replay-destination.s3.amazonaws.com/videos/video-#{@view_options['channel']}.mp4"
+      # TODO: elijah set up test subdomains for dance-api, and situationally
+      # point to those here
+      @project_video = "https://dance-api.code.org/videos/video-#{@view_options['channel']}.mp4"
       @project_video_stream = dance_project_embed_video_projects_url(key: params[:key], channel_id: params[:channel_id])
+      replay_video_view_options unless sharing || readonly
     end
 
     begin
@@ -451,7 +455,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/:key/:channel_id/embed_video
   def embed_video
-    video_src = "https://cdo-p5-replay-destination.s3.amazonaws.com/videos/video-#{params[:channel_id]}.mp4"
+    video_src = "https://dance-api.code.org/videos/video-#{params[:channel_id]}.mp4"
     render template: "projects/embed_video", layout: false, locals: {video_src: video_src}
   end
 

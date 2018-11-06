@@ -11,7 +11,7 @@ Still have questions? See below for answers to commonly asked questions or email
 <br/><br/>
 **General questions:**<br/>
 
-- [My region is already served by another organization, can we still apply to be a Regional Partner?](#map)
+- [My region is already served by another organization; can we still apply to be a Regional Partner?](#map)
 - [Where do you still need Regional Partners?](#need)
 - [Do you have an example job description for the Regional Partner Program Manager?](#pm)
 - [Where can we find more information about Code.org's K-12 curricula?](#progs)
@@ -37,7 +37,7 @@ ________________
 
 ### **My region is already served by another organization, can we still apply to be a Regional Partner?**
 
-For this year, we are only looking for Regional Partners in regions where Code.org is not already working with another organization. If you are interested in participating in local Professional Learning for the 2018-19 school year, please email partner@code.org and we will connect you with the Regional Partner for your area.
+For this year, we are only looking for Regional Partners in regions where Code.org is not already working with another organization. If you are interested in participating in local Professional Learning for the 2019-20 school year, please email partner@code.org and we will connect you with the Regional Partner for your area.
 
 [**Back to the top**](#top)
 <br/>
@@ -66,7 +66,7 @@ ________________
 
 ### **Do you have an example job description for the Regional Partner Program Manager?**
 
-See <a href="https://docs.google.com/document/d/1zwP4eFbaqzPpTH7IhMBXbR73h8yODIJKJ5D8noNNP-s/edithttps://drive.google.com/open?id=1slXdNqoMhBfIvD1oomxT1vX5_Hu8WpvnLmJhW9dn0sw" target=_blank>this document</a> for an example Regional Partner program manager job description. This position will require at least 0.65 of an FTE’s time - this can be shared across one or more staff members of your organization.
+See <a href="https://drive.google.com/open?id=1slXdNqoMhBfIvD1oomxT1vX5_Hu8WpvnLmJhW9dn0sw" target=_blank>this document</a> for an example Regional Partner program manager job description. This position will require at least 0.65 of an FTE’s time - this can be shared across one or more staff members of your organization.
 
 [**Back to the top**](#top)
 <br/>
