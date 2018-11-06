@@ -24,11 +24,10 @@ The following links all lead directly to the Spanish tutorial. Replace the "es" 
 1. [Tutorial instructions](https://crowdin.com/translate/codeorg/551/enus-es#q=dance_party)
 1. Most tutorial block strings are [here](https://crowdin.com/translate/codeorg/639/enus-es#q=dancelab) and [here](https://crowdin.com/translate/codeorg/all/enus-es#q=gamelab_setPosition). The rest can be found [here](https://crowdin.com/translate/codeorg/639/enus-es#169142), [here](https://crowdin.com/translate/codeorg/43/enus-es#88715), [here](https://crowdin.com/translate/codeorg/65/enus-es#5576), [here](https://crowdin.com/translate/codeorg/54/enus-es#q=variable...), [here](https://crowdin.com/translate/codeorg/65/enus-es#22315), [here](https://crowdin.com/translate/codeorg/639/enus-es#169139), and [here](https://crowdin.com/translate/codeorg/44/enus-es#3800).
 1. [Tutorial hints and optional challenges](https://crowdin.com/translate/codeorg/552/enus-es#q=dance_party)
-1. The feedback users see when they get a puzzle wrong can be found [here](https://crowdin.com/translate/codeorg/all/enus-es#q=danceFeedback). 
-1. [Misc. strings](https://crowdin.com/translate/codeorg/43/enus-es#q=select+song)
+1. Misc. strings [here](https://crowdin.com/translate/codeorg/43/enus-es#q=select+song) and [here](https://crowdin.com/translate/codeorg/56/enus-es#q=hoc2018_dance_measure)
+1. [Video titles](https://crowdin.com/translate/codeorg/56/enus-es#q=hoc2018_dance_video)
 
-<!-- 1. Strings about Dance Party on Code.org [here](https://crowdin.com/translate/codeorg/56/enus-es#q=minecraft) and [here](https://crowdin.com/translate/codeorg/56/enus-es#q=mc)
-1. [Video titles](https://crowdin.com/translate/codeorg/41/enus-es#q=mc_2017) -->
+<!-- 1. Strings about Dance Party on Code.org [here](https://crowdin.com/translate/codeorg/56/enus-es#q=minecraft) and [here](https://crowdin.com/translate/codeorg/56/enus-es#q=mc) -->
 
 ## Translating the unplugged activity
 View the [unplugged activity here](https://curriculum.code.org/hoc/unplugged/4/). The following links all lead directly to the Spanish unplugged activity in our Curriculum Builder project on Crowdin. Replace the "es" in the URL with the language code you got earlier.
