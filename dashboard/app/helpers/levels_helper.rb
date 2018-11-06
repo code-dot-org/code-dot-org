@@ -50,10 +50,10 @@ module LevelsHelper
   # NOTE: any client that has this value set will be able to upload a log and
   # regenerate the share video. Make sure this is only provided to views with
   # edit permission (ie, the project creator, but not the sharing view)
-  def replay_video_view_options
+  def replay_video_view_options(channel = nil)
     signed_url = AWS::S3.presigned_upload_url(
       "cdo-p5-replay-source.s3.amazonaws.com",
-      "source/#{@view_options['channel']}",
+      "source/#{channel || @view_options['channel']}",
       virtual_host: true
     )
 
