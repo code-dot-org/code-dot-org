@@ -261,6 +261,16 @@ Sounds.prototype.play = function (soundId, options) {
   }
 };
 
+/**
+ * Remove references to the specified sound so that it can be garbage collected
+ * to free up memory.
+ * @param soundId {string} Sound id to unload. This is the URL for sounds
+ * played via playURL.
+ */
+Sounds.prototype.unload = function (soundId) {
+  delete this.soundsById[soundId];
+};
+
 Sounds.prototype.playURL = function (url, playbackOptions) {
   // Play a sound given a URL, register it using the URL as id and infer
   // the file type from the extension at the end of the URL
