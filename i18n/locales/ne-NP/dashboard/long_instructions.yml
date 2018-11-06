@@ -210,6 +210,7 @@ ne:
       courseE_farmer_concept4: "Now let's go one level deeper! We've\nnested that whole block of code into another loop, but you need to get the\nartist back in place to draw the next line. Which of these code blocks can\nyou place at the end of the outermost loop to draw the whole grid?"
       courseF_bee_for_challenge2: "Solve this puzzle with the fewest number of blocks\npossible."
       courseF_bee_for_challenge2_2018: "Solve this puzzle with the fewest number of blocks\npossible."
+      courseF_bee_for_challenge2_2019: "Solve this puzzle with the fewest number of blocks\npossible."
       frozen circle function in circle: "Now let's create 20 overlapping\ncircles, turning 18 degrees between each circle."
       frozen circle function with parameter: "Here's a ”Create circle”\nblock that can make circles of different sizes. Can you use this to create\na small circle of size 5 and a larger circle of size 10?"
       frozen circle function: "Use the new “Create a circle” block to\ncreate 10 overlapping circles. Don't forget to jump forward between circles."
