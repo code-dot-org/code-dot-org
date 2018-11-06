@@ -57,11 +57,17 @@ export function getSelectedSong(songManifest, config) {
  * @param songData {Object<Object>} Song data containing urls of songs.
  */
 export function loadSong(songId, songData) {
+  const url = songData[songId].url;
   const options = {
-    id: songId,
-    mp3: songData[songId].url,
+    id: url,
+    mp3: url,
   };
   Sounds.getSingleton().register(options);
+}
+
+export function unloadSong(songId, songData) {
+  const url = songData[songId].url;
+  Sounds.getSingleton().unload(url);
 }
 
 export async function loadSongMetadata(id) {
