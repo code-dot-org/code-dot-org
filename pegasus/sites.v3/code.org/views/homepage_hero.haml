@@ -7,17 +7,28 @@
 - main_actions = capture_haml do
 
   .hoc2018
-    .hero-message-line1= hoc_s(:codeorg_homepage_hoc2018_header_line1)
-    .hero-message-line2
-      - if ["mc", "dance"].include? show_single_hero
+    - if show_single_hero == "mc"
+      .hero-message-line1= hoc_s(:codeorg_homepage_hoc2018_header_line1)
+      .hero-message-line2
         -# Don't tint the word "create"
         .desktop-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
-      - else
+        .mobile-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
+    - elsif show_single_hero == "dance"
+      .hero-message-line1{style: "font-size: 34px; line-height: 34px; padding-bottom: 10px"}
+        = hoc_s(:codeorg_homepage_hoc2018_header_line1)
+      .hero-message-line2{style: "font-size: 24px; line-height: 24px;"}
+        -# Don't tint the word "create"
+        .desktop-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
+        .mobile-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
+      .hero-message-line3
+        = hoc_s(:codeorg_homepage_hoc2018_header_line3)
+        %span.hero_video_link{onclick: "return showVideo_mainvideo()"}= hoc_s(:codeorg_homepage_hoc2018_video)
+    - else
+      .hero-message-line1= hoc_s(:codeorg_homepage_hoc2018_header_line1)
+      .hero-message-line2
         .desktop-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_desktop)
-      .mobile-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
-    - unless ["mc", "dance"].include? show_single_hero
+        .mobile-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
       .hero-message-gap.mobile-feature &nbsp;
-    - unless show_single_hero == "dance"
       .hero-message-line3
         = hoc_s(:codeorg_homepage_hoc2018_header_line3)
         %span.hero_video_link{onclick: "return showVideo_mainvideo()"}= hoc_s(:codeorg_homepage_hoc2018_video)
@@ -112,8 +123,9 @@
     - if show_single_hero == "dance"
       .clear{style: "clear: both"}
 
-      %div{style: "color: #00adbc; text-align: center; margin-left: 10%; margin-right: 10%; margin-bottom: 15px"}
-        Featuring music by
+      %div{style: "color: #00adbc; text-align: center; margin-left: 10%; margin-right: 10%; margin-bottom: 15px; font-family: 'Gotham 5r', sans-serif; line-height: 19px;"}
+        %div{style: "margin-bottom: 5px"}
+          Featuring music by
         %div
           - Homepage.get_dance_stars.each do |star|
             = star
