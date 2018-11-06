@@ -11054,3 +11054,175 @@ fil:
               name: Digital na Disenyo
             Linking Screens:
               name: Pag-uugnay sa mga Screen
+        coursef-2019:
+          description: Matutong gumami sa iba't ibang uri ng mga loop, mga event,
+            mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan
+            sa paglutas ng mga problema at talakayain ang mga epekto ng computing
+            at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo
+            at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga
+            kaibigan at pamilya.
+          description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman
+            sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
+          description_audience: 'Mga Edad: 9-13'
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
+            Sequence in Maze:
+              name: Pagkakasunod-sunod sa Maze
+            Building a Foundation:
+              name: Gumawa ng Foundation
+            Debugging with Scrat:
+              name: Pagde-debug gamit ang Scrat
+            Programming in Artist:
+              name: Pag-program sa Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            Nested Loops in Bee/Zombie:
+              name: Naka-Nest na mga Loops sa Bee/Zombie
+            Nested Loops with Frozen:
+              name: Naka-Nest na mga Loops sa Frozen
+            Conditionals with Cards:
+              name: Mga Conditional gamit ang mga Card
+            The Power of Words:
+              name: Ang Kapangyarihan ng mga Salita
+              description_student: Ang pang-aapi ay hindi talaga mabuti. Ang araling
+                ito ay magtuturo sa iyong tungkol sa kung ano pwede at hindi pwedeng
+                sabihin online.
+              description_teacher: "Ang mga estudyante ay magbigay pansin na habang
+                sila ay nagsasaya sa kanilang mga paboritong mga website, maaari silang
+                makakatagpo ng mga mensahe mula sa ibang mga bata na makakagawa sa
+                kanilang makaramdam ng galit, sakit, lungkot, o pagkakatakot. Sila
+                ay tutuklas sa mga pamamaraan para harapin ang pang-aapi online at
+                kung paano sila tutugon sa harap ng hindi kaaaya-ayang mga lenggwahe
+                online.\n\nAng mga estudyante ay tatalakay sa lahat ng mga pamamaraan
+                na magagamit nilang ang teknolohiya para sa komunikasyon at magtuklas
+                sa mga pagkakatulad at pagkakaiba ng harapan at online na pakikipag-usap.
+                Ang mga estudyante ay mag-iisip ng mga pamamaraan para tumugon sa
+                pang-aapi online. "
+            Envelope Variables:
+              name: Balot ng mga Variables
+              description_student: 'Ang mga sobre at mga variable ay mayroong isang
+                bagay na magkatulad: pareho silang maaaring humawak ng mga mahahalagang
+                mga bagay. Dito matutunan mo kung ano ang mga variables at ang mga
+                kasindak-sindak na mga bagay na magagawa nila.'
+              description_teacher: Ang mga variable ay ginagamit bilang mga placeholder
+                para sa mga halaga gaya ng mga numero o mga salita. Ang mga variable
+                ay nagbibigay daan sa napakaraming kalayaan sa pag-program. Sa halip
+                na kailangang i-type ang isang parirala ng maraming beses o kailangan
+                tandaan ang isang malabong numero, ang mga siyentista sa kompyuter
+                ay maaaring gumagamit ng mga variable para mag-reperensya sa kanila.
+                Ang araling ito ay nakakatulong para ipaliwanag kung ano ang mga variables
+                at kung paano natin maaaring gamitin ang mga ito sa napakaraming iba't
+                ibang pamamaraan. Ang ideya ng mga variable hindi isang madaling konsepto
+                na maintindihan, kaya aming inirerekomenda na maglaan ng malaking
+                oras para sa diskusyon sa dulo ng aralin.
+            For Loop Fun:
+              name: Saya sa For Loop
+              description_student: Magkakaroon ka ng napakasayang pag-aaral tungkol
+                sa mga `for` loop!
+              description_teacher: 'Alam natin na ang mga loop ay nagbibigay-daan
+                sa atin para magawa ang mga bagay-bagay nang paulit-ulit, ngunit ngayon
+                ay pag-aaralan natin kung paano gumamit ng mga loop na mayroong karagdagang
+                istraktura na binuo sa loob nito. Ang mga bagong istrakturang ito
+                ay nagbibigay-daan sa mga estudyante na makalikha ng code na mas makapangyarihan
+                at mas dynamic. '
+            For Loops in Bee:
+              name: Mga For Loops sa Bee
+              description_student: Buzz buzz. Sa mga palaisipang ito ikaw ay gagabay
+                sa isang bubuyog papunta sa nektar at sa pulot gamit ang mga `for`
+                loop!
+              description_teacher: Nagtatampok sa Bee, ang araling ito ay nakatuon
+                sa mga for loop at gamit ang isang lumalaking variable para malutas
+                ang mas mahirap na mga palaisipan. Ang mga estudyante ay magsisimula
+                sa pamamagitan ng pagbabalik-aral sa mga loop mula sa nakaraang mga
+                aralin, pagkatapos ay dadaanan ang paggamit ng mga for loop para mas
+                epektibong maglutas ng mga kumplikadong mga problema.
+            For Loops in Artist:
+              name: Mga Loops sa Artist
+              description_student: Maghanda na sa iyong susunod na obra maestra. Dito
+                ay gagamit ka ng mga `for` loop para makagawa ng iilang kamangha-manghang
+                mga larawan.
+              description_teacher: Sa araling ito, ang mga estudyante ay patuloy na
+                magsasanay sa mga for loop, sa pagkakataong ito gamit ang Artist.
+                Ang mga estudyante ay magkukumpleto ng mga palaisipan sa pamamagitan
+                ng pagsama-sama sa mga ideya ng mga variable, mga loop, at mga for
+                loop para makalikha ng mga komplikadong mga disenyo. Sa bandang huli,
+                sila ay magkakaroon ng pagkakataon na maglikha ng kanilang sariling
+                sining sa libreng laro na antas.
+            Explore Project Ideas:
+              name: Tuklasin ang mga Ideya sa Proyekto
+              description_student: Oras na para magkuha ng iilang inspirasyon! Ang
+                mga palaisipang ito ay nagpapakita sa iyo ng iilang nagawa nang mga
+                laro at mga ilustrasyon para makatulong sa paggawa ng iyong plano
+                para sa iyong MALAKING proyekto.
+              description_teacher: "Ang susunod na limang mga aralin ay nagbibigay
+                ng oportunidad sa mga estudyante ang magamit ang kanilang mga kakayahan
+                sa pag-code sa isang capstone na proyekto. Ang proyektong ito ay makakatulong
+                sa mga indibidwal na makakakuha ng karanasan sa pag-code at makabuo
+                ng isang halimbawa na maibahagi sa kanilang mga kasamahan at mga mahal
+                sa buhay. Ito ay ginawa para maging isang maraming-aralin o maraming-linggo
+                na proyekto kung saan ang mga estudyante ay gugugol ng oras para mag-brainstorm,
+                matuto tungkol sa proseso ng pagdisenyo, pagbuo, at pagkatapos ay
+                magpapakita sa kanilang huling nagawa. \n\nSa sunod na pagtuklas na
+                yugto, ang mga estudyante ay makakatingin sa mga halimbawang mga proyekto
+                sa parehong Artist at Play Lab para magbigay ng inspirasyon. Sa sunod,
+                ang mga estudyante ay matututo tungkol sa proseso ng pagdisenyo at
+                kung paano gamitin ito sa kanilang sariling mga proyekto. Sila ay
+                bibigyan din ng lugar para malikha nila ang kanilang sariling proyekto
+                sa alinman sa Artist o Play Lab (marahil ito ang pinakamahabang yugto
+                ng proyekto). Ang mga estudyante ay magbabago sa kanilang mga proyekto,
+                pagkatapos mag-test at karagdagang mag-isip. Sa wakas, ang mga estudyante
+                ay magpapakita sa kanilang natapos na gawain sa kanilang mga kasamahan."
+            The Design Process:
+              name: Ang Proseso ng Pag-Disenyo
+              description_student: Ang mga proyekto na kasing laki nito ay gugugol
+                ng oras at maraming pagpaplano. Dito, matutunan mo ang tungkol sa
+                proseso ng pag-disenyo na gagamitin mo para mabuo ang iyong sariling
+                nilikha.
+              description_teacher: Sa loob ng limang mga aralin, ang mga estudyante
+                ay magtatayo papunta sa pagbuo ng proyekto na sarili nilang disenyo
+                gamit ang alinman sa Play Lab o Artist bilang pang-program na kapaligiran.
+                Sa bahaging ito ng proyekto, ang mga estudyante ay matututo tungkol
+                sa proseso ng pagdisenyo at kung paano ipatupad ito sa kanilang mga
+                proyekto. Ang gabay sa aralin na nagbibigay buod sa lahat ng limang
+                yugto ng proseso ay maaaring makita sa simula ng proseso ng proyekto,
+                [here](https://curriculum.code.org/csf/coursef/15/).
+            Build Your Project:
+              name: Bumuo ng Iyong Proyekto
+              description_student: Sa wakas maaari ka nang magsimulang bumuo ng iyong
+                proyekto!
+              description_teacher: Sa loob ng limang mga aralin, ang mga estudyante
+                ay magbubuo hanggang sa mabuo nila ang isang proyekto na sarili niang
+                disenyo gamit ang alinman sa Play Lab o Artist bilang pang-program
+                na kapaligiran. Ngayon ang mga estudyante ay bibigyan ng kanilang
+                sariling lugar para ilikha ang kanilang proyekto gamit ang alinman
+                sa Artist o Play Lab. Ito ang magiging pinakamahabang bahagi ng proyekto.
+                Ang gabay ng aralin na nagpapakita sa lahat ng limang yugto ng proseso
+                ay maaaring mahanap sa simula ng proseso ng proyekto, [here](https://curriculum.code.org/csf/coursef/15/).
+            Revise Your Project:
+              name: Baguhin ang Iyong Proyekto
+              description_student: Ang Roma ay hindi nabuo sa isang araw at ang iyong
+                proyekto ay dapat hindi rin. Maggugol ng oras para baguhin at ayusin
+                ang iyong proyekto para maging pinakamahusay ito hangga't maaari.
+              description_teacher: Sa loob ng limang mga aralin, ang mga estudyante
+                ay bubuo hanggang sa mabuo nila ang proyekto na sarili nilang disenyo
+                gamit ang alinman sa Play Lab o Artist bilang pang-program na kapaligiran.
+                Ngayon na nabuo na ang proyekto, ang mga estudyante ay bibigyan ng
+                oportunidad na makakuha ng feedback mula sa kanilang mga kasamahan
+                at maayos ang kanilang mga proyekto. Ang gabay ng aralin na nagpapakita
+                sa lahat ng limang mga yugto ng proseso ay maaaring makita sa simula
+                ng proseso ng proyekto, [here](https://curriculum.code.org/csf/coursef/15/).
+            Present Your Project:
+              name: Ipakita ang Iyong Proyekto
+              description_student: Oras na para ipakita ang iyong gawain! Diyo ipapakita
+                mo ang iyong kamangha-mangha na proyekto sa iyong mga kasamahan.
+              description_teacher: Sa loob ng limang mga aralin, ang mga estudyante
+                ay bubuo hanggang sa maubo nila ang proyekto na sarili nilang disenyo
+                gamit ang alinman sa Play Lab o Artist bilang kapaligiran sa kanilang
+                pag-program. Sa wakas, ang mga estudyante ay maaaring makakapakita
+                sa kanilang natapos na gawain sa kanilang mga kasamahan at sa mga
+                mahal sa buhay gamit ang isang espesyal na link. Ang gabay ng aralin
+                na nagpapakita sa lahat ng limang mga yugto ng proseso ay maaaring
+                makita sa simula ng proseso ng proyekto, [here](https://curriculum.code.org/csf/coursef/15/).
+            new stage:
+              name: bagong yugto
