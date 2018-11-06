@@ -142,6 +142,8 @@ class ShareAllowedDialog extends React.Component {
     }).isRequired,
     icon: PropTypes.string,
     shareUrl: PropTypes.string.isRequired,
+    // Dance Party projects tweet @ the artist of the selected song when shared.
+    artistTag: PropTypes.string,
     thumbnailUrl: PropTypes.string,
     isAbusive: PropTypes.bool.isRequired,
     isOpen: PropTypes.bool.isRequired,
