@@ -1675,3 +1675,13 @@ uk:
           stages:
             Dance Party:
               name: Танцювальна вечірка
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Закладання основ
+            Conditionals with Cards:
+              name: Листівки та умови
+            Envelope Variables:
+              name: Конвертні змінні
+            For Loop Fun:
+              name: Ігри з циклами
