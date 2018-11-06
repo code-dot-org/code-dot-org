@@ -1517,3 +1517,13 @@ cs:
           stages:
             Artist:
               name: Umělec
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Budování nadace
+            Conditionals with Cards:
+              name: Podmínky s kartami
+            Envelope Variables:
+              name: Obálkové proměnné
+            For Loop Fun:
+              name: For cyklus zábavy
