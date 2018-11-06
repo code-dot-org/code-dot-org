@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.full-resource-image { 
+  width: 100%; 
+}
+
 .description {
   background-color: #00adbc;
   color: #fff;
