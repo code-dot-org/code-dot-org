@@ -188,6 +188,8 @@ is:
         snowflake_dropdown: Notaðu þennan fellilista til að búa til mismunandi snjókorn!
       Function intro Ryan_callout:
         Function_intro_Ryan_1: Þessi litlu fyrirmæli hér segja tölvunni að keyra STÓRA bunkann af kóða með þvi heiti sem er á vinnusvæðinu.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Þessi litlu fyrirmæli hér segja tölvunni að keyra STÓRA bunkann af kóða með þvi heiti sem er á vinnusvæðinu.
       Geometric Pattern_callout:
         4-5_Artist_Patterns_Free_Play_1: Öllum uppáhaldskubbunum þínum hefur nú verið raðað í flokka. Smelltu á þessi orð til að sjá hvert allt fór!
       Geometric Sun_callout:
@@ -207,6 +209,8 @@ is:
         InspirationalArtwork_1: Prófaðu að setja nýja ' aths ' kubbinn neðan við þetta merki til að hafa athugasemd í forritinu þínu!
       InspirationalArtwork_2018_callout:
         InspirationalArtwork_1: Prófaðu að setja nýja ' aths ' kubbinn neðan við þetta merki til að hafa athugasemd í forritinu þínu!
+      InspirationalArtwork_2019_callout:
+        InspirationalArtwork_1: Prófaðu að setja nýja ' aths ' kubbinn neðan við þetta merki til að hafa athugasemd í forritinu þínu!
       MC HOC 2016 Level 2-2_callout:
         craft2_run_button_callout: Smelltu á "Keyra" þegar þú vilt prófa forritið.
       MC HOC 2016 New Walk_callout:
@@ -217,17 +221,25 @@ is:
         MC_HOC_2017_02_Cole_1: Nú hefur leikmaðurinn eignast vin! Þú getur skrifað kóða fyrir Umbann til að hjálpa þér í gegnum borðin.
       MC_HOC_2017_03_Cole_callout:
         MC_HOC_2017_03_Cole_1: Þetta er `endurtaka` lykkja! Settu hana á vinnusvæðið og bættu í hana kóða sem þú vilt að keyri aftur og aftur.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Þetta er `endurtaka` lykkja! Settu hana á vinnusvæðið og bættu í hana kóða sem þú vilt að keyri aftur og aftur.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Umbinn getur svifið yfir vatn, en leikmaðurinn ekki!
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: Umbinn getur svifið yfir vatn, en leikmaðurinn ekki!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Smelltu þessu á vinnusvæðið og bættu við kóða sem á að endurtaka aftur og aftur!
       MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Þú getur ekki fjarlægt þessa kubba, en þú getur breytt þeim!
+      MC_HOC_2017_06_Cole_2019_callout:
         MC_HOC_2017_06_Cole_1: Þú getur ekki fjarlægt þessa kubba, en þú getur breytt þeim!
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: 'Umbinn getur svifið yfir hraun, en leikmaðurinn ekki!  '
       MC_HOC_2017_08_Will_callout:
         MC_HOC_2017_08_RY_1: 'Umbinn getur svifið yfir hraun, en leikmaðurinn ekki!  '
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'Umbinn getur svifið yfir hraun, en leikmaðurinn ekki!  '
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'Umbinn getur svifið yfir hraun, en leikmaðurinn ekki!  '
       Mike Playlab Project_callout:
         New Play Lab Project_callout1: Smelltu á flokkana til að sjá kubbana í verkfærakassanum! Dragðu kubba inn á vinnusvæðið til að bæta þeim við forritið þitt
@@ -513,6 +525,8 @@ is:
         courseC_maze_debugging5_1: Þessir kubbar eru læstir og ekki hægt að eyða þeim!
       courseC_maze_debugging5_2018_callout:
         courseC_maze_debugging5_1: Þessir kubbar eru læstir og ekki hægt að eyða þeim!
+      courseC_maze_debugging5_2019_callout:
+        courseC_maze_debugging5_1: Þessir kubbar eru læstir og ekki hægt að eyða þeim!
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: Þú hefur ekki nema einn svona kubb í þessari þraut.
       courseC_maze_programming1_callout:
@@ -582,9 +596,13 @@ is:
         grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á "Keyra" til að ræsa forritið.
       courseD_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á "Keyra" til að ræsa forritið.
+      courseD_maze_ramp1_2019_callout:
+        grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á "Keyra" til að ræsa forritið.
       courseD_maze_ramp2_callout:
         courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri kubba til að klára þrautirnar.
       courseD_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri kubba til að klára þrautirnar.
+      courseD_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri kubba til að klára þrautirnar.
       courseD_maze_ramp3_callout:
         courseC_maze_programming3_2: Dragðu óþarfa kubba aftur í verkfærakassann til að losa þig við þá.
@@ -592,9 +610,14 @@ is:
       courseD_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Dragðu óþarfa kubba aftur í verkfærakassann til að losa þig við þá.
         stone_block_2: Gráir kubbar eru naglfastir og ekki hægt að fleygja þeim.
+      courseD_maze_ramp3_2019_callout:
+        courseC_maze_programming3_2: Dragðu óþarfa kubba aftur í verkfærakassann til að losa þig við þá.
+        stone_block_2: Gráir kubbar eru naglfastir og ekki hægt að fleygja þeim.
       courseD_maze_ramp4_callout:
         courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota.
       courseD_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota.
+      courseD_maze_ramp4_2019_callout:
         courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota.
       courseD_maze_ramp6_callout:
         courseD_maze_ramp6_1: Kóðinn sem þú setur hér verður endurtekinn eins oft og þú segir til um, áður en afgangurinn af forritinu er keyrður.
@@ -740,6 +763,8 @@ is:
         courseF_artist_for1_1: Verkfærakassinn er flokkaður til að kóðinn fái meira pláss. `Frá` lykkjurnar búa hér undir.
       courseF_artist_for1_2018_callout:
         courseF_artist_for1_1: Verkfærakassinn er flokkaður til að kóðinn fái meira pláss. `Frá` lykkjurnar búa hér undir.
+      courseF_artist_for1_2019_callout:
+        courseF_artist_for1_1: Verkfærakassinn er flokkaður til að kóðinn fái meira pláss. `Frá` lykkjurnar búa hér undir.
       courseF_artist_fwp1_callout:
         courseF_artist_fwp1_1: Smelltu á "Breyta" hnappinn til að breyta kóðanum inni í fallinu.
       courseF_artist_fwp1_2018_callout:
@@ -765,6 +790,8 @@ is:
       courseF_bee_for4_callout:
         courseF_bee_for4_1: Þú finnur `frá` lykkjuna hér!
       courseF_bee_for4_2018_callout:
+        courseF_bee_for4_1: Þú finnur `frá` lykkjuna hér!
+      courseF_bee_for4_2019_callout:
         courseF_bee_for4_1: Þú finnur `frá` lykkjuna hér!
       courseF_bee_functions2_callout:
         courseF_bee_functions2_1: Þessi kubbur kallar á fall. Smelltu á þennan "breyta" hnapp til að sjá innihald þess!
