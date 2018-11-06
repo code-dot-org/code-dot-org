@@ -5113,3 +5113,55 @@ ka:
               name: ციფრული დიზაინი
             Linking Screens:
               name: ეკრანების დაკავშირება
+        coursef-2019:
+          description_audience: 'ასაკი: 9-13'
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
+            Building a Foundation:
+              name: ფუნდამენტის აშენება
+            Debugging with Scrat:
+              name: გამართვა სკრეტთან ერთად
+            Programming in Artist:
+              name: პროგრამირება მსახიობში
+            'Loops: My Loopy Robotic Friends':
+              name: 'ციკლები: ჩემი ციკლური რობოტისებრი მეგობრები'
+            Loops in Artist:
+              name: ციკლები მხატვარში
+            Nested Loops in Bee/Zombie:
+              name: ჩადგმული ციკლები ფუტკარში/ზომბიში
+            Conditionals with Cards:
+              name: პირობები ბარათებით
+            The Power of Words:
+              name: სიტყვების ძალა
+              description_student: ძალადობა არასდროს არის კარგი. ეს გაკვეთილი გასწავლით,
+                თუ რისი გაკეთება შეიძლება ონლაინ და რისი - არა.
+            Envelope Variables:
+              name: ცვლადები კონვერტებში
+            For Loop Fun:
+              name: ხალისი "მიზნისთვის" ციკლით
+              description_student: თქვენ ძალიან იხალისებთ, როდესაც შეისწავლით `for`
+                ციკლებს!
+            For Loops in Bee:
+              name: For ციკლები ფუტკარში
+              description_student: ბზზ ბზზ. ამ თავსატეხებში თქვენ უნდა მიიყვანოთ ფუტკარი
+                ნექტართან და თაფლთან `for` ციკლების გამოყენებით!
+            For Loops in Artist:
+              name: For ციკლები მხატვარში
+            Explore Project Ideas:
+              name: გამოიკვლიეთ პროექტების იდეები
+            The Design Process:
+              name: დიზაინის პროცესი
+              description_student: ასეთი დიდი პროექტები საჭიროებენ დიდ დროს და საკმაოდ
+                გრძელ დაგეგმარებას. აქ თქვენ შეისწავლით იმ დიზაინის პროცესის შესახებ,
+                რომელსაც გამოიყენებთ თქვენი ქმნილების ასაწყობად.
+            Build Your Project:
+              name: ააწყვეთ თქვენი პროექტი
+              description_student: საბოლოოდ თქვენ შეგიძლიათ, დაიწყოთ თქვენი პროექტის
+                აწყობა!
+            Revise Your Project:
+              name: გადახედეთ თქვენს პროექტს
+            Present Your Project:
+              name: წარმოადგინეთ თქვენი პროექტი
+            new stage:
+              name: ახალი დონე
