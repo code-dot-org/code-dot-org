@@ -726,12 +726,18 @@ export class DetailViewContents extends React.Component {
     if (MultiAnswerQuestionFields[key]) {
       return (
         <div>
-          {MultiAnswerQuestionFields[key]['teacher'] && (<p>Teacher Response: {this.props.applicationData.form_data[_.camelCase(MultiAnswerQuestionFields[key]['teacher'])] || NA}</p>)}
-          {MultiAnswerQuestionFields[key]['principal'] && (<p>Principal Response: {this.props.applicationData.form_data[_.camelCase(MultiAnswerQuestionFields[key]['principal'])] || NA}</p>)}
+          {MultiAnswerQuestionFields[key]['teacher'] && (<p>Teacher Response: {this.formatAnswer(key, this.props.applicationData.form_data[_.camelCase(MultiAnswerQuestionFields[key]['teacher'])])}</p>)}
+          {MultiAnswerQuestionFields[key]['principal'] && (<p>Principal Response: {this.formatAnswer(key, this.props.applicationData.form_data[_.camelCase(MultiAnswerQuestionFields[key]['principal'])])}</p>)}
           {MultiAnswerQuestionFields[key]['stats'] && (<p>Data from NCES: {this.props.applicationData.school_stats[MultiAnswerQuestionFields[key]['stats']] || NA}</p>)}
         </div>
       );
-    } else if (Array.isArray(answer)) {
+    } else {
+      return this.formatAnswer(key, answer);
+    }
+  };
+
+  formatAnswer = (key, answer) => {
+    if (Array.isArray(answer)) {
       return answer.sort().join(', ');
     } else {
       return answer || NA;
