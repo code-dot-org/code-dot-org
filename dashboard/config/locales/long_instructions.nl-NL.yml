@@ -409,6 +409,11 @@ nl:
         \ Alle code die je nodig hebt om de rivier over te steken, zit hierin! \r\n
         \r\nMaak twee kleine, groene blokjes vast in je werkruimte om het pad te repareren
         en {currentPlayerName} naar de Redstone-fakkel [redstone_torch] te leiden."
+      Function intro Ryan_2019: "Er is een **function** genaamd 'brug bouwen' in de
+        werkruimte.  Alle code die je nodig hebt om de rivier over te steken, zit
+        hierin! \r\n \r\nMaak twee kleine, groene blokjes vast in je werkruimte om
+        het pad te repareren en {currentPlayerName} naar de Redstone-fakkel [redstone_torch]
+        te leiden."
       K-1 Bee Loops 2: Gebruik een lus om te verplaatsen en pak dan te nectar en maak
         honing!
       K-1 Bee Loops 3: Gebruik lussen om nectar te pakken en honing te maken!
@@ -438,10 +443,20 @@ nl:
         aan het 'wanneer uitgevoerd'-blok in de werkruimte om de agent naar de drukplaat
         [PressurePlate_Up] te leiden. Druk vervolgens op 'Uitvoeren' en gebruik de
         pijltoetsen om {currentPlayerName} het huis uit te bewegen en de **kist**
-        [chest] te bereiken.  \n"
+        [chest] te bereiken.  "
+      MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} is gevangen in het huis, maar
+        de agent is er om te helpen!   \r\n \r\n   \r\nMaak een 'naar voren'-blok
+        vast aan het 'wanneer uitgevoerd'-blok in de werkruimte om de agent naar de
+        drukplaat [PressurePlate_Up] te leiden. Druk vervolgens op 'Uitvoeren' en
+        gebruik de pijltoetsen om {currentPlayerName} het huis uit te bewegen en de
+        **kist** [chest] te bereiken.  "
       MC_HOC_2017_02: De speler moet de geheime gaard bereiken.  Help de agent de
         poort te openen door een code te schrijven om hem naar de drukplaat te leiden.
       MC_HOC_2017_02_Cole: "{currentPlayerName} gaat op avontuur! Bereik hiervoor
+        de **kaart** [map_empty] achter de gesloten deur aan de rechterkant. \r\n
+        \r\nMaak de code vast in de werkruimte om de agent naar de drukplaat [PressurePlate_Up]
+        te bewegen zodat {currentPlayerName} door kan. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} gaat op avontuur! Bereik hiervoor
         de **kaart** [map_empty] achter de gesloten deur aan de rechterkant. \r\n
         \r\nMaak de code vast in de werkruimte om de agent naar de drukplaat [PressurePlate_Up]
         te bewegen zodat {currentPlayerName} door kan. "
@@ -456,6 +471,9 @@ nl:
       MC_HOC_2017_03_Cole: "{currentPlayerName} gaat verder op avontuur en heeft een
         **kompas** [compass] nodig om zich voor te bereiden op de tocht.  \r\n   \r\nProgrammeer
         de agent om de poort te openen. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} gaat verder op avontuur en heeft
+        een **kompas** [compass] nodig om zich voor te bereiden op de tocht.  \r\n
+        \  \r\nProgrammeer de agent om de poort te openen. "
       MC_HOC_2017_03_Kiki: "Het avontuur van de speler begint achter een gesloten
         deur in de geheime gaard!  \r\n\r\n\r\nHelp de agent de deur te openen door
         een code te schrijven om hem naar de drukplaat te leiden."
@@ -467,9 +485,15 @@ nl:
         drukplaten te passeren."
       MC_HOC_2017_04POINT5_RYAN: "Je hebt de oversteek gemaakt! \r\n\r\nLeid {currentPlayerName}
         nu veilig door het doolhof om het **bijl** [diamond_axe] te bereiken\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Je hebt de oversteek gemaakt! \r\n\r\nLeid
+        {currentPlayerName} nu veilig door het doolhof om het **bijl** [diamond_axe]
+        te bereiken\r\n"
       MC_HOC_2017_04_Cole: "De agent kan over water bewegen!  \r\n \r\nGebruik een
         'herhalen'-lus om deze puzzel op te lossen en {currentPlayerName} naar de
         **emmer** [bucket_empty] achter de deur te leiden. "
+      MC_HOC_2017_04_Cole_2019: "De agent kan over water bewegen!  \r\n \r\nGebruik
+        een 'herhalen'-lus om deze puzzel op te lossen en {currentPlayerName} naar
+        de **emmer** [bucket_empty] achter de deur te leiden. "
       MC_HOC_2017_04_Kiki: "De geheime gaard leidt tot deze prachtige oase!  Om dit
         level te halen, moet de speler het oranje vakje in de hut bereiken.  \r\n\r\nGebruik
         een 'herhalen'-lus om de agent naar de drukplaat te leiden waarmee de deur
@@ -481,6 +505,9 @@ nl:
       MC_HOC_2017_05_Cole: "O nee, de brug is stuk! \r\n\r\nProgrammeer de agent om
         de brug te herbouwen met het 'plaatsen'-blok, zodat {currentPlayerName} de
         **spade** [diamond_shovel] kan bereiken."
+      MC_HOC_2017_05_Cole_2019: "O nee, de brug is stuk! \r\n\r\nProgrammeer de agent
+        om de brug te herbouwen met het 'plaatsen'-blok, zodat {currentPlayerName}
+        de **spade** [diamond_shovel] kan bereiken."
       MC_HOC_2017_05_Josh: "O nee, de brug is stuk! \n\n\nHelp de agent de brug te
         herbouwen zodat de speler de **spade** kan bereiken."
       MC_HOC_2017_05_Kiki: "Het is tijd voor de speler om de geheime gaard te verlaten
@@ -490,11 +517,17 @@ nl:
       MC_HOC_2017_06_Cole: "Nog een rivier, en deze is nog breder! \r\n \r\nCorrigeer
         deze code om de agent te helpen een brug te bouwen, zodat {currentPlayerName}
         het **pikhouweel** [diamond_pickaxe] kan bereiken. "
+      MC_HOC_2017_06_Cole_2019: "Nog een rivier, en deze is nog breder! \r\n \r\nCorrigeer
+        deze code om de agent te helpen een brug te bouwen, zodat {currentPlayerName}
+        het **pikhouweel** [diamond_pickaxe] kan bereiken. "
       MC_HOC_2017_06_Josh: "Nog een rivier, en deze is nog breder!  \r\n\r\nCorrigeer
         deze code om de agent te helpen een brug te bouwen."
       MC_HOC_2017_06_Kiki: "Nog een rivier, en deze is nog breder!  \r\n\r\nCorrigeer
         deze code om de agent te helpen een brug over het water te bouwen."
       MC_HOC_2017_07_Cole: "Er ligt ijs in de weg!  \r\n \r\nMet de 'pad vrijmaken'-functie
+        kun je het ijs vernietigen en {currentPlayerName} naar het mijnkarretje [minecart_normal]
+        leiden! "
+      MC_HOC_2017_07_Cole_2019: "Er ligt ijs in de weg!  \r\n \r\nMet de 'pad vrijmaken'-functie
         kun je het ijs vernietigen en {currentPlayerName} naar het mijnkarretje [minecart_normal]
         leiden! "
       MC_HOC_2017_07_Kiki: "Lussen zijn niet de enige manier om code te herhalen!
@@ -533,6 +566,10 @@ nl:
         \r\n \r\nGebruik deze functies met andere code uit de werkplaats om de weg
         naar het mijnkarretje vrij te maken en vervolgens **vuursteen en staal** [flint_and_steel]
         te bereiken. \r\n "
+      MC_HOC_2017_10_RETRY_2019: "Zie jij het verschil tussen de twee functies in
+        de werkruimte? \r\n \r\nGebruik deze functies met andere code uit de werkplaats
+        om de weg naar het mijnkarretje vrij te maken en vervolgens **vuursteen en
+        staal** [flint_and_steel] te bereiken. \r\n "
       MC_HOC_2017_10_RYAN: Probeer aan het begin functies te maken waarmee het makkelijker
         is voor de agent om dit mijnkarretje af te maken en de speler naar het oranje
         vakje te leiden.
@@ -550,12 +587,17 @@ nl:
       MC_HOC_2017_Ali: 'Bekijk de onderstaande functies.  Hoe kun je deze gebruiken
         om de Ghasts te vermijden en {currentPlayerName} helpen veilig het **betoverde
         boek** [book_enchanted] te bereiken?  '
+      MC_HOC_2017_Ali_2019: 'Bekijk de onderstaande functies.  Hoe kun je deze gebruiken
+        om de Ghasts te vermijden en {currentPlayerName} helpen veilig het **betoverde
+        boek** [book_enchanted] te bereiken?  '
       MC_HOC_2017_FP10x10: "**Vrij spel:** Het is nu aan jou! Durf jij jezelf uit
         te dagen om alle diamanten in dit level te verzamelen? "
       MC_HOC_2017_FP10x10_RE: "**Vrij spel:** Het is nu aan jou! Durf jij jezelf uit
         te dagen om alle diamanten in dit level te verzamelen? "
       MC_HOC_2017_FP20x20: "**Vrij spel:** Het is nu aan jou! Gebruik de code van
         de agent om de wereld te verkennen."
+      MC_HOC_2017_FP20x20_2019: "**Vrij spel:** Het is nu aan jou! Gebruik de code
+        van de agent om de wereld te verkennen."
       MC_HOC_2017_Ryan_03: "Wist je dat je meerdere stukken code in één lus kunt plaatsen?
         \ \r\n\r\nGebruik een 'herhalen'-lus om de agent te helpen een brug over de
         rivier te bouwen door blokken in het water te plaatsen."
@@ -689,15 +731,22 @@ nl:
         bij elke honingraat. Gebruik een geneste lus. '
       courseD_bee_nestedLoops8_2018: 'Verzamel alle nectar van elke bloem en maak
         honing bij elke honingraat. Gebruik een geneste lus. '
+      courseD_bee_nestedLoops8_2019: 'Verzamel alle nectar van elke bloem en maak
+        honing bij elke honingraat. Gebruik een geneste lus. '
       courseD_maze_nestedLoops4: Help me tot bij de zonnebloem!
       courseD_maze_nestedLoops4_2018: Help me tot bij de zonnebloem!
+      courseD_maze_nestedLoops4_2019: Help me tot bij de zonnebloem!
       courseD_maze_ramp1: Plak alle blokken aaneen bij deze puzzel en klik op "Start"
         om het te zien bewegen!
       courseD_maze_ramp1_2018: Plak alle blokken aaneen bij deze puzzel en klik op
         "Start" om het te zien bewegen!
+      courseD_maze_ramp1_2019: Plak alle blokken aaneen bij deze puzzel en klik op
+        "Start" om het te zien bewegen!
       courseD_maze_ramp2: Versleep een extra `ga voorwaarts` blok uit de gereedschapskist,
         en koppel alle blokken aan `als gestart` om je code te vervolledigen.
       courseD_maze_ramp2_2018: Versleep een extra `ga voorwaarts` blok uit de gereedschapskist,
+        en koppel alle blokken aan `als gestart` om je code te vervolledigen.
+      courseD_maze_ramp2_2019: Versleep een extra `ga voorwaarts` blok uit de gereedschapskist,
         en koppel alle blokken aan `als gestart` om je code te vervolledigen.
       courseD_scrat_ramp1: Plak alle blokken aaneen bij deze puzzel en klik op "Start"
         om het te zien bewegen!
@@ -729,6 +778,8 @@ nl:
       courseF_bee_for_challenge2: Los deze puzzel op en gebruik zo weinig mogelijk
         blokken.
       courseF_bee_for_challenge2_2018: Los deze puzzel op en gebruik zo weinig mogelijk
+        blokken.
+      courseF_bee_for_challenge2_2019: Los deze puzzel op en gebruik zo weinig mogelijk
         blokken.
       frozen circle function in circle: Laten we nu 20 overlappende cirkels maken,
         draai 18 graden tussen elke cirkel.
