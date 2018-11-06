@@ -270,7 +270,7 @@ id:
         untuk mengumpulkan semua nektar dan membuat madu. Sekarang Anda bisa menggunakan
         "jalankan" dan "langkah".
       2-3 Bee Debugging 6: "Apa yang tantangan yang manis! \\ r \n\\ r \nPerbaiki
-        \nkesalahan (s) untuk mengumpulkan semua nektar.\n \n"
+        \nkesalahan (s) untuk mengumpulkan semua nektar.\n "
       2-3 Bee Debugging 7: Blok ini benar-benar menggangguku. Perbaiki yang salah
         untuk mengumpulkan semua nektar dan membuat madu.
       2-3 Bee Debugging 8: Blok ini benar-benar menggangguku. Perbaiki yang salah
@@ -965,14 +965,14 @@ id:
         \ *\n(Petunjuk: anda akan menggunakan hampir semua kode yang sama sebagai
         fungsi 'moveCloud0')\r\n*\nPanggil fungsi` moveCloud (nama) `Anda yang baru
         di dalam blok, satu kali untuk \nsetiap nama awan.\r \n * (Petunjuk: ini mirip
-        dengan bagaimana fungsi\n `loopCloud (nama)` dipanggil beberap kali.\n"
+        dengan bagaimana fungsi\n `loopCloud (nama)` dipanggil beberap kali."
       CSD U6 params modify clouds_2018: "#Awan\r\n\r\nProgram ini membuat awan bergerak
         ketika anda meniup pada elemen pengubah sinyal suara, tapi belum selesai.\r\n\r\n#\nLakukan
         ini\r\n*Buat fungsi baru 'moveCloud(nama)\" yang akan menggerakkan awan.\r\n
         \ *\n(Petunjuk: anda akan menggunakan hampir semua kode yang sama sebagai
         fungsi 'moveCloud0')\r\n*\nPanggil fungsi` moveCloud (nama) `Anda yang baru
         di dalam blok, satu kali untuk \nsetiap nama awan.\r \n * (Petunjuk: ini mirip
-        dengan bagaimana fungsi\n `loopCloud (nama)` dipanggil beberap kali.\n"
+        dengan bagaimana fungsi\n `loopCloud (nama)` dipanggil beberap kali."
       CSD U6 params modify planes: "# Multi-pesawat Controller\r \r program ini bergerak
         tiga pesawat menggunakan accelerometer papan dan layar kotak centang.  Sekarang,
         hanya pesawat merah bekerja. \r \r # This\r melakukan * membuat baru 'movePlane(name)'
@@ -1618,6 +1618,8 @@ id:
         lab.
       Function intro Ryan: Gunakan fungsi `bangun jembatan` dua kali untuk membuat
         jalur menuju obor.
+      Function intro Ryan_2019: Gunakan fungsi `bangun jembatan` dua kali untuk membuat
+        jalur menuju obor.
       Infinity_catch: Apakah kamu bisa membuat Elsa ("aktor 2") menyusul Anna dengan
         menggunakan tombol panah?
       Infinity_finale: Buat apapun yang Anda suka dan bagikanlah!
@@ -1737,31 +1739,44 @@ id:
       MC_HOC_2017_01_RETRY: Bawa Agent ke pelat tekanan, lalu tekan "Jalankan" dan
         gunakan tombol panah untuk memindahkan pemain ke luar rumah untuk mengambil
         peti.
+      MC_HOC_2017_01_RETRY_2019: Bawa Agent ke pelat tekanan, lalu tekan "Jalankan"
+        dan gunakan tombol panah untuk memindahkan pemain ke luar rumah untuk mengambil
+        peti.
       MC_HOC_2017_02: Bawa Agent ke pelat tekanan.
       MC_HOC_2017_02_Cole: Pindahkan Agent ke pelat tekanan sehingga {currentPlayerName}
+        bisa mencapai peta.
+      MC_HOC_2017_02_Cole_2019: Pindahkan Agent ke pelat tekanan sehingga {currentPlayerName}
         bisa mencapai peta.
       MC_HOC_2017_02_Kiki: Bawa Agent ke pelat tekanan, lalu bawa pemain ke kotak
         oranye.
       MC_HOC_2017_02_Will: Bawa Agent ke pelat tekanan.
       MC_HOC_2017_03_Cole: Buat kode agar Agent membuka gerbang.
+      MC_HOC_2017_03_Cole_2019: Buat kode agar Agent membuka gerbang.
       MC_HOC_2017_03_Kiki: Bawa Agent ke pelat tekanan.
       MC_HOC_2017_04: Ubah loop dari teka-teki terakhir untuk membantu Agent membuat
         jalur di bagian yang lebih luas di sungai ini.
       MC_HOC_2017_04POINT5_Cole: Bawa Agent ke pelat tekanan.
       MC_HOC_2017_04POINT5_RYAN: Bawa Agent ke pelat tekanan.
+      MC_HOC_2017_04POINT5_RYAN_2019: Bawa Agent ke pelat tekanan.
       MC_HOC_2017_04_Cole: Bawa Agent ke pelat tekanan.
+      MC_HOC_2017_04_Cole_2019: Bawa Agent ke pelat tekanan.
       MC_HOC_2017_04_Kiki: Bawa Agent ke pelat tekanan.
       MC_HOC_2017_05: Gunakan fungsi untuk membantu Agent mencapai pelat tekanan.
       MC_HOC_2017_05_Cole: Bawa pemain ke sekop.
+      MC_HOC_2017_05_Cole_2019: Bawa pemain ke sekop.
       MC_HOC_2017_05_Josh: Bawa pemain ke sekop.
       MC_HOC_2017_05_Kiki: Bawa pemain ke kotak oranye.
       MC_HOC_2017_06_Cole: Perbaiki kode ini untuk membuat Agent membangun jembatan
+        yang melintasi sungai ini.
+      MC_HOC_2017_06_Cole_2019: Perbaiki kode ini untuk membuat Agent membangun jembatan
         yang melintasi sungai ini.
       MC_HOC_2017_06_Josh: Perbaiki kode ini untuk membantu Agent membangun jembatan
         yang melintasi sungai ini.
       MC_HOC_2017_06_Kiki: Perbaiki kode ini untuk membantu Agent membangun jembatan
         yang melintasi sungai ini.
       MC_HOC_2017_07_Cole: Hancurkan es dan bawa {currentPlayerName} ke Kereta Tambang.
+      MC_HOC_2017_07_Cole_2019: Hancurkan es dan bawa {currentPlayerName} ke Kereta
+        Tambang.
       MC_HOC_2017_07_Kiki: Gunakan fungsi untuk membersihkan jalur ke kotak oranye.
       MC_HOC_2017_07a_Kiki: Bersihkan jalur ke kotak oranye.
       MC_HOC_2017_08_Cole: Ubah fungsi yang disediakan agar berhasil untuk bioma ini.
@@ -1779,6 +1794,8 @@ id:
         ini.
       MC_HOC_2017_10_RETRY: Buat fungsi untuk membantu kamu menyelesaikan kereta tambang
         ini.
+      MC_HOC_2017_10_RETRY_2019: Buat fungsi untuk membantu kamu menyelesaikan kereta
+        tambang ini.
       MC_HOC_2017_10_RYAN: Buat fungsi untuk membantu kamu menyelesaikan kereta tambang
         ini.
       MC_HOC_2017_10_RYAN2: Buat fungsi untuk membantu kamu menyelesaikan kereta tambang
@@ -1786,11 +1803,13 @@ id:
       MC_HOC_2017_13_Cole: "**Main bebas:**  Waktunya menjelajah sendiri!"
       MC_HOC_2017_4.5v2: Bawa Agent ke pelat tekanan.
       MC_HOC_2017_Ali: Gunakan fungsi untuk menemukan jalur di lahar.
+      MC_HOC_2017_Ali_2019: Gunakan fungsi untuk menemukan jalur di lahar.
       MC_HOC_2017_FP10x10: "**Main bebas:** Dapatkah kamu menantang dirimu untuk mengambil
         semua berlian di level ini? "
       MC_HOC_2017_FP10x10_RE: "**Main bebas:** Dapatkah kamu menantang dirimu untuk
         mengambil semua berlian di level ini? "
       MC_HOC_2017_FP20x20: "**Main bebas:**  Waktunya menjelajah sendiri!"
+      MC_HOC_2017_FP20x20_2019: "**Main bebas:**  Waktunya menjelajah sendiri!"
       MC_HOC_2017_Ryan_03: Sekarang gunakan loop untuk membantu Agent membangun jembatan
         di atas sungai dengan menempatkan blok di air.
       MC_HOC_2017_Ryan_05: Hancurkan kaktus ini agar pemain bisa mencapai sasaran.
@@ -2222,6 +2241,9 @@ id:
       courseC_artist_prog5_2018: |-
         Rumah ini membutuhkan atap! Gambarkan segitiga. Petunjuk:
         semua tiga sisi panjangnya sama.
+      courseC_artist_prog5_2019: |-
+        Rumah ini membutuhkan atap! Gambarkan segitiga. Petunjuk:
+        semua tiga sisi panjangnya sama.
       courseD_artist_binary1: |-
         Gunakan blok di bawah ini agar
         seniman menggambar "01010101" dalam biner pada baris pertama.
@@ -2260,6 +2282,8 @@ id:
         madu pada setiap sarang madu. Gunakan putaran bersarang. '
       courseD_bee_nestedLoops8_2018: 'Kumpulkan semua nektar dari setiap bunga dan
         buatlah madu pada setiap sarang madu. Gunakan putaran bersarang. '
+      courseD_bee_nestedLoops8_2019: 'Kumpulkan semua nektar dari setiap bunga dan
+        buatlah madu pada setiap sarang madu. Gunakan putaran bersarang. '
       courseD_bounce_events10: Ada sebuah target di atas. Tempelkan blok "Skor poin"
         dan blok "Skor poin lawan" ke blok "Jika bola di target" dan blok "Jika bola
         meleset dari dayung" untuk membuat permainan. Lihat berapa banyak poin yang
@@ -2294,8 +2318,10 @@ id:
         untuk mengumpulkan semua nektar dan membuat madu.
       courseD_maze_nestedLoops4: Bawa aku ke bunga matahari!
       courseD_maze_nestedLoops4_2018: Bawa aku ke bunga matahari!
+      courseD_maze_nestedLoops4_2019: Bawa aku ke bunga matahari!
       courseD_maze_nestedLoops6: Bawa aku ke bunga matahari!
       courseD_maze_nestedLoops6_2018: Bawa aku ke bunga matahari!
+      courseD_maze_nestedLoops6_2019: Bawa aku ke bunga matahari!
       courseE_artist_functions1: |-
         Hello. Saya artis zombie. Saya suka menggambar!
         Bantu saya menggambar kacamata persegi. Petunjuk: jembatan antara gelas adalah
@@ -2333,17 +2359,26 @@ id:
       courseF_artist_for7_2018: |-
         Buat tiga perubahan kecil pada
         kode dari level terakhir untuk mendapatkan ini!
+      courseF_artist_for7_2019: |-
+        Buat tiga perubahan kecil pada
+        kode dari level terakhir untuk mendapatkan ini!
       courseF_artist_for_challenge1: Dapatkah Anda mencari tahu cara untuk membuat
         ulang gambar ini?
       courseF_artist_for_challenge1_2018: Dapatkah Anda mencari tahu cara untuk membuat
+        ulang gambar ini?
+      courseF_artist_for_challenge1_2019: Dapatkah Anda mencari tahu cara untuk membuat
         ulang gambar ini?
       courseF_artist_for_challenge2: Dapatkah Anda mencari tahu cara membuat ulang
         gambar ini dengan satu putaran?
       courseF_artist_for_challenge2_2018: Dapatkah Anda mencari tahu cara membuat
         ulang gambar ini dengan satu putaran?
+      courseF_artist_for_challenge2_2019: Dapatkah Anda mencari tahu cara membuat
+        ulang gambar ini dengan satu putaran?
       courseF_bee_for_challenge2: Selesaikan teka-teki ini dengan menggunakan jumlah
         blok paling sedikit.
       courseF_bee_for_challenge2_2018: Selesaikan teka-teki ini dengan menggunakan
+        jumlah blok paling sedikit.
+      courseF_bee_for_challenge2_2019: Selesaikan teka-teki ini dengan menggunakan
         jumlah blok paling sedikit.
       courseF_bee_for_challenge3: Selesaikan teka-teki ini dengan menggunakan jumlah
         blok paling sedikit.
@@ -2574,7 +2609,7 @@ id:
         mengumpulkan semua nektar dan membuat madu. Sekarang Anda bisa menggunakan
         "jalankan" dan "langkah".
       grade3_Debugging_6: "Apa yang tantangan yang manis! \\ r \n\\ r \nPerbaiki \nkesalahan
-        (s) untuk mengumpulkan semua nektar.\n \n"
+        (s) untuk mengumpulkan semua nektar.\n "
       grade3_Debugging_7: Blok ini benar-benar menggangguku. Perbaiki yang salah untuk
         mengumpulkan semua nektar dan membuat madu.
       grade3_Debugging_9: Blok ini benar-benar menggangguku. Perbaiki yang salah untuk

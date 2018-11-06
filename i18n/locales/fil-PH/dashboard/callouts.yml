@@ -188,6 +188,8 @@ fil:
         snowflake_dropdown: Gamitin ang drop-down na ito para makalikha na iba't ibang mga snowflakes!
       Function intro Ryan_callout:
         Function_intro_Ryan_1: Ang maliit na mga instruksyon na ito ay nagsasabi sa kompyuter na magpatakbo ng MALALAKING tipag ng code na may parehong mga pangalan sa workspace.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Ang maliit na mga instruksyon na ito ay nagsasabi sa kompyuter na magpatakbo ng MALALAKING tipag ng code na may parehong mga pangalan sa workspace.
       Geometric Pattern_callout:
         4-5_Artist_Patterns_Free_Play_1: Lahat ng iyong mga paboritong mga bloke ay nakaayos na ayon sa mga kategorya. I-click ang mga salitang ito para makita kung saan ang lahat napunta!
       Geometric Sun_callout:
@@ -206,6 +208,8 @@ fil:
       InspirationalArtwork_callout:
         InspirationalArtwork_1: Subukang gamitin ang bagong `comment` na bloke sa ilalim ng label na ito para hayaan ang iyong sarili na magtala sa loob ng iyong mga programa!
       InspirationalArtwork_2018_callout:
+        InspirationalArtwork_1: Subukang gamitin ang bagong `comment` na bloke sa ilalim ng label na ito para hayaan ang iyong sarili na magtala sa loob ng iyong mga programa!
+      InspirationalArtwork_2019_callout:
         InspirationalArtwork_1: Subukang gamitin ang bagong `comment` na bloke sa ilalim ng label na ito para hayaan ang iyong sarili na magtala sa loob ng iyong mga programa!
       Mike Playlab Project_callout:
         New Play Lab Project_callout1: I-click ang mga kategorya para makita ang mga bloke sa loob ng iyong toolbox! Kaladkarin ang mga bloke sa iyong workspace, at idagdag ang mga ito sa iyong programa
@@ -381,6 +385,8 @@ fil:
         courseC_maze_debugging5_1: Ang mga blokeng ito ay naka-lock at hindi maaaring burahin!
       courseC_maze_debugging5_2018_callout:
         courseC_maze_debugging5_1: Ang mga blokeng ito ay naka-lock at hindi maaaring burahin!
+      courseC_maze_debugging5_2019_callout:
+        courseC_maze_debugging5_1: Ang mga blokeng ito ay naka-lock at hindi maaaring burahin!
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: Mayroon ka lang isa sa mga blokeng ito ang magagamit sa palaisipang ito.
       courseC_maze_programming1_callout:
@@ -450,9 +456,13 @@ fil:
         grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin ang "Run" para simulan ang iyong programa.
       courseD_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin ang "Run" para simulan ang iyong programa.
+      courseD_maze_ramp1_2019_callout:
+        grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin ang "Run" para simulan ang iyong programa.
       courseD_maze_ramp2_callout:
         courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
       courseD_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
+      courseD_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
       courseD_maze_ramp3_callout:
         courseC_maze_programming3_2: Maaari mong kaladkarin ang mga ekstrang bloke papunta sa toolbox para maitapon ang mga ito.
@@ -460,9 +470,14 @@ fil:
       courseD_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Maaari mong kaladkarin ang mga ekstrang bloke papunta sa toolbox para maitapon ang mga ito.
         stone_block_2: Ang mga bloke na kulay aboy ay yari sa bato at hindi maaaring itapon.
+      courseD_maze_ramp3_2019_callout:
+        courseC_maze_programming3_2: Maaari mong kaladkarin ang mga ekstrang bloke papunta sa toolbox para maitapon ang mga ito.
+        stone_block_2: Ang mga bloke na kulay aboy ay yari sa bato at hindi maaaring itapon.
       courseD_maze_ramp4_callout:
         courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi ito kung ilan sa mga blokeng ito ang natira para magamit mo.
       courseD_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi ito kung ilan sa mga blokeng ito ang natira para magamit mo.
+      courseD_maze_ramp4_2019_callout:
         courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi ito kung ilan sa mga blokeng ito ang natira para magamit mo.
       courseD_maze_ramp6_callout:
         courseD_maze_ramp6_1: Kahit anong code ang ilalagay mo dito ay mag-uulit ng ilang beses ayon sa kagustuhan mo, pagkatapos ay magpatuloy na patakbuhin ang natirang programa.
@@ -734,6 +749,8 @@ fil:
       grade5_artist_variables_triangles1_callout:
         grade5_artist_variables_triangles1_1: Bigyang-pansin na ang mga bloke ngayon ay mayroon nang bagong paraan para maglagay ng mga numero. Ang mga `math` na mga bloke ay maaaring hilahin palabas at igalaw sa paligid!
       grade5_artist_variables_triangles1_2018_callout:
+        grade5_artist_variables_triangles1_1: Bigyang-pansin na ang mga bloke ngayon ay mayroon nang bagong paraan para maglagay ng mga numero. Ang mga `math` na mga bloke ay maaaring hilahin palabas at igalaw sa paligid!
+      grade5_artist_variables_triangles1_2019_callout:
         grade5_artist_variables_triangles1_1: Bigyang-pansin na ang mga bloke ngayon ay mayroon nang bagong paraan para maglagay ng mga numero. Ang mga `math` na mga bloke ay maaaring hilahin palabas at igalaw sa paligid!
       grade5_artist_variables_triangles2_callout:
         set_length: Gamitin ang blokeng ito para maitakda ang "haba" sa tamang halaga.

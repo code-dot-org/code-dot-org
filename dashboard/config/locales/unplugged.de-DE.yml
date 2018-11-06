@@ -454,3 +454,11 @@ de:
         title: Bewegung, Bewegung
       RelayProgramming_2018:
         title: Relais-Programmierung
+      courseB_unplugged_MRF_2019:
+        title: Meine Roboterfreunde
+      Conditionals_2019:
+        title: Bedingungen
+        desc: Als Einführung in bedingte Anweisungen spielen die Schüler ein Kartenspiel,
+          für welches sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich
+          einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen
+          Punkt" erstellen.

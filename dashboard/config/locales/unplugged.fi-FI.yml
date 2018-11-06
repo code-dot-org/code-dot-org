@@ -429,3 +429,10 @@ fi:
         title: Liikuta, liikuta
       RelayProgramming_2018:
         title: Releohjelmointi
+      courseB_unplugged_MRF_2019:
+        title: Robottiystäväni
+      Conditionals_2019:
+        title: Ehtolausekkeet
+        desc: Ehtolausekkeiden oppimiseksi opiskeliat pelaavat korttipeliä ja luovat
+          sääntöjä kuten "Jos saan punaisen kortin, saan pisteen" ja "Jos saan mustan
+          kortin, sinä saat pisteen."

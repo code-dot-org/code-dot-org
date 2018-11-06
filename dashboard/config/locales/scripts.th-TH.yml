@@ -1473,3 +1473,27 @@ th:
           stages:
             Artist:
               name: ศิลปิน
+        aquatic:
+          title: 'ไมน์คราฟท์: การเดินทางทางน้ำ'
+        coursef-2019:
+          stages:
+            Sequence in Maze:
+              name: การจัดลำดับก่อนหลังกับเขาวงกต
+            Building a Foundation:
+              name: สร้างพื้นฐาน
+            Programming in Artist:
+              name: การเขียนโปรแกรมในเรื่องศิลปิน
+            Loops in Artist:
+              name: ลูปกับศิลปิน
+            Nested Loops in Bee/Zombie:
+              name: ลูปซ้อนลูป ในเกมผึ้งและซอมบี้
+            Nested Loops with Frozen:
+              name: ลูปซ้อนลูป กับเกม Frozen
+            Conditionals with Cards:
+              name: เงื่อนไข
+            Functions in Minecraft:
+              name: ฟังก์ชั่นในไมน์คราฟท์
+            For Loop Fun:
+              name: สนุกกับ For ลูป
+            For Loops in Bee:
+              name: ลูป For ในเรื่องผึ้ง

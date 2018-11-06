@@ -402,7 +402,7 @@
   mc_gradelevel: "Mayores de 6 años"
   mc_platformtext: "Cualquier navegador moderno, smartphone, tableta"
   mc_specs: "Muchos lenguajes| Navegadores modernos, tablets | Edad 6-106"
-  minecraft_agent: 'Minecraft: Viaje del héroe'
+  minecraft_agent: "Minecraft: Viaje del héroe"
   minecraft_designer: "Diseñador de Minecraft"
   minecraft_adventurer: "Aventurero de Minecraft"
   minecraft_tutorials: "Tutoriales de Minecraft Hora del Código"
@@ -656,7 +656,7 @@
   dashboard_sections_table_stage_extras: "Etapa Extra"
   dashboard_sections_table_students: "Alumnos"
   dashboard_sections_table_code: "Código de sección"
-  dashboard_sections_name: "Nombre de la sección"
+  dashboard_sections_name: 'Nombre de la sección'
   dashboard_sections_choose_secret: "Si quieres proporcionar cuentas a tus alumnos, elige un tipo secreto de <b>palabra</b> o <b>imagen</b> para esa sección."
   dashboard_sections_secret_word: "Una <b>palabra</b> te permite establecer una palabra secreta para cada alumno."
   dashboard_sections_secret_picture: "Una <b>imagen</b> te permite definir una imagen secreta para cada alumno, ideal para estudiantes más jóvenes que aún no escriben."
@@ -682,7 +682,7 @@
   dashboard_students_add_multiple: 'Escribe o pega los nombres de sus alumnos, uno por línea:'
   dashboard_students_new_google_classroom_section: "Para añadir los estudiantes, usa <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> y luego presiona el botón <b>Sincronizar estudiantes de Google Classroom</b> que se encuentra en la parte superior."
   dashboard_students_new_section: "¡Has creado una nueva sección! Ahora, añade a tus alumnos usando los botones anteriores <b>Añadir alumno</b> y <b>Añadir varios alumnos</b>."
-  dashboard_students_name: "Nombre"
+  dashboard_students_name: 'Nombre'
   dashboard_students_progress: "Progreso"
   dashboard_students_male: "Hombre"
   dashboard_students_female: "Mujer"
@@ -1450,6 +1450,7 @@
   user_header_settings: "Mi cuenta"
   user_header_logout: "Cerrar sesión"
   user_header_signin: "Iniciar Sesión"
+  user_header_create: 'Olustur '
   user_header_gamelab: "Laboratorio de juego"
   user_header_playlab: "Laboratorio de juegos"
   user_header_minecraft: "Minecraft"
@@ -1489,7 +1490,7 @@
   hoc2018_creativity: "creatività"
   hoc2018_creativity_create: "Crear"
   hoc2018_creativity_hoc_coming: "L'ora del Codice sta arrivando…"
-  hoc2018_creativity_what_will_you_create: "¿Qué vas a crear?"
+  hoc2018_creativity_what_will_you_create: "Ne olusturacaksin?"
   hoc2018_creativity_homepage: "Hayallerine dogru uc ve yeniliklerini ortaya cikar. Kod Saati ve kendine has yaraticilikla basla, ne olursa olsun. Videomuzu izle."
   hoc2018_creativity_hoc_about: 'Bu sene, Kod Saati yaraticilik hakkinda olacaktir. '
   hoc2018_creativity_social_media: 'Bu sene, #HourofCode yaraticilik hakkindadir. Ben varim! Ya sen?'
@@ -1498,6 +1499,7 @@
   hoc2018_creativity_courses_link: "Code.org <a href=\"https://studio.code.org/courses\"> Code.org kurslari </a> ile ilerle"
   hoc2018_mc_page_title: "Tutoriales de Minecraft Hora del Código"
   hoc2018_mc_details: "Muchos idiomas| Navegadores y tabletas modernos | Grados 2+"
+  hoc2018_mc_hero_title: "Minecraft: Viaje del héroe"
   hoc2018_mc_designer_title: "Diseñador de Minecraft"
   hoc2018_mc_designer_description: "Construye un juego de Minecraft. Crea tus propias versiones de las gallinas, ovejas, Creepers, zombis y más."
   hoc2018_mc_adventurer_title: "Aventurero de Minecraft"
@@ -1523,9 +1525,14 @@
   hoc2018_mc_video_title_hoc_is_here: "La Hora del Código ha llegado - Todo el mundo puede aprender"
   hoc2018_mc_video_title_anybody_can_learn: "Todo el mundo puede aprender"
   hoc2018_mc_video_title_my_name_is_aracely: "Mi nombre es Aracely"
-  hoc2018_mc_homepage_what_create: "¿Qué vas a crear?"
+  hoc2018_mc_homepage_what_create: "Ne olusturacaksin?"
   hoc2018_mc_homepage_join_us: "Únete"
   hoc2018_mc_homepage_try_it: "Pruébalo"
   hoc2018_mc_minecraft_education: "Educacion Minecraft"
   hoc2018_mc_continue_learning: "Continúe aprendiendo con minecraft."
   hoc2018_mc_go_to_mc_education: "Ir a Minecraft Education"
+  hoc2018_dance_party_button: "Inicio"
+  hoc2018_dance_teacher_resources_tile1_button: "Plan de clases"
+  hoc2018_dance_teacher_resources_tile2_button: "Actividad fuera de línea"
+  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "Aprende más"
+  hoc2018_dance_amazon_apply_now_button_text: "Aplícalo ahora"

@@ -687,6 +687,7 @@ sv:
       Crack a Caesar Cipher_2018: Instruktioner
       Food Fight!: "Vi har lagt till en sista funktion åt dig. \\r \\r Använd ett \"om-uttalande\" för att programmera ditt spel att anropa funktionen \"level_up\" först när \"player_score\" blir större än ett visst antal. \\r \\r T ex: \"player_score\" > 6\\r \\r Spela spelet, och spela förbi förbi nivå 4 för att komma till nästa pussel. "
       Function intro Ryan: Använd "bygg bro"-funktionen två gånger för att skapa en väg till facklan.
+      Function intro Ryan_2019: Använd "bygg bro"-funktionen två gånger för att skapa en väg till facklan.
       Infinity_catch: Kan du göra så att Elsa ("spelkaraktär 2") kommer till Anna genom att använda piltangenterna?
       Infinity_finale: Skapa vad du vill och dela det!
       Infinity_move_collide: Hiro är "spelkaraktär 1". Flytta honom direkt till Baymax och spela upp ett ljud när rör vid varandra.
@@ -839,25 +840,33 @@ sv:
       MC HOC 2016 Village Test: Åh nej! Zombies har fångat dig inomhus! Koda Iron Golem för att jaga och attackera zombies!
       MC_HOC_2017_01_Cole: Du måste samla på dig alla verktyg på den här resan. Styr med **piltangenterna** och gå till kistan på vägen för att vinna.
       MC_HOC_2017_01_RETRY: 'Ta agenten till tryckplattan, tryck sedan på "Kör" och använd piltangenterna för att styra spelaren ut ur huset och ta kistan. '
+      MC_HOC_2017_01_RETRY_2019: 'Ta agenten till tryckplattan, tryck sedan på "Kör" och använd piltangenterna för att styra spelaren ut ur huset och ta kistan. '
       MC_HOC_2017_02: Ta agenten till tryckplattan.
       MC_HOC_2017_02_Cole: 'Flytta agenten till tryckplattan så att {currentPlayerName} kan ta sig till kartan. '
+      MC_HOC_2017_02_Cole_2019: 'Flytta agenten till tryckplattan så att {currentPlayerName} kan ta sig till kartan. '
       MC_HOC_2017_02_Kiki: Ta agenten till tryckplattan, ta sedan spelaren till den orangefärgade rutan.
       MC_HOC_2017_02_Will: Ta agenten till tryckplattan.
       MC_HOC_2017_03_Cole: 'Koda agenten att öppna grinden. '
+      MC_HOC_2017_03_Cole_2019: 'Koda agenten att öppna grinden. '
       MC_HOC_2017_03_Kiki: Ta agenten till tryckplattan.
       MC_HOC_2017_04: Ändra loopen från det senaste pusslet för att hjälpa agenten skapa en väg över den bredare delen av den här floden.
       MC_HOC_2017_04POINT5_Cole: Ta agenten till tryckplattan.
       MC_HOC_2017_04POINT5_RYAN: Ta agenten till tryckplattan.
+      MC_HOC_2017_04POINT5_RYAN_2019: Ta agenten till tryckplattan.
       MC_HOC_2017_04_Cole: Ta agenten till tryckplattan.
+      MC_HOC_2017_04_Cole_2019: Ta agenten till tryckplattan.
       MC_HOC_2017_04_Kiki: Ta agenten till tryckplattan.
       MC_HOC_2017_05: Använd en funktion för att hjälpa agenten till tryckplattan.
       MC_HOC_2017_05_Cole: Ta spelaren till spaden.
+      MC_HOC_2017_05_Cole_2019: Ta spelaren till spaden.
       MC_HOC_2017_05_Josh: Ta spelaren till spaden.
       MC_HOC_2017_05_Kiki: Ta spelaren till den orangefärgade rutan.
       MC_HOC_2017_06_Cole: Fixa koden för att få agenten att bygga en bro över floden.
+      MC_HOC_2017_06_Cole_2019: Fixa koden för att få agenten att bygga en bro över floden.
       MC_HOC_2017_06_Josh: Fixa koden för att hjälpa agenten bygga en bro över floden.
       MC_HOC_2017_06_Kiki: Fixa koden för att hjälpa agenten bygga en bro över floden.
       MC_HOC_2017_07_Cole: Förstör isen och ta {currentPlayerName} till gruvvagnen.
+      MC_HOC_2017_07_Cole_2019: Förstör isen och ta {currentPlayerName} till gruvvagnen.
       MC_HOC_2017_07_Kiki: Använd en funktion för att rensa vägen till den orangefärgade rutan.
       MC_HOC_2017_07a_Kiki: Rensa vägen till den orangefärgade rutan.
       MC_HOC_2017_08_Cole: Ändra funktionen så att den fungerar i det här ekosystemet.
@@ -870,14 +879,17 @@ sv:
       MC_HOC_2017_10_Cole_old: Skapa en funktion som hjälper dig bygga gruvvagnen.
       MC_HOC_2017_10_Kiki: Skapa en funktion som hjälper dig bygga gruvvagnen.
       MC_HOC_2017_10_RETRY: Skapa en funktion som hjälper dig bygga gruvvagnen.
+      MC_HOC_2017_10_RETRY_2019: Skapa en funktion som hjälper dig bygga gruvvagnen.
       MC_HOC_2017_10_RYAN: Skapa en funktion som hjälper dig bygga gruvvagnen.
       MC_HOC_2017_10_RYAN2: Skapa en funktion som hjälper dig bygga gruvvagnen.
       MC_HOC_2017_13_Cole: "**Spela fritt:**  Dags att utforska på egen hand!"
       MC_HOC_2017_4.5v2: Ta agenten till tryckplattan.
       MC_HOC_2017_Ali: Använd funktionerna för att ta dig över lavan.
+      MC_HOC_2017_Ali_2019: Använd funktionerna för att ta dig över lavan.
       MC_HOC_2017_FP10x10: "**Spela fritt:** Klarar du av att samla alla diamanter på den här banan? "
       MC_HOC_2017_FP10x10_RE: "**Spela fritt:** Klarar du av att samla alla diamanter på den här banan? "
       MC_HOC_2017_FP20x20: "**Spela fritt:**  Dags att utforska på egen hand!"
+      MC_HOC_2017_FP20x20_2019: "**Spela fritt:**  Dags att utforska på egen hand!"
       MC_HOC_2017_Ryan_03: Använd loopar för att hjälpa agenten bygga en bro över floden genom att placera ut block i vattnet.
       MC_HOC_2017_Ryan_05: Förstör kaktusarna så att spelaren kan nå målet.
       MC_HOC_Kiki_02: Ta agenten till tryckplattan.
@@ -932,7 +944,7 @@ sv:
       NEW Course 4 Bee For Loops 5 5: Har du förstått "för loop"? Låt oss hjälpa biet att få resten av nektarn.
       NEW Course 4 Bee For Loops 5: Du kan också använda en "för loop" för att räkna ner. Försök samla denna nektar genom att räkna ner från 5 till 1, 1 i taget.
       NEW Course 4 Bee For Loops 6: Det sista numret i din slinga kallas "ökningen". Varje gång loopen körs, ändras 'räknar' -variabeln med värdet av ökningen. Försök samla dessa blommor genom att använda en ökning av 2.
-      NEW Course 4 Bee For Loops 7: |2
+      NEW Course 4 Bee For Loops 7: |-
         Låt oss nu kombinera variabeln "räknare" med ett matematik block! Hur kan du använda variabeln "räknare" för att navigerai denna trädgård med minsta möjliga antal block? Vad behöver du göra för att samla in 3, 6, 9, 12, 15 nektar denna gång? Hemligheten ligger i variabeln "räknare"! \r \r Kom ihåg: om din slinga räknar upp, läggs 'ökningen' till i 'räknar-
          variabeln varje gång.
       NEW Course 4 Bee For Loops 8: 'Du kan detta! Vad bör din ökning vara för att samla 3, 6, 9, 12, 15 nektar? \r Ledtråd: Vad behöver du lägga till varje nummer för att få numret efter det?'
@@ -1072,6 +1084,8 @@ sv:
         Huset behöver ett tak! Rita en triangel. Tips: alla tre sidor är lika långa.
       courseC_artist_prog5_2018: |-
         Huset behöver ett tak! Rita en triangel. Tips: alla tre sidor är lika långa.
+      courseC_artist_prog5_2019: |-
+        Huset behöver ett tak! Rita en triangel. Tips: alla tre sidor är lika långa.
       courseC_maze_debugging10: Felsök denna nivå genom att ordna om och lägga till block för att få mig till grisen!
       courseD_artist_binary1: Binärt är ett sätt att representera information med hjälp av endast två alternativ.  Här kommer vi att använda alternativen "av" (företrädd av siffran 0) och "på" (företrädd av nummer 1).  \r \r vi har försett dig med ett rutnät av "pixlar" som du kan gå igenom och göra mönster genom att aktivera bara vissa rutor.  Kan du få konstnären att rita "01010101" i binärt i första raden?
       courseD_artist_binary1_2018: Binärt är ett sätt att representera information med hjälp av endast två alternativ.  Här kommer vi att använda alternativen "av" (företrädd av siffran 0) och "på" (företrädd av nummer 1).  \r \r vi har försett dig med ett rutnät av "pixlar" som du kan gå igenom och göra mönster genom att aktivera bara vissa rutor.  Kan du få konstnären att rita "01010101" i binärt i första raden?
@@ -1090,6 +1104,7 @@ sv:
       courseD_bee_nestedLoops6_2018: Få mig till Solrosen!
       courseD_bee_nestedLoops8: 'Samla all nektar från varje blomma och gör honung vid varje bivaxkaka. Använd en nästlad loop. '
       courseD_bee_nestedLoops8_2018: 'Samla all nektar från varje blomma och gör honung vid varje bivaxkaka. Använd en nästlad loop. '
+      courseD_bee_nestedLoops8_2019: 'Samla all nektar från varje blomma och gör honung vid varje bivaxkaka. Använd en nästlad loop. '
       courseD_bounce_events10: Det finns ett nytt mål längst upp.Lägg till "poäng" och "poäng motståndare" blocken till  "när bollen i mål" och "när bollen missar paddel" blocken för att göra ett spel. Se hur många poäng du kan få innan dina motståndare får två poäng.
       courseD_bounce_events11: Nu kan du koppla block till  "när kör"block. Du måste lägga till det nya "starta ny boll" blocket på mer än ett ställe. Prova också att ändra scenen eller hastigheten på paddeln och bollen och se hur många poäng du kan få innan din motståndare får två poäng.
       courseD_bounce_events12: Skapa ditt eget Studsa Spel. Du kan ändra alla bilder och regler. När du är klar, klicka på Slutför för att låta dina vänner prova ditt spel på sina telefoner.
@@ -1104,8 +1119,10 @@ sv:
       courseD_debugging_3: Dessa block irriterar mig. Åtgärda felen för att samla all nektar och göra all honung.
       courseD_maze_nestedLoops4: 'Få mig till Solrosen!'
       courseD_maze_nestedLoops4_2018: 'Få mig till Solrosen!'
+      courseD_maze_nestedLoops4_2019: 'Få mig till Solrosen!'
       courseD_maze_nestedLoops6: Få mig till Solrosen!
       courseD_maze_nestedLoops6_2018: Få mig till Solrosen!
+      courseD_maze_nestedLoops6_2019: Få mig till Solrosen!
       courseE_artist_functions1: "Hej. Jag zombie-konstnär. Mig älskar teckning! Hjälp mig att rita de kvadratiska glasögonen. Tips: bron mellan glasen är 25 pixlar kortare än längden på kvadraten."
       courseE_artist_functions1_2018: "Hej. Jag zombie-konstnär. Mig älskar teckning! Hjälp mig att rita de kvadratiska glasögonen. Tips: bron mellan glasen är 25 pixlar kortare än längden på kvadraten."
       courseE_bee_concept1: Samla nektar från alla blommor. Använd en nästlad lopp. 
@@ -1119,14 +1136,19 @@ sv:
       courseE_farmer_concept4: Låt oss nu gå ytterligare en nivå djupare! Vi har nästlat hela kodblocket i en annan slinga men du behöver få konstnären tillbaka på plats för att rita nästa linje. Vilket av dessa kodblock kan du lägga i slutet av den yttersta loppen för att rita hela rutnätet?
       courseF_artist_for7: Gör tre små ändringar i koden från den sista nivån för att få den här!
       courseF_artist_for7_2018: Gör tre små ändringar i koden från den sista nivån för att få den här!
+      courseF_artist_for7_2019: Gör tre små ändringar i koden från den sista nivån för att få den här!
       courseF_artist_for_challenge1: Kan du lista ut hur du kan återskapa denna ritning?
       courseF_artist_for_challenge1_2018: Kan du lista ut hur du kan återskapa denna ritning?
+      courseF_artist_for_challenge1_2019: Kan du lista ut hur du kan återskapa denna ritning?
       courseF_artist_for_challenge2: Kan du lista ut hur du kan återskapa denna ritning med en enda slinga?
       courseF_artist_for_challenge2_2018: Kan du lista ut hur du kan återskapa denna ritning med en enda slinga?
+      courseF_artist_for_challenge2_2019: Kan du lista ut hur du kan återskapa denna ritning med en enda slinga?
       courseF_bee_for8: 'Du kan detta! Vad bör din ökning vara för att samla 3, 6, 9, 12, 15 nektar? \r Ledtråd: Vad behöver du lägga till varje nummer för att få numret efter det?'
       courseF_bee_for8_2018: 'Du kan detta! Vad bör din ökning vara för att samla 3, 6, 9, 12, 15 nektar? \r Ledtråd: Vad behöver du lägga till varje nummer för att få numret efter det?'
+      courseF_bee_for8_2019: 'Du kan detta! Vad bör din ökning vara för att samla 3, 6, 9, 12, 15 nektar? \r Ledtråd: Vad behöver du lägga till varje nummer för att få numret efter det?'
       courseF_bee_for_challenge2: Lösa detta pussel med minsta möjliga antal block.
       courseF_bee_for_challenge2_2018: Lösa detta pussel med minsta möjliga antal block.
+      courseF_bee_for_challenge2_2019: Lösa detta pussel med minsta möjliga antal block.
       courseF_bee_for_challenge3: Lösa detta pussel med minsta möjliga antal block.
       courseF_bee_functions4: Funktionen "flytta och få nektar" vänder biet, samlar nektar, och vänder sedan tillbaka biet till där det började. Använd funktionen för att samla all nektar.
       courseF_bee_functions4_2018: Funktionen "flytta och få nektar" vänder biet, samlar nektar, och vänder sedan tillbaka biet till där det började. Använd funktionen för att samla all nektar.

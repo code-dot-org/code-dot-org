@@ -89,19 +89,19 @@ def get_social_metadata_for_page(request)
         title: hoc_s(:social_hoc2018_hoc_coming_create),
         description: hoc_s(:social_hoc2018_creativity_in_are_you),
         image: images[:hoc_2018_creativity],
-        video: videos[:creativity_is]
+        video: videos[:hour_of_code_worldwide]
       },
       "actual-hoc" => {
         title: hoc_s(:social_hoc2018_hoc_here),
         description: hoc_s(:social_hoc2018_creativity_in_are_you),
         image: images[:hoc_2018_creativity],
-        video: videos[:creativity_is]
+        video: videos[:hour_of_code_worldwide]
       },
       "default" => {
         title: hoc_s(:social_hoc2018_join),
         description: hoc_s(:social_hoc2018_creativity_in_are_you),
         image: images[:hoc_2018_creativity],
-        video: videos[:creativity_is]
+        video: videos[:hour_of_code_worldwide]
       }
     },
     "challenge" => {

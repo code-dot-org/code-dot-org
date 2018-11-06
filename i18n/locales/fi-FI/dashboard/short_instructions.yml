@@ -450,6 +450,7 @@ fi:
       Crack a Caesar Cipher: Ohjeet
       Crack a Caesar Cipher_2018: Ohjeet
       Function intro Ryan: Luo polku soihdulle käyttämällä kahdesti toimintoa rakenna silta.
+      Function intro Ryan_2019: Luo polku soihdulle käyttämällä kahdesti toimintoa rakenna silta.
       Infinity_catch: Osaatko ohjata Elsan (hahmo 2) saamaan Annan kiinni kun painat nuolinäppäimiä?
       Infinity_finale: Luo mitä tahansa ja jaa se!
       Infinity_move_collide: Hiro on hahmo 1. Liikuta häntä oikealle kohti Baymaxia, ja soita ääni kun he koskettavat toisiaan.
@@ -485,25 +486,33 @@ fi:
       MC HOC 2016 Level 10: On aika tehdä oma Minecraft! Luo olentoja ja sitten pistä ne tekemään mitä vain haluat. Pidä hauskaa!
       MC_HOC_2017_01_Cole: Sinun on kerättävä kaikki työkalut tällä matkalla. Liiku käyttämällä **nuolinäppäimiä**. Voitat pääsemällä polulla olevalle arkulle.
       MC_HOC_2017_01_RETRY: 'Vie Agent painelaatalle, paina Suorita ja liikuta pelaaja nuolinäppäimillä ulos talosta keräämään arkku.'
+      MC_HOC_2017_01_RETRY_2019: 'Vie Agent painelaatalle, paina Suorita ja liikuta pelaaja nuolinäppäimillä ulos talosta keräämään arkku.'
       MC_HOC_2017_02: Vie Agent painelaatalle.
       MC_HOC_2017_02_Cole: 'Liikuta Agent painelaatalle, jotta {currentPlayerName} pääse kartan luo. '
+      MC_HOC_2017_02_Cole_2019: 'Liikuta Agent painelaatalle, jotta {currentPlayerName} pääse kartan luo. '
       MC_HOC_2017_02_Kiki: Vie Agent painelaatalle ja sitten pelaaja oranssiin ruutuun.
       MC_HOC_2017_02_Will: Vie Agent painelaatalle.
       MC_HOC_2017_03_Cole: 'Koodaa Agent avaamaan portti. '
+      MC_HOC_2017_03_Cole_2019: 'Koodaa Agent avaamaan portti. '
       MC_HOC_2017_03_Kiki: Vie Agent painelaatalle.
       MC_HOC_2017_04: Auta Agentia tekemään tie joen leveämmän osan yli muuttamalla edellisen tehtävän silmukkaa.
       MC_HOC_2017_04POINT5_Cole: Vie Agent painelaatalle.
       MC_HOC_2017_04POINT5_RYAN: Vie Agent painelaatalle.
+      MC_HOC_2017_04POINT5_RYAN_2019: Vie Agent painelaatalle.
       MC_HOC_2017_04_Cole: Vie Agent painelaatalle.
+      MC_HOC_2017_04_Cole_2019: Vie Agent painelaatalle.
       MC_HOC_2017_04_Kiki: Vie Agent painelaatalle.
       MC_HOC_2017_05: Auta Agentia pääsemään painelaatalle käyttämällä toimintoa.
       MC_HOC_2017_05_Cole: Vie pelaaja lapiolle.
+      MC_HOC_2017_05_Cole_2019: Vie pelaaja lapiolle.
       MC_HOC_2017_05_Josh: Vie pelaaja lapiolle.
       MC_HOC_2017_05_Kiki: Vie pelaaja oranssiin ruutuun.
       MC_HOC_2017_06_Cole: Korjaa tämä koodi siten, että Agent rakentaa sillan joen yli.
+      MC_HOC_2017_06_Cole_2019: Korjaa tämä koodi siten, että Agent rakentaa sillan joen yli.
       MC_HOC_2017_06_Josh: Korjaa tämä koodi auttaaksesi Agentia rakentamaan silta joen yli.
       MC_HOC_2017_06_Kiki: Korjaa tämä koodi auttaaksesi Agentia rakentamaan silta joen yli.
       MC_HOC_2017_07_Cole: Tuhoa jää ja vie {currentPlayerName} kaivosvaunulle.
+      MC_HOC_2017_07_Cole_2019: Tuhoa jää ja vie {currentPlayerName} kaivosvaunulle.
       MC_HOC_2017_07_Kiki: Raivaa polku oranssille ruudulle käyttämällä toimintoa.
       MC_HOC_2017_07a_Kiki: Muuta polkua oranssiin ruutuun.
       MC_HOC_2017_08_Cole: Muuta annettua toimintoa siten, että se toimii tässä biomissa.
@@ -516,14 +525,17 @@ fi:
       MC_HOC_2017_10_Cole_old: Luo toiminto avuksi kaivosvaunun loppuun rakentamiseen.
       MC_HOC_2017_10_Kiki: Luo toiminto avuksi kaivosvaunun loppuun rakentamiseen.
       MC_HOC_2017_10_RETRY: Luo toiminto avuksi kaivosvaunun loppuun rakentamiseen.
+      MC_HOC_2017_10_RETRY_2019: Luo toiminto avuksi kaivosvaunun loppuun rakentamiseen.
       MC_HOC_2017_10_RYAN: Luo toiminto avuksi kaivosvaunun loppuun rakentamiseen.
       MC_HOC_2017_10_RYAN2: Luo toiminto avuksi kaivosvaunun loppuun rakentamiseen.
       MC_HOC_2017_13_Cole: "**Vapaa peli:** Aika tehdä tutkimustyötä itsekseen!"
       MC_HOC_2017_4.5v2: Vie Agent painelaatalle.
       MC_HOC_2017_Ali: Käytä toimintoja löytääksesi tie laavan yli.
+      MC_HOC_2017_Ali_2019: Käytä toimintoja löytääksesi tie laavan yli.
       MC_HOC_2017_FP10x10: "**Vapaa peli:** Saatko haastettua itsesi keräämään kaikki tämän tason timantit? "
       MC_HOC_2017_FP10x10_RE: "**Vapaa peli:** Saatko haastettua itsesi keräämään kaikki tämän tason timantit? "
       MC_HOC_2017_FP20x20: "**Vapaa peli:** Aika tehdä tutkimustyötä itsekseen!"
+      MC_HOC_2017_FP20x20_2019: "**Vapaa peli:** Aika tehdä tutkimustyötä itsekseen!"
       MC_HOC_2017_Ryan_03: Käytä nyt silmukoita auttaaksesi Agentia rakentamaan silta joen yli asettamalla kuutioita veteen.
       MC_HOC_2017_Ryan_05: Tuhoa nämä kaktukset, jotta pelaaja pääsee maaliin.
       MC_HOC_Kiki_02: Vie Agent painelaatalle.
@@ -640,12 +652,15 @@ fi:
         Tämä talo tarvitsee katon. Piirrä kolmio. Vihje: kaikki kolme sivua ovat saman pituisia.
       courseC_artist_prog5_2018: |-
         Tämä talo tarvitsee katon. Piirrä kolmio. Vihje: kaikki kolme sivua ovat saman pituisia.
+      courseC_artist_prog5_2019: |-
+        Tämä talo tarvitsee katon. Piirrä kolmio. Vihje: kaikki kolme sivua ovat saman pituisia.
       courseD_bee_debugging3: Nämä lohkot todella häiritsevät minua. Korjaa virhe(et) kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi.
       courseD_bee_nestedLoops3: Kerää kaikki metsi jokaisesta kukasta. Käytä sisäistä silmukkaa. 
       courseD_bee_nestedLoops5: 'Kerää kaikki mesi kukista ja tee hunaja hunajakennoihin. Käytä sisäkkäistä silmukkaa. '
       courseD_bee_nestedLoops6_2018: Vie minut auringonkukan luo!
       courseD_bee_nestedLoops8: 'Kerää kaikki mesi kukista ja tee hunaja hunajakennoihin. Käytä sisäkkäistä silmukkaa. '
       courseD_bee_nestedLoops8_2018: 'Kerää kaikki mesi kukista ja tee hunaja hunajakennoihin. Käytä sisäkkäistä silmukkaa. '
+      courseD_bee_nestedLoops8_2019: 'Kerää kaikki mesi kukista ja tee hunaja hunajakennoihin. Käytä sisäkkäistä silmukkaa. '
       courseD_bounce_events10: Yläreunassa on nyt maali. Liitä "lisää piste" ja "lisää piste vastustajalle" lohkot "kun pallo osuu maaliin" ja "kun pallo ohittaa mailan" lohkoihin saadaksesi aikaan pelin. Kokeile, kuinka monta pistettä pystyt keräämään, ennen kuin vastustajasi saa kaksi pistettä.
       courseD_bounce_events11: Voit nyt lisätä lohkoja "suoritettaessa" lohkoon. Sinun tulee lisätä uusi "laukaise uusi pallo" lohko useampaan, kuin yhteen paikkaan. Kokeile myös vaihtaa taustaa ja sekä mailan, että pallon nopeutta ja katso kuinka monta pistettä pystyt keräämään ennen kuin vastustajasi saa kaksi pistettä.
       courseD_bounce_events12: Luo oma Bounce-pelisi. Voi muokata kaikkea ulkonäköön ja sääntöihin liittyvää. Kun olet valmis, napsauta Valmis ja voit jakaa pelisi niin, että kaverisikin voivat pelata sitä omilla älypuhelimillaan.
@@ -660,8 +675,10 @@ fi:
       courseD_debugging_3: Nämä lohkot todella häiritsevät minua. Korjaa virhe(et) kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi.
       courseD_maze_nestedLoops4: 'Vie minut auringonkukan luo!'
       courseD_maze_nestedLoops4_2018: 'Vie minut auringonkukan luo!'
+      courseD_maze_nestedLoops4_2019: 'Vie minut auringonkukan luo!'
       courseD_maze_nestedLoops6: Vie minut auringonkukan luo!
       courseD_maze_nestedLoops6_2018: Vie minut auringonkukan luo!
+      courseD_maze_nestedLoops6_2019: Vie minut auringonkukan luo!
       courseE_artist_functions1: "Moro! Mää zombie taitelija. Mää rakastaa piirtämistä!  Auta minua tekemään neliölasit. Vihje: lasien nenäkappale on 25 kuvapistettä lyhyempi kuin neliön pituus."
       courseE_artist_functions1_2018: "Moro! Mää zombie taitelija. Mää rakastaa piirtämistä!  Auta minua tekemään neliölasit. Vihje: lasien nenäkappale on 25 kuvapistettä lyhyempi kuin neliön pituus."
       courseE_bee_concept1: Kerää kaikki metsi jokaisesta kukasta. Käytä sisäistä silmukkaa. 

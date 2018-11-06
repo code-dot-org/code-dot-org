@@ -462,6 +462,13 @@ sl:
       Crack Random Substitution_2018: Navodila
       Crack a Caesar Cipher: Navodila
       Crack a Caesar Cipher_2018: Navodila
+      HOC 2018 Level_1: Vzemi čoln iz zaboja.
+      HOC 2018 Level_10: Pridi do vhoda v ta morski spomenik.
+      HOC 2018 Level_11: 'Izgradi strugo s pomočjo prismarina v sredini morskega spomenika.'
+      HOC 2018 Level_12: 'Izoblikuj si svoj podvodni svet, kakor želiš.'
+      HOC 2018 Level_3: 'Odveslaj na odprto morje proti ribi.'
+      HOC 2018 Level_6: Pojdi po ledu do lososa.
+      HOC 2018 Level_9b: 'Korale uporabi kot navigacijski točki, da prideš do zaklada.'
       Infinity_catch: "Ali lahko naredis tako, da bo Elsa (\"igralka 2\") dohitela\nAno, z uporabo tipk s puščicami?"
       Infinity_finale: Ustvari karkoli želiš in deli!
       Infinity_move_collide: "Hiro je \"igralec 1\". Premakni ga čisto do Baymaxa\nin dodaj zvok, ko se dotakneta."
@@ -722,12 +729,15 @@ sl:
         Ta hiša potrebuje streho! Nariši trikotnik. Namig: vse 3 strani so enako dolge.
       courseC_artist_prog5_2018: |-
         Ta hiša potrebuje streho! Nariši trikotnik. Namig: vse 3 strani so enako dolge.
+      courseC_artist_prog5_2019: |-
+        Ta hiša potrebuje streho! Nariši trikotnik. Namig: vse 3 strani so enako dolge.
       courseC_maze_debugging10: Razhrošči ta nivo s preurejanjem in spreminjanjem blokov, da pridem do prašička!
       courseD_bee_debugging3: Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
       courseD_bee_nestedLoops3: Pridobi ves nektar iz vsakega cveta. Uporabi ugnezdeno zanko.
       courseD_bee_nestedLoops5: 'Dobi ves nektar iz vsakega cveta in naredi med v satovju. Uporabi ugnezdeno zanko. '
       courseD_bee_nestedLoops8: 'Dobi ves nektar iz vsakega cveta in naredi med v satovju. Uporabi ugnezdeno zanko. '
       courseD_bee_nestedLoops8_2018: 'Dobi ves nektar iz vsakega cveta in naredi med v satovju. Uporabi ugnezdeno zanko. '
+      courseD_bee_nestedLoops8_2019: 'Dobi ves nektar iz vsakega cveta in naredi med v satovju. Uporabi ugnezdeno zanko. '
       courseD_bounce_events10: Zdaj je na vrhu gol. Dodaj bloke "dosežena točka" in "nasprotnik doseže točko" na bloka "ko je žoga v golu" in "ko žoga zgreši lopar", da narediš igro. Preizkusi, koliko točk lahko dosežeš, preden nasprotnik doseže dve točki.
       courseD_bounce_events11: Zdaj lahko dodaš bloke na blok "ob zagonu". Dodati moraš nov blok "izstreli novo žogo" na več kot enem mestu. Poleg tega poskusi spremeniti sceno ali hitrost loparja in žoge, da vidiš, koliko točk lahko dosežeš, preden tvoj nasprotnik doseže dve točki.
       courseD_bounce_events12: Ustvarite svojo igrico Skokica. Spremenite lahko videz in pravila. Ko končate, kliknite Končano, da lahko prijatelji preizkusijo igrico na svojih telefonih.
@@ -751,8 +761,10 @@ sl:
       courseE_farmer_concept4: Pojdimo za en nivo globlje! Celoten blok kode smo ugnezdili v novo zanko, ti pa moraš poskrbeti, da se umetnik postavi nazaj na pravo mesto, da nariše naslednjo črto. Katerega od teh blokov lahko umestiš na konec zunanje zanke, da narišeš celotno mrežo?
       courseF_artist_for7: Naredi tri majhne sprememb v kodi iz prejšnje naloge, da narišeš tole!
       courseF_artist_for7_2018: Naredi tri majhne sprememb v kodi iz prejšnje naloge, da narišeš tole!
+      courseF_artist_for7_2019: Naredi tri majhne sprememb v kodi iz prejšnje naloge, da narišeš tole!
       courseF_bee_for8: Obvladaš! Kakšen bi moral biti tvoj prirastek, da bi čebelica dobila 3, 6, 9, 12, 15 nektarjev?
       courseF_bee_for8_2018: Obvladaš! Kakšen bi moral biti tvoj prirastek, da bi čebelica dobila 3, 6, 9, 12, 15 nektarjev?
+      courseF_bee_for8_2019: Obvladaš! Kakšen bi moral biti tvoj prirastek, da bi čebelica dobila 3, 6, 9, 12, 15 nektarjev?
       flappy_1: Dodaj blok pod `ko kliknjen` blok ter pritisni "Zaženi". Klikni ali tapni na zaslon, da premakneš Flappya do cilja.
       flappy_11: Ustvarite svojo igrico o Plahutaču (Flappyju). Spremenite lahko videz in pravila. Ko končate, kliknite Končano, da lahko prijatelji preizkusijo igrico na svojih telefonih.
       flappy_11_2018: Ustvarite svojo igrico o Plahutaču (Flappyju). Spremenite lahko videz in pravila. Ko končate, kliknite Končano, da lahko prijatelji preizkusijo igrico na svojih telefonih.

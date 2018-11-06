@@ -409,7 +409,7 @@
   mc_gradelevel: "Alder 6-106"
   mc_platformtext: "Moderne nettlesarar, smarttelefonar, nettbrett"
   mc_specs: "Fleire språk | Moderne nettlesarar og nettbrett | Alder 6-106"
-  minecraft_agent: 'Minecraft: Heltens reise'
+  minecraft_agent: "Minecraft: Heltens reise"
   minecraft_designer: "Minecraft-designer"
   minecraft_adventurer: "Minecraft-eventyrar"
   minecraft_tutorials: "Rettleiingar for Kodetimen i Minecraft"
@@ -659,7 +659,7 @@
   dashboard_sections_table_stage_extras: "Tilleggsmateriale"
   dashboard_sections_table_students: "Elevar"
   dashboard_sections_table_code: "Seksjonskode"
-  dashboard_sections_name: "Namn på seksjonen"
+  dashboard_sections_name: 'Namn på seksjonen'
   dashboard_sections_choose_secret: "Dersom du ønsker å gi kontoar til elevane, Velg eit hemmeleg <b>ord</b> eller <b>bilde</b> for denne delen."
   dashboard_sections_secret_word: "Eit <b>ord</b> tillet deg å sette eit hemmeleg ord for kvar elev."
   dashboard_sections_secret_picture: "Eit <b>bilde</b> tillet deg å tilordna eit hemmeleg bilde for kvar student, ideelt for yngre elevar som enno ikkje kan skrive."
@@ -685,7 +685,7 @@
   dashboard_students_add_multiple: 'Skriv eller lim inn namna på elevane dine, ein per linje:'
   dashboard_students_new_google_classroom_section: "For å legge til elevar, bruk <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> og klikk deretter på <b>Synkronisér elevar fra Google Classroom</b>-knappen over."
   dashboard_students_new_section: "Du har laga ei ny seksjon! Legg til elevar ved å bruke knappane <b>Legg til elev</b> og <b>Legg til fleire elevar</b> ovenfor."
-  dashboard_students_name: "Namn"
+  dashboard_students_name: 'Namn'
   dashboard_students_progress: "Framgang"
   dashboard_students_male: "Mann"
   dashboard_students_female: "Kvinne"
@@ -1429,6 +1429,7 @@
   hoc2018_mc_page_title: "Rettleiingar for Kodetimen i Minecraft"
   hoc2018_mc_details: "Mange språk | Moderne nettlesarar og nettbrett | 2. klasse og oppover"
   hoc2018_mc_aquatic_description: "Minecraft er tilbake i Kodetimen med ein heilt ny aktivitet! Reis gjennom Minecraft med kode."
+  hoc2018_mc_hero_title: "Minecraft: Heltens reise"
   hoc2018_mc_hero_description: "Minecraft er tilbake i Kodetimen med ein heilt ny aktivitet! Reis gjennom Minecraft med kode."
   hoc2018_mc_designer_title: "Minecraft-designer"
   hoc2018_mc_designer_description: "Programmer dyr og andre Minecraft-vesen i din eigen versjon av Minecraft."
@@ -1459,3 +1460,8 @@
   hoc2018_mc_minecraft_education: "Minecraft Education"
   hoc2018_mc_continue_learning: "Hald fram med å lære med Minecraft."
   hoc2018_mc_go_to_mc_education: "Gå til Minecraft Education"
+  hoc2018_dance_party_button: "Start"
+  hoc2018_dance_teacher_resources_tile1_button: "Plan over oppgåver"
+  hoc2018_dance_teacher_resources_tile2_button: "Aktivitet utan datamaskinar"
+  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "Lær meir"
+  hoc2018_dance_amazon_apply_now_button_text: "Søk nå"

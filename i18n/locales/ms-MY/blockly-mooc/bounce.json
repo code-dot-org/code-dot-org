@@ -122,7 +122,7 @@
   "setTeam": "Tetapkan kumpulan {team}",
   "setTeamRandom": "Tetapkan kumpulan rawak",
   "shareBounceTwitter": "Lihat permainan Bounce yang saya buat.  Saya tulis sendiri dengan @codeorg",
-  "shareBounceTwitterDonor": "",
+  "shareBounceTwitterDonor": "Tengoklah permainan Bounce yang saya buat. (Terima kasih {donor} kerana menyokong @codeorg)",
   "shareGame": "Kongsi permainan anda:",
   "turnLeft": "belok kiri",
   "turnRight": "belok kanan",
