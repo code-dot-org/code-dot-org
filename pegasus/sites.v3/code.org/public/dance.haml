@@ -2,6 +2,11 @@
 %link{href: "/css/starwars.css", type: "text/css", rel: "stylesheet"}
 
 %h1= I18n.t(:hoc2018_dance_party_main_heading)
+%div.dance-text-icon-container
+  %a{href: "https://code.org/translate/dance"}
+    %div.dance-translate-link-text
+      =I18n.t(:hoc2018_dance_party_subheading)
+    %i.fa.fa-chevron-right.dance-chevron-icon
 =view :dance_tutorial_section
 
 %h1= I18n.t(:hoc2018_dance_teacher_resources_title)
