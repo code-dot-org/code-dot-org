@@ -1,5 +1,5 @@
 .resource-card {
-  height: 234px;
+  height: 300px;
   width: 468px;
   border: 1px solid gray;
   margin: 20px;
@@ -16,7 +16,7 @@
 
 .resource-text-box {
   width: 234px;
-  height: 234px;
+  height: 300px;
   background-color: #00adbc;
   position: absolute;
   float: left;
@@ -24,7 +24,7 @@
 }
 
 .resource-title {
-  font-size: 27px;
+  font-size: 20px;
   color: white;
   font-family: 'Gotham 7r', sans-serif;
   margin-bottom: 20px;
