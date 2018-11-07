@@ -142,6 +142,10 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     }
   end
 
+  def scholarship_status
+    object.try(:scholarship_status)
+  end
+
   def scholarship_dropdown_options
     options = []
     Pd::Teacher1920ApplicationConstants::SCHOLARSHIP_LABELS.each do |key, value|
