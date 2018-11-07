@@ -176,6 +176,12 @@ export class QuickViewTable extends React.Component {
           transforms: [sortable]
         }
       }, {
+        property: 'friendly_scholarship_status',
+        header: {
+          label: 'Scholarship Teacher?',
+          transforms: [sortable]
+        }
+      }, {
         property: 'total_score',
         header: {
           label: 'Bonus Points',
