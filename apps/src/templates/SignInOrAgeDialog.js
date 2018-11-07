@@ -101,7 +101,11 @@ class SignInOrAgeDialog extends Component {
     }
 
     //Sets cookie to true when anon user is 13+. False otherwise.
-    sessionStorage.setItem(sessionStorageKey, parseInt(value, 10) >= 13);
+    let over13 = parseInt(value, 10) >= 13;
+    sessionStorage.setItem(sessionStorageKey, over13);
+    if (over13) {
+      reload();
+    }
 
     // When opening a new tab, we'll have a new session (and thus show this dialog),
     // but may still be using a storage_id for a previous user. Clear that cookie
