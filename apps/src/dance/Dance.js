@@ -562,7 +562,6 @@ Dance.prototype.updateSongMetadata = function (id) {
 Dance.prototype.onHandleEvents = function (currentFrameEvents) {
   this.hooks.find(v => v.name === 'runUserEvents').func(currentFrameEvents);
   this.tickCount += 1;
-  // TODO: doesn't fire on every draw?
   this.captureThumbnailImage();
 };
 
