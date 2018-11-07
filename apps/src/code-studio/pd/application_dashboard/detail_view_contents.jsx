@@ -877,15 +877,17 @@ export class DetailViewContents extends React.Component {
           </td>
           {this.renderScoringSection('regionalPartnerName')}
         </tr>
-        <tr>
-          <td style={styles.questionColumn}>
-            Scholarship Teacher?
-          </td>
-          <td style={styles.answerColumn}>
-            {this.renderScholarshipStatusAnswer()}
-          </td>
-          <td style={styles.scoringColumn}/>
-        </tr>
+        {this.props.applicationData.application_type === 'Teacher' &&
+          <tr>
+            <td style={styles.questionColumn}>
+              Scholarship Teacher?
+            </td>
+            <td style={styles.answerColumn}>
+              {this.renderScholarshipStatusAnswer()}
+            </td>
+            <td style={styles.scoringColumn}/>
+          </tr>
+        }
         </tbody>
       </Table>
     );
