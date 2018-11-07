@@ -72,25 +72,6 @@ export function captureThumbnailFromSvg(svg) {
 
 /**
  * Copies the image from the canvas, shrinks it to a width equal to
- * THUMBNAIL_WIDTH preserving aspect ratio, and saves it to the server.
- * @param {HTMLCanvasElement} canvas
- */
-export function captureThumbnailFromCanvas(canvas) {
-  if (!canvas) {
-    console.warn(`Thumbnail capture failed: canvas element not found.`);
-    return;
-  }
-  if (!shouldCapture()) {
-    return;
-  }
-  lastCaptureTimeMs = Date.now();
-
-  const thumbnailCanvas = createThumbnail(canvas);
-  canvasToBlob(thumbnailCanvas).then(project.saveThumbnail);
-}
-
-/**
- * Copies the image from the canvas, shrinks it to a width equal to
  * THUMBNAIL_WIDTH preserving aspect ratio, and returns the thumbnail blob
  * to a callback method.
  * @param {HTMLCanvasElement} canvas
@@ -100,9 +81,11 @@ export function getThumbnailFromCanvas(canvas, onComplete) {
   if (!canvas) {
     console.warn(`Thumbnail capture failed: canvas element not found.`);
     onComplete(null);
+    return;
   }
   if (!shouldCapture()) {
     onComplete(null);
+    return;
   }
   lastCaptureTimeMs = Date.now();
 
@@ -111,11 +94,22 @@ export function getThumbnailFromCanvas(canvas, onComplete) {
 }
 
 /**
- * Sets a PNG blob as the thumbnail on the current project.
- * @param {Blob} pngBlob A Blob in PNG format containing the thumbnail image.
+ * Copies the image from the canvas, shrinks it to a width equal to
+ * THUMBNAIL_WIDTH preserving aspect ratio, and saves it to the server.
+ * @param {HTMLCanvasElement} canvas
  */
-export function setProjectThumbnail(pngBlob) {
-  project.setThumbnailPngBlob(pngBlob);
+export function captureThumbnailFromCanvas(canvas) {
+  getThumbnailFromCanvas(canvas, project.saveThumbnail);
+}
+
+/**
+ * Copies the image from the canvas, shrinks it to a width equal to
+ * THUMBNAIL_WIDTH preserving aspect ratio, and saves it in memory.
+ * When the project is saved, the thumbnail will be saved as well.
+ * @param {HTMLCanvasElement} canvas
+ */
+export function setThumbnailBlobFromCanvas(canvas) {
+  getThumbnailFromCanvas(canvas, project.setThumbnailPngBlob);
 }
 
 /**
