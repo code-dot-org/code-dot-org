@@ -33,7 +33,7 @@ export const SongTitlesToArtistTwitterHandle = {
   "wecantstop_mileycyrus" : "MileyCyrus",
   "wenospeakamericano_yolandabecool" : "YolandaBeCool",
   "ymca_villagepeople" : "VillagePeople",
-  // These are the tracks available locally, Twitter handles are fake.
-  "jazzy_beats" : "JazzyBeats",
-  "synthesize" : "StevieSynth"
+  // These are the tracks available locally tweet @codeorg to avoid spamming anyone.
+  "jazzy_beats" : "codeorg",
+  "synthesize" : "codeorg"
 };
