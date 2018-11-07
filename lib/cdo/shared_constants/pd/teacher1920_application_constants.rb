@@ -453,5 +453,11 @@ module Pd
         :student_tr_count
       ]
     }
+
+    SCHOLARSHIP_LABELS = {
+      no: "No",
+      yes_code_dot_org: "Yes, Code.org scholarship",
+      yes_other: "Yes, other scholarship"
+    }
   end
 end

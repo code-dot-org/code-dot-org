@@ -129,6 +129,10 @@ export class DetailViewContents extends React.Component {
       attending_teachercon: PropTypes.bool,
       school_stats: PropTypes.object,
       scholarship_status: PropTypes.string,
+      scholarship_dropdown_options: PropTypes.arrayOf(PropTypes.shape({
+        label: PropTypes.string,
+        value: PropTypes.string
+      })),
       principal_approval_state: PropTypes.string
     }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
@@ -387,16 +391,17 @@ export class DetailViewContents extends React.Component {
         <Select
           value={this.state.scholarship_status}
           onChange={this.handleScholarshipStatusChange}
-          options={[
-            {label: "No", value:"no"},
-            {label: "Yes, Code.org scholarship", value: "yes_code_dot_org"},
-            {label: "Yes, other scholarship", value: "yes_other"}
-          ]}
+          options={this.props.applicationData.scholarship_dropdown_options}
         />
       </FormGroup>
       );
     }
-    return this.state.scholarship_status;
+
+    return (
+      this.props.applicationData.scholarship_dropdown_options.find((option)=>{
+        return option.value === this.state.scholarship_status;
+      }).label
+    );
   };
 
   renderEditButtons = () => {
