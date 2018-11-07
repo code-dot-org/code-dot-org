@@ -10,6 +10,7 @@ import SendToPhone from './SendToPhone';
 import color from "../../util/color";
 import * as applabConstants from '../../applab/constants';
 import * as gamelabConstants from '../../gamelab/constants';
+import { SongTitlesToArtistTwitterHandle } from '../dancePartySongArtistTags';
 import { hideShareDialog, unpublishProject } from './shareDialogRedux';
 import { showPublishDialog } from '../../templates/projects/publishDialog/publishDialogRedux';
 import PublishDialog from '../../templates/projects/publishDialog/PublishDialog';
@@ -142,6 +143,8 @@ class ShareAllowedDialog extends React.Component {
     }).isRequired,
     icon: PropTypes.string,
     shareUrl: PropTypes.string.isRequired,
+    // Only applicable to Dance Party projects, used to Tweet at song artist.
+    selectedSong: PropTypes.string,
     thumbnailUrl: PropTypes.string,
     isAbusive: PropTypes.bool.isRequired,
     isOpen: PropTypes.bool.isRequired,
@@ -257,6 +260,8 @@ class ShareAllowedDialog extends React.Component {
       modalClass += ' no-modal-icon';
     }
 
+    const artistTwitterHandle = SongTitlesToArtistTwitterHandle[this.props.selectedSong];
+
     const hasThumbnail = !!this.props.thumbnailUrl;
     const thumbnailUrl = hasThumbnail ?
       this.props.thumbnailUrl :
@@ -264,10 +269,18 @@ class ShareAllowedDialog extends React.Component {
 
     const facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
                            encodeURIComponent(this.props.shareUrl);
-    const twitterShareUrl = "https://twitter.com/intent/tweet?url=" +
+    const twitterShareUrlDefault = "https://twitter.com/intent/tweet?url=" +
                           encodeURIComponent(this.props.shareUrl) +
                           "&amp;text=Check%20out%20what%20I%20made%20@codeorg" +
                           "&amp;hashtags=HourOfCode&amp;related=codeorg";
+    // Check out the dance I made featuring @artist on @codeorg! URL #HourOfCode
+    const twitterShareUrlDance = "https://twitter.com/intent/tweet?url=" +
+                          "&amp;text=Check%20out%20the%20dance%20I%20made%20featuring%20@" + artistTwitterHandle + "%20on%20@codeorg!%20" +
+                          encodeURIComponent(this.props.shareUrl) +
+                          "&amp;hashtags=HourOfCode&amp;related=codeorg";
+
+    const twitterShareUrl = artistTwitterHandle ?
+      twitterShareUrlDance : twitterShareUrlDefault;
 
     const showShareWarning = (
       !this.props.canShareSocial &&
