@@ -111,7 +111,8 @@ export function getThumbnailFromCanvas(canvas, onComplete) {
 }
 
 /**
- * TODO: (madelynkasula) add description
+ * Sets a PNG blob as the thumbnail on the current project.
+ * @param {Blob} pngBlob A Blob in PNG format containing the thumbnail image.
  */
 export function setProjectThumbnail(pngBlob) {
   project.setThumbnailPngBlob(pngBlob);

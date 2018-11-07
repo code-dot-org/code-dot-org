@@ -794,9 +794,9 @@ var projects = module.exports = {
     if (preparingRemix) {
       return this.sourceHandler.prepareForRemix().then(completeAsyncSave);
     } else if (thumbnailPngBlob) {
-      // Call completeAsyncSave even if thumbnail save fails.
       const blob = thumbnailPngBlob;
       thumbnailPngBlob = null;
+      // Call completeAsyncSave even if thumbnail save fails.
       return this.saveThumbnail(blob).then(completeAsyncSave, completeAsyncSave);
     } else {
       return completeAsyncSave();
@@ -1274,7 +1274,9 @@ var projects = module.exports = {
   },
 
   /**
-   * TODO: add description
+   * Sets the thumbnailPngBlob variable. Caveat: This does not save the thumbnail to the current project.
+   * Use the saveThumbnail method to do that.
+   * @param {Blob} pngBlob A Blob in PNG format containing the thumbnail image.
    */
   setThumbnailPngBlob(pngBlob) {
     thumbnailPngBlob = pngBlob;
