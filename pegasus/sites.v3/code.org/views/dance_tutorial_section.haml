@@ -1,3 +1,5 @@
+- hide_dance_extra_button = DCDO.get('dance_extra_hoc', nil)
+
 %div{style: "clear:both"}
 .starwars-container
   .img-container.dance-img-placeholder
@@ -10,10 +12,11 @@
       %a{:href => '/api/hour/begin/dance', :target=>'_self'}
         %button.sw-try-button= I18n.t(:hoc2018_dance_party_button)
   .col-25.starwars-tutorial.starwars-js-tutorial
-    .tutorial-box
+    .tutorial-box{style: "height: 224px;"}
       %h2.sw-h2.dance-party-h2= I18n.t(:hoc2018_dance_keep_on_dancing_box_title)
       .sw-tutorial-info
         %p.sw-tutorial-description= I18n.t(:hoc2018_dance_keep_on_dancing_description)
-      %a{:href => '/api/hour/begin/dance-extras', :target=>'_self'}
-        %button.sw-try-button= I18n.t(:hoc2018_dance_keep_on_dancing_button)
+      - unless hide_dance_extra_button
+        %a{:href => '/api/hour/begin/dance-extras', :target=>'_self'}
+          %button.sw-try-button= I18n.t(:hoc2018_dance_keep_on_dancing_button)
 %div{style: "clear:both"}
