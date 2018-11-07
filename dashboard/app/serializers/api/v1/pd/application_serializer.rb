@@ -32,8 +32,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :principal_approval_state,
     :meets_scholarship_criteria,
     :school_stats,
-    :scholarship_status,
-    :scholarship_dropdown_options
+    :scholarship_status
   )
 
   def email
@@ -144,9 +143,5 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
   def scholarship_status
     object.try(:scholarship_status)
-  end
-
-  def scholarship_dropdown_options
-    Pd::Teacher1920ApplicationConstants::SCHOLARSHIP_DROPDOWN_OPTIONS
   end
 end

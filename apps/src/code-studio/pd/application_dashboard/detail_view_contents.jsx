@@ -27,7 +27,8 @@ import {
   SectionHeaders,
   ScoreableQuestions,
   MultiAnswerQuestionFields,
-  ValidScores as TeacherValidScores
+  ValidScores as TeacherValidScores,
+  ScholarshipDropdownOptions
 } from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import _ from 'lodash';
 import {
@@ -129,10 +130,6 @@ export class DetailViewContents extends React.Component {
       attending_teachercon: PropTypes.bool,
       school_stats: PropTypes.object,
       scholarship_status: PropTypes.string,
-      scholarship_dropdown_options: PropTypes.arrayOf(PropTypes.shape({
-        label: PropTypes.string,
-        value: PropTypes.string
-      })),
       principal_approval_state: PropTypes.string
     }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
@@ -391,22 +388,18 @@ export class DetailViewContents extends React.Component {
           <Select
             value={this.state.scholarship_status}
             onChange={this.handleScholarshipStatusChange}
-            options={this.props.applicationData.scholarship_dropdown_options}
+            options={ScholarshipDropdownOptions}
           />
         </FormGroup>
       );
     }
 
-    if (this.props.applicationData.scholarship_dropdown_options) {
-      const option = this.props.applicationData.scholarship_dropdown_options.find((option)=>{
-        return option.value === this.state.scholarship_status;
-      });
-      if (option) {
-        return option.label;
-      }
+    const option = ScholarshipDropdownOptions.find((option) => {
+      return option.value === this.state.scholarship_status;
+    });
+    if (option) {
+      return option.label;
     }
-
-    return this.state.scholarship_status;
   };
 
   renderEditButtons = () => {
