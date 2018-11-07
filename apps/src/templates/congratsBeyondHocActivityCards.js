@@ -98,20 +98,20 @@ const AquaticMinecraft = {
   buttonText: i18n.minecraftAquaticButton(),
 };
 
-const MinecraftMarketing = {
-  title: i18n.minecraftMarketingTitle(),
-  description: i18n.minecraftMarketingDesc(),
-  link: pegasus('/minecraft'),
-  image: "minecraft-marketing",
-  buttonText: i18n.minecraftMarketingButton(),
+const DanceParty = {
+  title: i18n.dancePartyTitle(),
+  description: i18n.dancePartyDesc(),
+  link: "/s/dance",
+  image: "dance-party",
+  buttonText: i18n.dancePartyButton(),
 };
 
 const DancePartyFollowUp = {
-  title: i18n.dancePartyTitle(),
-  description: i18n.dancePartyDesc(),
+  title: i18n.danceAfterPartyTitle(),
+  description: i18n.danceAfterPartyDesc(),
   link: "/s/dance-extras",
   image: "dance-party",
-  buttonText: i18n.dancePartyButton(),
+  buttonText: i18n.danceAfterPartyButton(),
 };
 
 export const cardSets = {
@@ -177,7 +177,7 @@ export const cardSets = {
   ],
   'youngerThan13DefaultCards' : [
     CSFExpress,
-    MinecraftMarketing,
+    DanceParty,
     AnotherHoC
   ],
   'signedInNonEnglishDefaultCards' : [
