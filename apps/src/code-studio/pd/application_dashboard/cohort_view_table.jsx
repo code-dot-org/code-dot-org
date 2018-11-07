@@ -137,6 +137,16 @@ export class CohortViewTable extends React.Component {
       }
     ];
 
+    if (this.props.viewType === 'teacher') {
+      columns.push({
+        property: 'friendly_scholarship_status',
+        header: {
+          label: 'Scholarship Teacher?',
+          transforms: [sortable]
+        }
+      });
+    }
+
     if (this.showLocked()) {
       columns.push({
         property: 'locked',
