@@ -495,7 +495,8 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
-            status: 'accepted_not_notified'
+            status: 'accepted_not_notified',
+            friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
@@ -531,7 +532,8 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: nil,
             registered_workshop: nil,
-            status: 'accepted_not_notified'
+            status: 'accepted_not_notified',
+            friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
@@ -589,7 +591,8 @@ module Api::V1::Pd
           course: 'csp',
           regional_partner: @regional_partner,
           user: @serializing_teacher,
-          pd_workshop_id: workshop.id
+          pd_workshop_id: workshop.id,
+          scholarship_status: 'no'
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
@@ -611,7 +614,8 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
-            status: 'accepted_not_notified'
+            status: 'accepted_not_notified',
+            friendly_scholarship_status: 'No'
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
@@ -646,7 +650,8 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: nil,
             registered_workshop: nil,
-            status: 'accepted_not_notified'
+            status: 'accepted_not_notified',
+            friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
