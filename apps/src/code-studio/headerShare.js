@@ -47,7 +47,7 @@ export function shareProject(shareUrl) {
           isProjectLevel={!!dashboard.project.isProjectLevel()}
           i18n={i18n}
           shareUrl={shareUrl}
-          artistTag="Beyonce"
+          selectedSong={selectedSong}
           thumbnailUrl={dashboard.project.getThumbnailUrl()}
           isAbusive={dashboard.project.exceedsAbuseThreshold()}
           canPrint={appType === "artist"}
