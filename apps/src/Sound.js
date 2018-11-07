@@ -15,7 +15,15 @@ function isIE9() {
 
 /**
  * Initialize an individual sound
- * @param config available sound files for this audio
+ * @param {Object} config available sound files for this audio
+ * @property {boolean} allowHTML5Mobile
+ * @property {boolean} playAfterLoad
+ * @property {boolean} forceHTML5
+ * @property {Object} playAfterLoadOptions
+ * @property {string} mp3
+ * @property {string} ogg
+ * @property {string} wav
+ * @property {function} onPreloadError
  * @param audioContext context this sound can be played on, or null if none
  * @constructor
  */
@@ -340,10 +348,16 @@ Sound.prototype.preloadViaWebAudio = function (filename, onPreloadedCallback) {
   request.responseType = 'arraybuffer';
   var self = this;
   request.onload = function () {
-    self.audioContext.decodeAudioData(request.response, function (buffer) {
-      onPreloadedCallback(buffer);
-      self.onSoundLoaded();
-    });
+    if (request.status === 200) {
+      self.audioContext.decodeAudioData(request.response, function (buffer) {
+        onPreloadedCallback(buffer);
+        self.onSoundLoaded();
+      });
+    } else {
+      const {onPreloadError} = self.config;
+      onPreloadError && onPreloadError(request.status);
+    }
+
   };
   request.send();
 };

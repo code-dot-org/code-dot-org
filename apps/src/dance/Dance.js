@@ -25,6 +25,7 @@ import {
   loadSongMetadata,
   parseSongOptions,
   unloadSong,
+  fetchSignedCookies,
 } from './songs';
 
 const ButtonState = {
@@ -159,7 +160,12 @@ Dance.prototype.setSongCallback = function (songId) {
   getStore().dispatch(setSelectedSong(songId));
 
   unloadSong(lastSongId, songData);
-  loadSong(songId, songData);
+  loadSong(songId, songData, status => {
+    if (status === 403) {
+      // The cloudfront signed cookies may have expired.
+      fetchSignedCookies().then(() => loadSong(songId, songData));
+    }
+  });
 
   this.updateSongMetadata(songId);
 
