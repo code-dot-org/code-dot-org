@@ -995,6 +995,18 @@ module Pd::Application
       end
     end
 
+    test 'test scholarship statuses' do
+      application = create :pd_teacher1920_application
+      assert_nil application.scholarship_status
+
+      application.scholarship_status = 'no'
+      application.save
+      assert_equal 'no', application.scholarship_status
+
+      application.scholarship_status = 'invalid status'
+      refute application.save
+    end
+
     private
 
     def assert_status_log(expected, application)
