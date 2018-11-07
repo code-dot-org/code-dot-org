@@ -396,11 +396,14 @@ Dance.prototype.runButtonClick = async function () {
 
   Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;
-  await this.execute();
 
-  this.studioApp_.toggleRunReset('reset');
-  // Safe to allow normal run/reset behavior now
-  this.runIsStarting = false;
+  try {
+    await this.execute();
+  } finally {
+    this.studioApp_.toggleRunReset('reset');
+    // Safe to allow normal run/reset behavior now
+    this.runIsStarting = false;
+  }
 
   // Enable the Finish button if is present:
   const shareCell = document.getElementById('share-cell');
@@ -437,9 +440,9 @@ Dance.prototype.execute = async function () {
   await this.initSongsPromise;
 
   const songMetadata = await this.songMetadataPromise;
-  return new Promise(resolve => {
-    this.nativeAPI.play(songMetadata, () => {
-      resolve();
+  return new Promise((resolve, reject)=> {
+    this.nativeAPI.play(songMetadata, success => {
+      success ? resolve() : reject();
     });
   });
 };
