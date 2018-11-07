@@ -32,7 +32,8 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :principal_approval_state,
     :meets_scholarship_criteria,
     :school_stats,
-    :scholarship_status
+    :scholarship_status,
+    :scholarship_dropdown_options
   )
 
   def email
@@ -139,5 +140,13 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
       white_percent: percent_string(stats.student_wh_count, stats.students_total),
       two_or_more_races_percent: percent_string(stats.student_tr_count, stats.students_total)
     }
+  end
+
+  def scholarship_dropdown_options
+    options = []
+    Pd::Teacher1920ApplicationConstants::SCHOLARSHIP_LABELS.each do |key, value|
+      options.push({value: key, label: value})
+    end
+    options
   end
 end
