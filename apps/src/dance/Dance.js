@@ -16,7 +16,7 @@ import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
-import {getThumbnailFromCanvas} from '../util/thumbnail';
+import {getThumbnailFromCanvas, setProjectThumbnail} from '../util/thumbnail';
 import SignInOrAgeDialog from "../templates/SignInOrAgeDialog";
 import project from "../code-studio/initApp/project";
 import {
@@ -601,11 +601,7 @@ Dance.prototype.captureThumbnailImage = function () {
     return;
   }
 
-  // Overwrite thumbnailBlob if we receive a blob from getThumbnailFromCanvas
-  const onComplete = (pngBlob) => {
-    if (pngBlob) {
-      this.thumbnailBlob = pngBlob;
-    }
-  };
+  // Set thumbnail on project after receiving from getThumbnailFromCanvas
+  const onComplete = (pngBlob) => setProjectThumbnail(pngBlob);
   getThumbnailFromCanvas(document.getElementById('defaultCanvas0'), onComplete);
 };

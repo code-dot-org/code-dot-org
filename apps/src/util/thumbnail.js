@@ -111,6 +111,13 @@ export function getThumbnailFromCanvas(canvas, onComplete) {
 }
 
 /**
+ * TODO: (madelynkasula) add description
+ */
+export function setProjectThumbnail(pngBlob) {
+  project.setThumbnailPngBlob(pngBlob);
+}
+
+/**
  * @type {boolean} Whether a screenshot capture is pending.
  * Used only by captureThumbnailFromElement.
  */

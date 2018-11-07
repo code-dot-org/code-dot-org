@@ -87,6 +87,7 @@ var isEditing = false;
 let initialSaveComplete = false;
 let initialCaptureComplete = false;
 let thumbnailChanged = false;
+let thumbnailPngBlob = null;
 
 /**
  * Current state of our sources API data
@@ -792,6 +793,11 @@ var projects = module.exports = {
 
     if (preparingRemix) {
       return this.sourceHandler.prepareForRemix().then(completeAsyncSave);
+    } else if (thumbnailPngBlob) {
+      // Call completeAsyncSave even if thumbnail save fails.
+      const blob = thumbnailPngBlob;
+      thumbnailPngBlob = null;
+      return this.saveThumbnail(blob).then(completeAsyncSave, completeAsyncSave);
     } else {
       return completeAsyncSave();
     }
@@ -1265,6 +1271,13 @@ var projects = module.exports = {
    */
   getThumbnailUrl() {
     return current && current.thumbnailUrl;
+  },
+
+  /**
+   * TODO: add description
+   */
+  setThumbnailPngBlob(pngBlob) {
+    thumbnailPngBlob = pngBlob;
   },
 
   /**
