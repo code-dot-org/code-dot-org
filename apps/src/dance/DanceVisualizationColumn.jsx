@@ -37,7 +37,9 @@ const SongSelector = Radium(class extends React.Component {
         <label><b>{i18n.selectSong()}</b></label>
         <select id="song_selector" style={styles.selectStyle} onChange={this.changeSong} value={this.props.selectedSong}>
           {Object.keys(this.props.songData).map((option, i) => (
-            <option key={i} value={option}>{this.props.songData[option].title}</option>
+            ((this.props.songData[option].pg13 && !this.props.filterOff) || !this.props.songData[option].pg13) &&
+              <option key={i} value={option}>{this.props.songData[option].title}</option>
+
           ))}
         </select>
       </div>
