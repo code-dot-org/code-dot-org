@@ -354,7 +354,9 @@ module Pd::Application
     end
 
     def friendly_scholarship_status
-      SCHOLARSHIP_LABELS[scholarship_status&.to_sym]
+      if scholarship_status
+        SCHOLARSHIP_DROPDOWN_OPTIONS.find {|option| option[:value] == scholarship_status}[:label]
+      end
     end
 
     # memoize in a hash, per course
