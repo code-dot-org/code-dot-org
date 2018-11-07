@@ -461,5 +461,7 @@ module Pd
       yes_code_dot_org: "Yes, Code.org scholarship",
       yes_other: "Yes, other scholarship"
     }
+
+    SCHOLARSHIP_DROPDOWN_OPTIONS = SCHOLARSHIP_LABELS.map {|key, value| {value: key, label: value}}
   end
 end
