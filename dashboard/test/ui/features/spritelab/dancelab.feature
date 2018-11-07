@@ -13,6 +13,7 @@ Feature: Dance Lab
     And I am on "http://studio.code.org/restricted/placeholder.txt"
     Then page text does contain "placeholder for testing"
 
+  @no_mobile
   Scenario: Can toggle run/reset in DanceLab
     Given I am on "http://studio.code.org/s/allthethings/stage/37/puzzle/1?noautoplay=true"
     And I rotate to landscape
@@ -29,6 +30,7 @@ Feature: Dance Lab
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
 
+  @no_mobile
   Scenario: Can get to level success in DanceLab
     Given I am on "http://studio.code.org/s/allthethings/stage/37/puzzle/1?noautoplay=true"
     And I rotate to landscape
@@ -42,6 +44,7 @@ Feature: Dance Lab
     And I wait until element ".congrats" is visible
 
   @as_student
+  @no_mobile
   Scenario: Dance Party Share
     Given I am on "http://studio.code.org/s/dance/stage/1/puzzle/13?noautoplay=true"
     And I rotate to landscape
