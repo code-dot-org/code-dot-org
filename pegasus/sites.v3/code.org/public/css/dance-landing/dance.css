@@ -25,3 +25,15 @@
   font-weight: bold;
   margin-left: 5px;
 }
+
+.dance_thumbnail-tile-img {
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 348px;
+  width: 465px;
+}
+
+.dance_thumbnail-tile-subtitle {
+  margin-top: 3px;
+  margin-left: 494px;
+}
