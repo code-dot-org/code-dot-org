@@ -706,6 +706,7 @@ module Api::V1::Pd
         "Status",
         "Meets minimum requirements?",
         "Meets scholarship requirements?",
+        "Scholarship teacher?",
         "Bonus Points",
         "Notes",
         "Title",
