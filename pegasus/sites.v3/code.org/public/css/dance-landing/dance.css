@@ -37,3 +37,7 @@
   margin-top: 3px;
   margin-left: 494px;
 }
+
+.dance-clear-element {
+  clear: both;
+}

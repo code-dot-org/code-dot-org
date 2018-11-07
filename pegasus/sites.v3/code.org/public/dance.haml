@@ -18,13 +18,13 @@
 =view :student_dance_projects
 
 %h2= I18n.t(:hoc2018_dance_videos_section_heading)
-.starwars-videos{style: "clear: both;"}
+.starwars-videos.dance-clear-element
   =view :dance_creativity_video
   %a{href: "https://www.youtube.com/playlist?list=PLzdnOPI1iJNcXMS80NRhQd0NA3po1swJf"}
     %img.dance_thumbnail-tile-img{src:"/images/creativity_playlist_thumbnail.png"}
-%h6.dance_thumbnail-tile-subtitle= I18n.t(:hoc2018_dance_view_creativity_video_playlist)
+%h5.dance_thumbnail-tile-subtitle= I18n.t(:hoc2018_dance_view_creativity_video_playlist)
 
-.starwars-videos{style: "clear: both;"}
+.starwars-videos.dance-clear-element
   =view :dance_videos
 
 %h1= I18n.t(:hoc2018_dance_amazon_learn_more_future_engineer_subheading_title)
