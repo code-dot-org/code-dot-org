@@ -388,12 +388,12 @@ export class DetailViewContents extends React.Component {
     if (this.state.editing && this.props.isWorkshopAdmin) {
       return (
         <FormGroup>
-        <Select
-          value={this.state.scholarship_status}
-          onChange={this.handleScholarshipStatusChange}
-          options={this.props.applicationData.scholarship_dropdown_options}
-        />
-      </FormGroup>
+          <Select
+            value={this.state.scholarship_status}
+            onChange={this.handleScholarshipStatusChange}
+            options={this.props.applicationData.scholarship_dropdown_options}
+          />
+        </FormGroup>
       );
     }
 

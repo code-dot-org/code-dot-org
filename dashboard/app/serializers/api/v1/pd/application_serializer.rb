@@ -147,10 +147,6 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   end
 
   def scholarship_dropdown_options
-    options = []
-    Pd::Teacher1920ApplicationConstants::SCHOLARSHIP_LABELS.each do |key, value|
-      options.push({value: key, label: value})
-    end
-    options
+    Pd::Teacher1920ApplicationConstants::SCHOLARSHIP_DROPDOWN_OPTIONS
   end
 end
