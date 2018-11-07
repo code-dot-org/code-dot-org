@@ -96,7 +96,6 @@ class ProjectsController < ApplicationController
     },
     dance: {
       name: 'New Dance Lab Project',
-      levelbuilder_required: true,
       default_image_url: '',
     },
     makerlab: {
