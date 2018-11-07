@@ -7,7 +7,9 @@ import ShareDisallowedDialog from './ShareDisallowedDialog';
 class ShareDialog extends Component {
   static propTypes = {
     signInState: PropTypes.oneOf(Object.values(SignInState)),
-    isProjectLevel: PropTypes.bool.isRequired
+    isProjectLevel: PropTypes.bool.isRequired,
+    // Only applicable to Dance Party projects, used to Tweet at song artist.
+    selectedSong: PropTypes.string,
   };
 
   render() {
