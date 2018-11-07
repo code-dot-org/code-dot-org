@@ -397,11 +397,16 @@ export class DetailViewContents extends React.Component {
       );
     }
 
-    return (
-      this.props.applicationData.scholarship_dropdown_options.find((option)=>{
+    if (this.props.applicationData.scholarship_dropdown_options) {
+      const option = this.props.applicationData.scholarship_dropdown_options.find((option)=>{
         return option.value === this.state.scholarship_status;
-      }).label
-    );
+      });
+      if (option) {
+        return option.label;
+      }
+    }
+
+    return this.state.scholarship_status;
   };
 
   renderEditButtons = () => {
