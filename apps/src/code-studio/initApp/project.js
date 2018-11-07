@@ -944,6 +944,10 @@ var projects = module.exports = {
       }));
   },
 
+  getSelectedSong() {
+    return currentSources.selectedSong;
+  },
+
   /**
    * Save the project with the maker API state toggled, then reload the page
    * so that the toolbox gets re-initialized.
