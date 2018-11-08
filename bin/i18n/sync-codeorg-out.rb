@@ -70,6 +70,8 @@ def sanitize!(data)
     data.each {|datum| sanitize!(datum)}
   elsif data.is_a? String
     data.gsub!(/\\r/, "\r")
+  elsif [true, false].include? data
+    # pass
   elsif data.nil?
     # pass
   else

@@ -18,7 +18,8 @@ def sync_in
   localize_block_content
   run_bash_script "bin/i18n-codeorg/in.sh"
   localize_pegasus_markdown_content
-  redact_level_content
+  # disable redaction of level content until the switch to remark is complete
+  #redact_level_content
   redact_block_content
 end
 

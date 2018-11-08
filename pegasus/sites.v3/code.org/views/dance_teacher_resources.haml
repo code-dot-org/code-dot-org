@@ -1,0 +1,34 @@
+%link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/dance-landing/dance-teacher-resources.css'}
+
+:ruby
+  resources = [
+    {
+      title: I18n.t(:hoc2018_dance_teacher_resources_title),
+      description: I18n.t(:hoc2018_dance_teacher_resources_tile1_description),
+      image: "/images/animated-examples/cutesprite.gif",
+      button_text: I18n.t(:hoc2018_dance_teacher_resources_tile1_button),
+      link: CDO.studio_url('/s/dance')
+    },
+    {
+      title: I18n.t(:hoc2018_dance_teacher_resources_tile2_title),
+      description: I18n.t(:hoc2018_dance_teacher_resources_tile2_description),
+      image: "/images/animated-examples/cutesprite.gif",
+      button_text: I18n.t(:hoc2018_dance_teacher_resources_tile2_button),
+      link: CDO.studio_url('/s/dance-extras')
+    },
+  ]
+
+.resources
+  -resources.each do |resource|
+    .col-50
+      .resource-card
+        .resource-gif
+          %img{src: resource[:image]}
+        .resource-text-box
+          .resource-title
+            = resource[:title]
+          .resource-description
+            = resource[:description]
+          %a{href: resource[:link]}
+            %button.gray-button
+              = resource[:button_text]
