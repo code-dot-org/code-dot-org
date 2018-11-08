@@ -119,7 +119,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     response_summary = {}
 
     responses = PEGASUS_DB[:forms].where(source_id: workshops.flat_map(&:enrollments).map(&:id), kind: 'PdWorkshopSurvey').map {|form| form[:data].nil? ? {} : JSON.parse(form[:data])}
-    responses = responses.compact.reject {|response| response['consent_b'] == '0'}
+    responses = responses.compact.select {|response| response['consent_b'] == '1'}
     responses = coerce_old_surveys_to_new_format(responses, workshops)
 
     return {} if responses.count == 0

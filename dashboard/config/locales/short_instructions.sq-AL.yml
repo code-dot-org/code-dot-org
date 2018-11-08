@@ -162,7 +162,7 @@ sq:
       2-3 Artist Loops 8: Le të vendosim të dy elementet brenda një cikli.
       2-3 Artist Loops 9: "Ne do të ciklojmë elementet e njëjtë, por\n tani ne do
         të shtojmë distancë midis tyre.\r\nPërdor të njëjtin kod si më përpara, por
-        shto një hap përpara në fund të ciklit të jashtëm.\n"
+        shto një hap përpara në fund të ciklit të jashtëm."
       2-3 Artist Loops New 1: Le të vizatojmë kokën e robotit! A mund të bësh një
         katror me brinjë që janë 100 piksela?
       2-3 Artist Loops New 10: |-
@@ -1398,7 +1398,7 @@ sq:
         spiral, secila anë është 20 piksel më e madhe se e fundit.
       Course 4 Artist For Loops 8: "Vetëm një ndryshim i vogël në kod nga figura e
         fundit mund të ndryshoj këtë vizatim. Mund ta zbulosh se çfarë është \nai
-        ndryshim? \r\n \r\nUdhëzim: Duhet të heqësh diçka!\n"
+        ndryshim? \r\n \r\nUdhëzim: Duhet të heqësh diçka!"
       Course 4 Artist For Loops 8a: "Vetëm një ndryshim i vogël në kod nga figura
         e fundit mund të ndryshoj këtë vizatim. Mund ta zbulosh se çfarë është \nai
         ndryshim?"
@@ -1821,7 +1821,7 @@ sq:
         \"rritje\" do të fillojë me një vlerë prej 1.\r\n\r\nMund t'a bëni që\n sa
         herë të klikoni Qen, rritja të jetë me 2? Klikoni \nshigjetën e vahdimit për
         të drejtuar litarin.\r\n\r\nDrejto litarin disa herë, duke klikuar Qenin \npara
-        secilës herë.\n"
+        secilës herë."
       Course 4 Play Labs For Loops 6: Nëse mbani mend, një numër prim është një numër
         i plotë i cili është i plotëpjestueshëm vetëm me veten dhe 1. Përdor funksionin
         "eshte_prim" për të nxjerrë të gjithë numrat prim nga 1 deri 100.
@@ -2734,6 +2734,9 @@ sq:
       courseC_artist_prog5_2018: |-
         Kjo shtëpi ka nevojë për një çati! Vizato trekëndëshin. Ndihmë:
         të treja brinjët janë të së njëjtës gjatësi.
+      courseC_artist_prog5_2019: |-
+        Kjo shtëpi ka nevojë për një çati! Vizato trekëndëshin. Ndihmë:
+        të treja brinjët janë të së njëjtës gjatësi.
       courseC_maze_debugging10: Korigjo këtë nivel duke rregulluar dhe shtuar blloqet
         për të më çuar te derrkuci!
       courseD_artist_binary1: "Binar është një mënyrë për të përfaqësuar informacion\nduke
@@ -2778,6 +2781,8 @@ sq:
         tek çdo koshere. Përdor një cikël të mbivendosur. "
       courseD_bee_nestedLoops8_2018: "Mblidh gjithë nektarin nga secila lule\ndhe
         bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
+      courseD_bee_nestedLoops8_2019: "Mblidh gjithë nektarin nga secila lule\ndhe
+        bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
       courseD_bounce_events10: Tani është një shënjestër në krye! Bashkangjisni blloqet
         "pikët e shënuara " dhe "pikët e shënuara të kundërshtarit" me blloqet "kur
         topi është në shënjestër" dhe " kur topi humbet raketën" për të bërë një lojë.
@@ -2814,8 +2819,10 @@ sq:
         gabimin (et) për të mbledhur gjithë nektarin dhe bëj gjithë mjaltin.
       courseD_maze_nestedLoops4: Më ço tek luledielli!
       courseD_maze_nestedLoops4_2018: Më ço tek luledielli!
+      courseD_maze_nestedLoops4_2019: Më ço tek luledielli!
       courseD_maze_nestedLoops6: Më ço tek luledielli!
       courseD_maze_nestedLoops6_2018: Më ço tek luledielli!
+      courseD_maze_nestedLoops6_2019: Më ço tek luledielli!
       courseE_artist_functions1: "Përshëndetje. Unë artisti zombi. Më pëlqen të vizatoj!\nMë
         ndihmo të vizatoj xhamat katrorë. Ndihmë: ura midis xhamave është \n25 piksela
         më e shkurtër sesa gjatësia e katrorit."
@@ -2856,12 +2863,20 @@ sq:
         Bëjë tre ndryshime të vogla në
         kod nga niveli i fundit për të marrë këtë!
          !
+      courseF_artist_for7_2019: |-
+        Bëjë tre ndryshime të vogla në
+        kod nga niveli i fundit për të marrë këtë!
+         !
       courseF_artist_for_challenge1: A mund të kuptoni se si të rikrijoni këtë vizatim?
       courseF_artist_for_challenge1_2018: A mund të kuptoni se si të rikrijoni këtë
+        vizatim?
+      courseF_artist_for_challenge1_2019: A mund të kuptoni se si të rikrijoni këtë
         vizatim?
       courseF_artist_for_challenge2: A mund të kuptoni se si të rikrijoni këtë vizatim
         me një cikël të thjeshtë?
       courseF_artist_for_challenge2_2018: A mund të kuptoni se si të rikrijoni këtë
+        vizatim me një cikël të thjeshtë?
+      courseF_artist_for_challenge2_2019: A mund të kuptoni se si të rikrijoni këtë
         vizatim me një cikël të thjeshtë?
       courseF_bee_for8: "Çfarë do të bëje nëse do të hiqnim disa blloqe? A mund t'i
         shtosh përsëri për të ndihmuar bletën të mbledhi nektar?\r\nMos harro:\nNëse
@@ -2871,10 +2886,17 @@ sq:
         t'i shtosh përsëri për të ndihmuar bletën të mbledhi nektar?\r\nMos harro:\nNëse
         cikli numëron për sipër, rritësi i shtohet variablës së numëruesit sa herë
         i shkon. Sa duhet të jetë rritësi për të mbledhur 3, 6, 9 nektar? \r\n"
+      courseF_bee_for8_2019: "Çfarë do të bëje nëse do të hiqnim disa blloqe? A mund
+        t'i shtosh përsëri për të ndihmuar bletën të mbledhi nektar?\r\nMos harro:\nNëse
+        cikli numëron për sipër, rritësi i shtohet variablës së numëruesit sa herë
+        i shkon. Sa duhet të jetë rritësi për të mbledhur 3, 6, 9 nektar? \r\n"
       courseF_bee_for_challenge2: |-
         Zgjidhe këtë puzzle duke përdorur numrin
         më të pakët të mundshëm të blloqeve.
       courseF_bee_for_challenge2_2018: |-
+        Zgjidhe këtë puzzle duke përdorur numrin
+        më të pakët të mundshëm të blloqeve.
+      courseF_bee_for_challenge2_2019: |-
         Zgjidhe këtë puzzle duke përdorur numrin
         më të pakët të mundshëm të blloqeve.
       courseF_bee_for_challenge3: |-
@@ -3408,7 +3430,7 @@ sq:
         Kliko këtu."
       grade5_artist_for_loops5: "Vetëm një ndryshim i vogël në kod nga figura e fundit
         mund të ndryshoj këtë vizatim. Mund ta zbulosh se çfarë është \nai ndryshim?
-        \r\n \r\nUdhëzim: Duhet të heqësh diçka!\n"
+        \r\n \r\nUdhëzim: Duhet të heqësh diçka!"
       grade5_artist_for_loops6: Nëse kthehesh pak më shumë apo pak më pak se zakonisht,
         krijon një efekt. Provo të kthehesh 89 gradë për të formuar këtë spirale katrore
         te shtrembëruar.

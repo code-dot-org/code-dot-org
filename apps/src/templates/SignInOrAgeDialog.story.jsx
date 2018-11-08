@@ -13,6 +13,16 @@ export default storybook => {
             age13Required={true}
           />
         )
+      },
+      {
+        name:'SignInOrAgeDialog with dance style',
+        story: () => (
+          <SignInOrAgeDialog
+            signedIn={false}
+            age13Required={true}
+            useDancePartyStyle={true}
+          />
+        )
       }
     ]);
 };

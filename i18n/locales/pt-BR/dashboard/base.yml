@@ -44,6 +44,7 @@ pt-BR:
   done_with_module: Concluído com este Módulo de Aprendizagem
   cancel: "Cancelar"
   okay: "Ok"
+  or: "ou"
   heading_x_of_y: "%{heading} (página %{x} de %{y})"
   add_teacher_form:
     code:
@@ -78,6 +79,7 @@ pt-BR:
   prize: 'prêmio'
   more_info: 'Mais informações'
   auth:
+    continue_with: 'Continuar com %{provider}'
     sign_in_with: 'Entre com %{provider}'
     signed_in: 'Sessão iniciada!'
     signed_out: 'Você saiu da <a href="%{url}">Code.org</a>.'
@@ -102,6 +104,7 @@ pt-BR:
     already_in_use: "Seu %{provider} já está conectado a outra conta do Code.org."
     already_linked: "Seu %{provider} já está conectado a outra conta do Code.org."
   signup_form:
+    email_signup: 'Registre-se com o seu endereço de e-mail'
     student_count: '%{count} alunos já se registraram.'
     teacher_count: '%{count} professores já se registraram.'
     overview: 'Cadastre-se para ter uma conta e acompanhar seu progresso ou gerenciar sua sala de aula. <a href="/">Você pode explorar diversas fases e desafios</a> sem uma conta, mas precisará fazer login para salvar seu progresso e seus projetos.'
@@ -118,6 +121,7 @@ pt-BR:
     age: 'Idade'
     user_type: 'Você é um aluno ou professor?'
     submit: 'Registrar'
+    go_to_account: 'Ir para minha conta'
     teacher: 'Você é um professor?'
     valid_username: "Disponível!"
     invalid_username: "O nome de usuário deve ter ao menos 5 caracteres"
@@ -271,7 +275,7 @@ pt-BR:
         personal_login_created_username: 'Você criou uma conta pessoal com sucesso. Você agora pode entrar em sua conta com seu nome de usuário (%{username}) e senha'
   nav:
     header:
-      finished_hoc: "Terminei minha Hora do Código"
+      finished_hoc: "Eu terminei a minha Hora de Código"
       sign_in_to_save: 'Entre para salvar o progresso'
       free_play:
         playlab: 'Criar um aplicativo do Play Lab'
@@ -629,6 +633,8 @@ pt-BR:
     minecraft2016:
       title: "Minecraft"
       body: "Crie animais e outras criaturas de Minecraft em sua própria versão do Minecraft."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
     sports:

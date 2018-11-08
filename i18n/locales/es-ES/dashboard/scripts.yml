@@ -3040,3 +3040,15 @@ es:
           stages:
             Artist:
               name: Artista
+        coursef-2019:
+          description_short: Aprende todos los conceptos de Fundamentos de Informática y crea tu propio arte, historia o juego.
+          description_audience: 'Edades de 9 a 13 años'
+          stages:
+            Building a Foundation:
+              name: Construyendo una Base
+            Conditionals with Cards:
+              name: Condicionales con tarjetas
+            Envelope Variables:
+              name: Variables de sobre
+            For Loop Fun:
+              name: Diversión con bucles Para

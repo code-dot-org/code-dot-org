@@ -17,11 +17,15 @@
             "\"none\""
           ],
           [
+            "Colors",
+            "\"color_cycle\""
+          ],
+          [
             "Squares",
             "\"disco\""
           ],
           [
-            "Colors",
+            "Rainbow",
             "\"rainbow\""
           ],
           [
@@ -29,8 +33,24 @@
             "\"diamonds\""
           ],
           [
+            "Bubbles",
+            "\"splatter\""
+          ],
+          [
+            "Hypno",
+            "\"swirl\""
+          ],
+          [
+            "Spiral",
+            "\"spiral\""
+          ],
+          [
+            "Song Title",
+            "\"text\""
+          ],
+          [
             "(Random)",
-            "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]"
+            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','splatter','swirl','spiral'][randomInt(0,7)]"
           ]
         ]
       }

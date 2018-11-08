@@ -192,14 +192,17 @@ sq:
       courseD_bee_nestedLoops5: "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
       courseD_bee_nestedLoops8: "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
       courseD_bee_nestedLoops8_2018: "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
+      courseD_bee_nestedLoops8_2019: "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
       courseD_bounce_events1: Shko te flamuri! Bashkangjit një bllok te blloku "kur shigjeta majtas" dhe shtypni "Run" për të lëvizur lojtarin te flamuri.
       courseD_maze_nestedLoops4: 'Më ço tek luledielli!'
       courseD_maze_nestedLoops4_2018: 'Më ço tek luledielli!'
+      courseD_maze_nestedLoops4_2019: 'Më ço tek luledielli!'
       courseE_bee_functions3: "Funksionet janë blloqe kodi që performojnë\nnjë detyrë. Përdor funksionin \"merr 5\" për të marrë 5 nektarë në një kohë. Sigurohu të\npërdorësh një cikël për të arritur një numërim blloku ideal, gjithashtu."
       courseE_bee_functions3_2018: "Funksionet janë blloqe kodi që performojnë\nnjë detyrë. Përdor funksionin \"merr 5\" për të marrë 5 nektarë në një kohë. Sigurohu të\npërdorësh një cikël për të arritur një numërim blloku ideal, gjithashtu."
       courseE_farmer_concept4: "Tani le të shkojmë një nivel më thellë! Ne kemi\nmbivendosur gjithë bllokun e kodit në një cikël tjetër, por ti ke nevojë të arrish \nartistin mbrapsht për të vizatuar rreshtin tjetër. Cilin nga këto blloqe kodi mund \ntë vendosësh në fund të pozicionit për të vizatuar gjithë rrejtën?"
       courseF_bee_for_challenge2: "Zgjidhe këtë puzzle duke përdorur numrin\nmë të pakët të mundshëm të blloqeve."
       courseF_bee_for_challenge2_2018: "Zgjidhe këtë puzzle duke përdorur numrin\nmë të pakët të mundshëm të blloqeve."
+      courseF_bee_for_challenge2_2019: "Zgjidhe këtë puzzle duke përdorur numrin\nmë të pakët të mundshëm të blloqeve."
       frozen circle function in circle: Tani le të krijojmë 20 rrathë të mbivendosur, duke kthyer 18 gradë ndërmjet çdo rrethi.
       frozen circle function with parameter: "Këtu kemi një bllok \"Krijo një rreth\" \nqë bën rrathët me madhësi të ndryshme. A mund ta përdorësh këtë për të krijuar \nnjë rreth të vogël me masë 5 dhe një rreth më të madh me masën 10?"
       frozen circle function: Përdor bllokun e ri "Create a circle" për të krijuar 10 rrathë të mbivendosur. Mos harro të hidhesh përpara ndërmjet rrathëve.
@@ -306,7 +309,7 @@ sq:
       grade4_review_bee1: Tani përdor bllokun e ri të përsëritjes për të mbledhur të gjithë nektarin dhe për të përgatitur të gjithë mjaltin.
       grade5_artist_for_loops1: Vizato këtë trekëndësh që është në masë 50 piksel.
       grade5_artist_for_loops10: "Mund ta zbulosh se si të përdorësh të gjitha gjërat që ke mësuar për të krijuar këtë figurë?\\r\n\\r\nTë nevojitet një udhezim? Kliko këtu."
-      grade5_artist_for_loops5: |2
+      grade5_artist_for_loops5: |-
         Vetëm një ndryshim i vogël në kod nga figura e fundit mund të ndryshoj këtë vizatim. Mund ta zbulosh se çfarë është 
         ai ndryshim? \r
          \r

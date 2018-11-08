@@ -209,12 +209,12 @@ id:
         (s) untuk mengumpulkan semua nektar.  \\ r \nAnda sekarang dapat menggunakan
         kedua run dan langkah.\n "
       2-3 Bee Debugging 6: "Apa yang tantangan yang manis! \\ r \n\\ r \nPerbaiki
-        \nkesalahan (s) untuk mengumpulkan semua nektar.\n \n"
+        \nkesalahan (s) untuk mengumpulkan semua nektar.\n "
       2-3 Bee Debugging 9: Blok ini benar-benar menggangguku. Perbaiki yang salah
         untuk mengumpulkan semua nektar dan membuat madu.
       2-3 Bee Debugging Assessment 1: "** Penilaian : ** Sekarang saatnya untuk menunjukkan
         apa yang Anda ketahui! \\ r \n\\ r \nPerbaiki kesalahan (s) untuk mengumpulkan
-        semua nektar dan membuat semua madu.\n \n"
+        semua nektar dan membuat semua madu.\n "
       2-3 Bee Functions 1: "Fungsi adalah blok kode yang melakukan suatu tugas.  \\
         r \n\\ r \nGunakan `mendapatkan 2 nectar` fungsi untuk mengumpulkan nektar
         dari bunga masing-masing."
@@ -241,8 +241,7 @@ id:
       2-3 Bee Loops 3B: Sekarang gunakan blok `repeat` untuk mengumpulkan semua nektar
         dan buatlah semua madu.
       2-3 Bee Loops 4: "Seperti sebuah lebah sibuk! \\ r \n\\ r \nBantuan Bee mengumpulkan
-        semua nektar dan membuat semua madu dengan paling sedikit blok mungkin.\n
-        \n"
+        semua nektar dan membuat semua madu dengan paling sedikit blok mungkin.\n "
       2-3 Bee Loops 4A: "Berapa kali loop bisa membantu Anda dalam teka-teki ini ?
         \ \\ r \n\\ r \nLoops adalah teman Anda! Gunakan sebuah beberapa dari mereka
         untuk menyelesaikan ini teka-teki dengan paling sedikit blok mungkin.\n \n"
@@ -670,6 +669,10 @@ id:
         \ Semua kode yang kamu butuhkan untuk menyeberangi sungai sudah tersedia!
         \r\n \r\nPosisikan blok hijau kecil dua kali ke ruang kerjamu untuk memperbaiki
         jalur dan bawa {currentPlayerName} ke Obor Batu Merah [redstone_torch]."
+      Function intro Ryan_2019: "**Fungsi** bernama `bangun jembatan` ada di ruang
+        kerjamu.  Semua kode yang kamu butuhkan untuk menyeberangi sungai sudah tersedia!
+        \r\n \r\nPosisikan blok hijau kecil dua kali ke ruang kerjamu untuk memperbaiki
+        jalur dan bawa {currentPlayerName} ke Obor Batu Merah [redstone_torch]."
       K-1 Bee Loops 2: Gunakan sebuah perulangan untuk bergerak dan kemudian mendapatkan
         nektar dan membuat madu!
       K-1 Bee Loops 3: Gunakan beberapa perulangan untuk mendapatkan nektar dan membuat
@@ -698,10 +701,19 @@ id:
         siap membantu!   \r\n \r\n   \r\nPosisikan blok `pindah maju` ke blok `ketika
         dijalankan` di ruang kerja untuk membawa Agent ke pelat tekanan [PressurePlate_Up],
         lalu tekan \"Jalankan\" dan gunakan tombol panah untuk memindahkan {currentPlayerName}
-        ke luar rumah untuk mengambil **peti** [chest].  \n"
+        ke luar rumah untuk mengambil **peti** [chest].  "
+      MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} terjebak di dalam rumah, namun
+        Agent siap membantu!   \r\n \r\n   \r\nPosisikan blok `pindah maju` ke blok
+        `ketika dijalankan` di ruang kerja untuk membawa Agent ke pelat tekanan [PressurePlate_Up],
+        lalu tekan \"Jalankan\" dan gunakan tombol panah untuk memindahkan {currentPlayerName}
+        ke luar rumah untuk mengambil **peti** [chest].  "
       MC_HOC_2017_02: Pemain perlu masuk ke dalam hutan kecil rahasia itu.  Bantu
         Agent membuka gerbang dengan menulis kode untuk membawanya ke pelat tekanan.
       MC_HOC_2017_02_Cole: "{currentPlayerName} pergi berpetualang! Untuk membantu,
+        dapatkan **peta** [map_empty] di balik pintu terkunci di sebelah kanan. \r\n
+        \r\nPosisikan kode ke ruang kerja untuk memindahkan Agent ke pelat tekanan
+        [PressurePlate_Up] sehingga {currentPlayerName} bisa lewat. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} pergi berpetualang! Untuk membantu,
         dapatkan **peta** [map_empty] di balik pintu terkunci di sebelah kanan. \r\n
         \r\nPosisikan kode ke ruang kerja untuk memindahkan Agent ke pelat tekanan
         [PressurePlate_Up] sehingga {currentPlayerName} bisa lewat. "
@@ -716,6 +728,9 @@ id:
       MC_HOC_2017_03_Cole: "{currentPlayerName} melanjutkan petualangan dan membutuhkan
         **kompas** [compass] untuk mempersiapkan perjalanan.  \r\n   \r\nBuat kode
         agar Agent membuka gerbang. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} melanjutkan petualangan dan membutuhkan
+        **kompas** [compass] untuk mempersiapkan perjalanan.  \r\n   \r\nBuat kode
+        agar Agent membuka gerbang. "
       MC_HOC_2017_03_Kiki: "Petualangan pemain akan dimulai dari balik pintu terkunci
         di Hutan Kecil Rahasia!  \r\n\r\n\r\nBantu Agent membuka pintu dengan menulis
         kode untuk membawanya ke pelat tekanan."
@@ -728,9 +743,15 @@ id:
       MC_HOC_2017_04POINT5_RYAN: "Kamu berhasil menyeberang! \r\n\r\nSekarang, bawa
         {currentPlayerName} dengan aman melalui labirin untuk mengambil **kapak**
         [diamond_axe]\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Kamu berhasil menyeberang! \r\n\r\nSekarang,
+        bawa {currentPlayerName} dengan aman melalui labirin untuk mengambil **kapak**
+        [diamond_axe]\r\n"
       MC_HOC_2017_04_Cole: "Agent bisa bergerak melintasi air!  \r\n \r\nGunakan loop
         `ulangi` untuk memecahkan teka-teki ini dan membantu {currentPlayerName} masuk
         ke **ember** [bucket_empty] di balik pintu. "
+      MC_HOC_2017_04_Cole_2019: "Agent bisa bergerak melintasi air!  \r\n \r\nGunakan
+        loop `ulangi` untuk memecahkan teka-teki ini dan membantu {currentPlayerName}
+        masuk ke **ember** [bucket_empty] di balik pintu. "
       MC_HOC_2017_04_Kiki: "Jalan masuk ke Hutan Kecil Rahasia mengarah ke Oasis yang
         indah ini!  Untuk melewati level ini, pemain perlu mencapai kotak oranye di
         pondok.  \r\n\r\nGunakan loop `ulangi` untuk membantu Agent mencapai pelat
@@ -742,6 +763,9 @@ id:
       MC_HOC_2017_05_Cole: "Oh tidak, jembatannya hilang! \r\n\r\nBuat kode agar Agent
         membangun kembali jembatan menggunakan blok `tempatkan` sehingga {currentPlayerName}
         bisa mencapai **sekop** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "Oh tidak, jembatannya hilang! \r\n\r\nBuat kode agar
+        Agent membangun kembali jembatan menggunakan blok `tempatkan` sehingga {currentPlayerName}
+        bisa mencapai **sekop** [diamond_shovel]."
       MC_HOC_2017_05_Josh: "Oh tidak, jembatannya hilang! \r\n\r\nBantu Agent membangun
         kembali jembatan sehingga pemain bisa mencapai **sekop**."
       MC_HOC_2017_05_Kiki: "Waktunya pemain meninggalkan Hutan Kecil Rahasia dan melanjutkan
@@ -750,6 +774,9 @@ id:
       MC_HOC_2017_06_Cole: "Ada sungai lagi, tapi yang ini jauh lebih lebar! \r\n
         \r\nPerbaiki kode ini untuk membantu Agent membangun jembatan sehingga {currentPlayerName}
         bisa mencapai **beliung** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2019: "Ada sungai lagi, tapi yang ini jauh lebih lebar!
+        \r\n \r\nPerbaiki kode ini untuk membantu Agent membangun jembatan sehingga
+        {currentPlayerName} bisa mencapai **beliung** [diamond_pickaxe]. "
       MC_HOC_2017_06_Josh: "Ada sungai lagi, tapi yang ini jauh lebih lebar!  r \n\n\nPerbaiki
         kode ini untuk membantu Agent membangun jembatan yang melintasi sungai ini."
       MC_HOC_2017_06_Kiki: "Ada sungai lagi, tapi yang ini jauh lebih lebar!  \r\n\r\nPerbaiki
@@ -757,6 +784,9 @@ id:
       MC_HOC_2017_07_Cole: "Ada es yang menghalangi!  \r\n \r\nFungsi `bersihkan jalur`
         bisa membantumu menghancurkan es dan membawa {currentPlayerName} ke Kereta
         Tambang [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2019: "Ada es yang menghalangi!  \r\n \r\nFungsi `bersihkan
+        jalur` bisa membantumu menghancurkan es dan membawa {currentPlayerName} ke
+        Kereta Tambang [minecart_normal]! "
       MC_HOC_2017_07_Kiki: "Loop bukan satu-satunya cara untuk mengulangi kode!  \r\n\r\nDi
         sini, kami telah memberi kamu fungsi yang disebut `bersihkan kaktus` yang
         akan membantu membersihkan tiga kaktus setiap kali kamu menggunakannya.  Gunakan
@@ -792,6 +822,10 @@ id:
         ruang kerjamu? \r\n \r\nGunakan fungsi ini dengan kode lain dari kotak alat
         untuk membersihkan jalur Kereta Tambang, lalu ambil **Batu Api dan Baja**
         [flint_and_steel]. \r\n "
+      MC_HOC_2017_10_RETRY_2019: "Dapatkah kamu melihat perbedaan antara dua fungsi
+        di ruang kerjamu? \r\n \r\nGunakan fungsi ini dengan kode lain dari kotak
+        alat untuk membersihkan jalur Kereta Tambang, lalu ambil **Batu Api dan Baja**
+        [flint_and_steel]. \r\n "
       MC_HOC_2017_10_RYAN: Coba buat fungsi dari awal yang akan mempermudah Agent
         untuk menyelesaikan kereta tambang ini dan membawa pemain ke kotak oranye.
       MC_HOC_2017_10_RYAN2: Coba buat fungsi dari awal yang akan mempermudah Agent
@@ -806,12 +840,17 @@ id:
       MC_HOC_2017_Ali: 'Lihatlah fungsi di bawah ini.  Bagaimana kamu bisa menggunakannya
         untuk menghindari Ghast dan membantu {currentPlayerName} mencapai **Buku Sihir**
         [book_enchanted] dengan aman?  '
+      MC_HOC_2017_Ali_2019: 'Lihatlah fungsi di bawah ini.  Bagaimana kamu bisa menggunakannya
+        untuk menghindari Ghast dan membantu {currentPlayerName} mencapai **Buku Sihir**
+        [book_enchanted] dengan aman?  '
       MC_HOC_2017_FP10x10: "**Main bebas:** Sekarang terserah kamu! Dapatkah kamu
         menantang dirimu untuk mengambil semua berlian di level ini? "
       MC_HOC_2017_FP10x10_RE: "**Main bebas:** Sekarang terserah kamu! Dapatkah kamu
         menantang dirimu untuk mengambil semua berlian di level ini? "
       MC_HOC_2017_FP20x20: "**Main bebas:** Sekarang terserah kamu! Gunakan kode Agent
         untuk membantu kamu menjelajahi dunia ini."
+      MC_HOC_2017_FP20x20_2019: "**Main bebas:** Sekarang terserah kamu! Gunakan kode
+        Agent untuk membantu kamu menjelajahi dunia ini."
       MC_HOC_2017_Ryan_03: "Tahukah kamu bahwa kamu bisa memasukkan lebih dari satu
         bagian kode ke dalam loop?  \r\n\r\nGunakan loop `ulangi` untuk membantu Agent
         membangun jembatan di atas sungai dengan menempatkan blok di air."
@@ -923,10 +962,13 @@ id:
         madu pada setiap sarang madu. Gunakan putaran bersarang. '
       courseD_bee_nestedLoops8_2018: 'Kumpulkan semua nektar dari setiap bunga dan
         buatlah madu pada setiap sarang madu. Gunakan putaran bersarang. '
+      courseD_bee_nestedLoops8_2019: 'Kumpulkan semua nektar dari setiap bunga dan
+        buatlah madu pada setiap sarang madu. Gunakan putaran bersarang. '
       courseD_bounce_events1: Mendapatkan ke bendera! Melampirkan blok ke "ketika
         panah kiri" blok dan tekan "Run" untuk memindahkan pemain ke bendera.
       courseD_maze_nestedLoops4: Bawa aku ke bunga matahari!
       courseD_maze_nestedLoops4_2018: Bawa aku ke bunga matahari!
+      courseD_maze_nestedLoops4_2019: Bawa aku ke bunga matahari!
       courseE_bee_functions2: "Fungsi adalah blok kode yang melakukan suatu tugas.
         \ \\ r \n\\ r \nGunakan `mendapatkan 2 nectar` fungsi untuk mengumpulkan nektar
         dari bunga masing-masing."
@@ -947,6 +989,8 @@ id:
       courseF_bee_for_challenge2: Selesaikan teka-teki ini dengan menggunakan blok
         sesedikit mungkin.
       courseF_bee_for_challenge2_2018: Selesaikan teka-teki ini dengan menggunakan
+        blok sesedikit mungkin.
+      courseF_bee_for_challenge2_2019: Selesaikan teka-teki ini dengan menggunakan
         blok sesedikit mungkin.
       frozen circle function in circle: Sekarang, mari kita membuat 20 lingkaran yang
         tumpang tindih, berbelok 18 derajat antara setiap lingkaran.
@@ -1089,12 +1133,11 @@ id:
         (s) untuk mengumpulkan semua nektar.  \\ r \nAnda sekarang dapat menggunakan
         kedua run dan langkah.\n "
       grade3_Debugging_6: "Apa yang tantangan yang manis! \\ r \n\\ r \nPerbaiki \nkesalahan
-        (s) untuk mengumpulkan semua nektar.\n \n"
+        (s) untuk mengumpulkan semua nektar.\n "
       grade3_Debugging_9: Blok ini benar-benar menggangguku. Perbaiki yang salah untuk
         mengumpulkan semua nektar dan membuat madu.
       grade3_Loops_10: "Seperti sebuah lebah sibuk! \\ r \n\\ r \nBantuan Bee mengumpulkan
-        semua nektar dan membuat semua madu dengan paling sedikit blok mungkin.\n
-        \n"
+        semua nektar dan membuat semua madu dengan paling sedikit blok mungkin.\n "
       grade3_Loops_11: "Bentuk jalan ini berbeda dengan yang lain. \\ r \nr \\ \nDapatkah
         Anda mengumpulkan semua nektar menggunakan sebagai beberapa blok \nmungkin?"
       grade3_Loops_3: Gunakan sebuah `repeat` lingkaran untuk mengumpulkan semua nektar.
@@ -1226,8 +1269,7 @@ id:
       grade4_review_bee1: Sekarang gunakan blok `repeat` untuk mengumpulkan semua
         nektar dan buatlah semua madu.
       grade4_review_bee3: "Seperti sebuah lebah sibuk! \\ r \n\\ r \nBantuan Bee mengumpulkan
-        semua nektar dan membuat semua madu dengan paling sedikit blok mungkin.\n
-        \n"
+        semua nektar dan membuat semua madu dengan paling sedikit blok mungkin.\n "
       grade5_artist_for_loops10: |-
         **Tantangan:** Dapatkan Anda mencari
         tahu cara menggunakan semua yang telah Anda pelajari untuk membuat gambar poligon ini,
@@ -1248,7 +1290,7 @@ id:
         'patroli' untuk memindahkan kucing 400 piksel dan kemudian turun 400 piksel."
       level 'grade3_Loops_10: "Seperti sebuah lebah sibuk! \\ r \n\\ r \nBantuan Bee
         mengumpulkan semua nektar dan membuat semua madu dengan paling sedikit blok
-        mungkin.\n \n"
+        mungkin.\n "
       level 'grade3_Loops_11: "Bentuk jalan ini berbeda dengan yang lain. \\ r \nr
         \\ \nDapatkah Anda mengumpulkan semua nektar menggunakan sebagai beberapa
         blok \nmungkin?"

@@ -286,7 +286,26 @@ pt-BR:
       Big Game Booleans 1: "Da última vez que você trabalhou em seu jogo fizemos\nnossos alvo e inimigo voarem pela tela, mas eles nunca\nvoltaram. Clique em \"Executar\" para ver como seu jogo está funcionando agora e depois clique\nem concluir. Vamos fazer os gráficos reaparecerem na tela depois que eles tiverem\nsaído."
       Big Game Booleans 5: "Nesse ponto do seu jogo, seu inimigo deve percorrer\na tela da direita para a esquerda, seu alvo deve percorrer a tela da esquerda para\na direita e eles devem retornar para o lado oposto, repetidamente. Veja\nse seu jogo está funcionando como você gostaria e então clique em\nConcluir para seguir em frente."
       Big Game Collision 1: "Até agora você programou um jogo\ncom um alvo e um inimigo que se movem, sendo que ambos retornam à tela quando\nsaem, e um jogador que responde à entrada do teclado. Clique em Executar para\nver como seu jogo está funcionando e então vamos para o que\nestá faltando - a detecção de colisão!"
+      Big Game Final: |-
+        Você conseguiu!
+        
+        Agora seu jogo deve estar funcionando completamente. Aproveite seu novo jogo e faça alguns ajustes finais.
+        
+        Quando você estiver feliz com o produto final, clique em Concluir e você terá a oportunidade de compartilhar um link para o seu jogo. 
+        
+        Bom trabalho!
+      Big Game Player 1: |-
+        Estamos quase terminando o jogo!
+        
+        Da última vez que você trabalhou no seu jogo, você usou booleanos para fazer seu alvo e seu inimigo retornarem à tela quando saírem. Clique em Executar para ver como seu jogo está agora e então vamos fazer seu jogador se mover para cima e para baixo.
+      Big Game Player 2: |-
+        Para mover o jogador para cima e para baixo, vamos precisar usar um bloco condicional para descobrir qual tecla está pressionada e responder de acordo.
+        
+        Os computadores leem teclas pressionadas como códigos numéricos - a seta para cima é **38** e a seta para baixo é **40**. Você pode consultar outros códigos de teclas em seu material. 
+        
+        Edite a função `atualizar-jogador` para que ela mova o jogador para cima quando a seta para cima (código 38) estiver pressionada e para baixo quando a seta para baixo (código 40) estiver pressionada.
       Big Game Vars 1: "Vamos começar o seu Grande Jogo! Aqui você vai\nver um monte de trechos de código para reservar espaço que você eventualmente vai substituir\npelo seu próprio código, mas por enquanto vamos nos preocupar somente em definir as variáveis.\nClique em \"Executar\" para ver como é o jogo com os valores-padrão."
+      Big Game Vars 3: Agora, vamos definir o pano de fundo para seu novo jogo. Edite a variável `bg` e selecione uma nova imagem de pano de fundo no menu.
       Big Game Vars 4: "Incrível! Agora você pode atualizar as variáveis para\no jogador, o alvo e o inimigo. Fique à vontade para brincar com todas as variáveis\ne assim deixar seu jogo do jeito que você quer. Clique em \"Concluir\"\nquando você terminar."
       CSD U3 - images - Embed Project: Exemplo do Projeto Final
       CSD U5 Waze Data Video: Assista este vídeo para aprender como esse problema é resolvido pelo Waze. Enquanto assiste, pense em quais dados estão sendo coletados e de onde eles estão vindo.
@@ -326,6 +345,7 @@ pt-BR:
       Course 4 SCFP 1: "Crie uma função com parâmetros que permitem\nao artista saltar para trás e para frente por x pixels, e também para cima e para baixo\npor y pixels (usando números positivos e negativos)."
       Course 4 SCVP 1: "Crie uma função com parâmetros que permitem\nao artista saltar para trás e para frente por x pixels, e também para cima e para baixo\npor y pixels (usando números positivos e negativos)."
       CourseF_PlayLab_vars2: "A corrida do último desafio não foi\nmuito justa! Altere a variável \"velocidade_cão\" para garantir que você possa coletar mais\nbandeiras do que o gato. O primeiro a coletar 10 bandeiras vence!"
+      Craft Aquatic - allthethings: Chegue ao Farol do Mar.
       Eval Booleans Free Play: "Atividade livre: experimente criar algo\nvocê mesmo usando booleanos."
       Eval Design Recipe Free Play: "Atividade livre: use a receita de design\npara criar algumas funções com seu próprio design"
       Eval Strings Images .1: "Até agora, lidamos com um único\ntipo de dado, os números. Outro tipo de dados é a string, que é uma combinação\nde letras, números, ou outros caracteres envolvidos entre aspas. Execute a\nstring \"Olá, mundo!\" e veja o que acontece."
@@ -334,6 +354,19 @@ pt-BR:
       Eval Strings Images Free Play: "Atividade livre: explore os blocos disponíveis\npara criar algo interessante. Lembre-se de compartilhar suas criações favoritas."
       Fish Tank 5-validated_simple: O peixe quer um amigo.   Adicione um novo sprite.
       Function intro Ryan: "A **função** chamada 'construir ponte' está em sua área de trabalho. Todos os códigos de que você precisa para atravessar o rio estão corretos! \\r\n \\r\nFixe o bloco verde pequeno duas vezes em sua área de trabalho para corrigir o caminho e levar o jogador {currentPlayerName} até a Tocha de Redstone [redstone_torch]."
+      Function intro Ryan_2019: "A **função** chamada 'construir ponte' está em sua área de trabalho. Todos os códigos de que você precisa para atravessar o rio estão corretos! \\r\n \\r\nFixe o bloco verde pequeno duas vezes em sua área de trabalho para corrigir o caminho e levar o jogador {currentPlayerName} até a Tocha de Redstone [redstone_torch]."
+      HOC 2018 Level_1: "Você precisa de suprimentos para a viagem adiante. Colete um **barco** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) de um **baú** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
+      HOC 2018 Level_10: "Há uma **lula** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) escondida em algum lugar deste Monumento Oceânico. Você consegue encontrá-la?\n\n"
+      HOC 2018 Level_11: Construa uma parede de **prismarinho** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) em volta do concreto preto. Isso ativará o **canal** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) e concluirá seu desafio.
+      HOC 2018 Level_12: Parabéns! O mundo aquático aberto aguarda você. Construa um recife de coral. Um vulcão. Um naufrágio. Você decide.
+      HOC 2018 Level_2: Usar um barco é bem melhor do que nadar no mar aberto. Vá até o final do cais e suba a bordo.
+      HOC 2018 Level_3: Pegue os remos e controle o barco pelo mar aberto para pegar o **bacalhau** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Use o bacalhau para alimentar o **golfinho** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png). Use um bloco de repetição para atravessar o oceano mais rápido.
+      HOC 2018 Level_5: Há uma **concha de náutilo** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png) escondida em algum lugar. Explore o naufrágio para encontrar o **baú** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      HOC 2018 Level_6: Aqui está congelando! Pegue um **salmão** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) no caminho até as ruínas subaquáticas.
+      HOC 2018 Level_7a: "Você encontrou as ruínas subaquáticas. No arenito, procure um **baú** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) que contém tesouro de **prismarinho** (https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      HOC 2018 Level_8: "Primeiro icebergs, e agora lava? Sobreviva nesta ilha vulcânica e encontre o **salmão** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) no recife de coral.\n\n"
+      HOC 2018 Level_9b: "Você conseguiu chegar ao recife de corais. Agora, procure o **Coração do Mar** [](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png). Use os corais azul e vermelho para chegar no **baú** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png) do tesouro.\n\n"
       K-1 Bee Loops 2: "Use um laço \"repita\" para mover e então coletar o néctar e\nproduzir mel!"
       K-1 Bee Loops 3: "Use três laços \"repita\" para coletar o néctar\ne\nfabricar o mel!"
       K-1 Bee Loops 4: "Use laços \"repita\" para obter néctar, produzir\nmel e\npara mover!"
@@ -349,16 +382,23 @@ pt-BR:
       MC_HOC_2017_01: "Clique em \"Executar\" para mover o jogador usando as **teclas de seta**. \\r\n\\r\nPara passar este nível, você precisa chegar até a porta e abri-la (usando a **barra de espaço**) para que você consiga entrar no quadrado laranja."
       MC_HOC_2017_01_Cole: Você precisa coletar todas as ferramentas nesta jornada. Movimente-se usando as **teclas de seta** e chegue até o baú no caminho para vencer
       MC_HOC_2017_01_Kiki: 'Para jogar este nível, clique no botão laranja "Executar" sob o espaço de jogo, então mova o jogador usando as **teclas de seta**.  '
-      MC_HOC_2017_01_RETRY: |2
+      MC_HOC_2017_01_RETRY: |-
+        {currentPlayerName} está preso dentro da casa, mas o Agent está aqui para ajudar!  \r
+         \r
+           \r
+        Fixe um bloco 'mover para a frente' no bloco 'ao rodar' na área de trabalho para levar o Agent até a placa de pressão [PressurePlate_Up], então pressione "Executar" e use as teclas de seta para mover o jogador {currentPlayerName} para fora da casa para coletar o **baú** [chest].  
+      MC_HOC_2017_01_RETRY_2019: |-
         {currentPlayerName} está preso dentro da casa, mas o Agent está aqui para ajudar!  \r
          \r
            \r
         Fixe um bloco 'mover para a frente' no bloco 'ao rodar' na área de trabalho para levar o Agent até a placa de pressão [PressurePlate_Up], então pressione "Executar" e use as teclas de seta para mover o jogador {currentPlayerName} para fora da casa para coletar o **baú** [chest].  
       MC_HOC_2017_02: O jogador precisa entrar no bosque secreto. Ajude o Agent a abrir o portão escrevendo um código para levá-lo até a placa de pressão.
       MC_HOC_2017_02_Cole: "{currentPlayerName} entrou em uma aventura! Para ajudar, pegue o **mapa** [map_empty] atrás da porta trancada à direita. \\r\n \\r\nFixe o código na área de trabalho para mover o Agent até a placa de pressão [PressurePlate_Up] para que o jogador {currentPlayerName} consiga passar. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} entrou em uma aventura! Para ajudar, pegue o **mapa** [map_empty] atrás da porta trancada à direita. \\r\n \\r\nFixe o código na área de trabalho para mover o Agent até a placa de pressão [PressurePlate_Up] para que o jogador {currentPlayerName} consiga passar. "
       MC_HOC_2017_02_Kiki: "O jogador entrou em uma aventura, mas primeiro ele tem que conseguir a tocha que está escondida do outro lado da porta trancada. \\r\n\\r\nPrograme o Agent para mover-se parar frente duas vezes até o caminho branco e chegar até a placa de pressão para que ele possa abrir a porta para o jogador."
       MC_HOC_2017_02_Will: "Para concluir este nível, o jogador precisa chegar até o quadrado laranja dentro do Bosque Secreto, que está atrás da porta trancada. \\r\n\\r\nO código na área de trabalho fará com que o Agent mova-se para frente duas vezes para chegar até a placa de pressão e abrir a porta para o Alex ou o Steve."
       MC_HOC_2017_03_Cole: "{currentPlayerName} continua na aventura e precisa da **bússola** [compass] para se preparar para a viagem. \\r\n   \\r\nUse o código do Agent para abrir o portão. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} continua na aventura e precisa da **bússola** [compass] para se preparar para a viagem. \\r\n   \\r\nUse o código do Agent para abrir o portão. "
       MC_HOC_2017_03_Kiki: "A aventura do jogador vai começar atrás da porta fechada, no Bosque Secreto! \\r\n\\r\n\\r\nAjude o Agent a abrir a porta escrevendo um código para levá-lo até a placa de pressão."
       MC_HOC_2017_04: Altere o ciclo do último enigma para ajudar o Agent a trilhar um caminho sobre a parte mais larga deste rio.
       MC_HOC_2017_04POINT5_Cole: |-
@@ -367,7 +407,9 @@ pt-BR:
         
         Ajude o Agent a liberar o caminho encontrando um padrão simples e usando ciclos para atravessar as duas primeiras placas de pressão.
       MC_HOC_2017_04POINT5_RYAN: "Você conseguiu chegar até o outro lado! \\r\n\\r\nAgora, leve o jogador {currentPlayerName} em segurança pelo labirinto para coletar o **machado** [diamond_axe]\\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Você conseguiu chegar até o outro lado! \\r\n\\r\nAgora, leve o jogador {currentPlayerName} em segurança pelo labirinto para coletar o **machado** [diamond_axe]\\r\n"
       MC_HOC_2017_04_Cole: "O Agent pode mover-se pela água! \\r\n \\r\nUse um ciclo 'repetir' para resolver este enigma e ajudar {currentPlayerName} a chegar até o **balde** [bucket_empty] atrás da porta. "
+      MC_HOC_2017_04_Cole_2019: "O Agent pode mover-se pela água! \\r\n \\r\nUse um ciclo 'repetir' para resolver este enigma e ajudar {currentPlayerName} a chegar até o **balde** [bucket_empty] atrás da porta. "
       MC_HOC_2017_04_Kiki: "A entrada para o Bosque Secreto levou a este belo Oásis! Para passar deste nível, o jogador precisa chegar até o quadrado laranja na cabana. \\r\n\\r\nUse um ciclo 'repetir' para ajudar o Agent a percorrer todo o caminho até a placa de pressão, que abre a porta da cabana."
       MC_HOC_2017_05: |-
         Os ciclos nem sempre são úteis. 
@@ -375,15 +417,18 @@ pt-BR:
         
         Estes cactos não estão crescendo em um padrão óbvio, então um ciclo não os eliminaria corretamente. Em vez disso, demos a você uma função chamada 'destruir e mover' que fará o trabalho duro toda vez que o Agent encontrar um obstáculo no caminho.
       MC_HOC_2017_05_Cole: "Ah não, a ponte está interditada! \\r\n\\r\nUse o código do Agent para reconstruir a ponte usando o bloco 'colocar' para que {currentPlayerName} consiga pegar a **pá** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "Ah não, a ponte está interditada! \\r\n\\r\nUse o código do Agent para reconstruir a ponte usando o bloco 'colocar' para que {currentPlayerName} consiga pegar a **pá** [diamond_shovel]."
       MC_HOC_2017_05_Josh: |-
         Ah não, a ponte está interditada! \r
         \r
         Use o código do Agent para reconstruir a ponte usando o bloco 'colocar' para que {currentPlayerName} consiga pegar a **pá**.
       MC_HOC_2017_05_Kiki: "É hora do jogador sair do Bosque Secreto e continuar a aventura, mas a ponte está interditada! \\r\n\\r\nAjude o Agent a reconstruir a ponte, depois vá até a tábua de madeira para que o jogador consiga chegar até o quadrado laranja."
       MC_HOC_2017_06_Cole: "Outro rio, mas este é bem mais largo! \\r\n \\r\nCorrija esse código para ajudar o Agent a construir uma ponte para que {currentPlayerName} consiga chegar ate a **picareta** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2019: "Outro rio, mas este é bem mais largo! \\r\n \\r\nCorrija esse código para ajudar o Agent a construir uma ponte para que {currentPlayerName} consiga chegar ate a **picareta** [diamond_pickaxe]. "
       MC_HOC_2017_06_Josh: "Outro rio, mas este é bem mais largo! \\r\n\\r\nCorrija este código para ajudar o Agent a construir uma ponte sobre este rio."
       MC_HOC_2017_06_Kiki: "Outro rio, mas este é bem mais largo! \\r\n\\r\nCorrija este código para ajudar o Agent a construir uma ponte sobre a água."
       MC_HOC_2017_07_Cole: "Tem gelo no caminho! \\r\n \\r\nA função 'abrir caminho' pode ajudá-lo a destruir o gelo e levar {currentPlayerName} até o Carrinho de Minas [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2019: "Tem gelo no caminho! \\r\n \\r\nA função 'abrir caminho' pode ajudá-lo a destruir o gelo e levar {currentPlayerName} até o Carrinho de Minas [minecart_normal]! "
       MC_HOC_2017_07_Kiki: "O ciclos não são o único modo de repetir códigos! \\r\n\\r\nAqui, demos a você uma função chamada 'eliminar cactos' que fará o trabalho duro de eliminar três cactos toda vez que você usá-la. Use dois blocos 'eliminar cactos' para abrir o caminho até o quadrado laranja. "
       MC_HOC_2017_07a_Kiki: Agora, edite esse ciclo para ajudar o Agent a liberar o caminho até o quadrado laranja.
       MC_HOC_2017_08_Cole: "Agora, em vez de destruir antes de mover-se, você precisará colocar um bloco. \\r\n\\r\nAltere a função fornecida para funcionar neste deserto."
@@ -405,6 +450,7 @@ pt-BR:
       MC_HOC_2017_10_Cole_old: Tente criar uma função desde o início que torne mais fácil para o Agent terminar este carrinho de minas e levar o jogador para a quadrado laranja.
       MC_HOC_2017_10_Kiki: Tente criar uma função desde o início que torne mais fácil para o Agent terminar este carrinho de minas e levar o jogador para a quadrado laranja.
       MC_HOC_2017_10_RETRY: "Você consegue ver a diferença entre as duas funções na área de trabalho? \\r\n \\r\nUse essas funções com outro código da caixa de ferramentas para liberar o caminho até o Carrinho de Minas e, em seguida, colete **Pederneira** [flint_and_steel]. \\r\n "
+      MC_HOC_2017_10_RETRY_2019: "Você consegue ver a diferença entre as duas funções na área de trabalho? \\r\n \\r\nUse essas funções com outro código da caixa de ferramentas para liberar o caminho até o Carrinho de Minas e, em seguida, colete **Pederneira** [flint_and_steel]. \\r\n "
       MC_HOC_2017_10_RYAN: Tente criar funções desde o início que torne mais fácil para o Agent terminar este carrinho de minas e levar o jogador para a quadrado laranja.
       MC_HOC_2017_10_RYAN2: Tente criar funções desde o início que torne mais fácil para o Agent terminar este carrinho de minas e levar o jogador para a quadrado laranja.
       MC_HOC_2017_11_Kiki: Agora é com você! Veja o que você consegue criar em torno deste lago congelado.
@@ -415,9 +461,11 @@ pt-BR:
         
         Ajude o Agent a liberar o caminho encontrando um padrão simples e usando ciclos para atravessar as duas primeiras placas de pressão.
       MC_HOC_2017_Ali: 'Olhe as funções abaixo. Como pode você usá-las para evitar o Ghasts e ajudar {currentPlayerName} a chegar em segurança até o **Livro Encantado** [book_enchanted]?  '
+      MC_HOC_2017_Ali_2019: 'Olhe as funções abaixo. Como pode você usá-las para evitar o Ghasts e ajudar {currentPlayerName} a chegar em segurança até o **Livro Encantado** [book_enchanted]?  '
       MC_HOC_2017_FP10x10: "**Jogo Livre:** Agora é com você! Você consegue se superar e coletar todos os diamantes neste nível? "
       MC_HOC_2017_FP10x10_RE: "**Jogo Livre:** Agora é com você! Você consegue se superar e coletar todos os diamantes neste nível? "
       MC_HOC_2017_FP20x20: "**Jogo Livre:** Agora é com você! Use o código do Agent para ajudá-lo a explorar este mundo."
+      MC_HOC_2017_FP20x20_2019: "**Jogo Livre:** Agora é com você! Use o código do Agent para ajudá-lo a explorar este mundo."
       MC_HOC_2017_Ryan_03: "Você sabia que pode colocar mais de um código em um ciclo? \\r\n\\r\nUse um ciclo 'repetir' para ajudar o Agent a construir uma ponte sobre o rio colocando os blocos na água."
       MC_HOC_2017_Ryan_05: "Às vezes você precisa derrubar o que estiver atrapalhando seu jogador. \\r\nUse o bloco 'destruir' para eliminar todos os cactos entre o Agent e a placa de pressão."
       MC_HOC_Kiki_02: Alguém precisa estar na placa de pressão antes que a porta lateral abra. Ajude o Agent a chegar até a placa para que o jogador possa sair da casa.
@@ -856,6 +904,7 @@ pt-BR:
       courseD_bee_nestedLoops5: "Colete todo o néctar de cada flor\ne produza mel na colmeia. \\r\n\\r\nUse um laço aninhado. "
       courseD_bee_nestedLoops8: "Colete todo o néctar de cada flor\ne produza mel na colmeia. \\r\n\\r\nUse um laço aninhado. "
       courseD_bee_nestedLoops8_2018: "Colete todo o néctar de cada flor\ne produza mel na colmeia. \\r\n\\r\nUse um laço aninhado. "
+      courseD_bee_nestedLoops8_2019: "Colete todo o néctar de cada flor\ne produza mel na colmeia. \\r\n\\r\nUse um laço aninhado. "
       courseD_bounce_events1: Vá até a bandeira! Anexe um bloco ao bloco "quando seta para esquerda" e clique em "Executar" para mover o jogador até a bandeira.
       courseD_iceage_loops10: Ajude Scrat a chegar até a noz!
       courseD_iceage_loops12: Pegue a noz da maneira que você conseguir!
@@ -866,8 +915,10 @@ pt-BR:
       courseD_iceage_loops9: A noz está tão longe! Você pode usar laços para ajudar o Scrat a chegar lá?
       courseD_maze_nestedLoops4: "Leve-me até o girassol usando o menor número de blocos\npossível! \\r\n\\r\nUse um laço \"repita\" dentro de outro para diminuir\na quantidade de códigos que você precisa."
       courseD_maze_nestedLoops4_2018: "Leve-me até o girassol usando o menor número de blocos\npossível! \\r\n\\r\nUse um laço \"repita\" dentro de outro para diminuir\na quantidade de códigos que você precisa."
+      courseD_maze_nestedLoops4_2019: "Leve-me até o girassol usando o menor número de blocos\npossível! \\r\n\\r\nUse um laço \"repita\" dentro de outro para diminuir\na quantidade de códigos que você precisa."
       courseD_maze_ramp5d: Leve o pássaro até o porco.
       courseD_maze_ramp5d_2018: Leve o pássaro até o porco.
+      courseD_maze_ramp5d_2019: Leve o pássaro até o porco.
       courseD_maze_until10: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until10_2018: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until10_predict2: Ajude o zumbi a chegar até o girassol.
@@ -889,6 +940,7 @@ pt-BR:
       courseE_farmer_functions10b_2018: Use sua nova função duas vezes para resolver este desafio.
       courseF_bee_for_challenge2: "Resolva este desafio com o menor número de blocos\npossível."
       courseF_bee_for_challenge2_2018: "Resolva este desafio com o menor número de blocos\npossível."
+      courseF_bee_for_challenge2_2019: "Resolva este desafio com o menor número de blocos\npossível."
       coursea_maze_ramp1_2018: Para levar o pássaro até o porco, encaixe o <xml><block type="maze_moveEast"/></xml> bloco no final do <xml><block type="when_run"/></xml> bloco e aperte "▶ Executar"!
       csd-pulse-check-survey-1-free-response U1Ch2: Mais alguma coisa que você gostaria que o professor soubesse?
       csd-pulse-check-survey-1-free-response U1Ch2_2018: Mais alguma coisa que você gostaria que o professor soubesse?
@@ -1142,4 +1194,5 @@ pt-BR:
         de cada uma das flores usando o menor número possível de blocos.
       ramp_artist_loops9: Resolva este enigma desenhando um quadrado com lados de 200 pixels.
       ramp_artist_loops9_2018: Resolva este enigma desenhando um quadrado com lados de 200 pixels.
+      ramp_artist_loops9_2019: Resolva este enigma desenhando um quadrado com lados de 200 pixels.
       test_sarah: oi

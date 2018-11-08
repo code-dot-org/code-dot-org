@@ -2,7 +2,7 @@ require 'active_support/core_ext/hash/indifferent_access'
 require 'cdo/firehose'
 
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config]
+  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :embed_video]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config, :export_create_channel]
   protect_from_forgery except: :export_config
@@ -76,6 +76,9 @@ class ProjectsController < ApplicationController
     minecraft_hero: {
       name: 'New Minecraft Hero Project'
     },
+    minecraft_aquatic: {
+      name: 'New Minecraft Aquatic Project'
+    },
     applab: {
       name: 'New App Lab Project',
       login_required: true
@@ -93,7 +96,7 @@ class ProjectsController < ApplicationController
     },
     dance: {
       name: 'New Dance Lab Project',
-      levelbuilder_required: true,
+      default_image_url: '',
     },
     makerlab: {
       name: 'New Maker Lab Project',
@@ -316,10 +319,17 @@ class ProjectsController < ApplicationController
       no_header: sharing,
       small_footer: !no_footer && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
-      game_display_name: data_t("game.name", @game.name)
+      game_display_name: data_t("game.name", @game.name),
     )
+
     if params[:key] == 'artist'
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/_share_image.png", 'https:'
+    elsif params[:key] == 'dance'
+      # TODO: elijah set up test subdomains for dance-api, and situationally
+      # point to those here
+      @project_video = "https://dance-api.code.org/videos/video-#{@view_options['channel']}.mp4"
+      @project_video_stream = dance_project_embed_video_projects_url(key: params[:key], channel_id: params[:channel_id])
+      replay_video_view_options unless sharing || readonly
     end
 
     begin
@@ -440,6 +450,12 @@ class ProjectsController < ApplicationController
     limited_project_gallery = dcdo_flag.nil? ? true : dcdo_flag
     project_validator = current_user&.permission? UserPermission::PROJECT_VALIDATOR
     !project_validator && limited_project_gallery
+  end
+
+  # GET /projects/:key/:channel_id/embed_video
+  def embed_video
+    video_src = "https://dance-api.code.org/videos/video-#{params[:channel_id]}.mp4"
+    render template: "projects/embed_video", layout: false, locals: {video_src: video_src}
   end
 
   private

@@ -240,6 +240,10 @@ fi:
         kaiken koodin, jota tarvitset joen ylittämiseen! \r\n \r\nKorjaa polku napsauttamalla
         pieni vihreä lohko työtilaasi kahdesti ja vie {currentPlayerName} punakivisoihdun
         [redstone_torch] luo."
+      Function intro Ryan_2019: "Työtilassasi on **toiminto** rakenna silta. Se sisältää
+        kaiken koodin, jota tarvitset joen ylittämiseen! \r\n \r\nKorjaa polku napsauttamalla
+        pieni vihreä lohko työtilaasi kahdesti ja vie {currentPlayerName} punakivisoihdun
+        [redstone_torch] luo."
       MC Agent Freeplay: "**Vapaa peli:** Nyt määräät sinä! Käytä Agentin koodia apuna
         maailman tutkimisessa."
       MC_HOC_2017 Agent Test: "Napsauttamalla Suorita voit liikuttaa pelaajaa **nuolinäppäimillä**.
@@ -256,12 +260,21 @@ fi:
         on paikalla auttamassa!   \r\n \r\n   \r\nNapsauta liiku eteenpäin -lohko
         kun suoritetaan -lohkon päälle työtilassa, jotta Agent pääsee painelaatalle
         [PressurePlate_Up]. Paina sitten Suorita ja liikuta {currentPlayerName} nuolinäppäimillä
-        ulos talosta ottamaan **arkku** [chest].  \n"
+        ulos talosta ottamaan **arkku** [chest].  "
+      MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} on ansassa talon sisällä, mutta
+        Agent on paikalla auttamassa!   \r\n \r\n   \r\nNapsauta liiku eteenpäin -lohko
+        kun suoritetaan -lohkon päälle työtilassa, jotta Agent pääsee painelaatalle
+        [PressurePlate_Up]. Paina sitten Suorita ja liikuta {currentPlayerName} nuolinäppäimillä
+        ulos talosta ottamaan **arkku** [chest].  "
       MC_HOC_2017_02: Pelaajan on päästävä Salaiseen Lehtoon. Auta Agentia avaamaan
         ovi kirjoittamalla koodi, jolla hän siirtyy painelaatalle.
       MC_HOC_2017_02_Cole: "{currentPlayerName} on lähdössä seikkailuun! Hanki apua
         hakemalla **kartta** [map_empty] oikealla olevan lukitun oven takaa. \r\n
         \r\nNapsauta koodi työtilaan liikuttaaksesi Agent painelaatalle [PressurePlate_Up],
+        jotta {currentPlayerName} pääsee läpi."
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} on lähdössä seikkailuun! Hanki
+        apua hakemalla **kartta** [map_empty] oikealla olevan lukitun oven takaa.
+        \r\n \r\nNapsauta koodi työtilaan liikuttaaksesi Agent painelaatalle [PressurePlate_Up],
         jotta {currentPlayerName} pääsee läpi."
       MC_HOC_2017_02_Kiki: "Pelaaja on lähtenyt seikkailulle, mutta alkuun hänen on
         haettava soihtu, joka on piilotettu lukitun oven toiselle puolelle. \r\n\r\nOhjelmoi
@@ -273,6 +286,9 @@ fi:
         oven Alexille tai Stevelle."
       MC_HOC_2017_03_Cole: "{currentPlayerName} jatkaa seikkailua ja tarvitsee **kompassin**
         [compass] valmistautuakseen matkalle.  \r\n   \r\nKoodaa Agent avaamaan portti. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} jatkaa seikkailua ja tarvitsee
+        **kompassin** [compass] valmistautuakseen matkalle.  \r\n   \r\nKoodaa Agent
+        avaamaan portti. "
       MC_HOC_2017_03_Kiki: "Pelaajan seikkailu alkaa lukitun oven takana Salaisessa
         Lehdossa!  \r\n\r\n\r\nAuta Agentia avaamaan ovi kirjoittamalla koodi, jolla
         hän siirtyy painelaatalle."
@@ -283,9 +299,14 @@ fi:
         kuvio ja käytä silmukoita kahden ensimmäisen painelaatan ylittämiseen."
       MC_HOC_2017_04POINT5_RYAN: "Pääsit toiselle puolelle! \r\n\r\nVie {currentPlayerName}
         seuraavaksi turvallisesti sokkelon läpi hakemaan **kirves** [diamond_axe]\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Pääsit toiselle puolelle! \r\n\r\nVie {currentPlayerName}
+        seuraavaksi turvallisesti sokkelon läpi hakemaan **kirves** [diamond_axe]\r\n"
       MC_HOC_2017_04_Cole: "Agent voi liikkua veden yli!  \r\n \r\nRatkaise tämä tehtävä
         käyttämällä toisto-silmukkaa ja auta pelaajaa {currentPlayerName} pääsemään
         oven takana olevan **ämpärin** [bucket_empty] luo. "
+      MC_HOC_2017_04_Cole_2019: "Agent voi liikkua veden yli!  \r\n \r\nRatkaise tämä
+        tehtävä käyttämällä toisto-silmukkaa ja auta pelaajaa {currentPlayerName}
+        pääsemään oven takana olevan **ämpärin** [bucket_empty] luo. "
       MC_HOC_2017_04_Kiki: "Sisäänkäynti Salaiseen Lehtoon johti tälle kauniille keitaalle!
         \ Tämän tason selvittämiseksi pelaajan on päästävä oranssin ruutuun mökissä.
         \ \r\n\r\nAuta Agentia toisto-silmukkaa käyttäen pääsemään mökin oven avaavalle
@@ -297,6 +318,9 @@ fi:
       MC_HOC_2017_05_Cole: "Voi ei, silta ei ole käytössä! \r\n\r\nKoodaa Agent rakentamaan
         silta uudelleen aseta-lohkon avulla, jotta {currentPlayerName} pääsee **lapion**
         [diamond_shovel] luo."
+      MC_HOC_2017_05_Cole_2019: "Voi ei, silta ei ole käytössä! \r\n\r\nKoodaa Agent
+        rakentamaan silta uudelleen aseta-lohkon avulla, jotta {currentPlayerName}
+        pääsee **lapion** [diamond_shovel] luo."
       MC_HOC_2017_05_Josh: "Voi ei, silta ei ole käytössä! \r\n\r\nAuta Agentia rakentamaan
         silta uudelleen, jotta pelaaja pääsee **lapion** luo."
       MC_HOC_2017_05_Kiki: "Pelaajan on aika lähteä Salaisesta Lehdosta ja jatkaa
@@ -306,12 +330,18 @@ fi:
       MC_HOC_2017_06_Cole: "Taas joki, mutta paljon leveämpi sellainen!  \r\n\r\nAuta
         Agentia rakentamaan silta, jotta {currentPlayerName} pääsee **hakun** [diamond_pickaxe]
         luo. "
+      MC_HOC_2017_06_Cole_2019: "Taas joki, mutta paljon leveämpi sellainen!  \r\n\r\nAuta
+        Agentia rakentamaan silta, jotta {currentPlayerName} pääsee **hakun** [diamond_pickaxe]
+        luo. "
       MC_HOC_2017_06_Josh: "Taas joki, mutta paljon leveämpi sellainen!  \r\n\r\nAuta
         Agentia rakentamaan silta joen yli korjaamalla tämä koodi."
       MC_HOC_2017_06_Kiki: "Taas joki, mutta paljon leveämpi sellainen!  \r\n\r\nAuta
         Agentia rakentamaan silta veden poikki korjaamalla tämä koodi."
       MC_HOC_2017_07_Cole: "Edessä on jäätä!  \r\n \r\nRaivaa polku -toiminto voi
         auttaa sinua tuhoamaan jään ja viemään pelaajan {currentPlayerName} kaivosvaunulle
+        [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2019: "Edessä on jäätä!  \r\n \r\nRaivaa polku -toiminto
+        voi auttaa sinua tuhoamaan jään ja viemään pelaajan {currentPlayerName} kaivosvaunulle
         [minecart_normal]! "
       MC_HOC_2017_07_Kiki: "Silmukat eivät ole ainoa tapa toistaa koodia!  \r\n\r\nTässä
         olemme antaneet sinulle toiminnon raivaa kaktukset, joka tekee raskaan työn
@@ -342,6 +372,9 @@ fi:
       MC_HOC_2017_10_RETRY: "Näetkö eron työtilassasi olevien toimintojen välillä?
         \r\n \r\nRaivaa kaivosvaunulle toe näillä toiminnoilla ja työkalupakin koodeilla
         ja ota **tulukset** [flint_and_steel]. \r\n "
+      MC_HOC_2017_10_RETRY_2019: "Näetkö eron työtilassasi olevien toimintojen välillä?
+        \r\n \r\nRaivaa kaivosvaunulle toe näillä toiminnoilla ja työkalupakin koodeilla
+        ja ota **tulukset** [flint_and_steel]. \r\n "
       MC_HOC_2017_10_RYAN: Yritä rakentaa alusta asti toimintoja, jotka helpottavat
         Agentin tehtävää rakentaa kaivosvaunu loppuun ja saada pelaaja oranssiin ruutuun.
       MC_HOC_2017_10_RYAN2: Yritä rakentaa alusta asti toimintoja, jotka helpottavat
@@ -356,11 +389,16 @@ fi:
       MC_HOC_2017_Ali: 'Katso alla olevia toimintoja. Miten voit käyttää niitä hornanhenkien
         välttämiseen ja pelaajan {currentPlayerName} auttamiseen, jotta hän pääsisi
         turvallisesti **lumotun kirjan** [book_enchanted] luo?  '
+      MC_HOC_2017_Ali_2019: 'Katso alla olevia toimintoja. Miten voit käyttää niitä
+        hornanhenkien välttämiseen ja pelaajan {currentPlayerName} auttamiseen, jotta
+        hän pääsisi turvallisesti **lumotun kirjan** [book_enchanted] luo?  '
       MC_HOC_2017_FP10x10: "**Vapaa peli:** Nyt määräät sinä! Saatko haastettua itsesi
         keräämään kaikki tämän tason timantit? "
       MC_HOC_2017_FP10x10_RE: "**Vapaa peli:** Nyt määräät sinä! Saatko haastettua
         itsesi keräämään kaikki tämän tason timantit? "
       MC_HOC_2017_FP20x20: "**Vapaa peli:** Nyt määräät sinä! Käytä Agentin koodia
+        apuna maailman tutkimisessa."
+      MC_HOC_2017_FP20x20_2019: "**Vapaa peli:** Nyt määräät sinä! Käytä Agentin koodia
         apuna maailman tutkimisessa."
       MC_HOC_2017_Ryan_03: "Tiesitkö, että voit laittaa silmukkaan enemmän kuin yhden
         koodijonon?  \r\n\r\nKäytä toisto-silmukkaa auttaaksesi Agentia rakentamaan
@@ -388,10 +426,13 @@ fi:
         Käytä sisäkkäistä silmukkaa. '
       courseD_bee_nestedLoops8_2018: 'Kerää kaikki mesi kukista ja tee hunaja hunajakennoihin.
         Käytä sisäkkäistä silmukkaa. '
+      courseD_bee_nestedLoops8_2019: 'Kerää kaikki mesi kukista ja tee hunaja hunajakennoihin.
+        Käytä sisäkkäistä silmukkaa. '
       courseD_bounce_events1: Mene lipulle! Liitä lohko "kun nuoli vasemmalle" -lohkoon
         ja paina "Suorita" liikuttaaksesi pelaajan lipulle.
       courseD_maze_nestedLoops4: Vie minut auringonkukan luo!
       courseD_maze_nestedLoops4_2018: Vie minut auringonkukan luo!
+      courseD_maze_nestedLoops4_2019: Vie minut auringonkukan luo!
       courseE_bee_functions3: |-
         Funktiot ovat koodilohkoja, jotka suorittavat jonkin tehtävän.
         Käytä "ota 5"-fuktiota kerätäksesi 5 mettä kerralla. Käytä silmukkaa,

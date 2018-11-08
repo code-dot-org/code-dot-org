@@ -2243,3 +2243,13 @@ bg:
           stages:
             Artist:
               name: Художник
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Изграждане на база
+            Conditionals with Cards:
+              name: Условия с карти
+            Envelope Variables:
+              name: Плик с променливи
+            For Loop Fun:
+              name: Повторения за забавление

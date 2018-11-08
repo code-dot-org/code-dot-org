@@ -1207,3 +1207,9 @@ sr:
           stages:
             Artist:
               name: Уметник
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Изградња темеља
+            Conditionals with Cards:
+              name: Услови са картама
