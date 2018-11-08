@@ -57,8 +57,7 @@ class AgeDialog extends Component {
   };
 
   static propTypes = {
-    signedIn: PropTypes.bool.isRequired,
-    age13Required: PropTypes.bool.isRequired
+    signedIn: PropTypes.bool.isRequired
   };
 
   onClickAgeOk = () => {
@@ -84,10 +83,10 @@ class AgeDialog extends Component {
   };
 
   render() {
-    const { signedIn, age13Required } = this.props;
+    const { signedIn} = this.props;
     // Don't show dialog unless script requires 13+, we're not signed in, and
     // we haven't already given this dialog our age or we do not require sign-in
-    if (!age13Required || signedIn || sessionStorage.getItem(sessionStorageKey)) {
+    if (signedIn || sessionStorage.getItem(sessionStorageKey)) {
       return null;
     }
 
@@ -115,7 +114,7 @@ class AgeDialog extends Component {
         isOpen={this.state.open}
         uncloseable
       >
-        <div style={styles.container} className="signInOrAgeDialog">
+        <div style={styles.container} className="AgeDialog">
           <div style={styles.dancePartyHeading}>
             {i18n.welcomeToDanceParty()}
           </div>
@@ -136,6 +135,5 @@ class AgeDialog extends Component {
 export const UnconnectedAgeDialog = AgeDialog;
 
 export default connect(state => ({
-  age13Required: state.progress.isAge13Required,
   signedIn: state.progress.signInState === SignInState.SignedIn
 }))(AgeDialog);
