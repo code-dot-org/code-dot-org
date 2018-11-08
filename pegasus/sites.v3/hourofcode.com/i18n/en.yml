@@ -450,6 +450,7 @@
 
   title_country_resources: Country Specific Resources
   title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
+  title_how_to_promote: Spread the word
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: How to host an Hour of Code - Organizations
@@ -836,7 +837,7 @@
   tutorial_codesterscr_name: "Cheer Routines"
   tutorial_grokdisease_name: "Disease Epidemic"
   tutorial_techec_name: "Explaining Closures in JS"
-  tutorial_rgbegin_name: "RoboGarden - Beginner"
+  tutorial_rgbegin_name: "RoboGarden Coding - Beginner"
   tutorial_myradream_name: "Actimator: Myra's Dream"
   tutorial_thinkfun_name: "Robot Repair: Can You Fix the Robot Brain?"
   tutorial_hopfireworks_name: "Make a Fireworks App on iPad/iPhone"
@@ -862,7 +863,7 @@
   tutorial_gpbcatapult_name: "Build a Catapult"
   tutorial_quorumastro_name: "Coding in Astronomy"
   tutorial_alicewonder_name: "Alice in Wonderland"
-  tutorial_rginter_name: "RoboGarden - Intermediate"
+  tutorial_rginter_name: "RoboGarden Coding - Intermediate"
   tutorial_bloxmobscience_name: "iOS and Android Science Apps"
   tutorial_cssgrid_name: "Grid Garden"
   tutorial_bloxmobdesign_name: "App Design Process"
@@ -876,7 +877,7 @@
   tutorial_techcpp_name: "7 Features of C++17 that will simplify your code"
   tutorial_beetik_name: "Code the Music of Franz Liszt"
   tutorial_codedj_name: "Compose Music with Code DJ"
-  tutorial_rgadvan_name: "RoboGarden - Advanced"
+  tutorial_rgadvan_name: "RoboGarden Coding - Advanced"
   tutorial_codehsrn_name: "Creating Apps with React Native"
   tutorial_codehswd_name: "Web Design with CodeHS"
   tutorial_turtlerobot_name: "Turtle Robot"
@@ -1102,6 +1103,7 @@
   tutorial_vidcodeplastic_name: "Plastic Pollution PSA"
   tutorial_vidcodetypeface_name: "Create your own typeface!"
   tutorial_washustorm_name: "Stormy Science"
+  tutorial_activitypackets_name: "Wonder Workshop Activity Packets"
 
   tutorial_chibitronics_shortdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_shortdescription: "Choose between making a basketball game or mix and match across sports!"
@@ -1684,6 +1686,7 @@
   tutorial_vidcodeplastic_shortdescription: "Learn to use loops, sin waves and customized emojis to make a unique project."
   tutorial_vidcodetypeface_shortdescription: "Create your own typeface using shapes and elements of typography. Type has more elements than you may have realized!"
   tutorial_washustorm_shortdescription: "Learn how to program an incoming storm."
+  tutorial_activitypackets_shortdescription: "Find hours of family-friendly fun with Wonder Workshop's printable packets of creative coding activities. Bring coding to life with Dash, Dot, and Cue robots by downloading these online and offline activities to use during Hour of Code and beyond!"
 
   tutorial_chibitronics_longdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
@@ -2266,7 +2269,7 @@
   tutorial_vidcodeplastic_longdescription: "The problem of plastic filling our oceans continues to worsen. Luckily, you can make your voice heard with code through the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript, you can make a second video about any subject you care about! Learn to use loops, sin waves and customized emojis to make a unique project."
   tutorial_vidcodetypeface_longdescription: "Create your own typeface using shapes and elements of typography. Type has more elements than you may have realized! So far we have talked about fonts and how they are different styles of text. Fonts are actually just different styles of a typeface. A typeface is a family of fonts that have similar features."
   tutorial_washustorm_longdescription: "Learn how to program an incoming storm."
-
+  tutorial_activitypackets_longdescription: "Find hours of family-friendly fun with Wonder Workshop's printable packets of creative coding activities. Bring coding to life with Dash, Dot, and Cue robots by downloading these online and offline activities to use during Hour of Code and beyond!"
 
   tutorial_chibitronics_language: "English"
   tutorial_athlete_language: "English, French, Spanish, Italian, Portuguese (Brazil)"
@@ -2285,7 +2288,7 @@
   tutorial_textcomp_language: "English only"
   tutorial_encryption_language: "English only"
   tutorial_kanopixel_language: "English only"
-  tutorial_foos_language: "English, Arabic, Azerbaijani, Chinese, Dutch, French, German, Greek, Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Romanian, Russian, Serbian, Spanish, Swedish, Turkish, Ukrainian"
+  tutorial_foos_language: "Chinese, English, French, German, Italian, Japanese, Korean, Malay, Portuguese (Brazil), Spanish, Swedish, Thai"
   tutorial_tynkerdd_language: "English only"
   tutorial_tynkerana_language: "English only"
   tutorial_vidcard_language: "English only"
@@ -2756,7 +2759,7 @@
   tutorial_codemojipizza_language: "English"
   tutorial_moonlander_language: "English"
   tutorial_sushicards_language: "English"
-  tutorial_codesparkcreate_language: "Chinese, English, French, German, Italian, Japanese, Korean, Malay, Portuguese (Brazil), Spanish, Thai"
+  tutorial_codesparkcreate_language: "Chinese, English, French, German, Italian, Japanese, Korean, Malay, Portuguese (Brazil), Spanish, Swedish, Thai"
   tutorial_hardvsoft_language: "English"
   tutorial_codestersecard_language: "Chinese, English, Spanish"
   tutorial_codesterslogo_language: "Chinese, English, Spanish"
@@ -2849,6 +2852,7 @@
   tutorial_vidcodeplastic_language: "English"
   tutorial_vidcodetypeface_language: "English"
   tutorial_washustorm_language: "English"
+  tutorial_activitypackets_language: "English"
 
   tutorial_chibitronics_string_detail_grades: "Grades 2-5"
   tutorial_athlete_string_detail_grades: "Grades 2+"
@@ -3300,7 +3304,7 @@
   tutorial_blockscadicecream_string_detail_grades: "Grades 6+"
   tutorial_blockscadpizza_string_detail_grades: "Grades 6-8"
   tutorial_blockscadsugar_string_detail_grades: "Grades 6-8"
-  tutorial_bsgridlight_string_detail_grades: "Pre-reader - Grade 9+"
+  tutorial_bsgridlight_string_detail_grades: "Grades 2+"
   tutorial_bpartscratch_string_detail_grades: "Grades 6+"
   tutorial_bpartvid_string_detail_grades: "Grades 6+"
   tutorial_bpenglishscratch_string_detail_grades: "Grades 2-8"
@@ -3431,6 +3435,7 @@
   tutorial_vidcodeplastic_string_detail_grades: "Grades 6+"
   tutorial_vidcodetypeface_string_detail_grades: "Grades 6+"
   tutorial_washustorm_string_detail_grades: "Grades 2-5"
+  tutorial_activitypackets_string_detail_grades: "Pre-reader - Grade 8"
 
   tutorial_chibitronics_string_platforms: "All modern browsers"
   tutorial_athlete_string_platforms: "All modern browsers"
@@ -3761,7 +3766,7 @@
   tutorial_techioan_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
   tutorial_techiogsr_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
   tutorial_groktunnel_string_platforms: "All modern browsers"
-  tutorial_stemcod_string_platforms: "All modern browsers"
+  tutorial_stemcod_string_platforms: "Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_techikb_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
   tutorial_kanostreet_string_platforms: "All modern browsers"
   tutorial_nyblebot_string_platforms: "Android tablet, iPad, Android phone, iPhone"
@@ -3872,7 +3877,7 @@
   tutorial_bcpy2_string_platforms: "All modern browsers"
   tutorial_bcjs1_string_platforms: "All modern browsers"
   tutorial_bcjs2_string_platforms: "All modern browsers"
-  tutorial_3dbearmars_string_platforms: ""
+  tutorial_3dbearmars_string_platforms: "Android tablet, iPad, Android phone, iPhone"
   tutorial_alexaskill_string_platforms: "All modern browsers"
   tutorial_bitsboxyak_string_platforms: ""
   tutorial_blockscadbargraphs_string_platforms: "All modern browsers"
@@ -3931,13 +3936,13 @@
   tutorial_discovery_string_platforms: "All modern browsers"
   tutorial_csfirstname_string_platforms: "All modern browsers"
   tutorial_obstaclecourse_string_platforms: "iPad"
-  tutorial_edisonmove_string_platforms: ""
-  tutorial_edisonspider_string_platforms: ""
-  tutorial_edisonspotlight_string_platforms: ""
+  tutorial_edisonmove_string_platforms: "All modern browsers"
+  tutorial_edisonspider_string_platforms: "All modern browsers, iPad, Android tablets"
+  tutorial_edisonspotlight_string_platforms: "All modern browsers, iPad, Android tablets"
   tutorial_firiapython_string_platforms: "All modern browsers"
   tutorial_gamefrootsquid_string_platforms: "All modern browsers, iPad"
-  tutorial_duckpiano_string_platforms: "Chrome, Firefox, Safari"
-  tutorial_gpsound_string_platforms: "Chrome, Firefox, Safari"
+  tutorial_duckpiano_string_platforms: "All modern browsers"
+  tutorial_gpsound_string_platforms: "All modern browsers"
   tutorial_groklearningpython_string_platforms: "All modern browsers"
   tutorial_htmltimetravel_string_platforms: "All modern browsers"
   tutorial_hp_flappy_string_platforms: "iPad"
@@ -3989,9 +3994,9 @@
   tutorial_spherotext3_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_spherotext4_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_spheroraptor_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
-  tutorial_stempiday_string_platforms: "All modern browsers, Android tablet, iPad"
-  tutorial_stemplanetoids_string_platforms: "All modern browsers, Android tablet, iPad"
-  tutorial_stempong_string_platforms: "All modern browsers, Android tablet, iPad"
+  tutorial_stempiday_string_platforms: "Chrome, Firefox, Safari, Android tablet, iPad"
+  tutorial_stemplanetoids_string_platforms: "Chrome, Firefox, Safari, Android tablet, iPad"
+  tutorial_stempong_string_platforms: "Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_algobot_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_thunkableapps_string_platforms: "Chrome, Firefox, Safari, Android tablet, iPad, Android phone, iPhone"
   tutorial_toxicodedot_string_platforms: "All modern browsers"
@@ -4013,6 +4018,7 @@
   tutorial_vidcodeplastic_string_platforms: "All modern browsers, iPad"
   tutorial_vidcodetypeface_string_platforms: "All modern browsers, iPad"
   tutorial_washustorm_string_platforms: "All modern browsers"
+  tutorial_activitypackets_string_platforms: "Unplugged"
 
   tutorial_chibitronics_string_detail_platforms: "Chibitronics Chibi Chip and Circuit Sticker LEDs"
   tutorial_athlete_string_detail_platforms: ""
@@ -4595,6 +4601,7 @@
   tutorial_vidcodeplastic_string_detail_platforms: ""
   tutorial_vidcodetypeface_string_detail_platforms: ""
   tutorial_washustorm_string_detail_platforms: ""
+  tutorial_activitypackets_string_detail_platforms: "Dash or Cue robot"
 
   tutorial_chibitronics_string_detail_programming_languages: "Blocks"
   tutorial_athlete_string_detail_programming_languages: "Blocks"
@@ -5177,6 +5184,7 @@
   tutorial_vidcodeplastic_string_detail_programming_languages: "JavaScript"
   tutorial_vidcodetypeface_string_detail_programming_languages: "JavaScript"
   tutorial_washustorm_string_detail_programming_languages: "Blocks"
+  tutorial_activitypackets_string_detail_programming_languages: "Blocks, Wonder, Xylo, Blockly"
 
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"

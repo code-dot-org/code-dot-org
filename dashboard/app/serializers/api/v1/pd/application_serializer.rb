@@ -31,7 +31,9 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :attending_teachercon,
     :principal_approval_state,
     :meets_scholarship_criteria,
-    :school_stats
+    :school_stats,
+    :status_change_log,
+    :scholarship_status
   )
 
   def email
@@ -110,7 +112,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   end
 
   def percent_string(count, total)
-    return 'No data' unless count && total
+    return 'N/A' unless count && total
 
     "#{(100.0 * count / total).round(2)}%"
   end
@@ -138,5 +140,46 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
       white_percent: percent_string(stats.student_wh_count, stats.students_total),
       two_or_more_races_percent: percent_string(stats.student_tr_count, stats.students_total)
     }
+  end
+
+  def status_change_log
+    serialized_log = {}
+
+    # Old status changes were logged with just the time of the change, not the person
+    # doing the change. So we need to get all changes, and then find a way to resolve
+    # duplicates. So we build a hash where keys are time followed by status, assuming
+    # that if two entries show the same status change and are within a minute of each
+    # other, they are the same change
+
+    status_log = object.try(:status_log) || []
+
+    status_log.each do |entry|
+      entry_time = Time.parse(entry['at']).in_time_zone('America/Los_Angeles')
+      entry_time_string = "#{entry_time.strftime('%F %H:%M')} #{entry_time.zone}"
+      serialized_log[entry_time_string + entry['status']] = {
+        title: entry['status'].titleize,
+        time: entry_time_string
+      }
+    end
+
+    change_log = object.sanitize_status_timestamp_change_log
+    change_log.each do |entry|
+      # Use the time rounded down to the minute to see if these two statuses log entries
+      # are the same.
+      entry_time = Time.parse(entry[:time]).in_time_zone('America/Los_Angeles')
+      entry_time_string = "#{entry_time.strftime('%F %H:%M')} #{entry_time.zone}"
+
+      serialized_log[entry_time_string + entry[:title]] = {
+        title: entry[:title].titleize,
+        time: entry_time_string,
+        changing_user: entry[:changing_user_name]
+      }.compact
+    end
+
+    serialized_log.values.sort {|x, y| Time.parse(y[:time]) <=> Time.parse(x[:time])}
+  end
+
+  def scholarship_status
+    object.try(:scholarship_status)
   end
 end
