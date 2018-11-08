@@ -15,7 +15,15 @@ function isIE9() {
 
 /**
  * Initialize an individual sound
- * @param config available sound files for this audio
+ * @param {Object} config available sound files for this audio
+ * @property {boolean} allowHTML5Mobile
+ * @property {boolean} playAfterLoad
+ * @property {boolean} forceHTML5
+ * @property {Object} playAfterLoadOptions
+ * @property {string} mp3
+ * @property {string} ogg
+ * @property {string} wav
+ * @property {function} onPreloadError
  * @param audioContext context this sound can be played on, or null if none
  * @constructor
  */
@@ -36,6 +44,10 @@ export default function Sound(config, audioContext) {
    * @private {boolean} Whether the sound is loaded.
    */
   this.isLoaded_ = false;
+  /**
+   * @private {boolean} Whether the sound failed to load.
+   */
+  this.didLoadFail_ = false;
 }
 
 /**
@@ -117,6 +129,18 @@ Sound.prototype.handlePlayFailed = function (options) {
   }
 };
 
+Sound.prototype.handleLoadFailed = function (status) {
+  this.didLoadFail_ = true;
+  const {onPreloadError, playAfterLoadOptions} = this.config;
+
+  // If the song was loaded via preload, notify the caller.
+  onPreloadError && onPreloadError(status);
+
+  // If the song was to be played upon load, notify the caller.
+  const callback = playAfterLoadOptions && playAfterLoadOptions.callback;
+  callback && callback(false);
+};
+
 Sound.prototype.handlePlayStarted = function (options) {
   this.isPlaying_ = true;
   if (options.callback) {
@@ -159,6 +183,13 @@ Sound.prototype.isPlaying = function () {
  */
 Sound.prototype.isLoaded = function () {
   return this.isLoaded_;
+};
+
+/**
+ * @returns {boolean} whether the sound failed to load.
+ */
+Sound.prototype.didLoadFail = function () {
+  return this.didLoadFail_;
 };
 
 Sound.prototype.newPlayableBufferSource = function (buffer, options) {
@@ -321,6 +352,11 @@ Sound.prototype.preload = function () {
       audioElement.removeEventListener(loadEventName, eventListener);
     }.bind(this);
     audioElement.addEventListener(loadEventName, eventListener);
+    audioElement.addEventListener('error', () => {
+      // Indicate failure without the http status code since it is not
+      // available in this context.
+      this.handleLoadFailed();
+    });
   }
 };
 
@@ -340,10 +376,17 @@ Sound.prototype.preloadViaWebAudio = function (filename, onPreloadedCallback) {
   request.responseType = 'arraybuffer';
   var self = this;
   request.onload = function () {
-    self.audioContext.decodeAudioData(request.response, function (buffer) {
-      onPreloadedCallback(buffer);
-      self.onSoundLoaded();
-    });
+    if (request.status === 200) {
+      self.audioContext.decodeAudioData(request.response, function (buffer) {
+        onPreloadedCallback(buffer);
+        self.onSoundLoaded();
+      });
+    } else {
+      self.handleLoadFailed(request.status);
+    }
+  };
+  request.onerror = function () {
+    self.handleLoadFailed(request.status);
   };
   request.send();
 };

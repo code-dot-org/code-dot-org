@@ -394,12 +394,12 @@ module Pd::Application
       csv_header_csd = CSV.parse(Teacher1920Application.csv_header('csd'))[0]
       assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?"
       refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the 2019-20 school year?"
-      assert_equal 101, csv_header_csd.length
+      assert_equal 102, csv_header_csd.length
 
       csv_header_csp = CSV.parse(Teacher1920Application.csv_header('csp'))[0]
       refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?"
       assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the 2019-20 school year?"
-      assert_equal 103, csv_header_csp.length
+      assert_equal 104, csv_header_csp.length
     end
 
     test 'school cache' do
@@ -993,6 +993,18 @@ module Pd::Application
         application.status = status
         assert application.valid?
       end
+    end
+
+    test 'test scholarship statuses' do
+      application = create :pd_teacher1920_application
+      assert_nil application.scholarship_status
+
+      application.scholarship_status = 'no'
+      application.save
+      assert_equal 'no', application.scholarship_status
+
+      application.scholarship_status = 'invalid status'
+      refute application.save
     end
 
     private
