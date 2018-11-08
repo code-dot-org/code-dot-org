@@ -4086,3 +4086,17 @@ is:
           stages:
             Artist:
               name: Listamaður
+        coursef-2019:
+          description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin
+            myndir, sögur og leiki.
+          stages:
+            Building a Foundation:
+              name: Að byggja grunn
+            Conditionals with Cards:
+              name: Skilyrði með kortum
+            Envelope Variables:
+              name: Umslagabreytur
+            For Loop Fun:
+              name: Fyndnar frá lykkjur
+            new stage:
+              name: nýr áfangi

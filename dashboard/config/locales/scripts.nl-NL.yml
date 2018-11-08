@@ -1904,3 +1904,13 @@ nl:
           stages:
             Artist:
               name: Kunstenaar
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Een Basis Bouwen
+            Conditionals with Cards:
+              name: Statements met Kaarten
+            Envelope Variables:
+              name: Envelop variabelen
+            For Loop Fun:
+              name: For Lus fun

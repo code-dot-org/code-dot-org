@@ -3,7 +3,7 @@ title: Find a workshop
 theme: responsive
 ---
 # Find a workshop (for US teachers only, grades K-5)
-We welcome elementary school teachers to sign up for a free, high-quality professional development workshop from an experienced computer science facilitator. The workshop will provide an intro to computer science, pedagogy, overview of the online curriculum, teacher dashboard, and strategies for teaching “unplugged” classroom activities. Workshops last 6-7 hours and will prepare you to teach the Code Studio courses for grades K-5. For more information about our goals and approach to our courses, please see our [curriculum values](/educate/curriculum/values) and our [professional learning values](/educate/professional-learning/values). See [what else you'll get](#get) from attending a workshop.
+We welcome elementary school teachers to sign up for a free, high-quality professional development workshop from an experienced computer science facilitator. The workshop will provide an intro to computer science, pedagogy, overview of the online curriculum, teacher dashboard, and strategies for teaching “unplugged” classroom activities. Workshops last 7-8 hours and will prepare you to teach the Code Studio courses for grades K-5. For more information about our goals and approach to our courses, please see our [curriculum values](/educate/curriculum/values) and our [professional learning values](/educate/professional-learning/values). See [what else you'll get](#get) from attending a workshop.
 <br />
 <br />
 ### No workshop in your area or outside the United States? <br />

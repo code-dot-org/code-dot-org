@@ -273,3 +273,9 @@ it:
       RelayProgramming_2018:
         title: Programmazione a Staffetta
         desc: 'Questa attività inizierà con una breve lezione sulla correzione degli errori (debugging) e sulla persistenza, poi partirà una corsa contro il tempo: gli studenti si suddividono in squadre e lavorano insieme per scrivere un programma un''istruzione alla volta.'
+      courseB_unplugged_MRF_2019:
+        title: I Miei Amici Robotici
+        desc: Impara a programmare scrivendo codice per i tuoi amici robotici!
+      Conditionals_2019:
+        title: Istruzioni condizionali
+        desc: Per imparare le istruzioni condizionali, gli studenti giocano con le carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto" e "SE estraggo una carta nera tu ottieni un punto".

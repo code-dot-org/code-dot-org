@@ -114,6 +114,9 @@ de:
         Wir haben die Blöcke in eine Funktion namens „zeichne ein Quadrat“ verschoben,
         um ein Quadrat zu zeichnen. Kannst du die Funktion „zeichne ein Quadrat“ benutzen,
         um die Gläser zu erstellen? Die Quadrate haben einen Abstand von 75 Pixel.
+      2-3 Artist Functions 3 a: "Ändere die Funktion \"zeichne ein Quadrat\" um die
+        Brillengläser mit Rahmen zu zeichnen, die eine Seitenlänge von 115px haben.
+        \n\nDie Quadrate sind jetzt 45 Pixel auseinander."
       2-3 Artist Functions 3: Bearbeite die Funktion, um ein Quadrat mit einer Seitenlänge
         von 115 und zeichne die größeren Gläser. Die Quadrate sind jetzt 45 Pixel
         auseinander.
@@ -1631,6 +1634,8 @@ de:
         kannst.
       Function intro Ryan: Verwende zweimal die "Brücke bauen"-Funktion, um einen
         Weg zur Fackel zu bauen.
+      Function intro Ryan_2019: Verwende zweimal die "Brücke bauen"-Funktion, um einen
+        Weg zur Fackel zu bauen.
       Infinity_catch: Kannst du Elsa („Figur 2") dazu bewegen, Anna mithilfe der Pfeiltasten
         einzufangen?
       Infinity_finale: Erstelle alles, was dir gefällt und teile es!
@@ -1660,6 +1665,8 @@ de:
       InspirationalArtwork: Wenn dich dieses Bild inspiriert, versuche etwas ähnliches
         zu machen. Andererseits kannst du auch etwas komplett eigenes machen.
       InspirationalArtwork_2018: Wenn dich dieses Bild inspiriert, versuche etwas
+        ähnliches zu machen. Andererseits kannst du auch etwas komplett eigenes machen.
+      InspirationalArtwork_2019: Wenn dich dieses Bild inspiriert, versuche etwas
         ähnliches zu machen. Andererseits kannst du auch etwas komplett eigenes machen.
       K-1 Artist 1 Assessment 1: Zeichne eine kurze Linie nach oben und eine lange
         Linie nach rechts!
@@ -1876,31 +1883,44 @@ de:
       MC_HOC_2017_01_RETRY: 'Führe den Agenten zur Druckplatte. Wähle dann "Ausführen"
         aus und verwende die Pfeiltasten, um den Spieler aus dem Haus zu lenken und
         die Truhe einzusammeln. '
+      MC_HOC_2017_01_RETRY_2019: 'Führe den Agenten zur Druckplatte. Wähle dann "Ausführen"
+        aus und verwende die Pfeiltasten, um den Spieler aus dem Haus zu lenken und
+        die Truhe einzusammeln. '
       MC_HOC_2017_02: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_02_Cole: 'Bewege den Agenten zur Druckplatte, sodass {currentPlayerName}
+        zur Karte gelangen kann. '
+      MC_HOC_2017_02_Cole_2019: 'Bewege den Agenten zur Druckplatte, sodass {currentPlayerName}
         zur Karte gelangen kann. '
       MC_HOC_2017_02_Kiki: Bewege den Agenten zur Druckplatte, sodass der Spieler
         zum organgefarbenen Quadrat gelangen kann.
       MC_HOC_2017_02_Will: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_03_Cole: 'Lass den Agenten das Tor öffnen. '
+      MC_HOC_2017_03_Cole_2019: 'Lass den Agenten das Tor öffnen. '
       MC_HOC_2017_03_Kiki: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_04: Ändere die Schleife aus der letzten Aufgabe so, dass der Agent
         einen Weg über den breiteren Teil des Flusses baut.
       MC_HOC_2017_04POINT5_Cole: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_04POINT5_RYAN: Führe den Agenten zur Druckplatte.
+      MC_HOC_2017_04POINT5_RYAN_2019: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_04_Cole: Führe den Agenten zur Druckplatte.
+      MC_HOC_2017_04_Cole_2019: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_04_Kiki: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_05: Verwende eine Funktion, um den Agenten zur Druckplatte zu führen.
       MC_HOC_2017_05_Cole: Bringe den Spieler zur Schaufel.
+      MC_HOC_2017_05_Cole_2019: Bringe den Spieler zur Schaufel.
       MC_HOC_2017_05_Josh: Bringe den Spieler zur Schaufel.
       MC_HOC_2017_05_Kiki: Bringe den Spieler zum orangefarbenen Quadrat.
       MC_HOC_2017_06_Cole: Ändere diesen Code, um den Agenten eine Brücke über den
         Fluss bauen zu lassen.
+      MC_HOC_2017_06_Cole_2019: Ändere diesen Code, um den Agenten eine Brücke über
+        den Fluss bauen zu lassen.
       MC_HOC_2017_06_Josh: Ändere diesen Code, um den Agenten eine Brücke über den
         Fluss bauen zu lassen.
       MC_HOC_2017_06_Kiki: Ändere diesen Code, um den Agenten eine Brücke über den
         Fluss bauen zu lassen.
       MC_HOC_2017_07_Cole: Zerstöre das Eis und bringe {currentPlayerName} zur Lore.
+      MC_HOC_2017_07_Cole_2019: Zerstöre das Eis und bringe {currentPlayerName} zur
+        Lore.
       MC_HOC_2017_07_Kiki: Verwende die Funktion, um den Weg zum orangefarbenen Quadrat
         zu räumen.
       MC_HOC_2017_07a_Kiki: Räume den Weg zum orangefarbenen Quadrat.
@@ -1917,16 +1937,21 @@ de:
       MC_HOC_2017_10_Cole_old: Erstelle eine Funktion, um diese Lore fertigzustellen.
       MC_HOC_2017_10_Kiki: Erstelle eine Funktion, um diese Lore fertigzustellen.
       MC_HOC_2017_10_RETRY: Erstelle eine Funktion, um diese Lore fertigzustellen.
+      MC_HOC_2017_10_RETRY_2019: Erstelle eine Funktion, um diese Lore fertigzustellen.
       MC_HOC_2017_10_RYAN: Erstelle eine Funktion, um diese Lore fertigzustellen.
       MC_HOC_2017_10_RYAN2: Erstelle eine Funktion, um diese Lore fertigzustellen.
       MC_HOC_2017_13_Cole: "**Freies Spiel:**  Jetzt kannst du auf eigene Faust losziehen!"
       MC_HOC_2017_4.5v2: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_Ali: Verwende die Funktion, um einen Weg durch die Lava zu suchen.
+      MC_HOC_2017_Ali_2019: Verwende die Funktion, um einen Weg durch die Lava zu
+        suchen.
       MC_HOC_2017_FP10x10: "**Freies Spiel:** Schaffst du es, alle Diamanten in diesem
         Level einzusammeln? "
       MC_HOC_2017_FP10x10_RE: "**Freies Spiel:** Schaffst du es, alle Diamanten in
         diesem Level einzusammeln? "
       MC_HOC_2017_FP20x20: "**Freies Spiel:**  Jetzt kannst du auf eigene Faust losziehen!"
+      MC_HOC_2017_FP20x20_2019: "**Freies Spiel:**  Jetzt kannst du auf eigene Faust
+        losziehen!"
       MC_HOC_2017_Ryan_03: Verwende jetzt Schleifen, um den Agenten eine Brücke über
         den Fluss bauen zu lassen, indem er Blöcke im Wasser platziert.
       MC_HOC_2017_Ryan_05: Zerstöre diese Kakteen, sodass der Spieler das Ziel erreichen
@@ -2621,6 +2646,8 @@ de:
         alle drei Seiten sind gleich lang.'
       courseC_artist_prog5_2018: 'Dieses Haus braucht ein Dach! Zeichne das Dreieck.  Hinweis:
         alle drei Seiten sind gleich lang.'
+      courseC_artist_prog5_2019: 'Dieses Haus braucht ein Dach! Zeichne das Dreieck.  Hinweis:
+        alle drei Seiten sind gleich lang.'
       courseC_maze_debugging10: Bereinige diesen Level von Fehlern, indem du die Bausteine
         so anordnest, dass ich das Schwein erreiche.
       courseD_artist_binary1: |-
@@ -2660,6 +2687,8 @@ de:
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
       courseD_bee_nestedLoops8_2018: Sammle den gesamten Nektar jeder Blüte und erzeuge
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
+      courseD_bee_nestedLoops8_2019: Sammle den gesamten Nektar jeder Blüte und erzeuge
+        Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
       courseD_bounce_events10: Jetzt ist oben ein Tor. Hänge die Bausteine „Punkt
         erzielen“ und „Punkt für den Gegner“ an die Bausteine „Wenn Ball im Tor“ und
         „Wenn Ball Schläger verfehlt“, um ein Spiel zu erzeugen. Finde heraus, wie
@@ -2698,8 +2727,12 @@ de:
       courseD_maze_nestedLoops4_2018: |-
         Bring mich zu der Sonnenblume!
         (Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen.
+      courseD_maze_nestedLoops4_2019: |-
+        Bring mich zu der Sonnenblume!
+        (Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen.
       courseD_maze_nestedLoops6: Bring mich zu der Sonnenblume!
       courseD_maze_nestedLoops6_2018: Bring mich zu der Sonnenblume!
+      courseD_maze_nestedLoops6_2019: Bring mich zu der Sonnenblume!
       courseE_artist_functions1: 'Hallo. Ich Zombie-Künstler. Ich zeichnen liebe!
         Hilf mir, die quadratischen Gläser zu zeichnen.  Hinweis: Die Brücke zwischen
         den Gläsern ist 25 Pixel kürzer als die Länge der Quadrate.'
@@ -2739,11 +2772,16 @@ de:
         Level vor, um dies zu erreichen!
       courseF_artist_for7_2018: Nimm drei kleine Änderungen an dem Code aus dem vorherigem
         Level vor, um dies zu erreichen!
+      courseF_artist_for7_2019: Nimm drei kleine Änderungen an dem Code aus dem vorherigem
+        Level vor, um dies zu erreichen!
       courseF_artist_for_challenge1: Kriegst du heraus, wie man das Bild nachzeichnet?
       courseF_artist_for_challenge1_2018: Kriegst du heraus, wie man das Bild nachzeichnet?
+      courseF_artist_for_challenge1_2019: Kriegst du heraus, wie man das Bild nachzeichnet?
       courseF_artist_for_challenge2: Kriegst du heraus, wie man das Bild mit einer
         einzigen Schleife nachzeichnet?
       courseF_artist_for_challenge2_2018: Kriegst du heraus, wie man das Bild mit
+        einer einzigen Schleife nachzeichnet?
+      courseF_artist_for_challenge2_2019: Kriegst du heraus, wie man das Bild mit
         einer einzigen Schleife nachzeichnet?
       courseF_artist_fwp1: Bearbeite die Funktion "Zeichne ein Quadrat", um Fehler
         zu finden.
@@ -2791,8 +2829,13 @@ de:
       courseF_bee_for8_2018: |-
         Jetzt hast du es! Wie hoch sollte deine Schrittweite sein, um 3, 6, 9, 12, 15 Nektarportionen zu sammeln?
         Hinweis: Was musst du jeder Zahl hinzufügen, um die Zahl danach zu bekommen?
+      courseF_bee_for8_2019: |-
+        Jetzt hast du es! Wie hoch sollte deine Schrittweite sein, um 3, 6, 9, 12, 15 Nektarportionen zu sammeln?
+        Hinweis: Was musst du jeder Zahl hinzufügen, um die Zahl danach zu bekommen?
       courseF_bee_for_challenge2: Löse diese Aufgabe mit so wenig Bausteinen wie möglich.
       courseF_bee_for_challenge2_2018: Löse diese Aufgabe mit so wenig Bausteinen
+        wie möglich.
+      courseF_bee_for_challenge2_2019: Löse diese Aufgabe mit so wenig Bausteinen
         wie möglich.
       courseF_bee_for_challenge3: Löse diese Aufgabe mit so wenig Bausteinen wie möglich.
       courseF_bee_functions4: Die „bewege und hole Nektar“- Funktion dreht die Biene,

@@ -274,3 +274,8 @@ et:
         title: Liiguta, liiguta
       RelayProgramming_2018:
         title: Relee programmeerimine
+      courseB_unplugged_MRF_2019:
+        title: Minu robotsõbrad
+      Conditionals_2019:
+        title: Tingimuslaused
+        desc: 'Tingimuslausete kohta õppimiseks mängivad õpilased kaardimängu ja loovad reegleid nagu: "Kui tõmban kaardi, saan mina punkti" ja "Kui tõmban musta kaardi, saad sina punkti."'

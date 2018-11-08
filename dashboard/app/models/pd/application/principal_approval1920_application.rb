@@ -2,24 +2,25 @@
 #
 # Table name: pd_applications
 #
-#  id                  :integer          not null, primary key
-#  user_id             :integer
-#  type                :string(255)      not null
-#  application_year    :string(255)      not null
-#  application_type    :string(255)      not null
-#  regional_partner_id :integer
-#  status              :string(255)
-#  locked_at           :datetime
-#  notes               :text(65535)
-#  form_data           :text(65535)      not null
-#  created_at          :datetime         not null
-#  updated_at          :datetime         not null
-#  course              :string(255)
-#  response_scores     :text(65535)
-#  application_guid    :string(255)
-#  accepted_at         :datetime
-#  properties          :text(65535)
-#  deleted_at          :datetime
+#  id                          :integer          not null, primary key
+#  user_id                     :integer
+#  type                        :string(255)      not null
+#  application_year            :string(255)      not null
+#  application_type            :string(255)      not null
+#  regional_partner_id         :integer
+#  status                      :string(255)
+#  locked_at                   :datetime
+#  notes                       :text(65535)
+#  form_data                   :text(65535)      not null
+#  created_at                  :datetime         not null
+#  updated_at                  :datetime         not null
+#  course                      :string(255)
+#  response_scores             :text(65535)
+#  application_guid            :string(255)
+#  accepted_at                 :datetime
+#  properties                  :text(65535)
+#  deleted_at                  :datetime
+#  status_timestamp_change_log :text(65535)
 #
 # Indexes
 #
@@ -215,6 +216,34 @@ module Pd::Application
         [:plan_to_teach],
         [:how_heard]
       ]
+    end
+
+    # full_answers plus the other fields from form_data
+    def csv_data
+      sanitize_form_data_hash.tap do |hash|
+        additional_text_fields.each do |field_name, option, additional_text_field_name|
+          next unless hash.key? field_name
+
+          option ||= OTHER_WITH_TEXT
+          additional_text_field_name ||= "#{field_name}_other".to_sym
+          hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
+          hash.delete additional_text_field_name
+        end
+      end
+    end
+
+    def school
+      @school ||= School.includes(:school_district).find_by(id: sanitize_form_data_hash[:school])
+    end
+
+    def district_name
+      school ?
+        school.try(:school_district).try(:name).try(:titleize) :
+        sanitize_form_data_hash[:school_district_name]
+    end
+
+    def school_name
+      school ? school.name.try(:titleize) : sanitize_form_data_hash[:school_name]
     end
   end
 end

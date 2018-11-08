@@ -40,6 +40,8 @@ fr:
         finish_sign_up_header: Terminez la création de votre profil
         finish_sign_up_subheader: Remplissez les informations suivantes pour finir
           de créer votre compte Code.org.
+        finish_sign_up_subheader_provider: Remplissez les informations suivantes pour
+          compléter la création d'un Code.org avec <strong>%{provider}</strong> <strong>%{email}</strong>.
         error:
           future: ne peut pas être dans le futur
   hello: Bonjour tout le monde
@@ -53,6 +55,7 @@ fr:
   next_resource: Ressource suivante
   cancel: Annuler
   okay: OK
+  or: ou
   heading_x_of_y: "%{heading} (page %{x} sur %{y})"
   add_teacher_form:
     code:
@@ -89,6 +92,7 @@ fr:
   prize: prix
   more_info: Plus d'informations
   auth:
+    continue_with: Continuer avec %{provider}
     sign_in_with: Se connecter avec %{provider}
     signed_in: Connecté!
     signed_out: Déconnexion de <a href="%{url}">Code.org</a>.
@@ -104,6 +108,10 @@ fr:
     clever: Compte Clever
     powerschool: Compte Powerschool
     forgot_password: Mot de passe oublié ?
+    migration_success: Succès! Vous avez fait la mise à jour pour la nouvelle expérience
+      de compte.
+    demigration_success: La nouvelle expérience de compte est désormais désactivée
+      sur votre compte.
     need_confirmation: Pas reçu les instructions de confirmation ?
     need_unlock: Pas reçu les instructions de déverrouillage?
     not_linked: Désolé, ton compte Code.org n'est pas lié à ton %{provider}. Tu dois
@@ -112,7 +120,12 @@ fr:
       connecter avec votre compte Clever.
     unable_to_connect_provider: Impossible de connecter votre compte Code.org à votre
       %{provider}. Veuillez réessayer s'il vous plaît.
+    already_in_use: Votre compte de %{provider} est déjà connecté à un autre compte
+      de Code.org.
+    already_linked: Votre compte de %{provider} est déjà associé à votre compte de
+      Code.org.
   signup_form:
+    email_signup: Inscrivez-vous avec votre adresse email
     student_count: "%{count} élèves se sont déjà inscrits."
     teacher_count: "%{count} enseignants se sont déjà inscrits."
     overview: Inscrivez-vous pour suivre vos progression ou gérer votre classe. <a
@@ -145,6 +158,7 @@ fr:
     age: Age
     user_type: Êtes-vous un élève ou un enseignant ?
     submit: S’inscrire
+    go_to_account: Vers mon compte
     teacher: Êtes-vous un enseignant?
     valid_username: Disponible !
     invalid_username: Le nom d'utilisateur doit contenir au moins 5 caractères
@@ -156,6 +170,8 @@ fr:
       de service</a> et la <a href='http://code.org/privacy'> politique de confidentialité</a>.
     under_13_consent: Si j’ai moins de 13 ans, je confirme que j’ai l’autorisation
       de mes parents ou de mon tuteur légal pour utiliser les services de Code.org.
+    student_consent: Je confirme que j’ai l'autorisation de mes parents ou de mon
+      tuteur légal pour utiliser les services de Code.org.
     agree_us_website: J’accepte d’utiliser un site Web basé aux États-Unis.
     my_data_to_us: Des informations sur mon utilisation de ce site peuvent être envoyées
       et enregistrées ou traitées aux États-Unis.
@@ -215,7 +231,7 @@ fr:
     remember: Se souvenir de moi
     submit: Connexion
   signin:
-    try_heading: Tu souhaites essayer de coder sans t’inscrire?
+    try_heading: Vous souhaitez essayer de coder sans vous inscrire ?
     try_hoc: Essaie d'abord une Heure de Code
     try_20hours: Essaie notre Introduction de 20 heures à l'informatique
   signinsection:
@@ -260,6 +276,7 @@ fr:
     student_associated_subject: Informations de connexion pour Code.org
   teacher_mailer:
     new_teacher_subject: Bienvenue sur Code.org!
+    delete_teacher_subject: 'Notification de Code.org : votre compte a été supprimé'
   section:
     your_section:
       one: 'Ta section:'
@@ -267,6 +284,7 @@ fr:
     code_with_teacher: "%{section_code} avec %{teacher_name}"
     confirm:
       remove: Êtes-vous sûr de vouloir quitter cette section ?
+    default_name: Section sans titre
     remove: "(supprimer la section)"
     type:
       picture: Mot de passe par image
@@ -324,7 +342,7 @@ fr:
           (%{username}) et votre mot de passe
   nav:
     header:
-      finished_hoc: J'ai fini mon Heure de Code.
+      finished_hoc: J'ai fini mon Heure de Code
       sign_in_to_save: Connecte-toi pour enregistrer tes progrès.
       free_play:
         playlab: Crée une application
@@ -378,6 +396,7 @@ fr:
       signin: Connexion
       signup: Créer un compte
       already_registered: Déjà enregistré ?
+      pair_programming: Programmation en binôme
       team: Équipe
       driver: Pilote
       navigator: Navigateur
@@ -439,6 +458,9 @@ fr:
       les modifications)"
     delete: Supprimer votre compte
     delete_text: Cliquer sur le bouton ci-dessous supprimera votre compte.
+    delete_text_teacher_managed_note: Vous n’êtes pas autorisé à supprimer ce compte
+      parce qu’il est géré par votre enseignant. Votre enseignant devra vous supprimer
+      de ses sections pour qu vous puissiez supprimer votre compte.
     delete_text_teacher_note: 'Veuillez noter : supprimer votre compte ne supprimera
       pas les comptes de vos élèves.'
     delete_confirm: Êtes-vous sûr de vouloir supprimer votre compte ?
@@ -456,6 +478,8 @@ fr:
     create_personal_login_info: Si tu veux continuer d'utiliser ton compte Code.org
       après la fin de ton année scolaire, demande à tes parents ou ton tuteur de t'aider
       à créer tes propres informations de connexion.
+    create_personal_login_link_account: Vous pouvez choisir de vous connecter à un
+      compte personnel dans la section « Gérer les comptes liés ».
     create_personal_login_terms: En créant un login personnel, j'accepte les <a href='%{terms_of_service_url}',
       target='_blank'>termes et conditions</a> de Code.org . Si j'ai moins de 13 ans,
       je confirme en soumettant ce formulaire que j'ai l'autorisation des mes parents
@@ -867,6 +891,8 @@ fr:
       title: Minecraft
       body: Créez un jeu Minecraft. Créez vos propres versions des poulets, des moutons,
         des creepers, des zombies et bien d'autres encore.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
       body: Minecraft est de retour dans l'Heure de Code avec une toute nouvelle activité!

@@ -2,13 +2,44 @@
 zh-CN:
   data:
     display_name:
+      App Lab Intro 8 - Video Design Mode: 视频：设计模式
+      App Lab Intro 8 - Video Getting Started: 视频：开始
+      App Lab Intro 8 - Video Images and Sounds: 视频：图像和声音
+      App Lab Intro 8 - Video Share Your App: 视频：分享应用程序
+      AppLab Intro 3 - Change Screen Color: 更改屏幕颜色
+      AppLab Intro 3 - Change Text 2: 更改文本
+      AppLab Intro 3 - Change Text: 更改文本
+      AppLab Intro 3 - onEvent mouseOut: 使用 mouseout
+      AppLab Intro 4 - Change Screen Color: 更改屏幕颜色
+      AppLab Intro 4 - Change Text 2: 更改文本
+      AppLab Intro 4 - Change Text: 更改文本
+      AppLab Intro 4 - Video Welcome: 欢迎来到《编程一小时》
       AppLab Intro 4 - Video setProperty: 开始
+      AppLab Intro 5 - Change Screen Color: 更改屏幕颜色
+      AppLab Intro 5 - Change Text 2: 更改文本
+      AppLab Intro 5 - Change Text: 更改文本
+      AppLab Intro 6 - Change Screen Color: 更改屏幕颜色
+      AppLab Intro 6 - Change Text 2: 更改文本
       AppLab Intro 6 - Video welcome: 开始
+      AppLab Intro 7 - Change Screen Color: 更改屏幕颜色
+      AppLab Intro 7 - Change Text 2: 更改文本
       CSD Polling Events Map: 轮询事件
       CSD Polling Events Map_2018: 轮询事件
       CSD Timed Loop Map: 定时的循环
+      CSD U2 Heading Sizes: 标题大小
+      CSD U2 Heading Sizes_2018: 标题大小
+      CSD U2 Heading Test: 标题和段落
+      CSD U2 Heading Test_2018: 标题和段落
+      CSD U2 Inspector Warm Up: 浏览HTML
+      CSD U2 Inspector Warm Up_2018: 浏览HTML
+      CSD U2 Layout Properties Map: 布局属性
+      CSD U2 Layout Properties Map_2018: 布局属性
       CSD U2 Pair Programming Video: 结对编程
       CSD U2 Pair Programming Video_2018: 结对编程
+      CSD U2 RGB intro: RGB部件
+      CSD U2 RGB intro_2018: RGB部件
+      CSD U2 Style Sheet Map: CSS和样式表
+      CSD U2 Style Sheet Map_2018: CSS和样式表
       CSD U2 images map: HTML 中的图像
       CSD U2 images map_2018: HTML 中的图像
       CSD U3 Animation Tab Map: 动画标签页
@@ -42,6 +73,9 @@ zh-CN:
       CSD U3 L7 Freeplay_2018: 自由发挥
       CSD U3 L9 Freeplay: 自由发挥
       CSD U3 L9 Freeplay_2018: 自由发挥
+      CSD U3 Random Number Map Level: 随机数
+      CSD U3 Random Number Map Level_2018: 随机数
+      CSD U3 Random Number Map: 随机数
       CSD U3 Sprite Properties Map: 精灵属性
       CSD U3 Sprite Properties Map_2018: 精灵属性
       CSD U3 The Draw Loop Map: 绘制循环
@@ -65,6 +99,7 @@ zh-CN:
       CSD U6 setProperty Map: 使用代码设计屏幕
       CSD U6 setProperty Map_2018: 使用代码设计屏幕
       CourseEF_video_IntroSpriteLab: 这是精灵实验室
+      CourseEF_video_IntroSpriteLab_2019: 这是精灵实验室
       MC_HOC_2017_FP10x10: 自由发挥
       MC_HOC_2017_FP10x10_RE: 自由发挥
       SG U3L07 More Subgoals: 使用文档

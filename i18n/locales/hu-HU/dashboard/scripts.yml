@@ -1566,3 +1566,13 @@ hu:
           stages:
             Artist:
               name: Művész
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Alapozás
+            Conditionals with Cards:
+              name: Feltételek kártyákkal
+            Envelope Variables:
+              name: Boríték változók
+            For Loop Fun:
+              name: Szórakozás a For ciklussal

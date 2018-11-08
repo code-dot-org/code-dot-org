@@ -15,7 +15,7 @@ export default class StudentHomepage extends Component {
     topCourse: shapes.topCourse,
     sections: shapes.sections,
     canViewAdvancedTools: PropTypes.bool,
-    includeDanceParty: PropTypes.bool
+    includeDanceParty: PropTypes.bool,
   };
 
   componentDidMount() {

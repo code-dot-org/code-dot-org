@@ -252,7 +252,9 @@ hu:
             '"left"': balra nyíl
             '"right"': jobbra nyíl
             '"w"': Nyugat
+            '"a"': A
             '"s"': Dél
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -261,7 +263,9 @@ hu:
             '"left"': balra nyíl
             '"right"': jobbra nyíl
             '"w"': Nyugat
+            '"a"': A
             '"s"': Dél
+            '"d"': D
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -275,6 +279,18 @@ hu:
         text: fordulj balra
       RyanLab_turnRight:
         text: fordulj jobbra
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': méret
+            '"x"': x pozíció
+            '"y"': y-pozíció
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': méret
+            '"x"': x pozíció
+            '"y"': y-pozíció
       craft_ifPath:
         options:
           DIR:

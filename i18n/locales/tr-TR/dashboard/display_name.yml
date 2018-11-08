@@ -1,8 +1,79 @@
 tr:
   data:
     display_name:
+      App Lab Intro 8 - Video Getting Started: 'Video: İşe Başlama'
+      App Lab Intro 8 - Video Images and Sounds: 'Video: Görüntüler ve Sesler'
+      App Lab Intro 8 - Video Make It Interactive: 'Video: Etkileşimli Hale Getir'
+      App Lab Intro 8 - Video Share Your App: 'Video: Uygulamanı Paylaş'
+      AppLab Intro 3 - Change Screen Color: Ekran Rengini Değiştir
+      AppLab Intro 3 - Change Text 2: Yazıyı Değiştir
+      AppLab Intro 3 - Change Text: Yazıyı Değiştir
+      AppLab Intro 3 - Change Two Buttons: İki Buton
+      AppLab Intro 3 - Full Text: İki Buton
+      AppLab Intro 3 - onEvent before: Daha fazla onEvent Alıştırması
+      AppLab Intro 3 - onEvent intro: Butonları Çalışır Hale Getir
+      AppLab Intro 3 - onEvent mouseInOut: Daha fazla onEvent Alıştırması
+      AppLab Intro 3 - onEvent mouseOut: mouseOut Kullanımı
+      AppLab Intro 3 - onEvent mouseOver: mouseOver Kullanımı
+      AppLab Intro 3 - onEvent twoButtons: Daha fazla onEvent Alıştırması
+      AppLab Intro 3 - playSound: playSound Kullanımı
+      AppLab Intro 3 - share and keep going: Bu ya da Şu
+      AppLab Intro 3 - stopSound: playSound Kullanımı
+      AppLab Intro 3 - thisOrThat: Bu ya da Şu
+      AppLab Intro 4 - Change Screen Color: Ekran Rengini Değiştir
+      AppLab Intro 4 - Change Text 2: Yazıyı Değiştir
+      AppLab Intro 4 - Change Text: Yazıyı Değiştir
+      AppLab Intro 4 - Change Two Buttons: İki Buton
+      AppLab Intro 4 - Full Text: İki Buton
+      AppLab Intro 4 - Video Welcome: Kod Saati'ne Hoşgeldiniz
       AppLab Intro 4 - Video setProperty: İlk adım
+      AppLab Intro 4 - onEvent before: Daha fazla onEvent Alıştırması
+      AppLab Intro 4 - onEvent intro: Butonları Çalışır Hale Getir
+      AppLab Intro 4 - onEvent mouseOver: mouseOver Kullanımı
+      AppLab Intro 4 - onEvent twoButtons: Daha fazla onEvent Alıştırması
+      AppLab Intro 4 - playSound: playSound Kullanımı
+      AppLab Intro 4 - stopSound: playSound Kullanımı
+      AppLab Intro 4 - thisOrThat: Bu ya da Şu
+      AppLab Intro 5 - Change Screen Color: Ekran Rengini Değiştir
+      AppLab Intro 5 - Change Text 2: Yazıyı Değiştir
+      AppLab Intro 5 - Change Text: Yazıyı Değiştir
+      AppLab Intro 5 - Change Two Buttons: İki Buton
+      AppLab Intro 5 - Full Text: İki Buton
+      AppLab Intro 5 - addButton: playSound Kullanımı
+      AppLab Intro 5 - go further: playSound Kullanımı
+      AppLab Intro 5 - onEvent intro: Butonları Çalışır Hale Getir
+      AppLab Intro 5 - onEvent twoButtons: Daha fazla onEvent Alıştırması
+      AppLab Intro 5 - playSound: playSound Kullanımı
+      AppLab Intro 5 - rate it app: playSound Kullanımı
+      AppLab Intro 5 - setScreen: playSound Kullanımı
+      AppLab Intro 5 - share keep going: playSound Kullanımı
+      AppLab Intro 5 - socialTemplate: playSound Kullanımı
+      AppLab Intro 6 - Change Screen Color: Ekran Rengini Değiştir
+      AppLab Intro 6 - Change Text 2: Yazıyı Değiştir
+      AppLab Intro 6 - Full Text: İki Buton
       AppLab Intro 6 - Video welcome: İlk adım
+      AppLab Intro 6 - animalSoundBoard: playSound Kullanımı
+      AppLab Intro 6 - blankApp: playSound Kullanımı
+      AppLab Intro 6 - onEvent intro: Butonları Çalışır Hale Getir
+      AppLab Intro 6 - onEvent twoButtons: Daha fazla onEvent Alıştırması
+      AppLab Intro 6 - playSound Template: playSound Kullanımı
+      AppLab Intro 6 - playSound: playSound Kullanımı
+      AppLab Intro 6 - quizApp: playSound Kullanımı
+      AppLab Intro 6 - thisOrThatAddButton Template: Bu ya da Şu
+      AppLab Intro 6 - thisOrThatAddButton: Bu ya da Şu
+      AppLab Intro 6 - thisOrThatAddScreen: Bu ya da Şu
+      AppLab Intro 6 - thisOrThatPersonalize: Bu ya da Şu
+      AppLab Intro 6 - thisOrThatSetScreen: Bu ya da Şu
+      AppLab Intro 7 - Change Screen Color: Ekran Rengini Değiştir
+      AppLab Intro 7 - Change Text 2: Yazıyı Değiştir
+      AppLab Intro 7 - Full Text: İki Buton
+      AppLab Intro 7 - onEvent intro: Butonları Çalışır Hale Getir
+      AppLab Intro 7 - onEvent twoButtons: Daha fazla onEvent Alıştırması
+      AppLab Intro 7 - playSound: playSound Kullanımı
+      AppLab Intro 7 - thisOrThatAddButton: Bu ya da Şu
+      AppLab Intro 7 - thisOrThatAddScreen: Bu ya da Şu
+      AppLab Intro 7 - thisOrThatPersonalize: Bu ya da Şu
+      AppLab Intro 7 - thisOrThatSetScreen: Bu ya da Şu
       CSD Polling Events Map: Yoklama olayları
       CSD Polling Events Map_2018: Yoklama olayları
       CSD Timed Loop Map: Zamanlanmış döngü

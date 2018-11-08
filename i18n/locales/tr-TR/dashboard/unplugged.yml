@@ -276,3 +276,9 @@ tr:
         title: Dijital Paylaşım
       RelayProgramming_2018:
         title: Röle Programlama
+      courseB_unplugged_MRF_2019:
+        title: Robot dostlarım
+        desc: Arkadaşların için kod yazarak programlamayı öğren!
+      Conditionals_2019:
+        title: Koşullar
+        desc: Koşullu ifadeleri öğrenmek için öğrenciler kart oyunu oynayacak. Burada eğer kırmızı kartı çekersem puan alırım, eğer siyah kartı çekersem sen bir puan alırsın gibi kurallar yaratacaklar

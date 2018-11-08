@@ -51,13 +51,13 @@ lv:
         2-3_Artist_Functions_12_a: Pamēģini vispirms palaist kodu, lai apskatītos
           ko nepieciešams pievienot.
       2-3 Artist Functions 2 a_authored_hint:
-        2-3_Artist_Functions_2_a: |
+        2-3_Artist_Functions_2_a: |-
           Tavai programmai nepieciešams:
            - izmantot funkciju
            - pārvietoties uz priekšu 100+75 punktus
            - izmantot funkciju
       2-3 Artist Functions 2_authored_hint:
-        2-3_Artist_Functions_2_a: |
+        2-3_Artist_Functions_2_a: |-
           Tavai programmai nepieciešams:
            - izmantot funkciju
            - pārvietoties uz priekšu 100+75 punktus
@@ -84,7 +84,7 @@ lv:
           name=\"VALUE\" config=\"45,60,90,120,180\">90</title>\n<next>\n<block type=\"draw_move_by_constant\">\n<title
           name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">50</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</xml>\n
           \nroot -> data -> authored_hints -> 2-3 Artist Loops New 11_authored_hint
-          -> 2-3_Artist_Loops_New_11_a\nhttps://studio.code.org/s/course2/stage/7/puzzle/9\n"
+          -> 2-3_Artist_Loops_New_11_a\nhttps://studio.code.org/s/course2/stage/7/puzzle/9"
       2-3 Artist Loops New 12_authored_hint:
         2-3_Artist Loops_New_12_c: Māksliniekam jāpagriežas pa labi tikai par 60 grādiem,
           lai veidotos plats leņķis.
@@ -352,7 +352,7 @@ lv:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
       courseD_artist_functions2_authored_hint:
-        courseD_artist_functions2_a: |
+        courseD_artist_functions2_a: |-
           Tavai programmai nepieciešams:
            - izmantot funkciju
            - pārvietoties uz priekšu 100+75 punktus
@@ -376,7 +376,7 @@ lv:
           ka pirms sākt zīmēt otru kvadrātu nepieciešams lekt uz priekšu 175 punktus.
         courseE_artist_functions1_b: Tas nekas, ja zīmējot brilles līnijas pārklājas.
       courseE_artist_functions2_authored_hint:
-        courseD_artist_functions2_a: |
+        courseD_artist_functions2_a: |-
           Tavai programmai nepieciešams:
            - izmantot funkciju
            - pārvietoties uz priekšu 100+75 punktus
@@ -416,7 +416,7 @@ lv:
           ka pirms sākt zīmēt otru kvadrātu nepieciešams lekt uz priekšu 175 punktus.
         2-3_Artist_Functions_1_b: Tas nekas, ja zīmējot brilles līnijas pārklājas.
       grade4_artist_functions2_authored_hint:
-        2-3_Artist_Functions_2_a: |
+        2-3_Artist_Functions_2_a: |-
           Tavai programmai nepieciešams:
            - izmantot funkciju
            - pārvietoties uz priekšu 100+75 punktus
@@ -450,6 +450,9 @@ lv:
         grade5_artist_variables_triangles1_b: Izmanto 'atkārtot' ciklu, lai kods būtu
           īsāks.
       grade5_artist_variables_triangles1_2018_authored_hint:
+        grade5_artist_variables_triangles1_b: Izmanto 'atkārtot' ciklu, lai kods būtu
+          īsāks.
+      grade5_artist_variables_triangles1_2019_authored_hint:
         grade5_artist_variables_triangles1_b: Izmanto 'atkārtot' ciklu, lai kods būtu
           īsāks.
       level 'grade3_Loops_10_authored_hint:

@@ -30,6 +30,7 @@ en:
             '"PINEAPPLE"': all pineapples
             '"ROBOT"': all robots
             '"SHARK"': all sharks
+            '"UNICORN"': all unicorns
           MOVE:
             MOVES.ClapHigh: Clap High
             MOVES.Clown: Clown
@@ -38,8 +39,8 @@ en:
             MOVES.Drop: Drop
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Kick: Kick
             MOVES.Roll: Roll
+            MOVES.Kick: Star
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Thiller
             '"next"': "(Next)"
@@ -60,8 +61,8 @@ en:
             MOVES.Drop: Drop
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Kick: Kick
             MOVES.Roll: Roll
+            MOVES.Kick: Star
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Thriller
             '"next"': "(Next)"
@@ -96,6 +97,7 @@ en:
             '"PINEAPPLE"': all pineapples
             '"ROBOT"': all robots
             '"SHARK"': all sharks
+            '"UNICORN"': all unicorns
           MOVE:
             MOVES.ClapHigh: Clap High
             MOVES.Clown: Clown
@@ -104,8 +106,8 @@ en:
             MOVES.Drop: Drop
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Kick: Kick
             MOVES.Roll: Roll
+            MOVES.Kick: Star
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Thriller
             '"next"': "(Next)"
@@ -126,8 +128,8 @@ en:
             MOVES.Drop: Drop
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Kick: Kick
             MOVES.Roll: Roll
+            MOVES.Kick: Star
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Thriller
             '"next"': "(Next)"
@@ -194,11 +196,23 @@ en:
             '4': Drop
             '5': Floss
             '6': Fresh
-            '7': Kick
             '9': Roll
+            '7': Star
             '10': This or That
             '11': Thriller
             '8': None
+      Dancelab_ifTime:
+        text: |-
+          if {UNIT} is {OP} {N}
+           {DO1} {DO2}
+        options:
+          UNIT:
+            '"measures"': measures
+            '"seconds"': seconds
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} jump to {LOCATION}"
         options:
@@ -229,10 +243,14 @@ en:
             '"ROBOT"': all robots
             '"SHARK"': all sharks
           FORMAT:
+            '"border"': border
+            '"inner"': inside square
             '"circle"': circle
             '"grid"': grid
             '"row"': row
             '"column"': column
+            '"x"': criss-cross
+            '"plus"': plus
             '"random"': random
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -317,10 +335,34 @@ en:
             '"disco"': Squares
             '"rainbow"': Colors
             '"diamonds"': Diamonds
-            "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]": "(Random)"
+            '"splatter"': Bubbles
+            '"swirl"': Hypno
+            '"spiral"': Spiral
+            "['disco', 'rainbow', 'diamonds','splatter','swirl','spiral'][randomInt(0,5)]": "(Random)"
       Dancelab_setDanceSpeed:
-        text: change {SPRITE} dance speed to {SPEED}
+        text: set {SPRITE} dance speed to {SPEED}
         options:
+          SPEED:
+            '4': very fast
+            '2': fast
+            '1': normal
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        text: set {GROUP} dance speed to {SPEED}
+        options:
+          GROUP:
+            sprites: all
+            '"ALIEN"': all aliens
+            '"BEAR"': all bears
+            '"CAT"': all cats
+            '"DOG"': all dogs
+            '"DUCK"': all ducks
+            '"FROG"': all frogs
+            '"MOOSE"': all moose
+            '"PINEAPPLE"': all pineapples
+            '"ROBOT"': all robots
+            '"SHARK"': all sharks
           SPEED:
             '4': very fast
             '2': fast
@@ -335,7 +377,8 @@ en:
             '"strobe"': Strobe
             '"rain"': Rain
             '"raining_tacos"': Tacos
-            "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": "(Random)"
+            '"spotlight"': Spotlight
+            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Random)"
       Dancelab_setProp:
         text: 'set {SPRITE} {PROPERTY} to {VAL} '
         options:
@@ -382,15 +425,42 @@ en:
             '"y"': vertical position
       Dancelab_setTint:
         text: set {SPRITE} tint to {VAL}
+      Dancelab_setTintEach:
+        text: set {THIS} tint to {VAL}
+        options:
+          THIS:
+            sprites: all
+            '"ALIEN"': all aliens
+            '"BEAR"': all bears
+            '"CAT"': all cats
+            '"DOG"': all dogs
+            '"DUCK"': all ducks
+            '"FROG"': all frogs
+            '"MOOSE"': all moose
+            '"PINEAPPLE"': all pineapples
+            '"ROBOT"': all robots
+            '"SHARK"': all sharks
+      Dancelab_setVisible:
+        text: set {SPRITE} visible to {VISIBILITY}
+        options:
+          VISIBILITY:
+            'true': visible
+            'false': invisible
       Dancelab_setVisibleEach:
         text: set {THIS} visibility to {VISIBILITY}
         options:
           THIS:
             sprites: all
-            '"alien"': Aliens
-            '"mrwiggles"': MrWiggles
-            '"pizza"': Pizzas
-            '"unicorn"': Unicorns
+            '"ALIEN"': all aliens
+            '"BEAR"': all bears
+            '"CAT"': all cats
+            '"DOG"': all dogs
+            '"DUCK"': all ducks
+            '"FROG"': all frogs
+            '"MOOSE"': all moose
+            '"PINEAPPLE"': all pineapples
+            '"ROBOT"': all robots
+            '"SHARK"': all sharks
           VISIBILITY:
             'true': visible
             'false': invisible
@@ -430,14 +500,47 @@ en:
         options:
           KEY:
             '"up"': up
-            '"down"': down
             '"left"': left
+            '"down"': down
             '"right"': right
             '"space"': space
+            '"enter"': enter
             '"a"': a
-            '"w"': w
-            '"s"': s
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: when {RANGE} peak
         options:

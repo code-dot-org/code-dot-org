@@ -401,10 +401,15 @@ hy:
         honey at the honeycomb. \\\r\n\\\r\nUse a nested loop. "
       courseD_bee_nestedLoops8_2018: "Collect all of the nectar from each flower\nand
         make honey at the honeycomb. \\\r\n\\\r\nUse a nested loop. "
+      courseD_bee_nestedLoops8_2019: "Collect all of the nectar from each flower\nand
+        make honey at the honeycomb. \\\r\n\\\r\nUse a nested loop. "
       courseD_maze_nestedLoops4: "Get me to the sunflower using the fewest blocks\npossible!
         \ \\\r\n\\\r\nTry using one `repeat` loop inside of another to cut down\non
         the amount of code you need."
       courseD_maze_nestedLoops4_2018: "Get me to the sunflower using the fewest blocks\npossible!
+        \ \\\r\n\\\r\nTry using one `repeat` loop inside of another to cut down\non
+        the amount of code you need."
+      courseD_maze_nestedLoops4_2019: "Get me to the sunflower using the fewest blocks\npossible!
         \ \\\r\n\\\r\nTry using one `repeat` loop inside of another to cut down\non
         the amount of code you need."
       courseE_bee_functions3: "Functions are blocks of code that perform\na task.
@@ -420,6 +425,9 @@ hy:
         Solve this puzzle with the fewest number of blocks
         possible.
       courseF_bee_for_challenge2_2018: |-
+        Solve this puzzle with the fewest number of blocks
+        possible.
+      courseF_bee_for_challenge2_2019: |-
         Solve this puzzle with the fewest number of blocks
         possible.
       frozen circle function in circle: |-

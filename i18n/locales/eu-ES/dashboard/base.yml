@@ -28,6 +28,7 @@ eu:
   unsubmit: Bidalketa ezeztatu
   cancel: "Ezeztatu"
   okay: "Ongi da"
+  or: "edo"
   add_teacher_form:
     code:
       label: 'Irakaslea gehitu:'
@@ -401,6 +402,8 @@ eu:
       title: "Minecraft"
       body: "Esploratu Minecraft mundu bat kodearen bitartez."
     minecraft2016:
+      title: "Minecraft"
+    aquatic:
       title: "Minecraft"
     hero:
       title: "Minecraft"

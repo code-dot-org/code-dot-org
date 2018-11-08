@@ -221,7 +221,7 @@ id:
       4-5 Artist 11_authored_hint:
         4-5_Artist_11_a: Dalam loop anda, pastikan artis melompat ke atas dan mundur setelah gambar setiap baris.
       4-5 Artist 3_authored_hint:
-        4-5_Artist_3_a: |2
+        4-5_Artist_3_a: |-
           Jika tempat tidur bunga adalah 600 piksel di sekitar dan dua sisi 200 piksel lama, berikut adalah cara untuk mencari tahu apa sisi pendek menambahkan hingga:
           
            ** 600-200 - 200 = 200 **
@@ -619,6 +619,9 @@ id:
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: Jika anda menyebut fungsi dengan benar, ini adalah jalan yang akan anda tempuh...
         Function_intro_Ryan_a: Kamu bisa memanggil fungsi berulang kali di dalam program!  Coba panggil dua kali untuk memecahkan teka-teki ini.
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_b: Jika anda menyebut fungsi dengan benar, ini adalah jalan yang akan anda tempuh...
+        Function_intro_Ryan_a: Kamu bisa memanggil fungsi berulang kali di dalam program!  Coba panggil dua kali untuk memecahkan teka-teki ini.
       Harvesting_authored_hint:
         pointer_harvester_test: Blok apa yang dapat saya gunakan untuk memeriksa sesuatu dan membuat keputusan?
       Inspirational Artwork_authored_hint:
@@ -660,7 +663,18 @@ id:
         MC_HOC_2017_01_RETRY_a: Tarik satu blok `pindah maju` dari kotak alat ke ruang kerja dan posisikan di bawah blok `ketika dijalankan`.
         MC_HOC_2017_01_RETRY_b: Jangan lupa klik "Jalankan" untuk menjalankan kode untuk Agent.
         MC_HOC_2017_01_RETRY_c: Setelah Agent menjalankan semua kodenya, kamu bisa memindahkan pemain dengan tombol panah!
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Tarik satu blok `pindah maju` dari kotak alat ke ruang kerja dan posisikan di bawah blok `ketika dijalankan`.
+        MC_HOC_2017_01_RETRY_b: Jangan lupa klik "Jalankan" untuk menjalankan kode untuk Agent.
+        MC_HOC_2017_01_RETRY_c: Setelah Agent menjalankan semua kodenya, kamu bisa memindahkan pemain dengan tombol panah!
       MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Pindahkan Agent maju dua ruang untuk berdiri di atas pelat tekanan.  Hal ini akan membuka pintu bagi pemainmu.
+        MC_HOC_2017_02_Cole_b: |-
+          Tekan "Jalankan"! 
+          Kamu bisa menjalankan kodemu meskipun tidak benar.  Jalankan dan atur ulang kodemu berulang kali hingga kamu mengetahui apa yang salah.
+        MC_HOC_2017_02_Cole_c: Setelah Agent membuka pintu, gunakan tombol panah untuk memindahkan pemain ke peta!
+        MC_HOC_2017_02_Cole_d: Pastikan Agen mengikuti jalan yang telah digariskan pada peta!
+      MC_HOC_2017_02_Cole_2019_authored_hint:
         MC_HOC_2017_02_Cole_a: Pindahkan Agent maju dua ruang untuk berdiri di atas pelat tekanan.  Hal ini akan membuka pintu bagi pemainmu.
         MC_HOC_2017_02_Cole_b: |-
           Tekan "Jalankan"! 
@@ -676,11 +690,17 @@ id:
       MC_HOC_2017_03_Cole_authored_hint:
         MC_HOC_2017_03_Cole_a: Setelah kamu membawa Agent ke pelat tekanan, kamu bisa menggunakan tombol panah untuk membuat pemain berjalan ke kompas!
         MC_HOC_2017_03_Cole_b: Apakah kodenya terlihat agak panjang?  Coba gunakan loop `ulangi` dan lihat apakah kamu bisa mengetahui cara membuatnya lebih pendek!
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_a: Setelah kamu membawa Agent ke pelat tekanan, kamu bisa menggunakan tombol panah untuk membuat pemain berjalan ke kompas!
+        MC_HOC_2017_03_Cole_b: Apakah kodenya terlihat agak panjang?  Coba gunakan loop `ulangi` dan lihat apakah kamu bisa mengetahui cara membuatnya lebih pendek!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
           Melintasi kedua pelat tekanan ini akan membuka jalur bagi pemain. 
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Gunakan blok `belok kanan` untuk mengubah arah Agent'
+        MC_HOC_2017_04POINT5_RYAN_a: Agent hanya perlu mencapai pelat tekanan pertama untuk memungkinkan Alex atau Steve lewat menuju kapak.
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
         MC_HOC_2017_04POINT5_RYAN_b: 'Gunakan blok `belok kanan` untuk mengubah arah Agent'
         MC_HOC_2017_04POINT5_RYAN_a: Agent hanya perlu mencapai pelat tekanan pertama untuk memungkinkan Alex atau Steve lewat menuju kapak.
       MC_HOC_2017_04_Cole_authored_hint:
@@ -689,7 +709,16 @@ id:
           Tekan "Jalankan"! 
           Kamu bisa menjalankan kodemu meskipun tidak benar.  Jalankan dan atur ulang kodemu berulang kali hingga kamu mengetahui apa yang salah.
         MC_HOC_2017_04_Cole_b: Setelah Agent mencapai pelat tekanan, ia akan membuka pintu untuk pemain.
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_a: Agent perlu `pindah maju` 7 kali.  Bagaimana kamu bisa menggunakan loop `ulangi` untuk mewujudkannya?
+        MC_HOC_2017_04_Cole_c: |-
+          Tekan "Jalankan"! 
+          Kamu bisa menjalankan kodemu meskipun tidak benar.  Jalankan dan atur ulang kodemu berulang kali hingga kamu mengetahui apa yang salah.
+        MC_HOC_2017_04_Cole_b: Setelah Agent mencapai pelat tekanan, ia akan membuka pintu untuk pemain.
       MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Tahukah kamu bahwa kamu bisa memasukkan lebih dari satu bagian kode ke dalam loop?  Coba tempatkan papan **dan** maju ke dalam `ulangi` untuk menyelesaikan teka-teki ini.
+        MC_HOC_2017_05_Cole_b: Dapatkanlah agen di seberang sungai, sedang membangun jembatan untuk Anda pergi.
+      MC_HOC_2017_05_Cole_2019_authored_hint:
         MC_HOC_2017_05_Cole_a: Tahukah kamu bahwa kamu bisa memasukkan lebih dari satu bagian kode ke dalam loop?  Coba tempatkan papan **dan** maju ke dalam `ulangi` untuk menyelesaikan teka-teki ini.
         MC_HOC_2017_05_Cole_b: Dapatkanlah agen di seberang sungai, sedang membangun jembatan untuk Anda pergi.
       MC_HOC_2017_05_Josh_authored_hint:
@@ -697,9 +726,16 @@ id:
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: Berapa kali loop ini berjalan?  Berapa kali hal ini *harus* dijalankan?
         MC_HOC_2017_06_Cole_b: 'Bantu agen membangun jembatan sepanjang jalan melintasi air! '
+      MC_HOC_2017_06_Cole_2019_authored_hint:
+        MC_HOC_2017_06_Cole_a: Berapa kali loop ini berjalan?  Berapa kali hal ini *harus* dijalankan?
+        MC_HOC_2017_06_Cole_b: 'Bantu agen membangun jembatan sepanjang jalan melintasi air! '
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Coba masukkan lebih dari satu instruksi ke dalam loop `ulangi`!
       MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_c: Semua kamu perlu memiliki agen adalah jalan pasti menuju Minecart.
+        MC_HOC_2017_07_Cole_a: Untuk memecahkan teka-teki ini, cari tahu apa kegunaan fungsi `bersihkan jalur` dan panggil sebanyak yang kamu butuhkan menggunakan blok `bersihkan jalur` kecil berwarna hijau dari kotak alat.
+        MC_HOC_2017_07_Cole_b: Coba campurkan blok fungsi dengan blok lain dari kotak alat untuk membantu kamu mengatasi teka-teki ini.
+      MC_HOC_2017_07_Cole_2019_authored_hint:
         MC_HOC_2017_07_Cole_c: Semua kamu perlu memiliki agen adalah jalan pasti menuju Minecart.
         MC_HOC_2017_07_Cole_a: Untuk memecahkan teka-teki ini, cari tahu apa kegunaan fungsi `bersihkan jalur` dan panggil sebanyak yang kamu butuhkan menggunakan blok `bersihkan jalur` kecil berwarna hijau dari kotak alat.
         MC_HOC_2017_07_Cole_b: Coba campurkan blok fungsi dengan blok lain dari kotak alat untuk membantu kamu mengatasi teka-teki ini.
@@ -718,6 +754,9 @@ id:
       MC_HOC_2017_10_RETRY_authored_hint:
         MC_HOC_2017_10_Cole_b: Tidak tahu pergi ke mana? Lihat apakah anda dapat menemukan garis putus-putus!
         MC_HOC_2017_10_Cole_a: Gunakan fungsi untuk mempermudah pemecahan teka-teki ini!
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_b: Tidak tahu pergi ke mana? Lihat apakah anda dapat menemukan garis putus-putus!
+        MC_HOC_2017_10_Cole_a: Gunakan fungsi untuk mempermudah pemecahan teka-teki ini!
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Coba buat Agent membangun beberapa jembatan sehingga Alex atau Steve bisa berjalan-jalan di sekitar tepi peta.
       MC_HOC_2017_4.5v2_authored_hint:
@@ -730,7 +769,15 @@ id:
           Kamu bisa menjalankan kodemu meskipun tidak benar.  Jalankan dan atur ulang kodemu berulang kali hingga kamu mengetahui apa yang salah.
         MC_HOC_2017_08_RY_b: Ada BANYAK cara untuk memecahkan teka-teki ini.  Cobalah beberapa!
         MC_HOC_2017_08_RY_c: Cobalah mengikuti garis putus-putus untuk jalan mudah melewati lahar.
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: |-
+          Tekan "Jalankan"! 
+          Kamu bisa menjalankan kodemu meskipun tidak benar.  Jalankan dan atur ulang kodemu berulang kali hingga kamu mengetahui apa yang salah.
+        MC_HOC_2017_08_RY_b: Ada BANYAK cara untuk memecahkan teka-teki ini.  Cobalah beberapa!
+        MC_HOC_2017_08_RY_c: Cobalah mengikuti garis putus-putus untuk jalan mudah melewati lahar.
       MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Coba buat Agent membangun beberapa jembatan sehingga Alex atau Steve bisa berjalan-jalan di sekitar tepi peta.
+      MC_HOC_2017_FP20x20_2019_authored_hint:
         MC_HOC_2017_13_Cole_a: Coba buat Agent membangun beberapa jembatan sehingga Alex atau Steve bisa berjalan-jalan di sekitar tepi peta.
       NEW Course 4 Artist Functions 13_authored_hint:
         NEW_Course_4_Artist_Functions_13_a: Mencoba mengedit `gambar sebuah garis dari kotak` sehingga fungsi anda tidak perlu menyebutnya dua kali.
@@ -1894,9 +1941,14 @@ id:
       courseC_artist_prog2_2018_authored_hint:
         courseC_artist_prog2_a: 'Jika Anda menggunakan blok agar saya ''bergerak maju dengan 100 pixel'', saya akan menarik garis secara otomatis.'
         courseC_artist_prog2_b: Kesulitan mengubah sudut? Gunakan blok 'belok kanan 90 derajat'.
+      courseC_artist_prog2_2019_authored_hint:
+        courseC_artist_prog2_a: 'Jika Anda menggunakan blok agar saya ''bergerak maju dengan 100 pixel'', saya akan menarik garis secara otomatis.'
+        courseC_artist_prog2_b: Kesulitan mengubah sudut? Gunakan blok 'belok kanan 90 derajat'.
       courseC_artist_prog3_authored_hint:
         courseC_artist_prog3_b: Ingin membuat kode lebih pendek? Coba gunakan satu lingkaran dalam teka-teki ini.
       courseC_artist_prog3_2018_authored_hint:
+        courseC_artist_prog3_b: Ingin membuat kode lebih pendek? Coba gunakan satu lingkaran dalam teka-teki ini.
+      courseC_artist_prog3_2019_authored_hint:
         courseC_artist_prog3_b: Ingin membuat kode lebih pendek? Coba gunakan satu lingkaran dalam teka-teki ini.
       courseC_artist_prog4_authored_hint:
         courseC_artist_prog4_a: Untuk menyelesaikan roketnya, cukup menggambar segitiga di atas!
@@ -1904,6 +1956,11 @@ id:
         courseC_artist_prog4_c: |-
           Untuk menggambar segitiga, Anda ingin: - bergerak maju - belok ke kiri 120 derajat - bergerak maju - belok ke kiri 120 derajat - maju terus
       courseC_artist_prog4_2018_authored_hint:
+        courseC_artist_prog4_a: Untuk menyelesaikan roketnya, cukup menggambar segitiga di atas!
+        courseC_artist_prog4_b: Anda bisa menggunakan menu drop dwon pada blok `ubah` untuk melihat sudut mana yang Anda butuhkan!
+        courseC_artist_prog4_c: |-
+          Untuk menggambar segitiga, Anda ingin: - bergerak maju - belok ke kiri 120 derajat - bergerak maju - belok ke kiri 120 derajat - maju terus
+      courseC_artist_prog4_2019_authored_hint:
         courseC_artist_prog4_a: Untuk menyelesaikan roketnya, cukup menggambar segitiga di atas!
         courseC_artist_prog4_b: Anda bisa menggunakan menu drop dwon pada blok `ubah` untuk melihat sudut mana yang Anda butuhkan!
         courseC_artist_prog4_c: |-
@@ -1916,11 +1973,19 @@ id:
         courseC_artist_prog5_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
         courseC_artist_prog5_c: Anda bisa menggunakan menu drop dwon pada blok `ubah` untuk melihat sudut mana yang Anda butuhkan!
         courseC_artist_prog5_d: Setiap putaran harus 90 derajat ke kanan.
+      courseC_artist_prog5_2019_authored_hint:
+        courseC_artist_prog5_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_artist_prog5_c: Anda bisa menggunakan menu drop dwon pada blok `ubah` untuk melihat sudut mana yang Anda butuhkan!
+        courseC_artist_prog5_d: Setiap putaran harus 90 derajat ke kanan.
       courseC_artist_prog6_authored_hint:
         courseC_artist_prog6_a: Seniman sudah menghadapi cara yang benar untuk menggambar garis pertamanya.
         courseC_artist_prog6_b: Berlian ini nyata terdapat persegi yang berdiri di sudutnya.
         courseC_artist_prog6_c: Karena berlian ini juga persegi, pastikan untuk memutar 90 derajat di sudut.
       courseC_artist_prog6_2018_authored_hint:
+        courseC_artist_prog6_a: Seniman sudah menghadapi cara yang benar untuk menggambar garis pertamanya.
+        courseC_artist_prog6_b: Berlian ini nyata terdapat persegi yang berdiri di sudutnya.
+        courseC_artist_prog6_c: Karena berlian ini juga persegi, pastikan untuk memutar 90 derajat di sudut.
+      courseC_artist_prog6_2019_authored_hint:
         courseC_artist_prog6_a: Seniman sudah menghadapi cara yang benar untuk menggambar garis pertamanya.
         courseC_artist_prog6_b: Berlian ini nyata terdapat persegi yang berdiri di sudutnya.
         courseC_artist_prog6_c: Karena berlian ini juga persegi, pastikan untuk memutar 90 derajat di sudut.
@@ -1952,16 +2017,35 @@ id:
           
           Ulang pola ini sebanyak 2 kali!
         courseC_artist_prog7_e: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
+      courseC_artist_prog7_2019_authored_hint:
+        courseC_artist_prog7_a: Setiap sudut adalah 45 atau 90 derajat.
+        courseC_artist_prog7_c: Anda bisa menggunakan menu dropdown pada blok putar untuk melihat sudut mana yang Anda butuhkan!
+        courseC_artist_prog7_d: |-
+          Anda akan ingin:
+          - bergerak maju kedepan
+          - berbelok ke kanan 45 derajat
+          - bergerak maju kedepan
+          - berbelok ke kanan 90 derajat
+          - bergerak maju kedepan
+          - berbelok ke kanan 45 derajat
+          
+          Ulang pola ini sebanyak 2 kali!
+        courseC_artist_prog7_e: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseC_artist_prog_challenge1-doghouse_authored_hint:
         courseC_artist_prog7_a: Gunakan sudut 60 derajat untuk membuat atap.
       courseC_artist_prog_challenge1_authored_hint:
         courseC_artist_prog_challenge1_a: Anda dapat menggambar ini sebagai persegi panjang dengan sebuah garis di tengah atau dua persegi yang berbeda!
       courseC_artist_prog_challenge1_2018_authored_hint:
         courseC_artist_prog_challenge1_a: Anda dapat menggambar ini sebagai persegi panjang dengan sebuah garis di tengah atau dua persegi yang berbeda!
+      courseC_artist_prog_challenge1_2019_authored_hint:
+        courseC_artist_prog_challenge1_a: Anda dapat menggambar ini sebagai persegi panjang dengan sebuah garis di tengah atau dua persegi yang berbeda!
       courseC_artist_prog_challenge2a_authored_hint:
         courseC_artist_prog_challenge2_a: Setelah menggambar garis pertama, coba berbelok ke kiri sebelum anda menggambar garis kedua anda.
         courseC_artist_prog_challenge2_b: Setelah anda menggambar garis kedua, coba berbelok ke kanan sebelum anda menggambar garis ketiga anda.
       courseC_artist_prog_challenge2a_2018_authored_hint:
+        courseC_artist_prog_challenge2_a: Setelah menggambar garis pertama, coba berbelok ke kiri sebelum anda menggambar garis kedua anda.
+        courseC_artist_prog_challenge2_b: Setelah anda menggambar garis kedua, coba berbelok ke kanan sebelum anda menggambar garis ketiga anda.
+      courseC_artist_prog_challenge2a_2019_authored_hint:
         courseC_artist_prog_challenge2_a: Setelah menggambar garis pertama, coba berbelok ke kiri sebelum anda menggambar garis kedua anda.
         courseC_artist_prog_challenge2_b: Setelah anda menggambar garis kedua, coba berbelok ke kanan sebelum anda menggambar garis ketiga anda.
       courseC_collector_loops_challenge2_authored_hint:
@@ -2123,15 +2207,22 @@ id:
         courseC_maze_debugging1_b: Ada 1 blok yang perlu ditambahkan untuk melengkapi teka-teki ini.
       courseC_maze_debugging1_2018_authored_hint:
         courseC_maze_debugging1_b: Ada 1 blok yang perlu ditambahkan untuk melengkapi teka-teki ini.
+      courseC_maze_debugging1_2019_authored_hint:
+        courseC_maze_debugging1_b: Ada 1 blok yang perlu ditambahkan untuk melengkapi teka-teki ini.
       courseC_maze_debugging2_authored_hint:
         courseC_maze_debugging2_a: Ada banyak kode berharga di ruang kerja. Jangan hanya menghapus semuanya dan memulai lagi dari awal!
         courseC_maze_debugging2_c: Tidak tahu apa yang salah? Coba jalankan kode beberapa kali untuk melihat apa yang terjadi.
       courseC_maze_debugging2_2018_authored_hint:
         courseC_maze_debugging2_a: Ada banyak kode berharga di ruang kerja. Jangan hanya menghapus semuanya dan memulai lagi dari awal!
         courseC_maze_debugging2_c: Tidak tahu apa yang salah? Coba jalankan kode beberapa kali untuk melihat apa yang terjadi.
+      courseC_maze_debugging2_2019_authored_hint:
+        courseC_maze_debugging2_a: Ada banyak kode berharga di ruang kerja. Jangan hanya menghapus semuanya dan memulai lagi dari awal!
+        courseC_maze_debugging2_c: Tidak tahu apa yang salah? Coba jalankan kode beberapa kali untuk melihat apa yang terjadi.
       courseC_maze_debugging3_authored_hint:
         courseC_maze_debugging3_b: Tidak tahu apa yang salah? Coba jalankan kode beberapa kali untuk melihat apa yang terjadi.
       courseC_maze_debugging3_2018_authored_hint:
+        courseC_maze_debugging3_b: Tidak tahu apa yang salah? Coba jalankan kode beberapa kali untuk melihat apa yang terjadi.
+      courseC_maze_debugging3_2019_authored_hint:
         courseC_maze_debugging3_b: Tidak tahu apa yang salah? Coba jalankan kode beberapa kali untuk melihat apa yang terjadi.
       courseC_maze_debugging4_authored_hint:
         courseC_maze_debugging4_a: Gunakan tombol "step" untuk menjalankan instruksi satu per satu. Apakah itu membantu anda menemukan garis di mana ada yang salah?
@@ -2139,14 +2230,22 @@ id:
       courseC_maze_debugging4_2018_authored_hint:
         courseC_maze_debugging4_a: Gunakan tombol "step" untuk menjalankan instruksi satu per satu. Apakah itu membantu anda menemukan garis di mana ada yang salah?
         courseC_maze_debugging4_b: Salah satu belokannya membuat Scrat masuk ke arah yang salah. Bisakah kamu mencari tahu yang mana?
+      courseC_maze_debugging4_2019_authored_hint:
+        courseC_maze_debugging4_a: Gunakan tombol "step" untuk menjalankan instruksi satu per satu. Apakah itu membantu anda menemukan garis di mana ada yang salah?
+        courseC_maze_debugging4_b: Salah satu belokannya membuat Scrat masuk ke arah yang salah. Bisakah kamu mencari tahu yang mana?
       courseC_maze_debugging5_authored_hint:
         courseC_maze_debugging5_b: Coba katakan apa yang harus dilakukan Scrat dengan suara keras. Apakah sama seperti kode di workspace? Apa yang salah?
       courseC_maze_debugging5_2018_authored_hint:
+        courseC_maze_debugging5_b: Coba katakan apa yang harus dilakukan Scrat dengan suara keras. Apakah sama seperti kode di workspace? Apa yang salah?
+      courseC_maze_debugging5_2019_authored_hint:
         courseC_maze_debugging5_b: Coba katakan apa yang harus dilakukan Scrat dengan suara keras. Apakah sama seperti kode di workspace? Apa yang salah?
       courseC_maze_debugging6_authored_hint:
         courseC_maze_debugging6_b: |-
           Setelah Anda menemukan dan tetap yang pertama bug, melalui proses debugging lagi untuk menemukan yang kedua. Ulangi proses sampai program bekerja!
       courseC_maze_debugging6_2018_authored_hint:
+        courseC_maze_debugging6_b: |-
+          Setelah Anda menemukan dan tetap yang pertama bug, melalui proses debugging lagi untuk menemukan yang kedua. Ulangi proses sampai program bekerja!
+      courseC_maze_debugging6_2019_authored_hint:
         courseC_maze_debugging6_b: |-
           Setelah Anda menemukan dan tetap yang pertama bug, melalui proses debugging lagi untuk menemukan yang kedua. Ulangi proses sampai program bekerja!
       courseC_maze_debugging7_authored_hint:
@@ -2155,6 +2254,11 @@ id:
           Setelah menemukan dan memperbaiki bug pertama, pastikan untuk menggunakan proses debug lagi untuk menemukan yang berikutnya.
           Ulangi proses debug sampai program bekerja!
       courseC_maze_debugging7_2018_authored_hint:
+        courseC_maze_debugging7_b: Jangan lupa gunakan tombol "Step" untuk menjalankan program baris demi baris!
+        courseC_maze_debugging7_c: |-
+          Setelah menemukan dan memperbaiki bug pertama, pastikan untuk menggunakan proses debug lagi untuk menemukan yang berikutnya.
+          Ulangi proses debug sampai program bekerja!
+      courseC_maze_debugging7_2019_authored_hint:
         courseC_maze_debugging7_b: Jangan lupa gunakan tombol "Step" untuk menjalankan program baris demi baris!
         courseC_maze_debugging7_c: |-
           Setelah menemukan dan memperbaiki bug pertama, pastikan untuk menggunakan proses debug lagi untuk menemukan yang berikutnya.
@@ -2529,9 +2633,14 @@ id:
       courseD_artist_project1_2018_authored_hint:
         courseD_artist_project1_a: Gunakan menu drop down pada blok `ubah` untuk memilih sudut yang Anda butuhkan!
         courseD_artist_project1_b: Ingat bahwa `move forward` menarik garis, sementara`jump forward` tidak.
+      courseD_artist_project1_2019_authored_hint:
+        courseD_artist_project1_a: Gunakan menu drop down pada blok `ubah` untuk memilih sudut yang Anda butuhkan!
+        courseD_artist_project1_b: Ingat bahwa `move forward` menarik garis, sementara`jump forward` tidak.
       courseD_artist_project1a_authored_hint:
         courseD_artist_project1a_b: Pola-pola ini banyak seperti anak tangga dari teka-teki lain, tetapi menggunakan sebuah sudut yang berbeda.
       courseD_artist_project1a_2018_authored_hint:
+        courseD_artist_project1a_b: Pola-pola ini banyak seperti anak tangga dari teka-teki lain, tetapi menggunakan sebuah sudut yang berbeda.
+      courseD_artist_project1a_2019_authored_hint:
         courseD_artist_project1a_b: Pola-pola ini banyak seperti anak tangga dari teka-teki lain, tetapi menggunakan sebuah sudut yang berbeda.
       courseD_artist_project2_authored_hint:
         courseD_artist_project2_a: Ingat bahwa `move forward` menarik garis, sementara`jump forward` tidak.
@@ -2539,17 +2648,26 @@ id:
       courseD_artist_project2_2018_authored_hint:
         courseD_artist_project2_a: Ingat bahwa `move forward` menarik garis, sementara`jump forward` tidak.
         courseD_artist_project2_b: Setelah Anda menarik dan bergerak yang pertama kalinya, Anda dapat mengulangi kode dengan menambahkan sebuah lingkaran di sekitar luar.
+      courseD_artist_project2_2019_authored_hint:
+        courseD_artist_project2_a: Ingat bahwa `move forward` menarik garis, sementara`jump forward` tidak.
+        courseD_artist_project2_b: Setelah Anda menarik dan bergerak yang pertama kalinya, Anda dapat mengulangi kode dengan menambahkan sebuah lingkaran di sekitar luar.
       courseD_artist_project3_authored_hint:
         courseD_artist_project3_a: Gunakan menu drop down pada blok `ubah` untuk memilih sudut yang Anda butuhkan!
       courseD_artist_project3_2018_authored_hint:
+        courseD_artist_project3_a: Gunakan menu drop down pada blok `ubah` untuk memilih sudut yang Anda butuhkan!
+      courseD_artist_project3_2019_authored_hint:
         courseD_artist_project3_a: Gunakan menu drop down pada blok `ubah` untuk memilih sudut yang Anda butuhkan!
       courseD_artist_project3a_authored_hint:
         courseD_artist_project3a_a: Anda dapat memilih jumlah yang berbeda untuk memutar bentuk Anda! Bagaimana 18 kali dengan sebuah turn 20 derajat di antara?
       courseD_artist_project3a_2018_authored_hint:
         courseD_artist_project3a_a: Anda dapat memilih jumlah yang berbeda untuk memutar bentuk Anda! Bagaimana 18 kali dengan sebuah turn 20 derajat di antara?
+      courseD_artist_project3a_2019_authored_hint:
+        courseD_artist_project3a_a: Anda dapat memilih jumlah yang berbeda untuk memutar bentuk Anda! Bagaimana 18 kali dengan sebuah turn 20 derajat di antara?
       courseD_artist_project4_authored_hint:
         courseD_artist_project4_b: Untuk mencoba ini, tariklah kepingan salju pertama anda, belilah, kemudian tariklah kepingan salju kedua.
       courseD_artist_project4_2018_authored_hint:
+        courseD_artist_project4_b: Untuk mencoba ini, tariklah kepingan salju pertama anda, belilah, kemudian tariklah kepingan salju kedua.
+      courseD_artist_project4_2019_authored_hint:
         courseD_artist_project4_b: Untuk mencoba ini, tariklah kepingan salju pertama anda, belilah, kemudian tariklah kepingan salju kedua.
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: Untuk menggambar sebuah sisi, gunakan ` bergerak maju dengan 100 piksel ` blok, dan mengubah 100 untuk sebuah 200.
@@ -2745,10 +2863,17 @@ id:
         courseD_bee_nestedLoops1_a: Tidak bekerja Coba gunakan tombol "step" untuk melihat apa yang terjadi baris demi baris.
         courseD_bee_nestedLoops1_b: Cobalah menulis kode untuk satu sisi dari kotak pertama. Bisakah Anda mengulangi ini untuk mendapatkan semua nektar?
         courseD_bee_nestedLoops1_c: Ingatlah untuk menggunakan blok `get nectar` begitu anda berada di lapangan dengan bunga.
+      courseD_bee_nestedLoops1_2019_authored_hint:
+        courseD_bee_nestedLoops1_a: Tidak bekerja Coba gunakan tombol "step" untuk melihat apa yang terjadi baris demi baris.
+        courseD_bee_nestedLoops1_b: Cobalah menulis kode untuk satu sisi dari kotak pertama. Bisakah Anda mengulangi ini untuk mendapatkan semua nektar?
+        courseD_bee_nestedLoops1_c: Ingatlah untuk menggunakan blok `get nectar` begitu anda berada di lapangan dengan bunga.
       courseD_bee_nestedLoops1a_authored_hint:
         courseD_bee_nestedLoops1_a: Tidak bekerja Coba gunakan tombol "step" untuk melihat apa yang terjadi baris demi baris.
         courseD_bee_nestedLoops1_c: Ingatlah untuk menggunakan blok `get nectar` begitu anda berada di lapangan dengan bunga.
       courseD_bee_nestedLoops1a_2018_authored_hint:
+        courseD_bee_nestedLoops1_a: Tidak bekerja Coba gunakan tombol "step" untuk melihat apa yang terjadi baris demi baris.
+        courseD_bee_nestedLoops1_c: Ingatlah untuk menggunakan blok `get nectar` begitu anda berada di lapangan dengan bunga.
+      courseD_bee_nestedLoops1a_2019_authored_hint:
         courseD_bee_nestedLoops1_a: Tidak bekerja Coba gunakan tombol "step" untuk melihat apa yang terjadi baris demi baris.
         courseD_bee_nestedLoops1_c: Ingatlah untuk menggunakan blok `get nectar` begitu anda berada di lapangan dengan bunga.
       courseD_bee_nestedLoops2_authored_hint:
@@ -2756,6 +2881,10 @@ id:
         courseD_bee_nestedLoops2_b: Tidak tahu di mana harus meletakkan loop? Cobalah tuliskan kode di atas kertas langkah demi langkah dan cari sebuah pola.
         courseD_bee_nestedLoops2_c: Ingat anda bisa memasukkan lebih dari satu blok ke dalam satu loop.
       courseD_bee_nestedLoops2_2018_authored_hint:
+        courseD_bee_nestedLoops2_a: Untuk mengatasi teka-teki ini, anda perlu menyarangkan satu loop `repeat 'di bagian yang lain.
+        courseD_bee_nestedLoops2_b: Tidak tahu di mana harus meletakkan loop? Cobalah tuliskan kode di atas kertas langkah demi langkah dan cari sebuah pola.
+        courseD_bee_nestedLoops2_c: Ingat anda bisa memasukkan lebih dari satu blok ke dalam satu loop.
+      courseD_bee_nestedLoops2_2019_authored_hint:
         courseD_bee_nestedLoops2_a: Untuk mengatasi teka-teki ini, anda perlu menyarangkan satu loop `repeat 'di bagian yang lain.
         courseD_bee_nestedLoops2_b: Tidak tahu di mana harus meletakkan loop? Cobalah tuliskan kode di atas kertas langkah demi langkah dan cari sebuah pola.
         courseD_bee_nestedLoops2_c: Ingat anda bisa memasukkan lebih dari satu blok ke dalam satu loop.
@@ -3120,16 +3249,26 @@ id:
         courseD_maze_nestedLoops3_a: Untuk memecahkan teka-teki ini, anda akan perlu "nest" satu loop `repeat` di dalam loop` repeat` lain.
         courseD_maze_nestedLoops3_b: Tidak tahu di mana harus dimana meletakkan loop? Coba tulis kode langkah demi langkah dan cari sebuah pola.
         courseD_maze_nestedLoops3_c: Cobalah menulis kode untuk satu lintasan lurus dan belokan. Dapatkah anda mengulangi ini untuk mendapatkan bunga matahari?
+      courseD_maze_nestedLoops3_2019_authored_hint:
+        courseD_maze_nestedLoops3_a: Untuk memecahkan teka-teki ini, anda akan perlu "nest" satu loop `repeat` di dalam loop` repeat` lain.
+        courseD_maze_nestedLoops3_b: Tidak tahu di mana harus dimana meletakkan loop? Coba tulis kode langkah demi langkah dan cari sebuah pola.
+        courseD_maze_nestedLoops3_c: Cobalah menulis kode untuk satu lintasan lurus dan belokan. Dapatkah anda mengulangi ini untuk mendapatkan bunga matahari?
       courseD_maze_nestedLoops4_authored_hint:
         courseD_maze_nestedLoops4_b: Jika pola loop sulit untuk dilihat, cobalah mengkodekan semuanya terlebih dulu dan lihat kode apa yang berulang-ulang lagi dan lagi sebelum anda memasukkan loop.
         courseD_maze_nestedLoops4_c: Coba gunakan satu loop`repeat`di dalam yang lain untuk mengurangi jumlah kode yang anda butuhkan.
       courseD_maze_nestedLoops4_2018_authored_hint:
         courseD_maze_nestedLoops4_b: Jika pola loop sulit untuk dilihat, cobalah mengkodekan semuanya terlebih dulu dan lihat kode apa yang berulang-ulang lagi dan lagi sebelum anda memasukkan loop.
         courseD_maze_nestedLoops4_c: Coba gunakan satu loop`repeat`di dalam yang lain untuk mengurangi jumlah kode yang anda butuhkan.
+      courseD_maze_nestedLoops4_2019_authored_hint:
+        courseD_maze_nestedLoops4_b: Jika pola loop sulit untuk dilihat, cobalah mengkodekan semuanya terlebih dulu dan lihat kode apa yang berulang-ulang lagi dan lagi sebelum anda memasukkan loop.
+        courseD_maze_nestedLoops4_c: Coba gunakan satu loop`repeat`di dalam yang lain untuk mengurangi jumlah kode yang anda butuhkan.
       courseD_maze_nestedLoops5_authored_hint:
         courseD_maze_nestedLoops5_a: Carilah pola langkah tangga di labirin ini untuk menemukan di mana loop bersarang bisa digunakan.
         courseD_maze_nestedLoops5_b: Tidak tahu di mana harus dimana meletakkan loop? Coba tulis kode langkah demi langkah dan cari sebuah pola.
       courseD_maze_nestedLoops5_2018_authored_hint:
+        courseD_maze_nestedLoops5_a: Carilah pola langkah tangga di labirin ini untuk menemukan di mana loop bersarang bisa digunakan.
+        courseD_maze_nestedLoops5_b: Tidak tahu di mana harus dimana meletakkan loop? Coba tulis kode langkah demi langkah dan cari sebuah pola.
+      courseD_maze_nestedLoops5_2019_authored_hint:
         courseD_maze_nestedLoops5_a: Carilah pola langkah tangga di labirin ini untuk menemukan di mana loop bersarang bisa digunakan.
         courseD_maze_nestedLoops5_b: Tidak tahu di mana harus dimana meletakkan loop? Coba tulis kode langkah demi langkah dan cari sebuah pola.
       courseD_maze_nestedLoops6_authored_hint:
@@ -3140,10 +3279,17 @@ id:
         courseD_maze_nestedLoops6_a: Jika anda terjebak, coba tuliskan kode di atas kertas tanpa loop terlebih dulu dan temukan pola.
         courseD_maze_nestedLoops6_b: Loop bersarang `repeat` dapat membantu mengurangi jumlah blok yang digunakan.
         courseD_maze_nestedLoops6_c: Ini akan mengambil dua set loop bertasarang `repeat` untuk menyelesaikan teka-teki ini.
+      courseD_maze_nestedLoops6_2019_authored_hint:
+        courseD_maze_nestedLoops6_a: Jika anda terjebak, coba tuliskan kode di atas kertas tanpa loop terlebih dulu dan temukan pola.
+        courseD_maze_nestedLoops6_b: Loop bersarang `repeat` dapat membantu mengurangi jumlah blok yang digunakan.
+        courseD_maze_nestedLoops6_c: Ini akan mengambil dua set loop bertasarang `repeat` untuk menyelesaikan teka-teki ini.
       courseD_maze_ramp1_authored_hint:
         courseC_maze_programming1_a: Jika burung tersebut tidak sampai ke babi, pastikan ketiga blok telah diklik sepenuhnya bersama-sama, lalu klik "Run" lagi.
         courseC_maze_programming1_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_maze_ramp1_2018_authored_hint:
+        courseC_maze_programming1_a: Jika burung tersebut tidak sampai ke babi, pastikan ketiga blok telah diklik sepenuhnya bersama-sama, lalu klik "Run" lagi.
+        courseC_maze_programming1_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
+      courseD_maze_ramp1_2019_authored_hint:
         courseC_maze_programming1_a: Jika burung tersebut tidak sampai ke babi, pastikan ketiga blok telah diklik sepenuhnya bersama-sama, lalu klik "Run" lagi.
         courseC_maze_programming1_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_maze_ramp2_authored_hint:
@@ -3152,10 +3298,16 @@ id:
       courseD_maze_ramp2_2018_authored_hint:
         courseC_maze_programming2_a: Untuk menggunakan sebuah blok `move forward`, seret dari toolbox ke dalam ruang kerja dan hubungkan ke blok`when run`.
         courseC_maze_programming2_b: Pastikan semua 3 blok diklik bersama dan dilekatkan pada blok `when run`.
+      courseD_maze_ramp2_2019_authored_hint:
+        courseC_maze_programming2_a: Untuk menggunakan sebuah blok `move forward`, seret dari toolbox ke dalam ruang kerja dan hubungkan ke blok`when run`.
+        courseC_maze_programming2_b: Pastikan semua 3 blok diklik bersama dan dilekatkan pada blok `when run`.
       courseD_maze_ramp4_authored_hint:
         courseC_maze_programming4_a: Anda bisa belok kanan atau kiri dari sudut pandang burung. Jika anda menghadap ke kanan, belok ke kanan akan membuat anda menunjuk ke bawah.
         courseC_maze_programming4_b: Untuk mengikuti jalan, bergerak maju dan berbelok ke satu arah, kemudian bergerak lagi dan berbelok sebaliknya. Maju terus satu kali lagi untuk menjangkau babi.
       courseD_maze_ramp4_2018_authored_hint:
+        courseC_maze_programming4_a: Anda bisa belok kanan atau kiri dari sudut pandang burung. Jika anda menghadap ke kanan, belok ke kanan akan membuat anda menunjuk ke bawah.
+        courseC_maze_programming4_b: Untuk mengikuti jalan, bergerak maju dan berbelok ke satu arah, kemudian bergerak lagi dan berbelok sebaliknya. Maju terus satu kali lagi untuk menjangkau babi.
+      courseD_maze_ramp4_2019_authored_hint:
         courseC_maze_programming4_a: Anda bisa belok kanan atau kiri dari sudut pandang burung. Jika anda menghadap ke kanan, belok ke kanan akan membuat anda menunjuk ke bawah.
         courseC_maze_programming4_b: Untuk mengikuti jalan, bergerak maju dan berbelok ke satu arah, kemudian bergerak lagi dan berbelok sebaliknya. Maju terus satu kali lagi untuk menjangkau babi.
       courseD_maze_ramp5_authored_hint:
@@ -3163,6 +3315,10 @@ id:
         courseC_maze_programming5_b: Ingat bahwa ternyata dari sudut pandang burung.
         courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_maze_ramp5_2018_authored_hint:
+        courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
+        courseC_maze_programming5_b: Ingat bahwa ternyata dari sudut pandang burung.
+        courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
+      courseD_maze_ramp5_2019_authored_hint:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
         courseC_maze_programming5_b: Ingat bahwa ternyata dari sudut pandang burung.
         courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
@@ -3174,11 +3330,19 @@ id:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
         courseC_maze_programming5_b: Ingat bahwa ternyata dari sudut pandang burung.
         courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
+      courseD_maze_ramp5a_2019_authored_hint:
+        courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
+        courseC_maze_programming5_b: Ingat bahwa ternyata dari sudut pandang burung.
+        courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_maze_ramp5b_authored_hint:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
         courseC_maze_programming5_b: Ingat bahwa ternyata dari sudut pandang burung.
         courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_maze_ramp5b_2018_authored_hint:
+        courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
+        courseC_maze_programming5_b: Ingat bahwa ternyata dari sudut pandang burung.
+        courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
+      courseD_maze_ramp5b_2019_authored_hint:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
         courseC_maze_programming5_b: Ingat bahwa ternyata dari sudut pandang burung.
         courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
@@ -3408,10 +3572,15 @@ id:
         courseF_artist_for3_b: Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
       courseF_artist_for3_2018_authored_hint:
         courseF_artist_for3_b: Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
+      courseF_artist_for3_2019_authored_hint:
+        courseF_artist_for3_b: Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
       courseF_artist_for4_authored_hint:
         courseF_artist_for4_a: "** Apakah nomor terkecil yang Anda perlukan? \nBerapakah jumlah terbesar? \nSeberapa besar adalah peningkatan setiap kali? ** \n\nmereka adalah pertanyaan-pertanyaan Anda perlu tanyakan untuk mengisi kekosongan loop 'untuk'."
         courseF_artist_for4_c: Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
       courseF_artist_for4_2018_authored_hint:
+        courseF_artist_for4_a: "** Apakah nomor terkecil yang Anda perlukan? \nBerapakah jumlah terbesar? \nSeberapa besar adalah peningkatan setiap kali? ** \n\nmereka adalah pertanyaan-pertanyaan Anda perlu tanyakan untuk mengisi kekosongan loop 'untuk'."
+        courseF_artist_for4_c: Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
+      courseF_artist_for4_2019_authored_hint:
         courseF_artist_for4_a: "** Apakah nomor terkecil yang Anda perlukan? \nBerapakah jumlah terbesar? \nSeberapa besar adalah peningkatan setiap kali? ** \n\nmereka adalah pertanyaan-pertanyaan Anda perlu tanyakan untuk mengisi kekosongan loop 'untuk'."
         courseF_artist_for4_c: Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
       courseF_artist_for_challenge1_authored_hint:
@@ -3422,10 +3591,17 @@ id:
         courseF_artist_for_challenge1_a: '''Lebar pena'' adalah 1. Alun-alun pertama memiliki 50 pixel sisi, dan setiap persegi adalah 50 piksel lebih luas daripada yang terakhir.'
         courseF_artist_for_challenge1_b: Opacity pada sikat selalu 'counter' / 2.
         courseF_artist_for_challenge1_c: Setelah Anda membuat setiap persegi, jangan lupa untuk melompat ke belakang, mengubah, melompat lagi, kemudian menghidupkan kembali!
+      courseF_artist_for_challenge1_2019_authored_hint:
+        courseF_artist_for_challenge1_a: '''Lebar pena'' adalah 1. Alun-alun pertama memiliki 50 pixel sisi, dan setiap persegi adalah 50 piksel lebih luas daripada yang terakhir.'
+        courseF_artist_for_challenge1_b: Opacity pada sikat selalu 'counter' / 2.
+        courseF_artist_for_challenge1_c: Setelah Anda membuat setiap persegi, jangan lupa untuk melompat ke belakang, mengubah, melompat lagi, kemudian menghidupkan kembali!
       courseF_artist_for_challenge2_authored_hint:
         courseF_artist_for_challenge2_c: '''Untuk loop'' pergi dari 5 sampai 250 oleh 2. '
         courseF_artist_for_challenge2_a: Perubahan warna terjadi menggunakan 'diatur warna merah, hijau, biru' blok. Merah diatur konstan di 255, hijau adalah selalu nilai 'counter', dan biru selalu ' 255 - counter'.
       courseF_artist_for_challenge2_2018_authored_hint:
+        courseF_artist_for_challenge2_c: '''Untuk loop'' pergi dari 5 sampai 250 oleh 2. '
+        courseF_artist_for_challenge2_a: Perubahan warna terjadi menggunakan 'diatur warna merah, hijau, biru' blok. Merah diatur konstan di 255, hijau adalah selalu nilai 'counter', dan biru selalu ' 255 - counter'.
+      courseF_artist_for_challenge2_2019_authored_hint:
         courseF_artist_for_challenge2_c: '''Untuk loop'' pergi dari 5 sampai 250 oleh 2. '
         courseF_artist_for_challenge2_a: Perubahan warna terjadi menggunakan 'diatur warna merah, hijau, biru' blok. Merah diatur konstan di 255, hijau adalah selalu nilai 'counter', dan biru selalu ' 255 - counter'.
       courseF_artist_fwp_challenge2_authored_hint:
@@ -3448,6 +3624,9 @@ id:
         courseF_artist_variables_challenge2_a: Variabel sangat membantu Anda karena dapat menambahkan setiap kali melalui satu lingkaran. 
         courseF_artist_variables_challenge2_c: Menggunakan sebuah variabel untuk sisi dan untuk panjang membuat kode lebih bersih karena Anda dapat mengulang kode yang sama beberapa kali, sebagai gantinya membuat salinan baru untuk setiap rangkaian angka.
       courseF_artist_variables_challenge2_2018_authored_hint:
+        courseF_artist_variables_challenge2_a: Variabel sangat membantu Anda karena dapat menambahkan setiap kali melalui satu lingkaran. 
+        courseF_artist_variables_challenge2_c: Menggunakan sebuah variabel untuk sisi dan untuk panjang membuat kode lebih bersih karena Anda dapat mengulang kode yang sama beberapa kali, sebagai gantinya membuat salinan baru untuk setiap rangkaian angka.
+      courseF_artist_variables_challenge2_2019_authored_hint:
         courseF_artist_variables_challenge2_a: Variabel sangat membantu Anda karena dapat menambahkan setiap kali melalui satu lingkaran. 
         courseF_artist_variables_challenge2_c: Menggunakan sebuah variabel untuk sisi dan untuk panjang membuat kode lebih bersih karena Anda dapat mengulang kode yang sama beberapa kali, sebagai gantinya membuat salinan baru untuk setiap rangkaian angka.
       courseF_bee_conditionals2_authored_hint:
@@ -3478,11 +3657,17 @@ id:
         courseF_bee_for5_c: Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
       courseF_bee_for5_2018_authored_hint:
         courseF_bee_for5_c: Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
+      courseF_bee_for5_2019_authored_hint:
+        courseF_bee_for5_c: Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_a: "Lihatlah suatu pilihan ini untuk gerakan: \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
         courseF_bee_for_challenge2_b: 'Coba gunakan dua loop ''untuk'': Satu untuk memanjat dan meraih nektar, dan yang lainnya memanjat turun dan membuat madu.'
         courseF_bee_for_challenge2_c: "Perhatikan bahwa satu loop untuk membutuhkan beberapa loop reguler di dalam waktu balasan ulang untuk membuat pola tangga meningkat.\n\nYang lain loop hanya membutuhkan satu lingkaran biasa untuk menghasilkan jumlah madu."
       courseF_bee_for_challenge2_2018_authored_hint:
+        courseF_bee_for_challenge2_a: "Lihatlah suatu pilihan ini untuk gerakan: \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
+        courseF_bee_for_challenge2_b: 'Coba gunakan dua loop ''untuk'': Satu untuk memanjat dan meraih nektar, dan yang lainnya memanjat turun dan membuat madu.'
+        courseF_bee_for_challenge2_c: "Perhatikan bahwa satu loop untuk membutuhkan beberapa loop reguler di dalam waktu balasan ulang untuk membuat pola tangga meningkat.\n\nYang lain loop hanya membutuhkan satu lingkaran biasa untuk menghasilkan jumlah madu."
+      courseF_bee_for_challenge2_2019_authored_hint:
         courseF_bee_for_challenge2_a: "Lihatlah suatu pilihan ini untuk gerakan: \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
         courseF_bee_for_challenge2_b: 'Coba gunakan dua loop ''untuk'': Satu untuk memanjat dan meraih nektar, dan yang lainnya memanjat turun dan membuat madu.'
         courseF_bee_for_challenge2_c: "Perhatikan bahwa satu loop untuk membutuhkan beberapa loop reguler di dalam waktu balasan ulang untuk membuat pola tangga meningkat.\n\nYang lain loop hanya membutuhkan satu lingkaran biasa untuk menghasilkan jumlah madu."
