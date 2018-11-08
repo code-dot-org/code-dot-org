@@ -79,7 +79,7 @@ export async function loadSongMetadata(id) {
 export function parseSongOptions(songManifest) {
   let songs = {};
   songManifest.forEach((song) => {
-    songs[song.id] = {title: song.text, url: song.url};
+    songs[song.id] = {title: song.text, url: song.url, pg13: song.pg13};
   });
   return songs;
 }
