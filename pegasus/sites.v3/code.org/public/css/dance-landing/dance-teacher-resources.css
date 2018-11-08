@@ -2,6 +2,7 @@
   height: 300px;
   width: 468px;
   border: 1px solid gray;
+  margin-bottom: 20px;
   overflow: hidden;
   position: relative;
   float: left;
@@ -43,12 +44,19 @@
 
 @media screen and (min-width: 0px) and (max-width: 470px) {
   .resource-card {
-    height: 486px;
+    height: 468px;
     width: 300px;
-    border: 1px solid red;
-    /* margin: 20px; */
-    overflow: hidden;
-    position: relative;
+  }
+
+  .resource-gif {
+    width: 300px;
     float: left;
+  }
+
+  .resource-text-box {
+    width: 300px;
+    height: 234px;
+    margin-left: 0px;
+    margin-top: 234px;
   }
 }
