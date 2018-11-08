@@ -2,7 +2,6 @@
   height: 300px;
   width: 468px;
   border: 1px solid gray;
-  margin: 20px;
   overflow: hidden;
   position: relative;
   float: left;
@@ -10,8 +9,8 @@
 
 .resource-gif {
   position: absolute;
-  margin-left: 234px;
   width: 234px;
+  float: left;
 }
 
 .resource-text-box {
@@ -19,8 +18,8 @@
   height: 300px;
   background-color: #00adbc;
   position: absolute;
-  float: left;
   padding: 20px;
+  margin-left: 234px;
 }
 
 .resource-title {
@@ -40,4 +39,16 @@
   background-color: #e7e8ea;
   border-color: #e7e8ea;
   color: #5b6770;
+}
+
+@media screen and (min-width: 0px) and (max-width: 470px) {
+  .resource-card {
+    height: 486px;
+    width: 300px;
+    border: 1px solid red;
+    /* margin: 20px; */
+    overflow: hidden;
+    position: relative;
+    float: left;
+  }
 }
