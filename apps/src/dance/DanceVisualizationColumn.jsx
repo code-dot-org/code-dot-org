@@ -20,6 +20,7 @@ const styles = {
 
 const SongSelector = Radium(class extends React.Component {
   static propTypes = {
+    enableSongSelection: PropTypes.bool,
     setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string,
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
@@ -35,7 +36,13 @@ const SongSelector = Radium(class extends React.Component {
     return (
       <div>
         <label><b>{i18n.selectSong()}</b></label>
-        <select id="song_selector" style={styles.selectStyle} onChange={this.changeSong} value={this.props.selectedSong}>
+        <select
+          id="song_selector"
+          style={styles.selectStyle}
+          onChange={this.changeSong}
+          value={this.props.selectedSong}
+          disabled={!this.props.enableSongSelection}
+        >
           {Object.keys(this.props.songData).map((option, i) => (
             <option key={i} value={option}>{this.props.songData[option].title}</option>
           ))}
@@ -50,6 +57,8 @@ class DanceVisualizationColumn extends React.Component {
     showFinishButton: PropTypes.bool.isRequired,
     setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string,
+    levelIsRunning: PropTypes.bool,
+    levelRunIsStarting: PropTypes.bool,
     isShareView: PropTypes.bool.isRequired,
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
     userType: PropTypes.string.isRequired
@@ -71,11 +80,13 @@ class DanceVisualizationColumn extends React.Component {
     const teacherOverride = queryString.parse(window.location.search).songfilter === 'on';
     const signedOutAge = sessionStorage.getItem('anon_over13') ? sessionStorage.getItem('anon_over13') : false;
     const filterOff = (signedInOver13 || signedOutAge) && !teacherOverride;
+    const enableSongSelection = !this.props.levelIsRunning && !this.props.levelRunIsStarting;
 
     return (
       <span>
         {!this.props.isShareView &&
           <SongSelector
+            enableSongSelection={enableSongSelection}
             setSong={this.props.setSong}
             selectedSong={this.props.selectedSong}
             songData={this.props.songData}
@@ -101,5 +112,7 @@ export default connect(state => ({
   isShareView: state.pageConstants.isShareView,
   songData: state.songs.songData,
   selectedSong: state.songs.selectedSong,
-  userType: state.progress.userType
+  userType: state.progress.userType,
+  levelIsRunning: state.runState.isRunning,
+  levelRunIsStarting: state.songs.runIsStarting
 }))(DanceVisualizationColumn);
