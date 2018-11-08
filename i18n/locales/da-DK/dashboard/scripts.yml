@@ -1421,3 +1421,13 @@ da:
           stages:
             Artist:
               name: Kunstner
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Opbygge et fundament
+            Conditionals with Cards:
+              name: Betingelser med kortspil
+            Envelope Variables:
+              name: Omslut variabler
+            For Loop Fun:
+              name: For loop sjov

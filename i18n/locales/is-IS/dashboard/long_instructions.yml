@@ -323,7 +323,7 @@ is:
       CSD U2 Debugging 2_2018: "# Villuleit\\r\n\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**Hvað er villa?**</summary>\\r\nVillur eru mistök í kóða sem valda því að hann virkar ekki eins og ætlað var.\\r\n</details>\\r\n<details>\\r\n<summary>**Hvað er villuleit?**</summary>\\r\nVilluleit er það að finna og lagfæra villur. Villuleitarferlið er það sama og við lausn vandamála almennt svo þær aðferðir nýtast hér. \\r\n</details>\\r\n<details>\\r\n<summary>**Dæmi um villur?**</summary>\\r\nVillur geta verið hvað sem lætur kóðann ekki virka sem skyldi. Nokkur dæmi eru ritvillur, kóði settur á rangan stað, rangt tag notað eða gleymt að loka tagi.\\r\n</details>\\r\n</div>\\r\n\\r\nMeiri þjálfun í villuleit! Villuleitin hér er svolítið erfiðari en í síðustu síðu.\\r\n\\r\n# Gerðu þetta\\r\n\\r\n<img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38\nAM.png\" style=\"float:right;border:5px black solid;width:250px\">\\r\n\\r\n*\nRæddu við félaga þinn hvaða villur gætu verið á þessari síðu.\\r\n* Finndu og lagaðu allar villurnar svo að síðan verði eins og síðan hér til hægri."
       CSD U2 Debugging 3: "# Villuleit\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**Hvað er villa?**</summary>\\r\nVillur eru mistök í kóða sem valda því að kóðinn virkar ekki sem skyldi.\\r\n</details>\\r\n<details>\\r\n<summary>**Hvað er villuleit?**</summary>\\r\nVilluleit er það að finna og lagfæra villur. Villuleitarferlið er það sama og fyrir lausn vandamála almennt svo færni á því sviði nýtist við villuleit. \\r\n</details>\\r\n<details>\\r\n<summary>**Dæmi um villur**</summary>\\r\nVillur geta verið hvað sem lætur kóðann ekki virka eins og ætlað var. Nokkur dæmi eru ritvillur, kóði settur á rangan stað, rangt tag notað eða gleymt að loka tagi.\\r\n</details>\\r\n</div>\\r\n\\r\nÞessi síða er með myndir. Myndirnar gera villuleitina svolítið flóknari. Getur þú aflúsað þessa síðu?\\r\n\\r\n# Gerðu þetta\\r\n\\r\n* Ræddu við félaga þinn hvað geti verið að valda villunum.\\r\n* Lagaðu villurnar svo að síðan þín líti út eins og <a href=\"https://codeprojects.org/dgobgP_Y66km4U-o969RUBcFBjfAlNSYIGfBkGPrnVQ/\"\ntarget=\"_blank\"> fyrirmyndin</a>."
       CSD U2 Debugging 3_2018: "# Villuleit\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**Hvað er villa?**</summary>\\r\nVillur eru mistök í kóða sem valda því að kóðinn virkar ekki sem skyldi.\\r\n</details>\\r\n<details>\\r\n<summary>**Hvað er villuleit?**</summary>\\r\nVilluleit er það að finna og lagfæra villur. Villuleitarferlið er það sama og fyrir lausn vandamála almennt svo færni á því sviði nýtist við villuleit. \\r\n</details>\\r\n<details>\\r\n<summary>**Dæmi um villur**</summary>\\r\nVillur geta verið hvað sem lætur kóðann ekki virka eins og ætlað var. Nokkur dæmi eru ritvillur, kóði settur á rangan stað, rangt tag notað eða gleymt að loka tagi.\\r\n</details>\\r\n</div>\\r\n\\r\nÞessi síða er með myndir. Myndirnar gera villuleitina svolítið flóknari. Getur þú aflúsað þessa síðu?\\r\n\\r\n# Gerðu þetta\\r\n\\r\n* Ræddu við félaga þinn hvað geti verið að valda villunum.\\r\n* Lagaðu villurnar svo að síðan þín líti út eins og <a href=\"https://codeprojects.org/dgobgP_Y66km4U-o969RUBcFBjfAlNSYIGfBkGPrnVQ/\"\ntarget=\"_blank\"> fyrirmyndin</a>."
-      CSD U2 Debugging 4: |2
+      CSD U2 Debugging 4: |-
         # Mótun útlits\r
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -362,7 +362,7 @@ is:
         Gerðu kóðann auðlesnari með því að bæta inn auðum línum og inndrætti.\r
         * Lagaðu allar villurnar svo síðan þín verði eins og <a href="https://codeprojects.org/kh6WWXr6rbDWuSBzsug7CRIZ2eo-EwPgV4D0M6pvhF8/"
         target="_blank"> fyrirmyndin</a>
-      CSD U2 Debugging 4_2018: |2
+      CSD U2 Debugging 4_2018: |-
         # Mótun útlits\r
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -746,7 +746,7 @@ is:
         \r
         * Smelltu á ábendinguna "Hvernig nota ég Inspector Tool?" hægra megin til að læra að nota greiningartækið\r
         * Fylgdu leiðbeiningunum á síðunni og kannaðu gerð hennar og ræddu við félaga hvernig hún virkar.
-      CSD U2 Project Start: |2
+      CSD U2 Project Start: |-
         # Byrjað á verkefninu\r
         \r
         Nú ættir þú að hafa ákveðið hvernig vefurinn þinn á að vera. Þá er komið að því að kóða hann hér. Ekki gera ráð fyrir að geta gert allt í dag. Þú munt hafa næg tækifæri til að betrumbæta verkefnið eftir því sem þú lærir meira um vefsmíði.\r
@@ -757,7 +757,7 @@ is:
          * Minnst **tvo hausa í mismunandi stærð**\r
          * Minnst **eina efnisgrein**\r
         * **Ígrundaðu** síðuna þína með því að bera hana saman við drögin og sýndu félaga þínum hana
-      CSD U2 Project Start_2018: |2
+      CSD U2 Project Start_2018: |-
         # Byrjað á verkefninu\r
         \r
         Nú ættir þú að hafa ákveðið hvernig vefurinn þinn á að vera. Þá er komið að því að kóða hann hér. Ekki gera ráð fyrir að geta gert allt í dag. Þú munt hafa næg tækifæri til að betrumbæta verkefnið eftir því sem þú lærir meira um vefsmíði.\r
@@ -786,7 +786,7 @@ is:
         * Bættu HTML í hverja nýja síðu sem þú dróst upp í leiðarvísi verkefnisins.\r
         * Þú getur líka bætt meira HTML í síður sem þú bjóst til áður.\r
         
-      CSD U2 add file - OLD: |2
+      CSD U2 add file - OLD: |-
         <div style="float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
@@ -867,7 +867,7 @@ is:
         * Berið ykkur saman við aðra til að sjá hvort síðurnar eru eins.\r
         \r
         
-      CSD U2 commenting: |2
+      CSD U2 commenting: |-
         # Athugasemdir\r
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -908,7 +908,7 @@ is:
         \r
         * Skoðaðu kóðann með félaga og finndu athugasemdirnar.\r
         * Notaðu athugasemdirnar til að hjálpa þér að laga villurnar í HTML kóðanum.
-      CSD U2 commenting_2018: |2
+      CSD U2 commenting_2018: |-
         # Athugasemdir\r
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -1007,7 +1007,7 @@ is:
         \r
         
       CSD U2 images intro: "# Myndir\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\\r\n<details>\\r\n<summary>**Hvernig bæti ég við myndum?**</summary>\\r\nMeð `<img>` taginu getur þú birt myndir á vefsíðu. <br><br>\\r\n\\r\nDæmi:\\r\n<pre>&lt;img src=\"dog.png\"\nalt=\"hundur stekkur\"/&gt;</pre><br><br>\\r\n\\r\nTil að segja vafranum hvaða myndskrá eigi að nota, er upplýsingum bætt inn í &lt;img&gt; tagið innan hornklofanna. Svona upplýsingar í tagi eru nefndar **eigindir** (enska:attribute). Eigindin `src` táknar enska orðið \"source\" sem þýðir \"uppruni\". Hún segir til um hvaðan myndin eigi að koma. Heiti á myndskrám hafa endingar sem segja tölvunni hvers konar myndskrá hún er að vinna með. \nAlgengar skrárendingar mynda eru .jpg, .jpeg, .png. <br><br>\\r\n\\r\nAuk \"src\" eigindar, hafa myndeiningar líka eigindina \"alt\" til að lýsa myndinni í orðum. Það er mikilvægt ef myndin kemur ekki fram eða fyrir fólk sem sér illa.<br><br>\\r\n\\r\n`<img>` tagið er dæmi um **sjálflokandi tag** því það byrjar og endar í sama hornklofanum. Til að sýna þetta er sett `/` í lok tagsins framan við hornklofann sem lokar taginu. Þá veit tölvan að hún þarf ekki að leita að endatagi.\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**Hvað er sjálflokandi tag?**</summary>\\r\n`<img>` tagið er dæmi um **sjálflokandi tag** því það byrjar og endar í sama hornklofanum. Til að sýna þetta er sett `/` í lok tagsins framan við hornklofann sem lokar taginu. Sjálflokandi tag þarf ekki endatag því það er ekkert efni sem færi á milli byrjunar- og endatags. Allt sem tagið gerir er skilgreint í eigindum þess sem eru í byrjunartaginu.\\r\n</details>\\r\n<details>\\r\n<summary>**Af hverju hefur myndtagið ekki endatag?**</summary>\\r\n\"Img\" tagið fyrir myndir er sjálflokandi tag og sjálflokandi tag hefur ekki endatag því það er ekkert efni sem færi á milli byrjunar- og endatags. Allt sem tagið gerir er skilgreint í eigindum þess sem eru í byrjunartaginu.\\r\n</details>\\r\n<details>\\r\n<summary>**Hvað er eigind?**</summary>\\r\nEigindir (enska:attributes) eru viðbótarupplýsingar sem bætt er í byrjunartag. Eigindir hafa heiti og gildi. Heitið segir hvers konar upplýsingar er verið að gefa og gildið eru sjálfar upplýsingarnar, sem tagið notar. \\r\n\\r\nTil dæmis hafa &lt;img&gt; tög tvær eigindir, src og alt.\nsrc segir til um heiti myndskrárinnar og alt segir vafranum í orðum hvað efni myndarinnar er.\\r\n</details>\\r\n</div>\\r\n\\r\nUppskriftasíðan mundi líta mun betur út með mynd af kökubitunum, svo við höfum bætt einni á þessa síðu. Hún gæti þó komið betur út annars staðar á síðunni.\\r\n\\r\n# Gerðu þetta\\r\n* Skoðaðu skráalistann vinstra megin við vinnusvæðið og finndu skrána \"scotcheroos.jpeg\"\\r\n* Notaðu greiningartækið (inspector tool) til að finna kóðann sem lét myndina birtast á síðunni.\\r\n* Gakktu úr skugga um að þú og félagi þinn séuð sammála um það hvernig myndtagið virkar.\\r\n* Reyndu að færa myndina efst á síðuna."
-      CSD U2 layout style freeplay - OLD: |2
+      CSD U2 layout style freeplay - OLD: |-
         # Þinn eigin vefur\r
         \r
         Prófaðu eitthvað af þessum nýju CSS eiginleikum í þínum eigin vef.\r
@@ -1103,7 +1103,7 @@ is:
         * Notaðu greiningartækið (inspector tool) til að sjá kóðann sem býr til tenglana efst á síðunni index.html.\r
         * Ræddu við félaga um hvernig þið teljið að þessi kóði virki.\r
         * Smelltu á recipe.html í skráalistanum vinstra megin.  Bættu við tengli efst á þessari síðu sem færir þig aftur yfir á index.html.
-      CSD U2 link pages: |2
+      CSD U2 link pages: |+
         # Ný síða fyrir vefsetrið.\r
         \r
         Hér er verkefnið þitt frá því áður.  Þú átt að bæta við annarri síðu.  Nýja síðan þín getur verið Topp 10 listi, uppskrift eða eitthvað sem þú ákveður.\r
@@ -1224,7 +1224,7 @@ is:
         Gættu þess að þú og félagi þinn séuð sammála um hvað tögin gera.\r
         * Lagaðu kóðann í seinni listanum svo að atriðin birtist rétt.\r
         
-      CSD U2 navigation: |2
+      CSD U2 navigation: |
         # Gerð tenglastiku\r
         \r
         Hér er verkefnið þitt frá því áður.  Þú átt að tengja þessar tvær síður saman með því að búa til **tenglastiku** (enska:navigation bar) efst á síðunni.  Vefsetur hafa yfirleitt tenglastiku á öllum síðum til að auðvelda að fara milli efnis á vefsetrinu.  Þú getur séð dæmi um tenglastiku á [þessari síðu](https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/).\r
@@ -1237,7 +1237,7 @@ is:
         * Prófaðu tenglana á forskoðunarsvæðinu með því að smella á þá.\r
         \r
         
-      CSD U2 navigation_2018: |2
+      CSD U2 navigation_2018: |
         # Gerð tenglastiku\r
         \r
         Hér er verkefnið þitt frá því áður.  Þú átt að tengja þessar tvær síður saman með því að búa til **tenglastiku** (enska:navigation bar) efst á síðunni.  Vefsetur hafa yfirleitt tenglastiku á öllum síðum til að auðvelda að fara milli efnis á vefsetrinu.  Þú getur séð dæmi um tenglastiku á [þessari síðu](https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/).\r
@@ -1250,7 +1250,7 @@ is:
         * Prófaðu tenglana á forskoðunarsvæðinu með því að smella á þá.\r
         \r
         
-      CSD U2 new page: |2
+      CSD U2 new page: |+
         # Ný síða fyrir vefsetrið.\r
         \r
         Hér er verkefnið þitt frá því áður.  Þú átt að bæta við annarri síðu.  Nýja síðan þín getur verið Topp 10 listi, uppskrift eða eitthvað sem þú ákveður.\r
@@ -1265,7 +1265,7 @@ is:
          * haus\r
         \r
         
-      CSD U2 new page_2018: |2
+      CSD U2 new page_2018: |+
         # Ný síða fyrir vefsetrið.\r
         \r
         Hér er verkefnið þitt frá því áður.  Þú átt að bæta við annarri síðu.  Nýja síðan þín getur verið Topp 10 listi, uppskrift eða eitthvað sem þú ákveður.\r
@@ -1334,7 +1334,7 @@ is:
         * Afritaðu vefslóðina sem þú færð og sendu hana í tölvupósti til þeirra sem mega sjá síðuna.\r
         \r
         
-      CSD U2 text style freeplay - OLD: |2
+      CSD U2 text style freeplay - OLD: |-
         # Stílum bætt við\r
         \r
         Nú getur þú útlitsmótað textann á þínum eigin vef!\r
@@ -1462,7 +1462,7 @@ is:
         ![](https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04
         PM.png)
       CSD U2 upload image: "# Að hlaða upp nýrri mynd\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\\r\n<details>\\r\n<summary>**Hvernig bæti ég við myndum?**</summary>\\r\nMeð `<img>` taginu getur þú birt myndir á vefsíðu. <br><br>\\r\n\\r\nDæmi:\\r\n<pre>&lt;img src=\"dog.png\"\nalt=\"hundur stekkur\"/&gt;</pre><br><br>\\r\n\\r\nTil að segja vafranum hvaða myndskrá eigi að nota, er upplýsingum bætt inn í &lt;img&gt; tagið innan hornklofanna. Svona upplýsingar í tagi eru nefndar **eigindir** (enska:attribute). Eigindin `src` táknar enska orðið \"source\" sem þýðir \"uppruni\". Hún segir til um hvaðan myndin eigi að koma. Heiti á myndskrám hafa endingar sem segja tölvunni hvers konar myndskrá hún er að vinna með. \nAlgengar skrárendingar mynda eru .jpg, .jpeg, .png. <br><br>\\r\n\\r\nAuk \"src\" eigindar, hafa myndeiningar líka eigindina \"alt\" til að lýsa myndinni í orðum. Það er mikilvægt ef myndin kemur ekki fram eða fyrir fólk sem sér illa.<br><br>\\r\n\\r\n`<img>` tagið er dæmi um **sjálflokandi tag** því það byrjar og endar í sama hornklofanum. Til að sýna þetta er sett `/` í lok tagsins framan við hornklofann sem lokar taginu. Þá veit tölvan að hún þarf ekki að leita að endatagi.\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**Hvað er sjálflokandi tag?**</summary>\\r\n`<img>` tagið er dæmi um **sjálflokandi tag** því það byrjar og endar í sama hornklofanum. Til að sýna þetta er sett `/` í lok tagsins framan við hornklofann sem lokar taginu. Sjálflokandi tag þarf ekki endatag því það er ekkert efni sem færi á milli byrjunar- og endatags. Allt sem tagið gerir er skilgreint í eigindum þess sem eru í byrjunartaginu.\\r\n</details>\\r\n<details>\\r\n<summary>**Af hverju hefur myndtagið ekki endatag?**</summary>\\r\n\"Img\" tagið fyrir myndir er sjálflokandi tag og sjálflokandi tag hefur ekki endatag því það er ekkert efni sem færi á milli byrjunar- og endatags. Allt sem tagið gerir er skilgreint í eigindum þess sem eru í byrjunartaginu.\\r\n</details>\\r\n<details>\\r\n<summary>**Hvað er eigind?**</summary>\\r\nEigindir (enska:attributes) eru viðbótarupplýsingar sem bætt er í byrjunartag. Eigindir hafa heiti og gildi. Heitið segir hvers konar upplýsingar er verið að gefa og gildið eru sjálfar upplýsingarnar, sem tagið notar. \\r\n\\r\nTil dæmis hafa &lt;img&gt; tög tvær eigindir, src og alt.\nsrc segir til um heiti myndskrárinnar og alt segir vafranum í orðum hvað efni myndarinnar er.\\r\n</details>\\r\n</div>\\r\n\\r\nÞú getur nú bætt eigin myndum við vefinn þinn. Ef þú átt ekki myndir sem þú vilt nota í tölvunni getur þú leitað að þeim hér og hlaðið þeim niður.\\r\n<form action=\"https://www.google.com/search\" method=\"GET\"\ntarget=\"_blank\">\\r\n<input type=hidden name=site value=\"imghp\" />\\r\n<input\ntype=hidden name=tbm value=isch />\\r\n<input type=hidden name=tbs value=\"sur:fmc\"\n/>\\r\n<input name=q />\\r\n<input type=submit value=\"search\">\\r\n<br />\\r\n</form>\\r\n\\r\nÞegar þú hefur náð í myndir, smelltu þá á ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49\nPM.png) til að hlaða myndunum upp frá tölvunni og inn í verkefnið þitt.\\r\n\\r\n#\nGerðu þetta\\r\n* Hladdu minnst tveimur myndum inn í verkefnið þitt\\r\n* Notaðu `<img>` tagið til að birta myndirnar á vefnum þínum."
-      CSD U2 upload images: |2
+      CSD U2 upload images: |
         # Hlaða upp myndum\r
         \r
         Næst þarft þú að hlaða myndunum upp frá tölvunni og inn í verkefnið þitt.\r
@@ -1477,7 +1477,7 @@ is:
         [Kennslustund 8 þraut 6](/s/csd2/stage/8/puzzle/6) er með hjálp ef þú þarft.\r
         \r
         
-      CSD U2 upload images_2018: |2
+      CSD U2 upload images_2018: |
         # Hlaða upp myndum\r
         \r
         Næst þarft þú að hlaða myndunum upp frá tölvunni og inn í verkefnið þitt.\r
@@ -3016,7 +3016,7 @@ is:
         * Keyrðu kóðann og ræddu við félaga um hvernig þú heldur að þetta virki.
       CSD U3 dancing alien: "# Kvikar í teiknilykkjunni\\r\n\\r\nMeð því að breyta eiginleikum kvika í teiknilykkjunni getur þú sett hreyfingu í persónur þínar.\n\\r\n\\r\nÞessi hreyfimynd hefur verið stillt á hægagang.  Í upphafi forritsins hefur kubburinn `World.frameRate` verið notaður til að stilla myndtíðnina á 10. Venjulega er myndtíðnin stillt á 30. Kannaðu að vild aðrar stillingar fyrir myndtíðni.\\r\n\\r\n#\nGerðu þetta\\r\n* Keyrðu kóðann til að sjá hvernig hann virkar.\\r\n* Ræddu við félaga af hverju sumt af kóðanum er innan í teiknilykkjunni og sumt utan við hana.\\r\n* Prófaðu að breyta myndtíðninni og keyra forritið aftur."
       CSD U3 dancing alien_2018: "# Kvikar í teiknilykkjunni\\r\n\\r\nMeð því að breyta eiginleikum kvika í teiknilykkjunni getur þú sett hreyfingu í persónur þínar.\n\\r\n\\r\nÞessi hreyfimynd hefur verið stillt á hægagang.  Í upphafi forritsins hefur kubburinn `World.frameRate` verið notaður til að stilla myndtíðnina á 10. Venjulega er myndtíðnin stillt á 30. Kannaðu að vild aðrar stillingar fyrir myndtíðni.\\r\n\\r\n#\nGerðu þetta\\r\n* Keyrðu kóðann til að sjá hvernig hann virkar.\\r\n* Ræddu við félaga af hverju sumt af kóðanum er innan í teiknilykkjunni og sumt utan við hana.\\r\n* Prófaðu að breyta myndtíðninni og keyra forritið aftur."
-      CSD U3 debug: |2
+      CSD U3 debug: |-
         <img src="https://images.code.org/249f124a9bbd3da7d6327a7be8ab73c9-image-1493138569984.41.50
         AM.png" style="float:right;width:150px;">\r
         \r
@@ -3029,7 +3029,7 @@ is:
         * Skoðaðu kóðann á vinnusvæðinu.\r
         * Breyttu kóðanum svo hann teikni myndina hér til hægri.\r
          * (Þú þarft að færa einn kubb OG breyta hnitum ferningsins)
-      CSD U3 debug_2018: |2
+      CSD U3 debug_2018: |-
         <img src="https://images.code.org/249f124a9bbd3da7d6327a7be8ab73c9-image-1493138569984.41.50
         AM.png" style="float:right;width:150px;">\r
         \r
@@ -4002,6 +4002,7 @@ is:
       Inspirational Artwork: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\\r\n\\r\n**Hugmyndir fyrir frjálsa æfingu:** Nú hefur þú lært allt sem þú þarft að kunna til að búa til svona mynstur! \\r\n\\r\nEf þér finnst þessi mynd áhugaverð getur þú reynt að gera eitthvað svipað. Eða búið til eitthvað sem er alfarið þitt eigið.\\r\n\\r\nAthugaðu:\nVið höfum notað `stilla alfa` kubbinn til að láta lit krónublaðanna dofna þegar utar dregur."
       InspirationalArtwork: "Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur!\\r\n\\r\nEf þessi mynd gefur þér hugmyndir, gætir þú glímt við eitthvað svipað. Annars bara eitthvað sem þér dettur í hug.\\r\n"
       InspirationalArtwork_2018: "Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur!\\r\n\\r\nEf þessi mynd gefur þér hugmyndir, gætir þú glímt við eitthvað svipað. Annars bara eitthvað sem þér dettur í hug.\\r\n"
+      InspirationalArtwork_2019: "Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur!\\r\n\\r\nEf þessi mynd gefur þér hugmyndir, gætir þú glímt við eitthvað svipað. Annars bara eitthvað sem þér dettur í hug.\\r\n"
       K-1 Bee Loops 2: Notaðu `endurtaka` lykkju til að hreyfast og sæktu svo blómasafann og búðu til hunang!
       K-1 Bee Loops 3: Notaðu þrjár `endurtaka` lykkjur til að sækja blómasafann og búa til hunang!
       K-1 Bee Loops 4: Notaðu `endurtaka` lykkjur til að sækja blómasafann, búa til hunang og hreyfast!
@@ -4204,7 +4205,7 @@ is:
       Room Escape Workshop - 5: "# Leynikóðinn athugaður\\r\n\\r\nEftir að þú hefur tekið við ágiskun notandans um hver leynikóðinn er, þarft þú að athuga hvort hann sé réttur! Við getum gert þetta með `if` yrðingu. Svona skilyrðing athugar hvort skilyrði stenst. Í þessu tilfelli hvort að talan sem notandinn sló inn sé sú sama og leynikóðinn\\r\n\\r\n# Gerðu þetta\\r\n\\r\n*\nBættu <img\nsrc=\"https://images.code.org/5e9a434b1ad6b8f010db928b668127a5-image-1491061131564.37.01\nAM.png\" style=\"width:100px\"> yrðingu inn í `onEvent` kubbinn fyrir öryggishólfið neðan við fyrirmælin til notanda\\r\n* Búðu til skilyrði með því að draga út <img src=\"https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08\nAM.png\" style=\"width:100px\"> kubbinn sem mun athuga hvor tveir hlutir séu eins\\r\n*\nSettu *guess* öðru megin í <img src=\"https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08\nAM.png\" style=\"width:100px\"> (heiti breytunnar sem geymir ágiskun notandans) \\r\n* Settu gildið fyrir leynikóðann þinn í hina hlið skilyrðisins"
       Room Escape Workshop - 6: "# Leynikóði af handahófi\\r\n\\r\n<img src=\"https://images.code.org/dfa3a28d30b7a1d2879e3fc95b8f42dc-image-1489603534640.44.51\nPM.png\" style=\"width:200px;float:right\">\\r\n\\r\nLeyniklefinn hefur öryggishólf með talnalási. Kóðinn fyrir lásinn verður falinn bak við mynd þar sem nú stendur \"CODE\" í Klefa 1. Gerum þetta áhugaverðara með því að búa til 4-stafa slembitölu sem verður leynikóðinn.\\r\n\\r\n# Gerðu þetta\\r\n\\r\n*\nBættu við breytu sem mun geyma leynikóðann.\\r\n\\t* Dragðu út kubb fyrir breytu\\r\n    * Settu heiti breytunnar í reitinn við hlið `var`, t.d. \"leyniKodi\"\\r\n* Settu hægra megin í breytuna slembitölu sem verður leynikóðinn\\r\n\\t* Bættu kubbi fyrir slembitölu (random number) í hægri hlið breytunnar\\r\n    * Slembitölukubburinn hefur tvö inntök fyrir lægstu og hæstu tölu sem hann getur búið til\\r\n    * Þú vilt láta hann búa til tölu á bilinu 1000 til 9999\\r\n* Settu texta í leynikóðaeininguna í klefa 1\\r\n\\t* Notaðu setText kubbinn til að setja texta í secretCode eininguna"
       Room Escape Workshop - 7: "# Öryggishólfið að innan\\r\n\\r\n<img\nsrc=\"https://images.code.org/71e74305187a46d0badeb29a9a69ac56-image-1490371014841.55.37\nAM.png\" style=\"width:200px;float:right\">\\r\n\\r\nEftir að forritið er farið að biðja um og athuga leynikóðann á það að \"opna\" öryggishólfið og sýna lykilinn. Til þess þarft þú fyrst að búa til þessar einingar í hönnunarstöðunni.\\r\n\\r\n# Gerðu þetta\\r\n\\r\n* Skiptu í hönnunarstöðu og bættu við mynd af gráum ferningi\\r\n\\t*\nDragðu myndeiningu <img src=\"https://images.code.org/8f4bc108415d83e5c528c9204502efc2-image-1491059181186.06.13\nAM.png\" style=\"width:75px\"> út á skjáinn\\r\n    * Gefðu henni gott auðkenni (ID) t.d. *innanHolfs*\n\\r\n    * Finndu gráan ferning fyrir mynd\\r\n    *\nHún á að sýna öryggishólfið að innan því hún mun fela framhlið þess þegar hún er gerð sýnileg\\r\n* Bættu við mynd af lykli\\r\n\\t* Veldu og dragðu myndeiningu <img\nsrc=\"https://images.code.org/8f4bc108415d83e5c528c9204502efc2-image-1491059181186.06.13\nAM.png\" style=\"width:75px\"> út á skjáinn\\r\n    * Gefðu henni gott auðkenni (t.d. *lykill*)\\r\n    * Finndu mynd af lykli \\r\n* Notaðu \"hidden\" eiginleika gráa ferningsins og lykilsins til að fela þá svo að hönnunarstaðan líti einhvern veginn svona út\\r\n\\r\n<img src=\"https://images.code.org/2c2c7e9996515f2b30d416b558fd1360-image-1489605526794.17.55\nPM.png\" style=\"width:200px\">"
-      Room Escape Workshop - 8: |2
+      Room Escape Workshop - 8: |-
         # Að sýna hólfið að innan\r
         \r
         Stilltu nú upp kóðanum til að sýna lykilinn og gráa ferninginn þegar notandinn slær inn réttan leynikóða.\r
@@ -4250,7 +4251,7 @@ is:
         
       U5 ColorSleuth implement end game: "# Áskorun - Veldu hvernig leikurinn á að enda og útfærðu það\\r\n\\r\nÁskorunin nú felst í að þú bætir við kóða sem kemur alveg frá þér.   Notaðu það sem þú hefur lært. Spjall Alexis og Michael getur líka hjálpað.\\r\n\\r\n**Þetta er síðasti forritunaráfanginn**\\r\n\\r\n* Settu inn allar breytingar og viðbætur við forritið\\r\n* Smelltu svo á **Senda**\\r\n\\r\n**Markmið:** Bæta við kóða sem lætur leikinn enda og sem:\\r\n* Skiptir yfir í skjámyndina `gameOver_screen`\\r\n*\nSýnir hvaða spilari vann leikinn með því að birta textana `player1Win_label` eða `player2Win_label`\\r\n\\r\n*Við höfum lagt til `gameOver_screen` skjámynd í sniðmátinu fyrir þetta verkefni -- Skiptu yfir í Hönnunarstöðu til að sjá hvað er þar*\\r\n\\r\n**Tillögur**\\r\n*\nEf þér dettur ekkert í hug, gætir þú reynt að láta leikslok byggjast á skilyrðinu \"fyrstur í 10\" - fyrsti spilari sem fær 10 stig vinnur.\\r\n* Þú ættir að nota tillöguna sem kom fram í spjallinu og bæta við falli eins og `checkGameOver()` og kalla á það frá `checkCorrect`\\r\n\\r\n<details><summary><strong>Umfram og aukalega:\nHér eru fleiri kostir sem þú getur bætt við að vild [Smelltu til að útvíkka]</strong></summary>\\r\n\\r\n<p>\\r\nHér eru nokkrar hugmyndir um viðbætur eða útvíkkun verkefnisins:\\r\n\\r\n</p>\\r\n<ul>\\r\n\\r\n\\r\n<li>Setja\n\"Byrja aftur\" hnapp á síðasta skjáinn. Hann ætti að núllstilla allt og birta leiksviðið aftur\\r\n</li>\\r\n<li>Bæta við upphafsskjá sem útskýrir reglur leiksins og býður spilara að hefja leikinn (það ætti að vera sjálfvalið)\\r\n</li>\\r\n<li>Gera leikinn erfiðari:</li>\\r\n<uL>\\r\n<li>Gera litina líkari hvor öðrum (við höfum bætt 20 við hvert RGB gildi, prófaðu 15 eða 10).</li>\\r\n    <li>Eða hafa erfiðleikann breytilegan - þú gætir notað slembitölu á bilinu 5 til 20 og bætt henni við RGB gildin. </li>\\r\n    <li>Eða látið leikinn verða smám saman erfiðari - notað breytu fyrir það hve miklu á að bæta við hvert RGB gildi og minnkað innihald breytunnar með tímanum.</li>\\r\n\\t<li>Eða bjóða spilara á upphafsskjánum að velja erfiðleikastig: auðvelt, miðlungs eða erfitt.</li>\\r\n</uL>\\r\n\\r\n<li>Bæta við tímatakmörkun - flettu upp lesningunni um setTimeout sem kallar á fall eftir vissan tíma. (Athugaðu: þú gætir þurft að 'remixa' verkefnið sem frjálst verkefni í App-smiðjunni til að þetta sé hægt).\\r\n</li>\\r\n<li>Þú getur líka notað <code>getTime()</code> í upphafi og lok kóðans til að reikna út hvað leikurinn stóð í langan tíma og notað það til að stilla af skorið.</li>\\r\n</ul>\\r\n</details>\\r\n"
       What is the difference between formative and summative assessment?: 'Eftirfarandi tengill vísar í skilgreiningar á og dæmi um matsaðferðir, bæði mótandi símat og lokamat:'
-      aE1: |2
+      aE1: |+
         <img src="https://images.code.org/fa3c416b74ff9071455535955bc4df35-image-1465507662295.gif"
         style="float:left; width:100px; margin: 0 20px 80px 100px;"/>\r
         \r
@@ -4467,7 +4468,7 @@ is:
         </table>\r
         
       beeDebugVideo1: Safnaðu öllum blómasafanum.
-      collector example: |2
+      collector example: |-
         Safnaðu öllu gullinu með `taka` kubbnum:\r
         \r
         <xml>\r
@@ -4535,7 +4536,7 @@ is:
       course2_playlab_stage17_11: "Búðu til eigin sögu. Þegar þú hefur klárað hana, getur þú smellt á Ljúka til að leyfa vinum að prófa hana í símunum sínum.\\r\n<br/>\\r\n\\r\n<h5>\\r\n<details>\\r\n<summary><b>Vantar hugmyndir?</b></summary>\\r\n\\t<br/>\\r\n\\t<h5>\\r\n\\t\\t<ul>\\r\n        \\t<li><strong>Hver er þar?</strong> - Láttu persónur birtast með myndum af handahófi. Enginn veit hver birtist næst.</li>\\r\n            <li><strong>Lagt í ævintýraferð</strong>\n- Breyttu bakgrunninum og láttu svo persónurnar tala um hvar þær eru staddar. </li>\\r\n            <li><strong>Kúluspil</strong> - Láttu eina persónu hreyfast með örvarlyklunum (notaðu `þegar upp-ör`, `þegar niður-ör` kubbana),\nog spilaðu hljóð af handahófi þegar hann rekst á aðrar persónur á skjánum.\n</li>\\r\n        </ul>\\r\n\\t</h5>\\r\n</details>\\r\n</h5>\\r\n"
       course3_artist_concept_challenge1: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\r\n\\r\nHér er áskorun!  \\r\n\\r\nÞessi hönnun notar aðeins kubba sem þú hefur þegar séð.  Getur þú endurskapað hana?  Prófaðu þig áfram. Það er ekkert atriði að þetta heppnist í fyrstu (eða jafnvel sjöttu!) tilraun.\\r\n\\r\nEndurtekna formið er næstum eins og það í síðustu þraut, nema hvað lengdin sem er notuð í fyrstu lykkjunni er aðeins styttri. "
       course3_artist_functions_challenge1: Þegar þú hefur einu sinni skilgreint fall, getur þú notað það aftur og aftur - hvar og hvenær sem þú vilt! Prófaðu þennan kóða til að sjá hvernig hann virkar og breyttu honum svo til að búa til þína eigin flottu hönnun!
-      course3_artist_functions_challenge2: |2
+      course3_artist_functions_challenge2: |-
         Þú getur notað `hoppa` skipunina til að komast á hvað stað sem er í skjámyndinni! Prófaðu þennan kóða til að sjá hvernig hann virkar. Breyttu honum svo eftir eigin höfði!\r
         <xml>\r
           <block
@@ -4573,7 +4574,7 @@ is:
         \r
         ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
       course4_artist_concept_challenge2: Búðu til fimm hjóllaga mynstur með kóðanum fyrir neðan.
-      course4_artist_functions_challenge2: |2
+      course4_artist_functions_challenge2: |-
         Þú getur notað `hoppa` skipunina til að komast á hvað stað sem er í skjámyndinni! Prófaðu þennan kóða til að sjá hvernig hann virkar. Breyttu honum svo eftir eigin höfði!\r
         <xml>\r
           <block
@@ -5061,9 +5062,14 @@ is:
         *"Hæ, ég er listamaður. Þú getur skrifað kóða til að láta mig teikna næstum hvað sem er."*\r
         \r
         Leiktu þér með kubbana í verkfærakassanum til að sjá hvað þeir gera!
+      courseC_artist_prog1_2019: |-
+        *"Hæ, ég er listamaður. Þú getur skrifað kóða til að láta mig teikna næstum hvað sem er."*\r
+        \r
+        Leiktu þér með kubbana í verkfærakassanum til að sjá hvað þeir gera!
       courseC_artist_prog_challenge1-doghouse: Byggjum hundahús fyrir Jorge!
       courseC_artist_prog_challenge1: Teiknaðu klefa fyrir hvert dýr. Þessi þraut hefur margar lausnir. Skemmtu þér við að finna eina!
       courseC_artist_prog_challenge1_2018: Teiknaðu klefa fyrir hvert dýr. Þessi þraut hefur margar lausnir. Skemmtu þér við að finna eina!
+      courseC_artist_prog_challenge1_2019: Teiknaðu klefa fyrir hvert dýr. Þessi þraut hefur margar lausnir. Skemmtu þér við að finna eina!
       courseC_artist_prog_challenge2: "*Hjálpaðu mér að teikna gulu línurnar á þessum vegi!*"
       courseC_collector_loops_challenge2: |-
         Leitum að fjársjóði - með lykkjum! Hjálpaðu safnaranum með því að fjarlægja villur úr þessum kóða. Náðu öllum fjársjóðunum!
@@ -5187,14 +5193,19 @@ is:
         - Þriðja innri lykkjan á að búa til ferning.
       courseD_artist_project1: "Teiknaðu lítið form, á milli **20 og 50** díla breitt.  Það má vera hvaða form sem þú vilt.  \\r\n<hr/>\\r\n\\r\nÞú getur prófað að búa til fjölhliðung eins og einn af þessum:  \\r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \\r\n\\r\n  \\r\n  \\r\nEða abstrakt form eins og eitt af þessum:  \\r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
       courseD_artist_project1_2018: "Teiknaðu lítið form, á milli **20 og 50** díla breitt.  Það má vera hvaða form sem þú vilt.  \\r\n<hr/>\\r\n\\r\nÞú getur prófað að búa til fjölhliðung eins og einn af þessum:  \\r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \\r\n\\r\n  \\r\n  \\r\nEða abstrakt form eins og eitt af þessum:  \\r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
+      courseD_artist_project1_2019: "Teiknaðu lítið form, á milli **20 og 50** díla breitt.  Það má vera hvaða form sem þú vilt.  \\r\n<hr/>\\r\n\\r\nÞú getur prófað að búa til fjölhliðung eins og einn af þessum:  \\r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \\r\n\\r\n  \\r\n  \\r\nEða abstrakt form eins og eitt af þessum:  \\r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
       courseD_artist_project1a: "<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />Í þessari þraut færðu tækifæri til að byrja á nýrri teikningu! \\r\n\\r\nTeiknaðu tröppumynstur sem notar snúninga á milli 75 og 105 gráða -- en gættu þess að vinstri og hægri snúningar noti sama horn.  \\r\n(Seinna sérðu hvers vegna.)"
       courseD_artist_project1a_2018: "<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />Í þessari þraut færðu tækifæri til að byrja á nýrri teikningu! \\r\n\\r\nTeiknaðu tröppumynstur sem notar snúninga á milli 75 og 105 gráða -- en gættu þess að vinstri og hægri snúningar noti sama horn.  \\r\n(Seinna sérðu hvers vegna.)"
+      courseD_artist_project1a_2019: "<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />Í þessari þraut færðu tækifæri til að byrja á nýrri teikningu! \\r\n\\r\nTeiknaðu tröppumynstur sem notar snúninga á milli 75 og 105 gráða -- en gættu þess að vinstri og hægri snúningar noti sama horn.  \\r\n(Seinna sérðu hvers vegna.)"
       courseD_artist_project2: "Teiknaðu nú tvö eða þrjú svona form í röð með því að stökkva fram um einhvern fjölda díla.  \\r\n\\r\n-\nEf þú stekkur fram um **minna** en breidd formsins, gætu þau skarast\\r\n-\nEf þú stekkur fram um **meira** en breidd formsins, verður bil á milli þeirra\\r\n\\r\n<hr/>\\r\n\\r\nRöðin gæti orðið bein eins og þessi:\\r\n\\r\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\\r\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\\r\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\\r\n<br/>  <br/>\\r\n\\r\n\\r\nEða að formin gætu færst til eins og eitt af þessum: \\r\n\\r\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\\r\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\\r\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
       courseD_artist_project2_2018: "Teiknaðu nú tvö eða þrjú svona form í röð með því að stökkva fram um einhvern fjölda díla.  \\r\n\\r\n-\nEf þú stekkur fram um **minna** en breidd formsins, gætu þau skarast\\r\n-\nEf þú stekkur fram um **meira** en breidd formsins, verður bil á milli þeirra\\r\n\\r\n<hr/>\\r\n\\r\nRöðin gæti orðið bein eins og þessi:\\r\n\\r\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\\r\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\\r\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\\r\n<br/>  <br/>\\r\n\\r\n\\r\nEða að formin gætu færst til eins og eitt af þessum: \\r\n\\r\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\\r\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\\r\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
+      courseD_artist_project2_2019: "Teiknaðu nú tvö eða þrjú svona form í röð með því að stökkva fram um einhvern fjölda díla.  \\r\n\\r\n-\nEf þú stekkur fram um **minna** en breidd formsins, gætu þau skarast\\r\n-\nEf þú stekkur fram um **meira** en breidd formsins, verður bil á milli þeirra\\r\n\\r\n<hr/>\\r\n\\r\nRöðin gæti orðið bein eins og þessi:\\r\n\\r\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\\r\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\\r\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\\r\n<br/>  <br/>\\r\n\\r\n\\r\nEða að formin gætu færst til eins og eitt af þessum: \\r\n\\r\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\\r\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\\r\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
       courseD_artist_project2a: "Snúðu nú við um 180 gráður og teiknaðu nákvæmlega sama tröppumynstrið aftur! \\r\n\\r\n- Afgangurinn af þessu stigi verður auðveldari ef þú setur allan kóðann í lykkju sem lætur Elsu \\r\n<br/>\\r\nteikna, snúa við um 180 gráður, teikna, og snúa svo aftur við um 180 gráður. \\r\n\\r\n<hr/>\\r\n\\r\nHér er dæmi um tröppur sem nota 76 gráðu snúning:\\r\n\\r\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
       courseD_artist_project2a_2018: "Snúðu nú við um 180 gráður og teiknaðu nákvæmlega sama tröppumynstrið aftur! \\r\n\\r\n- Afgangurinn af þessu stigi verður auðveldari ef þú setur allan kóðann í lykkju sem lætur Elsu \\r\n<br/>\\r\nteikna, snúa við um 180 gráður, teikna, og snúa svo aftur við um 180 gráður. \\r\n\\r\n<hr/>\\r\n\\r\nHér er dæmi um tröppur sem nota 76 gráðu snúning:\\r\n\\r\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
+      courseD_artist_project2a_2019: "Snúðu nú við um 180 gráður og teiknaðu nákvæmlega sama tröppumynstrið aftur! \\r\n\\r\n- Afgangurinn af þessu stigi verður auðveldari ef þú setur allan kóðann í lykkju sem lætur Elsu \\r\n<br/>\\r\nteikna, snúa við um 180 gráður, teikna, og snúa svo aftur við um 180 gráður. \\r\n\\r\n<hr/>\\r\n\\r\nHér er dæmi um tröppur sem nota 76 gráðu snúning:\\r\n\\r\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
       courseD_artist_project3: "Láttu nú Elsu hoppa aftur inn að miðju með `hoppa á 200 þvert 200 niður` kubbnum og snúðu henni svo hún teikni röð af formum aftur og aftur í mismunandi áttir. \\r\n\\r\nÞú getur teiknað alls konar flott snjókorn!\\r\n<hr/>\\r\nSkoðaðu þessi dæmi með fjölhliðungum:  \\r\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\\r\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\\r\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\\r\n\\r\nMeð abstrakt formum gæti snjókorn litið meira svona út:  \\r\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\\r\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\\r\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
       courseD_artist_project3_2018: "Láttu nú Elsu hoppa aftur inn að miðju með `hoppa á 200 þvert 200 niður` kubbnum og snúðu henni svo hún teikni röð af formum aftur og aftur í mismunandi áttir. \\r\n\\r\nÞú getur teiknað alls konar flott snjókorn!\\r\n<hr/>\\r\nSkoðaðu þessi dæmi með fjölhliðungum:  \\r\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\\r\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\\r\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\\r\n\\r\nMeð abstrakt formum gæti snjókorn litið meira svona út:  \\r\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\\r\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\\r\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+      courseD_artist_project3_2019: "Láttu nú Elsu hoppa aftur inn að miðju með `hoppa á 200 þvert 200 niður` kubbnum og snúðu henni svo hún teikni röð af formum aftur og aftur í mismunandi áttir. \\r\n\\r\nÞú getur teiknað alls konar flott snjókorn!\\r\n<hr/>\\r\nSkoðaðu þessi dæmi með fjölhliðungum:  \\r\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\\r\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\\r\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\\r\n\\r\nMeð abstrakt formum gæti snjókorn litið meira svona út:  \\r\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\\r\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\\r\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
       courseD_artist_project3a: |-
         Snúðu forminu 5 eða 6 sinnum í hring.\r
         - Ef þú velur 5 snúninga, er hver snúningur 72 gráður\r
@@ -5215,10 +5226,22 @@ is:
         Hér er dæmi þar sem Elsa snýr 6 sinnum:\r
         \r
         ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
+      courseD_artist_project3a_2019: |-
+        Snúðu forminu 5 eða 6 sinnum í hring.\r
+        - Ef þú velur 5 snúninga, er hver snúningur 72 gráður\r
+        -
+        Ef þú velur 6 snúninga, er hver snúningur 60 gráður\r
+        <hr/>\r
+        \r
+        Hér er dæmi þar sem Elsa snýr 6 sinnum:\r
+        \r
+        ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
       courseD_artist_project4: "Hvað mundi gerast ef við legðum tvö mismunandi löguð snjókorn saman annað ofan á hitt og snerum því síðara aðeins? \\r\nPrófaðu það og sjáðu hvað kemur út!"
       courseD_artist_project4_2018: "Hvað mundi gerast ef við legðum tvö mismunandi löguð snjókorn saman annað ofan á hitt og snerum því síðara aðeins? \\r\nPrófaðu það og sjáðu hvað kemur út!"
+      courseD_artist_project4_2019: "Hvað mundi gerast ef við legðum tvö mismunandi löguð snjókorn saman annað ofan á hitt og snerum því síðara aðeins? \\r\nPrófaðu það og sjáðu hvað kemur út!"
       courseD_artist_project5: 'Virkjaðu sköpunargáfuna með formin og hornin. Hvaða alveg nýjar myndir skyldir þú geta skapað?'
       courseD_artist_project5_2018: 'Virkjaðu sköpunargáfuna með formin og hornin. Hvaða alveg nýjar myndir skyldir þú geta skapað?'
+      courseD_artist_project5_2019: 'Virkjaðu sköpunargáfuna með formin og hornin. Hvaða alveg nýjar myndir skyldir þú geta skapað?'
       courseD_artist_project_embedded: Þetta er það sem þú ert að fara að búa til!
       courseD_artist_ramp11: |-
         Fínt!  Nú skulum við búa til ferning með listamanninum!   Kubbarnir eru svolítið öðruvísi en hugmyndin sú sama.\r
@@ -5254,11 +5277,14 @@ is:
       courseD_bee_debugging_challenge2: Taktu eftir hvernig býflugan nær í blómasafann. Getur þú notað eins reglu til að hjálpa henni að búa til allt hunangið?
       courseD_bee_nestedLoops2: Nú áttu að hjálpa býflugunni að safna öllum blómasafanum með eins fáum kubbum og mögulegt er.
       courseD_bee_nestedLoops2_2018: Nú áttu að hjálpa býflugunni að safna öllum blómasafanum með eins fáum kubbum og mögulegt er.
+      courseD_bee_nestedLoops2_2019: Nú áttu að hjálpa býflugunni að safna öllum blómasafanum með eins fáum kubbum og mögulegt er.
       courseD_bee_nestedLoops2_predict1: Nú áttu að hjálpa býflugunni að safna öllum blómasafanum með eins fáum kubbum og mögulegt er.
       courseD_bee_nestedLoops2_predict1_2018: Nú áttu að hjálpa býflugunni að safna öllum blómasafanum með eins fáum kubbum og mögulegt er.
+      courseD_bee_nestedLoops2_predict1_2019: Nú áttu að hjálpa býflugunni að safna öllum blómasafanum með eins fáum kubbum og mögulegt er.
       courseD_bee_nestedLoops5: "Safnaðu öllum blómasafanum úr hverju blómi og búðu til hunang í hverju búi. \\r\n\\r\nNotaðu faldaða lykkju. "
       courseD_bee_nestedLoops8: "Safnaðu öllum blómasafanum úr hverju blómi og búðu til hunang í hverju búi. \\r\n\\r\nNotaðu faldaða lykkju. "
       courseD_bee_nestedLoops8_2018: "Safnaðu öllum blómasafanum úr hverju blómi og búðu til hunang í hverju búi. \\r\n\\r\nNotaðu faldaða lykkju. "
+      courseD_bee_nestedLoops8_2019: "Safnaðu öllum blómasafanum úr hverju blómi og búðu til hunang í hverju búi. \\r\n\\r\nNotaðu faldaða lykkju. "
       courseD_bee_nested_loops_challenge1: Komum í fjársjóðaleit - með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur fjársjóðshrúgum en aðeins með kubbunum í verkfærakassanum.
       courseD_bee_nested_loops_challenge2: Komum í fjársjóðaleit - með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur fjársjóðshrúgum en aðeins með kubbunum í verkfærakassanum.
       courseD_bounce_events1: Náðu til flaggsins! Festu kubb við "þegar vinstri ör" kubbinn og ýttu á "Keyra" til að færa leikmanninn að flagginu.
@@ -5464,14 +5490,19 @@ is:
       courseD_maze_loops_challenge1: Komum í fjársjóðaleit - með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur fjársjóðshrúgum en aðeins með kubbunum í verkfærakassanum.
       courseD_maze_nestedLoops4: "Komdu mér til sólsblómsins með sem allra fæstum kubbum!\\r\n\\r\nReyndu að nota einn \"endurtaka\" kubb innan í öðrum til að kóðinn verði sem stystur."
       courseD_maze_nestedLoops4_2018: "Komdu mér til sólsblómsins með sem allra fæstum kubbum!\\r\n\\r\nReyndu að nota einn \"endurtaka\" kubb innan í öðrum til að kóðinn verði sem stystur."
+      courseD_maze_nestedLoops4_2019: "Komdu mér til sólsblómsins með sem allra fæstum kubbum!\\r\n\\r\nReyndu að nota einn \"endurtaka\" kubb innan í öðrum til að kóðinn verði sem stystur."
       courseD_maze_ramp1: 'Í þessari þraut: Festu alla kubbana saman og smelltu á "Keyra" til að sjá hvað gerist!'
       courseD_maze_ramp1_2018: 'Í þessari þraut: Festu alla kubbana saman og smelltu á "Keyra" til að sjá hvað gerist!'
+      courseD_maze_ramp1_2019: 'Í þessari þraut: Festu alla kubbana saman og smelltu á "Keyra" til að sjá hvað gerist!'
       courseD_maze_ramp2: Dragðu annan `færa áfram` kubb úr verkfærakassanum og festu svo alla kubbana við `þegar keyrt` kubbinn til að ljúka við kóðann.
       courseD_maze_ramp2_2018: Dragðu annan `færa áfram` kubb úr verkfærakassanum og festu svo alla kubbana við `þegar keyrt` kubbinn til að ljúka við kóðann.
+      courseD_maze_ramp2_2019: Dragðu annan `færa áfram` kubb úr verkfærakassanum og festu svo alla kubbana við `þegar keyrt` kubbinn til að ljúka við kóðann.
       courseD_maze_ramp3: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\\r\n\\r\nÞað er einn aukakubbur sem mun láta fuglinn hrapa. \\r\nHentu kubbnum með því að draga hann aftur í verkfærakassann."
       courseD_maze_ramp3_2018: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\\r\n\\r\nÞað er einn aukakubbur sem mun láta fuglinn hrapa. \\r\nHentu kubbnum með því að draga hann aftur í verkfærakassann."
+      courseD_maze_ramp3_2019: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\\r\n\\r\nÞað er einn aukakubbur sem mun láta fuglinn hrapa. \\r\nHentu kubbnum með því að draga hann aftur í verkfærakassann."
       courseD_maze_ramp4: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\\r\n\\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
       courseD_maze_ramp4_2018: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\\r\n\\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
+      courseD_maze_ramp4_2019: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\\r\n\\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
       courseD_maze_ramp5: |-
         *"Fylgdu þessari slóð til að koma mér til svínsins!"*\r
         \r
@@ -5480,8 +5511,13 @@ is:
         *"Fylgdu þessari slóð til að koma mér til svínsins!"*\r
         \r
         Gættu þín á TNT.
+      courseD_maze_ramp5_2019: |-
+        *"Fylgdu þessari slóð til að koma mér til svínsins!"*\r
+        \r
+        Gættu þín á TNT.
       courseD_maze_ramp5a: Taktu eftir röð kubbanna og reyndu að finna út hvernig á að komast til svínsins!
       courseD_maze_ramp5a_2018: Taktu eftir röð kubbanna og reyndu að finna út hvernig á að komast til svínsins!
+      courseD_maze_ramp5a_2019: Taktu eftir röð kubbanna og reyndu að finna út hvernig á að komast til svínsins!
       courseD_maze_ramp6: |-
         *"Slakaðu á og hjálpaðu mér að finna vonda svínið. Annars gæti ég reiðst!"*\r
         \r
@@ -5569,7 +5605,7 @@ is:
       courseE_artist_functions_challenge: Þegar þú hefur einu sinni skilgreint fall, getur þú notað það aftur og aftur - hvar og hvenær sem þú vilt! Prófaðu þennan kóða til að sjá hvernig hann virkar og breyttu honum svo til að búa til þína eigin flottu hönnun!
       courseE_artist_functions_challenge1: Þegar þú hefur einu sinni skilgreint fall, getur þú notað það aftur og aftur - hvar og hvenær sem þú vilt! Prófaðu þennan kóða til að sjá hvernig hann virkar og breyttu honum svo til að búa til þína eigin flottu hönnun!
       courseE_artist_functions_challenge1_2018: Þegar þú hefur einu sinni skilgreint fall, getur þú notað það aftur og aftur - hvar og hvenær sem þú vilt! Prófaðu þennan kóða til að sjá hvernig hann virkar og breyttu honum svo til að búa til þína eigin flottu hönnun!
-      courseE_artist_functions_challenge2: |2
+      courseE_artist_functions_challenge2: |-
         Þú getur notað `hoppa` skipunina til að komast á hvað stað sem er í skjámyndinni! Prófaðu þennan kóða til að sjá hvernig hann virkar. Breyttu honum svo eftir eigin höfði!\r
         <xml>\r
           <block
@@ -5578,7 +5614,7 @@ is:
             <title
         name="YPOS">???</title>\r
             </block></xml>
-      courseE_artist_functions_challenge2_2018: |2
+      courseE_artist_functions_challenge2_2018: |-
         Þú getur notað `hoppa` skipunina til að komast á hvað stað sem er í skjámyndinni! Prófaðu þennan kóða til að sjá hvernig hann virkar. Breyttu honum svo eftir eigin höfði!\r
         <xml>\r
           <block
@@ -5659,10 +5695,12 @@ is:
       courseE_farmer_predict1_2018: "Nú er bóndinn að rækta meira en bara kál!  \\r\n\\r\nÍ þessari þraut er bóndinn annaðhvort að rækta kál eða að rækta maís.  Notaðu kubbinn `ef við kál / annars` til að taka upp kál á meðan það er kál, en **annars** taka upp maís á meðan það er maís.\n\\r\n\\r\n\\r\n\\r\n"
       courseE_farmer_ramp11a: "Ó nei! Kálhausarnir vaxa svo þétt að bóndinn veit ekki hvað þeir eru margir! \\r\n\\r\n<hr/>\\r\n\\r\nVið höfum bætt nýjum kubbi í verkfærakassann sem heitir `meðan það er kál`. Notaðu hann til að taka upp kál á meðan eitthvað kál er!\\r\n\\r\n\\r\n"
       courseE_farmer_ramp11a_2018: "Ó nei! Kálhausarnir vaxa svo þétt að bóndinn veit ekki hvað þeir eru margir! \\r\n\\r\n<hr/>\\r\n\\r\nVið höfum bætt nýjum kubbi í verkfærakassann sem heitir `meðan það er kál`. Notaðu hann til að taka upp kál á meðan eitthvað kál er!\\r\n\\r\n\\r\n"
+      courseE_farmer_ramp11a_2019: "Ó nei! Kálhausarnir vaxa svo þétt að bóndinn veit ekki hvað þeir eru margir! \\r\n\\r\n<hr/>\\r\n\\r\nVið höfum bætt nýjum kubbi í verkfærakassann sem heitir `meðan það er kál`. Notaðu hann til að taka upp kál á meðan eitthvað kál er!\\r\n\\r\n\\r\n"
       courseE_farmer_ramp12: "Notaðu nú faldaðar lykkjur (`endurtaka` og `meðan`) til að leysa þessa þraut.\\r\n\\r\n\\r\n\\r\n"
       courseE_farmer_ramp12_2018: "Notaðu nú faldaðar lykkjur (`endurtaka` og `meðan`) til að leysa þessa þraut.\\r\n\\r\n\\r\n\\r\n"
       courseE_farmer_ramp12_forswap: "Notaðu nú faldaðar lykkjur (`endurtaka` og `meðan`) til að leysa þessa þraut.\\r\n\\r\n\\r\n\\r\n"
       courseE_farmer_ramp12_forswap_2018: "Notaðu nú faldaðar lykkjur (`endurtaka` og `meðan`) til að leysa þessa þraut.\\r\n\\r\n\\r\n\\r\n"
+      courseE_farmer_ramp12_forswap_2019: "Notaðu nú faldaðar lykkjur (`endurtaka` og `meðan`) til að leysa þessa þraut.\\r\n\\r\n\\r\n\\r\n"
       courseE_farmer_ramp12a: "Nú er bóndinn að rækta meira en bara kál!  \\r\n\\r\nÍ þessari þraut er bóndinn annaðhvort að rækta kál eða að rækta maís.  Notaðu kubbinn `ef við kál / annars` til að taka upp kál á meðan það er kál, en **annars** taka upp maís á meðan það er maís.\n\\r\n\\r\n\\r\n\\r\n"
       courseE_farmer_ramp12a_2018: "Nú er bóndinn að rækta meira en bara kál!  \\r\n\\r\nÍ þessari þraut er bóndinn annaðhvort að rækta kál eða að rækta maís.  Notaðu kubbinn `ef við kál / annars` til að taka upp kál á meðan það er kál, en **annars** taka upp maís á meðan það er maís.\n\\r\n\\r\n\\r\n\\r\n"
       courseE_farmer_ramp13: "Hamingjan!  Sjáðu alla þessa sprota. Sumir munu verða að maís og aðrir að káli.  Notaðu `ef við maís / annars` kubbinn til að taka upp maís á meðan það er maís, en **annars** taka upp kál á meðan það er kál. \\r\n\\r\n\\r\n\\r\n"
@@ -5757,10 +5795,16 @@ is:
         Ef þú snýrð aðeins meira eða minna en þú mundir venjulega gera fyrir tiltekið form, getur útkoman komið skemmtilega á óvart. \r
         \r
         Prófaðu að nota eitthvað af kóðanum úr síðasta áfanga, en snúa um 89 gráður til að búa til þennan snúna spíral úr ferningum.
+      courseF_artist_for_Template_2019: |-
+        Ef þú snýrð aðeins meira eða minna en þú mundir venjulega gera fyrir tiltekið form, getur útkoman komið skemmtilega á óvart. \r
+        \r
+        Prófaðu að nota eitthvað af kóðanum úr síðasta áfanga, en snúa um 89 gráður til að búa til þennan snúna spíral úr ferningum.
       courseF_artist_for_challenge1: "Getur þú fundið leið til að endurgera þessa teikningu? \\r\n\\r\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"\nwidth=\"350px\"/>\\r\n"
       courseF_artist_for_challenge1_2018: "Getur þú fundið leið til að endurgera þessa teikningu? \\r\n\\r\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"\nwidth=\"350px\"/>\\r\n"
+      courseF_artist_for_challenge1_2019: "Getur þú fundið leið til að endurgera þessa teikningu? \\r\n\\r\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"\nwidth=\"350px\"/>\\r\n"
       courseF_artist_for_challenge2: "Getur þú fundið leið til að endurgera þessa teikningu með einni lykkju? \\r\n\\r\n<img\nsrc=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\"\nwidth=\"350px\"/>"
       courseF_artist_for_challenge2_2018: "Getur þú fundið leið til að endurgera þessa teikningu með einni lykkju? \\r\n\\r\n<img\nsrc=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\"\nwidth=\"350px\"/>"
+      courseF_artist_for_challenge2_2019: "Getur þú fundið leið til að endurgera þessa teikningu með einni lykkju? \\r\n\\r\n<img\nsrc=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\"\nwidth=\"350px\"/>"
       courseF_artist_fwp1: Nú ætlum við að prófa öflugan ritil fyrir föll. Reyndu að finna út úr því hvernig þú gætir unnið með og lagað villur í fallinu `teikna ferning`.
       courseF_artist_fwp1_2018: Nú ætlum við að prófa öflugan ritil fyrir föll. Reyndu að finna út úr því hvernig þú gætir unnið með og lagað villur í fallinu `teikna ferning`.
       courseF_artist_fwp2: "Breyttu fallinu svo að það taki stika með heitinu `lengd`.\\r\n\\r\nHver ferningur ætti að hafa 25 lengri hliðar en næsti á undan. Sá fyrsti hefur 25 díla hliðar."
@@ -5857,6 +5901,7 @@ is:
         Hver hlið er 100 díla löng. Þú þarft að snúa um 120 gráður á hverju horni.
       courseF_artist_variables_challenge1: Getur þú búið til `lengd` breytu og notað hana til að skapa þetta athyglisverða mynstur?
       courseF_artist_variables_challenge1_2018: Getur þú búið til `lengd` breytu og notað hana til að skapa þetta athyglisverða mynstur?
+      courseF_artist_variables_challenge1_2019: Getur þú búið til `lengd` breytu og notað hana til að skapa þetta athyglisverða mynstur?
       courseF_artist_variables_challenge1a: |-
         <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png"
         width="250px"/>\r
@@ -5868,6 +5913,11 @@ is:
         \r
         Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur! Þessari þraut er ætlað að vera erfið.  Getur þú haldið þig við hana þar til þú finnur lausn?
       courseF_artist_variables_challenge2_2018: |-
+        <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png"
+        width="250px"/>\r
+        \r
+        Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur! Þessari þraut er ætlað að vera erfið.  Getur þú haldið þig við hana þar til þú finnur lausn?
+      courseF_artist_variables_challenge2_2019: |-
         <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png"
         width="250px"/>\r
         \r
@@ -5904,8 +5954,11 @@ is:
         Notaðu þessa `frá` lykkju til að safna öllum blómasafanum. Það eru nokkrar aðgerðir sem þú ættir að endurtaka `teljari` sinnum.
       courseF_bee_for_challenge1_2018: |-
         Notaðu þessa `frá` lykkju til að safna öllum blómasafanum. Það eru nokkrar aðgerðir sem þú ættir að endurtaka `teljari` sinnum.
+      courseF_bee_for_challenge1_2019: |-
+        Notaðu þessa `frá` lykkju til að safna öllum blómasafanum. Það eru nokkrar aðgerðir sem þú ættir að endurtaka `teljari` sinnum.
       courseF_bee_for_challenge2: Leystu þessa þraut með eins fáum kubbum og mögulegt er.
       courseF_bee_for_challenge2_2018: Leystu þessa þraut með eins fáum kubbum og mögulegt er.
+      courseF_bee_for_challenge2_2019: Leystu þessa þraut með eins fáum kubbum og mögulegt er.
       courseF_bee_for_challenge3: "**Ofuráskorun með `frá` lykkjur:** Leystu þessa þraut með eins fáum kubbum og mögulegt er."
       courseF_bee_functions2: "Til að auðvelda hlutina er kominn tími til að læra um föll (enska: functions).\\r\n\\r\nHéðan í frá munt þú nota nýjan *fallaritil* (enska: function editor). Þetta er sérstakur gluggi sem birtist þegar þú vilt búa til eða breyta falli. Kóði falls sést ekki á vinnusvæðinu en þú getur samt notað hann! \\r\n<hr/>\\r\n\\r\nVið skulum æfa okkur með þetta fall sem safnar blómasafa en aðeins þegar býflugan er á blómi. Smelltu á bláa \"breyta\" hnappinn til að sjá kóðann innan í fallinu!\\r\n\\r\nNotaðu `sækja aðeins blómasafa` fallið til að safna blómasafanum úr hverju blómi."
       courseF_bee_functions2_2018: "Til að auðvelda hlutina er kominn tími til að læra um föll (enska: functions).\\r\n\\r\nHéðan í frá munt þú nota nýjan *fallaritil* (enska: function editor). Þetta er sérstakur gluggi sem birtist þegar þú vilt búa til eða breyta falli. Kóði falls sést ekki á vinnusvæðinu en þú getur samt notað hann! \\r\n<hr/>\\r\n\\r\nVið skulum æfa okkur með þetta fall sem safnar blómasafa en aðeins þegar býflugan er á blómi. Smelltu á bláa \"breyta\" hnappinn til að sjá kóðann innan í fallinu!\\r\n\\r\nNotaðu `sækja aðeins blómasafa` fallið til að safna blómasafanum úr hverju blómi."
@@ -6538,8 +6591,10 @@ is:
       post-assessment survey q37: "(Val) Ef þú tókst ekki AP prófið, er þá eitthvað sem hefði orðið til þess að þú hefðir frekar tekið prófið?"
       ramp_artist_loops4: Hvað gerist þegar þú bætir við 72 gráðu hægri snúningi sem síðasta kubbi í lykkjunni?
       ramp_artist_loops4_2018: Hvað gerist þegar þú bætir við 72 gráðu hægri snúningi sem síðasta kubbi í lykkjunni?
+      ramp_artist_loops4_2019: Hvað gerist þegar þú bætir við 72 gráðu hægri snúningi sem síðasta kubbi í lykkjunni?
       ramp_artist_loops7: Leitaðu að endurtekningu og styttu þennan kóða með því að nota lykkjur!
       ramp_artist_loops7_2018: Leitaðu að endurtekningu og styttu þennan kóða með því að nota lykkjur!
+      ramp_artist_loops7_2019: Leitaðu að endurtekningu og styttu þennan kóða með því að nota lykkjur!
       u3-old-drawing-view: |
         # Þín eigin teikning\r
         \r

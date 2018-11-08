@@ -1593,6 +1593,8 @@ nn:
       FoodFight_2018: Dette er eit eksempel på eit spel du kan lage i spel-lab.
       Function intro Ryan: Bruk funksjonen "build bridge"(bygg bru) to gonger for
         å lage ein bane til redstonefakkelen.
+      Function intro Ryan_2019: Bruk funksjonen "build bridge"(bygg bru) to gonger
+        for å lage ein bane til redstonefakkelen.
       Get To The Goal: Bygg kva du vil. Dette er eit eksempel på eit gjett-eit-tal-spel!
       Guess The Number 2: Bygg kva du vil. Dette er eit eksempel på eit gjett-eit-tal-spel!
       Guess The Number: Bygg kva du vil. Dette er eit eksempel på eit gjett-eit-tal-spel!
@@ -1623,6 +1625,8 @@ nn:
       InspirationalArtwork: Om dette bildet inspirerer deg, lag noko som liknar. Eller
         du kan lage kva du vil.
       InspirationalArtwork_2018: Om dette bildet inspirerer deg, lag noko som liknar.
+        Eller du kan lage kva du vil.
+      InspirationalArtwork_2019: Om dette bildet inspirerer deg, lag noko som liknar.
         Eller du kan lage kva du vil.
       K-1 Artist 1 Assessment 1: Teikn ei kort linje oppover og ei lang linje mot
         høgre!
@@ -1827,31 +1831,42 @@ nn:
         inne i huset.
       MC_HOC_2017_01_RETRY: 'Få agenten til trykkplata, deretter klikk "køyr" og bruk
         piltastane for å bevege spelaren ut av huset for å kome til kista. '
+      MC_HOC_2017_01_RETRY_2019: 'Få agenten til trykkplata, deretter klikk "køyr"
+        og bruk piltastane for å bevege spelaren ut av huset for å kome til kista. '
       MC_HOC_2017_02: Få agenten til trykkplata.
       MC_HOC_2017_02_Cole: 'Flytt agenten til trykkplata slik at {currentPlayerName}
+        kan kome til kartet. '
+      MC_HOC_2017_02_Cole_2019: 'Flytt agenten til trykkplata slik at {currentPlayerName}
         kan kome til kartet. '
       MC_HOC_2017_02_Kiki: Få agenten til trykkplata og få så spelaren til den oransje
         firkanten.
       MC_HOC_2017_02_Will: Få agenten til trykkplata.
       MC_HOC_2017_03_Cole: 'Programmer agenten til å opne porten. '
+      MC_HOC_2017_03_Cole_2019: 'Programmer agenten til å opne porten. '
       MC_HOC_2017_03_Kiki: Få agenten til trykkplata.
       MC_HOC_2017_04: Forandre løkka frå den siste gåta for å hjelpe agenten til å
         lage ein bane over den breiaste delen av elva.
       MC_HOC_2017_04POINT5_Cole: Få agenten til trykkplata.
       MC_HOC_2017_04POINT5_RYAN: Få agenten til trykkplata.
+      MC_HOC_2017_04POINT5_RYAN_2019: Få agenten til trykkplata.
       MC_HOC_2017_04_Cole: Få agenten til trykkplata.
+      MC_HOC_2017_04_Cole_2019: Få agenten til trykkplata.
       MC_HOC_2017_04_Kiki: Få agenten til trykkplata.
       MC_HOC_2017_05: Bruk ein funksjon til å hjelpe agenten fram til trykkplata.
       MC_HOC_2017_05_Cole: Få spelaren til den oransje firkanten.
+      MC_HOC_2017_05_Cole_2019: Få spelaren til den oransje firkanten.
       MC_HOC_2017_05_Josh: Få spelaren til den oransje firkanten.
       MC_HOC_2017_05_Kiki: Få spelaren til den oransje firkanten.
       MC_HOC_2017_06_Cole: Fiks på denne koden for å hjelpe agenten med å bygge ei
         bru over elva.
+      MC_HOC_2017_06_Cole_2019: Fiks på denne koden for å hjelpe agenten med å bygge
+        ei bru over elva.
       MC_HOC_2017_06_Josh: Fiks på denne koden for å hjelpe agenten med å bygge ei
         bru over elva.
       MC_HOC_2017_06_Kiki: Fiks på denne koden for å hjelpe agenten med å bygge ei
         bru over elva.
       MC_HOC_2017_07_Cole: Øydelegg isen og få {currentPlayerName} til Minecarten.
+      MC_HOC_2017_07_Cole_2019: Øydelegg isen og få {currentPlayerName} til Minecarten.
       MC_HOC_2017_07_Kiki: Bruk ein funksjon for å klarere banen til den oransje firkanten.
       MC_HOC_2017_07a_Kiki: Klarér banen til den oransje firkanten.
       MC_HOC_2017_08_Cole: Forandre funksjonen slik at han verkar for denne biomen.
@@ -1867,17 +1882,21 @@ nn:
       MC_HOC_2017_10_Kiki: Lag ein funksjon som hjelper deg å gjere ferdig denne minevogna.
       MC_HOC_2017_10_RETRY: Bruk funksjonar for å hjelpe deg med å gjere ferdig denne
         minevogna.
+      MC_HOC_2017_10_RETRY_2019: Bruk funksjonar for å hjelpe deg med å gjere ferdig
+        denne minevogna.
       MC_HOC_2017_10_RYAN: Lag ein funksjon som hjelper deg å gjere ferdig denne minevogna.
       MC_HOC_2017_10_RYAN2: Lag ein funksjon som hjelper deg å gjere ferdig denne
         minevogna.
       MC_HOC_2017_13_Cole: "**Frileik:** Utforsk på eiga hand!"
       MC_HOC_2017_4.5v2: Få agenten til trykkplata.
       MC_HOC_2017_Ali: Bruk funksjonane til å finne ein veg over lavaen.
+      MC_HOC_2017_Ali_2019: Bruk funksjonane til å finne ein veg over lavaen.
       MC_HOC_2017_FP10x10: "**Frileik** Kan du utfordre deg sjølv til å samle alle
         diamantane på dette nivået? "
       MC_HOC_2017_FP10x10_RE: "**Frileik** Kan du utfordre deg sjølv til å samle alle
         diamantane på dette nivået? "
       MC_HOC_2017_FP20x20: "**Frileik:** Utforsk på eiga hand!"
+      MC_HOC_2017_FP20x20_2019: "**Frileik:** Utforsk på eiga hand!"
       MC_HOC_2017_Ryan_03: No brukar du løkker for å hjelpe agenten med å bygge ei
         bru over elva ved å plassere blokker i vatnet.
       MC_HOC_2017_Ryan_05: Øydelegge desse kaktusane slik at spelaren kan komme seg
@@ -3106,6 +3125,8 @@ nn:
         dei tre sidene skal være like lange.'
       courseC_artist_prog5_2018: 'Dette huset treng eit tak! Teikn trekanten. Hint:
         alle dei tre sidene skal være like lange.'
+      courseC_artist_prog5_2019: 'Dette huset treng eit tak! Teikn trekanten. Hint:
+        alle dei tre sidene skal være like lange.'
       courseC_artist_prog_challenge1-doghouse: La oss byggje eit hundehus til Jorge!
       courseC_artist_prog_challenge1: Teikn eit rom for kvar av dyra. Det er mange
         ulike måtar å løyse denne oppgåva på, så ha det gøy. Den kortast moglege løysinga
@@ -3113,11 +3134,16 @@ nn:
       courseC_artist_prog_challenge1_2018: Teikn eit rom for kvar av dyra. Det er
         mange ulike måtar å løyse denne oppgåva på, så ha det gøy. Den kortast moglege
         løysinga brukar 6 blokkar, men du kan bruke så mange du vil!
+      courseC_artist_prog_challenge1_2019: Teikn eit rom for kvar av dyra. Det er
+        mange ulike måtar å løyse denne oppgåva på, så ha det gøy. Den kortast moglege
+        løysinga brukar 6 blokkar, men du kan bruke så mange du vil!
       courseC_artist_prog_challenge2: "*Hjelp meg å måle dei gule linjene på denne
         vegen! *"
       courseC_artist_prog_challenge2a: "*Hjelp meg å måle dei gule linjene på denne
         vegen! *"
       courseC_artist_prog_challenge2a_2018: "*Hjelp meg å måle dei gule linjene på
+        denne vegen! *"
+      courseC_artist_prog_challenge2a_2019: "*Hjelp meg å måle dei gule linjene på
         denne vegen! *"
       courseC_collector_loops_challenge2: Få tak i heile skatten!
       courseC_collector_loops_challenge2_2018: Få tak i heile skatten!
@@ -3305,17 +3331,25 @@ nn:
         brei. Det kan vere kva som helst figur.  '
       courseD_artist_project1_2018: 'Teikn ein liten figur, mellom **20 og 50** pikslar
         brei. Det kan vere kva som helst figur.  '
+      courseD_artist_project1_2019: 'Teikn ein liten figur, mellom **20 og 50** pikslar
+        brei. Det kan vere kva som helst figur.  '
       courseD_artist_project1a: Teikn eit trappetrinnsmønster som brukar svingar mellom
         75 og 105 gradar.
       courseD_artist_project1a_2018: Teikn eit trappetrinnsmønster som brukar svingar
         mellom 75 og 105 gradar.
+      courseD_artist_project1a_2019: Teikn eit trappetrinnsmønster som brukar svingar
+        mellom 75 og 105 gradar.
       courseD_artist_project2: Ta forma di og teikn to eller tre på rad!
       courseD_artist_project2_2018: Ta forma di og teikn to eller tre på rad!
+      courseD_artist_project2_2019: Ta forma di og teikn to eller tre på rad!
       courseD_artist_project2a: Snu 180 gradar og teikn trappetrinnsmønsteret igjen!
       courseD_artist_project2a_2018: Snu 180 gradar og teikn trappetrinnsmønsteret
         igjen!
+      courseD_artist_project2a_2019: Snu 180 gradar og teikn trappetrinnsmønsteret
+        igjen!
       courseD_artist_project5: Leik med snøflak!
       courseD_artist_project5_2018: Leik med snøflak!
+      courseD_artist_project5_2019: Leik med snøflak!
       courseD_artist_project_embedded: Dette er kva du snart skal gjere!
       courseD_artist_ramp12: Bruk det du har lært til å teikne denne trekanten inne
         i firkanten.
@@ -3367,6 +3401,8 @@ nn:
       courseD_bee_nestedLoops8: 'Saml inn all nektar frå kvar blomst og lag honning
         i alle bikubene. '
       courseD_bee_nestedLoops8_2018: 'Saml inn all nektar frå kvar blomst og lag honning
+        i alle bikubene. '
+      courseD_bee_nestedLoops8_2019: 'Saml inn all nektar frå kvar blomst og lag honning
         i alle bikubene. '
       courseD_bounce_embed_endgame: Bruk venstre og høgre piltast til å flytte åra.
         Sjå kor mange poeng du kan få før motstandaren skårar to gongar!
@@ -3477,9 +3513,13 @@ nn:
         som mogleg!  '
       courseD_maze_nestedLoops4_2018: 'Få zombien til solsikka ved å bruke så få blokker
         som mogleg!  '
+      courseD_maze_nestedLoops4_2019: 'Få zombien til solsikka ved å bruke så få blokker
+        som mogleg!  '
       courseD_maze_nestedLoops6: Få zombien til solsikka ved å bruke berre dei tilgjengelege
         blokkene.
       courseD_maze_nestedLoops6_2018: Få zombien til solsikka ved å bruke berre dei
+        tilgjengelege blokkene.
+      courseD_maze_nestedLoops6_2019: Få zombien til solsikka ved å bruke berre dei
         tilgjengelege blokkene.
       courseD_maze_ramp7: Få fuglen til grisen!
       courseD_maze_until_challenge: Ingen hint, berre utfordringar. Få zombien til
@@ -3571,25 +3611,35 @@ nn:
       courseE_farmer_ramp11: Denne oppgåva brukar óg løkker. Kan du finne ut korleis?
       courseE_farmer_ramp11a: Så lenge det er en haug, fjern jorda.
       courseE_farmer_ramp11a_2018: Så lenge det er en haug, fjern jorda.
+      courseE_farmer_ramp11a_2019: Så lenge det er en haug, fjern jorda.
       courseE_farmer_ramp11b: Så lenge det er en haug, fjern jorda.
       courseE_farmer_ramp11b_2018: Så lenge det er en haug, fjern jorda.
+      courseE_farmer_ramp11b_2019: Så lenge det er en haug, fjern jorda.
       courseE_farmer_ramp12: Bruk løkker for å løyse denne oppgåva.
       courseE_farmer_ramp12_2018: Bruk løkker for å løyse denne oppgåva.
       courseE_farmer_ramp12_forswap: Bruk løkker for å løyse denne oppgåva.
       courseE_farmer_ramp12_forswap_2018: Bruk løkker for å løyse denne oppgåva.
+      courseE_farmer_ramp12_forswap_2019: Bruk løkker for å løyse denne oppgåva.
       courseE_farmer_ramp12b: Så lenge det er salat, plukk salaten!
       courseE_farmer_ramp12b_2018: Så lenge det er salat, plukk salaten!
+      courseE_farmer_ramp12b_2019: Så lenge det er salat, plukk salaten!
       courseF_artist_for7: Gjer tre små endringar i koden frå førre nivå for å få
         dette til!
       courseF_artist_for7_2018: Gjer tre små endringar i koden frå førre nivå for
+        å få dette til!
+      courseF_artist_for7_2019: Gjer tre små endringar i koden frå førre nivå for
         å få dette til!
       courseF_artist_for_challenge1: Kan du finne ut korleis du kan gjenskape denne
         teikninga?
       courseF_artist_for_challenge1_2018: Kan du finne ut korleis du kan gjenskape
         denne teikninga?
+      courseF_artist_for_challenge1_2019: Kan du finne ut korleis du kan gjenskape
+        denne teikninga?
       courseF_artist_for_challenge2: Kan du finne ut korleis du kan gjenskape denne
         teikninga med ei enkelt løkke?
       courseF_artist_for_challenge2_2018: Kan du finne ut korleis du kan gjenskape
+        denne teikninga med ei enkelt løkke?
+      courseF_artist_for_challenge2_2019: Kan du finne ut korleis du kan gjenskape
         denne teikninga med ei enkelt løkke?
       courseF_artist_ramp10: Dra koden for den siste trekanten til ei ny løkke slik
         at det spinn rundt og lagar eit snøfnugg!
@@ -3603,6 +3653,9 @@ nn:
       courseF_artist_variables9_2018: Sjå kva som skjer når du gjentar koden frå siste
         oppgåve 30 gongar i staden for berre 3! Lag gjerne mønter eller fargeleg linjene
         for å krydre oppgåva.
+      courseF_artist_variables9_2019: Sjå kva som skjer når du gjentar koden frå siste
+        oppgåve 30 gongar i staden for berre 3! Lag gjerne mønter eller fargeleg linjene
+        for å krydre oppgåva.
       courseF_artistembed_variables9: Sjå kva som skjer når du gjentar koden frå siste
         oppgåve 30 gongar i staden for berre 3! Lag gjerne mønter eller fargeleg linjene
         for å krydre oppgåva.
@@ -3614,8 +3667,11 @@ nn:
         nektar?
       courseF_bee_for8_2018: Du kan dette! Kva må auka vere for å samle 3, 6, 9, 12,
         15 nektar?
+      courseF_bee_for8_2019: Du kan dette! Kva må auka vere for å samle 3, 6, 9, 12,
+        15 nektar?
       courseF_bee_for_challenge2: Løys denne oppgåva med færrast mogleg blokker.
       courseF_bee_for_challenge2_2018: Løys denne oppgåva med færrast mogleg blokker.
+      courseF_bee_for_challenge2_2019: Løys denne oppgåva med færrast mogleg blokker.
       courseF_bee_for_challenge3: Løys denne oppgåva med færrast mogleg blokker.
       courseF_bee_functions4: Funksjonen "flytt og hent nektar" snur bia, samlar inn
         nektar og returnerer til der den starta. Bruk denne funksjonen til å samle
@@ -4286,24 +4342,33 @@ nn:
       level grade3_Loops_2: Kan du løyse same oppgåve enklare ved å bruke ei løkke?
       ramp_artist_loops2: Flytt framover fem gongar og lag denne farga linja.
       ramp_artist_loops2_2018: Flytt framover fem gongar og lag denne farga linja.
+      ramp_artist_loops2_2019: Flytt framover fem gongar og lag denne farga linja.
       ramp_artist_loops3: Bruk ei løkke for å teikne fem farga prikkar.
       ramp_artist_loops3_2018: Bruk ei løkke for å teikne fem farga prikkar.
+      ramp_artist_loops3_2019: Bruk ei løkke for å teikne fem farga prikkar.
       ramp_artist_loops5: Bruk løkker for å teikne trappa.
       ramp_artist_loops5_2018: Bruk løkker for å teikne trappa.
+      ramp_artist_loops5_2019: Bruk løkker for å teikne trappa.
       ramp_artist_loops6: Endre løkka for å teikne trappa.
       ramp_artist_loops6_2018: Endre løkka for å teikne trappa.
+      ramp_artist_loops6_2019: Endre løkka for å teikne trappa.
       ramp_artist_loops7: Sjå etter eit mønster, og gjer denne koden kortare ved å
         bruke løkker!
       ramp_artist_loops7_2018: Sjå etter eit mønster, og gjer denne koden kortare
+        ved å bruke løkker!
+      ramp_artist_loops7_2019: Sjå etter eit mønster, og gjer denne koden kortare
         ved å bruke løkker!
       ramp_artist_loops8: Sjå etter eit mønster, og gjer denne koden kortare ved å
         bruke løkker.
       ramp_artist_loops8_2018: Sjå etter eit mønster, og gjer denne koden kortare
         ved å bruke løkker.
+      ramp_artist_loops8_2019: Sjå etter eit mønster, og gjer denne koden kortare
+        ved å bruke løkker.
       ramp_artist_loops8_clone: Sjå etter eit mønster, og gjer denne koden kortare
         ved å bruke løkker.
       ramp_artist_loops9: Løys dette puslespelet ved å teikne ein firkant.
       ramp_artist_loops9_2018: Løys dette puslespelet ved å teikne ein firkant.
+      ramp_artist_loops9_2019: Løys dette puslespelet ved å teikne ein firkant.
       scrat 16 (copy 1): Nøtt! Nøtt! Nøtt! Bruk ei "Viss"-blokk for å få meg dit med
         så få blokker som mogleg.
       scrat 16: Nøtt! Nøtt! Nøtt! Bruk ei "Viss"-blokk for å få meg dit med så få

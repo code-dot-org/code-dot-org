@@ -29,8 +29,12 @@
             "\"raining_tacos\""
           ],
           [
+            "Spotlight",
+            "\"spotlight\""
+          ],
+          [
             "(Random)",
-            "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]"
+            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]"
           ]
         ]
       }

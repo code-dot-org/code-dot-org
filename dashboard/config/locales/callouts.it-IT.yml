@@ -188,6 +188,9 @@ it:
       Function intro Ryan_callout:
         Function_intro_Ryan_1: Questa piccola istruzione dice al computer di eseguire
           GROSSI pezzi di codice con lo stesso nome nell'area di lavoro.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Questa piccola istruzione dice al computer di eseguire
+          GROSSI pezzi di codice con lo stesso nome nell'area di lavoro.
       Geometric Pattern_callout:
         4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora
           sono stati organizzati in categorie. Clicca su queste parole per scoprire
@@ -218,6 +221,9 @@ it:
       InspirationalArtwork_2018_callout:
         InspirationalArtwork_1: Prova ad usare il nuovo blocco `comment` sotto questa
           etichetta, per inserire dei commenti all'interno del tuo programma!
+      InspirationalArtwork_2019_callout:
+        InspirationalArtwork_1: Prova ad usare il nuovo blocco `comment` sotto questa
+          etichetta, per inserire dei commenti all'interno del tuo programma!
       MC HOC 2016 Level 2-2_callout:
         craft2_run_button_callout: Quando sei pronto, clicca su "Esegui" per provare
           il tuo programma.
@@ -233,18 +239,29 @@ it:
         MC_HOC_2017_03_Cole_1: Questo è un ciclo di "ripetizione"!  Prendilo dall'area
           di lavoro e aggiungi al suo interno il codice che vuoi eseguire diverse
           volte.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Questo è un ciclo di "ripetizione"!  Prendilo dall'area
+          di lavoro e aggiungi al suo interno il codice che vuoi eseguire diverse
+          volte.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: L'Agente può muoversi sull'acqua, il giocatore no!
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: L'Agente può muoversi sull'acqua, il giocatore no!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Trascina questo blocco nell'area di lavoro e aggiungi
           al suo interno il codice che vuoi ripetere diverse volte!
       MC_HOC_2017_06_Cole_callout:
         MC_HOC_2017_06_Cole_1: Non puoi buttare via questi blocchi, ma puoi modificarli!
+      MC_HOC_2017_06_Cole_2019_callout:
+        MC_HOC_2017_06_Cole_1: Non puoi buttare via questi blocchi, ma puoi modificarli!
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: 'L''Agente può muoversi sulla lava, il giocatore no!  '
       MC_HOC_2017_08_Will_callout:
         MC_HOC_2017_08_RY_1: 'L''Agente può muoversi sulla lava, il giocatore no!  '
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'L''Agente può muoversi sulla lava, mentre Steve e Alex
+          non possono!  '
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'L''Agente può muoversi sulla lava, mentre Steve e Alex
           non possono!  '
       Mike Playlab Project_callout:
@@ -649,6 +666,9 @@ it:
       courseC_maze_debugging5_2018_callout:
         courseC_maze_debugging5_1: Questi blocchi grigi sono bloccati e non possono
           essere cancellati!
+      courseC_maze_debugging5_2019_callout:
+        courseC_maze_debugging5_1: Questi blocchi grigi sono bloccati e non possono
+          essere cancellati!
       courseC_maze_programming1_callout:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro,
           premi "Esegui" per far partire il programma.
@@ -728,10 +748,16 @@ it:
       courseD_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro,
           premi "Esegui" per far partire il programma.
+      courseD_maze_ramp1_2019_callout:
+        grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro,
+          premi "Esegui" per far partire il programma.
       courseD_maze_ramp2_callout:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
           dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseD_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
+          dentro tutti i blocchi necessari per risolvere l'esercizio.
+      courseD_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
           dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseD_maze_ramp6_callout:
@@ -891,6 +917,9 @@ it:
       courseF_artist_for1_2018_callout:
         courseF_artist_for1_1: La cassetta degli attrezzi è organizzata in categorie,
           in modo da lasciare più spazio per il codice.  I cicli li trovi qui.
+      courseF_artist_for1_2019_callout:
+        courseF_artist_for1_1: La cassetta degli attrezzi è organizzata in categorie,
+          in modo da lasciare più spazio per il codice.  I cicli li trovi qui.
       courseF_artist_ramp8_callout:
         courseE_artist_ramp8_1: Puoi cambiare questo numero.
         courseE_artist_ramp8_2: Clicca qui per inserire il numero di volte da ripetere
@@ -916,6 +945,8 @@ it:
       courseF_bee_for4_callout:
         courseF_bee_for4_1: I cicli li trovi qui dentro!
       courseF_bee_for4_2018_callout:
+        courseF_bee_for4_1: I cicli li trovi qui dentro!
+      courseF_bee_for4_2019_callout:
         courseF_bee_for4_1: I cicli li trovi qui dentro!
       courseF_bee_functions2_callout:
         courseF_bee_functions2_1: Questo blocco chiama una funzione. Clicca questo
@@ -948,6 +979,8 @@ it:
         courseF_bee_fwp_challenge2_callout1: Questa funzione farà un buon lavoro con
           le pannocchie, ma con le altre verdure?
       courseF_bee_variables_1_2018_callout:
+        courseF_bee_functions_1_2018_1: Puoi trovare qui le tue variabili!
+      courseF_bee_variables_1_2019_callout:
         courseF_bee_functions_1_2018_1: Puoi trovare qui le tue variabili!
       courseF_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro,

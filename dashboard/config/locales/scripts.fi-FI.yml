@@ -1563,3 +1563,13 @@ fi:
           stages:
             Artist:
               name: Taiteilija
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Rakennetaan perustus
+            Conditionals with Cards:
+              name: Ehtolauseet pelikorteilla
+            Envelope Variables:
+              name: Kirjekuorimuuttujat
+            For Loop Fun:
+              name: Silmukkahupia

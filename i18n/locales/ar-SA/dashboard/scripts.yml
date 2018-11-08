@@ -1330,3 +1330,13 @@ ar:
           stages:
             Artist:
               name: الرسام
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: بناء قاعدة
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            Envelope Variables:
+              name: المتغيرات المغلف
+            For Loop Fun:
+              name: حلقة فور، مرح

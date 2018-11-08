@@ -1,6 +1,10 @@
 ---
 en:
   data:
+    contract_match:
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        Big Triangle: משולש גדול
+        Big Triangle|Image|Number|String: משולש גדול|תמונה|מספר|מחרוזת
     evaluation_multi:
       U5 evaluation q1:
         'No': 'לא'

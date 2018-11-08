@@ -307,7 +307,7 @@
   mc_gradelevel: "Vanusele 6+"
   mc_platformtext: "Tänapäevased brauserid, nutitelefonid ja tahvelarvutid"
   mc_specs: "Palju keeli | Kaasaegsed brauserid ja nutiseadmed | Vanuses 6 +"
-  minecraft_agent: 'Minecraft: Kangelase teekond'
+  minecraft_agent: "Minecraft: Kangelase teekond"
   minecraft_designer: "Minecraft Kujundaja"
   minecraft_adventurer: "Minecraft Seikleja"
   minecraft_tutorials: "Minecraft KoodiTund - juhendid"
@@ -493,7 +493,7 @@
   dashboard_sections_table_pairing_allowed: "Paarisprogrammeerimine"
   dashboard_sections_table_students: "Õpilased"
   dashboard_sections_table_code: "Jaotise kood"
-  dashboard_sections_name: "Osa nimi"
+  dashboard_sections_name: 'Osa nimi'
   dashboard_sections_choose_secret: "Kui soovid õpilastele kontod luua, vali salajane tüüp <b>sõna</b> või <b>pilt</b> vastava osa jaoks."
   dashboard_sections_secret_word: "<b>Sõna</b> lubab sul luua salasõna igale õpilasele."
   dashboard_sections_secret_picture: "<b>Pilt</b> võimaldab sul määrata salapildi igale õpilasele, hea kasutada nooremate õpilaste puhul, kes veel ei oska väga hästi trükkida."
@@ -506,7 +506,7 @@
   dashboard_sections_assign_hoc_script_desc: "Osaled KoodiTunnis?"
   dashboard_students_add_multiple: 'Kirjutage või kopeerige oma õpilaste nimed, igale reale üks:'
   dashboard_students_new_section: "Sa oled loonud uue sektsiooni! Nüüd lisage oma õpilasi kasutades <b>Lisa õpilane</b> ja <b>Lisa mitu õpilast</b> nuppe."
-  dashboard_students_name: "Nimi"
+  dashboard_students_name: 'Nimi'
   dashboard_students_progress: "Progress"
   dashboard_students_male: "Mees"
   dashboard_students_female: "Naine"
@@ -1080,6 +1080,7 @@
   user_header_settings: "Minu konto"
   user_header_logout: "Logi välja"
   user_header_signin: "Logi sisse"
+  user_header_create: 'Loo '
   user_header_gamelab: "Game Lab"
   user_header_playlab: "Play Lab"
   user_header_minecraft: "Minecraft"
@@ -1091,4 +1092,42 @@
   joining_section_instruct_account: "Logi sisse oma Code.org kontole."
   joining_section_instruct_code: 'Liikuge %{code_org_url} ja sisestage oma Üksuse kood: %{section_code}.'
   hero_name: 'Minecraft: Kangelase teekond'
-  creativity_create: "Loo"
+  hoc2018_creativity: "loovus"
+  hoc2018_creativity_create: "Loo"
+  hoc2018_creativity_hoc_coming: "KoodiTund on tulemas..."
+  hoc2018_creativity_what_will_you_create: "Mida Sina tahakasid luua?"
+  hoc2018_creativity_homepage: "Lase loovusel lennata ja nii sünnib innovatsioon. Kasuta KoodiTundi ja oma loomingulisust mistahes vormis. Vaata meie videot."
+  hoc2018_creativity_hoc_about: 'Tänavu on KoodiTunni fookuses loovus. '
+  hoc2018_creativity_social_media: 'Tänavu on #KoodiTund teemaks loovus. Mina löön kaasa! Aga Sina?'
+  hoc2018_creativity_social_media_2: 'Tänavu on #Kooditund teemaks loovus. Mida Sina tahaksid luua?'
+  hoc2018_creativity_courses: "Jätka Code.org kursustega"
+  hoc2018_creativity_courses_link: "Jätka <a href=\"https://studio.code.org/courses\">Code.org kursustega</a>"
+  hoc2018_mc_page_title: "Minecraft KoodiTund - juhendid"
+  hoc2018_mc_details: "Palju keeli | Kaasaegsed brauserid ja nutiseadmed | Vanuses 6 +"
+  hoc2018_mc_aquatic_description: "Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond läbi Minecrafti koos koodiga."
+  hoc2018_mc_hero_title: "Minecraft: Kangelase teekond"
+  hoc2018_mc_hero_description: "Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond läbi Minecrafti koos koodiga."
+  hoc2018_mc_designer_title: "Minecraft Kujundaja"
+  hoc2018_mc_designer_description: "Programmeri loomi ja teisi Minecrafti olendeid sinu enda Minecrafti versioonis."
+  hoc2018_mc_adventurer_title: "Minecraft Seikleja"
+  hoc2018_mc_adventurer_description: "Kasuta koodi, et viia Alex või Steve seiklusele."
+  hoc2018_mc_start: "Alusta"
+  hoc2018_mc_no_internet: "Ei ole internetti?"
+  hoc2018_mc_download_adventurer: "Lae alla Minecraft Seikleja offline versioon."
+  hoc2018_mc_educators_box2_button: "Laadi alla"
+  hoc2018_mc_video_1min: "1 min"
+  hoc2018_mc_video_2min: "2 min"
+  hoc2018_mc_video_5min: "5 min"
+  hoc2018_mc_video_title_inspire_girl: "Inspireeri tüdrukut"
+  hoc2018_mc_video_title_schools_dont_teach: "Mida enamik koole ei õpeta"
+  hoc2018_mc_homepage_what_create: "Mida Sina tahakasid luua?"
+  hoc2018_mc_homepage_join_us: "Liitu meiega"
+  hoc2018_mc_homepage_try_it: "Proovi seda"
+  hoc2018_mc_back: "Minecraft on tagasi uhiuue tegevusega KoodiTunniks!"
+  hoc2018_mc_back_journey: "Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond läbi Minecrafti koos koodiga."
+  hoc2018_mc_go_to_mc_education: "Mine Minecraft Education"
+  hoc2018_dance_party_button: "Alusta"
+  hoc2018_dance_teacher_resources_tile1_button: "Tunnikava"
+  hoc2018_dance_teacher_resources_tile2_button: "Lahutatud tegevus"
+  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "Lisateave"
+  hoc2018_dance_amazon_apply_now_button_text: "Taotle nüüd"

@@ -160,7 +160,7 @@ bg:
             '8': Без
             '9': Roll
             '10': Това или онова
-            '11': Thiller
+            '11': Thriller
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -506,6 +506,22 @@ bg:
         text: завий наляво
       RyanLab_turnRight:
         text: завий надясно
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"rotation"': въртене
+            '"x"': x позиция
+            '"y"': y позиция
+            '"direction"': посока на движение
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': x позиция
+            '"y"': y позиция
+            '"direction"': посока на движение
+            '"tint"': оттенък
       craft_ifPath:
         options:
           DIR:

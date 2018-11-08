@@ -91,6 +91,10 @@ de:
         Function_intro_Ryan_1: Diese kleine Anweisung sagt dem Computer, dass er ein
           GROSSES Code-Stück mit dem entsprechenden Namen im Arbeitsbereich ausführen
           soll.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Diese kleine Anweisung sagt dem Computer, dass er ein
+          GROSSES Code-Stück mit dem entsprechenden Namen im Arbeitsbereich ausführen
+          soll.
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Spiele einen Geräusch ab, wenn dieses Ereignis
           passiert.
@@ -115,13 +119,23 @@ de:
         MC_HOC_2017_03_Cole_1: Dies ist eine "wiederholen"-Schleife.  Klicke in den
           Arbeitsbereich und füge den Code hinzu, der immer wieder ausgeführt werden
           soll.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Dies ist eine "wiederholen"-Schleife.  Klicke in den
+          Arbeitsbereich und füge den Code hinzu, der immer wieder ausgeführt werden
+          soll.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Der Agent kann über Wasser schweben. Der Spieler kann
+          das nicht!
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: Der Agent kann über Wasser schweben. Der Spieler kann
           das nicht!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Klicke in den Arbeitsbereich und füge den Code hinzu,
           der immer wieder ausgeführt werden soll.
       MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Du kannst diese Blöcke nicht verwerfen. Du kannst sie
+          jedoch bearbeiten!
+      MC_HOC_2017_06_Cole_2019_callout:
         MC_HOC_2017_06_Cole_1: Du kannst diese Blöcke nicht verwerfen. Du kannst sie
           jedoch bearbeiten!
       MC_HOC_2017_08_RY_callout:
@@ -131,6 +145,9 @@ de:
         MC_HOC_2017_08_RY_1: 'Der Agent kann über Lava schweben. Der Spieler kann
           das nicht!  '
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'Der Agent kann über Lava schweben. Der Spieler kann
+          das nicht!  '
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'Der Agent kann über Lava schweben. Der Spieler kann
           das nicht!  '
       Mike Playlab Project_callout:

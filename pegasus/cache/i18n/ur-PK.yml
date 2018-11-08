@@ -135,10 +135,10 @@ ur-PK:
   homepage_hero_text_bosh: |-
     &ldquo;اگر آپ کوڈ کر سکتے ہیں، تو آپ اپنی زندگی کے راستے کا انتخاب کر سکتے ہیں۔ &rdquo;
     کرس بوش
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;اس ہنر نے میرا مستقبل بدل دیا ہے. اور یہ بات قابل ذکر ہے کے یہ بہت ہی مزیدار ہے.&rdquo;
      لونا, ساتویں جماعت
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;میں نے اپنے بچوں کو سیکھنے کے لئے کبھی بھی اتنا پرجوش نہیں دیکھا۔&rdquo;
      مایکل، استاد
   homepage_hero_text_student3: |-
@@ -397,4 +397,9 @@ ur-PK:
   flappy_shortcode: پھڑپھڑایں
   header_courses: کورسز
   header_educate_hoc: آور-آف-کوڈ
-  creativity_create: بنائیں
+  hoc2018_creativity_create: بنائیں
+  hoc2018_mc_start: شروع کریں
+  hoc2018_mc_video_title_inspire_girl: ایک لڑکی کی حوصلہ افزائی
+  hoc2018_mc_homepage_join_us: ہمارے ساتھ شامل ہوں
+  hoc2018_dance_party_button: شروع کریں
+  hoc2018_dance_amazon_about_future_engineer_box1_button_text: مزید سیکھے

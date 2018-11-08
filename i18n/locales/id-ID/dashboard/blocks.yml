@@ -3,20 +3,36 @@ id:
   data:
     blocks:
       Dancelab_atTimestamp:
+        text: setelah {TIMESTAMP}{UNIT}
         options:
           UNIT:
             '"seconds"': detik
       Dancelab_changeColorBy:
+        text: ubah {COLOR}{METHOD} dengan {AMOUNT}
         options:
           METHOD:
             '"hue"': Corak warna warni
             '"saturation"': Saturasi
             '"brightness"': Kecerahan
       Dancelab_changeMoveEachLR:
+        text: lakukan {GROUP} {MOVE} {DIR} selamanya
         options:
           GROUP:
             sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
           MOVE:
+            MOVES.ClapHigh: Tepuk tangan di atas
+            MOVES.Clown: Badut
+            MOVES.Dab: Oleskan
             '"rand"': Acak
             MOVES.Rest: Tidak ada
           DIR:
@@ -25,6 +41,9 @@ id:
       Dancelab_changeMoveLR:
         options:
           MOVE:
+            MOVES.ClapHigh: Tepuk tangan di atas
+            MOVES.Clown: Badut
+            MOVES.Dab: Oleskan
             '"rand"': Acak
             MOVES.Rest: Tidak ada
           DIR:
@@ -40,7 +59,20 @@ id:
         options:
           GROUP:
             sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
           MOVE:
+            MOVES.ClapHigh: Tepuk tangan di atas
+            MOVES.Clown: Badut
+            MOVES.Dab: Oleskan
             '"rand"': Acak
             MOVES.Rest: Tidak ada
           DIR:
@@ -49,6 +81,9 @@ id:
       Dancelab_doMoveLR:
         options:
           MOVE:
+            MOVES.ClapHigh: Tepuk tangan di atas
+            MOVES.Clown: Badut
+            MOVES.Dab: Oleskan
             '"rand"': Acak
             MOVES.Rest: Tidak ada
           DIR:
@@ -74,9 +109,9 @@ id:
       Dancelab_ifDanceIs:
         options:
           DANCE:
-            '0': Clap High
-            '1': Clown
-            '2': Dab
+            '0': Tepuk tangan di atas
+            '1': Badut
+            '2': Oleskan
             '3': Double Jam
             '4': Drop
             '5': Floss
@@ -85,7 +120,7 @@ id:
             '8': Tidak ada
             '9': Roll
             '10': This or That
-            '11': Thiller
+            '11': Thriller
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -97,6 +132,16 @@ id:
         options:
           GROUP:
             sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
           FORMAT:
             '"grid"': Kisi
             '"row"': baris
@@ -157,6 +202,16 @@ id:
         options:
           GROUP:
             sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
           PROPERTY:
             '"scale"': ukuran
             '"height"': tinggi
@@ -210,12 +265,14 @@ id:
             '1': Sedang
             '2': Besar
       gamelab_changeColor:
+        text: ubah {COLOR}{METHOD} dengan {AMOUNT}
         options:
           METHOD:
             '"tint"': Mewarnai
             '"tone"': Nada
             '"shade"': Corak
       gamelab_changeColorBy:
+        text: ubah {COLOR}{METHOD} dengan {AMOUNT}
         options:
           METHOD:
             '"hue"': Corak warna warni
@@ -433,6 +490,22 @@ id:
         text: Tengah
       Vector_vectorNorth:
         text: Utara
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
       craft_ifPath:
         options:
           DIR:

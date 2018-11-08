@@ -49,6 +49,7 @@ tr:
   next_resource: Sonraki Kaynak
   cancel: İptal
   okay: Tamam
+  or: veya
   heading_x_of_y: "%{heading} (sayfa %{x}, %{y})"
   add_teacher_form:
     code:
@@ -796,6 +797,8 @@ tr:
       title: Minecraft
       body: Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın sana ait sürümünde
         programla.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     sports:

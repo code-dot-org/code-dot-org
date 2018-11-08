@@ -499,6 +499,10 @@ it:
         CDEF_Video_SpritesInAction: Personaggi in Azione
         CSF_SpriteLab_SpritesInAction_CDEF: Personaggi in Azione
         CSF_StarWars_ProjectIntro: Introduzione al progetto Star Wars
+        mc_2018_intro: 'Minecraft: Viaggio Acquatico - Introduzione'
+        MC_2018_loops: 'Minecraft: Viaggio Acquatico - Ripeti fino a che'
+        mc_2018_conditionals: 'Minecraft: Viaggio Acquatico - Istruzioni condizionali'
+        mc_2018_closing: 'Minecraft: Viaggio Acquatico - Congratulazioni'
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l'altro blocco qua sopra

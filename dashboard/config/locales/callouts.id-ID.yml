@@ -237,6 +237,9 @@ id:
       Function intro Ryan_callout:
         Function_intro_Ryan_1: Instruksi kecil ini memberi tahu komputer untuk menjalankan
           potongan BESAR kode dengan nama yang sama di ruang kerja.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Instruksi kecil ini memberi tahu komputer untuk menjalankan
+          potongan BESAR kode dengan nama yang sama di ruang kerja.
       Geometric Pattern_callout:
         4-5_Artist_Patterns_Free_Play_1: Semua blok favorit Anda diatur dalam kategori.
           Klik pada kata-kata ini untuk melihat di mana semuanya ditempatkan!
@@ -262,6 +265,9 @@ id:
       InspirationalArtwork_2018_callout:
         InspirationalArtwork_1: Coba gunakan blok 'komentar` yang baru di bawah label
           ini untuk meninggalkan catatan anda sendiri di dalam program anda!
+      InspirationalArtwork_2019_callout:
+        InspirationalArtwork_1: Coba gunakan blok 'komentar` yang baru di bawah label
+          ini untuk meninggalkan catatan anda sendiri di dalam program anda!
       MC HOC 2016 Level 2-2_callout:
         craft2_run_button_callout: Ketika anda sudah siap, tekan "Run" untuk mencoba
           program anda.
@@ -276,13 +282,21 @@ id:
       MC_HOC_2017_03_Cole_callout:
         MC_HOC_2017_03_Cole_1: Ini adalah loop `ulangi`!  Klik untuk memasukkannya
           ke ruang kerja dan tambahkan kode yang ingin kamu jalankan berulang kali.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Ini adalah loop `ulangi`!  Klik untuk memasukkannya
+          ke ruang kerja dan tambahkan kode yang ingin kamu jalankan berulang kali.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Agent bisa mengapung di atas air, tapi pemain tidak
+          bisa!
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: Agent bisa mengapung di atas air, tapi pemain tidak
           bisa!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Klik untuk memasukkannya ke ruang kerja dan tambahkan
           beberapa kode untuk mengulanginya lagi dan lagi!
       MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Kamu tidak bisa membuang blok ini, tapi kamu bisa mengeditnya!
+      MC_HOC_2017_06_Cole_2019_callout:
         MC_HOC_2017_06_Cole_1: Kamu tidak bisa membuang blok ini, tapi kamu bisa mengeditnya!
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: Agent bisa mengapung di atas lahar, tapi pemain tidak
@@ -291,6 +305,9 @@ id:
         MC_HOC_2017_08_RY_1: Agent bisa mengapung di atas lahar, tapi pemain tidak
           bisa!
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: Agent bisa mengapung di atas lahar, tapi pemain tidak
+          bisa!
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: Agent bisa mengapung di atas lahar, tapi pemain tidak
           bisa!
       Mike Playlab Project_callout:
@@ -706,6 +723,8 @@ id:
         courseC_maze_debugging5_1: Blok-blok tersebut terkunci dan tidak dapat dihapus!
       courseC_maze_debugging5_2018_callout:
         courseC_maze_debugging5_1: Blok-blok tersebut terkunci dan tidak dapat dihapus!
+      courseC_maze_debugging5_2019_callout:
+        courseC_maze_debugging5_1: Blok-blok tersebut terkunci dan tidak dapat dihapus!
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: Kamu hanya punya satu blok yang tersedia di dalam teka-teki
           ini.
@@ -814,10 +833,16 @@ id:
       courseD_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: Setelah menghubungkan semua blok, tekan "Jalankan"
           untuk memulai program mu.
+      courseD_maze_ramp1_2019_callout:
+        grade2_CaringForNewPet_0_1: Setelah menghubungkan semua blok, tekan "Jalankan"
+          untuk memulai program mu.
       courseD_maze_ramp2_callout:
         courseC_maze_programming2_1: Ini adalah kotak perlengkapan. Dimana kamu akan
           menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan.
       courseD_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: Ini adalah kotak perlengkapan. Dimana kamu akan
+          menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan.
+      courseD_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: Ini adalah kotak perlengkapan. Dimana kamu akan
           menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan.
       courseD_maze_ramp3_callout:
@@ -828,10 +853,17 @@ id:
         courseC_maze_programming3_2: Kamu bisa menarik blok-blok tambahan ke dalam
           kotak perlengkapan untuk membuangnya.
         stone_block_2: Blok-blok warna abu-abu terbuat dari batu dan tidak bisa dibuang.
+      courseD_maze_ramp3_2019_callout:
+        courseC_maze_programming3_2: Kamu bisa menarik blok-blok tambahan ke dalam
+          kotak perlengkapan untuk membuangnya.
+        stone_block_2: Blok-blok warna abu-abu terbuat dari batu dan tidak bisa dibuang.
       courseD_maze_ramp4_callout:
         courseC_maze_programming4_1: Ini adalah batas jumlah blok kamu. Menunjukkan
           kepada kamu masih ada berapa blok yang bisa kamu gunakan.
       courseD_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Ini adalah batas jumlah blok kamu. Menunjukkan
+          kepada kamu masih ada berapa blok yang bisa kamu gunakan.
+      courseD_maze_ramp4_2019_callout:
         courseC_maze_programming4_1: Ini adalah batas jumlah blok kamu. Menunjukkan
           kepada kamu masih ada berapa blok yang bisa kamu gunakan.
       courseD_maze_ramp6_callout:
@@ -1064,6 +1096,9 @@ id:
       courseF_artist_for1_2018_callout:
         courseF_artist_for1_1: Toolbox berada di mode "category" untuk memberikan
           lebih banyak ruang bagi kode kamu. Kategori loop`for` tinggal disini.
+      courseF_artist_for1_2019_callout:
+        courseF_artist_for1_1: Toolbox berada di mode "category" untuk memberikan
+          lebih banyak ruang bagi kode kamu. Kategori loop`for` tinggal disini.
       courseF_artist_fwp1_callout:
         courseF_artist_fwp1_1: Klik tombol "edit" untuk mengubah kode dibagian dalam
           fungsi.
@@ -1098,16 +1133,25 @@ id:
       courseF_artist_variables3_2018_callout:
         courseF_artist_variables3_a: Gunakan ini untuk menetapkan nilai dari variabel
           `panjang`
+      courseF_artist_variables3_2019_callout:
+        courseF_artist_variables3_a: Gunakan ini untuk menetapkan nilai dari variabel
+          `panjang`
       courseF_artist_variables6_callout:
         courseF_artist_variables6_1: Variabel-variable akan berguna ketika kamu harus
           mengubah salinan yang banyak dari satu nomor yang sama.
       courseF_artist_variables6_2018_callout:
         courseF_artist_variables6_1: Variabel-variable akan berguna ketika kamu harus
           mengubah salinan yang banyak dari satu nomor yang sama.
+      courseF_artist_variables6_2019_callout:
+        courseF_artist_variables6_1: Variabel-variable akan berguna ketika kamu harus
+          mengubah salinan yang banyak dari satu nomor yang sama.
       courseF_artist_variables6a_callout:
         courseF_artist_variables6a_1: Variabel-variable akan berguna ketika kamu harus
           mengubah salinan yang banyak dari satu nomor yang sama.
       courseF_artist_variables6a_2018_callout:
+        courseF_artist_variables6a_1: Variabel-variable akan berguna ketika kamu harus
+          mengubah salinan yang banyak dari satu nomor yang sama.
+      courseF_artist_variables6a_2019_callout:
         courseF_artist_variables6a_1: Variabel-variable akan berguna ketika kamu harus
           mengubah salinan yang banyak dari satu nomor yang sama.
       courseF_artist_variables_3_callout:
@@ -1139,9 +1183,13 @@ id:
         courseF_bee_for4_1: Anda akan menemukan loop 'for` di sini!
       courseF_bee_for4_2018_callout:
         courseF_bee_for4_1: Anda akan menemukan loop 'for` di sini!
+      courseF_bee_for4_2019_callout:
+        courseF_bee_for4_1: Anda akan menemukan loop 'for` di sini!
       courseF_bee_for9_callout:
         courseF_bee_for9_1: Kamu akan menemukan blok `matematika` disini.
       courseF_bee_for9_2018_callout:
+        courseF_bee_for9_1: Kamu akan menemukan blok `matematika` disini.
+      courseF_bee_for9_2019_callout:
         courseF_bee_for9_1: Kamu akan menemukan blok `matematika` disini.
       courseF_bee_functions2_callout:
         courseF_bee_functions2_1: Blok ini memanggil fungsi. Klik tombol "sunting"
@@ -1488,6 +1536,10 @@ id:
           memiliki cara baru untuk memasukkan nomor. Blok-blok `matematika` tersebut
           bisa ditarik dan dipindah-pindahkan!
       grade5_artist_variables_triangles1_2018_callout:
+        grade5_artist_variables_triangles1_1: Perhatikan bahwa blok-blok sekarang
+          memiliki cara baru untuk memasukkan nomor. Blok-blok `matematika` tersebut
+          bisa ditarik dan dipindah-pindahkan!
+      grade5_artist_variables_triangles1_2019_callout:
         grade5_artist_variables_triangles1_1: Perhatikan bahwa blok-blok sekarang
           memiliki cara baru untuk memasukkan nomor. Blok-blok `matematika` tersebut
           bisa ditarik dan dipindah-pindahkan!

@@ -915,6 +915,41 @@ es:
         ya está implementado! \r\n \r\nLleva dos veces el pequeño bloque verde a tu
         espacio de trabajo para arreglar el camino y conseguir que {currentPlayerName}
         alcance la antorcha de redstone [redstone_torch]."
+      Function intro Ryan_2019: "Cuentas con una **función** llamada \"construir puente\"
+        en tu espacio de trabajo. ¡Todo el código que necesitas para cruzar el río
+        ya está implementado! \r\n \r\nLleva dos veces el pequeño bloque verde a tu
+        espacio de trabajo para arreglar el camino y conseguir que {currentPlayerName}
+        alcance la antorcha de redstone [redstone_torch]."
+      HOC 2018 Level_1: "Necesitarás suministros para el viaje. Consigue un **barco**
+        ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        del **cofre** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
+      HOC 2018 Level_10: "Hay un **calamar** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        en algún lugar de este monumento oceánico, ¿puedes encontrarlo?\n\n"
+      HOC 2018 Level_11: Construye un muro de **prismarina** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        alrededor del hormigón negro. ¡Esto activará el **conducto** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        y completará tu desafío!
+      HOC 2018 Level_12: "¡Enhorabuena! El mundo acuático abierto te espera. ¡Construye
+        un arrecife de coral! ¡Un volcán! ¡Un naufragio! Tú decides."
+      HOC 2018 Level_2: "¡Es más fácil ir en barco que nadar en aguas abiertas! Ve
+        hacia el final del muelle para saltar a bordo."
+      HOC 2018 Level_3: Coge los remos y maneja tu barco por mar abierto para pescar
+        el **bacalao** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Alimenta al **delfín** con el bacalao ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Usa un bloque de repetición para atravesar más rápido el océano.
+      HOC 2018 Level_5: "¡Hay una **concha de Nautilus** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        escondida en alguna parte! Explora el naufragio para alcanzar el **cofre**
+        ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png)."
+      HOC 2018 Level_6: "¡Parece que hace mucho frío fuera! Pesca un **salmón** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+        para abrirte camino hasta las ruinas subacuáticas."
+      HOC 2018 Level_7a: "Has encontrado las ruinas subacuáticas. Busca un **cofre**
+        en la arenisca ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png),
+        contiene un tesoro de **prismarina** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      HOC 2018 Level_8: "¿Primero icebergs y ahora lava? Atraviesa esta isla volcánica
+        y encuentra el **pez tropical** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        en el arrecife de coral.\n\n"
+      HOC 2018 Level_9b: "¡Has llegado al arrecife, ahora busca el **corazón del mar**
+        ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! Usa el coral azul y rojo para alcanzar el **cofre** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
       K-1 Bee Loops 2: |-
         ¡Utiliza un enlace para moverte obtener el nectar y
         hacer miel!
@@ -946,12 +981,23 @@ es:
         de \"avanzar\" en el bloque de \"al ejecutar\" dentro del área de trabajo
         para llevar al Agent al plato de presión [PressurePlate_Up], y entonces pulsa
         \"Ejecutar\" y utiliza las flechas direccionales para sacar a {currentPlayerName}
-        de la casa y conseguir el **cofre** [chest].\n"
+        de la casa y conseguir el **cofre** [chest]."
+      MC_HOC_2017_01_RETRY_2019: "¡{currentPlayerName} está atrapado en el interior
+        de la casa, pero el Agent está aquí para ayudar!   \r\n \r\n   \r\nPon un
+        bloque de \"avanzar\" en el bloque de \"al ejecutar\" dentro del área de trabajo
+        para llevar al Agent al plato de presión [PressurePlate_Up], y entonces pulsa
+        \"Ejecutar\" y utiliza las flechas direccionales para sacar a {currentPlayerName}
+        de la casa y conseguir el **cofre** [chest]."
       MC_HOC_2017_02: El jugador necesita llegar a esa arboleda secreta. Ayuda al
         Agent a abrir la puerta escribiendo código para llevarlo al plato de presión.
       MC_HOC_2017_02_Cole: "¡{currentPlayerName} se ha embarcado en una gran aventura!
         Para proporcionarle ayuda, tendrás que conseguir el **mapa** [map_empty] que
         hay detrás de la puerta cerrada que está a la derecha. \r\n \r\nIntroduce
+        el código en el espacio de trabajo para llevar al Agent al Plato de presión
+        [PressurePlate_Up] para que {currentPlayerName} pueda seguir adelante."
+      MC_HOC_2017_02_Cole_2019: "¡{currentPlayerName} se ha embarcado en una gran
+        aventura! Para proporcionarle ayuda, tendrás que conseguir el **mapa** [map_empty]
+        que hay detrás de la puerta cerrada que está a la derecha. \r\n \r\nIntroduce
         el código en el espacio de trabajo para llevar al Agent al Plato de presión
         [PressurePlate_Up] para que {currentPlayerName} pueda seguir adelante."
       MC_HOC_2017_02_Kiki: "El jugador se ha embarcado en una gran aventura, pero
@@ -967,6 +1013,9 @@ es:
       MC_HOC_2017_03_Cole: "{currentPlayerName} continúa con su aventura, y ahora
         necesita la **brújula** [compass] para prepararse para el viaje.  \r\n   \r\nPrograma
         al Agent para abrir la puerta. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} continúa con su aventura, y ahora
+        necesita la **brújula** [compass] para prepararse para el viaje.  \r\n   \r\nPrograma
+        al Agent para abrir la puerta. "
       MC_HOC_2017_03_Kiki: "¡La aventura del jugador comenzará detrás de la puerta
         cerrada, en la arboleda secreta! \r\n\r\n\r\nAyuda al Agent a abrir la puerta
         escribiendo código para que llegue al plato de presión."
@@ -978,7 +1027,14 @@ es:
         primeros platos de presión."
       MC_HOC_2017_04POINT5_RYAN: "¡Lo has conseguido! \r\n\r\nAhora, haz que {currentPlayerName}
         atraviese sin problemas el laberinto para hacerse con el **hacha** [diamond_axe]\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "¡Lo has conseguido! \r\n\r\nAhora, haz que
+        {currentPlayerName} atraviese sin problemas el laberinto para hacerse con
+        el **hacha** [diamond_axe]\r\n"
       MC_HOC_2017_04_Cole: "¡El Agent puede moverse por el agua!  \r\n \r\nUtiliza
+        un bucle de \"repetición\" para ayudar a resolver este rompecabezas y ayudar
+        a {currentPlayerName} a llegar al **cubo** [bucket_empty] que hay detrás de
+        la puerta. "
+      MC_HOC_2017_04_Cole_2019: "¡El Agent puede moverse por el agua!  \r\n \r\nUtiliza
         un bucle de \"repetición\" para ayudar a resolver este rompecabezas y ayudar
         a {currentPlayerName} a llegar al **cubo** [bucket_empty] que hay detrás de
         la puerta. "
@@ -994,6 +1050,9 @@ es:
       MC_HOC_2017_05_Cole: "¡Oh, no! ¡El puente ha desaparecido! \r\n\r\nPrograma
         al Agent para reconstruir el puente utilizando el bloque \"colocar\", para
         que {currentPlayerName} pueda llegar a la **pala** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "¡Oh, no! ¡El puente ha desaparecido! \r\n\r\nPrograma
+        al Agent para reconstruir el puente utilizando el bloque \"colocar\", para
+        que {currentPlayerName} pueda llegar a la **pala** [diamond_shovel]."
       MC_HOC_2017_05_Josh: "¡Oh, no! ¡El puente ha desaparecido! \n\n\nAyuda al Agent
         a reconstruir el puente para que el jugador pueda llegar a la **pala**."
       MC_HOC_2017_05_Kiki: "Ha llegado el momento de que el jugador abandone la arboleda
@@ -1003,6 +1062,9 @@ es:
       MC_HOC_2017_06_Cole: "Otro río, ¡pero este es mucho más amplio! \r\n \r\nArregla
         este código para ayudar al Agent a construir un puente y así {currentPlayerName}
         pueda llegar al **pico** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2019: "Otro río, ¡pero este es mucho más amplio! \r\n \r\nArregla
+        este código para ayudar al Agent a construir un puente y así {currentPlayerName}
+        pueda llegar al **pico** [diamond_pickaxe]. "
       MC_HOC_2017_06_Josh: "Otro río, ¡pero este es mucho más amplio! \r\n\r\nArregla
         este código para ayudar al Agent a levantar un puente sobre el río."
       MC_HOC_2017_06_Kiki: "Otro río, ¡pero este es mucho más amplio! \r\n\r\nArregla
@@ -1010,6 +1072,9 @@ es:
       MC_HOC_2017_07_Cole: "¡El hielo se interpone en tu camino! \r\n \r\nLa función
         \"despejar camino\" puede ayudarte a destruir el hielo y conseguir que {currentPlayerName}
         llegue a la vagoneta [minecart_normal]."
+      MC_HOC_2017_07_Cole_2019: "¡El hielo se interpone en tu camino! \r\n \r\nLa
+        función \"despejar camino\" puede ayudarte a destruir el hielo y conseguir
+        que {currentPlayerName} llegue a la vagoneta [minecart_normal]."
       MC_HOC_2017_07_Kiki: "Los bucles no son la única forma de repetir código.  \r\n\r\nMira,
         te hemos dado una función llamada \"despejar cactus\", que se encargará de
         quitar tres cactus cada vez que la uses. Utiliza dos bloques de \"despejar
@@ -1046,6 +1111,10 @@ es:
         en tu espacio de trabajo? \r\n \r\nUtiliza estas funciones con otro código
         de la caja de herramientas para despejar el camino para la vagoneta; a continuación,
         hazte con el **chisquero de pedernal** [flint_and_steel]. \r\n "
+      MC_HOC_2017_10_RETRY_2019: "¿Eres capaz de ver la diferencia entre las dos funciones
+        en tu espacio de trabajo? \r\n \r\nUtiliza estas funciones con otro código
+        de la caja de herramientas para despejar el camino para la vagoneta; a continuación,
+        hazte con el **chisquero de pedernal** [flint_and_steel]. \r\n "
       MC_HOC_2017_10_RYAN: Intenta crear funciones desde el principio que hagan más
         sencillo que el Agent finalice con la vagoneta y lleve al jugador al recuadro
         naranja.
@@ -1063,12 +1132,17 @@ es:
       MC_HOC_2017_Ali: 'Mira las funciones que hay abajo. ¿Cómo puedes utilizarlas
         para evitar a los Ghasts y ayudar a {currentPlayerName} a llegar sin problemas
         al **Libro Encantado** [book_enchanted]?  '
+      MC_HOC_2017_Ali_2019: 'Mira las funciones que hay abajo. ¿Cómo puedes utilizarlas
+        para evitar a los Ghasts y ayudar a {currentPlayerName} a llegar sin problemas
+        al **Libro Encantado** [book_enchanted]?  '
       MC_HOC_2017_FP10x10: "**Juego libre:** ¡Te toca! ¿Podrás ponerte a prueba a
         ti mismo y conseguir todos los diamantes de este nivel?  "
       MC_HOC_2017_FP10x10_RE: "**Juego libre:** ¡Te toca! ¿Podrás ponerte a prueba
         a ti mismo y conseguir todos los diamantes de este nivel?  "
       MC_HOC_2017_FP20x20: "**Juego libre:** ¡Te toca! Utiliza el código del Agent
         para ayudarte a explorar este mundo."
+      MC_HOC_2017_FP20x20_2019: "**Juego libre:** ¡Te toca! Utiliza el código del
+        Agent para ayudarte a explorar este mundo."
       MC_HOC_2017_Ryan_03: "¿Sabías que puedes poner más de un trozo de código en
         un bucle? \r\n\r\nUtiliza un bucle de \"repetición\" para ayudar al Agent
         a construir un puente sobre el río colocando bloques en el agua."
@@ -1146,10 +1220,13 @@ es:
         en cada panel. Utiliza un bucle anidado. '
       courseD_bee_nestedLoops8_2018: 'Recolecta todo el néctar de cada flor y haz
         miel en cada panel. Utiliza un bucle anidado. '
+      courseD_bee_nestedLoops8_2019: 'Recolecta todo el néctar de cada flor y haz
+        miel en cada panel. Utiliza un bucle anidado. '
       courseD_bounce_events1: ¡Llegar a la bandera! Coloque un bloque en "cuando flecha"
         bloquear y pulse "Ejecutar" para mover el jugador a la bandera.
       courseD_maze_nestedLoops4: "¡Llévame al girasol!"
       courseD_maze_nestedLoops4_2018: "¡Llévame al girasol!"
+      courseD_maze_nestedLoops4_2019: "¡Llévame al girasol!"
       courseE_bee_functions2: "Las funciones son bloques de código que realizan una
         tarea. \r\n\r\nUsa la función `obtener 2 néctar` para recolectar el néctar
         de cada flor."
@@ -1171,6 +1248,8 @@ es:
       courseF_bee_for_challenge2: Resuelve este rompecabezas con el menor número de
         bloques posible.
       courseF_bee_for_challenge2_2018: Resuelve este rompecabezas con el menor número
+        de bloques posible.
+      courseF_bee_for_challenge2_2019: Resuelve este rompecabezas con el menor número
         de bloques posible.
       frozen circle function in circle: Ahora crearemos 20 círculos superpuestos,
         girando 18 grados entre cada círculo.
@@ -1480,4 +1559,6 @@ es:
       ramp_artist_loops4: "¿Qué sucede cuando agregas un giro a la derecha \nde 72
         grados después de todo lo demás dentro de tu bucle?"
       ramp_artist_loops4_2018: "¿Qué sucede cuando agregas un giro a la derecha \nde
+        72 grados después de todo lo demás dentro de tu bucle?"
+      ramp_artist_loops4_2019: "¿Qué sucede cuando agregas un giro a la derecha \nde
         72 grados después de todo lo demás dentro de tu bucle?"

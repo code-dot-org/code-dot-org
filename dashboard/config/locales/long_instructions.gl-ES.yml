@@ -414,8 +414,11 @@ gl:
         en cada colmea. Usa un bucle aniñado. "
       courseD_bee_nestedLoops8_2018: "Recolle todo o néctar de cada flor\ne produce
         mel en cada colmea. Usa un bucle aniñado. "
+      courseD_bee_nestedLoops8_2019: "Recolle todo o néctar de cada flor\ne produce
+        mel en cada colmea. Usa un bucle aniñado. "
       courseD_maze_nestedLoops4: Lévame até o xirasol!
       courseD_maze_nestedLoops4_2018: Lévame até o xirasol!
+      courseD_maze_nestedLoops4_2019: Lévame até o xirasol!
       courseE_bee_functions3: |-
         As funcións son bloques de código que realizan
         unha tarefa. Usa a función "obteña 5" para recoller 5 néctares dunha vez. Lémbrate tamén de usar un bucle para obter un contador ideal de bloque.
@@ -429,6 +432,9 @@ gl:
         Resolve este desafío usando o menor número
         de bloques posíbel.
       courseF_bee_for_challenge2_2018: |-
+        Resolve este desafío usando o menor número
+        de bloques posíbel.
+      courseF_bee_for_challenge2_2019: |-
         Resolve este desafío usando o menor número
         de bloques posíbel.
       frozen circle function in circle: |-

@@ -223,6 +223,8 @@ bs:
         stone_block_2: Sivi blokovi su napravljeni od kamena i ne mogu se baciti.
       courseD_maze_ramp3_2018_callout:
         stone_block_2: Sivi blokovi su napravljeni od kamena i ne mogu se baciti.
+      courseD_maze_ramp3_2019_callout:
+        stone_block_2: Sivi blokovi su napravljeni od kamena i ne mogu se baciti.
       courseE_artist_functions_challenge_callout:
         courseE_artist_functions_challenge_callout2: Ako ti se ne sviđa ovaj dizajn,
           promijeni ga u šta želiš!
@@ -264,6 +266,8 @@ bs:
       courseF_bee_for4_callout:
         courseF_bee_for4_1: Ovdje ćeš naći `for`petlju!
       courseF_bee_for4_2018_callout:
+        courseF_bee_for4_1: Ovdje ćeš naći `for`petlju!
+      courseF_bee_for4_2019_callout:
         courseF_bee_for4_1: Ovdje ćeš naći `for`petlju!
       courseF_bee_fwp_challenge2_callout:
         courseF_bee_fwp_challenge2_callout1: Ova funkcija će uraditi dobar posao sa

@@ -15,7 +15,7 @@ nav: how_to_nav
 
 يقدم موقع Code.org الفرصة لموظفيك [ليتصلوا](%= codeorg_url('/volunteer') %) بفصول دراسية محلية تقوم بساعة برمجة حيث يشاركونهم خبراتهم العملية ويشجعوا الطلاب لدراسة علم الكمبيوتر.
 
-<button>سجل دخولك لتتطوع!</button> <br /> <br /></p> 
+[<button>Sign up to volunteer!</button>](%= codeorg_url('/volunteer') %) <br /> <br />
 
 لمزيد من التعليمات حول تشجيع الموظفين وربط الموظفين بالفصول الدراسية، تفقد [دليل لتعاون الشركاء](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 

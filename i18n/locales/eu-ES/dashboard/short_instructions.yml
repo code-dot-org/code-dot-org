@@ -1031,6 +1031,8 @@ eu:
         Etxe honek teilatua behar du! Triangelua marraztu. Pista: hiru aldeak luzera bera dute.
       courseC_artist_prog5_2018: |-
         Etxe honek teilatua behar du! Triangelua marraztu. Pista: hiru aldeak luzera bera dute.
+      courseC_artist_prog5_2019: |-
+        Etxe honek teilatua behar du! Triangelua marraztu. Pista: hiru aldeak luzera bera dute.
       courseC_maze_debugging10: Araztu maila hau blokeak birrordenatuz eta gehituz zerriarekin elkar nadin!
       courseD_artist_binary1: "Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk \"off\" (0 zenbakiarekin adierazia) eta \"on\" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \\r \\r\n\"Pixel\" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan \"01010101\" bitarrez marraztea?"
       courseD_artist_binary1_2018: "Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk \"off\" (0 zenbakiarekin adierazia) eta \"on\" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \\r \\r\n\"Pixel\" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan \"01010101\" bitarrez marraztea?"
@@ -1049,6 +1051,7 @@ eu:
       courseD_bee_nestedLoops6_2018: Eraman nazazu ekiloreraino!
       courseD_bee_nestedLoops8: 'Bildu lore bakoitzeko nektar guztia, eta egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. '
       courseD_bee_nestedLoops8_2018: 'Bildu lore bakoitzeko nektar guztia, eta egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. '
+      courseD_bee_nestedLoops8_2019: 'Bildu lore bakoitzeko nektar guztia, eta egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. '
       courseD_bounce_events10: Orain, helburu bat dago goiko partean. Itsatsi "tantoa eman" eta "aurkariari tantoa eman" blokeak "pilota helburuan" eta "pilotak erraketa jotzen ez duenean" blokeei joko bat egiteko. Ikusi zenbat tanto lor ditzakezun zure aurkariak bi tanto lortu aurretik.
       courseD_bounce_events11: Orain, blokeak gehitu ditzakezu "martxan dagoenean" blokean. "bota beste pilota bat" bloke berria gehitu behar duzu toki batean baino gehiagotan. Era berean, saia zaitez eszena aldatzen, edo erraketaren eta pilotaren abiadura, eta ikusi ea zenbat tanto eskura ditzakezun zure aurkariak bi tanto eskuratu aurretik.
       courseD_bounce_events12: Sor ezazu zure Errebote joko propioa. Ikuste-efektu eta arau guztiak alda ditzakezu. Prest daukazunean, klikatu Amaitu zure lagunek probatu ahal izan dezaten zure jokoa haien telefonoetan.
@@ -1063,8 +1066,10 @@ eu:
       courseD_debugging_3: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
       courseD_maze_nestedLoops4: 'Eraman nazazu ekiloreraino!'
       courseD_maze_nestedLoops4_2018: 'Eraman nazazu ekiloreraino!'
+      courseD_maze_nestedLoops4_2019: 'Eraman nazazu ekiloreraino!'
       courseD_maze_nestedLoops6: Eraman nazazu ekiloreraino!
       courseD_maze_nestedLoops6_2018: Eraman nazazu ekiloreraino!
+      courseD_maze_nestedLoops6_2019: Eraman nazazu ekiloreraino!
       courseE_artist_functions1: "Kaixo. Ni zombie artista. Marraztea maite dugu!\nLagundu nazazu beirazko laukiak marrazten. Lagungarria: Beiren arteko zubia, laukien luzera baino 25 pixel txikiagoa da."
       courseE_artist_functions1_2018: "Kaixo. Ni zombie artista. Marraztea maite dugu!\nLagundu nazazu beirazko laukiak marrazten. Lagungarria: Beiren arteko zubia, laukien luzera baino 25 pixel txikiagoa da."
       courseE_bee_concept1: Bildu lore bakoitzeko nektar guztia. Erabili begizta kabiatu bat. 
@@ -1078,14 +1083,19 @@ eu:
       courseE_farmer_concept4: Orain goazen maila sakonago batera! kode-bloke oso hori kabiatu dugu beste begizta batean, baina artista bere lekura eraman behar duzu hurrengo lerroa marrazteko. Hauetako ze kode-bloke jar dezakezu kanpo-begiztaren amaieran lauki-sare osoa marrazteko?
       courseF_artist_for7: Egin hiru aldaketatxo azken mailako kodean hau lortzeko!
       courseF_artist_for7_2018: Egin hiru aldaketatxo azken mailako kodean hau lortzeko!
+      courseF_artist_for7_2019: Egin hiru aldaketatxo azken mailako kodean hau lortzeko!
       courseF_artist_for_challenge1: Badakizu nola egin berriro marrazki hau?
       courseF_artist_for_challenge1_2018: Badakizu nola egin berriro marrazki hau?
+      courseF_artist_for_challenge1_2019: Badakizu nola egin berriro marrazki hau?
       courseF_artist_for_challenge2: Badakizu nola egin berriro marrazki hau begizta bakar batekin?
       courseF_artist_for_challenge2_2018: Badakizu nola egin berriro marrazki hau begizta bakar batekin?
+      courseF_artist_for_challenge2_2019: Badakizu nola egin berriro marrazki hau begizta bakar batekin?
       courseF_bee_for8: "Ondo zabiltza! Zein izan behar da darabilzun inkrementua 3, 6, 9, 12, 15 nektar jasotzeko?\n"
       courseF_bee_for8_2018: "Ondo zabiltza! Zein izan behar da darabilzun inkrementua 3, 6, 9, 12, 15 nektar jasotzeko?\n"
+      courseF_bee_for8_2019: "Ondo zabiltza! Zein izan behar da darabilzun inkrementua 3, 6, 9, 12, 15 nektar jasotzeko?\n"
       courseF_bee_for_challenge2: Ebatzi puzle hau ahalik eta bloke gutxien erabiliz.
       courseF_bee_for_challenge2_2018: Ebatzi puzle hau ahalik eta bloke gutxien erabiliz.
+      courseF_bee_for_challenge2_2019: Ebatzi puzle hau ahalik eta bloke gutxien erabiliz.
       courseF_bee_for_challenge3: Ebatzi puzle hau ahalik eta bloke gutxien erabiliz.
       courseF_bee_functions4: '"Mugitu eta lortu nektarra" funtzioak erlea mugitu, nektarra bildu eta erlea hasierako lekura itzultzen du. Erabili funtzioa nektar guztia biltzeko.'
       courseF_bee_functions4_2018: '"Mugitu eta lortu nektarra" funtzioak erlea mugitu, nektarra bildu eta erlea hasierako lekura itzultzen du. Erabili funtzioa nektar guztia biltzeko.'

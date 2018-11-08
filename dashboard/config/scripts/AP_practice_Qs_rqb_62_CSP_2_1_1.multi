@@ -1,0 +1,23 @@
+name 'AP_practice_Qs_rqb_62_CSP_2_1_1'
+wrong 'Hexadecimal is a newer format and is recognized by more programming languages.'
+right 'Hexadecimal format takes up less storage space in memory and in files.'
+wrong 'Compilers will transform all numeric values to Hexadecimal to make them readable by the CPU.'
+wrong 'Not all numeric values can be represented in Binary.'
+markdown <<MARKDOWN
+Choose 1 benefit of having a numeric value represented in Hexadecimal instead of Binary.
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.1.1** and Essential Knowledge statements: **2.1.1F**
+<hr>
+ (A) All programming languages can interpret all numeric representations, as long as the format is indicated within the program.
+
+<hr>
+ (B) Hexadecimal format can represent every byte (i.e., eight bits) as two consecutive hexadecimal digits, since it uses alphanumeric characters 0-9 and A-F, instead of the eight digits that would be required by Binary.  Fewer digits means less storage space required.
+
+<hr>
+ (C) Compilers will actually transform all numeric values to Binary to make them readable by the CPU.
+
+<hr>
+ (D) All numeric values can be represented in Binary, but very large numbers will require very many digits.
+
+MARKDOWN
