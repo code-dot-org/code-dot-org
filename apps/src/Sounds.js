@@ -276,7 +276,9 @@ Sounds.prototype.playURL = function (url, playbackOptions) {
   // the file type from the extension at the end of the URL
   // (NOTE: not ideal because preload happens inside first play)
   var sound = this.soundsById[url];
-  if (sound) {
+  // If the song previously failed to load, let the call to this.register()
+  // below replace its entry in this.soundsById and try again to load it.
+  if (sound && !sound.didLoadFail()) {
     if (sound.isLoaded()) {
       sound.play(playbackOptions);
     } else {
