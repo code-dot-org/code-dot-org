@@ -52,6 +52,7 @@ Feature: Dance Lab
     And I close the instructions overlay if it exists
 
     When I navigate to the shared version of my project
+    And element ".signInOrAgeDialog" is hidden
     Then I click selector "#runButton" once I see it
     Then I wait until element "#runButton" is not visible
 
