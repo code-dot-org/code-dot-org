@@ -796,7 +796,6 @@ module Api::V1::Pd
     end
 
     test 'cohort csv download returns expected columns for facilitators' do
-      skip "Facilitator CSVs will be overhauled with facilitator app work"
       create :pd_facilitator1819_application, :locked, course: 'csf'
       sign_in @workshop_admin
       get :cohort_view, format: 'csv', params: {role: 'csf_facilitators'}

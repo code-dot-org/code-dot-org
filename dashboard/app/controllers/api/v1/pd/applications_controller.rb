@@ -124,8 +124,14 @@ module Api::V1::Pd
           render json: serialized_applications
         end
         format.csv do
-          csv_text = get_csv_text applications, role
-          send_csv_attachment csv_text, "#{role}_cohort_applications.csv"
+          if [:csd_teachers, :csp_teachers].include? role.to_sym
+            csv_text = get_csv_text applications, role
+            send_csv_attachment csv_text, "#{role}_cohort_applications.csv"
+          else
+            optional_columns = get_optional_columns(regional_partner_value)
+            csv_text = [TYPES_BY_ROLE[role.to_sym].cohort_csv_header(optional_columns), applications.map {|app| app.to_cohort_csv_row(optional_columns)}].join
+            send_csv_attachment csv_text, "#{role}_cohort_applications.csv"
+          end
         end
       end
     end
@@ -287,6 +293,11 @@ module Api::V1::Pd
         TYPES_BY_ROLE[role.try(&:to_sym)].csv_header(course),
         *applications.map {|a| a.to_csv_row(course)}
       ].join
+    end
+
+    # TODO: remove remaining teachercon references
+    def get_optional_columns(_regional_partner_value)
+      {accepted_teachercon: false, registered_workshop: false}
     end
 
     def prefetch_and_serialize(applications, role: nil, serializer:, scope: {})
