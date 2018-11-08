@@ -352,6 +352,11 @@ Sound.prototype.preload = function () {
       audioElement.removeEventListener(loadEventName, eventListener);
     }.bind(this);
     audioElement.addEventListener(loadEventName, eventListener);
+    audioElement.addEventListener('error', () => {
+      // Indicate failure without the http status code since it is not
+      // available in this context.
+      this.handleLoadFailed();
+    });
   }
 };
 
