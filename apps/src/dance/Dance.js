@@ -381,7 +381,7 @@ Dance.prototype.runButtonClick = async function () {
   // Block re-entrancy since starting a run is async
   // (not strictly needed since we disable the run button,
   // but better to be safe)
-  if (this.runIsStarting) {
+  if (getStore().getState().songs.runIsStarting) {
     return;
   }
 
@@ -391,7 +391,6 @@ Dance.prototype.runButtonClick = async function () {
   // tasks that need to complete first
   const runButton = document.getElementById('runButton');
   runButton.disabled = true;
-  this.runIsStarting = true;
   getStore().dispatch(setRunIsStarting(true));
   await this.danceReadyPromise;
 
@@ -406,7 +405,6 @@ Dance.prototype.runButtonClick = async function () {
   } finally {
     this.studioApp_.toggleRunReset('reset');
     // Safe to allow normal run/reset behavior now
-    this.runIsStarting = false;
     getStore().dispatch(setRunIsStarting(false));
   }
 
