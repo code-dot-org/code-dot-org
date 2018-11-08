@@ -24,5 +24,6 @@ theme: responsive
 
 %h1= I18n.t(:hoc2018_dance_videos_section_heading)
 
-%h2= I18n.t(:hoc2018_dance_amazon_learn_more_future_engineer_subheading_title)
-=view :dance_amazon_future_engineer
+- if request.language == 'en'
+  %h2= I18n.t(:hoc2018_dance_amazon_learn_more_future_engineer_subheading_title)
+  =view :dance_amazon_future_engineer
