@@ -42,25 +42,25 @@ class Api::V1::Pd::ApplicationSerializerTest < ::ActionController::TestCase
     @application.update(
       status_log: [{
         status: 'unreviewed',
-        at: Time.parse('2019-09-01 12:00')
+        at: Time.parse('2019-09-01 12:00 -07:00')
       }, {
         status: 'pending',
-        at: Time.parse('2019-10-01 9:00')
+        at: Time.parse('2019-10-01 9:00 -07:00')
       }, {
         status: 'accepted_no_cost_registration',
-        at: Time.parse('2019-11-06 15:00')
+        at: Time.parse('2019-11-06 15:00 -08:00')
       }],
       status_timestamp_change_log: [{
         title: 'accepted_no_cost_registration_email',
-        time: Time.parse('2019-11-06 15:01'),
+        time: Time.parse('2019-11-06 15:01 -08:00'),
       }, {
         title: 'pending',
-        time: Time.parse('2019-10-01 09:00'),
+        time: Time.parse('2019-10-01 09:00 -07:00'),
         changing_user_id: program_manager.id,
         changing_user_name: program_manager.name
       }, {
         title: 'accepted_no_cost_registration',
-        time: Time.parse('2019-11-06 15:00'),
+        time: Time.parse('2019-11-06 15:00 -08:00'),
         changing_user_id: program_manager.id,
         changing_user_name: program_manager.name
       }].to_json
