@@ -2,7 +2,7 @@
   "category": "",
   "config": {
     "func": "setDanceSpeed",
-    "blockText": "change {SPRITE} dance speed to {SPEED}",
+    "blockText": "set {SPRITE} dance speed to {SPEED}",
     "args": [
       {
         "name": "SPRITE",

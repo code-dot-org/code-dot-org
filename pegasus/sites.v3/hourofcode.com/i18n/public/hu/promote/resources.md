@@ -7,7 +7,7 @@ nav: promote_nav
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# Promote the Hour of Code
+# Népszerűsítsd a "Hour of Code" kezdeményezést
 
 ### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code](<%= resolve_url('/how-to') %>)!
 
@@ -17,17 +17,15 @@ nav: promote_nav
 
 <a id="posters"></a>
 
-## Hang these posters in your school
+## Függeszd ki ezeket a posztereket az iskoládban
 
-[![image](/images/fit-250/poster_steph.png)](/files/poster_steph.pdf)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/poster_malala.png)](/files/poster_malala.pdf)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/poster_hadi.png)](/files/poster_hadi.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
-
-[![image](/images/fit-250/poster_mary.png)](/files/poster_mary.pdf)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/poster_satya.png)](/files/poster_satya.pdf)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/poster_shakira.png)](/files/poster_shakira.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
+<%= view :promote_new_posters %>
 
 Looking for our posters from previous years? [Find them here](<%= resolve_url('/promote/previous-posters') %>)!
 
 <a id="social"></a>
 
-## Post these on social media
+## Oszd meg ezeket a közösségi médiában
 
 [![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -37,7 +35,7 @@ Looking for our posters from previous years? [Find them here](<%= resolve_url('/
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## Használd ezt az "Hour of Code" logót a népszerűsítéshez
 
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 

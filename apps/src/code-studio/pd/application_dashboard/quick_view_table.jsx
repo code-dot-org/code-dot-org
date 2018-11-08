@@ -155,7 +155,7 @@ export class QuickViewTable extends React.Component {
 
     if (this.props.viewType === 'teacher') {
       columns.push({
-        property: 'principal_approval',
+        property: 'principal_approval_state',
         header: {
           label: 'Principal Approval',
           transforms: [sortable]
@@ -173,6 +173,12 @@ export class QuickViewTable extends React.Component {
         property: 'meets_scholarship_criteria',
         header: {
           label: 'Meets Scholarship Requirements',
+          transforms: [sortable]
+        }
+      }, {
+        property: 'friendly_scholarship_status',
+        header: {
+          label: 'Scholarship Teacher?',
           transforms: [sortable]
         }
       }, {
@@ -275,11 +281,11 @@ export class QuickViewTable extends React.Component {
     );
   };
 
-  formatPrincipalApprovalCell = (principal_approval, props) => {
-    if (principal_approval) {
+  formatPrincipalApprovalCell = (principal_approval_state, props) => {
+    if (principal_approval_state) {
       return (
         <span>
-          {principal_approval}
+          {principal_approval_state}
         </span>
       );
     }
