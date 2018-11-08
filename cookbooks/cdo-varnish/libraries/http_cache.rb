@@ -133,6 +133,11 @@ class HttpCache
       dashboard: {
         behaviors: [
           {
+            path: '/favicon.ico',
+            headers: [],
+            cookies: 'none',
+          },
+          {
             # Serve Sprockets-bundled assets directly from the S3 bucket synced via `assets:precompile`.
             #
             path: '/assets/*',
@@ -184,6 +189,11 @@ class HttpCache
           },
           {
             path: '/api/v1/projects/gallery/public/*',
+            headers: [],
+            cookies: 'none'
+          },
+          {
+            path: '/api/v1/sound-library/*',
             headers: [],
             cookies: 'none'
           },
