@@ -32,7 +32,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :principal_approval_state,
     :meets_scholarship_criteria,
     :school_stats,
-    :status_change_log
+    :status_change_log,
     :scholarship_status
   )
 
@@ -148,7 +148,8 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     # Old status changes were logged with just the time of the change, not the person
     # doing the change. So we need to get all changes, and then find a way to resolve
     # duplicates. So we build a hash where keys are time followed by status, assuming
-    # that if two entries show the same status change
+    # that if two entries show the same status change and are within a minute of each
+    # other, they are the same change
 
     status_log = object.try(:status_log) || []
 
