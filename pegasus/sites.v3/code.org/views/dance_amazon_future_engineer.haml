@@ -1,0 +1,61 @@
+%link{href: "/css/tools.css", rel: "stylesheet"}
+
+:ruby
+  resources = [
+    [
+      {
+        title: I18n.t(:hoc2018_dance_amazon_about_future_engineer_box1_title),
+        description: I18n.t(:hoc2018_dance_amazon_about_future_engineer_box1_description),
+        image: "/images/fill-373x248/AFE_K8.jpg",
+        button_text: I18n.t(:hoc2018_dance_amazon_apply_now_button_text),
+        link: "https://www.amazonfutureengineer.com"
+      },
+      {
+        title: I18n.t(:hoc2018_dance_amazon_try_coding_this_summer_box2_long_title),
+        description: I18n.t(:hoc2018_dance_amazon_try_coding_box2_description),
+        image: "/images/fill-373x248/AFE_highschool.jpg",
+        button_text: I18n.t(:hoc2018_dance_amazon_apply_now_button_text),
+        link: "https://www.codingwithkids.com/amazon"
+      },
+    ],
+    [
+      {
+        title: I18n.t(:hoc2018_dance_amazon_scholarship_programs_box3_long_title),
+        description: I18n.t(:hoc2018_dance_amazon_scholarship_programs_box3_description),
+        image: "/images/fill-373x248/AFE_scholarship.jpg",
+        button_text: I18n.t(:hoc2018_dance_amazon_apply_now_button_text),
+        link: "https://www.scholarsapply.org/amazonfutureengineer"
+      },
+      {
+        title: I18n.t(:hoc2018_dance_amazon_internships_box4_long_title),
+        description: I18n.t(:hoc2018_dance_amazon_internships_box4_description),
+        image: "/images/fill-373x248/AFE_intern.jpg",
+        button_text: I18n.t(:hoc2018_dance_amazon_apply_now_button_text),
+        link: " https://www.amazon.jobs/en/landing_pages/amazonfutureengineer"
+      },
+    ]
+  ]
+
+.resources
+  - resources.each do |resource|
+    .tile-container-responsive{style: "padding: 5px;"}
+      .col-50
+        .tutorial-tile
+          %img.tutorial-tile-img{src: resource[0][:image]}
+          .tutorial-info
+            %h3.bold-text{style: "margin-top: 0px;"}= resource[0][:title]
+            .smalltext= resource[0][:description]
+            %a{href: resource[0][:link], target: '_blank'}
+              %button.tutorial-info-start.bold-text.tutorial-gray= resource[0][:button_text]
+            .clear
+
+      .col-50
+        .tutorial-tile
+          %img.tutorial-tile-img{src:resource[1][:image]}
+          .tutorial-info
+            %h3.bold-text{style: "margin-top: 0px;"}= resource[1][:title]
+            .smalltext= resource[1][:description]
+            %a{href: resource[1][:link], target: '_blank'}
+              %button.tutorial-info-start.bold-text.tutorial-gray= resource[1][:button_text]
+            .clear
+
