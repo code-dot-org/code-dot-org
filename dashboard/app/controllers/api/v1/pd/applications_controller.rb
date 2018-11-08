@@ -233,7 +233,8 @@ module Api::V1::Pd
         :regional_partner_value,
         :response_scores,
         :pd_workshop_id,
-        :fit_workshop_id
+        :fit_workshop_id,
+        :scholarship_status
       )
     end
 
