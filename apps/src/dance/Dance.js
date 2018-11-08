@@ -16,7 +16,7 @@ import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
-import SignInOrAgeDialog from "../templates/SignInOrAgeDialog";
+import AgeDialog from "../templates/AgeDialog";
 import project from "../code-studio/initApp/project";
 import {
   getSongManifest,
@@ -120,7 +120,7 @@ Dance.prototype.init = function (config) {
   ReactDOM.render((
     <Provider store={getStore()}>
       <div>
-        <SignInOrAgeDialog useDancePartyStyle={true}/>
+        <AgeDialog/>
         <AppView
           visualizationColumn={
             <DanceVisualizationColumn
