@@ -126,7 +126,7 @@ const customInputTypes = {
         .appendTitle(new Blockly.FieldVariable(null, null, null, Blockly.BlockValueType.SPRITE), inputConfig.name);
     },
     generateCode(block, arg) {
-      return block.getTitleValue(arg.name);
+      return Blockly.JavaScript.translateVarName(block.getTitleValue(arg.name));
     },
   },
 };

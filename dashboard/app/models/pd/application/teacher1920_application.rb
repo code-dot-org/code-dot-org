@@ -353,6 +353,12 @@ module Pd::Application
       Pd::Workshop.find_by(id: pd_workshop_id)&.date_and_location_name
     end
 
+    def friendly_scholarship_status
+      if scholarship_status
+        SCHOLARSHIP_DROPDOWN_OPTIONS.find {|option| option[:value] == scholarship_status}[:label]
+      end
+    end
+
     # memoize in a hash, per course
     FILTERED_LABELS = Hash.new do |h, key|
       labels_to_remove = (

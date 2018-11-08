@@ -7,6 +7,8 @@ module Api::V1::Pd
     # include Pd::Teacher1819ApplicationConstants
     include Pd::Facilitator1819ApplicationConstants
 
+    freeze_time
+
     setup_all do
       csf_facilitator_application_hash = build :pd_facilitator1819_application_hash,
         program: Pd::Application::Facilitator1819Application::PROGRAMS[:csf]
@@ -299,6 +301,37 @@ module Api::V1::Pd
       assert_equal({regional_partner_name: 'Yes'}, application.response_scores_hash)
     end
 
+    test 'update appends to the status changed log if status is changed' do
+      sign_in @program_manager
+
+      assert_equal [], @csd_teacher_application_with_partner.sanitize_status_timestamp_change_log
+
+      post :update, params: {id: @csd_teacher_application_with_partner.id, application: {status: 'pending'}}
+      @csd_teacher_application_with_partner.reload
+
+      assert_equal [
+        {
+          title: 'pending',
+          changing_user_id: @program_manager.id,
+          changing_user_name: @program_manager.name,
+          time: Time.zone.now
+        }
+      ], @csd_teacher_application_with_partner.sanitize_status_timestamp_change_log
+    end
+
+    test 'update does not append to the status changed log if status is unchanged' do
+      sign_in @program_manager
+      @csd_teacher_application_with_partner.update(status_timestamp_change_log: '[]')
+      @csd_teacher_application_with_partner.reload
+
+      assert_equal [], @csd_teacher_application_with_partner.sanitize_status_timestamp_change_log
+
+      post :update, params: {id: @csd_teacher_application_with_partner.id, application: {status: @csd_teacher_application_with_partner.status}}
+      @csd_teacher_application_with_partner.reload
+
+      assert_equal [], @csd_teacher_application_with_partner.sanitize_status_timestamp_change_log
+    end
+
     test 'workshop admins can lock and unlock applications' do
       sign_in @workshop_admin
       put :update, params: {id: @csf_facilitator_application_no_partner, application: {status: 'accepted', locked: 'true'}}
@@ -317,6 +350,18 @@ module Api::V1::Pd
 
       # Make sure partner is retained
       assert_equal @regional_partner, @csf_facilitator_application_with_partner.reload.regional_partner
+    end
+
+    test 'workshop admins can update scholarship status' do
+      scholarship_status = 'no'
+      sign_in @workshop_admin
+      put :update, params: {id: @csp_teacher_application.id, application: {scholarship_status: 'no'}}
+      assert_response :success
+      data = JSON.parse(response.body)
+      assert_equal scholarship_status, data['scholarship_status']
+
+      # Make sure scholarship status is retained
+      assert_equal scholarship_status, @csp_teacher_application.reload.scholarship_status
     end
 
     # TODO: remove this test when workshop_organizer is deprecated
@@ -396,7 +441,6 @@ module Api::V1::Pd
     end
 
     test 'csv download for csf facilitator returns expected columns' do
-      skip "Facilitator CSVs will be overhauled with facilitator app work"
       sign_in @workshop_admin
 
       get :quick_view, format: 'csv', params: {role: 'csf_facilitators'}
@@ -413,7 +457,6 @@ module Api::V1::Pd
     end
 
     test 'csv download for csp facilitator returns expected columns' do
-      skip "Facilitator CSVs will be overhauled with facilitator app work"
       sign_in @workshop_admin
 
       get :quick_view, format: 'csv', params: {role: 'csp_facilitators'}
@@ -483,7 +526,8 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
-            status: 'accepted_not_notified'
+            status: 'accepted_not_notified',
+            friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
@@ -519,7 +563,8 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: nil,
             registered_workshop: nil,
-            status: 'accepted_not_notified'
+            status: 'accepted_not_notified',
+            friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
@@ -577,7 +622,8 @@ module Api::V1::Pd
           course: 'csp',
           regional_partner: @regional_partner,
           user: @serializing_teacher,
-          pd_workshop_id: workshop.id
+          pd_workshop_id: workshop.id,
+          scholarship_status: 'no'
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
@@ -599,7 +645,8 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
-            status: 'accepted_not_notified'
+            status: 'accepted_not_notified',
+            friendly_scholarship_status: 'No'
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
@@ -634,7 +681,8 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: nil,
             registered_workshop: nil,
-            status: 'accepted_not_notified'
+            status: 'accepted_not_notified',
+            friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
@@ -694,6 +742,7 @@ module Api::V1::Pd
         "Status",
         "Meets minimum requirements?",
         "Meets scholarship requirements?",
+        "Scholarship teacher?",
         "Bonus Points",
         "Notes",
         "Title",
@@ -798,7 +847,6 @@ module Api::V1::Pd
     end
 
     test 'cohort csv download returns expected columns for facilitators' do
-      skip "Facilitator CSVs will be overhauled with facilitator app work"
       create :pd_facilitator1819_application, :locked, course: 'csf'
       sign_in @workshop_admin
       get :cohort_view, format: 'csv', params: {role: 'csf_facilitators'}
