@@ -70,10 +70,6 @@ class AgeDialog extends Component {
     // Sets cookie to true when anon user is 13+. False otherwise.
     let over13 = parseInt(value, 10) >= 13;
     sessionStorage.setItem(sessionStorageKey, over13);
-    // Filter on by default, reload to filter
-    if (over13) {
-      reload();
-    }
 
     // When opening a new tab, we'll have a new session (and thus show this dialog),
     // but may still be using a storage_id for a previous user. Clear that cookie
@@ -81,6 +77,8 @@ class AgeDialog extends Component {
     const cookieName = environmentSpecificCookieName('storage_id');
     if (cookies.get(cookieName)) {
       cookies.remove(cookieName, {path: '/', domain: '.code.org'});
+      reload();
+    } else if (over13) { // Filter on by default, reload to filter
       reload();
     } else {
       this.setState({open: false});
