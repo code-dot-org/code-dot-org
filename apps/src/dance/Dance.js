@@ -25,6 +25,7 @@ import {
   loadSongMetadata,
   parseSongOptions,
   unloadSong,
+  fetchSignedCookies,
 } from './songs';
 
 const ButtonState = {
@@ -161,7 +162,12 @@ Dance.prototype.setSongCallback = function (songId) {
   getStore().dispatch(setSelectedSong(songId));
 
   unloadSong(lastSongId, songData);
-  loadSong(songId, songData);
+  loadSong(songId, songData, status => {
+    if (status === 403) {
+      // The cloudfront signed cookies may have expired.
+      fetchSignedCookies().then(() => loadSong(songId, songData));
+    }
+  });
 
   this.updateSongMetadata(songId);
 
@@ -392,11 +398,14 @@ Dance.prototype.runButtonClick = async function () {
 
   Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;
-  await this.execute();
 
-  this.studioApp_.toggleRunReset('reset');
-  // Safe to allow normal run/reset behavior now
-  this.runIsStarting = false;
+  try {
+    await this.execute();
+  } finally {
+    this.studioApp_.toggleRunReset('reset');
+    // Safe to allow normal run/reset behavior now
+    this.runIsStarting = false;
+  }
 
   // Enable the Finish button if is present:
   const shareCell = document.getElementById('share-cell');
@@ -433,9 +442,9 @@ Dance.prototype.execute = async function () {
   await this.initSongsPromise;
 
   const songMetadata = await this.songMetadataPromise;
-  return new Promise(resolve => {
-    this.nativeAPI.play(songMetadata, () => {
-      resolve();
+  return new Promise((resolve, reject)=> {
+    this.nativeAPI.play(songMetadata, success => {
+      success ? resolve() : reject();
     });
   });
 };
