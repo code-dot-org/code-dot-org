@@ -100,10 +100,11 @@ class SignInOrAgeDialog extends Component {
       return;
     }
 
-    //Sets cookie to true when anon user is 13+. False otherwise.
+    // Sets cookie to true when anon user is 13+. False otherwise.
     let over13 = parseInt(value, 10) >= 13;
     sessionStorage.setItem(sessionStorageKey, over13);
-    if (over13) {
+    // In order to render songs options with filter off in Dance Party, reload page
+    if (this.props.useDancePartyStyle && over13) {
       reload();
     }
 
