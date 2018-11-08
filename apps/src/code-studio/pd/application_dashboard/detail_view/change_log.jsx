@@ -12,7 +12,13 @@ const styles = {
 
 export default class ChangeLog extends React.Component {
   static propTypes = {
-    changeLog: PropTypes.arrayOf(PropTypes.object).isRequired
+    changeLog: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        time: PropTypes.string.isRequired,
+        changing_user: PropTypes.string
+      })
+    ).isRequired
   };
 
   render() {
