@@ -38,12 +38,12 @@
 
 .resources
   - resources.each do |resource|
-    .tile-container-responsive{style: "padding: 5px;"}
+    .tile-container-responsive.set-container-padding
       .col-50
         .tutorial-tile
           %img.tutorial-tile-img{src: resource[0][:image]}
           .tutorial-info
-            %h3.bold-text{style: "margin-top: 0px;"}= resource[0][:title]
+            %h3.bold-text.set-margin= resource[0][:title]
             .smalltext= resource[0][:description]
             %a{href: resource[0][:link], target: '_blank'}
               %button.tutorial-info-start.bold-text.tutorial-gray= resource[0][:button_text]
@@ -53,7 +53,7 @@
         .tutorial-tile
           %img.tutorial-tile-img{src:resource[1][:image]}
           .tutorial-info
-            %h3.bold-text{style: "margin-top: 0px;"}= resource[1][:title]
+            %h3.bold-text.set-margin= resource[1][:title]
             .smalltext= resource[1][:description]
             %a{href: resource[1][:link], target: '_blank'}
               %button.tutorial-info-start.bold-text.tutorial-gray= resource[1][:button_text]
