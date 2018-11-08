@@ -1,5 +1,4 @@
 "en-US":
-  ! '': 
   hour_of_code: "Hour of Code"
   hello: "Hello world"
   'yes': 'Yes'
@@ -1572,11 +1571,15 @@
   aquatic_name: 'Minecraft: Voyage Aquatic'
   account_sign_up_email_opt_in: "Can we email you about updates to our courses, local opportunities, or other computer science news? (roughly once a month)"
   account_sign_up_child_accept_terms: "I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+  hoc_overview_dance_title: "Dance Party"
+  hoc_overview_dance_subtitle: "Code a Dance Party to share with your friends."
   hoc_overview_title: "Hour of Code Activities from Code.org"
   hoc_overview_subtitle: "The <a href=\"https://hourofcode.com\">Hour of Code</a> is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 200+ one-hour tutorials, available in over 45 languages."
   hoc_overview_partner_activities_title: "More activities from partners"
   hoc_overview_partner_activities_body: "The Hour of Code website has over 100 computer science activities for all ages and experience levels, developed by Code.org and partners."
   hoc_overview_partner_activities_link: "View Activities"
+  hoc_overview_view_teacher_guide: "View teacher guide"
+  hoc_overview_view_tutorial: "View tutorial"
   hoc2018_creativity: "creativity"
   hoc2018_creativity_create: "Create"
   hoc2018_creativity_hoc_coming: "The Hour of Code is coming…"
@@ -1648,10 +1651,10 @@
   hoc2018_mc_short_description_shorter: "Use your creativity and problem solving skills to explore and build underwater worlds with code."
   hoc2018_mc_journey: "Journey through Minecraft with code."
   hoc2018_dance_party_main_heading: "Dance Party"
-  hoc2018_dance_party_subheading: "Help Translate Dance Party"
+  hoc2018_dance_party_subheading: "Help translate Dance Party"
   hoc2018_dance_create_your_own_dance_title: "Create Your Own Dance Party"
   hoc2018_dance_party_box_title: "Dance Party"
-  hoc2018_dance_party_box_description: "Code a Dance Party to share with your friends!"
+  hoc2018_dance_party_box_description: 'Featuring music by:'
   hoc2018_dance_party_specs: "Language | Format | Age 6-106"
   hoc2018_dance_party_button: "Start"
   hoc2018_dance_keep_on_dancing_box_title: "Keep On Dancing"
@@ -1662,7 +1665,7 @@
   hoc2018_dance_teacher_resources_tile1_description: "Lesson plans, certificates, and music filtering."
   hoc2018_dance_teacher_resources_tile1_button: "Lesson Plan"
   hoc2018_dance_teacher_resources_tile2_title: "Dance Party Unplugged"
-  hoc2018_dance_teacher_resources_tile2_description: "No computers needed! Your class will learn about coding concepts to choreograph a dance party together."
+  hoc2018_dance_teacher_resources_tile2_description: "No computers needed!  Learn coding concepts to choreograph a dance party together."
   hoc2018_dance_teacher_resources_tile2_button: "Unplugged Activity"
   hoc2018_dance_featured_student_creations_title: "Featured Student Creations"
   hoc2018_dance_videos_section_heading: "Get Inspired"
@@ -1680,10 +1683,10 @@
   hoc2018_dance_amazon_apply_now_button_text: "Apply now"
   hoc2018_dance_amazon_scholarship_programs_box3_short_title: "Scholarship programs"
   hoc2018_dance_amazon_scholarship_programs_box3_long_title: "Get funding for your CS degree"
-  hoc2018_dance_amazon_scholarship_programs_box3_description: "Amazon is offering $10,000 4-year scholarships for underserved students who are studying CS. Applicants must have successfully completed or currently be enrolled in an AP computer science course. Scholarship recipients will also receive paid summer internships at Amazon in the summer of 2020!"
+  hoc2018_dance_amazon_scholarship_programs_box3_description: "Amazon is offering $10,000 4-year scholarships for underserved students who are studying CS in the US. Applicants must have successfully completed or currently be enrolled in an AP computer science course and intend on studying a computer science degree at a 4-year college or university in the US. Scholarship recipients will receive paid summer internships at Amazon in the summer of 2020!"
   hoc2018_dance_amazon_internships_box4_long_title: "Come Intern at Amazon"
   hoc2018_dance_amazon_internships_box4_short_title: "Internships"
-  hoc2018_dance_amazon_internships_box4_description: "Applications are now open for summer 2019 Amazon Future Engineer internships.  Interns will partner with a technical mentor and manager, as well as with other interns, to innovate and create new features and services on behalf of Amazon customers."
+  hoc2018_dance_amazon_internships_box4_description: "Applications are now open for summer 2019 Amazon Future Engineer internships.  Interns will partner with a technical mentor and manager, as well as with other interns, to innovate and create new features and services on behalf of Amazon customers. Internships are available in the US and Canada."
   hoc2018_dance_measure: "Measure"
   hoc2018_dance_measure_colon: 'Measure:'
   hoc2018_aquatic_video1: "Minecraft Voyage Aquatic - Introduction"
@@ -1694,3 +1697,7 @@
   hoc2018_dance_video2: "Dance Party - Events"
   hoc2018_dance_video3: "Dance Party - Properties"
   hoc2018_dance_video4: "Dance Party - Congratulations"
+  page_not_found_title: "Page Not Found"
+  page_not_found_header: '404: Page Not Found'
+  page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."
+  page_not_found_button: "Return home"

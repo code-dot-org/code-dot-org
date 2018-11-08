@@ -26,8 +26,8 @@ Feature: Dance Lab Age Filter
     And I close the instructions overlay if it exists
     Then element "#runButton" is visible
     And element "#song_selector" is visible
-    #Jazzy_beats is available on local and isawthesign is available on test
-    And I see option "jazzy_beats" or "isawthesign_aceofbase" in the dropdown "#song_selector"
+    #synthesize is available on local and shapeofyou_edsheeran is available on test
+    And I see option "Synthesize" or "Ed Sheeran - Shape of You" in the dropdown "#song_selector"
 
     Then I am on "http://studio.code.org/s/allthethings/stage/37/puzzle/1?noautoplay=true&songfilter=on"
     And I wait for the page to fully load
@@ -69,5 +69,5 @@ Feature: Dance Lab Age Filter
     And I close the instructions overlay if it exists
     Then element "#runButton" is visible
     And element "#song_selector" is visible
-    #Jazzy_beats is available on local and isawthesign is available on test
-    And I see option "jazzy_beats" or "isawthesign_aceofbase" in the dropdown "#song_selector"
+    #synthesize is available on local and shapeofyou_edsheeran is available on test
+    And I see option "Synthesize" or "Ed Sheeran - Shape of You" in the dropdown "#song_selector"
