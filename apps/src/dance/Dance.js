@@ -11,7 +11,7 @@ import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import {DanceParty} from '@code-dot-org/dance-party';
 import danceMsg from './locale';
-import {reducers, setSelectedSong, setSongData} from './redux';
+import {reducers, setSelectedSong, setSongData, setRunIsStarting} from './redux';
 import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
@@ -376,6 +376,7 @@ Dance.prototype.runButtonClick = async function () {
   if (this.runIsStarting) {
     return;
   }
+
   // Disable the run button now to give some visual feedback
   // that the button was pressed. toggleRunReset() will
   // eventually execute down below, but there are some long-running
@@ -383,6 +384,7 @@ Dance.prototype.runButtonClick = async function () {
   const runButton = document.getElementById('runButton');
   runButton.disabled = true;
   this.runIsStarting = true;
+  getStore().dispatch(setRunIsStarting(true));
   await this.danceReadyPromise;
 
   //Log song count in Dance Lab
@@ -395,6 +397,7 @@ Dance.prototype.runButtonClick = async function () {
   this.studioApp_.toggleRunReset('reset');
   // Safe to allow normal run/reset behavior now
   this.runIsStarting = false;
+  getStore().dispatch(setRunIsStarting(false));
 
   // Enable the Finish button if is present:
   const shareCell = document.getElementById('share-cell');
