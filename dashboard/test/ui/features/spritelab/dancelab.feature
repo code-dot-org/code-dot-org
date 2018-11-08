@@ -1,7 +1,7 @@
 @no_older_chrome
 Feature: Dance Lab
-  # This test requires cloudfront.
-  @no_circle
+  # This test relies on CloudFront signed cookies to access /restricted/ on the
+  # test machine, but uses SoundLibraryApi for access in CircleCI.
   @no_firefox
   @no_safari
   Scenario: Restricted audio content is protected
@@ -13,12 +13,16 @@ Feature: Dance Lab
     And I am on "http://studio.code.org/restricted/placeholder.txt"
     Then page text does contain "placeholder for testing"
 
+  @no_mobile
   Scenario: Can toggle run/reset in DanceLab
     Given I am on "http://studio.code.org/s/allthethings/stage/37/puzzle/1?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
+    And element ".signInOrAgeDialog" is visible
+    And I select the "10" option in dropdown "uitest-age-selector"
+    And I click selector "#uitest-submit-age"
     And I close the instructions overlay if it exists
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
@@ -29,6 +33,7 @@ Feature: Dance Lab
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
 
+  @no_mobile
   Scenario: Can get to level success in DanceLab
     Given I am on "http://studio.code.org/s/allthethings/stage/37/puzzle/1?noautoplay=true"
     And I rotate to landscape
@@ -42,6 +47,7 @@ Feature: Dance Lab
     And I wait until element ".congrats" is visible
 
   @as_student
+  @no_mobile
   Scenario: Dance Party Share
     Given I am on "http://studio.code.org/s/dance/stage/1/puzzle/13?noautoplay=true"
     And I rotate to landscape

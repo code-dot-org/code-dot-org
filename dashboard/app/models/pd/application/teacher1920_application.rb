@@ -324,9 +324,9 @@ module Pd::Application
         [:cs_terms, TEXT_FIELDS[:other_with_text]],
         [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain]],
         [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
-        [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain]],
-        [:able_to_attend_multiple, TEXT_FIELDS[:unable_to_attend_1920]],
-        [:travel_to_another_workshop, TEXT_FIELDS[:not_sure_explain]],
+        [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain], :able_to_attend_multiple_not_sure_explain],
+        [:able_to_attend_multiple, TEXT_FIELDS[:unable_to_attend_1920], :able_to_attend_multiple_unable_to_attend],
+        [:travel_to_another_workshop, TEXT_FIELDS[:not_sure_explain], :travel_to_another_workshop_not_sure],
         [:how_heard, TEXT_FIELDS[:other_with_text]]
       ]
     end
@@ -351,6 +351,12 @@ module Pd::Application
 
     def assigned_workshop
       Pd::Workshop.find_by(id: pd_workshop_id)&.date_and_location_name
+    end
+
+    def friendly_scholarship_status
+      if scholarship_status
+        SCHOLARSHIP_DROPDOWN_OPTIONS.find {|option| option[:value] == scholarship_status}[:label]
+      end
     end
 
     # memoize in a hash, per course

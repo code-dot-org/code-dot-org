@@ -352,6 +352,18 @@ module Api::V1::Pd
       assert_equal @regional_partner, @csf_facilitator_application_with_partner.reload.regional_partner
     end
 
+    test 'workshop admins can update scholarship status' do
+      scholarship_status = 'no'
+      sign_in @workshop_admin
+      put :update, params: {id: @csp_teacher_application.id, application: {scholarship_status: 'no'}}
+      assert_response :success
+      data = JSON.parse(response.body)
+      assert_equal scholarship_status, data['scholarship_status']
+
+      # Make sure scholarship status is retained
+      assert_equal scholarship_status, @csp_teacher_application.reload.scholarship_status
+    end
+
     # TODO: remove this test when workshop_organizer is deprecated
     test 'Regional partners cannot lock and unlock applications as workshop organizers' do
       sign_in @workshop_organizer
@@ -516,7 +528,8 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
-            status: 'accepted_not_notified'
+            status: 'accepted_not_notified',
+            friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
@@ -552,7 +565,8 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: nil,
             registered_workshop: nil,
-            status: 'accepted_not_notified'
+            status: 'accepted_not_notified',
+            friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
@@ -610,7 +624,8 @@ module Api::V1::Pd
           course: 'csp',
           regional_partner: @regional_partner,
           user: @serializing_teacher,
-          pd_workshop_id: workshop.id
+          pd_workshop_id: workshop.id,
+          scholarship_status: 'no'
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
@@ -632,7 +647,8 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
-            status: 'accepted_not_notified'
+            status: 'accepted_not_notified',
+            friendly_scholarship_status: 'No'
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
@@ -667,7 +683,8 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: nil,
             registered_workshop: nil,
-            status: 'accepted_not_notified'
+            status: 'accepted_not_notified',
+            friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
@@ -727,6 +744,7 @@ module Api::V1::Pd
         "Status",
         "Meets minimum requirements?",
         "Meets scholarship requirements?",
+        "Scholarship teacher?",
         "Bonus Points",
         "Notes",
         "Title",
@@ -783,7 +801,7 @@ module Api::V1::Pd
         "How far would you be willing to travel to academic year workshops?",
         "Are you interested in this online program for school year workshops?",
         "Will you or your school be able to pay the fee?",
-        "Please provide any additional information you’d like to share about why your application should be considered for a scholarship.",
+        "Please provide any additional information you'd like to share about why your application should be considered for a scholarship.",
         "Teacher's gender identity",
         "Teacher's race",
         "How did you hear about this program? (Teacher's response)",
@@ -797,8 +815,8 @@ module Api::V1::Pd
         "Do you approve of this teacher participating in Code.org's 2019-20 Professional Learning Program?",
         "Is this teacher planning to teach this course in the 2019-20 school year?",
         "Total student enrollment",
-        "Percentage of students who are eligible to receive free or reduced lunch (Principal’s response)",
-        "Percentage of underrepresented minority students (Principal’s response)",
+        "Percentage of students who are eligible to receive free or reduced lunch (Principal's response)",
+        "Percentage of underrepresented minority students (Principal's response)",
         "Percentage of student enrollment by race - White",
         "Percentage of student enrollment by race - Black or African American",
         "Percentage of student enrollment by race - Hispanic or Latino",
@@ -807,12 +825,12 @@ module Api::V1::Pd
         "Percentage of student enrollment by race - American Indian or Native Alaskan",
         "Percentage of student enrollment by race - Other",
         "Are you committed to including this course on the master schedule in 2019-20 if this teacher is accepted into the program?",
-        "Will this course replace an existing computer science course in the master schedule? (Principal’s response)",
+        "Will this course replace an existing computer science course in the master schedule? (Principal's response)",
         "Which existing course or curriculum will CS Principles replace?",
         "How will you implement CS Principles at your school?",
         "Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?",
         "If there is a fee for the program, will your teacher or your school be able to pay for the fee?",
-        "How did you hear about this program? (Principal’s response)",
+        "How did you hear about this program? (Principal's response)",
         "Principal authorizes college board to send AP Scores",
         "Title I status code (NCES data)",
         "Total student enrollment (NCES data)",
