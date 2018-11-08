@@ -144,13 +144,13 @@ Code.org offers hands-on workshops and online support. Over 80,000 teachers have
 
 <div class="col-50" style="padding-right: 20px">
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp5-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/unit5/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 5', ages: 'Building Apps', description: "Students continue learning how to program in the JavaScript language. Using Code.org's App Lab environment, students create a series of applications that live on the web. Each app highlights a core concept of programming."%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-explore-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/csp-explore/', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'AP Explore Performance Task', ages: 'Explore - Impact of Computing Innovations', description: 'This unit provides activities and resources for students to prepare for and complete the AP Explore Performance Task, which requires students to identify a computing innovation, explore its impact, and create a related digital artifact.'%>
 
 </div>
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-explore-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/csp-explore/', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'AP Explore Performance Task', ages: 'Explore - Impact of Computing Innovations', description: 'This unit provides activities and resources for students to prepare for and complete the AP Explore Performance Task, which requires students to identify a computing innovation, explore its impact, and create a related digital artifact.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp5-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/unit5/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 5', ages: 'Building Apps', description: "Students continue learning how to program in the JavaScript language. Using Code.org's App Lab environment, students create a series of applications that live on the web. Each app highlights a core concept of programming."%>
 
 [/col-50]
 
@@ -263,19 +263,18 @@ We have forums for educators to discuss and trade ideas about CS Principles and 
 ### <a name="materials"></a>What materials do I need for this course?
 **Required Materials:**
 
-This course requires students have access to computers with a modern web browser. For more details, check out Code.org's technology requirements, [here](/educate/it).
+This course requires that students have access to computers with a modern web browser. At this time, our courses are not optimized for tablets or mobile devices. For more details, check out [Code.org's technology requirements](/educate/it).
 
-Many lessons have handouts that are designed to guide students through activities. While these handouts are not required, we highly recommend their use. In addition to handouts, you will need the following:
+Many lessons have handouts that are designed to guide students through activities. While these handouts are not required, we highly recommend their use. 
 
-- Unit 1 Lesson 2 requires some craft materials for constructing physical devices. The lesson recommends items like cups, string/yarn, construction paper, flashlights, slinkies, noise makers, markers, and glue.
+In addition to handouts, several lessons call for specific items. You can find these listed below as well as our suggestions for alternatives:
+
+- **Unit 1, Lesson 2:** various craft materials for constructing physical devices such as cups, string/yarn, construction paper, flashlights, slinkies, noise makers, markers, and glue
+- **Unit 3, Lesson 1:** A handful of legos per 2-3 students (alternatives: post-it notes, construction paper)
+- **Unit 3, Lesson 2 - 3:** Playing cards, we recommend 1 deck per 6 students (alternative: write numbers of post-it notes)
+- **Unit 4, Lesson 8:** Clear dixie cups with beans (alternatives: any clear container such as a ziplock bag, empty water bottle, etc., and/or any small item such as beads, raisins, coffee beans, etc.)
 
 **Optional Materials**
-
-The following items are called for in lessons, but alternatives are offered below:
-
-- (Unit 3, Lesson 1) A handful of legos per 2-3 students. Alternatives: post-it notes, construction paper
-- (Unit 3, Lesson 2 - 3) Playing cards (1 deck per 6 students). Alternatives: write numbers of post-it notes.
-- (Unit 4, Lesson 8) Clear dixie cups with beans. Alternatives: Any clear container (ziplock bag, empty water bottle, etc) with any small item (beads, raisins, coffee beans, etc)
 
 The following supplies are completely optional but will be useful to have on hand for various lessons:
 
@@ -283,6 +282,8 @@ The following supplies are completely optional but will be useful to have on han
 - Chart paper
 - Markers
 - Post-it notes
+
+<br />
 
 ### How can I access answer keys?
 With an approved teacher account you can find answer keys in a blue "Teacher Only" panel that shows in the online lessons and activities.
@@ -295,12 +296,22 @@ Teachers in our professional learning program will automatically be approved to 
 
 CS Principles was written using the AP CS Principles Framework and prepares students for the AP CS Principles exam. The course has also been aligned to the newly revised 2017 CSTA standards. A summary of standards mappings can be found at [curriculum.code.org/csp/standards](https://curriculum.code.org/csp/standards)
 	
-<br>
+<br />
+
+### What is the recommended timing for teaching CS Principles?
+
+We recommend that CS Principles be taught as a full year course, assuming that you meet with students daily or nearly daily for 45 or more minutes. Full-year schedules where students are in class for a similar amount of time per week will also work.
+
+It is possible to teach the course on a semester block schedule, though we highly recommend this implementation only be used in the fall semester. Since the AP Performance Tasks are due in late April and require 20 dedicated hours of class time to complete, most schools find there is not enough time to complete the course on a block schedule in the spring.
+
+<br />
 
 ### How can I communicate with other teachers who are using the curriculum?
+
 Check out our forum at <a href="https://forum.code.org" target=_blank>https://forum.code.org</a>. There you'll find a space for general CS Principles discussion as well as unit- and lesson-specific threads.
 
 <br />
+
 ### Can I give feedback on the lessons?
 
 Yes, please! Our desire is that the curriculum will be a living document and not something set in stone. We are open to changes or alternatives to lessons so please send us your feedback by using the CS Principles forum.
@@ -322,6 +333,7 @@ We send out monthly updates! [Sign up for future emails](http://code.org/educate
 <br />
 
 ### Ideas and Inspirations
+
 Please see this page about [CS Principles Inspirations](/educate/csp/inspirations) to read about the influential works in computer science education that form some of the course's philosophical underpinnings.
 
 AP® is a registered trademark of the College Board.

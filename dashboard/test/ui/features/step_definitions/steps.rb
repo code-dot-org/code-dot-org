@@ -685,7 +685,7 @@ And (/^I do not see "([^"]*)" option in the dropdown "([^"]*)"/) do |option, sel
 end
 
 And (/^I see option "([^"]*)" or "([^"]*)" in the dropdown "([^"]*)"/) do |option_alpha, option_beta, selector|
-  select_options_text = @browser.execute_script("return $('#{selector} option').val()")
+  select_options_text = @browser.execute_script("return $('#{selector} option').text()")
   expect((select_options_text.include? option_alpha) || (select_options_text.include? option_beta)).to eq(true)
 end
 

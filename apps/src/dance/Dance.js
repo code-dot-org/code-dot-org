@@ -25,6 +25,7 @@ import {
   loadSongMetadata,
   parseSongOptions,
   unloadSong,
+  fetchSignedCookies,
 } from './songs';
 
 const ButtonState = {
@@ -120,7 +121,9 @@ Dance.prototype.init = function (config) {
   ReactDOM.render((
     <Provider store={getStore()}>
       <div>
-        <SignInOrAgeDialog useDancePartyStyle={true}/>
+        {!this.share &&
+          <SignInOrAgeDialog useDancePartyStyle={true}/>
+        }
         <AppView
           visualizationColumn={
             <DanceVisualizationColumn
@@ -159,7 +162,12 @@ Dance.prototype.setSongCallback = function (songId) {
   getStore().dispatch(setSelectedSong(songId));
 
   unloadSong(lastSongId, songData);
-  loadSong(songId, songData);
+  loadSong(songId, songData, status => {
+    if (status === 403) {
+      // The cloudfront signed cookies may have expired.
+      fetchSignedCookies().then(() => loadSong(songId, songData));
+    }
+  });
 
   this.updateSongMetadata(songId);
 
@@ -262,7 +270,7 @@ Dance.prototype.afterInject_ = function () {
   const recordReplayLog = this.shouldShowSharing() || this.level.isProjectLevel;
   this.nativeAPI = new DanceParty({
     onPuzzleComplete: this.onPuzzleComplete.bind(this),
-    playSound: audioCommands.playSound,
+    playSound: this.playSong.bind(this),
     recordReplayLog,
     showMeasureLabel: !this.share,
     onHandleEvents: this.onHandleEvents.bind(this),
@@ -278,6 +286,7 @@ Dance.prototype.afterInject_ = function () {
     },
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
+    i18n: danceMsg,
   });
   /** Expose for testing **/
   window.__DanceTestInterface = this.nativeAPI.getTestInterface();
@@ -285,6 +294,13 @@ Dance.prototype.afterInject_ = function () {
   if (recordReplayLog) {
     getStore().dispatch(saveReplayLog(this.nativeAPI.getReplayLog()));
   }
+};
+
+Dance.prototype.playSong = function (url, callback, onEnded) {
+  audioCommands.playSound({url: url, callback: callback, onEnded: () => {
+    onEnded();
+    this.studioApp_.toggleRunReset('run');
+  }});
 };
 
 /**
@@ -382,11 +398,14 @@ Dance.prototype.runButtonClick = async function () {
 
   Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;
-  await this.execute();
 
-  this.studioApp_.toggleRunReset('reset');
-  // Safe to allow normal run/reset behavior now
-  this.runIsStarting = false;
+  try {
+    await this.execute();
+  } finally {
+    this.studioApp_.toggleRunReset('reset');
+    // Safe to allow normal run/reset behavior now
+    this.runIsStarting = false;
+  }
 
   // Enable the Finish button if is present:
   const shareCell = document.getElementById('share-cell');
@@ -423,9 +442,9 @@ Dance.prototype.execute = async function () {
   await this.initSongsPromise;
 
   const songMetadata = await this.songMetadataPromise;
-  return new Promise(resolve => {
-    this.nativeAPI.play(songMetadata, () => {
-      resolve();
+  return new Promise((resolve, reject)=> {
+    this.nativeAPI.play(songMetadata, success => {
+      success ? resolve() : reject();
     });
   });
 };
