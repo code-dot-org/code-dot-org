@@ -319,6 +319,18 @@ module Api::V1::Pd
       assert_equal @regional_partner, @csf_facilitator_application_with_partner.reload.regional_partner
     end
 
+    test 'workshop admins can update scholarship status' do
+      scholarship_status = 'no'
+      sign_in @workshop_admin
+      put :update, params: {id: @csp_teacher_application.id, application: {scholarship_status: 'no'}}
+      assert_response :success
+      data = JSON.parse(response.body)
+      assert_equal scholarship_status, data['scholarship_status']
+
+      # Make sure scholarship status is retained
+      assert_equal scholarship_status, @csp_teacher_application.reload.scholarship_status
+    end
+
     # TODO: remove this test when workshop_organizer is deprecated
     test 'Regional partners cannot lock and unlock applications as workshop organizers' do
       sign_in @workshop_organizer

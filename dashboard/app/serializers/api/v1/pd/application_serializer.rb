@@ -31,7 +31,8 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :attending_teachercon,
     :principal_approval_state,
     :meets_scholarship_criteria,
-    :school_stats
+    :school_stats,
+    :scholarship_status
   )
 
   def email
@@ -138,5 +139,9 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
       white_percent: percent_string(stats.student_wh_count, stats.students_total),
       two_or_more_races_percent: percent_string(stats.student_tr_count, stats.students_total)
     }
+  end
+
+  def scholarship_status
+    object.try(:scholarship_status)
   end
 end

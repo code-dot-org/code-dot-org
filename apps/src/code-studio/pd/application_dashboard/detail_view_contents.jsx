@@ -8,8 +8,10 @@ import {
   MenuItem,
   FormControl,
   InputGroup,
-  Table
+  Table,
+  FormGroup
 } from 'react-bootstrap';
+import Select from "react-select";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
@@ -25,7 +27,8 @@ import {
   SectionHeaders,
   ScoreableQuestions,
   MultiAnswerQuestionFields,
-  ValidScores as TeacherValidScores
+  ValidScores as TeacherValidScores,
+  ScholarshipDropdownOptions
 } from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import _ from 'lodash';
 import {
@@ -126,6 +129,7 @@ export class DetailViewContents extends React.Component {
       registered_fit_weekend: PropTypes.bool,
       attending_teachercon: PropTypes.bool,
       school_stats: PropTypes.object,
+      scholarship_status: PropTypes.string,
       principal_approval_state: PropTypes.string
     }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
@@ -158,7 +162,8 @@ export class DetailViewContents extends React.Component {
       regional_partner_name: this.props.applicationData.regional_partner_name || UNMATCHED_PARTNER_LABEL,
       regional_partner_value: this.props.applicationData.regional_partner_id || UNMATCHED_PARTNER_VALUE,
       pd_workshop_id: this.props.applicationData.pd_workshop_id,
-      fit_workshop_id: this.props.applicationData.fit_workshop_id
+      fit_workshop_id: this.props.applicationData.fit_workshop_id,
+      scholarship_status: this.props.applicationData.scholarship_status
     };
   }
 
@@ -247,13 +252,20 @@ export class DetailViewContents extends React.Component {
     this.setState({ regional_partner_name, regional_partner_value});
   };
 
+  handleScholarshipStatusChange = (selection) => {
+    this.setState({
+      scholarship_status: selection ? selection.value : null
+    });
+  };
+
   handleSaveClick = () => {
     let stateValues = [
       'status',
       'locked',
       'notes',
       'regional_partner_value',
-      'pd_workshop_id'
+      'pd_workshop_id',
+      'scholarship_status'
     ];
 
     if (this.props.applicationData.application_type === 'Facilitator') {
@@ -367,6 +379,27 @@ export class DetailViewContents extends React.Component {
       );
     }
     return this.state.regional_partner_name;
+  };
+
+  renderScholarshipStatusAnswer = () => {
+    if (this.state.editing && this.props.isWorkshopAdmin) {
+      return (
+        <FormGroup>
+          <Select
+            value={this.state.scholarship_status}
+            onChange={this.handleScholarshipStatusChange}
+            options={ScholarshipDropdownOptions}
+          />
+        </FormGroup>
+      );
+    }
+
+    const option = ScholarshipDropdownOptions.find((option) => {
+      return option.value === this.state.scholarship_status;
+    });
+    if (option) {
+      return option.label;
+    }
   };
 
   renderEditButtons = () => {
@@ -842,6 +875,17 @@ export class DetailViewContents extends React.Component {
           </td>
           {this.renderScoringSection('regionalPartnerName')}
         </tr>
+        {this.props.applicationData.application_type === 'Teacher' &&
+          <tr>
+            <td style={styles.questionColumn}>
+              Scholarship Teacher?
+            </td>
+            <td style={styles.answerColumn}>
+              {this.renderScholarshipStatusAnswer()}
+            </td>
+            <td style={styles.scoringColumn}/>
+          </tr>
+        }
         </tbody>
       </Table>
     );
