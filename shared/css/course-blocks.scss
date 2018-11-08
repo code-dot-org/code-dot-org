@@ -307,6 +307,16 @@
     padding-left: 10px;
   }
 
+  .bar {
+    width: 100%;
+    font-size: 13px;
+    padding: 4px 30px;
+    margin: 0;
+    bottom: 0;
+    float: left;
+    position: absolute;
+  }
+
   .audience {
     background-color: $light_gray;
     color: white;

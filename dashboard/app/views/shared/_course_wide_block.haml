@@ -55,9 +55,9 @@
         .smalltext= t('upsell.20-hour.body_short')
       - if current_user && showState
         .audiencebar.smalltext.audience= audience
-        = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
       - else
         .bottombar.smalltext.audience= audience
+      = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
 
 -elsif id == 'unplugged' && view == 'large'
   - url = CDO.code_org_url("/curriculum/unplugged")
@@ -112,9 +112,9 @@
         .smalltext= data_t_suffix('script.name', id, 'description_short')
       - if current_user
         .audiencebar.smalltext.audience= data_t_suffix('script.name', id, 'description_audience')
-        = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
       - else
         .bottombar.smalltext.audience= data_t_suffix('script.name', id, 'description_audience')
+      = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
 
 -elsif [Script::COURSE1_NAME, Script::COURSE2_NAME, Script::COURSE3_NAME, Script::COURSE4_NAME, Script::ALGEBRA_NAME].include? id
   .courseblock-span6.courseblock-wide-large
