@@ -120,7 +120,9 @@ Dance.prototype.init = function (config) {
   ReactDOM.render((
     <Provider store={getStore()}>
       <div>
-        <SignInOrAgeDialog useDancePartyStyle={true}/>
+        {!this.share &&
+          <SignInOrAgeDialog useDancePartyStyle={true}/>
+        }
         <AppView
           visualizationColumn={
             <DanceVisualizationColumn
