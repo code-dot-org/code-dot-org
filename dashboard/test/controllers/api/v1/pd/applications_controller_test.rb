@@ -396,7 +396,6 @@ module Api::V1::Pd
     end
 
     test 'csv download for csf facilitator returns expected columns' do
-      skip "Facilitator CSVs will be overhauled with facilitator app work"
       sign_in @workshop_admin
 
       get :quick_view, format: 'csv', params: {role: 'csf_facilitators'}
@@ -413,7 +412,6 @@ module Api::V1::Pd
     end
 
     test 'csv download for csp facilitator returns expected columns' do
-      skip "Facilitator CSVs will be overhauled with facilitator app work"
       sign_in @workshop_admin
 
       get :quick_view, format: 'csv', params: {role: 'csp_facilitators'}

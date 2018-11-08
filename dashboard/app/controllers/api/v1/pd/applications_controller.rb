@@ -70,8 +70,18 @@ module Api::V1::Pd
           render json: serialized_applications
         end
         format.csv do
-          csv_text = get_csv_text applications, role
-          send_csv_attachment csv_text, "#{role}_applications.csv"
+          if [:csd_teachers, :csp_teachers].include? role
+            csv_text = get_csv_text applications, role
+            send_csv_attachment csv_text, "#{role}_applications.csv"
+          else
+            prefetch applications, role: role
+            course = role[0..2] # course is the first 3 characters in role, e.g. 'csf'
+            csv_text = [
+              TYPES_BY_ROLE[role].csv_header(course, current_user),
+              *applications.map {|a| a.to_csv_row(current_user)}
+            ].join
+            send_csv_attachment csv_text, "#{role}_applications.csv"
+          end
         end
       end
     end
