@@ -7,13 +7,16 @@ import ShareDisallowedDialog from './ShareDisallowedDialog';
 class ShareDialog extends Component {
   static propTypes = {
     signInState: PropTypes.oneOf(Object.values(SignInState)),
-    isProjectLevel: PropTypes.bool.isRequired
+    isProjectLevel: PropTypes.bool.isRequired,
+    // Only applicable to Dance Party projects, used to Tweet at song artist.
+    selectedSong: PropTypes.string,
   };
 
   render() {
     const { signInState, isProjectLevel, ...otherProps } = this.props;
     // If we're on a project level (i.e. /projects/appname), always show signed
     // in version of the dialog
+
     if (signInState === SignInState.SignedIn || isProjectLevel) {
       return (
         <ShareAllowedDialog {...otherProps}/>
