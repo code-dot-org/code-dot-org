@@ -168,6 +168,10 @@ module Api::V1::Pd
     def update
       application_data = application_params.to_h
 
+      if application_data[:status] != @application.status
+        status_changed = true
+      end
+
       if application_data[:response_scores]
         application_data[:response_scores] = JSON.parse(application_data[:response_scores]).transform_keys {|x| x.to_s.underscore}.to_json
       end
@@ -197,6 +201,8 @@ module Api::V1::Pd
       unless @application.update(application_data)
         return render status: :bad_request, json: {errors: @application.errors.full_messages}
       end
+
+      @application.update_status_timestamp_change_log(current_user) if status_changed
 
       render json: @application, serializer: ApplicationSerializer
     end
