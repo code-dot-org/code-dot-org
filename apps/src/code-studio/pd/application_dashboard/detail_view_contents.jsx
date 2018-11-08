@@ -37,6 +37,7 @@ import {
 } from './constants';
 import PrincipalApprovalButtons from './principal_approval_buttons';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
+import ChangeLog from './detail_view/change_log';
 
 const styles = {
   notes: {
@@ -129,6 +130,7 @@ export class DetailViewContents extends React.Component {
       registered_fit_weekend: PropTypes.bool,
       attending_teachercon: PropTypes.bool,
       school_stats: PropTypes.object,
+      status_change_log: PropTypes.arrayOf(PropTypes.object),
       scholarship_status: PropTypes.string,
       principal_approval_state: PropTypes.string
     }).isRequired,
@@ -924,6 +926,11 @@ export class DetailViewContents extends React.Component {
         {!this.showPrincipalApprovalTable() && this.renderResendOrUnrequirePrincipalApprovalSection()}
         {this.renderNotes()}
         {this.renderEditMenu()}
+        {this.props.applicationData.status_change_log && (
+          <ChangeLog
+            changeLog={this.props.applicationData.status_change_log}
+          />
+        )}
       </div>
     );
   }
