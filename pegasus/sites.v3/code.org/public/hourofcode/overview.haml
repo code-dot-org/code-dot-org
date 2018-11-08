@@ -31,11 +31,12 @@ theme: responsive
 
 .full-resource-block
   %img.full-resource-image{src: "/images/hoc2018.png"}
-  .description
-    %h2.resource-title.white= I18n.t(:hoc_overview_partner_activities_title)
-    = I18n.t(:hoc_overview_partner_activities_body)
-    %div
+  .activities-info
+    %span
+      %h2.resource-title.white= I18n.t(:hoc_overview_partner_activities_title)
+      = I18n.t(:hoc_overview_partner_activities_body)
+    %span
       %a{href: "https://hourofcode.com/learn"}
-        %button.tutorial-gray{style: "margin-top: 15px;"}= I18n.t(:hoc_overview_partner_activities_link)
+        %button.tutorial-info-start.tutorial-gray= I18n.t(:hoc_overview_partner_activities_link)
 
 .hoc-tiles-container
