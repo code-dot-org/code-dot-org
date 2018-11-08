@@ -29,6 +29,7 @@ export default class AgeDropdown extends Component {
         ref={element => this.root = element}
         name="age"
         style={this.props.style}
+        id="uitest-age-selector"
       >
        {ages.map(age => <option key={age} value={age}>{age}</option>)}
       </select>

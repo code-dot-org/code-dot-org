@@ -57,7 +57,7 @@ Start here if you are looking for:
 * There are many more topical guides in the [docs](./docs) folder.
 * In addition, several sections of the repository have their own documentation:
   * [apps/README](./apps/README.md)
-  * [blockly-core/README](./blockly-core/README.md)
+  * [blockly/README](https://github.com/code-dot-org/blockly/blob/master/README.md)
 
 ### Everything else
 

@@ -135,7 +135,7 @@ The Code.org Professional Learning Program is open to educators who are interest
 * Plan to teach the course in the 2019-20 school year
 * For CS Discoveries, teach students between 6th and 10th grade
 * For CS Principles, teach students between 9th and 12th grade
-* Support the recruitment and enrollment of a diverse group of stuents in the course, representative of the school's student population
+* Support the recruitment and enrollment of a diverse group of students in the course, representative of the school's student population
 
 ## <a name="cost"></a>When does the program start and what does it cost?
 

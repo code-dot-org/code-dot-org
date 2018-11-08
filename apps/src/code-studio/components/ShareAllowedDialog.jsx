@@ -1,4 +1,4 @@
-/* global dashboard */
+/* global dashboard, appOptions */
 
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
@@ -10,6 +10,7 @@ import SendToPhone from './SendToPhone';
 import color from "../../util/color";
 import * as applabConstants from '../../applab/constants';
 import * as gamelabConstants from '../../gamelab/constants';
+import { SongTitlesToArtistTwitterHandle } from '../dancePartySongArtistTags';
 import { hideShareDialog, unpublishProject } from './shareDialogRedux';
 import { showPublishDialog } from '../../templates/projects/publishDialog/publishDialogRedux';
 import PublishDialog from '../../templates/projects/publishDialog/PublishDialog';
@@ -17,6 +18,7 @@ import { createHiddenPrintWindow } from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import DownloadAsGif from "./DownloadAsGif";
+import experiments from '../../util/experiments';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -141,6 +143,8 @@ class ShareAllowedDialog extends React.Component {
     }).isRequired,
     icon: PropTypes.string,
     shareUrl: PropTypes.string.isRequired,
+    // Only applicable to Dance Party projects, used to Tweet at song artist.
+    selectedSong: PropTypes.string,
     thumbnailUrl: PropTypes.string,
     isAbusive: PropTypes.bool.isRequired,
     isOpen: PropTypes.bool.isRequired,
@@ -160,6 +164,7 @@ class ShareAllowedDialog extends React.Component {
     canShareSocial: PropTypes.bool.isRequired,
     userSharingDisabled: PropTypes.bool,
     getNextFrame: PropTypes.func,
+    replayLog: PropTypes.array,
   };
 
   state = {
@@ -189,8 +194,25 @@ class ShareAllowedDialog extends React.Component {
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.isOpen && !prevProps.isOpen) {
       recordShare('open');
+      this.tryCreateReplayVideo();
     }
   }
+
+  shouldCreateReplayVideo = () =>
+    experiments.isEnabled('p5Replay') &&
+    this.props.appType === 'dance' &&
+    appOptions.signedReplayLogUrl &&
+    this.props.replayLog &&
+    this.props.replayLog.length;
+
+  tryCreateReplayVideo = () => {
+    if (this.shouldCreateReplayVideo()) {
+      fetch(appOptions.signedReplayLogUrl, {
+        method: "PUT",
+        body: JSON.stringify(this.props.replayLog)
+      });
+    }
+  };
 
   sharingDisabled = () =>
     this.props.userSharingDisabled &&
@@ -238,6 +260,8 @@ class ShareAllowedDialog extends React.Component {
       modalClass += ' no-modal-icon';
     }
 
+    const artistTwitterHandle = SongTitlesToArtistTwitterHandle[this.props.selectedSong];
+
     const hasThumbnail = !!this.props.thumbnailUrl;
     const thumbnailUrl = hasThumbnail ?
       this.props.thumbnailUrl :
@@ -245,10 +269,18 @@ class ShareAllowedDialog extends React.Component {
 
     const facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
                            encodeURIComponent(this.props.shareUrl);
-    const twitterShareUrl = "https://twitter.com/intent/tweet?url=" +
+    const twitterShareUrlDefault = "https://twitter.com/intent/tweet?url=" +
                           encodeURIComponent(this.props.shareUrl) +
                           "&amp;text=Check%20out%20what%20I%20made%20@codeorg" +
                           "&amp;hashtags=HourOfCode&amp;related=codeorg";
+    // Check out the dance I made featuring @artist on @codeorg! URL #HourOfCode
+    const twitterShareUrlDance = "https://twitter.com/intent/tweet?url=" +
+                          "&amp;text=Check%20out%20the%20dance%20I%20made%20featuring%20@" + artistTwitterHandle + "%20on%20@codeorg!%20" +
+                          encodeURIComponent(this.props.shareUrl) +
+                          "&amp;hashtags=HourOfCode&amp;related=codeorg";
+
+    const twitterShareUrl = artistTwitterHandle ?
+      twitterShareUrlDance : twitterShareUrlDefault;
 
     const showShareWarning = (
       !this.props.canShareSocial &&
@@ -435,6 +467,7 @@ export default connect(state => ({
   isOpen: state.shareDialog.isOpen,
   isUnpublishPending: state.shareDialog.isUnpublishPending,
   getNextFrame: state.shareDialog.getNextFrame,
+  replayLog: state.shareDialog.replayLog,
 }), dispatch => ({
   onClose: () => dispatch(hideShareDialog()),
   onShowPublishDialog(projectId, projectType) {

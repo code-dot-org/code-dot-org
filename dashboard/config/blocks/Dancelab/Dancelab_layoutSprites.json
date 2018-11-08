@@ -57,6 +57,14 @@
         "name": "FORMAT",
         "options": [
           [
+            "border",
+            "\"border\""
+          ],
+          [
+            "inside square",
+            "\"inner\""
+          ],
+          [
             "circle",
             "\"circle\""
           ],
@@ -71,6 +79,14 @@
           [
             "column",
             "\"column\""
+          ],
+          [
+            "criss-cross",
+            "\"x\""
+          ],
+          [
+            "plus",
+            "\"plus\""
           ],
           [
             "random",

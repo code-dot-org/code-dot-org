@@ -5,6 +5,8 @@ CODEORG_CONFIG_FILE = File.join(File.dirname(__FILE__), "codeorg_crowdin.yml")
 CODEORG_IDENTITY_FILE = File.join(File.dirname(__FILE__), "codeorg_credentials.yml")
 HOUROFCODE_CONFIG_FILE = File.join(File.dirname(__FILE__), "hourofcode_crowdin.yml")
 HOUROFCODE_IDENTITY_FILE = File.join(File.dirname(__FILE__), "hourofcode_credentials.yml")
+CODEORG_MARKDOWN_CONFIG_FILE = File.join(File.dirname(__FILE__), "codeorg_markdown_crowdin.yml")
+CODEORG_MARKDOWN_IDENTITY_FILE = File.join(File.dirname(__FILE__), "codeorg_markdown_credentials.yml")
 
 def should_i(question)
   loop do
@@ -68,6 +70,9 @@ def redact(source, dest, *plugins)
 end
 
 def restore(source, redacted, dest, *plugins)
+  return unless File.exist?(source)
+  return unless File.exist?(redacted)
+
   plugins = plugins_to_arg(plugins)
   source_data = YAML.load_file(source)
   redacted_data = YAML.load_file(redacted)

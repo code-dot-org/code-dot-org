@@ -7,241 +7,241 @@ nav: how_to_nav
 
 # Az önkéntesek útmutatója
 
-### Make a difference in a classroom today!
+### Csinálj különlegességet egy osztályteremben!
 
 ---
 
 ## Miért legyél önkéntes?
 
-Check out some testimony from past volunteers:
+Nézd meg néhány korábbi önkéntesünk vallomását:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-- “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
+- "A legjobb élmény számomra az volt, mikor az egész osztály nőből és színes egyéniségekből állt. Jól felszólítja iparunk jövőjét, hogy legyen esélye elérni ezen gyerekeket és felkelteni érdeklődésüket."
+- "Különösen tetszett, hogy ösztönözhettem a fiatal lányokat a technológia megismerésére. Úgy érzem, hogy én is segítettem a környezetemben élő következő generációnak."
+- "Imádtam nézni, milyen izgatottak lettek a gyerekek. Egy csodálatos dolog volt, hogy a tanárok felfedezték az, hogy néhány diák, aki nem tudományokban volt nagy jártassággal, elkezdtek úgy gondolkodni, mint egy fejlesztő és segítettek másoknak a tanulásban. Ez lehetőséget az arra, hogy magabiztosabbnak érezzék magukat."
 
-## Anyone can volunteer
+## Bárki lehet önkéntes
 
-### Volunteers and speakers in tech:
+### Önkéntesek és előadók jelenléte a technológiában:
 
-Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
+Van kötődésed a számítástechnikához vagy a technológiához? Ha programozóként dolgozol egy informatikai vállalatnál bármilyen posztban, vagy esetleg már részt vettél számítástechnikai képzésen, akkor készen állsz arra, hogy inspiráld a tanulókat! Sok tanuló nem találkozott még olyannal, aki az informatikai szférában végez munkát, de a tanáraink örömest keresnének szakértőket, egyetemi hallgatókat.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science. <br /> <br />
+A vendég előadó lehetsz egy tanteremben, vagy segíthetsz a tanítóknak egy esemény alkalmával. Látogass el egy helyi iskolába, hogy inspiráld a diákokat, hogy igenis tanuljanak számítástechnikát. <br /> <br />
 
-<a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button> <br /> <br /></p> 
+<a href="https://code.org/volunteer"><button>Jelentkezz önkéntesnek!</button> <br /> <br /></p> 
 
 <h3>
-  Anyone passionate about expanding opportunity:
+  Bárki, aki szenvedélyes a lehetőségek iránt:
 </h3>
 
 <p>
-  Do you believe that learning computer science can open doors of opportunity for students? Help out in a local classroom or organize an after school event! You don’t need any background in computer science to host an Hour of Code. And, just offering to help out is often enough to convince your child’s teacher, a friend, or a club to try an hour.
+  Te szerinted is lehetőségek tárházát nyitja ki az informatika tanulás a tanulók részére? Segíts egy helyi osztályban, vagy szervezz egy iskola utáni eseményt! Semmi tapasztalat és háttértudás nem szükséges egy "Hour of Code" esemény megszervezéséhez. Hogy meggyőzd gyermeked tanárát, egy barátodat vagy egy kulbot, hogy próbálják ki elegendő csak felkínálni a lehetőséget.
 </p>
 
 <h3>
-  How do you get started?
+  Hogyan kezdd el?
 </h3>
 
 <ol>
   <li>
-    <a href="%= resolve_url('/promote/resources#help-schools') %">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+    Küld el <a href="%= resolve_url('/promote/resources#help-schools') %">ezt az emailt</a> gyermeked tanárának, melyben felajánlod segítséged egy "Hour of Code" rendezvény megszervezéséhez.
   </li>
   
   <li>
-    Offer to host an Hour of Code event after school at a local school. <a href="%= resolve_url('/how-to') %">Use this How-To Guide</a> to help you plan.
+    Ajánld fel a lehetőséget, és rendezz a helyi iskolában egy iskola utáni eseményt. Használd <a href="%= resolve_url('/how-to') %">ezt az útmutatót</a>, mely segítséget adhat a tervezéshez.
   </li>
 </ol>
 
 <h2>
-  Recruit your co-workers to volunteer
+  Kérdd fel a munkatársaidat önkéntesnek
 </h2>
 
 <p>
-  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="%= resolve_url('/promote/resources#sample-email') %">Send this email</a> to your manager or the CEO to get everyone on board.
+  Mesélj barátaidnak, munkatársaidnak a "Hour of Code" kezdeményezésről. Tanárok ezrei várják az önkénteseket, szóval kérd meg őket, hogy <a href="https://code.org/volunteer">jelentkezzenek önkéntesnek</a>. Kérdd meg a munkáltatód, hogy szintén csatlakozzon! Küldd el <a href="%= resolve_url('/promote/resources#sample-email') %">ezt az emailt</a> a céged vezérigazgatójának vagy bármely felsővezetőjének.
 </p>
 
 <h2>
-  How to prepare
+  Hogyan készülj fel
 </h2>
 
 <ul>
   <li>
-    <a href="%= resolve_url('/promote/resources#videos') %">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
+    <a href="%= resolve_url('/promote/resources#videos') %">Válassz egy videót</a> és mutasd meg az osztálynak, hogy felkeltsd érdeklődésüket és motiváld őket az "Hour of Code" eseményen való részvételre.
   </li>
   <li>
-    Check out the <a href="/files/hoc-volunteer-toolkit.pdf">Hour of Code Volunteer Toolkit</a> which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
+    Nézd meg az <a href="/files/hoc-volunteer-toolkit.pdf">"Hour of Code" önkénteseknek szóló segédletet</a>, mely egy összefoglaló mellett időtervet, előkészítő anyagokat és marketing anyagokat is tartalmaz. Minden ami szükséges készen áll a te önkénteskedésedhez!
   </li>
   <li>
-    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="%= resolve_url('/learn') %">Hour of Code tutorial</a>.
+    Ha azt tervezed, hogy gyakorlatot fogsz megcsinálni a te alkalmadkor, akkor tölts vele előzetesen 30 percet azért, hogy kipróbálj legalább egy <a href="%= resolve_url('/learn') %">"Hour of Code" gyakorlatot</a>.
   </li>
   <li>
-    If you're visiting a school, complete any background checks or required paperwork.
+    Ha meglátogatsz egy iskolát, előtte végezd el a látogatáshoz esetlegesen szükséges papírmunkát.
   </li>
   <li>
-    <a href="https://code.org/files/CSTT_Volunteers.pdf">Review these tips</a> about how to interact with students.
+    <a href="https://code.org/files/CSTT_Volunteers.pdf">Nézd át ezeket a tanácsokat</a>, hogy könnyebben interakcióba tudj lépni a tanulókkal.
   </li>
   <li>
-    Join the conversation on Facebook, Twitter, Instagram, and Tumblr with #HourOfCode.
+    Csatlakozz a Facebookon, Twitteren, Instagramon és Tumblren a témában folyó beszélgetéshez #HourOfCode hashtaggel.
   </li>
   <li>
-    Connect with the teacher to discuss what you plan to speak about during your session.
+    Vedd fel a kapcsolatot a tanárral, hogy megbeszéld miről is szeretnél beszélni a te alkalmadkor.
   </li>
   <li>
-    If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand.
+    Ha egy virtuális önkéntes vagy fontos az, hogy teszteld számítógéped mikrofonját, kameráját és képernyőmegosztó képességét.
   </li>
 </ul>
 
 <h2>
-  Day-of Hour of Code Event
+  "Hour of Code" esemény napján
 </h2>
 
 <p>
-  When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+  Ha te szervezel egy "Hour of Code" eseményt segítségként használd a lentebb található időrendet. Mindenekelőtt győződj meg róla, hogy tényleg bejelentkeztél-e az iskolához, valamint üdvözölted-e a fogadó tanárt az esemény napján. Erősítsd meg az előzetesen elfogadott ütemtervet, beszéljetek meg minden vitatémát.
 </p>
 
 <h3>
-  Sample agenda:
+  Minta időrend:
 </h3>
 
 <table>
   <tr>
     <th>
-      Időpont
+      Idő
     </th>
     
     <th>
-      Agenda item
+      Időrendi pontok
     </th>
   </tr>
   
   <tr>
     <td>
-      1-5 minutes
+      1-5 perc
     </td>
     
     <td>
-      <a href="%= resolve_url('promote/resources#videos') %">Show an inspirational video</a>.
+      <a href="%= resolve_url('promote/resources#videos') %">Mutass egy inspiráló videót</a>.
     </td>
   </tr>
   
   <tr>
     <td>
-      5-10 minutes
+      5-10 perc
     </td>
     
     <td>
-      Introduce yourself and learn more about the students: </ul>
+      Mutasd meg magadat, és tudj meg többet a diákokról: </ul>
       
       <li>
-        What do you work, what do you do, and what do you love most about your job?
+        Mit dolgozol, mivel foglalkozol és mit szeretsz legjobban a munkádban?
       </li>
       
       <li>
-        What or who inspired you?
+        Mi vagy ki inspirál Téged?
       </li>
       
       <li>
-        How did you get interested in computer science?
+        Hogyan kezdett el érdekelni a számítástechnika?
       </li>
       
       <li>
-        Did you have a mentor?
+        Volt/van egy mentorod?
       </li>
       
       <li>
-        Share a story about how tech affects everyone.
+        Ossz meg egy történetet arról, hogy az emberek miként függnek a technológiától.
       </li>
       
-      <br />Ask the students questions and leave time for Q&A.</br> 
+      <br />Kérdezz a diákoktól, adj időt egy rövid kérdezz & felelekre.</br> 
       
       <li>
-        What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built?
+        Milyen munkák iránt érdeklődnek, mi a kedvenc technikai eszközük vagy alkalmazásuk, valamint mit gondolnak, az hogyan jöhetett létre?
       </li>
       
       <li>
-        Do the students have any questions for you?</ul></td> </tr> <tr>
+        Van-e valamilyen kérdésük?</ul></td> </tr> <tr>
           <td>
-            30-60 minutes
+            30-60 perc
           </td>
           
           <td>
-            <strong>Code!</strong> Walk around, answer questions, and guide them through tough puzzles. Try not to give students the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity.
+            <strong>Kódoljatok!</strong> Sétálj körbe, válaszolj a kérdésekre és vezesd, segítsd őket a feladatokban. Próbáld meg nem egyből a megoldást elárulni, hanem inkább rávezető kérdéseket feltenni, ezáltal ráirányítva a megoldásra őket. Továbbá biztasd őket, hogy egymástól is bátran kérdezhetnek. Az egymástól való tanulás egy remek oktatási lehetőség.
           </td>
         </tr>
         
         <tr>
           <td>
-            1-3 minutes
+            1-3 perc
           </td>
           
           <td>
-            Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!
+            Köszönd meg mindenkinek a részvételt és a munkáját, esetleg mondj néhány inspiráló gondolatot. Ha van lehetőséged, osztogass apró ajándékokat (pl.: matricáknak nagyon örülnek a gyerekek)!
           </td>
         </tr>
         
         <tr>
           <td>
-            After
+            Ezt követően
           </td>
           
           <td>
-            <strong>Make a lasting change:</strong> Talk to the teacher about turning the Hour of Code into a full computer science course! Go to <a href="https://code.org/yourschool">code.org/yourschool</a> with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.
+            <strong>Tégy egy tartós változást:</strong> Beszélj az oktatóval az "Hour of Code" esemény rendszeressé tételének lehetőségéről, egy szakkör elindításáról! Látogass el az oktatóddal a <a href="https://code.org/yourschool">code.org/yourschool</a> oldalra, hogy kitöltsétek mit is tanít ez az iskola ma, továbbá hogy meggyőzd őt a számítástechnikai eszközök használatának fontosságáról.
           </td>
         </tr></tbody> </table> 
         
         <h3>
-          After the Event:
+          Az eseményt követően:
         </h3>
         <ul>
           <li>
-            Share your photos and stories with Code.org at giving@code.org.
+            Oszd meg képeidet, történeteidet a Code.org-gal a giving@code.org email címen.
           </li>
           <li>
-            Remember to enter in your volunteer hours in your company’s volunteer tracking portal.
+            Ne felejts el beszámolni az önkéntességedről munkáltatódnál is.
           </li>
           <li>
-            Share about your experience on social media #HourOfCode!
+            Oszd meg tapasztalataidat a közösségi médiában! #HourOfCode
           </li>
           <li>
-            If you do take pictures/videos during the event, <strong>especially with students</strong>, make sure you get teacher/parent permission if you would like to post your stories on social media.
+            Ha fényképet vagy videót készítettél az esemény alatt, <strong>különösen ha a gyerekekről</strong>, kérj hozzá a szülőtől/tanártól engedélyt, hogy azt felhasználhasd a közösségi média felületeiden.
           </li>
           <li>
-            And, check back in a month: Is the teacher interested in offering a computer science course? Share <a href="https://code.org/yourschool">resources and professional learning opportunities to help them do this</a>.
+            Végezetül térj vissza egy hónap múlva: Esetleg a tanárt érdekli egy számítástechnikai kurzus? Oszd meg <a href="https://code.org/yourschool">segédleteinket és professzionális tanulási lehetőségeinket, hogy ezáltal segítsd őt</a>.
           </li>
         </ul>
         <h2>
-          How you get selected as a technical volunteer of guest speaker
+          Hogyan választhatnak ki egy vendégelőadó technikai önkéntesének
         </h2>
         <ul>
           <li>
-            Teachers will be searching for volunteers on our <a href="https://code.org/volunteer/local">volunteer map</a>.
+            Tanárok az <a href="https://code.org/volunteer/local">önkéntestérkép</a> segítségével online kereshetnek önkénteseket.
           </li>
           <li>
-            Try to make your profile as complete as possible to increase the chance that a teacher will select you.
+            Próbáld meg profilodat a lehető legjobban kitölteni, ezzel növelve az esélyedet a kiválasztásra.
           </li>
           <li>
-            A teacher will contact you through this form (your email address will never be shared with the teacher). <em>If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.</em>
+            Az oktató ezen az oldalon keresztül tud kapcsolatba lépni veled (email címedet nem osztjuk meg a tanárral). <em>Ha a tanároktól túl sok megkeresést kapsz, abban az esetben frissítheted preferenciáidat az adataid szerkesztésre gombra kattintva vagy le is iratkozhatsz a levelek alján lévő leiratkozás gombbal az adott tanár leveleiről.</em>
           </li>
         </ul>
         <h2>
-          Volunteering during the Hour of Code FAQ
+          Önkéntesség az "Hour of Code" alatt GYIK
         </h2>
         <h3>
-          I haven't been contacted by a teacher yet. How can I still volunteer?
+          Még nem kaptam megkeresést, hogyan lehetek így is önkéntes?
         </h3>
         <p>
-          Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+          Próbálj meg megkeresni iskolákat, intézményvezetőket és tanárokat felajánlva nekik segítségedet.
         </p>
         <h3>
-          How long do classroom visits last for?
+          Mennyi időbe telik egy osztály meglátogatása?
         </h3>
         <p>
-          An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+          Személyes látogatás általában 60-90 percet vesz igénybe, amíg egy virtuális látogatás 20-30 percig tart.
         </p>
         <h3>
-          What age group is the Hour of Code activity appropriate for?
+          Milyen korcsoportnak megfelelő az "Hour of Code" esemény?
         </h3>
         <p>
-          Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
+          Code.org és partnereink minden korosztály számára kínálnak lehetőséget a tanulásra, legyen fiú vagy lány, bármilyen háttérrel rendelkező ember óvodától 12. osztályig. Sőt, még a felnőttek is szórakozhatnak egy jót!
         </p>
         <p>
           <%= view :signup_button %>

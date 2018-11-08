@@ -153,7 +153,7 @@ def create_down_out_pr
 
   `git push origin #{DOWN_OUT_BRANCH}`
   down_out_pr = GitHub.create_pull_request(
-    base: IN_UP_BRANCH,
+    base: 'staging',
     head: DOWN_OUT_BRANCH,
     title: "I18n sync Down & Out #{Date.today.strftime('%m/%d')}"
   )
