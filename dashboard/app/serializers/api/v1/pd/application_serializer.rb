@@ -33,6 +33,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :meets_scholarship_criteria,
     :school_stats,
     :status_change_log
+    :scholarship_status
   )
 
   def email
@@ -111,7 +112,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   end
 
   def percent_string(count, total)
-    return 'No data' unless count && total
+    return 'N/A' unless count && total
 
     "#{(100.0 * count / total).round(2)}%"
   end
@@ -175,5 +176,9 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     end
 
     serialized_log.values.sort {|x, y| Time.parse(y[:time]) <=> Time.parse(x[:time])}
+  end
+
+  def scholarship_status
+    object.try(:scholarship_status)
   end
 end

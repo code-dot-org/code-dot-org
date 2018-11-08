@@ -12,7 +12,8 @@ class Api::V1::Pd::ApplicationQuickViewSerializer < ActiveModel::Serializer
     :principal_approval_state,
     :total_score,
     :meets_criteria,
-    :meets_scholarship_criteria
+    :meets_scholarship_criteria,
+    :friendly_scholarship_status
   )
 
   def locked
@@ -29,5 +30,9 @@ class Api::V1::Pd::ApplicationQuickViewSerializer < ActiveModel::Serializer
 
   def meets_scholarship_criteria
     object.try(:meets_scholarship_criteria)
+  end
+
+  def friendly_scholarship_status
+    object.try(:friendly_scholarship_status)
   end
 end
