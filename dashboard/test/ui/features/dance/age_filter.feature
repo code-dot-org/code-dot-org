@@ -44,9 +44,7 @@ Feature: Dance Lab Age Filter
     And I wait for the page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
-    And element ".signInOrAgeDialog" is visible
-    And I select the "10" option in dropdown "uitest-age-selector"
-    And I click selector "#uitest-submit-age"
+    And I select age 10 in the age dialog
 
     And I close the instructions overlay if it exists
     Then element "#runButton" is visible
@@ -62,12 +60,24 @@ Feature: Dance Lab Age Filter
     And I wait for the page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
-    And element ".signInOrAgeDialog" is visible
-    And I select the "13" option in dropdown "uitest-age-selector"
-    And I click selector "#uitest-submit-age"
+    And I select age 13 in the age dialog
 
     And I close the instructions overlay if it exists
     Then element "#runButton" is visible
     And element "#song_selector" is visible
     #synthesize is available on local and shapeofyou_edsheeran is available on test
     And I see option "Synthesize" or "Ed Sheeran - Shape of You" in the dropdown "#song_selector"
+
+    # session cookie should persist and no dialog should show up
+    Then I am on "http://studio.code.org/s/dance/stage/1/puzzle/9"
+    And I rotate to landscape
+    And I wait for the page to fully load
+    And I wait for 3 seconds
+    And I wait until I don't see selector "#p5_loading"
+    And element ".ageDialog" is hidden
+    And I close the instructions overlay if it exists
+    Then element "#runButton" is visible
+    And element "#song_selector" is visible
+    #synthesize is available on local and shapeofyou_edsheeran is available on test
+    And I see option "Synthesize" or "Ed Sheeran - Shape of You" in the dropdown "#song_selector"
+
