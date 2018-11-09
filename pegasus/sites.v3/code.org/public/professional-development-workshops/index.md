@@ -17,7 +17,7 @@ Look at the map below to find the next upcoming CS Fundamentals workshop in your
 
 If you can’t find a workshop above, and you’re in the U.S., contact your Regional Partner. They may already have a private workshop set up near your area that you can join, or can set up a workshop if they see enough demand.
 
-<a href="<% CDO.studio_url('/pd/regional_partner_contact/new') %>"><button>Contact my Regional Partner</button></a>
+<a href="<%= CDO.studio_url('/pd/regional_partner_contact/new') %>"><button>Contact my Regional Partner</button></a>
 
 Regional Partners are organizations across the country who advocate for access to computer science education, act as a K-12 computer science hub for their region, and create a strong local community of computer science educators. Our [Regional Partners](/educate/regional-partner/partners) are happy to work with you to organize a training at your school or district.
 
@@ -51,6 +51,40 @@ Regional Partners are organizations across the country who advocate for access t
 [/col-33]
 
 <div style="clear:both"></div>
+
+### Teachers love our professional learning!
+
+Join the over 80,000 teachers who have participated in our workshops. The majority of our workshop attendees rank it **the best professional development ever**. In fact, 98% of attendees would recommend our program to another teacher. 
+
+<br />
+
+<div class="breakoutquote" style="background-color: #7665a0">
+
+<div class="col-33">
+
+<p><img src="/images/code_quote_headshot.jpg" style="max-width: 80%"></p>
+
+</div>
+
+<div class="col-66">
+
+<p>"<strong>This will totally change my curriculum.</strong> I love how the lessons are prepared and aligned to the Common Core and Gext Generation Science Standards."</p>
+
+</div>
+
+<div class="clearboth">
+
+</div>
+
+</div>
+
+### Can’t attend a workshop?
+
+If you cannot attend a workshop, teachers anywhere in the world can use [our self-paced online workshop](/educate/professional-development-online) to get started at no cost. And, the curriculum, lesson plans, tools, and support are also available at no cost worldwide. [Join our forums](https://forum.code.org/) to connect with other teachers for support, teaching tips, and best practices.
+
+### Outside of the US?
+
+Unfortunately, we do not currently offer professional development workshops outside of the US. However, you can take a look at [our self-paced online workshop](/educate/professional-development-online) to get started at no cost. And, the curriculum, lesson plans, tools, and support are also available at no cost worldwide. [Join our forums](https://forum.code.org/) to connect with other teachers for support, teaching tips, and best practices.
 
 ## Benefits beyond the workshop
 
