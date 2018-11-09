@@ -85,8 +85,8 @@ Dance.prototype.init = function (config) {
   });
   this.studioApp_.labUserId = config.labUserId;
   this.level.softButtons = this.level.softButtons || {};
-  this.tickCount = 0;
-  this.thumbnailBlob = null;
+  // Last time (in milliseconds) a thumbnail was captured from the scene.
+  this.lastThumbnailCaptureMs = 0;
 
   config.afterClearPuzzle = function () {
     this.studioApp_.resetButtonClick();
@@ -561,7 +561,6 @@ Dance.prototype.updateSongMetadata = function (id) {
  */
 Dance.prototype.onHandleEvents = function (currentFrameEvents) {
   this.hooks.find(v => v.name === 'runUserEvents').func(currentFrameEvents);
-  this.tickCount += 1;
   this.captureThumbnailImage();
 };
 
@@ -589,17 +588,19 @@ Dance.prototype.getAppReducers = function () {
   return reducers;
 };
 
-// Number of ticks after which to capture a thumbnail image of the play space.
-const CAPTURE_TICK_INTERVAL = 5;
+// Minimum time to wait after capturing a thumbnail image before capturing another thumbnail.
+const MIN_CAPTURE_INTERVAL_MS = 120000;
 
 /**
- * Capture a thumbnail image of the play space every CAPTURE_TICK_INTERVAL ticks.
+ * Capture a thumbnail image of the play space every MIN_CAPTURE_INTERVAL_MS milliseconds.
  */
 Dance.prototype.captureThumbnailImage = function () {
-  if (this.tickCount % CAPTURE_TICK_INTERVAL !== 0) {
+  const intervalMs = Date.now() - this.lastThumbnailCaptureMs;
+  if (intervalMs < MIN_CAPTURE_INTERVAL_MS) {
     return;
   }
 
+  this.lastThumbnailCaptureMs = Date.now();
   // Set PNG blob on project from current canvas
   setThumbnailBlobFromCanvas(document.getElementById('defaultCanvas0'));
 };

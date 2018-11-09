@@ -1279,7 +1279,9 @@ var projects = module.exports = {
    * @param {Blob} pngBlob A Blob in PNG format containing the thumbnail image.
    */
   setThumbnailPngBlob(pngBlob) {
-    thumbnailPngBlob = pngBlob;
+    if (pngBlob) {
+      thumbnailPngBlob = pngBlob;
+    }
   },
 
   /**
