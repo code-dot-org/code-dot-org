@@ -103,7 +103,7 @@ class AgeDialog extends Component {
           isOpen={this.state.open}
           uncloseable
         >
-          <div style={styles.container} className="ageDialog">
+          <div style={styles.container} className="age-dialog">
             <div style={styles.dancePartyHeading}>
               {i18n.welcomeToDanceParty()}
             </div>
