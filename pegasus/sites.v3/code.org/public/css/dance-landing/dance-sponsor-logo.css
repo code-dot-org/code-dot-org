@@ -15,3 +15,13 @@
   margin-left: 18%;
   margin-right: 18%;
 }
+
+@media screen and (min-width: 0px) and (max-width: 512px) {
+  .sponsor-logo-with-text {
+    flex-direction: column;
+  }
+
+  .sponsor-logo-with-text .sponsor-logo-image {
+    margin-top: 10px;
+  }
+}
