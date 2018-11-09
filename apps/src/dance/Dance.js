@@ -52,6 +52,17 @@ var Dance = function () {
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
+
+  this.performanceData_ = {
+    // Time until Blockly is interactable
+    timeToInteractive: null,
+    // Time until Dance Party play() can be called (sprites and song metadata loaded)
+    timeToPlayable: null,
+    // Time the run button was last clicked
+    lastRunButtonClick: null,
+    // Time between last run click and last time the song actually started playing
+    lastRunButtonDelay: null,
+  };
 };
 
 module.exports = Dance;
@@ -118,6 +129,8 @@ Dance.prototype.init = function (config) {
 
   this.initSongsPromise = this.initSongs(config);
 
+  this.awaitTimingMetrics();
+
   ReactDOM.render((
     <Provider store={getStore()}>
       <div>
@@ -136,6 +149,22 @@ Dance.prototype.init = function (config) {
       </div>
     </Provider>
   ), document.getElementById(config.containerId));
+};
+
+/**
+ * Fire-and-forget asynchronous waits to update timing metrics.
+ */
+Dance.prototype.awaitTimingMetrics = function () {
+  $(document).one('appInitialized', () => {
+    this.performanceData_.timeToInteractive = performance.now();
+  });
+
+  this.danceReadyPromise
+    .then(() => this.initSongsPromise)
+    .then(() => this.songMetadataPromise)
+    .then(() => {
+      this.performanceData_.timeToPlayable = performance.now();
+    });
 };
 
 Dance.prototype.initSongs = async function (config) {
@@ -288,8 +317,17 @@ Dance.prototype.afterInject_ = function () {
     container: 'divDance',
     i18n: danceMsg,
   });
-  /** Expose for testing **/
-  window.__DanceTestInterface = this.nativeAPI.getTestInterface();
+
+  // Expose an interface for testing
+  // Composes the nativeAPI getPerformanceData with our own performance data.
+  const nativeAPITestInterface = this.nativeAPI.getTestInterface();
+  window.__DanceTestInterface = {
+    ...nativeAPITestInterface,
+    getPerformanceData: () => ({
+      ...nativeAPITestInterface.getPerformanceData(),
+      ...this.performanceData_
+    })
+  };
 
   if (recordReplayLog) {
     getStore().dispatch(saveReplayLog(this.nativeAPI.getReplayLog()));
@@ -385,6 +423,9 @@ Dance.prototype.runButtonClick = async function () {
     return;
   }
 
+  this.performanceData_.lastRunButtonClick = performance.now();
+  this.performanceData_.lastRunButtonDelay = null;
+
   // Disable the run button now to give some visual feedback
   // that the button was pressed. toggleRunReset() will
   // eventually execute down below, but there are some long-running
@@ -445,6 +486,8 @@ Dance.prototype.execute = async function () {
   const songMetadata = await this.songMetadataPromise;
   return new Promise((resolve, reject)=> {
     this.nativeAPI.play(songMetadata, success => {
+      this.performanceData_.lastRunButtonDelay =
+        performance.now() - this.performanceData_.lastRunButtonClick;
       success ? resolve() : reject();
     });
   });
