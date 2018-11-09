@@ -1,134 +1,135 @@
 name_s,url_s,show_s,twitter_s,level_s,weight_f,twitter_weight_f
 AAAAAA (ignore this),,,,,0,
 AAAAAA2 (ignore this),,,,,0,
-Microsoft,http://www.microsoft.com,logo,@microsoft,diamond,0.1695500647,0.1946269800
-Facebook,http://www.facebook.com,logo,@facebook,diamond,0.2921478349,0.3353572936
-Amazon,https://www.amazon.com/,logo,@amazon,diamond,0.4063584807,0.4664600043
-Infosys Foundation USA,http://www.infosys.com/infosys-foundation/infosys-usa-foundation/Pages/index.aspx,logo,@InfyFoundation,diamond,0.4945613992,0.5677083742
-Omidyar Network,http://www.omidyar.com,logo,,platinum,0.5547518726,
-Google,http://www.google.com,logo,@Google,platinum,0.5992542542,0.6187927790
-Bill and Melinda Gates Foundation,http://www.gatesfoundation.org/,logo,@gatesfoundation,platinum,0.6393464899,0.6648147653
-Ali and Hadi Partovi,http://www.partovi.org,both,@apartovi,platinum,0.6634018313,0.6924279570
-Ballmer Family Giving,http://en.wikipedia.org/wiki/Steve_Ballmer,both,@Steven_Ballmer,platinum,0.6874571727,0.7200411488
-PricewaterhouseCoopers,,logo,@PwC_LLP,platinum,0.7115125141,0.7476543406
-Vista Equity Partners,https://www.vistaequitypartners.com/,logo,@RFS_Vista,platinum,0.7355678555,0.7752675324
-Chan Zuckerberg Initiative,http://www.startupeducation.org/,logo,,gold,0.7516047498,
-Quadrivium Foundation,http://www.qdvm.org/,logo,@KathrynAMurdoch,gold,0.7676416441,0.7936763269
-Reid Hoffman,http://www.linkedin.com/in/reidhoffman,both,@reidhoffman,gold,0.7836785384,0.8120851214
-Linda and Glenn Greenberg,,both,,gold,0.7977108208,
-Salesforce,http://www.salesforce.com,logo,@SalesforceOrg,gold,0.8099389527,0.8261218272
-Feroz and Erica Dewan,https://www.linkedin.com/in/feroz-dewan-4736502,name,,gold,0.8219666234,
-Diane Tang and Ben Smith,http://research.google.com/pubs/author3770.html,both,,gold,0.8323906047,
-Verizon,http://www.verizon.com/about/responsibility/verizon-foundation,logo,@verizon,gold,0.8424136636,0.8376273238
-Drew Houston,http://en.wikipedia.org/wiki/Drew_Houston,both,@drewhouston,gold,0.8505323413,0.8469467760
-Bill Gates,http://en.wikipedia.org/wiki/Bill_Gates,both,@BillGates,gold,0.8585507885,0.8561511733
-Pluralsight One,https://www.pluralsightone.org,logo,@pluralsight,gold,0.8705784592,0.8699577692
-BlackRock,https://www.blackrock.com/,logo,@blackrock,gold,0.8785969063,0.8791621664
-Jeff Bezos,https://en.wikipedia.org/wiki/Jeff_Bezos,both,@JeffBezos,gold,0.8866153535,0.8883665637
-John and Ann Doerr,http://en.wikipedia.org/wiki/John_Doerr,both,@johndoerr,gold,0.8946338006,0.8975709609
-The Marie-Josée and Henry R. Kravis Foundation,,name,@HenryRKravis,gold,0.9026522477,0.9067753582
-Nathan and Elizabeth Blecharczyk,,both,@nathanblec,gold,0.9106706949,0.9159797555
-Sean Parker,http://en.wikipedia.org/wiki/Sean_Parker,both,@sparker,gold,0.918689142,0.9251841527
-AT&T,http://about.att.com/content/csr/home/possibilities/at-t-aspire.html,logo,@att,silver,0.9255048221,0.9330078904
-Juniper Networks Foundation Fund,http://www.juniper.net,logo,@JuniperNetworks,silver,0.9311177351,0.9394509685
-Accenture,https://www.accenture.com/us-en/company-skills-succeed,logo,@Accenture,silver,0.935131481,0.9440583584
-Expedia,http://www.expedia.com/,logo,,silver,0.9391407046,
-Jeff Wilke,http://www.crunchbase.com/person/jeffrey-wilke,name,@jeffawilke,silver,0.9431499282,0.9486605570
-Mark Cuban,http://markcubancompanies.com/,name,@mcuban,silver,0.9471591517,0.9532627556
-The Walt Disney Company,http://thewaltdisneycompany.com/,name,@WaltDisneyCo,bronze,0.9509679141,0.9576348443
-Humble Bundle,https://www.humblebundle.com,name,@Humble,bronze,0.9543837459,0.9615558869
-CME Group Foundation,http://www.cmegroupfoundation.org/,name,@CMEGroup,bronze,0.9567892801,0.9643172061
-Workday,http://www.workday.com,name,@workday,bronze,0.9590019705,0.9668571595
-IAC,http://iac.com/,name,,bronze,0.9610065823,
-Symantec,https://www.symantec.com/,name,@symantec,bronze,0.9627706407,0.9688821269
-Electronic Arts,https://www.ea.com/,name,@ea,bronze,0.9643950775,0.9707468224
-Adobe,http://www.adobe.com/,name,asked not to be listed,bronze,0.965998767,0.9725877018
-General Motors,https://www.gm.com/,name,@GM,bronze,0.9676024564,0.9744285813
-Jeff Weiner,http://www.linkedin.com/in/jeffweiner08,name,@jeffweiner,bronze,0.9692061458,0.9762694607
-CSNYC,http://www.csnyc.org/,name,,bronze,0.9706093741,
-CA Technologies,https://www.ca.com,name,@CAInc,bronze,0.9718201596,0.9776593247
-Association for Computing Machinery (ACM),http://www.acm.org/,name,@theofficialacm,bronze,0.9730232614,0.9790403686
-Owen and Jennifer Van Natta,http://www.crunchbase.com/person/owen-van-natta,name,,bronze,0.9742260285,
-The Honest Company,https://www.honest.com,name,@Honest,bronze,0.9753486111,0.9803289842
-Mark Sugarman,,name,@marksugarman,bronze,0.9763139139,0.9814370579
-Motorola Solutions Foundation ,,name,@MotoSolutions,bronze,0.9772761275,0.9825415855
-Qualcomm,https://www.qualcomm.com,name,@Qualcomm,bronze,0.9782383412,0.9836461132
-DXC Technology Foundation,,name,@DXCTechnology,bronze,0.9790401859,0.9845665529
-Emerson Collective,,name,@EmCollective,bronze,0.9798420306,0.9854869927
-Jerry Yang,http://en.wikipedia.org/wiki/Jerry_Yang_(entrepreneur),name,,bronze,0.9806438753,
-John and Allison Danner,,name,@jwdanner,bronze,0.98144572,0.9864074324
-Ken Fox,https://www.linkedin.com/in/kenfox/,name,,bronze,0.9822475647,
-Northrop Grumman Foundation,http://www.northropgrumman.com/,name,@northropgrumman,bronze,0.9830494094,0.9873278721
-Squarespace,http://www.squarespace.com,name,@squarespace,bronze,0.9838512542,0.9882483118
-Vinod and Neeru Khosla,http://www.crunchbase.com/person/vinod-khosla,name,@vkhosla,bronze,0.9846530989,0.9891687516
-Dara Khosrowshahi,,name,@dkhos,supporter,0.9852544824,0.9898590814
-GoDaddy,,name,@GoDaddy,supporter,0.9858558659,0.9905494112
-Ron Conway,,name,@RonConway,supporter,0.9864572495,0.9912397410
-Sameer Gandhi,,name,@skg_accel,supporter,0.987058633,0.9919300708
-CNYL Foundation,,name,,supporter,0.9874755923,
-Alfred Lin,,name,@Alfred_Lin,supporter,0.9878765146,0.9923902906
-Allen & Co,,name,,supporter,0.988277437,
-Barton Family Foundation,,name,@Rich_Barton,supporter,0.9886783593,0.9928505105
-Christian Leone,,name,,supporter,0.9890792817,
-Craig Silverstein and Mary Obelnicki,,name,,supporter,0.9894802041,
-Keith Rabois,,name,@rabois,supporter,0.9898811264,0.9933107303
-Max Levchin,,name,@mlevchin,supporter,0.9902820488,0.9937709502
-Phokion Potamianos-Homem,,name,,supporter,0.9906829711,
-Rackspace ,,name,@Rackspace,supporter,0.9910838935,0.9942311701
-Swartz Foundation,,name,,supporter,0.9914848158,
-Tableau Foundation,,name,@tableau,supporter,0.9918857382,0.9946913899
-Technically Learning,,name,,supporter,0.9922458235,
-John and Melissa Meier,,name,,supporter,0.9925264691,
-Megan Smith,,name,@smithmegan,supporter,0.9928071148,0.9950135438
-Nick and Leslie Hanauer Foundation,,name,@NickHanauer,supporter,0.9930877604,0.9953356977
-Best Buy,,name,@BestBuy,supporter,0.9933283138,0.9956118297
-Ned and Haleh Clapp,,name,,supporter,0.9935688673,
-Dave Maestri,,name,,supporter,0.9938014022,
-Microsoft Alumni Foundation,,name,@microsoftalumni,supporter,0.9940183012,0.9958608086
-Taner Halicioglu,,name,,supporter,0.9942337569,
-Automattic,,name,@automattic,supporter,0.9944342181,0.9960909185
-Jeff Lawson,https://www.twilio.com/,name,@jeffiel,supporter,0.9946346793,0.9963210285
-JP Morgan Chase & Co,,name,@jpmorgan,supporter,0.9948351404,0.9965511384
-Ken Hirsh,,name,,supporter,0.9950356016,
-LinkedIn,,name,@LinkedIn,supporter,0.9952360628,0.9967812483
-Matt Mullenweg,,name,@photomatt,supporter,0.995436524,0.9970113583
-Osman Rashid,,name,@osmanrashid,supporter,0.9956369851,0.9972414682
-Riot Games,http://www.riotgames.com/,name,@riotgames,supporter,0.9958374463,0.9974715781
-Ronald and Ling Cheng,,name,,supporter,0.9960379075,
-Sylvina Capital,,name,,supporter,0.9962383687,
-Ali Rowghani ,,name,@ROWGHANI,other,0.9963987376,0.9976556661
-Craig Nevill-Manning,,name,,other,0.9965591066,
-Macys.com,,name,@Macys,other,0.9967194755,0.9978397540
-Mark Torrance,,name,,other,0.9968798445,
-Michael Birch,,name,,other,0.9970402134,
-Susan Wojcicki and Dennis Troper,,name,@SusanWojcicki,other,0.9972005823,0.9980238420
-DHI Group,,name,,other,0.9973545365,
-Elastic,,name,@elastic,other,0.9974873406,0.9981762881
-Swish.com,,name,,other,0.9976094215,
-Wells Fargo ,,name,@WellsFargo,other,0.9977299776,0.9983146749
-Case Foundation,,name,@SteveCase,other,0.9978502543,0.9984527408
-Intel,,name,@intel,other,0.997970531,0.9985908068
-Mike Schroepfer and Erin Hoffman Family Foundation ,,name,@schrep,other,0.9980908077,0.9987288727
-National Math and Science Initiative,,name,@NMSI,other,0.9982110844,0.9988669387
-BlackBerry Employee Giving,,name,@BlackBerry,other,0.9983081077,0.9989783119
-Ari Steinberg ,,name,@aristeinberg,other,0.9983963106,0.9990795603
-Akamai Technologies,,name,@Akamai,other,0.998476495,0.9991716042
-Alex and Susie Algard,,name,@algard,other,0.9985566795,0.9992636482
-Binder Foundation,,name,,other,0.998636864,
-The BOSS Group and Our Valued Clients,,name,@TheBOSSGroup,other,0.9987170485,0.9993556922
-EWCY Foundation,,name,,other,0.9987972329,
-Grace Chung,,name,,other,0.9988774174,
-Harvest Foundation,,name,,other,0.9989576019,
-Laurent Drion ,,name,@LaurentDrion,other,0.9990377863,0.9994477362
-Madrona Venture Group,,name,@MadronaVentures,other,0.9991179708,0.9995397801
-Media Temple,,name,@mediatemple,other,0.9991981553,0.9996318241
-Medina Foundation,,name,,other,0.9992783398,
-Melinda Chelliah,,name,,other,0.9993585242,
-Nickolas Downey,,name,,other,0.9994387087,
-Quantopian,,name,@quantopian,other,0.9995188932,0.9997238681
-Real Networks Foundation,https://www.realnetworks.com/realnetworks-foundation,none,,other,0.9995990776,
-Rob Short,,name,,other,0.9996792621,
-Rudy Gadre,,name,,other,0.9997594466,
-Sam Yagan,,name,@samyagan,other,0.9998396311,0.9998159121
-Scott Dorsey,,name,@ScottDorsey,other,0.9999198155,0.9999079560
+Microsoft,http://www.microsoft.com,logo,@microsoft,diamond,0.1682013511,0.1928518946
+Facebook,http://www.facebook.com,logo,@facebook,diamond,0.2898238973,0.3322986845
+Amazon,https://www.amazon.com/,logo,@amazon,diamond,0.4031260359,0.4622056796
+Infosys Foundation USA,http://www.infosys.com/infosys-foundation/infosys-usa-foundation/Pages/index.aspx,logo,@InfyFoundation,diamond,0.4906273299,0.5625306189
+Omidyar Network,http://www.omidyar.com,logo,,platinum,0.5503390084,
+Google,http://www.google.com,logo,@Google,platinum,0.5944873885,0.6131491110
+Bill and Melinda Gates Foundation,http://www.gatesfoundation.org/,logo,@gatesfoundation,platinum,0.634260704,0.6587513561
+Ali and Hadi Partovi,http://www.partovi.org,both,@apartovi,platinum,0.6581246932,0.6861127031
+Ballmer Family Giving,http://en.wikipedia.org/wiki/Steve_Ballmer,both,@Steven_Ballmer,platinum,0.6819886825,0.7134740502
+PricewaterhouseCoopers,,logo,@PwC_LLP,platinum,0.7058526718,0.7408353973
+Vista Equity Partners,https://www.vistaequitypartners.com/,logo,@RFS_Vista,platinum,0.7297166611,0.7681967444
+Chan Zuckerberg Initiative,http://www.startupeducation.org/,logo,,gold,0.7456259872,
+Quadrivium Foundation,http://www.qdvm.org/,logo,@KathrynAMurdoch,gold,0.7615353134,0.7864376424
+Reid Hoffman,http://www.linkedin.com/in/reidhoffman,both,@reidhoffman,gold,0.7774446396,0.8046785404
+Linda and Glenn Greenberg,,both,,gold,0.7913653,
+Salesforce,http://www.salesforce.com,logo,@SalesforceOrg,gold,0.8034961612,0.8185872252
+Feroz and Erica Dewan,https://www.linkedin.com/in/feroz-dewan-4736502,name,,gold,0.8154281559,
+Diane Tang and Ben Smith,http://research.google.com/pubs/author3770.html,both,,gold,0.8257692179,
+Verizon,http://www.verizon.com/about/responsibility/verizon-foundation,logo,@verizon,gold,0.8357125467,0.8299877865
+Drew Houston,http://en.wikipedia.org/wiki/Drew_Houston,both,@drewhouston,gold,0.8437666431,0.8392222411
+Bill Gates,http://en.wikipedia.org/wiki/Bill_Gates,both,@BillGates,gold,0.8517213062,0.8483426901
+Pluralsight One,https://www.pluralsightone.org,logo,@pluralsight,gold,0.8636533009,0.8620233637
+BlackRock,https://www.blackrock.com/,logo,@blackrock,gold,0.8716079639,0.8711438127
+Jeff Bezos,https://en.wikipedia.org/wiki/Jeff_Bezos,both,@JeffBezos,gold,0.879562627,0.8802642617
+John and Ann Doerr,http://en.wikipedia.org/wiki/John_Doerr,both,@johndoerr,gold,0.8875172901,0.8893847108
+The Marie-Josée and Henry R. Kravis Foundation,,name,@HenryRKravis,gold,0.8954719532,0.8985051598
+Nathan and Elizabeth Blecharczyk,,both,@nathanblec,gold,0.9034266163,0.9076256088
+Sean Parker,http://en.wikipedia.org/wiki/Sean_Parker,both,@sparker,gold,0.9113812794,0.9167460578
+Charlie Lee,,both,@SatoshiLite,gold,0.9193359425,0.9258665068
+AT&T,http://about.att.com/content/csr/home/possibilities/at-t-aspire.html,logo,@att,silver,0.9260974061,0.9336188885
+Juniper Networks Foundation Fund,http://www.juniper.net,logo,@JuniperNetworks,silver,0.9316656703,0.9400032028
+Accenture,https://www.accenture.com/us-en/company-skills-succeed,logo,@Accenture,silver,0.9356474883,0.9445685713
+Expedia,http://www.expedia.com/,logo,,silver,0.9396248198,
+Jeff Wilke,http://www.crunchbase.com/person/jeffrey-wilke,name,@jeffawilke,silver,0.9436021513,0.9491287958
+Mark Cuban,http://markcubancompanies.com/,name,@mcuban,silver,0.9475794829,0.9536890203
+The Walt Disney Company,http://thewaltdisneycompany.com/,name,@WaltDisneyCo,bronze,0.9513579479,0.9580212336
+Humble Bundle,https://www.humblebundle.com,name,@Humble,bronze,0.9547466078,0.9619065145
+CME Group Foundation,http://www.cmegroupfoundation.org/,name,@CMEGroup,bronze,0.9571330068,0.9646426492
+Workday,http://www.workday.com,name,@workday,bronze,0.9593280961,0.9671594371
+IAC,http://iac.com/,name,,bronze,0.9613167618,
+Symantec,https://www.symantec.com/,name,@symantec,bronze,0.9630667877,0.9691659359
+Electronic Arts,https://www.ea.com/,name,@ea,bronze,0.9646783027,0.9710136245
+Adobe,http://www.adobe.com/,name,asked not to be listed,bronze,0.9662692353,0.9728377143
+General Motors,https://www.gm.com/,name,@GM,bronze,0.9678601679,0.9746618041
+Jeff Weiner,http://www.linkedin.com/in/jeffweiner08,name,@jeffweiner,bronze,0.9694511006,0.9764858939
+CSNYC,http://www.csnyc.org/,name,,bronze,0.9708431666,
+CA Technologies,https://www.ca.com,name,@CAInc,bronze,0.9720443207,0.9778630817
+Association for Computing Machinery (ACM),http://www.acm.org/,name,@theofficialacm,bronze,0.9732378523,0.9792315298
+Owen and Jennifer Van Natta,http://www.crunchbase.com/person/owen-van-natta,name,,bronze,0.9744310518,
+The Honest Company,https://www.honest.com,name,@Honest,bronze,0.9755447046,0.9805083927
+Mark Sugarman,,name,@marksugarman,bronze,0.9765023287,0.9816063602
+Motorola Solutions Foundation ,,name,@MotoSolutions,bronze,0.9774568883,0.9827008141
+Qualcomm,https://www.qualcomm.com,name,@Qualcomm,bronze,0.9784114478,0.9837952680
+DXC Technology Foundation,,name,@DXCTechnology,bronze,0.9792069141,0.9847073129
+Emerson Collective,,name,@EmCollective,bronze,0.9800023805,0.9856193578
+Jerry Yang,http://en.wikipedia.org/wiki/Jerry_Yang_(entrepreneur),name,,bronze,0.9807978468,
+John and Allison Danner,,name,@jwdanner,bronze,0.9815933131,0.9865314027
+Ken Fox,https://www.linkedin.com/in/kenfox/,name,,bronze,0.9823887794,
+Northrop Grumman Foundation,http://www.northropgrumman.com/,name,@northropgrumman,bronze,0.9831842457,0.9874434476
+Squarespace,http://www.squarespace.com,name,@squarespace,bronze,0.983979712,0.9883554925
+Vinod and Neeru Khosla,http://www.crunchbase.com/person/vinod-khosla,name,@vkhosla,bronze,0.9847751783,0.9892675374
+Dara Khosrowshahi,,name,@dkhos,supporter,0.985371778,0.9899515711
+GoDaddy,,name,@GoDaddy,supporter,0.9859683778,0.9906356048
+Ron Conway,,name,@RonConway,supporter,0.9865649775,0.9913196385
+Sameer Gandhi,,name,@skg_accel,supporter,0.9871615772,0.9920036721
+CNYL Foundation,,name,,supporter,0.9875752197,
+Alfred Lin,,name,@Alfred_Lin,supporter,0.9879729529,0.9924596946
+Allen & Co,,name,,supporter,0.988370686,
+Barton Family Foundation,,name,@Rich_Barton,supporter,0.9887684192,0.9929157170
+Christian Leone,,name,,supporter,0.9891661523,
+Craig Silverstein and Mary Obelnicki,,name,,supporter,0.9895638855,
+Keith Rabois,,name,@rabois,supporter,0.9899616186,0.9933717395
+Max Levchin,,name,@mlevchin,supporter,0.9903593518,0.9938277619
+Phokion Potamianos-Homem,,name,,supporter,0.9907570849,
+Rackspace ,,name,@Rackspace,supporter,0.9911548181,0.9942837844
+Swartz Foundation,,name,,supporter,0.9915525513,
+Tableau Foundation,,name,@tableau,supporter,0.9919502844,0.9947398068
+Technically Learning,,name,,supporter,0.9923075053,
+John and Melissa Meier,,name,,supporter,0.9925859186,
+Megan Smith,,name,@smithmegan,supporter,0.9928643318,0.9950590226
+Nick and Leslie Hanauer Foundation,,name,@NickHanauer,supporter,0.993142745,0.9953782383
+Best Buy,,name,@BestBuy,supporter,0.9933813849,0.9956518517
+Ned and Haleh Clapp,,name,,supporter,0.9936200248,
+Dave Maestri,,name,,supporter,0.99385071,
+Microsoft Alumni Foundation,,name,@microsoftalumni,supporter,0.9940658836,0.9958985599
+Taner Halicioglu,,name,,supporter,0.9942796254,
+Automattic,,name,@automattic,supporter,0.994478492,0.9961265711
+Jeff Lawson,https://www.twilio.com/,name,@jeffiel,supporter,0.9946773586,0.9963545823
+JP Morgan Chase & Co,,name,@jpmorgan,supporter,0.9948762251,0.9965825936
+Ken Hirsh,,name,,supporter,0.9950750917,
+LinkedIn,,name,@LinkedIn,supporter,0.9952739583,0.9968106048
+Matt Mullenweg,,name,@photomatt,supporter,0.9954728249,0.9970386160
+Osman Rashid,,name,@osmanrashid,supporter,0.9956716915,0.9972666272
+Riot Games,http://www.riotgames.com/,name,@riotgames,supporter,0.995870558,0.9974946385
+Ronald and Ling Cheng,,name,,supporter,0.9960694246,
+Sylvina Capital,,name,,supporter,0.9962682912,
+Ali Rowghani ,,name,@ROWGHANI,other,0.9964273845,0.9976770474
+Craig Nevill-Manning,,name,,other,0.9965864777,
+Macys.com,,name,@Macys,other,0.996745571,0.9978594564
+Mark Torrance,,name,,other,0.9969046642,
+Michael Birch,,name,,other,0.9970637575,
+Susan Wojcicki and Dennis Troper,,name,@SusanWojcicki,other,0.9972228508,0.9980418654
+DHI Group,,name,,other,0.9973755803,
+Elastic,,name,@elastic,other,0.997507328,0.9981929212
+Swish.com,,name,,other,0.9976284377,
+Wells Fargo ,,name,@WellsFargo,other,0.9977480349,0.9983300458
+Case Foundation,,name,@SteveCase,other,0.9978673548,0.9984668525
+Intel,,name,@intel,other,0.9979866748,0.9986036593
+Mike Schroepfer and Erin Hoffman Family Foundation ,,name,@schrep,other,0.9981059947,0.9987404660
+National Math and Science Initiative,,name,@NMSI,other,0.9982253147,0.9988772727
+BlackBerry Employee Giving,,name,@BlackBerry,other,0.9983215661,0.9989876302
+Ari Steinberg ,,name,@aristeinberg,other,0.9984090674,0.9990879551
+Akamai Technologies,,name,@Akamai,other,0.998488614,0.9991791596
+Alex and Susie Algard,,name,@algard,other,0.9985681606,0.9992703641
+Binder Foundation,,name,,other,0.9986477073,
+The BOSS Group and Our Valued Clients,,name,@TheBOSSGroup,other,0.9987272539,0.9993615686
+EWCY Foundation,,name,,other,0.9988068005,
+Grace Chung,,name,,other,0.9988863472,
+Harvest Foundation,,name,,other,0.9989658938,
+Laurent Drion ,,name,@LaurentDrion,other,0.9990454404,0.9994527731
+Madrona Venture Group,,name,@MadronaVentures,other,0.9991249871,0.9995439775
+Media Temple,,name,@mediatemple,other,0.9992045337,0.9996351820
+Medina Foundation,,name,,other,0.9992840803,
+Melinda Chelliah,,name,,other,0.999363627,
+Nickolas Downey,,name,,other,0.9994431736,
+Quantopian,,name,@quantopian,other,0.9995227202,0.9997263865
+Real Networks Foundation,https://www.realnetworks.com/realnetworks-foundation,none,,other,0.9996022668,
+Rob Short,,name,,other,0.9996818135,
+Rudy Gadre,,name,,other,0.9997613601,
+Sam Yagan,,name,@samyagan,other,0.9998409067,0.9998175910
+Scott Dorsey,,name,@ScottDorsey,other,0.9999204534,0.9999087955
 Yum! Brands Foundation,,name,@yumbrands,other,1,1.0000000000
