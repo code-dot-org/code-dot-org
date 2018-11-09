@@ -6,10 +6,11 @@ theme: responsive
 %link{href: "/css/dance-landing/dance.css", type: "text/css", rel: "stylesheet"}
 
 %h1= I18n.t(:hoc2018_dance_party_main_heading)
-.dance-text-icon-container
-  %a{href: "/translate/dance", style: "text-decoration: none"}
-    .dance-translate-link-text
+%div.dance-text-icon-container
+  %a{href: "/translate/dance"}
+    %div.dance-translate-link-text
       =I18n.t(:hoc2018_dance_party_subheading)
+  %a{href: "/translate/dance", style: "text-decoration: none;"}
     %i.fa.fa-chevron-right.dance-chevron-icon
 
 =view :dance_tutorial_section
