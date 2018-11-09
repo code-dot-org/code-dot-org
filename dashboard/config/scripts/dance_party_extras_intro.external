@@ -1,0 +1,33 @@
+name 'Dance_Party_extras_intro'
+display_name 'Keep On Dacning!'
+markdown <<MARKDOWN
+# Keep on Dancing!
+
+for part 2, you're going to create your own project. There are no puzzles here - instead there are a bunch of projects that show different ways to make more complex dance parties.
+
+You can do these levels _in any order_. Jump around to look at how something was done in a previous level, or combine concepts between the projects. Try them all, pick your favorite, and spend your time working on adding to that project to make it your own.
+
+## Get in Formation
+
+[![Get in Formation](https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif)](2)
+
+## Where'd They Go?
+
+[![Where'd They Go?](https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif)](3)
+
+## Dance Crews
+
+[![Dance Crews](https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif)](4)
+
+## Quarter Notes
+
+[![Quarter Notes](https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif)](5)
+
+## Bass, Mid, and Treble
+
+[![Bass, Mid, and Treble](https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif)](6)
+
+## Speed it Up, Slow it Down
+
+[![Speed it Up, Slow it Down](https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif)](7)
+MARKDOWN
