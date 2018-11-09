@@ -57,7 +57,8 @@ class AgeDialog extends Component {
   };
 
   static propTypes = {
-    signedIn: PropTypes.bool.isRequired
+    signedIn: PropTypes.bool.isRequired,
+    turnOffFilter: PropTypes.func.isRequired
   };
 
   onClickAgeOk = () => {
@@ -71,14 +72,16 @@ class AgeDialog extends Component {
     let over13 = parseInt(value, 10) >= 13;
     sessionStorage.setItem(sessionStorageKey, over13);
 
+    if (over13) {
+      this.props.turnOffFilter();
+    }
+
     // When opening a new tab, we'll have a new session (and thus show this dialog),
     // but may still be using a storage_id for a previous user. Clear that cookie
     // and reload
     const cookieName = environmentSpecificCookieName('storage_id');
     if (cookies.get(cookieName)) {
       cookies.remove(cookieName, {path: '/', domain: '.code.org'});
-      reload();
-    } else if (over13) { // Filter on by default, reload to filter
       reload();
     } else {
       this.setState({open: false});
@@ -93,44 +96,42 @@ class AgeDialog extends Component {
       return null;
     }
 
-    const provideAge = (
-      <div style={styles.middleCell}>
-        {i18n.provideAge()}
-        <div style={styles.age}>
-          <AgeDropdown
-            style={styles.dropdown}
-            ref={element => this.ageDropdown = element}
-          />
-          <Button
-            id="uitest-submit-age"
-            onClick={this.onClickAgeOk}
-            text={i18n.ok()}
-            color={Button.ButtonColor.gray}
-          />
-        </div>
-      </div>
-    );
-
     return (
-      <BaseDialog
-        useUpdatedStyles
-        isOpen={this.state.open}
-        uncloseable
-      >
-        <div style={styles.container} className="AgeDialog">
-          <div style={styles.dancePartyHeading}>
-            {i18n.welcomeToDanceParty()}
-          </div>
-          <div>
-            <div style={styles.middle}>
-              {provideAge}
+      <div>
+        <BaseDialog
+          useUpdatedStyles
+          isOpen={this.state.open}
+          uncloseable
+        >
+          <div style={styles.container} className="AgeDialog">
+            <div style={styles.dancePartyHeading}>
+              {i18n.welcomeToDanceParty()}
+            </div>
+            <div>
+              <div style={styles.middle}>
+                <div style={styles.middleCell}>
+                  {i18n.provideAge()}
+                  <div style={styles.age}>
+                    <AgeDropdown
+                      style={styles.dropdown}
+                      ref={element => this.ageDropdown = element}
+                    />
+                    <Button
+                      id="uitest-submit-age"
+                      onClick={this.onClickAgeOk}
+                      text={i18n.ok()}
+                      color={Button.ButtonColor.gray}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="https://code.org/privacy">{i18n.privacyPolicy()}</a>
             </div>
           </div>
-          <div>
-            <a href="https://code.org/privacy">{i18n.privacyPolicy()}</a>
-          </div>
-        </div>
-      </BaseDialog>
+        </BaseDialog>
+      </div>
     );
   }
 }
