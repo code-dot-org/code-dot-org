@@ -150,14 +150,11 @@
   .smalltext {
     font-size: 13px;
     line-height: 17px;
-    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-family: $gotham-regular;
     font-weight:normal;
     color:$charcoal;
-
-    html[dir=rtl] & {
-      padding-right: 10px;
-    }
   }
 
   .bar {
