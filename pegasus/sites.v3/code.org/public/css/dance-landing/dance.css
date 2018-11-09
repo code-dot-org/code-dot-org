@@ -37,10 +37,10 @@
   clear: both;
 }
 
-<<<<<<< HEAD
 a:hover {
   text-decoration: none;
-=======
+}
+
 .sponsor-logo-with-text {
   display: flex;
   justify-content: center;
@@ -68,5 +68,4 @@ a:hover {
   .sponsor-logo-with-text .sponsor-logo-image {
     margin-top: 10px;
   }
->>>>>>> staging
 }
