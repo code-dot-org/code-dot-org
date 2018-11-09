@@ -16,9 +16,9 @@
 .dance-chevron-icon {
   display: inline;
   color: rgb(0, 173, 188);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: bold;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .dance_thumbnail-tile-img {
@@ -35,6 +35,10 @@
 
 .dance-clear-element {
   clear: both;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 .sponsor-logo-with-text {
