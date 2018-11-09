@@ -74,6 +74,9 @@ const styles = {
     display: 'inline',
     right: 0
   },
+  link: {
+    textDecoration: 'none'
+  },
   description: {
     fontSize: 14,
     lineHeight: '22px',
@@ -212,7 +215,7 @@ class Link extends Component {
 
     return (
       <div style={linkBoxStyle}>
-        <a href={link}>
+        <a href={link} style={styles.link}>
           {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl}/>}
           <div style={styles.linkToViewAll}>
             {linkText}
