@@ -61,6 +61,16 @@ h1.tools-title {
   justify-content: space-between;
 }
 
+.activities-info {
+  background-color: #00adbc;
+  color: #fff;
+  padding: 30px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 h3.tutorial-info-h {
   margin-top: 0px;
 }

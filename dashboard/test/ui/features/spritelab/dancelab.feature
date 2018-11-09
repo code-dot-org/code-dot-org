@@ -26,12 +26,15 @@ Feature: Dance Lab
     And I close the instructions overlay if it exists
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
+    And element "#song_selector" is enabled
     Then I click selector "#runButton" once I see it
     Then I wait until element "#runButton" is not visible
     And element "#resetButton" is visible
+    And element "#song_selector" is disabled
     Then I click selector "#resetButton" once I see it
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
+    And element "#song_selector" is enabled
 
   @no_mobile
   Scenario: Can get to level success in DanceLab
@@ -55,11 +58,12 @@ Feature: Dance Lab
     And I close the instructions overlay if it exists
 
     When I navigate to the shared version of my project
+    And element ".signInOrAgeDialog" is hidden
     Then I click selector "#runButton" once I see it
     Then I wait until element "#runButton" is not visible
 
     Then evaluate JavaScript expression "window.__DanceTestInterface.getSprites().length === 3"
-    
+
     Then I click selector "#resetButton" once I see it
     Then element "#runButton" is visible
     And element "#resetButton" is hidden

@@ -294,7 +294,8 @@ module Pd
         :taught_in_past,
         :free_lunch_percent,
         :underrepresented_minority_percent,
-        :race
+        :race,
+        :principal_implementation
       ],
       scholarship_questions: [
         :plan_to_teach,
