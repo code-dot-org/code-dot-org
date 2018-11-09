@@ -34,12 +34,6 @@ Regional Partners are organizations across the country who advocate for access t
 
 [col-33]
 
-<img src="/images/fit-200/swagbag.png"/>
-
-[/col-33]
-
-[col-33]
-
 <img src="/images/fit-200/coursebook.png"/>
 
 [/col-33]
@@ -47,6 +41,12 @@ Regional Partners are organizations across the country who advocate for access t
 [col-33]
 
 <img src="/images/fit-200/k5certificate.png"/>
+
+[/col-33]
+
+[col-33]
+
+<img src="/images/fit-200/swagbag.png"/>
 
 [/col-33]
 
