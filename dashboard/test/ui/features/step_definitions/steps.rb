@@ -681,7 +681,7 @@ end
 
 And (/^I select age (\d+) in the age dialog/) do |age|
   steps %Q{
-    And element ".ageDialog" is visible
+    And element ".age-dialog" is visible
     And I select the "#{age}" option in dropdown "uitest-age-selector"
     And I click selector "#uitest-submit-age"
   }

@@ -74,7 +74,7 @@ Feature: Dance Lab Age Filter
     And I wait for the page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
-    And element ".ageDialog" is hidden
+    And element ".age-dialog" is hidden
     And I close the instructions overlay if it exists
     Then element "#runButton" is visible
     And element "#song_selector" is visible
