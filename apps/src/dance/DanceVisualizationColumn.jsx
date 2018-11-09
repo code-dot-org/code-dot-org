@@ -8,6 +8,7 @@ import Radium from "radium";
 import {connect} from "react-redux";
 import i18n from '@cdo/locale';
 import queryString from "query-string";
+import AgeDialog from "../templates/AgeDialog";
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -57,6 +58,30 @@ class DanceVisualizationColumn extends React.Component {
     userType: PropTypes.string.isRequired
   };
 
+  state = {
+    filterOff: this.setFilterStatus()
+  };
+
+  /*
+    Turn the song filter off unless there is a teacher override
+  */
+  turnFilterOff() {
+    this.setState({filterOff: queryString.parse(window.location.search).songfilter !== 'on'});
+  }
+
+  /*
+    The filter defaults to on. If the user is over 13 (identified via account or anon dialog) and
+    the teacher override is not activated, filter turns off
+   */
+  setFilterStatus() {
+    // userType - 'teacher', assumed age > 13. 'student', age > 13.
+    //            'student_y', age < 13. 'unknown', signed out users
+    const signedInOver13 = this.props.userType === 'teacher' || this.props.userType === 'student';
+    const teacherOverride = queryString.parse(window.location.search).songfilter === 'on';
+    const signedOutAge = sessionStorage.getItem('anon_over13') ? sessionStorage.getItem('anon_over13') === 'true' : false;
+    return (signedInOver13 || signedOutAge) && !teacherOverride;
+  }
+
   render() {
     const divDanceStyle = {
       touchAction: 'none',
@@ -67,34 +92,34 @@ class DanceVisualizationColumn extends React.Component {
       overflow: 'hidden',
     };
 
-    // userType - 'teacher', assumed age > 13. 'student', age > 13.
-    //            'student_y', age < 13. 'unknown', signed out users
-    const signedInOver13 = this.props.userType === 'teacher' || this.props.userType === 'student';
-    const teacherOverride = queryString.parse(window.location.search).songfilter === 'on';
-    const signedOutAge = sessionStorage.getItem('anon_over13') ? sessionStorage.getItem('anon_over13') : false;
-    const filterOff = (signedInOver13 || signedOutAge) && !teacherOverride;
-
     return (
-      <span>
-        {!this.props.isShareView &&
-          <SongSelector
-            setSong={this.props.setSong}
-            selectedSong={this.props.selectedSong}
-            songData={this.props.songData}
-            filterOff={filterOff}
+      <div>
+        {sessionStorage.getItem('anon_over13') === null &&
+          <AgeDialog
+            turnOffFilter={this.turnFilterOff.bind(this)}
           />
         }
-        <ProtectedVisualizationDiv>
-          <div
-            id="divDance"
-            style={divDanceStyle}
-          />
-        </ProtectedVisualizationDiv>
-        <GameButtons showFinishButton={this.props.showFinishButton}>
-          <ArrowButtons />
-        </GameButtons>
-        <BelowVisualization />
-      </span>
+        <span>
+          {!this.props.isShareView &&
+            <SongSelector
+              setSong={this.props.setSong}
+              selectedSong={this.props.selectedSong}
+              songData={this.props.songData}
+              filterOff={this.state.filterOff}
+            />
+          }
+          <ProtectedVisualizationDiv>
+            <div
+              id="divDance"
+              style={divDanceStyle}
+            />
+          </ProtectedVisualizationDiv>
+          <GameButtons showFinishButton={this.props.showFinishButton}>
+            <ArrowButtons />
+          </GameButtons>
+          <BelowVisualization />
+        </span>
+      </div>
     );
   }
 }
