@@ -383,7 +383,7 @@ class Homepage
   end
 
   def self.get_dance_stars
-    [
+    stars = [
       "Katy Perry", "Madonna", "Keith Urban", "Sia", "Carly Rae Jepsen",
       "Ciara", "Macklemore & Ryan Lewis", "Yolanda Be Cool, DCup",
       "J Balvin, Willy William", "Bruce Springsteen", "a-ha", "Imagine Dragons",
@@ -392,5 +392,7 @@ class Homepage
       "Ace of Base", "The Weekend", "Avicii", "Mc Hammer", "Village People",
       "OutKast", "will.i.am", "Ed Sheeran", "and more!"
     ]
+
+    DCDO.get("hoc2018_dance_stars", stars)
   end
 end
