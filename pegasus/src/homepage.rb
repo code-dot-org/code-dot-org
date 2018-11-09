@@ -390,7 +390,7 @@ class Homepage
       "Ariana Grande", "Justin Bieber", "Selena Gomez", "Lady Antebellum",
       "Los Del Rio", "Bruno Mars", "Calvin Harris", "Luke Bryan", "Coldplay",
       "Ace of Base", "The Weekend", "Avicii", "Mc Hammer", "Village People",
-      "OutKast", "will.i.am", "Ed Sheeran", "and more!"
+      "OutKast", "will.i.am", "Ed Sheeran"
     ]
 
     DCDO.get("hoc2018_dance_stars", stars)
