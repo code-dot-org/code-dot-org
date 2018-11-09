@@ -155,6 +155,11 @@ export class DetailViewContents extends React.Component {
   }
 
   getOriginalState() {
+    // Principal Implementation is only scoreable in csd applications. It was the one
+    // exception to the whole thing and not worth reimplimenting the consts file
+    const bonusPoints = this.props.applicationData.course === 'csd' ? ScoreableQuestions['bonusPoints']
+      : _.filter(ScoreableQuestions['bonusPoints'], (x) => x !== 'principal_implementation');
+
     return {
       editing: false,
       status: this.props.applicationData.status,
@@ -165,7 +170,8 @@ export class DetailViewContents extends React.Component {
       regional_partner_value: this.props.applicationData.regional_partner_id || UNMATCHED_PARTNER_VALUE,
       pd_workshop_id: this.props.applicationData.pd_workshop_id,
       fit_workshop_id: this.props.applicationData.fit_workshop_id,
-      scholarship_status: this.props.applicationData.scholarship_status
+      scholarship_status: this.props.applicationData.scholarship_status,
+      bonus_point_questions: bonusPoints
     };
   }
 
@@ -244,7 +250,7 @@ export class DetailViewContents extends React.Component {
     const responseScores = this.state.response_scores;
     responseScores[category][key] = event.target.value;
     this.setState({
-      response_scores: responseScores
+      response_scores: responseScores,
     });
   };
 
@@ -661,7 +667,7 @@ export class DetailViewContents extends React.Component {
         </div>
       );
     }
-    if (ScoreableQuestions['bonusPoints'].includes(snakeCaseKey)) {
+    if (this.state.bonus_point_questions.includes(snakeCaseKey)) {
       if (scoringDropdowns.length) {
         scoringDropdowns.push(<br key="bonus_points_br"/>);
       }

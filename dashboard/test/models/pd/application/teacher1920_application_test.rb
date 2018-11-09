@@ -640,7 +640,7 @@ module Pd::Application
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csd],
         csd_which_grades: ['6'],
         cs_total_course_hours: 50,
-        cs_terms: '1 semester',
+        cs_terms: 'A full year',
         previous_yearlong_cdo_pd: ['CS Principles'],
         plan_to_teach: options[:plan_to_teach].first,
         replace_existing: options[:replace_existing].second,
@@ -655,7 +655,7 @@ module Pd::Application
         principal_diversity_recruitment: principal_options[:committed_to_diversity].first,
         principal_free_lunch_percent: 50,
         principal_underrepresented_minority_percent: 50,
-        principal_implementation: principal_options[:csd_implementation].first
+        principal_implementation: principal_options[:csd_implementation].second
 
       application = create :pd_teacher1920_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
       application.auto_score!
@@ -684,7 +684,9 @@ module Pd::Application
             taught_in_past: 2,
             race: 2,
             free_lunch_percent: 5,
-            underrepresented_minority_percent: 5
+            underrepresented_minority_percent: 5,
+            principal_implementation: 2,
+            cs_terms: 2
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -850,7 +852,9 @@ module Pd::Application
             taught_in_past: 0,
             race: 0,
             free_lunch_percent: 0,
-            underrepresented_minority_percent: 0
+            underrepresented_minority_percent: 0,
+            cs_terms: 0,
+            principal_implementation: 0
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
