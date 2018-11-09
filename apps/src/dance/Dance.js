@@ -11,7 +11,7 @@ import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import {DanceParty} from '@code-dot-org/dance-party';
 import danceMsg from './locale';
-import {reducers, setSelectedSong, setSongData} from './redux';
+import {reducers, setSelectedSong, setSongData, setRunIsStarting} from './redux';
 import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
@@ -24,6 +24,7 @@ import {
   loadSongMetadata,
   parseSongOptions,
   unloadSong,
+  fetchSignedCookies,
 } from './songs';
 
 const ButtonState = {
@@ -155,7 +156,12 @@ Dance.prototype.setSongCallback = function (songId) {
   getStore().dispatch(setSelectedSong(songId));
 
   unloadSong(lastSongId, songData);
-  loadSong(songId, songData);
+  loadSong(songId, songData, status => {
+    if (status === 403) {
+      // The cloudfront signed cookies may have expired.
+      fetchSignedCookies().then(() => loadSong(songId, songData));
+    }
+  });
 
   this.updateSongMetadata(songId);
 
@@ -369,16 +375,17 @@ Dance.prototype.runButtonClick = async function () {
   // Block re-entrancy since starting a run is async
   // (not strictly needed since we disable the run button,
   // but better to be safe)
-  if (this.runIsStarting) {
+  if (getStore().getState().songs.runIsStarting) {
     return;
   }
+
   // Disable the run button now to give some visual feedback
   // that the button was pressed. toggleRunReset() will
   // eventually execute down below, but there are some long-running
   // tasks that need to complete first
   const runButton = document.getElementById('runButton');
   runButton.disabled = true;
-  this.runIsStarting = true;
+  getStore().dispatch(setRunIsStarting(true));
   await this.danceReadyPromise;
 
   //Log song count in Dance Lab
@@ -386,11 +393,14 @@ Dance.prototype.runButtonClick = async function () {
 
   Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;
-  await this.execute();
 
-  this.studioApp_.toggleRunReset('reset');
-  // Safe to allow normal run/reset behavior now
-  this.runIsStarting = false;
+  try {
+    await this.execute();
+  } finally {
+    this.studioApp_.toggleRunReset('reset');
+    // Safe to allow normal run/reset behavior now
+    getStore().dispatch(setRunIsStarting(false));
+  }
 
   // Enable the Finish button if is present:
   const shareCell = document.getElementById('share-cell');
@@ -427,9 +437,9 @@ Dance.prototype.execute = async function () {
   await this.initSongsPromise;
 
   const songMetadata = await this.songMetadataPromise;
-  return new Promise(resolve => {
-    this.nativeAPI.play(songMetadata, () => {
-      resolve();
+  return new Promise((resolve, reject)=> {
+    this.nativeAPI.play(songMetadata, success => {
+      success ? resolve() : reject();
     });
   });
 };
