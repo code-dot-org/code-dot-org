@@ -16,9 +16,13 @@
 .resource-title {
   padding: 0px;
   margin: 0px;
+  color: #5b6770;
   font-size: 24px;
-  color: #ffffff;
   padding-bottom: 10px;
+}
+
+.white {
+  color: #ffffff;
 }
 
 .orange-button {
