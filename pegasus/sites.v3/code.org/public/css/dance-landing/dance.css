@@ -30,6 +30,10 @@
   clear: both;
 }
 
+.dance-add-padding {
+  padding: 10px;
+}
+
 .sponsor-logo-with-text {
   display: flex;
   justify-content: center;
