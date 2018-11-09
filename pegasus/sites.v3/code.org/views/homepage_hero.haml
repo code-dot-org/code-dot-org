@@ -103,29 +103,22 @@
         - if show_single_hero == "dance"
           %div{style: "text-align: center"}
             %img{src: "/images/fit-400/homepage/hoc2018_dance_stars_mobile.png", style: "max-width: 400px; width: 100%; padding-top: 50px"}
-          %div{style: "color: #00adbc; font-size: 40px; line-height: 40px; width: 100%; font-family: 'Gotham 5r', sans-serif; text-align: center"}
-            Code your own
-            %span{style: "color: #eb57bf; line-height: 40px"}
-              Dance Party!
+          .hoc2018-dance-heading= hoc_s(:codeorg_homepage_hoc2018_dance_heading)
 
     -# Temporary for hoc2018 mc launch
     - if show_single_hero == "mc"
       .desktop-feature
         %img{src: "/images/fit-450/homepage/hoc2018_mc_characters.png", style: "position: absolute; width: 450px; right: 20px; bottom: 0px;"}
     - elsif show_single_hero == "dance"
-      .desktop-feature{style: "position: absolute; width: 600px; width: 50%; top: 120px; right: 20px; text-align: center"}
+      .desktop-feature{style: "position: absolute; width: 600px; width: 50%; top: 125px; right: 20px; text-align: center"}
         %img{src: "/images/fit-600/homepage/hoc2018_dance_stars.png", style: "width: 100%"}
-        %div{style: "color: #00adbc; font-size: 40px; line-height: 40px; width: 100%; font-family: 'Gotham 5r', sans-serif;"}
-          Code your own
-          %span{style: "color: #eb57bf; line-height: 40px"}
-            Dance Party!
+        .hoc2018-dance-heading= hoc_s(:codeorg_homepage_hoc2018_dance_heading)
 
     - if show_single_hero == "dance"
       .clear{style: "clear: both"}
 
       %div{style: "color: #00adbc; text-align: center; margin-left: 10%; margin-right: 10%; margin-bottom: 15px; font-family: 'Gotham 5r', sans-serif; line-height: 19px;"}
-        %div{style: "margin-bottom: 5px"}
-          Featuring music by
+        %div{style: "margin-bottom: 5px"}= hoc_s(:codeorg_homepage_hoc2018_musician_word)
         %div
           - Homepage.get_dance_stars.each do |star|
             = star

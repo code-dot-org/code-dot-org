@@ -14,13 +14,16 @@
   campaign_date_full_year: "December 4-10, 2017"
 
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
+  codeorg_homepage_hoc2018_dance_heading: 'Code your own <span class="highlight-word">Dance party!</span>'
   codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
   codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_musician_word: 'Featuring music by'
   codeorg_homepage_hoc2018_video: 'Watch our video'
   hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
   hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
+
 
   hoc2018_tutorial_mchoc_description: 'Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.'
 
