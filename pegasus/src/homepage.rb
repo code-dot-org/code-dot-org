@@ -252,7 +252,7 @@ class Homepage
       ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
     else
       last_block =
-        if DCDO.get('hoc_launch', nil) == 'dance'
+        if DCDO.get('hoc_launch', CDO.default_hoc_launch) == 'dance'
           {
             id: 'dance-nonen',
             title: 'studiobar_dance_title',
