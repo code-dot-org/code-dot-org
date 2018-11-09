@@ -36,3 +36,7 @@
 .dance-clear-element {
   clear: both;
 }
+
+a:hover {
+  text-decoration: none;
+}
