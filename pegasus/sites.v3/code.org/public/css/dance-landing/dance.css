@@ -10,14 +10,15 @@
 
 .dance-text-icon-container {
   float: right;
+  right: 0px;
 }
 
 .dance-chevron-icon {
   display: inline;
   color: rgb(0, 173, 188);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: bold;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .dance_thumbnail-tile-img {
