@@ -1,3 +1,4 @@
+/* global dashboard*/
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import { SignInState } from '@cdo/apps/code-studio/progressRedux';
@@ -17,7 +18,9 @@ class ShareDialog extends Component {
     // If we're on a project level (i.e. /projects/appname), always show signed
     // in version of the dialog
 
-    if (signInState === SignInState.SignedIn || isProjectLevel) {
+    const isDance = dashboard.project && dashboard.project.getStandaloneApp() === 'dance';
+
+    if (signInState === SignInState.SignedIn || isProjectLevel || isDance) {
       return (
         <ShareAllowedDialog {...otherProps}/>
       );
