@@ -12,6 +12,7 @@ import { environmentSpecificCookieName } from '@cdo/apps/code-studio/utils';
 describe('AgeDialog', () => {
   const defaultProps = {
     signedIn: false,
+    turnOffFilter: ()=>{}
   };
 
   afterEach(() => sessionStorage.clear());
