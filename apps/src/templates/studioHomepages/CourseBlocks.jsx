@@ -200,7 +200,7 @@ export class CourseBlocksAll extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired,
     showModernElementaryCourses: PropTypes.bool.isRequired,
-    hocLaunch: PropTypes.bool,
+    hocLaunch: PropTypes.string,
   };
 
   componentDidMount() {
