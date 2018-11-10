@@ -140,6 +140,8 @@ nl:
         snowflake_dropdown: Gebruik deze vervolgkeuzelijst om verschillende sneeuwvlokken te maken!
       Function intro Ryan_callout:
         Function_intro_Ryan_1: Met deze kleine instructie weet de computer dat het GROTE stuk code met dezelfde naam in de werkruimte moet worden uitgevoerd.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Met deze kleine instructie weet de computer dat het GROTE stuk code met dezelfde naam in de werkruimte moet worden uitgevoerd.
       Geometric Pattern_callout:
         4-5_Artist_Patterns_Free_Play_1: Al je favoriete blokken nu ingedeeld in verschillende categorieën. Klik op deze woorden om te zien waar alles is ingedeeld!
       Geometric Sun_callout:
@@ -165,17 +167,25 @@ nl:
         MC_HOC_2017_02_Cole_1: Je speler heeft nu een vriendje!  Je kunt code schrijven zodat de agent je kan helpen door de levels heen te komen.
       MC_HOC_2017_03_Cole_callout:
         MC_HOC_2017_03_Cole_1: Dit is een 'herhalen'-lus!  Maak deze vast in de werkruimte en voeg code to die je steeds weer wilt uitvoeren.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Dit is een 'herhalen'-lus!  Maak deze vast in de werkruimte en voeg code to die je steeds weer wilt uitvoeren.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: De agent kan over water zweven, maar de speler niet!
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: De agent kan over water zweven, maar de speler niet!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Maak deze vast in de werkruimte en voeg wat code toe om deze steeds weer te herhalen!
       MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Je kunt deze blokken niet weggooien, maar je kunt ze wel bewerken!
+      MC_HOC_2017_06_Cole_2019_callout:
         MC_HOC_2017_06_Cole_1: Je kunt deze blokken niet weggooien, maar je kunt ze wel bewerken!
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: 'De agent kan over lava zweven, maar de speler niet!  '
       MC_HOC_2017_08_Will_callout:
         MC_HOC_2017_08_RY_1: 'De agent kan over lava zweven, maar de speler niet!  '
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'De agent kan over lava zweven, maar de speler niet!  '
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'De agent kan over lava zweven, maar de speler niet!  '
       Mike Playlab Project_callout:
         New Play Lab Project_callout2: Druk op 'Uitvoeren' om je programma op te slaan en uit te voeren

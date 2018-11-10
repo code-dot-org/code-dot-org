@@ -1354,3 +1354,11 @@ hr:
           stages:
             Artist:
               name: Umjetnik
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Izrada temelja
+            Conditionals with Cards:
+              name: Uvjeti s kartama
+            For Loop Fun:
+              name: For Petlja Zabava

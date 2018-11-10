@@ -296,6 +296,13 @@ sl:
           Kako velik je korak po?
 
           To so vprašanja, ki si jih moraš zastaviti, da boš lahko izpolnil polja v zanki 'za vsako število'.
+      courseF_artist_for4_2019_authored_hint:
+        courseF_artist_for4_a: |-
+          **Kakšno je najmanjše število, ki ga potrebukeš?
+          Kakšno pa je največje?
+          Kako velik je korak po?
+
+          To so vprašanja, ki si jih moraš zastaviti, da boš lahko izpolnil polja v zanki 'za vsako število'.
       grade2_MakeDogTag_1_authored_hint:
         2-3_Artist_1_new_a: Če uporabiš blok 'premakni se naprej za 100 pikslov' avtomatično
           narišem črto.

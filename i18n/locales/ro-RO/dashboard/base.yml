@@ -192,7 +192,7 @@ ro:
       submit: 'Schimbă-mi parola'
   welcome_email:
     subject: 'Alătură-te clasei mele (pe Code.org)'
-    body: |2
+    body: |
       Dă clic pe linkul de mai jos pentru a te înscrie la tutorialele de informatică pe Code.org (cu mine ca "Profesorul" tău):
       
        %{link}

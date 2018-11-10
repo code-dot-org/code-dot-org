@@ -181,13 +181,16 @@ gl:
       courseD_bee_nestedLoops5: "Recolle todo o néctar de cada flor\ne produce mel en cada colmea. Usa un bucle aniñado. "
       courseD_bee_nestedLoops8: "Recolle todo o néctar de cada flor\ne produce mel en cada colmea. Usa un bucle aniñado. "
       courseD_bee_nestedLoops8_2018: "Recolle todo o néctar de cada flor\ne produce mel en cada colmea. Usa un bucle aniñado. "
+      courseD_bee_nestedLoops8_2019: "Recolle todo o néctar de cada flor\ne produce mel en cada colmea. Usa un bucle aniñado. "
       courseD_maze_nestedLoops4: 'Lévame até o xirasol!'
       courseD_maze_nestedLoops4_2018: 'Lévame até o xirasol!'
+      courseD_maze_nestedLoops4_2019: 'Lévame até o xirasol!'
       courseE_bee_functions3: "As funcións son bloques de código que realizan\nunha tarefa. Usa a función \"obteña 5\" para recoller 5 néctares dunha vez. Lémbrate tamén de usar un bucle para obter un contador ideal de bloque."
       courseE_bee_functions3_2018: "As funcións son bloques de código que realizan\nunha tarefa. Usa a función \"obteña 5\" para recoller 5 néctares dunha vez. Lémbrate tamén de usar un bucle para obter un contador ideal de bloque."
       courseE_farmer_concept4: "Agora, imos nos profundizar máis un nivel!\nAniñamos todo o bloque de código dentro de outro bucle, pero necesitas posicionar o artista no lugar para debuxar a próxima recta. Cal destes bloques de código podes colocar no final do bucle máis externo para debuxar toda a grade?"
       courseF_bee_for_challenge2: "Resolve este desafío usando o menor número\nde bloques posíbel."
       courseF_bee_for_challenge2_2018: "Resolve este desafío usando o menor número\nde bloques posíbel."
+      courseF_bee_for_challenge2_2019: "Resolve este desafío usando o menor número\nde bloques posíbel."
       frozen circle function in circle: "Agora imos crear 20 círculos\nsobrepostos, virando 18 graos entre cada círculo."
       frozen circle function with parameter: "Temos aquí un bloque \"cree un círculo\"\nque pode facer círculos de tamaños diferentes. Podes usar isto para crear\nun pequeno círculo de tamaño 5 e un círculo maior de tamaño 10?"
       frozen circle function: "Usa o novo bloque \"cree un círculo\" para\ncrear 10 círculos sobrepostos. Non te esquezas de avanzar entre os círculos."

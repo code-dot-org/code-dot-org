@@ -563,3 +563,11 @@ pt-BR:
           então irá mudar rapidamente para uma corrida contra o tempo à medida que
           os alunos se dividem em times e trabalham juntos para escrever um programa
           uma instrução por vez.
+      courseB_unplugged_MRF_2019:
+        title: Meus amigos robóticos
+        desc: 'tradução pendente: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      Conditionals_2019:
+        title: Condições
+        desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de
+          cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um
+          ponto", e "se eu comprar uma carta preta, você ganha um ponto".

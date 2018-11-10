@@ -419,7 +419,7 @@
   dashboard_sections_table_pairing_allowed: "Programació per parelles"
   dashboard_sections_table_students: "Alumnes"
   dashboard_sections_table_code: "Secció Codi"
-  dashboard_sections_name: "Nom de la secció"
+  dashboard_sections_name: 'Nom de la secció'
   dashboard_sections_choose_secret: "Si t'agradaria donar comptes als seus estudiants, tria un tipus de contrassenya de <b>paraula</b> o d' <b>imatge</b> per a aquesta secció."
   dashboard_sections_secret_word: "Una <b>paraula</b> li permet posar una contrassenya per a cada alumne."
   dashboard_sections_secret_picture: "Una <b>imatge</b> us permet establir una imatge secreta per a cada alumne, ideal per a alumnes més petits que encara no saben escriure."
@@ -429,7 +429,7 @@
   dashboard_sections_close: "Tancar"
   dashboard_students_add_multiple: 'Escriu o enganxa els noms dels teus alumnes, un per línia:'
   dashboard_students_new_section: "Heu creat un grup nou! Ara afegiu els vostres alumnes utilitzant els botons <b>Afegeix alumne</b> i <b>Afegeix diversos alumnes</b>."
-  dashboard_students_name: "Nom"
+  dashboard_students_name: 'Nom'
   dashboard_students_progress: "Progrés"
   dashboard_students_male: "Home"
   dashboard_students_female: "Dona"
@@ -926,3 +926,7 @@
   hoc2018_mc_video_title_inspire_girl: "Inspira a una noia"
   hoc2018_mc_homepage_join_us: "Uneix-te"
   hoc2018_mc_homepage_try_it: "Proveu-ho"
+  hoc2018_dance_party_button: "Inici"
+  hoc2018_dance_teacher_resources_tile1_button: "Unitat didàctica"
+  hoc2018_dance_teacher_resources_tile2_button: "Activitat sense connexió"
+  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "Aprèn més"

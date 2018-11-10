@@ -1475,3 +1475,13 @@ pt:
           stages:
             Artist:
               name: Artista
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Criar uma base
+            Conditionals with Cards:
+              name: Condicionais com cartas
+            Envelope Variables:
+              name: Variáveis do envelope
+            For Loop Fun:
+              name: Diversão com laços for

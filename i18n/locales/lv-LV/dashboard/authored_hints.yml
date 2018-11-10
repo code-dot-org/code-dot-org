@@ -37,13 +37,13 @@ lv:
       2-3 Artist Functions 12_authored_hint:
         2-3_Artist_Functions_12_a: Pamēģini vispirms palaist kodu, lai apskatītos ko nepieciešams pievienot.
       2-3 Artist Functions 2 a_authored_hint:
-        2-3_Artist_Functions_2_a: |2
+        2-3_Artist_Functions_2_a: |-
           Tavai programmai nepieciešams:
            - izmantot funkciju
            - pārvietoties uz priekšu 100+75 punktus
            - izmantot funkciju
       2-3 Artist Functions 2_authored_hint:
-        2-3_Artist_Functions_2_a: |2
+        2-3_Artist_Functions_2_a: |-
           Tavai programmai nepieciešams:
            - izmantot funkciju
            - pārvietoties uz priekšu 100+75 punktus
@@ -57,7 +57,7 @@ lv:
       2-3 Artist Functions 4_authored_hint:
         2-3_Artist_Functions_4_a: Māksliniekam starp katru kvadrātu nepieciešams pagriezties par 120 grādiem, lai pabeigtu zīmējumu.
       2-3 Artist Loops New 11_authored_hint:
-        2-3_Artist_Loops_New_11_a: |2
+        2-3_Artist_Loops_New_11_a: |-
           Atceries, ka iepriekšējā uzdevuma kods ir:
           
           <xml>
@@ -348,7 +348,7 @@ lv:
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
       courseD_artist_functions2_authored_hint:
-        courseD_artist_functions2_a: |2
+        courseD_artist_functions2_a: |-
           Tavai programmai nepieciešams:
            - izmantot funkciju
            - pārvietoties uz priekšu 100+75 punktus
@@ -364,7 +364,7 @@ lv:
         courseE_artist_functions1_a: Kvadrātiem malas ir 100 punktu garas, tas nozīmē, ka pirms sākt zīmēt otru kvadrātu nepieciešams lekt uz priekšu 175 punktus.
         courseE_artist_functions1_b: Tas nekas, ja zīmējot brilles līnijas pārklājas.
       courseE_artist_functions2_authored_hint:
-        courseD_artist_functions2_a: |2
+        courseD_artist_functions2_a: |-
           Tavai programmai nepieciešams:
            - izmantot funkciju
            - pārvietoties uz priekšu 100+75 punktus
@@ -396,7 +396,7 @@ lv:
         2-3_Artist_Functions_1_a: Kvadrātiem malas ir 100 punktu garas, tas nozīmē, ka pirms sākt zīmēt otru kvadrātu nepieciešams lekt uz priekšu 175 punktus.
         2-3_Artist_Functions_1_b: Tas nekas, ja zīmējot brilles līnijas pārklājas.
       grade4_artist_functions2_authored_hint:
-        2-3_Artist_Functions_2_a: |2
+        2-3_Artist_Functions_2_a: |-
           Tavai programmai nepieciešams:
            - izmantot funkciju
            - pārvietoties uz priekšu 100+75 punktus
@@ -425,6 +425,8 @@ lv:
       grade5_artist_variables_triangles1_authored_hint:
         grade5_artist_variables_triangles1_b: Izmanto 'atkārtot' ciklu, lai kods būtu īsāks.
       grade5_artist_variables_triangles1_2018_authored_hint:
+        grade5_artist_variables_triangles1_b: Izmanto 'atkārtot' ciklu, lai kods būtu īsāks.
+      grade5_artist_variables_triangles1_2019_authored_hint:
         grade5_artist_variables_triangles1_b: Izmanto 'atkārtot' ciklu, lai kods būtu īsāks.
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: Beigās ciklā jābūt pieciem blokiem.
