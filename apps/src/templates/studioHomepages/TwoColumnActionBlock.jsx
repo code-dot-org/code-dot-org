@@ -62,6 +62,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
       url: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
       target: PropTypes.string,
+      id: PropTypes.string,
     })),
   };
 
@@ -103,6 +104,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
                     color={Button.ButtonColor.gray}
                     text={button.text}
                     target={button.target}
+                    id={button.id}
                   />
                   &nbsp;
                   &nbsp;
@@ -158,10 +160,12 @@ export class AdministratorResourcesActionBlock extends Component {
         description={i18n.administratorResourcesDescription()}
         buttons={[
           {
+            id: 'your_school_professional_learning',
             url: pegasus('/educate/professional-learning'),
             text: i18n.yourSchoolProfessionalLearningProgramsButton()
           },
           {
+            id: 'your_school_administrators',
             url: pegasus('/administrators'),
             text: i18n.yourSchoolAdminButton()
           }
