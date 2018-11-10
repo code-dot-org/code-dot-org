@@ -27,7 +27,7 @@ let lastCaptureTimeMs = 0;
  * since the last capture.
  * @returns {boolean}
  */
- function shouldCapture() {
+ function shouldCapture(captureIntervalMs = MIN_CAPTURE_INTERVAL_MS) {
   const {isShareView, isEmbedView} = getStore().getState().pageConstants;
   if (!project.getCurrentId() || !project.isOwner() || isShareView || isEmbedView) {
     return false;
@@ -35,7 +35,7 @@ let lastCaptureTimeMs = 0;
 
   // Skip capturing a screenshot if we just captured one recently.
   const intervalMs = Date.now() - lastCaptureTimeMs;
-  if (intervalMs < MIN_CAPTURE_INTERVAL_MS) {
+  if (intervalMs < captureIntervalMs) {
     return;
   }
 
@@ -77,13 +77,13 @@ export function captureThumbnailFromSvg(svg) {
  * @param {HTMLCanvasElement} canvas
  * @param {func} onComplete
  */
-export function getThumbnailFromCanvas(canvas, onComplete) {
+export function getThumbnailFromCanvas(canvas, captureIntervalMs, onComplete) {
   if (!canvas) {
     console.warn(`Thumbnail capture failed: canvas element not found.`);
     onComplete(null);
     return;
   }
-  if (!shouldCapture()) {
+  if (!shouldCapture(captureIntervalMs)) {
     onComplete(null);
     return;
   }
@@ -99,7 +99,7 @@ export function getThumbnailFromCanvas(canvas, onComplete) {
  * @param {HTMLCanvasElement} canvas
  */
 export function captureThumbnailFromCanvas(canvas) {
-  getThumbnailFromCanvas(canvas, project.saveThumbnail);
+  getThumbnailFromCanvas(canvas, MIN_CAPTURE_INTERVAL_MS, project.saveThumbnail);
 }
 
 /**
@@ -109,7 +109,14 @@ export function captureThumbnailFromCanvas(canvas) {
  * @param {HTMLCanvasElement} canvas
  */
 export function setThumbnailBlobFromCanvas(canvas) {
-  getThumbnailFromCanvas(canvas, project.setThumbnailPngBlob);
+  /**
+   * Since we are storing the PNG blob in memory rather than writing it
+   * to S3 in our onComplete callback, we are decreasing our capture interval
+   * to 5 seconds. The thumbnail (captured every 5+ seconds) will then be
+   * saved to S3 when the project is saved.
+   */
+  const OVERRIDE_MIN_CAPTURE_INTERVAL_MS = 5000;
+  getThumbnailFromCanvas(canvas, OVERRIDE_MIN_CAPTURE_INTERVAL_MS, project.setThumbnailPngBlob);
 }
 
 /**
