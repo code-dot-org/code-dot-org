@@ -22,6 +22,7 @@ export const SongTitlesToArtistTwitterHandle = {
   "nottearslefttocry_arianagrande" : "ArianaGrande",
   "shapeofyou_edsheeran" : "EdSheeran",
   "somebodylikeyou_keithurban" : "KeithUrban",
+  "firework_katyperry" : "KatyPerry",
   "sorry_justinbieber" : "JustinBieber",
   "summer_calvinharris" : "CalvinHarris",
   "takeonme_aha" : "Aha_Com",
