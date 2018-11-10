@@ -389,7 +389,7 @@ class Homepage
       "J Balvin, Willy William", "Bruce Springsteen", "a-ha", "Imagine Dragons",
       "Ariana Grande", "Justin Bieber", "Selena Gomez", "Lady Antebellum",
       "Los Del Rio", "Bruno Mars", "Calvin Harris", "Luke Bryan", "Coldplay",
-      "Ace of Base", "The Weekend", "Avicii", "Mc Hammer", "Village People",
+      "Ace of Base", "The Weeknd", "Avicii", "MC Hammer", "Village People",
       "OutKast", "will.i.am", "Ed Sheeran"
     ]
 
