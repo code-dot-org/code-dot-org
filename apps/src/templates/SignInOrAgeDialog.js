@@ -20,6 +20,10 @@ const styles = {
     fontSize: 16,
     fontFamily: "'Gotham 5r', sans-serif",
   },
+  dancePartyHeading: {
+    fontSize: 32,
+    fontFamily: "'Gotham 7r', sans-serif",
+  },
   middle: {
     marginTop: 20,
     marginBottom: 20,
@@ -81,7 +85,7 @@ class SignInOrAgeDialog extends Component {
   static propTypes = {
     signedIn: PropTypes.bool.isRequired,
     age13Required: PropTypes.bool.isRequired,
-    noSignIn: PropTypes.bool,
+    useDancePartyStyle: PropTypes.bool,
   };
 
   onClickAgeOk = () => {
@@ -91,12 +95,18 @@ class SignInOrAgeDialog extends Component {
       return;
     }
 
-    if (parseInt(value, 10) < 13) {
+    if (!this.props.useDancePartyStyle && parseInt(value, 10) < 13) {
       this.setState({tooYoung: true});
       return;
     }
 
-    sessionStorage.setItem(sessionStorageKey, true);
+    // Sets cookie to true when anon user is 13+. False otherwise.
+    let over13 = parseInt(value, 10) >= 13;
+    sessionStorage.setItem(sessionStorageKey, over13);
+    // In order to render songs options with filter off in Dance Party, reload page
+    if (this.props.useDancePartyStyle && over13) {
+      reload();
+    }
 
     // When opening a new tab, we'll have a new session (and thus show this dialog),
     // but may still be using a storage_id for a previous user. Clear that cookie
@@ -112,9 +122,10 @@ class SignInOrAgeDialog extends Component {
 
   render() {
     const { signedIn, age13Required } = this.props;
+    let ageRequired = age13Required || this.props.useDancePartyStyle;
     // Don't show dialog unless script requires 13+, we're not signed in, and
-    // we haven't already given this dialog our age
-    if (!age13Required || signedIn || sessionStorage.getItem(sessionStorageKey)) {
+    // we haven't already given this dialog our age or we do not require sign-in
+    if (!ageRequired || signedIn || sessionStorage.getItem(sessionStorageKey)) {
       return null;
     }
 
@@ -127,6 +138,7 @@ class SignInOrAgeDialog extends Component {
             ref={element => this.ageDropdown = element}
           />
           <Button
+            id="uitest-submit-age"
             onClick={this.onClickAgeOk}
             text={i18n.ok()}
             color={Button.ButtonColor.gray}
@@ -167,12 +179,12 @@ class SignInOrAgeDialog extends Component {
         isOpen={this.state.open}
         uncloseable
       >
-        <div style={styles.container}>
-          <div style={styles.heading}>
-            {this.props.noSignIn ? i18n.signinDanceParty() : i18n.signinOrAge()}
+        <div style={styles.container} className="signInOrAgeDialog">
+          <div style={this.props.useDancePartyStyle ? styles.dancePartyHeading : styles.heading}>
+            {this.props.useDancePartyStyle ? i18n.welcomeToDanceParty() : i18n.signinOrAge()}
           </div>
           <div>
-            {this.props.noSignIn ?
+            {this.props.useDancePartyStyle ?
               <div style={styles.middle}>
                 {provideAge}
               </div> :

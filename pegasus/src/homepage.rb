@@ -130,7 +130,7 @@ class Homepage
       {
         text: "homepage_action_text_try_it",
         type: "cta_button_hollow_white",
-        url: DCDO.get("hoc_launch", nil) == "mc" ? "/hourofcode/overview" : "/learn"
+        url: DCDO.get("hoc_launch", CDO.default_hoc_launch) == "mc" ? "/hourofcode/overview" : "/learn"
       },
       {
         text: "homepage_action_text_codevideo",
@@ -251,6 +251,25 @@ class Homepage
         }
       ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
     else
+      last_block =
+        if DCDO.get('hoc_launch', CDO.default_hoc_launch) == 'dance'
+          {
+            id: 'dance-nonen',
+            title: 'studiobar_dance_title',
+            text: 'studiobar_dance_body',
+            url: '/dance',
+            image: '/shared/images/courses/logo_tall_dance.jpg'
+          }
+        else
+          {
+            id: 'flappy-nonen',
+            title: 'studiobar_flappy_title',
+            text: 'studiobar_flappy_body',
+            url: '/s/flappy/reset',
+            image: '/shared/images/courses/logo_tall_flappy.jpg'
+          }
+        end
+
       @non_en_blocks_entries ||= [
         {
           id: "students-nonen",
@@ -283,14 +302,14 @@ class Homepage
           image: "/images/mc/2016_homepage_hocblock.jpg"
         },
         {
-          id: "flappy-nonen",
+          id: last_block[:id],
           type: "blockshort",
-          title: "studiobar_flappy_title",
-          text: "studiobar_flappy_body",
+          title: last_block[:title],
+          text: last_block[:text],
           color1: "185, 191, 21",
           color2: "209, 213, 103",
-          url: CDO.studio_url("/s/flappy/reset"),
-          image: "/shared/images/courses/logo_tall_flappy.jpg"
+          url: CDO.studio_url(last_block[:url]),
+          image: last_block[:image]
         }
       ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
     end
@@ -308,7 +327,7 @@ class Homepage
   end
 
   def self.show_single_hero
-    hoc_launch = DCDO.get("hoc_launch", nil)
+    hoc_launch = DCDO.get("hoc_launch", CDO.default_hoc_launch)
     if hoc_launch == "mc"
       "mc"
     elsif hoc_launch == "dance"
@@ -339,7 +358,7 @@ class Homepage
       # For UI tests just lock to the first hero image
       heroes_arranged = heroes[0, 1]
     elsif show_single_hero
-      hoc_marketing_mode = DCDO.get("hoc_launch", nil)
+      hoc_marketing_mode = DCDO.get("hoc_launch", CDO.default_hoc_launch)
       heroes_arranged = if hoc_marketing_mode == "mc"
                           hoc2018_hero_mc
                         elsif hoc_marketing_mode == "dance"

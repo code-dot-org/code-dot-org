@@ -2,24 +2,25 @@
 #
 # Table name: pd_applications
 #
-#  id                  :integer          not null, primary key
-#  user_id             :integer
-#  type                :string(255)      not null
-#  application_year    :string(255)      not null
-#  application_type    :string(255)      not null
-#  regional_partner_id :integer
-#  status              :string(255)
-#  locked_at           :datetime
-#  notes               :text(65535)
-#  form_data           :text(65535)      not null
-#  created_at          :datetime         not null
-#  updated_at          :datetime         not null
-#  course              :string(255)
-#  response_scores     :text(65535)
-#  application_guid    :string(255)
-#  accepted_at         :datetime
-#  properties          :text(65535)
-#  deleted_at          :datetime
+#  id                          :integer          not null, primary key
+#  user_id                     :integer
+#  type                        :string(255)      not null
+#  application_year            :string(255)      not null
+#  application_type            :string(255)      not null
+#  regional_partner_id         :integer
+#  status                      :string(255)
+#  locked_at                   :datetime
+#  notes                       :text(65535)
+#  form_data                   :text(65535)      not null
+#  created_at                  :datetime         not null
+#  updated_at                  :datetime         not null
+#  course                      :string(255)
+#  response_scores             :text(65535)
+#  application_guid            :string(255)
+#  accepted_at                 :datetime
+#  properties                  :text(65535)
+#  deleted_at                  :datetime
+#  status_timestamp_change_log :text(65535)
 #
 # Indexes
 #
@@ -38,6 +39,26 @@ module Pd::Application
     include Rails.application.routes.url_helpers
     include Pd::TeacherCommonApplicationConstants
     include SchoolInfoDeduplicator
+
+    serialized_attrs %w(
+      scholarship_status
+    )
+
+    validate :scholarship_status_valid
+
+    def scholarship_status_valid
+      unless scholarship_status.nil? || self.class.scholarship_statuses.include?(scholarship_status)
+        errors.add(:scholarship_status, 'is not included in the list.')
+      end
+    end
+
+    def self.scholarship_statuses
+      %w(
+        no
+        yes_code_dot_org
+        yes_other
+      )
+    end
 
     # Updates the associated user's school info with the info from this teacher application
     # based on these rules in order:
@@ -535,10 +556,10 @@ module Pd::Application
         [:cs_offered_at_school, TEXT_FIELDS[:other_please_list]],
         [:cs_opportunities_at_school, TEXT_FIELDS[:other_please_list]],
         [:csd_course_hours_per_week, TEXT_FIELDS[:other_please_list]],
-        [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain], :plan_to_teach_dont_know_explain],
+        [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain], :plan_to_teach_other],
         [:able_to_attend_single, TEXT_FIELDS[:unable_to_attend], :able_to_attend_single_explain],
         [:able_to_attend_multiple, TEXT_FIELDS[:no_explain], :able_to_attend_multiple_explain],
-        [:committed, TEXT_FIELDS[:no_explain], :committed_explain]
+        [:committed, TEXT_FIELDS[:no_explain], :committed_other]
       ]
     end
 
