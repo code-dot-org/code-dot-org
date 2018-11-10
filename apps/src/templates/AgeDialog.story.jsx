@@ -10,7 +10,7 @@ export default storybook => {
         story: () => (
           <AgeDialog
             signedIn={false}
-            age13Required={true}
+            turnOffFilter={()=>{}}
           />
         )
       }

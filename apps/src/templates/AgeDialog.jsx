@@ -97,41 +97,39 @@ class AgeDialog extends Component {
     }
 
     return (
-      <div>
-        <BaseDialog
-          useUpdatedStyles
-          isOpen={this.state.open}
-          uncloseable
-        >
-          <div style={styles.container} className="age-dialog">
-            <div style={styles.dancePartyHeading}>
-              {i18n.welcomeToDanceParty()}
-            </div>
-            <div>
-              <div style={styles.middle}>
-                <div style={styles.middleCell}>
-                  {i18n.provideAge()}
-                  <div style={styles.age}>
-                    <AgeDropdown
-                      style={styles.dropdown}
-                      ref={element => this.ageDropdown = element}
-                    />
-                    <Button
-                      id="uitest-submit-age"
-                      onClick={this.onClickAgeOk}
-                      text={i18n.ok()}
-                      color={Button.ButtonColor.gray}
-                    />
-                  </div>
+      <BaseDialog
+        useUpdatedStyles
+        isOpen={this.state.open}
+        uncloseable
+      >
+        <div style={styles.container} className="age-dialog">
+          <div style={styles.dancePartyHeading}>
+            {i18n.welcomeToDanceParty()}
+          </div>
+          <div>
+            <div style={styles.middle}>
+              <div style={styles.middleCell}>
+                {i18n.provideAge()}
+                <div style={styles.age}>
+                  <AgeDropdown
+                    style={styles.dropdown}
+                    ref={element => this.ageDropdown = element}
+                  />
+                  <Button
+                    id="uitest-submit-age"
+                    onClick={this.onClickAgeOk}
+                    text={i18n.ok()}
+                    color={Button.ButtonColor.gray}
+                  />
                 </div>
               </div>
             </div>
-            <div>
-              <a href="https://code.org/privacy">{i18n.privacyPolicy()}</a>
-            </div>
           </div>
-        </BaseDialog>
-      </div>
+          <div>
+            <a href="https://code.org/privacy">{i18n.privacyPolicy()}</a>
+          </div>
+        </div>
+      </BaseDialog>
     );
   }
 }
