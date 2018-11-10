@@ -77,7 +77,7 @@ describe('AgeDialog', () => {
       instance.ageDropdown = {
         getValue: () => '13'
       };
-      wrapper.find('Button').at(1).simulate('click');
+      wrapper.find('Button').at(0).simulate('click');
       assert.strictEqual(sessionStorage.getItem('anon_over13'), 'true');
       assert(utils.reload.called);
       assert(cookies.remove.calledWith(environmentSpecificCookieName('storage_id'),
