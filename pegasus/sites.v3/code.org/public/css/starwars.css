@@ -35,7 +35,7 @@
 
 .starwars-container .tutorial-box {
   background-color: rgba(0, 0, 0, 0.4);
-  color:white;
+  color: white;
   padding: 20px;
   border-radius: 5px;
 }
@@ -67,8 +67,8 @@
 }
 
 .sw-try-button {
-  font-size:18px;
-  height:40px;
+  font-size: 18px;
+  height: 40px;
 }
 
 .header-banner {

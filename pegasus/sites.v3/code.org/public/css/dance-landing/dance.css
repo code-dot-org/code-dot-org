@@ -37,6 +37,18 @@
   clear: both;
 }
 
+.dance-tutorial {
+  top: 20px;
+}
+
+.dance-tutorial-box {
+  height: 290px;
+}
+
+.dance-tutorial-info {
+  height: 160px;
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -67,5 +79,17 @@ a:hover {
 
   .sponsor-logo-with-text .sponsor-logo-image {
     margin-top: 10px;
+  }
+
+  .dance-tutorial {
+    margin-bottom: 10px;
+  }
+
+  .dance-tutorial-box {
+    height: 220px;
+  }
+
+  .dance-tutorial-info {
+    height: 100px;
   }
 }
