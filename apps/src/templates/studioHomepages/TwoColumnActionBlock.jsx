@@ -174,17 +174,35 @@ export class SpecialAnnouncementActionBlock extends Component {
   };
 
   render() {
-    if (this.props.hocLaunch === "dance") {
+    if (this.props.hocLaunch === "actual-hoc") {
       return (
         <TwoColumnActionBlock
           imageUrl={pegasus('/shared/images/fill-540x289/teacher-announcement/hoc2018-dance.jpg')}
-          subHeading={i18n.specialAnnouncementHeadingHoc2018()}
-          description={i18n.specialAnnouncementDescriptionHoc2018()}
+          subHeading={i18n.specialAnnouncementHeadingHoc2018Actual()}
+          description={i18n.specialAnnouncementDescriptionHoc2018Actual()}
+          buttons={[
+            {
+              url: pegasus('/hourofcode/overview'),
+              text: i18n.tryIt()
+            }
+          ]}
+        />
+      );
+    } else if (this.props.hocLaunch === "dance") {
+      return (
+        <TwoColumnActionBlock
+          imageUrl={pegasus('/shared/images/fill-540x289/teacher-announcement/hoc2018-dance.jpg')}
+          subHeading={i18n.specialAnnouncementHeadingHoc2018Mc()}
+          description={i18n.specialAnnouncementDescriptionHoc2018Dance()}
           buttons={[
             {
               url: 'https://hourofcode.com/#join',
-              text: i18n.signUpButton()
+              text: i18n.joinUs()
             },
+            {
+              url: pegasus('/hourofcode/overview'),
+              text: i18n.tryIt()
+            }
           ]}
         />
       );
