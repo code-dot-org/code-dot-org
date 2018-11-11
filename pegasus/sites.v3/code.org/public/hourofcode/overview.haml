@@ -13,7 +13,8 @@ theme: responsive
 
 - if DCDO.get('hoc_launch', CDO.default_hoc_launch) == 'dance'
   .full-resource-block{style: "margin-top: 20px;"}
-    %img.full-resource-image{src: "/images/dance_party.gif"}
+    %a{href: "/dance"}
+      %img.full-resource-image{src: "/images/dance_party.gif"}
     .tutorial-info{style: "padding: 30px;"}
       %span
         %h2.resource-title= I18n.t(:hoc_overview_dance_title)
