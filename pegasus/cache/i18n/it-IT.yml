@@ -2417,7 +2417,7 @@
   applab_tile_title: Intro to App Lab (Ages 13+)
   applab_tile_subtitle: Create your own app in JavaScript using block based programming.
     Or take your skills to the next level with text-based programming. (English Only)
-  applab_tile_start_tutorial: Start tutorial
+  applab_tile_start_tutorial: Start
   aquatic_name: 'Minecraft: Voyage Aquatic'
   hoc_overview_dance_title: Dance Party
   hoc_overview_dance_subtitle: Code a Dance Party to share with your friends.
@@ -2431,6 +2431,7 @@
     science activities for all ages and experience levels, developed by Code.org and
     partners.
   hoc_overview_partner_activities_link: View Activities
+  hoc_overview_start_tutorial: Start
   hoc_overview_view_teacher_guide: View teacher guide
   hoc_overview_view_tutorial: View tutorial
   hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition provides standards-aligned
