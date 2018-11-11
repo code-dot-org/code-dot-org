@@ -9,8 +9,13 @@
 }
 
 .dance-text-icon-container {
+  margin-top: 10px;
+  margin-bottom: 70px;
+  width: 100%;
+}
+
+.translate-link {
   float: right;
-  margin-bottom: 10px;
 }
 
 .dance-chevron-icon {
