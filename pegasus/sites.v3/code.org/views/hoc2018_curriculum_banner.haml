@@ -1,3 +1,7 @@
 .hoc2018-curriculum-banner
-  = hoc_s(:codeorg_homepage_hoc2018_curriculum).gsub("%{studio_url}", CDO.studio_url)
+  - if request.language == "en" && DCDO.get("hoc_launch", CDO.default_hoc_launch) == "dance"
+    %a.hoc2018-curriculum-link{href: "/yourschool"} Bring computer science
+    to your school or district
+  - else
+    = hoc_s(:codeorg_homepage_hoc2018_curriculum).gsub("%{studio_url}", CDO.studio_url)
   .clear{style: "clear: both"}
