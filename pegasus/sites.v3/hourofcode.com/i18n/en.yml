@@ -525,6 +525,7 @@
   learn_robotics_banner_heading: 'Robotics and Circuits'
   learn_robotics_banner_blurb: 'Got robots or physical computing kits? Use them with the activities below and make a tangible Hour of Code for students of any age! Some activities even offer a simulator so you can get started without any hardware.'
 
+  tutorial_danceparty_name: "Dance Party"
   tutorial_chibitronics_name: "Chibitronics: Illuminated Story"
   tutorial_athlete_name: "Code your own sports game"
   tutorial_moana_name: "Moana: Wayfinding with Code"
@@ -1108,6 +1109,7 @@
   tutorial_washustorm_name: "Stormy Science"
   tutorial_activitypackets_name: "Wonder Workshop Activity Packets"
 
+  tutorial_danceparty_shortdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   tutorial_chibitronics_shortdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_shortdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_shortdescription: "Moana is brave, fearless, and is determined to find her own path."
@@ -1691,6 +1693,7 @@
   tutorial_washustorm_shortdescription: "Learn how to program an incoming storm."
   tutorial_activitypackets_shortdescription: "Find hours of family-friendly fun with Wonder Workshop's printable packets of creative coding activities. Bring coding to life with Dash, Dot, and Cue robots by downloading these online and offline activities to use during Hour of Code and beyond!"
 
+  tutorial_danceparty_longdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   tutorial_chibitronics_longdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
@@ -2274,6 +2277,7 @@
   tutorial_washustorm_longdescription: "Learn how to program an incoming storm."
   tutorial_activitypackets_longdescription: "Find hours of family-friendly fun with Wonder Workshop's printable packets of creative coding activities. Bring coding to life with Dash, Dot, and Cue robots by downloading these online and offline activities to use during Hour of Code and beyond!"
 
+  tutorial_danceparty_language: "Multiple"
   tutorial_chibitronics_language: "English"
   tutorial_athlete_language: "English, French, Spanish, Italian, Portuguese (Brazil)"
   tutorial_moana_language: "English, Arabic, Chinese (Simplified), Chinese (Traditional) Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Polynesian (Samoan), Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese"
@@ -2857,6 +2861,7 @@
   tutorial_washustorm_language: "English"
   tutorial_activitypackets_language: "English"
 
+  tutorial_danceparty_string_detail_grades: "Grades 2+"
   tutorial_chibitronics_string_detail_grades: "Grades 2-5"
   tutorial_athlete_string_detail_grades: "Grades 2+"
   tutorial_moana_string_detail_grades: "Grades 2+"
@@ -3440,6 +3445,7 @@
   tutorial_washustorm_string_detail_grades: "Grades 2-5"
   tutorial_activitypackets_string_detail_grades: "Pre-reader - Grade 8"
 
+  tutorial_danceparty_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_chibitronics_string_platforms: "All modern browsers"
   tutorial_athlete_string_platforms: "All modern browsers"
   tutorial_moana_string_platforms: "All modern browsers, Android tablet, iPad"
@@ -4023,6 +4029,7 @@
   tutorial_washustorm_string_platforms: "All modern browsers"
   tutorial_activitypackets_string_platforms: "Unplugged"
 
+  tutorial_danceparty_string_detail_platforms: ""
   tutorial_chibitronics_string_detail_platforms: "Chibitronics Chibi Chip and Circuit Sticker LEDs"
   tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
@@ -4606,6 +4613,7 @@
   tutorial_washustorm_string_detail_platforms: ""
   tutorial_activitypackets_string_detail_platforms: "Dash or Cue robot"
 
+  tutorial_danceparty_string_detail_programming_languages: "Blocks"
   tutorial_chibitronics_string_detail_programming_languages: "Blocks"
   tutorial_athlete_string_detail_programming_languages: "Blocks"
   tutorial_moana_string_detail_programming_languages: "Blocks"
