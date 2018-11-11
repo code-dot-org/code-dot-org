@@ -110,7 +110,7 @@ module Pd
           willing_to_travel: BASE_PAGE_LABELS[:section_4_summer_workshop][:willing_to_travel],
           interested_in_online_program: 'Are you interested in this online program for school year workshops?',
           pay_fee: BASE_PAGE_LABELS[:section_4_summer_workshop][:pay_fee],
-          scholarship_reasons: 'Please provide any additional information you’d like to share about why your application should be considered for a scholarship.'
+          scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship."
         },
       section_5_additional_demographic_information:
         BASE_PAGE_LABELS[:section_5_submission].slice(:gender_identity, :race).merge(
@@ -136,7 +136,7 @@ module Pd
         principal_approval: "Do you approve of <Teacher Name> participating in Code.org's 2019-20 Professional Learning Program?",
         principal_plan_to_teach: 'Is <Teacher Name> planning to teach this course in the 2019-20 school year?',
         principal_schedule_confirmed: 'Are you committed to including Computer Science <Program> on the master schedule in 2019-20 if <Teacher Name> is accepted into the program?',
-        principal_implementation: 'To participate in Code.org’s Computer Science <Program> Professional Learning Program, we require that this course be offered in one of the following ways. Please select which option will be implemented at your school.',
+        principal_implementation: "To participate in Code.org's Computer Science <Program> Professional Learning Program, we require that this course be offered in one of the following ways. Please select which option will be implemented at your school.",
         principal_diversity_recruitment: 'Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?',
       }
     }.freeze
@@ -148,6 +148,7 @@ module Pd
         status: "Status",
         meets_criteria: "Meets minimum requirements?",
         meets_scholarship_criteria: "Meets scholarship requirements?",
+        friendly_scholarship_status: "Scholarship teacher?",
         regional_partner_name: "Regional Partner",
         assigned_workshop: "Assigned Workshop",
         friendly_registered_workshop: "Registered for workshop?",
@@ -188,8 +189,8 @@ module Pd
         do_you_approve: "Do you approve of this teacher participating in Code.org's 2019-20 Professional Learning Program?",
         plan_to_teach: "Is this teacher planning to teach this course in the 2019-20 school year?",
         total_student_enrollment: "Total student enrollment",
-        free_lunch_percent: "Percentage of students who are eligible to receive free or reduced lunch (Principal’s response)",
-        underrepresented_minority_percent: "Percentage of underrepresented minority students (Principal’s response)",
+        free_lunch_percent: "Percentage of students who are eligible to receive free or reduced lunch (Principal's response)",
+        underrepresented_minority_percent: "Percentage of underrepresented minority students (Principal's response)",
         white: "Percentage of student enrollment by race - White",
         black: "Percentage of student enrollment by race - Black or African American",
         hispanic: "Percentage of student enrollment by race - Hispanic or Latino",
@@ -198,14 +199,14 @@ module Pd
         american_indian: "Percentage of student enrollment by race - American Indian or Native Alaskan",
         other: "Percentage of student enrollment by race - Other",
         committed_to_master_schedule: "Are you committed to including this course on the master schedule in 2019-20 if this teacher is accepted into the program?",
-        replace_course: "Will this course replace an existing computer science course in the master schedule? (Principal’s response)",
+        replace_course: "Will this course replace an existing computer science course in the master schedule? (Principal's response)",
         replace_which_course_csp: "Which existing course or curriculum will CS Principles replace?",
         replace_which_course_csd: "Which existing course or curriculum will CS Discoveries replace?",
         csp_implementation: "How will you implement CS Principles at your school?",
         csd_implementation: "How will you implement CS Discoveries at your school?",
         committed_to_diversity: "Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?",
         pay_fee: "If there is a fee for the program, will your teacher or your school be able to pay for the fee?",
-        how_heard: "How did you hear about this program? (Principal’s response)",
+        how_heard: "How did you hear about this program? (Principal's response)",
         share_ap_scores: "Principal authorizes college board to send AP Scores",
       },
       nces: {
@@ -293,7 +294,8 @@ module Pd
         :taught_in_past,
         :free_lunch_percent,
         :underrepresented_minority_percent,
-        :race
+        :race,
+        :principal_implementation
       ],
       scholarship_questions: [
         :plan_to_teach,
@@ -346,6 +348,7 @@ module Pd
         :status,
         :meets_criteria,
         :meets_scholarship_criteria,
+        :friendly_scholarship_status,
         :total_score,
         :notes,
         :title,
@@ -453,5 +456,11 @@ module Pd
         :student_tr_count
       ]
     }
+
+    SCHOLARSHIP_DROPDOWN_OPTIONS = [
+      {value: 'no', label: "No"},
+      {value: 'yes_code_dot_org', label: "Yes, Code.org scholarship"},
+      {value: 'yes_other', label: "Yes, other scholarship"}
+    ]
   end
 end

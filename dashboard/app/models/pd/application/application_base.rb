@@ -2,24 +2,25 @@
 #
 # Table name: pd_applications
 #
-#  id                  :integer          not null, primary key
-#  user_id             :integer
-#  type                :string(255)      not null
-#  application_year    :string(255)      not null
-#  application_type    :string(255)      not null
-#  regional_partner_id :integer
-#  status              :string(255)
-#  locked_at           :datetime
-#  notes               :text(65535)
-#  form_data           :text(65535)      not null
-#  created_at          :datetime         not null
-#  updated_at          :datetime         not null
-#  course              :string(255)
-#  response_scores     :text(65535)
-#  application_guid    :string(255)
-#  accepted_at         :datetime
-#  properties          :text(65535)
-#  deleted_at          :datetime
+#  id                          :integer          not null, primary key
+#  user_id                     :integer
+#  type                        :string(255)      not null
+#  application_year            :string(255)      not null
+#  application_type            :string(255)      not null
+#  regional_partner_id         :integer
+#  status                      :string(255)
+#  locked_at                   :datetime
+#  notes                       :text(65535)
+#  form_data                   :text(65535)      not null
+#  created_at                  :datetime         not null
+#  updated_at                  :datetime         not null
+#  course                      :string(255)
+#  response_scores             :text(65535)
+#  application_guid            :string(255)
+#  accepted_at                 :datetime
+#  properties                  :text(65535)
+#  deleted_at                  :datetime
+#  status_timestamp_change_log :text(65535)
 #
 # Indexes
 #
@@ -155,6 +156,15 @@ module Pd::Application
     # @see Pd::Application::Email
     def deliver_email(email)
       raise 'Abstract method must be overridden by inheriting class'
+    end
+
+    # Log the send email to the status log
+    def log_sent_email(email)
+      entry = {
+        time: Time.zone.now,
+        title: email.email_type + '_email'
+      }
+      update(status_timestamp_change_log: sanitize_status_timestamp_change_log.append(entry).to_json)
     end
 
     self.table_name = 'pd_applications'
@@ -361,6 +371,28 @@ module Pd::Application
     # Default response score hash
     def default_response_score_hash
       {}
+    end
+
+    def sanitize_status_timestamp_change_log
+      if status_timestamp_change_log
+        JSON.parse(status_timestamp_change_log).map(&:symbolize_keys)
+      else
+        []
+      end
+    end
+
+    # Record when the status changes and who changed it
+    # Ideally we'd implement this as an after_save action, but since we want the current
+    # user to be included, this needs to be explicitly passed in in the controller
+    def update_status_timestamp_change_log(user)
+      log_entry = {
+        title: status,
+        changing_user_id: user.try(:id),
+        changing_user_name: user.try(:name) || user.try(:email),
+        time: Time.zone.now
+      }
+
+      update(status_timestamp_change_log: sanitize_status_timestamp_change_log.append(log_entry).to_json)
     end
   end
 end
