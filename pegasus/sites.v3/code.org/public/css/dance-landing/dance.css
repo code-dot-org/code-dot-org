@@ -1,3 +1,23 @@
+.dance-party-h2 {
+  font-size: 20px;
+}
+
+.img-dance-stars-wrapper {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  justify-content: space-evenly;
+  padding: 20px 10px 10px;
+  margin-left: 60px;
+}
+
+.dance-tutorial {
+  top: 20px;
+}
+
 .dance-translate-link-text {
   color: rgb(0, 173, 188);
   font-size: 16px;
