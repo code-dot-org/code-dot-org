@@ -16,6 +16,7 @@ var hasProjectChanged = false;
 var assets = require('./clientApi').create('/v3/assets');
 var files = require('./clientApi').create('/v3/files');
 var sources = require('./clientApi').create('/v3/sources');
+var sourcesPublic = require('./clientApi').create('/v3/sources-public');
 var channels = require('./clientApi').create('/v3/channels');
 
 var showProjectAdmin = require('../showProjectAdmin');
@@ -1193,6 +1194,17 @@ var projects = module.exports = {
    */
   load() {
     var deferred = new $.Deferred();
+
+    // Use the sources-public API for dancelab shares. Responses from this API
+    // can be publicly cached, which is helpful for HoC scalability in the
+    // celebrity tweet scenario where a single share link gets many hits.
+    const useSourcesPublic = appOptions.share && appOptions.level &&
+      appOptions.level.projectType === 'dance';
+    let sourcesApi;
+    if (this.useSourcesApi()) {
+      sourcesApi = useSourcesPublic ? sourcesPublic : sources;
+    }
+
     if (projects.isProjectLevel()) {
       if (redirectFromHashUrl() || redirectEditView()) {
         deferred.resolve();
@@ -1221,7 +1233,7 @@ var projects = module.exports = {
               fetchAbuseScoreAndPrivacyViolations(this, function () {
                 deferred.resolve();
               });
-            }, queryParams('version'), this.useSourcesApi());
+            }, queryParams('version'), sourcesApi);
           }
         });
       } else {
@@ -1239,7 +1251,7 @@ var projects = module.exports = {
             fetchAbuseScoreAndPrivacyViolations(this, function () {
               deferred.resolve();
             });
-          }, queryParams('version'), this.useSourcesApi());
+          }, queryParams('version'), sourcesApi);
         }
       });
     } else {
@@ -1316,9 +1328,9 @@ var projects = module.exports = {
  * @param {object} channelData Data we fetched from channels api
  * @param {function} callback
  * @param {string?} version Optional version to load
- * @param {boolean} useSourcesApi use sources api when true
+ * @param {boolean} sources api to use, if present.
  */
-function fetchSource(channelData, callback, version, useSourcesApi) {
+function fetchSource(channelData, callback, version, sourcesApi) {
   // Explicitly remove levelSource/levelHtml from channels
   delete channelData.levelSource;
   delete channelData.levelHtml;
@@ -1329,12 +1341,12 @@ function fetchSource(channelData, callback, version, useSourcesApi) {
   current = channelData;
 
   projects.setTitle(current.name);
-  if (useSourcesApi && channelData.migratedToS3) {
+  if (sourcesApi && channelData.migratedToS3) {
     var url = current.id + '/' + SOURCE_FILE;
     if (version) {
       url += '?version=' + version;
     }
-    sources.fetch(url, function (err, data, jqXHR) {
+    sourcesApi.fetch(url, function (err, data, jqXHR) {
       if (err) {
         console.warn('unable to fetch project source file', err);
         data = {
