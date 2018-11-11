@@ -5,13 +5,13 @@ theme: responsive
 
 %link{href: "/css/dance-landing/dance.css", type: "text/css", rel: "stylesheet"}
 
-%div.dance-text-icon-container
-  %a{href: "/translate/dance"}
-    %div.dance-translate-link-text
+=view :dance_tutorial_section
+
+.dance-text-icon-container
+  %a.translate-link{href: "/translate/dance"}
+    .dance-translate-link-text
       =I18n.t(:hoc2018_dance_party_subheading)
     %i.fa.fa-chevron-right.dance-chevron-icon
-
-=view :dance_tutorial_section
 
 =view :dance_teacher_resources
 
