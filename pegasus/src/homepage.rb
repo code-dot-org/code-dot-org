@@ -121,26 +121,50 @@ class Homepage
       twitter = "Every student deserves the opportunity to express their creativity with computer science. What will you create? https://twitter.com/codeorg/status/1051805228859834368"
     end
 
-    [
-      {
-        text: "homepage_action_text_join_us",
-        type: "cta_button_solid_white",
-        url: CDO.hourofcode_url("#join")
-      },
-      {
-        text: "homepage_action_text_try_it",
-        type: "cta_button_hollow_white",
-        url: DCDO.get("hoc_launch", CDO.default_hoc_launch) == "mc" ? "/hourofcode/overview" : "/learn"
-      },
-      {
-        text: "homepage_action_text_codevideo",
-        type: "video",
-        youtube_id: youtube_id,
-        download_path: download_path,
-        facebook: facebook,
-        twitter: twitter
-      }
-    ]
+    hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_launch)
+    if hoc_mode == "actual-hoc"
+      [
+        {
+          text: "homepage_action_text_try_it",
+          type: "cta_button_hollow_white",
+          url: "/hourofcode/overview"
+        }
+      ]
+    elsif hoc_mode == "soon-hoc"
+      [
+        {
+          text: "homepage_action_text_join_us",
+          type: "cta_button_solid_white",
+          url: CDO.hourofcode_url("#join")
+        },
+        {
+          text: "homepage_action_text_try_it",
+          type: "cta_button_hollow_white",
+          url: "/hourofcode/overview"
+        }
+      ]
+    else
+      [
+        {
+          text: "homepage_action_text_join_us",
+          type: "cta_button_solid_white",
+          url: CDO.hourofcode_url("#join")
+        },
+        {
+          text: "homepage_action_text_try_it",
+          type: "cta_button_hollow_white",
+          url: "/learn"
+        },
+        {
+          text: "homepage_action_text_codevideo",
+          type: "video",
+          youtube_id: youtube_id,
+          download_path: download_path,
+          facebook: facebook,
+          twitter: twitter
+        }
+      ]
+    end
   end
 
   def self.get_blocks(request)
@@ -318,12 +342,16 @@ class Homepage
   def self.get_video
     video = get_actions.find {|a| a[:type] == "video"}
 
-    {
-      video_code: video[:youtube_id],
-      download_path: video[:download_path],
-      facebook: {u: video[:facebook]},
-      twitter: {related: 'codeorg', text: video[:twitter]}
-    }
+    if video
+      {
+        video_code: video[:youtube_id],
+        download_path: video[:download_path],
+        facebook: {u: video[:facebook]},
+        twitter: {related: 'codeorg', text: video[:twitter]}
+      }
+    else
+      nil
+    end
   end
 
   def self.show_single_hero
