@@ -1997,6 +1997,9 @@ ro:
       courseC_artist_prog2_2018_authored_hint:
         courseC_artist_prog2_a: 'Dacă utilizaţi blocul pentru a mă face să ''merg înainte cu 100 pixeli'', voi trasa automat o linie.'
         courseC_artist_prog2_b: Probleme la cotitură? Folosiți blocul "întoarce la dreapta cu 90 de grade".
+      courseC_artist_prog2_2019_authored_hint:
+        courseC_artist_prog2_a: 'Dacă utilizaţi blocul pentru a mă face să ''merg înainte cu 100 pixeli'', voi trasa automat o linie.'
+        courseC_artist_prog2_b: Probleme la cotitură? Folosiți blocul "întoarce la dreapta cu 90 de grade".
       courseC_harvester_loops2_authored_hint:
         courseC_harvester_loops2_a: Dacă vă împotmoliți, încercați să scrieți pașii pe hârtie și să căutați modele repetate.
         courseC_harvester_loops2_c: O buclă va repeta comanda `mută înainte ', iar cealaltă va repeta comanda`culege dovleac`.
@@ -2163,6 +2166,8 @@ ro:
         courseD_artist_project3_b: "Încercați buclele imbricate!\n\nUtilizați codul pe care l-ați creat pentru a desena o linie de forme și pentru imbricați-o în interiorul unei alte bucle. În partea de jos, înainte ca bucla exterioară să se termine, adăugați un bloc care o va întoarce pe Elsa de jur împrejur.  \n\n- Încercați 72 de grade dacă repetați bucla exterioară de 5 ori\n- Încercați 60 de grade dacă repetați bucla exterioară de 6 ori"
       courseD_artist_project3_2018_authored_hint:
         courseD_artist_project3_b: "Încercați buclele imbricate!\n\nUtilizați codul pe care l-ați creat pentru a desena o linie de forme și pentru imbricați-o în interiorul unei alte bucle. În partea de jos, înainte ca bucla exterioară să se termine, adăugați un bloc care o va întoarce pe Elsa de jur împrejur.  \n\n- Încercați 72 de grade dacă repetați bucla exterioară de 5 ori\n- Încercați 60 de grade dacă repetați bucla exterioară de 6 ori"
+      courseD_artist_project3_2019_authored_hint:
+        courseD_artist_project3_b: "Încercați buclele imbricate!\n\nUtilizați codul pe care l-ați creat pentru a desena o linie de forme și pentru imbricați-o în interiorul unei alte bucle. În partea de jos, înainte ca bucla exterioară să se termine, adăugați un bloc care o va întoarce pe Elsa de jur împrejur.  \n\n- Încercați 72 de grade dacă repetați bucla exterioară de 5 ori\n- Încercați 60 de grade dacă repetați bucla exterioară de 6 ori"
       courseD_bee_conditionals8_authored_hint:
         courseD_bee_conditionals8_a: "**Amintiți-vă:** Acest puzzle se schimbă de fiecare dată când este executat.  \n\nVeți dori să utilizați un bloc condițional (\"dacă\" sau \"dacă/altfel\") pentru a rezolva provocarea."
       courseD_bee_conditionals8_2018_authored_hint:
@@ -2170,6 +2175,8 @@ ro:
       courseD_bee_nestedLoops2_authored_hint:
         courseD_bee_nestedLoops2_b: Nu reușiți să vă dați seama unde să puneți buclele? Încercați să scrieți pe hârtie codul pas cu pas și căutați un model.
       courseD_bee_nestedLoops2_2018_authored_hint:
+        courseD_bee_nestedLoops2_b: Nu reușiți să vă dați seama unde să puneți buclele? Încercați să scrieți pe hârtie codul pas cu pas și căutați un model.
+      courseD_bee_nestedLoops2_2019_authored_hint:
         courseD_bee_nestedLoops2_b: Nu reușiți să vă dați seama unde să puneți buclele? Încercați să scrieți pe hârtie codul pas cu pas și căutați un model.
       courseD_bee_nestedLoops5_authored_hint:
         grade4_bee_nestedLoops4_b: |-
@@ -2188,17 +2195,25 @@ ro:
         courseD_maze_nestedLoops3_b: Nu reușiți să vă dați seama unde să puneți buclele? Încercați să scrieți codul pas cu pas și căutați un model.
       courseD_maze_nestedLoops3_2018_authored_hint:
         courseD_maze_nestedLoops3_b: Nu reușiți să vă dați seama unde să puneți buclele? Încercați să scrieți codul pas cu pas și căutați un model.
+      courseD_maze_nestedLoops3_2019_authored_hint:
+        courseD_maze_nestedLoops3_b: Nu reușiți să vă dați seama unde să puneți buclele? Încercați să scrieți codul pas cu pas și căutați un model.
       courseD_maze_nestedLoops4_authored_hint:
         courseD_maze_nestedLoops4_b: Dacă modelul structural cu bucle este greu de identificat, încercați să îl codificați în întregime mai întâi și să observați ce anume se repetă de mai multe ori, înainte de a plasa în interior buclele.
       courseD_maze_nestedLoops4_2018_authored_hint:
+        courseD_maze_nestedLoops4_b: Dacă modelul structural cu bucle este greu de identificat, încercați să îl codificați în întregime mai întâi și să observați ce anume se repetă de mai multe ori, înainte de a plasa în interior buclele.
+      courseD_maze_nestedLoops4_2019_authored_hint:
         courseD_maze_nestedLoops4_b: Dacă modelul structural cu bucle este greu de identificat, încercați să îl codificați în întregime mai întâi și să observați ce anume se repetă de mai multe ori, înainte de a plasa în interior buclele.
       courseD_maze_nestedLoops5_authored_hint:
         courseD_maze_nestedLoops5_b: Nu reușiți să vă dați seama unde să puneți buclele? Încercați să scrieți codul pas cu pas și căutați un model.
       courseD_maze_nestedLoops5_2018_authored_hint:
         courseD_maze_nestedLoops5_b: Nu reușiți să vă dați seama unde să puneți buclele? Încercați să scrieți codul pas cu pas și căutați un model.
+      courseD_maze_nestedLoops5_2019_authored_hint:
+        courseD_maze_nestedLoops5_b: Nu reușiți să vă dați seama unde să puneți buclele? Încercați să scrieți codul pas cu pas și căutați un model.
       courseD_maze_nestedLoops6_authored_hint:
         courseD_maze_nestedLoops6_a: Dacă v-ați împotmolit, încercați să scrieți codul pe hârtie fără bucle prima dată și căutați modele de structură.
       courseD_maze_nestedLoops6_2018_authored_hint:
+        courseD_maze_nestedLoops6_a: Dacă v-ați împotmolit, încercați să scrieți codul pe hârtie fără bucle prima dată și căutați modele de structură.
+      courseD_maze_nestedLoops6_2019_authored_hint:
         courseD_maze_nestedLoops6_a: Dacă v-ați împotmolit, încercați să scrieți codul pe hârtie fără bucle prima dată și căutați modele de structură.
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Există două metode de a rezolva acest puzzle!
@@ -2270,6 +2285,8 @@ ro:
         courseF_artist_for4_a: "**Care este cel mai mic număr de care aveți nevoie? \nCare este cel mai mare număr? \nCât de mare este creșterea de fiecare dată?**\n\nAcestea sunt întrebările pe care trebuie să vi le puneți pentru a completa spațiile goale din interiorul  buclei imbricate `pentru`."
       courseF_artist_for4_2018_authored_hint:
         courseF_artist_for4_a: "**Care este cel mai mic număr de care aveți nevoie? \nCare este cel mai mare număr? \nCât de mare este creșterea de fiecare dată?**\n\nAcestea sunt întrebările pe care trebuie să vi le puneți pentru a completa spațiile goale din interiorul  buclei imbricate `pentru`."
+      courseF_artist_for4_2019_authored_hint:
+        courseF_artist_for4_a: "**Care este cel mai mic număr de care aveți nevoie? \nCare este cel mai mare număr? \nCât de mare este creșterea de fiecare dată?**\n\nAcestea sunt întrebările pe care trebuie să vi le puneți pentru a completa spațiile goale din interiorul  buclei imbricate `pentru`."
       courseF_bee_conditionals5_authored_hint:
         courseF_bee_conditionals5_c: 'Există 3 laturi cu flori ale dreptunghiului, deci, codul trebuie să se "repete de 3 ori". La fiecare repetare, albina va trebui să continue drumul, "în timp ce există o cale înainte". '
       courseF_bee_conditionals5_2018_authored_hint:
@@ -2282,10 +2299,15 @@ ro:
         courseF_bee_for5_a: De data aceasta, blocul dvs. "mută înainte" precum și blocul dvs. "obține nectar" vor trebui să fie în bucle `repetă ' separate, ambele în interiorul aceleiași bucle imbricate`pentru`.
       courseF_bee_for5_2018_authored_hint:
         courseF_bee_for5_a: De data aceasta, blocul dvs. "mută înainte" precum și blocul dvs. "obține nectar" vor trebui să fie în bucle `repetă ' separate, ambele în interiorul aceleiași bucle imbricate`pentru`.
+      courseF_bee_for5_2019_authored_hint:
+        courseF_bee_for5_a: De data aceasta, blocul dvs. "mută înainte" precum și blocul dvs. "obține nectar" vor trebui să fie în bucle `repetă ' separate, ambele în interiorul aceleiași bucle imbricate`pentru`.
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_b: 'Încercați să folosiți două bucle `pentru`: una pentru a urca și a aduna nectar, iar cealaltă pentru a coborî și a face miere.'
         courseF_bee_for_challenge2_c: "Notați că o buclă `pentru` are nevoie de mai multe bucle obișnuite în interiorul acelei repetări de atîtea ori valoarea din`numărător` pentru a face modelul crescător al scărilor.\n\nCelălaltă buclă \"pentru\" are nevoie doar de o buclă obișnuită pentru a face cantitatea de \"miez\" indicată de numărător."
       courseF_bee_for_challenge2_2018_authored_hint:
+        courseF_bee_for_challenge2_b: 'Încercați să folosiți două bucle `pentru`: una pentru a urca și a aduna nectar, iar cealaltă pentru a coborî și a face miere.'
+        courseF_bee_for_challenge2_c: "Notați că o buclă `pentru` are nevoie de mai multe bucle obișnuite în interiorul acelei repetări de atîtea ori valoarea din`numărător` pentru a face modelul crescător al scărilor.\n\nCelălaltă buclă \"pentru\" are nevoie doar de o buclă obișnuită pentru a face cantitatea de \"miez\" indicată de numărător."
+      courseF_bee_for_challenge2_2019_authored_hint:
         courseF_bee_for_challenge2_b: 'Încercați să folosiți două bucle `pentru`: una pentru a urca și a aduna nectar, iar cealaltă pentru a coborî și a face miere.'
         courseF_bee_for_challenge2_c: "Notați că o buclă `pentru` are nevoie de mai multe bucle obișnuite în interiorul acelei repetări de atîtea ori valoarea din`numărător` pentru a face modelul crescător al scărilor.\n\nCelălaltă buclă \"pentru\" are nevoie doar de o buclă obișnuită pentru a face cantitatea de \"miez\" indicată de numărător."
       courseF_bee_for_challenge3_authored_hint:

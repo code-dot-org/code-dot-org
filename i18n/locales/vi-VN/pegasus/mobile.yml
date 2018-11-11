@@ -366,7 +366,7 @@
   mc_longdescription: "Hãy sử dụng các khối mã để đưa Steve hoặc Alex vào chuyến phiêu lưu khám phá thế giới Minecraft"
   mc_shortdescription: "Hãy sử dụng các khối mã để đưa Steve hoặc Alex vào chuyến phiêu lưu khám phá thế giới Minecraft"
   mc_specs: "Nhiều ngôn ngữ | Các trình duyệt hiện đại và máy tính bảng | Lứa tuổi 6-106"
-  minecraft_agent: 'Minecraft: Hero''s Journey'
+  minecraft_agent: "Minecraft: Hero's Journey"
   minecraft_designer: "Nhà thiết kế Minecraft"
   minecraft_agent_description: "Minecraft đã trở lại trong Giờ Lập Trình với một hoạt động mới! Hãy bắt đầu cuộc hành trình Minecraft với việc lập trình."
   minecraft_agent_button: "Bắt đầu"
@@ -515,12 +515,12 @@
   dashboard_sections_table_pairing_allowed: "Lập trình đôi"
   dashboard_sections_table_students: "học viên"
   dashboard_sections_table_code: "Mã của học phần"
-  dashboard_sections_name: "Tên phần"
+  dashboard_sections_name: 'Tên phần'
   dashboard_sections_choose_secret: "Nếu bạn muốn cấp tài khoản cho học sinh của mình, chọn một kiểu <b>từ</b> hoặc <b>hình ảnh</b> bí mật cho phần đó."
   dashboard_sections_close: "Đóng"
   dashboard_sections_other_section: "Giáo viên khác"
   dashboard_students_add_multiple: 'Gõ hoặc dán tên của các học sinh, mỗi tên một dòng:'
-  dashboard_students_name: "Tên"
+  dashboard_students_name: 'Tên'
   dashboard_students_progress: "Sự tiến bộ"
   dashboard_students_male: "Nam"
   dashboard_students_female: "Nữ"
@@ -796,6 +796,7 @@
   account_sign_up_email_opt_in: "Chúng tôi có thể gửi email cho bạn thông tin cập nhật về các khóa học của chúng tôi, các cơ hội ở địa phương hay tin tức về khoa học máy tính khác không?"
   hoc2018_creativity_create: "Tạo"
   hoc2018_mc_aquatic_description: "Minecraft đã trở lại trong Giờ Lập Trình với một hoạt động mới! Hãy bắt đầu cuộc hành trình Minecraft với việc lập trình."
+  hoc2018_mc_hero_title: "Minecraft: Hero's Journey"
   hoc2018_mc_hero_description: "Minecraft đã trở lại trong Giờ Lập Trình với một hoạt động mới! Hãy bắt đầu cuộc hành trình Minecraft với việc lập trình."
   hoc2018_mc_designer_title: "Nhà thiết kế Minecraft"
   hoc2018_mc_designer_description: "Chương trình động vật và sinh vật Minecraft khác trong phiên bản Minecraft của riêng bạn."
@@ -811,3 +812,8 @@
   hoc2018_mc_minecraft_education: "Minecraft Education"
   hoc2018_mc_continue_learning: "Tiếp tục học tập với Minecraft."
   hoc2018_mc_go_to_mc_education: "Đi tới phần Đào tạo Minecraft"
+  hoc2018_dance_party_button: "Bắt đầu"
+  hoc2018_dance_teacher_resources_tile1_button: "Giáo Án"
+  hoc2018_dance_teacher_resources_tile2_button: "Hoạt động không dùng máy"
+  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "Tìm hiểu thêm"
+  hoc2018_dance_amazon_apply_now_button_text: "Đăng ký ngay"

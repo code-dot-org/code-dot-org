@@ -1258,3 +1258,13 @@ ne:
           stages:
             Artist:
               name: Artist
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Building a Foundation
+            Conditionals with Cards:
+              name: Conditionals with Cards
+            Envelope Variables:
+              name: Envelope Variables
+            For Loop Fun:
+              name: For Loop Fun

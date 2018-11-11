@@ -283,3 +283,8 @@ zh-TW:
         title: 移動它，移動它
       RelayProgramming_2018:
         title: 接力編程
+      courseB_unplugged_MRF_2019:
+        title: 我的機器人朋友
+      Conditionals_2019:
+        title: 條件判斷（Conditionals）
+        desc: 為了學習關於條件判斷陳述式，學生會玩個撲克牌遊戲，建立一些規則，像是「如果我抽到的是紅色的牌，我就得一分」和「如果我抽到的牌是黑色的，你就得一分」。

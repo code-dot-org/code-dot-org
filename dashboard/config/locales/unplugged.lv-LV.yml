@@ -384,3 +384,10 @@ lv:
         title: Ej, ej
       RelayProgramming_2018:
         title: Releju programmēšana
+      courseB_unplugged_MRF_2019:
+        title: Mani Robotikas draugi
+      Conditionals_2019:
+        title: Sazarojumi
+        desc: Lai iemācītos nosacījuma apgalvojumus, skolēniem jāspēlē kāršu spēle
+          un jāizveido tās noteikumi, piemēram, "Ja es izvelku sarkanu kārti, es iegūstu
+          punktu" un "Ja es izvelku melnu kārti, tu iegūsti punktu."

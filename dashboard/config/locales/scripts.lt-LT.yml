@@ -1535,3 +1535,9 @@ lt:
           stages:
             Artist:
               name: Menininkas
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Laiptuota piramidė
+            Conditionals with Cards:
+              name: Sąlyginiai sakiniai su kortomis

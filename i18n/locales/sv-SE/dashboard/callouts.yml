@@ -81,6 +81,8 @@ sv:
         snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
       Function intro Ryan_callout:
         Function_intro_Ryan_1: Den här lilla instruktionen säger åt datorn att köra den STORA gruppen kod med samma namn i arbetsytan.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Den här lilla instruktionen säger åt datorn att köra den STORA gruppen kod med samma namn i arbetsytan.
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Spela upp ett ljud när händelsen inträffar.
       Infinity_move_directions_callout:
@@ -98,17 +100,25 @@ sv:
         MC_HOC_2017_02_Cole_1: Din spelare har fått en kompis!  Du kan skriva kod åt agenten för att hjälpa dig på banorna.
       MC_HOC_2017_03_Cole_callout:
         MC_HOC_2017_03_Cole_1: Det här är en "upprepa"-loop!  Klicka på den i arbetsytan och lägg till kod som du vill köra om och om igen.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Det här är en "upprepa"-loop!  Klicka på den i arbetsytan och lägg till kod som du vill köra om och om igen.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Agenten kan sväva över vatten, men spelaren kan inte det!
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: Agenten kan sväva över vatten, men spelaren kan inte det!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Klicka in den här i arbetsytan och lägg till lite kod för att upprepa den om och om igen!
       MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Du kan inte kasta bort de här blocken, men du kan redigera dem!
+      MC_HOC_2017_06_Cole_2019_callout:
         MC_HOC_2017_06_Cole_1: Du kan inte kasta bort de här blocken, men du kan redigera dem!
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: 'Agenten kan sväva över lava, men spelaren kan inte det!'
       MC_HOC_2017_08_Will_callout:
         MC_HOC_2017_08_RY_1: 'Agenten kan sväva över lava, men spelaren kan inte det!'
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'Agenten kan sväva över lava, men spelaren kan inte det!'
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'Agenten kan sväva över lava, men spelaren kan inte det!'
       NEW Course 4 Artist Functions 5_callout:
         edit_function: Klicka här om du vill redigera din funktion.

@@ -1061,3 +1061,13 @@ sl:
           stages:
             Artist:
               name: Umetnik
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Graditi temelje
+            Conditionals with Cards:
+              name: Pogojniki s kartami
+            Envelope Variables:
+              name: Spremeljivke v ovojnicah
+            For Loop Fun:
+              name: Zabava s "for" zankami

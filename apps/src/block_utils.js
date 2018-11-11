@@ -623,8 +623,10 @@ const STANDARD_INPUT_TYPES = {
   },
   [FIELD_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
+      const changeHandler = 'Number' === inputConfig.type ? blockly.FieldTextInput.numberValidator : undefined;
+      const fieldTextInput = new blockly.FieldTextInput('', changeHandler);
       currentInputRow.appendTitle(inputConfig.label)
-          .appendTitle(new blockly.FieldTextInput(''), inputConfig.name);
+          .appendTitle(fieldTextInput, inputConfig.name);
     },
     generateCode(block, inputConfig) {
       let code = block.getTitleValue(inputConfig.name);

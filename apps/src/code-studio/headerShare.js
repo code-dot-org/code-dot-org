@@ -25,6 +25,7 @@ export function shareProject(shareUrl) {
     const pageConstants = getStore().getState().pageConstants;
     const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
     const appType = dashboard.project.getStandaloneApp();
+    const selectedSong = dashboard.project.getSelectedSong();
 
     // Allow publishing for any project type that students can publish.
     // Younger students can now get to the share dialog if their teacher allows
@@ -46,6 +47,7 @@ export function shareProject(shareUrl) {
           isProjectLevel={!!dashboard.project.isProjectLevel()}
           i18n={i18n}
           shareUrl={shareUrl}
+          selectedSong={selectedSong}
           thumbnailUrl={dashboard.project.getThumbnailUrl()}
           isAbusive={dashboard.project.exceedsAbuseThreshold()}
           canPrint={appType === "artist"}

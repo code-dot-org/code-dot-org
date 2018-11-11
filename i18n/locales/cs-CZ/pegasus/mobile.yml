@@ -414,7 +414,7 @@
   mc_gradelevel: "Věk 6 +"
   mc_platformtext: "Moderní prohlížeče, smartphony, tablety"
   mc_specs: "Mnoho jazyků | Moderní prohlížeče a tablety | Věk 6-106 let"
-  minecraft_agent: 'Minecraft: Cesta hrdiny'
+  minecraft_agent: "Minecraft: Cesta hrdiny"
   minecraft_designer: "Minecraft Designer"
   minecraft_adventurer: "Minecraft Adventurer"
   minecraft_tutorials: "Návody Hodiny kódu s Minecraftem"
@@ -656,7 +656,7 @@
   dashboard_sections_table_stage_extras: "Extra bonusy"
   dashboard_sections_table_students: "Studenti"
   dashboard_sections_table_code: "Kód sekce"
-  dashboard_sections_name: "Jméno sekce"
+  dashboard_sections_name: 'Jméno sekce'
   dashboard_sections_choose_secret: "Pokud chcete nastavit účty svým studentům, vyberte tajné <b>slovo</b> nebo <b>obrázek</b> pro tuto sekci."
   dashboard_sections_secret_word: "<b>Slovo</b> vám umožňuje nastavit pro každého studenta tajné slovo."
   dashboard_sections_secret_picture: "<b>Obrázek</b> vám umožňuje pro každého studenta nastavit tajný obrázek, což je ideální pro mladší studenty, kteří dosud neumějí psát."
@@ -680,7 +680,7 @@
   dashboard_error_other_section: "Jestliže přesouváte studenty mezi vašimi vlastními sekcemi, vyberte sekci z nabídky. Volbu \"Jiná sekce\" označte pouze v případě přesunu studentů do sekce jiného učitele."
   dashboard_students_add_multiple: 'Zadejte nebo vložte jména vašich studentů, jeden na řádek:'
   dashboard_students_new_section: "Vytvořili jste novou sekci! Nyní přidejte své studenty pomocí tlačítka <b>Přidat studenta</b> a <b>Přidat více studentů</b> výše."
-  dashboard_students_name: "Jméno"
+  dashboard_students_name: 'Jméno'
   dashboard_students_progress: "pokrok"
   dashboard_students_male: "Muž"
   dashboard_students_female: "Žena"
@@ -1348,6 +1348,7 @@
   hoc2018_mc_page_title: "Návody Hodiny kódu s Minecraftem"
   hoc2018_mc_details: "Mnoho jazyků | Moderní prohlížeč a tablety | Od druhé třídy"
   hoc2018_mc_aquatic_description: "Minecraft je zpět se zbrusu novou aktivitou pro Hodinu kódu! Projděte Minecraftem s kódem."
+  hoc2018_mc_hero_title: "Minecraft: Cesta hrdiny"
   hoc2018_mc_hero_description: "Minecraft je zpět se zbrusu novou aktivitou pro Hodinu kódu! Projděte Minecraftem s kódem."
   hoc2018_mc_designer_title: "Minecraft Designer"
   hoc2018_mc_designer_description: "Naprogramuj zvířata a další postavy, vytvoř si svojí vlastní verzi Minecraftu."
@@ -1374,3 +1375,8 @@
   hoc2018_mc_homepage_try_it: "Zkuste to"
   hoc2018_mc_back: "Minecraft je zpět se zbrusu novou aktivitou pro Hodinu kódu!"
   hoc2018_mc_back_journey: "Minecraft je zpět se zbrusu novou aktivitou pro Hodinu kódu! Projděte Minecraftem s kódem."
+  hoc2018_dance_party_button: "Spustit"
+  hoc2018_dance_teacher_resources_tile1_button: "Plán hodiny"
+  hoc2018_dance_teacher_resources_tile2_button: "Aktivita bez počítače"
+  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "Zjisti více"
+  hoc2018_dance_amazon_apply_now_button_text: "Přihlaš se nyní"

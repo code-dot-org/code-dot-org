@@ -17,11 +17,15 @@
             "\"none\""
           ],
           [
+            "Colors",
+            "\"color_cycle\""
+          ],
+          [
             "Squares",
             "\"disco\""
           ],
           [
-            "Colors",
+            "Rainbow",
             "\"rainbow\""
           ],
           [
@@ -41,8 +45,12 @@
             "\"spiral\""
           ],
           [
+            "Song Title",
+            "\"text\""
+          ],
+          [
             "(Random)",
-            "['disco', 'rainbow', 'diamonds','splatter','swirl','spiral'][randomInt(0,5)]"
+            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','splatter','swirl','spiral'][randomInt(0,7)]"
           ]
         ]
       }

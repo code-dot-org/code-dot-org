@@ -2,24 +2,25 @@
 #
 # Table name: pd_applications
 #
-#  id                  :integer          not null, primary key
-#  user_id             :integer
-#  type                :string(255)      not null
-#  application_year    :string(255)      not null
-#  application_type    :string(255)      not null
-#  regional_partner_id :integer
-#  status              :string(255)
-#  locked_at           :datetime
-#  notes               :text(65535)
-#  form_data           :text(65535)      not null
-#  created_at          :datetime         not null
-#  updated_at          :datetime         not null
-#  course              :string(255)
-#  response_scores     :text(65535)
-#  application_guid    :string(255)
-#  accepted_at         :datetime
-#  properties          :text(65535)
-#  deleted_at          :datetime
+#  id                          :integer          not null, primary key
+#  user_id                     :integer
+#  type                        :string(255)      not null
+#  application_year            :string(255)      not null
+#  application_type            :string(255)      not null
+#  regional_partner_id         :integer
+#  status                      :string(255)
+#  locked_at                   :datetime
+#  notes                       :text(65535)
+#  form_data                   :text(65535)      not null
+#  created_at                  :datetime         not null
+#  updated_at                  :datetime         not null
+#  course                      :string(255)
+#  response_scores             :text(65535)
+#  application_guid            :string(255)
+#  accepted_at                 :datetime
+#  properties                  :text(65535)
+#  deleted_at                  :datetime
+#  status_timestamp_change_log :text(65535)
 #
 # Indexes
 #
@@ -323,9 +324,9 @@ module Pd::Application
         [:cs_terms, TEXT_FIELDS[:other_with_text]],
         [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain]],
         [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
-        [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain]],
-        [:able_to_attend_multiple, TEXT_FIELDS[:unable_to_attend_1920]],
-        [:travel_to_another_workshop, TEXT_FIELDS[:not_sure_explain]],
+        [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain], :able_to_attend_multiple_not_sure_explain],
+        [:able_to_attend_multiple, TEXT_FIELDS[:unable_to_attend_1920], :able_to_attend_multiple_unable_to_attend],
+        [:travel_to_another_workshop, TEXT_FIELDS[:not_sure_explain], :travel_to_another_workshop_not_sure],
         [:how_heard, TEXT_FIELDS[:other_with_text]]
       ]
     end
@@ -350,6 +351,12 @@ module Pd::Application
 
     def assigned_workshop
       Pd::Workshop.find_by(id: pd_workshop_id)&.date_and_location_name
+    end
+
+    def friendly_scholarship_status
+      if scholarship_status
+        SCHOLARSHIP_DROPDOWN_OPTIONS.find {|option| option[:value] == scholarship_status}[:label]
+      end
     end
 
     # memoize in a hash, per course
@@ -392,7 +399,7 @@ module Pd::Application
             :csp_how_offer,
           ],
           principal: [
-            :csp_ap_exam,
+            :share_ap_scores,
             :replace_which_course_csp,
             :csp_implementation
           ]
@@ -457,10 +464,10 @@ module Pd::Application
           row.push(teacher_answers[k] || try(k) || "")
         end
         CSV_COLUMNS[:principal].each do |k|
+          if columns_to_exclude[:principal]&.include? k.to_sym
+            next
+          end
           if principal_answers
-            if columns_to_exclude[:principal]&.include? k.to_sym
-              next
-            end
             row.push(principal_answers[k] || principal_application.try(k) || "")
           else
             row.push("")
@@ -508,7 +515,10 @@ module Pd::Application
       # Section 2
       if course == 'csd'
         meets_minimum_criteria_scores[:csd_which_grades] = (responses[:csd_which_grades] & options[:csd_which_grades].first(5)).any? ? YES : NO
+
         meets_minimum_criteria_scores[:cs_total_course_hours] = responses[:cs_total_course_hours].to_i >= 50 ? YES : NO
+
+        bonus_points_scores[:cs_terms] = responses[:cs_terms] == options[:cs_terms][4] ? 2 : 0
       elsif course == 'csp'
         meets_minimum_criteria_scores[:csp_which_grades] = (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
         meets_minimum_criteria_scores[:cs_total_course_hours] = (responses[:cs_total_course_hours]&.>= 100) ? YES : NO
@@ -550,6 +560,7 @@ module Pd::Application
 
         if course == 'csd'
           meets_minimum_criteria_scores[:principal_implementation] = responses[:principal_implementation].in?(principal_options[:csd_implementation].first(2)) ? YES : NO
+          bonus_points_scores[:principal_implementation] = responses[:principal_implementation] == principal_options[:csd_implementation][1] ? 2 : 0
         elsif course == 'csp'
           meets_minimum_criteria_scores[:principal_implementation] = responses[:principal_implementation] == principal_options[:csp_implementation].first ? YES : NO
         end

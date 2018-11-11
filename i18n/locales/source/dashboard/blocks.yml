@@ -201,6 +201,18 @@ en:
             '10': This or That
             '11': Thriller
             '8': None
+      Dancelab_ifTime:
+        text: |-
+          if {UNIT} is {OP} {N}
+           {DO1} {DO2}
+        options:
+          UNIT:
+            '"measures"': measures
+            '"seconds"': seconds
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} jump to {LOCATION}"
         options:
@@ -231,10 +243,14 @@ en:
             '"ROBOT"': all robots
             '"SHARK"': all sharks
           FORMAT:
+            '"border"': border
+            '"inner"': inside square
             '"circle"': circle
             '"grid"': grid
             '"row"': row
             '"column"': column
+            '"x"': criss-cross
+            '"plus"': plus
             '"random"': random
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -324,8 +340,29 @@ en:
             '"spiral"': Spiral
             "['disco', 'rainbow', 'diamonds','splatter','swirl','spiral'][randomInt(0,5)]": "(Random)"
       Dancelab_setDanceSpeed:
-        text: change {SPRITE} dance speed to {SPEED}
+        text: set {SPRITE} dance speed to {SPEED}
         options:
+          SPEED:
+            '4': very fast
+            '2': fast
+            '1': normal
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        text: set {GROUP} dance speed to {SPEED}
+        options:
+          GROUP:
+            sprites: all
+            '"ALIEN"': all aliens
+            '"BEAR"': all bears
+            '"CAT"': all cats
+            '"DOG"': all dogs
+            '"DUCK"': all ducks
+            '"FROG"': all frogs
+            '"MOOSE"': all moose
+            '"PINEAPPLE"': all pineapples
+            '"ROBOT"': all robots
+            '"SHARK"': all sharks
           SPEED:
             '4': very fast
             '2': fast

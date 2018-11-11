@@ -67,6 +67,14 @@
   box-sizing: border-box;
   margin-top: 20px;
 
+  &:hover {
+    border-color: $dark_charcoal;
+
+    h3, .smalltext {
+      color: $dark_charcoal;
+    }
+  }
+
   .heading {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -142,14 +150,11 @@
   .smalltext {
     font-size: 13px;
     line-height: 17px;
-    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-family: $gotham-regular;
     font-weight:normal;
     color:$charcoal;
-
-    html[dir=rtl] & {
-      padding-right: 10px;
-    }
   }
 
   .bar {
@@ -166,6 +171,10 @@
   .teacher-guide {
     bottom: 40px;
     text-align: right;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .audiencebar {
@@ -293,6 +302,16 @@
     color:$charcoal;
     float: left;
     padding-left: 10px;
+  }
+
+  .bar {
+    width: 100%;
+    font-size: 13px;
+    padding: 4px 30px;
+    margin: 0;
+    bottom: 0;
+    float: left;
+    position: absolute;
   }
 
   .audience {

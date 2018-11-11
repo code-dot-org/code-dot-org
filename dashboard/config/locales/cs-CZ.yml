@@ -406,7 +406,6 @@ cs:
       example: Vzorové řešení
       example_with_number: Vzorové řešení %{solution_number}
       submitted_on: Odesláno na %{date}
-      last_updated: 'Naposledy aktualizováno:'
       unsubmit: Neodesláno
       worked_with: Pracoval s
       update_lock_settings: Aktualizace zámku zde.
