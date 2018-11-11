@@ -21,7 +21,7 @@ def get_social_metadata_for_page(request)
     hoc_student_challenge: {path: "/images/fit-1920/social-media/hoc-student-challenge.jpg", width: 1920, height: 1080},
     mc_social_2017: {path: "/images/mc/mc_social_2017.jpg", width: 1200, height: 630},
     mc_social_2018: {path: "/images/social-media/mc-social-2018.jpg", width: 1200, height: 630},
-    dance_2018: {path: "/images/social-media/dance-social.jpg", width: 1200, height: 630}
+    dance_2018: {path: "/images/social-media/dance-social.jpg", width: 511, height: 273}
   }
 
   # Important:
