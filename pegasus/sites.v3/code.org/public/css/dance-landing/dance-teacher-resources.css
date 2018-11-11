@@ -6,6 +6,8 @@
   height: 300px;
   width: 468px;
   border: 1px solid gray;
+  margin-left: 5px;
+  margin-right: 5px;
   margin-bottom: 20px;
   overflow: hidden;
   position: relative;
@@ -45,6 +47,17 @@
   border-color: #e7e8ea;
   color: #5b6770;
 }
+
+.col-50:nth-child(2) {
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 970px) {
+  .col-50 {
+    padding-left: 10px;
+  }
+}
+
 
 @media screen and (min-width: 0px) and (max-width: 470px) {
   .resource-card {
