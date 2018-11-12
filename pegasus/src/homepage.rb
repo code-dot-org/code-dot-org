@@ -126,7 +126,7 @@ class Homepage
       [
         {
           text: "homepage_action_text_try_it",
-          type: "cta_button_hollow_white",
+          type: "cta_button_solid_white",
           url: "/hourofcode/overview"
         }
       ]
@@ -432,10 +432,10 @@ class Homepage
   def self.get_dance_stars
     stars = [
       "Katy Perry", "Madonna", "Keith Urban", "Sia", "Carly Rae Jepsen",
-      "Ciara", "Macklemore & Ryan Lewis", "Yolanda Be Cool, DCup",
-      "J Balvin, Willy William", "Bruce Springsteen", "a-ha", "Imagine Dragons",
+      "Ciara", "Macklemore and Ryan Lewis", "Yolanda Be Cool",
+      "J Balvin", "Bruce Springsteen", "A-ha", "Imagine Dragons",
       "Ariana Grande", "Justin Bieber", "Selena Gomez", "Lady Antebellum",
-      "Los Del Rio", "Bruno Mars", "Calvin Harris", "Luke Bryan", "Coldplay",
+      "Los del Rio", "Mark Ronson (ft. Bruno Mars)", "Calvin Harris", "Luke Bryan", "Coldplay",
       "Ace of Base", "The Weeknd", "Avicii", "MC Hammer", "Village People",
       "OutKast", "will.i.am", "Ed Sheeran"
     ]
