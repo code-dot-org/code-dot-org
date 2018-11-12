@@ -127,6 +127,10 @@ a:hover {
     background: black;
     border-radius: 5px;
   }
+
+  .sponsor-subtext-description {
+    margin-bottom: 45px;
+  }
 }
 
 /* Tablet and mobile */
@@ -152,6 +156,10 @@ a:hover {
 
   .amazon-footer {
     padding-bottom: 20px;
+  }
+
+  .dance-responsive-padding {
+    padding: 10px;
   }
 }
 
