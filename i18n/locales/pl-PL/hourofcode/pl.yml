@@ -12,10 +12,13 @@ pl:
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 grudnia 2016 roku"
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
+  codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
   codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_musician_before: 'Featuring'
+  codeorg_homepage_hoc2018_musician_after: 'and more!'
   codeorg_homepage_hoc2018_video: 'Watch our video'
   hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
   hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
@@ -295,7 +298,7 @@ pl:
   social_hoc2018_code_org_what_create: "Code.org: What will you create?"
   social_hoc2018_creativity_in_are_you: "The #HourOfCode is about creativity. I’m in! Are you?"
   social_hoc2018_dance_party: "Hour of Code: Dance Party"
-  social_hoc2018_dance_what_create: "Do a little dance. Make a little code. What will you create?"
+  social_hoc2018_dance_what_create: "Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   social_hoc2018_every_student: "Every student deserves the opportunity to express their creativity with computer science."
   social_hoc2018_every_student_try_what_create: "Every student deserves the opportunity to express their creativity with computer science. Try your hand at the new tutorials. What will you create?"
   social_hoc2018_hoc_coming_create: "The Hour of Code is coming. What will you create?"
@@ -304,6 +307,7 @@ pl:
   social_hoc2018_mc: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   social_hoc2018_mc_creativity: "Use your creativity and problem solving skills to explore and build underwater worlds with code."
   social_hoc2018_what_create: "What will you create?"
+  social_hoc2018_global_movement: "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
   map_title: "Mapa Godziny Kodowania"
   map_header: '# wydarzeń Hour of Code na całym świecie'
   map_header_count_year: '%{event_count} wydarzenia zarejestrowane dla Godziny Kodowania %{year}'
@@ -418,6 +422,7 @@ pl:
   videos_anybody_can_learn: Każdy może się nauczyć (1 min.)
   title_country_resources: Zasoby dla konkretnych krajów
   title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
+  title_how_to_promote: Podaj dalej
   title_how_to_districts: Poradnik Godziny Kodowania dla jednostek
   title_how_to_events: Poradnik wydarzenia Godziny Kodowania
   title_how_to_organizations: Jak poprowadzić Godzinę Kodowania - organizacje
@@ -482,6 +487,7 @@ pl:
   learn_banner_teachers: "Nauczyciele: <a id='teacher_banner_host'> Zorganizuj godzinę</a> lub <a id='teacher_banner_howto'> przeczytaj Jak to zrobić</a>"
   learn_robotics_banner_heading: 'ROBOTYKA'
   learn_robotics_banner_blurb: 'Czy masz roboty? Użyj je w aktywnościach poniżej i uczyń rzeczywistą Godzinę Kodowania dla uczniów w każdym wieku!'
+  tutorial_danceparty_name: "Dance Party"
   tutorial_chibitronics_name: "Chibitronics: Illuminated Story"
   tutorial_athlete_name: "Zakoduj swoją grę sportową"
   tutorial_moana_name: "Vaiana: kodowanie na oceanie"
@@ -797,7 +803,7 @@ pl:
   tutorial_codesterscr_name: "Cheer Routines"
   tutorial_grokdisease_name: "Disease Epidemic"
   tutorial_techec_name: "Explaining Closures in JS"
-  tutorial_rgbegin_name: "RoboGarden - Beginner"
+  tutorial_rgbegin_name: "RoboGarden Coding - Beginner"
   tutorial_myradream_name: "Actimator: Myra's Dream"
   tutorial_thinkfun_name: "Robot Repair: Can You Fix the Robot Brain?"
   tutorial_hopfireworks_name: "Make a Fireworks App on iPad/iPhone"
@@ -1062,6 +1068,8 @@ pl:
   tutorial_vidcodeplastic_name: "Plastic Pollution PSA"
   tutorial_vidcodetypeface_name: "Create your own typeface!"
   tutorial_washustorm_name: "Stormy Science"
+  tutorial_activitypackets_name: "Wonder Workshop Activity Packets"
+  tutorial_danceparty_shortdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   tutorial_chibitronics_shortdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_shortdescription: "Wybierz między utworzeniem meczu koszykówki a innymi sportami!"
   tutorial_moana_shortdescription: "Vaiana jest odważna, nieustraszona i zdeterminowana, by odnaleźć swą drogę."
@@ -1642,6 +1650,8 @@ pl:
   tutorial_vidcodeplastic_shortdescription: "Learn to use loops, sin waves and customized emojis to make a unique project."
   tutorial_vidcodetypeface_shortdescription: "Create your own typeface using shapes and elements of typography. Type has more elements than you may have realized!"
   tutorial_washustorm_shortdescription: "Learn how to program an incoming storm."
+  tutorial_activitypackets_shortdescription: "Find hours of family-friendly fun with Wonder Workshop's printable packets of creative coding activities. Bring coding to life with Dash, Dot, and Cue robots by downloading these online and offline activities to use during Hour of Code and beyond!"
+  tutorial_danceparty_longdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   tutorial_chibitronics_longdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_longdescription: "Wybierz między utworzeniem meczu koszykówki a innymi sportami!"
   tutorial_moana_longdescription: "Nowy samouczek Godziny Kodowania Disneya używa graficznego języka programowania z wykorzystaniem bloków, które uczniowie po prostu przeciągają i upuszczają by napisać kod. Programowanie graficzne jest przyjemnym i łatwym do zrozumienia sposobem nauczania logiki kodowania. Kontakt z programowaniem graficznym tworzy podstawy do tekstowego programowania, które jest czynnością bardziej złożoną. Samouczek jest kierowany do dzieci w wieku od 8 lat oraz tych, którzy mierzą się z kodowaniem po raz pierwszy. Dostępny w 23 językach i zlokalizowany poza Stanami Zjednoczonymi. Samouczek jest dostępny za darmo online i zawiera zestaw narzędzi w języku angielskim i hiszpańskim dla nauczycieli i organizatorów Godziny Kodowania."
@@ -2222,6 +2232,8 @@ pl:
   tutorial_vidcodeplastic_longdescription: "The problem of plastic filling our oceans continues to worsen. Luckily, you can make your voice heard with code through the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript, you can make a second video about any subject you care about! Learn to use loops, sin waves and customized emojis to make a unique project."
   tutorial_vidcodetypeface_longdescription: "Create your own typeface using shapes and elements of typography. Type has more elements than you may have realized! So far we have talked about fonts and how they are different styles of text. Fonts are actually just different styles of a typeface. A typeface is a family of fonts that have similar features."
   tutorial_washustorm_longdescription: "Learn how to program an incoming storm."
+  tutorial_activitypackets_longdescription: "Find hours of family-friendly fun with Wonder Workshop's printable packets of creative coding activities. Bring coding to life with Dash, Dot, and Cue robots by downloading these online and offline activities to use during Hour of Code and beyond!"
+  tutorial_danceparty_language: "Multiple"
   tutorial_chibitronics_language: "Polski"
   tutorial_athlete_language: "Angielski, francuski, hiszpański, włoski, portugalski (Brazylia)"
   tutorial_moana_language: "Angielski, arabski, chiński (uproszczony), chiński (tradycyjny), duński, holenderski, fiński, francuski, niemiecki, indonezyjski, włoski, japoński, koreański, norweski, polski, polinezyjski (samoa), portugalski, rosyjski, hiszpański, szwedzki, turecki, ukraiński, wietnamski"
@@ -2709,7 +2721,7 @@ pl:
   tutorial_codemojipizza_language: "Polski"
   tutorial_moonlander_language: "Polski"
   tutorial_sushicards_language: "Polski"
-  tutorial_codesparkcreate_language: "Chinese, English, French, German, Italian, Japanese, Korean, Malay, Portuguese (Brazil), Spanish, Thai"
+  tutorial_codesparkcreate_language: "Angielski, arabski, azerski, chiński, holenderski, francuski, niemiecki, grecki, hindi, węgierski, islandzki, indonezyjski, włoski, japoński, koreański, norweski, polski, portugalski, rumuński, rosyjski, serbski, hiszpański, szwedzki, turecki, ukraiński"
   tutorial_hardvsoft_language: "Polski"
   tutorial_codestersecard_language: "Chinese, English, Spanish"
   tutorial_codesterslogo_language: "Chinese, English, Spanish"
@@ -2802,6 +2814,8 @@ pl:
   tutorial_vidcodeplastic_language: "Polski"
   tutorial_vidcodetypeface_language: "Polski"
   tutorial_washustorm_language: "Polski"
+  tutorial_activitypackets_language: "Polski"
+  tutorial_danceparty_string_detail_grades: "Klasy 2+"
   tutorial_chibitronics_string_detail_grades: "Od dzieci, które uczą się czytać, do klasy 5"
   tutorial_athlete_string_detail_grades: "Klasy 2+"
   tutorial_moana_string_detail_grades: "Klasy 2+"
@@ -3251,7 +3265,7 @@ pl:
   tutorial_blockscadicecream_string_detail_grades: "Klasy 6+"
   tutorial_blockscadpizza_string_detail_grades: "Klasy 6-8"
   tutorial_blockscadsugar_string_detail_grades: "Klasy 6-8"
-  tutorial_bsgridlight_string_detail_grades: "Pre-reader - Grade 9+"
+  tutorial_bsgridlight_string_detail_grades: "Klasy 2+"
   tutorial_bpartscratch_string_detail_grades: "Klasy 6+"
   tutorial_bpartvid_string_detail_grades: "Klasy 6+"
   tutorial_bpenglishscratch_string_detail_grades: "Klasy 2-8"
@@ -3382,6 +3396,8 @@ pl:
   tutorial_vidcodeplastic_string_detail_grades: "Klasy 6+"
   tutorial_vidcodetypeface_string_detail_grades: "Klasy 6+"
   tutorial_washustorm_string_detail_grades: "Od dzieci, które uczą się czytać, do klasy 5"
+  tutorial_activitypackets_string_detail_grades: "Od dzieci, które uczą się czytać, do klasy 8"
+  tutorial_danceparty_string_platforms: "Wszystkie nowoczesne przeglądarki, tablet z systemem Android, iPad, telefon z systemem Android, iPhone"
   tutorial_chibitronics_string_platforms: "Wszystkie współczesne przeglądarki"
   tutorial_athlete_string_platforms: "Wszystkie współczesne przeglądarki"
   tutorial_moana_string_platforms: "Wszystkie współczesne przeglądarki, tablet z systemem Android, iPad"
@@ -3736,7 +3752,7 @@ pl:
   tutorial_cocomarcade_string_platforms: "Wszystkie współczesne przeglądarki internetowe"
   tutorial_techcpp_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
   tutorial_beetik_string_platforms: "Chrome, Firefox, Android tablet, iPad"
-  tutorial_codedj_string_platforms: "Chrome, Firefox, Safari, Android tablet, iPad"
+  tutorial_codedj_string_platforms: "Wszystkie współczesne przeglądarki"
   tutorial_rgadvan_string_platforms: "Chrome, Firefox, Android tablet"
   tutorial_codehsrn_string_platforms: "Chrome, Firefox, Safari, Android phone, iPhone"
   tutorial_codehswd_string_platforms: "Chrome, Firefox, Safari"
@@ -3821,7 +3837,7 @@ pl:
   tutorial_bcpy2_string_platforms: "Wszystkie współczesne przeglądarki"
   tutorial_bcjs1_string_platforms: "Wszystkie współczesne przeglądarki"
   tutorial_bcjs2_string_platforms: "Wszystkie współczesne przeglądarki"
-  tutorial_3dbearmars_string_platforms: ""
+  tutorial_3dbearmars_string_platforms: "Tablet z systemem Android, iPad, telefon z systemem Android, iPhone"
   tutorial_alexaskill_string_platforms: "Wszystkie współczesne przeglądarki"
   tutorial_bitsboxyak_string_platforms: ""
   tutorial_blockscadbargraphs_string_platforms: "Wszystkie współczesne przeglądarki"
@@ -3880,13 +3896,13 @@ pl:
   tutorial_discovery_string_platforms: "Wszystkie współczesne przeglądarki"
   tutorial_csfirstname_string_platforms: "Wszystkie współczesne przeglądarki"
   tutorial_obstaclecourse_string_platforms: "iPad"
-  tutorial_edisonmove_string_platforms: ""
-  tutorial_edisonspider_string_platforms: ""
-  tutorial_edisonspotlight_string_platforms: ""
+  tutorial_edisonmove_string_platforms: "Wszystkie współczesne przeglądarki"
+  tutorial_edisonspider_string_platforms: "All modern browsers, iPad, Android tablets"
+  tutorial_edisonspotlight_string_platforms: "All modern browsers, iPad, Android tablets"
   tutorial_firiapython_string_platforms: "Wszystkie współczesne przeglądarki"
   tutorial_gamefrootsquid_string_platforms: "All modern browsers, iPad"
-  tutorial_duckpiano_string_platforms: "Chrome, Firefox, Safari"
-  tutorial_gpsound_string_platforms: "Chrome, Firefox, Safari"
+  tutorial_duckpiano_string_platforms: "Wszystkie współczesne przeglądarki"
+  tutorial_gpsound_string_platforms: "Wszystkie współczesne przeglądarki"
   tutorial_groklearningpython_string_platforms: "Wszystkie współczesne przeglądarki"
   tutorial_htmltimetravel_string_platforms: "Wszystkie współczesne przeglądarki"
   tutorial_hp_flappy_string_platforms: "iPad"
@@ -3938,9 +3954,9 @@ pl:
   tutorial_spherotext3_string_platforms: "Wszystkie nowoczesne przeglądarki, tablet z systemem Android, iPad, telefon z systemem Android, iPhone"
   tutorial_spherotext4_string_platforms: "Wszystkie nowoczesne przeglądarki, tablet z systemem Android, iPad, telefon z systemem Android, iPhone"
   tutorial_spheroraptor_string_platforms: "Wszystkie nowoczesne przeglądarki, tablet z systemem Android, iPad, telefon z systemem Android, iPhone"
-  tutorial_stempiday_string_platforms: "Wszystkie współczesne przeglądarki, tablet z systemem Android, iPad"
-  tutorial_stemplanetoids_string_platforms: "Wszystkie współczesne przeglądarki, tablet z systemem Android, iPad"
-  tutorial_stempong_string_platforms: "Wszystkie współczesne przeglądarki, tablet z systemem Android, iPad"
+  tutorial_stempiday_string_platforms: "Wszystkie współczesne przeglądarki"
+  tutorial_stemplanetoids_string_platforms: "Wszystkie współczesne przeglądarki"
+  tutorial_stempong_string_platforms: "Wszystkie współczesne przeglądarki"
   tutorial_algobot_string_platforms: "Wszystkie nowoczesne przeglądarki, tablet z systemem Android, iPad, telefon z systemem Android, iPhone"
   tutorial_thunkableapps_string_platforms: "Chrome, Firefox, Safari, Android tablet, iPad, Android phone, iPhone"
   tutorial_toxicodedot_string_platforms: "Wszystkie współczesne przeglądarki"
@@ -3962,6 +3978,8 @@ pl:
   tutorial_vidcodeplastic_string_platforms: "All modern browsers, iPad"
   tutorial_vidcodetypeface_string_platforms: "All modern browsers, iPad"
   tutorial_washustorm_string_platforms: "Wszystkie współczesne przeglądarki"
+  tutorial_activitypackets_string_platforms: "Bez komputera"
+  tutorial_danceparty_string_detail_platforms: ""
   tutorial_chibitronics_string_detail_platforms: "Chibitronics Chibi Chip and Circuit Sticker LEDs"
   tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
@@ -4542,6 +4560,8 @@ pl:
   tutorial_vidcodeplastic_string_detail_platforms: ""
   tutorial_vidcodetypeface_string_detail_platforms: ""
   tutorial_washustorm_string_detail_platforms: ""
+  tutorial_activitypackets_string_detail_platforms: "Dash or Cue robot"
+  tutorial_danceparty_string_detail_programming_languages: "Bloki"
   tutorial_chibitronics_string_detail_programming_languages: "Bloki"
   tutorial_athlete_string_detail_programming_languages: "Bloki"
   tutorial_moana_string_detail_programming_languages: "Bloki"
@@ -5122,6 +5142,7 @@ pl:
   tutorial_vidcodeplastic_string_detail_programming_languages: "JavaScript"
   tutorial_vidcodetypeface_string_detail_programming_languages: "JavaScript"
   tutorial_washustorm_string_detail_programming_languages: "Bloki"
+  tutorial_activitypackets_string_detail_programming_languages: "Blocks, Wonder, Xylo, Blockly"
   school_not_found_heading: "Nie możemy znaleźć Twojej szkoły. Proszę podać więcej informacji."
   school_name: "Nazwa szkoły"
   school_name_error: "Wymagana jest nazwa szkoły."
