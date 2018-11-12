@@ -146,6 +146,10 @@ a:hover {
     background-size: cover;
   }
 
+  .sponsor-subtext-description {
+    margin-bottom: 0;
+  }
+
   .amazon-footer {
     padding-bottom: 20px;
   }
