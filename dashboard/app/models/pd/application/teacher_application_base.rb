@@ -40,6 +40,26 @@ module Pd::Application
     include Pd::TeacherCommonApplicationConstants
     include SchoolInfoDeduplicator
 
+    serialized_attrs %w(
+      scholarship_status
+    )
+
+    validate :scholarship_status_valid
+
+    def scholarship_status_valid
+      unless scholarship_status.nil? || self.class.scholarship_statuses.include?(scholarship_status)
+        errors.add(:scholarship_status, 'is not included in the list.')
+      end
+    end
+
+    def self.scholarship_statuses
+      %w(
+        no
+        yes_code_dot_org
+        yes_other
+      )
+    end
+
     # Updates the associated user's school info with the info from this teacher application
     # based on these rules in order:
     # 1. Application has a specific school? always overwrite the user's school info

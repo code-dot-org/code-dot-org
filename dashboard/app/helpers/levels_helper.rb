@@ -51,6 +51,8 @@ module LevelsHelper
   # regenerate the share video. Make sure this is only provided to views with
   # edit permission (ie, the project creator, but not the sharing view)
   def replay_video_view_options(channel = nil)
+    return unless DCDO.get('share_video_generation_enabled', true)
+
     signed_url = AWS::S3.presigned_upload_url(
       "cdo-p5-replay-source.s3.amazonaws.com",
       "source/#{channel || @view_options['channel']}",
@@ -555,7 +557,9 @@ module LevelsHelper
       callback: @callback,
       sublevelCallback: @sublevel_callback,
     }
-    app_options[:useRestrictedSongs] = CDO.cdn_enabled if @game == Game.dance
+    dev_with_credentials = rack_env?(:development) && (!!CDO.aws_access_key || !!CDO.aws_role) && !!CDO.cloudfront_key_pair_id
+    use_restricted_songs = CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
+    app_options[:useRestrictedSongs] = use_restricted_songs if @game == Game.dance
 
     if params[:blocks]
       level_options[:sharedBlocks] = Block.for(*params[:blocks].split(','))
