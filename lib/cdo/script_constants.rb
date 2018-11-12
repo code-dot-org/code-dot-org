@@ -51,7 +51,6 @@ module ScriptConstants
       # you must also update the cdo-tutorials gsheet so the end of script API works
 
       nil,
-      DANCE_PARTY_NAME = 'dance'.freeze,
       MINECRAFT_AQUATIC_NAME = 'aquatic'.freeze,
       MINECRAFT_HERO_NAME = 'hero'.freeze,
       MINECRAFT_NAME = 'mc'.freeze,

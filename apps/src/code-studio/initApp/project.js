@@ -88,6 +88,7 @@ var isEditing = false;
 let initialSaveComplete = false;
 let initialCaptureComplete = false;
 let thumbnailChanged = false;
+let thumbnailPngBlob = null;
 
 /**
  * Current state of our sources API data
@@ -793,6 +794,11 @@ var projects = module.exports = {
 
     if (preparingRemix) {
       return this.sourceHandler.prepareForRemix().then(completeAsyncSave);
+    } else if (thumbnailPngBlob) {
+      const blob = thumbnailPngBlob;
+      thumbnailPngBlob = null;
+      // Call completeAsyncSave even if thumbnail save fails.
+      return this.saveThumbnail(blob).then(completeAsyncSave, completeAsyncSave);
     } else {
       return completeAsyncSave();
     }
@@ -1281,6 +1287,17 @@ var projects = module.exports = {
    */
   getThumbnailUrl() {
     return current && current.thumbnailUrl;
+  },
+
+  /**
+   * Sets the thumbnailPngBlob variable. Caveat: This does not save the thumbnail to the current project.
+   * Use the saveThumbnail method to do that.
+   * @param {Blob} pngBlob A Blob in PNG format containing the thumbnail image.
+   */
+  setThumbnailPngBlob(pngBlob) {
+    if (pngBlob) {
+      thumbnailPngBlob = pngBlob;
+    }
   },
 
   /**

@@ -126,7 +126,7 @@ class Homepage
       [
         {
           text: "homepage_action_text_try_it",
-          type: "cta_button_hollow_white",
+          type: "cta_button_solid_white",
           url: "/hourofcode/overview"
         }
       ]
@@ -169,7 +169,7 @@ class Homepage
 
   def self.get_blocks(request)
     if request.language == "en"
-      @en_blocks_entries ||= [
+      [
         {
           id: "students-en",
           type: "block",
@@ -289,12 +289,12 @@ class Homepage
             id: 'flappy-nonen',
             title: 'studiobar_flappy_title',
             text: 'studiobar_flappy_body',
-            url: '/s/flappy/reset',
+            url: CDO.studio_url('/s/flappy/reset'),
             image: '/shared/images/courses/logo_tall_flappy.jpg'
           }
         end
 
-      @non_en_blocks_entries ||= [
+      [
         {
           id: "students-nonen",
           type: "blockshort",
@@ -332,7 +332,7 @@ class Homepage
           text: last_block[:text],
           color1: "185, 191, 21",
           color2: "209, 213, 103",
-          url: CDO.studio_url(last_block[:url]),
+          url: last_block[:url],
           image: last_block[:image]
         }
       ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
@@ -432,10 +432,10 @@ class Homepage
   def self.get_dance_stars
     stars = [
       "Katy Perry", "Madonna", "Keith Urban", "Sia", "Carly Rae Jepsen",
-      "Ciara", "Macklemore & Ryan Lewis", "Yolanda Be Cool, DCup",
-      "J Balvin, Willy William", "Bruce Springsteen", "a-ha", "Imagine Dragons",
+      "Ciara", "Macklemore and Ryan Lewis", "Yolanda Be Cool",
+      "J Balvin", "Bruce Springsteen", "A-ha", "Imagine Dragons",
       "Ariana Grande", "Justin Bieber", "Selena Gomez", "Lady Antebellum",
-      "Los Del Rio", "Bruno Mars", "Calvin Harris", "Luke Bryan", "Coldplay",
+      "Los del Rio", "Mark Ronson (ft. Bruno Mars)", "Calvin Harris", "Luke Bryan", "Coldplay",
       "Ace of Base", "The Weeknd", "Avicii", "MC Hammer", "Village People",
       "OutKast", "will.i.am", "Ed Sheeran"
     ]
