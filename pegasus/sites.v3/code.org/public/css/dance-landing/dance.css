@@ -146,6 +146,10 @@ a:hover {
   .tutorial-box {
     background-size: cover;
   }
+
+  .amazon-footer {
+    padding-bottom: 20px;
+  }
 }
 
 /* Tablet only */
