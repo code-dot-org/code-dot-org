@@ -12,10 +12,13 @@ cn:
   campaign_date_year: "2017"
   campaign_date_full_year: "2017年12月4日至12月10日"
   codeorg_homepage_hoc2018_curriculum: '继续更深入的使用 <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org 课程</a>'
+  codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: '编程一小时活动即将开始'
   codeorg_homepage_hoc2018_header_line2_desktop: '<span class="hoc2018-highlight-word">你将创建什么？</span>'
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_musician_before: 'Featuring'
+  codeorg_homepage_hoc2018_musician_after: 'and more!'
   codeorg_homepage_hoc2018_video: '观看视频'
   hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
   hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
@@ -295,7 +298,7 @@ cn:
   social_hoc2018_code_org_what_create: "Code.org: What will you create?"
   social_hoc2018_creativity_in_are_you: "The #HourOfCode is about creativity. I’m in! Are you?"
   social_hoc2018_dance_party: "Hour of Code: Dance Party"
-  social_hoc2018_dance_what_create: "Do a little dance. Make a little code. What will you create?"
+  social_hoc2018_dance_what_create: "Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   social_hoc2018_every_student: "Every student deserves the opportunity to express their creativity with computer science."
   social_hoc2018_every_student_try_what_create: "Every student deserves the opportunity to express their creativity with computer science. Try your hand at the new tutorials. What will you create?"
   social_hoc2018_hoc_coming_create: "The Hour of Code is coming. What will you create?"
@@ -304,6 +307,7 @@ cn:
   social_hoc2018_mc: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   social_hoc2018_mc_creativity: "Use your creativity and problem solving skills to explore and build underwater worlds with code."
   social_hoc2018_what_create: "What will you create?"
+  social_hoc2018_global_movement: "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
   map_title: "编程一小时地图"
   map_header: '世界各地的《编程一小时》活动'
   map_header_count_year: '%{event_count} 已注册的编程一小时活动 %{year}'
@@ -418,6 +422,7 @@ cn:
   videos_anybody_can_learn: 任何人都可以学习 (1分钟)
   title_country_resources: 不同国家的特殊资源
   title_hoc_advisory_committee: 编程一小时和 CSEdWeek 咨询委员会
+  title_how_to_promote: 传播信息
   title_how_to_districts: 地区如何主办编程一小时
   title_how_to_events: 编程一小时操作指南
   title_how_to_organizations: 如何主办编程一小时 —— 组织
@@ -482,6 +487,7 @@ cn:
   learn_banner_teachers: "教师：<a id='teacher_banner_host'> 主持一个小时</a>或<a id='teacher_banner_howto'> 阅读操作指南</a>"
   learn_robotics_banner_heading: '机器人'
   learn_robotics_banner_blurb: '有机器人？使用机器人执行下面的活动，为不同年龄的学生打造充实的“编程一小时”！'
+  tutorial_danceparty_name: "Dance Party"
   tutorial_chibitronics_name: "Chibitronics: Illuminated Story"
   tutorial_athlete_name: "编写你专属的运动游戏"
   tutorial_moana_name: "莫阿娜：代码给我指路"
@@ -1062,6 +1068,8 @@ cn:
   tutorial_vidcodeplastic_name: "Plastic Pollution PSA"
   tutorial_vidcodetypeface_name: "Create your own typeface!"
   tutorial_washustorm_name: "Stormy Science"
+  tutorial_activitypackets_name: "Wonder Workshop Activity Packets"
+  tutorial_danceparty_shortdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   tutorial_chibitronics_shortdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_shortdescription: "选择制作一款篮球游戏，或者制作一款综合运动游戏！"
   tutorial_moana_shortdescription: "勇敢无畏的Moana决心要找到她自己的路"
@@ -1642,6 +1650,8 @@ cn:
   tutorial_vidcodeplastic_shortdescription: "Learn to use loops, sin waves and customized emojis to make a unique project."
   tutorial_vidcodetypeface_shortdescription: "Create your own typeface using shapes and elements of typography. Type has more elements than you may have realized!"
   tutorial_washustorm_shortdescription: "Learn how to program an incoming storm."
+  tutorial_activitypackets_shortdescription: "Find hours of family-friendly fun with Wonder Workshop's printable packets of creative coding activities. Bring coding to life with Dash, Dot, and Cue robots by downloading these online and offline activities to use during Hour of Code and beyond!"
+  tutorial_danceparty_longdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   tutorial_chibitronics_longdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_longdescription: "选择制作一款篮球游戏，或者制作一款综合运动游戏！"
   tutorial_moana_longdescription: "新的迪斯尼《编程一小时》教程使用可视化编程语言-使用块, 学生只需拖放可视块来编写代码。可视化编程是一种有趣且容易理解的方法来教编码逻辑。视觉编程的曝光为基于文本的编程奠定了基础, 这是一个更复杂的活动。该教程是针对8岁以上的孩子和那些尝试第一次编码的人。可使用23种语言，并在美国以外地区进行本地化。本教程是免费提供在线, 并包括教育工作者和活动组织者的英语和西班牙语数字工具包。"
@@ -2222,6 +2232,8 @@ cn:
   tutorial_vidcodeplastic_longdescription: "The problem of plastic filling our oceans continues to worsen. Luckily, you can make your voice heard with code through the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript, you can make a second video about any subject you care about! Learn to use loops, sin waves and customized emojis to make a unique project."
   tutorial_vidcodetypeface_longdescription: "Create your own typeface using shapes and elements of typography. Type has more elements than you may have realized! So far we have talked about fonts and how they are different styles of text. Fonts are actually just different styles of a typeface. A typeface is a family of fonts that have similar features."
   tutorial_washustorm_longdescription: "Learn how to program an incoming storm."
+  tutorial_activitypackets_longdescription: "Find hours of family-friendly fun with Wonder Workshop's printable packets of creative coding activities. Bring coding to life with Dash, Dot, and Cue robots by downloading these online and offline activities to use during Hour of Code and beyond!"
+  tutorial_danceparty_language: "多个"
   tutorial_chibitronics_language: "英文"
   tutorial_athlete_language: "英语、法语、西班牙语、意大利语、葡萄牙语（巴西）"
   tutorial_moana_language: "英语, 阿拉伯语, 中文 (简体), 中文 (繁体) 丹麦, 荷兰, 芬兰, 法国, 德国, 印度尼西亚, 意大利, 日本, 韩国, 挪威, 波兰, 波利尼西亚 (萨摩亚), 葡萄牙, 俄罗斯, 西班牙, 瑞典, 土耳其, 乌克兰, 越南"
@@ -2709,7 +2721,7 @@ cn:
   tutorial_codemojipizza_language: "英文"
   tutorial_moonlander_language: "英文"
   tutorial_sushicards_language: "英文"
-  tutorial_codesparkcreate_language: "Chinese, English, French, German, Italian, Japanese, Korean, Malay, Portuguese (Brazil), Spanish, Thai"
+  tutorial_codesparkcreate_language: "英语, 阿拉伯语, 阿塞拜疆语, 中文, 荷兰语, 法语, 德语, 希腊语, 印地文, 匈牙利语, 冰岛语, 印度尼西亚, 意大利, 日本, 韩国, 挪威, 波兰, 葡萄牙, 罗马尼亚, 俄罗斯, 塞尔维亚, 西班牙, 瑞典, 土耳其, 乌克兰"
   tutorial_hardvsoft_language: "英文"
   tutorial_codestersecard_language: "Chinese, English, Spanish"
   tutorial_codesterslogo_language: "Chinese, English, Spanish"
@@ -2802,6 +2814,8 @@ cn:
   tutorial_vidcodeplastic_language: "英文"
   tutorial_vidcodetypeface_language: "英文"
   tutorial_washustorm_language: "英文"
+  tutorial_activitypackets_language: "英文"
+  tutorial_danceparty_string_detail_grades: "二年级以上"
   tutorial_chibitronics_string_detail_grades: "幼儿园到五年级"
   tutorial_athlete_string_detail_grades: "二年级以上"
   tutorial_moana_string_detail_grades: "二年级以上"
@@ -3251,7 +3265,7 @@ cn:
   tutorial_blockscadicecream_string_detail_grades: "六年级以上"
   tutorial_blockscadpizza_string_detail_grades: "小学二年级到初中二年级"
   tutorial_blockscadsugar_string_detail_grades: "小学二年级到初中二年级"
-  tutorial_bsgridlight_string_detail_grades: "Pre-reader - Grade 9+"
+  tutorial_bsgridlight_string_detail_grades: "二年级以上"
   tutorial_bpartscratch_string_detail_grades: "六年级以上"
   tutorial_bpartvid_string_detail_grades: "六年级以上"
   tutorial_bpenglishscratch_string_detail_grades: "小学二年级到初中二年级"
@@ -3382,6 +3396,8 @@ cn:
   tutorial_vidcodeplastic_string_detail_grades: "六年级以上"
   tutorial_vidcodetypeface_string_detail_grades: "六年级以上"
   tutorial_washustorm_string_detail_grades: "幼儿园到五年级"
+  tutorial_activitypackets_string_detail_grades: "幼儿园到初中二年级"
+  tutorial_danceparty_string_platforms: "所有较新的浏览器，安卓平板电脑，iPad，安卓手机，iPhone"
   tutorial_chibitronics_string_platforms: "所有高版本浏览器"
   tutorial_athlete_string_platforms: "所有高版本浏览器"
   tutorial_moana_string_platforms: "所有较新的浏览器，安卓平板电脑，iPad"
@@ -3821,7 +3837,7 @@ cn:
   tutorial_bcpy2_string_platforms: "所有高版本浏览器"
   tutorial_bcjs1_string_platforms: "所有高版本浏览器"
   tutorial_bcjs2_string_platforms: "所有高版本浏览器"
-  tutorial_3dbearmars_string_platforms: ""
+  tutorial_3dbearmars_string_platforms: "安卓平板电脑，iPad，Android 手机 iPhone"
   tutorial_alexaskill_string_platforms: "所有高版本浏览器"
   tutorial_bitsboxyak_string_platforms: ""
   tutorial_blockscadbargraphs_string_platforms: "所有高版本浏览器"
@@ -3880,13 +3896,13 @@ cn:
   tutorial_discovery_string_platforms: "所有高版本浏览器"
   tutorial_csfirstname_string_platforms: "所有高版本浏览器"
   tutorial_obstaclecourse_string_platforms: "iPad"
-  tutorial_edisonmove_string_platforms: ""
-  tutorial_edisonspider_string_platforms: ""
-  tutorial_edisonspotlight_string_platforms: ""
+  tutorial_edisonmove_string_platforms: "所有高版本浏览器"
+  tutorial_edisonspider_string_platforms: "All modern browsers, iPad, Android tablets"
+  tutorial_edisonspotlight_string_platforms: "All modern browsers, iPad, Android tablets"
   tutorial_firiapython_string_platforms: "所有高版本浏览器"
   tutorial_gamefrootsquid_string_platforms: "各种当代浏览器、Ipad、不插电教学"
-  tutorial_duckpiano_string_platforms: "Chrome、 火狐、 Safari"
-  tutorial_gpsound_string_platforms: "Chrome、 火狐、 Safari"
+  tutorial_duckpiano_string_platforms: "所有高版本浏览器"
+  tutorial_gpsound_string_platforms: "所有高版本浏览器"
   tutorial_groklearningpython_string_platforms: "所有高版本浏览器"
   tutorial_htmltimetravel_string_platforms: "所有高版本浏览器"
   tutorial_hp_flappy_string_platforms: "iPad"
@@ -3938,9 +3954,9 @@ cn:
   tutorial_spherotext3_string_platforms: "所有较新的浏览器，安卓平板电脑，iPad，安卓手机，iPhone"
   tutorial_spherotext4_string_platforms: "所有较新的浏览器，安卓平板电脑，iPad，安卓手机，iPhone"
   tutorial_spheroraptor_string_platforms: "所有较新的浏览器，安卓平板电脑，iPad，安卓手机，iPhone"
-  tutorial_stempiday_string_platforms: "所有较新的浏览器，安卓平板电脑，iPad"
-  tutorial_stemplanetoids_string_platforms: "所有较新的浏览器，安卓平板电脑，iPad"
-  tutorial_stempong_string_platforms: "所有较新的浏览器，安卓平板电脑，iPad"
+  tutorial_stempiday_string_platforms: "所有高版本浏览器"
+  tutorial_stemplanetoids_string_platforms: "所有高版本浏览器"
+  tutorial_stempong_string_platforms: "所有高版本浏览器"
   tutorial_algobot_string_platforms: "所有较新的浏览器，安卓平板电脑，iPad，安卓手机，iPhone"
   tutorial_thunkableapps_string_platforms: "Chrome, Firefox, Safari, Android tablet, iPad, Android phone, iPhone"
   tutorial_toxicodedot_string_platforms: "所有高版本浏览器"
@@ -3962,6 +3978,8 @@ cn:
   tutorial_vidcodeplastic_string_platforms: "各种当代浏览器、Ipad、不插电教学"
   tutorial_vidcodetypeface_string_platforms: "各种当代浏览器、Ipad、不插电教学"
   tutorial_washustorm_string_platforms: "所有高版本浏览器"
+  tutorial_activitypackets_string_platforms: "未插电"
+  tutorial_danceparty_string_detail_platforms: ""
   tutorial_chibitronics_string_detail_platforms: "Chibitronics Chibi Chip and Circuit Sticker LEDs"
   tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
@@ -4542,6 +4560,8 @@ cn:
   tutorial_vidcodeplastic_string_detail_platforms: ""
   tutorial_vidcodetypeface_string_detail_platforms: ""
   tutorial_washustorm_string_detail_platforms: ""
+  tutorial_activitypackets_string_detail_platforms: "Dash or Cue robot"
+  tutorial_danceparty_string_detail_programming_languages: "方块"
   tutorial_chibitronics_string_detail_programming_languages: "方块"
   tutorial_athlete_string_detail_programming_languages: "方块"
   tutorial_moana_string_detail_programming_languages: "方块"
@@ -5122,6 +5142,7 @@ cn:
   tutorial_vidcodeplastic_string_detail_programming_languages: "JavaScript"
   tutorial_vidcodetypeface_string_detail_programming_languages: "JavaScript"
   tutorial_washustorm_string_detail_programming_languages: "方块"
+  tutorial_activitypackets_string_detail_programming_languages: "Blocks, Wonder, Xylo, Blockly"
   school_not_found_heading: "我们找不到你的学校。请输入更多信息。"
   school_name: "学校名"
   school_name_error: "必须填写学校名字"
