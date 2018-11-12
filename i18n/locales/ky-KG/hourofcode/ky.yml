@@ -12,10 +12,13 @@ ky:
   campaign_date_year: "2017"
   campaign_date_full_year: "2017, 4-10-декабрда"
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
+  codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
   codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_musician_before: 'Featuring'
+  codeorg_homepage_hoc2018_musician_after: 'and more!'
   codeorg_homepage_hoc2018_video: 'Watch our video'
   hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
   hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
@@ -295,7 +298,7 @@ ky:
   social_hoc2018_code_org_what_create: "Code.org: What will you create?"
   social_hoc2018_creativity_in_are_you: "The #HourOfCode is about creativity. I’m in! Are you?"
   social_hoc2018_dance_party: "Hour of Code: Dance Party"
-  social_hoc2018_dance_what_create: "Do a little dance. Make a little code. What will you create?"
+  social_hoc2018_dance_what_create: "Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   social_hoc2018_every_student: "Every student deserves the opportunity to express their creativity with computer science."
   social_hoc2018_every_student_try_what_create: "Every student deserves the opportunity to express their creativity with computer science. Try your hand at the new tutorials. What will you create?"
   social_hoc2018_hoc_coming_create: "The Hour of Code is coming. What will you create?"
@@ -304,6 +307,7 @@ ky:
   social_hoc2018_mc: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   social_hoc2018_mc_creativity: "Use your creativity and problem solving skills to explore and build underwater worlds with code."
   social_hoc2018_what_create: "What will you create?"
+  social_hoc2018_global_movement: "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
   map_title: "Код саатынын картасы"
   map_header: 'Дүйнө жүзүндөгү #Код сааты иш-чаралары'
   map_header_count_year: '%{event_count} events registered in %{year}'
@@ -418,6 +422,7 @@ ky:
   videos_anybody_can_learn: Каалаган үйрөнө алат (1 мүн)
   title_country_resources: Өлкөгө тиешелүү ресурсттар
   title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
+  title_how_to_promote: Маалымат тараткыла
   title_how_to_districts: Код саатын райондордо кантип өтүү керек
   title_how_to_events: Код сааты иш-чарасын кантип өткөзүү керек
   title_how_to_organizations: Код саатын кантип өткөзүү керек - Уюмдар
@@ -482,6 +487,7 @@ ky:
   learn_banner_teachers: "Мугалимдер: <a id='teacher_banner_host'>Код саатын өткүлө</a> же <a id='teacher_banner_howto'>кантип өтүү жетектемесин окугула</a>"
   learn_robotics_banner_heading: 'Роботикс жана схемалар'
   learn_robotics_banner_blurb: 'Роботтор же физикалык эсептөөчү жабдыктар барбы? Аларды алдында берилген тапшырмаларда колдонуп, бардык курактардагы окуучуларга реалдуу Код саатын өткөргүлө! Кээ бир тапшырмалар симуляцияны сунуш кылышат, ошондуктан силер ишти куралсыз баштай аласыңар.'
+  tutorial_danceparty_name: "Dance Party"
   tutorial_chibitronics_name: "Chibitronics: Illuminated Story"
   tutorial_athlete_name: "Өздүк спорт оюнуңду коддо"
   tutorial_moana_name: "Моана: Код менен жол табуу"
@@ -1062,6 +1068,8 @@ ky:
   tutorial_vidcodeplastic_name: "Plastic Pollution PSA"
   tutorial_vidcodetypeface_name: "Create your own typeface!"
   tutorial_washustorm_name: "Stormy Science"
+  tutorial_activitypackets_name: "Wonder Workshop Activity Packets"
+  tutorial_danceparty_shortdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   tutorial_chibitronics_shortdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_shortdescription: "Баскетбол оюнун же спорттун түрлөрүн аралаштырып түзүүнү тандагыла!"
   tutorial_moana_shortdescription: "Моана эр жүрөк, кайраттуу жана өз жолун табууга чечкиндүү баратат."
@@ -1642,6 +1650,8 @@ ky:
   tutorial_vidcodeplastic_shortdescription: "Learn to use loops, sin waves and customized emojis to make a unique project."
   tutorial_vidcodetypeface_shortdescription: "Create your own typeface using shapes and elements of typography. Type has more elements than you may have realized!"
   tutorial_washustorm_shortdescription: "Learn how to program an incoming storm."
+  tutorial_activitypackets_shortdescription: "Find hours of family-friendly fun with Wonder Workshop's printable packets of creative coding activities. Bring coding to life with Dash, Dot, and Cue robots by downloading these online and offline activities to use during Hour of Code and beyond!"
+  tutorial_danceparty_longdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   tutorial_chibitronics_longdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_longdescription: "Баскетбол оюнун же спорттун түрлөрүн аралаштырып түзүүнү тандагыла!"
   tutorial_moana_longdescription: "Disney'дин жаңы Код сааты окуу китебинде окуучулар код жазыш үчүн блокторду сүйрөп койгон визуалдык програмдоо тили колдонулат. Визуалдык програмдоо - код жазуу логикасыны үйрөтүүнүн көңүлдүү жана түшүнүктүү ыкмасы. Визуалдык програмдоонун таасир этүүсү татаалыраак тапшырмага - текстте негизделген програмдоого негизин салат. Окуу китеби биринчи жолу код жазууга үйрөнө тургандарга жана 8+ балдарга арналган. 23 тилде жеткиликтүү жана Акш чегинин тышында локализацияланган. Бул окуу китептин жеткиликтүү вариантын онлайн таба аласыз, ал окутуучулар жана иш-чаралардын уюштуруучулары үчүн англис жана испан тилиндеги санариптик аспаптардын жыйндысын камтыйт."
@@ -2222,6 +2232,8 @@ ky:
   tutorial_vidcodeplastic_longdescription: "The problem of plastic filling our oceans continues to worsen. Luckily, you can make your voice heard with code through the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript, you can make a second video about any subject you care about! Learn to use loops, sin waves and customized emojis to make a unique project."
   tutorial_vidcodetypeface_longdescription: "Create your own typeface using shapes and elements of typography. Type has more elements than you may have realized! So far we have talked about fonts and how they are different styles of text. Fonts are actually just different styles of a typeface. A typeface is a family of fonts that have similar features."
   tutorial_washustorm_longdescription: "Learn how to program an incoming storm."
+  tutorial_activitypackets_longdescription: "Find hours of family-friendly fun with Wonder Workshop's printable packets of creative coding activities. Bring coding to life with Dash, Dot, and Cue robots by downloading these online and offline activities to use during Hour of Code and beyond!"
+  tutorial_danceparty_language: "Бир нече"
   tutorial_chibitronics_language: "Англисче"
   tutorial_athlete_language: "Англисче, французча, испанча, италиянча, португалча (Бразилия)"
   tutorial_moana_language: "Англисче, арабча, кытайча (жөнөкөйлөштүрүлгөн), кытайча (салттуу), датча, нидерландча, финче, французча, немисче, индонезияча, итальянча, жапончо, корейче, норвежче, полякча, полинезияча (Самоа), португалча, орусча, испанча, шведча, түркчө, украинче, вьетнамча"
@@ -2709,7 +2721,7 @@ ky:
   tutorial_codemojipizza_language: "Англисче"
   tutorial_moonlander_language: "Англисче"
   tutorial_sushicards_language: "Англисче"
-  tutorial_codesparkcreate_language: "Chinese, English, French, German, Italian, Japanese, Korean, Malay, Portuguese (Brazil), Spanish, Thai"
+  tutorial_codesparkcreate_language: "Англисче, арабча, азербайжанча, кытайча, нидерландча, французча, немисче, грекче, хиндиче, венгерче, исландияча, индонезияча, итальянча, жапончо, корейче, норвежче, полякча, португалча, румынча, орусча, сербче, испанча, шведче, түркчө, украинче"
   tutorial_hardvsoft_language: "Англисче"
   tutorial_codestersecard_language: "Chinese, English, Spanish"
   tutorial_codesterslogo_language: "Chinese, English, Spanish"
@@ -2802,6 +2814,8 @@ ky:
   tutorial_vidcodeplastic_language: "Англисче"
   tutorial_vidcodetypeface_language: "Англисче"
   tutorial_washustorm_language: "Англисче"
+  tutorial_activitypackets_language: "Англисче"
+  tutorial_danceparty_string_detail_grades: "2+ класстар"
   tutorial_chibitronics_string_detail_grades: "2-5-класстар"
   tutorial_athlete_string_detail_grades: "2+ класстар"
   tutorial_moana_string_detail_grades: "2+ класстар"
@@ -3251,7 +3265,7 @@ ky:
   tutorial_blockscadicecream_string_detail_grades: "6+ класстар"
   tutorial_blockscadpizza_string_detail_grades: "6-8-класстар"
   tutorial_blockscadsugar_string_detail_grades: "6-8-класстар"
-  tutorial_bsgridlight_string_detail_grades: "Pre-reader - Grade 9+"
+  tutorial_bsgridlight_string_detail_grades: "2+ класстар"
   tutorial_bpartscratch_string_detail_grades: "6+ класстар"
   tutorial_bpartvid_string_detail_grades: "6+ класстар"
   tutorial_bpenglishscratch_string_detail_grades: "2-8-класстар"
@@ -3382,6 +3396,8 @@ ky:
   tutorial_vidcodeplastic_string_detail_grades: "6+ класстар"
   tutorial_vidcodetypeface_string_detail_grades: "6+ класстар"
   tutorial_washustorm_string_detail_grades: "2-5-класстар"
+  tutorial_activitypackets_string_detail_grades: "Окуучу+ - 8-класс"
+  tutorial_danceparty_string_platforms: "Бардык жаңы браузерлер, Android планшети, iPad, Android телефону, iPhone"
   tutorial_chibitronics_string_platforms: "Бардык жаңы браузерлер"
   tutorial_athlete_string_platforms: "Бардык жаңы браузерлер"
   tutorial_moana_string_platforms: "Бардык жаңы браузерлер, Android планшети, iPad"
@@ -3821,7 +3837,7 @@ ky:
   tutorial_bcpy2_string_platforms: "Бардык жаңы браузерлер"
   tutorial_bcjs1_string_platforms: "Бардык жаңы браузерлер"
   tutorial_bcjs2_string_platforms: "Бардык жаңы браузерлер"
-  tutorial_3dbearmars_string_platforms: ""
+  tutorial_3dbearmars_string_platforms: "Android планшети, iPad, Android телефону, iPhone"
   tutorial_alexaskill_string_platforms: "Бардык жаңы браузерлер"
   tutorial_bitsboxyak_string_platforms: ""
   tutorial_blockscadbargraphs_string_platforms: "Бардык жаңы браузерлер"
@@ -3880,13 +3896,13 @@ ky:
   tutorial_discovery_string_platforms: "Бардык жаңы браузерлер"
   tutorial_csfirstname_string_platforms: "Бардык жаңы браузерлер"
   tutorial_obstaclecourse_string_platforms: "iPad"
-  tutorial_edisonmove_string_platforms: ""
-  tutorial_edisonspider_string_platforms: ""
-  tutorial_edisonspotlight_string_platforms: ""
+  tutorial_edisonmove_string_platforms: "Бардык жаңы браузерлер"
+  tutorial_edisonspider_string_platforms: "All modern browsers, iPad, Android tablets"
+  tutorial_edisonspotlight_string_platforms: "All modern browsers, iPad, Android tablets"
   tutorial_firiapython_string_platforms: "Бардык жаңы браузерлер"
   tutorial_gamefrootsquid_string_platforms: "Бардык жаңы браузерлер, iPad"
-  tutorial_duckpiano_string_platforms: "Chrome, Firefox, Safari"
-  tutorial_gpsound_string_platforms: "Chrome, Firefox, Safari"
+  tutorial_duckpiano_string_platforms: "Бардык жаңы браузерлер"
+  tutorial_gpsound_string_platforms: "Бардык жаңы браузерлер"
   tutorial_groklearningpython_string_platforms: "Бардык жаңы браузерлер"
   tutorial_htmltimetravel_string_platforms: "Бардык жаңы браузерлер"
   tutorial_hp_flappy_string_platforms: "iPad"
@@ -3938,9 +3954,9 @@ ky:
   tutorial_spherotext3_string_platforms: "Бардык жаңы браузерлер, Android планшети, iPad, Android телефону, iPhone"
   tutorial_spherotext4_string_platforms: "Бардык жаңы браузерлер, Android планшети, iPad, Android телефону, iPhone"
   tutorial_spheroraptor_string_platforms: "Бардык жаңы браузерлер, Android планшети, iPad, Android телефону, iPhone"
-  tutorial_stempiday_string_platforms: "Бардык жаңы браузерлер, Android планшети, iPad"
-  tutorial_stemplanetoids_string_platforms: "Бардык жаңы браузерлер, Android планшети, iPad"
-  tutorial_stempong_string_platforms: "Бардык жаңы браузерлер, Android планшети, iPad"
+  tutorial_stempiday_string_platforms: "Бардык жаңы браузерлер"
+  tutorial_stemplanetoids_string_platforms: "Бардык жаңы браузерлер"
+  tutorial_stempong_string_platforms: "Бардык жаңы браузерлер"
   tutorial_algobot_string_platforms: "Бардык жаңы браузерлер, Android планшети, iPad, Android телефону, iPhone"
   tutorial_thunkableapps_string_platforms: "Chrome, Firefox, Safari, Android tablet, iPad, Android phone, iPhone"
   tutorial_toxicodedot_string_platforms: "Бардык жаңы браузерлер"
@@ -3962,6 +3978,8 @@ ky:
   tutorial_vidcodeplastic_string_platforms: "Бардык жаңы браузерлер, iPad"
   tutorial_vidcodetypeface_string_platforms: "Бардык жаңы браузерлер, iPad"
   tutorial_washustorm_string_platforms: "Бардык жаңы браузерлер"
+  tutorial_activitypackets_string_platforms: "Офлайн"
+  tutorial_danceparty_string_detail_platforms: ""
   tutorial_chibitronics_string_detail_platforms: "Chibitronics Chibi Chip and Circuit Sticker LEDs"
   tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
@@ -4542,6 +4560,8 @@ ky:
   tutorial_vidcodeplastic_string_detail_platforms: ""
   tutorial_vidcodetypeface_string_detail_platforms: ""
   tutorial_washustorm_string_detail_platforms: ""
+  tutorial_activitypackets_string_detail_platforms: "Dash or Cue robot"
+  tutorial_danceparty_string_detail_programming_languages: "Блоктор"
   tutorial_chibitronics_string_detail_programming_languages: "Блоктор"
   tutorial_athlete_string_detail_programming_languages: "Блоктор"
   tutorial_moana_string_detail_programming_languages: "Блоктор"
@@ -5122,6 +5142,7 @@ ky:
   tutorial_vidcodeplastic_string_detail_programming_languages: "JavaScript"
   tutorial_vidcodetypeface_string_detail_programming_languages: "JavaScript"
   tutorial_washustorm_string_detail_programming_languages: "Блоктор"
+  tutorial_activitypackets_string_detail_programming_languages: "Blocks, Wonder, Xylo, Blockly"
   school_not_found_heading: "Мектебиңерди таба алган жокпуз. Кошумча маалымат бериңиз."
   school_name: "Мектептин аты"
   school_name_error: "Мектептин аты керек."
