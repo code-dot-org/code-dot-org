@@ -438,7 +438,7 @@ class Homepage
       "Los del Rio", "Mark Ronson (ft. Bruno Mars)", "Calvin Harris", "Luke Bryan", "Coldplay",
       "Ace of Base", "The Weeknd", "Avicii", "MC Hammer", "Village People",
       "OutKast", "will.i.am", "Ed Sheeran"
-    ]
+    ].sort
 
     DCDO.get("hoc2018_dance_stars", stars)
   end
