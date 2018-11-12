@@ -432,9 +432,9 @@ class Homepage
   def self.get_dance_stars
     stars = [
       "Ace of Base", "A-ha", "Ariana Grande", "Avicii", "Bruce Springsteen", "Calvin Harris",
-      "Carly Rae Jepsen", "Ciara", "Coldplay", "Ed Sheeran", "Imagine Dragons", "J Balvin",
-      "Justin Bieber", "Katy Perry", "Keith Urban", "Lady Antebellum", "Lady Gaga", "Los del Río",
-      "Luke Bryan", "Macklemore and Ryan Lewis", "Madonna", "Mark Ronson (ft. Bruno Mars)",
+      "Carly Rae Jepsen", "Ciara", "Coldplay", "Don Omar", "Ed Sheeran", "Imagine Dragons",
+      "J Balvin", "Justin Bieber", "Katy Perry", "Keith Urban", "Lady Antebellum", "Lady Gaga",
+      "Los del Río", "Luke Bryan", "Macklemore and Ryan Lewis", "Madonna", "Mark Ronson (ft. Bruno Mars)",
       "MC Hammer", "Miley Cyrus", "Nicki Minaj", "OutKast", "Selena Gomez", "Sia",
       "The Weeknd", "Village People", "will.i.am", "Yolanda Be Cool"
     ]
