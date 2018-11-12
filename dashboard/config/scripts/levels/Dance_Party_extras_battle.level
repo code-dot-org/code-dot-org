@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 182,
   "properties": {
-    "skin": "gamelab",
+    "skin": "dance",
     "helper_libraries": [
       "DanceLab"
     ],
@@ -38,7 +38,7 @@
     "block_pool": "Dancelab",
     "name_suffix": "_draft",
     "skip_autosave": true,
-    "default_song": "hammer",
+    "default_song": "iliketomoveit_william",
     "long_instructions": "# Dance Crews\r\n\r\nHere's a dance off between two crews. The arrow keys control one of the dancers and the \"w,a,s,d\" keys control the other. Have a dance off with a friend, and then try to improve this dance off.\r\n\r\n* Add more keys to control dances\r\n* Make the backup dancers also respond when the keys are pressed\r\n* Alternate the dancer every 4 measures by setting their visibility",
     "soft_buttons": [
       "leftButton",
@@ -48,10 +48,7 @@
     ],
     "display_name": "Dance Crews",
     "contained_level_names": null,
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

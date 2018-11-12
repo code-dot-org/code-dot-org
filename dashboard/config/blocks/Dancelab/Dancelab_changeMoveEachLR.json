@@ -66,12 +66,24 @@
         "name": "MOVE",
         "options": [
           [
-            "Clap High",
-            "MOVES.ClapHigh"
+            "(Next)",
+            "\"next\""
           ],
           [
-            "Gangnam",
-            "MOVES.Clown"
+            "(Previous)",
+            "\"prev\""
+          ],
+          [
+            "(Random)",
+            "\"rand\""
+          ],
+          [
+            "Body Roll",
+            "MOVES.Roll"
+          ],
+          [
+            "Clap High",
+            "MOVES.ClapHigh"
           ],
           [
             "Dab",
@@ -94,8 +106,8 @@
             "MOVES.Fresh"
           ],
           [
-            "Body Roll",
-            "MOVES.Roll"
+            "Gangnam",
+            "MOVES.Clown"
           ],
           [
             "Star",
@@ -108,18 +120,6 @@
           [
             "Zombie",
             "MOVES.Thriller"
-          ],
-          [
-            "(Next)",
-            "\"next\""
-          ],
-          [
-            "(Previous)",
-            "\"prev\""
-          ],
-          [
-            "(Random)",
-            "\"rand\""
           ],
           [
             "None",
