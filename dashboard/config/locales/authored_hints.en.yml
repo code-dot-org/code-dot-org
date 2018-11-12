@@ -3532,7 +3532,19 @@ en:
           **Optional Challenge**
 
           Change the background effect at different points during the song by connecting the new block under the <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> events.
+      Dance_Events_Example_Video_authored_hint: {}
       Dance_Party_01_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+          * Make sure a dancer appears on the screen.
+
+          *This level ends after 4 measures.*
+        challenges: |-
+          **Optional Challenges**
+          * Choose a different song to play.
+          * Choose a different that looks like a moose!
+          * Rename your dancer.
+      Dance_Party_01_low_authored_hint:
         validation: |-
           **How do I pass this level?**
           * Make sure a dancer appears on the screen.
