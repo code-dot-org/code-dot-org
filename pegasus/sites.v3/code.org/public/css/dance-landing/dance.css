@@ -35,9 +35,7 @@
   color: #00adbc;
   text-align: center;
   margin-bottom: 15px;
-  font: 10px;
-  font-family: 'Gotham 5r', sans-serif;
-  line-height: 16px;
+  font: 10px/16px 'Gotham 5r', sans-serif;
   padding: 0 10px;
 }
 
@@ -154,6 +152,7 @@ a:hover {
   .tutorial-box {
     background-size: cover;
   }
+
 }
 
 /* Tablet only */
