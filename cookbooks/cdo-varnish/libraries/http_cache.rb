@@ -188,6 +188,11 @@ class HttpCache
             cookies: 'none'
           },
           {
+            path: '/api/v1/sound-library/*',
+            headers: [],
+            cookies: 'none'
+          },
+          {
             path: '/api/*',
             headers: WHITELISTED_HEADERS,
             cookies: whitelisted_cookies
@@ -205,7 +210,10 @@ class HttpCache
             cookies: whitelisted_cookies
           },
           {
-            path: '/v3/files-public/*',
+            path: %w(
+              /v3/files-public/*
+              /v3/sources-public/*
+            ),
             headers: [],
             cookies: 'none'
           },
