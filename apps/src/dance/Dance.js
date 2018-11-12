@@ -16,6 +16,7 @@ import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
+import {setThumbnailBlobFromCanvas} from '../util/thumbnail';
 import SignInOrAgeDialog from "../templates/SignInOrAgeDialog";
 import project from "../code-studio/initApp/project";
 import {
@@ -94,9 +95,7 @@ Dance.prototype.init = function (config) {
   this.danceReadyPromise = new Promise(resolve => {
     this.danceReadyPromiseResolve = resolve;
   });
-
   this.studioApp_.labUserId = config.labUserId;
-
   this.level.softButtons = this.level.softButtons || {};
 
   config.afterClearPuzzle = function () {
@@ -615,6 +614,7 @@ Dance.prototype.updateSongMetadata = function (id) {
  */
 Dance.prototype.onHandleEvents = function (currentFrameEvents) {
   this.hooks.find(v => v.name === 'runUserEvents').func(currentFrameEvents);
+  this.captureThumbnailImage();
 };
 
 /**
@@ -639,4 +639,13 @@ Dance.prototype.displayFeedback_ = function () {
 
 Dance.prototype.getAppReducers = function () {
   return reducers;
+};
+
+/**
+ * Capture a thumbnail image of the play space. This will capture a PNG blob
+ * of the thumbnail in memory, then will save that blob to S3 when the project
+ * is saved.
+ */
+Dance.prototype.captureThumbnailImage = function () {
+  setThumbnailBlobFromCanvas(document.getElementById('defaultCanvas0'));
 };

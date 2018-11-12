@@ -1,5 +1,7 @@
 // Dance Party song titles mapped to the artist's Twitter handle to use in the // ShareDialog share links. Not all songs are available in all environments,
-// and the full list of Dance Party songs can be found at: https://s3.console.aws.amazon.com/s3/buckets/cdo-sound-library/hoc_song_meta/?region=us-east-1&tab=overview
+// and the full list of in-use Dance Party songs can be found at: https://s3.console.aws.amazon.com/s3/buckets/cdo-sound-library/hoc_song_meta/?region=us-east-1&tab=overview
+//Full list of songs including potential (reflected here) can be found at:
+// https://tinyurl.com/y9r5xx5d
 
 export const SongTitlesToArtistTwitterHandle = {
   "backtoyou_selenagomez" : "SelenaGomez",
@@ -7,10 +9,9 @@ export const SongTitlesToArtistTwitterHandle = {
   "callmemaybe_carlyraejepsen": "CarlyRaeJepsen",
   "cantfeelmyface_theweeknd" : "TheWeeknd",
   "cantholdus_macklemore" : "Macklemore",
-  "cheapthrills_sia" : "SiaMusic",
+  "cheapthrills_sia" : "Sia",
   "countrygirl_lukebryan" : "LukeBryanOnline",
   "dancinginthedark_brucespringsteen" : "Springsteen",
-  "danzakuduro_donomar" : "DONOMAR",
   "heyya_outkast" : "Outkast",
   "iliketomoveit_william" : "iamwill",
   "getintothegroove_madonna" : "Madonna",
@@ -18,7 +19,7 @@ export const SongTitlesToArtistTwitterHandle = {
   "macarena_losdelrio" : "LosDelRioMusic",
   "migente_jbalvin" : "JBalvin",
   "needyounow_ladyantebellum" : "LadyAntebellum",
-  "nottearslefttocry_arianagrande" : "ArianGrande",
+  "nottearslefttocry_arianagrande" : "ArianaGrande",
   "shapeofyou_edsheeran" : "EdSheeran",
   "somebodylikeyou_keithurban" : "KeithUrban",
   "sorry_justinbieber" : "JustinBieber",
@@ -33,7 +34,26 @@ export const SongTitlesToArtistTwitterHandle = {
   "wecantstop_mileycyrus" : "MileyCyrus",
   "wenospeakamericano_yolandabecool" : "YolandaBeCool",
   "ymca_villagepeople" : "VillagePeople",
-  // These are the tracks available locally tweet @codeorg to avoid spamming anyone.
+  // These tracks available locally, tweet @codeorg to avoid spamming anyone.
   "jazzy_beats" : "codeorg",
-  "synthesize" : "codeorg"
+  "synthesize" : "codeorg",
+  // These tracks are currently only potential. If we get licensing, we'll be
+  // able to tweet the artist without an additional DTP.
+  "onedance_drake" : "Drake",
+  "starships_nickiminaj" : "NickiMinaj",
+  "elprestamo_maluma" : "Maluma",
+  "despacito_luisfonsi" : "LuisFonsi",
+  "tunaktunaktun_dalermehndi" : "DalerMehndi",
+  "sapescommejamias_maitregims" : "MaitreGIMS",
+  "lesercitodelselfie_takagi" : "TakagiBeatz",
+  "gangnamstyle_psy" : "Psy_Oppa",
+  "sophia_alvarosoler" : "AsolerMusic",
+  "danzakuduro_donomar" : "DONOMAR",
+  "cestlavie_khaled" : "Khaled_Officiel",
+  "occidentaliskarma_francescogabbani" : "FrankGabbani",
+  "isthatforme_anitta" : "Anitta",
+  "showdapoderosas_anitta" : "Anitta",
+  "janti_muratboz" : "MuratBoz",
+  "gee_girlsgen" : "GirlsGeneration",
+  "growingpains_alessiacara" : "AlessiaCara",
 };
