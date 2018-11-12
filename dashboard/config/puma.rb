@@ -1,6 +1,7 @@
 path = File.expand_path('../../deployment.rb', __FILE__)
 path = File.expand_path('../../../deployment.rb', __FILE__) unless File.file?(path)
 require path
+require 'cdo/aws/metrics'
 
 if CDO.dashboard_sock
   bind "unix://#{CDO.dashboard_sock}"
