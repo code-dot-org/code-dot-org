@@ -1,7 +1,13 @@
+.resources {
+  margin-top: 45px;
+}
+
 .resource-card {
   height: 300px;
   width: 468px;
-  border: 1px solid gray;
+  border: none;
+  margin-left: 5px;
+  margin-right: 5px;
   margin-bottom: 20px;
   overflow: hidden;
   position: relative;
@@ -42,15 +48,33 @@
   color: #5b6770;
 }
 
+.col-50:nth-child(2) {
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 970px) {
+  .col-50 {
+    padding-left: 10px;
+  }
+}
+
+
 @media screen and (min-width: 0px) and (max-width: 470px) {
   .resource-card {
     height: 468px;
     width: 300px;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .resource-gif {
-    width: 300px;
-    float: left;
+    width: 100%
+  }
+
+  .resource-gif img {
+    margin-top: -50px;
+    width: 100%
   }
 
   .resource-text-box {

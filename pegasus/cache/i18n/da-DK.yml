@@ -2198,13 +2198,14 @@
   applab_tile_title: Intro to App Lab (Ages 13+)
   applab_tile_subtitle: Create your own app in JavaScript using block based programming.
     Or take your skills to the next level with text-based programming. (English Only)
-  applab_tile_start_tutorial: Start tutorial
+  applab_tile_start_tutorial: Start
   applab_tile_teacher_guide: View teacher guide
   aquatic_name: 'Minecraft: Voyage Aquatic'
   account_sign_up_child_accept_terms: I confirm that I have my parent or legal guardian's
     permission to use the Code.org services.
   hoc_overview_dance_title: Dance Party
-  hoc_overview_dance_subtitle: Code a Dance Party to share with your friends.
+  hoc_overview_dance_subtitle: Code a Dance Party to share with your friends. Featuring
+    Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
   hoc_overview_title: Hour of Code Activities from Code.org
   hoc_overview_subtitle: The <a href="https://hourofcode.com">Hour of Code</a> is
     a global movement reaching tens of millions of students in 180+ countries. Anyone,
@@ -2215,8 +2216,8 @@
     science activities for all ages and experience levels, developed by Code.org and
     partners.
   hoc_overview_partner_activities_link: View Activities
+  hoc_overview_start_tutorial: Start
   hoc_overview_view_teacher_guide: View teacher guide
-  hoc_overview_view_tutorial: View tutorial
   hoc2018_creativity: creativity
   hoc2018_creativity_hoc_coming: The Hour of Code is coming…
   hoc2018_creativity_what_will_you_create: What will you create?
@@ -2299,13 +2300,13 @@
   hoc2018_dance_party_subheading: Help translate Dance Party
   hoc2018_dance_create_your_own_dance_title: Create Your Own Dance Party
   hoc2018_dance_party_box_title: Dance Party
-  hoc2018_dance_party_box_description: 'Featuring music by:'
+  hoc2018_dance_party_box_description: Code a Dance Party to share with your friends!
   hoc2018_dance_party_specs: Language | Format | Age 6-106
   hoc2018_dance_keep_on_dancing_box_title: Keep On Dancing
   hoc2018_dance_keep_on_dancing_description: Go beyond the first hour with extended
     project ideas.
   hoc2018_dance_keep_on_dancing_specs: Language | Format | Age 13+
-  hoc2018_dance_keep_on_dancing_button: Go Beyond
+  hoc2018_dance_keep_on_dancing_button: Start Part 2
   hoc2018_dance_teacher_resources_title: Teacher Resources
   hoc2018_dance_teacher_resources_tile1_description: Lesson plans, certificates, and
     music filtering.
