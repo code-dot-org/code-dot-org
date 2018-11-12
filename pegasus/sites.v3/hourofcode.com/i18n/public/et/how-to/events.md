@@ -5,62 +5,62 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to organize an Hour of Code assembly or event
+# Kuidas korraldada KoodiTund üritust
 
-### Get your entire school or community involved in an Hour of Code!
+### Kaasa terve kool või kodukant KoodiTund kampaaniasse!
 
 ---
 
-## 1. Prepare for your event
+## 1. Ürituse ettevalmistus
 
-- Determine a venue, date, and time.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/promote/press-kit') %>) for help.
+- Vali toimumiskoht, kuupäev ja toimumisaeg.
+- Saada [kiri](https://hourofcode.com/promote/resources#sample-emails) omvalitsuse juhile, rahvasaadikutele, tuntud äriinimestele jt ning kutsu neid esinema. Loe lähemalt[ Kuidas teha juhis](<%=localized_file('/files/elected-official.pdf')%>) kui kaasate parlamendiliikmeid/poliitikuid KoodiTund üritusse.
+- Kutsu üritusele ka kohalik meedia, blogijad. Lisainfo meie[ pressimaterjalist](<%= resolve_url('/promote/press-kit') %>).
 
-## 2. During your event
+## 2. Ürituse ajal
 
-- Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/promote/stats') %>).   
+- Alusta üritust ühe meie [ inspireeriva video näitamisega.](<%= resolve_url('/promote/resources#videos') %>).
+- Kõnele sissejuhatuseks, kui oluline on arvutiteadus, kasutades meie[ statistikat ja infograafikuid](<%= resolve_url('/promote/stats') %>).   
       
     
-- **Other event ideas**: 
-    - Invite a local industry leader to discuss his or her work involving computer science.
-    - Invite a local politician and have students teach him or her how to code.
-    - Have a group of students demonstrate an unplugged activity.
-    - Have a group of students teach the principal or a group of teachers how to code.
-    - If your school already teaches computer science, have students demo projects.
+- **Muud ideed ürituseks**: 
+    - Kutsu üritusele kohalikud It-valdkonna juhid, et nad räägiksid, kuidas nende töö on arvutiteadustega seotud.
+    - Kutsu kohalik poliitik ning lase õpilastel talle programmeerimist õpetada.
+    - Grupp õpilasi võib näidata KoodiTund ürituse arvutivaba tegevust.
+    - Grupp õpilasi võib õpetada kooli direktorile või õpetajatele programmeerimist.
+    - Kui koolis juba õpetatakse arvutiteadust, siis lase õpilastel oma töid tutvustada.
 
-## 3. Share how it went
+## 3. Jaga teistega
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
-
----
-
-## Host a Family Code Night with the Hour of Code and invite parents to participate
-
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Jaga oma ürituse pilte Facebookis ja Twitteris kasutades #**HourOfCode**.
 
 ---
 
-## Example plan for a school assembly or event
+## Korralda KoodiTund programmeerimisõhtu ning kutsu lapsevanemad osalema
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+Korralda üritust noorematele lastele (lasteaiast kuni 5. klassini) ning kutsu lapsevanemaid KoodiTund üritusele. See on hea võimalus kogukonna kaasamiseks ning julgustada lapsevanemaid toetama arvutiteaduste õpetamist koolis. Meie koostööparnerid Family Code Night ürituse juures on koostanud juhendi, mis sisaldab kõike vajalikku ürituse planeerimiseks, reklaamimiseks ja läbiviimiseks. [Kliki siia ja lae alla ürituse korraldamise juhend](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
-**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+---
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+## Näidisplaan üritusele koolis
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**Üritus:** Kooliülene kogunemine arvutiteaduse nädala alguse tähistamiseks
 
-## Run of Show
+**Kuupäev: Arvutiteaduse nädala algus</p> 
 
-| Time             | Action                                                                                                                                           |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).                                                      |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>). |
-| 10:15 - 10:30 am | Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.            |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                        |
-| 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                              |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                |
+**Kellaaeg:** Koolipäeva vältel. Soovitavalt ennelõunal. Kestvus umbes 1 tund.
+
+**Toimumiskoht:** Kooli aula, spordisaal, kohvik vmt
+
+## Päevakava
+
+| Aeg           | Tegevus                                                                                                                                                                                               |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 | Alusta üritust ühe meie [ inspireeriva video näitamisega.](<%= resolve_url('/promote/resources#videos') %>).                                                                                            |
+| 10:05 - 10:15 | Koolidirektor annab ülevaate arvutiteaduse olulisusest. Kasuta meie[ statistikat ja infograafikuid](<%= resolve_url('/promote/stats') %>).                                                              |
+| 10:15 - 10:30 | Erikülaline tutvustab ennast ning kõneleb, kuidas tehnoloogia ja arvutiteadus nende igapäevaelus olulist rolli mängib.                                                                                |
+| 10:30 - 10:40 | Õpilased näitavad, kuidas nad KoodiTund ürituse raames programmeerivad. Asja lõbusamaks tegemiseks võivad hoopis õpilased olla õpetaja rollis ning õpetada direktorid, poliitikuid või teisi õpilasi! |
+| 10:40 - 11:00 | Õpilased näitavad KoodiTund ürituse arvutivaba tegevust, demonstreerimaks, et arvuiteaduse põhimõtteid võib ka ilma arvutita õpetada.                                                                 |
+| 11:00 - 11:05 | Korraldaja lõpusõnad.                                                                                                                                                                                 |
 
 <%= view :signup_button %>

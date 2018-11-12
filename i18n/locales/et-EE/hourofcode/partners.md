@@ -113,31 +113,31 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% end %>
 
-# Major Partners and Corporate Supporters
+# Peamised partnerid ja korporatiivtoetajad
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# International Partners
+# Rahvusvahelised partnerid
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Tunniplaani ja juhendite koostamise partnerid
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Infrastructure Partners and Tools
+# Infrastruktuuri ja vahendite partnerid
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 * * *
 
-# Additional Partners
+# Täiendavad partnerid
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 
