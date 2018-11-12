@@ -39,22 +39,6 @@ before_fork do
   end
 end
 
-on_worker_shutdown do
-  # This method posts metrics asynchronously to AWS, so this metric is unlikely to be published before worker shutdown.
-  Cdo::Metrics.push(
-    'App Server',
-    [
-      {
-        metric_name: :WorkerShutDown,
-        dimensions: [
-          {name: "Host", value: CDO.dashboard_hostname}
-        ],
-        value: 1
-      }
-    ]
-  )
-end
-
 on_worker_boot do |_index|
   Cdo::Metrics.push(
     'App Server',
@@ -62,7 +46,7 @@ on_worker_boot do |_index|
       {
         metric_name: :WorkerBoot,
         dimensions: [
-          {name: "Host", value: CDO.dashboard_hostname}
+          {name: "Host", value: CDO.pegasus_hostname}
         ],
         value: 1
       }
