@@ -1,3 +1,4 @@
+require 'fileutils'
 require 'open3'
 require 'tempfile'
 
@@ -53,6 +54,9 @@ def plugins_to_arg(plugins)
 end
 
 def redact(source, dest, *plugins)
+  return unless File.exist? source
+  FileUtils.mkdir_p File.dirname(dest)
+
   plugins = plugins_to_arg(plugins)
   data = YAML.load_file(source)
   stdout, _status = Open3.capture2(

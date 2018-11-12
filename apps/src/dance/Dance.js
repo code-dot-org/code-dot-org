@@ -16,7 +16,7 @@ import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
-import SignInOrAgeDialog from "../templates/SignInOrAgeDialog";
+import {setThumbnailBlobFromCanvas} from '../util/thumbnail';
 import project from "../code-studio/initApp/project";
 import {
   getSongManifest,
@@ -94,9 +94,7 @@ Dance.prototype.init = function (config) {
   this.danceReadyPromise = new Promise(resolve => {
     this.danceReadyPromiseResolve = resolve;
   });
-
   this.studioApp_.labUserId = config.labUserId;
-
   this.level.softButtons = this.level.softButtons || {};
 
   config.afterClearPuzzle = function () {
@@ -133,20 +131,15 @@ Dance.prototype.init = function (config) {
 
   ReactDOM.render((
     <Provider store={getStore()}>
-      <div>
-        {!this.share &&
-          <SignInOrAgeDialog useDancePartyStyle={true}/>
+      <AppView
+        visualizationColumn={
+          <DanceVisualizationColumn
+            showFinishButton={showFinishButton}
+            setSong={this.setSongCallback.bind(this)}
+          />
         }
-        <AppView
-          visualizationColumn={
-            <DanceVisualizationColumn
-              showFinishButton={showFinishButton}
-              setSong={this.setSongCallback.bind(this)}
-            />
-          }
-          onMount={onMount}
-        />
-      </div>
+        onMount={onMount}
+      />
     </Provider>
   ), document.getElementById(config.containerId));
 };
@@ -615,6 +608,7 @@ Dance.prototype.updateSongMetadata = function (id) {
  */
 Dance.prototype.onHandleEvents = function (currentFrameEvents) {
   this.hooks.find(v => v.name === 'runUserEvents').func(currentFrameEvents);
+  this.captureThumbnailImage();
 };
 
 /**
@@ -639,4 +633,13 @@ Dance.prototype.displayFeedback_ = function () {
 
 Dance.prototype.getAppReducers = function () {
   return reducers;
+};
+
+/**
+ * Capture a thumbnail image of the play space. This will capture a PNG blob
+ * of the thumbnail in memory, then will save that blob to S3 when the project
+ * is saved.
+ */
+Dance.prototype.captureThumbnailImage = function () {
+  setThumbnailBlobFromCanvas(document.getElementById('defaultCanvas0'));
 };

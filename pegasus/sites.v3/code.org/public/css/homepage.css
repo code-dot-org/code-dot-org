@@ -571,6 +571,11 @@ body.modal-open .supreme-container{
   text-transform: uppercase;
 }
 
+.statistics {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .statistics a .stats-number {
   text-align: center;
   color: rgb(77, 87, 95);
