@@ -2,7 +2,7 @@
   font-size: 20px;
 }
 
-.img-dance-stars-wrapper {
+.img-dance-stars {
   position: absolute;
   top: 10px;
   left: 70px;
@@ -162,7 +162,7 @@ a:hover {
     display: block;
   }
 
-  .img-dance-stars-wrapper {
+  .img-dance-stars {
     width: auto;
     left: 50%;
     margin-left: -260px;
@@ -194,7 +194,7 @@ a:hover {
     background-size: cover;
   }
 
-  .img-dance-stars-wrapper {
+  .img-dance-stars {
     position: static;
     margin: 0 auto;
     max-width: 100%;
