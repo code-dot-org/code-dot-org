@@ -94,7 +94,7 @@ Unfortunately, we do not currently offer professional development workshops outs
 
 [/col-20]
 
-Code.org and ISTE are partnering to expand teacher community and learning opportunities beyond Code.org’s professional learning. Through this partnership, we can offer a [first time ISTE membership](https://www.iste.org/membership/code-org) exclusively to Code.org teachers at the special price of $99 (regularly $125).
+Code.org and ISTE are partnering to expand teacher community and learning opportunities beyond Code.org’s professional learning. Through this partnership, we can offer a <a href="https://www.iste.org/membership/code-org" target="_blank">first time ISTE membership</a> exclusively to Code.org teachers at the special price of $99 (regularly $125).
 
 Check out these 3 key benefits of ISTE membership:
 
