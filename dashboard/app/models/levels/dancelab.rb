@@ -28,6 +28,10 @@ class Dancelab < GamelabJr
     default_song
   )
 
+  def self.skins
+    ['dance']
+  end
+
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
