@@ -44,8 +44,11 @@
 }
 
 a.translate-link {
-  text-align: right;
-  display: block;
+  transition: 600ms opacity;
+}
+
+a.translate-link:hover {
+  opacity: 0.7;
 }
 
 .dance-translate-link-text {
@@ -57,11 +60,7 @@ a.translate-link {
 .dance-text-icon-container {
   margin-top: 10px;
   margin-bottom: 40px;
-  transition: 600ms opacity;
-}
-
-.dance-text-icon-container:hover {
-  opacity: 0.7;
+  text-align: right;
 }
 
 .dance-chevron-icon {
@@ -136,11 +135,6 @@ a:hover {
   .foot-note-text {
     position: static;
     color: #00adbc;
-  }
-
-  a.translate-link {
-    text-align: right;
-    display: block;
   }
 
   .dance-text-icon-container {
