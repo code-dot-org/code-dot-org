@@ -63,11 +63,18 @@
   .resource-card {
     height: 468px;
     width: 300px;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .resource-gif {
-    width: 300px;
-    float: left;
+    width: 100%
+  }
+
+  .resource-gif img {
+    margin-top: -50px;
+    width: 100%
   }
 
   .resource-text-box {
