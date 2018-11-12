@@ -11,34 +11,37 @@
   campaign_date_full: "5-11 december"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 december 2016"
-  codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
-  codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
-  codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
-  codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
-  codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
-  codeorg_homepage_hoc2018_video: 'Watch our video'
-  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
-  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
+  codeorg_homepage_hoc2018_curriculum: 'Fortsätt med <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org-kurser</a>'
+  codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
+  codeorg_homepage_hoc2018_header_line1: 'Hour of Code närmar sig...'
+  codeorg_homepage_hoc2018_header_line2_desktop: 'Vad kommer du att <span class="hoc2018-highlight-word">skapa?</span>'
+  codeorg_homepage_hoc2018_header_line2_mobile: 'Vad kommer du att skapa?'
+  codeorg_homepage_hoc2018_header_line3: 'Släpp loss din fantasi och skapa innovation. Börja med en Hour of Code och din eget sätt att utrycka dig, vad det än är.'
+  codeorg_homepage_hoc2018_musician_before: 'Featuring'
+  codeorg_homepage_hoc2018_musician_after: 'and more!'
+  codeorg_homepage_hoc2018_video: 'Se vår film'
+  hourofcode_homepage_hoc2018_header_line1: 'Vem som helst, var som helst kan arrangera ett Hour of Code-evenemang. En-timmes-övningar på över 45 språk. Inga förkunskaper behövs.'
+  hourofcode_homepage_hoc2018_header_line2: 'Åldrar 4 till 104.'
   hoc2018_tutorial_mchoc_description: 'Använd kodblock för att ta Alex eller Steve på ett äventyr genom denna Minecraftvärld.'
-  hoc2018_minecraft_aquatic_title1: "Minecraft Voyage Aquatic"
-  hoc2018_minecraft_with_microsoft: "In partnership with"
-  hoc2018_minecraft_thank_microsoft: "We thank Microsoft for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century."
-  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
-  cookie_banner_more_information: "See Code.org's Privacy Policy."
-  cookie_banner_accept: 'I agree'
+  hoc2018_minecraft_aquatic_title1: "Minecraft undervattens-äventyret"
+  hoc2018_minecraft_with_microsoft: "I samarbete med"
+  hoc2018_minecraft_thank_microsoft: "Vi tackar Microsoft för att de stöttar vår vision och mission att se till att varje barn har möjligheten att lära sig datavetenskap och färdigheterna som behövs för att lyckas detta århundrade."
+  cookie_banner_message: 'Genom att fortsätta på vår webbplats eller klicka "Jag godkänner" så godkänner du att vi lagrar cookies på din dator eller enhet.'
+  cookie_banner_more_information: "Läs Code.org:s sekretesspolicy."
+  cookie_banner_accept: 'Jag godkänner'
   front_header_banner: 'Delta i det största utbildningsevenemanget någonsin, 5-11 december 2016'
   front_intro_default: 'Hour of Code är en global rörelse som når tiotals miljoner elever i över 180 länder. Vem som helst kan arrangera en Hour of Code var som helst. Det finns en-timmes-övningar på över 45 språk. Inga förkunskaper behövs. <strong>Från 4 till 104 år.</strong>'
-  front_intro_default_2: 'A global movement in 180+ countries.'
+  front_intro_default_2: 'En global rörelse i 180+ länder.'
   front_watch_video: 'Se den nya filmen'
   front_watch_regular_video: 'Se filmen'
   front_volunteers: 'Frivilliga med teknisk kunskap sökes'
   front_start_learning: 'Börja lära'
-  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
-  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
-  gdpr_dialog_link_intro: 'For details see our'
-  gdpr_dialog_privacy_policy: 'privacy policy'
-  gdpr_dialog_logout: 'Logout'
-  gdpr_dialog_yes: 'Yes'
+  gdpr_dialog_heading: 'Godkänner du att använda en webbplats baserad i USA?'
+  gdpr_dialog_message: 'Data från din användning av denna webbplats kan skickas till och lagras eller bli bearbetad i USA.'
+  gdpr_dialog_link_intro: 'För detaljer se vår'
+  gdpr_dialog_privacy_policy: 'sekretesspolicy'
+  gdpr_dialog_logout: 'Logga ut'
+  gdpr_dialog_yes: 'Ja'
   header_menu_resources: 'Resurser'
   header_menu_faq: 'Vanliga frågor'
   header_menu_how_to: 'Så gör du'
@@ -64,7 +67,7 @@
   company_tntp: TNTP
   company_abss: Alamance-Burlington School System
   company_aldineisd: Aldine Independent School District
-  company_afterschool: after school
+  company_afterschool: efter skolan
   company_laalliance: Alliance College Ready Public Schools
   company_asd: Arlington Public Schools
   company_arlingtonpublicschools: Arlington Public Schools
@@ -241,17 +244,17 @@
   front_join_us_more_info: "För mer information, besök <a href='https://code.org'> code.org</a>."
   front_join_us_code_info: "För mer information, besök code.org"
   front_join_us_n_students_served: "# deltagare"
-  front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
-  front_join_us_learn_more: "Learn more"
-  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
-  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
-  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
+  front_join_us_challenge: "Vinn en video-chatt med en kändis i ditt klassrum!"
+  front_join_us_learn_more: "Läs mer"
+  signup_closed: 'Anmälan för Hour of Code är nu stängd. Kolla igen i oktober att anmäla dig till nästa Hour of Code.'
+  signup_registration_not_required: "Du behöver inte registrera dig för att delta! Hour of Code-aktiviteterna går att använda året runt. <a href='%{hoc_activities_url}'>Prova en aktivitet</a> eller läsa vår <a href='%{howto_guide_url}'>handledning</a> för att planera ett evenemang för din klass."
+  signup_registration_closed: "Och varje år i december, kan din klass tillsammans med miljontals elever runt om i världen fira Computer Science Education Week genom Hour of Code. Vi öppnar registreringen för det årliga firandet i oktober."
   signup_header: 'Organisera en Hour of Code under %{campaign_date} och registrera det här.'
   signup_name_label: 'Ditt namn'
   signup_name_error: 'Namn krävs.'
   signup_email_label: 'Din mailadress'
   signup_email_error: 'E-post krävs'
-  signup_invalid_email_error: 'The email address you entered is invalid'
+  signup_invalid_email_error: 'E-postadressen du angav är ogiltig'
   signup_organization_name_label: 'Namn på skolan eller organisationen'
   signup_organization_name_error: 'Organisationens namn krävs.'
   signup_event_type_label: 'Typ av evenemang'
@@ -267,11 +270,11 @@
   signup_your_event: 'Registrera ditt evenemang'
   signup_host_an_hour: 'Håll en Hour of Code'
   signup_match_volunteer: 'Hjälp mig att hitta en programmerare att inspirera mina elever'
-  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
-  signup_email_preference_privacy: '(See our privacy policy)'
-  signup_email_preference_yes: 'Yes'
-  signup_email_preference_no: 'No'
-  signup_email_preference_error: 'Email preference is required'
+  signup_email_preference_opt_in: 'Kan vi maila dig om uppdateringar till Code.org-kurser, lokala möjligheter eller andra datavetenskaps-nyheter?'
+  signup_email_preference_privacy: '(Se vår sekretesspolicy)'
+  signup_email_preference_yes: 'Ja'
+  signup_email_preference_no: 'Nej'
+  signup_email_preference_error: 'Mail-preferenser måste anges'
   signup_multiple_event_warning: "Om du är värd för flera evenemang, skicka in ett unikt namn eller e-post för var och en. Vi räknar endast ett event per namn och mailadress -kombination."
   signup_registration_deadline: "Senaste möjlighet att registrera sig för Hour of Code är den 12:e December."
   signup_name_placeholder: 'Ditt namn'
@@ -292,23 +295,24 @@
   signup_continue_label: 'Fortsätt'
   signup_thank_you_header: "Tack för att du anmält dig som värd för ett Hour of code-evenemang."
   signup_thank_you_message: 'Vi har skickat ett bekräftelsemail med information för att hjälpa dig komma igång.'
-  social_hoc2018_code_org_what_create: "Code.org: What will you create?"
-  social_hoc2018_creativity_in_are_you: "The #HourOfCode is about creativity. I’m in! Are you?"
-  social_hoc2018_dance_party: "Hour of Code: Dance Party"
-  social_hoc2018_dance_what_create: "Do a little dance. Make a little code. What will you create?"
-  social_hoc2018_every_student: "Every student deserves the opportunity to express their creativity with computer science."
-  social_hoc2018_every_student_try_what_create: "Every student deserves the opportunity to express their creativity with computer science. Try your hand at the new tutorials. What will you create?"
-  social_hoc2018_hoc_coming_create: "The Hour of Code is coming. What will you create?"
-  social_hoc2018_hoc_here: "The Hour of Code is here!"
+  social_hoc2018_code_org_what_create: "Code.org: Vad kommer du att skapa?"
+  social_hoc2018_creativity_in_are_you: "#HourOfCode handlar om kreativitet. Jag är med! Är du?"
+  social_hoc2018_dance_party: "Hour of Code: dans-party"
+  social_hoc2018_dance_what_create: "Gör en liten dans. Skapa lite kod. Vad kommer du att skapa?"
+  social_hoc2018_every_student: "Varje elev förtjänar möjligheten att utrycka sig kreativt med programmering."
+  social_hoc2018_every_student_try_what_create: "Varje elev förtjänar möjligheten att uttrycka sin kreativitet med programmering. Testa de nya aktiviteterna. Vad kommer du att skapa?"
+  social_hoc2018_hoc_coming_create: "Hour of Code närmar sig. Vad kommer du att skapa?"
+  social_hoc2018_hoc_here: "Hour of Code är här!"
   social_hoc2018_join: "Alla barn bör få möjligheten"
   social_hoc2018_mc: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   social_hoc2018_mc_creativity: "Use your creativity and problem solving skills to explore and build underwater worlds with code."
-  social_hoc2018_what_create: "What will you create?"
+  social_hoc2018_what_create: "Vad kommer du att skapa?"
+  social_hoc2018_global_movement: "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
   map_title: "Hour of Code kartan"
   map_header: '# Hour of Code evenemang runt om i världen'
-  map_header_count_year: '%{event_count} events registered in %{year}'
+  map_header_count_year: '%{event_count} evenemang registrerade %{year}'
   see_all_events: 'Se alla evenemang'
-  map_header_company: '# by company organizers'
+  map_header_company: '# av företag'
   map_header_country: '# i %{country}'
   map_search_placeholder: 'Sök efter Hour of Code-evenemang'
   map_search_search: 'Sök'
@@ -418,6 +422,7 @@
   videos_anybody_can_learn: Vem som helst kan lära sig (1 min)
   title_country_resources: Lands-specifikt material
   title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
+  title_how_to_promote: Sprid ordet
   title_how_to_districts: Hour of Code-guide för kommuner
   title_how_to_events: Kodtimmen evenemang så-gör-du
   title_how_to_organizations: Hur hålla i en Kodtimme - organisationer
@@ -482,6 +487,7 @@
   learn_banner_teachers: "Lärare: <a id='teacher_banner_host'>Led en undervisningstimme</a> eller <a id='teacher_banner_howto'>läs vår Så gör du-guide</a>"
   learn_robotics_banner_heading: 'ROBOTTEKNIK'
   learn_robotics_banner_blurb: 'Har ni robotar? Använd dem i aktiviteterna nedan och skapa en konkret Hour of Code för elever i alla åldrar!'
+  tutorial_danceparty_name: "Dance Party"
   tutorial_chibitronics_name: "Chibitronics: Illuminated Story"
   tutorial_athlete_name: "Koda ditt eget sportspel"
   tutorial_moana_name: "Moana: Hitta vägen med programmering"
@@ -797,7 +803,7 @@
   tutorial_codesterscr_name: "Cheer Routines"
   tutorial_grokdisease_name: "Disease Epidemic"
   tutorial_techec_name: "Explaining Closures in JS"
-  tutorial_rgbegin_name: "RoboGarden - Beginner"
+  tutorial_rgbegin_name: "RoboGarden Coding - Beginner"
   tutorial_myradream_name: "Actimator: Myra's Dream"
   tutorial_thinkfun_name: "Robot Repair: Can You Fix the Robot Brain?"
   tutorial_hopfireworks_name: "Make a Fireworks App on iPad/iPhone"
@@ -823,7 +829,7 @@
   tutorial_gpbcatapult_name: "Build a Catapult"
   tutorial_quorumastro_name: "Coding in Astronomy"
   tutorial_alicewonder_name: "Alice in Wonderland"
-  tutorial_rginter_name: "RoboGarden - Intermediate"
+  tutorial_rginter_name: "RoboGarden Coding - Intermediate"
   tutorial_bloxmobscience_name: "iOS and Android Science Apps"
   tutorial_cssgrid_name: "Grid Garden"
   tutorial_bloxmobdesign_name: "App Design Process"
@@ -837,7 +843,7 @@
   tutorial_techcpp_name: "7 Features of C++17 that will simplify your code"
   tutorial_beetik_name: "Code the Music of Franz Liszt"
   tutorial_codedj_name: "Compose Music with Code DJ"
-  tutorial_rgadvan_name: "RoboGarden - Advanced"
+  tutorial_rgadvan_name: "RoboGarden Coding - Advanced"
   tutorial_codehsrn_name: "Creating Apps with React Native"
   tutorial_codehswd_name: "Web Design with CodeHS"
   tutorial_turtlerobot_name: "Turtle Robot"
@@ -1062,6 +1068,8 @@
   tutorial_vidcodeplastic_name: "Plastic Pollution PSA"
   tutorial_vidcodetypeface_name: "Create your own typeface!"
   tutorial_washustorm_name: "Stormy Science"
+  tutorial_activitypackets_name: "Wonder Workshop Activity Packets"
+  tutorial_danceparty_shortdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   tutorial_chibitronics_shortdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_shortdescription: "Välj mellan att göra ett basketspel och att skapa din egen blandning av olika sporter!"
   tutorial_moana_shortdescription: "Moana är modig, orädd, och är fast besluten att hitta sin egen väg."
@@ -1642,6 +1650,8 @@
   tutorial_vidcodeplastic_shortdescription: "Learn to use loops, sin waves and customized emojis to make a unique project."
   tutorial_vidcodetypeface_shortdescription: "Create your own typeface using shapes and elements of typography. Type has more elements than you may have realized!"
   tutorial_washustorm_shortdescription: "Learn how to program an incoming storm."
+  tutorial_activitypackets_shortdescription: "Find hours of family-friendly fun with Wonder Workshop's printable packets of creative coding activities. Bring coding to life with Dash, Dot, and Cue robots by downloading these online and offline activities to use during Hour of Code and beyond!"
+  tutorial_danceparty_longdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   tutorial_chibitronics_longdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_longdescription: "Välj mellan att göra ett basketspel och att skapa din egen blandning av olika sporter!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
@@ -2222,6 +2232,8 @@
   tutorial_vidcodeplastic_longdescription: "The problem of plastic filling our oceans continues to worsen. Luckily, you can make your voice heard with code through the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript, you can make a second video about any subject you care about! Learn to use loops, sin waves and customized emojis to make a unique project."
   tutorial_vidcodetypeface_longdescription: "Create your own typeface using shapes and elements of typography. Type has more elements than you may have realized! So far we have talked about fonts and how they are different styles of text. Fonts are actually just different styles of a typeface. A typeface is a family of fonts that have similar features."
   tutorial_washustorm_longdescription: "Learn how to program an incoming storm."
+  tutorial_activitypackets_longdescription: "Find hours of family-friendly fun with Wonder Workshop's printable packets of creative coding activities. Bring coding to life with Dash, Dot, and Cue robots by downloading these online and offline activities to use during Hour of Code and beyond!"
+  tutorial_danceparty_language: "Multipla"
   tutorial_chibitronics_language: "Svenska"
   tutorial_athlete_language: "Engelska, franska, spanska, italienska, portugisiska (brasiliansk)"
   tutorial_moana_language: "English, Arabic, Chinese (Simplified), Chinese (Traditional) Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Polynesian (Samoan), Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese"
@@ -2239,7 +2251,7 @@
   tutorial_textcomp_language: "Endast på engelska"
   tutorial_encryption_language: "Endast på engelska"
   tutorial_kanopixel_language: "Endast på engelska"
-  tutorial_foos_language: "English, Arabic, Azerbaijani, Chinese, Dutch, French, German, Greek, Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Romanian, Russian, Serbian, Spanish, Swedish, Turkish, Ukrainian"
+  tutorial_foos_language: "Chinese, English, French, German, Italian, Japanese, Korean, Malay, Portuguese (Brazil), Spanish, Swedish, Thai"
   tutorial_tynkerdd_language: "Endast på engelska"
   tutorial_tynkerana_language: "Endast på engelska"
   tutorial_vidcard_language: "Endast på engelska"
@@ -2709,7 +2721,7 @@
   tutorial_codemojipizza_language: "Svenska"
   tutorial_moonlander_language: "Svenska"
   tutorial_sushicards_language: "Svenska"
-  tutorial_codesparkcreate_language: "Chinese, English, French, German, Italian, Japanese, Korean, Malay, Portuguese (Brazil), Spanish, Thai"
+  tutorial_codesparkcreate_language: "Chinese, English, French, German, Italian, Japanese, Korean, Malay, Portuguese (Brazil), Spanish, Swedish, Thai"
   tutorial_hardvsoft_language: "Svenska"
   tutorial_codestersecard_language: "Chinese, English, Spanish"
   tutorial_codesterslogo_language: "Chinese, English, Spanish"
@@ -2802,6 +2814,8 @@
   tutorial_vidcodeplastic_language: "Svenska"
   tutorial_vidcodetypeface_language: "Svenska"
   tutorial_washustorm_language: "Svenska"
+  tutorial_activitypackets_language: "Svenska"
+  tutorial_danceparty_string_detail_grades: "Årskurs 2 och uppåt"
   tutorial_chibitronics_string_detail_grades: "Grades 2-5"
   tutorial_athlete_string_detail_grades: "Årskurs 2 och uppåt"
   tutorial_moana_string_detail_grades: "Årskurs 2 och uppåt"
@@ -3251,7 +3265,7 @@
   tutorial_blockscadicecream_string_detail_grades: "Årskurs 6+"
   tutorial_blockscadpizza_string_detail_grades: "Årskurs 6-8"
   tutorial_blockscadsugar_string_detail_grades: "Årskurs 6-8"
-  tutorial_bsgridlight_string_detail_grades: "Pre-reader - Grade 9+"
+  tutorial_bsgridlight_string_detail_grades: "Årskurs 2 och uppåt"
   tutorial_bpartscratch_string_detail_grades: "Årskurs 6+"
   tutorial_bpartvid_string_detail_grades: "Årskurs 6+"
   tutorial_bpenglishscratch_string_detail_grades: "Årskurs 2-8"
@@ -3382,6 +3396,8 @@
   tutorial_vidcodeplastic_string_detail_grades: "Årskurs 6+"
   tutorial_vidcodetypeface_string_detail_grades: "Årskurs 6+"
   tutorial_washustorm_string_detail_grades: "Grades 2-5"
+  tutorial_activitypackets_string_detail_grades: "Pre-reader - Grade 8"
+  tutorial_danceparty_string_platforms: "Alla moderna webbläsare, Android-surfplatta, iPad, Android-telefon, iPhone"
   tutorial_chibitronics_string_platforms: "Alla moderna webbläsare"
   tutorial_athlete_string_platforms: "Alla moderna webbläsare"
   tutorial_moana_string_platforms: "Alla moderna webbläsare, Android-surfplatta, iPad"
@@ -3736,7 +3752,7 @@
   tutorial_cocomarcade_string_platforms: "Alla moderna webbläsare"
   tutorial_techcpp_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
   tutorial_beetik_string_platforms: "Chrome, Firefox, Android tablet, iPad"
-  tutorial_codedj_string_platforms: "Chrome, Firefox, Safari, Android tablet, iPad"
+  tutorial_codedj_string_platforms: "Alla moderna webbläsare"
   tutorial_rgadvan_string_platforms: "Chrome, Firefox, Android tablet"
   tutorial_codehsrn_string_platforms: "Chrome, Firefox, Safari, Android phone, iPhone"
   tutorial_codehswd_string_platforms: "Chrome, Firefox, Safari"
@@ -3821,7 +3837,7 @@
   tutorial_bcpy2_string_platforms: "Alla moderna webbläsare"
   tutorial_bcjs1_string_platforms: "Alla moderna webbläsare"
   tutorial_bcjs2_string_platforms: "Alla moderna webbläsare"
-  tutorial_3dbearmars_string_platforms: ""
+  tutorial_3dbearmars_string_platforms: "Android tablet, iPad, Android phone, iPhone"
   tutorial_alexaskill_string_platforms: "Alla moderna webbläsare"
   tutorial_bitsboxyak_string_platforms: ""
   tutorial_blockscadbargraphs_string_platforms: "Alla moderna webbläsare"
@@ -3880,13 +3896,13 @@
   tutorial_discovery_string_platforms: "Alla moderna webbläsare"
   tutorial_csfirstname_string_platforms: "Alla moderna webbläsare"
   tutorial_obstaclecourse_string_platforms: "iPad"
-  tutorial_edisonmove_string_platforms: ""
-  tutorial_edisonspider_string_platforms: ""
-  tutorial_edisonspotlight_string_platforms: ""
+  tutorial_edisonmove_string_platforms: "Alla moderna webbläsare"
+  tutorial_edisonspider_string_platforms: "All modern browsers, iPad, Android tablets"
+  tutorial_edisonspotlight_string_platforms: "All modern browsers, iPad, Android tablets"
   tutorial_firiapython_string_platforms: "Alla moderna webbläsare"
   tutorial_gamefrootsquid_string_platforms: "Alla moderna webbläsare, iPad, inte uppkopplad"
-  tutorial_duckpiano_string_platforms: "Chrome, Firefox, Safari"
-  tutorial_gpsound_string_platforms: "Chrome, Firefox, Safari"
+  tutorial_duckpiano_string_platforms: "Alla moderna webbläsare"
+  tutorial_gpsound_string_platforms: "Alla moderna webbläsare"
   tutorial_groklearningpython_string_platforms: "Alla moderna webbläsare"
   tutorial_htmltimetravel_string_platforms: "Alla moderna webbläsare"
   tutorial_hp_flappy_string_platforms: "iPad"
@@ -3938,9 +3954,9 @@
   tutorial_spherotext3_string_platforms: "Alla moderna webbläsare, Android-surfplatta, iPad, Android-telefon, iPhone"
   tutorial_spherotext4_string_platforms: "Alla moderna webbläsare, Android-surfplatta, iPad, Android-telefon, iPhone"
   tutorial_spheroraptor_string_platforms: "Alla moderna webbläsare, Android-surfplatta, iPad, Android-telefon, iPhone"
-  tutorial_stempiday_string_platforms: "Alla moderna webbläsare, Android-surfplatta, iPad"
-  tutorial_stemplanetoids_string_platforms: "Alla moderna webbläsare, Android-surfplatta, iPad"
-  tutorial_stempong_string_platforms: "Alla moderna webbläsare, Android-surfplatta, iPad"
+  tutorial_stempiday_string_platforms: "Alla moderna webbläsare"
+  tutorial_stemplanetoids_string_platforms: "Alla moderna webbläsare"
+  tutorial_stempong_string_platforms: "Alla moderna webbläsare"
   tutorial_algobot_string_platforms: "Alla moderna webbläsare, Android-surfplatta, iPad, Android-telefon, iPhone"
   tutorial_thunkableapps_string_platforms: "Chrome, Firefox, Safari, Android tablet, iPad, Android phone, iPhone"
   tutorial_toxicodedot_string_platforms: "Alla moderna webbläsare"
@@ -3962,6 +3978,8 @@
   tutorial_vidcodeplastic_string_platforms: "Alla moderna webbläsare, iPad, inte uppkopplad"
   tutorial_vidcodetypeface_string_platforms: "Alla moderna webbläsare, iPad, inte uppkopplad"
   tutorial_washustorm_string_platforms: "Alla moderna webbläsare"
+  tutorial_activitypackets_string_platforms: "Urkopplad"
+  tutorial_danceparty_string_detail_platforms: ""
   tutorial_chibitronics_string_detail_platforms: "Chibitronics Chibi Chip and Circuit Sticker LEDs"
   tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
@@ -4542,6 +4560,8 @@
   tutorial_vidcodeplastic_string_detail_platforms: ""
   tutorial_vidcodetypeface_string_detail_platforms: ""
   tutorial_washustorm_string_detail_platforms: ""
+  tutorial_activitypackets_string_detail_platforms: "Dash or Cue robot"
+  tutorial_danceparty_string_detail_programming_languages: "Block"
   tutorial_chibitronics_string_detail_programming_languages: "Block"
   tutorial_athlete_string_detail_programming_languages: "Block"
   tutorial_moana_string_detail_programming_languages: "Block"
@@ -5122,6 +5142,7 @@
   tutorial_vidcodeplastic_string_detail_programming_languages: "JavaScript"
   tutorial_vidcodetypeface_string_detail_programming_languages: "JavaScript"
   tutorial_washustorm_string_detail_programming_languages: "Block"
+  tutorial_activitypackets_string_detail_programming_languages: "Blocks, Wonder, Xylo, Blockly"
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"
   school_name_error: "School name is required."
