@@ -34,7 +34,7 @@ const SongSelector = Radium(class extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="song-selector-wrapper">
         <label><b>{i18n.selectSong()}</b></label>
         <select
           id="song_selector"
