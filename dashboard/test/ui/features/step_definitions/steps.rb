@@ -679,6 +679,14 @@ Then /^element "([^"]*)" is hidden$/ do |selector|
   expect(element_visible?(selector)).to eq(false)
 end
 
+And (/^I select age (\d+) in the age dialog/) do |age|
+  steps %Q{
+    And element ".age-dialog" is visible
+    And I select the "#{age}" option in dropdown "uitest-age-selector"
+    And I click selector "#uitest-submit-age"
+  }
+end
+
 And (/^I do not see "([^"]*)" option in the dropdown "([^"]*)"/) do |option, selector|
   select_options_text = @browser.execute_script("return $('#{selector} option').val()")
   expect((select_options_text.include? option)).to eq(false)
