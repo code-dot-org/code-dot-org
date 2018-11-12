@@ -169,7 +169,7 @@ class Homepage
 
   def self.get_blocks(request)
     if request.language == "en"
-      @en_blocks_entries ||= [
+      [
         {
           id: "students-en",
           type: "block",
@@ -289,12 +289,12 @@ class Homepage
             id: 'flappy-nonen',
             title: 'studiobar_flappy_title',
             text: 'studiobar_flappy_body',
-            url: '/s/flappy/reset',
+            url: CDO.studio_url('/s/flappy/reset'),
             image: '/shared/images/courses/logo_tall_flappy.jpg'
           }
         end
 
-      @non_en_blocks_entries ||= [
+      [
         {
           id: "students-nonen",
           type: "blockshort",
@@ -332,7 +332,7 @@ class Homepage
           text: last_block[:text],
           color1: "185, 191, 21",
           color2: "209, 213, 103",
-          url: CDO.studio_url(last_block[:url]),
+          url: last_block[:url],
           image: last_block[:image]
         }
       ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
