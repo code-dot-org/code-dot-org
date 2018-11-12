@@ -2417,10 +2417,11 @@
   applab_tile_title: Intro to App Lab (Ages 13+)
   applab_tile_subtitle: Create your own app in JavaScript using block based programming.
     Or take your skills to the next level with text-based programming. (English Only)
-  applab_tile_start_tutorial: Start tutorial
+  applab_tile_start_tutorial: Start
   aquatic_name: 'Minecraft: Voyage Aquatic'
   hoc_overview_dance_title: Dance Party
-  hoc_overview_dance_subtitle: Code a Dance Party to share with your friends.
+  hoc_overview_dance_subtitle: Code a Dance Party to share with your friends. Featuring
+    Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
   hoc_overview_title: Hour of Code Activities from Code.org
   hoc_overview_subtitle: The <a href="https://hourofcode.com">Hour of Code</a> is
     a global movement reaching tens of millions of students in 180+ countries. Anyone,
@@ -2431,8 +2432,8 @@
     science activities for all ages and experience levels, developed by Code.org and
     partners.
   hoc_overview_partner_activities_link: View Activities
+  hoc_overview_start_tutorial: Start
   hoc_overview_view_teacher_guide: View teacher guide
-  hoc_overview_view_tutorial: View tutorial
   hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition provides standards-aligned
     curriculum, training and coding in Minecraft.'
   hoc2018_mc_educators_box3_title: Attend a free student workshop
@@ -2446,13 +2447,13 @@
   hoc2018_dance_party_subheading: Help translate Dance Party
   hoc2018_dance_create_your_own_dance_title: Create Your Own Dance Party
   hoc2018_dance_party_box_title: Dance Party
-  hoc2018_dance_party_box_description: 'Featuring music by:'
+  hoc2018_dance_party_box_description: Code a Dance Party to share with your friends!
   hoc2018_dance_party_specs: Language | Format | Age 6-106
   hoc2018_dance_keep_on_dancing_box_title: Keep On Dancing
   hoc2018_dance_keep_on_dancing_description: Go beyond the first hour with extended
     project ideas.
   hoc2018_dance_keep_on_dancing_specs: Language | Format | Age 13+
-  hoc2018_dance_keep_on_dancing_button: Go Beyond
+  hoc2018_dance_keep_on_dancing_button: Start Part 2
   hoc2018_dance_teacher_resources_title: Teacher Resources
   hoc2018_dance_teacher_resources_tile1_description: Lesson plans, certificates, and
     music filtering.
@@ -2463,6 +2464,7 @@
   hoc2018_dance_videos_section_heading: Get Inspired
   hoc2018_dance_video_title_what_is_creativity: What is Creativity?
   hoc2018_dance_view_creativity_video_playlist: What is Creativity? View Full Series
+    (5 min)
   hoc2018_dance_amazon_sponsor_section_with_logo_title: In partnership with
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
     Engineer* is a comprehensive childhood-to-career program to inspire, educate,
@@ -2471,33 +2473,32 @@
     more</a>
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Learn more about
     Amazon Future Engineer
-  hoc2018_dance_amazon_about_future_engineer_box1_title: About Amazon Future Engineer
-  hoc2018_dance_amazon_about_future_engineer_box1_description: Learn about Amazon’s
-    kindergarten to career program to increase access to computer science education.
-    Find information on how to get involved in our summer camps, high school CS classes,
-    scholarships, and internships.<br>
-  hoc2018_dance_amazon_try_coding_this_summer_box2_long_title: Try coding this summer
-  hoc2018_dance_amazon_K-8_programs_box2_short_title: K-8 programs
-  hoc2018_dance_amazon_try_coding_box2_description: Get involved in Amazon Future
-    Engineer’s free, fun, and inclusive computer science camps! Summer camps are available
-    for students from kindergarten through 8th grade in multiple locations in the
-    US for summer 2019. <br>
-  hoc2018_dance_amazon_scholarship_programs_box3_short_title: Scholarship programs
-  hoc2018_dance_amazon_scholarship_programs_box3_long_title: Get funding for your
-    CS degree
-  hoc2018_dance_amazon_scholarship_programs_box3_description: Amazon is offering $10,000
-    4-year scholarships for underserved students who are studying CS in the US. Applicants
-    must have successfully completed or currently be enrolled in an AP computer science
-    course and intend on studying a computer science degree at a 4-year college or
-    university in the US. Scholarship recipients will receive paid summer internships
-    at Amazon in the summer of 2020! <br>
-  hoc2018_dance_amazon_internships_box4_long_title: Come Intern at Amazon
-  hoc2018_dance_amazon_internships_box4_short_title: Internships
-  hoc2018_dance_amazon_internships_box4_description: Applications are now open for
-    summer 2019 Amazon Future Engineer internships.  Interns will partner with a technical
-    mentor and manager, as well as with other interns, to innovate and create new
-    features and services on behalf of Amazon customers. Internships are available
-    in the US and Canada.<br>
+  hoc2018_dance_amazon_about_future_engineer_title: About Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_description: Learn about Amazon’s kindergarten
+    to career program to increase access to computer science education. Find information
+    on how to get involved in our summer camps, high school CS classes, scholarships,
+    and internships.
+  hoc2018_dance_amazon_about_future_engineer_button: Learn more
+  hoc2018_dance_amazon_try_coding_this_summer_title: Try coding this summer
+  hoc2018_dance_amazon_try_coding_this_summer_description: Get involved in Amazon
+    Future Engineer’s free, fun, and inclusive computer science camps! Summer camps
+    are available for students from kindergarten through 8th grade in multiple locations
+    in the US for summer 2019.
+  hoc2018_dance_amazon_try_coding_this_summer_button: Join a camp
+  hoc2018_dance_amazon_scholarship_programs_title: Scholarship programs
+  hoc2018_dance_amazon_scholarship_programs_description: Amazon is offering scholarships
+    of $10,000 per year for underserved students who have successfully completed or
+    are currently enrolled in an AP CS course and intend on studying a CS degree at
+    a 4-year college or university in the United States.
+  hoc2018_dance_amazon_scholarship_programs_button: Apply now
+  hoc2018_dance_amazon_internships_title: Come Intern at Amazon
+  hoc2018_dance_amazon_internships_description: Applications are now open for summer
+    2019 Amazon Future Engineer internships. Interns will partner with a manager,
+    technical mentor, and other interns to innovate and create new features and services
+    on behalf of Amazon customers. Internships are available in the US and Canada.
+  hoc2018_dance_amazon_internships_button: Find an internship
+  hoc2018_dance_amazon_k8_programs_title: K-8 programs
+  hoc2018_dance_amazon_funding_title: Get funding for your CS degree
   hoc2018_dance_amazon_future_engineer_footer: "* The artists whose music is used
     in this tutorial are not sponsoring or endorsing Amazon as part of licensing use
     of their music to Code.org.\n\n"

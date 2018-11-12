@@ -5,14 +5,14 @@ theme: responsive
 
 %link{href: "/css/dance-landing/dance.css", type: "text/css", rel: "stylesheet"}
 
-%div.dance-text-icon-container
-  %a{href: "/translate/dance"}
-    %div.dance-translate-link-text
-      =I18n.t(:hoc2018_dance_party_subheading)
-    %i.fa.fa-chevron-right.dance-chevron-icon
 =view :dance_tutorial_section
 
-%h2= I18n.t(:hoc2018_dance_teacher_resources_title)
+.dance-text-icon-container
+  %a.translate-link{href: "/translate/dance"}
+    .dance-translate-link-text
+      =I18n.t(:hoc2018_dance_party_subheading)
+    %i.fa.fa-chevron-right.dance-chevron-icon
+
 =view :dance_teacher_resources
 
 =view :dance_sponsor_logo
@@ -21,11 +21,15 @@ theme: responsive
 =view :student_dance_projects
 
 %h2= I18n.t(:hoc2018_dance_videos_section_heading)
-.dance-videos.dance-clear-element
-  =view :dance_creativity_video
-  %a{href: "https://www.youtube.com/playlist?list=PLzdnOPI1iJNcXMS80NRhQd0NA3po1swJf"}
-    %img.dance_thumbnail-tile-img{src:"/images/creativity_playlist_thumbnail.png"}
-%h5.dance_thumbnail-tile-subtitle= I18n.t(:hoc2018_dance_view_creativity_video_playlist)
+.thumbnail-wrapper
+  .dance-videos.dance-clear-element
+    =view :dance_creativity_video
+    .col-50.dance-add-padding
+      .videothumbnail
+        .thumbnail-wrapper
+          %a{href: "https://www.youtube.com/playlist?list=PLzdnOPI1iJNcXMS80NRhQd0NA3po1swJf", target: "_blank"}
+            %img.dance-thumbnail-tile-img{src:"/images/dance-hoc/dance_playlist_thumbnail.png"}
+          .dance-thumbnail-tile-subtitle= I18n.t(:hoc2018_dance_view_creativity_video_playlist)
 
 .dance-videos.dance-clear-element
   =view :dance_videos

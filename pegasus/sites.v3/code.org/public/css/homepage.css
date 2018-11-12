@@ -161,7 +161,7 @@ body.modal-open .supreme-container{
 }
 
 #homepage .action.hoc2018 {
-  float: left;
+  display: inline-block;
   margin-right: 20px;
 }
 
@@ -195,7 +195,6 @@ body.modal-open .supreme-container{
 }
 
 .hoc2018 .hero-message-line2 {
-  font-family: 'Gotham 5r', sans-serif;
   font-size: 40px;
   line-height: 40px;
   padding-bottom: 40px;
@@ -203,6 +202,21 @@ body.modal-open .supreme-container{
 
 .hoc2018 .hoc2018-highlight-word {
   color: rgb(0,173,188);
+}
+
+.hoc2018-dance-heading {
+  color: #00F7EB;
+  font-size: 40px;
+  line-height: 40px;
+  width: 100%;
+  font-family: 'Gotham 5r', sans-serif;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.hoc2018-dance-heading .highlight-word {
+  color: #FC72EE;
+  line-height: 40px;
 }
 
 .hoc2018 .hero-message-gap {
@@ -377,7 +391,7 @@ body.modal-open .supreme-container{
   background-size: cover;
   width: 100%;
   height: 100%;
-  background-position: 0% 50%;
+  background-position: 50%;
   height: 220px;
   border-radius: 5px;
 }
@@ -555,6 +569,11 @@ body.modal-open .supreme-container{
   text-align: center;
   margin-top: 20px;
   text-transform: uppercase;
+}
+
+.statistics {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .statistics a .stats-number {

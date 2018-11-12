@@ -1,5 +1,4 @@
 .project-card {
-  height: 240px;
   width: 216px;
   border: 1px solid gray;
   display: inline-block;
@@ -7,8 +6,7 @@
 }
 
 .project-video {
-  height: 150px;
-  width: 100%
+  width: 100%;
 }
 
 .project-details {
