@@ -96,10 +96,24 @@ class DanceVisualizationColumn extends React.Component {
       touchAction: 'none',
       width: GAME_WIDTH,
       height: GAME_HEIGHT,
-      backgroundColor: '#fff',
+      background: '#fff',
       position: 'relative',
       overflow: 'hidden',
     };
+
+    const p5LoadingStyle = {
+      width: 400,
+      height: 400,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    };
+
+    const p5LoadingGifStyle = {
+      width: 100,
+      height: 100,
+    };
+
     const enableSongSelection = !this.props.levelIsRunning && !this.props.levelRunIsStarting;
 
     return (
@@ -123,7 +137,11 @@ class DanceVisualizationColumn extends React.Component {
             <div
               id="divDance"
               style={divDanceStyle}
-            />
+            >
+              <div id="p5_loading" style={p5LoadingStyle}>
+                <img src="//curriculum.code.org/images/DancePartyLoading.gif" style={p5LoadingGifStyle}/>
+              </div>
+            </div>
           </ProtectedVisualizationDiv>
           <GameButtons showFinishButton={this.props.showFinishButton}>
             <ArrowButtons />
