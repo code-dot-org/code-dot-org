@@ -45,16 +45,12 @@
             "\"snowflakes\""
           ],
           [
-            "Song Title",
-            "\"text\""
-          ],
-          [
             "Spiral",
             "\"spiral\""
           ],
           [
             "(Random)",
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]"
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]"
           ]
         ]
       }

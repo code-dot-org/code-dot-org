@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 182,
   "properties": {
-    "skin": "gamelab",
+    "skin": "dance",
     "helper_libraries": [
       "DanceLab"
     ],
@@ -38,7 +38,7 @@
     "block_pool": "Dancelab",
     "name_suffix": "_draft",
     "skip_autosave": true,
-    "default_song": "hammer",
+    "default_song": "canttouchthis_mchammer",
     "long_instructions": "# Quarter Notes\r\n\r\nMost of our dances have used whole measures, but each measure is made up of 4 quarter notes. This dance uses `every 0.25 measures` to make the dancer clap on every quarter note.\r\n\r\nThis dance also uses a _conditional_ block to control when the `every 0.25 measures` block can change the dance. Try changing the numbers in the conditional block to see how it changes the dance.\r\n\r\n* Experiment with other note durations (like 0.5 for a half note or 0.125 for an eighth note).\r\n* Add some `after measure` events.\r\n* Switch \"measures\" with \"seconds\" and try timing your dances that way.",
     "soft_buttons": [
       "leftButton",

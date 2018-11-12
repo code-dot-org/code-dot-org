@@ -7,7 +7,7 @@
       0.74
     ],
     "func": "whenTouchingAdvanced",
-    "blockText": "when {SPRITE1} touches {SPRITE2}",
+    "blockText": "when {SPRITE1} touches {SPRITE2} advanced",
     "args": [
       {
         "name": "SPRITE1",
