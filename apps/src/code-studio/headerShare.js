@@ -45,7 +45,7 @@ export function shareProject(shareUrl) {
       <Provider store={getStore()}>
         <ShareDialog
           isProjectLevel={!!dashboard.project.isProjectLevel()}
-          isDance={dashboard.project.getStandaloneApp() === 'dance'}
+          allowSignedOutShare={appType === 'dance'}
           i18n={i18n}
           shareUrl={shareUrl}
           selectedSong={selectedSong}
