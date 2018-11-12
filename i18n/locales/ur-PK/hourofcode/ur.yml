@@ -12,10 +12,13 @@
   campaign_date_year: "2017"
   campaign_date_full_year: "4-10، 2017"
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
+  codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
   codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_musician_before: 'Featuring'
+  codeorg_homepage_hoc2018_musician_after: 'and more!'
   codeorg_homepage_hoc2018_video: 'Watch our video'
   hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
   hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
@@ -295,7 +298,7 @@
   social_hoc2018_code_org_what_create: "Code.org: What will you create?"
   social_hoc2018_creativity_in_are_you: "The #HourOfCode is about creativity. I’m in! Are you?"
   social_hoc2018_dance_party: "Hour of Code: Dance Party"
-  social_hoc2018_dance_what_create: "Do a little dance. Make a little code. What will you create?"
+  social_hoc2018_dance_what_create: "Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   social_hoc2018_every_student: "Every student deserves the opportunity to express their creativity with computer science."
   social_hoc2018_every_student_try_what_create: "Every student deserves the opportunity to express their creativity with computer science. Try your hand at the new tutorials. What will you create?"
   social_hoc2018_hoc_coming_create: "The Hour of Code is coming. What will you create?"
@@ -304,6 +307,7 @@
   social_hoc2018_mc: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   social_hoc2018_mc_creativity: "Use your creativity and problem solving skills to explore and build underwater worlds with code."
   social_hoc2018_what_create: "What will you create?"
+  social_hoc2018_global_movement: "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
   map_title: "کوڈ کا نقشہ"
   map_header: 'قیام کوڈ 2017 کے لئے رجسٹرڈ # واقعات'
   map_header_count_year: '%{event_count} events registered in %{year}'
@@ -418,6 +422,7 @@
   videos_anybody_can_learn: کوئی بھی سیکھ سکتا ہے (1 منٹ)
   title_country_resources: ملکی مخصوص وسائل
   title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
+  title_how_to_promote: اس بات کو عام کریں
   title_how_to_districts: آور-آف-کوڈ ھاؤ-ٹو برائے ڈسٹرکٹس (اضلاع)
   title_how_to_events: "آور-آف-کوڈ ایونٹ ھاؤ-ٹو\n"
   title_how_to_organizations: آور-آف-کوڈ کس طرح ھوسٹ (منعقد) کریں۔ آرگنائزیشنز
@@ -482,6 +487,7 @@
   learn_banner_teachers: "اساتذہ: <a id='teacher_banner_host'> ایک گھنٹے کی میزبانی</a> کریں یا <a id='teacher_banner_howto'> نکات ملحوظ</a>"
   learn_robotics_banner_heading: 'روبوٹکس اور سرکٹس'
   learn_robotics_banner_blurb: 'روبوٹ یا جسمانی کمپیوٹنگ کٹس مل گیا؟ نیچے سرگرمیوں کے ساتھ ان کا استعمال اور کسی بھی عمر کے طالب علموں کے لئے ایک ٹھوس کے گھنٹے کوڈ کریں! بعض سرگرمیوں نے ایک سیمیولیٹر کو بھی پیش کرتے ہیں تاکہ اگر آپ کوئی ہارڈ ویئر کے بغیر شروع ہو سکتے ہیں ۔'
+  tutorial_danceparty_name: "Dance Party"
   tutorial_chibitronics_name: "Chibitronics: Illuminated Story"
   tutorial_athlete_name: "اپنے کھیل کھیل کوڈ"
   tutorial_moana_name: "اعلی Moana: کوڈ کے ساتھ وایفندینگ"
@@ -1062,6 +1068,8 @@
   tutorial_vidcodeplastic_name: "Plastic Pollution PSA"
   tutorial_vidcodetypeface_name: "Create your own typeface!"
   tutorial_washustorm_name: "Stormy Science"
+  tutorial_activitypackets_name: "Wonder Workshop Activity Packets"
+  tutorial_danceparty_shortdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   tutorial_chibitronics_shortdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_shortdescription: "ایک باسکٹ بال کھیل بنانے یا کھیلوں میں مکس اور میچ کے درمیان انتخاب کریں!"
   tutorial_moana_shortdescription: "موانا بہادر، خوفناک ہے اور اس کا اپنا راستہ تلاش کرنے کا ارادہ رکھتا ہے."
@@ -1642,6 +1650,8 @@
   tutorial_vidcodeplastic_shortdescription: "Learn to use loops, sin waves and customized emojis to make a unique project."
   tutorial_vidcodetypeface_shortdescription: "Create your own typeface using shapes and elements of typography. Type has more elements than you may have realized!"
   tutorial_washustorm_shortdescription: "Learn how to program an incoming storm."
+  tutorial_activitypackets_shortdescription: "Find hours of family-friendly fun with Wonder Workshop's printable packets of creative coding activities. Bring coding to life with Dash, Dot, and Cue robots by downloading these online and offline activities to use during Hour of Code and beyond!"
+  tutorial_danceparty_longdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   tutorial_chibitronics_longdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_longdescription: "ایک باسکٹ بال کھیل بنانے یا کھیلوں میں مکس اور میچ کے درمیان انتخاب کریں!"
   tutorial_moana_longdescription: "نئے ڈزنی گھنٹہ کوڈ ٹیوٹوریل بلاکس کا استعمال کرتے ہوئے بصری پروگرامنگ زبان کا استعمال کرتا ہے جہاں طالب علم کو صرف کوڈ لکھنے کے لئے بصری بلاکس کو گھسیٹنا اور ڈراپنا ہوتا ہے. بصری پروگرامنگ کوڈنگ کی منطق کو سکھانے کے لئے ایک مذاق اور آسانی سے سمجھا جاتا ہے. بصری پروگرامنگ کا نمائش، متن پر مبنی پروگرامنگ کی بنیاد بناتا ہے، زیادہ پیچیدہ سرگرمی. سبق 8+ سے زائد بچوں کے لئے نشانہ بنایا جاتا ہے اور وہ پہلی بار کوڈنگ کی کوشش کرتے ہیں. 23 زبانوں میں دستیاب ہے اور ریاستہائے متحدہ کے باہر مقامی. یہ سبق مفت آن لائن دستیاب ہے اور اساتذہ اور ایونٹ آرگنائزر کے لئے انگریزی اور ہسپانوی میں ڈیجیٹل ٹول کٹ شامل ہے."
@@ -2222,6 +2232,8 @@
   tutorial_vidcodeplastic_longdescription: "The problem of plastic filling our oceans continues to worsen. Luckily, you can make your voice heard with code through the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript, you can make a second video about any subject you care about! Learn to use loops, sin waves and customized emojis to make a unique project."
   tutorial_vidcodetypeface_longdescription: "Create your own typeface using shapes and elements of typography. Type has more elements than you may have realized! So far we have talked about fonts and how they are different styles of text. Fonts are actually just different styles of a typeface. A typeface is a family of fonts that have similar features."
   tutorial_washustorm_longdescription: "Learn how to program an incoming storm."
+  tutorial_activitypackets_longdescription: "Find hours of family-friendly fun with Wonder Workshop's printable packets of creative coding activities. Bring coding to life with Dash, Dot, and Cue robots by downloading these online and offline activities to use during Hour of Code and beyond!"
+  tutorial_danceparty_language: "ایک سے زیادہ"
   tutorial_chibitronics_language: "انگلش"
   tutorial_athlete_language: "انگریزی، فرانسیسی، ہسپانوی، اطالوی، پرتگالی (برازیل)"
   tutorial_moana_language: "انگریزی، عربی، چینی (آسان)، چینی (روایتی) ڈینش، ڈچ، فینیش، فرانسیسی، جرمن، انڈونیثیائی، اطالوی، جاپانی، کوریائی، ناروے، پولش، پولینیس (ساموآن)، پرتگالی، روسی، ہسپانوی، سویڈش، ترکی، یوکرین، ویتنامی"
@@ -2709,7 +2721,7 @@
   tutorial_codemojipizza_language: "انگلش"
   tutorial_moonlander_language: "انگلش"
   tutorial_sushicards_language: "انگلش"
-  tutorial_codesparkcreate_language: "Chinese, English, French, German, Italian, Japanese, Korean, Malay, Portuguese (Brazil), Spanish, Thai"
+  tutorial_codesparkcreate_language: "انگریزی، عربی، آزربائیجان، چینی، ڈچ، فرانسیسی، جرمن، یونانی، ہندی، ہنگری، آئس لینڈ، انڈونیشین، اطالوی، جاپانی، کوریائی، ناروے، پولش، پرتگالی، رومانیہ، روسی، صربی، ہسپانوی، سویڈش، ترکی، یوکرینیائی"
   tutorial_hardvsoft_language: "انگلش"
   tutorial_codestersecard_language: "Chinese, English, Spanish"
   tutorial_codesterslogo_language: "Chinese, English, Spanish"
@@ -2802,6 +2814,8 @@
   tutorial_vidcodeplastic_language: "انگلش"
   tutorial_vidcodetypeface_language: "انگلش"
   tutorial_washustorm_language: "انگلش"
+  tutorial_activitypackets_language: "انگلش"
+  tutorial_danceparty_string_detail_grades: "گریڈ 2+"
   tutorial_chibitronics_string_detail_grades: "گریڈ 2-5"
   tutorial_athlete_string_detail_grades: "گریڈ 2+"
   tutorial_moana_string_detail_grades: "گریڈ 2+"
@@ -3251,7 +3265,7 @@
   tutorial_blockscadicecream_string_detail_grades: "Grades 6+"
   tutorial_blockscadpizza_string_detail_grades: "گریڈز 6-8"
   tutorial_blockscadsugar_string_detail_grades: "گریڈز 6-8"
-  tutorial_bsgridlight_string_detail_grades: "Pre-reader - Grade 9+"
+  tutorial_bsgridlight_string_detail_grades: "گریڈ 2+"
   tutorial_bpartscratch_string_detail_grades: "Grades 6+"
   tutorial_bpartvid_string_detail_grades: "Grades 6+"
   tutorial_bpenglishscratch_string_detail_grades: "گرڈ 2-8"
@@ -3382,6 +3396,8 @@
   tutorial_vidcodeplastic_string_detail_grades: "Grades 6+"
   tutorial_vidcodetypeface_string_detail_grades: "Grades 6+"
   tutorial_washustorm_string_detail_grades: "گریڈ 2-5"
+  tutorial_activitypackets_string_detail_grades: "پری ریڈر - گریڈ 8"
+  tutorial_danceparty_string_platforms: "تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ، رکن، لوڈ، اتارنا Android فون، آئی فون"
   tutorial_chibitronics_string_platforms: "جدید براؤزر"
   tutorial_athlete_string_platforms: "جدید براؤزر"
   tutorial_moana_string_platforms: "تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ، رکن"
@@ -3821,7 +3837,7 @@
   tutorial_bcpy2_string_platforms: "جدید براؤزر"
   tutorial_bcjs1_string_platforms: "جدید براؤزر"
   tutorial_bcjs2_string_platforms: "جدید براؤزر"
-  tutorial_3dbearmars_string_platforms: ""
+  tutorial_3dbearmars_string_platforms: "لوڈ، اتارنا Android کی گولی، رکن، لوڈ، اتارنا Android فون، آئی فون"
   tutorial_alexaskill_string_platforms: "جدید براؤزر"
   tutorial_bitsboxyak_string_platforms: ""
   tutorial_blockscadbargraphs_string_platforms: "جدید براؤزر"
@@ -3880,13 +3896,13 @@
   tutorial_discovery_string_platforms: "جدید براؤزر"
   tutorial_csfirstname_string_platforms: "جدید براؤزر"
   tutorial_obstaclecourse_string_platforms: "واپس اوپر"
-  tutorial_edisonmove_string_platforms: ""
-  tutorial_edisonspider_string_platforms: ""
-  tutorial_edisonspotlight_string_platforms: ""
+  tutorial_edisonmove_string_platforms: "جدید براؤزر"
+  tutorial_edisonspider_string_platforms: "All modern browsers, iPad, Android tablets"
+  tutorial_edisonspotlight_string_platforms: "All modern browsers, iPad, Android tablets"
   tutorial_firiapython_string_platforms: "جدید براؤزر"
   tutorial_gamefrootsquid_string_platforms: "تمام جدید براؤزرز، رکن"
-  tutorial_duckpiano_string_platforms: "کروم، فائر فاکس، سفاری"
-  tutorial_gpsound_string_platforms: "کروم، فائر فاکس، سفاری"
+  tutorial_duckpiano_string_platforms: "جدید براؤزر"
+  tutorial_gpsound_string_platforms: "جدید براؤزر"
   tutorial_groklearningpython_string_platforms: "جدید براؤزر"
   tutorial_htmltimetravel_string_platforms: "جدید براؤزر"
   tutorial_hp_flappy_string_platforms: "واپس اوپر"
@@ -3938,9 +3954,9 @@
   tutorial_spherotext3_string_platforms: "تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ، رکن، لوڈ، اتارنا Android فون، آئی فون"
   tutorial_spherotext4_string_platforms: "تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ، رکن، لوڈ، اتارنا Android فون، آئی فون"
   tutorial_spheroraptor_string_platforms: "تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ، رکن، لوڈ، اتارنا Android فون، آئی فون"
-  tutorial_stempiday_string_platforms: "تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ، رکن"
-  tutorial_stemplanetoids_string_platforms: "تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ، رکن"
-  tutorial_stempong_string_platforms: "تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ، رکن"
+  tutorial_stempiday_string_platforms: "جدید براؤزر"
+  tutorial_stemplanetoids_string_platforms: "جدید براؤزر"
+  tutorial_stempong_string_platforms: "جدید براؤزر"
   tutorial_algobot_string_platforms: "تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ، رکن، لوڈ، اتارنا Android فون، آئی فون"
   tutorial_thunkableapps_string_platforms: "Chrome, Firefox, Safari, Android tablet, iPad, Android phone, iPhone"
   tutorial_toxicodedot_string_platforms: "جدید براؤزر"
@@ -3962,6 +3978,8 @@
   tutorial_vidcodeplastic_string_platforms: "تمام جدید براؤزرز، رکن"
   tutorial_vidcodetypeface_string_platforms: "تمام جدید براؤزرز، رکن"
   tutorial_washustorm_string_platforms: "جدید براؤزر"
+  tutorial_activitypackets_string_platforms: "غیر منسلک"
+  tutorial_danceparty_string_detail_platforms: ""
   tutorial_chibitronics_string_detail_platforms: "Chibitronics Chibi Chip and Circuit Sticker LEDs"
   tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
@@ -4542,6 +4560,8 @@
   tutorial_vidcodeplastic_string_detail_platforms: ""
   tutorial_vidcodetypeface_string_detail_platforms: ""
   tutorial_washustorm_string_detail_platforms: ""
+  tutorial_activitypackets_string_detail_platforms: "Dash or Cue robot"
+  tutorial_danceparty_string_detail_programming_languages: "بلاکس"
   tutorial_chibitronics_string_detail_programming_languages: "بلاکس"
   tutorial_athlete_string_detail_programming_languages: "بلاکس"
   tutorial_moana_string_detail_programming_languages: "بلاکس"
@@ -5122,6 +5142,7 @@
   tutorial_vidcodeplastic_string_detail_programming_languages: "جاوا اسکرپٹ"
   tutorial_vidcodetypeface_string_detail_programming_languages: "جاوا اسکرپٹ"
   tutorial_washustorm_string_detail_programming_languages: "بلاکس"
+  tutorial_activitypackets_string_detail_programming_languages: "Blocks, Wonder, Xylo, Blockly"
   school_not_found_heading: "ہم آپ کا اسکول نہیں مل سکا. مزید معلومات درج کریں."
   school_name: "سکول کا نام"
   school_name_error: "اسکول کے نام کی ضرورت ہے."
