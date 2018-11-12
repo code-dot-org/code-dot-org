@@ -70,7 +70,7 @@
             "MOVES.ClapHigh"
           ],
           [
-            "Clown",
+            "Gangnam",
             "MOVES.Clown"
           ],
           [
@@ -78,7 +78,7 @@
             "MOVES.Dab"
           ],
           [
-            "Double Jam",
+            "Double Down",
             "MOVES.DoubleJam"
           ],
           [
@@ -94,7 +94,7 @@
             "MOVES.Fresh"
           ],
           [
-            "Roll",
+            "Body Roll",
             "MOVES.Roll"
           ],
           [
@@ -106,12 +106,8 @@
             "MOVES.ThisOrThat"
           ],
           [
-            "Thriller",
+            "Zombie",
             "MOVES.Thriller"
-          ],
-          [
-            "(Random)",
-            "\"rand\""
           ],
           [
             "None",
