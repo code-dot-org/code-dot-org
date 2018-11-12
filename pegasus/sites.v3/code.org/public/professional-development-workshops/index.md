@@ -68,7 +68,7 @@ Join the over 80,000 teachers who have participated in our workshops. The majori
 
 <div class="col-66">
 
-<p>"<strong>This will totally change my curriculum.</strong> I love how the lessons are prepared and aligned to the Common Core and Gext Generation Science Standards."</p>
+<p>"<strong>This will totally change my curriculum.</strong> I love how the lessons are prepared and aligned to the Common Core and Next Generation Science Standards."</p>
 
 </div>
 
