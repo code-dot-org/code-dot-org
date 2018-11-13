@@ -431,14 +431,13 @@ class Homepage
 
   def self.get_dance_stars
     stars = [
-      "Katy Perry", "Madonna", "Keith Urban", "Sia", "Carly Rae Jepsen",
-      "Ciara", "Macklemore and Ryan Lewis", "Yolanda Be Cool",
-      "J Balvin", "Bruce Springsteen", "A-ha", "Imagine Dragons",
-      "Ariana Grande", "Justin Bieber", "Selena Gomez", "Lady Antebellum",
-      "Los del Rio", "Mark Ronson (ft. Bruno Mars)", "Calvin Harris", "Luke Bryan", "Coldplay",
-      "Ace of Base", "The Weeknd", "Avicii", "MC Hammer", "Village People",
-      "OutKast", "will.i.am", "Ed Sheeran"
-    ].sort
+      "Ace of Base", "A-ha", "Ariana Grande", "Avicii and Aloe Blacc", "Bruce Springsteen", "Calvin Harris",
+      "Carly Rae Jepsen", "Ciara", "Coldplay", "Ed Sheeran", "Imagine Dragons",
+      "J Balvin and Willy William", "Justin Bieber", "Katy Perry", "Keith Urban", "Lady Antebellum", "Lady Gaga",
+      "Los del Río", "Luke Bryan", "Macklemore and Ryan Lewis", "Madonna", "Mark Ronson (ft. Bruno Mars)",
+      "MC Hammer", "Miley Cyrus", "OutKast", "Selena Gomez", "Sia", "Village People", "The Weeknd", "will.i.am",
+      "Yolanda Be Cool"
+    ]
 
     DCDO.get("hoc2018_dance_stars", stars)
   end
