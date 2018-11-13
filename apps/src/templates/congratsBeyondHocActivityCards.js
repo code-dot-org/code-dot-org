@@ -103,11 +103,11 @@ const AquaticMinecraft = {
 // This card is displayed to promote the MC Aquatic tutorial after finishing
 // another Hour of Code activity.
 const AquaticMinecraftPromo = {
-  title: i18n.minecraftAquaticTitle(),
-  description: i18n.minecraftAquaticDesc(),
+  title: i18n.minecraftAquaticPromoTitle(),
+  description: i18n.minecraftAquaticPromoDesc(),
   link: "/s/aquatic/reset",
   image: "aquatic-minecraft",
-  buttonText: i18n.minecraftAquaticButton(),
+  buttonText: i18n.minecraftAquaticPromoButton(),
 };
 
 const DanceParty = {
