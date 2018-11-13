@@ -11,10 +11,10 @@ Scenario: Student sign in from code.org
   Given I am on "http://code.org/"
   And I reload the page
   Then I wait to see ".header_user"
-  Then I press "signin_button"
+  Then I click selector "#signin_button"
   And I wait to see "#signin"
   And I fill in username and password for "Bob"
-  And I press "signin-button"
+  And I click selector "#signin-button"
   Then I wait until I am on "http://studio.code.org/home"
   Then I wait to see ".user_menu"
   And I wait until element ".display_name" is visible
@@ -28,10 +28,10 @@ Scenario: Student sign in from studio.code.org
   Given I am on "http://studio.code.org/"
   And I reload the page
   Then I wait to see ".header_user"
-  Then I press "signin_button"
+  Then I click selector "#signin_button"
   And I wait to see "#signin"
   And I fill in username and password for "Alice"
-  And I press "signin-button"
+  And I click selector "#signin-button"
   Then I wait until I am on "http://studio.code.org/home"
   Then I wait to see ".user_menu"
   And I wait until element ".display_name" is visible
@@ -45,10 +45,10 @@ Scenario: Student sign in from studio.code.org in the eu
   Given I am on "http://studio.code.org/"
   And I reload the page
   Then I wait to see ".header_user"
-  Then I press "signin_button"
+  Then I click selector "#signin_button"
   And I wait to see "#signin"
   And I fill in username and password for "Alice"
-  And I press "signin-button"
+  And I click selector "#signin-button"
   Then I wait until I am on "http://studio.code.org/home"
   Then I wait to see ".user_menu"
   And I wait until element ".display_name" is visible
@@ -62,7 +62,7 @@ Scenario: Teacher sign in from studio.code.org
   Given I am on "http://code.org/"
   And I reload the page
   Then I wait to see ".header_user"
-  Then I press "signin_button"
+  Then I click selector "#signin_button"
   And I wait to see "#signin"
   And I fill in username and password for "Casey"
   And I click selector "#signin-button" to load a new page
