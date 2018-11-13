@@ -1,6 +1,7 @@
 path = File.expand_path('../../deployment.rb', __FILE__)
 path = File.expand_path('../../../deployment.rb', __FILE__) unless File.file?(path)
 require path
+require 'cdo/aws/metrics'
 
 if CDO.dashboard_sock
   bind "unix://#{CDO.dashboard_sock}"
@@ -25,9 +26,32 @@ before_fork do
   DASHBOARD_DB.disconnect
   ActiveRecord::Base.connection_pool.disconnect!
   Cdo::AppServerMetrics.instance&.spawn_reporting_task if defined?(Cdo::AppServerMetrics)
+
+  # Control automated restarts of web application server processes via Gatekeeper.
+  # NOTE: before_fork runs on the parent puma process, so complete restart of the web application services on all
+  # front end instances is required for a change of this Gatekeeper flag to take effect:
+  #   sudo service dashboard upgrade && sudo service pegasus upgrade
+  if Gatekeeper.allows('enableWebServiceProcessRollingRestart')
+    require 'puma_worker_killer'
+
+    restart_period = DCDO.get("web_service_process_restart_period", 12 * 3600) # default to 12 hours
+    PumaWorkerKiller.enable_rolling_restart(restart_period)
+  end
 end
 
 on_worker_boot do |_index|
+  Cdo::Metrics.push(
+    'App Server',
+    [
+      {
+        metric_name: :WorkerBoot,
+        dimensions: [
+          {name: "Host", value: CDO.dashboard_hostname}
+        ],
+          value: 1
+      }
+    ]
+  )
   ActiveRecord::Base.establish_connection
   require 'dynamic_config/gatekeeper'
   require 'dynamic_config/dcdo'

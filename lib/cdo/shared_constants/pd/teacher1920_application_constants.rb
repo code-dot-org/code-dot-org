@@ -148,6 +148,7 @@ module Pd
         status: "Status",
         meets_criteria: "Meets minimum requirements?",
         meets_scholarship_criteria: "Meets scholarship requirements?",
+        friendly_scholarship_status: "Scholarship teacher?",
         regional_partner_name: "Regional Partner",
         assigned_workshop: "Assigned Workshop",
         friendly_registered_workshop: "Registered for workshop?",
@@ -293,7 +294,8 @@ module Pd
         :taught_in_past,
         :free_lunch_percent,
         :underrepresented_minority_percent,
-        :race
+        :race,
+        :principal_implementation
       ],
       scholarship_questions: [
         :plan_to_teach,
@@ -346,6 +348,7 @@ module Pd
         :status,
         :meets_criteria,
         :meets_scholarship_criteria,
+        :friendly_scholarship_status,
         :total_score,
         :notes,
         :title,
@@ -453,5 +456,11 @@ module Pd
         :student_tr_count
       ]
     }
+
+    SCHOLARSHIP_DROPDOWN_OPTIONS = [
+      {value: 'no', label: "No"},
+      {value: 'yes_code_dot_org', label: "Yes, Code.org scholarship"},
+      {value: 'yes_other', label: "Yes, other scholarship"}
+    ]
   end
 end

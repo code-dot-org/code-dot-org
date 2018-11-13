@@ -27,18 +27,10 @@ const styles = {
   image: {
     width: 310,
     height: 220,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    overflow: 'hidden'
   },
   jumboImage: {
     width: 473,
     height: 220,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    overflow: 'hidden'
   },
   text: {
     fontFamily: '"Gotham 4r", sans-serif',

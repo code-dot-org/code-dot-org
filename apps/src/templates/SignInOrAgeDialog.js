@@ -20,10 +20,6 @@ const styles = {
     fontSize: 16,
     fontFamily: "'Gotham 5r', sans-serif",
   },
-  dancePartyHeading: {
-    fontSize: 32,
-    fontFamily: "'Gotham 7r', sans-serif",
-  },
   middle: {
     marginTop: 20,
     marginBottom: 20,
@@ -85,7 +81,6 @@ class SignInOrAgeDialog extends Component {
   static propTypes = {
     signedIn: PropTypes.bool.isRequired,
     age13Required: PropTypes.bool.isRequired,
-    useDancePartyStyle: PropTypes.bool,
   };
 
   onClickAgeOk = () => {
@@ -95,12 +90,12 @@ class SignInOrAgeDialog extends Component {
       return;
     }
 
-    if (!this.props.useDancePartyStyle && parseInt(value, 10) < 13) {
+    if (parseInt(value, 10) < 13) {
       this.setState({tooYoung: true});
       return;
     }
 
-    //Sets cookie to true when anon user is 13+. False otherwise.
+    // Sets cookie to true when anon user is 13+. False otherwise.
     sessionStorage.setItem(sessionStorageKey, parseInt(value, 10) >= 13);
 
     // When opening a new tab, we'll have a new session (and thus show this dialog),
@@ -117,10 +112,9 @@ class SignInOrAgeDialog extends Component {
 
   render() {
     const { signedIn, age13Required } = this.props;
-    let ageRequired = age13Required || this.props.useDancePartyStyle;
     // Don't show dialog unless script requires 13+, we're not signed in, and
     // we haven't already given this dialog our age or we do not require sign-in
-    if (!ageRequired || signedIn || sessionStorage.getItem(sessionStorageKey)) {
+    if (!age13Required || signedIn || sessionStorage.getItem(sessionStorageKey)) {
       return null;
     }
 
@@ -175,36 +169,28 @@ class SignInOrAgeDialog extends Component {
         uncloseable
       >
         <div style={styles.container} className="signInOrAgeDialog">
-          <div style={this.props.useDancePartyStyle ? styles.dancePartyHeading : styles.heading}>
-            {this.props.useDancePartyStyle ? i18n.welcomeToDanceParty() : i18n.signinOrAge()}
+          <div style={styles.heading}>
+            {i18n.signinOrAge()}
           </div>
-          <div>
-            {this.props.useDancePartyStyle ?
-              <div style={styles.middle}>
-                {provideAge}
-              </div> :
-              <div style={styles.middle}>
-                <div style={styles.middleCell}>
-                  {i18n.signinForProgress()}
-                  <div style={styles.button}>
-                    <Button
-                      href={`/users/sign_in?user_return_to=${location.pathname}`}
-                      text={i18n.signinCodeOrg()}
-                      color={Button.ButtonColor.gray}
-                    />
-                  </div>
-                </div>
-                <div style={styles.center}>
-                  <div style={styles.centerLine}/>
-                  <div style={styles.centerText}>
-                    {i18n.or()}
-                  </div>
-                  <div style={styles.centerLine}/>
-                </div>
-                {provideAge}
+          <div style={styles.middle}>
+            <div style={styles.middleCell}>
+              {i18n.signinForProgress()}
+              <div style={styles.button}>
+                <Button
+                  href={`/users/sign_in?user_return_to=${location.pathname}`}
+                  text={i18n.signinCodeOrg()}
+                  color={Button.ButtonColor.gray}
+                />
               </div>
-            }
-
+            </div>
+            <div style={styles.center}>
+              <div style={styles.centerLine}/>
+              <div style={styles.centerText}>
+                {i18n.or()}
+              </div>
+              <div style={styles.centerLine}/>
+            </div>
+            {provideAge}
           </div>
           <div>
             <a href="https://code.org/privacy">{i18n.privacyPolicy()}</a>

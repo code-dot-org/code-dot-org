@@ -15,7 +15,7 @@ export async function getSongManifest(useRestrictedSongs) {
   const promises = [songManifestPromise];
 
   if (useRestrictedSongs) {
-    const signedCookiesPromise = fetch('/dashboardapi/sign_cookies', {credentials: 'same-origin'});
+    const signedCookiesPromise = fetchSignedCookies();
     promises.push(signedCookiesPromise);
   }
 
@@ -29,6 +29,14 @@ export async function getSongManifest(useRestrictedSongs) {
     ...song,
     url: `${songPathPrefix}${song.url}.mp3`,
   }));
+}
+
+/**
+ * Fetch cookies signed by cloudfront which grant access to restricted songs.
+ * @returns {Promise<Response>}
+ */
+export function fetchSignedCookies() {
+  return fetch('/dashboardapi/sign_cookies', {credentials: 'same-origin'});
 }
 
 /**
@@ -55,12 +63,14 @@ export function getSelectedSong(songManifest, config) {
  * Load the specified song sound file.
  * @param songId {string} Song to load.
  * @param songData {Object<Object>} Song data containing urls of songs.
+ * @param onPreloadError {function} Error callback with status code.
  */
-export function loadSong(songId, songData) {
+export function loadSong(songId, songData, onPreloadError) {
   const url = songData[songId].url;
   const options = {
     id: url,
     mp3: url,
+    onPreloadError,
   };
   Sounds.getSingleton().register(options);
 }
@@ -79,7 +89,7 @@ export async function loadSongMetadata(id) {
 export function parseSongOptions(songManifest) {
   let songs = {};
   songManifest.forEach((song) => {
-    songs[song.id] = {title: song.text, url: song.url};
+    songs[song.id] = {title: song.text, url: song.url, pg13: song.pg13};
   });
   return songs;
 }
