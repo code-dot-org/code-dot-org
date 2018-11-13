@@ -161,6 +161,10 @@ a:hover {
   .dance-responsive-padding {
     padding: 10px;
   }
+
+  .add-margintop-between-sections {
+    margin-top: 30px;
+  }
 }
 
 /* Tablet only */
