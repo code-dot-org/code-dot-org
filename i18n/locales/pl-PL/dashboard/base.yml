@@ -320,6 +320,7 @@ pl:
       playlab: 'Play Lab'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
+      dance: 'Potańcówka'
       view_all: 'Zobacz wszystkie projekty...'
     popup:
       progress_for_user: "%{name} w toku"
@@ -561,6 +562,8 @@ pl:
       body_short: "Zaprojektuj aplikację i zakoduj za pomocą bloków lub JavaScript, aby działała, następnie natychmiast udostępnij swoją aplikację."
       audience: 'Wiek 13+'
       cta: 'Zobacz instrukcję'
+    dance:
+      title: 'Potańcówka'
     hoc:
       title: 'Klasyczny labirynt'
       body: 'Wypróbuj podstawy informatyki. Miliony dały im już szansę.'

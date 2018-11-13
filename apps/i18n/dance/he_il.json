@@ -9,5 +9,6 @@
   "danceFeedbackStartNewMove": "הרקדן שלכם לא השתמש בתנועה חדשה אחרי התיבה הרביעית.",
   "danceFeedbackNeedDifferentDance": "אתם צריכים להשתמש ברקדן אחר.",
   "danceFeedbackNeedEveryTwoMeasures": "ודאו כי אתם משתמשים בבלוק 'כל 2 תיבות'",
-  "danceFeedbackNeedMakeANewDancer": "השתמשו בבלוק 'צור חדש' על מנת ליצור רקדן שני."
+  "danceFeedbackNeedMakeANewDancer": "השתמשו בבלוק 'צור חדש' על מנת ליצור רקדן שני.",
+  "measure": "תיבה:"
 }

@@ -44,6 +44,14 @@ el:
           PROPERTY:
             '"scale"': μέγεθος
             '"height"': ύψος
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': δευτερόλεπτα
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': δευτερόλεπτα
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -74,12 +82,32 @@ el:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"random"': τυχαίο
       Dancelab_randomColor:
         text: τυχαίο χρώμα
       Dancelab_setDanceSpeed:
         options:
+          SPEED:
+            '1': κανονικό
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: όλα
           SPEED:
             '1': κανονικό
             '2': fast
@@ -103,6 +131,10 @@ el:
           PROPERTY:
             '"scale"': μέγεθος
             '"height"': ύψος
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: όλα
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -121,10 +153,11 @@ el:
         options:
           KEY:
             '"up"': επάνω
-            '"down"': κάτω
             '"left"': αριστερά
+            '"down"': κάτω
             '"right"': δεξιά
             '"space"': διάστημα
+            '"x"': x
       gamelab_changePropBy:
         options:
           PROPERTY:

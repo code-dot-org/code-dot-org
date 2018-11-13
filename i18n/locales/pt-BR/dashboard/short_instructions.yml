@@ -492,6 +492,8 @@ pt-BR:
       Alien Defender: 'Ideia de Projeto: Construa um jogo de defesa no Laboratório!'
       Alien Defender_2018: 'Ideia de Projeto: Construa um jogo de defesa no Laboratório!'
       AllTheThings Applab - Turtle move with button: "Arraste um botão para fora da tela e\ndefina seu texto como \"Vá em frente!\". Adicione um manipulador de eventos para o botão que\nfaz a tartaruga se mover para a frente. Execute o programa para ver se ele funciona. "
+      'AllTheThings: Pixelation - Lesson 14 - Make the Letter A': 'Faça uma letra ''A'' 3x5. O widget está configurado com as dimensões incorretas. Sua primeira tarefa é definir o segundo byte do código binário de 8-bits para o número 5: 0000 0101. Então começe a inserir os dados do pixel.'
+      'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4': 'Vamos começar com a imagem 4x4 que Maddie criou no vídeo. Sua tarefa é preencher uma grade 4x4 com cores usando 12-bits por pixel. Aqui estão os requisitos: Linha 1 - preencha com sombras de vermelho. Linha 2 - sombras de verde. Linha 3 - sombras de azul. Linha 4 - sombras de cinza.'
       App Lab test: teste
       Applab AllTheThings ResourcesTab AllResources: "Desenhe um quadrado usando apenas avance\ne vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição\ninicial da tartaruga."
       Applab AllTheThings ResourcesTab MapReference: "Desenhe um quadrado usando apenas avance\ne vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição\ninicial da tartaruga."
@@ -565,17 +567,26 @@ pt-BR:
       CSD U3 Sprites intro sprites: Faça isso
       CSD U3 Sprites intro sprites_2018 - Validation Test: Faça isso
       CSD U3 Sprites intro sprites_2018: Faça isso
+      CSD U3 Variable Arithmetic: Modifique o valor "tamanho" inicial para fazer um quadrado maior.
       CSD U3 Variables Intro: 'Crie sua própria variável '
       CSD U3 Variables Reassign pt2: Crie e atribua uma nova variável em uma única linha.
+      CSD U3 Variables Square Random: Modifique o valor "tamanho" inicial para fazer um quadrado maior.
+      CSD U3 Variables Square: Modifique o valor "tamanho" inicial para fazer um quadrado maior.
+      CSD U3 Variables create and assign: Crie e atribua o tamanho em uma única linha de código.
       CSD U5 black white images pixelation 2: Desenhar uma cara de sorriso (clique aqui para ver a imagem)
       CSD U5 black white images pixelation 2_2018: Desenhar uma cara de sorriso (clique aqui para ver a imagem)
+      CSD U5 black white images pixelation 4: Adicione sobrancelhas ao rosto sorridente (clique aqui para ver a imagem)
+      CSD U5 black white images pixelation 4_2018: Adicione sobrancelhas ao rosto sorridente (clique aqui para ver a imagem)
       CSD U5 black white images pixelation 5: Desenho algo que você gosta
       CSD U5 black white images pixelation 5_2018: Desenho algo que você gosta
       CSDU4 - AppLab - 1: "Desta vez vamos aprender\num pouco sobre como alterar a caneta da tartaruga. Leia a documentação para encontrar\nlarguraCaneta() e corCaneta(), e então desenhe o quadrado roxo como foi mostrado."
+      CSDU4 - AppLab - 2: Escreva um programa que atue como uma calculadora simples. (clique aqui para ver todas as instruções)
       CSDU4 - Design Mode - 1: "Arraste um botão para fora da tela e\ndefina seu texto como \"Vá em frente!\". Adicione um manipulador de eventos para o botão que\nfaz a tartaruga se mover para a frente. Execute o programa para ver se ele funciona. "
       CSDU4 - Design Mode - 10: "Introdução do comando setPosition!\nSubstitua o moveTo no manipulador de eventos de clique do botão para usar setPosition\npara mover o botão para uma posição aleatória quando ele for clicado."
+      CSDU4 - Design Mode - 11: Experimente tipos de eventos diferentes e selecione qual deles você acha melhor. (Clique aqui para ver todas as instruções)
       CSDU4 - Design Mode - 12: "Introdução de textLabels.  Primeiro, tente substituir\nseu botão por um textLabel.  O texto vai responder a eventos da mesma forma que o\nbotão?  Tente conectá-lo a um manipulador de eventos. Fornecemos um código\ninicial similar ao resultado do último nível, então você pode copiar o código do\núltimo nível aqui se você preferir. "
       CSDU4 - Design Mode - 24: "Introdução de textInput, getText\ne write.  Primeiro, execute o código inicial várias vezes. Tente alterar o que\né escrito na tela quando o botão for clicado. Então, use getText para escrever\nna tela o que o usuário digitou na caixa de texto."
+      CSDU4 - Design Mode - 33: Modifique o código para que o som só seja tocado quando a seta para cima for pressionada (Clique aqui para ver todas as instruções)
       CSDU4 - Design Mode - 4: "Esse programa tem um problema! Você pode descobrir\nqual? Execute o programa e veja se você pode descobrir a partir das mensagens de erro\nno console qual é o problema. Não há muito código para ver, então você deve ser capaz\nde descobrir o problema simplesmente lendo o código com atenção. Faça uma alteração\nque permita que o programa funcione como esperado."
       CSDU4 nameAgeTemplate: "Introdução de textInput, getText\ne write.  Primeiro, execute o código inicial várias vezes. Tente alterar o que\né escrito na tela quando o botão for clicado. Então, use getText para escrever\nna tela o que o usuário digitou na caixa de texto."
       CSP student contact info: Por favor, insira seu endereço de email.
@@ -594,6 +605,9 @@ pt-BR:
       CSPU5_U3L13 - Debug Id Problem: "Esse programa tem um problema! Você pode descobrir\nqual? Execute o programa e veja se você pode descobrir a partir das mensagens de erro\nno console qual é o problema. Não há muito código para ver, então você deve ser capaz\nde descobrir o problema simplesmente lendo o código com atenção. Faça uma alteração\nque permita que o programa funcione como esperado."
       CSPU5_U3L13 - Turtle Driver Project: "Desafio: crie uma \"tartaruga motorista\"\ncom pelo menos três botões na tela para mover a tartaruga para a frente e\nvirá-la para a direita e para a esquerda. Se quiser, você pode copiar/colar de um nível anterior,\nmas você vai exercitar seus músculos de programação se criar\nesse pequeno programa desde o início. Se tiver tempo, adicione botões extras! Você\ntambém pode se divertir alterando os parâmetros nas funções da tartaruga, usando cores,\netc."
       CSPU5_U3L13 - Turtle move with button: "Arraste um botão para fora da tela e\ndefina seu texto como \"Vá em frente!\". Adicione um manipulador de eventos para o botão que\nfaz a tartaruga se mover para a frente. Execute o programa para ver se ele funciona. "
+      CSPU5_U3L14 - User Input Division calculator: Escreva um programa que atue como uma calculadora simples. (clique aqui para ver todas as instruções)
+      CSPU5_U3L14 - User Input Division calculator_2018: Escreva um programa que atue como uma calculadora simples. (clique aqui para ver todas as instruções)
+      CSPU5_U3L16 - newEventTypes: Experimente tipos de eventos diferentes e selecione qual deles você acha melhor. (Clique aqui para ver todas as instruções)
       CSPU5_U3L16 - setPosition to fixed location: "Introdução do comando setPosition!\nSubstitua o moveTo no manipulador de eventos de clique do botão para usar setPosition\npara mover o botão para uma posição aleatória quando ele for clicado."
       CSPU5_U3L16 - setPosition to move button: "Introdução do comando setPosition!\nSubstitua o moveTo no manipulador de eventos de clique do botão para usar setPosition\npara mover o botão para uma posição aleatória quando ele for clicado."
       CSPU5_U3L16 - setPosition to move button_2018: "Introdução do comando setPosition!\nSubstitua o moveTo no manipulador de eventos de clique do botão para usar setPosition\npara mover o botão para uma posição aleatória quando ele for clicado."
@@ -604,6 +618,8 @@ pt-BR:
       CSPU5_U3L19 - fix the var name syntax error v2_2018: "Demos a você um trecho de código\ncom um erro. Ele não reconhece a variável. Você consegue descobrir o motivo? Conserte\no erro e execute o programa. Observe também a mensagem de erro, já que ela\npode aparecer em algum momento da sua vida.\\r\n\\r\n"
       CSPU5_U3L19 - three basic ops of variables: "Faça o seguinte:\\r\nDemos a você\ntrês linhas de código mostradas na página anterior. Adicione três linhas de\ncódigo abaixo das mostradas aqui para criar sua própria variável, atribuir um\nvalor a ela e escrevê-la na tela.  OBSERVAÇÃO: altere o nome da variável de\nx para alguma outra coisa.\\r\n"
       CSPU5_U3L19 - three basic ops of variables_2018: "Faça o seguinte:\\r\nDemos a você\ntrês linhas de código mostradas na página anterior. Adicione três linhas de\ncódigo abaixo das mostradas aqui para criar sua própria variável, atribuir um\nvalor a ela e escrevê-la na tela.  OBSERVAÇÃO: altere o nome da variável de\nx para alguma outra coisa.\\r\n"
+      CSPU5_U3L25 - play sound when up key: Modifique o código para que o som só seja tocado quando a seta para cima for pressionada (Clique aqui para ver todas as instruções)
+      CSPU5_U3L25 - play sound when up key_2018: Modifique o código para que o som só seja tocado quando a seta para cima for pressionada (Clique aqui para ver todas as instruções)
       CSPU5_addDescriptiveIDsToTurtleDriver: "Esse programa tem um problema! Você pode descobrir\nqual? Execute o programa e veja se você pode descobrir a partir das mensagens de erro\nno console qual é o problema. Não há muito código para ver, então você deve ser capaz\nde descobrir o problema simplesmente lendo o código com atenção. Faça uma alteração\nque permita que o programa funcione como esperado."
       CSPU5_addDescriptiveIDsToTurtleDriver_2018: "Esse programa tem um problema! Você pode descobrir\nqual? Execute o programa e veja se você pode descobrir a partir das mensagens de erro\nno console qual é o problema. Não há muito código para ver, então você deve ser capaz\nde descobrir o problema simplesmente lendo o código com atenção. Faça uma alteração\nque permita que o programa funcione como esperado."
       CSPU5_setPosition to fixed location: "Introdução do comando setPosition!\nSubstitua o moveTo no manipulador de eventos de clique do botão para usar setPosition\npara mover o botão para uma posição aleatória quando ele for clicado."
@@ -1097,7 +1113,19 @@ pt-BR:
       Dance Party Predict: 'O que acha que vai acontecer quando você clicar no alienígena?  '
       Dance Party Predict_2019: 'O que acha que vai acontecer quando você clicar no alienígena?  '
       Dance Party Predict_simple: 'O que acha que vai acontecer quando você clicar no alienígena?  '
-      Dance_Party_04: Adicione um efeito de plano de fundo para seu programa.
+      Dance_Party_01: Arraste o bloco 'criar novo' para a área de trabalho, conectando-o dentro do bloco de 'configuração'.
+      Dance_Party_01_low: Arraste o bloco 'criar novo' para a área de trabalho, conectando-o dentro do bloco de 'configuração'.
+      Dance_Party_02: Faça o alce iniciar um novo movimento após quatro compassos!
+      Dance_Party_03: Agora, faça o(a) dançarino(a) iniciar um novo movimento após seis compassos!
+      Dance_Party_04: Adicione um efeito de plano de fundo ao seu programa.
+      Dance_Party_05: Use outro bloco novo para fazer o(a) dançarino(a) mudar seus movimentos a cada dois compassos.
+      Dance_Party_06: Crie um(a) dançarino(a) de apoio intitulado 'backup_dancer1' para dançar com o gato.
+      Dance_Party_08: É possível deixar os dois dançarinos de apoio do mesmo tamanho?
+      Dance_Party_09: Use o bloco de 'definir tonalidade” para alterar a cor de um(a) dançarino(a).
+      Dance_Party_10: Faça o outro dançarino também responder à música usando o bloco 'começar a seguir '.
+      Dance_Party_11.5: Use os blocos "todos os patos" para fazer os patos dançarem juntos.
+      Dance_Party_11: O bloco 'com a seta para cima pressionada' permite executar o código quando a seta para cima for pressionada. Tente fazer o(a) dançarino(a) se movimentar rapidamente pressionando a seta para cima.
+      Dance_Party_11b: Faça o robô dançar drop uma vez pressionando a tecla de seta para a direita e fazer a dança do fio dental uma vez pressionando a seta para cima. Faça o movimento dança drop-dança do fio dental o mais rápido que puder!
       Eval Booleans 1: "Operadores booleanos (como >, <, =) nos permitem\ncomparar valores diferentes, retornando \"verdadeiro\" ou \"falso\". Clique em \"Executar\"\npara ver o que essa expressão retorna."
       Eval Booleans 2: "Você pode definir os valores para que essa expressão\nseja \"verdadeira\"?"
       Eval Booleans 3: "A função \"comprimento-string\" retorna o número\nde caracteres em uma string (incluindo espaços!) - faça esse código retornar\n\"verdadeiro\"."
@@ -1194,17 +1222,17 @@ pt-BR:
       GLJr_Behavior_2: Agora você tem alguns blocos novos! Tente usá-los e veja como eles funcionam. Em suas anotações, escreva quais você tentou e o que eles fazem.
       GLJr_Behavior_6: Vamos tentar mais alguns comportamentos - faça o cachorro correr para cima e o gato correr para a direita.
       GLJr_Forever_2: Agora você tem alguns blocos novos! Tente usá-los e veja como eles funcionam. Em suas anotações, escreva quais você tentou e o que eles fazem.
-      HOC 2018 Level_1: Colete um barco do baú.
-      HOC 2018 Level_10: Vá para a entrada do Monumento do Oceano.
-      HOC 2018 Level_11: 'Construa um canal com Prismarino dentro do Monumento Oceano.  '
-      HOC 2018 Level_12: 'Projete seu próprio ambiente subaquático, você decide!  '
-      HOC 2018 Level_2: 'Vá até o final da doca.  '
-      HOC 2018 Level_3: 'Atravesse os mares abertos até o bacalhau.  '
-      HOC 2018 Level_4: Use um loop para chegar ao golfinho.
-      HOC 2018 Level_5: Explore o naufrágio para chegar ao baú.
-      HOC 2018 Level_6: Navegue através do gelo para chegar ao templo.
-      HOC 2018 Level_7a: Pesquise essas ruínas subaquáticas por um baú.
-      HOC 2018 Level_9b: 'Use o corais como pontos de referência para alcançar o tesouro.  '
+      HOC 2018 Level_1: Colete um barco no baú.
+      HOC 2018 Level_10: Vá até a entrada do Monumento Oceânico.
+      HOC 2018 Level_11: 'Construa um canal usando Prismarinho dentro do Monumento Oceânico.'
+      HOC 2018 Level_12: 'Desenvolva seu próprio ambiente subaquático. Use sua imaginação!'
+      HOC 2018 Level_2: 'Vá até o final do cais.'
+      HOC 2018 Level_3: 'Atravesse o mar aberto para conseguir o bacalhau.'
+      HOC 2018 Level_4: Use um loop para chegar até o golfinho.
+      HOC 2018 Level_5: Explore o naufrágio para chegar até o baú.
+      HOC 2018 Level_6: Navegue no gelo para chegar até o salmão.
+      HOC 2018 Level_7a: Procure um baú nas ruínas subaquáticas.
+      HOC 2018 Level_9b: 'Use os corais como pontos passagem para alcançar o tesouro.'
       HoCAB_labyrinth1: Use os blocos de seta para resolver este labirinto!
       Infinity_catch: "Você pode fazer Elsa (\"personagem 2\") alcançar\nAnna usando as setas do teclado?"
       Infinity_finale: Crie o que quiser e compartilhe!
@@ -1576,8 +1604,12 @@ pt-BR:
       PS Log test - Define and use turnAround: "Escreva a função virar() e\nuse-a para fazer a tartaruga se mover como descrito."
       PS copy 2-3 Bee Conditionals 5: "Tenha cuidado para não coletar néctar das\nflores roxas que não o têm. \\r\nPrimeiro, veja se o néctar\né igual a 1 usando o bloco \"se néctar\"."
       PS predictive Applab level test: 'Veja aqui algumas instruções. '
+      Pixelation - Lesson 14 - Make the Letter A: 'Faça uma letra ''A'' 3x5. O widget está configurado com as dimensões incorretas. Sua primeira tarefa é definir o segundo byte do código binário de 8-bits para o número 5: 0000 0101. Então começe a inserir os dados do pixel.'
+      Pixelation - Lesson 14 - Make the Letter A_2018: 'Faça uma letra ''A'' 3x5. O widget está configurado com as dimensões incorretas. Sua primeira tarefa é definir o segundo byte do código binário de 8-bits para o número 5: 0000 0101. Então começe a inserir os dados do pixel.'
       Pixelation - Lesson 14 - Make your own B and W Image: Agora, crie sua própria imagem! Começamos com uma tela de 10x10, mas você pode deixá-la do tamanho que você quiser. Feliz pixelização!
       Pixelation - Lesson 14 - Make your own B&W Image: Agora, crie sua própria imagem! Começamos com uma tela de 10x10, mas você pode deixá-la do tamanho que você quiser. Feliz pixelização!
+      Pixelation - Lesson 15 - Color Shades 4x4: 'Vamos começar com a imagem 4x4 que Maddie criou no vídeo. Sua tarefa é preencher uma grade 4x4 com cores usando 12-bits por pixel. Aqui estão os requisitos: Linha 1 - preencha com sombras de vermelho. Linha 2 - sombras de verde. Linha 3 - sombras de azul. Linha 4 - sombras de cinza.'
+      Pixelation - Lesson 15 - Color Shades 4x4_2018: 'Vamos começar com a imagem 4x4 que Maddie criou no vídeo. Sua tarefa é preencher uma grade 4x4 com cores usando 12-bits por pixel. Aqui estão os requisitos: Linha 1 - preencha com sombras de vermelho. Linha 2 - sombras de verde. Linha 3 - sombras de azul. Linha 4 - sombras de cinza.'
       Play Lab Rocket 1: "Um foguete é lançado, viajando a 15 metros\npor segundo... clique em \"Executar\" para ver como é esse problema em forma de animação."
       Play Lab Rocket 2: "Começamos a receita de design para a altura do foguete\nusando o contrato e os exemplos que você escreveu. Complete a definição da função\npara a altura do foguete e execute sua animação."
       Play Lab Rocket 2B: "Um foguete decola, viajando a 15 metros\npor segundo. Usando a receita de design, escreva uma função chamada altura-foguete\nque recebe o número de segundos passados desde a decolagem do foguete\ne retorna a altura do foguete passado esse tempo."
@@ -1726,12 +1758,14 @@ pt-BR:
       U3L13 - Turtle Driver Project: "Desafio: crie uma \"tartaruga motorista\"\ncom pelo menos três botões na tela para mover a tartaruga para a frente e\nvirá-la para a direita e para a esquerda. Se quiser, você pode copiar/colar de um nível anterior,\nmas você vai exercitar seus músculos de programação se criar\nesse pequeno programa desde o início. Se tiver tempo, adicione botões extras! Você\ntambém pode se divertir alterando os parâmetros nas funções da tartaruga, usando cores,\netc."
       U3L13 - Turtle move with button: "Arraste um botão para fora da tela e\ndefina seu texto como \"Vá em frente!\". Adicione um manipulador de eventos para o botão que\nfaz a tartaruga se mover para a frente. Execute o programa para ver se ele funciona. "
       U3L14 - Unfortunate Events Free Play: "Siga a planilha de \"Eventos\ninfelizes\" e insira seu código aqui para testá-lo. Carregamos previamente\no código que você precisa para começar."
+      U3L14 - User Input Division calculator: Escreva um programa que atue como uma calculadora simples. (clique aqui para ver todas as instruções)
       U3L16 - hideAndShow: "Introdução de textInput, getText e write.  Primeiro,\nexecute o código inicial várias vezes. Tente alterar o que é escrito na\ntela quando o botão for clicado. Então, use getText para escrever na tela\no que o usuário digitou na caixa de texto. GIF: U3L16 - useGetText.gif"
       U3L16 - image and text labels: "Introdução do comando setPosition!  Substitua\no moveTo no manipulador de eventos de clique do botão para usar setPosition para mover o\nbotão para uma posição aleatória quando ele for clicado."
       U3L16 - images and text labels: "Introdução de objetos diferentes de\nbotões! - textLabels e imagens.  Primeiro, tente substituir seu botão por um\ntextLabel.  O texto vai responder a eventos da mesma forma que o botão?  Tente conectá-lo\na um manipulador de eventos. Fornecemos um código inicial similar ao resultado do\núltimo nível, então você pode copiar o código do último nível aqui se\npreferir. "
       U3L16 - images: "Introdução de imagens. Tente substituir o textLabel\npor uma imagem. A imagem vai responder aos eventos como o botão respondia? Tente \nconectá-la a um manipulador de eventos. Fornecemos um código inicial similar\nao resultado do último nível, então você pode copiar o código do último nível\naqui se você preferir. "
       U3L16 - nameAgeTemplate: "Introdução de textInput, getText\ne write.  Primeiro, execute o código inicial várias vezes. Tente alterar o que\né escrito na tela quando o botão for clicado. Então, use getText para escrever\nna tela o que o usuário digitou na caixa de texto."
       U3L16 - nameAgeTemplate_2018: "Introdução de textInput, getText\ne write.  Primeiro, execute o código inicial várias vezes. Tente alterar o que\né escrito na tela quando o botão for clicado. Então, use getText para escrever\nna tela o que o usuário digitou na caixa de texto."
+      U3L16 - newEventTypes: Experimente tipos de eventos diferentes e selecione qual deles você acha melhor. (Clique aqui para ver todas as instruções)
       U3L16 - setPosition to move button: "Introdução do comando setPosition!\nSubstitua o moveTo no manipulador de eventos de clique do botão para usar setPosition\npara mover o botão para uma posição aleatória quando ele for clicado."
       U3L16 - setPositionMoveButton: Use setPosition para moveButton
       U3L16 - setupMoveToRandom: "Vamos nos basear em alguns códigos\niniciais simples para esta lição. Sua primeira tarefa: use moveTo e randomNumber\npara fazer a tartaruga se mover para uma posição aleatória a cada clique do botão. Fornecemos\na você o código inicial para nossa configuração comum: um botão que move a tartaruga\nquando é clicado. Você deve modificar esse código.  "
@@ -1747,6 +1781,7 @@ pt-BR:
       U3L2 Using Simple Commands (no tooltips): "Desenhe um quadrado usando apenas avance\ne vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição\ninicial da tartaruga."
       U3L2 Using Simple Commands: "Desenhe um quadrado usando apenas avance\ne vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição\ninicial da tartaruga."
       U3L2 Using Simple Commands_2018: "Desenhe um quadrado usando apenas avance\ne vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição\ninicial da tartaruga."
+      U3L25 - play sound when up key: Modifique o código para que o som só seja tocado quando a seta para cima for pressionada (Clique aqui para ver todas as instruções)
       U3L2_Turtle3by3Grid: "Desenhe uma grade 3x3 acima e à direita da\ntartaruga. Tente fazer isso com o menor número de comandos possível. OBSERVAÇÃO:\nEsse problema é bastante desafiador. Você deve precisar passar um tempo resolvendo-o\ne ajustando-o.  Você também deve considerar usar lápis e papel para esboçar\nsuas ideias."
       U3L2_Turtle3by3Grid_2018: "Desenhe uma grade 3x3 acima e à direita da\ntartaruga. Tente fazer isso com o menor número de comandos possível. OBSERVAÇÃO:\nEsse problema é bastante desafiador. Você deve precisar passar um tempo resolvendo-o\ne ajustando-o.  Você também deve considerar usar lápis e papel para esboçar\nsuas ideias."
       U3L2_TurtleSquare_right: "Desenhe um quadrado usando apenas avance\ne vireEsquerda, mas, desta vez, faça o quadrado aparecer ACIMA e À DIREITA\nda posição inicial."

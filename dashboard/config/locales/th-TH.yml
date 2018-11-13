@@ -242,6 +242,8 @@ th:
       applab: แอ๊ปแล็บ
       artist: ศิลปิน
       gamelab: เกมแล๊ป (Game Lab)
+      minecraft: ไมน์คราฟท์
+      dance: งานเต้นรำ
     popup:
       progress_for_user: ความคืบหน้าของ %{name}
       progress: ความคืบหน้าของคุณ
@@ -382,6 +384,8 @@ th:
   upsell:
     applab:
       title: แอ๊ปแล็บ
+    dance:
+      title: งานเต้นรำ
     20-hour:
       body: This 20-hour คอร์ส covers the core computer science and programming concepts
         in คอร์ส 2-4. The คอร์ส is designed for use with ages 10-18. Check out คอร์ส
@@ -395,10 +399,15 @@ th:
     infinity:
       title: เรื่องราวและเกม
     minecraft:
+      title: ไมน์คราฟท์
       body: สำรวจโลก Minecraft ผ่านโค้ด
     minecraft2016:
+      title: ไมน์คราฟท์
       body: เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง
+    aquatic:
+      title: ไมน์คราฟท์
     hero:
+      title: ไมน์คราฟท์
       body: การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด! มาผจญภัยไปกับไมน์คราฟท์ด้วยการใช้โค้ดเป็นเครื่องมือ
     unplugged_conditionals:
       title: 'เงื่อนไข '
@@ -472,6 +481,8 @@ th:
           other: อาชีพอื่น ๆ
   flex_category:
     required: ภาพรวม
+  hoc_download:
+    minecraft_name: ชั่วโมงแห่งโค้ดตอนไมน์คราฟท์
   pd:
     form_labels:
       email: อีเมล

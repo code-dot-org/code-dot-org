@@ -686,7 +686,7 @@
   dashboard_students_add_multiple: 'Надрукуйте або вставте імена Ваших учнів, по одному на рядок:'
   dashboard_students_new_google_classroom_section: "Щоб додати учнів, використуйте <a href='http://classroom.google.com' target='_blank'>Google Клас</a> та після клацніть кнопку <b>Синхронізувати учнів з Google Класу</b> угорі."
   dashboard_students_new_section: "Ви створили нову групу! Тепер додавайте учнів, використовуючи кнопки <b>Додати учня</b> та <b>Додати учнів</b>."
-  dashboard_students_name: 'Ім’я'
+  dashboard_students_name: 'Ім’я: '
   dashboard_students_progress: "Прогрес"
   dashboard_students_male: "Чоловік"
   dashboard_students_female: "Жінка"
@@ -1332,6 +1332,7 @@
   flappy_shortcode: "махати"
   header_home: "Головна"
   header_courses: "курси"
+  header_course_catalog: "Каталог курсів"
   header_project_gallery: "Проекти"
   header_educate_overview: "Огляд для педагога"
   header_educate_elementary: "Початкова школа"
@@ -1370,7 +1371,10 @@
   user_header_dance: "Танцювальна вечірка"
   user_header_minecraft: "Майнкрафт"
   user_header_flappy: "Пурх"
+  applab_tile_start_tutorial: "Початок"
   aquatic_name: 'Minecraft: Водна подорож'
+  hoc_overview_dance_title: "Танцювальна вечірка"
+  hoc_overview_start_tutorial: "Початок"
   hoc2018_creativity: "творчість"
   hoc2018_creativity_create: "Створити"
   hoc2018_creativity_hoc_coming: "Наближається Година коду…"
@@ -1414,4 +1418,6 @@
   hoc2018_dance_party_button: "Початок"
   hoc2018_dance_teacher_resources_tile1_button: "План уроку"
   hoc2018_dance_teacher_resources_tile2_button: "Безмашинна вправа"
-  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "Дізнайтеся більше"
+  hoc2018_dance_amazon_about_future_engineer_button: "Дізнайтеся більше"
+  hoc2018_dance_measure: "Крок"
+  hoc2018_dance_measure_colon: 'Крок:'

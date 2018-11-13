@@ -8702,6 +8702,60 @@ fr:
         - What does
         it look like to draw two snowflakes on top of one another?\\r
         
+      Dance_Party_01: |-
+        *Faisons une fête dansante !*
+        
+        Faites glisser le bloc « créer un nouveau » dans l’espace de travail, puis connectez-le à l’intérieur du bloc « configuration » pour créer votre premier danseur.
+        
+        * *Vous pouvez également cliquer sur l'ampoule située à gauche si vous souhaitez plus d'informations ou des défis supplémentaires.*
+      Dance_Party_01_low: |-
+        *Faisons une fête dansante !*
+        
+        Faites glisser le bloc « créer un nouveau » dans l’espace de travail, puis connectez-le à l’intérieur du bloc « configuration » pour créer votre premier danseur.
+        
+        * *Vous pouvez également cliquer sur l'ampoule située à gauche si vous souhaitez plus d'informations ou des défis supplémentaires.*
+      Dance_Party_02: |-
+        Faisons danser cet orignal !
+        
+        Faites glisser le bloc <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> sur l'espace de travail. Connectez-le sous le bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Votre danseur devrait commencer un nouveau mouvement après la quatrième mesure.
+        
+        
+        **Les mesures** sont utilisées pour compter le temps en musique. Dans ce tutoriel, une mesure dure quatre temps.
+      Dance_Party_03: "*Voilà qu'on danse !*\n\nAjoutez un bloc <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> à votre espace de travail. Faites en sorte que le danseur commence un nouveau mouvement après 6 mesures."
+      Dance_Party_04: |-
+        *Cette danse a besoin d'être un peu plus éclatante !*
+        
+        Recherchez un nouveau bloc dans votre boîte à outils qui ajoute un effet de fond derrière votre danseur. Regardez les effets changer avec la musique !
+      Dance_Party_05: |-
+        Utilisez un autre nouveau bloc pour faire changer les mouvements du danseur **toutes les 2 mesures** !
+        
+        *Choisir « (Suivant) », « (Précédent) » ou « (Aléatoire) » indique au danseur d'effectuer un mouvement différent à chaque fois que le programme est exécuté.
+      Dance_Party_06: |-
+        *Nous avons besoin de plus de danseurs !*
+        
+        Créez un danseur de sauvegarde appelé « backup_dancer1 » pour danser avec le chat.
+      Dance_Party_08: |-
+        Chaque danseur possède un ensemble de _propriétés_ qui contrôlent son apparence.
+        
+        Vous pouvez donner l’impression qu’un danseur est à l’arrière-plan en réduisant sa _taille_. Pouvez-vous donner la même taille aux deux danseurs de sauvegarde ?
+      Dance_Party_09: |-
+        Les danseurs ont une propriété « nuance » qui peut ajouter une couche de couleur. Essayez de modifier la nuance de l’un de vos danseurs.
+        *Les nuances vont mélanger la couleur que vous choisissez avec les couleurs du danseur.
+      Dance_Party_10: |-
+        Nous savons maintenant comment changer les propriétés d'un danseur. Nous pouvons également faire en sorte que les mêmes propriétés correspondent automatiquement à la musique en utilisant ce bloc :
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+        
+        Ce programme utilise le volume « grave » de la musique (les sons graves) pour contrôler la hauteur d'un danseur. Peux-tu aussi faire en sorte que l'autre danseur réponde à la musique ?
+      Dance_Party_11.5: "Jetez un œil à ce bloc :\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nMaintenant, vous pouvez créer un groupe de danseurs à la fois !\n\nEssayez d’utiliser certains des blocs « tous les canards » pour concevoir un programme qui fera danser ensemble tous les canards."
+      Dance_Party_11: "Le bloc <xml><block type=\"Dancelab_whenKey\"></block></xml> vous permet d'exécuter le programme lorsque vous appuyez sur la flèche dirigée vers le haut.\n\nVous pouvez changer le mouvement de danse, changer les propriétés d'un danseur ou faire un mouvement rapide une seule fois. Soyez créatif et cherchez de nouveaux blocs !"
+      Dance_Party_11b: |-
+        Il est temps de danser ! Le Chat fait le dab lorsque vous appuyez sur la touche fléchée gauche. Faites le Robot faire le « drop » lorsque vous appuyez sur la touche fléchée droite.
+      Dance_Party_12: Prends ton rythme ! Créez votre propre danse à partager avec vos amis.
       Escape Room Example: |-
         # Room Escape\\r
         \\r
@@ -8747,6 +8801,15 @@ fr:
       HOC 2018 Level_7a: "Vous avez découvert les ruines sous-marines. Fouillez le grès à la recherche d'un **coffre** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) contenant un trésor de **prismarine** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
       HOC 2018 Level_8: "D'abord des icebergs, et maintenant de la lave ? Traversez cette île volcanique et dénichez le **poisson tropical** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) dans le récif de corail.\n\n"
       HOC 2018 Level_9b: "Vous voici enfin au récif, partez à la recherche du **Cœur de l'océan** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Utilisez les coraux bleus et rouges pour atteindre le **coffre** au trésor ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
+      HOC Dance 4_draft: |-
+        Utilisez un autre nouveau bloc pour faire changer les mouvements du danseur **toutes les 2 mesures** !
+        
+        *Choisir « (Suivant) », « (Précédent) » ou « (Aléatoire) » indique au danseur d'effectuer un mouvement différent à chaque fois que le programme est exécuté.
+      HOC Dance 5_draft: |-
+        *Nous avons besoin de plus de danseurs !*
+        
+        Créez un danseur de sauvegarde appelé « backup_dancer1 » pour danser avec le chat.
+      HOC Dance 9_draft: "Le bloc <xml><block type=\"Dancelab_whenKey\"></block></xml> vous permet d'exécuter le programme lorsque vous appuyez sur la flèche dirigée vers le haut.\n\nVous pouvez changer le mouvement de danse, changer les propriétés d'un danseur ou faire un mouvement rapide une seule fois. Soyez créatif et cherchez de nouveaux blocs !"
       Inspirational Artwork: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\\r\n\\r\n**Free-Play Inspiration:** You've now learned everything\nyou need to know to make a pattern like this! \\r\n\\r\nIf this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\\r\n\\r\nNotice:\nWe've used the `set alpha` block to make the \"petals\" fade toward the outside."
       InspirationalArtwork: "You've now learned everything\nyou need to know to make a pattern like this! \\r\n\\r\nIf this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\\r\n"
       InspirationalArtwork_2018: "You've now learned everything\nyou need to know to make a pattern like this! \\r\n\\r\nIf this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\\r\n"

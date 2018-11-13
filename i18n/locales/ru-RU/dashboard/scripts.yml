@@ -2052,10 +2052,23 @@ ru:
           stages:
             Artist:
               name: Художник
+        dance:
+          stages:
+            Dance Party:
+              name: Танцевальная вечеринка
+          title: Танцевальная вечеринка
         frozen-2018-test-b:
           stages:
             Artist:
               name: Художник
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Танцевальная вечеринка
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Танцевальная вечеринка
         coursef-2019:
           description_audience: 'Возраст: 9-13'
           stages:
@@ -2073,3 +2086,7 @@ ru:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
+        dance-low:
+          stages:
+            Dance Party:
+              name: Танцевальная вечеринка

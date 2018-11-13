@@ -5564,6 +5564,60 @@ tr:
         - Elmas desenini daha uzun veya kısa yaparsanız ne olur?\r
         - Bir kar tanesinin üzerine iki tane daha çizince nasıl görünüyor?\r
         
+      Dance_Party_01: |-
+        *Dans partisi yapalım!*
+        
+        İlk dansçınızı yaratmak için `yeni yap` bloğunu çalışma alanına sürükleyin ve `kurulum` bloğunun içine bağlayın.
+        
+        * *Eğer daha fazla bilgi almak veya ek görevler istiyorsanız sol taraftaki ampüle tıklayın.*
+      Dance_Party_01_low: |-
+        *Dans partisi yapalım!*
+        
+        İlk dansçınızı yaratmak için `yeni yap` bloğunu çalışma alanına sürükleyin ve `kurulum` bloğunun içine bağlayın.
+        
+        * *Eğer daha fazla bilgi almak veya ek görevler istiyorsanız sol taraftaki ampüle tıklayın.*
+      Dance_Party_02: |-
+        Bu geyik dansını alalım!
+        
+        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> bloğunu çalışma alanına sürükleyin. <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> bloğunun altına bağlayın. Dansçınız dördüncü ölçüden sonra yeni bir harekete başlayacaktır.
+        
+        
+        **Ölçüler** müziğin içindeki zamanı hesaplamak için kullanılır. Bu eğitimde bir ölçü dört vuruş uzunluğundadır.
+      Dance_Party_03: "*Şimdi hareketleniyoruz!*\n\nÇalışma alanına bir <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> bloğu ekleyin. Dansçının 6 ölçü sonra yeni bir harekete başlamasını sağlayın."
+      Dance_Party_04: |-
+        *Bu dansın biraz parıltıya ihtiyacı var!*
+        
+        Araç kutunuzda dansçınızın arkasına bir arka plan efekti ekleyecek yeni bir blok arayın. Efektin müzik ilerledikçe değişimini izleyin!
+      Dance_Party_05: |-
+        Dansçının **her 2 ölçüde bir** hareket değiştirmesini sağlamak için başka bir yeni blok kullanın!
+        
+        * `(İleri)`, `(Geri)`, veya `(Rastgele)` seçenekleri ile kod her çalıştığında dansçınıza farklı bir hareket yapma komutu verirsiniz.
+      Dance_Party_06: |-
+        *Daha fazla dansçıya ihtiyacımız var!*
+        
+        Kediyle birlikte dans edecek `arkaplan_dansçısı1` isimli bir arka plan dansçısı yaratın.
+      Dance_Party_08: |-
+        Her dansçının nasıl göründüğünü belirleyen bir _özellikler_ seti vardır.
+        
+        _boyut_ küçülterek bir dansçının arka planda dans eden bir dansçı gibi görünmesini sağlayabilirsiniz. İki arka plan dansçısını da aynı boyuta getirebilir misiniz?
+      Dance_Party_09: |-
+        Dansçılar kendilerine yeni bir renk katmanı ekleyen bir "renk tonu" özelliğine sahiptir. Dansçılarınızdan birinin renk tonunu değiştirmeye çalışın.
+        * Renk tonu özelliği sayesinde seçtiğiniz renk ve dansçının rengi karışacaktır.
+      Dance_Party_10: |-
+        Artık bir dansçının özelliklerinin nasıl değiştirildiğini biliyoruz. Ayrıca aynı özelliklerin bu bloğu kullanan müziğe otomatik olarak tepki vermelerini sağlayabiliriz.
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+        
+        Bu program bir dansçının boyunun kontrolü için müziğin "bas" (düşük) seslerini kullanır. Diğer dansçıların da müziğe tepki vermesini sağlayabilir misiniz?
+      Dance_Party_11.5: "Bu bloğa bir bakın:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nArtık tek seferde birden çok dansçı yaratabilirsiniz!\n\nTüm ördeklerin hep birlikte dans etmesini sağlayacak kodu yazmak için \"tüm ördekler\" bloklarının bazılarını kullanmayı deneyin."
+      Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> bloğu yukarı oka basıldığında kodu çalıştırmanızı sağlar.\n\nDans hareketini değiştirebilir, bir dansçının özelliklerini değiştirebilir ya da bir kereliğine hızlı bir hareket yapabilirsiniz. Yaratıcı olun ve yeni bloklar arayın!"
+      Dance_Party_11b: |-
+        Şimdi dans zamanı! Sol ok tuşuna bastığınızda Kedi dab dansı yapar. Sağ ok tuşuna bastığınızda Robota "drop" figürü yaptırırsınız.
+      Dance_Party_12: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla paylaşın.
       Escape Room Example: |-
         # Odadan Kaçış\r
         \r
@@ -5585,6 +5639,27 @@ tr:
       Geometric Pattern: "** Proje fikri: ** geometrik şekiller fikirler kullanarak bir model oluşturma. Bu sebat ve planlama gerektirir!"
       Geometric Sun: "** Proje fikri: ** geometrik şekiller fikirler kullanarak bir model oluşturma. Bu sebat ve planlama gerektirir!"
       Geometric Sun_2018: "** Proje fikri: ** geometrik şekiller fikirler kullanarak bir model oluşturma. Bu sebat ve planlama gerektirir!"
+      HOC 2018 Level_1: "Seni bekleyen yolculuk için malzemelere ihtiyacın var. **Sandık**tan ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png) **sandalı** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) al."
+      HOC 2018 Level_10: "Bir **kalamar** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) bu Okyanus Anıtı içinde bir yerlerde saklanıyor, onu bulabilir misin?"
+      HOC 2018 Level_11: Siyah beton etrafına **prizmarin** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) duvarı ör. Bu **su yolunu** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) harekete geçirecek ve görevini tamamlayacak!
+      HOC 2018 Level_12: Tebrikler! Uçsuz bucaksız su dünyası seni bekliyor. Bir mercan resifi inşa et! Bir volkan! Bir gemi enkazı! Sana kalmış.
+      HOC 2018 Level_2: Sandalla gitmek açık suda yüzmekten çok daha kolay! Binmek için iskelenin sonuna git.
+      HOC 2018 Level_3: Kürekleri al ve **morinayı** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png) yakalamak için sandalını açık denize sür.
+      HOC 2018 Level_4: Hadi morinayla **yunus** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png) besleyelim. Okyanusu daha hızlı geçmek için bir tekrarla bloku kullan.
+      HOC 2018 Level_5: Orada bir yerlerde bir **notilus kabuğu** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png) saklanıyor! **Sandığa** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png) ulaşmak için gemi enkazını araştır.
+      HOC 2018 Level_6: Dışarısı buz gibi görünüyor! Su altı harabelerine giderken bir **somon** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) yakala.
+      HOC 2018 Level_7a: "Sualtı harabelerini buldun. **Prizmarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) hazinesi içeren **sandığı** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) bulmak için kumtaşını ara."
+      HOC 2018 Level_8: "Önce buz dağları, şimdi de lav mı? Bu volkanik adayı geç ve mercan resifi içinde **tropikal balığı** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) bul."
+      HOC 2018 Level_9b: "Resife geldin, şimdi de **Denizin Kalbini** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ara! Hazine **sandığına** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png) ulaşmak için mavi ve kırmızı mercanları kullan."
+      HOC Dance 4_draft: |-
+        Dansçının **her 2 ölçüde bir** hareket değiştirmesini sağlamak için başka bir yeni blok kullanın!
+        
+        * `(İleri)`, `(Geri)`, veya `(Rastgele)` seçenekleri ile kod her çalıştığında dansçınıza farklı bir hareket yapma komutu verirsiniz.
+      HOC Dance 5_draft: |-
+        *Daha fazla dansçıya ihtiyacımız var!*
+        
+        Kediyle birlikte dans edecek `arkaplan_dansçısı1` isimli bir arka plan dansçısı yaratın.
+      HOC Dance 9_draft: "<xml><block type=\"Dancelab_whenKey\"></block></xml> bloğu yukarı oka basıldığında kodu çalıştırmanızı sağlar.\n\nDans hareketini değiştirebilir, bir dansçının özelliklerini değiştirebilir ya da bir kereliğine hızlı bir hareket yapabilirsiniz. Yaratıcı olun ve yeni bloklar arayın!"
       Harvesting: "Ah,haritamı kaybettim ve ne ektiğimi hatırlamıyorum. Her filiz **mısır** olarak büyüyebilir. ![mısır resmi](https://images.code.org/cac3133c40781553a70066a67298b2b5-image-1472493202556.png)\n, **fasulye** ![fasulye resmi](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png)\n, veya**kabaklar** ![kabak resmi](https://images.code.org/03cf76a978e0788ccb53f14e9d264695-image-1472493237148.png)\n. Bütün bitkileri, ne olursa olsun, alacak bir kaç kod yazabilir misin?"
       Inspirational Artwork: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\" width=\"250px\"/> \\r \\r ** Serbest ilham: ** Şimdi böyle bir model yapmak için bilmeniz gereken her şeyi öğrendin! \\r \\r bu resimden ilham almayı deneyin ve benzer bir şey yapın. Aksi takdirde, kendiniz birşey yaratın. \\r \\r dikkat: 'set Alfa' bloğu kullandım."
       InspirationalArtwork: "Serbest ilham zamanı. Bu deseni oluşturmak için gerekli herşeyi öğrendin. Eğer bu resim ilham veriyorsa benzer birşeyler yapmaya çalış. Yoksa kendi tasarımını yap.\\r\n\\r\nİlham alınan tasarımın kodunu görmek ister misin? "

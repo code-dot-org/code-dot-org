@@ -37,8 +37,8 @@ eu:
             MOVES.Drop: Bota
             MOVES.Floss: Haria
             MOVES.Fresh: Freskatu
-            MOVES.Kick: Bota
             MOVES.Roll: Biratu
+            MOVES.Kick: Bota
             MOVES.ThisOrThat: Hau edo Hori
             '"rand"': Ausazkoa
           DIR:
@@ -55,8 +55,8 @@ eu:
             MOVES.Drop: Bota
             MOVES.Floss: Haria
             MOVES.Fresh: Freskatu
-            MOVES.Kick: Bota
             MOVES.Roll: Biratu
+            MOVES.Kick: Bota
             MOVES.ThisOrThat: Hau edo Hori
             '"rand"': Ausazkoa
           DIR:
@@ -93,10 +93,9 @@ eu:
             MOVES.Drop: Bota
             MOVES.Floss: Haria
             MOVES.Fresh: Freskatu
-            MOVES.Kick: Bota
             MOVES.Roll: Biratu
+            MOVES.Kick: Bota
             MOVES.ThisOrThat: Hau edo Hori
-            '"rand"': Ausazkoa
           DIR:
             '1': "→"
             "-1": "←"
@@ -111,10 +110,9 @@ eu:
             MOVES.Drop: Bota
             MOVES.Floss: Haria
             MOVES.Fresh: Freskatu
-            MOVES.Kick: Bota
             MOVES.Roll: Biratu
+            MOVES.Kick: Bota
             MOVES.ThisOrThat: Hau edo Hori
-            '"rand"': Ausazkoa
           DIR:
             '1': "→"
             "-1": "←"
@@ -156,23 +154,26 @@ eu:
       Dancelab_getTime:
         options:
           UNIT:
-            '"measures"': Neurriak
-            '"seconds"': Segunduak
+            '"measures"': neurriak
+            '"seconds"': segundu
       Dancelab_ifDanceIs:
         options:
           DANCE:
-            '0': Txalo Haundi
-            '1': Pailazoa
-            '2': Mihi-arrain
-            '3': Urdaiazpiko bikoitza
-            '4': Bota
-            '5': Haria
-            '6': Freskatu
-            '7': Bota
-            '8': None
-            '9': Biratu
-            '10': Hau edo Hori
-            '11': Thriller
+            MOVES.ClapHigh: Txalo Haundi
+            MOVES.Clown: Pailazoa
+            MOVES.Dab: Mihi-arrain
+            MOVES.DoubleJam: Urdaiazpiko bikoitza
+            MOVES.Drop: Bota
+            MOVES.Floss: Haria
+            MOVES.Fresh: Freskatu
+            MOVES.Roll: Biratu
+            MOVES.Kick: Bota
+            MOVES.ThisOrThat: Hau edo Hori
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"measures"': neurriak
+            '"seconds"': segundu
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -212,6 +213,16 @@ eu:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"random"': ausazkoa
       Dancelab_randomColor:
@@ -219,9 +230,28 @@ eu:
       Dancelab_setBackgroundEffect:
         options:
           EFFECT:
-            "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]": Ausazkoa
+            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": Ausazkoa
       Dancelab_setDanceSpeed:
         options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            '"ALIEN"': estralurtar guztiak
+            '"BEAR"': hartz guztiak
+            '"CAT"': katu guztiak
+            '"DOG"': txakur guztiak
+            '"DUCK"': ahate guztiak
+            '"FROG"': zapo guztiak
+            '"MOOSE"': altze guztiak
+            '"PINEAPPLE"': piña giztiak
+            '"ROBOT"': robot guztiak
+            '"SHARK"': marrazo guztiak
           SPEED:
             '1': normal
             '2': fast
@@ -231,7 +261,7 @@ eu:
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
-            "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": Ausazkoa
+            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": Ausazkoa
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -269,8 +299,37 @@ eu:
             '"rotation"': itzulikapena
             '"x"': posizio horizontala
             '"y"': posizio bertikala
+            '"tint"': tinta
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            '"ALIEN"': estralurtar guztiak
+            '"BEAR"': hartz guztiak
+            '"CAT"': katu guztiak
+            '"DOG"': txakur guztiak
+            '"DUCK"': ahate guztiak
+            '"FROG"': zapo guztiak
+            '"MOOSE"': altze guztiak
+            '"PINEAPPLE"': piña giztiak
+            '"ROBOT"': robot guztiak
+            '"SHARK"': marrazo guztiak
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'false': ikusezin
       Dancelab_setVisibleEach:
         options:
+          THIS:
+            '"ALIEN"': estralurtar guztiak
+            '"BEAR"': hartz guztiak
+            '"CAT"': katu guztiak
+            '"DOG"': txakur guztiak
+            '"DUCK"': ahate guztiak
+            '"FROG"': zapo guztiak
+            '"MOOSE"': altze guztiak
+            '"PINEAPPLE"': piña giztiak
+            '"ROBOT"': robot guztiak
+            '"SHARK"': marrazo guztiak
           VISIBILITY:
             'false': ikusezin
       Dancelab_startMapping:
@@ -303,14 +362,15 @@ eu:
         options:
           KEY:
             '"up"': gora
-            '"down"': behera
             '"left"': ezkerrera
+            '"down"': behera
             '"right"': eskuinera
             '"space"': espazioa
             '"a"': a
-            '"w"': w
-            '"s"': s
             '"d"': d
+            '"s"': s
+            '"w"': w
+            '"x"': x
       Dancelab_whenPeak:
         options:
           RANGE:
