@@ -12,11 +12,11 @@
       %a{:href => '/api/hour/begin/dance', :target=>'_self'}
         %button.sw-try-button= I18n.t(:hoc2018_dance_party_button)
   .col-25.starwars-tutorial.starwars-js-tutorial
+  - unless hide_dance_extra_button
     .tutorial-box{style: "height: 224px;"}
       %h2.sw-h2.dance-party-h2= I18n.t(:hoc2018_dance_keep_on_dancing_box_title)
       .sw-tutorial-info
         %p.sw-tutorial-description= I18n.t(:hoc2018_dance_keep_on_dancing_description)
-      - unless hide_dance_extra_button
-        %a{:href => '/api/hour/begin/dance-extras', :target=>'_self'}
-          %button.sw-try-button= I18n.t(:hoc2018_dance_keep_on_dancing_button)
+      %a{:href => '/api/hour/begin/dance-extras', :target=>'_self'}
+        %button.sw-try-button= I18n.t(:hoc2018_dance_keep_on_dancing_button)
 %div{style: "clear:both"}
