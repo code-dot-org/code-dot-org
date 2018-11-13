@@ -89,7 +89,7 @@
   "setBallHardcourt": "hard court گیند رکھیں",
   "setBallRandom": "بلا ترتیب گیند رکھیں",
   "setBallRetro": "retro گیند رکھیں",
-  "setBall": "سیٹ {گیند} گیند",
+  "setBall": "سیٹ {ball} گیند",
   "setBallSpeedFast": "گیند کی رفتار تیز کریں",
   "setBallSpeedNormal": "گیند کی رفتار مناسب کریں",
   "setBallSpeedRandom": "بلا ترتيب گیند کی رفتار کا تعین کریں",
