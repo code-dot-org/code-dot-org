@@ -109,7 +109,7 @@ const DanceParty = {
 const DancePartyFollowUp = {
   title: i18n.danceAfterPartyTitle(),
   description: i18n.danceAfterPartyDesc(),
-  link: "/s/dance-extras",
+  link: "/s/dance-extras/reset",
   image: "dance-party-2",
   buttonText: i18n.danceAfterPartyButton(),
 };
