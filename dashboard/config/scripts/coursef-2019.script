@@ -38,7 +38,7 @@ level 'Virtual Pet 5_2019'
 level 'Virtual Pet 6_2019'
 level 'Virtual Pet Freeplay_2019'
 
-stage 'Programming in Artist', flex_category: 'csf_f_1'
+stage 'The Artist', flex_category: 'csf_f_1'
 level 'courseC_video_artist_2019'
 level 'courseC_artist_prog1_2019'
 level 'courseC_artist_prog2_2019'
@@ -49,10 +49,6 @@ level 'courseC_artist_prog6_2019'
 level 'courseC_artist_prog7_2019', challenge: true
 level 'courseC_artist_prog8_2019'
 assessment 'courseC_artist_prog6_predict1_2019'
-bonus 'courseC_artist_prog_challenge1_2019'
-bonus 'courseC_artist_prog_challenge2a_2019'
-
-stage 'Loops in Artist', flex_category: 'csf_f_1'
 level 'courseF_markdown_loops_intro_2019'
 level 'ramp_video_artistIntro_2019'
 level 'ramp_artist_loops1_2019'
@@ -66,8 +62,10 @@ level 'ramp_artist_loops7_2019'
 level 'ramp_artist_loops8_2019', challenge: true
 level 'ramp_artist_loops9_2019'
 level 'courseF_markdown_loops_end_2019'
+bonus 'courseC_artist_prog_challenge1_2019'
+bonus 'courseC_artist_prog_challenge2a_2019'
 
-stage 'Nested Loops in Bee/Zombie', flex_category: 'csf_f_1'
+stage 'Nested Loops in the Maze', flex_category: 'csf_f_1'
 level 'courseD_bee_nestedLoops1a_2019'
 level 'courseD_bee_nestedLoops1_2019'
 level 'courseF_markdown_nestedloops_intro_2019'
@@ -181,14 +179,8 @@ named_level 'courseF_project_1_2019'
 
 stage 'The Design Process', flex_category: 'end_of_course_project'
 named_level 'Begin planning your project_2018_2019'
-
-stage 'Build Your Project', flex_category: 'end_of_course_project'
 named_level 'Course F: Artist Project_2019'
 named_level 'CourseF_Project_SpriteLab_2019'
-
-stage 'Revise Your Project', flex_category: 'end_of_course_project'
 named_level 'Course F: Artist Project - Revise_2019'
 named_level 'CourseF_Project_Revise_SpriteLab_2019'
-
-stage 'Present Your Project', flex_category: 'end_of_course_project'
 named_level 'Prepare for your presentation_2018_2019'
