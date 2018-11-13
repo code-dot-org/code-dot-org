@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181104231808) do
+ActiveRecord::Schema.define(version: 20181113190811) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -580,6 +580,11 @@ ActiveRecord::Schema.define(version: 20181104231808) do
     t.datetime "created_at",         null: false
     t.datetime "sent_at"
     t.index ["pd_application_id"], name: "index_pd_application_emails_on_pd_application_id", using: :btree
+  end
+
+  create_table "pd_application_tags", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string "name", null: false
+    t.index ["name"], name: "index_pd_application_tags_on_name", using: :btree
   end
 
   create_table "pd_applications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
