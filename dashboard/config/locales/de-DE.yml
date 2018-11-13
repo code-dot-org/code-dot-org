@@ -347,6 +347,7 @@ de:
       playlab: Spielelabor
       minecraft: Minecraft
       flappy: Flappy
+      dance: Dance-Party
     popup:
       progress_for_user: "%{name}'s Fortschritt"
       progress: Dein Fortschritt
@@ -710,6 +711,8 @@ de:
         dann teile die App in Sekunden.
       audience: Ab 13 Jahren
       cta: Lerne wie
+    dance:
+      title: Dance-Party
     hoc:
       title: Klassisches Labyrinth
       body: Lerne die Grundlagen der Informatik kennen. Millionen Menschen haben es
