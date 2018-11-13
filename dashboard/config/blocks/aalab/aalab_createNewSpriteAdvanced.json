@@ -3,7 +3,7 @@
   "config": {
     "func": "createNewSpriteAdvanced",
     "inline": false,
-    "blockText": "make a new sprite \n called {NAME} \n with costume {COSTUME} \n at {LOCATION}",
+    "blockText": "make a new sprite \n called {NAME} \n with costume {COSTUME} \n at {LOCATION} advanced",
     "color": [
       355,
       ".7",
