@@ -13,6 +13,10 @@ const styles = {
     left: 0,
     right: 0,
     bottom: 0,
+    width: '100%',
+    height: '100%',
+  },
+  rotateContainerInner: {
     width: '100vw',
     height: '100vh',
     backgroundPosition: '50% 50%',
@@ -44,20 +48,26 @@ const RotateContainer = React.createClass({
   },
 
   render() {
-    // One of the issues we have is that in StudioApp.prototype.fixViewportForSmallScreens_
-    // we modify the viewport width, while assuming we're in landscape layout. TODO: expound further
+    // In StudioApp.prototype.fixViewportForSmallScreens_ we modify the viewport
+    // size manually, assuming we're in landscape mode (which is false when this
+    // component is visible). The result was that this container was being
+    // stretch to fit an area larger than the screen
+    // The fix is to have an outer container that fits that larger area and is
+    // just white, with an inner container that stretches to the screen by using
+    // viewport units
 
     return (
-      <div
-        id="rotateContainer"
-        style={{
-          ...styles.rotateContainer,
-          backgroundImage: 'url(' + this.props.assetUrl('media/turnphone_horizontal.png') + ')',
-        }}
-      >
-        <div style={styles.rotateText}>
-          <p style={styles.paragraph}>{msg.rotateText()}<br />{msg.orientationLock()}</p>
-        </div>
+      <div id="rotateContainer" style={styles.rotateContainer}>
+        <div
+          style={{
+            ...styles.rotateContainerInner,
+            backgroundImage: 'url(' + this.props.assetUrl('media/turnphone_horizontal.png') + ')',
+          }}
+        >
+          <div style={styles.rotateText}>
+            <p style={styles.paragraph}>{msg.rotateText()}<br />{msg.orientationLock()}</p>
+          </div>
+          </div>
       </div>
     );
   },
