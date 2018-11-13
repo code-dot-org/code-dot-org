@@ -48,7 +48,7 @@
   color: #5b6770;
 }
 
-.col-50:nth-child(2) {
+#teacher-resources .col-50:nth-child(2) {
   padding-left: 10px;
 }
 

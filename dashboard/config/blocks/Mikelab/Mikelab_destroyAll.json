@@ -1,0 +1,31 @@
+{
+  "category": "Sprites",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "destroyAll",
+    "blockText": "remove {SELECT} {COSTUME}",
+    "args": [
+      {
+        "name": "COSTUME",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "SELECT",
+        "options": [
+          [
+            "all",
+            "\"all\""
+          ],
+          [
+            "this",
+            "\"this\""
+          ]
+        ]
+      }
+    ]
+  }
+}
