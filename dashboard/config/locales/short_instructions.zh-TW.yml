@@ -786,6 +786,19 @@ zh-TW:
       Crack Random Substitution_2018: 說明
       Crack a Caesar Cipher: 說明
       Crack a Caesar Cipher_2018: 說明
+      Dance_Party_01: 將「製作新內容」程式積木拖曳至工作區中，並在「設定」程式積木內部進行連接。
+      Dance_Party_01_low: 將「製作新內容」程式積木拖曳至工作區中，並在「設定」程式積木內部進行連接。
+      Dance_Party_02: 讓麋鹿在 4 個小節後開始新的動作！
+      Dance_Party_03: 現在讓舞者在 6 個小節後開始新的動作！
+      Dance_Party_04: 將背景效果新增至您的程式。
+      Dance_Party_05: 使用另一個新的程式積木，讓舞者每 2 個小節改變動作。
+      Dance_Party_06: 建立一個名為「backup_dancer1」的備用舞者與貓跳舞。
+      Dance_Party_08: 您是否能讓兩個備用舞者的大小相同？
+      Dance_Party_09: 使用「設定色調」程式積木來變更舞者的顏色。
+      Dance_Party_10: 使用「開始跟隨」程式積木，讓另一個舞者也能回應音樂。
+      Dance_Party_11.5: 使用「所有鴨子」程式積木，讓鴨子一起跳舞。
+      Dance_Party_11: "「按下向上鍵時」程式積木允許您在按下向上箭頭時執行程式碼。按下向上鍵時，嘗試讓舞者進行一個快速的動作。"
+      Dance_Party_11b: 按下向右鍵時，會讓機器人「掉落」一次，而按下向上鍵時，會讓機器人跳「牙線舞」一次。盡可能快速地掉落又跳牙線舞！
       Eval Booleans 1: 布林運算子（像是 >、 <、 =）讓我們能夠比較不同的值，並返回 true 或 false。點擊「運行」來看看這個運算式的結果。
       Eval Booleans: 布林值（Booleans）讓我們能夠比較不同的值，如果二者相等則返回 true；如果沒有則返回 false。你覺得這個程式運行後的結果會是什麼呢？
       Find the Wizard: 做你喜歡的任何東西。比方說一個猜數字遊戲！
@@ -800,6 +813,17 @@ zh-TW:
       Guess The Number 2: 做你喜歡的任何東西。比方說一個猜數字遊戲！
       Guess The Number: 做你喜歡的任何東西。比方說一個猜數字遊戲！
       Guess The Number_2018: 做你喜歡的任何東西。比方說一個猜數字遊戲！
+      HOC 2018 Level_1: 打開箱子以取得小船。
+      HOC 2018 Level_10: 前往這個海洋遺址的入口。
+      HOC 2018 Level_11: 使用海洋遺址內部的海磷石建造一根導管。
+      HOC 2018 Level_12: 設計您自己的水下環境，您自己決定！
+      HOC 2018 Level_2: 走向碼頭盡頭。
+      HOC 2018 Level_3: 穿越開放海域前往鱈魚的所在位置。
+      HOC 2018 Level_4: 使用循環前往海豚的所在位置。
+      HOC 2018 Level_5: 探索沉船以找到箱子。
+      HOC 2018 Level_6: 在冰塊中尋找以找到鮭魚。
+      HOC 2018 Level_7a: 搜尋這些水底廢墟以尋找箱子。
+      HOC 2018 Level_9b: 使用珊瑚做為航點以找到寶藏。
       Infinity_catch: 您能用方向鍵控制艾莎（角色2），讓她追上安娜嗎？
       Infinity_finale: 自由發揮吧！然後把您的成果分享出來！
       Infinity_move_collide: 阿廣是「角色1」，讓他向右走到杯麵那裡，然後在他們碰面時播放一個音效。
