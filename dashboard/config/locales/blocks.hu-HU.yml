@@ -44,6 +44,14 @@ hu:
           PROPERTY:
             '"scale"': méret
             '"height"': magasság
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': másodperc
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': másodperc
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -74,12 +82,32 @@ hu:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"random"': véletlen
       Dancelab_randomColor:
         text: Véletlen szín
       Dancelab_setDanceSpeed:
         options:
+          SPEED:
+            '1': normál
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: összes
           SPEED:
             '1': normál
             '2': fast
@@ -103,6 +131,10 @@ hu:
           PROPERTY:
             '"scale"': méret
             '"height"': magasság
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: összes
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -121,10 +153,11 @@ hu:
         options:
           KEY:
             '"up"': fel
-            '"down"': le
             '"left"': balra
+            '"down"': le
             '"right"': jobbra
             '"space"': világűr
+            '"x"': x
       gamelab_changePropBy:
         options:
           PROPERTY:

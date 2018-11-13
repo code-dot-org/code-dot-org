@@ -779,6 +779,10 @@ es:
         CDEF_Video_SpritesInAction: Sprites en accion
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites en accion
         CSF_StarWars_ProjectIntro: Introducción al proyecto de Star Wars
+        mc_2018_intro: 'Minecraft: Viaje acuático introducción'
+        MC_2018_loops: 'Minecraft: Viaje acuático introducción'
+        mc_2018_conditionals: 'Minecraft: Viaje acuático introducción'
+        mc_2018_closing: 'Minecraft: Viaje acuático introducción'
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

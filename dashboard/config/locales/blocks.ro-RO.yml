@@ -39,15 +39,11 @@ ro:
         options:
           GROUP:
             sprites: toate
-          MOVE:
-            '"rand"': Aleatoriu
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"rand"': Aleatoriu
           DIR:
             '1': "→"
             "-1": "←"
@@ -69,6 +65,17 @@ ro:
             '"height"': înălțime
             '"rotation"': rotație
             '"tint"': tentă
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': secunde
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': secunde
+          OP:
+            '">"': ">"
+            '"="': "="
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -112,6 +119,16 @@ ro:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"grid"': rețea
             '"row"': rând
@@ -128,12 +145,23 @@ ro:
       Dancelab_setBackgroundEffect:
         options:
           EFFECT:
+            '"color_cycle"': Curcubeu
             '"disco"': Discotecă
             '"rainbow"': Curcubeu
             '"diamonds"': Diamante
-            "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]": Aleatoriu
+            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": Aleatoriu
       Dancelab_setDanceSpeed:
         options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: toate
           SPEED:
             '1': normal
             '2': fast
@@ -143,7 +171,7 @@ ro:
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
-            "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": Aleatoriu
+            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": Aleatoriu
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -169,6 +197,11 @@ ro:
             '"width"': lăţime
             '"height"': înălțime
             '"rotation"': rotație
+            '"tint"': tentă
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: toate
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -202,14 +235,15 @@ ro:
         options:
           KEY:
             '"up"': sus
-            '"down"': jos
             '"left"': stânga
+            '"down"': jos
             '"right"': dreapta
             '"space"': spaţiu
             '"a"': a
-            '"w"': w
-            '"s"': s
             '"d"': d
+            '"s"': s
+            '"w"': w
+            '"x"': x
       Dancelab_whenPeak:
         options:
           RANGE:

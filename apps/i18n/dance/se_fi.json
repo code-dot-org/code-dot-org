@@ -9,5 +9,6 @@
   "danceFeedbackStartNewMove": "",
   "danceFeedbackNeedDifferentDance": "",
   "danceFeedbackNeedEveryTwoMeasures": "",
-  "danceFeedbackNeedMakeANewDancer": ""
+  "danceFeedbackNeedMakeANewDancer": "",
+  "measure": ""
 }

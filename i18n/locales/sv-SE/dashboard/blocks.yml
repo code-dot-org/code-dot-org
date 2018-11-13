@@ -44,6 +44,14 @@ sv:
           PROPERTY:
             '"scale"': storlek
             '"height"': höjd
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekunder
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': sekunder
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -74,12 +82,32 @@ sv:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"random"': slumpad
       Dancelab_randomColor:
         text: slumpad färg
       Dancelab_setDanceSpeed:
         options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: alla
           SPEED:
             '1': normal
             '2': fast
@@ -103,6 +131,10 @@ sv:
           PROPERTY:
             '"scale"': storlek
             '"height"': höjd
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: alla
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -121,10 +153,11 @@ sv:
         options:
           KEY:
             '"up"': upp
-            '"down"': ner
             '"left"': vänster
+            '"down"': ner
             '"right"': höger
             '"space"': rymden
+            '"x"': x
       gamelab_changePropBy:
         options:
           PROPERTY:

@@ -148,6 +148,19 @@ et:
         arrows_move_actor: Kasuta tegelaskuju liigutamiseks nooleklahve
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Kasuta tegelaskuju liigutamiseks nooleklahve
+      Dance_Party_01_callout:
+        dance_callout_01: Lisa see plokk oma programmi!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Lisa see plokk oma programmi!
+      Dance_Party_02_callout:
+        dance_callout_02: Lisa see plokk oma programmi!
+      Dance_Party_04_callout:
+        dance_callout_04: Lisa see plokk oma programmi!
+      Dance_Party_06_callout:
+        dance_callout_06: Lisa oma uus tantsija siia
+      Dance_Party_11_callout:
+        dance_callout_11_a: Uus plokk!
+        dance_callout_11_b: Uus plokk!
       Eval Design Recipe .1_callout:
         edit_function: Funktsiooni muutmiseks kliki siin.
       Frozen Project Test Toolbox_callout:

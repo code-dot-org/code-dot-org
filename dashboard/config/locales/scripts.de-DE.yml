@@ -1701,10 +1701,23 @@ de:
           stages:
             Artist:
               name: Künstler
+        dance:
+          stages:
+            Dance Party:
+              name: Dance-Party
+          title: Dance-Party
         frozen-2018-test-b:
           stages:
             Artist:
               name: Künstler
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Dance-Party
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Dance-Party
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1715,3 +1728,7 @@ de:
               name: Umschlag-Variablen
             For Loop Fun:
               name: "„Zähle mit“-Schleifenspaß"
+        dance-low:
+          stages:
+            Dance Party:
+              name: Dance-Party

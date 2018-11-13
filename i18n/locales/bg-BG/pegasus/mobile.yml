@@ -1326,6 +1326,8 @@
   user_header_view_my_projects: "Покажи моите проекти"
   view_all_sections: "Покажи всички раздели"
   hero_name: 'Minecraft: Пътуването на героя'
+  applab_tile_start_tutorial: "Старт"
+  hoc_overview_start_tutorial: "Старт"
   hoc2018_creativity_create: "Създай"
   hoc2018_mc_page_title: "Minecraft Hour of Code уроци"
   hoc2018_mc_details: "Много езици | Съвременни браузъри и таблети | Клас 2 +"
@@ -1363,5 +1365,5 @@
   hoc2018_dance_party_button: "Старт"
   hoc2018_dance_teacher_resources_tile1_button: "План на урок"
   hoc2018_dance_teacher_resources_tile2_button: "Ънплъгд дейност"
-  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "Научете повече"
-  hoc2018_dance_amazon_apply_now_button_text: "Регистрирай се сега"
+  hoc2018_dance_amazon_about_future_engineer_button: "Научете повече"
+  hoc2018_dance_amazon_scholarship_programs_button: "Регистрирай се сега"
