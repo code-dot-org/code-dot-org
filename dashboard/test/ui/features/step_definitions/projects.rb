@@ -76,7 +76,7 @@ end
 
 Then /^I publish the project from the share dialog$/ do
   steps <<-STEPS
-    And I click selector "#share-dialog-publish-button"
+    And I press "share-dialog-publish-button"
     Then I publish the project from the publish to gallery dialog
   STEPS
 end
@@ -94,7 +94,7 @@ Then /^I publish the project from the publish to gallery dialog$/ do
   steps <<-STEPS
     And I wait to see a publish dialog with title containing "Publish to Public Gallery"
     And element "#publish-dialog-publish-button" is visible
-    And I click selector "#publish-dialog-publish-button"
+    And I press "publish-dialog-publish-button"
     And I wait for the dialog to close
   STEPS
 end
@@ -126,7 +126,7 @@ end
 
 Then /^I unpublish the project from the share dialog$/ do
   steps <<-STEPS
-    Then I click selector "#share-dialog-unpublish-button"
+    Then I press "share-dialog-unpublish-button"
     And I wait for the dialog to close
   STEPS
 end
