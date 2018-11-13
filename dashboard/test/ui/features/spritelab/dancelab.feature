@@ -15,7 +15,7 @@ Feature: Dance Lab
 
   @no_mobile
   Scenario: Can toggle run/reset in DanceLab
-    Given I am on "http://studio.code.org/s/allthethings/stage/37/puzzle/1?noautoplay=true"
+    Given I am on "http://studio.code.org/s/allthethings/stage/37/puzzle/2?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
     And I wait for 3 seconds
