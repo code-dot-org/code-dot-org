@@ -389,3 +389,18 @@ en:
       BinaryImages_2019:
         title: Binary Images
         desc: Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.
+      courseE_unplugged_privateInformation_2019:
+        title: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.desc'
+      SongwritingParameters_2019:
+        title: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      courseE_unplugged_CnC_2019:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+      Internet_2019:
+        title: 'translation missing: en-US.data.unplugged.Internet_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.desc'
