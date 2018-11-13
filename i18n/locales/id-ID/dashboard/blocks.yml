@@ -73,7 +73,6 @@ id:
             MOVES.ClapHigh: Tepuk tangan di atas
             MOVES.Clown: Badut
             MOVES.Dab: Oleskan
-            '"rand"': Acak
             MOVES.Rest: Tidak ada
           DIR:
             '1': "→"
@@ -84,7 +83,6 @@ id:
             MOVES.ClapHigh: Tepuk tangan di atas
             MOVES.Clown: Badut
             MOVES.Dab: Oleskan
-            '"rand"': Acak
             MOVES.Rest: Tidak ada
           DIR:
             '1': "→"
@@ -106,21 +104,21 @@ id:
             '"height"': tinggi
             '"rotation"': Perputaran
             '"tint"': Mewarnai
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': detik
       Dancelab_ifDanceIs:
         options:
           DANCE:
-            '0': Tepuk tangan di atas
-            '1': Badut
-            '2': Oleskan
-            '3': Double Jam
-            '4': Drop
-            '5': Floss
-            '6': Fresh
-            '7': Kick
-            '8': Tidak ada
-            '9': Roll
-            '10': This or That
-            '11': Thriller
+            MOVES.ClapHigh: Tepuk tangan di atas
+            MOVES.Clown: Badut
+            MOVES.Dab: Oleskan
+            MOVES.Rest: Tidak ada
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': detik
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -166,6 +164,16 @@ id:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"grid"': Kisi
             '"row"': baris
@@ -177,9 +185,29 @@ id:
         options:
           EFFECT:
             '"none"': Tidak ada
-            "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]": Acak
+            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": Acak
       Dancelab_setDanceSpeed:
         options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
           SPEED:
             '1': normal
             '2': fast
@@ -190,7 +218,7 @@ id:
         options:
           EFFECT:
             '"none"': Tidak ada
-            "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": Acak
+            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": Acak
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -223,10 +251,35 @@ id:
             '"scale"': ukuran
             '"height"': tinggi
             '"rotation"': Perputaran
+            '"tint"': Mewarnai
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -254,10 +307,11 @@ id:
         options:
           KEY:
             '"up"': atas
-            '"down"': turun
             '"left"': kiri
+            '"down"': turun
             '"right"': kanan
             '"space"': luar angkasa
+            '"x"': x
       Dancelab_whenPeak:
         options:
           RANGE:

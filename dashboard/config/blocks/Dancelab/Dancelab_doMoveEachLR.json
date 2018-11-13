@@ -66,16 +66,28 @@
         "name": "MOVE",
         "options": [
           [
+            "Bend",
+            "MOVES.XBend"
+          ],
+          [
+            "Body Roll",
+            "MOVES.Roll"
+          ],
+          [
+            "Clap",
+            "MOVES.XClapSide"
+          ],
+          [
             "Clap High",
             "MOVES.ClapHigh"
           ],
           [
-            "Gangnam",
-            "MOVES.Clown"
-          ],
-          [
             "Dab",
             "MOVES.Dab"
+          ],
+          [
+            "Disco",
+            "MOVES.XFever"
           ],
           [
             "Double Down",
@@ -94,12 +106,48 @@
             "MOVES.Fresh"
           ],
           [
-            "Body Roll",
-            "MOVES.Roll"
+            "Gangnam",
+            "MOVES.Clown"
+          ],
+          [
+            "Head + Hips",
+            "MOVES.XHeadHips"
+          ],
+          [
+            "Hop",
+            "MOVES.XHop"
+          ],
+          [
+            "Kick",
+            "MOVES.XHighKick"
+          ],
+          [
+            "Knee",
+            "MOVES.XKnee"
+          ],
+          [
+            "Kneel",
+            "MOVES.XKneel"
+          ],
+          [
+            "Ole",
+            "MOVES.XOle"
+          ],
+          [
+            "Reach",
+            "MOVES.XArmsSide"
+          ],
+          [
+            "Slide",
+            "MOVES.XSlide"
           ],
           [
             "Star",
             "MOVES.Kick"
+          ],
+          [
+            "Stretch",
+            "MOVES.XArmsUp"
           ],
           [
             "This or That",

@@ -9637,10 +9637,10 @@ en:
               name: new stage
             Dance Party:
               name: Dance Party
-          title: ''
+          title: Dance Party
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
+          description: Code your own dance party to share with your friends!
         frozen-2018-test-b:
           title: New Frozen Script
           description: ''
@@ -9831,3 +9831,11 @@ en:
               description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             new stage:
               name: new stage
+        dance-low:
+          stages:
+            Dance Party:
+              name: Dance Party
+          title: Dance Party (Low Bandwidth)
+          description_audience: ''
+          description_short: Code your own dance party to share with your friends! (This version is for slow connections)
+          description: ''

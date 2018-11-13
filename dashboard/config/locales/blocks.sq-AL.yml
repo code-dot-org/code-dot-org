@@ -40,6 +40,14 @@ sq:
           PROPERTY:
             '"scale"': madhësia
             '"height"': gjatësia
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekondat
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': sekondat
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -68,11 +76,29 @@ sq:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"random"': zakonshëm
       Dancelab_randomColor:
         text: ngjyrë e rastësishme
       Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
         options:
           SPEED:
             '1': normal
@@ -109,10 +135,11 @@ sq:
         options:
           KEY:
             '"up"': lart
-            '"down"': poshtë
             '"left"': majtas
+            '"down"': poshtë
             '"right"': djathtas
             '"space"': hapësirë
+            '"x"': x
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -256,19 +283,91 @@ sq:
           PROPERTY:
             '"scale"': madhësia
       craft_ifPath:
+        text: |-
+          nëse shtegu {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": përpara
+            "'right'": në të djathtë
+            "'left'": në të majtë
       craft_ifStandingOn:
+        text: |-
+          nëse je ngritur {TYPE}
+          {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": korali blu
+            "'redCoralBlock'": korali i kuq
             "'sand'": rërë
+            "'wool_blue'": ujë i thellë
             "'planksOak'": dru lisi
+            "'seaLantern'": fari i detit
       craft_ifStandingOnLimit:
+        text: |-
+          nëse je ngritur {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": rërë
+            "'darkPrismarine'": primarine e errët
+            "'seaLantern'": fari i detit
       craft_moveForward:
         text: lëviz përpara
+      craft_placeBlock:
+        text: vendos {blockType}
+        options:
+          blockType:
+            '"strippedOak"': lis i zhveshur
+            '"strippedDarkOak"': lis i i errët i zhveshur
+            '"stoneBricks"': tulla guri
+            '"mossyStoneBricks"': tulla guri me myshk
+            '"crackedStoneBricks"': tulla guri të thyera
+            '"decorativeStoneBricks"': tulla guri zbukuruese
+            '"blueCoralBlock"': blloku i koraleve blu
+            '"pinkCoralBlock"': blloku i koraleve të kuqe
+            '"magentaCoralBlock"': blloku i koraleve të purpurta
+            '"redCoralBlock"': blloku i koraleve të kuqe
+            '"yellowCoralBlock"': blloku i koraleve të verdha
+            '"blueDeadCoralBlock"': blloku i vdekur i koraleve blu
+            '"pinkDeadCoralBlock"': blloku i vdekur i koraleve rozë
+            '"magentaDeadCoralBlock"': blloku i vdekur i koraleve të purpurta
+            '"readDeadCoralBlock"': blloku i vdekur i koraleve të kuqe
+            '"yellowDeadCoralBlock"': blloku i vdekur i koralve të verdha
+            '"prismarine"': prismarine
+            '"darkPrismarine"': primarine e errët
+            '"seaLantern"': fari i detit
+            '"packedIce"': akull i paketuar
+            '"blueIce"': akull blu
+            '"blackConcrete"': beton i zi
+            '"seaGrass"': bar deti
+            '"kelp"': leshterik
+            '"polishedGranite"': granit i lëmuar
+      craft_placePrismarine:
+        text: vendos prismarinen
       craft_placeTorch:
         text: vendos pishtarin
+      craft_repeatUntilConduit:
+        text: |-
+          përsërite deri sa tubi të mbarojë
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          përsërit deri te pikësynimi
+          {STATEMENT}
+      craft_spawnEntity:
+        text: vezë peshku {ENTITY}
+        options:
+          ENTITY:
+            '"cod"': merluc
+            '"dolphin"': delfin
+            '"salmon"': salmon
+            '"seaTurtle"': breshkë deti
+            '"squid"': kallamar
+            '"tropicalFish"': peshk tropikal
+      craft_turn:
+        text: kthehu {DIR}
+        options:
+          DIR:
+            right: djathtas ↻
+            left: majtas ↺

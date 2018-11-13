@@ -362,10 +362,10 @@ sk:
         text: Je to ako programovanie s papierom. To je všetko!
     C1_maze_debugging:
       1:
-        text: Ladenie je hľadanie a opravovanie problémov. Je veľa spôsobov, ako ladiť
-          problémy. Jedným z najľahších je ísť krok po kroku až kým nenarazíte na
-          niečo problematické. Tu sa snažím spraviť premet vzad na stožiari, no vždy
-          padnem.
+        text: Hľadanie a odstraňoanie chýb (anglicky DEBUGGING) môžeme robiť rôznymi
+          spôsobmi. Jedným z najľahších je ísť krok po kroku až kým nenarazíš na miesto,
+          kde program funguje inak, ako si plánoval. Tu sa snažím spraviť premet vzad
+          na stožiari, no vždy padnem.
       2: 
       3: 
       4: 
@@ -896,9 +896,9 @@ sk:
           Minecraftu.
       6:
         image: notes/mc_2017_agent_intro_6.png
-        text: Potrebujem ale tvoju pomoc. Začni najprv úvodnou lekciou, nauč sa ako
-          kódovať a o pár levelov neskôr sa stretneme, dobre? Drž mi palce! Myslím
-          si, že toto je správna cesta. Au! Kaktus! Som v poriadku!
+        text: Potrebujem ale tvoju pomoc. Začni najprv úvodnou lekciou, nauč sa kódovať
+          a o pár levelov neskôr sa stretneme, dobre? Drž mi palce! Myslím si, že
+          toto je tá správna cesta. Au! Kaktus! Som v poriadku!
       7:
         image: notes/mc_2017_agent_intro_7.png
         text: Aby si dokončil výzvu Hodiny Kódu, budeš musieť napísať kód, ktorý naprogramuje
@@ -968,10 +968,10 @@ sk:
           čísla do bloku "Opakuj".
       8:
         image: notes/mc_2017_repeat_8.png
-        text: Môžeš tiež pridať otočenia a viac príkazov do bloku "Opakuj", ale teraz
-          skús použiť príkaz "Opakuj" pre posun Agenta dopredu o niekoľko krokov.
+        text: Do bloku "Opakuj" môžeš pridať aj otočky a iné príkazy, teraz ale skús
+          blok "Opakuj" použiť na to, aby si Agenta posunul o niekoľko krokov dopredu.
           Nezabúdaj, že ak sa v úlohe zasekneš, môžeš vždy stlačiť modré tlačidlo
-          "Reset" a skúsiť to znova.
+          "Obnoviť" a skúsiť to znova.
       9:
         image: notes/mc_2017_repeat_9.png
         text: 'Ak uvažuješ o tom, mať úžasnú prácu, ako má Katie, klikni na tlačidlo

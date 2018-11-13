@@ -1366,7 +1366,9 @@
   signing_in_single_instruct: "თქვენს მოსწავლეებს შეუძლიათ Code.org-ის ანგარიშებში შესვლა ამ ბმულზე https://code.org/ გადასვლით და ზედა მარჯვენა კუთხეში მდებარე \"შესვლის\" ღილაკზე დაწკაპებით."
   syncing_students: "მიმდინარეობს თქვენი მოსწავლეების სინქრონიზაცია"
   google_sign_in_instruct: 'აქ მათ უნდა აირჩიონ "შედი გუგლის ანგარიშის საშუალებით":'
+  applab_tile_start_tutorial: "დაწყება"
   account_sign_up_email_opt_in: "შეიძლება, რომ ელფოსტით მოგწეროთ კურსების განახლებები, ადგილობრივი შესაძლებლობები და სხვა სიახლეები კომპიუტერული მეცნიერებების შესახებ?"
+  hoc_overview_start_tutorial: "დაწყება"
   hoc2018_creativity_create: "შექმნა"
   hoc2018_mc_page_title: "Minecraft-ის კოდის ერთი საათი: ტუტორიალები"
   hoc2018_mc_details: "სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | 2+ კლასი"
@@ -1397,5 +1399,5 @@
   hoc2018_dance_party_button: "დაწყება"
   hoc2018_dance_teacher_resources_tile1_button: "გაკვეთილის გეგმა"
   hoc2018_dance_teacher_resources_tile2_button: "აქტივობა უკომპიუტეროდ"
-  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "გაიგეთ მეტი"
-  hoc2018_dance_amazon_apply_now_button_text: "მიიღეთ მონაწილეობა ახლავე"
+  hoc2018_dance_amazon_about_future_engineer_button: "გაიგეთ მეტი"
+  hoc2018_dance_amazon_scholarship_programs_button: "მიიღეთ მონაწილეობა ახლავე"
