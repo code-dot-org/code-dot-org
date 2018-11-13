@@ -377,3 +377,15 @@ en:
       ForLoopFun_2019:
         title: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title'
         desc: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.desc'
+      GraphPaperProgramming_2019:
+        title: Graph Paper Programming
+        desc: Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing.
+      RelayProgramming_2018_2019:
+        title: Relay Programming
+        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Unplugged Activity
+        desc: Today you will learn what it means to be a Digital Citizen.
+      BinaryImages_2019:
+        title: Binary Images
+        desc: Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.

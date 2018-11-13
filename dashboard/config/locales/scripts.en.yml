@@ -9839,3 +9839,85 @@ en:
           description_audience: ''
           description_short: Code your own dance party to share with your friends! (This version is for slow connections)
           description: ''
+        coursed-2019:
+          title: Course D (2019)
+          description: Students develop their understanding of nested loops, while loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+          description_short: Learn about conditional statements and create your own art, story or game.
+          description_audience: 'Ages: 7-11'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+              description_student: ''
+              description_teacher: ''
+            Introduction to Online Puzzles:
+              name: Introduction to Online Puzzles
+              description_student: ''
+              description_teacher: ''
+            Relay Programming:
+              name: Relay Programming
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: Debugging in Collector
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: Events in Bounce
+              description_student: ''
+              description_teacher: ''
+            Loops in Ice Age:
+              name: Loops in Ice Age
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Artist:
+              name: Nested Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Frozen:
+              name: Nested Loops in Frozen
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Until Loops in Maze:
+              name: Until Loops in Maze
+              description_student: ''
+              description_teacher: ''
+            Conditionals with Cards:
+              name: Conditionals with Cards
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Bee:
+              name: Conditionals in Bee
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Harvester:
+              name: Conditionals & Loops in Harvester
+              description_student: ''
+              description_teacher: ''
+            Digital Citizenship:
+              name: Digital Citizenship
+              description_student: ''
+              description_teacher: ''
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+              description_student: ''
+              description_teacher: ''
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+              description_student: ''
+              description_teacher: ''
+            Artist Binary:
+              name: Artist Binary
+              description_student: ''
+              description_teacher: ''
