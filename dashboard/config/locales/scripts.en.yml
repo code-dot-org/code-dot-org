@@ -10042,3 +10042,197 @@ en:
               name: Crowdsourcing
               description_student: This lesson will teach you about crowdsourcing, the process of building a project with a team.
               description_teacher: In computer science, we face some big, daunting problems. Challenges such as finding large prime numbers or sequencing DNA are almost impossible to do as an individual. Adding the power of others makes these tasks manageable. This lesson will show your students how helpful teamwork can be in the industry of computer science.
+        express-2019:
+          title: Express Course (2019)
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
+          description_audience: 'Ages: 9-18'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: Programming in Maze
+              description_student: ''
+              description_teacher: ''
+            Relay Programming:
+              name: Relay Programming
+              description_student: ''
+              description_teacher: ''
+            Debugging in Maze:
+              name: Debugging in Maze
+              description_student: ''
+              description_teacher: ''
+            Programming in Collector:
+              name: Programming in Collector
+              description_student: ''
+              description_teacher: ''
+            Programming in Artist:
+              name: Programming in Artist
+              description_student: ''
+              description_teacher: ''
+            'Loops: Getting Loopy':
+              name: 'Loops: Getting Loopy'
+              description_student: ''
+              description_teacher: ''
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Copyright and Creativity:
+              name: Copyright and Creativity
+              description_student: ''
+              description_teacher: ''
+            'Concept Practice with Minecraft ':
+              name: 'Concept Practice with Minecraft '
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Frozen:
+              name: Nested Loops in Frozen
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Until Loops in Maze:
+              name: Until Loops in Maze
+              description_student: ''
+              description_teacher: ''
+            Conditionals with Cards:
+              name: Conditionals with Cards
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Bee:
+              name: Conditionals in Bee
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Harvester:
+              name: Conditionals & Loops in Harvester
+              description_student: ''
+              description_teacher: ''
+            'Functions: Songwriting':
+              name: 'Functions: Songwriting'
+              description_student: ''
+              description_teacher: ''
+            Functions in Minecraft:
+              name: Functions in Minecraft
+              description_student: ''
+              description_teacher: ''
+            Functions in Harvester:
+              name: Functions in Harvester
+              description_student: ''
+              description_teacher: ''
+            Functions in Artist:
+              name: Functions in Artist
+              description_student: ''
+              description_teacher: ''
+            Screen Out the Mean:
+              name: Screen Out the Mean
+              description_student: ''
+              description_teacher: ''
+            Determine the Concept:
+              name: Determine the Concept
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Build a Flappy Game:
+              name: Build a Flappy Game
+              description_student: ''
+              description_teacher: ''
+            The Power of Words:
+              name: The Power of Words
+              description_student: ''
+              description_teacher: ''
+            Envelope Variables:
+              name: Envelope Variables
+              description_student: ''
+              description_teacher: ''
+            Variables as Constant in Artist:
+              name: Variables as Constant in Artist
+              description_student: ''
+              description_teacher: ''
+            Variables that Change in Bee:
+              name: Variables that Change in Bee
+              description_student: ''
+              description_teacher: ''
+            Variables that Change in Artist:
+              name: Variables that Change in Artist
+              description_student: ''
+              description_teacher: ''
+            For Loop Fun:
+              name: For Loop Fun
+              description_student: ''
+              description_teacher: ''
+            For Loops in Bee:
+              name: For Loops in Bee
+              description_student: ''
+              description_teacher: ''
+            For Loops in Artist:
+              name: For Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Pet Giraffe with Sprite Lab:
+              name: Pet Giraffe with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Explore Project Ideas:
+              name: Explore Project Ideas
+              description_student: ''
+              description_teacher: ''
+            The Design Process:
+              name: The Design Process
+              description_student: ''
+              description_teacher: ''
+            Build Your Project:
+              name: Build Your Project
+              description_student: ''
+              description_teacher: ''
+            Revise Your Project:
+              name: Revise Your Project
+              description_student: ''
+              description_teacher: ''
+            Present Your Project:
+              name: Present Your Project
+              description_student: ''
+              description_teacher: ''
+            Binary Bracelets:
+              name: Binary Bracelets
+              description_student: ''
+              description_teacher: ''
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+              description_student: ''
+              description_teacher: ''
+            Artist Binary:
+              name: Artist Binary
+              description_student: ''
+              description_teacher: ''
+            Internet:
+              name: Internet
+              description_student: ''
+              description_teacher: ''
+            Crowdsourcing:
+              name: Crowdsourcing
+              description_student: ''
+              description_teacher: ''

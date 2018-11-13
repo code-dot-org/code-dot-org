@@ -404,3 +404,15 @@ en:
       Crowdsourcing_2019:
         title: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
         desc: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.desc'
+      GettingLoopy_2019:
+        title: Getting Loopy
+        desc: This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Unplugged Activity
+        desc: Today you will learn about what to do if someone is being mean online.
+      BigEvent_2019:
+        title: The Big Event
+        desc: Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.
+      BinaryBracelets_2019:
+        title: Binary Bracelets
+        desc: Students create bracelets as a binary representations of the first letter of their name. Students learn that data can be represented and stored in more than one way.
