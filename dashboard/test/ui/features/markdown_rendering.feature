@@ -7,7 +7,7 @@ Feature: Markdown rendering across the website
     And I rotate to landscape
     And I wait to see "#extra-details-tag"
     Then element "#extra-details-tag" is hidden
-    And I click selector "#summary-tag"
+    And I press "summary-tag"
     Then element "#extra-details-tag" is visible
 
   @eyes

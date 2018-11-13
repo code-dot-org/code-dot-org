@@ -127,17 +127,17 @@ end
 
 When /^I reset the puzzle to the starting version$/ do
   steps <<-STEPS
-    Then I click selector "#versions-header"
+    Then I press "versions-header"
     And I wait to see a dialog titled "Version History"
     And I see "#showVersionsModal"
     And I wait until element "button:contains(Start over)" is visible
     And I close the dialog
     And I wait until element "#showVersionsModal" is gone
     And I wait for 3 seconds
-    Then I click selector "#versions-header"
+    Then I press "versions-header"
     And I wait until element "button:contains(Start over)" is visible
     And I click selector "button:contains(Start over)"
-    And I click selector "#confirm-button"
+    And I press "confirm-button"
     And I wait until element "#showVersionsModal" is gone
     And I wait for 3 seconds
   STEPS
@@ -683,7 +683,7 @@ And (/^I select age (\d+) in the age dialog/) do |age|
   steps %Q{
     And element ".age-dialog" is visible
     And I select the "#{age}" option in dropdown "uitest-age-selector"
-    And I click selector "#uitest-submit-age"
+    And I press "uitest-submit-age"
   }
 end
 
@@ -876,10 +876,10 @@ Given(/^I sign in as "([^"]*)"$/) do |name|
     Given I am on "http://studio.code.org/reset_session"
     Then I am on "http://studio.code.org/"
     And I wait to see "#signin_button"
-    Then I click selector "#signin_button"
+    Then I press "signin_button"
     And I wait to see "#signin"
     And I fill in username and password for "#{name}"
-    And I click selector "#signin-button"
+    And I press "signin-button"
     And I wait to see ".header_user"
   }
 end
@@ -890,10 +890,10 @@ Given(/^I sign out and sign in as "([^"]*)"$/) do |name|
     And I wait for 5 seconds
     Then I am on "http://studio.code.org/"
     And I wait to see "#signin_button"
-    Then I click selector "#signin_button"
+    Then I press "signin_button"
     And I wait to see "#signin"
     And I fill in username and password for "#{name}"
-    And I click selector "#signin-button"
+    And I press "signin-button"
     And I wait to see ".header_user"
   }
 end
@@ -903,7 +903,7 @@ Given(/^I sign in as "([^"]*)" from the sign in page$/) do |name|
     And check that the url contains "/users/sign_in"
     And I wait to see "#signin"
     And I fill in username and password for "#{name}"
-    And I click selector "#signin-button"
+    And I press "signin-button"
     And I wait to see ".header_user"
   }
 end
@@ -1096,8 +1096,8 @@ And(/^I create a student named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_user_age"
-    And I click selector "#user_terms_of_service_version"
-    And I click selector "#signup-button"
+    And I press "user_terms_of_service_version"
+    And I press "signup-button"
     And I wait until I am on "http://studio.code.org/home"
   }
 end
@@ -1114,9 +1114,9 @@ And(/^I create a student in the eu named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_user_age"
-    And I click selector "#user_terms_of_service_version"
-    And I click selector "#user_data_transfer_agreement_accepted"
-    And I click selector "#signup-button"
+    And I press "user_terms_of_service_version"
+    And I press "user_data_transfer_agreement_accepted"
+    And I press "signup-button"
     And I wait until I am on "http://studio.code.org/home"
   }
 end
@@ -1133,8 +1133,8 @@ And(/^I create a young student named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "10" option in dropdown "user_user_age"
-    And I click selector "#user_terms_of_service_version"
-    And I click selector "#signup-button"
+    And I press "user_terms_of_service_version"
+    And I press "signup-button"
     And I wait until I am on "http://studio.code.org/home"
   }
 end
@@ -1153,7 +1153,7 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "Yes" option in dropdown "user_email_preference_opt_in"
-    And I click selector "#user_terms_of_service_version"
+    And I press "user_terms_of_service_version"
     And I click selector "#signup-button" to load a new page
     And I wait until I am on "http://studio.code.org/home"
   }
