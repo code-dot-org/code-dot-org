@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "skin": "gamelab",
+    "skin": "dance",
     "is_project_level": true,
     "helper_libraries": [
       "DanceLab"
@@ -42,12 +42,9 @@
       "downButton",
       "upButton"
     ],
-    "default_song": "hammer",
+    "default_song": "firework_katyperry",
     "contained_level_names": null,
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
