@@ -1604,7 +1604,9 @@ en:
       Dance Party Predict: 'What do you think will happen when you click on the alien?  '
       Dance Party Predict_2019: 'What do you think will happen when you click on the alien?  '
       Dance Party Predict_simple: 'What do you think will happen when you click on the alien?  '
+      Dance_Events_Example_Video: Use events to make your dance party interactive!
       Dance_Party_01: Drag the `make a new` block into the workspace, and connect it inside the `setup` block.
+      Dance_Party_01_low: Drag the `make a new` block into the workspace, and connect it inside the `setup` block.
       Dance_Party_02: Make the moose start a new move after 4 measures!
       Dance_Party_03: Now make the dancer start a new move after 6 measures!
       Dance_Party_04: Add a background effect to your program.

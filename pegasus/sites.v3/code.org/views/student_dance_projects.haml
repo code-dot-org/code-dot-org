@@ -3,39 +3,39 @@
 :ruby
   dance_projects = [
     {
-      title: "Dance Party 1",
-      name: "Ryan",
-      age: "13+",
-      image: "ryan_project",
-      link: "https://studio.code.org/projects/dance/cMFiZ9Q2Nr2fDLsrzVRW0w"
+      title: "After Party",
+      name: "M",
+      age: "18",
+      image: "project4_a",
+      link: "https://studio.code.org/projects/dance/I-U55ZusXI3UsVLjTeuxLQ/"
     },
     {
-      title: "Mi oficina",
-      name: "Emma!",
-      age: "18+",
-      image: "emma_project",
+      title: "Down to the Beat",
+      name: "A",
+      age: "11",
+      image: "project2_b",
       link: "https://studio.code.org/projects/dance/TMhwhq8fQAeTEaoDS10ML-lhxiMGdKlHa6Lsvo1sTnA"
     },
     {
-      title: "Dance Party 3",
-      name: "Still Hadi",
-      age: "13+",
-      image: "ryan_project",
-      link: ""
+      title: "Bear Bop",
+      name: "J",
+      age: "8",
+      image: "project1_a",
+      link: "https://studio.code.org/projects/dance/cMFiZ9Q2Nr2fDLsrzVRW0w"
     },
     {
-      title: "Dance Party 4",
-      name: "Guess who",
-      age: "13+",
-      image: "emma_project",
-      link: ""
+      title: "Friday Night",
+      name: "L",
+      age: "16",
+      image: "project3_b",
+      link: "https://studio.code.org/projects/dance/ZZ3CKXXmUdLrih9cfWbwmw"
     },
   ]
 
 .student_dance_projects
   - dance_projects.each do |project|
     %a.project-card{href: project[:link], style: "color: #696969; text-decoration: none"}
-      %img.project-video{src:"/images/animated-examples/student-dance-projects/#{project[:image]}.gif"}
+      %img.project-video{src:"/images/dance-hoc/#{project[:image]}.gif"}
       .project-details
         .project-title
           = project[:title]
