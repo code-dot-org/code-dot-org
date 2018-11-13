@@ -944,7 +944,23 @@ he:
       Course 4 SCF 1_authored_hint:
         Course_4_SCF_1_a: לכל משושה אורך כל פאה הוא 40 פיקסלים.
         Course_4_SCF_1_b: יש לקפוץ 120 פיקסלים בין כל משושה ומשושה בכל שורה אופקית.
+      Dance short test 2_authored_hint:
+        challenges: |-
+          **אתגר רשות**
+
+          שנו את אפקט הרקע בנקודות שונות במהלך השיר על ידי חיבור הבלוק החדש מתחת ל-<block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">״תיבות״</title></block></xml>מקרים.
+      Dance short test_authored_hint:
+        challenges: |-
+          **אתגר רשות**
+
+          שנו את אפקט הרקע בנקודות שונות במהלך השיר על ידי חיבור הבלוק החדש מתחת ל-<block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">״תיבות״</title></block></xml>מקרים.
       Dance_Party_01_authored_hint:
+        validation: |-
+          **איך אנחנו עוברים את השלב הזה?**
+          * ודאו שהרקדן מופיע על גבי המסך.
+
+          *השלב הזה מסתיים אחרי 4 תיבות.*
+      Dance_Party_01_low_authored_hint:
         validation: |-
           **איך אנחנו עוברים את השלב הזה?**
           * ודאו שהרקדן מופיע על גבי המסך.
@@ -963,6 +979,11 @@ he:
           * אחרי 6 תיבות, הרקדן שלכם צריך לעשות צעד שונה מאשר זה שהוא עשה אחרי 4 תיבות.
 
           *השלב הזה מסתיים אחרי 12 תיבות.*
+      Dance_Party_04_authored_hint:
+        challenges: |-
+          **אתגר רשות**
+
+          שנו את אפקט הרקע בנקודות שונות במהלך השיר על ידי חיבור הבלוק החדש מתחת ל-<block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">״תיבות״</title></block></xml>מקרים.
       Dance_Party_05_authored_hint:
         validation: |-
           **איך אנחנו עוברים את השלב הזה?**
@@ -983,6 +1004,12 @@ he:
           *הוסיפו רקדן שלישי (או כמה שבא לכם!)
           * גרמו לכל הרקדנים שלכם לבצע צעדים אחרים בנקודות שונות במהלך השיר.
       Dance_Party_08_authored_hint:
+        validation: |-
+          **איך אנחנו עוברים את השלב הזה?**
+
+          * שני הרקדנים חייבים להיות בגודל שונה מ-100.
+
+          *השלב הזה מסתיים אחרי 6 תיבות.*
         challenges: |-
           **אתגר רשות**
 
@@ -1041,6 +1068,11 @@ he:
           * אחרי 6 תיבות, הרקדן שלכם צריך לעשות צעד שונה מאשר זה שהוא עשה אחרי 4 תיבות.
 
           *השלב הזה מסתיים אחרי 12 תיבות.*
+      Dance_Party_4_authored_hint:
+        challenges: |-
+          **אתגר רשות**
+
+          שנו את אפקט הרקע בנקודות שונות במהלך השיר על ידי חיבור הבלוק החדש מתחת ל-<block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">״תיבות״</title></block></xml>מקרים.
       Dance_Party_5_authored_hint:
         validation: |-
           **איך אנחנו עוברים את השלב הזה?**
@@ -1055,6 +1087,12 @@ he:
           *הוסיפו רקדן שלישי (או כמה שבא לכם!)
           * גרמו לכל הרקדנים שלכם לבצע צעדים אחרים בנקודות שונות במהלך השיר.
       Dance_Party_8_authored_hint:
+        validation: |-
+          **איך אנחנו עוברים את השלב הזה?**
+
+          * שני הרקדנים חייבים להיות בגודל שונה מ-100.
+
+          *השלב הזה מסתיים אחרי 6 תיבות.*
         challenges: |-
           **אתגר רשות**
 
@@ -1094,6 +1132,11 @@ he:
           * אחרי 6 תיבות, הרקדן שלכם צריך לעשות צעד שונה מאשר זה שהוא עשה אחרי 4 תיבות.
 
           *השלב הזה מסתיים אחרי 12 תיבות.*
+      HOC Dance 3_draft_authored_hint:
+        challenges: |-
+          **אתגר רשות**
+
+          שנו את אפקט הרקע בנקודות שונות במהלך השיר על ידי חיבור הבלוק החדש מתחת ל-<block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">״תיבות״</title></block></xml>מקרים.
       HOC Dance 4_draft_authored_hint:
         validation: |-
           **איך אנחנו עוברים את השלב הזה?**
@@ -1108,6 +1151,12 @@ he:
           *הוסיפו רקדן שלישי (או כמה שבא לכם!)
           * גרמו לכל הרקדנים שלכם לבצע צעדים אחרים בנקודות שונות במהלך השיר.
       HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **איך אנחנו עוברים את השלב הזה?**
+
+          * שני הרקדנים חייבים להיות בגודל שונה מ-100.
+
+          *השלב הזה מסתיים אחרי 6 תיבות.*
         challenges: |-
           **אתגר רשות**
 

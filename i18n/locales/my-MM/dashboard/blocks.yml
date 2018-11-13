@@ -37,18 +37,7 @@ my:
       Dancelab_ifDanceIs:
         options:
           DANCE:
-            '0': Clap High
-            '1': Clown
-            '2': Dab
-            '3': Double Jam
-            '4': Drop
-            '5': Floss
-            '6': Fresh
-            '7': Kick
-            '8': ဘာမှမရှိ
-            '9': Roll
-            '10': This or That
-            '11': Thriller
+            MOVES.Rest: ဘာမှမရှိ
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -65,6 +54,16 @@ my:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
       Dancelab_randomColor:
         text: ကျဘန်းအရောင်
       Dancelab_setBackgroundEffect:
@@ -79,6 +78,16 @@ my:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
+          SPEED:
+            '1': ပုံမှန်
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
@@ -87,10 +96,18 @@ my:
         options:
           GROUP:
             sprites: အားလုံး
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: အားလုံး
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: အားလုံး
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"x"': "×"
       gamelab_debugSprite:
         options:
           VAL:

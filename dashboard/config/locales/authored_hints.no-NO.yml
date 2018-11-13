@@ -2321,9 +2321,6 @@
           </block>
           </xml>
       Course 4 SCFL 4_authored_hint:
-        Course_4_SCFL_4_a: Forandringen av farge skjer ved bruk av valg-av-farge-rød-grønn-blå-blokken.
-          Rød er alltid verdien av "telleren", grønn er alltid "255-teller" og blå
-          er alltid konstant på akkurat 255.
         Course_4_SCFL_4_b: Hver figur er et kvadrat med sider som er `teller` piksler
           lange og starter med 5px og øker med 5px hele veien opp til 200px.
         Course_4_SCFL_4_c: Kunstneren snur 15 grader mellom hvert kvadrat.
@@ -2766,7 +2763,7 @@
         Course_4_SCV_2_c: Kunstneren svinger til venstre når for hver decagon han
           lager, men svinger til høyre i begge de andre løkkene.
         Course_4_SCV_2_d: For å forhindre at alle dine 10 blomsterkronblader forsvinner
-          inn i det samme stedet, pass på å hoppefremover 'lengder'/'til side' før
+          inn i det samme stedet, pass på å hoppe fremover 'lengder'/'til side' før
           du kan snu 360/'til side'-grader som en del av din ytterste løkke.
       Course 4 SCV 3_authored_hint:
         Course_4_SCV_3_a: 'Bruk matteblokken din for å legge til og trekke fra poeng-variabelen

@@ -3,80 +3,215 @@ cs:
   data:
     blocks:
       Dancelab_atTimestamp:
+        text: po {TIMESTAMP} {UNIT}
         options:
           UNIT:
+            '"measures"': měření
             '"seconds"': sekundy
+      Dancelab_changeColorBy:
+        text: změň {COLOR} {METHOD} o {AMOUNT}
+        options:
+          METHOD:
+            '"hue"': odstín
+            '"saturation"': sytost
+            '"brightness"': jas
       Dancelab_changeMoveEachLR:
+        text: "{GROUP} dělá {MOVE} {DIR} navěky"
         options:
           GROUP:
             sprites: vše
+            '"ALIEN"': všichni mimozemšťani
+            '"BEAR"': všichni medvědi
+            '"CAT"': všechny kočky
+            '"DOG"': všichni psi
+            '"DUCK"': všechny kachny
+            '"FROG"': všechny žáby
+            '"MOOSE"': všichni losi
+            '"PINEAPPLE"': všechny ananasy
+            '"ROBOT"': všichni roboti
+            '"SHARK"': všichni žraloci
+            '"UNICORN"': všichni jednorožci
           MOVE:
+            MOVES.ClapHigh: Clap High
+            MOVES.Clown: Klaun
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Jam
+            MOVES.Drop: Roznožka
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Roll: Roll
+            MOVES.Kick: Hvězda
+            MOVES.ThisOrThat: To nebo tamto
+            '"next"': "(Další)"
+            '"prev"': "(Předchozí)"
+            '"rand"': "(Náhodný)"
             MOVES.Rest: Žádný
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
+        text: "{SPRITE} dělá {MOVE} {DIR} navěky"
         options:
           MOVE:
+            MOVES.ClapHigh: Clap High
+            MOVES.Clown: Klaun
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Jam
+            MOVES.Drop: Roznožka
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Roll: Roll
+            MOVES.Kick: Hvězda
+            MOVES.ThisOrThat: To nebo tamto
+            MOVES.Thriller: Thriller
+            '"next"': "(Další)"
+            '"prev"': "(Předchozí)"
+            '"rand"': "(Náhodný)"
             MOVES.Rest: Žádný
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
+        text: změň {SPRITE} {PROPERTY} o {VAL}
         options:
           PROPERTY:
             '"scale"': velikost
             '"height"': výška
+            '"rotation"': rotace
+            '"x"': vodorovná pozice
+            '"y"': svislá pozice
       Dancelab_doMoveEachLR:
+        text: "{GROUP} dělá {MOVE} {DIR} jednou"
         options:
           GROUP:
             sprites: vše
+            '"ALIEN"': všichni mimozemšťani
+            '"BEAR"': všichni medvědi
+            '"CAT"': všechny kočky
+            '"DOG"': všichni psi
+            '"DUCK"': všechny kachny
+            '"FROG"': všechny žáby
+            '"MOOSE"': všichni losi
+            '"PINEAPPLE"': všechny ananasy
+            '"ROBOT"': všichni roboti
+            '"SHARK"': všichni žraloci
+            '"UNICORN"': všichni jednorožci
           MOVE:
+            MOVES.ClapHigh: Clap High
+            MOVES.Clown: Klaun
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Jam
+            MOVES.Drop: Roznožka
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Roll: Roll
+            MOVES.Kick: Hvězda
+            MOVES.ThisOrThat: To nebo tamto
             MOVES.Rest: Žádný
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
+        text: "{SPRITE} dělá {MOVE} {DIR} jednou"
         options:
           MOVE:
+            MOVES.ClapHigh: Clap High
+            MOVES.Clown: Klaun
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Jam
+            MOVES.Drop: Roznožka
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Roll: Roll
+            MOVES.Kick: Hvězda
+            MOVES.ThisOrThat: To nebo tamto
             MOVES.Rest: Žádný
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_everySeconds:
+        text: 'každé {N} {UNIT} '
         options:
           UNIT:
+            '"measures"': měření
             '"seconds"': sekundy
+      Dancelab_everySecondsRange:
+        text: 'každé {N} {UNIT} od {START} do {STOP} '
+        options:
+          UNIT:
+            measures: Měření
+            seconds: Sekund
+      Dancelab_everyVerseChorus:
+        text: 'každé {UNIT} '
+        options:
+          UNIT:
+            '"verse"': verš
+            '"chorus"': sbor
+      Dancelab_getEnergy:
+        text: vezmi {RANGE}
+        options:
+          RANGE:
+            '"low"': basy
+            '"mid"': střed
+            '"high"': výšky
       Dancelab_getProp:
         options:
           PROPERTY:
             '"scale"': velikost
             '"height"': výška
+            '"rotation"': rotace
+            '"x"': vodorovná pozice
+            '"y"': svislá pozice
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"measures"': měření
+            '"seconds"': sekundy
       Dancelab_ifDanceIs:
         options:
           DANCE:
-            '0': Clap High
-            '1': Clown
-            '2': Dab
-            '3': Double Jam
-            '4': Drop
-            '5': Floss
-            '6': Fresh
-            '7': Kick
-            '8': Žádný
-            '9': Roll
-            '10': This or That
-            '11': Thriller
+            MOVES.ClapHigh: Clap High
+            MOVES.Clown: Klaun
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Jam
+            MOVES.Drop: Roznožka
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Roll: Roll
+            MOVES.Kick: Hvězda
+            MOVES.ThisOrThat: To nebo tamto
+            MOVES.Rest: Žádný
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"measures"': měření
+            '"seconds"': sekundy
       Dancelab_jumpTo:
         options:
           LOCATION:
             "{x: 100, y: 200}": vlevo
             "{x: 300, y: 200}": vpravo
+            "{x: 200, y: 200}": uprostřed
+            "{x: 100, y: 100}": vlevo nahoře
+            "{x: 300, y: 100}": vpravo nahoře
+            "{x: 100, y: 300}": vlevo dole
+            "{x: 300, y: 300}": vpravo dole
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": náhodně
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: vše
+            '"ALIEN"': všichni mimozemšťani
+            '"BEAR"': všichni medvědi
+            '"CAT"': všechny kočky
+            '"DOG"': všichni psi
+            '"DUCK"': všechny kachny
+            '"FROG"': všechny žáby
+            '"MOOSE"': všichni losi
+            '"PINEAPPLE"': všechny ananasy
+            '"ROBOT"': všichni roboti
+            '"SHARK"': všichni žraloci
+            '"UNICORN"': všichni jednorožci
           FORMAT:
             '"random"': náhodně
       Dancelab_makeNewDanceSprite:
@@ -84,6 +219,11 @@ cs:
           LOCATION:
             "{x: 100, y: 200}": vlevo
             "{x: 300, y: 200}": vpravo
+            "{x: 200, y: 200}": uprostřed
+            "{x: 100, y: 100}": vlevo nahoře
+            "{x: 300, y: 100}": vpravo nahoře
+            "{x: 100, y: 300}": vlevo dole
+            "{x: 300, y: 300}": vpravo dole
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": náhodně
       Dancelab_makeNewDanceSpriteGroup:
         options:
@@ -97,6 +237,16 @@ cs:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"random"': náhodně
       Dancelab_randomColor:
@@ -105,63 +255,214 @@ cs:
         options:
           EFFECT:
             '"none"': Žádný
+            '"splatter"': Bubliny
+            '"swirl"': Hypno
+            '"spiral"': Spirála
+            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": "(Náhodný)"
       Dancelab_setDanceSpeed:
+        text: nastav {SPRITE} rychlost tance na {SPEED}
         options:
           SPEED:
             '1': normální
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      Dancelab_setForegroundEffect:
-        options:
-          EFFECT:
-            '"none"': Žádný
-      Dancelab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': velikost
-            '"height"': výška
-      Dancelab_setPropEach:
+            '2': rychle
+            '4': velmi rychle
+            '0.5': pomalu
+            '0.25': velmi pomalu
+      Dancelab_setDanceSpeedEach:
+        text: nastav {GROUP} rychlost tance na {SPEED}
         options:
           GROUP:
             sprites: vše
-          PROPERTY:
-            '"scale"': velikost
-            '"height"': výška
-      Dancelab_setPropRandom:
+            '"ALIEN"': všichni mimozemšťani
+            '"BEAR"': všichni medvědi
+            '"CAT"': všechny kočky
+            '"DOG"': všichni psi
+            '"DUCK"': všechny kachny
+            '"FROG"': všechny žáby
+            '"MOOSE"': všichni losi
+            '"PINEAPPLE"': všechny ananasy
+            '"ROBOT"': všichni roboti
+            '"SHARK"': všichni žraloci
+            '"UNICORN"': všichni jednorožci
+          SPEED:
+            '1': normální
+            '2': rychle
+            '4': velmi rychle
+            '0.5': pomalu
+            '0.25': velmi pomalu
+      Dancelab_setForegroundEffect:
+        text: nastav efekt popředí {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Žádný
+            '"rain"': Déšť
+            '"raining_tacos"': Tacos
+            '"spotlight"': Bodový reflektor
+            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Náhodný)"
+      Dancelab_setProp:
+        text: 'nastav {SPRITE} {PROPERTY} na {VAL} '
         options:
           PROPERTY:
             '"scale"': velikost
             '"height"': výška
-      Dancelab_setVisibleEach:
+            '"rotation"': rotace
+            '"x"': vodorovná pozice
+            '"y"': svislá pozice
+      Dancelab_setPropEach:
+        text: nastav {GROUP} {PROPERTY} na {VAL}
+        options:
+          GROUP:
+            sprites: vše
+            '"ALIEN"': všichni mimozemšťani
+            '"BEAR"': všichni medvědi
+            '"CAT"': všechny kočky
+            '"DOG"': všichni psi
+            '"DUCK"': všechny kachny
+            '"FROG"': všechny žáby
+            '"MOOSE"': všichni losi
+            '"PINEAPPLE"': všechny ananasy
+            '"ROBOT"': všichni roboti
+            '"SHARK"': všichni žraloci
+            '"UNICORN"': všichni jednorožci
+          PROPERTY:
+            '"scale"': velikost
+            '"height"': výška
+            '"rotation"': rotace
+            '"x"': vodorovná pozice
+            '"y"': svislá pozice
+      Dancelab_setPropRandom:
+        text: náhodně {SPRITE} {PROPERTY}
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"height"': výška
+            '"rotation"': rotace
+            '"x"': vodorovná pozice
+            '"y"': svislá pozice
+      Dancelab_setTint:
+        text: nastav odstín {SPRITE} na {VAL}
+      Dancelab_setTintEach:
+        text: nastav odstín {THIS} na {VAL}
         options:
           THIS:
             sprites: vše
+            '"ALIEN"': všichni mimozemšťani
+            '"BEAR"': všichni medvědi
+            '"CAT"': všechny kočky
+            '"DOG"': všichni psi
+            '"DUCK"': všechny kachny
+            '"FROG"': všechny žáby
+            '"MOOSE"': všichni losi
+            '"PINEAPPLE"': všechny ananasy
+            '"ROBOT"': všichni roboti
+            '"SHARK"': všichni žraloci
+      Dancelab_setVisible:
+        text: nastav viditelnost {SPRITE} na {VISIBILITY}
+        options:
+          VISIBILITY:
+            'true': viditelný
+            'false': neviditelný
+      Dancelab_setVisibleEach:
+        text: nastav viditelnost {THIS} na {VISIBILITY}
+        options:
+          THIS:
+            sprites: vše
+            '"ALIEN"': všichni mimozemšťani
+            '"BEAR"': všichni medvědi
+            '"CAT"': všechny kočky
+            '"DOG"': všichni psi
+            '"DUCK"': všechny kachny
+            '"FROG"': všechny žáby
+            '"MOOSE"': všichni losi
+            '"PINEAPPLE"': všechny ananasy
+            '"ROBOT"': všichni roboti
+            '"SHARK"': všichni žraloci
+            '"UNICORN"': všichni jednorožci
+          VISIBILITY:
+            'true': viditelný
+            'false': neviditelný
       Dancelab_startMapping:
+        text: "{SPRITE} začne {PROPERTY} podle {RANGE}"
         options:
           PROPERTY:
             '"scale"': velikost
             '"height"': výška
+            '"rotation"': rotace
+            '"x"': vodorovná pozice
+            '"y"': svislá pozice
+          RANGE:
+            '"bass"': basy
+            '"mid"': střed
+            '"treble"': výšky
       Dancelab_stopMapping:
+        text: "{SPRITE} přestane {PROPERTY} podle {RANGE}"
         options:
           PROPERTY:
             '"scale"': velikost
             '"height"': výška
+            '"rotation"': rotace
+            '"x"': vodorovná pozice
+            '"y"': svislá pozice
+            '"direction"': směr pohybu
+          RANGE:
+            '"bass"': basy
+            '"mid"': střed
+            '"treble"': výšky
       Dancelab_whenKey:
+        text: když {KEY} stisknuta
         options:
           KEY:
             '"up"': nahoru
-            '"down"': dolů
             '"left"': vlevo
+            '"down"': dolů
             '"right"': vpravo
             '"space"': vesmír
+            '"enter"': enter
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
+      Dancelab_whenPeak:
+        text: když {RANGE} vrcholí
+        options:
+          RANGE:
+            '0': basy
+            '1': střed
+            '2': výšky
+      Dancelab_whenSetup:
+        text: příprava
+      gamelab_changeColor:
+        text: změň {COLOR} {METHOD} o {AMOUNT}
+      gamelab_changeColorBy:
+        text: změň {COLOR} {METHOD} o {AMOUNT}
+        options:
+          METHOD:
+            '"hue"': odstín
+            '"saturation"': sytost
+            '"brightness"': jas
       gamelab_changePropBy:
+        text: změň {SPRITE} {PROPERTY} o {VAL}
         options:
           PROPERTY:
             '"scale"': velikost
+            '"rotation"': rotace
             '"x"': souřadnice X
             '"y"': souřadnice Y
+            '"direction"': směr pohybu
       gamelab_debugSprite:
         options:
           VAL:
@@ -171,8 +472,10 @@ cs:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"rotation"': rotace
             '"x"': souřadnice X
             '"y"': souřadnice Y
+            '"direction"': směr pohybu
       gamelab_locationDelta:
         options:
           DIR:
@@ -187,38 +490,55 @@ cs:
       gamelab_randomColor:
         text: náhodná barva
       gamelab_setPosition:
+        text: přesuň {THIS} na pozici {POSITION}
         options:
           POSITION:
+            "{x: 50, y: 50}": vlevo nahoře
+            "{x: 200, y: 50}": uprostřed nahoře
+            "{x: 350, y: 50}": vpravo nahoře
+            "{x: 50, y: 200}": vlevo uprostřed
+            "{x: 200, y: 200}": uprostřed
+            "{x: 350, y: 200}": vpravo uprostřed
+            "{x: 50, y: 350}": vlevo dole
+            "{x: 200, y: 350}": uprostřed dole
+            "{x: 350, y: 350}": vpravo dole
             '"random"': náhodně
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"rotation"': rotace
             '"x"': souřadnice X
             '"y"': souřadnice Y
+            '"direction"': směr pohybu
       gamelab_setSizes:
         options:
           PROPERTY:
             '"scale"': velikost
             '"height"': výška
+      gamelab_setup:
+        text: příprava
       gamelab_spritesWhere:
         options:
           PROPERTY:
             '"scale"': velikost
             '"x"': souřadnice X
             '"y"': souřadnice Y
+            '"direction"': směr pohybu
       gamelab_spritesWhereGenerator:
         options:
           PROPERTY:
             '"scale"': velikost
             '"x"': souřadnice X
             '"y"': souřadnice Y
+            '"direction"': směr pohybu
       gamelab_turn:
         options:
           DIRECTION:
             '"right"': vpravo
             '"left"': vlevo
       gamelab_whenKey:
+        text: když {KEY} stisknuta
         options:
           KEY:
             '"up"': nahoru
@@ -226,6 +546,10 @@ cs:
             '"left"': vlevo
             '"right"': vpravo
             '"space"': vesmír
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       gamelab_whenPressedAndReleased:
         options:
           DIR:
@@ -241,23 +565,36 @@ cs:
             '"left"': vlevo
             '"right"': vpravo
             '"space"': vesmír
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       Mikelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"rotation"': rotace
             '"x"': souřadnice X
             '"y"': souřadnice Y
+            '"direction"': směr pohybu
       Mikelab_createNewSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": vlevo
             "{x: 300, y: 200}": vpravo
+            "{x: 200, y: 200}": uprostřed
+            "{x: 100, y: 100}": vlevo nahoře
+            "{x: 300, y: 100}": vpravo nahoře
+            "{x: 100, y: 300}": vlevo dole
+            "{x: 300, y: 300}": vpravo dole
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"rotation"': rotace
             '"x"': souřadnice X
             '"y"': souřadnice Y
+            '"direction"': směr pohybu
       Mikelab_randomColor:
         text: náhodná barva
       Mikelab_setBG:
@@ -268,14 +605,17 @@ cs:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"rotation"': rotace
             '"x"': souřadnice X
             '"y"': souřadnice Y
+            '"direction"': směr pohybu
       Mikelab_showScoreboard:
         options:
           CORNER:
             '"right"': vpravo
             '"left"': vlevo
       Mikelab_whenKeyPressed:
+        text: když {KEY} stisknuta
         options:
           KEY:
             '"up"': šipka nahoru
@@ -310,32 +650,109 @@ cs:
         text: otočit vlevo
       RyanLab_turnRight:
         text: otočit vpravo
+      Vector_positionCenter:
+        text: uprostřed
       aalab_changeGroupPropBy:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"rotation"': rotace
             '"x"': souřadnice X
             '"y"': souřadnice Y
+            '"direction"': směr pohybu
       aalab_spritesWhere:
         options:
           PROPERTY:
             '"scale"': velikost
             '"x"': souřadnice X
             '"y"': souřadnice Y
+            '"direction"': směr pohybu
       craft_ifPath:
+        text: |-
+          pokud je cesta {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": před sebe
+            "'right'": doprava
+            "'left'": doleva
       craft_ifStandingOn:
+        text: |-
+          pokud stojíš na {TYPE}
+          {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": modrý korál
+            "'redCoralBlock'": červený korál
             "'sand'": písek
+            "'wool_blue'": hluboké vody
             "'planksOak'": dubová prkna
+            "'seaLantern'": mořská lucerna
       craft_ifStandingOnLimit:
+        text: |-
+          pokud stojíš na {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": písek
+            "'darkPrismarine'": tmavý prismarin
+            "'seaLantern'": mořská lucerna
       craft_moveForward:
         text: posunout vpřed
+      craft_placeBlock:
+        text: polož {blockType}
+        options:
+          blockType:
+            '"strippedOak"': ohoblovaný dub
+            '"strippedDarkOak"': ohoblovaný tmavý dub
+            '"stoneBricks"': kamenné cihly
+            '"mossyStoneBricks"': mechové kamenné cihly
+            '"crackedStoneBricks"': popraskané kamenné cihly
+            '"decorativeStoneBricks"': ozdobné kamenné cihly
+            '"blueCoralBlock"': blok modrého korálu
+            '"pinkCoralBlock"': blok růžového korálu
+            '"magentaCoralBlock"': blok purpurového korálu
+            '"redCoralBlock"': blok červeného korálu
+            '"yellowCoralBlock"': blok žlutého korálu
+            '"blueDeadCoralBlock"': blok mrtvého modrého korálu
+            '"pinkDeadCoralBlock"': blok mrtvého růžového korálu
+            '"magentaDeadCoralBlock"': blok mrtvého purpurového korálu
+            '"readDeadCoralBlock"': blok mrtvého červeného korálu
+            '"yellowDeadCoralBlock"': blok mrtvého žlutého korálu
+            '"prismarine"': prismarin
+            '"darkPrismarine"': tmavý prismarin
+            '"seaLantern"': mořská lucerna
+            '"packedIce"': balený led
+            '"blueIce"': modrý led
+            '"blackConcrete"': černý beton
+            '"seaGrass"': mořská tráva
+            '"kelp"': řasy
+            '"polishedGranite"': leštěná žula
+      craft_placePrismarine:
+        text: polož prismarin
       craft_placeTorch:
         text: umísti pochodeň
+      craft_repeatUntilConduit:
+        text: |-
+          opakuj do dokončení potrubí
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          opakuj do cíle
+          {STATEMENT}
+      craft_spawnEntity:
+        text: stvoř {ENTITY}
+        options:
+          ENTITY:
+            '"cod"': treska
+            '"dolphin"': delfín
+            '"salmon"': losos
+            '"seaTurtle"': mořská želva
+            '"squid"': oliheň
+            '"tropicalFish"': tropická ryba
+      craft_turn:
+        text: otoč {DIR}
+        options:
+          DIR:
+            right: doprava ↻
+            left: doleva ↺

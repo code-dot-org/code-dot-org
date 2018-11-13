@@ -338,6 +338,7 @@ nl:
       playlab: Speel Lab
       minecraft: Minecraft
       flappy: Flappy
+      dance: Dansfeest
     popup:
       progress_for_user: "%{name} de vooruitgang"
       progress: Jouw voortgang
@@ -608,6 +609,8 @@ nl:
         werken, en deel je app dan in een paar seconden.
       audience: Leeftijd 13+
       cta: Leer hoe
+    dance:
+      title: Dansfeest
     hoc:
       title: Klassiek doolhof
       body: Probeer de beginselen van de informatica. Miljoenen gingen je voor!

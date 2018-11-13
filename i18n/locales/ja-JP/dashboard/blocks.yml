@@ -48,17 +48,11 @@ ja:
             '"DOG"': 全ての犬
             '"PINEAPPLE"': 全てのパイナップル
             '"ROBOT"': 全てのロボット
-          MOVE:
-            '"next"': "(次へ)"
-            '"prev"': "(前へ)"
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': "(次へ)"
-            '"prev"': "(前へ)"
           DIR:
             '1': "→"
             "-1": "←"
@@ -71,6 +65,14 @@ ja:
           PROPERTY:
             '"scale"': おおきさ
             '"height"': 高さ
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': 秒
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': 秒
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -112,12 +114,37 @@ ja:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"random"': ランダム に
       Dancelab_randomColor:
         text: てきとうな色
       Dancelab_setDanceSpeed:
         options:
+          SPEED:
+            '1': ノーマル
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: すべて
+            '"BEAR"': 全ての熊
+            '"CAT"': 全ての猫
+            '"DOG"': 全ての犬
+            '"PINEAPPLE"': 全てのパイナップル
+            '"ROBOT"': 全てのロボット
           SPEED:
             '1': ノーマル
             '2': fast
@@ -146,10 +173,24 @@ ja:
           PROPERTY:
             '"scale"': おおきさ
             '"height"': 高さ
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: すべて
+            '"BEAR"': 全ての熊
+            '"CAT"': 全ての猫
+            '"DOG"': 全ての犬
+            '"PINEAPPLE"': 全てのパイナップル
+            '"ROBOT"': 全てのロボット
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: すべて
+            '"BEAR"': 全ての熊
+            '"CAT"': 全ての猫
+            '"DOG"': 全ての犬
+            '"PINEAPPLE"': 全てのパイナップル
+            '"ROBOT"': 全てのロボット
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -164,10 +205,11 @@ ja:
         options:
           KEY:
             '"up"': 上 に
-            '"down"': 下 に
             '"left"': 左 に
+            '"down"': 下 に
             '"right"': 右 に
             '"space"': うちゅう
+            '"x"': x
       gamelab_changeColorBy:
         options:
           METHOD:
@@ -354,8 +396,8 @@ ja:
           {STATEMENT}
         options:
           TYPE:
-            "'blueCoralBlock'": 青いサンゴ
-            "'redCoralBlock'": 赤いサンゴ
+            "'blueCoralBlock'": 青色のサンゴ
+            "'redCoralBlock'": 赤色のサンゴ
             "'sand'": 砂
             "'wool_blue'": 水の深い所
             "'planksOak'": 樫の木の板
@@ -367,16 +409,60 @@ ja:
         options:
           TYPE:
             "'sand'": 砂
+            "'darkPrismarine'": 暗海晶ブロック
             "'seaLantern'": 海のランタン
       craft_moveForward:
         text: 前に すすむ
       craft_placeBlock:
+        text: "{blockType}を置く"
         options:
           blockType:
+            '"strippedOak"': 樹皮を剥いだオーク
+            '"strippedDarkOak"': 樹皮を剥いだダークオーク
+            '"stoneBricks"': 石レンガ
+            '"mossyStoneBricks"': 苔石レンガ
+            '"crackedStoneBricks"': ひびの入った石レンガ
+            '"decorativeStoneBricks"': 模様入り石レンガ
+            '"blueCoralBlock"': 青色のサンゴブロック
+            '"pinkCoralBlock"': 桃色のサンゴブロック
+            '"magentaCoralBlock"': 赤紫色のサンゴブロック
+            '"redCoralBlock"': 赤色のサンゴブロック
+            '"yellowCoralBlock"': 黄色のサンゴブロック
+            '"blueDeadCoralBlock"': 青色の死んだサンゴブロック
+            '"pinkDeadCoralBlock"': 桃色の死んだサンゴブロック
+            '"magentaDeadCoralBlock"': 赤紫色の死んだサンゴブロック
+            '"readDeadCoralBlock"': 赤色の死んだサンゴブロック
+            '"yellowDeadCoralBlock"': 黄色の死んだサンゴブロック
+            '"prismarine"': 海晶ブロック
+            '"darkPrismarine"': 暗海晶ブロック
             '"seaLantern"': 海のランタン
+            '"packedIce"': 氷塊
+            '"blueIce"': 青氷
+            '"blackConcrete"': 黒色のコンクリート
+            '"seaGrass"': 海草
+            '"kelp"': コンブ
+            '"polishedGranite"': 花崗岩
+      craft_placePrismarine:
+        text: 海晶ブロックを置く
       craft_placeTorch:
         text: 松明を置く
       craft_repeatUntilGoal:
         text: |-
           ゴールまでリピート
           {STATEMENT}
+      craft_spawnEntity:
+        text: "{ENTITY}を産む"
+        options:
+          ENTITY:
+            '"cod"': タラ
+            '"dolphin"': イルカ
+            '"salmon"': サケ
+            '"seaTurtle"': ウミガメ
+            '"squid"': イカ
+            '"tropicalFish"': 熱帯魚
+      craft_turn:
+        text: "{DIR}を向く"
+        options:
+          DIR:
+            right: 右↻
+            left: 左↺

@@ -225,6 +225,19 @@ es-MX:
       CourseF_PlayLab_vars10_callout:
         Course_4_Play_Lab_Vars_9_1: "¡Todos tus bloques están organizados en categorías!
           Haz click en la etiqueta para ver las piezas dentro."
+      Dance_Party_01_callout:
+        dance_callout_01: "¡Añade este bloque a tu programa!"
+      Dance_Party_01_low_callout:
+        dance_callout_01: "¡Añade este bloque a tu programa!"
+      Dance_Party_02_callout:
+        dance_callout_02: "¡Añade este bloque a tu programa!"
+      Dance_Party_04_callout:
+        dance_callout_04: "¡Añade este bloque a tu programa!"
+      Dance_Party_06_callout:
+        dance_callout_06: Añade tu nuevo bailarín aquí
+      Dance_Party_11_callout:
+        dance_callout_11_a: "¡Bloque nuevo!"
+        dance_callout_11_b: "¡Bloque nuevo!"
       Eval Design Recipe .1_callout:
         edit_function: Haz clic aquí para editar tu función.
       Frozen Project Test Toolbox_callout:

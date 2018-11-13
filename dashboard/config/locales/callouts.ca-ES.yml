@@ -62,6 +62,19 @@ ca:
         arrows_move_actor: Utilitza les fletxes per moure l'actor
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Utilitza les fletxes per moure l'actor
+      Dance_Party_01_callout:
+        dance_callout_01: Afegir aquest bloc al teu programa!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Afegir aquest bloc al teu programa!
+      Dance_Party_02_callout:
+        dance_callout_02: Afegir aquest bloc al teu programa!
+      Dance_Party_04_callout:
+        dance_callout_04: Afegir aquest bloc al teu programa!
+      Dance_Party_06_callout:
+        dance_callout_06: Afegir el teu nou dansaire aquí
+      Dance_Party_11_callout:
+        dance_callout_11_a: Nou bloc!
+        dance_callout_11_b: Nou bloc!
       Eval Design Recipe .1_callout:
         edit_function: Fes clic aquí per editar la teva funció.
       Frozen Project Test Toolbox_callout:

@@ -3534,10 +3534,7 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
         dance:
-          title: '[șir gol]'
           description_audience: '[șir gol]'
-          description_short: '[șir gol]'
-          description: '[șir gol]'
         frozen-2018-test-b:
           description: '[șir gol]'
           description_short: '[șir gol]'
@@ -3642,3 +3639,6 @@ ro:
             Pet Giraffe with Sprite Lab:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+        dance-low:
+          description_audience: '[șir gol]'
+          description: '[șir gol]'

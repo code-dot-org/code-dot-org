@@ -3561,80 +3561,203 @@ es-MX:
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
       Dance short test 2_authored_hint:
         validation: |-
-          ** ¿Cómo paso este nivel? **
+          **¿Cómo paso este nivel?**
 
-          * necesita hacer el efecto de cambio de fondo en algún momento la séptima medida de la canción.
+          * Necesitas cambiar el efecto de fondo en algún momento de la séptima medida de la canción.
 
-          * este nivel termina después de 10 medidas.*
+          *Este nivel termina después de 10 medidas.*
+        challenges: |-
+          **Reto Opcional**
+
+          Cambia el efecto de fondo en diferentes puntos durante la canción conectando el nuevo bloque en <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> eventos.
       Dance short test_authored_hint:
         validation: |-
-          ** ¿Cómo paso este nivel? **
+          **¿Cómo paso este nivel?**
 
-          * necesita hacer el efecto de cambio de fondo en algún momento la séptima medida de la canción.
+          * Necesitas cambiar el efecto de fondo en algún momento de la séptima medida de la canción.
 
-          * este nivel termina después de 10 medidas.*
+          *Este nivel termina después de 10 medidas.*
+        challenges: |-
+          **Reto Opcional**
+
+          Cambia el efecto de fondo en diferentes puntos durante la canción conectando el nuevo bloque en <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> eventos.
       Dance_Party_01_authored_hint:
         validation: |-
-          **Comó paso esto nivel?**
-          *Asegurarse una bailarin aparece en la pantalla.
+          **¿Cómo paso este nivel?**
+          * Asegúrate de que un bailarín aparece en la pantalla.
 
-          *Esto nivel termina despues de cuatro medidas.*
+          *Este nivel termina después de 4 medidas.*
         challenges: |-
-          ** Retos opcionales**
-          * elegir una canción diferente para jugar.
-          * elegir otra que parece un alce!
-          * cambiar el nombre de su bailarín.
+          **Retos Opcionales**
+          * Elige una canción diferente para jugar.
+          * ¡Elige uno distinto que parezca un alce!
+          * Cambia el nombre de tu bailarín.
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+          * Asegúrate de que un bailarín aparece en la pantalla.
+
+          *Este nivel termina después de 4 medidas.*
+        challenges: |-
+          **Retos Opcionales**
+          * Elige una canción diferente para jugar.
+          * ¡Elige uno distinto que parezca un alce!
+          * Cambia el nombre de tu bailarín.
       Dance_Party_02_authored_hint:
         validation: |-
-          ** ¿Cómo paso este nivel? **
-          * el bailarín necesita cambiar a un nuevo movimiento después de 4 medidas.
+          **¿Cómo paso este nivel?**
+          * El bailarín necesita cambiar a un nuevo movimiento después de 4 medidas.
 
-          * termina el nivel después de 8 medidas.*
+          *Este nivel termina después de 8 medidas.*
       Dance_Party_03_authored_hint:
         validation: |-
-          ** ¿Cómo paso este nivel? **
+          **¿Cómo paso este nivel?**
 
-          * después de 6 medidas, el bailarín necesita estar haciendo un baile diferente de lo que era después de 4 medidas.
+          * Después de 6 medidas, su bailarín necesita estar haciendo un baile distinto después de 4 medidas.
 
-          * termina el nivel después de 12 medidas.*
+          *Este nivel termina después de 12 medidas.*
       Dance_Party_04_authored_hint:
         validation: |-
-          ** ¿Cómo paso este nivel? **
+          **¿Cómo paso este nivel?**
 
-          * necesita hacer el efecto de cambio de fondo en algún momento la séptima medida de la canción.
+          * Necesitas cambiar el efecto de fondo en algún momento de la séptima medida de la canción.
 
-          * este nivel termina después de 10 medidas.*
+          *Este nivel termina después de 10 medidas.*
+        challenges: |-
+          **Reto Opcional**
+
+          Cambia el efecto de fondo en diferentes puntos durante la canción conectando el nuevo bloque en <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> eventos.
+      Dance_Party_05_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Tu baile debe tener movimientos diferentes a lo largo de las 12 primeras medidas de la canción.
+
+          *Este nivel termina después de 12 medidas.*
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Necesitarás tener al menos dos bailarines.
+
+          *Este nivel termina después de 6 medidas.*
+        challenges: |-
+          **Reto Opcional**
+
+          * Añadir un tercer bailarín (o tantos como quieras)
+          * Haz que todos tus bailarines realicen diferentes movimientos en diferentes puntos de la canción.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Dos bailarines deben tener un tamaño diferente a 100.
+
+          *Este nivel termina después de 6 medidas.*
+        challenges: |-
+          **Reto Opcional**
+
+          * Experimenta cambiando otras propiedades (ancho, altura, rotación, etcétera.)
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Cambiar el color de al menos un bailarín
+
+          *Este nivel termina después de 8 medidas.*
       Dance_Party_1_authored_hint:
         validation: |-
-          **Comó paso esto nivel?**
-          *Asegurarse una bailarin aparece en la pantalla.
+          **¿Cómo paso este nivel?**
+          * Asegúrate de que un bailarín aparece en la pantalla.
 
-          *Esto nivel termina despues de cuatro medidas.*
+          *Este nivel termina después de 4 medidas.*
         challenges: |-
-          ** Retos opcionales**
-          * elegir una canción diferente para jugar.
-          * elegir otra que parece un alce!
-          * cambiar el nombre de su bailarín.
+          **Retos Opcionales**
+          * Elige una canción diferente para jugar.
+          * ¡Elige uno distinto que parezca un alce!
+          * Cambia el nombre de tu bailarín.
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Las propiedades de dos o más bailarines deben cambiar.
+
+          *Este nivel termina después de 8 medidas.*
+      Dance_Party_11.5_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * ¡Se creativo!
+
+          *Este nivel termina después de 8 medidas.*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * ¡Se creativo!
+
+          *Este nivel termina después de 8 medidas.*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Utiliza el bloque 'cuando presiona la flecha izquierda' para hacer que el Robot haga un movimiento de baile cuando lo pulses.
+
+          *Este nivel termina después de 8 medidas.*
       Dance_Party_2_authored_hint:
         validation: |-
-          ** ¿Cómo paso este nivel? **
-          * el bailarín necesita cambiar a un nuevo movimiento después de 4 medidas.
+          **¿Cómo paso este nivel?**
+          * El bailarín necesita cambiar a un nuevo movimiento después de 4 medidas.
 
-          * termina el nivel después de 8 medidas.*
+          *Este nivel termina después de 8 medidas.*
       Dance_Party_3_authored_hint:
         validation: |-
-          ** ¿Cómo paso este nivel? **
+          **¿Cómo paso este nivel?**
 
-          * después de 6 medidas, el bailarín necesita estar haciendo un baile diferente de lo que era después de 4 medidas.
+          * Después de 6 medidas, su bailarín necesita estar haciendo un baile distinto después de 4 medidas.
 
-          * termina el nivel después de 12 medidas.*
+          *Este nivel termina después de 12 medidas.*
       Dance_Party_4_authored_hint:
         validation: |-
-          ** ¿Cómo paso este nivel? **
+          **¿Cómo paso este nivel?**
 
-          * necesita hacer el efecto de cambio de fondo en algún momento la séptima medida de la canción.
+          * Necesitas cambiar el efecto de fondo en algún momento de la séptima medida de la canción.
 
-          * este nivel termina después de 10 medidas.*
+          *Este nivel termina después de 10 medidas.*
+        challenges: |-
+          **Reto Opcional**
+
+          Cambia el efecto de fondo en diferentes puntos durante la canción conectando el nuevo bloque en <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> eventos.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Tu baile debe tener movimientos diferentes a lo largo de las 12 primeras medidas de la canción.
+
+          *Este nivel termina después de 12 medidas.*
+      Dance_Party_6_authored_hint:
+        challenges: |-
+          **Reto Opcional**
+
+          * Añadir un tercer bailarín (o tantos como quieras)
+          * Haz que todos tus bailarines realicen diferentes movimientos en diferentes puntos de la canción.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Dos bailarines deben tener un tamaño diferente a 100.
+
+          *Este nivel termina después de 6 medidas.*
+        challenges: |-
+          **Reto Opcional**
+
+          * Experimenta cambiando otras propiedades (ancho, altura, rotación, etcétera.)
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Cambiar el color de al menos un bailarín
+
+          *Este nivel termina después de 8 medidas.*
       Farmer for Authored Hint testing_authored_hint:
         first_hint: Esta es la primera pista. Tiene * algo de * ** basic ** `margen
         second_hint: Esta es la segunda pista . Tiene una imagen . ! [] (https://images.code.org/cab43107265a683a6216e18faab2353f-
@@ -3658,41 +3781,100 @@ es-MX:
       HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: "¿Ves las **linternas marinas** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           ¿Qué condicional usarías con ellas para atravesar el monumento oceánico?\n\n"
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: Mund ta përdorësh bllokun e shtegut Nëse, për të ndihmuar veten
+          që të marrësh kthesat e duhura.
       HOC 2018 Level_9b_authored_hint:
         voyage_aquatic_9a: "¡Qué hermoso arrecife de coral! El coral azul será tu
           mano **derecha** en este viaje. ¡No te fíes de la **siniestra** presencia
           del coral rojo!"
       HOC Dance 0_draft_authored_hint:
         validation: |-
-          **Comó paso esto nivel?**
-          *Asegurarse una bailarin aparece en la pantalla.
+          **¿Cómo paso este nivel?**
+          * Asegúrate de que un bailarín aparece en la pantalla.
 
-          *Esto nivel termina despues de cuatro medidas.*
+          *Este nivel termina después de 4 medidas.*
         challenges: |-
-          ** Retos opcionales**
-          * elegir una canción diferente para jugar.
-          * elegir otra que parece un alce!
-          * cambiar el nombre de su bailarín.
+          **Retos Opcionales**
+          * Elige una canción diferente para jugar.
+          * ¡Elige uno distinto que parezca un alce!
+          * Cambia el nombre de tu bailarín.
       HOC Dance 1_draft_authored_hint:
         validation: |-
-          ** ¿Cómo paso este nivel? **
-          * el bailarín necesita cambiar a un nuevo movimiento después de 4 medidas.
+          **¿Cómo paso este nivel?**
+          * El bailarín necesita cambiar a un nuevo movimiento después de 4 medidas.
 
-          * termina el nivel después de 8 medidas.*
+          *Este nivel termina después de 8 medidas.*
       HOC Dance 2_draft_authored_hint:
         validation: |-
-          ** ¿Cómo paso este nivel? **
+          **¿Cómo paso este nivel?**
 
-          * después de 6 medidas, el bailarín necesita estar haciendo un baile diferente de lo que era después de 4 medidas.
+          * Después de 6 medidas, su bailarín necesita estar haciendo un baile distinto después de 4 medidas.
 
-          * termina el nivel después de 12 medidas.*
+          *Este nivel termina después de 12 medidas.*
       HOC Dance 3_draft_authored_hint:
         validation: |-
-          ** ¿Cómo paso este nivel? **
+          **¿Cómo paso este nivel?**
 
-          * necesita hacer el efecto de cambio de fondo en algún momento la séptima medida de la canción.
+          * Necesitas cambiar el efecto de fondo en algún momento de la séptima medida de la canción.
 
-          * este nivel termina después de 10 medidas.*
+          *Este nivel termina después de 10 medidas.*
+        challenges: |-
+          **Reto Opcional**
+
+          Cambia el efecto de fondo en diferentes puntos durante la canción conectando el nuevo bloque en <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> eventos.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Tu baile debe tener movimientos diferentes a lo largo de las 12 primeras medidas de la canción.
+
+          *Este nivel termina después de 12 medidas.*
+      HOC Dance 5_draft_authored_hint:
+        challenges: |-
+          **Reto Opcional**
+
+          * Añadir un tercer bailarín (o tantos como quieras)
+          * Haz que todos tus bailarines realicen diferentes movimientos en diferentes puntos de la canción.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Dos bailarines deben tener un tamaño diferente a 100.
+
+          *Este nivel termina después de 6 medidas.*
+        challenges: |-
+          **Reto Opcional**
+
+          * Experimenta cambiando otras propiedades (ancho, altura, rotación, etcétera.)
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Cambiar el color de al menos un bailarín
+
+          *Este nivel termina después de 8 medidas.*
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Las propiedades de dos o más bailarines deben cambiar.
+
+          *Este nivel termina después de 8 medidas.*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * ¡Se creativo!
+
+          *Este nivel termina después de 8 medidas.*
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * ¡Se creativo!
+
+          *Este nivel termina después de 8 medidas.*
       Harvesting_authored_hint:
         pointer_harvester_test: "¿Qué tipo de bloque puedo usar para verificar algo
           y tomar una decisión?"

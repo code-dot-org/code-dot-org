@@ -339,6 +339,7 @@ fr:
       playlab: 'Labo de jeux'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
+      dance: 'Fête dansante'
     popup:
       progress_for_user: "progrès de %{name}"
       progress: 'Ton progrès'
@@ -502,7 +503,7 @@ fr:
   footer:
     thank_you: 'Nous remercions nos <a href="https://code.org/about/donors"> donateurs</a>, <a href="https://code.org/about/partners"> partenaires</a>, notre <a href="https://code.org/about/team"> équipe étendue</a>, notre casting vidéo et nos <a href="https://code.org/about/advisors"> conseillers d''éducation</a> pour leur soutien à la création de Code Studio.'
     help_from_html: 'Nous tenons particulièrement à remercier les ingénieurs de Google, Microsoft, Facebook, Twitter et beaucoup d''autres organismes qui ont contribué à créer ce matériel.'
-    help_from_html_old: 'Les ingénieurs de Google, Microsoft, Facebook et Twitter ont contribué à créer ce matériel.'
+    help_from_html_old: 'Les ingénieurs de Google, Microsoft, Facebook et Twitter ont contribué à créer ces matériels.'
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. <br />Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm. Tous droits réservés.<br />La reine des neiges&#8482; &copy; %{current_year} Disney. Tous droits réservés. <br /> L’âge de glace&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. <br /> Angry Bird&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. <br /> Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tous droits réservés. <br /> Le monde incroyable de Gumball est une marque commerciale et &copy; %{current_year} Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482 ; &copie ; %{current_year} Microsoft. Tous droits réservés. Star Wars&#8482 ; &copie ; %{current_year} Disney et Lucasfilm. Tous droits réservés. La reine des neiges&#8482 ; &copie ; %{current_year} Disney. Tous droits réservés. L’âge de glace&#8482 ; &copie ; %{current_year} 20th Century Fox. Tous droits réservés. Angry Bird&#8482 ; &copie ; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. Plantes vs. Zombies&#8482 ; &copie ; %{current_year} Electronic Arts Inc. Tous droits réservés. Le monde incroyable de Gumball est une marque commerciale et &copie ; 2015 Cartoon Network.'
     code_from_html: 'Code.org utilise p5.play, qui est distribué sous la licence <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
@@ -586,6 +587,8 @@ fr:
       body_short: "Concevez une application, codez à l'aide de blocs ou en JavaScript pour la faire fonctionner, puis partagez votre application en quelques secondes."
       audience: 'Âge recommandé: 13 ans et plus'
       cta: 'Apprendre comment'
+    dance:
+      title: 'Fête dansante'
     hoc:
       title: 'Labyrinthe classique'
       body: 'Essaie les fondamentaux de l''informatique. Des millions ont essayé.'

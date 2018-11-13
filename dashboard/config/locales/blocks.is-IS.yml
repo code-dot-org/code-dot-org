@@ -79,21 +79,19 @@ is:
           PROPERTY:
             '"scale"': stærð
             '"height"': hæð
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekúndur
       Dancelab_ifDanceIs:
         options:
           DANCE:
-            '0': Clap High
-            '1': Trúður
-            '2': Dab
-            '3': Double Jam
-            '4': Drop
-            '5': Floss
-            '6': Fresh
-            '7': Kick
-            '8': Ekkert
-            '9': Roll
-            '10': This or That
-            '11': Thriller
+            MOVES.Clown: Trúður
+            MOVES.Rest: Ekkert
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': sekúndur
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -133,6 +131,16 @@ is:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"random"': eitthvað
       Dancelab_randomColor:
@@ -143,6 +151,25 @@ is:
             '"none"': Ekkert
       Dancelab_setDanceSpeed:
         options:
+          SPEED:
+            '1': venjulegt
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: allt
+            '"ALIEN"': allar geimverur
+            '"BEAR"': allir birnir
+            '"CAT"': allir kettir
+            '"DOG"': allir hundar
+            '"DUCK"': allar endur
+            '"FROG"': allir froskar
+            '"MOOSE"': allir elgir
+            '"ROBOT"': öll vélmenni
+            '"SHARK"': allir hákarlar
           SPEED:
             '1': venjulegt
             '2': fast
@@ -179,10 +206,32 @@ is:
           PROPERTY:
             '"scale"': stærð
             '"height"': hæð
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: allt
+            '"ALIEN"': allar geimverur
+            '"BEAR"': allir birnir
+            '"CAT"': allir kettir
+            '"DOG"': allir hundar
+            '"DUCK"': allar endur
+            '"FROG"': allir froskar
+            '"MOOSE"': allir elgir
+            '"ROBOT"': öll vélmenni
+            '"SHARK"': allir hákarlar
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: allt
+            '"ALIEN"': allar geimverur
+            '"BEAR"': allir birnir
+            '"CAT"': allir kettir
+            '"DOG"': allir hundar
+            '"DUCK"': allar endur
+            '"FROG"': allir froskar
+            '"MOOSE"': allir elgir
+            '"ROBOT"': öll vélmenni
+            '"SHARK"': allir hákarlar
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -197,10 +246,11 @@ is:
         options:
           KEY:
             '"up"': uppi
-            '"down"': niðri
             '"left"': vinstri
+            '"down"': niðri
             '"right"': hægri
             '"space"': geimur
+            '"x"': x
       gamelab_changeColorBy:
         options:
           METHOD:
