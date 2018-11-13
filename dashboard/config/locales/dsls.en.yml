@@ -11739,6 +11739,14 @@ en:
         The harvester will pick the corn.: The harvester will pick the corn.
         The harvester will pick the lettuce.: The harvester will pick the lettuce.
         The harvester will pick two pumpkins.: The harvester will pick two pumpkins.
+      courseE_multi_farmer_functions11_predict_2018_2019:
+        Correct!: Correct!
+        Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce.: Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce.
+        Look at the functions defined below.  What will the harvester pick?: Look at the functions defined below.  What will the harvester pick?
+        The harvester will pick all of the pumpkins.: The harvester will pick all of the pumpkins.
+        The harvester will pick the corn.: The harvester will pick the corn.
+        The harvester will pick the lettuce.: The harvester will pick the lettuce.
+        The harvester will pick two pumpkins.: The harvester will pick two pumpkins.
       courseE_multi_farmer_predict1:
         Correct!: Correct!
         I don't know: I don't know
@@ -11819,6 +11827,15 @@ en:
         The artist will draw two squares with a small gap in between.: The artist will draw two squares with a small gap in between.
         What will happen when you press "Run"?: What will happen when you press "Run"?
       courseE_prediction_artistFunction1_2018:
+        Correct! The function is called two times in the program, with a jump in between.: Correct! The function is called two times in the program, with a jump in between.
+        Incorrect. The function is actually called two times in the program.: Incorrect. The function is actually called two times in the program.
+        Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.: Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.
+        Nothing. The function is not called in the program.: Nothing. The function is not called in the program.
+        The artist will draw a single square.: The artist will draw a single square.
+        The artist will draw two squares that overlap.: The artist will draw two squares that overlap.
+        The artist will draw two squares with a small gap in between.: The artist will draw two squares with a small gap in between.
+        What will happen when you press "Run"?: What will happen when you press "Run"?
+      courseE_prediction_artistFunction1_2018_2019:
         Correct! The function is called two times in the program, with a jump in between.: Correct! The function is called two times in the program, with a jump in between.
         Incorrect. The function is actually called two times in the program.: Incorrect. The function is actually called two times in the program.
         Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.: Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.
@@ -12086,6 +12103,16 @@ en:
         The artist will solve the puzzle correctly.: The artist will solve the puzzle correctly.
         What will happen when you press the "Run" button?: What will happen when you press the "Run" button?
       coursee_prediction_artistfunction2_2018:
+        Correct!: Correct!
+        Incorrect. The loop turns 90 degrees between calls to "draw polygon".: Incorrect. The loop turns 90 degrees between calls to "draw polygon".
+        Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".: Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".
+        Incorrect. The program does not call "draw line of polygons".: Incorrect. The program does not call "draw line of polygons".
+        The artist will draw four squares in a window pattern.: The artist will draw four squares in a window pattern.
+        The artist will draw four squares on top of one another.: The artist will draw four squares on top of one another.
+        The artist will draw only one line of squares.: The artist will draw only one line of squares.
+        The artist will solve the puzzle correctly.: The artist will solve the puzzle correctly.
+        What will happen when you press the "Run" button?: What will happen when you press the "Run" button?
+      coursee_prediction_artistfunction2_2018_2019:
         Correct!: Correct!
         Incorrect. The loop turns 90 degrees between calls to "draw polygon".: Incorrect. The loop turns 90 degrees between calls to "draw polygon".
         Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".: Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".
