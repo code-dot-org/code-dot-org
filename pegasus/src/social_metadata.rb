@@ -3,6 +3,7 @@
 #   csedweek.org/
 #   hourofcode.com/
 #   code.org/challenge
+#   code.org/dance
 
 def get_social_metadata_for_page(request)
   videos = {
@@ -19,7 +20,8 @@ def get_social_metadata_for_page(request)
     hoc_2018_creativity: {path: "/images/social-media/hourofcode-2018-creativity.jpg", width: 846, height: 529},
     hoc_student_challenge: {path: "/images/fit-1920/social-media/hoc-student-challenge.jpg", width: 1920, height: 1080},
     mc_social_2017: {path: "/images/mc/mc_social_2017.jpg", width: 1200, height: 630},
-    mc_social_2018: {path: "/images/social-media/mc-social-2018.jpg", width: 1200, height: 630}
+    mc_social_2018: {path: "/images/social-media/mc-social-2018.jpg", width: 1200, height: 630},
+    dance_2018: {path: "/images/social-media/dance-social.jpg", width: 511, height: 273}
   }
 
   # Important:
@@ -147,7 +149,7 @@ def get_social_metadata_for_page(request)
       "default" => {
         title: hoc_s(:social_hoc2018_dance_party),
         description: hoc_s(:social_hoc2018_dance_what_create),
-        image: images[:hoc_2018_creativity]
+        image: images[:dance_2018]
       }
     }
   }
