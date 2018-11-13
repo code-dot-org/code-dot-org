@@ -353,6 +353,12 @@ module Pd::Application
       Pd::Workshop.find_by(id: pd_workshop_id)&.date_and_location_name
     end
 
+    def friendly_scholarship_status
+      if scholarship_status
+        SCHOLARSHIP_DROPDOWN_OPTIONS.find {|option| option[:value] == scholarship_status}[:label]
+      end
+    end
+
     # memoize in a hash, per course
     FILTERED_LABELS = Hash.new do |h, key|
       labels_to_remove = (
@@ -509,7 +515,10 @@ module Pd::Application
       # Section 2
       if course == 'csd'
         meets_minimum_criteria_scores[:csd_which_grades] = (responses[:csd_which_grades] & options[:csd_which_grades].first(5)).any? ? YES : NO
+
         meets_minimum_criteria_scores[:cs_total_course_hours] = responses[:cs_total_course_hours].to_i >= 50 ? YES : NO
+
+        bonus_points_scores[:cs_terms] = responses[:cs_terms] == options[:cs_terms][4] ? 2 : 0
       elsif course == 'csp'
         meets_minimum_criteria_scores[:csp_which_grades] = (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
         meets_minimum_criteria_scores[:cs_total_course_hours] = (responses[:cs_total_course_hours]&.>= 100) ? YES : NO
@@ -551,6 +560,7 @@ module Pd::Application
 
         if course == 'csd'
           meets_minimum_criteria_scores[:principal_implementation] = responses[:principal_implementation].in?(principal_options[:csd_implementation].first(2)) ? YES : NO
+          bonus_points_scores[:principal_implementation] = responses[:principal_implementation] == principal_options[:csd_implementation][1] ? 2 : 0
         elsif course == 'csp'
           meets_minimum_criteria_scores[:principal_implementation] = responses[:principal_implementation] == principal_options[:csp_implementation].first ? YES : NO
         end

@@ -76,7 +76,8 @@
       "comment_Math": null,
       "comment_Control": null,
       "console.log": null,
-      "stopSound": null
+      "stopSound": null,
+      "mousePressedOver": null
     },
     "edit_code": true,
     "embed": "false",
@@ -114,10 +115,17 @@
     "pause_animations_by_default": "false",
     "parent_level_id": 4973,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "preload_asset_list": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-11-07 18:35:53 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

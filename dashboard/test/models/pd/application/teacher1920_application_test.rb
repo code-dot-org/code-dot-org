@@ -394,12 +394,12 @@ module Pd::Application
       csv_header_csd = CSV.parse(Teacher1920Application.csv_header('csd'))[0]
       assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?"
       refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the 2019-20 school year?"
-      assert_equal 101, csv_header_csd.length
+      assert_equal 102, csv_header_csd.length
 
       csv_header_csp = CSV.parse(Teacher1920Application.csv_header('csp'))[0]
       refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?"
       assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the 2019-20 school year?"
-      assert_equal 103, csv_header_csp.length
+      assert_equal 104, csv_header_csp.length
     end
 
     test 'school cache' do
@@ -640,7 +640,7 @@ module Pd::Application
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csd],
         csd_which_grades: ['6'],
         cs_total_course_hours: 50,
-        cs_terms: '1 semester',
+        cs_terms: 'A full year',
         previous_yearlong_cdo_pd: ['CS Principles'],
         plan_to_teach: options[:plan_to_teach].first,
         replace_existing: options[:replace_existing].second,
@@ -655,7 +655,7 @@ module Pd::Application
         principal_diversity_recruitment: principal_options[:committed_to_diversity].first,
         principal_free_lunch_percent: 50,
         principal_underrepresented_minority_percent: 50,
-        principal_implementation: principal_options[:csd_implementation].first
+        principal_implementation: principal_options[:csd_implementation].second
 
       application = create :pd_teacher1920_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
       application.auto_score!
@@ -684,7 +684,9 @@ module Pd::Application
             taught_in_past: 2,
             race: 2,
             free_lunch_percent: 5,
-            underrepresented_minority_percent: 5
+            underrepresented_minority_percent: 5,
+            principal_implementation: 2,
+            cs_terms: 2
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -850,7 +852,9 @@ module Pd::Application
             taught_in_past: 0,
             race: 0,
             free_lunch_percent: 0,
-            underrepresented_minority_percent: 0
+            underrepresented_minority_percent: 0,
+            cs_terms: 0,
+            principal_implementation: 0
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -993,6 +997,18 @@ module Pd::Application
         application.status = status
         assert application.valid?
       end
+    end
+
+    test 'test scholarship statuses' do
+      application = create :pd_teacher1920_application
+      assert_nil application.scholarship_status
+
+      application.scholarship_status = 'no'
+      application.save
+      assert_equal 'no', application.scholarship_status
+
+      application.scholarship_status = 'invalid status'
+      refute application.save
     end
 
     private

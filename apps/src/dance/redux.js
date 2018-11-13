@@ -3,6 +3,7 @@
 /** @enum {string} */
 export const SET_SELECTED_SONG = 'dance/SET_SELECTED_SONG';
 export const SET_SONG_DATA = 'dance/SET_SONG_DATA';
+export const SET_RUN_IS_STARTING = 'dance/SET_RUN_IS_STARTING';
 
 export function setSelectedSong(song) {
   return {
@@ -15,6 +16,13 @@ export function setSongData(songData) {
   return {
     type: SET_SONG_DATA,
     songData
+  };
+}
+
+export function setRunIsStarting(runIsStarting) {
+  return {
+    type: SET_RUN_IS_STARTING,
+    runIsStarting
   };
 }
 
@@ -41,6 +49,11 @@ function songs(state, action) {
       return {
         ...state,
         songData: action.songData,
+      };
+    case SET_RUN_IS_STARTING:
+      return {
+        ...state,
+        runIsStarting: action.runIsStarting
       };
     default:
       return state;

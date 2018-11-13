@@ -11,12 +11,12 @@ import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import {DanceParty} from '@code-dot-org/dance-party';
 import danceMsg from './locale';
-import {reducers, setSelectedSong, setSongData} from './redux';
+import {reducers, setSelectedSong, setSongData, setRunIsStarting} from './redux';
 import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
-import SignInOrAgeDialog from "../templates/SignInOrAgeDialog";
+import {setThumbnailBlobFromCanvas} from '../util/thumbnail';
 import project from "../code-studio/initApp/project";
 import {
   getSongManifest,
@@ -25,6 +25,7 @@ import {
   loadSongMetadata,
   parseSongOptions,
   unloadSong,
+  fetchSignedCookies,
 } from './songs';
 
 const ButtonState = {
@@ -51,6 +52,17 @@ var Dance = function () {
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
+
+  this.performanceData_ = {
+    // Time until Blockly is interactable
+    timeToInteractive: null,
+    // Time until Dance Party play() can be called (sprites and song metadata loaded)
+    timeToPlayable: null,
+    // Time the run button was last clicked
+    lastRunButtonClick: null,
+    // Time between last run click and last time the song actually started playing
+    lastRunButtonDelay: null,
+  };
 };
 
 module.exports = Dance;
@@ -82,9 +94,7 @@ Dance.prototype.init = function (config) {
   this.danceReadyPromise = new Promise(resolve => {
     this.danceReadyPromiseResolve = resolve;
   });
-
   this.studioApp_.labUserId = config.labUserId;
-
   this.level.softButtons = this.level.softButtons || {};
 
   config.afterClearPuzzle = function () {
@@ -117,22 +127,37 @@ Dance.prototype.init = function (config) {
 
   this.initSongsPromise = this.initSongs(config);
 
+  this.awaitTimingMetrics();
+
   ReactDOM.render((
     <Provider store={getStore()}>
-      <div>
-        <SignInOrAgeDialog useDancePartyStyle={true}/>
-        <AppView
-          visualizationColumn={
-            <DanceVisualizationColumn
-              showFinishButton={showFinishButton}
-              setSong={this.setSongCallback.bind(this)}
-            />
-          }
-          onMount={onMount}
-        />
-      </div>
+      <AppView
+        visualizationColumn={
+          <DanceVisualizationColumn
+            showFinishButton={showFinishButton}
+            setSong={this.setSongCallback.bind(this)}
+          />
+        }
+        onMount={onMount}
+      />
     </Provider>
   ), document.getElementById(config.containerId));
+};
+
+/**
+ * Fire-and-forget asynchronous waits to update timing metrics.
+ */
+Dance.prototype.awaitTimingMetrics = function () {
+  $(document).one('appInitialized', () => {
+    this.performanceData_.timeToInteractive = performance.now();
+  });
+
+  this.danceReadyPromise
+    .then(() => this.initSongsPromise)
+    .then(() => this.songMetadataPromise)
+    .then(() => {
+      this.performanceData_.timeToPlayable = performance.now();
+    });
 };
 
 Dance.prototype.initSongs = async function (config) {
@@ -159,7 +184,12 @@ Dance.prototype.setSongCallback = function (songId) {
   getStore().dispatch(setSelectedSong(songId));
 
   unloadSong(lastSongId, songData);
-  loadSong(songId, songData);
+  loadSong(songId, songData, status => {
+    if (status === 403) {
+      // The cloudfront signed cookies may have expired.
+      fetchSignedCookies().then(() => loadSong(songId, songData));
+    }
+  });
 
   this.updateSongMetadata(songId);
 
@@ -280,8 +310,17 @@ Dance.prototype.afterInject_ = function () {
     container: 'divDance',
     i18n: danceMsg,
   });
-  /** Expose for testing **/
-  window.__DanceTestInterface = this.nativeAPI.getTestInterface();
+
+  // Expose an interface for testing
+  // Composes the nativeAPI getPerformanceData with our own performance data.
+  const nativeAPITestInterface = this.nativeAPI.getTestInterface();
+  window.__DanceTestInterface = {
+    ...nativeAPITestInterface,
+    getPerformanceData: () => ({
+      ...nativeAPITestInterface.getPerformanceData(),
+      ...this.performanceData_
+    })
+  };
 
   if (recordReplayLog) {
     getStore().dispatch(saveReplayLog(this.nativeAPI.getReplayLog()));
@@ -373,16 +412,20 @@ Dance.prototype.runButtonClick = async function () {
   // Block re-entrancy since starting a run is async
   // (not strictly needed since we disable the run button,
   // but better to be safe)
-  if (this.runIsStarting) {
+  if (getStore().getState().songs.runIsStarting) {
     return;
   }
+
+  this.performanceData_.lastRunButtonClick = performance.now();
+  this.performanceData_.lastRunButtonDelay = null;
+
   // Disable the run button now to give some visual feedback
   // that the button was pressed. toggleRunReset() will
   // eventually execute down below, but there are some long-running
   // tasks that need to complete first
   const runButton = document.getElementById('runButton');
   runButton.disabled = true;
-  this.runIsStarting = true;
+  getStore().dispatch(setRunIsStarting(true));
   await this.danceReadyPromise;
 
   //Log song count in Dance Lab
@@ -390,11 +433,14 @@ Dance.prototype.runButtonClick = async function () {
 
   Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;
-  await this.execute();
 
-  this.studioApp_.toggleRunReset('reset');
-  // Safe to allow normal run/reset behavior now
-  this.runIsStarting = false;
+  try {
+    await this.execute();
+  } finally {
+    this.studioApp_.toggleRunReset('reset');
+    // Safe to allow normal run/reset behavior now
+    getStore().dispatch(setRunIsStarting(false));
+  }
 
   // Enable the Finish button if is present:
   const shareCell = document.getElementById('share-cell');
@@ -431,9 +477,11 @@ Dance.prototype.execute = async function () {
   await this.initSongsPromise;
 
   const songMetadata = await this.songMetadataPromise;
-  return new Promise(resolve => {
-    this.nativeAPI.play(songMetadata, () => {
-      resolve();
+  return new Promise((resolve, reject)=> {
+    this.nativeAPI.play(songMetadata, success => {
+      this.performanceData_.lastRunButtonDelay =
+        performance.now() - this.performanceData_.lastRunButtonClick;
+      success ? resolve() : reject();
     });
   });
 };
@@ -560,6 +608,7 @@ Dance.prototype.updateSongMetadata = function (id) {
  */
 Dance.prototype.onHandleEvents = function (currentFrameEvents) {
   this.hooks.find(v => v.name === 'runUserEvents').func(currentFrameEvents);
+  this.captureThumbnailImage();
 };
 
 /**
@@ -584,4 +633,13 @@ Dance.prototype.displayFeedback_ = function () {
 
 Dance.prototype.getAppReducers = function () {
   return reducers;
+};
+
+/**
+ * Capture a thumbnail image of the play space. This will capture a PNG blob
+ * of the thumbnail in memory, then will save that blob to S3 when the project
+ * is saved.
+ */
+Dance.prototype.captureThumbnailImage = function () {
+  setThumbnailBlobFromCanvas(document.getElementById('defaultCanvas0'));
 };

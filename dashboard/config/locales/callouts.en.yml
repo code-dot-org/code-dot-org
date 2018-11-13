@@ -572,7 +572,10 @@ en:
       CourseF_PlayLab_vars8_callout: {}
       Dance short test 2_callout: {}
       Dance short test_callout: {}
+      Dance_Events_Example_Video_callout: {}
       Dance_Party_01_callout:
+        dance_callout_01: Add this block to your program!
+      Dance_Party_01_low_callout:
         dance_callout_01: Add this block to your program!
       Dance_Party_02_callout:
         dance_callout_02: Add this block to your program!
