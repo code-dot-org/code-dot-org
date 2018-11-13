@@ -190,6 +190,10 @@ a:hover {
     float: left;
     width: 50%;
   }
+
+  .img-container img {
+    margin-bottom: 5px
+  }
 }
 
 /* Mobile only */
@@ -199,7 +203,7 @@ a:hover {
   }
 
   .img-container {
-    background: url(/images/fit-1940/dance-hoc/dance_party_landing_main_nophotos.png);
+    background: url(/images/dance-hoc/dance_party_tutorial_hero.png);
     margin: 5px;
     border-radius: 5px;
     background-size: cover;
@@ -214,5 +218,15 @@ a:hover {
 
   .foot-note-text {
     font: 14px/16px 'Gotham 5r', sans-serif;
+  }
+
+  .student_dance_projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .dance-responsive-padding {
+    text-align: center;
   }
 }
