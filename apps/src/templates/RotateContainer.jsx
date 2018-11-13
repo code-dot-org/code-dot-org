@@ -1,29 +1,65 @@
 
 import React, {PropTypes} from 'react';
-var msg = require('@cdo/locale');
+const msg = require('@cdo/locale');
+
+// NOTE: We still have a media query style associated with this component
+// in RotateContainer.scss which controls the display attribute (none vs block)
+const styles = {
+  rotateContainer: {
+    position: 'fixed',
+    zIndex: 10001,
+    backgroundColor: 'white',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    width: '100vw',
+    height: '100vh',
+    backgroundPosition: '50% 50%',
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+  },
+  rotateText: {
+    position: 'relative',
+    top: '50%',
+    left: '-50%',
+    marginLeft: '50px',
+    marginRight: '-50px',
+  },
+  paragraph: {
+    textAlign: 'center',
+    fontSize: '26px',
+    lineHeight: '26px',
+    transform: 'rotate(90deg)',
+    WebkitTransform: 'rotate(90deg)',
+  }
+};
 
 /**
  * "Rotate your device" overlay.
  */
-var RotateContainer = React.createClass({
+const RotateContainer = React.createClass({
   propTypes: {
     assetUrl: PropTypes.func.isRequired
   },
 
-  render: function () {
+  render() {
+    // One of the issues we have is that in StudioApp.prototype.fixViewportForSmallScreens_
+    // we modify the viewport width, while assuming we're in landscape layout. TODO: expound further
+
     return (
-      <div id="rotateContainer" style={this.getStyle()}>
-        <div id="rotateText">
-          <p>{msg.rotateText()}<br />{msg.orientationLock()}</p>
+      <div
+        id="rotateContainer"
+        style={{
+          ...styles.rotateContainer,
+          backgroundImage: 'url(' + this.props.assetUrl('media/turnphone_horizontal.png') + ')',
+        }}
+      >
+        <div style={styles.rotateText}>
+          <p style={styles.paragraph}>{msg.rotateText()}<br />{msg.orientationLock()}</p>
         </div>
       </div>
     );
   },
-
-  getStyle: function () {
-    return {
-      backgroundImage: 'url(' + this.props.assetUrl('media/turnphone_horizontal.png') + ')'
-    };
-  }
 });
 module.exports = RotateContainer;
