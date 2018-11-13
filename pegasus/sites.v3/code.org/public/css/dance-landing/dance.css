@@ -219,4 +219,14 @@ a:hover {
   .foot-note-text {
     font: 14px/16px 'Gotham 5r', sans-serif;
   }
+
+  .student_dance_projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .dance-responsive-padding {
+    text-align: center;
+  }
 }
