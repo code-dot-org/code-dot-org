@@ -763,12 +763,36 @@ fr:
       Crack Random Substitution_2018: Consignes
       Crack a Caesar Cipher: Consignes
       Crack a Caesar Cipher_2018: Consignes
+      Dance_Party_01: Faites glisser le bloc «\_créer un nouveau\_» dans l'espace de travail et connectez-le à l'intérieur du bloc « configuration ».
+      Dance_Party_01_low: Faites glisser le bloc «\_créer un nouveau\_» dans l'espace de travail et connectez-le à l'intérieur du bloc « configuration ».
+      Dance_Party_02: Faites que l'orignal commence un nouveau mouvement après 4 mesures !
+      Dance_Party_03: Maintenant, demandez au danseur de commencer un nouveau mouvement après 6 mesures !
+      Dance_Party_04: Ajoutez un effet de fond à votre programme.
+      Dance_Party_05: Utilisez un autre nouveau bloc pour que le danseur change de mouvement toutes les 2 mesures.
+      Dance_Party_06: Créez un danseur de sauvegarde appelé « backup_dancer1 » pour danser avec le chat.
+      Dance_Party_08: Pouvez-vous donner la même taille aux deux danseurs de sauvegarde ?
+      Dance_Party_09: Utilisez le bloc « définir la nuance » pour changer la couleur d'un danseur.
+      Dance_Party_10: Demandez également à l’autre danseur de répondre à la musique à l’aide du bloc « commencer à suivre ».
+      Dance_Party_11.5: Utiliser les blocs « tous les canards » pour faire danser les canards ensemble.
+      Dance_Party_11: Le bloc « lorsqu’on appuie vers le haut » vous permet d'exécuter un programme lorsque vous appuyez sur la flèche vers le haut. Essayez de faire faire un mouvement rapide au danseur lorsque vous appuyez vers le haut.
+      Dance_Party_11b: Faites le Robot faire le « drop » une fois lorsque vous appuyez sur la touche fléchée droite et faire le « floss » une fois lorsque vous appuyez sur la touche fléchée haut. Réalisez le « drop-floss » aussi vite que possible !
       Food Fight!: "Nous avons ajouté une dernière fonction pour toi.\n\nUtilise une instruction « Si » pour programmer ton jeu et qu’il appelle la fonction «level_up» uniquement lorsque «player_score» devient supérieur à un certain nombre.\n\nPar exemple : «player_score» > 6\n\nJoue le jeu et franchis le niveau 4 pour passer au puzzle suivant."
       FoodFight: C'est un exemple de jeu que tu peux créer dans le Labo de jeux.
       FoodFight_2018: C'est un exemple de jeu que tu peux créer dans le Labo de jeux.
       Function intro Ryan: Utilisez deux fois la fonction « construire un pont » pour créer un passage vers la torche.
       Function intro Ryan_2019: Utilisez deux fois la fonction « construire un pont » pour créer un passage vers la torche.
       GLJ Flappy2: Clique pour battre des ailes - ne touche pas le sol!
+      HOC 2018 Level_1: Récupérez un bateau dans le coffre.
+      HOC 2018 Level_10: Atteignez l'entrée du monument sous-marin.
+      HOC 2018 Level_11: 'Construisez un conduit avec de la prismarine dans le monument sous-marin.'
+      HOC 2018 Level_12: 'Concevez votre propre environnement sous-marin, vous avez carte blanche !'
+      HOC 2018 Level_2: 'Rendez-vous au bout du quai.'
+      HOC 2018 Level_3: 'Naviguez en haute mer pour atteindre la morue.'
+      HOC 2018 Level_4: Utilisez une boucle pour atteindre le dauphin.
+      HOC 2018 Level_5: Explorez l'épave de navire pour atteindre le coffre.
+      HOC 2018 Level_6: Naviguez à travers la glace pour atteindre le saumon.
+      HOC 2018 Level_7a: Explorez les ruines sous-marines à la recherche d'un coffre.
+      HOC 2018 Level_9b: 'Suivez le corail pour atteindre le trésor.'
       Infinity_catch: Peux-tu aider Elsa («acteur 2») à rattraper Anna en utilisant les touches de direction ?
       Infinity_finale: Crée ce que tu veux et partage-le !
       Infinity_move_collide: Hiro est «Acteur 1».  Déplace-le vers Baymax et émets un signal sonore quand ils se touchent.
