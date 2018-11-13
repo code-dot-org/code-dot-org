@@ -51,7 +51,7 @@ export class WorkshopManagement extends React.Component {
             && new Date(this.props.date) >= new Date('2018-08-01')
           )
       ) {
-        surveyBaseUrl = "local_summer_workshop_daily_survey_results";
+        surveyBaseUrl = "daily_survey_results";
       } else if (props.subject === WorkshopTypes.local_summer) {
         surveyBaseUrl = "local_summer_workshop_survey_results";
       } else {

@@ -70,7 +70,7 @@ describe("WorkshopManagement", () => {
 
     it("uses daily results for academic year workshop past August 2018", () => {
       const surveyUrl = getSurveyUrlForProps({date: "2018-09-01", subject: '1-day Academic Year, Units 1 and 2'});
-      expect(surveyUrl).to.eql("/local_summer_workshop_daily_survey_results/123");
+      expect(surveyUrl).to.eql("/daily_survey_results/123");
     });
 
     it("uses survey results for academic year workshop before August 2018", () => {
@@ -80,12 +80,12 @@ describe("WorkshopManagement", () => {
 
     it("uses daily results for local summer in 2018", () => {
       const surveyUrl = getSurveyUrlForProps({date: "2018-07-01", subject: WorkshopTypes.local_summer});
-      expect(surveyUrl).to.eql("/local_summer_workshop_daily_survey_results/123");
+      expect(surveyUrl).to.eql("/daily_survey_results/123");
     });
 
     it("uses daily results for teachercon in 2018", () => {
       const surveyUrl = getSurveyUrlForProps({date: "2018-07-01", subject: WorkshopTypes.teachercon});
-      expect(surveyUrl).to.eql("/local_summer_workshop_daily_survey_results/123");
+      expect(surveyUrl).to.eql("/daily_survey_results/123");
     });
 
     it("uses local summer results for local summer in 2017", () => {
@@ -319,7 +319,7 @@ describe("WorkshopManagement", () => {
   describe("For a local summer workshop in 2018 or later", () => {
     it("Renders the correct survey results URL", () => {
       mockRouter.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
-      mockRouter.expects("createHref").withExactArgs("/local_summer_workshop_daily_survey_results/123").returns("surveyResultsHref");
+      mockRouter.expects("createHref").withExactArgs("/daily_survey_results/123").returns("surveyResultsHref");
 
       workshopManagement = shallow(
         <WorkshopManagement
