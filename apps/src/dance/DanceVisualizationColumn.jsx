@@ -7,7 +7,6 @@ import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import Radium from "radium";
 import {connect} from "react-redux";
 import i18n from '@cdo/locale';
-import queryString from "query-string";
 import AgeDialog from "../templates/AgeDialog";
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
@@ -72,10 +71,10 @@ class DanceVisualizationColumn extends React.Component {
   };
 
   /*
-    Turn the song filter off unless there is a teacher override
+    Turn the song filter off
   */
   turnFilterOff() {
-    this.setState({filterOff: queryString.parse(window.location.search).songfilter !== 'on'});
+    this.setState({filterOff: true});
   }
 
   /*
@@ -86,9 +85,8 @@ class DanceVisualizationColumn extends React.Component {
     // userType - 'teacher', assumed age > 13. 'student', age > 13.
     //            'student_y', age < 13. 'unknown', signed out users
     const signedInOver13 = this.props.userType === 'teacher' || this.props.userType === 'student';
-    const teacherOverride = queryString.parse(window.location.search).songfilter === 'on';
     const signedOutAge = sessionStorage.getItem('anon_over13') ? sessionStorage.getItem('anon_over13') === 'true' : false;
-    return (signedInOver13 || signedOutAge) && !teacherOverride;
+    return signedInOver13 || signedOutAge;
   }
 
   render() {
