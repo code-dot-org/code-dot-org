@@ -52,21 +52,18 @@
           PROPERTY:
             '"scale"': størrelse
             '"height"': høyde
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekunder
       Dancelab_ifDanceIs:
         options:
           DANCE:
-            '0': Clap High
-            '1': Clown
-            '2': Dab
-            '3': Double Jam
-            '4': Drop
-            '5': Floss
-            '6': Fresh
-            '7': Kick
-            '8': Ingen
-            '9': Roll
-            '10': This or That
-            '11': Thriller
+            MOVES.Rest: Ingen
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': sekunder
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -97,6 +94,16 @@
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"random"': tilfeldig
       Dancelab_randomColor:
@@ -107,6 +114,16 @@
             '"none"': Ingen
       Dancelab_setDanceSpeed:
         options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: alle
           SPEED:
             '1': normal
             '2': fast
@@ -134,6 +151,10 @@
           PROPERTY:
             '"scale"': størrelse
             '"height"': høyde
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: alle
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -152,10 +173,11 @@
         options:
           KEY:
             '"up"': opp
-            '"down"': ned
             '"left"': venstre
+            '"down"': ned
             '"right"': høyre
             '"space"': verdensrommmet
+            '"x"': x
       gamelab_changePropBy:
         options:
           PROPERTY:
