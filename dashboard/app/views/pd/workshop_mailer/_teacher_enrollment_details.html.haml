@@ -48,8 +48,14 @@
 %p
   Thank you,
   %br
-  Megan Hochstatter
-  K-5 Education Program Admin, Code.org
+  - if @workshop.course == Pd::Workshop::COURSE_CSF
+    Megan Hochstatter
+    %br
+    K-5 Education Program Admin, Code.org
+  - else
+    Sarah Fairweather
+    %br
+    Education Program Manager, Code.org
 
 %p
   P.S. Connect with other computer science teachers on Twitter
