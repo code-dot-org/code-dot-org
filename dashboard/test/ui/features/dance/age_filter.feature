@@ -109,3 +109,19 @@ Feature: Dance Lab Age Filter
     And I do not see "shapeofyou_edsheeran" option in the dropdown "#song_selector"
 
     And I sign out
+
+  Scenario: Song selector is hidden when initializing with teacher flag on for signed in student
+    Given I am on "http://studio.code.org/s/allthethings/stage/37/puzzle/1?noautoplay=true&songfilter=on"
+    And I rotate to landscape
+    And I wait for the page to fully load
+    And I wait for 3 seconds
+    And I wait until I don't see selector "#p5_loading"
+    And element ".age-dialog" is not visible
+    And I close the instructions overlay if it exists
+
+    #Local PG-13 option should not be visible after filter in any environment
+    And I do not see "synthesize" option in the dropdown "#song_selector"
+    #Test PG-13 option should not be visible after filter in any environment
+    And I do not see "shapeofyou_edsheeran" option in the dropdown "#song_selector"
+
+    And I sign out
