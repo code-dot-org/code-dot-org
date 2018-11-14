@@ -50,7 +50,7 @@ This year, our team has also created a follow-on activity for those who want to 
 1. When you begin you'll see the English track on the left and you can enter your translations on the right. Feel free to edit the timing if necessary. When complete, click the Publish button in the top right.
 1. The links for the videos are below:
   * [Warm up](https://amara.org/en/videos/BZ3PQvoJc9nj)
-  * [Events](https://amara.org/en/videos/9K90uyShDOFw)
+  * [Events](https://amara.org/en/videos/qPvkY90Ptpit)
   * [Properties](https://amara.org/en/videos/WYmfz2lZMAN4)
   * [Party On!](https://amara.org/en/videos/Swkw9vM1YlJk)
 
