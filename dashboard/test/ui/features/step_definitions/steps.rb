@@ -697,6 +697,11 @@ And (/^I see option "([^"]*)" or "([^"]*)" in the dropdown "([^"]*)"/) do |optio
   expect((select_options_text.include? option_alpha) || (select_options_text.include? option_beta)).to eq(true)
 end
 
+And (/^I wait for the song selector to load/) do
+  wait_for_jquery
+  wait_until {@browser.execute_script("return !!$('#song_selector').val();")}
+end
+
 def has_class?(selector, class_name)
   @browser.execute_script("return $(#{selector.dump}).hasClass('#{class_name}')")
 end
