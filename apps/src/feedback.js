@@ -1196,8 +1196,14 @@ FeedbackUtils.prototype.showSimpleDialog = function (options) {
   if (cancelButton) {
     dom.addClickTouchEvent(cancelButton, function () {
       if (options.onCancel) {
+        // Blockly calls into showSimpleDialog via Blockly.showSimpleDialog,
+        // treating the cancel button as a confirm and the confirm button as a
+        // cancel. When confirming (by clicking cancel), Blockly needs to know
+        // the input contents if we have any
         if (textBox) {
-          options.onCancel(textBox.value);
+          if (textBox.value) {
+            options.onCancel(textBox.value);
+          }
         } else {
           options.onCancel();
         }
