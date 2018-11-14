@@ -17,8 +17,6 @@ const styles = {
     height: '100%',
   },
   rotateContainerInner: {
-    width: '100vw',
-    height: '100vh',
     backgroundPosition: '50% 50%',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
@@ -48,19 +46,25 @@ const RotateContainer = React.createClass({
   },
 
   render() {
-    // In StudioApp.prototype.fixViewportForSmallScreens_ we modify the viewport
-    // size manually, assuming we're in landscape mode (which is false when this
-    // component is visible). The result was that this container was being
-    // stretch to fit an area larger than the screen
-    // The fix is to have an outer container that fits that larger area and is
-    // just white, with an inner container that stretches to the screen by using
-    // viewport units
+    // In StudioApp.prototype.fixViewportForSmallScreens_ we end up scaling our
+    // viewport so that things look good in landscape mode. Unfortunately, this
+    // means that we can't dependably use CSS to size our rotate container in a
+    // way that works across ios and android.
+    // What we do is to figure out the scaling factor fixViewportForSmallScreens_
+    // is going to use and set our width relative to that factor.
+    // In addition, I've added an outer container that fills up the whole space
+    // with a white background, so that if you scroll off of the inner container
+    // you see white instead of the codeApp
+
+    const scale = screen.height / 900;
 
     return (
       <div id="rotateContainer" style={styles.rotateContainer}>
         <div
           style={{
             ...styles.rotateContainerInner,
+            width: window.screen.width / scale,
+            height: window.screen.height,
             backgroundImage: 'url(' + this.props.assetUrl('media/turnphone_horizontal.png') + ')',
           }}
         >
