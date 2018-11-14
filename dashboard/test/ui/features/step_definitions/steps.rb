@@ -423,6 +423,14 @@ When /^I press a button with xpath "([^"]*)"$/ do |xpath|
   @button.click
 end
 
+# Prefer clicking with selenium over jquery, since selenium clicks will fail
+# if the target element is obscured by another element.
+When /^I click "([^"]*)"( to load a new page)?$/ do |selector, load|
+  page_load(load) do
+    @browser.find_element(:css, selector).click
+  end
+end
+
 When /^I click selector "([^"]*)"( to load a new page)?$/ do |jquery_selector, load|
   # normal a href links can only be clicked this way
   page_load(load) do
