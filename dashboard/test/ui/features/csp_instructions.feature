@@ -37,9 +37,9 @@ Scenario: Resources tab displays videos, map references, and reference links wit
 Scenario: Instructions can be collapsed and expanded
   Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/20"
   And I wait for the page to fully load
-  And I click selector "#ui-test-collapser"
+  And I press "ui-test-collapser"
   And element ".instructions-markdown" is hidden
-  And I click selector "#ui-test-collapser"
+  And I press "ui-test-collapser"
   And element ".instructions-markdown" is visible
 
 Scenario: Instructions have a resizer for non-embedded levels
