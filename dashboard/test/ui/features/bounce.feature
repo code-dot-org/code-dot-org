@@ -1,3 +1,5 @@
+# Brad (2018-11-14) Skip on IE due to webdriver exception
+@no_ie
 Feature: Complete a bounce level
 
 Scenario: Complete Level 1
