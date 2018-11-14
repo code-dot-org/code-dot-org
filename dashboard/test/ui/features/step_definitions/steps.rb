@@ -851,8 +851,6 @@ And(/^I set the language cookie$/) do
   end
 
   @browser.manage.add_cookie params
-
-  debug_cookies(@browser.manage.all_cookies)
 end
 
 And(/^I set the pagemode cookie to "([^"]*)"$/) do |cookie_value|
@@ -867,8 +865,6 @@ And(/^I set the pagemode cookie to "([^"]*)"$/) do |cookie_value|
   end
 
   @browser.manage.add_cookie params
-
-  debug_cookies(@browser.manage.all_cookies)
 end
 
 Given(/^I sign in as "([^"]*)"$/) do |name|
