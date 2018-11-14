@@ -33,8 +33,9 @@
   color: #00adbc;
   text-align: center;
   margin-bottom: 10px;
-  font: 14px/15px 'Gotham 5r', sans-serif;
-  padding: 0 10px;
+  font-family: 'Gotham 5r', sans-serif;
+  line-height: 19px;
+  padding: 5px 10px;
 }
 
 .img-wrapper img {
@@ -118,12 +119,6 @@ a:hover {
 @media screen and (min-width: 971px) {
   .desktop-only {
     display: block;
-  }
-
-  .starwars-container .img-container {
-    min-height: 345px;
-    background: black;
-    border-radius: 5px;
   }
 
   .sponsor-subtext-description {
