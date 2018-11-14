@@ -108,8 +108,8 @@ end
 When /^I wait for the page to fully load$/ do
   steps <<-STEPS
     When I wait to see "#runButton"
-    And I close the instructions overlay if it exists
     And I wait to see ".header_user"
+    And I close the instructions overlay if it exists
   STEPS
 end
 
@@ -421,6 +421,14 @@ When /^I press a button with xpath "([^"]*)"$/ do |xpath|
     @button = @browser.find_element(:xpath, xpath)
   end
   @button.click
+end
+
+# Prefer clicking with selenium over jquery, since selenium clicks will fail
+# if the target element is obscured by another element.
+When /^I click "([^"]*)"( to load a new page)?$/ do |selector, load|
+  page_load(load) do
+    @browser.find_element(:css, selector).click
+  end
 end
 
 When /^I click selector "([^"]*)"( to load a new page)?$/ do |jquery_selector, load|
@@ -856,8 +864,6 @@ And(/^I set the language cookie$/) do
   end
 
   @browser.manage.add_cookie params
-
-  debug_cookies(@browser.manage.all_cookies)
 end
 
 And(/^I set the pagemode cookie to "([^"]*)"$/) do |cookie_value|
@@ -872,8 +878,6 @@ And(/^I set the pagemode cookie to "([^"]*)"$/) do |cookie_value|
   end
 
   @browser.manage.add_cookie params
-
-  debug_cookies(@browser.manage.all_cookies)
 end
 
 Given(/^I sign in as "([^"]*)"$/) do |name|
@@ -881,10 +885,10 @@ Given(/^I sign in as "([^"]*)"$/) do |name|
     Given I am on "http://studio.code.org/reset_session"
     Then I am on "http://studio.code.org/"
     And I wait to see "#signin_button"
-    Then I click selector "#signin_button"
+    Then I click ".header_user"
     And I wait to see "#signin"
     And I fill in username and password for "#{name}"
-    And I click selector "#signin-button"
+    And I click "#signin-button"
     And I wait to see ".header_user"
   }
 end
@@ -895,10 +899,10 @@ Given(/^I sign out and sign in as "([^"]*)"$/) do |name|
     And I wait for 5 seconds
     Then I am on "http://studio.code.org/"
     And I wait to see "#signin_button"
-    Then I click selector "#signin_button"
+    Then I click ".header_user"
     And I wait to see "#signin"
     And I fill in username and password for "#{name}"
-    And I click selector "#signin-button"
+    And I click "#signin-button"
     And I wait to see ".header_user"
   }
 end
@@ -908,7 +912,7 @@ Given(/^I sign in as "([^"]*)" from the sign in page$/) do |name|
     And check that the url contains "/users/sign_in"
     And I wait to see "#signin"
     And I fill in username and password for "#{name}"
-    And I click selector "#signin-button"
+    And I click "#signin-button"
     And I wait to see ".header_user"
   }
 end

@@ -54,7 +54,6 @@ Feature: Dance Lab
     Given I am on "http://studio.code.org/s/dance/stage/1/puzzle/13?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
-    And I close the instructions overlay if it exists
     And I wait for the song selector to load
     And element "#song_selector" has value "cheapthrills_sia"
 
@@ -78,7 +77,6 @@ Feature: Dance Lab
     Given I am on "http://studio.code.org/s/dance/stage/1/puzzle/13?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
-    And I close the instructions overlay if it exists
 
     When I navigate to the shared version of my project
     Then I wait until element "#runButton" is visible

@@ -1,5 +1,5 @@
 hideable_stages true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/express/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-18/express/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-18/express/standards/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/express/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/express/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/express/standards/"]]
 stage_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/express/{LESSON}'
@@ -7,9 +7,6 @@ project_widget_visible true
 project_widget_types ["playlab", "artist"]
 script_announcements [{"notice"=>"New: Choose Which Lessons to Show or Hide for Your Section", "details"=>"Click \"Learn More\" to read the help article on showing and hiding lessons.", "link"=>"https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses bullhorn", "type"=>"bullhorn"}]
 version_year '2019'
-
-stage 'Algorithms: Graph Paper Programming'
-level 'GraphPaperProgramming_2019'
 
 stage 'Programming in Maze'
 level 'courseC_video_maze_2019'
@@ -25,9 +22,6 @@ assessment 'courseC_maze_programming8_predict1_2019'
 level 'courseC_maze_programming9_2019'
 bonus 'courseC_maze_programming_challenge1_2019'
 bonus 'courseC_maze_programming_challenge2_2019'
-
-stage 'Relay Programming'
-level 'RelayProgramming_2018_2019'
 
 stage 'Debugging in Maze'
 level 'courseC_video_debugging_2019'
@@ -74,9 +68,6 @@ assessment 'courseC_artist_prog6_predict1_2019'
 bonus 'courseC_artist_prog_challenge1_2019'
 bonus 'courseC_artist_prog_challenge2a_2019'
 
-stage 'Loops: Getting Loopy'
-level 'GettingLoopy_2019'
-
 stage 'Loops with Rey and BB-8'
 level 'bb8_skinOverview_C-F_video_2019'
 level 'courseC_starWars_loops1_2019'
@@ -108,9 +99,6 @@ level 'courseC_artist_loops5b_2019'
 level 'courseC_artist_loops6a_2019'
 level 'courseC_artist_loops7a_2019'
 level 'courseC_artist_loops8a_2019'
-
-stage 'Copyright and Creativity'
-level 'courseE_unplugged_CnC_2019'
 
 stage 'Concept Practice with Minecraft '
 level 'Overworld Move to Sheep_2019'
@@ -182,9 +170,6 @@ level 'courseD_maze_until9_2019', challenge: true
 level 'courseD_maze_until10_2019'
 assessment 'courseD_maze_until10_predict2_2019'
 
-stage 'Conditionals with Cards'
-level 'Conditionals_2019'
-
 stage 'Conditionals in Bee'
 level 'courseD_bee_conditionalsVid1_2019'
 level 'courseD_bee_conditionals1_predict1_2019'
@@ -216,9 +201,6 @@ level 'courseD_farmer_condLoops9_2019'
 assessment 'courseD_farmer_condLoops9_predict1_2019'
 bonus 'courseD_farmer_condLoops_challenge1_2019'
 bonus 'courseD_farmer_condLoops_challenge2_2019'
-
-stage 'Functions: Songwriting'
-level 'SongwritingParameters_2019'
 
 stage 'Functions in Minecraft'
 level 'MC_HOC_2017_01_RETRY_2019'
@@ -267,9 +249,6 @@ level 'courseE_artist_functionsProj_2019'
 bonus 'courseE_artist_functions_challenge1_2019'
 bonus 'courseE_artist_functions_challenge2_2019'
 
-stage 'Screen Out the Mean'
-level 'courseC_Unplugged_ScreenOutTheMean_2019'
-
 stage 'Determine the Concept'
 level 'courseE_bee_concept1_2019'
 level 'courseE_farmer_concept1_2019'
@@ -284,9 +263,6 @@ level 'courseE_artist_concept4_2019'
 bonus 'courseE_artist_concept_challenge1_2019'
 bonus 'courseE_artist_concept_challenge2_2019'
 
-stage 'Events: The Big Event'
-level 'BigEvent_2019'
-
 stage 'Build a Flappy Game'
 level 'courseC_video_flappyIntro_2019'
 level 'courseC_flappy_events1_2019'
@@ -300,11 +276,35 @@ level 'courseC_flappy_events8_2019'
 level 'courseC_flappy_events9_2019'
 level 'courseC_flappy_events10_2019'
 
-stage 'The Power of Words'
-level 'courseF_unplugged_powerOfWords_2019'
+stage 'Learning Sprites with Sprite Lab'
+level 'CourseEF_video_IntroSpriteLab_2019'
+level 'Fish Tank 1-validated_2019'
+level 'Fish Tank 2-validated_2019'
+level 'Fish Tank 3-validated_2019'
+level 'Fish Tank 4-validated_2019'
+level 'CourseEF_video_MakeSprite_2019'
+level 'Fish Tank 5-validated_2019'
+level 'Fish Tank 6-validated_2019'
+level 'Fish Tank 7-validated_2019'
 
-stage 'Envelope Variables'
-level 'EnvelopeVariables_2019'
+stage 'Alien Dance Party with Sprite Lab'
+level 'Dance Party 1-validated_2019'
+level 'Dance Party 2_2019'
+level 'Dance Party 3_2019'
+level 'Dance Party 4_2019'
+level 'Dance Party 5_2019'
+level 'Dance Party 6_2019'
+level 'Dance Party 7_2019'
+level 'Dance Party Freeplay_2019'
+
+stage 'Pet Giraffe with Sprite Lab'
+level 'Virtual Pet 1_2019'
+level 'Virtual Pet 2_2019'
+level 'Virtual Pet 3_2019'
+level 'Virtual Pet 4_2019'
+level 'Virtual Pet 5_2019'
+level 'Virtual Pet 6_2019'
+level 'Virtual Pet Freeplay_2019'
 
 stage 'Variables as Constant in Artist'
 level 'grade5_artist_variables_triangles1_2019'
@@ -338,9 +338,6 @@ level 'courseF_artist_variablesFP_2019'
 level 'courseF_markdown_variables_end_2019'
 bonus 'courseF_artist_variables_challenge1_2019'
 bonus 'courseF_artist_variables_challenge2_2019'
-
-stage 'For Loop Fun'
-level 'ForLoopFun_2019'
 
 stage 'For Loops in Bee'
 level 'courseF_bee_for1_2019'
@@ -376,61 +373,6 @@ level 'courseF_artist_for10_2019'
 bonus 'courseF_artist_for_challenge1_2019'
 bonus 'courseF_artist_for_challenge2_2019'
 
-stage 'Learning Sprites with Sprite Lab'
-level 'CourseEF_video_IntroSpriteLab_2019'
-level 'Fish Tank 1-validated_2019'
-level 'Fish Tank 2-validated_2019'
-level 'Fish Tank 3-validated_2019'
-level 'Fish Tank 4-validated_2019'
-level 'CourseEF_video_MakeSprite_2019'
-level 'Fish Tank 5-validated_2019'
-level 'Fish Tank 6-validated_2019'
-level 'Fish Tank 7-validated_2019'
-
-stage 'Alien Dance Party with Sprite Lab'
-level 'Dance Party 1-validated_2019'
-level 'Dance Party 2_2019'
-level 'Dance Party 3_2019'
-level 'Dance Party 4_2019'
-level 'Dance Party 5_2019'
-level 'Dance Party 6_2019'
-level 'Dance Party 7_2019'
-level 'Dance Party Freeplay_2019'
-
-stage 'Pet Giraffe with Sprite Lab'
-level 'Virtual Pet 1_2019'
-level 'Virtual Pet 2_2019'
-level 'Virtual Pet 3_2019'
-level 'Virtual Pet 4_2019'
-level 'Virtual Pet 5_2019'
-level 'Virtual Pet 6_2019'
-level 'Virtual Pet Freeplay_2019'
-
-stage 'Explore Project Ideas'
-named_level 'courseF_video_csMatters_2019'
-named_level 'InspirationalArtwork_2019'
-named_level 'courseF_project_1_2019'
-
-stage 'The Design Process'
-named_level 'Begin planning your project_2018_2019'
-
-stage 'Build Your Project'
-named_level 'Course F: Artist Project_2019'
-named_level 'CourseF_Project_SpriteLab_2019'
-
-stage 'Revise Your Project'
-named_level 'Course F: Artist Project - Revise_2019'
-named_level 'CourseF_Project_Revise_SpriteLab_2019'
-
-stage 'Present Your Project'
-named_level 'Prepare for your presentation_2018_2019'
-
-stage 'Binary Bracelets'
-level 'BinaryBracelets_2019'
-
-stage 'Unplugged: Binary'
-level 'BinaryImages_2019'
-
 stage 'Artist Binary'
 level 'courseD_external_binary1_2018_2019'
 level 'courseD_artist_binary1_2019'
@@ -446,8 +388,11 @@ level 'courseD_artist_binaryFP_2019'
 bonus 'courseD_artist_binary_challenge1_2019'
 bonus 'courseD_artist_binary_challenge2_2019'
 
-stage 'Internet'
-level 'Internet_2019'
+stage 'Explore Project Ideas'
+named_level 'courseF_video_csMatters_2019'
+named_level 'InspirationalArtwork_2019'
+named_level 'courseF_project_1_2019'
 
-stage 'Crowdsourcing'
-level 'Crowdsourcing_2019'
+stage 'Build Your Project'
+named_level 'Course F: Artist Project_2019'
+named_level 'CourseF_Project_SpriteLab_2019'
