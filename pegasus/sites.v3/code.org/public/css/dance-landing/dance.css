@@ -21,14 +21,9 @@
 .dance-try-button {
   font-size:18px;
   height:40px;
-  transition: 300ms all;
   background-color: white;
   border-color: white;
   color: #4d575f;
-}
-
-.dance-try-button:hover {
-  background-color: #FFCC22;
 }
 
 .foot-note-text {
