@@ -19,7 +19,7 @@ export const SongTitlesToArtistTwitterHandle = {
   "macarena_losdelrio" : "LosDelRioMusic",
   "migente_jbalvin" : "JBalvin",
   "needyounow_ladyantebellum" : "LadyAntebellum",
-  "nottearslefttocry_arianagrande" : "ArianaGrande",
+  "notearslefttocry_arianagrande" : "ArianaGrande",
   "shapeofyou_edsheeran" : "EdSheeran",
   "somebodylikeyou_keithurban" : "KeithUrban",
   "sorry_justinbieber" : "JustinBieber",
@@ -34,6 +34,7 @@ export const SongTitlesToArtistTwitterHandle = {
   "wecantstop_mileycyrus" : "MileyCyrus",
   "wenospeakamericano_yolandabecool" : "YolandaBeCool",
   "ymca_villagepeople" : "VillagePeople",
+  "firework_katyperry" : "KatyPerry",
   // These tracks available locally, tweet @codeorg to avoid spamming anyone.
   "jazzy_beats" : "codeorg",
   "synthesize" : "codeorg",

@@ -166,6 +166,205 @@ fr:
         4-5_While_Loops_8_a: Chaque élément devra sa propre boucle « while ».
       Artist Autorun Test_authored_hint:
         2-3_Artist_Functions_4_a: L'artiste doit tourner de 120 degrés entre chaque carré pour compléer ce design.
+      Dance short test 2_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Vous devez faire en sorte que l’effet de fond change parfois à la septième mesure de la chanson.
+          
+          *Ce niveau se termine après 10 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          
+          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml> <block type = "Dancelab_atTimestamp"> <title name = "TIMESTAMP"> ??? </ title> <title name = "UNIT" > "mesures" </ title> </ block> </ xml>.
+      Dance short test_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Vous devez faire en sorte que l’effet de fond change parfois à la septième mesure de la chanson.
+          
+          *Ce niveau se termine après 10 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          
+          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml> <block type = "Dancelab_atTimestamp"> <title name = "TIMESTAMP"> ??? </ title> <title name = "UNIT" > "mesures" </ title> </ block> </ xml>.
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Assurez-vous qu'un danseur apparaît à l'écran.
+          
+          *Ce niveau se termine après 4 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          *Choisissez une autre chanson à jouer.
+          *Choisissez un autre qui ressemble à un orignal !
+          *Renommez votre danseur.
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Assurez-vous qu'un danseur apparaît à l'écran.
+          
+          *Ce niveau se termine après 4 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          *Choisissez une autre chanson à jouer.
+          *Choisissez un autre qui ressemble à un orignal !
+          *Renommez votre danseur.
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Le danseur doit passer à un nouveau mouvement après 4 mesures.
+          
+          *Le niveau se termine après 8 mesures.*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Après 6 mesures, votre danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.
+          
+          *Le niveau se termine après 12 mesures.*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Vous devez faire en sorte que l’effet de fond change parfois à la septième mesure de la chanson.
+          
+          *Ce niveau se termine après 10 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          
+          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml> <block type = "Dancelab_atTimestamp"> <title name = "TIMESTAMP"> ??? </ title> <title name = "UNIT" > "mesures" </ title> </ block> </ xml>.
+      Dance_Party_05_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Votre danseur doit effectuer différents mouvements au cours des 12 premières mesures de la chanson.
+          
+          *Ce niveau se termine après 12 mesures.*
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Vous devez avoir au moins deux danseurs.
+          
+          *Ce niveau se termine après 6 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          
+          *Ajoutez un troisième danseur (ou autant que vous voulez !)
+          *Faites en sorte que tous vos danseurs exécutent différents mouvements à différents moments de la chanson.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Deux danseurs doivent avoir une taille autre que 100.
+          
+          *Ce niveau se termine après 6 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          
+          *Expérimentez en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Changez la nuance d'au moins un danseur.
+          
+          *Ce niveau se termine après 8 mesures.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Assurez-vous qu'un danseur apparaît à l'écran.
+          
+          *Ce niveau se termine après 4 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          *Choisissez une autre chanson à jouer.
+          *Choisissez un autre qui ressemble à un orignal !
+          *Renommez votre danseur.
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Les propriétés de deux ou plusieurs danseurs doivent changer.
+          
+          *Ce niveau se termine après 8 mesures.*
+      Dance_Party_11.5_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Soyez créatif !
+          
+          *Ce niveau se termine après 8 mesures.*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Soyez créatif !
+          
+          *Ce niveau se termine après 8 mesures.*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Appuyez sur le bloc « lorsque la flèche gauche est appuyée » pour que le Robot fasse un mouvement de danse.
+          
+          *Ce niveau se termine après 8 mesures.*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Le danseur doit passer à un nouveau mouvement après 4 mesures.
+          
+          *Le niveau se termine après 8 mesures.*
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Après 6 mesures, votre danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.
+          
+          *Le niveau se termine après 12 mesures.*
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Vous devez faire en sorte que l’effet de fond change parfois à la septième mesure de la chanson.
+          
+          *Ce niveau se termine après 10 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          
+          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml> <block type = "Dancelab_atTimestamp"> <title name = "TIMESTAMP"> ??? </ title> <title name = "UNIT" > "mesures" </ title> </ block> </ xml>.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Votre danseur doit effectuer différents mouvements au cours des 12 premières mesures de la chanson.
+          
+          *Ce niveau se termine après 12 mesures.*
+      Dance_Party_6_authored_hint:
+        challenges: |-
+          **Défis optionnels**
+          
+          *Ajoutez un troisième danseur (ou autant que vous voulez !)
+          *Faites en sorte que tous vos danseurs exécutent différents mouvements à différents moments de la chanson.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Deux danseurs doivent avoir une taille autre que 100.
+          
+          *Ce niveau se termine après 6 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          
+          *Expérimentez en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Changez la nuance d'au moins un danseur.
+          
+          *Ce niveau se termine après 8 mesures.*
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Dans votre programme, vous pouvez appeler une fonction autant de fois que vous le voulez !  Essayez de l'appeler deux fois pour résoudre ce casse-tête.
       Function intro Ryan_2019_authored_hint:
@@ -174,6 +373,93 @@ fr:
         voyage_aquatic_10a: "Vous voyez les **lanternes aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ? Comment les combiner à un bloc conditionnel pour traverser le monument sous-marin ?\n\n"
       HOC 2018 Level_9b_authored_hint:
         voyage_aquatic_9a: Quel manifique récif de corail ! Si le corail bleu est dans son bon **droit**, le corail rouge n'est pas non plus très **gauche** !
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Assurez-vous qu'un danseur apparaît à l'écran.
+          
+          *Ce niveau se termine après 4 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          *Choisissez une autre chanson à jouer.
+          *Choisissez un autre qui ressemble à un orignal !
+          *Renommez votre danseur.
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Le danseur doit passer à un nouveau mouvement après 4 mesures.
+          
+          *Le niveau se termine après 8 mesures.*
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Après 6 mesures, votre danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.
+          
+          *Le niveau se termine après 12 mesures.*
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Vous devez faire en sorte que l’effet de fond change parfois à la septième mesure de la chanson.
+          
+          *Ce niveau se termine après 10 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          
+          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml> <block type = "Dancelab_atTimestamp"> <title name = "TIMESTAMP"> ??? </ title> <title name = "UNIT" > "mesures" </ title> </ block> </ xml>.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Votre danseur doit effectuer différents mouvements au cours des 12 premières mesures de la chanson.
+          
+          *Ce niveau se termine après 12 mesures.*
+      HOC Dance 5_draft_authored_hint:
+        challenges: |-
+          **Défis optionnels**
+          
+          *Ajoutez un troisième danseur (ou autant que vous voulez !)
+          *Faites en sorte que tous vos danseurs exécutent différents mouvements à différents moments de la chanson.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Deux danseurs doivent avoir une taille autre que 100.
+          
+          *Ce niveau se termine après 6 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          
+          *Expérimentez en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Changez la nuance d'au moins un danseur.
+          
+          *Ce niveau se termine après 8 mesures.*
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Les propriétés de deux ou plusieurs danseurs doivent changer.
+          
+          *Ce niveau se termine après 8 mesures.*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Soyez créatif !
+          
+          *Ce niveau se termine après 8 mesures.*
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Soyez créatif !
+          
+          *Ce niveau se termine après 8 mesures.*
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Essayez de faire construire des ponts à l'Agent afin qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte.
       MC_HOC_2017_01_Cole_authored_hint:

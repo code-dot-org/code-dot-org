@@ -779,6 +779,19 @@ pl:
       Crack Random Substitution_2018: Instrukcje
       Crack a Caesar Cipher: Instrukcje
       Crack a Caesar Cipher_2018: Instrukcje
+      Dance_Party_01: Przeciągnij blok "zrób nowy" do obszaru roboczego i podłącz go w bloku "układ".
+      Dance_Party_01_low: Przeciągnij blok "zrób nowy" do obszaru roboczego i podłącz go w bloku "układ".
+      Dance_Party_02: Spraw, aby łoś rozpoczął nowy ruch po 4 taktach!
+      Dance_Party_03: Teraz spraw, aby tancerz rozpoczął nowy ruch po 6 taktach!
+      Dance_Party_04: Dodaj efekt tła do swojego programu.
+      Dance_Party_05: Użyj innego nowego bloku, aby tancerz zmieniał ruchy co 2 takty.
+      Dance_Party_06: Utwórz zapasową kopię tancerza o nazwie "kopia_tancerza1", aby zatańczył z kotem.
+      Dance_Party_08: Czy możesz utworzyć obu zapasowych tancerzy tej samej wielkości?
+      Dance_Party_09: Użyj bloku "ustaw odcień", aby zmienić kolor tancerza.
+      Dance_Party_10: Spraw, aby drugi tancerz również reagowała na muzykę za pomocą bloku "zaczyna się to".
+      Dance_Party_11.5: Użyj bloków "wszystkie kaczki", aby kaczki tańczyły razem.
+      Dance_Party_11: Blok "po naciśnięciu strzałki w górę" służy do uruchomienia kodu po naciśnięciu klawisza strzałki w górę. Postaraj się, aby tancerz wykonał szybki ruch, gdy naciskasz ten klawisz.
+      Dance_Party_11b: Spraw, aby Robot raz "tupnął", gdy naciśniesz klawisz strzałki w prawo, i raz "głośno klasnął", gdy naciśniesz klawisz strzałki w górę. Wykonaj tupnij-klaśnij tak szybko, jak potrafisz!
       Find the Wizard: "Buduj, co chcesz. To jest przykład\ngry w zgadywanie numeru!"
       Find the Wizard_2018: "Buduj, co chcesz. To jest przykład\ngry w zgadywanie numeru!"
       Food Fight!: "Dodaliśmy dla Ciebie jeszcze jedną funkcję. \\r\n\\r\nUżyj instrukcji \"jeśli\" i zaprogramuj swoją grę wywołując funkcję \"level_up\" (poziom wyżej), jeśli \"player_score\" (wynik gracza) przekroczy pewną liczbę. \\r\n\\r\nNa przykład: \"player_score\" > 6\\r\n\\r\nZagraj w tę grę i spowoduj, że osiągniesz poziom 3, aby przejść do następnej łamigłówki. "

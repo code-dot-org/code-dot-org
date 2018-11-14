@@ -1635,6 +1635,30 @@ nl:
         dat bestaat uit draaien tussen 75 en 105 graden.
       D_Frozen_nested7: Draai nu 180 graden en teken het trap patroon opnieuw!
       D_Frozen_nested8: Draai die vorm 5 of 6 keer rond in een cirkel.
+      Dance_Party_01: Sleep het blok 'nieuwe maken' naar de werkruimte, en verbind
+        deze in het 'setup' blok.
+      Dance_Party_01_low: Sleep het blok 'nieuwe maken' naar de werkruimte, en verbind
+        deze in het 'setup' blok.
+      Dance_Party_02: Zorg dat de eland een nieuwe move start na 4 maten!
+      Dance_Party_03: Laat de danser nu een nieuwe move starten na 6 maten!
+      Dance_Party_04: Voeg een achtergrondeffect toe aan je programma.
+      Dance_Party_05: Gebruik nog een nieuw blok om de danser elke 2 maten een nieuwe
+        move te laten doen.
+      Dance_Party_06: Maak een achtergronddanser genaamd 'backup_dancer1' om met de
+        kat te dansen.
+      Dance_Party_08: Kun je beide achtergronddansers dezelfde grootte geven?
+      Dance_Party_09: Gebruik het blok 'tint instellen' om de kleur van een danser
+        te veranderen.
+      Dance_Party_10: Zorg dat de andere danser ook op de muziek reageert, met behulp
+        van het blok 'begint te volgen'.
+      Dance_Party_11.5: Gebruik de "alle eenden" blokken om de eenden samen te laten
+        dansen.
+      Dance_Party_11: Met het blok 'wanneer pijlomhoogtoets ingedrukt' kun je code
+        uitvoeren door op de pijlomhoogtoets te drukken. Proberen de danser een een
+        snelle move te laten doen wanneer je op de pijlomhoogtoets drukt.
+      Dance_Party_11b: Zorg dat de Robot "naar de grond gaat" door op de rechterpijltoets
+        te drukken, en laat hem een keer de "floss" doen door op de pijlomhoogtoets
+        te drukken. Doe zo snel als je kan de drop-floss!
       Find the Wizard: Bouw wat je maar wilt. Dit is één voorbeeld van een getal raad
         spelletje!
       Find the Wizard_2018: Bouw wat je maar wilt. Dit is één voorbeeld van een getal
@@ -1659,6 +1683,17 @@ nl:
         raad spelletje!
       Guess The Number_2018: Bouw wat je maar wilt. Dit is één voorbeeld van een getal
         raad spelletje!
+      HOC 2018 Level_1: Haal een boot uit de kist.
+      HOC 2018 Level_10: Ga naar de ingang van dit Oceaanmonument.
+      HOC 2018 Level_11: Bouw de kracht van de zee met Prismarien in het Oceaanmonument.
+      HOC 2018 Level_12: Ontwerp je eigen onderwateromgeving, ga helemaal los!
+      HOC 2018 Level_2: Ga naar het einde van de steiger.
+      HOC 2018 Level_3: Doorkruis de open zee op zoek naar kabeljauw.
+      HOC 2018 Level_4: Gebruik een lus om de dolfijn te vinden.
+      HOC 2018 Level_5: Verken het scheepswrak om een kist te vinden.
+      HOC 2018 Level_6: Navigeer door het ijs om de zalm te vinden.
+      HOC 2018 Level_7a: Doorzoek deze onderwaterruïnes om een kist te vinden.
+      HOC 2018 Level_9b: Gebruik het koraal als referentiepunten om de schat te vinden.
       Infinity_catch: Kun je Elsa (acteur 2) laten inhalen door Anna met behulp van
         de pijltjestoetsen?
       Infinity_finale: Maak wat je maar wilt en deel het!

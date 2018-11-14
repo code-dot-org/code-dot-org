@@ -111,9 +111,16 @@ es-MX:
         movido los bloques para dibujar un cuadrado en la función llamada "dibuja
         un cuadrado". ¿Puedes utilizar la función "dibuja un cuadrado" para crear
         los lentes? Los cuadrados están separados por 75 píxeles.
+      2-3 Artist Functions 3 a: |-
+        Editar la función "dibujar un cuadro" para dibujar unos lentes con armazón cuadrado de 115 pixeles en cada lado.
+
+
+        Los cuadros están ahora separados 45 pixeles.
       2-3 Artist Functions 3: Edita la función para dibujar un cuadrado con una longitud
         lateral de 115 y dibuja los lentes más grandes. Los cuadrados están ahora
         separados 45 píxeles.
+      2-3 Artist Functions 4 a: Ahora, pon la función dentro de un bucle y agrega
+        un turno adicional para pintar estos tres cuadros.
       2-3 Artist Functions 4: Usa el bloque "repetir" para dibujar estos 3 cuadrados.
       2-3 Artist Functions 9: "** Freeplay: ** Aquí hay una función de copo de nieve.
         ¡Experimenta con él para crear una escena de invierno!\r\n\r\nEste es un nivel
@@ -221,79 +228,86 @@ es-MX:
       2-3 Bee Functions 4: La función "mover y obtener néctar" realizada por la abeja,
         recoge néctar, y entonces devuelve a la abeja al principio. Usa la función
         para recoger todo el néctar.
-      2-3 Bee Functions Assessment 1: "** Evaluación: ** Use la función dada para
-        recolectar néctar de cada flor."
-      2-3 Bee Functions Assessment 2: "** Evaluación: ** Crea una función para girar,
-        avanzar y hacer 3 mieles, luego regresa la abeja al lugar donde comenzó y
-        vuelve atrás."
+      2-3 Bee Functions Assessment 1: "**Evaluación:** Usa la función dada para recolectar
+        el nectar de cada flor."
+      2-3 Bee Functions Assessment 2: "**Evaluación:** Crea una función para girar,
+        avanzar y generar 3 mieles, después regresa a la abeja al lugar de inicio
+        y voltea."
       2-3 Bee Loops 1: 'Cada flor contiene una unidad de néctar. Recolecta néctar
         de cada una de las flores. '
-      2-3 Bee Loops 13: "** Evaluación: ** Recoge todo el néctar usando la menor cantidad
-        posible de bloques."
+      2-3 Bee Loops 13: "**Evaluación:** Recoge todos los nectars usando el menor
+        número de bloques posible."
       2-3 Bee Loops 3A: "¿Podrías utilizar un ciclo para recolectar todo el néctar?"
       2-3 Bee Loops 3B: Ahora usa el nuevo bloque repeat para recolectar todo el néctar
         y hacer toda la miel.
-      2-3 Bee Loops 4: "¡Una abeja tan ocupada!\n\r\nAyuda a Abeja a recolectar todo
-        el néctar y hacer toda la miel con la menor cantidad de bloques posible."
+      2-3 Bee Loops 4: Ayuda a la abeja a recolectar todo el nectar y haz toda la
+        miel con el menor número de bloques posible.
       2-3 Bee Loops 4A: "¿Qué pasa si haces un ciclo con esta secuencia 3 veces? ¡No
         olvides hacer la miel al final!"
-      2-3 Bee Loops 5: "La forma de este camino es diferente de los demás. \r\n\r\n¿Puedes
-        recolectar todo el néctar usando la menor cantidad de bloques posible?"
-      2-3 Bee Loops 7: "Que hermoso campo de flores! \r\n\r\nAyuda\na la abeja a visitar
-        cada uno.\r\n\r\nPuedes conseguir la manera de hacerlo con menos de 7 bloques?"
+      2-3 Bee Loops 5: |-
+        La forma de este camino es diferente a los demás.
+
+
+        ¿Puedes recolectar todo el nectar usando el menor número de bloques posible?
+      2-3 Bee Loops 7: |-
+        ¡Qué hermoso  campo de flores!
+
+        Ayuda a la abeja a visitar cada uno.
+
+        ¿Puedes encontrar un camino para hacerlo en menos de 7 bloques?
       2-3 Bee Loops 8: Estas flores moradas tienen una cantidad desconocida de néctar.
         Utiliza el ciclo "while nectar" para recolectar todo el néctar. Este ciclo
         va a ejecutarse mientras la condición sea verdadera, en este caso Néctar >
         0.
-      2-3 Bee Loops Assessment 1: |-
-        ** Evaluación: ** Use un bucle `siempre que`
-        para recoger todo el néctar de estas flores.
-      2-3 Maze 1: "¿Puedes ayudarme a atrapar el cerdo\nrevoltoso? \r\n\r\njunta un
-        par de bloques `adelante 'debajo del` cuando se ejecute`\nbloquea y presiona
-        \"Ejecutar\". "
-      2-3 Maze 12 - One Move Block: "Obtén el cerdo malo!\nPero esta vez, solo puedes
-        usar un bloque de `avanzar`\r\n\r\nAh observa de cerca\n¿Ves algunos otros
-        bloques que puedan ayudarte a llegar allí?"
-      2-3 Maze 12: "Subitamente, aparece un bloque mágico! Con\nel bloque `repetir`,
-        puede repetir el código una y otra vez.\r\n\r\nPuedes llegar a\nel cerdo creando
-        un circuito que usa solo un bloque `adelante' en el interior\nde una 'repetición'?"
-      2-3 Maze 13: |-
-        Llévame al cerdo! tu solo puedes usar un
-        bloque de `avanzar`en esta oportunidad
+      2-3 Bee Loops Assessment 1: "**Evaluación:** Usa el bucle 'while' para recolectar
+        todo el nectar de las flores."
+      2-3 Maze 1: "¿Me puedes ayudar a atrapar a este cerdo travieso?\n\nApila un
+        par de bloques de 'avanzar' debajo del de 'mientras corre' y presiona 'Correr'. "
+      2-3 Maze 12 - One Move Block: |-
+        ¡Atrapa al cerdo malo! Pero esta vez, solo puedes usar un bloque 'avanzar'...
+
+        Ah, mira detenidamente - ¿puedes ver cualquier otro bloque que te puede ayudar a llegar ahi?
+      2-3 Maze 12: |-
+        De repente, ¡un bloque mágico aparece! Con el bloque 'repetir', tú puedes repetir el código una y otra vez.
+
+        ¿Puedes llegar al cerdo creando un bucle que solo utilice bloques ‘avanzar’ dentro de uno ‘repetir’?
+      2-3 Maze 13: "¡Llévame al cerdo! Solo puedes usar un bloque 'avanzar' esta vez"
       2-3 Maze 15: Usa dos ciclos para hacer que el cerdo use menos bloques.
       2-3 Maze Loops 18: "¡Llévame al girasol!"
-      2-3 Maze Loops 19: "¡Llevemos esto a otro nivel!\n\r\n\r\nUsa las curvas para
-        llevarme al girasol usando el menor número posible de ellas."
-      2-3 Maze Loops Assessment 1: "**Evaluación:** Llévame\nal girasol usando solo
-        5 bloques! "
-      4-5 Artist 1: "Ayúdame a terminar de dibujar mi caja. (Cada línea\ntiene 300
-        píxeles de largo) \r\n\r\n"
+      2-3 Maze Loops 19: |-
+        ¡Llevemos esto a otro nivel!
+
+        Usa bucles para llevarme al girasol con el menor número de bucles posible.
+      2-3 Maze Loops Assessment 1: "**Evaluación:** ¡Llévame al girasol utilizando
+        solo 5 bloques! "
+      4-5 Artist 1: "Ayúdame a terminar de dibujar mi caja. (Cada línea es de 300
+        pixeles de largo)\n\n"
       4-5 Artist 10: Presione "Ejecutar" para probar el código. Luego, repita varias
         veces para completar el dibujo. Los colores serán diferentes cada vez.
-      4-5 Artist 11: "Completa las líneas verdes. \r \n\r\nlas\nlíneas tienen 300
-        píxeles de largo y 15 píxeles de separación."
+      4-5 Artist 11: "Completa la líneas verdes. \n\nLas líneas son de 300 píxeles
+        de largo y están separadas por 15 píxeles."
       4-5 Artist 2: "¿Puedes crear un bucle de código para completar el cuadrado?"
-      4-5 Artist 3.5: "Intenta descubrir qué sucede si\nejecutas este código (o simplemente
-        presiona \"Ejecutar\" y pruébalo). \r\n\r\nLuego, repite el\ncódigo las veces
-        necesarias para completar el dibujo!"
-      4-5 Artist 3: "Esta cama rectangular de flores tiene un perímetro\nde 600. \r\nEl
-        lado largo tiene una longitud de 200. \r\n\r\nDibuja el rectángulo\nusando
-        la menor cantidad de bloques posible."
-      4-5 Artist 4: "¿Cuántos grados hay en un círculo? \r\n\r\nEnlaza\nlos bloques
-        para crear un círculo de colores."
+      4-5 Artist 3.5: "Intenta descubrir que pasa si corres este código (o solo presiona
+        \"Correr\" y pruébalo). \n\nLuego, ¡Repite el código suficientes veces para
+        completar el dibujo!"
+      4-5 Artist 3: "Esta cama de flores rectangular tiene un perímetro de 600. \nEl
+        lado largo tiene una longitud de 200. \n\nDibuja un rectángulo usando el menor
+        número de bloques posibles."
+      4-5 Artist 4: "¿Cuántos grados tiene un circulo? \n\nRepite los bloques para
+        crear un circulo de colores."
       4-5 Artist 5: "¿Qué ángulo utilizas?"
       4-5 Artist 6: Este triángulo equilátero tiene ángulos de 60, 60 y 60 grados.
         Cada lado es de 200 píxeles. Completa el dibujo.
-      4-5 Artist 7: "Este triángulo rectángulo tiene ángulos de 30, 60,\ny 90 grados.
-        La longitud de los lados inclinados (longitud de la hipotenusa) es\n200 píxeles.
-        \r\n\r\nCompleta el dibujo."
-      4-5 Artist 8: "La línea de mitad de un campo de fútbol es * perpendicular *\na
-        los lados. \r\nEste rectángulo tiene un perímetro total de 800 píxeles,\ny
-        tiene 240 píxeles de largo. ¿Qué tan alto es? \r\n\r\nDibuja los límites y
-        la\nlinea central."
-      4-5 Artist 9: "Dibuje la mitad derecha de esta imagen para que\nel diseño sea
-        simétrico \r\nLos triángulos son equiláteros y tienen lados\nque tienen 50
-        píxeles de largo."
+      4-5 Artist 7: |-
+        Este triángulo rectángulo tiene ángulos de 30, 60 y 90 grados. El lado inclinado tiene una longitud de 200 píxeles (la longitud de la hipotenusa).
+
+        Completa el dibujo.
+      4-5 Artist 8: "La línea del centro en un campo de fútbol es *perpendicular*
+        a los lados. \nEste rectángulo tiene un perímetro de 800 píxeles en total,
+        y tiene una longitud de 240 píxeles. ¿Cuál se su altura? \n\nDibuja los bordes
+        y la línea del centro."
+      4-5 Artist 9: "Dibuja la mitad derecha de esta imagen para que diseño sea simétrico.
+        \nLos triángulos son equilateros y tienen lados de 50 pixeles de largo."
       4-5 Artist Assessment 1: |-
         ** Evaluación: ** Use un circuito para
         dibujar el triángulo equilátero. Cada lado tiene 300 píxeles.
@@ -541,9 +555,8 @@ es-MX:
         arrastrar en un nuevo botón. Posicionar y redimensionarlo. Luego configure
         su `\" texto \"`,\n`\" color de fondo \"`, y `\" tamaño de fuente \"\r`\n\r\n**Muéstrame:** "
       Artist Autorun Test: Usa el bloque "repetir" para dibujar estos 3 cuadrados.
-      Bergeron Robot Maze1: "¿Puedes ayudarme a atrapar el cerdo\nrevoltoso? \r\n\r\njunta
-        un par de bloques `adelante 'debajo del` cuando se ejecute`\nbloquea y presiona
-        \"Ejecutar\". "
+      Bergeron Robot Maze1: "¿Me puedes ayudar a atrapar a este cerdo travieso?\n\nApila
+        un par de bloques de 'avanzar' debajo del de 'mientras corre' y presiona 'Correr'. "
       CSD U3 - conditionals - arrows and gears: "# Engranajes con Condicionales\r\n\r\nVamos
         a\nhacer girar los engranajes solo cuando la tecla de espacio se mantiene
         presionada.\r\n\r\n# Hagamos\nEsto\r\n\r\n* Agregar una instrucción `if`.\r\n*
@@ -992,6 +1005,79 @@ es-MX:
         ¿Qué sucede si usas dos ángulos diferentes en el patrón del escalón de tu
         escalera?\r\n- ¿Qué sucede si haces el patrón de tu diamante más largo o más
         corto?\r\n-¿Cómo luce al dibujar dos copos de nieve uno encima del otro?\r?\n"
+      Dance_Party_01: |-
+        *¡Hagamos una fiesta!*
+
+        Arrastra el bloque de 'Crear nuevo' en el espacio de trabajo y conéctalo dentro del bloque de 'instalación' para crear tu primer bailarín.
+
+        * *También puedes hacer clic en el foco a la izquierda si deseas más información o retos extra.*
+      Dance_Party_01_low: |-
+        *¡Hagamos una fiesta!*
+
+        Arrastra el bloque de 'Crear nuevo' en el espacio de trabajo y conéctalo dentro del bloque de 'instalación' para crear tu primer bailarín.
+
+        * *También puedes hacer clic en el foco a la izquierda si deseas más información o retos extra.*
+      Dance_Party_02: |-
+        ¡Vamos a bailar!
+
+        Arrastra el bloque <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> en el espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. El bailarín debería comenzar un nuevo movimiento después de la cuarta medida.
+
+
+        Las **Medidas** se utilizan para contar el tiempo en la música. En este tutorial, una medida son cuatro tiempos.
+      Dance_Party_03: |-
+        *¡Ya estamos entrando en ritmo!*
+
+        Añade un bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> a tu espacio de trabajo. Haz que el bailarín comience un nuevo movimiento después de 6 medidas.
+      Dance_Party_04: |-
+        *¡Este baile necesita algunas luces! *
+
+        Busca un bloque nuevo en la caja de herramientas que agregue un efecto de fondo detrás de tu bailarín. ¡Mira como los efectos cambian con la música!
+      Dance_Party_05: |-
+        Usa un nuevo bloque para hacer que el bailarín cambie los movimientos ¡**Cada 2 medidas**!
+
+        *Al elegir '(siguiente)', '(anterior)' o '(al azar)' harás que el bailarín realice un movimiento distinto cada vez que se ejecuta el código.
+      Dance_Party_06: |-
+        *¡Necesitamos más bailarines! *
+
+        Crea un bailarín llamado 'backup_dancer1' para que baile con el gato.
+      Dance_Party_08: |-
+        Cada bailarín tiene su conjunto de _properties_ que controlan como se ve.
+
+        Puedes hacer parecer que un bailarín se encuentre en el fondo haciendo su _size_ más pequeño. ¿Puedes hacer que ambos bailarines sean del mismo tamaño?
+      Dance_Party_09: |-
+        Los bailarines tienen una propiedad de "tinte" que puede añadir una capa de color. Trata de cambiar el color de uno de tus bailarines.
+        * Los tintes mezclan el color que elijas con los colores del bailarín.
+      Dance_Party_10: |-
+        Ahora sabemos cómo cambiar las propiedades de un bailarín. También podemos hacer que estas mismas propiedades respondan automáticamente a la música con este bloque:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Este programa utiliza el volumen del "bajo" de la música (los sonidos profundos) para controlar la altura de un bailarín. ¿Puedes hacer que el otro bailarín también responda a la música?
+      Dance_Party_11.5: |-
+        Echa un vistazo a este bloque:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        ¡Ahora puedes crear un grupo de bailarines con un solo movimiento!
+
+        Trata de usar algunos de los bloques de "todos los patos" para escribir el código que hará que todos los patos bailen juntos.
+      Dance_Party_11: |-
+        El bloque <xml><block type="Dancelab_whenKey"></block></xml> le permite ejecutar el código cuando se presiona la flecha hacia arriba.
+
+        Puedes cambiar el movimiento del baile, cambiar las propiedades de un bailarín o hacer un movimiento rápido solo una vez. ¡Se creativo y busca nuevos bloques!
+      Dance_Party_11b: "¡Es hora de bailar! El gato se mueve cuando presionas la tecla
+        de flecha izquierda. Hace el “paso del robot” cuando presionas la tecla de
+        flecha derecha."
+      Dance_Party_12: "¡Vamos baila! Crea tu propio baile para compartir con tus amigos."
       Fish Tank 5-validated_simple: El pez quiere un amigo. Agrega un nuevo sprite.
       Function intro Ryan: "Una **función** llamada \"Construye puente\" se encuentra
         en tu área de trabajo.  ¡Incluye todo el código que necesitas para cruzar
@@ -1033,6 +1119,18 @@ es-MX:
       HOC 2018 Level_9b: "Lograste llegar al arrecife, ¡ahora busca el **Corazón del
         Mar** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
         Usa el coral azul y rojo para llegar al **cofre** del tesoro ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
+      HOC Dance 4_draft: |-
+        Usa un nuevo bloque para hacer que el bailarín cambie los movimientos ¡**Cada 2 medidas**!
+
+        *Al elegir '(siguiente)', '(anterior)' o '(al azar)' harás que el bailarín realice un movimiento distinto cada vez que se ejecuta el código.
+      HOC Dance 5_draft: |-
+        *¡Necesitamos más bailarines! *
+
+        Crea un bailarín llamado 'backup_dancer1' para que baile con el gato.
+      HOC Dance 9_draft: |-
+        El bloque <xml><block type="Dancelab_whenKey"></block></xml> le permite ejecutar el código cuando se presiona la flecha hacia arriba.
+
+        Puedes cambiar el movimiento del baile, cambiar las propiedades de un bailarín o hacer un movimiento rápido solo una vez. ¡Se creativo y busca nuevos bloques!
       K-1 Bee Loops 2: "¡Utiliza un enlace para moverte y obtener el néctar y hacer
         miel!"
       K-1 Bee Loops 3: "¡Utiliza enlaces para obtener néctar y para hacer miel!"
@@ -5149,10 +5247,10 @@ es-MX:
         herramientas ¡para ver qué hacen!"
       grade2_PuppyLoops_10: Mi molinillo de viento no está terminado. ¿Cuántas veces
         necesito repetir para terminarlo?
-      grade2_PuppyLoops_2: "Subitamente, aparece un bloque mágico! Con\nel bloque
-        `repetir`, puede repetir el código una y otra vez.\r\n\r\nPuedes llegar a\nel
-        cerdo creando un circuito que usa solo un bloque `adelante' en el interior\nde
-        una 'repetición'?"
+      grade2_PuppyLoops_2: |-
+        De repente, ¡un bloque mágico aparece! Con el bloque 'repetir', tú puedes repetir el código una y otra vez.
+
+        ¿Puedes llegar al cerdo creando un bucle que solo utilice bloques ‘avanzar’ dentro de uno ‘repetir’?
       grade2_PuppyLoops_4: Usa dos ciclos para hacer que el cerdo use menos bloques.
       grade2_PuppyLoops_8: 'El código para los tres bigotes que ves es incorrecto.
         Sugerencia: cada bigote tiene 75 píxeles de largo. Repara este código para
@@ -5166,10 +5264,10 @@ es-MX:
       grade2_playlab_project_3: "¿Puedes hacer que Waddles (actor 1) diga \"¡auch!\"
         y reproduzca un sonido de \"golpe\" si se encuentra con Chomp? \r\n\r\nCuando
         estes listo, juega el juego para hacer que eso suceda.\r\n\r\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
-      grade2_puppy_loops2: "Subitamente, aparece un bloque mágico! Con\nel bloque
-        `repetir`, puede repetir el código una y otra vez.\r\n\r\nPuedes llegar a\nel
-        cerdo creando un circuito que usa solo un bloque `adelante' en el interior\nde
-        una 'repetición'?"
+      grade2_puppy_loops2: |-
+        De repente, ¡un bloque mágico aparece! Con el bloque 'repetir', tú puedes repetir el código una y otra vez.
+
+        ¿Puedes llegar al cerdo creando un bucle que solo utilice bloques ‘avanzar’ dentro de uno ‘repetir’?
       grade2_puppy_loops3: "*\"¡Llevame al cerdo!\"*\r\n\r\n¡Solucione este rompecabezas
         creando un bucle!"
       grade2_puppy_loops4: Usa dos ciclos para hacer que el cerdo use menos bloques.
@@ -5212,9 +5310,8 @@ es-MX:
       grade3_Conditionals_10: 'Recoge néctar y haz miel. Pista: ¿Qué ocurre si usas
         el condicional "Si néctar" en una flor roja? ¿Puedes completar esto con un
         bucle (loop)?'
-      grade3_Conditionals_11 BAD: |-
-        ** Evaluación: ** Use un bucle `siempre que`
-        para recoger todo el néctar de estas flores.
+      grade3_Conditionals_11 BAD: "**Evaluación:** Usa el bucle 'while' para recolectar
+        todo el nectar de las flores."
       grade3_Conditionals_11: "Vamos a juntar todo!\r\n\r\nUsa lo aprendido para ayudarme
         a recolectar néctar sólo de las flores con néctar, utiliza el menor número
         de bloques posible.  \r\n\r\nNo olvides hacer miel al final."
@@ -5251,10 +5348,13 @@ es-MX:
         para hacer toda la miel."
       grade3_Debugging_9: Estos bloques realmente me molestan. Corregir el (los) error(es)
         para recoger todo el néctar y hacer todo de la miel.
-      grade3_Loops_10: "¡Una abeja tan ocupada!\n\r\nAyuda a Abeja a recolectar todo
-        el néctar y hacer toda la miel con la menor cantidad de bloques posible."
-      grade3_Loops_11: "La forma de este camino es diferente de los demás. \r\n\r\n¿Puedes
-        recolectar todo el néctar usando la menor cantidad de bloques posible?"
+      grade3_Loops_10: Ayuda a la abeja a recolectar todo el nectar y haz toda la
+        miel con el menor número de bloques posible.
+      grade3_Loops_11: |-
+        La forma de este camino es diferente a los demás.
+
+
+        ¿Puedes recolectar todo el nectar usando el menor número de bloques posible?
       grade3_Loops_3: "¿Podrías utilizar un ciclo para recolectar todo el néctar?"
       grade3_Loops_4: Ahora usa el nuevo bloque repeat para recolectar todo el néctar
         y hacer toda la miel.
@@ -5283,19 +5383,18 @@ es-MX:
         para ver si hay una flor bajo la nube. Si hay una flor, saca néctar."
       grade3_bee_conditionals_quantum2: La abeja sólo quiere néctar ahora. Recuerda
         que no todos los objetos son flores, recoge néctar solamente de las flores.
-      grade3_maze_Loop1: "**Evaluación:** Llévame\nal girasol usando solo 5 bloques! "
+      grade3_maze_Loop1: "**Evaluación:** ¡Llévame al girasol utilizando solo 5 bloques! "
       grade3_maze_loops2: "¡Llévame al girasol!"
       grade3_maze_loops2a: "*\"¡Zombie ambriento!\"*\r\n\r\nLleva al zombie hasta
         el usando la menor cantidad de bloques posible."
       grade3_maze_loops3: "*\"¡Debo comer girasol!\"*\r\n\r\nLleva al zombie hasta
         el girasol sólo usando los bloques disponibles."
-      grade3_maze_nestedLoops2: "Subitamente, aparece un bloque mágico! Con\nel bloque
-        `repetir`, puede repetir el código una y otra vez.\r\n\r\nPuedes llegar a\nel
-        cerdo creando un circuito que usa solo un bloque `adelante' en el interior\nde
-        una 'repetición'?"
-      grade3_maze_nestedLoops3: |-
-        Llévame al cerdo! tu solo puedes usar un
-        bloque de `avanzar`en esta oportunidad
+      grade3_maze_nestedLoops2: |-
+        De repente, ¡un bloque mágico aparece! Con el bloque 'repetir', tú puedes repetir el código una y otra vez.
+
+        ¿Puedes llegar al cerdo creando un bucle que solo utilice bloques ‘avanzar’ dentro de uno ‘repetir’?
+      grade3_maze_nestedLoops3: "¡Llévame al cerdo! Solo puedes usar un bloque 'avanzar'
+        esta vez"
       grade3_maze_nestedLoops4: Usa dos ciclos para hacer que el cerdo use menos bloques.
       grade4_arist_nested_loop_flags1: haz un bucle con el código dado para crear
         un molino de viento.
@@ -5452,8 +5551,8 @@ es-MX:
         la línea punteada utilizando los bloques Salta y Dibuja.
       grade4_review_bee1: Ahora usa el nuevo bloque repeat para recolectar todo el
         néctar y hacer toda la miel.
-      grade4_review_bee3: "¡Una abeja tan ocupada!\n\r\nAyuda a Abeja a recolectar
-        todo el néctar y hacer toda la miel con la menor cantidad de bloques posible."
+      grade4_review_bee3: Ayuda a la abeja a recolectar todo el nectar y haz toda
+        la miel con el menor número de bloques posible.
       grade4_scaffolded_project6: "¡Has terminado! Ahora puedes jugar tu juego o compartirlo
         con tus amigos o compañeros!"
       grade5_artist_for_loops1: 'Dibuje este triángulo que tiene un tamaño de 50 píxeles.
@@ -5568,17 +5667,22 @@ es-MX:
         una tormenta de hielo! \r\nCmabia la escena a un fondo helado y establece
         la velocidad de Sid (actor 1) en rápido.\r\nPresiona \"Ejecutar\" y mueve
         a Sid hacia Diego para que le advierta."
-      level 'grade3_Loops_10: "¡Una abeja tan ocupada!\n\r\nAyuda a Abeja a recolectar
-        todo el néctar y hacer toda la miel con la menor cantidad de bloques posible."
-      level 'grade3_Loops_11: "La forma de este camino es diferente de los demás.
-        \r\n\r\n¿Puedes recolectar todo el néctar usando la menor cantidad de bloques
-        posible?"
+      level 'grade3_Loops_10: Ayuda a la abeja a recolectar todo el nectar y haz toda
+        la miel con el menor número de bloques posible.
+      level 'grade3_Loops_11: |-
+        La forma de este camino es diferente a los demás.
+
+
+        ¿Puedes recolectar todo el nectar usando el menor número de bloques posible?
       level 'grade3_Loops_3: "¿Podrías utilizar un ciclo para recolectar todo el néctar?"
       level 'grade3_Loops_4: Ahora usa el nuevo bloque repeat para recolectar todo
         el néctar y hacer toda la miel.
-      level 'grade3_Loops_5: "Que hermoso campo de flores! \r\n\r\nAyuda\na la abeja
-        a visitar cada uno.\r\n\r\nPuedes conseguir la manera de hacerlo con menos
-        de 7 bloques?"
+      level 'grade3_Loops_5: |-
+        ¡Qué hermoso  campo de flores!
+
+        Ayuda a la abeja a visitar cada uno.
+
+        ¿Puedes encontrar un camino para hacerlo en menos de 7 bloques?
       level 'grade3_Loops_6: "¿Qué pasa si haces un ciclo con esta secuencia 3 veces?
         ¡No olvides hacer la miel al final!"
       level 'grade3_Loops_7: 'Cada flor contiene una unidad de néctar. Recolecta néctar

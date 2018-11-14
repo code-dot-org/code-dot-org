@@ -1602,6 +1602,8 @@ sq:
           stages:
             Artist:
               name: Artisti
+        aquatic:
+          title: 'Minecraft: Udhëtimi ujor'
         coursef-2019:
           stages:
             Building a Foundation:

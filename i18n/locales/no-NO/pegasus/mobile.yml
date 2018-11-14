@@ -1423,7 +1423,9 @@
   google_sign_in_instruct: 'Derfra bør de velge alternativet "Logg på med Google-kontoen":'
   hero_name: 'Minecraft: Heltens reise'
   applab-intro_name: Lab-intro til appen
+  applab_tile_start_tutorial: "Start"
   account_sign_up_email_opt_in: "Kan vi sende deg nyheter om kursene våre, lokale jobbmuligheter eller andre IT-relaterte nyheter?"
+  hoc_overview_start_tutorial: "Start"
   hoc2018_creativity_create: "Opprett"
   hoc2018_mc_page_title: "Minecraft Kodetime-oppgaver"
   hoc2018_mc_details: "Mange språk | Moderne nettlesere og nettbrett | 2. klasse og oppover"
@@ -1462,5 +1464,5 @@
   hoc2018_dance_party_button: "Start"
   hoc2018_dance_teacher_resources_tile1_button: "Oppgaveplan"
   hoc2018_dance_teacher_resources_tile2_button: "Frakoblet Aktivitet"
-  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "Lær mer"
-  hoc2018_dance_amazon_apply_now_button_text: "Søk nå"
+  hoc2018_dance_amazon_about_future_engineer_button: "Lær mer"
+  hoc2018_dance_amazon_scholarship_programs_button: "Søk nå"
