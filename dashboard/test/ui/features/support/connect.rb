@@ -15,7 +15,7 @@ def slow_browser?
   ['iPhone', 'iPad'].include? ENV['BROWSER_CONFIG']
 end
 
-def saucelabs_browser
+def saucelabs_browser(test_run_name)
   if CDO.saucelabs_username.blank?
     raise "Please define CDO.saucelabs_username"
   end
@@ -36,7 +36,8 @@ def saucelabs_browser
 
   capabilities[:javascript_enabled] = 'true'
   capabilities[:tunnelIdentifier] = CDO.circle_run_identifier if CDO.circle_run_identifier
-  capabilities[:name] = ENV['TEST_RUN_NAME']
+  capabilities[:name] = test_run_name
+  capabilities[:tags] = [ENV['GIT_BRANCH']]
   capabilities[:build] = CDO.circle_run_identifier || ENV['BUILD']
   capabilities[:idleTimeout] = 600
 
@@ -81,27 +82,27 @@ def saucelabs_browser
   browser
 end
 
-def get_browser
+def get_browser(test_run_name)
   if ENV['TEST_LOCAL'] == 'true'
     # This drives a local installation of ChromeDriver running on port 9515, instead of Saucelabs.
     SeleniumBrowser.local_browser
   else
-    saucelabs_browser
+    saucelabs_browser test_run_name
   end
 end
 
 browser = nil
 
-Before do
+Before do |scenario|
   puts "DEBUG: @browser == #{CGI.escapeHTML @browser.inspect}"
 
   if slow_browser?
-    browser ||= get_browser
+    browser ||= get_browser ENV['TEST_RUN_NAME']
     p 'slow browser, using existing'
     @browser ||= browser
   else
     p 'fast browser, getting a new one'
-    @browser = get_browser
+    @browser = get_browser "#{ENV['TEST_RUN_NAME']}_#{scenario.name}"
   end
   @browser.manage.delete_all_cookies
 
