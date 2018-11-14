@@ -1608,6 +1608,7 @@ he:
           stages:
             Dance Party:
               name: מסיבת ריקודים
+          title: מסיבת ריקודים
         frozen-2018-test-b:
           stages:
             Artist:
@@ -1634,3 +1635,7 @@ he:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
               name: לולאות עבור עם האמן
+        dance-low:
+          stages:
+            Dance Party:
+              name: מסיבת ריקודים

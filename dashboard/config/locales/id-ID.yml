@@ -161,6 +161,7 @@ id:
     field_is_required: diperlukan
     accept_terms: Anda menyetujui untuk membuat akun
     error: Sebuah kesalahan terjadi.
+    email_preference_privacy: "(Lihat kebijakan privasi)"
     email_preference_yes: Ya
     email_preference_no: Tidak
   school_info:

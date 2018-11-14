@@ -18,6 +18,7 @@ bg:
       messages:
         blank: е задължително
         blank_plural: са задължителни
+        invalid: е невалиден
         invalid_plural: са невалидни
     attributes:
       user:

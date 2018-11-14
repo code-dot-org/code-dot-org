@@ -40,6 +40,14 @@ sl:
           PROPERTY:
             '"scale"': velikost
             '"height"': višina
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekund(e)
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': sekund(e)
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -68,11 +76,29 @@ sl:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"random"': naključno
       Dancelab_randomColor:
         text: naključna barva
       Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
         options:
           SPEED:
             '1': normal
@@ -109,10 +135,11 @@ sl:
         options:
           KEY:
             '"up"': gor
-            '"down"': dol
             '"left"': levo
+            '"down"': dol
             '"right"': desno
             '"space"': vesolje
+            '"x"': x
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -284,15 +311,35 @@ sl:
           DIR:
             "'ahead'": spredaj
       craft_ifStandingOn:
+        text: |-
+          če stojiš na {TYPE}
+          {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": moder koral
+            "'redCoralBlock'": rdeč koral
             "'sand'": pesek
+            "'wool_blue'": globoka voda
             "'planksOak'": hrastove deske
+            "'seaLantern'": morska svetilka
       craft_ifStandingOnLimit:
+        text: |-
+          če stojiš na {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": pesek
+            "'darkPrismarine'": temen prismarin
+            "'seaLantern'": morska svetilka
       craft_moveForward:
         text: premakni se naprej
+      craft_placeBlock:
+        options:
+          blockType:
+            '"prismarine"': prismarin
+            '"darkPrismarine"': temen prismarin
+            '"seaLantern"': morska svetilka
+      craft_placePrismarine:
+        text: svetel prismarin
       craft_placeTorch:
         text: postavi baklo

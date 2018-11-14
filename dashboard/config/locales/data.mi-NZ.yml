@@ -694,6 +694,10 @@ mi:
         mc_2016_congrats: Hour of Code Mahimaina - Kupu Whakamiha
         mc_2017_congratulations: Hour of Code Mahimaina - Kupu Whakamiha
         CSF_loops_AB: Ngā Koromeke
+        mc_2018_intro: 'Toihuke: Rerenga Moana Timatanga kōrero'
+        MC_2018_loops: 'Toihuke: Rerenga Moana Wakahoutia tonu ake'
+        mc_2018_conditionals: 'Toihuke: Rerenga Moana Nga Tikanga'
+        mc_2018_closing: 'Toihuke: Rerenga Moana Ngaa Mihi'
     callout:
       text:
         drag_blocks: Tōia tētahi paraka "neke", kātahi me hoatu ki raro i tērā atu

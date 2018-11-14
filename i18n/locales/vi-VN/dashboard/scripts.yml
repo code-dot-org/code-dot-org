@@ -4687,6 +4687,8 @@ vi:
           stages:
             Artist:
               name: Họa sĩ
+        aquatic:
+          title: 'Minecraft Chuyến thám hiểm đại dương'
         coursef-2019:
           stages:
             Building a Foundation:

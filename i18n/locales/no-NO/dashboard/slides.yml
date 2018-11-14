@@ -268,7 +268,7 @@
       8:
         text: "Her sier \"flytt fremover\"-blokken \"flytte frem 100 piksler.\" Hva skjer når vi trykker \"Kjør\"? Da flytter Elsa fram en bestemt lengde på skjermen, 100 piksler faktisk! Piksler er små firkantede punkter på dataskjermen."
       9:
-        text: "Den andre blokken vi har i her sier \"snu 90 grader til høyre\". Når vi bruker denne \"snu til høyre\"-blokken, får det Elsa til å snu seg. Du kan prøve ut hvor mye du vil at Elsa skal snu. Vinkelen måles fra rett foran Elsa. Så dette er en 90 graders sving. Og dette er en 120 graders sving."
+        text: "Den andre blokken vi har her sier \"snu 90 grader til høyre\". Når vi bruker denne \"snu til høyre\"-blokken, får det Elsa til å snu seg. Du kan prøve hvor mye du vil at Elsa skal snu. Vinkelen måles fra rett foran Elsa. Så dette er en 90 graders sving. Og dette er en 120 graders sving."
       10:
         text: "Husk på at du kan endre antall piksler og grader ved å klikke på pilene ved siden av dem."
     frozen_loops:
@@ -290,13 +290,13 @@
       3:
         text: "Når du har lært en datamaskin hvordan den skal gjøre en handling en gang ved bruk av denne rekkefølgen av kommandoer så kan du navngi den handlingen selv, slik at det er lett å gjenta den senere. Når du definerer dine egne kommandoer og gir dem navn kalles det en funksjon."
       4:
-        text: "Hei, jeg heter Jess. Når du programmerer med blokker bruker du funksjoner som er et sett med handlinger du vil gjøre mange ganger. For eksempel har du skrevet kode for å lage en firkant."
+        text: "Hei, jeg er Jess. Når du programmerer med blokker bruker du funksjoner hvis det er et sett med handlinger du vil gjøre mange ganger. For eksempel har du skrevet kode for å lage en firkant."
       5:
-        text: "Du kan definere dette som en funksjon som heter \"opprett en firkant\" "
+        text: "Du kan definere dette som en funksjon kalt \"opprett en firkant\" "
       6:
         text: "Nå har du en ny blokk som du kan bruke flere ganger for å opprette flere ruter."
       7:
-        text: "Mange enkle figurer kan brukes til å lage mer komplekse mønstre. I den neste gåten vil koden du nylig skrev for å lage en sirkel være tilgjengelig som en ny funksjon som kan lage sirkler i forskjellige størrelser. Kan du bruke den for å hjelpe Elsa til å opprette komplekse og vakre mønstre i snøen?"
+        text: "Mange enkle figurer kan brukes til å lage mer komplekse mønstre. I den neste gåten vil koden du nylig skrev for å lage en sirkel være tilgjengelig som en ny funksjon som kan lage sirkler i forskjellige størrelser. Kan du bruke den for å hjelpe Elsa opprette komplekse og vakre mønstre i snøen?"
     playlab_intro:
       1:
         text: "Vi skal lage spill ved bruk av Spill Lab. Gode spill har en historie og hver historie har figurer. Vi skal lære hvordan vi får våre figurer, som hekser, romvesner og dyr, til å snakke, bevege seg og samhandle med hverandre. Ved slutten av denne oppgaven kan du bygge et spill fra bunnen av og dele det med dine venner."
@@ -463,7 +463,7 @@
         text: "Jeg fikk hunden til å komme og så \"Hei\", men katten ble så redd at den løp sin vei. \"Ahh\". Om jeg bare fikk en sjanse til, så kunne det ha endt lykkelig. Snipp snapp snute!"
     C1_spelling_bee_intro:
       1:
-        text: "Dette er nivået med den stavende bien. Bruk puslespillbitene til å flytte bien. Den vil samle bokstaver og stave mens den beveger seg."
+        text: "Dette er nivået til den stavende bien. Bruk puslespillbitene til å flytte bien. Den vil samle bokstaver og stave mens den beveger seg."
       2:
         text: "Se om du kan stave ordet vi gir deg i boksen under scenen. Men vær forsiktig! Om du flytter feil får du uønskede bokstaver."
     C1_zuck_repeat_loop:
@@ -512,7 +512,7 @@
       3:
         text: "Betingelser brukes i spill også. I dag skal vi øve oss på å bruke betingelser i et kortspill. I dette spiller bestemmer kortet jeg trekker hva vennene mine skal gjøre. Hvis jeg trekker syv skal alle klappe. Hvis ikke skal alle si \"awww\". La oss prøve det!"
       4:
-        text: "I vedder på at du kan lage spill som er enda artigere med betingelser. Prøv det! Betingelser er det som gjør at datamaskiner virker smarte. Et dataprogram som har betingelser kan gjøre forskjellige ting ut fra hva brukeren gjør."
+        text: "Jeg vedder på at du kan lage spill som er enda artigere med betingelser. Prøv det! Betingelser er det som gjør at datamaskiner virker smarte. Et dataprogram som har betingelser kan gjøre forskjellige ting ut fra hva brukeren gjør."
       5:
         text: "Tenk på ditt favorittspill. Hender det at du får flere poeng for når du gjør spesielle ting? Dette er fordi datamaskinen bruker betingelser. Betingelser er måten datamaskinen tar avgjørelser. Hva med at hvis du treffer målet får du ti poeng. Hvis ikke mister du tre. Når du vet hvordan betingelser fungerer kan du lage all slags spennende spill."
     C2_artist_debugging:
@@ -547,7 +547,7 @@
         text: "Hver gang du går online legger du igjen et fotavtrykk som kan søkes fram, kopieres, deles, spres og som er permanent. Hva slags digitalt fotavtrykk legger du igjen? Hva slags digitalt fotavtrykk ønsker du å legge igjen?"
     C2_graph_paper:
       1:
-        text: "Denne leksjonen kalles \"rutepapirprogrammering\", og det handler om algoritmer. I dag skal vi lære hvordan man skriver programmer sm viser hverandre hvordan man gjenskaper enkle svart-hvitt-bilder, bare ved å bruke håndtegnede piler."
+        text: "Denne leksjonen kalles \"rutepapirprogrammering\", og det handler om algoritmer. I dag skal vi lære hvordan man skriver programmer som viser hverandre hvordan man gjenskaper enkle svart-hvitt-bilder, bare ved å bruke håndtegnede piler."
       2:
         text: "En algoritme er en liste med instruksjoner for å gjennomføre en oppgave. Vi kommer til å følge dette settet med instruksjoner for å lage bollen. Algoritmer er skikkelig nyttige når du trenger å vise noen andre hvordan de skal gjøre noe."
       3:

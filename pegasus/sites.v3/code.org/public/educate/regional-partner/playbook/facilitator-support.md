@@ -55,7 +55,7 @@ ________________
 <a id="recruitment"></a>
 ## Facilitator Recruitment Resources
 
-- [2018-2019 (CURRENT) Facilitator Application Process Doc] (https://docs.google.com/document/d/11-I1qsTrvODrZgKDNP2frGLrMjmUb-C9ChOt7nbqV2Y/edit#)
+- [2019-2020 Facilitator Application Process Doc] (https://docs.google.com/document/d/1c6wXrVZ0u4yjV1eJg2INzqacvZV71hwfIxWIQHCM9_I/edit)
 - [Facilitator Program Page](https://code.org/facilitator) - General webpage to share with potential facilitators
 - [Facilitator Development Program Overview](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit#heading=h.psnytlkvnqcd)
 - [K-12 Facilitator Qualifications and Rubric](https://docs.google.com/document/d/14yKszp5_eYiTgZ4t8KpDTi2cBB4wd5SGxCV-a_eE6c8/edit) - Guide for recruitment

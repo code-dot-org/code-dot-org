@@ -695,6 +695,17 @@ pt:
       Food Fight!: "Adicionamos uma última função para\nque você use. Programe seu jogo para chamar a função \"suba de nível\" se \"pontos_jogador\"\n> 10. Jogue o jogo e passe do nível 4 para seguir para o próximo desafio."
       Function intro Ryan: Utiliza a função "construir ponte" duas vezes para criar um caminho até à tocha.
       Function intro Ryan_2019: Utiliza a função "construir ponte" duas vezes para criar um caminho até à tocha.
+      HOC 2018 Level_1: Coleciona um barco do baú.
+      HOC 2018 Level_10: Vai até à entrada deste Monumento do Oceano.
+      HOC 2018 Level_11: 'Constrói um canal com Prismarine dentro do Monumento do Oceano.'
+      HOC 2018 Level_12: 'Cria o teu próprio ambiente subaquático, as decisões são tuas!'
+      HOC 2018 Level_2: 'Vai até ao final do cais.'
+      HOC 2018 Level_3: 'Navega os mares por bacalhau.'
+      HOC 2018 Level_4: Utiliza uma argola para chegar ao golfinho.
+      HOC 2018 Level_5: Explora o navio encalhado para chegar ao baú.
+      HOC 2018 Level_6: Navega pelo gelo para chegar ao salmão.
+      HOC 2018 Level_7a: Revista estas ruínas subaquáticas para encontrar um baú.
+      HOC 2018 Level_9b: 'Utiliza o coral como pontos de passagem para chegar ao tesouro.'
       Infinity_catch: "Você pode fazer Elsa (\"personagem 2\") alcançar\nAnna usando as setas do teclado?"
       Infinity_finale: Crie o que quiser e compartilhe!
       Infinity_move_collide: "Hiro é o \"personagem 1\". Mova-o em direção a\nBaymax e reproduza um som quando eles se tocarem."

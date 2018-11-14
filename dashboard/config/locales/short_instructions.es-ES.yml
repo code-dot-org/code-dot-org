@@ -1592,6 +1592,32 @@ es:
       Crack Random Substitution_2018: Instrucciones
       Crack a Caesar Cipher: Instrucciones
       Crack a Caesar Cipher_2018: Instrucciones
+      Dance_Party_01: Arrastra el bloque «hacer uno nuevo» al espacio de trabajo y
+        conéctalo dentro del bloque «establecer».
+      Dance_Party_01_low: Arrastra el bloque «hacer uno nuevo» al espacio de trabajo
+        y conéctalo dentro del bloque «establecer».
+      Dance_Party_02: "¡Haz que el alce inicie un movimiento nuevo después de 4 compases!"
+      Dance_Party_03: "¡Ahora haz que el bailarín inicie un movimiento nuevo después
+        de 6 compases!"
+      Dance_Party_04: Añade un efecto de fondo a tu programa.
+      Dance_Party_05: Utiliza otro bloque nuevo para que el bailarín cambie de movimiento
+        cada 2 compases.
+      Dance_Party_06: Crea un bailarín de fondo llamado «bailarín_fondo1» para bailar
+        con el gato.
+      Dance_Party_08: "¿Puedes hacer que ambos bailarines de fondo tengan el mismo
+        tamaño?"
+      Dance_Party_09: Utiliza el bloque «establecer tonalidad» para cambiar el color
+        de un bailarín.
+      Dance_Party_10: Haz que el otro bailarín también responda a la música usando
+        el bloque «comienza siguiente».
+      Dance_Party_11.5: Utiliza los bloques «todos los patos» para que los patos bailen
+        juntos.
+      Dance_Party_11: El bloque «cuando arriba pulsada» te permite ejecutar código
+        cuando la flecha hacia arriba se pulsa. Intenta que el bailarín haga un movimiento
+        rápido cuando pulsas arriba.
+      Dance_Party_11b: Haz que el Robot haga «drop» una vez cuando pulsas la tecla
+        de flecha derecha y haga el baile «floss» una vez cuando pulsas la tecla de
+        flecha hacia arriba. ¡Haz los movimientos drop-floss tan rápido como puedas!
       Fish Tank 5-validated_simple: El pez quiere un amigo. Agrega un nuevo sprite.
       Food Fight!: "Añadimos una última función para\nti. \r\n\r\nUtiliza una sentencia
         \"Si\" para que tu programa llame la funcion \"livel_mas\" solo cuando \"puntuacion_jugador\"
@@ -1602,6 +1628,19 @@ es:
         un camino hasta la antorcha.
       Function intro Ryan_2019: Utiliza la función "construir puente" dos veces para
         abrir un camino hasta la antorcha.
+      HOC 2018 Level_1: Consigue un barco en el cofre.
+      HOC 2018 Level_10: Llega a la entrada de este monumento oceánico.
+      HOC 2018 Level_11: Construye un conducto con prismarina dentro del monumento
+        oceánico.
+      HOC 2018 Level_12: Diseña tu propio entorno subacuático, ¡tú decides qué!
+      HOC 2018 Level_2: Ve hacia el final del muelle.
+      HOC 2018 Level_3: Surca los mares en busca de bacalao.
+      HOC 2018 Level_4: Utiliza un bucle para llegar al delfín.
+      HOC 2018 Level_5: Explora el naufragio hasta llegar al cofre.
+      HOC 2018 Level_6: Navega a través del hielo para llegar al salmón.
+      HOC 2018 Level_7a: Explora las ruinas subacuáticas en busca de un cofre.
+      HOC 2018 Level_9b: Utiliza el coral como punto de ruta para llegar hasta el
+        tesoro.
       Infinity_catch: ¿Puedes hacer que Elsa ("actor2") alcance a Anna utilizando
         las teclas de flecha?
       Infinity_finale: "¡Crea cualquier osa que desees compartir!"
