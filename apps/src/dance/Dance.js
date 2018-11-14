@@ -468,7 +468,7 @@ Dance.prototype.execute = async function () {
   const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
   this.nativeAPI.addCues(timestamps);
 
-  const validationCallback = new Function('World', 'nativeAPI', 'sprites', this.level.validationCode);
+  const validationCallback = new Function('World', 'nativeAPI', 'sprites', 'events', this.level.validationCode);
   this.nativeAPI.registerValidation(validationCallback);
 
   // songMetadataPromise will resolve immediately if the request which populates
