@@ -112,9 +112,9 @@
 
     - if current_user.project_validator?
       %br
-      %div.admin-abuse{ :style => "display: none" }
+      .admin-abuse
         Abuse score:
-        %span.admin-abuse-score
+      %span.admin-abuse-score
         = link_to 'Reset', '#', { class: 'admin-abuse-reset' }
       .admin-report-abuse{ style: 'display: none;' }
         = link_to 'Report Abuse', '/report_abuse'

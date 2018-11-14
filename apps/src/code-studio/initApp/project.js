@@ -275,7 +275,7 @@ var projects = module.exports = {
   /**
    * Sets abuse score to zero, saves the project, and reloads the page
    */
-  adminResetAbuseScore() {
+  adminResetAbuseScore(new_score = 0) {
     var id = this.getCurrentId();
     if (!id) {
       return;
@@ -284,18 +284,20 @@ var projects = module.exports = {
       if (err) {
         throw err;
       }
-      assets.patchAll(id, 'abuse_score=0', null, function (err, result) {
+      assets.patchAll(id, `abuse_score=${new_score}`, null, function (err, result) {
         if (err) {
           throw err;
         }
       });
-      files.patchAll(id, 'abuse_score=0', null, function (err, result) {
+      files.patchAll(id, `abuse_score=${new_score}`, null, function (err, result) {
         if (err) {
           throw err;
         }
-        $('.admin-abuse-score').text(0);
+        $('.admin-abuse-score').text(new_score);
       });
     });
+
+    console.log("abuse score", this.getAbuseScore())
   },
 
   /**
