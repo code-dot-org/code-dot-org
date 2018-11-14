@@ -102,11 +102,11 @@ it:
       per cancellare la tua iscrizione a %{provider}.
     already_signedup: Già iscritto?
     notyet_signedup: Non ti sei ancora iscritto?
-    google_oauth2: Account Google
+    google_oauth2: Google
     twitter: Twitter
     facebook: Facebook
-    windowslive: Account Microsoft
-    microsoft_v2_auth: Account Microsoft
+    windowslive: Microsoft
+    microsoft_v2_auth: Microsoft
     clever: Account Clever
     powerschool: Account Powerschool
     forgot_password: Hai dimenticato la tua password?
@@ -331,7 +331,7 @@ it:
           con successo. Puoi ora accedere con la tua email e password
   nav:
     header:
-      finished_hoc: Ho finito la mia Ora del Codice
+      finished_hoc: Ho finito!
       sign_in_to_save: Accedi per salvare i progressi fatti
       free_play:
         playlab: Costruisci un Gioco nel Laboratorio

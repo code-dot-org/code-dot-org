@@ -21,11 +21,9 @@
 .dance-try-button {
   font-size:18px;
   height:40px;
-  transition: 300ms all;
-}
-
-.dance-try-button:hover {
-  background-color: #FFCC22;
+  background-color: white;
+  border-color: white;
+  color: #4d575f;
 }
 
 .foot-note-text {
@@ -35,8 +33,9 @@
   color: #00adbc;
   text-align: center;
   margin-bottom: 10px;
-  font: 14px/15px 'Gotham 5r', sans-serif;
-  padding: 0 10px;
+  font-family: 'Gotham 5r', sans-serif;
+  line-height: 19px;
+  padding: 5px 10px;
 }
 
 .img-wrapper img {
@@ -122,12 +121,6 @@ a:hover {
     display: block;
   }
 
-  .starwars-container .img-container {
-    min-height: 345px;
-    background: black;
-    border-radius: 5px;
-  }
-
   .sponsor-subtext-description {
     margin-bottom: 45px;
   }
@@ -190,6 +183,10 @@ a:hover {
     float: left;
     width: 50%;
   }
+
+  .img-container img {
+    margin-bottom: 5px
+  }
 }
 
 /* Mobile only */
@@ -199,7 +196,7 @@ a:hover {
   }
 
   .img-container {
-    background: url(/images/fit-1940/dance-hoc/dance_party_landing_main_nophotos.png);
+    background: url(/images/dance-hoc/dance_party_tutorial_hero.png);
     margin: 5px;
     border-radius: 5px;
     background-size: cover;
@@ -214,5 +211,15 @@ a:hover {
 
   .foot-note-text {
     font: 14px/16px 'Gotham 5r', sans-serif;
+  }
+
+  .student_dance_projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .dance-responsive-padding {
+    text-align: center;
   }
 }

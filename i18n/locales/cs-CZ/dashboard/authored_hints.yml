@@ -48,6 +48,10 @@ cs:
       2-3 Artist Debugging 9_authored_hint:
         2-3_Artist_Debugging_9_a: Umělec se potřebuje otočit o 60 stupňů více doleva, než začne kreslit!
         2-3_Artist_Debugging_9_b: K úplnému otočení není potřeba přidat další blok. Stačí přidat 60 stupňů do bloku `otočit vlevo`, který už tam je!
+      2-3 Artist Functions 3 a_authored_hint:
+        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Artist Functions 3_authored_hint:
+        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
           Vzpomeňte si, že kód z předchozí hádanky byl:

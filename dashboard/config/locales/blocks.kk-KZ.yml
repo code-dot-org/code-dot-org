@@ -40,6 +40,14 @@ kk:
           PROPERTY:
             '"scale"': шама
             '"height"': биіктік
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -68,11 +76,29 @@ kk:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"random"': кездейсоқ
       Dancelab_randomColor:
         text: кездейсоқ түс
       Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
         options:
           SPEED:
             '1': normal
@@ -109,10 +135,11 @@ kk:
         options:
           KEY:
             '"up"': жоғары
-            '"down"': төмен
             '"left"': солға
+            '"down"': төмен
             '"right"': оңға
             '"space"': кеңестік
+            '"x"': x
       gamelab_changePropBy:
         options:
           PROPERTY:

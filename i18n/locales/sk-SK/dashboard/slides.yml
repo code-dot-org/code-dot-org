@@ -253,7 +253,7 @@ sk:
         text: "Je to ako programovanie s papierom. To je všetko!"
     C1_maze_debugging:
       1:
-        text: "Ladenie je hľadanie a opravovanie problémov. Je veľa spôsobov, ako ladiť problémy. Jedným z najľahších je ísť krok po kroku až kým nenarazíte na niečo problematické. Tu sa snažím spraviť premet vzad na stožiari, no vždy padnem."
+        text: "Hľadanie a odstraňoanie chýb (anglicky DEBUGGING) môžeme robiť rôznymi spôsobmi. Jedným z najľahších je ísť krok po kroku až kým nenarazíš na miesto, kde program funguje inak, ako si plánoval. Tu sa snažím spraviť premet vzad na stožiari, no vždy padnem."
       2:
       3:
       4:
@@ -612,7 +612,7 @@ sk:
         text: "Ach, dobre, ahoj, som teda v skutočnom svete. Idem skúsiť nájst kancelárie Minecraftu."
       6:
         image: 'notes/mc_2017_agent_intro_6.png'
-        text: "Potrebujem ale tvoju pomoc. Začni najprv úvodnou lekciou, nauč sa ako kódovať a o pár levelov neskôr sa stretneme, dobre? Drž mi palce! Myslím si, že toto je správna cesta. Au! Kaktus! Som v poriadku!"
+        text: "Potrebujem ale tvoju pomoc. Začni najprv úvodnou lekciou, nauč sa kódovať a o pár levelov neskôr sa stretneme, dobre? Drž mi palce! Myslím si, že toto je tá správna cesta. Au! Kaktus! Som v poriadku!"
       7:
         image: 'notes/mc_2017_agent_intro_7.png'
         text: "Aby si dokončil výzvu Hodiny Kódu, budeš musieť napísať kód, ktorý naprogramuje Agenta. Spolupracuj s Agentom, aby si odstránil všetky prekážky, a zozbieraj predmety, ktoré budeš potrebovať na svojej ceste. Len Agent môže umiestniť a rozdeliť bloky, a len ty môžeš zbierať predmety. Obrazovka je rozdelená na tri hlavné časti. Na ľavej strane je hracie pole Minecraftu."
@@ -655,7 +655,7 @@ sk:
         text: "V ďalšej úrovni môžeš pomocou cyklov presunúť Agenta popri ceste. Presuň blok \"Opakuj\" do pracovného priestoru a umiestnite blok \"Posuň sa dopredu\" do vnútra bloku \"Opakuj\". Toto informuje počítač, aby opakoval ten istý príkaz veľa krát za sebou, bez toho, aby si musel presunúť celé bloky do pracovného priestoru. Môžeš si vybrať, koľkokrát sa príkaz zopakuje vložením čísla do bloku \"Opakuj\"."
       8:
         image: 'notes/mc_2017_repeat_8.png'
-        text: "Môžeš tiež pridať otočenia a viac príkazov do bloku \"Opakuj\", ale teraz skús použiť príkaz \"Opakuj\" pre posun Agenta dopredu o niekoľko krokov. Nezabúdaj, že ak sa v úlohe zasekneš, môžeš vždy stlačiť modré tlačidlo \"Reset\" a skúsiť to znova."
+        text: "Do bloku \"Opakuj\" môžeš pridať aj otočky a iné príkazy, teraz ale skús blok \"Opakuj\" použiť na to, aby si Agenta posunul o niekoľko krokov dopredu. Nezabúdaj, že ak sa v úlohe zasekneš, môžeš vždy stlačiť modré tlačidlo \"Obnoviť\" a skúsiť to znova."
       9:
         image: 'notes/mc_2017_repeat_9.png'
         text: "Ak uvažuješ o tom, mať úžasnú prácu, ako má Katie, klikni na tlačidlo \"Zobraziť kód\" po dokončení každej úrovne. To ti ukáže skutočný kód naprogramovaný v JavaScripte, ktorý používa Katie, keď programuje Minecraft. Katie: Áno, veľa šťastia!"

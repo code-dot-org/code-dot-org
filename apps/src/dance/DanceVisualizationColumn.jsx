@@ -73,9 +73,9 @@ class DanceVisualizationColumn extends React.Component {
   /*
     Turn the song filter off
   */
-  turnFilterOff() {
+  turnFilterOff = () => {
     this.setState({filterOff: true});
-  }
+  };
 
   /*
     The filter defaults to on. If the user is over 13 (identified via account or anon dialog), filter turns off
@@ -117,7 +117,7 @@ class DanceVisualizationColumn extends React.Component {
       <div>
         {!this.props.isShareView &&
           <AgeDialog
-            turnOffFilter={this.turnFilterOff.bind(this)}
+            turnOffFilter={this.turnFilterOff}
           />
         }
         <span>

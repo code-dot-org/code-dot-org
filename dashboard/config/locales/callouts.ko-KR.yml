@@ -90,6 +90,19 @@ ko:
         arrows_move_actor: 캐릭터를 움직이기 위해 방향키를 사용하세요.
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: 캐릭터를 움직이기 위해 방향키를 사용하세요.
+      Dance_Party_01_callout:
+        dance_callout_01: 이 블록을 프로그램에 추가하세요!
+      Dance_Party_01_low_callout:
+        dance_callout_01: 이 블록을 프로그램에 추가하세요!
+      Dance_Party_02_callout:
+        dance_callout_02: 이 블록을 프로그램에 추가하세요!
+      Dance_Party_04_callout:
+        dance_callout_04: 이 블록을 프로그램에 추가하세요!
+      Dance_Party_06_callout:
+        dance_callout_06: 여기에 새로운 댄서를 추가하세요
+      Dance_Party_11_callout:
+        dance_callout_11_a: 새 블록!
+        dance_callout_11_b: 새 블록!
       Eval Design Recipe .1_callout:
         edit_function: 함수를 수정하기 위해서 여기를 클릭하세요.
       Frozen Project Test Toolbox_callout:

@@ -399,6 +399,7 @@ pt-BR:
       playlab: Laboratório
       minecraft: Minecraft
       flappy: Flappy bird
+      dance: Festa dançante
       view_all: Ver todos os projetos...
     popup:
       progress_for_user: progresso de %{name}'s
@@ -825,6 +826,8 @@ pt-BR:
         funcionar, e então compartilhe seu aplicativo em apenas alguns segundos.
       audience: A partir de 13 anos
       cta: Saiba como
+    dance:
+      title: Festa dançante
     hoc:
       title: Labirinto clássico
       body: Experimente as noções básicas de ciência da computação. Milhões de pessoas

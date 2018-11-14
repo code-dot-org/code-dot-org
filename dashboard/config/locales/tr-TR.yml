@@ -365,6 +365,7 @@ tr:
       playlab: Oyun Laboratuvarı
       minecraft: Minecraft
       flappy: Flappy
+      dance: Dans Partisi
     popup:
       progress_for_user: "%{name}'ın ilerlemesi"
       progress: İlerlemeniz
@@ -746,6 +747,8 @@ tr:
       body_short: " Kod blokları yada JavaScript ile bir uygulama yapın ve paylaşın."
       audience: 13 + Yaş grubu
       cta: Nasıl olduğunu öğren
+    dance:
+      title: Dans Partisi
     hoc:
       title: Klasik Labirent
       body: Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.

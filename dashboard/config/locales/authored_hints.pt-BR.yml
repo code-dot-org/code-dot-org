@@ -3306,6 +3306,10 @@ pt-BR:
           é roxo (rgb = 100,50,150).
         Course_4_SCV_6_d: 'Para o zigue, vire a esquerda por ''360'' / ''sides''.
           Para o zague, vire a direita por  ''360'' / ''sides''. '
+        Course_4_SCV_6_e: 'O restante do programa é bem padrão para fazer rotações
+          de 360 graus de uma forma, porém estamos sobrepondo as formas pela metade,
+          então temos que girar à `180`/`lados`, que significa que precisamos do dobro
+          do usual (`sides`*`2` repetições). '
         Course_4_SCV_6_f: |-
           **Solução:**
 
@@ -3608,6 +3612,205 @@ pt-BR:
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Certifique-se de defininir o número para `velocidade_do_cachorro`
           como sendo maior do que o de `velocidade_do_gato`.
+      Dance short test 2_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Você precisa alterar o efeito do plano de fundo durante o sétimo compasso da música.
+
+          *Esta fase termina após 10 compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          Altere o efeito do plano de fundo em diversas partes da música, conectando o novo bloco aos eventos <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance short test_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Você precisa alterar o efeito do plano de fundo durante o sétimo compasso da música.
+
+          *Esta fase termina após 10 compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          Altere o efeito do plano de fundo em diversas partes da música, conectando o novo bloco aos eventos <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+          *Certifique-se de um(a) dançarino(a) apareça na tela.
+
+          *Esta fase termina após quatro compassos.*
+        challenges: |-
+          **Desafios opcionais**
+          *Escolha uma música diferente para tocar.
+          *Escolha um dançarino(a) diferente que se pareça com um alce!
+          *Renomeie seu(sua) dançarino(a).
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+          *Certifique-se de um(a) dançarino(a) apareça na tela.
+
+          *Esta fase termina após quatro compassos.*
+        challenges: |-
+          **Desafios opcionais**
+          *Escolha uma música diferente para tocar.
+          *Escolha um dançarino(a) diferente que se pareça com um alce!
+          *Renomeie seu(sua) dançarino(a).
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+          *O(a) dançarino(a) precisa fazer um novo passo após quatro compassos.
+
+          *A fase termina após oito compassos.*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Após seis compassos, seu(sua) dançarino(a) precisa executar uma dança diferente da que estava fazendo após o quarto compasso.
+
+          *Esta fase termina após doze compassos.*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Você precisa alterar o efeito do plano de fundo durante o sétimo compasso da música.
+
+          *Esta fase termina após 10 compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          Altere o efeito do plano de fundo em diversas partes da música, conectando o novo bloco aos eventos <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_05_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Seu(sua) dançarino(a) deve executar movimentos diferentes ao longo dos doze primeiros compassos da música.
+
+          *Esta fase termina após 12 compassos.*
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Você precisa ter pelo menos dois dançarinos.
+
+          *Esta fase termina após seis compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          * Adicione um terceiro dançarino (ou quantos você quiser!)
+          * Faça todos os seus dançarinos executarem movimentos diferentes em diversas partes da música.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Dois dançarinos precisam ter um tamanho diferente de 100.
+
+          *Esta fase termina após seis compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          * Experimente alterar outras propriedades (largura, altura, rotação, etc.)
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Altere a tonalidade de pelo menos um(a) dançarino(a).
+
+          *Esta fase termina após oito compassos.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+          *Certifique-se de um(a) dançarino(a) apareça na tela.
+
+          *Esta fase termina após quatro compassos.*
+        challenges: |-
+          **Desafios opcionais**
+          *Escolha uma música diferente para tocar.
+          *Escolha um dançarino(a) diferente que se pareça com um alce!
+          *Renomeie seu(sua) dançarino(a).
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * As propriedades de dois ou mais dançarinos devem mudar.
+
+          *Esta fase termina após oito compassos.*
+      Dance_Party_11.5_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Seja criativo!
+
+          *Esta fase termina após oito compassos.*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Seja criativo!
+
+          *Esta fase termina após oito compassos.*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Use o bloco 'com a seta para a esquerda pressionada' para fazer o robô executar um movimento de dança ao pressioná-la.
+
+          *Esta fase termina após oito compassos.*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+          *O(a) dançarino(a) precisa fazer um novo passo após quatro compassos.
+
+          *A fase termina após oito compassos.*
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Após seis compassos, seu(sua) dançarino(a) precisa executar uma dança diferente da que estava fazendo após o quarto compasso.
+
+          *Esta fase termina após doze compassos.*
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Você precisa alterar o efeito do plano de fundo durante o sétimo compasso da música.
+
+          *Esta fase termina após 10 compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          Altere o efeito do plano de fundo em diversas partes da música, conectando o novo bloco aos eventos <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Seu(sua) dançarino(a) deve executar movimentos diferentes ao longo dos doze primeiros compassos da música.
+
+          *Esta fase termina após 12 compassos.*
+      Dance_Party_6_authored_hint:
+        challenges: |-
+          **Desafio opcional**
+
+          * Adicione um terceiro dançarino (ou quantos você quiser!)
+          * Faça todos os seus dançarinos executarem movimentos diferentes em diversas partes da música.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Dois dançarinos precisam ter um tamanho diferente de 100.
+
+          *Esta fase termina após seis compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          * Experimente alterar outras propriedades (largura, altura, rotação, etc.)
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Altere a tonalidade de pelo menos um(a) dançarino(a).
+
+          *Esta fase termina após oito compassos.*
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Você pode executar uma função muitas vezes dentro de
           seu programa! Tente executá-la duas vezes para resolver este enigma.
@@ -3624,6 +3827,93 @@ pt-BR:
         voyage_aquatic_9a: Que recife de corais bonito! O coral azul parece ser o
           caminho **direito**, e lembre-se também de deixar o coral vermelho no caminho
           **esquerdo**.
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+          *Certifique-se de um(a) dançarino(a) apareça na tela.
+
+          *Esta fase termina após quatro compassos.*
+        challenges: |-
+          **Desafios opcionais**
+          *Escolha uma música diferente para tocar.
+          *Escolha um dançarino(a) diferente que se pareça com um alce!
+          *Renomeie seu(sua) dançarino(a).
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+          *O(a) dançarino(a) precisa fazer um novo passo após quatro compassos.
+
+          *A fase termina após oito compassos.*
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Após seis compassos, seu(sua) dançarino(a) precisa executar uma dança diferente da que estava fazendo após o quarto compasso.
+
+          *Esta fase termina após doze compassos.*
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Você precisa alterar o efeito do plano de fundo durante o sétimo compasso da música.
+
+          *Esta fase termina após 10 compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          Altere o efeito do plano de fundo em diversas partes da música, conectando o novo bloco aos eventos <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Seu(sua) dançarino(a) deve executar movimentos diferentes ao longo dos doze primeiros compassos da música.
+
+          *Esta fase termina após 12 compassos.*
+      HOC Dance 5_draft_authored_hint:
+        challenges: |-
+          **Desafio opcional**
+
+          * Adicione um terceiro dançarino (ou quantos você quiser!)
+          * Faça todos os seus dançarinos executarem movimentos diferentes em diversas partes da música.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Dois dançarinos precisam ter um tamanho diferente de 100.
+
+          *Esta fase termina após seis compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          * Experimente alterar outras propriedades (largura, altura, rotação, etc.)
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Altere a tonalidade de pelo menos um(a) dançarino(a).
+
+          *Esta fase termina após oito compassos.*
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * As propriedades de dois ou mais dançarinos devem mudar.
+
+          *Esta fase termina após oito compassos.*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Seja criativo!
+
+          *Esta fase termina após oito compassos.*
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Seja criativo!
+
+          *Esta fase termina após oito compassos.*
       Inspirational Artwork_authored_hint:
         brush_width: Nós escolhemos a largura do pincel para 1, e depois a cor azul
           antes de fazer qualquer outra coisa.

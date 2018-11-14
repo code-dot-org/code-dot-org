@@ -2,7 +2,7 @@
 nn:
   errors:
     messages:
-      not_saved: 'Ver snill og endre fylgjande feil:'
+      not_saved: 'Ver snill og endre følgande feil:'
       too_young: Det er aldersgrense på dette innhaldet og det er ikkje tilgjengeleg
         for yngre elevar.
       teacher_must_accept_terms: Det er aldersgrense på dette innhaldet og det er
@@ -643,7 +643,7 @@ nn:
     how_it_works: Slik fungerer det (vis kode)
     try_hour_of_code: Prøv en Kodetime!
   reference_area:
-    title: Trenger du hjelp?
+    title: Treng du hjelp?
     subtitle: Sjå desse videoane og tipsa
     teacher: Sjå løysinga
     teacher_no_solution: Slutt å sjå løysinga

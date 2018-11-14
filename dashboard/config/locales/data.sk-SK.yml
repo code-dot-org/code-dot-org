@@ -467,8 +467,8 @@ sk:
           slova JUMP (skok)
         maze_wordsearch_k_9: Presuňte ma jedným smerom, potom druhým pre vyhláskovanie
           slova CODE (kód)
-        maze_wordsearch_k_13: Presuňte ma jedným smerom, potom druhým pre vyhláskovanie
-          slova DEBUG (ladenie)
+        maze_wordsearch_k_13: Presuň ma jedným smerom, potom druhým pre vyhláskovanie
+          slova DEBUG (vyhľadať chyby)
         maze_wordsearch_k_15: Presuňte ma jedným smerom, potom druhým pre vyhláskovanie
           slova ABOVE (nad)
         maze_wordsearch_k_16: Presuňte ma jedným smerom, potom druhým pre vyhláskovanie
@@ -478,9 +478,9 @@ sk:
         applab_ec_simple: Vytvor si aplikáciu použitím blokov v paneli nástrojov.
         turtle_ec_1_2: 'Teraz nakresli štvorec. POZNÁMKA: použi svoju obľúbenú farbu
           výberom na novom bloku "farbaPera".'
-        turtle_ec_1_10: 'Dokázal si to! Teraz môžeš nakresliť čo len chceš. Niektoré
-          vtipné nápady: postavička z čiar, snehová vločka alebo špirála. Skús použiť
-          aj blok "šírkaPera". Prajeme veľa zábavy!'
+        turtle_ec_1_10: 'Dokázal si to! Teraz môžeš nakresliť čo len chceš. Pár vtipných
+          nápadov: postavička z čiar, snehová vločka alebo špirála. Skús použiť aj
+          blok "šírkaPera". Prajeme veľa zábavy!'
         studio_ec_sandbox: Vytvor si svoju vlastnú hru. Keď budeš hotový, klikni na
           Skončiť, nech tvoju hru môžu vyskúšať kamaráti na svojich telefónoch.
     video:
@@ -516,7 +516,7 @@ sk:
         C1_getting_loopy: Neustále opakovanie
         C1_pair_programming: Programovanie v páre
         C1_maze_intro_sequencing: Úvod do sekvencovania bludiska
-        C1_maze_debugging: Ladenie bludiska
+        C1_maze_debugging: 'Bludisko: Hľadanie a odstraňovanie chýb'
         C1_bee_level_intro: Level s včelami - Úvod
         C1_artist_intro: Umelec - Úvod
         C1_spelling_bee_intro: Úvod do hláskovania
@@ -531,9 +531,9 @@ sk:
         C2_artist_intro: Umelec - Úvod
         C2_zuck_repeat_loop: Slučky v bludisku
         C2_artist_loops: Umelec - Cykly
-        C2_artist_debugging: Umelec - Odstraňovanie chýb
+        C2_artist_debugging: Umelec - Hľadanie a odstraňovanie chýb
         C2_bee_loops: Slučky s včelami
-        C2_bee_debugging: Ladenie včely
+        C2_bee_debugging: 'Včela: Hľadanie a odstraňovanie chýb'
         C2_bee_conditionals: Podmienky s včelou
         C2_playlab_createstory: Play Lab - Vytvor príbeh
         C2_graph_paper: Programovanie na milimetrovom papieri
@@ -552,7 +552,7 @@ sk:
         C3_artist_nested_loops: Vnorené slučky
         C3_farmer_while: Podmieňovacie slučky While
         C3_bee_nested_loops: Vnorené slučky
-        C3_bee_debugging: Ladenie včely
+        C3_bee_debugging: 'Včela: Hľadanie a odstraňovanie chýb'
         C3_bounce: Odraziť
         C3_playlab_create_game: Play Lab - Vytvor hru
         C3_computational_thinking: Algoritmické myslenie

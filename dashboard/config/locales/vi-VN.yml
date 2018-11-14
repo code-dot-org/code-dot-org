@@ -1177,6 +1177,7 @@ vi:
     xem lại câu trả lời của bạn.
   hidden_stage: Giáo viên của bạn đã không mong đợi bạn ở đây. Hãy hỏi giáo viên của
     bạn về bài học nào bạn nên vào.
+  view_teacher_guide: Xem hướng dẫn cho giáo viên
   pd:
     form_labels:
       email: Thư điện tử

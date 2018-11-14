@@ -44,6 +44,14 @@ de:
           PROPERTY:
             '"scale"': Größe
             '"height"': Höhe
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': Sekunden
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': Sekunden
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -74,12 +82,32 @@ de:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"random"': zufällig
       Dancelab_randomColor:
         text: zufällige Farbe
       Dancelab_setDanceSpeed:
         options:
+          SPEED:
+            '1': Normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: Alle
           SPEED:
             '1': Normal
             '2': fast
@@ -103,6 +131,10 @@ de:
           PROPERTY:
             '"scale"': Größe
             '"height"': Höhe
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: Alle
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -121,10 +153,11 @@ de:
         options:
           KEY:
             '"up"': hoch
-            '"down"': runter
             '"left"': links
+            '"down"': runter
             '"right"': rechts
             '"space"': Weltall
+            '"x"': x
       gamelab_changePropBy:
         options:
           PROPERTY:
