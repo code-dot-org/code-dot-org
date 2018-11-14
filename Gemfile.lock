@@ -615,7 +615,7 @@ GEM
     orm_adapter (0.5.0)
     os (0.9.6)
     parallel (1.12.1)
-    parallel_tests (2.13.0)
+    parallel_tests (2.27.0)
       parallel
     paranoia (2.3.1)
       activerecord (>= 4.0, < 5.2)
@@ -1050,4 +1050,4 @@ RUBY VERSION
    ruby 2.5.0p0
 
 BUNDLED WITH
-   1.16.2
+   1.17.0
