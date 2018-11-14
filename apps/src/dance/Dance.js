@@ -477,7 +477,7 @@ Dance.prototype.execute = async function () {
   await this.initSongsPromise;
 
   const songMetadata = await this.songMetadataPromise;
-  return new Promise((resolve, reject)=> {
+  return new Promise((resolve, reject) => {
     this.nativeAPI.play(songMetadata, success => {
       this.performanceData_.lastRunButtonDelay =
         performance.now() - this.performanceData_.lastRunButtonClick;
@@ -617,7 +617,7 @@ Dance.prototype.onHandleEvents = function (currentFrameEvents) {
  */
 Dance.prototype.displayFeedback_ = function () {
   const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
-  this.studioApp_.displayFeedback({
+  let feedbackOptions = {
     feedbackType: this.testResults,
     message: this.message,
     response: this.response,
@@ -628,7 +628,15 @@ Dance.prototype.displayFeedback_ = function () {
     appStrings: {
       reinfFeedbackMsg: 'TODO: localized feedback message.',
     },
-  });
+  };
+
+  const over13Cookie = sessionStorage.getItem('anon_over13');
+  if (over13Cookie) {
+    // Disable social share for users under 13.
+    feedbackOptions.disableSocialShare = over13Cookie === 'false';
+  }
+
+  this.studioApp_.displayFeedback(feedbackOptions);
 };
 
 Dance.prototype.getAppReducers = function () {
