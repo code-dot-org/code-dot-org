@@ -16,13 +16,13 @@
       %a{:href => CDO.studio_url('/s/dance/reset'), :target=>'_self'}
         %button.sw-try-button.dance-try-button= I18n.t(:hoc2018_dance_party_button)
   .col-25.starwars-tutorial.starwars-js-tutorial.dance-tutorial
-  - unless hide_keep_on_dancing_tile
-    .tutorial-box
-      %h2.sw-h2.dance-party-h2= I18n.t(:hoc2018_dance_keep_on_dancing_box_title)
-      .sw-tutorial-info
-        %p.sw-tutorial-description= I18n.t(:hoc2018_dance_keep_on_dancing_description)
-      %a{:href => CDO.studio_url('/s/dance-extras/reset'), :target=>'_self'}
-        %button.sw-try-button.dance-try-button= I18n.t(:hoc2018_dance_keep_on_dancing_button)
+    - unless hide_keep_on_dancing_tile
+      .tutorial-box
+        %h2.sw-h2.dance-party-h2= I18n.t(:hoc2018_dance_keep_on_dancing_box_title)
+        .sw-tutorial-info
+          %p.sw-tutorial-description= I18n.t(:hoc2018_dance_keep_on_dancing_description)
+        %a{:href => CDO.studio_url('/s/dance-extras/reset'), :target=>'_self'}
+          %button.sw-try-button.dance-try-button= I18n.t(:hoc2018_dance_keep_on_dancing_button)
   .dance-text-icon-container.tablet-only.mobile-only
     %a.translate-link{href: "/translate/dance"}
       .dance-translate-link-text
