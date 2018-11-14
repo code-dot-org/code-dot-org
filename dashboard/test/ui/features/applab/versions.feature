@@ -105,7 +105,8 @@ Scenario: Project Version Checkpoints
   Then element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(0)" is visible
   And element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(1)" is not visible
 
-@no_mobile
+# Brad (2018-11-14) Skip on IE due to blocked pop-ups
+@no_mobile @no_ie
 Scenario: Project page refreshes when other client adds a newer version
   Given I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
@@ -145,7 +146,8 @@ Scenario: Project page refreshes when other client adds a newer version
   And I wait for the page to fully load
   Then ace editor code is equal to "// comment Y// comment X"
 
-@no_mobile
+# Brad (2018-11-14) Skip on IE due to blocked pop-ups
+@no_mobile @no_ie
 Scenario: Project page refreshes when other client replaces current version
   Given I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
