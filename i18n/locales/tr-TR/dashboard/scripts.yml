@@ -7108,16 +7108,33 @@ tr:
           stages:
             new stage:
               name: yeni kademe
+            Dance Party:
+              name: Dans Partisi
+          title: Dans Partisi
         frozen-2018-test-b:
           stages:
             Artist:
               name: Sanatçı
+        aquatic:
+          stages:
+            Aquatic:
+              name: Su
+          title: 'Minecraft: Su Yolculuğu'
+          description_short: Minecraft, Kodlama Saati için yepyeni bir etkinlikle geri döndü!
         sconyers:
           stages:
             Digital Design:
               name: Dijital Tasarım
             Linking Screens:
               name: Bağlama Ekranları
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Dans Partisi
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Dans Partisi
         coursef-2019:
           description: Farklı döngüler, olaylar, fonksiyonlar ve koşulları kullanma hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek ve bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin ikinci bölümünde, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir kaptanlık projesi tasarlayınız ve oluşturunuz.
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
@@ -7174,3 +7191,7 @@ tr:
               description_teacher: Beş ders süresince, öğrenciler programlama ortamı olarak Oyun Labaratuvarını veya Sanatçıyı kullanarak kendi tasarımları olan bir proje oluşturmaya başlayacaklardır.Şimdi öğrencilere Sanatçı ya da Oyun Laboratuvarı ile projelerini yaratacakları alanlar verilecek. Bu projenin en uzun bölümü olacak.Sürecin beş aşamasını da inceleyen ders rehberi, proje sürecinin başında, [here](https://curriculum.code.org/csf/coursef/15/) bulunabilir.
             new stage:
               name: yeni kademe
+        dance-low:
+          stages:
+            Dance Party:
+              name: Dans Partisi

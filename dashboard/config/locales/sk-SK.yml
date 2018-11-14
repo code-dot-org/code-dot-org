@@ -327,7 +327,7 @@ sk:
       project_gallery: Projekty
       sections: Sekcie
       help_support: Pomoc a podpora
-      report_bug: Nahláste chybu
+      report_bug: Nahlásiť chybu
       teacher_community: Komunita školiteľov
       professional_learning: Vzdelávanie pre profesionálov
       documentation: Dokumentácia
@@ -495,7 +495,7 @@ sk:
     prize_info: 'Ceny za účasti (iba pre učiteľov verejných škôl v U.S.): Nad $1,000
       v odmenách tried.'
     tryfirst: 'Alebo môžete najprv vyskúšať a neskôr sa zaregistrovať:'
-    trynow: Skús teraz
+    trynow: Skúsiť teraz
     add_hint_help: Prosím pomôžte nám pridať tipy pre Code.org tutoriály
     20hour_overview: Tento 20-hodinový kurz predstavuje základ informatiky a programovania.
       Kurz je určený pre deti od 1. po 8. triedu (stupeň K-8), ale určite pobaví študentov
@@ -527,7 +527,7 @@ sk:
       najlepšie interaktívne nástroje z našich osnov Základy v informatike a vydali
       sme ich ako samostatné časti, ktoré možete kedykoľvek použiť!
     announcement_learn_more_button: Zistiť viac
-    announcement_try_now_button: Skús teraz
+    announcement_try_now_button: Skúsiť teraz
     announcement_host_an_hour_button: Hosťuj Hodinu kódu
     announcement_watch_video_button: Prehrať video
     announcement_petition: Ako učiteľ patríte medzi propagátorov hnutia za to, aby
@@ -784,9 +784,9 @@ sk:
       body: Chceš napísať vlastnú hru za menej než 10 minút? Vyskúšaj náš Flappy kód!
     20-hour:
       title: Zrýchlený kurz
-      body: Tento 20-hodinový kurz predstavuje základ informatiky a programovania.
-        Kurz je určený pre deti od 1. po 8. triedu (stupeň K-8), ale určite pobaví
-        študentov všetkých vekových kategórií.
+      body: Tento 20-hodinový kurz pokrýva základné koncepty informatiky a programovania
+        obsiahnuté v kurzoch 2-4. Kurz je určený pre žiakov vo veku 10 - 18 rokov,
+        ale určite pobaví študentov všetkých vekových kategórií!
       body_short: Nauč sa základy informatiky v zrýchlenej verzií kurzov 2-4.
     hoc2014:
       try_new_tutorial: Skúste náš nový kurz Hodina Kódu, v betaverzii
@@ -815,7 +815,8 @@ sk:
     starwars:
       title: Star Wars
     infinity:
-      title: Neobmedzená Play Lab
+      title: Infinity Play Lab
+      body: Použi Play Lab a vytvor príbeh alebo hru s Disney postavičkami.
     minecraft:
       title: Minecraft
       body: Preskúmajte Minecraft svet prostredníctvom kódu.
@@ -1252,6 +1253,7 @@ sk:
   return_unit_overview: Prejsť na prehľad
   return_course_overview: Prejsť na prehľad
   view_all_units: Zobraziť všetky kapitoly
+  view_teacher_guide: Zobraziť príručku pre učiteľa
   pd:
     form_labels:
       first_name: Meno

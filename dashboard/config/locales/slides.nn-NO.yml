@@ -160,11 +160,11 @@ nn:
           til"-blokka.
       2:
         image: notes/hoc3_2.jpg
-        text: Kva om me ikkje visste kor langt fuglen måtte flytte for å komme til
-          grisen?
+        text: Kva om me ikkje visste kor langt fuglen måtte flytte seg for å komme
+          til grisen?
       3:
         image: notes/hoc3_3.jpg
-        text: Viss me sett ei "framover"-blokk inne blokka "gjenta til", vil fuglen
+        text: Dersom vi setter ei "framover"-blokk inne blokka "gjenta til", vil fuglen
           gå framover til han kjem TIL grisen (eller krasjar inn i ein vegg).
       4:
         image: notes/hoc3_4.jpg
@@ -173,20 +173,20 @@ nn:
     if:
       1:
         image: notes/hoc4_1.jpg
-        text: 'Hei, eg er Bill! Lat oss lære eit nytt grunnleggjande konsept: "Viss"-uttrykk.
+        text: 'Hei, eg er Bill! La oss lære eit nytt grunnleggjande konsept: "Dersom"-uttrykk.
           Dette er korleis datamaskiner tek avgjerder.'
       2:
         image: notes/hoc4_2.jpg
         text: Du nyttar sjølv "Viss"-uttrykk kvar dag. Før du går ut om morgonen,
-          seier du VISS det regner ute, må eg bruke jakka mi.
+          seier du DERSOM det regnar ute, må eg bruke regnjakka mi.
       3:
         image: notes/hoc4_3.jpg
         text: Me kan seie at zombien skal sjekke om det er ei bane til venstre, og
-          VISS han finn ei bane til venstre, kan me få han til å snu i den retninga.
+          DERSOM han finn ei bane til venstre, kan vi få han til å snu i den retninga.
       4:
         image: notes/hoc4_4.jpg
-        text: For å skrive koden for dette, lat oss dra ut "viss"-blokka vår og setje
-          ei "snu mot venstre"-blokk inni ho.
+        text: For å skrive koden for dette, lat oss dra ut "dersom"-blokka vår og
+          setje ei "snu mot venstre"-blokk inni ho.
       5:
         image: notes/hoc4_5.jpg
         text: Om me sett ei "framover"-blokk over og ei "gjenta"-blokk rundt alt,
@@ -195,46 +195,46 @@ nn:
           om ein skal snu for kvart steg.
       6:
         image: notes/hoc4_6.jpg
-        text: Viss-setningar er veldig viktige i programmering. Eit av dei første
-          programma eg skreiv, var eit tripp-trapp-tresko-spel der det var ei viss-setning
-          som sa at VISS den andre personen held på å vinne, blokkér posisjonen som
-          let den andre personen vinne.
+        text: Dersom-setningar er veldig viktige i programmering. Eit av dei første
+          programma eg skreiv, var eit tripp-trapp-tresko-spel der det var ei dersom-setning
+          som sa at DERSOM den andre personen held på å vinne, blokkér posisjonen
+          som let den andre personen vinne.
       7:
         image: notes/hoc4_7.jpg
-        text: Ha det gøy med "viss"-blokka!
+        text: Ha det gøy med "dersom"-blokka!
     if_else:
       1:
         image: notes/hoc5_1.jpg
         text: Hei, eg heiter Saloni. Eg nyttar programmering for å løyse helseproblem.
-          Lat oss lære om "viss-ellers"-blokka. Ho ser ut som ei "viss"-blokk, men
-          har ein ekstra del på slutten som seier "ellers".
+          Lat oss lære om "dersom-elles"-blokka. Ho ser ut som ei "dersom"-blokk,
+          men har ein ekstra del på slutten som seier "elles".
       2:
         image: notes/hoc5_2.jpg
         text: Viss eg set ei "framover"-blokk på plassen der det står "gjere" og ei
-          "snu til venstre"-blokk der det står "ellers", tyder det at zombien vil
-          velje mellom to alternativ. VISS det er ein veg framover, vil han gå dit,
-          og ELLERS (viss det ikkje er ein veg framover) vil han svinge til venstre.
+          "snu til venstre"-blokk der det står "elles", tyder det at zombien vil velje
+          mellom to alternativ. DERSOM det er ein veg framover, vil han gå dit, og
+          ELLES (viss det ikkje er ein veg framover) vil han svinge til venstre.
       3:
         image: notes/hoc5_3.jpg
-        text: Akkurat som "viss"-blokka, kan vi sette "viss ellers"-blokker inni "gjenta"-blokker
-          slik at zombien held fram med å flytte og "viss ellers"-blokka kontrollerer
-          om det er mogeleg å snu.
+        text: Akkurat som "dersom"-blokka, kan vi sette "dersom elles"-blokker inni
+          "gjenta"-blokker slik at zombien held fram med å flytte og "dersom elles"-blokka
+          kontrollerer om det er mogeleg å snu.
       4:
         image: notes/hoc5_4.jpg
         text: No får du vise zombiene kvar dei høyrer heime!
     if_else_scrat:
       1:
-        text: En "viss ellers"-setning er ei avgjersle mellom to ting. La oss sjå
-          på korleis vi kan bruke en "viss ellers"-setning med vår ven ekornet Scrat.
+        text: En "dersom elles"-setning er ei avgjersle mellom to ting. La oss sjå
+          på korleis vi kan bruke en "dersom elles"-setning med vår ven ekornet Scrat.
       2:
-        text: Denne blokka liknar på "viss"-blokka, men det er ein ekstra del på botnen
-          som seier "ellers". Dersom eg set ei "framover"-blokk der det står "gjere"
-          og ei "snu venstre"-blokk der det står "ellers", betyr det at ekornet Scrat
-          vil gå framover viss det er ein veg framfor. Viss det ikkje er ein veg framfor,
-          vil Scrat snu til venstre.
+        text: Denne blokka liknar på "dersom"-blokka, men det er ein ekstra del på
+          botnen som seier "elles". Dersom eg set ei "framover"-blokk der det står
+          "gjere" og ei "snu venstre"-blokk der det står "elles", betyr det at ekornet
+          Scrat vil gå framover dersom det er ein veg framfor. Dersom det ikkje er
+          ein veg framfor, vil Scrat snu til venstre.
       3:
-        text: Det er å ta ei avgjerd og gjøre ei av to handlingar basert på denne
-          avgjersla. Og akkurat som "viss"-blokker, kan du sette "viss-ellers"-blokker
+        text: Det er å ta ei avgjerd og gjere ei av to handlingar basert på denne
+          avgjersla. Og akkurat som "dersom"-blokker, kan du sette "dersom-elles"-blokker
           inni "gjenta"-blokker.
       4:
         text: La oss hjelpe ekornet Scrat å få ei eikenøtt!
@@ -271,8 +271,8 @@ nn:
           i ho SÅ LENGE utsegna på toppen er SANN.'
       3:
         image: notes/stage9_7.jpg
-        text: 'Døme: Viss bonden står på ein haug, vil ho harlde fram med å fjerne
-          skuffer med jord SÅ LENGE det er framleis er ein haug under ho.'
+        text: 'Døme: Dersom bonden står på ein haug, vil ho halde fram med å fjerne
+          skuffer med jord SÅ LENGE det er framleis er ein haug under henne.'
     loop_for:
       1:
         image: notes/stage11_1.jpg
@@ -311,8 +311,8 @@ nn:
           Ikkje skriv namnet først.
       5:
         image: notes/stage15_5.jpg
-        text: Viss du så skriv "lengde" der det står "x" og så trykker "Enter", vil
-          du opprette eit lengde-parameter til funksjonen din.
+        text: Dersom du så skriv "lengde" der det står "x" og så trykker "Enter",
+          vil du opprette eit lengde-parameter til funksjonen din.
       6:
         image: notes/stage15_6.jpg
         text: Klikk på stjerna. Så klikkar du på "variablar"-kategorien og dreg "lengde"
@@ -335,8 +335,8 @@ nn:
       2:
         image: notes/hoc6_2.jpg
         text: Dei grunnleggjande konsepta du brukte, er utgangspunktet for alle programma
-          og app'ane du ser rundt deg. Me har lært om gjentakande sløyfer, gjenta
-          til-setningar, viss-setningar og viss-elles-setninger.
+          og app'ane du ser rundt deg. Vi har lært om gjentakande sløyfer, gjenta
+          til-setningar, dersom-setningar og dersom-elles-setningar.
       3:
         image: notes/hoc6_3.jpg
         text: Om du likte den første kodetimen, kan du gå til code.org for å fortsetje
@@ -663,10 +663,10 @@ nn:
           på rad. Men ei datamaskin kan gjere det same millionar eller sjølv milliardar
           av gongar utan å gå lei.
       2:
-        text: Viss eg til dømes ønskja å sende ein mail for å gratulere alle på Facebook
-          som har bursdag i dag, ville det ha teke meg over hundre år å sende alle
-          mailane. Men med berre nokre linjer kode kan eg få eit dataprogram til å
-          gratulere dei på nokre få sekund.
+        text: Dersom eg til dømes ønskja å sende ein epost for å gratulere alle på
+          Facebook som har bursdag i dag, ville det ha teke meg over hundre år å sende
+          alle epostane. Men med berre nokre linjer kode kan eg få eit dataprogram
+          til å gratulere dei på nokre få sekund.
       3:
         text: For få fuglen til å nå bort til grisen kan du bruke ei gjenta-blokk
           i staden for å dra tre Nord-blokker til arbeidsområdet. Så dra ei gjenta-blokk
@@ -793,7 +793,7 @@ nn:
           lykkelig. Snipp snapp snute!
     C1_spelling_bee_intro:
       1:
-        text: Dette er nivået med den stavende bien. Bruk puslespillbitene til å flytte
+        text: Dette er nivået til den stavende bien. Bruk puslespillbitene til å flytte
           bien. Den vil samle bokstaver og stave mens den beveger seg.
       2:
         text: Se om du kan stave ordet vi gir deg i boksen under scenen. Men vær forsiktig!
@@ -805,10 +805,10 @@ nn:
           på rad. Men ei datamaskin kan gjere det same millionar eller sjølv milliardar
           av gongar utan å gå lei.
       2:
-        text: Viss eg til dømes ønskja å sende ein mail for å gratulere alle på Facebook
-          som har bursdag i dag, ville det ha teke meg over hundre år å sende alle
-          mailane. Men med berre nokre linjer kode kan eg få eit dataprogram til å
-          gratulere dei på nokre få sekund.
+        text: Dersom eg til dømes ønskja å sende ein epost for å gratulere alle på
+          Facebook som har bursdag i dag, ville det ha teke meg over hundre år å sende
+          alle epostane. Men med berre nokre linjer kode kan eg få eit dataprogram
+          til å gratulere dei på nokre få sekund.
       3:
         text: I dette eksempelet skal du flytte fuglen bort til grisen. Og vi har
           en gjenta-blokk til rådighet for å for å forenkle oppgaven. Du kunne jo
@@ -895,7 +895,7 @@ nn:
           mine skal gjøre. Hvis jeg trekker syv skal alle klappe. Hvis ikke skal alle
           si "awww". La oss prøve det!
       4:
-        text: I vedder på at du kan lage spill som er enda artigere med betingelser.
+        text: Jeg vedder på at du kan lage spill som er enda artigere med betingelser.
           Prøv det! Betingelser er det som gjør at datamaskiner virker smarte. Et
           dataprogram som har betingelser kan gjøre forskjellige ting ut fra hva brukeren
           gjør.
@@ -970,7 +970,7 @@ nn:
     C2_graph_paper:
       1:
         text: Denne leksjonen kalles "rutepapirprogrammering", og det handler om algoritmer.
-          I dag skal vi lære hvordan man skriver programmer sm viser hverandre hvordan
+          I dag skal vi lære hvordan man skriver programmer som viser hverandre hvordan
           man gjenskaper enkle svart-hvitt-bilder, bare ved å bruke håndtegnede piler.
       2:
         text: En algoritme er en liste med instruksjoner for å gjennomføre en oppgave.

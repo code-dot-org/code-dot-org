@@ -1445,6 +1445,8 @@
   google_sign_in_instruct: 'Mula dito, sila ay dapat pipili sa "Sign in with Google Account" na opsyon:'
   hero_name: 'Minecraft: Ang Paglalakbay ng Bayani'
   applab-intro_name: Panimula ng App Lab
+  applab_tile_start_tutorial: "Panimula"
+  hoc_overview_start_tutorial: "Panimula"
   hoc2018_creativity_create: "I-create"
   hoc2018_mc_page_title: "Mga Tutoryal sa Minecraft Hour of Code"
   hoc2018_mc_details: "Maraming wika | Modernong mga browser at mga tablet | Baitang 2+"
@@ -1483,5 +1485,5 @@
   hoc2018_dance_party_button: "Panimula"
   hoc2018_dance_teacher_resources_tile1_button: "Banghay-aralin"
   hoc2018_dance_teacher_resources_tile2_button: "Unplugged na Aktibidad"
-  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "Matuto nang higit pa"
-  hoc2018_dance_amazon_apply_now_button_text: "Mag-apply ngayon"
+  hoc2018_dance_amazon_about_future_engineer_button: "Matuto nang higit pa"
+  hoc2018_dance_amazon_scholarship_programs_button: "Mag-apply ngayon"

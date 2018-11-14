@@ -785,6 +785,14 @@ sk:
       GLJ Flappy2: Kliknite pre zamávanie - nedotknite sa zeme!
       HoCAB_labyrinth1: Použite blok so šípkami pre vyriešenie tohto bludiska!
       Infinity_finale: Vytvorte čo len chcete a zdieľajte to!
+      Infinity_move_collide: Hiro je "herec 1".  Posuň ho vpravo k Baymaxovi tak,
+        aby sa prehral zvuk, sa dotknú.
+      Infinity_move_directions: Baymax je "herec 2".  Pridaj bloky "Posuň sa" a potom
+        s použitím šípok posuň Baymaxa tak, aby sa dotkol ostatných dvoch postavičiek.
+      Infinity_move_right: Hiro je "herec 1".  Použi blok "Posuň sa" tak, aby sa Hiro
+        posunul vpravo a dotkol sa Baymaxa.
+      Infinity_repeat: Použi blok "Opakuj neustále" tak, aby sa Anna posunula hore
+        a dole o 400 pixelov.
       Infinity_touch_faster: Dotknite sa aj ďaľších vločiek!
       K-1 Artist 1 Assessment 1: Nakreslite krátku čiaru hore a dlhú čiaru doprava!
       K-1 Artist Loops 1: Nakreslite túto čiaru posunutím sa na Východ 4 krát.

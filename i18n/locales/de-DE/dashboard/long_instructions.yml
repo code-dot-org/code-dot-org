@@ -169,6 +169,42 @@ de:
       Course 4 SCFP 1: Schaffe eine Funktion mit Parametern, die es der Figur erlaubt, bei x Pixeln vor und zurück zu springen und bei y Pixeln auch hoch und runter (und dabei positive und negative Zahlen nutzt).
       Course 4 SCVP 1: Schaffe eine Funktion mit Parametern, die es der Figur erlaubt, bei x Pixeln vor und zurück zu springen und bei y Pixeln auch hoch und runter (und dabei positive und negative Zahlen nutzt).
       CourseF_PlayLab_vars2: Das Rennen im letzten Rätsel war nicht sehr fair! Ändere die Variable „Hunde_Geschwindigkeit“ so, dass du mehr Fahnen sammeln kannst als die Katze. Der erste, der 10 Fahnen hat, gewinnt!
+      Dance_Party_01: |-
+        *Wir haben eine Tanzparty!*
+        
+        Ziehe den 'Neu erstellen'-Block in den Arbeitsbereich und verbinde ihn mit dem 'Setup'-Block, um deinen ersten Tänzer zu erstellen.
+        
+        * *Du kannst auch die Glühbirne auf der linken Seite klicken, wenn du mehr Informationen oder weitere Herausforderungen möchtest.*
+      Dance_Party_01_low: |-
+        *Wir haben eine Tanzparty!*
+        
+        Ziehe den 'Neu erstellen'-Block in den Arbeitsbereich und verbinde ihn mit dem 'Setup'-Block, um deinen ersten Tänzer zu erstellen.
+        
+        * *Du kannst auch die Glühbirne auf der linken Seite klicken, wenn du mehr Informationen oder weitere Herausforderungen möchtest.*
+      Dance_Party_02: |-
+        Bring den Elch zum Tanzen!
+        
+        Zieh den <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">neuer&#95;T&auml;nzer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> Block in den Arbeitsbereich. Verbinde ihn unterhalb mit dem <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"Takt"</title></block></xml> Block. Dein Tänzer sollte nun eine neue Bewegung nach dem vierten Takt ausführen.
+        
+        
+        **Takte** werden benutzt um Zeit in Musik zu messen. In dieser Anleitung ist ein Takt vier Beats lang.
+      Dance_Party_03: "*Jetzt grooven wir!* \n\nFüge einen <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"Takt\"</title></block></xml> Block deinem Arbeitsbereich hinzu. Der Tänzer macht eine neue Bewegung nach 6 Takten."
+      Dance_Party_04: |-
+        *Dieser Tanz braucht mehr Biss*
+        
+        Suche nach dem neuen Block, welcher dir Hintergrundeffekte ermöglicht. Verfolge wie die Effekte sich im Takt der Musik ändern!
+      Dance_Party_05: |-
+        Verwende einen weiteren Block, um die Bewegung deines Tänzers **alle 2 Takte** ändern zu lassen!
+        
+        * Wähle `(Nächster)`, `(Vorhergehend)`, oder `(Zufällig)` um dem Tänzer mitzuteilen eine andere Bewegung auszuführen, jedesmal wenn dein Code läuft.
+      Dance_Party_06: |-
+        *Wir brauchen mehr Tänzer!*
+        
+        Erstelle einen Hintergrundtänzer `backup_dancer1, welcher mit der Katze tanzt.
+      Dance_Party_08: |-
+        Jeder Tänzer hat einen Satz _Eigenschaften_, diese legen fest wie er aussieht.
+        
+        Ein Tänzer wirkt weiter weg wenn du seine _Größe_ verringerst. Kannst du beiden Hintergrundtänzern die gleiche Größe geben?
       Function intro Ryan: "In deinem Arbeitsbereich befindet sich eine **Funktion** namens \"Brücke bauen\".  Sie umfasst den gesamten Code, den du zum Überqueren des Flusses benötigst! \\r\n \\r\nDocke den kleinen, grünen Block zweimal in deinem Arbeitsbereich an, um den Weg zu reparieren und {currentPlayerName} zur Redstone-Fackel [redstone_torch] zu bringen."
       Function intro Ryan_2019: "In deinem Arbeitsbereich befindet sich eine **Funktion** namens \"Brücke bauen\".  Sie umfasst den gesamten Code, den du zum Überqueren des Flusses benötigst! \\r\n \\r\nDocke den kleinen, grünen Block zweimal in deinem Arbeitsbereich an, um den Weg zu reparieren und {currentPlayerName} zur Redstone-Fackel [redstone_torch] zu bringen."
       HOC 2018 Level_1: "Du benötigst für deine Reise Vorräte. Sammle ein **Boot** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) aus der **Truhe** ein![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
@@ -183,6 +219,14 @@ de:
       HOC 2018 Level_7a: "Du hast die Unterwasserruine gefunden. Suche im Sandstein nach eine **Truhe** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) mit **Prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
       HOC 2018 Level_8: "Erst Eisberge, nun Lava? Durchquere diese Vulkaninsel, und finde die **Tropenfische** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) im Korallenriff.\n\n"
       HOC 2018 Level_9b: "Du hast das Riff erreicht. Suche jetzt nach dem **Herz des Meeres** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)! Verwende blaue und rote Korallen, um die Schatz**truhe** zu erreichen![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
+      HOC Dance 4_draft: |-
+        Verwende einen weiteren Block, um die Bewegung deines Tänzers **alle 2 Takte** ändern zu lassen!
+        
+        * Wähle `(Nächster)`, `(Vorhergehend)`, oder `(Zufällig)` um dem Tänzer mitzuteilen eine andere Bewegung auszuführen, jedesmal wenn dein Code läuft.
+      HOC Dance 5_draft: |-
+        *Wir brauchen mehr Tänzer!*
+        
+        Erstelle einen Hintergrundtänzer `backup_dancer1, welcher mit der Katze tanzt.
       K-1 Bee Loops 2: Verwende eine „Wiederhole“-Schleife zum Bewegen, dann den Nektar einzusammeln und Honig herzustellen.
       K-1 Bee Loops 3: Verwende drei „Wiederhole"-Schleifen, um Nektar zu holen und Honig herzustellen.
       K-1 Bee Loops 4: Verwende „Wiederhole"-Schleifen, um den Nektar einzusammeln, Honig herzustellen und zum Bewegen.

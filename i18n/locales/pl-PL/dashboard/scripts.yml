@@ -4129,6 +4129,9 @@ pl:
           stages:
             new stage:
               name: nowy etap
+            Dance Party:
+              name: Potańcówka
+          title: Potańcówka
         frozen-2018-test-b:
           stages:
             Artist:
@@ -4137,6 +4140,14 @@ pl:
           stages:
             Linking Screens:
               name: Łączenie ekranów
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Potańcówka
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Potańcówka
         coursef-2019:
           description_audience: 'W wieku 9-13'
           stages:
@@ -4162,3 +4173,7 @@ pl:
               description_student: Nareszcie możesz zacząć budować swój projekt!
             new stage:
               name: nowy etap
+        dance-low:
+          stages:
+            Dance Party:
+              name: Potańcówka

@@ -407,6 +407,7 @@ fr:
       playlab: Labo de jeux
       minecraft: Minecraft
       flappy: Flappy
+      dance: Fête dansante
     popup:
       progress_for_user: progrès de %{name}
       progress: Ton progrès
@@ -716,7 +717,7 @@ fr:
       Microsoft, Facebook, Twitter et beaucoup d'autres organismes qui ont contribué
       à créer ce matériel.
     help_from_html_old: Les ingénieurs de Google, Microsoft, Facebook et Twitter ont
-      contribué à créer ce matériel.
+      contribué à créer ces matériels.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits
       réservés. <br />Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm.
       Tous droits réservés.<br />La reine des neiges&#8482; &copy; %{current_year}
@@ -836,6 +837,8 @@ fr:
         pour la faire fonctionner, puis partagez votre application en quelques secondes.
       audience: 'Âge recommandé: 13 ans et plus'
       cta: Apprendre comment
+    dance:
+      title: Fête dansante
     hoc:
       title: Labyrinthe classique
       body: Essaie les fondamentaux de l'informatique. Des millions ont essayé.

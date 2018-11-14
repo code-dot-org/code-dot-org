@@ -14,6 +14,7 @@ ko:
       messages:
         blank: 이(가) 필요합니다.
         blank_plural: 이(가) 필요합니다.
+        invalid: 에 무제가 있습니다.
         invalid_plural: 가(이) 유효하지 않습니다
     attributes:
       user:
@@ -30,6 +31,9 @@ ko:
         age: 나이
         gender: 성별
         edit_header: 계정 정보 수정
+        finish_sign_up_header: 계정 만들기를 마칩니다.
+        finish_sign_up_subheader: "<strong>%{email}</strong>을 위해 Code.org 계정을 만들려면
+          밑에 있는 빈 곳에 정보들을 입력 하세요."
         error:
           future: 오늘 이전 날짜만 가능합니다.
   hello: Hello world
@@ -347,6 +351,7 @@ ko:
       playlab: Play Lab
       minecraft: 마인크래프트
       flappy: 플래피
+      dance: 댄스 파티
     popup:
       progress_for_user: "%{name} 의 진도"
       progress: 내 진도
@@ -618,6 +623,8 @@ ko:
         수 있습니다.
       audience: 13세 이상
       cta: 방법 알아보기
+    dance:
+      title: 댄스 파티
     hoc:
       title: 고전 미로게임
       body: 컴퓨터과학(CS, 정보과학)의 기초/개념/원리들을 경험 해보세요. 수 백 만 가지를 가능하게 합니다.

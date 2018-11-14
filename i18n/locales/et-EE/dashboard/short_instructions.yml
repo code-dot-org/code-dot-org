@@ -695,10 +695,34 @@ et:
       Crack Random Substitution_2018: Juhised
       Crack a Caesar Cipher: Juhised
       Crack a Caesar Cipher_2018: Juhised
+      Dance_Party_01: Lohista `tee uus` plokk töölauale ja ühenda see `seadista` ploki sisse.
+      Dance_Party_01_low: Lohista `tee uus` plokk töölauale ja ühenda see `seadista` ploki sisse.
+      Dance_Party_02: Las põder alustab uue liigutusega peale 4 ühikut!
+      Dance_Party_03: Las tantsija alustab uue liigutusega peale 6 ühikut!
+      Dance_Party_04: Lisa oma programmile taustaeffekt.
+      Dance_Party_05: Lisa uus plokk, et tantsija muudaks liigutusi iga 2 ühiku järel.
+      Dance_Party_06: Loo taustatantsija, keda kutustakse `taustatantsija1`, et ta kassiga tantsiks.
+      Dance_Party_08: Kas saad muuta mõlemad taustatantsijad sama suureks?
+      Dance_Party_09: Kasuta `määra toon` plokki, et tantsija värvi muuta.
+      Dance_Party_10: Pane teine tantsija muusikale vastavalt liikuma, kasutades `hakkab järgnema` plokki.
+      Dance_Party_11.5: Kasuta "kõik pardid" plokke, et panna kõik pardid koos tantsima.
+      Dance_Party_11: Plokk `kui vajutad ülesse` laseb koodi käivitada siis, kui vajutatakse ülemist nooleklahvi. Proovi panna tantsija kiireid liigutusi tegema kui vajutad ülemist nooleklahvi.
+      Dance_Party_11b: Pane Robot üks kord "kükitama", kui vajutatakse paremat nooleklahvi ja tegema ühe "kõrge plaksu", kui vajutatakse ülemist nooleklahvi. Kükita-plaksuta nii kiiresti kui võimalik!
       Food Fight!: "Lisasime sinu jaoks ühe viimase funktsiooni. \\r \\r Kasuta avaldist „kui“, et sinu mäng kasutaks funktsiooni „tase_üles“ ainult siis, kui „mängija_skoor“ ületab teatud arvu.\\r \\r Näide: „mängija_skoor“ 6 > 6\\r \\r Mängi mängu ja jõua 4. tasemelt edasi, et liikuda järgmisele mõistatusele. "
       Frequency Analysis: Test
       Function intro Ryan: Kasutage funktsiooni "ehitada sild" kaks korda, et teha tee Redstone Torchini.
       Function intro Ryan_2019: Kasutage funktsiooni "ehitada sild" kaks korda, et teha tee Redstone Torchini.
+      HOC 2018 Level_1: Võta laev kirstust.
+      HOC 2018 Level_10: Mine selle Ocean Monument (ookeani monumendi) sissepääsu juurde.
+      HOC 2018 Level_11: 'Ehitage koos Prismarine kanal Ocean Monument sisse.  '
+      HOC 2018 Level_12: 'Kujunda ise oma enda veealune keskkond!  '
+      HOC 2018 Level_2: 'Mine sadamakai lõppu.  '
+      HOC 2018 Level_3: 'Mine avamerele tursa juurde.  '
+      HOC 2018 Level_4: Kasutage delfiini saamiseks tsüklit.
+      HOC 2018 Level_5: Uuri laevahuku kohta, et jõuda kirstuni.
+      HOC 2018 Level_6: Liigu läbi jää, et jõuda lõheni.
+      HOC 2018 Level_7a: Kirstu leidmiseks otsi läbi need veealused varemed.
+      HOC 2018 Level_9b: 'Et jõuda aardeni, kasuta koralle asukohapunktidena.  '
       Infinity_catch: Kas oskad aidata Elsal („tegelane 2“) Annale järele jõuda, kasutades nooleklahve?
       Infinity_finale: Loo midagi vabal valikul ning jaga seda!
       Infinity_move_collide: Hiro on "näitleja 1". Liiguta ta Baymaxi juurde ning käivita heli, kui nad kokku puutuvad.
