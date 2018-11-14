@@ -18,6 +18,10 @@
         "name": "MOVE",
         "options": [
           [
+            "(Random)",
+            "\"rand\""
+          ],
+          [
             "Bend",
             "MOVES.XBend"
           ],

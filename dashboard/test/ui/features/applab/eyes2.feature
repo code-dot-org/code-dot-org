@@ -45,7 +45,7 @@ Scenario: Applab Instructions in Top Pane
   And I see no difference for "top instructions collapsed"
   Then I click selector ".fa-chevron-circle-down"
   And I see no difference for "top instructions uncollapsed"
-  Then I click selector "#hide-toolbox-icon"
+  Then I press "hide-toolbox-icon"
   And I see no difference for "toolbox collapsed"
 
   When I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/10"
