@@ -66,6 +66,10 @@
         "name": "MOVE",
         "options": [
           [
+            "(Random)",
+            "\"rand\""
+          ],
+          [
             "Bend",
             "MOVES.XBend"
           ],
@@ -84,6 +88,10 @@
           [
             "Dab",
             "MOVES.Dab"
+          ],
+          [
+            "Disco",
+            "MOVES.XFever"
           ],
           [
             "Double Down",

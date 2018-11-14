@@ -143,9 +143,6 @@ class AgeDialog extends Component {
               </div>
             </div>
           </div>
-          <div>
-            <a href="https://code.org/privacy">{i18n.privacyPolicy()}</a>
-          </div>
         </div>
       </BaseDialog>
     );

@@ -960,6 +960,7 @@ en:
       CSDU6 Innovation_2018: {}
       CSDU6 SFLP:
         CSDU6 SFLP: CSDU6 SFLP
+      CSF19Placeholder: {}
       CSP 2018 Precourse Placeholder: {}
       CSP Abstraction in Programming: {}
       CSP Abstraction in Programming 2: {}
@@ -3282,6 +3283,8 @@ en:
         Binary Drawing: Binary Drawing
       courseD_external_binary1_2018:
         Binary Drawing: Binary Drawing
+      courseD_external_binary1_2018_2019:
+        Binary Drawing: Binary Drawing
       courseE_external_ramp14:
         Good Job!: Good Job!
       courseF_external_ramp14: {}
@@ -3397,6 +3400,7 @@ en:
         title: title
       csd-pulse-check-survey-preamble: {}
       csd-pulse-check-survey-preamble_2018: {}
+      csd-pulse-check-survey-preamble_2018_2019: {}
       csd-pushDL-unit1: {}
       csd-pushDL-unit2: {}
       csd-pushDL-unit3: {}
@@ -3455,16 +3459,22 @@ en:
         title: title
       csp-pre-survey-2017 preamble 1: {}
       csp-pre-survey-2017 preamble 1_2018: {}
+      csp-pre-survey-2017 preamble 1_2018_2019: {}
       csp-pre-survey-2017 preamble 2 cs in general: {}
       csp-pre-survey-2017 preamble 2 cs in general_2018: {}
+      csp-pre-survey-2017 preamble 2 cs in general_2018_2019: {}
       csp-pre-survey-2017 preamble 3 this class: {}
       csp-pre-survey-2017 preamble 3 this class_2018: {}
+      csp-pre-survey-2017 preamble 3 this class_2018_2019: {}
       csp-pre-survey-2017 preamble 4 the future: {}
       csp-pre-survey-2017 preamble 4 the future_2018: {}
+      csp-pre-survey-2017 preamble 4 the future_2018_2019: {}
       csp-pre-survey-2017 preamble 5 demographics: {}
       csp-pre-survey-2017 preamble 5 demographics_2018: {}
+      csp-pre-survey-2017 preamble 5 demographics_2018_2019: {}
       csp-pre-survey-2017-q36-preamble: {}
       csp-pre-survey-2017-q36-preamble_2018: {}
+      csp-pre-survey-2017-q36-preamble_2018_2019: {}
       csp-pt-tech-setup-and-tools: {}
       csp-pt-tech-setup-and-tools_2018: {}
       csp-pulse-check-survey-preamble: {}
@@ -4260,9 +4270,11 @@ en:
         csd-post-survey-2017-levelgroup_2018: {}
         csd-pre-survey-2017-levelgroup: {}
         csd-pre-survey-2017-levelgroup_2018: {}
+        csd-pre-survey-2017-levelgroup_2018_2019: {}
         csd-pulse-check-survey-1-levelgroup: {}
         csd-pulse-check-survey-1-levelgroup U1Ch2: {}
         csd-pulse-check-survey-1-levelgroup U1Ch2_2018: {}
+        csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019: {}
         csd-pulse-check-survey-1-levelgroup U2Ch1: {}
         csd-pulse-check-survey-1-levelgroup U2Ch1_2018: {}
         csd-pulse-check-survey-1-levelgroup U2Ch2: {}
@@ -11230,6 +11242,15 @@ en:
         The bird will make it to the pig.: The bird will make it to the pig.
         The bird will run into the TNT.: The bird will run into the TNT.
         This code gets the bird perfectly to the pig.: This code gets the bird perfectly to the pig.
+      courseC_multi_maze_programming8_predict1_2018_2019:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. This code gets the bird perfectly to the pig.: Incorrect. This code gets the bird perfectly to the pig.
+        Read through the code below very carefully.  What will happen when you click "Run"?: Read through the code below very carefully.  What will happen when you click "Run"?
+        The bird will end up one step short of the pig.: The bird will end up one step short of the pig.
+        The bird will make it to the pig.: The bird will make it to the pig.
+        The bird will run into the TNT.: The bird will run into the TNT.
+        This code gets the bird perfectly to the pig.: This code gets the bird perfectly to the pig.
       courseC_multi_starWars_predict1:
         BB-8 will move 5 times and get all of the scrap metal: BB-8 will move 5 times and get all of the scrap metal
         BB-8 will move only one space: BB-8 will move only one space
@@ -11240,6 +11261,15 @@ en:
         The repeat block will make the BB-8 move forward 5 times.: The repeat block will make the BB-8 move forward 5 times.
         What do you think will happen when you click "Run"?: What do you think will happen when you click "Run"?
       courseC_multi_starWars_predict1_2018:
+        BB-8 will move 5 times and get all of the scrap metal: BB-8 will move 5 times and get all of the scrap metal
+        BB-8 will move only one space: BB-8 will move only one space
+        BB-8 will not move.: BB-8 will not move.
+        Correct!: Correct!
+        I don't know: I don't know
+        Incorrect. The repeat block will make the BB-8 move forward 5 times.: Incorrect. The repeat block will make the BB-8 move forward 5 times.
+        The repeat block will make the BB-8 move forward 5 times.: The repeat block will make the BB-8 move forward 5 times.
+        What do you think will happen when you click "Run"?: What do you think will happen when you click "Run"?
+      courseC_multi_starWars_predict1_2018_2019:
         BB-8 will move 5 times and get all of the scrap metal: BB-8 will move 5 times and get all of the scrap metal
         BB-8 will move only one space: BB-8 will move only one space
         BB-8 will not move.: BB-8 will not move.
@@ -11266,6 +11296,15 @@ en:
         Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
         Look closely at the code below.  What will happen when you click "Run"?: Look closely at the code below.  What will happen when you click "Run"?
         The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
+      courseC_multi_starWars_predict2_2018_2019:
+        BB-8 will collect all of the scrap metal with no problems.: BB-8 will collect all of the scrap metal with no problems.
+        BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.: BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.
+        BB-8 will travel too far in the first loop.: BB-8 will travel too far in the first loop.
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
+        Look closely at the code below.  What will happen when you click "Run"?: Look closely at the code below.  What will happen when you click "Run"?
+        The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
       courseD_multi_artist_binary8_predict1:
         A: A
         B: B
@@ -11275,6 +11314,14 @@ en:
         Incorrect.: Incorrect.
         Take a close look at the code below.  Which image will it create after you click "Run"?: Take a close look at the code below.  Which image will it create after you click "Run"?
       courseD_multi_artist_binary8_predict1_2018:
+        A: A
+        B: B
+        C: C
+        Correct!: Correct!
+        D: D
+        Incorrect.: Incorrect.
+        Take a close look at the code below.  Which image will it create after you click "Run"?: Take a close look at the code below.  Which image will it create after you click "Run"?
+      courseD_multi_artist_binary8_predict1_2018_2019:
         A: A
         B: B
         C: C
@@ -11292,6 +11339,15 @@ en:
         Take a good look at the code below.  Which drawing will this program make when you click "Run"?: Take a good look at the code below.  Which drawing will this program make when you click "Run"?
         The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: A
+        B: B
+        C: C
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
+        Take a good look at the code below.  Which drawing will this program make when you click "Run"?: Take a good look at the code below.  Which drawing will this program make when you click "Run"?
+        The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         A: A
         B: B
         C: C
@@ -11322,6 +11378,17 @@ en:
         'The bee will move to the cloud and try to get nectar, no matter what. ': 'The bee will move to the cloud and try to get nectar, no matter what. '
         ? The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
         : The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
+      courseD_multi_bee_conditionals1_predict1_2018_2019:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
+        The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        The bee will move to the cloud and only try to get nectar if there is a flower underneath.: The bee will move to the cloud and only try to get nectar if there is a flower underneath.
+        'The bee will move to the cloud and then do nothing, no matter what. ': 'The bee will move to the cloud and then do nothing, no matter what. '
+        'The bee will move to the cloud and try to get nectar, no matter what. ': 'The bee will move to the cloud and try to get nectar, no matter what. '
+        ? The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
+        : The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
       courseD_multi_bee_conditionals7_predict2:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -11334,6 +11401,17 @@ en:
         The bee will try to get honey from both flowers and honeycomb.: The bee will try to get honey from both flowers and honeycomb.
         The bee will try to get nectar from both flowers and honeycomb.: The bee will try to get nectar from both flowers and honeycomb.
       courseD_multi_bee_conditionals7_predict2_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..
+        Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        ? 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'
+        : 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'
+        The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        The bee will get nectar at each flower and honey at each honeycomb.: The bee will get nectar at each flower and honey at each honeycomb.
+        The bee will try to get honey from both flowers and honeycomb.: The bee will try to get honey from both flowers and honeycomb.
+        The bee will try to get nectar from both flowers and honeycomb.: The bee will try to get nectar from both flowers and honeycomb.
+      courseD_multi_bee_conditionals7_predict2_2018_2019:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..
@@ -11458,6 +11536,18 @@ en:
         The harvester will collect all of the crops.: The harvester will collect all of the crops.
         The harvester will not pick any of the crops with the path she is taking.: The harvester will not pick any of the crops with the path she is taking.
         The harvester will pick all of the crops, except the pumpkin.: The harvester will pick all of the crops, except the pumpkin.
+      courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        : Incorrect. The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        Incorrect. There is no code here for picking the pumpkin.: Incorrect. There is no code here for picking the pumpkin.
+        Take a close look at the code below.  What will happen after you click "Run"?: Take a close look at the code below.  What will happen after you click "Run"?
+        ? The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        : The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        The harvester will collect all of the crops.: The harvester will collect all of the crops.
+        The harvester will not pick any of the crops with the path she is taking.: The harvester will not pick any of the crops with the path she is taking.
+        The harvester will pick all of the crops, except the pumpkin.: The harvester will pick all of the crops, except the pumpkin.
       courseD_multi_farmer_ramp13:
         " ": " "
         Correct!: Correct!
@@ -11500,6 +11590,16 @@ en:
         The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
         This code will leave the holes completely untouched.: This code will leave the holes completely untouched.
         This code will leave the pile completely untouched.: This code will leave the pile completely untouched.
+      courseD_multi_farmer_while10_predict2_2018_2019:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
+        Incorrect. There is no code to remove dirt from the pile.: Incorrect. There is no code to remove dirt from the pile.
+        Nothing.  This code will leave only level ground.: Nothing.  This code will leave only level ground.
+        Take a good look at the code below. What will be left at the end of this puzzle?: Take a good look at the code below. What will be left at the end of this puzzle?
+        The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
+        This code will leave the holes completely untouched.: This code will leave the holes completely untouched.
+        This code will leave the pile completely untouched.: This code will leave the pile completely untouched.
       courseD_multi_farmer_while4_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -11510,6 +11610,15 @@ en:
         The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
         The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.: The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.
       courseD_multi_farmer_while4_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
+        Look closely at the code below.  What will happen after you click "Run"?: Look closely at the code below.  What will happen after you click "Run"?
+        Nothing will happen.: Nothing will happen.
+        The farmer will never stop removing dirt.: The farmer will never stop removing dirt.
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.: The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.
+      courseD_multi_farmer_while4_predict1_2018_2019:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
@@ -11539,6 +11648,15 @@ en:
         The zombie will make it to the sunflower.: The zombie will make it to the sunflower.
         The zombie will pass the correct path and end up going back and forth forever.: The zombie will pass the correct path and end up going back and forth forever.
         The zombie will turn right on the first path and go around in circles forever.: The zombie will turn right on the first path and go around in circles forever.
+      courseD_multi_maze_until10_predict2_2018_2019:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        In this code, the zombie will pass the correct path and end up going back and forth forever.: In this code, the zombie will pass the correct path and end up going back and forth forever.
+        Incorrect. The zombie will pass the correct path and end up going back and forth forever.: Incorrect. The zombie will pass the correct path and end up going back and forth forever.
+        Look carefully at the code below.  What will happen after you click "Run"?: Look carefully at the code below.  What will happen after you click "Run"?
+        The zombie will make it to the sunflower.: The zombie will make it to the sunflower.
+        The zombie will pass the correct path and end up going back and forth forever.: The zombie will pass the correct path and end up going back and forth forever.
+        The zombie will turn right on the first path and go around in circles forever.: The zombie will turn right on the first path and go around in circles forever.
       courseD_multi_maze_until2_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -11552,6 +11670,18 @@ en:
         The bird will not move at all.: The bird will not move at all.
         The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.: The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.
       courseD_multi_maze_until2_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!
+        : Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!
+        ? Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!
+        : Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!
+        Take a close look at the code below.  What do you think will happen when you click "Run"?: Take a close look at the code below.  What do you think will happen when you click "Run"?
+        The bird will make it to the pig.: The bird will make it to the pig.
+        The bird will move forward and run into the TNT.: The bird will move forward and run into the TNT.
+        The bird will not move at all.: The bird will not move at all.
+        The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.: The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.
+      courseD_multi_maze_until2_predict1_2018_2019:
         Correct!: Correct!
         I don't know.: I don't know.
         ? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!
@@ -11646,6 +11776,14 @@ en:
         The harvester will pick the corn.: The harvester will pick the corn.
         The harvester will pick the lettuce.: The harvester will pick the lettuce.
         The harvester will pick two pumpkins.: The harvester will pick two pumpkins.
+      courseE_multi_farmer_functions11_predict_2018_2019:
+        Correct!: Correct!
+        Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce.: Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce.
+        Look at the functions defined below.  What will the harvester pick?: Look at the functions defined below.  What will the harvester pick?
+        The harvester will pick all of the pumpkins.: The harvester will pick all of the pumpkins.
+        The harvester will pick the corn.: The harvester will pick the corn.
+        The harvester will pick the lettuce.: The harvester will pick the lettuce.
+        The harvester will pick two pumpkins.: The harvester will pick two pumpkins.
       courseE_multi_farmer_predict1:
         Correct!: Correct!
         I don't know: I don't know
@@ -11726,6 +11864,15 @@ en:
         The artist will draw two squares with a small gap in between.: The artist will draw two squares with a small gap in between.
         What will happen when you press "Run"?: What will happen when you press "Run"?
       courseE_prediction_artistFunction1_2018:
+        Correct! The function is called two times in the program, with a jump in between.: Correct! The function is called two times in the program, with a jump in between.
+        Incorrect. The function is actually called two times in the program.: Incorrect. The function is actually called two times in the program.
+        Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.: Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.
+        Nothing. The function is not called in the program.: Nothing. The function is not called in the program.
+        The artist will draw a single square.: The artist will draw a single square.
+        The artist will draw two squares that overlap.: The artist will draw two squares that overlap.
+        The artist will draw two squares with a small gap in between.: The artist will draw two squares with a small gap in between.
+        What will happen when you press "Run"?: What will happen when you press "Run"?
+      courseE_prediction_artistFunction1_2018_2019:
         Correct! The function is called two times in the program, with a jump in between.: Correct! The function is called two times in the program, with a jump in between.
         Incorrect. The function is actually called two times in the program.: Incorrect. The function is actually called two times in the program.
         Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.: Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.
@@ -11993,6 +12140,16 @@ en:
         The artist will solve the puzzle correctly.: The artist will solve the puzzle correctly.
         What will happen when you press the "Run" button?: What will happen when you press the "Run" button?
       coursee_prediction_artistfunction2_2018:
+        Correct!: Correct!
+        Incorrect. The loop turns 90 degrees between calls to "draw polygon".: Incorrect. The loop turns 90 degrees between calls to "draw polygon".
+        Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".: Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".
+        Incorrect. The program does not call "draw line of polygons".: Incorrect. The program does not call "draw line of polygons".
+        The artist will draw four squares in a window pattern.: The artist will draw four squares in a window pattern.
+        The artist will draw four squares on top of one another.: The artist will draw four squares on top of one another.
+        The artist will draw only one line of squares.: The artist will draw only one line of squares.
+        The artist will solve the puzzle correctly.: The artist will solve the puzzle correctly.
+        What will happen when you press the "Run" button?: What will happen when you press the "Run" button?
+      coursee_prediction_artistfunction2_2018_2019:
         Correct!: Correct!
         Incorrect. The loop turns 90 degrees between calls to "draw polygon".: Incorrect. The loop turns 90 degrees between calls to "draw polygon".
         Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".: Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".
@@ -12466,6 +12623,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q1 U1Ch2_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q1 U2Ch1:
         Agree: Agree
         Disagree: Disagree
@@ -12629,6 +12795,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q2 U1Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q2 U1Ch2_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I have the ability to learn computer science.: I have the ability to learn computer science.
@@ -12808,6 +12983,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q3 U1Ch2_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q3 U2Ch1:
         Agree: Agree
         Disagree: Disagree
@@ -12979,6 +13163,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q4 U1Ch2_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q4 U2Ch1:
         Agree: Agree
         Disagree: Disagree
@@ -13142,6 +13335,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csd-pulse-check-survey-1-q5 U1Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-pulse-check-survey-1-q5 U1Ch2_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
@@ -14333,6 +14535,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q10_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q11:
         Agree: Agree
         Disagree: Disagree
@@ -14343,6 +14554,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q11_2018:
+        Agree: Agree
+        Disagree: Disagree
+        'I think computer science is interesting. ': 'I think computer science is interesting. '
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q11_2018_2019:
         Agree: Agree
         Disagree: Disagree
         'I think computer science is interesting. ': 'I think computer science is interesting. '
@@ -14369,6 +14589,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q12_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        'I have the ability to learn computer science. ': 'I have the ability to learn computer science. '
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q13:
         Agree: Agree
         Disagree: Disagree
@@ -14387,6 +14616,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q13_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I think I will be better at computer science than other kids at my school.: I think I will be better at computer science than other kids at my school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q14:
         Agree: Agree
         Disagree: Disagree
@@ -14397,6 +14635,15 @@ en:
         Strongly disagree: Strongly disagree
         When I encounter a computer science problem without an obvious answer, I will always be able to figure out some way to solve it.: When I encounter a computer science problem without an obvious answer, I will always be able to figure out some way to solve it.
       csp-pre-survey-2017-q14_2018:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+        When I encounter a computer science problem without an obvious answer, I will always be able to figure out some way to solve it.: When I encounter a computer science problem without an obvious answer, I will always be able to figure out some way to solve it.
+      csp-pre-survey-2017-q14_2018_2019:
         Agree: Agree
         Disagree: Disagree
         Neither: Neither
@@ -14431,6 +14678,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q16_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        It is important to me to be good at computer science.: It is important to me to be good at computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q17:
         Agree: Agree
         Disagree: Disagree
@@ -14441,6 +14697,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q17_2018:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        People like me do computer science.: People like me do computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q17_2018_2019:
         Agree: Agree
         Disagree: Disagree
         Neither: Neither
@@ -14467,6 +14732,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q18_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I think I could become a computer scientist one day.: I think I could become a computer scientist one day.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q19:
         Agree: Agree
         Disagree: Disagree
@@ -14485,7 +14759,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q19_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I am going to like this computer science class.: I am going to like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q1_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I am very good at school.: I am very good at school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q1_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I am very good at school.: I am very good at school.
@@ -14521,6 +14813,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q20_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I will feel comfortable in this computer science class.: I will feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q21:
         Agree: Agree
         Disagree: Disagree
@@ -14531,6 +14832,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q21_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I know what I need to do to get good grades in this computer science class.: I know what I need to do to get good grades in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q21_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I know what I need to do to get good grades in this computer science class.: I know what I need to do to get good grades in this computer science class.
@@ -14557,6 +14867,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q22_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I expect that at times I'll feel unsure whether I belong in this class.: I expect that at times I'll feel unsure whether I belong in this class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q23:
         Agree: Agree
         Disagree: Disagree
@@ -14567,6 +14886,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q23_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I think I will be treated with as much respect as other students in this computer science class.: I think I will be treated with as much respect as other students in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q23_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I think I will be treated with as much respect as other students in this computer science class.: I think I will be treated with as much respect as other students in this computer science class.
@@ -14593,6 +14921,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q24_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I think I will feel like I can be myself in this computer science class.: I think I will feel like I can be myself in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q25:
         Agree: Agree
         Disagree: Disagree
@@ -14603,6 +14940,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q25_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I feel like my opinions will be taken seriously in this computer science class.: I feel like my opinions will be taken seriously in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q25_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I feel like my opinions will be taken seriously in this computer science class.: I feel like my opinions will be taken seriously in this computer science class.
@@ -14629,6 +14975,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q26_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I feel like it will be hard for people like me to be accepted in this computer science class.: I feel like it will be hard for people like me to be accepted in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q27:
         Agree: Agree
         Disagree: Disagree
@@ -14639,6 +14994,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q27_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I do computer science in my free time.: I do computer science in my free time.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q27_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I do computer science in my free time.: I do computer science in my free time.
@@ -14665,6 +15029,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q28_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        Learning computer science will help me in my other school subjects.: Learning computer science will help me in my other school subjects.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q29:
         Agree: Agree
         Computer science is important for my future.: Computer science is important for my future.
@@ -14683,7 +15056,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q29_2018_2019:
+        Agree: Agree
+        Computer science is important for my future.: Computer science is important for my future.
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+        When I encounter a problem without an obvious answer, I am always able to figure out some way to solve it.: When I encounter a problem without an obvious answer, I am always able to figure out some way to solve it.
+      csp-pre-survey-2017-q2_2018_2019:
         Agree: Agree
         Disagree: Disagree
         Neither: Neither
@@ -14719,6 +15110,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q30_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I expect that I will use computer science in my job.: I expect that I will use computer science in my job.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q31:
         Agree: Agree
         Disagree: Disagree
@@ -14729,6 +15129,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q31_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q31_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
@@ -14809,6 +15218,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q35_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I worry that the teacher or students in this class could think that I am not as good at computer science as other students.: I worry that the teacher or students in this class could think that I am not as good at computer science as other students.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q36-a:
         A little: A little
         A lot: A lot
@@ -14825,6 +15243,11 @@ en:
         I worry because I have little experience with computer science.: I worry because I have little experience with computer science.
         Not at all: Not at all
       csp-pre-survey-2017-q36-b_2018:
+        A little: A little
+        A lot: A lot
+        I worry because I have little experience with computer science.: I worry because I have little experience with computer science.
+        Not at all: Not at all
+      csp-pre-survey-2017-q36-b_2018_2019:
         A little: A little
         A lot: A lot
         I worry because I have little experience with computer science.: I worry because I have little experience with computer science.
@@ -14857,6 +15280,10 @@ en:
         Before your current computer science class, had you taken any other computer science classes at school?: Before your current computer science class, had you taken any other computer science classes at school?
         'no': 'no'
         'yes': 'yes'
+      csp-pre-survey-2017-q37_2018_2019:
+        Before your current computer science class, had you taken any other computer science classes at school?: Before your current computer science class, had you taken any other computer science classes at school?
+        'no': 'no'
+        'yes': 'yes'
       csp-pre-survey-2017-q39:
         ? Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?
         : Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?
@@ -14867,7 +15294,21 @@ en:
         : Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?
         'no': 'no'
         'yes': 'yes'
+      csp-pre-survey-2017-q39_2018_2019:
+        ? Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?
+        : Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?
+        'no': 'no'
+        'yes': 'yes'
       csp-pre-survey-2017-q3_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I think my schoolwork is interesting.: I think my schoolwork is interesting.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q3_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I think my schoolwork is interesting.: I think my schoolwork is interesting.
@@ -14903,7 +15344,25 @@ en:
         Online program: Online program
         Other: Other
         Summer program/camp: Summer program/camp
+      csp-pre-survey-2017-q40_2018_2019:
+        After school program at my school: After school program at my school
+        After school program somewhere else (e.g., Boys and Girls Club, etc.): After school program somewhere else (e.g., Boys and Girls Club, etc.)
+        I did not do any computer science outside of school: I did not do any computer science outside of school
+        ? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.
+        : If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.
+        Online program: Online program
+        Other: Other
+        Summer program/camp: Summer program/camp
       csp-pre-survey-2017-q4_2018:
+        Agree: Agree
+        Disagree: Disagree
+        It is important for me to be good at my schoolwork.: It is important for me to be good at my schoolwork.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q4_2018_2019:
         Agree: Agree
         Disagree: Disagree
         It is important for me to be good at my schoolwork.: It is important for me to be good at my schoolwork.
@@ -14930,6 +15389,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q5_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        People at my school notice when I am good at something.: People at my school notice when I am good at something.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q6:
         Agree: Agree
         Disagree: Disagree
@@ -14940,6 +15408,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q6_2018:
+        Agree: Agree
+        Disagree: Disagree
+        It is hard for people like me to be accepted at my school.: It is hard for people like me to be accepted at my school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q6_2018_2019:
         Agree: Agree
         Disagree: Disagree
         It is hard for people like me to be accepted at my school.: It is hard for people like me to be accepted at my school.
@@ -14966,6 +15443,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q7_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Other students in my school take my opinions seriously.: Other students in my school take my opinions seriously.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q8:
         Agree: Agree
         Disagree: Disagree
@@ -14984,6 +15470,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q8_2018_2019:
+        Agree: Agree
+        Disagree: Disagree
+        I am treated with as much respect as other students at my school.: I am treated with as much respect as other students at my school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q9:
         Agree: Agree
         Disagree: Disagree
@@ -14994,6 +15489,15 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q9_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I can really be myself at school.: I can really be myself at school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q9_2018_2019:
         Agree: Agree
         Disagree: Disagree
         I can really be myself at school.: I can really be myself at school.
@@ -17138,6 +17642,15 @@ en:
         ? Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?
         : Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?
       grade2_multi_collector_A_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.: Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.
+        Laurel tries to collect treasure where there is none and it causes an error.: Laurel tries to collect treasure where there is none and it causes an error.
+        Laurel will collect 4 pieces of treasure using this code.: Laurel will collect 4 pieces of treasure using this code.
+        Laurel will collect all of the treasure.: Laurel will collect all of the treasure.
+        Laurel will try to collect treasure where there is not any and it causes an error.: Laurel will try to collect treasure where there is not any and it causes an error.
+        Look at this code carefully. What do you think will happen when the program runs?: Look at this code carefully. What do you think will happen when the program runs?
+      grade2_multi_collector_A_predict1_2018_2019:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.: Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.

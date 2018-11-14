@@ -5,7 +5,6 @@ Feature: Hour of Code tests for users that are signed in
 Scenario:
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
   And I drag block "1" to block "5"
   And I press "runButton"
   Then I wait to see ".modal"
@@ -24,20 +23,17 @@ Scenario:
   # Level source is saved
   Then I am on "http://studio.code.org/hoc/1?noautoplay=true"
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
   And block "6" is child of block "5"
   # Level source is reset
   Then I am on "http://studio.code.org/hoc/reset"
   Then I am on "http://studio.code.org/hoc/1?noautoplay=true"
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
   And block "6" is child of block "5"
 
 Scenario: Failing at puzzle 6, refreshing puzzle 6, bubble should show up as attempted
   Given I am on "http://studio.code.org/hoc/6?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
   And I press "runButton"
   Then I wait to see ".uitest-topInstructions-inline-feedback"
   Then I reload the page
