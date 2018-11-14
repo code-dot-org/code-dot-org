@@ -97,7 +97,7 @@ class AgeDialog extends Component {
     }
 
     // Sets cookie to true when anon user is 13+. False otherwise.
-    let over13 = parseInt(value, 10) >= 13;
+    const over13 = parseInt(value, 10) >= 13;
     this.setSessionStorage(over13);
 
     if (over13) {
