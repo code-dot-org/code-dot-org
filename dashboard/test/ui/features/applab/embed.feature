@@ -7,6 +7,8 @@ Feature: App Lab Embed
     Given I start a new Applab project
     And I wait for the page to fully load
 
+  # Brad (2018-11-14) Skip on IE due to blocked pop-ups
+  @no_ie
   Scenario: App Lab Embed
     Given I ensure droplet is in text mode
     And I append text to droplet "button('hello', 'world');"
