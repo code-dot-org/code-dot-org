@@ -1,15 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import cookies from 'js-cookie';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import { SignInState } from '@cdo/apps/code-studio/progressRedux';
 import i18n from '@cdo/locale';
-import { reload } from '@cdo/apps/utils';
-import { environmentSpecificCookieName } from '@cdo/apps/code-studio/utils';
-import queryString from "query-string";
 
 const styles = {
   container: {
@@ -59,26 +55,7 @@ class AgeDialog extends Component {
 
   static propTypes = {
     signedIn: PropTypes.bool.isRequired,
-    turnOffFilter: PropTypes.func.isRequired
-  };
-
-  setManualFilter = () => {
-    this.setSessionStorage(false);
-  };
-
-  setSessionStorage = (over13) => {
-    sessionStorage.setItem(sessionStorageKey, over13);
-
-    // When opening a new tab, we'll have a new session (and thus show this dialog),
-    // but may still be using a storage_id for a previous user. Clear that cookie
-    // and reload
-    const cookieName = environmentSpecificCookieName('storage_id');
-    if (cookies.get(cookieName)) {
-      cookies.remove(cookieName, {path: '/', domain: '.code.org'});
-      reload();
-    } else {
-      this.setState({open: false});
-    }
+    setSessionStorage: PropTypes.func.isRequired
   };
 
   onClickAgeOk = () => {
@@ -89,23 +66,12 @@ class AgeDialog extends Component {
     }
 
     // Sets cookie to true when anon user is 13+. False otherwise.
-    let over13 = parseInt(value, 10) >= 13;
-    this.setSessionStorage(over13);
-
-    if (over13) {
-      this.props.turnOffFilter();
-    }
+    this.props.setSessionStorage(parseInt(value, 10) >= 13);
+    this.setState({open: false});
   };
 
   render() {
     const { signedIn} = this.props;
-
-    // If the song filter override has been turned on, set session storage
-    // Dialog won't render
-    if (queryString.parse(window.location.search).songfilter === 'on') {
-      this.setManualFilter();
-    }
-
     // Don't show dialog unless script requires 13+, we're not signed in, and
     // we haven't already given this dialog our age or we do not require sign-in
     if (signedIn || sessionStorage.getItem(sessionStorageKey)) {
