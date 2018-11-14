@@ -209,6 +209,55 @@ XML
     assert_equal localized_custom_block, translated_block
   end
 
+  test 'return default value if string is not translated' do
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "blocks" => {
+          "DanceLab_jumpTo" => {
+            "text" => "springen naar {TIMESTAMP} {DIRECTION}",
+            "options" => {
+              "DIRECTION" => {
+                "right": "",
+                "left": "",
+              }
+            }
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = create(:level, :blockly, level_num: 'level1_2_3')
+
+    custom_block =
+      [{
+        name: "DanceLab_jumpTo",
+        pool: "SelectDirection",
+        category: "Events",
+        config:
+          {
+            "color" => [140, 1, 0.74],
+            "func" => "atDirection",
+            "blockText" => "jump to {TIMESTAMP} {DIRECTION}",
+            "args" => [
+              {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
+              {"name" => "DIRECTION", "options" => [["right", "right"], ["left", "left"]]}
+            ],
+            "eventBlock" => true
+          },
+        helperCode: nil
+      }]
+
+    translated_block = level.localized_shared_blocks(custom_block)
+
+    assert_equal translated_block[0][:config]["blockText"], "springen naar {TIMESTAMP} {DIRECTION}"
+    assert_equal translated_block[0][:config]["args"][1]["options"][0][1], "right"
+    assert_equal translated_block[0][:config]["args"][1]["options"][1][1], "left"
+  end
+
   test 'original object is not mutated' do
     test_locale = :"te-ST"
     I18n.locale = test_locale
