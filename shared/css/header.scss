@@ -193,7 +193,6 @@
       float: left;
     }
     #view_all_projects {
-      width: 100%;
       height: 70px;
       border-bottom: 1px solid $charcoal;
     }
@@ -215,5 +214,17 @@
     #signin_button {
      margin-top: -4px !important;
    }
+  }
+}
+
+#language_dir.rtl #pageheader-wrapper {
+  .create_options {
+    img {
+      float: right;
+    }
+    .project_link {
+      padding-right: 10px;
+      float: right;
+    }
   }
 }

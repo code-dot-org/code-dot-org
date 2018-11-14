@@ -454,6 +454,10 @@ class ProjectsController < ApplicationController
 
   # GET /projects/:key/:channel_id/embed_video
   def embed_video
+    # explicitly set security related headers so that this page can actually
+    # be embedded.
+    response.headers['X-Frame-Options'] = 'ALLOWALL'
+    response.headers['Content-Security-Policy'] = ''
     video_src = "https://dance-api.code.org/videos/video-#{params[:channel_id]}.mp4"
     render template: "projects/embed_video", layout: false, locals: {video_src: video_src}
   end
