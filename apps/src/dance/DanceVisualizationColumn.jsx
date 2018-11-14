@@ -8,10 +8,6 @@ import Radium from "radium";
 import {connect} from "react-redux";
 import i18n from '@cdo/locale';
 import AgeDialog from "../templates/AgeDialog";
-import queryString from "query-string";
-import {environmentSpecificCookieName} from "@cdo/apps/code-studio/utils";
-import cookies from "js-cookie";
-import {reload} from "@cdo/apps/utils";
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -21,8 +17,6 @@ const styles = {
     width: '100%',
   }
 };
-
-const sessionStorageKey = 'anon_over13';
 
 const SongSelector = Radium(class extends React.Component {
   static propTypes = {
@@ -76,29 +70,12 @@ class DanceVisualizationColumn extends React.Component {
     filterOff: this.setFilterStatus()
   };
 
-  componentDidMount() {
-    // If session-based filter hasn't already been turned on and the teacher flag is on, set the session storage
-    if (sessionStorage.getItem(sessionStorageKey) !== 'true' && queryString.parse(window.location.search).songfilter === 'on') {
-      this.setSessionStorage(false);
-    }
-  }
-
   /*
-    Set session data for filter status and turn filter off/on
-   */
-  setSessionStorage = (over13) => {
-    sessionStorage.setItem(sessionStorageKey, over13);
-    this.setState({filterOff: over13});
-
-    // When opening a new tab, we'll have a new session (and thus show this dialog),
-    // but may still be using a storage_id for a previous user. Clear that cookie
-    // and reload
-    const cookieName = environmentSpecificCookieName('storage_id');
-    if (cookies.get(cookieName)) {
-      cookies.remove(cookieName, {path: '/', domain: '.code.org'});
-      reload();
-    }
-  };
+    Turn the song filter off
+  */
+  turnFilterOff() {
+    this.setState({filterOff: true});
+  }
 
   /*
     The filter defaults to on. If the user is over 13 (identified via account or anon dialog), filter turns off
@@ -107,7 +84,7 @@ class DanceVisualizationColumn extends React.Component {
     // userType - 'teacher', assumed age > 13. 'student', age > 13.
     //            'student_y', age < 13. 'unknown', signed out users
     const signedInOver13 = this.props.userType === 'teacher' || this.props.userType === 'student';
-    const signedOutAge = sessionStorage.getItem(sessionStorageKey) ? sessionStorage.getItem(sessionStorageKey) === 'true' : false;
+    const signedOutAge = sessionStorage.getItem('anon_over13') ? sessionStorage.getItem('anon_over13') === 'true' : false;
     return signedInOver13 || signedOutAge;
   }
 
@@ -136,14 +113,11 @@ class DanceVisualizationColumn extends React.Component {
 
     const enableSongSelection = !this.props.levelIsRunning && !this.props.levelRunIsStarting;
 
-    //Don't display age dialog if session storage is already set or in share mode
-    const displayAgeDialog = (sessionStorage.getItem(sessionStorageKey) === null && !this.props.isShareView);
-
     return (
       <div>
-        {displayAgeDialog &&
+        {!this.props.isShareView &&
           <AgeDialog
-            setSessionStorage={this.setSessionStorage}
+            turnOffFilter={this.turnFilterOff.bind(this)}
           />
         }
         <span>
