@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 182,
   "properties": {
-    "skin": "gamelab",
+    "skin": "dance",
     "helper_libraries": [
       "DanceLab"
     ],
@@ -38,7 +38,7 @@
     "block_pool": "Dancelab",
     "name_suffix": "_draft",
     "skip_autosave": true,
-    "default_song": "hammer",
+    "default_song": "wenospeakamericano_yolandabecool",
     "long_instructions": "# Where'd They Go?\r\n\r\nThis dance shows and hides two different groups of dancers. Check it out, and then try adding your own flair.\r\n\r\n* Add another group of dancers\r\n* Show and hide dancers using the arrow keys\r\n* Hide all of the dancers and switch to an exciting background effect",
     "soft_buttons": [
       "leftButton",
@@ -49,10 +49,7 @@
     "display_name": "Where'd They Go?",
     "short_instructions": "Where'd they go? (Click \"More\" for details)",
     "contained_level_names": null,
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

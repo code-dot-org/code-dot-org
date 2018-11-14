@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 182,
   "properties": {
-    "skin": "gamelab",
+    "skin": "dance",
     "helper_libraries": [
       "DanceLab"
     ],
@@ -38,7 +38,7 @@
     "block_pool": "Dancelab",
     "name_suffix": "_draft",
     "skip_autosave": true,
-    "default_song": "hammer",
+    "default_song": "isawthesign_aceofbase",
     "long_instructions": "# Let's Get in Formation!\r\n\r\nCheck out this dance that uses the `layout` block to change the backup dancers' formation throughout the dance. Try one of these ideas to extend it:\r\n\r\n* Create a second group of dancers in a different layout\r\n* Change layout when a key is pressed\r\n* Change a property when the dancers change formation",
     "soft_buttons": [
       "leftButton",

@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 182,
   "properties": {
-    "skin": "gamelab",
+    "skin": "dance",
     "helper_libraries": [
       "DanceLab"
     ],
@@ -38,7 +38,7 @@
     "block_pool": "Dancelab",
     "name_suffix": "_draft",
     "skip_autosave": true,
-    "default_song": "hammer",
+    "default_song": "thunder_imaginedragons",
     "long_instructions": "# Speed it Up, Slow it Down\r\n\r\nThis final dance uses the `set speed` block to control how fast each dancer moves. Try experimenting with different speeds during different points in the song. Feel free to keep tinkering on this dance, or return to any of the previous dances to make them even cooler.",
     "soft_buttons": [
       "leftButton",
@@ -49,10 +49,7 @@
     "display_name": "Speed it Up, Slow it Down",
     "short_instructions": "Speed it Up, Slow it Down (Click \"More\" for details)",
     "contained_level_names": null,
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
