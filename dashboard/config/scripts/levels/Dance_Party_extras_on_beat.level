@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 182,
   "properties": {
-    "skin": "gamelab",
+    "skin": "dance",
     "helper_libraries": [
       "DanceLab"
     ],
@@ -38,7 +38,7 @@
     "block_pool": "Dancelab",
     "name_suffix": "_draft",
     "skip_autosave": true,
-    "default_song": "hammer",
+    "default_song": "firework_katyperry",
     "long_instructions": "# Bass, Mid, and Treble\r\n\r\nThis dance uses \"peak\" events to trigger code when different parts of the music get loud. Try tinkering with different songs to see how they change the dance.",
     "soft_buttons": [
       "leftButton",
@@ -49,10 +49,7 @@
     "display_name": "Bass, Mid, and Treble",
     "short_instructions": "Bass, Mid, and Treble (Click \"More\" for details)",
     "contained_level_names": null,
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
