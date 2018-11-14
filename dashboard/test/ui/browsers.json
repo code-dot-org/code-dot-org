@@ -24,7 +24,7 @@
   {
     "name": "IE11Win10",
     "browserName": "Internet Explorer",
-    "version": "11.0",
+    "version": "11.103",
     "platform": "Windows 10"
   },
   {
