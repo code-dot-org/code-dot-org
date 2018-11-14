@@ -32,24 +32,11 @@ Regional Partners are organizations across the country who advocate for access t
 - A certificate of completion.
 - A bag of Code.org swag!
 
-[col-33]
-
-<img src="/images/fit-200/coursebook.png"/>
-
-[/col-33]
-
-[col-33]
-
-<img src="/images/fit-200/k5certificate.png"/>
-
-[/col-33]
-
-[col-33]
-
-<img src="/images/fit-200/swagbag.png"/>
-
-[/col-33]
-
+<div style="float: left;">
+  <img src="/images/fit-300/coursebook-2018.png" width="300"/>
+  <img src="/images/fit-300/k5certificate.png" width="300"/>
+  <img src="/images/fit-300/swagbag.png" width="300"/>
+</div>
 <div style="clear:both"></div>
 
 ### Teachers love our professional learning!
