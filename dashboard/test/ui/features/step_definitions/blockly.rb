@@ -230,3 +230,19 @@ end
 When(/^"(.+)" refers to block "(.+)"$/) do |block_alias, block_id|
   add_block_alias(block_alias, block_id)
 end
+
+memorized_code = nil
+When(/^I memorize my code$/) do
+  memorized_code = current_block_xml
+end
+
+Then(/^the project matches my memorized code$/) do
+  expect(memorized_code).to_not be_nil
+  expect(current_block_xml).to eq(memorized_code)
+end
+
+def current_block_xml
+  @browser.execute_script <<-JS
+    return __TestInterface.getBlockXML();
+  JS
+end
