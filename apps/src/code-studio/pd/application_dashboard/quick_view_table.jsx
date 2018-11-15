@@ -288,7 +288,7 @@ export class QuickViewTable extends React.Component {
   };
 
   formatTagsCell = (tags) => {
-    return tags.map(tag => tag.name).join(", ");
+    return tags.map(tag => tag.name).sort().join(", ");
   };
 
   formatActionsCell = (id) => {
