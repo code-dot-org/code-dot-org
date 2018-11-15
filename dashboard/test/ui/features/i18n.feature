@@ -28,7 +28,7 @@ Scenario: Minecraft:Agent tutorial in Spanish
   And I rotate to landscape
   And I wait for the page to fully load
   Then element "#toggleButton" is visible
-  And I click selector "#toggleButton"
+  And I press "toggleButton"
   And I wait until element ".csf-top-instructions p" is visible
   And element ".csf-top-instructions p" has "es" text from key "data.short_instructions.MC_HOC_2017_01_RETRY"
   Given I am on "http://studio.code.org/reset_session/lang/en"
@@ -91,7 +91,7 @@ Scenario: Minecraft:Agent tutorial in Portuguese
   And I rotate to landscape
   And I wait for the page to fully load
   Then element "#toggleButton" is visible
-  And I click selector "#toggleButton"
+  And I press "toggleButton"
   And I wait until element ".csf-top-instructions p" is visible
   And element ".csf-top-instructions p" has "pt-BR" text from key "data.short_instructions.MC_HOC_2017_01_RETRY"
   Given I am on "http://studio.code.org/reset_session/lang/en"
@@ -153,7 +153,7 @@ Scenario: Minecraft:Agent tutorial in Arabic (RTL)
   And I rotate to landscape
   And I wait for the page to fully load
   Then element "#toggleButton" is visible
-  And I click selector "#toggleButton"
+  And I press "toggleButton"
   And I wait until element ".csf-top-instructions p" is visible
   Then element ".csf-top-instructions p" has "ar-SA" text from key "data.short_instructions.MC_HOC_2017_01_RETRY"
   Given I am on "http://studio.code.org/reset_session/lang/en"
