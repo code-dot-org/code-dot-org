@@ -143,6 +143,11 @@ When /^I reset the puzzle to the starting version$/ do
   STEPS
 end
 
+When /^I reset the puzzle$/ do
+  @browser.find_element(:css, '#clear-puzzle-header').click
+  @browser.find_element(:css, '#confirm-button').click
+end
+
 Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
   @browser.find_element(selection_criteria)
