@@ -751,6 +751,7 @@ module Api::V1::Pd
         "Scholarship teacher?",
         "Bonus Points",
         "Notes",
+        "Tags",
         "Title",
         "First name",
         "Last name",
