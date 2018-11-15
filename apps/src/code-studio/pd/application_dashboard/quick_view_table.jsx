@@ -27,7 +27,12 @@ const styles = {
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
-    paddingLeft: '2px'
+    paddingLeft: '2px',
+    paddingRight: '2px'
+  },
+  tagsCell: {
+    paddingLeft: '2px',
+    paddingRight: '2px'
   }
 };
 
@@ -204,6 +209,19 @@ export class QuickViewTable extends React.Component {
         ]
       }
     },{
+      property: 'tags',
+      header: {
+        label: 'Tags'
+      },
+      cell: {
+        format: this.formatTagsCell,
+        transforms: [
+          () => ({
+            style: {...styles.tagsCell}
+          })
+        ]
+      }
+    },{
       property: 'id',
       header: {
         label: 'Actions',
@@ -267,6 +285,10 @@ export class QuickViewTable extends React.Component {
         </ReactTooltip>
       </div>
     );
+  };
+
+  formatTagsCell = (tags) => {
+    return tags.map(tag => tag.name).sort().join(", ");
   };
 
   formatActionsCell = (id) => {

@@ -21,7 +21,11 @@ const styles = {
   statusCellCommon: {
     padding: '5px'
   },
-  statusCell: StatusColors
+  statusCell: StatusColors,
+  tagsCell: {
+    paddingLeft: '2px',
+    paddingRight: '2px'
+  }
 };
 
 export class CohortViewTable extends React.Component {
@@ -205,6 +209,19 @@ export class CohortViewTable extends React.Component {
     }
 
     columns.push({
+      property: 'tags',
+      header: {
+        label: 'Tags'
+      },
+      cell: {
+        format: this.formatTagsCell,
+        transforms: [
+          () => ({
+            style: {...styles.tagsCell}
+          })
+        ]
+      }
+    },{
       property: 'id',
       header: {
         label: 'View Application'
@@ -238,6 +255,10 @@ export class CohortViewTable extends React.Component {
   formatDate = (iso8601Date) => moment(iso8601Date).format("MMM D");
 
   formatBoolean = (bool) => bool ? "Yes" : "No";
+
+  formatTagsCell = (tags) => {
+    return tags.map(tag => tag.name).sort().join(", ");
+  };
 
   formatViewButton = (id) => {
     return (

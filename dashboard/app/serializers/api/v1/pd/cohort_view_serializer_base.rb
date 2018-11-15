@@ -8,7 +8,8 @@ class Api::V1::Pd::CohortViewSerializerBase < ActiveModel::Serializer
     :email,
     :assigned_workshop,
     :registered_workshop,
-    :status
+    :status,
+    :tags
   )
 
   # Dynamically add locked where applicable

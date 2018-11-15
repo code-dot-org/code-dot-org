@@ -527,6 +527,7 @@ module Api::V1::Pd
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
             status: 'accepted_not_notified',
+            tags: [],
             friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -564,6 +565,7 @@ module Api::V1::Pd
             assigned_workshop: nil,
             registered_workshop: nil,
             status: 'accepted_not_notified',
+            tags: [],
             friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -602,6 +604,7 @@ module Api::V1::Pd
             assigned_workshop: nil,
             registered_workshop: nil,
             status: 'accepted',
+            tags: [],
             assigned_fit: nil,
             registered_fit: 'No',
             locked: true
@@ -646,6 +649,7 @@ module Api::V1::Pd
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
             status: 'accepted_not_notified',
+            tags: [],
             friendly_scholarship_status: 'No'
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -682,6 +686,7 @@ module Api::V1::Pd
             assigned_workshop: nil,
             registered_workshop: nil,
             status: 'accepted_not_notified',
+            tags: [],
             friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -721,6 +726,7 @@ module Api::V1::Pd
             assigned_fit: nil,
             registered_fit: 'No',
             status: 'accepted',
+            tags: [],
             locked: true
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -745,6 +751,7 @@ module Api::V1::Pd
         "Scholarship teacher?",
         "Bonus Points",
         "Notes",
+        "Tags",
         "Title",
         "First name",
         "Last name",
