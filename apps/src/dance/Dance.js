@@ -171,6 +171,14 @@ Dance.prototype.initSongs = async function (config) {
 
   loadSong(selectedSong, songData);
   this.updateSongMetadata(selectedSong);
+
+  if (config.channel) {
+    // Ensure that the selected song will be stored in the project the first
+    // time we run the level. This ensures that if we are on a project-backed
+    // script level, then the correct song will still be selected after we
+    // share.
+    config.level.selectedSong = selectedSong;
+  }
 };
 
 Dance.prototype.setSongCallback = function (songId) {
