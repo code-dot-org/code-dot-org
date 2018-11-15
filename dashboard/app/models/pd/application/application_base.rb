@@ -110,7 +110,7 @@ module Pd::Application
     has_and_belongs_to_many :tags, class_name: 'Pd::Application::Tag', foreign_key: 'pd_application_id', association_foreign_key: 'pd_application_tag_id'
 
     def tag_names
-      tags.map(&:name).join(", ")
+      tags.map(&:name).sort!.join(", ")
     end
 
     def set_type_and_year

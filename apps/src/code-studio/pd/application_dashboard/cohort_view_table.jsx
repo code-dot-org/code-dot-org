@@ -257,7 +257,7 @@ export class CohortViewTable extends React.Component {
   formatBoolean = (bool) => bool ? "Yes" : "No";
 
   formatTagsCell = (tags) => {
-    return tags.map(tag => tag.name).join(", ");
+    return tags.map(tag => tag.name).sort().join(", ");
   };
 
   formatViewButton = (id) => {
