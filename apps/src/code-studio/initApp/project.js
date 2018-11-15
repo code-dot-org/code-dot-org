@@ -31,7 +31,6 @@ var events = {
   appModeChanged: 'appModeChanged',
   appInitialized: 'appInitialized',
   workspaceChange: 'workspaceChange',
-  continueButtonPressed: 'continueButtonPressed',
 };
 
 // Number of consecutive failed attempts to update the channel.
@@ -521,13 +520,9 @@ var projects = module.exports = {
           this.setName('My Project');
         }
 
-        const eventName = appOptions.level.skipRunSave ?
-          events.continueButtonPressed :
-          events.appModeChanged;
-
-        $(window).on(eventName, function (event, callback) {
-          this.saveIfSourcesChanged().then(callback);
-        }.bind(this));
+        if (!appOptions.level.skipRunSave) {
+          $(window).on(events.appModeChanged, this.saveIfSourcesChanged.bind(this));
+        }
 
         $(window).on(events.appInitialized, function () {
           // Get the initial app code as a baseline

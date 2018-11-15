@@ -53,7 +53,7 @@ export const SongTitlesToArtistTwitterHandle = {
   "cestlavie_khaled" : "Khaled_Officiel",
   "occidentaliskarma_francescogabbani" : "FrankGabbani",
   "isthatforme_anitta" : "Anitta",
-  "showdapoderosas_anitta" : "Anitta",
+  "showdaspoderosas_anitta" : "Anitta",
   "janti_muratboz" : "MuratBoz",
   "gee_girlsgen" : "GirlsGeneration",
   "growingpains_alessiacara" : "AlessiaCara",
