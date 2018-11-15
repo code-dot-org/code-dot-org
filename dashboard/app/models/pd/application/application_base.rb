@@ -109,6 +109,10 @@ module Pd::Application
     has_many :emails, class_name: 'Pd::Application::Email'
     has_and_belongs_to_many :tags, class_name: 'Pd::Application::Tag', foreign_key: 'pd_application_id', association_foreign_key: 'pd_application_tag_id'
 
+    def tag_names
+      tags.map(&:name).join(", ")
+    end
+
     def set_type_and_year
       # Override in derived classes and set to valid values.
       # Setting them to nil here fails those validations and prevents this base class from being saved.
