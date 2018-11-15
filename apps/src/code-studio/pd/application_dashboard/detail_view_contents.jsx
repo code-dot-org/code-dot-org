@@ -272,12 +272,15 @@ export class DetailViewContents extends React.Component {
       'locked',
       'notes',
       'regional_partner_value',
-      'pd_workshop_id',
-      'scholarship_status'
+      'pd_workshop_id'
     ];
 
     if (this.props.applicationData.application_type === 'Facilitator') {
       stateValues.push('fit_workshop_id');
+    }
+
+    if (this.props.applicationData.application_type === 'Teacher') {
+      stateValues.push('scholarship_status');
     }
 
     const data = {
