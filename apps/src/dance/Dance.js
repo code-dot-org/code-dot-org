@@ -630,10 +630,10 @@ Dance.prototype.displayFeedback_ = function () {
     },
   };
 
-  const over13Cookie = sessionStorage.getItem('anon_over13');
-  if (over13Cookie) {
-    // Disable social share for users under 13.
-    feedbackOptions.disableSocialShare = over13Cookie === 'false';
+  // Disable social share for users under 13 if we have the cookie set.
+  const is13PlusCookie = sessionStorage.getItem('anon_over13');
+  if (is13PlusCookie) {
+    feedbackOptions.disableSocialShare = is13PlusCookie === 'false';
   }
 
   this.studioApp_.displayFeedback(feedbackOptions);
