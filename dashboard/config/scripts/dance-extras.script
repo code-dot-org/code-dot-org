@@ -1,3 +1,5 @@
+hidden false
+
 stage 'Dance Party - Go Further'
 named_level 'Dance_Party_extras_intro'
 named_level 'Dance_Party_extras_layout'

@@ -59,7 +59,7 @@ Scenario: Lock settings for students
   When I am on "http://studio.code.org/s/allthethings/lockable/1/puzzle/1/page/4"
   And I click selector ".submitButton" once I see it
   And I wait to see a dialog titled "Submit your survey"
-  And I click selector "#ok-button"
+  And I press "ok-button"
   And I wait until current URL contains "/s/allthethings/stage/31/puzzle/1"
 
   # now locked for student
