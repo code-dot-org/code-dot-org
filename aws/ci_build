@@ -146,7 +146,9 @@ def main
 
       write_build_status rack_env, commit_hash_short, :success
 
-      if rack_env == :test
+      # Only the managed test server should publish the commit hash of a successful Test Build
+      # This logic prevents staging-next server from corrupting the current successful commit hash.
+      if rack_env == :test && CDO.pegasus_hostname == 'test.code.org'
         ChatClient.log "<@#{DevelopersTopic.dotd}> DTT finished", color: 'purple'
         mark_dtt_green
       end
