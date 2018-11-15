@@ -181,7 +181,7 @@ class ProjectCardGrid extends Component {
               <ProjectAppTypeArea
                 labKey="dance"
                 labName={i18n.projectTypeDance()}
-                labViewMoreString={i18n.projectTypeDanceViewMore()}
+                labViewMoreString={i18n.projectsViewAll()}
                 projectList={projectLists.dance}
                 numProjectsToShow={numProjects}
                 galleryType={this.props.galleryType}
