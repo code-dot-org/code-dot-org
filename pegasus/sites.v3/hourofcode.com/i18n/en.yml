@@ -451,6 +451,8 @@
   videos_hoc_2014: Hour of Code is Here - Anybody Can Learn
   videos_obama_cs: President Obama on computer science
   videos_anybody_can_learn: Anybody Can Learn (1 min)
+  videos_creativity: What is Creativity?
+  videos_creativity_series: What is Creativity? View Full Series.
 
   title_country_resources: Country Specific Resources
   title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
@@ -3481,7 +3483,7 @@
   tutorial_allcancodeapps_string_detail_grades: "Grades 6+"
   tutorial_n2y_string_detail_grades: "Pre-reader+"
 
-  tutorial_danceparty_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
+  tutorial_danceparty_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_chibitronics_string_platforms: "All modern browsers"
   tutorial_athlete_string_platforms: "All modern browsers"
   tutorial_moana_string_platforms: "All modern browsers, Android tablet, iPad"
@@ -4063,7 +4065,7 @@
   tutorial_vidcodeplastic_string_platforms: "All modern browsers, iPad"
   tutorial_vidcodetypeface_string_platforms: "All modern browsers, iPad"
   tutorial_washustorm_string_platforms: "All modern browsers"
-  tutorial_activitypackets_string_platforms: "Unplugged"
+  tutorial_activitypackets_string_platforms: "Unplugged, iOS, Android, Kindle, Chrome* (*Cue only)"
   tutorial_googlerookie_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_tommyturtle_string_platforms: "Android tablet, iPad, Android phone, iPhone"
   tutorial_mazyad_string_platforms: "Unplugged"

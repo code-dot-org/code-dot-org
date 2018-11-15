@@ -54,6 +54,7 @@ def main(options)
   $failed_features = 0
 
   start_time = Time.now
+  ENV['GIT_BRANCH'] = GIT_BRANCH
   ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{start_time}"
 
   open_log_files

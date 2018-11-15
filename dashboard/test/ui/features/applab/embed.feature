@@ -1,3 +1,5 @@
+# Brad (2018-11-14) Skip on IE due to blocked pop-ups and possible "new document" issues
+@no_ie
 @dashboard_db_access
 @as_student
 @no_mobile

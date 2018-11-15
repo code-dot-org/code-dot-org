@@ -33,7 +33,7 @@ Code.org's Facilitator Development Program is a highly-selective professional le
 
 <br>
 <br>
-The Facilitator Development Program application is open U.S.-based applicants interested in developing as leaders and facilitators for teachers bringing CS education to their students. Preference will be given to applicants who meet or exceed our qualifications (listed below) and priority will be given to applicants who live in a region where Code.org has a <a href="https://code.org/educate/professional-learning/about-partners">Regional Partner</a> or in areas where we are considering future partnerships.
+The Facilitator Development Program application is open to U.S.-based applicants interested in developing as leaders and facilitators for teachers bringing CS education to their students. Preference will be given to applicants who meet or exceed our qualifications (listed below) and priority will be given to applicants who live in a region where Code.org has a <a href="https://code.org/educate/professional-learning/about-partners">Regional Partner</a> or in areas where we are considering future partnerships.
 
 </div>
 
