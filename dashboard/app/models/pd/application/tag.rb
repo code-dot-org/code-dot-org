@@ -15,5 +15,7 @@
 module Pd::Application
   class Tag < ActiveRecord::Base
     self.table_name = 'pd_application_tags'
+
+    has_and_belongs_to_many :pd_applications, foreign_key: 'pd_application_tag_id', association_foreign_key: 'pd_application_id'
   end
 end

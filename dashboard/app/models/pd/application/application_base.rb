@@ -107,6 +107,7 @@ module Pd::Application
     before_save :update_accepted_date, if: :status_changed?
     before_create :generate_application_guid, if: -> {application_guid.blank?}
     has_many :emails, class_name: 'Pd::Application::Email'
+    has_and_belongs_to_many :tags, class_name: 'Pd::Application::Tag', foreign_key: 'pd_application_id', association_foreign_key: 'pd_application_tag_id'
 
     def set_type_and_year
       # Override in derived classes and set to valid values.
