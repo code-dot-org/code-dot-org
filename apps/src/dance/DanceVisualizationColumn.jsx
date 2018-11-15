@@ -74,9 +74,10 @@ class DanceVisualizationColumn extends React.Component {
   /*
     Turn the song filter off unless there is a teacher override
   */
-  turnFilterOff() {
-    this.setState({filterOff: queryString.parse(window.location.search).songfilter !== 'on'});
-  }
+  turnFilterOff = () => {
+    const filterOff = queryString.parse(window.location.search).songfilter !== 'on';
+    this.setState({filterOff});
+  };
 
   /*
     The filter defaults to on. If the user is over 13 (identified via account or anon dialog) and
@@ -120,7 +121,7 @@ class DanceVisualizationColumn extends React.Component {
       <div>
         {(sessionStorage.getItem('anon_over13') === null && !this.props.isShareView) &&
           <AgeDialog
-            turnOffFilter={this.turnFilterOff.bind(this)}
+            turnOffFilter={this.turnFilterOff}
           />
         }
         <span>

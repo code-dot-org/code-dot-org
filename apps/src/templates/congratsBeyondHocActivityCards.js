@@ -90,6 +90,8 @@ const HeroMinecraft = {
   MCShareLink: ""
 };
 
+// This card is displayed when you complete the Code.org MC Aquatic tutorial.
+// The takes you to the Microsoft Minecraft page.
 const AquaticMinecraft = {
   title: i18n.minecraftAquaticTitle(),
   description: i18n.minecraftAquaticDesc(),
@@ -98,10 +100,20 @@ const AquaticMinecraft = {
   buttonText: i18n.minecraftAquaticButton(),
 };
 
+// This card is displayed to promote the MC Aquatic tutorial after finishing
+// another Hour of Code activity.
+const AquaticMinecraftPromo = {
+  title: i18n.minecraftAquaticPromoTitle(),
+  description: i18n.minecraftAquaticPromoDesc(),
+  link: "/s/aquatic/reset",
+  image: "aquatic-minecraft",
+  buttonText: i18n.minecraftAquaticPromoButton(),
+};
+
 const DanceParty = {
   title: i18n.dancePartyTitle(),
   description: i18n.dancePartyDesc(),
-  link: "/s/dance",
+  link: "/s/dance/reset",
   image: "dance-party",
   buttonText: i18n.dancePartyButton(),
 };
@@ -212,6 +224,27 @@ export const cardSets = {
   ],
   'signedOutNonEnglishDancePartyCards' : [
     DancePartyFollowUp,
+    CSFAccelerated,
+    CreateAccount
+  ],
+  // Use these cards if Dance Party Extras is hidden with DCDO.
+  'signedInEnglishDancePartyAquaticCards' : [
+    AquaticMinecraftPromo,
+    CSFExpress,
+    AnotherHoC
+  ],
+  'signedInNonEnglishDancePartyAquaticCards' : [
+    AquaticMinecraftPromo,
+    CSFAccelerated,
+    AnotherHoC
+  ],
+  'signedOutEnglishDancePartyAquaticCards' : [
+    AquaticMinecraftPromo,
+    CSFExpress,
+    CreateAccount
+  ],
+  'signedOutNonEnglishDancePartyAquaticCards' : [
+    AquaticMinecraftPromo,
     CSFAccelerated,
     CreateAccount
   ],
