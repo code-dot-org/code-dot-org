@@ -143,6 +143,11 @@ When /^I reset the puzzle to the starting version$/ do
   STEPS
 end
 
+When /^I reset the puzzle$/ do
+  @browser.find_element(:css, '#clear-puzzle-header').click
+  @browser.find_element(:css, '#confirm-button').click
+end
+
 Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
   @browser.find_element(selection_criteria)
@@ -703,6 +708,11 @@ end
 And (/^I see option "([^"]*)" or "([^"]*)" in the dropdown "([^"]*)"/) do |option_alpha, option_beta, selector|
   select_options_text = @browser.execute_script("return $('#{selector} option').text()")
   expect((select_options_text.include? option_alpha) || (select_options_text.include? option_beta)).to eq(true)
+end
+
+And (/^I wait for the song selector to load/) do
+  wait_for_jquery
+  wait_until {@browser.execute_script("return !!$('#song_selector').val();")}
 end
 
 def has_class?(selector, class_name)
