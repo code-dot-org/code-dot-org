@@ -121,7 +121,7 @@ class Homepage
       twitter = "Every student deserves the opportunity to express their creativity with computer science. What will you create? https://twitter.com/codeorg/status/1051805228859834368"
     end
 
-    hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_launch)
+    hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
     if hoc_mode == "actual-hoc"
       [
         {
@@ -378,14 +378,7 @@ class Homepage
     heroes = get_heroes
     hero_display_time = 13 * 1000
 
-    if rack_env != :production && request.params["preview"]
-      # On non-production, special "?preview=true" flag shows all heroes, and more quickly, for easier previewing
-      heroes_arranged = heroes
-      hero_display_time = 6 * 1000
-    elsif rack_env != :production && request.params["lock-hero"]
-      # For UI tests just lock to the first hero image
-      heroes_arranged = heroes[0, 1]
-    elsif show_single_hero
+    if show_single_hero
       hoc_marketing_mode = DCDO.get("hoc_launch", CDO.default_hoc_launch)
       heroes_arranged = if hoc_marketing_mode == "mc"
                           hoc2018_hero_mc
@@ -414,6 +407,16 @@ class Homepage
       unless heroes_celeba.empty?
         heroes_celeba.shuffle!
         heroes_arranged.unshift(heroes_celeba.first)
+      end
+    end
+
+    if rack_env != :production
+      if request.params["preview"]
+        # On non-production, special "?preview=true" flag shows all heroes, and more quickly, for easier previewing
+        hero_display_time = 6 * 1000
+      elsif request.params["lock-hero"]
+        # For UI tests just lock to the first hero image
+        heroes_arranged = heroes_arranged[0, 1]
       end
     end
 

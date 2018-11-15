@@ -9,6 +9,7 @@ import { SignInState } from '@cdo/apps/code-studio/progressRedux';
 import i18n from '@cdo/locale';
 import { reload } from '@cdo/apps/utils';
 import { environmentSpecificCookieName } from '@cdo/apps/code-studio/utils';
+import queryString from "query-string";
 
 const styles = {
   container: {
@@ -61,20 +62,12 @@ class AgeDialog extends Component {
     turnOffFilter: PropTypes.func.isRequired
   };
 
-  onClickAgeOk = () => {
-    const value = this.ageDropdown.getValue();
-    // Ignore click if nothing selected
-    if (!value) {
-      return;
-    }
+  setManualFilter = () => {
+    this.setSessionStorage(false);
+  };
 
-    // Sets cookie to true when anon user is 13+. False otherwise.
-    let over13 = parseInt(value, 10) >= 13;
+  setSessionStorage = (over13) => {
     sessionStorage.setItem(sessionStorageKey, over13);
-
-    if (over13) {
-      this.props.turnOffFilter();
-    }
 
     // When opening a new tab, we'll have a new session (and thus show this dialog),
     // but may still be using a storage_id for a previous user. Clear that cookie
@@ -88,8 +81,33 @@ class AgeDialog extends Component {
     }
   };
 
+  componentDidMount() {
+    // If the song filter override has been turned on, set session storage
+    // Dialog won't render
+    if (queryString.parse(window.location.search).songfilter === 'on') {
+      this.setManualFilter();
+    }
+  }
+
+  onClickAgeOk = () => {
+    const value = this.ageDropdown.getValue();
+    // Ignore click if nothing selected
+    if (!value) {
+      return;
+    }
+
+    // Sets cookie to true when anon user is 13+. False otherwise.
+    const over13 = parseInt(value, 10) >= 13;
+    this.setSessionStorage(over13);
+
+    if (over13) {
+      this.props.turnOffFilter();
+    }
+  };
+
   render() {
     const { signedIn} = this.props;
+
     // Don't show dialog unless script requires 13+, we're not signed in, and
     // we haven't already given this dialog our age or we do not require sign-in
     if (signedIn || sessionStorage.getItem(sessionStorageKey)) {
@@ -124,9 +142,6 @@ class AgeDialog extends Component {
                 </div>
               </div>
             </div>
-          </div>
-          <div>
-            <a href="https://code.org/privacy">{i18n.privacyPolicy()}</a>
           </div>
         </div>
       </BaseDialog>

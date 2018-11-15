@@ -107,11 +107,11 @@ import ChallengeDialog from './templates/ChallengeDialog';
  */
 FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     maxRequiredBlocksToFlag, recommendedBlocks, maxRecommendedBlocksToFlag) {
-
   options.level = options.level || {};
 
-  var hadShareFailure = (options.response && options.response.share_failure);
-  var showingSharing = options.showingSharing && !hadShareFailure && options.shareLink;
+  const {onContinue, shareLink} = options;
+  const hadShareFailure = (options.response && options.response.share_failure);
+  const showingSharing = options.showingSharing && !hadShareFailure && shareLink;
 
   var canContinue = this.canContinueToNextLevel(options.feedbackType);
   var displayShowCode = this.studioApp_.enableShowCode && this.studioApp_.enableShowLinesCount && canContinue && !showingSharing;
@@ -202,13 +202,11 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   };
 
-  const onContinue = () => {
-    if (options.level.skipRunSave) {
-      $(window).trigger('continueButtonPressed', options.onContinue);
-    } else {
-      options.onContinue();
-    }
-  };
+  // If we're showing a share link, fire-and-forget a project save right before showing the dialog
+  // so that any changes made since the last Run are reflected in the shared project.
+  if (showingSharing) {
+    project.saveIfSourcesChanged();
+  }
 
   var onHidden = onlyContinue ? onContinue : function () {
     if (!continueButton || feedbackDialog.hideButDontContinue) {

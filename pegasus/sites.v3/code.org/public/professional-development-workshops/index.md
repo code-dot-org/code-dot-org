@@ -32,24 +32,11 @@ Regional Partners are organizations across the country who advocate for access t
 - A certificate of completion.
 - A bag of Code.org swag!
 
-[col-33]
-
-<img src="/images/fit-200/coursebook.png"/>
-
-[/col-33]
-
-[col-33]
-
-<img src="/images/fit-200/k5certificate.png"/>
-
-[/col-33]
-
-[col-33]
-
-<img src="/images/fit-200/swagbag.png"/>
-
-[/col-33]
-
+<div style="float: left;">
+  <img src="/images/fit-300/coursebook-2018.png" width="300"/>
+  <img src="/images/fit-300/k5certificate.png" width="300"/>
+  <img src="/images/fit-300/swagbag.png" width="300"/>
+</div>
 <div style="clear:both"></div>
 
 ### Teachers love our professional learning!
@@ -78,13 +65,9 @@ Join the over 80,000 teachers who have participated in our workshops. The majori
 
 </div>
 
-### Can’t attend a workshop?
+### Can't attend a workshop, or outside of the United States?
 
-If you cannot attend a workshop, teachers anywhere in the world can use [our self-paced online workshop](/educate/professional-development-online) to get started at no cost. And, the curriculum, lesson plans, tools, and support are also available at no cost worldwide. [Join our forums](https://forum.code.org/) to connect with other teachers for support, teaching tips, and best practices.
-
-### Outside of the US?
-
-Unfortunately, we do not currently offer professional development workshops outside of the US. However, you can take a look at [our self-paced online workshop](/educate/professional-development-online) to get started at no cost. And, the curriculum, lesson plans, tools, and support are also available at no cost worldwide. [Join our forums](https://forum.code.org/) to connect with other teachers for support, teaching tips, and best practices.
+Unfortunately, we do not currently offer professional development workshops outside of the U.S. If you are outside of the U.S., or you are a U.S. teacher but cannot attend a workshop, you can take a look at our [our self-paced online workshop](/educate/professional-development-online) to get started at no cost. And, the curriculum, lesson plans, tools, and support are also available at no cost worldwide. [Join our forums](https://forum.code.org/) to connect with other teachers for support, teaching tips, and best practices.
 
 ## Benefits beyond the workshop
 
