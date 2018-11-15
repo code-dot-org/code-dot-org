@@ -36,6 +36,7 @@ class ScriptConstantsTest < Minitest::Test
     assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::GUMBALL_NAME)
     assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::ICEAGE_NAME)
     assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::DANCE_PARTY_NAME)
+    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::DANCE_PARTY_EXTRAS_NAME)
     refute ScriptConstants.script_in_category?(:hoc, ScriptConstants::COURSE4_NAME)
   end
 
@@ -67,6 +68,7 @@ class ScriptConstantsTest < Minitest::Test
 
   def test_assignable_info
     assert_equal 1, ScriptConstants.assignable_info({name: 'dance'})[:position]
+    assert_equal 2, ScriptConstants.assignable_info({name: 'dance-extras'})[:position]
     assert_equal 3, ScriptConstants.assignable_info({name: 'aquatic'})[:position]
     assert_equal 4, ScriptConstants.assignable_info({name: 'hero'})[:position]
     assert_equal 5, ScriptConstants.assignable_info({name: 'mc'})[:position]
