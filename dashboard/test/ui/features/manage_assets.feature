@@ -9,7 +9,7 @@ Feature: Manage Assets
     Then I click selector "#record-asset" once I see it
     And I wait until element ".modal-content" contains text "Your computer is not set-up to record audio."
 
-  @no_safari
+  @no_safari_yosemite
   #ToDo: epeach - solve safari specific failure
   Scenario: The manage assets dialog displays the audio preview, and toggles between play and pause button.
     Given I am a student
@@ -24,7 +24,7 @@ Feature: Manage Assets
     And element ".fa-play-circle" is visible
 
   # Brad (2018-11-14) Skip on IE due to blocked pop-ups
-  @no_safari @no_ie
+  @no_safari_yosemite @no_ie
   Scenario: The manage assets dialog displays an image thumbnail and opens in a new tab when clicked
     Given I am a student
     And I start a new Game Lab project
