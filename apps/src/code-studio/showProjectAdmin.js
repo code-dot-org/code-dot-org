@@ -39,7 +39,7 @@ export default (project) => {
         type:'PUT',
         dataType:'json',
         success:function (data) {
-          project.adminResetAbuseScore(-100);
+          project.setFeaturedAbuseScore();
           $('#unfeature_project').show();
           $('#feature_project').hide();
         },

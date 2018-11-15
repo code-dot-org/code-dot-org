@@ -194,16 +194,25 @@ class StorageApps
     new_score
   end
 
-  def reset_abuse(channel_id)
+  def set_featured_abuse_score(channel_id)
+    _owner, id = storage_decrypt_channel_id(channel_id)
+    row = @table.where(id: id).exclude(state: 'deleted').first
+    raise NotFound, "channel `#{channel_id}` not found" unless row
+
+    update_count = @table.where(id: id).exclude(state: 'deleted').update({abuse_score: -1000})
+    raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
+  end
+
+  def set_abuse(channel_id, new_score = 0)
     _owner, id = storage_decrypt_channel_id(channel_id)
 
     row = @table.where(id: id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
-    update_count = @table.where(id: id).exclude(state: 'deleted').update({abuse_score: 0})
+    update_count = @table.where(id: id).exclude(state: 'deleted').update({abuse_score: new_score})
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
-    0
+    new_score
   end
 
   def content_moderation_disabled?(channel_id)

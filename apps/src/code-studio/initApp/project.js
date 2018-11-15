@@ -275,12 +275,38 @@ var projects = module.exports = {
   /**
    * Sets abuse score to zero, saves the project, and reloads the page
    */
-  adminResetAbuseScore(new_score = 0) {
+  adminResetAbuseScore() {
     var id = this.getCurrentId();
     if (!id) {
       return;
     }
     channels.delete(id + '/abuse', function (err, result) {
+      if (err) {
+        throw err;
+      }
+      assets.patchAll(id, 'abuse_score=0', null, function (err, result) {
+        if (err) {
+          throw err;
+        }
+      });
+      files.patchAll(id, 'abuse_score=0', null, function (err, result) {
+        if (err) {
+          throw err;
+        }
+      });
+    });
+    $('.admin-abuse-score').text(0);
+  },
+
+  /**
+   * Sets abuse score to -1000, saves the project, and reloads the page. This is used when a project is featured to prevent false abuse reports from hiding the project.
+   */
+  setFeaturedAbuseScore(new_score = -1000) {
+    var id = this.getCurrentId();
+    if (!id) {
+      return;
+    }
+    channels.update(id + '/featured-abuse', function (err, result) {
       if (err) {
         throw err;
       }
@@ -293,11 +319,9 @@ var projects = module.exports = {
         if (err) {
           throw err;
         }
-        $('.admin-abuse-score').text(new_score);
       });
     });
-
-    console.log("abuse score", this.getAbuseScore())
+    $('.admin-abuse-score').text(new_score);
   },
 
   /**

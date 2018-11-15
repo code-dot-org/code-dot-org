@@ -301,6 +301,26 @@ class ChannelsApi < Sinatra::Base
   end
 
   #
+  # POST /v3/channels/<channel-id>/featured-abuse
+  #
+  # Set the abuse score to -1000 to prevent reported abuse from # hiding a project. Can only be done by a project validator
+  # and should only be used when a project is featured.
+  #
+  post %r{/v3/channels/([^/]+)/featured-abuse$} do |id|
+    # UserPermission::PROJECT_VALIDATOR
+    not_authorized unless project_validator?
+
+    dont_cache
+    content_type :json
+    begin
+      value = StorageApps.new(storage_id('user')).set_abuse(id, -1000)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
+    {abuse_score: value}.to_json
+  end
+
+  #
   # DELETE /v3/channels/<channel-id>/abuse
   #
   # Clear an abuse score. Requires project_validator permission
@@ -312,7 +332,7 @@ class ChannelsApi < Sinatra::Base
     dont_cache
     content_type :json
     begin
-      value = StorageApps.new(storage_id('user')).reset_abuse(id)
+      value = StorageApps.new(storage_id('user')).set_abuse(id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end

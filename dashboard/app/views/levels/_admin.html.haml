@@ -112,11 +112,12 @@
 
     - if current_user.project_validator?
       %br
-      .admin-abuse
+      .admin-abuse{ style: 'display: inline-block;' }
         Abuse score:
-      %span.admin-abuse-score
-        = link_to 'Reset', '#', { class: 'admin-abuse-reset' }
-      .admin-report-abuse{ style: 'display: none;' }
+      .admin-abuse-score{ style: 'display: inline-block;' }
+      .admin-reset-abuse
+        = link_to 'Reset Abuse', '#', { class: 'admin-abuse-reset' }
+      .admin-report-abuse
         = link_to 'Report Abuse', '/report_abuse'
 
       #disable-auto-moderation{'style' => ('display: none;' if content_moderation_disabled)}
