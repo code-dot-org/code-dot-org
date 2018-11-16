@@ -15,6 +15,9 @@ import {
 } from '../components/regional_partner_dropdown';
 
 const styles = {
+  container: {
+    overflowX: 'auto'
+  },
   table: {
     width: '100%'
   },
@@ -284,15 +287,17 @@ export class CohortViewTable extends React.Component {
     })(rows);
 
     return (
-      <Table.Provider
-        id="cohort-view"
-        className="pure-table table-striped"
-        columns={this.columns}
-        style={styles.table}
-      >
-        <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="id"/>
-      </Table.Provider>
+      <div style={styles.container}>
+        <Table.Provider
+          id="cohort-view"
+          className="pure-table table-striped"
+          columns={this.columns}
+          style={styles.table}
+        >
+          <Table.Header />
+          <Table.Body rows={sortedRows} rowKey="id"/>
+        </Table.Provider>
+      </div>
     );
   }
 }
