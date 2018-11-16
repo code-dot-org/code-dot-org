@@ -275,7 +275,7 @@ class Blockly < Level
   end
 
   def localized_blockly_level_options(script)
-    options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options") do
+    options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options", force: !Script.should_cache?) do
       level_options = blockly_level_options.dup
 
       # For historical reasons, `localized_instructions` and
@@ -284,9 +284,10 @@ class Blockly < Level
       # migrate to the new keys
       set_unless_nil(level_options, 'instructions', localized_short_instructions)
       set_unless_nil(level_options, 'authoredHints', localized_authored_hints)
-      set_unless_nil(level_options, 'sharedBlocks', localized_shared_blocks(level_options['sharedBlocks']))
 
       if should_localize?
+        set_unless_nil(level_options, 'sharedBlocks', localized_shared_blocks(level_options['sharedBlocks']))
+
         if script && !script.localize_long_instructions?
           level_options.delete('markdownInstructions')
         else
