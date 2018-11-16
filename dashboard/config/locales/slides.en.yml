@@ -2360,7 +2360,7 @@ en:
         text: "The middle area is your toolbox where you can find coding commands."
       5:
         image: 'notes/mc_2018_intro_5.png'
-        text: "And on the large area on the right is your workspace this is where you can stack commands to build your program and control your movements."
+        text: "And the large area on the right is your workspace. This is where you can stack commands to build your program and control your movements."
       6:
         image: 'notes/mc_2018_intro_6.png'
         text: "The instructions of each level are on top of the page. Click the plus sign to change between long and short instructions."
@@ -2375,10 +2375,10 @@ en:
         text: "If you want to try again, click the reset button to go back where you started."
       10:
         image: 'notes/mc_2018_intro_10.png'
-        text: "If you need to delete a command, just drag the block from your workspace back into the toolbox. Remember click run to see what your code looks like in action."
+        text: "If you need to delete a command, just drag the block from your workspace back into the toolbox. Remember, click \"Run\" to see what your code looks like in action."
       11:
         image: 'notes/mc_2018_intro_11.png'
-        text: "Ok, enough messing around, fellow adventurer. Let’s start coding to find some underwater treasure."
+        text: "Okay, enough messing around, fellow adventurer. Let’s start coding to find some underwater treasure."
     MC_2018_loops:
       1:
         image: 'notes/MC_2018_loops_1.png'
@@ -2391,10 +2391,10 @@ en:
         text: "Computers are really good at doing the same thing over and over again using coding loops. When you want your program to do the same instructions many times, you can use a loop!"
       4:
         image: 'notes/MC_2018_loops_4.png'
-        text: "The loop contains instructions with the command to repeat until goal. Once your program starts a repeat until goal loop, it will keep reading the instructions inside until it gets to the goal."
+        text: "The loop block contains instructions that are repeated until the goal is reached. Once your program starts a \"Repeat until goal\" loop, it will keep repeating the instructions inside until it gets to the goal."
       5:
         image: 'notes/MC_2018_loops_5.png'
-        text: "Try this for yourself! Place the commands you want to repeat inside the repeat until goal block, click run, and watch it go!"
+        text: "Try this for yourself! Place the commands you want to repeat inside the \"Repeat until goal\" block, click \"Run\", and watch it go!"
       6:
         image: 'notes/MC_2018_loops_6.png'
         text: "Well, that was a little weird. Who knew squids could code? I didn't even think they had fingers. So now we know about loops. Let's use them to bag us some more treasure."
@@ -2438,7 +2438,7 @@ en:
         text: "Tomohawk: Congratulations!"
       5:
         image: 'notes/mc_2018_closing_5.png'
-        text: "What a great day! All the treasure hunting led us to build a Minecraft conduit. Nautilus shells, treasure chests, and I just love the color of prismarine. And we learned how to code with loops and conditionals."
+        text: "What a great day! All the treasure hunting led us to build a Minecraft conduit, find Nautilus shells, and discover treasure chests. I just love the color of prismarine. We also learned how to code with loops and conditionals."
       6:
         image: 'notes/mc_2018_closing_6.png'
         text: "Speaking of coding, there is one more level to this quest. Are you up for it, adventurers?"
