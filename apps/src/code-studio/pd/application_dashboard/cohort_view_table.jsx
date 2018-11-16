@@ -255,7 +255,7 @@ export class CohortViewTable extends React.Component {
   };
 
   // Format dates as abbreviated month and day, e.g. "Mar 9"
-  formatDate = (iso8601Date) => moment(iso8601Date).format("MMM D");
+  formatDate = (iso8601Date) => iso8601Date ? moment(iso8601Date).format("MMM D") : "";
 
   formatBoolean = (bool) => bool ? "Yes" : "No";
 
