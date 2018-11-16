@@ -197,11 +197,14 @@ class ShareAllowedDialog extends React.Component {
     }
   }
 
-  shouldCreateReplayVideo = () =>
+  hasReplayVideo = () =>
     this.props.appType === 'dance' &&
-    appOptions.signedReplayLogUrl &&
+    appOptions.signedReplayLogUrl;
+
+  shouldCreateReplayVideo = () =>
+    this.hasReplayVideo() &&
     this.props.replayLog &&
-    this.props.replayLog.length;
+    this.props.replayLog.length > 1;
 
   tryCreateReplayVideo = () => {
     if (this.shouldCreateReplayVideo()) {
@@ -210,6 +213,30 @@ class ShareAllowedDialog extends React.Component {
         body: JSON.stringify(this.props.replayLog)
       });
     }
+  };
+
+  getReplayVideoUrl = () =>
+    `https://dance-api.code.org/videos/video-${this.props.channelId}.mp4`;
+
+  downloadReplayVideo = (event) => {
+    fetch(this.getReplayVideoUrl(), {
+      method: 'GET'
+    }).then((response) => response.blob())
+    .then((blob) => {
+      const element = document.createElement('a');
+      const url = URL.createObjectURL(blob);
+      element.setAttribute('href', url);
+      element.setAttribute('download', 'myvideo.mp4');
+      element.style.display = 'none';
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+    }).catch((error) => {
+      console.log(error);
+    });
+
+    event.preventDefault();
+    return false;
   };
 
   sharingDisabled = () =>
@@ -398,6 +425,16 @@ class ShareAllowedDialog extends React.Component {
                     text={i18n.unpublish()}
                     className="no-mc"
                   />
+                  }
+                  {this.hasReplayVideo() &&
+                  <a
+                    id="sharing-video"
+                    href=""
+                    onClick={this.downloadReplayVideo}
+                  >
+                    <i className="fa fa-film" style={{fontSize: 28}}></i>
+                    <span>Get Ma Video</span>
+                  </a>
                   }
                   {canPrint && hasThumbnail &&
                     <a href="#" onClick={wrapShareClick(this.print.bind(this), 'print')}>
