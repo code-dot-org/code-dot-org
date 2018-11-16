@@ -43,6 +43,7 @@ module Pd::Application
   class ApplicationBase < ActiveRecord::Base
     include ApplicationConstants
     include Pd::Form
+    include SerializedProperties
 
     acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
@@ -108,6 +109,13 @@ module Pd::Application
     before_create :generate_application_guid, if: -> {application_guid.blank?}
     has_many :emails, class_name: 'Pd::Application::Email'
     has_and_belongs_to_many :tags, class_name: 'Pd::Application::Tag', foreign_key: 'pd_application_id', association_foreign_key: 'pd_application_tag_id'
+
+    serialized_attrs %w(
+      notes_2
+      notes_3
+      notes_4
+      notes_5
+    )
 
     def tag_names
       tags.map(&:name).sort!.join(", ")
