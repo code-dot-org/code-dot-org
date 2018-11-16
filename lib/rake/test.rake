@@ -26,7 +26,7 @@ namespace :test do
         'bundle', 'exec', './runner.rb',
         '-d', CDO.site_host('studio.code.org'),
         '-p', CDO.site_host('code.org'),
-        '--db',
+        '--db', # Ensure features that require database access are run even if the server name isn't "test"
         '--parallel', '120',
         '--magic_retry',
         '--with-status-page',
@@ -54,7 +54,7 @@ namespace :test do
         '-c', 'ChromeLatestWin7,iPhone',
         '-d', CDO.site_host('studio.code.org'),
         '-p', CDO.site_host('code.org'),
-        '--db',
+        '--db', # Ensure features that require database access are run even if the server name isn't "test"
         '--eyes',
         '--magic_retry',
         '--with-status-page',
