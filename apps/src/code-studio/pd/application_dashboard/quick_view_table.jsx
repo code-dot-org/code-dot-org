@@ -13,6 +13,9 @@ import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import PrincipalApprovalButtons from './principal_approval_buttons';
 
 const styles = {
+  container: {
+    overflowX: 'auto'
+  },
   table: {
     width: '100%',
   },
@@ -335,15 +338,17 @@ export class QuickViewTable extends React.Component {
     })(rows);
 
     return (
-      <Table.Provider
-        id="quick-view"
-        className="pure-table table-striped"
-        columns={this.columns}
-        style={styles.table}
-      >
-        <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="id" />
-      </Table.Provider>
+      <div style={styles.container}>
+        <Table.Provider
+          id="quick-view"
+          className="pure-table table-striped"
+          columns={this.columns}
+          style={styles.table}
+        >
+          <Table.Header />
+          <Table.Body rows={sortedRows} rowKey="id" />
+        </Table.Provider>
+      </div>
     );
   }
 }
