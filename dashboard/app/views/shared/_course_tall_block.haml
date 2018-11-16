@@ -97,10 +97,15 @@
 - if ! (current_user && showState)
   - block_class << ' courseblock-noaction'
 
+- if id== 'dance'
+  - image_url = "courses/logo_tall_#{id}.gif"
+- else
+  - image_url = "courses/logo_tall_#{id}.jpg"
+
 .courseblock-span3.courseblock-tall{class: block_class}
   =link_to url do
     .imgspan
-      = image_tag(CDO.shared_image_url("courses/logo_tall_#{id}.jpg"), height: '120px', width: '100%')
+      = image_tag(CDO.shared_image_url(image_url), height: '120px', width: '100%')
     .clear
     - if Script.beta? id
       .beta
