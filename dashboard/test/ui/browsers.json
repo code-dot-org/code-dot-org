@@ -25,7 +25,9 @@
     "name": "IE11Win10",
     "browserName": "Internet Explorer",
     "version": "11.0",
-    "platform": "Windows 10"
+    "platform": "Windows 10",
+    "seleniumVersion": "3.141.0",
+    "iedriverVersion": "3.141.0"
   },
   {
     "name": "FirefoxLatest-2Yosemite",
