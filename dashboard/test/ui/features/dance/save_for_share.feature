@@ -1,7 +1,7 @@
 # Testing that various paths out of a project-backed level to a sharing link trigger
 # a save at the appropriate time so the student's latest changes are saved.
 
-@no_mobile @no_ie
+@no_mobile @no_ie @no_safari_yosemite
 Feature: Saving project before sharing
   Background:
     # Block numbers are based on default code of free-play level
@@ -13,6 +13,7 @@ Feature: Saving project before sharing
 
   Scenario: Free play level saves when Share is clicked
     Given I load the Dance Party free play level
+    And I wait to see "#clear-puzzle-header"
     And I reset the puzzle
     And I drag block "make a new cat" to offset "-2000, 0"
     Then block "make a new cat" has been deleted
@@ -28,6 +29,7 @@ Feature: Saving project before sharing
   @as_student
   Scenario: Free play level saves when Remix is clicked
     Given I load the Dance Party free play level
+    And I wait to see "#clear-puzzle-header"
     And I reset the puzzle
     And I drag block "make a new cat" to offset "-2000, 0"
     Then block "make a new cat" has been deleted
@@ -39,6 +41,7 @@ Feature: Saving project before sharing
 
   Scenario: Free play level saves when Finish is clicked
     Given I load the Dance Party free play level
+    And I wait to see "#clear-puzzle-header"
     And I reset the puzzle
     And I drag block "make a new cat" to offset "-2000, 0"
     Then block "make a new cat" has been deleted
