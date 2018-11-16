@@ -12,6 +12,7 @@ import * as applabConstants from '../../applab/constants';
 import * as gamelabConstants from '../../gamelab/constants';
 import { SongTitlesToArtistTwitterHandle } from '../dancePartySongArtistTags';
 import { hideShareDialog, unpublishProject } from './shareDialogRedux';
+import DownloadReplayVideoButton from './DownloadReplayVideoButton';
 import { showPublishDialog } from '../../templates/projects/publishDialog/publishDialogRedux';
 import PublishDialog from '../../templates/projects/publishDialog/PublishDialog';
 import { createHiddenPrintWindow } from '@cdo/apps/utils';
@@ -45,25 +46,6 @@ function wrapShareClick(handler, type) {
 
 function select(event) {
   event.target.select();
-}
-
-function downloadRemoteUrl(url, downloadName) {
-  fetch(url, {
-    method: 'GET',
-  }).then(response => response.blob())
-    .then(blob => {
-      const element = document.createElement('a');
-      const url = URL.createObjectURL(blob);
-      element.setAttribute('href', url);
-      element.setAttribute('download', downloadName);
-      element.style.display = 'none';
-      document.body.appendChild(element);
-      element.click();
-      document.body.removeChild(element);
-    })
-    .catch(error => {
-      console.log(error);
-    });
 }
 
 const styles = {
@@ -192,7 +174,6 @@ class ShareAllowedDialog extends React.Component {
     exportError: null,
     isTwitterAvailable: false,
     isFacebookAvailable: false,
-    replayVideoExists: false,
   };
 
   componentDidMount() {
@@ -233,36 +214,6 @@ class ShareAllowedDialog extends React.Component {
         body: JSON.stringify(this.props.replayLog)
       });
     }
-  };
-
-  getReplayVideoUrl = () =>
-    `https://dance-api.code.org/videos/video-${this.props.channelId}.mp4`;
-
-  downloadReplayVideo = (event) => {
-    if (this.state.replayVideoExists) {
-      downloadRemoteUrl(this.getReplayVideoUrl(), "myvideo.mp4");
-    } else {
-      this.checkReplayVideo();
-    }
-
-    event.preventDefault();
-    return false;
-  };
-
-  checkReplayVideo = (onSuccess = () => {}, onError = () => {}) => {
-    fetch(this.getReplayVideoUrl(), {
-      method: 'HEAD'
-    }).then((response) => {
-      this.setState({
-        replayVideoExists: true
-      });
-      onSuccess(response);
-    }).catch((error) => {
-      this.setState({
-        replayVideoExists: false
-      });
-      onError(error);
-    });
   };
 
   sharingDisabled = () =>
@@ -453,15 +404,9 @@ class ShareAllowedDialog extends React.Component {
                   />
                   }
                   {this.hasReplayVideo() &&
-                  <a
-                    id="sharing-video"
-                    href=""
-                    disabled={!this.state.replayVideoExists}
-                    onClick={this.downloadReplayVideo}
-                  >
-                    <i className="fa fa-film" style={{fontSize: 28}}></i>
-                    <span>Get Ma Video</span>
-                  </a>
+                      <DownloadReplayVideoButton
+                        channelId={this.props.channelId}
+                      />
                   }
                   {canPrint && hasThumbnail &&
                     <a href="#" onClick={wrapShareClick(this.print.bind(this), 'print')}>
