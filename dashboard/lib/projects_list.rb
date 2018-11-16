@@ -12,7 +12,7 @@ module ProjectsList
     spritelab: ['spritelab'],
     playlab: ['playlab', 'gumball', 'infinity', 'iceage'],
     artist: ['artist', 'frozen'],
-    minecraft: ['minecraft_adventurer', 'minecraft_designer', 'minecraft_hero'],
+    minecraft: ['minecraft_adventurer', 'minecraft_designer', 'minecraft_hero', 'minecraft_aquatic'],
     events: %w(starwars starwarsblocks starwarsblocks_hour flappy bounce sports basketball),
     k1: ['artist_k1', 'playlab_k1'],
     dance: ['dance']
