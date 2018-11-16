@@ -190,6 +190,9 @@ def parse_options
       opts.on("-V", "--verbose", "Verbose") do
         options.verbose = true
       end
+      opts.on("-VV", "--very-verbose", "Very verbose, extra debug logging") do
+        ENV['VERY_VERBOSE'] = true
+      end
       opts.on("--fail_fast", "Fail a feature as soon as a scenario fails") do
         options.fail_fast = true
       end
