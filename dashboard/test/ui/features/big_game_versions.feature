@@ -12,7 +12,7 @@ Feature: Big Game Versions
     And I close callout "0"
     And callout "0" is hidden
 
-  @no_safari
+  @no_safari_yosemite
   @no_mobile
   Scenario: Big Game Versions
 
