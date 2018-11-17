@@ -1,9 +1,10 @@
-@no_older_chrome
+# Brad 2018-11-15 Known crash on SafariYosemite
+@no_older_chrome @no_safari_yosemite
 Feature: Dance Lab
   # This test relies on CloudFront signed cookies to access /restricted/ on the
   # test machine, but uses SoundLibraryApi for access in CircleCI.
   @no_firefox
-  @no_safari
+  @no_safari_yosemite
   Scenario: Restricted audio content is protected
     When I am on "http://studio.code.org/restricted/placeholder.txt"
     Then page text does not contain "placeholder for testing"
