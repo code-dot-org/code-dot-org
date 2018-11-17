@@ -901,7 +901,12 @@ module Api::V1::Pd
         'School Name',
         'Email',
         'Status',
-        'Assigned Workshop'
+        'Assigned Workshop',
+        'Notes',
+        'Notes 2',
+        'Notes 3',
+        'Notes 4',
+        'Notes 5'
       ]
       assert_equal expected_headers, response_csv.first
       assert_equal expected_headers.length, response_csv.second.length

@@ -510,6 +510,14 @@ module Pd::Application
         columns.push 'Accepted Teachercon'
       end
 
+      columns.push(
+        'Notes',
+        'Notes 2',
+        'Notes 3',
+        'Notes 4',
+        'Notes 5'
+      )
+
       CSV.generate do |csv|
         csv << columns
       end
@@ -558,6 +566,14 @@ module Pd::Application
           columns.push nil
         end
       end
+
+      columns.push(
+        notes,
+        notes_2,
+        notes_3,
+        notes_4,
+        notes_5
+      )
 
       CSV.generate do |csv|
         csv << columns
