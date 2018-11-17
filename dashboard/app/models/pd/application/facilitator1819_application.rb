@@ -479,7 +479,16 @@ module Pd::Application
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
         columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
-        columns.push 'Status', 'Locked', 'Notes', 'Regional Partner'
+        columns.push(
+          'Status',
+          'Locked',
+          'Notes',
+          'Notes 2',
+          'Notes 3',
+          'Notes 4',
+          'Notes 5',
+          'Regional Partner'
+        )
         csv << columns
       end
     end
@@ -511,7 +520,16 @@ module Pd::Application
       answers = full_answers
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
-        row.push status, locked?, notes, regional_partner_name
+        row.push(
+          status,
+          locked?,
+          notes,
+          notes_2,
+          notes_3,
+          notes_4,
+          notes_5,
+          regional_partner_name
+        )
         csv << row
       end
     end
