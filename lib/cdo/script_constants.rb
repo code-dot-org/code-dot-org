@@ -52,7 +52,7 @@ module ScriptConstants
 
       nil,
       DANCE_PARTY_NAME = 'dance'.freeze, # 2018 hour of code
-      DANCE_EXTRAS_NAME = 'dance-extras'.freeze, # 2018 hour of code
+      DANCE_PARTY_EXTRAS_NAME = 'dance-extras'.freeze, # 2018 hour of code
       MINECRAFT_AQUATIC_NAME = 'aquatic'.freeze,
       MINECRAFT_HERO_NAME = 'hero'.freeze,
       MINECRAFT_NAME = 'mc'.freeze,
