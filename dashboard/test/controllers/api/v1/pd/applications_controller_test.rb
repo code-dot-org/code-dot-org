@@ -528,6 +528,11 @@ module Api::V1::Pd
             registered_workshop: 'Yes',
             status: 'accepted_not_notified',
             tags: [],
+            notes: nil,
+            notes_2: nil,
+            notes_3: nil,
+            notes_4: nil,
+            notes_5: nil,
             friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -566,6 +571,11 @@ module Api::V1::Pd
             registered_workshop: nil,
             status: 'accepted_not_notified',
             tags: [],
+            notes: nil,
+            notes_2: nil,
+            notes_3: nil,
+            notes_4: nil,
+            notes_5: nil,
             friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -605,6 +615,11 @@ module Api::V1::Pd
             registered_workshop: nil,
             status: 'accepted',
             tags: [],
+            notes: nil,
+            notes_2: nil,
+            notes_3: nil,
+            notes_4: nil,
+            notes_5: nil,
             assigned_fit: nil,
             registered_fit: 'No',
             locked: true
@@ -650,6 +665,11 @@ module Api::V1::Pd
             registered_workshop: 'Yes',
             status: 'accepted_not_notified',
             tags: [],
+            notes: nil,
+            notes_2: nil,
+            notes_3: nil,
+            notes_4: nil,
+            notes_5: nil,
             friendly_scholarship_status: 'No'
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -687,6 +707,11 @@ module Api::V1::Pd
             registered_workshop: nil,
             status: 'accepted_not_notified',
             tags: [],
+            notes: nil,
+            notes_2: nil,
+            notes_3: nil,
+            notes_4: nil,
+            notes_5: nil,
             friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -727,6 +752,11 @@ module Api::V1::Pd
             registered_fit: 'No',
             status: 'accepted',
             tags: [],
+            notes: nil,
+            notes_2: nil,
+            notes_3: nil,
+            notes_4: nil,
+            notes_5: nil,
             locked: true
           }.stringify_keys, JSON.parse(@response.body).first
         )

@@ -9,6 +9,11 @@ class Api::V1::Pd::CohortViewSerializerBase < ActiveModel::Serializer
     :assigned_workshop,
     :registered_workshop,
     :status,
+    :notes,
+    :notes_2,
+    :notes_3,
+    :notes_4,
+    :notes_5,
     :tags
   )
 
