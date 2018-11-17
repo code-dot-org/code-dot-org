@@ -18,7 +18,12 @@ class Api::V1::Pd::TcFitCohortViewSerializer < ActiveModel::Serializer
     :locked,
     :regional_partner_name,
     :course_name,
-    :form_data
+    :form_data,
+    :notes,
+    :notes_2,
+    :notes_3,
+    :notes_4,
+    :notes_5,
   )
 
   def type
