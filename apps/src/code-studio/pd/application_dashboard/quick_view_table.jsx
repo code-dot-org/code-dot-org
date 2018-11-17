@@ -198,20 +198,31 @@ export class QuickViewTable extends React.Component {
       });
     }
 
+    [
+      {property: 'notes', label: 'Notes'},
+      {property: 'notes_2', label: 'Notes 2'},
+      {property: 'notes_3', label: 'Notes 3'},
+      {property: 'notes_4', label: 'Notes 4'},
+      {property: 'notes_5', label: 'Notes 5'},
+    ].forEach((notesField)=> {
+      columns.push({
+        property: notesField.property,
+        header: {
+          label: notesField.label,
+            transforms: [sortable]
+        },
+        cell: {
+          format: this.formatNotesTooltip,
+          transforms: [
+            () => ({
+              style: {...styles.notesCell}
+            })
+          ]
+        }
+      });
+    });
+
     columns.push({
-      property: 'notes',
-      header: {
-        label: 'Notes'
-      },
-      cell: {
-        format: this.formatNotesTooltip,
-        transforms: [
-          () => ({
-            style: {...styles.notesCell}
-          })
-        ]
-      }
-    },{
       property: 'tags',
       header: {
         label: 'Tags'
