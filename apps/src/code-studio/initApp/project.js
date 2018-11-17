@@ -1303,7 +1303,7 @@ var projects = module.exports = {
   setThumbnailPngBlob(pngBlob) {
     if (pngBlob) {
       thumbnailPngBlob = pngBlob;
-      this.setThumbnailUrl();
+      projects.setThumbnailUrl();
     }
   },
 
@@ -1326,7 +1326,7 @@ var projects = module.exports = {
 
     return new Promise((resolve, reject) => {
       filesApi.putFile(THUMBNAIL_PATH, pngBlob, () => {
-        this.setThumbnailUrl();
+        projects.setThumbnailUrl();
         if (!initialCaptureComplete) {
           initialCaptureComplete = true;
         }
