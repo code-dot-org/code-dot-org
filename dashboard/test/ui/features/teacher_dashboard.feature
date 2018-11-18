@@ -170,6 +170,8 @@ Feature: Using the teacher dashboard
 
     When I am on "http://studio.code.org/s/dance/stage/1/puzzle/13"
     And I wait for the page to fully load
+    And I wait until I don't see selector "#p5_loading"
+    And I close the instructions overlay if it exists
     And I press the first ".project_remix" element to load a new page
     And I wait for the page to fully load
     And I press "runButton"
