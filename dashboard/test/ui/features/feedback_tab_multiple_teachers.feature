@@ -1,4 +1,6 @@
-@no_mobile
+# Disabling IE due to bug where text changes in the feedback text input are not registered,
+# so submit button remains disabled
+@no_mobile @no_ie @db_access
 Feature: Feedback Tab Display for Multiple Teachers
 
 Background:
@@ -8,9 +10,6 @@ Background:
   And I wait to see "#runButton"
   And I submit this level
 
-@no_ie
-# Disabling IE due to bug where text changes in the feedback text input are not registered,
-# so submit button remains disabled
 Scenario: With dev flag, student sees feedback from multiple teachers, when available
   #As teacher, not reviewing work, don't see feedback tab
   Then I sign out and sign in as "First_Teacher"

@@ -1,4 +1,4 @@
-@dashboard_db_access
+@db_access
 Feature: Stage Locking
 
 Background:

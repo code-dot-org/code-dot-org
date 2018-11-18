@@ -1,4 +1,4 @@
-@no_mobile
+@no_mobile @db_access
 Feature: Header navigation bar
 
 Scenario: Signed out user in English should see 6 header links

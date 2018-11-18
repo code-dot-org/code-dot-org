@@ -1,6 +1,4 @@
-@eyes
-@dashboard_db_access
-@no_mobile
+@eyes @no_mobile
 Feature: Courses page
 
 @as_student

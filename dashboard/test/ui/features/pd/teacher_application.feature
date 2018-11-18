@@ -1,6 +1,4 @@
-@dashboard_db_access
-@eyes
-
+@eyes @db_access
 Feature: Teacher Application
 
 Scenario: Basic teacher application submission

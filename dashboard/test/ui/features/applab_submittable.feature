@@ -1,4 +1,4 @@
-@no_mobile
+@no_mobile @db_access
 Feature: Submittable AppLab
 
 Background:

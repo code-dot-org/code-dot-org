@@ -1,4 +1,4 @@
-@eyes
+@eyes @db_access
 Feature: Teacher Only Markdown
 
 Scenario: Applab level with teacher only markdown

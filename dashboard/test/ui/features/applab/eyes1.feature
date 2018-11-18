@@ -1,6 +1,4 @@
-@eyes
-@dashboard_db_access
-@as_student
+@eyes @as_student
 Feature: App Lab Eyes -  Part 1
 
 Scenario: Button shows up on top of canvas

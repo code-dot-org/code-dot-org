@@ -1,6 +1,4 @@
-@no_firefox
-@dashboard_db_access
-@as_student
+@no_firefox @no_mobile @as_student
 Feature: Big Game Remix
 
   Background:
@@ -9,7 +7,6 @@ Feature: Big Game Remix
     And I wait for the page to fully load
     Then element "#runButton" is visible
 
-  @no_mobile
   Scenario: Big Game Remix
     Then I press the first ".project_remix" element to load a new page
     Then I wait until element ".project_updated_at" contains text "Saved"

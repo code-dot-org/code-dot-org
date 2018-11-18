@@ -1,4 +1,3 @@
-@dashboard_db_access
 @as_student
 Feature: Hour of Code tests for users that are signed in
 

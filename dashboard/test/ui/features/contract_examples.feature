@@ -1,6 +1,4 @@
-@no_ie
-@dashboard_db_access
-@as_student
+@as_student @no_ie
 Feature: Editing examples in the contract editor
 
 Background: Testing example add and removal
@@ -18,7 +16,6 @@ Background: Testing example add and removal
   When "second example" refers to the open contract editor example 1
   When "function definition" refers to the open contract editor function definition
 
-@no_ie
 Scenario: Dragging an example to delete it
   When the contract editor has 2 examples
   And I drag block "first example" to offset "-2000, -2000"

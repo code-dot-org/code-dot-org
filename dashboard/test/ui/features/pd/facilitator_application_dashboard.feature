@@ -1,6 +1,4 @@
-@dashboard_db_access
-@eyes
-
+@eyes @db_access
 Feature: Facilitator Application Dashboard view
 
   Scenario: Application dashboard, list view, detail view, cohort view

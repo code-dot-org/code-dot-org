@@ -1,5 +1,4 @@
-@eyes
-@dashboard_db_access
+@eyes @db_access
 Feature: Teacher Student Toggle
 
 Scenario: Toggle on Multi Level

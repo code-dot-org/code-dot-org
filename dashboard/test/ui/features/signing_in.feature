@@ -1,6 +1,4 @@
-@dashboard_db_access
 @no_mobile
-
 Feature: Signing in and signing out
 
 Scenario: Student sign in from code.org

@@ -930,7 +930,6 @@ Given(/^I am a (student|teacher)$/) do |user_type|
 end
 
 def enroll_in_plc_course(user_email)
-  require_rails_env
   user = User.find_by_email_or_hashed_email(user_email)
   course = Course.find_by(name: 'All The PLC Things')
   enrollment = Plc::UserCourseEnrollment.create(user: user, plc_course: course.plc_course)
@@ -1184,7 +1183,6 @@ And(/^I submit this level$/) do
 end
 
 And(/^I give user "([^"]*)" hidden script access$/) do |name|
-  require_rails_env
   user = User.find_by_email_or_hashed_email(@users[name][:email])
   user.permission = UserPermission::HIDDEN_SCRIPT_ACCESS
 end

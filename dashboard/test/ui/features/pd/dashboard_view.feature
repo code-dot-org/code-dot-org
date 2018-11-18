@@ -1,6 +1,4 @@
-@dashboard_db_access
-@eyes
-
+@eyes @db_access
 Feature: Basic appearance for Facilitator Survey UI
 
 Scenario: Facilitator View of dashboard is as expected

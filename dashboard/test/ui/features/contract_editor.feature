@@ -1,6 +1,4 @@
-@dashboard_db_access
-@as_student
-@eyes
+@as_student @eyes
 Feature: Opening the contract editor
 
 Scenario: Testing the contract variable editor

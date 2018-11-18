@@ -121,7 +121,6 @@ Scenario:
   And I see no difference for "star wars RTL text mode"
   And I close my eyes
 
-@dashboard_db_access
 Scenario:
   Given I am a student
   And I open my eyes to test "embedded ninjacat"
@@ -138,7 +137,6 @@ Scenario:
   And I close my eyes
   And I sign out
 
-@dashboard_db_access
 Scenario:
   Given I am a student
   And I open my eyes to test "calc expression evaluation"
@@ -154,7 +152,6 @@ Scenario:
   And I close my eyes
   And I sign out
 
-@dashboard_db_access
 Scenario:
   Given I am a student
   And I open my eyes to test "calc variable"

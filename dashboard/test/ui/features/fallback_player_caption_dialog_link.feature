@@ -1,6 +1,4 @@
-@dashboard_db_access
 @no_mobile
-
 Feature: Fallback player caption dialog link
 
   Scenario: Standalone level with fallback video player has captions popup

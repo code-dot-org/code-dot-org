@@ -1,5 +1,4 @@
-@no_mobile
-@as_taught_student
+@no_mobile @as_taught_student
 Feature: Submittable GameLab
 
 Background:

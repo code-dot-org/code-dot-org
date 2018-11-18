@@ -1,5 +1,4 @@
-@as_taught_student
-@eyes
+@eyes @as_taught_student
 Feature: Contained Levels
 
 Scenario: Applab with free response contained level

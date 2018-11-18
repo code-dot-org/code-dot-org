@@ -1,6 +1,4 @@
-@eyes
-@dashboard_db_access
-@as_student
+@eyes @as_student
 Feature: Game Lab Eyes
 
 Scenario: Basic GameLab level

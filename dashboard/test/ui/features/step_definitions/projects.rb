@@ -25,14 +25,12 @@ And(/^I confirm correct visibility of view more links$/) do
 end
 
 And(/^I give user "([^"]*)" project validator permission$/) do |name|
-  require_rails_env
   user = User.find_by_email_or_hashed_email(@users[name][:email])
   user.permission = UserPermission::PROJECT_VALIDATOR
   user.save!
 end
 
 Then(/^I remove featured projects from the gallery$/) do
-  require_rails_env
   FeaturedProject.delete_all
 end
 

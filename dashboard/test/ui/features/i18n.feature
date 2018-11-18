@@ -1,4 +1,4 @@
-@no_circle
+@no_circle @db_access
 Feature: Hour of Code, Frozen, and Minecraft:Agent tutorials in various languages
 
 Scenario: HoC tutorial in Spanish

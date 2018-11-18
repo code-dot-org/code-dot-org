@@ -39,7 +39,14 @@ def saucelabs_browser(test_run_name)
   capabilities[:name] = test_run_name
   capabilities[:tags] = [ENV['GIT_BRANCH']]
   capabilities[:build] = CDO.circle_run_identifier || ENV['BUILD']
-  capabilities[:idleTimeout] = 600
+  # How long a test run is allowed to take on SauceLabs before SauceLabs cancels it
+  # As of November 2018, our iOS simulator tests (which run a whole feature in a test, not just
+  # individual scenarios) will sometimes take 12-13 minutes.
+  capabilities[:maxDuration] = 20.minutes
+  # How long an individual selenium command may take before SauceLabs cancels the test
+  capabilities[:commandTimeout] = 3.minutes
+  # How long SauceLabs will wait for our test runner to send a new command
+  capabilities[:idleTimeout] = 60.seconds
 
   very_verbose "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
 
@@ -95,6 +102,23 @@ def get_browser(test_run_name)
 end
 
 browser = nil
+
+# If a scenario needs to interact with Rails or a local database,
+# it should be marked with this tag which allows us to require the
+# Rails environment (a potentially slow step) before we request
+# a browser from SauceLabs.
+# Keep this before the "get a browser" before hook, since before hooks
+# run in the order they are defined.
+# Note: This is expensive the first time it's used within a feature file but
+# very cheap after that.  It's usually best to just tag the whole feature.
+Before('@db_access or @as_taught_student or @as_authorized_taught_student') do
+  # Requires the full rails environment. Use sparingly, known to take 20-30s.
+  puts 'Requiring rails env'
+  start = Time.now
+  require File.expand_path('../../../../../config/environment.rb', __FILE__)
+  finish = Time.now
+  puts "Requiring rails env took #{finish - start} seconds"
+end
 
 Before do |scenario|
   very_verbose "DEBUG: @browser == #{CGI.escapeHTML @browser.inspect}"

@@ -1,7 +1,4 @@
-@no_ie
-@no_mobile
-@dashboard_db_access
-@pegasus_db_access
+@no_ie @no_mobile @db_access
 Feature: Using the teacher dashboard
 
   Scenario: Loading the teacher dashboard

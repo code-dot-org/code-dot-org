@@ -1,6 +1,4 @@
-@eyes
-@dashboard_db_access
-@as_student
+@eyes @as_student
 Feature: App Lab Eyes - Part 2
 
 Scenario: Applab visualization scaling

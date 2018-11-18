@@ -1,6 +1,6 @@
 Feature: Using the SectionActionDropdown
 
-  @no_ie
+  @no_ie @db_access
   # * Check that we get redirected to the right page
   Scenario: Viewing progress from SectionActionDropdown
     Given I create a teacher-associated student named "Sally"

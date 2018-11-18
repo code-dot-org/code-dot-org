@@ -1,6 +1,4 @@
-@dashboard_db_access
-@eyes
-
+@eyes @db_access
 Feature: Basic appearance for Daily Survey UI
 
 Scenario: Results view for facilitator survey UI is as expected

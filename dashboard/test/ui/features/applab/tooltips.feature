@@ -32,7 +32,7 @@ Feature: Applab visualization overlay tooltips
     And I set input "xpos" to "10"
     And I set input "ypos" to "270"
 
-  @eyes @dashboard_db_access @as_student
+  @eyes @as_student
   Scenario: Hovering over elements in design mode
     Given I open my eyes to test "tooltips in design mode"
     And I switch to design mode
@@ -85,7 +85,7 @@ Feature: Applab visualization overlay tooltips
 
     And I close my eyes
 
-  @eyes @dashboard_db_access @as_student
+  @eyes @as_student
   Scenario: Hovering over elements in code mode
     Given I open my eyes to test "tooltips in code mode"
     And I switch to code mode

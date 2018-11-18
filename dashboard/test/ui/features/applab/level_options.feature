@@ -1,4 +1,3 @@
-@dashboard_db_access
 @as_student
 Feature: App Lab Level Options
 
@@ -12,6 +11,7 @@ Scenario: Table data in level definition appears in data browser
   And I wait until element "#dataTable" is visible
   And I wait until element "td:contains(Seattle)" is visible
 
+@db_access
 Scenario: Level defaults to design mode, students see design mode and teachers see code mode when viewing student work
   #As student
   Given I create a teacher-associated student named "Lillian"

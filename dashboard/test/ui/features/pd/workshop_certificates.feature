@@ -1,6 +1,4 @@
-@dashboard_db_access
-@eyes
-
+@eyes @db_access
 Feature: Basic appearance for Workshop Certificates
 
 Scenario: Simple Workshop Certificate

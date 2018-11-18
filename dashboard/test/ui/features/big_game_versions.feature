@@ -1,5 +1,4 @@
-@dashboard_db_access
-@as_student
+@as_student @no_safari_yosemite @no_mobile
 Feature: Big Game Versions
 
   Background:
@@ -12,10 +11,7 @@ Feature: Big Game Versions
     And I close callout "0"
     And callout "0" is hidden
 
-  @no_safari_yosemite
-  @no_mobile
   Scenario: Big Game Versions
-
     # Create the initial version with title "VERSION_TEST"
     Then I press the first "g#game_title > .blocklyIconGroup" element
     And I wait until element "#functionNameText" is visible

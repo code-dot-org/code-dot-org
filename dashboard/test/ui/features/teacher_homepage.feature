@@ -1,7 +1,4 @@
-@dashboard_db_access
-@pegasus_db_access
-@as_teacher
-@no_mobile
+@as_teacher @no_mobile
 Feature: Using the teacher homepage sections feature
 
   Scenario: Loading the teacher homepage with new sections
@@ -166,6 +163,7 @@ Feature: Using the teacher homepage sections feature
 
     And the href of selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" contains the section id
 
+  @db_access
   Scenario: Loading the print certificates page for a section
     Given I create a teacher-associated student named "Sally"
     And I sign in as "Teacher_Sally"

@@ -1,6 +1,4 @@
-@no_mobile
-@dashboard_db_access
-@as_student
+@no_mobile @as_student
 Feature: App Lab Data Blocks
 
   Scenario: Evaluate Data Blocks

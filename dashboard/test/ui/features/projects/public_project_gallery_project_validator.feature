@@ -1,8 +1,6 @@
-@dashboard_db_access
-@no_mobile
 # only run in one browser, because multiple simultaneously-running instances of
 # this feature can interfere with each other.
-@only_one_browser
+@only_one_browser @no_mobile @db_access
 Feature: Public Project Gallery - Project Validator
 
 Background:

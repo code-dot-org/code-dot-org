@@ -225,17 +225,13 @@ def parse_options
         map! {|feature| feature.gsub(/^\.\//, '')}
 
     if options.force_db_access
-      options.pegasus_db_access = true
-      options.dashboard_db_access = true
+      options.db_access = true
     elsif ENV['CI']
-      options.pegasus_db_access = true
-      options.dashboard_db_access = true
+      options.db_access = true
     elsif rack_env?(:development)
-      options.pegasus_db_access = true if options.pegasus_domain =~ /(localhost|ngrok)/
-      options.dashboard_db_access = true if options.dashboard_domain =~ /(localhost|ngrok)/
+      options.db_access = true if options.dasboard_domain =~ /(localhost|ngrok)/
     elsif rack_env?(:test)
-      options.pegasus_db_access = true if options.pegasus_domain =~ /test/
-      options.dashboard_db_access = true if options.dashboard_domain =~ /test/
+      options.db_access = true if options.dashboard_domain =~ /test/
     end
 
     if options.config
@@ -620,8 +616,7 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@no_safari_yosemite') if browser['browserName'] == 'Safari' && browser['platform'] == 'OS X 10.10'
   arguments += skip_tag('@no_firefox') if browser['browserName'] == 'firefox'
   arguments += skip_tag('@webpurify') unless CDO.webpurify_key
-  arguments += skip_tag('@pegasus_db_access') unless options.pegasus_db_access
-  arguments += skip_tag('@dashboard_db_access') unless options.dashboard_db_access
+  arguments += skip_tag('@db_access') unless options.db_access
   arguments
 end
 
@@ -680,7 +675,7 @@ def run_feature(browser, feature, options)
   run_environment['TEST_RUN_NAME'] = test_run_string
   run_environment['IS_CIRCLE'] = options.is_circle ? "true" : "false"
 
-  # disable some stuff to make require_rails_env run faster within cucumber.
+  # disable some stuff to make loading the Rails env faster within cucumber.
   # These things won't be disabled in the dashboard instance we're testing against.
   run_environment['SKIP_I18N_INIT'] = 'true'
   run_environment['SKIP_DASHBOARD_ENABLE_PEGASUS'] = 'true'

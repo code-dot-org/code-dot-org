@@ -1,6 +1,4 @@
-@dashboard_db_access
 @no_mobile
-
 Feature: GDPR Dialog - data transfer agreement
 
   @skip
