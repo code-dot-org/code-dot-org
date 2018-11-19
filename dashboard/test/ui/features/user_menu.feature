@@ -44,12 +44,12 @@ Scenario: Student Signed In - shows display name with correct links
   And I wait until element "#user-edit" is visible
   And I wait until element "#user-signout" is visible
   # Check that the dropdown links work
-  And I click selector "#user-edit"
+  And I press "user-edit"
   And check that I am on "http://studio.code.org/users/edit"
   And I wait until element ".display_name" is visible
   And I click selector ".display_name"
   And I wait until element "#user-signout" is visible
-  And I click selector "#user-signout"
+  And I press "user-signout"
   And I wait until element "#signin_button" is visible
   And I wait until element ".display_name" is not visible
 
@@ -69,7 +69,7 @@ Scenario: Pair Programming
   And element ".display_name" contains text "Thing_Two"
   And I click selector ".display_name"
   And I wait until element "#pairing_link" is visible
-  And I click selector "#pairing_link"
+  And I press "pairing_link"
   And I wait until element ".student" is visible
   And I click selector ".student"
   And I wait until element ".addPartners" is visible

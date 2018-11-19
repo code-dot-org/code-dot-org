@@ -3,6 +3,7 @@
 #   csedweek.org/
 #   hourofcode.com/
 #   code.org/challenge
+#   code.org/dance
 
 def get_social_metadata_for_page(request)
   videos = {
@@ -13,13 +14,14 @@ def get_social_metadata_for_page(request)
   }
 
   images = {
-    celeb_challenge: {path: "/images/fit-1220/social-media/celeb-challenge.jpg", width: 1220, height: 640},
-    creativity: {path: "/images/social-media/codeorg-2018-creativity.jpg", width: 846, height: 529},
+    celeb_challenge: {path: "/images/fit-1220/social-media/celeb-challenge.png", width: 1220, height: 640},
+    creativity: {path: "/images/social-media/code-2018-creativity.png", width: 1200, height: 630},
     cs_is_everything_thumbnail: {path: "/images/cs-is-everything-thumbnail.png", width: 1200, height: 627},
-    hoc_2018_creativity: {path: "/images/social-media/hourofcode-2018-creativity.jpg", width: 846, height: 529},
-    hoc_student_challenge: {path: "/images/fit-1920/social-media/hoc-student-challenge.jpg", width: 1920, height: 1080},
-    mc_social_2017: {path: "/images/mc/mc_social_2017.jpg", width: 1200, height: 630},
-    mc_social_2018: {path: "/images/social-media/mc-social-2018.jpg", width: 1200, height: 630}
+    hoc_2018_creativity: {path: "/images/social-media/hoc-2018-creativity.png", width: 1200, height: 630},
+    hoc_student_challenge: {path: "/images/fit-1920/social-media/hoc-student-challenge.png", width: 1920, height: 1080},
+    mc_social_2017: {path: "/images/mc/mc_social_2017.png", width: 1200, height: 630},
+    mc_social_2018: {path: "/images/social-media/mc-social-2018.png", width: 1200, height: 630},
+    dance_2018: {path: "/images/social-media/dance-social-2018.png", width: 1200, height: 630}
   }
 
   # Important:
@@ -147,7 +149,7 @@ def get_social_metadata_for_page(request)
       "default" => {
         title: hoc_s(:social_hoc2018_dance_party),
         description: hoc_s(:social_hoc2018_dance_what_create),
-        image: images[:hoc_2018_creativity]
+        image: images[:dance_2018]
       }
     }
   }

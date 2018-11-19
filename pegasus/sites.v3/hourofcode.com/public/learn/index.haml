@@ -5,18 +5,14 @@ social:
   "twitter:card": photo
   "twitter:site": "@codeorg"
   "twitter:url": "https://<%=request.host%>/learn"
-  "twitter:image:src" : "https://code.org/images/learn/og-learn-student.png"
-  "twitter:title": "Hour of Code"
-  "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
-  "og:title": "Hour of Code"
-  "og:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages for all ages."
-  "og:image" : "https://code.org/images/learn/og-learn-student.png"
-  "og:image:width": "853"
-  "og:image:height": "447"
-  "og:video": ""
-  "og:video:width": ""
-  "og:video:height": ""
-  "og:video:type": ""
+  "twitter:title": "<%= hoc_s(:hour_of_code) %>"
+  "twitter:description": "<%= hoc_s(:social_hoc2018_global_movement) %>"
+  "twitter:image:src": "<%= 'https://' + request.host + '/images/social-media/hoc-2018-creativity.png' %>"
+  "og:title": "<%= hoc_s(:hour_of_code) %>"
+  "og:description": "<%= hoc_s(:social_hoc2018_global_movement) %>"
+  "og:image" : "<%= 'https://' + request.host + '/images/social-media/hoc-2018-creativity.png' %>"
+  "og:image:width": '1200'
+  "og:image:height": '630'
 ---
 -# hourofcode.com uses an early version of Bootstrap 3 which didn't have this wider dialog.
 :css
@@ -116,6 +112,9 @@ social:
     - if tutorial[:short_code] == "mchoc"
       - tutorial[:image] = CDO.code_org_url("/images/tutorials/hoc2018/aquatic2018_new.jpg")
       - tutorial[:shortdescription] = tutorial[:longdescription] = hoc_s(:hoc2018_tutorial_mchoc_description)
+  - if hoc_launch == "dance"
+    - if tutorial[:short_code] == "danceparty"
+      - tutorial[:tags] = "2018-tutorial"
 
 #tutorials
 
