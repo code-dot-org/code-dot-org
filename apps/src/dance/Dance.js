@@ -103,7 +103,6 @@ Dance.prototype.init = function (config) {
 
   config.enableShowCode = true;
   config.enableShowLinesCount = false;
-  config.noHowItWorks = true;
 
   const onMount = () => {
     config.loadAudio = this.loadAudio_.bind(this);
@@ -564,6 +563,9 @@ Dance.prototype.initInterpreter = function () {
     },
     setDanceSpeed: (spriteIndex, speed) => {
       nativeAPI.setDanceSpeed(sprites[spriteIndex], speed);
+    },
+    setDanceSpeedEach: (group, speed) => {
+      nativeAPI.setDanceSpeedEach(group, speed);
     },
     getEnergy: range => {
       return Number(nativeAPI.getEnergy(range));

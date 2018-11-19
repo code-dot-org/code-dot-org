@@ -12,7 +12,7 @@ module ProjectsList
     spritelab: ['spritelab'],
     playlab: ['playlab', 'gumball', 'infinity', 'iceage'],
     artist: ['artist', 'frozen'],
-    minecraft: ['minecraft_adventurer', 'minecraft_designer', 'minecraft_hero'],
+    minecraft: ['minecraft_adventurer', 'minecraft_designer', 'minecraft_hero', 'minecraft_aquatic'],
     events: %w(starwars starwarsblocks starwarsblocks_hour flappy bounce sports basketball),
     k1: ['artist_k1', 'playlab_k1'],
     dance: ['dance']
@@ -77,7 +77,7 @@ module ProjectsList
     #   which to search for the requested projects. Must not be specified
     #   when requesting all project types. Optional.
     # @return [Hash<Array<Hash>>] A hash of lists of published projects.
-    def fetch_published_projects(project_group, limit:, published_before:)
+    def fetch_published_projects(project_group, limit:, published_before: nil)
       unless limit && limit.to_i >= 1 && limit.to_i <= MAX_LIMIT
         raise ArgumentError, "limit must be between 1 and #{MAX_LIMIT}"
       end
@@ -86,7 +86,7 @@ module ProjectsList
         return include_featured(limit: limit)
       end
       raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.keys.include?(project_group.to_sym)
-      fetch_published_project_types([project_group.to_s], limit: limit, published_before: published_before)
+      fetch_published_project_types([project_group.to_sym], limit: limit, published_before: published_before)
     end
 
     def include_featured(limit:)
