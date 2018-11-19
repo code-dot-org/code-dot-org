@@ -103,7 +103,6 @@ Dance.prototype.init = function (config) {
 
   config.enableShowCode = true;
   config.enableShowLinesCount = false;
-  config.noHowItWorks = true;
 
   const onMount = () => {
     config.loadAudio = this.loadAudio_.bind(this);
