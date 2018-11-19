@@ -16,14 +16,13 @@ export default storybook => {
               {
                 id: 1,
                 date_accepted: '2017-11-01',
-                applicant_name: 'Poppy Pomfrey',
+                applicant_name: 'Poppy Pomfrey ',
                 district_name: 'UK Wizarding',
                 school_name: 'Hogwarts',
                 email: 'nurse@hogwarts.edu',
                 notified: 'Yes',
                 assigned_workshop: 'TeacherCon Chicago',
-                accepted_teachercon: 'Yes',
-                tags: []
+                accepted_teachercon: 'Yes'
               },
               {
                 id: 2,
@@ -34,8 +33,7 @@ export default storybook => {
                 email: 'short@hogwarts.edu',
                 notified: 'Yes',
                 assigned_workshop: 'TeacherCon Chicago',
-                accepted_teachercon: 'No',
-                tags: [{id: 3, name: 'charming'}]
+                accepted_teachercon: 'No'
               }
             ]}
             viewType="teacher"
@@ -63,7 +61,7 @@ export default storybook => {
               {
                 id: 1,
                 date_accepted: '2017-11-01',
-                applicant_name: 'Poppy Pomfrey',
+                applicant_name: 'Poppy Pomfrey ',
                 district_name: 'UK Wizarding',
                 school_name: 'Hogwarts',
                 email: 'nurse@hogwarts.edu',
@@ -71,8 +69,7 @@ export default storybook => {
                 assigned_workshop: 'Seattle, 5/1',
                 registered_workshop: 'Seattle, 5/1',
                 assigned_fit: 'Buffalo 6/1',
-                registered_fit: 'Yes',
-                tags: [{id: 1, name: 'nurse'}, {id: 2, name: "doesn't teach"}]
+                registered_fit: 'Yes'
               },
               {
                 id: 2,
@@ -86,7 +83,6 @@ export default storybook => {
                 registered_workshop: 'Seattle, 5/1',
                 assigned_fit: 'Buffalo 7/1',
                 registered_fit: 'Yes',
-                tags: [{id: 3, name: 'charming'}]
               }
             ]}
             viewType="facilitator"

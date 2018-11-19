@@ -28,10 +28,6 @@ const styles = {
   statusCell: StatusColors,
   notesCell: {
     maxWidth: '200px',
-  },
-  tagsCell: {
-    paddingLeft: '2px',
-    paddingRight: '2px'
   }
 };
 
@@ -240,19 +236,6 @@ export class CohortViewTable extends React.Component {
     });
 
     columns.push({
-      property: 'tags',
-      header: {
-        label: 'Tags'
-      },
-      cell: {
-        format: this.formatTagsCell,
-        transforms: [
-          () => ({
-            style: {...styles.tagsCell}
-          })
-        ]
-      }
-    },{
       property: 'id',
       header: {
         label: 'View Application'
@@ -309,10 +292,6 @@ export class CohortViewTable extends React.Component {
         </ReactTooltip>
       </div>
     );
-  };
-
-  formatTagsCell = (tags) => {
-    return tags.map(tag => tag.name).sort().join(", ");
   };
 
   formatViewButton = (id) => {
