@@ -8,6 +8,16 @@ const ATTRIBUTES_TO_CLEAN = [
 ];
 const DEFAULT_COLOR = [184, 1.00, 0.74];
 
+// Used for custom field type ClampedNumber(,)
+// Captures two optional arguments from the type string
+// Allows:
+//   ClampedNumber(x,y)
+//   ClampedNumber( x , y )
+//   ClampedNumber(,y)
+//   ClampedNumber(x,)
+//   ClampedNumber(,)
+const CLAMPED_NUMBER_REGEX = /^ClampedNumber\(\s*([\d.]*)\s*,\s*([\d.]*)\s*\)$/;
+
 /**
  * Create the xml for a level's toolbox
  * @param {string} blocks The xml of the blocks to go in the toolbox
@@ -623,8 +633,7 @@ const STANDARD_INPUT_TYPES = {
   },
   [FIELD_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      const changeHandler = 'Number' === inputConfig.type ? blockly.FieldTextInput.numberValidator : undefined;
-      const fieldTextInput = new blockly.FieldTextInput('', changeHandler);
+      const fieldTextInput = new blockly.FieldTextInput('', getFieldInputChangeHandler(blockly, inputConfig.type));
       currentInputRow.appendTitle(inputConfig.label)
           .appendTitle(fieldTextInput, inputConfig.name);
     },
@@ -638,6 +647,27 @@ const STANDARD_INPUT_TYPES = {
     },
   },
 };
+
+
+/**
+ * Given a type string for a field input, returns an appropriate change handler function
+ * for that type, which customizes the input field and provides validation on blur.
+ * @param {Blockly} blockly
+ * @param {string} type
+ * @returns {?function}
+ */
+function getFieldInputChangeHandler(blockly, type) {
+  const clampedNumberMatch = type.match(CLAMPED_NUMBER_REGEX);
+  if (clampedNumberMatch) {
+    const min = parseFloat(clampedNumberMatch[1]);
+    const max = parseFloat(clampedNumberMatch[2]);
+    return Blockly.FieldTextInput.clampedNumberValidator(min, max);
+  } else if ('Number' === type) {
+    return blockly.FieldTextInput.numberValidator;
+  } else {
+    return undefined;
+  }
+}
 
 const groupInputsByRow = function (inputs, inputTypes=STANDARD_INPUT_TYPES) {
   const inputRows = [];

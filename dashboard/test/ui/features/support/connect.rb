@@ -41,7 +41,7 @@ def saucelabs_browser(test_run_name)
   capabilities[:build] = CDO.circle_run_identifier || ENV['BUILD']
   capabilities[:idleTimeout] = 600
 
-  puts "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
+  very_verbose "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
 
   browser = nil
   Time.now.to_i.tap do |start_time|
@@ -58,6 +58,9 @@ def saucelabs_browser(test_run_name)
         http_client: http_client
       )
 
+      # Maximum time a single execute_script or execute_async_script command may take
+      browser.manage.timeouts.script_timeout = 30.seconds
+
       # Shorter idle_timeout to avoid "too many connection resets" error
       # and generally increases stability, reduces re-runs.
       # https://docs.omniref.com/ruby/gems/net-http-persistent/2.9.4/symbols/Net::HTTP::Persistent::Error#line=108
@@ -68,10 +71,10 @@ def saucelabs_browser(test_run_name)
       retries += 1
       retry
     end
-    puts "DEBUG: Got browser in #{Time.now.to_i - start_time}s with #{retries} retries"
+    very_verbose "DEBUG: Got browser in #{Time.now.to_i - start_time}s with #{retries} retries"
   end
 
-  puts "DEBUG: Browser: #{CGI.escapeHTML browser.inspect}"
+  very_verbose "DEBUG: Browser: #{CGI.escapeHTML browser.inspect}"
 
   # Maximize the window on desktop, as some tests require 1280px width.
   unless ENV['MOBILE']
@@ -94,19 +97,19 @@ end
 browser = nil
 
 Before do |scenario|
-  puts "DEBUG: @browser == #{CGI.escapeHTML @browser.inspect}"
+  very_verbose "DEBUG: @browser == #{CGI.escapeHTML @browser.inspect}"
 
   if slow_browser?
     browser ||= get_browser ENV['TEST_RUN_NAME']
-    p 'slow browser, using existing'
+    very_verbose 'slow browser, using existing'
     @browser ||= browser
   else
-    p 'fast browser, getting a new one'
+    very_verbose 'fast browser, getting a new one'
     @browser = get_browser "#{ENV['TEST_RUN_NAME']}_#{scenario.name}"
   end
   @browser.manage.delete_all_cookies
 
-  debug_cookies(@browser.manage.all_cookies) if @browser
+  debug_cookies(@browser.manage.all_cookies) if @browser && ENV['VERY_VERBOSE']
 
   unless ENV['TEST_LOCAL'] == 'true'
     unless @sauce_session_id
@@ -160,4 +163,8 @@ end
 
 at_exit do
   browser.quit unless browser.nil?
+end
+
+def very_verbose(msg)
+  puts msg if ENV['VERY_VERBOSE']
 end
