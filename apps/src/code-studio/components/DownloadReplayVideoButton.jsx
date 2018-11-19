@@ -24,6 +24,7 @@ function downloadRemoteUrl(url, downloadName) {
 }
 
 const DOWNLOAD_NAME = 'dance_party.mp4';
+const MAX_ATTEMPTS = 30; // we want to fail after ~30 seconds, so 30 attempts at 1 attempt / second
 
 const styles = {
   disabledLink: {
@@ -38,12 +39,14 @@ const styles = {
 export default class DownloadReplayVideoButton extends React.Component {
   static propTypes = {
     channelId: PropTypes.string.isRequired,
+    onError: PropTypes.func
   };
 
   state = {
     videoExists: false,
     downloadInitiated: false,
-    checkVideoUntilSuccessTimeout: null
+    checkVideoUntilSuccessTimeout: null,
+    checkVideoAttempts: 0,
   };
 
   componentDidUpdate(prevProps, prevState, snapshot) {
@@ -110,14 +113,30 @@ export default class DownloadReplayVideoButton extends React.Component {
       clearTimeout(this.state.checkVideoUntilSuccessTimeout);
     }
 
+    if (this.state.checkVideoAttempts >= MAX_ATTEMPTS) {
+      this.setState({
+        checkVideoAttempts: 0
+      });
+
+      if (this.props.onError) {
+        this.props.onError();
+      }
+
+      return;
+    }
+
     this.checkVideo().then((response) => {
       let timeout = null;
+      let attempts = this.state.checkVideoAttempts;
+
       if (!response.ok) {
         timeout = setTimeout(this.checkVideoUntilSuccess, delay);
+        attempts += 1;
       }
 
       this.setState({
-        checkVideoUntilSuccessTimeout: timeout
+        checkVideoUntilSuccessTimeout: timeout,
+        checkVideoAttempts: attempts
       });
     });
   };

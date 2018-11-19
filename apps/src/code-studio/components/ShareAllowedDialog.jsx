@@ -174,6 +174,7 @@ class ShareAllowedDialog extends React.Component {
     exportError: null,
     isTwitterAvailable: false,
     isFacebookAvailable: false,
+    replayVideoUnavailable: false,
   };
 
   componentDidMount() {
@@ -214,6 +215,12 @@ class ShareAllowedDialog extends React.Component {
         body: JSON.stringify(this.props.replayLog)
       });
     }
+  };
+
+  replayVideoNotFound = () => {
+    this.setState({
+      replayVideoUnavailable: true
+    });
   };
 
   sharingDisabled = () =>
@@ -406,6 +413,7 @@ class ShareAllowedDialog extends React.Component {
                   {this.hasReplayVideo() &&
                       <DownloadReplayVideoButton
                         channelId={this.props.channelId}
+                        onError={this.replayVideoNotFound}
                       />
                   }
                   {canPrint && hasThumbnail &&
@@ -442,6 +450,13 @@ class ShareAllowedDialog extends React.Component {
                     <span style={{fontSize: 12}} className="thumbnail-warning">
                       {i18n.thumbnailWarning()}
                       </span>
+                  </div>
+                }
+                {this.state.replayVideoUnavailable &&
+                  <div style={{clear: 'both', marginTop: 10}}>
+                    <span style={{fontSize: 12}} className="thumbnail-warning">
+                      {i18n.downloadReplayVideoButtonError()}
+                    </span>
                   </div>
                 }
                 <div style={{clear: 'both', marginTop: 40}}>
