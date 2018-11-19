@@ -527,6 +527,11 @@ module Api::V1::Pd
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
             status: 'accepted_not_notified',
+            notes: nil,
+            notes_2: nil,
+            notes_3: nil,
+            notes_4: nil,
+            notes_5: nil,
             friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -564,6 +569,11 @@ module Api::V1::Pd
             assigned_workshop: nil,
             registered_workshop: nil,
             status: 'accepted_not_notified',
+            notes: nil,
+            notes_2: nil,
+            notes_3: nil,
+            notes_4: nil,
+            notes_5: nil,
             friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -602,6 +612,11 @@ module Api::V1::Pd
             assigned_workshop: nil,
             registered_workshop: nil,
             status: 'accepted',
+            notes: nil,
+            notes_2: nil,
+            notes_3: nil,
+            notes_4: nil,
+            notes_5: nil,
             assigned_fit: nil,
             registered_fit: 'No',
             locked: true
@@ -646,6 +661,11 @@ module Api::V1::Pd
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
             status: 'accepted_not_notified',
+            notes: nil,
+            notes_2: nil,
+            notes_3: nil,
+            notes_4: nil,
+            notes_5: nil,
             friendly_scholarship_status: 'No'
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -682,6 +702,11 @@ module Api::V1::Pd
             assigned_workshop: nil,
             registered_workshop: nil,
             status: 'accepted_not_notified',
+            notes: nil,
+            notes_2: nil,
+            notes_3: nil,
+            notes_4: nil,
+            notes_5: nil,
             friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -721,6 +746,11 @@ module Api::V1::Pd
             assigned_fit: nil,
             registered_fit: 'No',
             status: 'accepted',
+            notes: nil,
+            notes_2: nil,
+            notes_3: nil,
+            notes_4: nil,
+            notes_5: nil,
             locked: true
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -745,6 +775,10 @@ module Api::V1::Pd
         "Scholarship teacher?",
         "Bonus Points",
         "Notes",
+        "Notes 2",
+        "Notes 3",
+        "Notes 4",
+        "Notes 5",
         "Title",
         "First name",
         "Last name",
@@ -860,7 +894,12 @@ module Api::V1::Pd
         'School Name',
         'Email',
         'Status',
-        'Assigned Workshop'
+        'Assigned Workshop',
+        'Notes',
+        'Notes 2',
+        'Notes 3',
+        'Notes 4',
+        'Notes 5'
       ]
       assert_equal expected_headers, response_csv.first
       assert_equal expected_headers.length, response_csv.second.length
