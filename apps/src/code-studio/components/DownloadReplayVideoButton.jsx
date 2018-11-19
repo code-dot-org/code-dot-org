@@ -65,6 +65,10 @@ export default class DownloadReplayVideoButton extends React.Component {
     this.checkVideoUntilSuccess();
   }
 
+  componentWillUnmount() {
+    clearTimeout(this.state.checkVideoUntilSuccessTimeout);
+  }
+
   getVideoUrl = () =>
     `https://dance-api.code.org/videos/video-${this.props.channelId}.mp4`;
 
@@ -72,7 +76,7 @@ export default class DownloadReplayVideoButton extends React.Component {
   // enabled on initial load, until the first time the user clicks it
   buttonEnabled = () => this.state.videoExists || !this.state.downloadInitiated;
 
-  tryDownloadVideo = (event = {}) => {
+  tryDownloadVideo = (event) => {
     if (!this.state.downloadInitiated) {
       this.setState({
         downloadInitiated: true
@@ -88,7 +92,9 @@ export default class DownloadReplayVideoButton extends React.Component {
       this.checkVideo();
     }
 
-    event.preventDefault();
+    if (event) {
+      event.preventDefault();
+    }
     return false;
   };
 
