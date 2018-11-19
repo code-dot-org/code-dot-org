@@ -33,23 +33,37 @@ theme: responsive
     .radio-row
       %div
         %label.radio-inline
-          %input#unsubscribe-volunteer-annual{name: "unsubscribed_s", type: "radio", xrequired: true, value: "untilhoc", checked: form.data['unsubscribed_s'] == 'untilhoc'}/
+          %input#unsubscribe-volunteer-annual{name: "unsubscribed_s", type: "radio", value: "untilhoc", checked: form.data['unsubscribed_s'] == 'untilhoc'}/
           Stop sending me teacher requests until the next Hour of Code
       %div
         %label.radio-inline
-          %input#unsubscribe-volunteer-annual{name: "unsubscribed_s", type: "radio", xrequired: true, value: "forever", checked: form.data['unsubscribed_s'] == 'forever'}/
+          %input#unsubscribe-volunteer-annual{name: "unsubscribed_s", type: "radio", value: "forever", checked: form.data['unsubscribed_s'] == 'forever'}/
           Stop sending me teacher requests forever
       %div
         %label.radio-inline
-          %input#unsubscribe-volunteer-annual{name: "unsubscribed_s", type: "radio", xrequired: true, value: "resubscribe", checked: form.data['unsubscribed_s'] == 'resubscribe'}/
+          %input#unsubscribe-volunteer-annual{name: "unsubscribed_s", type: "radio", value: "resubscribe", checked: form.data['unsubscribed_s'] == 'resubscribe'}/
           Send me teacher requests again
 
   - if form.data['age_18_plus_b'] != '1'
     .form-group
       %div
         %label{style: 'font-weight: normal; cursor: pointer'}
-          %input#volunteer-age-18-plus-unsubscribe{name: 'age_18_plus_b', type: 'checkbox', value: '1', xrequired: true, checked: true}
+          %input#volunteer-age-18-plus-unsubscribe{name: 'age_18_plus_b', type: 'checkbox', value: '1', checked: true}
             = I18n.t(:volunteer_engineer_submission_checkbox_age_18_plus)
+          %span.form-required-field *
+
+  .form-group
+    %label.control-label{for: "volunteer-email-preference"}
+      = I18n.t(:volunteer_engineer_submission_field_email_preference)
+      %a{href: '/privacy', target: '_blank'}
+        = I18n.t(:volunteer_engineer_submission_field_email_preference_privacy)
+      -unless form.data['email_preference_opt_in_s']
+        %span.form-required-field *
+    %div
+      %select#volunteer-email-preference.form-control{name: "email_preference_opt_in_s", type: "select"}
+        %option{value: "", selected: true, disabled: true}
+        %option{value: "yes"}= I18n.t(:volunteer_engineer_submission_field_email_preference_yes)
+        %option{value: "no"}= I18n.t(:volunteer_engineer_submission_field_email_preference_no)
 
   #volunteer-secret{style: 'display: none'}= secret
   %button.primary.btn-submit Confirm

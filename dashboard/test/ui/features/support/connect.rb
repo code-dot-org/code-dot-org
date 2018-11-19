@@ -58,6 +58,9 @@ def saucelabs_browser(test_run_name)
         http_client: http_client
       )
 
+      # Maximum time a single execute_script or execute_async_script command may take
+      browser.manage.timeouts.script_timeout = 30.seconds
+
       # Shorter idle_timeout to avoid "too many connection resets" error
       # and generally increases stability, reduces re-runs.
       # https://docs.omniref.com/ruby/gems/net-http-persistent/2.9.4/symbols/Net::HTTP::Persistent::Error#line=108
