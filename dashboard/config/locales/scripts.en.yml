@@ -9835,6 +9835,14 @@ en:
               name: The Artist
             Nested Loops in the Maze:
               name: Nested Loops in the Maze
+            Sequencing in the Maze:
+              name: Sequencing in the Maze
+            Programming and Loops with the Artist:
+              name: Programming and Loops with the Artist
+            Events with Sprite Lab:
+              name: Events with Sprite Lab
+            Loops with the Artist:
+              name: Loops with the Artist
         dance-low:
           stages:
             Dance Party:
