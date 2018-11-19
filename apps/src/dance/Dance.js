@@ -564,6 +564,9 @@ Dance.prototype.initInterpreter = function () {
     setDanceSpeed: (spriteIndex, speed) => {
       nativeAPI.setDanceSpeed(sprites[spriteIndex], speed);
     },
+    setDanceSpeedEach: (group, speed) => {
+      nativeAPI.setDanceSpeedEach(group, speed);
+    },
     getEnergy: range => {
       return Number(nativeAPI.getEnergy(range));
     },
