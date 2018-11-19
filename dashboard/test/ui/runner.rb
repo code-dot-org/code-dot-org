@@ -64,6 +64,9 @@ def main(options)
 
   run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature|
     run_feature browser, feature, options
+  rescue => e
+    ChatClient.log "Exception: #{e.message}", color: 'red'
+    raise
   end
 
   # Produce a final report if we aborted due to excess failures
@@ -74,7 +77,10 @@ def main(options)
 
   # If we aborted for some reason we may have no run results, and should
   # exit with a failure code.
-  return 1 if run_results.nil?
+  if run_results.nil?
+    ChatClient.log "Test run abandoned with no run results", color: 'red'
+    return 1001
+  end
 
   report_tests_finished start_time, run_results
   run_results.count {|feature_succeeded, _, _| !feature_succeeded}
@@ -189,6 +195,9 @@ def parse_options
       end
       opts.on("-V", "--verbose", "Verbose") do
         options.verbose = true
+      end
+      opts.on("-VV", "--very-verbose", "Very verbose, extra debug logging") do
+        ENV['VERY_VERBOSE'] = true
       end
       opts.on("--fail_fast", "Fail a feature as soon as a scenario fails") do
         options.fail_fast = true

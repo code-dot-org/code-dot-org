@@ -120,7 +120,7 @@
         = I18n.t(:volunteer_engineer_submission_field_email_preference_privacy)
       %span.form-required-field *
     %div
-      %select#volunteer-email-preference.form-control{name: "email_preference_opt_in_s", type: "select", required: true}
+      %select#volunteer-email-preference.form-control{name: "email_preference_opt_in_s", type: "select"}
         %option{value: "", selected: true, disabled: true}
         %option{value: "yes"}= I18n.t(:volunteer_engineer_submission_field_email_preference_yes)
         %option{value: "no"}= I18n.t(:volunteer_engineer_submission_field_email_preference_no)
