@@ -17,8 +17,7 @@ class Api::V1::Pd::ApplicationQuickViewSerializer < ActiveModel::Serializer
     :total_score,
     :meets_criteria,
     :meets_scholarship_criteria,
-    :friendly_scholarship_status,
-    :tags
+    :friendly_scholarship_status
   )
 
   def locked

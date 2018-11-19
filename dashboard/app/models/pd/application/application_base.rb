@@ -117,10 +117,6 @@ module Pd::Application
       notes_5
     )
 
-    def tag_names
-      tags.map(&:name).sort!.join(", ")
-    end
-
     def set_type_and_year
       # Override in derived classes and set to valid values.
       # Setting them to nil here fails those validations and prevents this base class from being saved.
