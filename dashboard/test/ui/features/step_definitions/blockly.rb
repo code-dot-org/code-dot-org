@@ -262,7 +262,7 @@ def clear_main_block_space
       } else if (Date.now() - waitStart > timeoutMs){
         callback('Timeout reached: Unable to clear Blockly.mainBlockSpace');
       } else {
-        setTimeout(checkForAndClearMainBlockSpace(), 100);
+        setTimeout(checkForAndClearMainBlockSpace, 100);
       }
     }())
   JS
