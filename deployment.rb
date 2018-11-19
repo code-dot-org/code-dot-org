@@ -261,7 +261,17 @@ class CDOImpl < OpenStruct
     site_url('hourofcode.com', path, scheme)
   end
 
-  CURRICULUM_LANGUAGES = Set['/es-mx', '/it-it', '/th-th']
+  # No curriculum languages are currently enabled; as of November 2018,
+  # enabling a language here will redirect _all_ links to CB for that language
+  # to the language-specific version of that content, even though we only
+  # generate language-specific versions of CB content for the subset of content
+  # we are actively translating.
+  #
+  # TODO: (elijah) figure out a better way to link to locale-specific CB
+  # content, and reenable some languages here.
+  #
+  # When enabled, this should look something like Set['/es-mx', '/it-it', '/th-th']
+  CURRICULUM_LANGUAGES = Set[]
 
   def curriculum_url(locale, path = '')
     locale = '/' + locale.downcase.to_s
