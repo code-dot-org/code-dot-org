@@ -111,9 +111,16 @@ es-MX:
         movido los bloques para dibujar un cuadrado en la función llamada "dibuja
         un cuadrado". ¿Puedes utilizar la función "dibuja un cuadrado" para crear
         los lentes? Los cuadrados están separados por 75 píxeles.
+      2-3 Artist Functions 3 a: |-
+        Editar la función "dibujar un cuadro" para dibujar unos lentes con armazón cuadrado de 115 pixeles en cada lado.
+
+
+        Los cuadros están ahora separados 45 pixeles.
       2-3 Artist Functions 3: Edita la función para dibujar un cuadrado con una longitud
         lateral de 115 y dibuja los lentes más grandes. Los cuadrados están ahora
         separados 45 píxeles.
+      2-3 Artist Functions 4 a: Ahora, pon la función dentro de un bucle y agrega
+        un turno adicional para pintar estos tres cuadros.
       2-3 Artist Functions 4: Usa el bloque "repetir" para dibujar estos 3 cuadrados.
       2-3 Artist Functions 7: 'Utiliza la función "dibuja una casa" para dibujar dos
         casas utilizando dos parámetros diferentes. (Sugerencia: la primera casa es
@@ -1609,6 +1616,31 @@ es-MX:
         - ¿Quée sucede si usas dos ángulos diferentes en tu patrón de escalones?
         - ¿Qué sucede si haces tu patrón de diamante más largo o más coto?
         - ¿Cómo luce dibujar dos copos de nieve uno encima del otro?
+      Dance_Party_01: Arrastra el bloque de 'Crear nuevo' en el espacio de trabajo
+        y conéctalo dentro del bloque de 'instalación'.
+      Dance_Party_01_low: Arrastra el bloque de 'Crear nuevo' en el espacio de trabajo
+        y conéctalo dentro del bloque de 'instalación'.
+      Dance_Party_02: Haz que el alce comience un nuevo movimiento después de 4 medidas.
+      Dance_Party_03: Haz que el bailarín comience un nuevo movimiento después de
+        6 medidas.
+      Dance_Party_04: Añade un efecto de fondo a tu programa.
+      Dance_Party_05: Usa un nuevo bloque para hacer que el bailarín cambie los movimientos
+        cada 2 medidas.
+      Dance_Party_06: Crea un bailarín llamado 'backup_dancer1' para que baile con
+        el gato.
+      Dance_Party_08: "¿Puedes hacer que ambos bailarines sean del mismo tamaño?"
+      Dance_Party_09: Utiliza el bloque de 'definir tinte ' para cambiar el color
+        de un bailarín.
+      Dance_Party_10: Haz que el otro bailarín también responda a la música usando
+        el bloque 'comienza después'.
+      Dance_Party_11.5: Usa los bloques de "todos los patos" para hacer que todos
+        los patos bailen juntos.
+      Dance_Party_11: El bloque 'cuando presiona arriba' le permite ejecutar el código
+        cuando se presiona la flecha hacia arriba. Tratar de hacer que el bailarín
+        haga un movimiento rápido cuando pulses la tecla arriba.
+      Dance_Party_11b: Haz que el Robot baile una vez cuando se pulse la tecla de
+        flecha derecha y haga el "hilo", una vez cuando presiones la tecla de flecha
+        hacia arriba. ¡Haz el baile del robot y el hilo tan rápido como puedas!
       Fish Tank 5-validated_simple: El pez quiere un amigo. Agrega un nuevo sprite.
       Food Fight!: 'Añadimos una última función para ti. Utiliza una sentencia "Si"
         para que tu programa llame la función "livel_mas" solo cuando "puntuacion_jugador"
@@ -1618,6 +1650,18 @@ es-MX:
         un camino para la antorcha.
       Function intro Ryan_2019: Usa la función "Construir puente" dos veces para crear
         un camino para la antorcha.
+      HOC 2018 Level_1: Obtén un bote en el cofre.
+      HOC 2018 Level_10: Dirígete a la entrada de este monumento oceánico.
+      HOC 2018 Level_11: Fabrica un conducto con prismarina dentro del monumento oceánico.
+      HOC 2018 Level_12: "¡Diseña tu propio ambiente submarino como quieras!"
+      HOC 2018 Level_2: Dirígete al final del muelle.
+      HOC 2018 Level_3: Cruza el mar para ir hacia donde está el bacalao.
+      HOC 2018 Level_4: Usa un giro para llegar a donde está el delfín.
+      HOC 2018 Level_5: Explora el barco hundido para llegar a donde está el cofre.
+      HOC 2018 Level_6: Cruza el hielo para llegar a donde está el salmón.
+      HOC 2018 Level_7a: Explora estas ruinas submarinas para encontrar un cofre.
+      HOC 2018 Level_9b: Usa el coral como punto de referencia para llegar a donde
+        está el tesoro.
       Infinity_catch: ¿Puedes hacer que Elsa ("actor2") alcance a Anna utilizando
         las teclas de flecha?
       Infinity_finale: "¡Crea cualquier cosa que desees compartir!"

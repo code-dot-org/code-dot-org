@@ -18,11 +18,9 @@
     "nectar_goal": "9",
     "flower_type": "redWithNectar",
     "ideal": "37",
-    "instructions": "Now there are flowers on both sides! We've added variables called \"left\" and \"right\" for you to use, and added a parameter called \"direction\" to \"get 3 nectar\". Edit \"get 3 nectar\" so that the bee turns the correct direction when the variables \"left\" or \"right\" are passed into the function.  ",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "predraw_blocks": "<xml><block type=\"procedures_defnoreturn\" movable=\"false\"><mutation><arg name=\"direction\" /></mutation><title name=\"NAME\">get 3 nectar</title><statement name=\"STACK\"><block type=\"controls_if\" inline=\"false\"><mutation else=\"1\" /><value name=\"IF0\"><block type=\"logic_compare\" inline=\"true\" movable=\"false\"><title name=\"OP\">EQ</title><value name=\"A\"><block type=\"variables_get\" movable=\"false\"><title name=\"VAR\">direction</title></block></value><value name=\"B\"><block type=\"variables_get\"><title name=\"VAR\">left</title></block></value></block></value><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"controls_repeat\"><title name=\"TIMES\">3</title><statement name=\"DO\"><block type=\"maze_nectar\" /></statement><next><block type=\"maze_move\"><title name=\"DIR\">moveBackward</title><next><block type=\"maze_move\"><title name=\"DIR\">moveBackward</title></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type=\"when_run\" movable=\"false\" deletable=\"false\"><next><block type=\"variables_set\" inline=\"false\" movable=\"false\" deletable=\"false\"><title name=\"VAR\">left</title><value name=\"VALUE\"><block type=\"math_number\" movable=\"false\" deletable=\"false\" editable=\"false\"><title name=\"NUM\">0</title></block></value><next><block type=\"variables_set\" inline=\"false\" movable=\"false\" deletable=\"false\"><title name=\"VAR\">right</title><value name=\"VALUE\"><block type=\"math_number\" movable=\"false\" deletable=\"false\" editable=\"false\"><title name=\"NUM\">1</title></block></value><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"procedures_callnoreturn\" inline=\"false\"><mutation name=\"get 3 nectar\"><arg name=\"direction\" /></mutation><value name=\"ARG0\"><block type=\"variables_get\"><title name=\"VAR\">right</title></block></value><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"procedures_callnoreturn\" inline=\"false\"><mutation name=\"get 3 nectar\"><arg name=\"direction\" /></mutation><value name=\"ARG0\"><block type=\"variables_get\"><title name=\"VAR\">left</title></block></value><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"procedures_callnoreturn\" inline=\"false\"><mutation name=\"get 3 nectar\"><arg name=\"direction\" /></mutation><value name=\"ARG0\"><block type=\"variables_get\"><title name=\"VAR\">right</title></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
-    "markdown_instructions": "Now there are flowers on both sides!  \r\n\r\nWe've added variables called `left` and `right` for you to use, and now there is a parameter called `direction` inside `get 3 nectar`. \r\n\r\n**Edit `get 3 nectar` so that the bee turns the correct direction when the variables `left` or `right` are passed into the function.**",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -35,10 +33,21 @@
     "fast_get_nectar_animation": "true",
     "callout_json": "[]",
     "hint_prompt_attempts_threshold": 15,
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null,
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "shape_shift": "false",
+    "short_instructions": "Now there are flowers on both sides! We've added variables called \"left\" and \"right\" for you to use, and added a parameter called \"direction\" to \"get 3 nectar\". Edit \"get 3 nectar\" so that the bee turns the correct direction when the variables \"left\" or \"right\" are passed into the function.  ",
+    "long_instructions": "Now there are flowers on both sides!  \r\n\r\nWe've added variables called `left` and `right` for you to use, and now there is a parameter called `direction` inside `get 3 nectar`. \r\n\r\n**Edit `get 3 nectar` so that the bee turns the correct direction when the variables `left` or `right` are passed into the function.**"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-11-09 20:35:47 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-11-09 20:36:02 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-11-09 20:42:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-11-09 20:57:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 5,
     "functions_with_params": 2
@@ -128,7 +137,7 @@
                 <block type="logic_compare" inline="true" movable="false">
                   <title name="OP">EQ</title>
                   <value name="A">
-                    <block type="variables_get" movable="false">
+                    <block type="parameters_get" movable="false">
                       <title name="VAR">direction</title>
                     </block>
                   </value>
@@ -164,7 +173,7 @@
                                         <block type="logic_compare" inline="true" movable="false">
                                           <title name="OP">EQ</title>
                                           <value name="A">
-                                            <block type="variables_get" movable="false">
+                                            <block type="parameters_get" movable="false">
                                               <title name="VAR">direction</title>
                                             </block>
                                           </value>

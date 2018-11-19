@@ -56,18 +56,18 @@ export class UnconnectedTwoColumnActionBlock extends Component {
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     imageUrl: PropTypes.string.isRequired,
     heading: PropTypes.string,
-    headingDescription: PropTypes.string,
     subHeading: PropTypes.string,
     description: PropTypes.string.isRequired,
     buttons: PropTypes.arrayOf(PropTypes.shape({
       url: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
       target: PropTypes.string,
+      id: PropTypes.string,
     })),
   };
 
   render() {
-    const { isRtl, responsiveSize, imageUrl, heading, headingDescription, subHeading, description, buttons } = this.props;
+    const { isRtl, responsiveSize, imageUrl, heading, subHeading, description, buttons } = this.props;
     const float = isRtl ? 'right' : 'left';
     const width = (responsiveSize === 'lg') ? '50%' : '100%';
 
@@ -77,11 +77,6 @@ export class UnconnectedTwoColumnActionBlock extends Component {
           <div style={styles.heading}>
             {heading}
           </div>
-        )}
-        {headingDescription && (
-          <p>
-            {headingDescription}
-          </p>
         )}
         <div style={styles.container}>
           {responsiveSize === 'lg' &&
@@ -109,6 +104,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
                     color={Button.ButtonColor.gray}
                     text={button.text}
                     target={button.target}
+                    id={button.id}
                   />
                   &nbsp;
                   &nbsp;
@@ -161,14 +157,15 @@ export class AdministratorResourcesActionBlock extends Component {
       <TwoColumnActionBlock
         imageUrl={pegasus('/images/fill-540x289/2015AR/newcsteacherstrained.png')}
         heading={i18n.administratorResourcesHeading()}
-        headingDescription={i18n.administratorResourcesHeadingDescription()}
         description={i18n.administratorResourcesDescription()}
         buttons={[
           {
+            id: 'your_school_professional_learning',
             url: pegasus('/educate/professional-learning'),
             text: i18n.yourSchoolProfessionalLearningProgramsButton()
           },
           {
+            id: 'your_school_administrators',
             url: pegasus('/administrators'),
             text: i18n.yourSchoolAdminButton()
           }
@@ -184,17 +181,35 @@ export class SpecialAnnouncementActionBlock extends Component {
   };
 
   render() {
-    if (this.props.hocLaunch === "dance") {
+    if (this.props.hocLaunch === "actual-hoc") {
       return (
         <TwoColumnActionBlock
           imageUrl={pegasus('/shared/images/fill-540x289/teacher-announcement/hoc2018-dance.jpg')}
-          subHeading={i18n.specialAnnouncementHeadingHoc2018()}
-          description={i18n.specialAnnouncementDescriptionHoc2018()}
+          subHeading={i18n.specialAnnouncementHeadingHoc2018Actual()}
+          description={i18n.specialAnnouncementDescriptionHoc2018Actual()}
+          buttons={[
+            {
+              url: pegasus('/hourofcode/overview'),
+              text: i18n.tryIt()
+            }
+          ]}
+        />
+      );
+    } else if (this.props.hocLaunch === "dance") {
+      return (
+        <TwoColumnActionBlock
+          imageUrl={pegasus('/shared/images/fill-540x289/teacher-announcement/hoc2018-dance.jpg')}
+          subHeading={i18n.specialAnnouncementHeadingHoc2018Mc()}
+          description={i18n.specialAnnouncementDescriptionHoc2018Dance()}
           buttons={[
             {
               url: 'https://hourofcode.com/#join',
-              text: i18n.signUpButton()
+              text: i18n.joinUs()
             },
+            {
+              url: pegasus('/hourofcode/overview'),
+              text: i18n.tryIt()
+            }
           ]}
         />
       );

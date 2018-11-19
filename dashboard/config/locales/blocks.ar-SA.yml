@@ -38,8 +38,8 @@ ar:
             MOVES.Drop: اسقاط
             MOVES.Floss: خيط
             MOVES.Fresh: طازج
-            MOVES.Kick: ركلة
             MOVES.Roll: تدحرج
+            MOVES.Kick: ركلة
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
             '"next"': "(التالي)"
@@ -59,8 +59,8 @@ ar:
             MOVES.Drop: اسقاط
             MOVES.Floss: خيط
             MOVES.Fresh: طازج
-            MOVES.Kick: ركلة
             MOVES.Roll: تدحرج
+            MOVES.Kick: ركلة
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
             '"next"': "(التالي)"
@@ -101,13 +101,10 @@ ar:
             MOVES.Drop: اسقاط
             MOVES.Floss: خيط
             MOVES.Fresh: طازج
-            MOVES.Kick: ركلة
             MOVES.Roll: تدحرج
+            MOVES.Kick: ركلة
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
-            '"next"': "(التالي)"
-            '"prev"': "(السابق)"
-            '"rand"': "(عشوائي)"
           DIR:
             '1': "→"
             "-1": "←"
@@ -122,13 +119,10 @@ ar:
             MOVES.Drop: اسقاط
             MOVES.Floss: خيط
             MOVES.Fresh: طازج
-            MOVES.Kick: ركلة
             MOVES.Roll: تدحرج
+            MOVES.Kick: ركلة
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
-            '"next"': "(التالي)"
-            '"prev"': "(السابق)"
-            '"rand"': "(عشوائي)"
           DIR:
             '1': "→"
             "-1": "←"
@@ -174,23 +168,27 @@ ar:
         options:
           UNIT:
             '"measures"': اجرائات
-            '"seconds"': ثانية
+            '"seconds"': ثوان
       Dancelab_ifDanceIs:
         text: إذا كان {SPRITE} يقوم بِ{DANCE}{DO1} {DO2}
         options:
           DANCE:
-            '0': تصفيق عالي
-            '1': مهرج
-            '2': داب
-            '3': ضغطتان
-            '4': اسقاط
-            '5': خيط
-            '6': طازج
-            '7': ركلة
-            '8': None
-            '9': تدحرج
-            '10': هذا أو ذاك
-            '11': تايلر
+            MOVES.ClapHigh: تصفيق عالي
+            MOVES.Clown: مهرج
+            MOVES.Dab: داب
+            MOVES.DoubleJam: ضغطتان
+            MOVES.Drop: اسقاط
+            MOVES.Floss: خيط
+            MOVES.Fresh: طازج
+            MOVES.Roll: تدحرج
+            MOVES.Kick: ركلة
+            MOVES.ThisOrThat: هذا أو ذاك
+            MOVES.Thriller: تايلر
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"measures"': اجرائات
+            '"seconds"': ثوان
       Dancelab_jumpTo:
         text: "{SPRITE} اقفز الى {LOCATION}"
         options:
@@ -236,6 +234,16 @@ ar:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"random"': عشوائي
       Dancelab_randomColor:
@@ -243,9 +251,29 @@ ar:
       Dancelab_setBackgroundEffect:
         options:
           EFFECT:
-            "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]": "(عشوائي)"
+            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": "(عشوائي)"
       Dancelab_setDanceSpeed:
         options:
+          SPEED:
+            '1': عادي
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: الكل
+            '"ALIEN"': كل الأجانب
+            '"BEAR"': كل الدببة
+            '"CAT"': كل القطط
+            '"DOG"': كل الكلاب
+            '"DUCK"': كل البط
+            '"FROG"': كل الضفادع
+            '"MOOSE"': كل الغزلان
+            '"PINEAPPLE"': كل الأناناس
+            '"ROBOT"': كل الروبوتات
+            '"SHARK"': كل القروش
           SPEED:
             '1': عادي
             '2': fast
@@ -255,7 +283,7 @@ ar:
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
-            "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": "(عشوائي)"
+            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(عشوائي)"
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -294,10 +322,39 @@ ar:
             '"rotation"': دوران
             '"x"': بشكل أفقي
             '"y"': بشكل عمودي
+            '"tint"': لون
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: الكل
+            '"ALIEN"': كل الأجانب
+            '"BEAR"': كل الدببة
+            '"CAT"': كل القطط
+            '"DOG"': كل الكلاب
+            '"DUCK"': كل البط
+            '"FROG"': كل الضفادع
+            '"MOOSE"': كل الغزلان
+            '"PINEAPPLE"': كل الأناناس
+            '"ROBOT"': كل الروبوتات
+            '"SHARK"': كل القروش
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'false': غير مرئي
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: الكل
+            '"ALIEN"': كل الأجانب
+            '"BEAR"': كل الدببة
+            '"CAT"': كل القطط
+            '"DOG"': كل الكلاب
+            '"DUCK"': كل البط
+            '"FROG"': كل الضفادع
+            '"MOOSE"': كل الغزلان
+            '"PINEAPPLE"': كل الأناناس
+            '"ROBOT"': كل الروبوتات
+            '"SHARK"': كل القروش
           VISIBILITY:
             'false': غير مرئي
       Dancelab_startMapping:
@@ -333,8 +390,8 @@ ar:
         options:
           KEY:
             '"up"': الأعلى
-            '"down"': الأسفل
             '"left"': اليسار
+            '"down"': الأسفل
             '"right"': اليمين
             '"space"': الفضاء
       Dancelab_whenPeak:

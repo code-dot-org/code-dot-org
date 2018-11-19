@@ -621,8 +621,13 @@ et:
         infinity_playlab_intro: Play Lab - Sissejuhatus
         infinity_playlab_events: Play Lab - Üritused
         infinity_playlab_repeat_forever: Play Lab – korda Igavesti
+        csd_concept_how_computers_work: Tutvustus, kuidas arvutid töötavad
         csd_concept_computer: 'Kuidas töötavad arvutid: Mis teeb arvutist arvuti?'
         csd_concept_binary_data: 'Kuidas töötavad arvutid: Binaararvud & andmed'
+        csd_concept_circuits_logic: 'Kuidas arvutid töötavad: ahelad ja loogika'
+        csd_concept_memory_cpu_input_output: 'Kuidas arvutid töötavad: mälu, CPU,
+          Input, & Output'
+        csd_concept_hardware_software: 'Kuidas arvutid töötavad: riistvara ja tarkvara'
         csd_concept_search: Kuidas Otsing töötab
         csd_external_amazon_data: Kui kasutatakse Big Data't Amazonis, et muuta meie
           elu
@@ -672,7 +677,38 @@ et:
         mc_2017_puzzle_3: App Lab Hour of Code - tsüklid
         mc_2017_puzzle_8: Minecraft Hour of Code - funktsioonid
         mc_2017_puzzle_12: Minecraft KoodiTund - Vabamäng
+        hint_videos_d_11_3_first: 'Vihje videod: D.11.3 esimene'
+        hint_videos_d_11_3_last: 'Vihje videod: D.11.3 viimane'
+        hint_videos_d_11_4_first: 'Vihje videod: D.11.4 esimene'
+        hint_videos_d_11_4_last: 'Vihje videod: D.11.4 viimane'
+        hint_videos_d_11_5_first: 'Vihje videod: D.11.5 esimene'
+        hint_videos_d_11_5_last: 'Vihje Videod: D.11.5 viimane'
+        hint_videos_d_11_6_first: 'Vihje videod: D.11.6 esimene'
+        hint_videos_d_11_6_last: 'Vihje Videod: D.11.6 viimane'
+        hint_videos_d_11_7_first: 'Vihje videod: D.11.7 esimene'
+        hint_videos_d_11_7_last: 'Vihje videod: D.11.7 viimane'
+        hint_videos_d_11_9_first: 'Vihje videod: D.11.9 esimene'
+        hint_videos_d_11_9_last: 'Vihje Videod: D.11.9 viimane'
+        hint_videos_d_11_11_first: 'Vihje videod: D.11.11 esimene'
+        hint_videos_d_11_11_last: 'Vihje videod: D.11.11 viimane'
+        applab_intro_welcome: App Lab - kuidas alustada
+        applab_intro_events: App Lab - tee see interaktiivseks
+        applab_intro_sounds: App Lab - pildid ja helid
+        applab_intro_designmode: App Lab - kujundamine
+        applab_intro_share: App Lab - jaga oma App'i
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_scrat_loops_K1: Tsüklik - Jääaeg
+        CSF_scrat_loops_CF: Tsüklik - Jääaeg
+        CSF_if_allskins: '"Kui" blokk'
+        CSF_ifelse_allskins: '"Kui"/"või" blokkide kasutamine'
         CSF_loops_AB: Tsüklid
+        mc_2018_intro: 'Minecraft: Voyage Aquatic sissejuhatus'
+        MC_2018_loops: 'Minecraft: Voyage Aquatic korda kuni'
+        mc_2018_conditionals: 'Minecraft: Voyage Aquatic tingimused'
+        mc_2018_closing: 'Minecraft: Voyage Aquatic palju õnne'
+        hoc_dance_events: Tantsuõhtu - sündmused
+        hoc_dance_properties: Tantsuõhtu - omadused
     callout:
       text:
         drag_blocks: Lohista plokki „liiguta“ ja kinnita see teise ploki alla

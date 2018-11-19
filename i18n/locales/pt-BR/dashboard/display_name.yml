@@ -143,6 +143,10 @@ pt-BR:
       CSD U2 RGB intro_2018: Widget RGB
       CSD U2 Style Sheet Map: CSS e Folhas de Estilo
       CSD U2 Style Sheet Map_2018: CSS e Folhas de Estilo
+      CSD U2 challenge: Desafio
+      CSD U2 challenge_2018: Desafio
+      CSD U2 lists map: Listas em HTML
+      CSD U2 lists map_2018: Listas em HTML
       CSD U2L01 TFMD_2018: Visão geral da aula
       CSD U2L02 TFMD_2018: Visão geral da aula
       CSD U2L03 TFMD_2018: Visão geral da aula
@@ -187,10 +191,15 @@ pt-BR:
       CSD U3 L7 Freeplay_2018: Atividade livre
       CSD U3 L9 Freeplay: Atividade livre
       CSD U3 L9 Freeplay_2018: Atividade livre
+      CSD U3 Random Number Map Level: Números Aleatórios
+      CSD U3 Random Number Map Level_2018: Números Aleatórios
+      CSD U3 Random Number Map: Números Aleatórios
       CSD U3 Sprite Properties Map: Propriedades do Sprite
       CSD U3 Sprite Properties Map_2018: Propriedades do Sprite
       CSD U3 Variables Map: variáveis
       CSD U3 Variables Map_2018: variáveis
+      CSD U3 challenge new shape: 'Desafio: Forma das Formas'
+      CSD U3 challenge new shape_2018: 'Desafio: Forma das Formas'
       CSD U3 collisions build isTouching: Detecção de Colisão
       CSD U3 collisions build isTouching_2018: Detecção de Colisão
       CSD U3 functions map: funções
@@ -369,6 +378,8 @@ pt-BR:
       'CSD: Sprite Velocity_2018': 'Video: Velocidade'
       CSDU6 - sensors challenge: 'Desafio: Entendendo os sensores'
       CSDU6 - sensors experiment: Experimento com Sensor
+      CSDU6 buzzer 2d arrays: Vetores 2D
+      CSDU6 buzzer 2d arrays_2018: Vetores 2D
       CSP CreateL01 SFLP: Visão geral da aula
       CSP CreateL02 SFLP_2018: Visão geral da aula
       CSP CreateL03 SFLP: Visão geral da aula
@@ -484,5 +495,17 @@ pt-BR:
       courseB_video_Unspotted: Erros Não Reportados
       courseB_video_Unspotted_2018: Erros Não Reportados
       coursee_explore_4: Defensor alienígena
+      csd1dlp-assessment: Avaliação
+      csd2dlp-assessment: Avaliação
+      csd3dlp-assessment: Avaliação
+      csd4dlp-assessment: Avaliação
+      csd5dlp-assessment: Avaliação
+      csd6dlp-assessment: Avaliação
+      csp1dlp-assessment: Avaliação
       csp2020-applab-test: Bem-vindo ao AppLab!
+      csp2dlp-assessment: Avaliação
+      csp3dlp-assessment: Avaliação
+      csp4dlp-assessment: Avaliação
+      csp5dlp-assessment: Avaliação
       maker workshop final: 'Desafio: Explorar!'
+      okToDelete: Testador

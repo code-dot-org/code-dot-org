@@ -16,7 +16,7 @@ import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
-import SignInOrAgeDialog from "../templates/SignInOrAgeDialog";
+import {setThumbnailBlobFromCanvas} from '../util/thumbnail';
 import project from "../code-studio/initApp/project";
 import {
   getSongManifest,
@@ -94,9 +94,7 @@ Dance.prototype.init = function (config) {
   this.danceReadyPromise = new Promise(resolve => {
     this.danceReadyPromiseResolve = resolve;
   });
-
   this.studioApp_.labUserId = config.labUserId;
-
   this.level.softButtons = this.level.softButtons || {};
 
   config.afterClearPuzzle = function () {
@@ -133,20 +131,15 @@ Dance.prototype.init = function (config) {
 
   ReactDOM.render((
     <Provider store={getStore()}>
-      <div>
-        {!this.share &&
-          <SignInOrAgeDialog useDancePartyStyle={true}/>
+      <AppView
+        visualizationColumn={
+          <DanceVisualizationColumn
+            showFinishButton={showFinishButton}
+            setSong={this.setSongCallback.bind(this)}
+          />
         }
-        <AppView
-          visualizationColumn={
-            <DanceVisualizationColumn
-              showFinishButton={showFinishButton}
-              setSong={this.setSongCallback.bind(this)}
-            />
-          }
-          onMount={onMount}
-        />
-      </div>
+        onMount={onMount}
+      />
     </Provider>
   ), document.getElementById(config.containerId));
 };
@@ -178,6 +171,14 @@ Dance.prototype.initSongs = async function (config) {
 
   loadSong(selectedSong, songData);
   this.updateSongMetadata(selectedSong);
+
+  if (config.channel) {
+    // Ensure that the selected song will be stored in the project the first
+    // time we run the level. This ensures that if we are on a project-backed
+    // script level, then the correct song will still be selected after we
+    // share.
+    config.level.selectedSong = selectedSong;
+  }
 };
 
 Dance.prototype.setSongCallback = function (songId) {
@@ -477,7 +478,7 @@ Dance.prototype.execute = async function () {
   const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
   this.nativeAPI.addCues(timestamps);
 
-  const validationCallback = new Function('World', 'nativeAPI', 'sprites', this.level.validationCode);
+  const validationCallback = new Function('World', 'nativeAPI', 'sprites', 'events', this.level.validationCode);
   this.nativeAPI.registerValidation(validationCallback);
 
   // songMetadataPromise will resolve immediately if the request which populates
@@ -631,6 +632,7 @@ Dance.prototype.updateSongMetadata = function (id) {
  */
 Dance.prototype.onHandleEvents = function (currentFrameEvents) {
   this.hooks.find(v => v.name === 'runUserEvents').func(currentFrameEvents);
+  this.captureThumbnailImage();
 };
 
 /**
@@ -650,9 +652,19 @@ Dance.prototype.displayFeedback_ = function () {
     appStrings: {
       reinfFeedbackMsg: 'TODO: localized feedback message.',
     },
+    disablePrinting: true,
   });
 };
 
 Dance.prototype.getAppReducers = function () {
   return reducers;
+};
+
+/**
+ * Capture a thumbnail image of the play space. This will capture a PNG blob
+ * of the thumbnail in memory, then will save that blob to S3 when the project
+ * is saved.
+ */
+Dance.prototype.captureThumbnailImage = function () {
+  setThumbnailBlobFromCanvas(document.getElementById('defaultCanvas0'));
 };

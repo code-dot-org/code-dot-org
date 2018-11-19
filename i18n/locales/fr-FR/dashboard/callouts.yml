@@ -73,6 +73,19 @@ fr:
         arrows_move_actor: Utilise les flèches pour déplacer l'acteur
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Utilise les flèches pour déplacer l'acteur
+      Dance_Party_01_callout:
+        dance_callout_01: Ajoutez ce bloc à votre programme\_!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Ajoutez ce bloc à votre programme\_!
+      Dance_Party_02_callout:
+        dance_callout_02: Ajoutez ce bloc à votre programme\_!
+      Dance_Party_04_callout:
+        dance_callout_04: Ajoutez ce bloc à votre programme\_!
+      Dance_Party_06_callout:
+        dance_callout_06: Ajoutez votre nouveau danseur ici
+      Dance_Party_11_callout:
+        dance_callout_11_a: Nouveau bloc !
+        dance_callout_11_b: Nouveau bloc !
       Eval Design Recipe .1_callout:
         edit_function: Clique ici pour modifier ta fonction.
       Frozen Project Test Toolbox_callout:

@@ -7,7 +7,7 @@ import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import Radium from "radium";
 import {connect} from "react-redux";
 import i18n from '@cdo/locale';
-import queryString from "query-string";
+import AgeDialog from "../templates/AgeDialog";
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -34,7 +34,7 @@ const SongSelector = Radium(class extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="song-selector-wrapper">
         <label><b>{i18n.selectSong()}</b></label>
         <select
           id="song_selector"
@@ -66,46 +66,86 @@ class DanceVisualizationColumn extends React.Component {
     userType: PropTypes.string.isRequired
   };
 
+  state = {
+    filterOff: this.setFilterStatus()
+  };
+
+  /*
+    Turn the song filter off
+  */
+  turnFilterOff = () => {
+    this.setState({filterOff: true});
+  };
+
+  /*
+    The filter defaults to on. If the user is over 13 (identified via account or anon dialog), filter turns off
+   */
+  setFilterStatus() {
+    // userType - 'teacher', assumed age > 13. 'student', age > 13.
+    //            'student_y', age < 13. 'unknown', signed out users
+    const signedInOver13 = this.props.userType === 'teacher' || this.props.userType === 'student';
+    const signedOutAge = sessionStorage.getItem('anon_over13') ? sessionStorage.getItem('anon_over13') === 'true' : false;
+    return signedInOver13 || signedOutAge;
+  }
+
   render() {
     const divDanceStyle = {
       touchAction: 'none',
       width: GAME_WIDTH,
       height: GAME_HEIGHT,
-      backgroundColor: '#fff',
+      background: '#fff',
       position: 'relative',
       overflow: 'hidden',
     };
 
-    // userType - 'teacher', assumed age > 13. 'student', age > 13.
-    //            'student_y', age < 13. 'unknown', signed out users
-    const signedInOver13 = this.props.userType === 'teacher' || this.props.userType === 'student';
-    const teacherOverride = queryString.parse(window.location.search).songfilter === 'on';
-    const signedOutAge = sessionStorage.getItem('anon_over13') ? sessionStorage.getItem('anon_over13') : false;
-    const filterOff = (signedInOver13 || signedOutAge) && !teacherOverride;
+    const p5LoadingStyle = {
+      width: 400,
+      height: 400,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    };
+
+    const p5LoadingGifStyle = {
+      width: 100,
+      height: 100,
+    };
+
     const enableSongSelection = !this.props.levelIsRunning && !this.props.levelRunIsStarting;
 
     return (
-      <span>
+      <div>
         {!this.props.isShareView &&
-          <SongSelector
-            enableSongSelection={enableSongSelection}
-            setSong={this.props.setSong}
-            selectedSong={this.props.selectedSong}
-            songData={this.props.songData}
-            filterOff={filterOff}
+          <AgeDialog
+            turnOffFilter={this.turnFilterOff}
           />
         }
-        <ProtectedVisualizationDiv>
-          <div
-            id="divDance"
-            style={divDanceStyle}
-          />
-        </ProtectedVisualizationDiv>
-        <GameButtons showFinishButton={this.props.showFinishButton}>
-          <ArrowButtons />
-        </GameButtons>
-        <BelowVisualization />
-      </span>
+        <span>
+          {!this.props.isShareView &&
+            <SongSelector
+              enableSongSelection={enableSongSelection}
+              setSong={this.props.setSong}
+              selectedSong={this.props.selectedSong}
+              songData={this.props.songData}
+              filterOff={this.state.filterOff}
+            />
+          }
+          <ProtectedVisualizationDiv>
+            <div
+              id="divDance"
+              style={divDanceStyle}
+            >
+              <div id="p5_loading" style={p5LoadingStyle}>
+                <img src="//curriculum.code.org/images/DancePartyLoading.gif" style={p5LoadingGifStyle}/>
+              </div>
+            </div>
+          </ProtectedVisualizationDiv>
+          <GameButtons showFinishButton={this.props.showFinishButton}>
+            <ArrowButtons />
+          </GameButtons>
+          <BelowVisualization />
+        </span>
+      </div>
     );
   }
 }

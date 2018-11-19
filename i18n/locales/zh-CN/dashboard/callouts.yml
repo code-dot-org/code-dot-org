@@ -180,6 +180,19 @@ zh-CN:
         arrows_move_actor: 使用箭头移动演员
       CourseF_PlayLab_vars10_callout:
         Course_4_Play_Lab_Vars_9_1: 现在，你所有的模块都被分别归类在目录里。点击目录标签可查看同一类别的所有模块。
+      Dance_Party_01_callout:
+        dance_callout_01: 向程序里增加这个模块！
+      Dance_Party_01_low_callout:
+        dance_callout_01: 向程序里增加这个模块！
+      Dance_Party_02_callout:
+        dance_callout_02: 向程序里增加这个模块！
+      Dance_Party_04_callout:
+        dance_callout_04: 向程序里增加这个模块！
+      Dance_Party_06_callout:
+        dance_callout_06: 在这里添加新的跳舞者
+      Dance_Party_11_callout:
+        dance_callout_11_a: 新模块！
+        dance_callout_11_b: 新模块！
       Eval Design Recipe .1_callout:
         edit_function: 单击此处来编辑您的函数。
       Frozen Project Test Toolbox_callout:
@@ -935,6 +948,10 @@ zh-CN:
         courseC_maze_programming3_2: 可以将额外的模块拖动到工具箱中, 以将其丢弃。
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: 用“创建圆圈”模块，并且改变大小。
+      frozen circle function with parameter_b_callout:
+        frozen_circle_function_with_parameter_circle: 使用`创建圆圈`模块，并改变大小。
+      frozen circle function with parameter_test_callout:
+        frozen_circle_function_with_parameter_circle: 使用`创建圆圈`模块，并改变大小。
       frozen cross rotate_callout:
         replace_questions_degree: 使用下拉菜单来将"???"替换为数字
       frozen cross rotate_b_callout:
@@ -965,8 +982,14 @@ zh-CN:
         move_elsa_forward: 拖动“向前移动”积木块，并把它拼在“当运行时”块下面，来让爱莎向前移动。
       frozen perpendicular_callout:
         turn_elsa: 用“转”模块来让艾莎转方向。下拉菜单里的数字决定了艾莎转多少度。
+      frozen perpendicular_b_callout:
+        turn_elsa: '用`转向`模块来让爱莎转向。 '
+      frozen perpendicular_test_callout:
+        turn_elsa: '用`转向`模块来让爱莎转向。 '
       frozen snowflake branch_callout:
         frozen_snowflake_branch: 用“创建一个雪花分支”模块
+      frozen snowflake branch_b_callout:
+        frozen_snowflake_branch: 使用“创建一个雪花分支”函数
       frozen snowflake branch_test_callout:
         frozen_snowflake_branch: 用“创建一个雪花分支”模块
       frozen square iterative_callout:

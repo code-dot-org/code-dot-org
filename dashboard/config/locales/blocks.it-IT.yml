@@ -42,7 +42,6 @@ it:
           GROUP:
             sprites: tutto
           MOVE:
-            '"rand"': Casuale
             MOVES.Rest: Nessuno
           DIR:
             '1': "→"
@@ -50,7 +49,6 @@ it:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"rand"': Casuale
             MOVES.Rest: Nessuno
           DIR:
             '1': "→"
@@ -85,23 +83,21 @@ it:
       Dancelab_getTime:
         options:
           UNIT:
-            '"measures"': Misure
-            '"seconds"': Secondi
+            '"measures"': misure
+            '"seconds"': secondi
       Dancelab_ifDanceIs:
         options:
           DANCE:
-            '0': Clap High
-            '1': Clown
-            '2': Dab
-            '3': Double Jam
-            '4': Drop
-            '5': Floss
-            '6': Fresh
-            '7': Kick
-            '8': Nessuno
-            '9': Roll
-            '10': This or That
-            '11': Thriller
+            MOVES.Rest: Nessuno
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"measures"': misure
+            '"seconds"': secondi
+          OP:
+            '">"': ">"
+            '"<"': "\\<"
+            '"="': "="
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -136,6 +132,16 @@ it:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           COSTUME:
             '"ALIEN"': Alieni
             '"UNICORN"': Unicorni
@@ -149,12 +155,23 @@ it:
         options:
           EFFECT:
             '"none"': Nessuno
+            '"color_cycle"': Arcobaleno
             '"rainbow"': Arcobaleno
             '"diamonds"': Diamanti
-            "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]": Casuale
+            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": Casuale
       Dancelab_setDanceSpeed:
         text: cambia la velocità di ballo di {SPRITE} a {SPEED}
         options:
+          SPEED:
+            '1': normale
+            '2': veloce
+            '4': molto veloce
+            '0.5': lento
+            '0.25': molto lento
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: tutto
           SPEED:
             '1': normale
             '2': veloce
@@ -166,7 +183,7 @@ it:
         options:
           EFFECT:
             '"none"': Nessuno
-            "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": Casuale
+            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": Casuale
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -189,14 +206,20 @@ it:
             '"scale"': dimensione
             '"height"': altezza
             '"rotation"': rotazione
+            '"tint"': tinta
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: tutto
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': visibile
+            'false': invisibile
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: tutto
-            '"alien"': Alieni
-            '"mrwiggles"': MrOndulino
-            '"pizza"': Pizze
-            '"unicorn"': Unicorni
           VISIBILITY:
             'true': visibile
             'false': invisibile
@@ -228,14 +251,16 @@ it:
         options:
           KEY:
             '"up"': in alto
-            '"down"': in basso
             '"left"': a sinistra
+            '"down"': in basso
             '"right"': a destra
             '"space"': spaziale
             '"a"': a
-            '"w"': w
-            '"s"': s
             '"d"': d
+            '"s"': s
+            '"w"': w
+            '"x"': x
+            '"0"': '0'
       Dancelab_whenPeak:
         options:
           RANGE:
@@ -501,6 +526,8 @@ it:
             '"direction"': direzione di movimento
             '"rotation"': rotazione o direzione
             '"tint"': tinta
+      aalab_whenTouchingAdvanced:
+        text: quando {SPRITE1} tocca {SPRITE2}
       craft_ifPath:
         text: |-
           Se c'è un sentiero a {DIR}

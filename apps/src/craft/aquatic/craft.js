@@ -394,6 +394,14 @@ Craft.minAssetsForLevelWithCharacter = function (levelNumber) {
 
 Craft.minAssetsForLevelNumber = function (levelNumber) {
   switch (levelNumber) {
+    case 1:
+      return ['aquaticIslandAssets'];
+    case 2:
+      return ['aquaticIslandAssets'];
+    case 3:
+      return ['aquaticLevelThreeAndFourAssets'];
+    case 4:
+      return ['aquaticLevelThreeAndFourAssets'];
     default:
       return ['aquaticAllAssetsMinusPlayer'];
   }

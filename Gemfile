@@ -135,6 +135,7 @@ gem 'gctools', github: 'wjordan/gctools', ref: 'ruby-2.5'
 gem 'nakayoshi_fork'
 # Ref: https://github.com/puma/puma/pull/1646
 gem 'puma', github: 'wjordan/puma', ref: 'out_of_band'
+gem 'puma_worker_killer'
 gem 'unicorn', '~> 5.1.0'
 
 gem 'chronic', '~> 0.10.2'

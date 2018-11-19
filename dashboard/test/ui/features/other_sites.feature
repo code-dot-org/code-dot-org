@@ -19,3 +19,4 @@ Examples:
   | http://code.org/starwars                                          | starwars tutorial landing  |
   | http://code.org/athletes                                          | athletes tutorial landing  |
   | http://code.org/educate/applab                                    | app lab tutorial landing   |
+  | http://code.org/dance                                             | dance tutorial landing     |

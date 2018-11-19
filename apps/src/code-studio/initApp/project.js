@@ -31,7 +31,6 @@ var events = {
   appModeChanged: 'appModeChanged',
   appInitialized: 'appInitialized',
   workspaceChange: 'workspaceChange',
-  continueButtonPressed: 'continueButtonPressed',
 };
 
 // Number of consecutive failed attempts to update the channel.
@@ -88,6 +87,7 @@ var isEditing = false;
 let initialSaveComplete = false;
 let initialCaptureComplete = false;
 let thumbnailChanged = false;
+let thumbnailPngBlob = null;
 
 /**
  * Current state of our sources API data
@@ -520,13 +520,9 @@ var projects = module.exports = {
           this.setName('My Project');
         }
 
-        const eventName = appOptions.level.skipRunSave ?
-          events.continueButtonPressed :
-          events.appModeChanged;
-
-        $(window).on(eventName, function (event, callback) {
-          this.saveIfSourcesChanged().then(callback);
-        }.bind(this));
+        if (!appOptions.level.skipRunSave) {
+          $(window).on(events.appModeChanged, this.saveIfSourcesChanged.bind(this));
+        }
 
         $(window).on(events.appInitialized, function () {
           // Get the initial app code as a baseline
@@ -793,6 +789,11 @@ var projects = module.exports = {
 
     if (preparingRemix) {
       return this.sourceHandler.prepareForRemix().then(completeAsyncSave);
+    } else if (thumbnailPngBlob) {
+      const blob = thumbnailPngBlob;
+      thumbnailPngBlob = null;
+      // Call completeAsyncSave even if thumbnail save fails.
+      return this.saveThumbnail(blob).then(completeAsyncSave, completeAsyncSave);
     } else {
       return completeAsyncSave();
     }
@@ -1281,6 +1282,17 @@ var projects = module.exports = {
    */
   getThumbnailUrl() {
     return current && current.thumbnailUrl;
+  },
+
+  /**
+   * Sets the thumbnailPngBlob variable. Caveat: This does not save the thumbnail to the current project.
+   * Use the saveThumbnail method to do that.
+   * @param {Blob} pngBlob A Blob in PNG format containing the thumbnail image.
+   */
+  setThumbnailPngBlob(pngBlob) {
+    if (pngBlob) {
+      thumbnailPngBlob = pngBlob;
+    }
   },
 
   /**

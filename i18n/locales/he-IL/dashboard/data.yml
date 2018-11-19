@@ -302,6 +302,8 @@ he:
         CSF_scrat_loops_K1: לולאות בעידן הקרח
         CSF_scrat_loops_CF: לולאות בעידן הקרח
         CSF_loops_AB: חזרות
+        hoc_dance_events: מסיבת ריקודים - אירועים
+        hoc_dance_properties: מסיבת ריקודים - תכונות
     callout:
       text:
         run: לחצו על "התחל" כדי לנסות את התוכנית שלכם
@@ -320,5 +322,5 @@ he:
         craft_callout_preplaced: הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל
         craft_inside_repeat: חזרו על הפעולות באמצעות הצבת בלוקים כאן
         craft_callout_preplaced_house: הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו לסיים אותו?
-        craft_what_is_iron: כרה את הברזל הזה!
+        craft_what_is_iron: כרו את הברזל הזה!
         craft_callout_moveforward: הקוד הזה יבדוק האם יש לבה. האם תוכלו להוסיף פקודה על מנת לנוע קדימה?

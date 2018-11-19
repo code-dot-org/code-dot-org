@@ -179,12 +179,12 @@ nn:
         2-3_Bee_Conditionals_14_a: Har du vanskar med å finne ut korleis du kan få
           blokkene ned? Prøv å gjere det same med den røde blomen akkurat som den
           lilla blomen!
-        2-3_Bee_Conditionals_14_b: Viss den røde blomen var lilla, kan du finne ut
-          korleis ein kan bruke en ekstra "gjenta"-løkke for å kutte ned på koden?
+        2-3_Bee_Conditionals_14_b: Dersom den røde blomen var lilla, kan du finne
+          ut korleis ein kan bruke en ekstra "gjenta"-løkke for å kutte ned på koden?
         2-3_Bee_Conditionals_14_c: "Prøv å bryte dette opp i to separate delar:  \n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1)
           Samle Nektar 3 gonger\n  - Flytt framover 5 gonger\n  - Sjå om det er nektar,
-          viss nektar: samle den\n  - Snut til venstre\n  \n2) Lag honning \n  - Gå
-          fram ein gong\n  - Lag to honningar"
+          dersom nektar: samle den\n  - Snut til venstre\n  \n2) Lag honning \n  -
+          Gå fram ein gong\n  - Lag to honningar"
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Hugs: Lilla blomsar har enten 0 eller 1 nektar,
           og dei kan endre seg kvar gong du køyrer programmet.'
@@ -288,8 +288,8 @@ nn:
           piksler lange, finn du slik ut korleis kortsidene blir rekna ut: \n\n**600
           - 200 - 200 = 200** det betyr begge kortsidene til saman er 200 pikslar.
           \n\n**Kva er 200/2?**"
-        4-5_Artist_3_b: Viss du ikkje kan sjå kor gjenta-løkka går med ein gang, prøv
-          å kode heile løysinga og sjå etter eit mønster.
+        4-5_Artist_3_b: Dersom du ikkje kan sjå kor gjenta-løkka går med ein gang,
+          prøv å kode heile løysinga og sjå etter eit mønster.
       4-5 Artist 4_authored_hint:
         4-5_Artist_4_a: |-
           Det er 360 gradar i en sirkel!
@@ -319,7 +319,7 @@ nn:
         4-5_Artist_Assessment_1_a: Du treng berre å teikne trekanten utanfor for å
           fullføre denne oppgåva.
       4-5 Artist Patterns 11_authored_hint:
-        4-5_Artist_Patterns_11_a: Viss det er 360 gradar i ein sirkel og kvar løkke
+        4-5_Artist_Patterns_11_a: Dersom det er 360 gradar i ein sirkel og kvar løkke
           snur 3 gradar, kor mange gongar må du gjenta løkka for teikne ein halv sirkel?
       4-5 Artist Patterns 2_authored_hint:
         4-5_Artist_Patterns_2_a: Legg merke til at sidan kvadrata er 20 pikslar lange,
@@ -327,7 +327,7 @@ nn:
       4-5 Artist Patterns 3_authored_hint:
         4-5_Artist_Patterns_3_a: Pass på at du tar ut heile blokka på "kode fra vertøylinja"
           kvar gong du prøver ein ny.
-        4-5_Artist_Patterns_3_b: Viss det blir altfor forvirrande kode, kan du alltid
+        4-5_Artist_Patterns_3_b: Dersom det blir altfor forvirrande kode, kan du alltid
           klikke "Start på nytt" og prøve ein gong til!
       4-5 Artist Patterns 5_authored_hint:
         4-5_Artist_Patterns_5_a: |-
@@ -336,12 +336,12 @@ nn:
           Kor mange gradar må han snu seg for å komme rett?
       4-5 Bee Conditionals 4_authored_hint:
         remember_quantum: "**Hugs:** Denne oppgåva endrar seg for kvar gong den blir
-          køyrd. \n\nVil du bruke e betinget blokke (\"viss\" eller ' viss/ellers')
-          til å løuse utfordringa."
+          køyrd. \n\nDu må bruke ei betinga blokke ('dersom' eller 'dersom/elles')
+          til å løyse utfordringa."
       4-5 Bee Conditionals 5_authored_hint:
         remember_quantum: "**Hugs:** Denne oppgåva endrar seg for kvar gong den blir
-          køyrd. \n\nVil du bruke e betinget blokke (\"viss\" eller ' viss/ellers')
-          til å løuse utfordringa."
+          køyrd. \n\nDu må bruke ei betinga blokke ('dersom' eller 'dersom/elles')
+          til å løyse utfordringa."
       4-5 Bee Conditionals 6_authored_hint:
         4-5 Bee Conditionals 6_a: Du kan løse denne oppgåva med å berre bruke blokkene
           på arbeidsområdet. I kva rekkefølgje skal dei gå?
@@ -2780,7 +2780,7 @@ nn:
         Course_4_SCV_2_c: Kunstneren svinger til venstre når for hver decagon han
           lager, men svinger til høyre i begge de andre løkkene.
         Course_4_SCV_2_d: For å forhindre at alle dine 10 blomsterkronblader forsvinner
-          inn i det samme stedet, pass på å hoppefremover 'lengder'/'til side' før
+          inn i det samme stedet, pass på å hoppe fremover 'lengder'/'til side' før
           du kan snu 360/'til side'-grader som en del av din ytterste løkke.
       Course 4 SCV 3_authored_hint:
         Course_4_SCV_3_a: 'Bruk matteblokken din for å legge til og trekke fra poeng-variabelen
@@ -3036,9 +3036,8 @@ nn:
       MC_HOC_2017_02_Will_authored_hint:
         MC_HOC_2017_02_Cole_a: Flytt agenten framover to steg for å stå på trykkplata.
           Dette vil opne døra for spelaren.
-        MC_HOC_2017_02_Cole_b: Trykk "Køyr agent"! Sjølv om det ikkje er riktig, kan
-          du køyre koden. Køyr og tilbakestill koden igjen og igjen, heilt til du
-          finn ut kva som går feil.
+        MC_HOC_2017_02_Cole_b: Du kan køyre koden sjølv om det ikkje er riktig. Køyr
+          og tilbakestill koden igjen og igjen, heilt til du finn ut kva som går feil.
         MC_HOC_2017_02_Cole_c: Når agenten har opna døra, bruk piltastane til å flytte
           spelaren til den oransje firkanten.
       MC_HOC_2017_03_Cole_authored_hint:
@@ -3240,7 +3239,7 @@ nn:
           - Snu 90 grader (for å få tegneren til å se nedover).
           - Hopp 20 piksler (for å komme til ny rad).
           - Snu tilbake 90 grader (for å få tegneren til å se mot høyre igjen).
-        aE3_d: Viss det blir altfor forvirrande kode, kan du alltid klikke "Start
+        aE3_d: Dersom det blir altfor forvirrande kode, kan du alltid klikke "Start
           på nytt" og prøve ein gong til!
       aE3alternate_authored_hint:
         aE3alternate_b: |-
@@ -3250,7 +3249,7 @@ nn:
           - Snu 90 grader (for å få tegneren til å se nedover).
           - Hopp 20 piksler (for å komme til ny rad).
           - Snu tilbake 90 grader (for å få tegneren til å se mot høyre igjen).
-        aE3alternate_d: Viss det blir altfor forvirrande kode, kan du alltid klikke
+        aE3alternate_d: Dersom det blir altfor forvirrande kode, kan du alltid klikke
           "Start på nytt" og prøve ein gong til!
       aE3alternateB_authored_hint:
         aE4alternateB_b: |-
@@ -3260,7 +3259,7 @@ nn:
           - Snu 90 grader (for å få tegneren til å se nedover).
           - Hopp 20 piksler (for å komme til ny rad).
           - Snu tilbake 90 grader (for å få tegneren til å se mot høyre igjen).
-        aE4alternateB_d: Viss det blir altfor forvirrande kode, kan du alltid klikke
+        aE4alternateB_d: Dersom det blir altfor forvirrande kode, kan du alltid klikke
           "Start på nytt" og prøve ein gong til!
       aE4_authored_hint:
         aE4_b: |-
@@ -3270,7 +3269,7 @@ nn:
           - Snu 90 grader (for å få tegneren til å se nedover).
           - Hopp 20 piksler (for å komme til ny rad).
           - Snu tilbake 90 grader (for å få tegneren til å se mot høyre igjen).
-        aE4_d: Viss det blir altfor forvirrande kode, kan du alltid klikke "Start
+        aE4_d: Dersom det blir altfor forvirrande kode, kan du alltid klikke "Start
           på nytt" og prøve ein gong til!
       artistLoopsK4_authored_hint:
         artistLoopsK4_a: Sitter du fast? Prøv å kjøre koden for å se hvilken blokk
@@ -3671,12 +3670,12 @@ nn:
           om det finnes en blomst? Hva gjør du om det finnes en blomst?
       courseD_bee_conditionals8_authored_hint:
         courseD_bee_conditionals8_a: "**Hugs:** Denne oppgåva endrar seg for kvar
-          gong den blir køyrd. \n\nVil du bruke e betinget blokke (\"viss\" eller
-          ' viss/ellers') til å løuse utfordringa."
+          gong den blir køyrd. \n\nDu må bruke ei betinga blokke ('dersom' eller 'dersom/elles')
+          til å løyse utfordringa."
       courseD_bee_conditionals8_2018_authored_hint:
         courseD_bee_conditionals8_a: "**Hugs:** Denne oppgåva endrar seg for kvar
-          gong den blir køyrd. \n\nVil du bruke e betinget blokke (\"viss\" eller
-          ' viss/ellers') til å løuse utfordringa."
+          gong den blir køyrd. \n\nDu må bruke ei betinga blokke ('dersom' eller 'dersom/elles')
+          til å løyse utfordringa."
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Det er to måtar å løyse denne oppgåva!
       courseD_playLab_cond3b_authored_hint:
@@ -3789,7 +3788,7 @@ nn:
       courseE_farmer_concept4_authored_hint:
         4-5_Artist_Patterns_3_a: Pass på at du tar ut heile blokka på "kode fra vertøylinja"
           kvar gong du prøver ein ny.
-        4-5_Artist_Patterns_3_b: Viss det blir altfor forvirrande kode, kan du alltid
+        4-5_Artist_Patterns_3_b: Dersom det blir altfor forvirrande kode, kan du alltid
           klikke "Start på nytt" og prøve ein gong til!
       courseE_farmer_functions1_authored_hint:
         courseE_farmer_functions1_a: Verktøykassa er organisert litt annerledes denne
@@ -4378,12 +4377,12 @@ nn:
           finnes en blomst. Hvis det finnes en blomst må bien samle blomstens nektar. '
       courseF_bee_conditionals8_authored_hint:
         courseF_bee_conditionals8_a: "**Hugs:** Denne oppgåva endrar seg for kvar
-          gong den blir køyrd. \n\nVil du bruke e betinget blokke (\"viss\" eller
-          ' viss/ellers') til å løuse utfordringa."
+          gong den blir køyrd. \n\nDu må bruke ei betinga blokke ('dersom' eller 'dersom/elles')
+          til å løyse utfordringa."
       courseF_bee_conditionals8_2018_authored_hint:
         courseF_bee_conditionals8_a: "**Hugs:** Denne oppgåva endrar seg for kvar
-          gong den blir køyrd. \n\nVil du bruke e betinget blokke (\"viss\" eller
-          ' viss/ellers') til å løuse utfordringa."
+          gong den blir køyrd. \n\nDu må bruke ei betinga blokke ('dersom' eller 'dersom/elles')
+          til å løyse utfordringa."
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_a: "Ta ein kikk på dette alternativet for røyrsle:
           \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
@@ -5065,16 +5064,16 @@ nn:
           ut først og sjå kva ting som blir repetert før du putter inn løkker.
       grade3_ConditionalsElse_4_authored_hint:
         remember_quantum: "**Hugs:** Denne oppgåva endrar seg for kvar gong den blir
-          køyrd. \n\nVil du bruke e betinget blokke (\"viss\" eller ' viss/ellers')
-          til å løuse utfordringa."
+          køyrd. \n\nDu må bruke ei betinga blokke ('dersom' eller 'dersom/elles')
+          til å løyse utfordringa."
       grade3_ConditionalsElse_5_authored_hint:
         remember_quantum: "**Hugs:** Denne oppgåva endrar seg for kvar gong den blir
-          køyrd. \n\nVil du bruke e betinget blokke (\"viss\" eller ' viss/ellers')
-          til å løuse utfordringa."
+          køyrd. \n\nDu må bruke ei betinga blokke ('dersom' eller 'dersom/elles')
+          til å løyse utfordringa."
       grade3_ConditionalsElse_TeacherIDo_authored_hint:
         remember_quantum: "**Hugs:** Denne oppgåva endrar seg for kvar gong den blir
-          køyrd. \n\nVil du bruke e betinget blokke (\"viss\" eller ' viss/ellers')
-          til å løuse utfordringa."
+          køyrd. \n\nDu må bruke ei betinga blokke ('dersom' eller 'dersom/elles')
+          til å løyse utfordringa."
       grade3_Conditionals_10 BAD_authored_hint:
         4-5_Bee_Nested_Loops_Rows_a: Prøv å handtere denne oppgåva som eit langt rektangel
           kor bia treng å flytte framover, deretter snu seg til venstre fleire gongar
@@ -5083,8 +5082,8 @@ nn:
         2-3_Bee_Conditionals_14_a: Har du vanskar med å finne ut korleis du kan få
           blokkene ned? Prøv å gjere det same med den røde blomen akkurat som den
           lilla blomen!
-        2-3_Bee_Conditionals_14_b: Viss den røde blomen var lilla, kan du finne ut
-          korleis ein kan bruke en ekstra "gjenta"-løkke for å kutte ned på koden?
+        2-3_Bee_Conditionals_14_b: Dersom den røde blomen var lilla, kan du finne
+          ut korleis ein kan bruke en ekstra "gjenta"-løkke for å kutte ned på koden?
       grade3_Conditionals_12_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Hugs: Lilla blomsar har enten 0 eller 1 nektar,
           og dei kan endre seg kvar gong du køyrer programmet.'
@@ -5132,8 +5131,8 @@ nn:
         2-3_Bee_Loops_3_a: Du bør ha 6 blokker inne i løkka di.
       grade3_bee_conditionals_quantum5_authored_hint:
         remember_quantum: "**Hugs:** Denne oppgåva endrar seg for kvar gong den blir
-          køyrd. \n\nVil du bruke e betinget blokke (\"viss\" eller ' viss/ellers')
-          til å løuse utfordringa."
+          køyrd. \n\nDu må bruke ei betinga blokke ('dersom' eller 'dersom/elles')
+          til å løyse utfordringa."
       grade3_maze_loops2_authored_hint:
         grade3_maze_loops2_b: Dersom mønsteret er vanskeleg å sjå, prøv å kode den
           ut først og sjå kva ting som blir repetert før du putter inn løkker.
@@ -5209,12 +5208,12 @@ nn:
         4-5_Nested_Loops_12_a: "** 360 / 36 =? **"
       grade4_bee_conditionals_quantum4_authored_hint:
         remember_quantum: "**Hugs:** Denne oppgåva endrar seg for kvar gong den blir
-          køyrd. \n\nVil du bruke e betinget blokke (\"viss\" eller ' viss/ellers')
-          til å løuse utfordringa."
+          køyrd. \n\nDu må bruke ei betinga blokke ('dersom' eller 'dersom/elles')
+          til å løyse utfordringa."
       grade4_bee_conditionals_quantum5_authored_hint:
         remember_quantum: "**Hugs:** Denne oppgåva endrar seg for kvar gong den blir
-          køyrd. \n\nVil du bruke e betinget blokke (\"viss\" eller ' viss/ellers')
-          til å løuse utfordringa."
+          køyrd. \n\nDu må bruke ei betinga blokke ('dersom' eller 'dersom/elles')
+          til å løyse utfordringa."
       grade4_bee_functions7_authored_hint:
         2-3_Bee_Functions_8_a: "Om oppgåva verkar utfordrande, kan du prøve å bygge
           funksjonen din litt om gangen.  \n\nLegg til nokre blokker og test dei.
