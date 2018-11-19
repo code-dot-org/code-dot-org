@@ -22,7 +22,7 @@ describe('AgeDialog', () => {
   });
 
   it('renders null if seen before', () => {
-    sessionStorage.setItem('anon_over13', true);
+    sessionStorage.setItem('ad_anon_over13', true);
     const wrapper = shallow(
       <AgeDialog
         {...defaultProps}
