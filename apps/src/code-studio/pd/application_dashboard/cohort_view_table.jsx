@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
+import ReactTooltip from 'react-tooltip';
 import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
 import {Button} from 'react-bootstrap';
@@ -24,7 +25,10 @@ const styles = {
   statusCellCommon: {
     padding: '5px'
   },
-  statusCell: StatusColors
+  statusCell: StatusColors,
+  notesCell: {
+    maxWidth: '200px',
+  }
 };
 
 export class CohortViewTable extends React.Component {
@@ -207,6 +211,30 @@ export class CohortViewTable extends React.Component {
       });
     }
 
+    [
+      {property: 'notes', label: 'Notes'},
+      {property: 'notes_2', label: 'Notes 2'},
+      {property: 'notes_3', label: 'Notes 3'},
+      {property: 'notes_4', label: 'Notes 4'},
+      {property: 'notes_5', label: 'Notes 5'},
+    ].forEach((notesField)=> {
+      columns.push({
+        property: notesField.property,
+        header: {
+          label: notesField.label,
+            transforms: [sortable]
+        },
+        cell: {
+          format: this.formatNotesTooltip,
+          transforms: [
+            () => ({
+              style: {...styles.notesCell}
+            })
+          ]
+        }
+      });
+    });
+
     columns.push({
       property: 'id',
       header: {
@@ -241,6 +269,30 @@ export class CohortViewTable extends React.Component {
   formatDate = (iso8601Date) => iso8601Date ? moment(iso8601Date).format("MMM D") : "";
 
   formatBoolean = (bool) => bool ? "Yes" : "No";
+
+  formatNotesTooltip = (notes) => {
+    let tooltipId = _.uniqueId();
+    return (
+      <div>
+        <div
+          data-tip
+          data-for={tooltipId}
+          aria-describedby={tooltipId}
+          style={styles.notesCellContent}
+        >
+          {notes}
+        </div>
+        <ReactTooltip
+          id={tooltipId}
+          role="tooltip"
+          wrapper="span"
+          effect="solid"
+        >
+          {notes}
+        </ReactTooltip>
+      </div>
+    );
+  };
 
   formatViewButton = (id) => {
     return (
