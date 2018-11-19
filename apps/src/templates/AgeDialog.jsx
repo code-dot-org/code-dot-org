@@ -47,7 +47,12 @@ const styles = {
   },
 };
 
-const sessionStorageKey = 'anon_over13';
+/*
+ * SignInOrAgeDialog uses 'anon_over13' as its session storage key.
+ * We want users seeing that dialog to have to input their age, so using
+ * a different session storage key here.
+ */
+const sessionStorageKey = 'ad_anon_over13';
 
 class AgeDialog extends Component {
   state = {
