@@ -6,7 +6,6 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "**Challenge:** This tag is a special one!  Can you figure out how to draw the outline?",
     "x": "125",
     "y": "150",
     "start_direction": "90",
@@ -15,7 +14,6 @@
     "free_play": "false",
     "slider_speed": "0.4",
     "embed": "false",
-    "markdown_instructions": "**Challenge:** This tag is a special one!  \r\n\r\nCan you figure out how to draw the outline?  \r\n(The long side is 150 pixels and each of the short sides are 75 pixels.)",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -44,11 +42,17 @@
     "name_suffix": "_2019",
     "parent_level_id": 10783,
     "contained_level_names": null,
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "short_instructions": "**Challenge:** This tag is a special one!  Can you figure out how to draw the outline?",
+    "long_instructions": "**Challenge:** This tag is a special one!  \r\n\r\nCan you figure out how to draw the outline?  \r\n(The long side is 150 pixels and each of the short sides are 75 pixels.)"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-07 17:53:35 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-23 15:53:09 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-07 17:53:35 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-23 15:53:09 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-11-19 17:54:40 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -59,11 +63,11 @@
         </block>
         <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,90">90</title>
+          <title name="VALUE" config="45,90,120">90</title>
         </block>
         <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,90">90</title>
+          <title name="VALUE" config="45,90,120">90</title>
         </block>
         <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>
