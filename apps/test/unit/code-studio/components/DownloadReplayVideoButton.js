@@ -9,8 +9,25 @@ import DownloadReplayVideoButton from '@cdo/apps/code-studio/components/Download
 describe('DownloadReplayVideoButton', () => {
   let wrapper;
 
+  let checkVideoSpy;
+  let checkVideoUntilSuccessSpy;
+  let fetchSpy;
+  let tryDownloadVideoSpy;
+
   beforeEach(function () {
     wrapper = shallow(<DownloadReplayVideoButton channelId="test" />);
+
+    checkVideoSpy = sinon.spy(wrapper.instance(), 'checkVideo');
+    checkVideoUntilSuccessSpy = sinon.spy(wrapper.instance(), 'checkVideoUntilSuccess');
+    fetchSpy = sinon.spy(window, 'fetch');
+    tryDownloadVideoSpy = sinon.spy(wrapper.instance(), 'tryDownloadVideo');
+  });
+
+  afterEach(function () {
+    checkVideoSpy.restore();
+    checkVideoUntilSuccessSpy.restore();
+    fetchSpy.restore();
+    tryDownloadVideoSpy.restore();
   });
 
   it('initially renders as enabled', () => {
@@ -42,29 +59,18 @@ describe('DownloadReplayVideoButton', () => {
   });
 
   it('begins checking for video immediately', () => {
-    const fetchStub = sinon.stub(window, 'fetch').resolves({ ok: false });
-    const checkVideoSpy = sinon.spy(wrapper.instance(), 'checkVideo');
-    const checkVideoUntilSuccessSpy = sinon.spy(wrapper.instance(), 'checkVideoUntilSuccess');
-
     expect(checkVideoSpy.callCount).to.equal(0);
     expect(checkVideoUntilSuccessSpy.callCount).to.equal(0);
-    expect(fetchStub.callCount).to.equal(0);
+    expect(fetchSpy.callCount).to.equal(0);
 
     wrapper.instance().componentDidMount();
 
     expect(checkVideoSpy.callCount).to.equal(1);
     expect(checkVideoUntilSuccessSpy.callCount).to.equal(1);
-    expect(fetchStub.callCount).to.equal(1);
-
-    fetchStub.restore();
-    checkVideoSpy.restore();
-    checkVideoUntilSuccessSpy.restore();
+    expect(fetchSpy.callCount).to.equal(1);
   });
 
   it('downloads video directly if it exists', () => {
-    const tryDownloadVideoSpy = sinon.spy(wrapper.instance(), 'tryDownloadVideo');
-    const fetchSpy = sinon.spy(window, 'fetch');
-
     expect(tryDownloadVideoSpy.callCount).to.equal(0);
     expect(fetchSpy.callCount).to.equal(0);
 
@@ -76,15 +82,9 @@ describe('DownloadReplayVideoButton', () => {
     expect(fetchSpy.calledWith(wrapper.instance().getVideoUrl(), {
       method: 'GET'
     })).to.equal(true);
-
-    tryDownloadVideoSpy.restore();
-    fetchSpy.restore();
   });
 
   it('disables button until video exists if it does not', () => {
-    const tryDownloadVideoSpy = sinon.spy(wrapper.instance(), 'tryDownloadVideo');
-    const fetchSpy = sinon.spy(window, 'fetch');
-
     expect(tryDownloadVideoSpy.callCount).to.equal(0);
     expect(fetchSpy.callCount).to.equal(0);
 
@@ -96,8 +96,5 @@ describe('DownloadReplayVideoButton', () => {
     expect(fetchSpy.calledWith(wrapper.instance().getVideoUrl(), {
       method: 'HEAD'
     })).to.equal(true);
-
-    tryDownloadVideoSpy.restore();
-    fetchSpy.restore();
   });
 });
