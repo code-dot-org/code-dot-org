@@ -431,6 +431,7 @@ es:
       example: Solución de ejemplo
       example_with_number: Ejemplo de solución %{solution_number}
       submitted_on: Enviado el %{date}
+      last_updated: 'Última actualización:'
       unsubmit: NO enviado
       worked_with: Trabajado con
       update_lock_settings: Actualiza las opciones de bloqueo aquí.
