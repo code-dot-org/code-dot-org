@@ -2363,6 +2363,8 @@ zh-CN:
               name: '注意: 已弃用 - 教师无法看到结果。计算机科学原理最终评估'
             'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment':
               name: '注意: 已弃用。教师看不到结果。计算机科学原理最终评估'
+            RQB Questions test:
+              name: RQB 问题测试
         cspexam1-mWU7ilDYM9:
           description_short: 这一选择题评估涵盖了计算机科学的7大概念的问题。这是第二部分50题考试的第1部分。
           stages:
@@ -7030,6 +7032,10 @@ zh-CN:
               name: 编程接力
             Introduction to Online Puzzles:
               name: 在线拼图简介
+            Events in Bouncey:
+              name: 反弹事件
+            Nested Loops in Bees:
+              name: 蜜蜂里的嵌套循环
             Nested Loops in Maze:
               name: 迷宫里的嵌套循环
         jr-test:
@@ -8299,7 +8305,9 @@ zh-CN:
           stages:
             Artist:
               name: 小艺术家
+          title: 新的冰雪奇缘脚本
         frozen-2018-test:
+          title: 新的冰雪奇缘脚本
           stages:
             Artist:
               name: 小艺术家
@@ -8309,21 +8317,139 @@ zh-CN:
               name: 新的阶段
             Dance Party:
               name: 舞蹈派对
+          title: 舞蹈派对
+          description_short: 精选 Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, 等 25 个!
+          description: 写出你自己的舞会代码，分享给你的朋友们！
         frozen-2018-test-b:
+          title: 新的冰雪奇缘脚本
           stages:
             Artist:
               name: 小艺术家
+        aquatic:
+          stages:
+            Aquatic:
+              name: 水上
+          title: '《我的世界》：水上航行'
+          description_short: 用你的创造力和解决问题的技能来用代码探索并构建水下世界！
+          description: '《我的世界》带来了一个全新的活动！用你的创造力和解决问题的技能用代码来探索并建造一个水下世界。'
         sconyers:
           stages:
+            Lesson the first:
+              name: 第一课
             Digital Design:
               name: 数字设计
             Linking Screens:
               name: 连接屏幕
+            Test Lesson:
+              name: 测试课程
+          title: 特蕾西的游乐场
         dance--draft:
           stages:
             Dance Party:
               name: 舞蹈派对
         dance-draft:
+          title: 请勿使用
           stages:
             Dance Party:
               name: 舞蹈派对
+        cspplayground:
+          stages:
+            Hannah's Test Stage:
+              name: Hannah的测试阶段
+            Hannah Test Stage:
+              name: Hannah 测试阶段
+          title: 计算机科学原理游戏板
+        dance-extras:
+          stages:
+            Dance Party - Go Further:
+              name: 舞会 - 继续
+        coursef-2019:
+          title: 课程 F （2019）
+          description: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
+          description_short: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
+          description_audience: '年龄：9-13'
+          stages:
+            'Programming: My Robotic Friends':
+              name: '编程: 我的机器人朋友'
+            Sequence in Maze:
+              name: 迷宫中的序列
+            Building a Foundation:
+              name: 打基础
+            Debugging with Scrat:
+              name: 斯奎特和调试
+            Programming in Artist:
+              name: 艺术家里的编程
+            'Loops: My Loopy Robotic Friends':
+              name: '循环: 我糊涂的机器人朋友'
+            Loops in Artist:
+              name: 艺术家里的循环
+            Nested Loops in Bee/Zombie:
+              name: 蜜蜂/僵尸里的嵌套循环
+            Nested Loops with Frozen:
+              name: 冰雪奇缘和嵌套循环
+            Conditionals with Cards:
+              name: 用 扑克牌 的 条件子句
+            Conditionals in Farmer:
+              name: 农夫和条件
+            Functions in Minecraft:
+              name: '《我的世界》中的函数'
+            The Power of Words:
+              name: 语言的力量
+              description_student: 永远不能恐吓。这节课要教会你在线上什么能说，而什么不能说。
+              description_teacher: "学生们会考虑到，当他们沉浸在喜欢的网站上时，可能会由别的孩子的消息，让他们感到生气、受伤害、悲伤，或者害怕。他们会找到办法来处理网络霸凌，如何回应令人不安的在线语言。\n\n学生们讨论所有他们用来沟通的技术，并且探索面对面和在线沟通的相似和不同点。学生们然后会头脑风暴来回应网络霸凌。 "
+            Envelope Variables:
+              name: 封装变量
+              description_student: '封装和变量有一些相同之处：两者都能保存有用的东西。这里你会学到什么是变量，和它们令人惊奇的作用。'
+              description_teacher: 变量被用作值的占位符，例如数字或词语。变量在编程中带来了很大的自由性。在编程中不需要打出同样的内容很多词，或者记住一个隐晦的数字，计算机科学家们用变量来引用它们。这节课帮助解释什么是变量，怎样通过不同的方法使用它们。变量的理念不容易领会，因此我们推荐在课程的结尾允许大量时间的讨论。
+            Variables as Constant in Artist:
+              name: 艺术家里的变量作为常数
+            Variables that Change in Bee:
+              name: 蜜蜂里的变化的变量
+            Variables that Change in Artist:
+              name: 小艺术家里的变化的变量
+            For Loop Fun:
+              name: 计数循环的乐趣
+              description_student: 你会在学习`计数循环`中获得很多乐趣！
+              description_teacher: '我们知道，循环让我们能一遍一遍的做一些事情，但现在，我们要学习如何用循环来构建正确的额外结构。这些新结构允许学生们创建更强大和动态的代码。 '
+            For Loops in Bee:
+              name: 蜜蜂式里的循环
+              description_student: 嗡嗡嗡。在这些关卡中，将会有一只蜜蜂来引导你用`计数循环`来采花蜜、酿蜂蜜。
+              description_teacher: 以蜜蜂为特点，这节课着重在计数循环，并用一个增量来解决复杂的关卡。学生们会从回顾前面课程的循环开始，然后学会用计数循环来更有效的解决复杂的问题。
+            For Loops in Artist:
+              name: 对于艺术家里的循环
+              description_student: 准备好制作你的下一个杰作。这里，你会用`计数循环`来制作一些令人惊叹的图片。
+              description_teacher: 在这节课中，学生们会继续练习计数循环，这次是和小艺术家一起。学生们会组合变量、循环、和计数循环创建复杂的图像，来完成关卡。结束时，他们有机会在自由关卡中创建他们自己的艺术。
+            Learning Sprites with Sprite Lab:
+              name: 在精灵实验室学习精灵
+            Alien Dance Party with Sprite Lab:
+              name: 精灵实验室中的外星人舞蹈派对
+            Pet Giraffe with Sprite Lab:
+              name: 精灵实验室中的宠物长颈鹿
+            Explore Project Ideas:
+              name: 探索项目理念
+              description_student: 是时候获得一些鼓励了！这些关卡会显示少量的内置程序，并显示你的大项目的计划。
+              description_teacher: "接下来的5堂课会给学生们一个机会来将他们的代码技巧用到一个实际项目中。这个项目会帮助他们获得编码经验，并制造一个能够分享给伙伴和亲人的样例。在多节课和多周的体验中，学生们会花时间来进行头脑风暴，学习调试的过程，建立和演示他们的最终作品。 \n\n在探索阶段，学生们能浏览小艺术家和剧本实验室中的样例项目来获得灵感。接下来，学生们会学习设计过程，如何在它们自己的项目中实现这些。然后会考虑在小艺术家或剧本实验室中创建他们自己的项目（这应该是这个项目最长的一个阶段）。学生们会在测试并多思考后，修改他们的项目。最终，学生们会相互演示他们的最终作品。"
+            The Design Process:
+              name: 设计过程
+              description_student: 大项目会花很多时间来计划。在这里，你会学习关于设计的流程，然后用它来创建自己的作品。
+              description_teacher: 通过这五节课，学生们能够用剧本实验室或小艺术家作为编程环境来创建自己的设计项目。学生们会学习设计过程，和如何在自己的项目中实现它。这堂课指导的这五个阶段可以项目过程开始的[这里](https://curriculum.code.org/csf/coursef/15/)找到。
+            Build Your Project:
+              name: 创建项目
+              description_student: 最后，你可以开始构建你的项目了！
+              description_teacher: 通过这五节课，学生们能够用剧本实验室或小艺术家作为编程环境来创建自己的设计项目。现在，学生们有自己的空间来用小艺术家或剧本实验室来创建他们自己的项目了。这会是这个项目中最长的部分了。这堂课指导的这五个阶段可以项目过程开始的[这里](https://curriculum.code.org/csf/coursef/15/)找到。
+            Revise Your Project:
+              name: 修改您的项目
+              description_student: 罗马不是一天建成的，你的项目也不是。花时间来编辑并修订你的项目来让它成为最好的项目。
+              description_teacher: 通过这五节课，学生们能够用剧本实验室或小艺术家作为编程环境来创建自己的设计项目。现在，项目已经构建好了，学生们有机会来从同伴那里获得反馈并修改项目。这堂课指导的这五个阶段可以项目过程开始的[这里](https://curriculum.code.org/csf/coursef/15/)找到。
+            Present Your Project:
+              name: 介绍您的项目
+              description_student: 是时间展示你的工作了！这里，你会给你的同伴展示你的令人惊奇的项目。
+              description_teacher: 通过这五节课，学生们能够用剧本实验室或小艺术家作为编程环境来创建自己的设计项目。最后，学生们能向同伴们展示他们完成的工作，或者通过链接分享给亲友们。这堂课指导的这五个阶段可以项目过程开始的[这里](https://curriculum.code.org/csf/coursef/15/)找到。
+            new stage:
+              name: 新的阶段
+        dance-low:
+          stages:
+            Dance Party:
+              name: 舞蹈派对
+          title: 舞会 (低带宽)
+          description_short: 写出你自己的舞会代码，分享给你的朋友们！（这是低带宽版本）

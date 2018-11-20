@@ -1,6 +1,7 @@
 tr:
   data:
     long_instructions:
+      "'pre-assessment survey q25A'": "Eger cevabiniz evet ise, simdiki bilgisayar bilimleri kursundan once aldiginiz bilgisayar bilimleri kurslari nelerdi?\n"
       2-3 Artist 1 new: "Merhaba, ben bir sanatçıyım. Bana neredeyse her şeyi çizdirebilecek kodlar yazabilirsin. Birkaç blok kullanarak resimdeki gri çizgilerin üstünü çizmemi sağla.(Her çizgi 100 piksel uzunluğunda)"
       2-3 Artist 11: "Her bir kenarı 100 piksel olan bir sekizgen çizerek dur levhasını oluştur\n"
       2-3 Artist 12: "Gözü tamamlamak için daire çiz. \n\\r \n\\r\nSanatçı her döngüde 1 derece dönüyorsa, daire çizmek için kodu kaç defa tekrarlamam gerekiyor? "
@@ -143,7 +144,7 @@ tr:
         Domuzu yakala. Bu kez sadece bir 'ilerle' bloğu kullanabilirsin. \r
         \r
         Yakından bak: Kullanabileceğin başka blok varmı?
-      2-3 Maze 12: |2
+      2-3 Maze 12: |-
         Aniden, büyülü bir blok göründü!  'Tekrarla' bloğu ile içindeki kodu tekrar tekrar çalıştırabilirsiniz. \r
          \r 'Tekrarla' bloğu içine sadece bir 'İlerle' bloğu koyarak domuza ulaşabilir misin?
       2-3 Maze 13: Domuza ulaştır. Sadece bir adet 'İlerle' bloğu kullanabilirsin
@@ -817,7 +818,7 @@ tr:
         \r
         Yapacağın gibi yap, 
         harika bir şeyler yap
-      CSD U2 CSS explore CSS: |2
+      CSD U2 CSS explore CSS: |-
         <div style="float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"markdown="1"> \r <details>\r
         <summary>** Dosyalar arasında nasıl geçiş yapabilirim? **</summary> \r
@@ -832,7 +833,7 @@ tr:
         * Bu yeni dil sayfa yaparken neleri değiştirdi? \r 
         * Bu dilin HTML'den farkı ne? \r 
         * 'index.html' ve 'style.css' dosyaları birbirine nasıl bağlı?
-      CSD U2 CSS explore CSS_2018: |2
+      CSD U2 CSS explore CSS_2018: |-
         <div style="float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"markdown="1"> \r <details>\r
         <summary>** Dosyalar arasında nasıl geçiş yapabilirim? **</summary> \r
@@ -853,7 +854,7 @@ tr:
       CSD U2 Debugging 2_2018: "# Debugging\\r \\r <div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:  <summary>** Hata ayıklama (debugging) nedir? **</summary> \\r Hata ayıklama, bulma ve düzeltme işlemidir. Hata ayıklama bir problem çözme işlemidir, bu nedenle hata ayıklamaya çalışırken problem çözme yöntemini kullanın. \\r</details> \\r <details>\\r <summary>** Kod hatalarının bazı örnekleri nelerdir? **</summary> \\r Hatalar(bugs) kodun planlandığı gibi çalışmasına engel olan her şey olabilir.  Bazı örnekler, kodu yanlış yere koymak, imla hatası, yanlış yazım, yanlış etiket veya parantez kullanmayı unutmak gibi. \\r </details> \\r</div> \\r\n \\r \nDaha fazla hata ayıklama(debugging) çalışması! Bu sayfadaki hataları ayıklamak bir öncekinden biraz daha zor.\n \\r \\r # Bunu yap\\r \\r  20px; font-size:14px\" markdown=\"1\"> \\r <details>\\r <img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38 AM.png\" style=\"float:right;border:5px black solid;width:250px\"> \\r \\r * Bu sayfadaki hatalar (bugs) nelerdir arkadaşınızla konuşun. \\r \n* Böylece sonuç sağdaki resimle aynı olana kadar bütün hataları (bugs) ayıklayın."
       CSD U2 Debugging 3: "# Debugging\\r \\r <div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\"> \\r <details>\\r <summary>** Hata nedir? **</summary> \\r Hatalar kodun planlandığı gibi çalışmasına engel olan yanlışlardır.  \\r</details> \\r <details>\\r <summary>** Hata ayıklama nedir? **</summary> \\r Hata ayıklama hataları belirleme ve onarma sürecidir.  Bu yüzden problem çözme adımlarını kullan. \\r</details> \\r <details>\\r <summary>** Bazı hata örnekleri nelerdir? **</summary> \\r Hatalar kodun planlandığı gibi çalışmamasına sebep olan her şey olabilir. Yazım hatası, kodu yanlış yere koyma, yanlış parantez kullanma ya da parantezi kapatmayı unutmak bazı hata örnekleridir. \\r </details> \\r</div> \\r \\r Bu sayfa görüntüler içerir. Görüntüler hataların bulunmasını biraz daha zorlaştırır. \\r \\r # Bunu yap \\r \\r Bu sayfadaki hatalara nelerin sebep olduğunu arkadaşınla tartış. <img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38 Am.png\" style=\"float:right;border:5px black solid;width:250px\"> \\r \\r * tartışmak, ortağınızla hatalardır Bu sayfa. \\r Sence * bulup Böylece sağdakini sayfanızla eşleşen tüm hataları giderin."
       CSD U2 Debugging 3_2018: "# Debugging\\r \\r <div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\"> \\r <details>\\r <summary>** Hata nedir? **</summary> \\r Hatalar kodun planlandığı gibi çalışmasına engel olan yanlışlardır.  \\r</details> \\r <details>\\r <summary>** Hata ayıklama nedir? **</summary> \\r Hata ayıklama hataları belirleme ve onarma sürecidir.  Bu yüzden problem çözme adımlarını kullan. \\r</details> \\r <details>\\r <summary>** Bazı hata örnekleri nelerdir? **</summary> \\r Hatalar kodun planlandığı gibi çalışmamasına sebep olan her şey olabilir. Yazım hatası, kodu yanlış yere koyma, yanlış parantez kullanma ya da parantezi kapatmayı unutmak bazı hata örnekleridir. \\r </details> \\r</div> \\r \\r Bu sayfa görüntüler içerir. Görüntüler hataların bulunmasını biraz daha zorlaştırır. \\r \\r # Bunu yap \\r \\r Bu sayfadaki hatalara nelerin sebep olduğunu arkadaşınla tartış. <img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38 Am.png\" style=\"float:right;border:5px black solid;width:250px\"> \\r \\r * tartışmak, ortağınızla hatalardır Bu sayfa. \\r Sence * bulup Böylece sağdakini sayfanızla eşleşen tüm hataları giderin."
-      CSD U2 Debugging 4: |2
+      CSD U2 Debugging 4: |-
         # Formatting\r
         <div style="float:
          right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1"> \r 
@@ -890,7 +891,7 @@ tr:
         kolaylaştırmak için kodu nasıl biçimlendirmeniz gerektiğini tartışın.\r 
         * Kodu daha okunur yapmak için yeni çizgi ve girinti ekleyin.\r 
         * Tüm hataları düzeltin, böylece sayfanız <a href="https://codeprojects.org/kh6WWXr6rbDWuSBzsug7CRIZ2eo-EwPgV4D0M6pvhF8/" target="_blank"> Hedef Sayfa</a> ile eşleşsin
-      CSD U2 Debugging 4_2018: |2
+      CSD U2 Debugging 4_2018: |-
         # Formatting\r
         <div style="float:
          right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1"> \r 
@@ -955,7 +956,7 @@ tr:
         * Tıklamayı unutmayın
         <img src="https://images.code.org/6a35d13b10ed2029a9323c9cb555e39e-image-1477681291001.01.12 PM.png" style="width:100px"> \r 
         * ** İçeriğinizin yapısı hakkında ne fark ettiniz? **
-      CSD U2 HTML Adding Paragraphs Template: |2
+      CSD U2 HTML Adding Paragraphs Template: |
         # "Body" Bölümüne Metin Ekleme\r
         \r 
         Bir web laboratuvarı projesine başladığınızda, otomatik olarak
@@ -967,7 +968,7 @@ tr:
         * Ön izleme alanında değişiklikleri görmüyorsanız "Yenile ve Kaydet" düğmesine tıklayın. \r 
         * İşinizi yanınızdaki ile karşılaştırın. Kodu aynı yere yerleştirdiğinizden emin olun. \r
         
-      CSD U2 HTML Adding Paragraphs Template_2018: |2
+      CSD U2 HTML Adding Paragraphs Template_2018: |
         # "Body" Bölümüne Metin Ekleme\r
         \r 
         Bir web laboratuvarı projesine başladığınızda, otomatik olarak
@@ -1037,7 +1038,7 @@ tr:
         \r 
         * Yazdığınız metni ' <p>' ve '</p>' etiketleri arasında en az iki ayrı paragraf olarak yerleştirin. \r
         * Sonuçları yanınızdaki ile karşılaştırın. Metnin görüntülenme şekli ile ilgili neler değişti?
-      CSD U2 HTML Adding Paragraphs: |2
+      CSD U2 HTML Adding Paragraphs: |
         # "Body" Bölümüne Metin Ekleme\r
         \r 
         Bir web laboratuvarı projesine başladığınızda, otomatik olarak
@@ -1049,7 +1050,7 @@ tr:
         * Ön izleme alanında değişiklikleri görmüyorsanız "Yenile ve Kaydet" düğmesine tıklayın. \r 
         * İşinizi yanınızdaki ile karşılaştırın. Kodu aynı yere yerleştirdiğinizden emin olun. \r
         
-      CSD U2 HTML Adding Paragraphs_2018: |2
+      CSD U2 HTML Adding Paragraphs_2018: |
         # "Body" Bölümüne Metin Ekleme\r
         \r 
         Bir web laboratuvarı projesine başladığınızda, otomatik olarak
@@ -1061,7 +1062,7 @@ tr:
         * Ön izleme alanında değişiklikleri görmüyorsanız "Yenile ve Kaydet" düğmesine tıklayın. \r 
         * İşinizi yanınızdaki ile karşılaştırın. Kodu aynı yere yerleştirdiğinizden emin olun. \r
         
-      CSD U2 HTML Debug Paragraphs: |2
+      CSD U2 HTML Debug Paragraphs: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1"> \r
         <details>\r
          <summary><strong>Paragraf ögesi nedir?</strong></summary> \r
@@ -1081,7 +1082,7 @@ tr:
         \r 
         * Web sayfasının doğru görüntülenmesi için bozulmuş kodu düzeltin\r
         * Yanınızdaki arkadaşınız ile düzeltilen sorunları karşılaştırın
-      CSD U2 HTML Debug Paragraphs_2018: |2
+      CSD U2 HTML Debug Paragraphs_2018: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1"> \r
         <details>\r
          <summary><strong>Paragraf ögesi nedir?</strong></summary> \r
@@ -1289,7 +1290,7 @@ tr:
         * Proje kılavuzunda oluşturduğun taslak sayfaları yapmak için oluşturduğun her yeni sayfaya HTML ekle.\r
         * Daha fazla HTML'i daha önce oluşturduğunuz sayfalara ekleyebilirsiniz. \r
         
-      CSD U2 add file - OLD: |2
+      CSD U2 add file - OLD: |-
         <div style="float: right; height: 
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" 
         markdown="1"> \r 
@@ -1377,7 +1378,7 @@ tr:
         * Başka bir çift ile sayfalarınızı aynı olup olmadığını öğrenmek için karşılaştırın. \r
         \r
         
-      CSD U2 commenting: |2
+      CSD U2 commenting: |-
         # Yorumlar\r 
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1"> \r
         <details>\r
@@ -1415,7 +1416,7 @@ tr:
         \r
         *Ortağınızla birlikte koda bakın ve yorumları bulun. \r
         * HTML içindeki hataları düzeltmeye yardımcı olması için yorumları kullanın.
-      CSD U2 commenting_2018: |2
+      CSD U2 commenting_2018: |-
         # Yorumlar\r 
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1"> \r
         <details>\r
@@ -1453,7 +1454,7 @@ tr:
         \r
         *Ortağınızla birlikte koda bakın ve yorumları bulun. \r
         * HTML içindeki hataları düzeltmeye yardımcı olması için yorumları kullanın.
-      CSD U2 create page: |2
+      CSD U2 create page: |+
         # Yen Bir Sayfa Oluştur ve Adlandır\r
         \r
         Kodlamaya başlamadan önce, proje içinde ihtiyacın olan tüm sayfaların olduğundan emin olmalısın.\r
@@ -1463,7 +1464,7 @@ tr:
         * Eklemek istediğiniz herhangi bir sayfa için bu işlemi yineleyin\r
          \r
         
-      CSD U2 create page_2018: |2
+      CSD U2 create page_2018: |+
         # Yen Bir Sayfa Oluştur ve Adlandır\r
         \r
         Kodlamaya başlamadan önce, proje içinde ihtiyacın olan tüm sayfaların olduğundan emin olmalısın.\r
@@ -1509,7 +1510,7 @@ tr:
         \r
         
       CSD U2 images intro: "# Resimler\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\\r\n<details>\\r\n<summary>**Resimleri nasıl eklerim?**</summary>\\r\n`<img>` etiketi resimleri sayfanızda gösterir.  <br><br>\\r\n\\r\nÖrnek:\\r\n<pre>&lt;img src=\"kopek.png\"\nalt=\"köpek zıplaması\"/&gt;</pre><br><br>\\r\n\\r\nTarayıcına hangi dosyayı kullanıcağını söylemek için , ekstra bilgi,   **özellik** denilen parantez içinde &lt;img&gt; etiketi eklenir. Özellik `src` açılımı **s**ou**rc**e\nresmin adını söyler. Uzantıları içeren resim dosyaları isimleri, bilgisayara hangi tip resim ile çalıştığını söyler. En çok kullanılan uzantılar  .jpg, .jpeg, .png. <br><br>\\r\n\\r\nsrc özelliğine ek olarak, resim elementleri, resmi tanımlayan `alt`özelliğine de sahiptir.\n. Resmin yüklenmemesi durumunda veya görüşünde güçlük yaşayanlar için önemli bir özelliktir. <br><br>\\r\n\\r\n`<img>` etiketi bir **void element** ine örnektir çünkü  bir etiket içinde başlar ve biter.  Bunu belirtmek için `/` kullanılır.  `/` resim etiketinin sonundaki kapama etiketinin içine konur.\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**void etiketi nedir?**</summary>\\r\n`<img>` etiketi bir  **void element**ine örnektir çünkü bir etiketin içinde başlar ve kapanır. Bunu belirtmek için `/` kullanılır. `/` resim etiketinin sonundaki kapama etiketiniin içine konur. Void etiketlerinin, kapama etiketlerine ihtiyacı yoktur çünkü etiketler arasına sarılması gereken yazılı bir içerik yoktur. Ekranda gözüken içerik etiketlerin özellikleri doğrultusunda belirtilmiştir.\\r\n</details>\\r\n<details>\\r\n<summary>**Resim etiketinde neden bir kapama etiketi yoktur?**</summary>\\r\nResim etiketi bir void etiketidir ve void etiketleri, kapama etiketlerine ihtiyaçları yoktur çünkü etiketler içine sarılması gereken bir yazılı içerik yoktur. Ekranda gözüken içerik etiketlerin özellikleri doğrultusunda belirtilmiştir.\\r\n</details>\\r\n<details>\\r\n<summary>**Özellik nedir?**</summary>\\r\nÖzellikler etiketlere eklenmiş ekstra bilgidir. Özelliklerin isimleri ve değerleri vardır.  \nİsim bize ne tür bir bilginin sağlandığını ve değer de bize etiket için özel bir bilgi verir. \\r\n\\r\nÖrneğin&lt;img&gt;\netiketinin iki özelliği vardır, src and alt. src dosyanın adını belirtir ve alt  resmi tarayıcının okuyabileceği şekilde resmin ne olduğunu söyler.\\r\n</details>\\r\n</div>\\r\n\\r\nYemek tarifi sayfası keklerin resimleri ile çok daha güzel gözükür, bu yüzden bu sayfaya bir tane ekliyoruz. Sayfanın herhangi bir yerinde de daha iyi gözükebilir. \\r\n\\r\n# Bunu yap\\r\n* Çalışma alanının solunda bulunan dosya listesine bak ve adı \"kek.jpeg\" olan dosyayı bul. \\r\n* Sayfada resmi gösteren kodları bulmak için denetleyici aracını kullan.  \\r\n* Resim etiketlerinin nasıl çalıştığı konusunda çalışma arkadaşınla birlikte aynı fikirde olduğunuzdan emin olun.\\r\n* Resmi sayfanın en üstüne taşımayı deneyin.\n \nContext | Request Context."
-      CSD U2 layout style freeplay - OLD: |2
+      CSD U2 layout style freeplay - OLD: |-
         # Kişisel Web Sitesi\r
         \r
         Kişisel web sitenize bazı yeni CSS özellikleri ekleyin.\r
@@ -1710,7 +1711,7 @@ tr:
         * Sen ve ortağın farklı etiketlerin ne yaptığı üzerinde aynı fikirde olduğunuzdan emin olun\r
         * Kodu düzeltin böylece ikinci liste ögeleri doğru şekilde görünsün. \r
         
-      CSD U2 navigation: |2
+      CSD U2 navigation: |
         # Gezinme çubuğu oluşturma\r
         \r
         İşte önceki projen.  Sayfanın üst kısmında bir gezinme çubuğu oluşturarak iki sayfayı birbirine bağlarsınız. websiteleri genellikle bütün sayfaları boyunca aynı gezinme çubuğunu kullanırlar böylece sitede geri ve ileri gidebilirsiniz.  Bu sayfada bir gezinme çubuğu örneği görebilirsin.(https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/).\r
@@ -1723,7 +1724,7 @@ tr:
         * Öngörünüm alanında linklerine tıklayarak onları test et.\r
         \r
         
-      CSD U2 navigation_2018: |2
+      CSD U2 navigation_2018: |
         # Gezinme çubuğu oluşturma\r
         \r
         İşte önceki projen.  Sayfanın üst kısmında bir gezinme çubuğu oluşturarak iki sayfayı birbirine bağlarsınız. websiteleri genellikle bütün sayfaları boyunca aynı gezinme çubuğunu kullanırlar böylece sitede geri ve ileri gidebilirsiniz.  Bu sayfada bir gezinme çubuğu örneği görebilirsin.(https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/).\r
@@ -1736,7 +1737,7 @@ tr:
         * Öngörünüm alanında linklerine tıklayarak onları test et.\r
         \r
         
-      CSD U2 new page: |2
+      CSD U2 new page: |+
         # Web siteniz için yeni bir sayfa oluşturun.\r
         \r
         İşte önceki projen.  Yeni bir sayfa daha ekliyor olacaksın. Yeni sayfan listenin en iyi 10'u, yemek tarifi veya hoşlandığın herhangi bir şey olabilir.\r
@@ -1752,7 +1753,7 @@ tr:
          * bir liste\r
          * bir üst başlık\r
         
-      CSD U2 new page_2018: |2
+      CSD U2 new page_2018: |+
         # Web siteniz için yeni bir sayfa oluşturun.\r
         \r
         İşte önceki projen.  Yeni bir sayfa daha ekliyor olacaksın. Yeni sayfan listenin en iyi 10'u, yemek tarifi veya hoşlandığın herhangi bir şey olabilir.\r
@@ -1818,7 +1819,7 @@ tr:
         * Üretilen URL' yi kopyalayın, sayfanızı görmesini istediğiniz kişilere bağlantıyı e-posta olarak gönderin. .\r
         \r
         
-      CSD U2 text style freeplay - OLD: |2
+      CSD U2 text style freeplay - OLD: |-
         # Biçimlendirme Ekleme\r
         \r
         Şimdi kişisel web sitenizdeki metinleri biçimlendirebilirsiniz!\r
@@ -1943,7 +1944,7 @@ tr:
         ![](https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04
         PM.png)
       CSD U2 upload image: "# Yeni Resim Yükle\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\\r\n<details>\\r\n<summary>**Nasıl resim eklerim?**</summary>\\r\n'<img>' etiketi, resimleri web sayfanızda göstermenizi sağlar. <br><br>\\r\n\\r\nÖrnek:\\r\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"köpek zıplıyor\"/&gt;</pre><br><br>\\r\n\\r\nTarayıcıya hangi dosyanın kullanılacağını söylemek ve ekstra bilgi vermek için  &lt;img&gt; etiketine parantez içinde **özellik** eklenir. 'src' özeliğinin açılımı **s**ou**rc**e  (kaynak) olup resim dosyasının adını söyler. Resim dosya adları bilgisayarda çalışmakta olduğunuz görüntü türünü belirten uzantıları içerir. Yaygın uzantıları arasında .jpg, .jpeg, .png yer almaktadır.<br><br>\\r\n\\r\n'src' özelliğine ek olarak, resim ögeleri, resmi tarif eden 'alt' özelliğine sahiptir. Bu durum resmi yükleyemeyenler veya görüş problemi yaşayanlar için önemlidir. <br><br>\\r\n\\r\n'<img>' etiketi **bos etiket**'e örnektir, çünkü bir etiket içinde başlar ve kapanır. Bunu göstermek için '/' işaretini  genellikle görüntü etiketinin sonuna ekleriz.\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**Boş etiket nedir?**</summary>\\r\n'<img>' etiketi **bos etiket**'e örnektir, çünkü bir etiket içinde başlar ve kapanır. Bunu göstermek için '/' işaretini  genellikle görüntü etiketinin sonuna ekleriz. Resim etiketinin  kapatma etiketine ihtiyacı yoktur, çünkü etiketler arasında gösterilecek metin içeriği yoktur. Ekranda gösterilen içerikler etiketlerin özelliğine göre biçimlendirilir.\\r\n</details>\\r\n<details>\\r\n<summary>**Neden resim etiketi kapatma etiketine sahip değildir?**</summary>\\r\nResim etiketinin  kapatma etiketi ihtiyacı yoktur, çünkü etiketler arasında gösterilecek metin içeriği yoktur. Ekranda gösterilen içerikler etiketlerin özelliğine göre biçimlendirilir.\\r\n</details>\\r\n<details>\\r\n<summary>**Özellik nedir?**</summary>\\r\nÖzellikler etiketin içindeki ek bilgilerdir.  Özelliklerin adları ve değerleri yoktur. Ad ne tür bilgi sağlandığını söyler ve değer bu etiket için özel bilgi verir. \\r\n\\r\nÖrneğin, &lt;img&gt;  etiketleri iki özelliğe sahiptir, bunlar 'src' ve 'alt'. 'src' resim dosyasının adını belirtir ve alt resmin ne olduğunu hakkında bilgi verir.\\r\n</details>\\r\n</div>\\r\n\\r\nŞimdi resimleri kişisel web sitenize yükleyebilirsiniz. Eğer resimler bilgisayarınızda değilse, buradan araştırabilir ve indirebilirsiniz.\\r\n<form action=\"https://www.google.com/search\" method=\"GET\"\ntarget=\"_blank\">\\r\n<input type=hidden name=site value=\"imghp\" />\\r\n<input\ntype=hidden name=tbm value=isch />\\r\n<input type=hidden name=tbs value=\"sur:fmc\"\n/>\\r\n<input name=q />\\r\n<input type=submit value=\"search\">\\r\n<br />\\r\n</form>\\r\n\\r\nResimleriniz varsa, tıklayın ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49\nPM.png) ve bilgisayarınızdan projenize yükleyin.\\r\n\\r\n#\nBunu Yap\\r\n* Projenize en az iki resim yükleyin\\r\n* '<img>' etiketini kullanarak resimleri web sitenizde gösterin."
-      CSD U2 upload images: |2
+      CSD U2 upload images: |
         # Resimleri Yükle\r
         \r
         Sonra, tüm resimleri projenize yüklemeniz gerekecek.\r
@@ -1958,7 +1959,7 @@ tr:
         [Lesson 8 Level 6](/s/csd2/stage/8/puzzle/6) ziyaret et.\r
         \r
         
-      CSD U2 upload images_2018: |2
+      CSD U2 upload images_2018: |
         # Resimleri Yükle\r
         \r
         Sonra, tüm resimleri projenize yüklemeniz gerekecek.\r
@@ -2904,7 +2905,7 @@ tr:
         * Kod moduna geri dönün, 'kite' nesnesini yeni animasyonda göstermek için `sprite.setAnimation()` bloğunu kullanın.\r
         \r
         Resmin çok büyük olursa endişelenme! Gelecek bölümde resmi nasıl sığdıracağınızı öğreneceksiniz.
-      CSD U3 Sprites anitab 3: |2
+      CSD U3 Sprites anitab 3: |-
         #Boyutu Değiştirme\r
         \r
         In
@@ -2920,7 +2921,7 @@ tr:
         Bu aşamada yeni yüklediğin görüntüyü kullanmalısın. `sprite.scale` bloğu ekle ve uçurtmanın boyutunu değiştir.\r
         \r
         _İpucu: Kodun sırası önemlidir! `sprite.scale` sprite yarattıktan sonra fakat drawSprites() bloğundan önce çağır
-      CSD U3 Sprites anitab 3_2018: |2
+      CSD U3 Sprites anitab 3_2018: |-
         #Boyutu Değiştirme\r
         \r
         In
@@ -2936,7 +2937,7 @@ tr:
         Bu aşamada yeni yüklediğin görüntüyü kullanmalısın. `sprite.scale` bloğu ekle ve uçurtmanın boyutunu değiştir.\r
         \r
         _İpucu: Kodun sırası önemlidir! `sprite.scale` sprite yarattıktan sonra fakat drawSprites() bloğundan önce çağır
-      CSD U3 Sprites anitab 4: |2
+      CSD U3 Sprites anitab 4: |-
         #Boyutu Değiştirme\r
         \r
         In
@@ -3379,7 +3380,7 @@ tr:
         * Kodu çalıştır ve ortağı ile birlikte nasıl işlediğini tartış.
       CSD U3 dancing alien: "# Çizme Döngüsü İçindeki Hareketli Nesneler\\r\n\\r\nÇizme döngüsü içindeki hareketli nesnelerin özelliklerini değiştirerek karakterlerinizi hareketlendirebilirsiniz.\n\\r\n\\r\nBu animasyon yavaşlıyor da. Çerçeve hızını 10'a ayarlamak için programın başında 'World.frameRate' bloku kullanılmıştır. Genellikle çerçeve hızı 30'tur. Farklı çerçeve hızı keşfetmekte rahat olun.\\r\n\\r\n#\nBunu Yap\\r\n* Nasıl işlediğini görmek için kodu çalıştır.\\r\n* Ortağınız ile bazı kodların neden çizme döngüsü içinde ve bazı kodların da dışında olduğunu tartışın.\\r\n* Çerçeve hızlarını değiştirmeyi deneyerek  kodları yeniden çalıştırın."
       CSD U3 dancing alien_2018: "# Çizme Döngüsü İçindeki Hareketli Nesneler\\r\n\\r\nÇizme döngüsü içindeki hareketli nesnelerin özelliklerini değiştirerek karakterlerinizi hareketlendirebilirsiniz.\n\\r\n\\r\nBu animasyon yavaşlıyor da. Çerçeve hızını 10'a ayarlamak için programın başında 'World.frameRate' bloku kullanılmıştır. Genellikle çerçeve hızı 30'tur. Farklı çerçeve hızı keşfetmekte rahat olun.\\r\n\\r\n#\nBunu Yap\\r\n* Nasıl işlediğini görmek için kodu çalıştır.\\r\n* Ortağınız ile bazı kodların neden çizme döngüsü içinde ve bazı kodların da dışında olduğunu tartışın.\\r\n* Çerçeve hızlarını değiştirmeyi deneyerek  kodları yeniden çalıştırın."
-      CSD U3 debug: |2
+      CSD U3 debug: |-
         <img src="https://images.code.org/249f124a9bbd3da7d6327a7be8ab73c9-image-1493138569984.41.50
         AM.png" style="float:right;width:150px;">\r
         \r
@@ -3392,7 +3393,7 @@ tr:
         * Çalışma alanındaki kodlara bakın.\r
         * Sağdaki resmi elde etmek için kodları değiştirin.\r
          * (Kodun bir satırının yerini  VE karenin koordinatlarını değiştirmelisiniz.)
-      CSD U3 debug_2018: |2
+      CSD U3 debug_2018: |-
         <img src="https://images.code.org/249f124a9bbd3da7d6327a7be8ab73c9-image-1493138569984.41.50
         AM.png" style="float:right;width:150px;">\r
         \r
@@ -3521,7 +3522,7 @@ tr:
       CSD U5 Amazon Data Video_2018: Bu sorunun Amazon tarafından nasıl çözüldüğünü öğrenmek için bu videoyu izleyin. İzlediğiniz gibi hangi verilerin toplandığı ve nereden geldiği hakkında düşünün.
       CSD U5 Netflix Data Video: Bu sorunun Netflix tarafından nasıl çözüldüğünü öğrenmek için bu videoyu izleyiniz. İzledikten hemen sonra hangi verilerin toplandığı ve nereden geldiği hakkında düşününüz.
       CSD U5 Netflix Data Video_2018: Bu sorunun Netflix tarafından nasıl çözüldüğünü öğrenmek için bu videoyu izleyiniz. İzledikten hemen sonra hangi verilerin toplandığı ve nereden geldiği hakkında düşününüz.
-      CSD U5 Pizza 2: |2
+      CSD U5 Pizza 2: |-
         # Pizza Partisi \ r 
         \ r 
         insanlar verilerle çalışırken, onlar yok cevaplar kapalı bırakmak biliyorum yapmak mantıklı ve bu
@@ -3533,7 +3534,7 @@ tr:
         * Yeni görmek için "Çalıştır" ı tıklayın liste cevapları temizlenecek. \ r
         * Temizlenmesi gereken her cevabı tıklayın ve bilgisayarın düzgün şekilde grafiğini çizecek şekilde düzeltin . ( Bazı cevapları tamamen silmek isteyebilirsiniz .) \ R 
         * İşiniz bittiğinde temizlenmiş cevapların yeni grafiğini görmek için "Grafiği Göster" e tıklayın.
-      CSD U5 Pizza 2_2018: |2
+      CSD U5 Pizza 2_2018: |-
         # Pizza Partisi \ r 
         \ r 
         insanlar verilerle çalışırken, onlar yok cevaplar kapalı bırakmak biliyorum yapmak mantıklı ve bu
@@ -3545,7 +3546,7 @@ tr:
         * Yeni görmek için "Çalıştır" ı tıklayın liste cevapları temizlenecek. \ r
         * Temizlenmesi gereken her cevabı tıklayın ve bilgisayarın düzgün şekilde grafiğini çizecek şekilde düzeltin . ( Bazı cevapları tamamen silmek isteyebilirsiniz .) \ R 
         * İşiniz bittiğinde temizlenmiş cevapların yeni grafiğini görmek için "Grafiği Göster" e tıklayın.
-      CSD U5 Pizza: |2
+      CSD U5 Pizza: |-
         # Pizza Partisi \ r 
         \ r 
         pizza partisi veri girmiştir bir  uygulamanın sizin için ve birbirinden cevaplar sınıfına eklendi. Bu bir  uygulama olduğu için verilen veriden çubuk grafik oluşturulmasını otomatikleştirebiliriz. \ r 
@@ -3562,7 +3563,7 @@ tr:
         \ r 
         * Bu bağlantı olacak yapmak size "Pizza Seçenekleri Topping" Verilerin kendi kopyasını: [Pizza Seçimleri Topping] (https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/copy) \ r 
         * You [here] dosyasının bir CSV sürümünü (https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/export? format = csv) indirebilirsiniz .
-      CSD U5 Pizza_2018: |2
+      CSD U5 Pizza_2018: |-
         # Pizza Partisi \ r 
         \ r 
         pizza partisi veri girmiştir bir  uygulamanın sizin için ve birbirinden cevaplar sınıfına eklendi. Bu bir  uygulama olduğu için verilen veriden çubuk grafik oluşturulmasını otomatikleştirebiliriz. \ r 
@@ -3643,7 +3644,7 @@ tr:
         # Bunu Yap\r
         *İkili 
         dizedeki iki sayıyı çözün.
-      CSD U5 binary 3: |2
+      CSD U5 binary 3: |-
         # Birden fazla sayıyı çözerek \ r 
         \ r 
         Sekiz bit'e kadar sayıyı hesaplayabilen bir widget. Bunu, aşağıdaki ikili dizgide kodlanan üç dünya rekorunu bulmaya çalışmak için kullanabilirsiniz . Yanıtlar dizede sıralıdır. \ r \ r 
@@ -4042,7 +4043,7 @@ tr:
         *
         Tasarım modunda yeni bir "kapalı" butonu ekleyin.\r
         *"kapalı" butonunun çalışmasını sağlayan bir kod ekleyin.
-      CSD U6 LED toggle: |2
+      CSD U6 LED toggle: |-
         # Işık Düğmesi\r
         \r
         Kullanmadığınız üç tane
@@ -4056,7 +4057,7 @@ tr:
          * Eğer LED kapalıysa, buton onu açmalıdır.\r
         
         *Eğer LED açıksa, buton onu kapamalıdır.
-      CSD U6 LED toggle_2018: |2
+      CSD U6 LED toggle_2018: |-
         # Işık Düğmesi\r
         \r
         Kullanmadığınız üç tane
@@ -4212,13 +4213,13 @@ tr:
         \r
         * Ses sensörünün "veri" olayına yanıt vermesi için bir olay denetimcisi oluşturun\r
         * Var olan kodu olay denetimcinizin içine taşıyın
-      CSD U6 analog light: |2
+      CSD U6 analog light: |-
         # Işık Sensörü Güncellemeler \ r 
         \ r 
         Bu
          uygulama çok benzer son, ama biz Kimliği "update_button" ile bir düğme ekledik. Işık sensörü her mevcut değerini görüntüleyen bir program yazınız
          zaman güncelleme butonu tıklanır.
-      CSD U6 analog light_2018: |2
+      CSD U6 analog light_2018: |-
         # Işık Sensörü Güncellemeler \ r 
         \ r 
         Bu
@@ -4603,7 +4604,7 @@ tr:
         Öncelikle, far olarak ne kullanacağınıza karar vermeniz gerekecek. Başka bir LED devresi ekleyebilirsiniz ya da belki renkli LED'leri far olarak kullanmayı sağlayan kartı monte etmek için bir yol bulabilirsiniz. Işıklarınızın düzenini hallettikten sonra ortamın ne kadar aydınlık ya da karanlık olduğuna göre farı açıp kapatan kodu programınıza ekleyin.\r
         \r
         _İpucu: Eğer varolan renkli LED'leri kullanıyorsanız, ışık sensörünün LED'lerden gelen ışığa göre değil, ortamdaki ışık seviyesine göre tepki gösterdiğinden emin olmak için ışık sensörünü korumanız gerekebilir
-      CSD U6 create LED app 2: |2
+      CSD U6 create LED app 2: |-
         # Uygulamanızı Yapın - Kod\r
         \r
         Bundan sonra, 
@@ -4620,7 +4621,7 @@ tr:
          * Rastgele Sayılara?\r
         * Kod
         Modunda, uygulamanızı çalıştıracak kodu ekleyin.
-      CSD U6 create LED app 2_2018: |2
+      CSD U6 create LED app 2_2018: |-
         # Uygulamanızı Yapın - Kod\r
         \r
         Bundan sonra, 
@@ -4921,7 +4922,7 @@ tr:
         \r
         Bir takım arkadaşıyla aşağıdaki koda bakın. Ne yapacağını düşünüyorsunuz? Bir tahmin yürütün sonra öğrenmek için kodu çalıştırın.\r
         
-      CSD U6 test LED: |2
+      CSD U6 test LED: |-
         # LED'i Kontrol Edin\r
         \r
         Artık kartınızın nasıl çalıştığını bildiğinize göre farklı LED blokları deneyebilirsiniz.\r
@@ -4933,7 +4934,7 @@ tr:
         Ne yaptıklarını görmek için farklı LED blokları deneyin.\r
          * İpucu: Kodunuzu değiştirdikten
         sonra "Sıfırla'ya" basmayı ve ve kodunuzu tekrar çalıştırmayı unutmayın
-      CSD U6 test LED_2018: |2
+      CSD U6 test LED_2018: |-
         # LED'i Kontrol Edin\r
         \r
         Artık kartınızın nasıl çalıştığını bildiğinize göre farklı LED blokları deneyebilirsiniz.\r
@@ -5106,7 +5107,7 @@ tr:
         * Sensör değerlerine dayalı farklı görüntüler görüntülemek için koşullu ifadeleri kullanın
       CSDU6 - sensors experiment: |-
         <Iframe width = "370" height = "620" style = "float: left; margin-right: 25px; border: 0px;" Src = "https://studio.code.org/projects/applab/iCWa6Gsb-W4StwmqFX5TkA/embed"> </ iframe> \ r \ r # sensör Deney sola programı çalıştırın ve Anakartınızla birlikte deneme. Anakartınızla birlikte çeşitli şekillerde karşılaşabileceksiniz. Deneme tamamlandığında, aşağıdaki metin kutusundaki her şey sensure için yanıtlayın. \ R \ r * ne bu sensör ölçmek? \ R * 'maksimum değeri nedir? \ R * 'ın en küçük değeri nedir?
-      CSDU6 - sensors light: |2
+      CSDU6 - sensors light: |-
         # Işık Sensörü Güncellemeler \ r 
         \ r 
         Bu
@@ -5337,7 +5338,7 @@ tr:
         Bu meydan okuma ile mücadele etmeden önce öğretmenin ile birlikte kontrol et.\r
         \r
         Şimdi LED ve vızıltıyı (buzzer) kullanmayı biliyorsun, çeşitli sesleri çalan ve LED kullanan bir uygulamayı oluşturmaya çalış. Farklı düğmelere tıkladığınızda çeşitli sesler çıkaran org veya sentezleyici yapabilirsiniz.
-      'Challenge: Input and UI': |2
+      'Challenge: Input and UI': |-
         # Dur\r
         \r
         Dersin sonuna geldin. Başlamadan önce zorlukla mücadele edebileceğini görmek için öğretmenin ile birlikte kontrol et. Eğer vaktin varsa becerilerini deneyeceğin ek bir zorlu görev bu. Zamanın yoksa önemli bir şey değil!\r
@@ -5563,6 +5564,60 @@ tr:
         - Elmas desenini daha uzun veya kısa yaparsanız ne olur?\r
         - Bir kar tanesinin üzerine iki tane daha çizince nasıl görünüyor?\r
         
+      Dance_Party_01: |-
+        *Dans partisi yapalım!*
+        
+        İlk dansçınızı yaratmak için `yeni yap` bloğunu çalışma alanına sürükleyin ve `kurulum` bloğunun içine bağlayın.
+        
+        * *Eğer daha fazla bilgi almak veya ek görevler istiyorsanız sol taraftaki ampüle tıklayın.*
+      Dance_Party_01_low: |-
+        *Dans partisi yapalım!*
+        
+        İlk dansçınızı yaratmak için `yeni yap` bloğunu çalışma alanına sürükleyin ve `kurulum` bloğunun içine bağlayın.
+        
+        * *Eğer daha fazla bilgi almak veya ek görevler istiyorsanız sol taraftaki ampüle tıklayın.*
+      Dance_Party_02: |-
+        Bu geyik dansını alalım!
+        
+        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> bloğunu çalışma alanına sürükleyin. <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> bloğunun altına bağlayın. Dansçınız dördüncü ölçüden sonra yeni bir harekete başlayacaktır.
+        
+        
+        **Ölçüler** müziğin içindeki zamanı hesaplamak için kullanılır. Bu eğitimde bir ölçü dört vuruş uzunluğundadır.
+      Dance_Party_03: "*Şimdi hareketleniyoruz!*\n\nÇalışma alanına bir <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> bloğu ekleyin. Dansçının 6 ölçü sonra yeni bir harekete başlamasını sağlayın."
+      Dance_Party_04: |-
+        *Bu dansın biraz parıltıya ihtiyacı var!*
+        
+        Araç kutunuzda dansçınızın arkasına bir arka plan efekti ekleyecek yeni bir blok arayın. Efektin müzik ilerledikçe değişimini izleyin!
+      Dance_Party_05: |-
+        Dansçının **her 2 ölçüde bir** hareket değiştirmesini sağlamak için başka bir yeni blok kullanın!
+        
+        * `(İleri)`, `(Geri)`, veya `(Rastgele)` seçenekleri ile kod her çalıştığında dansçınıza farklı bir hareket yapma komutu verirsiniz.
+      Dance_Party_06: |-
+        *Daha fazla dansçıya ihtiyacımız var!*
+        
+        Kediyle birlikte dans edecek `arkaplan_dansçısı1` isimli bir arka plan dansçısı yaratın.
+      Dance_Party_08: |-
+        Her dansçının nasıl göründüğünü belirleyen bir _özellikler_ seti vardır.
+        
+        _boyut_ küçülterek bir dansçının arka planda dans eden bir dansçı gibi görünmesini sağlayabilirsiniz. İki arka plan dansçısını da aynı boyuta getirebilir misiniz?
+      Dance_Party_09: |-
+        Dansçılar kendilerine yeni bir renk katmanı ekleyen bir "renk tonu" özelliğine sahiptir. Dansçılarınızdan birinin renk tonunu değiştirmeye çalışın.
+        * Renk tonu özelliği sayesinde seçtiğiniz renk ve dansçının rengi karışacaktır.
+      Dance_Party_10: |-
+        Artık bir dansçının özelliklerinin nasıl değiştirildiğini biliyoruz. Ayrıca aynı özelliklerin bu bloğu kullanan müziğe otomatik olarak tepki vermelerini sağlayabiliriz.
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+        
+        Bu program bir dansçının boyunun kontrolü için müziğin "bas" (düşük) seslerini kullanır. Diğer dansçıların da müziğe tepki vermesini sağlayabilir misiniz?
+      Dance_Party_11.5: "Bu bloğa bir bakın:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nArtık tek seferde birden çok dansçı yaratabilirsiniz!\n\nTüm ördeklerin hep birlikte dans etmesini sağlayacak kodu yazmak için \"tüm ördekler\" bloklarının bazılarını kullanmayı deneyin."
+      Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> bloğu yukarı oka basıldığında kodu çalıştırmanızı sağlar.\n\nDans hareketini değiştirebilir, bir dansçının özelliklerini değiştirebilir ya da bir kereliğine hızlı bir hareket yapabilirsiniz. Yaratıcı olun ve yeni bloklar arayın!"
+      Dance_Party_11b: |-
+        Şimdi dans zamanı! Sol ok tuşuna bastığınızda Kedi dab dansı yapar. Sağ ok tuşuna bastığınızda Robota "drop" figürü yaptırırsınız.
+      Dance_Party_12: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla paylaşın.
       Escape Room Example: |-
         # Odadan Kaçış\r
         \r
@@ -5580,13 +5635,36 @@ tr:
         Oyunu oyna ve 4 seviye geçmesini sağla
       Formative versus Summative Assessment: 'Aşağıdaki bağlantı, tanımlama ve geçerli  değerlendirme örnekleri sağlayan bir kaynaktır:'
       Function intro Ryan: "Çalışma alanında `köprü inşa et` adlı bir **işlev** var.  Nehrin karşısına geçmek için gereken tüm kodlar orada bulunuyor! \\r\n \\r\nKüçük yeşil bloğu çalışma alanına iki kez tutturarak yolu tamir et ve {currentPlayerName} karakterini Redstone Meşalesine [redstone_torch] ulaştır."
+      Function intro Ryan_2019: "Çalışma alanında `köprü inşa et` adlı bir **işlev** var.  Nehrin karşısına geçmek için gereken tüm kodlar orada bulunuyor! \\r\n \\r\nKüçük yeşil bloğu çalışma alanına iki kez tutturarak yolu tamir et ve {currentPlayerName} karakterini Redstone Meşalesine [redstone_torch] ulaştır."
       Geometric Pattern: "** Proje fikri: ** geometrik şekiller fikirler kullanarak bir model oluşturma. Bu sebat ve planlama gerektirir!"
       Geometric Sun: "** Proje fikri: ** geometrik şekiller fikirler kullanarak bir model oluşturma. Bu sebat ve planlama gerektirir!"
       Geometric Sun_2018: "** Proje fikri: ** geometrik şekiller fikirler kullanarak bir model oluşturma. Bu sebat ve planlama gerektirir!"
+      HOC 2018 Level_1: "Seni bekleyen yolculuk için malzemelere ihtiyacın var. **Sandık**tan ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png) **sandalı** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) al."
+      HOC 2018 Level_10: "Bir **kalamar** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) bu Okyanus Anıtı içinde bir yerlerde saklanıyor, onu bulabilir misin?"
+      HOC 2018 Level_11: Siyah beton etrafına **prizmarin** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) duvarı ör. Bu **su yolunu** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) harekete geçirecek ve görevini tamamlayacak!
+      HOC 2018 Level_12: Tebrikler! Uçsuz bucaksız su dünyası seni bekliyor. Bir mercan resifi inşa et! Bir volkan! Bir gemi enkazı! Sana kalmış.
+      HOC 2018 Level_2: Sandalla gitmek açık suda yüzmekten çok daha kolay! Binmek için iskelenin sonuna git.
+      HOC 2018 Level_3: Kürekleri al ve **morinayı** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png) yakalamak için sandalını açık denize sür.
+      HOC 2018 Level_4: Hadi morinayla **yunus** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png) besleyelim. Okyanusu daha hızlı geçmek için bir tekrarla bloku kullan.
+      HOC 2018 Level_5: Orada bir yerlerde bir **notilus kabuğu** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png) saklanıyor! **Sandığa** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png) ulaşmak için gemi enkazını araştır.
+      HOC 2018 Level_6: Dışarısı buz gibi görünüyor! Su altı harabelerine giderken bir **somon** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) yakala.
+      HOC 2018 Level_7a: "Sualtı harabelerini buldun. **Prizmarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) hazinesi içeren **sandığı** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) bulmak için kumtaşını ara."
+      HOC 2018 Level_8: "Önce buz dağları, şimdi de lav mı? Bu volkanik adayı geç ve mercan resifi içinde **tropikal balığı** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) bul."
+      HOC 2018 Level_9b: "Resife geldin, şimdi de **Denizin Kalbini** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ara! Hazine **sandığına** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png) ulaşmak için mavi ve kırmızı mercanları kullan."
+      HOC Dance 4_draft: |-
+        Dansçının **her 2 ölçüde bir** hareket değiştirmesini sağlamak için başka bir yeni blok kullanın!
+        
+        * `(İleri)`, `(Geri)`, veya `(Rastgele)` seçenekleri ile kod her çalıştığında dansçınıza farklı bir hareket yapma komutu verirsiniz.
+      HOC Dance 5_draft: |-
+        *Daha fazla dansçıya ihtiyacımız var!*
+        
+        Kediyle birlikte dans edecek `arkaplan_dansçısı1` isimli bir arka plan dansçısı yaratın.
+      HOC Dance 9_draft: "<xml><block type=\"Dancelab_whenKey\"></block></xml> bloğu yukarı oka basıldığında kodu çalıştırmanızı sağlar.\n\nDans hareketini değiştirebilir, bir dansçının özelliklerini değiştirebilir ya da bir kereliğine hızlı bir hareket yapabilirsiniz. Yaratıcı olun ve yeni bloklar arayın!"
       Harvesting: "Ah,haritamı kaybettim ve ne ektiğimi hatırlamıyorum. Her filiz **mısır** olarak büyüyebilir. ![mısır resmi](https://images.code.org/cac3133c40781553a70066a67298b2b5-image-1472493202556.png)\n, **fasulye** ![fasulye resmi](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png)\n, veya**kabaklar** ![kabak resmi](https://images.code.org/03cf76a978e0788ccb53f14e9d264695-image-1472493237148.png)\n. Bütün bitkileri, ne olursa olsun, alacak bir kaç kod yazabilir misin?"
       Inspirational Artwork: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\" width=\"250px\"/> \\r \\r ** Serbest ilham: ** Şimdi böyle bir model yapmak için bilmeniz gereken her şeyi öğrendin! \\r \\r bu resimden ilham almayı deneyin ve benzer bir şey yapın. Aksi takdirde, kendiniz birşey yaratın. \\r \\r dikkat: 'set Alfa' bloğu kullandım."
       InspirationalArtwork: "Serbest ilham zamanı. Bu deseni oluşturmak için gerekli herşeyi öğrendin. Eğer bu resim ilham veriyorsa benzer birşeyler yapmaya çalış. Yoksa kendi tasarımını yap.\\r\n\\r\nİlham alınan tasarımın kodunu görmek ister misin? "
       InspirationalArtwork_2018: "Serbest ilham zamanı. Bu deseni oluşturmak için gerekli herşeyi öğrendin. Eğer bu resim ilham veriyorsa benzer birşeyler yapmaya çalış. Yoksa kendi tasarımını yap.\\r\n\\r\nİlham alınan tasarımın kodunu görmek ister misin? "
+      InspirationalArtwork_2019: "Serbest ilham zamanı. Bu deseni oluşturmak için gerekli herşeyi öğrendin. Eğer bu resim ilham veriyorsa benzer birşeyler yapmaya çalış. Yoksa kendi tasarımını yap.\\r\n\\r\nİlham alınan tasarımın kodunu görmek ister misin? "
       K-1 Bee Loops 2: '"Tekrarla" bloğu kullanarak ilerleyip nektar ve balı alalım!'
       K-1 Bee Loops 3: Nektar almak ve bal yapmak için 3 'tekrarla' döngüsünü kullan!
       K-1 Bee Loops 4: '"Tekrarla" bloğu kullanarak ilerleyip nektar ve balı alalım ve ilerleyelim!'
@@ -5610,16 +5688,23 @@ tr:
       MC_HOC_2017_01: "Oynatıcıyı ** ok tuşlarını ** kullanarak taşımak için \"Çalıştır\"a tıklayın.\\r\n\\r\nBu seviyeyi geçmek için kapının yanına gitmeniz (** boşluk çubuğunu ** kullanarak) açmanız gerekiyor, böylece içteki turuncu kareye ulaşırsınız."
       MC_HOC_2017_01_Cole: Bu yolculukta tüm aletleri toplaman gerekiyor. **Ok tuşlarını** kullanarak etrafta dolaş ve kazanmak için yol üzerindeki sandığa ulaş
       MC_HOC_2017_01_Kiki: 'Bu seviyeyi oynamak için, oyun alanının altındaki turuncu "Çalıştır" düğmesine tıkla ve sonra **ok tuşlarını** kullanarak oyuncuyu hareket ettir.  '
-      MC_HOC_2017_01_RETRY: |2
+      MC_HOC_2017_01_RETRY: |-
+        {currentPlayerName} evin içinde sıkışıp kaldı, ama Agent yardım etmek için burada!   \r
+         \r
+           \r
+        Çalışma alanında `koştuğunda` bloğunun üzerine bir `ileri taşı` bloğu tutturarak Agent'ı baskı plakasına [PressurePlate_Up] götür, ardından "Çalıştır" düğmesine basıp ok tuşlarını kullanarak {currentPlayerName} karakterini evin dışına çıkar ve **sandığı** [chest] toplamasını sağla.  
+      MC_HOC_2017_01_RETRY_2019: |-
         {currentPlayerName} evin içinde sıkışıp kaldı, ama Agent yardım etmek için burada!   \r
          \r
            \r
         Çalışma alanında `koştuğunda` bloğunun üzerine bir `ileri taşı` bloğu tutturarak Agent'ı baskı plakasına [PressurePlate_Up] götür, ardından "Çalıştır" düğmesine basıp ok tuşlarını kullanarak {currentPlayerName} karakterini evin dışına çıkar ve **sandığı** [chest] toplamasını sağla.  
       MC_HOC_2017_02: Oyuncunun o gizli koruya girmesi gerekiyor.  Agent'ı baskı plakasına ulaştırmak için kod yazarak, geçidi açmasına yardımcı ol.
       MC_HOC_2017_02_Cole: "{currentPlayerName} bir maceraya atıldı! Yardımcı olmak için sağ taraftaki kilitli kapının arkasında bulunan **haritayı** [map_empty] al. \\r\n \\r\n{currentPlayerName} geçebilsin diye Agent'ı baskı plakasına [PressurePlate_Up] götürmek için kodu çalışma alanına tuttur. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} bir maceraya atıldı! Yardımcı olmak için sağ taraftaki kilitli kapının arkasında bulunan **haritayı** [map_empty] al. \\r\n \\r\n{currentPlayerName} geçebilsin diye Agent'ı baskı plakasına [PressurePlate_Up] götürmek için kodu çalışma alanına tuttur. "
       MC_HOC_2017_02_Kiki: "Oyuncu bir maceraya atıldı, ancak öncelikle o kilitli kapının diğer tarafında gizlenmiş meşaleyi alması gerekiyor. \\r\n\\r\nAgent'ı iki kez ileri giderek beyaz yolu takip edecek ve oyuncu için kapıyı açmak üzere baskı plakasına ulaşacak şekilde programla."
       MC_HOC_2017_02_Will: "Bu seviyeyi tamamlamak için oyuncunun, kilitli kapının arkasında bulunan Gizli Koru içindeki turuncu kareye ulaşması gerekiyor.  \\r\n\\r\nÇalışma alanındaki kod, Agent'ın iki kez ileri giderek baskı plakasına ulaşmasını ve Alex ya da Steve için kapıyı açmasını sağlar."
       MC_HOC_2017_03_Cole: "{currentPlayerName} maceraya devam ediyor ve yolculuğa hazırlanmak için **pusulaya** [compass] ihtiyacı var.  \\r\n   \\r\nAgent'ı geçidi açacak şekilde kodla. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} maceraya devam ediyor ve yolculuğa hazırlanmak için **pusulaya** [compass] ihtiyacı var.  \\r\n   \\r\nAgent'ı geçidi açacak şekilde kodla. "
       MC_HOC_2017_03_Kiki: "Oyuncunun macerası kilitli kapının ardındaki Gizli Koru'da başlayacak!  \\r\n\\r\n\\r\nAgent'ı baskı plakasına ulaştırmak için kod yazarak, kapıyı açmasına yardımcı ol."
       MC_HOC_2017_04: Agent'ın bu nehrin geniş kısmında bir yol açmasına yardımcı olmak için son bulmacadaki döngüyü değiştir.
       MC_HOC_2017_04POINT5_Cole: |-
@@ -5628,7 +5713,9 @@ tr:
         
         Basit bir desen bulup ilk iki baskı plakasından geçmek için döngüleri kullanarak, Agent'ın yolu temizlemesine yardımcı ol.
       MC_HOC_2017_04POINT5_RYAN: "Karşıya geçtin! \\r\n\\r\nŞimdi {currentPlayerName} karakterini labirentten güvenli bir şekilde geçirerek **baltayı** [diamond_axe] almasını sağla\\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Karşıya geçtin! \\r\n\\r\nŞimdi {currentPlayerName} karakterini labirentten güvenli bir şekilde geçirerek **baltayı** [diamond_axe] almasını sağla\\r\n"
       MC_HOC_2017_04_Cole: "Agent suyun karşısına geçebilir!  \\r\n \\r\nBu bulmacayı çözmek için bir `tekrarla` döngüsü kullan ve {currentPlayerName} karakterinin kapının arkasındaki **kovaya** [bucket_empty] ulaşmasına yardımcı ol. "
+      MC_HOC_2017_04_Cole_2019: "Agent suyun karşısına geçebilir!  \\r\n \\r\nBu bulmacayı çözmek için bir `tekrarla` döngüsü kullan ve {currentPlayerName} karakterinin kapının arkasındaki **kovaya** [bucket_empty] ulaşmasına yardımcı ol. "
       MC_HOC_2017_04_Kiki: "Gizli Koru'nun girişi bizi bu güzel Vaha'ya getirdi!  Bu seviyeyi geçmek için oyuncunun kulübedeki turuncu kareye ulaşması gerekiyor.  \\r\n\\r\nAgent'ın baskı plakasına giden tüm yolu geçerek kulübe kapısını açmasına yardımcı olmak için bir `tekrarla` döngüsü kullanın."
       MC_HOC_2017_05: |-
         Döngüler her zaman faydalı değildir. 
@@ -5636,6 +5723,7 @@ tr:
         
         Bu kaktüsler belirgin bir desenle büyümüyor, bu yüzden bir döngü ile doğru şekilde temizlenemez.  Bunun yerine, Agent'ın engelle karşılaştığı durumlarda işin zor kısmını halleden `yok et ve taşı` adlı bir işlev sunuyoruz.
       MC_HOC_2017_05_Cole: "Olamaz, köprü yıkılmış! \\r\n\\r\n{currentPlayerName} **küreğe** [diamond_shovel] ulaşabilsin diye, Agent'ı `yerleştir` bloğunu kullanarak köprüyü yeniden inşa edecek şekilde kodla."
+      MC_HOC_2017_05_Cole_2019: "Olamaz, köprü yıkılmış! \\r\n\\r\n{currentPlayerName} **küreğe** [diamond_shovel] ulaşabilsin diye, Agent'ı `yerleştir` bloğunu kullanarak köprüyü yeniden inşa edecek şekilde kodla."
       MC_HOC_2017_05_Josh: |-
         Olamaz, köprü yıkılmış! 
         
@@ -5643,9 +5731,11 @@ tr:
         Oyuncunun **küreğe** ulaşabilmesi için Agent'ın köprüyü yeniden inşa etmesine yardımcı ol.
       MC_HOC_2017_05_Kiki: "Oyuncunun Gizli Koru'dan ayrılıp maceraya devam etme zamanı geldi ama köprü yıkılmış! \\r\n\\r\nAgent'ın köprüyü yeniden inşa etmesine yardımcı ol, sonra oyuncunun turuncu kareye ulaşabilmesi için ahşap kalasa taşı."
       MC_HOC_2017_06_Cole: "Başka bir nehir, ama bu kez çok daha geniş! \\r\n \\r\n{currentPlayerName} **kazmaya** [diamond_pickaxe] ulaşabilsin diye Agent'ın köprü inşa etmesine yardımcı olmak için bu kodu düzelt. "
+      MC_HOC_2017_06_Cole_2019: "Başka bir nehir, ama bu kez çok daha geniş! \\r\n \\r\n{currentPlayerName} **kazmaya** [diamond_pickaxe] ulaşabilsin diye Agent'ın köprü inşa etmesine yardımcı olmak için bu kodu düzelt. "
       MC_HOC_2017_06_Josh: "Başka bir nehir, ama bu kez çok daha geniş!  \\r\n\\r\nAgent'ın bu nehrin karşısına geçen bir köprü inşa etmesine yardımcı olmak için bu kodu düzelt."
       MC_HOC_2017_06_Kiki: "Başka bir nehir, ama bu kez çok daha geniş!  \\r\n\\r\nAgent'ın suyun karşısına geçen bir köprü inşa etmesine yardımcı olmak için bu kodu düzelt."
       MC_HOC_2017_07_Cole: "Yolda buz var!  \\r\n \\r\n`Yolu temizle` işlevi, buzu yok edip {currentPlayerName} karakterini Maden Arabasına [minecart_normal] geçirmeye yardımcı olabilir! "
+      MC_HOC_2017_07_Cole_2019: "Yolda buz var!  \\r\n \\r\n`Yolu temizle` işlevi, buzu yok edip {currentPlayerName} karakterini Maden Arabasına [minecart_normal] geçirmeye yardımcı olabilir! "
       MC_HOC_2017_07_Kiki: "Kodu tekrarlamanın tek yolu döngüler değildir!  \\r\n\\r\nBurada, her kullandığınızda üç kaktüsü temizleme zahmetini üstlenecek `kaktüsleri temizle` adlı bir işlev sunuyoruz.  Turuncu kareye giden yolu temizlemek için iki `kaktüsleri temizle` bloğu kullan. "
       MC_HOC_2017_07a_Kiki: Şimdi, Agent'ın turuncu kareye giden yolu temizlemesine yardımcı olmak için bu döngüyü düzenle.
       MC_HOC_2017_08_Cole: "Şimdi de hareket etmeden önce yok etmek yerine bir blok yerleştirmen gerekecek.  \\r\n\\r\nSağlanan işlevi, çölde işe yarayacak şekilde değiştir."
@@ -5667,6 +5757,7 @@ tr:
       MC_HOC_2017_10_Cole_old: Agent'ın bu maden arabasını tamamlayıp oyuncuyu turuncu kareye ulaştırmasını kolaylaştıracak bir işlevi baştan oluşturmayı dene.
       MC_HOC_2017_10_Kiki: Agent'ın bu maden arabasını tamamlayıp oyuncuyu turuncu kareye ulaştırmasını kolaylaştıracak bir işlevi baştan oluşturmayı dene.
       MC_HOC_2017_10_RETRY: "Çalışma alanında bulunan iki işlev arasındaki farkı bulabilir misin? \\r\n \\r\nBu işlevleri araç kutusundaki diğer kodla birlikte kullanarak Maden Arabasının yolunu temizle ve sonra **Çakmaktaşı ve Çeliği** [flint_and_steel] topla. \\r\n "
+      MC_HOC_2017_10_RETRY_2019: "Çalışma alanında bulunan iki işlev arasındaki farkı bulabilir misin? \\r\n \\r\nBu işlevleri araç kutusundaki diğer kodla birlikte kullanarak Maden Arabasının yolunu temizle ve sonra **Çakmaktaşı ve Çeliği** [flint_and_steel] topla. \\r\n "
       MC_HOC_2017_10_RYAN: Agent'ın bu maden arabasını tamamlayıp oyuncuyu turuncu kareye ulaştırmasını kolaylaştıracak işlevleri baştan oluşturmayı dene.
       MC_HOC_2017_10_RYAN2: Agent'ın bu maden arabasını tamamlayıp oyuncuyu turuncu kareye ulaştırmasını kolaylaştıracak işlevleri baştan oluşturmayı dene.
       MC_HOC_2017_11_Kiki: Şimdi her şey sana bağlı! Bu donmuş gölün çevresinde neler oluşturabildiğini gör.
@@ -5677,9 +5768,11 @@ tr:
         
         Basit bir desen bulup ilk iki baskı plakasından geçmek için döngüleri kullanarak, Agent'ın yolu temizlemesine yardımcı ol.
       MC_HOC_2017_Ali: 'Aşağıdaki işlevlere bak.  Ghast''lardan uzak durmak ve {currentPlayerName} karakterinin güvenli bir şekilde **Büyülü Kitaba** [book_enchanted] ulaşmasına yardımcı olmak için bu işlevleri nasıl kullanabilirsin?  '
+      MC_HOC_2017_Ali_2019: 'Aşağıdaki işlevlere bak.  Ghast''lardan uzak durmak ve {currentPlayerName} karakterinin güvenli bir şekilde **Büyülü Kitaba** [book_enchanted] ulaşmasına yardımcı olmak için bu işlevleri nasıl kullanabilirsin?  '
       MC_HOC_2017_FP10x10: "**Serbest Oyun:** Artık size kalmış! \nBu seviyedeki tüm elmasları toplamak için kendinize meydan okuyabilir misiniz?\n"
       MC_HOC_2017_FP10x10_RE: "**Serbest Oyun:** Artık size kalmış! \nBu seviyedeki tüm elmasları toplamak için kendinize meydan okuyabilir misiniz?\n"
       MC_HOC_2017_FP20x20: "**Serbest Oyun** Şimdi her şey sana bağlı!\nBu dünyayı keşfetmene yardımcı olması için Ajan'ın kodunu kullan."
+      MC_HOC_2017_FP20x20_2019: "**Serbest Oyun** Şimdi her şey sana bağlı!\nBu dünyayı keşfetmene yardımcı olması için Ajan'ın kodunu kullan."
       MC_HOC_2017_Ryan_03: "Bir döngünün içine birden fazla kod yerleştirebileceğini biliyor muydun?  \\r\n\\r\nAgent'ın suya bloklar yerleştirerek bir köprü inşa etmesine yardımcı olmak için bir `tekrarla` döngüsü kullan."
       MC_HOC_2017_Ryan_05: "Bazen oyuncunun yoluna çıkan şeyleri devirmen gerekir.  \\r\nAgent ile baskı plakası arasındaki tüm kaktüsleri temizlemek için `yok et` bloğunu kullan."
       MC_HOC_Kiki_02: Yan kapının açılabilmesi için baskı plakasının üzerinde duran biri olmalıdır.  Oyuncunun evden çıkabilmesi için Agent'ın plakaya ulaşmasına yardımcı ol.
@@ -5870,7 +5963,7 @@ tr:
       Room Escape Workshop - 5: "# Gizli Kodu Kontrol Etme\\r\n\\r\nŞimdi kullanıcıdan gizli kod tahminlerini topladınız, kodların doğruluğunu kontrol etmeye ihtiyacınız var! Eğer (if) ifadesini kullanabiliriz. Bir eğer(if) ifadesi şartın doğruluğunu kontrol eder, bu durumda kullanıcının girdiği numaranın gizli koda eşit olup olmadığını kontrol edecek.\\r\n\\r\n# Bunu Yap\\r\n\\r\n*\nKasa için 'onEvent' bloku içerisinde aşağıda yer alan sor(prompt) komutuna <img\nsrc=\"https://images.code.org/5e9a434b1ad6b8f010db928b668127a5-image-1491061131564.37.01\nAM.png\" style=\"width:100px\"> durumu ekle\\r\n* Bloku çıkartarak <img src=\"https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08\nAM.png\" style=\"width:100px\"> iki şeyin birbirine eşitliğini kontrol edecek şartı oluştur\\r\n*\nBir tarafa <img src=\"https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08\nAM.png\" style=\"width:100px\"> *tahmin* yerleştir (bizim depoladığımız kullanıcıların tahmin ettiği değerin adı)\\rı\n* Diğer tarafa gizli kodu yerleştirin"
       Room Escape Workshop - 6: "# Rastgele Kod\\r\n\\r\n<img src=\"https://images.code.org/dfa3a28d30b7a1d2879e3fc95b8f42dc-image-1489603534640.44.51\nPM.png\" style=\"width:200px;float:right\">\\r\n\\r\nBizim gizli odamızın bir şifreli kilidi var. Bu şifre şuan Oda 1'de \"CODE\" diyen bir resmin arkasında gizli. Bunu daha eğlenceli yapmak için biz 4 haneli rastgele bir sayı üreteceğiz.\\r\n\\r\n# Bunu Yap\\r\n\\r\n*\nGizli kodu tutacak bir değişken oluşturun.\\r\n\\t* Değişken blokunu dışarı sürükleyin\\r\n    * Yanındaki boşlukta değişkeninize \"safeCode\" gibi bir ad seçin\\r\n* Değişkenin sağ tarafında gizli kodunuz rastgele bir sayı olarak belirleyin.\\r\n\\t* Değişkenin sağ tarafındaki rastgele sayı blokunu ekleyin\\r\n    * Rastgele sayı(random number) hangi aralıkta üretileceğini belirlemek amacıyla 2 girdi alır.\\r\n    * 1000 ile 9999 arasında üretmelisin\\r\n* Oda 1'deki gizli kodun içerisindeki metni belirle\\r\n\\t* 'secretCode' ögesinin metnini belirlemek için 'setText' blokunu kullan"
       Room Escape Workshop - 7: "# Kasanın içini gösterme\\r\n\\r\n<img\nsrc=\"https://images.code.org/71e74305187a46d0badeb29a9a69ac56-image-1490371014841.55.37\nAM.png\" style=\"width:200px;float:right\">\\r\n\\r\nGizli kodu kontrol ederek programa başlattınız, kasayı \"açmak\" ve içindeki anahtarı göstermek isteyeceksiniz. Öncelikle tasarım görünümünde bu ögeleri oluşturmalısınız.\\r\n\\r\n# Bunu Yap\\r\n\\r\n* Tasarım Görünüme geçin ve gri kare resmi ekleyin\\r\n\\t*\nResim ögesini ekranda <img src=\"https://images.code.org/8f4bc108415d83e5c528c9204502efc2-image-1491059181186.06.13\nAM.png\" style=\"width:75px\"> tıklayın ve sürükleyin\\r\n    * İyi bir ID verin\n(belki *kasaİçi*)\\r\n    * Resim olarak kullanmak için gri kareyi bulun\\r\n    *\nBu kasanın önünü gizleyeceği için gösterildiğinde kasanın içindeymiş gibi davranacaktır. \\r\n* Anahtar resm ekleyin\\r\n\\t* Resim ögesini sürükleyip bırakın<img\nsrc=\"https://images.code.org/8f4bc108415d83e5c528c9204502efc2-image-1491059181186.06.13\nAM.png\" style=\"width:75px\"> onto the screen\\r\n    * İyi bir ID verin\n(belki*anahtar*)\\r\n    * Kullanmak üzere bir anahtar resmi bulun \\r\n* Gri kare ve anahtar için Tasarım Görünümünde gizli özelliğine tıklayın. Tasarım Görünümünde onlar gizli olduğunda aşağıdaki gibi görünecektir.\\r\n\\r\n<img src=\"https://images.code.org/2c2c7e9996515f2b30d416b558fd1360-image-1489605526794.17.55\nPM.png\" style=\"width:200px\">"
-      Room Escape Workshop - 8: |2
+      Room Escape Workshop - 8: |-
         # Kasanın İçini gösterme\r
         \r
         Şimdi  kullanıcı doğru kodu girdiğinde anahtarı ve gri kareyi göstermek için kodu kur.
@@ -6099,7 +6192,7 @@ tr:
       course2_playlab_stage17_11: "Kendi hikaye oluşturun. İşiniz bittiğinde, hikayeni arkadaşların telefonlarında denesin. \\r  <br/> \\r \\r <h5>\\r <details>\\r <summary><b>fikir gerekiyor mu?</b></summary> \\r \\t <br/> \\r \\t<h5>\\r \\t\\t<ul>\\r \\t <li><strong>kim var orada?</strong>- rasgele karekterler görüntüle ve böylece sırada hangisi gösterilecek kimse bilmesin.</li> \\r <li><strong>bir maceraya gidiyoruz</strong> - arka plan değiştir, sonra  karakterler şu anda nerede oldukları hakkında konuşsun.</li> \\r <li><strong>pinball</strong> - ok tuşlarını kullanarak karakteri hareket ettir ( 'yukarı ok ', 'aşağı ok ne zaman'), ekranda  karakterler diğerleri ile çarpıştığında rasgele sesleri oynat.</li> \\r         </ul>\\r \\t</h5>\\r </details>\\r </h5>\\r\n"
       course3_artist_concept_challenge1: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\" width=\"200px\"/> \\r \\r şimdi bir meydan okuma!  \\r \\r burada sadece gösterilmiş olan blokları kullanan bir tasarımdır.  Deneme yanılma kullanmaktan çekinmeyin. \\r \\r tekrarlanan şekilson Bulmaca ile aynı,  İlk döngüde kullanılan uzunluk biraz daha küçük. "
       course3_artist_functions_challenge1: Bir kez bir fonksiyonu tanımladıktan sonra onu tekrar tekrar çalıştırabilirsin - ne zaman ve nerede istersen! Nasıl çalıştığını görmek için bu kodu deneyin, sonra onu kendi etkileyici tasarımınızı yapmak için değiştirin!
-      course3_artist_functions_challenge2: |2
+      course3_artist_functions_challenge2: |-
         Sadece tuvalin köşeleri gibi daha önceden belirlediğin noktalara zıplamakla kalmaz, 'jump to' komutunu kullanarak tam olarak istediğin noktaya ulaşabilirsin. Nasıl çalıştığını görmek için aşağıdaki kodu dene, sonra kendi programını yap!\r
         <xml>\r
           <block
@@ -6138,7 +6231,7 @@ tr:
         \r
         ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
       course4_artist_concept_challenge2: Aşağıdaki kodları kullanarak beş adet rüzgar gülü tasarımı oluştur.
-      course4_artist_functions_challenge2: |2
+      course4_artist_functions_challenge2: |-
         Sadece tuvalin köşeleri gibi daha önceden belirlediğin noktalara zıplamakla kalmaz, 'jump to' komutunu kullanarak tam olarak istediğin noktaya ulaşabilirsin. Nasıl çalıştığını görmek için aşağıdaki kodu dene, sonra kendi programını yap!\r
         <xml>\r
           <block
@@ -6407,7 +6500,7 @@ tr:
       courseA_playlab_events_challengeClone: |-
         Büyük hayvan yarışı Zamanı! ▼ bastığınızda aşağı ilerlesin. Kim en hızlı koşar
         
-      courseB_artist_loops10: |2
+      courseB_artist_loops10: |-
         Öğrendiklerini kullan ve resmi çiz. Sizce sanatçı eve gittiğinde ne gördü.\r
         \r
         <hr/>\r
@@ -6446,7 +6539,7 @@ tr:
         </table>\r
          
         
-      courseB_artist_loops10_2018: |2
+      courseB_artist_loops10_2018: |-
         Öğrendiklerini kullan ve resmi çiz. Sizce sanatçı eve gittiğinde ne gördü.\r
         \r
         <hr/>\r
@@ -6639,7 +6732,7 @@ tr:
         ___\r
         \r
         ![](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
-      courseC_artist_loops7a: |2
+      courseC_artist_loops7a: |-
         Farklı sayılarla çalıştırarak 'tekrarla' döngüsünü değiştirmeyi dene.  Bir çemberin etrafını tam olarak dolaşabilmek için ne kadar dönmen gerekir?\r
         - Kaç defa döneceğini değiştirmeyi dene\r
           - 6 defa 60 derece dönmeyi dene\r
@@ -6648,7 +6741,7 @@ tr:
         Bu resimde bir korsan, bir ninja ve bir zürafa kullanılmış. Onlar 20 derecelik açı ile 18 defa dönüyor.\r
         \r
         ![](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
-      courseC_artist_loops7a_2018: |2
+      courseC_artist_loops7a_2018: |-
         Farklı sayılarla çalıştırarak 'tekrarla' döngüsünü değiştirmeyi dene.  Bir çemberin etrafını tam olarak dolaşabilmek için ne kadar dönmen gerekir?\r
         - Kaç defa döneceğini değiştirmeyi dene\r
           - 6 defa 60 derece dönmeyi dene\r
@@ -6682,6 +6775,7 @@ tr:
       courseC_artist_prog_challenge1-doghouse: Jorge için bir köpek evi inşa edelim!
       courseC_artist_prog_challenge1: Hayvanların her biri için odalar çiz. Bu bulmacayı çözmek için birçok farklı yol var, keşfederek eğlen! Karelerin her kenarı 100 piksel uzunluğundadır. 
       courseC_artist_prog_challenge1_2018: Hayvanların her biri için odalar çiz. Bu bulmacayı çözmek için birçok farklı yol var, keşfederek eğlen! Karelerin her kenarı 100 piksel uzunluğundadır. 
+      courseC_artist_prog_challenge1_2019: Hayvanların her biri için odalar çiz. Bu bulmacayı çözmek için birçok farklı yol var, keşfederek eğlen! Karelerin her kenarı 100 piksel uzunluğundadır. 
       courseC_artist_prog_challenge2: "* Bana bu yoldaki sarı çizgileri boyamaya yardım et! *"
       courseC_collector_loops_challenge2: |-
         Döngüleri kullanarak hazine avı yapalım. Bu koddaki hatayı ayıklayarak toplayıcıya yardım et. Tüm hazineyi al!
@@ -6926,14 +7020,19 @@ tr:
         - Üçüncü iç döngü bir kare oluşturmalı.
       courseD_artist_project1: "**20 ve 50** piksel aralığındaki genişlikte küçük bir şekil çiz.  Sevdiğin herhangi bir şekil olabilir.  \\r\n<hr/>\\r\n\\r\nBunlara benzeyen bir çokgen yapmayı deneyebilirsin:  \\r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \\r\n\\r\n  \\r\n  \\r\nYa da bunlardan birine benzeyen soyut bir şekil:  \\r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
       courseD_artist_project1_2018: "**20 ve 50** piksel aralığındaki genişlikte küçük bir şekil çiz.  Sevdiğin herhangi bir şekil olabilir.  \\r\n<hr/>\\r\n\\r\nBunlara benzeyen bir çokgen yapmayı deneyebilirsin:  \\r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \\r\n\\r\n  \\r\n  \\r\nYa da bunlardan birine benzeyen soyut bir şekil:  \\r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
+      courseD_artist_project1_2019: "**20 ve 50** piksel aralığındaki genişlikte küçük bir şekil çiz.  Sevdiğin herhangi bir şekil olabilir.  \\r\n<hr/>\\r\n\\r\nBunlara benzeyen bir çokgen yapmayı deneyebilirsin:  \\r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \\r\n\\r\n  \\r\n  \\r\nYa da bunlardan birine benzeyen soyut bir şekil:  \\r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
       courseD_artist_project1a: "<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />Bu bulmaca, yeni bir çizim projesine başlamak için sana bir şans verecek! \\r\n\\r\n75 ve 105 derece arasında dönüşler kullanarak bir merdiven deseni çiz -- fakat sola ve sağa dönüşlerde aynı açıyı kullandığından emin ol.  \\r\n(Sebebini daha sonra göreceksin)"
       courseD_artist_project1a_2018: "<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />Bu bulmaca, yeni bir çizim projesine başlamak için sana bir şans verecek! \\r\n\\r\n75 ve 105 derece arasında dönüşler kullanarak bir merdiven deseni çiz -- fakat sola ve sağa dönüşlerde aynı açıyı kullandığından emin ol.  \\r\n(Sebebini daha sonra göreceksin)"
+      courseD_artist_project1a_2019: "<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />Bu bulmaca, yeni bir çizim projesine başlamak için sana bir şans verecek! \\r\n\\r\n75 ve 105 derece arasında dönüşler kullanarak bir merdiven deseni çiz -- fakat sola ve sağa dönüşlerde aynı açıyı kullandığından emin ol.  \\r\n(Sebebini daha sonra göreceksin)"
       courseD_artist_project2: "Şimdi şeklini al ve ileriye doğru bazı piksellleri atlayarak her satırda iki üç tane çiz.  \\r\n\\r\n-\nEğer şeklinin genişliğinden **daha az** atlarsan şekillerin üst üste gelebilir.\\r\n-\nEğer şeklinin genişliğinden **daha çok** atlarsan şekillerin arasında boşluk oluşabilir.\\r\n\\r\n<hr/>\\r\n\\r\n\nSatırın bunlar gibi düz çizgi ile bitebilir:\\r\n\\r\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\\r\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\\r\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\\r\n<br/>  <br/>\\r\n\\r\n\\r\nVeya şekillerin bunlardan biri gibi gezinebilir: \\r\n\\r\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\\r\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\\r\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
       courseD_artist_project2_2018: "Şimdi şeklini al ve ileriye doğru bazı piksellleri atlayarak her satırda iki üç tane çiz.  \\r\n\\r\n-\nEğer şeklinin genişliğinden **daha az** atlarsan şekillerin üst üste gelebilir.\\r\n-\nEğer şeklinin genişliğinden **daha çok** atlarsan şekillerin arasında boşluk oluşabilir.\\r\n\\r\n<hr/>\\r\n\\r\n\nSatırın bunlar gibi düz çizgi ile bitebilir:\\r\n\\r\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\\r\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\\r\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\\r\n<br/>  <br/>\\r\n\\r\n\\r\nVeya şekillerin bunlardan biri gibi gezinebilir: \\r\n\\r\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\\r\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\\r\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
+      courseD_artist_project2_2019: "Şimdi şeklini al ve ileriye doğru bazı piksellleri atlayarak her satırda iki üç tane çiz.  \\r\n\\r\n-\nEğer şeklinin genişliğinden **daha az** atlarsan şekillerin üst üste gelebilir.\\r\n-\nEğer şeklinin genişliğinden **daha çok** atlarsan şekillerin arasında boşluk oluşabilir.\\r\n\\r\n<hr/>\\r\n\\r\n\nSatırın bunlar gibi düz çizgi ile bitebilir:\\r\n\\r\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\\r\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\\r\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\\r\n<br/>  <br/>\\r\n\\r\n\\r\nVeya şekillerin bunlardan biri gibi gezinebilir: \\r\n\\r\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\\r\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\\r\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
       courseD_artist_project2a: "Şimdi, etrafında 180 derece dön ve tamamıyla aynı merdiven desenini çiz!  \\r\n\\r\n- Eğer Elsa'nın \\r <br/> çizip 180 derece dönmesini, çizip yeniden 180 derece dönmesini sağlamak için kodunu bir döngü içine yerleştirirsen, bu aşamanın kalan kısmı daha kolay olacaktır.\\r\n\\r\n<hr/>\\r\n\\r\nBurada 76 derecelik dönüş kullanılan bir merdiven örneği var:\\r\n\\r\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
       courseD_artist_project2a_2018: "Şimdi, etrafında 180 derece dön ve tamamıyla aynı merdiven desenini çiz!  \\r\n\\r\n- Eğer Elsa'nın \\r <br/> çizip 180 derece dönmesini, çizip yeniden 180 derece dönmesini sağlamak için kodunu bir döngü içine yerleştirirsen, bu aşamanın kalan kısmı daha kolay olacaktır.\\r\n\\r\n<hr/>\\r\n\\r\nBurada 76 derecelik dönüş kullanılan bir merdiven örneği var:\\r\n\\r\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
+      courseD_artist_project2a_2019: "Şimdi, etrafında 180 derece dön ve tamamıyla aynı merdiven desenini çiz!  \\r\n\\r\n- Eğer Elsa'nın \\r <br/> çizip 180 derece dönmesini, çizip yeniden 180 derece dönmesini sağlamak için kodunu bir döngü içine yerleştirirsen, bu aşamanın kalan kısmı daha kolay olacaktır.\\r\n\\r\n<hr/>\\r\n\\r\nBurada 76 derecelik dönüş kullanılan bir merdiven örneği var:\\r\n\\r\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
       courseD_artist_project3: "Sonra Elsa 'jump to 200 over and 200 down' blokunu kullanarak ortaya zıplar ve etrafında tekrar ve tekrar dönerek farklı yönlerde çizgiler çizer.  \\r\n\\r\nŞaşırtıcı kar taneleri yapabilirsin!\\r\n<hr/>\\r\nPolygonlar ile yapılan bu örnekler bir göz at:   \\r\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\\r\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\\r\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\\r\n\\r\nSoyut şekiller bunlardan biri gibi kar tanesi oluşturabilir:  \\r\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\\r\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\\r\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
       courseD_artist_project3_2018: "Sonra Elsa 'jump to 200 over and 200 down' blokunu kullanarak ortaya zıplar ve etrafında tekrar ve tekrar dönerek farklı yönlerde çizgiler çizer.  \\r\n\\r\nŞaşırtıcı kar taneleri yapabilirsin!\\r\n<hr/>\\r\nPolygonlar ile yapılan bu örnekler bir göz at:   \\r\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\\r\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\\r\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\\r\n\\r\nSoyut şekiller bunlardan biri gibi kar tanesi oluşturabilir:  \\r\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\\r\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\\r\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+      courseD_artist_project3_2019: "Sonra Elsa 'jump to 200 over and 200 down' blokunu kullanarak ortaya zıplar ve etrafında tekrar ve tekrar dönerek farklı yönlerde çizgiler çizer.  \\r\n\\r\nŞaşırtıcı kar taneleri yapabilirsin!\\r\n<hr/>\\r\nPolygonlar ile yapılan bu örnekler bir göz at:   \\r\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\\r\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\\r\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\\r\n\\r\nSoyut şekiller bunlardan biri gibi kar tanesi oluşturabilir:  \\r\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\\r\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\\r\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
       courseD_artist_project3a: |-
         Bu şekli daire etrafında 5 ya da 6 defa döndürün.\r
         - Eğer 5 defayı seçerseniz 72 derecelik açıyla deneyin\r
@@ -6954,8 +7053,19 @@ tr:
         Burada Elsa'nın 6 kez dönerek oluşturduğu desen var:\r
         \r
         ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
+      courseD_artist_project3a_2019: |-
+        Bu şekli daire etrafında 5 ya da 6 defa döndürün.\r
+        - Eğer 5 defayı seçerseniz 72 derecelik açıyla deneyin\r
+        -
+        Eğer 6 defa seçerseniz 60 derecelik açıyla deneyin\r
+        <hr/>\r
+        \r
+        Burada Elsa'nın 6 kez dönerek oluşturduğu desen var:\r
+        \r
+        ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
       courseD_artist_project4: "Eğer kar tanesinin iki farklı şeklini birbirinin üstüne diğerini az döndürerek katmanlara ayırırsak ne olur?    \\r\nDene ve ne edeceğini gör!"
       courseD_artist_project4_2018: "Eğer kar tanesinin iki farklı şeklini birbirinin üstüne diğerini az döndürerek katmanlara ayırırsak ne olur?    \\r\nDene ve ne edeceğini gör!"
+      courseD_artist_project4_2019: "Eğer kar tanesinin iki farklı şeklini birbirinin üstüne diğerini az döndürerek katmanlara ayırırsak ne olur?    \\r\nDene ve ne edeceğini gör!"
       courseD_artist_project4a: |
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"Şimdi, ne yapmamız gerekiyor? Haydi, kendi kış harikalar dünyamızı keşfedelim ve oluşturalım!"_\r
         \r
@@ -6972,8 +7082,17 @@ tr:
         - Elmas desenini daha uzun veya kısa yaparsanız ne olur?\r
         - Bir kar tanesinin üzerine iki tane daha çizince nasıl görünüyor?\r
         
+      courseD_artist_project4a_2019: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"Şimdi, ne yapmamız gerekiyor? Haydi, kendi kış harikalar dünyamızı keşfedelim ve oluşturalım!"_\r
+        \r
+        Oluşturduklarınızla oynamayı deneyin. Ne isterseniz onu çizin!\r
+        - Merdiven basamağı deseninde iki farklı açı kullanırsanız ne olur?\r
+        - Elmas desenini daha uzun veya kısa yaparsanız ne olur?\r
+        - Bir kar tanesinin üzerine iki tane daha çizince nasıl görünüyor?\r
+        
       courseD_artist_project5: 'Şekillerle ve açılarla ne tür yeni resimler çizebileceğini görmek için yaratıcı ol!'
       courseD_artist_project5_2018: 'Şekillerle ve açılarla ne tür yeni resimler çizebileceğini görmek için yaratıcı ol!'
+      courseD_artist_project5_2019: 'Şekillerle ve açılarla ne tür yeni resimler çizebileceğini görmek için yaratıcı ol!'
       courseD_artist_project_embedded: İşte yakında yapıyor olacağınız şey!
       courseD_artist_ramp11: |-
         Harika!  Şimdi sanatçıyı kullanarak bir kare yapalım!  Bloklar biraz farklıdır, ancak fikir aynıdır. \r <hr/> \r  200 piksel uzunlukta kenarlar vardır ve her açıyı yapmak için 90 derece döndürmek gerekir.
@@ -7007,15 +7126,20 @@ tr:
       courseD_bee_debugging_challenge2: Arıların nasıl nektar topladığını izle. Benzer deseni kullanarak arıların bütün balı yapmasına yardım edebilir misin?
       courseD_bee_nestedLoops2: Bu sefer tüm mümkün olduğunca az blok kullanarak tüm nektarı toplaması için arıya yardım edin.
       courseD_bee_nestedLoops2_2018: Bu sefer tüm mümkün olduğunca az blok kullanarak tüm nektarı toplaması için arıya yardım edin.
+      courseD_bee_nestedLoops2_2019: Bu sefer tüm mümkün olduğunca az blok kullanarak tüm nektarı toplaması için arıya yardım edin.
       courseD_bee_nestedLoops2_predict1: Bu sefer tüm mümkün olduğunca az blok kullanarak tüm nektarı toplaması için arıya yardım edin.
       courseD_bee_nestedLoops2_predict1_2018: Bu sefer tüm mümkün olduğunca az blok kullanarak tüm nektarı toplaması için arıya yardım edin.
+      courseD_bee_nestedLoops2_predict1_2019: Bu sefer tüm mümkün olduğunca az blok kullanarak tüm nektarı toplaması için arıya yardım edin.
       courseD_bee_nestedLoops5: 'Tüm çiçeklerdeki nektarları topla ve peteklere bal yap. İç içe döngü kullan. '
       courseD_bee_nestedLoops8: 'Tüm çiçeklerdeki nektarları topla ve peteklere bal yap. İç içe döngü kullan. '
       courseD_bee_nestedLoops8_2018: 'Tüm çiçeklerdeki nektarları topla ve peteklere bal yap. İç içe döngü kullan. '
+      courseD_bee_nestedLoops8_2019: 'Tüm çiçeklerdeki nektarları topla ve peteklere bal yap. İç içe döngü kullan. '
       courseD_bee_nestedLoops9: Balın tamamını yap.
       courseD_bee_nestedLoops9_2018: Balın tamamını yap.
+      courseD_bee_nestedLoops9_2019: Balın tamamını yap.
       courseD_bee_nestedLoops9_predict2: Balın tamamını yap.
       courseD_bee_nestedLoops9_predict2_2018: Balın tamamını yap.
+      courseD_bee_nestedLoops9_predict2_2019: Balın tamamını yap.
       courseD_bee_nested_loops_challenge1: Haydi döngüler kullanarak hazine avı yapalım! Toplayıcıya, yalnızca araç kutusundaki blokları kullanarak, en az iki hazine yığınına ulaşmasına yardım et.
       courseD_bee_nested_loops_challenge2: Haydi döngüler kullanarak hazine avı yapalım! Toplayıcıya, yalnızca araç kutusundaki blokları kullanarak, en az iki hazine yığınına ulaşmasına yardım et.
       courseD_bounce_events1: Bayrağa ulaşın! "sol ok olduğunda" karesine bir kare ekleyin ve oyuncuyu bayrağa doğru hareket ettirmek için "Çalıştır"a basın.
@@ -7222,24 +7346,34 @@ tr:
       courseD_maze_loops_challenge1: Haydi döngüler kullanarak hazine avı yapalım! Toplayıcıya, yalnızca araç kutusundaki blokları kullanarak, en az iki hazine yığınına ulaşmasına yardım et.
       courseD_maze_nestedLoops4: 'Beni ayçiçeğine götür!'
       courseD_maze_nestedLoops4_2018: 'Beni ayçiçeğine götür!'
+      courseD_maze_nestedLoops4_2019: 'Beni ayçiçeğine götür!'
       courseD_maze_ramp1: Bu bulmaca için tüm blokların birlikte sürükleyin ve izlemek için "Çalıştır" ı tıklatın!
       courseD_maze_ramp1_2018: Bu bulmaca için tüm blokların birlikte sürükleyin ve izlemek için "Çalıştır" ı tıklatın!
+      courseD_maze_ramp1_2019: Bu bulmaca için tüm blokların birlikte sürükleyin ve izlemek için "Çalıştır" ı tıklatın!
       courseD_maze_ramp2: Bir ilave 'ileri' bloğundan sürükleyin, sonra çalıştığı zaman ' tüm blokları ekleyebilirsiniz.
       courseD_maze_ramp2_2018: Bir ilave 'ileri' bloğundan sürükleyin, sonra çalıştığı zaman ' tüm blokları ekleyebilirsiniz.
+      courseD_maze_ramp2_2019: Bir ilave 'ileri' bloğundan sürükleyin, sonra çalıştığı zaman ' tüm blokları ekleyebilirsiniz.
       courseD_maze_ramp3: "* \"Bu domuz benim tüylerini  diken d\niken ediyor.\" * \\r \\r orada kuşun parçalanmasına sebep olacak bir blok var.  \\r Onu geri araç kutusuna geri sürükle."
       courseD_maze_ramp3_2018: "* \"Bu domuz benim tüylerini  diken d\niken ediyor.\" * \\r \\r orada kuşun parçalanmasına sebep olacak bir blok var.  \\r Onu geri araç kutusuna geri sürükle."
+      courseD_maze_ramp3_2019: "* \"Bu domuz benim tüylerini  diken d\niken ediyor.\" * \\r \\r orada kuşun parçalanmasına sebep olacak bir blok var.  \\r Onu geri araç kutusuna geri sürükle."
       courseD_maze_ramp4: "Yolu izleyin ve aptal domuza ulaşmamda bana öncülük edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!"
       courseD_maze_ramp4_2018: "Yolu izleyin ve aptal domuza ulaşmamda bana öncülük edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!"
+      courseD_maze_ramp4_2019: "Yolu izleyin ve aptal domuza ulaşmamda bana öncülük edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!"
       courseD_maze_ramp5: |-
         * Domuza ulaşmak için yolu takip edin!" * \r \r TNT den kaçının.
       courseD_maze_ramp5_2018: |-
         * Domuza ulaşmak için yolu takip edin!" * \r \r TNT den kaçının.
+      courseD_maze_ramp5_2019: |-
+        * Domuza ulaşmak için yolu takip edin!" * \r \r TNT den kaçının.
       courseD_maze_ramp5a: Sıraya dikkat edin ve o domuza nasıl ulaşacağınızı bulmaya çalışın!
       courseD_maze_ramp5a_2018: Sıraya dikkat edin ve o domuza nasıl ulaşacağınızı bulmaya çalışın!
+      courseD_maze_ramp5a_2019: Sıraya dikkat edin ve o domuza nasıl ulaşacağınızı bulmaya çalışın!
       courseD_maze_ramp5c: Domuza ulaşması için kuşa yardım et.
       courseD_maze_ramp5c_2018: Domuza ulaşması için kuşa yardım et.
+      courseD_maze_ramp5c_2019: Domuza ulaşması için kuşa yardım et.
       courseD_maze_ramp5d: Kuşu domuza götür.
       courseD_maze_ramp5d_2018: Kuşu domuza götür.
+      courseD_maze_ramp5d_2019: Kuşu domuza götür.
       courseD_maze_ramp6: |-
         * "Sakin ol ve kötü domuzu bulmama yardım et. Aksi takdirde sinirleniyorum!" * \r \r bir satırda birkaç blok varsa 'tekrarla' döngüsü içine taşıyın.  Bu daha az kod ile aynı şeyi yapmayı sağlar!
       courseD_maze_ramp7: "* \"Kızgın olma zamanı!\" * \\r \\r ** meydan okuma: ** kuşu domuza iletmek için öğrendiklerini kullanın!"
@@ -7311,7 +7445,7 @@ tr:
       courseE_artist_functions_challenge: Bir kez bir fonksiyonu tanımladıktan sonra onu tekrar tekrar çalıştırabilirsin - ne zaman ve nerede istersen! Nasıl çalıştığını görmek için bu kodu deneyin, sonra onu kendi etkileyici tasarımınızı yapmak için değiştirin!
       courseE_artist_functions_challenge1: Bir kez bir fonksiyonu tanımladıktan sonra onu tekrar tekrar çalıştırabilirsin - ne zaman ve nerede istersen! Nasıl çalıştığını görmek için bu kodu deneyin, sonra onu kendi etkileyici tasarımınızı yapmak için değiştirin!
       courseE_artist_functions_challenge1_2018: Bir kez bir fonksiyonu tanımladıktan sonra onu tekrar tekrar çalıştırabilirsin - ne zaman ve nerede istersen! Nasıl çalıştığını görmek için bu kodu deneyin, sonra onu kendi etkileyici tasarımınızı yapmak için değiştirin!
-      courseE_artist_functions_challenge2: |2
+      courseE_artist_functions_challenge2: |-
         Sadece tuvalin köşeleri gibi daha önceden belirlediğin noktalara zıplamakla kalmaz, 'jump to' komutunu kullanarak tam olarak istediğin noktaya ulaşabilirsin. Nasıl çalıştığını görmek için aşağıdaki kodu dene, sonra kendi programını yap!\r
         <xml>\r
           <block
@@ -7320,7 +7454,7 @@ tr:
             <title
         name="YPOS">???</title>\r
             </block></xml>
-      courseE_artist_functions_challenge2_2018: |2
+      courseE_artist_functions_challenge2_2018: |-
         Sadece tuvalin köşeleri gibi daha önceden belirlediğin noktalara zıplamakla kalmaz, 'jump to' komutunu kullanarak tam olarak istediğin noktaya ulaşabilirsin. Nasıl çalıştığını görmek için aşağıdaki kodu dene, sonra kendi programını yap!\r
         <xml>\r
           <block
@@ -7371,7 +7505,7 @@ tr:
       courseE_collector_ramp9: "Daha önceki ile aynı yolu al, ama bu sefer tüm hazineyi topla\n"
       courseE_farmer_concept4: Şimdi biraz daha derine inelim! Biz bütün bu kod bloğunu başka bir döngü içine koyduk fakat sanatçının tekrar başa dönüp bir sonraki çizgiyi çizmesi için onu kodlamalısın. Bunun için hangi kod bloklarını en dıştaki döngü sonunda yerleştirmeliyim?
       courseE_farmer_functions2ba: "*\"Çok fonksiyonel hissediyorum!\"*\\r\n\\r\nBu bulmacadaki tekrarlayan kodları fark ettin mi? Hepsini döngünün içine yerleştiremeyiz ama fonksiyonları **kullanabiliriz.**\n  \\r\n\\r\nBu bulmaca için tekrarlayan  kodları 'mısır ve kabak' (corn and pumpkin) isimli fonksiyona taşıdık. Şimdi bütün ihtiyacın olan küçük 'mısır ve kabak' (corn and pumpkin) **fonksiyon çağırma blokunu** ihtiyacın olan yere yerleştirmek. \\r\n\\r\n___\\r\n#####Her filiz *bir* mısır olarak büyüyecek yada hiçbir şey olmayacak."
-      courseE_farmer_functions2ba_2018: |2
+      courseE_farmer_functions2ba_2018: |-
         *"Çok fonksiyonel hissediyorum!"*\r
         \r
         Bu bulmacadaki tekrarlayan kodları fark ettin mi? Hepsini döngünün içine yerleştiremeyiz ama fonksiyonları **kullanabiliriz.**
@@ -7390,22 +7524,29 @@ tr:
       courseE_farmer_predict1_2018: "Şimdi çiftçi maruldan daha fazla şey büyüyor!  \\r \\r bu bulmacada, çiftçi marul veya ** değilse ** Mısır büyütüyor.  eğer marul / değilse' bloğu kullan ve marul topla **değilse **mısır topla. \\r \\r \\r \\r\n"
       courseE_farmer_ramp11a: "Amanın!  Marul demetleri çok yakın ve çiftçi kaç tane olduklarını bilmiyor! \\r \\r <hr/> \\r \\rYeni bir blok ekledik 'marul (olduğu) sürece'. Bu bloğu kullanın ve marul olduğu sürece toplayın\n"
       courseE_farmer_ramp11a_2018: "Amanın!  Marul demetleri çok yakın ve çiftçi kaç tane olduklarını bilmiyor! \\r \\r <hr/> \\r \\rYeni bir blok ekledik 'marul (olduğu) sürece'. Bu bloğu kullanın ve marul olduğu sürece toplayın\n"
+      courseE_farmer_ramp11a_2019: "Amanın!  Marul demetleri çok yakın ve çiftçi kaç tane olduklarını bilmiyor! \\r \\r <hr/> \\r \\rYeni bir blok ekledik 'marul (olduğu) sürece'. Bu bloğu kullanın ve marul olduğu sürece toplayın\n"
       courseE_farmer_ramp12: "Şimdi iç içe döngüleri kullanın ('tekrarla' ve 'sürece') ve bulmacayı çözün\\r \\r \\r \\r\n"
       courseE_farmer_ramp12_2018: "Şimdi iç içe döngüleri kullanın ('tekrarla' ve 'sürece') ve bulmacayı çözün\\r \\r \\r \\r\n"
       courseE_farmer_ramp12_forswap: "Şimdi iç içe döngüleri kullanın ('tekrarla' ve 'sürece') ve bulmacayı çözün\\r \\r \\r \\r\n"
       courseE_farmer_ramp12_forswap_2018: "Şimdi iç içe döngüleri kullanın ('tekrarla' ve 'sürece') ve bulmacayı çözün\\r \\r \\r \\r\n"
+      courseE_farmer_ramp12_forswap_2019: "Şimdi iç içe döngüleri kullanın ('tekrarla' ve 'sürece') ve bulmacayı çözün\\r \\r \\r \\r\n"
       courseE_farmer_ramp12a: "Şimdi çiftçi maruldan daha fazla şey büyüyor!  \\r \\r bu bulmacada, çiftçi marul veya ** değilse ** Mısır büyütüyor.  eğer marul / değilse' bloğu kullan ve marul topla **değilse **mısır topla. \\r \\r \\r \\r\n"
       courseE_farmer_ramp12a_2018: "Şimdi çiftçi maruldan daha fazla şey büyüyor!  \\r \\r bu bulmacada, çiftçi marul veya ** değilse ** Mısır büyütüyor.  eğer marul / değilse' bloğu kullan ve marul topla **değilse **mısır topla. \\r \\r \\r \\r\n"
       courseE_farmer_ramp12c: "Marul şimdi sadece yolun sonundadır.\\r\nBir marulun başına ulaşıncaya **kadar** yolun aşağısına inin,, ardından hala kalanlar **varken** onu toplamaya devam edin.  "
       courseE_farmer_ramp12c_2018: "Marul şimdi sadece yolun sonundadır.\\r\nBir marulun başına ulaşıncaya **kadar** yolun aşağısına inin,, ardından hala kalanlar **varken** onu toplamaya devam edin.  "
+      courseE_farmer_ramp12c_2019: "Marul şimdi sadece yolun sonundadır.\\r\nBir marulun başına ulaşıncaya **kadar** yolun aşağısına inin,, ardından hala kalanlar **varken** onu toplamaya devam edin.  "
       courseE_farmer_ramp12d: "Marul bahçenin her tarafına dağılmış durumda.\\r\nBir marulun başına ulaşıncaya **kadar** herbir yolun aşağısına inin,, ardından hala kalanlar **varken** onu toplamaya devam edin.  "
       courseE_farmer_ramp12d_2018: "Marul bahçenin her tarafına dağılmış durumda.\\r\nBir marulun başına ulaşıncaya **kadar** herbir yolun aşağısına inin,, ardından hala kalanlar **varken** onu toplamaya devam edin.  "
+      courseE_farmer_ramp12d_2019: "Marul bahçenin her tarafına dağılmış durumda.\\r\nBir marulun başına ulaşıncaya **kadar** herbir yolun aşağısına inin,, ardından hala kalanlar **varken** onu toplamaya devam edin.  "
       courseE_farmer_ramp12e: "Marul bahçenin her tarafına dağılmış durumda.\\r\nBir marulun başına ulaşıncaya **kadar** herbir yolun aşağısına inin,, ardından hala kalanlar **varken** onu toplamaya devam edin.  "
       courseE_farmer_ramp12e_2018: "Marul bahçenin her tarafına dağılmış durumda.\\r\nBir marulun başına ulaşıncaya **kadar** herbir yolun aşağısına inin,, ardından hala kalanlar **varken** onu toplamaya devam edin.  "
+      courseE_farmer_ramp12e_2019: "Marul bahçenin her tarafına dağılmış durumda.\\r\nBir marulun başına ulaşıncaya **kadar** herbir yolun aşağısına inin,, ardından hala kalanlar **varken** onu toplamaya devam edin.  "
       courseE_farmer_ramp12f: "** Meydan Okuma **: Bütün bitkileri elde etmenin tek yolu, marula ulaşıncaya kadar ileri gitmek, sonra  **eğer** sola giden bir yol varsa sola dönün. Aksi takdirde sağa dönün."
       courseE_farmer_ramp12f_2018: "** Meydan Okuma **: Bütün bitkileri elde etmenin tek yolu, marula ulaşıncaya kadar ileri gitmek, sonra  **eğer** sola giden bir yol varsa sola dönün. Aksi takdirde sağa dönün."
+      courseE_farmer_ramp12f_2019: "** Meydan Okuma **: Bütün bitkileri elde etmenin tek yolu, marula ulaşıncaya kadar ileri gitmek, sonra  **eğer** sola giden bir yol varsa sola dönün. Aksi takdirde sağa dönün."
       courseE_farmer_ramp12g: Marula ulaşana kadar ilerle, sonra sola dön **eğer** sola doğru yol varsa. Aksi taktirde, sağa dön.
       courseE_farmer_ramp12g_2018: Marula ulaşana kadar ilerle, sonra sola dön **eğer** sola doğru yol varsa. Aksi taktirde, sağa dön.
+      courseE_farmer_ramp12g_2019: Marula ulaşana kadar ilerle, sonra sola dön **eğer** sola doğru yol varsa. Aksi taktirde, sağa dön.
       courseE_farmer_ramp13: "Vay be!  Bu fidelere bak. Bazıları marul mazıları Mısıra dönecek.  'Eğer Mısır / değilse' bloğu ile  Mısır ise, Mısır al ** değilse **maruldur ve marul al. \\r \\r \\r \\r\n"
       courseE_farmer_ramp13_2018: "Vay be!  Bu fidelere bak. Bazıları marul mazıları Mısıra dönecek.  'Eğer Mısır / değilse' bloğu ile  Mısır ise, Mısır al ** değilse **maruldur ve marul al. \\r \\r \\r \\r\n"
       courseE_farmer_ramp15: |-
@@ -7503,13 +7644,19 @@ tr:
       courseF_IceAge_template: "Scrat hâlâ meşe palamutlarını arıyor!\n\\r\nHerbir olaya bir 'hareket aktörü 1' bloğu ekleyerek ve herbir ok tuşu için çalısıp, yön değiştirerek onun dönüp dolaşmasına yardımcı olun.\\r\nİşiniz bittiğinde, \"Çalıştır\" ı tıklayın ve tüm meşe palamutlarını toplamayı deneyin."
       courseF_artist_for2: 50 pikselden 100 piksel kenarına çıkan bu üçgen yığını oluşturmak için bir `for 'döngüsü içinde bir' tekrarlama 'döngüsü kullanın.
       courseF_artist_for2_2018: 50 pikselden 100 piksel kenarına çıkan bu üçgen yığını oluşturmak için bir `for 'döngüsü içinde bir' tekrarlama 'döngüsü kullanın.
+      courseF_artist_for2_2019: 50 pikselden 100 piksel kenarına çıkan bu üçgen yığını oluşturmak için bir `for 'döngüsü içinde bir' tekrarlama 'döngüsü kullanın.
       courseF_artist_for3: 20 piksellik kenarından 200 piksellik kenarına kadar giden bu üçgenleri oluşturun, herbir üçgen sonuncudan 20 piksel daha büyüktür.
       courseF_artist_for3_2018: 20 piksellik kenarından 200 piksellik kenarına kadar giden bu üçgenleri oluşturun, herbir üçgen sonuncudan 20 piksel daha büyüktür.
+      courseF_artist_for3_2019: 20 piksellik kenarından 200 piksellik kenarına kadar giden bu üçgenleri oluşturun, herbir üçgen sonuncudan 20 piksel daha büyüktür.
       courseF_artist_for5: |-
         Son görüntünün kodundaki sadece küçük bir değişiklik bu çizimi yaratabilir. Bu değişikliğin ne olduğunu öğrenebilir misin?\r
         ___\r
         İpucu: Bir şeyi kaldırmanız gerekiyor!
       courseF_artist_for5_2018: |-
+        Son görüntünün kodundaki sadece küçük bir değişiklik bu çizimi yaratabilir. Bu değişikliğin ne olduğunu öğrenebilir misin?\r
+        ___\r
+        İpucu: Bir şeyi kaldırmanız gerekiyor!
+      courseF_artist_for5_2019: |-
         Son görüntünün kodundaki sadece küçük bir değişiklik bu çizimi yaratabilir. Bu değişikliğin ne olduğunu öğrenebilir misin?\r
         ___\r
         İpucu: Bir şeyi kaldırmanız gerekiyor!
@@ -7521,10 +7668,16 @@ tr:
         Bir şekil için, olması gerekenden biraz daha az ya da çok dönersen, bu "neat" efekti oluşturur.\r
         \r
         Önceki bölümden birkaç kod dene ama bu kıvrımlı kare sarmalı oluşturmak için 89 derece döndür.
+      courseF_artist_for_Template_2019: |-
+        Bir şekil için, olması gerekenden biraz daha az ya da çok dönersen, bu "neat" efekti oluşturur.\r
+        \r
+        Önceki bölümden birkaç kod dene ama bu kıvrımlı kare sarmalı oluşturmak için 89 derece döndür.
       courseF_artist_for_challenge1: "Bu çizimi nasıl yeniden oluşturabileceğini kestirebiliyor musun?\\r\n\\r\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"\nwidth=\"350px\"/>\\r\n"
       courseF_artist_for_challenge1_2018: "Bu çizimi nasıl yeniden oluşturabileceğini kestirebiliyor musun?\\r\n\\r\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"\nwidth=\"350px\"/>\\r\n"
+      courseF_artist_for_challenge1_2019: "Bu çizimi nasıl yeniden oluşturabileceğini kestirebiliyor musun?\\r\n\\r\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"\nwidth=\"350px\"/>\\r\n"
       courseF_artist_for_challenge2: "Bu çizimi bir döngü ile nasıl yeniden oluşturabileceğini kestirebiliyor musun?\\r\n\\r\n<img src=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\"\nwidth=\"350px\"/>"
       courseF_artist_for_challenge2_2018: "Bu çizimi bir döngü ile nasıl yeniden oluşturabileceğini kestirebiliyor musun?\\r\n\\r\n<img src=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\"\nwidth=\"350px\"/>"
+      courseF_artist_for_challenge2_2019: "Bu çizimi bir döngü ile nasıl yeniden oluşturabileceğini kestirebiliyor musun?\\r\n\\r\n<img src=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\"\nwidth=\"350px\"/>"
       courseF_artist_fwp1: Bugün, güçlü bir fonksiyon editörü deneyeceğiz. 'bir kare çiz' fonksiyonunu düzenle ve hataları bul.
       courseF_artist_fwp1_2018: Bugün, güçlü bir fonksiyon editörü deneyeceğiz. 'bir kare çiz' fonksiyonunu düzenle ve hataları bul.
       courseF_artist_fwp2: "'Uzunluğu' adında bir parametre için fonksiyonu düzenleyin.  \\r \\r karenin kenarları 25 piksel daha büyük olmalıdır.  İlk karenin 25 piksel kenarları vardır.'?? ' yerine doğru değeri koyun ve resmi çizin."
@@ -7575,6 +7728,7 @@ tr:
         Bu üçgeni. \r çizmek için öğrendiklerini kullanın <hr/> \r her kenar100 piksel uzunluktadır. Her köşede 120 derece dönmek gerekir.
       courseF_artist_variables_challenge1: Uzunluk (length) değişkeni oluşturup bu ilginç deseni oluşturmak için kullanabilir misin?
       courseF_artist_variables_challenge1_2018: Uzunluk (length) değişkeni oluşturup bu ilginç deseni oluşturmak için kullanabilir misin?
+      courseF_artist_variables_challenge1_2019: Uzunluk (length) değişkeni oluşturup bu ilginç deseni oluşturmak için kullanabilir misin?
       courseF_artist_variables_challenge1a: |-
         <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png"
         width="250px"/>\r
@@ -7586,6 +7740,11 @@ tr:
         \r
         Böyle bir deseni oluşturmak için ihtiyacı olan her şeyi öğrendin! Bu bulmacanın zor olması gerekiyor. Çözümü bulana kadar çabalayabilir misin?
       courseF_artist_variables_challenge2_2018: |-
+        <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png"
+        width="250px"/>\r
+        \r
+        Böyle bir deseni oluşturmak için ihtiyacı olan her şeyi öğrendin! Bu bulmacanın zor olması gerekiyor. Çözümü bulana kadar çabalayabilir misin?
+      courseF_artist_variables_challenge2_2019: |-
         <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png"
         width="250px"/>\r
         \r
@@ -7622,8 +7781,11 @@ tr:
         Bütün nektarı toplamak için bu döngüyü kullan. Sayaç kadar tekrar ettirmek için bir kaç aksiyon(actions) var.
       courseF_bee_for_challenge1_2018: |-
         Bütün nektarı toplamak için bu döngüyü kullan. Sayaç kadar tekrar ettirmek için bir kaç aksiyon(actions) var.
+      courseF_bee_for_challenge1_2019: |-
+        Bütün nektarı toplamak için bu döngüyü kullan. Sayaç kadar tekrar ettirmek için bir kaç aksiyon(actions) var.
       courseF_bee_for_challenge2: Mümkün olan en az blokla bu bulmacayı çöz.
       courseF_bee_for_challenge2_2018: Mümkün olan en az blokla bu bulmacayı çöz.
+      courseF_bee_for_challenge2_2019: Mümkün olan en az blokla bu bulmacayı çöz.
       courseF_bee_for_challenge3: "** Şununla say döngüsü (for loops)- süper meydan okuma:** \nMümkün olan en az sayıdaki blokla bu bulmacayı çöz."
       courseF_bee_functions2: "İşleri kolaylaştırmak için fonksiyonları öğrenme zamanı!\\r\n\\r\nBurada, yeni bir *fonksiyon editörü* kullanacaksınız.  Bu editör fonksiyonunuzu düzenlerken ortaya çıkan ayrı bir penceredir. Çalışma alanında kodlama yaparken fonksiyonunuzdaki tüm kodu göremezsiniz, ama merak etmeyin...kodlarınız hala orada!  \\r\n___\\r\n\\r\n Arı bir çiçekte olduğunda nektarı alan bu fonksiyonla alıştırma yapalım.  İçindeki kodu görmek için mavi \"düzenle\" butonuna tıklayın!\\r\n\\r\nHer çiçekteki nektarı toplamak için `sadece nektar al` fonksiyonunu kullanın."
       courseF_bee_functions2_2018: "İşleri kolaylaştırmak için fonksiyonları öğrenme zamanı!\\r\n\\r\nBurada, yeni bir *fonksiyon editörü* kullanacaksınız.  Bu editör fonksiyonunuzu düzenlerken ortaya çıkan ayrı bir penceredir. Çalışma alanında kodlama yaparken fonksiyonunuzdaki tüm kodu göremezsiniz, ama merak etmeyin...kodlarınız hala orada!  \\r\n___\\r\n\\r\n Arı bir çiçekte olduğunda nektarı alan bu fonksiyonla alıştırma yapalım.  İçindeki kodu görmek için mavi \"düzenle\" butonuna tıklayın!\\r\n\\r\nHer çiçekteki nektarı toplamak için `sadece nektar al` fonksiyonunu kullanın."
@@ -7880,7 +8042,7 @@ tr:
       grade2_MakeDogTag_9: "Güzel bir şey yapmanın zamanı geldi!\n\\r\n\\r\nSon bulmacada yaptığınız kodu tekrar yapın, fakat bu kez döngü içinde en sona sola 30 derece dönüş ekleyin. Şimdi 8 yerine 24 kez tekrarlatın."
       grade2_PuppyLoops_10: |-
         Öğretmenim başladığım işi bitirmem gerektiğini söylüyor! \r \r Fırıldağı bitirmeme yardım et. Sorunun ne olduğunu anlayabildin mi?
-      grade2_PuppyLoops_2: |2
+      grade2_PuppyLoops_2: |-
         Aniden, büyülü bir blok göründü!  'Tekrarla' bloğu ile içindeki kodu tekrar tekrar çalıştırabilirsiniz. \r
          \r 'Tekrarla' bloğu içine sadece bir 'İlerle' bloğu koyarak domuza ulaşabilir misin?
       grade2_PuppyLoops_4: Domuza ulaşmak için daha az blok kullanarak iki döngü kullanın.
@@ -7889,7 +8051,7 @@ tr:
         Görünüşe bakılırsa kod içindeki C ters çizilmiş. \r
         \r
         Tekrar C gibi görünmesini sağlayabilir misin?
-      grade2_puppy_loops2: |2
+      grade2_puppy_loops2: |-
         Aniden, büyülü bir blok göründü!  'Tekrarla' bloğu ile içindeki kodu tekrar tekrar çalıştırabilirsiniz. \r
          \r 'Tekrarla' bloğu içine sadece bir 'İlerle' bloğu koyarak domuza ulaşabilir misin?
       grade2_puppy_loops4: Domuza ulaşmak için daha az blok kullanarak iki döngü kullanın.
@@ -7954,7 +8116,7 @@ tr:
       grade3_bee_conditionals_quantum2: "Yine bulutlar. Bütün bulutlar çiçek içermez. Nektar almadan önce çiçekmi diye kontrol et. "
       grade3_maze_Loop1: "**Değerlendirme:** Beni ayçiçeğine sadece 5 blok kullanarak götür! "
       grade3_maze_loops2: 'Beni ayçiçeğine götür!'
-      grade3_maze_nestedLoops2: |2
+      grade3_maze_nestedLoops2: |-
         Aniden, büyülü bir blok göründü!  'Tekrarla' bloğu ile içindeki kodu tekrar tekrar çalıştırabilirsiniz. \r
          \r 'Tekrarla' bloğu içine sadece bir 'İlerle' bloğu koyarak domuza ulaşabilir misin?
       grade3_maze_nestedLoops3: Domuza ulaştır. Sadece bir adet 'İlerle' bloğu kullanabilirsin
@@ -8139,10 +8301,13 @@ tr:
       post-assessment survey q37: "(İsteğe bağlı) AP sınav almadıysan, senin onu alman için ne fark gerekir?"
       ramp_artist_loops2: Her hareket arasında rasgele bir renk değiştirip, bu adımı beş kez tekrarlayarak biraz güzellik katın.
       ramp_artist_loops2_2018: Her hareket arasında rasgele bir renk değiştirip, bu adımı beş kez tekrarlayarak biraz güzellik katın.
+      ramp_artist_loops2_2019: Her hareket arasında rasgele bir renk değiştirip, bu adımı beş kez tekrarlayarak biraz güzellik katın.
       ramp_artist_loops3: "Renkli çizgiyi tekrar 5 kere çizin, \nbu sefer bir 'tekrarla' döngüsü kullanarak."
       ramp_artist_loops3_2018: "Renkli çizgiyi tekrar 5 kere çizin, \nbu sefer bir 'tekrarla' döngüsü kullanarak."
+      ramp_artist_loops3_2019: "Renkli çizgiyi tekrar 5 kere çizin, \nbu sefer bir 'tekrarla' döngüsü kullanarak."
       ramp_artist_loops4: Diğer her şey döngünün içine girdikten sonra 72 derece sağa dön eklediğinde ne olur?
       ramp_artist_loops4_2018: Diğer her şey döngünün içine girdikten sonra 72 derece sağa dön eklediğinde ne olur?
+      ramp_artist_loops4_2019: Diğer her şey döngünün içine girdikten sonra 72 derece sağa dön eklediğinde ne olur?
       ramp_artist_loops5: |-
         Döngüler kesinlikle kod yazmayı daha kolay hale getirir!
         Bu merdiveni çizmek için döngüleri kullanın.
@@ -8155,10 +8320,18 @@ tr:
         - Her basamak 50 piksel uzunluğunda ve 50 
         piksel yüksekliğindedir
         - Her yönde 90 derece dönmeniz gerekecek
+      ramp_artist_loops5_2019: |-
+        Döngüler kesinlikle kod yazmayı daha kolay hale getirir!
+        Bu merdiveni çizmek için döngüleri kullanın.
+        - Her basamak 50 piksel uzunluğunda ve 50 
+        piksel yüksekliğindedir
+        - Her yönde 90 derece dönmeniz gerekecek
       ramp_artist_loops7: Tekrarlayan deseni bulun ve kodu daha kısa yapın!
       ramp_artist_loops7_2018: Tekrarlayan deseni bulun ve kodu daha kısa yapın!
+      ramp_artist_loops7_2019: Tekrarlayan deseni bulun ve kodu daha kısa yapın!
       ramp_artist_loops9: Bu bulmacayı 200 piksel kenarlı bir kare çizerek çözün.
       ramp_artist_loops9_2018: Bu bulmacayı 200 piksel kenarlı bir kare çizerek çözün.
+      ramp_artist_loops9_2019: Bu bulmacayı 200 piksel kenarlı bir kare çizerek çözün.
       u3-old-drawing-view: |
         # Senin Kendi Çizimin\r
         \r

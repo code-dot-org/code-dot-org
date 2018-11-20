@@ -1602,3 +1602,15 @@ sq:
           stages:
             Artist:
               name: Artisti
+        aquatic:
+          title: 'Minecraft: Udhëtimi ujor'
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Krijimi i një fondacioni
+            Conditionals with Cards:
+              name: Kushtoret me Karta
+            Envelope Variables:
+              name: Variablat Zarf
+            For Loop Fun:
+              name: Qef me Ciklet For

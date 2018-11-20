@@ -384,7 +384,51 @@ de:
       CourseF_PlayLab_vars2: Das Rennen im letzten Rätsel war nicht sehr fair! Ändere
         die Variable „Hunde_Geschwindigkeit“ so, dass du mehr Fahnen sammeln kannst
         als die Katze. Der erste, der 10 Fahnen hat, gewinnt!
+      Dance_Party_01: |-
+        *Wir haben eine Tanzparty!*
+
+        Ziehe den 'Neu erstellen'-Block in den Arbeitsbereich und verbinde ihn mit dem 'Setup'-Block, um deinen ersten Tänzer zu erstellen.
+
+        * *Du kannst auch die Glühbirne auf der linken Seite klicken, wenn du mehr Informationen oder weitere Herausforderungen möchtest.*
+      Dance_Party_01_low: |-
+        *Wir haben eine Tanzparty!*
+
+        Ziehe den 'Neu erstellen'-Block in den Arbeitsbereich und verbinde ihn mit dem 'Setup'-Block, um deinen ersten Tänzer zu erstellen.
+
+        * *Du kannst auch die Glühbirne auf der linken Seite klicken, wenn du mehr Informationen oder weitere Herausforderungen möchtest.*
+      Dance_Party_02: |-
+        Bring den Elch zum Tanzen!
+
+        Zieh den <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">neuer&#95;T&auml;nzer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> Block in den Arbeitsbereich. Verbinde ihn unterhalb mit dem <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"Takt"</title></block></xml> Block. Dein Tänzer sollte nun eine neue Bewegung nach dem vierten Takt ausführen.
+
+
+        **Takte** werden benutzt um Zeit in Musik zu messen. In dieser Anleitung ist ein Takt vier Beats lang.
+      Dance_Party_03: "*Jetzt grooven wir!* \n\nFüge einen <xml><block type=\"Dancelab_atTimestamp\"><title
+        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"Takt\"</title></block></xml>
+        Block deinem Arbeitsbereich hinzu. Der Tänzer macht eine neue Bewegung nach
+        6 Takten."
+      Dance_Party_04: |-
+        *Dieser Tanz braucht mehr Biss*
+
+        Suche nach dem neuen Block, welcher dir Hintergrundeffekte ermöglicht. Verfolge wie die Effekte sich im Takt der Musik ändern!
+      Dance_Party_05: |-
+        Verwende einen weiteren Block, um die Bewegung deines Tänzers **alle 2 Takte** ändern zu lassen!
+
+        * Wähle `(Nächster)`, `(Vorhergehend)`, oder `(Zufällig)` um dem Tänzer mitzuteilen eine andere Bewegung auszuführen, jedesmal wenn dein Code läuft.
+      Dance_Party_06: |-
+        *Wir brauchen mehr Tänzer!*
+
+        Erstelle einen Hintergrundtänzer `backup_dancer1, welcher mit der Katze tanzt.
+      Dance_Party_08: |-
+        Jeder Tänzer hat einen Satz _Eigenschaften_, diese legen fest wie er aussieht.
+
+        Ein Tänzer wirkt weiter weg wenn du seine _Größe_ verringerst. Kannst du beiden Hintergrundtänzern die gleiche Größe geben?
       Function intro Ryan: "In deinem Arbeitsbereich befindet sich eine **Funktion**
+        namens \"Brücke bauen\".  Sie umfasst den gesamten Code, den du zum Überqueren
+        des Flusses benötigst! \r\n \r\nDocke den kleinen, grünen Block zweimal in
+        deinem Arbeitsbereich an, um den Weg zu reparieren und {currentPlayerName}
+        zur Redstone-Fackel [redstone_torch] zu bringen."
+      Function intro Ryan_2019: "In deinem Arbeitsbereich befindet sich eine **Funktion**
         namens \"Brücke bauen\".  Sie umfasst den gesamten Code, den du zum Überqueren
         des Flusses benötigst! \r\n \r\nDocke den kleinen, grünen Block zweimal in
         deinem Arbeitsbereich an, um den Weg zu reparieren und {currentPlayerName}
@@ -419,6 +463,14 @@ de:
       HOC 2018 Level_9b: "Du hast das Riff erreicht. Suche jetzt nach dem **Herz des
         Meeres** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
         Verwende blaue und rote Korallen, um die Schatz**truhe** zu erreichen![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
+      HOC Dance 4_draft: |-
+        Verwende einen weiteren Block, um die Bewegung deines Tänzers **alle 2 Takte** ändern zu lassen!
+
+        * Wähle `(Nächster)`, `(Vorhergehend)`, oder `(Zufällig)` um dem Tänzer mitzuteilen eine andere Bewegung auszuführen, jedesmal wenn dein Code läuft.
+      HOC Dance 5_draft: |-
+        *Wir brauchen mehr Tänzer!*
+
+        Erstelle einen Hintergrundtänzer `backup_dancer1, welcher mit der Katze tanzt.
       K-1 Bee Loops 2: Verwende eine „Wiederhole“-Schleife zum Bewegen, dann den Nektar
         einzusammeln und Honig herzustellen.
       K-1 Bee Loops 3: Verwende drei „Wiederhole"-Schleifen, um Nektar zu holen und
@@ -458,7 +510,13 @@ de:
         bewegen\"-Block unter dem \"beim Ausführen\"-Block ein, um den Agenten auf
         die Druckplatte [PressurePlate_Up] zu bringen. Wähle dann \"Ausführen\" aus
         und verwende die Pfeiltasten, um {currentPlayerName} aus dem Haus zu bewegen
-        und die **Truhe** [chest] einzusammeln.  \n"
+        und die **Truhe** [chest] einzusammeln.  "
+      MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} ist im Haus gefangen. Der Agent
+        steht jedoch zur Hilfe bereit!   \r\n \r\n   \r\nDocke im Arbeitsbereich einen
+        \"vorwärts bewegen\"-Block unter dem \"beim Ausführen\"-Block ein, um den
+        Agenten auf die Druckplatte [PressurePlate_Up] zu bringen. Wähle dann \"Ausführen\"
+        aus und verwende die Pfeiltasten, um {currentPlayerName} aus dem Haus zu bewegen
+        und die **Truhe** [chest] einzusammeln.  "
       MC_HOC_2017_02: Der Spieler muss in den verborgenen Hain gelangen.  Hilf dem
         Agenten, das Tor zu öffnen, indem du Code schreibst, mit dem er sich zur Druckplatte
         bewegt.
@@ -466,6 +524,10 @@ de:
         [map_empty] hinter der verschlossenen Tür rechts. \r\n \r\nDocke Code im Arbeitsbereich
         an, um den Agenten auf die Druckplatte zu bewegen [PressurePlate_Up], damit
         {currentPlayerName} durchkann. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} geht auf Abenteuertour! Hol die
+        **Karte** [map_empty] hinter der verschlossenen Tür rechts. \r\n \r\nDocke
+        Code im Arbeitsbereich an, um den Agenten auf die Druckplatte zu bewegen [PressurePlate_Up],
+        damit {currentPlayerName} durchkann. "
       MC_HOC_2017_02_Kiki: "Der Spieler zieht zu einem Abenteuer los. Zuerst benötigt
         er jedoch die Fackel, die sich hinter der verschlossenen Tür befindet. \r\n\r\nProgrammiere
         den Agenten so, dass er sich zweimal vorwärts bewegt, um dem weißen Weg zu
@@ -477,6 +539,9 @@ de:
       MC_HOC_2017_03_Cole: "{currentPlayerName} setzt sein Abenteuer fort und benötigt
         den **Kompass** [compass], um sich auf die Reise vorzubereiten.  \r\n   \r\nProgrammiere
         den Agenten, um das Tor zu öffnen. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} setzt sein Abenteuer fort und
+        benötigt den **Kompass** [compass], um sich auf die Reise vorzubereiten.  \r\n
+        \  \r\nProgrammiere den Agenten, um das Tor zu öffnen. "
       MC_HOC_2017_03_Kiki: "Das Abenteuer des Spielers beginnt hinter der verschlossenen
         Tür im verborgenen Hain!  \r\n\r\n\r\nHilf dem Agenten beim Öffnen der Tür,
         indem du ihn so programmierst, dass er die Druckplatte erreicht."
@@ -488,7 +553,12 @@ de:
         zum Überqueren der ersten beiden Druckplatten verwendest."
       MC_HOC_2017_04POINT5_RYAN: "Du bist drüben! \r\n\r\nBringe {currentPlayerName}
         jetzt sicher durch das Labyrinth, um die **Axt** [diamond_axe] einzusammeln.\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Du bist drüben! \r\n\r\nBringe {currentPlayerName}
+        jetzt sicher durch das Labyrinth, um die **Axt** [diamond_axe] einzusammeln.\r\n"
       MC_HOC_2017_04_Cole: "Der Agent kann sich über Wasser bewegen!  \r\n \r\nVerwende
+        eine \"wiederholen\"-Schleife, um diese Aufgabe zu lösen und {currentPlayerName}
+        den **Eimer** [bucket_empty] hinter der Tür holen zu lassen. "
+      MC_HOC_2017_04_Cole_2019: "Der Agent kann sich über Wasser bewegen!  \r\n \r\nVerwende
         eine \"wiederholen\"-Schleife, um diese Aufgabe zu lösen und {currentPlayerName}
         den **Eimer** [bucket_empty] hinter der Tür holen zu lassen. "
       MC_HOC_2017_04_Kiki: "Der Eintritt in den verborgenen Hain hat zu dieser wunderschönen
@@ -502,6 +572,9 @@ de:
       MC_HOC_2017_05_Cole: "Oh nein! Die Brücke ist kaputt! \r\n\r\nProgrammiere den
         Agenten mit dem \"platzieren\"-Block, um die Brücke neu zu bauen. Dann kann
         {currentPlayerName} die **Schaufel** [diamond_shovel] erreichen."
+      MC_HOC_2017_05_Cole_2019: "Oh nein! Die Brücke ist kaputt! \r\n\r\nProgrammiere
+        den Agenten mit dem \"platzieren\"-Block, um die Brücke neu zu bauen. Dann
+        kann {currentPlayerName} die **Schaufel** [diamond_shovel] erreichen."
       MC_HOC_2017_05_Josh: "Oh nein! Die Brücke ist kaputt! \n\n\nProgrammiere den
         Agenten, um die Brücke neu zu bauen. Dann kann der Spieler die **Schaufel**
         erreichen."
@@ -512,11 +585,17 @@ de:
       MC_HOC_2017_06_Cole: "Noch ein Fluss. Aber dieser ist viel breiter! \r\n \r\nÄndere
         den Code, damit der Agent eine Brücke baut. Dann kann {currentPlayerName}
         die **Spitzhacke** [diamond_pickaxe] erreichen. "
+      MC_HOC_2017_06_Cole_2019: "Noch ein Fluss. Aber dieser ist viel breiter! \r\n
+        \r\nÄndere den Code, damit der Agent eine Brücke baut. Dann kann {currentPlayerName}
+        die **Spitzhacke** [diamond_pickaxe] erreichen. "
       MC_HOC_2017_06_Josh: "Noch ein Fluss. Aber dieser ist viel breiter!  \r\n\r\nÄndere
         den Code, damit der Agent eine Brücke über den Fluss baut."
       MC_HOC_2017_06_Kiki: "Noch ein Fluss. Aber dieser ist viel breiter!  \r\n \r\nÄndere
         den Code, damit der Agent eine Brücke über das Wasser baut."
       MC_HOC_2017_07_Cole: "Da ist Eis im Weg!  \r\n \r\nDie \"Weg räumen\"-Funktion
+        hilft dir dabei, das Eis zu zerstören und {currentPlayerName} zur Lore [minecart_normal]
+        zu bringen! "
+      MC_HOC_2017_07_Cole_2019: "Da ist Eis im Weg!  \r\n \r\nDie \"Weg räumen\"-Funktion
         hilft dir dabei, das Eis zu zerstören und {currentPlayerName} zur Lore [minecart_normal]
         zu bringen! "
       MC_HOC_2017_07_Kiki: "Schleifen sind nicht die einzige Möglichkeit, um Code
@@ -554,6 +633,10 @@ de:
         im Arbeitsbereich? \r\n \r\nVerwende die Funktionen und anderen Code aus der
         Werkzeugkiste, um einen Pfad für die Lore zu räumen und dann das **Feuerzeug**
         [flint_and_steel] einzusammeln. \r\n "
+      MC_HOC_2017_10_RETRY_2019: "Siehst du den Unterschied zwischen den beiden Funktionen
+        im Arbeitsbereich? \r\n \r\nVerwende die Funktionen und anderen Code aus der
+        Werkzeugkiste, um einen Pfad für die Lore zu räumen und dann das **Feuerzeug**
+        [flint_and_steel] einzusammeln. \r\n "
       MC_HOC_2017_10_RYAN: Versuche, Funktionen ganz neu zu erstellen, mit denen der
         Agent seine Lore einfacher erstellt und der Spieler das orangefarbene Quadrat
         erreicht.
@@ -571,12 +654,17 @@ de:
       MC_HOC_2017_Ali: 'Sieh dir die Funktionen unten an. Wie kannst du diese verwenden,
         um die Ghasts zu vermeiden und {currentPlayerName} beim sicheren Erreichen
         des **Zauberbuchs** [book_enchanted] zu helfen?  '
+      MC_HOC_2017_Ali_2019: 'Sieh dir die Funktionen unten an. Wie kannst du diese
+        verwenden, um die Ghasts zu vermeiden und {currentPlayerName} beim sicheren
+        Erreichen des **Zauberbuchs** [book_enchanted] zu helfen?  '
       MC_HOC_2017_FP10x10: "**Freies Spiel:** Jetzt bist du dran! Kannst du alle Diamanten
         in diesem Level einsammeln? "
       MC_HOC_2017_FP10x10_RE: "**Freies Spiel:** Jetzt bist du dran! Kannst du alle
         Diamanten in diesem Level einsammeln? "
       MC_HOC_2017_FP20x20: "**Freies Spiel:** Jetzt bist du dran! Verwende den Code
         des Agenten, um die Welt zu erkunden."
+      MC_HOC_2017_FP20x20_2019: "**Freies Spiel:** Jetzt bist du dran! Verwende den
+        Code des Agenten, um die Welt zu erkunden."
       MC_HOC_2017_Ryan_03: "Wusstest du, dass du mehr als ein Code-Element in eine
         Schleife packen kannst?  \r\n\r\nVerwende eine \"wiederholen\"-Schleife, um
         den Agenten Blöcke im Wasser platzieren zu lassen. So entstehe eine Brücke
@@ -636,6 +724,8 @@ de:
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
       courseD_bee_nestedLoops8_2018: Sammle den gesamten Nektar jeder Blüte und erzeuge
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
+      courseD_bee_nestedLoops8_2019: Sammle den gesamten Nektar jeder Blüte und erzeuge
+        Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
       courseD_bounce_events1: "Berühre die Fahne. \r\nHänge einen Baustein an den
         „wenn-Pfeil-nach-links“-Baustein und starte das Programm mit „Ausführen“ \r\n\r\nKlicke
         mit der Maus auf den Linkspfeil, um den Spieler zur Fahne zu bewegen."
@@ -643,6 +733,9 @@ de:
         Bring mich zu der Sonnenblume!
         (Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen.
       courseD_maze_nestedLoops4_2018: |-
+        Bring mich zu der Sonnenblume!
+        (Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen.
+      courseD_maze_nestedLoops4_2019: |-
         Bring mich zu der Sonnenblume!
         (Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen.
       courseE_bee_functions3: Funktionen sind Programm-Bausteine, die eine Aufgabe
@@ -664,6 +757,8 @@ de:
         zu lösen.
       courseF_bee_for_challenge2: Löse diese Aufgabe mit so wenig Bausteinen wie möglich.
       courseF_bee_for_challenge2_2018: Löse diese Aufgabe mit so wenig Bausteinen
+        wie möglich.
+      courseF_bee_for_challenge2_2019: Löse diese Aufgabe mit so wenig Bausteinen
         wie möglich.
       frozen circle function in circle: Jetzt erstellen wir 20 überschneidende Kreise
         und drehen die einzelnen Kreise um 18 Grad.

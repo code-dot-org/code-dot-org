@@ -1395,3 +1395,13 @@ eu:
           stages:
             Artist:
               name: Artista
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Oinarri bat Eraikitzen
+            Conditionals with Cards:
+              name: Baldintzak Txartelekin
+            Envelope Variables:
+              name: Gutun-azaleko aldagarriak
+            For Loop Fun:
+              name: Begizta jostarirako

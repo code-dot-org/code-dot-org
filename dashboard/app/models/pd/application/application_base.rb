@@ -158,6 +158,15 @@ module Pd::Application
       raise 'Abstract method must be overridden by inheriting class'
     end
 
+    # Log the send email to the status log
+    def log_sent_email(email)
+      entry = {
+        time: Time.zone.now,
+        title: email.email_type + '_email'
+      }
+      update(status_timestamp_change_log: sanitize_status_timestamp_change_log.append(entry).to_json)
+    end
+
     self.table_name = 'pd_applications'
 
     # Override in derived class
@@ -362,6 +371,28 @@ module Pd::Application
     # Default response score hash
     def default_response_score_hash
       {}
+    end
+
+    def sanitize_status_timestamp_change_log
+      if status_timestamp_change_log
+        JSON.parse(status_timestamp_change_log).map(&:symbolize_keys)
+      else
+        []
+      end
+    end
+
+    # Record when the status changes and who changed it
+    # Ideally we'd implement this as an after_save action, but since we want the current
+    # user to be included, this needs to be explicitly passed in in the controller
+    def update_status_timestamp_change_log(user)
+      log_entry = {
+        title: status,
+        changing_user_id: user.try(:id),
+        changing_user_name: user.try(:name) || user.try(:email),
+        time: Time.zone.now
+      }
+
+      update(status_timestamp_change_log: sanitize_status_timestamp_change_log.append(log_entry).to_json)
     end
   end
 end

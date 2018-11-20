@@ -284,3 +284,24 @@ zh-CN:
       RelayProgramming_2018:
         title: 编程接力
         desc: 这次活动会从对"调试和坚持"的简短课程开始，然后会很快进入钟表竞赛。学生们会被分队，并一起编一个一次只能执行一条指令的程序。
+      courseB_unplugged_MRF_2019:
+        title: 我的机器人朋友
+        desc: 为朋友写代码来学习编程！
+      BuildingAFoundation_2019:
+        title: '丢失翻译: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: '丢失翻译: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: '翻译丢失: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
+        desc: '翻译丢失: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.desc'
+      Conditionals_2019:
+        title: 条件语句
+        desc: 为了学习有关条件语句，学生们在玩卡片游戏的同时遵守一些规则，比如"如果我画一张红色的卡片，我得一分"以及"如果我画一张黑色的卡片，你得一分。"
+      courseF_unplugged_powerOfWords_2019:
+        title: '翻译丢失: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: '翻译丢失: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: '翻译丢失: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: '翻译丢失: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: '翻译丢失: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: '翻译丢失: en-US.data.unplugged.ForLoopFun_2018.desc'

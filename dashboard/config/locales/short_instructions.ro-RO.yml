@@ -2316,6 +2316,8 @@ ro:
         toate trei laturile au aceeaşi lungime.'
       courseC_artist_prog5_2018: 'Această casă are nevoie de un acoperiş! Desenează
         triunghiul.  Sugestie: toate trei laturile au aceeaşi lungime.'
+      courseC_artist_prog5_2019: 'Această casă are nevoie de un acoperiş! Desenează
+        triunghiul.  Sugestie: toate trei laturile au aceeaşi lungime.'
       courseC_maze_debugging10: Repară acest nivel prin rearanjarea şi adăugarea blocurilor
         de instrucţiuni pentru a mă duce la porc!
       courseD_artist_binary1: "Codul binar este un mod de a reprezenta informatia
@@ -2359,6 +2361,8 @@ ro:
         miere la fiecare fagure. Folosește o buclă imbricată. '
       courseD_bee_nestedLoops8_2018: 'Colectează tot nectarul din fiecare floare și
         fă miere la fiecare fagure. Folosește o buclă imbricată. '
+      courseD_bee_nestedLoops8_2019: 'Colectează tot nectarul din fiecare floare și
+        fă miere la fiecare fagure. Folosește o buclă imbricată. '
       courseD_bounce_events10: Există un acum un gol în partea de sus. Atașează blocurile
         "scor" și "scor oponent" la blocurile "când bila este in gaură" și "când bila
         ratează paleta" ca să faci un joc. Vezi câte puncte poți înscrie înainte ca
@@ -2394,8 +2398,11 @@ ro:
         pentru a folosi mai putine blocuri.
       courseD_maze_nestedLoops4_2018: Du-mă la floarea-soarelui! Foloseste bucla "repeta"
         pentru a folosi mai putine blocuri.
+      courseD_maze_nestedLoops4_2019: Du-mă la floarea-soarelui! Foloseste bucla "repeta"
+        pentru a folosi mai putine blocuri.
       courseD_maze_nestedLoops6: Du-mă la floarea-soarelui!
       courseD_maze_nestedLoops6_2018: Du-mă la floarea-soarelui!
+      courseD_maze_nestedLoops6_2019: Du-mă la floarea-soarelui!
       courseE_artist_functions1: "Ajuta zombieul sa deseneze ochelarii folosind patrate
         cu laturi de 100 de pixeli. \r Spatiul dintre ochelari este de 75 de pixeli."
       courseE_artist_functions1_2018: "Ajuta zombieul sa deseneze ochelarii folosind
@@ -2426,20 +2433,30 @@ ro:
         a obţine aceast lucru!
       courseF_artist_for7_2018: Fă trei modificări mici la codul de la ultimul nivel
         pentru a obţine aceast lucru!
+      courseF_artist_for7_2019: Fă trei modificări mici la codul de la ultimul nivel
+        pentru a obţine aceast lucru!
       courseF_artist_for_challenge1: Îți poți da seama cum să re-creezi acest desen?
       courseF_artist_for_challenge1_2018: Îți poți da seama cum să re-creezi acest
+        desen?
+      courseF_artist_for_challenge1_2019: Îți poți da seama cum să re-creezi acest
         desen?
       courseF_artist_for_challenge2: Îţi poți da seama cum să re-creezi acest desen
         cu o singură buclă?
       courseF_artist_for_challenge2_2018: Îţi poți da seama cum să re-creezi acest
         desen cu o singură buclă?
+      courseF_artist_for_challenge2_2019: Îţi poți da seama cum să re-creezi acest
+        desen cu o singură buclă?
       courseF_bee_for8: "Ati prins ideea! Care ar trebui sa fie variabila voastra
         crescatoare pentru a colecta 3, 6, 9, 12 sau 15 randuri de polen?\r\n"
       courseF_bee_for8_2018: "Ati prins ideea! Care ar trebui sa fie variabila voastra
         crescatoare pentru a colecta 3, 6, 9, 12 sau 15 randuri de polen?\r\n"
+      courseF_bee_for8_2019: "Ati prins ideea! Care ar trebui sa fie variabila voastra
+        crescatoare pentru a colecta 3, 6, 9, 12 sau 15 randuri de polen?\r\n"
       courseF_bee_for_challenge2: Rezolvă acest puzzle folosind cât mai puține blocuri
         posibil.
       courseF_bee_for_challenge2_2018: Rezolvă acest puzzle folosind cât mai puține
+        blocuri posibil.
+      courseF_bee_for_challenge2_2019: Rezolvă acest puzzle folosind cât mai puține
         blocuri posibil.
       courseF_bee_for_challenge3: Rezolvă acest puzzle folosind cât mai puține blocuri
         posibil.

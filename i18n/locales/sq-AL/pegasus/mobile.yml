@@ -557,7 +557,7 @@
   dashboard_sections_table_pairing_allowed: "Programim në çift"
   dashboard_sections_table_students: "Studentët"
   dashboard_sections_table_code: "Pjesë Kodi"
-  dashboard_sections_name: "Emri Seksionit"
+  dashboard_sections_name: 'Emri Seksionit'
   dashboard_sections_choose_secret: "Nëse ti dëshiron të sigurosh llogari për studentët e tu, zgjidh një mënyrë fshehje një <b>fjalë</b> ose një<b> figurë</b> për atë seksion."
   dashboard_sections_secret_word: "Një <b>fjalë</b> të lejon ty të vendosësh një fjalë të fshehtë për çdo student."
   dashboard_sections_secret_picture: "Një <b>figurë</b> të lejon ty të vendosësh një figurë të fshehtë për çdo student, ideale për studentët, të cilët nuk mund të shkruajnë ende."
@@ -567,7 +567,7 @@
   dashboard_sections_close: "Mbyll"
   dashboard_students_add_multiple: 'Shkruaj emrat e studentëve të tu, një për çdo rresht:'
   dashboard_students_new_section: "Ti ke krijuar një seksion të ri! Tani shto studentë duke përdorur butonat lartë <b>Shto studentë</b> dhe <b>Shto studentë të shumëfishtë</b>."
-  dashboard_students_name: "Emri"
+  dashboard_students_name: 'Emri'
   dashboard_students_progress: "Ecuri"
   dashboard_students_male: "Mashkull"
   dashboard_students_female: "Femër"
@@ -1105,6 +1105,11 @@
   user_header_playlab: "Play Lab"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
+  applab_tile_start_tutorial: "Fillo"
+  aquatic_name: 'Minecraft: Udhëtimi ujor'
+  account_sign_up_email_opt_in: "A mund t'ju dërgojmë email-e mbi përditësimin e kurseve tona, mundësitë lokale apo të rejat e shkencave kompjuterike? (afërsisht një herë në muaj)"
+  account_sign_up_child_accept_terms: "Konfirmoj se kam lejen e prindit ose të kujdestarit ligjor për të përdorur shërbimet e Code.org."
+  hoc_overview_start_tutorial: "Fillo"
   hoc2018_creativity_create: "Krijo"
   hoc2018_mc_page_title: "Tutorialet e Orës së Kodimit Minecraft"
   hoc2018_mc_details: "Shumë gjuhë | Browserët modern dhe tabletat | Klasat 2+"
@@ -1121,3 +1126,7 @@
   hoc2018_mc_video_title_inspire_girl: "Frymëzo një vajzë"
   hoc2018_mc_homepage_join_us: "Na u bashko!"
   hoc2018_mc_homepage_try_it: "Provoje"
+  hoc2018_dance_party_button: "Fillo"
+  hoc2018_dance_teacher_resources_tile1_button: "Plani Mësimor"
+  hoc2018_dance_teacher_resources_tile2_button: "Aktiviteti Unplugged"
+  hoc2018_dance_amazon_about_future_engineer_button: "Mëso më shumë"

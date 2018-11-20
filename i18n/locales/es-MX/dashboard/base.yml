@@ -78,6 +78,7 @@ es-MX:
   prize: 'Premio'
   more_info: 'Más información '
   auth:
+    continue_with: 'Conectate con %{provider}'
     sign_in_with: 'Iniciar sesión con %{provider}'
     signed_in: '¡Sesión iniciada!'
     signed_out: 'Haz finalizado tu sesión en <a href="%{url}">Code.org</a>.'
@@ -102,6 +103,7 @@ es-MX:
     already_in_use: "Tu %{provider} ya está conectado a otra cuenta de Code.org."
     already_linked: "El %{provider} ya está vinculada a tu cuenta Code.org."
   signup_form:
+    email_signup: 'Regístrate con tu correo electrónico'
     student_count: '%{count} estudiantes ya se han registrado.'
     teacher_count: '%{count} maestros ya se han registrado.'
     overview: 'Crea una cuenta para ver tu progreso o administrar tu grupo. <a href="/"> Puedes explorar varios niveles y puzles </a> sin una cuenta, pero necesitarás registrarte para guardar tu progresso y projectos.'
@@ -330,6 +332,7 @@ es-MX:
       playlab: 'Laboratorio de juegos'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
+      dance: 'Fiesta de Baile'
       view_all: 'Ver todos los proyectos...'
     popup:
       progress_for_user: "progreso de %{name}"
@@ -364,7 +367,6 @@ es-MX:
       example: 'Solución de ejemplo'
       example_with_number: 'Ejemplo de solución %{solution_number}'
       submitted_on: 'Enviado el %{date}'
-      last_updated: 'Última actualización:'
       unsubmit: 'NO enviado'
       worked_with: 'Trabajado con'
       update_lock_settings: 'Actualizar los ajustes de bloqueo aquí.'
@@ -582,6 +584,8 @@ es-MX:
       body_short: "Diseña una aplicación, código con bloques o JavaScript para hacerla funcionar, luego compártela en segundos."
       audience: 'Mayores de 13 años'
       cta: 'Aprende cómo'
+    dance:
+      title: 'Fiesta de Baile'
     hoc:
       title: 'Laberinto clásico'
       body: 'Prueba los fundamentos de la ciencia de la computación. Millones lo han intentado.'

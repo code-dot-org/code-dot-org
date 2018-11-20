@@ -228,6 +228,7 @@
   studiobar_title_nolink: "Explora Code Studio"
   studiobar_elementary_title: "Cursos elementales"
   studiobar_elementary_body: "Tres nuevos cursos para K‑5"
+  studiobar_dance_title: "Fiesta para bailar"
   studiobar_hoc_title: "La Hora de Programación"
   studiobar_hoc_body: "Aprende a programar con Angry Birds"
   studiobar_flappy_title: "Código de Flappy"
@@ -402,7 +403,7 @@
   mc_gradelevel: "Mayores de 6 años"
   mc_platformtext: "Cualquier navegador moderno, smartphone, tableta"
   mc_specs: "Muchos lenguajes| Navegadores modernos, tablets | Edad 6-106"
-  minecraft_agent: 'Minecraft: Viaje del héroe'
+  minecraft_agent: "Minecraft: Viaje del héroe"
   minecraft_designer: "Diseñador de Minecraft"
   minecraft_adventurer: "Aventurero de Minecraft"
   minecraft_tutorials: "Tutoriales de Minecraft Hora del Código"
@@ -656,7 +657,7 @@
   dashboard_sections_table_stage_extras: "Etapa Extra"
   dashboard_sections_table_students: "Alumnos"
   dashboard_sections_table_code: "Código de sección"
-  dashboard_sections_name: "Nombre de la sección"
+  dashboard_sections_name: 'Nombre de la sección'
   dashboard_sections_choose_secret: "Si quieres proporcionar cuentas a tus alumnos, elige un tipo secreto de <b>palabra</b> o <b>imagen</b> para esa sección."
   dashboard_sections_secret_word: "Una <b>palabra</b> te permite establecer una palabra secreta para cada alumno."
   dashboard_sections_secret_picture: "Una <b>imagen</b> te permite definir una imagen secreta para cada alumno, ideal para estudiantes más jóvenes que aún no escriben."
@@ -682,7 +683,7 @@
   dashboard_students_add_multiple: 'Escribe o pega los nombres de sus alumnos, uno por línea:'
   dashboard_students_new_google_classroom_section: "Para añadir los estudiantes, usa <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> y luego presiona el botón <b>Sincronizar estudiantes de Google Classroom</b> que se encuentra en la parte superior."
   dashboard_students_new_section: "¡Has creado una nueva sección! Ahora, añade a tus alumnos usando los botones anteriores <b>Añadir alumno</b> y <b>Añadir varios alumnos</b>."
-  dashboard_students_name: "Nombre"
+  dashboard_students_name: 'Nombre'
   dashboard_students_progress: "Progreso"
   dashboard_students_male: "Hombre"
   dashboard_students_female: "Mujer"
@@ -1450,8 +1451,10 @@
   user_header_settings: "Mi cuenta"
   user_header_logout: "Cerrar sesión"
   user_header_signin: "Iniciar Sesión"
+  user_header_create: 'Crea '
   user_header_gamelab: "Laboratorio de juego"
   user_header_playlab: "Laboratorio de juegos"
+  user_header_dance: "Fiesta para bailar"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
   user_header_view_all: "Ver todos los proyectos..."
@@ -1484,20 +1487,25 @@
   syncing_students_instructions: 'Si su sección de Code.org está desactualizada con su lista de alumnos en Google Classroom, haga clic en el botón "Sincronizar estudiantes de Google Classroom" en la pestaña "Gestionar estudiantes":'
   google_sign_in_instruct: 'Desde ahí, deberán elegir la opcion "Registrarse con una cuenta de Google":'
   applab-intro_name: Introducción al App Lab
-  account_sign_up_email_opt_in: "¿Podemos enviarle por correo electrónico las actualizaciones a nuestros cursos, oportunidades locales u otras noticias de informática?"
+  applab_tile_start_tutorial: "Inicio"
+  aquatic_name: 'Minecraft: Udhëtimi ujor'
+  account_sign_up_email_opt_in: "¿Podemos enviarte por correo electrónico actualizaciones a nuestros cursos, oportunidades locales u otras noticias de informática? (aproximadamente una vez al mes)"
   account_sign_up_child_accept_terms: "Confirmo que tengo la autorización de mis padres o guardianes legales para utilizar los servicios de Code.org."
-  hoc2018_creativity: "creatività"
+  hoc_overview_dance_title: "Fiesta para bailar"
+  hoc_overview_start_tutorial: "Inicio"
+  hoc2018_creativity: "creatividad"
   hoc2018_creativity_create: "Crear"
-  hoc2018_creativity_hoc_coming: "L'ora del Codice sta arrivando…"
+  hoc2018_creativity_hoc_coming: "La Hora del Código está por llegar…"
   hoc2018_creativity_what_will_you_create: "¿Qué vas a crear?"
-  hoc2018_creativity_homepage: "Hayallerine dogru uc ve yeniliklerini ortaya cikar. Kod Saati ve kendine has yaraticilikla basla, ne olursa olsun. Videomuzu izle."
-  hoc2018_creativity_hoc_about: 'Bu sene, Kod Saati yaraticilik hakkinda olacaktir. '
-  hoc2018_creativity_social_media: 'Bu sene, #HourofCode yaraticilik hakkindadir. Ben varim! Ya sen?'
-  hoc2018_creativity_social_media_2: 'Bu sene, #HourofCode yaraticilik hakkindadir. Ne olusturacaksin?'
-  hoc2018_creativity_courses: "Code.or kurslari ile ilerle"
-  hoc2018_creativity_courses_link: "Code.org <a href=\"https://studio.code.org/courses\"> Code.org kurslari </a> ile ilerle"
+  hoc2018_creativity_homepage: "Da vuelo a la imaginación y el nacimiento a la innovación. Empieza con una hora de código y establece tu propio estilo creativo, cualquiera que sea. Ve nuestro video."
+  hoc2018_creativity_hoc_about: 'Este año, la hora del código se enfoca en la creatividad. '
+  hoc2018_creativity_social_media: 'Este año #HourOfCode se enfoca en la creatividad. ¡Cuenten conmigo! ¿Y tú?'
+  hoc2018_creativity_social_media_2: 'Este año #HourOfCode se enfoca en la creatividad. ¿Qué vas a crear?'
+  hoc2018_creativity_courses: "Ve más allá con los cursos de Code.org"
+  hoc2018_creativity_courses_link: "Ve más allá con <a href=\"https://studio.code.org/courses\">cursos Code.org</a>"
   hoc2018_mc_page_title: "Tutoriales de Minecraft Hora del Código"
   hoc2018_mc_details: "Muchos idiomas| Navegadores y tabletas modernos | Grados 2+"
+  hoc2018_mc_hero_title: "Minecraft: Viaje del héroe"
   hoc2018_mc_designer_title: "Diseñador de Minecraft"
   hoc2018_mc_designer_description: "Construye un juego de Minecraft. Crea tus propias versiones de las gallinas, ovejas, Creepers, zombis y más."
   hoc2018_mc_adventurer_title: "Aventurero de Minecraft"
@@ -1529,3 +1537,10 @@
   hoc2018_mc_minecraft_education: "Educacion Minecraft"
   hoc2018_mc_continue_learning: "Continúe aprendiendo con minecraft."
   hoc2018_mc_go_to_mc_education: "Ir a Minecraft Education"
+  hoc2018_dance_party_main_heading: "Fiesta para bailar"
+  hoc2018_dance_party_box_title: "Fiesta para bailar"
+  hoc2018_dance_party_button: "Inicio"
+  hoc2018_dance_teacher_resources_tile1_button: "Plan de clases"
+  hoc2018_dance_teacher_resources_tile2_button: "Actividad fuera de línea"
+  hoc2018_dance_amazon_about_future_engineer_button: "Aprende más"
+  hoc2018_dance_amazon_scholarship_programs_button: "Aplícalo ahora"

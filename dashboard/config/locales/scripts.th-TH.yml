@@ -324,6 +324,8 @@ th:
               name: จับคู่
             Maze:
               name: เขาวงกต
+            Minecraft:
+              name: ไมน์คราฟท์
         algebraPD2b:
           stages:
             Defining Functions:
@@ -433,9 +435,8 @@ th:
             Hour of Code 2015:
               name: ชั่วโมงของรหัส 2015
         mc:
-          title: ชั่วโมงแห่งการโค้ดด้วย Minecraft
-          description: ใช้บล็อกของโค้ดเพื่อนำ Steve หรือ Alex ในการผจญภัยผ่านโลก Minecraft
-            นี้
+          title: ชั่วโมงแห่งการเขียนโค้ดกับไมน์คราฟท์
+          description: ใช้บล็อกของโค้ดเพื่อพาสตีฟหรือแอเล็กซ์ผจญภัยไปในโลกของไมน์คราฟท์นี้
           description_short: สำรวจโลก Minecraft ผ่านโค้ด
           stages:
             Hour of Code 2015:
@@ -597,12 +598,12 @@ th:
             Lists:
               name: รายการ
         minecraft:
-          title: นักออกแบบชั่วโมงแห่งโค้ดด้วย Minecraft
+          title: นักออกแบบชั่วโมงแห่งโค้ดตอนไมน์คราฟท์
           description_short: เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง
           description: เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง
           stages:
             Minecraft Hour of Code Designer:
-              name: นักออกแบบชั่วโมงแห่งโค้ดด้วย Minecraft
+              name: นักออกแบบชั่วโมงแห่งโค้ดตอนไมน์คราฟท์
         coursea-draft:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -785,6 +786,8 @@ th:
               name: โค้ดที่หมดจดและการดีบั๊ก
         artist-and-bb8:
           stages:
+            F5 Minecraft:
+              name: F5 ไมน์คราฟท์
             Programming with BB-8:
               name: การเขียนโปรแกรมกับบีบี-8
             Bounce:
@@ -1109,7 +1112,7 @@ th:
         hero:
           stages:
             Minecraft Hour of Code:
-              name: ชั่วโมงแห่งการโค้ดด้วย Minecraft
+              name: ชั่วโมงแห่งการเขียนโค้ดกับไมน์คราฟท์
           title: 'ไมน์คราฟท์: การผจญภัยของฮีโร่'
           description: การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด!
             มาผจญภัยไปกับไมน์คราฟท์ด้วยการใช้โค้ดเป็นเครื่องมือ
@@ -1407,7 +1410,7 @@ th:
             Conditionals with Cards:
               name: เงื่อนไข
             Minecraft Hour of Code:
-              name: ชั่วโมงแห่งการโค้ดด้วย Minecraft
+              name: ชั่วโมงแห่งการเขียนโค้ดกับไมน์คราฟท์
             Functions in Minecraft:
               name: ฟังก์ชั่นในไมน์คราฟท์
         coursef-2018:
@@ -1469,7 +1472,54 @@ th:
           stages:
             Artist:
               name: ศิลปิน
+        dance:
+          stages:
+            Dance Party:
+              name: งานเต้นรำ
+          title: งานเต้นรำ
         frozen-2018-test-b:
           stages:
             Artist:
               name: ศิลปิน
+        aquatic:
+          stages:
+            Aquatic:
+              name: สัตว์น้ำ
+          title: 'ไมน์คราฟท์: การผจญภัยใต้น้ำ'
+          description_short: ใช้ความคิดสร้างสรรค์และทักษะต่างๆ ในการแก้ปัญหาเพื่อสำรวจและสร้างโลกใต้น้ำด้วยโค้ด!
+          description: ไมน์คราฟท์กลับมาพร้อมกับกิจกรรมใหม่เอี่ยม! ใช้ความคิดสร้างสรรค์และทักษะการแก้ปัญหาของคุณ
+            เพื่อสำรวจและสร้างโลกใต้น้ำด้วยโค้ด
+        dance--draft:
+          stages:
+            Dance Party:
+              name: งานเต้นรำ
+        dance-draft:
+          stages:
+            Dance Party:
+              name: งานเต้นรำ
+        coursef-2019:
+          stages:
+            Sequence in Maze:
+              name: การจัดลำดับก่อนหลังกับเขาวงกต
+            Building a Foundation:
+              name: สร้างพื้นฐาน
+            Programming in Artist:
+              name: การเขียนโปรแกรมในเรื่องศิลปิน
+            Loops in Artist:
+              name: ลูปกับศิลปิน
+            Nested Loops in Bee/Zombie:
+              name: ลูปซ้อนลูป ในเกมผึ้งและซอมบี้
+            Nested Loops with Frozen:
+              name: ลูปซ้อนลูป กับเกม Frozen
+            Conditionals with Cards:
+              name: เงื่อนไข
+            Functions in Minecraft:
+              name: ฟังก์ชั่นในไมน์คราฟท์
+            For Loop Fun:
+              name: สนุกกับ For ลูป
+            For Loops in Bee:
+              name: ลูป For ในเรื่องผึ้ง
+        dance-low:
+          stages:
+            Dance Party:
+              name: งานเต้นรำ

@@ -1527,3 +1527,13 @@ el:
           stages:
             Artist:
               name: Καλλιτέχνης
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+            Conditionals with Cards:
+              name: Υποθέσεις με Κάρτες
+            Envelope Variables:
+              name: Μεταβλητές
+            For Loop Fun:
+              name: Διασκέδαση με το Βρόχο Για

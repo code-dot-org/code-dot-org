@@ -248,8 +248,8 @@ nn:
             'Maze: Sequence':
               name: 'Labyrint: sekvens'
         usability:
-          title: Brukbarheitstesting
-          description: Eit utval av tema om brukbarheitstesting frå kurs 4.
+          title: Testing om det er brukarvenleg
+          description: Eit utval av tema om test om det er brukbart for kurs 4.
           stages:
             Binary:
               name: Binær
@@ -700,8 +700,8 @@ nn:
             The Internet:
               name: Internett er for alle
         algebraPD2a:
-          description: 'Fase 2 Online: Blanda sommerstudie'
-          description_short: 'Fase 2 Online: Blanda sommerstudie'
+          description: 'Fase 2 Online: Blanda sommarstudie'
+          description_short: 'Fase 2 Online: Blanda sommarstudie'
           stages:
             Booleans:
               name: Boolske verdiar
@@ -755,8 +755,8 @@ nn:
             Web Lab:
               name: Nett-lab
         algebraPD2b:
-          description: 'Fase 2 Online: Blanda sommerstudie'
-          description_short: 'Fase 2 Online: Blanda sommerstudie'
+          description: 'Fase 2 Online: Blanda sommarstudie'
+          description_short: 'Fase 2 Online: Blanda sommarstudie'
           stages:
             Booleans:
               name: Boolske verdiar
@@ -799,8 +799,8 @@ nn:
             Next Steps:
               name: Neste steg
         ECSPD2:
-          description: 'Fase 2 Online: Blanda sommerstudie'
-          description_short: 'Fase 2 Online: Blanda sommerstudie'
+          description: 'Fase 2 Online: Blanda sommarstudie'
+          description_short: 'Fase 2 Online: Blanda sommarstudie'
           stages:
             0: |-
               Unit 1, Days 1-2
@@ -813,8 +813,8 @@ nn:
             Wrap-up:
               name: Oppsummering
         algebraPD2:
-          description: 'Fase 2 Online: Blanda sommerstudie'
-          description_short: 'Fase 2 Online: Blanda sommerstudie'
+          description: Støtte for akademisk år
+          description_short: Støtte for akademisk år
           stages:
             Lesson Prep:
               name: Førebuing av leksjon
@@ -825,8 +825,8 @@ nn:
             Welcome!:
               name: Velkomen!
         sciencePD2b:
-          description: 'Fase 2 Online: Blanda sommerstudie'
-          description_short: 'Fase 2 Online: Blanda sommerstudie'
+          description: 'Fase 2 Online: Blanda sommarstudie'
+          description_short: 'Fase 2 Online: Blanda sommarstudie'
           stages:
             Welcome!:
               name: Velkomen!
@@ -845,16 +845,16 @@ nn:
             Next Steps:
               name: Neste steg
         sciencePD2b-iZone:
-          description: 'Fase 2 Online: Blanda sommerstudie'
-          description_short: 'Fase 2 Online: Blanda sommerstudie'
+          description: 'Fase 2 Online: Blanda sommarstudie'
+          description_short: 'Fase 2 Online: Blanda sommarstudie'
           stages:
             Welcome!:
               name: Velkomen!
             Wrap-Up:
               name: Oppsummering
         ECSPD2-iZone:
-          description: 'Fase 2 Online: Blanda sommerstudie'
-          description_short: 'Fase 2 Online: Blanda sommerstudie'
+          description: 'Fase 2 Online: Blanda sommarstudie'
+          description_short: 'Fase 2 Online: Blanda sommarstudie'
           stages:
             0: |-
               Unit 1, Days 1-2
@@ -867,8 +867,8 @@ nn:
             Wrap-up:
               name: Oppsummering
         ECSPD2-NexTech:
-          description: 'Fase 2 Online: Blanda sommerstudie'
-          description_short: 'Fase 2 Online: Blanda sommerstudie'
+          description: 'Fase 2 Online: Blanda sommarstudie'
+          description_short: 'Fase 2 Online: Blanda sommarstudie'
           stages:
             0: |-
               Unit 1, Days 1-2
@@ -1373,7 +1373,7 @@ nn:
               name: 'Leksjonar 12 - 13: Abstraksjon på internett'
         basketball:
           title: Lag eit basketballspel
-          description_short: Lag eit basketballspel
+          description_short: Velg laget ditt og programmer et basketballspel
           description: Lag eit basketballspel
           stages:
             Bounce:
@@ -1419,13 +1419,13 @@ nn:
             'Real-life Algorithms: Plant a Seed':
               name: 'Verkelege algoritmar: Plante eit frø'
             Events in Play Lab:
-              name: Hendingar i Spellab
+              name: Hendingar i Spel-lab
             Going Places Safely:
               name: Går stader trygt
         courseb-draft:
           stages:
             Events in Play Lab:
-              name: Hendingar i Spellab
+              name: Hendingar i Spel-lab
             'Real-life Algorithms: Plant a Seed':
               name: 'Verkelege algoritmar: Plante eit frø'
             Your Digital Footprint:
@@ -1437,7 +1437,7 @@ nn:
             Binary Bracelets:
               name: Binær armbånd
             Events in Play Lab:
-              name: Hendingar i Spellab
+              name: Hendingar i Spel-lab
             Your Digital Footprint:
               name: Dine digitale fotspor
             Building a Foundation:
@@ -1628,7 +1628,7 @@ nn:
             'Real-life Algorithms: Plant a Seed':
               name: 'Verkelege algoritmar: Plante eit frø'
             Events in Play Lab:
-              name: Hendingar i Spellab
+              name: Hendingar i Spel-lab
           title: Kurs A
           assignment_family_title: Kurs A
         courseb-2017:
@@ -1636,7 +1636,7 @@ nn:
             'Real-life Algorithms: Plant a Seed':
               name: 'Verkelege algoritmar: Plante eit frø'
             Events in Play Lab:
-              name: Hendingar i Spellab
+              name: Hendingar i Spel-lab
           title: Kurs B
           assignment_family_title: Kurs B
         coursec-2017:
@@ -1644,7 +1644,7 @@ nn:
             'Real-life Algorithms: Paper Planes':
               name: 'Verkelege algoritmar: Papirfly'
             Events in Play Lab:
-              name: Hendingar i Spellab
+              name: Hendingar i Spel-lab
           title: Kurs C
           assignment_family_title: Kurs C
         coursed-2017:
@@ -1719,7 +1719,7 @@ nn:
             'Real-life Algorithms: Plant a Seed':
               name: 'Verkelege algoritmar: Plante eit frø'
             Events in Play Lab:
-              name: Hendingar i Spellab
+              name: Hendingar i Spel-lab
             Spelling Bee:
               name: Stavekonkurranse
         subgoal-labels-opt-in:
@@ -2110,3 +2110,15 @@ nn:
           stages:
             Artist:
               name: Kunstnar
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Bygge eit fundament
+            Nested Loops in Bee/Zombie:
+              name: Løkker i løkker i Bie/Zombie
+            Conditionals with Cards:
+              name: Vilkår med kort
+            Envelope Variables:
+              name: Konvolutt-variablar
+            For Loop Fun:
+              name: Morro med for-løkker

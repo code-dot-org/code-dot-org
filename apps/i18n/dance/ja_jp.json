@@ -1,6 +1,6 @@
 {
   "danceFeedbackNeedNewDancer": "",
-  "danceFeedbackNoDancers": "",
+  "danceFeedbackNoDancers": "ダンサーがありません。",
   "danceFeedbackNoBackground": "",
   "danceFeedbackTooManyDancers": "",
   "danceFeedbackUseSetSize": "",
@@ -9,5 +9,6 @@
   "danceFeedbackStartNewMove": "",
   "danceFeedbackNeedDifferentDance": "",
   "danceFeedbackNeedEveryTwoMeasures": "",
-  "danceFeedbackNeedMakeANewDancer": ""
+  "danceFeedbackNeedMakeANewDancer": "",
+  "measure": ""
 }

@@ -1475,7 +1475,34 @@ cs:
           stages:
             Artist:
               name: Umělec
+        dance:
+          stages:
+            Dance Party:
+              name: Taneční párty
+          title: Taneční párty
         frozen-2018-test-b:
           stages:
             Artist:
               name: Umělec
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Taneční párty
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Taneční párty
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Budování nadace
+            Conditionals with Cards:
+              name: Podmínky s kartami
+            Envelope Variables:
+              name: Obálkové proměnné
+            For Loop Fun:
+              name: For cyklus zábavy
+        dance-low:
+          stages:
+            Dance Party:
+              name: Taneční párty

@@ -1371,6 +1371,8 @@ et:
               name: Kunstnik Binaar
             Building a Foundation:
               name: Vundamendi ehitus
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
         new-express:
           stages:
             Introduction:
@@ -1542,6 +1544,8 @@ et:
               name: Binaarsed pildid
             Artist Binary:
               name: Kunstnik Binaar
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
             Graph Paper Programming:
               name: Millimeetripaberi programmeerimine
             Relay Programming:
@@ -1638,7 +1642,36 @@ et:
           stages:
             Artist:
               name: Kunstnik
+        dance:
+          stages:
+            Dance Party:
+              name: Tantsuõhtu
+          title: Tantsuõhtu
         frozen-2018-test-b:
           stages:
             Artist:
               name: Kunstnik
+        aquatic:
+          title: 'Minecraft: Voyage Aquatic'
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Tantsuõhtu
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Tantsuõhtu
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            Envelope Variables:
+              name: Ümbriku muutujad
+            For Loop Fun:
+              name: For Loop Fun
+        dance-low:
+          stages:
+            Dance Party:
+              name: Tantsuõhtu

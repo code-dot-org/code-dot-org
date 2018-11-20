@@ -1580,7 +1580,34 @@ ko:
           stages:
             Artist:
               name: 화가
+        dance:
+          stages:
+            Dance Party:
+              name: 댄스 파티
+          title: 댄스 파티
         frozen-2018-test-b:
           stages:
             Artist:
               name: 화가
+        dance--draft:
+          stages:
+            Dance Party:
+              name: 댄스 파티
+        dance-draft:
+          stages:
+            Dance Party:
+              name: 댄스 파티
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: 건물 기초 만들기
+            Conditionals with Cards:
+              name: 조건선택 카드
+            Envelope Variables:
+              name: 변수들 함께 묶기
+            For Loop Fun:
+              name: 재미있는 반복
+        dance-low:
+          stages:
+            Dance Party:
+              name: 댄스 파티

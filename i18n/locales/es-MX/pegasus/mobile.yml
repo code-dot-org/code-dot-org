@@ -228,6 +228,8 @@
   studiobar_title_nolink: "Explora Code Studio"
   studiobar_elementary_title: "Cursos elementales"
   studiobar_elementary_body: "Tres nuevos cursos para K‑5"
+  studiobar_dance_title: "Fiesta de Baile"
+  studiobar_dance_body: "Crea y comparte tu propia fiesta"
   studiobar_hoc_title: "La hora de Código"
   studiobar_hoc_body: "Aprende a programar con Angry Birds"
   studiobar_flappy_title: "Código Flappy"
@@ -403,11 +405,12 @@
   mc_gradelevel: "Edades 6+"
   mc_platformtext: "Navegadores modernos, smartphones, tabletas"
   mc_specs: "Muchos lenguajes| Navegadores modernos, tablets | Edad 6-106"
-  minecraft_agent: 'Minecraft: Viaje del héroe'
+  minecraft_agent: "Minecraft: Viaje del héroe"
   minecraft_designer: "Diseñador de Minecraft"
   minecraft_adventurer: "Aventurero de Minecraft"
   minecraft_tutorials: "Tutoriales de Minecraft Hora del Código"
   minecraft_specs: "Muchos idiomas| Navegadores y tabletas modernos | Grados 2+"
+  minecraft_start_tutorial: "Tutorial de inicio"
   minecraft_agent_button: "Inicio"
   minecraft_designer_description: "Diseña un juego Minecraft. Crea tus propias versiones de gallinas, ovejas, Creepers, zombis y muchos más personajes."
   minecraft_designer_button: "Inicio"
@@ -429,12 +432,12 @@
   minecraft_future_description: "Descubre cómo otras escuelas y organizaciones sin fines de lucro están incorporando competencias digitales a sus comunidades, desde alfabetización digital hasta educación en ciencias de la computación. Considera diferentes modelos, obtén consejos y trucos, y <a href='%{minecraft_future_url}', target='_blank'>accede a los recursos</a> que encontraron más valiosos."
   minecraft_og_designer: "Minecraft está de vuelta con una nueva actividad para la hora del código. Programa animales y otras criaturas de Minecraft en tu propia versión de Minecraft."
   minecraft_og_agent: "Minecraft está de vuelta con una nueva actividad para la hora del código, ¡y tú eres el héroe! Escribe código para viajar a través de las biomas de Minecraft."
-  sports_page_title: "Hora del Código de Los Deportes"
-  sports_og_title: "Esfuérzate. Todo el mundo puede aprender."
+  sports_page_title: "Deportes Hora del Código"
+  sports_og_title: "Esfuérzate. Cualquiera puede aprender."
   sports_og_description: "Campeones y medallistas de oro te animan a probar la hora del código. Escribe tu propio juego deportivo."
   sports_title: "Programa tu propio juego de deporte"
   sports_watch_video: "Mira el Video"
-  sports_video_title: "Esfuérzate. Todo el mundo puede aprender."
+  sports_video_title: "Esfuérzate. Cualquiera puede aprender."
   sports_select_theme: "Selecciona el tema del tutorial"
   sports_basketball_title: "Crea un juego de baloncesto"
   sports_all_sports_title: "Multideporte"
@@ -450,7 +453,7 @@
   sports_athlete_Nneka: "Nneka Ogwumike, medallista de oro, campeona de la WNBA y MVP de 2016, Los Angeles Sparks"
   sports_athlete_Carmelo: "Carmelo Anthony, medallista de oro olímpico y NBA All-Star, New York Knicks"
   sports_athlete_Marco: "Marco Belinelli, campeón de la NBA, Charlotte Hornets"
-  sports_athlete_Neymar: "Neymar Jr., futbolista, medallista de oro olímpico con equipo nacional de Brasil y FC Barcelona"
+  sports_athlete_Neymar: "Neymar Jr., medallista de oro olímpico y futbolisa, FC Barcelona y equipo nacional de Brasil"
   sports_athlete_Sarah: "Sarah Quita Offringa, campeona de windsurf"
   sports_athlete_Marcelo: "Marcelo, campeón de fútbol y jugador en el equipo nacional, Real Madrid, Brasil"
   sports_athlete_Erika: "Erika Olivera, campeona maratonista"
@@ -461,16 +464,16 @@
   video_title_cs_is_everything: "Las Ciencias de la Computación están cambiando todo"
   video_title_inspire_girl: "Inspira a una chica"
   video_title_cs_intro: "Introducción a las Ciencias de la Computación"
-  video_title_schools_dont_teach: "¿Qué no se aprende en colegios e institutos? (5min)"
-  video_title_obama: "El presidente Obama sobre las Ciencias de la Computación"
-  video_title_hoc_is_here: "La Hora del Código ha llegado - Todo el mundo puede aprender"
+  video_title_schools_dont_teach: "Lo Que La Mayoría De Las Escuelas No Enseña (5 min)"
+  video_title_obama: "El Presidente Obama en ciencias de la computación"
+  video_title_hoc_is_here: "La Hora del Código está aquí - Todos pueden aprender"
   video_title_anybody_can_learn: "Cualquiera puede aprender"
-  video_title_steph_curry: "Hora del Código con Steph Curry"
+  video_title_steph_curry: "Hora de código con Steph Curry"
   video_title_draymond_green: "Hora de código con Draymond Green"
   video_title_russell_okung: "Hora de código con Russell Okung"
   video_title_real_madrid: "Hora de código con el Real Madrid"
   video_title_marco_belinelli: "Hora de código con Marco Belinelli"
-  video_title_chris_bosh: "Chris Bosh sobre Ciencias de la computación"
+  video_title_chris_bosh: "Chris Bosh en Ciencias de la Computación"
   video_title_my_name_is_aracely: "Mi nombre es Aracely"
   video_1min: "1 minuto"
   video_2min: "2 minutos"
@@ -481,13 +484,13 @@
   no_internet: "¿No tienes Internet?"
   download_offline: "Descarga la versión fuera de línea."
   are_you_teacher: "¿Eres un maestro/a?"
-  review_lesson_plan: "Revisa el plan de lecciones y otros recursos del maestro."
+  review_lesson_plan: "Revisa el plan de lecciones y otros recursos del profesor."
   volunteer_engineer_submission_title: "Inspirar a estudiantes y voluntarios para la Hora de Código."
   volunteer_engineer_submission_subtitle_generic: '100.000 profesores van a llevar a cabo una Hora del Código en sus aulas este año, del 7 al 13 de Diciembre del 2015. ¡Y necesitan tu ayuda! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} maestros quieren a voluntarios apasionados por la enseñanza de ciencias de la computación para ayudar cons su Horas de Código este Diciembre. <br>%{num_volunteers} voluntarios se han inscripto. Únete a ellos."
   volunteer_engineer_submission_intro_background: "La Hora del Código es un movimiento mundial para introducir la Informática a millones de estudiantes en más de 180 países. Únete a esta iniciativa durante la Semana de Educación en Ciencias de la Computación, del 7 al 13 de Diciembre."
   volunteer_engineer_submission_intro_recruit: 'A estos maestros les encantaría tener a alguien <span style="font-family: ''Gotham 7r'', sans-serif;"> apasionado por enseñar ciencia de la computación</span>, la cual puede ayudar en el aula, o alguien que pueda <span style="font-family: ''Gotham 7r'', sans-serif;"> inspirar </span> a sus alumnos hablando de la amplitud de posibilidades con las ciencias de la computación (que podría hacerse a través de una video conferencia). Si usted no está buscando ofrecerse como voluntario, <a href="%{url}"> aprenda más</a> acerca de organizar su propio evento de Hora de Código.'
-  volunteer_engineer_submission_intro_guide: "Conozca más acerca de nuestro <a href=\"%{volunteer_guide}\">programa de voluntariado aquí</a>."
+  volunteer_engineer_submission_intro_guide: "Aprende más sobre nuestro programa voluntario <a href=\"%{volunteer_guide}\"></a>."
   volunteer_engineer_submission_intro_signup: "Por favor, introduzca la siguiente información si usted es un estudiante de informática o profesional del software. Los campos marcados con un <span class=\"form-required-field\">*</span> son obligatorios."
   volunteer_engineer_submission_intro_links: "¿No está buscando ser voluntario? <a href=\"%{learn_more}\"> Aprende más</a> sobre organizar tu propio evento Hora de Código y encontrando un voluntario local en nuestro <a href=\"%{volunteer_local}\"> mapa de voluntariado</a>."
   volunteer_engineer_submission_update_information: "Actualisa tu informasion"
@@ -520,7 +523,7 @@
   volunteer_engineer_submission_field_email_preference_no: 'No'
   volunteer_engineer_submission_final_paragraph: "Se mostrará su ubicación en el mapa local de docentes para que puedan contactarlo para oportunidades de voluntariado en la Hora del Código. Su dirección exacta y correo electrónico NUNCA serán compartidos. Pero la información adicional (incluyendo su ubicación aproximada) será visible públicamente por docentes locales."
   volunteer_engineer_submission_checkbox_contact: 'Estoy de acuerdo que los docentes me contacten para oportunidades de voluntariado (Nota: tu dirección de correo electrónico no será compartida)'
-  volunteer_engineer_submission_checkbox_age_18_plus: "Certifico que tengo más de 18 años."
+  volunteer_engineer_submission_checkbox_age_18_plus: "Certifico que soy mayor de 18 años."
   volunteer_engineer_submission_submit: "Enviar"
   volunteer_engineer_submission_thankyou: "Gracias por ofrecerse de voluntario para la Hora del Código. Para prepararse para la Hora del Código y reclutar a otros ingenieros, <a href=\"%{url}\">vea esta página.</a>"
   volunteer_engineer_submission_commitment_uncertain: "Incierto"
@@ -551,7 +554,7 @@
   volunteer_engineer_submission_type_task_remote: "Quiero que hagas una llamada de Skype a mi clase para que les digas algunas palabras inspiradoras a los niños"
   volunteer_engineer_submission_type_task_mentor: "Estoy buscando un mentor que me ayude a prepararme para programar con mis alumnos"
   petition_age: "Edad"
-  dashboard_announce_hoc_scaling_progress: "¡Ups! Estamos experimentando un alto tráfico en la Hora del Código. No podemos guardar ningún progreso esta semana, pero el progreso de antes de esta semana sigue estando seguro."
+  dashboard_announce_hoc_scaling_progress: "¡Ups! Estamos experimentando un alto tráfico en la Hora del Código. No podemos guardar ningún progreso esta semana, pero el progreso anterior a esta esta semana sigue estando seguro."
   dashboard_announce_learn_more_button: "Aprende más"
   dashboard_landing_title: "Página de inicio del maestro"
   dashboard_landing_welcome: "Bienvenido al nuevo y mejorado panel para maestros."
@@ -657,7 +660,7 @@
   dashboard_sections_table_stage_extras: "Etapa Extra"
   dashboard_sections_table_students: "Estudiantes"
   dashboard_sections_table_code: "Código de sección"
-  dashboard_sections_name: "Nombre de la sección"
+  dashboard_sections_name: 'Nombre de la sección'
   dashboard_sections_choose_secret: "Si quieres proporcionar cuentas a tus alumnos, elige un tipo secreto de <b>palabra</b> o <b>imagen</b> para esa sección."
   dashboard_sections_secret_word: "Una <b>palabra</b> te permite establecer una palabra secreta para cada alumno."
   dashboard_sections_secret_picture: "Una <b>imagen</b> te permite definir una imagen secreta para cada alumno, ideal para estudiantes más jóvenes que aún no escriben."
@@ -683,7 +686,7 @@
   dashboard_students_add_multiple: 'Escriba o pegue los nombres de sus alumnos, uno por línea:'
   dashboard_students_new_google_classroom_section: "Para añadir los estudiantes, <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> y luego presiona el botón <b>Sincronizar estudiantes de Google Classroom</b> que se encuentra en la parte superior."
   dashboard_students_new_section: "¡Ha creado una nueva sección! Ahora, agregue sus alumnos usando los botones anteriores <b>Añadir alumno</b> y <b>Añadir varios alumnos</b>."
-  dashboard_students_name: "Nombre"
+  dashboard_students_name: 'Nombre'
   dashboard_students_progress: "Progreso"
   dashboard_students_male: "Varón"
   dashboard_students_female: "Mujer"
@@ -719,8 +722,8 @@
   dashboard_coursed: 'Curso D: '
   dashboard_coursee: 'Curso E: '
   dashboard_coursef: 'Curso F: '
-  dashboard_pre-express: 'Curso Rápido prescolar: '
-  dashboard_express: 'Curso rápido: '
+  dashboard_pre-express: 'Curso Express pre-lectores: '
+  dashboard_express: 'Curso Express: '
   dashboard_unplugged: "Si no tiene computadoras, <a href='%{unplugged_url}'> intente estas lecciones desenchufados</a> en su salón del clase."
   dashboard_tools: 'Herramientas: '
   dashboard_curriculum: "Currículum"
@@ -741,7 +744,7 @@
   dashboard_curriculum_csp: 'Principios informáticos AP®:'
   dashboard_curriculum_ecs: 'Explorando la Informática:'
   dashboard_curriculum_csd: 'Descubrimientos de Ciencias de la Computación: '
-  dashboard_curriculum_apcsa: 'Informática avanzada en Java: '
+  dashboard_curriculum_apcsa: 'AP Ciencias de la Computación en Java: '
   dashboard_grade_k: "Kah"
   dashboard_grade_other: "Otros"
   dashboard_login_word: "Palabra"
@@ -781,7 +784,7 @@
   dashboard_faq_k5: "Preguntas frecuentes sobre K-5"
   code_hoc_coming: "¡La Hora del Código está aquí: del 8 al 14 de diciembre!"
   code_sign_up: "Inscribirse para participar durante la Semana de la Educación en Computación"
-  host_an_hour: "Hospeda una hora"
+  host_an_hour: "Organiza una Hora del Código"
   learn_banner_title: "Únete a nosotros para la Hora de Código"
   learn_banner_desc: "La Hora de Código es un movimiento mundial que alcanza más de 100 millones de alumnos en más de 180 países. Cualquier persona, en cualquier lugar puede organizar un evento de la Hora de Código. ¡Ayúdanos a dar a cada alumno la oportunidad de aprender ciencias de la computación! Los organizadores puede seguir nuestra <a href='%{how_to_url}' target='_blank'>guía de como hacerlo</a> para enseñar en una Hora de Código e inspirar a los alumnos con <a href='%{videos_url}' target='_blank'>estos videos</a>."
   learn_more: "Aprenda más"
@@ -1451,8 +1454,10 @@
   user_header_settings: "Mi cuenta"
   user_header_logout: "Cerrar sesión"
   user_header_signin: "Iniciar Sesión"
+  user_header_create: 'Crea '
   user_header_gamelab: "Laboratorio de juegos"
   user_header_playlab: "Laboratorio de juegos"
+  user_header_dance: "Fiesta de Baile"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
   user_header_view_all: "Ver todos los proyectos..."
@@ -1477,28 +1482,43 @@
   joining_section_overview: "Si un estudiante todavía no se ha unido a su sección, pídale que realicen los siguientes pasos. Tenga en cuenta que solo necesitan hacer esto una vez. Al unirte a tu sección, los estudiantes podrán ver el curso que se les asignó y podrás seguir el progreso del trabajo que se ha completado mientras estén registrados."
   joining_section_instruct_website: 'Cree una cuenta de Code.org si aún no lo han hecho. Pueden hacer esto en https://studio.code.org/users/sign_up. Tenga en cuenta que pueden registrarse con una dirección de correo electrónico y contraseña, o registrarse en Google, Facebook o Microsoft haciendo clic en uno de estos botones:'
   joining_section_instruct_account: "Inicie sesión con su cuenta de Code.org."
-  joining_section_instruct_code: 'Navegue a %{code_org_url} y escriba su seccion de sodigo:%{section_code}.'
+  joining_section_instruct_code: 'Vaya a %{code_org_url} y escriba en su código de sección: %{section_code}.'
   joining_section_instruct_button: "Una vez que ellos presionen el botón \"comenzar\", se deben agregar a su sección."
   signing_in_single_instruct: "Sus alumnos pueden iniciar sesión en sus cuentas de Code.org accediendo a https://code.org/ y haciendo clic en el botón \"Iniciar sesión\" en la esquina superior derecha."
   reset_student_password_email: "Si su estudiante creó una cuenta de Code.org usando su dirección de correo electrónico y contraseña (en lugar de iniciar sesión a través de su cuenta de Google, Facebook, Microsoft o Clever), puede restablecer su contraseña yendo a la pestaña \"Administrar estudiantes\" para la sección y haciendo clic en el botón \"Restablecer contraseña\" en la columna \"Contraseña\"."
   syncing_students: "Actualiza tus estudiantes"
-  syncing_students_instructions: 'Si su sección de Code.org está desactualizada con su lista de alumnos en Google Classroom, haga clic en el botón "Sincronizar estudiantes de Google Classroom" en la pestaña "Gestionar estudiantes":'
+  syncing_students_instructions: 'Si su sección de Code.org no está actualizada con su lista de alumnos en Google Classroom, haga clic en el botón "Sincronizar estudiantes de Google Classroom" en la pestaña "Gestionar estudiantes":'
   google_sign_in_instruct: 'Desde ahí, deberán elegir la opcion "Registrarse con una cuenta de Google":'
   applab-intro_name: Introducción al Laboratorio de Aplicaciones
+  applab_tile_title: "Introducción a App Lab (edades 13+)"
+  applab_tile_subtitle: "Crea tu propia aplicación en JavaScript usando la programación en bloque. O aplica tus habilidades en el siguiente nivel con la programación basada en texto. (Sólo en inglés)"
+  applab_tile_start_tutorial: "Inicio"
+  aquatic_name: 'Minecraft: Udhëtimi ujor'
   account_sign_up_email_opt_in: "¿Podemos enviarle por correo electrónico actualizaciones de nuestros cursos, oportunidades en su zona u otras noticias sobre informática?"
   account_sign_up_child_accept_terms: "Confirmo que tengo la autorización de mis padres o guardianes legales para utilizar los servicios de Code.org."
-  hoc2018_creativity: "creatività"
+  hoc_overview_dance_title: "Fiesta de Baile"
+  hoc_overview_title: "Actividades Hora del Código de Code.org"
+  hoc_overview_subtitle: "La Hora del Código es un movimiento global, que llega a decenas de millones de estudiantes en más de 180 países. Cualquier persona, en cualquier lugar puede organizar un evento Hora del Código. Tutoriales de una hora están disponibles en más de 30 idiomas. No se necesita experiencia. Para edades entre 4 y 104 años."
+  hoc_overview_partner_activities_title: "Más actividades de socios"
+  hoc_overview_partner_activities_body: "La Hora del Código tiene más de 100 actividades de ciencias de la computación para todas las edades y niveles de experiencia, desarrollado por Code.org y socios."
+  hoc_overview_partner_activities_link: "Ver actividades"
+  hoc_overview_start_tutorial: "Inicio"
+  hoc2018_creativity: "creatividad"
   hoc2018_creativity_create: "Crear"
-  hoc2018_creativity_hoc_coming: "L'ora del Codice sta arrivando…"
+  hoc2018_creativity_hoc_coming: "Ya viene la Hora del código…"
   hoc2018_creativity_what_will_you_create: "¿Qué vas a crear?"
-  hoc2018_creativity_homepage: "Hayallerine dogru uc ve yeniliklerini ortaya cikar. Kod Saati ve kendine has yaraticilikla basla, ne olursa olsun. Videomuzu izle."
-  hoc2018_creativity_hoc_about: 'Bu sene, Kod Saati yaraticilik hakkinda olacaktir. '
-  hoc2018_creativity_social_media: 'Bu sene, #HourofCode yaraticilik hakkindadir. Ben varim! Ya sen?'
-  hoc2018_creativity_social_media_2: 'Bu sene, #HourofCode yaraticilik hakkindadir. Ne olusturacaksin?'
-  hoc2018_creativity_courses: "Code.or kurslari ile ilerle"
-  hoc2018_creativity_courses_link: "Code.org <a href=\"https://studio.code.org/courses\"> Code.org kurslari </a> ile ilerle"
+  hoc2018_creativity_homepage: "Deja volar la imaginación y que nazca la innovación. Comienza con una Hora del código y establece tu propio estilo creativo, cualquiera que sea. Ve nuestro video."
+  hoc2018_creativity_hoc_about: 'Este año, la Hora del Código es completamente sobre creatividad. '
+  hoc2018_creativity_social_media: 'Este año #HourOfCode se enfoca en la creatividad. ¡Cuenten conmigo! ¿Y tú?'
+  hoc2018_creativity_social_media_2: 'Este año #HourOfCode se enfoca en la creatividad. ¿Qué vas a crear?'
+  hoc2018_creativity_courses: "Anda más allá con los cursos de la Hora del Código"
+  hoc2018_creativity_courses_link: "Anda más allá con <a href=\"https://studio.code.org/courses\">cursos Code.org</a>"
+  hoc2018_homepage: "Registra tu clase para probar una de los más de 150 NUEVAS actividades de la Hora del Código (Dic 3-9)!"
   hoc2018_mc_page_title: "Tutoriales de Minecraft Hora del Código"
   hoc2018_mc_details: "Muchos idiomas| Navegadores y tabletas modernos | Grados 2+"
+  hoc2018_mc_aquatic_announcement: "Registra tu clase para probar una de las más de 150 NUEVAS actividades de la Hora del Código (dic 3-9). Asegúrate de chequear nuestra nueva actividad 2018 de Minecraft, el Viaje Acuático!. Registra a tu clase hoy."
+  hoc2018_mc_aquatic_title: "Minecraft Viaje Acuático"
+  hoc2018_mc_hero_title: "Minecraft: Viaje del héroe"
   hoc2018_mc_designer_title: "Diseñador de Minecraft"
   hoc2018_mc_designer_description: "Diseña un juego Minecraft. Crea tus propias versiones de gallinas, ovejas, Creepers, zombis y muchos más personajes."
   hoc2018_mc_adventurer_title: "Aventurero de Minecraft"
@@ -1506,7 +1526,19 @@
   hoc2018_mc_start: "Inicio"
   hoc2018_mc_no_internet: "¿No tienes Internet?"
   hoc2018_mc_download_adventurer: "Descarga la versión offline del Aventurero de Minecraft."
+  hoc2018_mc_educators: "Para profesores"
+  hoc2018_mc_educators_box1_title: "Programa con Minecraft"
+  hoc2018_mc_educators_box1_desc: 'Minecraft: La Edición Educación proporciona un curriculo con estándares alineados, entrenamiento y programación en Minecraft.'
+  hoc2018_mc_educators_box1_button: "Comenzar"
+  hoc2018_mc_educators_box2_title: "Descarga a Guía de facilitador"
+  hoc2018_mc_educators_box2_desc: "Este kit de herramientas te ayudará a organizar una hora del código y comprometer a tus estudiantes en Ciencias de la Computación."
   hoc2018_mc_educators_box2_button: "Descarga"
+  hoc2018_mc_educators_box3_title: "Asistir a un taller gratis para estudiantes"
+  hoc2018_mc_educators_box3_desc: "Visite una tienda Microsoft en su área para un taller gratis de Hora de Código. Para los participantes de todos los niveles, y para edades de 6 años en adelante."
+  hoc2018_mc_educators_box3_button: "Encuentra un taller"
+  hoc2018_mc_educators_box4_title: "Accede a más recursos de Ciencias de la Computación"
+  hoc2018_mc_educators_box4_desc: "Crea un cambio en tu comunidad con habilidades digitales en educación en ciencias de la computación de Microsoft."
+  hoc2018_mc_educators_box4_button: "Explora nuestros cursos"
   hoc2018_mc_watch_videos: "Antes de empezar, ve uno de estos videos inspiradores"
   hoc2018_mc_videos_more: "Más <a href='%{inspiring_videos_playlist}'>videos inspiradores</a> con la participación de celebridades"
   hoc2018_mc_careers_more: "Más <a href='%{careers_url}' target='_blank'>videos inspiradores</a> con la participación de profesionales en el campo de la tecnología"
@@ -1514,19 +1546,28 @@
   hoc2018_mc_video_2min: "2 minutos"
   hoc2018_mc_video_3min: "3 minutos"
   hoc2018_mc_video_5min: "5 minutos"
-  hoc2018_mc_video_title_steph_curry: "Hora del Código con Steph Curry"
-  hoc2018_mc_video_title_sports: "Esfuérzate. Todo el mundo puede aprender."
+  hoc2018_mc_video_title_steph_curry: "Hora de código con Steph Curry"
+  hoc2018_mc_video_title_sports: "Esfuérzate. Cualquiera puede aprender."
   hoc2018_mc_video_title_cs_is_everything: "Las Ciencias de la Computación están cambiando todo"
   hoc2018_mc_video_title_inspire_girl: "Inspira a una chica"
   hoc2018_mc_video_title_cs_intro: "Introducción a las Ciencias de la Computación"
-  hoc2018_mc_video_title_schools_dont_teach: "¿Qué no se aprende en colegios e institutos? (5min)"
-  hoc2018_mc_video_title_obama: "El presidente Obama sobre las Ciencias de la Computación"
-  hoc2018_mc_video_title_hoc_is_here: "La Hora del Código ha llegado - Todo el mundo puede aprender"
+  hoc2018_mc_video_title_schools_dont_teach: "Lo Que La Mayoría De Las Escuelas No Enseña (5 min)"
+  hoc2018_mc_video_title_obama: "El Presidente Obama en ciencias de la computación"
+  hoc2018_mc_video_title_hoc_is_here: "La Hora del Código está aquí - Todos pueden aprender"
   hoc2018_mc_video_title_anybody_can_learn: "Cualquiera puede aprender"
   hoc2018_mc_video_title_my_name_is_aracely: "Mi nombre es Aracely"
+  hoc2018_mc_homepage_hoc_coming: "La Hora del código está aquí..."
   hoc2018_mc_homepage_what_create: "¿Qué vas a crear?"
+  hoc2018_mc_homepage_give_flight: "Deja volar la imaginación y nacimiento a la innovación. Comienza con una Hora del Código y dale tu propio estilo creativo, cualquiera este sea."
   hoc2018_mc_homepage_join_us: "Únete"
   hoc2018_mc_homepage_try_it: "Pruébalo"
   hoc2018_mc_minecraft_education: "Educacion Minecraft"
   hoc2018_mc_continue_learning: "Continúe aprendiendo con minecraft."
   hoc2018_mc_go_to_mc_education: "Ir a Minecraft Education"
+  hoc2018_dance_party_main_heading: "Fiesta de Baile"
+  hoc2018_dance_party_box_title: "Fiesta de Baile"
+  hoc2018_dance_party_button: "Inicio"
+  hoc2018_dance_teacher_resources_tile1_button: "Plan de clases"
+  hoc2018_dance_teacher_resources_tile2_button: "Actividad desconectada"
+  hoc2018_dance_amazon_about_future_engineer_button: "Aprende más"
+  hoc2018_dance_amazon_scholarship_programs_button: "Aplíca ahora"

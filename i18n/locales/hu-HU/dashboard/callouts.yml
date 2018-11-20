@@ -67,6 +67,8 @@ hu:
         snowflake_dropdown: Használd ezt a legördülő menüt különféle hópelyhek létrehozásához!
       Function intro Ryan_callout:
         Function_intro_Ryan_1: Ez a kis utasítás azt mondja a számítógépnek, hogy futassa a NAGY kódtömböt ugyanazzal a névvel a munkaterületen.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Ez a kis utasítás azt mondja a számítógépnek, hogy futassa a NAGY kódtömböt ugyanazzal a névvel a munkaterületen.
       Geometric Pattern_callout:
         4-5_Artist_Patterns_Free_Play_1: Minden kedvenc blokkod kategorizálva van. Kattints ezekre a szavakra, hogy lásd mi történt!
       Geometric Sun_callout:
@@ -88,17 +90,25 @@ hu:
         MC_HOC_2017_02_Cole_1: A játékosod társat kapott!  A szinteken úgy juthatsz túl, hogy kódot írsz az Agent számára.
       MC_HOC_2017_03_Cole_callout:
         MC_HOC_2017_03_Cole_1: Ez egy "ismétlés" ciklus.  Vidd a munkaterületre, és add meg azt a kódot, amelyet újra és újra futtatni szeretnél.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Ez egy "ismétlés" ciklus.  Vidd a munkaterületre, és add meg azt a kódot, amelyet újra és újra futtatni szeretnél.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Az Ügynök tud a víz fölött lebegni, de a játékos nem!
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: Az Ügynök tud a víz fölött lebegni, de a játékos nem!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Vidd a munkaterületre, és add meg azt a kódot, amelyet újra és újra meg szeretnél ismételni.
       MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Ezeket a blokkokat nem dobhatod el, de szerkesztheted őket!
+      MC_HOC_2017_06_Cole_2019_callout:
         MC_HOC_2017_06_Cole_1: Ezeket a blokkokat nem dobhatod el, de szerkesztheted őket!
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: 'Az Ügynök tud a láva fölött lebegni, de a játékos nem!  '
       MC_HOC_2017_08_Will_callout:
         MC_HOC_2017_08_RY_1: 'Az Ügynök tud a láva fölött lebegni, de a játékos nem!  '
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'Az Ügynök tud a láva fölött lebegni, de a játékos nem!  '
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'Az Ügynök tud a láva fölött lebegni, de a játékos nem!  '
       NEW Course 4 Artist Functions 5_callout:
         edit_function: Kattints ide a függvényed szerkesztéséhez!

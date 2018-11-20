@@ -1,4 +1,5 @@
-"ja-JP":
+---
+ja-JP:
   hour_of_code: Hour of Code（コーディングを学ぶ時間）
   hello: Hello world
   'yes': はい
@@ -29,7 +30,7 @@
   twentyhours_heading: コンピュータサイエンスコースを紹介する
   twentyhours_text: 初めてのHour of Codeを修了しましたか？フォローアップコースでコンピュータサイエンスやプログラミング概念をさらに学びましょう。
   og_title: 全ての子供に機会を得る権利があります
-  og_title_soon: Hour of Code がやってきます。
+  og_title_soon: Hour of Codeがやってくる
   og_title_here: Hour of Codeがやってきた！
   og_description: すべての学校のすべての学生が、コンピュータ サイエンスを学ぶ機会を得られる。それはすべてを変えるでしょう。
   og_description_celeb: 新しいチュートリアルに挑戦し、1人もしくはクラスで著名人とのビデオチャットを勝ちとりましょう！
@@ -300,7 +301,7 @@
   homepage_hero_text_stat_loc: 850万人の女の子がCode.orgに参加して学んでいます。
   homepage_hero_text_stat_students: 'コードスタジオの学生アカウント #student_count  '
   homepage_hero_text_stat_served: 'Hour of Code: #served 提供'
-  homepage_hero_hoc_is_coming: Hour of Code がやってきます。
+  homepage_hero_hoc_is_coming: Hour of Codeがやってくる
   homepage_hero_hoc_is_here: Hour of Codeがやってきました
   homepage_slot_text_hoc: Hour of Code
   homepage_slot_text_frozen: "「アナと雪の女王」のアナとエルサ"
@@ -732,9 +733,8 @@
   dashboard_error_none_selected: 移動する生徒が選択されていません。少なくとも 1 人の生徒を選択してください。
   dashboard_error_other_section: あなたが管理するセクション間で生徒を移動する場合は、ドロップダウン リストからあなたのセクションを選択してください。生徒を別の教師のセクションに移動する場合のみ、「その他のセクション」を選択してください。
   dashboard_students_add_multiple: １行について１人の生徒の名前をタイプまたはペーストします。
-  dashboard_students_new_google_classroom_section: 生徒の追加には <a href='http://classroom.google.com'
-    target='_blank'>Google Classroom</a> へ行き、上部の<b>Sync students from Google Classroom</b>
-    をクリックしてください。
+  dashboard_students_new_google_classroom_section: 生徒を追加するには、<a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a>を使って、上部の<b>Google Classroomから生徒を同期する</b>ボタンをクリックしてください。
   dashboard_students_new_section: 新しいセクションを作成しました！<b>生徒を追加</b>、<b>複数の生徒を追加</b>ボタンをつかって、生徒を追加してください。
   dashboard_students_name: 名前
   dashboard_students_progress: 進行状況
@@ -1594,10 +1594,15 @@
     Classroomから生徒を同期する」ボタンをクリックしてください:'
   google_sign_in_instruct: ここでは、「グーグルアカウントでサインイン」のオプションを選ぶことができます。
   applab-intro_name: App Labの紹介
+  applab_tile_start_tutorial: 始める
   account_sign_up_email_opt_in: 当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？
+  hoc_overview_start_tutorial: 始める
   hoc2018_creativity_create: つくる
   hoc2018_mc_page_title: MinecraftのHour of Codeチュートリアル
   hoc2018_mc_details: 多言語対応 | 最新ブラウザ、タブレット | 小学校2年生以上
+  hoc2018_mc_aquatic_announcement: クラスを登録して150以上ある新しいHour of Code（12月3～9日）向けアクティビティのひとつを試してみてください。2018年の新しいMinecraftアクティビティであるVoyage
+    Aquaticを確認することをお忘れなく！今日クラスを登録しましょう。
+  hoc2018_mc_hero_title: 'Minecraft: 主人公の旅'
   hoc2018_mc_designer_title: Minecraftデザイナー
   hoc2018_mc_designer_description: ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。
   hoc2018_mc_adventurer_title: Minecraftアドベンチャー
@@ -1627,239 +1632,11 @@
   hoc2018_mc_homepage_join_us: 参加しませんか
   hoc2018_mc_homepage_try_it: 挑戦してみる
   hoc2018_mc_continue_learning: マインクラフトで学習をつづける
-  ! '': 
-  studiobar_dance_title: Dance Party
-  studiobar_dance_body: Create and share your own Dance Party
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  minecraft_start_tutorial: Start tutorial
-  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
-  sports_title: Code your own sports game
-  sports_all_sports_title: Mix and match across sports
-  video_title_cs_is_everything: Computer Science is Changing Everything
-  dashboard_course_csina: Computer Science in Algebra
-  codesters_name: Codesters
-  coursea-2018_name: Course A (2018)
-  courseb-2018_name: Course B (2018)
-  coursec-2018_name: Course C (2018)
-  coursed-2018_name: Course D (2018)
-  coursee-2018_name: Course E (2018)
-  coursef-2018_name: Course F (2018)
-  express-2018_name: Express Course (2018)
-  csd1_name: 'Unit 1: Problem Solving'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Animation and Games'
-  csd4_name: 'Unit 4: The Design Process'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp3_name: 'Unit 3: Algorithms and Programming'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
-  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
-    of computer programming, which unlocks the ability to make rich, interactive apps.
-    This course uses JavaScript as the programming language, and App Lab as the programming
-    environment to build apps, but the concepts learned in these lessons span all
-    programming languages and tools.
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  text-compression_name: Text Compression
-  csd_category_name: CS Discoveries ('17-'18)
-  research_studies_category_name: Research Studies
-  sports_name: Code your own sports game
-  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
-  coursec_shortdescription_congrats: Learn the basics of computer science and create
-    your own art, stories, and games.
-  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
-    create your own art, stories, and games.
-  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
-    create your own art, stories, and games.
-  lightbot_beyond_name: LightBot
-  udacity_beyond_name: CS 101
-  kodu_beyond_name: Kodu
-  cargobot_beyond_name: Cargobot
-  kidsruby_beyond_name: KidsRuby
-  mozilla_beyond_name: Webmaker
-  codea_beyond_name: Codea
-  lego_beyond_name: Mindstorms
-  finch_beyond_name: Finch
-  alice_beyond_name: Alice
-  sphero_beyond_name: SPRK
-  kodu_beyond_platformtext: Windows, xBox
-  starwars_shortcode: star
-  mc_shortcode: mc
-  frozen_shortcode: frzn
-  hourofcode_shortcode: code
-  infinity_shortcode: inf
-  playlab_shortcode: lab
-  artist_shortcode: art
-  user_header_dance: Dance Party
-  user_header_spritelab: Sprite Lab
-  user_header_view_project_gallery: View project gallery
-  hero_name: 'Minecraft: Hero''s Journey'
-  applab_tile_title: Intro to App Lab (Ages 13+)
-  applab_tile_subtitle: Create your own app in JavaScript using block based programming.
-    Or take your skills to the next level with text-based programming. (English Only)
-  applab_tile_start_tutorial: Start tutorial
-  applab_tile_teacher_guide: View teacher guide
-  aquatic_name: 'Minecraft: Voyage Aquatic'
-  account_sign_up_child_accept_terms: I confirm that I have my parent or legal guardian's
-    permission to use the Code.org services.
-  hoc_overview_title: Hour of Code Activities from Code.org
-  hoc_overview_subtitle: The <a href="https://hourofcode.com">Hour of Code</a> is
-    a global movement reaching tens of millions of students in 180+ countries. Anyone,
-    anywhere can organize an Hour of Code event or try any of the over 200+ one-hour
-    tutorials, available in over 45 languages.
-  hoc_overview_partner_activities_title: More activities from partners
-  hoc_overview_partner_activities_body: The Hour of Code website has over 100 computer
-    science activities for all ages and experience levels, developed by Code.org and
-    partners.
-  hoc_overview_partner_activities_link: View Activities
-  hoc2018_creativity: creativity
-  hoc2018_creativity_hoc_coming: The Hour of Code is coming…
-  hoc2018_creativity_what_will_you_create: What will you create?
-  hoc2018_creativity_homepage: Give flight to imagination and birth to innovation.
-    Start with an Hour of Code and your own brand of creativity, whatever it may be.
-    Watch our video.
-  hoc2018_creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
-  hoc2018_creativity_social_media: 'This year''s #HourOfCode is about creativity.
-    I’m in! Are you?'
-  hoc2018_creativity_social_media_2: 'This year''s #HourOfCode is about creativity.
-    What will you create?'
-  hoc2018_creativity_courses: Go further with Code.org courses
-  hoc2018_creativity_courses_link: Go further with <a href="https://studio.code.org/courses">Code.org
-    courses</a>
-  hoc2018_homepage: Sign up your class to try one of the over 150 NEW activites for
-    the Hour of Code (Dec 3-9)!
-  hoc2018_mc_aquatic_announcement: Sign up your class to try one of the over 150 NEW
-    activities for the Hour of Code (Dec 3-9). Be sure to check out our brand new
-    Minecraft activity for 2018, the Voyage Aquatic! Sign up your class today.
-  hoc2018_mc_aquatic_title: Minecraft Voyage Aquatic
-  hoc2018_mc_aquatic_description: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
-  hoc2018_mc_hero_title: Minecraft Hero’s Journey
-  hoc2018_mc_hero_description: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
-  hoc2018_mc_educators: For Educators
-  hoc2018_mc_educators_box1_title: Code with Minecraft
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition provides standards-aligned
-    curriculum, training and coding in Minecraft.'
-  hoc2018_mc_educators_box1_button: Get started
-  hoc2018_mc_educators_box2_title: Download Facilitator Guide
-  hoc2018_mc_educators_box2_desc: This toolkit will help you host an Hour of Code
-    and engage your students in computer science.
-  hoc2018_mc_educators_box3_title: Attend a free student workshop
-  hoc2018_mc_educators_box3_desc: Visit a Microsoft Store in your area for a free
-    Hour of Code workshop. For participants of all skill levels, ages six and up.
-  hoc2018_mc_educators_box3_button: Find a workshop
-  hoc2018_mc_educators_box4_title: Access more computer science resources
-  hoc2018_mc_educators_box4_desc: Create change in your community with digital skills
-    and computer science education resources from Microsoft.
-  hoc2018_mc_educators_box4_button: Explore resources
-  hoc2018_mc_video_title_cs_is_everything: Computer Science is Changing Everything
-  hoc2018_mc_homepage_hoc_coming: The Hour of Code is coming...
-  hoc2018_mc_homepage_what_create: What will you create?
-  hoc2018_mc_homepage_give_flight: Give flight to imagination and birth to innovation.
-    Start with an Hour of Code and your own brand of creativity, whatever it may be.
-  hoc2018_mc_homepage_watch_video: Watch our video
-  hoc2018_mc_back: Minecraft is back with a brand new activity for Hour of Code!
-  hoc2018_mc_back_journey: Minecraft is back for the Hour of Code with a brand new
-    activity! Journey through Minecraft with code.
-  hoc2018_mc_teacher_guide: View teacher guide
-  hoc2018_mc_minecraft_education: Minecraft Education
-  hoc2018_mc_go_to_mc_education: Go to Minecraft Education
-  hoc2018_mc_short_description: Use your creativity and problem solving skills to
-    find treasure and explore under water worlds with the power of code.
-  hoc2018_mc_short_description_shorter: Use your creativity and problem solving skills
-    to explore and build underwater worlds with code.
-  hoc2018_mc_journey: Journey through Minecraft with code.
-  hoc2018_dance_party_main_heading: Dance Party
-  hoc2018_dance_party_subheading: Help Translate Dance Party
-  hoc2018_dance_create_your_own_dance_title: Create Your Own Dance Party
-  hoc2018_dance_party_box_title: Dance Party
-  hoc2018_dance_party_box_description: Code a Dance Party to share with your friends!
-  hoc2018_dance_party_specs: Language | Format | Age 6-106
-  hoc2018_dance_party_button: Start
-  hoc2018_dance_keep_on_dancing_box_title: Keep On Dancing
-  hoc2018_dance_keep_on_dancing_description: Go beyond the first hour with extended
-    project ideas.
-  hoc2018_dance_keep_on_dancing_specs: Language | Format | Age 13+
-  hoc2018_dance_keep_on_dancing_button: Go Beyond
-  hoc2018_dance_teacher_resources_title: Teacher Resources
-  hoc2018_dance_teacher_resources_tile1_description: Lesson plans, certificates, and
-    music filtering.
-  hoc2018_dance_teacher_resources_tile1_button: Lesson Plan
-  hoc2018_dance_teacher_resources_tile2_title: Dance Party Unplugged
-  hoc2018_dance_teacher_resources_tile2_description: No computers needed! Your class
-    will learn about coding concepts to choreograph a dance party together.
-  hoc2018_dance_teacher_resources_tile2_button: Unplugged Activity
-  hoc2018_dance_featured_student_creations_title: Featured Student Creations
-  hoc2018_dance_videos_section_heading: Get Inspired
-  hoc2018_dance_video_title_what_is_creativity: What is Creativity?
-  hoc2018_dance_view_creativity_video_playlist: What is Creativity? View Full Series
-  hoc2018_dance_amazon_sponsor_section_with_logo_title: 'In partnership with: '
-  hoc2018_dance_amazon_sponsor_section_with_logo_description: Amazon Future Engineer
-    is a comprehensive childhood-to-career program to inspire, educate, and train
-    low-income and other disadvantaged children and young people to pursue careers
-    in computer science.
-  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
-    Engineer is a comprehensive childhood-to-career program to inspire, educate, and
-    train low-income and other disadvantaged children and young people to pursue careers
-    in computer science. <a href='%{amazon_future_engineer_link}' target='_blank'>Learn
-    more</a>
-  hoc2018_dance_amazon_learn_more_link: Learn more
-  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Learn more about
-    Amazon Future Engineer
-  hoc2018_dance_amazon_about_future_engineer_box1_title: About Amazon Future Engineer
-  hoc2018_dance_amazon_about_future_engineer_box1_description: Learn about Amazon’s
-    kindergarten to career program to increase access to computer science education.
-    Find information on how to get involved in our summer camps, high school CS classes,
-    scholarships, and internships.
-  hoc2018_dance_amazon_about_future_engineer_box1_button_text: Learn more
-  hoc2018_dance_amazon_try_coding_this_summer_box2_long_title: Try coding this summer
-  hoc2018_dance_amazon_K-8_programs_box2_short_title: K-8 programs
-  hoc2018_dance_amazon_try_coding_box2_description: Get involved in Amazon Future
-    Engineer’s free, fun, and inclusive computer science camps! Summer camps are available
-    for students from kindergarten through 8th grade in multiple locations in the
-    US for summer 2019.
-  hoc2018_dance_amazon_apply_now_button_text: Apply now
-  hoc2018_dance_amazon_scholarship_programs_box3_short_title: Scholarship programs
-  hoc2018_dance_amazon_scholarship_programs_box3_long_title: Get funding for your
-    CS degree
-  hoc2018_dance_amazon_scholarship_programs_box3_description: Amazon is offering $10,000
-    4-year scholarships for underserved students who are studying CS. Applicants must
-    have successfully completed or currently be enrolled in an AP computer science
-    course. Scholarship recipients will also receive paid summer internships at Amazon
-    in the summer of 2020!
-  hoc2018_dance_amazon_internships_box4_long_title: Come Intern at Amazon
-  hoc2018_dance_amazon_internships_box4_short_title: Internships
-  hoc2018_dance_amazon_internships_box4_description: Applications are now open for
-    summer 2019 Amazon Future Engineer internships.  Interns will partner with a technical
-    mentor and manager, as well as with other interns, to innovate and create new
-    features and services on behalf of Amazon customers.
-  hoc2018_dance_measure: Measure
-  hoc2018_dance_measure_colon: 'Measure:'
-  hoc2018_aquatic_video1: Minecraft Voyage Aquatic - Introduction
-  hoc2018_aquatic_video2: Minecraft Voyage Aquatic - Loops
-  hoc2018_aquatic_video3: Minecraft Voyage Aquatic - Conditionals
-  hoc2018_aquatic_video4: Minecraft Voyage Aquatic - Congratulations
-  hoc2018_dance_video1: Dance Party - Introduction
-  hoc2018_dance_video2: Dance Party - Events
-  hoc2018_dance_video3: Dance Party - Properties
-  hoc2018_dance_video4: Dance Party - Congratulations
+  hoc2018_mc_go_to_mc_education: マインクラフト　エデュケーションへ
+  hoc2018_mc_short_description: 創造性と問題解決スキルを発揮して、プログラムの力でお宝を探して水中世界を探検しましょう。
+  hoc2018_mc_short_description_shorter: 創造性と問題解決スキルを発揮して、プログラムで水中世界を探検し構築しましょう。
+  hoc2018_dance_party_button: 始める
+  hoc2018_dance_teacher_resources_tile1_button: 学習計画
+  hoc2018_dance_teacher_resources_tile2_button: アンプラグド　アクティビティ
+  hoc2018_dance_amazon_about_future_engineer_button: もっと詳しく知る
+  hoc2018_dance_amazon_scholarship_programs_button: 今すぐ申し込む

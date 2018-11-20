@@ -228,6 +228,7 @@
   studiobar_title_nolink: "Познайомтесь зі Студією коду"
   studiobar_elementary_title: "Базові курси"
   studiobar_elementary_body: "Три нові курси для K&#8209;5"
+  studiobar_dance_title: "Танцювальна вечірка"
   studiobar_hoc_title: "Година Коду"
   studiobar_hoc_body: "Вчимося програмувати зі Злими Птахами"
   studiobar_flappy_title: "Код Пурха"
@@ -419,7 +420,7 @@
   mc_gradelevel: "Вік 6+"
   mc_platformtext: "Сучасні браузери, смартфони, планшети"
   mc_specs: "Багато мов | Сучасні браузери та планшети| Вік 6-106"
-  minecraft_agent: 'Minecraft: Подорож героя'
+  minecraft_agent: "Minecraft: Подорож героя"
   minecraft_designer: "Майнкрафт - Розробник"
   minecraft_adventurer: "Майнкрафт - Пригоди"
   minecraft_tutorials: "Підручники Години коду від Майнкрафт"
@@ -659,7 +660,7 @@
   dashboard_sections_table_stage_extras: "Додатки після етапу"
   dashboard_sections_table_students: "Учні"
   dashboard_sections_table_code: "Код групи"
-  dashboard_sections_name: "Назва групи"
+  dashboard_sections_name: 'Назва групи'
   dashboard_sections_choose_secret: "Якщо Ви хочете створити облікові записи для своїх учнів, оберіть таємне  <b>слово</b> або  <b>зображення</b> для цієї групи."
   dashboard_sections_secret_word: "<b>Слово</b> дозволяє задати таємне слово для кожного учня."
   dashboard_sections_secret_picture: "<b>Зображення</b>дозволяє задати таємне зображення для кожного учня - ідеальний варіант для молодших школярів, які не вміють друкувати."
@@ -685,7 +686,7 @@
   dashboard_students_add_multiple: 'Надрукуйте або вставте імена Ваших учнів, по одному на рядок:'
   dashboard_students_new_google_classroom_section: "Щоб додати учнів, використуйте <a href='http://classroom.google.com' target='_blank'>Google Клас</a> та після клацніть кнопку <b>Синхронізувати учнів з Google Класу</b> угорі."
   dashboard_students_new_section: "Ви створили нову групу! Тепер додавайте учнів, використовуючи кнопки <b>Додати учня</b> та <b>Додати учнів</b>."
-  dashboard_students_name: "Ім’я"
+  dashboard_students_name: 'Ім’я: '
   dashboard_students_progress: "Прогрес"
   dashboard_students_male: "Чоловік"
   dashboard_students_female: "Жінка"
@@ -1331,6 +1332,7 @@
   flappy_shortcode: "махати"
   header_home: "Головна"
   header_courses: "курси"
+  header_course_catalog: "Каталог курсів"
   header_project_gallery: "Проекти"
   header_educate_overview: "Огляд для педагога"
   header_educate_elementary: "Початкова школа"
@@ -1369,7 +1371,10 @@
   user_header_dance: "Танцювальна вечірка"
   user_header_minecraft: "Майнкрафт"
   user_header_flappy: "Пурх"
+  applab_tile_start_tutorial: "Початок"
   aquatic_name: 'Minecraft: Водна подорож'
+  hoc_overview_dance_title: "Танцювальна вечірка"
+  hoc_overview_start_tutorial: "Початок"
   hoc2018_creativity: "творчість"
   hoc2018_creativity_create: "Створити"
   hoc2018_creativity_hoc_coming: "Наближається Година коду…"
@@ -1382,6 +1387,7 @@
   hoc2018_creativity_courses_link: "Навчайтесь далі з <a href=\"https://studio.code.org/courses\">курсами Code.org</a>"
   hoc2018_mc_page_title: "Підручники Години коду від Майнкрафт"
   hoc2018_mc_details: "Багато мов | Сучасні браузери та планшети | Класи 2+"
+  hoc2018_mc_hero_title: "Minecraft: Подорож героя"
   hoc2018_mc_designer_title: "Майнкрафт - Розробник"
   hoc2018_mc_designer_description: "Запрограмуй тварин та інших істот Майнкрафт у власній версії цієї гри."
   hoc2018_mc_adventurer_title: "Майнкрафт - Пригоди"
@@ -1407,3 +1413,11 @@
   hoc2018_mc_homepage_what_create: "А що створите Ви?"
   hoc2018_mc_homepage_join_us: "Приєднуйтесь"
   hoc2018_mc_homepage_try_it: "Спробувати"
+  hoc2018_dance_party_main_heading: "Танцювальна вечірка"
+  hoc2018_dance_party_box_title: "Танцювальна вечірка"
+  hoc2018_dance_party_button: "Початок"
+  hoc2018_dance_teacher_resources_tile1_button: "План уроку"
+  hoc2018_dance_teacher_resources_tile2_button: "Безмашинна вправа"
+  hoc2018_dance_amazon_about_future_engineer_button: "Дізнайтеся більше"
+  hoc2018_dance_measure: "Крок"
+  hoc2018_dance_measure_colon: 'Крок:'

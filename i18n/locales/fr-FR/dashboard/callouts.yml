@@ -73,6 +73,19 @@ fr:
         arrows_move_actor: Utilise les flèches pour déplacer l'acteur
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Utilise les flèches pour déplacer l'acteur
+      Dance_Party_01_callout:
+        dance_callout_01: Ajoutez ce bloc à votre programme\_!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Ajoutez ce bloc à votre programme\_!
+      Dance_Party_02_callout:
+        dance_callout_02: Ajoutez ce bloc à votre programme\_!
+      Dance_Party_04_callout:
+        dance_callout_04: Ajoutez ce bloc à votre programme\_!
+      Dance_Party_06_callout:
+        dance_callout_06: Ajoutez votre nouveau danseur ici
+      Dance_Party_11_callout:
+        dance_callout_11_a: Nouveau bloc !
+        dance_callout_11_b: Nouveau bloc !
       Eval Design Recipe .1_callout:
         edit_function: Clique ici pour modifier ta fonction.
       Frozen Project Test Toolbox_callout:
@@ -80,6 +93,8 @@ fr:
       Frozen Project Toolbox (Old)_callout:
         snowflake_dropdown: Utilise ce menu déroulant pour créer différents flocons de neige !
       Function intro Ryan_callout:
+        Function_intro_Ryan_1: Cette petite instruction indique à l'ordinateur d'exécuter un GROS morceau de code avec le même nom dans l'espace de travail.
+      Function intro Ryan_2019_callout:
         Function_intro_Ryan_1: Cette petite instruction indique à l'ordinateur d'exécuter un GROS morceau de code avec le même nom dans l'espace de travail.
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Joue un son lorsque cet événement se produit.
@@ -96,17 +111,25 @@ fr:
         MC_HOC_2017_02_Cole_1: Votre joueur a un nouvel ami !  Vous pouvez écrire du code pour que l'Agent vous aide à franchir les niveaux.
       MC_HOC_2017_03_Cole_callout:
         MC_HOC_2017_03_Cole_1: Ceci est une boucle « répéter » !  Cliquez dessus dans l'espace de travail et ajoutez le code que vous voulez exécuter en boucle.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Ceci est une boucle « répéter » !  Cliquez dessus dans l'espace de travail et ajoutez le code que vous voulez exécuter en boucle.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: L'Agent peut survoler l'eau, mais votre joueur ne le peut pas !
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: L'Agent peut survoler l'eau, mais votre joueur ne le peut pas !
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Cliquez dessus dans l'espace de travail et ajoutez du code pour le répéter en boucle !
       MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Vous ne pouvez pas jeter ces blocs, mais vous pouvez les modifier !
+      MC_HOC_2017_06_Cole_2019_callout:
         MC_HOC_2017_06_Cole_1: Vous ne pouvez pas jeter ces blocs, mais vous pouvez les modifier !
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: 'L''Agent peut survoler la lave, mais votre joueur ne le peut pas !  '
       MC_HOC_2017_08_Will_callout:
         MC_HOC_2017_08_RY_1: 'L''Agent peut survoler la lave, mais votre joueur ne le peut pas !  '
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'L''Agent peut survoler la lave, mais votre joueur ne le peut pas !  '
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'L''Agent peut survoler la lave, mais votre joueur ne le peut pas !  '
       NEW Course 4 Artist Functions 5_callout:
         edit_function: Clique ici pour modifier ta fonction.

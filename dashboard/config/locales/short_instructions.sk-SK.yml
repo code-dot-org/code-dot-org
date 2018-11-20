@@ -761,23 +761,38 @@ sk:
       Crack a Caesar Cipher_2018: Inštrukcie
       D_Frozen_nested5: Zahraj sa so snehovými vločkami!
       Dance Party 1-validated: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
+      Dance Party 1-validated_2019: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Dance Party 1-validated_simple: 'Čo si myslíte, že sa stane, keď kliknete na
         mimozemšťana?  '
       Dance Party Freeplay: A teraz si vytvorte vlastnú mimozemšťanskú diskotéku!
+      Dance Party Freeplay_2019: A teraz si vytvorte vlastnú mimozemšťanskú diskotéku!
       Dance Party Freeplay_simple: A teraz si vytvorte vlastnú mimozemšťanskú diskotéku!
       Dance Party Predict: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
+      Dance Party Predict_2019: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Dance Party Predict_simple: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Fish Tank 2-validated: Zmeňte Pracháča (kôpku slamy) na rybu.
+      Fish Tank 2-validated_2019: Zmeňte Pracháča (kôpku slamy) na rybu.
       Fish Tank 2-validated_simple: Zmeňte Pracháča (kôpku slamy) na rybu.
       Fish Tank 6-validated: Pridajte správanie k novému rybkinmu kamarátovi.
+      Fish Tank 6-validated_2019: Pridajte správanie k novému rybkinmu kamarátovi.
       Fish Tank 6-validated_simple: Pridajte správanie k novému rybkinmu kamarátovi.
       FoodFight: Toto je príklad hry, ktorú môžeš vytvoriť v Play Labe.
       FoodFight_2018: Toto je príklad hry, ktorú môžeš vytvoriť v Play Labe.
       Function intro Ryan: Dvakrát použi funkciu "Postav most" na vytvorenie cesty
         k fakli.
+      Function intro Ryan_2019: Dvakrát použi funkciu "Postav most" na vytvorenie
+        cesty k fakli.
       GLJ Flappy2: Kliknite pre zamávanie - nedotknite sa zeme!
       HoCAB_labyrinth1: Použite blok so šípkami pre vyriešenie tohto bludiska!
       Infinity_finale: Vytvorte čo len chcete a zdieľajte to!
+      Infinity_move_collide: Hiro je "herec 1".  Posuň ho vpravo k Baymaxovi tak,
+        aby sa prehral zvuk, sa dotknú.
+      Infinity_move_directions: Baymax je "herec 2".  Pridaj bloky "Posuň sa" a potom
+        s použitím šípok posuň Baymaxa tak, aby sa dotkol ostatných dvoch postavičiek.
+      Infinity_move_right: Hiro je "herec 1".  Použi blok "Posuň sa" tak, aby sa Hiro
+        posunul vpravo a dotkol sa Baymaxa.
+      Infinity_repeat: Použi blok "Opakuj neustále" tak, aby sa Anna posunula hore
+        a dole o 400 pixelov.
       Infinity_touch_faster: Dotknite sa aj ďaľších vločiek!
       K-1 Artist 1 Assessment 1: Nakreslite krátku čiaru hore a dlhú čiaru doprava!
       K-1 Artist Loops 1: Nakreslite túto čiaru posunutím sa na Východ 4 krát.
@@ -848,30 +863,42 @@ sk:
         štvorec vo vnútri domu.
       MC_HOC_2017_01_RETRY: 'Dostaň agenta na prítlačnú dosku. Potom stlač tlačidlo
         "Spustiť" a pomocou klávesov so šípkami presuň hráča z domu, aby získal truhlicu. '
+      MC_HOC_2017_01_RETRY_2019: 'Dostaň agenta na prítlačnú dosku. Potom stlač tlačidlo
+        "Spustiť" a pomocou klávesov so šípkami presuň hráča z domu, aby získal truhlicu. '
       MC_HOC_2017_02: Dostaň agenta na prítlačnú dosku.
       MC_HOC_2017_02_Cole: 'Posuň agenta na prítlačnú dosku, aby sa {currentPlayerName}
+        mohol dostať k mape. '
+      MC_HOC_2017_02_Cole_2019: 'Posuň agenta na prítlačnú dosku, aby sa {currentPlayerName}
         mohol dostať k mape. '
       MC_HOC_2017_02_Kiki: Dostaň agenta na prítlačnú dosku a potom dostaň hráča na
         oranžové políčko.
       MC_HOC_2017_02_Will: Dostaň agenta na prítlačnú dosku.
       MC_HOC_2017_03_Cole: 'Naprogramuj agenta tak, aby otvoril bránu. '
+      MC_HOC_2017_03_Cole_2019: 'Naprogramuj agenta tak, aby otvoril bránu. '
       MC_HOC_2017_03_Kiki: Dostaň agenta na prítlačnú dosku.
       MC_HOC_2017_04: Zmeň cyklus z poslednej úlohy tak, aby si agentovi pomohol vytvoriť
         cestu cez širšiu časť tejto rieky.
       MC_HOC_2017_04POINT5_Cole: Dostaň agenta na prítlačnú dosku.
       MC_HOC_2017_04POINT5_RYAN: Dostaň agenta na prítlačnú dosku.
+      MC_HOC_2017_04POINT5_RYAN_2019: Dostaň agenta na prítlačnú dosku.
       MC_HOC_2017_04_Cole: Dostaň agenta na prítlačnú dosku.
+      MC_HOC_2017_04_Cole_2019: Dostaň agenta na prítlačnú dosku.
       MC_HOC_2017_04_Kiki: Dostaň agenta na prítlačnú dosku.
       MC_HOC_2017_05: Pomocou funkcie pomôž agentovi dostať sa k prítlačnej doske.
       MC_HOC_2017_05_Cole: Dostaň hráča k lopate.
+      MC_HOC_2017_05_Cole_2019: Dostaň hráča k lopate.
       MC_HOC_2017_05_Josh: Dostaň hráča k lopate.
       MC_HOC_2017_05_Kiki: Dostaň hráča na oranžové políčko.
       MC_HOC_2017_06_Cole: Oprav tento kód tak, aby agent vybudoval most cez rieku.
+      MC_HOC_2017_06_Cole_2019: Oprav tento kód tak, aby agent vybudoval most cez
+        rieku.
       MC_HOC_2017_06_Josh: Oprav tento kód, aby si agentovi pomohol vybudovať most
         cez rieku.
       MC_HOC_2017_06_Kiki: Oprav tento kód, aby si agentovi pomohol vybudovať most
         cez rieku.
       MC_HOC_2017_07_Cole: Znič ľad a dostaň hráča {currentPlayerName} do banského
+        vozíka.
+      MC_HOC_2017_07_Cole_2019: Znič ľad a dostaň hráča {currentPlayerName} do banského
         vozíka.
       MC_HOC_2017_07_Kiki: Pomocou funkcie uvoľni cestu k oranžovému políčku.
       MC_HOC_2017_07a_Kiki: Uvoľni cestu k oranžovému políčku.
@@ -889,17 +916,21 @@ sk:
       MC_HOC_2017_10_Kiki: Vytvor funkciu, ktorá ti pomôže dokončiť tento banský vozík.
       MC_HOC_2017_10_RETRY: Vytvor funkciu, ktorá ti pomôže dokončiť cestu pre tento
         banský vozík.
+      MC_HOC_2017_10_RETRY_2019: Vytvor funkciu, ktorá ti pomôže dokončiť cestu pre
+        tento banský vozík.
       MC_HOC_2017_10_RYAN: Vytvor funkciu, ktorá ti pomôže dokončiť tento banský vozík.
       MC_HOC_2017_10_RYAN2: Vytvor funkciu, ktorá ti pomôže dokončiť tento banský
         vozík.
       MC_HOC_2017_13_Cole: "**Voľná hra:** Čas skúmať na vlastnú päsť!"
       MC_HOC_2017_4.5v2: Dostaň agenta na prítlačnú dosku.
       MC_HOC_2017_Ali: Pomocou funkcií nájdi cestu cez lávu.
+      MC_HOC_2017_Ali_2019: Pomocou funkcií nájdi cestu cez lávu.
       MC_HOC_2017_FP10x10: "**Voľná hra:** Trúfneš si pozbierať všetky diamanty v
         tejto úrovni? "
       MC_HOC_2017_FP10x10_RE: "**Voľná hra:** Trúfneš si pozbierať všetky diamanty
         v tejto úrovni? "
       MC_HOC_2017_FP20x20: "**Voľná hra:** Čas skúmať na vlastnú päsť!"
+      MC_HOC_2017_FP20x20_2019: "**Voľná hra:** Čas skúmať na vlastnú päsť!"
       MC_HOC_2017_Ryan_03: Teraz použi cykly (opakovacie bloky) na miestnenie blokov
         do vody a pomôž tak agentovi vybudovať cez rieku most.
       MC_HOC_2017_Ryan_05: Znič tieto kaktusy, aby sa hráč mohol dostať do cieľa.
@@ -1035,6 +1066,7 @@ sk:
       Underground Mining Coal_2018: Najcennejšie zdroje nájdeš v podzemí, ale môže
         sa tam stmievať. Polož tam aspoň 2 fakle a vyťaž aspoň 2 kusy uhlia.
       Virtual Pet 1 Predict: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
+      Virtual Pet 1 Predict_2019: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Virtual Pet 1 Predict_simple: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       aE7: "Ak spravíte ďaľšiu takúto slučku, ale zabočíte doľava namiesto doprava,
         čo sa stane? \n\nViete to celé zopakovať pre nakreslenie tejto vlny?"
@@ -1104,6 +1136,7 @@ sk:
         tvojej snehovej vločky.
       courseD_artist_project5: Zahraj sa so snehovými vločkami!
       courseD_artist_project5_2018: Zahraj sa so snehovými vločkami!
+      courseD_artist_project5_2019: Zahraj sa so snehovými vločkami!
       courseD_bee_debugging3: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal
         všetok nektár a urobil celý med.
       courseD_debugging_3: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok
@@ -1128,9 +1161,12 @@ sk:
         slučky pre nakreslenie celej mriežky?
       courseF_artist_for_challenge1: Viete zistiť, ako znova nakresliť túto kresbu?
       courseF_artist_for_challenge1_2018: Viete zistiť, ako znova nakresliť túto kresbu?
+      courseF_artist_for_challenge1_2019: Viete zistiť, ako znova nakresliť túto kresbu?
       courseF_artist_for_challenge2: Viete zistiť, ako znova nakresliť túto kresbu
         s jedinou slučkou?
       courseF_artist_for_challenge2_2018: Viete zistiť, ako znova nakresliť túto kresbu
+        s jedinou slučkou?
+      courseF_artist_for_challenge2_2019: Viete zistiť, ako znova nakresliť túto kresbu
         s jedinou slučkou?
       courseF_bee_functions4: Funkcia "move and get nectar" prikáže včele otočiť sa,
         zbierať nektár a vrátiť sa kde to začalo. Použi funkciu aby si zozbieral všetok

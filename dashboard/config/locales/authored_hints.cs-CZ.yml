@@ -72,6 +72,10 @@ cs:
           než začne kreslit!
         2-3_Artist_Debugging_9_b: K úplnému otočení není potřeba přidat další blok.
           Stačí přidat 60 stupňů do bloku `otočit vlevo`, který už tam je!
+      2-3 Artist Functions 3 a_authored_hint:
+        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Artist Functions 3_authored_hint:
+        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
           Vzpomeňte si, že kód z předchozí hádanky byl:
@@ -224,6 +228,9 @@ cs:
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Funkci můžete ve svém programu zavolat vícekrát. Zkuste
           ji zavolat dvakrát, abyste vyřešili tuto hádanku.
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_a: Funkci můžete ve svém programu zavolat vícekrát. Zkuste
+          ji zavolat dvakrát, abyste vyřešili tuto hádanku.
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla
           Alex nebo Steve projít za kraj mapy.
@@ -237,7 +244,22 @@ cs:
           mohl provést kód.
         MC_HOC_2017_01_RETRY_c: Jakmile agent provede celý kód, můžete hráčem pohybovat
           pomocí kláves se šipkami.
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Přetáhněte jeden blok „pohyb vpřed“ z panelu nástrojů
+          do pracovního prostoru a přichyťte ho k bloku „při spuštění“.
+        MC_HOC_2017_01_RETRY_b: Nezapomeňte kliknout na tlačítko „Spustit“, aby agent
+          mohl provést kód.
+        MC_HOC_2017_01_RETRY_c: Jakmile agent provede celý kód, můžete hráčem pohybovat
+          pomocí kláves se šipkami.
       MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Posuňte agenta vpřed o dvě políčka a postavte ho na
+          nášlapnou desku. Otevře tak hráči dveře.
+        MC_HOC_2017_02_Cole_b: "Stiskněte tlačítko „Spustit“. \nKód můžete spustit,
+          i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud
+          nepřijdete na to, kde je chyba."
+        MC_HOC_2017_02_Cole_c: Jakmile agent otevře dveře, nasměrujte hráče k mapě
+          pomocí kláves se šipkami.
+      MC_HOC_2017_02_Cole_2019_authored_hint:
         MC_HOC_2017_02_Cole_a: Posuňte agenta vpřed o dvě políčka a postavte ho na
           nášlapnou desku. Otevře tak hráči dveře.
         MC_HOC_2017_02_Cole_b: "Stiskněte tlačítko „Spustit“. \nKód můžete spustit,
@@ -258,10 +280,19 @@ cs:
           nasměrovat ke kompasu pomocí kláves se šipkami.
         MC_HOC_2017_03_Cole_b: Připadá vám kód příliš dlouhý? Zkuste použít cyklus
           „opakovat“ a uvidíte, jestli dokážete přijít na to, jak ho zkrátit.
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_a: Když dostanete agenta na nášlapnou desku, můžete hráče
+          nasměrovat ke kompasu pomocí kláves se šipkami.
+        MC_HOC_2017_03_Cole_b: Připadá vám kód příliš dlouhý? Zkuste použít cyklus
+          „opakovat“ a uvidíte, jestli dokážete přijít na to, jak ho zkrátit.
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: "Přechodem přes tyto dvě nášlapné desky otevřete
           hráči cestu. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: Pomocí bloku „otočit vpravo“ změníte směr agenta.
+        MC_HOC_2017_04POINT5_RYAN_a: Agent se musí dostat jen na první nášlapnou desku,
+          aby uvolnil Alex nebo Stevovi cestu k sekeře.
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
         MC_HOC_2017_04POINT5_RYAN_b: Pomocí bloku „otočit vpravo“ změníte směr agenta.
         MC_HOC_2017_04POINT5_RYAN_a: Agent se musí dostat jen na první nášlapnou desku,
           aby uvolnil Alex nebo Stevovi cestu k sekeře.
@@ -273,7 +304,19 @@ cs:
           nepřijdete na to, kde je chyba."
         MC_HOC_2017_04_Cole_b: Jakmile se agent dostane na nášlapnou desku, otevře
           hráči dveře.
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_a: Agent se musí sedmkrát „posunout vpřed“. Jak k tomu
+          lze využít cyklus „opakovat“?
+        MC_HOC_2017_04_Cole_c: "Stiskněte tlačítko „Spustit“. \nKód můžete spustit,
+          i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud
+          nepřijdete na to, kde je chyba."
+        MC_HOC_2017_04_Cole_b: Jakmile se agent dostane na nášlapnou desku, otevře
+          hráči dveře.
       MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Věděli jste, že do cyklu můžete vložit více částí kódu?
+          Zkuste do cyklu „opakovat“ vložit umístění prkna **a** posun vpřed pro dokončení
+          této hádanky.
+      MC_HOC_2017_05_Cole_2019_authored_hint:
         MC_HOC_2017_05_Cole_a: Věděli jste, že do cyklu můžete vložit více částí kódu?
           Zkuste do cyklu „opakovat“ vložit umístění prkna **a** posun vpřed pro dokončení
           této hádanky.
@@ -283,9 +326,17 @@ cs:
           této hádanky.
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: Kolikrát tento cyklus proběhne? Kolikrát by *měl* proběhnout?
+      MC_HOC_2017_06_Cole_2019_authored_hint:
+        MC_HOC_2017_06_Cole_a: Kolikrát tento cyklus proběhne? Kolikrát by *měl* proběhnout?
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Zkuste do cyklu „opakovat“ vložit více pokynů!
       MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_a: K vyřešení této hádanky musíte přijít na to, co dělá
+          funkce „uvolnit cestu“ a zavolat ji tolikrát, kolikrát bude třeba, pomocí
+          malého zeleného bloku „uvolnit cestu“ v panelu nástrojů.
+        MC_HOC_2017_07_Cole_b: Zkuste zkombinovat bloky funkcí s ostatními bloky z
+          panelu nástrojů. Pomůže vám to vyřešit tuto hádanku.
+      MC_HOC_2017_07_Cole_2019_authored_hint:
         MC_HOC_2017_07_Cole_a: K vyřešení této hádanky musíte přijít na to, co dělá
           funkce „uvolnit cestu“ a zavolat ji tolikrát, kolikrát bude třeba, pomocí
           malého zeleného bloku „uvolnit cestu“ v panelu nástrojů.
@@ -305,6 +356,8 @@ cs:
         MC_HOC_2017_10_Cole_a: Pomocí funkcí tuto hádanku vyřešíte snadněji!
       MC_HOC_2017_10_RETRY_authored_hint:
         MC_HOC_2017_10_Cole_a: Pomocí funkcí tuto hádanku vyřešíte snadněji!
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_a: Pomocí funkcí tuto hádanku vyřešíte snadněji!
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla
           Alex nebo Steve projít za kraj mapy.
@@ -316,7 +369,15 @@ cs:
           i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud
           nepřijdete na to, kde je chyba."
         MC_HOC_2017_08_RY_b: Tuto hádanku lze vyřešit MNOHA způsoby. Pár jich vyzkoušejte!
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: "Stiskněte tlačítko „Spustit“. \nKód můžete spustit,
+          i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud
+          nepřijdete na to, kde je chyba."
+        MC_HOC_2017_08_RY_b: Tuto hádanku lze vyřešit MNOHA způsoby. Pár jich vyzkoušejte!
       MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla
+          Alex nebo Steve projít za kraj mapy.
+      MC_HOC_2017_FP20x20_2019_authored_hint:
         MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla
           Alex nebo Steve projít za kraj mapy.
       New Minecraft Hero Project_authored_hint:

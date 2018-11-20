@@ -55,7 +55,7 @@ et:
       2-3 Artist Debugging 6: "Tundub et ma istun toolil, millel on üks jalg puudu.\r\n\r
         \nMuuda koodi, et toolile üks jalg juurde joonistada."
       2-3 Artist Debugging 7: "Tundub et C on tagurpidi joonistatud.\r\n\r\n Kas sa
-        saad C õigetpidi joonistada?\n"
+        saad C õigetpidi joonistada?"
       2-3 Artist Debugging 8: "Õpetaja ütleb, et pean alustatu lõpule viima!\r\n\r\nAita
         mul tuulevurr valmis teha. Kas sa mõtled välja, mis valesti on?"
       2-3 Artist Debugging 9: "Midagi on valesti!\r\n\r\nKood selle varre jaoks on
@@ -1444,6 +1444,27 @@ et:
       Crack Random Substitution_2018: Juhised
       Crack a Caesar Cipher: Juhised
       Crack a Caesar Cipher_2018: Juhised
+      Dance_Party_01: Lohista `tee uus` plokk töölauale ja ühenda see `seadista` ploki
+        sisse.
+      Dance_Party_01_low: Lohista `tee uus` plokk töölauale ja ühenda see `seadista`
+        ploki sisse.
+      Dance_Party_02: Las põder alustab uue liigutusega peale 4 ühikut!
+      Dance_Party_03: Las tantsija alustab uue liigutusega peale 6 ühikut!
+      Dance_Party_04: Lisa oma programmile taustaeffekt.
+      Dance_Party_05: Lisa uus plokk, et tantsija muudaks liigutusi iga 2 ühiku järel.
+      Dance_Party_06: Loo taustatantsija, keda kutustakse `taustatantsija1`, et ta
+        kassiga tantsiks.
+      Dance_Party_08: Kas saad muuta mõlemad taustatantsijad sama suureks?
+      Dance_Party_09: Kasuta `määra toon` plokki, et tantsija värvi muuta.
+      Dance_Party_10: Pane teine tantsija muusikale vastavalt liikuma, kasutades `hakkab
+        järgnema` plokki.
+      Dance_Party_11.5: Kasuta "kõik pardid" plokke, et panna kõik pardid koos tantsima.
+      Dance_Party_11: Plokk `kui vajutad ülesse` laseb koodi käivitada siis, kui vajutatakse
+        ülemist nooleklahvi. Proovi panna tantsija kiireid liigutusi tegema kui vajutad
+        ülemist nooleklahvi.
+      Dance_Party_11b: Pane Robot üks kord "kükitama", kui vajutatakse paremat nooleklahvi
+        ja tegema ühe "kõrge plaksu", kui vajutatakse ülemist nooleklahvi. Kükita-plaksuta
+        nii kiiresti kui võimalik!
       Food Fight!: "Lisasime sinu jaoks ühe viimase funktsiooni. \r \r Kasuta avaldist
         „kui“, et sinu mäng kasutaks funktsiooni „tase_üles“ ainult siis, kui „mängija_skoor“
         ületab teatud arvu.\r \r Näide: „mängija_skoor“ 6 > 6\r \r Mängi mängu ja
@@ -1451,6 +1472,20 @@ et:
       Frequency Analysis: Test
       Function intro Ryan: Kasutage funktsiooni "ehitada sild" kaks korda, et teha
         tee Redstone Torchini.
+      Function intro Ryan_2019: Kasutage funktsiooni "ehitada sild" kaks korda, et
+        teha tee Redstone Torchini.
+      HOC 2018 Level_1: Võta laev kirstust.
+      HOC 2018 Level_10: Mine selle Ocean Monument (ookeani monumendi) sissepääsu
+        juurde.
+      HOC 2018 Level_11: 'Ehitage koos Prismarine kanal Ocean Monument sisse.  '
+      HOC 2018 Level_12: 'Kujunda ise oma enda veealune keskkond!  '
+      HOC 2018 Level_2: 'Mine sadamakai lõppu.  '
+      HOC 2018 Level_3: 'Mine avamerele tursa juurde.  '
+      HOC 2018 Level_4: Kasutage delfiini saamiseks tsüklit.
+      HOC 2018 Level_5: Uuri laevahuku kohta, et jõuda kirstuni.
+      HOC 2018 Level_6: Liigu läbi jää, et jõuda lõheni.
+      HOC 2018 Level_7a: Kirstu leidmiseks otsi läbi need veealused varemed.
+      HOC 2018 Level_9b: 'Et jõuda aardeni, kasuta koralle asukohapunktidena.  '
       Infinity_catch: Kas oskad aidata Elsal („tegelane 2“) Annale järele jõuda, kasutades
         nooleklahve?
       Infinity_finale: Loo midagi vabal valikul ning jaga seda!
@@ -1675,28 +1710,41 @@ et:
       MC_HOC_2017_01_RETRY: 'Kirjutage kood, et saada Agent surveplaadile, siis vajutage
         "Käivita" ja kasutage nooleklahve, et viia mängija majast välja, et ta saaks
         saaks kätte kirstu. '
+      MC_HOC_2017_01_RETRY_2019: 'Kirjutage kood, et saada Agent surveplaadile, siis
+        vajutage "Käivita" ja kasutage nooleklahve, et viia mängija majast välja,
+        et ta saaks saaks kätte kirstu. '
       MC_HOC_2017_02: Liiguta Agent surveplaadile.
       MC_HOC_2017_02_Cole: 'Liiguta Agent surveplaadile, et {currentPlayerName} saaks
         minna kaardile. '
+      MC_HOC_2017_02_Cole_2019: 'Liiguta Agent surveplaadile, et {currentPlayerName}
+        saaks minna kaardile. '
       MC_HOC_2017_02_Kiki: Liiguta Agent surveplaadile ja siis liiguta mängija oranžile
         nelinurgale.
       MC_HOC_2017_02_Will: Liiguta Agent surveplaadile.
       MC_HOC_2017_03_Cole: 'Programmeri Agent väravat avama. '
+      MC_HOC_2017_03_Cole_2019: 'Programmeri Agent väravat avama. '
       MC_HOC_2017_03_Kiki: Liiguta Agent surveplaadile.
       MC_HOC_2017_04: Muuta viimase pusle tsüklit, et aidata Agendil teha rada üle
         jõe laiema osa.
       MC_HOC_2017_04POINT5_Cole: Liiguta Agent surveplaadile.
       MC_HOC_2017_04POINT5_RYAN: Liiguta Agent surveplaadile.
+      MC_HOC_2017_04POINT5_RYAN_2019: Liiguta Agent surveplaadile.
       MC_HOC_2017_04_Cole: Liiguta Agent surveplaadile.
+      MC_HOC_2017_04_Cole_2019: Liiguta Agent surveplaadile.
       MC_HOC_2017_04_Kiki: Liiguta Agent surveplaadile.
       MC_HOC_2017_05: Loo funktsiooni, et aidata Agendil liikuda surveplaadile.
       MC_HOC_2017_05_Cole: Vii mängija kühvli juurde.
+      MC_HOC_2017_05_Cole_2019: Vii mängija kühvli juurde.
       MC_HOC_2017_05_Josh: Vii mängija kühvli juurde.
       MC_HOC_2017_05_Kiki: Vii mängija oranži ruudu juurde.
       MC_HOC_2017_06_Cole: Paranda kood, et Agent saaks ehitada silla üle selle jõe.
+      MC_HOC_2017_06_Cole_2019: Paranda kood, et Agent saaks ehitada silla üle selle
+        jõe.
       MC_HOC_2017_06_Josh: Paranda kood, et Agent saaks ehitada silla üle selle jõe.
       MC_HOC_2017_06_Kiki: Paranda kood, et Agent saaks ehitada silla üle selle jõe.
       MC_HOC_2017_07_Cole: Hävita jää hävitada ja saada {currentPlayerName} Minecart'i
+        juurde.
+      MC_HOC_2017_07_Cole_2019: Hävita jää hävitada ja saada {currentPlayerName} Minecart'i
         juurde.
       MC_HOC_2017_07_Kiki: Kasuta funktsiooni, et teha rada vabaks oranži ruudu juurde.
       MC_HOC_2017_07a_Kiki: Tee rada vabaks oranži ruudu juurde.
@@ -1714,16 +1762,20 @@ et:
       MC_HOC_2017_10_Kiki: Koosta funktsioon, mis aitavad teil lõpetada selle minecart'i.
       MC_HOC_2017_10_RETRY: Kasutage funktsioone, et saaksid lõpetada selle minecart'i
         loo.
+      MC_HOC_2017_10_RETRY_2019: Kasutage funktsioone, et saaksid lõpetada selle minecart'i
+        loo.
       MC_HOC_2017_10_RYAN: Koosta funktsioon, mis aitavad teil lõpetada selle minecart'i.
       MC_HOC_2017_10_RYAN2: Koosta funktsioon, mis aitavad teil lõpetada selle minecart'i.
       MC_HOC_2017_13_Cole: "** Vabamäng: ** Aeg uurida ise edasi!"
       MC_HOC_2017_4.5v2: Liiguta Agent surveplaadile.
       MC_HOC_2017_Ali: Kasutage funktsioone, et leida viis minna üle laava.
+      MC_HOC_2017_Ali_2019: Kasutage funktsioone, et leida viis minna üle laava.
       MC_HOC_2017_FP10x10: "**Vaba mängimine:** kas suudad kokku koguda kõik teemandid
         sellel mängutasemel? "
       MC_HOC_2017_FP10x10_RE: "**Vaba mängimine:** kas suudad kokku koguda kõik teemandid
         sellel mängutasemel? "
       MC_HOC_2017_FP20x20: "** Vabamäng: ** Aeg uurida ise edasi!"
+      MC_HOC_2017_FP20x20_2019: "** Vabamäng: ** Aeg uurida ise edasi!"
       MC_HOC_2017_Ryan_03: Nüüd kasuta tsüklied, et aidata Agendil ehitada silda üle
         jõe pannes vette plokke.
       MC_HOC_2017_Ryan_05: Hävitada kaktused, et mängija saaks minna sihtmärgini.
@@ -2227,6 +2279,8 @@ et:
         kõik kolm külge on sama pikad.'
       courseC_artist_prog5_2018: 'Sellele majale on katust vaja! Joonista kolmnurk.
         Vihje: kõik kolm külge on sama pikad.'
+      courseC_artist_prog5_2019: 'Sellele majale on katust vaja! Joonista kolmnurk.
+        Vihje: kõik kolm külge on sama pikad.'
       courseC_maze_debugging10: Paranda selle taseme vead, seades ja lisades plokke
         nii, et jõuaksin põrsani!
       courseD_artist_binary1: Kas oskad teha nii, et kunstnik joonistaks esimesel
@@ -2261,6 +2315,8 @@ et:
       courseD_bee_nestedLoops8: "Kogu kõikidest lilledest kogu nektar kokku ja tee
         meekärje juures mett.\r\r Kasuta pesaga tsüklit. "
       courseD_bee_nestedLoops8_2018: "Kogu kõikidest lilledest kogu nektar kokku ja
+        tee meekärje juures mett.\r\r Kasuta pesaga tsüklit. "
+      courseD_bee_nestedLoops8_2019: "Kogu kõikidest lilledest kogu nektar kokku ja
         tee meekärje juures mett.\r\r Kasuta pesaga tsüklit. "
       courseD_bounce_events10: Nüüd on üleval värav. Mängu loomiseks kinnita plokid
         „lisa punkt“ ja „lisa vastase punkt“ plokkide "kui pall läheb väravasse" ja
@@ -2297,9 +2353,14 @@ et:
       courseD_maze_nestedLoops4_2018: "Aita mind päevalilleni, kasutades nii vähe
         plokke kui võimalik!\r\rProovi kasutada 'korda' tsüklit mõne teise tsükli
         sees, et kasutada vähem koodi."
+      courseD_maze_nestedLoops4_2019: "Aita mind päevalilleni, kasutades nii vähe
+        plokke kui võimalik!\r\rProovi kasutada 'korda' tsüklit mõne teise tsükli
+        sees, et kasutada vähem koodi."
       courseD_maze_nestedLoops6: "Teeme asja keerulisemaks!\r Kasuta võimalikult vähe
         tsükleid, et mind päevalilleni viia."
       courseD_maze_nestedLoops6_2018: "Teeme asja keerulisemaks!\r Kasuta võimalikult
+        vähe tsükleid, et mind päevalilleni viia."
+      courseD_maze_nestedLoops6_2019: "Teeme asja keerulisemaks!\r Kasuta võimalikult
         vähe tsükleid, et mind päevalilleni viia."
       courseE_artist_functions1: "Aita zombile joonistada prilid, kasutades 100 piksli
         pikkuste külgedega ruute.\r\nKaar klaaside vahel on 75 piksli pikkune."
@@ -2328,13 +2389,19 @@ et:
       courseF_artist_for7: Selleks tee kolm väikest muudatust eelmise taseme koodis!
       courseF_artist_for7_2018: Selleks tee kolm väikest muudatust eelmise taseme
         koodis!
+      courseF_artist_for7_2019: Selleks tee kolm väikest muudatust eelmise taseme
+        koodis!
       courseF_artist_for_challenge1: Kas saad aru, kuidas saaks selle joonistuse uuesti
         luua?
       courseF_artist_for_challenge1_2018: Kas saad aru, kuidas saaks selle joonistuse
         uuesti luua?
+      courseF_artist_for_challenge1_2019: Kas saad aru, kuidas saaks selle joonistuse
+        uuesti luua?
       courseF_artist_for_challenge2: Kas saad aru, kuidas saaks selle joonistuse uuesti
         luua ühe tsükliga?
       courseF_artist_for_challenge2_2018: Kas saad aru, kuidas saaks selle joonistuse
+        uuesti luua ühe tsükliga?
+      courseF_artist_for_challenge2_2019: Kas saad aru, kuidas saaks selle joonistuse
         uuesti luua ühe tsükliga?
       courseF_bee_for8: "Sul on see selge! Millist juurdekasvu on vaja, et koguda
         3, 6, 9, 12, 15 nektarit?\r Vihje: mille peab igale arvule lisama, et saada
@@ -2342,9 +2409,14 @@ et:
       courseF_bee_for8_2018: "Sul on see selge! Millist juurdekasvu on vaja, et koguda
         3, 6, 9, 12, 15 nektarit?\r Vihje: mille peab igale arvule lisama, et saada
         sellele järgnev arv?"
+      courseF_bee_for8_2019: "Sul on see selge! Millist juurdekasvu on vaja, et koguda
+        3, 6, 9, 12, 15 nektarit?\r Vihje: mille peab igale arvule lisama, et saada
+        sellele järgnev arv?"
       courseF_bee_for_challenge2: Lahenda see mõistatus, kasutades võimalikult vähe
         plokke.
       courseF_bee_for_challenge2_2018: Lahenda see mõistatus, kasutades võimalikult
+        vähe plokke.
+      courseF_bee_for_challenge2_2019: Lahenda see mõistatus, kasutades võimalikult
         vähe plokke.
       courseF_bee_for_challenge3: Lahenda see mõistatus, kasutades võimalikult vähe
         plokke.
@@ -2477,7 +2549,7 @@ et:
       grade2_PuppyLoops_8: "See kood kassi vurrude jaoks on vale.\n\r\n\r\nParanda
         kood, et joonistada vurrud, mis on ühepikkused."
       grade2_PuppyLoops_9: "Tundub et C on tagurpidi joonistatud.\r\n\r\n Kas sa saad
-        C õigetpidi joonistada?\n"
+        C õigetpidi joonistada?"
       grade2_playlab_project_1: Nüüd kirjuta programm, mis paneb Waddlesi üles /alla/vasakule/paremale
         nooleklahvide abil liikuma ja märke püüdma!
       grade2_playlab_project_3: "Kas sa saad panna pingviini (tegelane 1) \"Ai!\"

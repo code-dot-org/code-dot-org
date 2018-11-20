@@ -490,7 +490,7 @@
   dashboard_sections_table_pairing_allowed: "Par-programmering"
   dashboard_sections_table_students: "Elever"
   dashboard_sections_table_code: "Avsnitt kod"
-  dashboard_sections_name: "Sektionsnamn"
+  dashboard_sections_name: 'Sektionsnamn'
   dashboard_sections_choose_secret: "Om du vill ge dina elever konton, välj en typ av hemligt<b>ord</b> eller en <b>bild</b> för den sektionen."
   dashboard_sections_secret_word: "Ett <b>ord</b> låter dig ställa in ett hemligt ord för varje elev."
   dashboard_sections_secret_picture: "En <b>bild</b> låter dig ange en hemlig bild för varje elev, idealiskt för yngre elever som ännu inte skriva."
@@ -504,7 +504,7 @@
   dashboard_sections_move_students: "Flytta studenter"
   dashboard_students_add_multiple: 'Skriv eller klistra in namnen på dina elever, en per rad:'
   dashboard_students_new_section: "Du har skapt en ny sektion! Lägg nu till dina elever genom att använda <b>Lägg till elev</b> och <b>Lägg till flera elever</b> knapparna ovan."
-  dashboard_students_name: "Namn"
+  dashboard_students_name: 'Namn'
   dashboard_students_progress: "Framsteg"
   dashboard_students_male: "Man"
   dashboard_students_female: "Kvinna"
@@ -1112,7 +1112,9 @@
   user_header_playlab: "Spel-labb"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
+  applab_tile_start_tutorial: "Start"
   account_sign_up_email_opt_in: "Får vi skicka e-post till dig med nyheter om våra kurser, lokala erbjudanden eller andra nyheter i ämnet datavetenskap?"
+  hoc_overview_start_tutorial: "Start"
   hoc2018_creativity_create: "Skapa"
   hoc2018_mc_designer_description: "Programmera djur och andra Minecraft varelser i din egen version av Minecraft."
   hoc2018_mc_start: "Start"
@@ -1124,3 +1126,7 @@
   hoc2018_mc_video_title_inspire_girl: "Inspirera en flicka"
   hoc2018_mc_homepage_join_us: "Delta med oss"
   hoc2018_mc_homepage_try_it: "Prova"
+  hoc2018_dance_party_button: "Start"
+  hoc2018_dance_teacher_resources_tile1_button: "Lektionsplan"
+  hoc2018_dance_teacher_resources_tile2_button: "Ouppkopplad aktivitet"
+  hoc2018_dance_amazon_about_future_engineer_button: "Lär dig mer"

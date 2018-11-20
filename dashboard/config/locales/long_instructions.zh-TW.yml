@@ -567,6 +567,77 @@ zh-TW:
         `points = points +1` 的方式增加變數值。<br/><br/>\n\r\n3. 分數到達 10 分（每次加 1 分）就過關。\r\n\r\n<br/><br/>\r\n<h4>\r\n**注意：**\n使用向右鍵扔出派！\r\n</h4>"
       CourseF_PlayLab_vars9: "很好，現在我們來確定這個遊戲不至於太簡單！\r\n\r\n每當小狗（角色1）被小貓（角色2）的三明治丟到時就扣
         1 分。\r\n\r\n初始分數 10 分似乎不大困難，我們把分數從 10 改成 0 後再試試吧。"
+      Dance_Party_01: |-
+        *來舉行一場舞會！*
+
+        將「製作新內容」程式積木拖曳至工作區中，並在「設定」程式積木內部進行連接，以建立第一個舞者。
+
+        * *如果您想要更多資訊或其他挑戰，也可以按一下左側的燈泡。*
+      Dance_Party_01_low: |-
+        *來舉行一場舞會！*
+
+        將「製作新內容」程式積木拖曳至工作區中，並在「設定」程式積木內部進行連接，以建立第一個舞者。
+
+        * *如果您想要更多資訊或其他挑戰，也可以按一下左側的燈泡。*
+      Dance_Party_02: |-
+        讓這隻麋鹿跳舞！
+
+        拖出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木到工作區上。在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 程式積木之下進行連接。您的舞者應該在第四個小節之後開始新的動作。
+
+
+        **小節**用於計算音樂中的時間。在本教學課程中，一小節的長度為四拍。
+      Dance_Party_03: |-
+        *現在我們要跟著音樂律動了！*
+
+        將 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> 程式積木新增至您的工作區。讓舞者在 6 個小節後開始新的動作。
+      Dance_Party_04: |-
+        *這支舞需要一些閃光！*
+
+        在工具箱中尋找新的程式積木，在舞者的背後新增背景效果。觀看隨著時間和音樂來變化的效果！
+      Dance_Party_05: |-
+        使用另一個新的程式積木，讓舞者**每 2 個小節**改變動作！
+
+        * 選擇「（下一步）」、「（上一步）」或「（隨機）」告訴舞者每次執行程式碼時執行不同的動作。
+      Dance_Party_06: |-
+        *我們需要更多舞者！*
+
+        建立一個名為「backup_dancer1」的備用舞者與貓跳舞。
+      Dance_Party_08: |-
+        每個舞者都有一套 _屬性_ 來控制外觀。
+
+        您可以縮小 _尺寸_，讓這看起來像一個舞者在背景中。您是否能讓兩個備用舞者的大小相同？
+      Dance_Party_09: |-
+        舞者具有可以新增一層顏色的「色調」屬性。試著變更其中一個舞者的色調。
+        * 色調將混合您選擇的顏色與舞者的顏色。
+      Dance_Party_10: |-
+        現在我們已經知道如何改變舞者的屬性。我們也可以使用此程式積木，讓相同的屬性自動回應音樂：
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        此程式使用音樂的「低音」音量（低音）來控制一個舞者的高度。您是否能讓另一個舞者也回應音樂？
+      Dance_Party_11.5: |-
+        查看此程式積木：
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        現在您可以一次建立一群舞者了！
+
+        嘗試使用一些「所有鴨子」程式積木來編寫程式碼，這將使所有的鴨子一起跳舞。
+      Dance_Party_11: |-
+        <xml><block type="Dancelab_whenKey"></block></xml> 程式積木可讓您在按下向上箭頭時執行程式碼。
+
+        您可以變更舞蹈動作、變更舞者的屬性或者只進行一次快速動作。發揮創意，尋找新的程式積木！
+      Dance_Party_11b: 是時候跳舞了！按下向左鍵時，貓會輕拍。按下向右鍵時，可讓機器人「掉落」。
+      Dance_Party_12: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
       ECS Unit 3 Challenge Selection: "# 挑戰概覽\n> 你的挑戰有哪些？ \r\n\r\n## Enter the lesson
         you selected for your\nchallenge in the text box below.\r\n\r\nHTML Beginners:\r\n\r\n-
         Day 3-4,5:\nBasic HTML - Paragraph, Header, Strong, and EM Tags\r\n- Day 6--7:
@@ -610,6 +681,8 @@ zh-TW:
       Formative versus Summative Assessment: 下面的連結中提供了形成性和總結性評量的定義和範例：
       Function intro Ryan: "您的工作空間中有一個名為「建造橋樑」的**功能**。您要過河所需的代碼都建置在內！\r\n \r\n在您的工作空間中短按兩次小型的綠色方塊，即可修正路徑並讓
         {currentPlayerName} 前往紅石火把 [redstone_torch] 的位置。"
+      Function intro Ryan_2019: "您的工作空間中有一個名為「建造橋樑」的**功能**。您要過河所需的代碼都建置在內！\r\n \r\n在您的工作空間中短按兩次小型的綠色方塊，即可修正路徑並讓
+        {currentPlayerName} 前往紅石火把 [redstone_torch] 的位置。"
       GameLab Livecode Demo 1: "# 讓角色動起來\r\n\r\n要開始這個範例，請依下列步驟操作：\r\n\r\n1. 使用 createSprite()
         積木來建立一個新的角色。\r\n2. 切換到「動作」頁籤，並選擇角色的圖像。\r\n3. 使用 sprite.setAnimation() 積木來設置角色的動作。\r\n4.
         使用迴圈增量（慢慢增加）它的 x 和 y 值，就可以移動角色。\r\n"
@@ -636,6 +709,18 @@ zh-TW:
       HOC 2018 Level_8: "一開始是冰山，現在又是熔岩？穿越這座火山島，並在珊瑚礁中尋找**熱帶魚** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)。\n\n"
       HOC 2018 Level_9b: "您終於抵達珊瑚礁，現在尋找**海洋之心** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)！使用藍色和紅色的珊瑚抵達藏有寶藏的**箱子**
         ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)。\n\n"
+      HOC Dance 4_draft: |-
+        使用另一個新的程式積木，讓舞者**每 2 個小節**改變動作！
+
+        * 選擇「（下一步）」、「（上一步）」或「（隨機）」告訴舞者每次執行程式碼時執行不同的動作。
+      HOC Dance 5_draft: |-
+        *我們需要更多舞者！*
+
+        建立一個名為「backup_dancer1」的備用舞者與貓跳舞。
+      HOC Dance 9_draft: |-
+        <xml><block type="Dancelab_whenKey"></block></xml> 程式積木可讓您在按下向上箭頭時執行程式碼。
+
+        您可以變更舞蹈動作、變更舞者的屬性或者只進行一次快速動作。發揮創意，尋找新的程式積木！
       Harvesting: |-
         喔哦，我弄丟了地圖，種了什麼也搞不清楚！每個芽苗可以種出**玉米** ![picture of corn](https://images.code.org/cac3133c40781553a70066a67298b2b5-image-1472493202556.png)
         、**豌豆** ![picture of beans](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png)
@@ -646,6 +731,8 @@ zh-TW:
       InspirationalArtwork: "你已經學會了所有需要創建這個模式的知識了！\r\n\r\n如果這個圖形引起了你的聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。
         \r\n"
       InspirationalArtwork_2018: "你已經學會了所有需要創建這個模式的知識了！\r\n\r\n如果這個圖形引起了你的聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。
+        \r\n"
+      InspirationalArtwork_2019: "你已經學會了所有需要創建這個模式的知識了！\r\n\r\n如果這個圖形引起了你的聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。
         \r\n"
       K-1 Bee Loops 2: 使用一個「重複」迴圈來移動、接著採集花蜜、然後釀造蜂蜜！
       K-1 Bee Loops 3: 使用 3 個「重複」迴圈來採集花蜜和釀造蜂蜜！
@@ -673,13 +760,22 @@ zh-TW:
         房門反鎖住了，代理 Agent 快來幫忙！
 
         將「移動-向前」積木黏貼到工作區域的「當運行時」積木下，讓代理 Agent 走到壓力板 [PressurePlate_Up] 以打開房門。接著再用方向箭走出房子，然後收集 **箱子** [chest]。
+      MC_HOC_2017_01_RETRY_2019: |-
+        房門反鎖住了，代理 Agent 快來幫忙！
+
+        將「移動-向前」積木黏貼到工作區域的「當運行時」積木下，讓代理 Agent 走到壓力板 [PressurePlate_Up] 以打開房門。接著再用方向箭走出房子，然後收集 **箱子** [chest]。
       MC_HOC_2017_02: 玩家必須進入秘密樹叢。撰寫代碼，幫助 Agent 打開大門，讓他可以前往壓板。
       MC_HOC_2017_02_Cole: "{currentPlayerName} 即將踏上冒險旅程！請先打開右邊上鎖的門，取得裡頭的**地圖** [map_empty]。\r\n
         \r\n在工作區域中加入程式讓代理 Agent 移至壓力板 [PressurePlate_Up]，這樣 {currentPlayerName} 才可以順利進入。"
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} 即將踏上冒險旅程！請先打開右邊上鎖的門，取得裡頭的**地圖**
+        [map_empty]。\r\n \r\n在工作區域中加入程式讓代理 Agent 移至壓力板 [PressurePlate_Up]，這樣 {currentPlayerName}
+        才可以順利進入。"
       MC_HOC_2017_02_Kiki: "玩家已出發踏上冒險旅程，但首先他們必須先在上鎖的門後找到藏起來的火把。 \n\n\n設定 Agent 的程式以往前移動兩次，即可沿著白色路徑前進並抵達壓板，這樣他就可以為玩家開門。"
       MC_HOC_2017_02_Will: "若要完成此關卡，玩家必須進入秘密樹林，然後在上鎖的門後找到橙色方塊。 \n\n\n工作空間中的代碼可讓 Agent
         往前移動兩次以前往壓板，並為愛莉克斯或史提夫開門。"
       MC_HOC_2017_03_Cole: "{currentPlayerName} 繼續冒險，並需要**羅盤** [compass] 來為旅程做準備。\r\n
+        \  \r\n設定 Agent 的代碼以打開大門。"
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} 繼續冒險，並需要**羅盤** [compass] 來為旅程做準備。\r\n
         \  \r\n設定 Agent 的代碼以打開大門。"
       MC_HOC_2017_03_Kiki: "玩家的冒險旅程將在秘密樹林中打開上鎖的門後開始！ \n\n\n\n\n撰寫代碼，幫助 Agent 開門以讓他前往壓板。"
       MC_HOC_2017_04: 變更上一個版圖的循環，讓 Agent 可以在這條河較寬的部分開闢路徑。
@@ -687,7 +783,11 @@ zh-TW:
         Agent 清除路徑。"
       MC_HOC_2017_04POINT5_RYAN: "您已經安全通過！ \n\n\n現在，讓 {currentPlayerName} 安全地通過迷宮以收集**斧頭**
         [diamond_axe]"
+      MC_HOC_2017_04POINT5_RYAN_2019: "您已經安全通過！ \n\n\n現在，讓 {currentPlayerName} 安全地通過迷宮以收集**斧頭**
+        [diamond_axe]"
       MC_HOC_2017_04_Cole: "Agent 可以過河了！\r\n \r\n使用「重複」循環以解決此版圖，並幫助 {currentPlayerName}
+        前往門後的**桶子** [bucket_empty]。"
+      MC_HOC_2017_04_Cole_2019: "Agent 可以過河了！\r\n \r\n使用「重複」循環以解決此版圖，並幫助 {currentPlayerName}
         前往門後的**桶子** [bucket_empty]。"
       MC_HOC_2017_04_Kiki: "進入秘密樹叢，就可以抵達這片美麗的綠洲！若要完成此關卡，玩家必須前往小屋中的橙色方塊。 \n\n\n使用「重複」循環，幫助
         Agent 一路前往壓板，使用壓板即可開啟小屋大門。"
@@ -695,13 +795,19 @@ zh-TW:
         Agent 遇到障礙時幫您清除障礙。"
       MC_HOC_2017_05_Cole: "糟糕，橋沒了！ \n\n\n設定 Agent 的代碼，以使用「放置」方塊來重建橋樑，這樣 {currentPlayerName}
         才能抵達**鏟子** [diamond_shovel] 的位置。"
+      MC_HOC_2017_05_Cole_2019: "糟糕，橋沒了！ \n\n\n設定 Agent 的代碼，以使用「放置」方塊來重建橋樑，這樣 {currentPlayerName}
+        才能抵達**鏟子** [diamond_shovel] 的位置。"
       MC_HOC_2017_05_Josh: "糟糕，橋沒了！ \n\n\n幫助 Agent 重建橋樑，讓玩家可以前往**鏟子**的位置。"
       MC_HOC_2017_05_Kiki: "是時候讓玩家離開秘密樹叢，並繼續冒險旅程了，不過橋沒了！ \n\n\n幫助 Agent 重建橋樑然後移動木板，這樣玩家才能前往橙色方塊。"
       MC_HOC_2017_06_Cole: "又是一條河，但這條河寬多了！\r\n \r\n修正此代碼，幫助 Agent 建造橋樑，這樣 {currentPlayerName}
         才能前往**十字鎬** [diamond_pickaxe] 的位置。"
+      MC_HOC_2017_06_Cole_2019: "又是一條河，但這條河寬多了！\r\n \r\n修正此代碼，幫助 Agent 建造橋樑，這樣 {currentPlayerName}
+        才能前往**十字鎬** [diamond_pickaxe] 的位置。"
       MC_HOC_2017_06_Josh: "又是一條河，但這條河寬多了！ \n\n\n修正此代碼，幫助 Agent 建造橋樑以過河。"
       MC_HOC_2017_06_Kiki: "又是一條河，但這條河寬多了！ \n\n\n修正此代碼，幫助 Agent 建造橋樑以過河。"
       MC_HOC_2017_07_Cole: "路上有冰塊！\r\n \r\n「清除路徑」的功能可幫助您破壞冰塊，並讓 {currentPlayerName}
+        前往礦車 [minecart_normal]！"
+      MC_HOC_2017_07_Cole_2019: "路上有冰塊！\r\n \r\n「清除路徑」的功能可幫助您破壞冰塊，並讓 {currentPlayerName}
         前往礦車 [minecart_normal]！"
       MC_HOC_2017_07_Kiki: "循環不是重複代碼的唯一方式！ \n\n\n這裡我們為您提供了名稱為「清除仙人掌」的功能，此功能可在您每次使用時幫助您清除三株仙人掌。使用兩個「清除仙人掌」方塊以清除路徑，前往橙色方塊。"
       MC_HOC_2017_07a_Kiki: 現在，請編輯此循環已幫助 Agent 清除前往橙色方塊的路徑。
@@ -718,6 +824,8 @@ zh-TW:
       MC_HOC_2017_10_Kiki: 請嘗試從一開始建立功能，讓 Agent 可以更輕鬆地完成此礦車，並讓玩家可以前往橙色方塊。
       MC_HOC_2017_10_RETRY: "您是否可找出工作空間中兩個功能之間的不同處？\r\n \r\n使用這些功能與工具箱中的其他代碼來清除前往礦車的路徑，然後收集**打火鐮**
         [flint_and_steel]。\r\n "
+      MC_HOC_2017_10_RETRY_2019: "您是否可找出工作空間中兩個功能之間的不同處？\r\n \r\n使用這些功能與工具箱中的其他代碼來清除前往礦車的路徑，然後收集**打火鐮**
+        [flint_and_steel]。\r\n "
       MC_HOC_2017_10_RYAN: 請嘗試從一開始建立功能，讓 Agent 可以更輕鬆地完成此礦車，並讓玩家可以前往橙色方塊。
       MC_HOC_2017_10_RYAN2: 請嘗試從一開始建立功能，讓 Agent 可以更輕鬆地完成此礦車，並讓玩家可以前往橙色方塊。
       MC_HOC_2017_11_Kiki: 現在，就看您的表現了！看看您可以在這片凍湖四周打造出什麼。
@@ -726,9 +834,12 @@ zh-TW:
         Agent 清除路徑。"
       MC_HOC_2017_Ali: 請查看下方的功能。您要如何使用這些功能來避開地獄幽靈，並幫助 {currentPlayerName} 安全拿到**附魔書**
         [book_enchanted]？
+      MC_HOC_2017_Ali_2019: 請查看下方的功能。您要如何使用這些功能來避開地獄幽靈，並幫助 {currentPlayerName} 安全拿到**附魔書**
+        [book_enchanted]？
       MC_HOC_2017_FP10x10: "**自由遊戲：**現在，就看您的表現了！您可以挑戰自己，在此關卡中收集到所有鑽石嗎？ "
       MC_HOC_2017_FP10x10_RE: "**自由遊戲：**現在，就看您的表現了！您可以挑戰自己，在此關卡中收集到所有鑽石嗎？ "
       MC_HOC_2017_FP20x20: "**自由遊戲：**現在，就看您的表現了！使用 Agent 的代碼來探索這個世界。"
+      MC_HOC_2017_FP20x20_2019: "**自由遊戲：**現在，就看您的表現了！使用 Agent 的代碼來探索這個世界。"
       MC_HOC_2017_Ryan_03: "您知道嗎？您可以在循環中加入多段代碼。 \n\n\n使用「重複」循環，在水中放置方塊，幫助 Agent 建造渡河橋樑。"
       MC_HOC_2017_Ryan_05: "有時候，您必須破壞擋住玩家路徑的東西。 \n使用「破壞」方塊來清除 Agent 和壓板之間的所有仙人掌。"
       MC_HOC_Kiki_02: 有人必須先在壓板上，然後側門才會開啟。幫助 Agent 抵達壓板，這樣玩家才能離開房屋。
@@ -922,7 +1033,7 @@ zh-TW:
         src=\"https://images.code.org/c4263306ebb0ad1d99fe6f200a790d0c-image-1467936424533.gif\"\nwidth=\"300\"/>\r\n"
       artistLoopsKFP: "畫畫時間到了！使用你所學到的來畫出一個圖案。\r\n\r\n<hr/>\r\n<h3>一些點子</h3>\r\n<table>\r\n<tr>\r\n<td>\r\n<img\nsrc=\"https://images.code.org/8f4f2a68dae2cf0aa82cc0a49ea4df04-image-1466787750475.gif\"\nwidth=\"150\"/><br/>\r\n<h4>一隻唱歌的蝸牛</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/732ce5dd91c7f49f06e88da1a9f664f3-image-1466794904255.gif\"\nwidth=\"150\"/><br/>\r\n<h4>偉大城市</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/37fdd6fdd761df09fd4949d5e43f0a7f-image-1466795165642.gif\"\nwidth=\"150\"/><br/>\r\n<h4>音樂會</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/f7bf86b0f86669d82ee2c1565738b9cb-image-1466794447737.gif\"\nwidth=\"150\"/><br/>\r\n<h4>一個生日蛋糕</h4><br/><br/>\r\n</td>\r\n\r\n</tr>\r\n</table>\r\n"
       beeDebugVideo1: 收集所有的花蜜。
-      collector example: "使用`收集`積木來取得所有的黃金：\r\n\r\n<xml>\r\n  <block type=\"collector_collect\"/></xml>\n"
+      collector example: "使用`收集`積木來取得所有的黃金：\r\n\r\n<xml>\r\n  <block type=\"collector_collect\"/></xml>"
       collectorSkinVideo1: "移動 Laurel 到黃金那兒，然後使用`收集`積來把它撿起來。\r\n\r\n收集 1 堆黃金以完成這個關卡。"
       collectorSkinVideo2: "移動 Laurel 到黃金那兒，然後使用`收集`積來把它撿起來。\r\n\r\n收集 1 堆黃金以完成這個關卡。"
       conditionals_forvideo_harvester: 收集所有的玉米和生菜，然後收成南瓜。
@@ -1062,13 +1173,17 @@ zh-TW:
       courseD_bee_conditionals7_predict2_2018: "有時雲裡面有花朵，有時雲裡藏著蜂窩！\r\n\r\n使用`如果…否則`積木，如果是花朵就收集花蜜。\n否則，就釀造蜂蜜（因為它是蜂窩）。"
       courseD_bee_nestedLoops2: 這次，幫蜜蜂收集到所有花蜜，用的積木愈少愈好。
       courseD_bee_nestedLoops2_2018: 這次，幫蜜蜂收集到所有花蜜，用的積木愈少愈好。
+      courseD_bee_nestedLoops2_2019: 這次，幫蜜蜂收集到所有花蜜，用的積木愈少愈好。
       courseD_bee_nestedLoops2_predict1: 這次，幫蜜蜂收集到所有花蜜，用的積木愈少愈好。
       courseD_bee_nestedLoops2_predict1_2018: 這次，幫蜜蜂收集到所有花蜜，用的積木愈少愈好。
+      courseD_bee_nestedLoops2_predict1_2019: 這次，幫蜜蜂收集到所有花蜜，用的積木愈少愈好。
       courseD_bee_nestedLoops5: 使用巢狀迴圈來收集每一朵花的花蜜，並在每一個蜂巢製造蜂蜜。
       courseD_bee_nestedLoops7: "**挑戰：**想辦法用這些積木，得到所有的花蜜。"
       courseD_bee_nestedLoops7_2018: "**挑戰：**想辦法用這些積木，得到所有的花蜜。"
+      courseD_bee_nestedLoops7_2019: "**挑戰：**想辦法用這些積木，得到所有的花蜜。"
       courseD_bee_nestedLoops8: 使用巢狀迴圈來收集每一朵花的花蜜，並在每一個蜂巢製造蜂蜜。
       courseD_bee_nestedLoops8_2018: 使用巢狀迴圈來收集每一朵花的花蜜，並在每一個蜂巢製造蜂蜜。
+      courseD_bee_nestedLoops8_2019: 使用巢狀迴圈來收集每一朵花的花蜜，並在每一個蜂巢製造蜂蜜。
       courseD_bounce_events1: 移動到旗幟那兒！在「當按向左鍵時」積木下添加程式，點擊「運行」讓球員移動到目標旗幟。
       courseD_collector_ramp10: "和之前的路徑一樣，不過這次要沿路收集到發現到的寶藏。\r\n"
       courseD_collector_ramp8: "這關很像上一關，不過現在我們是要幫 Laurel 完成探險！\r\n<hr/>\r\n\r\n和之前的走法相同，不過這次試試改用一個重複迴圈來收集到寶藏。\r\n"
@@ -1094,16 +1209,22 @@ zh-TW:
       courseD_farmer_while8_2018: "**挑戰：**填滿所有的洞，使用的積木愈少愈好。 "
       courseD_maze_nestedLoops4: 帶我到那朵向日葵的位置!
       courseD_maze_nestedLoops4_2018: 帶我到那朵向日葵的位置!
+      courseD_maze_nestedLoops4_2019: 帶我到那朵向日葵的位置!
       courseD_maze_ramp1: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
       courseD_maze_ramp1_2018: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
+      courseD_maze_ramp1_2019: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
       courseD_maze_ramp2: 從工具箱中拖曳出另一個`移動-向前`積木，把它放在`當運行時`積木下，就可以完成編碼。
       courseD_maze_ramp2_2018: 從工具箱中拖曳出另一個`移動-向前`積木，把它放在`當運行時`積木下，就可以完成編碼。
+      courseD_maze_ramp2_2019: 從工具箱中拖曳出另一個`移動-向前`積木，把它放在`當運行時`積木下，就可以完成編碼。
       courseD_maze_ramp3: "*「這隻豬真的把我惹毛了！」*\r\n\r\n有個積木會讓鳥崩潰，把它移除掉（拖曳回工具箱）。\r"
       courseD_maze_ramp3_2018: "*「這隻豬真的把我惹毛了！」*\r\n\r\n有個積木會讓鳥崩潰，把它移除掉（拖曳回工具箱）。\r"
+      courseD_maze_ramp3_2019: "*「這隻豬真的把我惹毛了！」*\r\n\r\n有個積木會讓鳥崩潰，把它移除掉（拖曳回工具箱）。\r"
       courseD_maze_ramp4: "*「順著路徑讓我抓到那隻蠢豬。」\r\n\r\n當心別碰到 TNT 炸藥，不然我的羽毛會滿天飛！"
       courseD_maze_ramp4_2018: "*「順著路徑讓我抓到那隻蠢豬。」\r\n\r\n當心別碰到 TNT 炸藥，不然我的羽毛會滿天飛！"
+      courseD_maze_ramp4_2019: "*「順著路徑讓我抓到那隻蠢豬。」\r\n\r\n當心別碰到 TNT 炸藥，不然我的羽毛會滿天飛！"
       courseD_maze_ramp5: "*「順著路徑，讓我抓到那頭豬！」\r\n\r\n注意別被 TNT 炸到。"
       courseD_maze_ramp5_2018: "*「順著路徑，讓我抓到那頭豬！」\r\n\r\n注意別被 TNT 炸到。"
+      courseD_maze_ramp5_2019: "*「順著路徑，讓我抓到那頭豬！」\r\n\r\n注意別被 TNT 炸到。"
       courseD_maze_ramp6: "*「冷靜！幫我抓到這頭壞豬，不然我就真的要變成憤怒鳥啦！」*\r\n\r\n當你有很多相同指令的積木時，試著將它們放到`重複`迴圈裡，這樣子就盡量減少積木的使用數。"
       courseD_maze_ramp7: "*「我真的要憤怒了！」*\r\n\r\n\r\n**挑戰：**\n使用你學到的方法來讓我抓到這頭豬！"
       courseD_maze_until10: 幫助殭屍，讓牠吃到向日葵。
@@ -1151,6 +1272,7 @@ zh-TW:
       courseE_farmer_ramp12_2018: "現在使用巢狀迴圈（`重複`和`當…`）來完成這個關卡。\r\n\r\n\r\n\r\n"
       courseE_farmer_ramp12_forswap: "現在使用巢狀迴圈（`重複`和`當…`）來完成這個關卡。\r\n\r\n\r\n\r\n"
       courseE_farmer_ramp12_forswap_2018: "現在使用巢狀迴圈（`重複`和`當…`）來完成這個關卡。\r\n\r\n\r\n\r\n"
+      courseE_farmer_ramp12_forswap_2019: "現在使用巢狀迴圈（`重複`和`當…`）來完成這個關卡。\r\n\r\n\r\n\r\n"
       courseE_maze_ramp1: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
       courseE_maze_ramp1_2018: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
       courseE_maze_ramp2: 從工具箱中拖曳出另一個`移動-向前`積木，把它放在`當運行時`積木下，就可以完成編碼。
@@ -1204,6 +1326,7 @@ zh-TW:
       courseF_artist_fwp9_2018: "**自由發揮：**這兒除了你寫的函式，還有更多的函式讓你發揮。畫些令人驚嘆的東西吧！用不同的筆跡寬度來看看你能畫出什麼不一樣的圖形！"
       courseF_artist_variablesFP: "**自由活動：**用你學過的東西，繪製出自己的作品。\r\n\r\n你知道怎麼畫出帶變數正方形、五角形、六角形嗎？"
       courseF_artist_variablesFP_2018: "**自由活動：**用你學過的東西，繪製出自己的作品。\r\n\r\n你知道怎麼畫出帶變數正方形、五角形、六角形嗎？"
+      courseF_artist_variablesFP_2019: "**自由活動：**用你學過的東西，繪製出自己的作品。\r\n\r\n你知道怎麼畫出帶變數正方形、五角形、六角形嗎？"
       courseF_artist_variables_FP: "**自由活動：**用你學過的東西，繪製出自己的作品。\r\n\r\n你知道怎麼畫出帶變數正方形、五角形、六角形嗎？"
       courseF_bee_conditionals1_predict1: "*「這雲擋住了我的視線 ！」* \r\n\r\n檢查看看雲下面藏了什麼，如果是花，就把花蜜採集起來。"
       courseF_bee_conditionals1_predict1_2018: "*「這雲擋住了我的視線 ！」* \r\n\r\n檢查看看雲下面藏了什麼，如果是花，就把花蜜採集起來。"
@@ -1211,6 +1334,7 @@ zh-TW:
       courseF_bee_conditionals7_predict2_2018: "有時雲裡面有花朵，有時雲裡藏著蜂窩！\r\n\r\n使用`如果…否則`積木，如果是花朵就收集花蜜。\n否則，就釀造蜂蜜（因為它是蜂窩）。"
       courseF_bee_for_challenge2: 盡可能使用最少的程式積木來完成這個關卡。
       courseF_bee_for_challenge2_2018: 盡可能使用最少的程式積木來完成這個關卡。
+      courseF_bee_for_challenge2_2019: 盡可能使用最少的程式積木來完成這個關卡。
       courseF_bee_for_challenge3: "**計數迴圈超級挑戰：**完成這個關卡，用的積木愈少愈好。"
       courseF_bee_fwp1: 檢查看看，雲的下面是不是藏著帶著花蜜的花朵。
       courseF_bee_fwp1_2018: 檢查看看，雲的下面是不是藏著帶著花蜜的花朵。

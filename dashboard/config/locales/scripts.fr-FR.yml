@@ -2692,7 +2692,34 @@ fr:
           stages:
             Artist:
               name: Artiste
+        dance:
+          stages:
+            Dance Party:
+              name: Fête dansante
+          title: Fête dansante
         frozen-2018-test-b:
           stages:
             Artist:
               name: Artiste
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Fête dansante
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Fête dansante
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Construire une fondation
+            Conditionals with Cards:
+              name: Instructions conditionnelles avec des cartes
+            Envelope Variables:
+              name: Les variables de l'enveloppe
+            For Loop Fun:
+              name: Jouons avec les boucles « Pour »
+        dance-low:
+          stages:
+            Dance Party:
+              name: Fête dansante

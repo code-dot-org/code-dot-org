@@ -619,7 +619,7 @@
   dashboard_sections_table_stage_extras: "დამატებითი რესურსები"
   dashboard_sections_table_students: "მოსწავლეები"
   dashboard_sections_table_code: "სექციის კოდი"
-  dashboard_sections_name: "განყოფილების სახელი"
+  dashboard_sections_name: 'განყოფილების სახელი'
   dashboard_sections_choose_secret: "თუ გინდათ, რომ თქვენი მოასწავლეებისთვის შექმნათ ანგარიშები, აირჩიეთ ამ განყოფილებისთვის საიდუმლო <b>სიტყვა</b> ან <b>სურათი</b>."
   dashboard_sections_secret_word: "<b>სიტყვა</b> გაძლევთ საშუალებას შექმნათ საიდუმლო სიტყვა ყოველი მოსწავლისთვის."
   dashboard_sections_secret_picture: "<b>სურათი</b> გაძლევთ საშუალებას დააყენოთ საიდუმლო სურათი ყოველი მოსწავლისთვის; ეს მეთოდი იდელაურია მათთვის, ვისაც ჯერ ბეჭდვა არ შეუძლია."
@@ -645,7 +645,7 @@
   dashboard_students_add_multiple: 'ჩაწერეთ მოსწავლეების სახელები, თითო ხაზზე თითო:'
   dashboard_students_new_google_classroom_section: "იმისათვის, რომ დაამატოთ მოსწავლეები, გამოიყენეთ <a href='http://classroom.google.com' target='_blank'> გუგლის კლასი</a> და შემდეგ დააწკაპუნეთ <b> ზემოთ განთავსებულ, გუგლის კლასიდან მოსწავლეების </b> სინქრონიზაციის ღილაკს."
   dashboard_students_new_section: "თქვენ შექმენით ახალი განყოფილება! ახლა დაამატეთ თქვენი მოსწავლეები, <b>მოსწავლის დამატებისა</b> და <b>რამდენიმე მოსწავლის დამატების</b> ღილაკების გამოყენებით."
-  dashboard_students_name: "სახელი"
+  dashboard_students_name: 'სახელი'
   dashboard_students_progress: "პროგრესი"
   dashboard_students_male: "მამრობითი"
   dashboard_students_female: "მდედრობითი"
@@ -1366,7 +1366,9 @@
   signing_in_single_instruct: "თქვენს მოსწავლეებს შეუძლიათ Code.org-ის ანგარიშებში შესვლა ამ ბმულზე https://code.org/ გადასვლით და ზედა მარჯვენა კუთხეში მდებარე \"შესვლის\" ღილაკზე დაწკაპებით."
   syncing_students: "მიმდინარეობს თქვენი მოსწავლეების სინქრონიზაცია"
   google_sign_in_instruct: 'აქ მათ უნდა აირჩიონ "შედი გუგლის ანგარიშის საშუალებით":'
+  applab_tile_start_tutorial: "დაწყება"
   account_sign_up_email_opt_in: "შეიძლება, რომ ელფოსტით მოგწეროთ კურსების განახლებები, ადგილობრივი შესაძლებლობები და სხვა სიახლეები კომპიუტერული მეცნიერებების შესახებ?"
+  hoc_overview_start_tutorial: "დაწყება"
   hoc2018_creativity_create: "შექმნა"
   hoc2018_mc_page_title: "Minecraft-ის კოდის ერთი საათი: ტუტორიალები"
   hoc2018_mc_details: "სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | 2+ კლასი"
@@ -1394,3 +1396,8 @@
   hoc2018_mc_homepage_join_us: "შემოგვიერთდით"
   hoc2018_mc_homepage_try_it: "სცადეთ"
   hoc2018_mc_minecraft_education: "Minecraft Education"
+  hoc2018_dance_party_button: "დაწყება"
+  hoc2018_dance_teacher_resources_tile1_button: "გაკვეთილის გეგმა"
+  hoc2018_dance_teacher_resources_tile2_button: "აქტივობა უკომპიუტეროდ"
+  hoc2018_dance_amazon_about_future_engineer_button: "გაიგეთ მეტი"
+  hoc2018_dance_amazon_scholarship_programs_button: "მიიღეთ მონაწილეობა ახლავე"

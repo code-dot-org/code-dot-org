@@ -108,8 +108,8 @@ end
 When /^I wait for the page to fully load$/ do
   steps <<-STEPS
     When I wait to see "#runButton"
-    And I close the instructions overlay if it exists
     And I wait to see ".header_user"
+    And I close the instructions overlay if it exists
   STEPS
 end
 
@@ -141,6 +141,11 @@ When /^I reset the puzzle to the starting version$/ do
     And I wait until element "#showVersionsModal" is gone
     And I wait for 3 seconds
   STEPS
+end
+
+When /^I reset the puzzle$/ do
+  @browser.find_element(:css, '#clear-puzzle-header').click
+  @browser.find_element(:css, '#confirm-button').click
 end
 
 Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -423,6 +428,14 @@ When /^I press a button with xpath "([^"]*)"$/ do |xpath|
   @button.click
 end
 
+# Prefer clicking with selenium over jquery, since selenium clicks will fail
+# if the target element is obscured by another element.
+When /^I click "([^"]*)"( to load a new page)?$/ do |selector, load|
+  page_load(load) do
+    @browser.find_element(:css, selector).click
+  end
+end
+
 When /^I click selector "([^"]*)"( to load a new page)?$/ do |jquery_selector, load|
   # normal a href links can only be clicked this way
   page_load(load) do
@@ -679,14 +692,27 @@ Then /^element "([^"]*)" is hidden$/ do |selector|
   expect(element_visible?(selector)).to eq(false)
 end
 
+And (/^I select age (\d+) in the age dialog/) do |age|
+  steps %Q{
+    And element ".age-dialog" is visible
+    And I select the "#{age}" option in dropdown "uitest-age-selector"
+    And I click selector "#uitest-submit-age"
+  }
+end
+
 And (/^I do not see "([^"]*)" option in the dropdown "([^"]*)"/) do |option, selector|
   select_options_text = @browser.execute_script("return $('#{selector} option').val()")
   expect((select_options_text.include? option)).to eq(false)
 end
 
 And (/^I see option "([^"]*)" or "([^"]*)" in the dropdown "([^"]*)"/) do |option_alpha, option_beta, selector|
-  select_options_text = @browser.execute_script("return $('#{selector} option').val()")
+  select_options_text = @browser.execute_script("return $('#{selector} option').text()")
   expect((select_options_text.include? option_alpha) || (select_options_text.include? option_beta)).to eq(true)
+end
+
+And (/^I wait for the song selector to load/) do
+  wait_for_jquery
+  wait_until {@browser.execute_script("return !!$('#song_selector').val();")}
 end
 
 def has_class?(selector, class_name)
@@ -843,8 +869,6 @@ And(/^I set the language cookie$/) do
   end
 
   @browser.manage.add_cookie params
-
-  debug_cookies(@browser.manage.all_cookies)
 end
 
 And(/^I set the pagemode cookie to "([^"]*)"$/) do |cookie_value|
@@ -859,8 +883,6 @@ And(/^I set the pagemode cookie to "([^"]*)"$/) do |cookie_value|
   end
 
   @browser.manage.add_cookie params
-
-  debug_cookies(@browser.manage.all_cookies)
 end
 
 Given(/^I sign in as "([^"]*)"$/) do |name|
@@ -868,10 +890,10 @@ Given(/^I sign in as "([^"]*)"$/) do |name|
     Given I am on "http://studio.code.org/reset_session"
     Then I am on "http://studio.code.org/"
     And I wait to see "#signin_button"
-    Then I click selector "#signin_button"
+    Then I click ".header_user"
     And I wait to see "#signin"
     And I fill in username and password for "#{name}"
-    And I click selector "#signin-button"
+    And I click "#signin-button"
     And I wait to see ".header_user"
   }
 end
@@ -882,10 +904,10 @@ Given(/^I sign out and sign in as "([^"]*)"$/) do |name|
     And I wait for 5 seconds
     Then I am on "http://studio.code.org/"
     And I wait to see "#signin_button"
-    Then I click selector "#signin_button"
+    Then I click ".header_user"
     And I wait to see "#signin"
     And I fill in username and password for "#{name}"
-    And I click selector "#signin-button"
+    And I click "#signin-button"
     And I wait to see ".header_user"
   }
 end
@@ -895,7 +917,7 @@ Given(/^I sign in as "([^"]*)" from the sign in page$/) do |name|
     And check that the url contains "/users/sign_in"
     And I wait to see "#signin"
     And I fill in username and password for "#{name}"
-    And I click selector "#signin-button"
+    And I click "#signin-button"
     And I wait to see ".header_user"
   }
 end

@@ -4170,6 +4170,9 @@ pl:
           stages:
             new stage:
               name: nowy etap
+            Dance Party:
+              name: Potańcówka
+          title: Potańcówka
         frozen-2018-test-b:
           stages:
             Artist:
@@ -4178,3 +4181,40 @@ pl:
           stages:
             Linking Screens:
               name: Łączenie ekranów
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Potańcówka
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Potańcówka
+        coursef-2019:
+          description_audience: W wieku 9-13
+          stages:
+            Sequence in Maze:
+              name: Sekwencje w labiryncie
+            Building a Foundation:
+              name: Kładąc podwaliny (Building a Foundation)
+            Conditionals with Cards:
+              name: Warunkowe z kartami
+            The Power of Words:
+              name: Moc Słów
+            Envelope Variables:
+              name: Zmienne w kopertach
+            For Loop Fun:
+              name: Zabawa z pętlą "dla"
+            For Loops in Bee:
+              name: Pętle for w pszczole
+            For Loops in Artist:
+              name: Pętle for w artyście
+            Explore Project Ideas:
+              name: Odkrywanie pomysłów na projekt
+            Build Your Project:
+              description_student: Nareszcie możesz zacząć budować swój projekt!
+            new stage:
+              name: nowy etap
+        dance-low:
+          stages:
+            Dance Party:
+              name: Potańcówka

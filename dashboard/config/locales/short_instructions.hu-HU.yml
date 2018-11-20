@@ -1397,6 +1397,8 @@ hu:
       FoodFight_2018: Ez egy példa játék, amit elkészíthetsz a játéklaborban.
       Function intro Ryan: Az út szabaddá tételéhez a fáklyához használd a "híd építése"
         funkciót.
+      Function intro Ryan_2019: Az út szabaddá tételéhez a fáklyához használd a "híd
+        építése" funkciót.
       Get To The Goal: Csinálj bármit, amit szeretnél. Egy egy számkitalálós játékra
         példa!
       Guess The Number 2: Csinálj bármit, amit szeretnél. Egy egy számkitalálós játékra
@@ -1405,6 +1407,17 @@ hu:
         példa!
       Guess The Number_2018: Csinálj bármit, amit szeretnél. Egy egy számkitalálós
         játékra példa!
+      HOC 2018 Level_1: Vegyél ki egy csónakot a ládából.
+      HOC 2018 Level_10: Menj a Víz alatti templom bejáratához.
+      HOC 2018 Level_11: Prizmarinnal építs csatornát a Víz alatti templom belsejében.
+      HOC 2018 Level_12: Alakítsd ki saját víz alatti világodat, ahogy neked tetszik!
+      HOC 2018 Level_2: Menj a móló végére.
+      HOC 2018 Level_3: Hajózz ki a nyílt vízre a tőkehalhoz.
+      HOC 2018 Level_4: Hurokkal kapd el a delfint.
+      HOC 2018 Level_5: Kutasd át az elsüllyedt hajót, és juss el a ládához.
+      HOC 2018 Level_6: Navigálj át a jégmezőn, és találd meg a lazacot.
+      HOC 2018 Level_7a: Kutasd át ezeket a víz alatti romokat, és keresd meg a ládát.
+      HOC 2018 Level_9b: Kincskeresés közben használd a korallokat útjelzőként.
       Infinity_catch: Tudsz segíteni Elzának (2. szereplő) utolérni Annát a nyíl gombokat
         használva?
       Infinity_finale: Alkoss bármit, amit csak szeretnél, és oszd meg másokkal!
@@ -1434,6 +1447,8 @@ hu:
       InspirationalArtwork: Ha ez a kép inspirál téged, akkor csinálhatsz egy hasonlót.
         Ha nem, akkor csinálj valamit te magad.
       InspirationalArtwork_2018: Ha ez a kép inspirál téged, akkor csinálhatsz egy
+        hasonlót. Ha nem, akkor csinálj valamit te magad.
+      InspirationalArtwork_2019: Ha ez a kép inspirál téged, akkor csinálhatsz egy
         hasonlót. Ha nem, akkor csinálj valamit te magad.
       K-1 Artist 1 Assessment 1: Rajzolj egy rövid vonalat felfelé és egy hosszút
         jobbra!
@@ -1641,30 +1656,42 @@ hu:
         A **nyílgombokkal** mozoghatsz, a győzelemhez juss el az úton fekvő ládáig.
       MC_HOC_2017_01_RETRY: 'Vidd az Agentet a nyomólapra, majd nyomd meg a "Futtatás"
         gombot, és a nyílgombokkal vidd ki a játékost a házból a láda felvevéséhez. '
+      MC_HOC_2017_01_RETRY_2019: 'Vidd az Agentet a nyomólapra, majd nyomd meg a "Futtatás"
+        gombot, és a nyílgombokkal vidd ki a játékost a házból a láda felvevéséhez. '
       MC_HOC_2017_02: Vidd az Agentet a nyomólapra.
       MC_HOC_2017_02_Cole: 'Vidd az Agentet a nyomólapra, hogy {currentPlayerName}
+        le tudjon menni a térképről. '
+      MC_HOC_2017_02_Cole_2019: 'Vidd az Agentet a nyomólapra, hogy {currentPlayerName}
         le tudjon menni a térképről. '
       MC_HOC_2017_02_Kiki: Vidd az Agentet a nyomólapra, majd juttasd a játékost a
         narancssárga négyzetre.
       MC_HOC_2017_02_Will: Vidd az Agentet a nyomólapra.
       MC_HOC_2017_03_Cole: 'Programozd úgy az Agentet, hogy kinyissa a kaput. '
+      MC_HOC_2017_03_Cole_2019: 'Programozd úgy az Agentet, hogy kinyissa a kaput. '
       MC_HOC_2017_03_Kiki: Vidd az Agentet a nyomólapra.
       MC_HOC_2017_04: Módosítsd az utolsó kirakós ciklusát, hogy az Agent hidat építsen
         a folyó szélesebb szakaszán.
       MC_HOC_2017_04POINT5_Cole: Vidd az Agentet a nyomólapra.
       MC_HOC_2017_04POINT5_RYAN: Vidd az Agentet a nyomólapra.
+      MC_HOC_2017_04POINT5_RYAN_2019: Vidd az Agentet a nyomólapra.
       MC_HOC_2017_04_Cole: Vidd az Agentet a nyomólapra.
+      MC_HOC_2017_04_Cole_2019: Vidd az Agentet a nyomólapra.
       MC_HOC_2017_04_Kiki: Vidd az Agentet a nyomólapra.
       MC_HOC_2017_05: Egy funkció segítségével vidd az Agentet a nyomólapra.
       MC_HOC_2017_05_Cole: Juttasd a játékost az ásóhoz.
+      MC_HOC_2017_05_Cole_2019: Juttasd a játékost az ásóhoz.
       MC_HOC_2017_05_Josh: Juttasd a játékost az ásóhoz.
       MC_HOC_2017_05_Kiki: Juttasd a játékost a narancssárga négyzetre.
       MC_HOC_2017_06_Cole: Javítsd ki ezt a kódot, hogy az Agent hidat építsen a folyóra.
+      MC_HOC_2017_06_Cole_2019: Javítsd ki ezt a kódot, hogy az Agent hidat építsen
+        a folyóra.
       MC_HOC_2017_06_Josh: Javítsd ki ezt a kódot, hogy segíts az Agentnek hidat építeni
         a folyóra.
       MC_HOC_2017_06_Kiki: Javítsd ki ezt a kódot, hogy segíts az Agentnek hidat építeni
         a folyóra.
       MC_HOC_2017_07_Cole: Törd fel a jeget, és juttasd {currentPlayerName} játékost
+        a csilléhez.
+      MC_HOC_2017_07_Cole_2019: Törd fel a jeget, és juttasd {currentPlayerName} játékost
         a csilléhez.
       MC_HOC_2017_07_Kiki: Egy funkciót használva tedd szabaddá az utat a narancssárga
         négyzethez.
@@ -1682,16 +1709,20 @@ hu:
         a csillét.
       MC_HOC_2017_10_Kiki: Hozz létre egy funkciót, amellyel befejezheted ezt a csillét.
       MC_HOC_2017_10_RETRY: Hozz létre egy funkciót, amellyel befejezheted ezt a csillét.
+      MC_HOC_2017_10_RETRY_2019: Hozz létre egy funkciót, amellyel befejezheted ezt
+        a csillét.
       MC_HOC_2017_10_RYAN: Hozz létre egy funkciót, amellyel befejezheted ezt a csillét.
       MC_HOC_2017_10_RYAN2: Hozz létre egy funkciót, amellyel befejezheted ezt a csillét.
       MC_HOC_2017_13_Cole: "**Szabad játék:**  Most szabadon barangolhatsz!"
       MC_HOC_2017_4.5v2: Vidd az Agentet a nyomólapra.
       MC_HOC_2017_Ali: Használd a funkciókat a láván átvezető út megtalálásához.
+      MC_HOC_2017_Ali_2019: Használd a funkciókat a láván átvezető út megtalálásához.
       MC_HOC_2017_FP10x10: "**Szabad játék:** Össze tudod-e szedni az ezen a szinten
         található összes gyémántot? "
       MC_HOC_2017_FP10x10_RE: "**Szabad játék:** Össze tudod-e szedni az ezen a szinten
         található összes gyémántot? "
       MC_HOC_2017_FP20x20: "**Szabad játék:**  Most szabadon barangolhatsz!"
+      MC_HOC_2017_FP20x20_2019: "**Szabad játék:**  Most szabadon barangolhatsz!"
       MC_HOC_2017_Ryan_03: Most ciklusokat használva utasítsd az Agentet arra, hogy
         építsen hidat a folyóra úgy, hogy blokkokat helyez a vízbe.
       MC_HOC_2017_Ryan_05: Pusztítsd el ezeket a kaktuszokat, hogy a játékos eljuthasson
@@ -2083,6 +2114,8 @@ hu:
         Tipp: Mind a három oldal egyforma hosszú.'
       courseC_artist_prog5_2018: 'A háznak tetőre van szüksége! Rajzold meg a háromszöget.
         Tipp: Mind a három oldal egyforma hosszú.'
+      courseC_artist_prog5_2019: 'A háznak tetőre van szüksége! Rajzold meg a háromszöget.
+        Tipp: Mind a három oldal egyforma hosszú.'
       courseC_maze_debugging10: Keresd meg a hibát és javítsd ki ezen a szinten! Juttass
         el a malacig úgy, hogy újrarendezed a blokkokat és újakat adsz hozzá!
       courseD_artist_binary1: "A bináris az információ ábrázolása mindössze 2 állapot
@@ -2126,6 +2159,8 @@ hu:
         és készíts mézet minden lépbe. Használj beágyazott ciklust!
       courseD_bee_nestedLoops8_2018: Gyűjtsd össze az összes nektárt az összes virágról,
         és készíts mézet minden lépbe. Használj beágyazott ciklust!
+      courseD_bee_nestedLoops8_2019: Gyűjtsd össze az összes nektárt az összes virágról,
+        és készíts mézet minden lépbe. Használj beágyazott ciklust!
       courseD_bounce_events10: A kapu most fönt van. Kapcsold össze a  "pontszám"
         és a "pontot szerez az ellenfél" blokkokat a "ha a labda célba ér" és a "ha
         a labda nem találja el az ütőt" blokkal, hogy elkészüljön a játék. Próbáld
@@ -2158,8 +2193,10 @@ hu:
         összegyűjtsük az összes nektárt és elkészítsük az összes mézet.
       courseD_maze_nestedLoops4: Juttass el a napraforgóhoz!
       courseD_maze_nestedLoops4_2018: Juttass el a napraforgóhoz!
+      courseD_maze_nestedLoops4_2019: Juttass el a napraforgóhoz!
       courseD_maze_nestedLoops6: Juttass el a napraforgóhoz!
       courseD_maze_nestedLoops6_2018: Juttass el a napraforgóhoz!
+      courseD_maze_nestedLoops6_2019: Juttass el a napraforgóhoz!
       courseE_artist_functions1: 'Helló! Zombi művész vagyok. Szeretek rajzolni. Segíts
         nekem szögletes szemüveget rajzolni. Tipp: a két üveg közti összekötő 25 pixellel
         rövidebb, mint a négyzet oldala.'
@@ -2194,20 +2231,30 @@ hu:
         kapd!
       courseF_artist_for7_2018: Végezz el három kis módosítást az előző kódon, hogy
         ezt kapd!
+      courseF_artist_for7_2019: Végezz el három kis módosítást az előző kódon, hogy
+        ezt kapd!
       courseF_artist_for_challenge1: Ki tudod találni hogyan lehet elkészíteni a rajzot?
       courseF_artist_for_challenge1_2018: Ki tudod találni hogyan lehet elkészíteni
+        a rajzot?
+      courseF_artist_for_challenge1_2019: Ki tudod találni hogyan lehet elkészíteni
         a rajzot?
       courseF_artist_for_challenge2: Ki tudod találni hogyan lehet elkészíteni a rajzot
         egy ciklussal?
       courseF_artist_for_challenge2_2018: Ki tudod találni hogyan lehet elkészíteni
         a rajzot egy ciklussal?
+      courseF_artist_for_challenge2_2019: Ki tudod találni hogyan lehet elkészíteni
+        a rajzot egy ciklussal?
       courseF_bee_for8: "Ha a ciklus felfelé számol, akkor minden ciklusban hozzáadódik
         a lépésköz a változóhoz. Mi legyen a lépésköz, hogy 3,6,9 nektárt gyűjtsünk?\r\n"
       courseF_bee_for8_2018: "Ha a ciklus felfelé számol, akkor minden ciklusban hozzáadódik
         a lépésköz a változóhoz. Mi legyen a lépésköz, hogy 3,6,9 nektárt gyűjtsünk?\r\n"
+      courseF_bee_for8_2019: "Ha a ciklus felfelé számol, akkor minden ciklusban hozzáadódik
+        a lépésköz a változóhoz. Mi legyen a lépésköz, hogy 3,6,9 nektárt gyűjtsünk?\r\n"
       courseF_bee_for_challenge2: Oldd meg ezt a feladványt a lehető legkevesebb blokk
         felhasználásával.
       courseF_bee_for_challenge2_2018: Oldd meg ezt a feladványt a lehető legkevesebb
+        blokk felhasználásával.
+      courseF_bee_for_challenge2_2019: Oldd meg ezt a feladványt a lehető legkevesebb
         blokk felhasználásával.
       courseF_bee_for_challenge3: Oldd meg ezt a feladványt a lehető legkevesebb blokk
         felhasználásával.

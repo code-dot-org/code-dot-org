@@ -1,4 +1,5 @@
-"nn-NO":
+---
+nn-NO:
   hour_of_code: Kodetimen
   hello: Hallo, verda
   'yes': Ja
@@ -39,7 +40,7 @@
   og_description: Alle elevar på alle skular burde få høve til å lære koding.
   og_description_celeb: Prøv de nye opplæringsprogrammene, vinne en kjendis videochat
     for deg selv eller klassen!
-  csedweek_og_title: Kodetimen kjem
+  csedweek_og_title: 'Computer Science Education Week '
   csedweek_og_description: 4.-10. desember 2017. Informatikk er grunleggande for alle
     elevar.
   csedweek_og_description_soon: Kodetimen er 4.-10. desember 2017. Programmering er
@@ -373,7 +374,7 @@
   homepage_action_text_hoc: Ein Kodetime for kvar einaste elev.
   homepage_action_text_num_served: "# servert"
   homepage_action_text_join_us: Bli med oss
-  homepage_action_text_sign_up: Meld deg på
+  homepage_action_text_sign_up: Registrer deg
   homepage_action_text_try_it: Prøv sjølv
   homepage_action_text_volunteers: Vi treng frivillige som er tekniske
   homepage_action_text_codevideo: Sjå videoen
@@ -1042,7 +1043,7 @@
     kan følgje <a href='%{how_to_url}' target='_blank'>guiden</a> for å undervise
     ein Kodetime og inspirere elevar med <a href='%{videos_url}' target='_blank'>desse
     videoane</a>.
-  learn_more: Lær meir
+  learn_more: Prøv no
   learn_sign_up_description: Registrer deg for å delta på Kodetimen under Kodeveka
     (CS Education Week)
   learn_sign_up_button: Meld deg på
@@ -1317,7 +1318,7 @@
   scratch_platformtext: Berre for nettlesarar på datamaskin (ikkje nettbrett)
   lightbot_platformtext: ALLE nettlesarar og iOS, Android eller spelkonsoll
   thinkersmith_platformtext: Struamlaust
-  condcards_platformtext: Struamlaust
+  condcards_platformtext: Utan datamaskin
   lightbotintl_platformtext: iOS, Android (eller nettlesar)
   codehs_platformtext: Moderne nettlesarar. (Oppfølgingskurs krev $$)
   codecademy_platformtext: Moderne nettlesarar. iOS- ogAndroid-app'ar
@@ -2016,14 +2017,17 @@
   google_sign_in_instruct: 'Derfra bør dei velge alternativet "Logg på med Google-kontoen":'
   hero_name: 'Minecraft: Helten si reise'
   applab-intro_name: Lab-intro til appen
+  applab_tile_start_tutorial: Start
   account_sign_up_email_opt_in: Kan vi sende deg nyheter om kursene våre, lokale jobbmuligheter
     eller andre IT-relaterte nyheter?
+  hoc_overview_start_tutorial: Start
   hoc2018_creativity_create: Opprett
   hoc2018_mc_page_title: Rettleiingar for Kodetimen i Minecraft
   hoc2018_mc_details: Mange språk | Moderne nettlesarar og nettbrett | 2. klasse og
     oppover
   hoc2018_mc_aquatic_description: Minecraft er tilbake i Kodetimen med ein heilt ny
     aktivitet! Reis gjennom Minecraft med kode.
+  hoc2018_mc_hero_title: 'Minecraft: Heltens reise'
   hoc2018_mc_hero_description: Minecraft er tilbake i Kodetimen med ein heilt ny aktivitet!
     Reis gjennom Minecraft med kode.
   hoc2018_mc_designer_title: Minecraft-designer
@@ -2061,300 +2065,8 @@
   hoc2018_mc_minecraft_education: Minecraft Education
   hoc2018_mc_continue_learning: Hald fram med å lære med Minecraft.
   hoc2018_mc_go_to_mc_education: Gå til Minecraft Education
-  ! '': 
-  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  studiobar_dance_title: Dance Party
-  studiobar_dance_body: Create and share your own Dance Party
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  minecraft_start_tutorial: Start tutorial
-  video_title_cs_is_everything: Computer Science is Changing Everything
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"
-  dashboard_course_csina: Computer Science in Algebra
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  thinkersmithspanish_name: Mis Amigos Roboticos
-  lightbot_name: Lightbot
-  lightbotintl_name: Lightbot
-  codecademy_name: Codecademy
-  codecombat_name: CodeCombat
-  touchdevelop_name: TouchDevelop
-  thinkersmith2_name: Binary Baubles
-  kodableunplugged_name: fuzzFamily Frenzy
-  codesters_name: Codesters
-  coursea-2017_name: Course A (2017)
-  courseb-2017_name: Course B (2017)
-  coursec-2017_name: Course C (2017)
-  coursed-2017_name: Course D (2017)
-  coursee-2017_name: Course E (2017)
-  coursef-2017_name: Course F (2017)
-  coursea-2018_name: Course A (2018)
-  courseb-2018_name: Course B (2018)
-  coursec-2018_name: Course C (2018)
-  coursed-2018_name: Course D (2018)
-  coursee-2018_name: Course E (2018)
-  coursef-2018_name: Course F (2018)
-  express_name: Express Course
-  express-2017_name: Express Course (2017)
-  pre-express-2017_name: Pre-reader Express Course (2017)
-  express-2018_name: Express Course (2018)
-  pre-express-2018_name: Pre-reader Express Course (2018)
-  csd1_name: 'Unit 1: Problem Solving'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Animation and Games'
-  csd4_name: 'Unit 4: The Design Process'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp3_name: 'Unit 3: Algorithms and Programming'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
-  csp-post-survey_name: Student Post-Course Survey
-  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
-    of computer programming, which unlocks the ability to make rich, interactive apps.
-    This course uses JavaScript as the programming language, and App Lab as the programming
-    environment to build apps, but the concepts learned in these lessons span all
-    programming languages and tools.
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  text-compression_name: Text Compression
-  csf_2017_category_name: CS Fundamentals (2017)
-  csf_2018_category_name: CS Fundamentals (2018)
-  csd_category_name: CS Discoveries ('17-'18)
-  csd_2018_category_name: CS Discoveries ('18-'19)
-  csp_2018_category_name: CS Principles ('18-'19)
-  research_studies_category_name: Research Studies
-  thinkersmithspanish_gradelevel: Por todos
-  kodable_platformtext: iPad
-  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  coursea_shortdescription_congrats: An introduction to computer science for pre-readers.
-  courseb_shortdescription_congrats: An introduction to computer science for pre-readers.
-    (Similar to Course A, but with more variety for older students.)
-  coursec_shortdescription_congrats: Learn the basics of computer science and create
-    your own art, stories, and games.
-  coursed_shortdescription_congrats: Quickly cover concepts from Course C, then go
-    further with algorithms, nested loops, conditionals, and more.
-  coursee_shortdescription_congrats: Quickly cover concepts in Course C & D and then
-    go further with functions.
-  coursef_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals
-    and create your own art, story or game.
-  coursea-2017_shortdescription_congrats: An introduction to computer science for
-    pre-readers.
-  courseb-2017_shortdescription_congrats: An introduction to computer science for
-    pre-readers. (Similar to Course A, but with more variety for older students.)
-  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
-    create your own art, stories, and games.
-  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
-    go further with algorithms, nested loops, conditionals, and more.
-  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
-    then go further with functions.
-  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
-    Fundamentals and create your own art, story or game.
-  coursea-2018_shortdescription_congrats: An introduction to computer science for
-    pre-readers.
-  courseb-2018_shortdescription_congrats: An introduction to computer science for
-    pre-readers. (Similar to Course A, but with more variety for older students.)
-  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
-    create your own art, stories, and games.
-  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
-    go further with algorithms, nested loops, conditionals, and more.
-  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
-    then go further with functions.
-  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
-    Fundamentals and create your own art, story or game.
-  lightbot_beyond_name: LightBot
-  codecademy_beyond_name: Codecademy
-  touchdevelop_beyond_name: TouchDevelop
-  udacity_beyond_name: CS 101
-  kodu_beyond_name: Kodu
-  cargobot_beyond_name: Cargobot
-  kidsruby_beyond_name: KidsRuby
-  mozilla_beyond_name: Webmaker
-  codecombat_beyond_name: CodeCombat
-  codea_beyond_name: Codea
-  lego_beyond_name: Mindstorms
-  finch_beyond_name: Finch
-  alice_beyond_name: Alice
-  sphero_beyond_name: SPRK
-  kodable_beyond_platformtext: iPad
-  scratchjr_beyond_platformtext: iPad
-  hopscotch_beyond_platformtext: iPad
-  kodu_beyond_platformtext: Windows, xBox
-  cargobot_beyond_platformtext: iPad
-  codea_beyond_platformtext: iPad
-  mc_shortcode: mc
-  frozen_shortcode: frzn
-  hourofcode_shortcode: code
-  infinity_shortcode: inf
-  playlab_shortcode: lab
-  artist_shortcode: art
-  csd_name: CS Discoveries
-  csd_2018_name: CS Discoveries
-  user_header_artist: 'Artist '
-  user_header_dance: Dance Party
-  user_header_spritelab: Sprite Lab
-  user_header_view_all: View all projects...
-  user_header_view_project_gallery: View project gallery
-  applab_tile_title: Intro to App Lab (Ages 13+)
-  applab_tile_subtitle: Create your own app in JavaScript using block based programming.
-    Or take your skills to the next level with text-based programming. (English Only)
-  applab_tile_start_tutorial: Start tutorial
-  applab_tile_teacher_guide: View teacher guide
-  aquatic_name: 'Minecraft: Voyage Aquatic'
-  account_sign_up_child_accept_terms: I confirm that I have my parent or legal guardian's
-    permission to use the Code.org services.
-  hoc_overview_title: Hour of Code Activities from Code.org
-  hoc_overview_subtitle: The <a href="https://hourofcode.com">Hour of Code</a> is
-    a global movement reaching tens of millions of students in 180+ countries. Anyone,
-    anywhere can organize an Hour of Code event or try any of the over 200+ one-hour
-    tutorials, available in over 45 languages.
-  hoc_overview_partner_activities_title: More activities from partners
-  hoc_overview_partner_activities_body: The Hour of Code website has over 100 computer
-    science activities for all ages and experience levels, developed by Code.org and
-    partners.
-  hoc_overview_partner_activities_link: View Activities
-  hoc2018_creativity: creativity
-  hoc2018_creativity_hoc_coming: The Hour of Code is coming…
-  hoc2018_creativity_what_will_you_create: What will you create?
-  hoc2018_creativity_homepage: Give flight to imagination and birth to innovation.
-    Start with an Hour of Code and your own brand of creativity, whatever it may be.
-    Watch our video.
-  hoc2018_creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
-  hoc2018_creativity_social_media: 'This year''s #HourOfCode is about creativity.
-    I’m in! Are you?'
-  hoc2018_creativity_social_media_2: 'This year''s #HourOfCode is about creativity.
-    What will you create?'
-  hoc2018_creativity_courses: Go further with Code.org courses
-  hoc2018_creativity_courses_link: Go further with <a href="https://studio.code.org/courses">Code.org
-    courses</a>
-  hoc2018_homepage: Sign up your class to try one of the over 150 NEW activites for
-    the Hour of Code (Dec 3-9)!
-  hoc2018_mc_aquatic_announcement: Sign up your class to try one of the over 150 NEW
-    activities for the Hour of Code (Dec 3-9). Be sure to check out our brand new
-    Minecraft activity for 2018, the Voyage Aquatic! Sign up your class today.
-  hoc2018_mc_aquatic_title: Minecraft Voyage Aquatic
-  hoc2018_mc_hero_title: Minecraft Hero’s Journey
-  hoc2018_mc_educators: For Educators
-  hoc2018_mc_educators_box1_title: Code with Minecraft
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition provides standards-aligned
-    curriculum, training and coding in Minecraft.'
-  hoc2018_mc_educators_box1_button: Get started
-  hoc2018_mc_educators_box2_title: Download Facilitator Guide
-  hoc2018_mc_educators_box2_desc: This toolkit will help you host an Hour of Code
-    and engage your students in computer science.
-  hoc2018_mc_educators_box3_title: Attend a free student workshop
-  hoc2018_mc_educators_box3_desc: Visit a Microsoft Store in your area for a free
-    Hour of Code workshop. For participants of all skill levels, ages six and up.
-  hoc2018_mc_educators_box3_button: Find a workshop
-  hoc2018_mc_educators_box4_title: Access more computer science resources
-  hoc2018_mc_educators_box4_desc: Create change in your community with digital skills
-    and computer science education resources from Microsoft.
-  hoc2018_mc_educators_box4_button: Explore resources
-  hoc2018_mc_video_3min: 3 min
-  hoc2018_mc_video_title_cs_is_everything: Computer Science is Changing Everything
-  hoc2018_mc_video_title_my_name_is_aracely: My Name is Aracely
-  hoc2018_mc_homepage_hoc_coming: The Hour of Code is coming...
-  hoc2018_mc_homepage_what_create: What will you create?
-  hoc2018_mc_homepage_give_flight: Give flight to imagination and birth to innovation.
-    Start with an Hour of Code and your own brand of creativity, whatever it may be.
-  hoc2018_mc_homepage_watch_video: Watch our video
-  hoc2018_mc_teacher_guide: View teacher guide
-  hoc2018_mc_short_description: Use your creativity and problem solving skills to
-    find treasure and explore under water worlds with the power of code.
-  hoc2018_mc_short_description_shorter: Use your creativity and problem solving skills
-    to explore and build underwater worlds with code.
-  hoc2018_mc_journey: Journey through Minecraft with code.
-  hoc2018_dance_party_main_heading: Dance Party
-  hoc2018_dance_party_subheading: Help Translate Dance Party
-  hoc2018_dance_create_your_own_dance_title: Create Your Own Dance Party
-  hoc2018_dance_party_box_title: Dance Party
-  hoc2018_dance_party_box_description: Code a Dance Party to share with your friends!
-  hoc2018_dance_party_specs: Language | Format | Age 6-106
   hoc2018_dance_party_button: Start
-  hoc2018_dance_keep_on_dancing_box_title: Keep On Dancing
-  hoc2018_dance_keep_on_dancing_description: Go beyond the first hour with extended
-    project ideas.
-  hoc2018_dance_keep_on_dancing_specs: Language | Format | Age 13+
-  hoc2018_dance_keep_on_dancing_button: Go Beyond
-  hoc2018_dance_teacher_resources_title: Teacher Resources
-  hoc2018_dance_teacher_resources_tile1_description: Lesson plans, certificates, and
-    music filtering.
-  hoc2018_dance_teacher_resources_tile1_button: Lesson Plan
-  hoc2018_dance_teacher_resources_tile2_title: Dance Party Unplugged
-  hoc2018_dance_teacher_resources_tile2_description: No computers needed! Your class
-    will learn about coding concepts to choreograph a dance party together.
-  hoc2018_dance_teacher_resources_tile2_button: Unplugged Activity
-  hoc2018_dance_featured_student_creations_title: Featured Student Creations
-  hoc2018_dance_videos_section_heading: Get Inspired
-  hoc2018_dance_video_title_what_is_creativity: What is Creativity?
-  hoc2018_dance_view_creativity_video_playlist: What is Creativity? View Full Series
-  hoc2018_dance_amazon_sponsor_section_with_logo_title: 'In partnership with: '
-  hoc2018_dance_amazon_sponsor_section_with_logo_description: Amazon Future Engineer
-    is a comprehensive childhood-to-career program to inspire, educate, and train
-    low-income and other disadvantaged children and young people to pursue careers
-    in computer science.
-  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
-    Engineer is a comprehensive childhood-to-career program to inspire, educate, and
-    train low-income and other disadvantaged children and young people to pursue careers
-    in computer science. <a href='%{amazon_future_engineer_link}' target='_blank'>Learn
-    more</a>
-  hoc2018_dance_amazon_learn_more_link: Learn more
-  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Learn more about
-    Amazon Future Engineer
-  hoc2018_dance_amazon_about_future_engineer_box1_title: About Amazon Future Engineer
-  hoc2018_dance_amazon_about_future_engineer_box1_description: Learn about Amazon’s
-    kindergarten to career program to increase access to computer science education.
-    Find information on how to get involved in our summer camps, high school CS classes,
-    scholarships, and internships.
-  hoc2018_dance_amazon_about_future_engineer_box1_button_text: Learn more
-  hoc2018_dance_amazon_try_coding_this_summer_box2_long_title: Try coding this summer
-  hoc2018_dance_amazon_K-8_programs_box2_short_title: K-8 programs
-  hoc2018_dance_amazon_try_coding_box2_description: Get involved in Amazon Future
-    Engineer’s free, fun, and inclusive computer science camps! Summer camps are available
-    for students from kindergarten through 8th grade in multiple locations in the
-    US for summer 2019.
-  hoc2018_dance_amazon_apply_now_button_text: Apply now
-  hoc2018_dance_amazon_scholarship_programs_box3_short_title: Scholarship programs
-  hoc2018_dance_amazon_scholarship_programs_box3_long_title: Get funding for your
-    CS degree
-  hoc2018_dance_amazon_scholarship_programs_box3_description: Amazon is offering $10,000
-    4-year scholarships for underserved students who are studying CS. Applicants must
-    have successfully completed or currently be enrolled in an AP computer science
-    course. Scholarship recipients will also receive paid summer internships at Amazon
-    in the summer of 2020!
-  hoc2018_dance_amazon_internships_box4_long_title: Come Intern at Amazon
-  hoc2018_dance_amazon_internships_box4_short_title: Internships
-  hoc2018_dance_amazon_internships_box4_description: Applications are now open for
-    summer 2019 Amazon Future Engineer internships.  Interns will partner with a technical
-    mentor and manager, as well as with other interns, to innovate and create new
-    features and services on behalf of Amazon customers.
-  hoc2018_dance_measure: Measure
-  hoc2018_dance_measure_colon: 'Measure:'
-  hoc2018_aquatic_video1: Minecraft Voyage Aquatic - Introduction
-  hoc2018_aquatic_video2: Minecraft Voyage Aquatic - Loops
-  hoc2018_aquatic_video3: Minecraft Voyage Aquatic - Conditionals
-  hoc2018_aquatic_video4: Minecraft Voyage Aquatic - Congratulations
-  hoc2018_dance_video1: Dance Party - Introduction
-  hoc2018_dance_video2: Dance Party - Events
-  hoc2018_dance_video3: Dance Party - Properties
-  hoc2018_dance_video4: Dance Party - Congratulations
+  hoc2018_dance_teacher_resources_tile1_button: Plan over oppgåver
+  hoc2018_dance_teacher_resources_tile2_button: Aktivitet utan datamaskiner
+  hoc2018_dance_amazon_about_future_engineer_button: Lær meir
+  hoc2018_dance_amazon_scholarship_programs_button: Søk nå

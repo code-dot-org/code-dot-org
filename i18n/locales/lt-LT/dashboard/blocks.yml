@@ -40,6 +40,14 @@ lt:
           PROPERTY:
             '"scale"': dydis
             '"height"': aukštis
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekundes
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': sekundes
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -68,11 +76,29 @@ lt:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"random"': atsitiktinis
       Dancelab_randomColor:
         text: Atsitiktinė spalva
       Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
         options:
           SPEED:
             '1': normal
@@ -109,10 +135,11 @@ lt:
         options:
           KEY:
             '"up"': aukštyn
-            '"down"': žemyn
             '"left"': kairėn
+            '"down"': žemyn
             '"right"': dešinėn
             '"space"': kosmosas
+            '"x"': x
       gamelab_changePropBy:
         options:
           PROPERTY:

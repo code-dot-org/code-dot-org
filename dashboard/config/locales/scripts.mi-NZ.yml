@@ -1290,3 +1290,13 @@ mi:
           stages:
             Artist:
               name: Rehetoi
+        aquatic:
+          title: 'Toihuke: Rerenga Moana'
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Te Hanga Tūāpapa
+            Envelope Variables:
+              name: Ngā Taurangi Kōpaki
+            For Loop Fun:
+              name: Kia Ngahau te Mahi Koromeke

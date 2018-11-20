@@ -182,7 +182,7 @@ zh-CN:
         2-3_Bee_Functions_8_a: "如果这个关卡看上去很有挑战性，尝试一点一点创建你的函数。 \n\n添加一些模块试试看。继续添加，然后再尝试。很快，你就能成功了！\n\n ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       2-3 Bee Functions 9_authored_hint:
         2-3_Bee_Functions_8_a: "如果这个关卡看上去很有挑战性，尝试一点一点创建你的函数。 \n\n添加一些模块试试看。继续添加，然后再尝试。很快，你就能成功了！"
-        2-3_Bee_Functions_8_b: |2
+        2-3_Bee_Functions_8_b: |-
           别忘了把你的代码创建在绿色的函数模块中。
           
            ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
@@ -3340,10 +3340,13 @@ zh-CN:
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: 如果您调用的函数正确, 这将是您要旅行的路径。
         Function_intro_Ryan_a: 您可以在程序中多次调用某一函数！尝试调用两次以解决该难题。
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_b: 如果您调用的函数正确, 这将是您要旅行的路径。
+        Function_intro_Ryan_a: 您可以在程序中多次调用某一函数！尝试调用两次以解决该难题。
       HOC 2018 Level_10_authored_hint:
-        voyage_aquatic_10a: "看到**海晶灯**![]（https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png）了吗？您怎样可以有条件地使用他们，穿过海底遗迹？\n\n"
+        voyage_aquatic_10a: "看到**海晶灯** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) 了吗？怎样可以用条件来使用它们，穿过海底遗迹？\n\n"
       HOC 2018 Level_9b_authored_hint:
-        voyage_aquatic_9a: 多漂亮的珊瑚礁啊！蓝色珊瑚在**右**边，红色珊瑚在**左**边，不要漏掉了！
+        voyage_aquatic_9a: 看见红色和蓝色的珊瑚块了吗？将它们用作向右向左转的路标来通过礁石。
       Harvesting_authored_hint:
         pointer_harvester_test: 我可以用什么样的模块来检查并做出决定？
       Inspirational Artwork_authored_hint:
@@ -3385,7 +3388,19 @@ zh-CN:
         MC_HOC_2017_01_RETRY_a: 将一个"向前移动"方块从工具箱拖拽入工作区，并将其粘贴到"当运行时"方块下面的位置。
         MC_HOC_2017_01_RETRY_b: 别忘了点击"运行"来运行为代理人写的代码。
         MC_HOC_2017_01_RETRY_c: 一旦代理人运行完全部代码，您就可以使用方向键移动玩家了！
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: 将一个"向前移动"方块从工具箱拖拽入工作区，并将其粘贴到"当运行时"方块下面的位置。
+        MC_HOC_2017_01_RETRY_b: 别忘了点击"运行"来运行为代理人写的代码。
+        MC_HOC_2017_01_RETRY_c: 一旦代理人运行完全部代码，您就可以使用方向键移动玩家了！
       MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: 将代理人向前移动两个空格，使其站立在压力板上。这将为您的玩家打开门。
+        MC_HOC_2017_02_Cole_b: |-
+          按"运行"！ 
+          
+          即便您的代码并不正确，您仍然可以运行。一遍遍运行并重置您的代码，直至您找出问题所在。
+        MC_HOC_2017_02_Cole_c: 一旦代理人将门打开，使用方向键将玩家移动至地图上！
+        MC_HOC_2017_02_Cole_d: 确保代理人正在跟踪地图上的路径!
+      MC_HOC_2017_02_Cole_2019_authored_hint:
         MC_HOC_2017_02_Cole_a: 将代理人向前移动两个空格，使其站立在压力板上。这将为您的玩家打开门。
         MC_HOC_2017_02_Cole_b: |-
           按"运行"！ 
@@ -3402,12 +3417,18 @@ zh-CN:
       MC_HOC_2017_03_Cole_authored_hint:
         MC_HOC_2017_03_Cole_a: 一旦您将代理人移动至压力板上，就可以使用方向键使玩家走至指南针处！
         MC_HOC_2017_03_Cole_b: 代码是不是感觉有点儿长？尝试使用"重复"循环，看看能不能设法将代码变短点儿！
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_a: 一旦您将代理人移动至压力板上，就可以使用方向键使玩家走至指南针处！
+        MC_HOC_2017_03_Cole_b: 代码是不是感觉有点儿长？尝试使用"重复"循环，看看能不能设法将代码变短点儿！
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
           穿过这两块压力板会为玩家打开该路径。 
           
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: '使用"向右转"模块改变代理人的方向 '
+        MC_HOC_2017_04POINT5_RYAN_a: 代理人只需要抵达第一块压力板即可使艾利克斯或者史蒂夫通过并抵达斧头。
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
         MC_HOC_2017_04POINT5_RYAN_b: '使用"向右转"模块改变代理人的方向 '
         MC_HOC_2017_04POINT5_RYAN_a: 代理人只需要抵达第一块压力板即可使艾利克斯或者史蒂夫通过并抵达斧头。
       MC_HOC_2017_04_Cole_authored_hint:
@@ -3417,7 +3438,17 @@ zh-CN:
           
           即便您的代码并不正确，您仍然可以运行。一遍遍运行并重置您的代码，直至您找出问题所在。
         MC_HOC_2017_04_Cole_b: 一旦代理人抵达了压力板，将为玩家打开门。
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_a: 代理人需要向前移动7次。您将如何使用"重复"循环来实现这一点？
+        MC_HOC_2017_04_Cole_c: |-
+          按"运行"！ 
+          
+          即便您的代码并不正确，您仍然可以运行。一遍遍运行并重置您的代码，直至您找出问题所在。
+        MC_HOC_2017_04_Cole_b: 一旦代理人抵达了压力板，将为玩家打开门。
       MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: 您是否知道您可以在一个循环中放置不止一条指令？尝试在某个"重复中"放置一块木板**并**向前移动来解决这一难题。
+        MC_HOC_2017_05_Cole_b: 在你行走的时候，建一座桥来让代理人过河。
+      MC_HOC_2017_05_Cole_2019_authored_hint:
         MC_HOC_2017_05_Cole_a: 您是否知道您可以在一个循环中放置不止一条指令？尝试在某个"重复中"放置一块木板**并**向前移动来解决这一难题。
         MC_HOC_2017_05_Cole_b: 在你行走的时候，建一座桥来让代理人过河。
       MC_HOC_2017_05_Josh_authored_hint:
@@ -3425,9 +3456,16 @@ zh-CN:
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: 这个循环运行了多少次？它又*应该*运行多少次？
         MC_HOC_2017_06_Cole_b: '帮助代理人建立一座横跨水的桥梁 ！ '
+      MC_HOC_2017_06_Cole_2019_authored_hint:
+        MC_HOC_2017_06_Cole_a: 这个循环运行了多少次？它又*应该*运行多少次？
+        MC_HOC_2017_06_Cole_b: '帮助代理人建立一座横跨水的桥梁 ！ '
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: 尝试在某个"重复"循环中放置不止一条指令！
       MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_c: 所有你需要代理人做的是清除到矿车的路径 。
+        MC_HOC_2017_07_Cole_a: 为了解决该难题，您需要搞清楚"清空路径"函数的作用是什么，并在任何有需要的时候，使用工具箱中的绿色小"清空路径"方块调用它。
+        MC_HOC_2017_07_Cole_b: 尝试将这些函数模块与工具箱中的其他模块混合，来帮助您解决该难题。
+      MC_HOC_2017_07_Cole_2019_authored_hint:
         MC_HOC_2017_07_Cole_c: 所有你需要代理人做的是清除到矿车的路径 。
         MC_HOC_2017_07_Cole_a: 为了解决该难题，您需要搞清楚"清空路径"函数的作用是什么，并在任何有需要的时候，使用工具箱中的绿色小"清空路径"方块调用它。
         MC_HOC_2017_07_Cole_b: 尝试将这些函数模块与工具箱中的其他模块混合，来帮助您解决该难题。
@@ -3446,6 +3484,9 @@ zh-CN:
       MC_HOC_2017_10_RETRY_authored_hint:
         MC_HOC_2017_10_Cole_b: 不知道去哪里？ 看看你是否能找到虚线!
         MC_HOC_2017_10_Cole_a: 使用函数来更容易的解决难题。
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_b: 不知道去哪里？ 看看你是否能找到虚线!
+        MC_HOC_2017_10_Cole_a: 使用函数来更容易的解决难题。
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: 尝试让代理人建造一些桥梁，这样艾莉克斯和史蒂夫就可以在地图边缘以外的地区走动了。
       MC_HOC_2017_4.5v2_authored_hint:
@@ -3460,7 +3501,16 @@ zh-CN:
           即便您的代码并不正确，您仍然可以运行。一遍遍运行并重置您的代码，直至您找出问题所在。
         MC_HOC_2017_08_RY_b: 有许多方法可以解决这一难题。接着尝试吧！
         MC_HOC_2017_08_RY_c: 尝试沿着虚线, 找到通过熔岩的简单路径。
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: |-
+          按"运行"！ 
+          
+          即便您的代码并不正确，您仍然可以运行。一遍遍运行并重置您的代码，直至您找出问题所在。
+        MC_HOC_2017_08_RY_b: 有许多方法可以解决这一难题。接着尝试吧！
+        MC_HOC_2017_08_RY_c: 尝试沿着虚线, 找到通过熔岩的简单路径。
       MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: 尝试让代理人建造一些桥梁，这样艾莉克斯和史蒂夫就可以在地图边缘以外的地区走动了。
+      MC_HOC_2017_FP20x20_2019_authored_hint:
         MC_HOC_2017_13_Cole_a: 尝试让代理人建造一些桥梁，这样艾莉克斯和史蒂夫就可以在地图边缘以外的地区走动了。
       NEW Course 4 Artist Functions 13_authored_hint:
         NEW_Course_4_Artist_Functions_13_a: 尝试编辑`draw a line of squares`（用正方形画一条线）的函数, 这样你就不必两次调用它。
@@ -3713,6 +3763,9 @@ zh-CN:
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: 您的循环中应该有3个模块来解决这个关卡。
       comment_intro_maze_2018_authored_hint:
+        courseC_maze_programming4_a: 当其他人试图读取您的代码时，注释也很有用。
+        courseC_maze_programming4_b: 当你更改方向时，增加一条注释 - 如果转向另一条路，会发生什么情况？
+      comment_intro_maze_2018_2019_authored_hint:
         courseC_maze_programming4_a: 当其他人试图读取您的代码时，注释也很有用。
         courseC_maze_programming4_b: 当你更改方向时，增加一条注释 - 如果转向另一条路，会发生什么情况？
       course1_artist_loops_challenge1_authored_hint:
@@ -4240,7 +4293,7 @@ zh-CN:
           * 设置新的背景。
           * 让骑士感谢玩家的帮助。
           * 让所有的演员消失, 并显示一个 "你赢了！"的信息
-        courseE_playLab_challenge1_b: |2
+        courseE_playLab_challenge1_b: |-
           当玩家输掉游戏时, 你可以做一些事情：
           
           * 让骑士消失。
@@ -4648,7 +4701,7 @@ zh-CN:
           </statement>
           </block></xml>
       course4_bee_fwp_challenge2_authored_hint:
-        courseF_bee_fwp_challenge2_a: |2
+        courseF_bee_fwp_challenge2_a: |-
           首先确保你明白这个函数是如何工作的。当农夫沿着每条小路向下移动时, 她只会尝试收集玉米。相反, 你怎么能让她查找3种蔬菜, 并只捡起她发现的那一种？
           
            将条件声明添加到函数中, 来查找玉米、南瓜和生菜。
@@ -7017,7 +7070,7 @@ zh-CN:
           ![](https://images.code.org/b1559bf476ceb59f880c43271c5e10b2-image-1494111787192.59.49 PM.png)
       courseC_artist_loop1_authored_hint:
         courseC_artist_loop1_a: 您不需要对循环进行任何更改, 只需在上面放置一个模块。
-        courseC_artist_loop1_b: |2
+        courseC_artist_loop1_b: |-
           这是您需要设置图案的模块: 
           
           <xml>
@@ -7029,7 +7082,7 @@ zh-CN:
            选择您喜欢的任何图案!
       courseC_artist_loop1_2018_authored_hint:
         courseC_artist_loop1_a: 您不需要对循环进行任何更改, 只需在上面放置一个模块。
-        courseC_artist_loop1_b: |2
+        courseC_artist_loop1_b: |-
           这是您需要设置图案的模块: 
           
           <xml>
@@ -7194,6 +7247,9 @@ zh-CN:
       courseC_artist_prog2_2018_authored_hint:
         courseC_artist_prog2_a: '如果使用模块让我 ''前进 100 像素''，我会自动画一条线。'
         courseC_artist_prog2_b: 怎么才能转弯呢？使用 '向右转 90 度' 模块。
+      courseC_artist_prog2_2019_authored_hint:
+        courseC_artist_prog2_a: '如果使用模块让我 ''前进 100 像素''，我会自动画一条线。'
+        courseC_artist_prog2_b: 怎么才能转弯呢？使用 '向右转 90 度' 模块。
       courseC_artist_prog3_authored_hint:
         courseC_artist_prog3_a: |-
           要创建这个窗户，只需绘制一个100 像素边长的正方形。
@@ -7206,6 +7262,17 @@ zh-CN:
           - 向前移动
         courseC_artist_prog3_b: 要写出更短的代码？尝试在这个关卡中使用一个循环。
       courseC_artist_prog3_2018_authored_hint:
+        courseC_artist_prog3_a: |-
+          要创建这个窗户，只需绘制一个100 像素边长的正方形。
+          - 向前移动
+          - 转弯
+          - 向前移动
+          - 转弯
+          - 向前移动
+          - 转弯
+          - 向前移动
+        courseC_artist_prog3_b: 要写出更短的代码？尝试在这个关卡中使用一个循环。
+      courseC_artist_prog3_2019_authored_hint:
         courseC_artist_prog3_a: |-
           要创建这个窗户，只需绘制一个100 像素边长的正方形。
           - 向前移动
@@ -7236,6 +7303,16 @@ zh-CN:
           - 向前移动
           - 左转120度
           - 向前移动
+      courseC_artist_prog4_2019_authored_hint:
+        courseC_artist_prog4_a: 要完成这个火箭，只需要在最上面画个三角形！
+        courseC_artist_prog4_b: 您可以使用`转向`模块的下拉菜单来查看所需的角度!
+        courseC_artist_prog4_c: |-
+          要绘制三角形，你需要：
+          - 向前移动
+          - 向左120度
+          - 向前移动
+          - 左转120度
+          - 向前移动
       courseC_artist_prog5_authored_hint:
         courseC_artist_prog5_a: 放慢滑块速度直到你能逐行运行代码，来查看哪里出错了。
         courseC_artist_prog5_b: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
@@ -7246,11 +7323,20 @@ zh-CN:
         courseC_artist_prog5_b: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
         courseC_artist_prog5_c: 您可以使用`转向`模块的下拉菜单来查看所需的角度!
         courseC_artist_prog5_d: 每个转弯应该是向右转90度。
+      courseC_artist_prog5_2019_authored_hint:
+        courseC_artist_prog5_a: 放慢滑块速度直到你能逐行运行代码，来查看哪里出错了。
+        courseC_artist_prog5_b: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
+        courseC_artist_prog5_c: 您可以使用`转向`模块的下拉菜单来查看所需的角度!
+        courseC_artist_prog5_d: 每个转弯应该是向右转90度。
       courseC_artist_prog6_authored_hint:
         courseC_artist_prog6_a: 艺术家已经面朝着正确的方向来画第一条线。
         courseC_artist_prog6_b: 这颗钻石真的只是一个立起来的正方形。
         courseC_artist_prog6_c: 因为这个钻石也是一个正方形, 请确保在拐角处旋转90度。
       courseC_artist_prog6_2018_authored_hint:
+        courseC_artist_prog6_a: 艺术家已经面朝着正确的方向来画第一条线。
+        courseC_artist_prog6_b: 这颗钻石真的只是一个立起来的正方形。
+        courseC_artist_prog6_c: 因为这个钻石也是一个正方形, 请确保在拐角处旋转90度。
+      courseC_artist_prog6_2019_authored_hint:
         courseC_artist_prog6_a: 艺术家已经面朝着正确的方向来画第一条线。
         courseC_artist_prog6_b: 这颗钻石真的只是一个立起来的正方形。
         courseC_artist_prog6_c: 因为这个钻石也是一个正方形, 请确保在拐角处旋转90度。
@@ -7286,11 +7372,29 @@ zh-CN:
           
           重复此模式两次!
         courseC_artist_prog7_e: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
+      courseC_artist_prog7_2019_authored_hint:
+        courseC_artist_prog7_a: 每个角度都是45度或90度。
+        courseC_artist_prog7_b: "它的第一步工作吗？ \n那第二步呢？\n哪里出问题了？"
+        courseC_artist_prog7_c: 您可以使用转向模块的下拉菜单来查看所需的角度！
+        courseC_artist_prog7_d: |-
+          你需要：
+          
+          - 向前移动
+          - 向右转45度
+          - 向前移动
+          - 向右转90度
+          - 前进
+          - 向右转45度
+          
+          重复此模式两次!
+        courseC_artist_prog7_e: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
       courseC_artist_prog_challenge1-doghouse_authored_hint:
         courseC_artist_prog7_a: 用60度角做屋顶。
       courseC_artist_prog_challenge1_authored_hint:
         courseC_artist_prog_challenge1_a: 你可以把它画成一个长方形, 其中一边在中间或在两个不同的正方形上!
       courseC_artist_prog_challenge1_2018_authored_hint:
+        courseC_artist_prog_challenge1_a: 你可以把它画成一个长方形, 其中一边在中间或在两个不同的正方形上!
+      courseC_artist_prog_challenge1_2019_authored_hint:
         courseC_artist_prog_challenge1_a: 你可以把它画成一个长方形, 其中一边在中间或在两个不同的正方形上!
       courseC_artist_prog_challenge2_authored_hint:
         courseC_artist_prog_challenge2_a: "可以将命令放在`重复`模块中, 将它们反复循环。试试看！\n\n<xml>\n\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">6</title>\n<statement name=\"DO\">\n<block type=\"draw_move_by_constant_dropdown\">\n<title name=\"DIR\">moveForward</title>\n<title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n<next>\n<block type=\"jump_by_constant_dropdown\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n</block>\n</next>\n</block>\n</statement></block></xml>"
@@ -7298,6 +7402,9 @@ zh-CN:
         courseC_artist_prog_challenge2_a: 绘制第一行后，在绘制第二行前向左转。
         courseC_artist_prog_challenge2_b: 绘制第二行后, 在绘制第三行之前向右转。
       courseC_artist_prog_challenge2a_2018_authored_hint:
+        courseC_artist_prog_challenge2_a: 绘制第一行后，在绘制第二行前向左转。
+        courseC_artist_prog_challenge2_b: 绘制第二行后, 在绘制第三行之前向右转。
+      courseC_artist_prog_challenge2a_2019_authored_hint:
         courseC_artist_prog_challenge2_a: 绘制第一行后，在绘制第二行前向左转。
         courseC_artist_prog_challenge2_b: 绘制第二行后, 在绘制第三行之前向右转。
       courseC_collector_loops_challenge2_authored_hint:
@@ -7584,6 +7691,12 @@ zh-CN:
           - 在第二步之后它还工作吗？
           - 哪里出错了？
         courseC_maze_debugging1_b: 只需要添加1个模块来完成这个关卡。
+      courseC_maze_debugging1_2019_authored_hint:
+        courseC_maze_debugging1_a: |-
+          - 在第一步之后一切运行正常吗？
+          - 在第二步之后它还工作吗？
+          - 哪里出错了？
+        courseC_maze_debugging1_b: 只需要添加1个模块来完成这个关卡。
       courseC_maze_debugging2_authored_hint:
         courseC_maze_debugging2_a: 工作区内有许多有价值的代码。请不要把它们全部删除来重新开始!
         courseC_maze_debugging2_b: |-
@@ -7592,6 +7705,13 @@ zh-CN:
           - 哪里出错了？
         courseC_maze_debugging2_c: 搞不清楚那里有错？尝试运行代码多次，看看会发生什么。
       courseC_maze_debugging2_2018_authored_hint:
+        courseC_maze_debugging2_a: 工作区内有许多有价值的代码。请不要把它们全部删除来重新开始!
+        courseC_maze_debugging2_b: |-
+          - 在第一步之后一切运行正常吗？
+          - 在第二步之后它还工作吗？
+          - 哪里出错了？
+        courseC_maze_debugging2_c: 搞不清楚那里有错？尝试运行代码多次，看看会发生什么。
+      courseC_maze_debugging2_2019_authored_hint:
         courseC_maze_debugging2_a: 工作区内有许多有价值的代码。请不要把它们全部删除来重新开始!
         courseC_maze_debugging2_b: |-
           - 在第一步之后一切运行正常吗？
@@ -7618,16 +7738,33 @@ zh-CN:
           
           ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
         courseC_maze_debugging3_b: 搞不清楚那里有错？尝试运行代码多次，看看会发生什么。
+      courseC_maze_debugging3_2019_authored_hint:
+        courseC_maze_debugging3_a: |-
+          如果要从你的代码中删除一个模块，请把所有的模块拖到工作区的其他地方。
+          
+          把想要删除的模块拖回到工具箱中。
+          
+          最后，把其他模块归位。
+          
+          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
+        courseC_maze_debugging3_b: 搞不清楚那里有错？尝试运行代码多次，看看会发生什么。
       courseC_maze_debugging4_authored_hint:
         courseC_maze_debugging4_a: 使用 "步进" 按钮一次运行一个指令。这能帮你找到出错的行了吗？
         courseC_maze_debugging4_b: 其中一个转折让斯奎特走错了方向。你能找出是哪一个吗？
       courseC_maze_debugging4_2018_authored_hint:
         courseC_maze_debugging4_a: 使用 "步进" 按钮一次运行一个指令。这能帮你找到出错的行了吗？
         courseC_maze_debugging4_b: 其中一个转折让斯奎特走错了方向。你能找出是哪一个吗？
+      courseC_maze_debugging4_2019_authored_hint:
+        courseC_maze_debugging4_a: 使用 "步进" 按钮一次运行一个指令。这能帮你找到出错的行了吗？
+        courseC_maze_debugging4_b: 其中一个转折让斯奎特走错了方向。你能找出是哪一个吗？
       courseC_maze_debugging5_authored_hint:
         courseC_maze_debugging5_a: "工作区中已经有很多有用的模块。请不要全部删除!  \n\n使用 \"步进\" 按钮来仔细查看并找出代码出错的地方。"
         courseC_maze_debugging5_b: 试着大声说出斯奎特应该做什么。它是否和工作区的代码一样？哪里出错了？
       courseC_maze_debugging5_2018_authored_hint:
+        courseC_maze_debugging5_a: "工作区中已经有很多有用的模块。请不要全部删除!  \n\n使用 \"步进\" 按钮来仔细查看并找出代码出错的地方。"
+        courseC_maze_debugging5_c: 您可以在转向模块的下拉菜单中更改其方向。
+        courseC_maze_debugging5_b: 试着大声说出斯奎特应该做什么。它是否和工作区的代码一样？哪里出错了？
+      courseC_maze_debugging5_2019_authored_hint:
         courseC_maze_debugging5_a: "工作区中已经有很多有用的模块。请不要全部删除!  \n\n使用 \"步进\" 按钮来仔细查看并找出代码出错的地方。"
         courseC_maze_debugging5_c: 您可以在转向模块的下拉菜单中更改其方向。
         courseC_maze_debugging5_b: 试着大声说出斯奎特应该做什么。它是否和工作区的代码一样？哪里出错了？
@@ -7645,6 +7782,13 @@ zh-CN:
           - 那告诉了你什么？
         courseC_maze_debugging6_b: |-
           等你发现并修复了第一个错误, 请再次进行调试过程来找到另一个错误。 重复这个过程, 直到程序可以正常工作!
+      courseC_maze_debugging6_2019_authored_hint:
+        courseC_maze_debugging6_a: |-
+          - 斯奎特应该做什么？
+          - 斯奎特做了什么？
+          - 那告诉了你什么？
+        courseC_maze_debugging6_b: |-
+          等你发现并修复了第一个错误, 请再次进行调试过程来找到另一个错误。 重复这个过程, 直到程序可以正常工作!
       courseC_maze_debugging7_authored_hint:
         courseC_maze_debugging7_a: |-
           - 在第一步的时候运行正常吗？
@@ -7656,6 +7800,16 @@ zh-CN:
           
           重复这个调试过程，直到程序正常工作！
       courseC_maze_debugging7_2018_authored_hint:
+        courseC_maze_debugging7_a: |-
+          - 在第一步的时候运行正常吗？
+          - 第二步呢？
+          - 哪里出错了？
+        courseC_maze_debugging7_b: 请不要忘了使用“步进”按钮来逐行运行程序！
+        courseC_maze_debugging7_c: |-
+          在发现并修复第一个缺陷后，请确保再次使用调试流程直到找到下一个。
+          
+          重复这个调试过程，直到程序正常工作！
+      courseC_maze_debugging7_2019_authored_hint:
         courseC_maze_debugging7_a: |-
           - 在第一步的时候运行正常吗？
           - 第二步呢？
@@ -8260,6 +8414,9 @@ zh-CN:
       courseD_artist_project1_2018_authored_hint:
         courseD_artist_project1_a: 使用`转向`块上的下拉菜单选择您需要的角度!
         courseD_artist_project1_b: 请记住, `向前移动`会画一条线, 而`向前跳`则不会。
+      courseD_artist_project1_2019_authored_hint:
+        courseD_artist_project1_a: 使用`转向`块上的下拉菜单选择您需要的角度!
+        courseD_artist_project1_b: 请记住, `向前移动`会画一条线, 而`向前跳`则不会。
       courseD_artist_project1a_authored_hint:
         courseD_artist_project1a_a: |
           这台阶使用76度转弯并且重复4次。 
@@ -8272,10 +8429,19 @@ zh-CN:
           
           <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
         courseD_artist_project1a_b: 这些模式很像从其他关卡里的楼梯台阶, 但使用不同的角度。
+      courseD_artist_project1a_2019_authored_hint:
+        courseD_artist_project1a_a: |
+          这台阶使用76度转弯并且重复4次。 
+          
+          <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
+        courseD_artist_project1a_b: 这些模式很像从其他关卡里的楼梯台阶, 但使用不同的角度。
       courseD_artist_project2_authored_hint:
         courseD_artist_project2_a: 请记住, `向前移动`会画一条线, 而`向前跳`则不会。
         courseD_artist_project2_b: 在第一次绘制和移动后, 可以通过在外部添加一个循环来重复代码。
       courseD_artist_project2_2018_authored_hint:
+        courseD_artist_project2_a: 请记住, `向前移动`会画一条线, 而`向前跳`则不会。
+        courseD_artist_project2_b: 在第一次绘制和移动后, 可以通过在外部添加一个循环来重复代码。
+      courseD_artist_project2_2019_authored_hint:
         courseD_artist_project2_a: 请记住, `向前移动`会画一条线, 而`向前跳`则不会。
         courseD_artist_project2_b: 在第一次绘制和移动后, 可以通过在外部添加一个循环来重复代码。
       courseD_artist_project2a_authored_hint:
@@ -8288,15 +8454,25 @@ zh-CN:
           这幅画是通过在`重复两次` 块内嵌套一个4个楼梯和一个`右转180度 `模块来制作的。 
           
           <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
+      courseD_artist_project2a_2019_authored_hint:
+        courseD_artist_project2a_a: |
+          这幅画是通过在`重复两次` 块内嵌套一个4个楼梯和一个`右转180度 `模块来制作的。 
+          
+          <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
       courseD_artist_project3_authored_hint:
         courseD_artist_project3_a: 使用`转向`块上的下拉菜单选择您需要的角度!
         courseD_artist_project3_b: "尝试嵌套循环！\n\n使用您创建的代码绘制一行形状并将其嵌套在另一个循环中。在底部, 在外部循环结束之前, 添加一个让埃尔莎转过来的块。\n\n- 如果重复外循环5次，尝试72度\n- 如果重复外循环6次，尝试60度"
       courseD_artist_project3_2018_authored_hint:
         courseD_artist_project3_a: 使用`转向`块上的下拉菜单选择您需要的角度!
         courseD_artist_project3_b: "尝试嵌套循环！\n\n使用您创建的代码绘制一行形状并将其嵌套在另一个循环中。在底部, 在外部循环结束之前, 添加一个让埃尔莎转过来的块。\n\n- 如果重复外循环5次，尝试72度\n- 如果重复外循环6次，尝试60度"
+      courseD_artist_project3_2019_authored_hint:
+        courseD_artist_project3_a: 使用`转向`块上的下拉菜单选择您需要的角度!
+        courseD_artist_project3_b: "尝试嵌套循环！\n\n使用您创建的代码绘制一行形状并将其嵌套在另一个循环中。在底部, 在外部循环结束之前, 添加一个让埃尔莎转过来的块。\n\n- 如果重复外循环5次，尝试72度\n- 如果重复外循环6次，尝试60度"
       courseD_artist_project3a_authored_hint:
         courseD_artist_project3a_a: 你可以选择不同的数量来旋转你的形状！转向18次，每次20度如何？
       courseD_artist_project3a_2018_authored_hint:
+        courseD_artist_project3a_a: 你可以选择不同的数量来旋转你的形状！转向18次，每次20度如何？
+      courseD_artist_project3a_2019_authored_hint:
         courseD_artist_project3a_a: 你可以选择不同的数量来旋转你的形状！转向18次，每次20度如何？
       courseD_artist_project4_authored_hint:
         courseD_artist_project4_a: |
@@ -8320,12 +8496,28 @@ zh-CN:
           
           <img src="https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png" width="200px" />
         courseD_artist_project4_b: 若要尝试此项, 请绘制第一个雪花, 然后转向, 然后绘制第二个雪花。
+      courseD_artist_project4_2019_authored_hint:
+        courseD_artist_project4_a: |
+          这里是五角的雪花, 在三角形的雪花前旋转36度：
+          
+          
+          <img src="https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png" width="200px" />
+          
+          这里是一组带有正方形的六边形：
+          
+          <img src="https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png" width="200px" />
+        courseD_artist_project4_b: 若要尝试此项, 请绘制第一个雪花, 然后转向, 然后绘制第二个雪花。
       courseD_artist_project4a_authored_hint:
         courseD_artist_project4a_a: |
           这里有两个不同长度的雪花, 在一个后接着画另一个。（在两者之间转30度）
           
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
       courseD_artist_project4a_2018_authored_hint:
+        courseD_artist_project4a_a: |
+          这里有两个不同长度的雪花, 在一个后接着画另一个。（在两者之间转30度）
+          
+          <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_project4a_2019_authored_hint:
         courseD_artist_project4a_a: |
           这里有两个不同长度的雪花, 在一个后接着画另一个。（在两者之间转30度）
           
@@ -8340,9 +8532,14 @@ zh-CN:
           将两个六边形4个三角形画成线：
           
           <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
+      courseD_artist_project5_2019_authored_hint:
+        courseD_artist_project4_a: |
+          将两个六边形4个三角形画成线：
+          
+          <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: 若要绘制一条边，使用`向前移动100像素`模块, 并将100更改为200。
-        courseD_artist_ramp11b: |2
+        courseD_artist_ramp11b: |-
           若要绘制4条边，将`向前移动100像素`模块放在重复循环里面, 并确保该循环设置为绘制4次。
           
            然后别忘了画完后转向！
@@ -8638,10 +8835,17 @@ zh-CN:
         courseD_bee_nestedLoops1_a: 不工作？ 请尝试使用 ""步进"" 按钮来逐行查证。
         courseD_bee_nestedLoops1_b: 请先尝试为正方形的一条边编写代码。你能循环来得到所有的花蜜吗？
         courseD_bee_nestedLoops1_c: 一旦你在一个有花朵的正方形的时候记得使用`采花蜜`模块。
+      courseD_bee_nestedLoops1_2019_authored_hint:
+        courseD_bee_nestedLoops1_a: 不工作？ 请尝试使用 ""步进"" 按钮来逐行查证。
+        courseD_bee_nestedLoops1_b: 请先尝试为正方形的一条边编写代码。你能循环来得到所有的花蜜吗？
+        courseD_bee_nestedLoops1_c: 一旦你在一个有花朵的正方形的时候记得使用`采花蜜`模块。
       courseD_bee_nestedLoops1a_authored_hint:
         courseD_bee_nestedLoops1_a: 不工作？ 请尝试使用 ""步进"" 按钮来逐行查证。
         courseD_bee_nestedLoops1_c: 一旦你在一个有花朵的正方形的时候记得使用`采花蜜`模块。
       courseD_bee_nestedLoops1a_2018_authored_hint:
+        courseD_bee_nestedLoops1_a: 不工作？ 请尝试使用 ""步进"" 按钮来逐行查证。
+        courseD_bee_nestedLoops1_c: 一旦你在一个有花朵的正方形的时候记得使用`采花蜜`模块。
+      courseD_bee_nestedLoops1a_2019_authored_hint:
         courseD_bee_nestedLoops1_a: 不工作？ 请尝试使用 ""步进"" 按钮来逐行查证。
         courseD_bee_nestedLoops1_c: 一旦你在一个有花朵的正方形的时候记得使用`采花蜜`模块。
       courseD_bee_nestedLoops2_authored_hint:
@@ -8649,6 +8853,10 @@ zh-CN:
         courseD_bee_nestedLoops2_b: 如果您无法确定将循环放在何处, 请尝试逐步编写代码并查找规律。
         courseD_bee_nestedLoops2_c: 请记住, 您可以在一个循环中放置多个模块。
       courseD_bee_nestedLoops2_2018_authored_hint:
+        courseD_bee_nestedLoops2_a: 要通过此关卡，需要在另一个里面嵌套一个`重复`循环。
+        courseD_bee_nestedLoops2_b: 如果您无法确定将循环放在何处, 请尝试逐步编写代码并查找规律。
+        courseD_bee_nestedLoops2_c: 请记住, 您可以在一个循环中放置多个模块。
+      courseD_bee_nestedLoops2_2019_authored_hint:
         courseD_bee_nestedLoops2_a: 要通过此关卡，需要在另一个里面嵌套一个`重复`循环。
         courseD_bee_nestedLoops2_b: 如果您无法确定将循环放在何处, 请尝试逐步编写代码并查找规律。
         courseD_bee_nestedLoops2_c: 请记住, 您可以在一个循环中放置多个模块。
@@ -8677,6 +8885,18 @@ zh-CN:
           - 向前移动
           - 向右转
       courseD_bee_nestedLoops7_2018_authored_hint:
+        courseD_bee_nestedLoops7_a: 需要在另一个里面有着‘`向前移动`模块的`重复`循环的里面重复`采花蜜`。
+        courseD_bee_nestedLoops7_b: 需要使用所有的三个`重复`模块来通过这个关卡。
+        courseD_bee_nestedLoops7_c: |
+          将模块嵌套三层深，像这样：
+          
+          - 重复4次
+          - 重复3次
+          - 重复12次
+          - 采花蜜
+          - 向前移动
+          - 向右转
+      courseD_bee_nestedLoops7_2019_authored_hint:
         courseD_bee_nestedLoops7_a: 需要在另一个里面有着‘`向前移动`模块的`重复`循环的里面重复`采花蜜`。
         courseD_bee_nestedLoops7_b: 需要使用所有的三个`重复`模块来通过这个关卡。
         courseD_bee_nestedLoops7_c: |
@@ -9374,7 +9594,7 @@ zh-CN:
       courseD_farmer_while6_authored_hint:
         courseD_farmer_conditionals6_a: 请确保您使用的是`当`循环来计算每个孔的填充次数。
         courseD_farmer_conditionals6_b: 请注意, 农民需要在台阶式的图案下多次向前和向下移动。
-        courseD_farmer_conditionals6_c: |2
+        courseD_farmer_conditionals6_c: |-
           这个阶梯图案使用以下模块
           
           - 向前移动
@@ -9390,7 +9610,7 @@ zh-CN:
       courseD_farmer_while6_2018_authored_hint:
         courseD_farmer_conditionals6_a: 请确保您使用的是`当`循环来计算每个孔的填充次数。
         courseD_farmer_conditionals6_b: 请注意, 农民需要在台阶式的图案下多次向前和向下移动。
-        courseD_farmer_conditionals6_c: |2
+        courseD_farmer_conditionals6_c: |-
           这个阶梯图案使用以下模块
           
           - 向前移动
@@ -9496,6 +9716,10 @@ zh-CN:
         courseD_maze_nestedLoops3_a: 为了通过这一关，需要在另一个`重复`循环中"嵌套"一个`重复`循环。
         courseD_maze_nestedLoops3_b: 不知道在哪里放循环？尝试逐步把代码写下, 并寻找规律。
         courseD_maze_nestedLoops3_c: 尝试为一条直路和一个转弯编写代码。你能再重复一遍得到太阳花吗？
+      courseD_maze_nestedLoops3_2019_authored_hint:
+        courseD_maze_nestedLoops3_a: 为了通过这一关，需要在另一个`重复`循环中"嵌套"一个`重复`循环。
+        courseD_maze_nestedLoops3_b: 不知道在哪里放循环？尝试逐步把代码写下, 并寻找规律。
+        courseD_maze_nestedLoops3_c: 尝试为一条直路和一个转弯编写代码。你能再重复一遍得到太阳花吗？
       courseD_maze_nestedLoops4_authored_hint:
         courseD_maze_nestedLoops4_a: |-
           尝试在迷宫中使用此路径。 
@@ -9510,10 +9734,20 @@ zh-CN:
           ![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)
         courseD_maze_nestedLoops4_b: 如果循环规律很难看出来，请尝试把它全部编码出来。然后看看哪段代码在放入循环之前是一直重复的。
         courseD_maze_nestedLoops4_c: 尝试将一个`重复`循环放到另一个循环里，来减少需要的代码。
+      courseD_maze_nestedLoops4_2019_authored_hint:
+        courseD_maze_nestedLoops4_a: |-
+          尝试在迷宫中使用此路径。 
+          
+          ![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)
+        courseD_maze_nestedLoops4_b: 如果循环规律很难看出来，请尝试把它全部编码出来。然后看看哪段代码在放入循环之前是一直重复的。
+        courseD_maze_nestedLoops4_c: 尝试将一个`重复`循环放到另一个循环里，来减少需要的代码。
       courseD_maze_nestedLoops5_authored_hint:
         courseD_maze_nestedLoops5_a: 在迷宫里寻找楼梯-步进规律来找到可以用嵌套循环的地方。
         courseD_maze_nestedLoops5_b: 不知道在哪里放循环？尝试逐步把代码写下, 并寻找规律。
       courseD_maze_nestedLoops5_2018_authored_hint:
+        courseD_maze_nestedLoops5_a: 在迷宫里寻找楼梯-步进规律来找到可以用嵌套循环的地方。
+        courseD_maze_nestedLoops5_b: 不知道在哪里放循环？尝试逐步把代码写下, 并寻找规律。
+      courseD_maze_nestedLoops5_2019_authored_hint:
         courseD_maze_nestedLoops5_a: 在迷宫里寻找楼梯-步进规律来找到可以用嵌套循环的地方。
         courseD_maze_nestedLoops5_b: 不知道在哪里放循环？尝试逐步把代码写下, 并寻找规律。
       courseD_maze_nestedLoops6_authored_hint:
@@ -9524,10 +9758,17 @@ zh-CN:
         courseD_maze_nestedLoops6_a: 如果被难住了，请试着在纸上先不用循环写下代码并寻找规律。
         courseD_maze_nestedLoops6_b: 嵌套的`重复`循环可以帮助减少使用的模块数量。
         courseD_maze_nestedLoops6_c: 需要两组嵌套的`重复`循环来通过这个关卡。
+      courseD_maze_nestedLoops6_2019_authored_hint:
+        courseD_maze_nestedLoops6_a: 如果被难住了，请试着在纸上先不用循环写下代码并寻找规律。
+        courseD_maze_nestedLoops6_b: 嵌套的`重复`循环可以帮助减少使用的模块数量。
+        courseD_maze_nestedLoops6_c: 需要两组嵌套的`重复`循环来通过这个关卡。
       courseD_maze_ramp1_authored_hint:
         courseC_maze_programming1_a: 如果小鸟没有到达猪那里。 确保所有三个模块已完全连在一起, 然后再次单击 "运行" 。
         courseC_maze_programming1_b: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
       courseD_maze_ramp1_2018_authored_hint:
+        courseC_maze_programming1_a: 如果小鸟没有到达猪那里。 确保所有三个模块已完全连在一起，然后再次单击 "运行" 。
+        courseC_maze_programming1_b: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
+      courseD_maze_ramp1_2019_authored_hint:
         courseC_maze_programming1_a: 如果小鸟没有到达猪那里。 确保所有三个模块已完全连在一起，然后再次单击 "运行" 。
         courseC_maze_programming1_b: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
       courseD_maze_ramp2_authored_hint:
@@ -9536,9 +9777,14 @@ zh-CN:
       courseD_maze_ramp2_2018_authored_hint:
         courseC_maze_programming2_a: 要使用`向前移动`模块，请将其从工具箱拖到工作区中，并将其连接到`当运行时`模块下面。
         courseC_maze_programming2_b: 确保所有3个模块都被点击了，并连接到`运行时`块。
+      courseD_maze_ramp2_2019_authored_hint:
+        courseC_maze_programming2_a: 要使用`向前移动`模块，请将其从工具箱拖到工作区中，并将其连接到`当运行时`模块下面。
+        courseC_maze_programming2_b: 确保所有3个模块都被点击了，并连接到`运行时`块。
       courseD_maze_ramp3_authored_hint:
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\n若要从代码中间删除模块, 请将所有模块拖到工作区的右边，并先暂时放在那里。\n\n点击要删除的块，并将它拖回工具箱。\n\n最后，把其它模块放回它们应该在的地方。\n"
       courseD_maze_ramp3_2018_authored_hint:
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\n若要从代码中间删除模块, 请将所有模块拖到工作区的右边，并先暂时放在那里。\n\n点击要删除的块，并将它拖回工具箱。\n\n最后，把其它模块放回它们应该在的地方。\n"
+      courseD_maze_ramp3_2019_authored_hint:
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\n若要从代码中间删除模块, 请将所有模块拖到工作区的右边，并先暂时放在那里。\n\n点击要删除的块，并将它拖回工具箱。\n\n最后，把其它模块放回它们应该在的地方。\n"
       courseD_maze_ramp4_authored_hint:
         courseC_maze_programming4_a: 你需要从鸟的视角向右或向左转。如果你面对右边，向右转会使你朝下。
@@ -9546,11 +9792,18 @@ zh-CN:
       courseD_maze_ramp4_2018_authored_hint:
         courseC_maze_programming4_a: 你可以从鸟的视角向右或向左转。如果你面向右，向右转将让你朝下。
         courseC_maze_programming4_b: 要沿着这条路，向前移动并转弯，然后再移动并转向对面的路。再往前走一步到达猪。
+      courseD_maze_ramp4_2019_authored_hint:
+        courseC_maze_programming4_a: 你可以从鸟的视角向右或向左转。如果你面向右，向右转将让你朝下。
+        courseC_maze_programming4_b: 要沿着这条路，向前移动并转弯，然后再移动并转向对面的路。再往前走一步到达猪。
       courseD_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: 尝试使用"步进"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？
         courseC_maze_programming5_b: 记住，转向是从鸟的角度来看的。
         courseC_maze_programming5_c: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
       courseD_maze_ramp5_2018_authored_hint:
+        courseC_maze_programming5_a: 尝试使用"步进"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？
+        courseC_maze_programming5_b: 记住，转向是从鸟的角度来看的。
+        courseC_maze_programming5_c: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
+      courseD_maze_ramp5_2019_authored_hint:
         courseC_maze_programming5_a: 尝试使用"步进"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？
         courseC_maze_programming5_b: 记住，转向是从鸟的角度来看的。
         courseC_maze_programming5_c: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
@@ -9562,11 +9815,19 @@ zh-CN:
         courseC_maze_programming5_a: 尝试使用"步进"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？
         courseC_maze_programming5_b: 记住，转向是从鸟的角度来看的。
         courseC_maze_programming5_c: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
+      courseD_maze_ramp5a_2019_authored_hint:
+        courseC_maze_programming5_a: 尝试使用"步进"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？
+        courseC_maze_programming5_b: 记住，转向是从鸟的角度来看的。
+        courseC_maze_programming5_c: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
       courseD_maze_ramp5b_authored_hint:
         courseC_maze_programming5_a: 尝试使用"步进"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？
         courseC_maze_programming5_b: 记住，转向是从鸟的角度来看的。
         courseC_maze_programming5_c: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
       courseD_maze_ramp5b_2018_authored_hint:
+        courseC_maze_programming5_a: 尝试使用"步进"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？
+        courseC_maze_programming5_b: 记住，转向是从鸟的角度来看的。
+        courseC_maze_programming5_c: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
+      courseD_maze_ramp5b_2019_authored_hint:
         courseC_maze_programming5_a: 尝试使用"步进"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？
         courseC_maze_programming5_b: 记住，转向是从鸟的角度来看的。
         courseC_maze_programming5_c: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
@@ -10147,14 +10408,14 @@ zh-CN:
         courseE_bee_functions6_b: 这可能有助于在函数内移动的情况, 但不是所有的`向前移动`块都需要在那里。
       courseE_bee_functions7_authored_hint:
         courseE_bee_functions7_a: "如果这个关卡看上去很有挑战性，尝试一点一点创建你的函数。 \n\n添加一些模块试试看。继续添加，然后再尝试。很快，你就能成功了！"
-        courseE_bee_functions7_b: |2
+        courseE_bee_functions7_b: |-
           别忘了把你的代码创建在绿色的函数模块中。
           
            ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         courseE_bee_functions7_c: 该函数应该让蜜蜂转到路上，收集花蜜，制作蜂蜜，然后转回头并回到原位。
       courseE_bee_functions7_2018_authored_hint:
         courseE_bee_functions7_a: "如果这个关卡看上去很有挑战性，尝试一点一点创建你的函数。 \n\n添加一些模块试试看。继续添加，然后再尝试。很快，你就能成功了！"
-        courseE_bee_functions7_b: |2
+        courseE_bee_functions7_b: |-
           别忘了把你的代码创建在绿色的函数模块中。
           
            ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
@@ -10355,9 +10616,14 @@ zh-CN:
       courseE_farmer_ramp11a_2018_authored_hint:
         courseE_farmer_ramp12_a: '不需要`重复`循环告诉农民铲多少次土, 现在你可以使用`当有土堆时`模块。  '
         courseE_farmer_ramp12_b: 你只需要向前移动一次就能找到土。
+      courseE_farmer_ramp11a_2019_authored_hint:
+        courseE_farmer_ramp12_a: '不需要`重复`循环告诉农民铲多少次土, 现在你可以使用`当有土堆时`模块。  '
+        courseE_farmer_ramp12_b: 你只需要向前移动一次就能找到土。
       courseE_farmer_ramp11b_authored_hint:
         courseE_farmer_ramp11b_a: 您可以在`重复`循环内嵌套`当`循环, 来使代码更短。
       courseE_farmer_ramp11b_2018_authored_hint:
+        courseE_farmer_ramp11b_a: 您可以在`重复`循环内嵌套`当`循环, 来使代码更短。
+      courseE_farmer_ramp11b_2019_authored_hint:
         courseE_farmer_ramp11b_a: 您可以在`重复`循环内嵌套`当`循环, 来使代码更短。
       courseE_farmer_ramp12_authored_hint:
         courseE_farmer_ramp12_b: 你仍然需要在它的外面使用一个 `重复`循环告诉农夫要向前走多少次得到莴苣。
@@ -10366,6 +10632,8 @@ zh-CN:
       courseE_farmer_ramp12_forswap_authored_hint:
         courseE_farmer_ramp12_b: 你仍然需要在它的外面使用一个 `重复`循环告诉农夫要向前走多少次得到莴苣。
       courseE_farmer_ramp12_forswap_2018_authored_hint:
+        courseE_farmer_ramp12_b: 你仍然需要在它的外面使用一个 `重复`循环告诉农夫要向前走多少次得到莴苣。
+      courseE_farmer_ramp12_forswap_2019_authored_hint:
         courseE_farmer_ramp12_b: 你仍然需要在它的外面使用一个 `重复`循环告诉农夫要向前走多少次得到莴苣。
       courseE_farmer_ramp12a_authored_hint:
         courseE_farmer_ramp12b: 您将需要检查21次`如果`语句, 来解决这个关卡。
@@ -10379,21 +10647,31 @@ zh-CN:
         courseE_farmer_ramp12b_b: 你仍需要先使用一个`直到` 循环，当你到了莴苣那里，然后使用一个`当`循环。
       courseE_farmer_ramp12c_2018_authored_hint:
         courseE_farmer_ramp12b_b: 你仍需要先使用一个`直到` 循环，当你到了莴苣那里，然后使用一个`当`循环。
+      courseE_farmer_ramp12c_2019_authored_hint:
+        courseE_farmer_ramp12b_b: 你仍需要先使用一个`直到` 循环，当你到了莴苣那里，然后使用一个`当`循环。
       courseE_farmer_ramp12d_authored_hint:
         courseE_farmer_ramp12d_b: 你仍然需要把你的`直到`和`当`循环放到`重复`循环中来通过这个关卡!
       courseE_farmer_ramp12d_2018_authored_hint:
+        courseE_farmer_ramp12d_b: 你仍然需要把你的`直到`和`当`循环放到`重复`循环中来通过这个关卡!
+      courseE_farmer_ramp12d_2019_authored_hint:
         courseE_farmer_ramp12d_b: 你仍然需要把你的`直到`和`当`循环放到`重复`循环中来通过这个关卡!
       courseE_farmer_ramp12e_authored_hint:
         courseE_farmer_ramp12e_b: 这个关卡的解决方案看起来很像最后一个关卡的解决方案, 除了转向了另一个方向。
       courseE_farmer_ramp12e_2018_authored_hint:
         courseE_farmer_ramp12e_b: 这个关卡的解决方案看起来很像最后一个关卡的解决方案, 除了转向了另一个方向。
+      courseE_farmer_ramp12e_2019_authored_hint:
+        courseE_farmer_ramp12e_b: 这个关卡的解决方案看起来很像最后一个关卡的解决方案, 除了转向了另一个方向。
       courseE_farmer_ramp12f_authored_hint:
         courseE_farmer_ramp12f_b: 使用`如果/否则`模块，帮助农民决定，她是要向右还是向左转。
       courseE_farmer_ramp12f_2018_authored_hint:
         courseE_farmer_ramp12f_b: 使用`如果/否则`模块，帮助农民决定，她是要向右还是向左转。
+      courseE_farmer_ramp12f_2019_authored_hint:
+        courseE_farmer_ramp12f_b: 使用`如果/否则`模块，帮助农民决定，她是要向右还是向左转。
       courseE_farmer_ramp12g_authored_hint:
         courseE_farmer_ramp12G_b: 使用`如果/否则`模块，帮助农民决定，她是要向右还是向左转。
       courseE_farmer_ramp12g_2018_authored_hint:
+        courseE_farmer_ramp12G_b: 使用`如果/否则`模块，帮助农民决定，她是要向右还是向左转。
+      courseE_farmer_ramp12g_2019_authored_hint:
         courseE_farmer_ramp12G_b: 使用`如果/否则`模块，帮助农民决定，她是要向右还是向左转。
       courseE_farmer_ramp13_authored_hint:
         courseE_farmer_ramp13_a: 在一个空格中可以有多个作物, 所以一定要使用 `当`循环来把它们全部捡起来!
@@ -10480,7 +10758,7 @@ zh-CN:
           * 设置新的背景。
           * 让骑士感谢玩家的帮助。
           * 让所有的演员消失, 并显示一个 "你赢了！"的信息
-        courseE_playLab_challenge1_b: |2
+        courseE_playLab_challenge1_b: |-
           当玩家输掉游戏时, 你可以做一些事情：
           
           * 让骑士消失。
@@ -10498,7 +10776,7 @@ zh-CN:
           * 设置新的背景。
           * 让骑士感谢玩家的帮助。
           * 让所有的演员消失, 并显示一个 "你赢了！"的信息
-        courseE_playLab_challenge1_b: |2
+        courseE_playLab_challenge1_b: |-
           当玩家输掉游戏时, 你可以做一些事情：
           
           * 让骑士消失。
@@ -10815,7 +11093,100 @@ zh-CN:
           </next>
           </block>
           </xml>
+      courseF_artist_for10_2019_authored_hint:
+        courseF_artist_for10_a: 这里的图片是通过一个`set alpha`（设置透明度）和`counter`/10的counter（计数器）来作为画笔尺寸来制作的。
+        courseF_artist_for10_b: 绘图中的图片使用61度转弯。
+        courseF_artist_for10_c: |-
+          想知道示例图片是如何做出来的？
+          
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_picker">
+          <title name="COLOUR">#ff0000</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">15</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">175</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="alpha" inline="true" id="alpha">
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">61</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseF_artist_for1_2018_authored_hint:
+        courseF_artist_for1_a: |-
+          你能画出这样的东西吗？
+          
+          ![](https://images.code.org/80ae9ab3e449db1ed4e13c86239f7617-image-1475906794954.06.12.png)
+      courseF_artist_for1_2019_authored_hint:
         courseF_artist_for1_a: |-
           你能画出这样的东西吗？
           
@@ -10839,6 +11210,24 @@ zh-CN:
           
           ![](https://images.code.org/a2569b7732cf02a12263607c9e355d19-image-1503676269436.3_hint 2.gif)
       courseF_artist_for2_2018_authored_hint:
+        courseF_artist_for2_a: |-
+          在`重复`循环中为三角形的长度使用`counter`变量。
+          
+          <xml><block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </xml>
+        courseF_artist_for2_b: 记得在你的计数循环以10记数。
+        courseF_artist_for2_c: |-
+          这是艺术家将遵循的模式:
+          
+          ![](https://images.code.org/a2569b7732cf02a12263607c9e355d19-image-1503676269436.3_hint 2.gif)
+      courseF_artist_for2_2019_authored_hint:
         courseF_artist_for2_a: |-
           在`重复`循环中为三角形的长度使用`counter`变量。
           
@@ -10886,11 +11275,30 @@ zh-CN:
           </block>
           </xml>
         courseF_artist_for3_b: 不要害怕犯错误！即使你还没有解决这个关卡，尝试添加模块并运行代码, 看看会发生什么。
+      courseF_artist_for3_2019_authored_hint:
+        courseF_artist_for3_a: |-
+          要让`计数循环`来引导移动，请确保在`向前移动`模块中使用`counter` 来作为距离。
+          
+          <xml>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </xml>
+        courseF_artist_for3_b: 不要害怕犯错误！即使你还没有解决这个关卡，尝试添加模块并运行代码, 看看会发生什么。
       courseF_artist_for4_authored_hint:
         courseF_artist_for4_a: "**你需要的数字最小是多少？ \n最大是多少？ \n那每次增加多少？**\n\n这些都是你在使用计数循环之前需要思考的问题。"
         courseF_artist_for4_b: 您的代码将非常类似于您在上一个关卡中所写的内容, 但请记住这次要画一个正方形!
         courseF_artist_for4_c: 不要害怕犯错误！即使你还没有解决这个关卡，尝试添加模块并运行代码, 看看会发生什么。
       courseF_artist_for4_2018_authored_hint:
+        courseF_artist_for4_a: "**你需要的数字最小是多少？ \n最大是多少？ \n那每次增加多少？**\n\n这些都是你在使用计数循环之前需要思考的问题。"
+        courseF_artist_for4_b: 您的代码将非常类似于您在上一个关卡中所写的内容, 但请记住这次要画一个正方形!
+        courseF_artist_for4_c: 不要害怕犯错误！即使你还没有解决这个关卡，尝试添加模块并运行代码, 看看会发生什么。
+      courseF_artist_for4_2019_authored_hint:
         courseF_artist_for4_a: "**你需要的数字最小是多少？ \n最大是多少？ \n那每次增加多少？**\n\n这些都是你在使用计数循环之前需要思考的问题。"
         courseF_artist_for4_b: 您的代码将非常类似于您在上一个关卡中所写的内容, 但请记住这次要画一个正方形!
         courseF_artist_for4_c: 不要害怕犯错误！即使你还没有解决这个关卡，尝试添加模块并运行代码, 看看会发生什么。
@@ -10900,11 +11308,18 @@ zh-CN:
       courseF_artist_for5_2018_authored_hint:
         courseF_artist_for5_a: 在制作此螺旋的时候，不需要在里面使用`重复`循环。
         courseF_artist_for5_b: '"计数循环" 循环、移动和转向模块可以保持完全相同。'
+      courseF_artist_for5_2019_authored_hint:
+        courseF_artist_for5_a: 在制作此螺旋的时候，不需要在里面使用`重复`循环。
+        courseF_artist_for5_b: '"计数循环" 循环、移动和转向模块可以保持完全相同。'
       courseF_artist_for6_authored_hint:
         courseF_artist_for6_a: 计数循环将从15数到 300，每次增加15。
         courseF_artist_for6_b: 在这个计数循环中放一个 "前进" 和 "转向" 模块。
         courseF_artist_for6_c: 你所要改变的就是 "转弯" 块中的度数。
       courseF_artist_for6_2018_authored_hint:
+        courseF_artist_for6_a: 计数循环将从15数到 300，每次增加15。
+        courseF_artist_for6_b: 在这个计数循环中放一个 "前进" 和 "转向" 模块。
+        courseF_artist_for6_c: 你所要改变的就是 "转弯" 块中的度数。
+      courseF_artist_for6_2019_authored_hint:
         courseF_artist_for6_a: 计数循环将从15数到 300，每次增加15。
         courseF_artist_for6_b: 在这个计数循环中放一个 "前进" 和 "转向" 模块。
         courseF_artist_for6_c: 你所要改变的就是 "转弯" 块中的度数。
@@ -10918,16 +11333,27 @@ zh-CN:
         courseF_artist_for7_b: 请注意这个螺旋是向右转而非向左！
         courseF_artist_for7_c: 这个关卡中的计数循环是从15到300，每次增加2。
         courseF_artist_for7_d: 这张图片是只转89度形成的。
+      courseF_artist_for7_2019_authored_hint:
+        courseF_artist_for7_a: 这个关卡里的钢笔更细。在开始之前，需要将其设置为`1`。
+        courseF_artist_for7_b: 请注意这个螺旋是向右转而非向左！
+        courseF_artist_for7_c: 这个关卡中的计数循环是从15到300，每次增加2。
+        courseF_artist_for7_d: 这张图片是只转89度形成的。
       courseF_artist_for8_authored_hint:
         courseF_artist_for8_a: 在代码中保留其他所有内容, 只有转角需要改变。
         courseF_artist_for8_b: 如果你想, 你可以为您的螺旋选择一个不同的颜色!
       courseF_artist_for8_2018_authored_hint:
         courseF_artist_for8_a: 在代码中保留其他所有内容, 只有转角需要改变。
         courseF_artist_for8_b: 如果你想, 你可以为您的螺旋选择一个不同的颜色!
+      courseF_artist_for8_2019_authored_hint:
+        courseF_artist_for8_a: 在代码中保留其他所有内容, 只有转角需要改变。
+        courseF_artist_for8_b: 如果你想, 你可以为您的螺旋选择一个不同的颜色!
       courseF_artist_for9_authored_hint:
         courseF_artist_for9_a: 如果将`set alpha`（设置透明度）模块放在计数循环中, 并使用 "计数器" 变量来更改它, 你就可以创建像这样的设计。
         courseF_artist_for9_b: '`set alpha`（设置透明度）模块更改颜色的透明度。数值越小，颜色越透明。'
       courseF_artist_for9_2018_authored_hint:
+        courseF_artist_for9_a: 如果将`set alpha`（设置透明度）模块放在计数循环中, 并使用 "计数器" 变量来更改它, 你就可以创建像这样的设计。
+        courseF_artist_for9_b: '`set alpha`（设置透明度）模块更改颜色的透明度。数值越小，颜色越透明。'
+      courseF_artist_for9_2019_authored_hint:
         courseF_artist_for9_a: 如果将`set alpha`（设置透明度）模块放在计数循环中, 并使用 "计数器" 变量来更改它, 你就可以创建像这样的设计。
         courseF_artist_for9_b: '`set alpha`（设置透明度）模块更改颜色的透明度。数值越小，颜色越透明。'
       courseF_artist_for_challenge1_authored_hint:
@@ -11068,6 +11494,143 @@ zh-CN:
           </block>
           </xml>
       courseF_artist_for_challenge1_2018_authored_hint:
+        courseF_artist_for_challenge1_a: '·笔宽度·是1。第一个正方形有50像素边, 每个正方形比前一个宽50像素。'
+        courseF_artist_for_challenge1_b: 画笔上的不透明度始终是 `counter`/2 （计数器/2）。
+        courseF_artist_for_challenge1_c: 在你画了每个正方形后, 别忘了向后跳, 转身, 再跳, 然后回头!
+        courseF_artist_for_challenge1_d: |-
+          ** 解决方案: **
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_picker">
+          <title name="COLOUR">#0000cd</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">50</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">350</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">50</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="alpha" inline="true" id="alpha">
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">4</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">jumpBackward</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">25</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">jumpBackward</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">25</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseF_artist_for_challenge1_2019_authored_hint:
         courseF_artist_for_challenge1_a: '·笔宽度·是1。第一个正方形有50像素边, 每个正方形比前一个宽50像素。'
         courseF_artist_for_challenge1_b: 画笔上的不透明度始终是 `counter`/2 （计数器/2）。
         courseF_artist_for_challenge1_c: 在你画了每个正方形后, 别忘了向后跳, 转身, 再跳, 然后回头!
@@ -11390,6 +11953,99 @@ zh-CN:
           </next>
           </block>
           </xml>
+      courseF_artist_for_challenge2_2019_authored_hint:
+        courseF_artist_for_challenge2_c: '`计数循环` 从5增加到250，每次增加2。 '
+        courseF_artist_for_challenge2_a: 使用`用红色，绿色和蓝色设置颜色`的模块。红色设为常量255，绿色一直是`counter`（计数器）的值，蓝色一直是`255-counter`。
+        courseF_artist_for_challenge2_b: 这个代码比你想象的要简单。 只需在计数循环中设置颜色, 向前移动, 然后转向。
+        courseF_artist_for_challenge2_d: |-
+          **解决方案:**
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">5</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">250</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_rgb" inline="false">
+          <value name="RED">
+          <block type="math_number">
+          <title name="NUM">255</title>
+          </block>
+          </value>
+          <value name="GREEN">
+          <block type="variables_get">
+          <title name="VAR">计数器</title>
+          </block>
+          </value>
+          <value name="BLUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">减去</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">255</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">计数器</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">向前移动</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">计数器</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">向右转</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">80</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseF_artist_fwp1_authored_hint:
         courseF_artist_fwp1_c: 将所有画正方形的代码放在函数编辑器内。
         courseF_artist_fwp1_a: 请记住，你需要转90度才能画一个正方形。
@@ -11528,16 +12184,25 @@ zh-CN:
       courseF_artist_variables10_2018_authored_hint:
         courseF_artist_variables10_a: 祝你在这个关卡玩得开心! 查看对代码可以做什么小更改。
         courseF_artist_variables10_b: 您可以多次尝试, 并多次运行您的代码。
+      courseF_artist_variables10_2019_authored_hint:
+        courseF_artist_variables10_a: 祝你在这个关卡玩得开心! 查看对代码可以做什么小更改。
+        courseF_artist_variables10_b: 您可以多次尝试, 并多次运行您的代码。
       courseF_artist_variables2_authored_hint:
         courseF_artist_variables2_a: 记住在绘制每个三角形后向前移动。
         courseF_artist_variables2_b: 新的循环将包含三角形的循环, 然后是 "向前移动" 命令。
       courseF_artist_variables2_2018_authored_hint:
         courseF_artist_variables2_a: 记住在绘制每个三角形后向前移动。
         courseF_artist_variables2_b: 新的循环将包含三角形的循环, 然后是 "向前移动" 命令。
+      courseF_artist_variables2_2019_authored_hint:
+        courseF_artist_variables2_a: 记住在绘制每个三角形后向前移动。
+        courseF_artist_variables2_b: 新的循环将包含三角形的循环, 然后是 "向前移动" 命令。
       courseF_artist_variables3_authored_hint:
         courseF_artist_variables3_a: '变量 "长度" 将在代码中的两个位置使用: 在三角形的边长中, 以及在三角形之间向前移动的量。'
         courseF_artist_variables3_b: '值为50的数字块只应位于一个位置: 在 "设置可变长度" 块之后。'
       courseF_artist_variables3_2018_authored_hint:
+        courseF_artist_variables3_a: '变量 "长度" 将在代码中的两个位置使用: 在三角形的边长中, 以及在三角形之间向前移动的量。'
+        courseF_artist_variables3_b: '值为50的数字块只应位于一个位置: 在 "设置可变长度" 块之后。'
+      courseF_artist_variables3_2019_authored_hint:
         courseF_artist_variables3_a: '变量 "长度" 将在代码中的两个位置使用: 在三角形的边长中, 以及在三角形之间向前移动的量。'
         courseF_artist_variables3_b: '值为50的数字块只应位于一个位置: 在 "设置可变长度" 块之后。'
       courseF_artist_variables4_authored_hint:
@@ -11548,6 +12213,13 @@ zh-CN:
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
         courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
       courseF_artist_variables4_2018_authored_hint:
+        courseF_artist_variables4_a: 你的代码不会和上一关有太大的不同，除了你需要让艺术家转弯往下跳，然后把他转回来准备再次往前跳。
+        courseF_artist_variables4_c: |-
+          这是你的艺术家将遵循的模式:
+          
+          ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+        courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
+      courseF_artist_variables4_2019_authored_hint:
         courseF_artist_variables4_a: 你的代码不会和上一关有太大的不同，除了你需要让艺术家转弯往下跳，然后把他转回来准备再次往前跳。
         courseF_artist_variables4_c: |-
           这是你的艺术家将遵循的模式:
@@ -11570,10 +12242,21 @@ zh-CN:
           这是你的艺术家将遵循的模式:
           
           ![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)
+      courseF_artist_variables5_2019_authored_hint:
+        courseF_artist_variables5_a: 你的代码的后半部分应该看起来和上半部差不多, 除了你会向*左*转，跳跃, 然后向*右*转。
+        courseF_artist_variables5_b: 代码的前半部分将绘制三个三角形, 而第二部分将绘制其他的三个三角形。
+        courseF_artist_variables5_c: 首先复制程序的前半部分代码, 然后修改它以使设计能够正确显示。
+        courseF_artist_variables5_d: |-
+          这是你的艺术家将遵循的模式:
+          
+          ![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)
       courseF_artist_variables6_authored_hint:
         courseF_artist_variables6_a: 由于使用了变量，只需在顶部更改一个数字即可让它工作。
         courseF_artist_variables6_b: 您需要编辑值为50的数字模块, 但代码中的其他任何东西都不需要修改。
       courseF_artist_variables6_2018_authored_hint:
+        courseF_artist_variables6_a: 由于使用了变量，只需在顶部更改一个数字即可让它工作。
+        courseF_artist_variables6_b: 您需要编辑值为50的数字模块, 但代码中的其他任何东西都不需要修改。
+      courseF_artist_variables6_2019_authored_hint:
         courseF_artist_variables6_a: 由于使用了变量，只需在顶部更改一个数字即可让它工作。
         courseF_artist_variables6_b: 您需要编辑值为50的数字模块, 但代码中的其他任何东西都不需要修改。
       courseF_artist_variables6a_authored_hint:
@@ -11592,11 +12275,23 @@ zh-CN:
           这就是你要遵循的模式! 
           
           ![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)
+      courseF_artist_variables6a_2019_authored_hint:
+        courseF_artist_variables6a_a: 记住使用变量`length`（长度）而不是实际数字来解决这个关卡。
+        courseF_artist_variables6a_b: 此代码将非常类似于您的三角形代码, 只是形状不同!
+        courseF_artist_variables6a_c: 先写一个正方形的代码, 然后添加代码在正方形之间移动。最后, 添加一个循环包含所有内容!
+        courseF_artist_variables6a_d: |-
+          这就是你要遵循的模式! 
+          
+          ![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)
       courseF_artist_variables7_authored_hint:
         courseF_artist_variables7_a: 使用 "设置长度" 块启动代码。将长度变量设置为150。
         courseF_artist_variables7_b: 您可以使用 "重复" 循环使您画三角形的代码更简单。
         courseF_artist_variables7_c: 你要左转120度来做三角形的角。
       courseF_artist_variables7_2018_authored_hint:
+        courseF_artist_variables7_a: 使用 "设置长度" 块启动代码。将长度变量设置为150。
+        courseF_artist_variables7_b: 您可以使用 "重复" 循环使您画三角形的代码更简单。
+        courseF_artist_variables7_c: 你要左转120度来做三角形的角。
+      courseF_artist_variables7_2019_authored_hint:
         courseF_artist_variables7_a: 使用 "设置长度" 块启动代码。将长度变量设置为150。
         courseF_artist_variables7_b: 您可以使用 "重复" 循环使您画三角形的代码更简单。
         courseF_artist_variables7_c: 你要左转120度来做三角形的角。
@@ -11608,10 +12303,17 @@ zh-CN:
         courseF_artist_variables8_b: 请记住，开始用`set length`（设置长度）模块来创在三角形，并以150像素开始。
         courseF_artist_variables8_c: 请确保使用 "重复" 循环来绘制三角形。
         courseF_artist_variables8_a: "尝试将一组\n\n<xml>\n<block type=\"variables_set\" inline=\"false\">\n<title name=\"VAR\">length</title>\n<value name=\"VALUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">ADD</title>\n<value name=\"A\">\n<block type=\"variables_get\">\n<title name=\"VAR\">length</title>\n</block>\n</value>\n<value name=\"B\">\n<block type=\"math_number\">\n<title name=\"NUM\">10</title>\n</block>\n</value>\n</block>\n</value>\n</block>\n</xml>\n\n模块放到循环的最后。\n"
+      courseF_artist_variables8_2019_authored_hint:
+        courseF_artist_variables8_b: 请记住，开始用`set length`（设置长度）模块来创在三角形，并以150像素开始。
+        courseF_artist_variables8_c: 请确保使用 "重复" 循环来绘制三角形。
+        courseF_artist_variables8_a: "尝试将一组\n\n<xml>\n<block type=\"variables_set\" inline=\"false\">\n<title name=\"VAR\">length</title>\n<value name=\"VALUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">ADD</title>\n<value name=\"A\">\n<block type=\"variables_get\">\n<title name=\"VAR\">length</title>\n</block>\n</value>\n<value name=\"B\">\n<block type=\"math_number\">\n<title name=\"NUM\">10</title>\n</block>\n</value>\n</block>\n</value>\n</block>\n</xml>\n\n模块放到循环的最后。\n"
       courseF_artist_variables9_authored_hint:
         courseF_artist_variables9_a: 对于这个关卡, 你所需要做的就是改变循环重复的次数。
         courseF_artist_variables9_b: 确保在您的循环中增加"长度", 以便线路变长。
       courseF_artist_variables9_2018_authored_hint:
+        courseF_artist_variables9_a: 对于这个关卡, 你所需要做的就是改变循环重复的次数。
+        courseF_artist_variables9_b: 确保在您的循环中增加"长度", 以便线路变长。
+      courseF_artist_variables9_2019_authored_hint:
         courseF_artist_variables9_a: 对于这个关卡, 你所需要做的就是改变循环重复的次数。
         courseF_artist_variables9_b: 确保在您的循环中增加"长度", 以便线路变长。
       courseF_artist_variablesFP_authored_hint:
@@ -11619,6 +12321,10 @@ zh-CN:
           尝试这三幅画之一。
           ![](https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png)
       courseF_artist_variablesFP_2018_authored_hint:
+        courseF_artist_variablesFP_a: |-
+          尝试这三幅画之一。
+          ![](https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png)
+      courseF_artist_variablesFP_2019_authored_hint:
         courseF_artist_variablesFP_a: |-
           尝试这三幅画之一。
           ![](https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png)
@@ -11943,6 +12649,162 @@ zh-CN:
           </next>
           </block>
           </xml>
+      courseF_artist_variables_challenge1_2019_authored_hint:
+        courseF_artist_variables_challenge1_a: 每条竖线的长度都是 "10"。每条水平线的长度应为 "长度"。
+        courseF_artist_variables_challenge1_b: 您将希望把 "长度" 的值在循环中增加10 **两次**。
+        courseF_artist_variables_challenge1_c: 要完成该模式, 您将需要向左两次, 右转两次, 并向前移动共四次。
+        courseF_artist_variables_challenge1_d: |-
+          这个谜题只用一个循环。没有变量的话，类似的路径可能只是一个锯齿形。
+          
+          ![](https://images.code.org/664fdd219502d004fb07886f834fa3d5-image-1496868743379.51.36 PM.png)
+          
+          如果您遇到麻烦, 请从创建此映像开始, 然后尝试查看可以使用变量更改水平线的长度。
+        courseF_artist_variables_challenge1_e: |-
+          这里是解决方案。
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">长度</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">18</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_move" inline="true">
+          <title name="DIR">向前移动</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">向右转</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">向前移动</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">长度</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">长度</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">增加</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">长度</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">向左转</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">向前移动</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">向左转</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">向前移动</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">长度</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">增加</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">长度</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">向右转</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseF_artist_variables_challenge1a_authored_hint:
         courseF_artist_variables_challenge1_a: '变量是有帮助的, 因为您可以通过循环每次增加它们。 '
         courseF_artist_variables_challenge1_b: 这个谜题有一个循环来创建多边形, 一个循环来重复多边形`sides`（边）的次数，然后另一个循环在把5加到到`sides`（边）后重新计算。
@@ -11961,6 +12823,14 @@ zh-CN:
           
           ![[Solution]](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
       courseF_artist_variables_challenge2_2018_authored_hint:
+        courseF_artist_variables_challenge2_a: 变量是有帮助的, 因为您可以通过循环每次增加它们。 
+        courseF_artist_variables_challenge2_c: 使用`sides`和`length`的变量使代码更干净, 因为您可以多次循环相同的代码, 而不是为每组数字创建一个新的副本。
+        courseF_artist_variables_challenge2_d: |-
+          ** 解决方案: **
+          
+          
+          ![[Solution]](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
+      courseF_artist_variables_challenge2_2019_authored_hint:
         courseF_artist_variables_challenge2_a: 变量是有帮助的, 因为您可以通过循环每次增加它们。 
         courseF_artist_variables_challenge2_c: 使用`sides`和`length`的变量使代码更干净, 因为您可以多次循环相同的代码, 而不是为每组数字创建一个新的副本。
         courseF_artist_variables_challenge2_d: |-
@@ -12035,17 +12905,30 @@ zh-CN:
         courseF_bee_for10_b: 第一组花总共有 ** 14 朵花 **。为了到达第一组, 蜜蜂必须嗡嗡作响往下移** 7 个正方形 ** （或14除以2个正方形。）下一组有多少朵花, 蜜蜂到那里需要走多少个正方形？
         courseF_bee_for10_c: "在关卡中, 第一组中有 ** 14 ** 朵花，第二组有 ** 10 ** 朵花, 第三组有 ** 6 ** 朵花, 第四组有 ** 2 ** 朵花。\n\n在这张图中, 请注意有 ** 7 ** 个红色正方形, ** 5 ** 个橙色正方形, ** 3 ** 个绿色正方形和 ** 1 ** 个蓝色块。\n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)\n\n数字有什么关联吗？"
         courseF_bee_for10_d: 你需要有2个重复循环，其中一个将使用数学模块。
+      courseF_bee_for10_2019_authored_hint:
+        courseF_bee_for10_a: 你能在需要走的步数和采花蜜的数量之间找到一个规律吗？
+        courseF_bee_for10_b: 第一组花总共有 ** 14 朵花 **。为了到达第一组, 蜜蜂必须嗡嗡作响往下移** 7 个正方形 ** （或14除以2个正方形。）下一组有多少朵花, 蜜蜂到那里需要走多少个正方形？
+        courseF_bee_for10_c: "在关卡中, 第一组中有 ** 14 ** 朵花，第二组有 ** 10 ** 朵花, 第三组有 ** 6 ** 朵花, 第四组有 ** 2 ** 朵花。\n\n在这张图中, 请注意有 ** 7 ** 个红色正方形, ** 5 ** 个橙色正方形, ** 3 ** 个绿色正方形和 ** 1 ** 个蓝色块。\n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)\n\n数字有什么关联吗？"
+        courseF_bee_for10_d: 你需要有2个重复循环，其中一个将使用数学模块。
       courseF_bee_for11_authored_hint:
         courseF_bee_for11_a: "12比15少多少？ \n9比12少多少？\n\n你看到规律了吗？"
       courseF_bee_for11_2018_authored_hint:
         courseF_bee_for11_a: "12比15少多少？ \n9比12少多少？\n\n你看到规律了吗？"
+      courseF_bee_for11_2019_authored_hint:
+        courseF_bee_for11_a: "12比15少多少？ \n9比12少多少？\n\n你看到规律了吗？"
       courseF_bee_for1_2018_authored_hint:
+        courseF_bee_for1_a: 将紫色数字块拖到`重复`循环的空白处, 告诉它要重复多少次。
+        courseF_bee_for1_b: 你将需要两个模块在你的 ' 重复 ' 循环里来收集所有的花蜜。
+      courseF_bee_for1_2019_authored_hint:
         courseF_bee_for1_a: 将紫色数字块拖到`重复`循环的空白处, 告诉它要重复多少次。
         courseF_bee_for1_b: 你将需要两个模块在你的 ' 重复 ' 循环里来收集所有的花蜜。
       courseF_bee_for2_authored_hint:
         courseF_bee_for2_a: 当你困惑时，一次只采一朵花，并经常测试。
         courseF_bee_for2_b: 记住在每个循环之间向前移动, 这样你就能到达每一朵花。
       courseF_bee_for2_2018_authored_hint:
+        courseF_bee_for2_a: 当你困惑时，一次只采一朵花，并经常测试。
+        courseF_bee_for2_b: 记住在每个循环之间向前移动, 这样你就能到达每一朵花。
+      courseF_bee_for2_2019_authored_hint:
         courseF_bee_for2_a: 当你困惑时，一次只采一朵花，并经常测试。
         courseF_bee_for2_b: 记住在每个循环之间向前移动, 这样你就能到达每一朵花。
       courseF_bee_for3_authored_hint:
@@ -12059,11 +12942,19 @@ zh-CN:
         courseF_bee_for4_a: 使用`计数循环`从1到 7，增量为 1，来通过这个关卡。
         courseF_bee_for4_b: 在`计数循环`循环中，你需要一个`向前移动` 指令，和一个循环来收集花蜜。
         courseF_bee_for4_c: 确保在嵌套的`重复`循环中使用`counter`（计数器）变量来获得足够的花蜜!
+      courseF_bee_for4_2019_authored_hint:
+        courseF_bee_for4_a: 使用`计数循环`从1到 7，增量为 1，来通过这个关卡。
+        courseF_bee_for4_b: 在`计数循环`循环中，你需要一个`向前移动` 指令，和一个循环来收集花蜜。
+        courseF_bee_for4_c: 确保在嵌套的`重复`循环中使用`counter`（计数器）变量来获得足够的花蜜!
       courseF_bee_for5_authored_hint:
         courseF_bee_for5_a: 这一次，`向前移动`模块和`采花蜜`模块需要在分开的`重复`循环里，二者都在同一个`计数循环`中。
         courseF_bee_for5_b: 在每个循环中使用 "计数器" 变量, 以便蜜蜂在每朵花之间移动不同的距离。
         courseF_bee_for5_c: 不要害怕犯错误！即使你还没有解决这个关卡，尝试添加模块并运行代码, 看看会发生什么。
       courseF_bee_for5_2018_authored_hint:
+        courseF_bee_for5_a: 这一次，`向前移动`模块和`采花蜜`模块需要在分开的`重复`循环里，二者都在同一个`计数循环`中。
+        courseF_bee_for5_b: 在每个循环中使用 "计数器" 变量, 以便蜜蜂在每朵花之间移动不同的距离。
+        courseF_bee_for5_c: 不要害怕犯错误！即使你还没有解决这个关卡，尝试添加模块并运行代码, 看看会发生什么。
+      courseF_bee_for5_2019_authored_hint:
         courseF_bee_for5_a: 这一次，`向前移动`模块和`采花蜜`模块需要在分开的`重复`循环里，二者都在同一个`计数循环`中。
         courseF_bee_for5_b: 在每个循环中使用 "计数器" 变量, 以便蜜蜂在每朵花之间移动不同的距离。
         courseF_bee_for5_c: 不要害怕犯错误！即使你还没有解决这个关卡，尝试添加模块并运行代码, 看看会发生什么。
@@ -12075,11 +12966,19 @@ zh-CN:
         courseF_bee_for6_a: 不要忘记在`重复`循环中使用`counter`（计数器）变量。
         courseF_bee_for6_b: 在`计数循环`循环中，你需要一个`向前移动` 指令，和一个循环来收集花蜜。
         courseF_bee_for6_c: 你的循环应该数 ** 从5到1 **。
+      courseF_bee_for6_2019_authored_hint:
+        courseF_bee_for6_a: 不要忘记在`重复`循环中使用`counter`（计数器）变量。
+        courseF_bee_for6_b: 在`计数循环`循环中，你需要一个`向前移动` 指令，和一个循环来收集花蜜。
+        courseF_bee_for6_c: 你的循环应该数 ** 从5到1 **。
       courseF_bee_for7_authored_hint:
         courseF_bee_for7_a: '`计数循环`循环需要从1到7，增量为2。'
         courseF_bee_for7_b: 在`计数循环`循环中，你需要一个`向前移动` 指令，和一个循环来收集花蜜。
         courseF_bee_for7_c: 请记住在 "重复" 循环中使用 "计数器" 变量。
       courseF_bee_for7_2018_authored_hint:
+        courseF_bee_for7_a: '`计数循环`循环需要从1到7，增量为2。'
+        courseF_bee_for7_b: 在`计数循环`循环中，你需要一个`向前移动` 指令，和一个循环来收集花蜜。
+        courseF_bee_for7_c: 请记住在 "重复" 循环中使用 "计数器" 变量。
+      courseF_bee_for7_2019_authored_hint:
         courseF_bee_for7_a: '`计数循环`循环需要从1到7，增量为2。'
         courseF_bee_for7_b: 在`计数循环`循环中，你需要一个`向前移动` 指令，和一个循环来收集花蜜。
         courseF_bee_for7_c: 请记住在 "重复" 循环中使用 "计数器" 变量。
@@ -12091,6 +12990,10 @@ zh-CN:
         courseF_bee_for8_a: "如果循环往上计数，那么每次运行运行时都会将增量加到计数器变量中。 \n\n你需要将什么加到每个数字，来得到下一个花蜜的数量？"
         courseF_bee_for8_b: 在这个关卡中, 你需要在台阶上移动以获得花朵。
         courseF_bee_for8_c: 您的循环将通过一些增量来计数 * 从3到 15 * 。这是什么呢？
+      courseF_bee_for8_2019_authored_hint:
+        courseF_bee_for8_a: "如果循环往上计数，那么每次运行运行时都会将增量加到计数器变量中。 \n\n你需要将什么加到每个数字，来得到下一个花蜜的数量？"
+        courseF_bee_for8_b: 在这个关卡中, 你需要在台阶上移动以获得花朵。
+        courseF_bee_for8_c: 您的循环将通过一些增量来计数 * 从3到 15 * 。这是什么呢？
       courseF_bee_for9_authored_hint:
         courseF_bee_for9_a: |-
           试着用计数器变量来做些数学。
@@ -12099,6 +13002,13 @@ zh-CN:
         courseF_bee_for9_c: 如果想要通过此关卡，看起来需要在每次循环迭代的开始让蜜蜂转弯。
         courseF_bee_for9_b: "**请记住：** 如果你的循环在往上计数，每次循环，增量会加到`counter`（计数器）上。"
       courseF_bee_for9_2018_authored_hint:
+        courseF_bee_for9_a: |-
+          试着用计数器变量来做些数学。
+          
+          要得到和你需要收集的花蜜一样的数量，你需要对每朵花的计数器做什么？
+        courseF_bee_for9_c: 如果想要通过此关卡，看起来需要在每次循环迭代的开始让蜜蜂转弯。
+        courseF_bee_for9_b: "**请记住：** 如果你的循环在往上计数，每次循环，增量会加到`counter`（计数器）上。"
+      courseF_bee_for9_2019_authored_hint:
         courseF_bee_for9_a: |-
           试着用计数器变量来做些数学。
           
@@ -12243,6 +13153,143 @@ zh-CN:
           </block>
           </xml>
       courseF_bee_for_challenge2_2018_authored_hint:
+        courseF_bee_for_challenge2_a: "看看这个移动选项:\n\n![] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
+        courseF_bee_for_challenge2_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
+        courseF_bee_for_challenge2_c: "注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。\n\n另一个`计数循环`循环只需要一个普通的循环来酿造`counter`（计数器）个蜂蜜。"
+        courseF_bee_for_challenge2_d: |-
+          **解决方案：**
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">3</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_moveForward"/>
+          </statement>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">向左转</title>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_moveForward"/>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">向右转</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">向右转</title>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">向右转</title>
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_moveForward">
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">向左转</title>
+          <next>
+          <block type="maze_moveForward">
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">向右转</title>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_honey"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseF_bee_for_challenge2_2019_authored_hint:
         courseF_bee_for_challenge2_a: "看看这个移动选项:\n\n![] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
         courseF_bee_for_challenge2_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         courseF_bee_for_challenge2_c: "注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。\n\n另一个`计数循环`循环只需要一个普通的循环来酿造`counter`（计数器）个蜂蜜。"
@@ -13255,7 +14302,7 @@ zh-CN:
           </statement>
           </block></xml>
       courseF_bee_fwp_challenge2_authored_hint:
-        courseF_bee_fwp_challenge2_a: |2
+        courseF_bee_fwp_challenge2_a: |-
           首先确保你明白这个函数是如何工作的。当农夫沿着每条小路向下移动时, 她只会尝试收集玉米。相反, 你怎么能让她查找3种蔬菜, 并只捡起她发现的那一种？
           
            将条件声明添加到函数中, 来查找玉米、南瓜和生菜。
@@ -13397,7 +14444,7 @@ zh-CN:
           </next>
           </block></xml>
       courseF_bee_fwp_challenge2_2018_authored_hint:
-        courseF_bee_fwp_challenge2_a: |2
+        courseF_bee_fwp_challenge2_a: |-
           首先确保你明白这个函数是如何工作的。当农夫沿着每条小路向下移动时, 她只会尝试收集玉米。相反, 你怎么能让她查找3种蔬菜, 并只捡起她发现的那一种？
           
            将条件声明添加到函数中, 来查找玉米、南瓜和生菜。
@@ -14030,14 +15077,14 @@ zh-CN:
         grade1_artist_loops4_a: 拖出一个`重复`循环，然后把其他模块放在它里面。需要重复几次？
       grade1_artist_loops6_authored_hint:
         grade1_artist_loops6_a: 这个挑战使用四个循环, 一个接一个!
-        grade1_artist_loops6_b: |2
+        grade1_artist_loops6_b: |-
           请注意, 每个循环都会使楼梯模式在不同的方向上移动。
           
            ![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
         grade1_artist_loops6_c: "循环应该这样做：\n- 循环1\n- 向右\n- 向下\n\n- 循环2\n- 向右\n-向上\n\n- 循环3\n- 向左\n- 向上\n\n- 循环4\n- 向左\n- 向下"
       grade1_artist_loops7a_authored_hint:
         artistLoopsK9_a: 这个挑战使用四个循环, 一个接一个!
-        artistLoopsK9_b: |2
+        artistLoopsK9_b: |-
           请注意, 每个循环都会使楼梯模式在不同的方向上移动。
           
            ![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
@@ -14398,7 +15445,7 @@ zh-CN:
         2-3_Bee_Functions_8_a: "如果这个关卡看上去很有挑战性，尝试一点一点创建你的函数。 \n\n添加一些模块试试看。继续添加，然后再尝试。很快，你就能成功了！\n\n ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       grade4_bee_functions8_authored_hint:
         2-3_Bee_Functions_8_a: "如果这个关卡看上去很有挑战性，尝试一点一点创建你的函数。 \n\n添加一些模块试试看。继续添加，然后再尝试。很快，你就能成功了！"
-        2-3_Bee_Functions_8_b: |2
+        2-3_Bee_Functions_8_b: |-
           别忘了把你的代码创建在绿色的函数模块中。
           
            ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
@@ -14506,6 +15553,10 @@ zh-CN:
         grade5_artist_variables_triangles1_b: 使用 "重复" 循环使代码更短。
         grade5_artist_variables_triangles1_c: 在循环中, 您需要向前移动50像素, 然后向左转120度。
       grade5_artist_variables_triangles1_2018_authored_hint:
+        grade5_artist_variables_triangles1_a: 要使这个三角形的内部角度为60度, 请记住将艺术家转120度。
+        grade5_artist_variables_triangles1_b: 使用 "重复" 循环使代码更短。
+        grade5_artist_variables_triangles1_c: 在循环中, 您需要向前移动50像素, 然后向左转120度。
+      grade5_artist_variables_triangles1_2019_authored_hint:
         grade5_artist_variables_triangles1_a: 要使这个三角形的内部角度为60度, 请记住将艺术家转120度。
         grade5_artist_variables_triangles1_b: 使用 "重复" 循环使代码更短。
         grade5_artist_variables_triangles1_c: 在循环中, 您需要向前移动50像素, 然后向左转120度。

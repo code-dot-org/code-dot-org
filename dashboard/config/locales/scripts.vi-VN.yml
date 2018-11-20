@@ -4931,3 +4931,21 @@ vi:
           stages:
             Artist:
               name: Họa sĩ
+        aquatic:
+          title: Minecraft Chuyến thám hiểm đại dương
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Xây dựng nền tảng
+            Debugging with Scrat:
+              name: Gỡ lỗi với Scrat
+            Nested Loops in Bee/Zombie:
+              name: Vòng lặp lồng nhau trong Con ong/Thây ma
+            Nested Loops with Frozen:
+              name: Vòng lặp lồng với Frozen
+            Envelope Variables:
+              name: Các biến phong bì
+            For Loop Fun:
+              name: Cho vòng lặp vui vẻ
+            new stage:
+              name: giai đoạn mới

@@ -919,7 +919,7 @@ uk:
             'Jigsaw: Learn to drag and drop':
               name: 'Пазли: вчимося перетягувати'
             Loops:
-              name: петлі
+              name: Цикли
             Programming:
               name: Програмування
             'Real-life Algorithms: Plant a Seed':
@@ -937,7 +937,7 @@ uk:
             'Jigsaw: Learn to drag and drop':
               name: 'Пазли: вчимося перетягувати'
             Loops:
-              name: петлі
+              name: Цикли
             Programming:
               name: Програмування
             Unspotted Bugs:
@@ -1022,7 +1022,7 @@ uk:
             Functions with Parameters:
               name: Функції з параметрами
             Loops:
-              name: петлі
+              name: Цикли
             Nested Loops:
               name: Вкладені цикли
             Variables:
@@ -1380,6 +1380,8 @@ uk:
               name: 'Художник: двійкова система'
             Building a Foundation:
               name: Закладання основ
+            Loops in Ice Age:
+              name: Петлі в Ice Age
         new-express:
           stages:
             Introduction:
@@ -1557,6 +1559,8 @@ uk:
               name: Двійкові зображення
             Artist Binary:
               name: 'Художник: двійкова система'
+            Loops in Ice Age:
+              name: Петлі в Ice Age
             Graph Paper Programming:
               name: Програмування по клітинках
             Relay Programming:
@@ -1661,6 +1665,7 @@ uk:
           stages:
             Dance Party:
               name: Танцювальна вечірка
+          title: Танцювальна вечірка
         frozen-2018-test-b:
           stages:
             Artist:
@@ -1672,6 +1677,20 @@ uk:
             Dance Party:
               name: Танцювальна вечірка
         dance-draft:
+          stages:
+            Dance Party:
+              name: Танцювальна вечірка
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Закладання основ
+            Conditionals with Cards:
+              name: Листівки та умови
+            Envelope Variables:
+              name: Конвертні змінні
+            For Loop Fun:
+              name: Ігри з циклами
+        dance-low:
           stages:
             Dance Party:
               name: Танцювальна вечірка

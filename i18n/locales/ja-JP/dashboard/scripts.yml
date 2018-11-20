@@ -344,7 +344,7 @@ ja:
               name: ステップ
         Hour of Code:
           title: Hour of Code 2013
-          description: 基礎試してくださいコンピュータと科学を文字ゾンビ対怒っている鳥や植物から！
+          description: アングリーバードやプラント vs. ゾンビのキャラクターを使って、コンピューターサイエンスの基礎を試してみよう！
           description_short: いろいろなキャラクターでコンピューター科学の基礎を試してみよう！
           stages:
             Hour of Code 2013:
@@ -1455,3 +1455,15 @@ ja:
           stages:
             Artist:
               name: アーティスト
+        aquatic:
+          description_short: 創造性と問題解決スキルを発揮して、プログラムで水中世界を探検し構築しましょう！
+          description: Minecraftに新しいアクティビティができました！創造性と問題解決スキルを発揮して、プログラムで水中世界を探検し構築しましょう。
+        coursef-2019:
+          description_short: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
+          stages:
+            Building a Foundation:
+              name: ピラミッドをたてよう
+            Loops in Artist:
+              name: アーティストくりかえし
+            Conditionals with Cards:
+              name: カードと条件

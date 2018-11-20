@@ -1662,3 +1662,20 @@ hu:
           stages:
             Artist:
               name: Művész
+        aquatic:
+          stages:
+            Aquatic:
+              name: Tengeri
+          title: 'Minecraft: Tengeri utazás'
+          description_short: A Minecraft egy vadonatúj programmal tér vissza a Kódolás
+            Órájára!
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Alapozás
+            Conditionals with Cards:
+              name: Feltételek kártyákkal
+            Envelope Variables:
+              name: Boríték változók
+            For Loop Fun:
+              name: Szórakozás a For ciklussal

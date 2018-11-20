@@ -5111,7 +5111,147 @@ es-MX:
           stages:
             Artist:
               name: Artista
+        dance:
+          stages:
+            Dance Party:
+              name: Fiesta de Baile
+          title: Fiesta de Baile
         frozen-2018-test-b:
           stages:
             Artist:
               name: Artista
+        aquatic:
+          title: 'Minecraft: Udhëtimi ujor'
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Fiesta de Baile
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Fiesta de Baile
+        coursef-2019:
+          description: Aprende a usar diferentes tipos de ciclos, eventos, funciones
+            y condicionales. Investiga distintas técnicas de solución de problemas
+            y discute impactos sociales de la computación y el internet. En esta segunda
+            parte del curso, diseña y crea un proyecto climático que puedes compartir
+            con amigos y familia.
+          description_short: Aprende todos los conceptos de Fundamentos de ciencias
+            de la computación y crea tu propio arte, historia o juego.
+          description_audience: 9 a 13 años
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programación: Mis amigos robóticos'
+            Sequence in Maze:
+              name: Secuencias en Maze
+            Building a Foundation:
+              name: Construir una base
+            Programming in Artist:
+              name: Programación en Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Ciclos: Mis amigos roboticos'
+            Conditionals with Cards:
+              name: Condicionales con tarjetas
+            The Power of Words:
+              name: El poder de las palabras
+              description_student: La intimidación no es aceptable. Esta lección le
+                enseñará acerca de lo que es y no es correcto decir en línea.
+              description_teacher: "Los estudiantes consideran que mientras que ellos
+                están disfrutando de su sitios web favoritos puede encontrar mensajes
+                de otros niños que pueden hacerles sentir enojados, heridos, tristes
+                o temerosos. Exploran formas de manejar la intimidación por internet
+                y cómo responder ante lenguaje perturbador en linea. \n\nLos estudiantes
+                discuten todas las formas que utilizan la tecnología para la comunicación
+                y exploran las similitudes y diferencias entre comunicación en persona
+                y en línea. Los estudiantes entonces piensan en maneras de responder
+                a la intimidación por el Internet. "
+            Envelope Variables:
+              name: Variables de sobre
+              description_student: 'Los sobres y las variables tienen algo en común:
+                ambas pueden contener cosas valiosas. Aprenderás qué son las vairables
+                y lo que pueden hacer.'
+              description_teacher: Las variables son usadas como objetos temporales
+                para valores como números o palabras. Las variables permiten mucha
+                libertad en programación. En lugar de tener que escribir una frase
+                muchas veces o recordar un numero, los cientificos de la computación
+                pueden usar variables para hacer referencia a ellos. Esta lección
+                ayuda a explicar qué son las variables y como podemos usarlas de distintas
+                formas. La idea de una variable puede no ser facil de comprender,
+                así que recomendamos permitir mucho tiemo para la discusión al final
+                de la lección.
+            For Loop Fun:
+              name: Diversión con bucles Para
+              description_student: "¡Vas a tener montones de diversión aprendiendo
+                acerca de ciclos!"
+              description_teacher: 'Sabemos que los ciclos nos permiten hacer cosas
+                una y otra vez, pero ahora vamos a aprender cómo usar ciclos con estructuras
+                adicionales. Estas nuevas estructuras permitirán a los alumnos crear
+                código más potente y dinámico. '
+            For Loops in Bee:
+              name: Ciclos en Bee
+              description_student: "¡Buzz buzz. En estos rompecabezas guiarás una
+                abeja a néctar y miel con ciclos!"
+              description_teacher: Con la abeja, esta lección se centra en ciclos
+                y usar una variable creciente para solucionar acertijo más complicados.
+                Los estudiantes comenzarán repasando ciclos de lecciones anteriores.
+            For Loops in Artist:
+              name: Ciclos en Artist
+              description_student: Prepárate hacer su siguiente obra maestra. Aquí
+                usarás ciclos para tomar fotos asombrosas.
+              description_teacher: En esta lección, los estudiantes siguen prácticando
+                ciclos, esta vez con Artist. Los estudiantes completarán acertijos
+                combinando las ideas de variables, ciclos y ciclos 'for'. Al final,
+                tendrán la oportunidad de crear su propio arte en un nivel de libre.
+            Explore Project Ideas:
+              name: Explora ideas de proyectos
+              description_student: "¡Hora de obtener inspiración! Estos acertijos
+                te mostrarán algunos juego pre hechos e ilustraciones para ayudarte
+                a desarrollar un plan para tu GRAN proyecto."
+              description_teacher: |-
+                Las siguientes cinco lecciones proveen una oportunidad a los estudiantes de usar sus habilidades de programación en un proyecto climatico. Este proyecto ayudara a los individuos a adquirir experiencia con la programación y producir un ejemplo para compartir con sus seres queridos y compañeros. Se pretende que sea un proyecto multi lección o multi semana donde los estudiantes pasen tiempo haciendo lluvia de ideas, aprendiendo sobre diseño, construyendo y presentando su trabajo final.
+
+                En la etapa de exploración, los estudiantes podrán ver ejemplos de sus proyectos para inspirarse. Despues, los estudiantes aprenderán sobre el proceso de diseño y como implementarlo en sus propios proyectos. Luego tendran el espacio para crear su propio proyecto en Artist o Play Lab (esta será la parte más larga del proyecto). Los estudiantes mejorarán sus proyectos despus de probarlos y pensar. Finalmente, los estuiantes presentarán su trabajo terminado a sus compañeros.
+            The Design Process:
+              name: El proceso de diseño
+              description_student: Los proyectos de este tamaño toman tiempo y mucha
+                planeación. Aquí, aprenderas sobre el proceso de diseño que usaras
+                para construir algo propio.
+              description_teacher: Durante cinco lecciones, los estudiantes construirán
+                un proyecto diseñado por ellos mismos usando ya sea Play Lab o Artist
+                como su ambiente de programación. En esta parte del proyecto, los
+                estudiantes aprenderan sobre el proceso de diseño y como implementarlo
+                en sus propios proyectos. La guia de lecciones que cubre las 5 etapas
+                del proceso puede encontrarse al inicio del proceso [here](https://curriculum.code.org/csf/coursef/15/).
+            Build Your Project:
+              name: Construye tu proyecto
+              description_student: "¡Finalmente puedes empezar a construir tu proyecto!"
+              description_teacher: Durante cinco lecciones, los estudiantes construirán
+                un proyecto diseñado por ellos mismos usando ya sea Play Lab o Artist
+                como su ambiente de programación. La guia de lecciones que cubre las
+                5 etapas del proceso puede encontrarse al inicio del proceso [here](https://curriculum.code.org/csf/coursef/15/).
+            Revise Your Project:
+              name: Mejora tu proyecto
+              description_student: Roma no se construyó en un dia y tu proyecto no
+                debería, tampoco. Tómate el tiempo de editar y mejorar tu proyecto
+                para que sea la mejor versión de sí.
+              description_teacher: Durante cinco lecciones, los estudiantes construirán
+                un proyecto diseñado por ellos mismos usando ya sea Play Lab o Artist
+                como su ambiente de programación. En esta parte del proyecto, los
+                estudiantes tendrán la oportunidad de obtener retroalimentación de
+                compañeros y mejorar sus proyectos. La guia de lecciones que cubre
+                las 5 etapas del proceso puede encontrarse al inicio del proceso [here](https://curriculum.code.org/csf/coursef/15/).
+            Present Your Project:
+              name: Presenta tu proyecto
+              description_student: "¡Hora de mostrar tu trabajo! Aquí presentarás
+                tu proyecto a tus compañeros."
+              description_teacher: Durante cinco lecciones, los estudiantes construirán
+                un proyecto diseñado por ellos mismos usando ya sea Play Lab o Artist
+                como su ambiente de programación. En esta parte del proyecto, los
+                estudiantes presentarán sus proyectos terminados a sus compañeros
+                lo los compartián con sus seres queridos con un vinculo especial.
+                La guia de lecciones que cubre las 5 etapas del proceso puede encontrarse
+                al inicio del proceso [here](https://curriculum.code.org/csf/coursef/15/).
+        dance-low:
+          stages:
+            Dance Party:
+              name: Fiesta de Baile

@@ -248,7 +248,7 @@
   homepage_hero_text_malala: "&ldquo;Προκαλώ τα κορίτσια σε κάθε χώρα να μάθουν μία ώρα του κώδικα&rdquo; Malala, νικητής του Νόμπελ ειρήνης"
   homepage_hero_text_susan: |-
     &ldquo;Αν μπορείτε να αλλάξετε την τεχνολογία, μπορείτε να αλλάξετε τον κόσμο. &rdquo;Susan, Διευθύνων Σύμβουλος του YouTube
-  homepage_hero_text_fistbump: |2-
+  homepage_hero_text_fistbump: |-
      Μην παίζετε απλά με το τηλέφωνό σας, προγραμματίστε το. &rdquo; Πρόεδρος Μπαράκ Ομπάμα
   homepage_hero_text_sheryl: |-
     &ldquo;Τα παιδιά μας &mdash; συμπεριλαμβανομένων και των κοριτσιών μας &mdash; χρειάζονται την ευκαιρία να μάθουν την Πληροφορική.&rdquo; Sheryl, COO του Facebook
@@ -604,7 +604,7 @@
   dashboard_sections_table_pairing_allowed: "Προγραμματισμός κατά ζεύγη"
   dashboard_sections_table_students: "Μαθητές"
   dashboard_sections_table_code: "Κωδικός ενότητας"
-  dashboard_sections_name: "Όνομα ενότητας"
+  dashboard_sections_name: 'Όνομα ενότητας'
   dashboard_sections_choose_secret: "Εάν θέλετε να παρέχετε λογαριασμούς για τους μαθητές σας, επιλέξτε ένα μυστικό τύπο <b>λέξης</b> ή <b>εικόνας</b> για την ενότητα αυτή."
   dashboard_sections_secret_word: "Μια <b>λέξη</b> σας επιτρέπει να ορίσετε μια μυστική λέξη για κάθε μαθητή."
   dashboard_sections_secret_picture: "Μια <b>εικόνα</b> σας επιτρέπει να ορίσετε μια μυστική εικόνα για κάθε μαθητή, ιδανικό για τους μικρότερους μαθητές, οι οποίοι δεν μπορούν ακόμη να πληκτρολογήσουν."
@@ -627,7 +627,7 @@
   dashboard_error_other_section: "Αν μετακινείτε μαθητές μεταξύτων δικών σας τμημάτων, επιλέξτε το τμήμα σας από το αναπτυσσόμενο μενού. Επιλέξτε \"Αλλη ενότητα\" για να μετακινήσετε τους μαθητές σας σε τμήμα ενός διαφορετικού δασκάλου."
   dashboard_students_add_multiple: 'Πληκτρολογήστε ή επικολλήστε τα ονόματα των μαθητών σας, ένα ανά γραμμή:'
   dashboard_students_new_section: "Έχετε δημιουργήσει μια νέα ενότητα! Τώρα προσθέστε τους μαθητές σας, χρησιμοποιώντας τα ανωτέρω πλήκτρα <b>Προσθήκη μαθητή</b> και <b>Προσθήκη πολλών μαθητών</b>."
-  dashboard_students_name: "Όνομα"
+  dashboard_students_name: 'Όνομα'
   dashboard_students_progress: "Πρόοδος"
   dashboard_students_male: "Αγόρι"
   dashboard_students_female: "Κορίτσι"
@@ -1246,6 +1246,8 @@
   user_header_playlab: "Εργαστήριο Παιχνιδιού"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Πουλάκι"
+  applab_tile_start_tutorial: "Έναρξη"
+  hoc_overview_start_tutorial: "Έναρξη"
   hoc2018_creativity_create: "Δημιουργία"
   hoc2018_mc_page_title: "Μαθήματα Minecraft από την Ώρα του Κώδικα"
   hoc2018_mc_details: "Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης και tablets | Ηλικίες 2+"
@@ -1272,3 +1274,7 @@
   hoc2018_mc_video_title_anybody_can_learn: "Οποιοσδήποτε Μπορεί να Μάθει"
   hoc2018_mc_homepage_join_us: "Ελάτε μαζί μας"
   hoc2018_mc_homepage_try_it: "Δοκιμάστε το"
+  hoc2018_dance_party_button: "Έναρξη"
+  hoc2018_dance_teacher_resources_tile1_button: "Σχέδιο μαθήματος"
+  hoc2018_dance_teacher_resources_tile2_button: "Αποσυνδεδεμένη Δραστηριότητα"
+  hoc2018_dance_amazon_about_future_engineer_button: "Μάθετε περισσότερα"

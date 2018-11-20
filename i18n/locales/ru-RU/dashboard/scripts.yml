@@ -2052,7 +2052,41 @@ ru:
           stages:
             Artist:
               name: Художник
+        dance:
+          stages:
+            Dance Party:
+              name: Танцевальная вечеринка
+          title: Танцевальная вечеринка
         frozen-2018-test-b:
           stages:
             Artist:
               name: Художник
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Танцевальная вечеринка
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Танцевальная вечеринка
+        coursef-2019:
+          description_audience: 'Возраст: 9-13'
+          stages:
+            Building a Foundation:
+              name: Создание основы
+            Loops in Artist:
+              name: Циклы в исполнителе Художник
+            Conditionals with Cards:
+              name: Условные выражения с картами
+            Envelope Variables:
+              name: Конвертные переменные
+            For Loop Fun:
+              name: Игры с циклами
+            For Loops in Bee:
+              name: Цикл for в Пчеле
+            For Loops in Artist:
+              name: Цикл for в Художнике
+        dance-low:
+          stages:
+            Dance Party:
+              name: Танцевальная вечеринка

@@ -519,7 +519,7 @@
   dashboard_sections_table_stage_extras: "Extra szakasz feladatok"
   dashboard_sections_table_students: "Tanuló"
   dashboard_sections_table_code: "Szakasz kódja"
-  dashboard_sections_name: "Csoport neve"
+  dashboard_sections_name: 'Csoport neve'
   dashboard_sections_choose_secret: "Ha szeretnél hozzáférést biztosítani a diákjaid számára, akkor válassz a titkos <b>kép</b> vagy <b>szó</b> azonosítás közül az adott csoportnál."
   dashboard_sections_secret_word: "A <b>szó</b> azonosítás lehetővé teszi, hogy minden diákhoz egy titkos szót állíts be."
   dashboard_sections_secret_picture: "A <b>kép</b> azonosítás lehetővé teszi, hogy minden diákhoz egy titkos képet állíts be. Ez kisebb gyermekek esetén lehet ideális."
@@ -542,7 +542,7 @@
   dashboard_error_other_section: "Ha a tanulóidat másik csoportba szeretnéd tenni, válaszd ki a csoportot a legördülő listából. Válaszd ki a \"másik csoport\" lehetőséget, hogy áthelyezd a tanulókat egy másik tanári csoportba."
   dashboard_students_add_multiple: 'Írd vagy másold be diákjaid nevét, soronként egyet:'
   dashboard_students_new_section: "Az új szekció létrehozása sikerült! Most vedd fel a diákokat a fenti <b>Diák hozzáadása</b> vagy a <b>Több diák hozzáadása</b> gombok használatával."
-  dashboard_students_name: "Név"
+  dashboard_students_name: 'Név'
   dashboard_students_progress: "Előmenetel"
   dashboard_students_male: "Férfi"
   dashboard_students_female: "Nő"
@@ -1137,8 +1137,11 @@
   user_header_playlab: "Játéklabor"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
+  applab_tile_start_tutorial: "Kezdés"
+  aquatic_name: 'Minecraft: Tengeri utazás'
   account_sign_up_email_opt_in: "Küldhetünk neked email üzeneteket az új tanfolyamjainkról, helyi lehetőségekről, és egyéb informatikai hírekről? (kb. havonta egyszer)"
   account_sign_up_child_accept_terms: "Megerősítem, hogy a szülőm vagy törvényes gondviselőm engedélyt adott, hogy használjam Code.org szolgáltatásait."
+  hoc_overview_start_tutorial: "Kezdés"
   hoc2018_creativity: "kreativitás"
   hoc2018_creativity_create: "Létrehoz"
   hoc2018_creativity_hoc_coming: "Hamarosan jön a Kódolás Órája…"
@@ -1172,3 +1175,7 @@
   hoc2018_mc_homepage_what_create: "Te mit fogsz létrehozni?"
   hoc2018_mc_homepage_join_us: "Csatlakozz"
   hoc2018_mc_homepage_try_it: "Próbáld ki"
+  hoc2018_dance_party_button: "Kezdés"
+  hoc2018_dance_teacher_resources_tile1_button: "Óravázlat"
+  hoc2018_dance_teacher_resources_tile2_button: "Offline tevékenység"
+  hoc2018_dance_amazon_about_future_engineer_button: "Tudj meg többet"

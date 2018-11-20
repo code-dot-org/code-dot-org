@@ -4,6 +4,11 @@
     "func": "ifDanceIs",
     "blockText": "if {SPRITE} is doing {DANCE}\n {DO1} {DO2}",
     "inline": true,
+    "color": [
+      210,
+      0.43,
+      0.64
+    ],
     "args": [
       {
         "name": "SPRITE",
@@ -15,54 +20,54 @@
         "options": [
           [
             "Clap High",
-            "0"
+            "MOVES.ClapHigh"
           ],
           [
-            "Clown",
-            "1"
+            "Gangnam",
+            "MOVES.Clown"
           ],
           [
             "Dab",
-            "2"
+            "MOVES.Dab"
           ],
           [
-            "Double Jam",
-            "3"
+            "Double Down",
+            "MOVES.DoubleJam"
           ],
           [
             "Drop",
-            "4"
+            "MOVES.Drop"
           ],
           [
             "Floss",
-            "5"
+            "MOVES.Floss"
           ],
           [
             "Fresh",
-            "6"
+            "MOVES.Fresh"
           ],
           [
-            "Roll",
-            "9"
+            "Body Roll",
+            "MOVES.Roll"
           ],
           [
             "Star",
-            "7"
+            "MOVES.Kick"
           ],
           [
             "This or That",
-            "10"
+            "MOVES.ThisOrThat"
           ],
           [
-            "Thriller",
-            "11"
+            "Zombie",
+            "MOVES.Thriller"
           ],
           [
             "None",
-            "8"
+            "MOVES.Rest"
           ]
         ],
-        "type": "String"
+        "type": "Number"
       },
       {
         "name": "DO1",

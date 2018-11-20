@@ -275,10 +275,16 @@ sk:
         title: Posuň to, Posuň to
       courseB_unplugged_CnC_2018:
         title: Je super tvoriť a hrať férovo
-        desc: Vďaka tímu z oddelenia Duševných práv a kreativity, ktorý poskytol svoje skúsenosti pre Výučbu základov informatiky môžu študenti vďaka tejto lekcií lepšie porozumieť kreatívny proces zdieľania a inšpirácie. Spolu s tým ide aj propagácia kreativity a potreba férovosti v kreatívnej práci.
+        desc: Táto lekcia, vytvorená s pomocou tímu Autorských práv a Kreativity, pomôže študentom lepšie porozumieť kreatívnemu procesu zdieľania myšlienok a využitia inšpirácie. Okrem toho sa budeme venovať aj témam kreatívneho vyjadrovania a potrebe férovosti pri kreatívnej tvorbe.
       courseE_unplugged_CnC_2018:
         title: Digitálne zdieľanie
-        desc: Vďaka tímu z oddelenia Duševných práv a kreativity, ktorý poskytol svoje skúsenosti pre Výučbu základov informatiky môžu študenti vďaka tejto lekcií lepšie porozumieť výhody i zádrhely pri rešpektovaní vlastníctva a copyrightu, predovšetkým v digitálnom svete. Študenti by mali byť vedení k dodržiavaniu autorských práv v umelca ako doležitej súčasti ich existencie v digitálnom svete.
+        desc: Táto lekcia, vytvorená s pomocou tímu Autorských práv a Kreativity, pomôže študentom lepšie porozumieť výzvam aj výhodám rešpektovania vlastníckych a autorských práv, s dôrazom na digitálne prostredie. Študenti by mali byť vedení k dodržiavaniu autorských práv umelcov, čo je dôležitá súčasť ich existencie ako etického digitálneho občana.
       RelayProgramming_2018:
         title: Štafetové programovanie
         desc: Táto aktivita začne krátkym školením o hľadaní a opravovaní chýb a o potrebe vytrvalosti. Následne sa študenti rozdelia do skupín, v ktorých, pretekajúc s časom, postupne po jednotlivých príkazoch vytvoria program.
+      courseB_unplugged_MRF_2019:
+        title: Moji robotickí priatelia
+        desc: Naučte sa programovať napísaním kódu pre Vašich priateľov!
+      Conditionals_2019:
+        title: Podmienky
+        desc: Pre naučenie sa o podmieňovacích spôsoboch si študenti zahrajú kartovú hru a vytvoria pravidlá ako "ak zahrám červenú kartu, dostanem bod" a "ak zahrám čiernu kartu, ty dostaneš bod."

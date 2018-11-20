@@ -393,7 +393,7 @@
   mc_longdescription: "ប្រើប្លុកនៃកូដដើម្បី Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងនៅក្នុងពិភព Minecraft នេះ។"
   mc_shortdescription: "ប្រើប្លុកនៃកូដដើម្បី Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងនៅក្នុងពិភព Minecraft នេះ។"
   mc_specs: "ភាសាជាច្រើន | ឧបករណ៍បើកគេហទំព័រ និង tablets | អាយុចាប់ពី ៦ដល់១០៦"
-  minecraft_agent: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
+  minecraft_agent: "Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស"
   minecraft_designer: "Minecraft Designer"
   minecraft_adventurer: "Minecraft Adventurer"
   minecraft_tutorials: "មេរៀន Minecraft Hour of Code"
@@ -589,7 +589,7 @@
   dashboard_assessments_none: "គ្រូភាគច្រើនវាស់វឌ្ឍនភាពរបស់សិស្សរបស់ពួកគេដោយប្រើផ្ទាំង \"មើលដំណើរការ\" ។ ប្រសិនបើអ្នកចាប់អារម្មណ៍ក្នុងការផ្តល់ការវាយតម្លៃបន្ថែមដល់សិស្សរបស់អ្នក អ្នកអាចរកឃើញសំណួរនិងផ្នែកនៅក្នុងគំរោងមេរៀនដែលត្រូវបានណែនាំ។ វាទាំងនេះត្រូវបានធ្វើនៅក្រៅ Code.org ។"
   dashboard_assessments_none_part2: "ប្រសិនបើអ្នកកំពុងបង្រៀនអនុវិទ្យាល័យឬវិទ្យាល័យយើងមានសំណួរសំរាប់ធ្វើការវាស់ស្ទង់ដែលអាចរកបានក្នុងផ្នែកមួយនៃ Code.org ដើម្បីជួយសិស្សរបស់អ្នកត្រៀមលក្ខណៈសម្រាប់ការធ្វើតេស្តចូលរៀន ។ ដើម្បីប្រើប្រាស់ការវាស់ស្ទង់ទាំងនេះ ដំបូងជ្រើសមេរៀនសំរាប់ថ្នាក់របស់អ្នក រួចជ្រើសរើសមេរៀនចេញពីតារាងជម្រើសខាងលើហើយអ្នកនឹងឃើញចំលើយនៅទីនោះ។"
   dashboard_navigation_section_community: "ការ​គាំទ្រ"
-  dashboard_students_name: "ឈ្មោះ"
+  dashboard_students_name: 'ឈ្មោះ'
   dashboard_students_male: "ប្រុស"
   dashboard_students_female: "ស្រី"
   dashboard_students_secret_word_title: "ពាក្យដែលរក្សារជាការសម្ងាត់"
@@ -669,10 +669,13 @@
   user_header_view_my_projects: "មើលគម្រោងរបស់ខ្ញុំ"
   view_all_sections: "មើលផ្នែកទាំងអស់"
   hero_name: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
+  applab_tile_start_tutorial: "ចាប់​ផ្ដើម"
+  hoc_overview_start_tutorial: "ចាប់​ផ្ដើម"
   hoc2018_creativity_create: "បង្កើត"
   hoc2018_mc_page_title: "មេរៀន Minecraft Hour of Code"
   hoc2018_mc_details: "ភាសាជាច្រើន | ឧបករណ៍បើកគេហទំព័រទំនើបៗ និង tablets | ថ្នាក់ទី២ឡើងទៅ"
   hoc2018_mc_aquatic_description: "Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។"
+  hoc2018_mc_hero_title: "Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស"
   hoc2018_mc_hero_description: "Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។"
   hoc2018_mc_designer_title: "Minecraft Designer"
   hoc2018_mc_adventurer_title: "Minecraft Adventurer"
@@ -698,3 +701,6 @@
   hoc2018_mc_homepage_try_it: "សាកល្បង"
   hoc2018_mc_back: "Minecraft បានត្រលប់មកវិញជាមួយហ្នឹងសកម្មភាពថ្មីសំរាប់ Hour of Code!"
   hoc2018_mc_back_journey: "Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។"
+  hoc2018_dance_party_button: "ចាប់​ផ្ដើម"
+  hoc2018_dance_amazon_about_future_engineer_button: "សិក្សាបន្ថែម"
+  hoc2018_dance_amazon_scholarship_programs_button: "ចូលរួមឥលូវនេះ"

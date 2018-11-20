@@ -9739,13 +9739,153 @@ tr:
           stages:
             new stage:
               name: yeni kademe
+            Dance Party:
+              name: Dans Partisi
+          title: Dans Partisi
         frozen-2018-test-b:
           stages:
             Artist:
               name: Sanatçı
+        aquatic:
+          stages:
+            Aquatic:
+              name: Su
+          title: 'Minecraft: Su Yolculuğu'
+          description_short: Minecraft, Kodlama Saati için yepyeni bir etkinlikle
+            geri döndü!
         sconyers:
           stages:
             Digital Design:
               name: Dijital Tasarım
             Linking Screens:
               name: Bağlama Ekranları
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Dans Partisi
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Dans Partisi
+        coursef-2019:
+          description: Farklı döngüler, olaylar, fonksiyonlar ve koşulları kullanma
+            hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek ve
+            bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin ikinci
+            bölümünde, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir kaptanlık
+            projesi tasarlayınız ve oluşturunuz.
+          description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
+            hikayelerinizi ve sanatınızı oluşturun.
+          description_audience: 'Yaş: 9-13'
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programlama: Robot dostlarım'
+            Sequence in Maze:
+              name: Labirentte dizi
+            Building a Foundation:
+              name: Bir Temel Oluşturma
+            Programming in Artist:
+              name: Sanatçı Programlama
+            'Loops: My Loopy Robotic Friends':
+              name: 'Döngüler: Loopy robot dostlarım'
+            Loops in Artist:
+              name: Sanatçı- Döngüler
+            Conditionals with Cards:
+              name: Kartlarla Koşullu Önermeler
+            The Power of Words:
+              name: Kelimelerin gücü
+              description_student: Zorbalık hiçbir zaman iyi değildir. Bu ders, size,
+                çevrimiçi ortamda neyi söylemenin doğru ve neyi söylemenin yanlış
+                olduğunu öğretecektir.
+              description_teacher: "Öğrenciler, en sevdikleri web sitelerinde eğlenirken,
+                diğer çocukların onları kızdıracak, incitecek, üzecek ya da korkutacak
+                mesajları ile karşılaşacaklarını düşünürler. Siber zorbalıkla başa
+                çıkmanın yollarını ve çevrimiçi rahatsız edici dil karşısında nasıl
+                cevap vereceklerini keşfederler. \n\nÖğrenciler, iletişim için kullandıkları
+                teknolojinin tüm araçlarını tartışırlar ve yüz yüze ve çevrimiçi iletişimin
+                benzerlik ve farklılıklarını keşfederler. Daha sonra öğrenciler, siber
+                zorbalığa tepki verme yöntemleri hakkında beyin fırtınası yaparlar. "
+            Envelope Variables:
+              name: Zarf değişkenleri
+              description_student: 'Zarflar ve değişkenlerin ortak bir yönü var: ikisi
+                de değerli şeyleri tutarlar. Burada değişkenlerin ne olduğunu ve onların
+                yapabileceği harika şeyleri öğreneceksiniz.'
+              description_teacher: Değişkenler sayılar ya da sözcükler gibi değerler
+                için yer tutucu olarak kullanılır. Değişkenler programlamada çok fazla
+                özgürlüğe izin verir. Bir ifadeyi defalarca yazmak veya belirsiz bir
+                numarayı hatırlamak yerine, bilgisayar bilimcileri değişkenleri kendilerine
+                referans olarak kullanabilir. Bu ders değişkenlerin ne olduğunu ve
+                bunları farklı şekillerde nasıl kullanabileceğimizin açıklamada yardımcı
+                olur. Değişkenler fikri kavramak için kolay bir görüş değil bu yüzden
+                dersin sonunda tartışma için bol bol vakit ayırmanızı öneririz.
+            For Loop Fun:
+              name: Şununla Say Döngüsü Eğlencesi
+              description_student: "`for` döngülerini öğrenmek için eğlenceli şeyler
+                bulacaksınız!"
+              description_teacher: 'Döngüler, bazı şeyleri tekrar tekrar yapmamıza
+                izin veriyor biliyoruz, fakat şimdi ekstra yapıların inşa edildiği
+                döngülerin nasıl kullanılacağını öğreneceğiz. Bu yeni yapılar, öğrencilerin
+                daha güçlü ve dinamik kodlar oluşturmalarını sağlayacak. '
+            For Loops in Bee:
+              name: Arı - şununla say döngüleri
+              description_teacher: Arı özelliğiyle bu ders, döngüler ve daha karmaşık
+                bulmacaları çözmek için artan bir değişken kullanmaya odaklanıyor.
+                Öğrenciler önceki derslerdeki döngüleri inceleyerek başlayacak, ardından
+                döngüleri kullanarak karmaşık problemleri daha etkili bir şekilde
+                çözmeye başlayacak.
+            For Loops in Artist:
+              name: Sanatçı-Şununla say Döngüleri
+              description_teacher: Bu derste öğrenciler, döngülerde pratik yapmaya
+                devam ediyor, bu kez sanatçı ile. Öğrenciler değişkenlerin, döngülerin
+                ve döngülerin karmaşık tasarımlar oluşturması için bulmaca tamamlayacaklar.
+                En sonunda, serbest oyunda kendi sanatlarını oluşturma şansına sahip
+                olacaklar.
+            Explore Project Ideas:
+              name: Proje fikirleri keşfetmek
+              description_student: Biraz ilham alma zamanı! Bu bulmacalar; önceden
+                oluşturulmuş bir avuç oyun ve canlandırmaları size gösterecek. Böylece
+                kendi büyük projenizi geliştirmenizde bunlar size yardımcı olacaklar.
+              description_teacher: "Sonraki beş ders, öğrencilere, kodlama becerilerini
+                yayınlamak için bir bitirme projesinde kullanmalarına olanak sağlar.
+                Bu proje, bireylere, kodlama tecrübesi kazanmalarında ve akranları
+                ve sevdikleri ile paylaşmaları için bir model üretmelerinde yardımcı
+                olacak. Bu, öğrencilerin beyin fırtınası yapmaları, tasarım sürecini
+                öğrenmeleri, inşa etmeleri ve sonrasında nihai çalışmalarını sunmalarına
+                zaman harcamaları için çok dersli veya çok haftalı bir proje olması
+                için planlanmaktadır. \n\nKeşif etabında, öğrenciler esinlenmek için
+                hem sanatçı hem de oyun laboratuvarındaki projelerin örneklerini inceleyebilecek.
+                Sonrasında, öğrenciler, tasarım sürecini ve bunu kendi projelerinde
+                nasıl uygulayacaklarını öğrenecekler. Ardından, onlara, kendi projelerini
+                ya Sanatçı ya da Oyun laboratuvarında oluşturmaları için alan verilecek(bu,
+                muhtemelen projenin en uzun aşamasıdır). Test etme ve ekstra düşünmeden
+                sonra öğrenciler, projelerini gözden geçirip düzeltecek. Son olarak,
+                öğrenciler, bitirmiş oldukları çalışmalarını akranlarına sunabilecekler."
+            The Design Process:
+              name: Tasarım işlemi
+              description_student: Bu büyük projeler zaman alıyor ve çok planlanıyor.
+                Burada, kendi tasarımınızı oluşturmak için kullanacağınız tasarım
+                sürecini öğreneceksiniz.
+            Build Your Project:
+              name: Projenizi oluşturun
+              description_student: Sonunda projeni oluşturmaya başlayabilirsin!
+            Revise Your Project:
+              name: Projenizi Gözden Geçirme
+              description_student: Roma bir günde inşa edilmedi, sizin projeniz de
+                bir günde bitmemeli. Projenizi olabilecek en iyi hale getirmek için,
+                projenizi gözden geçirmeye ve düzenlemeye zaman ayırın.
+            Present Your Project:
+              name: Projeni sun
+              description_student: Çalışmanızı gösterme zamanı! Burada, akranlarınıza,
+                muhteşem projenizi sunacaksınız.
+              description_teacher: Beş ders süresince, öğrenciler programlama ortamı
+                olarak Oyun Labaratuvarını veya Sanatçıyı kullanarak kendi tasarımları
+                olan bir proje oluşturmaya başlayacaklardır.Şimdi öğrencilere Sanatçı
+                ya da Oyun Laboratuvarı ile projelerini yaratacakları alanlar verilecek.
+                Bu projenin en uzun bölümü olacak.Sürecin beş aşamasını da inceleyen
+                ders rehberi, proje sürecinin başında, [here](https://curriculum.code.org/csf/coursef/15/)
+                bulunabilir.
+            new stage:
+              name: yeni kademe
+        dance-low:
+          stages:
+            Dance Party:
+              name: Dans Partisi

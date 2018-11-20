@@ -10,6 +10,7 @@ bg:
       messages:
         blank: "е задължително"
         blank_plural: "са задължителни"
+        invalid: "е невалиден"
         invalid_plural: "са невалидни"
     attributes:
       user:
@@ -171,7 +172,7 @@ bg:
       submit: 'Смяна на паролата ми'
   welcome_email:
     subject: 'Присъединете се към моя клас (на Code.org)'
-    body: |2
+    body: |
       Щракнете върху връзката по-долу за да се регистрирате за уроци по компютърни науки в Code.org (с мен като ваш "учител"):
       %{link}
       

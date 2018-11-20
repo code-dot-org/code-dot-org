@@ -741,6 +741,18 @@ de:
       FoodFight: Das ist ein Beispiel für ein Spiels, das du in Play Lab machen kannst.
       FoodFight_2018: Das ist ein Beispiel für ein Spiels, das du in Play Lab machen kannst.
       Function intro Ryan: Verwende zweimal die "Brücke bauen"-Funktion, um einen Weg zur Fackel zu bauen.
+      Function intro Ryan_2019: Verwende zweimal die "Brücke bauen"-Funktion, um einen Weg zur Fackel zu bauen.
+      HOC 2018 Level_1: Hol dir ein Boot aus der Truhe.
+      HOC 2018 Level_10: Erreiche den Eingang dieses Ozeanmonuments.
+      HOC 2018 Level_11: 'Baue mit dem Prismarin im Ozeanmonument einen Aquisator.'
+      HOC 2018 Level_12: 'Entwirf deine eigene Unterwasserwelt. Lass deiner Fantasie freien Lauf.'
+      HOC 2018 Level_2: 'Begib dich zum Ende des Anlegestegs.'
+      HOC 2018 Level_3: 'Fahre über das Meer zum Kabeljau.'
+      HOC 2018 Level_4: Verwende eine Schleife, um zum Delfin zu gelangen.
+      HOC 2018 Level_5: Erkunde das Schiffswrack, um die Truhe zu erreichen.
+      HOC 2018 Level_6: Navigiere durch das Eis, um den Lachs zu erreichen.
+      HOC 2018 Level_7a: Suche in diesen Unterwasserruine nach einer Truhe.
+      HOC 2018 Level_9b: 'Verwende die Korallen als Wegpunkte, um den Schatz zu erreichen.'
       Infinity_catch: Kannst du Elsa („Figur 2") dazu bewegen, Anna mithilfe der Pfeiltasten einzufangen?
       Infinity_finale: Erstelle alles, was dir gefällt und teile es!
       Infinity_move_collide: Hiro ist „Figur1“.  Bewege ihn nach rechts zu Baymax und spiele einen Ton ab, wenn sie sich berühren.
@@ -756,6 +768,7 @@ de:
       Inspirational Artwork: "Freies Spiel Inspiration: Du hast jetzt alles gelernt, um so ein Muster zu machen! Wenn dich das Bild inspiriert, versuche etwas Ähnliches zu machen. Wenn nicht, mach etwas ganz alleine.\n\nMöchtest du wissen, wie unser Inspirationsmuster gemacht wurde?"
       InspirationalArtwork: Wenn dich dieses Bild inspiriert, versuche etwas ähnliches zu machen. Andererseits kannst du auch etwas komplett eigenes machen.
       InspirationalArtwork_2018: Wenn dich dieses Bild inspiriert, versuche etwas ähnliches zu machen. Andererseits kannst du auch etwas komplett eigenes machen.
+      InspirationalArtwork_2019: Wenn dich dieses Bild inspiriert, versuche etwas ähnliches zu machen. Andererseits kannst du auch etwas komplett eigenes machen.
       K-1 Artist 1 Assessment 1: Zeichne eine kurze Linie nach oben und eine lange Linie nach rechts!
       K-1 Artist Loops 1: Zeichne die Linie, indem du 4-mal nach Osten gehst.
       K-1 Artist Loops 2: Kannst du die gleiche Linie mit Hilfe einer Schleife zeichnen?
@@ -898,25 +911,33 @@ de:
       MC HOC 2016 Village Test: Oh nein! Zombies haben dich eingesperrt! Programmiere den Eisengolem so, dass er die Zombies jagt und sie angreift!
       MC_HOC_2017_01_Cole: Du musst auf deinem Weg alle Werkzeuge einsammeln. Bewege dich mit den **Pfeiltasten** umher und erreiche die Truhe, um zu gewinnen.
       MC_HOC_2017_01_RETRY: 'Führe den Agenten zur Druckplatte. Wähle dann "Ausführen" aus und verwende die Pfeiltasten, um den Spieler aus dem Haus zu lenken und die Truhe einzusammeln. '
+      MC_HOC_2017_01_RETRY_2019: 'Führe den Agenten zur Druckplatte. Wähle dann "Ausführen" aus und verwende die Pfeiltasten, um den Spieler aus dem Haus zu lenken und die Truhe einzusammeln. '
       MC_HOC_2017_02: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_02_Cole: 'Bewege den Agenten zur Druckplatte, sodass {currentPlayerName} zur Karte gelangen kann. '
+      MC_HOC_2017_02_Cole_2019: 'Bewege den Agenten zur Druckplatte, sodass {currentPlayerName} zur Karte gelangen kann. '
       MC_HOC_2017_02_Kiki: Bewege den Agenten zur Druckplatte, sodass der Spieler zum organgefarbenen Quadrat gelangen kann.
       MC_HOC_2017_02_Will: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_03_Cole: 'Lass den Agenten das Tor öffnen. '
+      MC_HOC_2017_03_Cole_2019: 'Lass den Agenten das Tor öffnen. '
       MC_HOC_2017_03_Kiki: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_04: Ändere die Schleife aus der letzten Aufgabe so, dass der Agent einen Weg über den breiteren Teil des Flusses baut.
       MC_HOC_2017_04POINT5_Cole: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_04POINT5_RYAN: Führe den Agenten zur Druckplatte.
+      MC_HOC_2017_04POINT5_RYAN_2019: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_04_Cole: Führe den Agenten zur Druckplatte.
+      MC_HOC_2017_04_Cole_2019: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_04_Kiki: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_05: Verwende eine Funktion, um den Agenten zur Druckplatte zu führen.
       MC_HOC_2017_05_Cole: Bringe den Spieler zur Schaufel.
+      MC_HOC_2017_05_Cole_2019: Bringe den Spieler zur Schaufel.
       MC_HOC_2017_05_Josh: Bringe den Spieler zur Schaufel.
       MC_HOC_2017_05_Kiki: Bringe den Spieler zum orangefarbenen Quadrat.
       MC_HOC_2017_06_Cole: Ändere diesen Code, um den Agenten eine Brücke über den Fluss bauen zu lassen.
+      MC_HOC_2017_06_Cole_2019: Ändere diesen Code, um den Agenten eine Brücke über den Fluss bauen zu lassen.
       MC_HOC_2017_06_Josh: Ändere diesen Code, um den Agenten eine Brücke über den Fluss bauen zu lassen.
       MC_HOC_2017_06_Kiki: Ändere diesen Code, um den Agenten eine Brücke über den Fluss bauen zu lassen.
       MC_HOC_2017_07_Cole: Zerstöre das Eis und bringe {currentPlayerName} zur Lore.
+      MC_HOC_2017_07_Cole_2019: Zerstöre das Eis und bringe {currentPlayerName} zur Lore.
       MC_HOC_2017_07_Kiki: Verwende die Funktion, um den Weg zum orangefarbenen Quadrat zu räumen.
       MC_HOC_2017_07a_Kiki: Räume den Weg zum orangefarbenen Quadrat.
       MC_HOC_2017_08_Cole: Ändere die vorhandene Funktion so, dass sie in diesem Biom funktioniert.
@@ -929,14 +950,17 @@ de:
       MC_HOC_2017_10_Cole_old: Erstelle eine Funktion, um diese Lore fertigzustellen.
       MC_HOC_2017_10_Kiki: Erstelle eine Funktion, um diese Lore fertigzustellen.
       MC_HOC_2017_10_RETRY: Erstelle eine Funktion, um diese Lore fertigzustellen.
+      MC_HOC_2017_10_RETRY_2019: Erstelle eine Funktion, um diese Lore fertigzustellen.
       MC_HOC_2017_10_RYAN: Erstelle eine Funktion, um diese Lore fertigzustellen.
       MC_HOC_2017_10_RYAN2: Erstelle eine Funktion, um diese Lore fertigzustellen.
       MC_HOC_2017_13_Cole: "**Freies Spiel:**  Jetzt kannst du auf eigene Faust losziehen!"
       MC_HOC_2017_4.5v2: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_Ali: Verwende die Funktion, um einen Weg durch die Lava zu suchen.
+      MC_HOC_2017_Ali_2019: Verwende die Funktion, um einen Weg durch die Lava zu suchen.
       MC_HOC_2017_FP10x10: "**Freies Spiel:** Schaffst du es, alle Diamanten in diesem Level einzusammeln? "
       MC_HOC_2017_FP10x10_RE: "**Freies Spiel:** Schaffst du es, alle Diamanten in diesem Level einzusammeln? "
       MC_HOC_2017_FP20x20: "**Freies Spiel:**  Jetzt kannst du auf eigene Faust losziehen!"
+      MC_HOC_2017_FP20x20_2019: "**Freies Spiel:**  Jetzt kannst du auf eigene Faust losziehen!"
       MC_HOC_2017_Ryan_03: Verwende jetzt Schleifen, um den Agenten eine Brücke über den Fluss bauen zu lassen, indem er Blöcke im Wasser platziert.
       MC_HOC_2017_Ryan_05: Zerstöre diese Kakteen, sodass der Spieler das Ziel erreichen kann.
       MC_HOC_Kiki_02: Führe den Agenten zur Druckplatte.
@@ -1245,6 +1269,8 @@ de:
         Dieses Haus braucht ein Dach! Zeichne das Dreieck.  Hinweis: alle drei Seiten sind gleich lang.
       courseC_artist_prog5_2018: |-
         Dieses Haus braucht ein Dach! Zeichne das Dreieck.  Hinweis: alle drei Seiten sind gleich lang.
+      courseC_artist_prog5_2019: |-
+        Dieses Haus braucht ein Dach! Zeichne das Dreieck.  Hinweis: alle drei Seiten sind gleich lang.
       courseC_maze_debugging10: Bereinige diesen Level von Fehlern, indem du die Bausteine so anordnest, dass ich das Schwein erreiche.
       courseD_artist_binary1: "Bei der binären Schreibweise werden Informationen mit nur zwei Optionen repräsentiert.  Hier nutzen wir die Option „aus“ (dargestellt durch die Nummer 0) und „an“ (dargestellt durch die Nummer 1).\n\nWir haben dir ein Gitter aus „Pixeln“ zur Verfügung gestellt, durch das du laufen kannst und in dem du Designs erstellen kannst, indem du nur bestimmte Quadrate anschaltest.  Kannst du den Künstler „01010101“ in Binärcode in der ersten Reihe zeichnen lassen?"
       courseD_artist_binary1_2018: "Bei der binären Schreibweise werden Informationen mit nur zwei Optionen repräsentiert.  Hier nutzen wir die Option „aus“ (dargestellt durch die Nummer 0) und „an“ (dargestellt durch die Nummer 1).\n\nWir haben dir ein Gitter aus „Pixeln“ zur Verfügung gestellt, durch das du laufen kannst und in dem du Designs erstellen kannst, indem du nur bestimmte Quadrate anschaltest.  Kannst du den Künstler „01010101“ in Binärcode in der ersten Reihe zeichnen lassen?"
@@ -1263,6 +1289,7 @@ de:
       courseD_bee_nestedLoops6_2018: Bring mich zu der Sonnenblume!
       courseD_bee_nestedLoops8: 'Sammle den gesamten Nektar jeder Blüte und erzeuge Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.'
       courseD_bee_nestedLoops8_2018: 'Sammle den gesamten Nektar jeder Blüte und erzeuge Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.'
+      courseD_bee_nestedLoops8_2019: 'Sammle den gesamten Nektar jeder Blüte und erzeuge Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.'
       courseD_bounce_events10: Jetzt ist oben ein Tor. Hänge die Bausteine „Punkt erzielen“ und „Punkt für den Gegner“ an die Bausteine „Wenn Ball im Tor“ und „Wenn Ball Schläger verfehlt“, um ein Spiel zu erzeugen. Finde heraus, wie viele Punkte du erreichen kannst, bevor dein Gegner zwei Punkte erhält.
       courseD_bounce_events11: Jetzt kannst du Bausteine an den „wenn Ausführen“-Baustein anhängen. Du musst den neuen Baustein „neuen Ball werfen“ an mehr als einer Stelle einsetzen. Versuche, die Geschwindigkeit des Schlägers und des Balls zu verändern und probiere, wie viele Punkte Du machen kannst, bevor dein Gegner zwei Mal punktet.
       courseD_bounce_events12: Erstelle dein eigenes Bounce-Spiel. Du kannst die Bilder und Regeln ändern. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
@@ -1277,8 +1304,10 @@ de:
       courseD_debugging_3: Diese Bausteine nerven mich wirklich. Korrigiere den/die Fehler, sammle den ganzen Nektar und erzeuge den ganzen Honig.
       courseD_maze_nestedLoops4: "Bring mich zu der Sonnenblume!\n(Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen."
       courseD_maze_nestedLoops4_2018: "Bring mich zu der Sonnenblume!\n(Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen."
+      courseD_maze_nestedLoops4_2019: "Bring mich zu der Sonnenblume!\n(Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen."
       courseD_maze_nestedLoops6: Bring mich zu der Sonnenblume!
       courseD_maze_nestedLoops6_2018: Bring mich zu der Sonnenblume!
+      courseD_maze_nestedLoops6_2019: Bring mich zu der Sonnenblume!
       courseE_artist_functions1: "Hallo. Ich Zombie-Künstler. Ich zeichnen liebe! Hilf mir, die quadratischen Gläser zu zeichnen.  Hinweis: Die Brücke zwischen den Gläsern ist 25 Pixel kürzer als die Länge der Quadrate."
       courseE_artist_functions1_2018: "Hallo. Ich Zombie-Künstler. Ich zeichnen liebe! Hilf mir, die quadratischen Gläser zu zeichnen.  Hinweis: Die Brücke zwischen den Gläsern ist 25 Pixel kürzer als die Länge der Quadrate."
       courseE_bee_concept1: Sammle den ganzen Nektar von allen Blumen. Benutze eine verschachtelte Schleife.
@@ -1294,10 +1323,13 @@ de:
       courseE_farmer_functions4b_2018: Benutze deine neue Funktion um dieses Puzzle zu lösen.
       courseF_artist_for7: Nimm drei kleine Änderungen an dem Code aus dem vorherigem Level vor, um dies zu erreichen!
       courseF_artist_for7_2018: Nimm drei kleine Änderungen an dem Code aus dem vorherigem Level vor, um dies zu erreichen!
+      courseF_artist_for7_2019: Nimm drei kleine Änderungen an dem Code aus dem vorherigem Level vor, um dies zu erreichen!
       courseF_artist_for_challenge1: Kriegst du heraus, wie man das Bild nachzeichnet?
       courseF_artist_for_challenge1_2018: Kriegst du heraus, wie man das Bild nachzeichnet?
+      courseF_artist_for_challenge1_2019: Kriegst du heraus, wie man das Bild nachzeichnet?
       courseF_artist_for_challenge2: Kriegst du heraus, wie man das Bild mit einer einzigen Schleife nachzeichnet?
       courseF_artist_for_challenge2_2018: Kriegst du heraus, wie man das Bild mit einer einzigen Schleife nachzeichnet?
+      courseF_artist_for_challenge2_2019: Kriegst du heraus, wie man das Bild mit einer einzigen Schleife nachzeichnet?
       courseF_artist_fwp1: Bearbeite die Funktion "Zeichne ein Quadrat", um Fehler zu finden.
       courseF_artist_fwp1_2018: Bearbeite die Funktion "Zeichne ein Quadrat", um Fehler zu finden.
       courseF_artist_fwp2: Bearbeiten Sie die Funktion, um einen Parameter namens "Länge" zu akzeptieren.
@@ -1320,8 +1352,10 @@ de:
       courseF_artist_fwp9_2018: 'Freizeit: Zeichne etwas cooles! Spiele mit die Stiftbreite zu sehen, wie unterschiedlich Deine Zeichnungen aussehen kann!'
       courseF_bee_for8: "Jetzt hast du es! Wie hoch sollte deine Schrittweite sein, um 3, 6, 9, 12, 15 Nektarportionen zu sammeln?\nHinweis: Was musst du jeder Zahl hinzufügen, um die Zahl danach zu bekommen?"
       courseF_bee_for8_2018: "Jetzt hast du es! Wie hoch sollte deine Schrittweite sein, um 3, 6, 9, 12, 15 Nektarportionen zu sammeln?\nHinweis: Was musst du jeder Zahl hinzufügen, um die Zahl danach zu bekommen?"
+      courseF_bee_for8_2019: "Jetzt hast du es! Wie hoch sollte deine Schrittweite sein, um 3, 6, 9, 12, 15 Nektarportionen zu sammeln?\nHinweis: Was musst du jeder Zahl hinzufügen, um die Zahl danach zu bekommen?"
       courseF_bee_for_challenge2: Löse diese Aufgabe mit so wenig Bausteinen wie möglich.
       courseF_bee_for_challenge2_2018: Löse diese Aufgabe mit so wenig Bausteinen wie möglich.
+      courseF_bee_for_challenge2_2019: Löse diese Aufgabe mit so wenig Bausteinen wie möglich.
       courseF_bee_for_challenge3: Löse diese Aufgabe mit so wenig Bausteinen wie möglich.
       courseF_bee_functions4: Die „bewege und hole Nektar“- Funktion dreht die Biene, sammelt Nektar und bringt die Biene an den Ausgangsort zurück. Benutze die Funktion, um den ganzen Nektar zu sammeln.
       courseF_bee_functions4_2018: Die „bewege und hole Nektar“- Funktion dreht die Biene, sammelt Nektar und bringt die Biene an den Ausgangsort zurück. Benutze die Funktion, um den ganzen Nektar zu sammeln.

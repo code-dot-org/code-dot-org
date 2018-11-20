@@ -347,6 +347,7 @@
   volunteer_engineer_submission_field_description: "Опис"
   volunteer_engineer_submission_field_email: "Емаил адреса"
   volunteer_engineer_submission_field_email_placeholder: "Емаил адреса"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Погледајте нашу политику приватности)"
   volunteer_engineer_submission_field_email_preference_yes: 'Да'
   volunteer_engineer_submission_field_email_preference_no: 'не'
   volunteer_engineer_submission_submit: "Пошаљи"
@@ -429,7 +430,7 @@
   dashboard_sections_table_course: "Курс"
   dashboard_sections_table_students: "Студенти"
   dashboard_sections_table_code: "Секција програмирања"
-  dashboard_sections_name: "Име секције"
+  dashboard_sections_name: 'Име секције'
   dashboard_sections_choose_secret: "Ако желите да дате вашим ученицима, изаберите тајну <b>реч</b>или<b>слику</b>за ту секцију."
   dashboard_sections_secret_word: "<b>Реч</b>вам дозвољава да поставите тајну реч за сваког ученика."
   dashboard_sections_secret_picture: "<b>Слика</b>вам дозвољава да поставите тајну слику за сваког ученика,идеално за оне ученике који још не знају да пишу."
@@ -438,7 +439,7 @@
   dashboard_sections_switch_section: 'Промените групу:'
   dashboard_students_add_multiple: 'Укуцајте или налепите имена ваших ученика, у сваком реду по једног:'
   dashboard_students_new_section: "Направили сте нову групу! Сада додајте ваше ученике користећи дугмад <b>Додајте ученика</b> и <b> Додајте више ученика</b> изнад."
-  dashboard_students_name: "Име"
+  dashboard_students_name: 'Име'
   dashboard_students_progress: "Напредак"
   dashboard_students_male: "Мушко"
   dashboard_students_female: "Женско"
@@ -777,6 +778,8 @@
   user_header_signin: "Пријави се"
   user_header_playlab: "Играоница"
   user_header_flappy: "Флапи"
+  applab_tile_start_tutorial: "Покрени"
+  hoc_overview_start_tutorial: "Покрени"
   hoc2018_creativity: "креативност"
   hoc2018_creativity_create: "Креирај"
   hoc2018_creativity_hoc_coming: "Час програмирања долази…"
@@ -798,3 +801,6 @@
   hoc2018_mc_video_title_anybody_can_learn: "Свако може да научи"
   hoc2018_mc_homepage_join_us: "Pridruži nam se"
   hoc2018_mc_homepage_try_it: "Пробајте"
+  hoc2018_dance_party_button: "Покрени"
+  hoc2018_dance_teacher_resources_tile2_button: "Активност ван мреже"
+  hoc2018_dance_amazon_about_future_engineer_button: "Сазнајте више"

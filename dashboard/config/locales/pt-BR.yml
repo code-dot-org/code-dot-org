@@ -94,6 +94,7 @@ pt-BR:
   prize: prêmio
   more_info: Mais informações
   auth:
+    continue_with: Continuar com %{provider}
     sign_in_with: Entre com %{provider}
     signed_in: Sessão iniciada!
     signed_out: Você saiu da <a href="%{url}">Code.org</a>.
@@ -123,6 +124,7 @@ pt-BR:
     already_in_use: Seu %{provider} já está conectado a outra conta do Code.org.
     already_linked: Seu %{provider} já está conectado a outra conta do Code.org.
   signup_form:
+    email_signup: Registre-se com o seu endereço de e-mail
     student_count: "%{count} alunos já se registraram."
     teacher_count: "%{count} professores já se registraram."
     overview: Cadastre-se para ter uma conta e acompanhar seu progresso ou gerenciar
@@ -397,6 +399,7 @@ pt-BR:
       playlab: Laboratório
       minecraft: Minecraft
       flappy: Flappy bird
+      dance: Festa dançante
       view_all: Ver todos os projetos...
     popup:
       progress_for_user: progresso de %{name}'s
@@ -432,7 +435,6 @@ pt-BR:
       example: Solução do Exemplo
       example_with_number: Solução do Exemplo %{solution_number}
       submitted_on: 'Enviado em:'
-      last_updated: 'Última atualização:'
       unsubmit: Cancelar envio
       worked_with: Trabalhou com
       update_lock_settings: Atualize as configurações de bloqueio aqui.
@@ -824,6 +826,8 @@ pt-BR:
         funcionar, e então compartilhe seu aplicativo em apenas alguns segundos.
       audience: A partir de 13 anos
       cta: Saiba como
+    dance:
+      title: Festa dançante
     hoc:
       title: Labirinto clássico
       body: Experimente as noções básicas de ciência da computação. Milhões de pessoas

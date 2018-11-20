@@ -1,6 +1,18 @@
 sk:
   data:
     authored_hints:
+      2-3 Artist 1 new_authored_hint:
+        2-3_Artist_1_new_a: Ak použiješ blok, aby si ma `posunul dopredu o 100 pixelov`, tak ja automaticky nakreslím čiaru.
+        2-3_Artist_1_new_b: Máš problém otočiť sa v rohu? Použi blok `otoč vpravo o 90 stupňov`.
+      2-3 Artist 11_authored_hint:
+        2-3_Artist_11_a: 'Maš problém s uhlami? Potrebuješ prejsť 360 stupňov v 8 ťahoch. Koľko je 360/8? '
+      2-3 Artist 12_authored_hint:
+        2-3_Artist_12_a: Celý kruh má 360 stupňov, takže ak sa umelec otoči o 1 stupeň v každom cykle, tak to potrebuje spraviť 360 krát.
+      2-3 Artist 2 new_authored_hint:
+        2-3_Artist_2_new_a: Umelec nevyzerá byť otočený správnym smerom. Môžeš ho otočit predtým ako nakreslíš ćiaru?
+      2-3 Artist 3new_authored_hint:
+        2-3_Artist_3new_a: Koľko je 100-70? Podľa problému z príbehu, to je toľko, aký vysoký má byť klobúk!
+        2-3_Artist_3new_b: Umelec nevyzerá byť otočený správnym smerom. Môžeš ho otočit predtým ako nakreslíš ćiaru?
       2-3 Artist 4_authored_hint:
         2-3_Artist_4_a: Pre dokončenie domu stačí, aby ste nakreslili štvorec!
       2-3 Artist 9 NEW_authored_hint:
@@ -48,6 +60,8 @@ sk:
         Course_4_Artist_For_Loops_Challenge_a: Najväčší mnohouholník má 19 strán.
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Funkciu môžete volať v programe viackrát. Skúste ju volať dvakrát, aby ste vyriešili tento hlavolam.
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_a: Funkciu môžete volať v programe viackrát. Skúste ju volať dvakrát, aby ste vyriešili tento hlavolam.
       Inspirational Artwork_authored_hint:
         double_loop: Skúste vložiť slučku "for" dovnútra slučky "opakovať".
       MC Agent Freeplay_authored_hint:
@@ -58,7 +72,19 @@ sk:
         MC_HOC_2017_01_RETRY_a: Z panela s nástrojmi presuň jeden blok "posuň sa dopredu" do pracovného priestoru a prichyť ho na mieste pod blokom "pri spustení".
         MC_HOC_2017_01_RETRY_b: Nezabudni kliknúť na tlačidlo "Spustiť", aby sa spustil kód pre agenta.
         MC_HOC_2017_01_RETRY_c: Keď agent prejde všetok svoj kód, môžeš posúvať hráča pomocou klávesov so šípkami!
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Z panela s nástrojmi presuň jeden blok "posuň sa dopredu" do pracovného priestoru a prichyť ho na mieste pod blokom "pri spustení".
+        MC_HOC_2017_01_RETRY_b: Nezabudni kliknúť na tlačidlo "Spustiť", aby sa spustil kód pre agenta.
+        MC_HOC_2017_01_RETRY_c: Keď agent prejde všetok svoj kód, môžeš posúvať hráča pomocou klávesov so šípkami!
       MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Posuň agenta dopredu o dve políčka, aby sa postavil na prítlačnú dosku. To otvorí hráčovi dvere.
+        MC_HOC_2017_02_Cole_b: |-
+          Stlač tlačidlo "Spustiť"!
+          
+          Kód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.
+        MC_HOC_2017_02_Cole_c: Keď agent otvorí dvere, posúvaj hráča po mape pomocou klávesov so šípkami!
+        MC_HOC_2017_02_Cole_d: Uisti sa, že agent ide po ceste vyznačenej na mape!
+      MC_HOC_2017_02_Cole_2019_authored_hint:
         MC_HOC_2017_02_Cole_a: Posuň agenta dopredu o dve políčka, aby sa postavil na prítlačnú dosku. To otvorí hráčovi dvere.
         MC_HOC_2017_02_Cole_b: |-
           Stlač tlačidlo "Spustiť"!
@@ -75,12 +101,18 @@ sk:
       MC_HOC_2017_03_Cole_authored_hint:
         MC_HOC_2017_03_Cole_a: Keď dostaneš agenta k prítlačnej doske, pomocou klávesov so šípkami môžeš presunúť hráča ku kompasu!
         MC_HOC_2017_03_Cole_b: Zdá sa ti kód trochu dlhý? Skús použiť cyklus "opakuj" a uvidíš, či prídeš na to, ako ho skrátiť!
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_a: Keď dostaneš agenta k prítlačnej doske, pomocou klávesov so šípkami môžeš presunúť hráča ku kompasu!
+        MC_HOC_2017_03_Cole_b: Zdá sa ti kód trochu dlhý? Skús použiť cyklus "opakuj" a uvidíš, či prídeš na to, ako ho skrátiť!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
           Ak prejdeš po týchto dvoch prítlačných doskách, hráčovi sa sprístupní cesta. 
           
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Pomocou bloku "Otoč sa v pravo" zmeň smer agenta '
+        MC_HOC_2017_04POINT5_RYAN_a: Agentovi sa stačí dostať k prvej prítlačnej doske, aby Alex alebo Steve mohli prejsť k sekere.
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
         MC_HOC_2017_04POINT5_RYAN_b: 'Pomocou bloku "Otoč sa v pravo" zmeň smer agenta '
         MC_HOC_2017_04POINT5_RYAN_a: Agentovi sa stačí dostať k prvej prítlačnej doske, aby Alex alebo Steve mohli prejsť k sekere.
       MC_HOC_2017_04_Cole_authored_hint:
@@ -90,7 +122,17 @@ sk:
           
           Kód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.
         MC_HOC_2017_04_Cole_b: Keď sa agent dostane na prítlačnú dosku, otvorí hráčovi dvere.
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_a: Agent musí použiť príkaz "posuň sa dopredu" 7-krát. Ako môžeš použiť cyklus "opakuj", aby sa to stalo?
+        MC_HOC_2017_04_Cole_c: |-
+          Stlač tlačidlo "Spustiť"!
+          
+          Kód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.
+        MC_HOC_2017_04_Cole_b: Keď sa agent dostane na prítlačnú dosku, otvorí hráčovi dvere.
       MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Vedel si, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús sa pohybovať dopredu  **a** umiestniť dosku vo vnútri cyklu "opakuj", aby si dokončil túto úlohu.
+        MC_HOC_2017_05_Cole_b: Dostaň agenta cez rieku postavením mostu popri tom, ako kráčaš.
+      MC_HOC_2017_05_Cole_2019_authored_hint:
         MC_HOC_2017_05_Cole_a: Vedel si, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús sa pohybovať dopredu  **a** umiestniť dosku vo vnútri cyklu "opakuj", aby si dokončil túto úlohu.
         MC_HOC_2017_05_Cole_b: Dostaň agenta cez rieku postavením mostu popri tom, ako kráčaš.
       MC_HOC_2017_05_Josh_authored_hint:
@@ -98,9 +140,16 @@ sk:
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: Koľkokrát sa tento cyklus spustí? Koľkokrát *by sa mal* spustiť?
         MC_HOC_2017_06_Cole_b: 'Pomôž agentovi postaviť most po celej šírke rieky! '
+      MC_HOC_2017_06_Cole_2019_authored_hint:
+        MC_HOC_2017_06_Cole_a: Koľkokrát sa tento cyklus spustí? Koľkokrát *by sa mal* spustiť?
+        MC_HOC_2017_06_Cole_b: 'Pomôž agentovi postaviť most po celej šírke rieky! '
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Skús do cyklu"opakuj" vložiť viac ako jeden pokyn!
       MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_c: Všetko, čo musíš spraviť s agentom je vyčistiť chodník k banskému vozíku.
+        MC_HOC_2017_07_Cole_a: Ak chceš vyriešiť túto úlohu, zisti, čo robí funkcia "uvoľni cestu". Z panela s nástrojmi vyber malý zelený blok "uvoľni cestu" toľkokrát, koľko potrebuješ.
+        MC_HOC_2017_07_Cole_b: Skús zmiešať bloky funkcie s ďalšími blokmi z panela s nástrojmi, aby si vyriešil túto úlohu.
+      MC_HOC_2017_07_Cole_2019_authored_hint:
         MC_HOC_2017_07_Cole_c: Všetko, čo musíš spraviť s agentom je vyčistiť chodník k banskému vozíku.
         MC_HOC_2017_07_Cole_a: Ak chceš vyriešiť túto úlohu, zisti, čo robí funkcia "uvoľni cestu". Z panela s nástrojmi vyber malý zelený blok "uvoľni cestu" toľkokrát, koľko potrebuješ.
         MC_HOC_2017_07_Cole_b: Skús zmiešať bloky funkcie s ďalšími blokmi z panela s nástrojmi, aby si vyriešil túto úlohu.
@@ -119,6 +168,9 @@ sk:
       MC_HOC_2017_10_RETRY_authored_hint:
         MC_HOC_2017_10_Cole_b: Nevieš kam ísť? Pohľadaj bodkovanú čiaru!
         MC_HOC_2017_10_Cole_a: Zjednoduš riešenie tohto hlavolamu pomocou funkcií!
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_b: Nevieš kam ísť? Pohľadaj bodkovanú čiaru!
+        MC_HOC_2017_10_Cole_a: Zjednoduš riešenie tohto hlavolamu pomocou funkcií!
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Skús pomocou agenta vybudovať mosty, aby sa Alex alebo Steve mohli prechádzať za okrajmi mapy.
       MC_HOC_2017_4.5v2_authored_hint:
@@ -133,7 +185,16 @@ sk:
           Kód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.
         MC_HOC_2017_08_RY_b: Existuje MNOHO spôsobov, ako vyriešiť tento hlavolam. Skús niektoré z nich!
         MC_HOC_2017_08_RY_c: Skús nasledovať bodkovanú čiaru pre jednoduchú cestu cez lávu.
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: |-
+          Stlač tlačidlo "Spustiť"!
+          
+          Kód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.
+        MC_HOC_2017_08_RY_b: Existuje MNOHO spôsobov, ako vyriešiť tento hlavolam. Skús niektoré z nich!
+        MC_HOC_2017_08_RY_c: Skús nasledovať bodkovanú čiaru pre jednoduchú cestu cez lávu.
       MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Skús pomocou agenta vybudovať cesty pre banský vozík, aby si mohol objavovať svet!
+      MC_HOC_2017_FP20x20_2019_authored_hint:
         MC_HOC_2017_13_Cole_a: Skús pomocou agenta vybudovať cesty pre banský vozík, aby si mohol objavovať svet!
       NEW Course 4 Artist Params inspire_authored_hint:
         double_loop: Skúste vložiť slučku "for" dovnútra slučky "opakovať".
@@ -360,8 +421,14 @@ sk:
         courseF_maze_ramp6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
       grade2_CaringForNewPet_4_authored_hint:
         2-3_Maze_6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+      grade2_MakeDogTag_1_authored_hint:
+        2-3_Artist_1_new_a: Ak použiješ blok, aby si ma `posunul dopredu o 100 pixelov`, tak ja automaticky nakreslím čiaru.
+        2-3_Artist_1_new_b: Máš problém otočiť sa v rohu? Použi blok `otoč vpravo o 90 stupňov`.
       grade2_PuppyLoops_8_authored_hint:
         2-3_Artist_Debugging_2_a: 'Nápoveda: Každý fúz je 75 pixelov dlhý.'
+      grade4_review_artist1_authored_hint:
+        2-3_Artist_1_new_a: Ak použiješ blok, aby si ma `posunul dopredu o 100 pixelov`, tak ja automaticky nakreslím čiaru.
+        2-3_Artist_1_new_b: Máš problém otočiť sa v rohu? Použi blok `otoč vpravo o 90 stupňov`.
       grade5_artist_for_loops10_authored_hint:
         Course_4_Artist_For_Loops_Challenge_a: Najväčší mnohouholník má 19 strán.
       grade5_artist_functionparameters10_authored_hint:

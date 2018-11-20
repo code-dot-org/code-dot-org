@@ -447,7 +447,7 @@
   dashboard_sections_table_pairing_allowed: "Programación por parellas"
   dashboard_sections_table_students: "Alumnas/os"
   dashboard_sections_table_code: "Código da sección"
-  dashboard_sections_name: "Nome da sección"
+  dashboard_sections_name: 'Nome da sección'
   dashboard_sections_choose_secret: "Se queres crear contas para os teus alumnos, escolle un tipo de <b>palabra secreta</b> ou <b>imaxe</b> para a clase."
   dashboard_sections_secret_word: "Unha <b>palabra</b> permite que definas unha palabra secreta para cada alumno."
   dashboard_sections_secret_picture: "Unha <b>imaxe</b> permite que definas unha imaxe secreta para cada alumno, o que é ideal para os alumnos máis cativos que aínda non saben teclear."
@@ -457,7 +457,7 @@
   dashboard_sections_close: "Pechar"
   dashboard_students_add_multiple: 'Teclea ou apega os nomes dos teus alumnos, un por liña:'
   dashboard_students_new_section: "Creaches unha nova clase! Agora, agrega os teus alumnos usando os botóns de enriba <b>Agregar alumno</b> e <b>Agregar varios alumnos</b>."
-  dashboard_students_name: "Nome"
+  dashboard_students_name: 'Nome'
   dashboard_students_progress: "Progreso"
   dashboard_students_male: "Masculino"
   dashboard_students_female: "Feminino"
@@ -1042,8 +1042,15 @@
   user_header_flappy: "Flappy bird"
   user_header_view_my_projects: "Ver os meus proxectos"
   view_all_sections: "Ver todos os grupos"
+  applab_tile_start_tutorial: "Comezar"
+  account_sign_up_child_accept_terms: "Confirmo que teño autorización de meus pais ou titores legais para empregrar os servizos de Code.org."
+  hoc_overview_start_tutorial: "Comezar"
   hoc2018_creativity_create: "Crear"
   hoc2018_mc_start: "Comezar"
   hoc2018_mc_video_title_inspire_girl: "Anima a unha nena"
   hoc2018_mc_homepage_join_us: "Participa"
   hoc2018_mc_homepage_try_it: "Próbao"
+  hoc2018_dance_party_button: "Comezar"
+  hoc2018_dance_teacher_resources_tile1_button: "Planificación da lección"
+  hoc2018_dance_teacher_resources_tile2_button: "Actividade off-line"
+  hoc2018_dance_amazon_about_future_engineer_button: "Aprender máis"

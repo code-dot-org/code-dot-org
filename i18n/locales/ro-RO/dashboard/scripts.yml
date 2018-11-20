@@ -3534,10 +3534,7 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
         dance:
-          title: '[șir gol]'
           description_audience: '[șir gol]'
-          description_short: '[șir gol]'
-          description: '[șir gol]'
         frozen-2018-test-b:
           description: '[șir gol]'
           description_short: '[șir gol]'
@@ -3549,7 +3546,6 @@ ro:
               description_teacher: '[șir gol]'
         aquatic:
           description_audience: '[șir gol]'
-          description: '[șir gol]'
         sconyers:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -3564,7 +3560,6 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
         dance-draft:
-          title: '[șir gol]'
           description: '[șir gol]'
           description_short: '[șir gol]'
           description_audience: '[șir gol]'
@@ -3575,4 +3570,75 @@ ro:
         cspplayground:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
+          description: '[șir gol]'
+        dance-extras:
+          title: '[șir gol]'
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        coursef-2019:
+          description_short: Învățați toate conceptele din fundamentele informaticii şi creați propria dvs. artă, poveste sau joc.
+          stages:
+            'Programming: My Robotic Friends':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Sequence in Maze:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Debugging with Scrat:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Programming in Artist:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Loops: My Loopy Robotic Friends':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Loops in Artist:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Nested Loops in Bee/Zombie:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Nested Loops with Frozen:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Conditionals in Farmer:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Functions in Minecraft:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Envelope Variables:
+              name: Variabile de tip plic
+            Variables as Constant in Artist:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Variables that Change in Bee:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Variables that Change in Artist:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            For Loop Fun:
+              name: Pentru distracția cu bucle
+            Learning Sprites with Sprite Lab:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Alien Dance Party with Sprite Lab:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Pet Giraffe with Sprite Lab:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        dance-low:
+          description_audience: '[șir gol]'
           description: '[șir gol]'

@@ -779,12 +779,26 @@ pl:
       Crack Random Substitution_2018: Instrukcje
       Crack a Caesar Cipher: Instrukcje
       Crack a Caesar Cipher_2018: Instrukcje
+      Dance_Party_01: Przeciągnij blok "zrób nowy" do obszaru roboczego i podłącz go w bloku "układ".
+      Dance_Party_01_low: Przeciągnij blok "zrób nowy" do obszaru roboczego i podłącz go w bloku "układ".
+      Dance_Party_02: Spraw, aby łoś rozpoczął nowy ruch po 4 taktach!
+      Dance_Party_03: Teraz spraw, aby tancerz rozpoczął nowy ruch po 6 taktach!
+      Dance_Party_04: Dodaj efekt tła do swojego programu.
+      Dance_Party_05: Użyj innego nowego bloku, aby tancerz zmieniał ruchy co 2 takty.
+      Dance_Party_06: Utwórz zapasową kopię tancerza o nazwie "kopia_tancerza1", aby zatańczył z kotem.
+      Dance_Party_08: Czy możesz utworzyć obu zapasowych tancerzy tej samej wielkości?
+      Dance_Party_09: Użyj bloku "ustaw odcień", aby zmienić kolor tancerza.
+      Dance_Party_10: Spraw, aby drugi tancerz również reagowała na muzykę za pomocą bloku "zaczyna się to".
+      Dance_Party_11.5: Użyj bloków "wszystkie kaczki", aby kaczki tańczyły razem.
+      Dance_Party_11: Blok "po naciśnięciu strzałki w górę" służy do uruchomienia kodu po naciśnięciu klawisza strzałki w górę. Postaraj się, aby tancerz wykonał szybki ruch, gdy naciskasz ten klawisz.
+      Dance_Party_11b: Spraw, aby Robot raz "tupnął", gdy naciśniesz klawisz strzałki w prawo, i raz "głośno klasnął", gdy naciśniesz klawisz strzałki w górę. Wykonaj tupnij-klaśnij tak szybko, jak potrafisz!
       Find the Wizard: "Buduj, co chcesz. To jest przykład\ngry w zgadywanie numeru!"
       Find the Wizard_2018: "Buduj, co chcesz. To jest przykład\ngry w zgadywanie numeru!"
       Food Fight!: "Dodaliśmy dla Ciebie jeszcze jedną funkcję. \\r\n\\r\nUżyj instrukcji \"jeśli\" i zaprogramuj swoją grę wywołując funkcję \"level_up\" (poziom wyżej), jeśli \"player_score\" (wynik gracza) przekroczy pewną liczbę. \\r\n\\r\nNa przykład: \"player_score\" > 6\\r\n\\r\nZagraj w tę grę i spowoduj, że osiągniesz poziom 3, aby przejść do następnej łamigłówki. "
       FoodFight: Jest to przykład gry, jaką można stworzyć w play lab.
       FoodFight_2018: Jest to przykład gry, jaką można stworzyć w play lab.
       Function intro Ryan: Aby przerzucić pomost i dostać się do pochodni, dwukrotnie użyj funkcji "build bridge".
+      Function intro Ryan_2019: Aby przerzucić pomost i dostać się do pochodni, dwukrotnie użyj funkcji "build bridge".
       Get To The Goal: "Buduj, co chcesz. To jest przykład\ngry w zgadywanie numeru!"
       Guess The Number 2: "Buduj, co chcesz. To jest przykład\ngry w zgadywanie numeru!"
       Guess The Number: "Buduj, co chcesz. To jest przykład\ngry w zgadywanie numeru!"
@@ -804,6 +818,7 @@ pl:
       Inspirational Artwork: "Dowolne inspiracje: Nauczyłeś się wszystkiego, co musisz wiedzieć, aby utworzyć podobny wzór! Jeśli ten obraz Cię inspiruje, to spróbuj utworzyć coś podobnego. W przeciwnym razie, utwórz coś według własnego pomysłu.\\r\n\\r\nCzy chcesz wiedzieć, jak powstał nasz wzór? "
       InspirationalArtwork: Jeśli ten obrazek zainspiruje cię, spróbuj zrobić coś podobnego. W przeciwnym razie możesz stworzyć coś własnego.
       InspirationalArtwork_2018: Jeśli ten obrazek zainspiruje cię, spróbuj zrobić coś podobnego. W przeciwnym razie możesz stworzyć coś własnego.
+      InspirationalArtwork_2019: Jeśli ten obrazek zainspiruje cię, spróbuj zrobić coś podobnego. W przeciwnym razie możesz stworzyć coś własnego.
       K-1 Artist 1 Assessment 1: Narysuj krótką linię do góry a długą w prawo!
       K-1 Artist Loops 1: Narysuj tę linię poruszając się na wschód (E - East) 4 razy.
       K-1 Artist Loops 2: Teraz, rysuj tę samą linię stosując pętlę.
@@ -949,25 +964,33 @@ pl:
       MC_HOC_2017_01_Cole: "Musisz zbierać narzędzia podczas podróży.\nPoruszaj się używając klawiszy strzałek i dostań się do skrzyni wewnątrz domu, aby wygrać"
       MC_HOC_2017_01_Kiki: Kliknij "Uruchom", aby przenieść gracza na pomarańczowy kwadrat wewnątrz domku.
       MC_HOC_2017_01_RETRY: 'Pokieruj Agentem tak, by dotarł do płyty naciskowej, a następnie naciśnij przycisk "Uruchom". Użyj klawiszy strzałek, aby wyjść postacią gracza z domu i zabrać skrzynię. '
+      MC_HOC_2017_01_RETRY_2019: 'Pokieruj Agentem tak, by dotarł do płyty naciskowej, a następnie naciśnij przycisk "Uruchom". Użyj klawiszy strzałek, aby wyjść postacią gracza z domu i zabrać skrzynię. '
       MC_HOC_2017_02: Doprowadź Agenta do płytki naciskowej.
       MC_HOC_2017_02_Cole: 'Pokieruj Agentem na płytę naciskową, aby {currentPlayerName} mógł dotrzeć do mapy. '
+      MC_HOC_2017_02_Cole_2019: 'Pokieruj Agentem na płytę naciskową, aby {currentPlayerName} mógł dotrzeć do mapy. '
       MC_HOC_2017_02_Kiki: Pokieruj Agentem na płytę naciskową, a następnie umieść gracza na pomarańczowym polu.
       MC_HOC_2017_02_Will: Doprowadź Agenta do płytki naciskowej.
       MC_HOC_2017_03_Cole: 'Zakoduj Agenta tak, aby otworzył bramę. '
+      MC_HOC_2017_03_Cole_2019: 'Zakoduj Agenta tak, aby otworzył bramę. '
       MC_HOC_2017_03_Kiki: Doprowadź Agenta do płytki naciskowej.
       MC_HOC_2017_04: Zmień pętlę z poprzedniej łamigłówki, aby pomóc Agentowi przerzucić pomost nad szerszą częścią tej rzeki.
       MC_HOC_2017_04POINT5_Cole: Doprowadź Agenta do płytki naciskowej.
       MC_HOC_2017_04POINT5_RYAN: Doprowadź Agenta do płytki naciskowej.
+      MC_HOC_2017_04POINT5_RYAN_2019: Doprowadź Agenta do płytki naciskowej.
       MC_HOC_2017_04_Cole: Doprowadź Agenta do płytki naciskowej.
+      MC_HOC_2017_04_Cole_2019: Doprowadź Agenta do płytki naciskowej.
       MC_HOC_2017_04_Kiki: Doprowadź Agenta do płytki naciskowej.
       MC_HOC_2017_05: Użyj funkcji, aby pomóc Agentowi dotrzeć do płyty naciskowej.
       MC_HOC_2017_05_Cole: Doprowadź gracza do łopaty.
+      MC_HOC_2017_05_Cole_2019: Doprowadź gracza do łopaty.
       MC_HOC_2017_05_Josh: Doprowadź gracza do łopaty.
       MC_HOC_2017_05_Kiki: Doprowadź gracza do pomarańczowego kwadratu.
       MC_HOC_2017_06_Cole: Napraw ten kod, aby Agent mógł przerzucić przez rzekę most.
+      MC_HOC_2017_06_Cole_2019: Napraw ten kod, aby Agent mógł przerzucić przez rzekę most.
       MC_HOC_2017_06_Josh: Napraw ten kod, aby pomóc Agentowi przerzucić przez rzekę most.
       MC_HOC_2017_06_Kiki: Napraw ten kod, aby pomóc Agentowi przerzucić przez rzekę most.
       MC_HOC_2017_07_Cole: Zniszcz lód. Dzięki temu {currentPlayerName} dotrze Minecart.
+      MC_HOC_2017_07_Cole_2019: Zniszcz lód. Dzięki temu {currentPlayerName} dotrze Minecart.
       MC_HOC_2017_07_Kiki: Użyj funkcji, aby oczyścić drogę do pomarańczowego kwadratu.
       MC_HOC_2017_07a_Kiki: Oczyść drogę do pomarańczowego pola.
       MC_HOC_2017_08_Cole: Zmień podaną funkcję, aby działała w tym biomie.
@@ -980,14 +1003,17 @@ pl:
       MC_HOC_2017_10_Cole_old: Utwórz funkcję, która pozwoli Ci ukończyć ten minecart.
       MC_HOC_2017_10_Kiki: Utwórz funkcję, która pozwoli Ci ukończyć ten minecart.
       MC_HOC_2017_10_RETRY: Użyj funkcji, aby ukończyć ten minecart.
+      MC_HOC_2017_10_RETRY_2019: Użyj funkcji, aby ukończyć ten minecart.
       MC_HOC_2017_10_RYAN: Utwórz funkcję, która pozwoli Ci ukończyć ten minecart.
       MC_HOC_2017_10_RYAN2: Utwórz funkcję, która pozwoli Ci ukończyć ten minecart.
       MC_HOC_2017_13_Cole: "Zabaw się:  Czas na samodzielną eksplorację!"
       MC_HOC_2017_4.5v2: Doprowadź Agenta do płytki naciskowej.
       MC_HOC_2017_Ali: Użyj funkcji, aby przedostać się przez lawę.
+      MC_HOC_2017_Ali_2019: Użyj funkcji, aby przedostać się przez lawę.
       MC_HOC_2017_FP10x10: "Czas na zabawę: Czy podejmiesz wyzwanie, by zebrać wszystkie diamenty znajdujące się na tym poziomie? "
       MC_HOC_2017_FP10x10_RE: "Czas na zabawę: Czy podejmiesz wyzwanie, by zebrać wszystkie diamenty znajdujące się na tym poziomie? "
       MC_HOC_2017_FP20x20: "Zabaw się:  Czas na samodzielną eksplorację!"
+      MC_HOC_2017_FP20x20_2019: "Zabaw się:  Czas na samodzielną eksplorację!"
       MC_HOC_2017_Ryan_03: A teraz użyj pętli i pomóż Agentowi przerzucić przez rzekę most, umieszczając bloki w wodzie.
       MC_HOC_2017_Ryan_05: Zniszcz kaktusy, aby gracz mógł dostać się do celu.
       MC_HOC_Kiki_02: Pokieruj Agentem tak, aby dostał się do płyty naciskowej.
@@ -1294,9 +1320,12 @@ pl:
         Ten dom potrzebuje dachu ! Narysuj trójkąt. Wskazówka: Wszystkie trzy boki mają taką samą długość.
       courseC_artist_prog5_2018: |-
         Ten dom potrzebuje dachu ! Narysuj trójkąt. Wskazówka: Wszystkie trzy boki mają taką samą długość.
+      courseC_artist_prog5_2019: |-
+        Ten dom potrzebuje dachu ! Narysuj trójkąt. Wskazówka: Wszystkie trzy boki mają taką samą długość.
       courseC_artist_prog_challenge2: "*Pomóż mi narysować żółte linie na tej drodze!*"
       courseC_artist_prog_challenge2a: '*Pomóż mi narysować żółte linie na tej drodze!*'
       courseC_artist_prog_challenge2a_2018: '*Pomóż mi narysować żółte linie na tej drodze!*'
+      courseC_artist_prog_challenge2a_2019: '*Pomóż mi narysować żółte linie na tej drodze!*'
       courseC_collector_loops_challenge2: Zbierz co najmniej **5** części skarbu!
       courseC_collector_loops_challenge2_2018: Zbierz co najmniej **5** części skarbu!
       courseC_collector_prog9: '*"Zbierzmy cały skarb!"*'
@@ -1390,8 +1419,10 @@ pl:
       courseD_artist_nestedLoops_challenge2_2018: Napraw kod, aby utworzyć ten rysunek!
       courseD_artist_project1: 'Narysuj mały kształt, szeroki na  **20 do 50** pikseli. To może być kształt jakikolwiek chcesz.  '
       courseD_artist_project1_2018: 'Narysuj mały kształt, szeroki na  **20 do 50** pikseli. To może być kształt jakikolwiek chcesz.  '
+      courseD_artist_project1_2019: 'Narysuj mały kształt, szeroki na  **20 do 50** pikseli. To może być kształt jakikolwiek chcesz.  '
       courseD_artist_project2: Teraz weź swój kształt i narysuj go dwa lub trzy z rzędu!
       courseD_artist_project2_2018: Teraz weź swój kształt i narysuj go dwa lub trzy z rzędu!
+      courseD_artist_project2_2019: Teraz weź swój kształt i narysuj go dwa lub trzy z rzędu!
       courseD_autorun_binary4_2019: Czy potrafisz narysować ten wzorek powtarzając binarny łańcuch złożony z trzech cyfr (0 lub 1)?
       courseD_autorun_binary6_2019: Który 6-cyfrowy binarny łańcuch, powtórzony 11 razy, narysuje ten obraz?
       courseD_autorun_binary7_2019: Jaki jest najkrótszy łańcuch binarny, który możesz powtórzyć, by narysować ten obraz?
@@ -1414,13 +1445,16 @@ pl:
       courseD_bee_debugging_challenge2: Zobacz, jak pszczółka zbiera nektar. Czy dasz radę użyć tego samego wzorca, żeby pomóc pszczółce zrobić cały miód?
       courseD_bee_nestedLoops2: Tym raze, pomóż pszczołom zebrać cały nektar używając jak najmniejszej liczby bloków.
       courseD_bee_nestedLoops2_2018: Tym raze, pomóż pszczołom zebrać cały nektar używając jak najmniejszej liczby bloków.
+      courseD_bee_nestedLoops2_2019: Tym raze, pomóż pszczołom zebrać cały nektar używając jak najmniejszej liczby bloków.
       courseD_bee_nestedLoops2_predict1: Tym raze, pomóż pszczołom zebrać cały nektar używając jak najmniejszej liczby bloków.
       courseD_bee_nestedLoops2_predict1_2018: Tym raze, pomóż pszczołom zebrać cały nektar używając jak najmniejszej liczby bloków.
+      courseD_bee_nestedLoops2_predict1_2019: Tym raze, pomóż pszczołom zebrać cały nektar używając jak najmniejszej liczby bloków.
       courseD_bee_nestedLoops3: Zbierz cały nektar z każdego kwiatka. Użyj zagnieżdżonej pętli. 
       courseD_bee_nestedLoops5: 'Zbierz cały nektar z każdego kwiatka i zrób miód na plastrze miodu. \r \r Użyj zagnieżdżonej pętli. '
       courseD_bee_nestedLoops6_2018: Sprowadźmy to na inny poziom! \r Użyj pętli, aby doprowadzić mnie do słonecznika za pomocą możliwie najmniejszej liczby bloków.
       courseD_bee_nestedLoops8: 'Zbierz cały nektar z każdego kwiatka i zrób miód na plastrze miodu. \r \r Użyj zagnieżdżonej pętli. '
       courseD_bee_nestedLoops8_2018: 'Zbierz cały nektar z każdego kwiatka i zrób miód na plastrze miodu. \r \r Użyj zagnieżdżonej pętli. '
+      courseD_bee_nestedLoops8_2019: 'Zbierz cały nektar z każdego kwiatka i zrób miód na plastrze miodu. \r \r Użyj zagnieżdżonej pętli. '
       courseD_bounce_events10: Cel teraz jest u góry. Dołącz bloki "punkt wyniku" i "punkt wyniku przeciwnika" do bloków "kiedy piłka jest w bramce" i "kiedy piłka mija rakietkę", aby utworzyć grę. Zobacz, ile zdobędziesz punktów, zanim Twój przeciwnik zdobędzie dwa punkty.
       courseD_bounce_events11: Możesz teraz dołączyć bloki do bloku "po uruchomieniu". Musisz dołączyć nowy blok "wypuść nową piłkę" w więcej niż w jednym miejscu. Również, spróbuj zmienić scenerię lub szybkość rakietki oraz piłki i zobacz, ile punktów zdobędziesz, zanim Twój przeciwnik zdobędzie dwa punkty.
       courseD_bounce_events12: Utwórz własną grę w odbijanie. Możesz zmienić wszystkie efekty wizualne i zasady. Kiedy skończysz, kliknij przycisk "Zakończ", aby Twoi znajomi mogli zagrać na swoich telefonach.
@@ -1467,8 +1501,10 @@ pl:
       courseD_farmer_while_challenge2_2018: Wypełnij wszystkie dziury i usuń wszystkie stosy.
       courseD_maze_nestedLoops4: 'Doprowadź mnie do słonecznika używając możliwie najmniejszej liczby bloków! \r \r Spróbuj użyć pętli "powtórz" wewnątrz innej pętli, aby zmniejszyć liczbę potrzebnych bloków.'
       courseD_maze_nestedLoops4_2018: 'Doprowadź mnie do słonecznika używając możliwie najmniejszej liczby bloków! \r \r Spróbuj użyć pętli "powtórz" wewnątrz innej pętli, aby zmniejszyć liczbę potrzebnych bloków.'
+      courseD_maze_nestedLoops4_2019: 'Doprowadź mnie do słonecznika używając możliwie najmniejszej liczby bloków! \r \r Spróbuj użyć pętli "powtórz" wewnątrz innej pętli, aby zmniejszyć liczbę potrzebnych bloków.'
       courseD_maze_nestedLoops6: Sprowadźmy to na inny poziom! \r Użyj pętli, aby doprowadzić mnie do słonecznika za pomocą możliwie najmniejszej liczby bloków.
       courseD_maze_nestedLoops6_2018: Sprowadźmy to na inny poziom! \r Użyj pętli, aby doprowadzić mnie do słonecznika za pomocą możliwie najmniejszej liczby bloków.
+      courseD_maze_nestedLoops6_2019: Sprowadźmy to na inny poziom! \r Użyj pętli, aby doprowadzić mnie do słonecznika za pomocą możliwie najmniejszej liczby bloków.
       courseD_maze_ramp7: Doprowadź ptaka do świnki!
       courseD_maze_until_challenge: Bez podpowiedzi, po prostu wyzwanie. Doprowadź zombie do słonecznika.
       courseD_maze_until_challenge1-delete-this-copy: Bez podpowiedzi, po prostu wyzwanie. Doprowadź zombie do słonecznika.
@@ -1515,10 +1551,13 @@ pl:
       courseF_IceAge_9: "Zamień scenerię na oblodzone tło i\nustaw prędkość Sida (aktor 1) na \"szybko\"."
       courseF_artist_for7: Zrób trzy niewielkie zmiany w kodzie z poprzedniego poziomu, aby to otrzymać!
       courseF_artist_for7_2018: Zrób trzy niewielkie zmiany w kodzie z poprzedniego poziomu, aby to otrzymać!
+      courseF_artist_for7_2019: Zrób trzy niewielkie zmiany w kodzie z poprzedniego poziomu, aby to otrzymać!
       courseF_artist_for_challenge1: Czy wiesz, jak odtworzyć ten rysunek?
       courseF_artist_for_challenge1_2018: Czy wiesz, jak odtworzyć ten rysunek?
+      courseF_artist_for_challenge1_2019: Czy wiesz, jak odtworzyć ten rysunek?
       courseF_artist_for_challenge2: Czy wiesz, jak odtworzyć ten rysunek używając pojedynczej pętli?
       courseF_artist_for_challenge2_2018: Czy wiesz, jak odtworzyć ten rysunek używając pojedynczej pętli?
+      courseF_artist_for_challenge2_2019: Czy wiesz, jak odtworzyć ten rysunek używając pojedynczej pętli?
       courseF_artist_ramp9: Użyj tego, czego się nauczyłeś(-aś), by narysować ten trójkąt.
       courseF_artist_ramp9_2018: Użyj tego, czego się nauczyłeś(-aś), by narysować ten trójkąt.
       courseF_bee_conditionals1_predict1: Sprawdź, czy pod chmurką jest kwiat. Jeśli jest, zbierz nektar.
@@ -1527,8 +1566,10 @@ pl:
       courseF_bee_conditionals3_2018: "Pomóż pszczółce zebrać cały nektar.\n\\r\n\\r\n"
       courseF_bee_for8: Masz teraz to! Jaki powinien być przyrost, aby zebrać 3, 6, 9, 12, 15 nektarów?
       courseF_bee_for8_2018: Masz teraz to! Jaki powinien być przyrost, aby zebrać 3, 6, 9, 12, 15 nektarów?
+      courseF_bee_for8_2019: Masz teraz to! Jaki powinien być przyrost, aby zebrać 3, 6, 9, 12, 15 nektarów?
       courseF_bee_for_challenge2: Rozwiąż tę łamigłówkę używając jak najmniejszej liczby bloków.
       courseF_bee_for_challenge2_2018: Rozwiąż tę łamigłówkę używając jak najmniejszej liczby bloków.
+      courseF_bee_for_challenge2_2019: Rozwiąż tę łamigłówkę używając jak najmniejszej liczby bloków.
       courseF_bee_for_challenge3: Rozwiąż tę łamigłówkę używając jak najmniejszej liczby bloków.
       courseF_bee_functions3a: Napisz funkcję, dzięki której pszczółka zbiera nektar, jeśli jest na kwiatku, a w przeciwnym razie robi miód. Użyj swojej funkcji aby rozwiązać tę zagadkę!
       courseF_bee_functions3a_2018: Napisz funkcję, dzięki której pszczółka zbiera nektar, jeśli jest na kwiatku, a w przeciwnym razie robi miód. Użyj swojej funkcji aby rozwiązać tę zagadkę!
@@ -1895,16 +1936,22 @@ pl:
       level grade3_Loops_2: Tym razem użyj pętli, by zebrać cały nektar.
       ramp_artist_loops1: "Przesuń się do przodu o 60 pikseli,\naby ukończyć to zadanie."
       ramp_artist_loops1_2018: "Przesuń się do przodu o 60 pikseli,\naby ukończyć to zadanie."
+      ramp_artist_loops1_2019: "Przesuń się do przodu o 60 pikseli,\naby ukończyć to zadanie."
       ramp_artist_loops2: "Przesuń się do przodu pięć razy i utwórz tę\nkolorową linię."
       ramp_artist_loops2_2018: "Przesuń się do przodu pięć razy i utwórz tę\nkolorową linię."
+      ramp_artist_loops2_2019: "Przesuń się do przodu pięć razy i utwórz tę\nkolorową linię."
       ramp_artist_loops3: Użyj pętli `powtarzaj` do narysowania 5 kolorowych kresek.
       ramp_artist_loops3_2018: Użyj pętli `powtarzaj` do narysowania 5 kolorowych kresek.
+      ramp_artist_loops3_2019: Użyj pętli `powtarzaj` do narysowania 5 kolorowych kresek.
       ramp_artist_loops5: Użyj pętli do narysowania tych schodów.
       ramp_artist_loops5_2018: Użyj pętli do narysowania tych schodów.
+      ramp_artist_loops5_2019: Użyj pętli do narysowania tych schodów.
       ramp_artist_loops6: Edytuj swoją pętlę, by narysować schody.
       ramp_artist_loops6_2018: Edytuj swoją pętlę, by narysować schody.
+      ramp_artist_loops6_2019: Edytuj swoją pętlę, by narysować schody.
       ramp_artist_loops9: Rozwiąż to zadanie rysując kwadrat.
       ramp_artist_loops9_2018: Rozwiąż to zadanie rysując kwadrat.
+      ramp_artist_loops9_2019: Rozwiąż to zadanie rysując kwadrat.
       scrat 16 (copy 1): Żołądź! Żołądź! Żołądź! Użyj bloku "Jeśli", aby przenieść mnie tam używając jak najmniejszej liczby bloków.
       scrat 16: Żołądź! Żołądź! Żołądź! Użyj bloku "Jeśli", aby przenieść mnie tam używając jak najmniejszej liczby bloków.
       scrat 17: Ok, zróbmy to jeszcze raz, aby potrenować. To ćwiczenie nie różni się bardzo od poprzedniego, ale uważaj na ścianę!

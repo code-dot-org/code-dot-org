@@ -1064,7 +1064,7 @@ fr:
         easier to fix.\\\r\n\\\r\n# Do This\\\r\n\\\r\n* Look at the code with your
         partner\nand discuss how you should format the code to make it easier to read.\\\r\n*\nMake
         the code easier to read by adding new lines and indentation.\\\r\n* Fix\nall
-        the bugs so that your page matches the target page below.\\\r\n\\\r\n![](https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13\nAM.png)\n"
+        the bugs so that your page matches the target page below.\\\r\n\\\r\n![](https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13\nAM.png)"
       CSD U2 Debugging 4_2018: "# Formatting\\\r\n<div style=\"float:\nright; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\\r\n<details>\\\r\n<summary>**What
         is whitespace?**</summary>\\\r\nWhitespace\nrefers to any character that shows
@@ -1092,7 +1092,7 @@ fr:
         easier to fix.\\\r\n\\\r\n# Do This\\\r\n\\\r\n* Look at the code with your
         partner\nand discuss how you should format the code to make it easier to read.\\\r\n*\nMake
         the code easier to read by adding new lines and indentation.\\\r\n* Fix\nall
-        the bugs so that your page matches the target page below.\\\r\n\\\r\n![](https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13\nAM.png)\n"
+        the bugs so that your page matches the target page below.\\\r\n\\\r\n![](https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13\nAM.png)"
       CSD U2 Debugging comments: "# Debugging\\\r\n\\\r\nThis page has\nimages in
         it. Images make finding bugs a little more tricky. Can you debug\nthis page?\\\r\n\\\r\nAs
         you are debugging you may notice a new set of symbols\nthat look something
@@ -1853,7 +1853,7 @@ fr:
         This\\\r\n* Use HTML to create the page that you sketched out.  Make sure\nit
         includes\\\r\n * At least **two headings of different sizes**\\\r\n * At least\n**one
         paragraph**\\\r\n* **Reflect** on your page by comparing to your sketch\nand
-        showing it to your partner\n"
+        showing it to your partner"
       CSD U2 Project Start_2018: "# Start Your Project\\\r\n\\\r\nNow\nthat you have
         a plan for your personal website, you can start coding it here.  Don't\nworry
         if you can't do everything you want today.  You'll have plenty of\nchances
@@ -1861,7 +1861,7 @@ fr:
         This\\\r\n* Use HTML to create the page that you sketched out.  Make sure\nit
         includes\\\r\n * At least **two headings of different sizes**\\\r\n * At least\n**one
         paragraph**\\\r\n* **Reflect** on your page by comparing to your sketch\nand
-        showing it to your partner\n"
+        showing it to your partner"
       CSD U2 add content: "# Add HTML\\\r\n\\\r\nNext, you should\nadd the HTML to
         your pages.\\\r\n\\\r\n# Do This\\\r\n* For each of the new pages\nthat you've
         created, add HTML to make the page you sketched in your project\nguide.\\\r\n*
@@ -1903,7 +1903,7 @@ fr:
         you need to add a style sheet, name it, and link it to your html page.\\\r\n\\\r\n1.\nCreate
         a new style sheet for your project.\\\r\n2. Rename the style sheet file.\\\r\n3.\nAdd
         your style sheet to your HTML page.\\\r\n\\\r\n<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/weblab_stylesheet.png\"\nstyle=\"
-        max-width:500px\">\n"
+        max-width:500px\">"
       CSD U2 challenge: "# Challenge\\\r\n\\\r\nCheck with your\nteacher before starting
         on this challenge.\\\r\n\\\r\nThis page is only partially\nfinished, and it
         has some bugs.  Luckily, there are comments that should help\nyou to finish
@@ -1941,7 +1941,7 @@ fr:
         other people who are trying to understand your code.\\\r\n\\\r\n<pre>\\\r\n&lt;!--\nthis
         is a comment --&gt;\\\r\n</pre>\\\r\n\\\r\n# Do This\\\r\n\\\r\n* Look at
         the code\nwith your partner and find the comments.\\\r\n* Use the comments
-        to help you\nfix the bugs in the HTML.\n"
+        to help you\nfix the bugs in the HTML."
       CSD U2 commenting_2018: "# Comments\\\r\n<div style=\"float:\nright; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\\r\n<details>\\\r\n<summary>**What
         is whitespace?**</summary>\\\r\nWhitespace\nrefers to any character that shows
@@ -1965,7 +1965,7 @@ fr:
         other people who are trying to understand your code.\\\r\n\\\r\n<pre>\\\r\n&lt;!--\nthis
         is a comment --&gt;\\\r\n</pre>\\\r\n\\\r\n# Do This\\\r\n\\\r\n* Look at
         the code\nwith your partner and find the comments.\\\r\n* Use the comments
-        to help you\nfix the bugs in the HTML.\n"
+        to help you\nfix the bugs in the HTML."
       CSD U2 create page: "# Create and Name Your New Page\\\r\n\\\r\nBefore\nyou
         start coding, you should make sure that you have all the pages that you\nneed
         in your project.\\\r\n\\\r\n# Do This\\\r\n* Create a new HTML page and rename\nit.
@@ -2047,7 +2047,7 @@ fr:
         * `background-color`\\\r\n * `height`\\\r\n * `width`\\\r\n *\n`border-style`\\\r\n
         * `border-radius`\\\r\n * `border-width`\\\r\n * `float`\\\r\n\n* `margin`\\\r\n\\\r\n\\\r\nIf
         you’ve used at least 3 of the properties from the\nchecklist, you can explore
-        some additional CSS properties to add to your About\nMe page.\n"
+        some additional CSS properties to add to your About\nMe page."
       CSD U2 link demo: "# Making a Multi-page Site\\\r\n\\\r\n<div\nstyle=\"float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px;
         font-size:14px\" markdown=\"1\">\\\r\n<details>\\\r\n<summary>**What are\nhyperlinks?**</summary>\\\r\nHyperlinks
@@ -2114,7 +2114,7 @@ fr:
         Rename the file, either by right clicking it and choosing\n\"Rename\", or
         by clicking on it when it's already highlighted.  **Make sure\nthe name is
         unique, descriptive and ends in \".html\"**.\\\r\n* Use HTML to\nfill out
-        your new page.  It should include:\\\r\n * a list\\\r\n * a header\\\r\n\\\r\n"
+        your new page.  It should include:\\\r\n * a list\\\r\n * a header\\\r\n\\\r\n\n"
       CSD U2 lists intro: "# Lists\\\r\n<div style=\"float: right;\nheight: 250px;
         width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\\r\n<details>\\\r\n<summary>**What
         are the two types of lists?**</summary>\\\r\n\nThere are two types of lists
@@ -2223,7 +2223,7 @@ fr:
         Rename the file, either by right clicking it and choosing\n\"Rename\", or
         by clicking on it when it's already highlighted.  **Make sure\nthe name is
         unique, descriptive and ends in \".html\"**.\\\r\n* Use HTML to\nfill out
-        your new page.  It should include:\\\r\n * a list\\\r\n * a heading\\\r\n\\\r\n"
+        your new page.  It should include:\\\r\n * a list\\\r\n * a heading\\\r\n\\\r\n\n"
       CSD U2 new page_2018: "# Create a New Page for Your Website.\\\r\n\\\r\nHere's\nyour
         project from before.  You'll be adding another page.  Your new page\ncan be
         a top 10 list, a recipe, or anything you like.\\\r\n\\\r\n# Do This\\\r\n*\nAdd
@@ -2232,7 +2232,7 @@ fr:
         Rename the file, either by right clicking it and choosing\n\"Rename\", or
         by clicking on it when it's already highlighted.  **Make sure\nthe name is
         unique, descriptive and ends in \".html\"**.\\\r\n* Use HTML to\nfill out
-        your new page.  It should include:\\\r\n * a list\\\r\n * a heading\\\r\n\\\r\n"
+        your new page.  It should include:\\\r\n * a list\\\r\n * a heading\\\r\n\\\r\n\n"
       CSD U2 ordered list: "# Ordered Lists\r\n<div style=\"float:\nright; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\r\n<details>\r\n<summary>**What
         are the two types of lists?**</summary>\r\n\nThere are two types of lists
@@ -2316,7 +2316,7 @@ fr:
         CSS Properties are used:\\\r\n * `font-size`\\\r\n * `font-family`\\\r\n\n*
         `color`\\\r\n * `text-decoration`\\\r\n * `text-align`\\\r\n\\\r\nIf you’ve
         used\nat least 3 of the properties from the checklist, you can explore some
-        additional\ntext properties to add to your project.\n"
+        additional\ntext properties to add to your project."
       CSD U2 unordered list: "# Unordered Lists\\\r\n<div style=\"float:\nright; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\\r\n<details>\\\r\n<summary>**What
         are the two types of lists?**</summary>\\\r\n\nThere are two types of lists
@@ -3434,7 +3434,7 @@ fr:
         square in the right place on the screen.\\\r\n\\\r\n# Do This\\\r\n\\\r\n*
         Look\nat the code in the workspace.\\\r\n* Change the code so it makes the
         picture\non the right.\\\r\n * (You'll need to move one line of code AND change
-        the\ncoordinates of the square.)\n"
+        the\ncoordinates of the square.)"
       CSD U3 debug_2018: "<img src=\"https://images.code.org/249f124a9bbd3da7d6327a7be8ab73c9-image-1493138569984.41.50\nAM.png\"
         style=\"float:right;width:150px;\">\\\r\n\\\r\n# Debugging\\\r\n\\\r\nOften,\ncode
         doesn't work the first time it runs, and programmers have to debug it.  The\ncode
@@ -3443,7 +3443,7 @@ fr:
         square in the right place on the screen.\\\r\n\\\r\n# Do This\\\r\n\\\r\n*
         Look\nat the code in the workspace.\\\r\n* Change the code so it makes the
         picture\non the right.\\\r\n * (You'll need to move one line of code AND change
-        the\ncoordinates of the square.)\n"
+        the\ncoordinates of the square.)"
       CSD U3 ellipse: "<img src=\"https://images.code.org/2ef29be10261f6a2c5df8f214d524f4d-image-1493060602794.02.44\nPM.png\"
         style=\"float:right;width:150px;\">\\\r\n\\\r\n# ellipse\\\r\n\\\r\nYou can\nuse
         `ellipse` to make a circle.\\\r\n\\\r\n# Do This\\\r\n\\\r\n* Look at the
@@ -3604,12 +3604,12 @@ fr:
         6-bit binary numbers.\\\r\n\\\r\n# Do This\\\r\n\\\r\n* With your\npartner,
         answer the following questions:\\\r\n  1. What's the biggest number\nyou can
         make with this widget?\\\r\n  2. The record for most skips by a dog\nand person
-        in one minute is 59.  How would you encode 59 in binary?\n"
+        in one minute is 59.  How would you encode 59 in binary?"
       CSD U5 binary 2_2018: "# 6-Bit Number\\\r\n\\\r\nThis widget helps\nyou to calculate
         6-bit binary numbers.\\\r\n\\\r\n# Do This\\\r\n\\\r\n* With your\npartner,
         answer the following questions:\\\r\n  1. What's the biggest number\nyou can
         make with this widget?\\\r\n  2. The record for most skips by a dog\nand person
-        in one minute is 59.  How would you encode 59 in binary?\n"
+        in one minute is 59.  How would you encode 59 in binary?"
       CSD U5 binary 3-new: "# Decoding multiple numbers\\\r\n\\\r\nHere's\na widget
         that can calculate numbers of 4, 5, or 6 bits.  You can use it to\nfind the
         two world records encoded in the binary string below.\\\r\n\\\r\n1. Most\nnumber
@@ -3624,7 +3624,7 @@ fr:
         number of people lifted and thrown in two minutes.\\\r\n\\\r\n![](https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png)\\\r\n\\\r\n#\nDo
         This\\\r\n* Try to decode the three numbers from a the binary string\\\r\n*\nDiscuss
         your answers with your partner.\\\r\n * Was there any other information\nyou
-        need to be certain your numbers are correct?\n"
+        need to be certain your numbers are correct?"
       CSD U5 binary 4-new: "# Decoding multiple numbers\\\r\n\\\r\nHere's\na widget
         that can calculate numbers of 4, 5, or 6 bits.  You can use it to\nfind the
         two world records encoded in the binary string below.\\\r\n\\\r\n![](https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png)\\\r\n\\\r\n1.
@@ -3768,7 +3768,7 @@ fr:
         Essaie les blocs `blink`, `toggle` et `pulse` pour voir ce qu'ils font.\\\r\n*
         Utilise l'un de ces blocs pour que le bouton fonctionne comme un interrupteur.\\\r\n
         * Si la LED est éteinte, le bouton doit l'allumer.\\\r\n * Si la LED est allumée,
-        le bouton doit l'éteindre.\n"
+        le bouton doit l'éteindre."
       CSD U6 LED toggle_2018: "# Interrupteur\\\r\n\\\r\nIl y a encore trois autres
         blocs que tu n'as pas encore utilisés et qui permettent de contrôler la LED.
         Un de ces blocs peut transformer le bouton en interrupteur, allumant la LED
@@ -3776,7 +3776,7 @@ fr:
         ceci\\\r\n* Essaie les blocs `blink`, `toggle` et `pulse` pour voir ce qu'ils
         font.\\\r\n* Utilise l'un de ces blocs pour que le bouton fonctionne comme
         un interrupteur.\\\r\n * Si la LED est éteinte, le bouton doit l'allumer.\\\r\n
-        * Si la LED est allumée, le bouton doit l'éteindre.\n"
+        * Si la LED est allumée, le bouton doit l'éteindre."
       CSD U6 LEDbutton predict embed: "# Utilisation des évènements\\\r\n\\\r\nCe
         programme utilise des évènements. Examine le code avec ton binôme et imaginez
         sa fonction. Une fois que vous avez répondu à la question, clique sur \"Démarrer\"
@@ -3944,27 +3944,27 @@ fr:
         Fais ceci\\\r\n\\\r\n* Discute avec ton binôme pour savoir de quel code vous
         aurez besoin pour l'application. Est-qu'il faut...\r\n * des évènements ?\\\r\n
         * des variables ?\\\r\n * des accesseurs ?\\\r\n * des nombres aléatoires
-        ?\\\r\n* Dans le mode Code, ajoute le code qui fait fonctionner l'application.\n"
+        ?\\\r\n* Dans le mode Code, ajoute le code qui fait fonctionner l'application."
       CSD U6 create LED app 2_2018: "# Créé ton application - Le code\\\r\n\\\r\nMaintenant,
         tu dois ajouter le code qui fait fonctionner ton application.\\\r\n\\\r\n#
         Fais ceci\\\r\n\\\r\n* Discute avec ton binôme pour savoir de quel code vous
         aurez besoin pour l'application. Est-qu'il faut...\r\n * des évènements ?\\\r\n
         * des variables ?\\\r\n * des accesseurs ?\\\r\n * des nombres aléatoires
-        ?\\\r\n* Dans le mode Code, ajoute le code qui fait fonctionner l'application.\n"
+        ?\\\r\n* Dans le mode Code, ajoute le code qui fait fonctionner l'application."
       CSD U6 create LED app: "# Créé ton application - L'écran\\\r\n\\\r\nMaintenant,
         toi et ton binôme pouvez créer votre propre application utilisant la LED.
         Décidez entre-vous quelle application vous voulez réaliser.\\\r\n\\\r\n# Action\\\r\n\\\r\n*
         Discutez entre vous quels éléments seront nécessaires sur l'écran de votre
         application. Est-ce que vous voulez...\\\r\n * des boutons ?\\\r\n * des images
         ?\\\r\n * du texte ?\\\r\n* Dans le mode Concevoir, ajoutez les éléments en
-        vous assurant que vous donnez à chacun un identifiant significatif.\n"
+        vous assurant que vous donnez à chacun un identifiant significatif."
       CSD U6 create LED app_2018: "# Créé ton application - L'écran\\\r\n\\\r\nMaintenant,
         toi et ton binôme pouvez créer votre propre application utilisant la LED.
         Décidez entre-vous quelle application vous voulez réaliser.\\\r\n\\\r\n# Action\\\r\n\\\r\n*
         Discutez entre vous quels éléments seront nécessaires sur l'écran de votre
         application. Est-ce que vous voulez...\\\r\n * des boutons ?\\\r\n * des images
         ?\\\r\n * du texte ?\\\r\n* Dans le mode Concevoir, ajoutez les éléments en
-        vous assurant que vous donnez à chacun un identifiant significatif.\n"
+        vous assurant que vous donnez à chacun un identifiant significatif."
       CSD U6 design motorcycle: "# Design Mode is Back!\\\r\n\\\r\nNow\nthat you have
         Design Mode back, you can add some elements of your own. The\nmotorcycle should
         be able to move up and down right now, but how can you control\nits speed?\\\r\n\\\r\n#
@@ -3972,7 +3972,7 @@ fr:
         set the min and max values of the slider in design mode.\\\r\n* Create\nan
         event that will trigger when the slider value is changed.\\\r\n* Add code\nto
         get the slider value and store it into the `speed` variable when the event\nis
-        triggered.\n"
+        triggered."
       CSD U6 design motorcycle_2018: "# Design Mode is Back!\\\r\n\\\r\nNow\nthat
         you have Design Mode back, you can add some elements of your own. The\nmotorcycle
         should be able to move up and down right now, but how can you control\nits
@@ -3980,7 +3980,7 @@ fr:
         \ * Make\nsure you set the min and max values of the slider in design mode.\\\r\n*
         Create\nan event that will trigger when the slider value is changed.\\\r\n*
         Add code\nto get the slider value and store it into the `speed` variable when
-        the event\nis triggered.\n"
+        the event\nis triggered."
       CSD U6 emoji race demo: "# Emoji Race!\\\r\n\\\r\nThis is\nan example of a race
         game that you'll build by the end of this lesson. To\nplay, pair up with another
         student. The student on the left will the click\nthe left button on the Circuit
@@ -4187,7 +4187,7 @@ fr:
         that will play a long or short buzz according to the text property of\nthe
         *buzzer_input* dropdown menu.\\\r\n* Add new code that will turn the buzzer\noff
         when the right button is pressed.\\\r\n  * (Hint: the event is already in\nthe
-        code.)\\\r\n\\\r\n"
+        code.)\\\r\n\\\r"
       CSD U6 getProperty buzzer_2018: "# Using the Circuit Playground\\\r\n\\\r\nHere's\nthe
         same code you saw in the last level, but this time there's another dropdown\nmenu
         to control the buzzer.  You'll have to add the code to make it work.\\\r\n\\\r\n##\nDo
@@ -4195,7 +4195,7 @@ fr:
         that will play a long or short buzz according to the text property of\nthe
         *buzzer_input* dropdown menu.\\\r\n* Add new code that will turn the buzzer\noff
         when the right button is pressed.\\\r\n  * (Hint: the event is already in\nthe
-        code.)\\\r\n\\\r\n"
+        code.)\\\r\n\\\r"
       CSD U6 getProperty debug: "# Debug\\\r\n\\\r\nThis program\nshould change the
         background color, text color, and text of the button \"click_me\"\nwhen it
         is clicked, but nothing seems to be working. Fix the code so that\nthe program
@@ -4659,7 +4659,7 @@ fr:
         the value of `player_y`\nby 10\\\r\n  * Set the \"y\" property of player to
         your new value `player_y`\\\r\n\\\r\nOnce\nyou've added your code, test it.
         You should see that _both buttons_ work\neven though we only created one function
-        - cool!\n"
+        - cool!"
       CSD U6 tugowar variables 2_2018: "# Functions with Parameters\\\r\n\\\r\nMost\nof
         the existing functions you use in App Lab need inputs, or **parameters**,\nto
         pass the function necessary information. For example, when changing a screen,\nyou
@@ -4678,7 +4678,7 @@ fr:
         the value of `player_y`\nby 10\\\r\n  * Set the \"y\" property of player to
         your new value `player_y`\\\r\n\\\r\nOnce\nyou've added your code, test it.
         You should see that _both buttons_ work\neven though we only created one function
-        - cool!\n"
+        - cool!"
       CSD U6 tugowar variables 3: "# The checkWin() Function\\\r\n\\\r\nThe\nlast
         function that you need to figure out is the `checkWin()` function, which\nafter
         each player is moved, and is used to both check if that player has made\nit
@@ -5104,7 +5104,7 @@ fr:
         `console.log()` statements that say \"open!\" if the switch is open, and\n\"closed!\"
         otherwise.\\\r\n\\\r\n* Run your code and toggle the switch to see\nwhat happens.\\\r\n\\\r\nRemember:
         This program is wrapped under an event. You'll\n_have_ to press the left button
-        to update the program when you toggle the\nswitch.\n"
+        to update the program when you toggle the\nswitch."
       CSDU6 array index predict contained: "# Predict\\\r\n\\\r\nThe\ncode below will
         display four things on the screen.  What do you think they\nwill be?"
       CSDU6 array index predict contained_2018: "# Predict\\\r\n\\\r\nThe\ncode below
@@ -5706,6 +5706,80 @@ fr:
         if you use two different angles in your stair step pattern?\\\r\n- What\nhappens
         if you make your diamond pattern longer or shorter?\\\r\n- What does\nit look
         like to draw two snowflakes on top of one another?\\\r\n"
+      Dance_Party_01: |-
+        *Faisons une fête dansante !*
+
+        Faites glisser le bloc « créer un nouveau » dans l’espace de travail, puis connectez-le à l’intérieur du bloc « configuration » pour créer votre premier danseur.
+
+        * *Vous pouvez également cliquer sur l'ampoule située à gauche si vous souhaitez plus d'informations ou des défis supplémentaires.*
+      Dance_Party_01_low: |-
+        *Faisons une fête dansante !*
+
+        Faites glisser le bloc « créer un nouveau » dans l’espace de travail, puis connectez-le à l’intérieur du bloc « configuration » pour créer votre premier danseur.
+
+        * *Vous pouvez également cliquer sur l'ampoule située à gauche si vous souhaitez plus d'informations ou des défis supplémentaires.*
+      Dance_Party_02: |-
+        Faisons danser cet orignal !
+
+        Faites glisser le bloc <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> sur l'espace de travail. Connectez-le sous le bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Votre danseur devrait commencer un nouveau mouvement après la quatrième mesure.
+
+
+        **Les mesures** sont utilisées pour compter le temps en musique. Dans ce tutoriel, une mesure dure quatre temps.
+      Dance_Party_03: |-
+        *Voilà qu'on danse !*
+
+        Ajoutez un bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> à votre espace de travail. Faites en sorte que le danseur commence un nouveau mouvement après 6 mesures.
+      Dance_Party_04: |-
+        *Cette danse a besoin d'être un peu plus éclatante !*
+
+        Recherchez un nouveau bloc dans votre boîte à outils qui ajoute un effet de fond derrière votre danseur. Regardez les effets changer avec la musique !
+      Dance_Party_05: |-
+        Utilisez un autre nouveau bloc pour faire changer les mouvements du danseur **toutes les 2 mesures** !
+
+        *Choisir « (Suivant) », « (Précédent) » ou « (Aléatoire) » indique au danseur d'effectuer un mouvement différent à chaque fois que le programme est exécuté.
+      Dance_Party_06: |-
+        *Nous avons besoin de plus de danseurs !*
+
+        Créez un danseur de sauvegarde appelé « backup_dancer1 » pour danser avec le chat.
+      Dance_Party_08: |-
+        Chaque danseur possède un ensemble de _propriétés_ qui contrôlent son apparence.
+
+        Vous pouvez donner l’impression qu’un danseur est à l’arrière-plan en réduisant sa _taille_. Pouvez-vous donner la même taille aux deux danseurs de sauvegarde ?
+      Dance_Party_09: |-
+        Les danseurs ont une propriété « nuance » qui peut ajouter une couche de couleur. Essayez de modifier la nuance de l’un de vos danseurs.
+        *Les nuances vont mélanger la couleur que vous choisissez avec les couleurs du danseur.
+      Dance_Party_10: |-
+        Nous savons maintenant comment changer les propriétés d'un danseur. Nous pouvons également faire en sorte que les mêmes propriétés correspondent automatiquement à la musique en utilisant ce bloc :
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Ce programme utilise le volume « grave » de la musique (les sons graves) pour contrôler la hauteur d'un danseur. Peux-tu aussi faire en sorte que l'autre danseur réponde à la musique ?
+      Dance_Party_11.5: |-
+        Jetez un œil à ce bloc :
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Maintenant, vous pouvez créer un groupe de danseurs à la fois !
+
+        Essayez d’utiliser certains des blocs « tous les canards » pour concevoir un programme qui fera danser ensemble tous les canards.
+      Dance_Party_11: |-
+        Le bloc <xml><block type="Dancelab_whenKey"></block></xml> vous permet d'exécuter le programme lorsque vous appuyez sur la flèche dirigée vers le haut.
+
+        Vous pouvez changer le mouvement de danse, changer les propriétés d'un danseur ou faire un mouvement rapide une seule fois. Soyez créatif et cherchez de nouveaux blocs !
+      Dance_Party_11b: Il est temps de danser ! Le Chat fait le dab lorsque vous appuyez
+        sur la touche fléchée gauche. Faites le Robot faire le « drop » lorsque vous
+        appuyez sur la touche fléchée droite.
+      Dance_Party_12: Prends ton rythme ! Créez votre propre danse à partager avec
+        vos amis.
       Escape Room Example: "# Room Escape\\\r\n\\\r\nIn today's\nworkshop you are
         going to be working on making a room escape app!  This level\nhas an example
         app that you should play around with to get the feel for what\nyou will be
@@ -5728,6 +5802,11 @@ fr:
         est inclus ! \r\n \r\nPlacez deux fois le petit bloc vert dans votre espace
         de travail pour corriger le chemin et amener {currentPlayerName} vers la torche
         de redstone [redstone_torch]."
+      Function intro Ryan_2019: "Une **fonction** nommée « construire un pont » se
+        trouve dans votre espace de travail.  Tout le code nécessaire pour traverser
+        la rivière est inclus ! \r\n \r\nPlacez deux fois le petit bloc vert dans
+        votre espace de travail pour corriger le chemin et amener {currentPlayerName}
+        vers la torche de redstone [redstone_torch]."
       HOC 2018 Level_1: "Il vous faudra du matériel pour ce voyage. Prenez un **bateau**
         ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         dans le **coffre** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
@@ -5757,6 +5836,18 @@ fr:
       HOC 2018 Level_9b: "Vous voici enfin au récif, partez à la recherche du **Cœur
         de l'océan** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) !
         Utilisez les coraux bleus et rouges pour atteindre le **coffre** au trésor ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
+      HOC Dance 4_draft: |-
+        Utilisez un autre nouveau bloc pour faire changer les mouvements du danseur **toutes les 2 mesures** !
+
+        *Choisir « (Suivant) », « (Précédent) » ou « (Aléatoire) » indique au danseur d'effectuer un mouvement différent à chaque fois que le programme est exécuté.
+      HOC Dance 5_draft: |-
+        *Nous avons besoin de plus de danseurs !*
+
+        Créez un danseur de sauvegarde appelé « backup_dancer1 » pour danser avec le chat.
+      HOC Dance 9_draft: |-
+        Le bloc <xml><block type="Dancelab_whenKey"></block></xml> vous permet d'exécuter le programme lorsque vous appuyez sur la flèche dirigée vers le haut.
+
+        Vous pouvez changer le mouvement de danse, changer les propriétés d'un danseur ou faire un mouvement rapide une seule fois. Soyez créatif et cherchez de nouveaux blocs !
       Inspirational Artwork: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\r\n\r\n**Free-Play
         Inspiration:** You've now learned everything\nyou need to know to make a pattern
         like this! \r\n\r\nIf this picture inspires\nyou, try to make something similar.
@@ -5766,6 +5857,9 @@ fr:
         a pattern like this! \r\n\r\nIf this picture inspires\nyou, try to make something
         similar. Otherwise, create something all your own.\r\n"
       InspirationalArtwork_2018: "You've now learned everything\nyou need to know
+        to make a pattern like this! \r\n\r\nIf this picture inspires\nyou, try to
+        make something similar. Otherwise, create something all your own.\r\n"
+      InspirationalArtwork_2019: "You've now learned everything\nyou need to know
         to make a pattern like this! \r\n\r\nIf this picture inspires\nyou, try to
         make something similar. Otherwise, create something all your own.\r\n"
       K-1 Bee Loops 2: Utilise une boucle «Répéter» pour te déplacer et ensuite prendre
@@ -5818,7 +5912,13 @@ fr:
         « après exécution » dans l'espace de travail afin d'amener l'Agent sur la
         plaque de détection [PressurePlate_Up]. Ensuite, appuyez sur « Démarrer »
         et utilisez les touches de direction pour déplacer {currentPlayerName} hors
-        de la maison afin de récupérer le contenu du **coffre** [chest].  \n"
+        de la maison afin de récupérer le contenu du **coffre** [chest].  "
+      MC_HOC_2017_01_RETRY_2019: "Utilisez l'Agent pour libérer {currentPlayerName}
+        de la maison !   \\\r\n \\\r\n   \\\r\nDéplacez un bloc « avancer » dans le
+        bloc « après exécution » dans l'espace de travail afin d'amener l'Agent sur
+        la plaque de détection [PressurePlate_Up]. Ensuite, appuyez sur « Démarrer »
+        et utilisez les touches de direction pour déplacer {currentPlayerName} hors
+        de la maison afin de récupérer le contenu du **coffre** [chest].  "
       MC_HOC_2017_02: Le joueur doit atteindre le bosquet secret.  Aidez l'Agent à
         ouvrir la porte en écrivant le code qui lui permet d'atteindre la plaque de
         détection.
@@ -5827,6 +5927,11 @@ fr:
         droite. \r\n \r\nDéplacez le code dans l'espace de travail à fin de diriger
         l'Agent sur la plaque de détection [PressurePlate_Up]. Cela permettra à {currentPlayerName}
         de passer. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} se lance dans l'aventure ! Pour
+        l'aider, atteignez la **carte** [map_empty] située derrière la porte fermée
+        sur la droite. \r\n \r\nDéplacez le code dans l'espace de travail à fin de
+        diriger l'Agent sur la plaque de détection [PressurePlate_Up]. Cela permettra
+        à {currentPlayerName} de passer. "
       MC_HOC_2017_02_Kiki: "Le joueur se lance à l'aventure, mais d'abord il doit
         récupérer la torche cachée de l'autre côté de cette porte fermée. \r\n\r\nProgrammez
         l'Agent pour qu'il se déplace deux fois vers l'avant en suivant le chemin
@@ -5840,6 +5945,9 @@ fr:
       MC_HOC_2017_03_Cole: "{currentPlayerName} continue son aventure et a besoin
         de la **boussole** [compass] pour préparer son voyage.  \r\n   \r\nProgrammez
         l'Agent pour qu'il ouvre la porte. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} continue son aventure et a besoin
+        de la **boussole** [compass] pour préparer son voyage.  \r\n   \r\nProgrammez
+        l'Agent pour qu'il ouvre la porte. "
       MC_HOC_2017_03_Kiki: "L'aventure du joueur commencera derrière une porte fermée
         dans le bosquet secret !  \r\n\r\n\r\nAidez l'Agent à ouvrir la porte en écrivant
         le code pour qu'il atteigne la plaque de détection."
@@ -5851,7 +5959,13 @@ fr:
         les deux premières plaques de détection."
       MC_HOC_2017_04POINT5_RYAN: "Vous avez réussi ! \r\n\r\nMaintenant, dirigez {currentPlayerName}
         en toute sécurité à travers le labyrinthe pour récupérer la **hache** [diamond_axe]\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Vous avez réussi ! \r\n\r\nMaintenant, dirigez
+        {currentPlayerName} en toute sécurité à travers le labyrinthe pour récupérer
+        la **hache** [diamond_axe]\r\n"
       MC_HOC_2017_04_Cole: "L'Agent peut se déplacer sur l'eau !  \r\n \r\nUtilisez
+        une boucle « répéter » pour résoudre ce casse-tête et aider {currentPlayerName}
+        à récupérer le **seau** [bucket_empty] derrière la porte. "
+      MC_HOC_2017_04_Cole_2019: "L'Agent peut se déplacer sur l'eau !  \r\n \r\nUtilisez
         une boucle « répéter » pour résoudre ce casse-tête et aider {currentPlayerName}
         à récupérer le **seau** [bucket_empty] derrière la porte. "
       MC_HOC_2017_04_Kiki: "L'entrée du bosquet secret mène vers cette magnifique
@@ -5866,6 +5980,9 @@ fr:
       MC_HOC_2017_05_Cole: "Oh non, le pont est détruit ! \r\n\r\nProgrammez l'Agent
         pour reconstruire le pont en utilisant le bloc « placer » afin que {currentPlayerName}
         puisse atteindre la **pelle** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "Oh non, le pont est détruit ! \r\n\r\nProgrammez
+        l'Agent pour reconstruire le pont en utilisant le bloc « placer » afin que
+        {currentPlayerName} puisse atteindre la **pelle** [diamond_shovel]."
       MC_HOC_2017_05_Josh: "Oh non, le pont est détruit ! \n\n\nAidez l'Agent a reconstruire
         le pont afin que le joueur puisse atteindre la **pelle**."
       MC_HOC_2017_05_Kiki: "Il est temps pour le joueur de quitter le bosquet secret
@@ -5875,6 +5992,9 @@ fr:
       MC_HOC_2017_06_Cole: "Encore une rivière, mais celle-ci est beaucoup plus large !
         \r\n \r\nCorrigez ce code pour aider l'Agent à reconstruire un pont à fin
         que {currentPlayerName} récupère la **pioche** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2019: "Encore une rivière, mais celle-ci est beaucoup plus
+        large ! \r\n \r\nCorrigez ce code pour aider l'Agent à reconstruire un pont
+        à fin que {currentPlayerName} récupère la **pioche** [diamond_pickaxe]. "
       MC_HOC_2017_06_Josh: "Encore une rivière, mais celle-ci est beaucoup plus large !
         \ \r\n\r\nCorrigez ce code pour aider l'Agent à construire un pont par-dessus
         cette rivière."
@@ -5883,6 +6003,9 @@ fr:
         de l'eau."
       MC_HOC_2017_07_Cole: "De la glace bloque passage !  \r\n \r\nLa fonction « supprimer
         obstacle » vous aidera à détruire la glace et à diriger {currentPlayerName}
+        vers le wagonnet [minecart_normal] ! "
+      MC_HOC_2017_07_Cole_2019: "De la glace bloque passage !  \r\n \r\nLa fonction
+        « supprimer obstacle » vous aidera à détruire la glace et à diriger {currentPlayerName}
         vers le wagonnet [minecart_normal] ! "
       MC_HOC_2017_07_Kiki: "Vous pouvez utiliser autre chose que des boucles pour
         répéter le code !  \r\n\r\nIci, nous vous avons donné une fonction appelée
@@ -5923,6 +6046,10 @@ fr:
         dans votre espace de travail ? \r\n \r\nUtilisez ces fonctions avec d'autres
         codes de votre boîte à outils afin de dégager un chemin pour le wagonnet,
         puis récupérez le **briquet à silex** [flint_and_steel]. \r\n "
+      MC_HOC_2017_10_RETRY_2019: "Saurez-vous remarquer la différence entre les deux
+        fonctions dans votre espace de travail ? \r\n \r\nUtilisez ces fonctions avec
+        d'autres codes de votre boîte à outils afin de dégager un chemin pour le wagonnet,
+        puis récupérez le **briquet à silex** [flint_and_steel]. \r\n "
       MC_HOC_2017_10_RYAN: Essayez de construire dès le départ des fonctions qui permettront
         à l'Agent de facilement terminer ce wagonnet et d'amener le joueur jusqu'au
         carré orange.
@@ -5940,12 +6067,17 @@ fr:
       MC_HOC_2017_Ali: 'Observez les fonctions ci-dessous.  Comment pouvez-vous les
         utiliser pour éviter les Ghasts et aider {currentPlayerName} à atteindre le
         **livre enchanté** en toute sécurité [book_enchanted] ?  '
+      MC_HOC_2017_Ali_2019: 'Observez les fonctions ci-dessous.  Comment pouvez-vous
+        les utiliser pour éviter les Ghasts et aider {currentPlayerName} à atteindre
+        le **livre enchanté** en toute sécurité [book_enchanted] ?  '
       MC_HOC_2017_FP10x10: "**Jeu libre :** à votre tour ! Pourrez-vous relever le
         défi et récupérer tous les diamants dans ce niveau ? "
       MC_HOC_2017_FP10x10_RE: "**Jeu libre :** à votre tour ! Pourrez-vous relever
         le défi et récupérer tous les diamants dans ce niveau ? "
       MC_HOC_2017_FP20x20: "**Jeu libre :** à votre tour ! Utilisez le code de l'Agent
         pour explorer ce monde."
+      MC_HOC_2017_FP20x20_2019: "**Jeu libre :** à votre tour ! Utilisez le code de
+        l'Agent pour explorer ce monde."
       MC_HOC_2017_Ryan_03: "Saviez-vous que vous pouvez placer plusieurs bouts de
         code dans une boucle ?  \r\n\r\nUtilisez une boucle « répéter » pour aider
         l'Agent à construire un pont au-dessus de la rivière en plaçant des blocs
@@ -6307,7 +6439,7 @@ fr:
         the code to show the key and the gray square when the user inputs the\ncorrect
         code.\\\r\n\\\r\n# Do This\\\r\n\\\r\n* Inside the `if` statement you created\nin
         the `onEvent` command for the safe add:\\\r\n    * The `showElement` block\nto
-        show the gray square\\\r\n    * The `showElement` block to show the key\n"
+        show the gray square\\\r\n    * The `showElement` block to show the key"
       Room Escape Workshop - 9-2: "# Click Key\r\n\r\n<img src=\"https://images.code.org/1a736d2774860bebc5072b8ae8b38f34-image-1491066638078.10.00\nPM.png\"
         style=\"width:170px;float:right\">\r\n\r\nOnce a user clicks the\nkey you
         will want to show they are holding it. You can do this by moving the\nkey
@@ -7413,7 +7545,7 @@ fr:
         to repeat.\\\r\n\\\r\n ![](https://images.code.org/23e8e43ec4853c0bdbbbd50b9651300a-image-1443113032135.gif)\\\r\n\n\\\r\n*
         Finally, **modify `drawAllSeagrass`** to call this new two-param version\nof
         `drawSeagrass` supplying a reasonable random value for the second parameter\nas
-        well.\\\r\n\\\r\n<img src=\"https://images.code.org/4f15021cd9cebb62562665d3ddc82c51-image-1447885963677.PNG\"\nstyle=\"width:400px;padding-left:22px;\">\n"
+        well.\\\r\n\\\r\n<img src=\"https://images.code.org/4f15021cd9cebb62562665d3ddc82c51-image-1447885963677.PNG\"\nstyle=\"width:400px;padding-left:22px;\">"
       U3L07 - seaStar: "# Add Sea Stars\r\n\r\nWe're now\nready to add sea stars to
         our image by writing `drawAllSeaStars`. Recall that\nwe've already written
         loops to draw much more complex stars. \r\n\r\n# Do\nThis:\r\n\r\n* **Read**
@@ -7910,7 +8042,7 @@ fr:
         width:100px; margin: 0 20px 80px 100px;\"/>\\\r\n\\\r\n<div\nstyle=\"color:
         #7665a0; font-size: 1.6em; line-height: 1.4em;\">\\\r\nFirst,\nwe need napkins!\\\r\n\\\r\nChoose
         your favorite shape:\\\r\n - Square (Easy)\\\r\n\n- Triangle (Medium)\\\r\n
-        - Pentagon (Hard)\\\r\n\\\r\n</div>\\\r\n<br/>\\\r\n\\\r\n"
+        - Pentagon (Hard)\\\r\n\\\r\n</div>\\\r\n<br/>\\\r\n\\\r\n\n"
       aE2: "<img src=\"https://images.code.org/2a67ea28a0fb9f674fd764b350b297da-image-1465514320176.gif\"\nstyle=\"width:400px;
         margin: 0 20px 20px 10px;\"/>\r\n\r\n<div style=\"color:\n#7665a0; font-size:
         1.6em; line-height: 1.4em;\" >Now we need enough for everyone!\r\n<br/><br/>\r\n\r\nLet's\ntake
@@ -8002,7 +8134,7 @@ fr:
         Concert</h4><br/><br/>\\\r\n</td>\\\r\n\\\r\n<td>\\\r\n<img\nsrc=\"https://images.code.org/f7bf86b0f86669d82ee2c1565738b9cb-image-1466794447737.gif\"\nwidth=\"150\"/><br/>\\\r\n<h4>A
         Birthday Cake</h4><br/><br/>\\\r\n</td>\\\r\n\\\r\n</tr>\\\r\n</table>\\\r\n"
       collector example: "Collect all the gold using the `collect`\nblock:\\\r\n\\\r\n<xml>\\\r\n
-        \ <block type=\"collector_collect\"/></xml>\n"
+        \ <block type=\"collector_collect\"/></xml>"
       collectorDebugVideo2: "*\"Sequence matters!\"*\r\n\r\nThe\nblocks you need are
         already in the workspace, but not connected.  \r\n\r\nPut\nthese blocks in
         order to collect all of the gold and solve the puzzle."
@@ -8052,7 +8184,7 @@ fr:
         to get to absolutely any spot you like! Try this code\nto see how it works,
         then make the program your own!\\\r\n<xml>\\\r\n  <block\ntype=\"jump_to_xy\">\\\r\n
         \   <title name=\"XPOS\">???</title>\\\r\n    <title\nname=\"YPOS\">???</title>\\\r\n
-        \   </block></xml>\n"
+        \   </block></xml>"
       course3_farmer_condLoops_challenge1: "The pumpkins mark\nthe place where you
         should turn. *Turn right at the pumpkins.* Otherwise keep\ngoing forward,
         but remember to collect all of the lettuce or corn along the\nway. \r\n\r\n**Each
@@ -8085,7 +8217,7 @@ fr:
         to get to absolutely any spot you like! Try this code\nto see how it works,
         then make the program your own!\\\r\n<xml>\\\r\n  <block\ntype=\"jump_to_xy\">\\\r\n
         \   <title name=\"XPOS\">???</title>\\\r\n    <title\nname=\"YPOS\">???</title>\\\r\n
-        \   </block></xml>\n"
+        \   </block></xml>"
       course4_artist_fwp_challenge1: Essayez d'exécuter ce programme, et apportez-y
         des modifications pour voir quels changements sont produits. Comprenez-vous
         comment cela fonctionne ? (Vous pouvez également tout supprimer et mettre
@@ -8170,7 +8302,7 @@ fr:
         into the workspace and try to figure out how to get treasure.  Get\nat least
         one item to pass this level."
       courseA_collector_loops2: "Get all three piles! Move\nLaurel to each piece of
-        treasure, then use this block:\\\r\n  <xml><block type=\"collector_collect\"/></xml>\n"
+        treasure, then use this block:\\\r\n  <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops2_2018: "Get all three piles! Move\nLaurel to each piece
         of treasure, then use this block:\\\r\n  <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_preLoops1: "This is Laurel the Adventurer!\n\r\n\r\nPress
@@ -8179,7 +8311,7 @@ fr:
         a ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)\nblock
         to the bottom of the program and click \"Run\"!"
       courseA_collector_preLoops7: "Get all three piles! Move\nLaurel to each piece
-        of treasure, then use this block:\\\r\n  <xml><block type=\"collector_collect\"/></xml>\n"
+        of treasure, then use this block:\\\r\n  <xml><block type=\"collector_collect\"/></xml>"
       courseA_maze_ramp3_2018: "*\"This pig is ruffling my feathers.\"*\r\n\r\nThere\nis
         one extra block that is going to cause the bird to crash.  \r\nThrow it\naway
         by removing it from the other blocks and dragging it back to the toolbox."
@@ -8217,13 +8349,13 @@ fr:
         \ </block></xml> block to the <xml><block type=\"studio_whenArrow\">\\\r\n
         \   <title\nname=\"VALUE\">left</title>\\\r\n  </block></xml> event block
         that is already\nin the workspace.\\\r\n\\\r\nGet Jorge to the flag to finish
-        this level!\n"
+        this level!"
       courseA_playLab_events3_2018: "Help Jorge the Dog get moving\nby connecting
         the <xml><block type=\"studio_move\">\\\r\n    <title name=\"SPRITE\">1</title>\\\r\n
         \   <title\nname=\"DIR\">8</title>\\\r\n  </block></xml> block to the <xml><block
         type=\"studio_whenArrow\">\\\r\n    <title\nname=\"VALUE\">left</title>\\\r\n
         \ </block></xml> event block that is already\nin the workspace.\\\r\n\\\r\nGet
-        Jorge to the flag to finish this level!\n"
+        Jorge to the flag to finish this level!"
       courseA_playlab_events_challenge1: "*\"Where are my friends\nhiding? In this
         game, clicking on me will show my friend Olive the cat!\"*\\\r\n\\\r\nClicking\nOlive
         will make Robin appear! Can you write code to show the rest of the characters\ntoo?\\\r\n\\\r\nIn
@@ -8355,13 +8487,13 @@ fr:
         Try changing how many times you spin\\\r\n  - Try a 60\ndegree turn for 6
         times around\\\r\n  - Try a 20 degree turn for 18 times around\\\r\n___\\\r\nThis\nimage
         uses a pirate, a ninja, and a giraffe. They loop 18 times with a 20\ndegree
-        turn.\\\r\n\\\r\n![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)\n"
+        turn.\\\r\n\\\r\n![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)"
       courseC_artist_loops7a_2018: "Try changing the `repeat` loop\nto run a different
         number of times.  How far do you have to turn to go around\nin a full circle?\\\r\n-
         Try changing how many times you spin\\\r\n  - Try a 60\ndegree turn for 6
         times around\\\r\n  - Try a 20 degree turn for 18 times around\\\r\n___\\\r\nThis\nimage
         uses a pirate, a ninja, and a giraffe. They loop 18 times with a 20\ndegree
-        turn.\\\r\n\\\r\n![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)\n"
+        turn.\\\r\n\\\r\n![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)"
       courseC_artist_loops8a: "Now make something on your own.  What\nhappens when
         you make two separate circles of different stickers?\\\r\n___\\\r\nNeed\nan
         idea? Try making a design like this one.\\\r\n\\\r\n![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)"
@@ -8619,12 +8751,22 @@ fr:
         **20 and 50** pixels wide.  It can be any shape that you like.  \r\n<hr/>\r\n\r\nYou\ncan
         try making a polygon, like one of these:  \r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)
         \ \r\n\r\n  \r\n  \r\nOr\neven an abstract shape, like one of these:  \r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\r\n"
+      courseD_artist_project1_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_“Hi,
+        I’m Elsa of Arendelle, help me draw a shape.”_\r\n\r\nDraw a small shape,\nbetween
+        **20 and 50** pixels wide.  It can be any shape that you like.  \r\n<hr/>\r\n\r\nYou\ncan
+        try making a polygon, like one of these:  \r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)
+        \ \r\n\r\n  \r\n  \r\nOr\neven an abstract shape, like one of these:  \r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\r\n"
       courseD_artist_project1a: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Let’s
         try something new. This time, skate in a zig-zag.\"_\r\n\r\n\r\n<img\nsrc=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\"
         style=\"float: left; margin: 0 15px 15px 0;\" />\r\nDraw a\nstair-step pattern
         that uses turns between 75 and 105 degrees -- but make\nsure that your left
         and right turns use the same angle.  \r\n(You will see\nwhy later.)"
       courseD_artist_project1a_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Let’s
+        try something new. This time, skate in a zig-zag.\"_\r\n\r\n\r\n<img\nsrc=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\"
+        style=\"float: left; margin: 0 15px 15px 0;\" />\r\nDraw a\nstair-step pattern
+        that uses turns between 75 and 105 degrees -- but make\nsure that your left
+        and right turns use the same angle.  \r\n(You will see\nwhy later.)"
+      courseD_artist_project1a_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Let’s
         try something new. This time, skate in a zig-zag.\"_\r\n\r\n\r\n<img\nsrc=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\"
         style=\"float: left; margin: 0 15px 15px 0;\" />\r\nDraw a\nstair-step pattern
         that uses turns between 75 and 105 degrees -- but make\nsure that your left
@@ -8643,6 +8785,13 @@ fr:
         you jump forward by **more** than the width of your shape, you will get\na
         gap\r\n\r\n<hr/>\r\n\r\nYour row might end up straight like with these:\r\n\r\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\r\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\r\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\r\n<br/>
         \ <br/>\r\n\r\n\r\nOr,\nyour shapes might move around like one of these: \r\n\r\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\r\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\r\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
+      courseD_artist_project2_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_“Now,
+        let’s draw more than one.”_\r\n\r\nNow take your shape and draw two\nor three
+        in a row by jumping forward some number of pixels.  \r\n\r\n- If\nyou jump
+        forward by **less** than the width of your shape, they might overlap\r\n-\nIf
+        you jump forward by **more** than the width of your shape, you will get\na
+        gap\r\n\r\n<hr/>\r\n\r\nYour row might end up straight like with these:\r\n\r\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\r\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\r\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\r\n<br/>
+        \ <br/>\r\n\r\n\r\nOr,\nyour shapes might move around like one of these: \r\n\r\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\r\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\r\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
       courseD_artist_project2a: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Now
         let’s turn and go back the way we came.\"_\r\n\r\nTurn around 180 degrees\nand
         draw the exact same stair pattern again!  \r\n\r\n- The rest of this stage\nwill
@@ -8650,6 +8799,12 @@ fr:
         around 180 degrees, draw, then turn around 180 degrees again.\r\n\r\n<hr/>\r\n\r\nHere\nis
         an example of stairs that use a 76 degree turn:\r\n\r\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
       courseD_artist_project2a_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Now
+        let’s turn and go back the way we came.\"_\r\n\r\nTurn around 180 degrees\nand
+        draw the exact same stair pattern again!  \r\n\r\n- The rest of this stage\nwill
+        be easier if you put all of your code inside of a loop to make Elsa  draw,\nturn
+        around 180 degrees, draw, then turn around 180 degrees again.\r\n\r\n<hr/>\r\n\r\nHere\nis
+        an example of stairs that use a 76 degree turn:\r\n\r\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
+      courseD_artist_project2a_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Now
         let’s turn and go back the way we came.\"_\r\n\r\nTurn around 180 degrees\nand
         draw the exact same stair pattern again!  \r\n\r\n- The rest of this stage\nwill
         be easier if you put all of your code inside of a loop to make Elsa  draw,\nturn
@@ -8669,6 +8824,13 @@ fr:
         snowflakes you can make!\r\n<hr/>\r\nTake a look at these examples\nwith polygons:
         \ \r\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\r\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\r\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\r\n\r\nAbstract\nshapes
         might make a snowflake more like one of these:  \r\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\r\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\r\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+      courseD_artist_project3_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Let’s
+        make it into a snowflake.\"_\r\n\r\nNext, jump Elsa back to the center\nusing
+        the `jump to 200 over and 200 down` block, and spin her around to draw\nthe
+        line of shapes again and again in a bunch of different directions.   \r\n\r\nWhat\namazing
+        snowflakes you can make!\r\n<hr/>\r\nTake a look at these examples\nwith polygons:
+        \ \r\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\r\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\r\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\r\n\r\nAbstract\nshapes
+        might make a snowflake more like one of these:  \r\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\r\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\r\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
       courseD_artist_project3a: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Let’s
         spin and make it into a snowflake.\"_\\\r\n\\\r\nSpin that shape around\n5
         or 6 times in a circle.\\\r\n- If you choose 5 times,  try a turn of 72 degrees\\\r\n-\nIf
@@ -8679,11 +8841,20 @@ fr:
         or 6 times in a circle.\\\r\n- If you choose 5 times,  try a turn of 72 degrees\\\r\n-\nIf
         you choose 6 times,  try a turn of 60 degrees\\\r\n<hr/>\\\r\n\\\r\nHere's
         an\nexample of Elsa turning a pattern 6 times:\\\r\n\\\r\n![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)"
+      courseD_artist_project3a_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Let’s
+        spin and make it into a snowflake.\"_\\\r\n\\\r\nSpin that shape around\n5
+        or 6 times in a circle.\\\r\n- If you choose 5 times,  try a turn of 72 degrees\\\r\n-\nIf
+        you choose 6 times,  try a turn of 60 degrees\\\r\n<hr/>\\\r\n\\\r\nHere's
+        an\nexample of Elsa turning a pattern 6 times:\\\r\n\\\r\n![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)"
       courseD_artist_project4: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"What
         happens if we draw snowflakes on top of each other?\"_\r\n\r\nTry\nlayering
         two different shapes of snowflakes on top of one another with a little\nturn
         in between - see what you get! "
       courseD_artist_project4_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"What
+        happens if we draw snowflakes on top of each other?\"_\r\n\r\nTry\nlayering
+        two different shapes of snowflakes on top of one another with a little\nturn
+        in between - see what you get! "
+      courseD_artist_project4_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"What
         happens if we draw snowflakes on top of each other?\"_\r\n\r\nTry\nlayering
         two different shapes of snowflakes on top of one another with a little\nturn
         in between - see what you get! "
@@ -8699,10 +8870,19 @@ fr:
         if you use two different angles in your stair step pattern?\\\r\n- What\nhappens
         if you make your diamond pattern longer or shorter?\\\r\n- What does\nit look
         like to draw two snowflakes on top of one another?\\\r"
+      courseD_artist_project4a_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        \ _\"Now,\nwhat should we do? Let’s explore and create our own winter wonderland!\"_\\\r\n\\\r\nTry\nplaying
+        around with what you've created. Draw whatever you like!\\\r\n- What\nhappens
+        if you use two different angles in your stair step pattern?\\\r\n- What\nhappens
+        if you make your diamond pattern longer or shorter?\\\r\n- What does\nit look
+        like to draw two snowflakes on top of one another?\\\r"
       courseD_artist_project5: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Get
         creative with shapes and angles to see what kind of new snowflakes\nwe can
         draw!\"_\\\r\n"
       courseD_artist_project5_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Get
+        creative with shapes and angles to see what kind of new snowflakes\nwe can
+        draw!\"_\\\r\n"
+      courseD_artist_project5_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Get
         creative with shapes and angles to see what kind of new snowflakes\nwe can
         draw!\"_\\\r\n"
       courseD_artist_ramp11: "Great!  Now let's make a square\nusing Artist!  The
@@ -8732,6 +8912,8 @@ fr:
       courseD_bee_nestedLoops8: Recueille tout le nectar de chaque fleur et fabrique
         du miel dans chaque gâteau de miel. Utilise une boucle imbriquée.
       courseD_bee_nestedLoops8_2018: Recueille tout le nectar de chaque fleur et fabrique
+        du miel dans chaque gâteau de miel. Utilise une boucle imbriquée.
+      courseD_bee_nestedLoops8_2019: Recueille tout le nectar de chaque fleur et fabrique
         du miel dans chaque gâteau de miel. Utilise une boucle imbriquée.
       courseD_bounce_events1: Rendez-vous au drapeau! Attachez un bloc au bloc "Quand
         la flèche gauche" et appuyez sur "Exécuter" pour déplacer le joueur au drapeau.
@@ -8882,19 +9064,29 @@ fr:
       courseD_maze_nestedLoops4_2018: |-
         Amène-moi jusqu'au tournesol !
         (Indice : tu devras utiliser une boucle « Répéter » à l'intérieur d'une autre boucle pour réussir ce niveau.)
+      courseD_maze_nestedLoops4_2019: |-
+        Amène-moi jusqu'au tournesol !
+        (Indice : tu devras utiliser une boucle « Répéter » à l'intérieur d'une autre boucle pour réussir ce niveau.)
       courseD_maze_ramp3: "*\"This pig is ruffling my feathers.\"*\r\n\r\nThere\nis
         one extra block that is going to cause the bird to crash.  \r\nThrow it\naway
         by removing it from the other blocks and dragging it back to the toolbox."
       courseD_maze_ramp3_2018: "*\"This pig is ruffling my feathers.\"*\r\n\r\nThere\nis
         one extra block that is going to cause the bird to crash.  \r\nThrow it\naway
         by removing it from the other blocks and dragging it back to the toolbox."
+      courseD_maze_ramp3_2019: "*\"This pig is ruffling my feathers.\"*\r\n\r\nThere\nis
+        one extra block that is going to cause the bird to crash.  \r\nThrow it\naway
+        by removing it from the other blocks and dragging it back to the toolbox."
       courseD_maze_ramp4: "*\"Trace the path and lead me to\nthe silly pig.\"* \r\n\r\nAvoid
         TNT or feathers will fly!"
       courseD_maze_ramp4_2018: "*\"Trace the path and lead me to\nthe silly pig.\"*
         \r\n\r\nAvoid TNT or feathers will fly!"
+      courseD_maze_ramp4_2019: "*\"Trace the path and lead me to\nthe silly pig.\"*
+        \r\n\r\nAvoid TNT or feathers will fly!"
       courseD_maze_ramp5: "*\"Follow this path to get me to\nthe pig!\"*\\\r\n\\\r\nAvoid
         the TNT."
       courseD_maze_ramp5_2018: "*\"Follow this path to get me to\nthe pig!\"*\\\r\n\\\r\nAvoid
+        the TNT."
+      courseD_maze_ramp5_2019: "*\"Follow this path to get me to\nthe pig!\"*\\\r\n\\\r\nAvoid
         the TNT."
       courseD_maze_ramp6: "*\"Keep calm and help me find the\nbad pig. Otherwise I
         might get angry!\"*\\\r\n\\\r\nWhen you have several of the\nsame block in
@@ -8953,13 +9145,13 @@ fr:
         to get to absolutely any spot you like! Try this code\nto see how it works,
         then make the program your own!\\\r\n<xml>\\\r\n  <block\ntype=\"jump_to_xy\">\\\r\n
         \   <title name=\"XPOS\">???</title>\\\r\n    <title\nname=\"YPOS\">???</title>\\\r\n
-        \   </block></xml>\n"
+        \   </block></xml>"
       courseE_artist_functions_challenge2_2018: "Not only can you\njump to some pre-set
         locations, like the corners of the canvas, you can also\nuse a `jump to` command
         to get to absolutely any spot you like! Try this code\nto see how it works,
         then make the program your own!\\\r\n<xml>\\\r\n  <block\ntype=\"jump_to_xy\">\\\r\n
         \   <title name=\"XPOS\">???</title>\\\r\n    <title\nname=\"YPOS\">???</title>\\\r\n
-        \   </block></xml>\n"
+        \   </block></xml>"
       courseE_artist_ramp10: "Did you know you can put loops\ninside of other loops
         to make them more powerful?  That's called making a\n\"nested loop\".\\\r\n\\\r\n___\\\r\n\\\r\nDrag
         the code for the last triangle into\na new loop to spin it around and make
@@ -9076,6 +9268,10 @@ fr:
         guess how much dirt is in it.  \r\n\r\n___\r\n\r\nWe've added\na new block
         to the toolbox called the `while there is a pile` block.  Use\nthis to remove
         dirt only while there is still some to scoop! "
+      courseE_farmer_ramp11a_2019: "Oh my!  This pile is so big that\nit's hard to
+        guess how much dirt is in it.  \r\n\r\n___\r\n\r\nWe've added\na new block
+        to the toolbox called the `while there is a pile` block.  Use\nthis to remove
+        dirt only while there is still some to scoop! "
       courseE_farmer_ramp12a: "Help the farmer walk the path\nto find all of the lettuce\r\n\r\nIn
         this puzzle, lettuce is growing at the\nend of every path.  If there is a
         path in front of her, the farmer can keep\nmoving forward.  Otherwise, she
@@ -9091,16 +9287,25 @@ fr:
       courseE_farmer_ramp12c_2018: "The lettuce is now only at the\nend of the path.
         \ \r\nTravel down the path **until** you reach a head of lettuce,\nthen continue
         to pick it **while** there is still some left.  "
+      courseE_farmer_ramp12c_2019: "The lettuce is now only at the\nend of the path.
+        \ \r\nTravel down the path **until** you reach a head of lettuce,\nthen continue
+        to pick it **while** there is still some left.  "
       courseE_farmer_ramp12d: "The lettuce is scattered all\nover the garden.  \r\nTravel
         down each path **until** you reach a head of\nlettuce, then continue to pick
         it **while** there is still some left.  "
       courseE_farmer_ramp12d_2018: "The lettuce is scattered all\nover the garden.
         \ \r\nTravel down each path **until** you reach a head of\nlettuce, then continue
         to pick it **while** there is still some left.  "
+      courseE_farmer_ramp12d_2019: "The lettuce is scattered all\nover the garden.
+        \ \r\nTravel down each path **until** you reach a head of\nlettuce, then continue
+        to pick it **while** there is still some left.  "
       courseE_farmer_ramp12e: "The lettuce is scattered all\nover the garden.  \r\nTravel
         down each path **until** you reach a head of\nlettuce, then continue to pick
         it **while** there is still some left.  "
       courseE_farmer_ramp12e_2018: "The lettuce is scattered all\nover the garden.
+        \ \r\nTravel down each path **until** you reach a head of\nlettuce, then continue
+        to pick it **while** there is still some left.  "
+      courseE_farmer_ramp12e_2019: "The lettuce is scattered all\nover the garden.
         \ \r\nTravel down each path **until** you reach a head of\nlettuce, then continue
         to pick it **while** there is still some left.  "
       courseE_farmer_ramp13: "Goodness!  Look at all of these\nsprouts. Some of them
@@ -9220,13 +9425,21 @@ fr:
         you normally would for a shape, it creates a neat effect.\\\r\n\\\r\nTry\nusing
         some of the code from the last level, but turning 89 degrees to create\nthis
         twisted square spiral."
+      courseF_artist_for_Template_2019: "If you turn a little bit\nmore or less than
+        you normally would for a shape, it creates a neat effect.\\\r\n\\\r\nTry\nusing
+        some of the code from the last level, but turning 89 degrees to create\nthis
+        twisted square spiral."
       courseF_artist_for_challenge1: "Can you figure out how\nto re-create this drawing?
         \r\n\r\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"\nwidth=\"350px\"/>"
       courseF_artist_for_challenge1_2018: "Can you figure out how\nto re-create this
         drawing? \r\n\r\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"\nwidth=\"350px\"/>"
+      courseF_artist_for_challenge1_2019: "Can you figure out how\nto re-create this
+        drawing? \r\n\r\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"\nwidth=\"350px\"/>"
       courseF_artist_for_challenge2: "Can you figure out how\nto re-create this drawing
         with a single loop? \r\n\r\n<img src=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\"\nwidth=\"350px\"/>"
       courseF_artist_for_challenge2_2018: "Can you figure out how\nto re-create this
+        drawing with a single loop? \r\n\r\n<img src=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\"\nwidth=\"350px\"/>"
+      courseF_artist_for_challenge2_2019: "Can you figure out how\nto re-create this
         drawing with a single loop? \r\n\r\n<img src=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\"\nwidth=\"350px\"/>"
       courseF_artist_fwp2: "Edit the function to accept a parameter\ncalled `length`.
         \ \r\n\r\nThe sides of each square should be 25 pixels larger\nthan the last.
@@ -9336,6 +9549,10 @@ fr:
         now learned everything you need to know to\nmake a pattern like this! This
         puzzle is meant to be difficult.  Can you stick\nwith it until you figure
         out the solution?"
+      courseF_artist_variables_challenge2_2019: "<img src=\"https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png\"\nwidth=\"250px\"/>\\\r\n\\\r\nYou've
+        now learned everything you need to know to\nmake a pattern like this! This
+        puzzle is meant to be difficult.  Can you stick\nwith it until you figure
+        out the solution?"
       courseF_bee_conditionals1_predict1: "*\"This cloud is\nblocking my view!\"*\\\r\n\\\r\nCheck
         to see if there's a flower under the cloud.\nIf there's a flower, get nectar."
       courseF_bee_conditionals1_predict1_2018: "*\"This cloud is\nblocking my view!\"*\\\r\n\\\r\nCheck
@@ -9362,6 +9579,7 @@ fr:
         if there is a flower. Otherwise, make honey once (because there\nis a honeycomb)."
       courseF_bee_for_challenge2: Résous ce puzzle avec le moins de blocs possible.
       courseF_bee_for_challenge2_2018: Résous ce puzzle avec le moins de blocs possible.
+      courseF_bee_for_challenge2_2019: Résous ce puzzle avec le moins de blocs possible.
       courseF_bee_functions2: "To make things easier, it's\ntime to learn about functions!\r\n\r\nFrom
         here on out, you will be using\na new *function editor*.  This editor is a
         separate window that will appear\nwhen you go to edit a function.  You won't
@@ -11781,7 +11999,7 @@ fr:
         name=\"YPOS\">-10</title>\\\r\n    </block>\\\r\n    <block\ntype=\"jump_to\"><title
         name=\"VALUE\">7</title>\\\r\n    </block></xml>\\\r\nWhen\nyou are finished,
         right-click to save the image, then send it to me on <a\nhref=\"https://classroom.google.com\">Google
-        Classroom</a>.\n"
+        Classroom</a>."
       harvey_snowflake_artist2: "*It's time to get your snowflake\nready for 3d printing!*\\\r\n\\\r\n![](https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08\nPM.png)In
         order for your image to print correctly, follow these rules:\\\r\n\\\r\n*\nMake
         sure your image is all **one piece**! Separate pieces will print separately.\\\r\n*\nMake
@@ -11791,7 +12009,7 @@ fr:
         name=\"YPOS\">-10</title>\\\r\n    </block>\\\r\n    <block\ntype=\"jump_to\"><title
         name=\"VALUE\">7</title>\\\r\n    </block></xml>\\\r\nWhen\nyou are finished,
         right-click to save the image, then send it to me on <a\nhref=\"https://classroom.google.com\">Google
-        Classroom</a>.\n"
+        Classroom</a>."
       iceage_click_hello: "Can you help Sid call for his friends\nwhen you click on
         him? \r\nOnce you're done, press \"Run\" to play.  Click\non Sid to see your
         code work!"
@@ -11893,15 +12111,23 @@ fr:
         flowers before the winter by moving forward by 60 pixels."
       ramp_artist_loops1_2018: "What a lovely day!  \r\n\r\nHelp\nthe Artist cover
         his flowers before the winter by moving forward by 60 pixels."
+      ramp_artist_loops1_2019: "What a lovely day!  \r\n\r\nHelp\nthe Artist cover
+        his flowers before the winter by moving forward by 60 pixels."
       ramp_artist_loops5: "Loops sure make writing code easier!\\\r\n\\\r\nUse\nloops
         to draw this staircase.\\\r\n- Each stairstep is 50 pixels long and 50\npixels
         tall\\\r\n- You will need to turn 90 degrees in each direction"
       ramp_artist_loops5_2018: "Loops sure make writing code easier!\\\r\n\\\r\nUse\nloops
         to draw this staircase.\\\r\n- Each stairstep is 50 pixels long and 50\npixels
         tall\\\r\n- You will need to turn 90 degrees in each direction"
+      ramp_artist_loops5_2019: "Loops sure make writing code easier!\\\r\n\\\r\nUse\nloops
+        to draw this staircase.\\\r\n- Each stairstep is 50 pixels long and 50\npixels
+        tall\\\r\n- You will need to turn 90 degrees in each direction"
       ramp_artist_loops6: "This staircase is much bigger, but\nit takes the same amount
         of code as the last puzzle!\\\r\n\\\r\nFix this loop\nto complete the puzzle."
       ramp_artist_loops6_2018: "This staircase is much bigger, but\nit takes the same
+        amount of code as the last puzzle!\\\r\n\\\r\nFix this loop\nto complete the
+        puzzle."
+      ramp_artist_loops6_2019: "This staircase is much bigger, but\nit takes the same
         amount of code as the last puzzle!\\\r\n\\\r\nFix this loop\nto complete the
         puzzle."
       subgoal-test-clone: "### use goal labels to structure\nyour solution.\\\r\n\\\r\nThe

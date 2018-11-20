@@ -2402,13 +2402,21 @@ ne:
       courseF_artist_for7_2018: |-
         Make three small changes to the
         code from the last level to get this!
+      courseF_artist_for7_2019: |-
+        Make three small changes to the
+        code from the last level to get this!
       courseF_artist_for_challenge1: Can you figure out how to re-create this drawing?
       courseF_artist_for_challenge1_2018: Can you figure out how to re-create this
+        drawing?
+      courseF_artist_for_challenge1_2019: Can you figure out how to re-create this
         drawing?
       courseF_artist_for_challenge2: |-
         Can you figure out how to re-create this drawing
         with a single loop?
       courseF_artist_for_challenge2_2018: |-
+        Can you figure out how to re-create this drawing
+        with a single loop?
+      courseF_artist_for_challenge2_2019: |-
         Can you figure out how to re-create this drawing
         with a single loop?
       courseF_bee_for8: |-
@@ -2417,10 +2425,16 @@ ne:
       courseF_bee_for8_2018: |-
         You've got this! What should your
         increment be to collect 3, 6, 9, 12, 15 nectar?
+      courseF_bee_for8_2019: |-
+        You've got this! What should your
+        increment be to collect 3, 6, 9, 12, 15 nectar?
       courseF_bee_for_challenge2: |-
         Solve this puzzle using the fewest number of
         blocks possible.
       courseF_bee_for_challenge2_2018: |-
+        Solve this puzzle using the fewest number of
+        blocks possible.
+      courseF_bee_for_challenge2_2019: |-
         Solve this puzzle using the fewest number of
         blocks possible.
       courseF_bee_for_challenge3: |-

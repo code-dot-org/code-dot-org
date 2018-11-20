@@ -279,14 +279,14 @@ hu:
         weblapod további oldalaira hivatkozik. A fejléc átismétléséhez keresd fel
         a\n [9. szint 3. feladványát](/s/csd2/stage/9/puzzle/3).\r\n* Minden oldal
         esetén\nbizonyosodj meg róla, hogy van lábléc, amely tartalmazza az oldal
-        felhasználási feltételeit.\r\n\r\n"
+        felhasználási feltételeit.\r\n\r"
       CSD U2 header footer_2018: "# Fejléc és lábléc\r\n\r\nMinden\noldalon legyen
         fejléc és lábléc.\r\n\r\n# Tedd a következőket\r\n* Minden oldal esetén \nbizonyosodj
         meg róla, hogy az tartalmazza az oldal címét és egy navigációs menüt, ami\na
         weblapod további oldalaira hivatkozik. A fejléc átismétléséhez keresd fel
         a\n [9. szint 3. feladványát](/s/csd2/stage/9/puzzle/3).\r\n* Minden oldal
         esetén\nbizonyosodj meg róla, hogy van lábléc, amely tartalmazza az oldal
-        felhasználási feltételeit.\r\n\r\n"
+        felhasználási feltételeit.\r\n\r"
       Course 4 Artist 13: Még mindig játszol? Itt egy üres vászon, amire azt rajzolsz,
         amit csak akarsz!
       Course 4 Artist 6: |-
@@ -337,6 +337,40 @@ hu:
         \ Ebben megtalálható a hídon való átkeléshez szükséges minden kód! \r\n \r\nAz
         út kijavításához és {currentPlayerName} játékos eljuttatásához a vöröskő fáklyához
         [redstone_torch] illeszd a kis, zöld blokkot kétszer a munkaterületre."
+      Function intro Ryan_2019: "Egy \"híd építése\" nevű **funkció** van a munkaterületen.
+        \ Ebben megtalálható a hídon való átkeléshez szükséges minden kód! \r\n \r\nAz
+        út kijavításához és {currentPlayerName} játékos eljuttatásához a vöröskő fáklyához
+        [redstone_torch] illeszd a kis, zöld blokkot kétszer a munkaterületre."
+      HOC 2018 Level_1: Az előtted álló utazáshoz fel kell töltened a készleteidet.
+        Vegyél ki egy **csónakot** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        a **ládából** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+      HOC 2018 Level_10: A Víz alatti templomban valahol egy **tintahal** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        rejtőzik – meg tudod találni?
+      HOC 2018 Level_11: Építs falat **prizmarinból** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        a fekete beton köré. Ez aktiválni fogja a **csatornát** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png),
+        így teljesítetted a feladatot!
+      HOC 2018 Level_12: Gratulálunk! A nyílt vízi világ már vár rád. Építs korallzátonyt!
+        Vulkánt! Elsüllyedt hajót! Csak rajtad áll.
+      HOC 2018 Level_2: Csónakkal sokkal egyszerűbb, mint úszni a nyílt vízen! Menj
+        a móló végére, ahol vízre szállhatsz.
+      HOC 2018 Level_3: Ragadd meg az evezőt, és hajózz ki a nyílt vizekre, hogy kifoghasd
+        a **tőkehalat** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Hadd egye meg a tőkehalat a **delfin** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Ismétlő blokkal gyorsabban átjutsz az óceánon.
+      HOC 2018 Level_5: Valahol egy **nautiluszhéj** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** ![  (https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      HOC 2018 Level_6: Úgy tűnik, irtó hideg van odakint! A víz alatti romokhoz vezető
+        utad során fogj egy **lazacot** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
+      HOC 2018 Level_7a: Megtaláltad a víz alatti romokat. Keress a homokkőben egy
+        **ládát** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png),
+        ami **prizmarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        kincset rejt.
+      HOC 2018 Level_8: Először jéghegyek, most meg láva? Menj végig ezen a vulkáni
+        szigeten, és keresd meg a **trópusi halat** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        a korallzátonyban.
+      HOC 2018 Level_9b: Elérted a zátonyt, most keresd meg a **Tenger szívét** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! A kék és vörös korall segítségével juss el a kincset tartalmazó **ládához**
+        ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       K-1 Bee Loops 2: Használj egy ciklust, hogy nektárt gyűjts és mézet készíts!
       K-1 Bee Loops 3: Használj ciklusokat, hogy nektárt gyűjts és mézet készíts!
       K-1 Bee Loops 4: Használj ciklusokat, hogy nektárt gyűjts, mézet készíts, és
@@ -365,12 +399,22 @@ hu:
         siet!   \r\n \r\n   \r\nIllessz egy \"mozgás előre\" blokkot az \"amikor fut\"
         blokkba a munkaterületen, hogy az Agentet a [PressurePlate_Up] nyomólapra
         vidd, majd nyomd meg a \"Futtatás\" gombot, és a nyílgombokkal juttasd ki
-        {currentPlayerName} játékost a házból a **láda** [chest] felvevéséhez.  \n"
+        {currentPlayerName} játékost a házból a **láda** [chest] felvevéséhez.  "
+      MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} a ház foglya, de az Agent a
+        segítségére siet!   \r\n \r\n   \r\nIllessz egy \"mozgás előre\" blokkot az
+        \"amikor fut\" blokkba a munkaterületen, hogy az Agentet a [PressurePlate_Up]
+        nyomólapra vidd, majd nyomd meg a \"Futtatás\" gombot, és a nyílgombokkal
+        juttasd ki {currentPlayerName} játékost a házból a **láda** [chest] felvevéséhez.
+        \ "
       MC_HOC_2017_02: A játékosnak be kell jutnia a rejtett ligetbe.  Segíts az Agentnek
         kinyitni a kaput azzal, hogy úgy programozod, hogy a nyomólapra jusson.
       MC_HOC_2017_02_Cole: "{currentPlayerName} kalandra készül! Hogy segíts neki,
         szerezd meg a **térképet** [map_empty] a jobb oldali zárt ajtó mögül. \r\n
         \r\nAz Agent nyomólapra [PressurePlate_Up] juttatásához és az ajtó kinyitásához
+        {currentPlayerName} számára illeszd a kódot a munkaterületre. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} kalandra készül! Hogy segíts
+        neki, szerezd meg a **térképet** [map_empty] a jobb oldali zárt ajtó mögül.
+        \r\n \r\nAz Agent nyomólapra [PressurePlate_Up] juttatásához és az ajtó kinyitásához
         {currentPlayerName} számára illeszd a kódot a munkaterületre. "
       MC_HOC_2017_02_Kiki: "A játékos kalandra készül, de először meg kell szereznie
         a zárt ajtó mögött található fáklyát. \r\n\r\nProgramozd az Agentet úgy, hogy
@@ -382,6 +426,9 @@ hu:
         Alex vagy Steve számára."
       MC_HOC_2017_03_Cole: "{currentPlayerName} kalandjához egy **iránytűre** [compass]
         is szükség lesz.  \r\n   \r\nProgramozd úgy az Agentet, hogy kinyissa a kaput. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} kalandjához egy **iránytűre**
+        [compass] is szükség lesz.  \r\n   \r\nProgramozd úgy az Agentet, hogy kinyissa
+        a kaput. "
       MC_HOC_2017_03_Kiki: "A játékos kalandja a zárt ajtó mögött, a titkos ligetben
         kezdődik.  \r\n\r\n\r\nSegíts az Agentnek kinyitni az ajtót azzal, hogy úgy
         programozod, hogy a nyomólapra lépjen."
@@ -393,7 +440,12 @@ hu:
         első két nyomólapra."
       MC_HOC_2017_04POINT5_RYAN: "Keresztüljutottál! \r\n\r\nMost segíts {currentPlayerName}
         játékosnak keresztüljutni a labirintuson és felvenni a **baltát** [diamond_axe]\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Keresztüljutottál! \r\n\r\nMost segíts {currentPlayerName}
+        játékosnak keresztüljutni a labirintuson és felvenni a **baltát** [diamond_axe]\r\n"
       MC_HOC_2017_04_Cole: "Az Agent képes a vízen járni!  \r\n \r\nEgy \"ismétlés\"
+        ciklussal oldd meg a kirakóst, és juttasd el {currentPlayerName} játékost
+        az ajtó mögött található **vödörhöz** [bucket_empty]. "
+      MC_HOC_2017_04_Cole_2019: "Az Agent képes a vízen járni!  \r\n \r\nEgy \"ismétlés\"
         ciklussal oldd meg a kirakóst, és juttasd el {currentPlayerName} játékost
         az ajtó mögött található **vödörhöz** [bucket_empty]. "
       MC_HOC_2017_04_Kiki: "A titkos liget után egy gyönyörű oázist találtál!  Ennek
@@ -408,6 +460,9 @@ hu:
       MC_HOC_2017_05_Cole: "Ó, jaj, a híd leomlott! \r\n\r\nProgramozd az Agentet,
         hogy építse újra a hidat az \"elhelyezés\" blokkal, hogy {currentPlayerName}
         eljuthasson az **ásóhoz** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "Ó, jaj, a híd leomlott! \r\n\r\nProgramozd az Agentet,
+        hogy építse újra a hidat az \"elhelyezés\" blokkal, hogy {currentPlayerName}
+        eljuthasson az **ásóhoz** [diamond_shovel]."
       MC_HOC_2017_05_Josh: "Ó, jaj, a híd leomlott! \r\n\r\nProgramozd az Agentet,
         hogy építse újra a hidat, hogy a játékos eljuthasson az **ásóhoz**."
       MC_HOC_2017_05_Kiki: "Itt az ideje, hogy a játékos elhagyja a titkos ligetet,
@@ -417,11 +472,17 @@ hu:
       MC_HOC_2017_06_Cole: "Egy újabb folyó, de ez sokkal szélesebb! \r\n \r\nJavítsd
         ki ezt a kódot, és segíts ezzel az Agentnek hidat építeni, hogy {currentPlayerName}
         eljuthasson a **csákányhoz** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2019: "Egy újabb folyó, de ez sokkal szélesebb! \r\n \r\nJavítsd
+        ki ezt a kódot, és segíts ezzel az Agentnek hidat építeni, hogy {currentPlayerName}
+        eljuthasson a **csákányhoz** [diamond_pickaxe]. "
       MC_HOC_2017_06_Josh: "Egy újabb folyó, de ez sokkal szélesebb!  \r\n\r\nJavítsd
         ki ezt a kódot, és segíts ezzel az Agentnek hidat építeni rá."
       MC_HOC_2017_06_Kiki: "Egy újabb folyó, de ez sokkal szélesebb!  \r\n\r\nJavítsd
         ki ezt a kódot, és segíts ezzel az Agentnek hidat építeni rá."
       MC_HOC_2017_07_Cole: "Jég torlaszolja el az utat!  \r\n \r\nAz \"út szabaddá
+        tétele\" funkció segítségével feltörheted a jeget, és eljuttathatod {currentPlayerName}
+        játékost a csilléhez [minecart_normal]. "
+      MC_HOC_2017_07_Cole_2019: "Jég torlaszolja el az utat!  \r\n \r\nAz \"út szabaddá
         tétele\" funkció segítségével feltörheted a jeget, és eljuttathatod {currentPlayerName}
         játékost a csilléhez [minecart_normal]. "
       MC_HOC_2017_07_Kiki: "Nemcsak ciklusokkal ismételhetsz meg egy kódot!  \r\n\r\nItt
@@ -459,6 +520,10 @@ hu:
         \r\n \r\nEzeket a funkciókat az eszköztárból származó más kódokkal együtt
         használva szabaddá teheted az utat a csille előtt, majd felveheted **a kovakövet
         és az acélt** [flint_and_steel]. \r\n "
+      MC_HOC_2017_10_RETRY_2019: "Észreveszed a különbséget a két funkció között a
+        munkaterületen? \r\n \r\nEzeket a funkciókat az eszköztárból származó más
+        kódokkal együtt használva szabaddá teheted az utat a csille előtt, majd felveheted
+        **a kovakövet és az acélt** [flint_and_steel]. \r\n "
       MC_HOC_2017_10_RYAN: Próbálj olyan funkciókat az alapoktól felépíteni, amelyek
         megkönnyítik az Agent számára a csille befejezését és a játékos eljuttatását
         a narancssárga négyzetbe.
@@ -475,12 +540,17 @@ hu:
       MC_HOC_2017_Ali: 'Nézd meg az alábbi funkciókat.  Hogyan kerülheted el velük
         a szellemeket, és hogyan segíthetsz velük {currentPlayerName} játékosnak biztonságban
         eljutni a **varázskönyvhöz** [book_enchanted]?  '
+      MC_HOC_2017_Ali_2019: 'Nézd meg az alábbi funkciókat.  Hogyan kerülheted el
+        velük a szellemeket, és hogyan segíthetsz velük {currentPlayerName} játékosnak
+        biztonságban eljutni a **varázskönyvhöz** [book_enchanted]?  '
       MC_HOC_2017_FP10x10: "**Szabad játék:** Most rajtad múlik! Össze tudod-e szedni
         az ezen a szinten található összes gyémántot? "
       MC_HOC_2017_FP10x10_RE: "**Szabad játék:** Most rajtad múlik! Össze tudod-e
         szedni az ezen a szinten található összes gyémántot? "
       MC_HOC_2017_FP20x20: "**Szabad játék:** Most rajtad múlik! Az Agent kódja segítségével
         fedezd fel a világot."
+      MC_HOC_2017_FP20x20_2019: "**Szabad játék:** Most rajtad múlik! Az Agent kódja
+        segítségével fedezd fel a világot."
       MC_HOC_2017_Ryan_03: "Tudtad, hogy egy ciklusba több kóddarabot is helyezhetsz?
         \ \r\n\r\nAz \"ismétlés\" ciklust használva utasítsd az Agentet arra, hogy
         építsen hidat a folyóra úgy, hogy blokkokat helyezel a vízbe."
@@ -527,8 +597,11 @@ hu:
         és készíts mézet minden lépbe. Használj beágyazott ciklust!
       courseD_bee_nestedLoops8_2018: Gyűjtsd össze az összes nektárt az összes virágról,
         és készíts mézet minden lépbe. Használj beágyazott ciklust!
+      courseD_bee_nestedLoops8_2019: Gyűjtsd össze az összes nektárt az összes virágról,
+        és készíts mézet minden lépbe. Használj beágyazott ciklust!
       courseD_maze_nestedLoops4: Juttass el a napraforgóhoz!
       courseD_maze_nestedLoops4_2018: Juttass el a napraforgóhoz!
+      courseD_maze_nestedLoops4_2019: Juttass el a napraforgóhoz!
       courseE_bee_functions3: A függvények olyan kódot tartalmazó blokkok, amelyek
         elvégeznek egy feladatot.  Használd a "gyűjts 5" függvényt, hogy egyszerre
         5 egység nektárt össze tudj gyűjteni. Ne felejts el ciklust használni és ügyelj
@@ -543,6 +616,8 @@ hu:
         helyezned a teljes rács megrajzolásához?
       courseF_bee_for_challenge2: Oldd meg ezt a feladványt a legkevesebb blokk felhasználásával!
       courseF_bee_for_challenge2_2018: Oldd meg ezt a feladványt a legkevesebb blokk
+        felhasználásával!
+      courseF_bee_for_challenge2_2019: Oldd meg ezt a feladványt a legkevesebb blokk
         felhasználásával!
       frozen circle function in circle: Most rajzoljunk 20 egymást átfedő kört! 18
         fokot kell fordulni minden kör rajzolása után.

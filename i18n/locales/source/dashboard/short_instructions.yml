@@ -1604,7 +1604,9 @@ en:
       Dance Party Predict: 'What do you think will happen when you click on the alien?  '
       Dance Party Predict_2019: 'What do you think will happen when you click on the alien?  '
       Dance Party Predict_simple: 'What do you think will happen when you click on the alien?  '
+      Dance_Events_Example_Video: Use events to make your dance party interactive!
       Dance_Party_01: Drag the `make a new` block into the workspace, and connect it inside the `setup` block.
+      Dance_Party_01_low: Drag the `make a new` block into the workspace, and connect it inside the `setup` block.
       Dance_Party_02: Make the moose start a new move after 4 measures!
       Dance_Party_03: Now make the dancer start a new move after 6 measures!
       Dance_Party_04: Add a background effect to your program.
@@ -1615,7 +1617,7 @@ en:
       Dance_Party_10: Make the other dancer respond to the music using the `begins following` block, too.
       Dance_Party_11.5: Use the "all ducks" blocks to make the ducks dance together.
       Dance_Party_11: The `when up pressed` block lets you run code when the up arrow is pressed. Try to make the dancer do a quick move when you press up.
-      Dance_Party_11b: Make the Robot "drop" once when you press the right arrow key, and "floss" once when you press the up arrow key. Do the drop-floss as fast as you can!
+      Dance_Party_11b: Make the Robot "drop" once when you press the right arrow key, and "high clap" once when you press the up arrow key. Do the drop-clap as fast as you can!
       Dance_Party_12: Get your groove on! Create a dance of your own to share with your friends.
       ECSPD Binary Odometer: This is another resource you could use with your students.
       Eval Booleans 1: Boolean operators (like >, <, =) allow us to compare different values, returning either true or false. Click "Run" to see how this expression evaluates.

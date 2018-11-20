@@ -1666,6 +1666,34 @@ fr:
       Crack Random Substitution_2018: Consignes
       Crack a Caesar Cipher: Consignes
       Crack a Caesar Cipher_2018: Consignes
+      Dance_Party_01: Faites glisser le bloc «\_créer un nouveau\_» dans l'espace
+        de travail et connectez-le à l'intérieur du bloc « configuration ».
+      Dance_Party_01_low: Faites glisser le bloc «\_créer un nouveau\_» dans l'espace
+        de travail et connectez-le à l'intérieur du bloc « configuration ».
+      Dance_Party_02: Faites que l'orignal commence un nouveau mouvement après 4 mesures
+        !
+      Dance_Party_03: Maintenant, demandez au danseur de commencer un nouveau mouvement
+        après 6 mesures !
+      Dance_Party_04: Ajoutez un effet de fond à votre programme.
+      Dance_Party_05: Utilisez un autre nouveau bloc pour que le danseur change de
+        mouvement toutes les 2 mesures.
+      Dance_Party_06: Créez un danseur de sauvegarde appelé « backup_dancer1 » pour
+        danser avec le chat.
+      Dance_Party_08: Pouvez-vous donner la même taille aux deux danseurs de sauvegarde
+        ?
+      Dance_Party_09: Utilisez le bloc « définir la nuance » pour changer la couleur
+        d'un danseur.
+      Dance_Party_10: Demandez également à l’autre danseur de répondre à la musique
+        à l’aide du bloc « commencer à suivre ».
+      Dance_Party_11.5: Utiliser les blocs « tous les canards » pour faire danser
+        les canards ensemble.
+      Dance_Party_11: Le bloc « lorsqu’on appuie vers le haut » vous permet d'exécuter
+        un programme lorsque vous appuyez sur la flèche vers le haut. Essayez de faire
+        faire un mouvement rapide au danseur lorsque vous appuyez vers le haut.
+      Dance_Party_11b: Faites le Robot faire le « drop » une fois lorsque vous appuyez
+        sur la touche fléchée droite et faire le « floss » une fois lorsque vous appuyez
+        sur la touche fléchée haut. Réalisez le « drop-floss » aussi vite que possible
+        !
       Food Fight!: |-
         Nous avons ajouté une dernière fonction pour toi.
 
@@ -1678,7 +1706,22 @@ fr:
       FoodFight_2018: C'est un exemple de jeu que tu peux créer dans le Labo de jeux.
       Function intro Ryan: Utilisez deux fois la fonction « construire un pont » pour
         créer un passage vers la torche.
+      Function intro Ryan_2019: Utilisez deux fois la fonction « construire un pont »
+        pour créer un passage vers la torche.
       GLJ Flappy2: Clique pour battre des ailes - ne touche pas le sol!
+      HOC 2018 Level_1: Récupérez un bateau dans le coffre.
+      HOC 2018 Level_10: Atteignez l'entrée du monument sous-marin.
+      HOC 2018 Level_11: Construisez un conduit avec de la prismarine dans le monument
+        sous-marin.
+      HOC 2018 Level_12: Concevez votre propre environnement sous-marin, vous avez
+        carte blanche !
+      HOC 2018 Level_2: Rendez-vous au bout du quai.
+      HOC 2018 Level_3: Naviguez en haute mer pour atteindre la morue.
+      HOC 2018 Level_4: Utilisez une boucle pour atteindre le dauphin.
+      HOC 2018 Level_5: Explorez l'épave de navire pour atteindre le coffre.
+      HOC 2018 Level_6: Naviguez à travers la glace pour atteindre le saumon.
+      HOC 2018 Level_7a: Explorez les ruines sous-marines à la recherche d'un coffre.
+      HOC 2018 Level_9b: Suivez le corail pour atteindre le trésor.
       Infinity_catch: Peux-tu aider Elsa («acteur 2») à rattraper Anna en utilisant
         les touches de direction ?
       Infinity_finale: Crée ce que tu veux et partage-le !
@@ -1710,6 +1753,8 @@ fr:
       InspirationalArtwork: Si cette image t'inspire, essaye de créer quelque chose
         de similaire. Sinon, crée quelque chose de ton invention.
       InspirationalArtwork_2018: Si cette image t'inspire, essaye de créer quelque
+        chose de similaire. Sinon, crée quelque chose de ton invention.
+      InspirationalArtwork_2019: Si cette image t'inspire, essaye de créer quelque
         chose de similaire. Sinon, crée quelque chose de ton invention.
       K-1 Artist 1 Assessment 1: Dessine une courte ligne vers le haut et une longue
         ligne vers la droite !
@@ -1945,33 +1990,46 @@ fr:
       MC_HOC_2017_01_RETRY: 'Déplacez l''Agent sur la plaque de détection. Ensuite,
         appuyez sur « Démarrer » et utilisez les flèches de direction pour faire sortir
         le joueur de la maison et le diriger jusqu''au coffre. '
+      MC_HOC_2017_01_RETRY_2019: 'Déplacez l''Agent sur la plaque de détection. Ensuite,
+        appuyez sur « Démarrer » et utilisez les flèches de direction pour faire sortir
+        le joueur de la maison et le diriger jusqu''au coffre. '
       MC_HOC_2017_02: Déplacez l'Agent sur la plaque de détection.
       MC_HOC_2017_02_Cole: 'Déplacez l''Agent sur la plaque de détection afin que
         {currentPlayerName} puisse atteindre la carte. '
+      MC_HOC_2017_02_Cole_2019: 'Déplacez l''Agent sur la plaque de détection afin
+        que {currentPlayerName} puisse atteindre la carte. '
       MC_HOC_2017_02_Kiki: Déplacez l'Agent sur la plaque de détection, puis déplacez
         le joueur sur le carré orange.
       MC_HOC_2017_02_Will: Déplacez l'Agent sur la plaque de détection.
       MC_HOC_2017_03_Cole: 'Programmez l''Agent afin d''ouvrir la porte. '
+      MC_HOC_2017_03_Cole_2019: 'Programmez l''Agent afin d''ouvrir la porte. '
       MC_HOC_2017_03_Kiki: Déplacez l'Agent sur la plaque de détection.
       MC_HOC_2017_04: Modifiez la boucle du dernier casse-tête afin d'aider l'Agent
         à créer un passage par-dessus la partie la plus large de cette rivière.
       MC_HOC_2017_04POINT5_Cole: Déplacez l'Agent sur la plaque de détection.
       MC_HOC_2017_04POINT5_RYAN: Déplacez l'Agent sur la plaque de détection.
+      MC_HOC_2017_04POINT5_RYAN_2019: Déplacez l'Agent sur la plaque de détection.
       MC_HOC_2017_04_Cole: Déplacez l'Agent sur la plaque de détection.
+      MC_HOC_2017_04_Cole_2019: Déplacez l'Agent sur la plaque de détection.
       MC_HOC_2017_04_Kiki: Déplacez l'Agent sur la plaque de détection.
       MC_HOC_2017_05: Utilisez une fonction pour aider l'Agent à atteindre la plaque
         de détection.
       MC_HOC_2017_05_Cole: Dirigez le joueur jusqu'à la pelle.
+      MC_HOC_2017_05_Cole_2019: Dirigez le joueur jusqu'à la pelle.
       MC_HOC_2017_05_Josh: Dirigez le joueur jusqu'à la pelle.
       MC_HOC_2017_05_Kiki: Dirigez le joueur jusqu'au carré orange.
       MC_HOC_2017_06_Cole: Corrigez ce code afin que l'Agent construise un pont au-dessus
         de cette rivière.
+      MC_HOC_2017_06_Cole_2019: Corrigez ce code afin que l'Agent construise un pont
+        au-dessus de cette rivière.
       MC_HOC_2017_06_Josh: Corrigez ce code pour aider l'Agent à construire un pont
         au-dessus de cette rivière.
       MC_HOC_2017_06_Kiki: Corrigez ce code pour aider l'Agent à construire un pont
         au-dessus de cette rivière.
       MC_HOC_2017_07_Cole: Détruisez la glace et dirigez {currentPlayerName} vers
         le wagonnet.
+      MC_HOC_2017_07_Cole_2019: Détruisez la glace et dirigez {currentPlayerName}
+        vers le wagonnet.
       MC_HOC_2017_07_Kiki: Utilisez une fonction pour dégager le passage vers le carré
         orange.
       MC_HOC_2017_07a_Kiki: Dégagez le passage vers le carré orange.
@@ -1989,17 +2047,21 @@ fr:
       MC_HOC_2017_10_Cole_old: Créez une fonction afin de terminer ce wagonnet.
       MC_HOC_2017_10_Kiki: Créez une fonction afin de terminer ce wagonnet.
       MC_HOC_2017_10_RETRY: Créez une fonction afin de terminer ce wagonnet.
+      MC_HOC_2017_10_RETRY_2019: Créez une fonction afin de terminer ce wagonnet.
       MC_HOC_2017_10_RYAN: Créez une fonction afin de terminer ce wagonnet.
       MC_HOC_2017_10_RYAN2: Créez une fonction afin de terminer ce wagonnet.
       MC_HOC_2017_13_Cole: "**Jeu libre :**  c'est le moment pour vous d'explorer !"
       MC_HOC_2017_4.5v2: Déplacez l'Agent sur la plaque de détection.
       MC_HOC_2017_Ali: Utilisez les fonctions pour vous frayer un chemin à travers
         la lave.
+      MC_HOC_2017_Ali_2019: Utilisez les fonctions pour vous frayer un chemin à travers
+        la lave.
       MC_HOC_2017_FP10x10: "**Jeu libre :** pourrez-vous relever le défi et récupérer
         tous les diamants dans ce niveau ? "
       MC_HOC_2017_FP10x10_RE: "**Jeu libre :** pourrez-vous relever le défi et récupérer
         tous les diamants dans ce niveau ? "
       MC_HOC_2017_FP20x20: "**Jeu libre :**  c'est le moment pour vous d'explorer !"
+      MC_HOC_2017_FP20x20_2019: "**Jeu libre :**  c'est le moment pour vous d'explorer !"
       MC_HOC_2017_Ryan_03: Maintenant, utilisez des boucles afin d'aider l'Agent à
         construire un pont par-dessus la rivière en plaçant des blocs dans l'eau.
       MC_HOC_2017_Ryan_05: Détruisez ces cactus pour que le joueur puisse atteindre
@@ -2622,6 +2684,8 @@ fr:
         : les trois côtés sont de la même longueur.'
       courseC_artist_prog5_2018: 'Cette maison a besoin d''un toit ! Dessine le triangle.  Indice
         : les trois côtés sont de la même longueur.'
+      courseC_artist_prog5_2019: 'Cette maison a besoin d''un toit ! Dessine le triangle.  Indice
+        : les trois côtés sont de la même longueur.'
       courseC_flappy_embed_events: Voici un exemple d’un jeu que tu vas créer toi-même !
         Joue un peu avec une ou deux fois pour avoir une idée de ce que tu es sur
         le point de réaliser.
@@ -2711,6 +2775,8 @@ fr:
         du miel dans chaque gâteau de miel. Utilise une boucle imbriquée.
       courseD_bee_nestedLoops8_2018: Recueille tout le nectar de chaque fleur et fabrique
         du miel dans chaque gâteau de miel. Utilise une boucle imbriquée.
+      courseD_bee_nestedLoops8_2019: Recueille tout le nectar de chaque fleur et fabrique
+        du miel dans chaque gâteau de miel. Utilise une boucle imbriquée.
       courseD_bounce_events10: Il y a maintenant un but en haut. Attache les blocs
         « Marquer un point » et « Marquer un point pour l’adversaire » aux blocs « Quand
         la balle dans le but » et « Quand la balle manque la raquette » pour créer
@@ -2752,8 +2818,12 @@ fr:
       courseD_maze_nestedLoops4_2018: |-
         Amène-moi jusqu'au tournesol !
         (Indice : tu devras utiliser une boucle « Répéter » à l'intérieur d'une autre boucle pour réussir ce niveau.)
+      courseD_maze_nestedLoops4_2019: |-
+        Amène-moi jusqu'au tournesol !
+        (Indice : tu devras utiliser une boucle « Répéter » à l'intérieur d'une autre boucle pour réussir ce niveau.)
       courseD_maze_nestedLoops6: Amène-moi jusqu'au tournesol !
       courseD_maze_nestedLoops6_2018: Amène-moi jusqu'au tournesol !
+      courseD_maze_nestedLoops6_2019: Amène-moi jusqu'au tournesol !
       courseE_artist_functions1: 'Salut. Moi artiste zombie. Moi aime dessiner ! Toi
         aider moi à dessiner les verres carrés. Astuce : le pont entre les verres
         fait 25 pixels de moins que la longueur du carré.'
@@ -2787,12 +2857,18 @@ fr:
         précédent pour obtenir ça !
       courseF_artist_for7_2018: Effectue trois petits changements dans le code du
         niveau précédent pour obtenir ça !
+      courseF_artist_for7_2019: Effectue trois petits changements dans le code du
+        niveau précédent pour obtenir ça !
       courseF_artist_for_challenge1: Peux-tu trouver comment recréer ce dessin ?
       courseF_artist_for_challenge1_2018: Peux-tu trouver comment recréer ce dessin
+        ?
+      courseF_artist_for_challenge1_2019: Peux-tu trouver comment recréer ce dessin
         ?
       courseF_artist_for_challenge2: Peux-tu trouver comment récréer ce dessin avec
         une seule boucle?
       courseF_artist_for_challenge2_2018: Peux-tu trouver comment récréer ce dessin
+        avec une seule boucle?
+      courseF_artist_for_challenge2_2019: Peux-tu trouver comment récréer ce dessin
         avec une seule boucle?
       courseF_bee_for8: |-
         Tu as compris ! Quelle doit être ton augmentation pour recueillir 3, 6, 9, 12, 15 nectars ?
@@ -2800,9 +2876,14 @@ fr:
       courseF_bee_for8_2018: |-
         Tu as compris ! Quelle doit être ton augmentation pour recueillir 3, 6, 9, 12, 15 nectars ?
         Indice : que dois-tu ajouter à chaque numéro pour obtenir le nombre suivant ?
+      courseF_bee_for8_2019: |-
+        Tu as compris ! Quelle doit être ton augmentation pour recueillir 3, 6, 9, 12, 15 nectars ?
+        Indice : que dois-tu ajouter à chaque numéro pour obtenir le nombre suivant ?
       courseF_bee_for_challenge2: Résous ce puzzle en utilisant le moins de blocs
         possible.
       courseF_bee_for_challenge2_2018: Résous ce puzzle en utilisant le moins de blocs
+        possible.
+      courseF_bee_for_challenge2_2019: Résous ce puzzle en utilisant le moins de blocs
         possible.
       courseF_bee_for_challenge3: Résous ce puzzle en utilisant le moins de blocs
         possible.

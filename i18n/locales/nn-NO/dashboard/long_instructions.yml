@@ -3,7 +3,7 @@ nn:
     long_instructions:
       2-3 Artist 1 new: "Hei, eg er kunstnar. Du kan skrive kode for å få meg til å teikne nesten kva som helst. \nBruk nokre blokker for å få meg til å teikne over dei grå linjene i bildet. (Kvar linje er 100 pikslar lang)\\r \\r\n"
       2-3 Artist 11: 'Gje stoppskiltet ein kant ved å lage ein åttekant med 100 piksel lange sider. '
-      2-3 Artist 12: "Lag ein sirkel for å fullføre auget.\\r\n\\r\nViss kunstnaren snur seg éin grad i kvar løkkje, kor mange gongar må du gjenta for å fullføre sirkelen? 180? 360? 500? "
+      2-3 Artist 12: "Lag ein sirkel for å fullføre auget.\n\nDersom kunstnaren snur seg éin grad i kvar løkkje, kor mange gongar må du gjenta for å fullføre sirkelen? "
       2-3 Artist 2 new: Dette huset har ein halv-ferdig vegg. Kvar side er 100, men den halv-ferdige veggen er berre 50. Fullfør veggen.
       2-3 Artist 3.4: Hoppeblokka flyttar artisten utan å teikne. Teikn den stipla lina med hjelp av både hoppe- og teikneblokker. Kvar line er 50 pixlar lang.
       2-3 Artist 3new: "Den raude hatten er 100 pikslar høg. Fullfør teikninga ved å teikne ein svart hatt som er 70 pikslar kortare. \\r\n\\r\n*(Ps: Vidda på kvar hatt er 50 pikslar.)*"
@@ -99,9 +99,9 @@ nn:
       2-3 Artist Nested Loops Free Play: 'Frileik: teikn noko kult med løkker i løkker.'
       2-3 Bee Conditionals 11: "Eg lurer på kva som er der ute?\\r\n\\r\nHjelp meg å fly rundt gården og samle nektar frå dei blomane som har nektar. "
       2-3 Bee Conditionals 13: |-
-        Her skjer det mykje!\r
-        \r
-        Bruk kva du har lært til å samle all nektaren og lage honning.
+        Her skjer det mykje!
+        
+        Bruk det du har lært til å samle all nektaren og lage honning.
       2-3 Bee Conditionals 14: "Lat oss sette alt saman!\\r\n\\r\nBruk alt du har lært til å hjelpe meg med å samle inn all nektaren frå blomar som har nektar. Bruk så få blokker som mogleg.  \\r\n\\r\nIkkje gløym å lage honning på slutten."
       2-3 Bee Conditionals 15: "Trappemønsteret bør sjå kjend ut.\\r\n\\r\nKan du samle nektar frå dei blomane som har, med så få blokker som mogleg?"
       2-3 Bee Conditionals 2: "Hei, eg er ei sulten bie! \\r \n\\r\n\\r\nHjelp meg å samle all nektaren frå blomane. Bruk så få blokker som mogleg."
@@ -200,11 +200,11 @@ nn:
       4-5 Bee Conditionals 2: "Fleire skyer! \\r\n\\r\nSjekk under kvar sky for å sjå om den skjular ein blom før du får tak i nektaren. \\r\n\\r\nHugs, alle skyene skjular ikkje same ting!"
       4-5 Bee Conditionals 4: "Noen ganger skjuler denne skyen en blomst og noen ganger skjuler den en bikube! \\r\n\\r\nBruk blokken `hvis/ellers` til å samle nektar kun hvis det er en blomst der. \\r\nHvis ikke det er det, lag honning (fordi det er en bikube)."
       4-5 Bee Conditionals 5: |-
-        Det kan vere ein blome eller ein bikube under skyene. \r
-        \r
-        Bruk "viss/elles"-blokka til å samle inn nektar om det er ein blome. \r
+        Det kan vere ein blome eller ein bikube under skyene. 
+        
+        Bruk "dersom/elles"-blokka til å samle inn nektar om det er ein blome. 
         Om ikkje lagar du honning (for da er det ein bikube).
-      4-5 Bee Conditionals 6: "Eg er ikkje sikker på kor mykje nektar denne blomen har, men den har enten 1, 2 eller 3 nektar.\\r\n\\r\nKombinér dei betinga blokkene ('viss' og/eller 'viss/elles') for å berre få så mykje nektar som blomen har.\n\\r\n\\r\nHugs: talet på nektrar kan endre seg for kvar gong du køyrer oppgåva!"
+      4-5 Bee Conditionals 6: "Eg er ikkje sikker på kor mykje nektar denne blomen har, men den har enten 1, 2 eller 3 nektar.\n\nKombinér dei betinga blokkene ('dersom' og/eller 'dersom/elles') for å berre få så mykje nektar som blomen har.\n\nHugs: talet på nektar kan endre seg for kvar gong du køyrer oppgåva!"
       4-5 Bee Conditionals 7: "Hugs at lilla blomar kan ha 3, 2 og 1 nektar. \n\\r\n\\r\nFullfør \"kontroller lilla blomar\"-funksjonen og bruk den til å samle inn nektar frå alle blomane."
       4-5 Bee Conditionals 8: "Skriv ein funksjon som heiter \"Sjekk blom og lag honning\". \\r\n\\r\nFunksjonen din skal sjekke om den lilla blomen har 3, 2 eller 1 nektar og hente all nektaren. \\r\nDeretter skal den bevege seg framover og så lage honning."
       4-5 Bee Conditionals Assessment 1: "**Oppgåve** Denne skya gjømmer ein blomst med ein nektar eller ei honningkake som treng ein honning.\n\\r\n\\r\nGjer ferdig \"hent nektar eller lag honning\"-funksjonen og kall den for å sanke nektar eller honning.\\r\n"
@@ -220,20 +220,20 @@ nn:
       4-5 Maze Conditionals 1: Bruk "Gjenta-til"-blokka for å få zombien til solsikka.
       4-5 Maze Conditionals 10: "Kan du leggje til kun 3 blokker for hjelpe zombien å løyse ein meir kompleks labyrint? \\r\n\\r\nOm du gjer det riktig, kan han gå kva for ein svingete veg uansett lengde!"
       4-5 Maze Conditionals 2: Bruk "Gjenta-til"-blokka for å få zombien til solsikka.
-      4-5 Maze Conditionals 3: "Bruk \"viss\"-blokka for å la meg bestemme når eg skal snu. \\r\n"
-      4-5 Maze Conditionals 4: Ok, denne er heilt lik den forrige oppgåva, men du må hugse på korleis du brukte "viss"-blokken og deretter "Gjenta"-blokken saman.
-      4-5 Maze Conditionals 5: "Meg vil ha solsikke! \\r\n\\r\nBruk ei \"Viss\"-blokk for å få meg dit med så få blokker som mogleg."
+      4-5 Maze Conditionals 3: "Bruk \"dersom\"-blokka for å la meg bestemme når eg skal snu.\n"
+      4-5 Maze Conditionals 4: Ok, denne er heilt lik den førre oppgåva, men du må hugse på korleis du brukte "dersom"-blokka og deretter "Gjenta"-blokka saman.
+      4-5 Maze Conditionals 5: "\"Meg vil ha solsikke!\"\n\nBruk ei \"dersom\"-blokk for å få meg dit med så få blokker som mogleg."
       4-5 Maze Conditionals 6: |-
-        Et solsikke! \r
-        \r
-        Bruk ein "Viss"-blokk for å få meg dit med så få blokker som mogleg.
+        "Et solsikke!"
+        
+        Bruk ei "dersom"-blokk for å få meg dit med så få blokker som mogleg.
       4-5 Maze Conditionals 7: Denne løysinga er ikkje så ulik, men pass deg for dei kjøttetande plantane!
-      4-5 Maze Conditionals 8: "\"Viss/elles\"-blokka sjekkar ein føresetnad og gjer det eine ELLER det andre. \\r\n\\r\nBruk denne nye blokka for å få meg til solsikka."
+      4-5 Maze Conditionals 8: "\"Dersom/elles\"-blokka sjekkar ein føresetnad og gjer det eine ELLER det andre. \n\nBruk denne nye blokka for å få meg til solsikka."
       4-5 Maze Conditionals 9: |-
-        Ei siste øving med "Viss/elles"-blokka!\r
-        \r
+        Ei siste øving med "dersom/elles"-blokka!\
+        
         Følg det med fingeren din for å sjå om du finn ut av det på første forsøk.
-      4-5 Maze Conditionals Assessment 1: "Bruk ein \"Gjenta til\" og ein \"Viss/elles\" blokk for å få meg til solsikka med så få blokkar som mogleg."
+      4-5 Maze Conditionals Assessment 1: "**Oppgåve:** Bruk ein \"Gjenta til\" og ei \"dersom/elles\"-blokk for å få meg til solsikka med så få blokker som mogleg."
       4-5 Nested Loops 1: "Fullfør koden for å teikne desse trekantane. Den første er gjort ferdig for deg. Tips: 3 trekantar rotert er til saman 360 grader.\\r\n\\r\n"
       4-5 Nested Loops 11: "Klarar du å teikne dei 10 kvadratene på fortauet ved å bruke ei løkke i ei løkke?\\r\n\\r\nKvart kvadrat er 30 pikslar."
       4-5 Nested Loops 12: Klarar du å teikne desse 36 trekantane ved hjelp av ei løkke i ei løkke?
@@ -251,9 +251,9 @@ nn:
       4-5 While Loops 1: Flytt meg til holet og bruk ein "fyll" blokk til å fylle det med to spadar med jord.
       4-5 While Loops 2: Flytt meg til haugen med jord og bruk "Fjern" blokken til å fjerne den på fem spadetak.
       4-5 While Loops 3: "Bruk så få blokker som mogleg for å fullføre denne oppgåva! \\r\n\\r\nFlytt meg til jordhaugen og fjern alt skiten. Etterpå flytter du meg til holet og fyllar det heilt opp."
-      4-5 While Loops 4: "Wow! Sjå på det! \\r\n\\r \nEg veit ikkje kor mange spadetak med jord det tar å fylle det. \\r\nKan du skrive eit program som nyttar fyll-blokka ti å fyllel holet til det er heilt jamnt?  "
-      Alien Defender: "**Prosjektidé**: Lag eit forsvarsspel i Play Lab!"
-      Alien Defender_2018: "**Prosjektidé**: Lag eit forsvarsspel i Play Lab!"
+      4-5 While Loops 4: "Wow! Sjå på det! \n\nEg veit ikkje kor mange spadetak med jord det tar å fylle det.\nKan du skrive eit program som nyttar fyll-blokka ti å fylle holet til det er heilt jamnt?  "
+      Alien Defender: "**Prosjektidé**: Lag eit forsvarsspel i Spel-lab!"
+      Alien Defender_2018: "**Prosjektidé**: Lag eit forsvarsspel i Spel-lab!"
       AppLab Intro 1 - Add Sound: "# Kom i gang - legg til lyd\\r\n\\r\nApp\nlabben kan spele lyd óg. Du må bruke spelLyd()-blokka til å gjere det.\\r\n\\r\n1. Dra ei 'spelLyd()'-blokk til din 'påHending'. Dette vil gjere at lyden blir spelt når du klikkar på knappen. Klikk deretter på \"Vel...\" fra menyen.\\r\n\\r\n\\t![](https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41\nAM.png)\\r\n\\r\n2. Gå til \"Lydbiblioteket\" og finn lyden du ønsker. Det finst ein drøss!\\r\n\\r\n\\t![](https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52\nAM.png)\\r\n\\r\n3. Køyr appen for å sjekk korleis lydane dine fungerer."
       AppLab Intro 2 - add sound: |-
         <img src="https://images.code.org/3c1d6506a6a3c350380b921e08588a2b-image-1505429594117.52.37
@@ -402,6 +402,7 @@ nn:
       Course 4 SCVP 1: Opprett en funksjon med parametere som tillater kunstneren å hoppe framover og bakover med x antall piksler, og opp og ned med y antall piksler. Bruk positive og negative tall.
       CourseF_PlayLab_vars2: Løpet i førre oppgåve var ikkje veldig rettferdig. Endre variabelen "hund_fart" for å sikra at du kan samla fleire flagg enn Katt. Den fyrste til å samle 10 flagg vinn! 
       Function intro Ryan: "Ein **funksjon** som heiter \"build bridge\"(bygg bru) er no tilgjengeleg. All koden du treng for  bygge ei bru er tatt med!\\r\n\\r\nFest den lille grøne blokka to gonger i arbeidsområdet ditt for å fikse stien og få {currentPlayerName} til redstonefakkelen [redstone_torch]."
+      Function intro Ryan_2019: "Ein **funksjon** som heiter \"build bridge\"(bygg bru) er no tilgjengeleg. All koden du treng for  bygge ei bru er tatt med!\\r\n\\r\nFest den lille grøne blokka to gonger i arbeidsområdet ditt for å fikse stien og få {currentPlayerName} til redstonefakkelen [redstone_torch]."
       K-1 Bee Loops 2: Bruk ei gjenta-løkke til å bevege deg og så hente nektaren og lage honning!
       K-1 Bee Loops 3: Bruk tre gjenta-løkker til å hente nektar og lage honning!
       K-1 Bee Loops 4: Bruk gjenta-løkker til å hente nektar, lage honning og til å bevege deg!
@@ -421,15 +422,21 @@ nn:
       MC_HOC_2017_01: "Klikk \"Køyr\" for å flytte spelaren ved å bruke **piltastane**. \\r\n\\r \nFor å komme til neste nivå, må du komme til døra og opne den (ved å bruke **mellomromstasten**) slik du kan komme inn til den oransje firkanten."
       MC_HOC_2017_01_Cole: Klikk "Køyr" for å flytte spelaren til den oransje ruta inne i huset.
       MC_HOC_2017_01_Kiki: 'Du kjem i gong ved å klikke på den oransje "Køyr"-knappen nedanfor spelområdet. Deretter kan du flytte spelaren rundt med **piltastane**.  '
-      MC_HOC_2017_01_RETRY: |2
+      MC_HOC_2017_01_RETRY: |-
+        Døra er låst, men heldigvis er agenten klar til å hjelpe! \r
+         \r
+        Sett ei "gå framover"-blokk ved "når køyrast"-blokka i arbeidsområdet for å få agenten til å gå til trykkplata [PressurePlate_Up]. Trykk deretter på "Køyr", og bruk piltastane til å flytte {currentPlayerName} ut av huset og bort til **kista** [chest].
+      MC_HOC_2017_01_RETRY_2019: |-
         Døra er låst, men heldigvis er agenten klar til å hjelpe! \r
          \r
         Sett ei "gå framover"-blokk ved "når køyrast"-blokka i arbeidsområdet for å få agenten til å gå til trykkplata [PressurePlate_Up]. Trykk deretter på "Køyr", og bruk piltastane til å flytte {currentPlayerName} ut av huset og bort til **kista** [chest].
       MC_HOC_2017_02: Spelaren skal inn i den hemmelege skogen. Hjelp agenten ved å opne porten ved å skrive koden som hjelper den til trykkplata.
       MC_HOC_2017_02_Cole: "{currentPlayerName} er på veg på eventyr! **Kartet** [map_empty] er bak den låste døra til høgre, og vil vere til stor hjelp. \\r\n \\r\nSkriv inn koden i arbeidsområdet, slik at agenten beveger seg til trykkplata [PressurePlate_Up] og opner opp for {currentPlayerName}. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} er på veg på eventyr! **Kartet** [map_empty] er bak den låste døra til høgre, og vil vere til stor hjelp. \\r\n \\r\nSkriv inn koden i arbeidsområdet, slik at agenten beveger seg til trykkplata [PressurePlate_Up] og opner opp for {currentPlayerName}. "
       MC_HOC_2017_02_Kiki: "Spelaren er på veg på eventyr, men først må dei ha fakkelen som er gøymd bak den låste døra. \\r\n\\r\nProgrammer agenten til å gå framover to gongar og følgje den kvite stien fram til trykkplata, slik at den opnar døra for spelaren."
       MC_HOC_2017_02_Will: "For å fullføre må spelaren komme til det oransje feltet inni den hemmelege skogen, som er bak den låste døra. \\r\n\\r\nKoden i arbeidsområdet får agenten til å gå framover to gongar, så den kjem til trykkplata og opnar døra for Alex og Steve."
       MC_HOC_2017_03_Cole: "{currentPlayerName} held fram med eventyret sitt og har bruk for **kompasset**[compass] til turen. \\r\n\\r\nKod agenten til å opne porten. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} held fram med eventyret sitt og har bruk for **kompasset**[compass] til turen. \\r\n\\r\nKod agenten til å opne porten. "
       MC_HOC_2017_03_Kiki: "Spelaren sitt eventyr begynner bak den låste døra, i den hemmelege skogen! \\r\n\\r\n\\r\nHjelp agenten til å opne døra ved å skrive kode for å få ha til trykkplata."
       MC_HOC_2017_04: Forandre løkka frå den siste gåta for å hjelpe agenten til å lage ein bane over den breiaste delen av elva.
       MC_HOC_2017_04POINT5_Cole: |-
@@ -437,22 +444,27 @@ nn:
         \r
         Hjelp agenten til å fjerne stien ved å finne eit enkelt mønster og bruke løkkar for å krysse dei to første trykkplatene.
       MC_HOC_2017_04POINT5_RYAN: "Du kom deg overover! \\r \n\\r \nNå skal du få {currentPlayerName} trygt gjennom labyrinten for å hente **øksa** [diamond_axe]"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Du kom deg overover! \\r \n\\r \nNå skal du få {currentPlayerName} trygt gjennom labyrinten for å hente **øksa** [diamond_axe]"
       MC_HOC_2017_04_Cole: "Agenten kan bevege seg over vatn! \\r\n\n\\r\nBruk ei løkke til å løyse denne gåta og slik at {currentPlayerName} kan få **bøtta**[bucket_empty] bak døra. "
+      MC_HOC_2017_04_Cole_2019: "Agenten kan bevege seg over vatn! \\r\n\n\\r\nBruk ei løkke til å løyse denne gåta og slik at {currentPlayerName} kan få **bøtta**[bucket_empty] bak døra. "
       MC_HOC_2017_04_Kiki: "Inngangen til den hemmelege skogen førte til denne vakre oasen! For å komme vidare, må spelaren komme til den oransje firkanten i hytta. \\r\n\\r\nBruk ein gjenta-løkke for å hjelpe agenten til å komme heilt fram til trykkplata, som åpner hyttedøra."
       MC_HOC_2017_05: |-
         Løkker ikkje alltid nyttig.\r
         \r
         Desse kaktusane veks ikkje i eit klart mønster, så ei løkke ville ikkje ha fjerna dei riktig. I staden for har vi gitt deg ein funksjon kalla "øydelegge og flytte" som vil gjere jobben for deg kvar gong agenten får ei hindring.
       MC_HOC_2017_05_Cole: "Å nei, brua er borte! \\r\n\\r\nKod agenten til å bygge opp at brua med \"plasser\"-blokka, slik at {currentPlayerName} kan nå fram til **spaden**[diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "Å nei, brua er borte! \\r\n\\r\nKod agenten til å bygge opp at brua med \"plasser\"-blokka, slik at {currentPlayerName} kan nå fram til **spaden**[diamond_shovel]."
       MC_HOC_2017_05_Josh: |-
         Å nei, brua er borte! \r
         \r
         Hjelp agenten til å byggje brua opp at, slik at spelaren kan komme til **spaden**.
       MC_HOC_2017_05_Kiki: "Det er tid for at spelaren forlet den hemmelege skogen og held fram med eventyret. Men brua er borte! \\r\n\\r\nHjelp agenten med å byggje opp at brua, deretter flytte planken slik at spelaren kan komme til den oransje firkanten."
       MC_HOC_2017_06_Cole: "Ei anna elv, men dette er ei mykje større ei! \\r \n\\r \nFiks koden til få hjelpe agenten med å bygge ei bru slik at {currentPlayerName} kan komme til den **hakka** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2019: "Ei anna elv, men dette er ei mykje større ei! \\r \n\\r \nFiks koden til få hjelpe agenten med å bygge ei bru slik at {currentPlayerName} kan komme til den **hakka** [diamond_pickaxe]. "
       MC_HOC_2017_06_Josh: "Enda ei elv, men denne her er mykje større! \\r\n\\r\nFiks denne koden slik at agenten kan byggje ei bru over elva."
       MC_HOC_2017_06_Kiki: "Enda ei elv, men denne her er mykje større! \\r\n\\r\nFiks denne koden slik at agenten kan byggje ei bru over vatnet."
       MC_HOC_2017_07_Cole: "Det er is i vegen! \\r\n \\r\nFunksjonen \"klar bane\" kan hjelpe deg med å ødelegge isen og få {currentPlayerName} til Minecart [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2019: "Det er is i vegen! \\r\n \\r\nFunksjonen \"klar bane\" kan hjelpe deg med å ødelegge isen og få {currentPlayerName} til Minecart [minecart_normal]! "
       MC_HOC_2017_07_Kiki: "Løkker er ikkje den einaste måten å gjenta koden! \\r\n\\r \nHer har vi gitt deg ein funksjon som blir kalla \"fjern kaktusar\", som fjernar tre kaktusar kvar gong du brukar den. Bruk to \"fjern kaktusar\" blokker til å rydde vegen til den oransje firkanten. "
       MC_HOC_2017_07a_Kiki: Redigér denne løkka, slik at agenten rydder vegen til den oransje firkanten.
       MC_HOC_2017_08_Cole: "I stadenfor for å øydeleggje, skal du plassere ei blokk før du går. \\r\n\\r\nEndre funksjonen slik at den verkar i ørkenen."
@@ -472,6 +484,7 @@ nn:
       MC_HOC_2017_10_Cole_old: Prøv å byggje ein funksjon fra starten av, som gjer det lettare for agenten til å gjere ferdig minevogna og få spelaren til den oransje firkanten.
       MC_HOC_2017_10_Kiki: Prøv å byggje ein funksjon fra starten av, som gjer det lettare for agenten til å gjere ferdig minevogna og få spelaren til den oransje firkanten.
       MC_HOC_2017_10_RETRY: "Kan du sjå skilnaden mellom dei to funksjonane i arbeidsområdet ditt? \\r\n\\r\nBruk desse funksjonane saman med anna kode frå verktøyskassa, slik at du kan rydde vegen for minevogna og få tak i **Flint og stål**[flint_and_steel]. \\r "
+      MC_HOC_2017_10_RETRY_2019: "Kan du sjå skilnaden mellom dei to funksjonane i arbeidsområdet ditt? \\r\n\\r\nBruk desse funksjonane saman med anna kode frå verktøyskassa, slik at du kan rydde vegen for minevogna og få tak i **Flint og stål**[flint_and_steel]. \\r "
       MC_HOC_2017_10_RYAN: Prøv å byggje funksjonar frå starten av, som gjer det lettare for agenten å gjere ferdig minevogna og få spelaren til den oransje firkanten.
       MC_HOC_2017_10_RYAN2: Prøv å byggje funksjonar frå starten av, som gjer det lettare for agenten å gjere ferdig minevogna og få spelaren til den oransje firkanten.
       MC_HOC_2017_11_Kiki: No er det opp til deg! Sjå kva du kan lage rundt denne frosne innsjøen.
@@ -481,10 +494,12 @@ nn:
         \r
         Hjelp agenten til å fjerne stien ved å finne eit enkelt mønster og bruke løkkar for å krysse dei to første trykkplatene.
       MC_HOC_2017_Ali: 'Sjå på funksjonane nedanfor. Korleis kan du bruke dei til å komme unna Ghast og hjelpe {currentPlayerName} fram til **Den fortryllande boka** [book_enchanted]?  '
+      MC_HOC_2017_Ali_2019: 'Sjå på funksjonane nedanfor. Korleis kan du bruke dei til å komme unna Ghast og hjelpe {currentPlayerName} fram til **Den fortryllande boka** [book_enchanted]?  '
       MC_HOC_2017_FP10x10: "**Frileik** No er det opp til deg! Kan du utfordre deg sjølv til å samle alle diamantane på dette nivået?\n"
       MC_HOC_2017_FP10x10_RE: "**Frileik** No er det opp til deg! Kan du utfordre deg sjølv til å samle alle diamantane på dette nivået?\n"
       MC_HOC_2017_FP20x20: "**Frileik:** No er det opp til deg! Bruk agenten sin kode for å hjelpe deg med å utforske denne verda."
-      MC_HOC_2017_Ryan_03: "Visste du at du kan sette meir enn eitt stykke kode inn i ei løkke? \\r\n\\r \nBruk ei løkke for å hjelpe agenten med å byggje ei bru over elva ved å plassere blokkene i vatnet."
+      MC_HOC_2017_FP20x20_2019: "**Frileik:** No er det opp til deg! Bruk agenten sin kode for å hjelpe deg med å utforske denne verda."
+      MC_HOC_2017_Ryan_03: "Visste du at du kan sette meir enn eitt stykke kode inn i ei løkke? \n\nBruk ei løkke for å hjelpe agenten med å byggje ei bru over elva ved å plassere blokkene i vatnet."
       MC_HOC_2017_Ryan_05: "Nokre gongar må du slå ned ting som kjem i vegen for spelaren.  \\r Bruk blokka \"øydelegg\" for å fjerne alle kaktusane mellom agenten og trykkplata."
       Mike Test Bee Conditionals 1: "Denne skyen blokkerer synet mitt!\n\\r\n\\r\nSe om det er en blomst under skyen, og hent nektar kun hvis det er en blomst der.   \\r\nVær forsiktig, det kan endre seg!"
       Mike Test Bee Conditionals 2: "Oppgåve: Samle all nektaren.  \\r\nVer forsiktig så du ikkje samlar nektar frå ein lilla blom om den ikkje har nektar."
@@ -500,11 +515,11 @@ nn:
       Overworld Move to Sheep: Legg til endå ein "gå framover"-kommando for å nå fram til sauen.
       Overworld Move to Sheep_2018: Legg til endå ein "gå framover"-kommando for å nå fram til sauen.
       PS copy 2-3 Bee Conditionals 5: "Desse magiske lilla blomstene endrar seg!\\r\n\\r\nKvar gong du køyrer koden kan blomane enten ha 1 nektar eller ingen... Men du veit ikkje talet på nektar før du køyrer koden! \\r\n\\r\nPass på så du ikkje samlar nektar fra blomar som ikkje har noko. \\r\nDu må først sjekke om nektaren er lik 1 ved å bruke \"viss nektar\"-blokka."
-      Testing Quantum Farmer: "Wow! Sjå på det! \\r\n\\r \nEg veit ikkje kor mange spadetak med jord det tar å fylle det. \\r\nKan du skrive eit program som nyttar fyll-blokka ti å fyllel holet til det er heilt jamnt?  "
-      Underground Avoiding Lava: Lava er gøymt under nokre av desse blokkene. Dei er du nøydd til å dekke over før du går framover. Ein "viss"-kommando vil vera nyttig. Legg til ein "gå framover"-kommando på rett stad for å grave ut desse blokkene.
-      Underground Avoiding Lava_2018: Lava er gøymt under nokre av desse blokkene. Dei er du nøydd til å dekke over før du går framover. Ein "viss"-kommando vil vera nyttig. Legg til ein "gå framover"-kommando på rett stad for å grave ut desse blokkene.
-      Underground If Statements: No begynnar ting å bli vanskeleg. Grav ut 3 redstone, men ikkje dett ned i lavaen. Bruk ein "viss"-kommando til å plassere brustein over all lavaen du grev fram.
-      Underground If Statements_2018: No begynnar ting å bli vanskeleg. Grav ut 3 redstone, men ikkje dett ned i lavaen. Bruk ein "viss"-kommando til å plassere brustein over all lavaen du grev fram.
+      Testing Quantum Farmer: "Wow! Sjå på det! \n\nEg veit ikkje kor mange spadetak med jord det tar å fylle det.\nKan du skrive eit program som nyttar fyll-blokka ti å fylle holet til det er heilt jamnt?  "
+      Underground Avoiding Lava: Lava er gøymt under nokre av desse blokkene. Dei er du nøydd til å dekke over før du går framover. Ein "dersom"-kommando vil vera nyttig. Legg til ein "gå framover"-kommando på rett stad for å grave ut desse blokkene.
+      Underground Avoiding Lava_2018: Lava er gøymt under nokre av desse blokkene. Dei er du nøydd til å dekke over før du går framover. Ein "dersom"-kommando vil vera nyttig. Legg til ein "gå framover"-kommando på rett stad for å grave ut desse blokkene.
+      Underground If Statements: No begynnar ting å bli vanskeleg. Grav ut 3 redstone, men ikkje dett ned i lavaen. Bruk ein "dersom"-kommando til å plassere brustein over all lavaen du grev fram.
+      Underground If Statements_2018: No begynnar ting å bli vanskeleg. Grav ut 3 redstone, men ikkje dett ned i lavaen. Bruk ein "dersom"-kommando til å plassere brustein over all lavaen du grev fram.
       course1_artist_loops_challenge2: La oss spele eit spel! Tegn så mange X'ar som du kan! Klarer du tre på rad?
       course1_maze_debugging_challenge2: "Feilsøk dette nivået. Dette er dei rette\nblokkene, men dei ligg i feil rekkefølgje!"
       course1_maze_seq_challenge2: "Du kan bare flytte opp til fire gonger \ni kvar retning. Finn du ein bane før du går tom for blokker?"
@@ -569,10 +584,11 @@ nn:
       courseD_bee_nestedLoops5: 'Saml inn all nektar frå kvar blomst og lag honning i alle bikubene. '
       courseD_bee_nestedLoops8: 'Saml inn all nektar frå kvar blomst og lag honning i alle bikubene. '
       courseD_bee_nestedLoops8_2018: 'Saml inn all nektar frå kvar blomst og lag honning i alle bikubene. '
+      courseD_bee_nestedLoops8_2019: 'Saml inn all nektar frå kvar blomst og lag honning i alle bikubene. '
       courseD_bounce_events1: Kom deg til flagget! Kople ei blokk til "når venstre pil"-blokka og trykk "Køyr" for å flytte spelfiguren til flagget.
       courseD_collector_debugging6a: 'Utfordring: Bruk koden i arbeidsområdet til å få tak i minst **6** deler av skatten!'
       courseD_collector_debugging6a_2018: 'Utfordring: Bruk koden i arbeidsområdet til å få tak i minst **6** deler av skatten!'
-      courseD_collector_ramp8: |2
+      courseD_collector_ramp8: |
         Denne oppgåva er mykje lik som det siste, men no er det Laurel, eventyraren, som er stjerna!\r
          ___\r 
         \r 
@@ -587,6 +603,7 @@ nn:
       courseD_farmer_while_challenge2_2018: Fyll i alle hulla og fjern alle haugane.
       courseD_maze_nestedLoops4: 'Få zombien til solsikka ved å bruke så få blokker som mogleg!  '
       courseD_maze_nestedLoops4_2018: 'Få zombien til solsikka ved å bruke så få blokker som mogleg!  '
+      courseD_maze_nestedLoops4_2019: 'Få zombien til solsikka ved å bruke så få blokker som mogleg!  '
       courseD_maze_until_challenge1: Ingen hint, berre utfordringar. Få zombien til solsikka.
       courseD_maze_until_challenge1_2018: Ingen hint, berre utfordringar. Få zombien til solsikka.
       courseD_scrat_ramp4: Unngå sprekken i isen for å holde Scrat trygg!
@@ -604,6 +621,7 @@ nn:
       courseE_farmer_concept4: No skal me eitt hakk djupare! Me har nøsta heile kodeblokka inn ei anna løkke, men du må få artisten på rett plass for å teikne den neste linja. Kva for nokre av desse kodeblokkene kan du plassere i slutten av den ytste løkka for å teikne heile mønsteret?
       courseF_bee_for_challenge2: Løys denne oppgåva med færrast mogleg blokker.
       courseF_bee_for_challenge2_2018: Løys denne oppgåva med færrast mogleg blokker.
+      courseF_bee_for_challenge2_2019: Løys denne oppgåva med færrast mogleg blokker.
       frozen circle function in circle: Nå skal vi lage 20 overlappande sirklar medan vi dreier 18 grader mellom kvar sirkel.
       frozen circle function with parameter: Her er ei "Lag sirkel"-blokk som kan lage sirklar av ulik storleik. Kan du bruke den til å lage ein liten sirkel med storleik 5 og ein stor sirkel med storleik 10?
       frozen circle function: Bruk den nye "Lag sirkel"-blokka for å lage 10 overlappande sirklar. Hugs å gå framover mellom sirklane.
@@ -649,24 +667,24 @@ nn:
       grade3_ConditionalsElse_2: "Fleire skyer! \\r\n\\r\nSjekk under kvar sky for å sjå om den skjular ein blom før du får tak i nektaren. \\r\n\\r\nHugs, alle skyene skjular ikkje same ting!"
       grade3_ConditionalsElse_4: "Noen ganger skjuler denne skyen en blomst og noen ganger skjuler den en bikube! \\r\n\\r\nBruk blokken `hvis/ellers` til å samle nektar kun hvis det er en blomst der. \\r\nHvis ikke det er det, lag honning (fordi det er en bikube)."
       grade3_ConditionalsElse_5: |-
-        Det kan vere ein blome eller ein bikube under skyene. \r
-        \r
-        Bruk "viss/elles"-blokka til å samle inn nektar om det er ein blome. \r
+        Det kan vere ein blome eller ein bikube under skyene. 
+        
+        Bruk "dersom/elles"-blokka til å samle inn nektar om det er ein blome. 
         Om ikkje lagar du honning (for da er det ein bikube).
-      grade3_ConditionalsElse_6: "Eg er ikkje sikker på kor mykje nektar denne blomen har, men den har enten 1, 2 eller 3 nektar.\\r\n\\r\nKombinér dei betinga blokkene ('viss' og/eller 'viss/elles') for å berre få så mykje nektar som blomen har.\n\\r\n\\r\nHugs: talet på nektrar kan endre seg for kvar gong du køyrer oppgåva!"
+      grade3_ConditionalsElse_6: "Eg er ikkje sikker på kor mykje nektar denne blomen har, men den har enten 1, 2 eller 3 nektar.\n\nKombinér dei betinga blokkene ('dersom' og/eller 'dersom/elles') for å berre få så mykje nektar som blomen har.\n\nHugs: talet på nektar kan endre seg for kvar gong du køyrer oppgåva!"
       grade3_ConditionalsElse_7: "Hugs at lilla blomar kan ha 3, 2 og 1 nektar. \n\\r\n\\r\nFullfør \"kontroller lilla blomar\"-funksjonen og bruk den til å samle inn nektar frå alle blomane."
       grade3_ConditionalsElse_8: "Skriv ein funksjon som heiter \"Sjekk blom og lag honning\". \\r\n\\r\nFunksjonen din skal sjekke om den lilla blomen har 3, 2 eller 1 nektar og hente all nektaren. \\r\nDeretter skal den bevege seg framover og så lage honning."
       grade3_ConditionalsElse_9: "**Oppgåve** Denne skya gjømmer ein blomst med ein nektar eller ei honningkake som treng ein honning.\n\\r\n\\r\nGjer ferdig \"hent nektar eller lag honning\"-funksjonen og kall den for å sanke nektar eller honning.\\r\n"
       grade3_ConditionalsElse_TeacherIDo: |-
-        Det kan vere ein blome eller ein bikube under skyene. \r
-        \r
-        Bruk "viss/elles"-blokka til å samle inn nektar om det er ein blome. \r
+        Det kan vere ein blome eller ein bikube under skyene. 
+        
+        Bruk "dersom/elles"-blokka til å samle inn nektar om det er ein blome. 
         Om ikkje lagar du honning (for da er det ein bikube).
       grade3_Conditionals_1: "Hei, eg er ei sulten bie! \\r \n\\r\n\\r\nHjelp meg å samle all nektaren frå blomane. Bruk så få blokker som mogleg."
       grade3_Conditionals_10: |-
-        Her skjer det mykje!\r
-        \r
-        Bruk kva du har lært til å samle all nektaren og lage honning.
+        Her skjer det mykje!
+        
+        Bruk det du har lært til å samle all nektaren og lage honning.
       grade3_Conditionals_11 BAD: "**Oppgave:** Bruk ei medan-løkke for å samle all nektaren fra desse blomane."
       grade3_Conditionals_11: "Lat oss sette alt saman!\\r\n\\r\nBruk alt du har lært til å hjelpe meg med å samle inn all nektaren frå blomar som har nektar. Bruk så få blokker som mogleg.  \\r\n\\r\nIkkje gløym å lage honning på slutten."
       grade3_Conditionals_12: "Trappemønsteret bør sjå kjend ut.\\r\n\\r\nKan du samle nektar frå dei blomane som har, med så få blokker som mogleg?"
@@ -737,9 +755,9 @@ nn:
       grade4_bee_conditionals_quantum2: "Fleire skyer! \\r\n\\r\nSjekk under kvar sky for å sjå om den skjular ein blom før du får tak i nektaren. \\r\n\\r\nHugs, alle skyene skjular ikkje same ting!"
       grade4_bee_conditionals_quantum4: "Noen ganger skjuler denne skyen en blomst og noen ganger skjuler den en bikube! \\r\n\\r\nBruk blokken `hvis/ellers` til å samle nektar kun hvis det er en blomst der. \\r\nHvis ikke det er det, lag honning (fordi det er en bikube)."
       grade4_bee_conditionals_quantum5: |-
-        Det kan vere ein blome eller ein bikube under skyene. \r
-        \r
-        Bruk "viss/elles"-blokka til å samle inn nektar om det er ein blome. \r
+        Det kan vere ein blome eller ein bikube under skyene. 
+        
+        Bruk "dersom/elles"-blokka til å samle inn nektar om det er ein blome. 
         Om ikkje lagar du honning (for da er det ein bikube).
       grade4_bee_functions2: "Funksjonar er blokker med kode som gjer ei oppgåve. \\r\n\\r\nBruk funksjonen \"hent 2 nektar\" for å samle inn nektar frå kvar blome."
       grade4_bee_functions3: Bruk "hent 5"-funksjonen for å løyse denne oppgåva.
@@ -789,3 +807,4 @@ nn:
         Kvar blome inneheld ein porsjon nektar. Hent nektar frå alle blomane. 
       ramp_artist_loops7: Sjå etter eit mønster, og gjer denne koden kortare ved å bruke løkker!
       ramp_artist_loops7_2018: Sjå etter eit mønster, og gjer denne koden kortare ved å bruke løkker!
+      ramp_artist_loops7_2019: Sjå etter eit mønster, og gjer denne koden kortare ved å bruke løkker!

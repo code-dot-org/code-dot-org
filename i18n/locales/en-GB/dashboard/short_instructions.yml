@@ -153,6 +153,12 @@ en-GB:
       Bergeron Robot Maze1: "Can you help me catch the naughty pig? Stack a couple\nof `move forward` blocks below the `when run` block and press \"Run\". "
       Course 2 Bee Loops 1: "Hi, I'm a bee. Can you help me collect the\nnectar from these flowers? "
       Function intro Ryan: Use the `build bridge` function twice to make a path to the torch.
+      Function intro Ryan_2019: Use the `build bridge` function twice to make a path to the torch.
+      HOC 2018 Level_11: 'Build a conduit with Prismarine inside the Ocean Monument.'
+      HOC 2018 Level_12: 'Design your own underwater environment, it’s up to you!'
+      HOC 2018 Level_2: 'Head to the end of the dock.'
+      HOC 2018 Level_3: 'Head across the open seas to the cod.'
+      HOC 2018 Level_9b: 'Use the coral as waypoints to reach the treasure.'
       K-1 Maze Loops 1: Get me to the pig!
       K-1 Maze Loops 4: Get me to the pig!
       K-1 Maze Loops 9: Get me to the pig!
@@ -162,14 +168,18 @@ en-GB:
       Kiki_StarWars_Test_5_Example: Text
       MC_HOC_2017_01_Cole: You need to collect all the tools on this journey. Move around using the **arrow keys**, and get to the chest on the path to win
       MC_HOC_2017_01_RETRY: 'Get the Agent to the pressure plate, then press "Run" and use the arrow keys to move the player out of the house to collect the chest. '
+      MC_HOC_2017_01_RETRY_2019: 'Get the Agent to the pressure plate, then press "Run" and use the arrow keys to move the player out of the house to collect the chest. '
       MC_HOC_2017_02_Cole: 'Move the Agent to the pressure plate so that {currentPlayerName} can get to the map. '
+      MC_HOC_2017_02_Cole_2019: 'Move the Agent to the pressure plate so that {currentPlayerName} can get to the map. '
       MC_HOC_2017_02_Kiki: Get the Agent to the pressure plate, then get the player to the orange square.
       MC_HOC_2017_04: Change the loop from the last puzzle to help the Agent make a path over the wider part of this river.
       MC_HOC_2017_05: Use a function to help the Agent get to the pressure plate.
       MC_HOC_2017_06_Cole: Fix this code to get the Agent to build a bridge across this river.
+      MC_HOC_2017_06_Cole_2019: Fix this code to get the Agent to build a bridge across this river.
       MC_HOC_2017_06_Josh: Fix this code to help the Agent build a bridge across this river.
       MC_HOC_2017_06_Kiki: Fix this code to help the Agent build a bridge across this river.
       MC_HOC_2017_07_Cole: Destroy the ice and get {currentPlayerName} to the Minecart.
+      MC_HOC_2017_07_Cole_2019: Destroy the ice and get {currentPlayerName} to the Minecart.
       MC_HOC_2017_07_Kiki: Use a function to clear the path to the orange square.
       MC_HOC_2017_08_Cole: Change the provided function to work for this biome.
       MC_HOC_2017_08_RY: Use the functions to find a way across the lava.
@@ -180,9 +190,11 @@ en-GB:
       MC_HOC_2017_10_Cole_old: Create a function to help you finish this minecart.
       MC_HOC_2017_10_Kiki: Create a function to help you finish this minecart.
       MC_HOC_2017_10_RETRY: Create a function to help you finish this minecart.
+      MC_HOC_2017_10_RETRY_2019: Create a function to help you finish this minecart.
       MC_HOC_2017_10_RYAN: Create a function to help you finish this minecart.
       MC_HOC_2017_10_RYAN2: Create a function to help you finish this minecart.
       MC_HOC_2017_Ali: Use the functions to find a way across the lava.
+      MC_HOC_2017_Ali_2019: Use the functions to find a way across the lava.
       MC_HOC_2017_FP10x10: "**Freeplay:** Can you challenge yourself to collect all of the diamonds in this level? "
       MC_HOC_2017_FP10x10_RE: "**Freeplay:** Can you challenge yourself to collect all of the diamonds in this level? "
       MC_HOC_2017_Ryan_03: Now use loops to help The Agent build a bridge over the river by placing blocks in the water.

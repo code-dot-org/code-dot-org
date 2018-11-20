@@ -167,7 +167,49 @@ cs:
       Course 4 SCFP 1: Vytvoř funkci s parametry, které umožní umělci skákat dozadu a dopředu o x pixelů a také nahoru a dolů y pixelů (pomocí kladných a záporných čísel).
       Course 4 SCVP 1: Vytvoř funkci s parametry, které umožní umělci skákat dozadu a dopředu o x pixelů a také nahoru a dolů y pixelů (pomocí kladných a záporných čísel).
       CourseF_PlayLab_vars2: Závod v tom posledním puzzle nebyl velmi fér! Změň proměnnou "pes_rychlost", a ujisti se, že můžeš sesbírat více vlajek než kočka. Kdo první sesbírá 10 vyhrává!
+      Dance_Party_01: |-
+        *Pojďme uspořádat taneční párty!*
+        
+        Přetáhni blok `vytvořit nový`do pracovního prostoru, a napoj ho uvnitř bloku `příprava`. Tím vytvoříš nového tanečníka
+        
+        * *Jestliže chceš víc informací nebo extra výzvy, můžeš kliknout na žárovku vlevo.*
+      Dance_Party_01_low: |-
+        *Pojďme uspořádat taneční párty!*
+        
+        Přetáhni blok `vytvořit nový`do pracovního prostoru, a napoj ho uvnitř bloku `příprava`. Tím vytvoříš nového tanečníka
+        
+        * *Jestliže chceš víc informací nebo extra výzvy, můžeš kliknout na žárovku vlevo.*
+      Dance_Party_02: |-
+        Pojďme roztančit tohoto losa!
+        
+        Přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">novy&#95;tanecnik</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> do pracovního prostoru. Napoj ho na blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"měření"</title></block></xml>. Tvůj tanečník by běl začít nový pohyb po čtvrtém měření.
+      Dance_Party_03: "*Teď trsáme!* \n\nPřidej blok <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"měření\"</title></block></xml> do pracovního prostoru. Nech tanečníka začít nový pohyb po šesti měřeních."
+      Dance_Party_04: |-
+        *Tenhle tanec potřebuje jiskru!*
+        
+        Podívej na nový blok v nabídce. Přidává efekt pozadí za tvého tanečníka. Sleduj, jak se efekt mění spolu s hudbou!
+      Dance_Party_05: |-
+        Použij další nový blok k tomu, aby tanečním změnil pohyb **každé 2 měření**!
+        
+        * Volba`(Další)`, `(Předchozí)`, or `(Náhodný)` říká tanečníkovi, aby předvedl jiný pohyb pokaždé, když je kód spuštěn.
       Function intro Ryan: "Máte v pracovním prostoru **funkci** s názvem „postavit most“. Veškerý kód, který potřebujete k překročení řeky, je do ní vložen! \\r\n \\r\nPřichyťte malý zelený blok dvakrát do pracovního prostoru, čímž opravíte cestu a dostanete hráče {currentPlayerName} k ruditové louči [redstone_torch]."
+      Function intro Ryan_2019: "Máte v pracovním prostoru **funkci** s názvem „postavit most“. Veškerý kód, který potřebujete k překročení řeky, je do ní vložen! \\r\n \\r\nPřichyťte malý zelený blok dvakrát do pracovního prostoru, čímž opravíte cestu a dostanete hráče {currentPlayerName} k ruditové louči [redstone_torch]."
+      HOC 2018 Level_1: "Potřebuješ zásoby na nadcházející výpravu. Vezmi **loď** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) z **truhly** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
+      HOC 2018 Level_10: "Někde v tomto oceánském monumentu se ukrývá **chobotnice** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png), dokážeš ji najít?\n\n"
+      HOC 2018 Level_11: Postav zeď z **prismarinu** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) okolo černého betonu. Tak aktivuješ **potrubí** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) a dokončíš tuto výzvu!
+      HOC 2018 Level_12: Gratuluji! Otevřený vodní svět tě očekává. Postav korálový útes! Sopku! Lodní vrak! Je to jen na tobě.
+      HOC 2018 Level_2: Lodě jsou pro pohyb po otevřené vodě mnohem lepší, než plavání! Vydej se na konec doku a naskoč na palubu.
+      HOC 2018 Level_3: Popadni vesla a naviguj svou loď přes otevřenou vodu tak, abys chytil **tresku** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Pojďme treskou nakrmit **delfína** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png). Použij blok opakuj do, aby ses dostal přes oceán rychleji.
+      HOC 2018 Level_5: Někde tady je ukrytá **ulita loděnky** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)! Prozkoumej vrak lodi a najdi **truhlu** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      HOC 2018 Level_6: Vypadá to, že tam mrzne! Chyť **lososa** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) po cestě do podvodních ruin.
+      HOC 2018 Level_7a: "Objevil jsi podvodní ruiny. Najdi cestu k **truhle** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) obsahující **prismarinový** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) poklad.\n\n"
+      HOC 2018 Level_8: "Nejdřív ledovce a teď láva? Dostaň se skrz tento vulkanický ostrov a najdi **tropickou rybu** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) v korálovém útesu.\n\n"
+      HOC 2018 Level_9b: "Zvládl jsi to k útesu, teď hledej **Srdce moře** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Použij modré a červené korály, aby ses dostal k **truhle** s pokladem ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
+      HOC Dance 4_draft: |-
+        Použij další nový blok k tomu, aby tanečním změnil pohyb **každé 2 měření**!
+        
+        * Volba`(Další)`, `(Předchozí)`, or `(Náhodný)` říká tanečníkovi, aby předvedl jiný pohyb pokaždé, když je kód spuštěn.
       K-1 Bee Loops 2: Používej cyklus k pohybu a pak dostaneš nektar a vyrobíš med!
       K-1 Bee Loops 3: Používej cykly, abys dostal nektar a udělal med!
       K-1 Bee Loops 4: Použij cykly, abys dostal nektar, udělal med a pohyboval!
@@ -182,16 +224,23 @@ cs:
       MC_HOC_2017_01: "Kliknutím na tlačítko „Spustit“ můžete pohybovat hráčem pomocí **kláves se šipkami**.  \\r\n\\r\nKe splnění této úrovně se musíte dostat ke dveřím, otevřít je (pomocí **mezerníku**) a dostat se na oranžové políčko za nimi."
       MC_HOC_2017_01_Cole: Na této cestě musíte posbírat všechny nástroje. Pohybujte se pomocí **kláves se šipkami** a vítězství získáte, když se dostanete k truhle.
       MC_HOC_2017_01_Kiki: 'K hraní této úrovně klikněte na oranžové tlačítko „Spustit“ pod herním prostorem. Poté hráčem pohybujte pomocí **kláves se šipkami**.  '
-      MC_HOC_2017_01_RETRY: |2
+      MC_HOC_2017_01_RETRY: |-
+        Hráč {currentPlayerName} je uvězněn v domě, ale na pomoc mu přišel agent!   \r
+         \r
+           \r
+        Přichyťte v pracovním prostoru blok „pohyb vpřed“ k bloku „při spuštění“, abyste agenta přesunuli na nášlapnou desku [PressurePlate_Up]. Poté stiskněte tlačítko „Spustit“ a odveďte hráče {currentPlayerName} pomocí kláves se šipkami mimo dům, aby sebral **truhlu** [chest].
+      MC_HOC_2017_01_RETRY_2019: |-
         Hráč {currentPlayerName} je uvězněn v domě, ale na pomoc mu přišel agent!   \r
          \r
            \r
         Přichyťte v pracovním prostoru blok „pohyb vpřed“ k bloku „při spuštění“, abyste agenta přesunuli na nášlapnou desku [PressurePlate_Up]. Poté stiskněte tlačítko „Spustit“ a odveďte hráče {currentPlayerName} pomocí kláves se šipkami mimo dům, aby sebral **truhlu** [chest].
       MC_HOC_2017_02: Hráč se musí dostat do Tajného hájku. Pomozte agentovi otevřít bránu napsáním kódu, který ho dostane na nášlapnou desku.
       MC_HOC_2017_02_Cole: "Hráč {currentPlayerName} se vydává za dobrodružstvím! Pomozte mu a vezměte **mapu** [map_empty] za zamčenými dveřmi vpravo. \\r\n \\r\nPřichyťte kód do pracovního prostoru a posuňte agenta na nášlapnou desku [PressurePlate_Up], aby mohl hráč {currentPlayerName} projít."
+      MC_HOC_2017_02_Cole_2019: "Hráč {currentPlayerName} se vydává za dobrodružstvím! Pomozte mu a vezměte **mapu** [map_empty] za zamčenými dveřmi vpravo. \\r\n \\r\nPřichyťte kód do pracovního prostoru a posuňte agenta na nášlapnou desku [PressurePlate_Up], aby mohl hráč {currentPlayerName} projít."
       MC_HOC_2017_02_Kiki: "Hráč se vydává za dobrodružstvím, ale nejdříve musí získat pochodeň, která je ukryta za těmito zamčenými dveřmi. \\r\n\\r\nNaprogramujte agenta, aby se dvakrát pohnul vpřed po bílé cestě a stoupnul si na nášlapnou desku, která otevře hráči dveře."
       MC_HOC_2017_02_Will: "Pro dokončení této úrovně se musí hráč dostat na oranžové políčko nacházející se v Tajném hájku, který je za zamčenými dveřmi.  \\r\n\\r\nPomocí kódu v pracovním prostoru se agent pohne dvakrát vpřed, stoupne na nášlapnou desku a otevře Alex nebo Stevovi dveře."
       MC_HOC_2017_03_Cole: "Hráč {currentPlayerName} pokračuje ve svém dobrodružství a potřebuje **kompas** [compass], aby se připravil na výlet.  \\r\n   \\r\nNapište pro agenta kód, aby otevřel bránu."
+      MC_HOC_2017_03_Cole_2019: "Hráč {currentPlayerName} pokračuje ve svém dobrodružství a potřebuje **kompas** [compass], aby se připravil na výlet.  \\r\n   \\r\nNapište pro agenta kód, aby otevřel bránu."
       MC_HOC_2017_03_Kiki: "Hráčovo dobrodružství začne za zamčenými dveřmi, v Tajném hájku!  \\r\n\\r\n\\r\nPomozte agentovi otevřít dveře napsáním kódu, který ho dostane na nášlapnou desku."
       MC_HOC_2017_04: Upravte cyklus z poslední hádanky tak, abyste pomohli agentovi udělat cestu přes širší část této řeky.
       MC_HOC_2017_04POINT5_Cole: |-
@@ -200,7 +249,9 @@ cs:
         
         Pomozte agentovi uvolnit cestu tím, že najdete jednoduchý vzorec a použijete cykly k přejití přes první dvě nášlapné desky.
       MC_HOC_2017_04POINT5_RYAN: "Dokázali jste přejít! \\r\n\\r\nNyní proveďte hráče {currentPlayerName} bezpečně bludištěm a seberte **sekeru** [diamond_axe].\\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Dokázali jste přejít! \\r\n\\r\nNyní proveďte hráče {currentPlayerName} bezpečně bludištěm a seberte **sekeru** [diamond_axe].\\r\n"
       MC_HOC_2017_04_Cole: "Agent se může pohybovat po vodě!  \\r\n \\r\nVyřešte tuto hádanku tím, že použijete cyklus „opakovat“ a pomůžete hráči {currentPlayerName} získat **kbelík** [bucket_empty] za dveřmi."
+      MC_HOC_2017_04_Cole_2019: "Agent se může pohybovat po vodě!  \\r\n \\r\nVyřešte tuto hádanku tím, že použijete cyklus „opakovat“ a pomůžete hráči {currentPlayerName} získat **kbelík** [bucket_empty] za dveřmi."
       MC_HOC_2017_04_Kiki: "Vstup do Tajného hájku vás přivedl do této nádherné oázy! Pro absolvování této úrovně se musí hráč dostat na oranžové políčko v chatě.  \\r\n\\r\nPomocí cyklu „opakovat“ pomozte agentovi dostat se až nahoru na nášlapnou desku, která otevírá dveře do chaty."
       MC_HOC_2017_05: |-
         Ne vždy vám pomohou cykly. 
@@ -208,6 +259,7 @@ cs:
         
         Tyto kaktusy nerostou podle žádného zřejmého vzorce, takže pomocí cyklu je správně neodstraníte. Namísto toho máte k dispozici funkci s názvem „zničit a pohyb“, která za vás udělá těžkou práci pokaždé, když agent narazí na překážku.
       MC_HOC_2017_05_Cole: "Ale ne, most je zbořený! \\r\n\\r\nNaprogramujte kód pro agenta, aby znovu postavil most pomocí bloku „umístit“ a aby se hráč {currentPlayerName} dostal k **lopatě** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "Ale ne, most je zbořený! \\r\n\\r\nNaprogramujte kód pro agenta, aby znovu postavil most pomocí bloku „umístit“ a aby se hráč {currentPlayerName} dostal k **lopatě** [diamond_shovel]."
       MC_HOC_2017_05_Josh: |-
         Ale ne, most je zbořený! 
         
@@ -215,9 +267,11 @@ cs:
         Pomozte agentovi znovu postavit most, aby se hráč mohl dostat k **lopatě**.
       MC_HOC_2017_05_Kiki: "Nastal čas, aby hráč opustil Tajný hájek a pokračoval v dobrodružství. Most je však zbořený! \\r\n\\r\nPomozte agentovi znovu postavit most a poté přesuňte dřevěná prkna, aby se hráč mohl dostat na oranžové políčko."
       MC_HOC_2017_06_Cole: "Další řeka, ale tentokrát mnohem širší! \\r\n \\r\nOpravte tento kód a pomozte agentovi postavit most, aby se mohl hráč {currentPlayerName} dostat ke **krumpáči** [diamond_pickaxe]."
+      MC_HOC_2017_06_Cole_2019: "Další řeka, ale tentokrát mnohem širší! \\r\n \\r\nOpravte tento kód a pomozte agentovi postavit most, aby se mohl hráč {currentPlayerName} dostat ke **krumpáči** [diamond_pickaxe]."
       MC_HOC_2017_06_Josh: "Další řeka, ale tentokrát mnohem širší! \\r\n\\r\nOpravte tento kód a pomozte agentovi postavit most přes tuto řeku."
       MC_HOC_2017_06_Kiki: "Další řeka, ale tentokrát mnohem širší! \\r\n\\r\nOpravte tento kód a pomozte agentovi postavit most přes vodu."
       MC_HOC_2017_07_Cole: "V cestě je led!  \\r\n \\r\nFunkce \"uvolnit cestu\" vám může pomoci led zničit a dostat hráče {currentPlayerName} k vozíku [minecart_normal]!"
+      MC_HOC_2017_07_Cole_2019: "V cestě je led!  \\r\n \\r\nFunkce \"uvolnit cestu\" vám může pomoci led zničit a dostat hráče {currentPlayerName} k vozíku [minecart_normal]!"
       MC_HOC_2017_07_Kiki: "Kód lze opakovat i jinak než za využití cyklů!  \\r\n\\r\nDáváme vám k dispozici funkci s názvem „odstranit kaktusy“, která odstraní při každém použití tři kaktusy. Pomocí dvou bloků „odstranit kaktusy"
       MC_HOC_2017_07a_Kiki: Nyní upravte tento cyklus a pomozte agentovi uvolnit cestu k oranžovému políčku.
       MC_HOC_2017_08_Cole: "Nyní je třeba namísto zničení před pohybem umístit blok.  \\r\n\\r\nZměňte uvedenou funkci, aby fungovala v poušti."
@@ -239,6 +293,7 @@ cs:
       MC_HOC_2017_10_Cole_old: Zkuste od začátku vytvořit funkci, která pomůže agentovi dokončit tento vozík a dostat hráče na oranžové políčko.
       MC_HOC_2017_10_Kiki: Zkuste od začátku vytvořit funkci, která pomůže agentovi dokončit tento vozík a dostat hráče na oranžové políčko.
       MC_HOC_2017_10_RETRY: "Dokážete najít rozdíl mezi dvěma funkcemi ve svém pracovním prostoru? \\r\n \\r\nPoužijte tyto funkce a další kód z panelu nástrojů k uvolnění cesty pro vozík a seberte **křesadlo** [flint_and_steel]. \\r\n"
+      MC_HOC_2017_10_RETRY_2019: "Dokážete najít rozdíl mezi dvěma funkcemi ve svém pracovním prostoru? \\r\n \\r\nPoužijte tyto funkce a další kód z panelu nástrojů k uvolnění cesty pro vozík a seberte **křesadlo** [flint_and_steel]. \\r\n"
       MC_HOC_2017_10_RYAN: Zkuste od začátku vytvořit funkce, které pomohou agentovi dokončit tento vozík a dostat hráče na oranžové políčko.
       MC_HOC_2017_10_RYAN2: Zkuste od začátku vytvořit funkce, které pomohou agentovi dokončit tento vozík a dostat hráče na oranžové políčko.
       MC_HOC_2017_11_Kiki: Teď je to na vás! Zkuste, co dokážete vytvořit kolem tohoto zamrzlého jezera.
@@ -249,9 +304,11 @@ cs:
         
         Pomozte agentovi uvolnit cestu tím, že najdete jednoduchý vzorec a použijete cykly k přejití přes první dvě nášlapné desky.
       MC_HOC_2017_Ali: 'Podívejte se na funkce níže. Jak je můžete využít, abyste se vyhnuli ďasům a pomohli hráči {currentPlayerName} dostat se bezpečně ke **kouzelné knize** [book_enchanted]?'
+      MC_HOC_2017_Ali_2019: 'Podívejte se na funkce níže. Jak je můžete využít, abyste se vyhnuli ďasům a pomohli hráči {currentPlayerName} dostat se bezpečně ke **kouzelné knize** [book_enchanted]?'
       MC_HOC_2017_FP10x10: "**Volná hra:** Teď je to na vás! Dokážete sebrat všechny diamanty v této úrovni?"
       MC_HOC_2017_FP10x10_RE: "**Volná hra:** Teď je to na vás! Dokážete sebrat všechny diamanty v této úrovni?"
       MC_HOC_2017_FP20x20: "**Volná hra:** Teď je to na vás! Prozkoumejte tento svět pomocí agentova kódu."
+      MC_HOC_2017_FP20x20_2019: "**Volná hra:** Teď je to na vás! Prozkoumejte tento svět pomocí agentova kódu."
       MC_HOC_2017_Ryan_03: "Věděli jste, že do cyklu můžete vložit více částí kódu?  \\r\n\\r\nPomocí cyklu „opakovat“ pomozte agentovi postavit most přes řeku tím, že umístíte bloky do vody."
       MC_HOC_2017_Ryan_05: "Někdy je třeba zbourat vše, co se připlete vašemu hráči do cesty.  \\r\nPomocí bloku „zničit“ odstraňte všechny kaktusy mezi agentem a nášlapnou deskou."
       MC_HOC_Kiki_02: Někdo musí stát na nášlapné desce, než se otevřou boční dveře. Pomozte agentovi dostat se na desku, aby se mohl hráč dostat z domu.
@@ -287,6 +344,7 @@ cs:
       courseD_bee_nestedLoops5: 'Sesbírej všechen nektar z každého květu a udělej med na každé plástvi. Použij vnořené cykly. '
       courseD_bee_nestedLoops8: 'Sesbírej všechen nektar z každého květu a udělej med na každé plástvi. Použij vnořené cykly. '
       courseD_bee_nestedLoops8_2018: 'Sesbírej všechen nektar z každého květu a udělej med na každé plástvi. Použij vnořené cykly. '
+      courseD_bee_nestedLoops8_2019: 'Sesbírej všechen nektar z každého květu a udělej med na každé plástvi. Použij vnořené cykly. '
       courseD_bounce_events1: Dostaňte se k vlajce! Připojte blok k bloku "když vlevo šipka"a stiskněte tlačítko "Spustit", aby se hráč dostal k vlajce.
       courseD_debugging_3: |-
         *"Tyhle bloky mě vážně štvou."*
@@ -295,12 +353,14 @@ cs:
       courseD_debugging_6: "**Výzva:** Oprav chyby k sesbírání všeho nektaru a vyrobení všeho medu."
       courseD_maze_nestedLoops4: 'Dostaň mě ke slunečnici!'
       courseD_maze_nestedLoops4_2018: 'Dostaň mě ke slunečnici!'
+      courseD_maze_nestedLoops4_2019: 'Dostaň mě ke slunečnici!'
       courseE_bee_functions3: Funkce jsou bloky kódu, provádějící úkol. Použij funkci "dostat 5" k získání 5 nektarů najednou. Přesvědč se, zda používáš taky cyklus k získání ideálního počtu bloků.
       courseE_bee_functions3_2018: Funkce jsou bloky kódu, provádějící úkol. Použij funkci "dostat 5" k získání 5 nektarů najednou. Přesvědč se, zda používáš taky cyklus k získání ideálního počtu bloků.
       courseE_bee_ramp17: 'Pro poslední hádanku v této fázi, použij co si se naučil(a) a sesbírej veškerý nektar a vyrob všechen med.  '
       courseE_farmer_concept4: Teď pojďme hlouběji o jednu úroveň. Vnořili jsme celý blok kódu do jiného cyklu, ale umělec se musí dostat zpět na místo další řádky. Který z těchto bloků kódu můžeš umístit na konec vnějšího cyklu, aby nakreslil celou mřížku?
       courseF_bee_for_challenge2: Vyřeš tento puzzle s co nejmenším možným počtem bloků.
       courseF_bee_for_challenge2_2018: Vyřeš tento puzzle s co nejmenším možným počtem bloků.
+      courseF_bee_for_challenge2_2019: Vyřeš tento puzzle s co nejmenším možným počtem bloků.
       frozen circle function in circle: Vytvořme 20 překrývajících se kružnic tak, že je otočíme o 18 stupňů mezi každou kružnicí.
       frozen circle function with parameter: "Tady máš blok \"vytvoř kružnici\", \nkterý dokáže vyrobit kružnice různých velikostí. Dokážeš ho použít k vytvoření\nmalé kružnice o velikosti 5 a větší kružnice o velikosti 10?"
       frozen circle function: "Použij nový blok \"vytvoř kružnici\" k vytvoření\ndeseti překrývajících se kružnic. Nezapomeň skočit vpřed po každé kružnici."

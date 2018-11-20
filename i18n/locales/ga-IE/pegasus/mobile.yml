@@ -418,7 +418,7 @@
   mc_gradelevel: "Aois 6-106"
   mc_platformtext: "Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid"
   mc_specs: "Go leor teangacha | Brabhsálaithe nua-aimseartha agus táibléid | Aois 6-106"
-  minecraft_agent: 'Minecraft: Scéal Gaisce'
+  minecraft_agent: "Minecraft: Scéal Gaisce"
   minecraft_designer: "Dearthóir Minecraft"
   minecraft_adventurer: "Eachtránaí Minecraft"
   minecraft_tutorials: "Cúrsaí Teagaisc Minecraft don Uair Chódála"
@@ -669,7 +669,7 @@
   dashboard_sections_table_stage_extras: "Acmhainní Breise don Chéim"
   dashboard_sections_table_students: "Daltaí"
   dashboard_sections_table_code: "Cód an Rannáin"
-  dashboard_sections_name: "Ainm an Rannáin"
+  dashboard_sections_name: 'Ainm an Rannáin'
   dashboard_sections_choose_secret: "Más mian leat cuntais a thabhairt do na daltaí sa rannán, roghnaigh <b>focal</b> nó <b>pictiúr</b> rúnda i gcomhair an rannáin sin."
   dashboard_sections_secret_word: "Má roghnaíonn tú <b>focal</b>, beidh tú ábalta focal rúnda a shocrú do gach dalta."
   dashboard_sections_secret_picture: "Má roghnaíonn tú <b>pictiúr</b>, beidh tú ábalta pictiúr rúnda a shocrú do gach dalta, rud níos oiriúnaí do dhaltaí níos óige gan cumas clóscríofa acu."
@@ -695,7 +695,7 @@
   dashboard_students_add_multiple: 'Clóscríobh nó greamaigh ainmneacha na ndaltaí isteach, ceann amháin ar gach líne:'
   dashboard_students_new_google_classroom_section: "Le daltaí a chur leis an rannán, úsáid <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> ansin cliceáil an cnaipe <b>Sioncronaigh daltaí ó Google Classroom</b> thuas."
   dashboard_students_new_section: "Chruthaigh tú rannán nua! Anois bain úsáid as na cnaipí <b>Cuir dalta leis</b> agus <b>Cuir daltaí leis</b> le do chuid daltaí a chur leis an rannán."
-  dashboard_students_name: "Ainm"
+  dashboard_students_name: 'Ainm'
   dashboard_students_progress: "Dul chun cinn"
   dashboard_students_male: "Fireannach"
   dashboard_students_female: "Baineannach"
@@ -1470,10 +1470,13 @@
   syncing_students_instructions: 'Má tá do rannán ar Code.org as sionc leis an liosta daltaí ar Google Classroom, cliceáil an cnaipe "Sioncronaigh daltaí ó Google Classroom" sa gcluaisín "Bainistigh Daltaí":'
   google_sign_in_instruct: 'Ansin ag an bpointe sin, roghnaigh “Sign in with Google Account”:'
   applab-intro_name: Fáilte go dtí an tSaotharlann Aipeanna
+  applab_tile_start_tutorial: "Tosaigh"
   account_sign_up_email_opt_in: "An bhfuil cead againn ríomhphost a sheoladh chugat maidir lenár gcúrsaí, deiseanna foghlamtha áitiúla, nó nuacht eile faoin ríomheolaíocht?"
+  hoc_overview_start_tutorial: "Tosaigh"
   hoc2018_creativity_create: "Cruthaigh"
   hoc2018_mc_page_title: "Cúrsaí Teagaisc Minecraft don Uair Chódála"
   hoc2018_mc_details: "Go leor teangacha | Brabhsálaithe nua-aimseartha agus táibléid | Aois 7+"
+  hoc2018_mc_hero_title: "Minecraft: Scéal Gaisce"
   hoc2018_mc_designer_title: "Dearthóir Minecraft"
   hoc2018_mc_designer_description: "Códáil ainmhithe agus créatúir eile i do leagan féin de Minecraft."
   hoc2018_mc_adventurer_title: "Eachtránaí Minecraft"
@@ -1503,3 +1506,8 @@
   hoc2018_mc_minecraft_education: "Oideachas Minecraft"
   hoc2018_mc_continue_learning: "Lean ort ag foghlaim le Minecraft."
   hoc2018_mc_go_to_mc_education: "Oscail Oideachas Minecraft"
+  hoc2018_dance_party_button: "Tosaigh"
+  hoc2018_dance_teacher_resources_tile1_button: "Plean Ceachta"
+  hoc2018_dance_teacher_resources_tile2_button: "Gníomhaíocht Dhíphlugáilte"
+  hoc2018_dance_amazon_about_future_engineer_button: "Tuilleadh eolais"
+  hoc2018_dance_amazon_scholarship_programs_button: "Cuir iarratas isteach"

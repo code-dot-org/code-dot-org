@@ -402,7 +402,7 @@
   mc_gradelevel: "Възраст 6 +"
   mc_platformtext: "Съвременни браузъри, смартфони, таблети"
   mc_specs: "На много езици | Съвременни браузъри и таблети | Възраст 6 +"
-  minecraft_agent: 'Minecraft: Пътуването на героя'
+  minecraft_agent: "Minecraft: Пътуването на героя"
   minecraft_designer: "Minecraft дизайнер"
   minecraft_adventurer: "Minecraft авантюрист"
   minecraft_tutorials: "Minecraft Hour of Code уроци"
@@ -624,7 +624,7 @@
   dashboard_sections_table_stage_extras: "Екстри"
   dashboard_sections_table_students: "Ученици"
   dashboard_sections_table_code: "Код за раздел"
-  dashboard_sections_name: "Име на раздел"
+  dashboard_sections_name: 'Име на раздел'
   dashboard_sections_choose_secret: "Ако искате да предоставите акаунти на учениците си, изберете специален фромат  <b>дума</b> или <b>картина</b> за този раздел."
   dashboard_sections_secret_word: "<b>Дума</b>Ви позволява да зададете парола за всеки ученик."
   dashboard_sections_secret_picture: "<b>Картина</b> Ви позволява да зададете специфично изображение за всеки ученик, идеален вариант за по-малките ученици, които все още не могат да пишат на компютър."
@@ -649,7 +649,7 @@
   dashboard_error_other_section: "Ако премествате ученици между собствените си раздели, изберете вашия раздел от падащото меню. Само изберете \"Друг раздел\", за да преместите вашите ученици в различен учителски раздел."
   dashboard_students_add_multiple: 'Въведете или поставете имената на вашите ученици, по едно име на ред:'
   dashboard_students_new_section: "Създали сте нов раздел! Сега добавете вашите ученици, използвайки <b>Добавяне на ученик</b> и <b>Добавяне на няколко ученици</b> от бутоните по-горе."
-  dashboard_students_name: "Име"
+  dashboard_students_name: 'Име'
   dashboard_students_progress: "Прогрес"
   dashboard_students_male: "Мъж"
   dashboard_students_female: "Жена"
@@ -1326,10 +1326,13 @@
   user_header_view_my_projects: "Покажи моите проекти"
   view_all_sections: "Покажи всички раздели"
   hero_name: 'Minecraft: Пътуването на героя'
+  applab_tile_start_tutorial: "Старт"
+  hoc_overview_start_tutorial: "Старт"
   hoc2018_creativity_create: "Създай"
   hoc2018_mc_page_title: "Minecraft Hour of Code уроци"
   hoc2018_mc_details: "Много езици | Съвременни браузъри и таблети | Клас 2 +"
   hoc2018_mc_aquatic_description: "Minecraft се завръща за часът на кода с чисто нова дейност! Пътешествай през Minecraft с код."
+  hoc2018_mc_hero_title: "Minecraft: Пътуването на героя"
   hoc2018_mc_hero_description: "Minecraft се завръща за часът на кода с чисто нова дейност! Пътешествай през Minecraft с код."
   hoc2018_mc_designer_title: "Minecraft дизайнер"
   hoc2018_mc_designer_description: "Програмирай животни и други Minecraft същества в своя собствена версия на Minecraft."
@@ -1359,3 +1362,8 @@
   hoc2018_mc_minecraft_education: "Minecraft образование"
   hoc2018_mc_continue_learning: "Продължете да учите с Minecraft."
   hoc2018_mc_go_to_mc_education: "Отидете на Minecraft Education"
+  hoc2018_dance_party_button: "Старт"
+  hoc2018_dance_teacher_resources_tile1_button: "План на урок"
+  hoc2018_dance_teacher_resources_tile2_button: "Ънплъгд дейност"
+  hoc2018_dance_amazon_about_future_engineer_button: "Научете повече"
+  hoc2018_dance_amazon_scholarship_programs_button: "Регистрирай се сега"

@@ -120,6 +120,8 @@ sq:
         Ne ju kemi siguruar ju katër funksione.
         Përdori ato në çdo mënyrë që të pëlqen brenda një ose më shumë cikleve për të bërë figurat që
         ti mund të ndash me shokët. Shtyp lësho për të parë një shembull.
+      2-3 Artist Functions 2 a: 'Përdorni bllokun e vogël të gjelbër "vizato një katror"
+        për të thirrur këtë funksion të ri dhe për të krijuar syzet. '
       2-3 Artist Functions 2: |-
         Funksionet të lejojnë ty të përcaktosh blloqe të reja! Ne kemi
         lëvizur blloqet për të vizatuar një katror brenda një funksioni të quajtur "vizato një katror".
@@ -162,7 +164,7 @@ sq:
       2-3 Artist Loops 8: Le të vendosim të dy elementet brenda një cikli.
       2-3 Artist Loops 9: "Ne do të ciklojmë elementet e njëjtë, por\n tani ne do
         të shtojmë distancë midis tyre.\r\nPërdor të njëjtin kod si më përpara, por
-        shto një hap përpara në fund të ciklit të jashtëm.\n"
+        shto një hap përpara në fund të ciklit të jashtëm."
       2-3 Artist Loops New 1: Le të vizatojmë kokën e robotit! A mund të bësh një
         katror me brinjë që janë 100 piksela?
       2-3 Artist Loops New 10: |-
@@ -441,6 +443,9 @@ sq:
       2-3 Maze Loops 21: Më ço tek luledielli!
       2-3 Maze Loops Assessment 1: "Vlerësim: Më ço tek luledielli\nduke përdorur
         vetëm 5 blloqe! "
+      2-3 Maze sq1: |-
+        Ky derrkuci po më bezdis pendët. Më ndihmo të gjej
+        atë!
       2-3 Maze sq10: Më ço tek derrkuci! Çfarë blloqesh u përsëritën?
       2-3 Maze sq10v2: Më ço tek derrkuci! Çfarë blloqesh u përsëritën?
       2-3 Maze sq2: Ndiq gjurmët dhe më drejto për tek derrkuci budalla. Shmang TNT-në
@@ -472,10 +477,17 @@ sq:
       2-3 maze sq15: A mund të arrish te luledielli duke përodorur vetëm pesë blloqe?
       2-3 maze sq16: Në rregull, kjo është e njëjtë, por me pak ndryshime. A mund
         ta bësh vetë me 5 blloqe?
+      2-3: |-
+        Lulet lejla mund të kenë ose 1 ose 0 nektar. Kujdes
+        mos mbledhësh nektar nga lulja lejla nëse nuk ka.
       2-3level1: Ndihmoje zogun të kapë derrkucin e pabindur duke e lëvizur atë përpara
       20hr_farmer_stage9_1: Përshëndetje, unë jam një fermer. Kam nevojë për ndihmën
         tënde që të zbukuroj fushën në fermën time në mënyrë që të jetë gati për mbjellje.
         Më zhvendos në grumbullin e baltës dhe përdor bllokun "fshi" për t'a hequr.
+      20hr_farmer_stage9_10: Unë jam duke punuar deri vonë, kështu që jashtë u errësua
+        dhe s'mund ta dalloj sa të mëdhenj janë grumbujt me dhe. Tani, unë nuk i kam
+        më të gjitha mundësitë që kisha tek blloku Ndërsa. Më lëviz përgjatë fushës
+        dhe nëse ka ndonjë grumbull, hiqe atë
       20hr_farmer_stage9_11: 'Është ende errësirë jashtë. Më lëviz përgjatë rrugës,
         Nëse ka ndonjë grumbull, hiqe atë dhe nëse ka ndonjë gropë, mbushe atë. Ndihmë:
         përdor menunë e opsioneve në bllokun "nëse".'
@@ -498,10 +510,14 @@ sq:
       20hr_farmer_stage9_9: 'Më bëj që të heq të githë grumbullin me dhe. Përpiqu
         të përdorësh sa më pak blloqe që të jetë e mundur. Ndihmë: përpiqu të përdorësh
         bllokun "ndërsa".'
+      20hr_maze_stage2_1: Më ndihmon dot të kap derrkucin e pabindur? Grumbullo disa
+        blloqe "lëviz përpara" dhe shtyp "Vrapo" që të më ndihmosh të arrij atje.
       20hr_maze_stage2_10: Në rregull, provo bllokun e ri "përserit derisa"  - ai
         do të përsëritet derisa unë të arrij derrkucin e mërzitshëm.
       20hr_maze_stage2_11: Në rregull, edhe një herë të fundit për tu praktikuar -
         a mund ta zgidhësh këtë duke përdorur vetëm 4 blloqe?
+      20hr_maze_stage2_12: I dashur, njeri! Unë zombi, Unë i uritur. Duhet... të shkoj...
+        te lulja e diellit... A mund të më çosh atje vetëm me 5 blloqe?
       20hr_maze_stage2_13: Në rregull, kjo është e njëjtë, por me pak ndryshime. A
         mund ta bësh vetë me 5 blloqe?
       20hr_maze_stage2_14: 'Përdor bllokun e ri "nëse" për të më lënë të vendos se
@@ -740,6 +756,9 @@ sq:
         djathtë, i matur nga pikat më të largëta.
       4-5 Artist Patterns Free Play: "Lojë e lirë - provo dorën tënde për të bërë
         \nmodelin tuaj!"
+      4-5 Bee Conditionals - FC Test: Bleta kërkon vetëm nektarin tani. Jo të gjitha
+        objektet janë lule, prandaj kontrolloni poshtë ÇDO REJE për të parë nëse ajo
+        fsheh një lule. Nëse ajo është, atëherë ju mund të mblidhni nektarin.
       4-5 Bee Conditionals 1 (copy 1): |-
         Bleta nuk mund të thotë nëse kjo është
         një lule apo një koshere. Grumbullo nektar vetëm nga lulet, por së pari kontrollo
@@ -970,7 +989,40 @@ sq:
       4-5 While Loops Assessment 1: |-
         Ka shumë gropa dhe
         grumbuj. Më ndihmo të mbush gropat e të heq grumbujt që të bëj tokën e sheshtë.
+      AB_Debug_PlayLab2: Pse kjo lojë nuk bën asgjë.
+      AB_Debug_PlayLab3: Lëviz kalorësin në secilin prej flamujve. Nëse diçka shkon
+        keq, shiko për "bubuzhela"!
+      AlgPD DR Free Play: Krijo një funksion të bazuar në problemën tënde me fjalë.
+      Alien Defender: 'Ide Projekt: Bëj një lojë mbrojtëse në Play Lab!'
+      Alien Defender_2018: 'Ide Projekt: Bëj një lojë mbrojtëse në Play Lab!'
+      AllTheThings Applab - Turtle move with button: Shto një buton që e lëviz breshkën
+        kur klikon mbi të. (Kliko për të parë udhëzimet e plota)
+      'AllTheThings: Pixelation - Lesson 14 - Make the Letter A': 'Bëni një shkronjë
+        ''A'' 3x5. Përmasat e veglës së konfiguruar janë të gabuara. Detyra juaj e
+        parë është të vendosni bajtin e dytë në kodin binar 8-bit për 5: 0000 0101.
+        Pastaj filloni të futni të dhënat piksel.'
+      'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4': 'Fillojmë me imazhin
+        4x4 të krijuar nga Maddie në video. Detyra jote është të mbushësh me ngjyra
+        një rrjetë 4x4, duke përdorur 12 bit për piksel. Ja kërkesat: Rreshti 1: mbushe
+        me nuanca të së kuqes. Rreshti 2: nuanca të së gjelbrës. Rreshti 3 - nuanca
+        të së kaltrës. Rreshti 4 - nuanca gri.'
+      'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color': Fillojmë me imazhin
+        4x2 që Maddie po krijonte, por ne kemi lënë pa mbushur dy katrorët e fundit.
+        Përfundo imazhin duke zbuluar se cilat janë dy ngjyrat që mungojnë dhe kodifikoji
+        ato.
       App Lab test: test
+      AppLab_test02: Përmbledhje e aktivitetit në një fjali. Kliko për të parë udhëzimet
+        e plota.
+      Applab AllTheThings ResourcesTab AllResources: Vizato një rrjetë 1x1 lart, në
+        të majtë të pozicionit fillestar të breshkës. Klikoni për të parë udhëzimet
+        e plota.
+      Applab AllTheThings ResourcesTab MapReference: Vizato një rrjetë 1x1 lart, në
+        të majtë të pozicionit fillestar të breshkës. Klikoni për të parë udhëzimet
+        e plota.
+      Applab AllTheThings ResourcesTab ReferenceLinks: Vizato një rrjetë 1x1 lart,
+        në të majtë të pozicionit fillestar të breshkës. Klikoni për të parë udhëzimet
+        e plota.
+      Applab test: Ky nivel është i parashtruar. Vetëm për testim!
       Artist - Nested Loops 1: |-
         Plotëso kodin për të vizatuar këta
         trekëndësh. I pari është bërë për ty. Ndihmë: 3 trekëndëshi në një rrotullim
@@ -1011,6 +1063,10 @@ sq:
         te tjera! Duke perdorur "formen" tende si baze komande, krijo siluetat e 3
         shtepive secila 20 piksel me e madhe se e fundit duke filluar me 50 piksel
         gjatesi. Perdorimi i nje litar te kundert mund te te vije mjaft ne ndihme. '
+      Bee Recommended Blocks test: Lulet lejla mund të kenë ose 1 ose 0 nektar, por
+        ti nuk di se cila nga ato! Kujdes të mos mbledhësh nektar nga një lule lejla
+        nëse nuk ka. Kontrollo nëse nektari është i barabartë me 1 duke përdorur bllokun
+        Nëse.
       Bergeron Robot Maze1: "A mund të më ndihmosh mua të kap derrkucin e inatosur?
         Grumbullo \ndisa blloqe \"move forward\" së bashku dhe shtyp \"Lësho\". "
       Big Game Animation 1 (copy 1): |-
@@ -1022,11 +1078,21 @@ sq:
         targetit, dhe rikthen një vlerë të ndryshuar.\nPërfundo funksionin 'update-target'
         që të shtojë një vlerë x çdo herë \nqë thërritet. Sa më shumë ti shton tek
         x, më shpejt do shkojë targeti."
+      Big Game Animation 2: Funksioni 'update-target' merr vlerën x të targetit, dhe
+        rikthen një vlerë të ndryshuar. Përfundo funksionin 'update-target' që të
+        shtojë një vlerë x çdo herë që thërritet. Sa më shumë ti shton tek x, më shpejt
+        do shkojë targeti.
       Big Game Animation 3: |-
         Funksioni 'update-danger' duhet të punojë
         si 'update-target', përveç se rreziku duhet të lëvizë nga e djathta
         sipër në të majtë. Përfundo funksionin 'update-danger' për të bërë
         rrezikun të fluturojë mes ekranit.
+      Big Game Animation 4: Në këtë pikë të lojës tënde, rreziku yt duhet të kalojë
+        përmes ekranit nga e djathta në të majtë, kurse targeti yt duhet të kalojë
+        nga e majta në të djathtë. Ata nuk kthehen kurrë në ekran pasi janë larguar,
+        por për këtë do të flasim më vonë. Shpenzoni një minutë për t'u siguruar që
+        loja juaj funksionon ashtu si doni ju dhe pataj kliko "Mbaro" për të vazhduar
+        më tej.
       Big Game Booleans 1: |-
         Kur ti punove për herë të fundit me lojën tënde
         ne pamë targetin tonë dhe zanën e rrezikut që fluturonin në ekran, por ato kurrë
@@ -1126,6 +1192,10 @@ sq:
       C3-Farmer While Loops Assessment 1: |-
         Ka shumë gropa dhe
         grumbuj. Më ndihmo të mbush gropat e të heq grumbujt që të bëj tokën e sheshtë.
+      CSDU4 - Design Mode - 1: Shto një buton që e lëviz breshkën kur klikon mbi të.
+        (Kliko për të parë udhëzimet e plota)
+      CSPU5_U3L13 - Turtle move with button: Shto një buton që e lëviz breshkën kur
+        klikon mbi të. (Kliko për të parë udhëzimet e plota)
       Calc Circles of Eval .2: |-
         Ky Bllok Vlerësimi është një funksion
         shumëzimi i cili merr 2 numra dhe kthen prodhimin e atyre numrave.
@@ -1398,7 +1468,7 @@ sq:
         spiral, secila anë është 20 piksel më e madhe se e fundit.
       Course 4 Artist For Loops 8: "Vetëm një ndryshim i vogël në kod nga figura e
         fundit mund të ndryshoj këtë vizatim. Mund ta zbulosh se çfarë është \nai
-        ndryshim? \r\n \r\nUdhëzim: Duhet të heqësh diçka!\n"
+        ndryshim? \r\n \r\nUdhëzim: Duhet të heqësh diçka!"
       Course 4 Artist For Loops 8a: "Vetëm një ndryshim i vogël në kod nga figura
         e fundit mund të ndryshoj këtë vizatim. Mund ta zbulosh se çfarë është \nai
         ndryshim?"
@@ -1821,7 +1891,7 @@ sq:
         \"rritje\" do të fillojë me një vlerë prej 1.\r\n\r\nMund t'a bëni që\n sa
         herë të klikoni Qen, rritja të jetë me 2? Klikoni \nshigjetën e vahdimit për
         të drejtuar litarin.\r\n\r\nDrejto litarin disa herë, duke klikuar Qenin \npara
-        secilës herë.\n"
+        secilës herë."
       Course 4 Play Labs For Loops 6: Nëse mbani mend, një numër prim është një numër
         i plotë i cili është i plotëpjestueshëm vetëm me veten dhe 1. Përdor funksionin
         "eshte_prim" për të nxjerrë të gjithë numrat prim nga 1 deri 100.
@@ -2448,6 +2518,10 @@ sq:
       Overworld Shear Sheep_2018: |-
         Koha e qethjes së deleve! Përdor komandën "qethje"
         për të mbledhur lesh nga të dyja delet.
+      PDK5 Conditionals 1: Lulet lejla mund të kenë ose 1 ose 0 nektar, por ti nuk
+        di se cila nga ato! Kujdes të mos mbledhësh nektar nga një lule lejla nëse
+        nuk ka. Kontrollo nëse nektari është i barabartë me 1 duke përdorur bllokun
+        Nëse.
       PDK5 Functions 2: |-
         Funksionet të lejojnë ty të përcaktosh blloqe të reja! Ne kemi
         lëvizur blloqet për të vizatuar një katror brenda një funksioni të quajtur "vizato një katror".
@@ -2457,9 +2531,48 @@ sq:
         por ti nuk di se cila nga ato! Kujdes mos mbledhësh\nnektar nga një lule lejla
         nëse nuk ka. Kontrollo nëse nektari është i barabartë me 1 \nduke përdorur
         bllokun if."
+      Pixelation - Lesson 14 - Make the Letter A: 'Bëni një shkronjë ''A'' 3x5. Përmasat
+        e veglës së konfiguruar janë të gabuara. Detyra juaj e parë është të vendosni
+        bajtin e dytë në kodin binar 8-bit për 5: 0000 0101. Pastaj filloni të futni
+        të dhënat piksel.'
+      Pixelation - Lesson 14 - Make the Letter A_2018: 'Bëni një shkronjë ''A'' 3x5.
+        Përmasat e veglës së konfiguruar janë të gabuara. Detyra juaj e parë është
+        të vendosni bajtin e dytë në kodin binar 8-bit për 5: 0000 0101. Pastaj filloni
+        të futni të dhënat piksel.'
+      Pixelation - Lesson 15 - Color Shades 4x4: 'Fillojmë me imazhin 4x4 të krijuar
+        nga Maddie në video. Detyra jote është të mbushësh me ngjyra një rrjetë 4x4,
+        duke përdorur 12 bit për piksel. Ja kërkesat: Rreshti 1: mbushe me nuanca
+        të së kuqes. Rreshti 2: nuanca të së gjelbrës. Rreshti 3 - nuanca të së kaltrës.
+        Rreshti 4 - nuanca gri.'
+      Pixelation - Lesson 15 - Color Shades 4x4_2018: 'Fillojmë me imazhin 4x4 të
+        krijuar nga Maddie në video. Detyra jote është të mbushësh me ngjyra një rrjetë
+        4x4, duke përdorur 12 bit për piksel. Ja kërkesat: Rreshti 1: mbushe me nuanca
+        të së kuqes. Rreshti 2: nuanca të së gjelbrës. Rreshti 3 - nuanca të së kaltrës.
+        Rreshti 4 - nuanca gri.'
+      Pixelation - Lesson 15 - Complete 3-bit color: Fillojmë me imazhin 4x2 që Maddie
+        po krijonte, por ne kemi lënë pa mbushur dy katrorët e fundit. Përfundo imazhin
+        duke zbuluar se cilat janë dy ngjyrat që mungojnë dhe kodifikoji ato.
+      Pixelation - Lesson 15 - Complete 3-bit color_2018: Fillojmë me imazhin 4x2
+        që Maddie po krijonte, por ne kemi lënë pa mbushur dy katrorët e fundit. Përfundo
+        imazhin duke zbuluar se cilat janë dy ngjyrat që mungojnë dhe kodifikoji ato.
+      Poorva copy U3L2 Using Simple Commands: Vizato një rrjetë 1x1 lart, në të majtë
+        të pozicionit fillestar të breshkës. Klikoni për të parë udhëzimet e plota.
+      Quantum Bee: Lulet lejla mund të kenë ose 1 ose 0 nektar, por ti nuk di se cila
+        nga ato! Kujdes të mos mbledhësh nektar nga një lule lejla nëse nuk ka. Kontrollo
+        nëse nektari është i barabartë me 1 duke përdorur bllokun Nëse.
+      Ryan - 4-5 Bee Conditionals 2: Bleta kërkon vetëm nektarin tani. Jo të gjitha
+        objektet janë lule, prandaj kontrolloni poshtë ÇDO REJE për të parë nëse ajo
+        fsheh një lule. Nëse ajo është, atëherë ju mund të mblidhni nektarin.
+      Ryan - Bee Conditionals: Bleta kërkon vetëm nektarin tani. Jo të gjitha objektet
+        janë lule, prandaj kontrolloni poshtë ÇDO REJE për të parë nëse ajo fsheh
+        një lule. Nëse ajo është, atëherë ju mund të mblidhni nektarin.
       Ryan Test Locked Blocks: |-
         Këtu është një funksion që quhet "patrol".
         Ndryshoje atë që të lëvizësh macen 400 piksela lart dhe 400 piksela posht.
+      SG U3L2 Using Simple Commands part 1: Vizato një rrjetë 1x1 lart, në të majtë
+        të pozicionit fillestar të breshkës. Klikoni për të parë udhëzimet e plota.
+      SG U3L2 Using Simple Commands: Vizato një rrjetë 1x1 lart, në të majtë të pozicionit
+        fillestar të breshkës. Klikoni për të parë udhëzimet e plota.
       SpecialFrozenLevel: Ti zyrtarisht je bërë një mjeshtër! Krijo një dimër në një
         botë çudirash.
       Standalone_Artist_1: |-
@@ -2511,6 +2624,15 @@ sq:
       U2 frequency caesar: Udhëzimet
       U2 frequency random sub: Udhëzimet
       U2 vigenere cipher: Udhëzimet
+      U3L13 - Turtle move with button: Shto një buton që e lëviz breshkën kur klikon
+        mbi të. (Kliko për të parë udhëzimet e plota)
+      U3L2 Using Simple Commands (no tooltips): Vizato një rrjetë 1x1 lart, në të
+        majtë të pozicionit fillestar të breshkës. Klikoni për të parë udhëzimet e
+        plota.
+      U3L2 Using Simple Commands: Vizato një rrjetë 1x1 lart, në të majtë të pozicionit
+        fillestar të breshkës. Klikoni për të parë udhëzimet e plota.
+      U3L2 Using Simple Commands_2018: Vizato një rrjetë 1x1 lart, në të majtë të
+        pozicionit fillestar të breshkës. Klikoni për të parë udhëzimet e plota.
       U4 vigenere cipher 2: Udhëzimet
       U4L02 - Objects - Template1: Shabllon
       U4L02 - Objects - Template1_2018: Shabllon
@@ -2734,6 +2856,9 @@ sq:
       courseC_artist_prog5_2018: |-
         Kjo shtëpi ka nevojë për një çati! Vizato trekëndëshin. Ndihmë:
         të treja brinjët janë të së njëjtës gjatësi.
+      courseC_artist_prog5_2019: |-
+        Kjo shtëpi ka nevojë për një çati! Vizato trekëndëshin. Ndihmë:
+        të treja brinjët janë të së njëjtës gjatësi.
       courseC_maze_debugging10: Korigjo këtë nivel duke rregulluar dhe shtuar blloqet
         për të më çuar te derrkuci!
       courseD_artist_binary1: "Binar është një mënyrë për të përfaqësuar informacion\nduke
@@ -2778,6 +2903,8 @@ sq:
         tek çdo koshere. Përdor një cikël të mbivendosur. "
       courseD_bee_nestedLoops8_2018: "Mblidh gjithë nektarin nga secila lule\ndhe
         bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
+      courseD_bee_nestedLoops8_2019: "Mblidh gjithë nektarin nga secila lule\ndhe
+        bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
       courseD_bounce_events10: Tani është një shënjestër në krye! Bashkangjisni blloqet
         "pikët e shënuara " dhe "pikët e shënuara të kundërshtarit" me blloqet "kur
         topi është në shënjestër" dhe " kur topi humbet raketën" për të bërë një lojë.
@@ -2814,8 +2941,10 @@ sq:
         gabimin (et) për të mbledhur gjithë nektarin dhe bëj gjithë mjaltin.
       courseD_maze_nestedLoops4: Më ço tek luledielli!
       courseD_maze_nestedLoops4_2018: Më ço tek luledielli!
+      courseD_maze_nestedLoops4_2019: Më ço tek luledielli!
       courseD_maze_nestedLoops6: Më ço tek luledielli!
       courseD_maze_nestedLoops6_2018: Më ço tek luledielli!
+      courseD_maze_nestedLoops6_2019: Më ço tek luledielli!
       courseE_artist_functions1: "Përshëndetje. Unë artisti zombi. Më pëlqen të vizatoj!\nMë
         ndihmo të vizatoj xhamat katrorë. Ndihmë: ura midis xhamave është \n25 piksela
         më e shkurtër sesa gjatësia e katrorit."
@@ -2856,12 +2985,20 @@ sq:
         Bëjë tre ndryshime të vogla në
         kod nga niveli i fundit për të marrë këtë!
          !
+      courseF_artist_for7_2019: |-
+        Bëjë tre ndryshime të vogla në
+        kod nga niveli i fundit për të marrë këtë!
+         !
       courseF_artist_for_challenge1: A mund të kuptoni se si të rikrijoni këtë vizatim?
       courseF_artist_for_challenge1_2018: A mund të kuptoni se si të rikrijoni këtë
+        vizatim?
+      courseF_artist_for_challenge1_2019: A mund të kuptoni se si të rikrijoni këtë
         vizatim?
       courseF_artist_for_challenge2: A mund të kuptoni se si të rikrijoni këtë vizatim
         me një cikël të thjeshtë?
       courseF_artist_for_challenge2_2018: A mund të kuptoni se si të rikrijoni këtë
+        vizatim me një cikël të thjeshtë?
+      courseF_artist_for_challenge2_2019: A mund të kuptoni se si të rikrijoni këtë
         vizatim me një cikël të thjeshtë?
       courseF_bee_for8: "Çfarë do të bëje nëse do të hiqnim disa blloqe? A mund t'i
         shtosh përsëri për të ndihmuar bletën të mbledhi nektar?\r\nMos harro:\nNëse
@@ -2871,10 +3008,17 @@ sq:
         t'i shtosh përsëri për të ndihmuar bletën të mbledhi nektar?\r\nMos harro:\nNëse
         cikli numëron për sipër, rritësi i shtohet variablës së numëruesit sa herë
         i shkon. Sa duhet të jetë rritësi për të mbledhur 3, 6, 9 nektar? \r\n"
+      courseF_bee_for8_2019: "Çfarë do të bëje nëse do të hiqnim disa blloqe? A mund
+        t'i shtosh përsëri për të ndihmuar bletën të mbledhi nektar?\r\nMos harro:\nNëse
+        cikli numëron për sipër, rritësi i shtohet variablës së numëruesit sa herë
+        i shkon. Sa duhet të jetë rritësi për të mbledhur 3, 6, 9 nektar? \r\n"
       courseF_bee_for_challenge2: |-
         Zgjidhe këtë puzzle duke përdorur numrin
         më të pakët të mundshëm të blloqeve.
       courseF_bee_for_challenge2_2018: |-
+        Zgjidhe këtë puzzle duke përdorur numrin
+        më të pakët të mundshëm të blloqeve.
+      courseF_bee_for_challenge2_2019: |-
         Zgjidhe këtë puzzle duke përdorur numrin
         më të pakët të mundshëm të blloqeve.
       courseF_bee_for_challenge3: |-
@@ -3184,6 +3328,10 @@ sq:
       grade3_maze_nestedLoops3: Më ço tek derrkuci duke përdorur vetëm dy blloqe.
       grade3_maze_nestedLoops4: Përdor dy ciklet për të arritur tek derrkuci duke
         përdorur më pak blloqe.
+      grade3_robotFarmer_ConditionalsIntro_10: Unë jam duke punuar deri vonë, kështu
+        që jashtë u errësua dhe s'mund ta dalloj sa të mëdhenj janë grumbujt me dhe.
+        Tani, unë nuk i kam më të gjitha mundësitë që kisha tek blloku Ndërsa. Më
+        lëviz përgjatë fushës dhe nëse ka ndonjë grumbull, hiqe atë
       grade3_robotFarmer_ConditionalsIntro_11: 'Është ende errësirë jashtë. Më lëviz
         përgjatë rrugës, Nëse ka ndonjë grumbull, hiqe atë dhe nëse ka ndonjë gropë,
         mbushe atë. Ndihmë: përdor menunë e opsioneve në bllokun "nëse".'
@@ -3193,6 +3341,10 @@ sq:
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 'Më ndihmo t''i mbush të gjitha
         gropat me 5 lopata me baltë. Ndihmë: mund të vendosësh një bllok "repeat"
         brenda bllokut "while".'
+      grade3_robotFarmer_ConditionalsIntro_TeacherIDo2: Unë jam duke punuar deri vonë,
+        kështu që jashtë u errësua dhe s'mund ta dalloj sa të mëdhenj janë grumbujt
+        me dhe. Tani, unë nuk i kam më të gjitha mundësitë që kisha tek blloku Ndërsa.
+        Më lëviz përgjatë fushës dhe nëse ka ndonjë grumbull, hiqe atë
       grade4_arist_nested_loop_circles1: |-
         Përdor një cikël të mbivendosur për të përfunduar
         dizenjimin.
@@ -3408,7 +3560,7 @@ sq:
         Kliko këtu."
       grade5_artist_for_loops5: "Vetëm një ndryshim i vogël në kod nga figura e fundit
         mund të ndryshoj këtë vizatim. Mund ta zbulosh se çfarë është \nai ndryshim?
-        \r\n \r\nUdhëzim: Duhet të heqësh diçka!\n"
+        \r\n \r\nUdhëzim: Duhet të heqësh diçka!"
       grade5_artist_for_loops6: Nëse kthehesh pak më shumë apo pak më pak se zakonisht,
         krijon një efekt. Provo të kthehesh 89 gradë për të formuar këtë spirale katrore
         te shtrembëruar.
@@ -3631,3 +3783,5 @@ sq:
       scrat 20: A mund të shtosh vetëm 3 blloqe për të më ndihmuar mua të zgjidh një
         maze të ndërlikuar? Nëse e bën si duhet, unë mund të ec n çdo rrugë me kthesa
         pavarësisht gjatësisë. Nxito! Akulli po shkrin!
+      subgoal U3L2 Using Simple Commands: Vizato një rrjetë 1x1 lart, në të majtë
+        të pozicionit fillestar të breshkës. Klikoni për të parë udhëzimet e plota.

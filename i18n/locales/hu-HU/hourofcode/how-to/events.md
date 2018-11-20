@@ -54,7 +54,7 @@ Rendezz egy K-5 estet, amelyre meghívod a tanulók szüleit is, hogy csatlakozz
 
 ## Az előadás időrendje
 
-| Időpont       | Program                                                                                                                                                         |
+| Idő           | Program                                                                                                                                                         |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 10:00 - 10:05 | Kezdés az egyik [motivációs videónkkal](%= resolve_url('/promote/resources#videos') %).                                                                         |
 | 10:05 - 10:15 | Az igazgató beszél az informatika fontosságáról. Használd [ezeket a statisztikákat, infógrafikákat](%= resolve_url('/promote/stats') %).                        |

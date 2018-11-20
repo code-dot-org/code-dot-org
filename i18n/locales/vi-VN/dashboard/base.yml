@@ -872,6 +872,7 @@ vi:
     mac: 'Hệ điều hành Mac OS X'
   locked_stage: 'Nội dung của giai đoạn này không hiển thị vì giai đoạn này hiện đang bị khóa. Giáo viên của bạn có thể mở khóa giai đoạn này khi đến lúc làm việc hoặc xem lại câu trả lời của bạn.'
   hidden_stage: "Giáo viên của bạn đã không mong đợi bạn ở đây. Hãy hỏi giáo viên của bạn về bài học nào bạn nên vào."
+  view_teacher_guide: 'Xem hướng dẫn cho giáo viên'
   pd:
     form_labels:
       email: 'Thư điện tử'

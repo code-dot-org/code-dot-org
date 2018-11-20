@@ -575,7 +575,7 @@
   dashboard_sections_table_stage_extras: "මෙම පියවරේ ඇති අමතර දේවල්"
   dashboard_sections_table_students: "සිසුන්"
   dashboard_sections_table_code: "අංශ කේතය"
-  dashboard_sections_name: "අංශයේ නම"
+  dashboard_sections_name: 'අංශයේ නම'
   dashboard_sections_choose_secret: "ළමුන් සදහා ගිණුමක් ලබාදීමට ඔබ කැමතිනම්, එම කොටසට අදාලව රහසිගත <b>වචනයක්</b> හෝ <b>පින්තූරයක්</b> තෝරන්න."
   dashboard_sections_secret_word: "එක් <b>වචනයක්</b> තෝරාගැනීම මගින් ඔබේ සියලුම සිසුන් සඳහා මුර පදයක් සෑදිය හැකිය."
   dashboard_sections_secret_picture: "මෙම <b>පින්තූරය</b>මගින් ඔබට සෑම ශිෂ්‍යකුටම රහස්‍ය පින්තුරයක් වෙන්කල හැක, ටයිප් කිරීමට නොහැකි කුඩා ළමුන් සඳහා කදිමයි."
@@ -600,7 +600,7 @@
   dashboard_error_other_section: "ඔබ ඔබේ ම කොටස් අතර සිසුන් මාරු කරන්නේ නම්, ඔබේ කොටස dropdown මෙනුවෙන් තෝරන්න. ඔබගේ සිසුන් වෙනත් ගුරුවරුයෙකුගේ කොටසකට මාරු කිරීමට 'වෙනත් කොටස්' යන්න තෝරන්න."
   dashboard_students_add_multiple: 'එක් පේළියකට එක බැගින් වනසේ  ඔබගේ සිසුන් නම් ටයිප් කරන්න හෝ  paste  කරන්න :'
   dashboard_students_new_section: "ඔබ නව කොටසක් නිර්මාණය කර ඇත! දැන් ඔබගේ සිසුන් ඇතුලත් කිරීමට <b> සිසුවෙකු ඇතුලත් කරන්න </b> සහ <b> සිසුන් ඇතුලත් කරන්න </b> යන ඉහත බොත්තම් භාවිතා කරන්න."
-  dashboard_students_name: "නම"
+  dashboard_students_name: 'නම'
   dashboard_students_progress: "ප්‍රගතිය"
   dashboard_students_male: "පිරිමි"
   dashboard_students_female: "ගැහැණු"
@@ -1246,6 +1246,8 @@
   user_header_playlab: "ක්‍රීඩා පරීක්ෂණාගාරය"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "ෆ්ලැපි"
+  applab_tile_start_tutorial: "ආරම්භ කරන්න"
+  hoc_overview_start_tutorial: "ආරම්භ කරන්න"
   hoc2018_creativity_create: "තනන්න"
   hoc2018_mc_page_title: "Minecraft Hour of Code නිබන්ධන"
   hoc2018_mc_designer_title: "Minecraft Designer"
@@ -1259,3 +1261,7 @@
   hoc2018_mc_video_title_inspire_girl: "ගැහැණු ළමයෙකු උනන්දු කරවන්න"
   hoc2018_mc_homepage_join_us: "අප හා එක් වන්න"
   hoc2018_mc_homepage_try_it: "එය උත්සහ කරන්න"
+  hoc2018_dance_party_button: "ආරම්භ කරන්න"
+  hoc2018_dance_teacher_resources_tile1_button: "පාඩම් සැලැස්ම"
+  hoc2018_dance_teacher_resources_tile2_button: "අපේනුගත ක්‍රියාකාරකම"
+  hoc2018_dance_amazon_about_future_engineer_button: "වැඩිදුර ඉගෙන ගන්න"

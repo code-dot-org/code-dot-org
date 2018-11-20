@@ -1777,6 +1777,20 @@ pt:
         > 10. Jogue o jogo e passe do nível 4 para seguir para o próximo desafio.
       Function intro Ryan: Utiliza a função "construir ponte" duas vezes para criar
         um caminho até à tocha.
+      Function intro Ryan_2019: Utiliza a função "construir ponte" duas vezes para
+        criar um caminho até à tocha.
+      HOC 2018 Level_1: Coleciona um barco do baú.
+      HOC 2018 Level_10: Vai até à entrada deste Monumento do Oceano.
+      HOC 2018 Level_11: Constrói um canal com Prismarine dentro do Monumento do Oceano.
+      HOC 2018 Level_12: Cria o teu próprio ambiente subaquático, as decisões são
+        tuas!
+      HOC 2018 Level_2: Vai até ao final do cais.
+      HOC 2018 Level_3: Navega os mares por bacalhau.
+      HOC 2018 Level_4: Utiliza uma argola para chegar ao golfinho.
+      HOC 2018 Level_5: Explora o navio encalhado para chegar ao baú.
+      HOC 2018 Level_6: Navega pelo gelo para chegar ao salmão.
+      HOC 2018 Level_7a: Revista estas ruínas subaquáticas para encontrar um baú.
+      HOC 2018 Level_9b: Utiliza o coral como pontos de passagem para chegar ao tesouro.
       Infinity_catch: |-
         Você pode fazer Elsa ("personagem 2") alcançar
         Anna usando as setas do teclado?
@@ -2046,31 +2060,43 @@ pt:
       MC_HOC_2017_01_RETRY: 'Leva o Agent até à placa de pressão, prime "Executar"
         e utiliza as teclas de seta para mover o jogador para fora da casa e recolher
         o baú. '
+      MC_HOC_2017_01_RETRY_2019: 'Leva o Agent até à placa de pressão, prime "Executar"
+        e utiliza as teclas de seta para mover o jogador para fora da casa e recolher
+        o baú. '
       MC_HOC_2017_02: Leva o Agent até à placa de pressão.
       MC_HOC_2017_02_Cole: 'Move o Agent até à placa de pressão para que {currentPlayerName}
+        chegue ao mapa. '
+      MC_HOC_2017_02_Cole_2019: 'Move o Agent até à placa de pressão para que {currentPlayerName}
         chegue ao mapa. '
       MC_HOC_2017_02_Kiki: Leva o Agent até à placa de pressão e o jogador até ao
         quadrado cor de laranja.
       MC_HOC_2017_02_Will: Leva o Agent até à placa de pressão.
       MC_HOC_2017_03_Cole: 'Programa o Agent para abrir o portão. '
+      MC_HOC_2017_03_Cole_2019: 'Programa o Agent para abrir o portão. '
       MC_HOC_2017_03_Kiki: Leva o Agent até à placa de pressão.
       MC_HOC_2017_04: Muda a ação circular do último quebra-cabeças para ajudar o
         Agent a criar um caminho sobre a parte mais larga deste rio.
       MC_HOC_2017_04POINT5_Cole: Leva o Agent até à placa de pressão.
       MC_HOC_2017_04POINT5_RYAN: Leva o Agent até à placa de pressão.
+      MC_HOC_2017_04POINT5_RYAN_2019: Leva o Agent até à placa de pressão.
       MC_HOC_2017_04_Cole: Leva o Agent até à placa de pressão.
+      MC_HOC_2017_04_Cole_2019: Leva o Agent até à placa de pressão.
       MC_HOC_2017_04_Kiki: Leva o Agent até à placa de pressão.
       MC_HOC_2017_05: Utiliza uma função para ajudar o Agent a chegar à placa de pressão.
       MC_HOC_2017_05_Cole: Leva o jogador até à pá.
+      MC_HOC_2017_05_Cole_2019: Leva o jogador até à pá.
       MC_HOC_2017_05_Josh: Leva o jogador até à pá.
       MC_HOC_2017_05_Kiki: Leva o jogador até ao quadrado cor de laranja.
       MC_HOC_2017_06_Cole: Corrige este código para fazer com que o Agent construa
+        uma ponte sobre este rio.
+      MC_HOC_2017_06_Cole_2019: Corrige este código para fazer com que o Agent construa
         uma ponte sobre este rio.
       MC_HOC_2017_06_Josh: Corrige este código para ajudar o Agent a construir uma
         ponte sobre este rio.
       MC_HOC_2017_06_Kiki: Corrige este código para ajudar o Agent a construir uma
         ponte sobre este rio.
       MC_HOC_2017_07_Cole: Destrói o gelo e leva {currentPlayerName} até à Vagoneta.
+      MC_HOC_2017_07_Cole_2019: Destrói o gelo e leva {currentPlayerName} até à Vagoneta.
       MC_HOC_2017_07_Kiki: Utiliza uma função para abrir caminho até ao quadrado cor
         de laranja.
       MC_HOC_2017_07a_Kiki: Abre caminho até ao quadrado cor de laranja.
@@ -2085,16 +2111,19 @@ pt:
       MC_HOC_2017_10_Cole_old: Cria uma função que te ajude a terminar esta vagoneta.
       MC_HOC_2017_10_Kiki: Cria uma função que te ajude a terminar esta vagoneta.
       MC_HOC_2017_10_RETRY: Cria uma função que te ajude a terminar esta vagoneta.
+      MC_HOC_2017_10_RETRY_2019: Cria uma função que te ajude a terminar esta vagoneta.
       MC_HOC_2017_10_RYAN: Cria uma função que te ajude a terminar esta vagoneta.
       MC_HOC_2017_10_RYAN2: Cria uma função que te ajude a terminar esta vagoneta.
       MC_HOC_2017_13_Cole: "**Jogo livre:**  É hora de explorar sozinho!"
       MC_HOC_2017_4.5v2: Leva o Agent até à placa de pressão.
       MC_HOC_2017_Ali: Utiliza as funções para atravessar a lava.
+      MC_HOC_2017_Ali_2019: Utiliza as funções para atravessar a lava.
       MC_HOC_2017_FP10x10: "**Jogo livre:** És capaz de recolher todos os diamantes
         neste nível? "
       MC_HOC_2017_FP10x10_RE: "**Jogo livre:** És capaz de recolher todos os diamantes
         neste nível? "
       MC_HOC_2017_FP20x20: "**Jogo livre:**  É hora de explorar sozinho!"
+      MC_HOC_2017_FP20x20_2019: "**Jogo livre:**  É hora de explorar sozinho!"
       MC_HOC_2017_Ryan_03: Agora, utiliza ações circulares para ajudares o Agent a
         construir uma ponte sobre o rio através da colocação de blocos na água.
       MC_HOC_2017_Ryan_05: Destrói estes catos para o jogador conseguir atingir o
@@ -2591,6 +2620,8 @@ pt:
         Dica: todos os 3 lados têm o mesmo comprimento.'
       courseC_artist_prog5_2018: 'Essa casa precisa de um telhado! Desenhe o triângulo.
         Dica: todos os 3 lados têm o mesmo comprimento.'
+      courseC_artist_prog5_2019: 'Essa casa precisa de um telhado! Desenhe o triângulo.
+        Dica: todos os 3 lados têm o mesmo comprimento.'
       courseC_maze_debugging10: |-
         Depure esse nível reorganizando e adicionando blocos
         para me levar até o porco!
@@ -2637,6 +2668,9 @@ pt:
       courseD_bee_nestedLoops8_2018: |-
         Colete todo o néctar de cada flor
         e produza mel em cada colmeia. Use um laço aninhado.
+      courseD_bee_nestedLoops8_2019: |-
+        Colete todo o néctar de cada flor
+        e produza mel em cada colmeia. Use um laço aninhado.
       courseD_bounce_events10: Agora há um alvo na parte de cima. Conecte os blocos
         "marque um ponto" e "marque um ponto para o oponente" aos blocos "quando a
         bola atingir o alvo" e "quando a bola não acertar a raquete" para fazer um
@@ -2673,8 +2707,10 @@ pt:
         erro(s) para coletar todo o néctar e produzir todo o mel.
       courseD_maze_nestedLoops4: Leve-me até o girassol!
       courseD_maze_nestedLoops4_2018: Leve-me até o girassol!
+      courseD_maze_nestedLoops4_2019: Leve-me até o girassol!
       courseD_maze_nestedLoops6: Leve-me até o girassol!
       courseD_maze_nestedLoops6_2018: Leve-me até o girassol!
+      courseD_maze_nestedLoops6_2019: Leve-me até o girassol!
       courseE_artist_functions1: |-
         Olá. Mim artista zumbi. Mim ama desenhar!
         Me ajude a desenhar os óculos quadrados. Dica: a haste entre as lentes é
@@ -2716,6 +2752,9 @@ pt:
         contador a cada repetição. Qual deve ser seu incremento\npara coletar 3, 6
         e 9 néctares?\r\n"
       courseF_bee_for8_2018: "Se seu laço está contando, o\nincremento é somado à
+        variável contador a cada repetição. Qual deve ser seu incremento\npara coletar
+        3, 6 e 9 néctares?\r\n"
+      courseF_bee_for8_2019: "Se seu laço está contando, o\nincremento é somado à
         variável contador a cada repetição. Qual deve ser seu incremento\npara coletar
         3, 6 e 9 néctares?\r\n"
       courseF_bee_functions4: |-

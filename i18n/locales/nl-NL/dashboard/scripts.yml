@@ -1853,7 +1853,40 @@ nl:
           stages:
             Artist:
               name: Kunstenaar
+        dance:
+          stages:
+            Dance Party:
+              name: Dansfeest
+          title: Dansfeest
         frozen-2018-test-b:
           stages:
             Artist:
               name: Kunstenaar
+        aquatic:
+          stages:
+            Aquatic:
+              name: Aquatisch
+          title: 'Minecraft: Aquatische reis'
+          description_short: Minecraft is terug met een gloednieuwe activiteit voor het Codeuur!
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Dansfeest
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Dansfeest
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Een Basis Bouwen
+            Conditionals with Cards:
+              name: Statements met Kaarten
+            Envelope Variables:
+              name: Envelop variabelen
+            For Loop Fun:
+              name: For Lus fun
+        dance-low:
+          stages:
+            Dance Party:
+              name: Dansfeest

@@ -12,7 +12,6 @@ Feature: Looking at a few things with Applitools Eyes - Part 1
     And I am on "<url>"
     When I rotate to landscape
     And I wait for the page to fully load
-    And I close the instructions overlay if it exists
     And I see no difference for "initial load"
     And I close my eyes
     And I sign out

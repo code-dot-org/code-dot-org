@@ -111,9 +111,16 @@ es-MX:
         movido los bloques para dibujar un cuadrado en la función llamada "dibuja
         un cuadrado". ¿Puedes utilizar la función "dibuja un cuadrado" para crear
         los lentes? Los cuadrados están separados por 75 píxeles.
+      2-3 Artist Functions 3 a: |-
+        Editar la función "dibujar un cuadro" para dibujar unos lentes con armazón cuadrado de 115 pixeles en cada lado.
+
+
+        Los cuadros están ahora separados 45 pixeles.
       2-3 Artist Functions 3: Edita la función para dibujar un cuadrado con una longitud
         lateral de 115 y dibuja los lentes más grandes. Los cuadrados están ahora
         separados 45 píxeles.
+      2-3 Artist Functions 4 a: Ahora, pon la función dentro de un bucle y agrega
+        un turno adicional para pintar estos tres cuadros.
       2-3 Artist Functions 4: Usa el bloque "repetir" para dibujar estos 3 cuadrados.
       2-3 Artist Functions 9: "** Freeplay: ** Aquí hay una función de copo de nieve.
         ¡Experimenta con él para crear una escena de invierno!\r\n\r\nEste es un nivel
@@ -221,79 +228,86 @@ es-MX:
       2-3 Bee Functions 4: La función "mover y obtener néctar" realizada por la abeja,
         recoge néctar, y entonces devuelve a la abeja al principio. Usa la función
         para recoger todo el néctar.
-      2-3 Bee Functions Assessment 1: "** Evaluación: ** Use la función dada para
-        recolectar néctar de cada flor."
-      2-3 Bee Functions Assessment 2: "** Evaluación: ** Crea una función para girar,
-        avanzar y hacer 3 mieles, luego regresa la abeja al lugar donde comenzó y
-        vuelve atrás."
+      2-3 Bee Functions Assessment 1: "**Evaluación:** Usa la función dada para recolectar
+        el nectar de cada flor."
+      2-3 Bee Functions Assessment 2: "**Evaluación:** Crea una función para girar,
+        avanzar y generar 3 mieles, después regresa a la abeja al lugar de inicio
+        y voltea."
       2-3 Bee Loops 1: 'Cada flor contiene una unidad de néctar. Recolecta néctar
         de cada una de las flores. '
-      2-3 Bee Loops 13: "** Evaluación: ** Recoge todo el néctar usando la menor cantidad
-        posible de bloques."
+      2-3 Bee Loops 13: "**Evaluación:** Recoge todos los nectars usando el menor
+        número de bloques posible."
       2-3 Bee Loops 3A: "¿Podrías utilizar un ciclo para recolectar todo el néctar?"
       2-3 Bee Loops 3B: Ahora usa el nuevo bloque repeat para recolectar todo el néctar
         y hacer toda la miel.
-      2-3 Bee Loops 4: "¡Una abeja tan ocupada!\n\r\nAyuda a Abeja a recolectar todo
-        el néctar y hacer toda la miel con la menor cantidad de bloques posible."
+      2-3 Bee Loops 4: Ayuda a la abeja a recolectar todo el nectar y haz toda la
+        miel con el menor número de bloques posible.
       2-3 Bee Loops 4A: "¿Qué pasa si haces un ciclo con esta secuencia 3 veces? ¡No
         olvides hacer la miel al final!"
-      2-3 Bee Loops 5: "La forma de este camino es diferente de los demás. \r\n\r\n¿Puedes
-        recolectar todo el néctar usando la menor cantidad de bloques posible?"
-      2-3 Bee Loops 7: "Que hermoso campo de flores! \r\n\r\nAyuda\na la abeja a visitar
-        cada uno.\r\n\r\nPuedes conseguir la manera de hacerlo con menos de 7 bloques?"
+      2-3 Bee Loops 5: |-
+        La forma de este camino es diferente a los demás.
+
+
+        ¿Puedes recolectar todo el nectar usando el menor número de bloques posible?
+      2-3 Bee Loops 7: |-
+        ¡Qué hermoso  campo de flores!
+
+        Ayuda a la abeja a visitar cada uno.
+
+        ¿Puedes encontrar un camino para hacerlo en menos de 7 bloques?
       2-3 Bee Loops 8: Estas flores moradas tienen una cantidad desconocida de néctar.
         Utiliza el ciclo "while nectar" para recolectar todo el néctar. Este ciclo
         va a ejecutarse mientras la condición sea verdadera, en este caso Néctar >
         0.
-      2-3 Bee Loops Assessment 1: |-
-        ** Evaluación: ** Use un bucle `siempre que`
-        para recoger todo el néctar de estas flores.
-      2-3 Maze 1: "¿Puedes ayudarme a atrapar el cerdo\nrevoltoso? \r\n\r\njunta un
-        par de bloques `adelante 'debajo del` cuando se ejecute`\nbloquea y presiona
-        \"Ejecutar\". "
-      2-3 Maze 12 - One Move Block: "Obtén el cerdo malo!\nPero esta vez, solo puedes
-        usar un bloque de `avanzar`\r\n\r\nAh observa de cerca\n¿Ves algunos otros
-        bloques que puedan ayudarte a llegar allí?"
-      2-3 Maze 12: "Subitamente, aparece un bloque mágico! Con\nel bloque `repetir`,
-        puede repetir el código una y otra vez.\r\n\r\nPuedes llegar a\nel cerdo creando
-        un circuito que usa solo un bloque `adelante' en el interior\nde una 'repetición'?"
-      2-3 Maze 13: |-
-        Llévame al cerdo! tu solo puedes usar un
-        bloque de `avanzar`en esta oportunidad
+      2-3 Bee Loops Assessment 1: "**Evaluación:** Usa el bucle 'while' para recolectar
+        todo el nectar de las flores."
+      2-3 Maze 1: "¿Me puedes ayudar a atrapar a este cerdo travieso?\n\nApila un
+        par de bloques de 'avanzar' debajo del de 'mientras corre' y presiona 'Correr'. "
+      2-3 Maze 12 - One Move Block: |-
+        ¡Atrapa al cerdo malo! Pero esta vez, solo puedes usar un bloque 'avanzar'...
+
+        Ah, mira detenidamente - ¿puedes ver cualquier otro bloque que te puede ayudar a llegar ahi?
+      2-3 Maze 12: |-
+        De repente, ¡un bloque mágico aparece! Con el bloque 'repetir', tú puedes repetir el código una y otra vez.
+
+        ¿Puedes llegar al cerdo creando un bucle que solo utilice bloques ‘avanzar’ dentro de uno ‘repetir’?
+      2-3 Maze 13: "¡Llévame al cerdo! Solo puedes usar un bloque 'avanzar' esta vez"
       2-3 Maze 15: Usa dos ciclos para hacer que el cerdo use menos bloques.
       2-3 Maze Loops 18: "¡Llévame al girasol!"
-      2-3 Maze Loops 19: "¡Llevemos esto a otro nivel!\n\r\n\r\nUsa las curvas para
-        llevarme al girasol usando el menor número posible de ellas."
-      2-3 Maze Loops Assessment 1: "**Evaluación:** Llévame\nal girasol usando solo
-        5 bloques! "
-      4-5 Artist 1: "Ayúdame a terminar de dibujar mi caja. (Cada línea\ntiene 300
-        píxeles de largo) \r\n\r\n"
+      2-3 Maze Loops 19: |-
+        ¡Llevemos esto a otro nivel!
+
+        Usa bucles para llevarme al girasol con el menor número de bucles posible.
+      2-3 Maze Loops Assessment 1: "**Evaluación:** ¡Llévame al girasol utilizando
+        solo 5 bloques! "
+      4-5 Artist 1: "Ayúdame a terminar de dibujar mi caja. (Cada línea es de 300
+        pixeles de largo)\n\n"
       4-5 Artist 10: Presione "Ejecutar" para probar el código. Luego, repita varias
         veces para completar el dibujo. Los colores serán diferentes cada vez.
-      4-5 Artist 11: "Completa las líneas verdes. \r \n\r\nlas\nlíneas tienen 300
-        píxeles de largo y 15 píxeles de separación."
+      4-5 Artist 11: "Completa la líneas verdes. \n\nLas líneas son de 300 píxeles
+        de largo y están separadas por 15 píxeles."
       4-5 Artist 2: "¿Puedes crear un bucle de código para completar el cuadrado?"
-      4-5 Artist 3.5: "Intenta descubrir qué sucede si\nejecutas este código (o simplemente
-        presiona \"Ejecutar\" y pruébalo). \r\n\r\nLuego, repite el\ncódigo las veces
-        necesarias para completar el dibujo!"
-      4-5 Artist 3: "Esta cama rectangular de flores tiene un perímetro\nde 600. \r\nEl
-        lado largo tiene una longitud de 200. \r\n\r\nDibuja el rectángulo\nusando
-        la menor cantidad de bloques posible."
-      4-5 Artist 4: "¿Cuántos grados hay en un círculo? \r\n\r\nEnlaza\nlos bloques
-        para crear un círculo de colores."
+      4-5 Artist 3.5: "Intenta descubrir que pasa si corres este código (o solo presiona
+        \"Correr\" y pruébalo). \n\nLuego, ¡Repite el código suficientes veces para
+        completar el dibujo!"
+      4-5 Artist 3: "Esta cama de flores rectangular tiene un perímetro de 600. \nEl
+        lado largo tiene una longitud de 200. \n\nDibuja un rectángulo usando el menor
+        número de bloques posibles."
+      4-5 Artist 4: "¿Cuántos grados tiene un circulo? \n\nRepite los bloques para
+        crear un circulo de colores."
       4-5 Artist 5: "¿Qué ángulo utilizas?"
       4-5 Artist 6: Este triángulo equilátero tiene ángulos de 60, 60 y 60 grados.
         Cada lado es de 200 píxeles. Completa el dibujo.
-      4-5 Artist 7: "Este triángulo rectángulo tiene ángulos de 30, 60,\ny 90 grados.
-        La longitud de los lados inclinados (longitud de la hipotenusa) es\n200 píxeles.
-        \r\n\r\nCompleta el dibujo."
-      4-5 Artist 8: "La línea de mitad de un campo de fútbol es * perpendicular *\na
-        los lados. \r\nEste rectángulo tiene un perímetro total de 800 píxeles,\ny
-        tiene 240 píxeles de largo. ¿Qué tan alto es? \r\n\r\nDibuja los límites y
-        la\nlinea central."
-      4-5 Artist 9: "Dibuje la mitad derecha de esta imagen para que\nel diseño sea
-        simétrico \r\nLos triángulos son equiláteros y tienen lados\nque tienen 50
-        píxeles de largo."
+      4-5 Artist 7: |-
+        Este triángulo rectángulo tiene ángulos de 30, 60 y 90 grados. El lado inclinado tiene una longitud de 200 píxeles (la longitud de la hipotenusa).
+
+        Completa el dibujo.
+      4-5 Artist 8: "La línea del centro en un campo de fútbol es *perpendicular*
+        a los lados. \nEste rectángulo tiene un perímetro de 800 píxeles en total,
+        y tiene una longitud de 240 píxeles. ¿Cuál se su altura? \n\nDibuja los bordes
+        y la línea del centro."
+      4-5 Artist 9: "Dibuja la mitad derecha de esta imagen para que diseño sea simétrico.
+        \nLos triángulos son equilateros y tienen lados de 50 pixeles de largo."
       4-5 Artist Assessment 1: |-
         ** Evaluación: ** Use un circuito para
         dibujar el triángulo equilátero. Cada lado tiene 300 píxeles.
@@ -541,9 +555,8 @@ es-MX:
         arrastrar en un nuevo botón. Posicionar y redimensionarlo. Luego configure
         su `\" texto \"`,\n`\" color de fondo \"`, y `\" tamaño de fuente \"\r`\n\r\n**Muéstrame:** "
       Artist Autorun Test: Usa el bloque "repetir" para dibujar estos 3 cuadrados.
-      Bergeron Robot Maze1: "¿Puedes ayudarme a atrapar el cerdo\nrevoltoso? \r\n\r\njunta
-        un par de bloques `adelante 'debajo del` cuando se ejecute`\nbloquea y presiona
-        \"Ejecutar\". "
+      Bergeron Robot Maze1: "¿Me puedes ayudar a atrapar a este cerdo travieso?\n\nApila
+        un par de bloques de 'avanzar' debajo del de 'mientras corre' y presiona 'Correr'. "
       CSD U3 - conditionals - arrows and gears: "# Engranajes con Condicionales\r\n\r\nVamos
         a\nhacer girar los engranajes solo cuando la tecla de espacio se mantiene
         presionada.\r\n\r\n# Hagamos\nEsto\r\n\r\n* Agregar una instrucción `if`.\r\n*
@@ -992,8 +1005,86 @@ es-MX:
         ¿Qué sucede si usas dos ángulos diferentes en el patrón del escalón de tu
         escalera?\r\n- ¿Qué sucede si haces el patrón de tu diamante más largo o más
         corto?\r\n-¿Cómo luce al dibujar dos copos de nieve uno encima del otro?\r?\n"
+      Dance_Party_01: |-
+        *¡Hagamos una fiesta!*
+
+        Arrastra el bloque de 'Crear nuevo' en el espacio de trabajo y conéctalo dentro del bloque de 'instalación' para crear tu primer bailarín.
+
+        * *También puedes hacer clic en el foco a la izquierda si deseas más información o retos extra.*
+      Dance_Party_01_low: |-
+        *¡Hagamos una fiesta!*
+
+        Arrastra el bloque de 'Crear nuevo' en el espacio de trabajo y conéctalo dentro del bloque de 'instalación' para crear tu primer bailarín.
+
+        * *También puedes hacer clic en el foco a la izquierda si deseas más información o retos extra.*
+      Dance_Party_02: |-
+        ¡Vamos a bailar!
+
+        Arrastra el bloque <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> en el espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. El bailarín debería comenzar un nuevo movimiento después de la cuarta medida.
+
+
+        Las **Medidas** se utilizan para contar el tiempo en la música. En este tutorial, una medida son cuatro tiempos.
+      Dance_Party_03: |-
+        *¡Ya estamos entrando en ritmo!*
+
+        Añade un bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> a tu espacio de trabajo. Haz que el bailarín comience un nuevo movimiento después de 6 medidas.
+      Dance_Party_04: |-
+        *¡Este baile necesita algunas luces! *
+
+        Busca un bloque nuevo en la caja de herramientas que agregue un efecto de fondo detrás de tu bailarín. ¡Mira como los efectos cambian con la música!
+      Dance_Party_05: |-
+        Usa un nuevo bloque para hacer que el bailarín cambie los movimientos ¡**Cada 2 medidas**!
+
+        *Al elegir '(siguiente)', '(anterior)' o '(al azar)' harás que el bailarín realice un movimiento distinto cada vez que se ejecuta el código.
+      Dance_Party_06: |-
+        *¡Necesitamos más bailarines! *
+
+        Crea un bailarín llamado 'backup_dancer1' para que baile con el gato.
+      Dance_Party_08: |-
+        Cada bailarín tiene su conjunto de _properties_ que controlan como se ve.
+
+        Puedes hacer parecer que un bailarín se encuentre en el fondo haciendo su _size_ más pequeño. ¿Puedes hacer que ambos bailarines sean del mismo tamaño?
+      Dance_Party_09: |-
+        Los bailarines tienen una propiedad de "tinte" que puede añadir una capa de color. Trata de cambiar el color de uno de tus bailarines.
+        * Los tintes mezclan el color que elijas con los colores del bailarín.
+      Dance_Party_10: |-
+        Ahora sabemos cómo cambiar las propiedades de un bailarín. También podemos hacer que estas mismas propiedades respondan automáticamente a la música con este bloque:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Este programa utiliza el volumen del "bajo" de la música (los sonidos profundos) para controlar la altura de un bailarín. ¿Puedes hacer que el otro bailarín también responda a la música?
+      Dance_Party_11.5: |-
+        Echa un vistazo a este bloque:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        ¡Ahora puedes crear un grupo de bailarines con un solo movimiento!
+
+        Trata de usar algunos de los bloques de "todos los patos" para escribir el código que hará que todos los patos bailen juntos.
+      Dance_Party_11: |-
+        El bloque <xml><block type="Dancelab_whenKey"></block></xml> le permite ejecutar el código cuando se presiona la flecha hacia arriba.
+
+        Puedes cambiar el movimiento del baile, cambiar las propiedades de un bailarín o hacer un movimiento rápido solo una vez. ¡Se creativo y busca nuevos bloques!
+      Dance_Party_11b: "¡Es hora de bailar! El gato se mueve cuando presionas la tecla
+        de flecha izquierda. Hace el “paso del robot” cuando presionas la tecla de
+        flecha derecha."
+      Dance_Party_12: "¡Vamos baila! Crea tu propio baile para compartir con tus amigos."
       Fish Tank 5-validated_simple: El pez quiere un amigo. Agrega un nuevo sprite.
       Function intro Ryan: "Una **función** llamada \"Construye puente\" se encuentra
+        en tu área de trabajo.  ¡Incluye todo el código que necesitas para cruzar
+        el río! \r\n \r\nAjusta el pequeño bloque verde en tu área de trabajo dos
+        veces para arreglar el camino y llevar a {currentPlayerName} hasta la antorcha
+        de piedra rojiza [redstone_torch]."
+      Function intro Ryan_2019: "Una **función** llamada \"Construye puente\" se encuentra
         en tu área de trabajo.  ¡Incluye todo el código que necesitas para cruzar
         el río! \r\n \r\nAjusta el pequeño bloque verde en tu área de trabajo dos
         veces para arreglar el camino y llevar a {currentPlayerName} hasta la antorcha
@@ -1028,6 +1119,18 @@ es-MX:
       HOC 2018 Level_9b: "Lograste llegar al arrecife, ¡ahora busca el **Corazón del
         Mar** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
         Usa el coral azul y rojo para llegar al **cofre** del tesoro ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
+      HOC Dance 4_draft: |-
+        Usa un nuevo bloque para hacer que el bailarín cambie los movimientos ¡**Cada 2 medidas**!
+
+        *Al elegir '(siguiente)', '(anterior)' o '(al azar)' harás que el bailarín realice un movimiento distinto cada vez que se ejecuta el código.
+      HOC Dance 5_draft: |-
+        *¡Necesitamos más bailarines! *
+
+        Crea un bailarín llamado 'backup_dancer1' para que baile con el gato.
+      HOC Dance 9_draft: |-
+        El bloque <xml><block type="Dancelab_whenKey"></block></xml> le permite ejecutar el código cuando se presiona la flecha hacia arriba.
+
+        Puedes cambiar el movimiento del baile, cambiar las propiedades de un bailarín o hacer un movimiento rápido solo una vez. ¡Se creativo y busca nuevos bloques!
       K-1 Bee Loops 2: "¡Utiliza un enlace para moverte y obtener el néctar y hacer
         miel!"
       K-1 Bee Loops 3: "¡Utiliza enlaces para obtener néctar y para hacer miel!"
@@ -1057,12 +1160,22 @@ es-MX:
         hacia adelante\" con el bloque \"al correr\" en el área de trabajo para llevar
         al Agent a la placa de presión [PressurePlate_Up], luego presiona \"Correr\"
         y usa las teclas de flecha para sacar a {currentPlayerName} de la casa y recoger
-        el **cofre** [chest].\n"
+        el **cofre** [chest]."
+      MC_HOC_2017_01_RETRY_2019: "¡{currentPlayerName} está atrapado dentro de la
+        casa, pero el Agent está aquí para ayudar!   \r\n \r\n   \r\nAjusta un bloque
+        \"mover hacia adelante\" con el bloque \"al correr\" en el área de trabajo
+        para llevar al Agent a la placa de presión [PressurePlate_Up], luego presiona
+        \"Correr\" y usa las teclas de flecha para sacar a {currentPlayerName} de
+        la casa y recoger el **cofre** [chest]."
       MC_HOC_2017_02: El jugador necesita entrar a esa arboleda secreta.  Ayuda al
         Agent a abrir la puerta escribiendo código para que llegue a la placa de presión.
       MC_HOC_2017_02_Cole: "¡{currentPlayerName} se dirige a una aventura! Como ayuda,
         usa el **mapa** [map_empty] detrás de la puerta cerrada a la derecha. \r\n
         \r\nAjusta el código en el área de trabajo para mover al Agent a la placa
+        de presión [PressurePlate_Up] para que {currentPlayerName} pueda pasar."
+      MC_HOC_2017_02_Cole_2019: "¡{currentPlayerName} se dirige a una aventura! Como
+        ayuda, usa el **mapa** [map_empty] detrás de la puerta cerrada a la derecha.
+        \r\n \r\nAjusta el código en el área de trabajo para mover al Agent a la placa
         de presión [PressurePlate_Up] para que {currentPlayerName} pueda pasar."
       MC_HOC_2017_02_Kiki: "El jugador se dirige a una aventura, pero primero debe
         tomar la antorcha que está oculta del otro lado de esa puerta cerrada. \r\n\r\nPrograma
@@ -1076,6 +1189,9 @@ es-MX:
       MC_HOC_2017_03_Cole: "{currentPlayerName} continúa en la aventura y necesita
         la **brújula** [compass] para prepararse para el viaje.  \r\n   \r\nDale un
         código al Agent para que abra la puerta."
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} continúa en la aventura y necesita
+        la **brújula** [compass] para prepararse para el viaje.  \r\n   \r\nDale un
+        código al Agent para que abra la puerta."
       MC_HOC_2017_03_Kiki: "La aventura del jugador comenzará detrás de la puerta
         cerrada, ¡en la arboleda secreta!  \r\n\r\n\r\nAyuda al Agent a abrir la puerta
         escribiendo código para que llegue a la placa de presión."
@@ -1086,9 +1202,14 @@ es-MX:
         con un patrón sencillo y bucles para cruzar las dos primeras placas de presión."
       MC_HOC_2017_04POINT5_RYAN: "¡Lograste cruzar! \r\n\r\nAhora, ayuda a {currentPlayerName}
         a cruzar el laberinto con seguridad para recoger el **hacha** [diamond_axe]\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "¡Lograste cruzar! \r\n\r\nAhora, ayuda a {currentPlayerName}
+        a cruzar el laberinto con seguridad para recoger el **hacha** [diamond_axe]\r\n"
       MC_HOC_2017_04_Cole: "¡El Agent puede cruzar el agua!  \r\n \r\nUsa un bucle
         \"Repetir\" para resolver este acertijo y ayuda a {currentPlayerName} a llegar
         a la **cubeta** [bucket_empty] detrás de la puerta."
+      MC_HOC_2017_04_Cole_2019: "¡El Agent puede cruzar el agua!  \r\n \r\nUsa un
+        bucle \"Repetir\" para resolver este acertijo y ayuda a {currentPlayerName}
+        a llegar a la **cubeta** [bucket_empty] detrás de la puerta."
       MC_HOC_2017_04_Kiki: "¡La entrada a la arboleda secreta lleva a este hermoso
         oasis!  Para pasar este nivel, el jugador necesita llegar al cuadrado naranja
         de la cabaña.  \r\n\r\nUsa un bucle \"Repetir\" para ayudar al Agent a llegar
@@ -1100,6 +1221,9 @@ es-MX:
       MC_HOC_2017_05_Cole: "¡Oh, no, el puente se derrumbó! \r\n\r\nEscribe el código
         para que el Agent reconstruya el puente usando el bloque \"colocar\" para
         que {currentPlayerName} pueda llegar hasta la **pala** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "¡Oh, no, el puente se derrumbó! \r\n\r\nEscribe el
+        código para que el Agent reconstruya el puente usando el bloque \"colocar\"
+        para que {currentPlayerName} pueda llegar hasta la **pala** [diamond_shovel]."
       MC_HOC_2017_05_Josh: "¡Oh, no, el puente se derrumbó! \n\n\nAyuda al Agent a
         reconstruir el puente para que el jugador pueda llegar hasta la **pala**."
       MC_HOC_2017_05_Kiki: "Es hora de que el jugador deje la arboleda secreta y continúe
@@ -1109,11 +1233,17 @@ es-MX:
       MC_HOC_2017_06_Cole: "¡Otro río, pero este es mucho más ancho! \r\n \r\nArregla
         este código para ayudar al Agent a construir un puente para que {currentPlayerName}
         pueda llegar al **pico** [diamond_pickaxe]."
+      MC_HOC_2017_06_Cole_2019: "¡Otro río, pero este es mucho más ancho! \r\n \r\nArregla
+        este código para ayudar al Agent a construir un puente para que {currentPlayerName}
+        pueda llegar al **pico** [diamond_pickaxe]."
       MC_HOC_2017_06_Josh: "¡Otro río, pero este es mucho más ancho!  \r\n\r\nArregla
         este código para ayudar al Agent a construir un puente sobre este río."
       MC_HOC_2017_06_Kiki: "¡Otro río, pero este es mucho más ancho!  \r\n\r\nArregla
         este código para ayudar al Agent a construir un puente sobre el agua."
       MC_HOC_2017_07_Cole: "¡Hay hielo en el camino!  \r\n \r\n¡La función \"Despejar
+        el camino\" puede ayudarte a destruir el hielo y llevar a {currentPlayerName}
+        a la vagoneta [minecart_normal]!"
+      MC_HOC_2017_07_Cole_2019: "¡Hay hielo en el camino!  \r\n \r\n¡La función \"Despejar
         el camino\" puede ayudarte a destruir el hielo y llevar a {currentPlayerName}
         a la vagoneta [minecart_normal]!"
       MC_HOC_2017_07_Kiki: "¡Los bucles no son el único modo de repetir un código!
@@ -1152,6 +1282,10 @@ es-MX:
         en tu área de trabajo? \r\n \r\nUsa estas funciones con más código de la caja
         de herramientas para despejar el camino a la vagoneta, luego recoge el **pedernal
         y acero** [flint_and_steel]. \r\n"
+      MC_HOC_2017_10_RETRY_2019: "¿Puedes encontrar la diferencia entre las dos funciones
+        en tu área de trabajo? \r\n \r\nUsa estas funciones con más código de la caja
+        de herramientas para despejar el camino a la vagoneta, luego recoge el **pedernal
+        y acero** [flint_and_steel]. \r\n"
       MC_HOC_2017_10_RYAN: Trata de construir funciones desde el principio que le
         faciliten al Agent terminar esta vagoneta y lleven al jugador al cuadrado
         naranja.
@@ -1168,11 +1302,16 @@ es-MX:
       MC_HOC_2017_Ali: Mira las funciones más abajo.  ¿Cómo puedes usarlas para evitar
         a los Ghasts y a ayudar a {currentPlayerName} a llegar con seguridad al **libro
         de encantamientos** [book_enchanted]?
+      MC_HOC_2017_Ali_2019: Mira las funciones más abajo.  ¿Cómo puedes usarlas para
+        evitar a los Ghasts y a ayudar a {currentPlayerName} a llegar con seguridad
+        al **libro de encantamientos** [book_enchanted]?
       MC_HOC_2017_FP10x10: "**Improvisación:** ¡Ahora es cosa tuya! ¿Puedes ponerte
         el desafío de recoger todos los diamantes de este nivel?"
       MC_HOC_2017_FP10x10_RE: "**Improvisación:** ¡Ahora es cosa tuya! ¿Puedes ponerte
         el desafío de recoger todos los diamantes de este nivel?"
       MC_HOC_2017_FP20x20: "**Improvisación:** ¡Ahora es cosa tuya! Usa el código
+        del Agent para ayudarte a explorar este mundo."
+      MC_HOC_2017_FP20x20_2019: "**Improvisación:** ¡Ahora es cosa tuya! Usa el código
         del Agent para ayudarte a explorar este mundo."
       MC_HOC_2017_Ryan_03: "¿Sabías que puedes poner más de una parte de código dentro
         de un bucle?  \r\n\r\nUsa el bucle \"Repetir\" para ayudar al Agent a construir
@@ -1279,7 +1418,7 @@ es-MX:
         el comando ¡para llegar a absolutalmente cualquier espacio que gustes! Intenta
         este código para ver cómo funciona, luego 'has tu propio programa!\r\n<xml>\r\n
         \ <block type=\"jump_to_xy\">\r\n    <title name=\"XPOS\">???</title>\r\n
-        \   <title name=\"YPOS\">???</title>\r\n    </block></xml>\n"
+        \   <title name=\"YPOS\">???</title>\r\n    </block></xml>"
       course3_bee_functions_challenge1: Para este desafío debes trabajar solo. ¡Este
         puede ser más difícil de lo que parece!
       course3_bee_functions_challenge3: Crea una función para recoger todo el néctar
@@ -1324,7 +1463,7 @@ es-MX:
         el comando ¡para llegar a absolutalmente cualquier espacio que gustes! Intenta
         este código para ver cómo funciona, luego 'has tu propio programa!\r\n<xml>\r\n
         \ <block type=\"jump_to_xy\">\r\n    <title name=\"XPOS\">???</title>\r\n
-        \   <title name=\"YPOS\">???</title>\r\n    </block></xml>\n"
+        \   <title name=\"YPOS\">???</title>\r\n    </block></xml>"
       course4_artist_fwp_challenge1: Intente ejecutar este programa y haga cambios
         para ver que ocurre. ¿Puedes averiguar cómo funciona? (o elimínalo y reemplázalo
         con algo totalmente diferente)
@@ -1461,7 +1600,7 @@ es-MX:
         al espacio de trabajo e intenta descifrar cómo obtener tesoros. Obtén al menos
         un elemento para pasar este nivel."
       courseA_collector_loops2: "¡Consigue las tres pilas! Mueva Laurel a cada tesoro,
-        luego use este bloque:\r\n  <xml><block type=\"collector_collect\"/></xml>\n"
+        luego use este bloque:\r\n  <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops2_2018: "¡Consigue las tres pilas! Mueva Laurel a cada
         tesoro, luego use este bloque:\r\n  <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops3: |-
@@ -1486,7 +1625,7 @@ es-MX:
          bloques y uno ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
          bloque en la parte inferior del programa y haga clic en "Ejecutar"!
       courseA_collector_preLoops7: "¡Consigue las tres pilas! Mueva Laurel a cada
-        tesoro, luego use este bloque:\r\n  <xml><block type=\"collector_collect\"/></xml>\n"
+        tesoro, luego use este bloque:\r\n  <xml><block type=\"collector_collect\"/></xml>"
       courseA_forVideoTest_artist: "¡Los bucles de repetición también funcionan para
         Artist!"
       courseA_harvester_forVideo: "¿Puedes recoger todo el maíz utilizando únicamente
@@ -1513,7 +1652,7 @@ es-MX:
       courseA_harvester_loops8: "Este es el mismo rompecabezas, ¡pero ahora debes
         repetir **tres** veces en lugar de dos! Usa este bloque:\r\n\r\n<xml><block
         type=\"controls_repeat_simplified_dropdown\">\r\n    <title name=\"TIMES\"
-        config=\"2-10\">3</title>\r\n  </block></xml>\n"
+        config=\"2-10\">3</title>\r\n  </block></xml>"
       courseA_harvester_loops9: "¿Puedes descifrar cómo recoger *todo* este maiz?"
       courseA_harvester_seq1: "¡Ayuda a la cosechadra a recoger el trozo de maiz!"
       courseA_harvester_seq10: "¡La cosechadora necesta recoger todo el maiz! ¿Ves
@@ -1601,13 +1740,13 @@ es-MX:
         type=\"studio_move\">\r\n    <title name=\"SPRITE\">1</title>\r\n    <title\nname=\"DIR\">8</title>\r\n
         \ </block></xml> bloque a la <xml><block type=\"studio_whenArrow\">\r\n    <title\nname=\"VALUE\">izquierdo</title>\r\n
         \ </block></xml> evento bloque que ya está en el área de trabajo.\r\n\r\n¡Lleva
-        a Jorge a la bandera para terminar este nivel!\n"
+        a Jorge a la bandera para terminar este nivel!"
       courseA_playLab_events3_2018: "Ayuda a Jorge el perro a moverse conectando el
         <xml><block type=\"studio_move\">\r\n    <title name=\"SPRITE\">1</title>\r\n
         \   <title\nname=\"DIR\">8</title>\r\n  </block></xml> bloque a la <xml><block
         type=\"studio_whenArrow\">\r\n    <title\nname=\"VALUE\">izquierdo</title>\r\n
         \ </block></xml> evento bloque que ya está en el área de trabajo.\r\n\r\n¡Lleva
-        a Jorge a la bandera para terminar este nivel!\n"
+        a Jorge a la bandera para terminar este nivel!"
       courseA_playLab_events4: Ahora, haga que Jorge se mueva hacia la derecha cuando
         se haga click en la flecha derecha.
       courseA_playLab_events4_2018: Ahora, haga que Jorge se mueva hacia la derecha
@@ -1620,11 +1759,11 @@ es-MX:
       courseA_playlab_events_challenge1: "Al hacer clic en Olive\n aparecerá Robin.
         ¿Puedes escribir código para mostrar el resto de los personajes también?\r\n\r\nEn
         este rompecabezas , hacer Asegúrese de hacer clic para consejos ! ¡Los consejos
-        te ayudarán a hacer este proyecto paso a paso!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png)\n"
+        te ayudarán a hacer este proyecto paso a paso!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png)"
       courseA_playlab_events_challenge1_2018: "Al hacer clic en Olive\n aparecerá
         Robin. ¿Puedes escribir código para mostrar el resto de los personajes también?\r\n\r\nEn
         este rompecabezas , hacer Asegúrese de hacer clic para consejos ! ¡Los consejos
-        te ayudarán a hacer este proyecto paso a paso!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png)\n"
+        te ayudarán a hacer este proyecto paso a paso!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png)"
       courseA_playlab_events_challenge1a: "¿Dónde se esconden mis amigos? En este
         juego, al hacer click en mí, ¡se mostrará a mi amigo Olive, el gato! Al hacer
         clic en Olive aparecerá Robin. ¿Puedes escribir código para mostrar al resto
@@ -1935,13 +2074,13 @@ es-MX:
         en un círculo completo?\r\n- Intenta cambiar las veces que giras\r\n  - Intenta
         un giro de 60 grados por 6 veces\r\n  - Intenta un giro de 20 grados por 18
         veces\r\n___\r\nEsta imagen usa un pirata, un ninja, una girafa. Ellos giran
-        18 veces con un giro de 20 grados.\r\n\r\n![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)\n"
+        18 veces con un giro de 20 grados.\r\n\r\n![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)"
       courseC_artist_loops7a_2018: "Intenta cambiar el bucle `repetir` para ejecutar
         un número diferente de veces. ¿Qué tan lejos tienes que girar para pasar alrededor
         en un círculo completo?\r\n- Intenta cambiar las veces que giras\r\n  - Intenta
         un giro de 60 grados por 6 veces\r\n  - Intenta un giro de 20 grados por 18
         veces\r\n___\r\nEsta imagen usa un pirata, un ninja, una girafa. Ellos giran
-        18 veces con un giro de 20 grados.\r\n\r\n![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)\n"
+        18 veces con un giro de 20 grados.\r\n\r\n![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)"
       courseC_artist_loops8a: "Ahora haaz algo tu mismo. ¿Qué sucede cuándo haces
         dos circulos separados de calcomanías diferentes?\r\n___\r\n¿Becesitas una
         idea? Inténtalo haciendo un diseño como este.\r\n\r\n![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)"
@@ -1976,10 +2115,16 @@ es-MX:
       courseC_artist_prog1_2018: "*\"Hola, Soy artista. Puedes escribir un código
         para hacerme dibujar casi de todo.\"*\r\n\r\nJuega con los bloques en la caja
         de herramientas ¡para ver qué hacen!"
+      courseC_artist_prog1_2019: "*\"Hola, Soy artista. Puedes escribir un código
+        para hacerme dibujar casi de todo.\"*\r\n\r\nJuega con los bloques en la caja
+        de herramientas ¡para ver qué hacen!"
       courseC_artist_prog2: "*\"¡Hagamos una jaula para mi mascota monstruo!\"*\r\n\r\narrastra
         los bloques a la pantalla para que el artista dibuje sobre las lineas gises
         de la imagen.  \r\n(Each line is 100 pixels long)"
       courseC_artist_prog2_2018: "*\"¡Hagamos una jaula para mi mascota monstruo!\"*\r\n\r\narrastra
+        los bloques a la pantalla para que el artista dibuje sobre las lineas gises
+        de la imagen.  \r\n(Each line is 100 pixels long)"
+      courseC_artist_prog2_2019: "*\"¡Hagamos una jaula para mi mascota monstruo!\"*\r\n\r\narrastra
         los bloques a la pantalla para que el artista dibuje sobre las lineas gises
         de la imagen.  \r\n(Each line is 100 pixels long)"
       courseC_artist_prog3: "*\"¡Esta nave espacial necesita una ventana!\"*\r\n\r\nCada
@@ -1988,11 +2133,18 @@ es-MX:
       courseC_artist_prog3_2018: "*\"¡Esta nave espacial necesita una ventana!\"*\r\n\r\nCada
         lado del cuadrado interior es de 100 pixeles y todos los ángulos son de 90
         grados."
+      courseC_artist_prog3_2019: "*\"¡Esta nave espacial necesita una ventana!\"*\r\n\r\nCada
+        lado del cuadrado interior es de 100 pixeles y todos los ángulos son de 90
+        grados."
       courseC_artist_prog4: "*\"¡Oh no!  ¡La mascota extraterrestre de Starla acaba
         de irse volando! ¡Vamos a ayudar a la mujer del espacio*\r\n\r\nTermina el
         cohete de Starla para que pueda perseguir a la mascota.  \r\n(Cada lado del
         triángulo es de 100 pixeles de largo y los ángulos exteriores son de 120.)"
       courseC_artist_prog4_2018: "*\"¡Oh no!  ¡La mascota extraterrestre de Starla
+        acaba de irse volando! ¡Vamos a ayudar a la mujer del espacio*\r\n\r\nTermina
+        el cohete de Starla para que pueda perseguir a la mascota.  \r\n(Cada lado
+        del triángulo es de 100 pixeles de largo y los ángulos exteriores son de 120.)"
+      courseC_artist_prog4_2019: "*\"¡Oh no!  ¡La mascota extraterrestre de Starla
         acaba de irse volando! ¡Vamos a ayudar a la mujer del espacio*\r\n\r\nTermina
         el cohete de Starla para que pueda perseguir a la mascota.  \r\n(Cada lado
         del triángulo es de 100 pixeles de largo y los ángulos exteriores son de 120.)"
@@ -2004,9 +2156,15 @@ es-MX:
         una de nuestras mascotas en caso que se pierdan!\"*\r\n\r\nTermina esta etiqueta
         dibujando un rectángulo alrededor de la parte externa.  \r\n(Los lados largos
         son de 200 pixeles cada uno y los lados cortos son de 100 pixeles ada uno)"
+      courseC_artist_prog5_2019: "*\"¡Quizás deberíamos hacer una etiqueta para cada
+        una de nuestras mascotas en caso que se pierdan!\"*\r\n\r\nTermina esta etiqueta
+        dibujando un rectángulo alrededor de la parte externa.  \r\n(Los lados largos
+        son de 200 pixeles cada uno y los lados cortos son de 100 pixeles ada uno)"
       courseC_artist_prog6: "*\"¡Ahora una etiqueta para Belle!\"*\r\n\r\nDibuja este
         diamante con lados de 200 pixeles."
       courseC_artist_prog6_2018: "*\"¡Ahora una etiqueta para Belle!\"*\r\n\r\nDibuja
+        este diamante con lados de 200 pixeles."
+      courseC_artist_prog6_2019: "*\"¡Ahora una etiqueta para Belle!\"*\r\n\r\nDibuja
         este diamante con lados de 200 pixeles."
       courseC_artist_prog7: "**Desafío:** ¡Esta etiqueta es especial!  \r\n\r\n¿Puedes
         descifrar cómo dibujar el contorno?  \r\n(Ellado larog es de 150 pixeles y
@@ -2014,9 +2172,14 @@ es-MX:
       courseC_artist_prog7_2018: "**Desafío:** ¡Esta etiqueta es especial!  \r\n\r\n¿Puedes
         descifrar cómo dibujar el contorno?  \r\n(Ellado larog es de 150 pixeles y
         cada uno de los lados cortos es de 75 pixeles.)"
+      courseC_artist_prog7_2019: "**Desafío:** ¡Esta etiqueta es especial!  \r\n\r\n¿Puedes
+        descifrar cómo dibujar el contorno?  \r\n(Ellado larog es de 150 pixeles y
+        cada uno de los lados cortos es de 75 pixeles.)"
       courseC_artist_prog8: "Una etiqueta más.  Este es un triángulo para Pi.  \r\n(Cada
         lado es de 150 pixeles)"
       courseC_artist_prog8_2018: "Una etiqueta más.  Este es un triángulo para Pi.
+        \ \r\n(Cada lado es de 150 pixeles)"
+      courseC_artist_prog8_2019: "Una etiqueta más.  Este es un triángulo para Pi.
         \ \r\n(Cada lado es de 150 pixeles)"
       courseC_artist_prog_challenge1-doghouse: "¡Construyamos una casa para Jorge!"
       courseC_artist_prog_challenge1: Dibuja cuartos para cd uno de los animales.
@@ -2025,12 +2188,18 @@ es-MX:
       courseC_artist_prog_challenge1_2018: Dibuja cuartos para cd uno de los animales.
         Hay muchas formas diferentes de resolver este rompecabezas, ¡así que ha divertirse!
         Cada cuadrado tiene una medida de 100 pixeles por lado.
+      courseC_artist_prog_challenge1_2019: Dibuja cuartos para cd uno de los animales.
+        Hay muchas formas diferentes de resolver este rompecabezas, ¡así que ha divertirse!
+        Cada cuadrado tiene una medida de 100 pixeles por lado.
       courseC_artist_prog_challenge2: "*¡Ayúdame a pintar de amarillo las líneas en
         este camino!*"
       courseC_artist_prog_challenge2a: "*\"¡Ayúdame a pintar de amarillo las líneas
         en este camino!\"*\r\n\r\n¡Los segmentos de tres líneas tienen longitudes
         de 150, 100, y 200 pixeles!"
       courseC_artist_prog_challenge2a_2018: "*\"¡Ayúdame a pintar de amarillo las
+        líneas en este camino!\"*\r\n\r\n¡Los segmentos de tres líneas tienen longitudes
+        de 150, 100, y 200 pixeles!"
+      courseC_artist_prog_challenge2a_2019: "*\"¡Ayúdame a pintar de amarillo las
         líneas en este camino!\"*\r\n\r\n¡Los segmentos de tres líneas tienen longitudes
         de 150, 100, y 200 pixeles!"
       courseC_collector_loops_challenge2: "*\"¡Vamos a cazar el tesoro!\"*\r\n\r\nAyuda
@@ -2199,9 +2368,13 @@ es-MX:
         el código para ayudar a Scrat a llegar a la bellota."
       courseC_maze_debugging1_2018: "¡Este código no está del todo correcto!  \r\n\r\nArregla
         el código para ayudar a Scrat a llegar a la bellota."
+      courseC_maze_debugging1_2019: "¡Este código no está del todo correcto!  \r\n\r\nArregla
+        el código para ayudar a Scrat a llegar a la bellota."
       courseC_maze_debugging3: "Algo no está bien. \r\n\r\n¡Remueve los bloques para
         llevar a Scrat a la bellota!"
       courseC_maze_debugging3_2018: "Algo no está bien. \r\n\r\n¡Remueve los bloques
+        para llevar a Scrat a la bellota!"
+      courseC_maze_debugging3_2019: "Algo no está bien. \r\n\r\n¡Remueve los bloques
         para llevar a Scrat a la bellota!"
       courseC_maze_debugging_challenge2: Si Scrat se gira muy seguido, ¡podría marearse!
         Ayúdalo a alcanzar la bellota con sólo cuatro comandos "girar".
@@ -2294,9 +2467,9 @@ es-MX:
         _\"ir a la chatarra, BB-8!\"_ \r\n\r\nUsa cinco de los mismos bloques para
         recoger chatarra. la chatarra brilla así: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
       courseC_starWars_loops10: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\r\n
-        _\"Go BB-8!\"_\r\n\r\n¡Lo estás haciendo muy bien! ¡Continúa así!\n"
+        _\"Go BB-8!\"_\r\n\r\n¡Lo estás haciendo muy bien! ¡Continúa así!"
       courseC_starWars_loops10_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\r\n
-        _\"Go BB-8!\"_\r\n\r\n¡Lo estás haciendo muy bien! ¡Continúa así!\n"
+        _\"Go BB-8!\"_\r\n\r\n¡Lo estás haciendo muy bien! ¡Continúa así!"
       courseC_starWars_loops11: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _\"continúa, BB-8!\"_\r\n\r\n¡Casi terminas! Este vez, ¡escoje el camino que
         tú quieras!"
@@ -2614,6 +2787,12 @@ es-MX:
         forma que quieras.  \r\n<hr/>\r\n\r\nPuedes intentar hacer un polígono, como
         uno de estos:  \r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)
         \ \r\n\r\n  \r\n  \r\nO incluso una forma abstracta, como estas:  \r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
+      courseD_artist_project1_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Hola, Soy Elsa de Arendelle, ayúdame a dibujar una forma.”_\r\n\r\nDibuja
+        una forma pequeña, de entre **20 y 50** pixeles de ancho.  Puede ser cualquier
+        forma que quieras.  \r\n<hr/>\r\n\r\nPuedes intentar hacer un polígono, como
+        uno de estos:  \r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)
+        \ \r\n\r\n  \r\n  \r\nO incluso una forma abstracta, como estas:  \r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
       courseD_artist_project1a: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Intentemos algo nuevo. Esta vez, patina en zig-zag.\"_\r\n\r\n\r\n<img
         src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
@@ -2622,6 +2801,13 @@ es-MX:
         -- pero asegúrate que tus giros hacia la derecha e izquierda usen el mismo
         ángulo.  \r\n(Verás por qué más adelante.)"
       courseD_artist_project1a_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Intentemos algo nuevo. Esta vez, patina en zig-zag.\"_\r\n\r\n\r\n<img
+        src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
+        width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\r\nDibuja
+        un patrón de escalones de escalera que use giros de entre 75 y 105 grados
+        -- pero asegúrate que tus giros hacia la derecha e izquierda usen el mismo
+        ángulo.  \r\n(Verás por qué más adelante.)"
+      courseD_artist_project1a_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Intentemos algo nuevo. Esta vez, patina en zig-zag.\"_\r\n\r\n\r\n<img
         src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
         width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\r\nDibuja
@@ -2642,6 +2828,13 @@ es-MX:
         Si saltas hacia adelante **más** del ancho de tu forma, te quedará un espacio\r\n\r\n<hr/>\r\n\r\nTu
         fila puede termnar recta como en estos:\r\n\r\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\r\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\r\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\r\n<br/>
         \ <br/>\r\n\r\n\r\nO, tus formas se pueden mover coomo uno de estos: \r\n\r\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\r\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\r\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
+      courseD_artist_project2_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Ahora, vamos a dibujar más de uno.”_\r\n\r\nAhora toma tu forma y dibuja
+        dos o tres seguidas saltando hacia adelante un número de pixeles.  \r\n\r\n-
+        Si saltas hacia adelante **menos** del ancho de tu forma, se pueden superponer\r\n-
+        Si saltas hacia adelante **más** del ancho de tu forma, te quedará un espacio\r\n\r\n<hr/>\r\n\r\nTu
+        fila puede termnar recta como en estos:\r\n\r\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\r\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\r\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\r\n<br/>
+        \ <br/>\r\n\r\n\r\nO, tus formas se pueden mover coomo uno de estos: \r\n\r\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\r\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\r\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
       courseD_artist_project2a: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Ahora vamos a girarnos y volvernos por donde vinomos.\"_\r\n\r\n¡Gira 180
         grados y dibuja exactamente el mismo patrón de escalera nuevamente!  \r\n\r\n-
@@ -2650,6 +2843,13 @@ es-MX:
         gire 180 grados nuevamente.\r\n\r\n<hr/>\r\n\r\nAquí hay un ejemplo de escaleras
         que usan giros de 76 grados:\r\n\r\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
       courseD_artist_project2a_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Ahora vamos a girarnos y volvernos por donde vinomos.\"_\r\n\r\n¡Gira 180
+        grados y dibuja exactamente el mismo patrón de escalera nuevamente!  \r\n\r\n-
+        El resto de esta etapa será más fácil si pones todo tus códiggos dentro de
+        un bucle para hacer que Elsa dibuje, se gire en 180 grados, dibuje, puego
+        gire 180 grados nuevamente.\r\n\r\n<hr/>\r\n\r\nAquí hay un ejemplo de escaleras
+        que usan giros de 76 grados:\r\n\r\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
+      courseD_artist_project2a_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Ahora vamos a girarnos y volvernos por donde vinomos.\"_\r\n\r\n¡Gira 180
         grados y dibuja exactamente el mismo patrón de escalera nuevamente!  \r\n\r\n-
         El resto de esta etapa será más fácil si pones todo tus códiggos dentro de
@@ -2672,6 +2872,14 @@ es-MX:
         estos ejemplos con polígonos:  \r\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\r\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\r\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\r\n\r\nLas
         formas abstractas pueden hacer copos de nieve más parecido a uno de estos:
         \ \r\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\r\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\r\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+      courseD_artist_project3_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Vamos a transformarlo en un copo de nieve.\"_\r\n\r\nLuego, haz que Elsa
+        salte de vuelta al centro usando el bloque `saltar 200 sobre 200`, y hazla
+        que gire para dibujar la línea de formas una y otra vez in un montón de direcciones
+        diferentes.   \r\n\r\n¡Que copos de nieve tan maravillosos puedes hacer!\r\n<hr/>\r\nObserva
+        estos ejemplos con polígonos:  \r\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\r\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\r\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\r\n\r\nLas
+        formas abstractas pueden hacer copos de nieve más parecido a uno de estos:
+        \ \r\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\r\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\r\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
       courseD_artist_project3a: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Vamos a girarlo y a convertirlo en un copo de nieve.\"_\r\n\r\nHaz girar
         esa forma una 5 ó 6 veces en círculos.\r\n- Si escoges 5 veces, intenta un
@@ -2682,11 +2890,20 @@ es-MX:
         esa forma una 5 ó 6 veces en círculos.\r\n- Si escoges 5 veces, intenta un
         giro de 72 grados\r\n- Si escoges 6 veces, intenta un giro de 60 grados\r\n<hr/>\r\n\r\nAquí
         tienes un ejemplo de Elsa girando un patrón 6 veces:\r\n\r\n![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)"
+      courseD_artist_project3a_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Vamos a girarlo y a convertirlo en un copo de nieve.\"_\r\n\r\nHaz girar
+        esa forma una 5 ó 6 veces en círculos.\r\n- Si escoges 5 veces, intenta un
+        giro de 72 grados\r\n- Si escoges 6 veces, intenta un giro de 60 grados\r\n<hr/>\r\n\r\nAquí
+        tienes un ejemplo de Elsa girando un patrón 6 veces:\r\n\r\n![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)"
       courseD_artist_project4: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"¿Qué sucede si dibujamos un copo de nieve uno encima del otro?\"_\r\n\r\nIntenta
         superponer dos formas dferentes de copos de nieve uno encima del otro con
         un pequeño giro en medio - ¡observa lo que resulta! "
       courseD_artist_project4_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"¿Qué sucede si dibujamos un copo de nieve uno encima del otro?\"_\r\n\r\nIntenta
+        superponer dos formas dferentes de copos de nieve uno encima del otro con
+        un pequeño giro en medio - ¡observa lo que resulta! "
+      courseD_artist_project4_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"¿Qué sucede si dibujamos un copo de nieve uno encima del otro?\"_\r\n\r\nIntenta
         superponer dos formas dferentes de copos de nieve uno encima del otro con
         un pequeño giro en medio - ¡observa lo que resulta! "
@@ -2702,10 +2919,19 @@ es-MX:
         ¿Qué sucede si usas dos ángulos diferentes en el patrón del escalón de tu
         escalera?\r\n- ¿Qué sucede si haces el patrón de tu diamante más largo o más
         corto?\r\n-¿Cómo luce al dibujar dos copos de nieve uno encima del otro?\r?"
+      courseD_artist_project4a_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        \ _\"Ahora, ¿Qué deberíamos hacer? Exploremos y creemos nuestro propio wonderland
+        invernal!\"_\r\n\r\nIntenta jugar con lo que has creado. ¡Dibuja lo que quieras!\r\n-
+        ¿Qué sucede si usas dos ángulos diferentes en el patrón del escalón de tu
+        escalera?\r\n- ¿Qué sucede si haces el patrón de tu diamante más largo o más
+        corto?\r\n-¿Cómo luce al dibujar dos copos de nieve uno encima del otro?\r?"
       courseD_artist_project5: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"¡Vuélvete creativo con las formas y ángulos para ver que tipo de nuevos
         copos de nieve podemos dibujar!\"_\r\n \n"
       courseD_artist_project5_2018: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"¡Vuélvete creativo con las formas y ángulos para ver que tipo de nuevos
+        copos de nieve podemos dibujar!"_'
+      courseD_artist_project5_2019: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _"¡Vuélvete creativo con las formas y ángulos para ver que tipo de nuevos
         copos de nieve podemos dibujar!"_'
       courseD_artist_project_embedded: "¡Aquí está lo que pronto estarás construyendo!"
@@ -2848,17 +3074,25 @@ es-MX:
         a recoger todo el néctar."
       courseD_bee_nestedLoops1_2018: "*\"¡Esto va a ser genial!\"*\r\n\r\nAyuda a
         la abeja a recoger todo el néctar."
+      courseD_bee_nestedLoops1_2019: "*\"¡Esto va a ser genial!\"*\r\n\r\nAyuda a
+        la abeja a recoger todo el néctar."
       courseD_bee_nestedLoops1a: "*\"¡Esto va a ser genial!\"*\r\n\r\nAyuda a la abeja
         a recoger todo el néctar."
       courseD_bee_nestedLoops1a_2018: "*\"¡Esto va a ser genial!\"*\r\n\r\nAyuda a
+        la abeja a recoger todo el néctar."
+      courseD_bee_nestedLoops1a_2019: "*\"¡Esto va a ser genial!\"*\r\n\r\nAyuda a
         la abeja a recoger todo el néctar."
       courseD_bee_nestedLoops2: Esta vez, ayuda a la abeja a recoger todo el néctar
         usando los menos bloques posible.
       courseD_bee_nestedLoops2_2018: Esta vez, ayuda a la abeja a recoger todo el
         néctar usando los menos bloques posible.
+      courseD_bee_nestedLoops2_2019: Esta vez, ayuda a la abeja a recoger todo el
+        néctar usando los menos bloques posible.
       courseD_bee_nestedLoops2_predict1: Esta vez, ayuda a la abeja a recoger todo
         el néctar usando los menos bloques posible.
       courseD_bee_nestedLoops2_predict1_2018: Esta vez, ayuda a la abeja a recoger
+        todo el néctar usando los menos bloques posible.
+      courseD_bee_nestedLoops2_predict1_2019: Esta vez, ayuda a la abeja a recoger
         todo el néctar usando los menos bloques posible.
       courseD_bee_nestedLoops3: "*\"¿Puedes creer todas estas lores?\"*\r\n\r\nRecoge
         todo el néctar de cada flor. "
@@ -2871,14 +3105,20 @@ es-MX:
         usando sólo los bloques disponibles."
       courseD_bee_nestedLoops7_2018: "**Desafío:** Descifra cómo obtener todo el néctar
         usando sólo los bloques disponibles."
+      courseD_bee_nestedLoops7_2019: "**Desafío:** Descifra cómo obtener todo el néctar
+        usando sólo los bloques disponibles."
       courseD_bee_nestedLoops8: 'Recolecta todo el néctar de cada flor y haz miel
         en cada panel. Utiliza un bucle anidado. '
       courseD_bee_nestedLoops8_2018: 'Recolecta todo el néctar de cada flor y haz
         miel en cada panel. Utiliza un bucle anidado. '
+      courseD_bee_nestedLoops8_2019: 'Recolecta todo el néctar de cada flor y haz
+        miel en cada panel. Utiliza un bucle anidado. '
       courseD_bee_nestedLoops9: Haz toda la miel.
       courseD_bee_nestedLoops9_2018: Haz toda la miel.
+      courseD_bee_nestedLoops9_2019: Haz toda la miel.
       courseD_bee_nestedLoops9_predict2: Haz toda la miel.
       courseD_bee_nestedLoops9_predict2_2018: Haz toda la miel.
+      courseD_bee_nestedLoops9_predict2_2019: Haz toda la miel.
       courseD_bee_nested_loops_challenge1: Vamos a cazar un tesoro - ¡usando bucles!
         Ayuda al coleccionista a alcanzar al menos dos pilas del tesoro usando sólo
         los bloques en tu caja de herramientas.
@@ -3198,7 +3438,7 @@ es-MX:
       courseD_iceage_loops11: "¡Ayuda a Scrat a llegar a la bellota!"
       courseD_iceage_loops12: "¡Llega a la bellota de cualquier forma que puedas!"
       courseD_iceage_loops2: "¡Usa un bloque <xml><block type=\"maze_turn\">\r\n    <title
-        name=\"DIR\">turnLeft</title>\r\n  </block></xml> para llegar a la bellota!\n"
+        name=\"DIR\">turnLeft</title>\r\n  </block></xml> para llegar a la bellota!"
       courseD_iceage_loops3: ¿Puedes llegar a la bellota con sólo un bloque <xml><block
         type="maze_moveForward"/></xml>? ¡Inténtalo usando un bucle!
       courseD_iceage_loops4: Añade un bloque más para que Scrat llegue hasta la bellota!
@@ -3214,20 +3454,30 @@ es-MX:
         hasta el usando la menor cantidad de bloques posible."
       courseD_maze_nestedLoops3_2018: "*\"¡Zombie ambriento!\"*\r\n\r\nLleva al zombie
         hasta el usando la menor cantidad de bloques posible."
+      courseD_maze_nestedLoops3_2019: "*\"¡Zombie ambriento!\"*\r\n\r\nLleva al zombie
+        hasta el usando la menor cantidad de bloques posible."
       courseD_maze_nestedLoops4: "¡Llévame al girasol!"
       courseD_maze_nestedLoops4_2018: "¡Llévame al girasol!"
+      courseD_maze_nestedLoops4_2019: "¡Llévame al girasol!"
       courseD_maze_nestedLoops6: "*\"¡Debo comer girasol!\"*\r\n\r\nLleva al zombie
         hasta el girasol sólo usando los bloques disponibles."
       courseD_maze_nestedLoops6_2018: "*\"¡Debo comer girasol!\"*\r\n\r\nLleva al
+        zombie hasta el girasol sólo usando los bloques disponibles."
+      courseD_maze_nestedLoops6_2019: "*\"¡Debo comer girasol!\"*\r\n\r\nLleva al
         zombie hasta el girasol sólo usando los bloques disponibles."
       courseD_maze_ramp1: Para este rompecabezas, encaja todos los bloques juntos
         y haz clic en "Ejecutar" ¡para verlos funcionar!
       courseD_maze_ramp1_2018: Para este rompecabezas, encaja todos los bloques juntos
         y haz clic en "Ejecutar" ¡para verlos funcionar!
+      courseD_maze_ramp1_2019: Para este rompecabezas, encaja todos los bloques juntos
+        y haz clic en "Ejecutar" ¡para verlos funcionar!
       courseD_maze_ramp2: Arrastra un bloque 'mover hacia adelante' extra desde la
         caja de herramientas, luego adjunta todos los bloques al 'cuando ejecute'
         para finalizar el código.
       courseD_maze_ramp2_2018: Arrastra un bloque 'mover hacia adelante' extra desde
+        la caja de herramientas, luego adjunta todos los bloques al 'cuando ejecute'
+        para finalizar el código.
+      courseD_maze_ramp2_2019: Arrastra un bloque 'mover hacia adelante' extra desde
         la caja de herramientas, luego adjunta todos los bloques al 'cuando ejecute'
         para finalizar el código.
       courseD_maze_ramp3: "*\"Este cerdo esta erizando mis plumas.\"*\r\n\r\nHay un
@@ -3236,26 +3486,39 @@ es-MX:
       courseD_maze_ramp3_2018: "*\"Este cerdo esta erizando mis plumas.\"*\r\n\r\nHay
         un bloque adicional que va a hacer que el pájaro choque.  \r\nEliminalo removiéndolo
         de los otros bloques y arrastrándolo de vuelta a la caja de herramientas."
+      courseD_maze_ramp3_2019: "*\"Este cerdo esta erizando mis plumas.\"*\r\n\r\nHay
+        un bloque adicional que va a hacer que el pájaro choque.  \r\nEliminalo removiéndolo
+        de los otros bloques y arrastrándolo de vuelta a la caja de herramientas."
       courseD_maze_ramp4: "*\"Traza el camino y llevame hasta el cerdo tonto.\"* \r\n\r\n¡Evita
         el TNT o volarán plumas!"
       courseD_maze_ramp4_2018: "*\"Traza el camino y llevame hasta el cerdo tonto.\"*
+        \r\n\r\n¡Evita el TNT o volarán plumas!"
+      courseD_maze_ramp4_2019: "*\"Traza el camino y llevame hasta el cerdo tonto.\"*
         \r\n\r\n¡Evita el TNT o volarán plumas!"
       courseD_maze_ramp5: "*\"¡Sigue este camino para llevarme hasta el cerdo!\"*\r\n\r\nEvita
         el TNT."
       courseD_maze_ramp5_2018: "*\"¡Sigue este camino para llevarme hasta el cerdo!\"*\r\n\r\nEvita
         el TNT."
+      courseD_maze_ramp5_2019: "*\"¡Sigue este camino para llevarme hasta el cerdo!\"*\r\n\r\nEvita
+        el TNT."
       courseD_maze_ramp5a: Pon atención a la secuencia y ve si puedes descifrar ¡cómo
         llegar a ese cerdo!
       courseD_maze_ramp5a_2018: Pon atención a la secuencia y ve si puedes descifrar
+        ¡cómo llegar a ese cerdo!
+      courseD_maze_ramp5a_2019: Pon atención a la secuencia y ve si puedes descifrar
         ¡cómo llegar a ese cerdo!
       courseD_maze_ramp5b: "**Desafío:** ¡Navega por este laberinto para ayudar al
         pájaro a encontrar al cerdo!"
       courseD_maze_ramp5b_2018: "**Desafío:** ¡Navega por este laberinto para ayudar
         al pájaro a encontrar al cerdo!"
+      courseD_maze_ramp5b_2019: "**Desafío:** ¡Navega por este laberinto para ayudar
+        al pájaro a encontrar al cerdo!"
       courseD_maze_ramp5c: Ayuda al pájaro a llegar al cerdo.
       courseD_maze_ramp5c_2018: Ayuda al pájaro a llegar al cerdo.
+      courseD_maze_ramp5c_2019: Ayuda al pájaro a llegar al cerdo.
       courseD_maze_ramp5d: Lleva al pájaro hasta el cerdo.
       courseD_maze_ramp5d_2018: Lleva al pájaro hasta el cerdo.
+      courseD_maze_ramp5d_2019: Lleva al pájaro hasta el cerdo.
       courseD_maze_ramp6: "*\"Mantén la calma y ayúdame a encontrar a ese cerdo malo.
         ¡De lo contrario podría enojarme!\"*\r\n\r\nCuando tienes varios de los mismos
         bloques en una fila, intenta usar un bucle 'repetir'. ¡Hará lo mismo con menos
@@ -3527,13 +3790,13 @@ es-MX:
         el comando ¡para llegar a absolutalmente cualquier espacio que gustes! Intenta
         este código para ver cómo funciona, luego 'has tu propio programa!\r\n<xml>\r\n
         \ <block type=\"jump_to_xy\">\r\n    <title name=\"XPOS\">???</title>\r\n
-        \   <title name=\"YPOS\">???</title>\r\n    </block></xml>\n"
+        \   <title name=\"YPOS\">???</title>\r\n    </block></xml>"
       courseE_artist_functions_challenge2_2018: "No sólo puedes slatar algunas ubicaciones
         pre establecidas, como las esquinas del lienzo, también puedes 'saltar a'
         el comando ¡para llegar a absolutalmente cualquier espacio que gustes! Intenta
         este código para ver cómo funciona, luego 'has tu propio programa!\r\n<xml>\r\n
         \ <block type=\"jump_to_xy\">\r\n    <title name=\"XPOS\">???</title>\r\n
-        \   <title name=\"YPOS\">???</title>\r\n    </block></xml>\n"
+        \   <title name=\"YPOS\">???</title>\r\n    </block></xml>"
       courseE_artist_functions_predict1: "Aquí hay un rompecabezas que usa una función
         que hemos definido.\r\n"
       courseE_artist_functions_predict1_2018: 'Here is a puzzle that uses a function
@@ -3784,12 +4047,18 @@ es-MX:
         díficil adivinar cuánta tierra tiene. \r\n\r\n___\r\n\r\nHemos agregado un
         nuevo bloque a la caja de herramientas llamado bloque 'mientras haya un monón'.
         ¡Usalo para remover la tierra sólo mientras haya algo que rcoger! "
+      courseE_farmer_ramp11a_2019: "¡Oh cielos!  Este montón es tan grande que es
+        díficil adivinar cuánta tierra tiene. \r\n\r\n___\r\n\r\nHemos agregado un
+        nuevo bloque a la caja de herramientas llamado bloque 'mientras haya un monón'.
+        ¡Usalo para remover la tierra sólo mientras haya algo que rcoger! "
       courseE_farmer_ramp11b: Vamos a intentarlo de nuevo, ¡pero con más montones!
       courseE_farmer_ramp11b_2018: Vamos a intentarlo de nuevo, ¡pero con más montones!
+      courseE_farmer_ramp11b_2019: Vamos a intentarlo de nuevo, ¡pero con más montones!
       courseE_farmer_ramp12: Recoge todas las lechugas.
       courseE_farmer_ramp12_2018: Recoge todas las lechugas.
       courseE_farmer_ramp12_forswap: Recoge todas las lechugas.
       courseE_farmer_ramp12_forswap_2018: Recoge todas las lechugas.
+      courseE_farmer_ramp12_forswap_2019: Recoge todas las lechugas.
       courseE_farmer_ramp12a: "Ayuda al agricultor a recorrer el camino para encontrar
         todas las lechugas\r\n\r\nEn este rompecabezas, las lechugas están creciendo
         al final de cada camino. Si hay un camino frente a ellas, la agricultora puede
@@ -3806,10 +4075,16 @@ es-MX:
       courseE_farmer_ramp12b_2018: Ahora, la cosechadora necesita recogr todas laslechugas.
         Usa el 'mientras hay lechugas' dentro del bucle 'repetir' para recogerlas
         todas!
+      courseE_farmer_ramp12b_2019: Ahora, la cosechadora necesita recogr todas laslechugas.
+        Usa el 'mientras hay lechugas' dentro del bucle 'repetir' para recogerlas
+        todas!
       courseE_farmer_ramp12c: "Las lechugas están ahora al final del camino.  \r\nSigue
         el camino **hasta** que alcances la lechuga luego continúa para recoger **mientras**
         queden más por recoger.  "
       courseE_farmer_ramp12c_2018: "Las lechugas están ahora al final del camino.
+        \ \r\nSigue el camino **hasta** que alcances la lechuga luego continúa para
+        recoger **mientras** queden más por recoger.  "
+      courseE_farmer_ramp12c_2019: "Las lechugas están ahora al final del camino.
         \ \r\nSigue el camino **hasta** que alcances la lechuga luego continúa para
         recoger **mientras** queden más por recoger.  "
       courseE_farmer_ramp12d: "Las lechugas están espacidas en el jardín  \r\nSigue
@@ -3818,10 +4093,16 @@ es-MX:
       courseE_farmer_ramp12d_2018: "Las lechugas están espacidas en el jardín  \r\nSigue
         por cada camino **hasta** que alcances una lechuga, luego continúa para recogerla
         **mientras** queden más por recoger.  "
+      courseE_farmer_ramp12d_2019: "Las lechugas están espacidas en el jardín  \r\nSigue
+        por cada camino **hasta** que alcances una lechuga, luego continúa para recogerla
+        **mientras** queden más por recoger.  "
       courseE_farmer_ramp12e: "Las lechugas están espacidas en el jardín  \r\nSigue
         por cada camino **hasta** que alcances una lechuga, luego continúa para recogerla
         **mientras** queden más por recoger.  "
       courseE_farmer_ramp12e_2018: "Las lechugas están espacidas en el jardín  \r\nSigue
+        por cada camino **hasta** que alcances una lechuga, luego continúa para recogerla
+        **mientras** queden más por recoger.  "
+      courseE_farmer_ramp12e_2019: "Las lechugas están espacidas en el jardín  \r\nSigue
         por cada camino **hasta** que alcances una lechuga, luego continúa para recogerla
         **mientras** queden más por recoger.  "
       courseE_farmer_ramp12f: "**Desafío**: La única manera de recoger todos los cultivos
@@ -3831,10 +4112,17 @@ es-MX:
         los cultivos es moverse hacia adelante hasta llegar a la lechuga, luego girar
         a la izquierda **si** hay un camino a la izquierda. De lo contrario, gira
         a la derecha."
+      courseE_farmer_ramp12f_2019: "**Desafío**: La única manera de recoger todos
+        los cultivos es moverse hacia adelante hasta llegar a la lechuga, luego girar
+        a la izquierda **si** hay un camino a la izquierda. De lo contrario, gira
+        a la derecha."
       courseE_farmer_ramp12g: Muévete hacia adelante hasta llegar a la lechuga, luego
         gira a la izquierda **si** hay un camino a la izquierda. De lo contrario gira
         a la derecha.
       courseE_farmer_ramp12g_2018: Muévete hacia adelante hasta llegar a la lechuga,
+        luego gira a la izquierda **si** hay un camino a la izquierda. De lo contrario
+        gira a la derecha.
+      courseE_farmer_ramp12g_2019: Muévete hacia adelante hasta llegar a la lechuga,
         luego gira a la izquierda **si** hay un camino a la izquierda. De lo contrario
         gira a la derecha.
       courseE_farmer_ramp13: "¡Cielos!  Mira todos estos brotes. algunos se volverán
@@ -4016,21 +4304,33 @@ es-MX:
         con otros elementos de dibujo para hacer imágenes mágicas como esta.\r\n\r\n![](https://images.code.org/5a4eec10a53aa78ad6b12fb5e48680f8-image-1497991505852.png)"
       courseF_artist_for10_2018: "**Juego libre:** intenta usar la variable 'contador`
         con otros elementos de dibujo para hacer imágenes mágicas como esta.\r\n\r\n![](https://images.code.org/5a4eec10a53aa78ad6b12fb5e48680f8-image-1497991505852.png)"
+      courseF_artist_for10_2019: "**Juego libre:** intenta usar la variable 'contador`
+        con otros elementos de dibujo para hacer imágenes mágicas como esta.\r\n\r\n![](https://images.code.org/5a4eec10a53aa78ad6b12fb5e48680f8-image-1497991505852.png)"
       courseF_artist_for1_2018: "**Juego libre:** Experimaneta con el bucle 'por'
+        y la variable 'contador'.  \r\n\r\nArrastra unos pocos bloques y ve lo que
+        sucede.  \r\n"
+      courseF_artist_for1_2019: "**Juego libre:** Experimaneta con el bucle 'por'
         y la variable 'contador'.  \r\n\r\nArrastra unos pocos bloques y ve lo que
         sucede.  \r\n"
       courseF_artist_for2: Usa un bucle `repetir`dentro del bucle `por`para crear
         este grupo de triángulos que va dese lados de 50 pixeles a 100 pixeles.
       courseF_artist_for2_2018: Usa un bucle `repetir`dentro del bucle `por`para crear
         este grupo de triángulos que va dese lados de 50 pixeles a 100 pixeles.
+      courseF_artist_for2_2019: Usa un bucle `repetir`dentro del bucle `por`para crear
+        este grupo de triángulos que va dese lados de 50 pixeles a 100 pixeles.
       courseF_artist_for3: Crea estos triángulos ue van de lados de 20 a 200 pixeles,
         donde cada triángulo es 20 pixeles más grande que el úlimo.
       courseF_artist_for3_2018: Crea estos triángulos ue van de lados de 20 a 200
+        pixeles, donde cada triángulo es 20 pixeles más grande que el úlimo.
+      courseF_artist_for3_2019: Crea estos triángulos ue van de lados de 20 a 200
         pixeles, donde cada triángulo es 20 pixeles más grande que el úlimo.
       courseF_artist_for5: "Sólo un pequeño cambio al código de la última imagen puede
         crear este dibujo. ¿Puedes descfrar cuál es el cambio?\r\n___\r\nPista: ¡Necesitas
         remover algo!"
       courseF_artist_for5_2018: "Sólo un pequeño cambio al código de la última imagen
+        puede crear este dibujo. ¿Puedes descfrar cuál es el cambio?\r\n___\r\nPista:
+        ¡Necesitas remover algo!"
+      courseF_artist_for5_2019: "Sólo un pequeño cambio al código de la última imagen
         puede crear este dibujo. ¿Puedes descfrar cuál es el cambio?\r\n___\r\nPista:
         ¡Necesitas remover algo!"
       courseF_artist_for6: "Si giras un poco más o un poco menos de lo que normalmente
@@ -4039,14 +4339,22 @@ es-MX:
       courseF_artist_for6_2018: "Si giras un poco más o un poco menos de lo que normalmente
         harías para una forma, crea un efecto nítido\r \n\r\nRecrea tu código del
         último nivel, pero gira 89 grados para crear esta espiral cuadrado torcido."
+      courseF_artist_for6_2019: "Si giras un poco más o un poco menos de lo que normalmente
+        harías para una forma, crea un efecto nítido\r \n\r\nRecrea tu código del
+        último nivel, pero gira 89 grados para crear esta espiral cuadrado torcido."
       courseF_artist_for7: "¡Haz tres pequeños cambios all código del último nivel
         para obtener esto!  "
       courseF_artist_for7_2018: "¡Haz tres pequeños cambios all código del último
+        nivel para obtener esto!  "
+      courseF_artist_for7_2019: "¡Haz tres pequeños cambios all código del último
         nivel para obtener esto!  "
       courseF_artist_for9: "**Inspirción:** Usa el conntador al interior del bloque
         `establecer alfa` para obtener algo Como este centro desvanecido. \r\n(Este
         patrón de hexagon fue hecho usando un giro de 60 grados.)"
       courseF_artist_for9_2018: "**Inspirción:** Usa el conntador al interior del
+        bloque `establecer alfa` para obtener algo Como este centro desvanecido. \r\n(Este
+        patrón de hexagon fue hecho usando un giro de 60 grados.)"
+      courseF_artist_for9_2019: "**Inspirción:** Usa el conntador al interior del
         bloque `establecer alfa` para obtener algo Como este centro desvanecido. \r\n(Este
         patrón de hexagon fue hecho usando un giro de 60 grados.)"
       courseF_artist_for_challenge1: "¿Puedes descifrar cómo recrear este dibujo?
@@ -4055,10 +4363,16 @@ es-MX:
       courseF_artist_for_challenge1_2018: "¿Puedes descifrar cómo recrear este dibujo?
         \r\n\r\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"
         width=\"350px\"/>"
+      courseF_artist_for_challenge1_2019: "¿Puedes descifrar cómo recrear este dibujo?
+        \r\n\r\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"
+        width=\"350px\"/>"
       courseF_artist_for_challenge2: "¿Puedes descifrar cómo recrear este dibujo con
         un bucle simple? \r\n\r\n<img src=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\"
         width=\"350px\"/>"
       courseF_artist_for_challenge2_2018: "¿Puedes descifrar cómo recrear este dibujo
+        con un bucle simple? \r\n\r\n<img src=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\"
+        width=\"350px\"/>"
+      courseF_artist_for_challenge2_2019: "¿Puedes descifrar cómo recrear este dibujo
         con un bucle simple? \r\n\r\n<img src=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\"
         width=\"350px\"/>"
       courseF_artist_fwp1: Hoy, vamos a continuar usando el editor de función poderoso.
@@ -4171,10 +4485,17 @@ es-MX:
         Intenta editar la variable de otras formas.  \r\n-  ¿Qué sucede si comienzas
         con una 'longitud' de menos de 150? \r\n-  ¿Qué pasa si multiplicamos tu variable
         por 1.25 a través cada vez\r\n-? Cuál será tu código si giras 119 grados?"
+      courseF_artist_variables10_2019: "Aquí está tu código del último rompecabezas.
+        Intenta editar la variable de otras formas.  \r\n-  ¿Qué sucede si comienzas
+        con una 'longitud' de menos de 150? \r\n-  ¿Qué pasa si multiplicamos tu variable
+        por 1.25 a través cada vez\r\n-? Cuál será tu código si giras 119 grados?"
       courseF_artist_variables2: "Ahra usa oro bucle para dibujar tres de esos triángulos
         uno al lado del otro. \r\n\r\nPuede anidar el código dentro del interior de
         tu último rompecabezas."
       courseF_artist_variables2_2018: "Ahra usa oro bucle para dibujar tres de esos
+        triángulos uno al lado del otro. \r\n\r\nPuede anidar el código dentro del
+        interior de tu último rompecabezas."
+      courseF_artist_variables2_2019: "Ahra usa oro bucle para dibujar tres de esos
         triángulos uno al lado del otro. \r\n\r\nPuede anidar el código dentro del
         interior de tu último rompecabezas."
       courseF_artist_variables3: "Antes que las cosas se pongan díficiles, ¿Puedes
@@ -4183,10 +4504,16 @@ es-MX:
       courseF_artist_variables3_2018: "Antes que las cosas se pongan díficiles, ¿Puedes
         mover la longitud de 50 a una variable para que así podamos usarla en el próximo
         rompecabezas?  \r\n\r\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
+      courseF_artist_variables3_2019: "Antes que las cosas se pongan díficiles, ¿Puedes
+        mover la longitud de 50 a una variable para que así podamos usarla en el próximo
+        rompecabezas?  \r\n\r\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
       courseF_artist_variables4: Ahora usa la variable 'longitud' para hacer que el
         artista salte hacia adelante y hacia abajo en 'longitud' de los pixeles entre
         los triángulos.
       courseF_artist_variables4_2018: Ahora usa la variable 'longitud' para hacer
+        que el artista salte hacia adelante y hacia abajo en 'longitud' de los pixeles
+        entre los triángulos.
+      courseF_artist_variables4_2019: Ahora usa la variable 'longitud' para hacer
         que el artista salte hacia adelante y hacia abajo en 'longitud' de los pixeles
         entre los triángulos.
       courseF_artist_variables6: "**¡Ups!**  \r\n\r\nRealmente necesitamos que los
@@ -4195,16 +4522,25 @@ es-MX:
       courseF_artist_variables6_2018: "**¡Ups!**  \r\n\r\nRealmente necesitamos que
         los triángulos sean de 60 pixeles de ancho, con saltos de 60 pixeles.  \r\n\r\n¿No
         estás feliz de estar usando una variable?"
+      courseF_artist_variables6_2019: "**¡Ups!**  \r\n\r\nRealmente necesitamos que
+        los triángulos sean de 60 pixeles de ancho, con saltos de 60 pixeles.  \r\n\r\n¿No
+        estás feliz de estar usando una variable?"
       courseF_artist_variables6a: Usa lo que has aprendido para construir este diseño
         donde los cuadrados tengan lados de 80 pixeles y el artista salte 80 pixeles
         por sobre y por debajo entre cada uno.
       courseF_artist_variables6a_2018: Usa lo que has aprendido para construir este
         diseño donde los cuadrados tengan lados de 80 pixeles y el artista salte 80
         pixeles por sobre y por debajo entre cada uno.
+      courseF_artist_variables6a_2019: Usa lo que has aprendido para construir este
+        diseño donde los cuadrados tengan lados de 80 pixeles y el artista salte 80
+        pixeles por sobre y por debajo entre cada uno.
       courseF_artist_variables7: "Comencemos esta sección dibjando un triángulo con
         lados de 150 pixeles. \r\n\r\nAsegúrate de usar la variable 'longitud' y un
         bucle para repeir."
       courseF_artist_variables7_2018: "Comencemos esta sección dibjando un triángulo
+        con lados de 150 pixeles. \r\n\r\nAsegúrate de usar la variable 'longitud'
+        y un bucle para repeir."
+      courseF_artist_variables7_2019: "Comencemos esta sección dibjando un triángulo
         con lados de 150 pixeles. \r\n\r\nAsegúrate de usar la variable 'longitud'
         y un bucle para repeir."
       courseF_artist_variables8: "Reconstruye el código del triángulo del último rompecabezas,
@@ -4223,7 +4559,7 @@ es-MX:
         \                           </valor>\r\n                          </bloque>\r\n
         \                       </valor>\r\n                      </bloque>\r\n</xml>\r\n\r\nLa
         longitud del primer lado del triángulo es de 150 pixeles.\n \nroot -> data
-        -> markdown_instructions -> courseF_artist_variables8_markdown_instruction.\n"
+        -> markdown_instructions -> courseF_artist_variables8_markdown_instruction."
       courseF_artist_variables8_2018: "Reconstruye el código del triángulo del último
         rompecabezas, pero esta vez usa el bloque 'establecer la longitud a' para
         restaurar la variable 'longitud' a 'longitud'+10 al final de cada iteración
@@ -4240,7 +4576,24 @@ es-MX:
         \                           </valor>\r\n                          </bloque>\r\n
         \                       </valor>\r\n                      </bloque>\r\n</xml>\r\n\r\nLa
         longitud del primer lado del triángulo es de 150 pixeles.\n \nroot -> data
-        -> markdown_instructions -> courseF_artist_variables8_markdown_instruction.\n"
+        -> markdown_instructions -> courseF_artist_variables8_markdown_instruction."
+      courseF_artist_variables8_2019: "Reconstruye el código del triángulo del último
+        rompecabezas, pero esta vez usa el bloque 'establecer la longitud a' para
+        restaurar la variable 'longitud' a 'longitud'+10 al final de cada iteración
+        del bucle.\r\n\r\n<xml>\r\n<tipo de bloque=\"establecer_variables\" inline=\"falso\">\r\n
+        \                       <título nombre=\"VAR\">longitud</título>\r\n                        <valor
+        nombre=\"VALOR\">\r\n                          <tipo de bloque=\"matemática_aritmética\"
+        inline=\"verdero\">\r\n                            <título nombre=\"OP\">ADD</título>\r\n
+        \                           <valor nombre=\"A\">\r\n                              <tipo
+        de bloque=\"obtener_variables\">\r\n                                <título
+        nombre=\"VAR\">longitud</título>\r\n                              </bloque>\r\n
+        \                           </valor>\r\n                            <valor
+        nombre=\"B\">\r\n                              <tipo de bloque=\"matemática_número\">\r\n
+        \                               <título nombre=\"NUM\">10</título>\r\n                              </bloque>\r\n
+        \                           </valor>\r\n                          </bloque>\r\n
+        \                       </valor>\r\n                      </bloque>\r\n</xml>\r\n\r\nLa
+        longitud del primer lado del triángulo es de 150 pixeles.\n \nroot -> data
+        -> markdown_instructions -> courseF_artist_variables8_markdown_instruction."
       courseF_artist_variables9: "¡Tiempo de hacer algo de arte!  \r\n\r\n¡Ve lo que
         sucede cuando repites el código del último rompecabezas **30** veces en lugar
         de sólo 3!\r\n\r\nSiente la libertad de hacer tus líneas de cualquier color
@@ -4249,10 +4602,17 @@ es-MX:
         lo que sucede cuando repites el código del último rompecabezas **30** veces
         en lugar de sólo 3!\r\n\r\nSiente la libertad de hacer tus líneas de cualquier
         color o patrón para algo de diversión extra."
+      courseF_artist_variables9_2019: "¡Tiempo de hacer algo de arte!  \r\n\r\n¡Ve
+        lo que sucede cuando repites el código del último rompecabezas **30** veces
+        en lugar de sólo 3!\r\n\r\nSiente la libertad de hacer tus líneas de cualquier
+        color o patrón para algo de diversión extra."
       courseF_artist_variablesFP: "**Juego libre:** Toma lo que has aprendido y haz
         tu propio dibujo. \r\n\r\n¿Cómo puedes usar las variables con cuadrados, pentágonos
         o hexágonos?"
       courseF_artist_variablesFP_2018: "**Juego libre:** Toma lo que has aprendido
+        y haz tu propio dibujo. \r\n\r\n¿Cómo puedes usar las variables con cuadrados,
+        pentágonos o hexágonos?"
+      courseF_artist_variablesFP_2019: "**Juego libre:** Toma lo que has aprendido
         y haz tu propio dibujo. \r\n\r\n¿Cómo puedes usar las variables con cuadrados,
         pentágonos o hexágonos?"
       courseF_artist_variables_10: "Aquí está tu código del último rompecabezas. Intenta
@@ -4295,6 +4655,8 @@ es-MX:
         variable de 'longitud' y usarla para crear este interesante patrón?"
       courseF_artist_variables_challenge1_2018: "¡Alerta de desafío! ¿Puedes crear
         una variable de 'longitud' y usarla para crear este interesante patrón?"
+      courseF_artist_variables_challenge1_2019: "¡Alerta de desafío! ¿Puedes crear
+        una variable de 'longitud' y usarla para crear este interesante patrón?"
       courseF_artist_variables_challenge1a: "<img src=\"https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png\"
         width=\"250px\"/>\r\n\r\n¡Has aprendido todo lo que necesitas para saber para
         hacer un patrón como este! Este rompecabezas está hecho para ser díficil.
@@ -4304,6 +4666,10 @@ es-MX:
         hacer un patrón como este! Este rompecabezas está hecho para ser díficil.
         ¿Puedes insistrir con él hasta descubrir la solución?"
       courseF_artist_variables_challenge2_2018: "<img src=\"https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png\"
+        width=\"250px\"/>\r\n\r\n¡Has aprendido todo lo que necesitas para saber para
+        hacer un patrón como este! Este rompecabezas está hecho para ser díficil.
+        ¿Puedes insistrir con él hasta descubrir la solución?"
+      courseF_artist_variables_challenge2_2019: "<img src=\"https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png\"
         width=\"250px\"/>\r\n\r\n¡Has aprendido todo lo que necesitas para saber para
         hacer un patrón como este! Este rompecabezas está hecho para ser díficil.
         ¿Puedes insistrir con él hasta descubrir la solución?"
@@ -4361,16 +4727,26 @@ es-MX:
         bucles 'para' e intenta resover este problema.\r\n\r\nRecuerda: Puede que
         tengas que pasar por las soluciones varias veces antes de resolver todos los
         pasos."
+      courseF_bee_for10_2019: "**Desafío;** Toma lo que has aprendido acerca de los
+        bucles 'para' e intenta resover este problema.\r\n\r\nRecuerda: Puede que
+        tengas que pasar por las soluciones varias veces antes de resolver todos los
+        pasos."
       courseF_bee_for11: "Si tu bucle está en cuenta regresiva, el incremento es **sustraido**
         de la variable contador cada vez que se complete una vuelta.\r\n\r\n¿Cuál
         debería ser tu incremento para recoger 15, luego 12, luego 9, 6, 3 néctars?"
       courseF_bee_for11_2018: "Si tu bucle está en cuenta regresiva, el incremento
         es **sustraido** de la variable contador cada vez que se complete una vuelta.\r\n\r\n¿Cuál
         debería ser tu incremento para recoger 15, luego 12, luego 9, 6, 3 néctars?"
+      courseF_bee_for11_2019: "Si tu bucle está en cuenta regresiva, el incremento
+        es **sustraido** de la variable contador cada vez que se complete una vuelta.\r\n\r\n¿Cuál
+        debería ser tu incremento para recoger 15, luego 12, luego 9, 6, 3 néctars?"
       courseF_bee_for2: "Escribe el códgo pra ayudar a la abeja a recoger todo el
         néctar.\r\n\r\nNecesitarás muchos bloques para este desafío, pero aprenderemos
         una manera más fácil en el próximo rompecabezas."
       courseF_bee_for2_2018: "Escribe el códgo pra ayudar a la abeja a recoger todo
+        el néctar.\r\n\r\nNecesitarás muchos bloques para este desafío, pero aprenderemos
+        una manera más fácil en el próximo rompecabezas."
+      courseF_bee_for2_2019: "Escribe el códgo pra ayudar a la abeja a recoger todo
         el néctar.\r\n\r\nNecesitarás muchos bloques para este desafío, pero aprenderemos
         una manera más fácil en el próximo rompecabezas."
       courseF_bee_for3: "Ah, ¡el bucle 'para' lo hace mucho más fácil!\r\n\r\nIntenta
@@ -4381,6 +4757,9 @@ es-MX:
       courseF_bee_for6_2018: "También puedes usar el bucle 'para' para hacer cuenta
         regresiva.\r\n\r\nIntenta juntar este néctar contando regresivamente de **5**
         a **1** de **1** en uno."
+      courseF_bee_for6_2019: "También puedes usar el bucle 'para' para hacer cuenta
+        regresiva.\r\n\r\nIntenta juntar este néctar contando regresivamente de **5**
+        a **1** de **1** en uno."
       courseF_bee_for7: "El último númeo en tu bucle 'para' se llama **incremento**.
         Cada vez que el bucle es ejecutado, la variable contador cambia por el valor
         del **incremento**.\r\n\r\nIntenta recoger estas flores usando un **incremento**
@@ -4389,14 +4768,23 @@ es-MX:
         Cada vez que el bucle es ejecutado, la variable contador cambia por el valor
         del **incremento**.\r\n\r\nIntenta recoger estas flores usando un **incremento**
         de 2."
+      courseF_bee_for7_2019: "El último númeo en tu bucle 'para' se llama **incremento**.
+        Cada vez que el bucle es ejecutado, la variable contador cambia por el valor
+        del **incremento**.\r\n\r\nIntenta recoger estas flores usando un **incremento**
+        de 2."
       courseF_bee_for8: "¡Lo tienes! \r\n\r\n¿Cuál debería ser tu **incremento** para
         recoger 3, 6, 9, 12, 15 néctars?\r\n"
       courseF_bee_for8_2018: "¡Lo tienes! \r\n\r\n¿Cuál debería ser tu **incremento**
+        para recoger 3, 6, 9, 12, 15 néctars?\r\n"
+      courseF_bee_for8_2019: "¡Lo tienes! \r\n\r\n¿Cuál debería ser tu **incremento**
         para recoger 3, 6, 9, 12, 15 néctars?\r\n"
       courseF_bee_for9: "¡Ahora, combinemos la variable 'contador' con un bloque 'matemática'!\r\n\r\n¿Cómo
         puedes usar la variable 'contador' para navegar este jardín con la menor cantidad
         posible de bloques?"
       courseF_bee_for9_2018: "¡Ahora, combinemos la variable 'contador' con un bloque
+        'matemática'!\r\n\r\n¿Cómo puedes usar la variable 'contador' para navegar
+        este jardín con la menor cantidad posible de bloques?"
+      courseF_bee_for9_2019: "¡Ahora, combinemos la variable 'contador' con un bloque
         'matemática'!\r\n\r\n¿Cómo puedes usar la variable 'contador' para navegar
         este jardín con la menor cantidad posible de bloques?"
       courseF_bee_for_challenge1: "¡Puedes usar este 'bucle para' para recoger todo
@@ -4405,9 +4793,14 @@ es-MX:
       courseF_bee_for_challenge1_2018: "¡Puedes usar este 'bucle para' para recoger
         todo el néctar. Increible!\r\n\r\nHay unas pocas acciones que querrás 'repetir'contador'
         veces."
+      courseF_bee_for_challenge1_2019: "¡Puedes usar este 'bucle para' para recoger
+        todo el néctar. Increible!\r\n\r\nHay unas pocas acciones que querrás 'repetir'contador'
+        veces."
       courseF_bee_for_challenge2: Resuelve este rompecabezas con el menor número de
         bloques posible.
       courseF_bee_for_challenge2_2018: Resuelve este rompecabezas con el menor número
+        de bloques posible.
+      courseF_bee_for_challenge2_2019: Resuelve este rompecabezas con el menor número
         de bloques posible.
       courseF_bee_functions2: "Para facilitar las cosas, ¡es momento de aprender acerca
         de las funciones!!\r\n\r\nDe aquí en adelante, estarás usando un nuevo *editor
@@ -4552,7 +4945,13 @@ es-MX:
         rompecabezas, cada área necesita la variable para ser menos que el área anterior.
         Sustrae uno de la variable cada vez que pase por el bucle si quieres usar
         la misma función para resolver este nivel."
+      courseF_bee_variables_3_2019: "*\"¡Que jardín más increíble!\"*\r\n\r\nEn este
+        rompecabezas, cada área necesita la variable para ser menos que el área anterior.
+        Sustrae uno de la variable cada vez que pase por el bucle si quieres usar
+        la misma función para resolver este nivel."
       courseF_bee_variables_4_2018: "*\"¡Increíble!\"\r\n\r\nEdita el código para
+        hacerlo funcionar para este rompecabezas."
+      courseF_bee_variables_4_2019: "*\"¡Increíble!\"\r\n\r\nEdita el código para
         hacerlo funcionar para este rompecabezas."
       courseF_maze_ramp1: Para este rompecabezas, conecta todos los bloques desde
         el espacio de trabajo debajo del bloque <xml><block type="when_run"/></xml>
@@ -4848,10 +5247,10 @@ es-MX:
         herramientas ¡para ver qué hacen!"
       grade2_PuppyLoops_10: Mi molinillo de viento no está terminado. ¿Cuántas veces
         necesito repetir para terminarlo?
-      grade2_PuppyLoops_2: "Subitamente, aparece un bloque mágico! Con\nel bloque
-        `repetir`, puede repetir el código una y otra vez.\r\n\r\nPuedes llegar a\nel
-        cerdo creando un circuito que usa solo un bloque `adelante' en el interior\nde
-        una 'repetición'?"
+      grade2_PuppyLoops_2: |-
+        De repente, ¡un bloque mágico aparece! Con el bloque 'repetir', tú puedes repetir el código una y otra vez.
+
+        ¿Puedes llegar al cerdo creando un bucle que solo utilice bloques ‘avanzar’ dentro de uno ‘repetir’?
       grade2_PuppyLoops_4: Usa dos ciclos para hacer que el cerdo use menos bloques.
       grade2_PuppyLoops_8: 'El código para los tres bigotes que ves es incorrecto.
         Sugerencia: cada bigote tiene 75 píxeles de largo. Repara este código para
@@ -4865,10 +5264,10 @@ es-MX:
       grade2_playlab_project_3: "¿Puedes hacer que Waddles (actor 1) diga \"¡auch!\"
         y reproduzca un sonido de \"golpe\" si se encuentra con Chomp? \r\n\r\nCuando
         estes listo, juega el juego para hacer que eso suceda.\r\n\r\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
-      grade2_puppy_loops2: "Subitamente, aparece un bloque mágico! Con\nel bloque
-        `repetir`, puede repetir el código una y otra vez.\r\n\r\nPuedes llegar a\nel
-        cerdo creando un circuito que usa solo un bloque `adelante' en el interior\nde
-        una 'repetición'?"
+      grade2_puppy_loops2: |-
+        De repente, ¡un bloque mágico aparece! Con el bloque 'repetir', tú puedes repetir el código una y otra vez.
+
+        ¿Puedes llegar al cerdo creando un bucle que solo utilice bloques ‘avanzar’ dentro de uno ‘repetir’?
       grade2_puppy_loops3: "*\"¡Llevame al cerdo!\"*\r\n\r\n¡Solucione este rompecabezas
         creando un bucle!"
       grade2_puppy_loops4: Usa dos ciclos para hacer que el cerdo use menos bloques.
@@ -4911,9 +5310,8 @@ es-MX:
       grade3_Conditionals_10: 'Recoge néctar y haz miel. Pista: ¿Qué ocurre si usas
         el condicional "Si néctar" en una flor roja? ¿Puedes completar esto con un
         bucle (loop)?'
-      grade3_Conditionals_11 BAD: |-
-        ** Evaluación: ** Use un bucle `siempre que`
-        para recoger todo el néctar de estas flores.
+      grade3_Conditionals_11 BAD: "**Evaluación:** Usa el bucle 'while' para recolectar
+        todo el nectar de las flores."
       grade3_Conditionals_11: "Vamos a juntar todo!\r\n\r\nUsa lo aprendido para ayudarme
         a recolectar néctar sólo de las flores con néctar, utiliza el menor número
         de bloques posible.  \r\n\r\nNo olvides hacer miel al final."
@@ -4950,10 +5348,13 @@ es-MX:
         para hacer toda la miel."
       grade3_Debugging_9: Estos bloques realmente me molestan. Corregir el (los) error(es)
         para recoger todo el néctar y hacer todo de la miel.
-      grade3_Loops_10: "¡Una abeja tan ocupada!\n\r\nAyuda a Abeja a recolectar todo
-        el néctar y hacer toda la miel con la menor cantidad de bloques posible."
-      grade3_Loops_11: "La forma de este camino es diferente de los demás. \r\n\r\n¿Puedes
-        recolectar todo el néctar usando la menor cantidad de bloques posible?"
+      grade3_Loops_10: Ayuda a la abeja a recolectar todo el nectar y haz toda la
+        miel con el menor número de bloques posible.
+      grade3_Loops_11: |-
+        La forma de este camino es diferente a los demás.
+
+
+        ¿Puedes recolectar todo el nectar usando el menor número de bloques posible?
       grade3_Loops_3: "¿Podrías utilizar un ciclo para recolectar todo el néctar?"
       grade3_Loops_4: Ahora usa el nuevo bloque repeat para recolectar todo el néctar
         y hacer toda la miel.
@@ -4982,19 +5383,18 @@ es-MX:
         para ver si hay una flor bajo la nube. Si hay una flor, saca néctar."
       grade3_bee_conditionals_quantum2: La abeja sólo quiere néctar ahora. Recuerda
         que no todos los objetos son flores, recoge néctar solamente de las flores.
-      grade3_maze_Loop1: "**Evaluación:** Llévame\nal girasol usando solo 5 bloques! "
+      grade3_maze_Loop1: "**Evaluación:** ¡Llévame al girasol utilizando solo 5 bloques! "
       grade3_maze_loops2: "¡Llévame al girasol!"
       grade3_maze_loops2a: "*\"¡Zombie ambriento!\"*\r\n\r\nLleva al zombie hasta
         el usando la menor cantidad de bloques posible."
       grade3_maze_loops3: "*\"¡Debo comer girasol!\"*\r\n\r\nLleva al zombie hasta
         el girasol sólo usando los bloques disponibles."
-      grade3_maze_nestedLoops2: "Subitamente, aparece un bloque mágico! Con\nel bloque
-        `repetir`, puede repetir el código una y otra vez.\r\n\r\nPuedes llegar a\nel
-        cerdo creando un circuito que usa solo un bloque `adelante' en el interior\nde
-        una 'repetición'?"
-      grade3_maze_nestedLoops3: |-
-        Llévame al cerdo! tu solo puedes usar un
-        bloque de `avanzar`en esta oportunidad
+      grade3_maze_nestedLoops2: |-
+        De repente, ¡un bloque mágico aparece! Con el bloque 'repetir', tú puedes repetir el código una y otra vez.
+
+        ¿Puedes llegar al cerdo creando un bucle que solo utilice bloques ‘avanzar’ dentro de uno ‘repetir’?
+      grade3_maze_nestedLoops3: "¡Llévame al cerdo! Solo puedes usar un bloque 'avanzar'
+        esta vez"
       grade3_maze_nestedLoops4: Usa dos ciclos para hacer que el cerdo use menos bloques.
       grade4_arist_nested_loop_flags1: haz un bucle con el código dado para crear
         un molino de viento.
@@ -5151,8 +5551,8 @@ es-MX:
         la línea punteada utilizando los bloques Salta y Dibuja.
       grade4_review_bee1: Ahora usa el nuevo bloque repeat para recolectar todo el
         néctar y hacer toda la miel.
-      grade4_review_bee3: "¡Una abeja tan ocupada!\n\r\nAyuda a Abeja a recolectar
-        todo el néctar y hacer toda la miel con la menor cantidad de bloques posible."
+      grade4_review_bee3: Ayuda a la abeja a recolectar todo el nectar y haz toda
+        la miel con el menor número de bloques posible.
       grade4_scaffolded_project6: "¡Has terminado! Ahora puedes jugar tu juego o compartirlo
         con tus amigos o compañeros!"
       grade5_artist_for_loops1: 'Dibuje este triángulo que tiene un tamaño de 50 píxeles.
@@ -5267,17 +5667,22 @@ es-MX:
         una tormenta de hielo! \r\nCmabia la escena a un fondo helado y establece
         la velocidad de Sid (actor 1) en rápido.\r\nPresiona \"Ejecutar\" y mueve
         a Sid hacia Diego para que le advierta."
-      level 'grade3_Loops_10: "¡Una abeja tan ocupada!\n\r\nAyuda a Abeja a recolectar
-        todo el néctar y hacer toda la miel con la menor cantidad de bloques posible."
-      level 'grade3_Loops_11: "La forma de este camino es diferente de los demás.
-        \r\n\r\n¿Puedes recolectar todo el néctar usando la menor cantidad de bloques
-        posible?"
+      level 'grade3_Loops_10: Ayuda a la abeja a recolectar todo el nectar y haz toda
+        la miel con el menor número de bloques posible.
+      level 'grade3_Loops_11: |-
+        La forma de este camino es diferente a los demás.
+
+
+        ¿Puedes recolectar todo el nectar usando el menor número de bloques posible?
       level 'grade3_Loops_3: "¿Podrías utilizar un ciclo para recolectar todo el néctar?"
       level 'grade3_Loops_4: Ahora usa el nuevo bloque repeat para recolectar todo
         el néctar y hacer toda la miel.
-      level 'grade3_Loops_5: "Que hermoso campo de flores! \r\n\r\nAyuda\na la abeja
-        a visitar cada uno.\r\n\r\nPuedes conseguir la manera de hacerlo con menos
-        de 7 bloques?"
+      level 'grade3_Loops_5: |-
+        ¡Qué hermoso  campo de flores!
+
+        Ayuda a la abeja a visitar cada uno.
+
+        ¿Puedes encontrar un camino para hacerlo en menos de 7 bloques?
       level 'grade3_Loops_6: "¿Qué pasa si haces un ciclo con esta secuencia 3 veces?
         ¡No olvides hacer la miel al final!"
       level 'grade3_Loops_7: 'Cada flor contiene una unidad de néctar. Recolecta néctar
@@ -5285,4 +5690,6 @@ es-MX:
       ramp_artist_loops4: "¿Qué sucede cuando agregas un giro a la derecha \nde 72
         grados después de todo lo demás dentro de tu bucle?"
       ramp_artist_loops4_2018: "¿Qué sucede cuando agregas un giro a la derecha \nde
+        72 grados después de todo lo demás dentro de tu bucle?"
+      ramp_artist_loops4_2019: "¿Qué sucede cuando agregas un giro a la derecha \nde
         72 grados después de todo lo demás dentro de tu bucle?"

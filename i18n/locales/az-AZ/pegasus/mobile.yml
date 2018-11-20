@@ -324,10 +324,10 @@
   dashboard_sections_table_course: "Kurs"
   dashboard_sections_table_students: "Şagirdlər"
   dashboard_sections_table_code: "Bölmə kodu"
-  dashboard_sections_name: "Bölmənin adı"
+  dashboard_sections_name: 'Bölmənin adı'
   dashboard_sections_close: "Bağla"
   dashboard_students_add_multiple: 'Şagirdlərinizin adlarını hər sətirdə biri olmaqla yazın və ya əlavə edin:'
-  dashboard_students_name: "Ad"
+  dashboard_students_name: 'Ad'
   dashboard_students_progress: "Nəticə"
   dashboard_students_male: "Kişi"
   dashboard_students_female: "Qadın"
@@ -559,8 +559,14 @@
   user_header_playlab: "Oyun labı"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
+  applab_tile_start_tutorial: "Başlayın"
+  hoc_overview_start_tutorial: "Başlayın"
   hoc2018_creativity_create: "Düzəlt"
   hoc2018_mc_start: "Başlayın"
   hoc2018_mc_video_title_inspire_girl: "Bir qızı həvəsləndirin"
   hoc2018_mc_homepage_join_us: "Bizə qoşulun"
   hoc2018_mc_homepage_try_it: "Sınaqdan keçirin"
+  hoc2018_dance_party_button: "Başlayın"
+  hoc2018_dance_teacher_resources_tile1_button: "Dərs Planı"
+  hoc2018_dance_teacher_resources_tile2_button: "Sərbəst fəaliyyət"
+  hoc2018_dance_amazon_about_future_engineer_button: "Daha ətraflı"

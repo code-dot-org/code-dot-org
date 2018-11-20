@@ -118,10 +118,10 @@
   homepage_hero_text_bosh: |-
     &ldquo;اگر آپ کوڈ کر سکتے ہیں، تو آپ اپنی زندگی کے راستے کا انتخاب کر سکتے ہیں۔ &rdquo;
     کرس بوش
-  homepage_hero_text_student1: |2
+  homepage_hero_text_student1: |-
     &ldquo;اس ہنر نے میرا مستقبل بدل دیا ہے. اور یہ بات قابل ذکر ہے کے یہ بہت ہی مزیدار ہے.&rdquo;
      لونا, ساتویں جماعت
-  homepage_hero_text_student2: |2
+  homepage_hero_text_student2: |-
     &ldquo;میں نے اپنے بچوں کو سیکھنے کے لئے کبھی بھی اتنا پرجوش نہیں دیکھا۔&rdquo;
      مایکل، استاد
   homepage_hero_text_student3: |-
@@ -299,7 +299,7 @@
   dashboard_action_delete_yes: 'جی'
   dashboard_action_delete_no: 'نہيں'
   dashboard_navigation_home_page: "ٹیچر ہوم پیج"
-  dashboard_students_name: "نام"
+  dashboard_students_name: 'نام'
   dashboard_grade_other: "دیگر"
   dashboard_login_none: "Email"
   dashboard_stage: "اسٹیج"
@@ -346,7 +346,11 @@
   flappy_shortcode: "پھڑپھڑایں"
   header_courses: "کورسز"
   header_educate_hoc: "آور-آف-کوڈ"
+  applab_tile_start_tutorial: "شروع کریں"
+  hoc_overview_start_tutorial: "شروع کریں"
   hoc2018_creativity_create: "بنائیں"
   hoc2018_mc_start: "شروع کریں"
   hoc2018_mc_video_title_inspire_girl: "ایک لڑکی کی حوصلہ افزائی"
   hoc2018_mc_homepage_join_us: "ہمارے ساتھ شامل ہوں"
+  hoc2018_dance_party_button: "شروع کریں"
+  hoc2018_dance_amazon_about_future_engineer_button: "مزید سیکھے"

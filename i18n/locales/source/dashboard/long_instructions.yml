@@ -10644,7 +10644,7 @@ en:
       CSD U3 game user controls_2018: |-
         # User Controls
 
-        Next, you'll want to make sure your user controls are working.  Create a function that makes your sprites respond to user controls as defined in your project guide.  You can use the function in in [Lesson 20 Puzzle 13](/s/csd3/stage/20/puzzle/13) as an example.
+        Next, you'll want to make sure your user controls are working.  Create a function that makes your sprites respond to user controls as defined in your project guide.  You can use the function in in [Lesson 20 Puzzle 13](../../20/puzzle/13) as an example.
       CSD U3 game variables: |-
         # Create your Variables
 
@@ -20858,7 +20858,14 @@ en:
       Dance Party Predict: "**Make a prediction:** Here’s a sprite called `alien1`!   \n\nWhat do you think will happen when you click on it?  "
       Dance Party Predict_2019: "**Make a prediction:** Here’s a sprite called `alien1`!   \n\nWhat do you think will happen when you click on it?  "
       Dance Party Predict_simple: "**What do you think?** \n\nHere’s a sprite called `alien1`!   \n\nWhen you click on it, what will it do?  "
+      Dance_Events_Example_Video: Use events to make your dance party interactive!
       Dance_Party_01: |-
+        *Let's have a dance party!*
+
+        Drag the `make a new` block into the workspace, and connect it inside the `setup` block to create your first dancer.
+
+        * *You can also click the lightbulb to the left if you want more information or extra challenges.*
+      Dance_Party_01_low: |-
         *Let's have a dance party!*
 
         Drag the `make a new` block into the workspace, and connect it inside the `setup` block to create your first dancer.
@@ -20905,9 +20912,9 @@ en:
       Dance_Party_11.5: "Check out this block:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"DUCK\"</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\n  \nNow you can create a bunch of dancers at once!\n\nTry using some of the \"all ducks\" blocks to write code that will make all of the ducks dance together."
       Dance_Party_11: "The <xml><block type=\"Dancelab_whenKey\"></block></xml> block lets you run code when the up arrow is pressed. \n\nYou might change the dance move, change a dancer's properties, or do a quick move just once. Be creative and look out for new blocks!"
       Dance_Party_11b: |-
-        It's time for a dance-off! The Cat dabs when you press the left arrow key. Make the Robot "drop" once when you press the right arrow key, and "floss" once when you press the up arrow key.
+        It's time for a dance-off! The Cat dabs when you press the left arrow key. Make the Robot "drop" once when you press the right arrow key, and "high clap" once when you press the up arrow key.
 
-        **Use the keys to get the Robot to do the drop-floss-drop-floss as fast as you can!**
+        **Use the keys to get the Robot to do the drop-clap-drop-clap as fast as you can!**
       Dance_Party_12: Get your groove on! Create a dance of your own to share with your friends.
       Dance_Party_2: |-
         Let's get this moose dancing!
@@ -20939,6 +20946,24 @@ en:
         Use the <xml><block type="Dancelab_makeNewDanceSprite"><title name="COSTUME">"DUCK"</title><title name="NAME">backup&#95;dancer1</title><title name="LOCATION">{x: 300, y: 200}</title></block></xml> block to create a backup dancer called `backup_dancer1` to dance with the cat.
       Dance_Party_8: Every dancer has a set of _properties_ that control what it looks like. You can make it look like a dancer is in the background by making them smaller. Can you make both backup dancers the same size?
       Dance_Party_9: Dancers have a "tint" property that can add a layer of color. Try changing the tint of one of your dancers.
+      Dance_Party_extras_battle: |-
+        # Dance Crews
+
+        Here's a dance off between two crews. The arrow keys control one of the dancers and the "w,a,s,d" keys control the other. Have a dance off with a friend, and then try to improve this dance off.
+
+        * Add more keys to control dances
+        * Make the backup dancers also respond when the keys are pressed
+        * Alternate the dancer every 4 measures by setting their visibility
+      Dance_Party_extras_every_beat: |-
+        # Quarter Notes
+
+        Most of our dances have used whole measures, but each measure is made up of 4 quarter notes. This dance uses `every 0.25 measures` to make the dancer clap on every quarter note.
+
+        This dance also uses a _conditional_ block to control when the `every 0.25 measures` block can change the dance. Try changing the numbers in the conditional block to see how it changes the dance.
+
+        * Experiment with other note durations (like 0.5 for a half note or 0.125 for an eighth note).
+        * Add some `after measure` events.
+        * Switch "measures" with "seconds" and try timing your dances that way.
       Dance_Party_extras_layout: |-
         # Let's Get in Formation!
 
@@ -20947,14 +20972,22 @@ en:
         * Create a second group of dancers in a different layout
         * Change layout when a key is pressed
         * Change a property when the dancers change formation
+      Dance_Party_extras_on_beat: |-
+        # Bass, Mid, and Treble
+
+        This dance uses "peak" events to trigger code when different parts of the music get loud. Try tinkering with different songs to see how they change the dance.
+      Dance_Party_extras_speed: |-
+        # Speed it Up, Slow it Down
+
+        This final dance uses the `set speed` block to control how fast each dancer moves. Try experimenting with different speeds during different points in the song. Feel free to keep tinkering on this dance, or return to any of the previous dances to make them even cooler.
       Dance_Party_extras_visible: |-
         # Where'd They Go?
 
         This dance shows and hides two different groups of dancers. Check it out, and then try adding your own flair.
 
         * Add another group of dancers
-        * Show or hide dancers when the bass hits
-        * Use a conditional to only hide dancers _if_ the treble energy is high enough
+        * Show and hide dancers using the arrow keys
+        * Hide all of the dancers and switch to an exciting background effect
       Data Visualizations 101: |+
         ## Data Visualization 101: How to design charts and graphs
 

@@ -219,6 +219,16 @@ hu:
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: A programodon belül többször is meghívhatsz egy funkciót.  A
           kirakós megoldásához próbáld kétszer meghívni!
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_a: A programodon belül többször is meghívhatsz egy funkciót.  A
+          kirakós megoldásához próbáld kétszer meghívni!
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: Látod a **Tengeri lámpásokat** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Hogyan tudsz feltételt használni velük kapcsolatban, hogy átjuss a Víz alatti
+          templomon?
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Micsoda gyönyörű korallzátony! A kék korall jelzi a **jobb**
+          utat, de nehogy **balszerencsét** hozzon az itt hagyott vörös korall!
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Próbálj az Agenttel hidakat építtetni, hogy Alex vagy
           Steve túl tudjanak jutni a térkép szélein.
@@ -232,7 +242,22 @@ hu:
           futtatásához.
         MC_HOC_2017_01_RETRY_c: Miután az Agent futtatta az összes kódját, a játékost
           a nyílgombokkal mozgathatod.
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Húzz egy "mozgás előre" blokkot az eszköztárból a
+          munkaterületre, és illeszd a helyére az "amikor fut" blokk mögé.
+        MC_HOC_2017_01_RETRY_b: Ne feledd megnyomni a "Futtatás" gombot az Agent kódjának
+          futtatásához.
+        MC_HOC_2017_01_RETRY_c: Miután az Agent futtatta az összes kódját, a játékost
+          a nyílgombokkal mozgathatod.
       MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Vidd előre az Agentet két hellyel, hogy a nyomólapra
+          kerüljön. Ezzel kinyitod az ajtót a játékosnak.
+        MC_HOC_2017_02_Cole_b: "Nyomd meg a \"Futtatás\" gombot. \nA kódot akkor is
+          futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot újra és újra,
+          amíg rá nem jössz a hibájára."
+        MC_HOC_2017_02_Cole_c: Miután az Agent kinyitotta az ajtót, a nyílgombokkal
+          mozgathatod a játékost a térképen.
+      MC_HOC_2017_02_Cole_2019_authored_hint:
         MC_HOC_2017_02_Cole_a: Vidd előre az Agentet két hellyel, hogy a nyomólapra
           kerüljön. Ezzel kinyitod az ajtót a játékosnak.
         MC_HOC_2017_02_Cole_b: "Nyomd meg a \"Futtatás\" gombot. \nA kódot akkor is
@@ -253,10 +278,20 @@ hu:
           a játékost az iránytűhöz irányíthatod.
         MC_HOC_2017_03_Cole_b: Úgy érzed, túl sokáig tart a kódolás?  Próbáld ki az
           "ismétlés" ciklust, és találd ki, hogyan rövidítheted le a folyamatot!
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_a: Miután az Agentet a nyomólapra vitted, a nyílgombokkal
+          a játékost az iránytűhöz irányíthatod.
+        MC_HOC_2017_03_Cole_b: Úgy érzed, túl sokáig tart a kódolás?  Próbáld ki az
+          "ismétlés" ciklust, és találd ki, hogyan rövidítheted le a folyamatot!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: "A két nyomólapra lépve megnyitod az utat a játékos
           előtt. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Az Agent irányának módosításához használd a
+          "fordulás jobbra" blokkot '
+        MC_HOC_2017_04POINT5_RYAN_a: Az Agentnek csak az első nyomólapra kell eljutnia
+          ahhoz, hogy keresztülengedje a baltához Alexet vagy Steve-et.
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
         MC_HOC_2017_04POINT5_RYAN_b: 'Az Agent irányának módosításához használd a
           "fordulás jobbra" blokkot '
         MC_HOC_2017_04POINT5_RYAN_a: Az Agentnek csak az első nyomólapra kell eljutnia
@@ -269,7 +304,19 @@ hu:
           amíg rá nem jössz a hibájára."
         MC_HOC_2017_04_Cole_b: Amikor az Agent eljut a nyomólapra, kinyitja az ajtót
           a játékos előtt.
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_a: Az Agentnek 7-szer kell "mozgás előre" parancsot végrehajtania.  Hogyan
+          használhatsz egy "ismétlés" ciklust ennek programozásához?
+        MC_HOC_2017_04_Cole_c: "Nyomd meg a \"Futtatás\" gombot. \nA kódot akkor is
+          futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot újra és újra,
+          amíg rá nem jössz a hibájára."
+        MC_HOC_2017_04_Cole_b: Amikor az Agent eljut a nyomólapra, kinyitja az ajtót
+          a játékos előtt.
       MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Tudtad, hogy egy ciklusba több kóddarabot is helyezhetsz?  A
+          kirakós megoldásához próbálj egy deszkát elhelyezni **és** előremenni egy
+          "ismétlés" ciklusban.
+      MC_HOC_2017_05_Cole_2019_authored_hint:
         MC_HOC_2017_05_Cole_a: Tudtad, hogy egy ciklusba több kóddarabot is helyezhetsz?  A
           kirakós megoldásához próbálj egy deszkát elhelyezni **és** előremenni egy
           "ismétlés" ciklusban.
@@ -279,9 +326,17 @@ hu:
           "ismétlés" ciklusban.
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: Hányszor fut ez a ciklus?  És hányszor *kellene* futnia?
+      MC_HOC_2017_06_Cole_2019_authored_hint:
+        MC_HOC_2017_06_Cole_a: Hányszor fut ez a ciklus?  És hányszor *kellene* futnia?
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Próbálj több utasítást helyezni egy "ismétlés" ciklusba.
       MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_a: A kirakós megoldásához találd ki, hogy mit csinál az
+          "út szabaddá tétele" funkció, és hívd meg annyiszor, amennyiszer szükséges
+          az eszköztár kis zöld "út szabaddá tétele" blokkjával.
+        MC_HOC_2017_07_Cole_b: A kirakós megoldásához próbáld keverni a funkciókblokkokat
+          az eszköztár más blokkjaival.
+      MC_HOC_2017_07_Cole_2019_authored_hint:
         MC_HOC_2017_07_Cole_a: A kirakós megoldásához találd ki, hogy mit csinál az
           "út szabaddá tétele" funkció, és hívd meg annyiszor, amennyiszer szükséges
           az eszköztár kis zöld "út szabaddá tétele" blokkjával.
@@ -305,6 +360,9 @@ hu:
       MC_HOC_2017_10_RETRY_authored_hint:
         MC_HOC_2017_10_Cole_a: A kirakós megoldásának megkönnyítéséhez használd a
           funkciókat!
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_a: A kirakós megoldásának megkönnyítéséhez használd a
+          funkciókat!
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Próbálj az Agenttel hidakat építtetni, hogy Alex vagy
           Steve túl tudjanak jutni a térkép szélein.
@@ -317,7 +375,16 @@ hu:
           amíg rá nem jössz a hibájára."
         MC_HOC_2017_08_RY_b: Ezt a kirakóst RENGETEG módon meg lehet oldani.  Próbálj
           ki néhányat!
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: "Nyomd meg a \"Futtatás\" gombot. \nA kódot akkor is
+          futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot újra és újra,
+          amíg rá nem jössz a hibájára."
+        MC_HOC_2017_08_RY_b: Ezt a kirakóst RENGETEG módon meg lehet oldani.  Próbálj
+          ki néhányat!
       MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Próbálj az Agenttel hidakat építtetni, hogy Alex vagy
+          Steve túl tudjanak jutni a térkép szélein.
+      MC_HOC_2017_FP20x20_2019_authored_hint:
         MC_HOC_2017_13_Cole_a: Próbálj az Agenttel hidakat építtetni, hogy Alex vagy
           Steve túl tudjanak jutni a térkép szélein.
       New Minecraft Hero Project_authored_hint:
@@ -522,6 +589,11 @@ hu:
         courseC_artist_prog2_b: Baj van a bekanyarodással a sarkon? Használd a 'fordulj
           jobbra 90 fokot' blokkot!
       courseC_artist_prog2_2018_authored_hint:
+        courseC_artist_prog2_a: Ha használod a 'lépj előre 100 pixelt' blokkot, automatikusan
+          rajzolok egy vonalat.
+        courseC_artist_prog2_b: Baj van a bekanyarodással a sarkon? Használd a 'fordulj
+          jobbra 90 fokot' blokkot!
+      courseC_artist_prog2_2019_authored_hint:
         courseC_artist_prog2_a: Ha használod a 'lépj előre 100 pixelt' blokkot, automatikusan
           rajzolok egy vonalat.
         courseC_artist_prog2_b: Baj van a bekanyarodással a sarkon? Használd a 'fordulj

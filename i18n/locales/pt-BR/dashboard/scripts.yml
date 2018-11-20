@@ -2829,7 +2829,44 @@ pt-BR:
           stages:
             Artist:
               name: Artista
+        dance:
+          stages:
+            Dance Party:
+              name: Festa dançante
+          title: Festa dançante
         frozen-2018-test-b:
           stages:
             Artist:
               name: Artista
+        aquatic:
+          stages:
+            Aquatic:
+              name: Aquático
+          title: 'Minecraft: Viagem Aquática'
+          description_short: O Minecraft está de volta com uma nova atividade para a Hora do Código!
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Festa dançante
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Festa dançante
+        coursef-2019:
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programando: Meus amigos robôs'
+            Building a Foundation:
+              name: Criando uma base
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
+            Conditionals with Cards:
+              name: Condicionais com cartas
+            Envelope Variables:
+              name: Variáveis do envelope
+            For Loop Fun:
+              name: Diversão com laços for
+        dance-low:
+          stages:
+            Dance Party:
+              name: Festa dançante

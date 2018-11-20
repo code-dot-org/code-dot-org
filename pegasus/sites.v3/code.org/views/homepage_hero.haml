@@ -7,31 +7,42 @@
 - main_actions = capture_haml do
 
   .hoc2018
-    .hero-message-line1= hoc_s(:codeorg_homepage_hoc2018_header_line1)
-    .hero-message-line2
-      - if show_single_hero == "mc"
+    - if show_single_hero == "mc"
+      .hero-message-line1= hoc_s(:codeorg_homepage_hoc2018_header_line1)
+      .hero-message-line2
         -# Don't tint the word "create"
         .desktop-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
-      - else
+        .mobile-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
+    - elsif show_single_hero == "dance"
+      .hero-message-line1{style: "font-size: 28px; line-height: 28px; padding-bottom: 10px"}
+        = hoc_s(:codeorg_homepage_hoc2018_header_line1)
+      .hero-message-line2{style: "font-size: 28px; line-height: 28px;"}
+        -# Don't tint the word "create"
+        .desktop-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
+        .mobile-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
+    - else
+      .hero-message-line1= hoc_s(:codeorg_homepage_hoc2018_header_line1)
+      .hero-message-line2
         .desktop-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_desktop)
-      .mobile-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
-    - if show_single_hero != "mc"
+        .mobile-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
       .hero-message-gap.mobile-feature &nbsp;
-    .hero-message-line3
-      = hoc_s(:codeorg_homepage_hoc2018_header_line3)
-      %span.hero_video_link{onclick: "return showVideo_mainvideo()"}= hoc_s(:codeorg_homepage_hoc2018_video)
+      .hero-message-line3
+        = hoc_s(:codeorg_homepage_hoc2018_header_line3)
+        %span.hero_video_link{onclick: "return showVideo_mainvideo()"}= hoc_s(:codeorg_homepage_hoc2018_video)
 
-  - actions.each do |entry|
-    .action.hoc2018
+  .action_buttons
+    - actions.each do |entry|
       - if ["cta_button", "cta_button_solid_white", "cta_button_hollow_white"].include? entry[:type]
-        %a.linktag#hero-hoc{href: entry[:url]}
-          - extra_class = "herohocbutton-solid-white" if entry[:type] == "cta_button_solid_white"
-          - extra_class = "herohocbutton-hollow-white" if entry[:type] == "cta_button_hollow_white"
-          %button.herohocbutton{class: extra_class}= I18n.t(entry[:text])
-      - elsif false && entry[:type] == "video"  # There's a special video link for hoc2018, so don't show video action here
-        %button.clicktag#hero-video{onclick: "return showVideo_mainvideo();"}
-          %img.video-play-icon{src: "/shared/images/fit-48/play-button.png"}
-          %span#playtext= I18n.t(entry[:text])
+        .action.hoc2018
+          %a.linktag#hero-hoc{href: entry[:url]}
+            - extra_class = "herohocbutton-solid-white" if entry[:type] == "cta_button_solid_white"
+            - extra_class = "herohocbutton-hollow-white" if entry[:type] == "cta_button_hollow_white"
+            %button.herohocbutton{class: extra_class}= I18n.t(entry[:text])
+      - elsif entry[:type] == "video"  # There's a special video link for hoc2018, so don't show video action here
+        .action.hoc2018
+          %button.clicktag#hero-video{onclick: "return showVideo_mainvideo();"}
+            %img.video-play-icon{src: "/shared/images/fit-48/play-button.png"}
+            %span#playtext= I18n.t(entry[:text])
 
   .clear{style: "clear: both"}
 
@@ -74,21 +85,43 @@
         = view :mobile_header_responsive
 
   - if show_single_hero
-    .bigannounce-hoc2018.desktop-feature
+    - extra_style = show_single_hero == "dance" ? "width: 50%;" : nil
+    .bigannounce-hoc2018.desktop-feature{style: extra_style}
       - actions_id = show_single_hero_mobile_gap ? "actions-mobile-gap" : "actions"
       %div{id: actions_id}
         = main_actions
     .bigannounce2-hoc2018.mobile-feature
       - actions_id = show_single_hero_mobile_gap ? "actions-mobile-gap" : "actions"
-      %div{id: actions_id}
+      - actions_extra_style = show_single_hero == "dance" ? "text-align: center" : nil
+      %div{id: actions_id, style: actions_extra_style}
         = main_actions
         - if show_single_hero == "mc"
           %img{src: "/images/fit-400/mc/MC_Logo_Large.png", style: "width: 320px; height: 125px; padding-top: 25px; margin-left: -37px;"}
+        - if show_single_hero == "dance"
+          %a{href: "/dance"}
+            %div{style: "text-align: center"}
+              %img{src: "/images/fit-400/homepage/hoc2018_dance_stars_mobile.png", style: "max-width: 400px; width: 100%; padding-top: 50px"}
+            .hoc2018-dance-heading= hoc_s(:codeorg_homepage_hoc2018_dance_heading)
 
     -# Temporary for hoc2018 mc launch
     - if show_single_hero == "mc"
       .desktop-feature
-        %img{src: "/images/fit-450/homepage/hoc2018_mc_characters.png", style: "position: absolute; width: 450px; right: 20px; bottom: 0px;"}
+        %img{src: "/images/fit-450/homepage/hoc2018_mc_characters.png", style: "position: absolute; width: 400px; right: 20px; bottom: 0px;"}
+    - elsif show_single_hero == "dance"
+      %a{href: "/dance"}
+        .desktop-feature{style: "position: absolute; width: 600px; width: 50%; top: 125px; right: 20px; text-align: center"}
+          %img{src: "/images/fit-600/homepage/hoc2018_dance_stars.png", style: "width: 100%"}
+          .hoc2018-dance-heading= hoc_s(:codeorg_homepage_hoc2018_dance_heading)
+
+      .clear{style: "clear: both"}
+
+      %div{style: "color: #00adbc; text-align: center; margin-left: 10%; margin-right: 10%; padding-bottom: 15px; font-family: 'Gotham 5r', sans-serif; line-height: 19px;"}
+        %div{style: "margin-bottom: 5px"}= hoc_s(:codeorg_homepage_hoc2018_musician_before)
+        %div
+          - Homepage.get_dance_stars.each do |star|
+            %span{style: "white-space: nowrap"}= star
+            &nbsp; &nbsp;
+          %span{style: "white-space: nowrap"}= hoc_s(:codeorg_homepage_hoc2018_musician_after)
 
   #caption_container.container_responsive
 

@@ -186,7 +186,7 @@ vi:
       2-3 Bee Conditionals 12: |-
         Sử dụng một vòng lặp để kiểm tra và thu thập mật hoa
         từ tất cả các bông hoa.
-      2-3 Bee Conditionals 13: |
+      2-3 Bee Conditionals 13: |-
         Hút mật hoa để làm mật ong.
         Gợi ý: điều gì sẽ xảy ra nếu sử dụng hàm "if" để hút mật ở bông hoa đỏ?
                    bạn có thể dùng vòng lặp để hoàn thành không?
@@ -481,6 +481,20 @@ vi:
       Crack a Caesar Cipher_2018: lời chỉ đẫn
       Function intro Ryan: Sử dụng nhóm lệnh chức năng 'xây cầu' hai lần để tạo ra
         con đường đi tới với ngọn đuốc.
+      Function intro Ryan_2019: Sử dụng nhóm lệnh chức năng 'xây cầu' hai lần để tạo
+        ra con đường đi tới với ngọn đuốc.
+      HOC 2018 Level_1: Lấy chiếc thuyền ở trong chiếc rương.
+      HOC 2018 Level_10: Đến lối vào của Tòa nhà Đại dương này.
+      HOC 2018 Level_11: 'Xây một ống dẫn với prismarine bên trong Tòa nhà Đại dương.  '
+      HOC 2018 Level_12: 'Thiết kế môi trường dưới nước của riêng bạn, nó chỉ dành
+        cho bạn!  '
+      HOC 2018 Level_2: 'Đi đến cuối bến tàu.  '
+      HOC 2018 Level_3: 'Đi qua vùng biển khơi để tới chỗ cá tuyết.  '
+      HOC 2018 Level_4: Sử dụng vòng lặp để đến chỗ cá heo.
+      HOC 2018 Level_5: Khám phá con tàu đắm để đến chỗ chiếc rương.
+      HOC 2018 Level_6: Điều hướng thông qua tảng đá để tới chỗ cá hồi.
+      HOC 2018 Level_7a: Tìm kiếm những tàn tích dưới nước để thấy một chiếc rương.
+      HOC 2018 Level_9b: 'Sử dụng san hô như điểm chỉ đường để tới kho báu.  '
       Infinity_catch: Bạn có thể làm cho Elsa ("diễn viên 2") đuổi Anna bằng cách
         sử dụng các phím mũi tên?
       Infinity_finale: Tạo ra bất cứ điều gì bạn thích và chia sẻ nó!
@@ -640,33 +654,46 @@ vi:
       MC_HOC_2017_01_RETRY: 'Viết dòng lệnh để nhân vật đặc vụ tới tấm áp lực, sau
         đó nhấn vào "Chạy" và sử dụng các phím mũi tên để di chuyển nhân vật ra khỏi
         ngôi nhà. '
+      MC_HOC_2017_01_RETRY_2019: 'Viết dòng lệnh để nhân vật đặc vụ tới tấm áp lực,
+        sau đó nhấn vào "Chạy" và sử dụng các phím mũi tên để di chuyển nhân vật ra
+        khỏi ngôi nhà. '
       MC_HOC_2017_02: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_02_Cole: 'Di chuyển Đặc vụ đến tấm áp lực để cho {currentPlayerName}
+        có thể di chuyển vào và lấy được tấm bản đồ. '
+      MC_HOC_2017_02_Cole_2019: 'Di chuyển Đặc vụ đến tấm áp lực để cho {currentPlayerName}
         có thể di chuyển vào và lấy được tấm bản đồ. '
       MC_HOC_2017_02_Kiki: Cho Đặc vụ đi đến tấm áp lực, sau đó người chơi di chuyển
         đến ô vuông màu cam.
       MC_HOC_2017_02_Will: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_03_Cole: 'Lập trình để Đặc vụ mở cánh cửa. '
+      MC_HOC_2017_03_Cole_2019: 'Lập trình để Đặc vụ mở cánh cửa. '
       MC_HOC_2017_03_Kiki: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_04: Thay đổi vòng lặp từ câu đố trước để giúp Đặc vụ tạo ra một
         con đường đi qua phần rộng hơn của con sông.
       MC_HOC_2017_04POINT5_Cole: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_04POINT5_RYAN: Cho Đặc vụ di chuyển đến tấm áp lực.
+      MC_HOC_2017_04POINT5_RYAN_2019: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_04_Cole: Cho Đặc vụ di chuyển đến tấm áp lực.
+      MC_HOC_2017_04_Cole_2019: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_04_Kiki: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_05: Sử dụng một nhóm lệnh chức năng để giúp Đặc vụ đi đến tấm áp
         lực.
       MC_HOC_2017_05_Cole: Người chơi cần di chuyển tới chỗ cái xẻng.
+      MC_HOC_2017_05_Cole_2019: Người chơi cần di chuyển tới chỗ cái xẻng.
       MC_HOC_2017_05_Josh: Người chơi cần di chuyển tới chỗ cái xẻng.
       MC_HOC_2017_05_Kiki: Người chơi cần di chuyển đến ô vuông màu cam.
       MC_HOC_2017_06_Cole: Sửa lại các lệnh sau để Đặc vụ xây một cây cầu bắc ngang
         qua con sông.
+      MC_HOC_2017_06_Cole_2019: Sửa lại các lệnh sau để Đặc vụ xây một cây cầu bắc
+        ngang qua con sông.
       MC_HOC_2017_06_Josh: Sửa lại các lệnh sau để giúp Đặc vụ xây một cây cầu bắc
         ngang qua con sông.
       MC_HOC_2017_06_Kiki: Sửa lại các lệnh sau để giúp Đặc vụ xây một cây cầu bắc
         ngang qua con sông.
       MC_HOC_2017_07_Cole: Phá băng và để cho {currentPlayerName} di chuyển tới xe
         chở quặng (Minecart).
+      MC_HOC_2017_07_Cole_2019: Phá băng và để cho {currentPlayerName} di chuyển tới
+        xe chở quặng (Minecart).
       MC_HOC_2017_07_Kiki: Sử dụng một nhóm lệnh chức năng để dọn đường đi tới ô vuông
         màu cam.
       MC_HOC_2017_07a_Kiki: Dọn đường đi tới ô vuông màu cam.
@@ -689,6 +716,8 @@ vi:
         vụ tới xe chở quặng này.
       MC_HOC_2017_10_RETRY: Sử dụng các nhóm lệnh chức năng dưới đây để hoàn thành
         nhiệm vụ tới xe chở quặng.
+      MC_HOC_2017_10_RETRY_2019: Sử dụng các nhóm lệnh chức năng dưới đây để hoàn
+        thành nhiệm vụ tới xe chở quặng.
       MC_HOC_2017_10_RYAN: Tạo ra một nhóm lệnh chức năng để giúp bạn hoàn thành nhiệm
         vụ tới xe chở quặng này.
       MC_HOC_2017_10_RYAN2: Tạo ra một nhóm lệnh chức năng để giúp bạn hoàn thành
@@ -696,11 +725,15 @@ vi:
       MC_HOC_2017_13_Cole: 'Chơi tự do: Thời gian để bạn tự khám phá và sáng tạo!'
       MC_HOC_2017_4.5v2: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_Ali: Sử dụng các nhóm lệnh chức năng để tìm đường đi qua dung nham.
+      MC_HOC_2017_Ali_2019: Sử dụng các nhóm lệnh chức năng để tìm đường đi qua dung
+        nham.
       MC_HOC_2017_FP10x10: 'Chơi tự do: Bạn có thể thử thách bản thân tự thu thập
         hết các viên kim cương trong cấp độ này không? '
       MC_HOC_2017_FP10x10_RE: 'Chơi tự do: Bạn có thể thử thách bản thân tự thu thập
         hết các viên kim cương trong cấp độ này không? '
       MC_HOC_2017_FP20x20: 'Chơi tự do: Thời gian để bạn tự khám phá và sáng tạo!'
+      MC_HOC_2017_FP20x20_2019: 'Chơi tự do: Thời gian để bạn tự khám phá và sáng
+        tạo!'
       MC_HOC_2017_Ryan_03: Bây giờ sử dụng các vòng lặp để giúp Đặc vụ xây một cây
         cầu qua sông bằng cách đặt các khối đá trong nước.
       MC_HOC_2017_Ryan_05: Tiêu diệt những cây xương rồng để di chuyển người chơi
@@ -923,6 +956,8 @@ vi:
         Cả 3 cạnh đều dài như nhau.'
       courseC_artist_prog5_2018: 'Căn nhà này cần một mái nhà! Vẽ hình tam giác.  Gợi
         ý: Cả 3 cạnh đều dài như nhau.'
+      courseC_artist_prog5_2019: 'Căn nhà này cần một mái nhà! Vẽ hình tam giác.  Gợi
+        ý: Cả 3 cạnh đều dài như nhau.'
       courseD_bee_debugging3: Sửa tất cả các lỗi để con ong lấy được phấn hoa và tạo
         mật.
       courseD_bounce_events10: Đó là một mục tiêu hàng đầu. Đính kèm khối "điểm số"
@@ -1079,7 +1114,7 @@ vi:
         có thể sửa lại nó không?"
       grade3_Conditionals_1: Xin chào, tôi là Ong! Hãy giúp tôi thu thập mật hoa từ
         những bông hoa. Sử dụng hàm Loop.
-      grade3_Conditionals_10: |
+      grade3_Conditionals_10: |-
         Hút mật hoa để làm mật ong.
         Gợi ý: điều gì sẽ xảy ra nếu sử dụng hàm "if" để hút mật ở bông hoa đỏ?
                    bạn có thể dùng vòng lặp để hoàn thành không?

@@ -373,6 +373,7 @@ cs:
       playlab: Play Lab
       minecraft: Minecraft
       flappy: Flappy
+      dance: Taneční párty
     popup:
       progress_for_user: pokrok je %{name}
       progress: Tvůj pokrok
@@ -406,7 +407,6 @@ cs:
       example: Vzorové řešení
       example_with_number: Vzorové řešení %{solution_number}
       submitted_on: Odesláno na %{date}
-      last_updated: 'Naposledy aktualizováno:'
       unsubmit: Neodesláno
       worked_with: Pracoval s
       update_lock_settings: Aktualizace zámku zde.
@@ -655,6 +655,8 @@ cs:
         JavaScriptu a sdílejte své aplikace během několika sekund.
       audience: Věk 13 +
       cta: Jak na to
+    dance:
+      title: Taneční párty
     hoc:
       title: Klasické bludiště
       body: Zkuste základy informatiky. Miliony lidí to už zkusili.

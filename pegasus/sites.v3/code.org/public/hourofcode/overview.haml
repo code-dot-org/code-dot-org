@@ -1,6 +1,18 @@
 ---
 title: Hour of Code Teacher Resources
 theme: responsive
+social:
+  "twitter:card": photo
+  "twitter:site": "@codeorg"
+  "twitter:url": "https://<%=request.host%>/hourofcode/overview"
+  "twitter:title": "<%= hoc_s(:hour_of_code) %>"
+  "twitter:description": "<%= hoc_s(:social_hoc2018_global_movement) %>"
+  "twitter:image:src": "<%= 'https://' + request.host + '/images/social-media/code-2018-creativity.png' %>"
+  "og:title": "<%= hoc_s(:hour_of_code) %>"
+  "og:description": "<%= hoc_s(:social_hoc2018_global_movement) %>"
+  "og:image" : "<%= 'https://' + request.host + '/images/social-media/code-2018-creativity.png' %>"
+  "og:image:width": '1200'
+  "og:image:height": '630'
 ---
 %link{href: "/css/student.css", rel: "stylesheet"}
 %link{href: "/css/tools.css", rel: "stylesheet"}
@@ -9,19 +21,35 @@ theme: responsive
 
 %h1= I18n.t(:hoc_overview_title)
 
-=I18n.t(:hoc_overview_subtitle)
+= I18n.t(:hoc_overview_subtitle)
 
-#resources.tile-container-responsive
+- if DCDO.get('hoc_launch', CDO.default_hoc_launch) == 'dance'
+  .full-resource-block{style: "margin-top: 20px;"}
+    %a{href: "/dance"}
+      %img.full-resource-image{src: "/images/dance_party.gif"}
+    .tutorial-info{style: "padding: 30px;"}
+      %span
+        %h2.resource-title= I18n.t(:hoc_overview_dance_title)
+        = I18n.t(:hoc_overview_dance_subtitle)
+      %span
+        %a{href: "/dance"}
+          %button.tutorial-info-start.tutorial-gray= I18n.t(:hoc_overview_start_tutorial)
+        .tutorial-info-guide
+          %a{href: "https://curriculum.code.org/hoc/plugged/8/"}
+            = I18n.t(:hoc_overview_view_teacher_guide)
+
+.tile-container-responsive{style: "margin-top: 20px;"}
   = view :top_hoc_tutorials
 .clear
 
 .full-resource-block
   %img.full-resource-image{src: "/images/hoc2018.png"}
-  .description
-    %h2.resource-title= I18n.t(:hoc_overview_partner_activities_title)
-    = I18n.t(:hoc_overview_partner_activities_body)
-    %div
+  .activities-info
+    %span
+      %h2.resource-title.white= I18n.t(:hoc_overview_partner_activities_title)
+      = I18n.t(:hoc_overview_partner_activities_body)
+    %span
       %a{href: "https://hourofcode.com/learn"}
-        %button.tutorial-gray{style: "margin-top: 15px;"}= I18n.t(:hoc_overview_partner_activities_link)
+        %button.tutorial-info-start.tutorial-gray= I18n.t(:hoc_overview_partner_activities_link)
 
 .hoc-tiles-container

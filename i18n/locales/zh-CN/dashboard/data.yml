@@ -478,6 +478,8 @@ zh-CN:
         MC_2018_loops: '《我的世界》：水上航行重复直到'
         mc_2018_conditionals: '《我的世界》：水上航行条件'
         mc_2018_closing: '《我的世界》：水上航行祝贺'
+        hoc_dance_warmup: 舞会 - 热身
+        hoc_dance_congrats: 舞会 - 继续！
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

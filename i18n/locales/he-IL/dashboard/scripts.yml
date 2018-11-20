@@ -1483,6 +1483,7 @@ he:
           stages:
             Dance Party:
               name: מסיבת ריקודים
+          title: מסיבת ריקודים
         frozen-2018-test-b:
           stages:
             Artist:
@@ -1492,6 +1493,24 @@ he:
             Dance Party:
               name: מסיבת ריקודים
         dance-draft:
+          stages:
+            Dance Party:
+              name: מסיבת ריקודים
+        coursef-2019:
+          stages:
+            Sequence in Maze:
+              name: רצף במבוך
+            Debugging with Scrat:
+              name: ניפוי שגיאות עם סקראט
+            Conditionals with Cards:
+              name: התניות עם כרטיסים
+            For Loop Fun:
+              name: כיף עם לולאת "עבור"
+            For Loops in Bee:
+              name: לולאות עבור עם הדבורה
+            For Loops in Artist:
+              name: לולאות עבור עם האמן
+        dance-low:
           stages:
             Dance Party:
               name: מסיבת ריקודים

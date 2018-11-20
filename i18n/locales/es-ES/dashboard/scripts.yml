@@ -3036,7 +3036,38 @@ es:
           stages:
             Artist:
               name: Artista
+        dance:
+          stages:
+            Dance Party:
+              name: Fiesta para bailar
+          title: Fiesta para bailar
         frozen-2018-test-b:
           stages:
             Artist:
               name: Artista
+        aquatic:
+          title: 'Minecraft: Udhëtimi ujor'
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Fiesta para bailar
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Fiesta para bailar
+        coursef-2019:
+          description_short: Aprende todos los conceptos de Fundamentos de Informática y crea tu propio arte, historia o juego.
+          description_audience: 'Edades de 9 a 13 años'
+          stages:
+            Building a Foundation:
+              name: Construyendo una Base
+            Conditionals with Cards:
+              name: Condicionales con tarjetas
+            Envelope Variables:
+              name: Variables de sobre
+            For Loop Fun:
+              name: Diversión con bucles Para
+        dance-low:
+          stages:
+            Dance Party:
+              name: Fiesta para bailar

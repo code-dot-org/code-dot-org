@@ -224,6 +224,19 @@ es:
       CourseF_PlayLab_vars10_callout:
         Course_4_Play_Lab_Vars_9_1: "¡Ahora todos sus bloques organizan detrás de
           categorías! Haga clic en una etiqueta para ver las piezas dentro."
+      Dance_Party_01_callout:
+        dance_callout_01: "¡Añade este bloque a tu programa!"
+      Dance_Party_01_low_callout:
+        dance_callout_01: "¡Añade este bloque a tu programa!"
+      Dance_Party_02_callout:
+        dance_callout_02: "¡Añade este bloque a tu programa!"
+      Dance_Party_04_callout:
+        dance_callout_04: "¡Añade este bloque a tu programa!"
+      Dance_Party_06_callout:
+        dance_callout_06: Añade aquí tu nuevo bailarín
+      Dance_Party_11_callout:
+        dance_callout_11_a: "¡Bloque nuevo!"
+        dance_callout_11_b: "¡Bloque nuevo!"
       Eval Design Recipe .1_callout:
         edit_function: Haz clic aquí para editar tu función.
       Frozen Project Test Toolbox_callout:
@@ -233,6 +246,9 @@ es:
         snowflake_dropdown: "¡Usa este menú desplegable para crear diferentes copos
           de nieve!"
       Function intro Ryan_callout:
+        Function_intro_Ryan_1: Esta pequeña instrucción hace que el ordenador ejecute
+          el GRAN montón de código con el mismo nombre en el espacio de trabajo.
+      Function intro Ryan_2019_callout:
         Function_intro_Ryan_1: Esta pequeña instrucción hace que el ordenador ejecute
           el GRAN montón de código con el mismo nombre en el espacio de trabajo.
       Geometric Pattern_callout:
@@ -261,6 +277,9 @@ es:
       InspirationalArtwork_2018_callout:
         InspirationalArtwork_1: "¡Intenta usar el nuevo bloque `comentario` debajo
           de esta etiqueta para dejarte notas dentro de tu programa!"
+      InspirationalArtwork_2019_callout:
+        InspirationalArtwork_1: "¡Intenta usar el nuevo bloque `comentario` debajo
+          de esta etiqueta para dejarte notas dentro de tu programa!"
       MC HOC 2016 Level 2-2_callout:
         craft2_run_button_callout: Cuando estés listo, presiona "Ejecutar" para probar
           tu programa.
@@ -276,13 +295,22 @@ es:
         MC_HOC_2017_03_Cole_1: ¡Esto es un bucle de "repetición"! Haz clic sobre él
           en el espacio de trabajo y añade el código que quieras ejecutar de manera
           repetida.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: ¡Esto es un bucle de "repetición"! Haz clic sobre él
+          en el espacio de trabajo y añade el código que quieras ejecutar de manera
+          repetida.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: El Agent puede desplazarse sobre el agua, pero el jugador
+          no.
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: El Agent puede desplazarse sobre el agua, pero el jugador
           no.
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: "¡Haz clic en este espacio de trabajo y añade algo
           de código que quieras repetir!"
       MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: "¡No puedes eliminar estos bloques, pero puedes editarlos!"
+      MC_HOC_2017_06_Cole_2019_callout:
         MC_HOC_2017_06_Cole_1: "¡No puedes eliminar estos bloques, pero puedes editarlos!"
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: 'El Agent puede desplazarse sobre la lava, pero el jugador
@@ -291,6 +319,9 @@ es:
         MC_HOC_2017_08_RY_1: 'El Agent puede desplazarse sobre la lava, pero el jugador
           no. '
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'El Agent puede desplazarse sobre la lava, pero el jugador
+          no.   '
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'El Agent puede desplazarse sobre la lava, pero el jugador
           no.   '
       Mike Playlab Project_callout:
@@ -654,6 +685,9 @@ es:
       courseC_maze_debugging5_2018_callout:
         courseC_maze_debugging5_1: "¡Estos bloques están bloqueados y no pueden ser
           eliminados!"
+      courseC_maze_debugging5_2019_callout:
+        courseC_maze_debugging5_1: "¡Estos bloques están bloqueados y no pueden ser
+          eliminados!"
       courseC_maze_programming3_callout:
         courseC_maze_programming3_3: Estos bloques son de piedra y no se pueden tirar.
       courseC_maze_programming3_2018_callout:
@@ -714,6 +748,8 @@ es:
       courseD_maze_ramp3_callout:
         stone_block_2: Los bloques grises están hechos de piedra y no pueden tirarse.
       courseD_maze_ramp3_2018_callout:
+        stone_block_2: Los bloques grises están hechos de piedra y no pueden tirarse.
+      courseD_maze_ramp3_2019_callout:
         stone_block_2: Los bloques grises están hechos de piedra y no pueden tirarse.
       courseD_maze_ramp6_callout:
         courseD_maze_ramp6_1: Cualquier código que ingrese aquí se repetirá tantas
@@ -827,6 +863,8 @@ es:
       courseF_bee_for4_callout:
         courseF_bee_for4_1: "¡Aquí encontraras el bucle `para`!"
       courseF_bee_for4_2018_callout:
+        courseF_bee_for4_1: "¡Aquí encontraras el bucle `para`!"
+      courseF_bee_for4_2019_callout:
         courseF_bee_for4_1: "¡Aquí encontraras el bucle `para`!"
       courseF_bee_functions2_callout:
         courseF_bee_functions2_1: Este bloque llama a una función. ¡Haz clic en este

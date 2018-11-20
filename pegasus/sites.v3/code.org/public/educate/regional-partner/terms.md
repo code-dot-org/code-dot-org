@@ -21,11 +21,10 @@ nav: plc_regional_partner_nav
 
 ### Workshops ###
 - Organize and host quality, local workshops for teachers implementing Code.org’s K-12 program, with Code.org-accredited facilitators. 
-	- Summer 2019: Host or support local summer workshops for CS Discoveries and CS Principles professional learning program for your region's teachers.
+	- Summer 2019: Host or support local summer workshops for CS Fundamentals, CS Discoveries and CS Principles professional learning program for your region's teachers.
 	- Fall 2019: Host workshops for administrators and counselors workshops of teachers interested (or participating) in Code.org's professional learning programs. 
 	- Fall 2019 - Spring 2020: Host one-day CS Fundamentals workshops, CS Discoveries and CS Principles academic year workshops.
 	- Organizing workshops includes, but is not limited to: creating workshops and taking attendance in Code.org’s workshop dashboard, recruiting teachers using Code.org’s teacher application system, securing a venue, ordering food, and ordering supplies.
-	- **CS Fundamentals**: Code.org recommends organizing CS Fundamentals workshops by grade band (grades K-1, 2-3, 4-5) and will have distinct agendas for each grade band.  As much as possible, Code.org recommends filling workshops with teachers from the same grade band. 
 - Use Code.org’s dashboard to set up and run Code.org professional learning workshops, beyond the term of the original agreement.
 - Comply with the Code.org <a href="/privacy" target=_blank>privacy policy</a>.
 
@@ -68,7 +67,7 @@ nav: plc_regional_partner_nav
 ### Facilitator Development ###
 - Design and manage Facilitator application process in collaboration with the Regional Partner.
 - Pay for round-trip airfare, hotel, meals, and stipend during Facilitator Training events for new facilitators.
-- Host Facilitator Training Events (usually in the spring).
+- Host Facilitator Training Events.
 - Provide ongoing support and training to facilitators.
 
 
@@ -94,7 +93,7 @@ nav: plc_regional_partner_nav
 	- For each CS Fundamentals workshop, Code.org will provide a per teacher stipend to help cover the following: facilitator compensation and food. Code.org will fund all CS Fundamentals workshops, provided the following requirements are met:
 		- Minimum of 8 teachers attend per workshop
 		- Teachers meet the program requirements
-- Provide lump sum funding for workshop supplies and minor printing needs for the year, swag bags and curriculum guides for teachers, and a virtual curriculum guide containing course lesson plans, certificates of completion, and classroom supplies for some activities.
+- Provide lump sum funding for workshop supplies and minor printing needs for the year, curriculum guides for teachers, and a virtual curriculum guide containing course lesson plans, certificates of completion, and classroom supplies for some activities.
 - Collaborate with the Regional Partner to mutually determine the appropriate level of Code.org funding needed for the following year by evaluating funding needs and funding opportunities in your region that can support and sustain this work. 
 
 
@@ -102,7 +101,7 @@ nav: plc_regional_partner_nav
 - Evaluate Regional Partner success based on shared metrics such as growth of teachers and students in the region, implementation of courses, diversity, workshop surveys, teacher participant data, and quality of workshop.
 
 ### Program and Curricula Content ###
-- Code.org commits to providing K-12 computer science curricula at no cost and continue updating content as necessary.
+- Code.org commits to providing K-12 computer science curricula at no cost and will continue updating content as necessary.
 - Code.org will continue to provide high quality content for the professional learning programs at no cost to Regional Partners.
 
 ## Joint Commitment
