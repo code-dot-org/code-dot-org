@@ -52,7 +52,16 @@ const styles = {
  * We want users seeing that dialog to have to input their age, so using
  * a different session storage key here.
  */
-const sessionStorageKey = 'ad_anon_over13';
+const AGE_DIALOG_SESSION_KEY = 'ad_anon_over13';
+
+export const signedOutOver13 = () => {
+  const val = sessionStorage.getItem(AGE_DIALOG_SESSION_KEY);
+  if (val) {
+    return val === 'true';
+  } else {
+    return false;
+  }
+};
 
 class AgeDialog extends Component {
   state = {
@@ -69,7 +78,7 @@ class AgeDialog extends Component {
   };
 
   setSessionStorage = (over13) => {
-    sessionStorage.setItem(sessionStorageKey, over13);
+    sessionStorage.setItem(AGE_DIALOG_SESSION_KEY, over13);
     this.setState({open: false});
   };
 
@@ -102,7 +111,7 @@ class AgeDialog extends Component {
 
     // Don't show dialog unless script requires 13+, we're not signed in, and
     // we haven't already given this dialog our age or we do not require sign-in
-    if (signedIn || sessionStorage.getItem(sessionStorageKey)) {
+    if (signedIn || sessionStorage.getItem(AGE_DIALOG_SESSION_KEY)) {
       return null;
     }
 
