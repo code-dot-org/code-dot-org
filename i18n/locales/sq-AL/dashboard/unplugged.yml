@@ -286,3 +286,24 @@ sq:
       Conditionals_2019:
         title: Kushtet
         desc: Për të mësuar rreth përcaktimeve të kushtoreve, studentët luajnë një lojë me karta dhe krijojnë rregulla si "Nëse vizatoj një kartë të kuqe, unë marr një pikë" dhe "Nëse unë vizatoj një kartë të zezë, ti merr një pikë."
+      GraphPaperProgramming_2019:
+        title: Programimi Grafik me Letër
+        desc: Studentët shkruajnë një algoritëm (grup instruksionesh) duke përdorur një grup komandash të paracaktuara për të drejtuar shokët e tyre të klasës që të ribëjnë një vizatim.
+      RelayProgramming_2018_2019:
+        title: Programimi i Besuar
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Aktiviteti Unplugged
+      BinaryImages_2019:
+        title: Imazhet Binare
+        desc: Edhe pse shumë njerëz mendojnë për binarët si zero dhe njësha striktë, kurset tona të mëparshme i mësuan studentëve që informacioni mund të paraqitet në opsione të ndryshme binare. Ky mësim merr këtë koncept një hap më larg kur ilustron se si një kompjuter mund të ruajë edhe informacione më komplekse (si psh imazhe dhe ngjyra) në binarë, gjithashtu.
+      GettingLoopy_2019:
+        title: Duke u Çmëndur
+        desc: Ky mësim ju prezanton me konceptin e programimit të cikleve (instruksione të përsëritshme) ndërmjet një aktiviteti kërcimi. Studentët do të mësojnë koreografi të thjeshta, më pas do të udhëzohen ta përsërisin atë.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Aktiviteti Unplugged
+      BigEvent_2019:
+        title: Eventi i Madh
+        desc: Studentët janë prezantuar me konceptet e programimit të "eventeve", të cilat janë veprime që monitoron një kompjuter në mënyrë të vazhdueshme. Mësuesi do të shtypë butona në një letër të veçuar dhe studentët do të reagojnë në varësi të butonit që është shtypur.
+      BinaryBracelets_2019:
+        title: Byzylykët Binarë
+        desc: Studentët krijojnë byzylykë si një përfaqësim binar të shkronjës së parë të emrit të tyre. Studentët mësojnë që të dhënat mund të përfaqësohen dhe të ruhen në më shumë se një mënyrë.
