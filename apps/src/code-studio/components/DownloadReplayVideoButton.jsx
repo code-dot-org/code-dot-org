@@ -39,6 +39,7 @@ const MAX_ATTEMPTS = 30; // we want to fail after ~30 seconds, so 30 attempts at
 const styles = {
   disabledLink: {
     backgroundColor: color.lighter_gray,
+    borderColor: color.lighter_gray,
     boxShadow: 'none',
   },
   icon: {
