@@ -836,7 +836,6 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.sendToPhone = false;
   } else {
 
     // set up the twitter share url
