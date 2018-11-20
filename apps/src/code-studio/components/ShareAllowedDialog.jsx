@@ -391,6 +391,7 @@ class ShareAllowedDialog extends React.Component {
                   />
                   }
                   <DownloadReplayVideoButton
+                    style={styles.button}
                     onError={this.replayVideoNotFound}
                   />
                   {canPrint && hasThumbnail &&
