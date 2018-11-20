@@ -104,7 +104,7 @@ export default class DownloadReplayVideoButton extends React.Component {
     return false;
   };
 
-  checkVideo = () => {
+  checkVideo() {
     return fetch(this.getVideoUrl(), {
       method: 'HEAD',
     }).then((response) => {
@@ -114,7 +114,7 @@ export default class DownloadReplayVideoButton extends React.Component {
 
       return response;
     });
-  };
+  }
 
   checkVideoUntilSuccess = (delay = 1000) => {
     if (this.state.videoExists) {
