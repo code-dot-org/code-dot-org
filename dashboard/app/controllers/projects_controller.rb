@@ -96,7 +96,7 @@ class ProjectsController < ApplicationController
     },
     dance: {
       name: 'New Dance Lab Project',
-      default_image_url: '',
+      default_image_url: '/blockly/media/dance/placeholder.png',
     },
     makerlab: {
       name: 'New Maker Lab Project',
