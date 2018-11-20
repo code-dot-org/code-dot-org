@@ -1,0 +1,3 @@
+login_required true
+teacher_resources [["professionalLearning", "/link/to/professional/learning"], ["vocabulary", "/link/to/vocab"]]
+
