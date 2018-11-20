@@ -85,33 +85,68 @@ class ProjectsListTest < ActionController::TestCase
     refute_nil ProjectsList.send(:get_published_project_and_user_data, project_and_user)
   end
 
-  test 'fetch_published_project_types filters by sharing_disabled and project_type' do
+  test 'fetch_published_project_types filters by sharing_disabled and project_type - App Lab' do
     stub_projects = [
       {
         name: 'project1',
         properties: {sharing_disabled: true}.to_json,
         birthday: 13.years.ago.to_datetime,
         storage_id: @storage_id,
-        id: 1
+        id: 1,
+        project_type: 'applab'
       },
       {
         name: 'project2',
         properties: {}.to_json,
         birthday: 13.years.ago.to_datetime,
         storage_id: @storage_id,
-        id: 2
+        id: 2,
+        project_type: 'applab'
       },
       {
         name: 'project3',
         properties: {}.to_json,
         birthday: 13.years.ago.to_datetime,
         storage_id: @storage_id,
-        id: 3
+        id: 3,
+        project_type: 'applab'
       }
     ]
     PEGASUS_DB.stubs(:[]).returns(db_result(stub_projects))
     StorageApps.stubs(:get_published_project_data).returns({})
     assert_equal 2, ProjectsList.send(:fetch_published_project_types, ['applab'], limit: 4)['applab'].length
+  end
+
+  test 'fetch_published_project_types filters by sharing_disabled and project_type - Dance' do
+    stub_projects = [
+      {
+        name: 'project1',
+        properties: {sharing_disabled: true}.to_json,
+        birthday: 13.years.ago.to_datetime,
+        storage_id: @storage_id,
+        id: 1,
+        project_type: 'dance'
+      },
+      {
+        name: 'project2',
+        properties: {}.to_json,
+        birthday: 13.years.ago.to_datetime,
+        storage_id: @storage_id,
+        id: 2,
+        project_type: 'dance'
+      },
+      {
+        name: 'project3',
+        properties: {}.to_json,
+        birthday: 13.years.ago.to_datetime,
+        storage_id: @storage_id,
+        id: 3,
+        project_type: 'dance'
+      }
+    ]
+    PEGASUS_DB.stubs(:[]).returns(db_result(stub_projects))
+    StorageApps.stubs(:get_published_project_data).returns({})
+    assert_equal 3, ProjectsList.send(:fetch_published_project_types, ['dance'], limit: 4)['dance'].length
   end
 
   test 'extract_data_for_featured_project_cards correctly parses project data' do
