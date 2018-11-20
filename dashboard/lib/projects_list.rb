@@ -21,7 +21,7 @@ module ProjectsList
   # Sharing of advanced project types to the public gallery is restricted for
   # young students unless sharing is explciitly enabled by the student's
   # teacher for privacy reasons.
-  ADVANCED_PROJECT_TYPES = ['applab', 'gamelab']
+  ADVANCED_PROJECT_TYPES = ['applab', 'gamelab', 'spritelab']
 
   class << self
     # Look up every project associated with the provided user_id, excluding those that are hidden.
