@@ -34,10 +34,17 @@ he-IL:
   twentyhours_text: גמרת את שעת הקוד הראשונה שלך? למד עוד מבסיס מדעי המחשב ומושגים
     בתכנות בקורס הבא הזה.
   og_title: לכל ילד מגיע הזדמנות
+  og_title_here: שעה של קוד הגיעה!
   og_description: כל תלמיד בכל בית ספר deserves the opportunity ללמוד computer science.
     It's changing everything.
+  og_description_celeb: נסו את המדריכים החדשים, זכו בשיחת וידאו של סלבריטאי איתכם
+    או עם הכיתה שלכם!
   csedweek_og_title: שבוע החינוך למדעי המחשב
   csedweek_og_description: 4-10 בדצמבר, 2017. מדעי המחשב הם הבסיס שעל כל תלמידה ללמוד.
+  csedweek_og_description_soon: שעה של קוד תתקיים ב3-9 בדצמבר, 2018. מדעי המחשב הוא
+    תחום חשוב שכל תלמיד צריך ללמוד.
+  csedweek_og_description_here: שעה של קוד התחילה. מדעי המחשב הוא תחום חשוב שכל תלמיד
+    צריך ללמוד.
   hoc2014_heading: הצטרפו ל <a href="http://hourofcode.com">שעת קוד</a><br/>דצמבר
     8-14, 2014<br/>
   hoc2014_students: תלמידים
@@ -82,6 +89,7 @@ he-IL:
   congratulations_on_completing_hoc: ברכות על השלמת שעה אחת של קוד
   congratulations_volunteer: 'ברכות: עכשיו לאחר שניסית את שעת קוד, <a href="https://code.org/volunteer">
     הרשם בכדי להתנדב בכיתה </a>, ותעזור לתלמידים ללמוד שעת קוד!'
+  congratulations_on_completing_course: מזל טוב על השלמת %{course}
   congrats_next_tutorials_title: הוסמכת לשלב הבא
   congrats_next_tutorials_desc: נסה את ההדרכות הקצרות יותר באורך כשעה, או נסה <a href="%{current_path}/next">
     שותף הדרכה</a>.
@@ -180,7 +188,10 @@ he-IL:
   learn_next_level: המשך לשלב הבא
   learn_online: נסה קורסים אחרים באינטרנט
   learn_classes: מצא כיתות מקומיות
+  hoc_is_here: "#HourOfCode מגיעה שוב בדצמבר 5-11. https://youtu.be/KsOIlDT145A."
   just_did_hoc: בדיוק עכשיו עשיתי את ה-HourOfCode# - בואו תראו! codeorg@
+  just_did_course1: סיימתי עכשיו את קורס 1 - נסו אותו! @codeorg
+  just_did_course2: סיימתי עכשיו את קורס 2 - נסו אותו! @codeorg
   just_did_coursed: בדיוק עכשיו סיימתי את קורס ד' - בואו תראו! codeorg@
   learn_hoc: למד שעת קוד
   beyond_hoc: מעבר לשעה אחת
@@ -1215,7 +1226,9 @@ he-IL:
     על כפתור "אפס סיסמה" שתחת עמודה "סיסמה".
   syncing_students_instructions: 'אם קבוצת Code.org שלך אינה מעודכנת עם רשימת התלמידים
     שלך בכיתת גוגל, לחץ על כפתור "סנכרן תלמידים מכיתת גוגל" שתחת הכרטיסיה "נהל תלמידים":'
+  hero_name: 'מיינקראפט: המסע של הירו'
   applab_tile_start_tutorial: התחל
+  aquatic_name: 'מיינקראפט: מסע ימי'
   account_sign_up_email_opt_in: האם ניתן לשלוח דוא"ל עבור עדכונים בקורסים, הזדמנויות
     מקומיות, או חדשות במדעי המחשב?
   account_sign_up_child_accept_terms: אני מאשר שיש לי אישור הורה או אפוטרופוס להשתמש
