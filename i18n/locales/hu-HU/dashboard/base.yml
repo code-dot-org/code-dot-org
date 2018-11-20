@@ -280,6 +280,7 @@ hu:
       playlab: 'Játéklabor'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
+      dance: 'Táncos buli'
     popup:
       progress_for_user: "%{name} fejlődése"
       progress: 'Fejlődése'
@@ -469,6 +470,8 @@ hu:
       body_short: "Tervezz egy alkalmazást, kódolj elemekből vagy JavaScript-ben, majd oszd meg néhány másodperc alatt."
       audience: 'Kor 13+'
       cta: 'Ismerd meg hogyan'
+    dance:
+      title: 'Táncos buli'
     hoc:
       title: 'Hagyományos Útvesztö'
       body: 'Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.'
