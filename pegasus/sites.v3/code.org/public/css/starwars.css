@@ -82,16 +82,19 @@
   }
 
   .starwars-tutorial {
-    width: 50%;
-    float: left;
+    width: 100%;
     height: 220px;
     padding: 5px;
-    padding-top: 10px;
     position: static;
+    margin-bottom: 10px;
   }
 
   .starwars-container .tutorial-box {
     background-image: url(/images/fit-520/starwars_carousel_background.jpg);
+  }
+
+  .dance-party-container .tutorial-box {
+    background-image: url(/images/fit-1940/dance-hoc/dance_party_landing_main_nophotos.png)
   }
 
   .starwars-heading {

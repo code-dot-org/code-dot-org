@@ -22,7 +22,14 @@
   - body = t('upsell.gallery.body')
 
 - elsif id == 'applab'
+  / Goes to the App Lab *page* (/educate/applab)
   - url = CDO.code_org_url('/educate/applab')
+  - title = t('upsell.applab.title')
+  - body = t('upsell.applab.body_short')
+
+- elsif id == 'applab-intro'
+  / Goes to the App Lab *script* (/s/applab-intro/reset)
+  - url = CDO.studio_url('/s/applab-intro/reset')
   - title = t('upsell.applab.title')
   - body = t('upsell.applab.body_short')
 
@@ -51,7 +58,7 @@
   - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
 
-- elsif [Script::ARTIST_NAME, Script::PLAYLAB_NAME, Script::HOC_NAME, Script::FROZEN_NAME, Script::INFINITY_NAME, Script::STARWARS_NAME, Script::STARWARS_BLOCKS_NAME, Script::MINECRAFT_NAME, Script::MINECRAFT_DESIGNER_NAME, Script::MINECRAFT_HERO_NAME, Script::MINECRAFT_AQUATIC_NAME].include? id
+- elsif [Script::ARTIST_NAME, Script::PLAYLAB_NAME, Script::HOC_NAME, Script::FROZEN_NAME, Script::INFINITY_NAME, Script::STARWARS_NAME, Script::STARWARS_BLOCKS_NAME, Script::MINECRAFT_NAME, Script::MINECRAFT_DESIGNER_NAME, Script::MINECRAFT_HERO_NAME, Script::MINECRAFT_AQUATIC_NAME, Script::DANCE_PARTY_NAME].include? id
   - url = script_reset_url(id)
   - if id == 'frozen'
     - title = t('upsell.frozen.title')
@@ -75,6 +82,9 @@
   - elsif id == 'iceage' || id == 'gumball' || id == 'playlab'
     - url = CDO.code_org_url('/playlab')
     - title = data_t_suffix('script.name', id, 'title')
+  - elsif id == 'dance'
+    - url = CDO.code_org_url('/dance')
+    - title = t('upsell.dance.title')
   - else
     - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
@@ -87,10 +97,15 @@
 - if ! (current_user && showState)
   - block_class << ' courseblock-noaction'
 
+- if id== 'dance'
+  - image_url = "courses/logo_tall_#{id}.gif"
+- else
+  - image_url = "courses/logo_tall_#{id}.jpg"
+
 .courseblock-span3.courseblock-tall{class: block_class}
   =link_to url do
     .imgspan
-      = image_tag(CDO.shared_image_url("courses/logo_tall_#{id}.jpg"), height: '120px', width: '100%')
+      = image_tag(CDO.shared_image_url(image_url), height: '120px', width: '100%')
     .clear
     - if Script.beta? id
       .beta

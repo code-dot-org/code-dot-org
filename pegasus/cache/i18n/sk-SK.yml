@@ -1,4 +1,5 @@
-"sk-SK":
+---
+sk-SK:
   hour_of_code: Hodina Kódu
   hello: Ahoj svet
   'yes': Áno
@@ -65,7 +66,7 @@
   csedweek_map_legend_cs_tech_jam: Špeciálna udalosť
   cded_sign_up: Zaregistrovať sa
   cded_try_it: Skús to
-  try_now: Skús teraz
+  try_now: Skúsiť teraz
   california_heading: Požiadajte svoju školu, aby vyučovala informatiku
   california_text: Každý učiteľ môže ponúknuť naše <a href='http://studio.code.org/'>
     bezplatné kurzy</a>.  Každá základná škola môže <a href='http://code.org/educate/k5'>
@@ -484,7 +485,7 @@
   class_submission_level_vocational: Odborné
   class_submission_languages_other: Ostatné jazyky
   videos_more: Viac <a href='%{inspiring_videos_playlist}'>inšpiratívnych videí</a>,
-    ktoré uvázdajú vzory a celebrity
+    v ktorých vystupujú známe osobnosti
   careers_page_more: Viac <a href='%{careers_url}' target='_blank'>inšpiratívnych
     videí</a>, ktoré predstavujú odborníkov z technologických oblastí
   playlab_choose_theme: Vyber si tému Play Lab
@@ -514,6 +515,7 @@
   minecraft_adventurer: Minecraft Objavovateľ
   minecraft_tutorials: Kurz Minecraft Hodina Kódu
   minecraft_specs: Veľa jazykov | Moderné prehliadače a tablety | Ročník 2+
+  minecraft_start_tutorial: Spustiť kurz
   minecraft_agent_description: Minecraft je späť v Hodine Kódu s úplne novou aktivitou!
     Prejdi sa po Minecrafte s kódom.
   minecraft_agent_button: Spustiť
@@ -601,7 +603,7 @@
   sports_athlete_Chris: Chris Bosh, zlatý olympijský víťaz a majster NBA Miami Heat
   sports_athlete_Harrison: Harrison Barnes, olympijský víťaz a majster NBA Dallas
     Mavericks
-  watch_inspirational_videos: Skôr ako začneš, pozri si jedno z týchto inšpiračných
+  watch_inspirational_videos: Skôr ako začneš, pozri si jedno z týchto inšpiratívnych
     videí
   video_title_inspire_girl: Inšpiruj dievčatá
   video_title_cs_intro: Úvod do Sveta Technológií
@@ -1068,10 +1070,9 @@
   learn_sign_up_description: Prihláste sa a zúčastnite sa Hodiny Kódu počas "Vzdelávacieho
     týždňa Informatiky"
   learn_sign_up_button: Zaregistrovať sa
-  learn_videos_watch: Pozrite si toto inšpirujúce video s vašou triedou
-  learn_videos_show: Pustite toto inšpirujúce video vašej triede
-  learn_videos_before_hoc: Pozrite si toto inšpirujúce video pred začiatkom Hodiny
-    Kódu
+  learn_videos_watch: Pozrite si toto inšpiratívne video s vašou triedou
+  learn_videos_show: Pustite toto inšpiratívne video vašej triede
+  learn_videos_before_hoc: Pozrite si inšpiratívne video pred začiatkom Hodiny Kódu
   learn_educator_resources_description: Ako učiť Hodinu Kódu
   learn_educator_resources_button: Zdroje pre pedagógov
   learn_are_you_educator: Vyučuješ? Dozveď sa <a href="http://hourofcode.com/resources/how-to">ako
@@ -1171,7 +1172,7 @@
   projguts_name: Kameň, papier, nožnice
   hourofcode_name: Klasické bludisko
   playlab_name: Play Lab
-  infinity_name: Neobmedzená Play Lab
+  infinity_name: Infinity Play Lab
   artist_name: Umelec
   monstercoding_name: Programovanie na Tajomnom Ostrove
   allcancode_name: Bež Marko!
@@ -1313,6 +1314,7 @@
   course1_gradelevel: Vek 4-6
   course2_gradelevel: Vek 6-18
   course3_gradelevel: Vek 8-18
+  course4_gradelevel: Vek 10-18
   coursea_gradelevel: Vek 4-7
   courseb_gradelevel: Vek 5-8
   coursec_gradelevel: Vek 6-10
@@ -1331,6 +1333,7 @@
   coursed-2018_gradelevel: Vek 8+
   coursee-2018_gradelevel: Vek 8-12
   coursef-2018_gradelevel: Vek 9-13
+  accelerated_gradelevel: Vek 10-18
   codeorg_platformtext: Moderné prehliadače, smartfóny, tablety
   codeintl_platformtext: Moderné prehliadače, smartfóny, tablety
   thinkersmithspanish_platformtext: Bez počítača
@@ -1430,6 +1433,7 @@
   starwars_shortdescription: Nauč sa programovať droidy a vytvor si vlastnú hru Star
     Wars v ďalekej galaxii.
   playlab_shortdescription: Vytvor príbeh alebo hru s Play Labom!
+  infinity_shortdescription: Použi Play Lab a vytvor príbeh alebo hru s Disney postavičkami.
   artist_shortdescription: Nakresli skvelé obrázky a vzory s Umelcom!
   monsterocding_shortdescription: Pestrofarebné, samostatné programovacie dobrodružstvo
     pre deti.
@@ -1859,7 +1863,7 @@
   header_about: O nás
   header_teacher_community: Komunita školiteľov
   header_help_support: 'Pomoc a podpora '
-  header_report_bug: Nahláste chybu
+  header_report_bug: Nahlásiť chybu
   header_tutorials: Návody
   header_documentation: Dokumentácia
   csp_name: Princípy Informatiky
@@ -1930,17 +1934,46 @@
     konto":'
   hero_name: 'Minecraft: Cesta Hrdinu'
   applab-intro_name: Úvod do App Lab
+  applab_tile_title: Úvod do App Labu (Vek 13+)
+  applab_tile_subtitle: Vytvor vlastnú appku v JavaScripte pomocou blokového programovania.
+    Alebo sa posuň ešte ďalej a program napíš v texte.
+  applab_tile_start_tutorial: Spustiť
+  applab_tile_teacher_guide: Zobraziť príručku pre učiteľa
   account_sign_up_email_opt_in: Môžeme Vám zasielať emailom aktualizácie o našich
     školeniach, možnostiach výučby vo Vašom okolí alebo iných novinkách v informatike?
+  hoc_overview_title: Hodina Kódu s Code.org
+  hoc_overview_subtitle: <a href="https://hourofcode.com">Hodina Kódu</a> je celosvetové
+    hnutie, ktorého sa zúčastňujú desiatky miliónov študentov z viac ako 180 krajín.
+    Ktokoľvek, kdekoľvek môže zorganizovať svoju Hodinu Kódu a vyskúšať jeden z viac
+    ako 200 jednohodinových kurzov vo viac ako 45 jazykoch.
+  hoc_overview_start_tutorial: Spustiť
+  hoc_overview_view_teacher_guide: Zobraziť príručku pre učiteľa
+  hoc2018_creativity: kreativita
   hoc2018_creativity_create: Vytvoriť
+  hoc2018_creativity_hoc_coming: Hodina Kódu prichádza…
   hoc2018_creativity_what_will_you_create: Čo vytvoríš ty?
+  hoc2018_creativity_homepage: Popusti uzdu fantázii a a prebuď v sebe inovátora.
+    Začni Hodinou Kódu a použi tvoju vlastnú kreativitu na vytvorenie čohokoľvek,
+    čo si len predstavíš. Pozri si naše video.
+  hoc2018_creativity_hoc_about: 'Tohtoročná Hodina Kódu je o kreativite. '
+  hoc2018_creativity_social_media: 'Tohtoročná #HodinaKódu je o kreativite. Ja sa
+    do toho pustím. Čo ty?'
+  hoc2018_creativity_social_media_2: 'Tohtoročná #HodinaKódu je o kreativite. Ja sa
+    do toho pustím. Čo ty?'
   hoc2018_creativity_courses: Pokračuj ďalšími kurzami Code.org
   hoc2018_creativity_courses_link: Pokračuj ďalšími <a href="https://studio.code.org/courses">kurzami
     Code.org</a>
+  hoc2018_homepage: Zaregistruj svoju triedu a vyskúšajte jednu z viac ako 150 NOVÝCH
+    aktivít v Hodine Kódu (3.-9. decembra)!
   hoc2018_mc_page_title: Kurz Minecraft Hodina Kódu
   hoc2018_mc_details: Veľa jazykov | Moderné prehliadače a tablety | Ročník 2+
+  hoc2018_mc_aquatic_announcement: 'Zaregistruj svoju triedu a vyskúšajte jednu z
+    viac ako 150 NOVÝCH aktivít v Hodine Kódu (3.-9. decembra)! Určite si tiež pozrite
+    náš nový kurz Minecraft: Vodné Dobrodružstvo! Prihlás svoju triedu už dnes.'
+  hoc2018_mc_aquatic_title: Minecraft Vodné Dobrodužstvo
   hoc2018_mc_aquatic_description: Minecraft je späť v Hodine Kódu s úplne novou aktivitou!
     Prejdi sa po Minecrafte s kódom.
+  hoc2018_mc_hero_title: 'Minecraft: Cesta Hrdinu'
   hoc2018_mc_hero_description: Minecraft je späť v Hodine Kódu s úplne novou aktivitou!
     Prejdi sa po Minecrafte s kódom.
   hoc2018_mc_designer_title: Minecraft Dizajnér
@@ -1952,10 +1985,27 @@
   hoc2018_mc_start: Spustiť
   hoc2018_mc_no_internet: Nemáš internet?
   hoc2018_mc_download_adventurer: Stiahni si offline verziu Minecraft Objavovateľa.
+  hoc2018_mc_educators: Pre učiteľov
+  hoc2018_mc_educators_box1_title: Programovať s Minecraftom
+  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition obsahuje kompletné
+    učebné osnovy pre vyučovanie programovania v Minecrafte.'
+  hoc2018_mc_educators_box1_button: Začať
+  hoc2018_mc_educators_box2_title: Stiahnuť príručku
+  hoc2018_mc_educators_box2_desc: Tieto materiály Vám pomôžu efektívne viesť Hodinu
+    Kódu a zaujať Vašich študentov informatikou.
   hoc2018_mc_educators_box2_button: Stiahnuť
-  hoc2018_mc_watch_videos: Skôr ako začneš, pozri si jedno z týchto inšpiračných videí
+  hoc2018_mc_educators_box3_title: Zúčastniť sa workshopu pre študentov
+  hoc2018_mc_educators_box3_desc: Navštívte Microsoft obchod vo Vašej oblasti a vyhľadajte
+    workshop pre Hodinu Kódu. Pre účastníkov od 6 rokov.
+  hoc2018_mc_educators_box3_button: Nájsť workshop
+  hoc2018_mc_educators_box4_title: Viac materiálov pre výučbu informatiky
+  hoc2018_mc_educators_box4_desc: Rozšírte Vašu výučbu digitálnych zručností a informatiky
+    s týmito materiálmi od Microsoftu.
+  hoc2018_mc_educators_box4_button: Preskúmať materiály
+  hoc2018_mc_watch_videos: Skôr ako začneš, pozri si jedno z týchto inšpiratívnych
+    videí
   hoc2018_mc_videos_more: Viac <a href='%{inspiring_videos_playlist}'>inšpiratívnych
-    videí</a>, ktoré uvázdajú vzory a celebrity
+    videí</a>, v ktorých vystupujú známe osobnosti
   hoc2018_mc_careers_more: Viac <a href='%{careers_url}' target='_blank'>inšpiratívnych
     videí</a>, ktoré predstavujú odborníkov z technologických oblastí
   hoc2018_mc_video_1min: 1 min
@@ -1971,408 +2021,35 @@
   hoc2018_mc_video_title_hoc_is_here: Hodina Kódu je tu - ktokoľvek sa môže učiť
   hoc2018_mc_video_title_anybody_can_learn: Ktokoľvek sa môže učiť
   hoc2018_mc_video_title_my_name_is_aracely: Volám sa Aracely
+  hoc2018_mc_homepage_hoc_coming: Hodina Kódu sa blíži...
   hoc2018_mc_homepage_what_create: Čo vytvoríš ty?
+  hoc2018_mc_homepage_give_flight: Popusti uzdu fantázii a a prebuď v sebe inovátora.
+    Začni Hodinou Kódu a použi tvoju vlastnú kreativitu na vytvorenie čohokoľvek,
+    čo si len predstavíš.
+  hoc2018_mc_homepage_watch_video: Pozri si naše video
   hoc2018_mc_homepage_join_us: Pridaj sa k nám
   hoc2018_mc_homepage_try_it: Skús to
   hoc2018_mc_back: Minecraft je späť s úplne novou aktivitou pre Hodinu Kódu!
   hoc2018_mc_back_journey: Minecraft je späť v Hodine Kódu s úplne novou aktivitou!
     Prejdi sa po Minecrafte s kódom.
+  hoc2018_mc_teacher_guide: Zobraziť príručku pre učiteľa
   hoc2018_mc_minecraft_education: Výuka s Minecraftom
   hoc2018_mc_continue_learning: Pokračujte v učení sa s Minecraftom.
   hoc2018_mc_go_to_mc_education: Prejsť na výučbu Minecraftom
-  ! '': 
-  studiobar_dance_title: Dance Party
-  studiobar_dance_body: Create and share your own Dance Party
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  minecraft_start_tutorial: Start tutorial
-  sports_title: Code your own sports game
-  sports_all_sports_title: Mix and match across sports
-  video_title_cs_is_everything: Computer Science is Changing Everything
-  dashboard_course_csina: Computer Science in Algebra
-  thinkersmithspanish_name: Mis Amigos Roboticos
-  lightbot_name: Lightbot
-  lightbotintl_name: Lightbot
-  codecademy_name: Codecademy
-  codecombat_name: CodeCombat
-  touchdevelop_name: TouchDevelop
-  thinkersmith2_name: Binary Baubles
-  kodableunplugged_name: fuzzFamily Frenzy
-  codesters_name: Codesters
-  coursea-2018_name: Course A (2018)
-  courseb-2018_name: Course B (2018)
-  coursec-2018_name: Course C (2018)
-  coursed-2018_name: Course D (2018)
-  coursee-2018_name: Course E (2018)
-  coursef-2018_name: Course F (2018)
-  express-2018_name: Express Course (2018)
-  cspunit6_name: 'Post-AP: Databases in Apps'
-  csd1_name: 'Unit 1: Problem Solving'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Animation and Games'
-  csd4_name: 'Unit 4: The Design Process'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp-explore-2017_name: 'AP: Explore PT Prep'
-  csp-create-2017_name: 'AP: Create PT Prep'
-  csppostap-2017_name: 'Post AP: Databases in Apps'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp-explore-2018_name: 'AP: Explore PT Prep'
-  csp-create-2018_name: 'AP: Create PT Prep'
-  csppostap-2018_name: 'Post AP: Databases in Apps'
-  csp3_name: 'Unit 3: Algorithms and Programming'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
-  csp-ap_name: AP Performance Tasks
-  csppostap_name: 'Post AP: Databases in Apps'
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
-  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
-    of computer programming, which unlocks the ability to make rich, interactive apps.
-    This course uses JavaScript as the programming language, and App Lab as the programming
-    environment to build apps, but the concepts learned in these lessons span all
-    programming languages and tools.
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  text-compression_name: Text Compression
-  research_studies_category_name: Research Studies
-  sports_name: Code your own sports game
-  thinkersmithspanish_gradelevel: Por todos
-  course4_gradelevel: Ages 10-18
-  accelerated_gradelevel: Ages 10-18
-  kodable_platformtext: iPad
-  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
-  coursec_shortdescription_congrats: Learn the basics of computer science and create
-    your own art, stories, and games.
-  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
-    create your own art, stories, and games.
-  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
-    create your own art, stories, and games.
-  projguts_longdescription: This "unplugged" activity helps students learn how modeling
-    and simulation works by having a group of students play different versions of
-    the Rock / Paper / Scissors game, and see the results as different modeling experiments.
-  playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
-    pirates, zombies, ninjas, and many more characters move, make sounds, score points,
-    and even throw fireballs!
-  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
-    offers a fun filled self guided adventure that teaches several key programming
-    concepts to children. Each block based activity builds on the previous, introducing
-    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
-    colorful animated graphics, audio instructions.
-  allcancode_longdescription: Students play an adventure game based on an original
-    story. They guide Marco - the main character - through each level by giving him
-    step-by-step instructions in the form of the visual programming language used
-    by the Hour of Code. They get introduced to sequencing commands, iteration and
-    conditions without even noticing it.
-  csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flair. Use code to tell the story
-    you want to tell!
-  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
-    clocks scattered in the wilderness! In this tutorial you will learn the basics
-    of algorithms, sequences, loops and conditionals!
-  codesters_longdescription: 'Create your own games, animations, and artwork using
-    Python.  Once you’re done, share them with friends! Program in Python, a real
-    programming language used every day at companies - our drag and drop toolkit makes
-    it easy to learn!  Try building a basketball game, choreographing a dance, or
-    designing an animated card! '
-  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
-    in class as a way to spark students'' interest in coding with the TI technology
-    they carry in their backpacks everyday.  Learn the basics of coding using the
-    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
-    needed!  '
-  teacherled_longdescription: Now that tens of thousands of educators have tried the
-    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
-    activities that teach the basics of computer science. To help teachers find inspiration,
-    we collected and curated one-hour teacher-led lesson and activity plans designed
-    for different subject areas for Hour of Code veterans.
-  lightbot_beyond_name: LightBot
-  codecademy_beyond_name: Codecademy
-  touchdevelop_beyond_name: TouchDevelop
-  udacity_beyond_name: CS 101
-  kodu_beyond_name: Kodu
-  cargobot_beyond_name: Cargobot
-  kidsruby_beyond_name: KidsRuby
-  mozilla_beyond_name: Webmaker
-  codecombat_beyond_name: CodeCombat
-  codea_beyond_name: Codea
-  lego_beyond_name: Mindstorms
-  finch_beyond_name: Finch
-  alice_beyond_name: Alice
-  sphero_beyond_name: SPRK
-  kodable_beyond_platformtext: iPad
-  scratchjr_beyond_platformtext: iPad
-  hopscotch_beyond_platformtext: iPad
-  kodu_beyond_platformtext: Windows, xBox
-  cargobot_beyond_platformtext: iPad
-  codea_beyond_platformtext: iPad
-  tynker_beyond_longdescription: Tynker makes it fun & easy to learn programming.
-    It makes it visual. Kids build games and mobile apps by arranging blocks of code.
-    It removes the need to know programming syntax. Kids transform ideas into animated
-    stories and math art right away. It promotes progressive learning. As kids learn
-    fundamentals, Tynker introduces more advanced concepts including syntax driven
-    programming.
-  scratchjr_beyond_longdescription: ScratchJr is an introductory programming language
-    that enables young children to create their own interactive stories and games.
-    Children snap together graphical programming blocks to make characters move, jump,
-    dance, and sing
-  hopscotch_beyond_longdescription: Student-guided tutorial on the iPad using the
-    Hopscotch programming language. Students will build games and apps for their iPad
-    on their iPad. Students can work individually or with friends (up to 3 per iPad).
-  pocketcode_beyond_longdescription: Create your own game on your smart phone with
-    Pocket Code! Help skydiver Steve to deliver his parcels. You can share it with
-    friends and other users to try!
-  groklearning_beyond_longdescription: An introductory course using the programming
-    language Python for people with no programming experience. Our unique mix of introductory
-    content and challenges will bring you to a thorough understanding of Python and
-    programming itself. We've taught this content to students of varying ages from
-    diverse backgrounds and we're sure it'll suit you too.
-  hacketyhack_beyond_longdescription: 'Hackety Hack will teach you the absolute basics
-    of programming from the ground up. No previous programming experience is needed!
-    With Hackety Hack, you''ll learn the Ruby programming language. Ruby is used for
-    all kinds of programs, including desktop applications and websites. [Note: Desktop
-    install required]'
-  robomind_beyond_longdescription: 'Students learn the basics of programming by controling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
-  makeschool_beyond_longdescription: Know some ObjectiveC? Learn to make an iPhone
-    game in an hour! We'll guide you through the process, to code, test, and play
-    your game entirely in the browser and then share it on Facebook for friends to
-    try! No prior iPhone development experience is required. You must understand what
-    variables, methods, and objects are.
-  touchdevelop_beyond_longdescription: TouchDevelop lets you create apps on iPad,
-    iPhone, Android, PC, Mac, Windows Phone. Our touch-friendly editor makes coding
-    fun, even on your phone or tablet!
-  codehs_beyond_longdescription: 'Learn the basics of programming with Karel the Dog,
-    a fun, accessible and visual introduction to coding, where giving commands to
-    a computer is just like giving commands to a dog. This tutorial is great if led
-    by a teacher, but can also be done independently. [Note: payment is required]'
-  udemy_beyond_longdescription: 'Whether you''ve never seen a line of code or you
-    code for a living, Udemy has a course for you, taught by professional instructors.
-    [Note: payment is required]'
-  lynda_beyond_longdescription: 'Learn how to code, create, and build web applications,
-    from the foundations of object-oriented programming in C and C++, to how to write
-    Java. Our developer tutorials can help you learn to develop and create mobile
-    apps, work with PHP and MySQL databases, get started with the statistical processing
-    language R, and much more. [Note: payment is required]'
-  edx_beyond_longdescription: CS50x is Harvard College's introduction to the intellectual
-    enterprises of computer science and the art of programming for majors and non-majors
-    alike, with or without prior programming experience. Topics include abstraction,
-    algorithms, data structures, encapsulation, resource management, security, software
-    engineering, and web development. Languages include C, PHP, and JavaScript plus
-    SQL, CSS, and HTML. The on-campus version of CS50x is Harvard's second-largest
-    course.
-  coursera_beyond_longdescription: 'Stanford''s CS 101 class taught by Nick Parlante
-    (FREE!). CS101 teaches the essential ideas of Computer Science for a zero-prior-experience
-    audience. Play and experiment with short bits of code to bring to life to the
-    power and limitations of computers. CS101 also provides a general background on
-    computers today: what is a computer, what is hardware, what is software, what
-    is the internet. No previous experience is required other than the ability to
-    use a web browser.'
-  udacity_beyond_longdescription: In this course you will learn key concepts in computer
-    science and learn how to write your own computer programs in the context of building
-    a web crawler. There is no prior programming knowledge needed for this course.
-    Beginners are welcome! At the end of this course, you will have learned key concepts
-    in computer science and enough programming to be able to write Python programs
-    to solve problems on your own. This course will prepare you to move on to intermediate-level
-    computing courses.
-  teachingtree_beyond_longdescription: TeachingTree is an open platform that lets
-    anybody organize educational content. Our goal is for students to quickly access
-    the exact clips they need in order to learn individual concepts. Everyone is encouraged
-    to help by adding videos or tagging concepts.
-  kodu_beyond_longdescription: Kodu lets kids create games on the PC and XBox via
-    a simple visual programming language. Kodu can be used to teach creativity, problem
-    solving, storytelling, as well as programming. Anyone can use Kodu to make a game,
-    young children as well as adults with no design or programming skills. Kodu for
-    the PC is available to download for free. Kodu for the XBox is also available
-    in the USA on the XBox Marketplace, in the Indie Games channel for about $5.
-  cargobot_beyond_longdescription: Cargo-Bot is a puzzle game where you teach a robot
-    how to move crates. Sounds simple, right? It features 36 fiendishly clever puzzles,
-    haunting music and stunning retina graphics. You can even record your solutions
-    and share them on YouTube to show your friends.
-  kidsruby_beyond_longdescription: 'Have fun and make games, or hack your homework
-    using Ruby! Just tell your parents or teachers you''re learning Ruby programming...
-    ;). Free and works on any computer. [Note: Desktop install required]'
-  codeavengers_beyond_longdescription: Learn how to program games, apps and websites.
-    Designed by experts with perfect level of difficulty for beginners, easy to understand
-    instructions and great help when you need it. Our HTML, CSS and JavaScript courses
-    include code challenges and revision games that make learning fun and effective
-    for all ages.
-  mozilla_beyond_longdescription: Thimble makes it ridiculously simple to create and
-    share your own web pages. Write and edit HTML and CSS right in your browser, then
-    instantly preview your work. Host and share your finished projects with a single
-    click. Perfect for beginners and experts alike.
-  codecombat_beyond_longdescription: Play as a Wizard using code (spells) to control
-    your heroes, navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn
-    JavaScript in this HTML 5 web game for complete beginners.
-  codea_beyond_longdescription: Codea for iPad lets you create games and simulations
-    &mdash; or just about any visual idea you have. Turn your thoughts into interactive
-    creations that make use of iPad features like Multi-Touch and the accelerometer.
-    We think Codea is the most beautiful code editor you'll use, and it's easy. Codea
-    is designed to let you touch your code. Want to change a number? Just tap and
-    drag it. How about a color, or an image? Tapping will bring up visual editors
-    that let you choose exactly what you want.
-  starwars_shortcode: star
-  mc_shortcode: mc
-  frozen_shortcode: frzn
-  hourofcode_shortcode: code
-  infinity_shortcode: inf
-  playlab_shortcode: lab
-  artist_shortcode: art
-  user_header_dance: Dance Party
-  user_header_spritelab: Sprite Lab
-  user_header_view_project_gallery: View project gallery
-  sign_in_instruct_secret: Choose their secret %{secret}.
-  applab_tile_title: Intro to App Lab (Ages 13+)
-  applab_tile_subtitle: Create your own app in JavaScript using block based programming.
-    Or take your skills to the next level with text-based programming. (English Only)
-  applab_tile_start_tutorial: Start tutorial
-  applab_tile_teacher_guide: View teacher guide
-  aquatic_name: 'Minecraft: Voyage Aquatic'
-  account_sign_up_child_accept_terms: I confirm that I have my parent or legal guardian's
-    permission to use the Code.org services.
-  hoc_overview_title: Hour of Code Activities from Code.org
-  hoc_overview_subtitle: The <a href="https://hourofcode.com">Hour of Code</a> is
-    a global movement reaching tens of millions of students in 180+ countries. Anyone,
-    anywhere can organize an Hour of Code event or try any of the over 200+ one-hour
-    tutorials, available in over 45 languages.
-  hoc_overview_partner_activities_title: More activities from partners
-  hoc_overview_partner_activities_body: The Hour of Code website has over 100 computer
-    science activities for all ages and experience levels, developed by Code.org and
-    partners.
-  hoc_overview_partner_activities_link: View Activities
-  hoc2018_creativity: creativity
-  hoc2018_creativity_hoc_coming: The Hour of Code is coming…
-  hoc2018_creativity_homepage: Give flight to imagination and birth to innovation.
-    Start with an Hour of Code and your own brand of creativity, whatever it may be.
-    Watch our video.
-  hoc2018_creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
-  hoc2018_creativity_social_media: 'This year''s #HourOfCode is about creativity.
-    I’m in! Are you?'
-  hoc2018_creativity_social_media_2: 'This year''s #HourOfCode is about creativity.
-    What will you create?'
-  hoc2018_homepage: Sign up your class to try one of the over 150 NEW activites for
-    the Hour of Code (Dec 3-9)!
-  hoc2018_mc_aquatic_announcement: Sign up your class to try one of the over 150 NEW
-    activities for the Hour of Code (Dec 3-9). Be sure to check out our brand new
-    Minecraft activity for 2018, the Voyage Aquatic! Sign up your class today.
-  hoc2018_mc_aquatic_title: Minecraft Voyage Aquatic
-  hoc2018_mc_hero_title: Minecraft Hero’s Journey
-  hoc2018_mc_educators: For Educators
-  hoc2018_mc_educators_box1_title: Code with Minecraft
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition provides standards-aligned
-    curriculum, training and coding in Minecraft.'
-  hoc2018_mc_educators_box1_button: Get started
-  hoc2018_mc_educators_box2_title: Download Facilitator Guide
-  hoc2018_mc_educators_box2_desc: This toolkit will help you host an Hour of Code
-    and engage your students in computer science.
-  hoc2018_mc_educators_box3_title: Attend a free student workshop
-  hoc2018_mc_educators_box3_desc: Visit a Microsoft Store in your area for a free
-    Hour of Code workshop. For participants of all skill levels, ages six and up.
-  hoc2018_mc_educators_box3_button: Find a workshop
-  hoc2018_mc_educators_box4_title: Access more computer science resources
-  hoc2018_mc_educators_box4_desc: Create change in your community with digital skills
-    and computer science education resources from Microsoft.
-  hoc2018_mc_educators_box4_button: Explore resources
-  hoc2018_mc_video_title_cs_is_everything: Computer Science is Changing Everything
-  hoc2018_mc_homepage_hoc_coming: The Hour of Code is coming...
-  hoc2018_mc_homepage_give_flight: Give flight to imagination and birth to innovation.
-    Start with an Hour of Code and your own brand of creativity, whatever it may be.
-  hoc2018_mc_homepage_watch_video: Watch our video
-  hoc2018_mc_teacher_guide: View teacher guide
-  hoc2018_mc_short_description: Use your creativity and problem solving skills to
-    find treasure and explore under water worlds with the power of code.
-  hoc2018_mc_short_description_shorter: Use your creativity and problem solving skills
-    to explore and build underwater worlds with code.
-  hoc2018_mc_journey: Journey through Minecraft with code.
-  hoc2018_dance_party_main_heading: Dance Party
-  hoc2018_dance_party_subheading: Help Translate Dance Party
-  hoc2018_dance_create_your_own_dance_title: Create Your Own Dance Party
-  hoc2018_dance_party_box_title: Dance Party
-  hoc2018_dance_party_box_description: Code a Dance Party to share with your friends!
-  hoc2018_dance_party_specs: Language | Format | Age 6-106
-  hoc2018_dance_party_button: Start
-  hoc2018_dance_keep_on_dancing_box_title: Keep On Dancing
-  hoc2018_dance_keep_on_dancing_description: Go beyond the first hour with extended
-    project ideas.
-  hoc2018_dance_keep_on_dancing_specs: Language | Format | Age 13+
-  hoc2018_dance_keep_on_dancing_button: Go Beyond
-  hoc2018_dance_teacher_resources_title: Teacher Resources
-  hoc2018_dance_teacher_resources_tile1_description: Lesson plans, certificates, and
-    music filtering.
-  hoc2018_dance_teacher_resources_tile1_button: Lesson Plan
-  hoc2018_dance_teacher_resources_tile2_title: Dance Party Unplugged
-  hoc2018_dance_teacher_resources_tile2_description: No computers needed! Your class
-    will learn about coding concepts to choreograph a dance party together.
-  hoc2018_dance_teacher_resources_tile2_button: Unplugged Activity
-  hoc2018_dance_featured_student_creations_title: Featured Student Creations
-  hoc2018_dance_videos_section_heading: Get Inspired
-  hoc2018_dance_video_title_what_is_creativity: What is Creativity?
-  hoc2018_dance_view_creativity_video_playlist: What is Creativity? View Full Series
-  hoc2018_dance_amazon_sponsor_section_with_logo_title: 'In partnership with: '
-  hoc2018_dance_amazon_sponsor_section_with_logo_description: Amazon Future Engineer
-    is a comprehensive childhood-to-career program to inspire, educate, and train
-    low-income and other disadvantaged children and young people to pursue careers
-    in computer science.
-  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
-    Engineer is a comprehensive childhood-to-career program to inspire, educate, and
-    train low-income and other disadvantaged children and young people to pursue careers
-    in computer science. <a href='%{amazon_future_engineer_link}' target='_blank'>Learn
-    more</a>
-  hoc2018_dance_amazon_learn_more_link: Learn more
-  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Learn more about
-    Amazon Future Engineer
-  hoc2018_dance_amazon_about_future_engineer_box1_title: About Amazon Future Engineer
-  hoc2018_dance_amazon_about_future_engineer_box1_description: Learn about Amazon’s
-    kindergarten to career program to increase access to computer science education.
-    Find information on how to get involved in our summer camps, high school CS classes,
-    scholarships, and internships.
-  hoc2018_dance_amazon_about_future_engineer_box1_button_text: Learn more
-  hoc2018_dance_amazon_try_coding_this_summer_box2_long_title: Try coding this summer
-  hoc2018_dance_amazon_K-8_programs_box2_short_title: K-8 programs
-  hoc2018_dance_amazon_try_coding_box2_description: Get involved in Amazon Future
-    Engineer’s free, fun, and inclusive computer science camps! Summer camps are available
-    for students from kindergarten through 8th grade in multiple locations in the
-    US for summer 2019.
-  hoc2018_dance_amazon_apply_now_button_text: Apply now
-  hoc2018_dance_amazon_scholarship_programs_box3_short_title: Scholarship programs
-  hoc2018_dance_amazon_scholarship_programs_box3_long_title: Get funding for your
-    CS degree
-  hoc2018_dance_amazon_scholarship_programs_box3_description: Amazon is offering $10,000
-    4-year scholarships for underserved students who are studying CS. Applicants must
-    have successfully completed or currently be enrolled in an AP computer science
-    course. Scholarship recipients will also receive paid summer internships at Amazon
-    in the summer of 2020!
-  hoc2018_dance_amazon_internships_box4_long_title: Come Intern at Amazon
-  hoc2018_dance_amazon_internships_box4_short_title: Internships
-  hoc2018_dance_amazon_internships_box4_description: Applications are now open for
-    summer 2019 Amazon Future Engineer internships.  Interns will partner with a technical
-    mentor and manager, as well as with other interns, to innovate and create new
-    features and services on behalf of Amazon customers.
-  hoc2018_dance_measure: Measure
-  hoc2018_dance_measure_colon: 'Measure:'
-  hoc2018_aquatic_video1: Minecraft Voyage Aquatic - Introduction
-  hoc2018_aquatic_video2: Minecraft Voyage Aquatic - Loops
-  hoc2018_aquatic_video3: Minecraft Voyage Aquatic - Conditionals
-  hoc2018_aquatic_video4: Minecraft Voyage Aquatic - Congratulations
-  hoc2018_dance_video1: Dance Party - Introduction
-  hoc2018_dance_video2: Dance Party - Events
-  hoc2018_dance_video3: Dance Party - Properties
-  hoc2018_dance_video4: Dance Party - Congratulations
+  hoc2018_mc_short_description: Pomocou kreativity, schopnosti riešiť problémy a sily
+    kódu nájdi poklad a objavuj svet pod vodou.
+  hoc2018_mc_short_description_shorter: Pomocou kreativity, schopnosti riešiť problémy
+    a sily kódu objav a vybuduj podvodný svet.
+  hoc2018_mc_journey: Cesta Minecraftom s pomocou kódu.
+  hoc2018_dance_party_specs: Jazyk | Formát | Vek 6-106
+  hoc2018_dance_party_button: Spustiť
+  hoc2018_dance_teacher_resources_tile1_button: Plán lekcie
+  hoc2018_dance_teacher_resources_tile2_button: Aktivity bez počítača
+  hoc2018_dance_video_title_what_is_creativity: Čo je Kreativita?
+  hoc2018_dance_view_creativity_video_playlist: Čo je Kreativita? Pozrieť všetky videá
+  hoc2018_dance_amazon_about_future_engineer_button: Zistiť viac
+  hoc2018_dance_amazon_scholarship_programs_button: Použiť teraz
+  hoc2018_aquatic_video1: Minecraft Vodné Dobrodružstvo - Gratulujeme
+  hoc2018_aquatic_video2: Minecraft Vodné Dobrodružstvo - Cykly
+  hoc2018_aquatic_video3: Minecraft Vodné Dobrodružstvo - Podmienky
+  hoc2018_aquatic_video4: Minecraft Vodné Dobrodružstvo - Gratulujeme

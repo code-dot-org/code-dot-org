@@ -3,22 +3,22 @@
 :ruby
   resources = [
     {
-      title: "Dance Party",
-      description: "Code a Dance Party to share with your friends!",
-      image: "/images/animated-examples/cutesprite.gif",
-      button_text: "Start",
-      link: CDO.studio_url('/s/dance')
+      title: I18n.t(:hoc2018_dance_teacher_resources_title),
+      description: I18n.t(:hoc2018_dance_teacher_resources_tile1_description),
+      image: "/images/dance-hoc/dance_party_dance.gif",
+      button_text: I18n.t(:hoc2018_dance_teacher_resources_tile1_button),
+      link: "https://curriculum.code.org/hoc/plugged/8"
     },
     {
-      title: "Keep Dancing",
-      description: "Go beyond the first hour with extended Dance Party project ideas.",
-      image: "/images/animated-examples/cutesprite.gif",
-      button_text: "Go Beyond",
-      link: CDO.studio_url('/s/dance-extras')
+      title: I18n.t(:hoc2018_dance_teacher_resources_tile2_title),
+      description: I18n.t(:hoc2018_dance_teacher_resources_tile2_description),
+      image: "/images/dance-hoc/dance_party_unplugged_portrait.png",
+      button_text: I18n.t(:hoc2018_dance_teacher_resources_tile2_button),
+      link: "https://curriculum.code.org/hoc/unplugged/4"
     },
   ]
 
-.resources
+#teacher-resources.resources
   -resources.each do |resource|
     .col-50
       .resource-card

@@ -1,4 +1,5 @@
-"zh-CN":
+---
+zh-CN:
   hour_of_code: 编程一小时
   hello: 世界你好
   'yes': 对
@@ -242,6 +243,8 @@
   studiobar_title_nolink: 探索Code.org的课程
   studiobar_elementary_title: 初级课程
   studiobar_elementary_body: 为 K&#8209;5 所制的三个新课程
+  studiobar_dance_title: 舞蹈派对
+  studiobar_dance_body: 创建并分享你自己的跳舞派对
   studiobar_hoc_title: 编程一小时
   studiobar_hoc_body: 和愤怒的小鸟一起学习代码知识
   studiobar_flappy_title: 飞扬的代码
@@ -436,6 +439,7 @@
   minecraft_adventurer: "《我的世界》大冒险"
   minecraft_tutorials: 编程一小时《我的世界》教程
   minecraft_specs: 多种语言|最新的浏览器或平板电脑|2年级以上
+  minecraft_start_tutorial: 开始教程
   minecraft_agent_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
   minecraft_agent_button: 开始
   minecraft_designer_description: 建立一个 我的世界 游戏。创造您自己版本的鸡、羊、爬行者、僵尸等等。
@@ -704,7 +708,7 @@
   dashboard_sections_table_stage_extras: 此阶段的额外资源
   dashboard_sections_table_students: 学生
   dashboard_sections_table_code: 小组代码
-  dashboard_sections_name: 学习小组名称
+  dashboard_sections_name: 小组名称：
   dashboard_sections_choose_secret: 如果您想要给您的学生提供帐户，请为那个学习小组选择一种 <b>单词</b> 或 <b>图片</b>
     的密码类型。
   dashboard_sections_secret_word: "<b>单词</b>允许您为每位学生设置一个单词密语。"
@@ -733,7 +737,7 @@
   dashboard_students_new_google_classroom_section: 如果要添加学生，请转到<a href='http://classroom.google.com'
     target='_blank'>谷歌课堂</a>然后点击<b>Sync students from Google Classroom</b>。
   dashboard_students_new_section: 您已经创建了一个新的学习小组！现在，使用上面的<b>添加学生</b>和<b>添加多个学生</b>按钮来添加学生进组。
-  dashboard_students_name: 姓名
+  dashboard_students_name: '姓名： '
   dashboard_students_progress: 进度
   dashboard_students_male: 男性
   dashboard_students_female: 女性
@@ -1575,8 +1579,24 @@
   google_sign_in_instruct: '从那里, 他们应该选择 "使用谷歌帐户登录" 选项:'
   hero_name: "《我的世界》: 英雄之旅"
   applab-intro_name: 应用程序实验室简介
+  applab_tile_title: 应用实验室简介 （13岁以上）
+  applab_tile_subtitle: 用基于模块的编程来创建自己的JavaScript应用。或者用基于文本的编程来达到新的级别。（仅英语）
+  applab_tile_start_tutorial: 开始
+  applab_tile_teacher_guide: 查看教师指南
+  aquatic_name: "《我的世界》：水上航行"
   account_sign_up_email_opt_in: 我们可以通过电子邮件向您发送有关课程、本地的机会以及其他计算机科学新闻吗？（大约每月一次）
   account_sign_up_child_accept_terms: 我确认我的父母或法定监护人同意我使用 Code.org 的服务。
+  hoc_overview_dance_title: 舞蹈派对
+  hoc_overview_dance_subtitle: 写出你自己的舞会代码，分享给你的朋友们。精选 Katy Perry, Madonna, J. Balvin,
+    Sia, Keith Urban, Ciara, 等 25 个！
+  hoc_overview_title: 来自 Code.org 的编程一小时活动
+  hoc_overview_subtitle: <a href="https://hourofcode.com">编程一小时</a>是一个全球性的活动，在全球180多个国家有数千万学生参与了这个活动。无论你是谁，身处何方，你都可以举办一个编程一小时活动，或者尝试超过两百个，支持45种语言的编程一小时教程。
+  hoc_overview_partner_activities_title: 更多合作伙伴的活动
+  hoc_overview_partner_activities_body: 编程一小时网站为所有年龄和经验的人准备了超过100个计算机科学活动，由 Code.org
+    和合作伙伴开发。
+  hoc_overview_partner_activities_link: 查看活动
+  hoc_overview_start_tutorial: 开始
+  hoc_overview_view_teacher_guide: 查看教师指南
   hoc2018_creativity: 创造力
   hoc2018_creativity_create: 创建
   hoc2018_creativity_hoc_coming: 编程一小时就要来了…
@@ -1591,7 +1611,10 @@
   hoc2018_homepage: 注册您的班级以尝试编程一小时中的150多项新活动（12月3-9日推出）！
   hoc2018_mc_page_title: 编程一小时《我的世界》教程
   hoc2018_mc_details: 多种语言|最新的浏览器或平板电脑|2年级以上
+  hoc2018_mc_aquatic_announcement: 注册您的班级以尝试编程一小时中的150多项新活动（12月3-9日推出）！请尝试2018年全新《我的世界》活动，《我的世界》水上航行！现在就注册班级。
+  hoc2018_mc_aquatic_title: "《我的世界》：水上航行"
   hoc2018_mc_aquatic_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
+  hoc2018_mc_hero_title: "《我的世界》: 英雄之旅"
   hoc2018_mc_hero_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
   hoc2018_mc_designer_title: "《我的世界》造物主"
   hoc2018_mc_designer_description: 建立一个 我的世界 游戏。创造您自己版本的鸡、羊、爬行者、僵尸等等。
@@ -1600,7 +1623,19 @@
   hoc2018_mc_start: 开始
   hoc2018_mc_no_internet: 没有互联网吗？
   hoc2018_mc_download_adventurer: 下载离线版《我的世界》大冒险
+  hoc2018_mc_educators: 给教育工作者
+  hoc2018_mc_educators_box1_title: 在《我的世界》编程
+  hoc2018_mc_educators_box1_desc: "《我的世界》：教育版在《我的世界》中提供了标准的教案，培训和代码。"
+  hoc2018_mc_educators_box1_button: 开始
+  hoc2018_mc_educators_box2_title: 下载引导员指南
+  hoc2018_mc_educators_box2_desc: 工具包可以帮助你主持编程一小时活动，并将学生吸引到计算机科学中来。
   hoc2018_mc_educators_box2_button: 下载
+  hoc2018_mc_educators_box3_title: 参加免费的学生工场
+  hoc2018_mc_educators_box3_desc: 加入你附近微软商店的免费编程一小时工场。所有技能级别，年龄在6岁以上。
+  hoc2018_mc_educators_box3_button: 找到工场
+  hoc2018_mc_educators_box4_title: 更多计算机科学资源
+  hoc2018_mc_educators_box4_desc: 从微软带来改变社区的数字技能和计算机科学教育资源。
+  hoc2018_mc_educators_box4_button: 探索资源
   hoc2018_mc_watch_videos: 在开始之前，看一段鼓舞人心的视频
   hoc2018_mc_videos_more: 更多由榜样人物和明星出演的<a href='%{inspiring_videos_playlist}'>鼓舞人心的视频</a>
   hoc2018_mc_careers_more: 更多由科技人士拍摄的的<a href='%{careers_url}' target='_blank'>鼓舞人心的视频</a>
@@ -1617,213 +1652,58 @@
   hoc2018_mc_video_title_hoc_is_here: 编程一小时来了——任何人都可以学会
   hoc2018_mc_video_title_anybody_can_learn: 任何人都可以学习
   hoc2018_mc_video_title_my_name_is_aracely: 我叫阿拉丝莉
+  hoc2018_mc_homepage_hoc_coming: 编程一小时活动即将开始...
   hoc2018_mc_homepage_what_create: 你将创建什么？
+  hoc2018_mc_homepage_give_flight: 放飞想象，孕育创新。从编程一小时和自己的创意品牌开始，无论它是什么。
+  hoc2018_mc_homepage_watch_video: 观看视频
   hoc2018_mc_homepage_join_us: 加入我们
   hoc2018_mc_homepage_try_it: 试一试
   hoc2018_mc_back: "《我的世界》编程一小时的全新的活动回来了！"
   hoc2018_mc_back_journey: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
+  hoc2018_mc_teacher_guide: 查看教师指南
   hoc2018_mc_minecraft_education: "《我的世界》 教育"
   hoc2018_mc_continue_learning: 继续在《我的世界》 学习。
   hoc2018_mc_go_to_mc_education: 去 《我的世界》 教育
-  ! '': 
-  studiobar_dance_title: Dance Party
-  studiobar_dance_body: Create and share your own Dance Party
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  minecraft_start_tutorial: Start tutorial
-  video_title_cs_is_everything: Computer Science is Changing Everything
-  dashboard_course_csina: Computer Science in Algebra
-  thinkersmithspanish_name: Mis Amigos Roboticos
-  lightbot_name: Lightbot
-  lightbotintl_name: Lightbot
-  codecademy_name: Codecademy
-  codecombat_name: CodeCombat
-  touchdevelop_name: TouchDevelop
-  thinkersmith2_name: Binary Baubles
-  kodableunplugged_name: fuzzFamily Frenzy
-  codesters_name: Codesters
-  csd1_name: 'Unit 1: Problem Solving'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Animation and Games'
-  csd4_name: 'Unit 4: The Design Process'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp3_name: 'Unit 3: Algorithms and Programming'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  text-compression_name: Text Compression
-  csd_category_name: CS Discoveries ('17-'18)
-  research_studies_category_name: Research Studies
-  thinkersmithspanish_gradelevel: Por todos
-  kodable_platformtext: iPad
-  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
-  lightbot_beyond_name: LightBot
-  codecademy_beyond_name: Codecademy
-  touchdevelop_beyond_name: TouchDevelop
-  udacity_beyond_name: CS 101
-  kodu_beyond_name: Kodu
-  cargobot_beyond_name: Cargobot
-  kidsruby_beyond_name: KidsRuby
-  mozilla_beyond_name: Webmaker
-  codecombat_beyond_name: CodeCombat
-  codea_beyond_name: Codea
-  lego_beyond_name: Mindstorms
-  finch_beyond_name: Finch
-  alice_beyond_name: Alice
-  sphero_beyond_name: SPRK
-  kodable_beyond_platformtext: iPad
-  scratchjr_beyond_platformtext: iPad
-  hopscotch_beyond_platformtext: iPad
-  kodu_beyond_platformtext: Windows, xBox
-  cargobot_beyond_platformtext: iPad
-  codea_beyond_platformtext: iPad
-  starwars_shortcode: star
-  mc_shortcode: mc
-  frozen_shortcode: frzn
-  hourofcode_shortcode: code
-  infinity_shortcode: inf
-  playlab_shortcode: lab
-  artist_shortcode: art
-  applab_tile_title: Intro to App Lab (Ages 13+)
-  applab_tile_subtitle: Create your own app in JavaScript using block based programming.
-    Or take your skills to the next level with text-based programming. (English Only)
-  applab_tile_start_tutorial: Start tutorial
-  applab_tile_teacher_guide: View teacher guide
-  aquatic_name: 'Minecraft: Voyage Aquatic'
-  hoc_overview_title: Hour of Code Activities from Code.org
-  hoc_overview_subtitle: The <a href="https://hourofcode.com">Hour of Code</a> is
-    a global movement reaching tens of millions of students in 180+ countries. Anyone,
-    anywhere can organize an Hour of Code event or try any of the over 200+ one-hour
-    tutorials, available in over 45 languages.
-  hoc_overview_partner_activities_title: More activities from partners
-  hoc_overview_partner_activities_body: The Hour of Code website has over 100 computer
-    science activities for all ages and experience levels, developed by Code.org and
-    partners.
-  hoc_overview_partner_activities_link: View Activities
-  hoc2018_mc_aquatic_announcement: Sign up your class to try one of the over 150 NEW
-    activities for the Hour of Code (Dec 3-9). Be sure to check out our brand new
-    Minecraft activity for 2018, the Voyage Aquatic! Sign up your class today.
-  hoc2018_mc_aquatic_title: Minecraft Voyage Aquatic
-  hoc2018_mc_hero_title: Minecraft Hero’s Journey
-  hoc2018_mc_educators: For Educators
-  hoc2018_mc_educators_box1_title: Code with Minecraft
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition provides standards-aligned
-    curriculum, training and coding in Minecraft.'
-  hoc2018_mc_educators_box1_button: Get started
-  hoc2018_mc_educators_box2_title: Download Facilitator Guide
-  hoc2018_mc_educators_box2_desc: This toolkit will help you host an Hour of Code
-    and engage your students in computer science.
-  hoc2018_mc_educators_box3_title: Attend a free student workshop
-  hoc2018_mc_educators_box3_desc: Visit a Microsoft Store in your area for a free
-    Hour of Code workshop. For participants of all skill levels, ages six and up.
-  hoc2018_mc_educators_box3_button: Find a workshop
-  hoc2018_mc_educators_box4_title: Access more computer science resources
-  hoc2018_mc_educators_box4_desc: Create change in your community with digital skills
-    and computer science education resources from Microsoft.
-  hoc2018_mc_educators_box4_button: Explore resources
-  hoc2018_mc_video_title_cs_is_everything: Computer Science is Changing Everything
-  hoc2018_mc_homepage_hoc_coming: The Hour of Code is coming...
-  hoc2018_mc_homepage_give_flight: Give flight to imagination and birth to innovation.
-    Start with an Hour of Code and your own brand of creativity, whatever it may be.
-  hoc2018_mc_homepage_watch_video: Watch our video
-  hoc2018_mc_teacher_guide: View teacher guide
-  hoc2018_mc_short_description: Use your creativity and problem solving skills to
-    find treasure and explore under water worlds with the power of code.
-  hoc2018_mc_short_description_shorter: Use your creativity and problem solving skills
-    to explore and build underwater worlds with code.
-  hoc2018_mc_journey: Journey through Minecraft with code.
-  hoc2018_dance_party_main_heading: Dance Party
-  hoc2018_dance_party_subheading: Help Translate Dance Party
-  hoc2018_dance_create_your_own_dance_title: Create Your Own Dance Party
-  hoc2018_dance_party_box_title: Dance Party
-  hoc2018_dance_party_box_description: Code a Dance Party to share with your friends!
-  hoc2018_dance_party_specs: Language | Format | Age 6-106
-  hoc2018_dance_party_button: Start
-  hoc2018_dance_keep_on_dancing_box_title: Keep On Dancing
-  hoc2018_dance_keep_on_dancing_description: Go beyond the first hour with extended
-    project ideas.
-  hoc2018_dance_keep_on_dancing_specs: Language | Format | Age 13+
-  hoc2018_dance_keep_on_dancing_button: Go Beyond
-  hoc2018_dance_teacher_resources_title: Teacher Resources
-  hoc2018_dance_teacher_resources_tile1_description: Lesson plans, certificates, and
-    music filtering.
-  hoc2018_dance_teacher_resources_tile1_button: Lesson Plan
-  hoc2018_dance_teacher_resources_tile2_title: Dance Party Unplugged
-  hoc2018_dance_teacher_resources_tile2_description: No computers needed! Your class
-    will learn about coding concepts to choreograph a dance party together.
-  hoc2018_dance_teacher_resources_tile2_button: Unplugged Activity
-  hoc2018_dance_featured_student_creations_title: Featured Student Creations
-  hoc2018_dance_videos_section_heading: Get Inspired
-  hoc2018_dance_video_title_what_is_creativity: What is Creativity?
-  hoc2018_dance_view_creativity_video_playlist: What is Creativity? View Full Series
-  hoc2018_dance_amazon_sponsor_section_with_logo_title: 'In partnership with: '
-  hoc2018_dance_amazon_sponsor_section_with_logo_description: Amazon Future Engineer
-    is a comprehensive childhood-to-career program to inspire, educate, and train
-    low-income and other disadvantaged children and young people to pursue careers
-    in computer science.
-  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
-    Engineer is a comprehensive childhood-to-career program to inspire, educate, and
-    train low-income and other disadvantaged children and young people to pursue careers
-    in computer science. <a href='%{amazon_future_engineer_link}' target='_blank'>Learn
-    more</a>
-  hoc2018_dance_amazon_learn_more_link: Learn more
-  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Learn more about
-    Amazon Future Engineer
-  hoc2018_dance_amazon_about_future_engineer_box1_title: About Amazon Future Engineer
-  hoc2018_dance_amazon_about_future_engineer_box1_description: Learn about Amazon’s
-    kindergarten to career program to increase access to computer science education.
-    Find information on how to get involved in our summer camps, high school CS classes,
-    scholarships, and internships.
-  hoc2018_dance_amazon_about_future_engineer_box1_button_text: Learn more
-  hoc2018_dance_amazon_try_coding_this_summer_box2_long_title: Try coding this summer
-  hoc2018_dance_amazon_K-8_programs_box2_short_title: K-8 programs
-  hoc2018_dance_amazon_try_coding_box2_description: Get involved in Amazon Future
-    Engineer’s free, fun, and inclusive computer science camps! Summer camps are available
-    for students from kindergarten through 8th grade in multiple locations in the
-    US for summer 2019.
-  hoc2018_dance_amazon_apply_now_button_text: Apply now
-  hoc2018_dance_amazon_scholarship_programs_box3_short_title: Scholarship programs
-  hoc2018_dance_amazon_scholarship_programs_box3_long_title: Get funding for your
-    CS degree
-  hoc2018_dance_amazon_scholarship_programs_box3_description: Amazon is offering $10,000
-    4-year scholarships for underserved students who are studying CS. Applicants must
-    have successfully completed or currently be enrolled in an AP computer science
-    course. Scholarship recipients will also receive paid summer internships at Amazon
-    in the summer of 2020!
-  hoc2018_dance_amazon_internships_box4_long_title: Come Intern at Amazon
-  hoc2018_dance_amazon_internships_box4_short_title: Internships
-  hoc2018_dance_amazon_internships_box4_description: Applications are now open for
-    summer 2019 Amazon Future Engineer internships.  Interns will partner with a technical
-    mentor and manager, as well as with other interns, to innovate and create new
-    features and services on behalf of Amazon customers.
-  hoc2018_dance_measure: Measure
-  hoc2018_dance_measure_colon: 'Measure:'
-  hoc2018_aquatic_video1: Minecraft Voyage Aquatic - Introduction
-  hoc2018_aquatic_video2: Minecraft Voyage Aquatic - Loops
-  hoc2018_aquatic_video3: Minecraft Voyage Aquatic - Conditionals
-  hoc2018_aquatic_video4: Minecraft Voyage Aquatic - Congratulations
-  hoc2018_dance_video1: Dance Party - Introduction
-  hoc2018_dance_video2: Dance Party - Events
-  hoc2018_dance_video3: Dance Party - Properties
-  hoc2018_dance_video4: Dance Party - Congratulations
+  hoc2018_mc_short_description: 用你的创造力和解决问题的技能来找到财宝，并用代码来探索水下世界。
+  hoc2018_mc_short_description_shorter: 用你的创造力和解决问题的技能来用代码探索并构建水下世界。
+  hoc2018_mc_journey: 用代码在《我的世界》中旅行。
+  hoc2018_dance_party_main_heading: 舞蹈派对
+  hoc2018_dance_party_subheading: 帮助翻译舞蹈派对
+  hoc2018_dance_create_your_own_dance_title: 创建自己的舞会
+  hoc2018_dance_party_box_title: 舞蹈派对
+  hoc2018_dance_party_box_description: 写出一个舞会代码，分享给你的朋友们！
+  hoc2018_dance_party_specs: 语言 | 格式 | 6岁以上
+  hoc2018_dance_party_button: 开始
+  hoc2018_dance_keep_on_dancing_box_title: 继续跳舞
+  hoc2018_dance_keep_on_dancing_description: 通过扩展项目创意，超越第一个小时。
+  hoc2018_dance_keep_on_dancing_specs: 语言 | 格式 | 13岁以上
+  hoc2018_dance_keep_on_dancing_button: 超越
+  hoc2018_dance_teacher_resources_title: 教师资源
+  hoc2018_dance_teacher_resources_tile1_description: 课程计划、证书和音乐筛选。
+  hoc2018_dance_teacher_resources_tile1_button: 课程计划
+  hoc2018_dance_teacher_resources_tile2_title: 离线舞会
+  hoc2018_dance_teacher_resources_tile2_description: 不需要计算机！你的班级可以通过在一起编排舞会来学习编码的概念。
+  hoc2018_dance_teacher_resources_tile2_button: 线下的活动
+  hoc2018_dance_featured_student_creations_title: 精选的学生作品
+  hoc2018_dance_videos_section_heading: 获得灵感
+  hoc2018_dance_video_title_what_is_creativity: 什么是创造力?
+  hoc2018_dance_view_creativity_video_playlist: 什么是创造力？查看完整系列
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: '与以下机构合作: '
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: 亚马逊未来工程师是一个全面的儿童对职业计划,
+    以激励, 教育和培训低收入和其他处境不利的儿童和青年从事计算机科学的职业。<a href='%{amazon_future_engineer_link}'
+    target='_blank'>了解更多</a>
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: 了解更多关于亚马逊未来工程师
+  hoc2018_dance_amazon_about_future_engineer_title: 关于亚马逊未来工程师
+  hoc2018_dance_amazon_about_future_engineer_description: 了解亚马逊幼儿园的职业项目来发展计算机科学教育。查找如何参与我们的夏令营，高中计算机科学课程，奖学金和实习项目。
+  hoc2018_dance_amazon_about_future_engineer_button: 了解详情
+  hoc2018_dance_amazon_try_coding_this_summer_title: 这个夏天试试编程
+  hoc2018_dance_amazon_try_coding_this_summer_description: 参与亚马逊未来工程师的免费, 有趣的, 包容性的计算机科学营!
+    2019年夏季, 美国多个地点的幼儿园至8年级的学生可参加夏令营。
+  hoc2018_dance_amazon_try_coding_this_summer_button: 加入宿营
+  hoc2018_dance_amazon_scholarship_programs_title: 奖学金项目
+  hoc2018_dance_amazon_scholarship_programs_description: 亚马逊为成功完成或注册了 AP 计算机科学课程，并希望在美国学习4年计算机学位的低收入学生提供每年10000美元的奖学金。
+  hoc2018_dance_amazon_scholarship_programs_button: 立即申请
+  hoc2018_dance_amazon_internships_title: 加入亚马逊实习生
+  hoc2018_dance_amazon_internships_button: 查找实习项目
+  hoc2018_dance_amazon_k8_programs_title: K-8 项目
+  hoc2018_dance_amazon_funding_title: 为你的计算机科学学位筹资

@@ -121,31 +121,55 @@ class Homepage
       twitter = "Every student deserves the opportunity to express their creativity with computer science. What will you create? https://twitter.com/codeorg/status/1051805228859834368"
     end
 
-    [
-      {
-        text: "homepage_action_text_join_us",
-        type: "cta_button_solid_white",
-        url: CDO.hourofcode_url("#join")
-      },
-      {
-        text: "homepage_action_text_try_it",
-        type: "cta_button_hollow_white",
-        url: DCDO.get("hoc_launch", CDO.default_hoc_launch) == "mc" ? "/hourofcode/overview" : "/learn"
-      },
-      {
-        text: "homepage_action_text_codevideo",
-        type: "video",
-        youtube_id: youtube_id,
-        download_path: download_path,
-        facebook: facebook,
-        twitter: twitter
-      }
-    ]
+    hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
+    if hoc_mode == "actual-hoc"
+      [
+        {
+          text: "homepage_action_text_try_it",
+          type: "cta_button_solid_white",
+          url: "/hourofcode/overview"
+        }
+      ]
+    elsif hoc_mode == "soon-hoc"
+      [
+        {
+          text: "homepage_action_text_join_us",
+          type: "cta_button_solid_white",
+          url: CDO.hourofcode_url("#join")
+        },
+        {
+          text: "homepage_action_text_try_it",
+          type: "cta_button_hollow_white",
+          url: "/hourofcode/overview"
+        }
+      ]
+    else
+      [
+        {
+          text: "homepage_action_text_join_us",
+          type: "cta_button_solid_white",
+          url: CDO.hourofcode_url("#join")
+        },
+        {
+          text: "homepage_action_text_try_it",
+          type: "cta_button_hollow_white",
+          url: "/learn"
+        },
+        {
+          text: "homepage_action_text_codevideo",
+          type: "video",
+          youtube_id: youtube_id,
+          download_path: download_path,
+          facebook: facebook,
+          twitter: twitter
+        }
+      ]
+    end
   end
 
   def self.get_blocks(request)
     if request.language == "en"
-      @en_blocks_entries ||= [
+      [
         {
           id: "students-en",
           type: "block",
@@ -251,7 +275,26 @@ class Homepage
         }
       ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
     else
-      @non_en_blocks_entries ||= [
+      last_block =
+        if DCDO.get('hoc_launch', CDO.default_hoc_launch) == 'dance'
+          {
+            id: 'dance-nonen',
+            title: 'studiobar_dance_title',
+            text: 'studiobar_dance_body',
+            url: '/dance',
+            image: '/shared/images/courses/logo_tall_dance.jpg'
+          }
+        else
+          {
+            id: 'flappy-nonen',
+            title: 'studiobar_flappy_title',
+            text: 'studiobar_flappy_body',
+            url: CDO.studio_url('/s/flappy/reset'),
+            image: '/shared/images/courses/logo_tall_flappy.jpg'
+          }
+        end
+
+      [
         {
           id: "students-nonen",
           type: "blockshort",
@@ -283,14 +326,14 @@ class Homepage
           image: "/images/mc/2016_homepage_hocblock.jpg"
         },
         {
-          id: "flappy-nonen",
+          id: last_block[:id],
           type: "blockshort",
-          title: "studiobar_flappy_title",
-          text: "studiobar_flappy_body",
+          title: last_block[:title],
+          text: last_block[:text],
           color1: "185, 191, 21",
           color2: "209, 213, 103",
-          url: CDO.studio_url("/s/flappy/reset"),
-          image: "/shared/images/courses/logo_tall_flappy.jpg"
+          url: last_block[:url],
+          image: last_block[:image]
         }
       ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
     end
@@ -299,12 +342,16 @@ class Homepage
   def self.get_video
     video = get_actions.find {|a| a[:type] == "video"}
 
-    {
-      video_code: video[:youtube_id],
-      download_path: video[:download_path],
-      facebook: {u: video[:facebook]},
-      twitter: {related: 'codeorg', text: video[:twitter]}
-    }
+    if video
+      {
+        video_code: video[:youtube_id],
+        download_path: video[:download_path],
+        facebook: {u: video[:facebook]},
+        twitter: {related: 'codeorg', text: video[:twitter]}
+      }
+    else
+      nil
+    end
   end
 
   def self.show_single_hero
@@ -331,14 +378,7 @@ class Homepage
     heroes = get_heroes
     hero_display_time = 13 * 1000
 
-    if rack_env != :production && request.params["preview"]
-      # On non-production, special "?preview=true" flag shows all heroes, and more quickly, for easier previewing
-      heroes_arranged = heroes
-      hero_display_time = 6 * 1000
-    elsif rack_env != :production && request.params["lock-hero"]
-      # For UI tests just lock to the first hero image
-      heroes_arranged = heroes[0, 1]
-    elsif show_single_hero
+    if show_single_hero
       hoc_marketing_mode = DCDO.get("hoc_launch", CDO.default_hoc_launch)
       heroes_arranged = if hoc_marketing_mode == "mc"
                           hoc2018_hero_mc
@@ -370,6 +410,16 @@ class Homepage
       end
     end
 
+    if rack_env != :production
+      if request.params["preview"]
+        # On non-production, special "?preview=true" flag shows all heroes, and more quickly, for easier previewing
+        hero_display_time = 6 * 1000
+      elsif request.params["lock-hero"]
+        # For UI tests just lock to the first hero image
+        heroes_arranged = heroes_arranged[0, 1]
+      end
+    end
+
     return heroes_arranged, hero_display_time
   end
 
@@ -380,5 +430,18 @@ class Homepage
       link: "/privacy-may2018",
       link_text: "homepage_below_hero_announcement_link_text"
     }
+  end
+
+  def self.get_dance_stars
+    stars = [
+      "Ace of Base", "A-ha", "Ariana Grande", "Avicii and Aloe Blacc", "Bruce Springsteen", "Calvin Harris",
+      "Carly Rae Jepsen", "Ciara", "Coldplay", "Ed Sheeran", "Imagine Dragons",
+      "J Balvin and Willy William", "Justin Bieber", "Katy Perry", "Keith Urban", "Lady Antebellum", "Lady Gaga",
+      "Los del Río", "Luke Bryan", "Macklemore and Ryan Lewis", "Madonna", "Mark Ronson (ft. Bruno Mars)",
+      "MC Hammer", "Miley Cyrus", "OutKast", "Selena Gomez", "Sia", "Village People", "The Weeknd", "will.i.am",
+      "Yolanda Be Cool"
+    ]
+
+    DCDO.get("hoc2018_dance_stars", stars)
   end
 end

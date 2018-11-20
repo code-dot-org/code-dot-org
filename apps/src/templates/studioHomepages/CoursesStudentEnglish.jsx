@@ -12,7 +12,7 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
  */
 class CoursesStudentEnglish extends Component {
   static propTypes = {
-    displayMinecraftAquatic: PropTypes.bool,
+    hocLaunch: PropTypes.string,
   };
 
   render() {
@@ -31,7 +31,7 @@ class CoursesStudentEnglish extends Component {
         >
           <CourseBlocksHoc
             rowCount={1}
-            displayMinecraftAquatic={this.props.displayMinecraftAquatic}
+            hocLaunch={this.props.hocLaunch}
           />
         </ContentContainer>
 
