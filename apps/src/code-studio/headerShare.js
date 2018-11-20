@@ -25,12 +25,12 @@ export function shareProject(shareUrl) {
     const appType = dashboard.project.getStandaloneApp();
     const selectedSong = dashboard.project.getSelectedSong();
 
-    // Dance Party stores an 'anon_over13' cookie for signed out users, so we want to use that
-    // when we decide whether the user can share their project via social media.
+    // The AgeDialog used by Dance Party stores an 'ad_anon_over13' cookie for signed out users,
+    // so we want to use that when we decide whether the user can share their project via social media.
     const pageConstants = getStore().getState().pageConstants;
     let canShareSocial;
     if (appType === 'dance') {
-      const is13Plus = sessionStorage.getItem('anon_over13') === 'true';
+      const is13Plus = sessionStorage.getItem('ad_anon_over13') === 'true';
       canShareSocial = pageConstants.is13Plus || (!pageConstants.isSignedIn && is13Plus);
     } else {
       canShareSocial = pageConstants.is13Plus || !pageConstants.isSignedIn;
