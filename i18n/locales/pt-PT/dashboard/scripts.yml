@@ -1436,3 +1436,51 @@ pt:
               name: Variáveis do envelope
             For Loop Fun:
               name: Diversão com laços for
+            The Artist:
+              name: O Artista
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Programação por revezamento
+            Conditionals with Cards:
+              name: Condicionais com cartas
+            Digital Citizenship:
+              name: Cidadania digital
+            'Unplugged: Binary':
+              name: 'Offline: binário'
+            Artist Binary:
+              name: 'Artista: binário'
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Criar uma base
+            Nested Loops:
+              name: Laços aninhados
+            Conditionals with Cards:
+              name: Condicionais com cartas
+            Conditionals:
+              name: Condicionais
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Aberto ao público
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Programação por revezamento
+            Conditionals with Cards:
+              name: Condicionais com cartas
+            Envelope Variables:
+              name: Variáveis do envelope
+            For Loop Fun:
+              name: Diversão com laços for
+            Binary Bracelets:
+              name: Pulseiras binárias
+            'Unplugged: Binary':
+              name: 'Offline: binário'
+            Artist Binary:
+              name: 'Artista: binário'
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Aberto ao público
