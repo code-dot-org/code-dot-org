@@ -1,6 +1,6 @@
 @dashboard_db_access
 @no_mobile
-@no_safari
+@no_safari_yosemite
 Feature: Pixelation levels
   # Brad (2018-11-14) Skip on IE due to blocked pop-ups
   @no_ie

@@ -2345,3 +2345,109 @@ en:
       7:
         image: 'notes/hoc_dance_congrats_7.png'
         text: "At the end of the tutorial you can share a link to your creation with your friends. Stretch your imagination and just have fun!"
+    mc_2018_intro:
+      1:
+        image: 'notes/mc_2018_intro_1.png'
+        text: "Hello! You're just in time. Welcome to the Voyage Aquatic. I'm about to embark on a quest to find hidden underwater treasure and I'm very glad to have your help. Who knows what we'll encounter along these mysterious waterways? We're meant to meet our first guide somewhere on this dock."
+      2:
+        image: 'notes/mc_2018_intro_2.png'
+        text: "Welcome, adventurers! To complete the Voyage Aquatic you'll need to solve a series of puzzles using code. Here's how it works. Your screen is split into three main parts."
+      3:
+        image: 'notes/mc_2018_intro_3.png'
+        text: "On the left, you'll see the Minecraft world."
+      4:
+        image: 'notes/mc_2018_intro_4.png'
+        text: "The middle area is your toolbox where you can find coding commands."
+      5:
+        image: 'notes/mc_2018_intro_5.png'
+        text: "And the large area on the right is your workspace. This is where you can stack commands to build your program and control your movements."
+      6:
+        image: 'notes/mc_2018_intro_6.png'
+        text: "The instructions of each level are on top of the page. Click the plus sign to change between long and short instructions."
+      7:
+        image: 'notes/mc_2018_intro_7.png'
+        text: "Try dragging blocks from the toolbox into the workspace, stacking them, and then click the run button to execute your commands."
+      8:
+        image: 'notes/mc_2018_intro_8.png'
+        text: "You might have to try a few times to get it right and some of the puzzles have more than one solution so experiment to see what works."
+      9:
+        image: 'notes/mc_2018_intro_9.png'
+        text: "If you want to try again, click the reset button to go back where you started."
+      10:
+        image: 'notes/mc_2018_intro_10.png'
+        text: "If you need to delete a command, just drag the block from your workspace back into the toolbox. Remember, click \"Run\" to see what your code looks like in action."
+      11:
+        image: 'notes/mc_2018_intro_11.png'
+        text: "Okay, enough messing around, fellow adventurer. Let’s start coding to find some underwater treasure."
+    MC_2018_loops:
+      1:
+        image: 'notes/MC_2018_loops_1.png'
+        text: "Great! We've caught a codfish! Did you know if you feed a codfish to a dolphin, the dolphin will guide you to a shipwreck where there may be treasure? We must be getting closer. The next set of puzzles are bound to be trickier, so we better learn some more coding skills. What’s this? A cave?"
+      2:
+        image: 'notes/MC_2018_loops_2.png'
+        text: "Welcome, adventurers! My name is Squid. I noticed you were using the same set of commands over and over in some of the last puzzles. Must've been a bit tiresome. Do you ever wish you had a way to do something over and over again like, you know, washing dishes or brushing your teeth without getting tired or bored? That would be nice."
+      3:
+        image: 'notes/MC_2018_loops_3.png'
+        text: "Computers are really good at doing the same thing over and over again using coding loops. When you want your program to do the same instructions many times, you can use a loop!"
+      4:
+        image: 'notes/MC_2018_loops_4.png'
+        text: "The loop block contains instructions that are repeated until the goal is reached. Once your program starts a \"Repeat until goal\" loop, it will keep repeating the instructions inside until it gets to the goal."
+      5:
+        image: 'notes/MC_2018_loops_5.png'
+        text: "Try this for yourself! Place the commands you want to repeat inside the \"Repeat until goal\" block, click \"Run\", and watch it go!"
+      6:
+        image: 'notes/MC_2018_loops_6.png'
+        text: "Well, that was a little weird. Who knew squids could code? I didn't even think they had fingers. So now we know about loops. Let's use them to bag us some more treasure."
+    mc_2018_conditionals:
+      1:
+        image: 'notes/mc_2018_conditionals_1.png'
+        text: "Wow! Another three puzzles solved! And we've caught...a salmon. Not quite as exciting as piles of gold, but we’ll take what we can get. And I have a feeling that nautilus shell will come in handy later. I wonder what lurks in these ruins. Perhaps another hint! Let’s take a look inside."
+      2:
+        image: 'notes/mc_2018_conditionals_2.png'
+        text: "My name is Netty and welcome to my ruins. We make decisions all the time based on conditions. If it looks like rain, then we’ll grab an umbrella. If we’re hungry, then we'll eat a snack."
+      3:
+        image: 'notes/mc_2018_conditionals_3.png'
+        text: "If we see a creeper, then we run in the opposite direction. Computers make these types of decisions too. They can actually respond to conditions using code."
+      4:
+        image: 'notes/mc_2018_conditionals_4.png'
+        text: "To program a response like this using your code commands, select an if path block."
+      5:
+        image: 'notes/mc_2018_conditionals_5.png'
+        text: "Select the dropdown to create the command."
+      6:
+        image: 'notes/mc_2018_conditionals_6.png'
+        text: "For example, if you write the command \"if path to the right\" and place turn right inside the conditional, then when Steve reaches an open path to the right he will always turn right. If there is no opening to the right, he will not turn right. These conditional if commands are helpful when you run code in unpredictable situations such as mysterious ruins in underwater caves."
+      7:
+        image: 'notes/mc_2018_conditionals_7.png'
+        text: "Try using the if blocks and take your code for a spin."
+      8:
+        image: 'notes/mc_2018_conditionals_8.png'
+        text: "Wow! Netty’s ruins were awesome. I really gotta move out of my parents' house. So what do you think? Are the conditions right for us to complete the final puzzles? Let’s give it a go."
+    mc_2018_closing:
+      1:
+        image: 'notes/mc_2018_closing_1.png'
+        text: "Amy Lee33: Congratulations! You did it!"
+      2:
+        image: 'notes/mc_2018_closing_2.png'
+        text: "Squid: Congratulations!"
+      3:
+        image: 'notes/mc_2018_closing_3.png'
+        text: "Netty: You did it! Congratulations!"
+      4:
+        image: 'notes/mc_2018_closing_4.png'
+        text: "Tomohawk: Congratulations!"
+      5:
+        image: 'notes/mc_2018_closing_5.png'
+        text: "What a great day! All the treasure hunting led us to build a Minecraft conduit, find Nautilus shells, and discover treasure chests. I just love the color of prismarine. We also learned how to code with loops and conditionals."
+      6:
+        image: 'notes/mc_2018_closing_6.png'
+        text: "Speaking of coding, there is one more level to this quest. Are you up for it, adventurers?"
+      7:
+        image: 'notes/mc_2018_closing_7.png'
+        text: "It’s a free play level and you can put your coding skills to use and build something incredible."
+      8:
+        image: 'notes/mc_2018_closing_8.png'
+        text: "Hmmm... a place to hide your treasure, an underwater monument, a coral castle? Ahhh...so many ideas. Try using loops to create a repeat action, and conditionals to prepare for all those unpredictable scenarios."
+      9:
+        image: 'notes/mc_2018_closing_9.png'
+        text: "You've certainly proven yourself an intrepid coder by now, and I can’t wait to see what you build. And hopefully your adventures with code don't end here. Bon Voyage!"

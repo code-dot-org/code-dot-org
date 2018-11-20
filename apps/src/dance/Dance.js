@@ -103,7 +103,6 @@ Dance.prototype.init = function (config) {
 
   config.enableShowCode = true;
   config.enableShowLinesCount = false;
-  config.noHowItWorks = true;
 
   const onMount = () => {
     config.loadAudio = this.loadAudio_.bind(this);
@@ -565,6 +564,9 @@ Dance.prototype.initInterpreter = function () {
     setDanceSpeed: (spriteIndex, speed) => {
       nativeAPI.setDanceSpeed(sprites[spriteIndex], speed);
     },
+    setDanceSpeedEach: (group, speed) => {
+      nativeAPI.setDanceSpeedEach(group, speed);
+    },
     getEnergy: range => {
       return Number(nativeAPI.getEnergy(range));
     },
@@ -636,6 +638,7 @@ Dance.prototype.displayFeedback_ = function () {
     appStrings: {
       reinfFeedbackMsg: 'TODO: localized feedback message.',
     },
+    disablePrinting: true,
   };
 
   // Disable social share for users under 13 if we have the cookie set.
