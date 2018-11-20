@@ -47,6 +47,7 @@ class ScriptLevelsController < ApplicationController
     else
       client_state.reset
       reset_session
+      destroy_storage_id_cookie
 
       @redirect_path = redirect_path
       render 'levels/reset_and_redirect', formats: [:html], layout: false

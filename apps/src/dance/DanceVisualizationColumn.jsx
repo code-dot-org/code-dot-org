@@ -7,7 +7,7 @@ import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import Radium from "radium";
 import {connect} from "react-redux";
 import i18n from '@cdo/locale';
-import AgeDialog from "../templates/AgeDialog";
+import AgeDialog, {signedOutOver13} from "../templates/AgeDialog";
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -84,7 +84,7 @@ class DanceVisualizationColumn extends React.Component {
     // userType - 'teacher', assumed age > 13. 'student', age > 13.
     //            'student_y', age < 13. 'unknown', signed out users
     const signedInOver13 = this.props.userType === 'teacher' || this.props.userType === 'student';
-    const signedOutAge = sessionStorage.getItem('anon_over13') ? sessionStorage.getItem('anon_over13') === 'true' : false;
+    const signedOutAge = signedOutOver13();
     return signedInOver13 || signedOutAge;
   }
 
