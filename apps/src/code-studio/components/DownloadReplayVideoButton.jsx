@@ -42,7 +42,10 @@ const styles = {
     boxShadow: 'none',
   },
   icon: {
-    fontSize: 28
+    fontSize: 17,
+  },
+  span: {
+    paddingLeft: 10
   }
 };
 
@@ -57,6 +60,7 @@ class DownloadReplayVideoButton extends React.Component {
     channelId: PropTypes.string.isRequired,
     onError: PropTypes.func,
     replayLog: PropTypes.array,
+    style: PropTypes.object,
   };
 
   state = {
@@ -191,11 +195,15 @@ class DownloadReplayVideoButton extends React.Component {
       icon = "fa-spinner fa-pulse";
     }
 
+    const style = Object.assign({}, this.props.style);
+    if (!this.buttonEnabled()) {
+      Object.assign(style, styles.disabledLink);
+    }
+
     return (
-      <a
+      <button
         className="download-replay-video-button"
-        href="#"
-        style={this.buttonEnabled() ? {} : styles.disabledLink}
+        style={style}
         disabled={!this.buttonEnabled()}
         onClick={this.tryDownloadVideo}
       >
@@ -203,8 +211,10 @@ class DownloadReplayVideoButton extends React.Component {
           className={`fa ${icon}`}
           style={styles.icon}
         />
-        <span>{i18n.downloadReplayVideoButtonDownload()}</span>
-      </a>
+        <span style={styles.span}>
+          {i18n.downloadReplayVideoButtonDownload()}
+        </span>
+      </button>
     );
   }
 }
