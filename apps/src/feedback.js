@@ -9,6 +9,7 @@ import {dataURIToBlob} from './imageUtils';
 import trackEvent from './util/trackEvent';
 import {getValidatedResult} from './containedLevels';
 import PublishDialog from './templates/projects/publishDialog/PublishDialog';
+import DownloadReplayVideoButton from './code-studio/components/DownloadReplayVideoButton';
 import {
   showPublishDialog,
   PUBLISH_REQUEST,
@@ -869,6 +870,14 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 
   options.assetUrl = this.studioApp_.assetUrl;
 
+  // An early optimization; only render the container for
+  // DownloadReplayVideoButton if we think we're actually going to use it.
+  // @see DownloadReplayVideoButton.hasReplayVideo
+  options.downloadReplayVideo =
+    getStore().getState().pageConstants.appType === 'dance' &&
+    window.appOptions.signedReplayLogUrl;
+  console.log(options);
+
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('id', 'sharing');
   sharingDiv.innerHTML = require('./templates/sharing.html.ejs')({
@@ -955,6 +964,16 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
         $(sendToPhone).hide();
       }
     });
+  }
+
+  var downloadReplayVideoContainer = sharingDiv.querySelector('#download-replay-video-container');
+  if (downloadReplayVideoContainer) {
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <DownloadReplayVideoButton />
+      </Provider>,
+      downloadReplayVideoContainer
+    );
   }
 
   return sharingDiv;
