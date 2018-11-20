@@ -34,7 +34,7 @@
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
     "use_default_sprites": "false",
-    "validation_code": "if ((nativeAPI.getTime(\"measures\") < 1) && (nativeAPI.getTime(\"measures\") > 0)) {\r\n  if (sprites.length > 0) {\r\n  \tWorld.startingMove = sprites[0].current_move;\r\n  } else {\r\n    nativeAPI.fail(\"danceFeedbackNoDancers\");\r\n  }\r\n} else if (nativeAPI.getTime(\"measures\") > 8) {\r\n  nativeAPI.pass();\r\n} else if (nativeAPI.getTime(\"measures\") > 5.5) {\r\n  if (sprites.length > 0) {\r\n  \tif (sprites[0].current_move === World.startingMove) {\r\n      nativeAPI.fail(\"danceFeedbackStartNewMove\");\r\n    }\r\n  } else {\r\n    World.validationStatus = 3;\r\n    nativeAPI.fail(\"danceFeedbackNoDancers\");\r\n  }\r\n}",
+    "validation_code": "if ((nativeAPI.getTime(\"measures\") > 1) && (nativeAPI.getTime(\"measures\") < 3)) {\r\n  if (sprites.length > 0) {\r\n  \tWorld.startingMove = sprites[0].current_move;\r\n  } else {\r\n    nativeAPI.fail(\"danceFeedbackNoDancers\");\r\n  }\r\n} else if (nativeAPI.getTime(\"measures\") > 8) {\r\n  nativeAPI.pass();\r\n} else if (nativeAPI.getTime(\"measures\") > 5.5) {\r\n  if (sprites.length > 0) {\r\n  \tif (sprites[0].current_move === World.startingMove) {\r\n      nativeAPI.fail(\"danceFeedbackStartNewMove\");\r\n    }\r\n  } else {\r\n    World.validationStatus = 3;\r\n    nativeAPI.fail(\"danceFeedbackNoDancers\");\r\n  }\r\n}",
     "block_pool": "Dancelab",
     "custom_helper_library": "World.SPRITE_NAMES = [\"CAT\", \"MOOSE\"];\r\n",
     "preload_asset_list": [
