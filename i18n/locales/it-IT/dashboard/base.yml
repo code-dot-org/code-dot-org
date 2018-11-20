@@ -337,6 +337,7 @@ it:
       spritelab: 'Laboratorio dei Personaggi'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
+      dance: 'Ballando col codice'
       view_all: 'Guarda tutti i progetti...'
     popup:
       progress_for_user: "%{name} in corso"
@@ -502,7 +503,7 @@ it:
     teacher: 'Insegnante'
   footer:
     thank_you: 'Ringraziamo i nostri <a href="https://code.org/about/donors"> donatori</a>, <a href="https://code.org/about/partners"> partner</a>, il nostro <a href="https://code.org/about/team"> team</a>, il nostro cast video e i nostri <a href="https://code.org/about/advisors"> consulenti di formazione</a> per il loro supporto nella creazione di Code Studio.'
-    help_from_html: 'Siamo particolarmente riconoscenti agli ingegneri di Google, Microsoft, Facebook, Twitter, e molti altri, che hanno aiutato a creare questi corsi.'
+    help_from_html: 'Siamo particolarmente riconoscenti agli ingegneri di Amazon, Google e Microsoft che hanno aiutato a creare questi corsi.'
     help_from_html_old: 'Gli ingegneri di Google, Microsoft, Facebook e Twitter hanno contribuito a creare questi materiali.'
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tutti i diritti riservati.<br />Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Tutti i diritti riservati.<br />Frozen&#8482; &copy; %{current_year} Disney. Tutti i diritti riservati.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Tutti i diritti riservati.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tutti i diritti riservati.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tutti i diritti riservati.<br />The Amazing World of Gumball è un marchio registrato e &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Tutti i diritti riservati. Frozen&#8482; &copy; %{current_year} Disney. Tutti i diritti riservati. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Tutti i diritti riservati. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tutti i diritti riservati. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tutti i diritti riservati. The Amazing World of Gumball è un marchio registrato e &copy; 2015 Cartoon Network.'
@@ -587,6 +588,8 @@ it:
       body_short: "Progetta una App, programmala con i blocchi o con Javascript, e poi condividila."
       audience: 'Da 13 anni in su'
       cta: 'Scopri come'
+    dance:
+      title: 'Ballando col codice'
     hoc:
       title: 'Labirinto Classico'
       body: 'Impara i concetti base dell''informatica. Milioni di persone l''hanno già fatto.'
