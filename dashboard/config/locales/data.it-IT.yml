@@ -822,6 +822,10 @@ it:
         MC_2018_loops: 'Minecraft: Viaggio Acquatico - Ripeti fino a che'
         mc_2018_conditionals: 'Minecraft: Viaggio Acquatico - Istruzioni condizionali'
         mc_2018_closing: 'Minecraft: Viaggio Acquatico - Congratulazioni'
+        hoc_dance_warmup: Ballando col codice - Riscaldamento
+        hoc_dance_events: Ballando col codice - Eventi
+        hoc_dance_properties: Ballando col codice - Proprietà
+        hoc_dance_congrats: Ballando col codice - Parte la festa!
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

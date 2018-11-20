@@ -288,3 +288,24 @@ zh-TW:
       Conditionals_2019:
         title: 條件判斷（Conditionals）
         desc: 為了學習關於條件判斷陳述式，學生會玩個撲克牌遊戲，建立一些規則，像是「如果我抽到的是紅色的牌，我就得一分」和「如果我抽到的牌是黑色的，你就得一分」。
+      GraphPaperProgramming_2019:
+        title: 圖畫紙程式設計
+        desc: 學生用一組已經定義好的指令來寫出演算法（一連串的指令）以引導同學重建一個圖案。
+      RelayProgramming_2018_2019:
+        title: 接力編程
+      courseD_unplugged_digitalCitizenship_2019:
+        title: 不插電的活動
+      BinaryImages_2019:
+        title: 二進制圖像
+        desc: 雖然很多人認為二進制就是一堆的 0 和 1，我們前面的課程教導過學生，訊息是可以用不同的二進制表達法表示。這堂課將更深入這個觀念，並說明電腦如何同樣的以二進制儲存更複雜的訊息（例如圖像和顏色）。
+      GettingLoopy_2019:
+        title: 學習迴圈
+        desc: 這一課經由舞蹈活動來介紹迴圈（重複一些指令）這個編程概念。學生會學習到簡單的動作，然後依照指示重複這些動作。
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: 不插電的活動
+      BigEvent_2019:
+        title: 大事件
+        desc: 學生們將學習編程概念中的事件（events）, 電腦不斷監控著這些操作。老師在紙上按下按鈕，被遙控的學生則依照不同的按鈕作出不同的反應。
+      BinaryBracelets_2019:
+        title: 二進制手環
+        desc: 學生用二進制表示法創造一個代表他們名字的第一個字母的手環。學生會學到資料可以用一種以上的方法來呈現和儲存。

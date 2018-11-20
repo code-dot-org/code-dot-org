@@ -182,6 +182,9 @@ et:
       Geometric Sun_2018_callout:
         4-5_Artist_Patterns_Free_Play_1: Kõik teie lemmikplokid on nüüd jaotatud kategooriatesse.  Klõpsake
           neid sõnu, et näha, kuhu kõik läksid!
+      Geometric Sun_2019_callout:
+        4-5_Artist_Patterns_Free_Play_1: Kõik teie lemmikplokid on nüüd jaotatud kategooriatesse.  Klõpsake
+          neid sõnu, et näha, kuhu kõik läksid!
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Mängi heli, kui sündmus juhtub.
       Infinity_move_directions_callout:
@@ -253,19 +256,28 @@ et:
         craft_callout_preplaced: Panime sulle alustuseks siia mõned plokid
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Panime sulle alustuseks siia mõned plokid
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Panime sulle alustuseks siia mõned plokid
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Selle koodiga alustatakse majaehitust. Kas
           oskad selle lõpetada?
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Selle koodiga alustatakse majaehitust. Kas
           oskad selle lõpetada?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Selle koodiga alustatakse majaehitust. Kas
+          oskad selle lõpetada?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Programmi proovimiseks vajuta nuppu „Käivita“
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Programmi proovimiseks vajuta nuppu „Käivita“
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Programmi proovimiseks vajuta nuppu „Käivita“
       Overworld Place Wall_callout:
         craft_inside_repeat: Tegevuste kordamiseks panne siia plokid
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Tegevuste kordamiseks panne siia plokid
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Tegevuste kordamiseks panne siia plokid
       PS clone CSD U3 Variables Predict Where XY_callout:
         grid: Klikka siin võrgustiku näitamiseks.
@@ -297,14 +309,22 @@ et:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Selle koodiga otsitakse laavat. Kas oskad lisada
           käsu edasiliikumiseks?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Selle koodiga otsitakse laavat. Kas oskad lisada
+          käsu edasiliikumiseks?
       Underground Iron_callout:
         craft_what_is_iron: Kaevanda seda rauda!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Kaevanda seda rauda!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Kaevanda seda rauda!
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Pea meeles, kontrolli, et IGAL pilvel oleks LILL.
           Sa ei pea üldse meekärgesid kontrollima.
       courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Pea meeles, kontrolli, et IGAL pilvel oleks LILL.
+          Sa ei pea üldse meekärgesid kontrollima.
+      courseD_bee_conditionals2_2019_callout:
         4_5_Bee_Conditionals_2_1: Pea meeles, kontrolli, et IGAL pilvel oleks LILL.
           Sa ei pea üldse meekärgesid kontrollima.
       courseD_bee_conditionals2_test_callout:

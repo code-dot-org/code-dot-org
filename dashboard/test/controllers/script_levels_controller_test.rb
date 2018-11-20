@@ -600,24 +600,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     refute session['warden.user.user.key']
   end
 
-  def get_storage_id_cookie(response)
-    storage_id_regex = /\A#{storage_id_cookie_name}=(\S+)/
-    match_data = response.header['Set-Cookie']&.match(storage_id_regex)
-    match_data.present? ? match_data[0] : nil
-  end
-
-  test "show with the reset param should create a new storage_id cookie when not logged in" do
+  test "show with the reset param should destroy the storage_id cookie when not logged in" do
     get :reset, params: {script_id: Script::HOC_NAME}
     assert_response 200
-    first_storage_id_cookie = get_storage_id_cookie(response)
-    refute_nil first_storage_id_cookie
-
-    get :reset, params: {script_id: Script::HOC_NAME}
-    assert_response 200
-    second_storage_id_cookie = get_storage_id_cookie(response)
-    refute_nil second_storage_id_cookie
-
-    refute_equal first_storage_id_cookie, second_storage_id_cookie
+    # Ensure storage_id is set to empty value and domain is correct
+    cookie_header = response.header['Set-Cookie']
+    assert cookie_header.include?("#{storage_id_cookie_name}=;")
+    assert cookie_header.include?("domain=.test.host;")
   end
 
   test "show with the reset param should not create a new storage_id cookie when logged in" do
@@ -625,7 +614,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     get :reset, params: {script_id: Script::HOC_NAME}
     assert_response 302
-    assert_nil get_storage_id_cookie(response)
+    # Ensure storage_id is not being set
+    cookie_header = response.header['Set-Cookie']
+    refute cookie_header.include?("#{storage_id_cookie_name}=")
   end
 
   test "show with the reset param should not reset session when logged in" do

@@ -31,15 +31,15 @@ tr:
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
           MOVE:
-            MOVES.ClapHigh: Yüksek Alkış
-            MOVES.Clown: Palyaço
-            MOVES.DoubleJam: Çift Jam
-            MOVES.Roll: Yuvarlanma
-            MOVES.Kick: Tekme
-            MOVES.ThisOrThat: Şu ya da Bu
             '"next"': "(Sonraki)"
             '"prev"': "(Önceki)"
             '"rand"': "(Rastgele)"
+            MOVES.Roll: Yuvarlanma
+            MOVES.ClapHigh: Yüksek Alkış
+            MOVES.DoubleJam: Çift Jam
+            MOVES.Clown: Palyaço
+            MOVES.Kick: Tekme
+            MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
           DIR:
             '1': "→"
@@ -48,15 +48,15 @@ tr:
         text: "{SPRITE} sürekli {MOVE} {DIR} yap"
         options:
           MOVE:
-            MOVES.ClapHigh: Yüksek Alkış
-            MOVES.Clown: Palyaço
-            MOVES.DoubleJam: Çift Jam
-            MOVES.Roll: Yuvarlanma
-            MOVES.Kick: Tekme
-            MOVES.ThisOrThat: Şu ya da Bu
             '"next"': "(Sonraki)"
             '"prev"': "(Önceki)"
             '"rand"': "(Rastgele)"
+            MOVES.Roll: Yuvarlanma
+            MOVES.ClapHigh: Yüksek Alkış
+            MOVES.DoubleJam: Çift Jam
+            MOVES.Clown: Palyaço
+            MOVES.Kick: Tekme
+            MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
           DIR:
             '1': "→"
@@ -87,10 +87,11 @@ tr:
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
           MOVE:
-            MOVES.ClapHigh: Yüksek Alkış
-            MOVES.Clown: Palyaço
-            MOVES.DoubleJam: Çift Jam
+            '"rand"': "(Rastgele)"
             MOVES.Roll: Yuvarlanma
+            MOVES.ClapHigh: Yüksek Alkış
+            MOVES.DoubleJam: Çift Jam
+            MOVES.Clown: Palyaço
             MOVES.Kick: Tekme
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
@@ -101,10 +102,11 @@ tr:
         text: "{SPRITE} bir kere {MOVE} {DIR} yap"
         options:
           MOVE:
-            MOVES.ClapHigh: Yüksek Alkış
-            MOVES.Clown: Palyaço
-            MOVES.DoubleJam: Çift Jam
+            '"rand"': "(Rastgele)"
             MOVES.Roll: Yuvarlanma
+            MOVES.ClapHigh: Yüksek Alkış
+            MOVES.DoubleJam: Çift Jam
+            MOVES.Clown: Palyaço
             MOVES.Kick: Tekme
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
@@ -296,7 +298,7 @@ tr:
             '"disco"': Kareler
             '"rainbow"': Renkler
             '"diamonds"': Karolar
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": "(Rastgele)"
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Rastgele)"
       Dancelab_setDanceSpeed:
         text: "{SPRITE} dans hızını {SPEED} olarak değiştir"
         options:
@@ -619,6 +621,22 @@ tr:
             "{x: 300, y: 100}": sağ üst
             "{x: 100, y: 300}": sol alt
             "{x: 300, y: 300}": sağ alt
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": üst
+            "{x: 200, y: 300}": alt
+            "{x: 100, y: 200}": sol
+            "{x: 300, y: 200}": sağ
+            "{x: 200, y: 200}": merkez
+            "{x: 100, y: 100}": sol üst
+            "{x: 300, y: 100}": sağ üst
+            "{x: 100, y: 300}": sol alt
+            "{x: 300, y: 300}": sağ alt
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': tüm
       Mikelab_getProp:
         options:
           PROPERTY:

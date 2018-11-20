@@ -768,7 +768,11 @@ pl:
         CDEF_Video_SpritesInAction: Duszki w akcji
         CSF_SpriteLab_SpritesInAction_CDEF: Duszki w akcji
         CSF_StarWars_ProjectIntro: Wprowadzenie do projektu Star Wars
-        hoc_dance_events: Potańcówka - Wydarzenia
+        mc_2018_intro: 'Minecraft: Wodna Podróż - Wprowadzenie'
+        MC_2018_loops: 'Minecraft: Wodna Podróż - Powtarzaj aż'
+        mc_2018_conditionals: 'Minecraft: Wodna Podróż - Warunki'
+        mc_2018_closing: 'Minecraft: Wodna Podróż - Gratulacje'
+        hoc_dance_events: Potańcówka - Zdarzenia
         hoc_dance_properties: Potańcówka - Właściwości
     callout:
       text:

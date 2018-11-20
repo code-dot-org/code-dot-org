@@ -4047,10 +4047,17 @@ ka:
         mc_8_a: არის რამდენიმე ბილიკი, რომელსაც შეგიძლიათ გაყვეთ. რომელია მათგან უმოკლესი?
         mc_8_b: იმისათვის, რომ გაამარტივოთ კოდი, გამოიყენეთ `გამეორების` ციკლები.
         mc_8_c: თქვენი მიზანია შეაღწიოთ ეკრანის თავში მოთავსებული სახლის შესასვლელში.
+      Overworld Avoid Monsters_2019_authored_hint:
+        mc_8_a: არის რამდენიმე ბილიკი, რომელსაც შეგიძლიათ გაყვეთ. რომელია მათგან უმოკლესი?
+        mc_8_b: იმისათვის, რომ გაამარტივოთ კოდი, გამოიყენეთ `გამეორების` ციკლები.
+        mc_8_c: თქვენი მიზანია შეაღწიოთ ეკრანის თავში მოთავსებული სახლის შესასვლელში.
       Overworld Chop Tree_authored_hint:
         mc_2_a: 'ხის წინ დასადგომად, დაგჭირდებათ ორჯერ გამოიყენოთ ბლოკი`წინ გადაადგილება`.  '
         mc_2_b: ბრძანება `ბლოკის განადგურება` თქვენს წინ მდებარე ხეს მოჭრის.
       Overworld Chop Tree_2018_authored_hint:
+        mc_2_a: 'ხის წინ დასადგომად, დაგჭირდებათ ორჯერ გამოიყენოთ ბლოკი`წინ გადაადგილება`.  '
+        mc_2_b: ბრძანება `ბლოკის განადგურება` თქვენს წინ მდებარე ხეს მოჭრის.
+      Overworld Chop Tree_2019_authored_hint:
         mc_2_a: 'ხის წინ დასადგომად, დაგჭირდებათ ორჯერ გამოიყენოთ ბლოკი`წინ გადაადგილება`.  '
         mc_2_b: ბრძანება `ბლოკის განადგურება` თქვენს წინ მდებარე ხეს მოჭრის.
       Overworld Chop Trees_authored_hint:
@@ -4058,6 +4065,10 @@ ka:
           ბლოკების უმცირესი რაოდენობა?  '
         mc_4_b: ბრძანება `ბლოკის განადგურება` თქვენს წინ მდებარე ხეს მოჭრის.
       Overworld Chop Trees_2018_authored_hint:
+        mc_4_a: 'ხეების მოჭრა ნებისმიერი თანმიმდევრობით შეგიძლიათ. რომელ ბილიკს დასჭირდება
+          ბლოკების უმცირესი რაოდენობა?  '
+        mc_4_b: ბრძანება `ბლოკის განადგურება` თქვენს წინ მდებარე ხეს მოჭრის.
+      Overworld Chop Trees_2019_authored_hint:
         mc_4_a: 'ხეების მოჭრა ნებისმიერი თანმიმდევრობით შეგიძლიათ. რომელ ბილიკს დასჭირდება
           ბლოკების უმცირესი რაოდენობა?  '
         mc_4_b: ბრძანება `ბლოკის განადგურება` თქვენს წინ მდებარე ხეს მოჭრის.
@@ -4073,11 +4084,21 @@ ka:
         mc_6_b: შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ
           ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება.
         mc_6_c: ციკლში `გამეორება` შეგიძლიათ მოათავსოთ ერთზე მეტი ბლოკი.
+      Overworld House Frame Chosen_2019_authored_hint:
+        mc_6_a: იმისათვის, რომ აირჩიოთ რისი განთავსება გინდათ, დააწექით ისარს ბლოკზე
+          `განთავსება`.
+        mc_6_b: შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ
+          ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება.
+        mc_6_c: ციკლში `გამეორება` შეგიძლიათ მოათავსოთ ერთზე მეტი ბლოკი.
       Overworld Move to Sheep_authored_hint:
         mc_1_a: ბლოკი `წინ გადაადგილება` მოთავსებულია პანელის თავში.
         mc_1_b: 'დარწმუნდით, რომ `წინ გადაადგილების` ორივე ბლოკი მიმაგრებულია `გაშვების`
           ბლოკზე.  '
       Overworld Move to Sheep_2018_authored_hint:
+        mc_1_a: ბლოკი `წინ გადაადგილება` მოთავსებულია პანელის თავში.
+        mc_1_b: 'დარწმუნდით, რომ `წინ გადაადგილების` ორივე ბლოკი მიმაგრებულია `გაშვების`
+          ბლოკზე.  '
+      Overworld Move to Sheep_2019_authored_hint:
         mc_1_a: ბლოკი `წინ გადაადგილება` მოთავსებულია პანელის თავში.
         mc_1_b: 'დარწმუნდით, რომ `წინ გადაადგილების` ორივე ბლოკი მიმაგრებულია `გაშვების`
           ბლოკზე.  '
@@ -4088,6 +4109,12 @@ ka:
         mc_5_c: შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ
           ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება.
       Overworld Place Wall_2018_authored_hint:
+        mc_5_a: ჯერ გამოიყენეთ ბლოკი `განთავსება` და შემდეგ ბლოკი `გადაადგილება`.
+        mc_5_b: იმისათვის, რომ კოდი ერთზე მეტჯერ გაუშვათ, დარწმუნდით, რომ ორივე ბლოკი
+          `გამეორების` ციკლის შიგნითაა მოქცეული.
+        mc_5_c: შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ
+          ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება.
+      Overworld Place Wall_2019_authored_hint:
         mc_5_a: ჯერ გამოიყენეთ ბლოკი `განთავსება` და შემდეგ ბლოკი `გადაადგილება`.
         mc_5_b: იმისათვის, რომ კოდი ერთზე მეტჯერ გაუშვათ, დარწმუნდით, რომ ორივე ბლოკი
           `გამეორების` ციკლის შიგნითაა მოქცეული.
@@ -4105,11 +4132,21 @@ ka:
         mc_7_b: წყლის პირას მდებარე მუქი ყავისფერი ხმელეთის ორივე ზოლს სჭირდება მარცვლეულობით
           შევსება.
         mc_7_c: ციკლში `გამეორება` შეგიძლიათ მოათავსოთ ერთზე მეტი ბლოკი.
+      Overworld Plant Crops_2019_authored_hint:
+        mc_7_a: იმისათვის, რომ დარგოთ მცენარეულობა იმ სივრცეში, სადაც დგახართ, გამოიყენეთ
+          ბლოკი `მცენარეულობის დარგვა`.
+        mc_7_b: წყლის პირას მდებარე მუქი ყავისფერი ხმელეთის ორივე ზოლს სჭირდება მარცვლეულობით
+          შევსება.
+        mc_7_c: ციკლში `გამეორება` შეგიძლიათ მოათავსოთ ერთზე მეტი ბლოკი.
       Overworld Powered Minecart_authored_hint:
         mc_13_a: გამოიყენეთ ბლოკი `რკინიგზის განთავსება` იმისათვის, რომ რკინიგზა განათავსოთ
           იმ კვადრატზე, რომელზეც დგახართ.
         mc_13_b: იმისათვის, რომ კოდი შეამოკლოთ, გამოიყენეთ ციკლები `გამეორება`.
       Overworld Powered Minecart_2018_authored_hint:
+        mc_13_a: გამოიყენეთ ბლოკი `რკინიგზის განთავსება` იმისათვის, რომ რკინიგზა განათავსოთ
+          იმ კვადრატზე, რომელზეც დგახართ.
+        mc_13_b: იმისათვის, რომ კოდი შეამოკლოთ, გამოიყენეთ ციკლები `გამეორება`.
+      Overworld Powered Minecart_2019_authored_hint:
         mc_13_a: გამოიყენეთ ბლოკი `რკინიგზის განთავსება` იმისათვის, რომ რკინიგზა განათავსოთ
           იმ კვადრატზე, რომელზეც დგახართ.
         mc_13_b: იმისათვის, რომ კოდი შეამოკლოთ, გამოიყენეთ ციკლები `გამეორება`.
@@ -4120,6 +4157,12 @@ ka:
         mc_3_c: შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ
           ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება.
       Overworld Shear Sheep_2018_authored_hint:
+        mc_3_a: "`გაკრეჭვის` ბლოკი მოქმედებს თქვენ პირისპირ მდგომ ცხვარზე. ხედავთ
+          ცხვარს თქვენ წინ?  "
+        mc_3_b: 'თუ მოძრაობის მიმართულების შეცვლა გსურთ, გამოიყენეთ `მობრუნების` ბლოკი.  '
+        mc_3_c: შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ
+          ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება.
+      Overworld Shear Sheep_2019_authored_hint:
         mc_3_a: "`გაკრეჭვის` ბლოკი მოქმედებს თქვენ პირისპირ მდგომ ცხვარზე. ხედავთ
           ცხვარს თქვენ წინ?  "
         mc_3_b: 'თუ მოძრაობის მიმართულების შეცვლა გსურთ, გამოიყენეთ `მობრუნების` ბლოკი.  '
@@ -4149,6 +4192,11 @@ ka:
           მას. ახლა მხოლოდ გადაადგილების ბლოკის დამატება დაგრჩათ.
         mc_11_b: "`წინ გადაადგილების`ბრძანება `თუ` წინადადების შიგნით უნდა განთავდეს
           თუ მის შემდეგ?"
+      Underground Avoiding Lava_2019_authored_hint:
+        mc_11_a: ყველა კოდი თავის ადგილზეა. დროა, ლავაზე შეამოწმოთ და გაუმკლავდეთ
+          მას. ახლა მხოლოდ გადაადგილების ბლოკის დამატება დაგრჩათ.
+        mc_11_b: "`წინ გადაადგილების`ბრძანება `თუ` წინადადების შიგნით უნდა განთავდეს
+          თუ მის შემდეგ?"
       Underground If Statements_authored_hint:
         mc_12_a: სივრცეები წითელი ლაქებით არის ადგილი, სადაც მინერალურ ქვას იპოვით.
         mc_12_b: შეგიძლიათ გამოიყენოთ ციკლი `გამეორება`, იმისათვის, რომ თქვენი კოდი
@@ -4156,6 +4204,12 @@ ka:
         mc_12_c: 'გამოიყენეთ `თუ` დებულება, იმისათვის რომ ლავა შეამოწმოთ, შემდეგ განათავსეთ
           რიყის ქვები. '
       Underground If Statements_2018_authored_hint:
+        mc_12_a: სივრცეები წითელი ლაქებით არის ადგილი, სადაც მინერალურ ქვას იპოვით.
+        mc_12_b: შეგიძლიათ გამოიყენოთ ციკლი `გამეორება`, იმისათვის, რომ თქვენი კოდი
+          შეამოკლოთ?
+        mc_12_c: 'გამოიყენეთ `თუ` დებულება, იმისათვის რომ ლავა შეამოწმოთ, შემდეგ განათავსეთ
+          რიყის ქვები. '
+      Underground If Statements_2019_authored_hint:
         mc_12_a: სივრცეები წითელი ლაქებით არის ადგილი, სადაც მინერალურ ქვას იპოვით.
         mc_12_b: შეგიძლიათ გამოიყენოთ ციკლი `გამეორება`, იმისათვის, რომ თქვენი კოდი
           შეამოკლოთ?
@@ -4177,6 +4231,14 @@ ka:
           ამის შემდგ შეგიძლიათ მასზე გაიაროთ!
         mc_10_c: შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ
           ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება.
+      Underground Iron_2019_authored_hint:
+        mc_10_a: რკინის ბლოკები დალაქავებული ადგილებია ჩირაღდნის უკან! როგორ აპირებთ
+          იქ მიაღწიოთ?
+        mc_10_b: |-
+          როდესაც ლავის პირას დგახართ, გამოიყენეთ ბლოკი: `განათავსეთ რიყის ქვა წინ`, იმისათვის რომ უსაფრთხო გახადოთ ბილიკი.
+          ამის შემდგ შეგიძლიათ მასზე გაიაროთ!
+        mc_10_c: შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ
+          ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება.
       Underground Mining Coal_authored_hint:
         mc_9_a: პირისპირ შეეჩეხე რაიმეს? `განადგურების ბლოკი` გამოთხრის ამ ბლოკს შენ
           წინ.
@@ -4185,6 +4247,13 @@ ka:
         mc_9_c: იმისათვის, რომ განათავსოთ ჩირაღდანი იმ სივრცეში, სადაც დგახართ, გამოიყენეთ
           ბლოკი `ჩირაღდნის განთავსება`.
       Underground Mining Coal_2018_authored_hint:
+        mc_9_a: პირისპირ შეეჩეხე რაიმეს? `განადგურების ბლოკი` გამოთხრის ამ ბლოკს შენ
+          წინ.
+        mc_9_b: კედელში შავი ლაქები ქვანახშირია! გამოიყენეთ `განადგურების ბლოკი` მათ
+          გამოსათხრელად.
+        mc_9_c: იმისათვის, რომ განათავსოთ ჩირაღდანი იმ სივრცეში, სადაც დგახართ, გამოიყენეთ
+          ბლოკი `ჩირაღდნის განთავსება`.
+      Underground Mining Coal_2019_authored_hint:
         mc_9_a: პირისპირ შეეჩეხე რაიმეს? `განადგურების ბლოკი` გამოთხრის ამ ბლოკს შენ
           წინ.
         mc_9_b: კედელში შავი ლაქები ქვანახშირია! გამოიყენეთ `განადგურების ბლოკი` მათ
@@ -7893,6 +7962,17 @@ ka:
           </block>
           </xml>
           აირჩიეთ ნებისმიერი შაბლონი, რომელიც მოგწონთ!
+      courseC_artist_loop1_2019_authored_hint:
+        courseC_artist_loop1_a: ციკლში არაფრის შეცვლა არ გჭირდება, უბრალოდ თავზე ერთი
+          ბლოკი დაამატეთ.
+        courseC_artist_loop1_b: |-
+          ეს ბლოკი დაგჭირდებათ კოდის შაბლონის შესაქმნელად:
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
+          აირჩიეთ ნებისმიერი შაბლონი, რომელიც მოგწონთ!
       courseC_artist_loops1a_authored_hint:
         courseC_artist_loops1a_a: |-
           თავიდან ეს ბლიკი დაგჭირდებათ:
@@ -7925,6 +8005,22 @@ ka:
           <title name="VALUE">Bird</title>
           </block>
           </xml>
+      courseC_artist_loops1a_2019_authored_hint:
+        courseC_artist_loops1a_a: |-
+          თავიდან ეს ბლიკი დაგჭირდებათ:
+          <xml>
+          <block type="jump_to_xy">
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block>
+          </xml>
+        courseC_artist_loops1a_b: |-
+          სტიკერის დასახატად გამოიყენეთ ეს ბლოკი!
+          <xml>
+          <block type="sticker">
+          <title name="VALUE">Bird</title>
+          </block>
+          </xml>
       courseC_artist_loops2a_authored_hint:
         courseC_artist_loops2a_a: ციკლის შიგნით თქვენ დაგჭირდებათ ახტეთ 200-მდე სიგრძეზე
           ზემოთ და 200-მდე სიგრძეზე ქვემოთ, შემდეგ დახატოთ ჩიტის ეტიკეტი, შემდეგ შემობრუნდეთ
@@ -7932,6 +8028,12 @@ ka:
         courseC_artist_loops2a_b: იმისთვის, რომ გამეორებების რაოდენობა შეცვალოთ, დააწკაპუნეთ
           რიცხვზე `გამეორების` ციკლის თავზე.
       courseC_artist_loops2a_2018_authored_hint:
+        courseC_artist_loops2a_a: ციკლის შიგნით თქვენ დაგჭირდებათ ახტეთ 200-მდე სიგრძეზე
+          ზემოთ და 200-მდე სიგრძეზე ქვემოთ, შემდეგ დახატოთ ჩიტის ეტიკეტი, შემდეგ შემობრუნდეთ
+          30 გრადუსით.
+        courseC_artist_loops2a_b: იმისთვის, რომ გამეორებების რაოდენობა შეცვალოთ, დააწკაპუნეთ
+          რიცხვზე `გამეორების` ციკლის თავზე.
+      courseC_artist_loops2a_2019_authored_hint:
         courseC_artist_loops2a_a: ციკლის შიგნით თქვენ დაგჭირდებათ ახტეთ 200-მდე სიგრძეზე
           ზემოთ და 200-მდე სიგრძეზე ქვემოთ, შემდეგ დახატოთ ჩიტის ეტიკეტი, შემდეგ შემობრუნდეთ
           30 გრადუსით.
@@ -7947,6 +8049,11 @@ ka:
           ბლოკის განთავსება დაგჭირდებათ.
         courseC_artist_loops3a_b: ღამურის ეტიკეტის საპოვნელად გამოიყენეთ ბლოკის `დახატე
           ეტიკეტი` თავზე განთავსებული ჩამოსაშლელი მენიუ.
+      courseC_artist_loops3a_2019_authored_hint:
+        courseC_artist_loops3a_a: ჩიტის სტიკერის შემდეგ, ციკლის შიგნით მხოლოდ ერთი
+          ბლოკის განთავსება დაგჭირდებათ.
+        courseC_artist_loops3a_b: ღამურის ეტიკეტის საპოვნელად გამოიყენეთ ბლოკის `დახატე
+          ეტიკეტი` თავზე განთავსებული ჩამოსაშლელი მენიუ.
       courseC_artist_loops4a_authored_hint:
         courseC_artist_loops4a_a: |-
           წინ გადასახტომად გამოიყენეთ ეს ბლოკი:
@@ -7958,6 +8065,16 @@ ka:
           </xml>
           არ დაგავიწყდეთ შეცვალოთ გადახტომის მანძილი!
       courseC_artist_loops4a_2018_authored_hint:
+        courseC_artist_loops4a_a: |-
+          წინ გადასახტომად გამოიყენეთ ეს ბლოკი:
+          <xml>
+          <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+          </block>
+          </xml>
+          არ დაგავიწყდეთ შეცვალოთ გადახტომის მანძილი!
+      courseC_artist_loops4a_2019_authored_hint:
         courseC_artist_loops4a_a: |-
           წინ გადასახტომად გამოიყენეთ ეს ბლოკი:
           <xml>
@@ -7983,6 +8100,9 @@ ka:
       courseC_artist_loops5a_2018_authored_hint:
         courseC_artist_loops5a_a: გამოიყენეთ ჩამოსაშლელი სიები `სტიკერის დახატვის`
           ბლოკებზე, რათა შეცვალოთ სურათები.
+      courseC_artist_loops5a_2019_authored_hint:
+        courseC_artist_loops5a_a: გამოიყენეთ ჩამოსაშლელი სიები `სტიკერის დახატვის`
+          ბლოკებზე, რათა შეცვალოთ სურათები.
       courseC_artist_loops5b_authored_hint:
         courseC_artist_loops5b_a: |-
           გამოიყენეთ ეს ბლოკი, რათა განსაზღვროთ თქვენი ხაზების ნიმუში:
@@ -7995,6 +8115,17 @@ ka:
         courseC_artist_loops5b_b: ზემოთ განთავსებული დიზაინის მსგავსის ასაწყობად უნდა
           გადაადგილდეთ უკან იმდენივე ერთეულით, რამდენითაც წინ გადაადგილდებით.
       courseC_artist_loops5b_2018_authored_hint:
+        courseC_artist_loops5b_a: |-
+          გამოიყენეთ ეს ბლოკი, რათა განსაზღვროთ თქვენი ხაზების ნიმუში:
+
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
+        courseC_artist_loops5b_b: ზემოთ განთავსებული დიზაინის მსგავსის ასაწყობად უნდა
+          გადაადგილდეთ უკან იმდენივე ერთეულით, რამდენითაც წინ გადაადგილდებით.
+      courseC_artist_loops5b_2019_authored_hint:
         courseC_artist_loops5b_a: |-
           გამოიყენეთ ეს ბლოკი, რათა განსაზღვროთ თქვენი ხაზების ნიმუში:
 
@@ -8018,11 +8149,18 @@ ka:
       courseC_artist_loops6a_2018_authored_hint:
         courseC_artist_loops6a_a: ზემოთ განთავსებული დიზაინის მსგავსის ასაწყობად,
           სტიკერებს შორის გადახტით წინ 75 პიქსელზე ნაკლებით.
+      courseC_artist_loops6a_2019_authored_hint:
+        courseC_artist_loops6a_a: ზემოთ განთავსებული დიზაინის მსგავსის ასაწყობად,
+          სტიკერებს შორის გადახტით წინ 75 პიქსელზე ნაკლებით.
       courseC_artist_loops7a_authored_hint:
         courseC_artist_loops7a_a: |-
           წრე შეიცავს 360 გრადუსს. გაამრავლეთ მობრუნების გრადუსი გამეორებების რაოდენობაზე. უდრის თუ არა პასუხი 360-ს?
           შეამოწმეთ შემოთავაზებული მობრუნებები, რათა ნახოთ, როგორ მუშაობს ეს ნიმუში!
       courseC_artist_loops7a_2018_authored_hint:
+        courseC_artist_loops7a_a: |-
+          წრე შეიცავს 360 გრადუსს. გაამრავლეთ მობრუნების გრადუსი გამეორებების რაოდენობაზე. უდრის თუ არა პასუხი 360-ს?
+          შეამოწმეთ შემოთავაზებული მობრუნებები, რათა ნახოთ, როგორ მუშაობს ეს ნიმუში!
+      courseC_artist_loops7a_2019_authored_hint:
         courseC_artist_loops7a_a: |-
           წრე შეიცავს 360 გრადუსს. გაამრავლეთ მობრუნების გრადუსი გამეორებების რაოდენობაზე. უდრის თუ არა პასუხი 360-ს?
           შეამოწმეთ შემოთავაზებული მობრუნებები, რათა ნახოთ, როგორ მუშაობს ეს ნიმუში!
@@ -8038,6 +8176,12 @@ ka:
         courseC_artist_loopsPre1a_b: 'თქვენს `გამეორების` ციკლში 3 ბლოკი უნდა იყოს:
           `გადახტი 200-თ და ჩახტი 200-თ`, `გადაადგილდი წინ 50 პიქსელით` და `შეტრიალდი
           მარცნივ 60 გრადუსით`.'
+      courseC_artist_loopsPre1a_2019_authored_hint:
+        courseC_artist_loopsPre1a_a: არ დაგავიწყდეთ თქვენს ციკლში `მობრუნების` ბლოკის
+          მოთავსება.
+        courseC_artist_loopsPre1a_b: 'თქვენს `გამეორების` ციკლში 3 ბლოკი უნდა იყოს:
+          `გადახტი 200-თ და ჩახტი 200-თ`, `გადაადგილდი წინ 50 პიქსელით` და `შეტრიალდი
+          მარცნივ 60 გრადუსით`.'
       courseC_artist_loopsPrePre1a_authored_hint:
         courseC_artist_loopsPrePre1a_a: |-
           პირველი ბლოკი, რომელიც დაგჭირდებათ არის:
@@ -8048,6 +8192,15 @@ ka:
 
           ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
       courseC_artist_loopsPrePre1a_2018_authored_hint:
+        courseC_artist_loopsPrePre1a_a: |-
+          პირველი ბლოკი, რომელიც დაგჭირდებათ არის:
+
+          ![](https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png)
+        courseC_artist_loopsPrePre1a_b: |-
+          50 პიქსელით წინ გადასაადგილებლად გამოიყენეთ ეს ბლოკი
+
+          ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
+      courseC_artist_loopsPrePre1a_2019_authored_hint:
         courseC_artist_loopsPrePre1a_a: |-
           პირველი ბლოკი, რომელიც დაგჭირდებათ არის:
 
@@ -8195,12 +8348,20 @@ ka:
       courseC_collector_loops_challenge2_2018_authored_hint:
         courseC_maze_loops_challenge2_b: გამოიყენეთ ციკლები, რათა გეყოთ `შეგროვების`
           ბლოკები!
+      courseC_collector_loops_challenge2_2019_authored_hint:
+        courseC_maze_loops_challenge2_b: გამოიყენეთ ციკლები, რათა გეყოთ `შეგროვების`
+          ბლოკები!
       courseC_collector_prog1_authored_hint:
         courseC_collector_prog1_a: როდესაც განძის შემცველ ადგილზე დგახართ, გამოიყენეთ
           <xml><block type="collector_collect"/></xml> ბლოკი, რათა აიღოთ ის.
         courseC_collector_prog1_b: უმარტივესი ამონახსნი იქნებოდა ერთხელ გადაადგილება
           წინ, შემდეგ კი განძის შეგროვება.
       courseC_collector_prog1_2018_authored_hint:
+        courseC_collector_prog1_a: როდესაც განძის შემცველ ადგილზე დგახართ, გამოიყენეთ
+          <xml><block type="collector_collect"/></xml> ბლოკი, რათა აიღოთ ის.
+        courseC_collector_prog1_b: უმარტივესი ამონახსნი იქნებოდა ერთხელ გადაადგილება
+          წინ, შემდეგ კი განძის შეგროვება.
+      courseC_collector_prog1_2019_authored_hint:
         courseC_collector_prog1_a: როდესაც განძის შემცველ ადგილზე დგახართ, გამოიყენეთ
           <xml><block type="collector_collect"/></xml> ბლოკი, რათა აიღოთ ის.
         courseC_collector_prog1_b: უმარტივესი ამონახსნი იქნებოდა ერთხელ გადაადგილება
@@ -8213,10 +8374,17 @@ ka:
         courseC_collector_prog2_b: არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების
           დამატება, კოდის გაშვება და ნახეთ, რა მოხდება, თუნდაც თავსატეხი ბოლომდე ამოხსნილი
           არ გქონდეთ.
+      courseC_collector_prog2_2019_authored_hint:
+        courseC_collector_prog2_b: არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების
+          დამატება, კოდის გაშვება და ნახეთ, რა მოხდება, თუნდაც თავსატეხი ბოლომდე ამოხსნილი
+          არ გქონდეთ.
       courseC_collector_prog3_authored_hint:
         courseC_collector_prog3_c: თუ გიჭირთ ამ თავსატეხისათვის ამოხსნა, სცადეთ მოძრაობები
           ფურცელზე დაწეროთ.
       courseC_collector_prog3_2018_authored_hint:
+        courseC_collector_prog3_c: თუ გიჭირთ ამ თავსატეხისათვის ამოხსნა, სცადეთ მოძრაობები
+          ფურცელზე დაწეროთ.
+      courseC_collector_prog3_2019_authored_hint:
         courseC_collector_prog3_c: თუ გიჭირთ ამ თავსატეხისათვის ამოხსნა, სცადეთ მოძრაობები
           ფურცელზე დაწეროთ.
       courseC_collector_prog4_authored_hint:
@@ -8229,18 +8397,30 @@ ka:
         courseC_collector_prog4_b: არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების
           დამატება, კოდის გაშვება და ნახეთ, რა მოხდება, თუნდაც თავსატეხი ბოლომდე ამოხსნილი
           არ გქონდეთ.
+      courseC_collector_prog4_2019_authored_hint:
+        courseC_collector_prog4_a: თუ გაიჭედეთ, სცადეთ ნაბიჯების ქაღალდზე ჩაწერა.
+        courseC_collector_prog4_b: არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების
+          დამატება, კოდის გაშვება და ნახეთ, რა მოხდება, თუნდაც თავსატეხი ბოლომდე ამოხსნილი
+          არ გქონდეთ.
       courseC_collector_prog5_authored_hint:
         courseC_collector_prog5_c: თუ გაიჭედეთ, სცადეთ ნაბიჯების ქაღალდზე ჩაწერა.
       courseC_collector_prog5_2018_authored_hint:
+        courseC_collector_prog5_c: თუ გაიჭედეთ, სცადეთ ნაბიჯების ქაღალდზე ჩაწერა.
+      courseC_collector_prog5_2019_authored_hint:
         courseC_collector_prog5_c: თუ გაიჭედეთ, სცადეთ ნაბიჯების ქაღალდზე ჩაწერა.
       courseC_collector_prog6_authored_hint:
         courseC_collector_prog6_b: გაიჭედეთ? განძის შესაგროვებლად ეს ბილიკი სცადეთ.
       courseC_collector_prog6_2018_authored_hint:
         courseC_collector_prog6_b: გაიჭედეთ? განძის შესაგროვებლად ეს ბილიკი სცადეთ.
+      courseC_collector_prog6_2019_authored_hint:
+        courseC_collector_prog6_b: გაიჭედეთ? განძის შესაგროვებლად ეს ბილიკი სცადეთ.
       courseC_collector_prog_challenge1_authored_hint:
         courseC_collector_prog_challenge1_a: დამატებითი განძის შესაგროვებლად შეგიძლიათ
           `შეგროვების` ბრძანება უფრო ხშირად გამოიყენოთ.
       courseC_collector_prog_challenge1_2018_authored_hint:
+        courseC_collector_prog_challenge1_a: დამატებითი განძის შესაგროვებლად შეგიძლიათ
+          `შეგროვების` ბრძანება უფრო ხშირად გამოიყენოთ.
+      courseC_collector_prog_challenge1_2019_authored_hint:
         courseC_collector_prog_challenge1_a: დამატებითი განძის შესაგროვებლად შეგიძლიათ
           `შეგროვების` ბრძანება უფრო ხშირად გამოიყენოთ.
       courseC_collector_prog_challenge2_authored_hint:
@@ -8249,9 +8429,14 @@ ka:
       courseC_collector_prog_challenge2_2018_authored_hint:
         courseC_collector_prog_challenge1_a: თითოეულ სივრცეში შეგიძლიათ ერთზე მეტი`შეგროვების`
           ბლოკის გამოყენება.
+      courseC_collector_prog_challenge2_2019_authored_hint:
+        courseC_collector_prog_challenge1_a: თითოეულ სივრცეში შეგიძლიათ ერთზე მეტი`შეგროვების`
+          ბლოკის გამოყენება.
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+      courseC_flappy_events1_2019_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events2_authored_hint:
         courseC_flappy_events2_a: 'ბლოკს, რომელიც გჭირდებათ, ჰქვია `სისწრაფის განსაზღვრა`. '
@@ -8261,10 +8446,17 @@ ka:
         courseC_flappy_events2_a: 'ბლოკს, რომელიც გჭირდებათ, ჰქვია `სისწრაფის განსაზღვრა`. '
         courseC_flappy_events2_b: დააკავშირეთ `განსაზღვრე სისწრაფე` ბლოკი `გაშვებისას`
           ბლოკს, რათა ამოხსნათ ეს თავსატეხი.
+      courseC_flappy_events2_2019_authored_hint:
+        courseC_flappy_events2_a: 'ბლოკს, რომელიც გჭირდებათ, ჰქვია `სისწრაფის განსაზღვრა`. '
+        courseC_flappy_events2_b: დააკავშირეთ `განსაზღვრე სისწრაფე` ბლოკი `გაშვებისას`
+          ბლოკს, რათა ამოხსნათ ეს თავსატეხი.
       courseC_flappy_events3_authored_hint:
         courseC_flappy_events3_a: თუ რამე არასწორად მუშაობს, დარწმუნდით, რომ თქვენი
           ბლოკები სწორ მოვლენებს უკავშირდება სამუშაო სივრცეში.
       courseC_flappy_events3_2018_authored_hint:
+        courseC_flappy_events3_a: თუ რამე არასწორად მუშაობს, დარწმუნდით, რომ თქვენი
+          ბლოკები სწორ მოვლენებს უკავშირდება სამუშაო სივრცეში.
+      courseC_flappy_events3_2019_authored_hint:
         courseC_flappy_events3_a: თუ რამე არასწორად მუშაობს, დარწმუნდით, რომ თქვენი
           ბლოკები სწორ მოვლენებს უკავშირდება სამუშაო სივრცეში.
       courseC_flappy_events4_authored_hint:
@@ -8273,10 +8465,16 @@ ka:
       courseC_flappy_events4_2018_authored_hint:
         courseC_flappy_events4_a: დააკავშირეთ `თამაშის დასრულების` ბლოკი `დაბრკოლებასთან
           დაჯახების` ბლოკს, რათა ამოხსნათ ეს თავსატეხი.
+      courseC_flappy_events4_2019_authored_hint:
+        courseC_flappy_events4_a: დააკავშირეთ `თამაშის დასრულების` ბლოკი `დაბრკოლებასთან
+          დაჯახების` ბლოკს, რათა ამოხსნათ ეს თავსატეხი.
       courseC_flappy_events5_authored_hint:
         courseC_flappy_events5_a: თქვენ მოგიწევთ `ქულის მიღების` ბლოკის გამოყენება,
           რათა დაასრულოთ ეს დონე.
       courseC_flappy_events5_2018_authored_hint:
+        courseC_flappy_events5_a: თქვენ მოგიწევთ `ქულის მიღების` ბლოკის გამოყენება,
+          რათა დაასრულოთ ეს დონე.
+      courseC_flappy_events5_2019_authored_hint:
         courseC_flappy_events5_a: თქვენ მოგიწევთ `ქულის მიღების` ბლოკის გამოყენება,
           რათა დაასრულოთ ეს დონე.
       courseC_flappy_events6_authored_hint:
@@ -8285,10 +8483,16 @@ ka:
       courseC_flappy_events6_2018_authored_hint:
         courseC_flappy_events6_a: სცადეთ `აქნიე ____ რაოდენობით` ბლოკის დაკავშირება
           `როცა დააწკაპებთ` მოვლენასთან.
+      courseC_flappy_events6_2019_authored_hint:
+        courseC_flappy_events6_a: სცადეთ `აქნიე ____ რაოდენობით` ბლოკის დაკავშირება
+          `როცა დააწკაპებთ` მოვლენასთან.
       courseC_flappy_events7_authored_hint:
         courseC_flappy_events7_a: 'თქვენ შეგიძლიათ ფონის შეცვლა `განსაზღვრე სცენა`
           ბლოკის გამოყენებით. '
       courseC_flappy_events7_2018_authored_hint:
+        courseC_flappy_events7_a: 'თქვენ შეგიძლიათ ფონის შეცვლა `განსაზღვრე სცენა`
+          ბლოკის გამოყენებით. '
+      courseC_flappy_events7_2019_authored_hint:
         courseC_flappy_events7_a: 'თქვენ შეგიძლიათ ფონის შეცვლა `განსაზღვრე სცენა`
           ბლოკის გამოყენებით. '
       courseC_flappy_events8_authored_hint:
@@ -8297,10 +8501,16 @@ ka:
       courseC_flappy_events8_2018_authored_hint:
         courseC_flappy_events8_a: სცადეთ მეორე `სცენის განსაზღვრის` ბლოკის დაკავშირება,
           `დაბრკოლების გავლისას` მოვლენასთან, რათა დაასრულოთ ეს დონე.
+      courseC_flappy_events8_2019_authored_hint:
+        courseC_flappy_events8_a: სცადეთ მეორე `სცენის განსაზღვრის` ბლოკის დაკავშირება,
+          `დაბრკოლების გავლისას` მოვლენასთან, რათა დაასრულოთ ეს დონე.
       courseC_flappy_events9_authored_hint:
         courseC_flappy_events9_a: დონის დასასრულებლად დაუკავშირეთ `დააყენე 0 ქულა`
           ბლოკი `როდესაც დაბრკოლებას დაეჯახები` მოვლენას.
       courseC_flappy_events9_2018_authored_hint:
+        courseC_flappy_events9_a: დონის დასასრულებლად დაუკავშირეთ `დააყენე 0 ქულა`
+          ბლოკი `როდესაც დაბრკოლებას დაეჯახები` მოვლენას.
+      courseC_flappy_events9_2019_authored_hint:
         courseC_flappy_events9_a: დონის დასასრულებლად დაუკავშირეთ `დააყენე 0 ქულა`
           ბლოკი `როდესაც დაბრკოლებას დაეჯახები` მოვლენას.
       courseC_harvester_loops1_authored_hint:
@@ -8582,6 +8792,12 @@ ka:
           ის ყოველ ჯერზე ერთი მიმართულებით უნდა შეტრიალდეს.
         courseC_maze_debugging_challenge1_c: თუ იჭედებით, ყოველთვის შეგიძლიათ თავიდან
           დაწყება და ახალი გზის პოვნა!
+      courseC_maze_debugging_challenge1_2019_authored_hint:
+        courseC_maze_debugging_challenge1_a: მარცხნივ თუ მარჯვნივ? ეს თქვენი გადასაწყვეტია!
+        courseC_maze_debugging_challenge1_b: სკრატის ბილიკს მართკუთხედის ფორმა აქვს!
+          ის ყოველ ჯერზე ერთი მიმართულებით უნდა შეტრიალდეს.
+        courseC_maze_debugging_challenge1_c: თუ იჭედებით, ყოველთვის შეგიძლიათ თავიდან
+          დაწყება და ახალი გზის პოვნა!
       courseC_maze_debugging_challenge2_authored_hint:
         courseC_maze_debugging_challenge2_b: თუ იჭედებით, სცადეთ კოდის გამართვა. სად
           დაიწყო შეცდომები?
@@ -8590,6 +8806,13 @@ ka:
 
           ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
       courseC_maze_debugging_challenge2_2018_authored_hint:
+        courseC_maze_debugging_challenge2_b: თუ იჭედებით, სცადეთ კოდის გამართვა. სად
+          დაიწყო შეცდომები?
+        courseC_maze_debugging_challenge2_c: |-
+          არსებობს ორი სხვადასხვა გზა, რომელსაც შეგიძლიათ გაჰყვეთ წინ გადაადგილებისა და მობრუნების მხოლოდ ოთხი ბლოკის გამოყენებით. თუ მოიფიქრებთ, როგორ გამოიყენოთ გამეორების ბლოკი, ის შესაძლოა მეტიც იყოს!
+
+          ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
+      courseC_maze_debugging_challenge2_2019_authored_hint:
         courseC_maze_debugging_challenge2_b: თუ იჭედებით, სცადეთ კოდის გამართვა. სად
           დაიწყო შეცდომები?
         courseC_maze_debugging_challenge2_c: |-
@@ -8627,12 +8850,23 @@ ka:
           კოდის შუა ნაწილიდან ბლოკის წასაშლელად ყველა სხვა ბლოკი სამუშაო სივრცის სხვა ნაწილას გამოწიეთ.
           ინსტრუმენტების პანელიდან უკან შეწიეთ ბლოკი, რომლის წაშლაც გინდათ.
           საბოლოოდ, ყველა ბლოკი თავის ადგილზე დააბრუნეთ.
+      courseC_maze_programming3_2019_authored_hint:
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+          კოდის შუა ნაწილიდან ბლოკის წასაშლელად ყველა სხვა ბლოკი სამუშაო სივრცის სხვა ნაწილას გამოწიეთ.
+          ინსტრუმენტების პანელიდან უკან შეწიეთ ბლოკი, რომლის წაშლაც გინდათ.
+          საბოლოოდ, ყველა ბლოკი თავის ადგილზე დააბრუნეთ.
       courseC_maze_programming5_authored_hint:
         courseC_maze_programming5_b: თავსატეხის დასასრულებლად ჩიტს ერთხელ შეხვევა
           სჭირდება. შეგიძლია გამოარკვიო საით?
         courseC_maze_programming5_c: ამოხსნას ექნება ორი "წინ გადაადგილების" ბლოკი,
           ერთი მოხვევა, და ორით მეტი `წინ გადაადგილების` ბლოკი.
       courseC_maze_programming5_2018_authored_hint:
+        courseC_maze_programming5_b: თავსატეხის დასასრულებლად ჩიტს ერთხელ შეხვევა
+          სჭირდება. შეგიძლია გამოარკვიო საით?
+        courseC_maze_programming5_c: ამოხსნას ექნება ორი "წინ გადაადგილების" ბლოკი,
+          ერთი მოხვევა, და ორით მეტი `წინ გადაადგილების` ბლოკი.
+      courseC_maze_programming5_2019_authored_hint:
         courseC_maze_programming5_b: თავსატეხის დასასრულებლად ჩიტს ერთხელ შეხვევა
           სჭირდება. შეგიძლია გამოარკვიო საით?
         courseC_maze_programming5_c: ამოხსნას ექნება ორი "წინ გადაადგილების" ბლოკი,
@@ -8649,10 +8883,19 @@ ka:
           ჩიტიდან ღორამდე?
         courseC_maze_programming6_c: გახსოვდეთ, მას შემდეგ, რაც ჩიტი სახით კედლისკენ
           დადგება, უპირველეს ყოვლისა უნდა შეუხვიოთ.
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: ამ თავსატეხის ამოსახსნელად ორი ტიპის გზა არსებობს!
+        courseC_maze_programming6_b: მიაყოლეთ თითი გზას, რომელი საფეხურები გაიარეთ
+          ჩიტიდან ღორამდე?
+        courseC_maze_programming6_c: გახსოვდეთ, მას შემდეგ, რაც ჩიტი სახით კედლისკენ
+          დადგება, უპირველეს ყოვლისა უნდა შეუხვიოთ.
       courseC_maze_programming7_authored_hint:
         courseC_maze_programming7_b: თუ გიჭირთ ამ თავსატეხისათვის ამოხსნა, სცადეთ
           მოძრაობები ფურცელზე დაწეროთ.
       courseC_maze_programming7_2018_authored_hint:
+        courseC_maze_programming7_b: თუ გიჭირთ ამ თავსატეხისათვის ამოხსნა, სცადეთ
+          მოძრაობები ფურცელზე დაწეროთ.
+      courseC_maze_programming7_2019_authored_hint:
         courseC_maze_programming7_b: თუ გიჭირთ ამ თავსატეხისათვის ამოხსნა, სცადეთ
           მოძრაობები ფურცელზე დაწეროთ.
       courseC_maze_programming8_authored_hint:
@@ -8669,10 +8912,20 @@ ka:
         courseC_maze_programming8_b: არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების
           დამატება, კოდის გაშვება და ნახეთ, რა მოხდება, თუნდაც თავსატეხი ბოლომდე ამოხსნილი
           არ გქონდეთ.
+      courseC_maze_programming8_2019_authored_hint:
+        courseC_maze_programming8_a: გახსოვდეთ, თუ გაიჭედებით, შეგიძლიათ გამოიყენოთ
+          ღილაკი "ნაბიჯი", იმისათვის რომ ნაბიჯ-ნაბიჯ, ხაზ-ხაზად გააკვირდეთ თქვენს
+          კოდს.
+        courseC_maze_programming8_b: არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების
+          დამატება, კოდის გაშვება და ნახეთ, რა მოხდება, თუნდაც თავსატეხი ბოლომდე ამოხსნილი
+          არ გქონდეთ.
       courseC_maze_programming_challenge1_authored_hint:
         courseC_maze_programming_challenge1_a: გოჭთან მისასვლელი მრავალი გზა არსებობს.
           გააყოლეთ თითი გზის საპოვნელად, შემდეგ კი დაწერეთ შესაბამისი პროგრამა!
       courseC_maze_programming_challenge1_2018_authored_hint:
+        courseC_maze_programming_challenge1_a: გოჭთან მისასვლელი მრავალი გზა არსებობს.
+          გააყოლეთ თითი გზის საპოვნელად, შემდეგ კი დაწერეთ შესაბამისი პროგრამა!
+      courseC_maze_programming_challenge1_2019_authored_hint:
         courseC_maze_programming_challenge1_a: გოჭთან მისასვლელი მრავალი გზა არსებობს.
           გააყოლეთ თითი გზის საპოვნელად, შემდეგ კი დაწერეთ შესაბამისი პროგრამა!
       courseC_maze_programming_challenge2_authored_hint:
@@ -8682,6 +8935,12 @@ ka:
           უმოკლესი ამონახსნი იყენებს მხოლოდ 5 ბლოკს, მაგრამ მათ შორის ამ ბლოკს:
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_maze_programming_challenge2_2018_authored_hint:
+        courseC_maze_programming_challenge2_a: "*თუ უკან გამაგზავნით, გამოიჩინეთ სიფრთხილე
+          და დარწმუნდით, რომ სწორად შევტრიალდები!*"
+        courseC_maze_programming_challenge2_b: |-
+          უმოკლესი ამონახსნი იყენებს მხოლოდ 5 ბლოკს, მაგრამ მათ შორის ამ ბლოკს:
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseC_maze_programming_challenge2_2019_authored_hint:
         courseC_maze_programming_challenge2_a: "*თუ უკან გამაგზავნით, გამოიჩინეთ სიფრთხილე
           და დარწმუნდით, რომ სწორად შევტრიალდები!*"
         courseC_maze_programming_challenge2_b: |-
@@ -8712,7 +8971,23 @@ ka:
           ამას **ჩასმული ციკლი** ეწოდება.
         courseC_starWars_loops10_c: შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი,
           თუ თავსატეხი ჯერ არ ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება.
+      courseC_starWars_loops10_2019_authored_hint:
+        courseC_starWars_loops10_a: ნუთუ არ ჰგავს ეს ნიმუში გიგანტური კიბის საფეხურებს?
+          ნახეთ, შეგიძლიათ თუ არა წინა თავსატეხებში ნასწავლი მასალის გამოყენება ყველა
+          მობრუნების შესასრულებლად.
+        courseC_starWars_loops10_b: |-
+          თუ ნაკლები კოდის გამოყენება გსურთ, შეგიძლიათ განათავსოთ ერთი `გამეორების ციკლი` მეორეში!
+          ამას **ჩასმული ციკლი** ეწოდება.
+        courseC_starWars_loops10_c: შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი,
+          თუ თავსატეხი ჯერ არ ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება.
       courseC_starWars_loops1_2018_authored_hint:
+        courseC_starWars_loops1_a: როდესაც BB-8 ზედ გადაუვლის ჯართს, ის მას ავტომატურად
+          აგროვებს.
+        courseC_starWars_loops1_b: შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი,
+          თუ თავსატეხი ჯერ არ ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება.
+        courseC_starWars_loops1_c: ამ თავსატეხის ამოსახნელად ხუთჯერ მოგიწევთ `წინ
+          გადაადგილება`.
+      courseC_starWars_loops1_2019_authored_hint:
         courseC_starWars_loops1_a: როდესაც BB-8 ზედ გადაუვლის ჯართს, ის მას ავტომატურად
           აგროვებს.
         courseC_starWars_loops1_b: შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი,
@@ -8723,6 +8998,9 @@ ka:
         courseC_starWars_loops2_a: კოდის გასამეორებლად, გადმოათრიეთ `გამეორების` ციკლი,
           შემდეგ კი განათავსეთ მასში სასურველი ბლოკი.
       courseC_starWars_loops2_2018_authored_hint:
+        courseC_starWars_loops2_a: კოდის გასამეორებლად, გადმოათრიეთ `გამეორების` ციკლი,
+          შემდეგ კი განათავსეთ მასში სასურველი ბლოკი.
+      courseC_starWars_loops2_2019_authored_hint:
         courseC_starWars_loops2_a: კოდის გასამეორებლად, გადმოათრიეთ `გამეორების` ციკლი,
           შემდეგ კი განათავსეთ მასში სასურველი ბლოკი.
       courseC_starWars_loops4_authored_hint:
@@ -8737,12 +9015,23 @@ ka:
         courseC_starWars_loops4_a: გამოიყენეთ ორი `გამეორების` ბლოკი.
         courseC_starWars_loops4_b: 'ყოველ `გამეორების` ციკლში მოთავსდება მხოლოდ ერთი
           ბრძანება: `გადაადგილდეთ წინ`.'
+      courseC_starWars_loops4_2019_authored_hint:
+        courseC_starWars_loops4_c: მობრუნების ბლოკზე "მარცხნივ"-ის გვერდით განთავსებულ
+          ისარზე დაკლიკვით თქვენ შეგიძლიათ შეცვალოთ ის "მარჯვენაზე".
+        courseC_starWars_loops4_a: გამოიყენეთ ორი `გამეორების` ბლოკი.
+        courseC_starWars_loops4_b: 'ყოველ `გამეორების` ციკლში მოთავსდება მხოლოდ ერთი
+          ბრძანება: `გადაადგილდეთ წინ`.'
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: ქვემოთ სამოძრაოდ უნდა შეტრიალდეთ და შემდეგ იმოძრაოთ
           წინ.
         courseC_starWars_loops5_a: ამოხსნის საუკეთესო გზა მობრუნებას, შემდეგ ერთ `წინ
           გადაადგილებას`, კიდევ ერთ მობრუნებს და ციკლს იყენებს.
       courseC_starWars_loops5_2018_authored_hint:
+        courseC_starWars_loops5_b: ქვემოთ სამოძრაოდ უნდა შეტრიალდეთ და შემდეგ იმოძრაოთ
+          წინ.
+        courseC_starWars_loops5_a: ამოხსნის საუკეთესო გზა მობრუნებას, შემდეგ ერთ `წინ
+          გადაადგილებას`, კიდევ ერთ მობრუნებს და ციკლს იყენებს.
+      courseC_starWars_loops5_2019_authored_hint:
         courseC_starWars_loops5_b: ქვემოთ სამოძრაოდ უნდა შეტრიალდეთ და შემდეგ იმოძრაოთ
           წინ.
         courseC_starWars_loops5_a: ამოხსნის საუკეთესო გზა მობრუნებას, შემდეგ ერთ `წინ
@@ -8759,6 +9048,12 @@ ka:
         courseC_starWars_loops6_b: |-
           თუ ნაკლები კოდის გამოყენება გსურთ, შეგიძლიათ განათავსოთ ერთი `გამეორების ციკლი` მეორეში!
           ამას **ჩასმული ციკლი** ეწოდება.
+      courseC_starWars_loops6_2019_authored_hint:
+        courseC_starWars_loops6_a: სცადეთ სვლების ქაღალდზე ჩაწერა, შემდეგ კი მსგავსების
+          პოვნა.
+        courseC_starWars_loops6_b: |-
+          თუ ნაკლები კოდის გამოყენება გსურთ, შეგიძლიათ განათავსოთ ერთი `გამეორების ციკლი` მეორეში!
+          ამას **ჩასმული ციკლი** ეწოდება.
       courseC_starWars_loops7_authored_hint:
         courseC_starWars_loops7_a: ეს ნიმუში უფრო რთულად შეიძლება ჩანდეს, ვიდრე სინამდვილეში
           არის. ფარავს თუ არა ის მთელ ჯართს?
@@ -8767,6 +9062,13 @@ ka:
         courseC_starWars_loops7_c: შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი,
           თუ თავსატეხი ჯერ არ ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება.
       courseC_starWars_loops7_2018_authored_hint:
+        courseC_starWars_loops7_a: ეს ნიმუში უფრო რთულად შეიძლება ჩანდეს, ვიდრე სინამდვილეში
+          არის. ფარავს თუ არა ის მთელ ჯართს?
+        courseC_starWars_loops7_b: თუ ამ თავსატეხის ამოხსნას ვერ ახერხებთ, სცადეთ
+          ყველა სვლის ფურცელზე გადაწერა და მსგავსების მოძებნა.
+        courseC_starWars_loops7_c: შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი,
+          თუ თავსატეხი ჯერ არ ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება.
+      courseC_starWars_loops7_2019_authored_hint:
         courseC_starWars_loops7_a: ეს ნიმუში უფრო რთულად შეიძლება ჩანდეს, ვიდრე სინამდვილეში
           არის. ფარავს თუ არა ის მთელ ჯართს?
         courseC_starWars_loops7_b: თუ ამ თავსატეხის ამოხსნას ვერ ახერხებთ, სცადეთ
@@ -8787,6 +9089,13 @@ ka:
           დააკვირდით ამ ბილიკს.
 
           ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_2019_authored_hint:
+        course_starWars_loops8_b: შეხედეთ ამოცანას პირველ ნახევარს, როგორც კიბის საფეხურის
+          ამოცანას. აქამდე როგორ ხსნიდით ასეთ ამოცანებს?
+        course_starWars_loops8_c: |-
+          დააკვირდით ამ ბილიკს.
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops9_authored_hint:
         course_starWars_loops9_b: "`გამეორების`ციკლში ერთზე მეტი ბლოკის მოთავსება
           შეგიძლიათ."
@@ -8795,6 +9104,13 @@ ka:
 
           ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
       courseC_starWars_loops9_2018_authored_hint:
+        course_starWars_loops9_b: "`გამეორების`ციკლში ერთზე მეტი ბლოკის მოთავსება
+          შეგიძლიათ."
+        course_starWars_loops9_c: |-
+          ამ თავსატეხის ამოსახსნელად მარცხნივ მობრუნება არ დაგჭირდებათ. შეიძლება, რომ თქვენი ყველა ბრუნი მარჯვნივ იყოს.
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
+      courseC_starWars_loops9_2019_authored_hint:
         course_starWars_loops9_b: "`გამეორების`ციკლში ერთზე მეტი ბლოკის მოთავსება
           შეგიძლიათ."
         course_starWars_loops9_c: |-
@@ -8862,10 +9178,21 @@ ka:
           რომ შეარჩიოთ თქვენთვის სასურველი კუთხე!
         courseD_artist_project1_b: გაიხსენეთ, რომ `წინ გადაადგილება` ხატავს ხაზს,
           ხოლო `წინ გადახტომა` - არა.
+      courseD_artist_1_2018_2019_authored_hint:
+        courseD_artist_project1_a: გამოიყენეთ ჩამოსაშლელი მენიუ `მობრუნების` ბლოკებზე,
+          რომ შეარჩიოთ თქვენთვის სასურველი კუთხე!
+        courseD_artist_project1_b: გაიხსენეთ, რომ `წინ გადაადგილება` ხატავს ხაზს,
+          ხოლო `წინ გადახტომა` - არა.
       courseD_artist_2_2018_authored_hint:
         courseD_artist_project1_a: გამოიყენეთ ჩამოსაშლელი მენიუ `მობრუნების` ბლოკებზე,
           რომ შეარჩიოთ თქვენთვის სასურველი კუთხე!
+      courseD_artist_2_2018_2019_authored_hint:
+        courseD_artist_project1_a: გამოიყენეთ ჩამოსაშლელი მენიუ `მობრუნების` ბლოკებზე,
+          რომ შეარჩიოთ თქვენთვის სასურველი კუთხე!
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
       courseD_artist_7_2018_authored_hint:
@@ -8899,10 +9226,22 @@ ka:
           აი, ასე უნდა შეიყვანოთ თქვენი ორობითი კოდი:
 
           ![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)
+      courseD_artist_binary1_2019_authored_hint:
+        courseD_artist_binary1_a: ჩაანაცვლეთ "???" ტექსტსის ბლოკში იმ ორობითი სურათით,
+          რომელიც გსურთ, ნულებისა და ერთების გამოყენებით.
+        courseD_artist_binary1_b: მხატვარი დახატავს თეთრ სივრცეს თითოეული 1-სათვის
+          და შავ სივრცეს თითოეული 0-ისათვის.
+        courseD_artist_binary1_c: |-
+          აი, ასე უნდა შეიყვანოთ თქვენი ორობითი კოდი:
+
+          ![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)
       courseD_artist_binary2_authored_hint:
         courseD_artist_binary2_a: უბრალოდ დააჭირეთ `გაშვებას`, რათა იხილოთ ეს პროგრამა
           მოქმედებაში!
       courseD_artist_binary2_2018_authored_hint:
+        courseD_artist_binary2_a: უბრალოდ დააჭირეთ `გაშვებას`, რათა იხილოთ ეს პროგრამა
+          მოქმედებაში!
+      courseD_artist_binary2_2019_authored_hint:
         courseD_artist_binary2_a: უბრალოდ დააჭირეთ `გაშვებას`, რათა იხილოთ ეს პროგრამა
           მოქმედებაში!
       courseD_artist_binary3_authored_hint:
@@ -8917,6 +9256,12 @@ ka:
         courseD_artist_binary3_b: არ შეუშინდეთ შეცდომის დაშვებას! სცადეთ ორობითად
           დაწერა და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი. ასე
           უკეთ გაიგებთ, რა ხდება.
+      courseD_artist_binary3_2019_authored_hint:
+        courseD_artist_binary3_a: ინსტრუმენტების პანელში მდებარე ოთხი ორობითი ორნამენტიდან
+          ერთი ამ თავსატეხს ამოხსნის!
+        courseD_artist_binary3_b: არ შეუშინდეთ შეცდომის დაშვებას! სცადეთ ორობითად
+          დაწერა და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი. ასე
+          უკეთ გაიგებთ, რა ხდება.
       courseD_artist_binary4_authored_hint:
         courseD_artist_binary4_a: შეხედეთ ზედა რიგის პირველ სამ კვადრატს. შეგიძლიათ
           გაიმეოროთ ეს სამი, მთლიანი ორნამენტის მისაღებად?
@@ -8924,6 +9269,12 @@ ka:
           დაწერა და კოდის გაშვება, რათა ნახოთ, თუ რა მოხდება, თუნდაც ჯერ ამოხსნილი
           არ გქონდეთ თავსატეხი.
       courseD_artist_binary4_2018_authored_hint:
+        courseD_artist_binary4_a: შეხედეთ ზედა რიგის პირველ სამ კვადრატს. შეგიძლიათ
+          გაიმეოროთ ეს სამი, მთლიანი ორნამენტის მისაღებად?
+        courseD_artist_binary4_b: არ შეუშინდეთ შეცდომის დაშვებას! სცადეთ ორობითად
+          დაწერა და კოდის გაშვება, რათა ნახოთ, თუ რა მოხდება, თუნდაც ჯერ ამოხსნილი
+          არ გქონდეთ თავსატეხი.
+      courseD_artist_binary4_2019_authored_hint:
         courseD_artist_binary4_a: შეხედეთ ზედა რიგის პირველ სამ კვადრატს. შეგიძლიათ
           გაიმეოროთ ეს სამი, მთლიანი ორნამენტის მისაღებად?
         courseD_artist_binary4_b: არ შეუშინდეთ შეცდომის დაშვებას! სცადეთ ორობითად
@@ -8943,12 +9294,24 @@ ka:
           ადგილების გაცვლა.
         courseD_artist_binary5_c: თუ ამ თავსატეხის ამოხსნას ვერ ახერხებთ, სცადეთ ორობითი
           ხაზების ფურცელზე გადაწერა და ნახეთ, რომელი ნაწილები მეორდება.
+      courseD_artist_binary5_2019_authored_hint:
+        courseD_artist_binary5_a: პირველ რიგში სცადეთ კოდის გაშვება, რომ ნახოთ, თუ
+          რასთან გაქვთ საქმე.
+        courseD_artist_binary5_b: ღიმილის მისაღებად მხოლოდ ორი რიგისათვის გჭირდებათ
+          ადგილების გაცვლა.
+        courseD_artist_binary5_c: თუ ამ თავსატეხის ამოხსნას ვერ ახერხებთ, სცადეთ ორობითი
+          ხაზების ფურცელზე გადაწერა და ნახეთ, რომელი ნაწილები მეორდება.
       courseD_artist_binary6_authored_hint:
         courseD_artist_binary6_a: დაიწყეთ ზედა მარცხენა კუთხიდან. რამდენის წაკითხვა
           მოგიწევთ, სანამ ნიმუში გამეორებას დაიწყებს?
         courseD_artist_binary6_b: თქვენი ორობითი სტრინგი ეტაპობრივად შეგიძლიათ ააშენოთ
           და თან გააგრძელოთ ცდა!
       courseD_artist_binary6_2018_authored_hint:
+        courseD_artist_binary6_a: დაიწყეთ ზედა მარცხენა კუთხიდან. რამდენის წაკითხვა
+          მოგიწევთ, სანამ ნიმუში გამეორებას დაიწყებს?
+        courseD_artist_binary6_b: თქვენი ორობითი სტრინგი ეტაპობრივად შეგიძლიათ ააშენოთ
+          და თან გააგრძელოთ ცდა!
+      courseD_artist_binary6_2019_authored_hint:
         courseD_artist_binary6_a: დაიწყეთ ზედა მარცხენა კუთხიდან. რამდენის წაკითხვა
           მოგიწევთ, სანამ ნიმუში გამეორებას დაიწყებს?
         courseD_artist_binary6_b: თქვენი ორობითი სტრინგი ეტაპობრივად შეგიძლიათ ააშენოთ
@@ -8960,6 +9323,12 @@ ka:
           დაწერა და კოდის გაშვება, რათა ნახოთ, თუ რა მოხდება, თუნდაც ჯერ ამოხსნილი
           არ გქონდეთ თავსატეხი.
       courseD_artist_binary7_2018_authored_hint:
+        courseD_artist_binary7_a: დაიწყეთ ზედა მარცხენა კუთხიდან. რამდენის წაკითხვა
+          მოგიწევთ, სანამ ნიმუში გამეორებას დაიწყებს?
+        courseD_artist_binary7_b: არ შეუშინდეთ შეცდომის დაშვებას! სცადეთ ორობითად
+          დაწერა და კოდის გაშვება, რათა ნახოთ, თუ რა მოხდება, თუნდაც ჯერ ამოხსნილი
+          არ გქონდეთ თავსატეხი.
+      courseD_artist_binary7_2019_authored_hint:
         courseD_artist_binary7_a: დაიწყეთ ზედა მარცხენა კუთხიდან. რამდენის წაკითხვა
           მოგიწევთ, სანამ ნიმუში გამეორებას დაიწყებს?
         courseD_artist_binary7_b: არ შეუშინდეთ შეცდომის დაშვებას! სცადეთ ორობითად
@@ -8981,10 +9350,21 @@ ka:
         courseD_artist_binary8_c: არ შეუშინდეთ შეცდომის დაშვებას! სცადეთ ორობითად
           დაწერა და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი. ასე
           უკეთ გაიგებთ, რა ხდება.
+      courseD_artist_binary8_2019_authored_hint:
+        courseD_artist_binary8_a: სპირალი შეიძლება ზოგჯერ დამაბნეველიც იყოს. თქვენს
+          გონებაში გააცალკევეთ თითოეული ჰორიზონტალური ხაზი, როდესაც ამ დიზაინს შექმნით.
+        courseD_artist_binary8_b: პირველ რიგში სცადეთ კოდის გაშვება, რომ ნახოთ, თუ
+          რასთან გაქვთ საქმე.
+        courseD_artist_binary8_c: არ შეუშინდეთ შეცდომის დაშვებას! სცადეთ ორობითად
+          დაწერა და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი. ასე
+          უკეთ გაიგებთ, რა ხდება.
       courseD_artist_binary_challenge2_authored_hint:
         courseD_artist_binary_challenge2_a: თავდაპირველ პროგრამაში რამდენიმე ხაზი
           შეცდომითაა.
       courseD_artist_binary_challenge2_2018_authored_hint:
+        courseD_artist_binary_challenge2_a: თავდაპირველ პროგრამაში რამდენიმე ხაზი
+          შეცდომითაა.
+      courseD_artist_binary_challenge2_2019_authored_hint:
         courseD_artist_binary_challenge2_a: თავდაპირველ პროგრამაში რამდენიმე ხაზი
           შეცდომითაა.
       courseD_artist_binary_challenge3_authored_hint:
@@ -9008,6 +9388,11 @@ ka:
           ორი ბლოკის მოთავსებით დახატოთ. რომელი ბლოკები დაგჭირდებათ?
         courseD_artist_nestedLoops1_c: სცადეთ ნაბიჯების ფურცელზე ჩამოწერა და განმეორებადი
           ნიმუშის მოძებნა, რომლების გამარტივებაც ციკლებით იქნება შესაძლებელი.
+      courseD_artist_nestedLoops1_2019_authored_hint:
+        courseD_artist_nestedLoops1_b: შეგიძლიათ ეს სამკუთხედი `განმეორების` ციკლში
+          ორი ბლოკის მოთავსებით დახატოთ. რომელი ბლოკები დაგჭირდებათ?
+        courseD_artist_nestedLoops1_c: სცადეთ ნაბიჯების ფურცელზე ჩამოწერა და განმეორებადი
+          ნიმუშის მოძებნა, რომლების გამარტივებაც ციკლებით იქნება შესაძლებელი.
       courseD_artist_nestedLoops1a_authored_hint:
         courseD_artist_nestedLoops1a_b: თუ თქვენ თქვენს სამკუთხედს ციკლით შექმნით,
           მხატვარი სახით უნდა იყოს იმავე მიმართულებით, რა მიმართულებითც იყო დაწყებისას.
@@ -9022,10 +9407,20 @@ ka:
         courseD_artist_nestedLoops1a_c: თუ ფერები გინდათ, გამოიყენეთ `ფერის შერჩევის`
           ბლოკი თქვენს კოდში. არაა აუცილებელი, თქვენი ფერები შაბლონის სურათის ფერებს
           ემთხვეოდეს.
+      courseD_artist_nestedLoops1a_2019_authored_hint:
+        courseD_artist_nestedLoops1a_b: თუ თქვენ თქვენს სამკუთხედს ციკლით შექმნით,
+          მხატვარი სახით უნდა იყოს იმავე მიმართულებით, რა მიმართულებითც იყო დაწყებისას.
+          ეს 60 გრადუსიან ბრუნებს ბევრად გაამარტივებს.
+        courseD_artist_nestedLoops1a_c: თუ ფერები გინდათ, გამოიყენეთ `ფერის შერჩევის`
+          ბლოკი თქვენს კოდში. არაა აუცილებელი, თქვენი ფერები შაბლონის სურათის ფერებს
+          ემთხვეოდეს.
       courseD_artist_nestedLoops2_authored_hint:
         courseD_artist_nestedLoops2_b: არ დაგავიწყდეთ `მობრუნების` ბლოკის ციკლში მოთავსება,
           რათა მხატვარი თითოეული სამკუთხედის შემდეგ მობრუნდეს.
       courseD_artist_nestedLoops2_2018_authored_hint:
+        courseD_artist_nestedLoops2_b: არ დაგავიწყდეთ `მობრუნების` ბლოკის ციკლში მოთავსება,
+          რათა მხატვარი თითოეული სამკუთხედის შემდეგ მობრუნდეს.
+      courseD_artist_nestedLoops2_2019_authored_hint:
         courseD_artist_nestedLoops2_b: არ დაგავიწყდეთ `მობრუნების` ბლოკის ციკლში მოთავსება,
           რათა მხატვარი თითოეული სამკუთხედის შემდეგ მობრუნდეს.
       courseD_artist_nestedLoops3_authored_hint:
@@ -9044,11 +9439,23 @@ ka:
         courseD_artist_nestedLoops3_c: 'დაიწყეთ `განმეორების` ციკლის გამოყენებით,
           რომ შექმნათ ერთი კვადრატი. შემდეგ გაიმეორეთ ის კვადრატი რვაჯერ, კვადრატებს
           შორის 40 პიქსელით გადაადგილებით. '
+      courseD_artist_nestedLoops3_2019_authored_hint:
+        courseD_artist_nestedLoops3_a: "იმისათვის რომ კვადრატის თავიდან იმ ადგილზე
+          მოხვდეთ, სადაც მე-2 კვადრატზე მუშაობა უნდა დაიწყო, გამოიყენეთ წინ გადახტომის`
+          ბლოკი. \nრა სიშორეზე უნდა გადახტეთ, თუ კვადრატები 20 პიქსელის სიმაღლისაა
+          და ერთმანეთისგანაც 20 პიქსელით არის დაშორებული?"
+        courseD_artist_nestedLoops3_c: 'დაიწყეთ `განმეორების` ციკლის გამოყენებით,
+          რომ შექმნათ ერთი კვადრატი. შემდეგ გაიმეორეთ ის კვადრატი რვაჯერ, კვადრატებს
+          შორის 40 პიქსელით გადაადგილებით. '
       courseD_artist_nestedLoops5_authored_hint:
         courseD_artist_nestedLoops5_b: წრის შესაქმნელად განმეორების ციკლი ისე უნდა
           დააყენოთ, რომ მან 360-ჯერ გაიმეოროს. ციკლის შიგნით გაადგილდით წინ 1 პიქსელით
           და მობრუნდით 1 გრადუსით.
       courseD_artist_nestedLoops5_2018_authored_hint:
+        courseD_artist_nestedLoops5_b: წრის შესაქმნელად განმეორების ციკლი ისე უნდა
+          დააყენოთ, რომ მან 360-ჯერ გაიმეოროს. ციკლის შიგნით გაადგილდით წინ 1 პიქსელით
+          და მობრუნდით 1 გრადუსით.
+      courseD_artist_nestedLoops5_2019_authored_hint:
         courseD_artist_nestedLoops5_b: წრის შესაქმნელად განმეორების ციკლი ისე უნდა
           დააყენოთ, რომ მან 360-ჯერ გაიმეოროს. ციკლის შიგნით გაადგილდით წინ 1 პიქსელით
           და მობრუნდით 1 გრადუსით.
@@ -9061,6 +9468,14 @@ ka:
           - გადახტით წინ **50 პიქსელით**
           - მობრუნდით **60 გრადუსით**
       courseD_artist_nestedLoops7_2018_authored_hint:
+        courseD_artist_nestedLoops7_b: |-
+          გამოიყენეთ ჩასმული ციკლი, სადაც შიდა ციკლი კვადრატის კოდია.
+
+          - გაიმეორეთ 6-ჯერ
+          - გააკეთეთ კვადრატი
+          - გადახტით წინ **50 პიქსელით**
+          - მობრუნდით **60 გრადუსით**
+      courseD_artist_nestedLoops7_2019_authored_hint:
         courseD_artist_nestedLoops7_b: |-
           გამოიყენეთ ჩასმული ციკლი, სადაც შიდა ციკლი კვადრატის კოდია.
 
@@ -9088,6 +9503,16 @@ ka:
           - დახატეთ ექვსკუთხედი
           - გადახტით წინ 50 პიქსელით
           - მობრუნდით მარჯვნივ 45 გრადუსით
+      courseD_artist_nestedLoops8_2019_authored_hint:
+        courseD_artist_nestedLoops8_b: თუ გაიჭედეთ, გადახედეთ უკანასკნელ თავსატეხს,
+          შემდეგ კი შეცვალეთ, რაც განსხვავებულია.
+        courseD_artist_nestedLoops8_c: |-
+          გამოიყენეთ ჩასმული ციკლი:
+
+          - გაიმეორეთ 8-ჯერ
+          - დახატეთ ექვსკუთხედი
+          - გადახტით წინ 50 პიქსელით
+          - მობრუნდით მარჯვნივ 45 გრადუსით
       courseD_artist_nestedLoops9_authored_hint:
         courseD_artist_nestedLoops9_c: |-
           გამოიყენეთ ორი ჩასმული ციკლი:
@@ -9100,6 +9525,17 @@ ka:
           - გადახტით წინ 50 პიქსელით
           - მობრუნდით მარჯვნივ 45 პიქსელით
       courseD_artist_nestedLoops9_2018_authored_hint:
+        courseD_artist_nestedLoops9_c: |-
+          გამოიყენეთ ორი ჩასმული ციკლი:
+          - გაიმეორეთ 8-ჯერ
+          - დახატეთ კვადრატი
+          - გადახტით წინ 50 პიქსელით
+          - მობრუნდით მარჯვნივ 45 პიქსელით
+          - გაიმეორეთ 8-ჯერ
+          - დახატეთ სამკუთხედ
+          - გადახტით წინ 50 პიქსელით
+          - მობრუნდით მარჯვნივ 45 პიქსელით
+      courseD_artist_nestedLoops9_2019_authored_hint:
         courseD_artist_nestedLoops9_c: |-
           გამოიყენეთ ორი ჩასმული ციკლი:
           - გაიმეორეთ 8-ჯერ
@@ -9136,12 +9572,30 @@ ka:
           - დახატეთ სამკუთხედი
           - გადახტით წინ 50 პიქსელით
           - მობრუნდით მარჯვნივ 90 გრადუსით
+      courseD_artist_nestedLoops_challenge1_2019_authored_hint:
+        courseD_artist_nestedLoops_challenge1_a: დაიწყეთ ჩასმული ციკლის შექმნით, რათა
+          დახატოთ ოთხი რვაკუთხედი. მობრუნდით 45 გრადუსით რომ გააკეთოთ რვაკუთხედი.
+          გადახტით და მობრუნდით 90 გრადუსით თითოეულის შემდეგ.
+        courseD_artist_nestedLoops_challenge1_b: დაამატეთ კოდი, რომ დახატოთ სამკუთხედი
+          ჩასმულ ციკლში. გამოიყენეთ 120 გრადუსიანი ბრუნები თქვენი სამკუთხედისათვის.
+        courseD_artist_nestedLoops_challenge1_c: |-
+          გამოიყენეთ ჩასმული ციკლი:
+          - გაიმეორეთ 4-ჯერ
+          - დახატეთ რვაკუთხედი
+          - დახატეთ სამკუთხედი
+          - გადახტით წინ 50 პიქსელით
+          - მობრუნდით მარჯვნივ 90 გრადუსით
       courseD_artist_nestedLoops_challenge2_authored_hint:
         courseD_artist_nestedLoops_challenge2_a: ჩვეულებრივი რვაკუთხედის დასახატად
           მხატვარმა უნდა შეასრულოს 45 გრადუსიანი ბრუნი 8-ჯერ.
         courseD_artist_nestedLoops_challenge2_b: კვადრატის დასახატად, მხატვარმა უნდა
           შეასრულოს ბრუნი 90 გრადუსით 4-ჯერ.
       courseD_artist_nestedLoops_challenge2_2018_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: ჩვეულებრივი რვაკუთხედის დასახატად
+          მხატვარმა უნდა შეასრულოს 45 გრადუსიანი ბრუნი 8-ჯერ.
+        courseD_artist_nestedLoops_challenge2_b: კვადრატის დასახატად, მხატვარმა უნდა
+          შეასრულოს ბრუნი 90 გრადუსით 4-ჯერ.
+      courseD_artist_nestedLoops_challenge2_2019_authored_hint:
         courseD_artist_nestedLoops_challenge2_a: ჩვეულებრივი რვაკუთხედის დასახატად
           მხატვარმა უნდა შეასრულოს 45 გრადუსიანი ბრუნი 8-ჯერ.
         courseD_artist_nestedLoops_challenge2_b: კვადრატის დასახატად, მხატვარმა უნდა
@@ -9381,6 +9835,11 @@ ka:
           ციკლის ან `სანამ წინ გზა არის` ბლოკების გამოყენება.
         courseD_bee_conditionals2_c: თქვენ არ გიწევთ ღრუბლებში ფიჭების შემოწმება,
           იქ მხოლოდ ყვავილები ან ცარიელი სივრცეებია.
+      courseD_bee_conditionals2_2019_authored_hint:
+        courseD_bee_conditionals2_b: ამ ლაბირინთის გასავლელად თქვენ შეგიძლიათ `გამეორების`
+          ციკლის ან `სანამ წინ გზა არის` ბლოკების გამოყენება.
+        courseD_bee_conditionals2_c: თქვენ არ გიწევთ ღრუბლებში ფიჭების შემოწმება,
+          იქ მხოლოდ ყვავილები ან ცარიელი სივრცეებია.
       courseD_bee_conditionals2_test_authored_hint:
         courseD_bee_conditionals2_b: ამ ლაბირინთის გასავლელად თქვენ შეგიძლიათ `გამეორების`
           ციკლის ან `სანამ წინ გზა არის` ბლოკების გამოყენება.
@@ -9398,11 +9857,21 @@ ka:
         courseD_bee_conditionals3_c: არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების
           დამატება და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი. ასე
           უკეთ მიხვდებით, რა ხდება.
+      courseD_bee_conditionals3_2019_authored_hint:
+        courseD_bee_conditionals3_b: თქვენ შეგიძლიათ `გამეორების` ან `სანამ` ციკლის
+          გამოყენება ფუტკრის წინ გადასაადგილებლად. გამოიყენეთ ის, რომელიც უფრო მოგწონთ!
+        courseD_bee_conditionals3_c: არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების
+          დამატება და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი. ასე
+          უკეთ მიხვდებით, რა ხდება.
       courseD_bee_conditionals4_authored_hint:
         courseD_bee_conditionals4_c: <xml><block type="maze_untilBlocked"/></xml>
           ბლოკის გამოყენებით, თქვენ უნდა იმოძრაოთ წინ და შეამოწმოთ, არის თუ არა სადმე
           ყვავილი. თუ იქ ყვავილია, რა უნდა გააკეთოს ფუტკარმა?
       courseD_bee_conditionals4_2018_authored_hint:
+        courseD_bee_conditionals4_c: <xml><block type="maze_untilBlocked"/></xml>
+          ბლოკის გამოყენებით, თქვენ უნდა იმოძრაოთ წინ და შეამოწმოთ, არის თუ არა სადმე
+          ყვავილი. თუ იქ ყვავილია, რა უნდა გააკეთოს ფუტკარმა?
+      courseD_bee_conditionals4_2019_authored_hint:
         courseD_bee_conditionals4_c: <xml><block type="maze_untilBlocked"/></xml>
           ბლოკის გამოყენებით, თქვენ უნდა იმოძრაოთ წინ და შეამოწმოთ, არის თუ არა სადმე
           ყვავილი. თუ იქ ყვავილია, რა უნდა გააკეთოს ფუტკარმა?
@@ -9432,6 +9901,19 @@ ka:
         courseD_bee_conditionals5_b: "`სანამ წინ არის გზა` ბლოკის შიგნით თქვენ მოგიწევთ
           წინ მოძრაობა და ყვავილის არსებობის შემოწმება. როგორ შეამოწმებთ, არის თუ
           არა წინ ყვავილი? რას გააკეთებთ, თუ ყვავილი არის?"
+      courseD_bee_conditionals5_2019_authored_hint:
+        courseD_bee_conditionals5_a: განიხილეთ ამ მართკუთხა გზის ყოველი გვერდი, როგორც
+          ცალკე გზა. შექმენით ჩასმული ციკლი გარედან `გამეორების` ბლოკით და შიგნიდან
+          `სანამ წინ გზა არის` ციკლით. რამდენი გზის გავლა მოუწევს ფუტკარს, თუ ფუტკარმა
+          უნდა იბზუილოს ყოველ ყვავილიან მხარეს?
+        courseD_bee_conditionals5_c: მართკუთხედს აქვს 3 გვერდი ყვავილებით, ამიტომ
+          კოდი უნდა `განმეორდეს 3-ჯერ`. ყოველი გამეორებისას ფუტკარმა უნდა გააგრძელოს
+          გზაზე მოძრაობა, `სანამ წინ გზა არსებობს`. გზაზე მოძრაობის გასაგრძელებლად,
+          ფუტკარმა უნდა `იმოძრაოს წინ`. გზაში ფუტკარმა უნდა შეამოწმოს ყვავილის არსებობა.
+          `თუ იქ ყვავილია`, ფუტკარმა უნდა `შეაგროვოს ნექტარი`.
+        courseD_bee_conditionals5_b: "`სანამ წინ არის გზა` ბლოკის შიგნით თქვენ მოგიწევთ
+          წინ მოძრაობა და ყვავილის არსებობის შემოწმება. როგორ შეამოწმებთ, არის თუ
+          არა წინ ყვავილი? რას გააკეთებთ, თუ ყვავილი არის?"
       courseD_bee_conditionals6_authored_hint:
         courseD_bee_conditionals6_b: ამ შემთხვევაში, თქვენ არ მოგიწევთ ღრუბლების ქვეშ
           ნექტარის არსებობის შემოწმება.
@@ -9440,10 +9922,17 @@ ka:
         courseD_bee_conditionals6_b: ამ შემთხვევაში, თქვენ არ მოგიწევთ ღრუბლების ქვეშ
           ნექტარის არსებობის შემოწმება.
         courseD_bee_conditionals6_c: არსებობს თუ არა ციკლი, რომელიც თქვენს კოდს გაამარტივებს?
+      courseD_bee_conditionals6_2019_authored_hint:
+        courseD_bee_conditionals6_b: ამ შემთხვევაში, თქვენ არ მოგიწევთ ღრუბლების ქვეშ
+          ნექტარის არსებობის შემოწმება.
+        courseD_bee_conditionals6_c: არსებობს თუ არა ციკლი, რომელიც თქვენს კოდს გაამარტივებს?
       courseD_bee_conditionals7_authored_hint:
         courseD_bee_conditionals7_b: თუ ღრუბლის ქვეშ ყვავილი არაა, იქ ფიჭაა, ამიტომ
           თქვენ არ მოგიწევთ ცარიელი ადგილისთვის კოდის მოფიქრება.
       courseD_bee_conditionals7_2018_authored_hint:
+        courseD_bee_conditionals7_b: თუ ღრუბლის ქვეშ ყვავილი არაა, იქ ფიჭაა, ამიტომ
+          თქვენ არ მოგიწევთ ცარიელი ადგილისთვის კოდის მოფიქრება.
+      courseD_bee_conditionals7_2019_authored_hint:
         courseD_bee_conditionals7_b: თუ ღრუბლის ქვეშ ყვავილი არაა, იქ ფიჭაა, ამიტომ
           თქვენ არ მოგიწევთ ცარიელი ადგილისთვის კოდის მოფიქრება.
       courseD_bee_conditionals8_authored_hint:
@@ -9468,6 +9957,17 @@ ka:
           იმის მიუხედავად, რომ თქვენს წინ ღრუბელია, შეგიძლიათ თავიდანვე არ ეწვიოთ მას. სცადეთ კვადრატის მარჯვენა ქვედა მხარეს განლაგებული ღრუბლით დაწყება.
 
           ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
+      courseD_bee_conditionals8_2019_authored_hint:
+        courseD_bee_conditionals8_a: |-
+          **გახსოვდეთ:**ეს თავსატეხი ყოველ გაშვებაზე იცვლება.
+
+          თქვენ დაგჭირდებათ პირობითი ბლოკის (`თუ` ან `თუ/სხვაგვარად`) გამოყენება ამ გამოწვევის დასაძლევად.
+        courseD_bee_conditionals8_c: როგორ უნდა დარწმუნდეთ იმაში, რომ ყოველი გზის
+          ბოლომდე გააღწევთ, გზის სიგრძის მიუხედავად?
+        courseD_bee_conditionals8_d: |-
+          იმის მიუხედავად, რომ თქვენს წინ ღრუბელია, შეგიძლიათ თავიდანვე არ ეწვიოთ მას. სცადეთ კვადრატის მარჯვენა ქვედა მხარეს განლაგებული ღრუბლით დაწყება.
+
+          ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: შეგიძლიათ მოძებნოთ გზა, რომელიც მივა
           ყველა ყვავილთან და ფიჭასთან ხესთან დაჯახების გარეშე? საუკეთესო გზა სპირალურია.
@@ -9475,6 +9975,12 @@ ka:
           შეიძლება იყოს ყვავილი, ფიჭა ან არაფერი. ეს იმას ნიშნავს, რომ თქვენ შეგიძლიათ
           გაიმეოროთ `თუ/სხვაგვარად`პირობითი ბლოკი ყოველ კვადრატთან.
       courseD_bee_conditionals_challenge1_2018_authored_hint:
+        courseD_bee_conditionals_challenge1_a: შეგიძლიათ მოძებნოთ გზა, რომელიც მივა
+          ყველა ყვავილთან და ფიჭასთან ხესთან დაჯახების გარეშე? საუკეთესო გზა სპირალურია.
+        courseD_bee_conditionals_challenge1_b: ამ თავსატეხში ყოველი თავისუფალი ადგილი
+          შეიძლება იყოს ყვავილი, ფიჭა ან არაფერი. ეს იმას ნიშნავს, რომ თქვენ შეგიძლიათ
+          გაიმეოროთ `თუ/სხვაგვარად`პირობითი ბლოკი ყოველ კვადრატთან.
+      courseD_bee_conditionals_challenge1_2019_authored_hint:
         courseD_bee_conditionals_challenge1_a: შეგიძლიათ მოძებნოთ გზა, რომელიც მივა
           ყველა ყვავილთან და ფიჭასთან ხესთან დაჯახების გარეშე? საუკეთესო გზა სპირალურია.
         courseD_bee_conditionals_challenge1_b: ამ თავსატეხში ყოველი თავისუფალი ადგილი
@@ -9492,6 +9998,17 @@ ka:
           </statement>
           </block></xml>
       courseD_bee_conditionals_challenge2_2018_authored_hint:
+        courseD_bee_conditionals_challenge1_b: |-
+          ზუსტად ისე, როგორც `თუ ყვავილია` ბლოკის შიგნით, `სანამ ნექტარი > 0` ბლოკის შიგნით განლაგებული კოდი გაიშვება მხოლოდ მაშინ, როდესაც ფუტკარი ყვავილთანაა. განსხვავება იმაშია, რომ შიგნით მოთავსებული კოდი გაიშვება განმეორებითად მანამ, სანამ ნექტარი გათავდება. სცადეთ ეს ნიმუში:
+
+          <xml>  <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>                    <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block></xml>
+      courseD_bee_conditionals_challenge2_2019_authored_hint:
         courseD_bee_conditionals_challenge1_b: |-
           ზუსტად ისე, როგორც `თუ ყვავილია` ბლოკის შიგნით, `სანამ ნექტარი > 0` ბლოკის შიგნით განლაგებული კოდი გაიშვება მხოლოდ მაშინ, როდესაც ფუტკარი ყვავილთანაა. განსხვავება იმაშია, რომ შიგნით მოთავსებული კოდი გაიშვება განმეორებითად მანამ, სანამ ნექტარი გათავდება. სცადეთ ეს ნიმუში:
 
@@ -9633,10 +10150,17 @@ ka:
         courseD_bounce_events10s_a: |-
           თქვენს კოდში უნდა იყოს ეს ორივე მოვლენა:
           <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">მოქნევა</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">სტვენა</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
+      courseD_bounce_events10s_2019_authored_hint:
+        courseD_bounce_events10s_a: |-
+          თქვენს კოდში უნდა იყოს ეს ორივე მოვლენა:
+          <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">მოქნევა</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">სტვენა</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
       courseD_bounce_events11s_authored_hint:
         courseD_bounce_events11s_a: თქვენ მოგიწევთ ბურთის გასროლა თამაშის დაწყებისას,
           ასევე როდესაც მოახვედრებთ ბურთს კალათს და როდესაც ხელი აცდება ბურთს.
       courseD_bounce_events11s_2018_authored_hint:
+        courseD_bounce_events11s_a: თქვენ მოგიწევთ ბურთის გასროლა თამაშის დაწყებისას,
+          ასევე როდესაც მოახვედრებთ ბურთს კალათს და როდესაც ხელი აცდება ბურთს.
+      courseD_bounce_events11s_2019_authored_hint:
         courseD_bounce_events11s_a: თქვენ მოგიწევთ ბურთის გასროლა თამაშის დაწყებისას,
           ასევე როდესაც მოახვედრებთ ბურთს კალათს და როდესაც ხელი აცდება ბურთს.
       courseD_bounce_events12s_authored_hint:
@@ -9645,6 +10169,11 @@ ka:
         courseD_bounce_events12s_b: სცადეთ ყოველი გასროლაზე 2 ქულის მომატება და შეცვალეთ
           გუნდის სიმბოლო თქვენი ქალაქის გუნდის სიმბოლოთი!
       courseD_bounce_events12s_2018_authored_hint:
+        courseD_bounce_events12s_a: თქვენ შეგილიათ ააჩქაროთ ბურთი ან ხელი, ამ ბლოკების
+          `გაშვებისას` მოვლენასთან დაკავშირებით.
+        courseD_bounce_events12s_b: სცადეთ ყოველი გასროლაზე 2 ქულის მომატება და შეცვალეთ
+          გუნდის სიმბოლო თქვენი ქალაქის გუნდის სიმბოლოთი!
+      courseD_bounce_events12s_2019_authored_hint:
         courseD_bounce_events12s_a: თქვენ შეგილიათ ააჩქაროთ ბურთი ან ხელი, ამ ბლოკების
           `გაშვებისას` მოვლენასთან დაკავშირებით.
         courseD_bounce_events12s_b: სცადეთ ყოველი გასროლაზე 2 ქულის მომატება და შეცვალეთ
@@ -9658,6 +10187,14 @@ ka:
         courseD_bounce_events1s_b: არ დაგაწვიყდეთ "გაშვებაზე" დაჭერა და კალათთან ხელის
           მიყვანა, რათა ამოხსნათ ეს თავსატეხი.
       courseD_bounce_events1s_2018_authored_hint:
+        courseD_bounce_events1s_a: "თქვენ უნდა დაუმატოთ `იმოძრავე მარცხნივ` ბლოკი
+          `როდესაც მარცხენა ისარს დააჭერთ` მოვლენას, რათა აამუშავოთ ეს თამაში:\n\n
+          <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n
+          \   <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n
+          \  \n   </xml>"
+        courseD_bounce_events1s_b: არ დაგაწვიყდეთ "გაშვებაზე" დაჭერა და კალათთან ხელის
+          მიყვანა, რათა ამოხსნათ ეს თავსატეხი.
+      courseD_bounce_events1s_2019_authored_hint:
         courseD_bounce_events1s_a: "თქვენ უნდა დაუმატოთ `იმოძრავე მარცხნივ` ბლოკი
           `როდესაც მარცხენა ისარს დააჭერთ` მოვლენას, რათა აამუშავოთ ეს თამაში:\n\n
           <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n
@@ -9697,6 +10234,22 @@ ka:
           </next>
           </block>
           </xml>
+      courseD_bounce_events2s_2019_authored_hint:
+        courseD_bounce_events2s_a: |-
+          თქვენ დაგჭირდებათ ორი `მოძრაობის` მოვლენის დაწერა, რათა აამუშავოთ ეს კოდი:
+
+          <xml>
+          <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+          <next>
+          <block type="bounce_moveLeft"/>
+          </next>
+          </block>
+          <block type="bounce_whenRight" deletable="false" x="180" y="20">
+          <next>
+          <block type="bounce_moveRight"/>
+          </next>
+          </block>
+          </xml>
       courseD_bounce_events5s_authored_hint:
         courseD_bounce_events5s_a: თქვენ არ გჭირდებათ ხელის გამოძრავება ამ თავსატეხის
           ამოსახსნელად.
@@ -9704,6 +10257,12 @@ ka:
           დარწმუნდით, რომ დაამატეთ თქვენი კოდი სამუშაო სივრცეში:
           <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
       courseD_bounce_events5s_2018_authored_hint:
+        courseD_bounce_events5s_a: თქვენ არ გჭირდებათ ხელის გამოძრავება ამ თავსატეხის
+          ამოსახსნელად.
+        courseD_bounce_events5s_b: |-
+          დარწმუნდით, რომ დაამატეთ თქვენი კოდი სამუშაო სივრცეში:
+          <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
+      courseD_bounce_events5s_2019_authored_hint:
         courseD_bounce_events5s_a: თქვენ არ გჭირდებათ ხელის გამოძრავება ამ თავსატეხის
           ამოსახსნელად.
         courseD_bounce_events5s_b: |-
@@ -9721,9 +10280,17 @@ ka:
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
         courseD_bounce_events6s_b: თუ კოდი სწორად დაწერეთ, გასამარჯვებლად ხელის გადაადგილება
           არ უნდა დაგჭირდეთ.
+      courseD_bounce_events6s_2019_authored_hint:
+        courseD_bounce_events6s_a: |-
+          გაქვთ თუ არა მოვლენა, რომელიც ასე გამოიყურება?
+          <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
+        courseD_bounce_events6s_b: თუ კოდი სწორად დაწერეთ, გასამარჯვებლად ხელის გადაადგილება
+          არ უნდა დაგჭირდეთ.
       courseD_bounce_events7s_authored_hint:
         courseD_bounce_events7s_a: თუ გსურთ, შეგიძლიათ დაამატოთ ხმები მეტ ადგილას!
       courseD_bounce_events7s_2018_authored_hint:
+        courseD_bounce_events7s_a: თუ გსურთ, შეგიძლიათ დაამატოთ ხმები მეტ ადგილას!
+      courseD_bounce_events7s_2019_authored_hint:
         courseD_bounce_events7s_a: თუ გსურთ, შეგიძლიათ დაამატოთ ხმები მეტ ადგილას!
       courseD_collector_debugging1_authored_hint:
         courseD_collector_debugging1_c: არ დაგავიწყდეთ `შეგროვების` ბლოკის გამოყენება
@@ -9735,6 +10302,9 @@ ka:
         courseD_collector_debugging1_c: არ დაგავიწყდეთ `შეგროვების` ბლოკის გამოყენება
           განძთან მისვლის შემდეგ, რათა შეაგროვოთ ის.
       courseD_collector_debugging1a_2018_authored_hint:
+        courseD_collector_debugging1_c: არ დაგავიწყდეთ `შეგროვების` ბლოკის გამოყენება
+          განძთან მისვლის შემდეგ, რათა შეაგროვოთ ის.
+      courseD_collector_debugging1a_2019_authored_hint:
         courseD_collector_debugging1_c: არ დაგავიწყდეთ `შეგროვების` ბლოკის გამოყენება
           განძთან მისვლის შემდეგ, რათა შეაგროვოთ ის.
       courseD_collector_debugging2_authored_hint:
@@ -9757,6 +10327,13 @@ ka:
           რა უნდა მოხდეს?
 
           რას გეუბნებათ თქვენ ეს?
+      courseD_collector_debugging2a_2019_authored_hint:
+        courseD_collector_debugging2a_c: |-
+          რა მოხდება?
+
+          რა უნდა მოხდეს?
+
+          რას გეუბნებათ თქვენ ეს?
       courseD_collector_debugging3_authored_hint:
         courseD_collector_debugging3_a: არის თუ არა რამე ადგილი სადაც ლორელი უაზრო
           რაღაცებს აკეთებს? რა მოხდება თუ შეცვლით ამ ბლოკებს?
@@ -9767,6 +10344,9 @@ ka:
         courseD_collector_debugging3_a: არის თუ არა რამე ადგილი სადაც ლორელი უაზრო
           რაღაცებს აკეთებს? რა მოხდება თუ შეცვლით ამ ბლოკებს?
       courseD_collector_debugging3a_2018_authored_hint:
+        courseD_collector_debugging3_a: არის თუ არა რამე ადგილი სადაც ლორელი უაზრო
+          რაღაცებს აკეთებს? რა მოხდება თუ შეცვლით ამ ბლოკებს?
+      courseD_collector_debugging3a_2019_authored_hint:
         courseD_collector_debugging3_a: არის თუ არა რამე ადგილი სადაც ლორელი უაზრო
           რაღაცებს აკეთებს? რა მოხდება თუ შეცვლით ამ ბლოკებს?
       courseD_collector_debugging4_authored_hint:
@@ -9793,6 +10373,15 @@ ka:
           რას გეუბნებათ ეს?
         courseD_collector_debugging5a_b: როდესაც შეაგროვებთ განძეულობის პირველ რიგს,
           რა იქნება დარჩენილი შესასრულებლად თქვენს კოდში?
+      courseD_collector_debugging5a_2019_authored_hint:
+        courseD_collector_debugging5a_a: |-
+          რა აკეთებს?
+
+          რას უნდა აკეთებდეს?
+
+          რას გეუბნებათ ეს?
+        courseD_collector_debugging5a_b: როდესაც შეაგროვებთ განძეულობის პირველ რიგს,
+          რა იქნება დარჩენილი შესასრულებლად თქვენს კოდში?
       courseD_collector_debugging6_authored_hint:
         courseD_collector_debugging6_b: როგორც ჩანს, ყველა საჭირ სვლა უკვე აქაა, თუმცა
           მეტი რაოდენობით გჭირდებათ. როგორ შეგიძლიათ გამოიყენოთ `შეგროვების` ქმედება
@@ -9806,6 +10395,10 @@ ka:
           სივრცეშია. თუ ამ ყველაფერმა დაგაბნიათ, სცადეთ "თავიდან დაწყების" ღილაკზე
           დაწკაპება.
       courseD_collector_debugging6a_2018_authored_hint:
+        courseD_collector_debugging6_b: როგორც ჩანს, ყველა საჭირო ბლოკი უკვე სამუშაო
+          სივრცეშია. თუ ამ ყველაფერმა დაგაბნიათ, სცადეთ "თავიდან დაწყების" ღილაკზე
+          დაწკაპება.
+      courseD_collector_debugging6a_2019_authored_hint:
         courseD_collector_debugging6_b: როგორც ჩანს, ყველა საჭირო ბლოკი უკვე სამუშაო
           სივრცეშია. თუ ამ ყველაფერმა დაგაბნიათ, სცადეთ "თავიდან დაწყების" ღილაკზე
           დაწკაპება.
@@ -10074,6 +10667,72 @@ ka:
           </next>
           </block>
           </xml>
+      courseD_collector_nested_loops_challenge2_2019_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: არ დაგავიწყდეთ, რომ შეგიძლიათ `გაიმეოროთ`
+          როგორც ერთი ბრძანება, ასევე უფრო გრძელი კოდი. თქვენ ასევე შეგიძლიათ `გაიმეოროთ`
+          `გამეორების` ბლოკი!
+        courseD_bee_nested_loops_challenge2_b: 4-ვე ძვირფასი ქვის შესაგროვებლად ჯერ
+          გამოიყენეთ ციკლი, რათა მოშორდეთ ცენტრს. შებრუნდით მარცხნივ ან მარჯვნივ,
+          შემდეგ გამოიყენეთ ჩასმული ციკლი, რათა იმოძრავოთ განძის ერთი ბლოკიდან მეორისკენ.
+          თუ გაიმეორებთ ჩადგმულ ციკლს საკმარისი რაოდენობით, შემგროვებელი მოივლის *მთლიან*
+          გვირაბს!
+        courseD_bee_nested_loops_challenge2_c: უმოკლესი პროგრამა, რომელიც აგროვებს
+          მთელ განძს იყენებს ერთ `შეგროვების` ბლოკს და ორ მობრუნებას.
+        courseD_bee_nested_loops_challenge2_d: |-
+          **ამოხსნა:**
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">მოძრაობაწინ</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">მობრუნებამარცხნივ</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">მოძრაობაწინ</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">მობრუნებამარცხნივ</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">მოძრაობაწინ</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseD_collector_nested_loops_challenge2a_authored_hint:
         courseD_collector_nested_loops_challenge2a_a: არ დაგავიწყდეთ, რომ შეგიძლიათ
           `გაიმეოროთ` როგორც ერთი ბრძანება, ასევე უფრო გრძელი კოდი. თქვენ ასევე შეგიძლიათ
@@ -10124,6 +10783,17 @@ ka:
           \t აიღე სალათი
 
           თუ იქ არაფერია, არაფერსაც არ აიღებთ!
+      courseD_farmer_condLoops2_2019_authored_hint:
+        courseD_farmer_condLoops2_c: |-
+          თქვენი `თუ` ბრძანება შეიძლება ასე გამოიყურებოდეს:
+
+          -თუ სიმინდია
+          -აიღე სიმინდი
+          -სხვაგვარად
+          -თუ სალათია
+          \t აიღე სალათი
+
+          თუ იქ არაფერია, არაფერსაც არ აიღებთ!
       courseD_farmer_condLoops4_authored_hint:
         grade3_RunningFarm_4courseD_farmer_condLoops4_b: "`სანამ` ციკლი მიხედავს ცარიელ
           სივრცეებსაც! იქიდან გამომდინარე, რომ სალათი არ არის, ის არ შეაგროვებს მას
@@ -10132,6 +10802,13 @@ ka:
           როგორც `სანამ წინ გზა არსებობს` ციკლი, ასევე `გამეორების ციკლი`, რათა მთლიანად
           შეაგროვოთ მოსავალი.
       courseD_farmer_condLoops4_2018_authored_hint:
+        grade3_RunningFarm_4courseD_farmer_condLoops4_b: "`სანამ` ციკლი მიხედავს ცარიელ
+          სივრცეებსაც! იქიდან გამომდინარე, რომ სალათი არ არის, ის არ შეაგროვებს მას
+          და კოდი გაგრძლედება."
+        grade3_RunningFarm_4courseD_farmer_condLoops4_c: თქვენ შეგიძლიათ გამოიყენოთ,
+          როგორც `სანამ წინ გზა არსებობს` ციკლი, ასევე `გამეორების ციკლი`, რათა მთლიანად
+          შეაგროვოთ მოსავალი.
+      courseD_farmer_condLoops4_2019_authored_hint:
         grade3_RunningFarm_4courseD_farmer_condLoops4_b: "`სანამ` ციკლი მიხედავს ცარიელ
           სივრცეებსაც! იქიდან გამომდინარე, რომ სალათი არ არის, ის არ შეაგროვებს მას
           და კოდი გაგრძლედება."
@@ -10148,6 +10825,11 @@ ka:
           შეგიძლიათ მიხვდეთ, თუ როგორ უნდა გამოიყენოთ ეს თავსატეხში?'
         courseD_farmer_condLoops5_b: ყოველ ადგილას შეიძლება იყოს ერთზე მეტი სიმინდი
           ან სალათი. გამოიყენეთ `სანამ` ციკლი, რათა შეაგროვოთ ყველა მათგანი!
+      courseD_farmer_condLoops5_2019_authored_hint:
+        courseD_farmer_condLoops5_a: 'ეს ახალი ციკლია: `გამეორება, სანამ გოგრაა`.
+          შეგიძლიათ მიხვდეთ, თუ როგორ უნდა გამოიყენოთ ეს თავსატეხში?'
+        courseD_farmer_condLoops5_b: ყოველ ადგილას შეიძლება იყოს ერთზე მეტი სიმინდი
+          ან სალათი. გამოიყენეთ `სანამ` ციკლი, რათა შეაგროვოთ ყველა მათგანი!
       courseD_farmer_condLoops_challenge1_authored_hint:
         courseD_farmer_condLoops_challenge1_a: '"ნაბიჯის" ღილაკი შეიძლება ძალიან გამოგადგეთ
           ამ გამოწვევასთან გასამკლავებლად.'
@@ -10160,10 +10842,19 @@ ka:
         courseD_farmer_condLoops_challenge1_b: ჩვეულებრივ, თქვენ უბრალოდ `აიღებდით
           გოგრას` თუ გოგრასთან იქნებოდით. კიდევ რისი გაკეთება გიწევთ, თუ გოგრასთან
           იქნებით?
+      courseD_farmer_condLoops_challenge1_2019_authored_hint:
+        courseD_farmer_condLoops_challenge1_a: '"ნაბიჯის" ღილაკი შეიძლება ძალიან გამოგადგეთ
+          ამ გამოწვევასთან გასამკლავებლად.'
+        courseD_farmer_condLoops_challenge1_b: ჩვეულებრივ, თქვენ უბრალოდ `აიღებდით
+          გოგრას` თუ გოგრასთან იქნებოდით. კიდევ რისი გაკეთება გიწევთ, თუ გოგრასთან
+          იქნებით?
       courseD_farmer_condLoops_challenge2_authored_hint:
         courseD_farmer_condLoops_challenge2_a: ყოველ სივრცეში ბოსტნეულის სხვადასხვა
           რაოდენობაა. გამოიყენეთ `სანამ` ციკლი.
       courseD_farmer_condLoops_challenge2_2018_authored_hint:
+        courseD_farmer_condLoops_challenge2_a: ყოველ სივრცეში ბოსტნეულის სხვადასხვა
+          რაოდენობაა. გამოიყენეთ `სანამ` ციკლი.
+      courseD_farmer_condLoops_challenge2_2019_authored_hint:
         courseD_farmer_condLoops_challenge2_a: ყოველ სივრცეში ბოსტნეულის სხვადასხვა
           რაოდენობაა. გამოიყენეთ `სანამ` ციკლი.
       courseD_farmer_while1_authored_hint:
@@ -10176,11 +10867,20 @@ ka:
           შეგიძლიათ თუ არა გამოიყენოთ ამისთვის `გამეორების` ციკლი?
         courseD_farmer_while1_b: მიწის ამოსაღებად გამოიყენეთ ბლოკი `ამოიღე 1`, როდესაც
           იდგებით მიწის გროვაზე.
+      courseD_farmer_while1_2019_authored_hint:
+        courseD_farmer_while1_a: გროვის ასაღებად თქვენ მოგიწევთ წინ ოთხჯერ გადაადგილება.
+          შეგიძლიათ თუ არა გამოიყენოთ ამისთვის `გამეორების` ციკლი?
+        courseD_farmer_while1_b: მიწის ამოსაღებად გამოიყენეთ ბლოკი `ამოიღე 1`, როდესაც
+          იდგებით მიწის გროვაზე.
       courseD_farmer_while2_authored_hint:
         courseD_farmer_while2_a: ხვრელთან მისასვლელად მხოლოდ ერთხელ მოგიწევთ გადაადგილება.
         courseD_farmer_while2_b: თქვენი მოგიწევთ `შეავსე 1` ბლოკის გამოყენება ექვსჯერ.
           შეგიძლიათ სიმარტივისთვის ციკლის გამოყენება?
       courseD_farmer_while2_2018_authored_hint:
+        courseD_farmer_while2_a: ხვრელთან მისასვლელად მხოლოდ ერთხელ მოგიწევთ გადაადგილება.
+        courseD_farmer_while2_b: თქვენი მოგიწევთ `შეავსე 1` ბლოკის გამოყენება ექვსჯერ.
+          შეგიძლიათ სიმარტივისთვის ციკლის გამოყენება?
+      courseD_farmer_while2_2019_authored_hint:
         courseD_farmer_while2_a: ხვრელთან მისასვლელად მხოლოდ ერთხელ მოგიწევთ გადაადგილება.
         courseD_farmer_while2_b: თქვენი მოგიწევთ `შეავსე 1` ბლოკის გამოყენება ექვსჯერ.
           შეგიძლიათ სიმარტივისთვის ციკლის გამოყენება?
@@ -10192,10 +10892,17 @@ ka:
         courseD_farmer_while3_a: ციკლი დაგეხმარებათ კოდის გამარტივებაში.
         courseD_farmer_while3_b: წესით, გროვასთან მისასვლელად არ უნდა დაგჭირდეთ `მობრუნების`
           ბლოკები.
+      courseD_farmer_while3_2019_authored_hint:
+        courseD_farmer_while3_a: ციკლი დაგეხმარებათ კოდის გამარტივებაში.
+        courseD_farmer_while3_b: წესით, გროვასთან მისასვლელად არ უნდა დაგჭირდეთ `მობრუნების`
+          ბლოკები.
       courseD_farmer_while4_authored_hint:
         courseD_farmer_conditionals4_b: ეს ძალიან ჰგავს წინა თავსატეხს, განსხვავება
           მხოლოდ იმაშია, თუ რომელი ციკლში გჭირდებათ.
       courseD_farmer_while4_2018_authored_hint:
+        courseD_farmer_conditionals4_b: ეს ძალიან ჰგავს წინა თავსატეხს, განსხვავება
+          მხოლოდ იმაშია, თუ რომელი ციკლში გჭირდებათ.
+      courseD_farmer_while4_2019_authored_hint:
         courseD_farmer_conditionals4_b: ეს ძალიან ჰგავს წინა თავსატეხს, განსხვავება
           მხოლოდ იმაშია, თუ რომელი ციკლში გჭირდებათ.
       courseD_farmer_while5_authored_hint:
@@ -10204,6 +10911,11 @@ ka:
         courseD_farmer_conditionals5a_c: გადაადგილდით წინ 5-ჯერ. წინ ყოველ გადაადგილებაზე
           მოაშორეთ ერთი ნიჩაბი მიწა `სანამ გროვაა` ბლოკის გამოყენებით.
       courseD_farmer_while5_2018_authored_hint:
+        courseD_farmer_conditionals5a_b: მწკრივის ბოლოში მისასვლელად ფერმერი უნდა
+          გადაადგილდეს წინ ჯამში ხუთჯერ. კიდევ რა უნდა გააკეთოს ფერმერმა?
+        courseD_farmer_conditionals5a_c: გადაადგილდით წინ 5-ჯერ. წინ ყოველ გადაადგილებაზე
+          მოაშორეთ ერთი ნიჩაბი მიწა `სანამ გროვაა` ბლოკის გამოყენებით.
+      courseD_farmer_while5_2019_authored_hint:
         courseD_farmer_conditionals5a_b: მწკრივის ბოლოში მისასვლელად ფერმერი უნდა
           გადაადგილდეს წინ ჯამში ხუთჯერ. კიდევ რა უნდა გააკეთოს ფერმერმა?
         courseD_farmer_conditionals5a_c: გადაადგილდით წინ 5-ჯერ. წინ ყოველ გადაადგილებაზე
@@ -10234,11 +10946,28 @@ ka:
           რამდენჯერ უნდა გამოიყენოთ ეს ნიმუში?
 
           დარწმუნდით, რომ იყენებთ `როდესაც ხვრელია` ბლოკის მის გასავსებად.
+      courseD_farmer_while6_2019_authored_hint:
+        courseD_farmer_conditionals6_c: |-
+          კიბის საფეხურების ნიმუში იყენებს შემდეგ ბლოკებს
+          - წინ გადაადგილება
+          - ხვრელის გავსება
+          - მარჯვნივ მობრუნება
+          - წინ გადაადგილება
+          - ხვრელის გავსება
+          - მარცხნივ მობრუნება
+
+          რამდენჯერ უნდა გამოიყენოთ ეს ნიმუში?
+
+          დარწმუნდით, რომ იყენებთ `როდესაც ხვრელია` ბლოკის მის გასავსებად.
       courseD_farmer_while7_authored_hint:
         courseD_farmer_conditionals8_b: "`სანამ წინ გზაა` ციკლის გამეორების ციკლში
           განლაგება დაგეხმარებათ ამ თავსატეხის ამოხსნაში."
         courseD_farmer_conditionals8_c: რა უნდა გააკეთოთ ყოველი გზის ბოლოს?
       courseD_farmer_while7_2018_authored_hint:
+        courseD_farmer_conditionals8_b: "`სანამ წინ გზაა` ციკლის გამეორების ციკლში
+          განლაგება დაგეხმარებათ ამ თავსატეხის ამოხსნაში."
+        courseD_farmer_conditionals8_c: რა უნდა გააკეთოთ ყოველი გზის ბოლოს?
+      courseD_farmer_while7_2019_authored_hint:
         courseD_farmer_conditionals8_b: "`სანამ წინ გზაა` ციკლის გამეორების ციკლში
           განლაგება დაგეხმარებათ ამ თავსატეხის ამოხსნაში."
         courseD_farmer_conditionals8_c: რა უნდა გააკეთოთ ყოველი გზის ბოლოს?
@@ -10253,6 +10982,16 @@ ka:
         courseD_farmer_conditionals8_c: ამის ამოხსნა შესაძლებელია `გამეორების` ციკლების
           გამოყენების გარეშე. ამისთვის თქვენ დაგჭირდებათ ოთხი `სანამ` ციკლის გამოყენება.
       courseD_farmer_while_challenge1_2018_authored_hint:
+        courseD_farmer_while_challenge1_a: ყოველი ხვრელი ან გროვა განლაგებულია გზის
+          ბოლოდამ ერთი ნაბიჯით **უკან**.
+        courseD_farmer_while_challenge1_b: თუ გამოიყენებთ `სანამ` ციკლს, შეძლებთ უთხრათ
+          ფერმერს, რომ მოაშოროს გროვა ან შეავსოს ხვრელი მაშინაც კი, როდესაც ისინი
+          იქვე არ არის. ეს იმას ნიშნავს, რომ თქვენ შეგიძლიათ დააპროგრამოთ ის ისე,
+          რომ ფერმერმა ამოიღოს ნებისმიერი მიწის გროვა და შეავსოს ნებისმიერ ხვრელი,
+          იმის მიუხედავად თუ სადაა ის განლაგებული.
+        courseD_farmer_conditionals8_c: ამის ამოხსნა შესაძლებელია `გამეორების` ციკლების
+          გამოყენების გარეშე. ამისთვის თქვენ დაგჭირდებათ ოთხი `სანამ` ციკლის გამოყენება.
+      courseD_farmer_while_challenge1_2019_authored_hint:
         courseD_farmer_while_challenge1_a: ყოველი ხვრელი ან გროვა განლაგებულია გზის
           ბოლოდამ ერთი ნაბიჯით **უკან**.
         courseD_farmer_while_challenge1_b: თუ გამოიყენებთ `სანამ` ციკლს, შეძლებთ უთხრათ
@@ -10292,6 +11031,10 @@ ka:
         courseD_harvester_nested_loops_challenge1_a: სავარაუდოდ, თქვენ უკვე გამოიყენეთ
           ციკლი, რათა შექმნათ ტეხილის მსგავსი ნიმუში. თუ გახსოვთ ეს ალგორითმი, შეგიძლიათ
           შეიტანოთ მასში მცირე ცვლილებები.
+      courseD_harvester_nested_loops_challenge1_2019_authored_hint:
+        courseD_harvester_nested_loops_challenge1_a: სავარაუდოდ, თქვენ უკვე გამოიყენეთ
+          ციკლი, რათა შექმნათ ტეხილის მსგავსი ნიმუში. თუ გახსოვთ ეს ალგორითმი, შეგიძლიათ
+          შეიტანოთ მასში მცირე ცვლილებები.
       courseD_iceage_loops1_authored_hint:
         courseD_iceage_loops1_a: ფრთხილად იყავით ჩატეხილ ყინულთან! სკრატი მასში ჩავარდება!
       courseD_iceage_loops10_authored_hint:
@@ -10300,7 +11043,20 @@ ka:
         courseB_iceage_loops10_b: სცადეთ ნაბიჯების ხმამაღლა წარმოთქმა ან ფურცელზე
           ჩამოწერა. ხედავთ რამე კანონზომიერებას?
         courseB_iceage_loops10_c: ეს გრძელი ფაზლია! მიყევით ამ გზას.
+      courseD_iceage_loops10_2019_authored_hint:
+        courseB_iceage_loops10_a: ფრთხილად იყავით ჩატეხილ ყინულთან! სკრატი ჩავარდება
+          წყალში!
+        courseB_iceage_loops10_b: სცადეთ ნაბიჯების ხმამაღლა წარმოთქმა ან ფურცელზე
+          ჩამოწერა. ხედავთ რამე კანონზომიერებას?
+        courseB_iceage_loops10_c: ეს გრძელი ფაზლია! მიყევით ამ გზას.
+      courseD_iceage_loops1_2019_authored_hint:
+        courseD_iceage_loops1_a: ფრთხილად იყავით ჩატეხილ ყინულთან! სკრატი მასში ჩავარდება!
       courseD_iceage_loops2_authored_hint:
+        courseD_iceage_loops2_a: 'დაშალეთ ეს თავსატეხი ორ ნაწილად: პირველი ნაწილი
+          - კუთხემდე, ხოლო მეორე - კუთხის შემდეგ.'
+        courseD_iceage_loops2_b: თუ გაიჭედეთ, სცადეთ ნაბიჯების ხმამაღლა წარმოთქმა.
+        courseD_iceage_loops2_c: მიყევით ამ გზას სკტატის რკოსთან მისაყვანად.
+      courseD_iceage_loops2_2019_authored_hint:
         courseD_iceage_loops2_a: 'დაშალეთ ეს თავსატეხი ორ ნაწილად: პირველი ნაწილი
           - კუთხემდე, ხოლო მეორე - კუთხის შემდეგ.'
         courseD_iceage_loops2_b: თუ გაიჭედეთ, სცადეთ ნაბიჯების ხმამაღლა წარმოთქმა.
@@ -10313,14 +11069,33 @@ ka:
           </block></xml>
         courseB_iceage_loops3_b: კოდის გასამეორებლად, გადმოათრიეთ `გამეორება` ციკლი,
           შემდეგ კი ჩასვით მასში სასურველი ბლოკი.
+      courseD_iceage_loops3_2019_authored_hint:
+        courseB_iceage_loops3_a: |-
+          გამოიყენეთ ეს ახალი ბლოკი!
+          <xml><block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">5</title>
+          </block></xml>
+        courseB_iceage_loops3_b: კოდის გასამეორებლად, გადმოათრიეთ `გამეორება` ციკლი,
+          შემდეგ კი ჩასვით მასში სასურველი ბლოკი.
       courseD_iceage_loops4_authored_hint:
+        courseD_iceage_loops4_a: არ მოერიდოთ თქვენი კოდის გაშვებას, რომ ნახოთ, რა
+          მოხდება!
+        courseD_iceage_loops4_c: სკრატი უნდა მიყვეს ამ გზას.
+      courseD_iceage_loops4_2019_authored_hint:
         courseD_iceage_loops4_a: არ მოერიდოთ თქვენი კოდის გაშვებას, რომ ნახოთ, რა
           მოხდება!
         courseD_iceage_loops4_c: სკრატი უნდა მიყვეს ამ გზას.
       courseD_iceage_loops6_authored_hint:
         courseD_iceage_loops6_b: კიდევ უნდა დაამატოთ მხოლოდ **ერთი** ციკლი!
         courseD_iceage_loops6_c: თქვენი საბოლოო გზა ასე უნდა გამოიყურებოდეს.
+      courseD_iceage_loops6_2019_authored_hint:
+        courseD_iceage_loops6_b: კიდევ უნდა დაამატოთ მხოლოდ **ერთი** ციკლი!
+        courseD_iceage_loops6_c: თქვენი საბოლოო გზა ასე უნდა გამოიყურებოდეს.
       courseD_iceage_loops7_authored_hint:
+        courseB_iceage_loops7_a: თუ გაიჭედეთ, სცადეთ ნაბიჯების ფურცელზე ჩამოწერა.
+          ხედავთ კანონზომიერებას?
+        courseB_iceage_loops7_b: სკრატი უნდა მიყვეს ამ გზას რკოსთან მისასვლელად.
+      courseD_iceage_loops7_2019_authored_hint:
         courseB_iceage_loops7_a: თუ გაიჭედეთ, სცადეთ ნაბიჯების ფურცელზე ჩამოწერა.
           ხედავთ კანონზომიერებას?
         courseB_iceage_loops7_b: სკრატი უნდა მიყვეს ამ გზას რკოსთან მისასვლელად.
@@ -10330,7 +11105,18 @@ ka:
           გამეორდეს **4**-ჯერ.
         courseD_iceage_loops8_c: გამოიყენეთ ციკლები, რომ დაეხმაროთ სკრატს ამ გზის
           გავლაში.
+      courseD_iceage_loops8_2019_authored_hint:
+        courseD_iceage_loops8_b: პირველი ციკლი უნდა გამეორდეს **3**-ჯერ, მეორე უნდა
+          გამეორდეს **5**-ჯერ, მესამე უნდა გამეორდეს **4**-ჯერ, ხოლო ბოლო ციკლი უნდა
+          გამეორდეს **4**-ჯერ.
+        courseD_iceage_loops8_c: გამოიყენეთ ციკლები, რომ დაეხმაროთ სკრატს ამ გზის
+          გავლაში.
       courseD_iceage_loops9_authored_hint:
+        courseD_iceage_loops9_a: გაგიჭირდათ? სცადეთ ამ ფაზლის დაშლა მცირე ნაწილებად.
+          არ მოერიდოთ ფაზლის გაშვება კიდირების პროცესში!
+        courseD_iceage_loops9_b: თქვენი საბოლოო კოდი უნდა შეიცავდეს **4** ციკლს.
+        courseD_iceage_loops9_c: სკრატი უნდა მიყვეს ამ გზას რკოსთან მისასვლელად.
+      courseD_iceage_loops9_2019_authored_hint:
         courseD_iceage_loops9_a: გაგიჭირდათ? სცადეთ ამ ფაზლის დაშლა მცირე ნაწილებად.
           არ მოერიდოთ ფაზლის გაშვება კიდირების პროცესში!
         courseD_iceage_loops9_b: თქვენი საბოლოო კოდი უნდა შეიცავდეს **4** ციკლს.
@@ -10467,6 +11253,10 @@ ka:
         courseD_maze_until1_a: ხედავთ თუ არა მიმდევრობებს, რომელთა ციკლში მოთავსებითაც
           კოდი შემოკლდება?
         courseD_maze_until1_b: სცადეთ ჩასმული ციკლის გამოყენება ამ თავსატეხის ამოსახსნელად.
+      courseD_maze_until1_2019_authored_hint:
+        courseD_maze_until1_a: ხედავთ თუ არა მიმდევრობებს, რომელთა ციკლში მოთავსებითაც
+          კოდი შემოკლდება?
+        courseD_maze_until1_b: სცადეთ ჩასმული ციკლის გამოყენება ამ თავსატეხის ამოსახსნელად.
       courseD_maze_until3_authored_hint:
         courseD_maze_until3_b: თუ იჭედებით, სცადეთ ნაბიჯების ფურცელზე ამოწერა და განმეორებადი
           ნაწილების პოვნა.
@@ -10475,6 +11265,13 @@ ka:
         courseD_maze_until3_d: არ დაგავიწყდეთ `გამეორება, სანამ` ბლოკის გამოყენება,
           რათა შეამოკლოთ თქვენი კოდი.
       courseD_maze_until3_2018_authored_hint:
+        courseD_maze_until3_b: თუ იჭედებით, სცადეთ ნაბიჯების ფურცელზე ამოწერა და განმეორებადი
+          ნაწილების პოვნა.
+        courseD_maze_until3_c: არის კიბის საფეხურის მსგავსი მიმდევრობა, რომელსაც შეგიძლიათ
+          მიჰყვეთ ამ თავსატეხის ამოსახსნელად?
+        courseD_maze_until3_d: არ დაგავიწყდეთ `გამეორება, სანამ` ბლოკის გამოყენება,
+          რათა შეამოკლოთ თქვენი კოდი.
+      courseD_maze_until3_2019_authored_hint:
         courseD_maze_until3_b: თუ იჭედებით, სცადეთ ნაბიჯების ფურცელზე ამოწერა და განმეორებადი
           ნაწილების პოვნა.
         courseD_maze_until3_c: არის კიბის საფეხურის მსგავსი მიმდევრობა, რომელსაც შეგიძლიათ
@@ -10491,12 +11288,20 @@ ka:
           მიჰყვეთ ამ თავსატეხის ამოსახსნელად?
         courseD_maze_until4_c: არ დაგავიწყდეთ `გამეორება, სანამ` ბლოკის გამოყენება,
           რათა შეამოკლოთ თქვენი კოდი.
+      courseD_maze_until4_2019_authored_hint:
+        courseD_maze_until4_b: არის კიბის საფეხურის მსგავსი მიმდევრობა, რომელსაც შეგიძლიათ
+          მიჰყვეთ ამ თავსატეხის ამოსახსნელად?
+        courseD_maze_until4_c: არ დაგავიწყდეთ `გამეორება, სანამ` ბლოკის გამოყენება,
+          რათა შეამოკლოთ თქვენი კოდი.
       courseD_maze_until5_authored_hint:
         courseD_maze_until5_b: იმისათვის, რომ გამოიყენოთ მხოლოდ ერთი `წინ გადაადგილება`,
           ჩასვით ის `გამეორება მზესუმზირამდე` ბლოკში.
         courseD_maze_until5_c: თითოეული ნაბიჯის შემდეგ ზომბმა უნდა შეამოწმოს, არის
           თუ არა გზა მარცხნივ. როგორ უნდა მოიქცეს ის, როდესაც გზას იპოვის?
       courseD_maze_until5_2018_authored_hint:
+        courseD_maze_until5_b: იმისათვის, რომ გამოიყენოთ მხოლოდ ერთი `წინ გადაადგილება`,
+          ჩასვით ის `გამეორება მზესუმზირამდე` ბლოკში.
+      courseD_maze_until5_2019_authored_hint:
         courseD_maze_until5_b: იმისათვის, რომ გამოიყენოთ მხოლოდ ერთი `წინ გადაადგილება`,
           ჩასვით ის `გამეორება მზესუმზირამდე` ბლოკში.
       courseD_maze_until6_authored_hint:
@@ -10508,6 +11313,9 @@ ka:
       courseD_maze_until6_2018_authored_hint:
         courseD_maze_until6_b: იმისათვის, რომ გამოიყენოთ მხოლოდ ერთი `წინ გადაადგილება`,
           ჩასვით ის `გამეორება მზესუმზირამდე` ბლოკში.
+      courseD_maze_until6_2019_authored_hint:
+        courseD_maze_until6_b: იმისათვის, რომ გამოიყენოთ მხოლოდ ერთი `წინ გადაადგილება`,
+          ჩასვით ის `გამეორება მზესუმზირამდე` ბლოკში.
       courseD_maze_until7_authored_hint:
         courseD_maze_until7_b: მიუხედავად იმისა, რომ წინა თავსატეხთან შედარებით აქ
           მეტი მობრუნებაა, თქვენი კოდი შეიძლება თითქმის იგივე იყოს, თუ `გამეორება
@@ -10515,6 +11323,10 @@ ka:
         courseD_maze_until7_c: არ დაგავიწყდეთ მარცხნივ გზების შემოწმება, რადგან მარჯვნივ
           მობრუნება არასწორ გზაზე დაგაყენებთ!
       courseD_maze_until7_2018_authored_hint:
+        courseD_maze_until7_b: მიუხედავად იმისა, რომ წინა თავსატეხთან შედარებით აქ
+          მეტი მობრუნებაა, თქვენი კოდი შეიძლება თითქმის იგივე იყოს, თუ `გამეორება
+          სანამ` ბლოკს გამოიყენებთ!
+      courseD_maze_until7_2019_authored_hint:
         courseD_maze_until7_b: მიუხედავად იმისა, რომ წინა თავსატეხთან შედარებით აქ
           მეტი მობრუნებაა, თქვენი კოდი შეიძლება თითქმის იგივე იყოს, თუ `გამეორება
           სანამ` ბლოკს გამოიყენებთ!
@@ -10533,6 +11345,9 @@ ka:
       courseD_maze_until9_2018_authored_hint:
         courseD_maze_until8_c: არ დაგავიწყდეთ თქვენი `გამეორება სანამ` ბლოკის გამოყენება,
           მზესუმზირასთან მისასვლელად!
+      courseD_maze_until9_2019_authored_hint:
+        courseD_maze_until8_c: არ დაგავიწყდეთ თქვენი `გამეორება სანამ` ბლოკის გამოყენება,
+          მზესუმზირასთან მისასვლელად!
       courseD_playLab_cond1_authored_hint:
         courseD_playLab_cond1_b: გამოიყენეთ ჩამოსაშლელი მენიუები `როდესაც ისარი` და
           `მსახიობის გადაადგილება` ბლოკებზე, მათი მოძრაობის მიმართულების შესაცვლელად.
@@ -10543,10 +11358,18 @@ ka:
           `მსახიობის გადაადგილება` ბლოკებზე, მათი მოძრაობის მიმართულების შესაცვლელად.
         courseD_playLab_cond1_c: არ დაგავიწყდეთ ცალფეხას დრაკონთან მიყვანა, როდესაც
           მთელ კოდს დაწერთ!
+      courseD_playLab_cond1_2019_authored_hint:
+        courseD_playLab_cond1_b: გამოიყენეთ ჩამოსაშლელი მენიუები `როდესაც ისარი` და
+          `მსახიობის გადაადგილება` ბლოკებზე, მათი მოძრაობის მიმართულების შესაცვლელად.
+        courseD_playLab_cond1_c: არ დაგავიწყდეთ ცალფეხას დრაკონთან მიყვანა, როდესაც
+          მთელ კოდს დაწერთ!
       courseD_playLab_cond3a_authored_hint:
         courseD_playLab_cond3_c: "- `თუ` დრაკონი ბედნიერია \n  - `ქულის დამატება`\n
           \ - `ქულის დამატება`  \n  \n  \n \n- `სხვა შემთხვევაში` `ქულის დამატება`"
       courseD_playLab_cond3a_2018_authored_hint:
+        courseD_playLab_cond3_c: "- `თუ` დრაკონი ბედნიერია \n  - `ქულის დამატება`\n
+          \ - `ქულის დამატება`  \n  \n  \n \n- `სხვა შემთხვევაში` `ქულის დამატება`"
+      courseD_playLab_cond3a_2019_authored_hint:
         courseD_playLab_cond3_c: "- `თუ` დრაკონი ბედნიერია \n  - `ქულის დამატება`\n
           \ - `ქულის დამატება`  \n  \n  \n \n- `სხვა შემთხვევაში` `ქულის დამატება`"
       courseD_playLab_cond3b_authored_hint:
@@ -10556,6 +11379,9 @@ ka:
         courseD_playLab_cond5_b: შეგიძლიათ გქონდეთ ერთზე მეტი `მუდმივად გამეორების`
           ციკლი სამუშაო სივრცეში.
       courseD_playLab_cond5_2018_authored_hint:
+        courseD_playLab_cond5_b: შეგიძლიათ გქონდეთ ერთზე მეტი `მუდმივად გამეორების`
+          ციკლი სამუშაო სივრცეში.
+      courseD_playLab_cond5_2019_authored_hint:
         courseD_playLab_cond5_b: შეგიძლიათ გქონდეთ ერთზე მეტი `მუდმივად გამეორების`
           ციკლი სამუშაო სივრცეში.
       courseD_scrat_ramp1_authored_hint:
@@ -10648,12 +11474,20 @@ ka:
       courseE_artist_concept1_2018_authored_hint:
         courseE_artist_concept1_c: გამოიყენეთ `სიგანის დაყენების` ბლოკი თითოეული ფუნქციის
           გამოძახების წინ, კალმის სიგანის შესაცვლელად.
+      courseE_artist_concept1_2019_authored_hint:
+        courseE_artist_concept1_c: გამოიყენეთ `სიგანის დაყენების` ბლოკი თითოეული ფუნქციის
+          გამოძახების წინ, კალმის სიგანის შესაცვლელად.
       courseE_artist_concept4_authored_hint:
         courseE_artist_concept4_c: კვადრატების მწკრივის დახატვის შემდეგ თქვენ შეგიძლიათ
           მობრუნდეთ და დახატოთ მარცხნივ მოძრავი კვადრატების მწკრივი ან გადახტეთ უკან,
           ფიგურის მარცხენა მხარეს, რომ დახატოთ მარჯვნივ მოძრავი კვადრატების მწკრივი.
           რომელი გირჩევნიათ?
       courseE_artist_concept4_2018_authored_hint:
+        courseE_artist_concept4_c: კვადრატების მწკრივის დახატვის შემდეგ თქვენ შეგიძლიათ
+          მობრუნდეთ და დახატოთ მარცხნივ მოძრავი კვადრატების მწკრივი ან გადახტეთ უკან,
+          ფიგურის მარცხენა მხარეს, რომ დახატოთ მარჯვნივ მოძრავი კვადრატების მწკრივი.
+          რომელი გირჩევნიათ?
+      courseE_artist_concept4_2019_authored_hint:
         courseE_artist_concept4_c: კვადრატების მწკრივის დახატვის შემდეგ თქვენ შეგიძლიათ
           მობრუნდეთ და დახატოთ მარცხნივ მოძრავი კვადრატების მწკრივი ან გადახტეთ უკან,
           ფიგურის მარცხენა მხარეს, რომ დახატოთ მარჯვნივ მოძრავი კვადრატების მწკრივი.
@@ -10668,6 +11502,15 @@ ka:
 
           ![](https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png)
       courseE_artist_concept_challenge1_2018_authored_hint:
+        courseE_artist_concept_challenge1_a: "ექვსკუთხედის ნახევარს აქვს \"30-ის ტოლი
+          სიგრძე\" და ბრუნავს მარჯვნივ **60 გრადუსით**.\n  "
+        courseE_artist_concept_challenge1_b: 'სამკუთხედის 2/3-ს აქვს **80-ის ტოლი
+          სიგრძე** და ბრუნავს მარჯვნივ **120 გრადუსით**. '
+        courseE_artist_concept_challenge1_c: |-
+          ეს არის დიზაინი, რომელიც უნდა გაიმეოროთ, რომ შექმნათ სრული ფიგურა:
+
+          ![](https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png)
+      courseE_artist_concept_challenge1_2019_authored_hint:
         courseE_artist_concept_challenge1_a: "ექვსკუთხედის ნახევარს აქვს \"30-ის ტოლი
           სიგრძე\" და ბრუნავს მარჯვნივ **60 გრადუსით**.\n  "
         courseE_artist_concept_challenge1_b: 'სამკუთხედის 2/3-ს აქვს **80-ის ტოლი
@@ -10692,6 +11535,14 @@ ka:
           <xml>  <block type="jump_to">
           <title name="VALUE">???</title>
           </block></xml>
+      courseE_artist_concept_challenge2_2019_authored_hint:
+        courseE_artist_concept_challenge2_a: მას შემდეგ, რაც განსაზღვრავთ ფუნქციას,
+          შეგიძლიათ გამოიძახოთ ის რამდენჯერაც გინდათ - როცა და სადაც გინდათ!
+        courseE_artist_concept_challenge2_b: |-
+          შეგიძლიათ, ამ ბრძანების გამოყენებით, ტილოს სხვადასხვა პოზიციაზე გადახტეთ:
+          <xml>  <block type="jump_to">
+          <title name="VALUE">???</title>
+          </block></xml>
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: ყოველ კვადრატს აქვს 100 პიქსელის ტოლი გვერდი,
           რაც იმას ნიშნავს, რომ თქვენ მოგიწევთ 175 პიქსელით წინ გადაადგილება, სანამ
@@ -10706,6 +11557,11 @@ ka:
 
           ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
       courseE_artist_functions10_2018_authored_hint:
+        courseD_artist_functions10_c: |-
+          ხედავთ სად შეიძლება ამ ნახატმა გამოიყენოს ფუნქცია სახელად `ექვსკუთხედების მწკრივი`?
+
+          ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
+      courseE_artist_functions10_2019_authored_hint:
         courseD_artist_functions10_c: |-
           ხედავთ სად შეიძლება ამ ნახატმა გამოიყენოს ფუნქცია სახელად `ექვსკუთხედების მწკრივი`?
 
@@ -10732,6 +11588,19 @@ ka:
           - მოძრაობდეს წინ 100 + 75 პიქსელით
           - იყენებდეს ფუნქციას
       courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_b: ფუნქია, რომელსაც დაწერთ, უნდა შეიცავდეს არა მთლიან
+          პროგრამას, არამედ მხოლოდ იმ ნაწლის, რომელიც ხატავს კვადრატს 100 პიქსელი
+          ზომის გვერდებით.
+        courseD_artist_functions2_c: |-
+          გამოიყენეთ მწვანე `კვადრატის დახატვის` ბლოკი, რომ "გამოიძახოთ" თქვენი ფუნქცია `როცა მირბის` ბლოკის ქვეშ. სხვანაირად თქვენი ფუნქციის კოდი არ გეშვება.
+          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/>
+          </block></xml>
+        courseD_artist_functions2_a: |-
+          თქვენი პროგრამა უნდა:
+          - იყენებდეს ფუნქციას
+          - მოძრაობდეს წინ 100 + 75 პიქსელით
+          - იყენებდეს ფუნქციას
+      courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_b: ფუნქია, რომელსაც დაწერთ, უნდა შეიცავდეს არა მთლიან
           პროგრამას, არამედ მხოლოდ იმ ნაწლის, რომელიც ხატავს კვადრატს 100 პიქსელი
           ზომის გვერდებით.
@@ -10771,6 +11640,10 @@ ka:
         courseD_artist_functions5_c: დაიწყეთ ვარსკვლავის ფორმის კოდის `ვარსკვლავის
           დახატვის` ფუნქციაში ჩასმით, შემდეგ კი გამოიყენეთ ეს ფუნქცია, რომ დახატოთ
           სამი ვარსკვლავი!
+      courseE_artist_functions5_2019_authored_hint:
+        courseD_artist_functions5_c: დაიწყეთ ვარსკვლავის ფორმის კოდის `ვარსკვლავის
+          დახატვის` ფუნქციაში ჩასმით, შემდეგ კი გამოიყენეთ ეს ფუნქცია, რომ დახატოთ
+          სამი ვარსკვლავი!
       courseE_artist_functions6_authored_hint:
         grade4_artist_functions_windows0_c: არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ
           ბლოკების დამატება და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი.
@@ -10790,6 +11663,16 @@ ka:
           - გადახტით წინ **100 პიქსელით**
         courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
       courseE_artist_functions8_2018_authored_hint:
+        courseD_artist_functions8_f: თქვენ გჭირდებათ მხოლოდ ერთი `წინ გადაადგილების`
+          ბლოკი, მაგრამ ამის გარდა, დაგჭირდებათ რამდენიმე `წინ გადახტომის` და/ან `უკან
+          გადახტომის` ბლოკი!
+        courseD_artist_functions8_d: |-
+          კვადრატების ხაზის გასაკეთებლად,
+          - გაიმეორეთ 3-ჯერ
+          - დახატეთ კვადრატის **50 პიქსელი** სიგრძის გვერდებით
+          - გადახტით წინ **100 პიქსელით**
+        courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
+      courseE_artist_functions8_2019_authored_hint:
         courseD_artist_functions8_f: თქვენ გჭირდებათ მხოლოდ ერთი `წინ გადაადგილების`
           ბლოკი, მაგრამ ამის გარდა, დაგჭირდებათ რამდენიმე `წინ გადახტომის` და/ან `უკან
           გადახტომის` ბლოკი!
@@ -10833,6 +11716,23 @@ ka:
           - მობრუნდით 60 გრადუსით
           - დახატეთ სამკუთხედების ხაზი
           - მობრუნდით 120 გრადუსით
+      courseE_artist_functions9_2019_authored_hint:
+        courseD_artist_functions9_e: |-
+          შეგიძლიათ იპოვოთ ოთხივე ადგილი ამ ნახატში, სადაც `სამკუთხედების მწკრივის` გამოყენება შეიძლება?
+
+          ![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
+        courseD_artist_functions9_c: |-
+          სამკუთხედების მწკრივის დასახაზად:
+          - 4-ჯერ გამეორება
+          - სამკუთხედის დახატვა
+          - 50 პიქსელით წინ გადახტომა
+        courseD_artist_functions9_d: |-
+          ბრილიანტის დასახატად:
+          - გაიმეორეთ ორჯერ
+          - დახატეთ სამკუთხედების ხაზი
+          - მობრუნდით 60 გრადუსით
+          - დახატეთ სამკუთხედების ხაზი
+          - მობრუნდით 120 გრადუსით
       courseE_artist_functions_challenge_authored_hint:
         courseE_artist_functions_challenge_a: თუ ამ ფუნქციას კიდევ ერთხელ გამოიძახებთ,
           შეგიძლიათ შექმნათ იგივე დიზაინი საბოლოო კუთხეში. თქვენ, აგრეთვე, შეგიძლიათ
@@ -10847,6 +11747,11 @@ ka:
           შეგიძლიათ შექმნათ იგივე დიზაინი საბოლოო კუთხეში.
         courseE_artist_functions_challenge1_b: აგრეთვე, შეგიძლიათ `გადახტეთ` სხვა
           პოზიციებზე, ან შეცვალოთ ყველაფერი როგორც მოგესურვებათ!
+      courseE_artist_functions_challenge1_2019_authored_hint:
+        courseE_artist_functions_challenge1_a: თუ ფუნქციას კიდევ ერთხელ გამოიძახებთ,
+          შეგიძლიათ შექმნათ იგივე დიზაინი საბოლოო კუთხეში.
+        courseE_artist_functions_challenge1_b: აგრეთვე, შეგიძლიათ `გადახტეთ` სხვა
+          პოზიციებზე, ან შეცვალოთ ყველაფერი როგორც მოგესურვებათ!
       courseE_artist_functions_challenge2_authored_hint:
         courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n
           \   <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n
@@ -10856,6 +11761,14 @@ ka:
           ყოველთვის იწყება ზედა მარცხენა კუთხიდან, რაც ნიშნავს, რომ არ აქვს მნიშვნელობა,
           თუ სადაა ზომბი მხატვარი, სანამ ბრძანება გაეშვება!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       courseE_artist_functions_challenge2_2018_authored_hint:
+        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n
+          \   <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n
+          \ </block>\n  </xml>\n  \nეს `გადახტომის` ბლოკი საშუალებას გაძლევთ ამოძრაოთ
+          ზომბი სახატავი ბადის ნებისმიერ პიქსელზე, სადაც მოგესურვებათ. ბლოკი მუშაობს
+          ზომის რაღაც პიქსელებით მარჯვნივ და რაღაც პიქსელებით დაბლა გადაყვანით. ათვლა
+          ყოველთვის იწყება ზედა მარცხენა კუთხიდან, რაც ნიშნავს, რომ არ აქვს მნიშვნელობა,
+          თუ სადაა ზომბი მხატვარი, სანამ ბრძანება გაეშვება!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+      courseE_artist_functions_challenge2_2019_authored_hint:
         courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n
           \   <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n
           \ </block>\n  </xml>\n  \nეს `გადახტომის` ბლოკი საშუალებას გაძლევთ ამოძრაოთ
@@ -10946,6 +11859,8 @@ ka:
         courseE_bee_concept1_b: არის იქ რაიმე ორნამენტი, რომელიც აქ *მეორდება*?
       courseE_bee_concept1_2018_authored_hint:
         courseE_bee_concept1_b: არის იქ რაიმე ორნამენტი, რომელიც აქ *მეორდება*?
+      courseE_bee_concept1_2019_authored_hint:
+        courseE_bee_concept1_b: არის იქ რაიმე ორნამენტი, რომელიც აქ *მეორდება*?
       courseE_bee_concept2_authored_hint:
         courseE_bee_concept2_a: გამოგადგებათ`სანამ` ციკლი აქ?
         courseE_bee_concept2_d: თქვენ შეგიძლიათ შეამოწმოთ ცარიელი ადგილებიც კი, რათა
@@ -10955,6 +11870,14 @@ ka:
         courseE_bee_concept2_c: რომელ მხარეს უნდა მობრუნდეს ფუტკარი თითოეული გზის
           შემდეგ?
       courseE_bee_concept2_2018_authored_hint:
+        courseE_bee_concept2_a: გამოგადგებათ`სანამ` ციკლი აქ?
+        courseE_bee_concept2_d: თქვენ შეგიძლიათ შეამოწმოთ ცარიელი ადგილებიც კი, რათა
+          ნახოთ არის თუ არა თაფლი > 0-ზე.
+        courseE_bee_concept2_b: შეგიძლიათ გამოიყენოთ `სანამ` ციკლები, თითოეული გზის
+          ბოლომდე გასავლელად და თითოეული ადგილიდან მთელი თაფლის შესაგროვებლად.
+        courseE_bee_concept2_c: რომელ მხარეს უნდა მობრუნდეს ფუტკარი თითოეული გზის
+          შემდეგ?
+      courseE_bee_concept2_2019_authored_hint:
         courseE_bee_concept2_a: გამოგადგებათ`სანამ` ციკლი აქ?
         courseE_bee_concept2_d: თქვენ შეგიძლიათ შეამოწმოთ ცარიელი ადგილებიც კი, რათა
           ნახოთ არის თუ არა თაფლი > 0-ზე.
@@ -10972,6 +11895,11 @@ ka:
           სცადეთ ნაწილ-ნაწილ დაწეროთ ამოხსნა და მოძებნოთ გამეორებადი კოდი.
         courseE_bee_concept3a_c: აქ ყვავილების სამი ჯგუფია, ამიტომ თქვენი გარე `გამეორების`
           ციკლი უნდა მეორდებოდეს სამჯერ.
+      courseE_bee_concept3_2019_authored_hint:
+        courseE_bee_concept3a_b: თუ არ შეგიძლიათ გაარკვიოთ, სად უნდა ჩასვათ ციკლი,
+          სცადეთ ნაწილ-ნაწილ დაწეროთ ამოხსნა და მოძებნოთ გამეორებადი კოდი.
+        courseE_bee_concept3a_c: აქ ყვავილების სამი ჯგუფია, ამიტომ თქვენი გარე `გამეორების`
+          ციკლი უნდა მეორდებოდეს სამჯერ.
       courseE_bee_concept4_authored_hint:
         courseE_bee_concept4_b: კიბის საფეხური ნიმუში შეიძლება დაგეხმაროთ ყვავილებსა
           და ფიჭებში გაღწევაში.
@@ -10982,12 +11910,22 @@ ka:
           და ფიჭებში გაღწევაში.
         courseE_bee_concept4_c: თუ ყვავილთან ხართ, რამდენჯერ უნდა სცადოთ ნექტარის
           აღება? იგივეა თუ არა ეს რაოდენობა ყველა ყვავილისათვის?
+      courseE_bee_concept4_2019_authored_hint:
+        courseE_bee_concept4_b: კიბის საფეხური ნიმუში შეიძლება დაგეხმაროთ ყვავილებსა
+          და ფიჭებში გაღწევაში.
+        courseE_bee_concept4_c: თუ ყვავილთან ხართ, რამდენჯერ უნდა სცადოთ ნექტარის
+          აღება? იგივეა თუ არა ეს რაოდენობა ყველა ყვავილისათვის?
       courseE_bee_concept5_authored_hint:
         courseE_bee_concept5_c: |-
           ეს იმ მართკუთხა გზის სურათია, რომელიც ფუტკარმა შეიძლება გაიაროს.
 
           ![](https://images.code.org/b0ab0f9ec823fd8fbc9b032d68fd69d0-image-1493152066638.7.8 Hint Drawing.png)
       courseE_bee_concept5_2018_authored_hint:
+        courseE_bee_concept5_c: |-
+          ეს იმ მართკუთხა გზის სურათია, რომელიც ფუტკარმა შეიძლება გაიაროს.
+
+          ![](https://images.code.org/b0ab0f9ec823fd8fbc9b032d68fd69d0-image-1493152066638.7.8 Hint Drawing.png)
+      courseE_bee_concept5_2019_authored_hint:
         courseE_bee_concept5_c: |-
           ეს იმ მართკუთხა გზის სურათია, რომელიც ფუტკარმა შეიძლება გაიაროს.
 
@@ -11191,6 +12129,9 @@ ka:
       courseE_farmer_concept1_2018_authored_hint:
         courseE_farmer_concept1_b: თქვენ შეგიძლიათ გამოყენოთ კიბის პრინციპი ხვრელებთან
           მისაღწევად.
+      courseE_farmer_concept1_2019_authored_hint:
+        courseE_farmer_concept1_b: თქვენ შეგიძლიათ გამოყენოთ კიბის პრინციპი ხვრელებთან
+          მისაღწევად.
       courseE_farmer_concept2_authored_hint:
         courseE_farmer_concept2_b: აქ გამოგადგებათ ფუნქცია, რომელიც პასუხისმგებელია
           მობრუნებასა და გოგრების შეგროვებაზე და ბრუნდება მთავარ ჰორიზონტალურ გზაზე.
@@ -11201,12 +12142,22 @@ ka:
           მობრუნებასა და გოგრების შეგროვებაზე და ბრუნდება მთავარ ჰორიზონტალურ გზაზე.
         courseE_farmer_concept2_c: თქვენს მთავარ პროგრამას შეუძლია გამოიძახოს ეს ფუნქცია
           მწვანე `გააკეთე რამე` ბლოკით.
+      courseE_farmer_concept2_2019_authored_hint:
+        courseE_farmer_concept2_b: აქ გამოგადგებათ ფუნქცია, რომელიც პასუხისმგებელია
+          მობრუნებასა და გოგრების შეგროვებაზე და ბრუნდება მთავარ ჰორიზონტალურ გზაზე.
+        courseE_farmer_concept2_c: თქვენს მთავარ პროგრამას შეუძლია გამოიძახოს ეს ფუნქცია
+          მწვანე `გააკეთე რამე` ბლოკით.
       courseE_farmer_concept3_authored_hint:
         grade3_robotFarmer_ConditionalsIntro_8_b: რა უნდა გააკეთოთ, როდესაც მიაღწევთ
           გზის ბოლოს?
         grade3_robotFarmer_ConditionalsIntro_8_c: გამოიყენეთ `გამეორების` ციკლი, რათა
           გაუშვათ თქვენი კოდი რამდენჯერმე ყოველი სწორი გზისთვის.
       courseE_farmer_concept3_2018_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_8_b: რა უნდა გააკეთოთ, როდესაც მიაღწევთ
+          გზის ბოლოს?
+        grade3_robotFarmer_ConditionalsIntro_8_c: გამოიყენეთ `გამეორების` ციკლი, რათა
+          გაუშვათ თქვენი კოდი რამდენჯერმე ყოველი სწორი გზისთვის.
+      courseE_farmer_concept3_2019_authored_hint:
         grade3_robotFarmer_ConditionalsIntro_8_b: რა უნდა გააკეთოთ, როდესაც მიაღწევთ
           გზის ბოლოს?
         grade3_robotFarmer_ConditionalsIntro_8_c: გამოიყენეთ `გამეორების` ციკლი, რათა
@@ -11243,10 +12194,19 @@ ka:
           გაქვთ.
         courseE_farmer_functions1_b: თქვენ გჭირდებათ მხოლოდ ერთი გოგრის შეგროვება,
           მაგრამ იქნება შეგეძლოთ გოგრამდე მისასვლელად ციკლის გამოყენება?
+      courseE_farmer_functions1_2019_authored_hint:
+        courseE_farmer_functions1_a: ამჯერად ინსტრუმენტების პანელი ოდნავ განსხვავებულადაა
+          ორგანიზებული. დააწკაპუნეთ განსხვავებულ კატეგორიებს, რათა ნახოთ, რომელი ბლოკები
+          გაქვთ.
+        courseE_farmer_functions1_b: თქვენ გჭირდებათ მხოლოდ ერთი გოგრის შეგროვება,
+          მაგრამ იქნება შეგეძლოთ გოგრამდე მისასვლელად ციკლის გამოყენება?
       courseE_farmer_functions1a_authored_hint:
         courseE_farmer_functions1a_b: გამოიყენეთ `გამეორება, სანამ` ბლოკი გოგრასთან
           მოსახვედრად!
       courseE_farmer_functions1a_2018_authored_hint:
+        courseE_farmer_functions1a_b: გამოიყენეთ `გამეორება, სანამ` ბლოკი გოგრასთან
+          მოსახვედრად!
+      courseE_farmer_functions1a_2019_authored_hint:
         courseE_farmer_functions1a_b: გამოიყენეთ `გამეორება, სანამ` ბლოკი გოგრასთან
           მოსახვედრად!
       courseE_farmer_functions2b_authored_hint:
@@ -11263,12 +12223,22 @@ ka:
           შეგიძლიათ იმოძრავოთ მის გასწრივ და შებრუნდეთ.
         courseE_farmer_functions2b_c: თქვენ დაგჭირდებათ ორი განცალკევებული `გამეორება,
           სანამ` ბლოკი, რათა შეაგროვოთ მთლიანი მოსავალი.
+      courseE_farmer_functions2b_2019_authored_hint:
+        courseE_farmer_functions2b_a: თქვენ შეგიძლიათ გამოიყენოთ `გამეორება, სანამ
+          გოგრაა`, რათა მიაღწიოთ ორივე გზის ბოლომდე.
+        courseE_farmer_functions2b_b: დამაკავშირებელ გზაზე სიმინდი არაა, ამიტომ თქვენ
+          შეგიძლიათ იმოძრავოთ მის გასწრივ და შებრუნდეთ.
+        courseE_farmer_functions2b_c: თქვენ დაგჭირდებათ ორი განცალკევებული `გამეორება,
+          სანამ` ბლოკი, რათა შეაგროვოთ მთლიანი მოსავალი.
       courseE_farmer_functions2ba_authored_hint:
         courseE_farmer_functions2ba_a: გამოიყენეთ მწვანე `სიმინდი და გოგრა` ბლოკი,
           რათა გამოიძახოთ ეს ფუნქცია.
         courseE_farmer_functions2ba_b: ერთიანად გადმოათრიეთ ყველა ბლოკი ინსტრუმენტების
           პანელიდან `გაშვებისას` ბლოკის ქვეშ, რათა ნახოთ, თუ როგორ მუშაობს ეს ფუნქცია.
       courseE_farmer_functions2ba_2018_authored_hint:
+        courseE_farmer_functions2ba_a: გამოიყენეთ მწვანე `სიმინდი და გოგრა` ბლოკი,
+          რათა გამოიძახოთ ეს ფუნქცია.
+      courseE_farmer_functions2ba_2019_authored_hint:
         courseE_farmer_functions2ba_a: გამოიყენეთ მწვანე `სიმინდი და გოგრა` ბლოკი,
           რათა გამოიძახოთ ეს ფუნქცია.
       courseE_farmer_functions3c_authored_hint:

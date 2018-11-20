@@ -41,14 +41,18 @@ th:
       Conditionals:
         title: เงื่อนไข 
       BigEvent:
-        title: เหตุการณ์ใหญ่
+        title: อีเวนท์ใหญ่
       GoingPlacesSafely:
         title: ไปที่ไหนให้ปลอดภัย
         desc: อินเทอร์เน็ตเป็นสถานที่ที่มีมีประสิทธิภาพเป็นอย่างมาก แต่บางครั้งก็เป็นสถานที่ที่อันตราย ให้ครูแนะนำวิธีรักษาความปลอดภัยขณะที่นักเรียนท่องไปในอินเทอร์เน็ต
       GraphPaperProgramming:
         title: การเขียนกระดาษกราฟ
+      PaperPlanes:
+        title: 'อัลกอริทึมในชีวิตจริง: เครื่องบินกระดาษ'
       ComputationalThinking:
         title: คิดคำนวณ
+      DiceRace:
+        title: 'อัลกอริทึมในชีวิตจริง: การแข่งลูกเต๋า'
       Internet:
         title: อินเทอร์เน็ต
       DigitalCitizenship:
@@ -74,9 +78,11 @@ th:
         title: ไปที่ไหนให้ปลอดภัย
         desc: อินเทอร์เน็ตเป็นสถานที่ที่มีมีประสิทธิภาพเป็นอย่างมาก แต่บางครั้งก็เป็นสถานที่ที่อันตราย ให้ครูแนะนำวิธีรักษาความปลอดภัยขณะที่นักเรียนท่องไปในอินเทอร์เน็ต
       courseABC_unplugged_bigEvent:
-        title: เหตุการณ์ใหญ่
+        title: อีเวนท์ใหญ่
       courseC_unplugged_buildingAFoundation:
         title: สร้างพื้นฐาน
+      courseC_unplugged_paperPlanes:
+        title: 'อัลกอริทึมในชีวิตจริง: เครื่องบินกระดาษ'
       courseC_unplugged_gettingLoopy:
         title: มาวนลูปกัน
       courseD_unplugged_graphPaperProgramming:
@@ -85,6 +91,8 @@ th:
         title: โปรแกรมการถ่ายทอดข้อมูล
       courseD_unplugged_conditionalsCards:
         title: เงื่อนไข
+      courseE_unplugged_diceRace:
+        title: 'อัลกอริทึมในชีวิตจริง: การแข่งลูกเต๋า'
       courseE_unplugged_internet:
         title: อินเทอร์เน็ต
       courseF_unplugged_forLoopFun:
@@ -100,7 +108,7 @@ th:
         title: ไปที่ไหนให้ปลอดภัย
         desc: อินเทอร์เน็ตเป็นสถานที่ที่มีมีประสิทธิภาพเป็นอย่างมาก แต่บางครั้งก็เป็นสถานที่ที่อันตราย ให้ครูแนะนำวิธีรักษาความปลอดภัยขณะที่นักเรียนท่องไปในอินเทอร์เน็ต
       BigEvent_2018:
-        title: เหตุการณ์ใหญ่
+        title: อีเวนท์ใหญ่
       GraphPaperProgramming_2018:
         title: การเขียนกระดาษกราฟ
       courseD_unplugged_digitalCitizenship_2018:
@@ -109,6 +117,8 @@ th:
         title: กิจกรรมถอดปลั๊ก
       Conditionals_2018:
         title: เงื่อนไข 
+      PaperPlanes_2018:
+        title: 'อัลกอริทึมในชีวิตจริง: เครื่องบินกระดาษ'
       GettingLoopy_2018:
         title: มาวนลูปกัน
       MoveItMoveIt_2018:
@@ -119,3 +129,15 @@ th:
         title: เพื่อนหุ่นยนต์
       Conditionals_2019:
         title: เงื่อนไข 
+      GraphPaperProgramming_2019:
+        title: การเขียนกระดาษกราฟ
+      RelayProgramming_2018_2019:
+        title: โปรแกรมการถ่ายทอดข้อมูล
+      courseD_unplugged_digitalCitizenship_2019:
+        title: กิจกรรมถอดปลั๊ก
+      GettingLoopy_2019:
+        title: มาวนลูปกัน
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: กิจกรรมถอดปลั๊ก
+      BigEvent_2019:
+        title: อีเวนท์ใหญ่

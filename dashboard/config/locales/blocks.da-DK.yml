@@ -254,6 +254,15 @@ da:
           LOCATION:
             "{x: 100, y: 200}": venstre
             "{x: 300, y: 200}": højre
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": venstre
+            "{x: 300, y: 200}": højre
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': alle
       Mikelab_getProp:
         options:
           PROPERTY:

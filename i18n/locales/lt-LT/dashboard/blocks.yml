@@ -236,6 +236,11 @@ lt:
           LOCATION:
             "{x: 100, y: 200}": kairėn
             "{x: 300, y: 200}": dešinėn
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kairėn
+            "{x: 300, y: 200}": dešinėn
       Mikelab_getProp:
         options:
           PROPERTY:
