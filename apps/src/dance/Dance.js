@@ -642,7 +642,7 @@ Dance.prototype.displayFeedback_ = function () {
   };
 
   // Disable social share for users under 13 if we have the cookie set.
-  const is13PlusCookie = sessionStorage.getItem('anon_over13');
+  const is13PlusCookie = sessionStorage.getItem('ad_anon_over13');
   if (is13PlusCookie) {
     feedbackOptions.disableSocialShare = is13PlusCookie === 'false';
   }
