@@ -50,21 +50,31 @@ hi:
         4-5_Artist_Patterns_Free_Play_1: अपने पसंदीदा ब्लॉकों के सभी अब श्रेणियों में आयोजित कर रहे हैं ।  इन शब्दों पर क्लिक करें देखने के लिए जहां सब कुछ चला गया!
       Geometric Sun_2018_callout:
         4-5_Artist_Patterns_Free_Play_1: अपने पसंदीदा ब्लॉकों के सभी अब श्रेणियों में आयोजित कर रहे हैं ।  इन शब्दों पर क्लिक करें देखने के लिए जहां सब कुछ चला गया!
+      Geometric Sun_2019_callout:
+        4-5_Artist_Patterns_Free_Play_1: अपने पसंदीदा ब्लॉकों के सभी अब श्रेणियों में आयोजित कर रहे हैं ।  इन शब्दों पर क्लिक करें देखने के लिए जहां सब कुछ चला गया!
       Overworld Chop Trees_callout:
         craft_callout_preplaced: आपके द्वारा शुरूआत करने के लिए हमने यहाँ कुछ ब्लॉक रखे हैं
       Overworld Chop Trees_2018_callout:
+        craft_callout_preplaced: आपके द्वारा शुरूआत करने के लिए हमने यहाँ कुछ ब्लॉक रखे हैं
+      Overworld Chop Trees_2019_callout:
         craft_callout_preplaced: आपके द्वारा शुरूआत करने के लिए हमने यहाँ कुछ ब्लॉक रखे हैं
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: यह कोड आपके घर का निर्माण शुरू करेगा। क्या आप इसे खत्म कर सकते हैं?
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: यह कोड आपके घर का निर्माण शुरू करेगा। क्या आप इसे खत्म कर सकते हैं?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: यह कोड आपके घर का निर्माण शुरू करेगा। क्या आप इसे खत्म कर सकते हैं?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: अपने प्रोग्राम को आज़माने के लिए "Run" चलाएँ
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: अपने प्रोग्राम को आज़माने के लिए "Run" चलाएँ
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: अपने प्रोग्राम को आज़माने के लिए "Run" चलाएँ
       Overworld Place Wall_callout:
         craft_inside_repeat: ब्लॉक को यहाँ रखते हुए कार्रवाई दोहराएँ
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: ब्लॉक को यहाँ रखते हुए कार्रवाई दोहराएँ
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: ब्लॉक को यहाँ रखते हुए कार्रवाई दोहराएँ
       PS clone CSD U3 Variables Predict Where XY_callout:
         grid: ग्रिड दिखाने के लिए यहां क्लिक करें।
@@ -88,13 +98,19 @@ hi:
         craft_callout_moveforward: यह कोड लावा की जाँच करेगा, क्या आप आगे बढ़ने के लिए कमांड जोड़ सकते हैं?
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: यह कोड लावा की जाँच करेगा, क्या आप आगे बढ़ने के लिए कमांड जोड़ सकते हैं?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: यह कोड लावा की जाँच करेगा, क्या आप आगे बढ़ने के लिए कमांड जोड़ सकते हैं?
       Underground Iron_callout:
         craft_what_is_iron: इस लौह का खनन करें!
       Underground Iron_2018_callout:
         craft_what_is_iron: इस लौह का खनन करें!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: इस लौह का खनन करें!
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: याद रखें, यह देखने के लिए जांचें कि क्या प्रत्येक बादल में फ्लोअर है या नहीं। आपको हनीकॉम की जांच करने की ज़रूरत नहीं है।
       courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: याद रखें, यह देखने के लिए जांचें कि क्या प्रत्येक बादल में फ्लोअर है या नहीं। आपको हनीकॉम की जांच करने की ज़रूरत नहीं है।
+      courseD_bee_conditionals2_2019_callout:
         4_5_Bee_Conditionals_2_1: याद रखें, यह देखने के लिए जांचें कि क्या प्रत्येक बादल में फ्लोअर है या नहीं। आपको हनीकॉम की जांच करने की ज़रूरत नहीं है।
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: याद रखें, यह देखने के लिए जांचें कि क्या प्रत्येक बादल में फ्लोअर है या नहीं। आपको हनीकॉम की जांच करने की ज़रूरत नहीं है।
