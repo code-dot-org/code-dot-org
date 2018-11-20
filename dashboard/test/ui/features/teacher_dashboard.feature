@@ -172,6 +172,7 @@ Feature: Using the teacher dashboard
     And I wait for the page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
+    And I click selector "#x-close" once I see it
     And I close the instructions overlay if it exists
     And I press the first ".project_remix" element to load a new page
     And I wait for the page to fully load
