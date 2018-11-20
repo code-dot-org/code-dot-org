@@ -280,3 +280,26 @@ vi:
       Conditionals_2019:
         title: Điều kiện
         desc: Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu Tôi rút được một thẻ đen, bạn sẽ được một điểm."
+      GraphPaperProgramming_2019:
+        title: lập trình đồ thị trên giấy
+        desc: Học sinh viết một thuật toán (một tập hợp các hướng dẫn) bằng cách sử dụng tập hợp các lệnh đã được định nghĩa sẵn để chỉ dẫn các bạn cùng lớp tái hiện một bản vẽ.
+      RelayProgramming_2018_2019:
+        title: Chương trình chuyển tiếp
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Hoạt động không dùng máy
+        desc: Hôm nay bạn sẽ tìm hiểu một công dân số là thế nào.
+      BinaryImages_2019:
+        title: Hình ảnh Nhị phân
+        desc: Mặc dù nhiều người nghĩ rằng số nhị phân như số 0 hoặc số 1 có thực, các khóa học trước đó giảng dạy sinh viên rằng thông tin có thể được biểu diễn trong một loạt các số nhị phân.  Bài học này đưa ra khái niệm tiến xa hơn như cách minh họa làm thế nào một máy tính có thể lưu trữ các thông tin phức tạp hơn (chẳng hạn như hình ảnh và màu sắc) trong hệ nhị phân.
+      GettingLoopy_2019:
+        title: Tạo vòng lặp
+        desc: Bài này giới thiệu về khái niệm lập trình vòng lặp (các hướng dẫn lặp lại) qua hoạt động nhảy. Học sinh sẽ tìm hiểu về biên đạo múa cơ bản sau đó sẽ được hướng dẫn để lặp lại.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Hoạt động không dùng máy
+        desc: Hôm nay bạn sẽ tìm hiểu về những gì phải làm nếu một người nào đó được ám chỉ là đang online.
+      BigEvent_2019:
+        title: Sự kiện lớn
+        desc: Các bạn học sinh sẽ được giới thiệu về khái niệm lập trình "sự kiện", đó là những hoạt động máy tính liên tục theo dõi. Giáo viên sẽ bấm nút trên tờ giấy điều khiển từ xa và học sinh sẽ phản ứng tùy thuộc vào nút được nhấn.
+      BinaryBracelets_2019:
+        title: Vòng đeo tay nhị phân
+        desc: Học sinh tạo ra vòng tay như là một đại diện nhị phân của chữ cái đầu của tên của họ. Học sinh tìm hiểu rằng dữ liệu có thể được đại diện và lưu trữ theo nhiều hơn một cách.
