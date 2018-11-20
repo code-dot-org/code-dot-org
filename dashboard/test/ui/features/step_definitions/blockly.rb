@@ -124,33 +124,33 @@ Then /^block "([^"]*)" is not child of block "([^"]*)"$/ do |child, parent|
 end
 
 And /^I've initialized the workspace with an auto\-positioned flappy puzzle$/ do
-  @browser.execute_script("Blockly.mainBlockSpace.clear();")
+  clear_main_block_space
   blocks_xml = '<xml><block type="flappy_whenClick" deletable="false"><next><block type="flappy_flap_height"><title name="VALUE">Flappy.FlapHeight.NORMAL</title><next><block type="flappy_playSound"><title name="VALUE">"sfx_wing"</title></block></next></block></next></block><block type="flappy_whenCollideGround" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="when_run" deletable="false"><next><block type="flappy_setSpeed"><title name="VALUE">Flappy.LevelSpeed.NORMAL</title></block></next></block><block type="flappy_whenCollideObstacle" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="flappy_whenEnterObstacle" deletable="false"><next><block type="flappy_incrementPlayerScore"></block></next></block></xml>'
   arranged_blocks_xml = @browser.execute_script("return __TestInterface.arrangeBlockPosition('" + blocks_xml + "', {});")
   @browser.execute_script("__TestInterface.loadBlocks('" + arranged_blocks_xml + "');")
 end
 
 And /^I've initialized the workspace with an auto\-positioned flappy puzzle with extra newlines$/ do
-  @browser.execute_script("Blockly.mainBlockSpace.clear();")
+  clear_main_block_space
   blocks_xml = '\n\n    <xml><block type="flappy_whenClick" deletable="false"><next><block type="flappy_flap_height"><title name="VALUE">Flappy.FlapHeight.NORMAL</title><next><block type="flappy_playSound"><title name="VALUE">"sfx_wing"</title></block></next></block></next></block><block type="flappy_whenCollideGround" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="when_run" deletable="false"><next><block type="flappy_setSpeed"><title name="VALUE">Flappy.LevelSpeed.NORMAL</title></block></next></block><block type="flappy_whenCollideObstacle" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="flappy_whenEnterObstacle" deletable="false"><next><block type="flappy_incrementPlayerScore"></block></next></block></xml>'
   arranged_blocks_xml = @browser.execute_script("return __TestInterface.arrangeBlockPosition('" + blocks_xml + "', {});")
   @browser.execute_script("__TestInterface.loadBlocks('" + arranged_blocks_xml + "');")
 end
 
 And /^I've initialized the workspace with a manually\-positioned playlab puzzle$/ do
-  @browser.execute_script("Blockly.mainBlockSpace.clear();")
+  clear_main_block_space
   blocks_xml = '<xml><block type="studio_whenArrow" x="20"><title name="VALUE">up</title><next><block type="studio_move"><title name="DIR">1</title></block></next></block><block type="studio_whenArrow" y="20"><title name="VALUE">down</title><next><block type="studio_move"><title name="DIR">2</title></block></next></block><block type="studio_whenArrow" x="20" y="20"><title name="VALUE">left</title><next><block type="studio_move"><title name="DIR">4</title></block></next></block><block type="studio_whenArrow"><title name="VALUE">right</title><next><block type="studio_move"><title name="DIR">8</title></block></next></block></xml>'
   arranged_blocks_xml = @browser.execute_script("return __TestInterface.arrangeBlockPosition('" + blocks_xml + "', {});")
   @browser.execute_script("__TestInterface.loadBlocks('" + arranged_blocks_xml + "');")
 end
 
 And /^I've initialized the workspace with the solution blocks$/ do
-  @browser.execute_script("Blockly.mainBlockSpace.clear();")
+  clear_main_block_space
   @browser.execute_script("__TestInterface.loadBlocks(appOptions.level.solutionBlocks);")
 end
 
 And /^I've initialized the workspace with a studio say block saying "([^"]*)"$/ do |phrase|
-  @browser.execute_script("Blockly.mainBlockSpace.clear();")
+  clear_main_block_space
   xml = '<xml><block type="when_run" deletable="false"><next><block type="studio_saySprite"><title name="SPRITE">0</title><title name="TEXT">' + phrase + '</title></block></next></block></xml>'
   @browser.execute_script("__TestInterface.loadBlocks('" + xml + "');")
 end
@@ -245,4 +245,26 @@ def current_block_xml
   @browser.execute_script <<-JS
     return __TestInterface.getBlockXML();
   JS
+end
+
+def clear_main_block_space
+  # Do our async wait on the JavaScript side instead of polling over the wire.
+  # See https://seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/JavascriptExecutor.html
+  # and https://www.rubydoc.info/gems/selenium-webdriver/3.8.0/Selenium/WebDriver/Driver#execute_async_script-instance_method
+  result = @browser.execute_async_script <<-JS
+    var callback = arguments[arguments.length - 1];
+    var waitStart = Date.now();
+    var timeoutMs = 5000;
+    (function checkForAndClearMainBlockSpace() {
+      if (Blockly.mainBlockSpace) {
+        Blockly.mainBlockSpace.clear();
+        callback();
+      } else if (Date.now() - waitStart > timeoutMs){
+        callback('Timeout reached: Unable to clear Blockly.mainBlockSpace');
+      } else {
+        setTimeout(checkForAndClearMainBlockSpace(), 100);
+      }
+    }())
+  JS
+  expect(result).to be_nil
 end

@@ -1,9 +1,10 @@
-@no_older_chrome
+# Brad 2018-11-15 Known crash on SafariYosemite
+@no_older_chrome @no_safari_yosemite
 Feature: Dance Lab
   # This test relies on CloudFront signed cookies to access /restricted/ on the
   # test machine, but uses SoundLibraryApi for access in CircleCI.
   @no_firefox
-  @no_safari
+  @no_safari_yosemite
   Scenario: Restricted audio content is protected
     When I am on "http://studio.code.org/restricted/placeholder.txt"
     Then page text does not contain "placeholder for testing"
@@ -47,6 +48,11 @@ Feature: Dance Lab
     #Run for two measures until level success
     Then I click selector "#runButton" once I see it
     And I wait until element ".congrats" is visible
+
+  @no_mobile
+  Scenario: Dance Party 12 loads
+    Given I am on "http://studio.code.org/s/dance/stage/1/puzzle/12?noautoplay=true"
+    And I wait for the page to fully load
 
   @as_student
   @no_mobile
