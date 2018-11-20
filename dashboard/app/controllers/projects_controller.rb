@@ -322,9 +322,11 @@ class ProjectsController < ApplicationController
       game_display_name: data_t("game.name", @game.name),
     )
 
-    if params[:key] == 'artist'
+    if ['artist', 'dance'].include? params[:key]
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/_share_image.png", 'https:'
-    elsif params[:key] == 'dance' && DCDO.get('share_video_sharing_enabled', true)
+    end
+
+    if params[:key] == 'dance' && DCDO.get('share_video_sharing_enabled', true)
       # TODO: elijah set up test subdomains for dance-api, and situationally
       # point to those here
       @project_video = "https://dance-api.code.org/videos/video-#{@view_options['channel']}.mp4"
