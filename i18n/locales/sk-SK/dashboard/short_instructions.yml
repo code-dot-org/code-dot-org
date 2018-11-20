@@ -102,7 +102,7 @@ sk:
       2-3 Artist Nested Loops 9: "Dokončime tento obrázok pridaním kvetu. \n\nOpakuj kosoštvorec 12 krát aby si nakreslil svoj kvet."
       2-3 Artist Nested Loops Free Play: Máš voľné ruky, nakresli niečo zaujímavé s vnorenými cyklami.
       2-3 Bee Conditionals 1: Ahoj! Ja som včela. Pomôž mi získať nektár z kvetu.
-      2-3 Bee Conditionals 10: "Fialové kvety môžu mať buď 1 alebo 0 nektáru. Buď opatrní a nezbieraj nektár z kvetov, ak žiaden nemajú.\\r\n"
+      2-3 Bee Conditionals 10: 'Fialové kvety môžu mať buď 1 alebo 0 nektáru. Buď opatrný a nezbieraj nektár z kvetov, ak žiaden nemajú.  '
       2-3 Bee Conditionals 11: "Zbieraj nektár, kde kvety majú nektár."
       2-3 Bee Conditionals 12: Použi slučku na kontrolu a zber nektáru od všetkých týchto kvetov.
       2-3 Bee Conditionals 13: |-
@@ -171,7 +171,7 @@ sk:
       2-3 Bee Loops 6: Dokážeš nájsť najrýchlejšiu cestu pre včielku, aby mohla nazbierať všetok nektár a vyrobiť všetok med?
       2-3 Bee Loops 7: Aká krásna kvetinová lúka! Pomôž včielke navštíviť každý kvietok. Dokážeš to spraviť s menej ako 7 blokmi?
       2-3 Bee Loops 8: "Tieto fialové kvetinky majú pri každom spustení tejto úlohy iné množstvo nektáru. \n\nPoužite slučku \"pokiaľ je nektár\" pre pozbieranie všetkého nektáru. \n\nTáto slučka bude bežať tak dlho, pokiaľ bude splnená podmienka, v tomto prípade \"nektár > 0\"."
-      2-3 Bee Loops Assessment 1: 'Hodnotenie: Použite slučku "pokiaľ" pre pozbieranie všetkého nektáru z týchto kvetín.'
+      2-3 Bee Loops Assessment 1: 'Hodnotenie: Použi cyklus "pokiaľ", aby si pozbieral všetok nektár z týchto kvetín.'
       2-3 Maze 1: 'Viete mi pomôcť chytiť nezbedné prasiatko? Navrstvite niekoľko blokov "posunúť dopredu" pod blok "po spustení" a stlačte "Spustiť". '
       2-3 Maze 10: Naviguj ma k zelenému zlu! (Pozor na TNT)
       2-3 Maze 11: Dostaňte ma ku kvetinke, som hladný. Koľkokrát musíte zopakovať blok?
@@ -207,6 +207,7 @@ sk:
       2-3 maze sq14: Viete sa dostať k slnečnici použitím len štyroch blokov?
       2-3 maze sq15: Viete sa dostať k slnečnici použitím len piatich blokov?
       2-3 maze sq16: Ok, toto je podobné, ale mierne rozdielne. Spravíš to použitím len piatich blokov?
+      2-3: Fialové kvety môžu mať buď 1 alebo 0 nektáru. Buď opatrný a nezbieraj nektár z kvetov, ak žiaden nemajú.
       2-3level1: Pomôžte vtáčikovi chytiť nezbedné prasiatko posúvanim ho dopredu
       20hr_farmer_stage9_1: Ahoj, ja som farmár. Potrebujem vašu pomoc zploštit pole na mojej farme, tak aby bolo pripravené pre výsadbu. Presuňte ma na hromadu hliny a použite blok "odstrániť" na jeho odstránenie.
       20hr_farmer_stage9_11: 'Ešte stále je vonku tma. Posúvaj ma po poli. Ak tu je hromada, odstráň ju a ak tam je diera, vyplň ju. Poznámka: použi možnosti z rozbaľovacieho menu v bloku "if".'
@@ -566,25 +567,35 @@ sk:
       New Minecraft Hero Project: "**Voľná hra:** Čas skúmať na vlastnú päsť!"
       Overworld Avoid Monsters: "Naraziť do Creepera nie je dobrý nápad.\nOpatrne prebehni popri Creeperoch a dostaň sa do bezpečia svojho domova."
       Overworld Avoid Monsters_2018: "Naraziť do Creepera nie je dobrý nápad.\nOpatrne prebehni popri Creeperoch a dostaň sa do bezpečia svojho domova."
+      Overworld Avoid Monsters_2019: "Naraziť do Creepera nie je dobrý nápad.\nOpatrne prebehni popri Creeperoch a dostaň sa do bezpečia svojho domova."
       Overworld Chop Tree - allthethings: Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa vecí. Kráčaj ku stromu a použi príkaz "znič blok" na to, aby si ho vyrúbal.
       Overworld Chop Tree: Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa vecí. Kráčaj ku stromu a použi príkaz "znič blok" na to, aby si ho vyrúbal.
       Overworld Chop Tree_2018: Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa vecí. Kráčaj ku stromu a použi príkaz "znič blok" na to, aby si ho vyrúbal.
+      Overworld Chop Tree_2019: Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa vecí. Kráčaj ku stromu a použi príkaz "znič blok" na to, aby si ho vyrúbal.
       Overworld Chop Trees: Potrebujeme postaviť dom pred tým, než slnko zapadne. Domy vyžadujú veľa dreva. Vysekaj všetky 3 stromy.
       Overworld Chop Trees_2018: Potrebujeme postaviť dom pred tým, než slnko zapadne. Domy vyžadujú veľa dreva. Vysekaj všetky 3 stromy.
+      Overworld Chop Trees_2019: Potrebujeme postaviť dom pred tým, než slnko zapadne. Domy vyžadujú veľa dreva. Vysekaj všetky 3 stromy.
       Overworld Free Play 20x20: Gratulujeme! Dokončil si všetky úlohy! Teraz ťaž v bani, stavaj a vytvor niečo jedinečné použitím všetkého, čo si sa doteraz naučil.
       Overworld Free Play 20x20_2018: Gratulujeme! Dokončil si všetky úlohy! Teraz ťaž v bani, stavaj a vytvor niečo jedinečné použitím všetkého, čo si sa doteraz naučil.
+      Overworld Free Play 20x20_2019: Gratulujeme! Dokončil si všetky úlohy! Teraz ťaž v bani, stavaj a vytvor niečo jedinečné použitím všetkého, čo si sa doteraz naučil.
       Overworld House Frame Chosen: Vybuduj zvyšok svojho domu z hocijakého materiálu, ktorý sa ti páči. Príkaz "opakuj" ti pri tom veľmi pomôže.
       Overworld House Frame Chosen_2018: Vybuduj zvyšok svojho domu z hocijakého materiálu, ktorý sa ti páči. Príkaz "opakuj" ti pri tom veľmi pomôže.
+      Overworld House Frame Chosen_2019: Vybuduj zvyšok svojho domu z hocijakého materiálu, ktorý sa ti páči. Príkaz "opakuj" ti pri tom veľmi pomôže.
       Overworld Move to Sheep: Pridaj ešte jeden príkaz "posuň sa dopredu", aby si sa dostal ku ovci.
       Overworld Move to Sheep_2018: Pohni sa ešte o jeden krok dopredu, aby si sa dostal ku ovci.
+      Overworld Move to Sheep_2019: Pohni sa ešte o jeden krok dopredu, aby si sa dostal ku ovci.
       Overworld Place Wall: Každý dom začína so stenou. Postav prvú časť domu tak, že použiješ príkazy "polož" a "posuň sa dopredu" vo vnútri opakujúceho sa cyklu.
       Overworld Place Wall_2018: Každý dom začína so stenou. Postav prvú časť domu tak, že použiješ príkazy "polož" a "posuň sa dopredu" vo vnútri opakujúceho sa cyklu.
+      Overworld Place Wall_2019: Každý dom začína so stenou. Postav prvú časť domu tak, že použiješ príkazy "polož" a "posuň sa dopredu" vo vnútri opakujúceho sa cyklu.
       Overworld Plant Crops: Je dobré plánovať veci dopredu. Zasaď plodiny na oboch stranách vody, aby si neskôr nebol hladný.
       Overworld Plant Crops_2018: Je dobré plánovať veci dopredu. Zasaď plodiny na oboch stranách vody, aby si neskôr nebol hladný.
+      Overworld Plant Crops_2019: Je dobré plánovať veci dopredu. Zasaď plodiny na oboch stranách vody, aby si neskôr nebol hladný.
       Overworld Powered Minecart: Skvelá práca! Zhromaždil si veľa zdrojov a postavil si skromný dom. Teraz polož koľajnice od rohu mapy až ku dverám tvojho domu.
       Overworld Powered Minecart_2018: Skvelá práca! Zhromaždil si veľa zdrojov a postavil si skromný dom. Teraz polož koľajnice od rohu mapy až ku dverám tvojho domu.
+      Overworld Powered Minecart_2019: Skvelá práca! Zhromaždil si veľa zdrojov a postavil si skromný dom. Teraz polož koľajnice od rohu mapy až ku dverám tvojho domu.
       Overworld Shear Sheep: Je čas na strihanie oviec! Použi príkaz “strihaj“ na to, aby si z oviec zozbieral vlnu.
       Overworld Shear Sheep_2018: Je čas na strihanie oviec! Použi príkaz “strihaj“ na to, aby si z oviec zozbieral vlnu.
+      Overworld Shear Sheep_2019: Je čas na strihanie oviec! Použi príkaz “strihaj“ na to, aby si z oviec zozbieral vlnu.
       PS - test - pixelation: Dokončite tvar X písaním núl a jednotiek
       PS copy 2-3 Bee Conditionals 5: "Fialové kvety môžu mať buď 1 alebo 0 nektáru, ale nevieš, ktorý z nich! Pozor, nezbieraj nektár z fialových kvetov, ak ho nemajú. Skontrolujte, či nektár je rovný 1 pomocou bloku \"if\"."
       SpecialFrozenLevel: Oficiálne se z teba stal majster umelec! Vytvor zimnú krajinu zázrakov.
@@ -609,12 +620,16 @@ sk:
       U4 vigenere cipher 2: Inštrukcie
       Underground Avoiding Lava: Láva sa ukrýva pod niektorými z týchto blokov, ktoré budeš potrebovať zakryť predtým, než sa posunieš vpred. K tomu môžeš použiť príkaz "ak". Pridaj príkaz "posuň sa dopredu" na správne miesto, aby si vyťažil tieto bloky.
       Underground Avoiding Lava_2018: Láva sa ukrýva pod niektorými z týchto blokov, ktoré budeš potrebovať zakryť predtým, než sa posunieš vpred. K tomu môžeš použiť príkaz "ak". Pridaj príkaz "posuň sa dopredu" na správne miesto, aby si vyťažil tieto bloky.
+      Underground Avoiding Lava_2019: Láva sa ukrýva pod niektorými z týchto blokov, ktoré budeš potrebovať zakryť predtým, než sa posunieš vpred. K tomu môžeš použiť príkaz "ak". Pridaj príkaz "posuň sa dopredu" na správne miesto, aby si vyťažil tieto bloky.
       Underground If Statements: Teraz to bude zapeklité. Vyťaž 3 rudity, no nespadni pritom do lávy. Použí príkaz "ak" aby si umiestnil kamene cez všetku lávu, ktorú odkryješ.
       Underground If Statements_2018: Teraz to bude zapeklité. Vyťaž 3 rudity, no nespadni pritom do lávy. Použí príkaz "ak" aby si umiestnil kamene cez všetku lávu, ktorú odkryješ.
+      Underground If Statements_2019: Teraz to bude zapeklité. Vyťaž 3 rudity, no nespadni pritom do lávy. Použí príkaz "ak" aby si umiestnil kamene cez všetku lávu, ktorú odkryješ.
       Underground Iron: Vstúpiť do roztavenej lávy je zlý nápad. Pomocou kameňa vytvor most a potom vyťaž aspoň dva bloky železa.
       Underground Iron_2018: Vstúpiť do roztavenej lávy je zlý nápad. Pomocou kameňa vytvor most a potom vyťaž aspoň dva bloky železa.
+      Underground Iron_2019: Vstúpiť do roztavenej lávy je zlý nápad. Pomocou kameňa vytvor most a potom vyťaž aspoň dva bloky železa.
       Underground Mining Coal: Najcennejšie zdroje nájdeš v podzemí, ale môže sa tam stmievať. Polož tam aspoň 2 fakle a vyťaž aspoň 2 kusy uhlia.
       Underground Mining Coal_2018: Najcennejšie zdroje nájdeš v podzemí, ale môže sa tam stmievať. Polož tam aspoň 2 fakle a vyťaž aspoň 2 kusy uhlia.
+      Underground Mining Coal_2019: Najcennejšie zdroje nájdeš v podzemí, ale môže sa tam stmievať. Polož tam aspoň 2 fakle a vyťaž aspoň 2 kusy uhlia.
       Virtual Pet 1 Predict: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Virtual Pet 1 Predict_2019: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Virtual Pet 1 Predict_simple: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
@@ -646,10 +661,13 @@ sk:
       course4_artist_fwp_challenge1: Skús spustiť tento program a spraviť v ňom zmeny a pozri, čo sa stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž a nahraď niečim úplne iným)
       courseC_flappy_events10: 'Vytvor vlastnú hru Flappy! '
       courseC_flappy_events10_2018: 'Vytvor vlastnú hru Flappy! '
+      courseC_flappy_events10_2019: 'Vytvor vlastnú hru Flappy! '
       courseD_Frozen_nested5: Zahraj sa so snehovými vločkami!
       courseD_artist_5_2018: Zahraj sa so snehovými vločkami!
+      courseD_artist_5_2018_2019: Zahraj sa so snehovými vločkami!
       courseD_artist_binary1: Použite bloky nižšie, aby umelec nakreslil "01010101" v binárnom kóde v prvom riadku.
       courseD_artist_binary1_2018: Použite bloky nižšie, aby umelec nakreslil "01010101" v binárnom kóde v prvom riadku.
+      courseD_artist_binary1_2019: Použite bloky nižšie, aby umelec nakreslil "01010101" v binárnom kóde v prvom riadku.
       courseD_artist_embed_frozen: Stlač tlačidlo "Spustiť" aby sa ti ukázal dizajn snehovej vločky!
       courseD_artist_embed_frozen2: Stlač tlačidlo"Spustiť", aby sa ti ukázal dizajn tvojej snehovej vločky.
       courseD_artist_project5: Zahraj sa so snehovými vločkami!
@@ -777,7 +795,7 @@ sk:
       grade3_Conditionals_10 BAD: Pozbierajte nektár z radov s kvetinkami! Použite vnorenú slučku.
       grade3_Conditionals_10: |-
         Zbieraj nektár a urob med. Tip: čo sa stane, ak použiješ podmienku "if nectar" na červený kvet? Dokážeš to dokončiť so slučkou?
-      grade3_Conditionals_11 BAD: 'Hodnotenie: Použite slučku "pokiaľ" pre pozbieranie všetkého nektáru z týchto kvetín.'
+      grade3_Conditionals_11 BAD: 'Hodnotenie: Použi cyklus "pokiaľ", aby si pozbieral všetok nektár z týchto kvetín.'
       grade3_Conditionals_11: |-
         Zbieraj nektár a urob med. Pozor, nezbieraj nektár z fialových kvetov, ak ho nemajú.
       grade3_Conditionals_12: "Pozbieraj nektár zo všetkých štyroch kvetov."
