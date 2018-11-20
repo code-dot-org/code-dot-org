@@ -371,6 +371,7 @@ vi:
       playlab: Phòng trò chơi
       minecraft: Minecraft
       flappy: Flappy bird
+      dance: Bữa tiệc khiêu vũ
     popup:
       progress_for_user: sự tiến bộ của %{name}
       progress: Qua trình của bạn
@@ -755,6 +756,8 @@ vi:
         và chia sẻ ứng dụng của bạn trong vài giây.
       audience: Lứa tuổi 13 +
       cta: Học cách làm
+    dance:
+      title: Bữa tiệc khiêu vũ
     hoc:
       title: Mê cung cổ điển
       body: Hãy thử những lớp khoa học máy tính că bản. Hàng triệu người đã thử học

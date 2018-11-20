@@ -274,6 +274,15 @@ fi:
           LOCATION:
             "{x: 100, y: 200}": vasemmalle
             "{x: 300, y: 200}": oikealle
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": vasemmalle
+            "{x: 300, y: 200}": oikealle
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': kaikki
       Mikelab_getProp:
         options:
           PROPERTY:

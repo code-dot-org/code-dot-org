@@ -3998,6 +3998,7 @@ is:
       Geometric Pattern: "**Hugmynd að verkefni:** Búðu til mynstur sem notar hugtök úr flatarmálsfræði svo sem form. Þetta krefst úthalds og skipulags!"
       Geometric Sun: "**Hugmynd að verkefni:** Búðu til mynstur sem notar hugtök úr flatarmálsfræði svo sem form. Þetta krefst úthalds og skipulags!"
       Geometric Sun_2018: "**Hugmynd að verkefni:** Búðu til mynstur sem notar hugtök úr flatarmálsfræði svo sem form. Þetta krefst úthalds og skipulags!"
+      Geometric Sun_2019: "**Hugmynd að verkefni:** Búðu til mynstur sem notar hugtök úr flatarmálsfræði svo sem form. Þetta krefst úthalds og skipulags!"
       Harvesting: "Ó nei, ég týndi kortinu og man ekki hvað ég setti niður! Hver sproti gæti orðið að **maís** ![mynd af maís](https://images.code.org/cac3133c40781553a70066a67298b2b5-image-1472493202556.png)\n, **baunum** ![mynd af baunum](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png)\n eða **graskeri** ![mynd af graskeri](https://images.code.org/03cf76a978e0788ccb53f14e9d264695-image-1472493237148.png)\n. Getur þú skrifað kóða til að taka upp allar afurðirnar óháð tegund?"
       Inspirational Artwork: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\\r\n\\r\n**Hugmyndir fyrir frjálsa æfingu:** Nú hefur þú lært allt sem þú þarft að kunna til að búa til svona mynstur! \\r\n\\r\nEf þér finnst þessi mynd áhugaverð getur þú reynt að gera eitthvað svipað. Eða búið til eitthvað sem er alfarið þitt eigið.\\r\n\\r\nAthugaðu:\nVið höfum notað `stilla alfa` kubbinn til að láta lit krónublaðanna dofna þegar utar dregur."
       InspirationalArtwork: "Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur!\\r\n\\r\nEf þessi mynd gefur þér hugmyndir, gætir þú glímt við eitthvað svipað. Annars bara eitthvað sem þér dettur í hug.\\r\n"
@@ -4078,6 +4079,7 @@ is:
       NEW Course 4 Play Labs For Loops 8a: "**Áskorun:** Hvernig mundir þú nota `frá` lykkjuna til að byrja efst og fara niður á botn, láta hverja persónu segja númer sitt og hverfa svo af skjánum? "
       Overworld Move to Sheep: Bættu við annarri "færa áfram" skipun til að ná til kindarinnar.
       Overworld Move to Sheep_2018: Bættu við annarri "færa áfram" skipun til að ná til kindarinnar.
+      Overworld Move to Sheep_2019: Bættu við annarri "færa áfram" skipun til að ná til kindarinnar.
       PS - test - pixelation: |-
         # Gerðu þetta\r
         \r
@@ -4129,6 +4131,7 @@ is:
         Hve oft mun `frá` lykkjan hér fyrir neðan keyra?
       Robot Doodle: "**Hugmynd að verkefni:** Búðu til mynd af einhverju kunnuglegu úr raunheimi. Þetta krefst úthalds og skipulagningar!"
       Robot Doodle_2018: "**Hugmynd að verkefni:** Búðu til mynd af einhverju kunnuglegu úr raunheimi. Þetta krefst úthalds og skipulagningar!"
+      Robot Doodle_2019: "**Hugmynd að verkefni:** Búðu til mynd af einhverju kunnuglegu úr raunheimi. Þetta krefst úthalds og skipulagningar!"
       Robot Drawing: "**Hugmynd að verkefni:** Búðu til mynd af einhverju kunnuglegu úr raunheimi. Þetta krefst úthalds og skipulagningar!"
       Robot: "**Hugmynd að verkefni:** Búðu til mynd af einhverju kunnuglegu úr raunheimi. Þetta krefst úthalds og skipulagningar!"
       Room Escape Workshop - 1: |-
@@ -4974,6 +4977,7 @@ is:
         Spilaðu leikinn og hreyfðu Waddles með örvunum þar til þú skorar nógu mörg stig. Til að ljúka áskoruninni þarf að færa Waddles á miðjan skjáinn vinstra megin.
       courseC_artist_loop1: "Frábært!  \\r\n\\r\nGerum þetta svolítið skrautlegra með því að breyta penslinum með `stilla mynstur` kubbnum áður en lykkjan okkar byrjar."
       courseC_artist_loop1_2018: "Frábært!  \\r\n\\r\nGerum þetta svolítið skrautlegra með því að breyta penslinum með `stilla mynstur` kubbnum áður en lykkjan okkar byrjar."
+      courseC_artist_loop1_2019: "Frábært!  \\r\n\\r\nGerum þetta svolítið skrautlegra með því að breyta penslinum með `stilla mynstur` kubbnum áður en lykkjan okkar byrjar."
       courseC_artist_loops1a: "Við skulum smíða eitthvað stærra, eitt skref í einu! \\r\n\\r\nNotaðu kubbinn `hoppa á 200 þvert 200 niður` til að koma listamanninum í miðju leiksvæðisins, og notaðu svo `teikna límmiða` kubbinn til að líma mynd af fugli. "
       courseC_artist_loops2: |-
         Nú þegar uppvakningurinn þekkir leiðina, þarf að hjálpa honum að grafa **25 díla langar** holur á slóðinni til að planta fleiri blómum!\r
@@ -4981,8 +4985,10 @@ is:
         - Bilið á milli hola er 25 dílar
       courseC_artist_loops2a: Notaðu nú lykkju til að snúa fuglinum um 30 gráður 12 sinnum.
       courseC_artist_loops2a_2018: Notaðu nú lykkju til að snúa fuglinum um 30 gráður 12 sinnum.
+      courseC_artist_loops2a_2019: Notaðu nú lykkju til að snúa fuglinum um 30 gráður 12 sinnum.
       courseC_artist_loops3a: "Þetta er skemmtilegt!  \\r\n\\r\nBættu nú við límmiða með leðurblöku rétt á eftir fuglinum til að búa til mynd eins og þá hér fyrir neðan.\\r\n___\\r\n\\r\n![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
       courseC_artist_loops3a_2018: "Þetta er skemmtilegt!  \\r\n\\r\nBættu nú við límmiða með leðurblöku rétt á eftir fuglinum til að búa til mynd eins og þá hér fyrir neðan.\\r\n___\\r\n\\r\n![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
+      courseC_artist_loops3a_2019: "Þetta er skemmtilegt!  \\r\n\\r\nBættu nú við límmiða með leðurblöku rétt á eftir fuglinum til að búa til mynd eins og þá hér fyrir neðan.\\r\n___\\r\n\\r\n![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
       courseC_artist_loops4a: |-
         Breyttu kóðanum svo þú hoppir áfram um 75 díla milli þess að setja fuglinn og setja leðurblökuna.\r
         ___\r
@@ -4997,8 +5003,13 @@ is:
         Hvað gerist þegar þú skiptir út öðrum eða báðum límmiðum fyrir aðra veru?\r
         ___\r
         ![](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+      courseC_artist_loops5a_2019: |-
+        Hvað gerist þegar þú skiptir út öðrum eða báðum límmiðum fyrir aðra veru?\r
+        ___\r
+        ![](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
       courseC_artist_loops5b: "Hvað gerist þegar þú notar `færa áfram`\nsíðan `færa aftur á bak` um 100, 200 eða 400 díla einhvers staðar í lykkjunni?  \\r\n-\nPrófaðu að nota `stilla mynstur` kubbinn áður en lykkjan byrjar til að búa til listaverk!\\r\n___\\r\n![](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
       courseC_artist_loops5b_2018: "Hvað gerist þegar þú notar `færa áfram`\nsíðan `færa aftur á bak` um 100, 200 eða 400 díla einhvers staðar í lykkjunni?  \\r\n-\nPrófaðu að nota `stilla mynstur` kubbinn áður en lykkjan byrjar til að búa til listaverk!\\r\n___\\r\n![](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
+      courseC_artist_loops5b_2019: "Hvað gerist þegar þú notar `færa áfram`\nsíðan `færa aftur á bak` um 100, 200 eða 400 díla einhvers staðar í lykkjunni?  \\r\n-\nPrófaðu að nota `stilla mynstur` kubbinn áður en lykkjan byrjar til að búa til listaverk!\\r\n___\\r\n![](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
       courseC_artist_loops6: "Hvað ætti uppvakningurinn að setja í garðinn? \\r\n\\r\nTeiknaðu hvað sem þú vilt innan girðingarinnar. Viltu hafa blóm eða kannske pöddur?\\r\n*(Sjá fleiri hugmyndir í vísbendingum.)*\\r\n\\r\n\\r\n"
       courseC_artist_loops6a: |-
         Bættu þriðja límmiðanum einhvers staðar í lykkjuna! Hvernig lítur þetta út núna?\r
@@ -5008,6 +5019,13 @@ is:
         \r
         ![](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
       courseC_artist_loops6a_2018: |-
+        Bættu þriðja límmiðanum einhvers staðar í lykkjuna! Hvernig lítur þetta út núna?\r
+        - Breyttu mynstrinu í penslinum til að gera þetta fjölbreytilegra!\r
+        \r
+        ___\r
+        \r
+        ![](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
+      courseC_artist_loops6a_2019: |-
         Bættu þriðja límmiðanum einhvers staðar í lykkjuna! Hvernig lítur þetta út núna?\r
         - Breyttu mynstrinu í penslinum til að gera þetta fjölbreytilegra!\r
         \r
@@ -5032,6 +5050,15 @@ is:
         Þessi mynd notar sjóræningja, ninju og gíraffa. Þau snúa 18 sinnum um 20 gráður.\r
         \r
         ![](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
+      courseC_artist_loops7a_2019: |-
+        Prófaðu að breyta `endurtaka` lykkjunni og keyra hana mismunandi oft.  Hversu langt þarft þú að snúa til að fara í heilan hring?\r
+        - Prófaðu að breyta hve oft þú snýrð\r
+        - Prófaðu að snúa um 60 gráður 6 sinnum\r
+        - Prófaðu að snúa um 20 gráður 18 sinnum\r
+        ___\r
+        Þessi mynd notar sjóræningja, ninju og gíraffa. Þau snúa 18 sinnum um 20 gráður.\r
+        \r
+        ![](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
       courseC_artist_loops8a: |-
         Prófaðu nú að skapa eitthvað alfarið þitt eigið.  Hvað gerist þegar þú býrð til tvo aðskilda hringi með ólíkum límmiðum?\r
         ___\r
@@ -5044,16 +5071,27 @@ is:
         Vantar þig hugmyndir? Prófaðu búa til svona hönnun.\r
         \r
         ![](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
+      courseC_artist_loops8a_2019: |-
+        Prófaðu nú að skapa eitthvað alfarið þitt eigið.  Hvað gerist þegar þú býrð til tvo aðskilda hringi með ólíkum límmiðum?\r
+        ___\r
+        Vantar þig hugmyndir? Prófaðu búa til svona hönnun.\r
+        \r
+        ![](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
       courseC_artist_loopsPre1a: |-
         Settu nú kóðann sem þú hefur innan í `endurtaka` lykkju og láttu hana fara 6 umferðir.\r
         - Þú þarft að snúa um 60 gráður í lok hverrar lykkju til að fá myndina á skjánum.
       courseC_artist_loopsPre1a_2018: |-
         Settu nú kóðann sem þú hefur innan í `endurtaka` lykkju og láttu hana fara 6 umferðir.\r
         - Þú þarft að snúa um 60 gráður í lok hverrar lykkju til að fá myndina á skjánum.
+      courseC_artist_loopsPre1a_2019: |-
+        Settu nú kóðann sem þú hefur innan í `endurtaka` lykkju og láttu hana fara 6 umferðir.\r
+        - Þú þarft að snúa um 60 gráður í lok hverrar lykkju til að fá myndina á skjánum.
       courseC_artist_loopsPrePre1a: "Notaðu kubbinn `hoppa á 200 þvert\n200 niður` til að fá listamanninn inn í miðju leiksvæðisins. Teiknaðu svo línu sem er 50 díla löng með kubbnum `færa áfram 50 díla`."
       courseC_artist_loopsPrePre1a_2018: "Notaðu kubbinn `hoppa á 200 þvert\n200 niður` til að fá listamanninn inn í miðju leiksvæðisins. Teiknaðu svo línu sem er 50 díla löng með kubbnum `færa áfram 50 díla`."
+      courseC_artist_loopsPrePre1a_2019: "Notaðu kubbinn `hoppa á 200 þvert\n200 niður` til að fá listamanninn inn í miðju leiksvæðisins. Teiknaðu svo línu sem er 50 díla löng með kubbnum `færa áfram 50 díla`."
       courseC_artist_loopsTemplateA: "Notaðu kubbinn `hoppa á 200 þvert\n200 niður` til að koma listamanninum í miðju leiksvæðisins, og notaðu svo `teikna límmiða` kubbinn til að líma mynd af fugli. "
       courseC_artist_loopsTemplateA_2018: "Notaðu kubbinn `hoppa á 200 þvert\n200 niður` til að koma listamanninum í miðju leiksvæðisins, og notaðu svo `teikna límmiða` kubbinn til að líma mynd af fugli. "
+      courseC_artist_loopsTemplateA_2019: "Notaðu kubbinn `hoppa á 200 þvert\n200 niður` til að koma listamanninum í miðju leiksvæðisins, og notaðu svo `teikna límmiða` kubbinn til að líma mynd af fugli. "
       courseC_artist_prog1: |-
         *"Hæ, ég er listamaður. Þú getur skrifað kóða til að láta mig teikna næstum hvað sem er."*\r
         \r
@@ -5075,25 +5113,34 @@ is:
         Leitum að fjársjóði - með lykkjum! Hjálpaðu safnaranum með því að fjarlægja villur úr þessum kóða. Náðu öllum fjársjóðunum!
       courseC_collector_loops_challenge2_2018: |-
         Leitum að fjársjóði - með lykkjum! Hjálpaðu safnaranum með því að fjarlægja villur úr þessum kóða. Náðu öllum fjársjóðunum!
+      courseC_collector_loops_challenge2_2019: |-
+        Leitum að fjársjóði - með lykkjum! Hjálpaðu safnaranum með því að fjarlægja villur úr þessum kóða. Náðu öllum fjársjóðunum!
       courseC_collector_prog9: '*"Náum öllum fjársjóðnum!"*'
       courseC_collector_prog9_2018: '*"Náum öllum fjársjóðnum!"*'
+      courseC_collector_prog9_2019: '*"Náum öllum fjársjóðnum!"*'
       courseC_collector_prog_challenge2: '*Hér má finna **20** fjársjóði. Safnaðu að minnsta kosti helmingnum til að ljúka þessari áskorun!*'
       courseC_collector_prog_challenge2_2018: '*Hér má finna **20** fjársjóði. Safnaðu að minnsta kosti helmingnum til að ljúka þessari áskorun!*'
+      courseC_collector_prog_challenge2_2019: '*Hér má finna **20** fjársjóði. Safnaðu að minnsta kosti helmingnum til að ljúka þessari áskorun!*'
       courseC_flappy_events7: Prófaðu svo að breyta umhverfinu með því að tengja kubb við `þegar keyrt` kubbinn.
       courseC_flappy_events7_2018: Prófaðu svo að breyta umhverfinu með því að tengja kubb við `þegar keyrt` kubbinn.
+      courseC_flappy_events7_2019: Prófaðu svo að breyta umhverfinu með því að tengja kubb við `þegar keyrt` kubbinn.
       courseC_flappy_events9: Breyttu þessu nú þannig að í stað þess að leikurinn endi þegar Flappy rekst á hindrun þá stillist skorið aftur á 0.
       courseC_flappy_events9_2018: Breyttu þessu nú þannig að í stað þess að leikurinn endi þegar Flappy rekst á hindrun þá stillist skorið aftur á 0.
+      courseC_flappy_events9_2019: Breyttu þessu nú þannig að í stað þess að leikurinn endi þegar Flappy rekst á hindrun þá stillist skorið aftur á 0.
       courseC_harvester_loops_challenge1: Safnaðu öllu korninu.
       courseC_harvester_loops_challenge2: "Safnaðu öllu kálinu.\nForðastu tré og tún!"
       courseC_harvester_loops_challenge2_2018: "Safnaðu öllu kálinu.\nForðastu tré og tún!"
       courseC_maze_debugging_challenge2: '*"Ef ég snýst of oft, gæti mig svimað! Hjálpaðu mér að ná til svínsins með aðeins fjórum `snúa` skipunum."*'
       courseC_maze_debugging_challenge2_2018: '*"Ef ég snýst of oft, gæti mig svimað! Hjálpaðu mér að ná til svínsins með aðeins fjórum `snúa` skipunum."*'
+      courseC_maze_debugging_challenge2_2019: '*"Ef ég snýst of oft, gæti mig svimað! Hjálpaðu mér að ná til svínsins með aðeins fjórum `snúa` skipunum."*'
       courseC_maze_loops2_predict1: "Nú færðu töfrakubb til að nota! \\r\nMeð `endurtaka` kubbnum getur þú endurtekið kóða aftur og aftur í lykkju.\\r\n\\r\nGetur þú komið fuglinum til svínsins með því að búa til lykkju sem notar bara einn `færa áfram` kubb innan í `endurtaka` kubbi?"
       courseC_maze_loops_challenge2: Leitum að fjársjóði - með lykkjum! Hjálpaðu safnaranum með því að fjarlægja villur úr þessum kóða. Náðu öllum fjársjóðnum!
       courseC_maze_programming1: 'Í þessari þraut: Dragðu alla kubbana saman og smelltu á "Keyra" til að sjá hvað gerist!'
       courseC_maze_programming1_2018: 'Í þessari þraut: Dragðu alla kubbana saman og smelltu á "Keyra" til að sjá hvað gerist!'
+      courseC_maze_programming1_2019: 'Í þessari þraut: Dragðu alla kubbana saman og smelltu á "Keyra" til að sjá hvað gerist!'
       courseC_maze_programming4: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\\r\n\\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
       courseC_maze_programming4_2018: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\\r\n\\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
+      courseC_maze_programming4_2019: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\\r\n\\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
       courseC_maze_programming5: |-
         *"Fylgdu þessari slóð til að koma mér til svínsins!"*\r
         \r
@@ -5102,19 +5149,30 @@ is:
         *"Fylgdu þessari slóð til að koma mér til svínsins!"*\r
         \r
         Gættu þín á TNT.
+      courseC_maze_programming5_2019: |-
+        *"Fylgdu þessari slóð til að koma mér til svínsins!"*\r
+        \r
+        Gættu þín á TNT.
       courseC_maze_programming8: '*"Haltu ró þinni og hjálpaðu mér að finna vonda svínið."*'
       courseC_maze_programming8_2018: '*"Haltu ró þinni og hjálpaðu mér að finna vonda svínið."*'
+      courseC_maze_programming8_2019: '*"Haltu ró þinni og hjálpaðu mér að finna vonda svínið."*'
       courseC_maze_programming8_predict1: '*"Haltu ró þinni og hjálpaðu mér að finna vonda svínið."*'
       courseC_maze_programming8_predict1_2018: '*"Haltu ró þinni og hjálpaðu mér að finna vonda svínið."*'
+      courseC_maze_programming8_predict1_2019: '*"Haltu ró þinni og hjálpaðu mér að finna vonda svínið."*'
       courseC_maze_programming_challenge1: '*"Svínið er í felum! Getur þú hjálpað mér að finna leið?"*'
       courseC_maze_programming_challenge1_2018: '*"Svínið er í felum! Getur þú hjálpað mér að finna leið?"*'
+      courseC_maze_programming_challenge1_2019: '*"Svínið er í felum! Getur þú hjálpað mér að finna leið?"*'
       courseC_maze_programming_challenge2: Stundum er fleiri en leið til að leysa þraut. Stundum er fljótlegra að fara aftur á bak heldur en áfram!
       courseC_maze_programming_challenge2_2018: Stundum er fleiri en leið til að leysa þraut. Stundum er fljótlegra að fara aftur á bak heldur en áfram!
+      courseC_maze_programming_challenge2_2019: Stundum er fleiri en leið til að leysa þraut. Stundum er fljótlegra að fara aftur á bak heldur en áfram!
       courseC_starWars_loops1: "<img src=\"https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif\"\nstyle=\"border-radius:6px; float:left; margin: 0 10px 10px 0;\"/> BB-8 tínir upp glóandi brotamálm á hreyfingu. Hjálpaðu BB-8 að ná honum öllum!  \\r\nGættu þín á veggjum og kössum!  \\r\n"
       courseC_starWars_loops1_2018: "<img src=\"https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif\"\nstyle=\"border-radius:6px; float:left; margin: 0 10px 10px 0;\"/> BB-8 tínir upp glóandi brotamálm á hreyfingu. Hjálpaðu BB-8 að ná honum öllum!  \\r\nGættu þín á veggjum og kössum!  \\r\n"
+      courseC_starWars_loops1_2019: "<img src=\"https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif\"\nstyle=\"border-radius:6px; float:left; margin: 0 10px 10px 0;\"/> BB-8 tínir upp glóandi brotamálm á hreyfingu. Hjálpaðu BB-8 að ná honum öllum!  \\r\nGættu þín á veggjum og kössum!  \\r\n"
       courseC_starWars_loops8: |-
         **Áskorun:** Notaðu hugmyndir úr síðustu þrautum saman til að ljúka þessu stigi.
       courseC_starWars_loops8_2018: |-
+        **Áskorun:** Notaðu hugmyndir úr síðustu þrautum saman til að ljúka þessu stigi.
+      courseC_starWars_loops8_2019: |-
         **Áskorun:** Notaðu hugmyndir úr síðustu þrautum saman til að ljúka þessu stigi.
       courseD_Frozen_nested1: "Teiknaðu lítið form, á milli **20 og 50** díla breitt.  Það má vera hvaða form sem þú vilt.  \\r\n<hr/>\\r\n\\r\nÞú getur prófað að búa til fjölhliðung eins og einn af þessum:  \\r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \\r\n\\r\n  \\r\n  \\r\nEða abstrakt form eins og eitt af þessum:  \\r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
       courseD_Frozen_nested2: "Teiknaðu nú tvö eða þrjú svona form í röð með því að stökkva fram um einhvern fjölda díla.  \\r\n\\r\n-\nEf þú stekkur fram um **minna** en breidd formsins, gætu þau skarast\\r\n-\nEf þú stekkur fram um **meira** en breidd formsins, verður bil á milli þeirra\\r\n\\r\n<hr/>\\r\n\\r\nRöðin gæti orðið bein eins og þessi:\\r\n\\r\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\\r\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\\r\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\\r\n<br/>  <br/>\\r\n\\r\n\\r\nEða að formin gætu færst til eins og eitt af þessum: \\r\n\\r\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\\r\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\\r\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
@@ -5134,6 +5192,7 @@ is:
         \r
         ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
       courseD_artist_6_2018: "<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />Í þessari þraut færðu tækifæri til að byrja á nýrri teikningu! \\r\n\\r\nTeiknaðu tröppumynstur sem notar snúninga á milli 75 og 105 gráða -- en gættu þess að vinstri og hægri snúningar noti sama horn.  \\r\n(Seinna sérðu hvers vegna.)"
+      courseD_artist_6_2018_2019: "<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />Í þessari þraut færðu tækifæri til að byrja á nýrri teikningu! \\r\n\\r\nTeiknaðu tröppumynstur sem notar snúninga á milli 75 og 105 gráða -- en gættu þess að vinstri og hægri snúningar noti sama horn.  \\r\n(Seinna sérðu hvers vegna.)"
       courseD_artist_7_2018: "Snúðu nú við um 180 gráður og teiknaðu nákvæmlega sama tröppumynstrið aftur! \\r\n\\r\n- Afgangurinn af þessu stigi verður auðveldari ef þú setur allan kóðann í lykkju sem lætur Elsu \\r\n<br/>\\r\nteikna, snúa við um 180 gráður, teikna, og snúa svo aftur við um 180 gráður. \\r\n\\r\n<hr/>\\r\n\\r\nHér er dæmi um tröppur sem nota 76 gráðu snúning:\\r\n\\r\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
       courseD_artist_8_2018: |-
         Snúðu forminu 5 eða 6 sinnum í hring.\r
@@ -5147,11 +5206,16 @@ is:
         ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
       courseD_artist_binary_challenge1: Þú mátt aðeins nota hvert tvíundargildi (0 eða 1) einu sinni í þrautinni. Prófaðu að nota faldaðar lykkjur til að ljúka teikningunni.
       courseD_artist_binary_challenge1_2018: Þú mátt aðeins nota hvert tvíundargildi (0 eða 1) einu sinni í þrautinni. Prófaðu að nota faldaðar lykkjur til að ljúka teikningunni.
+      courseD_artist_binary_challenge1_2019: Þú mátt aðeins nota hvert tvíundargildi (0 eða 1) einu sinni í þrautinni. Prófaðu að nota faldaðar lykkjur til að ljúka teikningunni.
       courseD_artist_binary_challenge2: |-
         Þessi grind sýnir 256 bita - það þýðir að lítil breyting getur leitt til mikilla vandræða. Hefurðu nægt úthald til að koma þessu lógói aftur í rétt horf?\r
         \r
         ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
       courseD_artist_binary_challenge2_2018: |-
+        Þessi grind sýnir 256 bita - það þýðir að lítil breyting getur leitt til mikilla vandræða. Hefurðu nægt úthald til að koma þessu lógói aftur í rétt horf?\r
+        \r
+        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
+      courseD_artist_binary_challenge2_2019: |-
         Þessi grind sýnir 256 bita - það þýðir að lítil breyting getur leitt til mikilla vandræða. Hefurðu nægt úthald til að koma þessu lógói aftur í rétt horf?\r
         \r
         ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
@@ -5167,6 +5231,10 @@ is:
         **Áskorun:** Getur þú fundið leið til að búa til svona mynd?\r
         \r
         - Bæði formin hafa 50 díla hliðar
+      courseD_artist_nestedLoops9_predict1_2019: |-
+        **Áskorun:** Getur þú fundið leið til að búa til svona mynd?\r
+        \r
+        - Bæði formin hafa 50 díla hliðar
       courseD_artist_nestedLoops_challenge1: |-
         Getur þú fundið leið til að búa til svona mynd?\r
         \r
@@ -5179,6 +5247,12 @@ is:
         - Bæði formin hafa **50 díla hliðar**\r
         - *Átthyrningarnir* eru gerðir með **45 gráðu** snúningum.\r
         - *Þríhyrningarnir* eru gerðir með **120 gráðu** snúningum.
+      courseD_artist_nestedLoops_challenge1_2019: |-
+        Getur þú fundið leið til að búa til svona mynd?\r
+        \r
+        - Bæði formin hafa **50 díla hliðar**\r
+        - *Átthyrningarnir* eru gerðir með **45 gráðu** snúningum.\r
+        - *Þríhyrningarnir* eru gerðir með **120 gráðu** snúningum.
       courseD_artist_nestedLoops_challenge2: |-
         Getur þú fundið leið til að búa til svona mynd?\r
         \r
@@ -5186,6 +5260,12 @@ is:
         - Önnur innri lykkjan á að búa til sexhyrning.\r
         - Þriðja innri lykkjan á að búa til ferning.
       courseD_artist_nestedLoops_challenge2_2018: |-
+        Getur þú fundið leið til að búa til svona mynd?\r
+        \r
+        - Fyrsta innri lykkjan á að búa til átthyrning.\r
+        - Önnur innri lykkjan á að búa til sexhyrning.\r
+        - Þriðja innri lykkjan á að búa til ferning.
+      courseD_artist_nestedLoops_challenge2_2019: |-
         Getur þú fundið leið til að búa til svona mynd?\r
         \r
         - Fyrsta innri lykkjan á að búa til átthyrning.\r
@@ -5263,12 +5343,19 @@ is:
         *"Þetta ský er fyrir mér!"\r
         \r
         Athugaðu hvort það er blóm undir skýinu. Safnaðu blómasafa ef svo er.
+      courseD_bee_conditionals1_predict1_2019: |-
+        *"Þetta ský er fyrir mér!"\r
+        \r
+        Athugaðu hvort það er blóm undir skýinu. Safnaðu blómasafa ef svo er.
       courseD_bee_conditionals7_predict2: "Stundum hylur ský blóm en stundum hylur það býkúpu!\\r\n\\r\nNotaðu `ef/annars` kubb til að safna blómasafa við blóm og búa til hunang í býkúpum. Mundu: það er aldrei nema *ein* býkúpa eða *eitt* blóm undir hverju skýi."
       courseD_bee_conditionals7_predict2_2018: "Stundum hylur ský blóm en stundum hylur það býkúpu!\\r\n\\r\nNotaðu `ef/annars` kubb til að safna blómasafa við blóm og búa til hunang í býkúpum. Mundu: það er aldrei nema *ein* býkúpa eða *eitt* blóm undir hverju skýi."
+      courseD_bee_conditionals7_predict2_2019: "Stundum hylur ský blóm en stundum hylur það býkúpu!\\r\n\\r\nNotaðu `ef/annars` kubb til að safna blómasafa við blóm og búa til hunang í býkúpum. Mundu: það er aldrei nema *ein* býkúpa eða *eitt* blóm undir hverju skýi."
       courseD_bee_conditionals_challenge1: Safnaðu öllum blómasafanum eða búðu til allt hunangið. Þú getur aðeins safnað safa í blómum og búið til hunang í býkúpum. Athugaðu í hverjum reit hvort þar sé blóm eða býkúpa.
       courseD_bee_conditionals_challenge1_2018: Safnaðu öllum blómasafanum eða búðu til allt hunangið. Þú getur aðeins safnað safa í blómum og búið til hunang í býkúpum. Athugaðu í hverjum reit hvort þar sé blóm eða býkúpa.
+      courseD_bee_conditionals_challenge1_2019: Safnaðu öllum blómasafanum eða búðu til allt hunangið. Þú getur aðeins safnað safa í blómum og búið til hunang í býkúpum. Athugaðu í hverjum reit hvort þar sé blóm eða býkúpa.
       courseD_bee_conditionals_challenge2: Safnaðu öllum blómasafanum og búðu til allt hunangið. Þú getur safnað öllum blómasafanum í einu blómi með því að nota `meðan blómasafi` lykkju.
       courseD_bee_conditionals_challenge2_2018: Safnaðu öllum blómasafanum og búðu til allt hunangið. Þú getur safnað öllum blómasafanum í einu blómi með því að nota `meðan blómasafi` lykkju.
+      courseD_bee_conditionals_challenge2_2019: Safnaðu öllum blómasafanum og búðu til allt hunangið. Þú getur safnað öllum blómasafanum í einu blómi með því að nota `meðan blómasafi` lykkju.
       courseD_bee_conditionals_challenge3: Safnaðu öllum blómasafanum og búðu til allt hunangið. Þú getur safnað öllum blómasafanum í einu blómi með því að nota `meðan blómasafi` lykkju.
       courseD_bee_debugging_challenge1: Taktu eftir hvernig býflugan nær í blómasafann. Getur þú notað eins reglu til að hjálpa henni að búa til allt hunangið?
       courseD_bee_debugging_challenge1_2018: Taktu eftir hvernig býflugan nær í blómasafann. Getur þú notað eins reglu til að hjálpa henni að búa til allt hunangið?
@@ -5290,6 +5377,7 @@ is:
       courseD_bounce_events1: Náðu til flaggsins! Festu kubb við "þegar vinstri ör" kubbinn og ýttu á "Keyra" til að færa leikmanninn að flagginu.
       courseD_bounce_events2s: Tengdu nú kubb við atburðinn `þegar til hægri` svo að höndin komist að báðum körfunum.
       courseD_bounce_events2s_2018: Tengdu nú kubb við atburðinn `þegar til hægri` svo að höndin komist að báðum körfunum.
+      courseD_bounce_events2s_2019: Tengdu nú kubb við atburðinn `þegar til hægri` svo að höndin komist að báðum körfunum.
       courseD_collector_debugging1: |-
         *"Ó nei! Ég er í vandræðum."*\r
         \r
@@ -5314,6 +5402,10 @@ is:
         *"Ó nei! Ég er í vandræðum."*\r
         \r
         Lagaðu villu/r til að safna öllum fjársjóðnum.
+      courseD_collector_debugging1a_2019: |-
+        *"Ó nei! Ég er í vandræðum."*\r
+        \r
+        Lagaðu villu/r til að safna öllum fjársjóðnum.
       courseD_collector_debugging2: |-
         *"Þú getur þetta!"*\r
         \r
@@ -5327,6 +5419,10 @@ is:
         \r
         Lagaðu villu/r til að safna öllum fjársjóðnum.
       courseD_collector_debugging2a_2018: |-
+        *"Þú getur þetta!"*\r
+        \r
+        Lagaðu villu/r til að safna öllum fjársjóðnum.
+      courseD_collector_debugging2a_2019: |-
         *"Þú getur þetta!"*\r
         \r
         Lagaðu villu/r til að safna öllum fjársjóðnum.
@@ -5346,6 +5442,10 @@ is:
         *"Sýndu þrautseigju og þér mun takast þetta."*\r
         \r
         Lagaðu villu/r til að safna öllum fjársjóðnum.
+      courseD_collector_debugging3a_2019: |-
+        *"Sýndu þrautseigju og þér mun takast þetta."*\r
+        \r
+        Lagaðu villu/r til að safna öllum fjársjóðnum.
       courseD_collector_debugging4: |-
         *"Ekki láta þetta ergja þig. Þú getur þetta!*\r
         \r
@@ -5359,6 +5459,10 @@ is:
         \r
         Lagaðu villu/r til að safna öllum fjársjóðnum.
       courseD_collector_debugging4a_2018: |-
+        *"Ekki láta þetta ergja þig. Þú getur þetta!*\r
+        \r
+        Lagaðu villu/r til að safna öllum fjársjóðnum.
+      courseD_collector_debugging4a_2019: |-
         *"Ekki láta þetta ergja þig. Þú getur þetta!*\r
         \r
         Lagaðu villu/r til að safna öllum fjársjóðnum.
@@ -5378,10 +5482,15 @@ is:
         **Áskorun:**"Þessi þraut gerir mig hringlaða!"*\r
         \r
         Allar skipanir sem þú þarft eru þegar komnar...notaðu nú villuleitarhæfileika þína til að finna lausn á þessari þraut.
+      courseD_collector_debugging5a_2019: |-
+        **Áskorun:**"Þessi þraut gerir mig hringlaða!"*\r
+        \r
+        Allar skipanir sem þú þarft eru þegar komnar...notaðu nú villuleitarhæfileika þína til að finna lausn á þessari þraut.
       courseD_collector_debugging6: "**Áskorun:** Allar skipanir sem þú þarft eru þegar komnar...notaðu nú villuleitarhæfileika þína til að laga villur og safna öllum fjársjóðnum."
       courseD_collector_debugging6_2018: "**Áskorun:** Allar skipanir sem þú þarft eru þegar komnar...notaðu nú villuleitarhæfileika þína til að laga villur og safna öllum fjársjóðnum."
       courseD_collector_debugging6a: 'Áskorun: Notaðu kóðann á vinnusvæðinu til að safna minnst **6** gersemum!'
       courseD_collector_debugging6a_2018: 'Áskorun: Notaðu kóðann á vinnusvæðinu til að safna minnst **6** gersemum!'
+      courseD_collector_debugging6a_2019: 'Áskorun: Notaðu kóðann á vinnusvæðinu til að safna minnst **6** gersemum!'
       courseD_collector_debugging7: "**Áskorun**: Hér eru allar skipanir sem þú þarft...notaðu nú færni þína í villuleit til að finna lausn á þessari þraut."
       courseD_collector_debugging8: |-
         *"Svo mikið af fjársjóð!"*\r
@@ -5396,6 +5505,10 @@ is:
         \r
         Hjálpaðu Laurel að laga kóðann til að ná öllum fjársjóðnum.
       courseD_collector_debugging8a_2018: |-
+        *"Svo mikið af fjársjóð!"*\r
+        \r
+        Hjálpaðu Laurel að laga kóðann til að ná öllum fjársjóðnum.
+      courseD_collector_debugging8a_2019: |-
         *"Svo mikið af fjársjóð!"*\r
         \r
         Hjálpaðu Laurel að laga kóðann til að ná öllum fjársjóðnum.
@@ -5415,8 +5528,13 @@ is:
         *"Fjársjóðseyja!"*\r
         \r
         Hjálpaðu Laurel að laga kóðann til að ná öllum fjársjóðnum.
+      courseD_collector_debugging9a_2019: |-
+        *"Fjársjóðseyja!"*\r
+        \r
+        Hjálpaðu Laurel að laga kóðann til að ná öllum fjársjóðnum.
       courseD_collector_nested_loops_challenge2: "Við skulum leita að fjársjóði\n- með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er mögulegt að ná öllum 3."
       courseD_collector_nested_loops_challenge2_2018: "Við skulum leita að fjársjóði\n- með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er mögulegt að ná öllum 3."
+      courseD_collector_nested_loops_challenge2_2019: "Við skulum leita að fjársjóði\n- með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er mögulegt að ná öllum 3."
       courseD_collector_nested_loops_challenge2a: "Við skulum leita að fjársjóði\n- með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er mögulegt að ná öllum 3."
       courseD_collector_ramp10: "Láttu Laurel ferðast um þennan reit og safna fjársjóðum sem hún finnur.\\r\n"
       courseD_collector_ramp8: |
@@ -5435,17 +5553,26 @@ is:
         *"Maís, kál OG grasker! Hjálpaðu mér að uppskera þetta allt."*\r
         \r
         Hver jurt hefur annað hvort einn kólf af maís, einn haus af káli eða eitt grasker.
+      courseD_farmer_condLoops3_2019: |-
+        *"Maís, kál OG grasker! Hjálpaðu mér að uppskera þetta allt."*\r
+        \r
+        Hver jurt hefur annað hvort einn kólf af maís, einn haus af káli eða eitt grasker.
       courseD_farmer_condLoops4a: "*\"Vá! Nú vaxa jurtirnar í þyrpingum!\"* \\r\n\\r\nBóndinn á að taka upp allt kálið í hverri þyrpingu og fara svo á næstu. Og ekki hætta fyrr en við graskerið!"
       courseD_farmer_condLoops8: Safnaðu öllum maís og káli og taktu svo graskerið.
       courseD_farmer_condLoops8_2018: Safnaðu öllum maís og káli og taktu svo graskerið.
+      courseD_farmer_condLoops8_2019: Safnaðu öllum maís og káli og taktu svo graskerið.
       courseD_farmer_condLoops9: Safnaðu öllum maís og káli og taktu svo graskerið.
       courseD_farmer_condLoops9_2018: Safnaðu öllum maís og káli og taktu svo graskerið.
+      courseD_farmer_condLoops9_2019: Safnaðu öllum maís og káli og taktu svo graskerið.
       courseD_farmer_condLoops9_predict1: Safnaðu öllum maís og káli og taktu svo graskerið.
       courseD_farmer_condLoops9_predict1_2018: Safnaðu öllum maís og káli og taktu svo graskerið.
+      courseD_farmer_condLoops9_predict1_2019: Safnaðu öllum maís og káli og taktu svo graskerið.
       courseD_farmer_condLoops_challenge1: "Graskerin sýna hvar þú ættir að snúa. *Snúðu til hægri við graskerin.* Haltu annars áfram, en mundu að safna öllu káli eða maís á leiðinni. \\r\n\\r\n**Hver falin planta hefur bara 1 af maís eða káli.**"
       courseD_farmer_condLoops_challenge1_2018: "Graskerin sýna hvar þú ættir að snúa. *Snúðu til hægri við graskerin.* Haltu annars áfram, en mundu að safna öllu káli eða maís á leiðinni. \\r\n\\r\n**Hver falin planta hefur bara 1 af maís eða káli.**"
+      courseD_farmer_condLoops_challenge1_2019: "Graskerin sýna hvar þú ættir að snúa. *Snúðu til hægri við graskerin.* Haltu annars áfram, en mundu að safna öllu káli eða maís á leiðinni. \\r\n\\r\n**Hver falin planta hefur bara 1 af maís eða káli.**"
       courseD_farmer_condLoops_challenge2: "Þetta er grænt völundarhús. Snúðu til hægri við grasker, til vinstri við kál. Safnaðu öllu til að ljúka áfanganum."
       courseD_farmer_condLoops_challenge2_2018: "Þetta er grænt völundarhús. Snúðu til hægri við grasker, til vinstri við kál. Safnaðu öllu til að ljúka áfanganum."
+      courseD_farmer_condLoops_challenge2_2019: "Þetta er grænt völundarhús. Snúðu til hægri við grasker, til vinstri við kál. Safnaðu öllu til að ljúka áfanganum."
       courseD_farmer_condLoops_challenge2_clone: Þetta er grænt völundarhús. Snúðu til hægri við grasker, til vinstri við kál. Safnaðu öllu til að ljúka áfanganum.
       courseD_farmer_conditionals1: "*\"Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta akurinn á jörðinni minni svo ég geti sáð í hann!\"* \\r\n\\r\nFærðu mig að moldarhaugnum og notaðu `fjarlægja` kubbinn til að fjarlægja hauginn."
       courseD_farmer_conditionals4: |-
@@ -5456,11 +5583,16 @@ is:
       courseD_farmer_until_challenge2_2018: Notaðu `ef/annars` kubba til að fylgja krókóttum stígnum. Notaðu `fjarlægja 1` kubbinn í lykkju á hverju horni til að fjarlægja haugana.
       courseD_farmer_while1: "*\"Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta akurinn á jörðinni minni svo ég geti sáð í hann!\"* \\r\n\\r\nFærðu mig að moldarhaugnum og notaðu `fjarlægja` kubbinn til að fjarlægja hauginn."
       courseD_farmer_while1_2018: "*\"Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta akurinn á jörðinni minni svo ég geti sáð í hann!\"* \\r\n\\r\nFærðu mig að moldarhaugnum og notaðu `fjarlægja` kubbinn til að fjarlægja hauginn."
+      courseD_farmer_while1_2019: "*\"Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta akurinn á jörðinni minni svo ég geti sáð í hann!\"* \\r\n\\r\nFærðu mig að moldarhaugnum og notaðu `fjarlægja` kubbinn til að fjarlægja hauginn."
       courseD_farmer_while4: |-
         *"Ég veit ekki hve mikil mold er í þessum haug!"*\r
         \r
         Hjálpaðu bóndanum að fjarlægja hauginn með `meðan` lykkju.
       courseD_farmer_while4_2018: |-
+        *"Ég veit ekki hve mikil mold er í þessum haug!"*\r
+        \r
+        Hjálpaðu bóndanum að fjarlægja hauginn með `meðan` lykkju.
+      courseD_farmer_while4_2019: |-
         *"Ég veit ekki hve mikil mold er í þessum haug!"*\r
         \r
         Hjálpaðu bóndanum að fjarlægja hauginn með `meðan` lykkju.
@@ -5472,21 +5604,35 @@ is:
         *"Ég veit ekki hve mikil mold er í þessum haug!"*\r
         \r
         Hjálpaðu bóndanum að fjarlægja hauginn með `meðan` lykkju.
+      courseD_farmer_while4_predict1_2019: |-
+        *"Ég veit ekki hve mikil mold er í þessum haug!"*\r
+        \r
+        Hjálpaðu bóndanum að fjarlægja hauginn með `meðan` lykkju.
       courseD_farmer_while_challenge1: Fylltu allar holurnar og fjarlægðu alla haugana.
       courseD_farmer_while_challenge1_2018: Fylltu allar holurnar og fjarlægðu alla haugana.
+      courseD_farmer_while_challenge1_2019: Fylltu allar holurnar og fjarlægðu alla haugana.
       courseD_farmer_while_challenge2: Fylltu allar holurnar og fjarlægðu alla haugana.
       courseD_farmer_while_challenge2_2018: Fylltu allar holurnar og fjarlægðu alla haugana.
       courseD_harvester_nested_loops_challenge1-broken: '*"Ég þarf aðstoð á býlinu! Hjálpaðu mér að uppskera þennan maís en aðeins með kubbunum í verkfærakassanum."*'
       courseD_harvester_nested_loops_challenge1: '*"Ég þarf aðstoð á býlinu! Hjálpaðu mér að uppskera þennan maís en aðeins með kubbunum í verkfærakassanum."*'
       courseD_harvester_nested_loops_challenge1_2018: '*"Ég þarf aðstoð á býlinu! Hjálpaðu mér að uppskera þennan maís en aðeins með kubbunum í verkfærakassanum."*'
+      courseD_harvester_nested_loops_challenge1_2019: '*"Ég þarf aðstoð á býlinu! Hjálpaðu mér að uppskera þennan maís en aðeins með kubbunum í verkfærakassanum."*'
       courseD_iceage_loops10: Hjálpaðu Scrat að komast alla leið yfir til akarnsins!
+      courseD_iceage_loops10_2019: Hjálpaðu Scrat að komast alla leið yfir til akarnsins!
       courseD_iceage_loops11: Hjálpaðu Skrat að komast til akarnsins!
+      courseD_iceage_loops11_2019: Hjálpaðu Skrat að komast til akarnsins!
       courseD_iceage_loops12: Náðu akarninu hvernig sem þú getur!
+      courseD_iceage_loops12_2019: Náðu akarninu hvernig sem þú getur!
       courseD_iceage_loops4: Bættu við einum kubbi til að koma Scrat til akarnsins!
+      courseD_iceage_loops4_2019: Bættu við einum kubbi til að koma Scrat til akarnsins!
       courseD_iceage_loops6: Getur þú bætt við lykkju til að ná akarninu?
+      courseD_iceage_loops6_2019: Getur þú bætt við lykkju til að ná akarninu?
       courseD_iceage_loops7: 'Scrat langar mikið í þetta akarn! '
+      courseD_iceage_loops7_2019: 'Scrat langar mikið í þetta akarn! '
       courseD_iceage_loops8: 'Getur þú lagað þennan kóða? '
+      courseD_iceage_loops8_2019: 'Getur þú lagað þennan kóða? '
       courseD_iceage_loops9: Akarnið er svo langt í burtu! Getur þú notað lykkjur til að hjálpa Scrat að komast þangað?
+      courseD_iceage_loops9_2019: Akarnið er svo langt í burtu! Getur þú notað lykkjur til að hjálpa Scrat að komast þangað?
       courseD_maze_loops_challenge1: Komum í fjársjóðaleit - með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur fjársjóðshrúgum en aðeins með kubbunum í verkfærakassanum.
       courseD_maze_nestedLoops4: "Komdu mér til sólsblómsins með sem allra fæstum kubbum!\\r\n\\r\nReyndu að nota einn \"endurtaka\" kubb innan í öðrum til að kóðinn verði sem stystur."
       courseD_maze_nestedLoops4_2018: "Komdu mér til sólsblómsins með sem allra fæstum kubbum!\\r\n\\r\nReyndu að nota einn \"endurtaka\" kubb innan í öðrum til að kóðinn verði sem stystur."
@@ -5525,12 +5671,16 @@ is:
       courseD_maze_ramp7: "*\"Nú er ég sko reiður!\"* \\r\n\\r\n\\r\nNotaðu það sem þú hefur lært til að koma fuglinum til svínsins!"
       courseD_maze_until10: Hjálpaðu uppvakningum að komast til sólblómsins.
       courseD_maze_until10_2018: Hjálpaðu uppvakningum að komast til sólblómsins.
+      courseD_maze_until10_2019: Hjálpaðu uppvakningum að komast til sólblómsins.
       courseD_maze_until10_predict2: Hjálpaðu uppvakningum að komast til sólblómsins.
       courseD_maze_until10_predict2_2018: Hjálpaðu uppvakningum að komast til sólblómsins.
+      courseD_maze_until10_predict2_2019: Hjálpaðu uppvakningum að komast til sólblómsins.
       courseD_maze_until6: Hjálpaðu uppvakningum að komast til sólblómsins.
       courseD_maze_until6_2018: Hjálpaðu uppvakningum að komast til sólblómsins.
+      courseD_maze_until6_2019: Hjálpaðu uppvakningum að komast til sólblómsins.
       courseD_maze_until7: Hjálpaðu uppvakningum að komast til sólblómsins.
       courseD_maze_until7_2018: Hjálpaðu uppvakningum að komast til sólblómsins.
+      courseD_maze_until7_2019: Hjálpaðu uppvakningum að komast til sólblómsins.
       courseD_maze_until8: Hjálpaðu uppvakningum að komast til sólblómsins.
       courseD_maze_until8_2018: Hjálpaðu uppvakningum að komast til sólblómsins.
       courseD_maze_until_challenge: |-
@@ -5600,11 +5750,22 @@ is:
         Þessi hönnun notar aðeins kubba sem þú hefur þegar séð.  Getur þú endurskapað hana?  Prófaðu þig áfram. Það er ekkert atriði að þetta heppnist í fyrstu (eða jafnvel sjöttu!) tilraun.\r
         \r
         Endurtekna formið er næstum eins og það í síðustu þraut, nema hvað lengdin sem er notuð í fyrstu lykkjunni er aðeins styttri. 
+      courseE_artist_concept_challenge1_2019: |-
+        <img src="https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png"
+        width="200px"/>\r
+        \r
+        Hér er áskorun!  \r
+        \r
+        Þessi hönnun notar aðeins kubba sem þú hefur þegar séð.  Getur þú endurskapað hana?  Prófaðu þig áfram. Það er ekkert atriði að þetta heppnist í fyrstu (eða jafnvel sjöttu!) tilraun.\r
+        \r
+        Endurtekna formið er næstum eins og það í síðustu þraut, nema hvað lengdin sem er notuð í fyrstu lykkjunni er aðeins styttri. 
       courseE_artist_concept_challenge2: Búðu til fimm hjóllaga mynstur með kóðanum fyrir neðan.
       courseE_artist_concept_challenge2_2018: Búðu til fimm hjóllaga mynstur með kóðanum fyrir neðan.
+      courseE_artist_concept_challenge2_2019: Búðu til fimm hjóllaga mynstur með kóðanum fyrir neðan.
       courseE_artist_functions_challenge: Þegar þú hefur einu sinni skilgreint fall, getur þú notað það aftur og aftur - hvar og hvenær sem þú vilt! Prófaðu þennan kóða til að sjá hvernig hann virkar og breyttu honum svo til að búa til þína eigin flottu hönnun!
       courseE_artist_functions_challenge1: Þegar þú hefur einu sinni skilgreint fall, getur þú notað það aftur og aftur - hvar og hvenær sem þú vilt! Prófaðu þennan kóða til að sjá hvernig hann virkar og breyttu honum svo til að búa til þína eigin flottu hönnun!
       courseE_artist_functions_challenge1_2018: Þegar þú hefur einu sinni skilgreint fall, getur þú notað það aftur og aftur - hvar og hvenær sem þú vilt! Prófaðu þennan kóða til að sjá hvernig hann virkar og breyttu honum svo til að búa til þína eigin flottu hönnun!
+      courseE_artist_functions_challenge1_2019: Þegar þú hefur einu sinni skilgreint fall, getur þú notað það aftur og aftur - hvar og hvenær sem þú vilt! Prófaðu þennan kóða til að sjá hvernig hann virkar og breyttu honum svo til að búa til þína eigin flottu hönnun!
       courseE_artist_functions_challenge2: |-
         Þú getur notað `hoppa` skipunina til að komast á hvað stað sem er í skjámyndinni! Prófaðu þennan kóða til að sjá hvernig hann virkar. Breyttu honum svo eftir eigin höfði!\r
         <xml>\r
@@ -5615,6 +5776,15 @@ is:
         name="YPOS">???</title>\r
             </block></xml>
       courseE_artist_functions_challenge2_2018: |-
+        Þú getur notað `hoppa` skipunina til að komast á hvað stað sem er í skjámyndinni! Prófaðu þennan kóða til að sjá hvernig hann virkar. Breyttu honum svo eftir eigin höfði!\r
+        <xml>\r
+          <block
+        type="jump_to_xy">\r
+            <title name="XPOS">???</title>\r
+            <title
+        name="YPOS">???</title>\r
+            </block></xml>
+      courseE_artist_functions_challenge2_2019: |-
         Þú getur notað `hoppa` skipunina til að komast á hvað stað sem er í skjámyndinni! Prófaðu þennan kóða til að sjá hvernig hann virkar. Breyttu honum svo eftir eigin höfði!\r
         <xml>\r
           <block

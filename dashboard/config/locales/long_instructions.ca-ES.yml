@@ -211,6 +211,19 @@ ca:
         Ara ja pots crear tot un grup de dansaires alhora!
 
         Intenta utilitzar alguns dels blocs "tots els ànecs" per escriure un codi que farà que tots els ànecs dansin junts.
+      Dance_Party_11.5_test: |-
+        Fés una ullada a aquest bloc:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"ÀNEC"</title>
+        <title name="LAYOUT">"cercle"</title>
+        </block></xml>
+
+        Ara ja pots crear tot un grup de dansaires alhora!
+
+        Intenta utilitzar alguns dels blocs "tots els ànecs" per escriure un codi que farà que tots els ànecs dansin junts.
       Dance_Party_11: |-
         El bloc <xml><block type="Dancelab_whenKey"></block></xml> et permet executar un codi quan es prem la fletxa cap amunt.
 
@@ -234,6 +247,8 @@ ca:
       Overworld Move to Sheep: Afegeix una segona instrucció "avança" per arribar
         a l'ovella.
       Overworld Move to Sheep_2018: Afegeix una segona instrucció "avança" per arribar
+        a l'ovella.
+      Overworld Move to Sheep_2019: Afegeix una segona instrucció "avança" per arribar
         a l'ovella.
       course4_artist_fwp_challenge1: Intenta executar aquest programa, i fer canvis
         per veure què passa. Pots averiguar com funciona? (O borra'l i reemplaça'l

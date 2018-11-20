@@ -124,6 +124,7 @@ da:
     error: Der opstod en fejl.
     email_preference_question: Kan vi e-maile dig om opdateringer til vores kurser,
       lokale muligheder eller andre nyheder om computervidenskab?
+    email_preference_privacy: "(Se vores fortrolighedspolitik)"
     email_preference_yes: Ja
     email_preference_no: Nej
   school_info:
@@ -749,6 +750,7 @@ da:
         cs: Datalogi
         math: Matematik
         science: Videnskab
+        la: Sprog kunst
       resources:
         kodable: Kodable
       robotics:

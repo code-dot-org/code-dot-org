@@ -990,10 +990,17 @@ es:
         
         Este programa utiliza el volumen «bajo» de la música (los sonidos bajos) para controlar la altura de un bailarín. ¿Puedes hacer que el otro bailarín responda también a la música?
       Dance_Party_11.5: "Echa un vistazo a este bloque:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n¡Ahora puedes crear un montón de bailarines a la vez!\n\nTrata de usar algunos de los bloques «todos los patos» para escribir el código que hará que todos los patos bailen juntos."
+      Dance_Party_11.5_test: "Echa un vistazo a este bloque:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n¡Ahora puedes crear un montón de bailarines a la vez!\n\nTrata de usar algunos de los bloques «todos los patos» para escribir el código que hará que todos los patos bailen juntos."
       Dance_Party_11: "El bloque <xml><block type=\"Dancelab_whenKey\"></block></xml> te permite ejecutar código cuando se pulsa la flecha arriba.\n\nPuedes cambiar el movimiento del baile, cambiar las propiedades de un bailarín o hacer solo una vez un movimiento rápido. ¡Usa tu creatividad y estate pendiente de los nuevos bloques!"
       Dance_Party_11b: |-
         ¡Es hora de un concurso de baile! El Gato hace el paso «dab» cuando pulsas la tecla de flecha izquierda. Indica al Robot que haga «drop» cuando pulsas la tecla de flecha derecha.
       Dance_Party_12: '¡Mueve el esqueleto! Crea un baile propio para compartirlo con tus amigos.'
+      Dance_Party_3: "*¡Ahora movemos el esqueleto!*\n\nAñade un bloque de «compases» <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> a tu espacio de trabajo. Haz que el bailarín inicie un movimiento nuevo después de 6 compases."
+      Dance_Party_4: |-
+        *¡A este baile le hace falta brillo!*
+        
+        Busca un bloque nuevo en tu caja de herramientas que añada un efecto de fondo detrás de tu bailarín. ¡Observa cómo cambian los efectos al ritmo de la música!
+      Dance_Party_8: Cada bailarín tiene un conjunto de _propiedades_ que controlan su aspecto. Puedes hacer que parezca que un bailarín está en el fondo si reduces su tamaño. ¿Puedes hacer que ambos bailarines de fondo tengan el mismo tamaño?
       Fish Tank 5-validated_simple: El pez quiere un amigo. Agrega un nuevo sprite.
       Function intro Ryan: "Cuentas con una **función** llamada \"construir puente\" en tu espacio de trabajo. ¡Todo el código que necesitas para cruzar el río ya está implementado! \\r\n \\r\nLleva dos veces el pequeño bloque verde a tu espacio de trabajo para arreglar el camino y conseguir que {currentPlayerName} alcance la antorcha de redstone [redstone_torch]."
       Function intro Ryan_2019: "Cuentas con una **función** llamada \"construir puente\" en tu espacio de trabajo. ¡Todo el código que necesitas para cruzar el río ya está implementado! \\r\n \\r\nLleva dos veces el pequeño bloque verde a tu espacio de trabajo para arreglar el camino y conseguir que {currentPlayerName} alcance la antorcha de redstone [redstone_torch]."
@@ -1009,6 +1016,10 @@ es:
       HOC 2018 Level_7a: "Has encontrado las ruinas subacuáticas. Busca un **cofre** en la arenisca ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png), contiene un tesoro de **prismarina** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
       HOC 2018 Level_8: "¿Primero icebergs y ahora lava? Atraviesa esta isla volcánica y encuentra el **pez tropical** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) en el arrecife de coral.\n\n"
       HOC 2018 Level_9b: "¡Has llegado al arrecife, ahora busca el **corazón del mar** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Usa el coral azul y rojo para alcanzar el **cofre** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
+      HOC Dance 3_draft: |-
+        *¡A este baile le hace falta brillo!*
+        
+        Busca un bloque nuevo en tu caja de herramientas que añada un efecto de fondo detrás de tu bailarín. ¡Observa cómo cambian los efectos al ritmo de la música!
       HOC Dance 4_draft: |-
         ¡Utiliza otro bloque nuevo para que el bailarín cambie de movimientos **cada 2 compases**!
         
@@ -1017,6 +1028,7 @@ es:
         *¡Necesitamos más bailarines!*
         
         Crea un bailarín de fondo llamado «bailarín_fondo1» para bailar con el gato.
+      HOC Dance 6_draft: Cada bailarín tiene un conjunto de _propiedades_ que controlan su aspecto. Puedes hacer que parezca que un bailarín está en el fondo si reduces su tamaño. ¿Puedes hacer que ambos bailarines de fondo tengan el mismo tamaño?
       HOC Dance 9_draft: "El bloque <xml><block type=\"Dancelab_whenKey\"></block></xml> te permite ejecutar código cuando se pulsa la flecha arriba.\n\nPuedes cambiar el movimiento del baile, cambiar las propiedades de un bailarín o hacer solo una vez un movimiento rápido. ¡Usa tu creatividad y estate pendiente de los nuevos bloques!"
       K-1 Bee Loops 2: "¡Utiliza un enlace para moverte obtener el nectar y\nhacer miel!"
       K-1 Bee Loops 3: '¡Utiliza enlaces para obtener nectar, y para hacer miel!'
@@ -1133,6 +1145,7 @@ es:
       New Minecraft Hero Project: "**Juego libre:** ¡Te toca! Utiliza el código del Agent para ayudarte a explorar este mundo."
       Overworld Move to Sheep: Añade un segundo comando "avanzar" para llegar a la oveja.
       Overworld Move to Sheep_2018: Añade un segundo comando "avanzar" para llegar a la oveja.
+      Overworld Move to Sheep_2019: Añade un segundo comando "avanzar" para llegar a la oveja.
       PS copy 2-3 Bee Conditionals 5: "Estas flores púrpura cambian!\\r\n\\r\nCada vez que intentas el puzzle, las flores púrpura pueden tener nectar o no... pero no sabrás el número hasta que ejecutes el código! \\r\n\\r\nTen cuidado de no recolectar néctar de una flor púrpura si no tiene. \\r\nPrimero deberás comprobar si el néctar es igual a 1 usando el bloque `si hay néctar`."
       Pixelation - Lesson 15 - Complete 3-bit color: "#\nColor de Pixelacion: Tarea 1\n**Direcciones:**\n\n* Comenzamos con la imagen de 4x2\nMaddie estaba creando, pero hemos omitido las dos últimas cuadriculas.\n* Terminar\nla imagen al descubrir qué dos colores faltan y codificarlos.\n"
       Pixelation - Lesson 15 - Complete 3-bit color_2018: "#\nColor de Pixelacion: Tarea 1\n**Direcciones:**\n\n* Comenzamos con la imagen de 4x2\nMaddie estaba creando, pero hemos omitido las dos últimas cuadriculas.\n* Terminar\nla imagen al descubrir qué dos colores faltan y codificarlos.\n"

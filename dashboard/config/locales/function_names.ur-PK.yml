@@ -2,6 +2,7 @@
 ur:
   data:
     function_names:
+      x: x
       draw a circle: ایک دائرہ بنائیں
       draw a hexagon: ایک ھیگزاگون کا خاکہ بنائیں
       draw a flower: ایک پھول بنائیں

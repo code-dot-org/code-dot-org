@@ -430,6 +430,7 @@ es-MX:
       example: Solución de ejemplo
       example_with_number: Ejemplo de solución %{solution_number}
       submitted_on: Enviado el %{date}
+      last_updated: 'Última actualización:'
       unsubmit: NO enviado
       worked_with: Trabajado con
       update_lock_settings: Actualizar los ajustes de bloqueo aquí.
@@ -847,7 +848,7 @@ es-MX:
       audience: Mayores de 13 años
       cta: Aprende cómo
     hoc-encryption:
-      title: Encripción simple
+      title: Encriptación Simple
       body: Los estudiantes aprenderán técnicas para crear y modificar mensajes cifrados.
     weblab:
       title: Web Lab (beta)
@@ -1403,7 +1404,7 @@ es-MX:
       workshop_course:
         csf_af: Fundamentos de ciencias de la computación. (curso A-F)
         csf_express: Fundamentos de Ciencias de la Computacion (Express o Pre-Express)
-        csd: Descubrimientos de la informática
+        csd: Descubrimientos de Ciencias de la Computación
         csp: "'16-'17 Principios de CS"
       email_opt_in:
         opt_in_yes: Sí

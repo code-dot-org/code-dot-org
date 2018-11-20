@@ -31,19 +31,19 @@ ko:
             '"ROBOT"': 모든 로봇
             '"SHARK"': 모든 상어
           MOVE:
+            '"next"': "(다음)"
+            '"prev"': "(이전)"
+            '"rand"': "(임의)"
+            MOVES.Roll: 구르기
             MOVES.ClapHigh: 높이 손뼉치기
-            MOVES.Clown: 어릿광대
             MOVES.Dab: 댑
             MOVES.DoubleJam: 더블 잼
             MOVES.Drop: 드롭
             MOVES.Floss: 플로스
             MOVES.Fresh: 프레시
-            MOVES.Roll: 구르기
+            MOVES.Clown: 어릿광대
             MOVES.Kick: 킥
-            MOVES.ThisOrThat: 이것 또는 저것
-            '"next"': "(다음)"
-            '"prev"': "(이전)"
-            '"rand"': "(임의)"
+            MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
           DIR:
             '1': "→"
@@ -52,19 +52,19 @@ ko:
         text: "{SPRITE}이(가) {MOVE}{DIR}을(를) 영원히 실행"
         options:
           MOVE:
+            '"next"': "(다음)"
+            '"prev"': "(이전)"
+            '"rand"': "(임의)"
+            MOVES.Roll: 구르기
             MOVES.ClapHigh: 높이 손뼉치기
-            MOVES.Clown: 어릿광대
             MOVES.Dab: 댑
             MOVES.DoubleJam: 더블 잼
             MOVES.Drop: 드롭
             MOVES.Floss: 플로스
             MOVES.Fresh: 프레시
-            MOVES.Roll: 구르기
+            MOVES.Clown: 어릿광대
             MOVES.Kick: 킥
-            MOVES.ThisOrThat: 이것 또는 저것
-            '"next"': "(다음)"
-            '"prev"': "(이전)"
-            '"rand"': "(임의)"
+            MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
           DIR:
             '1': "→"
@@ -95,16 +95,17 @@ ko:
             '"ROBOT"': 모든 로봇
             '"SHARK"': 모든 상어
           MOVE:
+            '"rand"': "(임의)"
+            MOVES.Roll: 구르기
             MOVES.ClapHigh: 높이 손뼉치기
-            MOVES.Clown: 어릿광대
             MOVES.Dab: 댑
             MOVES.DoubleJam: 더블 잼
             MOVES.Drop: 드롭
             MOVES.Floss: 플로스
             MOVES.Fresh: 프레시
-            MOVES.Roll: 구르기
+            MOVES.Clown: 어릿광대
             MOVES.Kick: 킥
-            MOVES.ThisOrThat: 이것 또는 저것
+            MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
           DIR:
             '1': "→"
@@ -113,16 +114,17 @@ ko:
         text: "{SPRITE}이(가) {MOVE}{DIR}을(를) 한 번 실행"
         options:
           MOVE:
+            '"rand"': "(임의)"
+            MOVES.Roll: 구르기
             MOVES.ClapHigh: 높이 손뼉치기
-            MOVES.Clown: 어릿광대
             MOVES.Dab: 댑
             MOVES.DoubleJam: 더블 잼
             MOVES.Drop: 드롭
             MOVES.Floss: 플로스
             MOVES.Fresh: 프레시
-            MOVES.Roll: 구르기
+            MOVES.Clown: 어릿광대
             MOVES.Kick: 킥
-            MOVES.ThisOrThat: 이것 또는 저것
+            MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
           DIR:
             '1': "→"
@@ -183,7 +185,7 @@ ko:
             MOVES.Fresh: 프레시
             MOVES.Roll: 구르기
             MOVES.Kick: 킥
-            MOVES.ThisOrThat: 이것 또는 저것
+            MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
       Dancelab_ifTime:
         options:
@@ -317,7 +319,7 @@ ko:
             '"disco"': 사각형
             '"rainbow"': 색상
             '"diamonds"': 다이아몬드
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": "(임의)"
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(임의)"
       Dancelab_setDanceSpeed:
         text: "{SPRITE} 댄스 속도를 {SPEED}(으)로 변경하기"
         options:
@@ -640,6 +642,22 @@ ko:
             "{x: 300, y: 100}": 오른쪽 위
             "{x: 100, y: 300}": 왼쪽 아래
             "{x: 300, y: 300}": 오른쪽 아래
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": 맨 위로
+            "{x: 200, y: 300}": 맨 아래로
+            "{x: 100, y: 200}": 왼쪽으로
+            "{x: 300, y: 200}": 오른쪽으로
+            "{x: 200, y: 200}": 중간
+            "{x: 100, y: 100}": 왼쪽 위
+            "{x: 300, y: 100}": 오른쪽 위
+            "{x: 100, y: 300}": 왼쪽 아래
+            "{x: 300, y: 300}": 오른쪽 아래
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': 모두
       Mikelab_getProp:
         options:
           PROPERTY:

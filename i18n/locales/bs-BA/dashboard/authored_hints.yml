@@ -226,6 +226,8 @@ bs:
         courseC_artist_prog2_b: Imate problema sa skretanjem? Upotrijebite 'okreni za 90 stepeni' blok.
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
       courseD_scrat_ramp5_authored_hint:
         courseC_maze_programming5_b: Koliko daleko trebaš da se pomakneš da dođeš u ugao?
       courseD_scrat_ramp5_2018_authored_hint:
@@ -233,6 +235,8 @@ bs:
       courseE_farmer_concept3_authored_hint:
         grade3_robotFarmer_ConditionalsIntro_8_b: Šta bi trebao uraditi kada dođeš do kraja puta?
       courseE_farmer_concept3_2018_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_8_b: Šta bi trebao uraditi kada dođeš do kraja puta?
+      courseE_farmer_concept3_2019_authored_hint:
         grade3_robotFarmer_ConditionalsIntro_8_b: Šta bi trebao uraditi kada dođeš do kraja puta?
       courseE_farmer_elseif_test_authored_hint:
         grade3_robotFarmer_ConditionalsIntro_8_b: Šta bi trebao uraditi kada dođeš do kraja puta?

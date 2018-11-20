@@ -227,6 +227,8 @@ eu:
         courseC_artist_prog2_b: Arazoak bihurgunea hartzean? Erabili `eskuinera biratu 90 gradu` blokea.
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
       grade2_MakeDogTag_1_authored_hint:
         2-3_Artist_1_new_a: Blokea erabiltzen baduzun ni `aurrera 100 pixel` eginarazteko, lerro bat marraztuko dut automatikoki.
         2-3_Artist_1_new_b: Arazoak bihurgunea hartzean? Erabili `eskuinera biratu 90 gradu` blokea.

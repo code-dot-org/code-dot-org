@@ -31,16 +31,16 @@ nl:
             '"ROBOT"': alle robots
             '"SHARK"': alle haaien
           MOVE:
-            MOVES.ClapHigh: Hoog klappen
-            MOVES.Clown: Clown
-            MOVES.DoubleJam: Double Jam
-            MOVES.Drop: Naar de grond
-            MOVES.Roll: Rol
-            MOVES.Kick: Trap
-            MOVES.ThisOrThat: Dit of dat.
             '"next"': "(Volgende)"
             '"prev"': "(Vorige)"
             '"rand"': "(Willekeurig)"
+            MOVES.Roll: Rol
+            MOVES.ClapHigh: Hoog klappen
+            MOVES.DoubleJam: Double Jam
+            MOVES.Drop: Naar de grond
+            MOVES.Clown: Clown
+            MOVES.Kick: Trap
+            MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
           DIR:
             '1': "→"
@@ -49,16 +49,16 @@ nl:
         text: "{SPRITE} doe {MOVE} {DIR} voor altijd"
         options:
           MOVE:
-            MOVES.ClapHigh: Hoog klappen
-            MOVES.Clown: Clown
-            MOVES.DoubleJam: Double Jam
-            MOVES.Drop: Naar de grond
-            MOVES.Roll: Rol
-            MOVES.Kick: Trap
-            MOVES.ThisOrThat: Dit of dat.
             '"next"': "(Volgende)"
             '"prev"': "(Vorige)"
             '"rand"': "(Willekeurig)"
+            MOVES.Roll: Rol
+            MOVES.ClapHigh: Hoog klappen
+            MOVES.DoubleJam: Double Jam
+            MOVES.Drop: Naar de grond
+            MOVES.Clown: Clown
+            MOVES.Kick: Trap
+            MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
           DIR:
             '1': "→"
@@ -89,11 +89,12 @@ nl:
             '"ROBOT"': alle robots
             '"SHARK"': alle haaien
           MOVE:
+            '"rand"': "(Willekeurig)"
+            MOVES.Roll: Rol
             MOVES.ClapHigh: Hoog klappen
-            MOVES.Clown: Clown
             MOVES.DoubleJam: Double Jam
             MOVES.Drop: Naar de grond
-            MOVES.Roll: Rol
+            MOVES.Clown: Clown
             MOVES.Kick: Trap
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
@@ -104,11 +105,12 @@ nl:
         text: "{SPRITE} doe {MOVE} {DIR} een keer"
         options:
           MOVE:
+            '"rand"': "(Willekeurig)"
+            MOVES.Roll: Rol
             MOVES.ClapHigh: Hoog klappen
-            MOVES.Clown: Clown
             MOVES.DoubleJam: Double Jam
             MOVES.Drop: Naar de grond
-            MOVES.Roll: Rol
+            MOVES.Clown: Clown
             MOVES.Kick: Trap
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
@@ -294,7 +296,7 @@ nl:
             '"disco"': Vierkanten
             '"rainbow"': Kleuren
             '"diamonds"': Ruiten
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": "(Willekeurig)"
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Willekeurig)"
       Dancelab_setDanceSpeed:
         text: verander de danssnelheid van {SPRITE} naar {SPEED}
         options:
@@ -588,6 +590,22 @@ nl:
             "{x: 300, y: 100}": rechtsboven
             "{x: 100, y: 300}": linksonder
             "{x: 300, y: 300}": rechtsonder
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": boven
+            "{x: 200, y: 300}": onder
+            "{x: 100, y: 200}": links
+            "{x: 300, y: 200}": rechts
+            "{x: 200, y: 200}": midden
+            "{x: 100, y: 100}": linksboven
+            "{x: 300, y: 100}": rechtsboven
+            "{x: 100, y: 300}": linksonder
+            "{x: 300, y: 300}": rechtsonder
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': alles
       Mikelab_getProp:
         options:
           PROPERTY:

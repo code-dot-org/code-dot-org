@@ -1607,7 +1607,55 @@ ko:
               name: 변수들 함께 묶기
             For Loop Fun:
               name: 재미있는 반복
+            The Artist:
+              name: 화가
         dance-low:
           stages:
             Dance Party:
               name: 댄스 파티
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: 릴레이 프로그래밍
+            Conditionals with Cards:
+              name: 조건선택 카드
+            Digital Citizenship:
+              name: 디지털 시민의식
+            'Unplugged: Binary':
+              name: '언플러그드: 2진'
+            Artist Binary:
+              name: 화가 2진
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: 건물 기초 만들기
+            Nested Loops:
+              name: 중첩 반복
+            Conditionals with Cards:
+              name: 조건선택 카드
+            Conditionals:
+              name: 조건
+            Internet:
+              name: 인터넷
+            Crowdsourcing:
+              name: 클라우드소싱
+        express-2019:
+          stages:
+            Relay Programming:
+              name: 릴레이 프로그래밍
+            Conditionals with Cards:
+              name: 조건선택 카드
+            Envelope Variables:
+              name: 변수들 함께 묶기
+            For Loop Fun:
+              name: 재미있는 반복
+            Binary Bracelets:
+              name: 2진 팔찌
+            'Unplugged: Binary':
+              name: '언플러그드: 2진'
+            Artist Binary:
+              name: 화가 2진
+            Internet:
+              name: 인터넷
+            Crowdsourcing:
+              name: 클라우드소싱
