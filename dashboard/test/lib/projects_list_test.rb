@@ -45,14 +45,47 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal '2017-01-25T17:48:12.358-08:00', project_row['updatedAt']
   end
 
-  test 'get_published_project_and_user_data returns nil for projects with sharing_disabled' do
+  test 'get_published_project_and_user_data returns nil for App Lab project with sharing_disabled' do
     project_and_user = {
-      properties: {sharing_disabled: true}.to_json
+      properties: {sharing_disabled: true}.to_json,
+      project_type: 'applab'
     }
     assert_nil ProjectsList.send(:get_published_project_and_user_data, project_and_user)
   end
 
-  test 'fetch_published_project_types filters by sharing_disabled' do
+  test 'get_published_project_and_user_data returns nil for Game Lab project with sharing_disabled' do
+    project_and_user = {
+      properties: {sharing_disabled: true}.to_json,
+      project_type: 'gamelab'
+    }
+    assert_nil ProjectsList.send(:get_published_project_and_user_data, project_and_user)
+  end
+
+  test 'get_published_project_and_user_data does not return nil for Dance project even with sharing_disabled' do
+    project_and_user = {
+      properties: {sharing_disabled: true}.to_json,
+      project_type: 'dance',
+      storage_id: @storage_id,
+      id: 1,
+      birthday: 13.years.ago.to_datetime,
+    }
+    StorageApps.stubs(:get_published_project_data).returns({})
+    refute_nil ProjectsList.send(:get_published_project_and_user_data, project_and_user)
+  end
+
+  test 'get_published_project_and_user_data does not return nil for PlayLab project even with sharing_disabled' do
+    project_and_user = {
+      properties: {sharing_disabled: true}.to_json,
+      project_type: 'playlab',
+      storage_id: @storage_id,
+      id: 1,
+      birthday: 13.years.ago.to_datetime,
+    }
+    StorageApps.stubs(:get_published_project_data).returns({})
+    refute_nil ProjectsList.send(:get_published_project_and_user_data, project_and_user)
+  end
+
+  test 'fetch_published_project_types filters by sharing_disabled and project_type' do
     stub_projects = [
       {
         name: 'project1',
