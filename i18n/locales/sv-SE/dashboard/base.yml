@@ -264,6 +264,7 @@ sv:
       playlab: 'Spel-labb'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
+      dance: 'Dansparty'
     popup:
       progress_for_user: "%{name}s framsteg"
       progress: 'Dina framsteg'
@@ -468,6 +469,8 @@ sv:
       body_short: "Utveckla en app, bygg den med blocks eller JavaScript. När du har fått den att fungerar som du tänkte kan du inom några sekunder dela med dig av den till andra."
       audience: 'Ålder 13+'
       cta: 'Läs mer'
+    dance:
+      title: 'Dansparty'
     hoc:
       title: 'Klassisk labyrint'
       body: 'Lär dig grunderna i programmering. Miljoner har provat denna.'
