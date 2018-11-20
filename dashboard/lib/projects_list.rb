@@ -18,6 +18,11 @@ module ProjectsList
     dance: ['dance']
   }.freeze
 
+  # Sharing of advanced project types to the public gallery is restricted for
+  # young students unless sharing is explciitly enabled by the student's
+  # teacher for privacy reasons.
+  ADVANCED_PROJECT_TYPES = ['applab', 'gamelab']
+
   class << self
     # Look up every project associated with the provided user_id, excluding those that are hidden.
     # Return a set of metadata which can be used to display a table of personal projects in the UI.
@@ -226,9 +231,9 @@ module ProjectsList
     # @param [hash] the join of storage_apps and user tables for a published project.
     #  See project_and_user_fields for which fields it contains.
     # @returns [hash, nil] containing fields relevant to the published project or
-    #  nil when the user has sharing_disabled = true
+    #  nil when the user has sharing_disabled = true for App Lab and Game Lab.
     def get_published_project_and_user_data(project_and_user)
-      return nil if get_sharing_disabled_from_properties(project_and_user[:properties])
+      return nil if get_sharing_disabled_from_properties(project_and_user[:properties]) && ADVANCED_PROJECT_TYPES.include?(project_and_user[:project_type])
       channel_id = storage_encrypt_channel_id(project_and_user[:storage_id], project_and_user[:id])
       StorageApps.get_published_project_data(project_and_user, channel_id).merge(
         {
