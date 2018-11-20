@@ -66,7 +66,7 @@ end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
-  wait_until {@browser.find_element(selection_criteria)}
+  wait_until {!@browser.find_elements(selection_criteria).empty?}
 end
 
 When /^I go to the newly opened tab$/ do

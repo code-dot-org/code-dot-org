@@ -16,7 +16,7 @@ import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
-import {setThumbnailBlobFromCanvas} from '../util/thumbnail';
+import {captureThumbnailFromCanvas, setThumbnailBlobFromCanvas} from '../util/thumbnail';
 import project from "../code-studio/initApp/project";
 import {
   getSongManifest,
@@ -96,6 +96,7 @@ Dance.prototype.init = function (config) {
   });
   this.studioApp_.labUserId = config.labUserId;
   this.level.softButtons = this.level.softButtons || {};
+  this.initialThumbnailCapture = true;
 
   config.afterClearPuzzle = function () {
     this.studioApp_.resetButtonClick();
@@ -655,10 +656,16 @@ Dance.prototype.getAppReducers = function () {
 };
 
 /**
- * Capture a thumbnail image of the play space. This will capture a PNG blob
- * of the thumbnail in memory, then will save that blob to S3 when the project
- * is saved.
+ * Capture a thumbnail image of the play space. On initial capture, the thumbnail
+ * will be saved to the server. Every thumbnail captured after the initial capture will be
+ * stored in memory until the project is saved.
  */
 Dance.prototype.captureThumbnailImage = function () {
-  setThumbnailBlobFromCanvas(document.getElementById('defaultCanvas0'));
+  const canvas = document.getElementById('defaultCanvas0');
+  if (this.initialThumbnailCapture) {
+    this.initialThumbnailCapture = false;
+    captureThumbnailFromCanvas(canvas);
+  } else {
+    setThumbnailBlobFromCanvas(canvas);
+  }
 };
