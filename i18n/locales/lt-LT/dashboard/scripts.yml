@@ -1508,3 +1508,47 @@ lt:
               name: Laiptuota piramidė
             Conditionals with Cards:
               name: Sąlyginiai sakiniai su kortomis
+            The Artist:
+              name: Menininkas
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Programavimas komandoje
+            Conditionals with Cards:
+              name: Sąlyginiai sakiniai su kortomis
+            Digital Citizenship:
+              name: Virtuali pilietybė
+            'Unplugged: Binary':
+              name: 'Be kompiuterio: dvejetainiai skaičiai'
+            Artist Binary:
+              name: 'Meninkas: dvejetainis'
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Laiptuota piramidė
+            Nested Loops:
+              name: Kartojimas kartojime
+            Conditionals with Cards:
+              name: Sąlyginiai sakiniai su kortomis
+            Conditionals:
+              name: Sąlyginiai sakiniai
+            Internet:
+              name: Internetas
+            Crowdsourcing:
+              name: Komandinis programavimas
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Programavimas komandoje
+            Conditionals with Cards:
+              name: Sąlyginiai sakiniai su kortomis
+            Binary Bracelets:
+              name: Dvejetainės apyrankės
+            'Unplugged: Binary':
+              name: 'Be kompiuterio: dvejetainiai skaičiai'
+            Artist Binary:
+              name: 'Meninkas: dvejetainis'
+            Internet:
+              name: Internetas
+            Crowdsourcing:
+              name: Komandinis programavimas

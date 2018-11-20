@@ -974,6 +974,19 @@ es:
         ¡Ahora puedes crear un montón de bailarines a la vez!
 
         Trata de usar algunos de los bloques «todos los patos» para escribir el código que hará que todos los patos bailen juntos.
+      Dance_Party_11.5_test: |-
+        Echa un vistazo a este bloque:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        ¡Ahora puedes crear un montón de bailarines a la vez!
+
+        Trata de usar algunos de los bloques «todos los patos» para escribir el código que hará que todos los patos bailen juntos.
       Dance_Party_11: |-
         El bloque <xml><block type="Dancelab_whenKey"></block></xml> te permite ejecutar código cuando se pulsa la flecha arriba.
 
@@ -983,6 +996,17 @@ es:
         cuando pulsas la tecla de flecha derecha."
       Dance_Party_12: "¡Mueve el esqueleto! Crea un baile propio para compartirlo
         con tus amigos."
+      Dance_Party_3: |-
+        *¡Ahora movemos el esqueleto!*
+
+        Añade un bloque de «compases» <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> a tu espacio de trabajo. Haz que el bailarín inicie un movimiento nuevo después de 6 compases.
+      Dance_Party_4: |-
+        *¡A este baile le hace falta brillo!*
+
+        Busca un bloque nuevo en tu caja de herramientas que añada un efecto de fondo detrás de tu bailarín. ¡Observa cómo cambian los efectos al ritmo de la música!
+      Dance_Party_8: Cada bailarín tiene un conjunto de _propiedades_ que controlan
+        su aspecto. Puedes hacer que parezca que un bailarín está en el fondo si reduces
+        su tamaño. ¿Puedes hacer que ambos bailarines de fondo tengan el mismo tamaño?
       Fish Tank 5-validated_simple: El pez quiere un amigo. Agrega un nuevo sprite.
       Function intro Ryan: "Cuentas con una **función** llamada \"construir puente\"
         en tu espacio de trabajo. ¡Todo el código que necesitas para cruzar el río
@@ -1024,6 +1048,10 @@ es:
       HOC 2018 Level_9b: "¡Has llegado al arrecife, ahora busca el **corazón del mar**
         ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Usa el coral azul y rojo para alcanzar el **cofre** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
+      HOC Dance 3_draft: |-
+        *¡A este baile le hace falta brillo!*
+
+        Busca un bloque nuevo en tu caja de herramientas que añada un efecto de fondo detrás de tu bailarín. ¡Observa cómo cambian los efectos al ritmo de la música!
       HOC Dance 4_draft: |-
         ¡Utiliza otro bloque nuevo para que el bailarín cambie de movimientos **cada 2 compases**!
 
@@ -1032,6 +1060,9 @@ es:
         *¡Necesitamos más bailarines!*
 
         Crea un bailarín de fondo llamado «bailarín_fondo1» para bailar con el gato.
+      HOC Dance 6_draft: Cada bailarín tiene un conjunto de _propiedades_ que controlan
+        su aspecto. Puedes hacer que parezca que un bailarín está en el fondo si reduces
+        su tamaño. ¿Puedes hacer que ambos bailarines de fondo tengan el mismo tamaño?
       HOC Dance 9_draft: |-
         El bloque <xml><block type="Dancelab_whenKey"></block></xml> te permite ejecutar código cuando se pulsa la flecha arriba.
 
@@ -1267,6 +1298,8 @@ es:
       Overworld Move to Sheep: Añade un segundo comando "avanzar" para llegar a la
         oveja.
       Overworld Move to Sheep_2018: Añade un segundo comando "avanzar" para llegar
+        a la oveja.
+      Overworld Move to Sheep_2019: Añade un segundo comando "avanzar" para llegar
         a la oveja.
       PS copy 2-3 Bee Conditionals 5: "Estas flores púrpura cambian!\r\n\r\nCada vez
         que intentas el puzzle, las flores púrpura pueden tener nectar o no... pero

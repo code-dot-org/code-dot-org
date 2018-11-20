@@ -1623,7 +1623,7 @@ sk:
             Building a Foundation:
               name: Stavanie základov
             Programming in Artist:
-              name: Kódovať Umenie
+              name: Umenie s Kódom
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             Introduction:
@@ -1798,3 +1798,106 @@ sk:
                 Umelec či Play Lab. Nakoniec, študenti dostanú priesto rprezentovať
                 svoje práce rovesníkom alebo ich zdielať s blízkymi. Príručku kurzu
                 pre všetkých päť úrovní procesu nájdeme v prvom [here](https://curriculum.code.org/csf/coursef/15/).
+            The Artist:
+              name: Umelec
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Štafetové programovanie
+            Loops in Ice Age:
+              name: Slučky v Dobe Ľadovej
+            Nested Loops in Artist:
+              name: Vnorené cykly s Umelcom
+            Nested Loops in Frozen:
+              name: Vnorené cykly vo Frozen
+            Conditionals with Cards:
+              name: Podmienky s kartami
+            Digital Citizenship:
+              name: Digitálne Občianstvo
+            Artist Binary:
+              name: Binárny Umelec
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Stavanie základov
+            Programming in Artist:
+              name: Programovanie s Umelecom
+            Nested Loops:
+              name: Vnorené slučky
+            Nested Loops with Frozen:
+              name: Vnorené cykly s Frozen
+            Conditionals with Cards:
+              name: Podmienky s kartami
+            Conditionals:
+              name: Podmienky
+            Copyright and Creativity:
+              name: Autorské práva a Kreativita
+            Functions in Artist:
+              name: Funkcie s Umelcom
+              description_student: Jednoducho s funkciami vytvor zložitejšie kresby!
+              description_teacher: Študenti sa oboznámia s používaním funkcií na stránke
+                Code.org. V Umelcovi budeme tvoriť a upravovať veľkolepé obrázky.
+                Študenti sa naučia viac o vnorených funkciach, čo je vlastne zvolanie
+                jednej funkcie z vnútra inéj, ktoré sú na tvorbu komplexnejších vzorov.
+            Explore Project Ideas:
+              description_teacher: "V záverečnom projekte, nasledujúce štyri lekcie,
+                dostávajú študenti možnosť overiť svoje kódovacie zručnosti v praxi.
+                Projekt umožní jednotlivcom získať skúsenosť s kódovaním tak, že vytvoria
+                exemplár, ktorý môžu zdielať s rovesníkmi a blízkymi. \n\nVo fáze
+                prieskumu môžu študenti vidieť pre-postavené príklady projektov v
+                Umelcovi a aj v Play Labe. Ďalej sa študenti oboznámia s procesom
+                dizajnu a ako ho implementovať do vlastných projektov. Dostanú priestor
+                tvoriť vlastné projekty buď v Umelcovi alebo v Play Labe (toto je
+                pravdepodobne najdlhšia časť projektu). Nakoniec, budú študenti schopní
+                prezentovať svoje projekty rovesníkom.\n"
+            The Design Process:
+              description_teacher: |-
+                V priebehu štyroch hodín budú študenti pracovať na programovaní dizajnu vlastného projektu v kurze Play Lab alebo Umelec. V tejto časti sa študenti dozvedia o procese dizajnu a ako ho použiť vo vlastných projektoch. Príručku kurzu pre všetky štyri úrovne procesu nájdeme v prvom [here]
+                (https://curriculum.code.org/csf/coursee/12/).
+            Build Your Project:
+              description_teacher: "V priebehu štyroch hodín budú študenti pracovať
+                na programovaní dizajnu vlastného projektu v kurze Play Lab alebo
+                Umelec. \n\nŠtudenosti dostanú priestor vytvoriť vlastný projekt v
+                kurzoch Umelec či Play Lab. Toto bude pravdepodovne najdlhšia časť
+                kurzu. Príručku kurzu pre všetky štyri úrovne procesu nájdeme v prvom
+                [here](https://curriculum.code.org/csf/coursee/12/)."
+            Present Your Project:
+              description_teacher: V priebehu štyroch hodín budú študenti pracovať
+                na programovaní dizajnu vlastného projektu v kurze Play Lab alebo
+                Umelec. Nakoniec budú študenti schopní prezentovať svoj projekt rovesníkom
+                a blízkym alebo ho zdielať. Príručku kurzu pre všetky štyri úrovne
+                procesu nájdeme v prvom [here](https://curriculum.code.org/csf/coursee/12/).
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+            Nested Loops in Artist:
+              name: Vnorené cykly s Umelcom
+            Nested Loops in Frozen:
+              name: Vnorené cykly vo Frozen
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Štafetové programovanie
+            Programming in Artist:
+              name: Programovanie s Umelecom
+            Copyright and Creativity:
+              name: Autorské práva a Kreativita
+            Nested Loops in Frozen:
+              name: Vnorené cykly vo Frozen
+            Conditionals with Cards:
+              name: Podmienky s kartami
+            Functions in Artist:
+              name: Funkcie s Umelcom
+            Envelope Variables:
+              name: Obálkové premenné
+            For Loop Fun:
+              name: Zábavné opakovanie
+            Binary Bracelets:
+              name: Binárne náramky
+            Artist Binary:
+              name: Binárny Umelec
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing

@@ -3633,16 +3633,26 @@ fil:
         mc_8_a: Mayroong iilang mga landas ang kailangan mong tahakin. Alin ang pinkamaikli?
         mc_8_b: Gumamit ng `repeat` na mga loops para magawang simple ang iyong code.
         mc_8_c: Ang iyong layunin ay ang makapasok sa pintuan ng bahay na nasa itaas ng screen.
+      Overworld Avoid Monsters_2019_authored_hint:
+        mc_8_a: Mayroong iilang mga landas ang kailangan mong tahakin. Alin ang pinkamaikli?
+        mc_8_b: Gumamit ng `repeat` na mga loops para magawang simple ang iyong code.
+        mc_8_c: Ang iyong layunin ay ang makapasok sa pintuan ng bahay na nasa itaas ng screen.
       Overworld Chop Tree_authored_hint:
         mc_2_a: 'Kailangan mong `gumalaw pasulong` nang dalawang beses para makatindig sa harap ng kahoy.'
         mc_2_b: Ang `destroy block` na utos ay nagpuputol sa mga kahoy na nasa harap mo.
       Overworld Chop Tree_2018_authored_hint:
         mc_2_a: 'Kailangan mong `gumalaw pasulong` nang dalawang beses para makatindig sa harap ng kahoy.'
         mc_2_b: Ang `destroy block` na utos ay nagpuputol sa mga kahoy na nasa harap mo.
+      Overworld Chop Tree_2019_authored_hint:
+        mc_2_a: 'Kailangan mong `gumalaw pasulong` nang dalawang beses para makatindig sa harap ng kahoy.'
+        mc_2_b: Ang `destroy block` na utos ay nagpuputol sa mga kahoy na nasa harap mo.
       Overworld Chop Trees_authored_hint:
         mc_4_a: 'Maaari mong putulin ang mga kahot sa kahit anong pagkasunod-sunod. Anong landas ang nagdadala sa pinakamaikling bilang ng mga bloke?'
         mc_4_b: Ang `destroy block` na utos ay nagpuputol sa mga kahoy na nasa harap mo.
       Overworld Chop Trees_2018_authored_hint:
+        mc_4_a: 'Maaari mong putulin ang mga kahot sa kahit anong pagkasunod-sunod. Anong landas ang nagdadala sa pinakamaikling bilang ng mga bloke?'
+        mc_4_b: Ang `destroy block` na utos ay nagpuputol sa mga kahoy na nasa harap mo.
+      Overworld Chop Trees_2019_authored_hint:
         mc_4_a: 'Maaari mong putulin ang mga kahot sa kahit anong pagkasunod-sunod. Anong landas ang nagdadala sa pinakamaikling bilang ng mga bloke?'
         mc_4_b: Ang `destroy block` na utos ay nagpuputol sa mga kahoy na nasa harap mo.
       Overworld House Frame Chosen_authored_hint:
@@ -3653,10 +3663,17 @@ fil:
         mc_6_a: Nag-click sa arrow na nasa taas ng `place` ba bloke para makapili kung ano ang ilalagay mo.
         mc_6_b: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
         mc_6_c: Maaari kang maglagay ng higit sa isang bloke sa loob ng isang `repeat` na loop.
+      Overworld House Frame Chosen_2019_authored_hint:
+        mc_6_a: Nag-click sa arrow na nasa taas ng `place` ba bloke para makapili kung ano ang ilalagay mo.
+        mc_6_b: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
+        mc_6_c: Maaari kang maglagay ng higit sa isang bloke sa loob ng isang `repeat` na loop.
       Overworld Move to Sheep_authored_hint:
         mc_1_a: 'Ang `move forward` na bloke ay nasa taas ng toolbox.'
         mc_1_b: 'Siguradohing ang parehong `move forward` na mga bloke ay naka-snap sa `when run` na bloke.'
       Overworld Move to Sheep_2018_authored_hint:
+        mc_1_a: 'Ang `move forward` na bloke ay nasa taas ng toolbox.'
+        mc_1_b: 'Siguradohing ang parehong `move forward` na mga bloke ay naka-snap sa `when run` na bloke.'
+      Overworld Move to Sheep_2019_authored_hint:
         mc_1_a: 'Ang `move forward` na bloke ay nasa taas ng toolbox.'
         mc_1_b: 'Siguradohing ang parehong `move forward` na mga bloke ay naka-snap sa `when run` na bloke.'
       Overworld Place Wall_authored_hint:
@@ -3664,6 +3681,10 @@ fil:
         mc_5_b: Siguraduhing ang parehong mga bloke ay nasa loob ng `repeat` na loob para mapatakbo ang code nang higit sa isang beses.
         mc_5_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang mangyayari, kahit na hindi mo pa nalutas ang palaisipan.
       Overworld Place Wall_2018_authored_hint:
+        mc_5_a: Gamitin ang `place` na bloke muna, at pagkatapos ay ang `move` na bloke.
+        mc_5_b: Siguraduhing ang parehong mga bloke ay nasa loob ng `repeat` na loob para mapatakbo ang code nang higit sa isang beses.
+        mc_5_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
+      Overworld Place Wall_2019_authored_hint:
         mc_5_a: Gamitin ang `place` na bloke muna, at pagkatapos ay ang `move` na bloke.
         mc_5_b: Siguraduhing ang parehong mga bloke ay nasa loob ng `repeat` na loob para mapatakbo ang code nang higit sa isang beses.
         mc_5_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
@@ -3675,10 +3696,17 @@ fil:
         mc_7_a: Gamitin ang `plant crop` na bloke para magtanim ng pananim sa espasyo kung saan ka nakatayo.
         mc_7_b: Parehong mga piraso ng dark brown na mga lupain malapit sa tubig ay kailangang punan ng mga pananim.
         mc_7_c: Maaari kang maglagay ng higit sa isang bloke sa loob ng isang `repeat` na loop.
+      Overworld Plant Crops_2019_authored_hint:
+        mc_7_a: Gamitin ang `plant crop` na bloke para magtanim ng pananim sa espasyo kung saan ka nakatayo.
+        mc_7_b: Parehong mga piraso ng dark brown na mga lupain malapit sa tubig ay kailangang punan ng mga pananim.
+        mc_7_c: Maaari kang maglagay ng higit sa isang bloke sa loob ng isang `repeat` na loop.
       Overworld Powered Minecart_authored_hint:
         mc_13_a: Gamitin ang `place rail` para maglagay ng riles sa parisukat kung saan ka nakatayo.
         mc_13_b: Gamitin ang `repeat` na mga loop para mapaikli ang iyong code.
       Overworld Powered Minecart_2018_authored_hint:
+        mc_13_a: Gamitin ang `place rail` para maglagay ng riles sa parisukat kung saan ka nakatayo.
+        mc_13_b: Gamitin ang `repeat` na mga loop para mapaikli ang iyong code.
+      Overworld Powered Minecart_2019_authored_hint:
         mc_13_a: Gamitin ang `place rail` para maglagay ng riles sa parisukat kung saan ka nakatayo.
         mc_13_b: Gamitin ang `repeat` na mga loop para mapaikli ang iyong code.
       Overworld Shear Sheep_authored_hint:
@@ -3686,6 +3714,10 @@ fil:
         mc_3_b: 'Kung kailangan mong baguhin ang daan kung saan ka nakaharap, gamitin ang `turn` na bloke.'
         mc_3_c: 'Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang mangyayari, kung hindi mo pa nalutas ang palaisipan.'
       Overworld Shear Sheep_2018_authored_hint:
+        mc_3_a: 'Ang `shear` na bloke ay maghahatid sa tupa sa harap mo. Nakaharap ka ba sa tupa?'
+        mc_3_b: 'Kung kailangan mong baguhin ang daan kung saan ka nakaharap, gamitin ang `turn` na bloke.'
+        mc_3_c: 'Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang mangyayari, kung hindi mo pa nalutas ang palaisipan.'
+      Overworld Shear Sheep_2019_authored_hint:
         mc_3_a: 'Ang `shear` na bloke ay maghahatid sa tupa sa harap mo. Nakaharap ka ba sa tupa?'
         mc_3_b: 'Kung kailangan mong baguhin ang daan kung saan ka nakaharap, gamitin ang `turn` na bloke.'
         mc_3_c: 'Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang mangyayari, kung hindi mo pa nalutas ang palaisipan.'
@@ -3709,11 +3741,18 @@ fil:
       Underground Avoiding Lava_2018_authored_hint:
         mc_11_a: Ang lahat ng code ay nasa lugar para suriin kung may laba at para harapin ito. Ang kailangan mo lang gawin ay magdagdag ng bloke para makagalaw.
         mc_11_b: Dapat bang ang iyong `move forward` na utos ay nasa loob ng isang `if` na pahayag o pagkatapos?
+      Underground Avoiding Lava_2019_authored_hint:
+        mc_11_a: Ang lahat ng code ay nasa lugar para suriin kung may laba at para harapin ito. Ang kailangan mo lang gawin ay magdagdag ng bloke para makagalaw.
+        mc_11_b: Dapat bang ang iyong `move forward` na utos ay nasa loob ng isang `if` na pahayag o pagkatapos?
       Underground If Statements_authored_hint:
         mc_12_a: Ang mga puwang na may pulang mga dungis ay kung saan mahahanap mo ang Redstone.
         mc_12_b: Maaari ka bang gumamit ng `repeat` na loop para mapaikli ang code na ito?
         mc_12_c: 'Gamitin ang `if` na pahayag para suriin ang mga puwang para sa mga laba, pagkatapos ay maglagay ng mga kalsadang bato. '
       Underground If Statements_2018_authored_hint:
+        mc_12_a: Ang mga puwang na may pulang mga dungis ay kung saan mahahanap mo ang Redstone.
+        mc_12_b: Maaari ka bang gumamit ng `repeat` na loop para mapaikli ang code na ito?
+        mc_12_c: 'Gamitin ang `if` na pahayag para suriin ang mga puwang para sa mga laba, pagkatapos ay maglagay ng mga kalsadang bato. '
+      Underground If Statements_2019_authored_hint:
         mc_12_a: Ang mga puwang na may pulang mga dungis ay kung saan mahahanap mo ang Redstone.
         mc_12_b: Maaari ka bang gumamit ng `repeat` na loop para mapaikli ang code na ito?
         mc_12_c: 'Gamitin ang `if` na pahayag para suriin ang mga puwang para sa mga laba, pagkatapos ay maglagay ng mga kalsadang bato. '
@@ -3725,11 +3764,19 @@ fil:
         mc_10_a: Ang mga bakal na bloke ay ang mga may dungis na mga puwang sa likod ng sulo! Paano kaya ikaw makakapunta doon?
         mc_10_b: Kapag ikaw ay nakatayo sa dulo ng laba, gumamit ng `place a cobblestone ahead` para makagawa ng ligtas na landas. Pagkatapos, maaari kang maglakad dito!
         mc_10_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
+      Underground Iron_2019_authored_hint:
+        mc_10_a: Ang mga bakal na bloke ay ang mga may dungis na mga puwang sa likod ng sulo! Paano kaya ikaw makakapunta doon?
+        mc_10_b: Kapag ikaw ay nakatayo sa dulo ng laba, gumamit ng `place a cobblestone ahead` para makagawa ng ligtas na landas. Pagkatapos, maaari kang maglakad dito!
+        mc_10_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
       Underground Mining Coal_authored_hint:
         mc_9_a: Ikaw ba ay nakaharap sa tamang landas? Ang `destroy block` ay magmina sa bloke sa harap mo.
         mc_9_b: Ang itim na mga pekas na nasa pader ay uling! Gamitin ang `destroy block` sa mga ito para makapagmina ng uling.
         mc_9_c: Gamitin ang `place torch` para maglagay ng sulo sa puwang kung saan ka nakatayo.
       Underground Mining Coal_2018_authored_hint:
+        mc_9_a: Ikaw ba ay nakaharap sa tamang landas? Ang `destroy block` ay magmina sa bloke sa harap mo.
+        mc_9_b: Ang itim na mga pekas na nasa pader ay uling! Gamitin ang `destroy block` sa mga ito para makapagmina ng uling.
+        mc_9_c: Gamitin ang `place torch` para maglagay ng sulo sa puwang kung saan ka nakatayo.
+      Underground Mining Coal_2019_authored_hint:
         mc_9_a: Ikaw ba ay nakaharap sa tamang landas? Ang `destroy block` ay magmina sa bloke sa harap mo.
         mc_9_b: Ang itim na mga pekas na nasa pader ay uling! Gamitin ang `destroy block` sa mga ito para makapagmina ng uling.
         mc_9_c: Gamitin ang `place torch` para maglagay ng sulo sa puwang kung saan ka nakatayo.
@@ -5018,19 +5065,29 @@ fil:
         courseC_maze_programming6_a: Mayroong dalawang mga pamamaraan para malutas ang palaisipang ito!
       courseC_maze_programming6_2018_authored_hint:
         courseC_maze_programming6_a: Mayroong dalawang mga pamamaraan para malutas ang palaisipang ito!
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: Mayroong dalawang mga pamamaraan para malutas ang palaisipang ito!
       courseC_starWars_loops1_authored_hint:
         courseC_starWars_loops1_b: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
       courseC_starWars_loops10_authored_hint:
         courseC_starWars_loops10_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
       courseC_starWars_loops10_2018_authored_hint:
         courseC_starWars_loops10_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
+      courseC_starWars_loops10_2019_authored_hint:
+        courseC_starWars_loops10_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
       courseC_starWars_loops1_2018_authored_hint:
+        courseC_starWars_loops1_b: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
+      courseC_starWars_loops1_2019_authored_hint:
         courseC_starWars_loops1_b: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
       courseC_starWars_loops7_authored_hint:
         courseC_starWars_loops7_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
       courseC_starWars_loops7_2018_authored_hint:
         courseC_starWars_loops7_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
+      courseC_starWars_loops7_2019_authored_hint:
+        courseC_starWars_loops7_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
@@ -5042,9 +5099,13 @@ fil:
         courseD_artist_nestedLoops3_a: "Subukang gumamit ng `jump forward` na bloke para makuha mula sa taas ng isang parisukat sa lugar kung saan nagsimula ang kasunod. \n\nKung ang iyong parisukat ay 20 pixels ang taas at sila ay 20 pixels ang pagitan, gaano kalayo ba ang kailangan mung talonan?"
       courseD_artist_nestedLoops3_2018_authored_hint:
         courseD_artist_nestedLoops3_a: "Subukang gumamit ng `jump forward` na bloke para makuha mula sa taas ng isang parisukat sa lugar kung saan nagsimula ang kasunod. \n\nKung ang iyong parisukat ay 20 pixels ang taas at sila ay 20 pixels ang pagitan, gaano kalayo ba ang kailangan mung talonan?"
+      courseD_artist_nestedLoops3_2019_authored_hint:
+        courseD_artist_nestedLoops3_a: "Subukang gumamit ng `jump forward` na bloke para makuha mula sa taas ng isang parisukat sa lugar kung saan nagsimula ang kasunod. \n\nKung ang iyong parisukat ay 20 pixels ang taas at sila ay 20 pixels ang pagitan, gaano kalayo ba ang kailangan mung talonan?"
       courseD_bee_conditionals8_authored_hint:
         courseD_bee_conditionals8_a: "**Tandaan:** Ang palaisipang ito ay nagbabago sa bawat beses na ito ay tumatakbo.  \n\nGugustohin mong gumamit ng isang kondisyonal na bloke (`if` o `if/else`) para malutas ang hamon."
       courseD_bee_conditionals8_2018_authored_hint:
+        courseD_bee_conditionals8_a: "**Tandaan:** Ang palaisipang ito ay nagbabago sa bawat beses na ito ay tumatakbo.  \n\nGugustohin mong gumamit ng isang kondisyonal na bloke (`if` o `if/else`) para malutas ang hamon."
+      courseD_bee_conditionals8_2019_authored_hint:
         courseD_bee_conditionals8_a: "**Tandaan:** Ang palaisipang ito ay nagbabago sa bawat beses na ito ay tumatakbo.  \n\nGugustohin mong gumamit ng isang kondisyonal na bloke (`if` o `if/else`) para malutas ang hamon."
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Mayroong dalawang mga pamamaraan para malutas ang palaisipang ito!
@@ -5056,6 +5117,9 @@ fil:
         courseE_artist_concept_challenge1_a: 'Ang kalahating hexagon ay mayroong **haba ng 30** at lumiko pakanan nang **60 degrees**.  '
         courseE_artist_concept_challenge1_b: 'Ang 2/3 na tatsulok ay mayroong **haba ng 80** at lumiko pakanan ng **120 degrees**. '
       courseE_artist_concept_challenge1_2018_authored_hint:
+        courseE_artist_concept_challenge1_a: 'Ang kalahating hexagon ay mayroong **haba ng 30** at lumiko pakanan nang **60 degrees**.  '
+        courseE_artist_concept_challenge1_b: 'Ang 2/3 na tatsulok ay mayroong **haba ng 80** at lumiko pakanan ng **120 degrees**. '
+      courseE_artist_concept_challenge1_2019_authored_hint:
         courseE_artist_concept_challenge1_a: 'Ang kalahating hexagon ay mayroong **haba ng 30** at lumiko pakanan nang **60 degrees**.  '
         courseE_artist_concept_challenge1_b: 'Ang 2/3 na tatsulok ay mayroong **haba ng 80** at lumiko pakanan ng **120 degrees**. '
       courseE_artist_functions1_authored_hint:
@@ -5071,6 +5135,12 @@ fil:
           - Gumalawa pasulong nang 100 + 75 pixels
           - Gamitin ang function
       courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_a: |-
+          Ang iyong programa ay dapat:
+          - Gamitin ang function
+          - Gumalawa pasulong nang 100 + 75 pixels
+          - Gamitin ang function
+      courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: |-
           Ang iyong programa ay dapat:
           - Gamitin ang function

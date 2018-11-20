@@ -458,3 +458,38 @@ is:
         desc: Nemendur læra um skilyrtar setningar með því að spila á spil og búa
           til reglur eins og "ef ég dreg rautt spil, fæ ég stig" og "ef ég dreg svart
           spil, færð þú stig."
+      GraphPaperProgramming_2019:
+        title: Forritun rúðublaða
+        desc: Nemendur skrifa algrím (röð leiðbeininga) með fyrirfram ákveðnum skipunum
+          til að stýra bekkjarfélögum í að endurskapa teikningu.
+      RelayProgramming_2018_2019:
+        title: Boðhlaupsforritun
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Verkefni án tölvu
+        desc: Í dag munt þú læra hvað það þýðir að hafa stafrænt ríkisfang.
+      BinaryImages_2019:
+        title: Tvíundarmyndir
+        desc: Þó margir ímyndi sér að tvíundir takmarkist alfarið við núll og einn,
+          kenndu fyrri námskeið nemendum okkar að það er hægt að nota ýmsar aðrar
+          tvenndir til tákna upplýsingar. Þessi kennslustund gengur skrefi lengra
+          með þá hugmynd þar sem hún sýnir hvernig tölva getur einnig geymt enn flóknari
+          upplýsingar (svo sem myndir og liti) með tvíundarsniði.
+      GettingLoopy_2019:
+        title: Lykkjulæti
+        desc: Þessi kennslustund kynnir forritunarhugtakið lykkju (endurteknar skipanir)
+          með dansi. Nemendur læra einföld dansspor og fá síðan fyrirmæli um að endurtaka
+          þau.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Verkefni án tölvu
+        desc: Í dag munt þú læra hvað þú getur gert ef einhver kemur illa fram við
+          þig á netinu.
+      BigEvent_2019:
+        title: Stórviðburður
+        desc: Nemendur fá kynningu á forritunarhugtakinu "atvik" sem eru aðgerðir
+          sem tölvan er stöðugt að vakta. Kennarinn ýtir á hnapp á pappírsfjarstýringu
+          og nemendur bregðast mismunandi við eftir því á hvaða hnapp var ýtt.
+      BinaryBracelets_2019:
+        title: Stafræn armbönd
+        desc: Nemendur búa til armbönd sem sýna fyrsta stafinn í nafni hvers með gildi
+          hans í tvenndarkerfi. Nemendur læra að það er hægt að tákna og geyma gögn
+          á ýmsa vegu.

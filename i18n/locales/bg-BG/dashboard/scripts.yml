@@ -2151,6 +2151,8 @@ bg:
           stages:
             Artist:
               name: Художник
+        aquatic:
+          title: 'Minecraft: Подводното пътешествие'
         coursef-2019:
           stages:
             Building a Foundation:
@@ -2161,3 +2163,51 @@ bg:
               name: Плик с променливи
             For Loop Fun:
               name: Повторения за забавление
+            The Artist:
+              name: Художникът
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Повтори програмирането
+            Conditionals with Cards:
+              name: Условия с карти
+            Digital Citizenship:
+              name: Цифрови граждани
+            'Unplugged: Binary':
+              name: 'Ънплъгд: двоичен код'
+            Artist Binary:
+              name: 'Художник: Бинарен код'
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Изграждане на база
+            Nested Loops:
+              name: Вмъкнати цикли
+            Conditionals with Cards:
+              name: Условия с карти
+            Conditionals:
+              name: Условия
+            Internet:
+              name: Интернет
+            Crowdsourcing:
+              name: Crowdsourcing кампания
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Повтори програмирането
+            Conditionals with Cards:
+              name: Условия с карти
+            Envelope Variables:
+              name: Плик с променливи
+            For Loop Fun:
+              name: Повторения за забавление
+            Binary Bracelets:
+              name: Двоични гривни
+            'Unplugged: Binary':
+              name: 'Ънплъгд: двоичен код'
+            Artist Binary:
+              name: 'Художник: Бинарен код'
+            Internet:
+              name: Интернет
+            Crowdsourcing:
+              name: Crowdsourcing кампания

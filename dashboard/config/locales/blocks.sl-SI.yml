@@ -236,6 +236,11 @@ sl:
           LOCATION:
             "{x: 100, y: 200}": levo
             "{x: 300, y: 200}": desno
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": levo
+            "{x: 300, y: 200}": desno
       Mikelab_getProp:
         options:
           PROPERTY:

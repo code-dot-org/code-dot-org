@@ -8,7 +8,7 @@
   "collectorCollectTooltip": "เก็บวัตถุ",
   "collectorCollectedEverything": "ยินดีด้วย! คุณได้เก็บ{count, plural, one {ของไป} other {ของไปทั้งหมด # ชิ้น}}!",
   "collectorCollectedNothing": "เขียนโค้ดต่อไป! คุณต้องรวบรวมวัตถุให้มากที่สุดเท่าที่จะทำได้",
-  "collectorCollectedSome": "เยี่ยมมาก! คุณได้เก็บสิ่งของ {count} ชิ้นแล้ว!",
+  "collectorCollectedSome": "เยี่ยมมาก! คุณเก็บสิ่งของได้ {count, plural, one {1 item} other {# ชิ้น}}แล้ว!",
   "collectorCollectedNotEnough": "เขียนโค้ดต่อไป! คุณต้องรวบรวมวัตถุให้ได้อย่างน้อย {goal, plural, one {1 ชิ้น} other {# ชิ้น}}",
   "collectorCollectedTooMany": "ไม่มีสมบัติพอให้ฉันเก็บ",
   "collectorTooManyBlocks": "คุณสามารถใช้ได้แค่บล็อก {blockLimit} เท่านั้น ตรวจเช็คโค้ดของคุณดู แล้วลองอีกครั้ง!",
@@ -110,8 +110,8 @@
   "uncheckedPurpleError": "อย่าลืมตรวจสอบดอกไม้สีม่วงทั้งหมดเพื่อดูว่า มีน้ำหวานหรือไม่",
   "whileMsg": "ในขณะที่",
   "whileTooltip": "ทำซ้ำจนกระทั่งถึงจุดสิ้นสุด",
-  "word": "ค้นหาคำ",
+  "word": "ค้นหาคำว่า",
   "wrongCropError": "ฉันไม่สามารถเก็บเกี่ยวพืชผลนั้นได้จากที่นี่",
   "yes": "ใช่",
-  "youSpelled": "คุณถูกสะกด"
+  "youSpelled": "คุณสะกดดังนี้"
 }

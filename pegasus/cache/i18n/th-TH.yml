@@ -36,6 +36,7 @@ th-TH:
   twentyhours_text: เรียนบทแรกของ Hour of Code แล้วใช่ไหม? เรียนรู้เพิ่มเติมเกี่ยวกับหลักสูตรวิทยาการคอมพิวเตอร์
     และหลักการเขียนโปรแกรม (Programming Concepts) ได้ในหลักสูตรต่อไปนี้
   og_title: เด็กทุกคนสมควรได้รับโอกาส
+  og_title_soon: ชั่วโมงของการเขียนโค้ดกำลังมา
   og_title_here: Hour of Code อยู่ที่นี่แล้ว
   og_description: นักเรียนทุกคนในทุกโรงเรียนควรได้รับโอกาสศึกษาวิทยาการคอมพิวเตอร์.
     มันมีการเปลี่ยนแปลงทุกๆ อย่าง.
@@ -231,16 +232,17 @@ th-TH:
   studiobar_donate_body: เด็กจะได้รับการศึกษาจากแต่ละดอลลาร์ที่คุณบริจาค
   studiobar_shop_title: ร้านค้า
   studiobar_shop_body: แตกประเภทออก ใส่โลโก้ของเราด้วยความภาคภูมิใจ
-  homepage_hero_text_malala: '"ฉันท้าทายผู้หญิงทุกประเทศ ให้ลองเรียน Hour of Code"
-    มาลาลา, ผู้ชนะรางวัลโนเบลสันติภาพ'
+  homepage_stats_title: เรากำลังสร้างให้เกิดความแตกต่าง
+  homepage_hero_text_malala: '&ldquo;"ฉันท้าทายผู้หญิงทุกประเทศ ให้ลองเรียนชั่วโมงของการเขียนโค้ด(Hour
+    of Code)สักครั้ง&rdquo;" (มาลาลา), ผู้ชนะรางวัลโนเบลสาขาสันติภาพ'
   homepage_hero_text_susan: |-
     &ldquo; ถ้าคุณสามารถเปลี่ยนแปลงเทคโนโลยี,
     คุณสามารถเปลี่ยนแปลงโลกของเรา &rdquo;
-    Susan, ประธานกรรมการบริหาร YouTube
+    ซูซาน, ประธานกรรมการบริหารของ YouTube
   homepage_hero_text_fistbump: |-
     &ldquo;อย่าเพียงแค่เล่นเกมบนโทรศัพท์ของคุณ
     ลองสร้างโปรแกรมดูสิ&rdquo;
-    ประธานาธิบดีสหรัฐ บารัก โอบามา
+    ประธานาธิบดี บารัก โอบามา ของสหรัฐ
   homepage_hero_text_sheryl: |-
     &ldquo;เด็กๆ ของพวกเรา &mdash; รวมถึงเด็กผู้หญิง &mdash;
     ต้องการโอกาสที่จะได้เรียนรู้วิทยาการคอมพิวเตอร์ &rdquo;
@@ -282,6 +284,8 @@ th-TH:
   homepage_hero_text_stat_loc: มีเด็กหญิง 2.5 ล้านคนที่ได้ลงทะเบียนเรียนกับ Code Studio
   homepage_hero_text_stat_students: "#student_count บัญชี บน Code Studio"
   homepage_hero_text_stat_served: 'มีผู้ใช้บริการ Hour of Code: #served คนแล้ว'
+  homepage_hero_hoc_is_coming: ชั่วโมงของการเขียนโค้ดกำลังมา
+  homepage_hero_hoc_is_here: ชั่วโมงของการเขียนโค้ดมาถึงแล้ว
   homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_frozen: Frozen กับ เจ้าหญิงแอนนา และ เอลซ่า
   homepage_slot_text_studio: บทเรียนของเราทั้งหมด
@@ -299,6 +303,7 @@ th-TH:
   homepage_action_text_girlvideo: แรงบันดาลใจให้ผู้หญิง
   homepage_action_text_learn: เริ่มต้นการเรียนรู้กันเลย
   homepage_action_text_signpetition: ลงนามในคำร้อง
+  homepage_action_text_wincelebritychat: ได้รับรางวัลเพื่อพูดคุยกับดารา
   homepage_signpetition_dropdown: ลงนามในคำร้อง &#x25BE;
   homepage_diversity_pledge: รองรับความหลากหลาย
   homepage_banner_text_prizes: 'ชั่วโมงแห่งการโค้ดจะกลับมาอีกครั้งในวันที่ 7-13 ธันวาคม '
@@ -562,6 +567,7 @@ th-TH:
   dashboard_progress_not_completed: ไม่เสร็จสมบูรณ์
   dashboard_progress_completed_too_many_blocks: เสร็จเรียบร้อย แต่ใช้บล็อกมากเกินไป
   dashboard_progress_completed_perfect: เสร็จ สมบูรณ์
+  dashboard_progress_submitted: ส่งคำตอบแล้ว
   dashboard_progress_view: ดูความคืบหน้า
   dashboard_sections_new_section: กลุ่มใหม่
   dashboard_sections_jumbotron_instruction: สร้างกลุ่มใหม่ และเพิ่มนักเรียนเข้ากลุ่ม
@@ -1210,6 +1216,8 @@ th-TH:
   hoc2018_mc_video_2min: 2 นาที
   hoc2018_mc_video_5min: 5 นาที
   hoc2018_mc_video_title_inspire_girl: แรงบันดาลใจให้ผู้หญิง
+  hoc2018_mc_homepage_hoc_coming: ชั่วโมงของการเขียนโค้ดกำลังมา.....
+  hoc2018_mc_homepage_watch_video: ชมวิดีโอของเรา
   hoc2018_mc_homepage_join_us: ร่วมกับเรา
   hoc2018_mc_homepage_try_it: ลอง
   hoc2018_mc_back_journey: การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด!
@@ -1224,3 +1232,9 @@ th-TH:
   hoc2018_dance_teacher_resources_tile2_button: กิจกรรมถอดปลั๊ก
   hoc2018_dance_amazon_sponsor_section_with_logo_title: 'ด้วยความร่วมมือกับ: '
   hoc2018_dance_amazon_about_future_engineer_button: สิ่งที่น่าเรียนรู้ยังมีอีก
+  hoc2018_dance_measure: ห้องดนตรี
+  hoc2018_dance_measure_colon: 'ห้องดนตรี:'
+  page_not_found_header: '404: ไม่พบหน้าดังกล่าว'
+  page_not_found_description: หน้าที่ท่านกำลังหาอยู่นั้นไม่ปรากฎตามที่อยู่ดังกล่าว
+    เช็คที่อยู่ของเว็ปแล้วลองส่งใหม่อีกครั้ง หรือกลับไปที่โฮมเพจของเรา
+  page_not_found_button: กลับไปที่หน้าแรก

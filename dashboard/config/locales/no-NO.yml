@@ -18,6 +18,7 @@
       messages:
         blank: må fylles ut
         blank_plural: må fylles ut
+        invalid: er ugyldig
         invalid_plural: er ugyldig
     attributes:
       user:
@@ -35,6 +36,8 @@
         age: Alder
         gender: Kjønn
         edit_header: Rediger kontodetaljer
+        finish_sign_up_header: Fullfør oppretting av kontoen
+        finish_sign_up_subheader: Fyll ut for å gjøre ferdig Code.org-konto for <strong>%{email}</strong>.
         error:
           future: ikke mulig å være i framtiden
   hello: Hei, verden
@@ -70,7 +73,7 @@
   courses_page:
     title_student: Lære i Code Studio
     title_teacher: Undervis med Code Studio
-  unplugged_activity: Frakoblet Aktivitet
+  unplugged_activity: Aktivitet uten datamaskin
   of: av
   more: MER
   less: MINDRE
@@ -165,6 +168,7 @@
     error: En feil har oppstått.
     email_preference_question: Kan vi sende deg nyheter om kursene våre, lokale jobbmuligheter
       eller andre IT-relaterte nyheter?
+    email_preference_privacy: "(Se våre retningslinjer for personvern)"
     email_preference_yes: Ja
     email_preference_no: Nei
   school_info:
@@ -302,7 +306,7 @@
           nå logge på kontoen med ditt brukernavn (%{username}) og passord
   nav:
     header:
-      finished_hoc: Jeg har fullført min Kodetime
+      finished_hoc: Jeg har fullført Kodetimen min
       sign_in_to_save: Logg inn for å lagre fremdrift
       free_play:
         playlab: Lag en app
@@ -346,7 +350,7 @@
       teach: Undervis
       about: Om
     user:
-      classroom: Hjemmeside for lærere
+      classroom: Lærerens startside
       district_dashboard: Distrikt skrivebord
       label: Hei %{username}
       stats: Min fremdrift
@@ -547,15 +551,15 @@
       kvalitet <strong> uten kostnad for deg eller din skole </strong>. Ta ledelsen
       innen datavitenskap på din skolen, og søk om profesjonell opplæring.
     announcement_teacher_recruitment2: Lærere som deg leder den informasjonsvitenskapelige
-      utdannelsesbevegelsen. Du kan delta i profesjonelle læringsprogrammer av høy
+      utdanningsbevegelsen. Du kan delta i profesjonelle læringsprogrammer av høy
       kvalitet <strong> uten kostnad for deg eller din skole </strong>. Ta ledelsen
-      innen datavitenskap på din skolen, og søk om profesjonell opplæring. Ungdomskule
-      og videregående lærere må søke innen 17 mars.
-    announcement_csf_pilot: "<strong>Grunnskole lærere:</strong> Bli med og oppdater
-      våre grunnleggende Informatikk kurs! VI ser etter lærere til å lede arbeidet
-      med å oppgradere læreplanen i Grunnleggende Informatikk i løpet av vinteren
-      og våren 2017. Vi ser frem til å høre dine innspill før oppdateringene slippes
-      i august 2017."
+      innen IT på din skole, og søk om profesjonell opplæring. Lærere i ungdomskole
+      og videregående skole må søke innen 17 mars.
+    announcement_csf_pilot: "<strong>Grunnskolelærere:</strong> Bli med og oppdater
+      våre grunnleggende Informatikkurs! VI ser etter lærere til å lede arbeidet med
+      å oppgradere læreplanen i Grunnleggende Informatikk i løpet av vinteren og våren
+      2017. Vi ser frem til å høre dine innspill før oppdateringene slippes i august
+      2017."
     announcement_student_privacy: Hos Code.org tar vi studentenes personvern svært
       alvorlig. For å beskytte elevenes personvern har vi gjort endringer for din
       seksjons pålogginsside til ikke å vise fullt navn. Selv om denne oppdateringen
@@ -573,10 +577,11 @@
       learning programs <strong>at absolutely no cost to you or your school</strong>.
       Applications close on April 14th.
     announcement_applab_export: App Lab, vårt web-baserte programmeringsmiljø, støtter
-      nå export av kode! Du kan starte å bygge applikasjoner med dra-og-slipp av JavaScript
-      blokker, eksporter så koden for å fortsette kodingen i ditt favoritt utviklingsverktøy.
-    announcement_navigation_redesign: "<b> Endringer i nettstednavigering </b> <br/>Kommer
-      i sommer, vi forbedrer navigasjonen på siden Code.org, slik at du alltid har
+      nå eksport av kode! Du kan starte å bygge applikasjoner med dra-og-slipp av
+      JavaScript blokker, eksporter så koden for å fortsette kodingen i ditt foretrukne
+      utviklingsverktøy.
+    announcement_navigation_redesign: "<b> Endringer i nettstednavigering </b> <br/>I
+      sommer skal vi forbedre navigasjonen på siden Code.org, slik at du alltid har
       tilgang til de beste ressursene dine fra hvor som helst på nettstedet. Så snart
       du logger på din lærerkonto, vil hver side ha en ny navigasjonslinje med lenker
       til hjemmesiden din, kursene, prosjektgalleriet, seksjoner og profesjonell læring."
@@ -662,7 +667,7 @@
   video:
     tab: Video.
     notes: Ingen video? Vis notater.
-    notes_coming_soon: Tekst til denne videoen kommer snart.
+    notes_coming_soon: Kommentarer for denne videoen kommer snart.
     autoplay_option: Autovisning av videoer
     download: Last ned video
     show_notes: Vis notat
@@ -676,15 +681,15 @@
       link: Lær mer
       applab_unsupported_tablet: App Lab fungerer best på en stasjonær eller bærbar
         datamaskin med mus og tastatur. Det kan oppstå problemer med dette verktøyet
-        på enne enheten.
+        på denne enheten.
       gamelab_unsupported_tablet: Spill Lab fungerer best på en stasjonær eller bærbar
         datamaskin med mus og tastatur. Det kan oppstå problemer med dette verktøyet
-        på gjeldende enheten.
+        på den gjeldende enheten.
       weblab_unsupported_browser: Dessverre opplever vi problemer med lasting av Web
         Lab på denne nettleseren. Prøv en annen nettleser inntil problemet er løst.
         Beklager ulempen dette medfører.
       weblab_unsupported_locale_storage: Du kan oppleve problemer med å bruke Web
-        Lab i nettleserens Privat modus. Vennligst last prosjektet på nytt i Normal
+        Lab i nettleserens private modus. Vennligst last prosjektet på nytt i normal
         modus. Beklager ulempen dette medfører.
   slow_loading: Dette tar lengre tid enn vanlig...
   try_reloading: Last siden på nytt
@@ -793,18 +798,18 @@
       body: I denne leksjonen vil studentene bruke tekst comprimerings modulen til
         å komprimere tekst ved å estatte mønstre med symboler.
     unplugged:
-      title: Analoge leksjoner
-      audience: Passer for de som er 6 år og eldre
-      body: Vi har satt sammen en liste med "analoge" leksjoner som du kan prøve ut
-        i klasserommet. Nå kan du undervise i grunnkonseptene for dataprogrammering
+      title: Leksjoner uten datamaskin
+      audience: Alder 4+
+      body: Vi har satt sammen en liste med leksjoner uten datamaskin som du kan prøve
+        ut i klasserommet. Nå kan du undervise i grunnkonseptene for dataprogrammering
         uavhengig av om du har datamaskiner i klasserommet. Prøv disse leksjonene
         som frittstående kurs eller sammen med et hvilket som helst kurs i datakunnskap.
-      body_short: Hvis du ikke har datamaskiner, kan du prøve disse "analoge" leksjonene
-        i ditt klasserom.
+      body_short: Hvis du ikke har datamaskiner, kan du prøve disse leksjonene uten
+        datamaskin i ditt klasserom.
     unplugged_conditionals:
       title: Betingelser
-      body: Lær om algoritmer og betingede instruksjoner i denne "løsrevede" aktiviteten
-        ved å bruke en kortstokk.
+      body: Lær om algoritmer og betingede instruksjoner i denne aktiviteten uten
+        datamaskin ved å bruke en kortstokk.
     widgets:
       title: Moduler
       body: Studenter kan utforske konsepter fra informatikk-prinsipper-kurset vårt
@@ -815,9 +820,9 @@
   gallery:
     students_drew_these_with_code: Elever tegnet disse ved å kode.
     students_made_these_with_code: Elever laget disse ved å kode.
-    picture_count: I løpet av de siste <b>%{days}</b> dager har elvever tegnet  <b>%{count}</b>
+    picture_count: I løpet av de siste <b>%{days}</b> dager har elever tegnet <b>%{count}</b>
       bilder ved å skrive sine egne dataprogram. Klikk på bildene for å se hvert program
-      kjøre!
+      kjøre.
     activity_count: De siste <b>%{days}</b> dagene har elever laget <b>%{count}</b>
       apps og bilder ved å skrive sine egne programmer. Klikk på bildene og skjermbilder
       for å se hvert program i aksjon.
@@ -884,11 +889,12 @@
   contract_match:
     wrong_title: Feil svar
     badname: Kontrakten har feil navn.
-    badname_case: Funksjonsnavn er tegn sensitiv. Prøv å endre tegnet på din kontraknavn.
+    badname_case: I funksjonsnavn er det forskjell mellom store og små bokstaver.
+      Prøv å endre ditt kontraktnavn.
     badrange: Din kontrakt har feil område.
     baddomainsize: Kontrakten har ikke riktig antall elementer i domenet.
     baddomainname: En eller flere av domene elementene har feil navn.
-    baddomaintype: En eller flere av domene elementene er feil type, eller de er i
+    baddomaintype: En eller flere av domeneelementene har feil type, eller de er i
       feil rekkefølge.
   text_match:
     placeholder: Angi svaret her
@@ -1032,7 +1038,7 @@
       prosjekter. De du har delt lenken med vil ikke lenger kunne se prosjektet.
     view_all: Vis mine prosjekter
     remix: Remix
-    click_to_remix: Klikk "Remix" til spin-off din egen versjon!
+    click_to_remix: Klikk "Remix" for å lage din egen versjon!
     edit_project: Rediger prosjekt
     sharing_disabled: Beklager, dette prosjektet er ikke tilgjengelig for deling.
       Hvis dette er ditt eller en av dine elevers prosjekt, vennligst <a href='https://studio.code.org/users/sign_in'>logg
@@ -1059,7 +1065,7 @@
         abusive_url: URL til innholdet blir rapportert
         abuse_type:
           question: Hvordan krenker dette innholdet %{link_start}Villkår for bruk%{link_end}?
-          harassment: Trusler, nettmobbing, trakkasering
+          harassment: Trusler, nettmobbing, trakassering
           offensive: Krenkende innhold
           infringement: Opphavsrettskrenkelse
           other: Andre
@@ -1133,9 +1139,9 @@
     title: Kodetimen nedlastninger
     capsule_title: Har du internett?
     capsule_desc: Bruk online, web-basert <a href="%{url}">%{app_name}</a>.
-    instructions_headline: Ingen internett?
+    instructions_headline: Ingen internettforbindelse?
     instructions: 'Instruksjon for lærere: hvis du har lav internetthastighet kan
-      du laste ned disse opplæringsprogrammene til kodetime og installere dem for
+      du laste ned disse opplæringsprogrammene til Kodetimen og installere dem for
       å bruke dem i frakoblet modus. Velg språk og plattform, last ned og installer
       det på alle datamaskinene i klasserommet. Det kan være lurt å laste ned til
       en USB-pinne og så installere det derfra over på maskinene. Merk: elevene vil
@@ -1216,9 +1222,9 @@
         science: Vitenskap
         la: Språkfag
       resources:
-        kodable: Kodable
+        kodable: Kodbart
       robotics:
-        kodable: Kodable
+        kodable: Kodbart
       workshop_course:
         csp: "'16-'17 Prinsipper i informatikk"
       email_opt_in:

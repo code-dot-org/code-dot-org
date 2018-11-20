@@ -479,6 +479,8 @@ zh-CN:
         mc_2018_conditionals: '《我的世界》：水上航行条件'
         mc_2018_closing: '《我的世界》：水上航行祝贺'
         hoc_dance_warmup: 舞会 - 热身
+        hoc_dance_events: 舞蹈派对 - 事件
+        hoc_dance_properties: 舞蹈派对 - 属性
         hoc_dance_congrats: 舞会 - 继续！
     callout:
       text:

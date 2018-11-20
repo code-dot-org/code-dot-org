@@ -274,6 +274,15 @@ ga:
           LOCATION:
             "{x: 100, y: 200}": ar chlé
             "{x: 300, y: 200}": ar dheis
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ar chlé
+            "{x: 300, y: 200}": ar dheis
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': uile
       Mikelab_getProp:
         options:
           PROPERTY:

@@ -43,7 +43,7 @@ uk:
       2-3 Artist 9 REPLACEMENT_authored_hint:
         step_size: Кожен крок дорівнює 100 пікселів заввишки та 100 пікселів.
       2-3 Artist 9_authored_hint:
-        2-3_Artist_9_a: Цей алмаз насправді просто квадратний повернувся на 45 градусів.
+        2-3_Artist_9_a: Цей ромб - насправді просто квадрат, повернутий на 45 градусів.
         2-3_Artist_9_b: |-
           Не забудьте повернути художника на 45 градусів, перш ніж починати малювати свою площу!
 
@@ -114,7 +114,7 @@ uk:
       2-3 Artist Loops New 13_authored_hint:
         2-3_Artist_Loops_New_13_a: В кінці кожного алмазу, художник вже стоїть у правильному
           напрямку, щоб розпочати наступний. Через це нам не потрібно додавати додатковий
-          блок `повернути ліворуч &#39;до того, як ми знову почнемось.
+          блок `повернути ліворуч 'до того, як ми знову почнемось.
       2-3 Artist Loops New 9_authored_hint:
         2-3_Artist_Loops_New_9_a: Художник повинен повернути 45 градусів праворуч,
           перш ніж почати малювати.
@@ -146,15 +146,15 @@ uk:
         2-3_Bee_Conditionals_14_b: Якщо червона квітка була пурпурною, чи могли б
           ви зрозуміти, як використати додатковий цикл `repeat` для скорочення коду?
       2-3 Bee Conditionals 15_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Пам&#39;ятайте: фіолетові квіти мають лише 0 або
+        2-3_Bee_Conditionals_15_a: 'Пам''ятайте: фіолетові квіти мають лише 0 або
           1 нектар, і вони можуть змінюватися при кожному запуску програми.'
       2-3 Bee Conditionals 3_authored_hint:
         2-3_Bee_Conditionals_3_a: Код буде найкоротшим, якщо ви будете використовувати
           цикл при кожному русі вперед, інший цикл, щоб зібрати нектар, а інший -
           зробити мед.
       2-3 Bee Conditionals 6_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Пам&#39;ятайте: фіолетові квіти змінюються між
-          0 і 1 нектаром при запуску вашої програми!'
+        2-3_Bee_Conditionals_6_a: 'Пам''ятайте: фіолетові квіти змінюються між 0 і
+          1 нектаром при запуску вашої програми!'
       2-3 Bee Debugging 1_authored_hint:
         2-3_Bee_Debugging_1_a: Як тільки ви знайдете та виправите неправильний блок,
           ви бачите будь-які шаблони, які можна було б зробити більш простим, використовуючи
@@ -190,14 +190,14 @@ uk:
       2-3 Bee Loops 3B_authored_hint:
         2-3_Bee_Loops_3B_a: Вам буде потрібно два різних `repeat` цикли, один за іншим.
       2-3 Bee Loops 4_authored_hint:
-        2-3_Bee_Loops_4_a: Ви повинні скласти п&#39;ять блоків у вашому циклі.
+        2-3_Bee_Loops_4_a: Ви повинні скласти п'ять блоків у вашому циклі.
       2-3 Bee Loops 4A_authored_hint:
         2-3_Bee_Loops_4A_a: Перша акція стане чергою, а не рухом.
         2-3_Bee_Loops_4A_b: Остання частина програми може бути завершена написанням
           коду в кінці вашої програми за межами вашого циклу.
         2-3_Bee_Loops_4A_c: Якщо ви ще не можете помітити петлі, спочатку спочатку
-          кодируйте його далі, а потім подивіться, що ви можете об&#39;єднати в цикл
-          `repeat` в кінці.
+          кодируйте його далі, а потім подивіться, що ви можете об'єднати в цикл `repeat`
+          в кінці.
       2-3 Bee Loops 5_authored_hint:
         2-3_Bee_Loops_5_a: Якщо ви не можете визначити блоки, щоб вставити всередину
           `repeat` відразу, почніть, кодуючи кожний крок і шукати шаблон.
@@ -288,8 +288,8 @@ uk:
         4-5 Bee Conditionals 6_b: Переконайтеся, що ви перевіряєте, чи є квітка більш
           ніж ** 0 ** нектаром принаймні ** 3 ** раз, щоб вирішити цю загадку.
       4-5 Bee Debugging 1_authored_hint:
-        4-5_Bee_Debugging_1_a: Якщо у вас виникли проблеми з з&#39;ясуванням того,
-          що неправильно, спробуйте запустити його, щоб побачити, де все йде неправильно.
+        4-5_Bee_Debugging_1_a: Якщо у вас виникли проблеми з з'ясуванням того, що
+          неправильно, спробуйте запустити його, щоб побачити, де все йде неправильно.
       4-5 Bee Nested Loops Rows_authored_hint:
         4-5_Bee_Nested_Loops_Rows_a: Спробуйте розглянути цю головоломку як довгий
           прямокутник, де бджола має рухатися вперед, а потім повернути наліво кілька
@@ -312,6 +312,8 @@ uk:
         4-5_Maze_7_a: "** Хочете отримати ваш код як можна менше? ** Шукайте шаблони
           у ваших блоках. Ви бачите щось, що повторюється? Спробуйте вставити цикл
           навколо нього замість цього!"
+      4-5 Nested Loops 12_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       4-5 Nested Loops 6_authored_hint:
         4-5_Nested_Loops_6_a: Не забудьте зробити чергу після внутрішньої петлі. Ви
           будете петлі 6 трикутників більше 360 градусів. ** 360/6 =? **
@@ -478,7 +480,7 @@ uk:
       Course 4 Artist Functions challenge_authored_hint:
         Course_4_Artist_Functions_challenge_a: Частина розуміння того, як використовувати
           функції, - з'ясувати, які саме вам потрібні, а які ти не маєте.
-        Course_4_Artist_Functions_challenge_b: Використовуйте символ `for loop &#39;,
+        Course_4_Artist_Functions_challenge_b: Використовуйте символ `for loop ',
           а потім використовуйте його лічильник змінної всередині вкладеного циклу`
           repeat`.
         Course_4_Artist_Functions_challenge_c: Кожна ітерація, ви повинні зробити
@@ -535,8 +537,8 @@ uk:
       Course 4 Playlab For Loops 5b_authored_hint:
         Course_4_Playlab_For_Loops_5b_a: Символи знаходяться приблизно в 175 пікселях
           від центру.
-        Course_4_Playlab_For_Loops_5b_b: Пам&#39;ятайте, що наступний крок персонажа
-          буде довшим за останні, оскільки лічильник постійно збільшується.
+        Course_4_Playlab_For_Loops_5b_b: Пам'ятайте, що наступний крок персонажа буде
+          довшим за останні, оскільки лічильник постійно збільшується.
       Course 4 SCF 1_authored_hint:
         Course_4_SCF_1_a: Кожен шестикутник має 40 пікселів.
         Course_4_SCF_1_b: Між кожним шестикутником у кожній горизонтальній лінії є
@@ -551,7 +553,7 @@ uk:
           знову повернути свого виконавця та перейти назад у розмірі 440 пікселів
           (120 пікселів далі, ніж функція переміщення вниз / вперед).
       Course 4 SCF 1a_authored_hint:
-        Course_4_SCF_1a_a: Запам&#39;ятайте свої функції зі стадії 16.
+        Course_4_SCF_1a_a: Запам'ятайте свої функції зі стадії 16.
         Course_4_SCF_1a_b: "Подивіться на цей шлях як ваш основний маршрут:  \n\n![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)"
         Course_4_SCF_1a_c: Ви повинні розглянути можливість використання `для циклу`
           Не для кроків, а для параметра функції.
@@ -626,6 +628,12 @@ uk:
           зменшити колір, оскільки лічильник отримує вищий рівень."
         after: Коли ви закінчите з кожним "пелюстком", переконайтеся, що "переміщаєтеся
           вперед" 20 пікселів перед тим, як зробити 60 градусів обертання.
+      K2.0 sequence 10_authored_hint:
+        K2.0_sequence_10_a: Якщо у вас виникли проблеми, спробуйте в першу чергу записати
+          сходинки на папірці.
+      K2.0 sequence 9_authored_hint:
+        K2.0_sequence_9_a: Якщо у вас виникли проблеми, спробуйте в першу чергу записати
+          сходинки на папірці.
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Спробуй змусити Agent побудувати кілька мостів, щоб
           Алекс або Стів міг пересуватися за межами карти!
@@ -731,12 +739,16 @@ uk:
         MC_HOC_2017_06_Cole_a: Спробуйте розмістити кілька інструкцій усередину циклу
           "повтор"!
       MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_c: Все, що потрібно для роботи агента, - це очистити шлях
+          від Minecart.
         MC_HOC_2017_07_Cole_a: Щоб виконати це завдання, спробуйте з’ясувати, що робить
           функція "очистити шлях", і викличте її стільки разів, скільки потрібно,
           вставивши маленький зелений блок "очистити шлях" із панелі інструментів.
         MC_HOC_2017_07_Cole_b: Спробуйте скомбінувати блоки функцій з іншими блоками
           з панелі інструментів, щоб виконати це завдання.
       MC_HOC_2017_07_Cole_2019_authored_hint:
+        MC_HOC_2017_07_Cole_c: Все, що потрібно для роботи агента, - це очистити шлях
+          від Minecart.
         MC_HOC_2017_07_Cole_a: Щоб виконати це завдання, спробуйте з’ясувати, що робить
           функція "очистити шлях", і викличте її стільки разів, скільки потрібно,
           вставивши маленький зелений блок "очистити шлях" із панелі інструментів.
@@ -797,6 +809,42 @@ uk:
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Спробуйте змусити Agent побудувати кілька мостів, щоб
           Алекс або Стів міг пересуватися за межами карти.
+      Overworld House Frame Chosen_authored_hint:
+        mc_6_b: Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть
+          якщо ви ще не вирішили головоломку.
+      Overworld House Frame Chosen_2018_authored_hint:
+        mc_6_b: Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть
+          якщо ви ще не вирішили головоломку.
+      Overworld House Frame Chosen_2019_authored_hint:
+        mc_6_b: Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть
+          якщо ви ще не вирішили головоломку.
+      Overworld Place Wall_authored_hint:
+        mc_5_c: Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть
+          якщо ви ще не вирішили головоломку.
+      Overworld Place Wall_2018_authored_hint:
+        mc_5_c: Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть
+          якщо ви ще не вирішили головоломку.
+      Overworld Place Wall_2019_authored_hint:
+        mc_5_c: Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть
+          якщо ви ще не вирішили головоломку.
+      Overworld Shear Sheep_authored_hint:
+        mc_3_c: Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть
+          якщо ви ще не вирішили головоломку.
+      Overworld Shear Sheep_2018_authored_hint:
+        mc_3_c: Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть
+          якщо ви ще не вирішили головоломку.
+      Overworld Shear Sheep_2019_authored_hint:
+        mc_3_c: Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть
+          якщо ви ще не вирішили головоломку.
+      Underground Iron_authored_hint:
+        mc_10_c: Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть
+          якщо ви ще не вирішили головоломку.
+      Underground Iron_2018_authored_hint:
+        mc_10_c: Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть
+          якщо ви ще не вирішили головоломку.
+      Underground Iron_2019_authored_hint:
+        mc_10_c: Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть
+          якщо ви ще не вирішили головоломку.
       aE3_authored_hint:
         aE3_d: Якщо ваш код стає занадто заплутаним, ви завжди можете натиснути "Почати
           більше" і спробувати ще раз!
@@ -809,19 +857,133 @@ uk:
       aE4_authored_hint:
         aE4_d: Якщо ваш код стає занадто заплутаним, ви завжди можете натиснути "Почати
           більше" і спробувати ще раз!
+      artistDebugVideo1_authored_hint:
+        courseA_artist_loops7_a: Не можете зрозуміти, де поставити цикл? Спробуйте
+          написати код покрокові і шукайте шаблон.
+      artistLoopsK2_authored_hint:
+        artistLoopsK2_a: Якщо ви хочете повторити цикл більше, ніж 4 рази, ви можете
+          змінити номер у верхній частині блоку.
+      artistLoopsK2gradek_artist_loops3_authored_hint:
+        artistLoopsK2_a: Якщо ви хочете повторити цикл більше, ніж 4 рази, ви можете
+          змінити номер у верхній частині блоку.
+      artistLoopsK5_authored_hint:
+        artistLoopsK5_a: Всі 4 стартових блоків повинні йти всередині вашого повторюваного
+          блоку, щоб вирішити цю загадку.
+      comment_intro_maze_2018_authored_hint:
+        courseC_maze_programming4_b: Додайте коментар, коли ви зміните маршрути -
+          що б сталося, якщо ви повернули інший шлях?
+      comment_intro_maze_2018_2019_authored_hint:
+        courseC_maze_programming4_b: Додайте коментар, коли ви зміните маршрути -
+          що б сталося, якщо ви повернули інший шлях?
+      course1_maze_seq_challenge2_authored_hint:
+        courseB_maze_seq_challenge1_a: Найкращий шлях може не працювати на цей раз.
+      course2_artist_nestedLoops_challenge1_authored_hint:
+        courseD_artist_nestedLoops_challenge1_b: Додайте код, щоб намалювати трикутник
+          всередині вкладеного циклу. Використовуйте 120 градусів для вашого трикутника.
+      course2_bee_conditionals_challenge1_authored_hint:
+        courseD_bee_conditionals_challenge1_b: У цій головоломці кожен простір може
+          мати квітку, медову гребіну або нічого. Це означає, що ви можете повторити
+          ваш `if / else` умовно на кожному квадраті.
+      course2_harvester_loops_challenge1_authored_hint:
+        courseC_harvester_loops_challenge1_a: Не думайте навіть про спробу цього спробувати
+          без циклів!
+      course2_harvester_loops_challenge2_authored_hint:
+        courseC_harvester_loops_challenge2_a: Один із способів вирішити це виглядає
+          як зигзаг. Інший спосіб виглядає як спіраль! Існує безліч різних рішень
+          для загадки, як це. Бути наполегливим!
+      course2_maze_seq_challenge2_authored_hint:
+        courseB_maze_seq_challenge1_a: Найкращий шлях може не працювати на цей раз.
       course3_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_a: 'На пів шестикутника має ** довжину 30
           ** і повертає направо на ** 60 градусів **.  '
         courseE_artist_concept_challenge1_b: '2/3 трикутник має ** довжину 80 ** і
           повертає вправо на ** 120 градусів **. '
+      course3_bee_debugging_challenge1_authored_hint:
+        courseD_bee_debugging_challenge1_c: "Після того, як бджола перетворить його
+          у нижній рядок, повторіть ці команди: \n\n* Повторіть 2 рази: \n* Перемістіть
+          вперед \n* Зробіть 3 порції меду \n* Перемістіть назад"
       course3_bee_functions_challenge1_authored_hint:
         courseE_bee_functions_challenge1_a: Якщо головоломка здається складною, спробуйте
           трохи побудувати свою функцію. Додайте кілька блоків, а потім спробуйте.
           Додайте більше, а потім повторіть спробу. Незабаром ти туди дістанешся!
+        courseE_bee_functions_challenge1_b: Не забудьте побудувати свій код усередині
+          зеленого функціонального блоку.
       course3_bee_functions_challenge2_authored_hint:
         courseE_bee_functions_challenge1_a: Якщо головоломка здається складною, спробуйте
           трохи побудувати свою функцію. Додайте кілька блоків, а потім спробуйте.
           Додайте більше, а потім повторіть спробу. Незабаром ти туди дістанешся!
+        courseE_bee_functions_challenge1_b: Не забудьте побудувати свій код усередині
+          зеленого функціонального блоку.
+      course3_maze_debugging_challenge1_authored_hint:
+        courseC_maze_debugging_challenge1_a: Вліво або вправо? Тобі вирішувати!
+      course4_artist_variables_challenge2_authored_hint:
+        courseF_artist_variables_challenge2_d: |-
+          ** Рішення: **
+
+          ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
+      course4_collector_nested_loops_challenge2_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Не забувайте, що ви можете `repeat`
+          одній команді або більш довгий шаблон. Ви навіть можете `повторити` блок`
+          repeat`!
+        courseD_bee_nested_loops_challenge2_b: Щоб отримати всі 4 дорогоцінних каменів,
+          спершу скористайтеся циклом, щоб відійти від центру. Поверніть ліворуч або
+          праворуч, а потім використовуйте вкладену петлю, щоб перейти від першої
+          купи скарбів до другої. Якщо ви повторюєте вкладену петлю достатньо разів,
+          колектор буде переміщатися по * печері * * повністю *!
+      courseA_artist_loops4_authored_hint:
+        courseA_artist_loops4_a: Якщо ви хочете повторити цикл більше, ніж 4 рази,
+          ви можете змінити номер у верхній частині блоку.
+      courseA_artist_loops4_2018_authored_hint:
+        courseA_artist_loops4_a: Якщо ви хочете повторити цикл більше, ніж 4 рази,
+          ви можете змінити номер у верхній частині блоку.
+      courseA_artist_loops5_authored_hint:
+        courseA_artist_loops5_b: Якщо ви хочете повторити цикл більше, ніж 4 рази,
+          ви можете змінити номер у верхній частині блоку.
+      courseA_artist_loops5_2018_authored_hint:
+        courseA_artist_loops5_b: Якщо ви хочете повторити цикл більше, ніж 4 рази,
+          ви можете змінити номер у верхній частині блоку.
+      courseA_artist_loops6_authored_hint:
+        courseA_artist_loops6_a: Не можете зрозуміти, як зробити пагорб? Спробуйте
+          грати з блоками трохи, щоб побачити, що кожен малює.
+      courseA_artist_loops6_2018_authored_hint:
+        courseA_artist_loops6_a: Не можете зрозуміти, як зробити пагорб? Спробуйте
+          грати з блоками трохи, щоб побачити, що кожен малює.
+      courseA_artist_loops7_authored_hint:
+        courseA_artist_loops7_a: Не можете зрозуміти, де поставити цикл? Спробуйте
+          написати код покрокові і шукайте шаблон.
+      courseA_artist_loops7_2018_authored_hint:
+        courseA_artist_loops7_a: Не можете зрозуміти, де поставити цикл? Спробуйте
+          написати код покрокові і шукайте шаблон.
+      courseA_artist_loops7_forVideo_authored_hint:
+        courseA_artist_loops7_a: Не можете зрозуміти, де поставити цикл? Спробуйте
+          написати код покрокові і шукайте шаблон.
+      courseA_artist_loops9_authored_hint:
+        courseA_artist_loops9_a: Додайте ще один блок до коду, який ви надішлете,
+          щоб намалювати решту сходів.
+      courseA_artist_loops9_2018_authored_hint:
+        courseA_artist_loops9_a: Додайте ще один блок до коду, який ви надішлете,
+          щоб намалювати решту сходів.
+      courseA_artist_loops_challenge2a_authored_hint:
+        courseA_artist_loops_challenge2_c: Всі ваші блоки повинні бути всередині циклу,
+          щоб закінчити цю головоломку.
+      courseA_artist_loops_challenge2a_2018_authored_hint:
+        courseA_artist_loops_challenge2_c: Всі ваші блоки повинні бути всередині циклу,
+          щоб закінчити цю головоломку.
+      courseA_collector_loops6_authored_hint:
+        courseA_collector_loops6_a: Не можете зрозуміти, що не так? Спробуйте запустити
+          код кілька разів, щоб побачити, що станеться.
+      courseA_collector_loops6_2018_authored_hint:
+        courseA_collector_loops6_a: Не можете зрозуміти, що не так? Спробуйте запустити
+          код кілька разів, щоб побачити, що станеться.
+      courseA_collector_loops8_authored_hint:
+        courseA_collector_loops8_a: Якщо у вас виникли проблеми з виявленням цієї
+          головоломки, спробуйте написати рухами на папірці та шукати малюнок.
+      courseA_collector_loops8_2018_authored_hint:
+        courseA_collector_loops8_a: Якщо у вас виникли проблеми з виявленням цієї
+          головоломки, спробуйте написати рухами на папірці та шукати малюнок.
+      courseA_harvester_loops9_authored_hint:
+        courseA_harvester_loops9_b: Не бійтеся запускати свій код після кожної частини,
+          щоб побачити, що станеться!
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -897,6 +1059,10 @@ uk:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp5_2018_authored_hint:
+        courseC_maze_programming5_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
       courseA_maze_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -913,6 +1079,18 @@ uk:
           </next>
           </block>
           </xml>
+      courseA_maze_seq10_authored_hint:
+        courseA_maze_seq10_a: Якщо у вас виникли проблеми, спробуйте в першу чергу
+          записати сходинки на папірці.
+      courseA_maze_seq10_2018_authored_hint:
+        courseA_maze_seq10_a: Якщо у вас виникли проблеми, спробуйте в першу чергу
+          записати сходинки на папірці.
+      courseA_maze_seq13_authored_hint:
+        courseA_maze_seq13_b: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться.
+      courseA_maze_seq13_2018_authored_hint:
+        courseA_maze_seq13_b: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться.
       courseA_maze_seq5_2018_authored_hint:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
@@ -921,11 +1099,17 @@ uk:
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq_challenge1_authored_hint:
+        courseA_maze_seq_challenge1_a: Існує два рішення цієї загадки.
+      courseA_maze_seq_challenge1_2018_authored_hint:
+        courseA_maze_seq_challenge1_a: Існує два рішення цієї загадки.
+      courseA_playLab_events2_authored_hint:
+        courseA_playLab_events2_a: Шукай блок, який змушує собаку щось сказати.
       courseB_Scrat_ramp1_2018_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have
           been fully clicked together, then click "Run" again.
-        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
-          try something else!
+        '2': Не бійся помилятися! Спробуйте щось, і якщо він не працює, спробуйте
+          щось інше!
       courseB_Scrat_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -1015,8 +1199,80 @@ uk:
           </next>
           </block>
           </xml>
+      courseB_artist_loops2_authored_hint:
+        courseB_artist_loops2_a: Якщо ви хочете повторити цикл більше, ніж 4 рази,
+          ви можете змінити номер у верхній частині блоку.
+      courseB_artist_loops2_2018_authored_hint:
+        courseB_artist_loops2_a: Якщо ви хочете повторити цикл більше, ніж 4 рази,
+          ви можете змінити номер у верхній частині блоку.
+      courseB_artist_loops9_authored_hint:
+        courseB_artist_loops9_c: Не можете зрозуміти, де поставити цикл? Спробуйте
+          написати код покрокові і шукайте шаблон.
+      courseB_artist_loops9_2018_authored_hint:
+        courseB_artist_loops9_c: Не можете зрозуміти, де поставити цикл? Спробуйте
+          написати код покрокові і шукайте шаблон.
+      courseB_iceage_loops2_authored_hint:
+        courseB_iceage_loops2_b: Якщо ви застрягли, спробуйте виписати кроки на аркуші
+          паперу.
+      courseB_iceage_loops4_authored_hint:
+        courseB_iceage_loops4_b: Не бійся запускати свій код і подивитися, що станеться!
+      courseB_maze_seq5_authored_hint:
+        courseB_maze_seq5_a: Якщо ви застрягли, спробуйте розібрати шлях на папері.
+        courseB_maze_seq5_b: Є 2 способи вирішити цю загадку!
+      courseB_maze_seq5_2018_authored_hint:
+        courseB_maze_seq5_a: Якщо ви застрягли, спробуйте розібрати шлях на папері.
+        courseB_maze_seq5_b: Є 2 способи вирішити цю загадку!
+      courseB_maze_seq6_authored_hint:
+        courseB_maze_seq5_c: Існує два способи вирішити цю загадку!
+      courseB_maze_seq6_2018_authored_hint:
+        courseB_maze_seq5_c: Існує два способи вирішити цю загадку!
+      courseB_maze_seq7_authored_hint:
+        courseB_maze_seq7_a: Додати 1 блок, щоб перемістити птаха до свині.
+      courseB_maze_seq7_2018_authored_hint:
+        courseB_maze_seq7_a: Додати 1 блок, щоб перемістити Scrat до жолудя.
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_b: Існує два способи вирішити цю загадку!
+      courseB_maze_seq9_authored_hint:
+        courseB_maze_seq9_c: Існує два способи вирішити цю загадку!
+        courseB_maze_seq9_d: Застряг? Спробуй цей шлях!
+      courseB_maze_seq9_2018_authored_hint:
+        courseB_maze_seq9_c: Існує два способи вирішити цю загадку!
+        courseB_maze_seq9_d: Застряг? Спробуй цей шлях!
+      courseB_maze_seqOld_authored_hint:
+        courseB_maze_seqOld_a: Якщо у вас виникли проблеми, спробуйте в першу чергу
+          записати сходинки на папірці.
+      courseB_maze_seq_challenge1_authored_hint:
+        courseB_maze_seq_challenge1_a: Найкращий шлях може не працювати на цей раз.
+      courseB_maze_seq_challenge1_2018_authored_hint:
+        courseB_maze_seq_challenge1_a: Найкращий шлях може не працювати на цей раз.
+      courseB_playlab_events6_authored_hint:
+        courseB_playlab_events6_c: Отримати всі прапори, щоб пройти!
+      courseB_playlab_events6_2018_authored_hint:
+        courseB_playlab_events6_c: Отримати всі прапори, щоб пройти!
+      courseB_starWars_prog9_authored_hint:
+        courseB_starWars_prog9_a: Не бійся помилятися! Запустіть код, щоб побачити,
+          що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseB_starWars_prog9_2018_authored_hint:
+        courseB_starWars_prog9_a: Не бійся помилятися! Запустіть код, щоб побачити,
+          що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseC_PlayLab_events5_authored_hint:
+        courseC_PlayLab_events5_b: Клацніть на Octavia, коли ви запускаєте свою програму,
+          щоб перевірити, чи вона працює!
+      courseC_PlayLab_events5_2018_authored_hint:
+        courseC_PlayLab_events5_b: Клацніть на Octavia, коли ви запускаєте свою програму,
+          щоб перевірити, чи вона працює!
+      courseC_artist_loops7a_authored_hint:
+        courseC_artist_loops7a_a: Коло має 360 градусів. Помножте ступені у свою чергу
+          на кількість разів, коли ви повторюєте. Чи він дорівнює 360? Перевірте запропоновані
+          повороти, щоб побачити, що це працює!
+      courseC_artist_loops7a_2018_authored_hint:
+        courseC_artist_loops7a_a: Коло має 360 градусів. Помножте ступені у свою чергу
+          на кількість разів, коли ви повторюєте. Чи він дорівнює 360? Перевірте запропоновані
+          повороти, щоб побачити, що це працює!
+      courseC_artist_loops7a_2019_authored_hint:
+        courseC_artist_loops7a_a: Коло має 360 градусів. Помножте ступені у свою чергу
+          на кількість разів, коли ви повторюєте. Чи він дорівнює 360? Перевірте запропоновані
+          повороти, щоб побачити, що це працює!
       courseC_artist_prog2_authored_hint:
         courseC_artist_prog2_a: Якщо ти використаєш для мене блок "рухатися вперед
           на 100 пікселів", я намалюю лінію автоматично.
@@ -1032,6 +1288,193 @@ uk:
           на 100 пікселів", я намалюю лінію автоматично.
         courseC_artist_prog2_b: Виникли проблеми з повертанням за ріг? Використай
           блок "повернути праворуч на 90 градусів".
+      courseC_artist_prog5_authored_hint:
+        courseC_artist_prog5_b: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили
+          головоломку ще.
+      courseC_artist_prog5_2018_authored_hint:
+        courseC_artist_prog5_b: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили
+          головоломку ще.
+      courseC_artist_prog5_2019_authored_hint:
+        courseC_artist_prog5_b: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили
+          головоломку ще.
+      courseC_artist_prog7_authored_hint:
+        courseC_artist_prog7_a: Кожен кут - 45 або 90 градусів.
+        courseC_artist_prog7_e: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили
+          головоломку ще.
+      courseC_artist_prog7_2018_authored_hint:
+        courseC_artist_prog7_a: Кожен кут - 45 або 90 градусів.
+        courseC_artist_prog7_e: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили
+          головоломку ще.
+      courseC_artist_prog7_2019_authored_hint:
+        courseC_artist_prog7_a: Кожен кут - 45 або 90 градусів.
+        courseC_artist_prog7_e: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили
+          головоломку ще.
+      courseC_artist_prog_challenge2a_authored_hint:
+        courseC_artist_prog_challenge2_a: Після намалювання першого рядка поверніть
+          наліво, перш ніж намалювати другу лінію.
+      courseC_artist_prog_challenge2a_2018_authored_hint:
+        courseC_artist_prog_challenge2_a: Після намалювання першого рядка поверніть
+          наліво, перш ніж намалювати другу лінію.
+      courseC_artist_prog_challenge2a_2019_authored_hint:
+        courseC_artist_prog_challenge2_a: Після намалювання першого рядка поверніть
+          наліво, перш ніж намалювати другу лінію.
+      courseC_collector_prog2_authored_hint:
+        courseC_collector_prog2_b: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseC_collector_prog2_2018_authored_hint:
+        courseC_collector_prog2_b: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseC_collector_prog2_2019_authored_hint:
+        courseC_collector_prog2_b: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseC_collector_prog4_authored_hint:
+        courseC_collector_prog4_a: Якщо ви застрягли, спробуйте виписати кроки на
+          аркуші паперу.
+        courseC_collector_prog4_b: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+        courseC_collector_prog4_c: Спробуйте цю опцію для шляху.
+      courseC_collector_prog4_2018_authored_hint:
+        courseC_collector_prog4_a: Якщо ви застрягли, спробуйте виписати кроки на
+          аркуші паперу.
+        courseC_collector_prog4_b: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+        courseC_collector_prog4_c: Спробуйте цю опцію для шляху.
+      courseC_collector_prog4_2019_authored_hint:
+        courseC_collector_prog4_a: Якщо ви застрягли, спробуйте виписати кроки на
+          аркуші паперу.
+        courseC_collector_prog4_b: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+        courseC_collector_prog4_c: Спробуйте цю опцію для шляху.
+      courseC_collector_prog5_authored_hint:
+        courseC_collector_prog5_c: Якщо ви застрягли, спробуйте виписати кроки на
+          аркуші паперу.
+      courseC_collector_prog5_2018_authored_hint:
+        courseC_collector_prog5_c: Якщо ви застрягли, спробуйте виписати кроки на
+          аркуші паперу.
+      courseC_collector_prog5_2019_authored_hint:
+        courseC_collector_prog5_c: Якщо ви застрягли, спробуйте виписати кроки на
+          аркуші паперу.
+      courseC_collector_prog_challenge2_authored_hint:
+        courseC_collector_prog_challenge1_b: Забули свій шлях? Спробуйте цей шлях,
+          щоб вирішити головоломку!
+      courseC_collector_prog_challenge2_2018_authored_hint:
+        courseC_collector_prog_challenge1_b: Забули свій шлях? Спробуйте цей шлях,
+          щоб вирішити головоломку!
+      courseC_collector_prog_challenge2_2019_authored_hint:
+        courseC_collector_prog_challenge1_b: Забули свій шлях? Спробуйте цей шлях,
+          щоб вирішити головоломку!
+      courseC_harvester_loops3_authored_hint:
+        courseC_harvester_loops3_a: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили
+          головоломку.
+        courseC_harvester_loops3_c: Якщо ви хочете спростити свій код, ви можете поставити
+          один цикл в інший! Це називається ** вкладена петля **.
+      courseC_harvester_loops3_2018_authored_hint:
+        courseC_harvester_loops3_a: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили
+          головоломку.
+        courseC_harvester_loops3_c: Якщо ви хочете спростити свій код, ви можете поставити
+          один цикл в інший! Це називається ** вкладена петля **.
+      courseC_harvester_loops4_authored_hint:
+        courseC_harvester_loops4_c: Якщо ви хочете спростити свій код, ви можете поставити
+          один цикл в інший! Це називається ** вкладена петля **.
+      courseC_harvester_loops4_2018_authored_hint:
+        courseC_harvester_loops4_c: Якщо ви хочете спростити свій код, ви можете поставити
+          один цикл в інший! Це називається ** вкладена петля **.
+      courseC_harvester_loops_challenge1_authored_hint:
+        courseC_harvester_loops_challenge1_a: Це дуже важко без циклів!
+      courseC_harvester_loops_challenge1a_authored_hint:
+        courseC_harvester_loops_challenge1_a: Це дуже важко без циклів!
+      courseC_harvester_loops_challenge1a_2018_authored_hint:
+        courseC_harvester_loops_challenge1_a: Це дуже важко без циклів!
+      courseC_harvester_loops_challenge2_authored_hint:
+        courseC_harvester_loops_challenge2_a: Один із способів вирішити це виглядає
+          як зигзаг. Інший спосіб виглядає як спіраль! Існує безліч різних рішень
+          для загадки, як це. Бути наполегливим!
+      courseC_harvester_loops_challenge2_2018_authored_hint:
+        courseC_harvester_loops_challenge2_a: Один із способів вирішити це виглядає
+          як зигзаг. Інший спосіб виглядає як спіраль! Існує безліч різних рішень
+          для загадки, як це. Бути наполегливим!
+      courseC_maze_debugging1_authored_hint:
+        courseC_maze_debugging1_a: |-
+          - Чи все працює після першого кроку?
+          - Чи він все ще працює після другого?
+          - Звідки пішло не так?
+      courseC_maze_debugging1_2018_authored_hint:
+        courseC_maze_debugging1_a: |-
+          - Чи все працює після першого кроку?
+          - Чи він все ще працює після другого?
+          - Звідки пішло не так?
+      courseC_maze_debugging1_2019_authored_hint:
+        courseC_maze_debugging1_a: |-
+          - Чи все працює після першого кроку?
+          - Чи він все ще працює після другого?
+          - Звідки пішло не так?
+      courseC_maze_debugging2_authored_hint:
+        courseC_maze_debugging2_b: |-
+          - Чи все працює після першого кроку?
+          - Чи він все ще працює після другого?
+          - Звідки пішло не так?
+        courseC_maze_debugging2_c: Не можете зрозуміти, що не так? Спробуйте запустити
+          код кілька разів, щоб побачити, що станеться.
+      courseC_maze_debugging2_2018_authored_hint:
+        courseC_maze_debugging2_b: |-
+          - Чи все працює після першого кроку?
+          - Чи він все ще працює після другого?
+          - Звідки пішло не так?
+        courseC_maze_debugging2_c: Не можете зрозуміти, що не так? Спробуйте запустити
+          код кілька разів, щоб побачити, що станеться.
+      courseC_maze_debugging2_2019_authored_hint:
+        courseC_maze_debugging2_b: |-
+          - Чи все працює після першого кроку?
+          - Чи він все ще працює після другого?
+          - Звідки пішло не так?
+        courseC_maze_debugging2_c: Не можете зрозуміти, що не так? Спробуйте запустити
+          код кілька разів, щоб побачити, що станеться.
+      courseC_maze_debugging3_authored_hint:
+        courseC_maze_debugging3_b: Не можете зрозуміти, що не так? Спробуйте запустити
+          код кілька разів, щоб побачити, що станеться.
+      courseC_maze_debugging3_2018_authored_hint:
+        courseC_maze_debugging3_b: Не можете зрозуміти, що не так? Спробуйте запустити
+          код кілька разів, щоб побачити, що станеться.
+      courseC_maze_debugging3_2019_authored_hint:
+        courseC_maze_debugging3_b: Не можете зрозуміти, що не так? Спробуйте запустити
+          код кілька разів, щоб побачити, що станеться.
+      courseC_maze_debugging7_authored_hint:
+        courseC_maze_debugging7_a: |-
+          - Чи все працює на першому кроці?
+          - Як на рахунок другого кроку?
+          - Звідки це не так?
+      courseC_maze_debugging7_2018_authored_hint:
+        courseC_maze_debugging7_a: |-
+          - Чи все працює на першому кроці?
+          - Як на рахунок другого кроку?
+          - Звідки це не так?
+      courseC_maze_debugging7_2019_authored_hint:
+        courseC_maze_debugging7_a: |-
+          - Чи все працює на першому кроці?
+          - Як на рахунок другого кроку?
+          - Звідки це не так?
+      courseC_maze_debugging_challenge1_authored_hint:
+        courseC_maze_debugging_challenge1_a: Вліво або вправо? Тобі вирішувати!
+      courseC_maze_debugging_challenge1_2018_authored_hint:
+        courseC_maze_debugging_challenge1_a: Вліво або вправо? Тобі вирішувати!
+      courseC_maze_debugging_challenge1_2019_authored_hint:
+        courseC_maze_debugging_challenge1_a: Вліво або вправо? Тобі вирішувати!
+      courseC_maze_loops3_authored_hint:
+        courseC_maze_loops3_a: Ця головоломка дуже схожа на останню.
       courseC_maze_loops6_authored_hint:
         courseC_maze_loops6_b: Щоб помістити багато блоків у цикл `repeat`, просто
           перетягніть цикл у робочу область, потім перетягніть всі блоки з початкової
@@ -1045,9 +1488,142 @@ uk:
         courseC_maze_programming6_a: Існує два способи вирішити цю загадку!
       courseC_maze_programming6_2018_authored_hint:
         courseC_maze_programming6_a: Існує два способи вирішити цю загадку!
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: Існує два способи вирішити цю загадку!
+      courseC_maze_programming7_authored_hint:
+        courseC_maze_programming7_a: Не забудьте скористатися кнопкою "Крок", щоб
+          пройти через блок по блоках і шукати помилки.
+      courseC_maze_programming7_2018_authored_hint:
+        courseC_maze_programming7_a: Не забудьте скористатися кнопкою "Крок", щоб
+          пройти через блок по блоках і шукати помилки.
+      courseC_maze_programming7_2019_authored_hint:
+        courseC_maze_programming7_a: Не забудьте скористатися кнопкою "Крок", щоб
+          пройти через блок по блоках і шукати помилки.
+      courseC_maze_programming8_authored_hint:
+        courseC_maze_programming8_b: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseC_maze_programming8_2018_authored_hint:
+        courseC_maze_programming8_b: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseC_maze_programming8_2019_authored_hint:
+        courseC_maze_programming8_b: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseC_starWars_loops1_authored_hint:
+        courseC_starWars_loops1_b: Не бійся помилятися! Запустіть код, щоб побачити,
+          що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseC_starWars_loops10_authored_hint:
+        courseC_starWars_loops10_b: Якщо ви хочете використовувати менше коду, ви
+          можете помістити один цикл `repeat` іншим! Це називається ** вкладена петля
+          **.
+        courseC_starWars_loops10_c: Не бійся помилятися! Запустіть код, щоб побачити,
+          що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseC_starWars_loops10_2018_authored_hint:
+        courseC_starWars_loops10_b: Якщо ви хочете використовувати менше коду, ви
+          можете помістити один цикл `repeat` іншим! Це називається ** вкладена петля
+          **.
+        courseC_starWars_loops10_c: Не бійся помилятися! Запустіть код, щоб побачити,
+          що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseC_starWars_loops10_2019_authored_hint:
+        courseC_starWars_loops10_b: Якщо ви хочете використовувати менше коду, ви
+          можете помістити один цикл `repeat` іншим! Це називається ** вкладена петля
+          **.
+        courseC_starWars_loops10_c: Не бійся помилятися! Запустіть код, щоб побачити,
+          що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseC_starWars_loops1_2018_authored_hint:
+        courseC_starWars_loops1_b: Не бійся помилятися! Запустіть код, щоб побачити,
+          що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseC_starWars_loops1_2019_authored_hint:
+        courseC_starWars_loops1_b: Не бійся помилятися! Запустіть код, щоб побачити,
+          що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseC_starWars_loops6_authored_hint:
+        courseC_starWars_loops6_b: Якщо ви хочете використовувати менше коду, ви можете
+          помістити один цикл `repeat` іншим! Це називається ** вкладена петля **.
+      courseC_starWars_loops6_2018_authored_hint:
+        courseC_starWars_loops6_b: Якщо ви хочете використовувати менше коду, ви можете
+          помістити один цикл `repeat` іншим! Це називається ** вкладена петля **.
+      courseC_starWars_loops6_2019_authored_hint:
+        courseC_starWars_loops6_b: Якщо ви хочете використовувати менше коду, ви можете
+          помістити один цикл `repeat` іншим! Це називається ** вкладена петля **.
+      courseC_starWars_loops7_authored_hint:
+        courseC_starWars_loops7_c: Не бійся помилятися! Запустіть код, щоб побачити,
+          що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseC_starWars_loops7_2018_authored_hint:
+        courseC_starWars_loops7_c: Не бійся помилятися! Запустіть код, щоб побачити,
+          що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseC_starWars_loops7_2019_authored_hint:
+        courseC_starWars_loops7_c: Не бійся помилятися! Запустіть код, щоб побачити,
+          що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseD_Frozen_nested2_authored_hint:
+        courseD_artist_project2_b: Після першого впорядкування та перенесення ви можете
+          повторити код, додаючи цикл навколо зовнішнього вигляду.
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_binary3_authored_hint:
+        courseD_artist_binary3_a: Один із чотирьох бінарних візерунків у наборі інструментів
+          вирішить цю загадку!
+        courseD_artist_binary3_b: Не бійся помилятися! Спробуйте набрати двійковий
+          код і запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили
+          головоломку.
+      courseD_artist_binary3_2018_authored_hint:
+        courseD_artist_binary3_a: Один із чотирьох бінарних візерунків у наборі інструментів
+          вирішить цю загадку!
+        courseD_artist_binary3_b: Не бійся помилятися! Спробуйте набрати двійковий
+          код і запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили
+          головоломку.
+      courseD_artist_binary3_2019_authored_hint:
+        courseD_artist_binary3_a: Один із чотирьох бінарних візерунків у наборі інструментів
+          вирішить цю загадку!
+        courseD_artist_binary3_b: Не бійся помилятися! Спробуйте набрати двійковий
+          код і запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили
+          головоломку.
+      courseD_artist_binary4_authored_hint:
+        courseD_artist_binary4_b: Не бійся помилятися! Спробуйте набрати двійковий
+          код і запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте,
+          що ви вирішили головоломку ще.
+      courseD_artist_binary4_2018_authored_hint:
+        courseD_artist_binary4_b: Не бійся помилятися! Спробуйте набрати двійковий
+          код і запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте,
+          що ви вирішили головоломку ще.
+      courseD_artist_binary4_2019_authored_hint:
+        courseD_artist_binary4_b: Не бійся помилятися! Спробуйте набрати двійковий
+          код і запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте,
+          що ви вирішили головоломку ще.
+      courseD_artist_binary7_authored_hint:
+        courseD_artist_binary7_b: Не бійся помилятися! Спробуйте набрати двійковий
+          код і запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте,
+          що ви вирішили головоломку ще.
+      courseD_artist_binary7_2018_authored_hint:
+        courseD_artist_binary7_b: Не бійся помилятися! Спробуйте набрати двійковий
+          код і запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте,
+          що ви вирішили головоломку ще.
+      courseD_artist_binary7_2019_authored_hint:
+        courseD_artist_binary7_b: Не бійся помилятися! Спробуйте набрати двійковий
+          код і запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте,
+          що ви вирішили головоломку ще.
+      courseD_artist_binary8_authored_hint:
+        courseD_artist_binary8_c: Не бійся помилятися! Спробуйте набрати двійковий
+          код і запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили
+          головоломку.
+      courseD_artist_binary8_2018_authored_hint:
+        courseD_artist_binary8_c: Не бійся помилятися! Спробуйте набрати двійковий
+          код і запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили
+          головоломку.
+      courseD_artist_binary8_2019_authored_hint:
+        courseD_artist_binary8_c: Не бійся помилятися! Спробуйте набрати двійковий
+          код і запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили
+          головоломку.
+      courseD_artist_functions4_authored_hint:
+        courseD_artist_functions4_a: Спробуйте скористатись функцією!
+      courseD_artist_functions8_authored_hint:
+        courseD_artist_functions8_b: Після першого рядку квадратів потрібно перенести
+          художника вниз і назад, перш ніж запустити другу лінію квадратів.
       courseD_artist_nestedLoops3_authored_hint:
         courseD_artist_nestedLoops3_a: Спробуйте скористатись блоком "стрибати вперед",
           щоб отримати від верху одного квадрата до місця, де ви почнете наступне.
@@ -1058,18 +1634,428 @@ uk:
           щоб отримати від верху одного квадрата до місця, де ви почнете наступне.
           Якщо ваші квадрати високі в 20 пікселів, і вони розрізняються на 20 пікселів,
           як далеко вам потрібно стрибати?
+      courseD_artist_nestedLoops3_2019_authored_hint:
+        courseD_artist_nestedLoops3_a: Спробуйте скористатись блоком "стрибати вперед",
+          щоб отримати від верху одного квадрата до місця, де ви почнете наступне.
+          Якщо ваші квадрати високі в 20 пікселів, і вони розрізняються на 20 пікселів,
+          як далеко вам потрібно стрибати?
+      courseD_artist_nestedLoops4_authored_hint:
+        courseD_artist_nestedLoops4_b: Не забудьте стрибати вперед на 50 пікселів
+          між колами.
+      courseD_artist_nestedLoops4_2018_authored_hint:
+        courseD_artist_nestedLoops4_b: Не забудьте стрибати вперед на 50 пікселів
+          між колами.
+      courseD_artist_nestedLoops4_2019_authored_hint:
+        courseD_artist_nestedLoops4_b: Не забудьте стрибати вперед на 50 пікселів
+          між колами.
+      courseD_artist_nestedLoops9_authored_hint:
+        courseD_artist_nestedLoops9_b: Додайте другий набір вкладеного циклу до кінця
+          першого набору, але на цей раз використовуйте трикутники.
+      courseD_artist_nestedLoops9_2018_authored_hint:
+        courseD_artist_nestedLoops9_b: Додайте другий набір вкладеного циклу до кінця
+          першого набору, але на цей раз використовуйте трикутники.
+      courseD_artist_nestedLoops9_2019_authored_hint:
+        courseD_artist_nestedLoops9_b: Додайте другий набір вкладеного циклу до кінця
+          першого набору, але на цей раз використовуйте трикутники.
+      courseD_artist_nestedLoops_challenge1_authored_hint:
+        courseD_artist_nestedLoops_challenge1_b: Додайте код, щоб змінити колір на
+          зелений, і перетворити трикутник на 50 пікселів та 120 градусів на лівий
+          поворот.
+      courseD_artist_nestedLoops_challenge1_2018_authored_hint:
+        courseD_artist_nestedLoops_challenge1_b: Додайте код, щоб змінити колір на
+          зелений, і перетворити трикутник на 50 пікселів та 120 градусів на лівий
+          поворот.
+      courseD_artist_nestedLoops_challenge1_2019_authored_hint:
+        courseD_artist_nestedLoops_challenge1_b: Додайте код, щоб змінити колір на
+          зелений, і перетворити трикутник на 50 пікселів та 120 градусів на лівий
+          поворот.
+      courseD_artist_project2_authored_hint:
+        courseD_artist_project2_b: Після першого впорядкування та перенесення ви можете
+          повторити код, додаючи цикл навколо зовнішнього вигляду.
+      courseD_artist_project2_2018_authored_hint:
+        courseD_artist_project2_b: Після першого впорядкування та перенесення ви можете
+          повторити код, додаючи цикл навколо зовнішнього вигляду.
+      courseD_artist_project2_2019_authored_hint:
+        courseD_artist_project2_b: Після першого впорядкування та перенесення ви можете
+          повторити код, додаючи цикл навколо зовнішнього вигляду.
+      courseD_autorun_binary3_2019_authored_hint:
+        courseD_artist_binary3_a: Один із чотирьох бінарних візерунків у наборі інструментів
+          вирішить цю загадку!
+        courseD_artist_binary3_b: Не бійся помилятися! Спробуйте набрати двійковий
+          код і запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили
+          головоломку.
+      courseD_autorun_binary4_2019_authored_hint:
+        courseD_artist_binary4_b: Не бійся помилятися! Спробуйте набрати двійковий
+          код і запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте,
+          що ви вирішили головоломку ще.
+      courseD_autorun_binary7_2019_authored_hint:
+        courseD_artist_binary7_b: Не бійся помилятися! Спробуйте набрати двійковий
+          код і запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте,
+          що ви вирішили головоломку ще.
+      courseD_autorun_binary8_2019_authored_hint:
+        courseD_artist_binary8_c: Не бійся помилятися! Спробуйте набрати двійковий
+          код і запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили
+          головоломку.
+      courseD_bee_conditionals2_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+      courseD_bee_conditionals2_2018_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+      courseD_bee_conditionals2_2019_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+      courseD_bee_conditionals3_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+        courseD_bee_conditionals3_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили
+          головоломку.
+      courseD_bee_conditionals3_2018_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+        courseD_bee_conditionals3_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили
+          головоломку.
+      courseD_bee_conditionals3_2019_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+        courseD_bee_conditionals3_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили
+          головоломку.
+      courseD_bee_conditionals4_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+      courseD_bee_conditionals4_2018_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+      courseD_bee_conditionals4_2019_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+      courseD_bee_conditionals5_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+      courseD_bee_conditionals5_2018_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+      courseD_bee_conditionals5_2019_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+      courseD_bee_conditionals6_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+      courseD_bee_conditionals6_2018_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+      courseD_bee_conditionals6_2019_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+      courseD_bee_conditionals7_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+      courseD_bee_conditionals7_2018_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+      courseD_bee_conditionals7_2019_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+      courseD_bee_conditionals8_authored_hint:
+        courseD_bee_conditionals8_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+      courseD_bee_conditionals8_2018_authored_hint:
+        courseD_bee_conditionals8_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+      courseD_bee_conditionals8_2019_authored_hint:
+        courseD_bee_conditionals8_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+      courseD_bee_conditionals_challenge1_authored_hint:
+        courseD_bee_conditionals_challenge1_b: У цій головоломці кожен простір може
+          мати квітку, медову гребіну або нічого. Це означає, що ви можете повторити
+          ваш `if / else` умовно на кожному квадраті.
+      courseD_bee_conditionals_challenge1_2018_authored_hint:
+        courseD_bee_conditionals_challenge1_b: У цій головоломці кожен простір може
+          мати квітку, медову гребіну або нічого. Це означає, що ви можете повторити
+          ваш `if / else` умовно на кожному квадраті.
+      courseD_bee_conditionals_challenge1_2019_authored_hint:
+        courseD_bee_conditionals_challenge1_b: У цій головоломці кожен простір може
+          мати квітку, медову гребіну або нічого. Це означає, що ви можете повторити
+          ваш `if / else` умовно на кожному квадраті.
+      courseD_bee_debugging5_authored_hint:
+        courseD_bee_debugging5_b: Як тільки у вас є перший цикл так, як ви хочете,
+          що залишилося у вашому коді?
+      courseD_bee_debugging6_authored_hint:
+        courseD_bee_debugging6_b: Схоже, всі потрібні кроки тут, вам просто потрібно
+          більше їх. Як можна повторювати дії `get nektar` та` make honey` кілька
+          разів?
+      courseD_bee_debugging_challenge1_authored_hint:
+        courseD_bee_debugging_challenge1_c: "Після того, як бджола перетворить його
+          у нижній рядок, повторіть ці команди: \n\n* Повторіть 2 рази: \n* Перемістіть
+          вперед \n* Зробіть 3 порції меду \n* Перемістіть назад"
+      courseD_bee_debugging_challenge1_2018_authored_hint:
+        courseD_bee_debugging_challenge1_c: "Після того, як бджола перетворить його
+          у нижній рядок, повторіть ці команди: \n\n* Повторіть 2 рази: \n* Перемістіть
+          вперед \n* Зробіть 3 порції меду \n* Перемістіть назад"
+      courseD_bee_debugging_challenge2_authored_hint:
+        courseD_bee_debugging_challenge1_c: "Після того, як бджола перетворить його
+          у нижній рядок, повторіть ці команди: \n\n* Повторіть 2 рази: \n* Перемістіть
+          вперед \n* Зробіть 3 порції меду \n* Перемістіть назад"
+      courseD_bee_nested_loops_challenge1_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Не забувайте, що ви можете `repeat`
+          одній команді або більш довгий шаблон. Ви навіть можете `повторити` блок`
+          repeat`!
+        courseD_bee_nested_loops_challenge2_b: Щоб отримати всі 4 дорогоцінних каменів,
+          спершу скористайтеся циклом, щоб відійти від центру. Поверніть ліворуч або
+          праворуч, а потім використовуйте вкладену петлю, щоб перейти від першої
+          купи скарбів до другої. Якщо ви повторюєте вкладену петлю достатньо разів,
+          колектор буде переміщатися по * печері * * повністю *!
+      courseD_bee_nested_loops_challenge2_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Не забувайте, що ви можете `repeat`
+          одній команді або більш довгий шаблон. Ви навіть можете `повторити` блок`
+          repeat`!
+      courseD_collector_debugging5_authored_hint:
+        courseD_collector_debugging5_b: Як тільки у вас є перший цикл так, як ви хочете,
+          що залишилося у вашому коді?
+      courseD_collector_debugging5_2018_authored_hint:
+        courseD_collector_debugging5_b: Як тільки у вас є перший цикл так, як ви хочете,
+          що залишилося у вашому коді?
+      courseD_collector_nested_loops_challenge2_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Не забувайте, що ви можете `repeat`
+          одній команді або більш довгий шаблон. Ви навіть можете `повторити` блок`
+          repeat`!
+        courseD_bee_nested_loops_challenge2_b: Щоб отримати всі 4 дорогоцінних каменів,
+          спершу скористайтеся циклом, щоб відійти від центру. Поверніть ліворуч або
+          праворуч, а потім використовуйте вкладену петлю, щоб перейти від першої
+          купи скарбів до другої. Якщо ви повторюєте вкладену петлю достатньо разів,
+          колектор буде переміщатися по * печері * * повністю *!
+      courseD_collector_nested_loops_challenge2_2018_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Не забувайте, що ви можете `repeat`
+          одній команді або більш довгий шаблон. Ви навіть можете `повторити` блок`
+          repeat`!
+        courseD_bee_nested_loops_challenge2_b: Щоб отримати всі 4 дорогоцінних каменів,
+          спершу скористайтеся циклом, щоб відійти від центру. Поверніть ліворуч або
+          праворуч, а потім використовуйте вкладену петлю, щоб перейти від першої
+          купи скарбів до другої. Якщо ви повторюєте вкладену петлю достатньо разів,
+          колектор буде переміщатися по * печері * * повністю *!
+      courseD_collector_nested_loops_challenge2_2019_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Не забувайте, що ви можете `repeat`
+          одній команді або більш довгий шаблон. Ви навіть можете `повторити` блок`
+          repeat`!
+        courseD_bee_nested_loops_challenge2_b: Щоб отримати всі 4 дорогоцінних каменів,
+          спершу скористайтеся циклом, щоб відійти від центру. Поверніть ліворуч або
+          праворуч, а потім використовуйте вкладену петлю, щоб перейти від першої
+          купи скарбів до другої. Якщо ви повторюєте вкладену петлю достатньо разів,
+          колектор буде переміщатися по * печері * * повністю *!
+      courseD_collector_nested_loops_challenge2a_authored_hint:
+        courseD_collector_nested_loops_challenge2a_a: Не забувайте, що ви можете `repeat`
+          одній команді або більш довгий шаблон. Ви навіть можете `повторити` блок`
+          repeat`!
+      courseD_collector_ramp9_authored_hint:
+        courseD_collector_ramp9_b: Якщо ви хочете спростити свій код, ви можете помістити
+          один цикл повторення всередині іншого! Це називається ** вкладена петля
+          **.
+      courseD_debugging_5_authored_hint:
+        courseD_debugging_5_b: Як тільки у вас є перший цикл так, як ви хочете, що
+          залишилося у вашому коді?
+      courseD_debugging_6_authored_hint:
+        courseD_debugging_6_b: Схоже, всі потрібні кроки тут, вам просто потрібно
+          більше їх. Як можна повторювати дії `get nektar` та` make honey` кілька
+          разів?
+      courseD_farmer_while3_authored_hint:
+        courseD_farmer_while3_a: Цикл може допомогти вам спростити свій код тут.
+      courseD_farmer_while3_2018_authored_hint:
+        courseD_farmer_while3_a: Цикл може допомогти вам спростити свій код тут.
+      courseD_farmer_while3_2019_authored_hint:
+        courseD_farmer_while3_a: Цикл може допомогти вам спростити свій код тут.
+      courseD_iceage_loops2_authored_hint:
+        courseD_iceage_loops2_b: Якщо ви застрягли, спробуйте виписати кроки на аркуші
+          паперу.
+      courseD_iceage_loops2_2019_authored_hint:
+        courseD_iceage_loops2_b: Якщо ви застрягли, спробуйте виписати кроки на аркуші
+          паперу.
+      courseD_iceage_loops4_authored_hint:
+        courseD_iceage_loops4_a: Не бійся запускати свій код і подивитися, що станеться!
+      courseD_iceage_loops4_2019_authored_hint:
+        courseD_iceage_loops4_a: Не бійся запускати свій код і подивитися, що станеться!
+      courseD_maze_loops_challenge1_authored_hint:
+        courseD_bee_nested_loops_challenge1_a: Не забувайте, що ви можете `repeat`
+          одній команді або більш довгий шаблон. Ви навіть можете `повторити` блок`
+          repeat`!
+        courseD_bee_nested_loops_challenge1_b: Щоб отримати всі 4 дорогоцінних каменів,
+          спершу скористайтеся циклом, щоб відійти від центру. Поверніть ліворуч або
+          праворуч, а потім використовуйте вкладену петлю, щоб перейти від першої
+          купи скарбів до другої. Якщо ви повторюєте вкладену петлю достатньо разів,
+          колектор буде переміщатися по * печері * * повністю *!
+      courseD_maze_nestedLoops3_authored_hint:
+        courseD_maze_nestedLoops3_b: Не вдається з'ясувати, де класти цикли? Спробуйте
+          написати код покроково або дивіться в шаблон.
+      courseD_maze_nestedLoops3_2018_authored_hint:
+        courseD_maze_nestedLoops3_b: Не вдається з'ясувати, де класти цикли? Спробуйте
+          написати код покроково або дивіться в шаблон.
+      courseD_maze_nestedLoops3_2019_authored_hint:
+        courseD_maze_nestedLoops3_b: Не вдається з'ясувати, де класти цикли? Спробуйте
+          написати код покроково або дивіться в шаблон.
+      courseD_maze_nestedLoops5_authored_hint:
+        courseD_maze_nestedLoops5_b: Не вдається з'ясувати, де класти цикли? Спробуйте
+          написати код покроково або дивіться в шаблон.
+      courseD_maze_nestedLoops5_2018_authored_hint:
+        courseD_maze_nestedLoops5_b: Не вдається з'ясувати, де класти цикли? Спробуйте
+          написати код покроково або дивіться в шаблон.
+      courseD_maze_nestedLoops5_2019_authored_hint:
+        courseD_maze_nestedLoops5_b: Не вдається з'ясувати, де класти цикли? Спробуйте
+          написати код покроково або дивіться в шаблон.
+      courseD_maze_ramp1_authored_hint:
+        courseC_maze_programming1_b: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseD_maze_ramp1_2018_authored_hint:
+        courseC_maze_programming1_b: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseD_maze_ramp1_2019_authored_hint:
+        courseC_maze_programming1_b: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseD_maze_ramp5_authored_hint:
+        courseC_maze_programming5_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseD_maze_ramp5_2018_authored_hint:
+        courseC_maze_programming5_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseD_maze_ramp5_2019_authored_hint:
+        courseC_maze_programming5_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseD_maze_ramp5a_authored_hint:
+        courseC_maze_programming5_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseD_maze_ramp5a_2018_authored_hint:
+        courseC_maze_programming5_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseD_maze_ramp5a_2019_authored_hint:
+        courseC_maze_programming5_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseD_maze_ramp5b_authored_hint:
+        courseC_maze_programming5_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseD_maze_ramp5b_2018_authored_hint:
+        courseC_maze_programming5_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseD_maze_ramp5b_2019_authored_hint:
+        courseC_maze_programming5_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Існує два способи вирішити цю загадку!
+      courseD_maze_ramp7_authored_hint:
+        courseD_maze_ramp7_b: Не забудьте скористатися кнопкою "Крок", щоб пройти
+          через блок по блоках і шукати помилки.
+        courseD_maze_ramp7_c: Якщо ви хочете спростити свій код, ви можете помістити
+          один цикл повторення всередині іншого! Це називається ** вкладена петля
+          **.
+      courseD_maze_until3_authored_hint:
+        courseD_maze_until3_b: Якщо ви застрягли, спробуйте виписати кроки на папері
+          та шукати місця, де вони повторюються.
+        courseD_maze_until3_c: Чи є шаблон сходи, який ви можете слідкувати за цією
+          загадкою?
+      courseD_maze_until3_2018_authored_hint:
+        courseD_maze_until3_b: Якщо ви застрягли, спробуйте виписати кроки на папері
+          та шукати місця, де вони повторюються.
+        courseD_maze_until3_c: Чи є шаблон сходи, який ви можете слідкувати за цією
+          загадкою?
+      courseD_maze_until3_2019_authored_hint:
+        courseD_maze_until3_b: Якщо ви застрягли, спробуйте виписати кроки на папері
+          та шукати місця, де вони повторюються.
+        courseD_maze_until3_c: Чи є шаблон сходи, який ви можете слідкувати за цією
+          загадкою?
+      courseD_maze_until4_authored_hint:
+        courseD_maze_until4_b: Чи є шаблон сходи, який ви можете слідкувати за цією
+          загадкою?
+      courseD_maze_until4_2018_authored_hint:
+        courseD_maze_until4_b: Чи є шаблон сходи, який ви можете слідкувати за цією
+          загадкою?
+      courseD_maze_until4_2019_authored_hint:
+        courseD_maze_until4_b: Чи є шаблон сходи, який ви можете слідкувати за цією
+          загадкою?
+      courseD_maze_until5_authored_hint:
+        courseD_maze_until5_c: Після кожного кроку, зомбі повинні перевірити, чи є
+          шлях наліво. Що він повинен зробити, якщо знайде його?
+      courseD_scrat_ramp1_authored_hint:
+        courseC_maze_programming1_b: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseD_scrat_ramp1_2018_authored_hint:
+        courseC_maze_programming1_b: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseD_scrat_ramp4_authored_hint:
+        courseC_maze_programming4_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseD_scrat_ramp4_2018_authored_hint:
+        courseC_maze_programming4_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseD_scrat_ramp5_authored_hint:
+        courseC_maze_programming5_b: Як далеко потрібно рухатися, щоб дістатися до
+          кута?
+      courseD_scrat_ramp5_2018_authored_hint:
+        courseC_maze_programming5_b: Як далеко потрібно рухатися, щоб дістатися до
+          кута?
       courseD_scrat_ramp7_authored_hint:
         courseD_scrat_programming6_a: Існує два способи вирішити цю загадку!
+        courseD_scrat_programming6_c: Не бійся помилятися! Спробуйте додати блоки
+          та запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте,
+          що ви вирішили головоломку ще.
       courseD_scrat_ramp7_2018_authored_hint:
         courseD_scrat_programming6_a: Існує два способи вирішити цю загадку!
+        courseD_scrat_programming6_c: Не бійся помилятися! Спробуйте додати блоки
+          та запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте,
+          що ви вирішили головоломку ще.
+      courseD_scrat_ramp8_authored_hint:
+        courseD_maze_ramp7_b: Не забудьте скористатися кнопкою "Крок", щоб пройти
+          через блок по блоках і шукати помилки.
+        courseD_maze_ramp7_c: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили
+          головоломку ще.
+      courseD_scrat_ramp8_2018_authored_hint:
+        courseD_maze_ramp7_b: Не забудьте скористатися кнопкою "Крок", щоб пройти
+          через блок по блоках і шукати помилки.
+        courseD_maze_ramp7_c: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили
+          головоломку ще.
+      courseE_artist_concept4_authored_hint:
+        courseE_artist_concept4_c: Після нанесення лінії квадратів ви можете обернутись
+          і намалювати чергу лінійки квадратів, що йдуть зліва, або ви можете перейти
+          назад до лівої частини малюнка, щоб намалювати іншу лінію квадратів. Кого
+          ви віддаєте перевагу?
+      courseE_artist_concept4_2018_authored_hint:
+        courseE_artist_concept4_c: Після нанесення лінії квадратів ви можете обернутись
+          і намалювати чергу лінійки квадратів, що йдуть зліва, або ви можете перейти
+          назад до лівої частини малюнка, щоб намалювати іншу лінію квадратів. Кого
+          ви віддаєте перевагу?
+      courseE_artist_concept4_2019_authored_hint:
+        courseE_artist_concept4_c: Після нанесення лінії квадратів ви можете обернутись
+          і намалювати чергу лінійки квадратів, що йдуть зліва, або ви можете перейти
+          назад до лівої частини малюнка, щоб намалювати іншу лінію квадратів. Кого
+          ви віддаєте перевагу?
       courseE_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_a: 'На пів шестикутника має ** довжину 30
           ** і повертає направо на ** 60 градусів **.  '
         courseE_artist_concept_challenge1_b: '2/3 трикутник має ** довжину 80 ** і
           повертає вправо на ** 120 градусів **. '
       courseE_artist_concept_challenge1_2018_authored_hint:
+        courseE_artist_concept_challenge1_a: 'На пів шестикутника має ** довжину 30
+          ** і повертає направо на ** 60 градусів **.  '
+        courseE_artist_concept_challenge1_b: '2/3 трикутник має ** довжину 80 ** і
+          повертає вправо на ** 120 градусів **. '
+      courseE_artist_concept_challenge1_2019_authored_hint:
         courseE_artist_concept_challenge1_a: 'На пів шестикутника має ** довжину 30
           ** і повертає направо на ** 60 градусів **.  '
         courseE_artist_concept_challenge1_b: '2/3 трикутник має ** довжину 80 ** і
@@ -1084,18 +2070,51 @@ uk:
           просувати вперед 175 пікселів перед тим, як малювати свою другу площу.
         courseE_artist_functions1_b: Добре малювати перехресні лінії, щоб зробити
           свої окуляри.
+      courseE_artist_functions4_authored_hint:
+        courseD_artist_functions4_a: Спробуйте скористатись функцією!
+      courseE_artist_functions4_2018_authored_hint:
+        courseD_artist_functions4_a: Спробуйте скористатись функцією!
+      courseE_artist_functions6_authored_hint:
+        grade4_artist_functions_windows0_c: Не бійся помилятися! Спробуйте додати
+          блоки та запустити код, щоб побачити, що станеться, навіть якщо ви ще не
+          вирішили головоломку.
+      courseE_artist_functions6_2018_authored_hint:
+        grade4_artist_functions_windows0_c: Не бійся помилятися! Спробуйте додати
+          блоки та запустити код, щоб побачити, що станеться, навіть якщо ви ще не
+          вирішили головоломку.
+      courseE_artist_functions_challenge1_authored_hint:
+        courseE_artist_functions_challenge1_a: Якщо ви ще раз телефонуєте функцію,
+          ви зможете створити такий самий дизайн у фінальному кутку.
+      courseE_artist_functions_challenge1_2018_authored_hint:
+        courseE_artist_functions_challenge1_a: Якщо ви ще раз телефонуєте функцію,
+          ви зможете створити такий самий дизайн у фінальному кутку.
+      courseE_artist_functions_challenge1_2019_authored_hint:
+        courseE_artist_functions_challenge1_a: Якщо ви ще раз телефонуєте функцію,
+          ви зможете створити такий самий дизайн у фінальному кутку.
+      courseE_bee_functions5_authored_hint:
+        courseE_bee_functions5_a: Редагуйте функцію так, щоб вона вирішила головоломку
+          без зміни основної програми.
+      courseE_bee_functions5_2018_authored_hint:
+        courseE_bee_functions5_a: Редагуйте функцію так, щоб вона вирішила головоломку
+          без зміни основної програми.
       courseE_bee_functions6_authored_hint:
         courseE_bee_functions6_a: Якщо головоломка здається складною, спробуйте трохи
           побудувати свою функцію. Додайте кілька блоків, а потім спробуйте. Додайте
           більше, а потім повторіть спробу. Незабаром ти туди дістанешся! ! [] (https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+        courseE_bee_functions6_b: Це може допомогти в цьому випадку рухатися всередині
+          функції, але не всі ваші `move` блоків повинні бути там.
       courseE_bee_functions6_2018_authored_hint:
         courseE_bee_functions6_a: Якщо головоломка здається складною, спробуйте трохи
           побудувати свою функцію. Додайте кілька блоків, а потім спробуйте. Додайте
           більше, а потім повторіть спробу. Незабаром ти туди дістанешся! ! [] (https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+        courseE_bee_functions6_b: Це може допомогти в цьому випадку рухатися всередині
+          функції, але не всі ваші `move` блоків повинні бути там.
       courseE_bee_functions6test_authored_hint:
         courseE_bee_functions6_a: Якщо головоломка здається складною, спробуйте трохи
           побудувати свою функцію. Додайте кілька блоків, а потім спробуйте. Додайте
           більше, а потім повторіть спробу. Незабаром ти туди дістанешся! ! [] (https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+        courseE_bee_functions6_b: Це може допомогти в цьому випадку рухатися всередині
+          функції, але не всі ваші `move` блоків повинні бути там.
       courseE_bee_functions7_authored_hint:
         courseE_bee_functions7_a: Якщо головоломка здається складною, спробуйте трохи
           побудувати свою функцію. Додайте кілька блоків, а потім спробуйте. Додайте
@@ -1108,39 +2127,156 @@ uk:
         courseE_bee_functions_challenge1_a: Якщо головоломка здається складною, спробуйте
           трохи побудувати свою функцію. Додайте кілька блоків, а потім спробуйте.
           Додайте більше, а потім повторіть спробу. Незабаром ти туди дістанешся!
+        courseE_bee_functions_challenge1_b: Не забудьте побудувати свій код усередині
+          зеленого функціонального блоку.
       courseE_bee_functions_challenge1_2018_authored_hint:
         courseE_bee_functions_challenge1_a: Якщо головоломка здається складною, спробуйте
           трохи побудувати свою функцію. Додайте кілька блоків, а потім спробуйте.
           Додайте більше, а потім повторіть спробу. Незабаром ти туди дістанешся!
+        courseE_bee_functions_challenge1_b: Не забудьте побудувати свій код усередині
+          зеленого функціонального блоку.
       courseE_bee_functions_challenge2_authored_hint:
         courseE_bee_functions_challenge1_a: Якщо головоломка здається складною, спробуйте
           трохи побудувати свою функцію. Додайте кілька блоків, а потім спробуйте.
           Додайте більше, а потім повторіть спробу. Незабаром ти туди дістанешся!
+        courseE_bee_functions_challenge1_b: Не забудьте побудувати свій код усередині
+          зеленого функціонального блоку.
       courseE_bee_functions_challenge2_2018_authored_hint:
         courseE_bee_functions_challenge1_a: Якщо головоломка здається складною, спробуйте
           трохи побудувати свою функцію. Додайте кілька блоків, а потім спробуйте.
           Додайте більше, а потім повторіть спробу. Незабаром ти туди дістанешся!
+        courseE_bee_functions_challenge1_b: Не забудьте побудувати свій код усередині
+          зеленого функціонального блоку.
+      courseE_bee_ramp17_authored_hint:
+        courseE_bee_ramp17_b: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseE_farmer_concept2_authored_hint:
+        courseE_farmer_concept2_b: Функція, яка повертається, йде вниз по шляху, збирає
+          гарбузи, і тут повертається головна горизонтальна шляха.
+      courseE_farmer_concept2_2018_authored_hint:
+        courseE_farmer_concept2_b: Функція, яка повертається, йде вниз по шляху, збирає
+          гарбузи, і тут повертається головна горизонтальна шляха.
+      courseE_farmer_concept2_2019_authored_hint:
+        courseE_farmer_concept2_b: Функція, яка повертається, йде вниз по шляху, збирає
+          гарбузи, і тут повертається головна горизонтальна шляха.
       courseE_farmer_concept4_authored_hint:
         4-5_Artist_Patterns_3_a: Будьте обережні, щоб витягнути повний блок "коду
           з панелі інструментів кожного разу, коли ви спробуєте новий.
         4-5_Artist_Patterns_3_b: Якщо ваш код стає занадто заплутаним, ви завжди можете
           натиснути "Почати більше" і спробувати ще раз!
+      courseE_farmer_functions4b_authored_hint:
+        courseE_farmer_functions4b_a: Не бійся помилятися! Спробуйте додати блоки
+          та запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили
+          головоломку.
+      courseE_farmer_functions4b_2018_authored_hint:
+        courseE_farmer_functions4b_a: Не бійся помилятися! Спробуйте додати блоки
+          та запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили
+          головоломку.
+      courseE_farmer_functions5c_authored_hint:
+        courseE_farmer_functions5c_b: Не бійся помилятися! Спробуйте додати блоки
+          та запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили
+          головоломку.
+      courseE_farmer_functions5c_2018_authored_hint:
+        courseE_farmer_functions5c_b: Не бійся помилятися! Спробуйте додати блоки
+          та запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили
+          головоломку.
+      courseE_farmer_functions8b_authored_hint:
+        courseE_farmer_functions8b_a: Спробуйте запустити вказаний код, щоб побачити,
+          що це робить. Що вам потрібно після цього?
+      courseE_farmer_functions8b_2018_authored_hint:
+        courseE_farmer_functions8b_a: Спробуйте запустити вказаний код, щоб побачити,
+          що це робить. Що вам потрібно після цього?
+      courseE_farmer_ramp12a_authored_hint:
+        courseE_farmer_ramp12c: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseE_farmer_ramp12a_2018_authored_hint:
+        courseE_farmer_ramp12c: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseE_maze_ramp13_authored_hint:
+        courseD_maze_ramp11_b: Не забудьте скористатися кнопкою "Крок", щоб пройти
+          через блок по блоках і шукати помилки.
+      courseE_maze_ramp4_authored_hint:
+        courseC_maze_programming4_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseE_maze_ramp4_2018_authored_hint:
+        courseC_maze_programming4_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseE_maze_ramp5_authored_hint:
+        courseC_maze_programming5_b: Як далеко потрібно рухатися, щоб дістатися до
+          кута?
+      courseE_maze_ramp5_2018_authored_hint:
+        courseC_maze_programming5_b: Як далеко потрібно рухатися, щоб дістатися до
+          кута?
       courseE_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Існує два способи вирішити цю загадку!
+        courseC_maze_programming6_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
       courseE_maze_ramp6_2018_authored_hint:
         courseC_maze_programming6_a: Існує два способи вирішити цю загадку!
+        courseC_maze_programming6_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
+      courseE_maze_ramp7_authored_hint:
+        courseD_maze_ramp7_b: Не забудьте скористатися кнопкою "Крок", щоб пройти
+          через блок по блоках і шукати помилки.
+        courseD_maze_ramp7_c: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили
+          головоломку ще.
+      courseE_maze_ramp7_2018_authored_hint:
+        courseD_maze_ramp7_b: Не забудьте скористатися кнопкою "Крок", щоб пройти
+          через блок по блоках і шукати помилки.
+        courseD_maze_ramp7_c: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили
+          головоломку ще.
+      courseF_artist_for10_authored_hint:
+        courseF_artist_for10_b: Зображення на малюнку використовує поворот 61 градус.
+      courseF_artist_for10_2018_authored_hint:
+        courseF_artist_for10_b: Зображення на малюнку використовує поворот 61 градус.
+      courseF_artist_for10_2019_authored_hint:
+        courseF_artist_for10_b: Зображення на малюнку використовує поворот 61 градус.
+      courseF_artist_for3_authored_hint:
+        courseF_artist_for3_b: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseF_artist_for3_2018_authored_hint:
+        courseF_artist_for3_b: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseF_artist_for3_2019_authored_hint:
+        courseF_artist_for3_b: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
       courseF_artist_for4_authored_hint:
         courseF_artist_for4_a: "** Яке мінімальне число вам знадобиться? \nЯке найбільше
           число? \nНаскільки велика кількість кожного разу? **\nЦе питання, які вам
           потрібно запитати, щоб заповнити пробіли для циклу `for`."
+        courseF_artist_for4_c: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
       courseF_artist_for4_2018_authored_hint:
         courseF_artist_for4_a: "** Яке мінімальне число вам знадобиться? \nЯке найбільше
           число? \nНаскільки велика кількість кожного разу? **\nЦе питання, які вам
           потрібно запитати, щоб заповнити пробіли для циклу `for`."
+        courseF_artist_for4_c: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
       courseF_artist_for4_2019_authored_hint:
         courseF_artist_for4_a: "** Яке мінімальне число вам знадобиться? \nЯке найбільше
           число? \nНаскільки велика кількість кожного разу? **\nЦе питання, які вам
           потрібно запитати, щоб заповнити пробіли для циклу `for`."
+        courseF_artist_for4_c: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseF_artist_for7_authored_hint:
+        courseF_artist_for7_b: Зверніть увагу, що ця спіраль виявляється правильним,
+          а не зліва!
+      courseF_artist_for7_2018_authored_hint:
+        courseF_artist_for7_b: Зверніть увагу, що ця спіраль виявляється правильним,
+          а не зліва!
+      courseF_artist_for7_2019_authored_hint:
+        courseF_artist_for7_b: Зверніть увагу, що ця спіраль виявляється правильним,
+          а не зліва!
+      courseF_artist_fwp5_authored_hint:
+        courseF_artist_fwp5_b: Не забудьте стрибати 100 пікселів між фігурами.
+      courseF_artist_fwp5_2018_authored_hint:
+        courseF_artist_fwp5_b: Не забудьте стрибати 100 пікселів між фігурами.
       courseF_artist_fwp_challenge2_authored_hint:
         courseF_artist_fwp_challenge1_b: 'Це серія восьмикутників з боками, які є
           довжиною `контр-пікселів`. '
@@ -1150,6 +2286,10 @@ uk:
           кінці кожної ітерації.
         courseF_artist_fwp_challenge1_e: Як колір кожного восьмикутника, так і ширина
           пера контролюються змінні `counter`.
+        courseF_artist_fwp_challenge1_f: |-
+          ** Рішення: **
+
+          ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       courseF_artist_fwp_challenge2_2018_authored_hint:
         courseF_artist_fwp_challenge1_b: 'Це серія восьмикутників з боками, які є
           довжиною `контр-пікселів`. '
@@ -1159,6 +2299,66 @@ uk:
           кінці кожної ітерації.
         courseF_artist_fwp_challenge1_e: Як колір кожного восьмикутника, так і ширина
           пера контролюються змінні `counter`.
+        courseF_artist_fwp_challenge1_f: |-
+          ** Рішення: **
+
+          ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
+      courseF_artist_variables8_authored_hint:
+        courseF_artist_variables8_c: Обов'язково використовуйте цикл `repeat` для
+          нанесення трикутника.
+      courseF_artist_variables8_2018_authored_hint:
+        courseF_artist_variables8_c: Обов'язково використовуйте цикл `repeat` для
+          нанесення трикутника.
+      courseF_artist_variables8_2019_authored_hint:
+        courseF_artist_variables8_c: Обов'язково використовуйте цикл `repeat` для
+          нанесення трикутника.
+      courseF_artist_variables_challenge1a_authored_hint:
+        courseF_artist_variables_challenge1_d: |-
+          ** Рішення: **
+
+          ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
+      courseF_artist_variables_challenge2_authored_hint:
+        courseF_artist_variables_challenge2_d: |-
+          ** Рішення: **
+
+          ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
+      courseF_artist_variables_challenge2_2018_authored_hint:
+        courseF_artist_variables_challenge2_d: |-
+          ** Рішення: **
+
+          ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
+      courseF_artist_variables_challenge2_2019_authored_hint:
+        courseF_artist_variables_challenge2_d: |-
+          ** Рішення: **
+
+          ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
+      courseF_bee_for5_authored_hint:
+        courseF_bee_for5_c: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseF_bee_for5_2018_authored_hint:
+        courseF_bee_for5_c: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseF_bee_for5_2019_authored_hint:
+        courseF_bee_for5_c: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseF_bee_for8_authored_hint:
+        courseF_bee_for8_b: У цій головоломці вам доведеться пересуватися по шаблону
+          сходами, щоб дістати до квітів.
+      courseF_bee_for8_2018_authored_hint:
+        courseF_bee_for8_b: У цій головоломці вам доведеться пересуватися по шаблону
+          сходами, щоб дістати до квітів.
+      courseF_bee_for8_2019_authored_hint:
+        courseF_bee_for8_b: У цій головоломці вам доведеться пересуватися по шаблону
+          сходами, щоб дістати до квітів.
+      courseF_bee_for9_authored_hint:
+        courseF_bee_for9_c: Схоже, вам потрібно буде перетворити бджолу на початку
+          кожної ітерації циклу, якщо хочете вирішити головоломку.
+      courseF_bee_for9_2018_authored_hint:
+        courseF_bee_for9_c: Схоже, вам потрібно буде перетворити бджолу на початку
+          кожної ітерації циклу, якщо хочете вирішити головоломку.
+      courseF_bee_for9_2019_authored_hint:
+        courseF_bee_for9_c: Схоже, вам потрібно буде перетворити бджолу на початку
+          кожної ітерації циклу, якщо хочете вирішити головоломку.
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_a: "Подивіться на цю опцію для переміщення:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
         courseF_bee_for_challenge2_b: 'Спробуйте використати два «за» петлі: один
@@ -1195,6 +2395,9 @@ uk:
           кілька регулярних циклів всередині, що повторюють` counter` times, щоб зробити
           збільшене зображення сходами. \nІнший `for` петлі потребує лише одного регулярного
           циклу, щоб зробити `counter` суму мед."
+      courseF_bee_functions5_authored_hint:
+        courseE_bee_functions5_a: Редагуйте функцію так, щоб вона вирішила головоломку
+          без зміни основної програми.
       courseF_bee_functions6_2018_authored_hint:
         courseF_bee_functions6_a: Якщо головоломка здається складною, спробуйте трохи
           побудувати свою функцію. Додайте кілька блоків, а потім спробуйте. Додайте
@@ -1219,23 +2422,87 @@ uk:
         courseF_bee_functions8a_a: Якщо головоломка здається складною, спробуйте трохи
           побудувати свою функцію. Додайте кілька блоків, а потім спробуйте. Додайте
           більше, а потім повторіть спробу. Незабаром ти туди дістанешся!
+      courseF_bee_fwp5_authored_hint:
+        courseF_bee_fwp5_a: Порахуйте кількість пропусків, які потрібно перевірити
+          в кожному розтяжку, і використовуйте ці цифри як параметри для виклику функції.
+      courseF_bee_fwp5_2018_authored_hint:
+        courseF_bee_fwp5_a: Порахуйте кількість пропусків, які потрібно перевірити
+          в кожному розтяжку, і використовуйте ці цифри як параметри для виклику функції.
+      courseF_maze_ramp13_authored_hint:
+        courseF_maze_ramp13_b: Не забудьте скористатися кнопкою "Крок", щоб пройти
+          через блок по блоках і шукати помилки.
+        courseF_maze_ramp13_c: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseF_maze_ramp15_authored_hint:
+        courseF_maze_ramp7_b: Не забудьте скористатися кнопкою "Крок", щоб пройти
+          через блок по блоках і шукати помилки.
+      courseF_maze_ramp4_authored_hint:
+        courseF_maze_ramp4_c: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseF_maze_ramp4_2018_authored_hint:
+        courseF_maze_ramp4_c: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseF_maze_ramp5_authored_hint:
+        courseF_maze_ramp5_b: Існує більше одного способу дістатися до свині.
+      courseF_maze_ramp5_2018_authored_hint:
+        courseF_maze_ramp5_b: Існує більше одного способу дістатися до свині.
       courseF_maze_ramp6_authored_hint:
         courseF_maze_ramp6_a: Існує два способи вирішити цю загадку!
+        courseF_maze_ramp6_c: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили
+          головоломку ще.
       courseF_maze_ramp6_2018_authored_hint:
         courseF_maze_ramp6_a: Існує два способи вирішити цю загадку!
+        courseF_maze_ramp6_c: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили
+          головоломку ще.
+      courseF_maze_ramp7_authored_hint:
+        courseF_maze_ramp7_b: Не забудьте скористатися кнопкою "Крок", щоб пройти
+          через блок по блоках і шукати помилки.
+        courseF_maze_ramp7_c: Не бійся помилятися! Спробуйте додати блоки та запустити
+          код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили
+          головоломку ще.
+      coursea_maze_ramp1_2018_authored_hint:
+        courseC_maze_programming1_b: Не бійся помилятися! Спробуйте щось, і якщо він
+          не працює, спробуйте щось інше!
+      grade1_artist_loops1_authored_hint:
+        grade1_artist_loops1_a: Якщо ви хочете повторити цикл більше, ніж 4 рази,
+          ви можете змінити номер у верхній частині блоку.
+      grade1_maze_sequence10_authored_hint:
+        grade1_maze_sequence10_a: Якщо у вас виникли проблеми, спробуйте в першу чергу
+          записати сходинки на папірці.
+      grade1_maze_sequence9_authored_hint:
+        grade1_maze_sequence9_a: Якщо у вас виникли проблеми, спробуйте в першу чергу
+          записати сходинки на папірці.
+      grade1_maze_sequenceA_authored_hint:
+        grade1_maze_sequence10_a: Якщо у вас виникли проблеми, спробуйте в першу чергу
+          записати сходинки на папірці.
+      grade1_maze_sequenceB_authored_hint:
+        grade1_maze_sequenceB_a: Якщо у вас виникли проблеми, спробуйте в першу чергу
+          записати сходинки на папірці.
+      grade1_maze_sequenceC_authored_hint:
+        grade1_maze_sequenceC_a: Якщо у вас виникли проблеми, спробуйте в першу чергу
+          записати сходинки на папірці.
       grade2_CaringForNewPet_4_authored_hint:
         2-3_Maze_6_a: Існує два способи вирішити цю загадку!
+      grade2_CaringForNewPet_7D_authored_hint:
+        grade2_CaringForNewPet_7D_a: Не забудьте скористатися кнопкою "Крок", щоб
+          пройти через блок по блоках і шукати помилки.
       grade2_MakeDogTag_1_authored_hint:
         2-3_Artist_1_new_a: Якщо ти використаєш для мене блок "рухатися вперед на
           100 пікселів", я намалюю лінію автоматично.
         2-3_Artist_1_new_b: Виникли проблеми з повертанням за ріг? Використай блок
           "повернути праворуч на 90 градусів".
+      grade2_MakeDogTag_6_authored_hint:
+        grade2_MakeDogTag_6a: Кожен кут - 45 або 90 градусів.
       grade2_MakeDogTag_9_authored_hint:
         2-3_Artist_Loops_New_11_b: Ваш новий хід має йти на ** кінці ** коду всередині
           циклу.
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: Скільки разів моя форма повторювалася? Скільки разів
           * має * форму повторювати? Де ви можете змінити це в програмі?
+      grade2_PuppyLoops_3_authored_hint:
+        hint1: Ця головоломка дуже схожа на останню.
       grade2_PuppyLoops_6_authored_hint:
         2-3_Maze_16_a: Якщо схему важко побачити, спочатку спробуйте все це спершу
           копіювати та побачити, що все повторюється знову і знову, перш ніж ви кладете
@@ -1255,6 +2522,8 @@ uk:
       grade2_PuppyLoops_9_authored_hint:
         2-3_Artist_Debugging_7_a: Що станеться, якщо ви рухаєтеся художником або стрибаєте
           назад, коли малює перший рядок?
+      grade2_puppy_loops3_authored_hint:
+        hint1: Ця головоломка дуже схожа на останню.
       grade2_puppy_loops6_authored_hint:
         2-3_Maze_16_a: Якщо схему важко побачити, спочатку спробуйте все це спершу
           копіювати та побачити, що все повторюється знову і знову, перш ніж ви кладете
@@ -1277,27 +2546,34 @@ uk:
         2-3_Bee_Conditionals_14_b: Якщо червона квітка була пурпурною, чи могли б
           ви зрозуміти, як використати додатковий цикл `repeat` для скорочення коду?
       grade3_Conditionals_12_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Пам&#39;ятайте: фіолетові квіти мають лише 0 або
+        2-3_Bee_Conditionals_15_a: 'Пам''ятайте: фіолетові квіти мають лише 0 або
           1 нектар, і вони можуть змінюватися при кожному запуску програми.'
       grade3_Conditionals_2_authored_hint:
         2-3_Bee_Conditionals_3_a: Код буде найкоротшим, якщо ви будете використовувати
           цикл при кожному русі вперед, інший цикл, щоб зібрати нектар, а інший -
           зробити мед.
       grade3_Conditionals_4_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Пам&#39;ятайте: фіолетові квіти змінюються між
-          0 і 1 нектаром при запуску вашої програми!'
+        2-3_Bee_Conditionals_6_a: 'Пам''ятайте: фіолетові квіти змінюються між 0 і
+          1 нектаром при запуску вашої програми!'
       grade3_Conditionals_TeacherIDo_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Пам&#39;ятайте: фіолетові квіти змінюються між
-          0 і 1 нектаром при запуску вашої програми!'
+        2-3_Bee_Conditionals_6_a: 'Пам''ятайте: фіолетові квіти змінюються між 0 і
+          1 нектаром при запуску вашої програми!'
       grade3_Debugging_1_authored_hint:
         2-3_Bee_Debugging_1_a: Як тільки ви знайдете та виправите неправильний блок,
           ви бачите будь-які шаблони, які можна було б зробити більш простим, використовуючи
           `repeat` loop?
+      grade3_Debugging_10_authored_hint:
+        grade3_Debugging_10_b: Як тільки у вас є перший цикл так, як ви хочете, що
+          залишилося у вашому коді?
+      grade3_Debugging_11_authored_hint:
+        grade3_Debugging_11_b: Схоже, всі потрібні кроки тут, вам просто потрібно
+          більше їх. Як можна повторювати дії `get nektar` та` make honey` кілька
+          разів?
       grade3_Debugging_TeacherIDo_authored_hint:
         2-3_Bee_Debugging_4_a: Чи є місце, де бджола робить те, що не має сенсу? Що
           відбувається, коли ви змінюєте цей блок?
       grade3_Loops_10_authored_hint:
-        2-3_Bee_Loops_4_a: Ви повинні скласти п&#39;ять блоків у вашому циклі.
+        2-3_Bee_Loops_4_a: Ви повинні скласти п'ять блоків у вашому циклі.
       grade3_Loops_11_authored_hint:
         2-3_Bee_Loops_5_a: Якщо ви не можете визначити блоки, щоб вставити всередину
           `repeat` відразу, почніть, кодуючи кожний крок і шукати шаблон.
@@ -1318,8 +2594,8 @@ uk:
         2-3_Bee_Loops_4A_b: Остання частина програми може бути завершена написанням
           коду в кінці вашої програми за межами вашого циклу.
         2-3_Bee_Loops_4A_c: Якщо ви ще не можете помітити петлі, спочатку спочатку
-          кодируйте його далі, а потім подивіться, що ви можете об&#39;єднати в цикл
-          `repeat` в кінці.
+          кодируйте його далі, а потім подивіться, що ви можете об'єднати в цикл `repeat`
+          в кінці.
       grade3_Loops_8_authored_hint:
         2-3_Bee_Loops_2_a: Ви повинні скластися з чотирма блоками всередині вашого
           циклу.
@@ -1345,11 +2621,16 @@ uk:
       grade4_arist_nested_loop_triangles3_authored_hint:
         4-5_Nested_Loops_6_a: Не забудьте зробити чергу після внутрішньої петлі. Ви
           будете петлі 6 трикутників більше 360 градусів. ** 360/6 =? **
+      grade4_arist_nested_loop_triangles6_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       grade4_artist_functions1_authored_hint:
         2-3_Artist_Functions_1_a: Квадрати мають 100 пікселів, тобто вам доведеться
           просувати вперед 175 пікселів перед тим, як малювати свою другу площу.
         2-3_Artist_Functions_1_b: Добре малювати перехресні лінії, щоб зробити свої
           окуляри.
+      grade4_artist_functionsChallenge0_authored_hint:
+        grade4_artist_functionsChallenge0_b: Після першого рядку квадратів потрібно
+          перенести художника вниз і назад, перш ніж запустити другу лінію квадратів.
       grade4_artist_functions_challenge_authored_hint:
         Course_4_SCF_1_a: Кожен шестикутник має 40 пікселів.
         Course_4_SCF_1_b: Між кожним шестикутником у кожній горизонтальній лінії є
@@ -1376,6 +2657,8 @@ uk:
           того, як ви перебуваєте у правильному вертикальному положенні, вам доведеться
           знову повернути свого виконавця та перейти назад у розмірі 440 пікселів
           (120 пікселів далі, ніж функція переміщення вниз / вперед).
+      grade4_artist_functions_stars1_authored_hint:
+        grade4_artist_functions_stars1_a: Спробуйте скористатись функцією!
       grade4_artist_nestedLoops_challenge2_authored_hint:
         Course_4_Artist_11_a: 'На пів шестикутника має ** довжину 30 ** і повертає
           направо на ** 60 градусів **.  '
@@ -1391,6 +2674,11 @@ uk:
           Ви будете циклу цієї форми 6 разів більше 360 градусів.
 
           ** 360/6 =? **
+      grade4_artist_nested_loop_triangles6_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
+      grade4_bee_functions6_authored_hint:
+        grade4_bee_functions6_a: Редагуйте функцію так, щоб вона вирішила головоломку
+          без зміни основної програми.
       grade4_bee_functions7_authored_hint:
         2-3_Bee_Functions_8_a: Якщо головоломка здається складною, спробуйте трохи
           побудувати свою функцію. Додайте кілька блоків, а потім спробуйте. Додайте
@@ -1416,7 +2704,7 @@ uk:
       grade4_review_bee2_authored_hint:
         2-3_Bee_Loops_3_a: Ви повинні мати 6 блоків у вашому циклі.
       grade4_review_bee3_authored_hint:
-        2-3_Bee_Loops_4_a: Ви повинні скласти п&#39;ять блоків у вашому циклі.
+        2-3_Bee_Loops_4_a: Ви повинні скласти п'ять блоків у вашому циклі.
       grade5_artist_binary10_authored_hint:
         Course_4_Artist_Binary_Free_Play_2b_a: Цей код використовує два `для циклів`.
           Один піднімається від 1 до 8, другий відраховує від 8 до 1.
@@ -1433,6 +2721,9 @@ uk:
         Course_4_Artist_For_Loops_4_a: "** Яке мінімальне число вам знадобиться? \nЯке
           найбільше число? \nНаскільки велика кількість кожного разу? **\nЦе питання,
           які вам потрібно запитати, щоб заповнити пробіли для циклу `for`."
+      grade5_artist_for_loops7_authored_hint:
+        grade5_artist_for_loops7_b: Зверніть увагу, що ця спіраль виявляється правильним,
+          а не зліва!
       grade5_artist_for_loops8_authored_hint:
         Course_4_Artist_For_Loops_11_a: Кут повороту зміниться з кожною формою! Використовуйте
           математичний блок, щоб ввести 360, поділений на кількість сторін, для яких
@@ -1449,6 +2740,9 @@ uk:
           від 3 до 10 зі збільшенням 1.
         Course_4_Artist_For_Loops_inspire_c: Існує два повторення одного циклу повтору
           всередині петлі `for`, але друге повторення повертає протилежний напрям.
+      grade5_artist_for_loopsfreeplay12_authored_hint:
+        grade5_artist_for_loopsfreeplay12_b: Зображення на малюнку використовує поворот
+          61 градус.
       grade5_artist_functionparameters10_authored_hint:
         brush_width: Ми встановили ширину щітки до 1, а потім колір до синього, перш
           ніж ми зробили що-небудь ще.
@@ -1479,11 +2773,27 @@ uk:
       grade5_artist_variables_square7_authored_hint:
         Course_4_Artist_Vars_6_a: Щоб намалювати правильний багатокутник, повертайте
           ** 360/боки ** кожного разу.
+      grade5_bee_parameters_new5_authored_hint:
+        grade5_bee_parameters_new5_a: Порахуйте кількість пропусків, які потрібно
+          перевірити в кожному розтяжку, і використовуйте ці цифри як параметри для
+          виклику функції.
       grade5_playlab_variables2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Обов'язково встановіть число для `dog_speed` на
           щось більше, ніж` cat_speed`.
+      gradek_artist_loops1_authored_hint:
+        gradek_artist_loops1_a: Не можете зрозуміти, як малювати лінію? Почніть приєднувати
+          блоки до блоку `when run`, щоб побачити, що станеться.
+      gradek_artist_loops3_authored_hint:
+        artistLoopsK2_a: Якщо ви хочете повторити цикл більше, ніж 4 рази, ви можете
+          змінити номер у верхній частині блоку.
+      gradek_artist_loops5_authored_hint:
+        gradek_artist_loops5_a: Не можете зрозуміти, як зробити пагорб? Спробуйте
+          грати з блоками трохи, щоб побачити, що кожен малює.
+      gradek_artist_loops6_authored_hint:
+        gradek_artist_loops6_a: Не можете зрозуміти, де поставити цикл? Спробуйте
+          написати код покрокові і шукайте шаблон.
       level 'grade3_Loops_10_authored_hint:
-        2-3_Bee_Loops_4_a: Ви повинні скласти п&#39;ять блоків у вашому циклі.
+        2-3_Bee_Loops_4_a: Ви повинні скласти п'ять блоків у вашому циклі.
       level 'grade3_Loops_11_authored_hint:
         2-3_Bee_Loops_5_a: Якщо ви не можете визначити блоки, щоб вставити всередину
           `repeat` відразу, почніть, кодуючи кожний крок і шукати шаблон.
@@ -1504,8 +2814,8 @@ uk:
         2-3_Bee_Loops_4A_b: Остання частина програми може бути завершена написанням
           коду в кінці вашої програми за межами вашого циклу.
         2-3_Bee_Loops_4A_c: Якщо ви ще не можете помітити петлі, спочатку спочатку
-          кодируйте його далі, а потім подивіться, що ви можете об&#39;єднати в цикл
-          `repeat` в кінці.
+          кодируйте його далі, а потім подивіться, що ви можете об'єднати в цикл `repeat`
+          в кінці.
       level 'grade3_Loops_8_authored_hint:
         2-3_Bee_Loops_2_a: Ви повинні скластися з чотирма блоками всередині вашого
           циклу.

@@ -30,20 +30,21 @@ es-MX:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
+            '"UNICORN"': solo unicornios
           MOVE:
+            '"next"': "(Siguiente)"
+            '"prev"': "(Anterior)"
+            '"rand"': "(Al azar)"
+            MOVES.Roll: Rueda
             MOVES.ClapHigh: Aplauso alto
-            MOVES.Clown: Payaso
             MOVES.Dab: Dudar
             MOVES.DoubleJam: Jam doble
             MOVES.Drop: Caída
             MOVES.Floss: Hilo
             MOVES.Fresh: Fresco
-            MOVES.Roll: Rueda
+            MOVES.Clown: Payaso
             MOVES.Kick: Patada
             MOVES.ThisOrThat: Tal o cual
-            '"next"': "(Siguiente)"
-            '"prev"': "(Anterior)"
-            '"rand"': "(Al azar)"
             MOVES.Rest: Ninguna
           DIR:
             '1': "→"
@@ -52,20 +53,20 @@ es-MX:
         text: "{SPRITE} hacer {MOVE} {DIR} siempre"
         options:
           MOVE:
+            '"next"': "(Siguiente)"
+            '"prev"': "(Anterior)"
+            '"rand"': "(Al azar)"
+            MOVES.Roll: Rueda
             MOVES.ClapHigh: Aplauso alto
-            MOVES.Clown: Payaso
             MOVES.Dab: Dudar
             MOVES.DoubleJam: Jam doble
             MOVES.Drop: Caída
             MOVES.Floss: Hilo
             MOVES.Fresh: Fresco
-            MOVES.Roll: Rueda
+            MOVES.Clown: Payaso
             MOVES.Kick: Patada
             MOVES.ThisOrThat: Tal o cual
             MOVES.Thriller: Terror
-            '"next"': "(Siguiente)"
-            '"prev"': "(Anterior)"
-            '"rand"': "(Al azar)"
             MOVES.Rest: Ninguna
           DIR:
             '1': "→"
@@ -95,15 +96,17 @@ es-MX:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
+            '"UNICORN"': solo unicornios
           MOVE:
+            '"rand"': "(Al azar)"
+            MOVES.Roll: Rueda
             MOVES.ClapHigh: Aplauso alto
-            MOVES.Clown: Payaso
             MOVES.Dab: Dudar
             MOVES.DoubleJam: Jam doble
             MOVES.Drop: Caída
             MOVES.Floss: Hilo
             MOVES.Fresh: Fresco
-            MOVES.Roll: Rueda
+            MOVES.Clown: Payaso
             MOVES.Kick: Patada
             MOVES.ThisOrThat: Tal o cual
             MOVES.Rest: Ninguna
@@ -114,14 +117,15 @@ es-MX:
         text: "{SPRITE} hacer {MOVE} {DIR} una vez"
         options:
           MOVE:
+            '"rand"': "(Al azar)"
+            MOVES.Roll: Rueda
             MOVES.ClapHigh: Aplauso alto
-            MOVES.Clown: Payaso
             MOVES.Dab: Dudar
             MOVES.DoubleJam: Jam doble
             MOVES.Drop: Caída
             MOVES.Floss: Hilo
             MOVES.Fresh: Fresco
-            MOVES.Roll: Rueda
+            MOVES.Clown: Payaso
             MOVES.Kick: Patada
             MOVES.ThisOrThat: Tal o cual
             MOVES.Rest: Ninguna
@@ -221,11 +225,14 @@ es-MX:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
+            '"UNICORN"': solo unicornios
           FORMAT:
+            '"border"': borde
             '"circle"': círculo
             '"grid"': cuadrícula
             '"row"': fila
             '"column"': columna
+            '"plus"': más
             '"random"': al azar
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -293,10 +300,12 @@ es-MX:
             '"SHARK"': Tiburones
             '"UNICORN"': Unicornios
           LAYOUT:
+            '"border"': borde
             '"circle"': círculo
             '"grid"': cuadrícula
             '"row"': fila
             '"column"': columna
+            '"plus"': más
             '"random"': al azar
       Dancelab_mixColors:
         text: mezclar {COLOR1} y {COLOR2}
@@ -321,7 +330,11 @@ es-MX:
             '"disco"': Cuadrados
             '"rainbow"': Colores
             '"diamonds"': Diamantes
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": "(Al azar)"
+            '"splatter"': Burbujas
+            '"swirl"': Hipnótico
+            '"snowflakes"': Nieve
+            '"spiral"': Espiral
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Al azar)"
       Dancelab_setDanceSpeed:
         text: cambiar velocidad de danza {SPRITE} a {SPEED}
         options:
@@ -345,6 +358,7 @@ es-MX:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
+            '"UNICORN"': solo unicornios
           SPEED:
             '1': normal
             '2': rápido
@@ -358,6 +372,7 @@ es-MX:
             '"none"': Ninguna
             '"rain"': Lluvia
             '"raining_tacos"': Tacos
+            '"spotlight"': Destacado
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Al azar)"
       Dancelab_setProp:
         text: 'definir {SPRITE} {PROPERTY} a {VAL} '
@@ -385,6 +400,7 @@ es-MX:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
+            '"UNICORN"': solo unicornios
           PROPERTY:
             '"scale"': tamaño
             '"width"': ancho
@@ -440,6 +456,7 @@ es-MX:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
+            '"UNICORN"': solo unicornios
           VISIBILITY:
             'true': visible
             'false': invisible
@@ -483,11 +500,25 @@ es-MX:
             '"down"': abajo
             '"right"': derecha
             '"space"': espacio
+            '"enter"': intro
             '"a"': a
             '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"o"': o
+            '"p"': p
+            '"r"': r
             '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
             '"w"': w
             '"x"': x
+            '"z"': z
       Dancelab_whenPeak:
         text: Cuando {RANGE} alcance
         options:
@@ -735,6 +766,22 @@ es-MX:
             "{x: 300, y: 100}": arriba a la derecha
             "{x: 100, y: 300}": abajo a la izquierda
             "{x: 300, y: 300}": abajo a la derecha
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": arriba
+            "{x: 200, y: 300}": fondo
+            "{x: 100, y: 200}": izquierda
+            "{x: 300, y: 200}": derecha
+            "{x: 200, y: 200}": centro
+            "{x: 100, y: 100}": arriba a la izquierda
+            "{x: 300, y: 100}": arriba a la derecha
+            "{x: 100, y: 300}": abajo a la izquierda
+            "{x: 300, y: 300}": abajo a la derecha
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': todo
       Mikelab_edgesDisplace:
         text: limitacion de bloque {SPRITE} para moverse
       Mikelab_getProp:
@@ -818,8 +865,6 @@ es-MX:
             '"x"': posición x
             '"y"': posición y
             '"direction"': dirección de movimiento
-      aalab_createNewSpriteAdvanced:
-        text: "haz un gráfico nuevo\n llamado {NAME} \n con disfraz {COSTUME} \n en {LOCATION}"
       aalab_spritesWhere:
         options:
           PROPERTY:
