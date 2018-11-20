@@ -37,6 +37,32 @@ module Pd::WorkshopSurveyResultsHelper
   TEACHERCON_MULTIPLE_CHOICE_FIELDS = (Pd::TeacherconSurvey.public_required_fields & Pd::TeacherconSurvey.options.keys).freeze
   TEACHERCON_FIELDS_IN_SUMMARY = (Pd::TeacherconSurvey.public_fields).freeze
 
+  QUESTIONS_FOR_FACILITATOR_AVERAGES = {
+    FACILITATOR_EFFECTIVENESS: [
+      {primary_id: 'overallHow'},
+      {primary_id: 'duringYour'},
+      {primary_id: 'forThis54'},
+      {primary_id: 'howInteresting55'},
+      {primary_id: 'howOften56'},
+      {primary_id: 'howComfortable', all_ids: %w(howComfortable howComfortable57)},
+      {primary_id: 'howOften'}
+    ],
+    TEACHER_ENGAGEMENT: [
+      {primary_id: 'pleaseRate120_0'},
+      {primary_id: 'pleaseRate120_1'},
+      {primary_id: 'pleaseRate120_2'}
+    ],
+    OVERALL_SUCCESS: [
+      {primary_id: 'iFeel133', all_ids: ['iFeel133', 'pleaseRate_0', 'iFeel45']},
+      {primary_id: 'regardingThe_2', all_ids: ['regardingThe_2', 'pleaseRate_1']},
+      {primary_id: 'pleaseRate_2', all_ids: ['pleaseRate_2', 'regardingThe_3']},
+      {primary_id: 'iWould', all_ids: ['iWould', 'pleaseRate_4']},
+      {primary_id: 'pleaseRate_3'}
+    ]
+  }
+
+  QUESTIONS_FOR_FACILITATOR_AVERAGES_LIST = QUESTIONS_FOR_FACILITATOR_AVERAGES.values.flatten(1)
+
   include Pd::JotForm
   include Pd::WorkshopSurveyConstants
 
@@ -170,20 +196,33 @@ module Pd::WorkshopSurveyResultsHelper
 
     questions = get_questions_for_forms(workshop)
 
-    summary['questions'] = questions
+    summary[:questions] = questions
 
-    summary[:this_workshop] = generate_workshops_survey_summary(workshop, questions)
+    summary[:this_workshop] = generate_workshops_survey_summary([workshop], questions)
+
+    related_workshops =
+      if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+        nil
+      elsif current_user.permission?(UserPermission::WORKSHOP_ORGANIZER) || current_user.permission?(UserPermission::PROGRAM_MANAGER)
+        Pd::Workshop.organized_by(current_user).where(course: workshop.course)
+      else
+        Pd::Workshop.facilitated_by(current_user).where(course: workshop.course)
+      end
+
+    summary[:all_my_workshops] = generate_workshops_survey_summary(related_workshops, questions)
 
     summary[:facilitators] = Hash[*workshop.facilitators.pluck(:id, :name).flatten]
+
+    generate_facilitator_averages(summary)
 
     summary
   end
 
-  def generate_workshops_survey_summary(workshop, questions)
-    surveys = get_surveys_for_workshops(workshop)
+  def generate_workshops_survey_summary(workshops, questions)
+    surveys = get_surveys_for_workshops(workshops)
 
     workshop_summary = {}
-    facilitator_map = Hash[*workshop.facilitators.pluck(:id, :name).flatten]
+    facilitator_map = Hash[*workshops.flat_map(&:facilitators).pluck(:id, :name).flatten]
 
     # if the current user is a facilitator and not a program manager, workshop
     # organizer, or workshop admin, only show them responses about themselves,
@@ -263,33 +302,37 @@ module Pd::WorkshopSurveyResultsHelper
     workshop_summary
   end
 
-  def get_surveys_for_workshops(workshop)
-    responses = workshop.summer? ? {
+  def get_surveys_for_workshops(workshops)
+    workshop_subjects = workshops.map(&:subject).uniq
+
+    responses = workshops.any?(&:summer?) ? {
       'Pre Workshop' => {
-        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, day: 0).map(&:form_data_hash)
+        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshops, day: 0).map(&:form_data_hash)
       }
     } : {}
 
-    workshop.sessions.each_with_index do |_, index|
+    max_sessions_for_workshop = workshops.map(&:sessions).map(&:size).max
+
+    max_sessions_for_workshop.times do |index|
       day = index + 1
       responses["Day #{day}"] = {
         general: Pd::WorkshopDailySurvey.with_answers.where(
-          pd_workshop: workshop,
-          form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, day)
+          pd_workshop: workshops,
+          form_id: Pd::WorkshopDailySurvey.get_form_id_for_subjects_and_day(workshop_subjects, day)
         ).map(&:form_data_hash),
         facilitator: Pd::WorkshopFacilitatorDailySurvey.with_answers.where(
-          pd_workshop: workshop,
-          form_id: Pd::WorkshopFacilitatorDailySurvey.form_id(workshop.subject),
+          pd_workshop: workshops,
+          form_id: Pd::WorkshopFacilitatorDailySurvey.form_ids_for_subjects(workshop_subjects),
           day: day
         ).map {|x| x.form_data_hash(show_hidden_questions: true)}
       }
     end
 
-    unless workshop.summer?
+    unless workshops.all?(&:summer?)
       responses["Post Workshop"] = {
         general: Pd::WorkshopDailySurvey.with_answers.where(
-          pd_workshop: workshop,
-          form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, POST_WORKSHOP_FORM_KEY)
+          pd_workshop: workshops,
+          form_id: Pd::WorkshopDailySurvey.get_form_id_for_subjects_and_day(workshops.reject(&:summer).map(&:subject), POST_WORKSHOP_FORM_KEY)
         ).map(&:form_data_hash)
       }
     end
@@ -334,6 +377,43 @@ module Pd::WorkshopSurveyResultsHelper
     end
 
     questions
+  end
+
+  def generate_facilitator_averages(summary)
+    facilitators = summary[:facilitators]
+
+    flattened_this_workshop_histograms = summary[:this_workshop].values.flat_map(&:values).select {|x| x.is_a? Hash}.reduce(&:merge)
+    flattened_all_my_workshop_histograms = summary[:all_my_workshops].values.flat_map(&:values).select {|x| x.is_a? Hash}.reduce(&:merge)
+
+    flattened_questions = summary[:questions].values.flat_map(&:values).reduce(:merge)
+    flattened_questions.transform_values do |question|
+      question[:option_map] = question[:options].each_with_index.map {|x, i| [x, i + 1]}.to_h
+    end
+
+    facilitator_averages = facilitators.map {|name| [name, {}]}.to_h
+
+    facilitators.each do |facilitator|
+      QUESTIONS_FOR_FACILITATOR_AVERAGES_LIST.each do |question_group|
+        histogram_for_this_workshop = (question_group[:all_ids] || [question_group[:primary_id]]).map {|x| flattened_this_workshop_histograms[x]}.compact.first
+        histogram_for_this_workshop = histogram_for_this_workshop.try(:[], facilitator) || histogram_for_this_workshop
+        histogram_for_all_my_workshops = (question_group[:all_ids] || [question_group[:primary_id]]).map {|x| flattened_all_my_workshop_histograms[x]}.compact.first
+        histogram_for_all_my_workshops = histogram_for_all_my_workshops.try(:[], facilitator) || histogram_for_all_my_workshops
+
+        question = flattened_questions[question_group[:primary_id]]
+
+        next if histogram_for_this_workshop.nil?
+
+        total_responses_for_this_workshop = histogram_for_this_workshop.values.reduce(:+) || 0
+        total_answer_for_this_workshop_sum = histogram_for_this_workshop.map {|k, v| question[:option_map][k] * v}.reduce(:+) || 0
+        facilitator_averages[facilitator][question_group[:primary_id]] = {this_workshop: total_answer_for_this_workshop_sum / total_responses_for_this_workshop.to_f}
+
+        total_responses_for_all_workshops = histogram_for_all_my_workshops.values.reduce(:+) || 0
+        total_answer_for_all_workshops_sum = histogram_for_all_my_workshops.map {|k, v| question[:option_map][k] * v}.reduce(:+) || 0
+        facilitator_averages[facilitator][question_group[:primary_id]][:all_my_workshops] = total_answer_for_all_workshops_sum / total_responses_for_all_workshops.to_f
+      end
+    end
+
+    summary[:facilitator_averages] = facilitator_averages
   end
 
   private

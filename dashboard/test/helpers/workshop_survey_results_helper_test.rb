@@ -606,12 +606,105 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       'Day 5' => daily_expected_results
     }
 
-    assert_equal(all_expected_results, generate_workshops_survey_summary(@workshop, @expected_questions))
+    assert_equal(all_expected_results, generate_workshops_survey_summary([@workshop], @expected_questions))
 
     stubs(:current_user).returns @workshop.facilitators.first
+
     first_facilitator_expected_results = all_expected_results.deep_dup
     first_facilitator_expected_results['Day 1'][:facilitator]['sampleFacilitatorText'].delete @workshop.facilitators.second.name
     first_facilitator_expected_results['Day 1'][:facilitator]['sampleFacilitatorScale'].delete @workshop.facilitators.second.name
-    assert_equal(first_facilitator_expected_results, generate_workshops_survey_summary(@workshop, @expected_questions))
+    assert_equal(first_facilitator_expected_results, generate_workshops_survey_summary([@workshop], @expected_questions))
+  end
+
+  test 'generate facilitator averages works off provided summary data' do
+    existing_summary = {
+      this_workshop: {
+        'Day 1' => {
+          general: {
+            'overallHow' => {
+              'A tremendous amount' => 5,
+              'Quite a bit' => 3,
+              'Some' => 1
+            }
+          },
+          facilitator: {
+            'howOften56' => {
+              'Facilitator 1' => {
+                'All the time' => 5,
+                'Often' => 1
+              },
+              'Facilitator 2' => {
+                'Sometimes' => 5,
+                'Almost never' => 2
+              }
+            }
+          }
+        }
+      },
+      all_my_workshops: {
+        'Day 1' => {
+          general: {
+            'overallHow' => {
+              'A tremendous amount' => 10,
+              'Quite a bit' => 9,
+              'Some' => 8,
+              'A little bit' => 7,
+              'Almost nothing' => 1
+            }
+          },
+          facilitator: {
+            'howOften56' => {
+              'Facilitator 1' => {
+                'All the time' => 5,
+                'Often' => 4,
+                'Sometimes' => 3
+              },
+              'Facilitator 2' => {
+                'Sometimes' => 10,
+                'Once in a while' => 9,
+                'Almost never' => 8
+              }
+            }
+          }
+        }
+      },
+      questions: {
+        'Day 1' => {
+          general: {
+            'overallHow' => {
+              text: 'Overall how do you like this course?',
+              answer_type: 'singleSelect',
+              options: [
+                'Almost nothing',
+                'A little bit',
+                'Some',
+                'Quite a bit',
+                'A tremendous amount'
+              ]
+            }
+          },
+          facilitator: {
+            'howOften56' => {
+              text: 'How often did your facilitator help you?',
+              options: [
+                'Almost never',
+                'Once in a while',
+                'Sometimes',
+                'Often',
+                'All the time'
+              ]
+            }
+          }
+        }
+      },
+      facilitators: ['Facilitator 1', 'Facilitator 2']
+    }
+
+    assert_equal(
+      {
+
+      },
+      generate_facilitator_averages(existing_summary)
+    )
   end
 end
