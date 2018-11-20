@@ -1,5 +1,5 @@
 module Pd
-  module Facilitator1819ApplicationConstants
+  module Facilitator1920ApplicationConstants
     include FacilitatorCommonApplicationConstants
 
     SECTION_HEADERS = BASE_SECTION_HEADERS.freeze
