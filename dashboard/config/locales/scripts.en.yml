@@ -10308,7 +10308,19 @@ en:
           stages:
             new stage:
               name: new stage
-          title: andrea
+            module1:
+              name: module1
+            module2:
+              name: module2
+            andrea-g1:
+              name: andrea-g1
+            andrea-g2:
+              name: andrea-g2
+            andrea-g3:
+              name: andrea-g3
+            andrea-s1:
+              name: andrea-s1
+          title: andrea-test
           description_audience: ''
           description_short: this is to test my skills in making a course
           description: ''
