@@ -86,25 +86,37 @@ hy:
         craft_callout_preplaced: Weve put some blocks here to get you started
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Weve put some blocks here to get you started
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Weve put some blocks here to get you started
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Այս կոդը պետք է սկսել կառուցել ձեր տունը. Կարող եք ավարտել այն.
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Այս կոդը պետք է սկսել կառուցել ձեր տունը. Կարող եք ավարտել այն.
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Այս կոդը պետք է սկսել կառուցել ձեր տունը. Կարող եք ավարտել այն.
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Մանրամասն «Run» է փորձեք ձեր ծրագիրը
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Մանրամասն «Run» է փորձեք ձեր ծրագիրը
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Մանրամասն «Run» է փորձեք ձեր ծրագիրը
       Overworld Place Wall_callout:
         craft_inside_repeat: Կրկնել գործողությունները դնելով արգելափակում այստեղ
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Կրկնել գործողությունները դնելով արգելափակում այստեղ
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Կրկնել գործողությունները դնելով արգելափակում այստեղ
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: 'Այս կոդը պետք է ստուգելու համար լավա, կարող եք ավելացնել հրաման է առաջ շարժվել:'
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: 'Այս կոդը պետք է ստուգելու համար լավա, կարող եք ավելացնել հրաման է առաջ շարժվել:'
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: 'Այս կոդը պետք է ստուգելու համար լավա, կարող եք ավելացնել հրաման է առաջ շարժվել:'
       Underground Iron_callout:
         craft_what_is_iron: Mine այս երկաթ.
       Underground Iron_2018_callout:
+        craft_what_is_iron: Mine այս երկաթ.
+      Underground Iron_2019_callout:
         craft_what_is_iron: Mine այս երկաթ.
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: 'Օգտագործեք "Ստեղծել մի շրջան» դաշինքի եւ փոխել չափը:'

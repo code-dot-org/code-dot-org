@@ -212,6 +212,7 @@ hy:
       NEW Course 4 Artist Vars 6: "Draw this pattern of pentagons with\n100 pixel sides by setting the right value for `length` and dropping the `length`\nvariable into all of the the correct places. \\r\n\\r\nSee how you only have\nto set the value for `length` once, and the code uses the right value everywhere?"
       Overworld Move to Sheep: "Add a second “move forward” command to\nreach the sheep."
       Overworld Move to Sheep_2018: "Add a second “move forward” command to\nreach the sheep."
+      Overworld Move to Sheep_2019: "Add a second “move forward” command to\nreach the sheep."
       Testing Quantum Farmer: "Wow, look at that! \\r\n\\r\nI don't know how\nmany shovelfuls of dirt this hole needs.  \\r\nCan you write a program that\nkeeps using the `fill` block until the ground is even?  "
       course4_artist_fwp_challenge1: 'Փորձեք վազում այս ծրագիրը, եւ փոփոխություններ կատարել տեսնել, թե ինչ է տեղի ունենում: Կարող եք պարզել, թե ինչպես է այն աշխատում: (Կամ ջնջել այն եւ փոխարինել այն բանի հետ, բոլորովին տարբեր)'
       courseD_bee_nestedLoops5: "Collect all of the nectar from each flower\nand make honey at the honeycomb. \\\\r\n\\\\r\nUse a nested loop. "
