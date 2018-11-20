@@ -3,6 +3,13 @@ import i18n from '@cdo/locale';
 
 import color from "../../util/color";
 
+/**
+ * Trigger a download from the given url with the given name.
+ *
+ * Necessary to create a hidden anchor element and trigger a click in order to
+ * apply downloadName, as the download attribute only works for same-origin
+ * URLs.
+ */
 function downloadRemoteUrl(url, downloadName) {
   fetch(url, {
     method: 'GET',
