@@ -36,5 +36,20 @@
 
 module Pd::Application
   class Facilitator1920Application < FacilitatorApplicationBase
+    #override
+    def year
+      YEAR_19_20
+    end
+
+    # Are we still accepting applications?
+    APPLICATION_CLOSE_DATE = Date.new(2019, 2, 1)
+    def self.open?
+      Time.zone.now < APPLICATION_CLOSE_DATE
+    end
+
+    # @override
+    def check_idempotency
+      Pd::Application::Facilitator1920Application.find_by(user: user)
+    end
   end
 end
