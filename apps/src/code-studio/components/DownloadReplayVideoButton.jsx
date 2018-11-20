@@ -52,7 +52,6 @@ export default class DownloadReplayVideoButton extends React.Component {
   state = {
     videoExists: false,
     downloadInitiated: false,
-    checkVideoUntilSuccessTimeout: null,
     checkVideoAttempts: 0,
   };
 
@@ -73,7 +72,7 @@ export default class DownloadReplayVideoButton extends React.Component {
   }
 
   componentWillUnmount() {
-    clearTimeout(this.state.checkVideoUntilSuccessTimeout);
+    clearTimeout(this.checkVideoUntilSuccessTimeout);
   }
 
   getVideoUrl = () =>
@@ -122,8 +121,8 @@ export default class DownloadReplayVideoButton extends React.Component {
       return;
     }
 
-    if (this.state.checkVideoUntilSuccessTimeout) {
-      clearTimeout(this.state.checkVideoUntilSuccessTimeout);
+    if (this.checkVideoUntilSuccessTimeout) {
+      clearTimeout(this.checkVideoUntilSuccessTimeout);
     }
 
     if (this.state.checkVideoAttempts >= MAX_ATTEMPTS) {
@@ -139,16 +138,15 @@ export default class DownloadReplayVideoButton extends React.Component {
     }
 
     this.checkVideo().then((response) => {
-      let timeout = null;
+      this.checkVideoUntilSuccessTimeout = null;
       let attempts = this.state.checkVideoAttempts;
 
       if (!response.ok) {
-        timeout = setTimeout(this.checkVideoUntilSuccess, delay);
+        this.checkVideoUntilSuccessTimeout = setTimeout(this.checkVideoUntilSuccess, delay);
         attempts += 1;
       }
 
       this.setState({
-        checkVideoUntilSuccessTimeout: timeout,
         checkVideoAttempts: attempts
       });
     });
