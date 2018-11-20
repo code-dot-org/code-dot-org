@@ -37,7 +37,7 @@
 require 'state_abbr'
 
 module Pd::Application
-  class Facilitator1819Application < WorkshopAutoenrolledApplication
+  class Facilitator1819Application < FacilitatorApplicationBase
     include Facilitator1819ApplicationConstants
 
     serialized_attrs %w(
