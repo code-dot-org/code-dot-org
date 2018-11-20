@@ -31,19 +31,19 @@ zh-TW:
             '"ROBOT"': 所有機器人
             '"SHARK"': 所有鯊魚
           MOVE:
+            '"next"': "（下一個）"
+            '"prev"': "（上一個）"
+            '"rand"': "（隨機）"
+            MOVES.Roll: 滾動
             MOVES.ClapHigh: 高舉擊掌
-            MOVES.Clown: 小丑
             MOVES.Dab: 輕拍
             MOVES.DoubleJam: 即興二重奏
             MOVES.Drop: 掉落
             MOVES.Floss: 跳牙線舞
             MOVES.Fresh: 新鮮
-            MOVES.Roll: 滾動
+            MOVES.Clown: 小丑
             MOVES.Kick: 踢
             MOVES.ThisOrThat: 這個或那個
-            '"next"': "（下一個）"
-            '"prev"': "（上一個）"
-            '"rand"': "（隨機）"
             MOVES.Rest: 無
           DIR:
             '1': "→"
@@ -52,19 +52,19 @@ zh-TW:
         text: "{SPRITE} 永遠進行 {MOVE} {DIR}"
         options:
           MOVE:
+            '"next"': "（下一個）"
+            '"prev"': "（上一個）"
+            '"rand"': "（隨機）"
+            MOVES.Roll: 滾動
             MOVES.ClapHigh: 高舉擊掌
-            MOVES.Clown: 小丑
             MOVES.Dab: 輕拍
             MOVES.DoubleJam: 即興二重奏
             MOVES.Drop: 掉落
             MOVES.Floss: 跳牙線舞
             MOVES.Fresh: 新鮮
-            MOVES.Roll: 滾動
+            MOVES.Clown: 小丑
             MOVES.Kick: 踢
             MOVES.ThisOrThat: 這個或那個
-            '"next"': "（下一個）"
-            '"prev"': "（上一個）"
-            '"rand"': "（隨機）"
             MOVES.Rest: 無
           DIR:
             '1': "→"
@@ -95,14 +95,15 @@ zh-TW:
             '"ROBOT"': 所有機器人
             '"SHARK"': 所有鯊魚
           MOVE:
+            '"rand"': "（隨機）"
+            MOVES.Roll: 滾動
             MOVES.ClapHigh: 高舉擊掌
-            MOVES.Clown: 小丑
             MOVES.Dab: 輕拍
             MOVES.DoubleJam: 即興二重奏
             MOVES.Drop: 掉落
             MOVES.Floss: 跳牙線舞
             MOVES.Fresh: 新鮮
-            MOVES.Roll: 滾動
+            MOVES.Clown: 小丑
             MOVES.Kick: 踢
             MOVES.ThisOrThat: 這個或那個
             MOVES.Rest: 無
@@ -113,14 +114,15 @@ zh-TW:
         text: "{SPRITE} 進行一次 {MOVE} {DIR}"
         options:
           MOVE:
+            '"rand"': "（隨機）"
+            MOVES.Roll: 滾動
             MOVES.ClapHigh: 高舉擊掌
-            MOVES.Clown: 小丑
             MOVES.Dab: 輕拍
             MOVES.DoubleJam: 即興二重奏
             MOVES.Drop: 掉落
             MOVES.Floss: 跳牙線舞
             MOVES.Fresh: 新鮮
-            MOVES.Roll: 滾動
+            MOVES.Clown: 小丑
             MOVES.Kick: 踢
             MOVES.ThisOrThat: 這個或那個
             MOVES.Rest: 無
@@ -317,7 +319,7 @@ zh-TW:
             '"disco"': 正方形
             '"rainbow"': 顏色
             '"diamonds"': 方塊
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": "（隨機）"
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "（隨機）"
       Dancelab_setDanceSpeed:
         text: 將 {SPRITE} 舞蹈速度變更為 {SPEED}
         options:
@@ -640,6 +642,22 @@ zh-TW:
             "{x: 300, y: 100}": 右上
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": 頂端
+            "{x: 200, y: 300}": 底部
+            "{x: 100, y: 200}": 到左方
+            "{x: 300, y: 200}": 到右方
+            "{x: 200, y: 200}": 中心
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': 全部
       Mikelab_getProp:
         options:
           PROPERTY:
