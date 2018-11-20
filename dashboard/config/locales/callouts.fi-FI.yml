@@ -173,19 +173,28 @@ fi:
         craft_callout_preplaced: Olemme koonneet sinulle muutamia palikoita
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Olemme koonneet sinulle muutamia palikoita
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Olemme koonneet sinulle muutamia palikoita
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Tämä koodi aloittaa talosi rakentamisen. Saatko
           sen viimeisteltyä?
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Tämä koodi aloittaa talosi rakentamisen. Saatko
           sen viimeisteltyä?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Tämä koodi aloittaa talosi rakentamisen. Saatko
+          sen viimeisteltyä?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Kokeile ohjelmaa painamalla "Run" ["Suorita"]
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Kokeile ohjelmaa painamalla "Run" ["Suorita"]
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Kokeile ohjelmaa painamalla "Run" ["Suorita"]
       Overworld Place Wall_callout:
         craft_inside_repeat: Toista toimintoja asettamalla palikoita tänne
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Toista toimintoja asettamalla palikoita tänne
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Toista toimintoja asettamalla palikoita tänne
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö
@@ -193,9 +202,14 @@ fi:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö
           etenemiskomennon?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö
+          etenemiskomennon?
       Underground Iron_callout:
         craft_what_is_iron: Louhi tämä rauta!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Louhi tämä rauta!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Louhi tämä rauta!
       aE3_callout:
         aE3_1: Vain kourallinen näitä saatavilla
