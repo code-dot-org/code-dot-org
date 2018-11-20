@@ -9,7 +9,7 @@ var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults} from '../constants';
-import {DanceParty} from '@code-dot-org/dance-party';
+import {DanceParty, ResourceLoader} from '@code-dot-org/dance-party';
 import danceMsg from './locale';
 import {reducers, setSelectedSong, setSongData, setRunIsStarting} from './redux';
 import trackEvent from '../util/trackEvent';
@@ -317,6 +317,7 @@ Dance.prototype.afterInject_ = function () {
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
     i18n: danceMsg,
+    resourceLoader: new ResourceLoader('https://curriculum.code.org/images/sprites/dance_20181120/'),
   });
 
   // Expose an interface for testing
