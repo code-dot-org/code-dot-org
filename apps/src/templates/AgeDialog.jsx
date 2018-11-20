@@ -55,12 +55,7 @@ const styles = {
 const AGE_DIALOG_SESSION_KEY = 'ad_anon_over13';
 
 export const signedOutOver13 = () => {
-  const val = sessionStorage.getItem(AGE_DIALOG_SESSION_KEY);
-  if (val) {
-    return val === 'true';
-  } else {
-    return false;
-  }
+  return sessionStorage.getItem(AGE_DIALOG_SESSION_KEY) === 'true';
 };
 
 class AgeDialog extends Component {
