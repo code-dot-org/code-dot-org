@@ -1886,7 +1886,55 @@ nl:
               name: Envelop variabelen
             For Loop Fun:
               name: For Lus fun
+            The Artist:
+              name: De Artiest
         dance-low:
           stages:
             Dance Party:
               name: Dansfeest
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Estafette Programmeren
+            Conditionals with Cards:
+              name: Statements met Kaarten
+            Digital Citizenship:
+              name: Digitaal Burgerschap
+            'Unplugged: Binary':
+              name: 'Unplugged: binair'
+            Artist Binary:
+              name: Kunstenaar Binary
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Een Basis Bouwen
+            Nested Loops:
+              name: Genestelde lussen
+            Conditionals with Cards:
+              name: Statements met Kaarten
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Estafette Programmeren
+            Conditionals with Cards:
+              name: Statements met Kaarten
+            Envelope Variables:
+              name: Envelop variabelen
+            For Loop Fun:
+              name: For Lus fun
+            Binary Bracelets:
+              name: Binaire armbanden
+            'Unplugged: Binary':
+              name: 'Unplugged: binair'
+            Artist Binary:
+              name: Kunstenaar Binary
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
