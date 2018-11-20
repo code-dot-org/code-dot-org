@@ -4464,3 +4464,93 @@ id:
             Present Your Project:
               name: Menyajikan Proyek Anda
               description_student: Waktu untuk menunjukkan pekerjaan anda! Di sini anda akan menyajikan proyek mengagumkan untuk teman-teman anda.
+            The Artist:
+              name: Artis
+        coursed-2019:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algoritma: Kertas Grafik Pemrograman'
+            Introduction to Online Puzzles:
+              name: Pengantar teka-Teki secara Online
+            Relay Programming:
+              name: Pemrograman bergiliran
+            Conditionals with Cards:
+              name: Bersyarat dengan kartu
+            Digital Citizenship:
+              name: Kewarganegaraaan Digital
+            'Unplugged: Binary':
+              name: 'Dicabut: Biner'
+            Artist Binary:
+              name: Artis Biner
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Membangun dasar
+            Nested Loops:
+              name: Perulangan bercabang
+            Conditionals with Cards:
+              name: Bersyarat dengan kartu
+            Conditionals:
+              name: Kondisi
+            Private and Personal Information:
+              description_student: Internet adalah menyenangkan dan menarik, tetapi sangat penting untuk tetap aman. Pelajaran ini mengajarkan anda perbedaan antara informasi yang aman untuk berbagi dan informasi yang bersifat pribadi.
+            Build a Star Wars Game:
+              description_student: Merasakan kekuatan seperti yang anda membangun anda sendiri Peran Bintang Permainan dalam pelajaran ini.
+            Determine the Concept:
+              description_student: "Kami tidak memberikan rahasia! \nPelajaran ini bisa menggunakan semua keterampilan yang telah anda pelajari sejauh ini."
+            Explore Project Ideas:
+              description_student: Berikut ini adalah beberapa game dan gambar. Bermain dengan masing-masing dari mereka untuk mendapatkan ide-ide untuk proyek-proyek anda sendiri!
+            The Design Process:
+              description_student: Proyek besar ini memakan waktu dan banyak perencanaan. Di sini, anda akan belajar tentang proses desain yang akan anda gunakan untuk membangun kreasi anda sendiri.
+            Build Your Project:
+              description_student: Mendapatkan tangan mereka siap untuk banyak pengkodean! Saatnya untuk mulai membangun proyek anda.
+            Present Your Project:
+              name: Menyajikan Proyek Anda
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Sumber kerumunan
+        express-2019:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algoritma: Kertas Grafik Pemrograman'
+            Relay Programming:
+              name: Pemrograman bergiliran
+            Conditionals with Cards:
+              name: Bersyarat dengan kartu
+            Screen Out the Mean:
+              name: Berarti keluar layar
+            The Power of Words:
+              name: Kekuatan kata-Kata
+            Envelope Variables:
+              name: Sampul Variabel
+            For Loop Fun:
+              name: Untuk Loop Fun
+            Revise Your Project:
+              name: Merevisi Proyek Anda
+            Present Your Project:
+              name: Menyajikan Proyek Anda
+            Binary Bracelets:
+              name: Gelang biner
+            'Unplugged: Binary':
+              name: 'Dicabut: Biner'
+            Artist Binary:
+              name: Artis Biner
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Sumber kerumunan
+        csd1-2019:
+          stages:
+            The Problem Solving Process:
+              name: Proses Pemecahan Masalah
+            Exploring Problem Solving:
+              name: Eksplorasi Pemecahan Masalah
+            What is a Computer?:
+              name: Apa itu komputer?
+            Input and Output:
+              description_student: Dalam hal ini siswa kelas mempertimbangkan sejumlah perangkat komputasi untuk menentukan apa jenis masukan dan keluaran yang mereka gunakan. Kelompok-kelompok yang ditugaskan untuk sebuah perangkat komputasi dan didasarkan pada guru-disediakan definisi masukan dan keluaran, daftar masukan dan keluaran dari perangkat mereka. Untuk menyimpulkan pelajaran kelas meneliti umum kegiatan-kegiatan yang mereka lakukan pada perangkat komputasi dan pilih masukan dan keluaran yang digunakan untuk kegiatan itu dari grafik.
+            Processing:
+              name: Sedang memproses
+            Apps and Storage:
+              description_student: 'Pelajaran ini mencakup masukan dan keluaran aspek komputer dalam sebuah konteks yang relevan dan akrab bagi siswa: apps. Kelas mengevaluasi berbagai aplikasi web untuk menganalisis masalah-masalah tertentu yang mereka dirancang untuk memecahkan, masukan-masukan yang mereka butuhkan untuk bekerja, dan keluaran yang mereka berikan kepada pengguna. Kelas diakhiri dengan pengamatan dari aplikasi ini serta guru memimpin diskusi tentang dampak aplikasi di masyarakat. '

@@ -106,6 +106,19 @@ vi:
         arrows_move_actor: Sử dụng các mũi tên để di chuyển các diễn viên
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Sử dụng các mũi tên để di chuyển các diễn viên
+      Dance_Party_01_callout:
+        dance_callout_01: Thêm khối này vào chương trình của bạn!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Thêm khối này vào chương trình của bạn!
+      Dance_Party_02_callout:
+        dance_callout_02: Thêm khối này vào chương trình của bạn!
+      Dance_Party_04_callout:
+        dance_callout_04: Thêm khối này vào chương trình của bạn!
+      Dance_Party_06_callout:
+        dance_callout_06: Thêm vũ công mới của bạn ở đây
+      Dance_Party_11_callout:
+        dance_callout_11_a: Khối mới!
+        dance_callout_11_b: Khối mới!
       Eval Design Recipe .1_callout:
         edit_function: Click vào đây để chỉnh sửa hàm của bạn.
       Frozen Project Test Toolbox_callout:
@@ -117,6 +130,8 @@ vi:
       Geometric Sun_callout:
         4-5_Artist_Patterns_Free_Play_1: Tất cả các khối yêu thích của bạn bây giờ được sắp xếp vào các mục.  Nhấp chuột vào những từ này để xem tất cả mọi thứ đã đi đâu!
       Geometric Sun_2018_callout:
+        4-5_Artist_Patterns_Free_Play_1: Tất cả các khối yêu thích của bạn bây giờ được sắp xếp vào các mục.  Nhấp chuột vào những từ này để xem tất cả mọi thứ đã đi đâu!
+      Geometric Sun_2019_callout:
         4-5_Artist_Patterns_Free_Play_1: Tất cả các khối yêu thích của bạn bây giờ được sắp xếp vào các mục.  Nhấp chuột vào những từ này để xem tất cả mọi thứ đã đi đâu!
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Phát âm thanh khi sự kiện này xảy ra.
@@ -184,17 +199,25 @@ vi:
         craft_callout_preplaced: Chúng tôi đã đặt một số khối gỗ ở đây để giúp bạn bắt đầu
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Chúng tôi đã đặt một số khối gỗ ở đây để giúp bạn bắt đầu
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Chúng tôi đã đặt một số khối gỗ ở đây để giúp bạn bắt đầu
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Mã này sẽ bắt đầu xây dựng ngôi nhà của bạn. Bạn có hoàn thành được không?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Mã này sẽ bắt đầu xây dựng ngôi nhà của bạn. Bạn có hoàn thành được không?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Mã này sẽ bắt đầu xây dựng ngôi nhà của bạn. Bạn có hoàn thành được không?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Nhấn "Run" để thử chương trình của bạn
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Nhấn "Run" để thử chương trình của bạn
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Nhấn "Run" để thử chương trình của bạn
       Overworld Place Wall_callout:
         craft_inside_repeat: Lặp lại các hành động bằng cách đặt các khối gỗ vào đây
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Lặp lại các hành động bằng cách đặt các khối gỗ vào đây
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Lặp lại các hành động bằng cách đặt các khối gỗ vào đây
       PS copy 2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: Hoa màu tím có thể có 1 hoặc 0 mật hoa... nhưng bạn sẽ không biết cho đến khi bạn chạy các mã lệnh!
@@ -214,9 +237,13 @@ vi:
         craft_callout_moveforward: Mã này sẽ kiểm tra xem có dung nham hay không, bạn có thể thêm một lệnh để di chuyển về phía trước không?
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Mã này sẽ kiểm tra xem có dung nham hay không, bạn có thể thêm một lệnh để di chuyển về phía trước không?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Mã này sẽ kiểm tra xem có dung nham hay không, bạn có thể thêm một lệnh để di chuyển về phía trước không?
       Underground Iron_callout:
         craft_what_is_iron: Hãy đào khối sắt này!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Hãy đào khối sắt này!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Hãy đào khối sắt này!
       courseF_playLab_func2_callout:
         New Play Lab Project_callout2: Nhấn "Run" để lưu và thử chương trình của bạn

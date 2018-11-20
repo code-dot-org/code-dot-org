@@ -1376,3 +1376,51 @@ ar:
               name: المتغيرات المغلف
             For Loop Fun:
               name: حلقة فور، مرح
+            The Artist:
+              name: الاعب
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: برمجة السباق
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            Digital Citizenship:
+              name: المواطنة الرقمية
+            'Unplugged: Binary':
+              name: 'موصول: ثنائي'
+            Artist Binary:
+              name: ثنائي الفنان
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: بناء قاعدة
+            Nested Loops:
+              name: الحلقات المتداخلة
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            Conditionals:
+              name: الجمل الشرطية
+            Internet:
+              name: الإنترنت
+            Crowdsourcing:
+              name: حشد المصادر
+        express-2019:
+          stages:
+            Relay Programming:
+              name: برمجة السباق
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            Envelope Variables:
+              name: المتغيرات المغلف
+            For Loop Fun:
+              name: حلقة فور، مرح
+            Binary Bracelets:
+              name: أساور الثنائية
+            'Unplugged: Binary':
+              name: 'موصول: ثنائي'
+            Artist Binary:
+              name: ثنائي الفنان
+            Internet:
+              name: الإنترنت
+            Crowdsourcing:
+              name: حشد المصادر

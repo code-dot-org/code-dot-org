@@ -253,3 +253,24 @@ hu:
       Conditionals_2019:
         title: Feltételek
         desc: 'Hogy a diákok megtanulják a feltételes nyilatkozatok mibenlétét kártyajátékot játszanak és szabályokat hoznak létre, mint például: "Ha húzok egy piros lapot, én kapok egy pontot", és "Ha fekete lapot húzok, te kapsz egy pontot."'
+      GraphPaperProgramming_2019:
+        title: Grafikus programozás
+        desc: A diákok egy algoritmust (utasítások sorozata) írnak osztálytársaiknak egy sor előre definiált parancs segítségével, hogy reprodukáljanak egy rajzot.
+      RelayProgramming_2018_2019:
+        title: Váltó programozás
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Offline tevékenység
+      BinaryImages_2019:
+        title: Bináris képek
+        desc: Sokan azt hiszik, a bináris rendszer szigorúan nullákkal és egyesekkel operál, ám korábbi tanfolyamainkon megtanultuk,  a bináris opciók sokféle információt tudnak képviselni.  Ez a lecke ezt a koncepciót viszi előrébb egy lépéssel azt mutatva, hogy egy számítógép hogy képes tárolni összetett információt (például a képeket és színeket) is binárisan.
+      GettingLoopy_2019:
+        title: Ciklikusság
+        desc: Ez a lecke bevezet a ciklusok (ismétlődő utasítások) programozásának rejtelmeibe a tánc segítségével. A diákok megtanulnak egy egyszerű koreográfiát, majd azt újra megismétlik.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Offline tevékenység
+      BigEvent_2019:
+        title: A nagy esemény
+        desc: A diákok megismerkednek az "események" fogalmával, melyek olyan programozási cselekvések, amiket a számítógép folyamatosan figyel.  A tanár gombokat rajzol egy papírra és a diákok attól függően kell, hogy reagáljanak, hogy a tanár melyik gombot "nyomja meg".
+      BinaryBracelets_2019:
+        title: Bináris karkötők
+        desc: Diákok karkötőket készítenek nevük első betűjének bináris ábrázolására.  A diákok így megtanulják az adatok több módon is megjeleníthetők és tárolhatók.

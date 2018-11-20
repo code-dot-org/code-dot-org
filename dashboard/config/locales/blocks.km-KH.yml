@@ -274,6 +274,15 @@ km:
           LOCATION:
             "{x: 100, y: 200}": ឆ្វេង
             "{x: 300, y: 200}": ស្តាំ
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ឆ្វេង
+            "{x: 300, y: 200}": ស្តាំ
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': ទាំងអស់
       Mikelab_getProp:
         options:
           PROPERTY:

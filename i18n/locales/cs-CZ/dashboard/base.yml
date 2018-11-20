@@ -325,7 +325,7 @@ cs:
       playlab: 'Play Lab'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
-      dance: 'Taneční párty'
+      dance: 'Taneční večírek'
     popup:
       progress_for_user: "pokrok je %{name}"
       progress: 'Tvůj pokrok'
@@ -540,7 +540,7 @@ cs:
       audience: 'Věk 13 +'
       cta: 'Jak na to'
     dance:
-      title: 'Taneční párty'
+      title: 'Taneční večírek'
     hoc:
       title: 'Klasické bludiště'
       body: 'Zkuste základy informatiky. Miliony lidí to už zkusili.'

@@ -31,19 +31,19 @@ ru:
             '"ROBOT"': все роботы
             '"SHARK"': все акулы
           MOVE:
+            '"next"': "(Вперед)"
+            '"prev"': "(Назад)"
+            '"rand"': "(Случайный)"
+            MOVES.Roll: Перекат
             MOVES.ClapHigh: Высокий хлопок
-            MOVES.Clown: Клоун
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Двойной джем
             MOVES.Drop: Дроп
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
-            MOVES.Roll: Перекат
+            MOVES.Clown: Клоун
             MOVES.Kick: Удар
             MOVES.ThisOrThat: То или это
-            '"next"': "(Вперед)"
-            '"prev"': "(Назад)"
-            '"rand"': "(Случайный)"
             MOVES.Rest: Нет
           DIR:
             '1': "→"
@@ -52,19 +52,19 @@ ru:
         text: "{SPRITE} делать {MOVE} {DIR} всегда"
         options:
           MOVE:
+            '"next"': "(Вперед)"
+            '"prev"': "(Назад)"
+            '"rand"': "(Случайный)"
+            MOVES.Roll: Перекат
             MOVES.ClapHigh: Высокий хлопок
-            MOVES.Clown: Клоун
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Двойной джем
             MOVES.Drop: Дроп
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
-            MOVES.Roll: Перекат
+            MOVES.Clown: Клоун
             MOVES.Kick: Удар
             MOVES.ThisOrThat: То или это
-            '"next"': "(Вперед)"
-            '"prev"': "(Назад)"
-            '"rand"': "(Случайный)"
             MOVES.Rest: Нет
           DIR:
             '1': "→"
@@ -95,14 +95,15 @@ ru:
             '"ROBOT"': все роботы
             '"SHARK"': все акулы
           MOVE:
+            '"rand"': "(Случайный)"
+            MOVES.Roll: Перекат
             MOVES.ClapHigh: Высокий хлопок
-            MOVES.Clown: Клоун
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Двойной джем
             MOVES.Drop: Дроп
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
-            MOVES.Roll: Перекат
+            MOVES.Clown: Клоун
             MOVES.Kick: Удар
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
@@ -113,14 +114,15 @@ ru:
         text: "{SPRITE} делать {MOVE} {DIR} один раз"
         options:
           MOVE:
+            '"rand"': "(Случайный)"
+            MOVES.Roll: Перекат
             MOVES.ClapHigh: Высокий хлопок
-            MOVES.Clown: Клоун
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Двойной джем
             MOVES.Drop: Дроп
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
-            MOVES.Roll: Перекат
+            MOVES.Clown: Клоун
             MOVES.Kick: Удар
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
@@ -317,7 +319,7 @@ ru:
             '"disco"': Квадраты
             '"rainbow"': Цвета
             '"diamonds"': Ромбы
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": "(Случайный)"
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Случайный)"
       Dancelab_setDanceSpeed:
         text: измените скорость танца {SPRITE} на {SPEED}
         options:
@@ -640,6 +642,22 @@ ru:
             "{x: 300, y: 100}": вверху справа
             "{x: 100, y: 300}": внизу слева
             "{x: 300, y: 300}": внизу справа
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": верх
+            "{x: 200, y: 300}": низ
+            "{x: 100, y: 200}": влево
+            "{x: 300, y: 200}": вправо
+            "{x: 200, y: 200}": центр
+            "{x: 100, y: 100}": вверху слева
+            "{x: 300, y: 100}": вверху справа
+            "{x: 100, y: 300}": внизу слева
+            "{x: 300, y: 300}": внизу справа
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': все
       Mikelab_getProp:
         options:
           PROPERTY:

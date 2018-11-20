@@ -31,20 +31,20 @@ ar:
             '"ROBOT"': كل الروبوتات
             '"SHARK"': كل القروش
           MOVE:
+            '"next"': "(التالي)"
+            '"prev"': "(السابق)"
+            '"rand"': "(عشوائي)"
+            MOVES.Roll: تدحرج
             MOVES.ClapHigh: تصفيق عالي
-            MOVES.Clown: مهرج
             MOVES.Dab: داب
             MOVES.DoubleJam: ضغطتان
             MOVES.Drop: اسقاط
             MOVES.Floss: خيط
             MOVES.Fresh: طازج
-            MOVES.Roll: تدحرج
+            MOVES.Clown: مهرج
             MOVES.Kick: ركلة
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
-            '"next"': "(التالي)"
-            '"prev"': "(السابق)"
-            '"rand"': "(عشوائي)"
           DIR:
             '1': "→"
             "-1": "←"
@@ -52,20 +52,20 @@ ar:
         text: "{SPRITE} نفذ هذا {MOVE}{DIR} الى الابد"
         options:
           MOVE:
+            '"next"': "(التالي)"
+            '"prev"': "(السابق)"
+            '"rand"': "(عشوائي)"
+            MOVES.Roll: تدحرج
             MOVES.ClapHigh: تصفيق عالي
-            MOVES.Clown: مهرج
             MOVES.Dab: داب
             MOVES.DoubleJam: ضغطتان
             MOVES.Drop: اسقاط
             MOVES.Floss: خيط
             MOVES.Fresh: طازج
-            MOVES.Roll: تدحرج
+            MOVES.Clown: مهرج
             MOVES.Kick: ركلة
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
-            '"next"': "(التالي)"
-            '"prev"': "(السابق)"
-            '"rand"': "(عشوائي)"
           DIR:
             '1': "→"
             "-1": "←"
@@ -94,14 +94,15 @@ ar:
             '"ROBOT"': كل الروبوتات
             '"SHARK"': كل القروش
           MOVE:
+            '"rand"': "(عشوائي)"
+            MOVES.Roll: تدحرج
             MOVES.ClapHigh: تصفيق عالي
-            MOVES.Clown: مهرج
             MOVES.Dab: داب
             MOVES.DoubleJam: ضغطتان
             MOVES.Drop: اسقاط
             MOVES.Floss: خيط
             MOVES.Fresh: طازج
-            MOVES.Roll: تدحرج
+            MOVES.Clown: مهرج
             MOVES.Kick: ركلة
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
@@ -112,14 +113,15 @@ ar:
         text: "{SPRITE} نفذ هذا {MOVE} {DIR} مرة واحدة"
         options:
           MOVE:
+            '"rand"': "(عشوائي)"
+            MOVES.Roll: تدحرج
             MOVES.ClapHigh: تصفيق عالي
-            MOVES.Clown: مهرج
             MOVES.Dab: داب
             MOVES.DoubleJam: ضغطتان
             MOVES.Drop: اسقاط
             MOVES.Floss: خيط
             MOVES.Fresh: طازج
-            MOVES.Roll: تدحرج
+            MOVES.Clown: مهرج
             MOVES.Kick: ركلة
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
@@ -251,7 +253,7 @@ ar:
       Dancelab_setBackgroundEffect:
         options:
           EFFECT:
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": "(عشوائي)"
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(عشوائي)"
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -394,6 +396,7 @@ ar:
             '"down"': الأسفل
             '"right"': اليمين
             '"space"': الفضاء
+            '"x"': x
       Dancelab_whenPeak:
         options:
           RANGE:
@@ -530,6 +533,17 @@ ar:
             "{x: 200, y: 300}": أسفل
             "{x: 100, y: 200}": اليسار
             "{x: 300, y: 200}": اليمين
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": أعلى
+            "{x: 200, y: 300}": أسفل
+            "{x: 100, y: 200}": اليسار
+            "{x: 300, y: 200}": اليمين
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': الكل
       Mikelab_eval:
         text: تقييم{CODE}
       Mikelab_getProp:

@@ -391,3 +391,34 @@ lv:
         desc: Lai iemācītos nosacījuma apgalvojumus, skolēniem jāspēlē kāršu spēle
           un jāizveido tās noteikumi, piemēram, "Ja es izvelku sarkanu kārti, es iegūstu
           punktu" un "Ja es izvelku melnu kārti, tu iegūsti punktu."
+      GraphPaperProgramming_2019:
+        title: Rūtiņpapīra programmēšana
+        desc: Skolēni raksta algoritmu (darbību secību), izmantojot noteiktas komandas,
+          lai vadītu savus klasesbiedrus, kuri zīmē zīmējumu.
+      RelayProgramming_2018_2019:
+        title: Releju programmēšana
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Atvienota aktivitāte
+      BinaryImages_2019:
+        title: Binārie Attēli
+        desc: Lai arī daudzi domā par bināro kodu tikai kā par vieniniekiem un nullītēm,
+          mūsu iepriekšējās nodarbības iemācīja skolēniem to, ka informācija var tikt
+          bināri atspoguļota dažādos veidos. Šajā nodarbība parādīts, kā dators arī
+          sarežģītāku informāciju (kā, piemēram, attēlus un krāsas) var saglabāt binārajā
+          kodā.
+      GettingLoopy_2019:
+        title: Kļūst ciklisks
+        desc: Šī nodarbība ievieš ciklu (atkārtošanās) ideju programmēšanā, lietojot
+          deju aktivitātes. Skolēni iemācīsies vienkāršu horeogrāfiju, pēc tam saņems
+          norādījumus to atkārtot.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Atvienota aktivitāte
+      BigEvent_2019:
+        title: Lielais notikums
+        desc: Skolēni tiek iepazīstināti ar programmēšanas jēdzienu "notikums" (event),
+          kas ir aktivitāte, kam dators visu laiku seko līdzi. Skolotājs spiež pogas
+          uz papīra pults un skolēni reaģē atkarībā no tā, kāda poga ir piespiesta.
+      BinaryBracelets_2019:
+        title: Binārās aproces
+        desc: Skolēni veido aproces kā sava vārdu pirmo burtu bināru attēlojumu. Skolēni
+          apgūst, ka dati ir attēlojami un uzglabājāmi vairāk kā vienā veidā.

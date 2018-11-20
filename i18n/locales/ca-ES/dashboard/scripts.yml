@@ -1188,3 +1188,47 @@ ca:
               name: Posant les bases
             Conditionals with Cards:
               name: Condicionals amb targetes
+            The Artist:
+              name: L'artista
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Programació en relleus
+            Conditionals with Cards:
+              name: Condicionals amb targetes
+            Digital Citizenship:
+              name: Ciutadania digital
+            'Unplugged: Binary':
+              name: 'Sense connexió: Binari'
+            Artist Binary:
+              name: Artista binari
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Posant les bases
+            Nested Loops:
+              name: Bucles imbricats
+            Conditionals with Cards:
+              name: Condicionals amb targetes
+            Conditionals:
+              name: Condicionals
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Col·laboració oberta
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Programació en relleus
+            Conditionals with Cards:
+              name: Condicionals amb targetes
+            Binary Bracelets:
+              name: Polseres binàries
+            'Unplugged: Binary':
+              name: 'Sense connexió: Binari'
+            Artist Binary:
+              name: Artista binari
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Col·laboració oberta

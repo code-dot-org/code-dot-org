@@ -299,7 +299,7 @@ de:
       playlab: 'Spielelabor'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
-      dance: 'Dance-Party'
+      dance: 'Tanzparty'
     popup:
       progress_for_user: "%{name}'s Fortschritt"
       progress: 'Dein Fortschritt'
@@ -528,7 +528,7 @@ de:
       audience: 'Ab 13 Jahren'
       cta: 'Lerne wie'
     dance:
-      title: 'Dance-Party'
+      title: 'Tanzparty'
     hoc:
       title: 'Klassisches Labyrinth'
       body: 'Lerne die Grundlagen der Informatik kennen. Millionen Menschen haben es schon ausprobiert.'
