@@ -1,5 +1,5 @@
 {
-  "danceFeedbackNeedNewDancer": "",
+  "danceFeedbackNeedNewDancer": "Musíš vytvoriř tanečníka.",
   "danceFeedbackNoDancers": "Nemáš žiadnych tanečníkov.",
   "danceFeedbackNoBackground": "Potrebuješ pridať efekt v pozadí.",
   "danceFeedbackTooManyDancers": "Dávaj pozor! Ak vložíš `vytvor nový` blok dovnútra `každé dve merania`, tak vytvoriš veľa tanečníkov.",
