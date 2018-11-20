@@ -1,3 +1,5 @@
 login_required true
 teacher_resources [["professionalLearning", "/link/to/professional/learning"], ["vocabulary", "/link/to/vocab"]]
 
+stage 'andrea-g1', flex_category: 'andrea-g2'
+named_level 'test multi text'
