@@ -129,6 +129,11 @@ function unpackSources(data) {
  */
 const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
 
+/**
+ * Used by setThumbnailUrl() to set the project thumbnail URL path.
+ */
+const THUMBNAIL_PATH = '.metadata/thumbnail.png';
+
 var projects = module.exports = {
   /**
    * @returns {string} id of the current project, or undefined if we don't have
@@ -789,11 +794,6 @@ var projects = module.exports = {
 
     if (preparingRemix) {
       return this.sourceHandler.prepareForRemix().then(completeAsyncSave);
-    } else if (thumbnailPngBlob) {
-      const blob = thumbnailPngBlob;
-      thumbnailPngBlob = null;
-      // Call completeAsyncSave even if thumbnail save fails.
-      return this.saveThumbnail(blob).then(completeAsyncSave, completeAsyncSave);
     } else {
       return completeAsyncSave();
     }
@@ -838,6 +838,12 @@ var projects = module.exports = {
     if (this.getStandaloneApp()) {
       current.level = this.appToProjectUrl();
       current.projectType = this.getStandaloneApp();
+    }
+
+    if (thumbnailPngBlob) {
+      const blob = thumbnailPngBlob;
+      thumbnailPngBlob = null;
+      this.saveThumbnail(blob);
     }
 
     unpackSources(sourceAndHtml);
@@ -1284,14 +1290,20 @@ var projects = module.exports = {
     return current && current.thumbnailUrl;
   },
 
+  setThumbnailUrl() {
+    current.thumbnailUrl = `/v3/files/${current.id}/${THUMBNAIL_PATH}`;
+    thumbnailChanged = true;
+  },
+
   /**
-   * Sets the thumbnailPngBlob variable. Caveat: This does not save the thumbnail to the current project.
+   * Sets the thumbnailPngBlob variable. Caveat: This does not save the thumbnail to the server.
    * Use the saveThumbnail method to do that.
    * @param {Blob} pngBlob A Blob in PNG format containing the thumbnail image.
    */
   setThumbnailPngBlob(pngBlob) {
     if (pngBlob) {
       thumbnailPngBlob = pngBlob;
+      projects.setThumbnailUrl();
     }
   },
 
@@ -1302,6 +1314,9 @@ var projects = module.exports = {
    * @returns {Promise} A promise indicating whether the upload was successful.
    */
   saveThumbnail(pngBlob) {
+    if (!pngBlob) {
+      return Promise.reject('PNG blob required.');
+    }
     if (!current) {
       return Promise.reject('Project not initialized.');
     }
@@ -1310,12 +1325,10 @@ var projects = module.exports = {
     }
 
     return new Promise((resolve, reject) => {
-      const thumbnailPath = '.metadata/thumbnail.png';
-      filesApi.putFile(thumbnailPath, pngBlob, () => {
-        current.thumbnailUrl = `/v3/files/${current.id}/${thumbnailPath}`;
+      filesApi.putFile(THUMBNAIL_PATH, pngBlob, () => {
+        projects.setThumbnailUrl();
         if (!initialCaptureComplete) {
           initialCaptureComplete = true;
-          thumbnailChanged = true;
         }
         resolve();
       }, error => {
