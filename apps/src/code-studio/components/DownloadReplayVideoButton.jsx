@@ -1,4 +1,7 @@
+/* global appOptions */
+
 import React, {PropTypes} from 'react';
+import { connect } from 'react-redux';
 import i18n from '@cdo/locale';
 
 import color from "../../util/color";
@@ -43,10 +46,17 @@ const styles = {
   }
 };
 
-export default class DownloadReplayVideoButton extends React.Component {
+/**
+ * A button to download a video generated from a replay log. This component
+ * will, if given the appropriate parameters, also take care of uploading the
+ * replay log and initiating the generation of said video.
+ */
+class DownloadReplayVideoButton extends React.Component {
   static propTypes = {
+    appType: PropTypes.string.isRequired,
     channelId: PropTypes.string.isRequired,
-    onError: PropTypes.func
+    onError: PropTypes.func,
+    replayLog: PropTypes.array,
   };
 
   state = {
@@ -68,12 +78,31 @@ export default class DownloadReplayVideoButton extends React.Component {
   }
 
   componentDidMount() {
+    this.tryCreateReplayVideo();
     this.checkVideoUntilSuccess();
   }
 
   componentWillUnmount() {
     clearTimeout(this.checkVideoUntilSuccessTimeout);
   }
+
+  hasReplayVideo = () =>
+    this.props.appType === 'dance' &&
+    appOptions.signedReplayLogUrl;
+
+  shouldCreateReplayVideo = () =>
+    this.hasReplayVideo() &&
+    this.props.replayLog &&
+    this.props.replayLog.length > 1;
+
+  tryCreateReplayVideo = () => {
+    if (this.shouldCreateReplayVideo()) {
+      fetch(appOptions.signedReplayLogUrl, {
+        method: "PUT",
+        body: JSON.stringify(this.props.replayLog)
+      });
+    }
+  };
 
   getVideoUrl = () =>
     `https://dance-api.code.org/videos/video-${this.props.channelId}.mp4`;
@@ -153,6 +182,10 @@ export default class DownloadReplayVideoButton extends React.Component {
   };
 
   render() {
+    if (!this.hasReplayVideo()) {
+      return null;
+    }
+
     let icon = "fa-download";
     if (this.state.downloadInitiated) {
       icon = "fa-spinner fa-pulse";
@@ -175,3 +208,11 @@ export default class DownloadReplayVideoButton extends React.Component {
     );
   }
 }
+
+export const UnconnectedDownloadReplayVideoButton = DownloadReplayVideoButton;
+
+export default connect(state => ({
+  appType: state.pageConstants.appType,
+  channelId: state.pageConstants.channelId,
+  replayLog: state.shareDialog.replayLog,
+}))(DownloadReplayVideoButton);
