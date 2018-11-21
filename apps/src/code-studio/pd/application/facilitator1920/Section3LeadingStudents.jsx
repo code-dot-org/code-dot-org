@@ -5,7 +5,7 @@ import {
   PageLabels,
   SectionHeaders,
   TextFields
-} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
+} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
 import {YES, NONE} from '../ApplicationConstants';
 
 export default class Section3LeadingStudents extends LabeledFormComponent {
