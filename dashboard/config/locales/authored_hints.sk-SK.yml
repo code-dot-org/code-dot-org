@@ -271,6 +271,10 @@ sk:
         mc_13_a: Použi príkaz "Polož koľajnice", ktorým uložíš koľajnice na misto,
           na ktorom stojíš.
         mc_13_b: Použi príkaz "Opakuj", aby si tvoj kód skrátil.
+      Overworld Powered Minecart_2019_authored_hint:
+        mc_13_a: Použi príkaz "Polož koľajnice", ktorým uložíš koľajnice na misto,
+          na ktorom stojíš.
+        mc_13_b: Použi príkaz "Opakuj", aby si tvoj kód skrátil.
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -470,7 +474,12 @@ sk:
         courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
       courseC_maze_programming6_2018_authored_hint:
         courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
       courseD_maze_ramp6_authored_hint:

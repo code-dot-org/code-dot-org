@@ -224,6 +224,11 @@ sr:
           LOCATION:
             "{x: 100, y: 200}": лево
             "{x: 300, y: 200}": десно
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": лево
+            "{x: 300, y: 200}": десно
       Mikelab_getProp:
         options:
           PROPERTY:

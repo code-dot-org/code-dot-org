@@ -66,6 +66,19 @@ el:
         arrows_move_actor: Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό
+      Dance_Party_01_callout:
+        dance_callout_01: Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!
+      Dance_Party_02_callout:
+        dance_callout_02: Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!
+      Dance_Party_04_callout:
+        dance_callout_04: Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!
+      Dance_Party_06_callout:
+        dance_callout_06: Προσθέστε το νέο σας χορευτή εδώ
+      Dance_Party_11_callout:
+        dance_callout_11_a: Νέο μπλοκ*!
+        dance_callout_11_b: Νέο μπλοκ*!
       Eval Design Recipe .1_callout:
         edit_function: Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου.
       Frozen Project Test Toolbox_callout:
@@ -162,10 +175,15 @@ el:
         craft_callout_preplaced: Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι
           σου. Μπορείς να τον ολοκληρώσεις;
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι
+          σου. Μπορείς να τον ολοκληρώσεις;
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι
           σου. Μπορείς να τον ολοκληρώσεις;
       Overworld Move to Sheep_callout:
@@ -174,9 +192,14 @@ el:
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Πάτησε "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά
           σου
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Πάτησε "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά
+          σου
       Overworld Place Wall_callout:
         craft_inside_repeat: Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να
@@ -184,9 +207,14 @@ el:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να
           προσθέσεις μία εντολή για να προχωρήσεις μπροστά;
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να
+          προσθέσεις μία εντολή για να προχωρήσεις μπροστά;
       Underground Iron_callout:
         craft_what_is_iron: Εξόρυξε αυτόν τον σίδηρο!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Εξόρυξε αυτόν τον σίδηρο!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Εξόρυξε αυτόν τον σίδηρο!
       course_playlab_variables3_callout:
         course_playlab_variables3_1: Έτσι μπορείτε να ορίσετε τιμή σε μία από τις

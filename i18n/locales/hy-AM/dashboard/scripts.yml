@@ -1430,3 +1430,51 @@ hy:
               name: Envelope Variables
             For Loop Fun:
               name: For Loop Fun
+            The Artist:
+              name: The Artist
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Relay programming
+            Conditionals with Cards:
+              name: Conditionals with Cards
+            Digital Citizenship:
+              name: Digital Citizenship
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+            Artist Binary:
+              name: Artist Binary
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Building a Foundation
+            Nested Loops:
+              name: nested Loops
+            Conditionals with Cards:
+              name: Conditionals with Cards
+            Conditionals:
+              name: conditionals
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Relay programming
+            Conditionals with Cards:
+              name: Conditionals with Cards
+            Envelope Variables:
+              name: Envelope Variables
+            For Loop Fun:
+              name: For Loop Fun
+            Binary Bracelets:
+              name: Binary Bracelets
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+            Artist Binary:
+              name: Artist Binary
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing

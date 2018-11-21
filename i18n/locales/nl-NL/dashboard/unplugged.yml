@@ -270,3 +270,26 @@ nl:
       Conditionals_2019:
         title: Voorwaardelijke instructies
         desc: Om voorwaardelijke instructies te leren gaan leerlingen een kaartspel spelen en regels maken als "als ik een rode kaar trek, krijg ik een punt" en "als ik een zwarte kaart krijg, krijg jij een punt".
+      GraphPaperProgramming_2019:
+        title: Programmeren op Ruitjespapier
+        desc: Leerlingen schrijven een algoritme (een reeks instructies) waarbij ze een set van vooraf gedefinieerde opdrachten gebruiken om hun klasgenoten aanwijzingen te geven hoe ze een tekening moeten namaken.
+      RelayProgramming_2018_2019:
+        title: Estafette Programmeren
+      courseD_unplugged_digitalCitizenship_2019:
+        title: UNPLUGGED ACTIVITEIT
+        desc: Vandaag leert je wat het betekent om een digitale burger te zijn.
+      BinaryImages_2019:
+        title: Binaire afbeeldingen
+        desc: Hoewel veel mensen binair zien als enkel nullen en enen, leerde onze vorige lessen de leerlingen dat informatie weergegeven kan worden in een verscheidenheid van binaire opties. In deze les gaan we nog een stapje verder door te tonen hoe een computer nog meer complexe informatie (zoals afbeeldingen en kleuren) binair kan opslaan.
+      GettingLoopy_2019:
+        title: Rondjes lopen
+        desc: Deze les behandelt het programmeerconcept van lussen (herhaalde instructies) door middel van een dansactiviteit. Leerlingen zullen een eenvoudige choreografie leren, waarna ze de instructie krijgen om het te herhalen.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: UNPLUGGED ACTIVITEIT
+        desc: Vandaag leert je wat je kunt doen als iemand online gemeen doet.
+      BigEvent_2019:
+        title: De grote gebeurtenis
+        desc: Leerlingen worden bekend gemaakt met het programmeerconcept van "events", wat acties zijn waar een computer constant naar kijkt. De leraar drukt op knoppen van een papieren afstandsbediening en leerlingen reageren hierop, afhankelijk van welke knop ingedrukt is.
+      BinaryBracelets_2019:
+        title: Binaire armbanden
+        desc: Leerlingen maken armbanden als een binaire weergave van de eerste letter van hun naam. Leerlingen leren dat gegevens op meer dan een manier weergegeven en opgeslagen kunnen worden.

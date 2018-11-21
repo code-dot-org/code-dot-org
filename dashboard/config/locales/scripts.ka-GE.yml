@@ -5165,3 +5165,210 @@ ka:
               name: წარმოადგინეთ თქვენი პროექტი
             new stage:
               name: ახალი დონე
+            The Artist:
+              name: მხატვარი
+        coursed-2019:
+          stages:
+            Introduction to Online Puzzles:
+              name: შესავალი ონლაინ თავსატეხებში
+            Relay Programming:
+              name: პროგრამირება ცვლაში
+            Debugging in Collector:
+              name: გამართვა შემგროვებელში
+            Events in Bounce:
+              name: მოვლენები მხტუნავში
+            Loops in Ice Age:
+              name: ციკლები გამყინვარების პერიოდში
+            Loops in Artist:
+              name: ციკლები მხატვარში
+            Nested Loops in Bee:
+              name: ჩადგმული ციკლები ფუტკარში
+            Nested Loops in Artist:
+              name: ჩადგმული ციკლები მხატვარში
+            While Loops in Farmer:
+              name: While ციკლები ფერმერში
+            Conditionals with Cards:
+              name: პირობები ბარათებით
+            Conditionals in Bee:
+              name: პირობითი ბრძანებები ფუტკარში
+            Conditionals & Loops in Harvester:
+              name: პირობითი წინადადებები და ციკლები ფერმერში
+            Digital Citizenship:
+              name: ციფრული მოქალაქეობა
+            Build a Play Lab Game:
+              name: შექმენით სათამაშო ლაბორატორიის თამაში
+            'Unplugged: Binary':
+              name: 'გაკვეთილი კომპიუტერის გარეშე: ორობითი სისტემა'
+            Artist Binary:
+              name: 'მხატვარი: ორობითი'
+            Build a Star Wars Game:
+              name: ააწყვეთ ვარსკვლავური ომების თამაში
+        coursee-2019:
+          description_audience: 'ასაკი: 8-12'
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
+            Building a Foundation:
+              name: ფუნდამენტის აშენება
+            Debugging with Scrat:
+              name: გამართვა სკრეტთან ერთად
+            Programming in Artist:
+              name: პროგრამირება მსახიობში
+            'Loops: My Loopy Robotic Friends':
+              name: 'ციკლები: ჩემი ციკლური რობოტისებრი მეგობრები'
+            Loops in Artist:
+              name: ციკლები მხატვარში
+            Nested Loops:
+              name: ჩასმული ციკლები
+            Conditionals with Cards:
+              name: პირობები ბარათებით
+            Conditionals:
+              name: პირობითი ბრძანებები
+            Private and Personal Information:
+              name: კონფიდენციალური და პირადი ინფორმაცია
+            Build a Star Wars Game:
+              name: ააწყვეთ ვარსკვლავური ომების თამაში
+              description_student: შეიგრძენით ძალა, როდესაც შექმნით თქვენს საკუთარ
+                ვარსკვლავური ომების თამაშს ამ გაკვეთილში.
+              description_teacher: ამ გაკვეთილში მოსწავლეები ივარჯიშებენ მოვლენების
+                გამოყენებაზე. მოვლენების საშუალებით ისინი შეძლებენ ისეთი თამაშის აწყობას,
+                რომელსაც შემდგომში გაუზიარებენ სხვებს ონლაინ. R2-D2 და სხვა ვარსკვლავური
+                ომების პერსონაჟებთან ერთად, მოსწავლეები შეისწავლიან მოვლენების მთავარ
+                პრინციპებს, ხოლო შემდეგ მათ მიეცემათ საშუალება, შექმნან საკუთარი თამაში.
+            'Functions: Songwriting':
+              name: 'ფუნქციები: სიმღერების დაწერა'
+              description_student: როკ ვარსკვლავებსაც კი სჭირდებათ პროგრამირების უნარები.
+                ეს დონე შეგასწავლით ყველაფერს ფუნქციების შესახებ სიმღერების ტექსტების
+                გამოყენებით.
+            Copyright and Creativity:
+              name: საავტორო უფლებები და შემოქმედებითობა
+            Functions in Artist:
+              name: ფუნქციები მხატვარში
+              description_teacher: მოსწავლეები გაეცნობიან ფუნქციების გამოყენებას Code.org-ზე.
+                ფუნქციების საშუალებით "მხატვრის" პროგრამაში შეიქმნება და შესწორდება
+                არაჩვეულებრივი ნახატები. უფრო რთული ნიმუშებისთვის, მოსწავლეები შეისწავლიან
+                ფუნქციების ჩადგმის პრინციპებს (ერთი ფუნქციიდან მეორის გამოძახებას).
+            Explore Project Ideas:
+              name: გამოიკვლიეთ პროექტების იდეები
+            The Design Process:
+              name: დიზაინის პროცესი
+              description_student: ასეთი დიდი პროექტები საჭიროებენ დიდ დროს და საკმაოდ
+                გრძელ დაგეგმარებას. აქ თქვენ შეისწავლით იმ დიზაინის პროცესის შესახებ,
+                რომელსაც გამოიყენებთ თქვენი ქმნილების ასაწყობად.
+            Build Your Project:
+              name: ააწყვეთ თქვენი პროექტი
+              description_student: მოემზადეთ ბევრი კოდის დასაწერად! დროა, დაიწყოთ
+                თქვენი პროექტის აწყობა.
+            Present Your Project:
+              name: წარმოადგინეთ თქვენი პროექტი
+            Internet:
+              name: ინტერნეტი
+            Crowdsourcing:
+              name: ქრაუდსორსინგი
+              description_student: ეს გაკვეთილი შეგასწავლით მოხალისეების სამუშაო პროცესში
+                ჩართვის შესახებ, ანუ გუნდთთან ერთად პროექტზე მუშაობის შესახებ.
+              description_teacher: კომპიუტერულ მეცნიერებაში ჩვენ ვხვდებით ძალიან დიდ,
+                გამომწვევ პრობლემებს. თითქმის შეუძლებელია, ერთმა ადამიანმა ხელსაწყოების
+                გარეშე იპოვოს ძალიან დიდი მარტივი რიცხვი ან გამოითვალოს დნმ-ის მიმდევრობები.
+                სხვა ადამიანების დახმარება რეალურს ხდის ამ დავალებების შესრულებას.
+                ეს გაკვეთილი აჩვენებს მოსწავლეებს, თუ როგორი გამოსადეგი შეიძლება იყოს
+                ჯგუფური მუშაობა ისეთ სფეროში, როგორიცაა კომპიუტერული მეცნიერება.
+            Nested Loops in Bee:
+              name: ჩადგმული ციკლები ფუტკარში
+            Nested Loops in Artist:
+              name: ჩადგმული ციკლები მხატვარში
+        express-2019:
+          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
+            საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
+            გაზიარებასაც შეძლებთ.
+          description_short: 'შესავალი კომპიუტერულ მეცნიერებაში: აერთიანებს დაწყებითი
+            სკოლის პროგრამის საუკეთესო ელემენტებს უფროსი მოსწავლეებისთვის.'
+          description_audience: 'ასაკი: 9-18'
+          stages:
+            Programming in Maze:
+              name: პროგრამირება ლაბირინთში
+            Relay Programming:
+              name: პროგრამირება ცვლაში
+            Debugging in Maze:
+              name: გამართვა ლაბირინთში
+            Programming in Collector:
+              name: პროგრამირება შემგროვებელში
+            Programming in Artist:
+              name: პროგრამირება მსახიობში
+            Loops with Rey and BB-8:
+              name: ციკლები რეისთან და BB-8-სთან ერთად
+            Loops in Artist:
+              name: ციკლები მხატვარში
+            Copyright and Creativity:
+              name: საავტორო უფლებები და შემოქმედებითობა
+            Nested Loops in Bee:
+              name: ჩადგმული ციკლები ფუტკარში
+            While Loops in Farmer:
+              name: While ციკლები ფერმერში
+            Conditionals with Cards:
+              name: პირობები ბარათებით
+            Conditionals in Bee:
+              name: პირობითი ბრძანებები ფუტკარში
+            Conditionals & Loops in Harvester:
+              name: პირობითი წინადადებები და ციკლები ფერმერში
+            'Functions: Songwriting':
+              name: 'ფუნქციები: სიმღერების დაწერა'
+            Functions in Artist:
+              name: ფუნქციები მხატვარში
+            'Events: The Big Event':
+              name: 'მოვლენები: დიდი მოვლენა'
+            Build a Flappy Game:
+              name: ააწყვეთ მოფარფატე ჩიტის თამაში
+            The Power of Words:
+              name: სიტყვების ძალა
+            Envelope Variables:
+              name: ცვლადები კონვერტებში
+            For Loop Fun:
+              name: ხალისი "მიზნისთვის" ციკლით
+            For Loops in Bee:
+              name: For ციკლები ფუტკარში
+            For Loops in Artist:
+              name: For ციკლები მხატვარში
+            Explore Project Ideas:
+              name: გამოიკვლიეთ პროექტების იდეები
+            The Design Process:
+              name: დიზაინის პროცესი
+            Build Your Project:
+              name: ააწყვეთ თქვენი პროექტი
+            Revise Your Project:
+              name: გადახედეთ თქვენს პროექტს
+            Present Your Project:
+              name: წარმოადგინეთ თქვენი პროექტი
+            Binary Bracelets:
+              name: ორობითი სამაჯურები
+            'Unplugged: Binary':
+              name: 'გაკვეთილი კომპიუტერის გარეშე: ორობითი სისტემა'
+            Artist Binary:
+              name: 'მხატვარი: ორობითი'
+            Internet:
+              name: ინტერნეტი
+            Crowdsourcing:
+              name: ქრაუდსორსინგი
+        csd1-2019:
+          description_short: "  შეისწავლეთ თუ როგორ მუშაობენ ადამიანები კომპიუტერთან
+            პრობლემების გადასაჭრელად."
+          stages:
+            Intro to Problem Solving:
+              name: შესავალი პრობლემების გადაწყვეტაში
+            The Problem Solving Process:
+              name: პროებლემების გადაჭრის პროცესი
+            Exploring Problem Solving:
+              description_student: 'ამ გაკვეთილში კლასი იყენებს პრობლემის გადაწყვეტის
+                პროცესს სამი პრობლემის გადასაწყვეტად: სიტყვის ძებნა, დაბადების დღის
+                წვეულებაზე სკამების დაგეგმარება და მოგზაურობის დაგეგმვა. ეს პრობლემები
+                მიმდევრულად რთულდება და ცუდადაა აღწერილი, რათა ხაზი გავუსვათ იმას,
+                თუ რამდენად გვეხმარება პრობლემების გადაწყვეტის პროცესიამ სახის პრობლემებთან
+                მუშაობისას.'
+            What is a Computer?:
+              name: რა არის კომპიუტერი?
+            Input and Output:
+              name: შეყვანილი და მიღებული ინფორმაცია
+            Processing:
+              name: დამუშავება
+            Project - Propose an App:
+              name: პროექტი - შემოგვთავაზეთ აპლიკაცია

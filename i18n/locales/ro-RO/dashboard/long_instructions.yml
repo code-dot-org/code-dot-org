@@ -179,6 +179,7 @@ ro:
       NEW Course 4 Artist Vars 6: "Deseneaza acest model prin mutarea variabilei lungime in locurile corecte si apoi setati valoarea corecta pentru lungime. (pont: este un multiplu de 10). \\r\\r Vezi cum setezi valoarea pentru lungime doar o data, iar codurile folosesc aceeasi valoare peste tot? \\r\\r\\r\n"
       Overworld Move to Sheep: Adauga din nou instructiunea "Mergi inainte" pentru a ajunge la oaie.
       Overworld Move to Sheep_2018: Adauga din nou instructiunea "Mergi inainte" pentru a ajunge la oaie.
+      Overworld Move to Sheep_2019: Adauga din nou instructiunea "Mergi inainte" pentru a ajunge la oaie.
       Testing Quantum Farmer: "Oau, am găsit o gaură foarte adâncă! Nu ştiu de câte lopeţi cu pământ am nevoie pentru a o umple. Poţi scrie un program care să umple gaura până la nivelul solului? Indicaţie: Încearcă să foloseşti bucla \"în timp ce\" de data asta."
       course4_artist_fwp_challenge1: Încearcă să rulezi acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
       courseD_bee_nestedLoops5: 'Colectează tot nectarul din fiecare floare și fă miere la fiecare fagure. Folosește o buclă imbricată. '

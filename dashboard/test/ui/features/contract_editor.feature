@@ -74,7 +74,7 @@ Scenario: Changing Parameter names
   And "add-block" refers to block "41"
   And "i" refers to block "34"
   And "j" refers to block "35"
-  And "do-something" refers to block "62"
+  And "do-something" refers to block "60"
   And "evaluate" refers to block "10"
 
   When I open my eyes to test "changing contract parameters"

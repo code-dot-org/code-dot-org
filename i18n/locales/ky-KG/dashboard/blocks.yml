@@ -274,6 +274,15 @@ ky:
           LOCATION:
             "{x: 100, y: 200}": солго
             "{x: 300, y: 200}": оңго
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": солго
+            "{x: 300, y: 200}": оңго
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': баары
       Mikelab_getProp:
         options:
           PROPERTY:

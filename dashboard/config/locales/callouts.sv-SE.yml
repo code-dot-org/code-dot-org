@@ -85,6 +85,19 @@ sv:
         arrows_move_actor: Använd piltangenterna för att flytta figuren
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Använd piltangenterna för att flytta figuren
+      Dance_Party_01_callout:
+        dance_callout_01: Lägg till detta block till ditt program!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Lägg till detta block till ditt program!
+      Dance_Party_02_callout:
+        dance_callout_02: Lägg till detta block till ditt program!
+      Dance_Party_04_callout:
+        dance_callout_04: Lägg till detta block till ditt program!
+      Dance_Party_06_callout:
+        dance_callout_06: Lägg till din nya dansare här
+      Dance_Party_11_callout:
+        dance_callout_11_a: Nytt Block!
+        dance_callout_11_b: Nytt Block!
       Eval Design Recipe .1_callout:
         edit_function: Klicka här om du vill redigera din funktion.
       Frozen Project Test Toolbox_callout:
@@ -173,19 +186,29 @@ sv:
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Vi har lagt ut några block för att hjälpa dig komma
           igång
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Vi har lagt ut några block för att hjälpa dig komma
+          igång
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Den här koden kommer bygga ditt hus. Kan du
           avsluta det?
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Den här koden kommer bygga ditt hus. Kan du
           avsluta det?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Den här koden kommer bygga ditt hus. Kan du
+          avsluta det?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Tryck på "Kör" för att prova programmet
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Tryck på "Kör" för att prova programmet
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Tryck på "Kör" för att prova programmet
       Overworld Place Wall_callout:
         craft_inside_repeat: Upprepa handlingar genom att placera block här
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Upprepa handlingar genom att placera block här
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Upprepa handlingar genom att placera block här
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Den här koden håller koll efter lava. Kan du lägga
@@ -193,9 +216,14 @@ sv:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Den här koden håller koll efter lava. Kan du lägga
           till ett kommando för att gå framåt?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Den här koden håller koll efter lava. Kan du lägga
+          till ett kommando för att gå framåt?
       Underground Iron_callout:
         craft_what_is_iron: Bryt järnet!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Bryt järnet!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Bryt järnet!
       WebLab PS test - 1-12_callout:
         version_history_button: Kolla in versionshistorik

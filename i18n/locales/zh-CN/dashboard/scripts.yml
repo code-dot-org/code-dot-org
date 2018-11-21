@@ -8363,6 +8363,8 @@ zh-CN:
           stages:
             Dance Party - Go Further:
               name: 舞会 - 继续
+          title: 继续跳舞
+          description: 通过扩展项目创意，超越第一个小时。
         coursef-2019:
           title: 课程 F （2019）
           description: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
@@ -8447,9 +8449,285 @@ zh-CN:
               description_teacher: 通过这五节课，学生们能够用剧本实验室或小艺术家作为编程环境来创建自己的设计项目。最后，学生们能向同伴们展示他们完成的工作，或者通过链接分享给亲友们。这堂课指导的这五个阶段可以项目过程开始的[这里](https://curriculum.code.org/csf/coursef/15/)找到。
             new stage:
               name: 新的阶段
+            The Artist:
+              name: 小艺术家
         dance-low:
           stages:
             Dance Party:
               name: 舞蹈派对
           title: 舞会 (低带宽)
           description_short: 写出你自己的舞会代码，分享给你的朋友们！（这是低带宽版本）
+        coursed-2019:
+          description: 学生们会发展自己对于嵌套循环，当循环，条件，和事件的理解。在编码前，学生们会学到数字公民的内容。
+          description_short: 学习条件语句，并创建自己的艺术，故事或游戏。
+          description_audience: '年龄：7-11'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: '算法: 图纸编程'
+            Introduction to Online Puzzles:
+              name: 在线拼图简介
+            Relay Programming:
+              name: 编程接力
+            Debugging in Collector:
+              name: 在收集器中调试
+            Events in Bounce:
+              name: 反弹事件
+            Loops in Ice Age:
+              name: 冰河时代里的循环
+            Loops in Artist:
+              name: 艺术家里的循环
+            Nested Loops in Bee:
+              name: 蜜蜂里的嵌套循环
+            Nested Loops in Artist:
+              name: 艺术家中的嵌套循环
+            Nested Loops in Frozen:
+              name: 冰雪奇缘里的嵌套循环
+            While Loops in Farmer:
+              name: 当在农民循环中
+            Until Loops in Maze:
+              name: 迷宫里的直到循环
+            Conditionals with Cards:
+              name: 用 扑克牌 的 条件子句
+            Conditionals in Bee:
+              name: 蜜蜂里的条件
+            Conditionals & Loops in Harvester:
+              name: 收割者里的条件和循环
+            Digital Citizenship:
+              name: 数字公民
+            Build a Play Lab Game:
+              name: 建立一个剧本实验室游戏
+            'Unplugged: Binary':
+              name: '离线：二进制'
+            Artist Binary:
+              name: 小艺术家：二进制
+            Build a Star Wars Game:
+              name: 建立一个星球大战游戏!
+        coursee-2019:
+          description: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
+          description_short: 回顾课程 C 和 D 中的概念，然后继续学习函数。
+          description_audience: '年龄：8-12'
+          stages:
+            'Programming: My Robotic Friends':
+              name: '编程: 我的机器人朋友'
+            Sequence in Maze:
+              name: 迷宫中的序列
+            Building a Foundation:
+              name: 打基础
+            Debugging with Scrat:
+              name: 斯奎特和调试
+            Programming in Artist:
+              name: 艺术家里的编程
+            'Loops: My Loopy Robotic Friends':
+              name: '循环: 我糊涂的机器人朋友'
+            Loops in Artist:
+              name: 艺术家里的循环
+            Nested Loops:
+              name: 循环嵌套
+            Nested Loops with Frozen:
+              name: 冰雪奇缘和嵌套循环
+            Conditionals with Cards:
+              name: 用 扑克牌 的 条件子句
+            Conditionals:
+              name: 条件语句
+              description_student: 在这一有趣并有挑战的系列中，你能够明白计算机在某些条件下会做什么。
+              description_teacher: 这堂课向学生们介绍了`当`循环和`如果/否则`语句。_当循环_ 是只要条件为真就不停的重复命令。当循环被程序员们用来在不知道命令需要被重复多少次，但是直到什么时候需要被重复的时候使用。`如果/否则`语句经常被灵活的用在整个代码中，它能够帮助在某个条件成立是运行一些代码，不成立时运行另一些代码。
+            Private and Personal Information:
+              name: 私人和个人信息
+              description_student: 互联网非常有趣也令人激动，但是保证安全也非常重要。这堂课教会你在能安全共享的信息和隐私信息间的不同。
+              description_teacher: |-
+                由常识教育开发，这堂课关于什么信息能够安全的在线共享，但什么不能共享。
+                
+                当学生们参观网站时，会要求他们的个人信息，他们会学会采取批判性的思维来保护他们和家庭远离信息窃贼。在这堂课中，学生们会学会批判性的思考一些网站请求或强制要求的个人信息。他们会学会隐私信息和个人信息间的不同，也会区别能不能安全的共享的不同。
+            Build a Star Wars Game:
+              name: 建立一个星球大战游戏!
+              description_student: 在这堂课程，创建自己的星球大战游戏来体会原力吧。
+              description_teacher: 在这堂课中，学生们会练习使用事件来创建一个能在线共享的游戏。学生们会被引导学习事件，用R2-D2和其它星球大战的角色，来创造他们自己的游戏。
+            'Functions: Songwriting':
+              name: '功能: 作曲'
+              description_student: 甚至摇滚巨星也需要编程技能。这堂课会通过歌词来教你函数。
+              description_teacher: 函数是计算机科学世界中最宏伟的结构之一。 函数 (有时称为过程) 是迷你程序，你能在更大的程序里反复使用函数。本课将帮助学生直观地理解为什么用函数来合并功能是非常有用的。
+            Functions in Minecraft:
+              name: '《我的世界》中的函数'
+            Functions in Harvester:
+              name: 收割者中的函数
+            Copyright and Creativity:
+              name: 版权和创造力
+            Functions in Artist:
+              name: 艺术家之间的功能
+              description_student: 用函数来让复杂的图画变得更简单！
+              description_teacher: 学生们会学习Code.org上的函数。小艺术家中的大部分图片都会通过函数来创造或更改。为了一些更复杂的模式，学生们会学习一个函数内部调用另一个函数的嵌套函数。
+            Determine the Concept:
+              name: 确定概念
+              description_student: "我们不会放弃任何秘密！\n这一课会用到你学到的所有技能。"
+              description_teacher: 这堂课将以前课程的概念带到了一起，给了学生一次批判性思考来解决问题的机会。但没有告诉他们哪些概念会被用到。学生们会回顾基本的算法，调试，`重复`循环，条件，`当`循环和函数。
+            Learning Sprites with Sprite Lab:
+              name: 在精灵实验室学习精灵
+            Alien Dance Party with Sprite Lab:
+              name: 精灵实验室中的外星人舞蹈派对
+            Pet Giraffe with Sprite Lab:
+              name: 精灵实验室中的宠物长颈鹿
+            Explore Project Ideas:
+              name: 探索项目理念
+              description_student: 这里有几个游戏和绘画。每个都玩一下来获得自己项目的灵感！
+              description_teacher: "接下来的4堂课会给学生们一个机会来将他们的代码技巧用到一个实际项目中。这个项目会帮助他们获得编码经验，并制造一个能够分享给伙伴和亲人的样例。在一堂多节课和多周的体验中，学生们会花时间来进行头脑风暴，学习调试的过程，建立和演示他们的最终作品。 \n\n在探索阶段，学生们能浏览小艺术家和剧本实验室中的样例项目来获得灵感。接下来，学生们会学习设计过程，如何在它们自己的项目中实现这些。然后会考虑在小艺术家或剧本实验室中创建他们自己的项目（这应该是这个项目最长的一个阶段）。最终，学生们会相互演示他们的最终作品。"
+            The Design Process:
+              name: 设计过程
+              description_student: 大项目会花很多时间来计划。在这里，你会学习关于设计的流程，然后用它来创建自己的作品。
+              description_teacher: 通过这四堂课，学生们能够用剧本实验室或小艺术家作为编程环境来创建自己的设计项目。学生们会学习设计过程，和如何在自己的项目中实现它。这堂课指导的这四个阶段可以在第一个阶段的项目过程[这里](https://curriculum.code.org/csf/coursee/12/)找到。
+            Build Your Project:
+              name: 创建项目
+              description_student: 准备好大量的编码吧！是时候开始自己的项目了。
+              description_teacher: 通过这四堂课，学生们能够用剧本实验室或小艺术家作为编程环境来创建自己的设计项目。现在学生们会有自己的空间来使用小艺术家或剧本实验室来创建他们自己的项目了。这可能是四堂课中最长的一个阶段。这四个阶段可以在第一个阶段的项目过程[这里](https://curriculum.code.org/csf/coursee/12/)找到。
+            Present Your Project:
+              name: 介绍您的项目
+              description_student: 准备好展示！是时候把你完成的项目向伙伴们展示了。
+              description_teacher: 通过这四堂课，学生们能够用剧本实验室或小艺术家作为编程环境来创建自己的设计项目。最终，学生们将能向伙伴们展示他们的最终作品，或者给他们的亲友共享一个链接。这四个阶段可以在第一个阶段的项目过程[这里](https://curriculum.code.org/csf/coursee/12/)找到。
+            Internet:
+              name: 互联网
+              description_student: 有没有好奇过信息是如何在互联网上传递的？没什么神奇的！这堂课会教你互联网的基本工作。
+              description_teacher: 虽然很多人天天都在使用互联网，但没有多少人知道它是如何工作的。在这堂课中，学生们会假装为互联网，会学会连接，URL，IP地址和域名解析服务。
+            Crowdsourcing:
+              name: 众包
+              description_student: 这堂课会教你众包的概念，这是通过团队来完成一个项目的过程。
+              description_teacher: 在计算机科学中，我们面对一些很大的，令人气馁的问题。这些挑战像是找到最大的质数，或给DNS测序，这些基本上不可能由人来完成。增加一些来自其它人的力量会让这些任务可以被管理。这堂课会给你的学生展示团队合作如何在计算机科学的工业中有帮助的。
+            Nested Loops in Bee:
+              name: 蜜蜂里的嵌套循环
+            Nested Loops in Artist:
+              name: 艺术家中的嵌套循环
+            Nested Loops in Frozen:
+              name: 冰雪奇缘里的嵌套循环
+        express-2019:
+          description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+          description_short: '计算机科学导论：组合了我们为高年级学生准备的最佳的小学课程。'
+          description_audience: '年龄：9-18'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: '算法: 图纸编程'
+            Programming in Maze:
+              name: 迷宫编程
+            Relay Programming:
+              name: 编程接力
+            Debugging in Maze:
+              name: 迷宫里的调试
+            Programming in Collector:
+              name: 在收集器中编程
+            Programming in Artist:
+              name: 艺术家里的编程
+            'Loops: Getting Loopy':
+              name: '循环: 变得糊涂'
+            Loops with Rey and BB-8:
+              name: 与雷伊和BB-8一起循环
+            Loops in Artist:
+              name: 艺术家里的循环
+            Copyright and Creativity:
+              name: 版权和创造力
+            Nested Loops in Bee:
+              name: 蜜蜂里的嵌套循环
+            Nested Loops in Frozen:
+              name: 冰雪奇缘里的嵌套循环
+            While Loops in Farmer:
+              name: 当在农民循环中
+            Until Loops in Maze:
+              name: 迷宫里的直到循环
+            Conditionals with Cards:
+              name: 用 扑克牌 的 条件子句
+            Conditionals in Bee:
+              name: 蜜蜂里的条件
+            Conditionals & Loops in Harvester:
+              name: 收割者里的条件和循环
+            'Functions: Songwriting':
+              name: '功能: 作曲'
+            Functions in Minecraft:
+              name: '《我的世界》中的函数'
+            Functions in Harvester:
+              name: 收割者中的函数
+            Functions in Artist:
+              name: 艺术家之间的功能
+            Screen Out the Mean:
+              name: 筛选出平均值
+            Determine the Concept:
+              name: 确定概念
+            'Events: The Big Event':
+              name: '事件: 大事件'
+            Build a Flappy Game:
+              name: 创作像素鸟游戏
+            The Power of Words:
+              name: 语言的力量
+            Envelope Variables:
+              name: 封装变量
+            Variables as Constant in Artist:
+              name: 艺术家里的变量作为常数
+            Variables that Change in Bee:
+              name: 蜜蜂里的变化的变量
+            Variables that Change in Artist:
+              name: 小艺术家里的变化的变量
+            For Loop Fun:
+              name: 计数循环的乐趣
+            For Loops in Bee:
+              name: 蜜蜂式里的循环
+            For Loops in Artist:
+              name: 对于艺术家里的循环
+            Learning Sprites with Sprite Lab:
+              name: 在精灵实验室学习精灵
+            Alien Dance Party with Sprite Lab:
+              name: 精灵实验室中的外星人舞蹈派对
+            Pet Giraffe with Sprite Lab:
+              name: 精灵实验室中的宠物长颈鹿
+            Explore Project Ideas:
+              name: 探索项目理念
+            The Design Process:
+              name: 设计过程
+            Build Your Project:
+              name: 创建项目
+            Revise Your Project:
+              name: 修改您的项目
+            Present Your Project:
+              name: 介绍您的项目
+            Binary Bracelets:
+              name: 二进制的手镯
+            'Unplugged: Binary':
+              name: '离线：二进制'
+            Artist Binary:
+              name: 小艺术家：二进制
+            Internet:
+              name: 互联网
+            Crowdsourcing:
+              name: 众包
+        csd1-2019:
+          description: " \\r\n单元1是计算机科学领域的高度交互和协作的介绍，在更广泛的范围寻找解决问题的方案。在其中将会练习使用解决问题的流程来解决一系列的难题、挑战和真实世界的场景。接下来，会学到计算机是如何进行输入、输出、存储处理信息，从而帮助人类解决问题。最后是设计一个应用程序的项目，来解决选择的问题。\\r\n"
+          description_short: "  了解人类如何使用计算机来解决问题。"
+          stages:
+            CS Discoveries Pre-survey:
+              name: 计算机科学发现预调查
+            Intro to Problem Solving:
+              name: 解决问题入门
+              description_student: '该班分组设计铝箔船，让它能承载尽量多的便士。 在课程结束时, 小组会反思他们在活动中的经验, 并与他们在余下的过程中所做的解决问题的类型建立联系。 '
+              description_teacher: 在这节课中, 学生们小组合作设计铝箔船，让它能承载尽量多的便士。小组在他们的船上有两轮的工作，目标是设法保留比第1轮更多的便士。活动的结构预示着问题解决过程中的不同步骤，在下一课中将向学生更详细地介绍。在课程结束时, 学生们会反思他们在活动中的经验, 并与他们将在课程剩下的时间里解决问题的类型联系起来。 
+            The Problem Solving Process:
+              name: 解决问题的过程
+              description_student: 本课介绍了该班在接下来的一年中将使用的正式的问题解决流程：定义-准备-尝试-反思。该班将这些步骤与前一课中的铝箔船问题联系起来，然后是他们擅长解决的问题，然后是他们想要改进的问题。在课程结束时, 该班收集了每一步中广泛有用的策略列表，书写海报并张贴起来，接下来的一年都可以随时看到。
+              description_teacher: 本课程介绍了学生在一年中将使用的正式的问题解决流程 定义-准备-尝试-反思。这一课的开始是要求学生集思广益集体讨论他们在日常生活中遇到的各种不同类型的问题。然后, 学生将显示问题解决过程的四步骤, 并协同工作, 将这些抽象步骤与他们解决问题的实际经验联系起来。第一个学生将这些步骤与前一课中的铝箔船问题联系起来, 然后是他们擅长解决的问题, 然后是他们想要改进解决的问题。在课程结束时, 该班收集了每一步中广泛有用的策略列表，书写海报并张贴起来，接下来的一年都可以随时看到。
+            Exploring Problem Solving:
+              name: 探索解决问题
+              description_student: '在本课中, 班级将解决问题的过程应用于三个不同的问题上: 单词搜索、生日聚会的座位安排和旅行计划。这些问题会越来越复杂, 并且定义不清, 以强调解决问题的过程在解决这些类型的问题时特别有用。'
+              description_teacher: "在本课中, 学生将解决问题的过程应用到三个不同的问题，以便更好地理解每个步骤的价值。他们将解决单词搜索，生日聚会的座位安排, 和计划旅行的问题。这些问题会越来越复杂, 并且定义不清，以强调解决问题流程在解决问题时特别有用。这一课结束时，学生们将反思他们在解决问题流程中的经验。他们将为每一个步骤做出解释, 并将集思广益地提出问题或战略, 可以帮助他们更好地定义开放式的问题, 因为这往往是最关键的一步。 \\r\n\\r\n此课程可能需要两个课时或更长时间才能完成。前两个问题可能适用于一个单一课时, 但第三个问题将需要移到第二天。"
+            What is a Computer?:
+              name: 什么是电脑？
+              description_student: 在本课中，该班对计算机进行了初步定义。经过集思广益之后对计算机的可能定义，班级分组工作在海报上将图片分类为 “是计算机” 或 “不是计算机” ，并解释他们选择一些最难归类的动机。然后老师介绍计算机的定义，允许小组根据新的定义修改他们的海报。
+              description_teacher: "在本课中，学生将对计算机进行了初步定义。开始上课时，全班将集思广益对计算机做可能的定义，并把这个集思广益讨论的结果放在海报上。下一步，学生们将分组在海报上把图片分类为“是计算机” 或 “不是计算机” 。小组将他们的海报贴在课室里并简要解释他们选择一些最难归类的动机。然后老师介绍了计算机的定义，并允许学生根据新的定义修改他们的海报。\\r\n"
+            Input and Output:
+              name: 输入和输出
+              description_student: 在课堂上，学生考虑了一些计算设备来确定他们使用的输入和输出的类型。小组分配到一个计算设备, 并根据教师提供的输入和输出定义, 列出其设备的输入和输出。总结课程, 课堂检查在计算设备上所做的常见活动, 并从图表中选择用于该活动的输入和输出。
+              description_teacher: 在本课中, 学生将考虑一些计算设备来确定他们使用的输入和输出类型。小组分配到一个计算设备, 并根据教师提供的输入和输出定义, 列出其设备的输入和输出。在活动的早期, 学生被提示关注更明显的物理输入和输出 (例如, 键盘作为输入或屏幕作为输出), 但后来的讨论引导学生考虑不太明显的例子 (例如, 触摸屏既是输入, 又是输出, 或互联网可以作为输入和输出的事实）。在整个课程中, 教师将在教室前面的 T- Chart 图表上标识的输入和输出。总结课程, 学生检查在计算设备上所做的常见活动, 并从图表中选择用于该活动的输入和输出。
+            Processing:
+              name: 正在处理中
+              description_student: 这一课深入探讨了作为计算机定义的一部分引入的处理的含义。 结对一起工作, 把一副牌按顺序排列, 一个处理信息的表单。 最后, 课堂讨论了在解决信息问题的上下文中的处理方法。
+              description_teacher: 学生完成两个离线的排列卡片的活动, 探讨处理的意义及其与解决问题的关系。第一个活动的约束很少, 用于引入一个高级的处理定义。接下来的会引入更多的约束, 迫使学生开发一种算法, 能够一直成功地处理卡片。学生迭代开发、测试，并与同学分享他们的算法。总结性的讨论让学生反思他们在这些活动中所使用的不同类型的问题解决方法, 以及产生解决问题的算法的价值。
+            Apps and Storage:
+              name: 应用程序和存储
+              description_student: '本课程涵盖了计算机在上下文中的输入和输出方面。这对学生来说是相关而又熟悉的：应用程序。课堂评估各种网络应用程序, 以分析它们设计要解决的特定问题、它们需要工作的输入以及它们为用户提供的输出。 课程总结了对这些应用程序的观察，以及老师主导的关于应用程序对社会影响的讨论。 '
+              description_teacher: '本课程基于学生们熟悉的应用，回顾了计算机的输入、输出、存储和处理的概念。同时，学生评估了智能手机应用来分析被设计用来解决的特定的问题，需要的输入，然后将输入处理成需要的输出，并将信息存储起来稍后使用。最后结束于讨论，来将课程联系到学生们熟悉的应用上。 '
+            Project - Propose an App:
+              name: 项目- 提议一个应用程序
+              description_student: 为了完成对计算机的问题解决过程和输入/输出/存储/处理模型的研究, 该课程提出了用于解决现实世界问题的应用程序。该项目需要多天来完成, 并在海报演示文稿突出显示每个应用程序的功能。该项目设计为结对完成，虽然也可以单独完成。
+              description_teacher: 为了完成对计算机的问题解决过程和输入/输出/存储/处理模型的研究, 学生将提出一个用于解决现实世界问题的应用程序。该项目将需要好几天来完成, 并会让学生创建一个海报突出显示他们的应用程序的功能，并将呈现同学。项目指南为学生提供循序渐进的指导，并帮助他们组织想法。该项目设计为结对完成, 虽然也可以单独完成。

@@ -705,6 +705,8 @@ sk:
         MC_2018_loops: 'Minecraft: Voyage Aquatic - Opakovania'
         mc_2018_conditionals: 'Minecraft: Voyage Aquatic - Podmienky'
         mc_2018_closing: 'Minecraft: Voyage Aquatic - Gratulujeme'
+        hoc_dance_warmup: Tanečná párty - Zahrej sa
+        hoc_dance_congrats: Tanečná párty - Párty pokračuje!
     callout:
       text:
         drag_blocks: Presuňte blok "Posunúť" a pripojte ho pod druhý blok
@@ -777,8 +779,8 @@ sk:
         place_variable: Presuňte do tohto bloku Vašu premennú
         bee_for_loop: Presuňte sem najväčší počet nektárov, ktorý má včela pozbierať
         place_counter_variable: Presuňte do tohto bloku Vašu premennú počítadla
-        function_editor_draw_square: Toto je definícia Vašej funkcie. Tieto bloky
-          sa spustia vždy pri použití bloku "Nakresli štvorec"
+        function_editor_draw_square: Toto je definícia tvojej funkcie. Tieto bloky
+          sa spustia vždy keď použiješ blok "Nakresli štvorec"
         change_here: Tu urob zmenu
         write_draw_square_function: Presuňte sem bloky z panelu nástrojov pre nakreslenie
           štvorca
@@ -801,8 +803,8 @@ sk:
         right_arrow_fireball: Na streľbu ohnivých gulí použi pravú šípku
         name_function: Tu napíš meno svojej funkcie
         Infinity_move_right_runbutton: Tu pridaj blok posunúť
-        Infinity_move_directions_callout: Ktorý blok presunie Baymaxa postlačení šípky
-          hore smerom nahor?
+        Infinity_move_directions_callout: Ktorý blok presunie Baymaxa po stlačení
+          šípky hore smerom nahor?
         Infinity_move_directions_callout_arrow: Tieto šípky použi na riadenie
         Infinity_move_collide_callout: Keď nastane táto udalosť prehraj zvuk.
         Infinity_repeat_callout: Sem umiestni bloky Posunúť

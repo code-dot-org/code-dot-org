@@ -1247,3 +1247,45 @@ mi:
               name: Ngā Taurangi Kōpaki
             For Loop Fun:
               name: Kia Ngahau te Mahi Koromeke
+            The Artist:
+              name: Te Rehetoi
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Papatonotanga ā-Tānga
+            Digital Citizenship:
+              name: Te Kirirarautanga Matihiko
+            'Unplugged: Binary':
+              name: 'Momotu: Tāhūrua'
+            Artist Binary:
+              name: Rehetoi Tāhūrua
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Te Hanga Tūāpapa
+            Nested Loops:
+              name: Ngā Koromeke Tauroto
+            Conditionals:
+              name: Ngā Here
+            Internet:
+              name: Te Ipurangi
+            Crowdsourcing:
+              name: Te Mahi ā-Ohu
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Papatonotanga ā-Tānga
+            Envelope Variables:
+              name: Ngā Taurangi Kōpaki
+            For Loop Fun:
+              name: Kia Ngahau te Mahi Koromeke
+            Binary Bracelets:
+              name: Kōmore Ā-Rua
+            'Unplugged: Binary':
+              name: 'Momotu: Tāhūrua'
+            Artist Binary:
+              name: Rehetoi Tāhūrua
+            Internet:
+              name: Te Ipurangi
+            Crowdsourcing:
+              name: Te Mahi ā-Ohu

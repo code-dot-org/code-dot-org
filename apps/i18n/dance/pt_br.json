@@ -1,7 +1,7 @@
 {
   "danceFeedbackNeedNewDancer": "Você precisa criar um(a) dançarino(a).",
   "danceFeedbackNoDancers": "Você não tem dançarinos.",
-  "danceFeedbackNoBackground": "Você precisa adicionar um efeito de plano de fundo.",
+  "danceFeedbackNoBackground": "Você precisa adicionar um efeito de fundo.",
   "danceFeedbackTooManyDancers": "Tenha cuidado! Se você inserir o bloco 'criar novo' em 'cada dois compassos', você vai criar muitos dançarinos.",
   "danceFeedbackUseSetSize": "Use o bloco `set backup_dancer2 size` para diminuir o tamanho daquele(a) dançarino(a).",
   "danceFeedbackUseSetTint": "Use o bloco de 'definir tonalidade' para alterar a tonalidade de um(a) dançarino(a).",
@@ -10,5 +10,5 @@
   "danceFeedbackNeedDifferentDance": "Você precisa usar uma dança diferente.",
   "danceFeedbackNeedEveryTwoMeasures": "Certifique-se de que você está utilizando o bloco 'a cada dois compassos'",
   "danceFeedbackNeedMakeANewDancer": "Use o bloco de 'criar novo' para criar um(a) segundo(a) dançarino(a).",
-  "measure": ""
+  "measure": "Compasso:"
 }

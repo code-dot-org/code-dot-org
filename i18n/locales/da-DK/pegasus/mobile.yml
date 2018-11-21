@@ -373,6 +373,7 @@
   volunteer_engineer_submission_field_email_desc: "Din e-mail adresse vil aldrig blive delt, men vi sender dig anmodninger fra lærere."
   volunteer_engineer_submission_field_email_placeholder: "Email adresse"
   volunteer_engineer_submission_field_email_preference: "Kan vi e-maile dig om opdateringer til vores kurser, lokale muligheder eller andre nyheder om computervidenskab?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Se vores fortrolighedspolitik)"
   volunteer_engineer_submission_field_email_preference_yes: 'Ja'
   volunteer_engineer_submission_field_email_preference_no: 'Nej'
   volunteer_engineer_submission_final_paragraph: "Du vil være på et kort så lokale lærere kan kontakte dig for kodetimer eller andet frivillige opgaver. Din e-mail og nøjagtige adresse vil aldrig blive delt af os. Men andre oplysninger (herunder omtrentlige placering) vil være offentligt tilgængelig til lokale lærere."
@@ -1117,6 +1118,7 @@
   hoc2018_mc_designer_title: "Minecraft Designer"
   hoc2018_mc_start: "Start"
   hoc2018_mc_no_internet: "Har du ikke internet?"
+  hoc2018_mc_educators_box2_button: "Hent"
   hoc2018_mc_watch_videos: "Før du går i gang, se så én af disse inspirerende videoer"
   hoc2018_mc_video_1min: "1 min"
   hoc2018_mc_video_2min: "2 min"

@@ -78,6 +78,19 @@ hu:
         arrows_move_actor: A nyilak segítségével mozgasd a szereplőt!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: A nyilak segítségével mozgasd a szereplőt!
+      Dance_Party_01_callout:
+        dance_callout_01: Add hozzá ezt a blokkot a programodhoz!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Add hozzá ezt a blokkot a programodhoz!
+      Dance_Party_02_callout:
+        dance_callout_02: Add hozzá ezt a blokkot a programodhoz!
+      Dance_Party_04_callout:
+        dance_callout_04: Add hozzá ezt a blokkot a programodhoz!
+      Dance_Party_06_callout:
+        dance_callout_06: Itt add hozzá az új táncosodat
+      Dance_Party_11_callout:
+        dance_callout_11_a: Új blokk!
+        dance_callout_11_b: Új blokk!
       Eval Design Recipe .1_callout:
         edit_function: Kattints ide a függvényed szerkesztéséhez!
       Frozen Project Test Toolbox_callout:
@@ -97,6 +110,9 @@ hu:
         4-5_Artist_Patterns_Free_Play_1: Minden kedvenc blokkod kategorizálva van.
           Kattints ezekre a szavakra, hogy lásd mi történt!
       Geometric Sun_2018_callout:
+        4-5_Artist_Patterns_Free_Play_1: Minden kedvenc blokkod kategorizálva van.
+          Kattints ezekre a szavakra, hogy lásd mi történt!
+      Geometric Sun_2019_callout:
         4-5_Artist_Patterns_Free_Play_1: Minden kedvenc blokkod kategorizálva van.
           Kattints ezekre a szavakra, hogy lásd mi történt!
       Infinity_move_collide_callout:
@@ -169,10 +185,15 @@ hu:
         craft_callout_preplaced: Idetettünk néhány blokkot kezdetnek
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Idetettünk néhány blokkot kezdetnek
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Idetettünk néhány blokkot kezdetnek
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Ez a kód megkezdi a házad építését. Be tudod
           fejezni?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Ez a kód megkezdi a házad építését. Be tudod
+          fejezni?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Ez a kód megkezdi a házad építését. Be tudod
           fejezni?
       Overworld Move to Sheep_callout:
@@ -181,9 +202,14 @@ hu:
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Nyomd meg a „Futtatás” gombot, hogy kipróbáld a
           programodat
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Nyomd meg a „Futtatás” gombot, hogy kipróbáld a
+          programodat
       Overworld Place Wall_callout:
         craft_inside_repeat: Ismételd a blokkokat úgy, hogy ide helyezed őket
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Ismételd a blokkokat úgy, hogy ide helyezed őket
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Ismételd a blokkokat úgy, hogy ide helyezed őket
       PS copy 2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: A lila virágoknak 1 vagy 0 nektárja lehet...de csak akkor tudod
@@ -209,9 +235,14 @@ hu:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Ez a kód leellenőrzi a lávát, hozzá tudsz adni
           egy utasítást, hogy előrelépjen?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Ez a kód leellenőrzi a lávát, hozzá tudsz adni
+          egy utasítást, hogy előrelépjen?
       Underground Iron_callout:
         craft_what_is_iron: Bányászd ki a vasat!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Bányászd ki a vasat!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Bányászd ki a vasat!
       aE1_callout:
         aE1_1: Csak kettő lesz belőle, és két kör
@@ -233,6 +264,9 @@ hu:
         4_5_Bee_Conditionals_2_1: Emlékezz, ellenőrizni kell hogy van-e virág minden
           felhőben. A lépeket nem kell ellenőrizned.
       courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Emlékezz, ellenőrizni kell hogy van-e virág minden
+          felhőben. A lépeket nem kell ellenőrizned.
+      courseD_bee_conditionals2_2019_callout:
         4_5_Bee_Conditionals_2_1: Emlékezz, ellenőrizni kell hogy van-e virág minden
           felhőben. A lépeket nem kell ellenőrizned.
       courseD_bee_conditionals2_test_callout:
