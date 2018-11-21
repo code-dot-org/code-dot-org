@@ -1,5 +1,3 @@
-/* global appOptions */
-
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import i18n from '@cdo/locale';
@@ -91,9 +89,14 @@ class DownloadReplayVideoButton extends React.Component {
     clearTimeout(this.checkVideoUntilSuccessTimeout);
   }
 
+  getUploadUrl = () =>
+    window &&
+    window.appOptions &&
+    window.appOptions.signedReplayLogUrl;
+
   hasReplayVideo = () =>
     this.props.appType === 'dance' &&
-    appOptions.signedReplayLogUrl;
+    this.getUploadUrl();
 
   shouldCreateReplayVideo = () =>
     this.hasReplayVideo() &&
@@ -102,7 +105,7 @@ class DownloadReplayVideoButton extends React.Component {
 
   tryCreateReplayVideo = () => {
     if (this.shouldCreateReplayVideo()) {
-      fetch(appOptions.signedReplayLogUrl, {
+      fetch(this.getUploadUrl(), {
         method: "PUT",
         body: JSON.stringify(this.props.replayLog)
       });
