@@ -433,6 +433,8 @@ Dance.prototype.runButtonClick = async function () {
   // tasks that need to complete first
   const runButton = document.getElementById('runButton');
   runButton.disabled = true;
+  const divDanceLoading = document.getElementById('divDanceLoading');
+  divDanceLoading.style.display = 'flex';
   getStore().dispatch(setRunIsStarting(true));
   await this.danceReadyPromise;
 
@@ -446,6 +448,7 @@ Dance.prototype.runButtonClick = async function () {
     await this.execute();
   } finally {
     this.studioApp_.toggleRunReset('reset');
+    divDanceLoading.style.display = 'none';
     // Safe to allow normal run/reset behavior now
     getStore().dispatch(setRunIsStarting(false));
   }
@@ -470,9 +473,9 @@ Dance.prototype.execute = async function () {
     return;
   }
 
-  this.initInterpreter();
+  const charactersReferenced = this.initInterpreter();
 
-  await this.nativeAPI.ensureSpritesAreLoaded(this.charactersReferenced);
+  await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
 
   this.hooks.find(v => v.name === 'runUserSetup').func();
   const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
@@ -598,16 +601,14 @@ Dance.prototype.initInterpreter = function () {
 
   const studentCode = this.studioApp_.getCode();
 
-  // Process studentCode to determine which characters are referenced and update
-  // this.charactersReferenced array with the results:
-  this.charactersReferenced = [];
+  // Process studentCode to determine which characters are referenced and create
+  // charactersReferencedSet with the results:
+  const charactersReferencedSet = new Set();
   const charactersRegExp = new RegExp(/^.*makeNewDanceSprite(?:Group)?\([^"]*"([^"]*)[^\r\n]*/, 'gm');
   let match;
   while ((match = charactersRegExp.exec(studentCode))) {
     const characterName = match[1];
-    if (!this.charactersReferenced.includes(characterName)) {
-      this.charactersReferenced.push(characterName);
-    }
+    charactersReferencedSet.add(characterName);
   }
 
   let code = require('!!raw-loader!@code-dot-org/dance-party/src/p5.dance.interpreted');
@@ -620,6 +621,8 @@ Dance.prototype.initInterpreter = function () {
   };
 
   this.hooks = CustomMarshalingInterpreter.evalWithEvents(api, events, code).hooks;
+
+  return Array.from(charactersReferencedSet);
 };
 
 Dance.prototype.shouldShowSharing = function () {
