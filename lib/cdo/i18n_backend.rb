@@ -5,15 +5,13 @@ require 'cdo/key_value'
 module I18nSmartTranslate
   def translate(locale, key, options = I18n::EMPTY_HASH)
     if options.fetch(:smart, false)
-      options = get_smart_translate_options(locale, key, options)
+      options = I18nSmartTranslate.get_smart_translate_options(locale, key, options)
     end
 
     super(locale, key, options)
   end
 
-  private
-
-  def get_smart_translate_options(locale, key, options = I18n::EMPTY_HASH)
+  def self.get_smart_translate_options(locale, key, options = I18n::EMPTY_HASH)
     options = options.dup
     options.delete(:smart)
 
@@ -23,7 +21,6 @@ module I18nSmartTranslate
     # which periods in a key name can be mistakenly interpreted as separators
     if options.key?(:scope) && !options.key?(:separator)
       options[:separator] = get_valid_separator(key + options[:scope].join(''))
-      puts "settled on #{options[:separator].inspect}"
     end
 
     options
@@ -46,12 +43,12 @@ module I18nSmartTranslate
   #
   # Used for I18n, to make sure that dynamically-provided values can safely be
   # used as the I18n key.
-  def get_valid_separator(string)
-    puts "Finding valid separator for #{string.inspect}"
+  def self.get_valid_separator(string)
     SEPARATORS.each do |separator|
-      puts "Considering #{separator.inspect}"
       return separator unless string.include? separator
     end
+
+    nil
   end
 end
 
