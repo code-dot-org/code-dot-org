@@ -101,7 +101,7 @@ class DanceVisualizationColumn extends React.Component {
     const p5LoadingStyle = {
       width: 400,
       height: 400,
-      display: 'flex',
+      display: 'none',
       alignItems: 'center',
       justifyContent: 'center'
     };
@@ -135,7 +135,7 @@ class DanceVisualizationColumn extends React.Component {
               id="divDance"
               style={divDanceStyle}
             >
-              <div id="p5_loading" style={p5LoadingStyle}>
+              <div id="divDanceLoading" style={p5LoadingStyle}>
                 <img src="//curriculum.code.org/images/DancePartyLoading.gif" style={p5LoadingGifStyle}/>
               </div>
             </div>
