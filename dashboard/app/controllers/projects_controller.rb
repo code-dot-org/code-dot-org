@@ -322,16 +322,20 @@ class ProjectsController < ApplicationController
       game_display_name: data_t("game.name", @game.name),
     )
 
-    if ['artist', 'dance'].include? params[:key]
+    if params[:key] == 'artist'
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/_share_image.png", 'https:'
     end
 
-    if params[:key] == 'dance' && DCDO.get('share_video_sharing_enabled', true)
-      # TODO: elijah set up test subdomains for dance-api, and situationally
-      # point to those here
-      @project_video = "https://dance-api.code.org/videos/video-#{@view_options['channel']}.mp4"
-      @project_video_stream = dance_project_embed_video_projects_url(key: params[:key], channel_id: params[:channel_id])
-      replay_video_view_options unless sharing || readonly
+    if params[:key] == 'dance'
+      if DCDO.get('share_video_sharing_enabled', nil)
+        # TODO: elijah set up test subdomains for dance-api, and situationally
+        # point to those here
+        @project_video = "https://dance-api.code.org/videos/video-#{@view_options['channel']}.mp4"
+        @project_video_stream = dance_project_embed_video_projects_url(key: params[:key], channel_id: params[:channel_id])
+        replay_video_view_options unless sharing || readonly
+      else
+        @project_image = CDO.studio_url "v3/files/#{@view_options['channel']}/.metadata/thumbnail.png"
+      end
     end
 
     begin
