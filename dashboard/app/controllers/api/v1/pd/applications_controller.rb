@@ -107,7 +107,7 @@ module Api::V1::Pd
       end
 
       serializer =
-        if TYPES_BY_ROLE[role.to_sym] == Pd::Application::Facilitator1819Application
+        if TYPES_BY_ROLE[role.to_sym] == FACILITATOR_APPLICATION_CLASS
           FacilitatorApplicationCohortViewSerializer
         elsif TYPES_BY_ROLE[role.to_sym] == TEACHER_APPLICATION_CLASS
           TeacherApplicationCohortViewSerializer
@@ -276,9 +276,9 @@ module Api::V1::Pd
     end
 
     TYPES_BY_ROLE = {
-      csf_facilitators: Pd::Application::Facilitator1819Application,
-      csd_facilitators: Pd::Application::Facilitator1819Application,
-      csp_facilitators: Pd::Application::Facilitator1819Application,
+      csf_facilitators: FACILITATOR_APPLICATION_CLASS,
+      csd_facilitators: FACILITATOR_APPLICATION_CLASS,
+      csp_facilitators: FACILITATOR_APPLICATION_CLASS,
       csd_teachers: TEACHER_APPLICATION_CLASS,
       csp_teachers: TEACHER_APPLICATION_CLASS
     }
