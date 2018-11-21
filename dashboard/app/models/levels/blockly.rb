@@ -564,28 +564,6 @@ class Blockly < Level
     end.join
   end
 
-  # Return a character than can be used as a separator without separating the
-  # given string. If the given string contains all the attempted separator
-  # values, returns nil.
-  #
-  # Ex:
-  #
-  #   get_valid_separator("plain") -> "."
-  #   get_valid_separator("string.with.dots") -> "!"
-  #   get_valid_separator("string.with.dots.and.exclamation!") -> "|"
-  #   etc
-  #
-  # Used for I18n, to make sure that dynamically-provided values can safely be
-  # used as the I18n key.
-  #
-  # TODO: (elijah) isolate this and the I18n logic that calls it into a
-  # centralized I18n helper
-  def get_valid_separator(string)
-    ".!|,-_ ".split.each do |separator|
-      return separator unless string.include? separator
-    end
-  end
-
   # Display translated custom block text and options
   def localized_shared_blocks(level_objects)
     return nil if level_objects.blank?
@@ -598,8 +576,8 @@ class Blockly < Level
       block_text_translation = I18n.t(
         "text",
         scope: [:data, :blocks, level_object[:name]],
-        separator: get_valid_separator(level_object[:name]),
-        default: nil
+        default: nil,
+        smart: true
       )
       level_object[:config]["blockText"] = block_text_translation unless block_text_translation.nil?
       arguments = level_object[:config]["args"]
@@ -617,8 +595,8 @@ class Blockly < Level
           option_translation = I18n.t(
             option_value,
             scope: [:data, :blocks, level_object[:name], :options, argument['name']],
-            separator: get_valid_separator(option_value + level_object[:name] + argument['name']),
-            default: nil
+            default: nil,
+            smart: true
           )
           # Update the key (the first element) with the new translated value
           argument["options"][i][0] = option_translation unless option_translation.nil?
