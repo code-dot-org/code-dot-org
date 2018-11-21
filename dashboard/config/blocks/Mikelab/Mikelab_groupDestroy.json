@@ -1,12 +1,12 @@
 {
-  "category": "Sprites",
+  "category": "Group Sprites",
   "config": {
     "color": [
-      184,
-      1,
-      0.74
+      355,
+      ".7",
+      ".7"
     ],
-    "func": "destroyAll",
+    "func": "groupDestroy",
     "blockText": "remove {SELECT} {COSTUME}",
     "args": [
       {
