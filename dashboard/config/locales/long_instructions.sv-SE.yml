@@ -325,7 +325,7 @@ sv:
         </block></xml>
 
         Detta program använder musikens ”bas”-volym (de låga ljuden) för att styra en dansares längd. Kan du göra så att den andra dansaren också reagerar på musiken?
-      Dance_Party_11.5: |-
+      Dance_Party_11_5: |-
         Kolla in detta block:
 
         <xml>

@@ -1455,7 +1455,7 @@ sv:
       Dance_Party_09: Använd ”ange färgton”-blocket för att ändra en dansares färg.
       Dance_Party_10: Gör så att också de övriga dansarna reagerar på musiken med
         ”börjar imitera”-blocket.
-      Dance_Party_11.5: Använd ”bara ankor”-blocken för att göra så att ankorna dansar
+      Dance_Party_11_5: Använd ”bara ankor”-blocken för att göra så att ankorna dansar
         tillsammans.
       Dance_Party_11.5_test: Använd ”bara ankor”-blocken för att göra så att ankorna
         dansar tillsammans.
