@@ -412,6 +412,72 @@ XML
     assert_not_equal localized_custom_block, translated_block
   end
 
+  test 'option that contains a period in the key is translated' do
+    test_locale = :"fr-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "blocks" => {
+          "DanceLab_atSelectQuantity" => {
+            "text" => "vérifier la {QUANTITY} {MEASURE}",
+            "options" => {
+              "MEASURE" => {
+                "MEASURES.Whole": "entier",
+                "MEASURES.Half": "moitié",
+              }
+            }
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = create(:level, :blockly, level_num: 'level1_2_3')
+
+    custom_block =
+      [{
+        name: "DanceLab_atSelectQuantity",
+        pool: "SelectQuanity",
+        category: "Events",
+        config:
+        {
+          "color" => [140, 1, 0.74],
+          "func" => "atSelectQuantity",
+          "blockText" => "check the {QUANTITY} {MEASURE}",
+          "args" => [
+            {"name" => "QUANTITY", "type" => "Number", "field" => true},
+            {"name" => "MEASURE", "options" => [["whole", "whole"], ["half", "half"]]}
+          ],
+          "eventBlock" => true
+        },
+        helperCode: nil
+      }]
+
+    translated_block =
+      [{
+        name: "DanceLab_atSelectQuantity",
+        pool: "SelectQuanity",
+        category: "Events",
+        config:
+          {
+            "color" => [140, 1, 0.74],
+            "func" => "atSelectQuantity",
+            "blockText" => "vérifier la {QUANTITY} {MEASURE}",
+            "args" => [
+              {"name" => "QUANTITY", "type" => "Number", "field" => true},
+              {"name" => "MEASURE", "options" => [["whole", "entier"], ["half", "moitié"]]}
+            ],
+            "eventBlock" => true
+          },
+        helperCode: nil
+      }]
+
+    localized_custom_block = level.localized_shared_blocks(custom_block)
+
+    assert_equal localized_custom_block, translated_block
+  end
+
   test 'localizes authored hints' do
     test_locale = :"te-ST"
     level_name = 'test_localize_authored_hints'
