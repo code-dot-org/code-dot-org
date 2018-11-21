@@ -876,7 +876,6 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   options.downloadReplayVideo =
     getStore().getState().pageConstants.appType === 'dance' &&
     window.appOptions.signedReplayLogUrl;
-  console.log(options);
 
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('id', 'sharing');
