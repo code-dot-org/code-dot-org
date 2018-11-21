@@ -3,6 +3,7 @@ require 'active_support/core_ext/numeric/bytes'
 require 'cdo/key_value'
 
 module I18nSmartTranslate
+  # if called with the :smart option, attempt to improve the given options
   def translate(locale, key, options = I18n::EMPTY_HASH)
     if options.fetch(:smart, false)
       options = I18nSmartTranslate.get_smart_translate_options(locale, key, options)
@@ -37,12 +38,12 @@ module I18nSmartTranslate
   # Ex:
   #
   #   get_valid_separator("plain") -> "."
-  #   get_valid_separator("string.with.dots") -> "!"
-  #   get_valid_separator("string.with.dots.and.exclamation!") -> "|"
+  #   get_valid_separator("string.with.dots") -> "|"
+  #   get_valid_separator("string.with|dots.and|pipe") -> ","
   #   etc
   #
-  # Used for I18n, to make sure that dynamically-provided values can safely be
-  # used as the I18n key.
+  # Used for to make sure that dynamically-provided values can safely be used
+  # as the I18n key.
   def self.get_valid_separator(string)
     characters = string.split('').to_set
     SEPARATORS.each do |separator|
