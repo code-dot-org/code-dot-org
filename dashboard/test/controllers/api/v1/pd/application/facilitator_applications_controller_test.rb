@@ -2,9 +2,10 @@ require 'test_helper'
 
 module Api::V1::Pd::Application
   class FacilitatorApplicationsControllerTest < ::ActionController::TestCase
+    include Pd::Application::ActiveApplicationModels
     setup_all do
       @test_params = {
-        form_data: build(:pd_facilitator1819_application_hash)
+        form_data: build(FACILITATOR_APPLICATION_HASH_FACTORY)
       }
 
       @applicant = create :teacher
