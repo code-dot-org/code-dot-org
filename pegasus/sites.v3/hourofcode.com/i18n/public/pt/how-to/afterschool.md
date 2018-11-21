@@ -58,7 +58,7 @@ Comece seu evento da Hora do Código inspirando os participantes e discutindo so
 
 ## 6. É hora de programar!
 
-**Direcione os participantes para a atividade** - Excreva o link do tutorial no quadro. Encontre o link apresentado nas [informações para seu tutorial selecionado](http://<%= codeorg_url() %>/learn) abaixo do número de participantes.
+**Direcione os participantes para a atividade** - Excreva o link do tutorial no quadro. Encontre o link apresentado nas [informações para seu tutorial selecionado](<%= resolve_url('/learn') %>) abaixo do número de participantes.
 
 **Quando alguem se deparar com problemas, Não tem problema responder:** - "Eu não sei. Vamos resolver isso juntos." - "Tecnologia nem sempre functiona como nós queremos." -"Aprender a programar computadores é como aprender uma nova lingua: você não será fluente logo no início."
 
