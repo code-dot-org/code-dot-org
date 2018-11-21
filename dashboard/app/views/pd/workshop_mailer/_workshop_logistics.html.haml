@@ -22,3 +22,12 @@
     %td
       = @workshop.organizer.name
       (#{mail_to(@workshop.organizer.email)})
+  - unless @workshop.facilitators.empty?
+    %tr
+      %td.heading
+        Facilitator(s):
+      %td
+        - @workshop.facilitators.each do |facilitator|
+          = facilitator.name
+          (#{mail_to(facilitator.email)})
+          %br
