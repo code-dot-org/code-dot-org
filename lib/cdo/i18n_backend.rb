@@ -44,8 +44,9 @@ module I18nSmartTranslate
   # Used for I18n, to make sure that dynamically-provided values can safely be
   # used as the I18n key.
   def self.get_valid_separator(string)
+    characters = string.split('').to_set
     SEPARATORS.each do |separator|
-      return separator unless string.include? separator
+      return separator unless characters.include? separator
     end
 
     nil
