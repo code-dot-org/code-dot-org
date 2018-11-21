@@ -422,8 +422,8 @@ XML
             "text" => "vérifier la {QUANTITY} {MEASURE}",
             "options" => {
               "MEASURE" => {
-                "MEASURES.Whole": "entier",
-                "MEASURES.Half": "moitié",
+                "MEASURES.Whole": "Entier",
+                "MEASURES.Half": "Moitié",
               }
             }
           }
@@ -447,7 +447,7 @@ XML
           "blockText" => "check the {QUANTITY} {MEASURE}",
           "args" => [
             {"name" => "QUANTITY", "type" => "Number", "field" => true},
-            {"name" => "MEASURE", "options" => [["whole", "whole"], ["half", "half"]]}
+            {"name" => "MEASURE", "options" => [["MEASURES.Whole", "Whole"], ["MEASURES.Half", "Half"]]}
           ],
           "eventBlock" => true
         },
@@ -466,7 +466,7 @@ XML
             "blockText" => "vérifier la {QUANTITY} {MEASURE}",
             "args" => [
               {"name" => "QUANTITY", "type" => "Number", "field" => true},
-              {"name" => "MEASURE", "options" => [["whole", "entier"], ["half", "moitié"]]}
+              {"name" => "MEASURE", "options" => [["MEASURES.Whole", "Entier"], ["MEASURES.Half", "Moitié"]]}
             ],
             "eventBlock" => true
           },
