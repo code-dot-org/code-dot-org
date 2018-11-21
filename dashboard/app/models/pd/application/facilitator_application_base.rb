@@ -36,7 +36,7 @@
 
 module Pd::Application
   class FacilitatorApplicationBase < WorkshopAutoenrolledApplication
-    include Facilitator1819ApplicationConstants
+    include Pd::FacilitatorCommonApplicationConstants
 
     serialized_attrs %w(
       fit_workshop_id
@@ -61,8 +61,6 @@ module Pd::Application
     }.freeze
     PROGRAM_OPTIONS = PROGRAMS.values
     VALID_COURSES = PROGRAMS.keys.map(&:to_s)
-
-    validates_uniqueness_of :user_id
 
     validates :course, presence: true, inclusion: {in: VALID_COURSES}
     before_validation :set_course_from_program
