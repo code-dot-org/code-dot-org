@@ -16,7 +16,7 @@ import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
-import {setThumbnailBlobFromCanvas} from '../util/thumbnail';
+import {captureThumbnailFromCanvas, setThumbnailBlobFromCanvas} from '../util/thumbnail';
 import project from "../code-studio/initApp/project";
 import {
   getSongManifest,
@@ -96,6 +96,7 @@ Dance.prototype.init = function (config) {
   });
   this.studioApp_.labUserId = config.labUserId;
   this.level.softButtons = this.level.softButtons || {};
+  this.initialThumbnailCapture = true;
 
   config.afterClearPuzzle = function () {
     this.studioApp_.resetButtonClick();
@@ -103,7 +104,6 @@ Dance.prototype.init = function (config) {
 
   config.enableShowCode = true;
   config.enableShowLinesCount = false;
-  config.noHowItWorks = true;
 
   const onMount = () => {
     config.loadAudio = this.loadAudio_.bind(this);
@@ -487,7 +487,7 @@ Dance.prototype.execute = async function () {
   await this.initSongsPromise;
 
   const songMetadata = await this.songMetadataPromise;
-  return new Promise((resolve, reject)=> {
+  return new Promise((resolve, reject) => {
     this.nativeAPI.play(songMetadata, success => {
       this.performanceData_.lastRunButtonDelay =
         performance.now() - this.performanceData_.lastRunButtonClick;
@@ -566,6 +566,9 @@ Dance.prototype.initInterpreter = function () {
     },
     setDanceSpeed: (spriteIndex, speed) => {
       nativeAPI.setDanceSpeed(sprites[spriteIndex], speed);
+    },
+    setDanceSpeedEach: (group, speed) => {
+      nativeAPI.setDanceSpeedEach(group, speed);
     },
     getEnergy: range => {
       return Number(nativeAPI.getEnergy(range));
@@ -661,10 +664,16 @@ Dance.prototype.getAppReducers = function () {
 };
 
 /**
- * Capture a thumbnail image of the play space. This will capture a PNG blob
- * of the thumbnail in memory, then will save that blob to S3 when the project
- * is saved.
+ * Capture a thumbnail image of the play space. On initial capture, the thumbnail
+ * will be saved to the server. Every thumbnail captured after the initial capture will be
+ * stored in memory until the project is saved.
  */
 Dance.prototype.captureThumbnailImage = function () {
-  setThumbnailBlobFromCanvas(document.getElementById('defaultCanvas0'));
+  const canvas = document.getElementById('defaultCanvas0');
+  if (this.initialThumbnailCapture) {
+    this.initialThumbnailCapture = false;
+    captureThumbnailFromCanvas(canvas);
+  } else {
+    setThumbnailBlobFromCanvas(canvas);
+  }
 };
