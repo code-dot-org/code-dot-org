@@ -134,6 +134,7 @@ class DanceVisualizationColumn extends React.Component {
             <div
               id="divDance"
               style={divDanceStyle}
+              dir="ltr"
             >
               <div id="p5_loading" style={p5LoadingStyle}>
                 <img src="//curriculum.code.org/images/DancePartyLoading.gif" style={p5LoadingGifStyle}/>
