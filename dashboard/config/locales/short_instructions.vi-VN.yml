@@ -494,7 +494,7 @@ vi:
       Dance_Party_09: Sử dụng khối `set tint` để thay đổi màu sắc của một vũ công.
       Dance_Party_10: Làm cho các vũ công khác phản hồi theo nhạc bằng cách sử dụng
         khối `begins following`.
-      Dance_Party_11.5: Sử dụng các khối "all ducks" để làm cho những con vịt nhảy
+      Dance_Party_11_5: Sử dụng các khối "all ducks" để làm cho những con vịt nhảy
         cùng nhau.
       Dance_Party_11.5_test: Sử dụng các khối "all ducks" để làm cho những con vịt
         nhảy cùng nhau.
