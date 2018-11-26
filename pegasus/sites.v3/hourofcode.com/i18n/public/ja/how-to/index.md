@@ -5,15 +5,15 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to teach one Hour of Code with your class
+# クラスで Hour of Code を教える方法
 
 ### この運動に参加して、以下のステップで初めてのコンピュータサイエンスを生徒たちへ紹介しましょう。 Hour of Code(アワーオブコード) は、とっても簡単です。はじめての方でもご心配いりません！ 誰かのサポートが必要ならば、Hour of Codeの実施をサポートしてくれる[ローカルボランティア](<%= codeorg_url('/volunteer/local') %>)を探すことができます。
 
-### Take a look at our [participation guide if you still have questions](<%= localized_file('/files/participation-guide.pdf') %>).
+### 分からないことがあったら、[参加案内ページ](<%= localized_file('/files/participation-guide.pdf') %>)を見てください。
 
 ---
 
-## 1. この手引きビデオを見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. この「やり方を説明している動画」を見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. イベント用のチュートリアルを選ぶ
 
