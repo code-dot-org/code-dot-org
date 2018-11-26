@@ -55,8 +55,8 @@ const styles = {
  */
 class DownloadReplayVideoButton extends React.Component {
   static propTypes = {
-    appType: PropTypes.string.isRequired,
-    channelId: PropTypes.string.isRequired,
+    appType: PropTypes.string,
+    channelId: PropTypes.string,
     onError: PropTypes.func,
     replayLog: PropTypes.array,
     style: PropTypes.object,
@@ -190,7 +190,7 @@ class DownloadReplayVideoButton extends React.Component {
   };
 
   render() {
-    if (!this.hasReplayVideo()) {
+    if (!this.props.channelId || !this.hasReplayVideo()) {
       return null;
     }
 
