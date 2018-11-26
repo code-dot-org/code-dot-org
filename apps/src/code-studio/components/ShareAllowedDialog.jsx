@@ -1,4 +1,4 @@
-/* global dashboard, appOptions */
+/* global dashboard */
 
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
@@ -164,7 +164,6 @@ class ShareAllowedDialog extends React.Component {
     canShareSocial: PropTypes.bool.isRequired,
     userSharingDisabled: PropTypes.bool,
     getNextFrame: PropTypes.func,
-    replayLog: PropTypes.array,
   };
 
   state = {
@@ -195,27 +194,8 @@ class ShareAllowedDialog extends React.Component {
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.isOpen && !prevProps.isOpen) {
       recordShare('open');
-      this.tryCreateReplayVideo();
     }
   }
-
-  hasReplayVideo = () =>
-    this.props.appType === 'dance' &&
-    appOptions.signedReplayLogUrl;
-
-  shouldCreateReplayVideo = () =>
-    this.hasReplayVideo() &&
-    this.props.replayLog &&
-    this.props.replayLog.length > 1;
-
-  tryCreateReplayVideo = () => {
-    if (this.shouldCreateReplayVideo()) {
-      fetch(appOptions.signedReplayLogUrl, {
-        method: "PUT",
-        body: JSON.stringify(this.props.replayLog)
-      });
-    }
-  };
 
   replayVideoNotFound = () => {
     this.setState({
@@ -410,12 +390,10 @@ class ShareAllowedDialog extends React.Component {
                     className="no-mc"
                   />
                   }
-                  {this.hasReplayVideo() &&
-                      <DownloadReplayVideoButton
-                        channelId={this.props.channelId}
-                        onError={this.replayVideoNotFound}
-                      />
-                  }
+                  <DownloadReplayVideoButton
+                    style={styles.button}
+                    onError={this.replayVideoNotFound}
+                  />
                   {canPrint && hasThumbnail &&
                     <a href="#" onClick={wrapShareClick(this.print.bind(this), 'print')}>
                       <i className="fa fa-print" style={{fontSize: 26}} />
@@ -489,7 +467,6 @@ export default connect(state => ({
   isOpen: state.shareDialog.isOpen,
   isUnpublishPending: state.shareDialog.isUnpublishPending,
   getNextFrame: state.shareDialog.getNextFrame,
-  replayLog: state.shareDialog.replayLog,
 }), dispatch => ({
   onClose: () => dispatch(hideShareDialog()),
   onShowPublishDialog(projectId, projectType) {
