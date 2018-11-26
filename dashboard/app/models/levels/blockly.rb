@@ -24,6 +24,8 @@
 #
 
 require 'nokogiri'
+require 'cdo/i18n_backend'
+
 class Blockly < Level
   include SolutionBlocks
   before_save :fix_examples
@@ -576,8 +578,8 @@ class Blockly < Level
       block_text_translation = I18n.t(
         "text",
         scope: [:data, :blocks, level_object[:name]],
+        separator: Cdo::I18nSmartTranslate.get_valid_separator(level_object[:name]),
         default: nil,
-        smart: true
       )
       level_object[:config]["blockText"] = block_text_translation unless block_text_translation.nil?
       arguments = level_object[:config]["args"]
@@ -595,8 +597,8 @@ class Blockly < Level
           option_translation = I18n.t(
             option_value,
             scope: [:data, :blocks, level_object[:name], :options, argument['name']],
+            separator: Cdo::I18nSmartTranslate.get_valid_separator(option_value + level_object[:name] + argument['name']),
             default: nil,
-            smart: true
           )
           # Update the key (the first element) with the new translated value
           argument["options"][i][0] = option_translation unless option_translation.nil?
