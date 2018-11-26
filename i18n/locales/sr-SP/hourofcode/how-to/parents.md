@@ -41,7 +41,7 @@ Kick off your Hour of Code by inspiring your child and discussing how computer s
 It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- List things that use code in everyday life.
+- Набројите ствари које користе програм - код у свакодневном животу.
 - See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
