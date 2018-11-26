@@ -333,8 +333,8 @@ class ProjectsController < ApplicationController
         # point to those here
         @project_video = "https://dance-api.code.org/videos/video-#{@view_options['channel']}.mp4"
         @project_video_stream = dance_project_embed_video_projects_url(key: params[:key], channel_id: params[:channel_id])
-        replay_video_view_options unless sharing || readonly
       end
+      replay_video_view_options unless sharing || readonly
     end
 
     begin
