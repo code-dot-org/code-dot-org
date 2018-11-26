@@ -395,6 +395,7 @@ it:
       spritelab: Laboratorio dei Personaggi
       minecraft: Minecraft
       flappy: Flappy
+      dance: Ballando col codice
       view_all: Guarda tutti i progetti...
     popup:
       progress_for_user: "%{name} in corso"
@@ -693,8 +694,8 @@ it:
       <a href="https://code.org/about/partners"> partner</a>, il nostro <a href="https://code.org/about/team">
       team</a>, il nostro cast video e i nostri <a href="https://code.org/about/advisors">
       consulenti di formazione</a> per il loro supporto nella creazione di Code Studio.
-    help_from_html: Siamo particolarmente riconoscenti agli ingegneri di Google, Microsoft,
-      Facebook, Twitter, e molti altri, che hanno aiutato a creare questi corsi.
+    help_from_html: Siamo particolarmente riconoscenti agli ingegneri di Amazon, Google
+      e Microsoft che hanno aiutato a creare questi corsi.
     help_from_html_old: Gli ingegneri di Google, Microsoft, Facebook e Twitter hanno
       contribuito a creare questi materiali.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Tutti i diritti
@@ -814,6 +815,8 @@ it:
         poi condividila.
       audience: Da 13 anni in su
       cta: Scopri come
+    dance:
+      title: Ballando col codice
     hoc:
       title: Labirinto Classico
       body: Impara i concetti base dell'informatica. Milioni di persone l'hanno già

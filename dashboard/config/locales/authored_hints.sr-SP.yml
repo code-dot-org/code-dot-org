@@ -359,6 +359,9 @@ sr:
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           Твој програм треба да:
@@ -382,6 +385,12 @@ sr:
           - Помери напред за 100 + 75 пиксела
           - Користи функцију
       courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_a: |-
+          Твој програм треба да:
+          - Користи функцију
+          - Помери напред за 100 + 75 пиксела
+          - Користи функцију
+      courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: |-
           Твој програм треба да:
           - Користи функцију

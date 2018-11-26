@@ -31,19 +31,19 @@ th:
             '"ROBOT"': หุ่นยนต์ทั้งหมด
             '"SHARK"': ฉลามทั้งหมด
           MOVE:
+            '"next"': "(ถัดไป)"
+            '"prev"': "(ก่อนหน้า)"
+            '"rand"': "(สุ่ม)"
+            MOVES.Roll: ม้วนตัว
             MOVES.ClapHigh: ปรบมือสูง
-            MOVES.Clown: ตัวตลก
             MOVES.Dab: ตบเบา ๆ
             MOVES.DoubleJam: ดับเบิ้ลแจม
             MOVES.Drop: ทิ้งตัว
             MOVES.Floss: ท่าฟลอส
             MOVES.Fresh: ท่าเต้นเฟรช
-            MOVES.Roll: ม้วนตัว
+            MOVES.Clown: ตัวตลก
             MOVES.Kick: ท่าเตะ
             MOVES.ThisOrThat: ท่าเต้น This or That
-            '"next"': "(ถัดไป)"
-            '"prev"': "(ก่อนหน้า)"
-            '"rand"': "(สุ่ม)"
             MOVES.Rest: ไม่มี
           DIR:
             '1': "→"
@@ -52,19 +52,19 @@ th:
         text: "{SPRITE} ทำ {MOVE} {DIR} ตลอดไป"
         options:
           MOVE:
+            '"next"': "(ถัดไป)"
+            '"prev"': "(ก่อนหน้า)"
+            '"rand"': "(สุ่ม)"
+            MOVES.Roll: ม้วนตัว
             MOVES.ClapHigh: ปรบมือสูง
-            MOVES.Clown: ตัวตลก
             MOVES.Dab: ตบเบา ๆ
             MOVES.DoubleJam: ดับเบิ้ลแจม
             MOVES.Drop: ทิ้งตัว
             MOVES.Floss: ท่าฟลอส
             MOVES.Fresh: ท่าเต้นเฟรช
-            MOVES.Roll: ม้วนตัว
+            MOVES.Clown: ตัวตลก
             MOVES.Kick: ท่าเตะ
             MOVES.ThisOrThat: ท่าเต้น This or That
-            '"next"': "(ถัดไป)"
-            '"prev"': "(ก่อนหน้า)"
-            '"rand"': "(สุ่ม)"
             MOVES.Rest: ไม่มี
           DIR:
             '1': "→"
@@ -95,14 +95,15 @@ th:
             '"ROBOT"': หุ่นยนต์ทั้งหมด
             '"SHARK"': ฉลามทั้งหมด
           MOVE:
+            '"rand"': "(สุ่ม)"
+            MOVES.Roll: ม้วนตัว
             MOVES.ClapHigh: ปรบมือสูง
-            MOVES.Clown: ตัวตลก
             MOVES.Dab: ตบเบา ๆ
             MOVES.DoubleJam: ดับเบิ้ลแจม
             MOVES.Drop: ทิ้งตัว
             MOVES.Floss: ท่าฟลอส
             MOVES.Fresh: ท่าเต้นเฟรช
-            MOVES.Roll: ม้วนตัว
+            MOVES.Clown: ตัวตลก
             MOVES.Kick: ท่าเตะ
             MOVES.ThisOrThat: ท่าเต้น This or That
             MOVES.Rest: ไม่มี
@@ -113,14 +114,15 @@ th:
         text: "{SPRITE} ทำ {MOVE} {DIR} ครั้งเดียว"
         options:
           MOVE:
+            '"rand"': "(สุ่ม)"
+            MOVES.Roll: ม้วนตัว
             MOVES.ClapHigh: ปรบมือสูง
-            MOVES.Clown: ตัวตลก
             MOVES.Dab: ตบเบา ๆ
             MOVES.DoubleJam: ดับเบิ้ลแจม
             MOVES.Drop: ทิ้งตัว
             MOVES.Floss: ท่าฟลอส
             MOVES.Fresh: ท่าเต้นเฟรช
-            MOVES.Roll: ม้วนตัว
+            MOVES.Clown: ตัวตลก
             MOVES.Kick: ท่าเตะ
             MOVES.ThisOrThat: ท่าเต้น This or That
             MOVES.Rest: ไม่มี
@@ -317,7 +319,7 @@ th:
             '"disco"': สี่เหลี่ยมจัตุรัส
             '"rainbow"': สี
             '"diamonds"': เพชร
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": "(สุ่ม)"
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(สุ่ม)"
       Dancelab_setDanceSpeed:
         text: เปลี่ยน {SPRITE} ความเร็วของการเต้นเป็น {SPEED}
         options:
@@ -640,6 +642,22 @@ th:
             "{x: 300, y: 100}": ขวาบน
             "{x: 100, y: 300}": ซ้ายล่าง
             "{x: 300, y: 300}": ขวาล่าง
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": ด้านบน
+            "{x: 200, y: 300}": ด้านล่าง
+            "{x: 100, y: 200}": ซ้าย
+            "{x: 300, y: 200}": ขวา
+            "{x: 200, y: 200}": ตรงกลาง
+            "{x: 100, y: 100}": ซ้ายบน
+            "{x: 300, y: 100}": ขวาบน
+            "{x: 100, y: 300}": ซ้ายล่าง
+            "{x: 300, y: 300}": ขวาล่าง
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': ทั้งหมด
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -789,7 +807,7 @@ th:
       craft_repeatUntilGoal:
         text: ทำซ้ำจนสำเร็จ{STATEMENT}
       craft_spawnEntity:
-        text: ขยายพันธ์ุ {ENTITY}
+        text: แพร่พันธ์ุ {ENTITY}
         options:
           ENTITY:
             '"cod"': ปลาคอด

@@ -18,7 +18,7 @@ uk:
             розвивати навички розв'язування задач та наполегливість у пошуку рішень.
             До кінця цього курсу учні навчаться створювати власну гру або історію,
             якою зможуть поділитися з іншими. Рекомендується для 1 класу.
-          description_short: Курс 1 призначений для початківців у читанні.
+          description_short: Вступ до інформатики для початківців у читанні.
           description_audience: Вік 4-6
           stages:
             'Artist: Loops':
@@ -63,7 +63,7 @@ uk:
             попереднього досвіду програмування. Протягом навчання учні створюватимуть
             програми для розв'язування задач та розроблятимуть інтерактивні ігри чи
             історії, якими зможуть поділитися з іншими. Рекомендується для 2-5 класів.
-          description_short: Курс 2 призначено для учнів, котрі вміють читати.
+          description_short: Вступ до інформатики для учнів, котрі вміють читати.
           description_audience: Вік 6 + (необхідне читання)
           stages:
             'Artist: Debugging':
@@ -419,7 +419,7 @@ uk:
           title: Код Пурха
           description: Хочете написати свою власну гру, менш ніж за 10 хвилин? Спробуйте
             запрограмувати Пурха!
-          description_short: Створіть власну гру в Пурха менш, ніж за 10 хвилин!
+          description_short: Створіть власну гру в Пурха!
           stages:
             Flappy Code:
               name: Код Пурха
@@ -1680,6 +1680,9 @@ uk:
           stages:
             Dance Party:
               name: Танцювальна вечірка
+        dance-extras:
+          title: Продовжуємо танцювати
+          description: Рухайся далі однієї години з розширеними проектними ідеями.
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1690,7 +1693,57 @@ uk:
               name: Конвертні змінні
             For Loop Fun:
               name: Ігри з циклами
+            The Artist:
+              name: Художник
         dance-low:
           stages:
             Dance Party:
               name: Танцювальна вечірка
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Естафетне програмування
+            Loops in Ice Age:
+              name: Петлі в Ice Age
+            Conditionals with Cards:
+              name: Листівки та умови
+            Digital Citizenship:
+              name: Цифрове громадянство
+            'Unplugged: Binary':
+              name: 'Безмашинні вправи: двійкова система'
+            Artist Binary:
+              name: 'Художник: двійкова система'
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Закладання основ
+            Nested Loops:
+              name: Вкладені цикли
+            Conditionals with Cards:
+              name: Листівки та умови
+            Conditionals:
+              name: Умови
+            Internet:
+              name: Інтернет
+            Crowdsourcing:
+              name: Краудсорсинг
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Естафетне програмування
+            Conditionals with Cards:
+              name: Листівки та умови
+            Envelope Variables:
+              name: Конвертні змінні
+            For Loop Fun:
+              name: Ігри з циклами
+            Binary Bracelets:
+              name: Двійкові браслети
+            'Unplugged: Binary':
+              name: 'Безмашинні вправи: двійкова система'
+            Artist Binary:
+              name: 'Художник: двійкова система'
+            Internet:
+              name: Інтернет
+            Crowdsourcing:
+              name: Краудсорсинг

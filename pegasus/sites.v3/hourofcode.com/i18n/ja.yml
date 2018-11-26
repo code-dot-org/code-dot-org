@@ -11,32 +11,35 @@ ja:
   campaign_date_full: "12月 5 − 11日"
   campaign_date_year: "2016"
   campaign_date_full_year: "2016 年 12 月 5 - 11 日"
-  codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
+  codeorg_homepage_hoc2018_curriculum: '<a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org のコース</a> を進める'
+  codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
   codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
-  codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
+  codeorg_homepage_hoc2018_header_line2_mobile: '何を作りますか？'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_musician_before: 'Featuring'
+  codeorg_homepage_hoc2018_musician_after: 'and more!'
   codeorg_homepage_hoc2018_video: 'Watch our video'
-  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
-  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
+  hourofcode_homepage_hoc2018_header_line1: '世界中の誰でもHour of Codeのイベントを開催できます。45以上の言語の1時間のチュートリアルが用意されています。経験は必要ありません。'
+  hourofcode_homepage_hoc2018_header_line2: '4歳から104歳まで。'
   hoc2018_tutorial_mchoc_description: 'コードブロックで、アレックスやスティーブをマインクラフト世界の冒険に連れ出しましょう。'
   hoc2018_minecraft_aquatic_title1: "Minecraft Voyage Aquatic"
   hoc2018_minecraft_with_microsoft: "In partnership with"
   hoc2018_minecraft_thank_microsoft: "We thank Microsoft for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century."
-  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
-  cookie_banner_more_information: "See Code.org's Privacy Policy."
-  cookie_banner_accept: 'I agree'
+  cookie_banner_message: 'このサイトの閲覧を継続するか「同意する」をクリックすることで、クッキーがあなたのコンピューターやデバイスに保存されることに同意することになります。'
+  cookie_banner_more_information: "Code.orgのプライバシーポリシーを参照する。"
+  cookie_banner_accept: '同意する'
   front_header_banner: '%{campaign_date} は、史上最大の学習イベントに参加しよう'
-  front_intro_default: 'Hour of Code は、180カ国以上から数千万人の生徒が参加する世界的なムーブメントです。誰でも、どこでもHour of Codeのイベントを開催できます。1時間のチュートリアルは45ヵ国の言語に翻訳されています。<strong>4歳から104歳まで</strong>、経験は必要ありません。'
-  front_intro_default_2: 'A global movement in 180+ countries.'
+  front_intro_default: 'Hour of Code は、180カ国以上から数千万人の生徒が参加する世界的なムーブメントです。世界中の誰でもHour of Codeのイベントを開催できます。45以上の言語の1時間のチュートリアルが用意されています。<strong>4歳から104歳まで</strong>、経験は必要ありません。'
+  front_intro_default_2: '180ヵ国以上に渡る世界的なムーブメント。'
   front_watch_video: '新しいビデオを見る'
   front_watch_regular_video: 'ビデオを見る'
   front_volunteers: 'エンジニアボランティアを募集しています'
   front_start_learning: '学習を開始しましょう'
-  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_heading: 'アメリカ合衆国にあるウェブサイトを利用することに同意しますか？'
   gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
   gdpr_dialog_link_intro: 'For details see our'
-  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_privacy_policy: 'プライバシーポリシー'
   gdpr_dialog_logout: 'Logout'
   gdpr_dialog_yes: 'Yes'
   header_menu_resources: '資料'
@@ -211,8 +214,8 @@ ja:
   front_join_us_volunteer_header: 'Hour of Code のボランティア'
   front_join_us_tutorials: "今年の新しいチュートリアルをお試しください!"
   front_join_us_tutorials_link: '<i>200 以上のチュートリアルとレッスン プラン</i> の拡張リストをフィルタして参照! 様々なサブジェクト エリア、複数のハードウェア ニーズ、そしてすべての経験レベルの学生のためのアクティビティを見つけて下さい。'
-  front_join_us_robotics: 'ロボットはある？'
-  front_join_us_robotics_link: 'Hour of Codeをサポートするための以下のロボット パートナーに感謝します! あなたの教室にロボットがある場合、ロゴをクリックしてロボット関連のアクティビティのリストを見つけて下さい!'
+  front_join_us_robotics: 'ロボットや回路を獲得！'
+  front_join_us_robotics_link: '生徒と一緒に使うロボットや物理コンピューティングキット一式が必要ですか？私たちの寛大なパートナーたちが100を超える教室に寄付しています！参加するにはHour of Codeを登録してください。（教室はCode.orgが選定します。アメリカ合衆国のみ）'
   front_join_us_teacher: '先生ですか？'
   front_join_us_inspire: '生徒たちを盛り上げてください。'
   front_join_us_inspire_link: '1時間のHour of Codeの授業。'
@@ -267,13 +270,13 @@ ja:
   signup_your_event: 'イベントを登録'
   signup_host_an_hour: '開催する'
   signup_match_volunteer: '日本で働くソフトウェアエンジニアを探すのを助けて欲しい'
-  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
-  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_opt_in: 'Code.orgコースのアップデート、地元の何かよい機会、あるいはその他コンピューターサイエンスのニュースなどメールで連絡してもよいですか？'
+  signup_email_preference_privacy: '（プライバシーポリシーをご覧ください）'
   signup_email_preference_yes: 'Yes'
   signup_email_preference_no: 'No'
   signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "複数のイベントを開催する場合は、それぞれに一意の名前またはメールアドレスを提出してください。我々は、名前とメールアドレスの組み合わせごとに1 つのイベントとしてカウントします。"
-  signup_registration_deadline: "Hour of Codの登録締め切りは 12 月 12 日。"
+  signup_registration_deadline: "Hour of Codeの登録締切は12月11日です。"
   signup_name_placeholder: "お名前\n"
   signup_email_placeholder: 'you@example.com'
   signup_organization_name_placeholder: "例えば、リンカーン ・ ハイスクール"
@@ -295,7 +298,7 @@ ja:
   social_hoc2018_code_org_what_create: "Code.org: What will you create?"
   social_hoc2018_creativity_in_are_you: "The #HourOfCode is about creativity. I’m in! Are you?"
   social_hoc2018_dance_party: "Hour of Code: Dance Party"
-  social_hoc2018_dance_what_create: "Do a little dance. Make a little code. What will you create?"
+  social_hoc2018_dance_what_create: "Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   social_hoc2018_every_student: "Every student deserves the opportunity to express their creativity with computer science."
   social_hoc2018_every_student_try_what_create: "Every student deserves the opportunity to express their creativity with computer science. Try your hand at the new tutorials. What will you create?"
   social_hoc2018_hoc_coming_create: "The Hour of Code is coming. What will you create?"
@@ -303,10 +306,11 @@ ja:
   social_hoc2018_join: "全ての子供に機会を得る権利があります"
   social_hoc2018_mc: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   social_hoc2018_mc_creativity: "Use your creativity and problem solving skills to explore and build underwater worlds with code."
-  social_hoc2018_what_create: "What will you create?"
+  social_hoc2018_what_create: "何を作りますか？"
+  social_hoc2018_global_movement: "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
   map_title: "Hour of Code の地図"
-  map_header: '世界中でHour of Code 2017に登録された#個のイベント'
-  map_header_count_year: '%{event_count} events registered in %{year}'
+  map_header: '世界中でHour of Code 2017に登録された#回のイベント'
+  map_header_count_year: '%{year}には%{event_count}回のイベントが登録'
   see_all_events: 'すべてのイベントを見る'
   map_header_company: '# 会社主催'
   map_header_country: 'そのうち # 個は%{country} で行われています。'
@@ -325,16 +329,16 @@ ja:
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'よくある質問'
   hoc_faq_what_is_hoc_q: 'Hour of Codeとは何ですか？'
-  hoc_faq_what_is_hoc_a: "Hour of Codeは、「コード（プログラム）」の謎を解き明かし、誰もがその基本を学ぶことが可能なことを明らかにして、コンピューターサイエンス分野への参加者を拡大するため、1時間のコンピューターサイエンス入門として始まりました。1時間のコーディング（プログラミング）が、いまや様々なコミュニティの取り組みへと拡大し、コンピュータサイエンスの発展のための世界的な取り組みとなっています。<a href='%{tutorials}'>チュートリアルとアクティビティ</a>をご覧ください。この草の根キャンペーンは、世界中の<a href='%{partners}'>400以上のパートナー</a>と200,000以上の教育者によってサポートされています。"
+  hoc_faq_what_is_hoc_a: "Hour of Codeは、「コード（プログラム）」の謎を解き明かし、誰もがその基本を学ぶことが可能なことを明らかにして、コンピューターサイエンス分野への参加者を拡大するため、1時間のコンピューターサイエンス入門として始まりました。1時間のコーディング（プログラミング）が、いまや様々なコミュニティの取り組みへと拡大し、コンピューターサイエンスの発展のための世界的な取り組みとなっています。<a href='%{tutorials}'>チュートリアルとアクティビティ</a>をご覧ください。この草の根キャンペーンは、世界中の<a href='%{partners}'>400以上のパートナー</a>と200,000以上の教育者によってサポートされています。"
   hoc_faq_last_year: "チュートリアルを試す"
   hoc_faq_when_is_hoc_q: 'Hour of Code はいつ行われますか？'
-  hoc_faq_when_is_hoc_a: "Hour of Codeは、毎年<a href='%{csedweek_url}'>コンピュータサイエンス教育週間</a>の間に実施されます。%{campaign_date_year}年のコンピュータサイエンス教育週間は%{campaign_date_full}ですが、あなたは年間を通じてHour of Codeを開催できます。コンピュータサイエンス教育週間は、コンピュータの先駆者<a href='%{grace_hopper}'>アドミラル・グレース・マーレー・ホッパー</a>の誕生日 (1906年12月9日) を記念して毎年開催されています。"
+  hoc_faq_when_is_hoc_a: "Hour of Codeは、毎年<a href='%{csedweek_url}'>コンピューターサイエンス教育週間</a>に実施されます。%{campaign_date_year}年のコンピューターサイエンス教育週間は%{campaign_date_full}ですが、あなたは年間を通じてHour of Codeを開催できます。コンピューターサイエンス教育週間は、コンピューターの先駆者<a href='%{grace_hopper}'>アドミラル・グレース・マーレー・ホッパー</a>の誕生日 (1906年12月9日) を記念して毎年開催されています。"
   hoc_faq_why_cs_q: 'なぜコンピュータサイエンスなのですか？'
-  hoc_faq_why_cs_a: "<i>すべての</i>生徒はコンピュータサイエンスを学ぶ機会を与えられるべきです。それは、問題解決能力、論理的思考、創造性を育む手助けになります。早期に始めることにより、21世紀のいずれのキャリアパスにおいても成功する基盤を身に付けることができます。詳しい統計データは<a href='%{stats_url}'>ここ</a>を参照してください。"
+  hoc_faq_why_cs_a: "<i>すべての</i>生徒はコンピューターサイエンスを学ぶ機会を与えられるべきです。それは、問題解決能力、論理的思考、創造性を育む手助けになります。早期に始めることにより、21世紀のいずれのキャリアパスにおいても成功する基盤を身に付けることができます。詳しい統計データは<a href='%{stats_url}'>ここ</a>を参照してください。"
   hoc_faq_how_participate_q: 'どうすればHour of Codeの運動に参加できますか?'
   hoc_faq_how_participate_a: "<a href='/how-to'>イベント開催ガイド</a>を見て、プランを立て始めましょう。Hour of Codeのイベントは、学校や地域コミュニティー、学校での課外活動等様々な場所で簡単に開催することができます。もしくは、%{campaign_date} の期間内にご自分で試していただいても問題ありません！"
   hoc_faq_behind_hoc_q: 'Hour of Codeは誰が運営しているのですか?'
-  hoc_faq_behind_hoc_a: "Hour of Codeは、Hour of Codeとコンピュータサイエンス教育週間の<a href='%{partner_url}'>諮問委員会と審査委員会</a>、およびマイクロソフト、アップル、アマゾン、ボーイズ・アンド・ガールズ・クラブ・オブ・アメリカ、大学の理事会を含む、Hour of Codeを一体となって支援しているパートナーたちの、前例のない連携により運営されています。"
+  hoc_faq_behind_hoc_a: "Hour of Codeは、Hour of Codeとコンピューターサイエンス教育週間の<a href='%{partner_url}'>諮問委員会と審査委員会</a>、およびマイクロソフト、アップル、アマゾン、ボーイズ・アンド・ガールズ・クラブ・オブ・アメリカ、大学の理事会を含む、Hour of Codeを一体となって支援しているパートナーたちの、前例のない連携により運営されています。"
   hoc_faq_host_q: "プログラミングについて知らなくても、イベントを開催できますか？"
   hoc_faq_host_a: "もちろんです。Hour of Codeのチュートリアルは、生徒が自分のペースで一人で進められるようになっています。イベントを開催するにあたってあなたがやるべきことは<a href='%{codeorg_url}/learn'> 現在のチュートリアルを試してみる</a>ことだけです。後は私たちのチュートリアルに任せてください。それではいますぐ、<a href='/resources/how-to'> How to ガイド</a> を読んでイベントを計画しましょう！"
   hoc_faq_devices_q: "生徒はどのようなデバイスを使用する必要がありますか？"
@@ -354,7 +358,7 @@ ja:
   hoc_faq_count_hoc_q: "Hour of Codeの参加者の数はどうやって測っていますか？"
   hoc_faq_map_q: "なんで私のイベントに関するドットが地図上に表示されないのですか？"
   hoc_faq_map_a: "大変申し訳ありませんが、数多くのイベント主催者の方に登録頂いたため、いくつかのイベントをまとめて表示している場合があります。地図の上部に表示されている数字をクリックすることで、全てのイベントのリストが表示されますので、ご確認ください。また、イベントの追加後48時間ほど、地図上に反映されるまで時間がかかりますので、ご了承ください。"
-  hoc_faq_count_hoc_a: "Hour of Code の記録システムは、正確な利用者測定をしていません。Hour of Code の参加者を追跡する際に、生徒がログインや登録をしなくて済むようにするため、個々の生徒のＩＤを完全にはカウントしません。結果的に、参加者を多めに数えたり、少なめに数えたりします。詳しくは <a href='%{codeorg_url}/loc'>こちら</a> を参照してください。"
+  hoc_faq_count_hoc_a: "Hour of Codeの記録システムの利用者数測定は正確ではありません。Hour of Codeの参加者を追跡する際に、生徒がログインや登録をしなくて済むようにするため、個々の生徒のIDを完全にはカウントしていません。結果として参加者のカウントは多めだったり少なめだったりします。詳しくは<a href='%{codeorg_url}/loc'>こちら</a>を参照してください。"
   hoc_faq_one_hour_q: "どれくらいのことを、１時間で学ぶことができますか？"
   hoc_faq_one_hour_a: "Hour of Codeのゴールは、1時間で誰もをコンピュータサイエンスの専門家にすることではありません。むしろ、Hour of Codeを通じてコンピュータサイエンスが楽しく創造的で、誰でも取り組めることに気づいてほしいと思っています。ですので、Hour of Codeの成功は、どれくらい詳しく生徒が学んだかではなく、どれだけ幅広く多くの人がこの運動に参加し、最終的にコンピュータサイエンスをもっと勉強したいと思ったかで測られます。その結果、既に数百万人の先生や生徒がもっと勉強したいと思い、一部の生徒はコンピュータサイエンスを大学での専攻にしたいと考えています。これは素晴らしいことです。<br/>\n<br/>\nまた、先生方が1時間のアクティビティを通して、コンピュータサイエンスの学位を持っていなくてもコンピュータサイエンスの授業ができる、という自信を持ってもらうことも目的の一つです。既に、数千人の先生が、コンピュータサイエンスをより深く学ぶために、オンラインコースや大学の授業に参加しています。更に言えば、教育委員会の人々が生徒がをコンピュータサイエンスを学びたいと思っていることを実感し、また先生がそれを教える十分なスキルを持っていることも証明することも、Hour of Codeの目的です。"
   hoc_faq_more_questions_q: "この他に質問がありますか？"
@@ -374,9 +378,9 @@ ja:
   stats_pinterest: "Pinterest: 2 年"
   stats_instagram: "Instagram: 14 ヶ月"
   stats_hoc: "Hour of Code: 5 日"
-  stats_global: "1億人以上の生徒が Hour of Code を使ってみています"
+  stats_global: "これまで1億人以上の生徒が Hour of Code にトライしています"
   stats_girls_more: "過去70年の合計よりも多くの女子生徒が、コンピュータサイエンスを学んでいます。"
-  stats_females: "コンピュータサイエンスへの女性の参加は、高校課程、大学課程、および労働人口のわずか20％です。"
+  stats_females: "コンピューターサイエンスへの女学生の参加は、高校課程、大学課程、および労働人口のわずか20～25％です。"
   stats_females_more: "コードの時間中、女性は全参加者の<b> 50％を占めます</b>！"
   stats_nina: '"毎日、同じ結果が得られました&mdash; 100 ％ の取り組み。"-ニーナ ・ ニコルズ ピーリー、教師。'
   stats_student: '"<b>一生に一度</b> のチャンスだと思っていました。"-マリアナ 　アルザテ、小学 5 年生。'
@@ -416,8 +420,11 @@ ja:
   videos_hoc_2014: Hour of Code - 誰でも学べるプログラミング
   videos_obama_cs: オバマ大統領もコンピューター科学を
   videos_anybody_can_learn: 誰でも学べるプログラミング （１分）
+  videos_creativity: What is Creativity?
+  videos_creativity_series: What is Creativity? View Full Series.
   title_country_resources: 日本の方向けの資料
   title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
+  title_how_to_promote: みんなに広めよう
   title_how_to_districts: 地域向けのイベント開催ガイド
   title_how_to_events: Hour of Codeのイベント開催ガイド
   title_how_to_organizations: 組織で Hour of Code を開催する方法
@@ -482,6 +489,7 @@ ja:
   learn_banner_teachers: "先生向け: <a id='teacher_banner_host'>Host an hour</a> or <a id='teacher_banner_howto'>read the How-To Guide</a>"
   learn_robotics_banner_heading: 'ロボット工学'
   learn_robotics_banner_blurb: 'ロボットをお持ちですか？あなたのロボットとアクティビティを組み合わせて年齢を超え、全ての生徒を対象とした、手に触れることができるHour of Codeを造りましょう！'
+  tutorial_danceparty_name: "Dance Party"
   tutorial_chibitronics_name: "Chibitronics: Illuminated Story"
   tutorial_athlete_name: "自分だけのスポーツゲームのコードを書く"
   tutorial_moana_name: "モアナと伝説の海: Wayfinding with Code"
@@ -499,7 +507,7 @@ ja:
   tutorial_textcomp_name: "テキスト圧縮"
   tutorial_encryption_name: "簡易暗号化"
   tutorial_kanopixel_name: "Kanoピクセルハック"
-  tutorial_foos_name: "FOOSとcodeSparkアカデミー"
+  tutorial_foos_name: "codeSpark アカデミー with The Foos - パズルを解く"
   tutorial_tynkerdd_name: "ドラゴンダッシュ"
   tutorial_tynkerana_name: "アナログ時計のSTEM Kit"
   tutorial_vidcard_name: "Vidcode: 親友へのグリーティングカード"
@@ -760,7 +768,7 @@ ja:
   tutorial_playtune_name: "Play That Tune App"
   tutorial_computeit_name: "それを計算する"
   tutorial_codesterssj_name: "スペースジョーク"
-  tutorial_cmchat_name: "Python Chatbot"
+  tutorial_cmchat_name: "Trivia Chatbot"
   tutorial_tynkerdb_name: "ドラゴンブラスト"
   tutorial_cmbuild_name: "ゲームビルダー"
   tutorial_robotrattle_name: "ロボットラトル"
@@ -797,7 +805,7 @@ ja:
   tutorial_codesterscr_name: "応援ルーチン"
   tutorial_grokdisease_name: "病気の流行"
   tutorial_techec_name: "Explaining Closures in JS"
-  tutorial_rgbegin_name: "RoboGarden - Beginner"
+  tutorial_rgbegin_name: "RoboGarden Coding - Beginner"
   tutorial_myradream_name: "Actimator: Myra's Dream"
   tutorial_thinkfun_name: "ロボット修復：あなたはロボットの脳を修復できますか？"
   tutorial_hopfireworks_name: "Make a Fireworks App on iPad/iPhone"
@@ -823,7 +831,7 @@ ja:
   tutorial_gpbcatapult_name: "カタパルトを構築する"
   tutorial_quorumastro_name: "天文学におけるコーディング"
   tutorial_alicewonder_name: "不思議の国のアリス"
-  tutorial_rginter_name: "RoboGarden - Intermediate"
+  tutorial_rginter_name: "RoboGarden Coding - Intermediate"
   tutorial_bloxmobscience_name: "iOS and Android Science Apps"
   tutorial_cssgrid_name: "グリッドガーデン"
   tutorial_bloxmobdesign_name: "アプリケーション設計プロセス"
@@ -837,7 +845,7 @@ ja:
   tutorial_techcpp_name: "7 Features of C++17 that will simplify your code"
   tutorial_beetik_name: "Code the Music of Franz Liszt"
   tutorial_codedj_name: "Compose Music with Code DJ"
-  tutorial_rgadvan_name: "RoboGarden - Advanced"
+  tutorial_rgadvan_name: "RoboGarden Coding - Advanced"
   tutorial_codehsrn_name: "Creating Apps with React Native"
   tutorial_codehswd_name: "Web Design with CodeHS"
   tutorial_turtlerobot_name: "タートルロボット"
@@ -924,13 +932,13 @@ ja:
   tutorial_3dbearmars_name: "The Mars Pioneers"
   tutorial_alexaskill_name: "Alexa Blueprints: Create an Alexa Skill"
   tutorial_bitsboxyak_name: "Yak Attack! Make a Card with Typed Code"
-  tutorial_blockscadbargraphs_name: "Bar Graphs"
-  tutorial_blockscadbirdhouses_name: "Birdhouses"
-  tutorial_blockscadclock_name: "Analog Clock"
-  tutorial_blockscaddinner_name: "Dinner Robot"
-  tutorial_blockscadicecream_name: "Ice Cream Machine"
-  tutorial_blockscadpizza_name: "Pizza Printer"
-  tutorial_blockscadsugar_name: "Sugar Cubes"
+  tutorial_blockscadbargraphs_name: " 棒グラフ"
+  tutorial_blockscadbirdhouses_name: "バードハウス"
+  tutorial_blockscadclock_name: "アナログクロック"
+  tutorial_blockscaddinner_name: "ディナーロボット"
+  tutorial_blockscadicecream_name: "アイスクリームマシン"
+  tutorial_blockscadpizza_name: " ピザプリンタ"
+  tutorial_blockscadsugar_name: " 角砂糖"
   tutorial_bsgridlight_name: "GridLight: Hello World"
   tutorial_bpartscratch_name: "Art & Music: Color (Scratch)"
   tutorial_bpartvid_name: "Art & Music: Color (Vidcode)"
@@ -969,7 +977,7 @@ ja:
   tutorial_codemojipizza_name: "Make Pizza with JavaScript"
   tutorial_moonlander_name: "Moon Lander"
   tutorial_sushicards_name: "Beginner Scratch Sushi Cards"
-  tutorial_codesparkcreate_name: "codeSpark Academy with The Foos: Create Games"
+  tutorial_codesparkcreate_name: "codeSparkアカデミー: ゲームの作成"
   tutorial_hardvsoft_name: "Team Hardware vs. Team Software"
   tutorial_codestersecard_name: "Making an E-Card"
   tutorial_codesterslogo_name: "Your Company Logo"
@@ -1062,6 +1070,15 @@ ja:
   tutorial_vidcodeplastic_name: "Plastic Pollution PSA"
   tutorial_vidcodetypeface_name: "Create your own typeface!"
   tutorial_washustorm_name: "Stormy Science"
+  tutorial_activitypackets_name: "Wonder Workshop Activity Packets"
+  tutorial_googlerookie_name: "Rookie Collage"
+  tutorial_tommyturtle_name: "Tommy the Turtle: Learn to Code"
+  tutorial_mazyad_name: "Mazyad's Adventures"
+  tutorial_gamemaker_name: "Game Maker"
+  tutorial_duckrace_name: "The Big Duck Race"
+  tutorial_allcancodeapps_name: "Allcancode Platform: Build web and mobile apps in Blockly"
+  tutorial_n2y_name: "Bitt Bott Explores Earth"
+  tutorial_danceparty_shortdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   tutorial_chibitronics_shortdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_shortdescription: "バスケットボールゲームや、様々なスポーツの混合競技を造ろう！"
   tutorial_moana_shortdescription: "モアナは勇敢で怖いもの知らず、自分の道を見つけようと決意します"
@@ -1079,7 +1096,7 @@ ja:
   tutorial_textcomp_shortdescription: "テキスト圧縮ウィジェットでロスレス圧縮法を学ぶ"
   tutorial_encryption_shortdescription: "ここでは暗号化の大切さと、秘密のメッセージを解読する簡単な手法を紹介します。"
   tutorial_kanopixel_shortdescription: "テトリスからミネクラフトまで、ビデオゲームの歴史から象徴的なイメージを通してあなたの方法をコードしてください！"
-  tutorial_foos_shortdescription: "\"The Foos\" is a fun, pre-reader friendly game to learn about programming."
+  tutorial_foos_shortdescription: "シーケンシングやループのような基本的なコンピュータサイエンスの概念を教えるパズルを解くために愛らしいFoosをコードしてください。 コードスパーク・アカデミーの賞を受賞した「言葉のない」インターフェースで、どこにいても誰もがコードを学ぶことができます。 初心者のコーダーと先読み歓迎！"
   tutorial_tynkerdd_shortdescription: "宝のための壮大な探求に行く。"
   tutorial_tynkerana_shortdescription: "動作するアナログ時計を作成します。"
   tutorial_vidcard_shortdescription: "Learn how to make a greeting card with JavaScript!"
@@ -1251,7 +1268,7 @@ ja:
   tutorial_tlcaus_shortdescription: "あなたが選択したカードを予測し、検索アルゴリズムと計算上の思考の両方を導入する魔法のトリックを行います。"
   tutorial_oralhist_shortdescription: "The Computing Educators Oral History Project is a collection of interviews as well as teaching materials and tools tied to the CEOHP collection."
   tutorial_tlcmicro_shortdescription: "人々は、異なる電子レンジデザインを競い合って、簡単な作業を行うのが最も簡単なものを見ています。いくつかは他のものよりはるかに複雑であると見なされます。"
-  tutorial_imathematician_shortdescription: "囚人のジレンマの変形をプログラムするために数学(ゲーム理論) とコンピュータサイエンスを使用する"
+  tutorial_imathematician_shortdescription: "数学（ゲーム理論）とコンピューターサイエンスを使用して「囚人のジレンマ」の変形版をプログラムする"
   tutorial_tlcmagic_shortdescription: "単語に関する興味深い計算特性に基づいて魔法を探る。"
   tutorial_scratchmus_shortdescription: "楽器を選択し、音を追加し、キーを押して音楽を再生します。"
   tutorial_scratchanim_shortdescription: "Make your name come to life! Animate the letters by coding in Scratch."
@@ -1504,13 +1521,13 @@ ja:
   tutorial_3dbearmars_shortdescription: "The Mars Pioneers is a project-based learning module that teaches facts about Mars and the crucial conditions for human beings to survive there. The students will build a colony using Augmented Reality and 3D-print the colony facilities."
   tutorial_alexaskill_shortdescription: "Create your own Alexa Skills using Alexa Skill Blueprints - learn about using voice, artificial intelligence, and machine learning to create an Alexa Skill of your choosing. "
   tutorial_bitsboxyak_shortdescription: "Type modified JavaScript code to make a greeting card that you can email to friends and family. Yak Attack! is a completely open-ended activity that introduces variables, motion commands, loop functions, and more."
-  tutorial_blockscadbargraphs_shortdescription: "Students will write code that lets them quickly customize and analyze their own bar graphs. "
-  tutorial_blockscadbirdhouses_shortdescription: "Students will run a birdhouse-building company, converting units, calculating dimensions, and using variables to scale their products. "
-  tutorial_blockscadclock_shortdescription: "Students will program a 3D model of an analog clock that can be set to show any time. "
+  tutorial_blockscadbargraphs_shortdescription: "生徒は、自分の棒グラフをすばやくカスタマイズして分析できるコードを作成します。"
+  tutorial_blockscadbirdhouses_shortdescription: "\n学生は、バードハウスビルディング会社を経営し、単位を変換し、次元を計算し、変数を使って自社の製品を拡大します。"
+  tutorial_blockscadclock_shortdescription: "学生はいつでも表示できるように設定できるアナログ時計の3Dモデルをプログラミングします。"
   tutorial_blockscaddinner_shortdescription: "Students will write a program using variables and coordinates to help a robot set their dinner table for them!"
-  tutorial_blockscadicecream_shortdescription: "Students will program an ice cream machine to create 3D ice cream cones with different numbers and sizes of ice cream scoops."
-  tutorial_blockscadpizza_shortdescription: "Students will program a module to create a 3D pizza, calculating circumferences and areas and using loops along the way."
-  tutorial_blockscadsugar_shortdescription: "Students will use a programmed sugar-cube generator to explore volume and variables. "
+  tutorial_blockscadicecream_shortdescription: "\n生徒は3Dピザを作成し、円周と面積を計算し、途中でループを使用するモジュールをプログラミングします。"
+  tutorial_blockscadpizza_shortdescription: "\n生徒は3Dピザを作成し、円周と面積を計算し、途中でループを使用するモジュールをプログラミングします。"
+  tutorial_blockscadsugar_shortdescription: "生徒はプログラムされた砂糖キューブジェネレータを使用して、量と変数を調べます。"
   tutorial_bsgridlight_shortdescription: "Choose a Bot friend to help prepare for the Lighthouse Festival. Code your Bot to stop those pesky rogue bots and save the day!"
   tutorial_bpartscratch_shortdescription: "Creative Coding - developed with Scratch and Vidcode - pairs block- and text-based projects with hundreds of cross-curricular topics. "
   tutorial_bpartvid_shortdescription: "Creative Coding - developed with Scratch and Vidcode - pairs block- and text-based projects with hundreds of cross-curricular topics. "
@@ -1549,7 +1566,7 @@ ja:
   tutorial_codemojipizza_shortdescription: "This course is designed to teach students the fundamentals of JavaScript objects. Students will learn the basic types of data that can be stored in variables."
   tutorial_moonlander_shortdescription: "Moon Lander is a Game Builder course with 17 exercises that guides students on how to build their own physics-based game."
   tutorial_sushicards_shortdescription: "Make a game where you move a shark around to try and catch fish."
-  tutorial_codesparkcreate_shortdescription: "Ever wanted to design and code your own video game? Choose from two game kits that guide you through creating and coding a Mario-style video game using codeSpark Academy's no words interface. Beginner coders and pre-readers welcome!"
+  tutorial_codesparkcreate_shortdescription: "これまで自分のビデオゲームをデザインしてコード化したかったのですか？ codeSpark Academyの「作成」モードを開始してください。 私たちの言葉のないインターフェイスを使用してマリオスタイルのビデオゲームを作成し、コーディングするための2つのゲームキットから選択してください。 初心者のコーダーと先読み歓迎！"
   tutorial_hardvsoft_shortdescription: "Through an illustrated children's story and worksheets, your students will learn the differences between hardware and software."
   tutorial_codestersecard_shortdescription: "Build up your programming skills as you learn how to create an electronic greeting card that you can share with your teacher, family, or friends! "
   tutorial_codesterslogo_shortdescription: "Use code to get creative and design your own company logo! You'll learn coding basics in the programming language, Python. After you work through the tutorial, you'll have all the skills you need to create the logo for your personal brand!"
@@ -1642,6 +1659,15 @@ ja:
   tutorial_vidcodeplastic_shortdescription: "Learn to use loops, sin waves and customized emojis to make a unique project."
   tutorial_vidcodetypeface_shortdescription: "Create your own typeface using shapes and elements of typography. Type has more elements than you may have realized!"
   tutorial_washustorm_shortdescription: "Learn how to program an incoming storm."
+  tutorial_activitypackets_shortdescription: "Find hours of family-friendly fun with Wonder Workshop's printable packets of creative coding activities. Bring coding to life with Dash, Dot, and Cue robots by downloading these online and offline activities to use during Hour of Code and beyond!"
+  tutorial_googlerookie_shortdescription: "In this activity, you'll code a Rookie themed collage using Blockly, an introductory coding language. You'll use sequences, variables and loops to create a unique piece that highlights your creativity!"
+  tutorial_tommyturtle_shortdescription: "Help young kids learn the basics of coding with Tommy the Turtle! "
+  tutorial_mazyad_shortdescription: "This product will broaden our boundaries to create an integrated paper version with computerized applications and an alternative if the computer is not used for any reason. It will also serve as an introduction to understanding programming in general."
+  tutorial_gamemaker_shortdescription: "Game Maker is an open ended activity where students can create anything they want using a simple code wizard. Just click on the picture of a cute little monster and choose one of the options in the menu. More advanced tutorials are also included for those wanting to go deeper into game making."
+  tutorial_duckrace_shortdescription: "In this course you will solve programming tasks to help Toni the duck collect coins for its holiday savings. At the end of the course you create your own game."
+  tutorial_allcancodeapps_shortdescription: "Use the Allcancode Platform to create web and mobile apps from design to delivery."
+  tutorial_n2y_shortdescription: "Help Bitt Bott explore Earth using direction arrows."
+  tutorial_danceparty_longdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   tutorial_chibitronics_longdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_longdescription: "バスケットボールゲームや、様々なスポーツの混合競技を造ろう！"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
@@ -1659,7 +1685,7 @@ ja:
   tutorial_textcomp_longdescription: "どこかの時点で、これ以上速くビットを送信できないという物理的な限界が必ず来ます。大容量の情報をより速く送信する場合、同一情報をより少ないビット数で表す方法を考える必要があります。つまりデータを圧縮する必要があります。このレッスンで生徒はテキスト圧縮ウィジェットを使用して、テキストのパターン（大型）を見つけ出し、それを記号に置き換えることで、英文字テキスト文節を圧縮します。"
   tutorial_encryption_longdescription: "生徒は、暗号化の大切さと、秘密のメッセージを解読する簡単な手法を学びます。生徒は、古典的なシーザー暗号/ランダム換字暗号で変換されたメッセージを自分自身の力で解読します。これにより生徒は、インターネットで情報を送信する際の秘密保護の大切さや、高機能コンピュータツールが発達した時代にはより洗練された暗号化技術が必要となることを深く理解します。"
   tutorial_kanopixel_longdescription: "Creators of all ages learn to code in a real programming language and watch their commands come to life by drawing a sequence of 13 pictures with code. They'll learn along the way about video game art history from Pong and other retro games through 8-bit art and Minecraft, weaving together computer science with art, history, and storytelling. The implementation is flexible––you can spend 1 hour or a few hours over one or multiple sessions. Learners can complete Pixel Hack on their own using guidance within the challenges, or you can turn Pixel Hack into an instructor-led journey, with a comprehensive educator manual full of suggestions. Students will be encouraged to add their own creative flair by hacking our challenges, to earn the Pixel Hacker Certificate."
-  tutorial_foos_longdescription: "\\t\nかわいらしいFoosをコードして、シークエンスやループのような基本的なコンピュータサイエンスの概念が教えるパズルを解きましょう。受賞歴のある、codeSpark Academyの「言葉のない」インターフェースで、どこの誰もがコードを学べます。初心者のコーダーとプレリーダーを歓迎します。"
+  tutorial_foos_longdescription: "シーケンシングやループのような基本的なコンピュータサイエンスの概念を教えるパズルを解くために愛らしいFoosをコードしてください。 コードスパーク・アカデミーの賞を受賞した「言葉のない」インターフェースで、どこにいても誰もがコードを学ぶことができます。 初心者のコーダーと先読み歓迎！"
   tutorial_tynkerdd_longdescription: "Design your own custom dragon, then use programming to guide it through fun puzzles on its quest for treasure and coins! You'll have to navigate through complex castles, find power-ups, and conquer knights to get all the treasure."
   tutorial_tynkerana_longdescription: "Use your knowledge of math and geometry to create a working analog clock with moving second, minute, and hour hands. You'll need to calculate the angle that each hand should point based on what time it is. When you're done, you can add in reminders about what you need to do throughout the day to make your own alarm clock!"
   tutorial_vidcard_longdescription: "Learn how to make a greeting card with JavaScript!\n\nYou will learn how to manipulate your own videos by accessing each and every pixel and telling it what to do with CODE!\n\nYou can also upload and record your own footage to personalize the experience.\n\nCreated in partnership with GSGNY."
@@ -1896,7 +1922,7 @@ ja:
   tutorial_persistence_longdescription: "新たな未解決の問題に直面すると、人はしばしば非常な困難を覚えます。もしクリエイティブで役に立つ洗練された何かを造る機会を得たいなら、たとえ幾度か失敗しようとも、困難な問題に果敢に取り組む必要があります。このレッスンでは、失敗は全ての終焉ではなく、前進するためのヒントだということを学びます。"
   tutorial_getloopy_longdescription: "ループはある一定の回数を繰り返す行動を書く際に使用します。このレッスンで生徒は、一定の纏まった行動を単一のループに変換する方法を学びます。"
   tutorial_createface_longdescription: "The aim of this activity is to demonstrate how apparently complicated behaviour can be programmed using some simple rules. It also shows how programs are just rules followed by computers and specifically introduces object-based programming. The activity shows how breaking a program into objects can be much easier to write than trying to write it in one go. The class get to write some simple programs to control the face they created."
-  tutorial_happymaps_longdescription: "コンピューターサイエンスの根底には常にアルゴリズムと呼ばれるものがあります。「アルゴリズム」というと、何か複雑なものに聞こえるかもしれませんが、実は単に命令の一覧に過ぎません。この命令に従うことで誰もが同一の結果を得ることが可能になります。将来に亘り生徒たちにコンピュータサイエンス教育を施す堅固な土台作りとして、ここではアルゴリズムに関する確かな理解構築に焦点を当てて行きます。"
+  tutorial_happymaps_longdescription: "コンピューターサイエンスの根底には常にアルゴリズムと呼ばれるものがあります。「アルゴリズム」というと、何か複雑なものに聞こえるかもしれませんが、実は単に命令の一覧に過ぎません。この命令に従うことで誰もが同一の結果を得ることが可能になります。生徒たちにコンピューターサイエンス教育を施す堅固な土台作りとして、ここではアルゴリズムに関する確かな理解構築に焦点を当てて行きます。"
   tutorial_moveit_longdescription: "このレッスンで生徒は、明確な命令を伝えるには共通の言語が必要だということを理解します。生徒は簡単な手振りの組み合わせで相互に指示を出す練習をします。言語に対する理解が進んだ時、生徒は複数の命令を事前に伝え、相互に「プログラム」することを学びます。"
   tutorial_bigevent_longdescription: "イベントは事前に書き込まれたアルゴリズムに多様性を追加することができます。ユーザは時折、希望するタイミングでプログラムが応答できるようにしたいと思うことがあるでしょう。イベントはそのためにあります。"
   tutorial_gpp_longdescription: "相互に「プログラミング」し、絵を描くことを通し、生徒はプログラミングの本来の意味を理解し始めます。このアクティビティは、生徒が相互に教え合いながら、前もって用意された絵を再現することを目指し、グラフ用紙のマス目に色を塗ることから始めます。"
@@ -1920,7 +1946,7 @@ ja:
   tutorial_playtune_longdescription: "A blocks language is used to solve musical puzzles by writing code to match tunes played on a piano keyboard. Sequence, selection, and repetition algorithms are needed to solve the puzzles. After the 9th level, users can create their own tune and download it as an app for an Android device. Students can also modify the app by following a link to the App Inventor source code."
   tutorial_computeit_longdescription: "Let's switch roles. This time YOU are the computer! Read and interpret the programs to find the right trajectory and win the challenges. You will have to focus and use your intuitive abilities to understand some core concepts of programming."
   tutorial_codesterssj_longdescription: "In this activity, students use our drag-to-text toolkit to start coding in Python right away! As they work through introductory skill building activities, students begin to learn about basic syntax, variables, and events! They'll use multiple sprites to set up a joke telling scenario that they can share with their friends! *Electronic sharing requires student sign up."
-  tutorial_cmchat_longdescription: "Python Chatbot introduces kids ages 14+ to Python in 15 exercises. The objective is to code a chatbot that can interact with users and test their trivia knowledge. Python Chatbot teaches python, server side programming, chatbot development, string manipulation, data structures, loops, conditionals and variables."
+  tutorial_cmchat_longdescription: "Join a robot monkey in an hour-long course where you will learn the basics of chatbot programing. In the activity, you will advance through a 15 exercise-long course in which you will learn how to program your very own trivia chatbot."
   tutorial_tynkerdb_longdescription: "ドラゴンをえらんで、宝をさがしに行きます。しんぴてきなジャングルをたびし、しょうがいぶつをくぐりぬけ、パワーアップしていきます。とちゅうでシーケンス、ループ、じょうけんつきロジック、デバックのスキルをまなびます。"
   tutorial_cmbuild_longdescription: "およそ14才以上が対象となる「ゲームデザインコース」では、3つのコースを通してゲームの作り方やゲームに必要なパーツの作成を、ステップバイステップ式で学んでいきます。「プラットフォーマーコース」では、キーボードのユーザーインターフェイスとゲームデザインのゲームの基本的な仕組みをマスターします。「フロッガーコース」 では、古典的なゲームであるFrogger™風のゲームを作成する方法を学びます。「自分だけのスプライト」では、画像やアニメーションの作成方法を学び、自分で作るゲームに利用できるスプライトの作成方法を学びます。"
   tutorial_robotrattle_longdescription: "Robot Rattle teaches students to operate a fully physically simulated robot with the help of a visual coding language by easily dragging & dropping blocks to write code instructions. Students are introduced to the robot and its various moving joints, and learn to move its joints with the use of angles. The robot can push and grab objects in order to direct them to the goal, but also break if moved against obstacles. This activity is targeted to kids aged 13+ and offers easy-to-grasp insights into physical behaviour and robotics. On top of that, anyone with a smartphone and a mobile VR headset will be able to watch the full-scale robot performing the written code."
@@ -1932,7 +1958,7 @@ ja:
   tutorial_grokem_longdescription: "This activity is designed to give you your first experience programming, and has been specially designed for the Hour of Code. Use the programming language Python to explore emoticons and text manipulation."
   tutorial_kodmaze_longdescription: "Build your own mazes to solve and share! Students will pair geometry with programming to build solvable mazes based on given challenges. Challenges include mazes with simple shapes, fractions, symmetry, and specified angles."
   tutorial_codestersa_longdescription: "In this activity, designed for students with some coding experience, students use our drag-to-text toolkit to build an game with player controls! Students learn about variables, randomly generated numbers, game design, and multiple types of events and event triggers, all while scrambling to stay out of the way as asteroids hurtle toward their spaceship! Prereq: variables, parameters."
-  tutorial_cmdodo_longdescription: "A game-based platform for 2nd to 4th graders to learn and practice math with the same easy-to use interface enjoyed in CodeMonkey's \"Coding Adventure\". In 60 interactive challenges, students will improve their math skills with exciting new characters, features and challenges. Using a pixel ruler and protractor to measure distances and angles, students will help the Dodo get to the eggs."
+  tutorial_cmdodo_longdescription: "In this hour-long course, you will write real code as you add, subtract and multiply. Improve your math skills by solving puzzles and helping a dodo find her missing eggs!"
   tutorial_tynkerspace_longdescription: "あなたのうちゅうせんはついらくしてしまいました！さいわいにも、あなたはいきのびることができました。ドラッグ＆ドロッププログラミングをつかって、エイリアンやしょうがいぶつをさけながらスペアパーツをあつめます。うちゅうひこうしをきかんさせるふねを見つけることができるでしょうか？"
   tutorial_gfbloons_longdescription: "In this lesson you will code a shooting monkey tower from the popular Bloons Tower Defense game. By the end of the lesson you will know the angle finding maths and algorithms commonly used in many of today's most popular tower defense games. You will be able to apply this knowledge in your own game. Gamefroot Hour of Code tutorials use a visual programming language using blocks where students simply drag and drop visual blocks to write code."
   tutorial_raspipong_longdescription: "Recreate the classic game of Pong using a Sense HAT and some Python code. This activity can be completed online using the Sense HAT emulator, or by using a Raspberry Pi and the Sense HAT hardware."
@@ -2084,13 +2110,13 @@ ja:
   tutorial_3dbearmars_longdescription: "The Mars Pioneers is a project-based learning module that teaches facts about Mars and the crucial conditions for human beings to survive there. The students will build a colony using Augmented Reality and 3D-print the colony facilities."
   tutorial_alexaskill_longdescription: "Create your own Alexa Skills using Alexa Skill Blueprints - learn about using voice, artificial intelligence, and machine learning to create an Alexa Skill of your choosing. Alexa can tell a joke, sing a song, or share a story. (Amazon login required) Activity can be completed by individuals or teacher lead."
   tutorial_bitsboxyak_longdescription: "Type modified JavaScript code to make a greeting card that you can email to friends and family. Yak Attack! is a completely open-ended activity that introduces variables, motion commands, loop functions, and more. Perfect for kids (and teachers) who are ready to try typed coding for the first time."
-  tutorial_blockscadbargraphs_longdescription: "Students will write code that lets them quickly customize and analyze their own bar graphs. "
-  tutorial_blockscadbirdhouses_longdescription: "Students will run a birdhouse-building company, converting units, calculating dimensions, and using variables to scale their products. "
-  tutorial_blockscadclock_longdescription: "Students will program a 3D model of an analog clock that can be set to show any time. "
+  tutorial_blockscadbargraphs_longdescription: "生徒は、自分の棒グラフをすばやくカスタマイズして分析できるコードを作成します。"
+  tutorial_blockscadbirdhouses_longdescription: "\n学生は、バードハウスビルディング会社を経営し、単位を変換し、次元を計算し、変数を使って自社の製品を拡大します。"
+  tutorial_blockscadclock_longdescription: "学生はいつでも表示できるように設定できるアナログ時計の3Dモデルをプログラミングします。"
   tutorial_blockscaddinner_longdescription: "Students will write a program using variables and coordinates to help a robot set their dinner table for them!"
-  tutorial_blockscadicecream_longdescription: "Students will program an ice cream machine to create 3D ice cream cones with different numbers and sizes of ice cream scoops. They will work with variables, modules, and functions to calculate the cost of a particular ice cream cone based on the area of the spherical ice cream scoops."
-  tutorial_blockscadpizza_longdescription: "Students will program a module to create a 3D pizza, calculating circumferences and areas and using loops along the way."
-  tutorial_blockscadsugar_longdescription: "Students will use a programmed sugar-cube generator to explore volume and variables. "
+  tutorial_blockscadicecream_longdescription: "\n生徒は3Dピザを作成し、円周と面積を計算し、途中でループを使用するモジュールをプログラミングします。"
+  tutorial_blockscadpizza_longdescription: "\n生徒は3Dピザを作成し、円周と面積を計算し、途中でループを使用するモジュールをプログラミングします。"
+  tutorial_blockscadsugar_longdescription: "生徒はプログラムされた砂糖キューブジェネレータを使用して、量と変数を調べます。"
   tutorial_bsgridlight_longdescription: "Choose a Bot friend to help prepare for the Lighthouse Festival. Code your Bot to stop those pesky rogue bots and save the day!"
   tutorial_bpartscratch_longdescription: "Creative Coding - developed with Scratch and Vidcode - pairs block- and text-based projects with hundreds of cross-curricular topics. Projects are scaffolded so that teachers of any subject - regardless of prior experience - can easily introduce coding. The project-based approach positions coding as a means of self-expression for students and gives them a creative way to show what they know."
   tutorial_bpartvid_longdescription: "Creative Coding - developed with Scratch and Vidcode - pairs block- and text-based projects with hundreds of cross-curricular topics. Projects are scaffolded so that teachers of any subject - regardless of prior experience - can easily introduce coding. The project-based approach positions coding as a means of self-expression for students and gives them a creative way to show what they know."
@@ -2127,9 +2153,9 @@ ja:
   tutorial_codehsmusic_longdescription: "Students explore how coding is used in music creation by building their own dynamic eight-count beats and patterns with JavaScript blocks!"
   tutorial_codehssports_longdescription: "Students learn about how coding is used in sports and game design by building an original sports video game that can be shared with their friends immediately!"
   tutorial_codemojipizza_longdescription: "This course is designed to teach students the fundamentals of JavaScript objects. Students will learn the basic types of data that can be stored in variables, from their first boolean all the way to creating their own objects with multiple properties. The activity makes complex concepts easy to understand by using everyone's favourite food: Pizza!"
-  tutorial_moonlander_longdescription: "Moon Lander is a Game Builder course with 17 exercises that guides students on how to build their own physics-based game. In the game, students use code and 6-9th grade physics concepts in order to help a spaceship land safely. Along the way, they will learn about the power of gravity, understand the meaning of thrust force and learn more advanced concepts in coding and game design. "
+  tutorial_moonlander_longdescription: "Learn Physics as you Code! Moon Lander is a Game Builder course with 17 exercises that guide you on how to build your own physics-based game. In the game, you will use code and 6-9th grade Physics concepts in order to help a spaceship land safely on the moon."
   tutorial_sushicards_longdescription: "Make a game where you move a shark around to try and catch fish."
-  tutorial_codesparkcreate_longdescription: "Ever wanted to design and code your own video game? Choose from two game kits that guide you through creating and coding a Mario-style video game using codeSpark Academy's no words interface. Beginner coders and pre-readers welcome!"
+  tutorial_codesparkcreate_longdescription: "これまで自分のビデオゲームをデザインしてコード化したかったのですか？ codeSpark Academyの「作成」モードを開始してください。 私たちの言葉のないインターフェイスを使用してマリオスタイルのビデオゲームを作成し、コーディングするための2つのゲームキットから選択してください。 初心者のコーダーと先読み歓迎！"
   tutorial_hardvsoft_longdescription: "Through an illustrated children's story and worksheets, your students will learn the differences between hardware and software."
   tutorial_codestersecard_longdescription: "Build up your programming skills as you learn how to create an electronic greeting card that you can share with your teacher, family, or friends! "
   tutorial_codesterslogo_longdescription: "Use code to get creative and design your own company logo! You'll learn coding basics in the programming language, Python. After you work through the tutorial, you'll have all the skills you need to create the logo for your personal brand!"
@@ -2222,6 +2248,15 @@ ja:
   tutorial_vidcodeplastic_longdescription: "The problem of plastic filling our oceans continues to worsen. Luckily, you can make your voice heard with code through the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript, you can make a second video about any subject you care about! Learn to use loops, sin waves and customized emojis to make a unique project."
   tutorial_vidcodetypeface_longdescription: "Create your own typeface using shapes and elements of typography. Type has more elements than you may have realized! So far we have talked about fonts and how they are different styles of text. Fonts are actually just different styles of a typeface. A typeface is a family of fonts that have similar features."
   tutorial_washustorm_longdescription: "Learn how to program an incoming storm."
+  tutorial_activitypackets_longdescription: "Find hours of family-friendly fun with Wonder Workshop's printable packets of creative coding activities. Bring coding to life with Dash, Dot, and Cue robots by downloading these online and offline activities to use during Hour of Code and beyond!"
+  tutorial_googlerookie_longdescription: "In this activity, you'll code a Rookie themed collage using Blockly, an introductory coding language. You'll use sequences, variables and loops to create a unique piece that highlights your creativity!"
+  tutorial_tommyturtle_longdescription: "Help young kids learn the basics of coding with Tommy the Turtle! Gold Award Winner for Best Educational App by Best Mobile App Awards. Connects with STEMdash to enable parents and teachers to track learning progress, chat with your child to provide encouragement, or limit their playtime."
+  tutorial_mazyad_longdescription: "This product will broaden our boundaries to create an integrated paper version with computerized applications and an alternative if the computer is not used for any reason. It will also serve as an introduction to understanding programming in general."
+  tutorial_gamemaker_longdescription: "Game Maker is an open ended activity where students can create anything they want using a simple code wizard. Just click on the picture of a cute little monster and choose one of the options in the menu. More advanced tutorials are also included for those wanting to go deeper into game making."
+  tutorial_duckrace_longdescription: "In this course you will solve programming tasks to help Toni the duck collect coins for its holiday savings. At the end of the course you create your own game."
+  tutorial_allcancodeapps_longdescription: "Use the Allcancode Platform to create web and mobile apps from design to delivery. Application logic is written in Google Blockly, the programming language used in most Code.org activities."
+  tutorial_n2y_longdescription: "In these printable activities, students can help a little robot named Bitt Bott explore different landforms on Earth. Students give Bitt Bott simple directions by choosing and circling appropriate directional arrows. Each of the six activities includes simple directions that are supported with symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers and beginning readers understand and follow the directions."
+  tutorial_danceparty_language: "English, Arabic, Catalan, Chinese, Czech, Danish, Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese"
   tutorial_chibitronics_language: "日本語"
   tutorial_athlete_language: "英語、フランス語、スペイン語、イタリア語、ポルトガル語 (ブラジル)"
   tutorial_moana_language: "英語、アラビア語、中国語 (簡体字)、中国語 (繁体字) 、デンマーク語、オランダ語、フィンランド語、フランス語、ドイツ語、インドネシア語、イタリア語、日本語、韓国語、ノルウェー語、ポーランド語、ポリネシア (サモア語)、ポルトガル語、ロシア語、スペイン語、スウェーデン語、トルコ語、ウクライナ語、ベトナム語"
@@ -2239,7 +2274,7 @@ ja:
   tutorial_textcomp_language: "English only"
   tutorial_encryption_language: "English only"
   tutorial_kanopixel_language: "English only"
-  tutorial_foos_language: "English, Arabic, Azerbaijani, Chinese, Dutch, French, German, Greek, Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Romanian, Russian, Serbian, Spanish, Swedish, Turkish, Ukrainian"
+  tutorial_foos_language: "日本語"
   tutorial_tynkerdd_language: "English only"
   tutorial_tynkerana_language: "English only"
   tutorial_vidcard_language: "English only"
@@ -2664,13 +2699,13 @@ ja:
   tutorial_3dbearmars_language: "日本語"
   tutorial_alexaskill_language: "日本語"
   tutorial_bitsboxyak_language: "日本語"
-  tutorial_blockscadbargraphs_language: "Chinese (Simplified), English, French, German, Japanese, Norwegian (Bokmål), Serbian (Cyrillic), Spanish (Spain), Swedish"
-  tutorial_blockscadbirdhouses_language: "Chinese (Simplified), English, French, German, Japanese, Norwegian (Bokmål), Slovenian, Spanish (Spain), Swedish"
-  tutorial_blockscadclock_language: "Chinese (Simplified), English, French, German, Japanese, Norwegian (Bokmål), Slovenian, Spanish (Spain), Swedish"
-  tutorial_blockscaddinner_language: "Chinese (Simplified), English, French, German, Japanese, Norwegian (Bokmål), Slovenian, Spanish (Spain), Swedish"
-  tutorial_blockscadicecream_language: "Chinese (Simplified), English, French, German, Japanese, Norwegian (Bokmål), Slovenian, Spanish (Spain), Swedish"
-  tutorial_blockscadpizza_language: "Chinese, English, French, German, Japanese, Norwegian, Slovenian, Spanish, Swedish"
-  tutorial_blockscadsugar_language: "Chinese, Dutch, English, French, Japanese, Norwegian, Slovenian, Spanish, Swedish"
+  tutorial_blockscadbargraphs_language: "日本人"
+  tutorial_blockscadbirdhouses_language: "日本人"
+  tutorial_blockscadclock_language: "日本人"
+  tutorial_blockscaddinner_language: "日本人"
+  tutorial_blockscadicecream_language: "日本人"
+  tutorial_blockscadpizza_language: "日本人"
+  tutorial_blockscadsugar_language: "日本人"
   tutorial_bsgridlight_language: "日本語"
   tutorial_bpartscratch_language: "日本語"
   tutorial_bpartvid_language: "日本語"
@@ -2709,7 +2744,7 @@ ja:
   tutorial_codemojipizza_language: "日本語"
   tutorial_moonlander_language: "日本語"
   tutorial_sushicards_language: "日本語"
-  tutorial_codesparkcreate_language: "Chinese, English, French, German, Italian, Japanese, Korean, Malay, Portuguese (Brazil), Spanish, Thai"
+  tutorial_codesparkcreate_language: "日本語"
   tutorial_hardvsoft_language: "日本語"
   tutorial_codestersecard_language: "Chinese, English, Spanish"
   tutorial_codesterslogo_language: "Chinese, English, Spanish"
@@ -2763,7 +2798,7 @@ ja:
   tutorial_rgtech_language: "日本語"
   tutorial_robotmagic3d_language: "日本語"
   tutorial_robotmagicflappy_language: "日本語"
-  tutorial_scratchadventure_language: "Chinese, Dutch, English, French, Italian, Japanese"
+  tutorial_scratchadventure_language: "English, Spanish"
   tutorial_scratchtalk_language: "English, Spanish"
   tutorial_scratchjrstory_language: "日本語"
   tutorial_scratchjrtwinkle_language: "日本語"
@@ -2802,6 +2837,15 @@ ja:
   tutorial_vidcodeplastic_language: "日本語"
   tutorial_vidcodetypeface_language: "日本語"
   tutorial_washustorm_language: "日本語"
+  tutorial_activitypackets_language: "日本語"
+  tutorial_googlerookie_language: "日本語"
+  tutorial_tommyturtle_language: "日本語"
+  tutorial_mazyad_language: "Arabic, English"
+  tutorial_gamemaker_language: "日本語"
+  tutorial_duckrace_language: "English, German"
+  tutorial_allcancodeapps_language: "日本語"
+  tutorial_n2y_language: "日本語"
+  tutorial_danceparty_string_detail_grades: "小学2年生～"
   tutorial_chibitronics_string_detail_grades: "幼児〜小学5年"
   tutorial_athlete_string_detail_grades: "小学2年生～"
   tutorial_moana_string_detail_grades: "小学2年生～"
@@ -3251,7 +3295,7 @@ ja:
   tutorial_blockscadicecream_string_detail_grades: "小学6年～"
   tutorial_blockscadpizza_string_detail_grades: "小学6年～中学2年生向け"
   tutorial_blockscadsugar_string_detail_grades: "小学6年～中学2年生向け"
-  tutorial_bsgridlight_string_detail_grades: "Pre-reader - Grade 9+"
+  tutorial_bsgridlight_string_detail_grades: "小学2年生～"
   tutorial_bpartscratch_string_detail_grades: "小学6年～"
   tutorial_bpartvid_string_detail_grades: "小学6年～"
   tutorial_bpenglishscratch_string_detail_grades: "小学2年～中学2年生向け"
@@ -3374,7 +3418,7 @@ ja:
   tutorial_beanything_string_detail_grades: "幼児〜小学5年"
   tutorial_change_string_detail_grades: "小学2年～中学2年生向け"
   tutorial_cooking_string_detail_grades: "幼児〜小学5年"
-  tutorial_crystal_string_detail_grades: "小学6年～"
+  tutorial_crystal_string_detail_grades: "小学2年生～"
   tutorial_landscape_string_detail_grades: "小学6年～"
   tutorial_pets_string_detail_grades: "幼児〜小学5年"
   tutorial_petvet_string_detail_grades: "幼児〜小学5年"
@@ -3382,6 +3426,15 @@ ja:
   tutorial_vidcodeplastic_string_detail_grades: "小学6年～"
   tutorial_vidcodetypeface_string_detail_grades: "小学6年～"
   tutorial_washustorm_string_detail_grades: "幼児〜小学5年"
+  tutorial_activitypackets_string_detail_grades: "幼児〜中学2年"
+  tutorial_googlerookie_string_detail_grades: "小学6年～"
+  tutorial_tommyturtle_string_detail_grades: "幼児〜小学5年"
+  tutorial_mazyad_string_detail_grades: "幼児〜小学5年"
+  tutorial_gamemaker_string_detail_grades: "小学2年生～"
+  tutorial_duckrace_string_detail_grades: "小学2年生～"
+  tutorial_allcancodeapps_string_detail_grades: "小学6年～"
+  tutorial_n2y_string_detail_grades: "幼児〜"
+  tutorial_danceparty_string_platforms: "モダンブラウザ、 Androidタブレット、iPad"
   tutorial_chibitronics_string_platforms: "最新ブラウザ"
   tutorial_athlete_string_platforms: "最新ブラウザ"
   tutorial_moana_string_platforms: "モダンブラウザ、 Androidタブレット、iPad"
@@ -3736,7 +3789,7 @@ ja:
   tutorial_cocomarcade_string_platforms: "最近のすべてのブラウザ"
   tutorial_techcpp_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
   tutorial_beetik_string_platforms: "Chrome, Firefox, Android tablet, iPad"
-  tutorial_codedj_string_platforms: "Chrome, Firefox, Safari, Android tablet, iPad"
+  tutorial_codedj_string_platforms: "最新ブラウザ"
   tutorial_rgadvan_string_platforms: "Chrome, Firefox, Android tablet"
   tutorial_codehsrn_string_platforms: "Chrome, Firefox, Safari, Android phone, iPhone"
   tutorial_codehswd_string_platforms: "Chrome, Firefox, Safari"
@@ -3821,9 +3874,9 @@ ja:
   tutorial_bcpy2_string_platforms: "最新ブラウザ"
   tutorial_bcjs1_string_platforms: "最新ブラウザ"
   tutorial_bcjs2_string_platforms: "最新ブラウザ"
-  tutorial_3dbearmars_string_platforms: ""
+  tutorial_3dbearmars_string_platforms: "Android tablet, iPad, Android phone, iPhone"
   tutorial_alexaskill_string_platforms: "最新ブラウザ"
-  tutorial_bitsboxyak_string_platforms: ""
+  tutorial_bitsboxyak_string_platforms: "最新ブラウザ"
   tutorial_blockscadbargraphs_string_platforms: "最新ブラウザ"
   tutorial_blockscadbirdhouses_string_platforms: "最新ブラウザ"
   tutorial_blockscadclock_string_platforms: "最新ブラウザ"
@@ -3880,13 +3933,13 @@ ja:
   tutorial_discovery_string_platforms: "最新ブラウザ"
   tutorial_csfirstname_string_platforms: "最新ブラウザ"
   tutorial_obstaclecourse_string_platforms: "iPad"
-  tutorial_edisonmove_string_platforms: ""
-  tutorial_edisonspider_string_platforms: ""
-  tutorial_edisonspotlight_string_platforms: ""
+  tutorial_edisonmove_string_platforms: "最新ブラウザ"
+  tutorial_edisonspider_string_platforms: "All modern browsers, iPad, Android tablets"
+  tutorial_edisonspotlight_string_platforms: "All modern browsers, iPad, Android tablets"
   tutorial_firiapython_string_platforms: "最新ブラウザ"
   tutorial_gamefrootsquid_string_platforms: "すべてのモダンブラウザ、iPad、アンプラグ"
-  tutorial_duckpiano_string_platforms: "Chrome, Firefox, Safari"
-  tutorial_gpsound_string_platforms: "Chrome, Firefox, Safari"
+  tutorial_duckpiano_string_platforms: "最新ブラウザ"
+  tutorial_gpsound_string_platforms: "最新ブラウザ"
   tutorial_groklearningpython_string_platforms: "最新ブラウザ"
   tutorial_htmltimetravel_string_platforms: "最新ブラウザ"
   tutorial_hp_flappy_string_platforms: "iPad"
@@ -3938,9 +3991,9 @@ ja:
   tutorial_spherotext3_string_platforms: "全ての最新ブラウザ、Androidタブレット、iPad、Android携帯、iPhone"
   tutorial_spherotext4_string_platforms: "全ての最新ブラウザ、Androidタブレット、iPad、Android携帯、iPhone"
   tutorial_spheroraptor_string_platforms: "全ての最新ブラウザ、Androidタブレット、iPad、Android携帯、iPhone"
-  tutorial_stempiday_string_platforms: "モダンブラウザ、 Androidタブレット、iPad"
-  tutorial_stemplanetoids_string_platforms: "モダンブラウザ、 Androidタブレット、iPad"
-  tutorial_stempong_string_platforms: "モダンブラウザ、 Androidタブレット、iPad"
+  tutorial_stempiday_string_platforms: "最新ブラウザ"
+  tutorial_stemplanetoids_string_platforms: "最新ブラウザ"
+  tutorial_stempong_string_platforms: "最新ブラウザ"
   tutorial_algobot_string_platforms: "全ての最新ブラウザ、Androidタブレット、iPad、Android携帯、iPhone"
   tutorial_thunkableapps_string_platforms: "Chrome, Firefox, Safari, Android tablet, iPad, Android phone, iPhone"
   tutorial_toxicodedot_string_platforms: "最新ブラウザ"
@@ -3962,6 +4015,15 @@ ja:
   tutorial_vidcodeplastic_string_platforms: "すべてのモダンブラウザ、iPad、アンプラグ"
   tutorial_vidcodetypeface_string_platforms: "すべてのモダンブラウザ、iPad、アンプラグ"
   tutorial_washustorm_string_platforms: "最新ブラウザ"
+  tutorial_activitypackets_string_platforms: "Unplugged, iOS, Android, Kindle, Chrome* (*Cue only)"
+  tutorial_googlerookie_string_platforms: "全ての最新ブラウザ、Androidタブレット、iPad、Android携帯、iPhone"
+  tutorial_tommyturtle_string_platforms: "Android tablet, iPad, Android phone, iPhone"
+  tutorial_mazyad_string_platforms: "Unplugged"
+  tutorial_gamemaker_string_platforms: "すべてのモダンブラウザ、iPad、アンプラグ"
+  tutorial_duckrace_string_platforms: "モダンブラウザ、 Androidタブレット、iPad"
+  tutorial_allcancodeapps_string_platforms: "最新ブラウザ"
+  tutorial_n2y_string_platforms: "Unplugged"
+  tutorial_danceparty_string_detail_platforms: ""
   tutorial_chibitronics_string_detail_platforms: "Chibitronics Chibi Chip and Circuit Sticker LEDs"
   tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
@@ -4542,6 +4604,15 @@ ja:
   tutorial_vidcodeplastic_string_detail_platforms: ""
   tutorial_vidcodetypeface_string_detail_platforms: ""
   tutorial_washustorm_string_detail_platforms: ""
+  tutorial_activitypackets_string_detail_platforms: "Dash or Cue robot"
+  tutorial_googlerookie_string_detail_platforms: ""
+  tutorial_tommyturtle_string_detail_platforms: ""
+  tutorial_mazyad_string_detail_platforms: ""
+  tutorial_gamemaker_string_detail_platforms: ""
+  tutorial_duckrace_string_detail_platforms: ""
+  tutorial_allcancodeapps_string_detail_platforms: ""
+  tutorial_n2y_string_detail_platforms: ""
+  tutorial_danceparty_string_detail_programming_languages: "ブロック"
   tutorial_chibitronics_string_detail_programming_languages: "ブロック"
   tutorial_athlete_string_detail_programming_languages: "ブロック"
   tutorial_moana_string_detail_programming_languages: "ブロック"
@@ -5122,6 +5193,14 @@ ja:
   tutorial_vidcodeplastic_string_detail_programming_languages: "JavaScript"
   tutorial_vidcodetypeface_string_detail_programming_languages: "JavaScript"
   tutorial_washustorm_string_detail_programming_languages: "ブロック"
+  tutorial_activitypackets_string_detail_programming_languages: "Blocks, Wonder, Xylo, Blockly"
+  tutorial_googlerookie_string_detail_programming_languages: "ブロック"
+  tutorial_tommyturtle_string_detail_programming_languages: "言語非依存"
+  tutorial_mazyad_string_detail_programming_languages: "ブロック"
+  tutorial_gamemaker_string_detail_programming_languages: "JavaScript"
+  tutorial_duckrace_string_detail_programming_languages: "ブロック"
+  tutorial_allcancodeapps_string_detail_programming_languages: "ブロック"
+  tutorial_n2y_string_detail_programming_languages: ""
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"
   school_name_error: "School name is required."

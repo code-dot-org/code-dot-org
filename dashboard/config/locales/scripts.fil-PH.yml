@@ -11226,3 +11226,465 @@ fil:
                 makita sa simula ng proseso ng proyekto, [here](https://curriculum.code.org/csf/coursef/15/).
             new stage:
               name: bagong yugto
+            The Artist:
+              name: The Artist
+        coursed-2019:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Mga Algoritmo: Graph na Papel na Pag-program'
+            Introduction to Online Puzzles:
+              name: Pambungad sa mga Online na mga Palaisipan
+            Relay Programming:
+              name: Relay Programming
+            Debugging in Collector:
+              name: Pagde-debug sa Kolektor
+            Events in Bounce:
+              name: Mga Pangyayari sa Bounce
+            Nested Loops in Bee:
+              name: Mga Naka-Nest na mga Loop sa Bee
+            Nested Loops in Artist:
+              name: Naka--nest na mga Loops sa Artist
+            Nested Loops in Frozen:
+              name: Naka-nest na mga Loop sa Frozen
+            While Loops in Farmer:
+              name: Mga While Loops sa Farmer
+            Conditionals with Cards:
+              name: Mga Conditional gamit ang mga Card
+            Conditionals in Bee:
+              name: Mga Kondisyonal sa Bee
+            Conditionals & Loops in Harvester:
+              name: Mga Kondisyonal & Mga Loop sa Harvester
+            Digital Citizenship:
+              name: Digital na Pagkamamamayan
+            Build a Play Lab Game:
+              name: Bumuo ng Play Lab na Laro
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+            Artist Binary:
+              name: Artist na Binary
+            Build a Star Wars Game:
+              name: Bumuo ng Star Wars na Laro
+        coursee-2019:
+          description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga
+            kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function.
+            Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone
+            na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
+          description_audience: 'Mga Edad: 8-12'
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
+            Sequence in Maze:
+              name: Pagkakasunod-sunod sa Maze
+            Building a Foundation:
+              name: Gumawa ng Foundation
+            Debugging with Scrat:
+              name: Pagde-debug gamit ang Scrat
+            Programming in Artist:
+              name: Pag-program sa Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            Nested Loops:
+              name: Mga Loops na naka-nest
+            Nested Loops with Frozen:
+              name: Naka-Nest na mga Loops sa Frozen
+            Conditionals with Cards:
+              name: Mga Conditional gamit ang mga Card
+            Conditionals:
+              name: Mga conditional
+              description_student: Ikaw ay maaaring makapagsabi sa kompyuter kung
+                ano ang gagawin sa loob ng iilang mga kondisyon sa loob ng masaya
+                at mahirap na mga seryeng ito.
+              description_teacher: Ang araling ito ay nagpapakilala sa mga estudyante
+                sa `while` na mga loop at `if/else` na mga pahayag. Ang mga _while
+                loop_ ay mga loop na patuloy na nag-uulit sa mga utos hanggang sa
+                ang kondisyon ay true. Ang mga while loop ay ginagamit kapag ang nag-program
+                ay hindi alam ang eksaktong bilang ng beses na kailangang ulitin ang
+                kautusan, ngunit alam ng nag-program kung anong kondisyon ang kailangang
+                maging true para magpagtuloy ang pag-loop. Ang `If / Else` na mga
+                pahayag ay nagbibigay ng pleksibilidad sa pag-program sa pamamagitan
+                ng pagpapatakbo lang sa buong bahagi ng code kapag ang isang bagay
+                ay true, kung hindi magpapatakbo ito ng iba.
+            Private and Personal Information:
+              name: Pribado at Personal na Impormasyon
+              description_student: Ang internet ay masaya at kasabik-sabik, ngunit
+                importante din na manatiling ligtas. Ang araling ito ay nagtuturo
+                sa iyo sa kaibahan ng impormasyon na ligtas na ibahagi at impormasyon
+                na pribado.
+              description_teacher: |-
+                Ginawa ng Common Sense Education, ang araling ito ay tungkol sa kaibahan sa pagitan ng impormasyon na ligtas na ibahagi online at sa impormasyon na hindi ligtas.
+
+                Habang ang mga estudyante ay bibisita ng mga site na naghihingi ng mga impormasyon tungkol sa kanilang pagkakakilanlan, sila at matutong gumamit na kritikal na proseso sa pagsiyasat na magbibigay kapangyarihan sa kanila na maprotektahan ang kanilang mga sarili at ang kanilang pamilya mula sa pagnanakaw sa pagkakakilanlan. Sa araling ito, ang mga estudyante ay matututong kritikal na mag-isip tungkol sa mga impormasyon ng gumagamit na hinihiling o kinakailangan ng iilang mga website. Matutunan nila ang kaibahan ng pribadong impormasyon sa personal na impormasyon, pati na rin kung paano magtukoy kung ano ang ligtas o hindi ligtas ibahagai online.
+            Build a Star Wars Game:
+              name: Bumuo ng Star Wars na Laro
+              description_student: Damdamin ang puwersa habang nagbubuo ka ng iyong
+                sariling Star Wars na laro sa araling ito.
+              description_teacher: Sa araling ito, ang mga estudyante ay magsasanay
+                sa paggamit ng mga pangyayari para makabuo ng laro na maaari nilang
+                ibahagi online. Nagpapakita kay R2-D2 at ibang mga karakter sa Star
+                Wars, ang mga estudyante ay gagabayan sa mga pangyayari, pagkatapos
+                ay bibigyan ng lugar para makalikha ng kanilang sariling laro.
+            'Functions: Songwriting':
+              name: 'Mga Function: Pagsusulat ng Awit'
+              description_student: Kahit ang mga rockstar ay nangangailangan ng mga
+                kakayahan sa pag-program. Ang araling ito ay nagtuturo sa iyo tungkol
+                sa mga kakayahan gamit ang mga titik mula sa mga awitin.
+              description_teacher: Isa sa mga pinakadakilang istraktura sa mundo ng
+                computer science ay ang function. Ang mga function (minsang tinatawag
+                na mga pamamaraan) ay maliliit na mga programa na maaari mong gamitin
+                nang paulit-ulit sa loob ng iyong mas malaking programa. Ang araling
+                ito ay makakatulong sa mga estudyante na likas na makakaunawa kung
+                bakit ang pagsama-sama sa mga piraso ng code sa isang function ay
+                maaaring lubhang nakakatulong na pag-uugali.
+            Functions in Artist:
+              name: Mga Function sa Artist
+              description_student: Gumawa ng kumplikadong mga drowing nang mas madali
+                gamit ang mga function!
+              description_teacher: Ang mga estudyante ay ipapakilala sa paggamit ng
+                mga function sa Code.org. Ang mga dakilang mga larawan ay ililikha
+                at babaguhin gamit ang mga function sa Artist. Para sa mas kumplikadong
+                mga pattern, ang mga estudyante ay matututo tungkol sa pag-nest ng
+                mga function sa pamamagitan ng pagtawag ng isang function sa loob
+                ng isa pa.
+            Determine the Concept:
+              name: Tukuyin ang Konsepto
+              description_student: "Hindi kami mamimigay ng kahit na anong mga sekreto!
+                \nAng araling ito ay maaring gumamit sa kahit anong mga kakayahan
+                ang natutunan mo na."
+              description_teacher: Ang araling ito ay pinagsama-sama ang mga konsepto
+                mula sa mga nakaraang aralin at nagbibigay sa mga estudyante ng pagkakataon
+                na kritikal na makapag-isip tungkol sa kung paano nilang lulutasin
+                ang bawat problema, nang hindi sila sinasabihan kung aling konsepto
+                ang gagamitin nila. Ang mga estudyante ay magbabalik-aral sa mga pangunahing
+                konsepto sa mga algoritmo, pag-debug, `pag-ulit` ng mga loop, mga
+                kondisyonal, `while` na mga loop, at mga function.
+            Explore Project Ideas:
+              name: Tuklasin ang mga Ideya sa Proyekto
+              description_student: Narito ang iilang mga laro at mga drowings. Paglaruan
+                ang bawat isa sa kanila para makakuha ng mga ideya para sa iyong sariling
+                proyekto!
+              description_teacher: "Ang susunod na apat na mga aralin ay mabibigay
+                ng oportunidad para sa mga estudyante na magamit ang kanilang kakayahan
+                sa pag-code sa isang capstone na proyekto. Ang proyektong ito ay makakatulong
+                sa mga indibidwal na makakakuha ng karanasan sa pag-code at maggawa
+                ng isang halimbawa na maibahagi sa mga kasamahan at sa mga mahal sa
+                buhay. Layunin na maging isang maraming-aralin o maraming-linggo na
+                karanasan, ang mga estudyante ay gugugol ng oras para sa pagtuklas
+                sa pag-brainstorm, pag-aaral tungkol sa proseso ng pag-disenyo, pagbuo,
+                at pagpapakita ng kanilang huling gawain. \n\nSa pagtuklas na yugto,
+                ang mga estudyante ay maaaring makakita ng nagawa nang mga halimbawa
+                ng mga proyekto sa parehong Artist at Play Lab para gawing inspirasyon.
+                Sa sunod, ang mga estudyante ay matututo tungkol sa proseso ng pagdisenyo
+                at kung paano magamit ang mga ito sa kanilang sariling mga proyekto.
+                Sila ay bibigyan ng lugar kung saan makakalikha sila ng sarili nilang
+                proyekto alinman sa Artist o Play Lab (malamang ito ang pinakahabang
+                yugto ng proyekto). Sa wakas, ang mga estudyante ay makakapakita sa
+                kanilang natapos na gawa sa kanilang mga kasamahan."
+            The Design Process:
+              name: Ang Proseso ng Pag-Disenyo
+              description_student: Ang mga proyekto na kasing laki nito ay gugugol
+                ng oras at maraming pagpaplano. Dito, matutunan mo ang tungkol sa
+                proseso ng pag-disenyo na gagamitin mo para mabuo ang iyong sariling
+                nilikha.
+              description_teacher: Sa loob ng apat na aralin, ang mga estudyante ay
+                maaaring magtatayo ng pag-program ng proyekto na sarili nila ang disenyo
+                gamit ang alinman sa Play Lab o Artist bilang kanilang pag-program
+                na kapaligiran. Sa bahaging ito ng proyekto, ang mga estudyante ay
+                matututo tungkol sa proseso ng pagdisenyo at kung paano ipatupad ito
+                sa kanilang sariling mga proyekto. Ang gabay ng aralin para sa apat
+                na yugto ng proseso ay maaaring makita sa unang yugto ng proseso ng
+                proyektong ito [here](https://curriculum.code.org/csf/coursee/12/).
+            Build Your Project:
+              name: Bumuo ng Iyong Proyekto
+              description_student: Ihanda ang iyong mga kamay para sa maraming pag-code!
+                Oras na para magsimulang bumuo ng iyong proyekto.
+              description_teacher: Sa loob ng apat na aralin, ang mga estudyante ay
+                maaaring magtatayo ng pag-program ng proyekto na sarili nila ang disenyo
+                gamit ang alinman sa Play Lab o Artist bilang kanilang pag-program
+                na kapaligiran. Ngayon ang mga estudyante ay bibigyan ng sarili nilang
+                lugar para makalikha ng kanilang proyekto alinman sa Artist o Play
+                Lab. Ito marahil ang pinakamahabang yugto g proyekto. Ang gabay ng
+                aralin para sa apat na mga yugto ay maaaring makita sa unang yugto
+                ng proseso ng proyektong ito sa [here](https://curriculum.code.org/csf/coursee/12/).
+            Present Your Project:
+              name: Ipakita ang Iyong Proyekto
+              description_student: Maghandang magpakitang gilas! Oras na para ipakita
+                ang iyong natapos na proyekto sa iyong mga kasamahan.
+              description_teacher: Sa loob ng apat na mga aralin, ang mga estudyante
+                ay magtatayo ng pag-program na proyekto gamit ang sarili nilang disenyo
+                sa alinman sa Play Lab o Artist bilang pang-program na kapaligiran
+                nila. Sa wakas, ang mga estudyante ay makakapakita na sa kanilang
+                natapos na gawa sa kanilang mga kasamahan o magbahagi sa kanilang
+                mga mahal sa buhay gamit ang isang espesyal na link. Ang gabay ng
+                aralin para sa lahat ng apat na mga yugto ng proseso ay maaaring makita
+                sa unang yugto ng proseso ng proyektong ito sa [here](https://curriculum.code.org/csf/coursee/12/).
+            Internet:
+              name: Internet
+              description_student: Nagtataka ka na ba kung paano ang mga impormasyon
+                naglalakbay sa kabuoan ng Internet? Ito ay hindi mahika! Ang araling
+                ito ay magtuturo sa iyo sa mga pangunahing kaalaman kung paano ang
+                Internet gumagana.
+              description_teacher: Kahit na maraming mga tao ang gumamit ng Internet
+                araw-araw, hindi masyadong marami ang may alam kung paano ito gumagana.
+                Sa araling ito, ang mga estudyante ay magkukunwaring dumaloy sa Internet,
+                habang natututo tungkol sa mga koneksyon, mga URL, mga IP Address,
+                at ang DNS.
+            Crowdsourcing:
+              name: Pag-crowdsourcing
+              description_student: Ang araling ito ay nagtuturo sa iyo tungkol sa
+                crowdsourcing, ang proseso sa pagbuo ng isang proyekto sa isang pangkat.
+              description_teacher: Sa computer science, makakaharap tayo ng iilang
+                mga malalaki, nakakatakot na mga problema. Mga hamon gaya ng paghahanap
+                sa pinakamalaking prime na numero o pagsunod-sunod sa DNA ay halos
+                imposibleng magawa bilang isang indibidwal. Ang pagdadagdag ng kapangyarihan
+                ng iba ay nagpapagawa sa gawaing mga ito na mapapamahalaan. Ang araling
+                ito ay magpapakita sa mga estudyante kung paano maaring nakakatulong
+                ang pagtutulungan sa industriya ng computer science.
+            Nested Loops in Bee:
+              name: Mga Naka-Nest na mga Loop sa Bee
+            Nested Loops in Artist:
+              name: Naka--nest na mga Loops sa Artist
+            Nested Loops in Frozen:
+              name: Naka-nest na mga Loop sa Frozen
+        express-2019:
+          description: Alamin ang mga pangunahing alituntunin sa computer science
+            at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
+            laro o istorya na maaari mong ibahagi.
+          description_short: 'Isang introduksyon sa computer science: pinagsama ang
+            pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang
+            mga estudyante.'
+          description_audience: 'Mga Edad: 9-18'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Mga Algoritmo: Graph na Papel na Pag-program'
+            Programming in Maze:
+              name: Pag-Program sa Maze
+            Relay Programming:
+              name: Relay Programming
+            Debugging in Maze:
+              name: Pagde-debug sa Maze
+            Programming in Collector:
+              name: Pag-program sa Kolektor
+            Programming in Artist:
+              name: Pag-program sa Artist
+            'Loops: Getting Loopy':
+              name: 'Mga Loops: Pagiging Loopy'
+            Loops with Rey and BB-8:
+              name: Mga Loops kasama sina Rey at BB-8
+            Nested Loops in Bee:
+              name: Mga Naka-Nest na mga Loop sa Bee
+            Nested Loops in Frozen:
+              name: Naka-nest na mga Loop sa Frozen
+            While Loops in Farmer:
+              name: Mga While Loops sa Farmer
+            Conditionals with Cards:
+              name: Mga Conditional gamit ang mga Card
+            Conditionals in Bee:
+              name: Mga Kondisyonal sa Bee
+            Conditionals & Loops in Harvester:
+              name: Mga Kondisyonal & Mga Loop sa Harvester
+            'Functions: Songwriting':
+              name: 'Mga Function: Pagsusulat ng Awit'
+            Functions in Artist:
+              name: Mga Function sa Artist
+            Screen Out the Mean:
+              name: I-Screen Palabas ang Mean
+            Determine the Concept:
+              name: Tukuyin ang Konsepto
+            Build a Flappy Game:
+              name: Bumuo ng Flappy na Laro
+            The Power of Words:
+              name: Ang Kapangyarihan ng mga Salita
+            Envelope Variables:
+              name: Balot ng mga Variables
+            For Loop Fun:
+              name: Saya sa For Loop
+            For Loops in Bee:
+              name: Mga For Loops sa Bee
+            For Loops in Artist:
+              name: Mga Loops sa Artist
+            Explore Project Ideas:
+              name: Tuklasin ang mga Ideya sa Proyekto
+            The Design Process:
+              name: Ang Proseso ng Pag-Disenyo
+            Build Your Project:
+              name: Bumuo ng Iyong Proyekto
+            Revise Your Project:
+              name: Baguhin ang Iyong Proyekto
+            Present Your Project:
+              name: Ipakita ang Iyong Proyekto
+            Binary Bracelets:
+              name: Binary na mga Pulseras
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+            Artist Binary:
+              name: Artist na Binary
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Pag-crowdsourcing
+        csd1-2019:
+          description_short: "  Alamin kung paano ang mga tao gumagamit ng mga kompyuter
+            para lutasan ang mga problema."
+          stages:
+            CS Discoveries Pre-survey:
+              name: Pre-surbey ng CS Discoveries
+            Intro to Problem Solving:
+              name: Panimula sa Paglutas ng Problema
+              description_student: 'Ang klase ay magtatrabaho sa isang grupo para
+                magdisenyo ng aluminum foils na mga bangka na susuporta ng maraming
+                mga barya hangga''t maaari. Sa pagtatapos ng aralin, ang mga grupo
+                ay mag-iisip sa kanilang karanasan sa gawain at gumawa ng koneksyon
+                sa mga tipo ng paglutas ng problema na gagawin nila sa natirang bahagi
+                ng kurso. '
+              description_teacher: Sa araling ito, ang mga estudyante ay magtatrabaho
+                sa loob ng mga grupo para makadisenyo ng aluminum foil na mga bangka
+                na susuporta sa maraming mga barya hangga't maaari. Ang mga grupo
+                ay mayroong dalawang pagkakataon para magawa ang kanilang mga bangka,
+                na may layunin na makakarga ng mas marami pang barya kaysa sa nagawa
+                nila sa unang pagkakataon. Ang istraktura ng gawain ay nagpapahiwatig
+                sa iba't ibang hakbang sa proseso ng paglutas ng problema na ipapakilala
+                ng mas detalyado sa sumusunod na mga aralin. Sa pagtatapos ng aralin,
+                ang mga estudyante ay mag-iisip sa kanilang mga karanasan sa gawain
+                at gagawa ng mga koneksyon sa mga uri ng paglutas ng problema na gagawin
+                nila sa natitirang bahagi ng kurso.
+            The Problem Solving Process:
+              name: Ang Proseso ng Pagtuklas ng Problema
+              description_student: Ang araling ito ay nagpapakila sa pormal na proseso
+                ng paglutas ng problema na gagamitin ng klase sa loob ng isang taon,
+                Paglalarawan - Paghahanda - Pagsubok - Pag-iisip, Ang klase ay mag-uugnay
+                sa mga hakbang na ito sa problema sa mga aluminum na mga bangka sa
+                nakaraang aralin, pagkatapos ang isang problema na sanay na sila sa
+                paglutas, pagkatapos ay isang problema na gusto nilang pahusayin ang
+                paglutas. Sa bandang huli ng aralin, ang klase ay kukolekta ng isang
+                listahan ng mga nakakatulong na mga estratehiya para sa bawat hakbang
+                ng proseso na ilagay sa mga poster na gagamitin nila sa buong yunit
+                at taon.
+              description_teacher: Ang araling ito ay nagpapakila sa pormal na proseso
+                ng paglutas ng problema na gagamitin ng mga estudyante sa loob ng
+                isang taon, Paglalarawan - Paghahanda - Pagsubok - Pag-iisip. Ang
+                aralin ay magsisimula sa paghikayat sa mga estudyante na mag-isip
+                sa lahat ng iba't ibang uri ng mga problema na matagpuan nila sa pang-araw-araw
+                na buhay. Ang mga estudyante ay papakitaan ng apat na mga hakbang
+                sa proseso ng paglutas ng problema at sama-samang magtrabaho para
+                iugnay ang mga nilahat na mga hakbang sa kanilang aktwal na mga karanasan
+                sa paglutas ng mga problema. Ang mga estudyante ay unang mag-ugnay
+                sa mga hakbang na ito sa problema sa mga aluminum na bangka sa nakaraang
+                aralin, pagkatapos ang isang problema na sanay na silang maglutas,
+                pagkatapos ay isang problema na gusto nilang pahusayin pa ang paglutas.
+                Sa bandang huli ng aralin, ang klase ay kukolekta ng mga nakakatulong
+                na mga estratehiya para sa bawat hakbang ng proseso na ilalagay sa
+                mga poster na gagamitin nila sa buong yunit at taon.
+            Exploring Problem Solving:
+              name: Pagtuklas sa Paglutas ng Problema
+              description_student: 'Sa araling ito ang klase ay gagamit sa proseso
+                ng paglutas ng problema sa tatlong iba''t ibang mga problema: paghahanap
+                ng salita, pag-aayos ng upuan para sa isang birthday party, at ang
+                pagpaplano ng paglalakbay. Ang mga problema ay naging mas kumplikado
+                at hindi masyadong inilarawan para ipakita kung paano ang proseso
+                ng paglutas ng problema nakakatulong sa pagharap ng ganitong mga tipo
+                ng mga problema.'
+              description_teacher: |-
+                Sa araling ito ang mga estudyante ay gagamit ng proseso sa paglutas ng problema sa tatlong magkaibang mga problema para mas maintindihan pa nila ang kahalagahan ng bawat hakbang. Sila ay lulutas sa isang paghahanap ng salita, pag-aayos ng mga upuan para sa isang birthday party, at pagplano ng isang paglalakbay. Ang mga problema ay mas kumplikado at hindi masyadong inilarawan para ipakita kung paano ang proseso ng paglutas ng problema nakakatulong sa pagharap ng ganitong mga tipo ng mga problema. Ang aralin ay magtatapos sa pag-iisip ng mga estudyante tungkol sa kanilang karanasan sa proseso ng paglutas ng problema. Bibigyan nila ng katwiran ang pagdagdag sa bawat hakbang at mag-iisip ng mga katanungan at mga istratehiya na maaaring makakatulong sa kanilang paglalarawan sa mga walang-katapusan na mga problema, dahil ito kadalasan ang pinaka-kritikal na hakbang.
+
+                Ang araling ito ay parang tatagal ng dalawang oras ng klase o higit pa para makumpleto. Ang unang dalawang problema ay maaaring gawin sa isang klase ngunit ang pangatlo ay kailangang gawin sa pangalawang araw.
+            What is a Computer?:
+              name: Ano ang isang Kompyuter?
+              description_student: Sa araling ito, ang klase ay magkakaroon ng panimulang
+                kahulugan ng isang kompyuter. Pagkatapos mag-isip sa mga posibleng
+                kahulugan para sa isang kompyuter, ang klase ay magtatrabaho sa isang
+                grupo para ayusin ang mga larawan kung "isang kompyuter" ba o "hindi
+                isang kompyuter" sa poster paper at ipaliwanag ang nag-udyok sa kanila
+                na pumili sa iilang napakahirap na mga kategorisasyon. Ang mga guro
+                ay magpapakilala ng isang kahulugan ng kompyuter at pahintulotan ang
+                mga grupo na baguhin ang kanilang mga poster ayon sa mga bagong kahulugan.
+              description_teacher: Sa araling ito, ang mga estudyante ay magkakaroon
+                ng panimulang kahulugan ng isang kompyuter. Para masimulan ang aralin,
+                ang klase ay mag-iisip sa mga posibleng kahulugan para sa isang kompyuter
+                at ilagay ang mga resulta sa pag-iisip na ito sa pisara. Sunod nito,
+                ang mga estudyante ay magtatrabaho sa isang grupo para ayusin ang
+                mga larawan kung "isang kompyuter" ba o "hindi isang kompyuter" sa
+                poster na papel. Ang mga grupo ay maglagay sa kanilang mga poster
+                sa paligid ng silid at madaliang ipaliwanag ang nag-udyok sa kanila
+                na pumili sa ilang napakahirap na mga kategorisasyon. Ang guro ay
+                magpapakilala din ng isang kahulugan ng isang kompyuter at pahintulutan
+                ang mga estudyante na bumago sa kanilang mga poster ayon sa bagong
+                kahulugan.
+            Input and Output:
+              name: Input at Output
+              description_student: Sa klaseng ito, ang mga estudyante ay magsaalang-alang
+                sa ilang mga computing na mga kagamitan para matukoy kung anong mga
+                tipo ng mga input at mga output ang gagamitin nila. Ang mga grupo
+                ay aatasan ng isang computing na kagamitan at ayon sa binigay ng guro
+                na kahulugan ng input at output, maglilista ng mga input at mga output
+                ng device nila. Para matapos ang aralin, ang klase ay magsusuri sa
+                mga karaniwang gawain na ginagawa nila sa isang computing na kagamitan
+                at pipili ng mga input at mga output na magagamit para sa gawaing
+                iyon mula sa tsart.
+              description_teacher: Sa klaseng ito, ang mga estudyante ay magsaalang-alang
+                sa ilang mga computing na mga kagamitan para matukoy kung anong mga
+                tipo ng mga input at mga output ang gagamitin nila. Ang mga grupo
+                ay aatasan ng isang computing na kagamitan at ayon sa binigay ng guro
+                na kahulugan ng input at output, maglilista ng mga input at mga output
+                ng device nila. Bago pa ang gawaing ito, ang mga estudyante ay hinikayat
+                na magtuon sa mas halatang mga pisikal na mga input at mga output
+                (e.g. isang keyboard bilang input o isang screen bilang output) ngunit
+                ang mga diskusyon mamaya ay magdadala sa mga estudyante para mapansin
+                nila ang mga hindi masyadong halata na mga halimbawa (e.g. ang touch
+                screen ay parehong input at output o ang katunayan na ang Internet
+                ay maaaring maging parehong input at output). Sa kabuoan ng aralin,
+                ang guro ay magtatala ng mga input at mga output na natukoy at inilagay
+                sa isang T-chart sa harap ng silid. Para tapusin ang leksyon, ang
+                mga estudyante ay susuri sa mga karaniwang gawain na ginagawa nila
+                isang computing device at pipili ng mga inputs at outputs na ginagamit
+                para sa gawaing iyan mula sa tsart.
+            Processing:
+              name: Pagproseso
+              description_student: Ang araling ito ay tumitingin nang mas malalim
+                sa konsepto ng pagproseso na ipinakilala bilang bahagi ng pagbibigay
+                ng kahulugan sa isang kompyuter. Ang mga pares ay nagsama-samang magtrabaho
+                para mailagay ang isang kahon ng mga baraha sa tamang pagkakasunod-sunod,
+                isang anyo ng pag-proseso ng mga impormasyon. Sa bandang huli, ang
+                klase ay mag-uusap kung ano ang ibig sabihin ng pagproseso sa loob
+                ng konteksto ng paglutas ng mga problema sa impormasyon.
+              description_teacher: Ang mga estudyante ay kukumpleto sa dalawang unplugged
+                na mga gawain sa pag-aayos ng baraha para tuklasin ang kahulugan ng
+                pagproseso at ang relasyon nito sa paglutas ng problema. Ang una ay
+                mayroong ilang mga kondisyon at ginagamit para ipakilala ang high-level
+                na kahulugan ng pagproseso. Ang sunod ay nagpapakila sa isang karadagang
+                mga kondisyon para mapuwersa ang mga estudyante na makagawa ng algoritmo
+                na palaging matagumpay ang pagproseso sa mga baraha. Ang estudyante
+                ay palaging mag-develop, mag-test, at magbahagi ng kanilang mga algoritmo
+                sa kanilang mga kamag-aral. Isang wrap-up na diskusyon ay nakapagpaisip
+                sa mga estudyante tungkol sa iba't ibang tipo ng paglutas ng problema
+                na nagagamit nila sa mga gawaing ito at ang halaga ng pagbuo ng isang
+                algoritmo para lutasin ang problema.
+            Apps and Storage:
+              description_student: 'Ang araling ito ay sumasaklaw sa input at output
+                na mga aspeto ng mga kompyuter sa loob ng konteksto na makabuluhan
+                at pamilyar sa mga estudyante: ang mga app. Ang klase ay magtatasa
+                sa iba''t ibang mga aplikasyon sa web para suriin ang mga tiyak na
+                mga problema na dinisenyo para lutasin nila, ang mga input na kailangan
+                nilang gawin, ang mga output na ibinigay sa mga gumagamit. Ang klase
+                ay nagtatapos sa isang mga pag-talakay sa mga app na ito, pati na
+                rin ang isang diskusyon na pinanguluhan ng isang guro tungkol sa epekto
+                ng mga app sa lipunan. '
+            Project - Propose an App:
+              name: Proyekto - Pagmungkahi ng App
+              description_student: Para tapusin ang pag-aaral sa proseso ng paglutas
+                ng problema at ang input/output/store/proceso na modelo ng isang kompyuter,
+                ang klase ay mag-mungkahi ng mga app na dinisenyo para maglutas ng
+                mga problema sa totoong buhay. Ang proyektong ito makokumpleto sa
+                loob ng ilang mga araw at magtatapos sa isang poster na presentasyon
+                na nagpapakita sa mga katangian ng bawat app. Ang proyekto ay dinisenyo
+                nang may kapares pero maaari pa rin itong makumpleto nang mag-isa.
+              description_teacher: Para tapusin ang kanilang pag-aaral sa proseso
+                ng paglutas ng problema at ang input/output/store/proseso na modelo
+                ng isang kompyuter, ang mga estudyante ay magmumungkahi ng isang app
+                na dinisenyo para lumutas ng problema sa totoong buhay. Ang proyektong
+                ito ay gagawin sa loob ng iilang mga araw at magresulta sa paglikha
+                ng mga estudyante ng isang poster na nagpapakita sa mga katangian
+                ng kanilang app na ipapakita nila sa kanilang mga kamag-aral. Ang
+                gabay ng proyekto ay nagbibigay ng sunod-sunod na mga instruksyon
+                para sa mga estudyante at tumutulong sa kanila na mag-ayos ng kanilang
+                mga naisip. Ang proyekto ay dinisenyo para kumpletohin nang may kasama
+                pero maaari rin itong gawin na mag-isa lang.

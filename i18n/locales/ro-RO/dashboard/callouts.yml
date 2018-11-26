@@ -90,25 +90,37 @@ ro:
         craft_callout_preplaced: Am pus cateva blocuri aici pentru a incepe
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Am pus cateva blocuri aici pentru a incepe
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Am pus cateva blocuri aici pentru a incepe
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Acest cod va incepe sa construiasca casa ta. Il poti termina?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Acest cod va incepe sa construiasca casa ta. Il poti termina?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Acest cod va incepe sa construiasca casa ta. Il poti termina?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Apasă "Run" pentru a încerca programul tău
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Apasă "Run" pentru a încerca programul tău
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Apasă "Run" pentru a încerca programul tău
       Overworld Place Wall_callout:
         craft_inside_repeat: Repetati actiunile prin plasarea blocurilor aici
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Repetati actiunile prin plasarea blocurilor aici
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Repetati actiunile prin plasarea blocurilor aici
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Acest cod va cauta lava, poti adauga o comanda pentru a inainta?
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Acest cod va cauta lava, poti adauga o comanda pentru a inainta?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Acest cod va cauta lava, poti adauga o comanda pentru a inainta?
       Underground Iron_callout:
         craft_what_is_iron: Extrage acest fier!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Extrage acest fier!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Extrage acest fier!
       courseF_IceAge_2_callout:
         playlab_use_twice: '[șir gol]'

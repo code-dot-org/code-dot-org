@@ -259,3 +259,24 @@ pt:
       Conditionals_2019:
         title: Condicionais
         desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um ponto", e "se eu comprar uma carta preta, você ganha um ponto".
+      GraphPaperProgramming_2019:
+        title: Programação de papel milimetrico
+        desc: Os alunos escrevem um algoritmo (um conjunto de instruções) usando um conjunto predefinido de comandos para orientar seus colegas de classe na reprodução de um desenho.
+      RelayProgramming_2018_2019:
+        title: Programação por revezamento
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Atividade offline
+      BinaryImages_2019:
+        title: Imagens binárias
+        desc: Embora muitas pessoas vejam o binário estritamente como zeros e uns, nossos cursos anteriores ensinaram aos alunos que as informações podem ser representadas por uma grande variedade de opções binárias. Esta aula leva esse conceito um passo adiante, uma vez que demonstra como um computador também pode armazenar informações ainda mais complexas (como imagens e cores) em binário.
+      GettingLoopy_2019:
+        title: Repetindo
+        desc: Esta aula introduz o conceito de programação de laços (loops, ou instruções repetidas) por meio de uma atividade de dança. Os alunos vão aprender uma coreografia simples e então serão instruídos a repeti-la.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Atividade offline
+      BigEvent_2019:
+        title: O Grande Evento
+        desc: Os alunos são introduzidos ao conceito de "eventos" em programação, que são ações que um computador monitora constantemente. O professor vai apertar os botões de forma remota, e os alunos vão reagir de acordo com o botão pressionado.
+      BinaryBracelets_2019:
+        title: Pulseiras binárias
+        desc: Os alunos criam pulseiras como representações binárias da primeira letra de seus nomes. Os alunos aprendem que os dados podem ser representados e armazenados de mais de uma forma.

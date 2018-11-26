@@ -12,11 +12,16 @@ module ProjectsList
     spritelab: ['spritelab'],
     playlab: ['playlab', 'gumball', 'infinity', 'iceage'],
     artist: ['artist', 'frozen'],
-    minecraft: ['minecraft_adventurer', 'minecraft_designer', 'minecraft_hero'],
+    minecraft: ['minecraft_adventurer', 'minecraft_designer', 'minecraft_hero', 'minecraft_aquatic'],
     events: %w(starwars starwarsblocks starwarsblocks_hour flappy bounce sports basketball),
     k1: ['artist_k1', 'playlab_k1'],
     dance: ['dance']
   }.freeze
+
+  # Sharing of advanced project types to the public gallery is restricted for
+  # young students unless sharing is explciitly enabled by the student's
+  # teacher for privacy reasons.
+  ADVANCED_PROJECT_TYPES = ['applab', 'gamelab', 'spritelab']
 
   class << self
     # Look up every project associated with the provided user_id, excluding those that are hidden.
@@ -77,7 +82,7 @@ module ProjectsList
     #   which to search for the requested projects. Must not be specified
     #   when requesting all project types. Optional.
     # @return [Hash<Array<Hash>>] A hash of lists of published projects.
-    def fetch_published_projects(project_group, limit:, published_before:)
+    def fetch_published_projects(project_group, limit:, published_before: nil)
       unless limit && limit.to_i >= 1 && limit.to_i <= MAX_LIMIT
         raise ArgumentError, "limit must be between 1 and #{MAX_LIMIT}"
       end
@@ -86,7 +91,7 @@ module ProjectsList
         return include_featured(limit: limit)
       end
       raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.keys.include?(project_group.to_sym)
-      fetch_published_project_types([project_group.to_s], limit: limit, published_before: published_before)
+      fetch_published_project_types([project_group.to_sym], limit: limit, published_before: published_before)
     end
 
     def include_featured(limit:)
@@ -226,9 +231,9 @@ module ProjectsList
     # @param [hash] the join of storage_apps and user tables for a published project.
     #  See project_and_user_fields for which fields it contains.
     # @returns [hash, nil] containing fields relevant to the published project or
-    #  nil when the user has sharing_disabled = true
+    #  nil when the user has sharing_disabled = true for App Lab and Game Lab.
     def get_published_project_and_user_data(project_and_user)
-      return nil if get_sharing_disabled_from_properties(project_and_user[:properties])
+      return nil if get_sharing_disabled_from_properties(project_and_user[:properties]) && ADVANCED_PROJECT_TYPES.include?(project_and_user[:project_type])
       channel_id = storage_encrypt_channel_id(project_and_user[:storage_id], project_and_user[:id])
       StorageApps.get_published_project_data(project_and_user, channel_id).merge(
         {

@@ -1471,3 +1471,51 @@ da:
               name: Omslut variabler
             For Loop Fun:
               name: For loop sjov
+            The Artist:
+              name: Kunstneren
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Stafet-programmering
+            Conditionals with Cards:
+              name: Betingelser med kortspil
+            Digital Citizenship:
+              name: Digital statsborgerskab
+            'Unplugged: Binary':
+              name: 'Unplugged: Binære'
+            Artist Binary:
+              name: Kunstner binære
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Opbygge et fundament
+            Nested Loops:
+              name: Indlejret Løkker
+            Conditionals with Cards:
+              name: Betingelser med kortspil
+            Conditionals:
+              name: Betingelser
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Stafet-programmering
+            Conditionals with Cards:
+              name: Betingelser med kortspil
+            Envelope Variables:
+              name: Omslut variabler
+            For Loop Fun:
+              name: For loop sjov
+            Binary Bracelets:
+              name: Binære armbånd
+            'Unplugged: Binary':
+              name: 'Unplugged: Binære'
+            Artist Binary:
+              name: Kunstner binære
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing

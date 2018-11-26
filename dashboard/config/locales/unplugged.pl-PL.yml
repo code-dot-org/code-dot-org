@@ -499,3 +499,38 @@ pl:
         desc: 'Aby dowiedzieć się o instrukcjach warunkowych, uczniowie grają w karty
           i tworzą reguły takie, jak: "Jeśli wyciągnę czerwoną kartę, to zdobywam
           punkt" a "Jeśli wyciągnę czarną kartę, to ty zdobywasz punkt."'
+      GraphPaperProgramming_2019:
+        title: Programowanie na papierze milimetrowym
+        desc: Uczniowie piszą algorytm (zestaw instrukcji) korzystając ze zbioru wcześniej
+          zdefiniowanych poleceń, aby kierować innymi uczniami przy odtworzeniu rysunku.
+      RelayProgramming_2018_2019:
+        title: Sztafeta programowania
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Aktywność unplugged (bez komputera)
+        desc: Dzisiaj dowiesz się, co to znaczy być Cyfrowym Obywatelem.
+      BinaryImages_2019:
+        title: Binarne obrazy (Binary Images)
+        desc: Chociaż wiele osób sądzi, że binarne są tylko zera i jedynki, w naszych
+          poprzednich kursach uczniowie mogli się dowiedzieć, że informacja może być
+          reprezentowana na różne binarne sposoby.  Na tej lekcji to pojęcie jest
+          rozwijane jeszcze dalej i ilustrowane jest, jak komputer może przechowywać
+          bardziej złożone informacje (takie jak obrazy i kolory) w postaci binarnej.
+      GettingLoopy_2019:
+        title: Poznając pętle
+        desc: Ta lekcja wprowadza pętlę (instrukcje powtarzania), jedno z pojęć programowania,
+          z wykorzystaniem tańca. Uczniowie poznają prostą choreografię, a następnie
+          są proszeni o powtarzanie jej.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Aktywność unplugged (bez komputera)
+        desc: Dziś dowiesz się, co zrobić, jeśli ktoś jest złośliwy online.
+      BigEvent_2019:
+        title: Wielkie wydarzenie
+        desc: Przybliża się uczniom pojęcie "zdarzeń" (events) w programowaniu, które
+          są działaniami, które komputer stale monitoruje. Nauczyciel będzie naciskał
+          przyciski na papierze a uczniowie będą reagować w zależności od tego, który
+          przycisk został naciśnięty.
+      BinaryBracelets_2019:
+        title: Binarne bransoletki
+        desc: Uczniowie tworzą bransoletki jako binarne reprezentacje pierwszej litery
+          swoich nazwiska. Dowiadują się przy tym, że dane mogą być reprezentowane
+          i przechowywane na wiele sposobów.

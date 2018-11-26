@@ -62,7 +62,9 @@
       2-3 Artist Functions 12: "Funksjoner er veldig bra når man skal tegne kompliserte ting mange ganger. \\r\n\\r\nKan du bruke funksjonen `tegn en blomst` for å fylle ut resten av blomsterkassa?\\r\nPlantene er alle 100 piksler fra hverandre."
       2-3 Artist Functions 13: Vi har gitt deg fire funksjoner. Bruk dem slik du vil i ett eller flere ledd for å lage bilder som du kan dele med vennene dine. Trykk Kjør for å se et eksempel.
       2-3 Artist Functions 2: "Funksjoner lar deg lage nye blokker!\\r\n\\r\nVi har flyttet de nye blokkene du trenger for å lage et kvadrat inn i en funksjon som heter `tegn en firkant`. Bruk denne funksjonen for å lage brillene. \\r\n\\r\nFirkantene er 75 piksler fra hverandre."
+      2-3 Artist Functions 3 a: "Endre funksjonen \"tegne en firkant\" til å tegne briller med rammer som er 115px på hver side. \n\nRutene er nå 45 piksler fra hverandre."
       2-3 Artist Functions 3: "Endre funksjonen slik at den tegner sider på 115 piksler. \\r\n\\r\nDisse firkantene er nå 45 piksler fra hverandre."
+      2-3 Artist Functions 4 a: Plasser funksjonen inni en løkke for og legg til en ekstra gang for å tegne disse kvadratene.
       2-3 Artist Functions 4: Plasser funksjonen inni en løkke for å tegne disse kvadratene.
       2-3 Artist Functions 7: 'Bruk funksjonen "tegn et hus" for å tegne to hus med to forskjellige parametere. (Hint: det første huset er 100 piksler).'
       2-3 Artist Functions 9: 'Her er en funksjon for snøflak. Bruk den til å lage en vinterscene. Her er det fritt frem, så det er ingen oppgaver å løse. Ha det gøy!'
@@ -1056,25 +1058,35 @@
       New Sports Project: 'Lag ditt eget spill! Du bestemmer: Du kan endre på alle regler, blande og sette sammen ulike sporter. Vær kreativ! Når du er ferdig, trykk "Fullført" for å dele spillet med vennene dine, så de kan prøve det på sine telefoner!'
       Overworld Avoid Monsters: Det er ikke bra å møte på en creeper. Beveg deg forsiktig forbi creeperene og kom deg trygt hjem.
       Overworld Avoid Monsters_2018: Det er ikke bra å møte på en creeper. Beveg deg forsiktig forbi creeperene og kom deg trygt hjem.
+      Overworld Avoid Monsters_2019: Det er ikke bra å møte på en creeper. Beveg deg forsiktig forbi creeperene og kom deg trygt hjem.
       Overworld Chop Tree - allthethings: Tre er en veldig viktig ressurs. Det er mange ting som lages av det. Gå til treet og bruk kommandoen "ødelegg blokk" for å hugge det ned.
       Overworld Chop Tree: Tre er en veldig viktig ressurs. Det er mange ting som lages av det. Gå til treet og bruk kommandoen "ødelegg blokk" for å hugge det ned.
       Overworld Chop Tree_2018: Tre er en veldig viktig ressurs. Det er mange ting som lages av det. Gå til treet og bruk kommandoen "ødelegg blokk" for å hugge det ned.
+      Overworld Chop Tree_2019: Tre er en veldig viktig ressurs. Det er mange ting som lages av det. Gå til treet og bruk kommandoen "ødelegg blokk" for å hugge det ned.
       Overworld Chop Trees: Vi må bygge et hus før sola går ned. Du trenger masse tre for å bygge et hus. Hogg ned de tre trærne.
       Overworld Chop Trees_2018: Vi må bygge et hus før sola går ned. Du trenger masse tre for å bygge et hus. Hogg ned de tre trærne.
+      Overworld Chop Trees_2019: Vi må bygge et hus før sola går ned. Du trenger masse tre for å bygge et hus. Hogg ned de tre trærne.
       Overworld Free Play 20x20: Gratulerer! Du har fullført alle oppgavene våre! Nå kan du utvinne, bygge og lage noe unikt ved å bruke alt du har lært.
       Overworld Free Play 20x20_2018: Gratulerer! Du har fullført alle oppgavene våre! Nå kan du utvinne, bygge og lage noe unikt ved å bruke alt du har lært.
+      Overworld Free Play 20x20_2019: Gratulerer! Du har fullført alle oppgavene våre! Nå kan du utvinne, bygge og lage noe unikt ved å bruke alt du har lært.
       Overworld House Frame Chosen: Bygg resten av huset med det materiale du vil. Kommandoen "gjenta" vil være nyttig her.
       Overworld House Frame Chosen_2018: Bygg resten av huset med det materiale du vil. Kommandoen "gjenta" vil være nyttig her.
+      Overworld House Frame Chosen_2019: Bygg resten av huset med det materiale du vil. Kommandoen "gjenta" vil være nyttig her.
       Overworld Move to Sheep: Legg til enda en "gå fremover"-kommando for å nå fram til sauen.
       Overworld Move to Sheep_2018: Legg til enda en "gå fremover"-kommando for å nå fram til sauen.
+      Overworld Move to Sheep_2019: Legg til enda en "gå fremover"-kommando for å nå fram til sauen.
       Overworld Place Wall: Alle hus begynner med en vegg. Bygg den første delen av huset ved å putte kommandoene "plasser" og "flytt fremover" inne i gjenta-løkken.
       Overworld Place Wall_2018: Alle hus begynner med en vegg. Bygg den første delen av huset ved å putte kommandoene "plasser" og "flytt fremover" inne i gjenta-løkken.
+      Overworld Place Wall_2019: Alle hus begynner med en vegg. Bygg den første delen av huset ved å putte kommandoene "plasser" og "flytt fremover" inne i gjenta-løkken.
       Overworld Plant Crops: Det er lurt å planlegge fremover. Plant avlinger på begge sidene av vannet så du ikke blir sulten senere.
       Overworld Plant Crops_2018: Det er lurt å planlegge fremover. Plant avlinger på begge sidene av vannet så du ikke blir sulten senere.
+      Overworld Plant Crops_2019: Det er lurt å planlegge fremover. Plant avlinger på begge sidene av vannet så du ikke blir sulten senere.
       Overworld Powered Minecart: Bra jobbet! Du har samlet mange ressurser og bygd et enkelt hus. Nå kan du legge skinner fra kanten av kartet til husdøren.
       Overworld Powered Minecart_2018: Bra jobbet! Du har samlet mange ressurser og bygd et enkelt hus. Nå kan du legge skinner fra kanten av kartet til husdøren.
+      Overworld Powered Minecart_2019: Bra jobbet! Du har samlet mange ressurser og bygd et enkelt hus. Nå kan du legge skinner fra kanten av kartet til husdøren.
       Overworld Shear Sheep: Tid for å klippe sauer! Bruk "klipp"-kommandoen for å samle ull fra begge sauene.
       Overworld Shear Sheep_2018: Tid for å klippe sauer! Bruk "klipp"-kommandoen for å samle ull fra begge sauene.
+      Overworld Shear Sheep_2019: Tid for å klippe sauer! Bruk "klipp"-kommandoen for å samle ull fra begge sauene.
       PDK5 Conditionals 1: Lilla blomster kan ha enten 1 eller 0 nektar, men du vet ikke hvilken! Vær forsiktig med å samle nektar fra en lilla blomst hvis den ikke har noe. Sjekk om nektar er lik 1 ved hjelp av hvis blokken.
       PDK5 Functions 2: Funksjoner lar deg definere nye blokker! Vi har flyttet blokker for å tegne et kvadrat i en funksjon kalt "tegne en firkant". Kan du bruke funksjonen "tegne en firkant" for å opprette vinduer? kvadratene er 75 piksler fra hverandre.
       PS - test - pixelation: Fullfør X-formen ved å bruke 0 og 1-tall
@@ -1110,12 +1122,16 @@
       U4L02 - Objects - Template1_2018: Mal
       Underground Avoiding Lava: Under noen av blokkene skjuler det seg lava, som du må dekke til før du går videre. Her hjelper det med en "hvis"-kommando. Legg til en "flytt fremover"-kommando på riktig sted for å utvinne disse blokkene.
       Underground Avoiding Lava_2018: Under noen av blokkene skjuler det seg lava, som du må dekke til før du går videre. Her hjelper det med en "hvis"-kommando. Legg til en "flytt fremover"-kommando på riktig sted for å utvinne disse blokkene.
+      Underground Avoiding Lava_2019: Under noen av blokkene skjuler det seg lava, som du må dekke til før du går videre. Her hjelper det med en "hvis"-kommando. Legg til en "flytt fremover"-kommando på riktig sted for å utvinne disse blokkene.
       Underground If Statements: Det er nå det blir vanskelig. Utvinn tre rødsteiner, men ikke fall ned i lavaen. Bruk en "hvis"-kommando for å plassere brostein over lavaen du finner.
       Underground If Statements_2018: Det er nå det blir vanskelig. Utvinn tre rødsteiner, men ikke fall ned i lavaen. Bruk en "hvis"-kommando for å plassere brostein over lavaen du finner.
+      Underground If Statements_2019: Det er nå det blir vanskelig. Utvinn tre rødsteiner, men ikke fall ned i lavaen. Bruk en "hvis"-kommando for å plassere brostein over lavaen du finner.
       Underground Iron: Det er ikke lurt å gå rett inn i smeltet lava. Bruk brostein til å lage en bro, og så utvinner du minst to av jernblokkene.
       Underground Iron_2018: Det er ikke lurt å gå rett inn i smeltet lava. Bruk brostein til å lage en bro, og så utvinner du minst to av jernblokkene.
+      Underground Iron_2019: Det er ikke lurt å gå rett inn i smeltet lava. Bruk brostein til å lage en bro, og så utvinner du minst to av jernblokkene.
       Underground Mining Coal: De mest verdifulle ressursene finner du under bakken, men det kan være mørkt der. Plasser minst to fakler og utvinn minst to kull.
       Underground Mining Coal_2018: De mest verdifulle ressursene finner du under bakken, men det kan være mørkt der. Plasser minst to fakler og utvinn minst to kull.
+      Underground Mining Coal_2019: De mest verdifulle ressursene finner du under bakken, men det kan være mørkt der. Plasser minst to fakler og utvinn minst to kull.
       aE7: "Hva skjer dersom du kopierer løkken og snur mot venstre fremfor høyre? \\r \n\\r\nKlarer du å gjenskape denne bølgeformen?"
       aE8: "La oss nå gjenta det hele fire ganger for å opprette bilderammen. Se opp for hjørnene – du kan ikke bare snu deg 90 grader! \\r\n\\r\nEn halvsirkel kan lages ved å repetere 3 grader 60 ganger. Så hvilke av disse kodeblokkene må du bruke for å lage en kvart-sirkel for hjørnene?"
       beeDebugVideo1: Bruk en `gjenta`-løkke for å samle all nektaren.
@@ -1201,12 +1217,16 @@
       courseC_maze_debugging10: Feilsøk denne levelen ved å flytte rundt på brikkene og å legge til brikker, slik at jeg kommer meg bort til grisen!
       courseD_artist_binary1: "Binær er en måte å representere informasjon ved å bare bruke to alternativer. Vi skal bruke alternativene \"av\" (representert av tallet 0) og \"på\" (representert av tallet 1). \\r\n\\r\nVi har gitt deg et rutenett av \"piksler\" som du kan gå igjennom og lage mønstre ved å skru på spesifikke ruter. Kan du få artisten til å tegne \"01010101\" i binært i første rad?"
       courseD_artist_binary1_2018: "Binær er en måte å representere informasjon ved å bare bruke to alternativer. Vi skal bruke alternativene \"av\" (representert av tallet 0) og \"på\" (representert av tallet 1). \\r\n\\r\nVi har gitt deg et rutenett av \"piksler\" som du kan gå igjennom og lage mønstre ved å skru på spesifikke ruter. Kan du få artisten til å tegne \"01010101\" i binært i første rad?"
+      courseD_artist_binary1_2019: "Binær er en måte å representere informasjon ved å bare bruke to alternativer. Vi skal bruke alternativene \"av\" (representert av tallet 0) og \"på\" (representert av tallet 1). \\r\n\\r\nVi har gitt deg et rutenett av \"piksler\" som du kan gå igjennom og lage mønstre ved å skru på spesifikke ruter. Kan du få artisten til å tegne \"01010101\" i binært i første rad?"
       courseD_artist_binary4: Kan du tegne dette mønsteret ved å kjøre en løkke over en tresifret binærstreng?
       courseD_artist_binary4_2018: Kan du tegne dette mønsteret ved å kjøre en løkke over en tresifret binærstreng?
+      courseD_artist_binary4_2019: Kan du tegne dette mønsteret ved å kjøre en løkke over en tresifret binærstreng?
       courseD_artist_binary6: Hvilken 6-siftret binærstreng, repetert 11 ganger, vil tegne dette bildet?
       courseD_artist_binary6_2018: Hvilken 6-siftret binærstreng, repetert 11 ganger, vil tegne dette bildet?
+      courseD_artist_binary6_2019: Hvilken 6-siftret binærstreng, repetert 11 ganger, vil tegne dette bildet?
       courseD_artist_binary7: Hva er den korteste binærstrengen du kan repetere for å tegne dette bildet?
       courseD_artist_binary7_2018: Hva er den korteste binærstrengen du kan repetere for å tegne dette bildet?
+      courseD_artist_binary7_2019: Hva er den korteste binærstrengen du kan repetere for å tegne dette bildet?
       courseD_autorun_binary4_2019: Kan du tegne dette mønsteret ved å kjøre en løkke over en tresifret binærstreng?
       courseD_autorun_binary6_2019: Hvilken 6-siftret binærstreng, repetert 11 ganger, vil tegne dette bildet?
       courseD_autorun_binary7_2019: Hva er den korteste binærstrengen du kan repetere for å tegne dette bildet?
@@ -1233,6 +1253,7 @@
       courseD_farmer_until_challenge2_2018: Bruk blokken hvis/ellers til å følge den svingete banen. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne haugene.
       courseD_farmer_while_challenge1: Fyll inn alle hullene og fjern alle haugene.
       courseD_farmer_while_challenge1_2018: Fyll inn alle hullene og fjern alle haugene.
+      courseD_farmer_while_challenge1_2019: Fyll inn alle hullene og fjern alle haugene.
       courseD_farmer_while_challenge2: Fyll inn alle hullene og fjern alle haugene.
       courseD_farmer_while_challenge2_2018: Fyll inn alle hullene og fjern alle haugene.
       courseD_maze_nestedLoops4: 'Få meg til solsikken!'
@@ -1245,6 +1266,7 @@
       courseE_artist_functions1_2018: "Hallo. Meg zombie artist. Meg tegne elsker! Hjelp meg med å tegne de firkantete brillene. Hint: mellomrommet mellom brilleglassene er 25 piksler kortere enn lengden på firkantene."
       courseE_bee_concept1: Samle inn all nektaren fra alle blomstene. Bruk løkke i løkke.
       courseE_bee_concept1_2018: Samle inn all nektaren fra alle blomstene. Bruk løkke i løkke.
+      courseE_bee_concept1_2019: Samle inn all nektaren fra alle blomstene. Bruk løkke i løkke.
       courseE_bee_functions1: Samle inn nektar fra alle blomstene.
       courseE_bee_functions1_2018: Samle inn nektar fra alle blomstene.
       courseE_bee_functions3: Funksjoner er kodeblokker som utfører en bestemt oppgave. Bruk blokken "hent 5" til å samle inn 5 nektar om gangen. Pass på å bruk en løkke for å bruke ideelt antall blokker.

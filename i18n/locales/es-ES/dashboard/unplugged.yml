@@ -291,3 +291,26 @@ es:
       Conditionals_2019:
         title: Condicionales
         desc: Para aprender acerca de las instrucciones condicionales, los estudiantes juegan con cartas y crean reglas como "si tomo una tarjeta roja, obtengo un punto" y "si tomo una carta negra, tú obtienes un punto."
+      GraphPaperProgramming_2019:
+        title: Programación en papel cuadriculado
+        desc: Los estudiantes escriben un algoritmo (un conjunto de instrucciones) usando un conjunto de comandos predefinidos para dirigir a sus compañeros en la reproducción de un dibujo.
+      RelayProgramming_2018_2019:
+        title: Programación de Relevos
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Actividad fuera de línea
+        desc: Hoy aprenderás lo que significa ser un Ciudadano Digital.
+      BinaryImages_2019:
+        title: Imágenes binarias
+        desc: Aunque muchas personas piensan que el binario es estrictamente ceros y unos, nuestros cursos anteriores enseñaron a los alumnos que la información puede ser representada en una variedad de opciones binarias. Esta clase lleva ese concepto un paso más allá que ilustra cómo un ordenador también puede almacenar información aún más compleja (por ejemplo, imágenes y colores) en binario.
+      GettingLoopy_2019:
+        title: Bucleandose
+        desc: Esta lección introduce el concepto de programación de los bucles (instrucciones repetidas) a través de una actividad de baile. Los estudiantes aprenderán una simple coreografía, después se les pedirá que la repitan.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Actividad fuera de línea
+        desc: Hoy aprenderás qué hacer si alguien está siendo malo en la red.
+      BigEvent_2019:
+        title: El Gran Evento
+        desc: Se presenta a los estudiantes el concepto de "eventos" en programación, que son acciones que un ordenador monitoriza constantemente. El profesor presionará botones en un control remoto de papel y los estudiantes reaccionarán dependiendo de qué botón se presiona.
+      BinaryBracelets_2019:
+        title: Pulseras Binarias
+        desc: Los estudiantes crean pulseras como representaciones binarias de la primera letra de su nombre. Aprenden que los datos se pueden representar y guardar de más de una forma.

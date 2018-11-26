@@ -351,6 +351,15 @@ is:
           LOCATION:
             "{x: 100, y: 200}": vinstri
             "{x: 300, y: 200}": hægri
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": vinstri
+            "{x: 300, y: 200}": hægri
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': allt
       Mikelab_getProp:
         options:
           PROPERTY:

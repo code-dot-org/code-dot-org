@@ -251,23 +251,23 @@
       courseA_unplugged_loops:
         desc: I denne oppgaven skal du lære om løkker!
       courseB_unplugged_MRF:
-        title: Frakoblet Aktivitet
+        title: Aktivitet uten datamaskin
         desc: I denne oppgaven skal du 'programmere' vennene dine!
       courseB_unplugged_loopyMRF:
-        title: Frakoblet Aktivitet
+        title: Aktivitet uten datamaskin
         desc: Akkurat som i "Mine robotvenner" skal du "programmere" vennene dine,
           men denne gangen med løkker!
       courseC_Unplugged_ScreenOutTheMean:
-        title: Frakoblet Aktivitet
+        title: Aktivitet uten datamaskin
         desc: I dag skal du lære hva du skal gjøre hvis noen er slemme på nett.
       courseD_unplugged_digitalCitizenship:
-        title: Frakoblet Aktivitet
+        title: Aktivitet uten datamaskin
         desc: I dag skal du lære hva det vil si å være en digital borger.
       courseE_unplugged_privateInformation:
         title: 'Sunn fornuft opplæring: Privat og personlig informasjon '
         desc: I dag vil du lære forskjellen mellom privat og personlig informasjon!
       courseF_unplugged_powerOfWords:
-        title: Frakoblet Aktivitet
+        title: Aktivitet uten datamaskin
         desc: I dag skal du lære hva du skal gjøre hvis noen er slemme på nett.
       courseAB_unplugged_plantASeed:
         title: 'Virkelige algoritmer: Plante et frø'
@@ -412,10 +412,10 @@
           samling med instruksjoner) for å styre klassekameratene sine til å lage
           en tegning.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Frakoblet Aktivitet
+        title: Aktivitet uten datamaskin
         desc: I dag skal du lære hva det vil si å være en digital borger.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Frakoblet Aktivitet
+        title: Aktivitet uten datamaskin
         desc: I dag skal du lære hva du skal gjøre hvis noen er slemme på nett.
       Conditionals_2018:
         title: Betingelser
@@ -459,3 +459,38 @@
         desc: For å lære om betingete instruksjoner skal elevene spille et kortspill
           og lage regler som "Hvis jeg tegner et rødt kort, får jeg et poeng" og "Hvis
           jeg tegner et svart kort, får du et poeng."
+      GraphPaperProgramming_2019:
+        title: Millimeterpapirprogrammering
+        desc: Elevene bruker forhåndsbestemte kommandoer til å lage en algoritme (en
+          samling med instruksjoner) for å styre klassekameratene sine til å lage
+          en tegning.
+      RelayProgramming_2018_2019:
+        title: Relé programmering
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Aktivitet uten datamaskin
+        desc: I dag skal du lære hva det vil si å være en digital borger.
+      BinaryImages_2019:
+        title: Binære Bilder
+        desc: Selv om mange mennesker tenker på binærsystemet som kun 0 og 1, viser
+          vårt forrige kurs elevene at den informasjonen kan bli representert i en
+          rekke av binære alternativer. Denne leksjonen tar det konseptet et steg
+          videre da det illustrerer hvordan en datamaskin kan lagre enda mer kompleks
+          informasjon (som for eksempel bilder og farger) binært også.
+      GettingLoopy_2019:
+        title: Gå i spinn
+        desc: Denne leksjonen introduserer programmeringen av konseptet av sløyfer
+          (gjentatt instruksjon) gjennom en danseaktivitet. Studentene vil lære enkel
+          koreografi, og deretter bli bedt om å gjenta den.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Aktivitet uten datamaskin
+        desc: I dag skal du lære hva du skal gjøre hvis noen er slemme på nett.
+      BigEvent_2019:
+        title: Den store begivenheten
+        desc: Eleven blir introdusert for programmeringskonseptet "hendelse" som er
+          handlnger som datamaskinen overvåker. Læreren trykker på knapper på en papirfjernkontroll
+          og elevene svarer basert på hvilken knapp som er trykket.
+      BinaryBracelets_2019:
+        title: Binær armbånd
+        desc: Elevene skal lage armbånd som en binær representasjon av den første
+          bokstaven i navnet. Elevene lærer at data kan være representert og lagret
+          på mer enn én måte.
