@@ -445,7 +445,7 @@ uk:
         </block></xml>
 
         Ця програма використовує гучність "басів" (або низьких звуків) для керування висотою танцівника. Можеш зробити так, щоб інший танцівник теж реагував на музику?
-      Dance_Party_11.5: "Подивись на блок:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+      Dance_Party_11_5: "Подивись на блок:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
         \   <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"DUCK\"</title>\n
         \   <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\n  \nТепер
         можна створити одразу кілька танцівників!\n\nСпробуй використати деякі з блоків
