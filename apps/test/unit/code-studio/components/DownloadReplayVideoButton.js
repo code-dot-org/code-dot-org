@@ -7,16 +7,25 @@ import { expect } from '../../../util/configuredChai';
 import { UnconnectedDownloadReplayVideoButton as DownloadReplayVideoButton } from '@cdo/apps/code-studio/components/DownloadReplayVideoButton';
 
 describe('DownloadReplayVideoButton', () => {
-  window.appOptions = {
-    signedReplayLogUrl: "some-url.com"
-  };
-
   let wrapper;
 
   let checkVideoSpy;
   let checkVideoUntilSuccessSpy;
   let fetchSpy;
   let tryDownloadVideoSpy;
+
+  let originalAppOptions;
+
+  before(function () {
+    originalAppOptions = window.appOptions;
+    window.appOptions = {
+      signedReplayLogUrl: "some-url.com"
+    };
+  });
+
+  after(function () {
+    window.appOptions = originalAppOptions;
+  });
 
   beforeEach(function () {
     wrapper = shallow(
