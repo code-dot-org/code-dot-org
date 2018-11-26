@@ -386,7 +386,7 @@ class ShareAllowedDialog extends React.Component {
                   }
                   <a id="sharing-phone" href="" onClick={wrapShareClick(this.showSendToPhone.bind(this), 'send-to-phone')}>
                     <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
-                    <span>Send to phone</span>
+                    <span>{i18n.sendToPhone()}</span>
                   </a>
                   {canPublish && !isPublished &&
                   <button
