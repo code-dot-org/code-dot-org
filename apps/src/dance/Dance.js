@@ -629,7 +629,7 @@ Dance.prototype.onHandleEvents = function (currentFrameEvents) {
  */
 Dance.prototype.displayFeedback_ = function () {
   const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
-  this.studioApp_.displayFeedback({
+  let feedbackOptions = {
     feedbackType: this.testResults,
     message: this.message,
     response: this.response,
@@ -641,7 +641,15 @@ Dance.prototype.displayFeedback_ = function () {
       reinfFeedbackMsg: 'TODO: localized feedback message.',
     },
     disablePrinting: true,
-  });
+  };
+
+  // Disable social share for users under 13 if we have the cookie set.
+  const is13PlusCookie = sessionStorage.getItem('ad_anon_over13');
+  if (is13PlusCookie) {
+    feedbackOptions.disableSocialShare = is13PlusCookie === 'false';
+  }
+
+  this.studioApp_.displayFeedback(feedbackOptions);
 };
 
 Dance.prototype.getAppReducers = function () {
