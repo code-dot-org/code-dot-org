@@ -15,6 +15,21 @@ let sprites = () => {
   });
 };
 
+const limitedColours = [
+  '#000000', // BLACK
+  '#808080', // GREY
+  '#c3b091', // KHAKI
+  '#ffffff', // WHITE
+  '#ff0000', // RED
+  '#ff77ff', // PINK
+  '#ffa000', // ORANGE
+  '#ffff00', // YELLOW
+  '#228b22', // GREEN
+  '#0000cd', // BLUE
+  '#7fffd4', // AQUAMARINE
+  '#843179', // PLUM
+];
+
 const customInputTypes = {
   locationPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
@@ -127,6 +142,20 @@ const customInputTypes = {
     },
     generateCode(block, arg) {
       return Blockly.JavaScript.translateVarName(block.getTitleValue(arg.name));
+    },
+  },
+  limitedColourPicker: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const options = {
+        colours: limitedColours,
+        columns: 4,
+      };
+      currentInputRow
+        .appendTitle(inputConfig.label)
+        .appendTitle(new Blockly.FieldColour('#ff0000', undefined, options), 'VAL');
+    },
+    generateCode(block, arg) {
+      return block.getTitleValue(arg.name);
     },
   },
 };
