@@ -202,14 +202,14 @@ module Pd::WorkshopSurveyResultsHelper
 
     related_workshops =
       if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
-        nil
+        [workshop]
       elsif current_user.permission?(UserPermission::WORKSHOP_ORGANIZER) || current_user.permission?(UserPermission::PROGRAM_MANAGER)
         Pd::Workshop.organized_by(current_user).where(course: workshop.course)
       else
         Pd::Workshop.facilitated_by(current_user).where(course: workshop.course)
       end
 
-    summary[:all_my_workshops] = generate_workshops_survey_summary(related_workshops, questions)
+    summary[:all_my_workshops] = generate_workshops_survey_summary(related_workshops, questions) if related_workshops
 
     summary[:facilitators] = Hash[*workshop.facilitators.pluck(:id, :name).flatten]
 
@@ -332,7 +332,7 @@ module Pd::WorkshopSurveyResultsHelper
       responses["Post Workshop"] = {
         general: Pd::WorkshopDailySurvey.with_answers.where(
           pd_workshop: workshops,
-          form_id: Pd::WorkshopDailySurvey.get_form_id_for_subjects_and_day(workshops.reject(&:summer).map(&:subject), POST_WORKSHOP_FORM_KEY)
+          form_id: Pd::WorkshopDailySurvey.get_form_id_for_subjects_and_day(workshops.reject(&:summer?).map(&:subject), POST_WORKSHOP_FORM_KEY)
         ).map(&:form_data_hash)
       }
     end
@@ -380,14 +380,14 @@ module Pd::WorkshopSurveyResultsHelper
   end
 
   def generate_facilitator_averages(summary)
-    facilitators = summary[:facilitators]
+    facilitators = summary[:facilitators].values
 
     flattened_this_workshop_histograms = summary[:this_workshop].values.flat_map(&:values).select {|x| x.is_a? Hash}.reduce(&:merge)
     flattened_all_my_workshop_histograms = summary[:all_my_workshops].values.flat_map(&:values).select {|x| x.is_a? Hash}.reduce(&:merge)
 
     flattened_questions = summary[:questions].values.flat_map(&:values).reduce(:merge)
     flattened_questions.transform_values do |question|
-      question[:option_map] = question[:options].each_with_index.map {|x, i| [x, i + 1]}.to_h
+      question[:option_map] = question[:options].each_with_index.map {|x, i| [x, i + 1]}.to_h if question[:options]
     end
 
     facilitator_averages = facilitators.map {|name| [name, {}]}.to_h
@@ -399,17 +399,19 @@ module Pd::WorkshopSurveyResultsHelper
         histogram_for_all_my_workshops = (question_group[:all_ids] || [question_group[:primary_id]]).map {|x| flattened_all_my_workshop_histograms[x]}.compact.first
         histogram_for_all_my_workshops = histogram_for_all_my_workshops.try(:[], facilitator) || histogram_for_all_my_workshops
 
-        question = flattened_questions[question_group[:primary_id]]
+        question = flattened_questions[question_group[:primary_id]] || question_group[:all_ids].map {|x| flattened_questions[x]}.compact.first
 
         next if histogram_for_this_workshop.nil?
 
+        puts question_group
+
         total_responses_for_this_workshop = histogram_for_this_workshop.values.reduce(:+) || 0
         total_answer_for_this_workshop_sum = histogram_for_this_workshop.map {|k, v| question[:option_map][k] * v}.reduce(:+) || 0
-        facilitator_averages[facilitator][question_group[:primary_id]] = {this_workshop: total_answer_for_this_workshop_sum / total_responses_for_this_workshop.to_f}
+        facilitator_averages[facilitator][question_group[:primary_id]] = {this_workshop: (total_answer_for_this_workshop_sum / total_responses_for_this_workshop.to_f).round(2)}
 
         total_responses_for_all_workshops = histogram_for_all_my_workshops.values.reduce(:+) || 0
         total_answer_for_all_workshops_sum = histogram_for_all_my_workshops.map {|k, v| question[:option_map][k] * v}.reduce(:+) || 0
-        facilitator_averages[facilitator][question_group[:primary_id]][:all_my_workshops] = total_answer_for_all_workshops_sum / total_responses_for_all_workshops.to_f
+        facilitator_averages[facilitator][question_group[:primary_id]][:all_my_workshops] = (total_answer_for_all_workshops_sum / total_responses_for_all_workshops.to_f).round(2)
       end
     end
 

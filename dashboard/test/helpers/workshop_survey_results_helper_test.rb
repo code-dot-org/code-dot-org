@@ -700,11 +700,33 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       facilitators: ['Facilitator 1', 'Facilitator 2']
     }
 
+    generate_facilitator_averages(existing_summary)
+
     assert_equal(
       {
-
+        'Facilitator 1' => {
+          'overallHow' => {
+            this_workshop: 4.44,
+            all_my_workshops: 3.57
+          },
+          'howOften56' => {
+            this_workshop: 4.83,
+            all_my_workshops: 4.17
+          }
+        },
+        'Facilitator 2' => {
+          'overallHow' => {
+            this_workshop: 4.44,
+            all_my_workshops: 3.57
+          },
+          'howOften56' => {
+            this_workshop: 2.43,
+            all_my_workshops: 2.07
+          }
+        }
       },
-      generate_facilitator_averages(existing_summary)
+
+      existing_summary[:facilitator_averages]
     )
   end
 end
