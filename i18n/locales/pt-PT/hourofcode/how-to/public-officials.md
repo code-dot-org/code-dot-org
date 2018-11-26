@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # How to involve your entire community
 
-### Show your state, district, or city your commitment to computer science
+### Mostre ao seu estado, distrito ou cidade a sua dedicacao a Ciencias da Computacao
 
 * * *
 
