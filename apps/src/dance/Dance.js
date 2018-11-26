@@ -347,6 +347,11 @@ Dance.prototype.playSong = function (url, callback, onEnded) {
  * Reset Dance to its initial state.
  */
 Dance.prototype.reset = function () {
+  var clickToRunImage = document.getElementById('danceClickToRun');
+  if (clickToRunImage) {
+    clickToRunImage.style.display = "block";
+  }
+
   Sounds.getSingleton().stopAllAudio();
 
   this.nativeAPI.reset();
@@ -418,6 +423,11 @@ Dance.prototype.onReportComplete = function (response) {
  * Click the run button.  Start the program.
  */
 Dance.prototype.runButtonClick = async function () {
+  var clickToRunImage = document.getElementById('danceClickToRun');
+  if (clickToRunImage) {
+    clickToRunImage.style.display = "none";
+  }
+
   // Block re-entrancy since starting a run is async
   // (not strictly needed since we disable the run button,
   // but better to be safe)
