@@ -15,19 +15,14 @@ let sprites = () => {
   });
 };
 
+// fully-saturated primary and secondary colors.
 const limitedColours = [
-  '#000000', // BLACK
-  '#808080', // GREY
-  '#c3b091', // KHAKI
-  '#ffffff', // WHITE
   '#ff0000', // RED
-  '#ff77ff', // PINK
-  '#ffa000', // ORANGE
+  '#00ff00', // GREEN
+  '#0000ff', // BLUE
   '#ffff00', // YELLOW
-  '#228b22', // GREEN
-  '#0000cd', // BLUE
-  '#7fffd4', // AQUAMARINE
-  '#843179', // PLUM
+  '#00ffff', // CYAN
+  '#ff00ff', // MAGENTA
 ];
 
 const customInputTypes = {
@@ -148,7 +143,7 @@ const customInputTypes = {
     addInput(blockly, block, inputConfig, currentInputRow) {
       const options = {
         colours: limitedColours,
-        columns: 4,
+        columns: 3,
       };
       currentInputRow
         .appendTitle(inputConfig.label)
