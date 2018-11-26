@@ -12,6 +12,7 @@ import * as applabConstants from '../../applab/constants';
 import * as gamelabConstants from '../../gamelab/constants';
 import { SongTitlesToArtistTwitterHandle } from '../dancePartySongArtistTags';
 import { hideShareDialog, unpublishProject } from './shareDialogRedux';
+import DownloadReplayVideoButton from './DownloadReplayVideoButton';
 import { showPublishDialog } from '../../templates/projects/publishDialog/publishDialogRedux';
 import PublishDialog from '../../templates/projects/publishDialog/PublishDialog';
 import { createHiddenPrintWindow } from '@cdo/apps/utils';
@@ -173,6 +174,7 @@ class ShareAllowedDialog extends React.Component {
     exportError: null,
     isTwitterAvailable: false,
     isFacebookAvailable: false,
+    replayVideoUnavailable: false,
   };
 
   componentDidMount() {
@@ -197,11 +199,14 @@ class ShareAllowedDialog extends React.Component {
     }
   }
 
-  shouldCreateReplayVideo = () =>
+  hasReplayVideo = () =>
     this.props.appType === 'dance' &&
-    appOptions.signedReplayLogUrl &&
+    appOptions.signedReplayLogUrl;
+
+  shouldCreateReplayVideo = () =>
+    this.hasReplayVideo() &&
     this.props.replayLog &&
-    this.props.replayLog.length;
+    this.props.replayLog.length > 1;
 
   tryCreateReplayVideo = () => {
     if (this.shouldCreateReplayVideo()) {
@@ -210,6 +215,12 @@ class ShareAllowedDialog extends React.Component {
         body: JSON.stringify(this.props.replayLog)
       });
     }
+  };
+
+  replayVideoNotFound = () => {
+    this.setState({
+      replayVideoUnavailable: true
+    });
   };
 
   sharingDisabled = () =>
@@ -375,7 +386,7 @@ class ShareAllowedDialog extends React.Component {
                   }
                   <a id="sharing-phone" href="" onClick={wrapShareClick(this.showSendToPhone.bind(this), 'send-to-phone')}>
                     <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
-                    <span>Send to phone</span>
+                    <span>{i18n.sendToPhone()}</span>
                   </a>
                   {canPublish && !isPublished &&
                   <button
@@ -398,6 +409,12 @@ class ShareAllowedDialog extends React.Component {
                     text={i18n.unpublish()}
                     className="no-mc"
                   />
+                  }
+                  {this.hasReplayVideo() &&
+                      <DownloadReplayVideoButton
+                        channelId={this.props.channelId}
+                        onError={this.replayVideoNotFound}
+                      />
                   }
                   {canPrint && hasThumbnail &&
                     <a href="#" onClick={wrapShareClick(this.print.bind(this), 'print')}>
@@ -433,6 +450,13 @@ class ShareAllowedDialog extends React.Component {
                     <span style={{fontSize: 12}} className="thumbnail-warning">
                       {i18n.thumbnailWarning()}
                       </span>
+                  </div>
+                }
+                {this.state.replayVideoUnavailable &&
+                  <div style={{clear: 'both', marginTop: 10}}>
+                    <span style={{fontSize: 12}} className="thumbnail-warning">
+                      {i18n.downloadReplayVideoButtonError()}
+                    </span>
                   </div>
                 }
                 <div style={{clear: 'both', marginTop: 40}}>

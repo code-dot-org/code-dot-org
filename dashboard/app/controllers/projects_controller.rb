@@ -96,7 +96,7 @@ class ProjectsController < ApplicationController
     },
     dance: {
       name: 'New Dance Lab Project',
-      default_image_url: '',
+      default_image_url: '/blockly/media/dance/placeholder.png',
     },
     makerlab: {
       name: 'New Maker Lab Project',
@@ -330,7 +330,7 @@ class ProjectsController < ApplicationController
       @project_image = CDO.studio_url "v3/files/#{@view_options['channel']}/.metadata/thumbnail.png"
     end
 
-    if params[:key] == 'dance' && DCDO.get('share_video_sharing_enabled', nil)
+    if params[:key] == 'dance' && DCDO.get('share_video_sharing_enabled', true)
       # TODO: elijah set up test subdomains for dance-api, and situationally
       # point to those here
       @project_video = "https://dance-api.code.org/videos/video-#{@view_options['channel']}.mp4"

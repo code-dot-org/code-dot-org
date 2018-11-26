@@ -830,11 +830,12 @@ FeedbackUtils.prototype.getFeedbackMessageElement_ = function (options) {
  */
 FeedbackUtils.prototype.createSharingDiv = function (options) {
   // TODO: this bypasses the config encapsulation to ensure we have the most up-to-date value.
-  if (this.studioApp_.disableSocialShare || window.appOptions.disableSocialShare) {
+  if (this.studioApp_.disableSocialShare ||
+        window.appOptions.disableSocialShare ||
+        options.disableSocialShare) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.sendToPhone = false;
   } else {
 
     // set up the twitter share url

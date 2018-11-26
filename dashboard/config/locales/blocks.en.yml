@@ -32,20 +32,20 @@ en:
             '"SHARK"': all sharks
             '"UNICORN"': all unicorns
           MOVE:
+            '"next"': "(Next)"
+            '"prev"': "(Previous)"
+            '"rand"': "(Random)"
+            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Clap High
-            MOVES.Clown: Gangnam
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double Down
             MOVES.Drop: Drop
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Roll: Body Roll
+            MOVES.Clown: Gangnam
             MOVES.Kick: Star
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
-            '"next"': "(Next)"
-            '"prev"': "(Previous)"
-            '"rand"': "(Random)"
             MOVES.Rest: None
           DIR:
             "-1": "←"
@@ -54,20 +54,20 @@ en:
         text: "{SPRITE} do {MOVE} {DIR} forever"
         options:
           MOVE:
+            '"next"': "(Next)"
+            '"prev"': "(Previous)"
+            '"rand"': "(Random)"
+            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Clap High
-            MOVES.Clown: Gangnam
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double Down
             MOVES.Drop: Drop
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Roll: Body Roll
+            MOVES.Clown: Gangnam
             MOVES.Kick: Star
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
-            '"next"': "(Next)"
-            '"prev"': "(Previous)"
-            '"rand"': "(Random)"
             MOVES.Rest: None
           DIR:
             "-1": "←"
@@ -99,15 +99,28 @@ en:
             '"SHARK"': all sharks
             '"UNICORN"': all unicorns
           MOVE:
+            '"rand"': "(Random)"
+            MOVES.XBend: Bend
+            MOVES.Roll: Body Roll
+            MOVES.XClapSide: Clap
             MOVES.ClapHigh: Clap High
-            MOVES.Clown: Gangnam
             MOVES.Dab: Dab
+            MOVES.XFever: Disco
             MOVES.DoubleJam: Double Down
             MOVES.Drop: Drop
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Roll: Body Roll
+            MOVES.Clown: Gangnam
+            MOVES.XHeadHips: Head + Hips
+            MOVES.XHop: Hop
+            MOVES.XHighKick: Kick
+            MOVES.XKnee: Knee
+            MOVES.XKneel: Kneel
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: Reach
+            MOVES.XSlide: Slide
             MOVES.Kick: Star
+            MOVES.XArmsUp: Stretch
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
             MOVES.Rest: None
@@ -118,15 +131,28 @@ en:
         text: "{SPRITE} do {MOVE} {DIR} once"
         options:
           MOVE:
+            '"rand"': "(Random)"
+            MOVES.XBend: Bend
+            MOVES.Roll: Body Roll
+            MOVES.XClapSide: Clap
             MOVES.ClapHigh: Clap High
-            MOVES.Clown: Gangnam
             MOVES.Dab: Dab
+            MOVES.XFever: Disco
             MOVES.DoubleJam: Double Down
             MOVES.Drop: Drop
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Roll: Body Roll
+            MOVES.Clown: Gangnam
+            MOVES.XHeadHips: Head + Hips
+            MOVES.XHop: Hop
+            MOVES.XHighKick: Kick
+            MOVES.XKnee: Knee
+            MOVES.XKneel: Kneel
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: Reach
+            MOVES.XSlide: Slide
             MOVES.Kick: Star
+            MOVES.XArmsUp: Stretch
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
             MOVES.Rest: None
@@ -348,9 +374,8 @@ en:
             '"splatter"': Bubbles
             '"swirl"': Hypno
             '"snowflakes"': Snow
-            '"text"': Song Title
             '"spiral"': Spiral
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": "(Random)"
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Random)"
       Dancelab_setDanceSpeed:
         text: set {SPRITE} dance speed to {SPEED}
         options:
@@ -980,8 +1005,28 @@ en:
             "{x: 100, y: 300}": bottom left
             "{x: 300, y: 300}": bottom right
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_createNewSprite2:
+        text: make a new {COSTUME} at {LOCATION}
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": top
+            "{x: 200, y: 300}": bottom
+            "{x: 100, y: 200}": left
+            "{x: 300, y: 200}": right
+            "{x: 200, y: 200}": center
+            "{x: 100, y: 100}": top left
+            "{x: 300, y: 100}": top right
+            "{x: 100, y: 300}": bottom left
+            "{x: 300, y: 300}": bottom right
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_destroy:
         text: remove {SPRITE}
+      Mikelab_destroyAll:
+        text: remove {SELECT} {COSTUME}
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
       Mikelab_displace:
         text: "{TARGET} blocks {SPRITE} from moving"
       Mikelab_edgesDisplace:
@@ -1095,6 +1140,8 @@ en:
         text: when mouse released
       Mikelab_whenTouchesAny:
         text: when{SPRITE} touches any sprite
+      Mikelab_whenXTouchesY:
+        text: when{COSTUME} touches {COSTUME2}
       Mikelab_whileClicked:
         text: 'while clicking on{SPRITE}
 
@@ -1164,8 +1211,6 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
-      aalab_createNewSpriteAdvanced:
-        text: "make a new sprite \n called {NAME} \n with costume {COSTUME} \n at {LOCATION}"
       aalab_createPropertyGroup:
         text: |-
           make a new sprite group called {VAR}
@@ -1183,8 +1228,6 @@ en:
             '"direction"': movement direction
             '"rotation"': rotation or direction
             '"tint"': tint
-      aalab_whenTouchingAdvanced:
-        text: when {SPRITE1} touches {SPRITE2}
       craft_ifPath:
         text: |-
           if path {DIR}
