@@ -155,7 +155,7 @@ const customInputTypes = {
         .appendTitle(new Blockly.FieldColour('#ff0000', undefined, options), 'VAL');
     },
     generateCode(block, arg) {
-      return block.getTitleValue(arg.name);
+      return `'${block.getTitleValue(arg.name)}'`;
     },
   },
 };
