@@ -389,6 +389,8 @@ el:
             '"tint"': απόχρωση
       Dancelab_setTint:
         text: ορισμός {SPRITE} απόχρωσης σε {VAL}
+      Dancelab_setTintInline:
+        text: ορισμός {SPRITE} απόχρωσης σε {VAL}
       Dancelab_setTintEach:
         options:
           THIS:
