@@ -5,39 +5,39 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to involve your entire school district
+# Kuidas kõiki oma piirkonna koole kaasata
 
-### Every school in your district can take part in the largest learning event in history.
+### Iga kool teie piirkonnas saab osa võtta maailma suurimast õppimisüritusest.
 
 ---
 
-## Get every school participating, every student learning!
+## Kutsu iga kool osalema ning iga laps õppima!
 
-### 1. Recruit local schools
+### 1. Kaasake kohalikud koolid
 
-Share [this email](<%= resolve_url('/promote/resources#sample-emails') %>) and [teacher how to guide](<%= resolve_url('/how-to') %>), or include a [short blurb](<%= resolve_url('/promote/stats') %>) in newsletters/district communications. <br />
+Jagage [ seda e-kirja](<%= resolve_url('/promote/resources#sample-emails') %>) ja [ õpetajate juhendit](<%= resolve_url('/how-to') %>) või lisage [ lühike infonupp ](<%= resolve_url('/promote/stats') %>) infokirjadesse. <br />
 
-### 2. Provide a sample logistics plan for schools
+### 2. Valmistage koolidele lihtne kava
 
-Share this [sample logistics plan](<%= localized_file('/files/HOC_Logistics_plan.pdf') %>) with schools to give them ideas of how to organize whole school participation. It’s as easy as doing it in every math class, homeroom period, or rotating throughout the week through the computer lab.
+Jagage faili [ lihtne logistika kava ](<%= localized_file('/files/HOC_Logistics_plan.pdf') %>) koolidega et anda neile ideid, kuidas kogu kool kaasata. Seda võib teha näiteks igas matermaatikatunnis või kogu nädala vältel arvutiklassides.
 
-### 3. Share on social media
+### 3. Jagage sotsiaalmeedias
 
-Post to [Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) or [Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Or share one of these inspirational [pictures and quotes](<%= resolve_url('/promote/resources#social') %>) from world leaders, or [stats](<%= resolve_url('/promote/stats') %>).
+Postitage [ Facebookis](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) või [ Twitteris](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Või jagage neid inspireerivaid [ pilte ja tsitaate](<%= resolve_url('/promote/resources#social') %>) maailma liidritelt või [ statistikat](<%= resolve_url('/promote/stats') %>).
 
-### 4. Promote on your district’s homepage
+### 4. Reklaamige oma piirkonna kodulehekülgedel
 
-Let visitors know about your participation and Hour of Code events. Link it to [Hour of Code](<%= resolve_url('/') %>).
+Rääkige, et osalete KoodiTund kampaanias. Viidake oma artiklites leheküljele [ KoodiTund](<%= resolve_url('/') %>).
 
-### 5. Host a district Hour of Code event
+### 5. Korraldage piirkondlik KoodiTund üritus
 
-See our [event how to guide](<%= resolve_url('/how-to/events') %>) for a sample run of show, media outreach kit, and other supports.
+Tutvuge meie[ ürituste korraldamise juhendiga ](<%= resolve_url('/how-to/events') %>), kus on info ajakirjanikele ning muud toetavad materjalid.
 
-## What comes after the Hour of Code?
+## Mis saab pärast KoodiTund ürituse läbiviimist?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+KoodiTund on alles esimene samm, kus õpime, kuidas tehnoloogia töötab ning kuidas programmeerida. Järgmised sammud:
 
-- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
-- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- Julgustade õpilasi jätkama [ internetis õppimist](<%= codeorg_url('/learn/beyond') %>).
+- [Osale](<%= codeorg_url('/professional-development-workshops') %>)1-päevasel silmast-silma töötoas. (ainult USA haridustöötajatele)
 
 <%= view :signup_button %>
