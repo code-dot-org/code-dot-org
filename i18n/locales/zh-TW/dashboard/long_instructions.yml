@@ -785,9 +785,10 @@ zh-TW:
         </block></xml>
         
         此程式使用音樂的「低音」音量（低音）來控制一個舞者的高度。您是否能讓另一個舞者也回應音樂？
-      Dance_Party_11.5: "查看此程式積木：\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n現在您可以一次建立一群舞者了！\n\n嘗試使用一些「所有鴨子」程式積木來編寫程式碼，這將使所有的鴨子一起跳舞。"
       Dance_Party_11.5_test: "查看此程式積木：\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n現在您可以一次建立一群舞者了！\n\n嘗試使用一些「所有鴨子」程式積木來編寫程式碼，這將使所有的鴨子一起跳舞。"
       Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> 程式積木可讓您在按下向上箭頭時執行程式碼。\n\n您可以變更舞蹈動作、變更舞者的屬性或者只進行一次快速動作。發揮創意，尋找新的程式積木！"
+      Dance_Party_11_5: "查看此程式積木：\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n現在您可以一次建立一群舞者了！\n\n嘗試使用一些「所有鴨子」程式積木來編寫程式碼，這將使所有的鴨子一起跳舞。"
+      Dance_Party_11.5: "查看此程式積木：\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n現在您可以一次建立一群舞者了！\n\n嘗試使用一些「所有鴨子」程式積木來編寫程式碼，這將使所有的鴨子一起跳舞。"
       Dance_Party_11b: |-
         是時候跳舞了！按下向左鍵時，貓會輕拍。按下向右鍵時，可讓機器人「掉落」。
       Dance_Party_12: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
@@ -848,6 +849,9 @@ zh-TW:
         
         建立一個名為「backup_dancer1」的備用舞者與貓跳舞。
       HOC Dance 9_draft: "<xml><block type=\"Dancelab_whenKey\"></block></xml> 程式積木可讓您在按下向上箭頭時執行程式碼。\n\n您可以變更舞蹈動作、變更舞者的屬性或者只進行一次快速動作。發揮創意，尋找新的程式積木！"
+      HOC Dance Freeplay: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
+      HOC Dance Freeplay_draft: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
+      HOC Dance Predraw: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
       Harvesting: "喔哦，我弄丟了地圖，種了什麼也搞不清楚！每個芽苗可以種出**玉米** ![picture of corn](https://images.code.org/cac3133c40781553a70066a67298b2b5-image-1472493202556.png)\n、**豌豆** ![picture of beans](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png)\n、**南瓜** ![picture of pumpkin](https://images.code.org/03cf76a978e0788ccb53f14e9d264695-image-1472493237148.png)\n。你可以寫些程式來收成這些作物嗎？不管它們是什麼。"
       Inspirational Artwork: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\\r\n\\r\n**自由發揮靈感：**你已經學會了製作這樣的圖案所需的知識了！\\r\n\\r\n如果這個圖案讓你有些聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。 \\r\n\\r\n注意：我們用了`設定透明度`積木來製作 petals（花瓣）向外褪色的效果。"
       InspirationalArtwork: "你已經學會了所有需要創建這個模式的知識了！\\r\n\\r\n如果這個圖形引起了你的聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。 \\r\n"
