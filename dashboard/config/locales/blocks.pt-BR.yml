@@ -430,6 +430,8 @@ pt-BR:
             '"tint"': tonalidade
       Dancelab_setTint:
         text: definir tonalidade {SPRITE} para {VAL}
+      Dancelab_setTintInline:
+        text: definir tonalidade {SPRITE} para {VAL}
       Dancelab_setTintEach:
         text: definir tonalidade de {THIS} para {VAL}
         options:

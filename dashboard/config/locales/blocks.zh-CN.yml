@@ -431,6 +431,8 @@ zh-CN:
             '"tint"': 色调
       Dancelab_setTint:
         text: 设置 {SPRITE} 色调为 {VAL}
+      Dancelab_setTintInline:
+        text: 设置 {SPRITE} 色调为 {VAL}
       Dancelab_setTintEach:
         text: 设置 {THIS} 色调为 {VAL}
         options:

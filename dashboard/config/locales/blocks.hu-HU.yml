@@ -393,6 +393,8 @@ hu:
             '"tint"': árnyalat
       Dancelab_setTint:
         text: "{SPRITE} árnyalatának beállítása: {VAL}"
+      Dancelab_setTintInline:
+        text: "{SPRITE} árnyalatának beállítása: {VAL}"
       Dancelab_setTintEach:
         options:
           THIS:

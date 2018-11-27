@@ -383,6 +383,8 @@ tr:
             '"tint"': renk tonu
       Dancelab_setTint:
         text: "{SPRITE} renk tonunu {VAL} olarak ayarla"
+      Dancelab_setTintInline:
+        text: "{SPRITE} renk tonunu {VAL} olarak ayarla"
       Dancelab_setTintEach:
         options:
           THIS:

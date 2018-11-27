@@ -440,6 +440,8 @@ pl:
             '"tint"': odcień
       Dancelab_setTint:
         text: ustaw {SPRITE} odcień na {VAL}
+      Dancelab_setTintInline:
+        text: ustaw {SPRITE} odcień na {VAL}
       Dancelab_setTintEach:
         text: ustaw odcień {THIS} na {VAL}
         options:
