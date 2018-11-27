@@ -143,6 +143,23 @@ XML
     assert_equal xml, xml2
   end
 
+  def create_test_data(name, pool, block_text, args, category: 'Events')
+    [{
+      name: name,
+      pool: pool,
+      category: category,
+      config:
+      {
+        "color" => [140, 1, 0.74],
+        "func" => "atSelectColor",
+        "blockText" => block_text,
+        "args" => args,
+        "eventBlock" => true
+      },
+      helperCode: nil
+    }]
+  end
+
   test 'localized shared_blocks' do
     test_locale = :"te-ST"
     I18n.locale = test_locale
@@ -435,43 +452,25 @@ XML
 
     level = create(:level, :blockly, level_num: 'level1_2_3')
 
-    custom_block =
-      [{
-        name: "DanceLab_atSelectQuantity",
-        pool: "SelectQuanity",
-        category: "Events",
-        config:
-        {
-          "color" => [140, 1, 0.74],
-          "func" => "atSelectQuantity",
-          "blockText" => "check the {QUANTITY} {MEASURE}",
-          "args" => [
-            {"name" => "QUANTITY", "type" => "Number", "field" => true},
-            {"name" => "MEASURE", "options" => [["Whole", "MEASURES.Whole"], ["Half", "MEASURES.Half"]]}
-          ],
-        },
-        helperCode: nil
-      }]
+    test_custom_block = create_test_data(
+      "DanceLab_atSelectQuantity", "SelectQuanity",
+      "check the {QUANTITY} {MEASURE}",
+      [
+        {"name" => "QUANTITY", "type" => "Number", "field" => true},
+        {"name" => "MEASURE", "options" => [["Whole", "MEASURES.Whole"], ["Half", "MEASURES.Half"]]}
+      ],
+    )
 
-    translated_block =
-      [{
-        name: "DanceLab_atSelectQuantity",
-        pool: "SelectQuanity",
-        category: "Events",
-        config:
-          {
-            "color" => [140, 1, 0.74],
-            "func" => "atSelectQuantity",
-            "blockText" => "vérifier la {QUANTITY} {MEASURE}",
-            "args" => [
-              {"name" => "QUANTITY", "type" => "Number", "field" => true},
-              {"name" => "MEASURE", "options" => [["Entier", "MEASURES.Whole"], ["Moitié", "MEASURES.Half"]]}
-            ],
-          },
-        helperCode: nil
-      }]
+    translated_block = create_test_data(
+      "DanceLab_atSelectQuantity", "SelectQuanity",
+      "vérifier la {QUANTITY} {MEASURE}",
+      [
+        {"name" => "QUANTITY", "type" => "Number", "field" => true},
+        {"name" => "MEASURE", "options" => [["Entier", "MEASURES.Whole"], ["Moitié", "MEASURES.Half"]]}
+      ]
+    )
 
-    localized_custom_block = level.localized_shared_blocks(custom_block)
+    localized_custom_block = level.localized_shared_blocks(test_custom_block)
 
     assert_equal localized_custom_block, translated_block
   end
