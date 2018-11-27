@@ -1,0 +1,32 @@
+{
+  "category": "Group Actions",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "groupRemoveTint",
+    "blockText": "remove color from {SELECT} {COSTUME}",
+    "args": [
+      {
+        "name": "SELECT",
+        "options": [
+          [
+            "all",
+            "\"all\""
+          ],
+          [
+            "this",
+            "\"this\""
+          ]
+        ]
+      },
+      {
+        "name": "COSTUME",
+        "customInput": "costumePicker"
+      }
+    ],
+    "methodCall": true
+  }
+}

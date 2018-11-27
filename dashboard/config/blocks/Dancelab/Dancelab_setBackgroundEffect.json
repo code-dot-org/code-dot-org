@@ -6,8 +6,9 @@
       0.45,
       0.65
     ],
+    "inline": false,
     "func": "setBackgroundEffect",
-    "blockText": "set background effect {EFFECT}",
+    "blockText": "set background effect\n{EFFECT} {PALETTE}",
     "args": [
       {
         "name": "EFFECT",
@@ -49,8 +50,25 @@
             "\"spiral\""
           ],
           [
+            "Starspace",
+            "\"starspace\""
+          ],
+          [
             "(Random)",
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]"
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral','starspace'][randomInt(0,8)]"
+          ]
+        ]
+      },
+      {
+        "name": "PALETTE",
+        "options": [
+          [
+            "Light",
+            "\"light\""
+          ],
+          [
+            "Neon",
+            "\"neon\""
           ]
         ]
       }

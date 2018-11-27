@@ -1,0 +1,64 @@
+{
+  "category": "Group Sprites",
+  "config": {
+    "func": "sprite",
+    "blockText": "new {COSTUME} sprite at {LOCATION}",
+    "returnType": "None",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "COSTUME",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "LOCATION",
+        "options": [
+          [
+            "top",
+            "{x: 200, y: 100}"
+          ],
+          [
+            "bottom",
+            "{x: 200, y: 300}"
+          ],
+          [
+            "left",
+            "{x: 100, y: 200}"
+          ],
+          [
+            "right",
+            "{x: 300, y: 200}"
+          ],
+          [
+            "center",
+            "{x: 200, y: 200}"
+          ],
+          [
+            "top left",
+            "{x: 100, y: 100}"
+          ],
+          [
+            "top right",
+            "{x: 300, y: 100}"
+          ],
+          [
+            "bottom left",
+            "{x: 100, y: 300}"
+          ],
+          [
+            "bottom right",
+            "{x: 300, y: 300}"
+          ],
+          [
+            "Random",
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}"
+          ]
+        ]
+      }
+    ]
+  }
+}
