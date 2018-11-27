@@ -421,6 +421,8 @@
   "dontForget": "Jangan lupa",
   "downloadCSV": "Mengunduh CSV",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Animasi",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "Tarik blok untuk mencocokan",
   "dropletBlock_addOperator_description": "tambahkan dua nomor",
   "dropletBlock_addOperator_signatureOverride": "Tambahkan operator",

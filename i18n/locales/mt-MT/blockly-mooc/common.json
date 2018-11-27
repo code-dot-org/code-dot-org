@@ -421,6 +421,8 @@
   "dontForget": "",
   "downloadCSV": "",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "",
   "dropletBlock_addOperator_signatureOverride": "",

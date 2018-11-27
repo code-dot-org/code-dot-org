@@ -421,6 +421,8 @@
   "dontForget": "لا تنسى",
   "downloadCSV": "تحميل CSV",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "الرسوم المتحركة",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "جمع رقمين",
   "dropletBlock_addOperator_signatureOverride": "علامة الجمع",

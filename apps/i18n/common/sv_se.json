@@ -421,6 +421,8 @@
   "dontForget": "Glöm inte",
   "downloadCSV": "Ladda ner CSV",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Animation",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "Lägg till två nummer",
   "dropletBlock_addOperator_signatureOverride": "",

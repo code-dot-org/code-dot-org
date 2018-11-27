@@ -421,6 +421,8 @@
   "dontForget": "別忘了",
   "downloadCSV": "下載 CSV",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "動畫",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "兩數相加",
   "dropletBlock_addOperator_signatureOverride": "加法運算子",

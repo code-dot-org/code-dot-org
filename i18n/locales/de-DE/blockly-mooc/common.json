@@ -421,6 +421,8 @@
   "dontForget": "Nicht vergessen",
   "downloadCSV": "Als CSV herunterladen",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Zeichentrickfilm",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "Füge zwei Nummern hinzu",
   "dropletBlock_addOperator_signatureOverride": "Füge einen Operator hinzu",

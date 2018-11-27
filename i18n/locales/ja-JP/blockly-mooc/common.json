@@ -421,6 +421,8 @@
   "dontForget": "忘れないでください",
   "downloadCSV": "CSVダウンロード",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "アニメーション",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "一致するようにブロックをドラッグする",
   "dropletBlock_addOperator_description": "二つの数を足す",
   "dropletBlock_addOperator_signatureOverride": "演算子を追加",

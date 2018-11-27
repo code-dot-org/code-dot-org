@@ -421,6 +421,8 @@
   "dontForget": "No t'oblidis",
   "downloadCSV": "",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Animació",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "Arrossega els blocs per relacionar",
   "dropletBlock_addOperator_description": "Afegeix dos numeros",
   "dropletBlock_addOperator_signatureOverride": "Afegir operador",

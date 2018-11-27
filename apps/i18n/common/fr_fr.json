@@ -421,6 +421,8 @@
   "dontForget": "N’oubliez pas",
   "downloadCSV": "Télécharger en CSV",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Animation",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "Fais glisser les blocs pour faire correspondre",
   "dropletBlock_addOperator_description": "Ajouter deux nombres",
   "dropletBlock_addOperator_signatureOverride": "Ajouter un opérateur",

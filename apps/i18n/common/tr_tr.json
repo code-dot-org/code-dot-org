@@ -421,6 +421,8 @@
   "dontForget": "Unutma",
   "downloadCSV": "CSV indir",
   "downloadAssessmentCSV": "Ogrenci cevaplarinin CSV sini indir",
+  "downloadReplayVideoButtonDownload": "Animasyon",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "Kareleri eşleştirmek için sürükleyin",
   "dropletBlock_addOperator_description": "iki sayı ekle",
   "dropletBlock_addOperator_signatureOverride": "Operatör ekle",

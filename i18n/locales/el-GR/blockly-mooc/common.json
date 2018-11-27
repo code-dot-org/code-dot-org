@@ -421,6 +421,8 @@
   "dontForget": "Μην ξεχάσετε",
   "downloadCSV": "Κατεβάστε το CSV",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Κινούμενα γραφικά",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "Πρόσθεση δύο αριθμών",
   "dropletBlock_addOperator_signatureOverride": "Τελεστής πρόσθεσης",

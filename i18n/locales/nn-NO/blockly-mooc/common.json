@@ -421,6 +421,8 @@
   "dontForget": "Ikkje gløym",
   "downloadCSV": "Last ned CSV",
   "downloadAssessmentCSV": "Last ned CSV på svar frå elevar",
+  "downloadReplayVideoButtonDownload": "Animasjon",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "Dra like blokker",
   "dropletBlock_addOperator_description": "Legg til to tall",
   "dropletBlock_addOperator_signatureOverride": "Legg til operatør",

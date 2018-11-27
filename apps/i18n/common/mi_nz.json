@@ -421,6 +421,8 @@
   "dontForget": "Kaua e wareware",
   "downloadCSV": "",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Hākoritanga",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "",
   "dropletBlock_addOperator_signatureOverride": "",

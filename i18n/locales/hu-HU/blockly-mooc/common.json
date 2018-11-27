@@ -421,6 +421,8 @@
   "dontForget": "Ne felejtsd el",
   "downloadCSV": "",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Animáció",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "Adjon meg két értéket",
   "dropletBlock_addOperator_signatureOverride": "",

@@ -421,6 +421,8 @@
   "dontForget": "Vergeet niet",
   "downloadCSV": "Download CSV",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Animatie",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "Sleep de blokken om bij elkaar te passen",
   "dropletBlock_addOperator_description": "Twee getallen optellen",
   "dropletBlock_addOperator_signatureOverride": "Optel operator",

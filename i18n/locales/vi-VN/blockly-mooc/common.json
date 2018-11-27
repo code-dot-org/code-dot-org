@@ -421,6 +421,8 @@
   "dontForget": "Đừng quên",
   "downloadCSV": "",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Hình ảnh động",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "Cộng hai số",
   "dropletBlock_addOperator_signatureOverride": "Thêm người điều hành",
