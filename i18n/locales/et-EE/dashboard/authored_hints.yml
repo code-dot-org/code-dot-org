@@ -121,13 +121,6 @@ et:
           * Kahe või rohkema tantsija omadused peavad muutuma.
           
           *See tase lõppeb peale 8 ühikut*
-      Dance_Party_11.5_authored_hint:
-        validation: |-
-          **Kuidas ma siit tasemelt läbi saan?**
-          
-          * Ole lihtsalt loov!
-          
-          *See tase lõppeb peale 8 ühikut*
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
@@ -136,6 +129,20 @@ et:
           
           *See tase lõppeb peale 8 ühikut*
       Dance_Party_11_authored_hint:
+        validation: |-
+          **Kuidas ma siit tasemelt läbi saan?**
+          
+          * Ole lihtsalt loov!
+          
+          *See tase lõppeb peale 8 ühikut*
+      Dance_Party_11.5_authored_hint:
+        validation: |-
+          **Kuidas ma siit tasemelt läbi saan?**
+          
+          * Ole lihtsalt loov!
+          
+          *See tase lõppeb peale 8 ühikut*
+      Dance_Party_11_5_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
           
