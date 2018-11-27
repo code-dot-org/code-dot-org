@@ -385,19 +385,6 @@ hu:
         </block></xml>
 
         Ez a program a zene „basszus“ szólamának (a mély hangoknak) a hangereje alapján szabályozza az egyik táncos magasságát. Be tudod állítani, hogy a másik táncos is reagáljon a zenére?
-      Dance_Party_11.5: |-
-        Nézd meg ezt a blokkot:
-
-        <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
-
-        Most már egyetlen mozdulattal egy csomó táncost létre tudsz hozni!
-
-        Az „összes kacsa“ blokkok használatával próbálj meg olyan kódot írni, ami alapján az összes kacsa ugyanúgy fog táncolni.
       Dance_Party_11.5_test: |-
         Nézd meg ezt a blokkot:
 
@@ -415,6 +402,32 @@ hu:
         A <xml><block type="Dancelab_whenKey"></block></xml> blokkal a felfelé nyilat lenyomva tudod futtatni a kódot.
 
         Módosíthatod a táncmozdulatot, módosíthatod egy táncos tulajdonságait, vagy végezhetsz egy egyszeri mozdulatot. Ötletelj bátran, és keresd az új blokkokat!
+      Dance_Party_11_5: |-
+        Nézd meg ezt a blokkot:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Most már egyetlen mozdulattal egy csomó táncost létre tudsz hozni!
+
+        Az „összes kacsa“ blokkok használatával próbálj meg olyan kódot írni, ami alapján az összes kacsa ugyanúgy fog táncolni.
+      Dance_Party_11.5: |-
+        Nézd meg ezt a blokkot:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Most már egyetlen mozdulattal egy csomó táncost létre tudsz hozni!
+
+        Az „összes kacsa“ blokkok használatával próbálj meg olyan kódot írni, ami alapján az összes kacsa ugyanúgy fog táncolni.
       Dance_Party_11b: Indulhat a táncverseny! A Macska legyint, amikor megnyomod
         a balra nyilat. Állítsd be, hogy a Robot „drop“ mozdulatot tegyen, amikor
         megnyomod a jobbra nyilat.
@@ -470,6 +483,12 @@ hu:
         A <xml><block type="Dancelab_whenKey"></block></xml> blokkal a felfelé nyilat lenyomva tudod futtatni a kódot.
 
         Módosíthatod a táncmozdulatot, módosíthatod egy táncos tulajdonságait, vagy végezhetsz egy egyszeri mozdulatot. Ötletelj bátran, és keresd az új blokkokat!
+      HOC Dance Freeplay: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és
+        oszd meg az ismerőseiddel.
+      HOC Dance Freeplay_draft: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat,
+        és oszd meg az ismerőseiddel.
+      HOC Dance Predraw: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és
+        oszd meg az ismerőseiddel.
       K-1 Bee Loops 2: Használj egy ciklust, hogy nektárt gyűjts és mézet készíts!
       K-1 Bee Loops 3: Használj ciklusokat, hogy nektárt gyűjts és mézet készíts!
       K-1 Bee Loops 4: Használj ciklusokat, hogy nektárt gyűjts, mézet készíts, és

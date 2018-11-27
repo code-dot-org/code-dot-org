@@ -226,6 +226,7 @@ hu:
             '"ALIEN"': Földönkívüli
             '"BEAR"': Medve
             '"CAT"': Macska
+            '"DOG"': Kutya
             '"DUCK"': Kacsa
             '"FROG"': Béka
             '"MOOSE"': Jávorszarvas
@@ -248,7 +249,7 @@ hu:
           készíts {N} új {COSTUME} elemet
           {LAYOUT} elrendezésben
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
