@@ -205,6 +205,7 @@ de:
           COSTUME:
             '"BEAR"': Bär
             '"CAT"': Katze
+            '"DOG"': Hund
             '"DUCK"': Ente
             '"FROG"': Frosch
             '"MOOSE"': Elch
@@ -449,6 +450,7 @@ de:
             '"right"': rechts
             '"space"': Weltall
             '"x"': x
+            '"y"': y
       Dancelab_whenPeak:
         text: wenn {RANGE} Höhepunkt
         options:

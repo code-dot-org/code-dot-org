@@ -436,19 +436,6 @@ de:
         </block></xml>
 
         Dieses Programm verwendet den "Bass" (die tiefen Töne) der Musik, um die Höhe eines Tänzers zu kontrollieren. Können Sie die anderen Tänzer auch auf die Musik reagieren lassen?
-      Dance_Party_11.5: |-
-        Schauen Sie sich diesen Block an:
-
-        <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"ENTE"</title>
-        <title name="LAYOUT">"Kreis"</title>
-        </block></xml>
-
-        Jetzt können Sie eine ganze Reihe von Tänzern auf einmal erstellen!
-
-        Verwenden Sie einige der "alle Enten“-Blöcke, um Code zu schreiben, der alle Enten gemeinsam tanzen lässt.
       Dance_Party_11.5_test: |-
         Schauen Sie sich diesen Block an:
 
@@ -466,6 +453,32 @@ de:
         Mit dem Block <xml><block type="Dancelab_whenKey"></block></xml> können Sie Code ausführen, wenn die Pfeiltaste nach oben gedrückt wird.
 
         Sie können den Tanzschritt verändern, die Eigenschaften eines Tänzers verändern oder einen schnellen einmaligen Tanzschritt tun. Seien Sie kreativ und halten Sie Ausschau nach neuen Blöcken!
+      Dance_Party_11_5: |-
+        Schauen Sie sich diesen Block an:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"ENTE"</title>
+        <title name="LAYOUT">"Kreis"</title>
+        </block></xml>
+
+        Jetzt können Sie eine ganze Reihe von Tänzern auf einmal erstellen!
+
+        Verwenden Sie einige der "alle Enten“-Blöcke, um Code zu schreiben, der alle Enten gemeinsam tanzen lässt.
+      Dance_Party_11.5: |-
+        Schauen Sie sich diesen Block an:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"ENTE"</title>
+        <title name="LAYOUT">"Kreis"</title>
+        </block></xml>
+
+        Jetzt können Sie eine ganze Reihe von Tänzern auf einmal erstellen!
+
+        Verwenden Sie einige der "alle Enten“-Blöcke, um Code zu schreiben, der alle Enten gemeinsam tanzen lässt.
       Dance_Party_11b: Es ist Zeit für einen Tanz-Wettbewerb! Die Katze dabt, wenn
         Sie die linke Pfeiltaste drücken. Lassen Sie den Roboter "droppen", indem
         Sie die rechte Pfeiltaste drücken.
@@ -585,6 +598,12 @@ de:
         Mit dem Block <xml><block type="Dancelab_whenKey"></block></xml> können Sie Code ausführen, wenn die Pfeiltaste nach oben gedrückt wird.
 
         Sie können den Tanzschritt verändern, die Eigenschaften eines Tänzers verändern oder einen schnellen einmaligen Tanzschritt tun. Seien Sie kreativ und halten Sie Ausschau nach neuen Blöcken!
+      HOC Dance Freeplay: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
+        Sie ihn mit Ihren Freunden.
+      HOC Dance Freeplay_draft: Grooven Sie los! Erstellen Sie einen eigenen Tanz
+        und teilen Sie ihn mit Ihren Freunden.
+      HOC Dance Predraw: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
+        Sie ihn mit Ihren Freunden.
       K-1 Bee Loops 2: Verwende eine „Wiederhole“-Schleife zum Bewegen, dann den Nektar
         einzusammeln und Honig herzustellen.
       K-1 Bee Loops 3: Verwende drei „Wiederhole"-Schleifen, um Nektar zu holen und
