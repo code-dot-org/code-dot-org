@@ -1,4 +1,4 @@
-function createNewSprite2(costume,location) {
+function groupCreateNewSprite(costume,location) {
   if (!location) {
     location = {x: 200, y: 200};
   }
