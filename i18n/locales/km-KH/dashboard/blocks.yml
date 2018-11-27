@@ -84,7 +84,7 @@ km:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ព្រាវ
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -178,6 +178,7 @@ km:
             '"right"': ស្តាំ
             '"space"': លំហ​អាកាស
             '"x"': x
+            '"y"': 'y'
       gamelab_changePropBy:
         options:
           PROPERTY:

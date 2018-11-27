@@ -178,6 +178,7 @@ km:
             '"right"': ស្តាំ
             '"space"': លំហ​អាកាស
             '"x"': x
+            '"y"': y
       gamelab_changePropBy:
         options:
           PROPERTY:
