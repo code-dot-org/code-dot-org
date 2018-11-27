@@ -156,7 +156,7 @@ id:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": acak
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -314,6 +314,7 @@ id:
             '"right"': kanan
             '"space"': luar angkasa
             '"x"': x
+            '"y"': 'y'
       Dancelab_whenPeak:
         options:
           RANGE:

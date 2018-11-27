@@ -314,6 +314,7 @@ id:
             '"right"': kanan
             '"space"': luar angkasa
             '"x"': x
+            '"y"': y
       Dancelab_whenPeak:
         options:
           RANGE:
