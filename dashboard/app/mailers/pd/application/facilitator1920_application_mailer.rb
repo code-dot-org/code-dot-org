@@ -1,5 +1,5 @@
 module Pd::Application
-  class Facilitator1819ApplicationMailer < ActionMailer::Base
+  class Facilitator1920ApplicationMailer < ActionMailer::Base
     default from: 'Code.org <facilitators@code.org>'
     helper_method :signed_by, :from
 
@@ -40,7 +40,7 @@ module Pd::Application
     end
 
     def signed_by(facilitator_application)
-      facilitator_application.csf? ? 'Jenna Garcia' : 'Sarah Fairweather'
+      facilitator_application.csf? ? 'Megan Hochstatter' : 'Sarah Fairweather'
     end
   end
 end
