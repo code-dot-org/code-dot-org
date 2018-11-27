@@ -5,243 +5,243 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How-to Guide for Volunteers
+# Juhend vabatahtlikele
 
-### Make a difference in a classroom today!
+### Saad koolis lapsi inspireerida!
 
 ---
 
-## Why volunteer?
+## Miks tulla vabatahtlikuks?
 
-Check out some testimony from past volunteers:
+Mõned mõtted eelmiste aastate vabatahtlikelt:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-- “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
+- "Parim osa minu kogemusest oli see, et terve klass olid tüdrukud ja erineva nahavärviga inimesed. See on hea, sest kui jõuame nende lasteni, siis saame ka It-tööstuse tulevikku muuta."
+- "Eriti meeldis mulle see, et sain noori tüdrukuid julgustada tehnoloogia valdkonda uurima. Tundsin, et saan aidata It-valdkonna järgmist põlvkorda oma kodukohas."
+- "Mulle meeldis üliväga see, kui põnevil lapsed olid. Üks hämmastav asjaolu oli see, et õpilased, kes tavaliselt akadeemiliselt eriti edukad ei olnud, said nende ülesannetega väga hästi hakkama, mõtlesid nagu arendajad ning aitasid ka teisi. Kindlasti aitas see kaasa nende enesehinnangule."
 
-## Anyone can volunteer
+## Igaüks sobib vabatahtlikuks
 
-### Volunteers and speakers in tech:
+### Vabatahtlikud IT-sektorist:
 
-Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
+Kas sul on side arvutiteaduse või tehnoloogiavaldkonnaga? Kui töötad tarkvaraarendajana või mistahes ametis IT-ettevõttes (olgu see siis programmeerimisega seotud või mitte) või oled läbinud arvutiteaduse kursusi, siis saad aidata õpilasi innustada! Paljud õpilased ei ole kunagi khanud kedagi, kes IT-sektoris töötaks. Õpetajatele on väga oluline, et klassi õpilastel tekiks side valdkonna professionaalide ja üliõpilastega.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science. <br /> <br />
+Võid olla kas külalisesineja klassis või aidata KoodiTundi läbi viia. Külasta kohalikke koole ning innusta lapsi arvutiteadusi õppima.<br /> <br />
 
-<a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button> <br /> <br /></p> 
+<a href="https://code.org/volunteer"><button>Registreeri vabatahtlikuks juba täna!</button> <br /> <br /></p> 
 
 <h3>
-  Anyone passionate about expanding opportunity:
+  Kui soovid rohkem panustada:
 </h3>
 
 <p>
-  Do you believe that learning computer science can open doors of opportunity for students? Help out in a local classroom or organize an after school event! You don’t need any background in computer science to host an Hour of Code. And, just offering to help out is often enough to convince your child’s teacher, a friend, or a club to try an hour.
+  Usud, et arvuiteaduste õppimine avab õpilastele uusi võimalusi? Aita oma kohalikku kooli või korralda kooliväline üritus! Selleks, et KoodiTund üritust korraldada, ei pea sa olema arvutiteaduse taustaga. Isegi abipakkumine on vahel piisav selleks, et julgustada sinu lapse õpetajat, sõpra või huviringi KoodiTundi läbi tegema.
 </p>
 
 <h3>
-  How do you get started?
+  Kuidas alustada?
 </h3>
 
 <ol>
   <li>
-    <a href="%= resolve_url('/promote/resources#help-schools') %">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+    <a href="%= resolve_url('/promote/resources#help-schools') %">Saada see e-kiri</a> oma lapse õpetajale ja paku abi KoodiTund läbiviimisel.
   </li>
   
   <li>
-    Offer to host an Hour of Code event after school at a local school. <a href="%= resolve_url('/how-to') %">Use this How-To Guide</a> to help you plan.
+    Paku end läbi viima KoodiTund üritust koolivälisel ajal kohalikus koolis.<a href="%= resolve_url('/how-to') %">Kasuta seda juhist</a> ürituse korraldamisel.
   </li>
 </ol>
 
 <h2>
-  Recruit your co-workers to volunteer
+  Kaasa kolleege
 </h2>
 
 <p>
-  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="%= resolve_url('/promote/resources#sample-email') %">Send this email</a> to your manager or the CEO to get everyone on board.
+  Räägi oma sõpradele ja kolleegidele KoodiTund kampaaniast. Paljud õpetajad otsivad vabatahtlikke, palu neil <a href="https://code.org/volunteer"> vabatahtlikuks registreeruda</a>. Kutsu oma tööandja kaasa lööma. <a href="%= resolve_url('/promote/resources#sample-email') %">Saada see e-kiri</a> oma ülemusele või ettevõtte juhile, et kõiki kaasata.
 </p>
 
 <h2>
-  How to prepare
+  Ettevalmistus
 </h2>
 
 <ul>
   <li>
-    <a href="%= resolve_url('/promote/resources#videos') %">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
+    <a href="%= resolve_url('/promote/resources#videos') %">Vali video</a>, mida klassile näidata innustamiseks ja KoodiTunni sissejuhatuseks.
   </li>
   <li>
-    Check out the <a href="/files/hoc-volunteer-toolkit.pdf">Hour of Code Volunteer Toolkit</a> which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
+    Tutvu <a href="/files/hoc-volunteer-toolkit.pdf">KoodiTund vabatahtliku juhendiga</a>, mis sisaldab ülevaadet, ajakava, ettevalmistavaid materjale ja reklmaammaterjale. Siin on olemas kõik, mida vabatahtlikuks hakkamisel vajad!
   </li>
   <li>
-    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="%= resolve_url('/learn') %">Hour of Code tutorial</a>.
+    Kui plaanid läbi KoodiTund õpetuse oma ürituse raames, siis proovi vähemalt 30 minutit õppida vähemalt üht <a href="%= resolve_url('/learn') %">KoodiTund õpetust</a>.
   </li>
   <li>
-    If you're visiting a school, complete any background checks or required paperwork.
+    Kui külastad kooli, siis täida kõik vajalikud dokumendid (kui need on vajalikud).
   </li>
   <li>
-    <a href="https://code.org/files/CSTT_Volunteers.pdf">Review these tips</a> about how to interact with students.
+    <a href="https://code.org/files/CSTT_Volunteers.pdf">Vaata neid soovitusi</a>, kuidas tudengitega suhelda.
   </li>
   <li>
-    Join the conversation on Facebook, Twitter, Instagram, and Tumblr with #HourOfCode.
+    Liitu meiega sotsiaalmeedia kanalites Facebook, Twitter, Instagram ja Tumblr kasutades #HourOfCode.
   </li>
   <li>
-    Connect with the teacher to discuss what you plan to speak about during your session.
+    Võta ühendust õpetajaga ja arutage läbi, mida ürituse ajal räägite.
   </li>
   <li>
-    If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand.
+    Kui oled virtuaalne vabatahtlik, siis testige ekraani jagamise võimalusi eelnevalt.
   </li>
 </ul>
 
 <h2>
-  Day-of Hour of Code Event
+  KoodiTund ürituse päeval
 </h2>
 
 <p>
-  When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+  Kui korraldate KoodiTund üritust, järgige allpool toodud juhendit oma päeva planeerimisel. Enne seda kohtuge koolis õpetajaga ja vajadusel registreerige enda külaskäik valvelauas. Kinnitage üle kokku lepitud kava päevaks ning arutage läbi lahtised küsimused.
 </p>
 
 <h3>
-  Sample agenda:
+  Lihtne päevakava:
 </h3>
 
 <table>
   <tr>
     <th>
-      Time
+      Aeg
     </th>
     
     <th>
-      Agenda item
+      Teema
     </th>
   </tr>
   
   <tr>
     <td>
-      1-5 minutes
+      1-5 minutit
     </td>
     
     <td>
-      <a href="%= resolve_url('promote/resources#videos') %">Show an inspirational video</a>.
+      <a href="%= resolve_url('promote/resources#videos') %">Näita inspireerivat videot</a>.
     </td>
   </tr>
   
   <tr>
     <td>
-      5-10 minutes
+      5-10 minutit
     </td>
     
     <td>
-      Introduce yourself and learn more about the students: </ul>
+      Tutvusta ennast ja saa õpilastega tuttavaks: </ul>
       
       <li>
-        What do you work, what do you do, and what do you love most about your job?
+        Kus sa töötad, mida teed ning mis sulle oma töö juures kõige rohkem meeldib?
       </li>
       
       <li>
-        What or who inspired you?
+        Kes või mis sind inspireerib?
       </li>
       
       <li>
-        How did you get interested in computer science?
+        Millest sai alguse sinu huvi arvutiteaduse vastu?
       </li>
       
       <li>
-        Did you have a mentor?
+        Kas sul on mentor?
       </li>
       
       <li>
-        Share a story about how tech affects everyone.
+        Räägi sellest, kuidas tehnoloogia kõiki mõjutab.
       </li>
       
-      <br />Ask the students questions and leave time for Q&A.</br> 
+      <br />Küsi õpilastelt küsimusi ning jäta aega küsimusteks-vastusteks.</br> 
       
       <li>
-        What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built?
+        Millised töökohad õpilastele huvi pakuvad, mis on nende lemmikseadmed või -äpid ning kuidas nad arvavad, et need on loodud?
       </li>
       
       <li>
-        Do the students have any questions for you?</ul></td> </tr> <tr>
+        Kas õpilastel on sulle küsimusi?</ul></td> </tr> <tr>
           <td>
-            30-60 minutes
+            30-60 minutit
           </td>
           
           <td>
-            <strong>Code!</strong> Walk around, answer questions, and guide them through tough puzzles. Try not to give students the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity.
+            <strong>Programmeeri!</strong> Kõnni ringi, vasta küsimustele ja juhata neid programmeerimismängude mängimisel. Proovi teha nii, et sa ei anna kohe vastust vaid küsid suunavaid küsimusi, et õpilased leiaksid ise õige vastuse. Julgusta õpilasi, et nad teistega suhtleks ja küsimusi küsiks. Üheskoos õppimine on suurepärane õppimisvorm.
           </td>
         </tr>
         
         <tr>
           <td>
-            1-3 minutes
+            1-3 minutit
           </td>
           
           <td>
-            Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!
+            Täna kõiki ja ütle lõpetuseks midagi innustavat. Jaga võimalusel pisikingitusi (kleepsud on väga toredad)!
           </td>
         </tr>
         
         <tr>
           <td>
-            After
+            Pärast
           </td>
           
           <td>
-            <strong>Make a lasting change:</strong> Talk to the teacher about turning the Hour of Code into a full computer science course! Go to <a href="https://code.org/yourschool">code.org/yourschool</a> with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.
+            <strong>Sinust võib alguse saada suur muutus:</strong> Räägi õpetajaga, kuidas KoodiTund muuta täispikaks arvutiteaduse kursuseks! Mine<a href="https://code.org/yourschool">code.org/yourschool</a>koos õpetajaga ning nimetage, mida koolis täna õpetatakse ning julgustage neid arvutiteadust oma koolis õpetama.
           </td>
         </tr></tbody> </table> 
         
         <h3>
-          After the Event:
+          Pärast üritust:
         </h3>
         <ul>
           <li>
-            Share your photos and stories with Code.org at giving@code.org.
+            Jaga oma fotosid ja lugusid Code.org korraldajatega kirjutades giving@code.org.
           </li>
           <li>
-            Remember to enter in your volunteer hours in your company’s volunteer tracking portal.
+            Lisa vabatahtlikuks olemise aeg vastavasse töötabelisse (kui see teie organisatsioonis olemas).
           </li>
           <li>
-            Share about your experience on social media #HourOfCode!
+            Jaga oma kogemusi sotsiaalmeedias #HourOfCode!
           </li>
           <li>
-            If you do take pictures/videos during the event, <strong>especially with students</strong>, make sure you get teacher/parent permission if you would like to post your stories on social media.
+            Või teete ürituse ajal pilte/videosid, <strong>eriti koos õpilastega</strong>, siis küsige ka õpetaja/lapsevanemate nõusolek nende avaldamiseks sotsiaalmeedias.
           </li>
           <li>
-            And, check back in a month: Is the teacher interested in offering a computer science course? Share <a href="https://code.org/yourschool">resources and professional learning opportunities to help them do this</a>.
+            Võta kuu aja pärast õpetajaga uuesti ühendust, et teada saada, kas õpetaja on huvitatud arvutiteaduse kursusest? Jaga<a href="https://code.org/yourschool"> materjale ja õppimisvõimalusi, mis selle võimalikuks muudavad.</a>.
           </li>
         </ul>
         <h2>
-          How you get selected as a technical volunteer of guest speaker
+          Kuidas sinust võib saada vabatahtlik või külalisesineja
         </h2>
         <ul>
           <li>
-            Teachers will be searching for volunteers on our <a href="https://code.org/volunteer/local">volunteer map</a>.
+            Õpetajad otsivad vabatahtlikke meie <a href="https://code.org/volunteer/local"> vabatahtlike kaardilt</a>.
           </li>
           <li>
-            Try to make your profile as complete as possible to increase the chance that a teacher will select you.
+            Katsu lisada võimalikult palju infot oma profiili juurde.
           </li>
           <li>
-            A teacher will contact you through this form (your email address will never be shared with the teacher). <em>If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.</em>
+            Õpetaja võtab sinuga selle vormi kaudu ühendust (sinu e-posti aadressi ei jagata õpetajale). <em>Kui saad liiga palju palveid õpetejatelt, võid alati oma eelistustest infot muuta või loobuda. Vastav link on iga õpetajatelt tulnud e-kirja lõpus.</em>
           </li>
         </ul>
         <h2>
-          Volunteering during the Hour of Code FAQ
+          Vabatahtlikuks KoodiTund ajal KKK
         </h2>
         <h3>
-          I haven't been contacted by a teacher yet. How can I still volunteer?
+          Õpetaja pole minuga veel ühendust võtnud. Kas saan siiski vabatahtlikuks minna?
         </h3>
         <p>
-          Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+          Proovi ühendust võtta kohalike koolidega ning helista õpetajale/direktorile/sekretärile ning uuri, kuidas saaksid aidata.
         </p>
         <h3>
-          How long do classroom visits last for?
+          Kui kaua klassikülastus kestab?
         </h3>
         <p>
-          An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+          Klassiruumis üritus kestab tavaliselt 60-90 minutit ning virtuaalse klassiruumi puhul tavaliselt 20-30 minutit.
         </p>
         <h3>
-          What age group is the Hour of Code activity appropriate for?
+          Mis vanusegrupile KoodiTund sobib?
         </h3>
         <p>
-          Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
+          Code.org ja meie partnerid on kõik KoodiTund tegevused loonud selliselt, et need oleksid sobivad kõigile koolilastele, poistele ja tüdrukutele. Igaüks, isegi täiskasvanud, saab kaasa lüüa!
         </p>
         <p>
           <%= view :signup_button %>

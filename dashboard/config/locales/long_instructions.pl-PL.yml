@@ -502,7 +502,7 @@ pl:
         </block></xml>
 
         Ten program wykorzystuje „basy” (niskie tony) w muzyce do sterowania wysokością tancerza. Czy możesz spowodować, aby drugi tancerz także reagował na muzykę?
-      Dance_Party_11.5: |-
+      Dance_Party_11_5: |-
         Sprawdź ten blok:
 
         <xml>
