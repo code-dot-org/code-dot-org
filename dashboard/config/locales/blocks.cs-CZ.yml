@@ -248,6 +248,7 @@ cs:
             '"ALIEN"': Vetřelec
             '"BEAR"': Medvěd
             '"CAT"': Kočka
+            '"DOG"': Pes
             '"DUCK"': Kachna
             '"FROG"': Žába
             '"MOOSE"': Los
@@ -527,6 +528,7 @@ cs:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       Dancelab_whenPeak:
         text: když je {RANGE} na vrcholu

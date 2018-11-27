@@ -357,19 +357,6 @@ cs:
         </block></xml>
 
         Tento program používá k ovládání výšky jednoho z tanečníků hlasitost "basů" (nízkých zvuků) v hudbě. Dokážeš přimět také dalšího tanečníka, aby reagoval na hudbu?
-      Dance_Party_11.5: |-
-        Mrkni na tento blok:
-
-        <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
-
-        Nyní můžeš vytvořit několik tanečníků najednou!
-
-        Zkus použít některé z bloků "všechny kachny" k napsání kódu, který přiměje všechny kachny tančit společně.
       Dance_Party_11.5_test: |-
         Mrkni na tento blok:
 
@@ -387,6 +374,32 @@ cs:
         Blok <xml><block type="Dancelab_whenKey"></block></xml> ti umožní spustit kód, když stiskneš šipku nahoru.
 
         Můžeš změnit taneční pohyb, změnit vlastnosti tanečníka nebo udělat rychlý pohyb jen jednou. Buď kreativní a hledej nové bloky!
+      Dance_Party_11_5: |-
+        Mrkni na tento blok:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Nyní můžeš vytvořit několik tanečníků najednou!
+
+        Zkus použít některé z bloků "všechny kachny" k napsání kódu, který přiměje všechny kachny tančit společně.
+      Dance_Party_11.5: |-
+        Mrkni na tento blok:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Nyní můžeš vytvořit několik tanečníků najednou!
+
+        Zkus použít některé z bloků "všechny kachny" k napsání kódu, který přiměje všechny kachny tančit společně.
       Dance_Party_11b: |-
         Je čas na tanec! Když stiskneš šipku vlevo, kočka bude poklepávat. Přiměj Robota "klesnout", když stiskneš šipku vpravo a "zatleskat nahoře" při stisknutí šipky nahoru.
 
@@ -466,6 +479,10 @@ cs:
         Blok <xml><block type="Dancelab_whenKey"></block></xml> ti umožní spustit kód, když stiskneš šipku nahoru.
 
         Můžeš změnit taneční pohyb, změnit vlastnosti tanečníka nebo udělat rychlý pohyb jen jednou. Buď kreativní a hledej nové bloky!
+      HOC Dance Freeplay: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
+      HOC Dance Freeplay_draft: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho
+        s kamarády.
+      HOC Dance Predraw: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
       K-1 Bee Loops 2: Používej cyklus k pohybu a pak dostaneš nektar a vyrobíš med!
       K-1 Bee Loops 3: Používej cykly, abys dostal nektar a udělal med!
       K-1 Bee Loops 4: Použij cykly, abys dostal nektar, udělal med a pohyboval!
