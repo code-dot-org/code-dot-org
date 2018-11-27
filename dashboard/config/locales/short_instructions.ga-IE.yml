@@ -1884,6 +1884,9 @@ ga:
       Overworld Avoid Monsters_2018: B'olc an mhaise duit bualadh i gcoinne Téaltóra.
         Téigh thar na téaltóirí go cúramach go dtí go mbainfidh tú do theach amach
         slán sábháilte.
+      Overworld Avoid Monsters_2019: B'olc an mhaise duit bualadh i gcoinne Téaltóra.
+        Téigh thar na téaltóirí go cúramach go dtí go mbainfidh tú do theach amach
+        slán sábháilte.
       Overworld Chop Tree - allthethings: Is acmhainn thábhachtach é adhmad. Déantar
         go leor rudaí éagsúla as. Siúil go dtí an crann agus úsáid an t-ordú "scrios
         a bhfuil anseo" chun é a leagan.
@@ -1893,9 +1896,15 @@ ga:
       Overworld Chop Tree_2018: Is acmhainn thábhachtach é adhmad. Déantar go leor
         rudaí éagsúla as. Siúil go dtí an crann agus úsáid an t-ordú "scrios a bhfuil
         anseo" chun é a leagan.
+      Overworld Chop Tree_2019: Is acmhainn thábhachtach é adhmad. Déantar go leor
+        rudaí éagsúla as. Siúil go dtí an crann agus úsáid an t-ordú "scrios a bhfuil
+        anseo" chun é a leagan.
       Overworld Chop Trees: Caithfimid teach a thógáil sula mbeidh an ghrian ina luí.
         Teastaíonn go leor adhmaid uainn chun tithe a thógáil. Leag na trí chrann.
       Overworld Chop Trees_2018: Caithfimid teach a thógáil sula mbeidh an ghrian
+        ina luí. Teastaíonn go leor adhmaid uainn chun tithe a thógáil. Leag na trí
+        chrann.
+      Overworld Chop Trees_2019: Caithfimid teach a thógáil sula mbeidh an ghrian
         ina luí. Teastaíonn go leor adhmaid uainn chun tithe a thógáil. Leag na trí
         chrann.
       Overworld Free Play 20x20: Comhghairdeas! Chríochnaigh tú na dúshláin go léir!
@@ -1904,13 +1913,20 @@ ga:
       Overworld Free Play 20x20_2018: Comhghairdeas! Chríochnaigh tú na dúshláin go
         léir! Anois, tochail, tóg, agus cruthaigh rud éigin speisialta, ag baint úsáide
         as gach uile rud a d'fhoghlaim tú go dtí seo.
+      Overworld Free Play 20x20_2019: Comhghairdeas! Chríochnaigh tú na dúshláin go
+        léir! Anois, tochail, tóg, agus cruthaigh rud éigin speisialta, ag baint úsáide
+        as gach uile rud a d'fhoghlaim tú go dtí seo.
       Overworld House Frame Chosen: Tóg an chuid eile den teach as aon ábhar a thaitníonn
         leat. Beidh an t-ordú "athdhéan" áisiúil.
       Overworld House Frame Chosen_2018: Tóg an chuid eile den teach as aon ábhar
         a thaitníonn leat. Beidh an t-ordú "athdhéan" áisiúil.
+      Overworld House Frame Chosen_2019: Tóg an chuid eile den teach as aon ábhar
+        a thaitníonn leat. Beidh an t-ordú "athdhéan" áisiúil.
       Overworld Move to Sheep: Cuir ordú "téigh ar aghaidh" eile leis an gcód chun
         an chaora a shroicheadh.
       Overworld Move to Sheep_2018: Cuir ordú "téigh ar aghaidh" eile leis an gcód
+        chun an chaora a shroicheadh.
+      Overworld Move to Sheep_2019: Cuir ordú "téigh ar aghaidh" eile leis an gcód
         chun an chaora a shroicheadh.
       Overworld Place Wall: Tosaíonn gach teach le balla amháin. Tóg an chéad chuid
         den teach trí orduithe "cuir" agus "téigh ar aghaidh" a chur laistigh den
@@ -1918,9 +1934,14 @@ ga:
       Overworld Place Wall_2018: Tosaíonn gach teach le balla amháin. Tóg an chéad
         chuid den teach trí orduithe "cuir" agus "téigh ar aghaidh" a chur laistigh
         den lúb "athdhéan".
+      Overworld Place Wall_2019: Tosaíonn gach teach le balla amháin. Tóg an chéad
+        chuid den teach trí orduithe "cuir" agus "téigh ar aghaidh" a chur laistigh
+        den lúb "athdhéan".
       Overworld Plant Crops: Is maith an rud a bheith ullamh roimh ré. Cuir barra
         ar an dá thaobh den uisce sa chaoi nach mbeidh ocras ort ar ball.
       Overworld Plant Crops_2018: Is maith an rud a bheith ullamh roimh ré. Cuir barra
+        ar an dá thaobh den uisce sa chaoi nach mbeidh ocras ort ar ball.
+      Overworld Plant Crops_2019: Is maith an rud a bheith ullamh roimh ré. Cuir barra
         ar an dá thaobh den uisce sa chaoi nach mbeidh ocras ort ar ball.
       Overworld Powered Minecart: Maith thú! Bhailigh tú go leor acmhainní agus thóg
         tú teach cluthar. Anois leag ráillí ó chiumhais na léarscáile go dtí doras
@@ -1928,9 +1949,14 @@ ga:
       Overworld Powered Minecart_2018: Maith thú! Bhailigh tú go leor acmhainní agus
         thóg tú teach cluthar. Anois leag ráillí ó chiumhais na léarscáile go dtí
         doras an tí.
+      Overworld Powered Minecart_2019: Maith thú! Bhailigh tú go leor acmhainní agus
+        thóg tú teach cluthar. Anois leag ráillí ó chiumhais na léarscáile go dtí
+        doras an tí.
       Overworld Shear Sheep: Am lomadh na gcaorach! Bain úsáid as an ordú "lom" chun
         olann a bhailiú ó na caoirigh.
       Overworld Shear Sheep_2018: Am lomadh na gcaorach! Bain úsáid as an ordú "lom"
+        chun olann a bhailiú ó na caoirigh.
+      Overworld Shear Sheep_2019: Am lomadh na gcaorach! Bain úsáid as an ordú "lom"
         chun olann a bhailiú ó na caoirigh.
       PDK5 Functions 2: Is féidir leat blocanna nua a chruthú le feidhmeanna! Chuireamar
         na blocanna a theastaíonn uait chun cearnóg a tharraingt isteach i bhfeidhm
@@ -2018,10 +2044,17 @@ ga:
         seo, agus ní mór duit iad a chlúdach sular féidir leat dul ar aghaidh. Beidh
         ordú "má" áisiúil anseo. Cuir ordú "téigh ar aghaidh" san áit cheart chun
         na blocanna seo a thochailt.
+      Underground Avoiding Lava_2019: Tá laibhe i bhfolach faoi chuid de na blocanna
+        seo, agus ní mór duit iad a chlúdach sular féidir leat dul ar aghaidh. Beidh
+        ordú "má" áisiúil anseo. Cuir ordú "téigh ar aghaidh" san áit cheart chun
+        na blocanna seo a thochailt.
       Underground If Statements: Anois tá cúrsaí ag éirí níos deacra. Tochail trí
         dheargchloch, ach ná tit isteach sa laibhe. Úsáid ordú "má" chun duirleog
         a chur os cionn aon laibhe a nochtfaidh tú.
       Underground If Statements_2018: Anois tá cúrsaí ag éirí níos deacra. Tochail
+        trí dheargchloch, ach ná tit isteach sa laibhe. Úsáid ordú "má" chun duirleog
+        a chur os cionn aon laibhe a nochtfaidh tú.
+      Underground If Statements_2019: Anois tá cúrsaí ag éirí níos deacra. Tochail
         trí dheargchloch, ach ná tit isteach sa laibhe. Úsáid ordú "má" chun duirleog
         a chur os cionn aon laibhe a nochtfaidh tú.
       Underground Iron: Ní mholaimid duit siúl isteach i laibhe leáite. Cuir duirleoga
@@ -2029,10 +2062,16 @@ ga:
       Underground Iron_2018: Ní mholaimid duit siúl isteach i laibhe leáite. Cuir
         duirleoga síos le droichead a thógáil, ansin tochail ar a laghad dhá bhloc
         iarainn.
+      Underground Iron_2019: Ní mholaimid duit siúl isteach i laibhe leáite. Cuir
+        duirleoga síos le droichead a thógáil, ansin tochail ar a laghad dhá bhloc
+        iarainn.
       Underground Mining Coal: Tiocfaidh tú ar na hacmhainní is luachmhaire faoi thalamh,
         agus tá sé dorcha thíos ansin. Cuir ar a laghad dhá thóirse agus tochail ar
         a laghad dhá bhloc guail.
       Underground Mining Coal_2018: Tiocfaidh tú ar na hacmhainní is luachmhaire faoi
+        thalamh, agus tá sé dorcha thíos ansin. Cuir ar a laghad dhá thóirse agus
+        tochail ar a laghad dhá bhloc guail.
+      Underground Mining Coal_2019: Tiocfaidh tú ar na hacmhainní is luachmhaire faoi
         thalamh, agus tá sé dorcha thíos ansin. Cuir ar a laghad dhá thóirse agus
         tochail ar a laghad dhá bhloc guail.
       Valentine_artist_01: Cabhraigh leis an ealaíontóir a chroí láma a chríochnú.
@@ -2711,31 +2750,40 @@ ga:
         tú cúpla smaoineamh sna leideanna.
       courseC_artist_loop1: Cuirimis spleodar ann!
       courseC_artist_loop1_2018: Cuirimis spleodar ann!
+      courseC_artist_loop1_2019: Cuirimis spleodar ann!
       courseC_artist_loops3a: Anois cuir sciathán leathair leis!
       courseC_artist_loops3a_2018: Anois cuir sciathán leathair leis!
+      courseC_artist_loops3a_2019: Anois cuir sciathán leathair leis!
       courseC_artist_loops4: D'aimsigh an zombaí feirm fholamh! An féidir leat cabhrú
         leis beocht a chur inti trí ghreamáin ainmhithe a chur síos gach 100 picteilín
         timpeall na teorann?
       courseC_artist_loops4a: Bain triail as léim ar aghaidh 75 picteilín.
       courseC_artist_loops4a_2018: Bain triail as léim ar aghaidh 75 picteilín.
+      courseC_artist_loops4a_2019: Bain triail as léim ar aghaidh 75 picteilín.
       courseC_artist_loops5: "Iontach! Anois tá sé in am fál a dhéanamh chun na hainmhithe
         a choinneáil amach.\n\n"
       courseC_artist_loops5a: Bain triail as greamáin nua!
       courseC_artist_loops5a_2018: Bain triail as greamáin nua!
+      courseC_artist_loops5a_2019: Bain triail as greamáin nua!
       courseC_artist_loops5b: Cuir línte leis!
       courseC_artist_loops5b_2018: Cuir línte leis!
+      courseC_artist_loops5b_2019: Cuir línte leis!
       courseC_artist_loops6: |+
         Cad ba chóir don zombaí cur isteach sa ghairdín?
 
 
       courseC_artist_loops6a: Cuir greamán eile leis!
       courseC_artist_loops6a_2018: Cuir greamán eile leis!
+      courseC_artist_loops6a_2019: Cuir greamán eile leis!
       courseC_artist_loops7a: Bain triail as lúba agus uillinneacha éagsúla.
       courseC_artist_loops7a_2018: Bain triail as lúba agus uillinneacha éagsúla.
+      courseC_artist_loops7a_2019: Bain triail as lúba agus uillinneacha éagsúla.
       courseC_artist_loops8a: Anois bain triail as rud éigin as do stuaim féin!
       courseC_artist_loops8a_2018: Anois bain triail as rud éigin as do stuaim féin!
+      courseC_artist_loops8a_2019: Anois bain triail as rud éigin as do stuaim féin!
       courseC_artist_loopsPre1a: Tá sé in am an líne sin a chasadh thart!
       courseC_artist_loopsPre1a_2018: Tá sé in am an líne sin a chasadh thart!
+      courseC_artist_loopsPre1a_2019: Tá sé in am an líne sin a chasadh thart!
       courseC_artist_prog5: 'Teastaíonn díon ón teach seo! Tarraing an triantán. Leid:
         tá na trí thaobh ar comhfhad.'
       courseC_artist_prog5_2018: 'Teastaíonn díon ón teach seo! Tarraing an triantán.
@@ -2755,55 +2803,81 @@ ga:
         ar an mbóthar seo!*"
       courseC_collector_loops_challenge2: Bailigh ar a laghad **5** sheoid!
       courseC_collector_loops_challenge2_2018: Bailigh ar a laghad **5** sheoid!
+      courseC_collector_loops_challenge2_2019: Bailigh ar a laghad **5** sheoid!
       courseC_collector_prog1: Bain triail as na blocanna le féachaint an féidir leat
         cabhrú le Laurel roinnt seod a bhailiú.
       courseC_collector_prog1_2018: Bain triail as na blocanna le féachaint an féidir
+        leat cabhrú le Laurel roinnt seod a bhailiú.
+      courseC_collector_prog1_2019: Bain triail as na blocanna le féachaint an féidir
         leat cabhrú le Laurel roinnt seod a bhailiú.
       courseC_collector_prog2: Treoraigh Laural go dtí na seoda, ansin úsáid "bailigh"
         chun iad a bhailiú.
       courseC_collector_prog2_2018: Treoraigh Laural go dtí na seoda, ansin úsáid
         "bailigh" chun iad a bhailiú.
+      courseC_collector_prog2_2019: Treoraigh Laural go dtí na seoda, ansin úsáid
+        "bailigh" chun iad a bhailiú.
       courseC_collector_prog3: Cuir na blocanna seo san ord ceart chun na seoda a
         bhailiú agus an dúshlán a réiteach.
       courseC_collector_prog3_2018: Cuir na blocanna seo san ord ceart chun na seoda
+        a bhailiú agus an dúshlán a réiteach.
+      courseC_collector_prog3_2019: Cuir na blocanna seo san ord ceart chun na seoda
         a bhailiú agus an dúshlán a réiteach.
       courseC_collector_prog4: Cuir na blocanna seo san ord ceart chun na seoda go
         léir a bhailiú agus an dúshlán a réiteach.
       courseC_collector_prog4_2018: Cuir na blocanna seo san ord ceart chun na seoda
         go léir a bhailiú agus an dúshlán a réiteach.
+      courseC_collector_prog4_2019: Cuir na blocanna seo san ord ceart chun na seoda
+        go léir a bhailiú agus an dúshlán a réiteach.
       courseC_collector_prog5: Tá na blocanna seo san ord mícheart. An féidir leat
         iad a cheartú?
       courseC_collector_prog5_2018: Tá na blocanna seo san ord mícheart. An féidir
+        leat iad a cheartú?
+      courseC_collector_prog5_2019: Tá na blocanna seo san ord mícheart. An féidir
         leat iad a cheartú?
       courseC_collector_prog6: Cuir na blocanna san ord ceart chun na seoda go léir
         a bhailiú.
       courseC_collector_prog6_2018: Cuir na blocanna san ord ceart chun na seoda go
         léir a bhailiú.
+      courseC_collector_prog6_2019: Cuir na blocanna san ord ceart chun na seoda go
+        léir a bhailiú.
       courseC_collector_prog7: Úsáid blocanna ón mbosca uirlisí chun na seoda go léir
         a bhailiú.
       courseC_collector_prog7_2018: Úsáid blocanna ón mbosca uirlisí chun na seoda
+        go léir a bhailiú.
+      courseC_collector_prog7_2019: Úsáid blocanna ón mbosca uirlisí chun na seoda
         go léir a bhailiú.
       courseC_collector_prog8: '*"Nár lagaí Dia thú! Cabhraigh liom na seoda go léir
         a bhailiú."*'
       courseC_collector_prog8_2018: '*"Nár lagaí Dia thú! Cabhraigh liom na seoda
         go léir a bhailiú."*'
+      courseC_collector_prog8_2019: '*"Nár lagaí Dia thú! Cabhraigh liom na seoda
+        go léir a bhailiú."*'
       courseC_collector_prog9: '*"Bailímis na seoda go léir!"*'
       courseC_collector_prog9_2018: '*"Bailímis na seoda go léir!"*'
+      courseC_collector_prog9_2019: '*"Bailímis na seoda go léir!"*'
       courseC_collector_progA: Cabhraigh le Laurel na seoda go léir a bhailiú.
       courseC_collector_prog_challenge1: Caith súil ghéar air! An féidir leat na **10**
         seoid atá ann a bhailiú?
       courseC_collector_prog_challenge1_2018: Caith súil ghéar air! An féidir leat
         na **10** seoid atá ann a bhailiú?
+      courseC_collector_prog_challenge1_2019: Caith súil ghéar air! An féidir leat
+        na **10** seoid atá ann a bhailiú?
       courseC_collector_prog_challenge2: Bailigh ar a laghad **10** seoid chun an
         dúshlán seo a chríochnú!
       courseC_collector_prog_challenge2_2018: Bailigh ar a laghad **10** seoid chun
+        an dúshlán seo a chríochnú!
+      courseC_collector_prog_challenge2_2019: Bailigh ar a laghad **10** seoid chun
         an dúshlán seo a chríochnú!
       courseC_flappy_events1: Ceangail an bloc `gread mar is gnáth` leis an teagmhas
         `nuair a chliceáiltear`, ansin brúigh "Rith". Cliceáil nó tapáil an spás imeartha
         chun Flappy a threorú go dtí an sprioc.
       courseC_flappy_events10: 'Cruthaigh do chluiche Flappy féin! '
       courseC_flappy_events10_2018: 'Cruthaigh do chluiche Flappy féin! '
+      courseC_flappy_events10_2019: 'Cruthaigh do chluiche Flappy féin! '
       courseC_flappy_events1_2018: Ceangail an bloc `gread mar is gnáth` leis an teagmhas
+        `nuair a chliceáiltear`, ansin brúigh "Rith". Cliceáil nó tapáil an spás imeartha
+        chun Flappy a threorú go dtí an sprioc.
+      courseC_flappy_events1_2019: Ceangail an bloc `gread mar is gnáth` leis an teagmhas
         `nuair a chliceáiltear`, ansin brúigh "Rith". Cliceáil nó tapáil an spás imeartha
         chun Flappy a threorú go dtí an sprioc.
       courseC_flappy_events3: Ceangail an bloc `cuir deireadh leis an gcluiche` leis
@@ -2812,9 +2886,14 @@ ga:
       courseC_flappy_events3_2018: Ceangail an bloc `cuir deireadh leis an gcluiche`
         leis an teagmhas `nuair a bhuailtear leis an talamh`. Imir an cluiche agus
         tuairteáil an t-éan in aghaidh an talaimh le dul ar aghaidh.
+      courseC_flappy_events3_2019: Ceangail an bloc `cuir deireadh leis an gcluiche`
+        leis an teagmhas `nuair a bhuailtear leis an talamh`. Imir an cluiche agus
+        tuairteáil an t-éan in aghaidh an talaimh le dul ar aghaidh.
       courseC_flappy_events6: Féach an bhfuil tú in ann pointe a ghnóthú fós má ghreadann
         Flappy a sciatháin níos laige nó níos láidre le gach clic.
       courseC_flappy_events6_2018: Féach an bhfuil tú in ann pointe a ghnóthú fós
+        má ghreadann Flappy a sciatháin níos laige nó níos láidre le gach clic.
+      courseC_flappy_events6_2019: Féach an bhfuil tú in ann pointe a ghnóthú fós
         má ghreadann Flappy a sciatháin níos laige nó níos láidre le gach clic.
       courseC_harvester_loops1: Úsáid lúba chun na puimcíní go léir a bhailiú.
       courseC_harvester_loops10: Bailigh an t-arbhar agus na puimcíní go léir.
@@ -2913,41 +2992,61 @@ ga:
         a dhearcán a aimsiú! '
       courseC_maze_loops_challenge1a_2018: 'Anois ba mhaith le Scrat lúba a úsáid
         chun a dhearcán a aimsiú! '
+      courseC_maze_loops_challenge1a_2019: 'Anois ba mhaith le Scrat lúba a úsáid
+        chun a dhearcán a aimsiú! '
       courseC_maze_programming1: Sa dúshlán seo, tarraing na blocanna go léir le chéile
         agus cliceáil "Rith" lena chur ar siúl!
       courseC_maze_programming1_2018: Sa dúshlán seo, tarraing na blocanna go léir
+        le chéile agus cliceáil "Rith" lena chur ar siúl!
+      courseC_maze_programming1_2019: Sa dúshlán seo, tarraing na blocanna go léir
         le chéile agus cliceáil "Rith" lena chur ar siúl!
       courseC_maze_programming2: Tarraing bloc "téigh ar aghaidh" breise as an mbosca
         uirlisí chun an cód a chur i gcrích.
       courseC_maze_programming2_2018: Tarraing bloc "téigh ar aghaidh" breise as an
         mbosca uirlisí chun an cód a chur i gcrích.
+      courseC_maze_programming2_2019: Tarraing bloc "téigh ar aghaidh" breise as an
+        mbosca uirlisí chun an cód a chur i gcrích.
       courseC_maze_programming4: Seachain TNT nó pléascfaidh na cleití!
       courseC_maze_programming4_2018: Seachain TNT nó pléascfaidh na cleití!
+      courseC_maze_programming4_2019: Seachain TNT nó pléascfaidh na cleití!
       courseC_maze_programming5: Seachain an TNT.
       courseC_maze_programming5_2018: Seachain an TNT.
+      courseC_maze_programming5_2019: Seachain an TNT.
       courseC_maze_programming6: '"Tóg go bog é agus cabhraigh liom an mhuc dhána
         a aimsiú. Nó b''fhéidir go dtiocfaidh fearg orm!"'
       courseC_maze_programming6_2018: '"Tóg go bog é agus cabhraigh liom an mhuc dhána
+        a aimsiú. Nó b''fhéidir go dtiocfaidh fearg orm!"'
+      courseC_maze_programming6_2019: '"Tóg go bog é agus cabhraigh liom an mhuc dhána
         a aimsiú. Nó b''fhéidir go dtiocfaidh fearg orm!"'
       courseC_maze_programming7: "**Dúshlán:** Tá go leor fabhtanna sa chód seo. Caithfidh
         tú roinnt blocanna a bhaint agus cinn eile a chur leis."
       courseC_maze_programming7_2018: "**Dúshlán:** Tá go leor fabhtanna sa chód seo.
         Caithfidh tú roinnt blocanna a bhaint agus cinn eile a chur leis."
+      courseC_maze_programming7_2019: "**Dúshlán:** Tá go leor fabhtanna sa chód seo.
+        Caithfidh tú roinnt blocanna a bhaint agus cinn eile a chur leis."
       courseC_maze_programming8: '*"Tóg go bog é agus cabhraigh liom an mhuc dhána
         a aimsiú."*'
       courseC_maze_programming8_2018: '*"Tóg go bog é agus cabhraigh liom an mhuc
+        dhána a aimsiú."*'
+      courseC_maze_programming8_2019: '*"Tóg go bog é agus cabhraigh liom an mhuc
         dhána a aimsiú."*'
       courseC_maze_programming8_predict1: '*"Tóg go bog é agus cabhraigh liom an mhuc
         dhána a aimsiú."*'
       courseC_maze_programming8_predict1_2018: '*"Tóg go bog é agus cabhraigh liom
         an mhuc dhána a aimsiú."*'
+      courseC_maze_programming8_predict1_2019: '*"Tóg go bog é agus cabhraigh liom
+        an mhuc dhána a aimsiú."*'
       courseC_maze_programming9: '*"Anois, cabhraigh liom teacht aniar aduaidh ar
         an muc ar do rogha bealach!"*'
       courseC_maze_programming9_2018: '*"Anois, cabhraigh liom teacht aniar aduaidh
         ar an muc ar do rogha bealach!"*'
+      courseC_maze_programming9_2019: '*"Anois, cabhraigh liom teacht aniar aduaidh
+        ar an muc ar do rogha bealach!"*'
       courseC_maze_programming_challenge1: 'Chuaigh an mhuc i bhfolach, agus caithfidh
         tú é a aimsiú. '
       courseC_maze_programming_challenge1_2018: 'Chuaigh an mhuc i bhfolach, agus
+        caithfidh tú é a aimsiú. '
+      courseC_maze_programming_challenge1_2019: 'Chuaigh an mhuc i bhfolach, agus
         caithfidh tú é a aimsiú. '
       courseC_puppy_loops10: Tá tú ag déanamh go seoigh! Lean ort!
       courseC_puppy_loops11: Tá tú beagnach ann! An uair seo, roghnaigh aon chosán
@@ -2959,20 +3058,29 @@ ga:
       courseC_puppy_loops9: Tá tú ag déanamh go seoigh! Lean ort!
       courseC_starWars_loops10: Tá tú ag déanamh go seoigh! Lean ort!
       courseC_starWars_loops10_2018: Tá tú ag déanamh go seoigh! Lean ort!
+      courseC_starWars_loops10_2019: Tá tú ag déanamh go seoigh! Lean ort!
       courseC_starWars_loops10_predict2: Tá tú ag déanamh go seoigh! Lean ort!
       courseC_starWars_loops10_predict2_2018: Tá tú ag déanamh go seoigh! Lean ort!
+      courseC_starWars_loops10_predict2_2019: Tá tú ag déanamh go seoigh! Lean ort!
       courseC_starWars_loops11: Tá tú beagnach ann! An uair seo, roghnaigh aon chosán
         a thaitníonn leat!
       courseC_starWars_loops11_2018: Tá tú beagnach ann! An uair seo, roghnaigh aon
+        chosán a thaitníonn leat!
+      courseC_starWars_loops11_2019: Tá tú beagnach ann! An uair seo, roghnaigh aon
         chosán a thaitníonn leat!
       courseC_starWars_loops2: Chun an dramh-mhiotal go léir a bhailiú, bain triail
         as lúb a úsáideann bloc amháin laistigh de bhloc `athdhéan`.
       courseC_starWars_loops2_2018: Chun an dramh-mhiotal go léir a bhailiú, bain
         triail as lúb a úsáideann bloc amháin laistigh de bhloc `athdhéan`.
+      courseC_starWars_loops2_2019: Chun an dramh-mhiotal go léir a bhailiú, bain
+        triail as lúb a úsáideann bloc amháin laistigh de bhloc `athdhéan`.
       courseC_starWars_loops4: Sa dúshlán seo, is féidir leat dhá bhloc "athdhéan"
         a úsáid chun BB-8 a threorú go dtí an dramh-mhiotal go léir leis an líon is
         lú blocanna agus is féidir!
       courseC_starWars_loops4_2018: Sa dúshlán seo, is féidir leat dhá bhloc "athdhéan"
+        a úsáid chun BB-8 a threorú go dtí an dramh-mhiotal go léir leis an líon is
+        lú blocanna agus is féidir!
+      courseC_starWars_loops4_2019: Sa dúshlán seo, is féidir leat dhá bhloc "athdhéan"
         a úsáid chun BB-8 a threorú go dtí an dramh-mhiotal go léir leis an líon is
         lú blocanna agus is féidir!
       courseC_starWars_loops7: An féidir leat an dramh-mhiotal go léir a bhailiú gan
@@ -2981,28 +3089,45 @@ ga:
       courseC_starWars_loops7_2018: An féidir leat an dramh-mhiotal go léir a bhailiú
         gan ach lúb amháin a úsáid? I dtús báire, bain triail as gan lúb, ansin aimsigh
         an cód athdhéanta agus cuir i lúb é.
+      courseC_starWars_loops7_2019: An féidir leat an dramh-mhiotal go léir a bhailiú
+        gan ach lúb amháin a úsáid? I dtús báire, bain triail as gan lúb, ansin aimsigh
+        an cód athdhéanta agus cuir i lúb é.
       courseC_starWars_loops9: Úsáid ar fhoghlaim tú go dtí seo chun an dramh-mhiotal
         go léir a bhailiú!
       courseC_starWars_loops9_2018: Úsáid ar fhoghlaim tú go dtí seo chun an dramh-mhiotal
+        go léir a bhailiú!
+      courseC_starWars_loops9_2019: Úsáid ar fhoghlaim tú go dtí seo chun an dramh-mhiotal
         go léir a bhailiú!
       courseD_Frozen_nested5: Imir leis na calóga sneachta!
       courseD_artist_1_2018: 'Tarraing cearnóg bheag, gach taobh **30** picteilín
         ar fad.
 
 '
+      courseD_artist_1_2018_2019: 'Tarraing cearnóg bheag, gach taobh **30** picteilín
+        ar fad.
+
+'
       courseD_artist_4_2018: Cuir cruth an-bheag ag deireadh na líne!
+      courseD_artist_4_2018_2019: Cuir cruth an-bheag ag deireadh na líne!
       courseD_artist_5_2018: Imir leis na calóga sneachta!
+      courseD_artist_5_2018_2019: Imir leis na calóga sneachta!
       courseD_artist_binary1: Bain triail as na blocanna thíos le tabhairt ar an ealaíontóir
         "01010101" a thaispeáint mar chód dénártha sa chéad ró.
       courseD_artist_binary1_2018: Bain triail as na blocanna thíos le tabhairt ar
+        an ealaíontóir "01010101" a thaispeáint mar chód dénártha sa chéad ró.
+      courseD_artist_binary1_2019: Bain triail as na blocanna thíos le tabhairt ar
         an ealaíontóir "01010101" a thaispeáint mar chód dénártha sa chéad ró.
       courseD_artist_binary3: Cad é an teaghrán dénártha a dhéanfadh an patrún seo
         dá n-athdhéanfaí ocht n-uaire é?
       courseD_artist_binary3_2018: Cad é an teaghrán dénártha a dhéanfadh an patrún
         seo dá n-athdhéanfaí ocht n-uaire é?
+      courseD_artist_binary3_2019: Cad é an teaghrán dénártha a dhéanfadh an patrún
+        seo dá n-athdhéanfaí ocht n-uaire é?
       courseD_artist_binary4: An féidir leat an patrún seo a tharraingt gan ach trí
         dhigit dhénártha (0 nó 1) a athdhéanamh?
       courseD_artist_binary4_2018: An féidir leat an patrún seo a tharraingt gan ach
+        trí dhigit dhénártha (0 nó 1) a athdhéanamh?
+      courseD_artist_binary4_2019: An féidir leat an patrún seo a tharraingt gan ach
         trí dhigit dhénártha (0 nó 1) a athdhéanamh?
       courseD_artist_binary5: "Freagraíonn gach teaghrán dénártha do ró amháin sa
         bpictiúr seo. \n\nAn féidir leat iad a athordú chun gáire seachas grainc a
@@ -3010,19 +3135,29 @@ ga:
       courseD_artist_binary5_2018: "Freagraíonn gach teaghrán dénártha do ró amháin
         sa bpictiúr seo. \n\nAn féidir leat iad a athordú chun gáire seachas grainc
         a chur ar an aghaidh?"
+      courseD_artist_binary5_2019: "Freagraíonn gach teaghrán dénártha do ró amháin
+        sa bpictiúr seo. \n\nAn féidir leat iad a athordú chun gáire seachas grainc
+        a chur ar an aghaidh?"
       courseD_artist_binary6: Cé acu an teaghrán dénártha, athdhéanta 11 uair, a dhéanfadh
         an pictiúr seo?
       courseD_artist_binary6_2018: Cé acu an teaghrán dénártha, athdhéanta 11 uair,
+        a dhéanfadh an pictiúr seo?
+      courseD_artist_binary6_2019: Cé acu an teaghrán dénártha, athdhéanta 11 uair,
         a dhéanfadh an pictiúr seo?
       courseD_artist_binary7: Cad é an teaghrán dénártha is giorra a dhéanfadh an
         pictiúr seo dá n-athdhéanfaí 13 uair é?
       courseD_artist_binary7_2018: Cad é an teaghrán dénártha is giorra a dhéanfadh
         an pictiúr seo dá n-athdhéanfaí 13 uair é?
+      courseD_artist_binary7_2019: Cad é an teaghrán dénártha is giorra a dhéanfadh
+        an pictiúr seo dá n-athdhéanfaí 13 uair é?
       courseD_artist_binary8: Cuir an cód i gcrích chun an pictiúr seo a dhéanamh.
       courseD_artist_binary8_2018: Cuir an cód i gcrích chun an pictiúr seo a dhéanamh.
+      courseD_artist_binary8_2019: Cuir an cód i gcrích chun an pictiúr seo a dhéanamh.
       courseD_artist_binary8_predict1: Cuir an cód i gcrích chun an pictiúr seo a
         dhéanamh.
       courseD_artist_binary8_predict1_2018: Cuir an cód i gcrích chun an pictiúr seo
+        a dhéanamh.
+      courseD_artist_binary8_predict1_2019: Cuir an cód i gcrích chun an pictiúr seo
         a dhéanamh.
       courseD_artist_binaryFP: |-
         Seo dhuit canbhás le taifeach níos airde - 16 picteilín faoi 16 picteilín!
@@ -3034,11 +3169,17 @@ ga:
         Seo dhuit canbhás le taifeach níos airde - 16 picteilín faoi 16 picteilín!
 
         Féach cad a tharlaíonn nuair a dhéanaimid rud éigin cruthaitheach leis na giotáin!
+      courseD_artist_binaryFP_2019: |-
+        Seo dhuit canbhás le taifeach níos airde - 16 picteilín faoi 16 picteilín!
+
+        Féach cad a tharlaíonn nuair a dhéanaimid rud éigin cruthaitheach leis na giotáin!
       courseD_artist_binary_challenge0: Bain triail as lúba neadaithe chun an pictiúr
         seo a chur i gcrích.
       courseD_artist_binary_challenge2: An bhfuil tú sách dícheallach chun an lógó
         seo a chur ar ais mar a bhí sé?
       courseD_artist_binary_challenge2_2018: An bhfuil tú sách dícheallach chun an
+        lógó seo a chur ar ais mar a bhí sé?
+      courseD_artist_binary_challenge2_2019: An bhfuil tú sách dícheallach chun an
         lógó seo a chur ar ais mar a bhí sé?
       courseD_artist_binary_challenge3: An bhfuil tú sách dícheallach chun an lógó
         seo a chur ar ais mar a bhí sé?
@@ -3056,16 +3197,23 @@ ga:
         seo a réiteach.
       courseD_artist_nestedLoops1a: 'Anois athdhéan an triantán 6 huaire. '
       courseD_artist_nestedLoops1a_2018: 'Anois athdhéan an triantán 6 huaire. '
+      courseD_artist_nestedLoops1a_2019: 'Anois athdhéan an triantán 6 huaire. '
       courseD_artist_nestedLoops2: An uair seo, réitigh an dúshlán seo leis an líon
         is lú blocanna agus is féidir.
       courseD_artist_nestedLoops2_2018: An uair seo, réitigh an dúshlán seo leis an
         líon is lú blocanna agus is féidir.
+      courseD_artist_nestedLoops2_2019: An uair seo, réitigh an dúshlán seo leis an
+        líon is lú blocanna agus is féidir.
       courseD_artist_nestedLoops4: Iontach! Déan an rud céanna leis na ciorcail seo.
       courseD_artist_nestedLoops4_2018: Iontach! Déan an rud céanna leis na ciorcail
+        seo.
+      courseD_artist_nestedLoops4_2019: Iontach! Déan an rud céanna leis na ciorcail
         seo.
       courseD_artist_nestedLoops5: Cad a tharlóidh má chasann tú 90 céim idir na ciorcail
         freisin?
       courseD_artist_nestedLoops5_2018: Cad a tharlóidh má chasann tú 90 céim idir
+        na ciorcail freisin?
+      courseD_artist_nestedLoops5_2019: Cad a tharlóidh má chasann tú 90 céim idir
         na ciorcail freisin?
       courseD_artist_nestedLoops6: Cuir na blocanna sa gcód atá ann in eagar chun
         an pictiúr a dhéanamh.
@@ -3073,25 +3221,37 @@ ga:
         seo a dhéanamh.
       courseD_artist_nestedLoops7_2018: Úsáid ar fhoghlaim tú go dtí seo chun an pictiúr
         seo a dhéanamh.
+      courseD_artist_nestedLoops7_2019: Úsáid ar fhoghlaim tú go dtí seo chun an pictiúr
+        seo a dhéanamh.
       courseD_artist_nestedLoops8: Úsáid ar fhoghlaim tú sa chúpla dúshlán is déanaí
         chun an pictiúr seo a dhéanamh as an nua.
       courseD_artist_nestedLoops8_2018: Úsáid ar fhoghlaim tú sa chúpla dúshlán is
+        déanaí chun an pictiúr seo a dhéanamh as an nua.
+      courseD_artist_nestedLoops8_2019: Úsáid ar fhoghlaim tú sa chúpla dúshlán is
         déanaí chun an pictiúr seo a dhéanamh as an nua.
       courseD_artist_nestedLoops9: "**Dúshlán:** An féidir leat pictiúr den sórt seo
         a dhéanamh?"
       courseD_artist_nestedLoops9_2018: "**Dúshlán:** An féidir leat pictiúr den sórt
         seo a dhéanamh?"
+      courseD_artist_nestedLoops9_2019: "**Dúshlán:** An féidir leat pictiúr den sórt
+        seo a dhéanamh?"
       courseD_artist_nestedLoops9_predict1: "**Dúshlán:** An féidir leat pictiúr den
         sórt seo a dhéanamh?"
       courseD_artist_nestedLoops9_predict1_2018: "**Dúshlán:** An féidir leat pictiúr
+        den sórt seo a dhéanamh?"
+      courseD_artist_nestedLoops9_predict1_2019: "**Dúshlán:** An féidir leat pictiúr
         den sórt seo a dhéanamh?"
       courseD_artist_nestedLoops_challenge1: An féidir leat pictiúr den sórt seo a
         dhéanamh?
       courseD_artist_nestedLoops_challenge1_2018: An féidir leat pictiúr den sórt
         seo a dhéanamh?
+      courseD_artist_nestedLoops_challenge1_2019: An féidir leat pictiúr den sórt
+        seo a dhéanamh?
       courseD_artist_nestedLoops_challenge2: Deisigh an cód chun an pictiúr seo a
         dhéanamh!
       courseD_artist_nestedLoops_challenge2_2018: Deisigh an cód chun an pictiúr seo
+        a dhéanamh!
+      courseD_artist_nestedLoops_challenge2_2019: Deisigh an cód chun an pictiúr seo
         a dhéanamh!
       courseD_artist_project5: Imir leis na calóga sneachta!
       courseD_artist_project5_2018: Imir leis na calóga sneachta!
@@ -3119,28 +3279,42 @@ ga:
         léir.
       courseD_bee_conditionals10_2018: Bailigh an neachtar go léir agus déan an mhil
         go léir.
+      courseD_bee_conditionals10_2019: Bailigh an neachtar go léir agus déan an mhil
+        go léir.
       courseD_bee_conditionals1_predict1: Féach an bhfuil bláth faoin scamall. Má
         tá, bailigh an neachtar.
       courseD_bee_conditionals1_predict1_2018: Féach an bhfuil bláth faoin scamall.
+        Má tá, bailigh an neachtar.
+      courseD_bee_conditionals1_predict1_2019: Féach an bhfuil bláth faoin scamall.
         Má tá, bailigh an neachtar.
       courseD_bee_conditionals4: Bailigh an neachtar go léir leis an líon is lú blocanna
         agus is féidir.
       courseD_bee_conditionals4_2018: Bailigh an neachtar go léir leis an líon is
         lú blocanna agus is féidir.
+      courseD_bee_conditionals4_2019: Bailigh an neachtar go léir leis an líon is
+        lú blocanna agus is féidir.
       courseD_bee_conditionals5: Bailigh an neachtar go léir leis an líon is lú blocanna
         agus is féidir
       courseD_bee_conditionals5_2018: Bailigh an neachtar go léir leis an líon is
         lú blocanna agus is féidir
+      courseD_bee_conditionals5_2019: Bailigh an neachtar go léir leis an líon is
+        lú blocanna agus is féidir
       courseD_bee_conditionals9: Bailigh an neachtar go léir nó déan an mhil go léir.
       courseD_bee_conditionals9_2018: Bailigh an neachtar go léir nó déan an mhil
+        go léir.
+      courseD_bee_conditionals9_2019: Bailigh an neachtar go léir nó déan an mhil
         go léir.
       courseD_bee_conditionals_challenge1: Bailigh an neachtar go léir nó déan an
         mhil go léir.
       courseD_bee_conditionals_challenge1_2018: Bailigh an neachtar go léir nó déan
         an mhil go léir.
+      courseD_bee_conditionals_challenge1_2019: Bailigh an neachtar go léir nó déan
+        an mhil go léir.
       courseD_bee_conditionals_challenge2: Bailigh an neachtar go léir nó déan an
         mhil go léir.
       courseD_bee_conditionals_challenge2_2018: Bailigh an neachtar go léir nó déan
+        an mhil go léir.
+      courseD_bee_conditionals_challenge2_2019: Bailigh an neachtar go léir nó déan
         an mhil go léir.
       courseD_bee_conditionals_challenge3: Bailigh an neachtar go léir nó déan an
         mhil go léir.
@@ -3227,6 +3401,10 @@ ga:
         leis an teagmhas `nuair a théann liathróid i mbáire` agus an bloc `tabhair
         pointe don chéile comhraic` leis an teagmhas `nuair a théann liathróid thar
         lámh` chun cluiche a dhéanamh. '
+      courseD_bounce_events10s_2019: 'Ceangail an bloc `tabhair pointe don imreoir`
+        leis an teagmhas `nuair a théann liathróid i mbáire` agus an bloc `tabhair
+        pointe don chéile comhraic` leis an teagmhas `nuair a théann liathróid thar
+        lámh` chun cluiche a dhéanamh. '
       courseD_bounce_events11: Anois is féidir leat blocanna a cheangal leis an mbloc
         "nuair a ritear é". Caithfidh tú an bloc nua "tosaigh liathróid nua" a cheangal
         i níos mó ná áit amháin. Athraigh an radharc nó luas an tslacáin freisin,
@@ -3235,6 +3413,8 @@ ga:
       courseD_bounce_events11s: 'Ceangail an bloc `caith liathróid nua` aon áit a
         bhfuil liathróid nua ag teastáil. '
       courseD_bounce_events11s_2018: 'Ceangail an bloc `caith liathróid nua` aon áit
+        a bhfuil liathróid nua ag teastáil. '
+      courseD_bounce_events11s_2019: 'Ceangail an bloc `caith liathróid nua` aon áit
         a bhfuil liathróid nua ag teastáil. '
       courseD_bounce_events12: Cruthaigh do chluiche liathróide féin. Is féidir leat
         an leagan amach agus na rialacha go léir a athrú. Nuair a bheidh tú críochnaithe,
@@ -3245,10 +3425,16 @@ ga:
       courseD_bounce_events12s_2018: Cruthaigh do chluiche féin. Is féidir leat an
         leagan amach agus na rialacha go léir a athrú. Nuair a bheidh tú críochnaithe,
         cliceáil "Críochnaigh" agus lig do chairde an cluiche a imirt ar a nguthán.
+      courseD_bounce_events12s_2019: Cruthaigh do chluiche féin. Is féidir leat an
+        leagan amach agus na rialacha go léir a athrú. Nuair a bheidh tú críochnaithe,
+        cliceáil "Críochnaigh" agus lig do chairde an cluiche a imirt ar a nguthán.
       courseD_bounce_events1s: Ceangail bloc feiliúnach leis an mbloc "nuair a bhrúitear
         an tsaighead chlé" agus cliceáil "Rith" chun cabhrú leis an imreoir an líontán
         a bhaint amach.
       courseD_bounce_events1s_2018: Ceangail bloc feiliúnach leis an mbloc "nuair
+        a bhrúitear an tsaighead chlé" agus cliceáil "Rith" chun cabhrú leis an imreoir
+        an líontán a bhaint amach.
+      courseD_bounce_events1s_2019: Ceangail bloc feiliúnach leis an mbloc "nuair
         a bhrúitear an tsaighead chlé" agus cliceáil "Rith" chun cabhrú leis an imreoir
         an líontán a bhaint amach.
       courseD_bounce_events2: Ceangail bloc nua leis na blocanna "nuair a bhrúitear
@@ -3279,12 +3465,16 @@ ga:
         bhailiú.
       courseD_collector_debugging1a_2018: Réitigh na fadhbanna chun na seoda go léir
         a bhailiú.
+      courseD_collector_debugging1a_2019: Réitigh na fadhbanna chun na seoda go léir
+        a bhailiú.
       courseD_collector_debugging2: Réitigh na fadhbanna chun na seoda go léir a bhailiú.
       courseD_collector_debugging2_2018: Réitigh na fadhbanna chun na seoda go léir
         a bhailiú.
       courseD_collector_debugging2a: Réitigh na fadhbanna chun na seoda go léir a
         bhailiú.
       courseD_collector_debugging2a_2018: Réitigh na fadhbanna chun na seoda go léir
+        a bhailiú.
+      courseD_collector_debugging2a_2019: Réitigh na fadhbanna chun na seoda go léir
         a bhailiú.
       courseD_collector_debugging3: Réitigh na fadhbanna chun na seoda go léir a bhailiú.
       courseD_collector_debugging3_2018: Réitigh na fadhbanna chun na seoda go léir
@@ -3293,12 +3483,16 @@ ga:
         bhailiú.
       courseD_collector_debugging3a_2018: Réitigh na fadhbanna chun na seoda go léir
         a bhailiú.
+      courseD_collector_debugging3a_2019: Réitigh na fadhbanna chun na seoda go léir
+        a bhailiú.
       courseD_collector_debugging4: Réitigh na fadhbanna chun na seoda go léir a bhailiú.
       courseD_collector_debugging4_2018: Réitigh na fadhbanna chun na seoda go léir
         a bhailiú.
       courseD_collector_debugging4a: Réitigh na fadhbanna chun na seoda go léir a
         bhailiú.
       courseD_collector_debugging4a_2018: Réitigh na fadhbanna chun na seoda go léir
+        a bhailiú.
+      courseD_collector_debugging4a_2019: Réitigh na fadhbanna chun na seoda go léir
         a bhailiú.
       courseD_collector_debugging5: Tá gach ordú a theastaíonn uait anseo cheana féin...
         anois úsáid na scileanna dífhabhtaithe atá agat chun an dúshlán seo a réiteach.
@@ -3309,6 +3503,9 @@ ga:
         féin... anois úsáid na scileanna dífhabhtaithe atá agat chun an dúshlán seo
         a réiteach.
       courseD_collector_debugging5a_2018: Tá gach ordú a theastaíonn uait anseo cheana
+        féin... anois úsáid na scileanna dífhabhtaithe atá agat chun an dúshlán seo
+        a réiteach.
+      courseD_collector_debugging5a_2019: Tá gach ordú a theastaíonn uait anseo cheana
         féin... anois úsáid na scileanna dífhabhtaithe atá agat chun an dúshlán seo
         a réiteach.
       courseD_collector_debugging6: 'Dúshlán: Úsáid do chuid scileanna dífhabhtaithe
@@ -3341,41 +3538,61 @@ ga:
         tú arbhar mura bhfuil sé ann.
       courseD_farmer_condLoops1_2018: Úsáid ráitis choinníollacha le deimhniú nach
         mbainfidh tú arbhar mura bhfuil sé ann.
+      courseD_farmer_condLoops1_2019: Úsáid ráitis choinníollacha le deimhniú nach
+        mbainfidh tú arbhar mura bhfuil sé ann.
       courseD_farmer_condLoops2: Cabhraigh leis an mbuainteoir arbhar agus leitís
         a bhailiú ón ghort.
       courseD_farmer_condLoops2_2018: Cabhraigh leis an mbuainteoir arbhar agus leitís
+        a bhailiú ón ghort.
+      courseD_farmer_condLoops2_2019: Cabhraigh leis an mbuainteoir arbhar agus leitís
         a bhailiú ón ghort.
       courseD_farmer_condLoops3: '*"Arbhar, leitís, AGUS puimcíní! Cabhraigh liom
         iad go léir a bhailiú."*'
       courseD_farmer_condLoops3_2018: '*"Arbhar, leitís, AGUS puimcíní! Cabhraigh
         liom iad go léir a bhailiú."*'
+      courseD_farmer_condLoops3_2019: '*"Arbhar, leitís, AGUS puimcíní! Cabhraigh
+        liom iad go léir a bhailiú."*'
       courseD_farmer_condLoops5: Bailigh an t-arbhar agus an leitís go léir, ansin
         bain an puimcín ag an deireadh.
       courseD_farmer_condLoops5_2018: Bailigh an t-arbhar agus an leitís go léir,
+        ansin bain an puimcín ag an deireadh.
+      courseD_farmer_condLoops5_2019: Bailigh an t-arbhar agus an leitís go léir,
         ansin bain an puimcín ag an deireadh.
       courseD_farmer_condLoops6: An féidir leat an puimcín a bhaint? Ná déan dearmad
         an t-arbhar go léir a bhailiú ar an mbealach!
       courseD_farmer_condLoops6_2018: An féidir leat an puimcín a bhaint? Ná déan
         dearmad an t-arbhar go léir a bhailiú ar an mbealach!
+      courseD_farmer_condLoops6_2019: An féidir leat an puimcín a bhaint? Ná déan
+        dearmad an t-arbhar go léir a bhailiú ar an mbealach!
       courseD_farmer_condLoops7: 'Dúshlán: Bailigh an t-arbhar agus an leitís go léir,
         ansin bain an puimcín.'
       courseD_farmer_condLoops7_2018: 'Dúshlán: Bailigh an t-arbhar agus an leitís
+        go léir, ansin bain an puimcín.'
+      courseD_farmer_condLoops7_2019: 'Dúshlán: Bailigh an t-arbhar agus an leitís
         go léir, ansin bain an puimcín.'
       courseD_farmer_condLoops8: Bailigh an t-arbhar agus an leitís go léir, ansin
         bain an puimcín.
       courseD_farmer_condLoops8_2018: Bailigh an t-arbhar agus an leitís go léir,
         ansin bain an puimcín.
+      courseD_farmer_condLoops8_2019: Bailigh an t-arbhar agus an leitís go léir,
+        ansin bain an puimcín.
       courseD_farmer_condLoops9: Bailigh an t-arbhar agus an leitís go léir, ansin
         bain an puimcín.
       courseD_farmer_condLoops9_2018: Bailigh an t-arbhar agus an leitís go léir,
+        ansin bain an puimcín.
+      courseD_farmer_condLoops9_2019: Bailigh an t-arbhar agus an leitís go léir,
         ansin bain an puimcín.
       courseD_farmer_condLoops9_predict1: Bailigh an t-arbhar agus an leitís go léir,
         ansin bain an puimcín.
       courseD_farmer_condLoops9_predict1_2018: Bailigh an t-arbhar agus an leitís
         go léir, ansin bain an puimcín.
+      courseD_farmer_condLoops9_predict1_2019: Bailigh an t-arbhar agus an leitís
+        go léir, ansin bain an puimcín.
       courseD_farmer_condLoops_challenge2: Bailigh gach uile rud chun an leibhéal
         seo a chríochnú.
       courseD_farmer_condLoops_challenge2_2018: Bailigh gach uile rud chun an leibhéal
+        seo a chríochnú.
+      courseD_farmer_condLoops_challenge2_2019: Bailigh gach uile rud chun an leibhéal
         seo a chríochnú.
       courseD_farmer_condLoops_challenge2_clone: Bailigh gach uile rud chun an leibhéal
         seo a chríochnú.
@@ -3402,55 +3619,89 @@ ga:
         agus is féidir. '
       courseD_farmer_while10_2018: 'Cuir na cairn seo ar leibhéal leis an líon is
         lú blocanna agus is féidir. '
+      courseD_farmer_while10_2019: 'Cuir na cairn seo ar leibhéal leis an líon is
+        lú blocanna agus is féidir. '
       courseD_farmer_while10_predict2: 'Cuir na cairn seo ar leibhéal leis an líon
         is lú blocanna agus is féidir. '
       courseD_farmer_while10_predict2_2018: 'Cuir na cairn seo ar leibhéal leis an
         líon is lú blocanna agus is féidir. '
+      courseD_farmer_while10_predict2_2019: 'Cuir na cairn seo ar leibhéal leis an
+        líon is lú blocanna agus is féidir. '
       courseD_farmer_while1_2018: Téigh go dtí an carn ithreach agus úsáid an bloc
+        "bain" lena bhaint.
+      courseD_farmer_while1_2019: Téigh go dtí an carn ithreach agus úsáid an bloc
         "bain" lena bhaint.
       courseD_farmer_while2: Téigh go dtí an poll agus bain úsáid as bloc "líon" chun
         é a líonadh le sé shluasaid.
       courseD_farmer_while2_2018: Téigh go dtí an poll agus bain úsáid as bloc "líon"
         chun é a líonadh le sé shluasaid.
+      courseD_farmer_while2_2019: Téigh go dtí an poll agus bain úsáid as bloc "líon"
+        chun é a líonadh le sé shluasaid.
       courseD_farmer_while3: Réitigh an dúshlán seo leis an líon is lú blocanna agus
         is féidir.
       courseD_farmer_while3_2018: Réitigh an dúshlán seo leis an líon is lú blocanna
+        agus is féidir.
+      courseD_farmer_while3_2019: Réitigh an dúshlán seo leis an líon is lú blocanna
         agus is féidir.
       courseD_farmer_while4: Bain úsáid as lúb "chomh fada is" chun cabhrú leis an
         bhfeirmeoir an carn iomlán a bhaint.
       courseD_farmer_while4_2018: Bain úsáid as lúb "chomh fada is" chun cabhrú leis
         an bhfeirmeoir an carn iomlán a bhaint.
+      courseD_farmer_while4_2019: Bain úsáid as lúb "chomh fada is" chun cabhrú leis
+        an bhfeirmeoir an carn iomlán a bhaint.
       courseD_farmer_while4_predict1: Bain úsáid as lúb "chomh fada is" chun cabhrú
         leis an bhfeirmeoir an carn iomlán a bhaint.
       courseD_farmer_while4_predict1_2018: Bain úsáid as lúb "chomh fada is" chun
         cabhrú leis an bhfeirmeoir an carn iomlán a bhaint.
+      courseD_farmer_while4_predict1_2019: Bain úsáid as lúb "chomh fada is" chun
+        cabhrú leis an bhfeirmeoir an carn iomlán a bhaint.
       courseD_farmer_while5: 'Cabhraigh liom an ithir seo go léir a bhaint. '
       courseD_farmer_while5_2018: 'Cabhraigh liom an ithir seo go léir a bhaint. '
+      courseD_farmer_while5_2019: 'Cabhraigh liom an ithir seo go léir a bhaint. '
       courseD_farmer_while6: Úsáid an lúb `chomh fada is` chun na poill a líonadh
         gan mórán stró.
       courseD_farmer_while6_2018: Úsáid an lúb `chomh fada is` chun na poill a líonadh
+        gan mórán stró.
+      courseD_farmer_while6_2019: Úsáid an lúb `chomh fada is` chun na poill a líonadh
         gan mórán stró.
       courseD_farmer_while8: 'Dúshlán: Na poill seo go léir a líonadh leis an líon
         is lú blocanna agus is féidir. '
       courseD_farmer_while8_2018: 'Dúshlán: Na poill seo go léir a líonadh leis an
         líon is lú blocanna agus is féidir. '
+      courseD_farmer_while8_2019: 'Dúshlán: Na poill seo go léir a líonadh leis an
+        líon is lú blocanna agus is féidir. '
       courseD_farmer_while9: 'Cuir na cairn seo ar leibhéal leis an líon is lú blocanna
         agus is féidir. '
       courseD_farmer_while9_2018: 'Cuir na cairn seo ar leibhéal leis an líon is lú
         blocanna agus is féidir. '
+      courseD_farmer_while9_2019: 'Cuir na cairn seo ar leibhéal leis an líon is lú
+        blocanna agus is féidir. '
       courseD_iceage_loops1: Cabhraigh le Scrat an t-oighear a thrasnú chun an dearcán
         a fháil!
       courseD_iceage_loops10: Cabhraigh le Scrat an dearcán a fháil!
+      courseD_iceage_loops10_2019: Cabhraigh le Scrat an dearcán a fháil!
       courseD_iceage_loops11: Cabhraigh le Scrat an dearcán a fháil!
+      courseD_iceage_loops11_2019: Cabhraigh le Scrat an dearcán a fháil!
       courseD_iceage_loops12: Faigh an dearcán cibé slí is féidir leat!
+      courseD_iceage_loops12_2019: Faigh an dearcán cibé slí is féidir leat!
+      courseD_iceage_loops1_2019: Cabhraigh le Scrat an t-oighear a thrasnú chun an
+        dearcán a fháil!
       courseD_iceage_loops2: Úsáid bloc `cas ar chlé` chun an dearcán a fháil!
+      courseD_iceage_loops2_2019: Úsáid bloc `cas ar chlé` chun an dearcán a fháil!
       courseD_iceage_loops3: An féidir leat an dearcán a bhaint amach gan ach bloc
         amháin "téigh ar aghaidh" a úsáid?
+      courseD_iceage_loops3_2019: An féidir leat an dearcán a bhaint amach gan ach
+        bloc amháin "téigh ar aghaidh" a úsáid?
       courseD_iceage_loops6: An féidir leat lúb a chur leis an gcód chun an dearcán
         a fháil?
+      courseD_iceage_loops6_2019: An féidir leat lúb a chur leis an gcód chun an dearcán
+        a fháil?
       courseD_iceage_loops8: 'An féidir leat an cód seo a dheisiú? '
+      courseD_iceage_loops8_2019: 'An féidir leat an cód seo a dheisiú? '
       courseD_iceage_loops9: Tá an dearcán i bhfad bhfad ar siúl! An féidir leat lúba
         a úsáid chun cabhrú le Scrat é a fháil?
+      courseD_iceage_loops9_2019: Tá an dearcán i bhfad bhfad ar siúl! An féidir leat
+        lúba a úsáid chun cabhrú le Scrat é a fháil?
       courseD_maze_loops_challenge1: Téimis ag tóraíocht taisce - le lúba! Cabhraigh
         leis an mbailitheoir ar a laghad dhá charn maoine a shroicheadh gan ach na
         blocanna sa mbosca uirlisí a úsáid.
@@ -3510,25 +3761,36 @@ ga:
       courseD_maze_until1: Treoraigh an t-éan feargach go dtí an mhuc.
       courseD_maze_until10: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until10_2018: Cabhraigh leis an zombaí an lus gréine a fháil.
+      courseD_maze_until10_2019: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until10_predict2: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until10_predict2_2018: Cabhraigh leis an zombaí an lus gréine a
         fháil.
+      courseD_maze_until10_predict2_2019: Cabhraigh leis an zombaí an lus gréine a
+        fháil.
       courseD_maze_until1_2018: Treoraigh an t-éan feargach go dtí an mhuc.
+      courseD_maze_until1_2019: Treoraigh an t-éan feargach go dtí an mhuc.
       courseD_maze_until3: Cabhraigh leis an éan an mhuc a bhaint amach.
       courseD_maze_until3_2018: Cabhraigh leis an éan an mhuc a bhaint amach.
+      courseD_maze_until3_2019: Cabhraigh leis an éan an mhuc a bhaint amach.
       courseD_maze_until4: An féidir leat an zombaí a threorú go dtí an lus gréine
         gan ach na blocanna atá ar fáil a úsáid?
       courseD_maze_until4_2018: An féidir leat an zombaí a threorú go dtí an lus gréine
         gan ach na blocanna atá ar fáil a úsáid?
+      courseD_maze_until4_2019: An féidir leat an zombaí a threorú go dtí an lus gréine
+        gan ach na blocanna atá ar fáil a úsáid?
       courseD_maze_until6: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until6_2018: Cabhraigh leis an zombaí an lus gréine a fháil.
+      courseD_maze_until6_2019: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until7: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until7_2018: Cabhraigh leis an zombaí an lus gréine a fháil.
+      courseD_maze_until7_2019: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until8: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until8_2018: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until9: "**Dúshlán:** Seachain na fiacla agus cabhraigh leis an
         zombaí an lus gréine a fháil."
       courseD_maze_until9_2018: "**Dúshlán:** Seachain na fiacla agus cabhraigh leis
+        an zombaí an lus gréine a fháil."
+      courseD_maze_until9_2019: "**Dúshlán:** Seachain na fiacla agus cabhraigh leis
         an zombaí an lus gréine a fháil."
       courseD_maze_until_challenge: Gan leideanna, dúshlán amháin. Treoraigh an zombaí
         go dtí an lus gréine.
@@ -3544,9 +3806,13 @@ ga:
         seo a réiteach.
       courseD_playLab_cond1_2018: Treoraigh Cos Mhaide go dtí na bratacha chun an
         dúshlán seo a réiteach.
+      courseD_playLab_cond1_2019: Treoraigh Cos Mhaide go dtí na bratacha chun an
+        dúshlán seo a réiteach.
       courseD_playLab_cond2: 'Tabhair pointe amháin do Chos Mhaide gach uair a sroicheann
         sé an dragan. '
       courseD_playLab_cond2_2018: 'Tabhair pointe amháin do Chos Mhaide gach uair
+        a sroicheann sé an dragan. '
+      courseD_playLab_cond2_2019: 'Tabhair pointe amháin do Chos Mhaide gach uair
         a sroicheann sé an dragan. '
       courseD_playLab_cond6cloneForTest: Tástáil
       courseD_scrat_ramp1: Sa dúshlán seo, ceangail na blocanna go léir le chéile
@@ -3563,11 +3829,15 @@ ga:
         an dearcán a fháil!
       courseE_artist_concept1: 'Athdhéan an pictiúr seo. '
       courseE_artist_concept1_2018: 'Athdhéan an pictiúr seo. '
+      courseE_artist_concept1_2019: 'Athdhéan an pictiúr seo. '
       courseE_artist_concept4: Athdhéan an líníocht seo.
       courseE_artist_concept4_2018: Athdhéan an líníocht seo.
+      courseE_artist_concept4_2019: Athdhéan an líníocht seo.
       courseE_artist_concept_challenge1: 'Cabhraigh leis an ealaíontóir an cruth uathúil
         seo a tharraingt. '
       courseE_artist_concept_challenge1_2018: 'Cabhraigh leis an ealaíontóir an cruth
+        uathúil seo a tharraingt. '
+      courseE_artist_concept_challenge1_2019: 'Cabhraigh leis an ealaíontóir an cruth
         uathúil seo a tharraingt. '
       courseE_artist_functions1: Cabhraigh leis an zombaí spéaclaí a dhéanamh as cearnóga,
         100 picteilín ar gach taobh. Tá an droichead idir na spéaclaí 75 picteilín
@@ -3579,9 +3849,12 @@ ga:
         chun na spéaclaí a dhéanamh. '
       courseE_artist_functions2_2018: 'Úsáid an fheidhm "tarraing cearnóg" chun na
         spéaclaí a dhéanamh. '
+      courseE_artist_functions2_2019: 'Úsáid an fheidhm "tarraing cearnóg" chun na
+        spéaclaí a dhéanamh. '
       courseE_artist_functions3: Is féidir leat an pictiúr seo a dhéanamh trí bhloc
         "athdhéan" a úsáid.
       courseE_artist_functions3_2018: Cruthaigh feidhm a dhéanfaidh an réalta seo.
+      courseE_artist_functions3_2019: Cruthaigh feidhm a dhéanfaidh an réalta seo.
       courseE_artist_functions4: Anois go bhfuil tú in ann réalta amháin a tharraingt,
         bain triail as ceithre réalta!
       courseE_artist_functions4_2018: Anois go bhfuil tú in ann réalta amháin a tharraingt,
@@ -3589,6 +3862,8 @@ ga:
       courseE_artist_functions5: Tarraing na trí réalta sin amháin chun an dúshlán
         seo a réiteach.
       courseE_artist_functions5_2018: Tarraing na trí réalta sin amháin chun an dúshlán
+        seo a réiteach.
+      courseE_artist_functions5_2019: Tarraing na trí réalta sin amháin chun an dúshlán
         seo a réiteach.
       courseE_artist_ramp11: Anois déan cearnóg leis an Ealaíontóir!
       courseE_artist_ramp12: Úsáid ar fhoghlaim tú go dtí seo chun an triantán seo
@@ -3608,11 +3883,16 @@ ga:
       courseE_bee_concept1: Bailigh an neachtar go léir ó gach bláth. Úsáid lúb neadaithe.
       courseE_bee_concept1_2018: Bailigh an neachtar go léir ó gach bláth. Úsáid lúb
         neadaithe.
+      courseE_bee_concept1_2019: Bailigh an neachtar go léir ó gach bláth. Úsáid lúb
+        neadaithe.
       courseE_bee_concept2: 'Cabhraigh leis an mbeach an mhil go léir a dhéanamh. '
       courseE_bee_concept2_2018: 'Cabhraigh leis an mbeach an mhil go léir a dhéanamh. '
+      courseE_bee_concept2_2019: 'Cabhraigh leis an mbeach an mhil go léir a dhéanamh. '
       courseE_bee_concept3: Bailigh an neachtar go léir leis an líon is lú blocanna
         agus is féidir.
       courseE_bee_concept3_2018: Bailigh an neachtar go léir leis an líon is lú blocanna
+        agus is féidir.
+      courseE_bee_concept3_2019: Bailigh an neachtar go léir leis an líon is lú blocanna
         agus is féidir.
       courseE_bee_functions1: Bailigh an neachtar go léir ó gach bláth.
       courseE_bee_functions1_2018: Bailigh an neachtar go léir ó gach bláth.
@@ -3633,11 +3913,13 @@ ga:
       courseE_collector_ramp9: Cabhraigh le Laurel na seoda go léir a bhailiú.
       courseE_farmer_concept2: Bailigh na puimcíní go léir.
       courseE_farmer_concept2_2018: Bailigh na puimcíní go léir.
+      courseE_farmer_concept2_2019: Bailigh na puimcíní go léir.
       courseE_farmer_concept4: Anois téimis leibhéal amháin níos doimhne! Chuireamar
         an bloc iomlán cóid isteach i lúb eile, ach caithfidh an t-ealaíontóir filleadh
         ar ais chun an chéad líne eile a tharraingt. Cad é an bloc ba chóir duit cur
         ag deireadh na lúibe amuigh chun an patrún iomlán a chríochnú?
       courseE_farmer_functions3c_2018: Bain triail as ar chosán níos faide.
+      courseE_farmer_functions3c_2019: Bain triail as ar chosán níos faide.
       courseE_farmer_functions4b: Bain úsáid as an bhfeidhm nua seo chun an dúshlán
         seo a réiteach.
       courseE_farmer_functions4b_2018: Bain úsáid as an bhfeidhm nua seo chun an dúshlán
@@ -3645,12 +3927,14 @@ ga:
       courseE_farmer_functions8: "**Dúshlán:** Réitigh an puzal seo leis an líon is
         lú blocanna agus is féidir."
       courseE_farmer_functions8a1_2018: An bhfuil d'fheidhm fós úsáideach?
+      courseE_farmer_functions8a1_2019: An bhfuil d'fheidhm fós úsáideach?
       courseE_farmer_functions8b: "**Dúshlán:** Úsáid an fheidhm ón dúshlán is déanaí
         chun na puimcíní go léir a bhailiú. "
       courseE_farmer_functions8b_2018: "**Dúshlán:** Úsáid an fheidhm ón dúshlán is
         déanaí chun na puimcíní go léir a bhailiú. "
       courseE_farmer_functions9: Úsáid ráitis choinníollacha le do chód a shimpliú.
       courseE_farmer_functions9a1_2018: An bhfuil d'fheidhm fós úsáideach?
+      courseE_farmer_functions9a1_2019: An bhfuil d'fheidhm fós úsáideach?
       courseE_farmer_functions9b: An féidir leat patrún a dhéanamh amach a chabhróidh
         leat an dúshlán seo a réiteach?
       courseE_farmer_functions9b_2018: An féidir leat patrún a dhéanamh amach a chabhróidh
@@ -3736,6 +4020,8 @@ ga:
       courseE_video_createFunctions2: Níl físeán againn fós a mhíníonn conas a dhéantar
         feidhmeanna. Ionadchoinneálaí é seo.
       courseE_video_createFunctions2_2018: Níl físeán againn fós a mhíníonn conas
+        a dhéantar feidhmeanna. Ionadchoinneálaí é seo.
+      courseE_video_createFunctions2_2019: Níl físeán againn fós a mhíníonn conas
         a dhéantar feidhmeanna. Ionadchoinneálaí é seo.
       courseE_video_createFunctions_2018: Níl físeán againn fós a mhíníonn conas a
         dhéantar feidhmeanna. Ionadchoinneálaí é seo.
@@ -4164,6 +4450,7 @@ ga:
       grade2_collector_9a: "**Dúshlán:** Bailigh na boinn go léir."
       grade2_collector_A: Cabhraigh le Laurel na seoda go léir a bhailiú.
       grade2_collector_A_2018: Cabhraigh le Laurel na seoda go léir a bhailiú.
+      grade2_collector_A_2019: Cabhraigh le Laurel na seoda go léir a bhailiú.
       grade2_playlab_project_1: An féidir leat ríomhchlár a scríobh a aistríonn an
         phiongain timpeall an scáileáin leis na saighde suas/síos/ar chlé/ar dheis,
         chun na spriocanna go léir a bhaint amach?

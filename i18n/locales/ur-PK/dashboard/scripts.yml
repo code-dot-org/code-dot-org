@@ -67,6 +67,10 @@ ur:
           stages:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
+        allthethings:
+          stages:
+            Web Lab:
+              name: ویب لیب
         algebraPD2b:
           stages:
             Teacher Dashboard:
@@ -234,6 +238,16 @@ ur:
             Envelope Variables:
               name: لفافہ متغیرات
         coursef-2019:
+          stages:
+            Envelope Variables:
+              name: لفافہ متغیرات
+            The Artist:
+              name: مصور
+        coursee-2019:
+          stages:
+            Conditionals:
+              name: شرائط
+        express-2019:
           stages:
             Envelope Variables:
               name: لفافہ متغیرات

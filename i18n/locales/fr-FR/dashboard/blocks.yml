@@ -31,15 +31,15 @@ fr:
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
           MOVE:
-            MOVES.ClapHigh: Tapez des mains en haut
-            MOVES.Clown: Clown
-            MOVES.DoubleJam: Double jam
-            MOVES.Roll: Roll
-            MOVES.Kick: Coup
-            MOVES.ThisOrThat: Ceci ou cela
             '"next"': "(Suivant)"
             '"prev"': "(Précédent)"
             '"rand"': "(Aléatoire)"
+            MOVES.Roll: Roll
+            MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.DoubleJam: Double jam
+            MOVES.Clown: Clown
+            MOVES.Kick: Coup
+            MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
           DIR:
             '1': "→"
@@ -48,15 +48,15 @@ fr:
         text: "{SPRITE} faire {MOVE} {DIR} pour toujours"
         options:
           MOVE:
-            MOVES.ClapHigh: Tapez des mains en haut
-            MOVES.Clown: Clown
-            MOVES.DoubleJam: Double jam
-            MOVES.Roll: Roll
-            MOVES.Kick: Coup
-            MOVES.ThisOrThat: Ceci ou cela
             '"next"': "(Suivant)"
             '"prev"': "(Précédent)"
             '"rand"': "(Aléatoire)"
+            MOVES.Roll: Roll
+            MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.DoubleJam: Double jam
+            MOVES.Clown: Clown
+            MOVES.Kick: Coup
+            MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
           DIR:
             '1': "→"
@@ -86,10 +86,11 @@ fr:
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
           MOVE:
-            MOVES.ClapHigh: Tapez des mains en haut
-            MOVES.Clown: Clown
-            MOVES.DoubleJam: Double jam
+            '"rand"': "(Aléatoire)"
             MOVES.Roll: Roll
+            MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.DoubleJam: Double jam
+            MOVES.Clown: Clown
             MOVES.Kick: Coup
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
@@ -100,10 +101,11 @@ fr:
         text: "{SPRITE} faire {MOVE} {DIR} une fois"
         options:
           MOVE:
-            MOVES.ClapHigh: Tapez des mains en haut
-            MOVES.Clown: Clown
-            MOVES.DoubleJam: Double jam
+            '"rand"': "(Aléatoire)"
             MOVES.Roll: Roll
+            MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.DoubleJam: Double jam
+            MOVES.Clown: Clown
             MOVES.Kick: Coup
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
@@ -293,7 +295,7 @@ fr:
             '"disco"': Carrés
             '"rainbow"': Couleurs
             '"diamonds"': Diamants
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": "(Aléatoire)"
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Aléatoire)"
       Dancelab_setDanceSpeed:
         text: changer la vitesse de la danse à {SPEED} pour {SPRITE}
         options:
@@ -598,6 +600,22 @@ fr:
             "{x: 300, y: 100}": vers le haut à droite
             "{x: 100, y: 300}": vers le bas à gauche
             "{x: 300, y: 300}": vers le haut à droite
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": vers le haut
+            "{x: 200, y: 300}": vers le bas
+            "{x: 100, y: 200}": vers la gauche
+            "{x: 300, y: 200}": vers la droite
+            "{x: 200, y: 200}": vers le centre
+            "{x: 100, y: 100}": vers le haut à gauche
+            "{x: 300, y: 100}": vers le haut à droite
+            "{x: 100, y: 300}": vers le bas à gauche
+            "{x: 300, y: 300}": vers le haut à droite
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': tout
       Mikelab_getProp:
         options:
           PROPERTY:

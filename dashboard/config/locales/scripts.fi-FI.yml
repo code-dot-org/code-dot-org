@@ -1573,3 +1573,51 @@ fi:
               name: Kirjekuorimuuttujat
             For Loop Fun:
               name: Silmukkahupia
+            The Artist:
+              name: Taiteilija
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Releohjelmointi
+            Conditionals with Cards:
+              name: Ehtolauseet pelikorteilla
+            Digital Citizenship:
+              name: Digitaalinen kansalaisuus
+            'Unplugged: Binary':
+              name: 'Tietokoneeton tekeminen: binääri'
+            Artist Binary:
+              name: 'Taiteilija: binääri'
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Rakennetaan perustus
+            Nested Loops:
+              name: Sisäkkäiset silmukat
+            Conditionals with Cards:
+              name: Ehtolauseet pelikorteilla
+            Conditionals:
+              name: Ehtolausekkeet
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Joukkoistaminen
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Releohjelmointi
+            Conditionals with Cards:
+              name: Ehtolauseet pelikorteilla
+            Envelope Variables:
+              name: Kirjekuorimuuttujat
+            For Loop Fun:
+              name: Silmukkahupia
+            Binary Bracelets:
+              name: Binäärikorut
+            'Unplugged: Binary':
+              name: 'Tietokoneeton tekeminen: binääri'
+            Artist Binary:
+              name: 'Taiteilija: binääri'
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Joukkoistaminen

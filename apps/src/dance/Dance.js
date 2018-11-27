@@ -9,14 +9,14 @@ var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults} from '../constants';
-import {DanceParty} from '@code-dot-org/dance-party';
+import {DanceParty, ResourceLoader} from '@code-dot-org/dance-party';
 import danceMsg from './locale';
 import {reducers, setSelectedSong, setSongData, setRunIsStarting} from './redux';
 import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
-import {setThumbnailBlobFromCanvas} from '../util/thumbnail';
+import {captureThumbnailFromCanvas, setThumbnailBlobFromCanvas} from '../util/thumbnail';
 import project from "../code-studio/initApp/project";
 import {
   getSongManifest,
@@ -96,6 +96,7 @@ Dance.prototype.init = function (config) {
   });
   this.studioApp_.labUserId = config.labUserId;
   this.level.softButtons = this.level.softButtons || {};
+  this.initialThumbnailCapture = true;
 
   config.afterClearPuzzle = function () {
     this.studioApp_.resetButtonClick();
@@ -316,6 +317,7 @@ Dance.prototype.afterInject_ = function () {
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
     i18n: danceMsg,
+    resourceLoader: new ResourceLoader('https://curriculum.code.org/images/sprites/dance_20181120/'),
   });
 
   // Expose an interface for testing
@@ -345,6 +347,11 @@ Dance.prototype.playSong = function (url, callback, onEnded) {
  * Reset Dance to its initial state.
  */
 Dance.prototype.reset = function () {
+  var clickToRunImage = document.getElementById('danceClickToRun');
+  if (clickToRunImage) {
+    clickToRunImage.style.display = "block";
+  }
+
   Sounds.getSingleton().stopAllAudio();
 
   this.nativeAPI.reset();
@@ -416,6 +423,11 @@ Dance.prototype.onReportComplete = function (response) {
  * Click the run button.  Start the program.
  */
 Dance.prototype.runButtonClick = async function () {
+  var clickToRunImage = document.getElementById('danceClickToRun');
+  if (clickToRunImage) {
+    clickToRunImage.style.display = "none";
+  }
+
   // Block re-entrancy since starting a run is async
   // (not strictly needed since we disable the run button,
   // but better to be safe)
@@ -484,7 +496,7 @@ Dance.prototype.execute = async function () {
   await this.initSongsPromise;
 
   const songMetadata = await this.songMetadataPromise;
-  return new Promise((resolve, reject)=> {
+  return new Promise((resolve, reject) => {
     this.nativeAPI.play(songMetadata, success => {
       this.performanceData_.lastRunButtonDelay =
         performance.now() - this.performanceData_.lastRunButtonClick;
@@ -627,7 +639,7 @@ Dance.prototype.onHandleEvents = function (currentFrameEvents) {
  */
 Dance.prototype.displayFeedback_ = function () {
   const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
-  this.studioApp_.displayFeedback({
+  let feedbackOptions = {
     feedbackType: this.testResults,
     message: this.message,
     response: this.response,
@@ -639,7 +651,15 @@ Dance.prototype.displayFeedback_ = function () {
       reinfFeedbackMsg: 'TODO: localized feedback message.',
     },
     disablePrinting: true,
-  });
+  };
+
+  // Disable social share for users under 13 if we have the cookie set.
+  const is13PlusCookie = sessionStorage.getItem('ad_anon_over13');
+  if (is13PlusCookie) {
+    feedbackOptions.disableSocialShare = is13PlusCookie === 'false';
+  }
+
+  this.studioApp_.displayFeedback(feedbackOptions);
 };
 
 Dance.prototype.getAppReducers = function () {
@@ -647,10 +667,16 @@ Dance.prototype.getAppReducers = function () {
 };
 
 /**
- * Capture a thumbnail image of the play space. This will capture a PNG blob
- * of the thumbnail in memory, then will save that blob to S3 when the project
- * is saved.
+ * Capture a thumbnail image of the play space. On initial capture, the thumbnail
+ * will be saved to the server. Every thumbnail captured after the initial capture will be
+ * stored in memory until the project is saved.
  */
 Dance.prototype.captureThumbnailImage = function () {
-  setThumbnailBlobFromCanvas(document.getElementById('defaultCanvas0'));
+  const canvas = document.getElementById('defaultCanvas0');
+  if (this.initialThumbnailCapture) {
+    this.initialThumbnailCapture = false;
+    captureThumbnailFromCanvas(canvas);
+  } else {
+    setThumbnailBlobFromCanvas(canvas);
+  }
 };

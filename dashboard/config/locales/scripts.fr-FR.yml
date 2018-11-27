@@ -2719,7 +2719,55 @@ fr:
               name: Les variables de l'enveloppe
             For Loop Fun:
               name: Jouons avec les boucles « Pour »
+            The Artist:
+              name: L'Artiste
         dance-low:
           stages:
             Dance Party:
               name: Fête dansante
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Programmation de relais
+            Conditionals with Cards:
+              name: Instructions conditionnelles avec des cartes
+            Digital Citizenship:
+              name: Citoyenneté numérique
+            'Unplugged: Binary':
+              name: 'Débranché: Binaire'
+            Artist Binary:
+              name: Artiste binaire
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Construire une fondation
+            Nested Loops:
+              name: Boucles imbriquées
+            Conditionals with Cards:
+              name: Instructions conditionnelles avec des cartes
+            Conditionals:
+              name: Instructions conditionnelles
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Financement participatif
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Programmation de relais
+            Conditionals with Cards:
+              name: Instructions conditionnelles avec des cartes
+            Envelope Variables:
+              name: Les variables de l'enveloppe
+            For Loop Fun:
+              name: Jouons avec les boucles « Pour »
+            Binary Bracelets:
+              name: Bracelets binaires
+            'Unplugged: Binary':
+              name: 'Débranché: Binaire'
+            Artist Binary:
+              name: Artiste binaire
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Financement participatif

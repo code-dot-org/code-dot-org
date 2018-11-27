@@ -457,7 +457,20 @@ nl:
         </block></xml>
 
         Dit programma gebruikt het "bas" volume (de lage tonen) om de hoogte van een danser in te stellen. Kun je de andere danser ook laten reageren op de muziek?
-      Dance_Party_11.5: |-
+      Dance_Party_11_5: |-
+        Bekijk dit blok eens:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Nu kun je een heleboel dansers tegelijk maken!
+
+        Probeer met een deel van de "alle eenden" blokken code te schrijven waarmee alle eenden samen gaan dansen.
+      Dance_Party_11.5_test: |-
         Bekijk dit blok eens:
 
         <xml>
@@ -750,6 +763,8 @@ nl:
         schapen te bereiken.
       Overworld Move to Sheep_2018: Voeg een tweede "beweeg vooruit"-commando toe
         om de schapen te bereiken.
+      Overworld Move to Sheep_2019: Voeg een tweede "beweeg vooruit"-commando toe
+        om de schapen te bereiken.
       Testing Quantum Farmer: 'Wow, ik heb een heel diep gat gevonden! Ik weet niet
         hoeveel scheppen vuil daarvoor nodig zijn. Kan je een programma schrijven
         dat het gat vult tot boven vult? Hint: probeer dit keer een zolang-lus.'
@@ -801,19 +816,27 @@ nl:
         in een hoek van 30 graden.
       courseC_artist_loops2a_2018: Gebruik nu een lus om je vogel 12 keer te laten
         draaien in een hoek van 30 graden.
+      courseC_artist_loops2a_2019: Gebruik nu een lus om je vogel 12 keer te laten
+        draaien in een hoek van 30 graden.
       courseC_artist_prog_challenge1-doghouse: Laten we een hondenhok voor Jorge bouwen!
       courseC_artist_prog_challenge2: Help me de gele lijnen op deze weg schilderen!
         *
       courseC_collector_prog9: '*"Laten we alle schatten verzamelen!"*'
       courseC_collector_prog9_2018: '*"Laten we alle schatten verzamelen!"*'
+      courseC_collector_prog9_2019: '*"Laten we alle schatten verzamelen!"*'
       courseC_flappy_events7: Probeer vervolgens het landschap te veranderen door
         een blok toe te voegen aan de `als gestart` gebeurtenis.
       courseC_flappy_events7_2018: Probeer vervolgens het landschap te veranderen
+        door een blok toe te voegen aan de `als gestart` gebeurtenis.
+      courseC_flappy_events7_2019: Probeer vervolgens het landschap te veranderen
         door een blok toe te voegen aan de `als gestart` gebeurtenis.
       courseC_flappy_events9: |-
         Laten we wat dingen dooreen mengen. In de plaats van het spel te beëindigen wanneer Flappy een obstakel raakt,
         laten we de score opnieuw op 0 zetten.
       courseC_flappy_events9_2018: |-
+        Laten we wat dingen dooreen mengen. In de plaats van het spel te beëindigen wanneer Flappy een obstakel raakt,
+        laten we de score opnieuw op 0 zetten.
+      courseC_flappy_events9_2019: |-
         Laten we wat dingen dooreen mengen. In de plaats van het spel te beëindigen wanneer Flappy een obstakel raakt,
         laten we de score opnieuw op 0 zetten.
       courseC_harvester_loops_challenge1: Verzamel alle maïs.
@@ -831,15 +854,23 @@ nl:
         op "Start" om het te zien gaan!
       courseC_maze_programming1_2018: Versleep in deze puzzel alle blokken tezamen
         en klik op "Start" om het te zien gaan!
+      courseC_maze_programming1_2019: Versleep in deze puzzel alle blokken tezamen
+        en klik op "Start" om het te zien gaan!
       courseC_maze_programming_challenge2: Soms is er meer dan één manier om hetzelfde
         probleem op te lossen. Soms is het sneller om achterwaarts te gaan dan voorwaarts!
       courseC_maze_programming_challenge2_2018: Soms is er meer dan één manier om
+        hetzelfde probleem op te lossen. Soms is het sneller om achterwaarts te gaan
+        dan voorwaarts!
+      courseC_maze_programming_challenge2_2019: Soms is er meer dan één manier om
         hetzelfde probleem op te lossen. Soms is het sneller om achterwaarts te gaan
         dan voorwaarts!
       courseD_artist_binary_challenge1: Je kan elk van de binaire waardes (0 of 1)
         slechts éénmaal gebruiken in deze puzzel. Maak gebruik vaan geneste lussen
         om deze tekening te voltooien.
       courseD_artist_binary_challenge1_2018: Je kan elk van de binaire waardes (0
+        of 1) slechts éénmaal gebruiken in deze puzzel. Maak gebruik vaan geneste
+        lussen om deze tekening te voltooien.
+      courseD_artist_binary_challenge1_2019: Je kan elk van de binaire waardes (0
         of 1) slechts éénmaal gebruiken in deze puzzel. Maak gebruik vaan geneste
         lussen om deze tekening te voltooien.
       courseD_artist_project_embedded: Hier is wat je zo dadelijk zal maken!

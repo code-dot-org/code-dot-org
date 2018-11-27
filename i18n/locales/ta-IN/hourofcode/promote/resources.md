@@ -73,7 +73,7 @@ Looking for our posters from previous years? [Find them here](<%= resolve_url('/
 
 **Subject line:** Join me and over 100 million students for an Hour of Code <br />
 
-Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Computers are everywhere, changing every industry on the planet. But only 35% of all high schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
 கோட் ஹவர் உடன், கணினி அறிவியல் Google, MSN, Yahoo !, டிஸ்னி ஆகியவற்றின் முகப்புகளில் உள்ளது. இந்த இயக்கத்தை ஆதரிக்க 100 க்கும் மேற்பட்ட பங்காளிகள் ஒன்று சேர்ந்துள்ளனர். Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
@@ -99,7 +99,7 @@ Between <%= campaign_date('short') %>, ten percent of students around the world 
 
 The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
 
-Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+Computers are everywhere, changing every industry on the planet. But only 35% of all high schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
 You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
 
@@ -115,7 +115,7 @@ Dear Parents,
 
 We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
-But only a tiny fraction of us are learning **how** technology works. Fewer than half of all schools teach computer science.
+But only a tiny fraction of us are learning **how** technology works. Only 35% of all high schools teach computer science.
 
 That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
@@ -133,7 +133,7 @@ See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-கணினிகணினி எல்லா இடங்களிலும், ஒவ்வொரு தொழிற்துறையிலும் கிரகத்தின் மீது மாறும், ஆனால் அனைத்து பள்ளிகளில் பாதிக்கும் குறைவான கணினி அறிவியல் கற்பிக்கின்றன. கம்ப்யூட்டர் மற்றும் சிறுபான்மையினர் கணினி அறிவியல் வகுப்புகளிலும், டெக்னாலஜி துறையில் கடுமையாக குறைத்துள்ளனர். நல்ல செய்தி, இதை மாற்றுவதற்கு நாங்கள் எங்கள் வழியில் இருக்கிறோம்
+Computers are everywhere, changing every industry on the planet, but only 35% of all high schools teach computer science. கம்ப்யூட்டர் மற்றும் சிறுபான்மையினர் கணினி அறிவியல் வகுப்புகளிலும், டெக்னாலஜி துறையில் கடுமையாக குறைத்துள்ளனர். நல்ல செய்தி, இதை மாற்றுவதற்கு நாங்கள் எங்கள் வழியில் இருக்கிறோம்
 
 கோட் ஹவர் உடன், கணினி அறிவியல் Google, MSN, Yahoo !, டிஸ்னி ஆகியவற்றின் முகப்புகளில் உள்ளது. இந்த இயக்கத்தை ஆதரிக்க 100 க்கும் மேற்பட்ட பங்காளிகள் ஒன்று சேர்ந்துள்ளனர். உலகில் ஒவ்வொரு ஆப்பிள் ஸ்டோர் கோடரியின் ஒரு மணி நேரமும் வழங்கப்படுகிறது. பிரச்சாரத்தின் ஒரு பகுதியாக, ஒபாமா கூட தனது முதல் கோட் குறியீட்டை எழுதினார்.
 

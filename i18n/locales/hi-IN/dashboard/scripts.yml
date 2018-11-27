@@ -179,3 +179,7 @@ hi:
           stages:
             The Internet:
               name: इंटरनेट
+        coursee-2019:
+          stages:
+            Conditionals:
+              name: शर्तें

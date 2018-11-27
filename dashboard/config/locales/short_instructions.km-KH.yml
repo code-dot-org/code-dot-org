@@ -655,10 +655,16 @@ km:
       courseD_artist_binary5_2018: "Each binary string below represents one\nrow of
         this picture. \r\n\r\nCan you rearrange them so it draws a smiley face\ninstead
         of a frown?"
+      courseD_artist_binary5_2019: "Each binary string below represents one\nrow of
+        this picture. \r\n\r\nCan you rearrange them so it draws a smiley face\ninstead
+        of a frown?"
       courseD_artist_binaryFP: "Here's a higher resolution canvas to\ndraw on - 16
         pixels by 16 pixels!\\\r\n\\\r\nSee what happens when we start to\nget creative
         with the bits!"
       courseD_artist_binaryFP_2018: "Here's a higher resolution canvas to\ndraw on
+        - 16 pixels by 16 pixels!\\\r\n\\\r\nSee what happens when we start to\nget
+        creative with the bits!"
+      courseD_artist_binaryFP_2019: "Here's a higher resolution canvas to\ndraw on
         - 16 pixels by 16 pixels!\\\r\n\\\r\nSee what happens when we start to\nget
         creative with the bits!"
       courseD_artist_functions2: "This time, use the `draw a square`\nfunction to
@@ -669,10 +675,16 @@ km:
       courseD_artist_nestedLoops1_2018: "Draw a triangle to kickstart this\nstage.
         \ \r\n(Each side is 100 pixels long and you'll need to turn 120 degrees\nfor
         each exterior angle.)"
+      courseD_artist_nestedLoops1_2019: "Draw a triangle to kickstart this\nstage.
+        \ \r\n(Each side is 100 pixels long and you'll need to turn 120 degrees\nfor
+        each exterior angle.)"
       courseD_artist_nestedLoops3: "Use your new skills to quickly draw\nthe last
         row of windows for this building.\\\r\n\\\r\nThe windows are 20 pixel\nsquares,
         each 20 pixels apart."
       courseD_artist_nestedLoops3_2018: "Use your new skills to quickly draw\nthe
+        last row of windows for this building.\\\r\n\\\r\nThe windows are 20 pixel\nsquares,
+        each 20 pixels apart."
+      courseD_artist_nestedLoops3_2019: "Use your new skills to quickly draw\nthe
         last row of windows for this building.\\\r\n\\\r\nThe windows are 20 pixel\nsquares,
         each 20 pixels apart."
       courseD_artist_project4a: "Try playing around with what you've\ncreated. Draw
@@ -699,9 +711,14 @@ km:
       courseD_bee_conditionals3_2018: "Help the bee collect all of the nectar.\n\r\n\r\nYou
         can only collect nectar from flowers, but you can check any space\nto see
         if there is a flower."
+      courseD_bee_conditionals3_2019: "Help the bee collect all of the nectar.\n\r\n\r\nYou
+        can only collect nectar from flowers, but you can check any space\nto see
+        if there is a flower."
       courseD_bee_conditionals8: "Collect nectar if there is a flower.\\\r\nOtherwise,\nmake
         honey (because there is a honeycomb)."
       courseD_bee_conditionals8_2018: "Collect nectar if there is a flower.\\\r\nOtherwise,\nmake
+        honey (because there is a honeycomb)."
+      courseD_bee_conditionals8_2019: "Collect nectar if there is a flower.\\\r\nOtherwise,\nmake
         honey (because there is a honeycomb)."
       courseD_playLab_cond3b: "1) Make the dragon change between random\nemotions
         every second.  \r\n2) Make it so when Pegleg gets to the dragon,\nhe gets
@@ -711,6 +728,10 @@ km:
         set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto **chase**
         the pirate.  "
       courseD_playLab_cond6_2018: "1)  Slow the ninja (actor 3) down before\nyou set
+        him to chase the pirate.  \r\n2)  If the pirate is greater than 225\npixels
+        down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
+        **chase** the pirate.  "
+      courseD_playLab_cond6_2019: "1)  Slow the ninja (actor 3) down before\nyou set
         him to chase the pirate.  \r\n2)  If the pirate is greater than 225\npixels
         down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
         **chase** the pirate.  "

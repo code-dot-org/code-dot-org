@@ -532,8 +532,12 @@ pt-BR:
               name: Codificação e envio de texto
             Number Systems:
               name: Sistemas numéricos
+            Personal Innovations:
+              name: Inovações Pessoais
             Sending Binary Messages:
               name: Enviando mensagens binárias
+            Sending Binary Messages with the Internet Simulator:
+              name: Enviando Mensagens Binárias com o Simulador de Internet
             Sending Bits in the Real World:
               name: Enviando bits no mundo real
             Sending Complex Messages:
@@ -688,8 +692,16 @@ pt-BR:
               name: Criando funções
             Creating functions with Parameters:
               name: Criação de funções com parâmetros
+            Digital Assistant Project:
+              name: Projeto de Assistente Digital
+            Event-Driven Programming and Debugging:
+              name: Programação Orientada a Evento e Depuração
             Events Unplugged:
               name: Eventos offline
+            Functions with Return Values:
+              name: Funções com Valores de Retorno
+            Introducing Design Mode:
+              name: Introduzindo o Modo Design
             Introduction to Arrays:
               name: Introdução a Arrays
             Introduction to Conditional Logic:
@@ -702,10 +714,18 @@ pt-BR:
               name: Laços e Simulações
             Multi-screen Apps:
               name: Aplicativos Multi-Tela
+            Processing Arrays:
+              name: Processando Listas
             The Need For Programming Languages:
               name: A necessidade de linguagens de programação
+            Understanding Program Flow and Logic:
+              name: Entendendo Lógica e Fluxo de Programação
+            User Input and Strings:
+              name: Entradas de Usuário e Strings
             Using Simple Commands:
               name: Usando comandos simples
+            Using Variables in Apps:
+              name: Usando Variáveis em Apps
             While Loops:
               name: Laços enquanto
         algebraPD3:
@@ -873,6 +893,8 @@ pt-BR:
         sciencePD3:
           title: 'DP da ciência da computação na ciência'
           stages:
+            Decode and Share:
+              name: Decifre e Compartilhe
             Welcome Back!:
               name: Bem-vindo(a) de volta!
         Testing:
@@ -885,8 +907,12 @@ pt-BR:
         cspunit2:
           description_short: Programação
           stages:
+            Cracking the Code:
+              name: Quebrando o Código
             DNS in the Real World:
               name: DNS no mundo Real
+            Encryption Algorithms:
+              name: Chaves e Senhas
             HTTP and Abstraction:
               name: HTTP e Abstração na Internet
             Tell Me a Secret - Encrypting Text:
@@ -902,6 +928,16 @@ pt-BR:
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           stages:
+            Big Game - Animation:
+              name: Grande Jogo - Animação
+            Big Game - Booleans:
+              name: Grande Jogo - Boleanos
+            Big Game - Collision Detection:
+              name: Grande Jogo - Detecção de Colisão
+            Big Game - Player Movement:
+              name: Grande Jogo - Movimento do Jogador
+            Big Game - Variables:
+              name: Grande Jogo - Variáveis
             Booleans:
               name: Booleanos
             Defining Variables:
@@ -925,6 +961,10 @@ pt-BR:
           description: Todos os tipos de nível para testar UI
           description_short: Todos os tipos de nível para testar UI
           stages:
+            Anonymous student survey:
+              name: Pesquisa anônima de estudante
+            Anonymous student survey 2:
+              name: Pesquisa anônima de estudante 2
             AppLab:
               name: Laboratório de aplicativo
             Artist:
@@ -941,6 +981,10 @@ pt-BR:
               name: Resposta livre
             Jigsaw:
               name: Quebra-cabeça
+            Long assessment:
+              name: Avaliação longa
+            Markdown Details:
+              name: Detalhes de Marcação
             Match:
               name: Correspondência
             Maze:
@@ -1198,10 +1242,14 @@ pt-BR:
           description: Esta unidade introduz os conceitos fundamentais de programação de computadores, que ajudam na habilidade de criar ricos aplicativos interativos. Esse curso usa JavaScript como linguagem de programação, e o Laboratório de Aplicativo App Lab é o ambiente de programação para construir aplicativos, mas os conceitos aprendidos nessas lições envolvem todas as ferramentas e linguagens de programação.
           description_short: Programação
           stages:
+            Functions with Return Values:
+              name: Funções com Valores de Retorno
             Introduction to Arrays:
               name: Introdução a Arrays
             Loops and Simulations:
               name: Laços e Simulações
+            Processing Arrays:
+              name: Processando Listas
             While Loops:
               name: Laços enquanto
         gumball:
@@ -1331,8 +1379,12 @@ pt-BR:
               name: Números binários
             Number Systems:
               name: Sistemas numéricos
+            Personal Innovations:
+              name: Inovações Pessoais
             Sending Binary Messages:
               name: Enviando mensagens binárias
+            Sending Binary Messages with the Internet Simulator:
+              name: Enviando Mensagens Binárias com o Simulador de Internet
             Sending Numbers:
               name: Envio de números
             The Internet:
@@ -1380,6 +1432,8 @@ pt-BR:
               name: Pesquisa Pós-Curso
         csp4-2017:
           stages:
+            Cracking the Code:
+              name: Quebrando o Código
             Simple Encryption:
               name: Criptografia simples
             What is Big Data?:
@@ -1392,8 +1446,16 @@ pt-BR:
           stages:
             Beyond Buttons Toward Apps:
               name: Além dos botões para aplicativos
+            Digital Assistant Project:
+              name: Projeto de Assistente Digital
+            Event-Driven Programming and Debugging:
+              name: Programação Orientada a Evento e Depuração
             Events Unplugged:
               name: Eventos offline
+            Functions with Return Values:
+              name: Funções com Valores de Retorno
+            Introducing Design Mode:
+              name: Introduzindo o Modo Design
             Introduction to Arrays:
               name: Introdução a Arrays
             Introduction to Conditional Logic:
@@ -1404,6 +1466,14 @@ pt-BR:
               name: Laços e Simulações
             Multi-screen Apps:
               name: Aplicativos Multi-Tela
+            Processing Arrays:
+              name: Processando Listas
+            Understanding Program Flow and Logic:
+              name: Entendendo Lógica e Fluxo de Programação
+            User Input and Strings:
+              name: Entradas de Usuário e Strings
+            Using Variables in Apps:
+              name: Usando Variáveis em Apps
             While Loops:
               name: Laços enquanto
             If statements:
@@ -2315,6 +2385,8 @@ pt-BR:
               name: Unidade 3 Capítulo 1 Avaliação
         pwc:
           stages:
+            Personal Innovations:
+              name: Inovações Pessoais
             Simple Encryption:
               name: Criptografia simples
             Web Development - Creating Webpages:
@@ -2659,8 +2731,12 @@ pt-BR:
               name: Condicionais com cartas
         csp1-2018:
           stages:
+            Personal Innovations:
+              name: Inovações Pessoais
             Sending Binary Messages:
               name: Enviando mensagens binárias
+            Sending Binary Messages with the Internet Simulator:
+              name: Enviando Mensagens Binárias com o Simulador de Internet
             Number Systems:
               name: Sistemas numéricos
             Binary Numbers:
@@ -2728,12 +2804,18 @@ pt-BR:
           stages:
             Multi-screen Apps:
               name: Aplicativos Multi-Tela
+            User Input and Strings:
+              name: Entradas de Usuário e Strings
             While Loops:
               name: Laços enquanto
             Loops and Simulations:
               name: Laços e Simulações
             Introduction to Arrays:
               name: Introdução a Arrays
+            Processing Arrays:
+              name: Processando Listas
+            Functions with Return Values:
+              name: Funções com Valores de Retorno
         csd-novice-18:
           stages:
             Friday:
@@ -2866,7 +2948,72 @@ pt-BR:
               name: Variáveis do envelope
             For Loop Fun:
               name: Diversão com laços for
+            The Artist:
+              name: O Artista
         dance-low:
           stages:
             Dance Party:
               name: Festa dançante
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Programação por revezamento
+            Loops in Ice Age:
+              name: Repetições na Era do gelo
+            Conditionals with Cards:
+              name: Condicionais com cartas
+            Digital Citizenship:
+              name: Cidadania digital
+            'Unplugged: Binary':
+              name: 'Offline: binário'
+            Artist Binary:
+              name: 'Artista: binário'
+        coursee-2019:
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programando: Meus amigos robôs'
+            Building a Foundation:
+              name: Criando uma base
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
+            Nested Loops:
+              name: Laços aninhados
+            Conditionals with Cards:
+              name: Condicionais com cartas
+            Conditionals:
+              name: Condições
+            Copyright and Creativity:
+              name: Copyright e Direitos Autorais
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
+          stages:
+            Programming in Maze:
+              name: Programação no labirinto
+            Relay Programming:
+              name: Programação por revezamento
+            Copyright and Creativity:
+              name: Copyright e Direitos Autorais
+            Conditionals with Cards:
+              name: Condicionais com cartas
+            Envelope Variables:
+              name: Variáveis do envelope
+            For Loop Fun:
+              name: Diversão com laços for
+            Binary Bracelets:
+              name: Pulseiras binárias
+            'Unplugged: Binary':
+              name: 'Offline: binário'
+            Artist Binary:
+              name: 'Artista: binário'
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        csd1-2019:
+          stages:
+            Processing:
+              name: Processando

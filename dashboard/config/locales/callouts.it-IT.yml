@@ -177,6 +177,19 @@ it:
         Course_4_Play_Lab_Vars_9_1: I blocchi della cassetta degli attrezzi ora sono
           stati organizzati in categorie. Clicca su queste parole per scoprire dove
           sono finiti!
+      Dance_Party_01_callout:
+        dance_callout_01: Aggiungi questo blocco al tuo programma!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Aggiungi questo blocco al tuo programma!
+      Dance_Party_02_callout:
+        dance_callout_02: Aggiungi questo blocco al tuo programma!
+      Dance_Party_04_callout:
+        dance_callout_04: Aggiungi questo blocco al tuo programma!
+      Dance_Party_06_callout:
+        dance_callout_06: Aggiungi qui il nuovo ballerino
+      Dance_Party_11_callout:
+        dance_callout_11_a: Nuovo blocco!
+        dance_callout_11_b: Nuovo blocco!
       Eval Design Recipe .1_callout:
         edit_function: Clicca qui per modificare la tua funzione.
       Frozen Project Test Toolbox_callout:
@@ -200,6 +213,10 @@ it:
           sono stati organizzati in categorie. Clicca su queste parole per scoprire
           dove sono finiti!
       Geometric Sun_2018_callout:
+        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora
+          sono stati organizzati in categorie. Clicca su queste parole per scoprire
+          dove sono finiti!
+      Geometric Sun_2019_callout:
         4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora
           sono stati organizzati in categorie. Clicca su queste parole per scoprire
           dove sono finiti!
@@ -324,10 +341,15 @@ it:
         craft_callout_preplaced: Qui ci sono dei blocchi per farti iniziare
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Qui ci sono dei blocchi per farti iniziare
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Qui ci sono dei blocchi per farti iniziare
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Questo codice inizia la costruzione della tua
           casa. Riesci a finirla tu?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Questo codice inizia la costruzione della tua
+          casa. Riesci a finirla tu?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Questo codice inizia la costruzione della tua
           casa. Riesci a finirla tu?
       Overworld Move to Sheep_callout:
@@ -338,9 +360,15 @@ it:
         craft_run_button_callout: Clicca su "Esegui" per provare il tuo programma
         craft_drag_block_callout: Prendi il blocco "vai avanti" ed attaccalo sotto
           gli altri blocchi nell'area di lavoro.
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Clicca su "Esegui" per provare il tuo programma
+        craft_drag_block_callout: Prendi il blocco "vai avanti" ed attaccalo sotto
+          gli altri blocchi nell'area di lavoro.
       Overworld Place Wall_callout:
         craft_inside_repeat: Ripeti le azioni inserendo qui i relativi blocchi
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Ripeti le azioni inserendo qui i relativi blocchi
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Ripeti le azioni inserendo qui i relativi blocchi
       PS clone CSD U3 Variables Predict Where XY_callout:
         grid: Clicca qui per mostrare la griglia.
@@ -377,6 +405,9 @@ it:
         4-5_Artist_Patterns_Free_Play_2: Prova ad usare il nuovo blocco `comment`
           sotto questa etichetta, per inserire dei commenti all'interno del tuo programma!
       Robot Doodle_2018_callout:
+        4-5_Artist_Patterns_Free_Play_2: Prova ad usare il nuovo blocco `comment`
+          sotto questa etichetta, per inserire dei commenti all'interno del tuo programma!
+      Robot Doodle_2019_callout:
         4-5_Artist_Patterns_Free_Play_2: Prova ad usare il nuovo blocco `comment`
           sotto questa etichetta, per inserire dei commenti all'interno del tuo programma!
       Robot Drawing_callout:
@@ -423,9 +454,14 @@ it:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Questo codice controlla se c'è lava, sai aggiungere
           un comando per andare avanti?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Questo codice controlla se c'è lava, sai aggiungere
+          un comando per andare avanti?
       Underground Iron_callout:
         craft_what_is_iron: Estrai il ferro!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Estrai il ferro!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Estrai il ferro!
       WebLab PS test - 1-12_callout:
         version_history_button: Controlla la cronologia delle versioni
@@ -641,6 +677,9 @@ it:
       courseC_artist_loopsPrePre1a_2018_callout:
         courseC_artist_loopsPrePre1a_1: Inizia usando questo blocco per portare l'artista
           al centro dello schermo.
+      courseC_artist_loopsPrePre1a_2019_callout:
+        courseC_artist_loopsPrePre1a_1: Inizia usando questo blocco per portare l'artista
+          al centro dello schermo.
       courseC_collector_prog1_callout:
         courseC_collector_prog1_1: Vedi qualche nuovo blocco nella cassetta degli
           attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
@@ -649,10 +688,17 @@ it:
         courseC_collector_prog1_1: Vedi qualche nuovo blocco nella cassetta degli
           attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
           lezione.
+      courseC_collector_prog1_2019_callout:
+        courseC_collector_prog1_1: Vedi qualche nuovo blocco nella cassetta degli
+          attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
+          lezione.
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: Se necessario, puoi prendere altri blocchi dalla
           cassetta degli attrezzi!
       courseC_collector_prog7_2018_callout:
+        courseC_collector_prog7_1: Se necessario, puoi prendere altri blocchi dalla
+          cassetta degli attrezzi!
+      courseC_collector_prog7_2019_callout:
         courseC_collector_prog7_1: Se necessario, puoi prendere altri blocchi dalla
           cassetta degli attrezzi!
       courseC_harvester_loops1_callout:
@@ -675,16 +721,25 @@ it:
       courseC_maze_programming1_2018_callout:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro,
           premi "Esegui" per far partire il programma.
+      courseC_maze_programming1_2019_callout:
+        grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro,
+          premi "Esegui" per far partire il programma.
       courseC_maze_programming2_callout:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
           dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseC_maze_programming2_2018_callout:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
           dentro tutti i blocchi necessari per risolvere l'esercizio.
+      courseC_maze_programming2_2019_callout:
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
+          dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseC_maze_programming7_callout:
         courseC_maze_programming7_2: Questi blocchi sono fatti di pietra e non possono
           essere gettati via.
       courseC_maze_programming7_2018_callout:
+        courseC_maze_programming7_2: Questi blocchi sono fatti di pietra e non possono
+          essere gettati via.
+      courseC_maze_programming7_2019_callout:
         courseC_maze_programming7_2: Questi blocchi sono fatti di pietra e non possono
           essere gettati via.
       courseD_artist_functions2_callout:
@@ -702,6 +757,10 @@ it:
         courseD_artist_nestedLoops1a_1: 'Non devi impostare i singoli colori per svolgere
           correttamente questo esercizio: se vuoi, il blocco `imposta il colore scelto
           a caso` ti permette di ottenere facilmente tanti colori diversi!'
+      courseD_artist_nestedLoops1a_2019_callout:
+        courseD_artist_nestedLoops1a_1: 'Non devi impostare i singoli colori per svolgere
+          correttamente questo esercizio: se vuoi, il blocco `imposta il colore scelto
+          a caso` ti permette di ottenere facilmente tanti colori diversi!'
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: Puoi cambiare questo numero.
         courseD_artist_ramp11_2: Clicca qui per inserire il numero di volte da ripetere
@@ -713,6 +772,9 @@ it:
       courseD_bee_conditionals2_2018_callout:
         4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
           ha un FIORE. Invece non devi proprio cercare favi.
+      courseD_bee_conditionals2_2019_callout:
+        4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
+          ha un FIORE. Invece non devi proprio cercare favi.
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
           ha un FIORE. Invece non devi proprio cercare favi.
@@ -720,6 +782,9 @@ it:
         courseD_bee_conditionals_challenge2_1: Usa questo ciclo per raccogliere tutto
           il nettare da un fiore o fare tutto il miele in un favo.
       courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: Usa questo ciclo per raccogliere tutto
+          il nettare da un fiore o fare tutto il miele in un favo.
+      courseD_bee_conditionals_challenge2_2019_callout:
         courseD_bee_conditionals_challenge2_1: Usa questo ciclo per raccogliere tutto
           il nettare da un fiore o fare tutto il miele in un favo.
       courseD_bee_conditionals_challenge3_callout:
@@ -740,6 +805,9 @@ it:
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: Usa questo blocco per raccogliere un diamante.
       courseD_farmer_while7_2018_callout:
+        courseD_farmer_while7_2018_PathAhead: Devi usare il blocco `mentre c'è strada
+          in avanti` per risolvere questo esercizio.
+      courseD_farmer_while7_2019_callout:
         courseD_farmer_while7_2018_PathAhead: Devi usare il blocco `mentre c'è strada
           in avanti` per risolvere questo esercizio.
       courseD_maze_ramp1_callout:
@@ -770,6 +838,9 @@ it:
         courseD_playLab_condFP_1: Abbiamo organizzato i blocchi in categorie per darti
           più istruzioni con cui giocare! Clicca qui per vedere dove sono finite.
       courseD_playLab_condFP_2018_callout:
+        courseD_playLab_condFP_1: Abbiamo organizzato i blocchi in categorie per darti
+          più istruzioni con cui giocare! Clicca qui per vedere dove sono finite.
+      courseD_playLab_condFP_2019_callout:
         courseD_playLab_condFP_1: Abbiamo organizzato i blocchi in categorie per darti
           più istruzioni con cui giocare! Clicca qui per vedere dove sono finite.
       courseD_playLab_condFP_a_callout:
@@ -816,10 +887,17 @@ it:
         courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, sarà
           eseguito tutto il codice contenuto nella funzione. Cosa dovrà fare l'artista
           dopo aver disegnato il primo quadrato?
+      courseE_artist_functions2_2019_callout:
+        courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, sarà
+          eseguito tutto il codice contenuto nella funzione. Cosa dovrà fare l'artista
+          dopo aver disegnato il primo quadrato?
       courseE_artist_functions8_callout:
         courseD_artist_functions8_1: I blocchi per creare le funzioni sono stati spostati
           in questa categoria della cassetta degli attrezzi.
       courseE_artist_functions8a_2018_callout:
+        courseD_artist_functions8_1: I blocchi per creare le funzioni sono stati spostati
+          in questa categoria della cassetta degli attrezzi.
+      courseE_artist_functions8a_2019_callout:
         courseD_artist_functions8_1: I blocchi per creare le funzioni sono stati spostati
           in questa categoria della cassetta degli attrezzi.
       courseE_artist_functions_challenge_callout:
@@ -837,12 +915,22 @@ it:
           altri blocchi qui sotto.
         courseE_artist_functions_challenge1_callout2: Se non ti piace questo progetto,
           cambialo con qualunque cosa vuoi!
+      courseE_artist_functions_challenge1_2019_callout:
+        courseE_artist_functions_challenge1_callout1: Prosegui questo programma aggiungendo
+          altri blocchi qui sotto.
+        courseE_artist_functions_challenge1_callout2: Se non ti piace questo progetto,
+          cambialo con qualunque cosa vuoi!
       courseE_artist_functions_challenge2_callout:
         courseE_artist_functions_challenge2_callout1: Prosegui questo programma aggiungendo
           altri blocchi qui sotto.
         courseE_artist_functions_challenge2_callout2: Se non ti piace questo progetto,
           cambialo con qualunque cosa vuoi!
       courseE_artist_functions_challenge2_2018_callout:
+        courseE_artist_functions_challenge2_callout1: Prosegui questo programma aggiungendo
+          altri blocchi qui sotto.
+        courseE_artist_functions_challenge2_callout2: Se non ti piace questo progetto,
+          cambialo con qualunque cosa vuoi!
+      courseE_artist_functions_challenge2_2019_callout:
         courseE_artist_functions_challenge2_callout1: Prosegui questo programma aggiungendo
           altri blocchi qui sotto.
         courseE_artist_functions_challenge2_callout2: Se non ti piace questo progetto,
@@ -874,6 +962,10 @@ it:
           in modo leggermente diverso. Clicca sulle varie categorie per vedere che
           blocchi contengono.
       courseE_farmer_functions1_2018_callout:
+        courseE_farmer_functions1_2: Qui la cassetta degli attrezzi è organizzata
+          in modo leggermente diverso. Clicca sulle varie categorie per vedere che
+          blocchi contengono.
+      courseE_farmer_functions1_2019_callout:
         courseE_farmer_functions1_2: Qui la cassetta degli attrezzi è organizzata
           in modo leggermente diverso. Clicca sulle varie categorie per vedere che
           blocchi contengono.
