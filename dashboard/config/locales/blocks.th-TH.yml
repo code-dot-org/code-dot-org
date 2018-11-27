@@ -404,6 +404,8 @@ th:
             '"tint"': ระดับอ่อนสี
       Dancelab_setTint:
         text: กำหนด {SPRITE} ระดับอ่อนสีเป็น {VAL}
+      Dancelab_setTintInline:
+        text: กำหนด {SPRITE} ระดับอ่อนสีเป็น {VAL}
       Dancelab_setTintEach:
         options:
           THIS:

@@ -390,6 +390,8 @@ vi:
             '"tint"': sắc thái
       Dancelab_setTint:
         text: thiết lập sắc thái {SPRITE} thành {VAL}
+      Dancelab_setTintInline:
+        text: thiết lập sắc thái {SPRITE} thành {VAL}
       Dancelab_setTintEach:
         options:
           THIS:

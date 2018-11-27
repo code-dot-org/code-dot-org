@@ -368,6 +368,8 @@ uk:
             '"tint"': відтінок
       Dancelab_setTint:
         text: встановити для {SPRITE} відтінок {VAL}
+      Dancelab_setTintInline:
+        text: встановити для {SPRITE} відтінок {VAL}
       Dancelab_setTintEach:
         text: встановити для {THIS} відтінок у {VAL}
         options:

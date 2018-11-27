@@ -378,6 +378,8 @@ nl:
             '"y"': verticale positie
       Dancelab_setTint:
         text: stel de tint van {SPRITE} in op {VAL}
+      Dancelab_setTintInline:
+        text: stel de tint van {SPRITE} in op {VAL}
       Dancelab_setTintEach:
         options:
           THIS:
