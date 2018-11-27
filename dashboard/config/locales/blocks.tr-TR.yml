@@ -216,6 +216,7 @@ tr:
             '"ALIEN"': Uzaylı
             '"BEAR"': Ayı
             '"CAT"': Kedi
+            '"DOG"': Köpek
             '"DUCK"': Ördek
             '"FROG"': Kurbağa
             '"MOOSE"': Geyik
@@ -461,6 +462,7 @@ tr:
             '"right"': sağ
             '"space"': uzay
             '"x"': x
+            '"y"': y
       Dancelab_whenPeak:
         text: "{RANGE} en üst seviyedeyken"
         options:
