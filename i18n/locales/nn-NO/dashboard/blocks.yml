@@ -235,6 +235,7 @@ nn:
             '"ALIEN"': Romvesen
             '"BEAR"': Bjørn
             '"CAT"': Katt
+            '"DOG"': Hund
             '"DUCK"': And
             '"FROG"': Frosk
             '"MOOSE"': Elg
@@ -257,7 +258,7 @@ nn:
           lag {N} ny {COSTUME}
           i ei {LAYOUT}
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -508,6 +509,7 @@ nn:
             '"u"': u
             '"v"': v
             '"x"': x
+            '"y"': 'y'
       Dancelab_whenPeak:
         text: når {RANGE} er på sitt største
         options:

@@ -461,9 +461,10 @@ nn:
         </block></xml>
         
         Dette programmet brukar bassvolumet til musikkens (dei djupe lydane) til å kontrollere høgden på ein dansar. Greier du å få de andre dansarane til å reagere på musikken også?
-      Dance_Party_11.5: "Sjekk ut denne blokka:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"AND\"</title>\n<title name=\"LAYOUT\">\"sirkel\"</title>\n</block></xml>\n\nNo kan du lage mange dansarar samtidig!\n\nPrøv å bruke nokre av andeblokkene til å skrive kode som får alle endene til å danse saman."
       Dance_Party_11.5_test: "Sjekk ut denne blokka:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"AND\"</title>\n<title name=\"LAYOUT\">\"sirkel\"</title>\n</block></xml>\n\nNo kan du lage mange dansarar samtidig!\n\nPrøv å bruke nokre av andeblokkene til å skrive kode som får alle endene til å danse saman."
       Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml>-blokka gjer det mogleg å køyre kode når du trykker på oppoverpila.\n\nDu kan skifte dans, endra på eigenskapane til ein dansar eller gjere eit dansetrinn berre ein gong. Vær kreativ, og sjå etter nye blokker!"
+      Dance_Party_11_5: "Sjekk ut denne blokka:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"AND\"</title>\n<title name=\"LAYOUT\">\"sirkel\"</title>\n</block></xml>\n\nNo kan du lage mange dansarar samtidig!\n\nPrøv å bruke nokre av andeblokkene til å skrive kode som får alle endene til å danse saman."
+      Dance_Party_11.5: "Sjekk ut denne blokka:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"AND\"</title>\n<title name=\"LAYOUT\">\"sirkel\"</title>\n</block></xml>\n\nNo kan du lage mange dansarar samtidig!\n\nPrøv å bruke nokre av andeblokkene til å skrive kode som får alle endene til å danse saman."
       Dance_Party_11b: |-
         På tide med dansekonkurranse. Katten dabber når du trykker på venstre piltast. Du får roboten til å "droppe" når du trykker på høgrepila. 
         
@@ -492,6 +493,9 @@ nn:
         
         Lag ein ny dansar som heiter “backup_dancer1”, som kan danse med katten.
       HOC Dance 9_draft: "<xml><block type=\"Dancelab_whenKey\"></block></xml>-blokka gjer det mogleg å køyre kode når du trykker på oppoverpila.\n\nDu kan skifte dans, endra på eigenskapane til ein dansar eller gjere eit dansetrinn berre ein gong. Vær kreativ, og sjå etter nye blokker!"
+      HOC Dance Freeplay: Groove i veg! Lag ein dans du kan dele med venene dine.
+      HOC Dance Freeplay_draft: Groove i veg! Lag ein dans du kan dele med venene dine.
+      HOC Dance Predraw: Groove i veg! Lag ein dans du kan dele med venene dine.
       K-1 Bee Loops 2: Bruk ei gjenta-løkke til å bevege deg og så hente nektaren og lage honning!
       K-1 Bee Loops 3: Bruk tre gjenta-løkker til å hente nektar og lage honning!
       K-1 Bee Loops 4: Bruk gjenta-løkker til å hente nektar, lage honning og til å bevege deg!
