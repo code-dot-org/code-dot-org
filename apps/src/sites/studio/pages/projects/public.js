@@ -34,11 +34,9 @@ $(document).ready(() => {
           <StartNewProject
             canViewFullList
             canViewAdvancedTools
-            includeDanceParty={projectsData.includeDanceParty}
           />
           <PublicGallery
             limitedGallery={projectsData.limitedGallery}
-            includeDanceParty={projectsData.includeDanceParty}
           />
         </div>
       </Provider>,
