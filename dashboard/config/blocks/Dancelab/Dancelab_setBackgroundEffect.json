@@ -19,7 +19,7 @@
           ],
           [
             "(Random)",
-            "['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'smile_face', 'snowflakes', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]"
+            "['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'pizzas', 'splatter', 'rainbow', 'smile_face', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,18)]"
           ],
           [
             "Circles",
@@ -58,6 +58,10 @@
             "\"splatter\""
           ],
           [
+            "Pizzas",
+            "\"pizzas\""
+          ],
+          [
             "Rainbow",
             "\"rainbow\""
           ],
@@ -68,6 +72,10 @@
           [
             "Snow",
             "\"snowflakes\""
+          ],
+          [
+            "Song Names",
+            "\"text\""
           ],
           [
             "Space",
@@ -95,12 +103,40 @@
         "name": "PALETTE",
         "options": [
           [
+            "Black and White",
+            "\"rave\""
+          ],
+          [
+            "Cool",
+            "\"cool\""
+          ],
+          [
+            "Electronic",
+            "\"electronic\""
+          ],
+          [
+            "Ice Cream",
+            "\"iceCream\""
+          ],
+          [
             "Light",
-            "\"light\""
+            "\"default\""
           ],
           [
             "Neon",
             "\"neon\""
+          ],
+          [
+            "Tropical",
+            "\"tropical\""
+          ],
+          [
+            "Vintage",
+            "\"vintage\""
+          ],
+          [
+            "Warm",
+            "\"warm\""
           ]
         ]
       }

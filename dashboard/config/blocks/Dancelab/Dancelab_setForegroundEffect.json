@@ -18,7 +18,7 @@
           ],
           [
             "(Random)",
-            "['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'rain', 'floating_rainbows', 'smiling_poop', 'text', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,11)]"
+            "['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'smiling_poop', 'rain', 'floating_rainbows', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,10)]"
           ],
           [
             "Bubbles",
@@ -41,20 +41,16 @@
             "\"pineapples\""
           ],
           [
+            "Poop",
+            "\"smiling_poop\""
+          ],
+          [
             "Rain",
             "\"rain\""
           ],
           [
             "Rainbows",
             "\"floating_rainbows\""
-          ],
-          [
-            "Smiling Poop",
-            "\"smiling_poop\""
-          ],
-          [
-            "Song Names",
-            "\"text\""
           ],
           [
             "Spotlight",
