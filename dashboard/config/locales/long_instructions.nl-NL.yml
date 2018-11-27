@@ -457,19 +457,6 @@ nl:
         </block></xml>
 
         Dit programma gebruikt het "bas" volume (de lage tonen) om de hoogte van een danser in te stellen. Kun je de andere danser ook laten reageren op de muziek?
-      Dance_Party_11.5: |-
-        Bekijk dit blok eens:
-
-        <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
-
-        Nu kun je een heleboel dansers tegelijk maken!
-
-        Probeer met een deel van de "alle eenden" blokken code te schrijven waarmee alle eenden samen gaan dansen.
       Dance_Party_11.5_test: |-
         Bekijk dit blok eens:
 
@@ -487,6 +474,32 @@ nl:
         Met het <xml><block type="Dancelab_whenKey"></block></xml> blok kun je code uitvoeren door de pijlomhoogtoets in te drukken.
 
         Je kunt de dansmoves veranderen, eigenschappen van dansers aanpassen, of een move tussendoor doen. Wees creatief en ga op zoek naar nieuwe blokken!
+      Dance_Party_11_5: |-
+        Bekijk dit blok eens:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Nu kun je een heleboel dansers tegelijk maken!
+
+        Probeer met een deel van de "alle eenden" blokken code te schrijven waarmee alle eenden samen gaan dansen.
+      Dance_Party_11.5: |-
+        Bekijk dit blok eens:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Nu kun je een heleboel dansers tegelijk maken!
+
+        Probeer met een deel van de "alle eenden" blokken code te schrijven waarmee alle eenden samen gaan dansen.
       Dance_Party_11b: Hoog tijd voor een danswedstrijd! De kat doet een dab wanneer
         je op de linkerpijltoets drukt. Zorg dat de Robot "naar de grond gaat" door
         op de rechterpijltoets te drukken.
@@ -545,6 +558,10 @@ nl:
         Met het <xml><block type="Dancelab_whenKey"></block></xml> blok kun je code uitvoeren door de pijlomhoogtoets in te drukken.
 
         Je kunt de dansmoves veranderen, eigenschappen van dansers aanpassen, of een move tussendoor doen. Wees creatief en ga op zoek naar nieuwe blokken!
+      HOC Dance Freeplay: Ga helemaal los! Maak je eigen dans om te delen met je vrienden.
+      HOC Dance Freeplay_draft: Ga helemaal los! Maak je eigen dans om te delen met
+        je vrienden.
+      HOC Dance Predraw: Ga helemaal los! Maak je eigen dans om te delen met je vrienden.
       K-1 Bee Loops 2: Gebruik een lus om te verplaatsen en pak dan te nectar en maak
         honing!
       K-1 Bee Loops 3: Gebruik lussen om nectar te pakken en honing te maken!

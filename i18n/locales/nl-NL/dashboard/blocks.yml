@@ -215,6 +215,7 @@ nl:
             '"ALIEN"': Buitenaards wezen
             '"BEAR"': Beer
             '"CAT"': Kat
+            '"DOG"': Hond
             '"DUCK"': Eend
             '"FROG"': Kikker
             '"MOOSE"': Eland
@@ -237,7 +238,7 @@ nl:
           Maak {N} nieuw {COSTUME}
           in een {LAYOUT}
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -446,6 +447,7 @@ nl:
             '"right"': rechts
             '"space"': ruimte
             '"x"': x
+            '"y"': 'y'
       Dancelab_whenPeak:
         text: als {RANGE} piek
       gamelab_changeColor:
