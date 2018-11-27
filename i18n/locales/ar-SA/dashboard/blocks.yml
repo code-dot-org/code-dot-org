@@ -218,6 +218,8 @@ ar:
             '"random"': عشوائي
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"DOG"': كلب
           LOCATION:
             "{x: 200, y: 100}": أعلى
             "{x: 200, y: 300}": أسفل
@@ -226,7 +228,7 @@ ar:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": عشوائي
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
