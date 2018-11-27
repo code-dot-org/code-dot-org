@@ -617,7 +617,7 @@
           <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
           <block type="variables_get">
-          <title name="VAR">counter</title>
+          <title name="VAR">teller</title>
           </block>
           </value>
           <statement name="DO">
@@ -625,11 +625,11 @@
           <mutation name="draw a square 20"></mutation>
           <next>
           <block type="jump_by_constant">
-          <title name="DIR">jumpForward</title>
+          <title name="DIR">hoppFram</title>
           <title name="VALUE">20</title>
           <next>
           <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
+          <title name="DIR">snuHøyre</title>
           <title name="VALUE">3</title>
           </block>
           </next>
@@ -639,7 +639,7 @@
           </statement>
           <next>
           <block type="draw_turn_by_constant">
-          <title name="DIR">turnLeft</title>
+          <title name="DIR">snuVenstre</title>
           <title name="VALUE">100</title>
           </block>
           </next>
@@ -2323,7 +2323,7 @@
       Course 4 SCFL 4_authored_hint:
         Course_4_SCFL_4_a: Fargen forandrer seg ved å bruke blokka `angi farge rød,
           grønn, blå`. Rød er satt konstant til `teller`, grønn er alltid verdien`255
-          - teller` og blå er alltid `255 `.
+          - teller` og blå er alltid `255`.
         Course_4_SCFL_4_b: Hver figur er et kvadrat med sider som er `teller` piksler
           lange og starter med 5px og øker med 5px hele veien opp til 200px.
         Course_4_SCFL_4_c: Kunstneren snur 15 grader mellom hvert kvadrat.
@@ -2766,7 +2766,7 @@
         Course_4_SCV_2_c: Kunstneren svinger til venstre når for hver decagon han
           lager, men svinger til høyre i begge de andre løkkene.
         Course_4_SCV_2_d: For å forhindre at alle dine 10 blomsterkronblader forsvinner
-          inn i det samme stedet, pass på å hoppe fremover 'lengder'/'til side' før
+          inn i det samme stedet, pass på å hoppefremover 'lengder'/'til side' før
           du kan snu 360/'til side'-grader som en del av din ytterste løkke.
       Course 4 SCV 3_authored_hint:
         Course_4_SCV_3_a: 'Bruk matteblokken din for å legge til og trekke fra poeng-variabelen
@@ -2924,8 +2924,8 @@
         Course_4_SCV_6_c: Hver av figurens 5 sider er delt opp i biter av 'lengde'
           / 'sider' der zig er blågrønn (rgb = 0,175,200) og zag er lilla (rgb = 100,
           50, 150).
-        Course_4_SCV_6_d: 'For sikk, ta til venstre ved ''360 ''/'' sider''.  For
-          å sakk, snu til høyre ved ''360 ''/'' sider''. '
+        Course_4_SCV_6_d: 'For sikke, ta til venstre ved ''360 ''/'' sider''.  For
+          å sakke, snu til høyre ved ''360 ''/'' sider''. '
         Course_4_SCV_6_e: 'Resten av programmet er veldig standard for å lage en full
           360 graders rotasjon fra en form, bortsett fra at vi overlapper formene
           med halvering, slik at vi må snu mot høyre med "180"/"side", noe som betyr
@@ -2954,7 +2954,6 @@
         challenges: |-
           ** Valgfrie utfordringer **
           * Velg en annen sang å spille.
-          * Velg en annen som ser ut som en elg!
           * Gi din danser nytt navn.
       Dance_Party_01_low_authored_hint:
         validation: |-
@@ -2972,20 +2971,20 @@
           ** Hvordan runder jeg dette nivået? **
           * Danseren må bytte til en ny posisjon etter 4 takter.
 
-          * Nivået ender etter 8 takter.*
+          * Nivået ender etter 7 takter.*
       Dance_Party_03_authored_hint:
         validation: |-
           ** Hvordan runder jeg dette nivået? **
 
           * Etter 6 takter må din danser må gjøre en annen dans enn den gjorde etter 4 takter.
 
-          * Nivået ender etter 12 takter.*
+          * Nivået ender etter 11 takter.*
       Dance_Party_04_authored_hint:
         validation: |-
           ** Hvordan runder jeg dette nivået? **
 
           * Du skal endre en bakgrunnseffekt et sted i den syvende takten av sangen.
-          * Dette nivået ender etter 10 takter.*
+          * Dette nivået ender etter 9 takter.*
       Dance_Party_1_authored_hint:
         validation: |-
           ** Hvordan runder jeg dette nivået? **
@@ -3688,20 +3687,23 @@
       courseB_maze_seq8_2018_authored_hint:
         courseB_maze_seq8_b: Det er to måter å løse denne oppgaven!
       courseC_artist_prog2_authored_hint:
-        courseC_artist_prog2_a: Hvis du bruker blokken for å få meg til å "gå fremover
-          100 piksler", vil jeg tegne en linje automatisk.
-        courseC_artist_prog2_b: Vanskelig å runde hjørnet? Bruk "Snu 90 grader mot
-          høyre"-blokka.
+        courseC_artist_prog2_a: '*"Hvis du bruker <xml><block type="draw_move_by_constant"><title
+          name="DIR">flyttFremover</title><title name="VALUE">100</title></block></xml>-blokken,
+          vil jeg tegne en linje."*'
+        courseC_artist_prog2_b: Vanskelig å runde hjørnet? Bruk <xml><block type="draw_turn_by_constant_dropdown"><title
+          name="DIR">snuHøyre</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml>-blokken.
       courseC_artist_prog2_2018_authored_hint:
-        courseC_artist_prog2_a: Hvis du bruker blokken for å få meg til å "gå fremover
-          100 piksler", vil jeg tegne en linje automatisk.
-        courseC_artist_prog2_b: Vanskelig å runde hjørnet? Bruk "Snu 90 grader mot
-          høyre"-blokka.
+        courseC_artist_prog2_a: '*"Hvis du bruker <xml><block type="draw_move_by_constant"><title
+          name="DIR">flyttFremover</title><title name="VALUE">100</title></block></xml>-blokken,
+          vil jeg tegne en linje."*'
+        courseC_artist_prog2_b: Vanskelig å runde hjørnet? Bruk <xml><block type="draw_turn_by_constant_dropdown"><title
+          name="DIR">snuHøyre</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml>-blokken.
       courseC_artist_prog2_2019_authored_hint:
-        courseC_artist_prog2_a: Hvis du bruker blokken for å få meg til å "gå fremover
-          100 piksler", vil jeg tegne en linje automatisk.
-        courseC_artist_prog2_b: Vanskelig å runde hjørnet? Bruk "Snu 90 grader mot
-          høyre"-blokka.
+        courseC_artist_prog2_a: '*"Hvis du bruker <xml><block type="draw_move_by_constant"><title
+          name="DIR">flyttFremover</title><title name="VALUE">100</title></block></xml>-blokken,
+          vil jeg tegne en linje."*'
+        courseC_artist_prog2_b: Vanskelig å runde hjørnet? Bruk <xml><block type="draw_turn_by_constant_dropdown"><title
+          name="DIR">snuHøyre</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml>-blokken.
       courseC_maze_loops6_authored_hint:
         courseC_maze_loops6_b: |-
           For å sette flere blokker inn i en "gjenta"-løkke, dra først en løkke til arbeidsområdet. Legg deretter alle blokkene fra startprogrammet inn i løkken.
@@ -4505,21 +4507,21 @@
           som bruker denne koden flere ganger, istedet for å lage en ny kopi for hver
           gang.
       courseF_artist_variables_challenge2_authored_hint:
-        courseF_artist_variables_challenge2_a: Variabler er hjelpsomme, fordi du kan
+        courseF_artist_variables_challenge2_a: Variabler er hjelpsomme fordi du kan
           legge dem til hver gang i en løkke.
         courseF_artist_variables_challenge2_c: Bruker du en variabel for sidene og
           en variabel for lengden, blir koden enklere fordi du kan bruke en løkke
           som bruker denne koden flere ganger, istedet for å lage en ny kopi for hver
           gang.
       courseF_artist_variables_challenge2_2018_authored_hint:
-        courseF_artist_variables_challenge2_a: Variabler er hjelpsomme, fordi du kan
+        courseF_artist_variables_challenge2_a: Variabler er hjelpsomme fordi du kan
           legge dem til hver gang i en løkke.
         courseF_artist_variables_challenge2_c: Bruker du en variabel for sidene og
           en variabel for lengden, blir koden enklere fordi du kan bruke en løkke
           som bruker denne koden flere ganger, istedet for å lage en ny kopi for hver
           gang.
       courseF_artist_variables_challenge2_2019_authored_hint:
-        courseF_artist_variables_challenge2_a: Variabler er hjelpsomme, fordi du kan
+        courseF_artist_variables_challenge2_a: Variabler er hjelpsomme fordi du kan
           legge dem til hver gang i en løkke.
         courseF_artist_variables_challenge2_c: Bruker du en variabel for sidene og
           en variabel for lengden, blir koden enklere fordi du kan bruke en løkke
@@ -5146,7 +5148,9 @@
       courseF_bee_functions6_authored_hint:
         courseF_bee_functions6_a: "Hvis oppgaven virker utfordrende, kan du prøve
           å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test
-          dem. Legg til flere, og prøv igjen. Snart vil du få det til!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+          dem. Legg til flere, og prøv igjen. Snart vil du få det til!\n\n\n<xml>\n<block
+          type=\"procedures_defnoreturn\" editable=\"false\">\n<mutation/>\n<title
+          name=\"NAME\">få nektar lag honning</title>\n<statement name=\"STACK\">\n</statement>\n</block>\n</xml>"
       courseF_bee_functions6_2018_authored_hint:
         courseF_bee_functions6_a: "Hvis oppgaven virker utfordrende, kan du prøve
           å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test
@@ -5459,7 +5463,7 @@
         Course_4_Artist_Vars_8_a: Hvis du deler startlengden på antall sider, vil
           lengden på hver side bli kortere når antallet sider blir høyere.
       grade5_artist_variables_freeplay15_authored_hint:
-        Course_4_Artist_Inspire_a: Når du har fullført én firkant, kan du prøve å
+        Course_4_Artist_Inspire_a: Når du har fullført ét kvadrat, kan du prøve å
           hoppe fremover halvparten av lengden før du snur og lager en annen.
         Course_4_Artist_Inspire_b: Hver firkant og hvert hopp gjentas fire ganger
           (med en venstresving innimellom) for å lage en full hjul-lignende enhet.

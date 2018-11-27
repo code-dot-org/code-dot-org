@@ -99,7 +99,7 @@
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmer fra virkeligheten: Papirfly'
             Relay programming:
-              name: Relé programmering
+              name: Relé-programmering
             'Studio: Create a Story':
               name: 'Spill-Lab: Lage en historie'
             The Big Event:
@@ -807,7 +807,7 @@
         MikeTest:
           stages:
             Artist Functions:
-              name: Kunstner funksjoner
+              name: 'Kunstner: funksjoner'
         artistExemplar:
           description_audience: Alder 8+ (etter kurs 2)
         kinderTest:
@@ -879,7 +879,7 @@
             'Artist: Nested Loops':
               name: 'Kunstner: Løkker i løkker'
             Bee Debugging:
-              name: Bie feilsøking
+              name: 'Bie: feilsøking'
             Bounce:
               name: sprett
             'Farmer: While Loops':

@@ -194,6 +194,8 @@
             '"random"': tilfeldig
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"DOG"': Hund
           LOCATION:
             "{x: 100, y: 200}": venstre
             "{x: 300, y: 200}": høyre
