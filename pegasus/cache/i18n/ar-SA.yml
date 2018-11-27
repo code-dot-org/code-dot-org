@@ -1570,6 +1570,8 @@ ar-SA:
   applab_tile_start_tutorial: إبدأ
   account_sign_up_email_opt_in: هل يمكننا إرسال بريد إلكتروني إليك حول تحديثات دوراتنا
     أو الفرص المحلية أو أخبار علوم الكمبيوتر الأخرى؟
+  account_sign_up_child_accept_terms: أؤكد أنني حصلت على موافقة الأبوين أو الولي لاستعمال
+    خدمات code.org.
   hoc_overview_start_tutorial: إبدأ
   hoc2018_creativity_create: أنشئ
   hoc2018_mc_page_title: دروس ساعة من البرمجة مع ماينكرافت
@@ -1609,3 +1611,4 @@ ar-SA:
   hoc2018_dance_teacher_resources_tile1_button: خطة الدرس
   hoc2018_dance_teacher_resources_tile2_button: نشاط غير موصول
   hoc2018_dance_amazon_about_future_engineer_button: اعرف المزيد
+  hoc2018_dance_amazon_scholarship_programs_button: طبق الآن

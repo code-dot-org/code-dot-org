@@ -1,5 +1,6 @@
 require 'fileutils'
 require 'open3'
+require 'psych'
 require 'tempfile'
 
 CODEORG_CONFIG_FILE = File.join(File.dirname(__FILE__), "codeorg_crowdin.yml")
@@ -8,6 +9,35 @@ HOUROFCODE_CONFIG_FILE = File.join(File.dirname(__FILE__), "hourofcode_crowdin.y
 HOUROFCODE_IDENTITY_FILE = File.join(File.dirname(__FILE__), "hourofcode_credentials.yml")
 CODEORG_MARKDOWN_CONFIG_FILE = File.join(File.dirname(__FILE__), "codeorg_markdown_crowdin.yml")
 CODEORG_MARKDOWN_IDENTITY_FILE = File.join(File.dirname(__FILE__), "codeorg_markdown_credentials.yml")
+
+# Output the given data to YAML that will be consumed by Crowdin. Includes a
+# couple changes to the default `data.to_yaml` serialization:
+#
+#   1. Don't wrap lines. This is an optional feature provided by yaml, intended
+#      to make human editing of the serialized data easier. Because this data
+#      is only managed programmatically, we avoid wrapping to make the git
+#      diffs smaller and change detection easier.
+#
+#   2. Quote 'y' and 'n'. Psych intentionally departs from the YAML spec for
+#      these strings: https://github.com/ruby/psych/blob/8e880f7837db9ed66032a1dddc85444a1514a1e3/test/psych/test_boolean.rb#L21-L35
+#      But Crowdin sticks strictly to the YAML spec, so here we add special
+#      logic to ensure that we conform to the spec when outputting for Crowdin
+#      consumption.
+#      See https://github.com/gvvaughan/lyaml/issues/8#issuecomment-123132430
+def to_crowdin_yaml(data)
+  ast = Psych.parse_stream(Psych.dump(data))
+
+  # Make sure we treat the strings 'y' and 'n' as strings, and not bools
+  yaml_bool = /^(?:y|Y|n|N)$/
+  ast.grep(Psych::Nodes::Scalar).each do |node|
+    if yaml_bool.match node.value
+      node.plain = false
+      node.quoted = true
+    end
+  end
+
+  return ast.yaml(nil, {line_width: -1})
+end
 
 def should_i(question)
   loop do
@@ -69,7 +99,7 @@ def redact(source, dest, *plugins)
   )
   data = JSON.parse(stdout)
   File.open(dest, "w+") do |file|
-    file.write(data.to_yaml(line_width: -1))
+    file.write(to_crowdin_yaml(data))
   end
 end
 
@@ -102,7 +132,7 @@ def restore(source, redacted, dest, *plugins)
   restored_data = {}
   restored_data[redacted_key] = JSON.parse(stdout)
   File.open(dest, "w+") do |file|
-    file.write(restored_data.to_yaml(line_width: -1))
+    file.write(to_crowdin_yaml(restored_data))
   end
 
   source_json.close

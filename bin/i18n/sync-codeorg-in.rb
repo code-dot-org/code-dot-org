@@ -10,7 +10,6 @@ require 'fileutils'
 require 'json'
 require 'yaml'
 require 'tempfile'
-require 'psych'
 
 require_relative 'i18n_script_utils'
 
@@ -46,34 +45,9 @@ def localize_pegasus_markdown_content
   end
 end
 
-# Output the given data with the given label to YAML that will be consumed by
-# Crowdin. Includes a couple changes to the default `data.to_yaml` serialization:
-#
-#   1. Don't wrap lines. This is an optional feature provided by yaml, intended
-#      to make human editing of the serialized data easier. Because this data
-#      is only managed programmatically, we avoid wrapping to make the git
-#      diffs smaller and change detection easier.
-#
-#   2. Quote 'y' and 'n'. Psych intentionally departs from the YAML spec for
-#      these strings: https://github.com/ruby/psych/blob/8e880f7837db9ed66032a1dddc85444a1514a1e3/test/psych/test_boolean.rb#L21-L35
-#      But Crowdin sticks strictly to the YAML spec, so here we add special
-#      logic to ensure that we conform to the spec when outputting for Crowdin
-#      consumption.
-#      See https://github.com/gvvaughan/lyaml/issues/8#issuecomment-123132430
 def copy_to_yml(label, data)
-  ast = Psych.parse_stream(Psych.dump({"en" => {"data" => {label => data}}}))
-
-  # Make sure we treat the strings 'y' and 'n' as strings, and not bools
-  yaml_bool = /^(?:y|Y|n|N)$/
-  ast.grep(Psych::Nodes::Scalar).each do |node|
-    if yaml_bool.match node.value
-      node.plain = false
-      node.quoted = true
-    end
-  end
-
   File.open("dashboard/config/locales/#{label}.en.yml", "w+") do |f|
-    ast.yaml(f, {line_width: -1})
+    f.write(to_crowdin_yaml({"en" => {"data" => {label => data}}}))
   end
 end
 
