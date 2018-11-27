@@ -213,7 +213,7 @@ uk:
           створити {N} нових {COSTUME}
           у {LAYOUT}
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -666,7 +666,9 @@ uk:
             '"left"': стрілка ліворуч
             '"right"': стрілка праворуч
             '"w"': Зх
+            '"a"': А
             '"s"': Пд
+            '"d"': Г
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -675,7 +677,9 @@ uk:
             '"left"': стрілка ліворуч
             '"right"': стрілка праворуч
             '"w"': Зх
+            '"a"': А
             '"s"': Пд
+            '"d"': Г
       Mikelab_whileKeyPressed:
         options:
           KEY:
