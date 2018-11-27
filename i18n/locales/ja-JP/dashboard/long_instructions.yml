@@ -217,9 +217,10 @@ ja:
         </block></xml>
         
         このプログラムでは、音楽の”低音”（低い音）の大きさを利用してダンサーの高さをコントロールします。他のダンサーも、音楽に反応させることができますか？
-      Dance_Party_11.5: "このブロックをチェックしてみましょう。\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"アヒル\"</title>\n<title name=\"LAYOUT\">\"円\"</title>\n</block></xml>\n\n次は、たくさんのダンサーを一度に作成します！\n\n\"すべてのアヒル”のブロックを使用して、アヒルが全員一度にダンスするコードを書きましょう。"
       Dance_Party_11.5_test: "このブロックをチェックしてみましょう。\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"アヒル\"</title>\n<title name=\"LAYOUT\">\"円\"</title>\n</block></xml>\n\n次は、たくさんのダンサーを一度に作成します！\n\n\"すべてのアヒル”のブロックを使用して、アヒルが全員一度にダンスするコードを書きましょう。"
       Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> ブロックを使うと、上向きの矢印が押されたときにコードを実行することができます。\n\nダンスの動きを変更したり、ダンサーのプロパティを変更したり、短い動きを1回だけさせることもできます。クリエイティブになって、あたらしいブロックたちを見てみましょう！"
+      Dance_Party_11_5: "このブロックをチェックしてみましょう。\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"アヒル\"</title>\n<title name=\"LAYOUT\">\"円\"</title>\n</block></xml>\n\n次は、たくさんのダンサーを一度に作成します！\n\n\"すべてのアヒル”のブロックを使用して、アヒルが全員一度にダンスするコードを書きましょう。"
+      Dance_Party_11.5: "このブロックをチェックしてみましょう。\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"アヒル\"</title>\n<title name=\"LAYOUT\">\"円\"</title>\n</block></xml>\n\n次は、たくさんのダンサーを一度に作成します！\n\n\"すべてのアヒル”のブロックを使用して、アヒルが全員一度にダンスするコードを書きましょう。"
       Dance_Party_11b: |-
         思いっきりダンスする時間です！左矢印キーが押されると、ネコがダブの動きをします。右矢印キーを押したら、ロボットが”ドロップ”の動きをするようにしましょう。
       Dance_Party_12: グルーブをつづけて！自分だけのダンスを作成して、友達と共有しましょう。
@@ -247,6 +248,9 @@ ja:
         
         ’backup_dancer1’という名前のバックダンサーを追加して、猫と一緒に踊らせてみましょう。
       HOC Dance 9_draft: "<xml><block type=\"Dancelab_whenKey\"></block></xml> ブロックを使うと、上向きの矢印が押されたときにコードを実行することができます。\n\nダンスの動きを変更したり、ダンサーのプロパティを変更したり、短い動きを1回だけさせることもできます。クリエイティブになって、あたらしいブロックたちを見てみましょう！"
+      HOC Dance Freeplay: グルーブをつづけて！自分だけのダンスを作成して、友達と共有しましょう。
+      HOC Dance Freeplay_draft: グルーブをつづけて！自分だけのダンスを作成して、友達と共有しましょう。
+      HOC Dance Predraw: グルーブをつづけて！自分だけのダンスを作成して、友達と共有しましょう。
       K-1 Bee Loops 2: 繰り返しを使って移動して、みつを集めて、はちみつを作ってください!
       K-1 Bee Loops 3: 繰り返しを使ってみつを集めて、はちみつを作ってください!
       K-1 Bee Loops 4: 繰り返しを使って、みつを集めて、はちみつを作って、移動してください!
