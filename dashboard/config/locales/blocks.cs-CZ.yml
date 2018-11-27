@@ -429,6 +429,8 @@ cs:
             '"tint"': odstín
       Dancelab_setTint:
         text: nastavit {SPRITE} odstín na {VAL}
+      Dancelab_setTintInline:
+        text: nastavit {SPRITE} odstín na {VAL}
       Dancelab_setTintEach:
         text: nastav odstín {THIS} na {VAL}
         options:

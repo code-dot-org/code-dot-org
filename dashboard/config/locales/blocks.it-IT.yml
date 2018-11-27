@@ -399,6 +399,8 @@ it:
             '"tint"': tonalità
       Dancelab_setTint:
         text: imposta la tonalità del {SPRITE} su {VAL}
+      Dancelab_setTintInline:
+        text: imposta la tonalità del {SPRITE} su {VAL}
       Dancelab_setTintEach:
         options:
           THIS:

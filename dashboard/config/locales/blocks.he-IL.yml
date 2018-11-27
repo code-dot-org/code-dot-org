@@ -433,6 +433,8 @@ he:
             '"tint"': גוון
       Dancelab_setTint:
         text: קבעו גוון של {SPRITE} ל-{VAL}
+      Dancelab_setTintInline:
+        text: קבעו גוון של {SPRITE} ל-{VAL}
       Dancelab_setTintEach:
         text: קבעו גוון של {THIS} ל-{VAL}
         options:

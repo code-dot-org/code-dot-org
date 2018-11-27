@@ -137,13 +137,9 @@
           <title name="SPRITE">new_dancer</title>
           <title name="PROPERTY">"scale"</title>
         </block>
-        <block type="Dancelab_setTint">
-          <title name="SPRITE">new_dancer</title>
-          <value name="VAL">
-            <block type="colour_picker">
-              <title name="COLOUR">#66ffff</title>
-            </block>
-          </value>
+        <block type="Dancelab_setTintInline">
+          <title name="SPRITE">dancer1</title>
+          <title name="VAL">#33ffff</title>
         </block>
         <block type="Dancelab_startMapping">
           <title name="SPRITE">new_dancer</title>

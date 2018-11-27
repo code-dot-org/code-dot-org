@@ -346,6 +346,8 @@
             '"tint"': fargetone
       Dancelab_setTint:
         text: sett {SPRITE} fargetone til {VAL}
+      Dancelab_setTintInline:
+        text: sett {SPRITE} fargetone til {VAL}
       Dancelab_setTintEach:
         text: sett {THIS} fargetone til {VAL}
         options:

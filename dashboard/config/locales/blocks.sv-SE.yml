@@ -395,6 +395,8 @@ sv:
             '"tint"': färgton
       Dancelab_setTint:
         text: Ställ in {SPRITE}s färgton till {VAL}
+      Dancelab_setTintInline:
+        text: Ställ in {SPRITE}s färgton till {VAL}
       Dancelab_setTintEach:
         options:
           THIS:
