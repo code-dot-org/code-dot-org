@@ -18,44 +18,76 @@
             "\"none\""
           ],
           [
+            "(Random)",
+            "['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'smile_face', 'snowflakes', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]"
+          ],
+          [
+            "Circles",
+            "\"circles\""
+          ],
+          [
             "Colors",
             "\"color_cycle\""
-          ],
-          [
-            "Squares",
-            "\"disco\""
-          ],
-          [
-            "Rainbow",
-            "\"rainbow\""
           ],
           [
             "Diamonds",
             "\"diamonds\""
           ],
           [
-            "Bubbles",
-            "\"splatter\""
+            "Disco Ball",
+            "\"disco_ball\""
+          ],
+          [
+            "Fireworks",
+            "\"fireworks\""
           ],
           [
             "Hypno",
             "\"swirl\""
           ],
           [
+            "Kaleidoscope",
+            "\"kaleidoscope\""
+          ],
+          [
+            "Laser Dance Floor",
+            "\"lasers\""
+          ],
+          [
+            "Paint Splatter",
+            "\"splatter\""
+          ],
+          [
+            "Rainbow",
+            "\"rainbow\""
+          ],
+          [
+            "Smiles",
+            "\"smile_face\""
+          ],
+          [
             "Snow",
             "\"snowflakes\""
+          ],
+          [
+            "Space",
+            "\"galaxy\""
+          ],
+          [
+            "Sparkles",
+            "\"sparkles\""
           ],
           [
             "Spiral",
             "\"spiral\""
           ],
           [
-            "Starspace",
-            "\"starspace\""
+            "Squares",
+            "\"disco\""
           ],
           [
-            "(Random)",
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral','starspace'][randomInt(0,8)]"
+            "Stars",
+            "\"stars\""
           ]
         ]
       },

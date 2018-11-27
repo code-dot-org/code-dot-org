@@ -6118,11 +6118,6 @@ en:
         metadata: metadata
         plotting: plotting
         recycling: recycling
-      AP_practice_Qs_rqb_22_CSP_4_1_2:
-        0,  27,  44,  13,  16,  29,  32,  55: 0,  27,  44,  13,  16,  29,  32,  55
-        0, 44, 16, 32: 0, 44, 16, 32
-        27,  44,  13,  16,  29,  32,  55: 27,  44,  13,  16,  29,  32,  55
-        44,  16,  32: 44,  16,  32
       AP_practice_Qs_rqb_23_CSP_2_1_1:
         I and II: I and II
         I and III: I and III
@@ -6221,18 +6216,6 @@ en:
         A Power Supply: A Power Supply
         A trend: A trend
         Voting on a House Bill: Voting on a House Bill
-      AP_practice_Qs_rqb_36_CSP_4_1_2:
-        0,  27,  44,  13,  16,  29,  32,  55: 0,  27,  44,  13,  16,  29,  32,  55
-        ? |-
-          0, 44, 16, 32
-
-          <br><img src="https://curriculum.code.org/media/uploads/csp/cadf3089f18df918aaa923dbe99838da" width="300"><br>
-        : |-
-          0, 44, 16, 32
-
-          <br><img src="https://curriculum.code.org/media/uploads/csp/cadf3089f18df918aaa923dbe99838da" width="300"><br>
-        27,  44,  13,  16,  29,  32,  55: 27,  44,  13,  16,  29,  32,  55
-        44,  16,  32: 44,  16,  32
       AP_practice_Qs_rqb_37_CSP_4_1_2:
         0,  27,  44,  13,  16,  29,  32,  55: 0,  27,  44,  13,  16,  29,  32,  55
         0, 44, 16, 32: 0, 44, 16, 32
