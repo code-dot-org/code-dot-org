@@ -66,13 +66,15 @@ da:
             '"random"': tilfældig
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"DOG"': Hund
           LOCATION:
             "{x: 100, y: 200}": venstre
             "{x: 300, y: 200}": højre
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tilfældig
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
