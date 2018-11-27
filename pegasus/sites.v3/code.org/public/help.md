@@ -19,7 +19,7 @@ Petition your state to allow computer science to count towards math or science h
 [<button>Add your support</button>](/promote)
 
 ## Learn about our advocacy efforts in your state
-Learn more about [Code.org's advocacy work](advocacy.code.org) across the U.S. and the nine policies we recommend states adopt to make computer science foundational for all students. And, find out how you can drive change in your state.
+Learn more about [Code.org's advocacy work](https://advocacy.code.org) across the U.S. and the nine policies we recommend states adopt to make computer science foundational for all students. And, find out how you can drive change in your state.
 
 ## Host an Hour of Code - at work, in your community, or local school
 Millions of people of all ages have learned an [Hour of Code](https://hourofcode.com), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics. Anybody, anywhere, anytime can learn an Hour of Code.

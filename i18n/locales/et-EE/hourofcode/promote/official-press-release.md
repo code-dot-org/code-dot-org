@@ -5,19 +5,19 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-# Sample press release for elected officials
+# Pressiteate näidis
 
-### Use this sample press release language to help craft your message about participating in the Hour of Code.
+### Kasuta seda pressiteate näidis KoodiTund reklaamimiseks.
 
 * * *
 
-#### For Immediate Release  
+#### Koheseks avaldamiseks  
 
 
 #### [DATE]  
 
 
-#### Contact: [CONTACT INFORMATION]
+#### Kontaktisik: [Kontaktandmed]
 
 <br />
 

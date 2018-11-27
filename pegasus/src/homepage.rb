@@ -125,7 +125,7 @@ class Homepage
     if hoc_mode == "actual-hoc"
       [
         {
-          text: "homepage_action_text_try_it",
+          text: "get_started",
           type: "cta_button_solid_white",
           url: "/hourofcode/overview"
         }
