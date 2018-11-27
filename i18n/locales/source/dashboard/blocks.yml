@@ -528,7 +528,7 @@ en:
             '"height"': height
             '"rotation"': rotation
             '"x"': horizontal position
-            '"y"': vertial position
+            '"y"': vertical position
             '"direction"': movement direction
             '"tint"': tint
           RANGE:
