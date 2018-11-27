@@ -513,7 +513,7 @@ Dance.prototype.initInterpreter = function () {
     setBackground: color => {
       nativeAPI.setBackground(color.toString());
     },
-    setBackgroundEffect: (effect, palette) => {
+    setBackgroundEffect: (effect, palette = 'default') => {
       nativeAPI.setBackgroundEffect(effect.toString(), palette.toString());
     },
     setForegroundEffect: effect => {
