@@ -11,6 +11,7 @@ class I18nSmartTranslateTest < Minitest::Test
     test_strings.each do |test_string|
       separator = Cdo::I18nSmartTranslate.get_valid_separator test_string
       refute test_string.include? separator
+      refute_nil separator
     end
 
     # can accomodate strings that include multiple possible separators
@@ -19,6 +20,7 @@ class I18nSmartTranslateTest < Minitest::Test
         test_string = first_string + second_string
         separator = Cdo::I18nSmartTranslate.get_valid_separator test_string
         refute test_string.include? separator
+        refute_nil separator
       end
     end
 
