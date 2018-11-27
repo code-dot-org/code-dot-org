@@ -57,7 +57,7 @@ Feature: Dance Lab
   @as_student
   @no_mobile
   Scenario: Dance Party Share
-    Given I am on http://studio.code.org/s/dance/stage/1/puzzle/13?noautoplay=true"
+    Given I am on "http://studio.code.org/s/dance/stage/1/puzzle/13?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
     And I wait for the song selector to load
