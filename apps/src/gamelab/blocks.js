@@ -15,14 +15,24 @@ let sprites = () => {
   });
 };
 
-// fully-saturated primary and secondary colors.
+// This color palette is limited to colors which have different hues, therefore
+// it should not contain different shades of the same color such as
+// ['#ff0000', '#cc0000', '#880000'].
 const limitedColours = [
+  // fully-saturated primary colors
   '#ff0000', // RED
   '#00ff00', // GREEN
   '#0000ff', // BLUE
+
+  // fully-saturated secondary colors
   '#ffff00', // YELLOW
   '#00ffff', // CYAN
   '#ff00ff', // MAGENTA
+
+  // some "tertiary" colors
+  '#ff8800', // ORANGE
+  '#8800ff', // PURPLE
+  '#0088ff', // LIGHT BLUE
 ];
 
 const customInputTypes = {
