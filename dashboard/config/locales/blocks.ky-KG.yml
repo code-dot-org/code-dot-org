@@ -178,6 +178,7 @@ ky:
             '"right"': оңго
             '"space"': космос
             '"x"': x
+            '"y"': y
       gamelab_changePropBy:
         options:
           PROPERTY:
