@@ -122,7 +122,7 @@ ca:
             Digital Citizenship:
               name: Ciutadania digital
             'Farmer: While Loops':
-              name: 'Pagesa - bucles mentre'
+              name: 'Pagesa: bucles mentre'
             Internet:
               name: Internet
             Maze:
@@ -226,7 +226,7 @@ ca:
             'Bee: Nested Loops':
               name: 'Abella: bucles imbricats'
             'Farmer: While Loops':
-              name: 'Pagesa - bucles mentre'
+              name: 'Pagesa: bucles mentre'
             'Maze: Sequence':
               name: 'Laberint: seqüència'
         usability:
@@ -654,7 +654,7 @@ ca:
             Bounce:
               name: Rebota
             'Farmer: While Loops':
-              name: 'Pagesa - bucles mentre'
+              name: 'Pagesa: bucles mentre'
         csd3-2017:
           stages:
             Functions:

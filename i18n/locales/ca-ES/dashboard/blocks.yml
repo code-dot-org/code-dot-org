@@ -232,6 +232,7 @@ ca:
             '"ALIEN"': Extraterrestre
             '"BEAR"': Ós
             '"CAT"': Gat
+            '"DOG"': Gos
             '"DUCK"': Ànec
             '"FROG"': Granota
             '"MOOSE"': Ant
@@ -253,7 +254,7 @@ ca:
           fer {N} nou {COSTUME}
           en una {LAYOUT}
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
