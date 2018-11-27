@@ -1541,7 +1541,7 @@ cs:
       Dance_Party_09: Pomocí bloku `nastavit odstín` změň barvu tanečníka.
       Dance_Party_10: Přiměj dalšího tanečníka také reagovat na hudbu pomocí bloku
         `začíná následující`.
-      Dance_Party_11.5: Pomocí bloků "všechny kachny" přiměj kachny tančit spolu.
+      Dance_Party_11_5: Pomocí bloků "všechny kachny" přiměj kachny tančit spolu.
       Dance_Party_11.5_test: Pomocí bloků "všechny kachny" přiměj kachny tančit spolu.
       Dance_Party_11: Blok `když nahoru stisknuta` ti umožní spustit kód stisknutím
         na šipku nahoru. Zkus přimět tanečníka hýbat se rychleji po stisknutí šipky

@@ -607,7 +607,7 @@ he:
         </block></xml>
 
         התוכנה הזו משתמשת בצלילים הנמוכים (ווליום הבָּס) כדי לשלוט בגובה של אחד מהרקדנים. תוכלו לגרום לרקדן השני להגיב למוזיקה גם כן?
-      Dance_Party_11.5: "שימו לב לבלוק הזה:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+      Dance_Party_11_5: "שימו לב לבלוק הזה:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
         \   <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"ברווזים\"</title>\n
         \   <title name=\"LAYOUT\">\"מעגל\"</title>\n  </block></xml>\n  \nכעת באפשרותכם
         ליצור חבורה של רקדנים בבת אחת!\n\nנסו להשתמש בחלק מהבלוקים של \"כל הברווזים\"
