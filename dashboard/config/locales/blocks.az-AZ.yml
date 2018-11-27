@@ -178,6 +178,7 @@ az:
             '"right"': sağa
             '"space"': kosmos
             '"x"': x
+            '"y"': y
       gamelab_changePropBy:
         options:
           PROPERTY:
