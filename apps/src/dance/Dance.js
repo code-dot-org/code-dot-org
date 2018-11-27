@@ -9,7 +9,7 @@ var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults} from '../constants';
-import {DanceParty} from '@code-dot-org/dance-party';
+import {DanceParty, ResourceLoader} from '@code-dot-org/dance-party';
 import danceMsg from './locale';
 import {reducers, setSelectedSong, setSongData, setRunIsStarting} from './redux';
 import trackEvent from '../util/trackEvent';
@@ -317,6 +317,7 @@ Dance.prototype.afterInject_ = function () {
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
     i18n: danceMsg,
+    resourceLoader: new ResourceLoader('https://curriculum.code.org/images/sprites/dance_20181120/'),
   });
 
   // Expose an interface for testing
@@ -346,6 +347,11 @@ Dance.prototype.playSong = function (url, callback, onEnded) {
  * Reset Dance to its initial state.
  */
 Dance.prototype.reset = function () {
+  var clickToRunImage = document.getElementById('danceClickToRun');
+  if (clickToRunImage) {
+    clickToRunImage.style.display = "block";
+  }
+
   Sounds.getSingleton().stopAllAudio();
 
   this.nativeAPI.reset();
@@ -417,6 +423,11 @@ Dance.prototype.onReportComplete = function (response) {
  * Click the run button.  Start the program.
  */
 Dance.prototype.runButtonClick = async function () {
+  var clickToRunImage = document.getElementById('danceClickToRun');
+  if (clickToRunImage) {
+    clickToRunImage.style.display = "none";
+  }
+
   // Block re-entrancy since starting a run is async
   // (not strictly needed since we disable the run button,
   // but better to be safe)
@@ -631,7 +642,7 @@ Dance.prototype.onHandleEvents = function (currentFrameEvents) {
  */
 Dance.prototype.displayFeedback_ = function () {
   const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
-  this.studioApp_.displayFeedback({
+  let feedbackOptions = {
     feedbackType: this.testResults,
     message: this.message,
     response: this.response,
@@ -643,7 +654,15 @@ Dance.prototype.displayFeedback_ = function () {
       reinfFeedbackMsg: 'TODO: localized feedback message.',
     },
     disablePrinting: true,
-  });
+  };
+
+  // Disable social share for users under 13 if we have the cookie set.
+  const is13PlusCookie = sessionStorage.getItem('ad_anon_over13');
+  if (is13PlusCookie) {
+    feedbackOptions.disableSocialShare = is13PlusCookie === 'false';
+  }
+
+  this.studioApp_.displayFeedback(feedbackOptions);
 };
 
 Dance.prototype.getAppReducers = function () {

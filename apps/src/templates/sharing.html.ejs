@@ -51,6 +51,9 @@
         <%= msg.saveAndPublish() %>
       </button>
     <% } %>
+    <% if (options.downloadReplayVideo) { -%>
+      <span id="download-replay-video-container" />
+    <% } -%>
     <% if (options.sendToPhone) { -%>
       <button id="sharing-phone">
         <i class="fa fa-mobile fa-lg"></i>
