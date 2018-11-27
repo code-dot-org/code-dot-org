@@ -99,7 +99,14 @@ export function getThumbnailFromCanvas(canvas, captureIntervalMs, onComplete) {
  * @param {HTMLCanvasElement} canvas
  */
 export function captureThumbnailFromCanvas(canvas) {
-  getThumbnailFromCanvas(canvas, MIN_CAPTURE_INTERVAL_MS, project.saveThumbnail);
+  // Only attempt to save the thumbnail if we receive a PNG blob
+  // from getThumbnailFromCanvas.
+  const onComplete = pngBlob => {
+    if (pngBlob) {
+      project.saveThumbnail(pngBlob);
+    }
+  };
+  getThumbnailFromCanvas(canvas, MIN_CAPTURE_INTERVAL_MS, onComplete);
 }
 
 /**
