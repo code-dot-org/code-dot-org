@@ -235,7 +235,7 @@ bg:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случаен
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -441,6 +441,7 @@ bg:
             '"s"': s
             '"w"': w
             '"x"': x
+            '"y"': 'y'
       Dancelab_whenPeak:
         options:
           RANGE:

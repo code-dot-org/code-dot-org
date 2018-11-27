@@ -441,6 +441,7 @@ bg:
             '"s"': s
             '"w"': w
             '"x"': x
+            '"y"': y
       Dancelab_whenPeak:
         options:
           RANGE:
