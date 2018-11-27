@@ -233,6 +233,7 @@ sv:
           COSTUME:
             '"BEAR"': Björn
             '"CAT"': Katt
+            '"DOG"': Hund
             '"DUCK"': Anka
             '"FROG"': Groda
             '"MOOSE"': Älg
@@ -255,7 +256,7 @@ sv:
           gör {N} ny {COSTUME}
           i en {LAYOUT}
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'

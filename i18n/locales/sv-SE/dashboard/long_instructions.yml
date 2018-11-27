@@ -192,9 +192,10 @@ sv:
         </block></xml>
         
         Detta program använder musikens ”bas”-volym (de låga ljuden) för att styra en dansares längd. Kan du göra så att den andra dansaren också reagerar på musiken?
-      Dance_Party_11.5: "Kolla in detta block:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nNu kan du skapa ett gäng dansare på samma gång!\n\nTesta att skriva kod som gör så att alla ankor dansar tillsammans med hjälp av några av ”bara ankor”-blocken."
       Dance_Party_11.5_test: "Kolla in detta block:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nNu kan du skapa ett gäng dansare på samma gång!\n\nTesta att skriva kod som gör så att alla ankor dansar tillsammans med hjälp av några av ”bara ankor”-blocken."
       Dance_Party_11: "Detta <xml><block type=\"Dancelab_whenKey\"></block></xml> block låter dig köra kod när uppåtpilen trycks in.\n\nDu kan ändra dansrörelser, ändra egenskaperna för en dansare eller göra en snabb rörelse en enda gång. Var kreativ och håll utkik efter nya block!"
+      Dance_Party_11_5: "Kolla in detta block:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nNu kan du skapa ett gäng dansare på samma gång!\n\nTesta att skriva kod som gör så att alla ankor dansar tillsammans med hjälp av några av ”bara ankor”-blocken."
+      Dance_Party_11.5: "Kolla in detta block:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nNu kan du skapa ett gäng dansare på samma gång!\n\nTesta att skriva kod som gör så att alla ankor dansar tillsammans med hjälp av några av ”bara ankor”-blocken."
       Dance_Party_11b: |-
         Dags för en dansutmaning! Katten klappar när du trycker på vänsterpilen. Gör så att roboten ”faller” när du trycker på högerpilen.
       Dance_Party_12: Dags att svänga på höfterna! Skapa en egen dans att dela med dina vänner.
@@ -221,6 +222,9 @@ sv:
         
         Skapa en backgrundsdansare som kallas ”backup_dancer1” som ska dansa med katten.
       HOC Dance 9_draft: "Detta <xml><block type=\"Dancelab_whenKey\"></block></xml> block låter dig köra kod när uppåtpilen trycks in.\n\nDu kan ändra dansrörelser, ändra egenskaperna för en dansare eller göra en snabb rörelse en enda gång. Var kreativ och håll utkik efter nya block!"
+      HOC Dance Freeplay: Dags att svänga på höfterna! Skapa en egen dans att dela med dina vänner.
+      HOC Dance Freeplay_draft: Dags att svänga på höfterna! Skapa en egen dans att dela med dina vänner.
+      HOC Dance Predraw: Dags att svänga på höfterna! Skapa en egen dans att dela med dina vänner.
       K-1 Bee Loops 2: Använd en slinga för att flytta och sedan få nektar och gör honung!
       K-1 Bee Loops 3: Använd loopar att få nektar och göra honung!
       K-1 Bee Loops 4: Använd loopar att få nektar, göra honung och flytta!
