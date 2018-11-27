@@ -214,6 +214,7 @@ fr:
             '"ALIEN"': Extraterrestre
             '"BEAR"': Ours
             '"CAT"': Chat
+            '"DOG"': Chien
             '"DUCK"': Canard
             '"FROG"': Grenouille
             '"MOOSE"': Orignal
@@ -236,7 +237,7 @@ fr:
           faire {N} nouveau {COSTUME}
           dans un {LAYOUT}
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -444,6 +445,7 @@ fr:
             '"right"': vers la droite
             '"space"': espace
             '"x"': x
+            '"y"': 'y'
       Dancelab_whenPeak:
         text: Lorsque {RANGE} pic
         options:
