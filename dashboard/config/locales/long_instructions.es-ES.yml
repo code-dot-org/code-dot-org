@@ -912,13 +912,13 @@ es:
       Dance_Party_01: |-
         *¡Hagamos una fiesta para bailar!*
 
-        Arrastra el bloque «hacer uno nuevo» al espacio de trabajo y conéctalo dentro del bloque «establecer» para crear tu primer bailarín.
+        Arrastra el bloque `hacer uno nuevo` al espacio de trabajo y conéctalo dentro del bloque `establecer` para crear tu primer bailarín.
 
         * *También puedes hacer clic en la bombilla de la izquierda si quieres más información o desafíos extra.*
       Dance_Party_01_low: |-
         *¡Hagamos una fiesta para bailar!*
 
-        Arrastra el bloque «hacer uno nuevo» al espacio de trabajo y conéctalo dentro del bloque «establecer» para crear tu primer bailarín.
+        Arrastra el bloque `hacer uno nuevo` al espacio de trabajo y conéctalo dentro del bloque `establecer` para crear tu primer bailarín.
 
         * *También puedes hacer clic en la bombilla de la izquierda si quieres más información o desafíos extra.*
       Dance_Party_02: |-
@@ -961,19 +961,6 @@ es:
         </block></xml>
 
         Este programa utiliza el volumen «bajo» de la música (los sonidos bajos) para controlar la altura de un bailarín. ¿Puedes hacer que el otro bailarín responda también a la música?
-      Dance_Party_11.5: |-
-        Echa un vistazo a este bloque:
-
-        <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
-
-        ¡Ahora puedes crear un montón de bailarines a la vez!
-
-        Trata de usar algunos de los bloques «todos los patos» para escribir el código que hará que todos los patos bailen juntos.
       Dance_Party_11.5_test: |-
         Echa un vistazo a este bloque:
 
@@ -991,6 +978,32 @@ es:
         El bloque <xml><block type="Dancelab_whenKey"></block></xml> te permite ejecutar código cuando se pulsa la flecha arriba.
 
         Puedes cambiar el movimiento del baile, cambiar las propiedades de un bailarín o hacer solo una vez un movimiento rápido. ¡Usa tu creatividad y estate pendiente de los nuevos bloques!
+      Dance_Party_11_5: |-
+        Echa un vistazo a este bloque:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        ¡Ahora puedes crear un montón de bailarines a la vez!
+
+        Trata de usar algunos de los bloques «todos los patos» para escribir el código que hará que todos los patos bailen juntos.
+      Dance_Party_11.5: |-
+        Echa un vistazo a este bloque:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        ¡Ahora puedes crear un montón de bailarines a la vez!
+
+        Trata de usar algunos de los bloques «todos los patos» para escribir el código que hará que todos los patos bailen juntos.
       Dance_Party_11b: "¡Es hora de un concurso de baile! El Gato hace el paso «dab»
         cuando pulsas la tecla de flecha izquierda. Indica al Robot que haga «drop»
         cuando pulsas la tecla de flecha derecha."
@@ -1067,6 +1080,15 @@ es:
         El bloque <xml><block type="Dancelab_whenKey"></block></xml> te permite ejecutar código cuando se pulsa la flecha arriba.
 
         Puedes cambiar el movimiento del baile, cambiar las propiedades de un bailarín o hacer solo una vez un movimiento rápido. ¡Usa tu creatividad y estate pendiente de los nuevos bloques!
+      HOC Dance Freeplay: |-
+        ¡Mueve el esqueleto! Crea un baile propio para compartirlo
+        con tus amigos.
+      HOC Dance Freeplay_draft: |-
+        ¡Mueve el esqueleto! Crea un baile propio para compartirlo
+        con tus amigos.
+      HOC Dance Predraw: |-
+        ¡Mueve el esqueleto! Crea un baile propio para compartirlo
+        con tus amigos.
       K-1 Bee Loops 2: |-
         ¡Utiliza un enlace para moverte obtener el nectar y
         hacer miel!

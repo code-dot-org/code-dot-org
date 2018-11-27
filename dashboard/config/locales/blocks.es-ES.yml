@@ -221,6 +221,7 @@ es:
             '"ALIEN"': Extraterrestre
             '"BEAR"': Oso
             '"CAT"': Gato
+            '"DOG"': Perro
             '"DUCK"': Pato
             '"FROG"': Rana
             '"MOOSE"': Alce
@@ -495,6 +496,7 @@ es:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       Dancelab_whenPeak:
         text: cuando {RANGE} llega al punto máximo
