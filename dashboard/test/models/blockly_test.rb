@@ -447,9 +447,8 @@ XML
           "blockText" => "check the {QUANTITY} {MEASURE}",
           "args" => [
             {"name" => "QUANTITY", "type" => "Number", "field" => true},
-            {"name" => "MEASURE", "options" => [["MEASURES.Whole", "Whole"], ["MEASURES.Half", "Half"]]}
+            {"name" => "MEASURE", "options" => [["Whole", "MEASURES.Whole"], ["Half", "MEASURES.Half"]]}
           ],
-          "eventBlock" => true
         },
         helperCode: nil
       }]
@@ -466,9 +465,8 @@ XML
             "blockText" => "vérifier la {QUANTITY} {MEASURE}",
             "args" => [
               {"name" => "QUANTITY", "type" => "Number", "field" => true},
-              {"name" => "MEASURE", "options" => [["MEASURES.Whole", "Entier"], ["MEASURES.Half", "Moitié"]]}
+              {"name" => "MEASURE", "options" => [["Entier", "MEASURES.Whole"], ["Moitié", "MEASURES.Half"]]}
             ],
-            "eventBlock" => true
           },
         helperCode: nil
       }]
