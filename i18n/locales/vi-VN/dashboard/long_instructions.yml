@@ -160,9 +160,10 @@ vi:
         </block></xml>
         
         Chương trình này sử dụng âm lượng "bass" của âm nhạc (âm trầm) để điều khiển chiều cao của một vũ công. Bạn cũng có thể làm cho các vũ công khác phản hồi theo nhạc chứ?
-      Dance_Party_11.5: "Hãy xem khối này:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"VỊT\"</title>\n<title name=\"LAYOUT\">\"vòng tròn\"</title>\n</block></xml>\n\nBây giờ bạn có thể cùng lúc tạo ra một loạt các vũ công!\n\nHãy thử sử dụng một số trong các khối \"tất cả vịt\" để viết mã nhằm làm cho tất cả các con vịt nhảy cùng nhau."
       Dance_Party_11.5_test: "Hãy xem khối này:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"VỊT\"</title>\n<title name=\"LAYOUT\">\"vòng tròn\"</title>\n</block></xml>\n\nBây giờ bạn có thể cùng lúc tạo ra một loạt các vũ công!\n\nHãy thử sử dụng một số trong các khối \"tất cả vịt\" để viết mã nhằm làm cho tất cả các con vịt nhảy cùng nhau."
       Dance_Party_11: "Khối <xml><block type=\"Dancelab_whenKey\"></block></xml> cho phép bạn chạy mã khi nhấn phím mũi tên lên.\n\nBạn có thể thay đổi động tác nhảy, thay đổi thuộc tính của một vũ công hoặc làm một động tác nhanh chỉ một lần. Cứ thoải mái sáng tạo và tìm kiếm những khối mới!"
+      Dance_Party_11_5: "Hãy xem khối này:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"VỊT\"</title>\n<title name=\"LAYOUT\">\"vòng tròn\"</title>\n</block></xml>\n\nBây giờ bạn có thể cùng lúc tạo ra một loạt các vũ công!\n\nHãy thử sử dụng một số trong các khối \"tất cả vịt\" để viết mã nhằm làm cho tất cả các con vịt nhảy cùng nhau."
+      Dance_Party_11.5: "Hãy xem khối này:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"VỊT\"</title>\n<title name=\"LAYOUT\">\"vòng tròn\"</title>\n</block></xml>\n\nBây giờ bạn có thể cùng lúc tạo ra một loạt các vũ công!\n\nHãy thử sử dụng một số trong các khối \"tất cả vịt\" để viết mã nhằm làm cho tất cả các con vịt nhảy cùng nhau."
       Dance_Party_11b: |-
         Đã đến lúc khiêu vũ rồi! Mèo sẽ làm động tác dab khi bạn nhấn phím mũi tên trái. Hãy làm cho Robot "drop" khi bạn nhấn phím mũi tên phải.
       Dance_Party_12: Bắt đầu quẩy thôi! Tạo ra điệu nhảy của riêng bạn để chia sẻ với bạn bè.
@@ -187,6 +188,9 @@ vi:
         
         Tạo ra một vũ công dự phòng, gọi là `backup_dancer1` để nhảy cùng con mèo.
       HOC Dance 9_draft: "Khối <xml><block type=\"Dancelab_whenKey\"></block></xml> cho phép bạn chạy mã khi nhấn phím mũi tên lên.\n\nBạn có thể thay đổi động tác nhảy, thay đổi thuộc tính của một vũ công hoặc làm một động tác nhanh chỉ một lần. Cứ thoải mái sáng tạo và tìm kiếm những khối mới!"
+      HOC Dance Freeplay: Bắt đầu quẩy thôi! Tạo ra điệu nhảy của riêng bạn để chia sẻ với bạn bè.
+      HOC Dance Freeplay_draft: Bắt đầu quẩy thôi! Tạo ra điệu nhảy của riêng bạn để chia sẻ với bạn bè.
+      HOC Dance Predraw: Bắt đầu quẩy thôi! Tạo ra điệu nhảy của riêng bạn để chia sẻ với bạn bè.
       K-1 Bee Loops 2: Sử dụng một vòng lặp để di chuyển và sau đó lấy mật hoa và làm mật ong!
       K-1 Bee Loops 3: Sử dụng vòng để lấy mật hoa và làm mật ong!
       K-1 Bee Loops 6: Sử dụng vòng lặp để lấy mật hoa, mật ong, và di chuyển!

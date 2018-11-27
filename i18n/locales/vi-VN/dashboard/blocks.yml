@@ -222,6 +222,7 @@ vi:
             '"ALIEN"': Người ngoài hành tinh
             '"BEAR"': Gấu
             '"CAT"': Mèo
+            '"DOG"': Chó
             '"DUCK"': Vịt
             '"FROG"': Ếch
             '"MOOSE"': Nai sừng tấm
@@ -244,7 +245,7 @@ vi:
           làm {N} {COSTUME} mới
           trong {LAYOUT}
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
