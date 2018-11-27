@@ -1057,19 +1057,6 @@ es-MX:
         </block></xml>
 
         Este programa utiliza el volumen del "bajo" de la música (los sonidos profundos) para controlar la altura de un bailarín. ¿Puedes hacer que el otro bailarín también responda a la música?
-      Dance_Party_11.5: |-
-        Echa un vistazo a este bloque:
-
-        <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
-
-        ¡Ahora puedes crear un grupo de bailarines con un solo movimiento!
-
-        Trata de usar algunos de los bloques de "todos los patos" para escribir el código que hará que todos los patos bailen juntos.
       Dance_Party_11.5_test: |-
         Echa un vistazo a este bloque:
 
@@ -1087,6 +1074,32 @@ es-MX:
         El bloque <xml><block type="Dancelab_whenKey"></block></xml> le permite ejecutar el código cuando se presiona la flecha hacia arriba.
 
         Puedes cambiar el movimiento del baile, cambiar las propiedades de un bailarín o hacer un movimiento rápido solo una vez. ¡Se creativo y busca nuevos bloques!
+      Dance_Party_11_5: |-
+        Echa un vistazo a este bloque:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        ¡Ahora puedes crear un grupo de bailarines con un solo movimiento!
+
+        Trata de usar algunos de los bloques de "todos los patos" para escribir el código que hará que todos los patos bailen juntos.
+      Dance_Party_11.5: |-
+        Echa un vistazo a este bloque:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        ¡Ahora puedes crear un grupo de bailarines con un solo movimiento!
+
+        Trata de usar algunos de los bloques de "todos los patos" para escribir el código que hará que todos los patos bailen juntos.
       Dance_Party_11b: "¡Es hora de bailar! El gato se mueve cuando presionas la tecla
         de flecha izquierda. Hace el “paso del robot” cuando presionas la tecla de
         flecha derecha."
@@ -1162,6 +1175,15 @@ es-MX:
         El bloque <xml><block type="Dancelab_whenKey"></block></xml> le permite ejecutar el código cuando se presiona la flecha hacia arriba.
 
         Puedes cambiar el movimiento del baile, cambiar las propiedades de un bailarín o hacer un movimiento rápido solo una vez. ¡Se creativo y busca nuevos bloques!
+      HOC Dance Freeplay: |-
+        ¡Vamos baila! Crea tu propio baile para compartir con tus
+        amigos.
+      HOC Dance Freeplay_draft: |-
+        ¡Vamos baila! Crea tu propio baile para compartir con tus
+        amigos.
+      HOC Dance Predraw: |-
+        ¡Vamos baila! Crea tu propio baile para compartir con tus
+        amigos.
       K-1 Bee Loops 2: "¡Utiliza un enlace para moverte y obtener el néctar y hacer
         miel!"
       K-1 Bee Loops 3: "¡Utiliza enlaces para obtener néctar y para hacer miel!"

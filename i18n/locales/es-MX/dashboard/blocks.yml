@@ -267,7 +267,7 @@ es-MX:
           Hacer {N} nuevo {COSTUME}
           en un {LAYOUT}
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -518,6 +518,7 @@ es-MX:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
       Dancelab_whenPeak:
         text: Cuando {RANGE} alcance

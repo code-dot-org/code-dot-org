@@ -519,6 +519,7 @@ es-MX:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       Dancelab_whenPeak:
         text: Cuando {RANGE} alcance
