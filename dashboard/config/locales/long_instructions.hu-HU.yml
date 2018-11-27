@@ -385,7 +385,7 @@ hu:
         </block></xml>
 
         Ez a program a zene „basszus“ szólamának (a mély hangoknak) a hangereje alapján szabályozza az egyik táncos magasságát. Be tudod állítani, hogy a másik táncos is reagáljon a zenére?
-      Dance_Party_11.5: |-
+      Dance_Party_11_5: |-
         Nézd meg ezt a blokkot:
 
         <xml>

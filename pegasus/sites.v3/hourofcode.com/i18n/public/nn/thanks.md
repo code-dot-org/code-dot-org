@@ -51,8 +51,8 @@ Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classro
 
 You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-<% else %> En Kodetime er bare en start. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+<% else %> En Kodetime er bare en start. Dei fleste organisasjonane som tilbyr Kodetime-øvingar har også læreplanar for vidare utvikling. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
+Code.org tilbyr og [nybyrjarkurs i datavitskap](https://code.org/educate/curriculum/cs-fundamentals-international) som er oversatt til meir enn 25 ulike språk, kostnadsfritt for deg og skulen din. <% end %>
 
 <%= view 'popup_window.js' %>
