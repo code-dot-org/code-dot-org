@@ -281,6 +281,8 @@ pt-BR:
         * passo um
         * passo dois
       AppLab Intro 4 - Video onEvent: "# Usando o onEvent"
+      AppLab Intro 4 - Video share your work: "# Crie e compartilhe seu aplicativo!"
+      AppLab Intro 4 - Video share: "# Crie e compartilhe seu aplicativo!"
       Artist Autorun Test: "Agora coloque a função dentro de um laço\npara desenhar esses três quadrados."
       Bergeron Robot Maze1: "Você pode me ajudar a pegar o porco malvado? \n\nJunte alguns blocos `mover para frente` abaixo do bloco `quando executar` e clique em \"Executar\". "
       Big Game Animation 1: "Agora que você aprendeu a escrever funções lineares\nsimples, vamos usá-las para adicionar um pouco de movimento ao nosso jogo.\nClique em \"Executar\" para ver o que seu jogo pode fazer (não muito!), atualizar as variáveis que\nvocê quiser e depois clique em Concluir para seguir em frente."
@@ -401,9 +403,10 @@ pt-BR:
         </block></xml>
         
         Este programa utiliza o volume do "baixo" da música (os sons graves) para controlar a altura de um dançarino. Você pode fazer o outro dançarino responder à música também?
-      Dance_Party_11.5: "Veja este bloco:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nAgora você pode criar um grupo de dançarinos de uma só vez!\n\nTente usar alguns dos blocos \"todos os patos\" para escrever o código que fará todos os patos dançarem juntos."
       Dance_Party_11.5_test: "Veja este bloco:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nAgora você pode criar um grupo de dançarinos de uma só vez!\n\nTente usar alguns dos blocos \"todos os patos\" para escrever o código que fará todos os patos dançarem juntos."
       Dance_Party_11: "O bloco <xml><block type=\"Dancelab_whenKey\"></block></xml> permite executar o código quando a seta para cima for selecionada.\n\nVocê pode mudar o passo de dança, alterar as propriedades de um(a) dançarino(a) ou fazer um movimento rápido apenas uma vez. Use a criatividade e procure novos blocos!"
+      Dance_Party_11_5: "Veja este bloco:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nAgora você pode criar um grupo de dançarinos de uma só vez!\n\nTente usar alguns dos blocos \"todos os patos\" para escrever o código que fará todos os patos dançarem juntos."
+      Dance_Party_11.5: "Veja este bloco:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nAgora você pode criar um grupo de dançarinos de uma só vez!\n\nTente usar alguns dos blocos \"todos os patos\" para escrever o código que fará todos os patos dançarem juntos."
       Dance_Party_11b: |-
         É hora do concurso de dança! O gato dança dab quando você pressiona a tecla de seta para a esquerda. Faça o robô dançar drop pressionando a tecla da seta para a direita.
       Dance_Party_12: Entre no ritmo! Crie sua própria dança para compartilhar com seus amigos.
@@ -437,6 +440,9 @@ pt-BR:
         
         Crie um(a) dançarino(a) de apoio intitulado 'backup_dancer1' para dançar com o gato.
       HOC Dance 9_draft: "O bloco <xml><block type=\"Dancelab_whenKey\"></block></xml> permite executar o código quando a seta para cima for selecionada.\n\nVocê pode mudar o passo de dança, alterar as propriedades de um(a) dançarino(a) ou fazer um movimento rápido apenas uma vez. Use a criatividade e procure novos blocos!"
+      HOC Dance Freeplay: Entre no ritmo! Crie sua própria dança para compartilhar com seus amigos.
+      HOC Dance Freeplay_draft: Entre no ritmo! Crie sua própria dança para compartilhar com seus amigos.
+      HOC Dance Predraw: Entre no ritmo! Crie sua própria dança para compartilhar com seus amigos.
       K-1 Bee Loops 2: "Use um laço \"repita\" para mover e então coletar o néctar e\nproduzir mel!"
       K-1 Bee Loops 3: "Use três laços \"repita\" para coletar o néctar\ne\nfabricar o mel!"
       K-1 Bee Loops 4: "Use laços \"repita\" para obter néctar, produzir\nmel e\npara mover!"

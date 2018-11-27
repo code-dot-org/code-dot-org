@@ -508,6 +508,8 @@ pt-BR:
         * passo um
         * passo dois
       AppLab Intro 4 - Video onEvent: "# Usando o onEvent"
+      AppLab Intro 4 - Video share your work: "# Crie e compartilhe seu aplicativo!"
+      AppLab Intro 4 - Video share: "# Crie e compartilhe seu aplicativo!"
       Artist Autorun Test: |-
         Agora coloque a função dentro de um laço
         para desenhar esses três quadrados.
@@ -753,19 +755,6 @@ pt-BR:
         </block></xml>
 
         Este programa utiliza o volume do "baixo" da música (os sons graves) para controlar a altura de um dançarino. Você pode fazer o outro dançarino responder à música também?
-      Dance_Party_11.5: |-
-        Veja este bloco:
-
-        <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
-
-        Agora você pode criar um grupo de dançarinos de uma só vez!
-
-        Tente usar alguns dos blocos "todos os patos" para escrever o código que fará todos os patos dançarem juntos.
       Dance_Party_11.5_test: |-
         Veja este bloco:
 
@@ -783,6 +772,32 @@ pt-BR:
         O bloco <xml><block type="Dancelab_whenKey"></block></xml> permite executar o código quando a seta para cima for selecionada.
 
         Você pode mudar o passo de dança, alterar as propriedades de um(a) dançarino(a) ou fazer um movimento rápido apenas uma vez. Use a criatividade e procure novos blocos!
+      Dance_Party_11_5: |-
+        Veja este bloco:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Agora você pode criar um grupo de dançarinos de uma só vez!
+
+        Tente usar alguns dos blocos "todos os patos" para escrever o código que fará todos os patos dançarem juntos.
+      Dance_Party_11.5: |-
+        Veja este bloco:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Agora você pode criar um grupo de dançarinos de uma só vez!
+
+        Tente usar alguns dos blocos "todos os patos" para escrever o código que fará todos os patos dançarem juntos.
       Dance_Party_11b: É hora do concurso de dança! O gato dança dab quando você pressiona
         a tecla de seta para a esquerda. Faça o robô dançar drop pressionando a tecla
         da seta para a direita.
@@ -863,6 +878,12 @@ pt-BR:
         O bloco <xml><block type="Dancelab_whenKey"></block></xml> permite executar o código quando a seta para cima for selecionada.
 
         Você pode mudar o passo de dança, alterar as propriedades de um(a) dançarino(a) ou fazer um movimento rápido apenas uma vez. Use a criatividade e procure novos blocos!
+      HOC Dance Freeplay: Entre no ritmo! Crie sua própria dança para compartilhar
+        com seus amigos.
+      HOC Dance Freeplay_draft: Entre no ritmo! Crie sua própria dança para compartilhar
+        com seus amigos.
+      HOC Dance Predraw: Entre no ritmo! Crie sua própria dança para compartilhar
+        com seus amigos.
       K-1 Bee Loops 2: |-
         Use um laço "repita" para mover e então coletar o néctar e
         produzir mel!
