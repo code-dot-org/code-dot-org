@@ -20,6 +20,7 @@ el:
       messages:
         blank: απαιτείται
         blank_plural: απαιτούμενο
+        invalid: δεν είναι έγκυρο
         invalid_plural: μη έγκυρο
     attributes:
       user:
@@ -37,6 +38,7 @@ el:
         age: Ηλικία
         gender: Φύλο
         edit_header: Στοιχεία Λογαριασμού
+        finish_sign_up_header: Ολοκληρώστε τη δημιουργία του λογαριασμού σας
         error:
           future: δεν μπορεί να είναι στο μέλλον
   hello: Γεια σου κόσμε
@@ -87,6 +89,7 @@ el:
   prize: βραβείο
   more_info: Περισσότερες πληροφορίες
   auth:
+    continue_with: Συνέχεια μέσω %{provider}
     sign_in_with: Εγγραφή μέσω  %{provider}
     signed_in: Συνδέθηκες!
     signed_out: Αποσυνδεθήκατε από το <a href="%{url}">Code.org</a>.
