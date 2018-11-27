@@ -252,6 +252,7 @@ zh-CN:
             '"ALIEN"': 外星人
             '"BEAR"': 玩具熊
             '"CAT"': 猫
+            '"DOG"': 狗
             '"DUCK"': 鸭子
             '"FROG"': 青蛙
             '"MOOSE"': 驼鹿
@@ -273,7 +274,7 @@ zh-CN:
       Dancelab_makeNewDanceSpriteGroup:
         text: 在 {LAYOUT} 创造 {N} 新的 {COSTUME}
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -529,6 +530,7 @@ zh-CN:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
       Dancelab_whenPeak:
         text: 当 {RANGE} 达到最高

@@ -6268,19 +6268,6 @@ zh-CN:
         </block></xml>
 
         此程序使用音乐的“低音”音量来控制舞者的高度。您可以让其他舞者也对音乐做出响应吗？
-      Dance_Party_11.5: |-
-        查看此模块：
-
-        <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"鸭子"</title>
-        <title name="LAYOUT">"圆圈"</title>
-        </block></xml>
-
-        现在您可以一次创建多个舞者了！
-
-        尝试使用“所有鸭子”模块写入让所有鸭子一起跳舞的代码。
       Dance_Party_11.5_test: |-
         查看此模块：
 
@@ -6298,6 +6285,32 @@ zh-CN:
         <xml><block type="Dancelab_whenKey"></block></xml> 模块让您可以在按下上方向键时运行代码。
 
         您可以更改跳舞动作，更改舞者的属性，或者快速做一次动作。激发创造力，寻找新模块！
+      Dance_Party_11_5: |-
+        查看此模块：
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"鸭子"</title>
+        <title name="LAYOUT">"圆圈"</title>
+        </block></xml>
+
+        现在您可以一次创建多个舞者了！
+
+        尝试使用“所有鸭子”模块写入让所有鸭子一起跳舞的代码。
+      Dance_Party_11.5: |-
+        查看此模块：
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"鸭子"</title>
+        <title name="LAYOUT">"圆圈"</title>
+        </block></xml>
+
+        现在您可以一次创建多个舞者了！
+
+        尝试使用“所有鸭子”模块写入让所有鸭子一起跳舞的代码。
       Dance_Party_11b: 跳舞时间到了！按下左方向键时，猫会轻拍。让机器人在按下右方向键时“掉落”。
       Dance_Party_12: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
       Dance_Party_3: |-
@@ -6419,6 +6432,9 @@ zh-CN:
         <xml><block type="Dancelab_whenKey"></block></xml> 模块让您可以在按下上方向键时运行代码。
 
         您可以更改跳舞动作，更改舞者的属性，或者快速做一次动作。激发创造力，寻找新模块！
+      HOC Dance Freeplay: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
+      HOC Dance Freeplay_draft: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
+      HOC Dance Predraw: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
       Harvesting: |-
         哦，不，我的地图丢了，我不记得我中了什么了！每一个新芽都有可能长成**玉米** ![玉米的图片](https://images.code.org/cac3133c40781553a70066a67298b2b5-image-1472493202556.png)
         , **豆子** ![豆子的图片](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png)
