@@ -16,7 +16,6 @@
       description: I18n.t(:hoc2018_dance_teacher_resources_tile1_description),
       image: "/images/dance-hoc/dance_party_dance.gif",
       button_text: I18n.t(:hoc2018_dance_teacher_resources_tile1_button),
-      id: "lesson_plan",
       link: lesson_link
     },
     {
@@ -24,7 +23,6 @@
       description: I18n.t(:hoc2018_dance_teacher_resources_tile2_description),
       image: "/images/dance-hoc/dance_party_unplugged_portrait.png",
       button_text: I18n.t(:hoc2018_dance_teacher_resources_tile2_button),
-      id: "unplugged_activity",
       link: unplugged_link
     },
   ]
@@ -41,5 +39,5 @@
           .resource-description
             = resource[:description]
           %a{href: resource[:link]}
-            %button.gray-button{:id => "#{resource[:id]}"}
+            %button.gray-button
               = resource[:button_text]
