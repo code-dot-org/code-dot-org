@@ -317,7 +317,7 @@ Dance.prototype.afterInject_ = function () {
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
     i18n: danceMsg,
-    resourceLoader: new ResourceLoader('https://curriculum.code.org/images/sprites/dance_20181120/'),
+    resourceLoader: new ResourceLoader('https://curriculum.code.org/images/sprites/dance_20181127/'),
   });
 
   // Expose an interface for testing
