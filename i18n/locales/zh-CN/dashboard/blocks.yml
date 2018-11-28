@@ -331,7 +331,7 @@ zh-CN:
       Dancelab_setBackground:
         text: 设置背景颜色为 {COLOR}
       Dancelab_setBackgroundEffect:
-        text: 设置背景效果为 {EFFECT}
+        text: 设置背景效果 {EFFECT} [PALETTE][1]
         options:
           EFFECT:
             '"none"': 没有
@@ -339,7 +339,7 @@ zh-CN:
             '"disco"': 方形
             '"rainbow"': 彩虹
             '"diamonds"': 菱形
-            '"splatter"': 气泡
+            '"splatter"': 油漆飞溅
             '"swirl"': 催眠
             '"snowflakes"': 雪
             '"spiral"': 螺旋
