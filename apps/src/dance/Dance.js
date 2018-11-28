@@ -27,6 +27,7 @@ import {
   unloadSong,
   fetchSignedCookies,
 } from './songs';
+import { SongTitlesToArtistTwitterHandle } from '../code-studio/dancePartySongArtistTags';
 
 const ButtonState = {
   UP: 0,
@@ -642,6 +643,11 @@ Dance.prototype.onHandleEvents = function (currentFrameEvents) {
  */
 Dance.prototype.displayFeedback_ = function () {
   const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
+
+  const artistTwitterHandle = SongTitlesToArtistTwitterHandle[this.level.selectedSong];
+
+  const twitterText = "Check out the dance I made featuring @" + artistTwitterHandle + " on @codeorg!";
+
   let feedbackOptions = {
     feedbackType: this.testResults,
     message: this.message,
@@ -654,6 +660,7 @@ Dance.prototype.displayFeedback_ = function () {
       reinfFeedbackMsg: 'TODO: localized feedback message.',
     },
     disablePrinting: true,
+    twitter: {text: twitterText}
   };
 
   // Disable social share for users under 13 if we have the cookie set.
