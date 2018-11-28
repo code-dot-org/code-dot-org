@@ -532,19 +532,6 @@ pl:
         Teraz możesz utworzyć wielu tancerzy na raz!
 
         Spróbuj użyć kilku bloków „wszystkie kaczki", aby napisać kod, który sprawi, że wszystkie kaczki będą tańczyć razem.
-      Dance_Party_11.5: |-
-        Sprawdź ten blok:
-
-        <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
-
-        Teraz możesz utworzyć wielu tancerzy na raz!
-
-        Spróbuj użyć kilku bloków „wszystkie kaczki", aby napisać kod, który sprawi, że wszystkie kaczki będą tańczyć razem.
       Dance_Party_11b: "Czas, by potańczyć! Po naciśnięciu strzałki w lewo, Kot podnosi
         ręce do góry (ruch \"dab\"). Gdy naciśniesz strzałkę w prawo, Robot robi szpagat
         (ruch \"drop\") a klaszcze (ruch \"clap\"), gdy naciśniesz strzałkę do góry.

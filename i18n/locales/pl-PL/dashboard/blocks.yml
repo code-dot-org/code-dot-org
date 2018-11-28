@@ -363,7 +363,7 @@ pl:
       Dancelab_setBackground:
         text: ustaw kolor tła {COLOR}
       Dancelab_setBackgroundEffect:
-        text: ustaw efekt tła {EFFECT}
+        text: ustaw efekt tła {EFFECT} [PALETTE][1]
         options:
           EFFECT:
             '"none"': Żaden
@@ -371,7 +371,7 @@ pl:
             '"disco"': Kwadraty
             '"rainbow"': Tęcza
             '"diamonds"': Diamenty
-            '"splatter"': Bąbelki
+            '"splatter"': Plamy farby
             '"swirl"': Hypno
             '"snowflakes"': Śnieg
             '"spiral"': Spirala

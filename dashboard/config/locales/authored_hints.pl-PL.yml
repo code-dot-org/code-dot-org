@@ -1037,13 +1037,6 @@ pl:
           * Wystarczy być kreatywnym!
 
           * Ten poziom kończy się po 7 taktach.*
-      Dance_Party_11.5_authored_hint:
-        validation: |-
-          **Jak przejdę ten poziom?**
-
-          * Wystarczy być kreatywnym!
-
-          * Ten poziom kończy się po 7 taktach.*
       Dance_Party_11_5_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
