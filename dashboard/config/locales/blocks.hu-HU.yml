@@ -30,17 +30,18 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"UNICORN"': összes egyszarvú
           MOVE:
             '"next"': "(Következő)"
             '"prev"': "(Előző)"
             '"rand"': "(Véletlen)"
-            MOVES.Roll: Forgás
+            MOVES.Roll: Testforgás
             MOVES.ClapHigh: Taps fent
             MOVES.Dab: Legyintés
-            MOVES.DoubleJam: Dupla jam
+            MOVES.DoubleJam: Duplázás
             MOVES.Fresh: Friss
             MOVES.Clown: Bohóc
-            MOVES.Kick: Rúgás
+            MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
           DIR:
@@ -53,13 +54,13 @@ hu:
             '"next"': "(Következő)"
             '"prev"': "(Előző)"
             '"rand"': "(Véletlen)"
-            MOVES.Roll: Forgás
+            MOVES.Roll: Testforgás
             MOVES.ClapHigh: Taps fent
             MOVES.Dab: Legyintés
-            MOVES.DoubleJam: Dupla jam
+            MOVES.DoubleJam: Duplázás
             MOVES.Fresh: Friss
             MOVES.Clown: Bohóc
-            MOVES.Kick: Rúgás
+            MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
           DIR:
@@ -90,15 +91,16 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"UNICORN"': összes egyszarvú
           MOVE:
             '"rand"': "(Véletlen)"
-            MOVES.Roll: Forgás
+            MOVES.Roll: Testforgás
             MOVES.ClapHigh: Taps fent
             MOVES.Dab: Legyintés
-            MOVES.DoubleJam: Dupla jam
+            MOVES.DoubleJam: Duplázás
             MOVES.Fresh: Friss
             MOVES.Clown: Bohóc
-            MOVES.Kick: Rúgás
+            MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
           DIR:
@@ -109,13 +111,13 @@ hu:
         options:
           MOVE:
             '"rand"': "(Véletlen)"
-            MOVES.Roll: Forgás
+            MOVES.Roll: Testforgás
             MOVES.ClapHigh: Taps fent
             MOVES.Dab: Legyintés
-            MOVES.DoubleJam: Dupla jam
+            MOVES.DoubleJam: Duplázás
             MOVES.Fresh: Friss
             MOVES.Clown: Bohóc
-            MOVES.Kick: Rúgás
+            MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
           DIR:
@@ -171,10 +173,10 @@ hu:
             MOVES.ClapHigh: Taps fent
             MOVES.Clown: Bohóc
             MOVES.Dab: Legyintés
-            MOVES.DoubleJam: Dupla jam
+            MOVES.DoubleJam: Duplázás
             MOVES.Fresh: Friss
-            MOVES.Roll: Forgás
-            MOVES.Kick: Rúgás
+            MOVES.Roll: Testforgás
+            MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
       Dancelab_ifTime:
@@ -211,11 +213,16 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"UNICORN"': összes egyszarvú
           FORMAT:
+            '"border"': határ
+            '"inner"': belső négyzet
             '"circle"': kör
             '"grid"': rács
             '"row"': sor
             '"column"': oszlop
+            '"x"': keresztezés
+            '"plus"': plusz
             '"random"': véletlen
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -282,10 +289,14 @@ hu:
             '"SHARK"': Cápák
             '"UNICORN"': Egyszarvúak
           LAYOUT:
+            '"border"': határ
+            '"inner"': belső négyzet
             '"circle"': kör
             '"grid"': rács
             '"row"': sor
             '"column"': oszlop
+            '"x"': keresztezés
+            '"plus"': plusz
             '"random"': véletlen
       Dancelab_mixColors:
         text: "{COLOR1} és {COLOR2} keverése"
@@ -302,13 +313,18 @@ hu:
       Dancelab_setBackground:
         text: 'háttérszín beállítása: {COLOR}'
       Dancelab_setBackgroundEffect:
-        text: 'háttéreffekt beállítása: {EFFECT}'
+        text: háttéreffekt beállítása {EFFECT} [PALETTE][1]
         options:
           EFFECT:
             '"none"': Egyik sem
+            '"color_cycle"': Színek
             '"disco"': Négyzetek
-            '"rainbow"': Színek
+            '"rainbow"': Szivárvány
             '"diamonds"': Gyémántok
+            '"splatter"': Festékfröccsenés
+            '"swirl"': Hipnó
+            '"snowflakes"': Hó
+            '"spiral"': Spirál
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Véletlen)"
       Dancelab_setDanceSpeed:
         text: "{SPRITE} táncolási sebességének módosítása: {SPEED}"
@@ -333,6 +349,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"UNICORN"': összes egyszarvú
           SPEED:
             '1': normál
             '2': gyors
@@ -373,6 +390,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"UNICORN"': összes egyszarvú
           PROPERTY:
             '"scale"': méret
             '"width"': szélesség
@@ -394,8 +412,6 @@ hu:
             '"tint"': árnyalat
       Dancelab_setTint:
         text: "{SPRITE} árnyalatának beállítása: {VAL}"
-      Dancelab_setTintInline:
-        text: "{SPRITE} árnyalatának beállítása: {VAL}"
       Dancelab_setTintEach:
         options:
           THIS:
@@ -411,6 +427,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
       Dancelab_setVisible:
+        text: "{SPRITE} beállítása láthatónak: {VISIBILITY}"
         options:
           VISIBILITY:
             'true': látható
@@ -430,6 +447,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"UNICORN"': összes egyszarvú
           VISIBILITY:
             'true': látható
             'false': láthatatlan
