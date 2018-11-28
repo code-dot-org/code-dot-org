@@ -30,19 +30,20 @@ ru:
             '"PINEAPPLE"': все ананасы
             '"ROBOT"': все роботы
             '"SHARK"': все акулы
+            '"UNICORN"': все единороги
           MOVE:
             '"next"': "(Следующий)"
             '"prev"': "(Предыдущий)"
             '"rand"': "(Случайный)"
-            MOVES.Roll: Перекат
+            MOVES.Roll: Движение «волна»
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Dab: Дэб
-            MOVES.DoubleJam: Двойной джем
+            MOVES.DoubleJam: Удвоить усилия
             MOVES.Drop: Дроп
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
             MOVES.Clown: Клоун
-            MOVES.Kick: Удар
+            MOVES.Kick: Звезда
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
           DIR:
@@ -55,15 +56,15 @@ ru:
             '"next"': "(Следующий)"
             '"prev"': "(Предыдущий)"
             '"rand"': "(Случайный)"
-            MOVES.Roll: Перекат
+            MOVES.Roll: Движение «волна»
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Dab: Дэб
-            MOVES.DoubleJam: Двойной джем
+            MOVES.DoubleJam: Удвоить усилия
             MOVES.Drop: Дроп
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
             MOVES.Clown: Клоун
-            MOVES.Kick: Удар
+            MOVES.Kick: Звезда
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
           DIR:
@@ -94,17 +95,18 @@ ru:
             '"PINEAPPLE"': все ананасы
             '"ROBOT"': все роботы
             '"SHARK"': все акулы
+            '"UNICORN"': все единороги
           MOVE:
             '"rand"': "(Случайный)"
-            MOVES.Roll: Перекат
+            MOVES.Roll: Движение «волна»
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Dab: Дэб
-            MOVES.DoubleJam: Двойной джем
+            MOVES.DoubleJam: Удвоить усилия
             MOVES.Drop: Дроп
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
             MOVES.Clown: Клоун
-            MOVES.Kick: Удар
+            MOVES.Kick: Звезда
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
           DIR:
@@ -115,15 +117,15 @@ ru:
         options:
           MOVE:
             '"rand"': "(Случайный)"
-            MOVES.Roll: Перекат
+            MOVES.Roll: Движение «волна»
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Dab: Дэб
-            MOVES.DoubleJam: Двойной джем
+            MOVES.DoubleJam: Удвоить усилия
             MOVES.Drop: Дроп
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
             MOVES.Clown: Клоун
-            MOVES.Kick: Удар
+            MOVES.Kick: Звезда
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
           DIR:
@@ -179,12 +181,12 @@ ru:
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Clown: Клоун
             MOVES.Dab: Дэб
-            MOVES.DoubleJam: Двойной джем
+            MOVES.DoubleJam: Удвоить усилия
             MOVES.Drop: Дроп
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
-            MOVES.Roll: Перекат
-            MOVES.Kick: Удар
+            MOVES.Roll: Движение «волна»
+            MOVES.Kick: Звезда
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
       Dancelab_ifTime:
@@ -221,11 +223,16 @@ ru:
             '"PINEAPPLE"': все ананасы
             '"ROBOT"': все роботы
             '"SHARK"': все акулы
+            '"UNICORN"': все единороги
           FORMAT:
+            '"border"': граница
+            '"inner"': внутренняя площадь
             '"circle"': круг
             '"grid"': сетка
             '"row"': шеренга
             '"column"': колонна
+            '"x"': крест-накрест
+            '"plus"': плюс
             '"random"': случайный
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -293,10 +300,14 @@ ru:
             '"SHARK"': Акулы
             '"UNICORN"': Единороги
           LAYOUT:
+            '"border"': граница
+            '"inner"': внутренняя площадь
             '"circle"': круг
             '"grid"': сетка
             '"row"': шеренга
             '"column"': колонна
+            '"x"': крест-накрест
+            '"plus"': плюс
             '"random"': случайный
       Dancelab_mixColors:
         text: смешайте {COLOR1} и {COLOR2}
@@ -313,13 +324,18 @@ ru:
       Dancelab_setBackground:
         text: задать цвет фона {COLOR}
       Dancelab_setBackgroundEffect:
-        text: задать фоновый эффект {EFFECT}
+        text: задать фоновый эффект {EFFECT} [PALETTE][1]
         options:
           EFFECT:
             '"none"': Нет
+            '"color_cycle"': Цвета
             '"disco"': Квадраты
-            '"rainbow"': Цвета
+            '"rainbow"': Радуга
             '"diamonds"': Ромбы
+            '"splatter"': Брызги краски
+            '"swirl"': Гипноз
+            '"snowflakes"': Снег
+            '"spiral"': Спираль
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Случайный)"
       Dancelab_setDanceSpeed:
         text: измените скорость танца {SPRITE} на {SPEED}
@@ -344,6 +360,7 @@ ru:
             '"PINEAPPLE"': все ананасы
             '"ROBOT"': все роботы
             '"SHARK"': все акулы
+            '"UNICORN"': все единороги
           SPEED:
             '1': норма
             '2': быстро
@@ -384,6 +401,7 @@ ru:
             '"PINEAPPLE"': все ананасы
             '"ROBOT"': все роботы
             '"SHARK"': все акулы
+            '"UNICORN"': все единороги
           PROPERTY:
             '"scale"': размер
             '"width"': ширина
@@ -405,8 +423,6 @@ ru:
             '"tint"': оттенок
       Dancelab_setTint:
         text: установить оттенок {SPRITE} на {VAL}
-      Dancelab_setTintInline:
-        text: установить оттенок {SPRITE} на {VAL}
       Dancelab_setTintEach:
         options:
           THIS:
@@ -422,6 +438,7 @@ ru:
             '"ROBOT"': все роботы
             '"SHARK"': все акулы
       Dancelab_setVisible:
+        text: установить видимость {SPRITE} на {VISIBILITY}
         options:
           VISIBILITY:
             'true': видимый
@@ -441,6 +458,7 @@ ru:
             '"PINEAPPLE"': все ананасы
             '"ROBOT"': все роботы
             '"SHARK"': все акулы
+            '"UNICORN"': все единороги
           VISIBILITY:
             'true': видимый
             'false': невидимый
