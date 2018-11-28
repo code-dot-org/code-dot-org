@@ -532,7 +532,7 @@ Dance.prototype.initInterpreter = function () {
       nativeAPI.setForegroundEffect(effect.toString());
     },
     setForegroundEffectExtended: effect => {
-      nativeAPI.setForegroundEffectExtended(effect.toString());
+      nativeAPI.setForegroundEffect(effect.toString());
     },
     makeNewDanceSprite: (costume, name, location) => {
       return Number(sprites.push(nativeAPI.makeNewDanceSprite(costume, name, location)) - 1);
