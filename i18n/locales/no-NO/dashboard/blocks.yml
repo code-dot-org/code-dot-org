@@ -35,6 +35,7 @@
             '"next"': "(Neste)"
             '"prev"': "(Forrige)"
             '"rand"': "(Tilfeldig)"
+            MOVES.Roll: Kroppsrulling
             MOVES.ClapHigh: Klapp høyt
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double down
@@ -52,6 +53,7 @@
             '"next"': "(Neste)"
             '"prev"': "(Forrige)"
             '"rand"': "(Tilfeldig)"
+            MOVES.Roll: Kroppsrulling
             MOVES.ClapHigh: Klapp høyt
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double down
@@ -89,6 +91,7 @@
             '"UNICORN"': alle enhjørninger
           MOVE:
             '"rand"': "(Tilfeldig)"
+            MOVES.Roll: Kroppsrulling
             MOVES.ClapHigh: Klapp høyt
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double down
@@ -104,6 +107,7 @@
         options:
           MOVE:
             '"rand"': "(Tilfeldig)"
+            MOVES.Roll: Kroppsrulling
             MOVES.ClapHigh: Klapp høyt
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double down
@@ -162,6 +166,7 @@
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double down
             MOVES.Floss: Floss
+            MOVES.Roll: Kroppsrulling
             MOVES.Kick: Stjerne
             MOVES.Rest: Ingen
       Dancelab_ifTime:
@@ -191,6 +196,10 @@
             '"SHARK"': alle haier
             '"UNICORN"': alle enhjørninger
           FORMAT:
+            '"border"': kantlinje
+            '"inner"': indre kvadrat
+            '"x"': kryss
+            '"plus"': pluss
             '"random"': tilfeldig
       Dancelab_makeNewDanceSprite:
         options:
@@ -234,6 +243,10 @@
             '"SHARK"': Haier
             '"UNICORN"': Enhjørninger
           LAYOUT:
+            '"border"': kantlinje
+            '"inner"': indre kvadrat
+            '"x"': kryss
+            '"plus"': pluss
             '"random"': tilfeldig
       Dancelab_mixColors:
         text: bland {COLOR1} og {COLOR2}
@@ -250,7 +263,7 @@
       Dancelab_setBackground:
         text: sett bakgrunnsfarge {COLOR}
       Dancelab_setBackgroundEffect:
-        text: sett bakgrunn til {EFFECT}
+        text: velg bakgrunnseffekt {EFFECT} [PALETTE][1]
         options:
           EFFECT:
             '"none"': Ingen
@@ -258,7 +271,7 @@
             '"disco"': Kvadrater
             '"rainbow"': Regnbue
             '"diamonds"': Diamanter
-            '"splatter"': Bobler
+            '"splatter"': Rosa splætt
             '"swirl"': Hypno
             '"snowflakes"': Snø
             '"spiral"': Spiral

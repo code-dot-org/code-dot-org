@@ -1582,10 +1582,29 @@
           stages:
             Artist:
               name: Kunstner
+        dance:
+          stages:
+            Dance Party:
+              name: Dansefest
+          title: Dansefest
+          description_short: Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
+            Ciara og 25 andre!
+          description: Programmer din egen dansefest du kan dele med vennene dine!
         frozen-2018-test-b:
           stages:
             Artist:
               name: Kunstner
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Dansefest
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Dansefest
+        dance-extras:
+          title: Fortsett å danse
+          description: Fortsett etter den første timen med større prosjektideer.
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1600,6 +1619,10 @@
               name: Morro med for løkker
             The Artist:
               name: Kunstneren
+        dance-low:
+          stages:
+            Dance Party:
+              name: Dansefest
         coursed-2019:
           stages:
             Relay Programming:

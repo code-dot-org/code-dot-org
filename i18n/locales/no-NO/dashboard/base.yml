@@ -321,6 +321,7 @@
       playlab: 'Spill-lab'
       minecraft: 'Minecraft'
       flappy: 'Flakse'
+      dance: 'Dansefest'
     popup:
       progress_for_user: "%{name}s fremgang"
       progress: 'Din fremdrift'
@@ -559,6 +560,8 @@
       body_short: "Design en app, kode blokker eller JavaScript for å få det til å fungere, deretter kan du dele din app i løpet av sekunder."
       audience: 'Minstealder 13 år'
       cta: 'Lær hvordan'
+    dance:
+      title: 'Dansefest'
     hoc:
       title: 'Klassisk labyrint'
       body: 'Prøv de grunnleggende konseptene i datavitenskap. Mange millioner har alt prøvd.'
@@ -936,6 +939,7 @@
   return_unit_overview: 'Gå til kursoversikten'
   return_course_overview: 'Gå til kursoversikten'
   view_all_units: 'Vis alle enheter'
+  view_teacher_guide: 'Sjekk lærerveiledning'
   pd:
     form_labels:
       email: 'E-post'
