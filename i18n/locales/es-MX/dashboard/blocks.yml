@@ -30,20 +30,20 @@ es-MX:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
-            '"UNICORN"': solo unicornios
+            '"UNICORN"': todos los unicornios
           MOVE:
             '"next"': "(Siguiente)"
             '"prev"': "(Anterior)"
             '"rand"': "(Al azar)"
-            MOVES.Roll: Rueda
+            MOVES.Roll: Vuelta completa
             MOVES.ClapHigh: Aplauso alto
             MOVES.Dab: Dudar
-            MOVES.DoubleJam: Jam doble
+            MOVES.DoubleJam: Doble abajo
             MOVES.Drop: Caída
             MOVES.Floss: Hilo
             MOVES.Fresh: Fresco
             MOVES.Clown: Payaso
-            MOVES.Kick: Patada
+            MOVES.Kick: Estrella
             MOVES.ThisOrThat: Tal o cual
             MOVES.Rest: Ninguna
           DIR:
@@ -56,15 +56,15 @@ es-MX:
             '"next"': "(Siguiente)"
             '"prev"': "(Anterior)"
             '"rand"': "(Al azar)"
-            MOVES.Roll: Rueda
+            MOVES.Roll: Vuelta completa
             MOVES.ClapHigh: Aplauso alto
             MOVES.Dab: Dudar
-            MOVES.DoubleJam: Jam doble
+            MOVES.DoubleJam: Doble abajo
             MOVES.Drop: Caída
             MOVES.Floss: Hilo
             MOVES.Fresh: Fresco
             MOVES.Clown: Payaso
-            MOVES.Kick: Patada
+            MOVES.Kick: Estrella
             MOVES.ThisOrThat: Tal o cual
             MOVES.Thriller: Terror
             MOVES.Rest: Ninguna
@@ -96,18 +96,18 @@ es-MX:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
-            '"UNICORN"': solo unicornios
+            '"UNICORN"': todos los unicornios
           MOVE:
             '"rand"': "(Al azar)"
-            MOVES.Roll: Rueda
+            MOVES.Roll: Vuelta completa
             MOVES.ClapHigh: Aplauso alto
             MOVES.Dab: Dudar
-            MOVES.DoubleJam: Jam doble
+            MOVES.DoubleJam: Doble abajo
             MOVES.Drop: Caída
             MOVES.Floss: Hilo
             MOVES.Fresh: Fresco
             MOVES.Clown: Payaso
-            MOVES.Kick: Patada
+            MOVES.Kick: Estrella
             MOVES.ThisOrThat: Tal o cual
             MOVES.Rest: Ninguna
           DIR:
@@ -118,15 +118,15 @@ es-MX:
         options:
           MOVE:
             '"rand"': "(Al azar)"
-            MOVES.Roll: Rueda
+            MOVES.Roll: Vuelta completa
             MOVES.ClapHigh: Aplauso alto
             MOVES.Dab: Dudar
-            MOVES.DoubleJam: Jam doble
+            MOVES.DoubleJam: Doble abajo
             MOVES.Drop: Caída
             MOVES.Floss: Hilo
             MOVES.Fresh: Fresco
             MOVES.Clown: Payaso
-            MOVES.Kick: Patada
+            MOVES.Kick: Estrella
             MOVES.ThisOrThat: Tal o cual
             MOVES.Rest: Ninguna
           DIR:
@@ -183,12 +183,12 @@ es-MX:
             MOVES.ClapHigh: Aplauso alto
             MOVES.Clown: Payaso
             MOVES.Dab: Dudar
-            MOVES.DoubleJam: Jam doble
+            MOVES.DoubleJam: Doble abajo
             MOVES.Drop: Caída
             MOVES.Floss: Hilo
             MOVES.Fresh: Fresco
-            MOVES.Roll: Rueda
-            MOVES.Kick: Patada
+            MOVES.Roll: Vuelta completa
+            MOVES.Kick: Estrella
             MOVES.ThisOrThat: Tal o cual
             MOVES.Rest: Ninguna
       Dancelab_ifTime:
@@ -225,13 +225,15 @@ es-MX:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
-            '"UNICORN"': solo unicornios
+            '"UNICORN"': todos los unicornios
           FORMAT:
             '"border"': borde
+            '"inner"': dentro del cuadrado
             '"circle"': círculo
             '"grid"': cuadrícula
             '"row"': fila
             '"column"': columna
+            '"x"': entrecruzado
             '"plus"': más
             '"random"': al azar
       Dancelab_makeNewDanceSprite:
@@ -301,10 +303,12 @@ es-MX:
             '"UNICORN"': Unicornios
           LAYOUT:
             '"border"': borde
+            '"inner"': dentro del cuadrado
             '"circle"': círculo
             '"grid"': cuadrícula
             '"row"': fila
             '"column"': columna
+            '"x"': entrecruzado
             '"plus"': más
             '"random"': al azar
       Dancelab_mixColors:
@@ -322,16 +326,16 @@ es-MX:
       Dancelab_setBackground:
         text: establecer color de fondo {COLOR}
       Dancelab_setBackgroundEffect:
-        text: establecer efecto de fondo {EFFECT}
+        text: establecer efecto de fondo {EFFECT} [PALETTE][1]
         options:
           EFFECT:
             '"none"': Ninguna
             '"color_cycle"': Colores
             '"disco"': Cuadrados
-            '"rainbow"': Colores
+            '"rainbow"': Arco iris
             '"diamonds"': Diamantes
-            '"splatter"': Burbujas
-            '"swirl"': Hipnótico
+            '"splatter"': Salpicaduras de pintura
+            '"swirl"': Hipnosis
             '"snowflakes"': Nieve
             '"spiral"': Espiral
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Al azar)"
@@ -358,7 +362,7 @@ es-MX:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
-            '"UNICORN"': solo unicornios
+            '"UNICORN"': todos los unicornios
           SPEED:
             '1': normal
             '2': rápido
@@ -400,7 +404,7 @@ es-MX:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
-            '"UNICORN"': solo unicornios
+            '"UNICORN"': todos los unicornios
           PROPERTY:
             '"scale"': tamaño
             '"width"': ancho
@@ -437,6 +441,7 @@ es-MX:
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
       Dancelab_setVisible:
+        text: establecer {SPRITE} visible para {VISIBILITY}
         options:
           VISIBILITY:
             'true': visible
@@ -456,7 +461,7 @@ es-MX:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
-            '"UNICORN"': solo unicornios
+            '"UNICORN"': todos los unicornios
           VISIBILITY:
             'true': visible
             'false': invisible

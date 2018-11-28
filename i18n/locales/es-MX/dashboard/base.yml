@@ -332,7 +332,7 @@ es-MX:
       playlab: 'Laboratorio de juegos'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
-      dance: 'Fiesta de Baile'
+      dance: 'Fiesta de baile'
       view_all: 'Ver todos los proyectos...'
     popup:
       progress_for_user: "progreso de %{name}"
@@ -586,7 +586,7 @@ es-MX:
       audience: 'Mayores de 13 años'
       cta: 'Aprende cómo'
     dance:
-      title: 'Fiesta de Baile'
+      title: 'Fiesta de baile'
     hoc:
       title: 'Laberinto clásico'
       body: 'Prueba los fundamentos de la ciencia de la computación. Millones lo han intentado.'
@@ -633,6 +633,7 @@ es-MX:
       title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "¡Minecraft está de vuelta para la Hora del Código con una actividad nueva! Viaja a través de Minecraft con códigos."
     sports:
       title: "Спорт"
       body: "¡Elige entre un partido de baloncesto o una mezcla y combinación de todos los deportes."
@@ -971,7 +972,7 @@ es-MX:
   return_unit_overview: 'Ir al resumen de la unidad'
   return_course_overview: 'Ve a la vista general de la unidad'
   view_all_units: 'Ver todas las unidades'
-  view_teacher_guide: 'Ver guía del profesor'
+  view_teacher_guide: 'Ver la guía del profesor'
   pd:
     form_labels:
       first_name: 'Nombre'
