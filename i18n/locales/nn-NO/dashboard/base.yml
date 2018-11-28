@@ -939,6 +939,7 @@ nn:
   return_unit_overview: 'Gå til oversikt over eininga'
   return_course_overview: 'Gå til oversikt over eininga'
   view_all_units: 'Sjå alle einingane'
+  view_teacher_guide: 'Sjekk lærerveiledning'
   pd:
     form_labels:
       email: 'E-post'

@@ -221,10 +221,14 @@ nn:
             '"SHARK"': alle haier
             '"UNICORN"': alle enhjørninger
           FORMAT:
+            '"border"': kantlinje
+            '"inner"': indre kvadrat
             '"circle"': sirkel
             '"grid"': rutenett
             '"row"': rad
             '"column"': kolonne
+            '"x"': kryss
+            '"plus"': pluss
             '"random"': tilfeldig
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -291,10 +295,14 @@ nn:
             '"SHARK"': Haiar
             '"UNICORN"': Einhjørningar
           LAYOUT:
+            '"border"': kantlinje
+            '"inner"': indre kvadrat
             '"circle"': sirkel
             '"grid"': rutenett
             '"row"': rad
             '"column"': kolonne
+            '"x"': kryss
+            '"plus"': pluss
             '"random"': tilfeldig
       Dancelab_mixColors:
         text: bland {COLOR1} og {COLOR2}
@@ -319,7 +327,7 @@ nn:
             '"disco"': Kvadrat
             '"rainbow"': Regnboge
             '"diamonds"': Diamantar
-            '"splatter"': Bobler
+            '"splatter"': Rosa splætt
             '"swirl"': Hypno
             '"snowflakes"': Snø
             '"spiral"': Spiral
