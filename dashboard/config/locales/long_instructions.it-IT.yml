@@ -1189,6 +1189,7 @@ it:
         Modifica il codice in modo da perdere un punto ogni volta che il cane (personaggio 1) viene colpito da un sandwich lanciato dal gatto (personaggio 2).<br>
         <br>
         Iniziamo con 10 punti così non è troppo difficile. Lascia che il punteggio scenda da 10 fino a 0 per risolvere l'esercizio.
+      Craft Aquatic - allthethings: Raggiungi la lanterna di mare.
       D_Frozen_nested3: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Trasformiamo la figura in un fiocco di neve."_
 
@@ -1390,14 +1391,6 @@ it:
 
         Puoi modificare la mossa da eseguire, le proprietà di un ballerino oppure fare una mossa veloce una volta sola. Libera la tua creatività e cerca nuovi blocchi!
       Dance_Party_11_5: |-
-        Dai un’occhiata a questo blocco:
-
-        <xml>   <block type="Dancelab_makeNewDanceSpriteGroup">     <title name="N">6</title>     <title name="COSTUME">"DUCK"</title>     <title name="LAYOUT">"circle"</title>   </block></xml>
-
-        Ora sei in grado di creare un gruppo di ballerini in un colpo solo!
-
-        Prova ad usare alcuni blocchi `"tutti i paperi" eseguono la mossa ...` per scrivere del codice che faccia ballare i paperi tutti assieme.
-      Dance_Party_11.5: |-
         Dai un’occhiata a questo blocco:
 
         <xml>   <block type="Dancelab_makeNewDanceSpriteGroup">     <title name="N">6</title>     <title name="COSTUME">"DUCK"</title>     <title name="LAYOUT">"circle"</title>   </block></xml>

@@ -359,7 +359,7 @@ it:
       Dancelab_setBackground:
         text: imposta il colore dello sfondo {COLOR}
       Dancelab_setBackgroundEffect:
-        text: imposta sfondo con effetto {EFFECT}
+        text: imposta sfondo con effetto {EFFECT} [PALETTE][1]
         options:
           EFFECT:
             '"none"': Nessuno
@@ -367,7 +367,7 @@ it:
             '"disco"': Quadrati
             '"rainbow"': Arcobaleno
             '"diamonds"': Rombi
-            '"splatter"': Bolle
+            '"splatter"': Schizzi di vernice
             '"swirl"': Ipnotico
             '"snowflakes"': Neve
             '"spiral"': Spirale
@@ -459,9 +459,7 @@ it:
             '"y"': posizione verticale
             '"tint"': tonalità
       Dancelab_setTint:
-        text: imposta la tonalità del {SPRITE} su {VAL}
-      Dancelab_setTintInline:
-        text: imposta la tonalità del {SPRITE} su {VAL}
+        text: imposta la tonalità di {SPRITE} a {VAL}
       Dancelab_setTintEach:
         options:
           THIS:
@@ -477,6 +475,7 @@ it:
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
       Dancelab_setVisible:
+        text: imposta visibilità {SPRITE} su {VISIBILITY}
         options:
           VISIBILITY:
             'true': visibile
