@@ -18,7 +18,7 @@
           ],
           [
             "(Random)",
-            "['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]"
+            "\"rand\""
           ],
           [
             "Bubbles",
