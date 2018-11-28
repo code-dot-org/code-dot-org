@@ -91,6 +91,9 @@ Dance.prototype.init = function (config) {
   this.level = config.level;
   this.skin = config.skin;
   this.share = config.share;
+  this.studioAppInitPromise = new Promise(resolve => {
+    this.studioAppInitPromiseResolve = resolve;
+  });
   this.danceReadyPromise = new Promise(resolve => {
     this.danceReadyPromiseResolve = resolve;
   });
@@ -111,6 +114,7 @@ Dance.prototype.init = function (config) {
     config.valueTypeTabShapeMap = {[Blockly.BlockValueType.SPRITE]: 'angle'};
 
     this.studioApp_.init(config);
+    this.studioAppInitPromiseResolve();
 
     const finishButton = document.getElementById('finishButton');
     if (finishButton) {
@@ -304,7 +308,15 @@ Dance.prototype.afterInject_ = function () {
     recordReplayLog,
     showMeasureLabel: !this.share,
     onHandleEvents: this.onHandleEvents.bind(this),
-    onInit: () => {
+    onInit: async (nativeAPI) => {
+      if (this.share) {
+        // In the share scenario, we call ensureSpritesAreLoaded() early since the
+        // student code can't change. This way, we can start fetching assets while
+        // waiting for the user to press the Run button.
+        await this.studioAppInitPromise;
+        const charactersReferenced = this.computeCharactersReferenced(this.studioApp_.getCode());
+        await nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
+      }
       this.danceReadyPromiseResolve();
       // Log this so we can learn about how long it is taking for DanceParty to
       // load of all of its assets in the wild (will use the timeSinceLoad attribute)
@@ -601,16 +613,6 @@ Dance.prototype.initInterpreter = function () {
 
   const studentCode = this.studioApp_.getCode();
 
-  // Process studentCode to determine which characters are referenced and create
-  // charactersReferencedSet with the results:
-  const charactersReferencedSet = new Set();
-  const charactersRegExp = new RegExp(/^.*makeNewDanceSprite(?:Group)?\([^"]*"([^"]*)[^\r\n]*/, 'gm');
-  let match;
-  while ((match = charactersRegExp.exec(studentCode))) {
-    const characterName = match[1];
-    charactersReferencedSet.add(characterName);
-  }
-
   let code = require('!!raw-loader!@code-dot-org/dance-party/src/p5.dance.interpreted');
   code += studentCode;
 
@@ -622,6 +624,19 @@ Dance.prototype.initInterpreter = function () {
 
   this.hooks = CustomMarshalingInterpreter.evalWithEvents(api, events, code).hooks;
 
+  return this.computeCharactersReferenced(studentCode);
+};
+
+Dance.prototype.computeCharactersReferenced = function (studentCode) {
+  // Process studentCode to determine which characters are referenced and create
+  // charactersReferencedSet with the results:
+  const charactersReferencedSet = new Set();
+  const charactersRegExp = new RegExp(/^.*makeNewDanceSprite(?:Group)?\([^"]*"([^"]*)[^\r\n]*/, 'gm');
+  let match;
+  while ((match = charactersRegExp.exec(studentCode))) {
+    const characterName = match[1];
+    charactersReferencedSet.add(characterName);
+  }
   return Array.from(charactersReferencedSet);
 };
 
