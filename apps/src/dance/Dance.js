@@ -514,11 +514,25 @@ Dance.prototype.initInterpreter = function () {
     setBackground: color => {
       nativeAPI.setBackground(color.toString());
     },
+    // DEPRECATED
+    // An old block may refer to this version of the command,
+    // so we're keeping it around for backwards-compat.
+    // @see https://github.com/code-dot-org/dance-party/issues/469
     setBackgroundEffect: (effect, palette = 'default') => {
       nativeAPI.setBackgroundEffect(effect.toString(), palette.toString());
     },
+    setBackgroundEffectWithPalette: (effect, palette = 'default') => {
+      nativeAPI.setBackgroundEffectWithPalette(effect.toString(), palette.toString());
+    },
+    // DEPRECATED
+    // An old block may refer to this version of the command,
+    // so we're keeping it around for backwards-compat.
+    // @see https://github.com/code-dot-org/dance-party/issues/469
     setForegroundEffect: effect => {
       nativeAPI.setForegroundEffect(effect.toString());
+    },
+    setForegroundEffectExtended: effect => {
+      nativeAPI.setForegroundEffectExtended(effect.toString());
     },
     makeNewDanceSprite: (costume, name, location) => {
       return Number(sprites.push(nativeAPI.makeNewDanceSprite(costume, name, location)) - 1);
