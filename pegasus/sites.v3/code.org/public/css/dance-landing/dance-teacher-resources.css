@@ -46,6 +46,8 @@
   background-color: #e7e8ea;
   border-color: #e7e8ea;
   color: #5b6770;
+  height: auto;
+  white-space: normal;
 }
 
 #teacher-resources .col-50:nth-child(2) {
