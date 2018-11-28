@@ -143,7 +143,7 @@ XML
     assert_equal xml, xml2
   end
 
-  def create_test_data(name, pool, block_text, args, category: 'Events')
+  def create_custom_block(name, pool, block_text, args, category: 'Events')
     [{
       name: name,
       pool: pool,
@@ -449,7 +449,7 @@ XML
 
     level = create(:level, :blockly, level_num: 'level1_2_3')
 
-    test_custom_block = create_test_data(
+    test_custom_block = create_custom_block(
       "ThunderCats_atSelectStrengthLevel", "SelectStrengthLevel",
       "check the {LEVEL}",
       [
@@ -457,7 +457,7 @@ XML
       ],
     )
 
-    translated_block = create_test_data(
+    translated_block = create_custom_block(
       "ThunderCats_atSelectStrengthLevel", "SelectStrengthLevel",
       "vérifier la {LEVEL}",
       [
