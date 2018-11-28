@@ -376,6 +376,8 @@ fr:
             '"tint"': nuance
       Dancelab_setTint:
         text: définir la nuance de {SPRITE} à {VAL}
+      Dancelab_setTintInline:
+        text: définir la nuance de {SPRITE} à {VAL}
       Dancelab_setTintEach:
         options:
           THIS:

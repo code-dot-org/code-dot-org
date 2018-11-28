@@ -404,6 +404,8 @@ ru:
             '"tint"': оттенок
       Dancelab_setTint:
         text: установить оттенок {SPRITE} на {VAL}
+      Dancelab_setTintInline:
+        text: установить оттенок {SPRITE} на {VAL}
       Dancelab_setTintEach:
         options:
           THIS:

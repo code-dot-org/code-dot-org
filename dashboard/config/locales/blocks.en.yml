@@ -464,6 +464,8 @@ en:
             '"tint"': tint
       Dancelab_setTint:
         text: set {SPRITE} tint to {VAL}
+      Dancelab_setTintInline:
+        text: set {SPRITE} tint to {VAL}
       Dancelab_setTintEach:
         text: set {THIS} tint to {VAL}
         options:
@@ -528,7 +530,7 @@ en:
             '"height"': height
             '"rotation"': rotation
             '"x"': horizontal position
-            '"y"': vertial position
+            '"y"': vertical position
             '"direction"': movement direction
             '"tint"': tint
           RANGE:
