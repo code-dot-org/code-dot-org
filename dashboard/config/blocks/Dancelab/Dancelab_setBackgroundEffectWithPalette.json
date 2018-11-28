@@ -7,7 +7,7 @@
       0.65
     ],
     "inline": false,
-    "func": "setBackgroundEffect",
+    "func": "setBackgroundEffectWithPalette",
     "blockText": "set background effect\n{EFFECT} {PALETTE}",
     "args": [
       {
@@ -19,7 +19,7 @@
           ],
           [
             "(Random)",
-            "['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]"
+            "\"rand\""
           ],
           [
             "Circles",
