@@ -2547,6 +2547,8 @@ pt-BR:
             Minecraft Hour of Code:
               name: Hora do Código Minecraft
           title: 'Minecraft: Jornada do Herói'
+          description: O Minecraft está de volta para a Hora do Código com uma nova
+            atividade! Viaje através de Minecraft com código.
         csp-explore-2017:
           stages:
             Post-Course Survey:
@@ -3130,6 +3132,9 @@ pt-BR:
             Dance Party:
               name: Festa dançante
           title: Festa dançante
+          description_short: Apresentando Katy Perry, Madonna, J. Balvin, Sia, Keith
+            Urban, Ciara e mais 25!
+          description: Crie sua própria dança para compartilhar com seus amigos.
         frozen-2018-test-b:
           stages:
             Artist:
@@ -3151,7 +3156,7 @@ pt-BR:
               name: Festa dançante
         dance-extras:
           title: Continue dançando
-          description: Vá além da primeira hora com ideias de projetos estendidas.
+          description: Vá além da primeira hora com ideias de projeto estendido.
         coursef-2019:
           description_short: Aprenda todos os conceitos fundamentais da Ciência da
             Computação e crie sua própria arte, história ou jogo.

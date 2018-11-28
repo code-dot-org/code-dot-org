@@ -884,6 +884,8 @@ pt-BR:
       title: Minecraft
     hero:
       title: Minecraft
+      body: O Minecraft está de volta para a Hora do Código com uma nova atividade!
+        Viaje através de Minecraft com código.
     sports:
       title: Esportes
       body: Faça um jogo de basquete ou misture os esportes.
@@ -1319,7 +1321,7 @@ pt-BR:
   return_unit_overview: Ir para visão geral da unidade
   return_course_overview: Ir para visão geral da unidade
   view_all_units: Visualizar todas unidades
-  view_teacher_guide: Visualizar o guia para professores
+  view_teacher_guide: Exibir Guia do Professor
   pd:
     form_labels:
       first_name: Primeiro nome

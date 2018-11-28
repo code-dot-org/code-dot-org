@@ -43,7 +43,7 @@ pt-BR:
             MOVES.Floss: Dança do fio dental
             MOVES.Fresh: Novo
             MOVES.Clown: Palhaço
-            MOVES.Kick: Chute
+            MOVES.Kick: Estrela
             MOVES.ThisOrThat: Isso ou Aquilo
             MOVES.Rest: Nenhum
           DIR:
@@ -64,7 +64,7 @@ pt-BR:
             MOVES.Floss: Dança do fio dental
             MOVES.Fresh: Novo
             MOVES.Clown: Palhaço
-            MOVES.Kick: Chute
+            MOVES.Kick: Estrela
             MOVES.ThisOrThat: Isso ou Aquilo
             MOVES.Rest: Nenhum
           DIR:
@@ -110,7 +110,7 @@ pt-BR:
             MOVES.XHop: Pular
             MOVES.XHighKick: Pontapé
             MOVES.XSlide: Deslizar
-            MOVES.Kick: Chute
+            MOVES.Kick: Estrela
             MOVES.ThisOrThat: Isso ou Aquilo
             MOVES.Rest: Nenhum
           DIR:
@@ -133,7 +133,7 @@ pt-BR:
             MOVES.XHop: Pular
             MOVES.XHighKick: Pontapé
             MOVES.XSlide: Deslizar
-            MOVES.Kick: Chute
+            MOVES.Kick: Estrela
             MOVES.ThisOrThat: Isso ou Aquilo
             MOVES.Rest: Nenhum
           DIR:
@@ -195,7 +195,7 @@ pt-BR:
             MOVES.Floss: Dança do fio dental
             MOVES.Fresh: Novo
             MOVES.Roll: Rolar
-            MOVES.Kick: Chute
+            MOVES.Kick: Estrela
             MOVES.ThisOrThat: Isso ou Aquilo
             MOVES.Rest: Nenhum
       Dancelab_ifTime:
@@ -240,7 +240,7 @@ pt-BR:
             '"UNICORN"': todos os unicórnios
           FORMAT:
             '"border"': borda
-            '"inner"': quadrado de dentro
+            '"inner"': quadrado interno
             '"circle"': círculo
             '"grid"': grade
             '"row"': linha
@@ -315,7 +315,7 @@ pt-BR:
             '"UNICORN"': Unicórnios
           LAYOUT:
             '"border"': borda
-            '"inner"': quadrado de dentro
+            '"inner"': quadrado interno
             '"circle"': círculo
             '"grid"': grade
             '"row"': linha
@@ -338,7 +338,7 @@ pt-BR:
       Dancelab_setBackground:
         text: definir a cor do plano de fundo {COLOR}
       Dancelab_setBackgroundEffect:
-        text: definir o efeito do plano de fundo {EFFECT}
+        text: definir o efeito do plano de fundo {EFFECT} [PALETTE][1]
         options:
           EFFECT:
             '"none"': Nenhum
@@ -346,7 +346,7 @@ pt-BR:
             '"disco"': Quadrados
             '"rainbow"': Arco-íris
             '"diamonds"': Diamantes
-            '"splatter"': Bolhas
+            '"splatter"': Respingos de tinta
             '"swirl"': Hipno
             '"snowflakes"': Neve
             '"spiral"': Espiral
@@ -438,8 +438,6 @@ pt-BR:
             '"y"': posição vertical
             '"tint"': tonalidade
       Dancelab_setTint:
-        text: definir tonalidade {SPRITE} para {VAL}
-      Dancelab_setTintInline:
         text: definir tonalidade {SPRITE} para {VAL}
       Dancelab_setTintEach:
         text: definir tonalidade de {THIS} para {VAL}
