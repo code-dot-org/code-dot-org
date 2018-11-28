@@ -2217,6 +2217,7 @@ it-IT:
   hoc_overview_partner_activities_body: Nel sito dell'Ora del Codice puoi trovare
     più di 100 esercitazioni per tutte le età e livelli di esperienza, sviluppate
     da Code.org e partner.
+  hoc_overview_partner_activities_link: Visualizza le attività
   hoc_overview_start_tutorial: Inizia
   hoc_overview_view_teacher_guide: Visualizza la guida per l'insegnante
   hoc2018_creativity: creatività
@@ -2321,6 +2322,9 @@ it-IT:
     creando progetti più complessi.
   hoc2018_dance_keep_on_dancing_specs: Lingua | Formato | Oltre i 13 anni
   hoc2018_dance_keep_on_dancing_button: Inizia la seconda parte
+  hoc2018_dance_teacher_resources_title: Risorse per l'insegnante
+  hoc2018_dance_teacher_resources_tile1_description: Programmi di lezione, certificati
+    e filtering della musica.
   hoc2018_dance_teacher_resources_tile1_button: Piano di lavoro della lezione
   hoc2018_dance_teacher_resources_tile2_title: Ballando col Codice Unplugged (lezione
     tradizionale)
