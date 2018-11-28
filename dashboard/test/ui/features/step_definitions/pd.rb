@@ -202,7 +202,7 @@ And(/^I create some fake applications of each type and status$/) do
       Pd::Application::ApplicationBase.statuses.each do |status|
         10.times do
           teacher = FactoryGirl.create(:teacher, school_info: SchoolInfo.first, email: "teacher_#{SecureRandom.hex}@code.org")
-          application = FactoryGirl.create(:pd_facilitator1819_application, course: course, user: teacher)
+          application = FactoryGirl.create(:pd_facilitator1920_application, course: course, user: teacher)
           application.update(status: status)
         end
       end
