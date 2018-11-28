@@ -30,16 +30,16 @@ es:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
-            '"UNICORN"': solo unicornios
+            '"UNICORN"': todos los unicornios
           MOVE:
             '"next"': "(Siguiente)"
             '"prev"': "(Anterior)"
             '"rand"': "(Aleatorio)"
-            MOVES.Roll: Roll
+            MOVES.Roll: Bamboleo
             MOVES.ClapHigh: Palmas hacia arriba
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Doble abajo
             MOVES.Clown: Clown
-            MOVES.Kick: Kick
+            MOVES.Kick: Estrella
             MOVES.ThisOrThat: Este o aquel
             MOVES.Rest: Ninguno
           DIR:
@@ -52,11 +52,11 @@ es:
             '"next"': "(Siguiente)"
             '"prev"': "(Anterior)"
             '"rand"': "(Aleatorio)"
-            MOVES.Roll: Roll
+            MOVES.Roll: Bamboleo
             MOVES.ClapHigh: Palmas hacia arriba
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Doble abajo
             MOVES.Clown: Clown
-            MOVES.Kick: Kick
+            MOVES.Kick: Estrella
             MOVES.ThisOrThat: Este o aquel
             MOVES.Rest: Ninguno
           DIR:
@@ -87,14 +87,14 @@ es:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
-            '"UNICORN"': solo unicornios
+            '"UNICORN"': todos los unicornios
           MOVE:
             '"rand"': "(Aleatorio)"
-            MOVES.Roll: Roll
+            MOVES.Roll: Bamboleo
             MOVES.ClapHigh: Palmas hacia arriba
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Doble abajo
             MOVES.Clown: Clown
-            MOVES.Kick: Kick
+            MOVES.Kick: Estrella
             MOVES.ThisOrThat: Este o aquel
             MOVES.Rest: Ninguno
           DIR:
@@ -105,11 +105,11 @@ es:
         options:
           MOVE:
             '"rand"': "(Aleatorio)"
-            MOVES.Roll: Roll
+            MOVES.Roll: Bamboleo
             MOVES.ClapHigh: Palmas hacia arriba
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Doble abajo
             MOVES.Clown: Clown
-            MOVES.Kick: Kick
+            MOVES.Kick: Estrella
             MOVES.ThisOrThat: Este o aquel
             MOVES.Rest: Ninguno
           DIR:
@@ -164,9 +164,9 @@ es:
           DANCE:
             MOVES.ClapHigh: Palmas hacia arriba
             MOVES.Clown: Clown
-            MOVES.DoubleJam: Double Jam
-            MOVES.Roll: Roll
-            MOVES.Kick: Kick
+            MOVES.DoubleJam: Doble abajo
+            MOVES.Roll: Bamboleo
+            MOVES.Kick: Estrella
             MOVES.ThisOrThat: Este o aquel
             MOVES.Rest: Ninguno
       Dancelab_ifTime:
@@ -203,14 +203,16 @@ es:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
-            '"UNICORN"': solo unicornios
+            '"UNICORN"': todos los unicornios
           FORMAT:
-            '"border"': borde
+            '"border"': frontera
+            '"inner"': cuadrado
             '"circle"': círculo
             '"grid"': cuadrícula
             '"row"': fila
             '"column"': columna
-            '"plus"': más
+            '"x"': cruz
+            '"plus"': signo más
             '"random"': aleatorio
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -278,12 +280,14 @@ es:
             '"SHARK"': Tiburones
             '"UNICORN"': Unicornios
           LAYOUT:
-            '"border"': borde
+            '"border"': frontera
+            '"inner"': cuadrado
             '"circle"': círculo
             '"grid"': cuadrícula
             '"row"': fila
             '"column"': columna
-            '"plus"': más
+            '"x"': cruz
+            '"plus"': signo más
             '"random"': aleatorio
       Dancelab_mixColors:
         text: mezclar {COLOR1} y {COLOR2}
@@ -300,15 +304,15 @@ es:
       Dancelab_setBackground:
         text: establecer color de fondo {COLOR}
       Dancelab_setBackgroundEffect:
-        text: establecer efecto de fondo {EFFECT}
+        text: stablecer efecto de fondo {EFFECT} [PALETTE][1]
         options:
           EFFECT:
             '"none"': Ninguno
             '"color_cycle"': Colores
             '"disco"': Cuadrados
-            '"rainbow"': Colores
+            '"rainbow"': Arcoíris
             '"diamonds"': Diamantes
-            '"splatter"': Burbujas
+            '"splatter"': Salpicaduras de pintura
             '"swirl"': Hipnótico
             '"snowflakes"': Nieve
             '"spiral"': Espiral
@@ -336,7 +340,7 @@ es:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
-            '"UNICORN"': solo unicornios
+            '"UNICORN"': todos los unicornios
           SPEED:
             '1': normal
             '2': rápido
@@ -378,7 +382,7 @@ es:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
-            '"UNICORN"': solo unicornios
+            '"UNICORN"': todos los unicornios
           PROPERTY:
             '"scale"': tamaño
             '"width"': anchura
@@ -400,8 +404,6 @@ es:
             '"tint"': tonalidad
       Dancelab_setTint:
         text: establecer tonalidad {SPRITE} a {VAL}
-      Dancelab_setTintInline:
-        text: establecer tonalidad {SPRITE} a {VAL}
       Dancelab_setTintEach:
         options:
           THIS:
@@ -417,6 +419,7 @@ es:
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
       Dancelab_setVisible:
+        text: establecer {SPRITE} visible en {VISIBILITY}
         options:
           VISIBILITY:
             'true': visible
@@ -436,7 +439,7 @@ es:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
-            '"UNICORN"': solo unicornios
+            '"UNICORN"': todos los unicornios
           VISIBILITY:
             'true': visible
             'false': invisible
