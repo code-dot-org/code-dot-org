@@ -41,7 +41,8 @@ const styles = {
     fontSize: 14,
     lineHeight: "21px",
     height: 140,
-    width: 260
+    marginBottom: 5,
+    overflowY: 'scroll'
   },
   button: {
     marginLeft: 20,
@@ -79,6 +80,8 @@ class ResourceCard extends Component {
     let buttonStyles = [styles.button];
     let cardStyles = [styles.card, localeStyle];
     let titleStyles = [styles.title, styles.text, localeStyle];
+    let descriptionStyles = [styles.text, styles.description, localeStyle];
+
     if (allowWrap) {
       buttonStyles.push(styles.buttonAllowWrap);
       cardStyles.push(styles.cardAllowWrap);
@@ -92,7 +95,7 @@ class ResourceCard extends Component {
         <div style={titleStyles}>
           {title}
         </div>
-        <div style={[styles.text, styles.description, localeStyle]}>
+        <div style={descriptionStyles}>
           {description}
         </div>
         <br/>
