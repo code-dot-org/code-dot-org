@@ -356,7 +356,7 @@ he:
       Dancelab_setBackground:
         text: קבע צבע רקע {COLOR}
       Dancelab_setBackgroundEffect:
-        text: קבע אפקט רקע {EFFECT}
+        text: קבעו אפקט רקע {EFFECT}
         options:
           EFFECT:
             '"none"': כלום
@@ -456,9 +456,7 @@ he:
             '"y"': מיקום אנכי
             '"tint"': גוון
       Dancelab_setTint:
-        text: קבעו גוון של {SPRITE} ל-{VAL}
-      Dancelab_setTintInline:
-        text: קבעו גוון של {SPRITE} ל-{VAL}
+        text: קבע גוון של {SPRITE} ל {VAL}
       Dancelab_setTintEach:
         text: קבע גוון של {THIS} ל {VAL}
         options:

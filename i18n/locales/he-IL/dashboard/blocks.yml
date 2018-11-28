@@ -356,7 +356,7 @@ he:
       Dancelab_setBackground:
         text: קבע צבע רקע {COLOR}
       Dancelab_setBackgroundEffect:
-        text: קבע אפקט רקע {EFFECT}
+        text: קבעו אפקט רקע {EFFECT}
         options:
           EFFECT:
             '"none"': כלום
