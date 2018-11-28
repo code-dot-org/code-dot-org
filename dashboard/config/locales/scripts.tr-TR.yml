@@ -7044,6 +7044,8 @@ tr:
             Minecraft Hour of Code:
               name: Minecraft Kod Saati
           description_short: Minecraft, Kod Saati için yeni bir etkinlikle geri döndü!
+          description: Minecraft Kodlama Saati için yepyeni bir faaliyetle geri döndü.
+            Kodlamayla Minecraft’ta bir gezintiye çıkın
         applab-intro-staging:
           stages:
             Intro to AppLab - Choose Your Own Adventure 2:
@@ -9742,6 +9744,9 @@ tr:
             Dance Party:
               name: Dans Partisi
           title: Dans Partisi
+          description_short: Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara
+            ve 25 farklı şarkıcı daha sizlerle!
+          description: Kendi dans partinizi kodlayın ve arkadaşlarınızla paylaşın!
         frozen-2018-test-b:
           stages:
             Artist:
@@ -9767,6 +9772,9 @@ tr:
           stages:
             Dance Party:
               name: Dans Partisi
+        dance-extras:
+          title: Dans Etmeye Devam
+          description: Genişletilmiş proje fikirleri ile ilk saatin ötesine geç.
         coursef-2019:
           description: Farklı döngüler, olaylar, fonksiyonlar ve koşulları kullanma
             hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek ve

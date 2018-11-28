@@ -30,15 +30,16 @@ tr:
             '"PINEAPPLE"': tüm ananaslar
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
+            '"UNICORN"': tüm tek boynuzlu atlar
           MOVE:
             '"next"': "(Sonraki)"
             '"prev"': "(Önceki)"
             '"rand"': "(Rastgele)"
             MOVES.Roll: Yuvarlanma
             MOVES.ClapHigh: Yüksek Alkış
-            MOVES.DoubleJam: Çift Jam
+            MOVES.DoubleJam: Çift Aşağı
             MOVES.Clown: Palyaço
-            MOVES.Kick: Tekme
+            MOVES.Kick: Yıldız
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
           DIR:
@@ -53,9 +54,9 @@ tr:
             '"rand"': "(Rastgele)"
             MOVES.Roll: Yuvarlanma
             MOVES.ClapHigh: Yüksek Alkış
-            MOVES.DoubleJam: Çift Jam
+            MOVES.DoubleJam: Çift Aşağı
             MOVES.Clown: Palyaço
-            MOVES.Kick: Tekme
+            MOVES.Kick: Yıldız
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
           DIR:
@@ -86,13 +87,14 @@ tr:
             '"PINEAPPLE"': tüm ananaslar
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
+            '"UNICORN"': tüm tek boynuzlu atlar
           MOVE:
             '"rand"': "(Rastgele)"
             MOVES.Roll: Yuvarlanma
             MOVES.ClapHigh: Yüksek Alkış
-            MOVES.DoubleJam: Çift Jam
+            MOVES.DoubleJam: Çift Aşağı
             MOVES.Clown: Palyaço
-            MOVES.Kick: Tekme
+            MOVES.Kick: Yıldız
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
           DIR:
@@ -105,9 +107,9 @@ tr:
             '"rand"': "(Rastgele)"
             MOVES.Roll: Yuvarlanma
             MOVES.ClapHigh: Yüksek Alkış
-            MOVES.DoubleJam: Çift Jam
+            MOVES.DoubleJam: Çift Aşağı
             MOVES.Clown: Palyaço
-            MOVES.Kick: Tekme
+            MOVES.Kick: Yıldız
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
           DIR:
@@ -162,9 +164,9 @@ tr:
           DANCE:
             MOVES.ClapHigh: Yüksek Alkış
             MOVES.Clown: Palyaço
-            MOVES.DoubleJam: Çift Jam
+            MOVES.DoubleJam: Çift Aşağı
             MOVES.Roll: Yuvarlanma
-            MOVES.Kick: Tekme
+            MOVES.Kick: Yıldız
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
       Dancelab_ifTime:
@@ -201,11 +203,16 @@ tr:
             '"PINEAPPLE"': tüm ananaslar
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
+            '"UNICORN"': tüm tek boynuzlu atlar
           FORMAT:
+            '"border"': kenarlık
+            '"inner"': iç kare
             '"circle"': çember
             '"grid"': ızgara
             '"row"': satır
             '"column"': sütun
+            '"x"': çapraz geçiş
+            '"plus"': artı
             '"random"': gelişigüzel
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -272,10 +279,14 @@ tr:
             '"SHARK"': Köpek balıkları
             '"UNICORN"': Tek boynuzlu atlar
           LAYOUT:
+            '"border"': kenarlık
+            '"inner"': iç kare
             '"circle"': çember
             '"grid"': ızgara
             '"row"': satır
             '"column"': sütun
+            '"x"': çapraz geçiş
+            '"plus"': artı
             '"random"': gelişigüzel
       Dancelab_mixColors:
         text: "{COLOR1} ve {COLOR2}’yi karıştır"
@@ -292,13 +303,17 @@ tr:
       Dancelab_setBackground:
         text: arka plan rengini {COLOR} olarak ayarla
       Dancelab_setBackgroundEffect:
-        text: arka plan efektini {EFFECT} olarak ayarla
+        text: arka plan efektini {EFFECT} [PALETTE][1] olarak ayarla
         options:
           EFFECT:
             '"none"': Hiçbiri
+            '"color_cycle"': Renkler
             '"disco"': Kareler
-            '"rainbow"': Renkler
+            '"rainbow"': Gökkuşağı
             '"diamonds"': Karolar
+            '"splatter"': Boya Lekesi
+            '"swirl"': Hipno
+            '"snowflakes"': Kar
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Rastgele)"
       Dancelab_setDanceSpeed:
         text: "{SPRITE} dans hızını {SPEED} olarak değiştir"
@@ -323,6 +338,7 @@ tr:
             '"PINEAPPLE"': tüm ananaslar
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
+            '"UNICORN"': tüm tek boynuzlu atlar
           SPEED:
             '1': normal
             '2': hızlı
@@ -363,6 +379,7 @@ tr:
             '"PINEAPPLE"': tüm ananaslar
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
+            '"UNICORN"': tüm tek boynuzlu atlar
           PROPERTY:
             '"scale"': boyut
             '"width"': genişlik
@@ -384,8 +401,6 @@ tr:
             '"tint"': renk tonu
       Dancelab_setTint:
         text: "{SPRITE} renk tonunu {VAL} olarak ayarla"
-      Dancelab_setTintInline:
-        text: "{SPRITE} renk tonunu {VAL} olarak ayarla"
       Dancelab_setTintEach:
         options:
           THIS:
@@ -401,6 +416,7 @@ tr:
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
       Dancelab_setVisible:
+        text: "{SPRITE} görünürlüğünü {VISIBILITY} olarak ayarla"
         options:
           VISIBILITY:
             'true': görünür
@@ -420,6 +436,7 @@ tr:
             '"PINEAPPLE"': tüm ananaslar
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
+            '"UNICORN"': tüm tek boynuzlu atlar
           VISIBILITY:
             'true': görünür
             'false': görünmez

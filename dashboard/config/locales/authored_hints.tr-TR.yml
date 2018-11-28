@@ -1043,13 +1043,6 @@ tr:
           * Yaratıcı olmanız yeterli!
 
           *Bu seviye 8 ölçüden sonra biter.*
-      Dance_Party_11.5_authored_hint:
-        validation: |-
-          **Bu seviyeyi nasıl geçerim?**
-
-          * Yaratıcı olmanız yeterli!
-
-          *Bu seviye 8 ölçüden sonra biter.*
       Dance_Party_11_5_authored_hint:
         validation: |-
           **Bu seviyeyi nasıl geçerim?**
