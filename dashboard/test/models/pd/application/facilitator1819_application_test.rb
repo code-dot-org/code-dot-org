@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'state_abbr'
 
 module Pd::Application
   class Facilitator1819ApplicationTest < ActiveSupport::TestCase
