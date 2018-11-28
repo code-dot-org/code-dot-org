@@ -35,10 +35,10 @@ cs:
             '"next"': "(Další)"
             '"prev"': "(Předchozí)"
             '"rand"': "(Náhodně)"
-            MOVES.Roll: Kutálí se
+            MOVES.Roll: Naklánění
             MOVES.ClapHigh: Tleskají vysoko
             MOVES.Dab: Poklepávají
-            MOVES.DoubleJam: Dělají dvojité improvizace
+            MOVES.DoubleJam: Dvojitě dolů
             MOVES.Drop: Klesají
             MOVES.Floss: Tančí floss
             MOVES.Fresh: Tančí fresh
@@ -56,10 +56,10 @@ cs:
             '"next"': "(Další)"
             '"prev"': "(Předchozí)"
             '"rand"': "(Náhodně)"
-            MOVES.Roll: Kutálí se
+            MOVES.Roll: Naklánění
             MOVES.ClapHigh: Tleskají vysoko
             MOVES.Dab: Poklepávají
-            MOVES.DoubleJam: Dělají dvojité improvizace
+            MOVES.DoubleJam: Dvojitě dolů
             MOVES.Drop: Klesají
             MOVES.Floss: Tančí floss
             MOVES.Fresh: Tančí fresh
@@ -99,10 +99,10 @@ cs:
             '"UNICORN"': všichni jednorožci
           MOVE:
             '"rand"': "(Náhodně)"
-            MOVES.Roll: Kutálí se
+            MOVES.Roll: Naklánění
             MOVES.ClapHigh: Tleskají vysoko
             MOVES.Dab: Poklepávají
-            MOVES.DoubleJam: Dělají dvojité improvizace
+            MOVES.DoubleJam: Dvojitě dolů
             MOVES.Drop: Klesají
             MOVES.Floss: Tančí floss
             MOVES.Fresh: Tančí fresh
@@ -114,14 +114,14 @@ cs:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
-        text: "{SPRITE} dělá {MOVE} SMĚR][2] jednou"
+        text: "{SPRITE} dělá {MOVE} {DIR} jednou"
         options:
           MOVE:
             '"rand"': "(Náhodně)"
-            MOVES.Roll: Kutálí se
+            MOVES.Roll: Naklánění
             MOVES.ClapHigh: Tleskají vysoko
             MOVES.Dab: Poklepávají
-            MOVES.DoubleJam: Dělají dvojité improvizace
+            MOVES.DoubleJam: Dvojitě dolů
             MOVES.Drop: Klesají
             MOVES.Floss: Tančí floss
             MOVES.Fresh: Tančí fresh
@@ -183,11 +183,11 @@ cs:
             MOVES.ClapHigh: Tleskají vysoko
             MOVES.Clown: Šaškují
             MOVES.Dab: Poklepávají
-            MOVES.DoubleJam: Dělají dvojité improvizace
+            MOVES.DoubleJam: Dvojitě dolů
             MOVES.Drop: Klesají
             MOVES.Floss: Tančí floss
             MOVES.Fresh: Tančí fresh
-            MOVES.Roll: Kutálí se
+            MOVES.Roll: Naklánění
             MOVES.Kick: Kopou
             MOVES.ThisOrThat: Toto nebo ono
             MOVES.Rest: Žádný
@@ -230,8 +230,8 @@ cs:
             '"SHARK"': všichni žraloci
             '"UNICORN"': všichni jednorožci
           FORMAT:
-            '"border"': rámeček
-            '"inner"': uvnitř čtverce
+            '"border"': hranice
+            '"inner"': vnitřní čtverec
             '"circle"': kruh
             '"grid"': mřížka
             '"row"': řádek
@@ -305,8 +305,8 @@ cs:
             '"SHARK"': Žraloci
             '"UNICORN"': Jednorožci
           LAYOUT:
-            '"border"': rámeček
-            '"inner"': uvnitř čtverce
+            '"border"': hranice
+            '"inner"': vnitřní čtverec
             '"circle"': kruh
             '"grid"': mřížka
             '"row"': řádek
@@ -335,9 +335,9 @@ cs:
             '"none"': Žádný
             '"color_cycle"': Barvy
             '"disco"': Čtverce
-            '"rainbow"': Barvy
+            '"rainbow"': Duha
             '"diamonds"': Diamanty
-            '"splatter"': Bubliny
+            '"splatter"': Barevný stříkanec
             '"swirl"': Hypno
             '"snowflakes"': Sníh
             '"spiral"': Spirála
@@ -430,8 +430,6 @@ cs:
             '"tint"': odstín
       Dancelab_setTint:
         text: nastavit {SPRITE} odstín na {VAL}
-      Dancelab_setTintInline:
-        text: nastavit {SPRITE} odstín na {VAL}
       Dancelab_setTintEach:
         text: nastav odstín {THIS} na {VAL}
         options:
@@ -448,7 +446,7 @@ cs:
             '"ROBOT"': všichni roboti
             '"SHARK"': všichni žraloci
       Dancelab_setVisible:
-        text: nastav viditelnost {SPRITE} na {VISIBILITY}
+        text: nastavit {SPRITE} viditelný pro {VISIBILITY}
         options:
           VISIBILITY:
             'true': viditelný
