@@ -1527,6 +1527,8 @@ th:
             Dance Party:
               name: งานเต้นรำ
           title: งานเต้นรำ
+          description_short: มีเพลงของศิลปินดังต่างๆ เช่น Katy Perry, Madonna, J.
+            Balvin, Sia, Keith Urban, Ciara และคนอื่นๆ อีก 25 คน!
           description: เขียนโค้ดสำหรับปาร์ตี้เต้นรำของคุณเอง เพื่อแชร์กับเพื่อนๆ ของคุณ!
         frozen-2018-test-b:
           stages:
@@ -1548,6 +1550,9 @@ th:
           stages:
             Dance Party:
               name: งานเต้นรำ
+        dance-extras:
+          title: สร้างโค้ดเต้นรำกันต่อไป
+          description: ศึกษาต่อเนื่องจากขั้นพื้นฐานด้วยการใส่ไอเดียเพิ่มเติมให้กับโครงงาน
         coursef-2019:
           stages:
             Sequence in Maze:
