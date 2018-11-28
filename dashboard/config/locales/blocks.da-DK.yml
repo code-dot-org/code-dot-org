@@ -10,11 +10,20 @@ da:
         options:
           GROUP:
             sprites: alle
+            '"UNICORN"': alle enhjørninger
+          MOVE:
+            MOVES.Roll: Rul med kroppen
+            MOVES.DoubleJam: Ned to gange
+            MOVES.Kick: Stjerne
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
+          MOVE:
+            MOVES.Roll: Rul med kroppen
+            MOVES.DoubleJam: Ned to gange
+            MOVES.Kick: Stjerne
           DIR:
             '1': "→"
             "-1": "←"
@@ -27,11 +36,20 @@ da:
         options:
           GROUP:
             sprites: alle
+            '"UNICORN"': alle enhjørninger
+          MOVE:
+            MOVES.Roll: Rul med kroppen
+            MOVES.DoubleJam: Ned to gange
+            MOVES.Kick: Stjerne
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
+          MOVE:
+            MOVES.Roll: Rul med kroppen
+            MOVES.DoubleJam: Ned to gange
+            MOVES.Kick: Stjerne
           DIR:
             '1': "→"
             "-1": "←"
@@ -48,6 +66,12 @@ da:
         options:
           UNIT:
             '"seconds"': sekunder
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.DoubleJam: Ned to gange
+            MOVES.Roll: Rul med kroppen
+            MOVES.Kick: Stjerne
       Dancelab_ifTime:
         options:
           UNIT:
@@ -62,7 +86,11 @@ da:
         options:
           GROUP:
             sprites: alle
+            '"UNICORN"': alle enhjørninger
           FORMAT:
+            '"border"': grænse
+            '"inner"': indersiden af firkant
+            '"x"': kryds og tværs
             '"random"': tilfældig
       Dancelab_makeNewDanceSprite:
         options:
@@ -95,9 +123,20 @@ da:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"border"': grænse
+            '"inner"': indersiden af firkant
+            '"x"': kryds og tværs
             '"random"': tilfældig
       Dancelab_randomColor:
         text: tilfældig farve
+      Dancelab_setBackgroundEffect:
+        text: indstil baggrundseffekt {EFFECT} [PALETTE][1]
+        options:
+          EFFECT:
+            '"color_cycle"': Farver
+            '"rainbow"': Regnbue
+            '"splatter"': Sprøjt af maling
+            '"snowflakes"': Sne
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -110,12 +149,16 @@ da:
         options:
           GROUP:
             sprites: alle
+            '"UNICORN"': alle enhjørninger
           SPEED:
             '1': normal
             '2': fast
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT: {}
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -125,6 +168,7 @@ da:
         options:
           GROUP:
             sprites: alle
+            '"UNICORN"': alle enhjørninger
           PROPERTY:
             '"scale"': størrelse
             '"height"': højde
@@ -137,10 +181,13 @@ da:
         options:
           THIS:
             sprites: alle
+      Dancelab_setVisible:
+        text: indstil {SPRITE} synlighed til {VISIBILITY}
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: alle
+            '"UNICORN"': alle enhjørninger
       Dancelab_startMapping:
         options:
           PROPERTY:
