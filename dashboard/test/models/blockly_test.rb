@@ -150,11 +150,8 @@ XML
       category: category,
       config:
       {
-        "color" => [140, 1, 0.74],
-        "func" => "atSelectColor",
         "blockText" => block_text,
         "args" => args,
-        "eventBlock" => true
       },
       helperCode: nil
     }]
@@ -430,17 +427,17 @@ XML
   end
 
   test 'option that contains a period in the key is translated' do
-    test_locale = :"fr-ST"
+    test_locale = :"te-ST"
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
         "blocks" => {
-          "DanceLab_atSelectQuantity" => {
-            "text" => "vérifier la {QUANTITY} {MEASURE}",
+          "ThunderCats_atSelectStrengthLevel" => {
+            "text" => "vérifier la {LEVEL}",
             "options" => {
-              "MEASURE" => {
-                "MEASURES.Whole": "Entier",
-                "MEASURES.Half": "Moitié",
+              "LEVEL" => {
+                "LEVELS.Whole": "Entier",
+                "LEVELS.Half": "Moitié",
               }
             }
           }
@@ -453,20 +450,18 @@ XML
     level = create(:level, :blockly, level_num: 'level1_2_3')
 
     test_custom_block = create_test_data(
-      "DanceLab_atSelectQuantity", "SelectQuanity",
-      "check the {QUANTITY} {MEASURE}",
+      "ThunderCats_atSelectStrengthLevel", "SelectStrengthLevel",
+      "check the {LEVEL}",
       [
-        {"name" => "QUANTITY", "type" => "Number", "field" => true},
-        {"name" => "MEASURE", "options" => [["Whole", "MEASURES.Whole"], ["Half", "MEASURES.Half"]]}
+        {"name" => "LEVEL", "options" => [["Whole", "LEVELS.Whole"], ["Half", "LEVELS.Half"]]}
       ],
     )
 
     translated_block = create_test_data(
-      "DanceLab_atSelectQuantity", "SelectQuanity",
-      "vérifier la {QUANTITY} {MEASURE}",
+      "ThunderCats_atSelectStrengthLevel", "SelectStrengthLevel",
+      "vérifier la {LEVEL}",
       [
-        {"name" => "QUANTITY", "type" => "Number", "field" => true},
-        {"name" => "MEASURE", "options" => [["Entier", "MEASURES.Whole"], ["Moitié", "MEASURES.Half"]]}
+        {"name" => "LEVEL", "options" => [["Entier", "LEVELS.Whole"], ["Moitié", "LEVELS.Half"]]}
       ]
     )
 
