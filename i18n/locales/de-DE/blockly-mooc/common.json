@@ -327,7 +327,7 @@
   "danceAfterPartyDesc": "",
   "danceAfterPartyTitle": "",
   "dancePartyButton": "Start",
-  "dancePartyDesc": "",
+  "dancePartyDesc": "Codiere eine Tanzparty, um sie mit deinen Freunden zu teilen!",
   "dancePartyTitle": "Tanzparty",
   "dataLimitAlert": "Die Applikation hat auf die Datenbank zu oft gelesen oder geschrieben, was zu unerwarteten Fehlern führen kann. Bitte gebe dem Besitzer der Applikation bescheid, falls du weiterhin Probleme hast.",
   "dataMode": "",

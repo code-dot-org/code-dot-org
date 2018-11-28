@@ -40,7 +40,7 @@
   "blockActionRepeatRandom": "repetir aleatoriamente",
   "blockActionSetBlock": "definir bloco para",
   "blockActionSpawn": "invocar",
-  "blockActionSummon": "evocar",
+  "blockActionSummon": "invocar",
   "blockActionTeleport": "teleportar alvo",
   "blockActionTeleportToPlayer": "teleportar para o jogador",
   "blockActionTestForBlock": "testa se um tipo de bloco",

@@ -422,7 +422,7 @@
   "downloadCSV": "Fazer o download de CSV",
   "downloadAssessmentCSV": "Baixar CSV de respostas de estudantes",
   "downloadReplayVideoButtonDownload": "Animação",
-  "downloadReplayVideoButtonError": "",
+  "downloadReplayVideoButtonError": "Desculpe, não conseguimos baixar sua animação. Por favor, execute seu projeto e tente novamente.",
   "dragBlocksToMatch": "Arraste os blocos para combinar",
   "dropletBlock_addOperator_description": "Adiciona dois números",
   "dropletBlock_addOperator_signatureOverride": "Adicione um operador",

@@ -140,7 +140,7 @@
   "censusRequiredSelect": "Povinné. Prosím, vyberte niektorú možnosť.",
   "censusTextBased": "Textové programovanie v jazyku ako Java, JavaScript, Python, C++, atď. (okrem HTML alebo CSS)",
   "censusWebDesign": "Web dizajn pomocou HTML alebo CSS",
-  "challengeLevelIntro": "Hry s výzvou sú lekcie určené pre potrápenie Vášho mozgu! Dokážte, čo je vo Vás a vydajte zo seba maximum!",
+  "challengeLevelIntro": "Hry s výzvou sú tu na to, aby si si trochu potrápil mozog! Dokáž, čo je v tebe a vydaj zo seba maximum!",
   "challengeLevelPassTitle": "Dokázal/a si to!",
   "challengeLevelPassText": "Avšak mohli ste to dosiahnúť len s {idealBlocks, plural, one {1 blokom} other {# blokmi}}. Môžete Váš program ešte vylepšiť?",
   "challengeLevelPerfectTitle": "Výzva hotová!",
