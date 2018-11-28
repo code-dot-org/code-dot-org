@@ -30,16 +30,17 @@ vi:
             '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
+            '"UNICORN"': tất cả kỳ lân
           MOVE:
             '"next"': "(Tiếp theo)"
             '"prev"': "(Trước)"
             '"rand"': "(Ngẫu nhiên)"
-            MOVES.Roll: Lăn
+            MOVES.Roll: Cuộn cơ thể
             MOVES.ClapHigh: Vỗ tay cao
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Giảm gấp đôi
             MOVES.Fresh: Tươi
             MOVES.Clown: Chú hề
-            MOVES.Kick: Đá
+            MOVES.Kick: Ngôi sao
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
           DIR:
@@ -52,12 +53,12 @@ vi:
             '"next"': "(Tiếp theo)"
             '"prev"': "(Trước)"
             '"rand"': "(Ngẫu nhiên)"
-            MOVES.Roll: Lăn
+            MOVES.Roll: Cuộn cơ thể
             MOVES.ClapHigh: Vỗ tay cao
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Giảm gấp đôi
             MOVES.Fresh: Tươi
             MOVES.Clown: Chú hề
-            MOVES.Kick: Đá
+            MOVES.Kick: Ngôi sao
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
           DIR:
@@ -88,14 +89,15 @@ vi:
             '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
+            '"UNICORN"': tất cả kỳ lân
           MOVE:
             '"rand"': "(Ngẫu nhiên)"
-            MOVES.Roll: Lăn
+            MOVES.Roll: Cuộn cơ thể
             MOVES.ClapHigh: Vỗ tay cao
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Giảm gấp đôi
             MOVES.Fresh: Tươi
             MOVES.Clown: Chú hề
-            MOVES.Kick: Đá
+            MOVES.Kick: Ngôi sao
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
           DIR:
@@ -106,12 +108,12 @@ vi:
         options:
           MOVE:
             '"rand"': "(Ngẫu nhiên)"
-            MOVES.Roll: Lăn
+            MOVES.Roll: Cuộn cơ thể
             MOVES.ClapHigh: Vỗ tay cao
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Giảm gấp đôi
             MOVES.Fresh: Tươi
             MOVES.Clown: Chú hề
-            MOVES.Kick: Đá
+            MOVES.Kick: Ngôi sao
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
           DIR:
@@ -167,10 +169,10 @@ vi:
           DANCE:
             MOVES.ClapHigh: Vỗ tay cao
             MOVES.Clown: Chú hề
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Giảm gấp đôi
             MOVES.Fresh: Tươi
-            MOVES.Roll: Lăn
-            MOVES.Kick: Đá
+            MOVES.Roll: Cuộn cơ thể
+            MOVES.Kick: Ngôi sao
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
       Dancelab_ifTime:
@@ -207,11 +209,15 @@ vi:
             '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
+            '"UNICORN"': tất cả kỳ lân
           FORMAT:
+            '"border"': đường biên
+            '"inner"': hình vuông bên trong
             '"circle"': vòng tròn
             '"grid"': lưới
             '"row"': hàng
             '"column"': cột
+            '"plus"': cộng
             '"random"': ngẫu nhiên
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -278,10 +284,13 @@ vi:
             '"SHARK"': Cá mập
             '"UNICORN"': Kỳ lân
           LAYOUT:
+            '"border"': đường biên
+            '"inner"': hình vuông bên trong
             '"circle"': vòng tròn
             '"grid"': lưới
             '"row"': hàng
             '"column"': cột
+            '"plus"': cộng
             '"random"': ngẫu nhiên
       Dancelab_mixColors:
         text: trộn {COLOR1} và {COLOR2}
@@ -298,13 +307,18 @@ vi:
       Dancelab_setBackground:
         text: thiết lập màu nền {COLOR}
       Dancelab_setBackgroundEffect:
-        text: thiết lập hiệu ứng nền {EFFECT}
+        text: thiết lập hiệu ứng nền {EFFECT} [PALETTE][1]
         options:
           EFFECT:
             '"none"': Không có
+            '"color_cycle"': Màu sắc
             '"disco"': Hình vuông
-            '"rainbow"': Màu sắc
+            '"rainbow"': Cầu vồng
             '"diamonds"': Kim cương
+            '"splatter"': Tiếng lộp độp của sơn
+            '"swirl"': Thôi miên
+            '"snowflakes"': Tuyết
+            '"spiral"': Xoắn ốc
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Ngẫu nhiên)"
       Dancelab_setDanceSpeed:
         text: thay đổi tốc độ nhảy của {SPRITE} thành {SPEED}
@@ -329,6 +343,7 @@ vi:
             '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
+            '"UNICORN"': tất cả kỳ lân
           SPEED:
             '1': bình thường
             '2': nhanh
@@ -369,6 +384,7 @@ vi:
             '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
+            '"UNICORN"': tất cả kỳ lân
           PROPERTY:
             '"scale"': kích cỡ
             '"width"': chiều rộng
@@ -405,6 +421,7 @@ vi:
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
       Dancelab_setVisible:
+        text: thiết lập {SPRITE} có thể nhìn thấy với {VISIBILITY}
         options:
           VISIBILITY:
             'true': có thể nhìn thấy
@@ -424,6 +441,7 @@ vi:
             '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
+            '"UNICORN"': tất cả kỳ lân
           VISIBILITY:
             'true': có thể nhìn thấy
             'false': không thể nhìn thấy
