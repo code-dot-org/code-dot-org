@@ -34,63 +34,22 @@
 #  index_pd_applications_on_user_id              (user_id)
 #
 
-require 'state_abbr'
-
 module Pd::Application
-  class Facilitator1819Application < FacilitatorApplicationBase
-    has_one :pd_fit_weekend1819_registration,
-      class_name: 'Pd::FitWeekend1819Registration',
-      foreign_key: 'pd_application_id'
-
+  class Facilitator1920Application < FacilitatorApplicationBase
+    #override
     def year
-      YEAR_18_19
+      YEAR_19_20
     end
 
     # Are we still accepting applications?
-    APPLICATION_CLOSE_DATE = Date.new(2018, 2, 1)
+    APPLICATION_CLOSE_DATE = Date.new(2019, 2, 1)
     def self.open?
       Time.zone.now < APPLICATION_CLOSE_DATE
     end
 
-    # Queries for locked and (accepted or withdrawn) and assigned to a fit workshop
-    # @param [ActiveRecord::Relation<Pd::Application::Facilitator1819Application>] applications_query
-    #   (optional) defaults to all
-    # @note this is not chainable since it inspects fit_workshop_id from serialized attributes,
-    #   which must be done in the model.
-    # @return [array]
-    def self.fit_cohort(applications_query = all)
-      applications_query.
-        where(type: name).
-        where(status: [:accepted, :withdrawn]).
-        where.not(locked_at: nil).
-        includes(:pd_fit_weekend1819_registration).
-        select(&:fit_workshop_id?)
-    end
-
     # @override
     def check_idempotency
-      Pd::Application::Facilitator1819Application.find_by(user: user)
-    end
-
-    # G1 facilitators are always associated with Phoenix
-    # G2 facilitators are always associated with Atlanta
-    # G3 facilitators are assigned based on their partner mapping, arbitrarily
-    #   defaulting to Phoenix
-    def find_default_fit_teachercon
-      return unless regional_partner
-
-      return TC_PHOENIX if regional_partner.group == 1
-      return TC_ATLANTA if regional_partner.group == 2
-
-      return get_matching_teachercon(regional_partner) || TC_PHOENIX
-    end
-
-    def fit_weekend_registration
-      Pd::FitWeekend1819Registration.find_by_pd_application_id(id)
-    end
-
-    def teachercon_registration
-      Pd::Teachercon1819Registration.find_by_pd_application_id(id)
+      Pd::Application::Facilitator1920Application.find_by(user: user)
     end
   end
 end
