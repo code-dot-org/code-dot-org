@@ -522,7 +522,7 @@ Dance.prototype.initInterpreter = function () {
       nativeAPI.setBackgroundEffect(effect.toString(), palette.toString());
     },
     setBackgroundEffectWithPalette: (effect, palette = 'default') => {
-      nativeAPI.setBackgroundEffectWithPalette(effect.toString(), palette.toString());
+      nativeAPI.setBackgroundEffect(effect.toString(), palette.toString());
     },
     // DEPRECATED
     // An old block may refer to this version of the command,
