@@ -30,19 +30,20 @@ sv:
             '"PINEAPPLE"': alla ananaser
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
+            '"UNICORN"': alla enhörningar
           MOVE:
             '"next"': "(Nästa)"
             '"prev"': "(Föregående)"
             '"rand"': "(Slumpad)"
-            MOVES.Roll: Rulla
+            MOVES.Roll: Kroppsrullning
             MOVES.ClapHigh: Klappa högt
             MOVES.Dab: Badda
-            MOVES.DoubleJam: Dubbelstopp
+            MOVES.DoubleJam: Dubbelt ner
             MOVES.Drop: Släpp
             MOVES.Floss: Res dig
             MOVES.Fresh: Färsk
             MOVES.Clown: Clown
-            MOVES.Kick: Sparka
+            MOVES.Kick: Stjärna
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
           DIR:
@@ -55,15 +56,15 @@ sv:
             '"next"': "(Nästa)"
             '"prev"': "(Föregående)"
             '"rand"': "(Slumpad)"
-            MOVES.Roll: Rulla
+            MOVES.Roll: Kroppsrullning
             MOVES.ClapHigh: Klappa högt
             MOVES.Dab: Badda
-            MOVES.DoubleJam: Dubbelstopp
+            MOVES.DoubleJam: Dubbelt ner
             MOVES.Drop: Släpp
             MOVES.Floss: Res dig
             MOVES.Fresh: Färsk
             MOVES.Clown: Clown
-            MOVES.Kick: Sparka
+            MOVES.Kick: Stjärna
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
           DIR:
@@ -93,17 +94,18 @@ sv:
             '"PINEAPPLE"': alla ananaser
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
+            '"UNICORN"': alla enhörningar
           MOVE:
             '"rand"': "(Slumpad)"
-            MOVES.Roll: Rulla
+            MOVES.Roll: Kroppsrullning
             MOVES.ClapHigh: Klappa högt
             MOVES.Dab: Badda
-            MOVES.DoubleJam: Dubbelstopp
+            MOVES.DoubleJam: Dubbelt ner
             MOVES.Drop: Släpp
             MOVES.Floss: Res dig
             MOVES.Fresh: Färsk
             MOVES.Clown: Clown
-            MOVES.Kick: Sparka
+            MOVES.Kick: Stjärna
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
           DIR:
@@ -114,15 +116,15 @@ sv:
         options:
           MOVE:
             '"rand"': "(Slumpad)"
-            MOVES.Roll: Rulla
+            MOVES.Roll: Kroppsrullning
             MOVES.ClapHigh: Klappa högt
             MOVES.Dab: Badda
-            MOVES.DoubleJam: Dubbelstopp
+            MOVES.DoubleJam: Dubbelt ner
             MOVES.Drop: Släpp
             MOVES.Floss: Res dig
             MOVES.Fresh: Färsk
             MOVES.Clown: Clown
-            MOVES.Kick: Sparka
+            MOVES.Kick: Stjärna
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
           DIR:
@@ -177,12 +179,12 @@ sv:
             MOVES.ClapHigh: Klappa högt
             MOVES.Clown: Clown
             MOVES.Dab: Badda
-            MOVES.DoubleJam: Dubbelstopp
+            MOVES.DoubleJam: Dubbelt ner
             MOVES.Drop: Släpp
             MOVES.Floss: Res dig
             MOVES.Fresh: Färsk
-            MOVES.Roll: Rulla
-            MOVES.Kick: Sparka
+            MOVES.Roll: Kroppsrullning
+            MOVES.Kick: Stjärna
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
       Dancelab_ifTime:
@@ -219,11 +221,15 @@ sv:
             '"PINEAPPLE"': alla ananaser
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
+            '"UNICORN"': alla enhörningar
           FORMAT:
+            '"border"': gräns
+            '"inner"': innanför kvadrat
             '"circle"': cirkel
             '"grid"': rutnät
             '"row"': rad
             '"column"': kolumn
+            '"x"': korsvis
             '"random"': slumpad
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -288,10 +294,13 @@ sv:
             '"SHARK"': Hajar
             '"UNICORN"': Enhörningar
           LAYOUT:
+            '"border"': gräns
+            '"inner"': innanför kvadrat
             '"circle"': cirkel
             '"grid"': rutnät
             '"row"': rad
             '"column"': kolumn
+            '"x"': korsvis
             '"random"': slumpad
       Dancelab_mixColors:
         text: blanda {COLOR1} och {COLOR2}
@@ -308,13 +317,16 @@ sv:
       Dancelab_setBackground:
         text: ange bakgrundsfärg {COLOR}
       Dancelab_setBackgroundEffect:
-        text: ställ in bakgrundseffekt {EFFECT}
+        text: täll in bakgrundseffekt {EFFECT} [PALETTE][1]
         options:
           EFFECT:
             '"none"': Ingen
+            '"color_cycle"': Färger
             '"disco"': Fyrkanter
-            '"rainbow"': Färger
+            '"rainbow"': Regnbåge
             '"diamonds"': Diamanter
+            '"splatter"': Färgstänk
+            '"snowflakes"': Snö
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Slumpad)"
       Dancelab_setDanceSpeed:
         text: ändra danshastigheten av {SPRITE} till {SPEED}
@@ -339,6 +351,7 @@ sv:
             '"PINEAPPLE"': alla ananaser
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
+            '"UNICORN"': alla enhörningar
           SPEED:
             '1': normal
             '2': snabb
@@ -377,6 +390,7 @@ sv:
             '"PINEAPPLE"': alla ananaser
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
+            '"UNICORN"': alla enhörningar
           PROPERTY:
             '"scale"': storlek
             '"width"': bredd
@@ -396,8 +410,6 @@ sv:
             '"tint"': färgton
       Dancelab_setTint:
         text: Ställ in {SPRITE}s färgton till {VAL}
-      Dancelab_setTintInline:
-        text: Ställ in {SPRITE}s färgton till {VAL}
       Dancelab_setTintEach:
         options:
           THIS:
@@ -413,6 +425,7 @@ sv:
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
       Dancelab_setVisible:
+        text: ställ in synligheten på {SPRITE} till {VISIBILITY}
         options:
           VISIBILITY:
             'true': synlig
@@ -432,6 +445,7 @@ sv:
             '"PINEAPPLE"': alla ananaser
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
+            '"UNICORN"': alla enhörningar
           VISIBILITY:
             'true': synlig
             'false': osynlig
