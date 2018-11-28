@@ -38,7 +38,7 @@ module Pd::Application
     end
 
     test 'after Jan 31 2019 applications are closed' do
-      Timecop.freeze Time.zone.local(2019, 1, 31) do
+      Timecop.freeze Time.zone.local(2019, 2, 1) do
         sign_in create(:teacher)
         get :new
         assert_response :success
