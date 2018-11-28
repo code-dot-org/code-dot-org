@@ -430,11 +430,6 @@ sk:
         \   <title name=\"LAYOUT\">\"kruh\"</title>\n  </block></xml>\n  \nTeraz môžeš
         vytvoriť viacerých tanečníkov naraz!\n\nSkús použiť niektorý z blokov \"všetky
         kačice\" na napísanie kódu, ktorý roztancuje všetky kačice spoločne."
-      Dance_Party_11.5: "Pozri na tento blok:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
-        \   <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"Kačica\"</title>\n
-        \   <title name=\"LAYOUT\">\"kruh\"</title>\n  </block></xml>\n  \nTeraz môžeš
-        vytvoriť viacerých tanečníkov naraz!\n\nSkús použiť niektorý z blokov \"všetky
-        kačice\" na napísanie kódu, ktorý roztancuje všetky kačice spoločne."
       Dance_Party_11b: |-
         Je čas na tanečný súboj! Mačka spraví dab, keď stlačíš šípku vľavo. Donúť Robota spraviť "špagát" pri stlačení šípky vpravo a "tlesk" pri stlačení šípky hore.
 

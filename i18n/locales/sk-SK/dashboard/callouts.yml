@@ -197,8 +197,6 @@ sk:
         dance_callout_11_b: Nový blok!
       Dance_Party_11_5_callout:
         dance_party_11.5_groups: Tu hľadaj blok "všetky kačice"
-      Dance_Party_11.5_callout:
-        dance_party_11.5_groups: Tu hľadaj blok "všetky kačice"
       Eval Design Recipe .1_callout:
         edit_function: Kliknite sem pre úpravu Vašej funkcie.
       Frozen Project Test Toolbox_callout:
@@ -1006,7 +1004,7 @@ sk:
       course_playlab_variables3_callout:
         course_playlab_variables3_1: Takto nastavíte hodnotu Vašej premennej.
       coursea_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: Po pospájaní všetkých blokov stlačte "Spustiť" pre spustenie vášho programu.
+        grade2_CaringForNewPet_0_1: Po pospájaní všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: Extra bloky môžete presunúť na panel nástrojov pre ich odstránenie.
       coursef_maze_ramp3_2018_callout:
