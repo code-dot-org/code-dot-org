@@ -456,7 +456,9 @@ he:
             '"y"': מיקום אנכי
             '"tint"': גוון
       Dancelab_setTint:
-        text: קבע גוון של {SPRITE} ל {VAL}
+        text: קבעו גוון של {SPRITE} ל-{VAL}
+      Dancelab_setTintInline:
+        text: קבעו גוון של {SPRITE} ל-{VAL}
       Dancelab_setTintEach:
         text: קבע גוון של {THIS} ל {VAL}
         options:
