@@ -61,7 +61,9 @@
         <%= msg.sendToPhone() %>
       </button>
     <% } %>
-
+    <div id="download-replay-video-error" style="font-size: 12px; display: none;">
+      <%= msg.downloadReplayVideoButtonError() %>
+    </div>
   </div>
   <div id="send-to-phone" style="display: none">
     <label for="phone">Enter a US phone number:</label>
