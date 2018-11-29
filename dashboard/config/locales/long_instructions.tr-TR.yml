@@ -5362,19 +5362,6 @@ tr:
         </block></xml>
 
         Bu program bir dansçının boyunun kontrolü için müziğin "bas" (düşük) seslerini kullanır. Diğer dansçıların da müziğe tepki vermesini sağlayabilir misiniz?
-      Dance_Party_11_5: |-
-        Bu bloğa bir bakın:
-
-        <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
-
-        Artık tek seferde birden çok dansçı yaratabilirsiniz!
-
-        Tüm ördeklerin hep birlikte dans etmesini sağlayacak kodu yazmak için "tüm ördekler" bloklarının bazılarını kullanmayı deneyin.
       Dance_Party_11.5_test: |-
         Bu bloğa bir bakın:
 
@@ -5392,9 +5379,64 @@ tr:
         <xml><block type="Dancelab_whenKey"></block></xml> bloğu yukarı oka basıldığında kodu çalıştırmanızı sağlar.
 
         Dans hareketini değiştirebilir, bir dansçının özelliklerini değiştirebilir ya da bir kereliğine hızlı bir hareket yapabilirsiniz. Yaratıcı olun ve yeni bloklar arayın!
+      Dance_Party_11_5: |-
+        Bu bloğa bir bakın:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Artık tek seferde birden çok dansçı yaratabilirsiniz!
+
+        Tüm ördeklerin hep birlikte dans etmesini sağlayacak kodu yazmak için "tüm ördekler" bloklarının bazılarını kullanmayı deneyin.
       Dance_Party_11b: Şimdi dans zamanı! Sol ok tuşuna bastığınızda Kedi dab dansı
         yapar. Sağ ok tuşuna bastığınızda Robota "drop" figürü yaptırırsınız.
       Dance_Party_12: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla paylaşın.
+      Dance_Party_extras_battle: |-
+        # Dans Ekipleri
+
+        İşte iki ekibin kıyasıya dansı Ok tuşları dansçılardan birini, "w,a,s,d" tuşları diğerini kontrol eder. Bir arkadaşınızla kıyasıya dans edin ve sonra bu dansı geliştirmeye çalışın
+
+        * Dansları kontrol etmek için daha fazla tuş ekleyin
+        * Tuşlara basıldığında arka plan dansçılarının da tepki vermesini sağlayın
+        * Görünürlüklerini ayarlayarak dansçının dört ölçüde bir değişmesini sağlayın
+      Dance_Party_extras_every_beat: |-
+        # Çeyrek Notalar
+
+        Danslarımızın çoğunda tam ölçüler kullanılır ama her ölçü 4 çeyrek notadan oluşur. Bu dans, dansçının her çeyrek notada el çırpması için `her 0,25 ölçüde bir` kullanır.
+
+        Bu dans aynı zamanda, 'her 0,25 ölçüde bir' bloğunun dansı ne zaman değiştireceğini belirlemek için bir _koşul_ bloğu da kullanır. Dansı nasıl değiştirdiğini görmek için koşul bloğunun içindeki sayıyı değiştirmeyi deneyin.
+
+        * Diğer nota uzunluklarıyla denemeler yapın (örneğin yarım nota için 0,5 veya 1/8’lik nota için 0,125 değeri girin).
+        * Birkaç `ölçüden sonra` etkinliği ekleyin.
+        * "Ölçüler" değerini "saniyeler" ile değiştirerek danslarınızı böyle zamanlamayı deneyin.
+      Dance_Party_extras_layout: |-
+        # Şimdi Giriş Düzeni!
+
+        Dans boyunca arka plan dansçılarının dizilimini değiştirmek için `düzen` bloğunu kullanan bu dansa göz atın. Geliştirmek için şu fikirlerden birini deneyin:
+
+        * Farklı bir düzende ikinci bir dansçı grubu oluşturun
+        * Bir tuşa basıldığında düzeni değiştirin
+        * Dansçılar dizilimi değiştirdiğinde bir özelliği değiştirin
+      Dance_Party_extras_on_beat: |-
+        # Bas, Orta ve Tizler
+
+        Bu dans, müziğin farklı bölümlerinde ses seviyesi yükseldiğinde kodu başlatmak için "zirve" etkinliklerini kullanır. Farklı şarkıların dansı nasıl değiştirdiğini görmek için şarkıyı değiştirin.
+      Dance_Party_extras_speed: |-
+        # Hızlandır, Yavaşlat
+
+        Bu son dans dansçıların hızını belirlemek için `hız ayarla` bloğunu kullanır. Şarkının farklı yerlerinde farklı hızlarla denemeler yapın. Bu dansta özgürce denemeler yapın veya daha önceki danslara dönerek onları daha da güzelleştirin.
+      Dance_Party_extras_visible: |-
+        # Nereye gittiler?
+
+        Bu dans iki farklı dansçı grubunu görünür yapar ve gizler. Deneyin ve sonra kendi yaratıcılığınızı ekleyin.
+
+        * Başka bir dansçı grubu ekleyin
+        * Ok tuşlarını kullanarak dansçıları görünür yapın ve gizleyin
+        * Tüm dansçıları gizleyin ve heyecan veren bir arka plan efektine geçiş yapın
       Escape Room Example: "# Odadan Kaçış\r\n\r\nBugünkü çalışmada bir odadan kaçış
         uygulaması yapmaya çalışacaksın! Bu bölüm oluşturduğun uygulamayla oynayarak
         öğrenmeye bir örnektir.\r\n\r\n# Bunu Yap\r\n\r\n* Uygulamayı başlatmak için
@@ -5469,6 +5511,12 @@ tr:
         <xml><block type="Dancelab_whenKey"></block></xml> bloğu yukarı oka basıldığında kodu çalıştırmanızı sağlar.
 
         Dans hareketini değiştirebilir, bir dansçının özelliklerini değiştirebilir ya da bir kereliğine hızlı bir hareket yapabilirsiniz. Yaratıcı olun ve yeni bloklar arayın!
+      HOC Dance Freeplay: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla
+        paylaşın.
+      HOC Dance Freeplay_draft: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla
+        paylaşın.
+      HOC Dance Predraw: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla
+        paylaşın.
       Harvesting: |-
         Ah,haritamı kaybettim ve ne ektiğimi hatırlamıyorum. Her filiz **mısır** olarak büyüyebilir. ![mısır resmi](https://images.code.org/cac3133c40781553a70066a67298b2b5-image-1472493202556.png)
         , **fasulye** ![fasulye resmi](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png)

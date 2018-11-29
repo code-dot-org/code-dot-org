@@ -376,6 +376,41 @@ en:
             '"snowflakes"': Snow
             '"spiral"': Spiral
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Random)"
+      Dancelab_setBackgroundEffectWithPalette:
+        text: |-
+          set background effect
+          {EFFECT} {PALETTE}
+        options:
+          EFFECT:
+            '"none"': None
+            '"rand"': "(Random)"
+            '"circles"': Circles
+            '"color_cycle"': Colors
+            '"diamonds"': Diamonds
+            '"disco_ball"': Disco Ball
+            '"fireworks"': Fireworks
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoscope
+            '"lasers"': Laser Dance Floor
+            '"splatter"': Paint Splatter
+            '"rainbow"': Rainbow
+            '"snowflakes"': Snow
+            '"text"': Song Names
+            '"galaxy"': Space
+            '"sparkles"': Sparkles
+            '"spiral"': Spiral
+            '"disco"': Squares
+            '"stars"': Stars
+          PALETTE:
+            '"rave"': Black and White
+            '"cool"': Cool
+            '"electronic"': Electronic
+            '"iceCream"': Ice Cream
+            '"default"': Light
+            '"neon"': Neon
+            '"tropical"': Tropical
+            '"vintage"': Vintage
+            '"warm"': Warm
       Dancelab_setDanceSpeed:
         text: set {SPRITE} dance speed to {SPEED}
         options:
@@ -416,6 +451,25 @@ en:
             '"raining_tacos"': Tacos
             '"spotlight"': Spotlight
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Random)"
+      Dancelab_setForegroundEffectExtended:
+        text: set foreground effect {EFFECT}
+        options:
+          EFFECT:
+            '"none"': None
+            '"rand"': "(Random)"
+            '"bubbles"': Bubbles
+            '"confetti"': Confetti
+            '"hearts_red"': Hearts
+            '"music_notes"': Music Notes
+            '"pineapples"': Pineapples
+            '"pizzas"': Pizzas
+            '"smiling_poop"': Poop
+            '"rain"': Rain
+            '"floating_rainbows"': Rainbows
+            '"smile_face"': Smiles
+            '"spotlight"': Spotlight
+            '"color_lights"': Stage Lights
+            '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'set {SPRITE} {PROPERTY} to {VAL} '
         options:
@@ -479,6 +533,8 @@ en:
             '"PINEAPPLE"': all pineapples
             '"ROBOT"': all robots
             '"SHARK"': all sharks
+      Dancelab_setTintInline:
+        text: set {SPRITE} tint to {VAL}
       Dancelab_setVisible:
         text: set {SPRITE} visible to {VISIBILITY}
         options:

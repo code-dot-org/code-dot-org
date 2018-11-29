@@ -264,6 +264,8 @@ uk:
           description: Вивчайте функціональне програмування через алгебру
           description_short: Вивчайте функціональне програмування через алгебру
           stages:
+            'Eval: Boolean Operators':
+              name: Логічні оператори
             'Eval: Conditionals':
               name: Умови
             'Eval: Strings and Images':
@@ -300,6 +302,8 @@ uk:
           stages:
             Introduction to PD:
               name: Знайомство з профессійним кодуванням
+            Next Steps:
+              name: Наступні Кроки
             Teacher Dashboard:
               name: Панель вчителя
             Unplugged lessons:
@@ -423,6 +427,8 @@ uk:
         cspunit1:
           description_short: Програмування
           stages:
+            Binary Numbers:
+              name: Двійкові Числа
             Personal Innovations:
               name: Особисті інновації
         algebraPD:
@@ -464,6 +470,8 @@ uk:
           stages:
             Evaluation Blocks:
               name: Оцінкові блоки
+            Next Steps:
+              name: Наступні Кроки
             Strings and Images:
               name: Рядки та зображення
             Teacher Dashboard:
@@ -578,6 +586,8 @@ uk:
               name: 'Оцінка: умови'
             Evaluation Blocks:
               name: Оцінкові блоки
+            Next Steps:
+              name: Наступні Кроки
             Strings and Images:
               name: Рядки та зображення
             Teacher Dashboard:
@@ -597,6 +607,8 @@ uk:
           stages:
             Best Practices for Teaching Computer Science:
               name: Успішні методики викладання інформатики
+            Next Steps:
+              name: Наступні Кроки
         ECSPD2:
           description: 'Етап 2 онлайн: Змішане літнє навчання'
           description_short: 'Етап 2 онлайн: Змішане літнє навчання'
@@ -637,6 +649,10 @@ uk:
               name: Ласкаво просимо!
             Wrap-Up:
               name: Підведення підсумків
+        Equity-OnlinePD:
+          stages:
+            Next Steps:
+              name: Наступні Кроки
         sciencePD2b-iZone:
           description: 'Етап 2 онлайн: Змішане літнє навчання'
           description_short: 'Етап 2 онлайн: Змішане літнє навчання'
@@ -807,6 +823,8 @@ uk:
               name: Панель вчителя
         csp1-2017:
           stages:
+            Binary Numbers:
+              name: Двійкові Числа
             Personal Innovations:
               name: Особисті інновації
             The Internet:
@@ -1577,6 +1595,8 @@ uk:
           stages:
             Personal Innovations:
               name: Особисті інновації
+            Binary Numbers:
+              name: Двійкові Числа
             The Internet:
               name: Інтернет
         csp3-2018:

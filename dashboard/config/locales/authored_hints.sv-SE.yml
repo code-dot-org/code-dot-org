@@ -146,13 +146,6 @@ sv:
           * Egenskaper för två eller flera dansare måste ändras.
 
           *Denna nivå slutar efter 8 åtgärder.*
-      Dance_Party_11_5_authored_hint:
-        validation: |-
-          **Hur ska man ta sig förbi denna nivå?**
-
-          * Var bara kreativ!
-
-          *Denna nivå slutar efter 8 åtgärder.*
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
@@ -161,6 +154,13 @@ sv:
 
           *Denna nivå slutar efter 8 åtgärder.*
       Dance_Party_11_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Var bara kreativ!
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      Dance_Party_11_5_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
 
