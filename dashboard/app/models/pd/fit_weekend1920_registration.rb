@@ -16,4 +16,10 @@
 #
 
 class Pd::FitWeekend1920Registration < Pd::FitWeekendRegistrationBase
+  include Pd::ApplicationConstants
+
+  # override
+  def set_registration_year
+    self.registration_year = YEAR_19_20
+  end
 end
