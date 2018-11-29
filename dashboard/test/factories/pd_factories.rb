@@ -943,32 +943,32 @@ FactoryGirl.define do
     agree true
 
     trait :csf do
-      program Pd::Application::Facilitator1819Application::PROGRAMS[:csf]
+      program Pd::Application::Facilitator1920Application::PROGRAMS[:csf]
       csf_availability 'Yes'
     end
 
     trait :csd do
-      program Pd::Application::Facilitator1819Application::PROGRAMS[:csd]
+      program Pd::Application::Facilitator1920Application::PROGRAMS[:csd]
       with_csd_csp_specific_fields
     end
 
     trait :csp do
-      program Pd::Application::Facilitator1819Application::PROGRAMS[:csp]
+      program Pd::Application::Facilitator1920Application::PROGRAMS[:csp]
       with_csd_csp_specific_fields
     end
 
     trait :with_csf_specific_fields do
-      csf_availability Pd::Application::Facilitator1819Application::ONLY_WEEKEND
+      csf_availability Pd::Application::Facilitator1920Application::ONLY_WEEKEND
       csf_partial_attendance_reason 'reasons'
     end
 
     trait :with_csd_csp_specific_fields do
-      csd_csp_fit_availability Pd::Application::Facilitator1819Application.options[:csd_csp_fit_availability].first
-      csd_csp_teachercon_availability Pd::Application::Facilitator1819Application.options[:csd_csp_teachercon_availability].first
+      csd_csp_fit_availability Pd::Application::Facilitator1920Application.options[:csd_csp_fit_availability].first
+      csd_csp_teachercon_availability Pd::Application::Facilitator1920Application.options[:csd_csp_teachercon_availability].first
     end
   end
 
-  factory :pd_facilitator1920_application, class: 'Pd::Application::Facilitator1819Application' do
+  factory :pd_facilitator1920_application, class: 'Pd::Application::Facilitator1920Application' do
     association :user, factory: [:teacher, :with_school_info], strategy: :create
     course 'csp'
     transient do

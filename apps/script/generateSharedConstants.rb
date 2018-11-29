@@ -94,15 +94,6 @@ def main
   generate_shared_js_file(
     generate_multiple_constants(
       %w(SECTION_HEADERS PAGE_LABELS LABEL_OVERRIDES NUMBERED_QUESTIONS TEXT_FIELDS),
-      source_module: Pd::Facilitator1819ApplicationConstants,
-      transform_keys: true
-    ),
-    "#{REPO_DIR}/apps/src/generated/pd/facilitator1819ApplicationConstants.js"
-  )
-
-  generate_shared_js_file(
-    generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS LABEL_OVERRIDES NUMBERED_QUESTIONS TEXT_FIELDS),
       source_module: Pd::Facilitator1920ApplicationConstants,
       transform_keys: true
     ),

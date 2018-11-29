@@ -38,6 +38,10 @@ require 'state_abbr'
 
 module Pd::Application
   class Facilitator1819Application < FacilitatorApplicationBase
+    include Pd::Facilitator1819ApplicationConstants
+
+    validates_uniqueness_of :user_id
+
     has_one :pd_fit_weekend1819_registration,
       class_name: 'Pd::FitWeekend1819Registration',
       foreign_key: 'pd_application_id'
@@ -91,6 +95,130 @@ module Pd::Application
 
     def teachercon_registration
       Pd::Teachercon1819Registration.find_by_pd_application_id(id)
+    end
+
+    # memoize in a hash, per course
+    FILTERED_LABELS ||= Hash.new do |h, key|
+      labels_to_remove = key == 'csf' ?
+        [:csd_csp_fit_availability, :csd_csp_teachercon_availability]
+        : # csd / csp
+        [:csf_availability, :csf_partial_attendance_reason]
+
+      h[key] = ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+    end
+
+    # @override
+    # Filter out extraneous answers, based on selected program (course)
+    def self.filtered_labels(course)
+      raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
+      FILTERED_LABELS[course]
+    end
+
+    # @override
+    def self.csv_header(course, user)
+      # strip all markdown formatting out of the labels
+      markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
+      CSV.generate do |csv|
+        columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
+        columns.push(
+          'Status',
+          'Locked',
+          'Notes',
+          'Notes 2',
+          'Notes 3',
+          'Notes 4',
+          'Notes 5',
+          'Regional Partner'
+        )
+        csv << columns
+      end
+    end
+
+    def self.cohort_csv_header(optional_columns)
+      columns = [
+        'Date Accepted',
+        'Name',
+        'School District',
+        'School Name',
+        'Email',
+        'Status',
+        'Assigned Workshop'
+      ]
+      if optional_columns[:registered_workshop]
+        columns.push 'Registered Workshop'
+      end
+      if optional_columns[:accepted_teachercon]
+        columns.push 'Accepted Teachercon'
+      end
+
+      columns.push(
+        'Notes',
+        'Notes 2',
+        'Notes 3',
+        'Notes 4',
+        'Notes 5'
+      )
+
+      CSV.generate do |csv|
+        csv << columns
+      end
+    end
+
+    # @override
+    def to_csv_row(user)
+      answers = full_answers
+      CSV.generate do |csv|
+        row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
+        row.push(
+          status,
+          locked?,
+          notes,
+          notes_2,
+          notes_3,
+          notes_4,
+          notes_5,
+          regional_partner_name
+        )
+        csv << row
+      end
+    end
+
+    def to_cohort_csv_row(optional_columns)
+      columns = [
+        date_accepted,
+        applicant_name,
+        district_name,
+        school_name,
+        user.email,
+        status,
+        fit_workshop_date_and_location
+      ]
+      if optional_columns[:registered_workshop]
+        if workshop.try(:local_summer?)
+          columns.push(registered_workshop? ? 'Yes' : 'No')
+        else
+          columns.push nil
+        end
+      end
+      if optional_columns[:accepted_teachercon]
+        if workshop.try(:teachercon?)
+          columns.push(pd_teachercon1819_registration ? 'Yes' : 'No')
+        else
+          columns.push nil
+        end
+      end
+
+      columns.push(
+        notes,
+        notes_2,
+        notes_3,
+        notes_4,
+        notes_5
+      )
+
+      CSV.generate do |csv|
+        csv << columns
+      end
     end
   end
 end
