@@ -30,19 +30,20 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"UNICORN"': ユニコーンだらけ
           MOVE:
             '"next"': "(次へ)"
             '"prev"': "(戻る)"
             '"rand"': "(ランダム)"
-            MOVES.Roll: ロール
+            MOVES.Roll: ボディロール
             MOVES.ClapHigh: 手を高く上げてたたく
             MOVES.Dab: ダブ
-            MOVES.DoubleJam: ダブルジャム
+            MOVES.DoubleJam: ダブルダウン
             MOVES.Drop: ドロップ
             MOVES.Floss: フロス
             MOVES.Fresh: フレッシュ
-            MOVES.Clown: ピエロ
-            MOVES.Kick: キック
+            MOVES.Clown: ガンナム
+            MOVES.Kick: 星
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
           DIR:
@@ -55,15 +56,15 @@ ja:
             '"next"': "(次へ)"
             '"prev"': "(戻る)"
             '"rand"': "(ランダム)"
-            MOVES.Roll: ロール
+            MOVES.Roll: ボディロール
             MOVES.ClapHigh: 手を高く上げてたたく
             MOVES.Dab: ダブ
-            MOVES.DoubleJam: ダブルジャム
+            MOVES.DoubleJam: ダブルダウン
             MOVES.Drop: ドロップ
             MOVES.Floss: フロス
             MOVES.Fresh: フレッシュ
-            MOVES.Clown: ピエロ
-            MOVES.Kick: キック
+            MOVES.Clown: ガンナム
+            MOVES.Kick: 星
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
           DIR:
@@ -94,17 +95,18 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"UNICORN"': ユニコーンだらけ
           MOVE:
             '"rand"': "(ランダム)"
-            MOVES.Roll: ロール
+            MOVES.Roll: ボディロール
             MOVES.ClapHigh: 手を高く上げてたたく
             MOVES.Dab: ダブ
-            MOVES.DoubleJam: ダブルジャム
+            MOVES.DoubleJam: ダブルダウン
             MOVES.Drop: ドロップ
             MOVES.Floss: フロス
             MOVES.Fresh: フレッシュ
-            MOVES.Clown: ピエロ
-            MOVES.Kick: キック
+            MOVES.Clown: ガンナム
+            MOVES.Kick: 星
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
           DIR:
@@ -115,15 +117,15 @@ ja:
         options:
           MOVE:
             '"rand"': "(ランダム)"
-            MOVES.Roll: ロール
+            MOVES.Roll: ボディロール
             MOVES.ClapHigh: 手を高く上げてたたく
             MOVES.Dab: ダブ
-            MOVES.DoubleJam: ダブルジャム
+            MOVES.DoubleJam: ダブルダウン
             MOVES.Drop: ドロップ
             MOVES.Floss: フロス
             MOVES.Fresh: フレッシュ
-            MOVES.Clown: ピエロ
-            MOVES.Kick: キック
+            MOVES.Clown: ガンナム
+            MOVES.Kick: 星
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
           DIR:
@@ -177,14 +179,14 @@ ja:
         options:
           DANCE:
             MOVES.ClapHigh: 手を高く上げてたたく
-            MOVES.Clown: ピエロ
+            MOVES.Clown: ガンナム
             MOVES.Dab: ダブ
-            MOVES.DoubleJam: ダブルジャム
+            MOVES.DoubleJam: ダブルダウン
             MOVES.Drop: ドロップ
             MOVES.Floss: フロス
             MOVES.Fresh: フレッシュ
-            MOVES.Roll: ロール
-            MOVES.Kick: キック
+            MOVES.Roll: ボディロール
+            MOVES.Kick: 星
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
       Dancelab_ifTime:
@@ -221,11 +223,16 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"UNICORN"': ユニコーンだらけ
           FORMAT:
+            '"border"': 境界
+            '"inner"': 四角の中
             '"circle"': 円
             '"grid"': グリッド
             '"row"': 行
             '"column"': 列
+            '"x"': 十字
+            '"plus"': プラス
             '"random"': ランダム に
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -293,10 +300,14 @@ ja:
             '"SHARK"': サメ
             '"UNICORN"': ユニコーン
           LAYOUT:
+            '"border"': 境界
+            '"inner"': 四角の中
             '"circle"': 円
             '"grid"': グリッド
             '"row"': 行
             '"column"': 列
+            '"x"': 十字
+            '"plus"': プラス
             '"random"': ランダム に
       Dancelab_mixColors:
         text: "{COLOR1} と {COLOR2} をまぜる"
@@ -321,6 +332,31 @@ ja:
             '"rainbow"': 色
             '"diamonds"': ダイヤモンド
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(ランダム)"
+      Dancelab_setBackgroundEffectWithPalette:
+        text: 背景エフェクトを {EFFECT} {PALETTE} にセット
+        options:
+          EFFECT:
+            '"none"': 設定なし
+            '"rand"': "(ランダム)"
+            '"circles"': トンネル
+            '"diamonds"': ダイヤモンド
+            '"disco_ball"': ミラーボール
+            '"kaleidoscope"': 万華鏡
+            '"lasers"': レーザーのダンスフロア
+            '"splatter"': 塗料のしぶき
+            '"rainbow"': 色
+            '"text"': 曲名
+            '"sparkles"': きらめき
+            '"disco"': 正方形
+            '"stars"': 星
+          PALETTE:
+            '"rave"': 白黒
+            '"cool"': 青
+            '"default"': 光
+            '"neon"': ネオン
+            '"tropical"': 熱帯
+            '"vintage"': ヴィンテージ
+            '"warm"': 赤
       Dancelab_setDanceSpeed:
         text: "{SPRITE} のダンスの速さを {SPEED} に変更"
         options:
@@ -344,6 +380,7 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"UNICORN"': ユニコーンだらけ
           SPEED:
             '1': ノーマル
             '2': はやい
@@ -358,6 +395,20 @@ ja:
             '"rain"': 雨
             '"raining_tacos"': タコス
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(ランダム)"
+      Dancelab_setForegroundEffectExtended:
+        text: 前景エフェクトを {EFFECT} にセット
+        options:
+          EFFECT:
+            '"none"': 設定なし
+            '"rand"': "(ランダム)"
+            '"confetti"': 紙吹雪
+            '"hearts_red"': ハート
+            '"music_notes"': 音符
+            '"pineapples"': パイナップル
+            '"smiling_poop"': うんち
+            '"rain"': 雨
+            '"floating_rainbows"': 虹
+            '"raining_tacos"': タコス
       Dancelab_setProp:
         text: "{SPRITE} {PROPERTY} を {VAL} にセット "
         options:
@@ -384,6 +435,7 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"UNICORN"': ユニコーンだらけ
           PROPERTY:
             '"scale"': おおきさ
             '"width"': 幅
@@ -405,8 +457,6 @@ ja:
             '"tint"': 色合い
       Dancelab_setTint:
         text: "{SPRITE} の色合いを {VAL} にセット"
-      Dancelab_setTintInline:
-        text: "{SPRITE} の色合いを {VAL} にセット"
       Dancelab_setTintEach:
         options:
           THIS:
@@ -421,7 +471,10 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+      Dancelab_setTintInline:
+        text: "{SPRITE} の色合いを {VAL} にセット"
       Dancelab_setVisible:
+        text: "{SPRITE} 可視を{VISIBILITY} に設定"
         options:
           VISIBILITY:
             'true': 見える
@@ -441,6 +494,7 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"UNICORN"': ユニコーンだらけ
           VISIBILITY:
             'true': 見える
             'false': 見えない
