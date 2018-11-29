@@ -90,6 +90,15 @@ Feature: Dance Lab
     And I wait for the song selector to load
     And element "#song_selector" has value "cheapthrills_sia"
 
+    # Try the other How it Works button with a queryparam
+    # Covers regression https://github.com/code-dot-org/dance-party/issues/527
+    When I navigate to the last shared URL with a queryparam
+    And I wait until element "#open-workspace" is visible
+    Then element "#codeWorkspace" is not visible
+    When I click selector "#open-workspace" to load a new page
+    And I wait for the song selector to load
+    Then element "#codeWorkspace" is visible
+
   @no_mobile
   Scenario: Dance Party can share while logged out
     Given I am on "http://studio.code.org/s/dance/stage/1/puzzle/13?noautoplay=true"
