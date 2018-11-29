@@ -6,7 +6,7 @@ import {
   PageLabels,
   SectionHeaders,
   TextFields
-} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
+} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
 import {YES} from '../ApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 
@@ -47,7 +47,7 @@ export default class Section1AboutYou extends LabeledFormComponent {
         </p>
         <p>
           <strong>
-            The deadline to apply is Dec. 1, 2017.
+            The deadline to apply is Jan. 31, 2019.
           </strong>
         </p>
 
