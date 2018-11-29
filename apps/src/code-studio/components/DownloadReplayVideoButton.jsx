@@ -167,8 +167,13 @@ class DownloadReplayVideoButton extends React.Component {
         checkVideoAttempts: 0
       });
 
-      if (this.props.onError) {
-        this.props.onError();
+      if (this.state.downloadInitiated) {
+        if (this.props.onError) {
+          this.props.onError();
+          this.setState({
+            downloadInitiated: false
+          });
+        }
       }
 
       return;
