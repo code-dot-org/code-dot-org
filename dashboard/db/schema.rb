@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181117002905) do
+ActiveRecord::Schema.define(version: 20181128012054) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -718,6 +718,16 @@ ActiveRecord::Schema.define(version: 20181117002905) do
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
     t.index ["pd_application_id"], name: "index_pd_fit_weekend1819_registrations_on_pd_application_id", using: :btree
+  end
+
+  create_table "pd_fit_weekend_registrations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "pd_application_id"
+    t.string   "registration_year",               null: false
+    t.text     "form_data",         limit: 65535
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.index ["pd_application_id"], name: "index_pd_fit_weekend_registrations_on_pd_application_id", using: :btree
+    t.index ["registration_year"], name: "index_pd_fit_weekend_registrations_on_registration_year", using: :btree
   end
 
   create_table "pd_international_opt_ins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
