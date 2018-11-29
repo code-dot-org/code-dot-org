@@ -615,18 +615,26 @@ pt-BR:
       CSPU5_Debugging predict unexpected behavior - two onEvents to one ID: "Sua vez de tentar! Fornecemos a você um\ncódigo inicial com dois botões e dois manipuladores de evento na tela, mas deixamos\nos Ids padrões de \"id\". Você precisa alterar esses ids para conectar\no manipulador de eventos ao botão correto. (Curiosamente, o programa\nincorreto funciona, mas ele tem um comportamento bizarro. Vamos discutir mais\nsobre isso na próxima lição. Por enquanto, faça os botões funcionarem corretamente)."
       CSPU5_Debugging predict unexpected behavior - two onEvents to one_2018: "Sua vez de tentar! Fornecemos a você um\ncódigo inicial com dois botões e dois manipuladores de evento na tela, mas deixamos\nos Ids padrões de \"id\". Você precisa alterar esses ids para conectar\no manipulador de eventos ao botão correto. (Curiosamente, o programa\nincorreto funciona, mas ele tem um comportamento bizarro. Vamos discutir mais\nsobre isso na próxima lição. Por enquanto, faça os botões funcionarem corretamente)."
       CSPU5_FinalizeChaserGame: "Introdução do comando setPosition!\nSubstitua o moveTo no manipulador de eventos de clique do botão para usar setPosition\npara mover o botão para uma posição aleatória quando ele for clicado."
+      CSPU5_U3 - Arrays - assignment2: Calcule a soma dos três valores armazenados em um vetor. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - assignment2_2018: Calcule a soma dos três valores armazenados em um vetor. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - createFirstArray: Crie um vetor de números pares a partir de 0 até 10 e mostre o conteúdo da lista com console.log. (Clique aqui para ver todas as instruções)
       CSPU5_U3 - Arrays - createFirstArray_2018: Crie um vetor de números pares a partir de 0 até 10 e mostre o conteúdo da lista com console.log. (Clique aqui para ver todas as instruções)
       CSPU5_U3 - Arrays - expressionsAsIndexes: Escreva um programa que escolha e mostre uma cor aleatória do vetor. (Clique aqui para ver todas as instruções)
       CSPU5_U3 - Arrays - expressionsAsIndexes_2018: Escreva um programa que escolha e mostre uma cor aleatória do vetor. (Clique aqui para ver todas as instruções)
       CSPU5_U3 - Arrays - favThings Counting Variable: Crie uma variável global para o índice atual e use-a para mostrar o primeiro item no vetor. (Clique aqui para ver todas as instruções)
       CSPU5_U3 - Arrays - favThings Counting Variable_2018: Crie uma variável global para o índice atual e use-a para mostrar o primeiro item no vetor. (Clique aqui para ver todas as instruções)
+      CSPU5_U3 - Arrays - favThings createArray: Crie um array de palavras descrevendo suas coisas favoritas. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings createArray_2018: Crie um array de palavras descrevendo suas coisas favoritas. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - indexPractice: Mostre o conteúdo da lista na tela em ordem numérica. (Clique aqui para ver todas as instruções)
       CSPU5_U3 - Arrays - indexPractice_2018: Mostre o conteúdo da lista na tela em ordem numérica. (Clique aqui para ver todas as instruções)
       CSPU5_U3 - Canvas - freePlay: Estenda a funcionalidade de um dos efeitos, ou crie um novo de sua preferência. (Clique para ver todas as instruções)
       CSPU5_U3 - Canvas - freePlay_2018: Estenda a funcionalidade de um dos efeitos, ou crie um novo de sua preferência. (Clique para ver todas as instruções)
+      CSPU5_U3 - Canvas - redrawOriginal: Escreva uma função que processa seu vetor, redesenhando os pontos da forma que eles aparecem originalmente (Clique aqui para ver todas as instruções)
+      CSPU5_U3 - Canvas - redrawOriginal_2018: Escreva uma função que processa seu vetor, redesenhando os pontos da forma que eles aparecem originalmente (Clique aqui para ver todas as instruções)
       CSPU5_U3 - High Low - Else if: Adicione uma condição senão-se com o objetivo de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer que estão errados. (Clique para ver todas as instruções)
       CSPU5_U3 - High Low - Else if_2018: Adicione uma condição senão-se com o objetivo de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer que estão errados. (Clique para ver todas as instruções)
+      CSPU5_U3 - Keys - Multiple Keys: Toque um som diferente quando a seta para baixo for pressionada (Clique aqui para ver todas as instruções)
+      CSPU5_U3 - Keys - Multiple Keys_2018: Toque um som diferente quando a seta para baixo for pressionada (Clique aqui para ver todas as instruções)
       CSPU5_U313 Two Buttons with Ids: "Sua vez de tentar! Fornecemos a você um\ncódigo inicial com dois botões e dois manipuladores de evento na tela, mas deixamos\nos Ids padrões de \"id\". Você precisa alterar esses ids para conectar\no manipulador de eventos ao botão correto. (Curiosamente, o programa\nincorreto funciona, mas ele tem um comportamento bizarro. Vamos discutir mais\nsobre isso na próxima lição. Por enquanto, faça os botões funcionarem corretamente)."
       CSPU5_U3L13 - Debug Id Problem: "Esse programa tem um problema! Você pode descobrir\nqual? Execute o programa e veja se você pode descobrir a partir das mensagens de erro\nno console qual é o problema. Não há muito código para ver, então você deve ser capaz\nde descobrir o problema simplesmente lendo o código com atenção. Faça uma alteração\nque permita que o programa funcione como esperado."
       CSPU5_U3L13 - Turtle Driver Project: "Desafio: crie uma \"tartaruga motorista\"\ncom pelo menos três botões na tela para mover a tartaruga para a frente e\nvirá-la para a direita e para a esquerda. Se quiser, você pode copiar/colar de um nível anterior,\nmas você vai exercitar seus músculos de programação se criar\nesse pequeno programa desde o início. Se tiver tempo, adicione botões extras! Você\ntambém pode se divertir alterando os parâmetros nas funções da tartaruga, usando cores,\netc."
@@ -1150,10 +1158,11 @@ pt-BR:
       Dance_Party_08: É possível deixar os dois dançarinos de apoio do mesmo tamanho?
       Dance_Party_09: Use o bloco de 'definir tonalidade” para alterar a cor de um(a) dançarino(a).
       Dance_Party_10: Faça o outro dançarino também responder à música usando o bloco 'começar a seguir '.
-      Dance_Party_11.5: Use os blocos "todos os patos" para fazer os patos dançarem juntos.
       Dance_Party_11.5_test: Use os blocos "todos os patos" para fazer os patos dançarem juntos.
       Dance_Party_11: O bloco 'com a seta para cima pressionada' permite executar o código quando a seta para cima for pressionada. Tente fazer o(a) dançarino(a) se movimentar rapidamente pressionando a seta para cima.
+      Dance_Party_11_5: Use os blocos "todos os patos" para fazer os patos dançarem juntos.
       Dance_Party_11b: Faça o robô dançar drop uma vez pressionando a tecla de seta para a direita e fazer a dança do fio dental uma vez pressionando a seta para cima. Faça o movimento dança drop-dança do fio dental o mais rápido que puder!
+      Dance_Party_12: Entre no ritmo! Crie sua própria dança para compartilhar com seus amigos.
       Eval Booleans 1: "Operadores booleanos (como >, <, =) nos permitem\ncomparar valores diferentes, retornando \"verdadeiro\" ou \"falso\". Clique em \"Executar\"\npara ver o que essa expressão retorna."
       Eval Booleans 2: "Você pode definir os valores para que essa expressão\nseja \"verdadeira\"?"
       Eval Booleans 3: "A função \"comprimento-string\" retorna o número\nde caracteres em uma string (incluindo espaços!) - faça esse código retornar\n\"verdadeiro\"."
@@ -1402,19 +1411,27 @@ pt-BR:
       K-1 maze debug 8: "Depure esse nível reorganizando e adicionando\nblocos\npara me levar até o porco!"
       K-1 maze debug 9: "Depure esse nível reorganizando e trocando blocos\npara me levar até o porco!"
       K2.0 sequence 1: Altere o código para me levar até o porco!
+      K2.0 sequence 10: 'Desafio: Me mova em volta da TNT para chegar até o porco.'
+      K2.0 sequence 12: 'Vamos pegar aquele porco! '
       K2.0 sequence 2: Altere o código para me levar até o porco!
       K2.0 sequence 3: Descubra o que está faltando e então REMOVA blocos para me levar até o porco!
+      K2.0 sequence 4: Hora para um quebra-cabeça menor!  Mova um caminho e, em seguida, mova outro para me levar até o porco.
       K2.0 sequence 5: Mova-me por um caminho, e então por outro para me levar até o porco!
       K2.0 sequence 6: "Descubra o que está faltando e então adicione blocos\npara me levar até o porco!"
+      K2.0 sequence 7: Resolva este nível e me leve até o porco!
+      K2.0 sequence 8: Analise este nível adicionando blocos para me levar até o porco!
       K2.0 sequence 9: 'Desvie do TNT para me levar até o porco! '
       KIKI GLJ Test Response: 'Olhe cuidadosamente para o código abaixo. O que você acha que acontecerá com o avião quando você clicar "Executar"?  '
+      KTest1: Você pode me mover para o Sul mais uma vez para chegar até o porco?
       KTest2: Desenhe o caminho e leve-me até aquele porco bobalhão. Não passe pelas dinamites, senão penas vão voar!
       Kiki_StarWars_Test_3: Texto
       Kiki_StarWars_Test_4: Texto
       Kiki_StarWars_Test_5: Texto
       Kiki_StarWars_Test_5_Example: Texto
       LaurelDebugging4Video1: Mova Laurel ao redor e pegue quanto ouro puder!
+      Limited Quantity of Blocks Test: Leve-me até o porco usando apenas um bloco
       Luigi's Pizza 1: "Bem-vindo à pizzaria do Luigi! Para pedir uma pizza,\ndigite o nome de um sabor na função \"custo\" e vamos retornar o\npreço da pizza. Tente pedir uma pizza de pepperoni para começar."
+      Luigi's Pizza 2 (copy 1): Agora há apenas quatro opções disponíveis na pizzaria do Luigi - vamos arrumar isso! Adicione alguns novos sabores ao bloco condicional na função "custo". Quando adicionar seus sabores, teste a função para ver se ela funciona.
       Luigi's Pizza 2: "Agora há apenas quatro opções disponíveis\nna pizzaria do Luigi - vamos arrumar isso! Adicione alguns novos sabores ao bloco condicional\nna função \"custo\". Quando adicionar seus sabores, teste\na função para ver se ela funciona."
       Luigi's Pizza 3 (copy 1): "Assim está melhor, todos adoram uma maior\nvariedade nos sabores de pizza! Mas você ainda não consegue agradar a todos, e\nalgumas pessoas estão vindo pedir sabores que Luigi não tem. Ao invés de\ndizer não a essas pessoas, você poderia atualizar a cláusula \"senão\" para que possamos\ncobrar a mais deles por sabores que normalmente não oferecemos?"
       Luigi's Pizza 3: "Assim está melhor, todos adoram uma maior variedade nos\nsabores de pizza! Mas você ainda não consegue agradar a todos, e algumas pessoas estão\nvindo pedir sabores que Luigi não tem. Ao invés de dizer não\na essas pessoas, você poderia atualizar a cláusula \"senão\" para que possamos cobrar a\nmais deles por sabores que normalmente não oferecemos? Vamos cobrar R$10.000\npor um sabor que não está disponível."
@@ -1493,7 +1510,9 @@ pt-BR:
       MSM Big Game Vars Backup: "Na caixa de ferramentas de variáveis você vai ver diversas\nvariáveis que definem a aparência dos personagens do seu jogo e como eles se movem e\ninteragem"
       MSM Defining Vars 1 (copy 1): "Escreva um programa que produz um triângulo\nverde sólido de 50 pixels."
       MSM Defining Vars 1: "Escreva um programa que produz um triângulo\nverde sólido de 50 pixels."
+      MSM Defining Vars 2 (copy 1): Se quiséssemos fazer cinquenta triângulos verdes, seria horrível repetir esse bloco de código 50 vezes. Vamos criar uma variável chamada "minha-forma" e colocar o código para um triângulo verde sólido de 50 pixels dentro dela.
       MSM Defining Vars 2: "Se quiséssemos fazer 50 triângulos verdes,\nseria horrível repetir esse bloco de código 50 vezes. Vamos criar uma\nvariável chamada \"minha-forma\" e colocar o código para um triângulo verde sólido de 50 pixels\ndentro dela."
+      MSM Defining Vars 3 (copy 1): Pegue sua variável "minha-forma" e use-a com este código fornecido para desenhar dois triângulos verdes idênticos.
       MSM Defining Vars 3: "Pegue sua variável \"minha-forma\" e use-a\ncom esse código fornecido para desenhar dois triângulos verdes idênticos que têm\n50 pixels."
       MSM Defining Vars 4: "Edite sua variável \"minha-forma\" para que ela\ndesenhe estrelas vermelhas sólidas de 75 pixels."
       MSM Play Lab Butterfly 1: "Ajude Sam a ficar na tela para que\nvocê sempre possa ver pelo menos uma pequena parte dele. Usando as setas do teclado, veja\nquão longe Sam pode ir para a esquerda enquanto permanece na tela. Você vai descobrir que\nSam fica na tela enquanto sua coordenada x for maior que -50. Então, complete\no código para fazer Sam permanecer na tela."
@@ -1504,9 +1523,11 @@ pt-BR:
       Middle School Hackathon Pt 2: "(Clique para ver todas as instruções)"
       Mike Pair Programming: Veja aqui as instruções
       Mike Test Bee Conditionals 1: "Esta nuvem está tapando minha visão! Veja\nse há uma flor atrás da nuvem, e só colete néctar se houver\numa flor. Cuidado, isso pode mudar!"
+      MikeAssessment1: Agora faça isto certo!
       MikeStar: Desenhe isto.
       MikeStarHard: Desenhe isto.
       MikeStarNested: Desenhe isto.
+      MikeTest1: Quem sabe o que você deve fazer?!?!
       NEW Course 4 Artist Functions 1: "Você consegue desenhar um quadrado com\n100 pixels de comprimento usando um laço?"
       NEW Course 4 Artist Functions 10.1: "Use as funções dos desafios\nanteriores para desenhar esse padrão."
       NEW Course 4 Artist Functions 10: "Clique em \"editar\" para preencher\nos blocos na definição da função para fazer um quadrado de 40 pixels."
@@ -1719,12 +1740,16 @@ pt-BR:
       U2 vigenere cipher: Instruções
       U2L10 NetSim Manual DNS: "Nessa versão do simulador você não pode\nver o endereço de outros alunos. Ao invés disso, um de vocês deve agir como um\nserviço de nome, para ajudar a compartilhar os endereços entre si."
       U2L14 frequency random: Teste
+      U3 - Arrays - assignment2: Calcule a soma dos três valores armazenados em um vetor. (Clique para ver as instruções completas)
       U3 - Arrays - createFirstArray: Crie um vetor de números pares a partir de 0 até 10 e mostre o conteúdo da lista com console.log. (Clique aqui para ver todas as instruções)
       U3 - Arrays - expressionsAsIndexes: Escreva um programa que escolha e mostre uma cor aleatória do vetor. (Clique aqui para ver todas as instruções)
       U3 - Arrays - favThings Counting Variable: Crie uma variável global para o índice atual e use-a para mostrar o primeiro item no vetor. (Clique aqui para ver todas as instruções)
+      U3 - Arrays - favThings createArray: Crie um array de palavras descrevendo suas coisas favoritas. (Clique para ver as instruções completas)
       U3 - Arrays - indexPractice: Mostre o conteúdo da lista na tela em ordem numérica. (Clique aqui para ver todas as instruções)
       U3 - Canvas - freePlay: Estenda a funcionalidade de um dos efeitos, ou crie um novo de sua preferência. (Clique para ver todas as instruções)
+      U3 - Canvas - redrawOriginal: Escreva uma função que processa seu vetor, redesenhando os pontos da forma que eles aparecem originalmente (Clique aqui para ver todas as instruções)
       U3 - High Low - Else if: Adicione uma condição senão-se com o objetivo de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer que estão errados. (Clique para ver todas as instruções)
+      U3 - Keys - Multiple Keys: Toque um som diferente quando a seta para baixo for pressionada (Clique aqui para ver todas as instruções)
       U3 - Simple Drawing - Comments: Faça isso
       U3 - Simple Drawing - Ellipse and No Fill: Faça isso
       U3 - Simple Drawing - Fill: Faça isso
@@ -2746,7 +2771,9 @@ pt-BR:
       grade1_maze_sequence2: Altere o código para me levar até o porco!
       grade1_maze_sequence5: Mova-me por um caminho, e então por outro para me levar até o porco!
       grade1_maze_sequence6: "Descubra o que está faltando e então adicione blocos\npara me levar até o porco!"
+      grade1_maze_sequence8: Analise este nível adicionando blocos para me levar até o porco!
       grade1_maze_sequence9: 'Desvie do TNT para me levar até o porco! '
+      grade1_maze_sequenceA: 'Desafio: Me mova em volta da TNT para chegar até o porco.'
       grade2_CaringForNewPet_10: Leve-me até o porco!
       grade2_CaringForNewPet_5: Leve-me até o porco!
       grade2_MakeDogTag_10: Agora desenhe o que você quiser!

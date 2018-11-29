@@ -793,6 +793,10 @@ pt-BR:
         MC_2018_loops: 'Minecraft: Viagem Aquática Repetir Até'
         mc_2018_conditionals: 'Minecraft: Viagem Aquática Condicionais'
         mc_2018_closing: 'Minecraft: Viagem Aquática Parabéns'
+        hoc_dance_warmup: Festa Dançante - Aquecimento
+        hoc_dance_events: Festa de dança - Eventos
+        hoc_dance_properties: Festa de dança - Propriedades
+        hoc_dance_congrats: Festa Dançante - Festejar!
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco
