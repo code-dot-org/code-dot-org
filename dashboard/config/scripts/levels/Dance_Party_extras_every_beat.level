@@ -67,7 +67,7 @@
           <statement name="DO">
             <block type="Dancelab_setBackgroundEffectWithPalette">
               <title name="EFFECT">"rainbow"</title>
-              <title name="EFFECT">"default"</title>
+              <title name="PALETTE">"default"</title>
               <next>
                 <block type="Dancelab_makeNewDanceSprite">
                   <title name="COSTUME">"ROBOT"</title>
