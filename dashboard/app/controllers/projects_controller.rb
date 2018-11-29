@@ -327,7 +327,7 @@ class ProjectsController < ApplicationController
     end
 
     if params[:key] == 'dance'
-      @project_image = CDO.studio_url "v3/files/#{@view_options['channel']}/.metadata/thumbnail.png"
+      @project_image = CDO.studio_url "v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
       if DCDO.get('share_video_sharing_enabled', true)
         # TODO: elijah set up test subdomains for dance-api, and situationally
         # point to those here

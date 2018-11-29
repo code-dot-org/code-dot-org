@@ -27,6 +27,7 @@ import {
   unloadSong,
   fetchSignedCookies,
 } from './songs';
+import { SongTitlesToArtistTwitterHandle } from '../code-studio/dancePartySongArtistTags';
 
 const ButtonState = {
   UP: 0,
@@ -317,7 +318,7 @@ Dance.prototype.afterInject_ = function () {
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
     i18n: danceMsg,
-    resourceLoader: new ResourceLoader('https://curriculum.code.org/images/sprites/dance_20181120/'),
+    resourceLoader: new ResourceLoader('https://curriculum.code.org/images/sprites/dance_20181127/'),
   });
 
   // Expose an interface for testing
@@ -513,10 +514,24 @@ Dance.prototype.initInterpreter = function () {
     setBackground: color => {
       nativeAPI.setBackground(color.toString());
     },
+    // DEPRECATED
+    // An old block may refer to this version of the command,
+    // so we're keeping it around for backwards-compat.
+    // @see https://github.com/code-dot-org/dance-party/issues/469
     setBackgroundEffect: (effect, palette = 'default') => {
       nativeAPI.setBackgroundEffect(effect.toString(), palette.toString());
     },
+    setBackgroundEffectWithPalette: (effect, palette = 'default') => {
+      nativeAPI.setBackgroundEffect(effect.toString(), palette.toString());
+    },
+    // DEPRECATED
+    // An old block may refer to this version of the command,
+    // so we're keeping it around for backwards-compat.
+    // @see https://github.com/code-dot-org/dance-party/issues/469
     setForegroundEffect: effect => {
+      nativeAPI.setForegroundEffect(effect.toString());
+    },
+    setForegroundEffectExtended: effect => {
       nativeAPI.setForegroundEffect(effect.toString());
     },
     makeNewDanceSprite: (costume, name, location) => {
@@ -642,6 +657,11 @@ Dance.prototype.onHandleEvents = function (currentFrameEvents) {
  */
 Dance.prototype.displayFeedback_ = function () {
   const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
+
+  const artistTwitterHandle = SongTitlesToArtistTwitterHandle[this.level.selectedSong];
+
+  const twitterText = "Check out the dance I made featuring @" + artistTwitterHandle + " on @codeorg!";
+
   let feedbackOptions = {
     feedbackType: this.testResults,
     message: this.message,
@@ -654,6 +674,7 @@ Dance.prototype.displayFeedback_ = function () {
       reinfFeedbackMsg: 'TODO: localized feedback message.',
     },
     disablePrinting: true,
+    twitter: {text: twitterText}
   };
 
   // Disable social share for users under 13 if we have the cookie set.
