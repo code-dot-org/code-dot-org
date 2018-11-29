@@ -5,7 +5,7 @@ import $ from 'jquery';
 export var checkForUnsupportedBrowsersOnLoad = function () {
   $(document).ready(function () {
     let textDivId = null;
-    let dismissable = false;
+    textDivId = '#unsupported-browser';
 
     if (isUnsupportedBrowser()) {
       textDivId = '#unsupported-browser';
@@ -16,23 +16,17 @@ export var checkForUnsupportedBrowsersOnLoad = function () {
         } else if (appOptions.app === 'gamelab' && !appOptions.valueTypeTabShapeMap) {
           textDivId = '#gamelab-unsupported-tablet';
         }
-        dismissable = true;
       } else if (isIE11() && appOptions.app === 'weblab') {
         textDivId = '#weblab-unsupported-browser';
-        dismissable = true;
       } else if (appOptions.app === 'weblab' && !isStorageAvailable('localStorage')) {
         textDivId = '#weblab-unsupported-local-storage';
-        dismissable = true;
       }
     }
 
     if (textDivId) {
       $(textDivId).show();
-      if (dismissable) {
-        $("#dismiss-icon").show();
-      } else {
-        $("#warning-icon").show();
-      }
+      $("#warning-icon").show();
+      $("#dismiss-icon").show();
       $("#warning-banner").show();
     }
   });
