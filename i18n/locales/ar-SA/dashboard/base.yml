@@ -277,6 +277,7 @@ ar:
       playlab: 'مختبر اللعب'
       minecraft: 'Minecraft'
       flappy: 'فلابي'
+      dance: 'حفلة رقص'
     popup:
       progress_for_user: "تقدم %{name}"
       progress: 'إنجازاتك'
@@ -505,6 +506,8 @@ ar:
       body_short: "تصميم تطبيق، أكواد مع قطع برمجية أو JavaScript لجعلها تعمل، ثم قم بشاركة التطبيق الخاص بك في ثوان."
       audience: 'للأعمار 13 +'
       cta: 'تعلم كيف'
+    dance:
+      title: 'حفلة رقص'
     hoc:
       title: 'المتاهة الكلاسيكية'
       body: 'جرب تعلّم أساسيات علوم الحاسب الآلي. الملايين قاموا بذلك.'
@@ -543,7 +546,7 @@ ar:
       title: "Minecraft"
     hero:
       title: "Minecraft"
-      body: "ماين كرافت عادت لساعة من البرمجة بنشاط جديد! رحلة في عالم ماين كرافت مع البرمجة."
+      body: "عاد Minecraft بأنشطة جديدة تمامًا ومخصصة لساعة من البرمجة! رحلة عبر Minecraft مع البرمجة."
     unplugged:
       title: "درس غير موصول"
       audience: "العمر 4+"
@@ -747,6 +750,7 @@ ar:
     minecraft_name: 'ساعة البرمجة ماين كرافت'
     starwars_javascript_name: 'حرب النجوم: بناء مجرة باستعمال البرمجة (جافا سكريبت)'
     mac: 'نظام تشغيل ماك'
+  view_teacher_guide: 'عرض دليل المعلم'
   pd:
     form_labels:
       email: 'البريد الإلكتروني'

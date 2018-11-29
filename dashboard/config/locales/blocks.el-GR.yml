@@ -30,16 +30,17 @@ el:
             '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
             '"SHARK"': όλοι οι καρχαρίες
+            '"UNICORN"': όλοι οι μονόκεροι
           MOVE:
             '"next"': "(Επόμενο)"
             '"prev"': "(Προηγούμενο)"
             '"rand"': "(Τυχαίο)"
-            MOVES.Roll: Κύλα
+            MOVES.Roll: Κύλιση σώματος
             MOVES.ClapHigh: Παλαμάκια Ψηλά
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Διπλό κάτω
             MOVES.Fresh: Φρέσκο
-            MOVES.Clown: Κλόουν
-            MOVES.Kick: Κλώτσα
+            MOVES.Clown: Γκάνγκαμ στάιλ
+            MOVES.Kick: Αστέρι
             MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
           DIR:
@@ -52,12 +53,12 @@ el:
             '"next"': "(Επόμενο)"
             '"prev"': "(Προηγούμενο)"
             '"rand"': "(Τυχαίο)"
-            MOVES.Roll: Κύλα
+            MOVES.Roll: Κύλιση σώματος
             MOVES.ClapHigh: Παλαμάκια Ψηλά
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Διπλό κάτω
             MOVES.Fresh: Φρέσκο
-            MOVES.Clown: Κλόουν
-            MOVES.Kick: Κλώτσα
+            MOVES.Clown: Γκάνγκαμ στάιλ
+            MOVES.Kick: Αστέρι
             MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
           DIR:
@@ -88,14 +89,15 @@ el:
             '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
             '"SHARK"': όλοι οι καρχαρίες
+            '"UNICORN"': όλοι οι μονόκεροι
           MOVE:
             '"rand"': "(Τυχαίο)"
-            MOVES.Roll: Κύλα
+            MOVES.Roll: Κύλιση σώματος
             MOVES.ClapHigh: Παλαμάκια Ψηλά
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Διπλό κάτω
             MOVES.Fresh: Φρέσκο
-            MOVES.Clown: Κλόουν
-            MOVES.Kick: Κλώτσα
+            MOVES.Clown: Γκάνγκαμ στάιλ
+            MOVES.Kick: Αστέρι
             MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
           DIR:
@@ -106,12 +108,12 @@ el:
         options:
           MOVE:
             '"rand"': "(Τυχαίο)"
-            MOVES.Roll: Κύλα
+            MOVES.Roll: Κύλιση σώματος
             MOVES.ClapHigh: Παλαμάκια Ψηλά
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Διπλό κάτω
             MOVES.Fresh: Φρέσκο
-            MOVES.Clown: Κλόουν
-            MOVES.Kick: Κλώτσα
+            MOVES.Clown: Γκάνγκαμ στάιλ
+            MOVES.Kick: Αστέρι
             MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
           DIR:
@@ -165,11 +167,11 @@ el:
         options:
           DANCE:
             MOVES.ClapHigh: Παλαμάκια Ψηλά
-            MOVES.Clown: Κλόουν
-            MOVES.DoubleJam: Double Jam
+            MOVES.Clown: Γκάνγκαμ στάιλ
+            MOVES.DoubleJam: Διπλό κάτω
             MOVES.Fresh: Φρέσκο
-            MOVES.Roll: Κύλα
-            MOVES.Kick: Κλώτσα
+            MOVES.Roll: Κύλιση σώματος
+            MOVES.Kick: Αστέρι
             MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
       Dancelab_ifTime:
@@ -206,11 +208,16 @@ el:
             '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
             '"SHARK"': όλοι οι καρχαρίες
+            '"UNICORN"': όλοι οι μονόκεροι
           FORMAT:
+            '"border"': όριο
+            '"inner"': εσωτερικό τετράγωνο
             '"circle"': κύκλος
             '"grid"': πλέγμα
             '"row"': γραμμή
             '"column"': στήλη
+            '"x"': χιαστί
+            '"plus"': συν
             '"random"': τυχαίο
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -221,6 +228,7 @@ el:
             '"ALIEN"': Εξωγήινος
             '"BEAR"': Αρκούδα
             '"CAT"': Γάτα
+            '"DOG"': Σκύλος
             '"DUCK"': Πάπια
             '"FROG"': Βάτραχος
             '"MOOSE"': Ελάφι
@@ -277,10 +285,14 @@ el:
             '"SHARK"': Καρχαρίες
             '"UNICORN"': Μονόκεροι
           LAYOUT:
+            '"border"': όριο
+            '"inner"': εσωτερικό τετράγωνο
             '"circle"': κύκλος
             '"grid"': πλέγμα
             '"row"': γραμμή
             '"column"': στήλη
+            '"x"': χιαστί
+            '"plus"': συν
             '"random"': τυχαίο
       Dancelab_mixColors:
         text: ανακάτεψε {COLOR1} και {COLOR2}
@@ -305,6 +317,31 @@ el:
             '"rainbow"': Χρώματα
             '"diamonds"': Διαμάντια
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Τυχαίο)"
+      Dancelab_setBackgroundEffectWithPalette:
+        text: ορισμός εφέ φόντου {EFFECT} {PALETTE}
+        options:
+          EFFECT:
+            '"none"': Κανένα
+            '"rand"': "(Τυχαίο)"
+            '"circles"': Σήραγγα
+            '"diamonds"': Διαμάντια
+            '"disco_ball"': Ντισκομπάλα
+            '"kaleidoscope"': Καλειδοσκόπιο
+            '"lasers"': Πίστα χορού λέιζερ
+            '"splatter"': Πιτσιλιές χρωμάτων
+            '"rainbow"': Χρώματα
+            '"text"': Τίτλος τραγουδιού
+            '"sparkles"': Αστράκια
+            '"disco"': Τετράγωνα
+            '"stars"': Αστέρια
+          PALETTE:
+            '"rave"': Ασπρόμαυρο
+            '"cool"': Μπλουζ
+            '"default"': Φωτεινό
+            '"neon"': Νέον
+            '"tropical"': Τροπικό
+            '"vintage"': Βίντατζ
+            '"warm"': Κόκκινα
       Dancelab_setDanceSpeed:
         text: αλλαγή {SPRITE} ταχύτητας χορού σε {SPEED}
         options:
@@ -328,6 +365,7 @@ el:
             '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
             '"SHARK"': όλοι οι καρχαρίες
+            '"UNICORN"': όλοι οι μονόκεροι
           SPEED:
             '1': κανονικό
             '2': γρήγορη
@@ -342,6 +380,20 @@ el:
             '"rain"': Βροχή
             '"raining_tacos"': Τάκο
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Τυχαίο)"
+      Dancelab_setForegroundEffectExtended:
+        text: ορισμός εφέ προσκηνίου {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Κανένα
+            '"rand"': "(Τυχαίο)"
+            '"confetti"': Κομφετί
+            '"hearts_red"': Καρδιές
+            '"music_notes"': Νότες μουσικής
+            '"pineapples"': Ανανάδες
+            '"smiling_poop"': Κακάκια
+            '"rain"': Βροχή
+            '"floating_rainbows"': Ουράνιο τόξο
+            '"raining_tacos"': Τάκο
       Dancelab_setProp:
         text: 'ορισμός {SPRITE} {PROPERTY} σε {VAL} '
         options:
@@ -368,6 +420,7 @@ el:
             '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
             '"SHARK"': όλοι οι καρχαρίες
+            '"UNICORN"': όλοι οι μονόκεροι
           PROPERTY:
             '"scale"': μέγεθος
             '"width"': πλάτος
@@ -389,8 +442,6 @@ el:
             '"tint"': απόχρωση
       Dancelab_setTint:
         text: ορισμός {SPRITE} απόχρωσης σε {VAL}
-      Dancelab_setTintInline:
-        text: ορισμός {SPRITE} απόχρωσης σε {VAL}
       Dancelab_setTintEach:
         options:
           THIS:
@@ -405,7 +456,10 @@ el:
             '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
             '"SHARK"': όλοι οι καρχαρίες
+      Dancelab_setTintInline:
+        text: ορισμός {SPRITE} απόχρωσης σε {VAL}
       Dancelab_setVisible:
+        text: ορίστε {SPRITE} ως ορατό σε {VISIBILITY}
         options:
           VISIBILITY:
             'true': ορατό
@@ -425,6 +479,7 @@ el:
             '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
             '"SHARK"': όλοι οι καρχαρίες
+            '"UNICORN"': όλοι οι μονόκεροι
           VISIBILITY:
             'true': ορατό
             'false': αόρατο

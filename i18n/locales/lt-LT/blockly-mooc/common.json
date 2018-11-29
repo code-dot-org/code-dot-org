@@ -421,6 +421,8 @@
   "dontForget": "Nepamiršk",
   "downloadCSV": "",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Animacija",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "Pridėti du skaičius",
   "dropletBlock_addOperator_signatureOverride": "",

@@ -864,10 +864,11 @@ tr:
       Dance_Party_08: İki arka plan dansçısını da aynı boyuta getirebilir misini?
       Dance_Party_09: Dansçının rengini değiştirmek için `renk tonu ayarla` bloğunu kullanın.
       Dance_Party_10: '`Takibe başlar` bloğunu kullanarak diğer dansçının da müziğe tepki vermesini sağlayın.'
-      Dance_Party_11.5: Ördekleri birlikte dans ettirmek için "tüm ördekler" bloğunu kullanın.
       Dance_Party_11.5_test: Ördekleri birlikte dans ettirmek için "tüm ördekler" bloğunu kullanın.
       Dance_Party_11: '`Yukarıya basıldığında` bloğu yukarı oka basıldığında kodu çalıştırmanızı sağlar. Yukarı oka basarak dansçıya hızlı bir hareket yaptırmaya çalışın.'
+      Dance_Party_11_5: Ördekleri birlikte dans ettirmek için "tüm ördekler" bloğunu kullanın.
       Dance_Party_11b: Robota sağ ok tuşuna basarak bir kere "drop" ve yukarı ok tuşuna basarak bir kere "floss" hareketi yaptırın. Elinizden geldiğince hızlı drop-floss yapın!
+      Dance_Party_12: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla paylaşın.
       Find the Wizard: Ne istersen geliştir. Bu sayı tahmin oyununa bir örnektir!
       Find the Wizard_2018: Ne istersen geliştir. Bu sayı tahmin oyununa bir örnektir!
       Food Fight!: "Sizin için son bir fonksiyon ekledik.\nEğer bloğu kullan ve oyuncunun puanı belirli bir sayıyı geçince üst seviye \"level_up\" fonksiyonunu çağır.\nOyunu oyna ve 4 seviye geçmesini sağla. "

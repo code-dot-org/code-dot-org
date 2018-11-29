@@ -27,12 +27,14 @@ it:
       numbers: numeri
       Numbers: Numeri
       Default: Impostazione predefinita
-      World: Mondo
+      World: Ambiente
       Sprites: Personaggi
       Behaviors: Comportamenti
       Start: Inizia
       Music: Musica
       Dancing: Danza
+      Dancers: Ballerini
+      Groups: Gruppi
       Sprite: Personaggio
       Brush: Pennello
       Booleans: Valori Booleani

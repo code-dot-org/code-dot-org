@@ -421,6 +421,8 @@
   "dontForget": "សូមមេត្តាកុំភ្លេច",
   "downloadCSV": "",
   "downloadAssessmentCSV": "ទាញយក CSV រាល់ការឆ្លើយតបរបស់សិស្ស",
+  "downloadReplayVideoButtonDownload": "ការធ្វើចលនា",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "អូសប្លុកដើម្បីផ្គូផ្គង",
   "dropletBlock_addOperator_description": "",
   "dropletBlock_addOperator_signatureOverride": "",

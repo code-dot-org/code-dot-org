@@ -252,6 +252,7 @@ zh-CN:
             '"ALIEN"': 外星人
             '"BEAR"': 玩具熊
             '"CAT"': 猫
+            '"DOG"': 狗
             '"DUCK"': 鸭子
             '"FROG"': 青蛙
             '"MOOSE"': 驼鹿
@@ -330,7 +331,7 @@ zh-CN:
       Dancelab_setBackground:
         text: 设置背景颜色为 {COLOR}
       Dancelab_setBackgroundEffect:
-        text: 设置背景效果为 {EFFECT}
+        text: 设置背景效果 {EFFECT}
         options:
           EFFECT:
             '"none"': 没有
@@ -343,6 +344,35 @@ zh-CN:
             '"snowflakes"': 雪
             '"spiral"': 螺旋
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": 随机
+      Dancelab_setBackgroundEffectWithPalette:
+        text: 设置背景效果 {EFFECT} {PALETTE}
+        options:
+          EFFECT:
+            '"none"': 没有
+            '"rand"': 随机
+            '"circles"': 隧道
+            '"color_cycle"': 颜色
+            '"diamonds"': 菱形
+            '"disco_ball"': 迪斯科球
+            '"swirl"': 催眠
+            '"kaleidoscope"': 万花筒
+            '"lasers"': 激光舞池
+            '"splatter"': 油漆飞溅
+            '"rainbow"': 彩虹
+            '"snowflakes"': 雪
+            '"text"': 歌曲标题
+            '"sparkles"': 火花
+            '"spiral"': 螺旋
+            '"disco"': 方形
+            '"stars"': 星星
+          PALETTE:
+            '"rave"': 黑白
+            '"cool"': 蓝色
+            '"default"': 光
+            '"neon"': 霓虹
+            '"tropical"': 热带
+            '"vintage"': 复古
+            '"warm"': 红色
       Dancelab_setDanceSpeed:
         text: 将 {SPRITE} 跳舞速度改为 {SPEED}
         options:
@@ -383,6 +413,22 @@ zh-CN:
             '"raining_tacos"': 玉米卷
             '"spotlight"': 聚光灯
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": 随机
+      Dancelab_setForegroundEffectExtended:
+        text: 设置前景效果为 {EFFECT}
+        options:
+          EFFECT:
+            '"none"': 没有
+            '"rand"': 随机
+            '"bubbles"': 气泡
+            '"confetti"': 彩纸屑
+            '"hearts_red"': 心
+            '"music_notes"': 音符
+            '"pineapples"': 菠萝
+            '"smiling_poop"': 便便
+            '"rain"': 下雨
+            '"floating_rainbows"': 彩虹
+            '"spotlight"': 聚光灯
+            '"raining_tacos"': 玉米卷
       Dancelab_setProp:
         text: 设置 {SPRITE} {PROPERTY} 为 {VAL}
         options:
@@ -431,8 +477,6 @@ zh-CN:
             '"tint"': 色调
       Dancelab_setTint:
         text: 设置 {SPRITE} 色调为 {VAL}
-      Dancelab_setTintInline:
-        text: 设置 {SPRITE} 色调为 {VAL}
       Dancelab_setTintEach:
         text: 设置 {THIS} 色调为 {VAL}
         options:
@@ -448,6 +492,8 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
+      Dancelab_setTintInline:
+        text: 设置 {SPRITE} 色调为 {VAL}
       Dancelab_setVisible:
         text: 设置 {SPRITE} 可见度为 {VISIBILITY}
         options:
@@ -531,6 +577,7 @@ zh-CN:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       Dancelab_whenPeak:
         text: 当 {RANGE} 达到最高

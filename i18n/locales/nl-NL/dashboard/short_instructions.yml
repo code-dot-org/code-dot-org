@@ -798,10 +798,11 @@ nl:
       Dance_Party_08: Kun je beide achtergronddansers dezelfde grootte geven?
       Dance_Party_09: Gebruik het blok 'tint instellen' om de kleur van een danser te veranderen.
       Dance_Party_10: Zorg dat de andere danser ook op de muziek reageert, met behulp van het blok 'begint te volgen'.
-      Dance_Party_11.5: Gebruik de "alle eenden" blokken om de eenden samen te laten dansen.
       Dance_Party_11.5_test: Gebruik de "alle eenden" blokken om de eenden samen te laten dansen.
       Dance_Party_11: Met het blok 'wanneer pijlomhoogtoets ingedrukt' kun je code uitvoeren door op de pijlomhoogtoets te drukken. Proberen de danser een een snelle move te laten doen wanneer je op de pijlomhoogtoets drukt.
+      Dance_Party_11_5: Gebruik de "alle eenden" blokken om de eenden samen te laten dansen.
       Dance_Party_11b: Zorg dat de Robot "naar de grond gaat" door op de rechterpijltoets te drukken, en laat hem een keer de "floss" doen door op de pijlomhoogtoets te drukken. Doe zo snel als je kan de drop-floss!
+      Dance_Party_12: Ga helemaal los! Maak je eigen dans om te delen met je vrienden.
       Find the Wizard: Bouw wat je maar wilt. Dit is één voorbeeld van een getal raad spelletje!
       Find the Wizard_2018: Bouw wat je maar wilt. Dit is één voorbeeld van een getal raad spelletje!
       Food Fight!: "We hebben nog een laatste functie toegevoegd die je kunt gebruiken. Programmeer je spel zo dat het de \"niveau_omhoog\" functie aanroept als \"speler_punten\" > 10. Speel het spel en ga voorbij niveau 4 om verder te gaan naar de volgende puzzel.\n"

@@ -747,10 +747,11 @@ de:
       Dance_Party_08: Können Sie beide Backup-Tänzer gleich groß machen?
       Dance_Party_09: Verwenden Sie den Block "Farbton einstellen", um den Farbton eines Tänzers zu verändern.
       Dance_Party_10: Lassen Sie die anderen Tänzer auch auf die Musik reagieren, indem Sie den Block "beginnt danach" verwenden.
-      Dance_Party_11.5: Verwenden Sie die Blöcke "alle Enten", um die Enten gemeinsam tanzen zu lassen.
       Dance_Party_11.5_test: Verwenden Sie die Blöcke "alle Enten", um die Enten gemeinsam tanzen zu lassen.
       Dance_Party_11: Mit dem Block "Wenn nach oben gedrückt" können Sie Code ausführen, wenn die Pfeiltaste nach oben gedrückt wird. Versuchen Sie, den Tänzer eine schnelle Bewegung ausführen zu lassen, wenn Sie die Pfeiltaste nach oben drücken.
+      Dance_Party_11_5: Verwenden Sie die Blöcke "alle Enten", um die Enten gemeinsam tanzen zu lassen.
       Dance_Party_11b: Lassen Sie den Roboter einmal "droppen", wenn Sie die rechte Pfeiltaste drücken, und einmal "flossen", wenn Sie die Pfeiltaste nach oben drücken. Machen Sie den Drop-Floss, so schnell es geht!
+      Dance_Party_12: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen Sie ihn mit Ihren Freunden.
       Food Fight!: "Wir haben für dich eine letzte Funktion ergänzt.\n\nBenutze eine „Wenn“-Aussage, um dein Spiel zu programmieren, um die „Level-hoch“-Funktion nur dann aufzurufen, wenn „Spieler_Punkte“ größer als eine bestimmte Zahl wird.\n\nZum Beispiel: „Spieler_Punkte“ > 6\n\nSpiele das Spiel und lasse es Level 4 passieren, um zum nächsten Puzzle zu gelangen."
       FoodFight: Das ist ein Beispiel für ein Spiels, das du in Play Lab machen kannst.
       FoodFight_2018: Das ist ein Beispiel für ein Spiels, das du in Play Lab machen kannst.

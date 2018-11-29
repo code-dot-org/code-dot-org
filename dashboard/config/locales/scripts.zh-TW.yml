@@ -3670,6 +3670,9 @@ zh-TW:
             Dance Party:
               name: 舞蹈派對
           title: 舞蹈派對
+          description_short: 精選 Katy Perry、Madonna、J. Balvin, Sia、Keith Urban、Ciara
+            和其他 25 位名人！
+          description: 使用代碼自創一支舞蹈，并與朋友分享！
         frozen-2018-test-b:
           stages:
             Artist:
@@ -3686,6 +3689,9 @@ zh-TW:
           stages:
             Dance Party:
               name: 舞蹈派對
+        dance-extras:
+          title: 繼續跳舞
+          description: 在一小時之後嘗試更多奇思妙想。
         coursef-2019:
           description_short: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
           stages:

@@ -2944,43 +2944,42 @@ it:
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
       Dance short test 2_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
           * Devi fare in modo che l’effetto di sfondo cambi nel corso della settima battuta della canzone.
           
-          *Questo livello terminerà dopo 10 battute. *
+          *L'esercizio terminerà dopo 10 battute. *
         challenges: |-
-          **Sfida opzionale**
+          **Sfida supplementare**
           
           Modifica l’effetto di sfondo in punti diversi della canzone unendo il nuovo blocco sotto gli eventi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
       Dance short test_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
           * Devi fare in modo che l’effetto di sfondo cambi nel corso della settima battuta della canzone.
           
-          *Questo livello terminerà dopo 10 battute. *
+          *L'esercizio terminerà dopo 10 battute. *
         challenges: |-
-          **Sfida opzionale**
+          **Sfida supplementare**
           
           Modifica l’effetto di sfondo in punti diversi della canzone unendo il nuovo blocco sotto gli eventi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
       Dance_Party_01_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           * Assicurati che sullo schermo appaia un ballerino.
           
-          *Questo livello terminerà dopo 4 battute. *
+          *L'esercizio terminerà dopo 4 battute.*
         challenges: |-
-          **Sfide opzionali**
-          * Scegli un brano diverso.
-          * Scegline uno che assomigli ad un alce!
+          **Sfide supplementari**
+          * Cambia brano musicale.
           * Rinomina il tuo ballerino.
       Dance_Party_01_low_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           * Assicurati che sullo schermo appaia un ballerino.
           
-          *Questo livello terminerà dopo 4 battute. *
+          *L'esercizio terminerà dopo 4 battute.*
         challenges: |-
           **Sfide opzionali**
           * Scegli un brano diverso.
@@ -2988,64 +2987,64 @@ it:
           * Rinomina il tuo ballerino.
       Dance_Party_02_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
-          * Il ballerino deve passare ad una nuova mossa dopo 4 battute.
+          **Come faccio a completare questo esercizio?**
+          * Il ballerino deve cambiare mossa dopo 4 battute.
           
-          *Il livello terminerà dopo 8 battute. *
+          *L'esercizio terminerà dopo 8 battute.*
       Dance_Party_03_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
           * Dopo 6 battute, il tuo ballerino dovrà ballare in modo diverso rispetto a come ballava dopo 4 battute.
           
-          *Questo livello terminerà dopo 12 battute. *
+          *L'esercizio terminerà dopo 12 battute.*
       Dance_Party_04_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
-          * Devi fare in modo che l’effetto di sfondo cambi nel corso della settima battuta della canzone.
+          * Devi fare in modo che lo sfondo cambi effetto prima della settima battuta della canzone.
           
-          *Questo livello terminerà dopo 10 battute. *
+          *L'esercizio terminerà dopo 10 battute.*
         challenges: |-
-          **Sfida opzionale**
+          **Sfida supplementare**
           
           Modifica l’effetto di sfondo in punti diversi della canzone unendo il nuovo blocco sotto gli eventi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
       Dance_Party_06_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
-          * Devi disporre di almeno due ballerini.
+          * Devi avere almeno due ballerini.
           
-          *Questo livello terminerà dopo 6 battute. *
+          *L'esercizio terminerà dopo 6 battute. *
         challenges: |-
-          **Sfida opzionale**
+          **Sfida supplementare**
           
-          * Aggiungi un terzo ballerino (oppure tutti quelli che vuoi!)
-          * Fai eseguire a tutti i tuoi ballerini delle mosse diverse in momenti diversi della canzone.
+          * Aggiungi un terzo ballerino (o tutti quelli che vuoi!)
+          * Fai eseguire ai tuoi ballerini delle mosse diverse in momenti diversi della canzone.
       Dance_Party_08_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
           * Due ballerini devono avere una dimensione diversa da 100.
           
-          *Questo livello terminerà dopo 6 battute. *
+          *L'esercizio terminerà dopo 6 battute. *
         challenges: |-
-          **Sfida opzionale**
+          **Sfida supplementare**
           
           * Fai qualche esperimento modificando le altre proprietà (larghezza, altezza, rotazione e così via)
       Dance_Party_09_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
           * Modifica la tonalità di almeno un ballerino.
           
-          *Questo livello terminerà dopo 8 battute. *
+          *L'esercizio terminerà dopo 8 battute.*
       Dance_Party_1_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           * Assicurati che sullo schermo appaia un ballerino.
           
-          *Questo livello terminerà dopo 4 battute. *
+          *L'esercizio terminerà dopo 4 battute.*
         challenges: |-
           **Sfide opzionali**
           * Scegli un brano diverso.
@@ -3053,94 +3052,94 @@ it:
           * Rinomina il tuo ballerino.
       Dance_Party_10_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
           * Le proprietà di due o più ballerini devono essere cambiate.
           
-          *Questo livello terminerà dopo 8 battute. *
-      Dance_Party_11.5_authored_hint:
-        validation: |-
-          **Come faccio a superare questo livello?**
-          
-          * Mettici un po’ di creatività!
-          
-          *Questo livello terminerà dopo 8 battute. *
+          *L'esercizio terminerà dopo 8 battute. *
       Dance_Party_11.5_test_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
-          * Mettici un po’ di creatività!
+          * Sii semplicemente creativo!
           
-          *Questo livello terminerà dopo 8 battute. *
+          *L'esercizio terminerà dopo 8 battute.*
       Dance_Party_11_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
-          * Mettici un po’ di creatività!
+          * Sii semplicemente creativo!
           
-          *Questo livello terminerà dopo 8 battute. *
+          *L'esercizio terminerà dopo 8 battute.*
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+          
+          * Sii semplicemente creativo!
+          
+          *L'esercizio terminerà dopo 8 battute.*
       Dance_Party_11b_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
-          * Usa il blocco `quando si preme il tasto freccia sinistra` per far eseguire al Robot una mossa di danza premendo quel tasto.
+          * Usa il blocco `quando si preme a sinistra` per far eseguire al Robot una mossa di ballo premendo quel tasto.
           
-          *Questo livello terminerà dopo 8 battute. *
+          *L'esercizio terminerà dopo 8 battute.*
       Dance_Party_2_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           * Il ballerino deve passare ad una nuova mossa dopo 4 battute.
           
-          *Il livello terminerà dopo 8 battute. *
+          *L'esercizio terminerà dopo 8 battute. *
       Dance_Party_3_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
           * Dopo 6 battute, il tuo ballerino dovrà ballare in modo diverso rispetto a come ballava dopo 4 battute.
           
-          *Questo livello terminerà dopo 12 battute. *
+          *L'esercizio terminerà dopo 12 battute. *
       Dance_Party_4_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
           * Devi fare in modo che l’effetto di sfondo cambi nel corso della settima battuta della canzone.
           
-          *Questo livello terminerà dopo 10 battute. *
+          *L'esercizio terminerà dopo 10 battute. *
         challenges: |-
-          **Sfida opzionale**
+          **Sfida supplementare**
           
           Modifica l’effetto di sfondo in punti diversi della canzone unendo il nuovo blocco sotto gli eventi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
       Dance_Party_5_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
           * Nel corso dell prime 12 battute della canzone il tuo ballerino deve eseguire mosse diverse.
           
-          *Questo livello terminerà dopo 12 battute. *
+          *L'esercizio terminerà dopo 12 battute. *
       Dance_Party_6_authored_hint:
         challenges: |-
-          **Sfida opzionale**
+          **Sfida supplementare**
           
-          * Aggiungi un terzo ballerino (oppure tutti quelli che vuoi!)
-          * Fai eseguire a tutti i tuoi ballerini delle mosse diverse in momenti diversi della canzone.
+          * Aggiungi un terzo ballerino (o tutti quelli che vuoi!)
+          * Fai eseguire ai tuoi ballerini delle mosse diverse in momenti diversi della canzone.
       Dance_Party_8_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
           * Due ballerini devono avere una dimensione diversa da 100.
           
-          *Questo livello terminerà dopo 6 battute. *
+          *L'esercizio terminerà dopo 6 battute. *
         challenges: |-
-          **Sfida opzionale**
+          **Sfida supplementare**
           
           * Fai qualche esperimento modificando le altre proprietà (larghezza, altezza, rotazione e così via)
       Dance_Party_9_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
           * Modifica la tonalità di almeno un ballerino.
           
-          *Questo livello terminerà dopo 8 battute. *
+          *L'esercizio terminerà dopo 8 battute. *
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           Questo è il primo indizio. Ha * alcuni * * * basic * * 'markup'
@@ -3159,15 +3158,17 @@ it:
         Function_intro_Ryan_b: Se usi le funzioni in modo corretto, questo è il percorso che seguirai...
         Function_intro_Ryan_a: Puoi richiamare una funzione più volte in un programma!  Prova a richiamarla due volte per risolvere questo esercizio.
       HOC 2018 Level_10_authored_hint:
-        voyage_aquatic_10a: "Guarda le **Lanterne marine** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Come puoi usare un condizionale per arrivare al Monumento oceanico?\n\n"
+        voyage_aquatic_10a: "Guarda le **Lanterne marine** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Come potresti usare un'istruzione condizionale per attraversare il Monumento oceanico?\n\n"
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: Puoi usare il blocco `se c'è strada` per girare dalla parte giusta.
       HOC 2018 Level_9b_authored_hint:
-        voyage_aquatic_9a: Che bella barriera corallina! Con il corallo blu vai a **destra**, e attento al corallo rosso sulla **sinistra**!
+        voyage_aquatic_9a: Che bella barriera corallina! I coralli blu ti suggeriscono quando girare a **destra** e quelli rossi quando girare a **sinistra**.
       HOC Dance 0_draft_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           * Assicurati che sullo schermo appaia un ballerino.
           
-          *Questo livello terminerà dopo 4 battute. *
+          *L'esercizio terminerà dopo 4 battute.*
         challenges: |-
           **Sfide opzionali**
           * Scegli un brano diverso.
@@ -3175,80 +3176,80 @@ it:
           * Rinomina il tuo ballerino.
       HOC Dance 1_draft_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           * Il ballerino deve passare ad una nuova mossa dopo 4 battute.
           
-          *Il livello terminerà dopo 8 battute. *
+          *L'esercizio terminerà dopo 8 battute. *
       HOC Dance 2_draft_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
           * Dopo 6 battute, il tuo ballerino dovrà ballare in modo diverso rispetto a come ballava dopo 4 battute.
           
-          *Questo livello terminerà dopo 12 battute. *
+          *L'esercizio terminerà dopo 12 battute. *
       HOC Dance 3_draft_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
           * Devi fare in modo che l’effetto di sfondo cambi nel corso della settima battuta della canzone.
           
-          *Questo livello terminerà dopo 10 battute. *
+          *L'esercizio terminerà dopo 10 battute. *
         challenges: |-
-          **Sfida opzionale**
+          **Sfida supplementare**
           
           Modifica l’effetto di sfondo in punti diversi della canzone unendo il nuovo blocco sotto gli eventi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
       HOC Dance 4_draft_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
           * Nel corso dell prime 12 battute della canzone il tuo ballerino deve eseguire mosse diverse.
           
-          *Questo livello terminerà dopo 12 battute. *
+          *L'esercizio terminerà dopo 12 battute. *
       HOC Dance 5_draft_authored_hint:
         challenges: |-
-          **Sfida opzionale**
+          **Sfida supplementare**
           
-          * Aggiungi un terzo ballerino (oppure tutti quelli che vuoi!)
-          * Fai eseguire a tutti i tuoi ballerini delle mosse diverse in momenti diversi della canzone.
+          * Aggiungi un terzo ballerino (o tutti quelli che vuoi!)
+          * Fai eseguire ai tuoi ballerini delle mosse diverse in momenti diversi della canzone.
       HOC Dance 6_draft_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
           * Due ballerini devono avere una dimensione diversa da 100.
           
-          *Questo livello terminerà dopo 6 battute. *
+          *L'esercizio terminerà dopo 6 battute. *
         challenges: |-
-          **Sfida opzionale**
+          **Sfida supplementare**
           
           * Fai qualche esperimento modificando le altre proprietà (larghezza, altezza, rotazione e così via)
       HOC Dance 7_draft_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
           * Modifica la tonalità di almeno un ballerino.
           
-          *Questo livello terminerà dopo 8 battute. *
+          *L'esercizio terminerà dopo 8 battute. *
       HOC Dance 8_draft_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
           * Le proprietà di due o più ballerini devono essere cambiate.
           
-          *Questo livello terminerà dopo 8 battute. *
+          *L'esercizio terminerà dopo 8 battute. *
       HOC Dance 9_draft_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
           * Mettici un po’ di creatività!
           
-          *Questo livello terminerà dopo 8 battute. *
+          *L'esercizio terminerà dopo 8 battute. *
       HOC Dance make group_authored_hint:
         validation: |-
-          **Come faccio a superare questo livello?**
+          **Come faccio a completare questo esercizio?**
           
           * Mettici un po’ di creatività!
           
-          *Questo livello terminerà dopo 8 battute. *
+          *L'esercizio terminerà dopo 8 battute. *
       Harvesting_authored_hint:
         pointer_harvester_test: Che tipo di blocco è possibile utilizzare per controllare qualcosa e prendere una decisione?
       Inspirational Artwork_authored_hint:
