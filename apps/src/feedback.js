@@ -944,6 +944,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
           var params = $.param({
             level_source: options.response.level_source_id,
             channel_id: options.channelId,
+            type: project.getStandaloneApp(),
             phone: phone.val()
           });
           $(submitButton).val("Sending..");

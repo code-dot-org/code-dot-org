@@ -51,15 +51,16 @@
         <%= msg.saveAndPublish() %>
       </button>
     <% } %>
-    <% if (options.downloadReplayVideo) { -%>
-      <span id="download-replay-video-container" />
-    <% } -%>
-    <% if (options.sendToPhone) { -%>
+    <% if (options.downloadReplayVideo) { %>
+      <!-- Mount point for DownloadReplayVideoButton component. -->
+      <span id="download-replay-video-container"></span>
+    <% } %>
+    <% if (options.sendToPhone) { %>
       <button id="sharing-phone">
         <i class="fa fa-mobile fa-lg"></i>
         <%= msg.sendToPhone() %>
       </button>
-    <% } -%>
+    <% } %>
 
   </div>
   <div id="send-to-phone" style="display: none">
