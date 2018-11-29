@@ -16,7 +16,7 @@
 #
 
 class Pd::FitWeekend1920Registration < Pd::FitWeekendRegistrationBase
-  include Pd::ApplicationConstants
+  include Pd::Application::ApplicationConstants
 
   # override
   def set_registration_year

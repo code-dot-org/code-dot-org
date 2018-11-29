@@ -1427,6 +1427,52 @@ FactoryGirl.define do
     form_data {build(:pd_fit_weekend1819_registration_hash, status).to_json}
   end
 
+  factory :pd_fit_weekend1920_registration_hash, parent: :form_data_hash do
+    email "ssnape@hogwarts.edu"
+    preferred_first_name "Sevvy"
+    last_name "Snape"
+    phone "5558675309"
+
+    # default to declined
+    able_to_attend "No"
+    trait :declined do
+      # declined is the default, trait included here just for completeness
+    end
+
+    trait :accepted do
+      able_to_attend "Yes"
+      address_city "Albuquerque"
+      address_state "Alabama"
+      address_street "123 Street Ave"
+      address_zip "12345"
+      agree_share_contact true
+      contact_first_name "Dumble"
+      contact_last_name "Dore"
+      contact_phone "1597534862"
+      contact_relationship "it's complicated"
+      dietary_needs "Food Allergy"
+      dietary_needs_details "memories"
+      how_traveling "Amtrak or regional train service"
+      liability_waiver "Yes"
+      live_far_away "Yes"
+      need_hotel "No"
+      photo_release "Yes"
+    end
+
+    trait :declined do
+      able_to_attend "No"
+    end
+  end
+
+  factory :pd_fit_weekend1920_registration, class: 'Pd::FitWeekend1920Registration' do
+    transient do
+      status :accepted
+    end
+
+    association :pd_application, factory: :pd_facilitator1920_application
+    form_data {build(:pd_fit_weekend1920_registration_hash, status).to_json}
+  end
+
   factory :pd_workshop_daily_survey, class: 'Pd::WorkshopDailySurvey' do
     form_id 12345
     submission_id {(Pd::WorkshopDailySurvey.maximum(:submission_id) || 0) + 1}
