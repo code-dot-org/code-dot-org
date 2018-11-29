@@ -1,6 +1,7 @@
 # This can be viewed on non-production environments at /rails/mailers/pd/teacher_application_mailer
 class Pd::Facilitator1920ApplicationMailerPreview < ActionMailer::Preview
   include FactoryGirl::Syntax::Methods
+  include Pd::Application::ActiveApplicationModels
 
   def confirmation
     FACILITATOR_APPLICATION_MAILER_CLASS.confirmation build_application
