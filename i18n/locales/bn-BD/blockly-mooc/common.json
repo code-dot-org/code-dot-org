@@ -421,6 +421,8 @@
   "dontForget": "ভুলবেন না",
   "downloadCSV": "CSV ডাউনলোড করুন",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "এনিমেশন",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "দুটো সংখ্যা যুক্ত কর",
   "dropletBlock_addOperator_signatureOverride": "চালনাকারী যুক্ত কর",

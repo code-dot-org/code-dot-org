@@ -421,6 +421,8 @@
   "dontForget": "Ez ahaztu",
   "downloadCSV": "",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Animazioa",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "Batu bi zenbaki",
   "dropletBlock_addOperator_signatureOverride": "Gehitu eragile bat",

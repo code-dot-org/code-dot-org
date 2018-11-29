@@ -188,6 +188,11 @@ id:
           EFFECT:
             '"none"': Tidak ada
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": Acak
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': Tidak ada
+            '"rand"': Acak
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -221,6 +226,11 @@ id:
           EFFECT:
             '"none"': Tidak ada
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": Acak
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': Tidak ada
+            '"rand"': Acak
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -314,6 +324,7 @@ id:
             '"right"': kanan
             '"space"': luar angkasa
             '"x"': x
+            '"y"': y
       Dancelab_whenPeak:
         options:
           RANGE:

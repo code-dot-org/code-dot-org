@@ -429,8 +429,6 @@ et:
             '"tint"': toon
       Dancelab_setTint:
         text: määra {SPRITE} toon {VAL}
-      Dancelab_setTintInline:
-        text: määra {SPRITE} toon {VAL}
       Dancelab_setTintEach:
         text: määra {THIS} toon {VAL}
         options:
