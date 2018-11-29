@@ -423,6 +423,8 @@ es-MX:
             '"tint"': tinte
       Dancelab_setTint:
         text: definir tinte {SPRITE} a {VAL}
+      Dancelab_setTintInline:
+        text: definir tinte {SPRITE} a {VAL}
       Dancelab_setTintEach:
         options:
           THIS:

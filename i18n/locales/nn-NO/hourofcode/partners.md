@@ -1,17 +1,17 @@
 ---
 title: <%= hoc_s(:title_partners).inspect %>
 ---
-Kodetimen er drevet av Hour of Code og Computer Science Education Week sine rådgivende og evaluerende komiteer.
+Kodetimen blir drive av Hour of Code og Computer Science Education Week sine rådgjevande og evaluerande komitear.
 
-Den [rådgivende komiteen](%= resolve_url('/advisory-committee') %) består av representanter fra K-12(barnehage gjennom vidregående), akademia, forprofitter, motprofitter og internasjonale organisasjoner. Denne kommiteen veileder strategen for Kodetime kampanjen.
+Den [rådgjevande komiteen](%= resolve_url('/advisory-committee') %) består av representantar fra grunnskulen, akademia, ideelle organisasjoner, selskap og internasjonale organisasjonar. Denne kommiteen rettleiar strategien for Kodetime-kampanjen.
 
-Den [evaluerende komiteen](%= resolve_url('/review-committee') %) består av 15 lærere fra barnehage gjennom videregående som vurderer og anbefaler aktiviteter med bruk av den rådgivende komiteens rubrikk. Lærerne ser gjennom student-lede aktiviteter og lærer-lede timeplaner innsendt av hundrevis av aktivitet-partnere, de evaluerer aktivitetenes pedagogisk verdi, dens evne til å engasjere elever, og potensielt appellere til ulike sett av studenter.
+Den [evaluerande komiteen](%= resolve_url('/review-committee') %) består av 15 lærarar frå barnehage til vidaregående som vurderer og anbefaler aktivitetar med bruk av den rådgivende komiteens rubrikk. Desse personane går gjennom dei elevguida aktivitetene og lærarguida timeplanane som er sendt inn frå hundrevis av aktivitetspartnarar som evalurerer den pedagogiske verdien av aktivitetene, oppgåva si evne til å engasjere elevar og potensielt nå fram til ulike sett av elevar.
 
-Begge komiteens arbeid og dedikasjon har bidratt til suksessen av Kodetimen og dens visjon om å tilby en introduksjon til informatikk for hver student.
+Arbeidet og dedikasjonen i begge kommiteane har bidratt til suksessen Kodetimen og visjonen den har om å tilby ein introduksjon til datavitskap for kvar elev.
 
 <% if @country == 'la' %>
 
-# Latin-Amerika partnere
+# Partnarar i Latin-Amerika
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
 
@@ -19,7 +19,7 @@ Begge komiteens arbeid og dedikasjon har bidratt til suksessen av Kodetimen og d
 
 <% if @country == 'ac' %>
 
-# Afrika partnere
+# Partnarar i Afrika
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
 
@@ -27,7 +27,7 @@ Begge komiteens arbeid og dedikasjon har bidratt til suksessen av Kodetimen og d
 
 <% if @country == 'au' %>
 
-# Australia partnere
+# Partnarar i Australia
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
 
@@ -35,7 +35,7 @@ Begge komiteens arbeid og dedikasjon har bidratt til suksessen av Kodetimen og d
 
 <% if @country == 'cn' %>
 
-# Kina partnere
+# Partnarar i Kina
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
 
@@ -43,7 +43,7 @@ Begge komiteens arbeid og dedikasjon har bidratt til suksessen av Kodetimen og d
 
 <% if @country == 'fr' %>
 
-# Frankrike partnere
+# Partnarar i Frankrike
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
@@ -51,7 +51,7 @@ Begge komiteens arbeid og dedikasjon har bidratt til suksessen av Kodetimen og d
 
 <% if @country == 'id' %>
 
-# Indonesia partnere
+# Partnarar i Indonesia
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
 
@@ -59,7 +59,7 @@ Begge komiteens arbeid og dedikasjon har bidratt til suksessen av Kodetimen og d
 
 <% if @country == 'ie' %>
 
-# Irland partnere
+# Partnarar i Irland
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
 
@@ -67,7 +67,7 @@ Begge komiteens arbeid og dedikasjon har bidratt til suksessen av Kodetimen og d
 
 <% if @country == 'in' %>
 
-# India partnere
+# Partnarar i India
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
@@ -75,7 +75,7 @@ Begge komiteens arbeid og dedikasjon har bidratt til suksessen av Kodetimen og d
 
 <% if @country == 'jp' %>
 
-# Japan partnere
+# Partnarar i Japan
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
 
@@ -83,7 +83,7 @@ Begge komiteens arbeid og dedikasjon har bidratt til suksessen av Kodetimen og d
 
 <% if @country == 'nl' %>
 
-# Nederland partnere
+# Partnarar i Nederland
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
 
@@ -91,7 +91,7 @@ Begge komiteens arbeid og dedikasjon har bidratt til suksessen av Kodetimen og d
 
 <% if @country == 'nz' %>
 
-# New Zealand partnere
+# Partnarar i New Zealand
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
 
@@ -99,7 +99,7 @@ Begge komiteens arbeid og dedikasjon har bidratt til suksessen av Kodetimen og d
 
 <% if @country == 'uk' %>
 
-# Storbritannia partnere
+# Partnarar i Storbrittania
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
 
@@ -107,37 +107,37 @@ Begge komiteens arbeid og dedikasjon har bidratt til suksessen av Kodetimen og d
 
 <% if @country == 'ca' %>
 
-# Canada partnere
+# Partnarar i Canada
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
 
 <% end %>
 
-# Store partnere og støttene bedrifter
+# Hovudpartnarar og bedrifter som støttar oss
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# International Partners
+# Internasjonale partnarar
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Partnarar for læreplan og opplæring
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Infrastructure Partners and Tools
+# Partnarar for infrastruktur og verktøy
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 * * *
 
-# Additional Partners
+# Øvrige samarbeidspartnarar
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

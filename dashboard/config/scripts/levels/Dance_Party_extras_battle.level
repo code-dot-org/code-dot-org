@@ -283,13 +283,9 @@
             <title name="SPRITE">dancer1</title>
             <title name="LOCATION">{x: randomNumber(50, 350), y: randomNumber(50, 350)}</title>
           </block>
-          <block type="Dancelab_setTint">
+          <block type="Dancelab_setTintInline">
             <title name="SPRITE">dancer1</title>
-            <value name="VAL">
-              <block type="colour_picker">
-                <title name="COLOUR">#33ffff</title>
-              </block>
-            </value>
+            <title name="VAL">#33ffff</title>
           </block>
           <block type="Dancelab_setVisible">
             <title name="SPRITE">dancer1</title>

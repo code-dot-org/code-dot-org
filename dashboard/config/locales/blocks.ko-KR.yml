@@ -404,6 +404,8 @@ ko:
             '"tint"': 색조
       Dancelab_setTint:
         text: "{SPRITE} 색조를 {VAL}(으)로 설정하기"
+      Dancelab_setTintInline:
+        text: "{SPRITE} 색조를 {VAL}(으)로 설정하기"
       Dancelab_setTintEach:
         options:
           THIS:

@@ -54,6 +54,18 @@ Feature: Dance Lab
     Given I am on "http://studio.code.org/s/dance/stage/1/puzzle/12?noautoplay=true"
     And I wait for the page to fully load
 
+  Scenario: Dance Party 8 runs new set tint block
+    Given I am on "http://studio.code.org/s/dance/stage/1/puzzle/8?noautoplay=true"
+    And I wait for the page to fully load
+    And I select age 10 in the age dialog
+    And I close the instructions overlay if it exists
+    # drag the "set tint" block from the toolbox to below "after 4 measures"
+    And I drag block "5" to block "14"
+    # set the sprite on the new "set tint" block in the workspace
+    And I set block "19" to have a value of "top_dancer1" for title "SPRITE"
+    And I press "runButton"
+    And I wait until element ".congrats" is visible
+
   @as_student
   @no_mobile
   Scenario: Dance Party Share
@@ -68,7 +80,7 @@ Feature: Dance Lab
     Then I click selector "#runButton" once I see it
     Then I wait until element "#runButton" is not visible
 
-    Then evaluate JavaScript expression "window.__DanceTestInterface.getSprites().length === 3"
+    Then evaluate JavaScript expression "window.__DanceTestInterface.getSprites().length === 10"
 
     Then I click selector "#resetButton" once I see it
     Then element "#runButton" is visible

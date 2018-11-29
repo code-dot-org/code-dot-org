@@ -8,165 +8,165 @@ theme: responsive
 
 # 2018 Champions for Computer Science Awards
 
-In celebration of the 2018 [Computer Science Education Week](https://csedweek.org/) (CSEdWeek), the [Computer Science Teachers Association](http://www.csteachers.org/) (CSTA) and [Code.org](https://code.org/) are pleased to present the 2nd annual Champions of Computer Science Awards.
-
-Winners will be announced at the CSEdWeek Kickoff event on December 3rd.
+In celebration of the 2018 [Computer Science Education Week](https://csedweek.org/) (CSEdWeek), the [Computer Science Teachers Association](http://www.csteachers.org/) (CSTA) and [Code.org](https://code.org/) are pleased to announce the second annual Champions of Computer Science Awards. From developing tools and curriculum for students with disabilities, to providing needed tech equipment to underserved schools, these winners represent the students, teachers, schools, districts, and organizations working to make computer science education accessible for everyone.
+<br>
+<br>
+Selected from a pool of more than 200 nominees, the winners will be presented with their awards at a special 2018 CSEdWeek kickoff event on December 3rd featuring Melinda Gates of the Bill & Melinda Gates Foundation.
+<br>
 <br>
 
-# Last Year's Winners
+# Winners
+
+[col-25]
+
+<a href="/awards/2018/jocelyn-marencik">
+    <center><img src="/images/awards/2018/fit-540/jocelyn-marencik-1.jpg" width="90%"></center>
+    <div style="margin-top:5px;font-size:16px;text-align:center">Jocelyn Marencik</div>
+</a>
+
+[/col-25]
+
+[col-25]
+
+<a href="/awards/2018/robert-defillippo">
+    <center><img src="/images/awards/2018/fit-540/defillippo-1.jpg" width="90%"></center>
+    <div style="margin-top:5px;font-size:16px;text-align:center">Robert DeFillippo</div>
+</a>
+
+[/col-25]
+
+[col-25]
+
+<a href="/awards/2018/chanel-white">
+    <center><img src="/images/awards/2018/fit-540/chanel-white-2.jpg" width="90%"></center>
+    <div style="margin-top:5px;font-size:16px;text-align:center">Chanel White</div>
+</a>
+
+[/col-25]
+
+[col-25]
+
+<a href="/awards/2018/seasidehs">
+    <center><img src="/images/awards/2018/fit-540/seasidehs.jpg" width="90%"></center>
+    <div style="margin-top:5px;font-size:16px;text-align:center">Seaside High School</div>
+</a>
+
+[/col-25]
+
+<div style="clear:both"></div>
+
+<br>
+<br>
+
+[col-25]
+
+<a href="/awards/2018/lps">
+    <center><img src="/images/awards/2018/fit-540/lps-1.jpg" width="90%"></center>
+    <div style="margin-top:5px;font-size:16px;text-align:center">Lincoln Public Schools</div>
+</a>
+
+[/col-25]
+
+[col-25]
+
+<a href="/awards/2018/gcwg">
+    <center><img src="/images/awards/2018/fit-540/gcwg-profile.jpg" width="90%"></center>
+    <div style="margin-top:5px;font-size:16px;text-align:center">GirlsCodingWithGirls</div>
+</a>
+
+[/col-25]
+
+[col-25]
+
+<a href="/awards/2018/richard-ladner">
+    <center><img src="/images/awards/2018/fit-540/richard-ladner-1.jpg" width="90%"></center>
+    <div style="margin-top:5px;font-size:16px;text-align:center">Richard Ladner</div>
+</a>
+
+[/col-25]
+
+[col-25]
+
+<a href="/awards/2018/quorum">
+    <center><img src="/images/awards/2018/fit-540/quorum-profile.png" width="90%"></center>
+    <div style="margin-top:5px;font-size:16px;text-align:center">The Quorum Programming Team</div>
+</a>
+
+[/col-25]
+
+<div style="clear:both"></div>
+
+# 2017 Winners
 
 ## Students
 
-[col-25]
-
 <a href="/awards/2017/reynaga_garcia">
-    <center><img src="/images/awards/garcia_pena.jpg" width="90%"></center>
-    <div style="margin-top:5px;font-size:16px;text-align:center">Angela Garcia Pena and Crystal Reynaga</div>
+    <div style="margin-top:5px;font-size:16px;text-align:left">Angela Garcia Pena and Crystal Reynaga</div>
 </a>
-
-[/col-25]
-
-[col-25]
 
 <a href="/awards/2017/branum">
-    <center><img src="/images/awards/john_mason_branum.jpg" width="90%"></center>
-    <div style="margin-top:5px;font-size:16px;text-align:center">Mason Branum</div>
+    <div style="margin-top:5px;font-size:16px;text-align:left">Mason Branum</div>
 </a>
-
-[/col-25]
-
-[col-25]
 
 <a href="/awards/2017/shekhar">
-    <center><img src="/images/awards/shreya_shekhar_thumb.png" width="90%"></center>
-    <div style="margin-top:5px;font-size:16px;text-align:center">Shreya Shekhar</div>
+    <div style="margin-top:5px;font-size:16px;text-align:left">Shreya Shekhar</div>
 </a>
-
-[/col-25]
-
-[col-25]
 
 <a href="/awards/2017/srivastava">
-    <center><img src="/images/awards/vidhi_srivastava_teachers.jpg" width="90%"></center>
-    <div style="margin-top:5px;font-size:16px;text-align:center">Vidhi Srivastava</div>
+    <div style="margin-top:5px;font-size:16px;text-align:left">Vidhi Srivastava</div>
 </a>
-
-[/col-25]
-
-<div style="clear:both"></div>
 
 ## Teachers
 
-[col-25]
-
 <a href="/awards/2017/neville">
-    <center><img src="/images/awards/diane_neville_students_thumb.jpg" width="90%"></center>
-    <div style="margin-top:5px;font-size:16px;text-align:center">Diane Neville</div>
+    <div style="margin-top:5px;font-size:16px;text-align:left">Diane Neville</div>
 </a>
-
-[/col-25]
-
-[col-25]
 
 <a href="/awards/2017/lopez">
-    <center><img src="/images/awards/efrain_lopez_students_thumb.jpg" width="90%"></center>
-    <div style="margin-top:5px;font-size:16px;text-align:center">Efraín López</div>
+    <div style="margin-top:5px;font-size:16px;text-align:left">Efraín López</div>
 </a>
-
-[/col-25]
-
-[col-25]
 
 <a href="/awards/2017/sutkowski">
-    <center><img src="/images/awards/heather_sutkowski_students.jpg" width="90%"></center>
-    <div style="margin-top:5px;font-size:16px;text-align:center">Heather Sutkowski</div>
+    <div style="margin-top:5px;font-size:16px;text-align:left">Heather Sutkowski</div>
 </a>
-
-[/col-25]
-
-[col-25]
 
 <a href="/awards/2017/ramos">
-    <center><img src="/images/awards/lawrence_ramos_students_thumb.jpg" width="90%"></center>
-    <div style="margin-top:5px;font-size:16px;text-align:center">Lawrence Ramos</div>
+    <div style="margin-top:5px;font-size:16px;text-align:left">Lawrence Ramos</div>
 </a>
-
-[/col-25]
-
-<div style="clear:both"></div>
 
 ## Schools
 
-[col-25]
-
 <a href="/awards/2017/ams">
-    <center><img src="/images/awards/ams_students_thumb.jpg" width="90%"></center>
-    <div style="margin-top:5px;font-size:16px;text-align:center">Anacapa Middle School</div>
+    <div style="margin-top:5px;font-size:16px;text-align:left">Anacapa Middle School</div>
 </a>
-
-[/col-25]
-
-[col-25]
 
 <a href="/awards/2017/asmsa">
-    <center><img src="/images/awards/asmsa_student_thumb.jpg" width="90%"></center>
-    <div style="margin-top:5px;font-size:16px;text-align:center">Arkansas School for Mathematics, Sciences and the Arts</div>
+    <div style="margin-top:5px;font-size:16px;text-align:left">Arkansas School for Mathematics, Sciences and the Arts</div>
 </a>
-
-[/col-25]
-
-[col-25]
 
 <a href="/awards/2017/bhs">
-    <center><img src="/images/awards/bhs_students_thumb.jpg" width="90%"></center>
-    <div style="margin-top:5px;font-size:16px;text-align:center">Brenham High School</div>
+    <div style="margin-top:5px;font-size:16px;text-align:left">Brenham High School</div>
 </a>
-
-[/col-25]
-
-[col-25]
 
 <a href="/awards/2017/ehs">
-    <center><img src="/images/awards/ehs_students.jpg" width="90%"></center>
-    <div style="margin-top:5px;font-size:16px;text-align:center">Eufaula High School</div>
+    <div style="margin-top:5px;font-size:16px;text-align:left">Eufaula High School</div>
 </a>
-
-[/col-25]
-
-<div style="clear:both"></div>
 
 ## District
 
-[col-25]
-
 <a href="/awards/2017/sfusd">
-    <center><img src="/images/awards/sfusd_students.jpg" width="90%"></center>
-    <div style="margin-top:5px;font-size:16px;text-align:center">San Francisco Unified School District</div>
+    <div style="margin-top:5px;font-size:16px;text-align:left">San Francisco Unified School District</div>
 </a>
-
-[/col-25]
-
-<div style="clear:both"></div>
 
 ## Organizations
 
-[col-25]
-
 <a href="/awards/2017/qcra">
-    <center><img src="/images/awards/qcra_students.jpg" width="90%"></center>
-    <div style="margin-top:5px;font-size:16px;text-align:center">Queen City Robotics Alliance</div>
+    <div style="margin-top:5px;font-size:16px;text-align:left">Queen City Robotics Alliance</div>
 </a>
-
-[/col-25]
-
-[col-25]
 
 <a href="/awards/2017/sbcs">
-    <center><img src="/images/awards/sbcs_students.jpg" width="90%"></center>
-    <div style="margin-top:5px;font-size:16px;text-align:center">South Bend Code School</div>
+    <div style="margin-top:5px;font-size:16px;text-align:left">South Bend Code School</div>
 </a>
-
-[/col-25]
 
 <div style="clear:both"></div>
 

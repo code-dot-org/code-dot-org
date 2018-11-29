@@ -411,6 +411,8 @@ nn:
             '"tint"': farge
       Dancelab_setTint:
         text: sett fargen på {SPRITE} til {VAL}
+      Dancelab_setTintInline:
+        text: sett fargen på {SPRITE} til {VAL}
       Dancelab_setTintEach:
         text: sett {THIS} fargetone til {VAL}
         options:
