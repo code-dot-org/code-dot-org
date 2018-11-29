@@ -58,11 +58,10 @@ module Pd::Application
 
     # memoize in a hash, per course
     FILTERED_LABELS ||= Hash.new do |h, key|
-      labels_to_remove = (key == 'csf' ?
+      labels_to_remove = key == 'csf' ?
         [:csd_csp_fit_availability, :csd_csp_teachercon_availability]
         : # csd / csp
         [:csf_availability, :csf_partial_attendance_reason]
-      )
 
       h[key] = ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
     end
