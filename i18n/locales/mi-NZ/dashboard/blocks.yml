@@ -68,7 +68,7 @@ mi:
             "{x: 300, y: 200}": matau
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
