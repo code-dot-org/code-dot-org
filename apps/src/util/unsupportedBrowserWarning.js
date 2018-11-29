@@ -5,7 +5,6 @@ import $ from 'jquery';
 export var checkForUnsupportedBrowsersOnLoad = function () {
   $(document).ready(function () {
     let textDivId = null;
-    textDivId = '#unsupported-browser';
 
     if (isUnsupportedBrowser()) {
       textDivId = '#unsupported-browser';
