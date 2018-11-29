@@ -264,8 +264,8 @@ class ShareAllowedDialog extends React.Component {
                           "&amp;hashtags=HourOfCode&amp;related=codeorg";
     // Check out the dance I made featuring @artist on @codeorg! URL #HourOfCode
     const twitterShareUrlDance = "https://twitter.com/intent/tweet?url=" +
-                          "&amp;text=Check%20out%20the%20dance%20I%20made%20featuring%20@" + artistTwitterHandle + "%20on%20@codeorg!%20" +
                           encodeURIComponent(this.props.shareUrl) +
+                          "&amp;text=Check%20out%20the%20dance%20I%20made%20featuring%20@" + artistTwitterHandle + "%20on%20@codeorg!%20" +
                           "&amp;hashtags=HourOfCode&amp;related=codeorg";
 
     const twitterShareUrl = artistTwitterHandle ?
