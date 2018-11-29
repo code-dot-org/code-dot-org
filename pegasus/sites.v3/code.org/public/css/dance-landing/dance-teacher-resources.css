@@ -34,6 +34,14 @@
   color: white;
   font-family: 'Gotham 7r', sans-serif;
   margin-bottom: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.resource-title:hover {
+  overflow: visible;
+  white-space: normal;
 }
 
 .resource-description {
@@ -68,6 +76,10 @@
     float: none;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .resource-title {
+    margin-bottom: 0px;
   }
 
   .resource-gif {
