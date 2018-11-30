@@ -3,7 +3,7 @@
 
 #warning-banner {
   position: absolute;
-  z-index: 100;
+  z-index: 1000;
   overflow: hidden;
   width: 100%;
   box-sizing: border-box;
@@ -11,11 +11,16 @@
   font-size: 13px;
   line-height: 16px;
   background-color: $purple;
-  text-align: center;
   color: white;
+  display: flex;
+  align-items: center;
 
-  .banner-text, .banner-icon {
-    display: inline;
+  #dismiss-icon {
+    margin-left: auto;
+  }
+
+  #warning-icon {
+    padding-right: 10px;
   }
 
   a, a:visited {
