@@ -218,9 +218,9 @@ de:
         </block></xml>
         
         Dieses Programm verwendet den "Bass" (die tiefen Töne) der Musik, um die Höhe eines Tänzers zu kontrollieren. Können Sie die anderen Tänzer auch auf die Musik reagieren lassen?
-      Dance_Party_11.5: "Schauen Sie sich diesen Block an:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"ENTE\"</title>\n<title name=\"LAYOUT\">\"Kreis\"</title>\n</block></xml>\n\nJetzt können Sie eine ganze Reihe von Tänzern auf einmal erstellen!\n\nVerwenden Sie einige der \"alle Enten“-Blöcke, um Code zu schreiben, der alle Enten gemeinsam tanzen lässt."
       Dance_Party_11.5_test: "Schauen Sie sich diesen Block an:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"ENTE\"</title>\n<title name=\"LAYOUT\">\"Kreis\"</title>\n</block></xml>\n\nJetzt können Sie eine ganze Reihe von Tänzern auf einmal erstellen!\n\nVerwenden Sie einige der \"alle Enten“-Blöcke, um Code zu schreiben, der alle Enten gemeinsam tanzen lässt."
       Dance_Party_11: "Mit dem Block <xml><block type=\"Dancelab_whenKey\"></block></xml> können Sie Code ausführen, wenn die Pfeiltaste nach oben gedrückt wird.\n\nSie können den Tanzschritt verändern, die Eigenschaften eines Tänzers verändern oder einen schnellen einmaligen Tanzschritt tun. Seien Sie kreativ und halten Sie Ausschau nach neuen Blöcken!"
+      Dance_Party_11_5: "Schauen Sie sich diesen Block an:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"ENTE\"</title>\n<title name=\"LAYOUT\">\"Kreis\"</title>\n</block></xml>\n\nJetzt können Sie eine ganze Reihe von Tänzern auf einmal erstellen!\n\nVerwenden Sie einige der \"alle Enten“-Blöcke, um Code zu schreiben, der alle Enten gemeinsam tanzen lässt."
       Dance_Party_11b: |-
         Es ist Zeit für einen Tanz-Wettbewerb! Die Katze dabt, wenn Sie die linke Pfeiltaste drücken. Lassen Sie den Roboter "droppen", indem Sie die rechte Pfeiltaste drücken.
       Dance_Party_12: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen Sie ihn mit Ihren Freunden.
@@ -231,47 +231,47 @@ de:
         Suche nach dem neuen Block, welcher dir Hintergrundeffekte ermöglicht. Verfolge wie die Effekte sich im Takt der Musik ändern!
       Dance_Party_8: "Jeder Tänzer hat eine Sammlung von _Eigenschaften_, dies legt fest wie er aussieht.\n\nEin Tänzer wirkt weiter weg wenn du seine _Größe_ verringerst. Kannst du beiden Hintergrundtänzern die gleiche Größe geben?"
       Dance_Party_extras_battle: |-
-        # Dance Crews
+        # Tanz-Crews
         
-        Hier ist ein Tanz zwischen zwei Teams. Die Pfeiltasten steuern einen Tänzer und die Tasten "w,a,s,d" den anderen. Tanze mit einem Freund und versuche dann, diesen Tanz zu verbessern.
+        Hier ist ein Tanzduell zwischen zwei Crews. Die Pfeiltasten steuern einen der Tänzer und die Tasten „w, a, s, d“ steuern den anderen. Liefere dir ein Tanzduell mit einem Freund, und versuche dann, dieses Tanzduell zu verbessern.
         
-        * Füge weitere Tasten hinzu, um Tänze zu kontrollieren
-        * Lass die Hintergrund-Tänzer auch reagieren, wenn die Tasten gedrückt werden
-        * Wechsel die Tänzer alle 4 Takte ab, indem du ihre Sichtbarkeit änderst
+        * Füge weitere Tasten zum Steuern der Tänzer hinzu
+        * Bringe die Backup-Tänzer dazu, ebenfalls zu reagieren, wenn die Tasten betätigt werden
+        * Wechsle die Tänzer nach jeweils 4 Takten durch das Festlegen ihrer Sichtbarkeit
       Dance_Party_extras_every_beat: |-
-        # Viertel-Noten
+        # Viertelnoten
         
-        Die meisten unserer Tänze haben ganze Takte verwendet, aber jeder Takt besteht aus 4 Viertelnoten. Dieser Tanz verwendet `alle 0,25 Takte`, um die Tänzerin dazu zu bringen, bei jeden Viertelton zu klatschen.
+        Für die meisten unserer Tänze wurden ganze Takte verwendet, aber jeder Takt setzt sich aus 4 Viertelnoten zusammen. Für diesen Tanz werden „alle 0,25 Takte“ verwendet, um den Tänzer bei jeder Viertelnote zum Klatschen zu bringen.
         
-        Dieser Tanz verwendet auch einen _Bedingung_ Block, um zu steuern, wann der `jede 0,25 Takte'-Block den Tanz verändern kann. Versuche die Zahlen im Bedingung-Block zu ändern, um zu sehen, wie er den Tanz verändert.
+        Für diesen Tanz wird auch ein _vorbehaltlicher_Block verwendet, um zu kontrollieren, wann der „alle 0,25 Takte“-Block den Tanz ändern kann. Versuche, die Zahlen in dem vorbehaltlichen Block zu ändern, um zu sehen, wie es den Tanz verändert.
         
-        * Experimentiere mit anderen Notenlängen (z.B. 0,5 für eine halbe Note oder 0,125 für eine Achtelnote).
-        * Füge einige Ereignisse 'nach dem Takt' hinzu.
-        * Wechsle "Takt" mit "Sekunden" und versuche, deine Tänze so zu timen.
+        * Experimentiere mit anderen Tondauern (wie 0,5 für eine halbe Note oder 0,125 für eine Achtelnote).
+        * Füge einige Events „nach dem Takt“ hinzu.
+        * Tausche „Takte“ und „Sekunden“ und versuche, deine Tänze auf diese Weise zeitlich abzustimmen.
       Dance_Party_extras_layout: |-
-        # Ab in die Formation!
+        # Nehmen wir die Formation ein!
         
-        Schau dir diesen Tanz an, der den `Layout`-Block verwendet, um die Formation der Hintergrund-Tänzer während des gesamten Tanzes zu ändern. Versuche eine dieser Ideen:
+        Schaue dir diesen Tanz an, der den „Layout“-Block verwendet, um die Formation der Backup-Tänzer während des Tanzes zu ändern. Probiere eine dieser Ideen aus, um ihn zu verlängern:
         
         * Erstelle eine zweite Gruppe von Tänzern in einem anderen Layout
-        * Layout ändern, wenn eine Taste gedrückt wird
-        * Ändere eine Eigenschaft, wenn die Tänzer die Formation wechseln
+        * Ändere das Layout, wenn eine Taste gedrückt wird
+        * Ändere eine Eigenschaft, wenn die Tänzer ihre Formation ändern
       Dance_Party_extras_on_beat: |-
-        # Bass, Mittel- und Hochtöne
+        # Bass, mittlerer Ton und Sopran
         
-        Dieser Tanz verwendet besondere Ereignisse, um Code auszulösen, wenn verschiedene Bereiche der Musik laut werden. Versuche an verschiedenen Songs zu basteln, um zu sehen, wie sie den Tanz verändern.
+        Dieser Tanz verwendet „Peak“-Ereignisse, um den Code auszulösen, wenn verschiedene Teile der Musik laut werden. Versuche, mit verschiedenen Liedern herumzuexperimentieren, um zu sehen, wie sie den Tanz verändern.
       Dance_Party_extras_speed: |-
-        # Beschleunige, verlangsame
+        # Beschleunigen, verlangsamen
         
-        Dieser letzte Tanz verwendet den Block "Geschwindigkeit einstellen", um zu steuern, wie schnell sich jeder Tänzer bewegt. Versuche mit unterschiedlichen Geschwindigkeiten an verschiedenen Stellen im Song zu experimentieren. Du kannst gerne weiter an diesem Tanz basteln oder zu einem der vorherigen Tänze zurückkehren, um sie noch cooler zu machen.
+        Dieser letzte Tanz nutzt den Block „festgelegte Geschwindigkeit“, um zu kontrollieren, wie schnell sich jeder Tänzer bewegt. Versuche, an verschiedenen Stellen im Lied mit unterschiedlichen Geschwindigkeiten zu experimentieren. Zögere nicht, bei diesem Tanz herumzuexperimentieren oder kehre zu einem der bisherigen Tänze zurück, um ihn noch cooler zu machen.
       Dance_Party_extras_visible: |-
-        # Wohin sind sie?
+        # Wo würden sie hingehen?
         
-        Dieser Tanz zeigt und verbirgt zwei verschiedene Gruppen von Tänzern. Schau dir das an und versuche dann, deinen eigenen Geschmack einzubringen.
+        Dieser Tanz blendet zwei verschiedene Gruppen von Tänzern ein und aus. Sieh ihn dir an und versuche dann, dein eigenes Flair hinzuzufügen.
         
         * Füge eine weitere Gruppe von Tänzern hinzu
-        * Ein- und Ausblenden von Tänzern mit den Pfeiltasten
-        * Verstecke alle Tänzer und wechsel zu einem spannenden Hintergrundeffekt
+        * Blende Tänzer mithilfe der Pfeiltasten ein- und aus
+        * Blende alle der Tänzer aus und wechsle zu einem spannenden Hintergrundeffekt
       Function intro Ryan: "In deinem Arbeitsbereich befindet sich eine **Funktion** namens \"Brücke bauen\".  Sie umfasst den gesamten Code, den du zum Überqueren des Flusses benötigst! \\r\n \\r\nDocke den kleinen, grünen Block zweimal in deinem Arbeitsbereich an, um den Weg zu reparieren und {currentPlayerName} zur Redstone-Fackel [redstone_torch] zu bringen."
       Function intro Ryan_2019: "In deinem Arbeitsbereich befindet sich eine **Funktion** namens \"Brücke bauen\".  Sie umfasst den gesamten Code, den du zum Überqueren des Flusses benötigst! \\r\n \\r\nDocke den kleinen, grünen Block zweimal in deinem Arbeitsbereich an, um den Weg zu reparieren und {currentPlayerName} zur Redstone-Fackel [redstone_torch] zu bringen."
       HOC 2018 Level_1: "Du benötigst für deine Reise Vorräte. Sammle ein **Boot** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) aus der **Truhe** ein![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
@@ -300,6 +300,9 @@ de:
         Erstellen Sie einen Backup-Tänzer namens "backup_dancer1", der mit der Katze tanzt.
       HOC Dance 6_draft: "Jeder Tänzer hat eine Sammlung von _Eigenschaften_, dies legt fest wie er aussieht.\n\nEin Tänzer wirkt weiter weg wenn du seine _Größe_ verringerst. Kannst du beiden Hintergrundtänzern die gleiche Größe geben?"
       HOC Dance 9_draft: "Mit dem Block <xml><block type=\"Dancelab_whenKey\"></block></xml> können Sie Code ausführen, wenn die Pfeiltaste nach oben gedrückt wird.\n\nSie können den Tanzschritt verändern, die Eigenschaften eines Tänzers verändern oder einen schnellen einmaligen Tanzschritt tun. Seien Sie kreativ und halten Sie Ausschau nach neuen Blöcken!"
+      HOC Dance Freeplay: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen Sie ihn mit Ihren Freunden.
+      HOC Dance Freeplay_draft: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen Sie ihn mit Ihren Freunden.
+      HOC Dance Predraw: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen Sie ihn mit Ihren Freunden.
       K-1 Bee Loops 2: Verwende eine „Wiederhole“-Schleife zum Bewegen, dann den Nektar einzusammeln und Honig herzustellen.
       K-1 Bee Loops 3: Verwende drei „Wiederhole"-Schleifen, um Nektar zu holen und Honig herzustellen.
       K-1 Bee Loops 4: Verwende „Wiederhole"-Schleifen, um den Nektar einzusammeln, Honig herzustellen und zum Bewegen.

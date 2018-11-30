@@ -29,19 +29,20 @@ ca:
             '"PINEAPPLE"': totes les pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': tots els taurons
+            '"UNICORN"': tots els unicorns
           MOVE:
             '"next"': "(Següent)"
             '"prev"': "(Anterior)"
             '"rand"': "(Aleatori)"
-            MOVES.Roll: Voltar pel terra
+            MOVES.Roll: Rodar per terra
             MOVES.ClapHigh: aplaudir ben fort
             MOVES.Dab: Dansa d'amagar el cap
-            MOVES.DoubleJam: Moviment doble
+            MOVES.DoubleJam: Baixada doble
             MOVES.Drop: Caiguda
             MOVES.Floss: Provocació
             MOVES.Fresh: Fresc
             MOVES.Clown: Pallasso
-            MOVES.Kick: Cossa
+            MOVES.Kick: Estrella
             MOVES.ThisOrThat: Aquest o aquell
             MOVES.Rest: Cap
           DIR:
@@ -54,15 +55,15 @@ ca:
             '"next"': "(Següent)"
             '"prev"': "(Anterior)"
             '"rand"': "(Aleatori)"
-            MOVES.Roll: Voltar pel terra
+            MOVES.Roll: Rodar per terra
             MOVES.ClapHigh: aplaudir ben fort
             MOVES.Dab: Dansa d'amagar el cap
-            MOVES.DoubleJam: Moviment doble
+            MOVES.DoubleJam: Baixada doble
             MOVES.Drop: Caiguda
             MOVES.Floss: Provocació
             MOVES.Fresh: Fresc
             MOVES.Clown: Pallasso
-            MOVES.Kick: Cossa
+            MOVES.Kick: Estrella
             MOVES.ThisOrThat: Aquest o aquell
             MOVES.Rest: Cap
           DIR:
@@ -92,17 +93,18 @@ ca:
             '"PINEAPPLE"': totes les pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': tots els taurons
+            '"UNICORN"': tots els unicorns
           MOVE:
             '"rand"': "(Aleatori)"
-            MOVES.Roll: Voltar pel terra
+            MOVES.Roll: Rodar per terra
             MOVES.ClapHigh: aplaudir ben fort
             MOVES.Dab: Dansa d'amagar el cap
-            MOVES.DoubleJam: Moviment doble
+            MOVES.DoubleJam: Baixada doble
             MOVES.Drop: Caiguda
             MOVES.Floss: Provocació
             MOVES.Fresh: Fresc
             MOVES.Clown: Pallasso
-            MOVES.Kick: Cossa
+            MOVES.Kick: Estrella
             MOVES.ThisOrThat: Aquest o aquell
             MOVES.Rest: Cap
           DIR:
@@ -113,15 +115,15 @@ ca:
         options:
           MOVE:
             '"rand"': "(Aleatori)"
-            MOVES.Roll: Voltar pel terra
+            MOVES.Roll: Rodar per terra
             MOVES.ClapHigh: aplaudir ben fort
             MOVES.Dab: Dansa d'amagar el cap
-            MOVES.DoubleJam: Moviment doble
+            MOVES.DoubleJam: Baixada doble
             MOVES.Drop: Caiguda
             MOVES.Floss: Provocació
             MOVES.Fresh: Fresc
             MOVES.Clown: Pallasso
-            MOVES.Kick: Cossa
+            MOVES.Kick: Estrella
             MOVES.ThisOrThat: Aquest o aquell
             MOVES.Rest: Cap
           DIR:
@@ -176,12 +178,12 @@ ca:
             MOVES.ClapHigh: aplaudir ben fort
             MOVES.Clown: Pallasso
             MOVES.Dab: Dansa d'amagar el cap
-            MOVES.DoubleJam: Moviment doble
+            MOVES.DoubleJam: Baixada doble
             MOVES.Drop: Caiguda
             MOVES.Floss: Provocació
             MOVES.Fresh: Fresc
-            MOVES.Roll: Voltar pel terra
-            MOVES.Kick: Cossa
+            MOVES.Roll: Rodar per terra
+            MOVES.Kick: Estrella
             MOVES.ThisOrThat: Aquest o aquell
             MOVES.Rest: Cap
       Dancelab_ifTime:
@@ -217,11 +219,16 @@ ca:
             '"PINEAPPLE"': totes les pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': tots els taurons
+            '"UNICORN"': tots els unicorns
           FORMAT:
+            '"border"': frontera
+            '"inner"': plaça interior
             '"circle"': cercle
             '"grid"': quadrícula
             '"row"': filera
             '"column"': columna
+            '"x"': cruïlla
+            '"plus"': més
             '"random"': atzar
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -232,6 +239,7 @@ ca:
             '"ALIEN"': Extraterrestre
             '"BEAR"': Ós
             '"CAT"': Gat
+            '"DOG"': Gos
             '"DUCK"': Ànec
             '"FROG"': Granota
             '"MOOSE"': Ant
@@ -284,10 +292,14 @@ ca:
             '"PINEAPPLE"': Pinyes
             '"SHARK"': Taurons
           LAYOUT:
+            '"border"': frontera
+            '"inner"': plaça interior
             '"circle"': cercle
             '"grid"': quadrícula
             '"row"': filera
             '"column"': columna
+            '"x"': cruïlla
+            '"plus"': més
             '"random"': atzar
       Dancelab_mixColors:
         text: barrejar {COLOR1} i {COLOR2}
@@ -312,6 +324,29 @@ ca:
             '"rainbow"': Colors
             '"diamonds"': Diamants
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Aleatori)"
+      Dancelab_setBackgroundEffectWithPalette:
+        text: definir l'efecte de fons {EFFECT} {PALETTE}
+        options:
+          EFFECT:
+            '"none"': Cap
+            '"rand"': "(Aleatori)"
+            '"circles"': Túnel
+            '"diamonds"': Diamants
+            '"disco_ball"': Bola de discoteca
+            '"kaleidoscope"': Calidoscopi
+            '"lasers"': Zona de ball amb làser
+            '"splatter"': Esquitxades de pintura
+            '"rainbow"': Colors
+            '"text"': Títol de la cançó
+            '"sparkles"': Guspires
+            '"disco"': Requadres
+            '"stars"': Estrelles
+          PALETTE:
+            '"rave"': Blanc i negre
+            '"cool"': Blues
+            '"default"': Llum
+            '"neon"': Neó
+            '"warm"': Vermells
       Dancelab_setDanceSpeed:
         text: canviar {SPRITE} velocitat de dansa a {SPEED}
         options:
@@ -334,6 +369,7 @@ ca:
             '"PINEAPPLE"': totes les pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': tots els taurons
+            '"UNICORN"': tots els unicorns
           SPEED:
             '1': normal
             '2': ràpid
@@ -348,6 +384,20 @@ ca:
             '"rain"': Pluja
             '"raining_tacos"': Tacs
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Aleatori)"
+      Dancelab_setForegroundEffectExtended:
+        text: definir l'efecte de fons {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Cap
+            '"rand"': "(Aleatori)"
+            '"confetti"': Confeti
+            '"hearts_red"': Cors
+            '"music_notes"': Notes de música
+            '"pineapples"': Pinyes
+            '"smiling_poop"': Caca
+            '"rain"': Pluja
+            '"floating_rainbows"': Arc de Sant Martí
+            '"raining_tacos"': Tacs
       Dancelab_setProp:
         text: 'configurar {SPRITE} {PROPERTY} a {VAL} '
         options:
@@ -372,6 +422,7 @@ ca:
             '"PINEAPPLE"': totes les pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': tots els taurons
+            '"UNICORN"': tots els unicorns
           PROPERTY:
             '"scale"': mida
             '"width"': amplada
@@ -391,8 +442,6 @@ ca:
             '"y"': posició vertical
       Dancelab_setTint:
         text: configurar {SPRITE} tint a {VAL}
-      Dancelab_setTintInline:
-        text: configurar {SPRITE} tint a {VAL}
       Dancelab_setTintEach:
         options:
           THIS:
@@ -406,6 +455,10 @@ ca:
             '"PINEAPPLE"': totes les pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': tots els taurons
+      Dancelab_setTintInline:
+        text: configurar {SPRITE} tint a {VAL}
+      Dancelab_setVisible:
+        text: conjunt {SPRITE} visible per {VISIBILITY}
       Dancelab_setVisibleEach:
         text: configurar {THIS} visibilitat a {VISIBILITY}
         options:
@@ -420,6 +473,7 @@ ca:
             '"PINEAPPLE"': totes les pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': tots els taurons
+            '"UNICORN"': tots els unicorns
       Dancelab_startMapping:
         text: "{SPRITE} comença a {PROPERTY} seguit de {RANGE}"
         options:

@@ -421,6 +421,8 @@
   "dontForget": "Ná déan dearmad",
   "downloadCSV": "Íoslódáil CSV",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Beochan",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "Tarraing na blocanna le meaitseáil",
   "dropletBlock_addOperator_description": "Suimigh dhá uimhir",
   "dropletBlock_addOperator_signatureOverride": "",

@@ -43,7 +43,7 @@
     "CONTROLS_FOR_HELPURL": "",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "értékét %1 -től %2 -ig %3 lépésközzel",
     "CONTROLS_FOR_INPUT_WITH": "számold",
-    "CONTROLS_FOR_TOOLTIP": "A kezdőértéktől kezdve változtassa a \"%1\" változó értékét a megadott lépésközzel haladva egészen a végértékig és minden lépésben hajtsa végre az utasításokat.",
+    "CONTROLS_FOR_TOOLTIP": "A kezdőértéktől kezdve változtassa a(z) \"%1\" változó értékét a megadott lépésközzel haladva egészen a végértékig és minden lépésben hajtsa végre az utasításokat.",
     "CONTROLS_IF_ELSEIF_TOOLTIP": "Újabb feltétel hozzáadása.",
     "CONTROLS_IF_ELSE_TOOLTIP": "Adj hozzá egy végső catch-all feltételt az if blokkhoz.",
     "CONTROLS_IF_HELPURL": "",

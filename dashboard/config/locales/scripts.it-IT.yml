@@ -3686,6 +3686,13 @@ it:
           stages:
             Artist:
               name: Artista
+        aquatic:
+          title: 'Minecraft: Viaggio Acquatico'
+          description_short: Usa la tua creatività e le competenze di problem solving
+            per esplorare e costruire mondi sottomarini con la programmazione!
+          description: Anche quest'anno Minecraft propone un'attività nuova di zecca!
+            Usa la tua creatività e le competenze di problem solving per esplorare
+            e creare mondi sottomarini grazie alla potenza della programmazione.
         dance--draft:
           stages:
             Dance Party:

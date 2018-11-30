@@ -12,6 +12,8 @@ ca:
       Events: Esdeveniments
       Text: text
       Start: Inici
+      Dancers: Dansaires
+      Groups: Grups
       Booleans: Veritat o fals
       test: prova
       Name: Nom

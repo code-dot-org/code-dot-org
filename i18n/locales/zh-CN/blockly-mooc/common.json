@@ -421,6 +421,8 @@
   "dontForget": "别忘了",
   "downloadCSV": "下载 CSV",
   "downloadAssessmentCSV": "下载学生回复的 CSV 文件",
+  "downloadReplayVideoButtonDownload": "动画",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "拖动模块到合适的位置",
   "dropletBlock_addOperator_description": "添加两个数字",
   "dropletBlock_addOperator_signatureOverride": "添加运算符",

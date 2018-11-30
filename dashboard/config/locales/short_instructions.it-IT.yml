@@ -1863,32 +1863,48 @@ it:
       Dance Party Freeplay: Ora crea la tua discoteca aliena!
       Dance Party Freeplay_2019: Ora crea la tua discoteca aliena!
       Dance Party Freeplay_simple: Ora crea la tua discoteca aliena!
-      Dance_Party_01: Trascina il blocco `crea un nuovo nell’area di lavoro e uniscilo
-        al blocco `setup`.
-      Dance_Party_01_low: Trascina il blocco `crea un nuovo nell’area di lavoro e
-        uniscilo al blocco `setup`.
+      Dance_Events_Example_Video: Usa gli eventi per rendere il tuo ballo interattivo!
+      Dance_Party_01: Trascina nell’area di lavoro il blocco `crea un nuovo`e aggancialo
+        al blocco `quando si clicca su "Esegui"` (`setup`).
+      Dance_Party_01_low: Trascina nell’area di lavoro il blocco `crea un nuovo`e
+        aggancialo al blocco `quando si clicca su "Esegui"` (`setup`).
       Dance_Party_02: Fai iniziare all’alce una nuova mossa dopo 4 battute!
-      Dance_Party_03: Adesso fai cominciare al ballerino una nuova mossa dopo 6 battute.
-      Dance_Party_04: Aggiungi un effetto di sfondo al tuo programma.
-      Dance_Party_05: Usa un nuovo blocco per far cambiare le mosse al ballerino ogni
-        2 battute.
-      Dance_Party_06: Crea un ballerino di seconda fila chiamato `ballerino_sullo_sfondo1`
-        che balli assieme al gatto.
-      Dance_Party_08: Riesci a rendere entrambi i ballerini sullo sfondo delle stesse
-        dimensioni?
-      Dance_Party_09: Usa il blocco `imposta tonalità` per modificare il colore di
-        un ballerino.
-      Dance_Party_10: Fai reagire alla musica anche l’altro ballerino usando il blocco
-        `inizia seguendo`
-      Dance_Party_11_5: Usa i blocchi “tutti i paperi” per far ballare i paperi assieme.
-      Dance_Party_11.5_test: Usa i blocchi “tutti i paperi” per far ballare i paperi
-        assieme.
-      Dance_Party_11: Il blocco `quando si preme freccia su` ti consente di eseguire
-        il codice premendo il tasto freccia su. Prova a far eseguire al ballerino
-        una mossa veloce quando premi il tasto freccia su.
-      Dance_Party_11b: Fai fare una “spaccata” al Robot quando premi il tasto freccia
-        destra, e fagli eseguire la “floss dance” premendo il tasto freccia in alto.
-        Alterna le due mosse più velocemente che puoi!
+      Dance_Party_03: Adesso fai in modo che il ballerino cominci una nuova mossa
+        dopo 6 battute.
+      Dance_Party_04: Aggiungi nel programma un effetto allo sfondo.
+      Dance_Party_05: Usa un altro nuovo blocco per far cambiare mosse al ballerino
+        ogni 2 battute.
+      Dance_Party_06: Crea un ballerino secondario `backup_dancer1` che balli assieme
+        al gatto.
+      Dance_Party_08: Riesci a rendere entrambi i ballerini secondari (backup_dancer1
+        e backup_dancer2) delle stesse dimensioni?
+      Dance_Party_09: Usa il blocco `imposta la tonalità` per modificare il colore
+        di un ballerino.
+      Dance_Party_10: Fai in modo che anche l’altro ballerino segua la musica, usando
+        il blocco `modifica ... seguendo ...`.
+      Dance_Party_11.5_test: Usa alcuni blocchi `"tutti i paperi" eseguono la mossa
+        ...` per scrivere del codice che faccia ballare i paperi tutti assieme.
+      Dance_Party_11: Il blocco `quando si preme in alto` ti consente di eseguire
+        il codice sottostante quando premi la freccia in su (↑). Prova a far eseguire
+        al ballerino una mossa quando premi la freccia in su.
+      Dance_Party_11_5: Usa alcuni blocchi `"tutti i paperi" eseguono la mossa ...`
+        per scrivere del codice che faccia ballare i paperi tutti assieme.
+      Dance_Party_11b: Fai fare una “spaccata” al Robot premendo la freccia a destra
+        (→) e fagli fare un "applauso" quando premi la freccia in giù (↓). Alterna
+        le due mosse più velocemente che puoi!
+      Dance_Party_12: Lasciati andare e lanciati in pista! Crea un ballo personalizzato
+        da condividere con i tuoi amici.
+      Dance_Party_extras_battle: Squadre di ballo (Clicca "Di più" per maggiori dettagli)
+      Dance_Party_extras_every_beat: Quattro Quarti (Clicca "Di più" per maggiori
+        dettagli)
+      Dance_Party_extras_layout: Tutti in Formazione! (Clicca "Di più" per maggiori
+        dettagli)
+      Dance_Party_extras_on_beat: Bassi, Medi e Alti (Clicca "Di più" per maggiori
+        dettagli)
+      Dance_Party_extras_speed: Accelerare, Rallentare (Clicca "Di più" per maggiori
+        dettagli)
+      Dance_Party_extras_visible: Dove sono andati? (Clicca "Di più" per maggiori
+        dettagli)
       Eval Contracts 4 A: 'La funzione "ridimensiona" restituisce l''immagine in ingresso
         ingrandita o rimpicciolita di un certo fattore. Prova a ridimensionare questo
         cerchio di un fattore 10: l''immagine che ne risulta quanto è diversa dall''immagine
@@ -1969,18 +1985,18 @@ it:
       Guess The Number_2018: Costruisci quello che vuoi. Ecco un esempio del gioco
         "Indovina che numero ho pensato!"
       HOC 2018 Level_1: Prendi una barca dalla cassa.
-      HOC 2018 Level_10: Raggiungi l'entrata del Monumento oceanico.
+      HOC 2018 Level_10: Raggiungi l'entrata di questo Monumento oceanico.
       HOC 2018 Level_11: Costruisci un condotto di prismarino all'interno del Monumento
         oceanico.
       HOC 2018 Level_12: Progetta il tuo ambiente sottomarino personalizzato, decidi
         tutto tu!
       HOC 2018 Level_2: 'Dirigiti alla fine del molo.  '
       HOC 2018 Level_3: 'Naviga in mare aperto verso il merluzzo.  '
-      HOC 2018 Level_4: Usa un ciclo per raggiungere il delfino.
+      HOC 2018 Level_4: Usa il ciclo (blocco rosa) per raggiungere il delfino.
       HOC 2018 Level_5: Esplora il relitto per raggiungere la cassa.
       HOC 2018 Level_6: Naviga tra i ghiacci per raggiungere il salmone.
       HOC 2018 Level_7a: Cerca una cassa tra le rovine sottomarine.
-      HOC 2018 Level_9b: Usa il corallo come punto di riferimento per raggiungere
+      HOC 2018 Level_9b: Usa i coralli rossi e blu come punti di riferimento per raggiungere
         il tesoro.
       Infinity_catch: Riesci a fare in modo che Elsa (il "personaggio 2") raggiunga
         Anna usando i tasti freccia?
