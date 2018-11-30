@@ -27,7 +27,7 @@ class Pd::FitWeekend1819Registration < ActiveRecord::Base
 
   after_create :send_fit_weekend_confirmation_email
   def send_fit_weekend_confirmation_email
-    Pd::FitWeekend1819RegistrationMailer.confirmation(self).deliver_now
+    Pd::FitWeekendRegistrationMailer.confirmation(self).deliver_now
   end
 
   YES = 'Yes'.freeze

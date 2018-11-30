@@ -1,4 +1,4 @@
-class Pd::FitWeekend1819RegistrationMailer < ActionMailer::Base
+class Pd::FitWeekendRegistrationMailer < ActionMailer::Base
   default from: 'Sarah Fairweather <facilitators@code.org>'
 
   def confirmation(registration)
