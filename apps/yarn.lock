@@ -58,9 +58,9 @@
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.2.0.tgz#3354090ecb81c60386b33931c7c64c4c9948e8b3"
 
-"@code-dot-org/dance-party@0.0.40":
-  version "0.0.40"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-0.0.40.tgz#8b25447da9f7173a39f9d7b06d8f7d46e8b2efcf"
+"@code-dot-org/dance-party@0.0.41":
+  version "0.0.41"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-0.0.41.tgz#27ac861f0c0d21b0d20b98e471d2e8995945cdb2"
 
 "@code-dot-org/johnny-five@0.11.1-cdo.2":
   version "0.11.1-cdo.2"
