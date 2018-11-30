@@ -125,6 +125,7 @@ class DeleteAccountsHelper
     SQL
 
     unless application_ids.empty?
+      # Pd::FitWeekend1819Registration does not inherit from Pd::FitWeekendRegistrationBase so both are needed here
       Pd::FitWeekend1819Registration.where(pd_application_id: application_ids).update_all(form_data: '{}')
       Pd::FitWeekendRegistrationBase.where(pd_application_id: application_ids).update_all(form_data: '{}')
       Pd::Application::ApplicationBase.with_deleted.where(id: application_ids).update_all(form_data: '{}', notes: nil)
