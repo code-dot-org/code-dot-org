@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "You need to make a dancer.",
+  "danceFeedbackNoDancers": "You have no dancers.",
+  "danceFeedbackNoBackground": "You need to add a background effect.",
+  "danceFeedbackTooManyDancers": "Be careful! If you put `make a new` block inside `every 2 measures`, you will create a lot of dancers.",
+  "danceFeedbackUseSetSize": "Use the `set backup_dancer2 size` block to make that dancer smaller.",
+  "danceFeedbackUseSetTint": "Use the `set tint` block to change a dancer's tint.",
+  "danceFeedbackUseStartMapping": "Try adding the <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> block to your program.",
+  "danceFeedbackStartNewMove": "Your dancer wasn't doing a new move after the fourth measure.",
+  "danceFeedbackNeedDifferentDance": "You need to use a different dance.",
+  "danceFeedbackNeedEveryTwoMeasures": "Make sure you are using the `every 2 measures` block",
+  "danceFeedbackNeedMakeANewDancer": "Use the `make a new` block to create a second dancer.",
+  "measure": "Measure:"
+}

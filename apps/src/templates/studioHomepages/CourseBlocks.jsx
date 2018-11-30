@@ -76,6 +76,7 @@ class CourseBlocksCsfModern extends Component {
           details={i18n.courseBlocksLegacyNotificationBody()}
           detailsLinkText={i18n.courseBlocksLegacyNotificationDetailsLinkText()}
           detailsLink="https://docs.google.com/document/d/1MVDfbEzr0o9DqaOYmOOYpsQPTfXUFvCx4Xs9uixrdBE/edit?usp=sharing"
+          detailsLinkNewWindow={true}
           dismissible={false}
           buttons={[
             {
@@ -132,14 +133,26 @@ class CourseBlocksCsfLegacy extends Component {
 
 export class CourseBlocksHoc extends Component {
   static propTypes = {
-    rowCount: PropTypes.number.isRequired
+    rowCount: PropTypes.number.isRequired,
+    isInternational: PropTypes.bool,
+  };
+
+  getFirstRowTiles = () => {
+    if (this.props.isInternational) {
+      return ['#dance', '#aquatic', '#frozen', '#hourofcode'];
+    } else {
+      return ['#dance', '#aquatic', '#applab-intro', '#flappy'];
+    }
   };
 
   componentDidMount() {
-    $('#hero').appendTo(ReactDOM.findDOMNode(this.refs.hero)).show();
-    $('#starwars').appendTo(ReactDOM.findDOMNode(this.refs.starwars)).show();
-    $('#frozen').appendTo(ReactDOM.findDOMNode(this.refs.frozen)).show();
-    $('#hourofcode').appendTo(ReactDOM.findDOMNode(this.refs.hourofcode)).show();
+    // First row, dynamically created based on isInternational value
+    const tiles = this.getFirstRowTiles();
+    tiles.forEach((tile, index) => {
+      $(tile).appendTo(ReactDOM.findDOMNode(this.refs[index]));
+    });
+
+    // Second row
     $('#flappy').appendTo(ReactDOM.findDOMNode(this.refs.flappy)).show();
     $('#infinity').appendTo(ReactDOM.findDOMNode(this.refs.infinity)).show();
     $('#playlab').appendTo(ReactDOM.findDOMNode(this.refs.playlab)).show();
@@ -150,10 +163,10 @@ export class CourseBlocksHoc extends Component {
     return (
       <div>
         <div className="row">
-          <ProtectedStatefulDiv ref="hero"/>
-          <ProtectedStatefulDiv ref="starwars"/>
-          <ProtectedStatefulDiv ref="frozen"/>
-          <ProtectedStatefulDiv ref="hourofcode"/>
+          <ProtectedStatefulDiv ref="0"/>
+          <ProtectedStatefulDiv ref="1"/>
+          <ProtectedStatefulDiv ref="2"/>
+          <ProtectedStatefulDiv ref="3"/>
         </div>
 
         {this.props.rowCount > 1 && (
@@ -161,6 +174,8 @@ export class CourseBlocksHoc extends Component {
             <br/>
             <br/>
             <div className="row">
+              {/* TODO: (madelynkasula) If Flappy is in 1st row, what should replace Flappy on line below? */}
+              {/* Can we remove 2nd row? It's never used... */}
               <ProtectedStatefulDiv ref="flappy"/>
               <ProtectedStatefulDiv ref="infinity"/>
               <ProtectedStatefulDiv ref="playlab"/>
@@ -194,7 +209,10 @@ export class CourseBlocksAll extends Component {
           linkText={i18n.teacherCourseHocLinkText()}
           link={pegasus('/hourofcode/overview')}
         >
-          <CourseBlocksHoc rowCount={1}/>
+          <CourseBlocksHoc
+            rowCount={1}
+            isInternational={!this.props.isEnglish}
+          />
         </ContentContainer>
 
         {!this.props.isEnglish && (

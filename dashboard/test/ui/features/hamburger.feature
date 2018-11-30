@@ -94,7 +94,6 @@ Feature: Hamburger dropdown
     And I see "#stats"
     And I see "#help-us"
 
-@skip
 Scenario: Signed out user viewing hamburger dropdown in Spanish on desktop
   Given I am on "http://code.org/lang/es"
   Then I wait until I am on "http://code.org/"
@@ -115,7 +114,6 @@ Scenario: Signed out user viewing hamburger dropdown in Spanish on desktop
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
-@skip
 Scenario: Student viewing hamburger dropdown in Spanish on desktop
   Given I create a student named "Estrella Estudiante"
   Then I wait until I am on "http://studio.code.org/home"
@@ -136,7 +134,6 @@ Scenario: Student viewing hamburger dropdown in Spanish on desktop
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
-@skip
 Scenario: Teacher viewing hamburger dropdown in Spanish on desktop
   Given I create a teacher named "Pabla Profesora"
   Then I wait until I am on "http://studio.code.org/home"
@@ -157,7 +154,6 @@ Scenario: Teacher viewing hamburger dropdown in Spanish on desktop
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
-@skip
 Scenario: Student viewing hamburger dropdown in Spanish on desktop on level
   Given I create a student named "Estrella Estudiante"
   Given I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1/lang/es"
@@ -176,7 +172,6 @@ Scenario: Student viewing hamburger dropdown in Spanish on desktop on level
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
-@skip
 Scenario: Teacher viewing hamburger dropdown in Spanish on desktop on level
   Given I create a teacher named "Pabla Profesora"
   Given I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1/lang/es"

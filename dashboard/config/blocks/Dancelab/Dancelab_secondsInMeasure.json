@@ -1,8 +1,0 @@
-{
-  "category": "Music",
-  "config": {
-    "func": "secondsInMeasure",
-    "blockText": "seconds in a measure",
-    "returnType": "Number"
-  }
-}

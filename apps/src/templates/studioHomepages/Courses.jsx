@@ -44,7 +44,7 @@ class Courses extends Component {
       isSignedOut,
       userId,
       showInitialTips,
-      modernElementaryCoursesAvailable
+      modernElementaryCoursesAvailable,
     } = this.props;
     const headingText = isTeacher ? i18n.coursesHeadingTeacher() : i18n.coursesHeadingStudent();
     const subHeadingText = i18n.coursesHeadingSubText(

@@ -21,6 +21,15 @@
   = f.label :permitted_errors, 'Permitted errors (default 0)'
   = f.number_field :permitted_errors, :value => @level.permitted_errors
 .field
+  = f.label :auto_run, 'Automatically rerun on block changes'
+  :ruby
+    selector = f.select :auto_run, options_for_select([
+      ['No', nil],
+      ['Yes, but only for field changes', SharedConstants::ARTIST_AUTORUN_OPTIONS.limited_auto_run],
+      ['Yes, for all code changes', SharedConstants::ARTIST_AUTORUN_OPTIONS.full_auto_run],
+    ], selected: @level.auto_run)
+  = selector
+.field
   = link_to 'Edit Predraw Blocks', level_edit_blocks_path(@level, :predraw_blocks) unless @level.new_record?
   = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'predraw'}
   :javascript

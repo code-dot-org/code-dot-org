@@ -19,6 +19,7 @@ class HttpCache
 
   # A map from script name to script level URL pattern.
   CACHED_SCRIPTS_MAP = %w(
+    aquatic
     starwars
     starwarsblocks
     mc
@@ -28,6 +29,7 @@ class HttpCache
     hero
     sports
     basketball
+    dance
   ).map do |script_name|
     # Most scripts use the default route pattern.
     [script_name, "/s/#{script_name}/stage/*"]
@@ -52,7 +54,10 @@ class HttpCache
 
     # Signed-in user type (student/teacher), or signed-out if cookie is not present.
     user_type = "_user_type#{env_suffix}"
-    default_cookies = DEFAULT_COOKIES + [user_type]
+    # Students younger than 13 shouldn't see App Lab and Game Lab unless they
+    # are in a teacher's section for privacy reasons.
+    limit_project_types = "_limit_project_types#{env_suffix}"
+    default_cookies = DEFAULT_COOKIES + [user_type, limit_project_types]
 
     # These cookies are whitelisted on all session-specific (not cached) pages.
     whitelisted_cookies = [
@@ -136,6 +141,13 @@ class HttpCache
             cookies: 'none'
           },
           {
+            path: '/restricted/*',
+            proxy: 'cdo-restricted',
+            headers: [],
+            cookies: 'none',
+            trusted_signer: true,
+          },
+          {
             path: %w(
               /v3/assets/*
               /v3/animations/*
@@ -156,6 +168,15 @@ class HttpCache
             headers: WHITELISTED_HEADERS + ['User-Agent'],
             cookies: whitelisted_cookies
           },
+          # The last puzzle in Dance Party (Hour of Code 2018) is project backed and should not be cached in CloudFront.
+          # Use CloudFront Behavior precedence rules to not cache this path, but all paths in CACHED_SCRIPTS_MAP
+          # that don't match this path will be cached.
+          {
+            # TODO(suresh): lookup the last puzzle from the database
+            path: "/s/dance/stage/1/puzzle/13",
+            headers: WHITELISTED_HEADERS,
+            cookies: whitelisted_cookies
+          },
           {
             path: CACHED_SCRIPTS_MAP.values,
             headers: WHITELISTED_HEADERS,
@@ -163,6 +184,11 @@ class HttpCache
           },
           {
             path: '/api/v1/projects/gallery/public/*',
+            headers: [],
+            cookies: 'none'
+          },
+          {
+            path: '/api/v1/sound-library/*',
             headers: [],
             cookies: 'none'
           },
@@ -184,7 +210,10 @@ class HttpCache
             cookies: whitelisted_cookies
           },
           {
-            path: '/v3/files-public/*',
+            path: %w(
+              /v3/files-public/*
+              /v3/sources-public/*
+            ),
             headers: [],
             cookies: 'none'
           },

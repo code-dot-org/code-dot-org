@@ -9,7 +9,7 @@ class MakerController < ApplicationController
     # Redirect to login if not signed in
     authenticate_user!
 
-    csd_unit_6_script = Script.find_by_name(Script::CSD6_NAME)
+    csd_unit_6_script = MakerController.maker_script current_user
     current_level = current_user.next_unpassed_progression_level(csd_unit_6_script)
     @csd_unit_6 = {
       assignableName: data_t_suffix('script.name', csd_unit_6_script[:name], 'title'),
@@ -17,6 +17,26 @@ class MakerController < ApplicationController
       linkToOverview: script_path(csd_unit_6_script),
       linkToLesson: script_next_path(csd_unit_6_script, 'next')
     }
+  end
+
+  def self.maker_script(for_user)
+    if any_csd_2017?(for_user) && !any_csd_2018?(for_user)
+      Script.get_from_cache(Script::CSD6_NAME)
+    else
+      Script.get_from_cache(Script::CSD6_2018_NAME)
+    end
+  end
+
+  def self.any_csd_2017?(for_user)
+    !for_user.user_scripts.joins(:script).
+      where(scripts: {name: ScriptConstants::CATEGORIES[:csd]}).empty? ||
+      for_user.section_courses.include?(Course.get_from_cache(ScriptConstants::CSD_2017))
+  end
+
+  def self.any_csd_2018?(for_user)
+    !for_user.user_scripts.joins(:script).
+      where(scripts: {name: ScriptConstants::CATEGORIES[:csd_2018]}).empty? ||
+      for_user.section_courses.include?(Course.get_from_cache(ScriptConstants::CSD_2018))
   end
 
   def setup

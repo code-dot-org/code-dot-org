@@ -61,6 +61,7 @@ describe('entry tests', () => {
     'bounce',
     'calc',
     'craft',
+    'dance',
     'eval',
     'flappy',
     'gamelab',
@@ -331,7 +332,7 @@ describe('entry tests', () => {
   var OUTPUT_DIR = 'build/package/js/';
   config.exec = {
     convertScssVars: './script/convert-scss-variables.js',
-    generateSharedConstants: './script/generateSharedConstants.rb'
+    generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb'
   };
 
   var junitReporterBaseConfig = {
@@ -441,53 +442,58 @@ describe('entry tests', () => {
   var appsEntries = _.fromPairs(appsToBuild.map(function (app) {
     return [app, './src/sites/studio/pages/levels-' + app + '-main.js'];
   }));
+
   var codeStudioEntries = {
-    'blockly':                      './src/sites/studio/pages/blockly.js',
-    'code-studio':                  './src/sites/studio/pages/code-studio.js',
+    'blockly':                             './src/sites/studio/pages/blockly.js',
+    'code-studio':                         './src/sites/studio/pages/code-studio.js',
+    'levels/contract_match':               './src/sites/studio/pages/levels/contract_match.jsx',
+    'levels/_curriculum_reference':        './src/sites/studio/pages/levels/_curriculum_reference.js',
+    'levels/_dialog':                      './src/sites/studio/pages/levels/_dialog.js',
+    'levels/_standalone_video':            './src/sites/studio/pages/levels/_standalone_video.js',
+    'levels/external':                     './src/sites/studio/pages/levels/external.js',
+    'levels/_level_group':                 './src/sites/studio/pages/levels/_level_group.js',
+    'levels/_match':                       './src/sites/studio/pages/levels/_match.js',
+    'levels/multi':                        './src/sites/studio/pages/levels/multi.js',
+    'levels/textMatch':                    './src/sites/studio/pages/levels/textMatch.js',
+    'levels/widget':                       './src/sites/studio/pages/levels/widget.js',
+    'levels/_external_link':               './src/sites/studio/pages/levels/_external_link.js',
+    'projects/index':                      './src/sites/studio/pages/projects/index.js',
+    'projects/public':                     './src/sites/studio/pages/projects/public.js',
+    'projects/featured':                   './src/sites/studio/pages/projects/featured.js',
+    'schoolInfo':                          './src/sites/studio/pages/schoolInfo.js',
+    'schoolInfoInterstitial':              './src/sites/studio/pages/schoolInfoInterstitial.js',
+    'scripts/stage_extras':                './src/sites/studio/pages/scripts/stage_extras.js',
+    'signup':                              './src/sites/studio/pages/signup.js',
+    'raceInterstitial':                    './src/sites/studio/pages/raceInterstitial.js',
+    'layouts/_terms_interstitial':         './src/sites/studio/pages/layouts/_terms_interstitial.js',
+    'maker/home':                          './src/sites/studio/pages/maker/home.js',
+    'maker/setup':                         './src/sites/studio/pages/maker/setup.js',
+    'maker/discountcode':                  './src/sites/studio/pages/maker/discountcode.js',
+    'scriptOverview':                      './src/sites/studio/pages/scriptOverview.js',
+    'home/_homepage':                      './src/sites/studio/pages/home/_homepage.js',
+    'congrats/index':                      './src/sites/studio/pages/congrats/index.js',
+    'courses/index':                       './src/sites/studio/pages/courses/index.js',
+    'courses/show':                        './src/sites/studio/pages/courses/show.js',
+    'devise/registrations/edit':           './src/sites/studio/pages/devise/registrations/edit.js',
+    'devise/registrations/_finish_sign_up': './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
+  };
+
+  var internalEntries = {
+    'blocks/edit':                  './src/sites/studio/pages/blocks/edit.js',
+    'courses/edit':                 './src/sites/studio/pages/courses/edit.js',
     'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
     'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',
     'levelbuilder_craft':           './src/sites/studio/pages/levelbuilder_craft.js',
     'levelbuilder_edit_script':     './src/sites/studio/pages/levelbuilder_edit_script.js',
     'levelbuilder_gamelab':         './src/sites/studio/pages/levelbuilder_gamelab.js',
-    'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
     'levelbuilder_pixelation':      './src/sites/studio/pages/levelbuilder_pixelation.js',
-    'blocks/edit':                  './src/sites/studio/pages/blocks/edit.js',
-    'shared_blockly_functions/edit':'./src/sites/studio/pages/shared_blockly_functions/edit.js',
-    'libraries/edit':               './src/sites/studio/pages/libraries/edit.js',
-    'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
-    'levels/_curriculum_reference': './src/sites/studio/pages/levels/_curriculum_reference.js',
-    'levels/_dialog':               './src/sites/studio/pages/levels/_dialog.js',
-    'levels/_standalone_video':     './src/sites/studio/pages/levels/_standalone_video.js',
-    'levels/external':              './src/sites/studio/pages/levels/external.js',
-    'levels/_level_group':          './src/sites/studio/pages/levels/_level_group.js',
-    'levels/_match':                './src/sites/studio/pages/levels/_match.js',
-    'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
-    'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
-    'levels/widget':                './src/sites/studio/pages/levels/widget.js',
-    'levels/_external_link':        './src/sites/studio/pages/levels/_external_link.js',
+    'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
+    'levels/editors/_all':          './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_blockly':      './src/sites/studio/pages/levels/editors/_blockly.js',
     'levels/editors/_droplet':      './src/sites/studio/pages/levels/editors/_droplet.js',
-    'levels/editors/_all':          './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_dsl':          './src/sites/studio/pages/levels/editors/_dsl.js',
-    'projects/index':               './src/sites/studio/pages/projects/index.js',
-    'projects/public':              './src/sites/studio/pages/projects/public.js',
-    'projects/featured':            './src/sites/studio/pages/projects/featured.js',
-    'schoolInfo':                   './src/sites/studio/pages/schoolInfo.js',
-    'schoolInfoInterstitial':       './src/sites/studio/pages/schoolInfoInterstitial.js',
-    'scripts/stage_extras':         './src/sites/studio/pages/scripts/stage_extras.js',
-    'signup':                       './src/sites/studio/pages/signup.js',
-    'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
-    'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
-    'maker/home':                   './src/sites/studio/pages/maker/home.js',
-    'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
-    'maker/discountcode':           './src/sites/studio/pages/maker/discountcode.js',
-    'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
-    'home/_homepage':               './src/sites/studio/pages/home/_homepage.js',
-    'congrats/index':               './src/sites/studio/pages/congrats/index.js',
-    'courses/index':                './src/sites/studio/pages/courses/index.js',
-    'courses/show':                 './src/sites/studio/pages/courses/show.js',
-    'courses/edit':                 './src/sites/studio/pages/courses/edit.js',
-    'devise/registrations/edit':    './src/sites/studio/pages/devise/registrations/edit.js',
+    'libraries/edit':               './src/sites/studio/pages/libraries/edit.js',
+    'shared_blockly_functions/edit':'./src/sites/studio/pages/shared_blockly_functions/edit.js',
   };
 
   var otherEntries = {
@@ -523,10 +529,10 @@ describe('entry tests', () => {
     'pd/application_dashboard/index': './src/sites/studio/pages/pd/application_dashboard/index.js',
     'pd/application/facilitator_application/new': './src/sites/studio/pages/pd/application/facilitator_application/new.js',
     'pd/application/teacher_application/new': './src/sites/studio/pages/pd/application/teacher_application/new.js',
-    'pd/application/teacher_application/new_1920_preview': './src/sites/studio/pages/pd/application/teacher_application/new_1920_preview.js',
     'pd/application/principal_approval_application/new': './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
     'pd/teachercon1819_registration/new': './src/sites/studio/pages/pd/teachercon1819_registration/new.js',
     'pd/fit_weekend1819_registration/new': './src/sites/studio/pages/pd/fit_weekend1819_registration/new.js',
+    'pd/workshop_enrollment/new': './src/sites/studio/pages/pd/workshop_enrollment/new.js',
     'pd/workshop_enrollment/cancel': './src/sites/studio/pages/pd/workshop_enrollment/cancel.js',
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
@@ -555,9 +561,9 @@ describe('entry tests', () => {
 
     'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
     'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js',
+    'regionalPartnerSearch': './src/regionalPartnerSearch/regionalPartnerSearch',
 
     cookieBanner: './src/cookieBanner/cookieBanner.js',
-    dance: './src/gamelab/dance.js',
   };
 
   // Create a config for each of our bundles
@@ -572,6 +578,7 @@ describe('entry tests', () => {
           {},
           appsEntries,
           codeStudioEntries,
+          internalEntries,
           otherEntries
         ),
         function (val) {
@@ -618,6 +625,9 @@ describe('entry tests', () => {
         ...(process.env.ANALYZE_BUNDLE ? [
           new BundleAnalyzerPlugin({
             analyzerMode: 'static',
+            excludeAssets: [
+              ...Object.keys(internalEntries),
+            ],
           }),
         ] : []),
         new StatsWriterPlugin({
@@ -754,7 +764,7 @@ describe('entry tests', () => {
   grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
     child_process.execSync('mkdir -p ' + current);
-    appsToBuild.concat('common', 'tutorialExplorer').map(function (item) {
+    appsToBuild.concat('common', 'tutorialExplorer', 'regionalPartnerSearch').map(function (item) {
       var localeType = (item === 'common' ? 'locale' : 'appLocale');
       var localeString = '/*' + item + '*/ ' +
         'module.exports = window.blockly.' + localeType + ';';

@@ -1,13 +1,17 @@
 ---
-title: <%= hoc_s(:title_how_to) %>
+title: <%= hoc_s(:title_how_to).inspect %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>Com ensenyar una Hora del Codi</h1>
+# How to teach one Hour of Code with your class
 
-Uneix-te al moviment i introdueix a un grup d'estudiants a la seva primera hora de ciència computacional amb aquests pasos. L'hora de codi és fàcil de córrer - inclús per a principiants! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### Uneix-te al moviment i introdueix a un grup d'estudiants en la seva primera hora d'informàtica amb aquests passos. L'Hora del Codi és fàcil d'utilitzar - fins i tot per a principiants! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions](<%= localized_file('/files/participation-guide.pdf') %>).
+
+---
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -21,13 +25,13 @@ Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources
 
 ## 4. Plan your technology needs - computers are optional
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+The best Hour of Code experience includes Internet-connected computers. Però **no** necessites un ordinador per a cada nen, i fins i tot pots fer l'Hora del Codi sense cap ordinador.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Assegura't de provar els tutorials en els ordinadors o dispositius dels estudiants per garantir que funcionen correctament en navegadors amb so i vídeo. **Tens poc ample de banda?** Planeja mostrar els vídeos des de davant de la classe per tal d'evitar que cada estudiant es descarregui els seus propis vídeos. O prova els tutorials desconnectats / fora de línia.
 
-Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
+Proporciona auriculars a la teva classe, o demana als estudiants que se'n portin de propis, si el tutorial que esculls funciona millor amb so.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Quan els estudiants s'associen, s'ajuden mútuament i consulten menys al professor. Ells veuen també que la informàtica és social i col·laborativa.
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Quan els estudiants s'associen, s'ajuden mútuament i depenen menys del professor. Ells veuen també que la informàtica és social i col·laborativa.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 

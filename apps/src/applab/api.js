@@ -380,6 +380,10 @@ export function startWebRequest(url, func) {
                            'func': func });
 }
 
+export function startWebRequestSync(url, func) {
+  return Applab.executeCmd(null, 'startWebRequestSync', {url, func});
+}
+
 export function getKeyValue(key, onSuccess, onError) {
   return Applab.executeCmd(null,
                            'getKeyValue',

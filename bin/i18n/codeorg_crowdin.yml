@@ -35,20 +35,12 @@ files: [
   #   rather than uploading the source directly
   "ignore" : [
     "/source/hourofcode/**",
-    "/source/dashboard/authored_hints.yml",
-    "/source/dashboard/instructions.yml",
-    "/source/dashboard/markdown_instructions.yml",
   ],
 
   #
   # The parameter "update_option" is optional. If it is not set, translations for changed strings will be lost. Useful for typo fixes and minor changes in source strings.
   # e.g. "update_as_unapproved" or "update_without_changes"
   #
-  "update_option" : "update_as_unapproved"
- }, {
-  # config for redacted content
-  "source" : "/redacted/**/*.yml",
-  "translation" : "/%language%/**/%original_file_name%",
   "update_option" : "update_as_unapproved"
  }, {
   # config for json content
@@ -62,6 +54,13 @@ files: [
     "/source/blockly-mooc/gamelab.json",
     "/source/blockly-mooc/netsim.json",
     "/source/blockly-mooc/weblab.json"
+  ],
+  "update_option" : "update_as_unapproved"
+ }, {
+  "source" : "/source/**/*.md",
+  "translation" : "/%language%/**/%original_file_name%",
+  "ignore" : [
+    "/source/hourofcode/**",
   ],
   "update_option" : "update_as_unapproved"
  }

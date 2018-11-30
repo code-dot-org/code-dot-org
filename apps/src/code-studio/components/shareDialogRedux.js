@@ -10,6 +10,7 @@ const SET_GET_NEXT_FRAME = 'shareDialog/SET_GET_NEXT_FRAME';
 const UNPUBLISH_REQUEST  = 'shareDialog/UNPUBLISH_REQUEST';
 const UNPUBLISH_SUCCESS  = 'shareDialog/UNPUBLISH_SUCCESS';
 const UNPUBLISH_FAILURE  = 'shareDialog/UNPUBLISH_FAILURE';
+const SAVE_REPLAY_LOG  = 'shareDialog/SAVE_REPLAY_LOG';
 
 // Reducer
 
@@ -53,6 +54,11 @@ export default function reducer(state = initialState, action) {
         ...state,
         getNextFrame: action.func,
       };
+    case SAVE_REPLAY_LOG:
+      return {
+        ...state,
+        replayLog: action.replayLog
+      };
     default:
       return state;
   }
@@ -91,4 +97,8 @@ export function unpublishProject(projectId) {
 
 export function setGetNextFrame(func) {
   return {type: SET_GET_NEXT_FRAME, func};
+}
+
+export function saveReplayLog(replayLog) {
+  return {type: SAVE_REPLAY_LOG, replayLog};
 }

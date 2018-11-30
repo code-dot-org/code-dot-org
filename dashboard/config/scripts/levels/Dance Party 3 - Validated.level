@@ -55,6 +55,7 @@
     "show_type_hints": "true",
     "instructions": "Create a new sprite called `alien2`, then make it do a different dance move when it's clicked.  ",
     "validation_code": "if (World.frameCount > 50) {\r\n  var status = 0;\r\n\r\n  // Check through all sprites in case student changed the sprite name\r\n  if(World.allSprites.length > 5){\r\n    status = 0;\r\n  }\r\n  else{\r\n    status = 3;\r\n  }\r\n  levelSuccess(status);\r\n}",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

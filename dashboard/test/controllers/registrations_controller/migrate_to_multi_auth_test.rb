@@ -13,8 +13,8 @@ class MigrateToMultiAuthTest < ActionDispatch::IntegrationTest
 
     sign_in teacher
     get '/users/migrate_to_multi_auth'
-    assert_redirected_to '/home'
-    assert_equal 'Multi-auth is now enabled on your account.', flash[:notice]
+    assert_redirected_to '/users/edit'
+    assert_equal 'Success! You have updated to our new account experience.', flash[:notice]
 
     teacher.reload
     assert teacher.migrated?
@@ -26,8 +26,8 @@ class MigrateToMultiAuthTest < ActionDispatch::IntegrationTest
 
     sign_in teacher
     get '/users/migrate_to_multi_auth'
-    assert_redirected_to '/home'
-    assert_equal 'Multi-auth is still enabled on your account.', flash[:notice]
+    assert_redirected_to '/users/edit'
+    assert_equal 'Success! You have updated to our new account experience.', flash[:notice]
 
     teacher.reload
     assert teacher.migrated?

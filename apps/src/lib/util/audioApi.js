@@ -31,14 +31,22 @@ export const commands = {
    * _@param {boolean} [opts.allowMultiple] If false (default) this call will
    *        stop other instances of the same sound from playing.  If true,
    *        multiple instances of the sound may be played simultaneously.
+   * _@param {function} [opts.callback] Called back when the sound starts playing
+   *        with an argument of true. If the sound fails to play, called back
+   *        with an argument of false.
+   * _@param {function} [opts.onEnded] Called back when the sound stops playing
    */
   playSound(opts) {
     apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
     apiValidateType(opts, 'playSound', 'loop', opts.loop, 'boolean', OPTIONAL);
+    apiValidateType(opts, 'playSound', 'callback', opts.callback, 'function', OPTIONAL);
+    apiValidateType(opts, 'playSound', 'onEnded', opts.onEnded, 'function', OPTIONAL);
 
     const url = assetPrefix.fixPath(opts.url);
     if (Sounds.getSingleton().isPlayingURL(url)) {
-      return;
+      if (opts.callback) {
+        opts.callback(false);
+      }
     }
 
     // TODO: Re-enable forceHTML5 after Varnish 4.1 upgrade.
@@ -70,7 +78,9 @@ export const commands = {
       volume: 1.0,
       loop: !!opts.loop,
       forceHTML5: forceHTML5,
-      allowHTML5Mobile: true
+      allowHTML5Mobile: true,
+      callback: opts.callback,
+      onEnded: opts.onEnded,
     });
   },
 
@@ -97,7 +107,7 @@ export const commands = {
  * arguments converted to an options object.
  */
 export const executors = {
-  playSound: (url, loop = false) => executeCmd(null, 'playSound', {url, loop}),
+  playSound: (url, loop = false, callback) => executeCmd(null, 'playSound', {url, loop, callback}),
   stopSound: (url) => executeCmd(null, 'stopSound', {url})
 };
 // Note to self - can we use _.zipObject to map argumentNames to arguments here?

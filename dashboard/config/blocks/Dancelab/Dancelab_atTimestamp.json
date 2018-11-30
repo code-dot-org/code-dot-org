@@ -7,11 +7,12 @@
       0.74
     ],
     "func": "atTimestamp",
-    "blockText": "at {TIMESTAMP} {UNIT}",
+    "blockText": "after {TIMESTAMP} {UNIT}",
     "args": [
       {
         "name": "TIMESTAMP",
-        "type": "Number"
+        "type": "Number",
+        "field": true
       },
       {
         "name": "UNIT",

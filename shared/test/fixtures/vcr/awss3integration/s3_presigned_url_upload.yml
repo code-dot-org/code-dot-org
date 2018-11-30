@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: http://cdo-temp.s3.amazonaws.com/presigned_test_key-0.5488135039273248?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJKADNJLDLSFUAK2Q/20180928/us-east-1/s3/aws4_request&X-Amz-Date=20180928T074343Z&X-Amz-Expires=900&X-Amz-Signature=42bda69aface60ce44de2392261f5a7a1d838efac84a1531533cc969acee6a41&X-Amz-SignedHeaders=host
+    body:
+      encoding: UTF-8
+      string: Testing S3 presigned upload
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 28 Sep 2018 07:43:44 GMT
+      Etag:
+      - '"3af8a09c64085b054521b6763200fb77"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 28 Sep 2018 07:43:43 GMT
+- request:
+    method: get
+    uri: https://cdo-temp.s3.amazonaws.com/presigned_test_key-0.5488135039273248
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 28 Sep 2018 07:43:44 GMT
+      Last-Modified:
+      - Fri, 28 Sep 2018 07:43:44 GMT
+      Etag:
+      - '"3af8a09c64085b054521b6763200fb77"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '27'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: Testing S3 presigned upload
+    http_version: 
+  recorded_at: Fri, 28 Sep 2018 07:43:43 GMT
+recorded_with: VCR 3.0.3

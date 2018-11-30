@@ -1,4 +1,6 @@
-import { TestResults } from '@cdo/apps/constants';
+import GameLabJr from '@cdo/interpreted/GameLabJr.interpreted.js';
+import ValidationSetup from '@cdo/interpreted/ValidationSetup.interpreted.js';
+import {TestResults} from '@cdo/apps/constants';
 
 const levelDef = {
   helperLibraries: ['GameLabJr'],
@@ -29,6 +31,7 @@ export default {
   levelDefinition: levelDef,
   tests: [
     {
+      libraries: {GameLabJr, ValidationSetup},
       description: 'Sprite Lab fail',
       xml: `
         <xml>
@@ -40,6 +43,7 @@ export default {
       },
     },
     {
+      libraries: {GameLabJr, ValidationSetup},
       description: 'Sprite Lab pass',
       xml: `
         <xml>

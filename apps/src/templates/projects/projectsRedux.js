@@ -121,9 +121,11 @@ function selectedGallery(state = initialSelectedGalleryState, action) {
 // A map from project type to array of projects
 const initialProjectListState = {
   applab: [],
+  spritelab: [],
   gamelab: [],
   playlab: [],
   artist: [],
+  dance: [],
 };
 
 function projectLists(state = initialProjectListState, action) {
@@ -155,7 +157,9 @@ function projectLists(state = initialProjectListState, action) {
 // Whether there are more projects of each type on the server which are
 // older than the ones we have on the client.
 const initialHasOlderProjects = {
+  dance: true,
   applab: true,
+  spritelab: true,
   gamelab: true,
   playlab: true,
   artist: true,

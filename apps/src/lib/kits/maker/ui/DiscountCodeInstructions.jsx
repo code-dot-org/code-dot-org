@@ -42,7 +42,7 @@ export default class DiscountCodeInstructions extends Component {
           <div>(Expires {expiration})</div>
         </h2>
         <div>
-          We're happy to share with you this discount code that will bring down the cost of a $325 Circuit Playground kit to{" "}
+          We're happy to share with you this discount code that will bring down the cost of a $350 Circuit Playground kit to{" "}
           {this.props.fullDiscount ? "$0" : "only $97.50"} including standard ground shipping.
           We're excited that you will be bringing this opportunity to your students!
         </div>

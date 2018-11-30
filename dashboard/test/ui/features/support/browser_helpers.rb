@@ -85,7 +85,7 @@ module BrowserHelpers
       if js_errors
         puts "DEBUG: [#{check_reason_description}] JS errors: #{CGI.escapeHTML js_errors.join(' | ')}"
       else
-        puts "DEBUG: [#{check_reason_description}] No JS errors found on current page."
+        puts "DEBUG: [#{check_reason_description}] No JS errors found on current page." if ENV['VERY_VERBOSE']
       end
     end
   rescue => err

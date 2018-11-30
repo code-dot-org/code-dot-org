@@ -30,26 +30,45 @@ export default class PreWorkshopQuestions extends FormComponent {
           })
         }
         {selectedUnit && lessons &&
-          this.buildSelectFieldGroup({
-            name: "lesson",
-            label: "Lesson",
-            placeholder: "Select a lesson",
-            required: true,
-            options: lessons,
-            controlWidth: {md: 6}
-          })
+        this.buildSelectFieldGroup({
+          name: "lesson",
+          label: "Lesson",
+          placeholder: "Select a lesson",
+          required: true,
+          options: lessons,
+          controlWidth: {md: 6}
+        })
         }
         {
           this.buildFieldGroup({
             name: "questionsAndTopics",
             componentClass: "textarea",
             label: "What questions are on your mind leading into this workshop? " +
-              "What topics do you hope to discuss during the workshop?",
+            "What topics do you hope to discuss during the workshop?",
             required: false,
           })
         }
       </FormGroup>
     );
+  }
+
+  /**
+   * @override
+   */
+  static getDynamicallyRequiredFields(data, pageProps) {
+    const requiredFields = [];
+
+    // If the selected unit has associated lessons, require lesson too.
+    if (data.unit) {
+      const selectedUnit = pageProps.unitsAndLessons.find(unit => unit[0] === data.unit);
+      const lessons = selectedUnit && selectedUnit[1];
+
+      if (lessons) {
+        requiredFields.push('lesson');
+      }
+    }
+
+    return requiredFields;
   }
 }
 

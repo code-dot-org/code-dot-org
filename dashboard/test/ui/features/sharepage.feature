@@ -1,10 +1,11 @@
+# Brad (2018-11-14) Skip on IE due to webdriver exception
+@no_ie
 @no_mobile
 Feature: Puzzle share page
 
 Scenario: Share a flappy game, visit the share page, and visit the workspace
   Given I am on "http://studio.code.org/flappy/10?noautoplay=true"
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
   And I've initialized the workspace with my flappy puzzle.
 
   Then I press "runButton"
@@ -39,7 +40,6 @@ Scenario: Share a flappy game, visit the share page, and visit the workspace
 Scenario: Share and save an artist level to the project gallery
   Given I am on "http://studio.code.org/s/artist/stage/1/puzzle/10"
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
   And I drag block "1" to block "12"
 
   When I press "runButton"
@@ -72,7 +72,6 @@ Scenario: Share and save an artist level to the project gallery
 Scenario: Share and save a playlab level to the project gallery
   Given I am on "http://studio.code.org/s/playlab/stage/1/puzzle/10"
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
 
   When I press "runButton"
   And I press "finishButton"

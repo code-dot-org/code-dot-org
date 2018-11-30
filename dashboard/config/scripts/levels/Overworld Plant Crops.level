@@ -47,7 +47,8 @@
     "level_verification_timeout": "0",
     "use_player": "false",
     "hint_prompt_attempts_threshold": 7,
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

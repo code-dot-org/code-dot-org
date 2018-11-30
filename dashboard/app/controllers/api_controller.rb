@@ -1,3 +1,4 @@
+require 'cdo/aws/cloudfront'
 require 'google/apis/classroom_v1'
 require 'honeybadger'
 
@@ -17,7 +18,10 @@ class ApiController < ApplicationController
   end
 
   def clever_classrooms
-    query_clever_service("v1.1/teachers/#{current_user.uid}/sections") do |response|
+    return head :forbidden unless current_user
+
+    uid = current_user.uid_for_provider(AuthenticationOption::CLEVER)
+    query_clever_service("v1.1/teachers/#{uid}/sections") do |response|
       json = response.map do |section|
         data = section['data']
         {
@@ -33,6 +37,8 @@ class ApiController < ApplicationController
   end
 
   def import_clever_classroom
+    return head :forbidden unless current_user
+
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
 
@@ -64,13 +70,6 @@ class ApiController < ApplicationController
 
     begin
       yield service
-
-      if client.access_token != current_user.oauth_token
-        current_user.update!(
-          oauth_token: client.access_token,
-          oauth_token_expiration: client.expires_in + Time.now.to_i,
-        )
-      end
     rescue Google::Apis::ClientError, Google::Apis::AuthorizationError => error
       render status: :forbidden, json: {error: error}
     end
@@ -422,6 +421,24 @@ class ApiController < ApplicationController
     end.flatten
 
     render json: data
+  end
+
+  # GET /dashboardapi/sign_cookies
+  def sign_cookies
+    # length of time the browser can privately cache this request for cookies
+    expires_in 1.hour
+
+    # length of time these cookies are considered valid by cloudfront
+    expiration_date = Time.now + 4.hours
+    resource = CDO.studio_url('/restricted/*', CDO.default_scheme)
+
+    cloudfront_cookies = AWS::CloudFront.signed_cookies(resource, expiration_date)
+
+    cloudfront_cookies.each do |k, v|
+      cookies[k] = v
+    end
+
+    head :ok
   end
 
   private

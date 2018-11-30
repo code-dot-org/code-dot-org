@@ -46,6 +46,7 @@
     "hide_custom_blocks": "true",
     "instructions": "Now we have two sprites! Use behaviors to make the dog jittery and make the cat wander",
     "parent_level_id": 11924,
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

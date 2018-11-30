@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_hoc_advisory_committee) %>
+title: <%= hoc_s(:title_hoc_advisory_committee).inspect %>
 ---
 # Hour of Code and CSEdWeek Advisory Committee
 

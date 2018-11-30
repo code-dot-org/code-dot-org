@@ -44,6 +44,7 @@
     "custom_helper_library": "function draggable() {\r\n  var behavior = function(sprite) {\r\n    var v = createVector(winMouseX - pwinMouseX, winMouseY - pwinMouseY);\r\n    this.position.add(v);\r\n  }\r\n  behavior.name = 'draggable';\r\n  return behavior;\r\n}",
     "custom_blocks": "[\n  {\n    \"func\": \"draggable\",\n    \"blockText\": \"drag and drop\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  }\n]\n",
     "hide_custom_blocks": "false",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

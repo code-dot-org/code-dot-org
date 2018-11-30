@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import {
   changeInterfaceMode,
   viewAnimationJson,
-  setMobileControlsConfig,
+  setMobileControlsConfig
 } from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
@@ -122,7 +122,6 @@ var GameLab = function () {
   this.Globals = {};
   this.btnState = {};
   this.dPadState = {};
-  this.libraries = {};
   this.currentCmdQueue = null;
   this.interpreterStarted = false;
   this.globalCodeRunsDuringPreload = false;
@@ -170,7 +169,9 @@ module.exports = GameLab;
  */
 GameLab.prototype.log = function (object, logLevel) {
   this.consoleLogger_.log(object);
-  getStore().dispatch(jsDebugger.appendLog(object, logLevel));
+  if (this.debuggerEnabled) {
+    getStore().dispatch(jsDebugger.appendLog(object, logLevel));
+  }
 };
 
 /**
@@ -183,8 +184,6 @@ GameLab.prototype.injectStudioApp = function (studioApp) {
 
   this.studioApp_.setCheckForEmptyBlocks(true);
 };
-
-GameLab.baseP5loadImage = null;
 
 /**
  * Initialize Blockly and this GameLab instance.  Called on page load.
@@ -226,7 +225,6 @@ GameLab.prototype.init = function (config) {
 
 
   this.level.helperLibraries = this.level.helperLibraries || [];
-  this.isDanceLab = this.level.helperLibraries.some(name => name === 'DanceLab');
 
   this.level.softButtons = this.level.softButtons || {};
   if (this.level.useDefaultSprites) {
@@ -327,19 +325,6 @@ GameLab.prototype.init = function (config) {
     if (this.studioApp_.isUsingBlockly()) {
       // Custom blockly config options for game lab jr
       config.valueTypeTabShapeMap = GameLab.valueTypeTabShapeMap(Blockly);
-
-      this.studioApp_.displayAlert('#belowVisualization', {type: 'warning', sideMargin: 0},
-        <div>
-          <p>
-            <strong>Welcome to the Sprite Lab pre-release Beta!</strong>
-          </p>
-          <p>
-            This is a new Code.org project we are still working on. You may
-            notice blocks change or stop working. If a block turns gray, try
-            deleting it and replacing it.
-          </p>
-        </div>, ''
-      );
     }
 
     this.studioApp_.init(config);
@@ -358,16 +343,7 @@ GameLab.prototype.init = function (config) {
     this.setCrosshairCursorForPlaySpace();
 
     if (this.shouldAutoRunSetup) {
-      const changeHandler = this.rerunSetupCode.bind(this);
-      if (this.studioApp_.isUsingBlockly()) {
-        const blocklyCanvas = Blockly.mainBlockSpace.getCanvas();
-        blocklyCanvas.addEventListener('blocklyBlockSpaceChange',
-          changeHandler);
-      } else {
-        this.studioApp_.editor.on('change', changeHandler);
-        // Droplet doesn't automatically bubble up aceEditor changes
-        this.studioApp_.editor.aceEditor.on('change', changeHandler);
-      }
+      this.studioApp_.addChangeHandler(this.rerunSetupCode.bind(this));
     }
   };
 
@@ -377,8 +353,9 @@ GameLab.prototype.init = function (config) {
   var showDebugButtons = config.level.editCode &&
     (!config.hideSource && !config.level.debuggerDisabled);
   var showDebugConsole = config.level.editCode && !config.hideSource;
+  this.debuggerEnabled = showDebugButtons || showDebugConsole;
 
-  if (showDebugButtons || showDebugConsole) {
+  if (this.debuggerEnabled) {
     getStore().dispatch(jsDebugger.initialize({
       runApp: this.runButtonClick,
     }));
@@ -417,7 +394,16 @@ GameLab.prototype.init = function (config) {
     config.initialAnimationList : this.startAnimations;
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
 
-  const loader = this.loadLibraries_().then(() => ReactDOM.render((
+  // Pre-register all audio preloads with our Sounds API, which will load
+  // them into memory so they can play immediately:
+  $("link[as=fetch][rel=preload]").each((i, { href }) => {
+    const soundConfig = { id: href };
+    soundConfig[Sounds.getExtensionFromUrl(href)] = href;
+    Sounds.getSingleton().register(soundConfig);
+  });
+
+  this.loadValidationCodeIfNeeded_();
+  const loader = this.studioApp_.loadLibraries(this.level.helperLibraries).then(() => ReactDOM.render((
     <Provider store={getStore()}>
       <GameLabView
         showFinishButton={finishButtonFirstLine && showFinishButton}
@@ -692,7 +678,9 @@ GameLab.prototype.reset = function () {
   this.reportPreloadEventHandlerComplete_ = null;
   this.globalCodeRunsDuringPreload = false;
 
-  getStore().dispatch(jsDebugger.detach());
+  if (this.debuggerEnabled) {
+    getStore().dispatch(jsDebugger.detach());
+  }
   this.consoleLogger_.detach();
 
   // Discard the interpreter.
@@ -1136,7 +1124,7 @@ GameLab.prototype.execute = function (keepTicking = true) {
     return;
   }
 
-  this.gameLabP5.startExecution(this.isDanceLab);
+  this.gameLabP5.startExecution();
   this.gameLabP5.setLoop(keepTicking);
 
   if (!this.JSInterpreter ||
@@ -1187,16 +1175,15 @@ GameLab.prototype.initInterpreter = function (attachDebugger=true) {
     customMarshalBlockedProperties: this.gameLabP5.getCustomMarshalBlockedProperties(),
     customMarshalObjectList: this.gameLabP5.getCustomMarshalObjectList(),
   });
-  window.tempJSInterpreter = this.JSInterpreter;
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
-  if (attachDebugger) {
+  if (attachDebugger && this.debuggerEnabled) {
     getStore().dispatch(jsDebugger.attach(this.JSInterpreter));
   }
   let code = '';
   if (this.level.helperLibraries) {
     code += this.level.helperLibraries
-      .map((lib) => this.libraries[lib])
+      .map((lib) => this.studioApp_.libraries[lib])
       .join("\n") + '\n';
   }
   if (this.level.sharedBlocks) {
@@ -1301,32 +1288,6 @@ GameLab.prototype.loadValidationCodeIfNeeded_ = function () {
   if (this.level.validationCode && !this.level.helperLibraries.some(name => name === validationLibraryName)) {
     this.level.helperLibraries.unshift(validationLibraryName);
   }
-};
-
-let libraryPreload;
-GameLab.prototype.loadLibraries_ = function () {
-  if (!libraryPreload) {
-    this.loadValidationCodeIfNeeded_();
-    libraryPreload = Promise.all(this.level.helperLibraries.map(this.loadLibrary_.bind(this)));
-  }
-  return libraryPreload;
-};
-
-GameLab.prototype.loadLibrary_ = function (name) {
-  if (this.libraries[name]) {
-    return Promise.resolve();
-  }
-
-  return new Promise((resolve, error) => {
-    $.ajax({
-      url: '/libraries/' + name,
-      success: response => {
-        this.libraries[name] = response;
-        resolve();
-      },
-      error,
-    });
-  });
 };
 
 /**

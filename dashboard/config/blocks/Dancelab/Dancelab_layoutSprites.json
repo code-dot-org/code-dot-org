@@ -2,7 +2,7 @@
   "category": "Groups",
   "config": {
     "func": "layoutSprites",
-    "blockText": "layout {GROUP} sprites as a {FORMAT}",
+    "blockText": "layout {GROUP} as a {FORMAT}",
     "args": [
       {
         "name": "GROUP",
@@ -12,26 +12,66 @@
             "sprites"
           ],
           [
-            "Alien",
-            "\"alien\""
+            "all aliens",
+            "\"ALIEN\""
           ],
           [
-            "MrWiggles",
-            "\"mrwiggles\""
+            "all bears",
+            "\"BEAR\""
           ],
           [
-            "Pizza",
-            "\"pizza\""
+            "all cats",
+            "\"CAT\""
           ],
           [
-            "Unicorn",
-            "\"unicorn\""
+            "all dogs",
+            "\"DOG\""
+          ],
+          [
+            "all ducks",
+            "\"DUCK\""
+          ],
+          [
+            "all frogs",
+            "\"FROG\""
+          ],
+          [
+            "all moose",
+            "\"MOOSE\""
+          ],
+          [
+            "all pineapples",
+            "\"PINEAPPLE\""
+          ],
+          [
+            "all robots",
+            "\"ROBOT\""
+          ],
+          [
+            "all sharks",
+            "\"SHARK\""
+          ],
+          [
+            "all unicorns",
+            "\"UNICORN\""
           ]
         ]
       },
       {
         "name": "FORMAT",
         "options": [
+          [
+            "border",
+            "\"border\""
+          ],
+          [
+            "inside square",
+            "\"inner\""
+          ],
+          [
+            "circle",
+            "\"circle\""
+          ],
           [
             "grid",
             "\"grid\""
@@ -43,6 +83,18 @@
           [
             "column",
             "\"column\""
+          ],
+          [
+            "criss-cross",
+            "\"x\""
+          ],
+          [
+            "plus",
+            "\"plus\""
+          ],
+          [
+            "random",
+            "\"random\""
           ]
         ]
       }

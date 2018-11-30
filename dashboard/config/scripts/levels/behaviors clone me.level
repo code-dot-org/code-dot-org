@@ -48,6 +48,7 @@
     "instructions": "Clone this level and make your own blocks!",
     "parent_level_id": 12164,
     "auto_run_setup": "DRAW_LOOP",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

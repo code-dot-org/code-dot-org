@@ -1,11 +1,6 @@
 module Pd
   module PrincipalApproval1819ApplicationConstants
-    YES_NO = %w(Yes No).freeze
-
-    # Remove newlines and leading whitespace from multiline strings
-    def self.clean_multiline(string)
-      string.gsub(/\n\s*/, ' ')
-    end
+    include PrincipalApprovalCommonApplicationConstants
 
     PAGE_LABELS = {
       first_name: 'First Name',
@@ -41,12 +36,6 @@ module Pd
       school_state: 'State',
       school_zip_code: 'Zip Code',
       school_type: 'My school is a',
-    }.freeze
-
-    TEXT_FIELDS = {
-      other_with_text: 'Other:'.freeze,
-      other_please_explain: 'Other (Please Explain):'.freeze,
-      dont_know_explain: "I don't know (Please Explain):".freeze
     }.freeze
   end
 end

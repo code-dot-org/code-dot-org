@@ -185,6 +185,15 @@ module Pd::WorkshopSurveyResultsHelper
     workshop_summary = {}
     facilitator_map = Hash[*workshop.facilitators.pluck(:id, :name).flatten]
 
+    # if the current user is a facilitator and not a program manager, workshop
+    # organizer, or workshop admin, only show them responses about themselves,
+    # not any other facilitator
+    show_only_user = current_user &&
+      current_user.facilitator? &&
+      !(current_user.program_manager? ||
+        current_user.workshop_organizer? ||
+        current_user.workshop_admin?)
+
     # Each session has a general response section.
     # Some also have a facilitator response section
     questions.each do |session, response_sections|
@@ -209,7 +218,7 @@ module Pd::WorkshopSurveyResultsHelper
                 facilitator_responses[survey['facilitatorId'].to_i] = (facilitator_responses[survey['facilitatorId'].to_i] || []).append survey[q_key]
               end
 
-              if current_user&.facilitator?
+              if show_only_user
                 facilitator_responses.slice! current_user.id
               end
               session_summary[:facilitator][q_key] = facilitator_responses.transform_keys {|k| facilitator_map[k]}
@@ -219,13 +228,28 @@ module Pd::WorkshopSurveyResultsHelper
               session_summary[response_section][q_key] = sum
             end
           else
+            # For multiple-choice responses, return a frequency map with nulls removed
+            # [1, 1, 2, 2, 3, 5, 7, 7, 7, 7, 7, nil, nil] => {1: 2, 2: 2, 3: 1, 5: 1, 7: 5}
+            #
+            # For facilitator-specific responses, return a map per facilitator:
+            # { "Facilitator Name 1": {1: 2, 2: 2, ...}, "Facilitator Name 2": ... }
             if response_section == :facilitator
-              # Facilitator specific multiple choice answers are not currently supported
-              next
+              facilitator_responses = Hash.new
+              surveys_for_session[:facilitator]&.each do |survey|
+                next unless survey[q_key].presence
+                facilitator_responses[survey['facilitatorId'].to_i] = (facilitator_responses[survey['facilitatorId'].to_i] || []).append survey[q_key]
+              end
+
+              if show_only_user
+                facilitator_responses.slice! current_user.id
+              end
+
+              facilitator_responses.each do |facilitator, responses|
+                facilitator_responses[facilitator] = responses.group_by {|v| v}.transform_values(&:size).reject {|k, _| k.nil?}
+              end
+
+              session_summary[:facilitator][q_key] = facilitator_responses.transform_keys {|k| facilitator_map[k]}
             else
-              # For non facilitator specific responses, just return a frequency map with
-              # nulls removed
-              # [1, 1, 2, 2, 3, 5, 7, 7, 7, 7, 7, nil, nil] => {1: 2, 2: 2, 3: 1, 5: 1, 7: 5}
               summary = surveys_for_session[response_section].map {|survey| survey[q_key]}.group_by {|v| v}.transform_values(&:size)
               session_summary[response_section][q_key] = summary.reject {|k, _| k.nil?}
             end

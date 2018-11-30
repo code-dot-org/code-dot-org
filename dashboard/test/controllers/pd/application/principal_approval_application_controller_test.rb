@@ -2,6 +2,8 @@ require 'test_helper'
 
 module Pd::Application
   class PrincipalApprovalApplicationControllerTest < ::ActionController::TestCase
+    include ActiveApplicationModels
+
     test 'invalid guid goes to not_found page' do
       get :new, params: {application_guid: 'invalid_guid'}
       assert_template :not_found
@@ -9,10 +11,10 @@ module Pd::Application
     end
 
     test 'already completed principal application goes to submitted page' do
-      teacher_application = create :pd_teacher1819_application
+      teacher_application = create TEACHER_APPLICATION_FACTORY
       application_guid = teacher_application.application_guid
 
-      create :pd_principal_approval1819_application, application_guid: application_guid
+      create PRINCIPAL_APPROVAL_FACTORY, application_guid: application_guid
       get :new, params: {application_guid: application_guid}
       assert_template :submitted
       assert_response :success
@@ -21,7 +23,7 @@ module Pd::Application
     end
 
     test 'completed teacher application but no principal application goes to new page' do
-      teacher_application = create :pd_teacher1819_application
+      teacher_application = create TEACHER_APPLICATION_FACTORY
       application_guid = teacher_application.application_guid
 
       get :new, params: {application_guid: application_guid}

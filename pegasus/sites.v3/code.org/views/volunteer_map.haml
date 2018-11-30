@@ -10,7 +10,7 @@
   Enter your address to find a local volunteer. If there aren't any local volunteers available, search for volunteers in other cities who can participate remotely through a video conference.
 %p
   Want to sign up to volunteer?
-  %a{href: "https://code.org/volunteer"}
+  %a{href: "/volunteer"}
     Sign up here
   to be included on this map.
 
@@ -23,34 +23,35 @@
       .form-group.col-xs-2.submit-btn
         %button#btn-submit{type: "submit", style: "margin-top: 0px"} Search
 
-    .form-group.col-xs-4
-      %label.control-label.small{for: "location-flexibility"} How a volunteer can help
-      %div
-        %select#location-flexibility.form-control{name: "location_flexibility_ss[]", type: "select"}
-          %option{selected: location_flexibility_ss.nil_or_empty?, value: ""}= "any"
-          -VolunteerEngineerSubmission2015.locations.each do |key, value|
-            %option{value: key, selected: (location_flexibility_ss||[]).include?(key.to_s)}= value
-    .form-group.col-xs-4
-      %label.control-label.small{for: "experience-level"} Experience level
-      %div
-        %select#experience-level.form-control{name: "experience_s", type: "select"}
-          %option{selected: experience_s.nil_or_empty?, value: ""}= "any"
-          -VolunteerEngineerSubmission2015.experiences.each do |key, value|
-            %option{value: key, selected: (experience_s||[]).include?(key.to_s)}= value
-    .form-group.col-xs-2
-      %label.control-label.small{for: "distance"} Within
-      %div
-        %select#distance.form-control{name: "distance", type: "select"}
-          %option{selected: distance.nil_or_empty?, value: ""}= "15 miles"
-          -VolunteerEngineerSubmission2015.distances.each do |key, value|
-            %option{value: key, selected: (distance||[]).include?(key.to_s)}= value
-    .form-group.col-xs-2
-      %label.control-label.small{for: "num_volunteers"} Show no more than
-      %div
-        %select#num_volunteers.form-control{name: "num_volunteers", type: "select"}
-          %option{selected: num_volunteers.nil_or_empty?, value: ""}= "10 volunteers"
-          -VolunteerEngineerSubmission2015.num_volunteers.each do |key, value|
-            %option{value: key, selected: (num_volunteers||[]).include?(key.to_s)}= value
+    .filter-options{style: "display: none"}
+      .form-group.col-xs-4
+        %label.control-label.small{for: "location-flexibility"} How a volunteer can help
+        %div
+          %select#location-flexibility.form-control{name: "location_flexibility_ss[]", type: "select"}
+            %option{selected: location_flexibility_ss.nil_or_empty?, value: ""}= "any"
+            -VolunteerEngineerSubmission2015.locations.each do |key, value|
+              %option{value: key, selected: (location_flexibility_ss||[]).include?(key.to_s)}= value
+      .form-group.col-xs-4
+        %label.control-label.small{for: "experience-level"} Experience level
+        %div
+          %select#experience-level.form-control{name: "experience_s", type: "select"}
+            %option{selected: experience_s.nil_or_empty?, value: ""}= "any"
+            -VolunteerEngineerSubmission2015.experiences.each do |key, value|
+              %option{value: key, selected: (experience_s||[]).include?(key.to_s)}= value
+      .form-group.col-xs-2
+        %label.control-label.small{for: "distance"} Within
+        %div
+          %select#distance.form-control{name: "distance", type: "select"}
+            %option{selected: distance.nil_or_empty?, value: ""}= "15 miles"
+            -VolunteerEngineerSubmission2015.distances.each do |key, value|
+              %option{value: key, selected: (distance||[]).include?(key.to_s)}= value
+      .form-group.col-xs-2
+        %label.control-label.small{for: "num_volunteers"} Show no more than
+        %div
+          %select#num_volunteers.form-control{name: "num_volunteers", type: "select"}
+            %option{selected: num_volunteers.nil_or_empty?, value: ""}= "10 volunteers"
+            -VolunteerEngineerSubmission2015.num_volunteers.each do |key, value|
+              %option{value: key, selected: (num_volunteers||[]).include?(key.to_s)}= value
 
 
 #volunteer-search-results.row.top-margin

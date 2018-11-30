@@ -22,28 +22,28 @@ video_player: true
 
 .clear
 
-#resources.responsive-body
+#resources
   %h1 Resources
   %h2 Try the Computer Science Fundamentals course that introduces Sprite Lab
   %h3 Course E
   %h4 Grade 4
   .smalltext In Course E, students practice coding with algorithms, loops, conditionals, before moving on to functions. In the second part of this course, they will design and create a capstone project that they can share with friends and family.
-  %a{:href=>CDO.studio_url("/s/csd3")}
+  %a{:href=>CDO.studio_url("/s/coursee-2018")}
     %button{style: "margin-top: 20px;"}= I18n.t(:view_unit)
 .clear
 
-#challenges.responsive-body
+#challenges
   %h1 Sample Projects
   %h2 Explore these sample projects and take the challenge to make them even better
   .highlights-content
     - cta = "Remix the project"
-    = view :highlight_item, item: {image: "spritelab/bubbleHoops", title: "Bubble Hoops", desc: "Get nostalgic with this bubble hoop simulation. Challenge: Score a point each time the ball hits the target.", cta: cta, url: 'https://studio.code.org/s/coursee-2018/stage/23/puzzle/4'}
+    = view :highlight_item, item: {image: "spritelab/bunny", title: "Feed the Bunny", desc: "Make the bunny bigger by feeding it. Challenge: Add a new sprite that causes a different effect.", cta: cta, url: 'https://studio.code.org/s/coursee-2018/stage/23/puzzle/4'}
     = view :highlight_item, item: {image: "spritelab/dogger", title: "Dogger", desc: "Control the dog to get her past the cars to the target. Challenge: Make all of the cars move different speeds", cta: cta, url: 'https://studio.code.org/s/coursee-2018/stage/23/puzzle/5'}
-    = view :highlight_item, item: {image: "spritelab/bear", title: "Feed the Bear", desc: "Move the bear around to collect cupcakes and be sure to avoid the apple!  Challenge: Make the bear get bigger with *every* cupcake.", cta: cta, url: 'https://levelbuilder-studio.code.org/s/coursef-2018/stage/24/puzzle/3'}
+    = view :highlight_item, item: {image: "spritelab/car", title: "Driving Game", desc: "Avoid the cars and collect the coins. Challenge: Make something happen when you lose all your points.", cta: cta, url: 'https://studio.code.org/s/coursef-2018/stage/24/puzzle/3'}
   .clear
 
 #videos
-  %h1.responsive-body Video library
+  %h1 Video library
   Some of these appear in 
   %a{href: "/s/coursee-2018/"}
     Course E

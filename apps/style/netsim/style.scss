@@ -908,7 +908,18 @@ $wide-column-width: 121px;
       border-right: none;
       border-top: none;
       li {
+        // Custom colors
+        &.ui-state-default {
+          background-color: $light_cyan;
+          a { color: $white; }
+        }
+        &.ui-state-active {
+          background-color: white;
+          a { color: $dark_charcoal; }
+        }
+
         // Make tabs just a _little_ bit more compact
+        border: none;
         margin-right: 2px;
         a {
           font-family: $gotham-bold;

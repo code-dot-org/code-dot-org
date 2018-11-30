@@ -36,18 +36,6 @@ OptionParser.new do |opts|
     options[:dry_run] = dry_run
   end
 
-  opts.on('--deleted-after WHEN', 'Only purge accounts soft-deleted after this date') do |deleted_after|
-    options[:deleted_after] = Time.parse(deleted_after)
-  end
-
-  opts.on('--deleted-at-least DAYS', Integer, 'Only purge accounts soft-deleted at least this long') do |days|
-    options[:deleted_before] = days.days.ago
-  end
-
-  opts.on('--max-accounts-to-purge MAX', Integer, 'Do nothing if more than this number of accounts would be purged') do |max|
-    options[:max_accounts_to_purge] = max
-  end
-
   opts.on('-h', '--help', 'Print this') do
     puts opts
     exit

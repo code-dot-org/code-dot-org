@@ -1,0 +1,46 @@
+name 'AP_practice_Qs_rqb_119_CSP_4_1_1'
+wrong '<pre>
+IF   ( (number % 2 = 0)  OR  (number % 3 = 0) )
+{
+   DISPLAY ("Number is divisible by 6")
+}
+</pre>'
+right '<pre>
+IF  ( (number % 2 = 0)  AND  (number % 3 = 0) )
+{
+   DISPLAY ("Number is divisible by 6")
+}
+</pre>'
+wrong '<pre>
+IF  ( (number % 2 != 0)  AND  (number % 3 = 0) )
+{
+   DISPLAY ("Number is divisible by 6")
+}
+</pre>'
+wrong '<pre>
+IF  ( (number % 2 = 0)  OR  (number % 3 != 0) )
+{
+   DISPLAY ("Number is divisible by 6")
+}
+</pre>'
+markdown <<MARKDOWN
+A student is writing a program to solve a problem. She decides to draw a flowchart to visually represent the algorithm. The flowchart uses the oval block to represent the start or end of the algorithm,  a diamond to represent the conditional or decision step which determines the execution path of the algorithm, a rectangle to represent one or more processing steps, and a parallelogram to represent an input statement. 
+<br><img src="https://curriculum.code.org/media/uploads/csp/8d97b1823065d613b57c323b95ef4665" width="300"><br>
+
+Which of the following statements is equivalent to the algorithm in the flowchart?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **4.1.1** and Essential Knowledge statements: **4.1.1B, 4.1.1C, 4.1.1A**
+<hr>
+ (A) <strong> This option is incorrect. </strong> The print statement will display "Number is divisible by 6" only if the number input is divisible by both 2 and 3 and not by only one of them.
+
+<hr>
+ (B) <strong> This option is correct. The print statement will display "Number is divisible by 6" only if the number input is divisible by both 2 and 3. </strong>
+
+<hr>
+ (C) <strong> This option is incorrect. </strong> The print statement will display " Number is divisible by 6" only if the number input is divisible by both 2 and 3 and not by only one of them.
+
+<hr>
+ (D) <strong> This option is incorrect. </strong> The print statement will display " Number is divisible by 6" only if the number input is divisible by both 2 and 3 and not by only one of them. 
+
+MARKDOWN

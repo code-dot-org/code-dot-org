@@ -1,0 +1,37 @@
+- partner_name = @application.regional_partner&.name || 'Code.org'
+
+%p
+  Hello
+  = @application.first_name + ','
+
+%p
+  Thank you for submitting your application to join
+  = "#{@application.regional_partner&.name || 'Code.org'}'s"
+  Professional Learning Program!
+  = @application.regional_partner&.name || 'We'
+  will review your application soon.
+
+%p
+  In the meantime, please visit
+  = link_to 'https://code.org/yourschool', 'https://code.org/yourschool'
+  and tell us more about what computer science opportunities are available at your school.
+  Or, visit
+  = link_to 'https://code.org/educate', 'https://code.org/educate'
+  for additional resources and opportunities to connect with other computer science educators.
+  Thank you for supporting computer science for all!
+
+  - if @application.regional_partner
+    %p{style: 'margin-bottom: 0'}
+      Please direct all questions or concerns to:
+      %div{style: 'padding-left: 2em'}
+        = render partial: 'partner_signature'
+
+%p
+  Thanks again for applying!
+
+%p
+  Anthonette Peña
+  %br
+  National Program Manager
+  %br
+  Code.org
