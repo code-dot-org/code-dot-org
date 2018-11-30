@@ -55,6 +55,21 @@ module Pd::Application
       Time.zone.now < APPLICATION_CLOSE_DATE
     end
 
+    # Queries for locked and (accepted or withdrawn) and assigned to a fit workshop
+    # @param [ActiveRecord::Relation<Pd::Application::Facilitator1920Application>] applications_query
+    #   (optional) defaults to all
+    # @note this is not chainable since it inspects fit_workshop_id from serialized attributes,
+    #   which must be done in the model.
+    # @return [array]
+    def self.fit_cohort(applications_query = all)
+      applications_query.
+        where(type: name).
+        where(status: [:accepted, :withdrawn]).
+        where.not(locked_at: nil).
+        includes(:pd_fit_weekend1920_registration).
+        select(&:fit_workshop_id?)
+    end
+
     # @override
     def check_idempotency
       Pd::Application::Facilitator1920Application.find_by(user: user)
