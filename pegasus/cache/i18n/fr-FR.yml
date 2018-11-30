@@ -335,6 +335,7 @@ fr-FR:
   studiobar_elementary_title: Cours élémentaires
   studiobar_elementary_body: Nos trois nouveaux cours pour l’école primaire
   studiobar_dance_title: Fête dansante
+  studiobar_dance_body: Créez et partagez votre propre soirée dansante
   studiobar_hoc_title: L'Heure de Code
   studiobar_hoc_body: Apprends à coder avec Angry Birds
   studiobar_flappy_title: Le code de Flappy
@@ -542,8 +543,8 @@ fr-FR:
   minecraft_tutorials: Minecraft heure de Code tutoriels
   minecraft_specs: Beaucoup de langues | Les navigateurs modernes et comprimés | Grades
     2 +
-  minecraft_agent_description: Minecraft est de retour dans l'Heure de Code avec une
-    toute nouvelle activité! Le voyage dans Minecraft avec du code.
+  minecraft_agent_description: Minecraft est de retour pour l’Heure de code avec une
+    toute nouvelle activité ! Exploration de Minecraft avec le code.
   minecraft_agent_button: Commencer
   minecraft_designer_description: Créez un jeu Minecraft. Créez vos propres versions
     des poulets, des moutons, des creepers, des zombies et bien d'autres encore.
@@ -2143,23 +2144,30 @@ fr-FR:
   hero_name: 'Minecraft: Le voyage du héros'
   applab-intro_name: Introduction pour App Lab
   applab_tile_start_tutorial: Commencer
+  applab_tile_teacher_guide: Voir le guide de l'enseignant
   account_sign_up_email_opt_in: Pouvons-nous vous envoyer des e-mails d’information
     sur nos formations, des opportunités près de chez vous ou d’autres brèves dans
     le domaine informatique?
   account_sign_up_child_accept_terms: Je confirme que j’ai l'autorisation de mes parents
     ou de mon tuteur légal pour utiliser les services de Code.org.
   hoc_overview_dance_title: Fête dansante
+  hoc_overview_partner_activities_title: Plus d'activités des partenaires
+  hoc_overview_partner_activities_body: Le site Web Heure de Code propose plus de
+    100 activités informatiques pour tous les âges et tous les niveaux d'expérience,
+    développées par Code.org et ses partenaires.
+  hoc_overview_partner_activities_link: Nouvelles activités
   hoc_overview_start_tutorial: Commencer
+  hoc_overview_view_teacher_guide: Voir le guide de l'enseignant
   hoc2018_creativity_create: Créer
-  hoc2018_creativity_what_will_you_create: Que vas-tu créer?
+  hoc2018_creativity_what_will_you_create: Qu'allez-vous créer ?
   hoc2018_mc_page_title: Minecraft heure de Code tutoriels
   hoc2018_mc_details: Beaucoup de langues | Les navigateurs modernes et comprimés
     | Grades 2 +
-  hoc2018_mc_aquatic_description: Minecraft est de retour dans l'Heure de Code avec
-    une toute nouvelle activité! Le voyage dans Minecraft avec du code.
+  hoc2018_mc_aquatic_description: Minecraft est de retour pour l’Heure de code avec
+    une toute nouvelle activité ! Exploration de Minecraft avec le code.
   hoc2018_mc_hero_title: 'Minecraft : Voyage du héros'
-  hoc2018_mc_hero_description: Minecraft est de retour dans l'Heure de Code avec une
-    toute nouvelle activité! Le voyage dans Minecraft avec du code.
+  hoc2018_mc_hero_description: Minecraft est de retour pour l’Heure de code avec une
+    toute nouvelle activité ! Exploration de Minecraft avec le code.
   hoc2018_mc_designer_title: Concepteur de Minecraft
   hoc2018_mc_designer_description: Créez un jeu Minecraft. Créez vos propres versions
     des poulets, des moutons, des creepers, des zombies et bien d'autres encore.
@@ -2189,20 +2197,37 @@ fr-FR:
   hoc2018_mc_video_title_hoc_is_here: L'Heure du Code est là - Tout le monde peut
     apprendre
   hoc2018_mc_video_title_anybody_can_learn: Tout le monde peut apprendre
-  hoc2018_mc_homepage_what_create: Que vas-tu créer?
+  hoc2018_mc_homepage_hoc_coming: L’Heure de code va arriver...
+  hoc2018_mc_homepage_what_create: Qu'allez-vous créer ?
   hoc2018_mc_homepage_join_us: Rejoignez-nous
   hoc2018_mc_homepage_try_it: Participez
   hoc2018_mc_back: Minecraft est de retour pour une toute nouvelle activité de l'Heure
     de Code!
-  hoc2018_mc_back_journey: Minecraft est de retour dans l'Heure de Code avec une toute
-    nouvelle activité! Le voyage dans Minecraft avec du code.
+  hoc2018_mc_back_journey: Minecraft est de retour pour l’Heure de code avec une toute
+    nouvelle activité ! Exploration de Minecraft avec le code.
+  hoc2018_mc_teacher_guide: Voir le guide de l'enseignant
   hoc2018_mc_minecraft_education: Minecraft version éducation
   hoc2018_mc_continue_learning: Continuer à apprendre avec Minecraft.
   hoc2018_mc_go_to_mc_education: Allez sur Minecraft version éducation
   hoc2018_dance_party_main_heading: Fête dansante
+  hoc2018_dance_create_your_own_dance_title: Créez votre propre soirée dansante
   hoc2018_dance_party_box_title: Fête dansante
+  hoc2018_dance_party_box_description: Codez une soirée dansante à partager avec vos
+    amis !
   hoc2018_dance_party_button: Commencer
+  hoc2018_dance_keep_on_dancing_box_title: Continuez à danser
+  hoc2018_dance_keep_on_dancing_description: Allez au-delà de la première heure avec
+    de longues idées de projets.
+  hoc2018_dance_keep_on_dancing_button: Commencer la partie 2
+  hoc2018_dance_teacher_resources_title: Ressources pédagogiques
+  hoc2018_dance_teacher_resources_tile1_description: Plans de cours, certificats et
+    filtrage de la musique.
   hoc2018_dance_teacher_resources_tile1_button: Plan de cours
+  hoc2018_dance_teacher_resources_tile2_title: Soirée dansante décontractée
+  hoc2018_dance_teacher_resources_tile2_description: Pas besoin d’ordinateurs !  Apprenez
+    les concepts de codage pour chorégraphier une soirée dansante ensemble.
   hoc2018_dance_teacher_resources_tile2_button: Activité manuelle
   hoc2018_dance_amazon_about_future_engineer_button: Pour en savoir plus
   hoc2018_dance_amazon_scholarship_programs_button: Demander maintenant
+  hoc2018_dance_measure: Mesure
+  hoc2018_dance_measure_colon: 'Mesure:'

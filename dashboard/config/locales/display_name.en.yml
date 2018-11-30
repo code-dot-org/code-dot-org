@@ -115,14 +115,22 @@ en:
       CSD Timed For Loop Map: Timed For Loops
       CSD Timed Loop Map: Timed Loops
       CSD U1L01 TFMD_2018: Lesson Overview
+      CSD U1L01 TFMD_2019: Lesson Overview
       CSD U1L02 TFMD_2018: Lesson Overview
+      CSD U1L02 TFMD_2019: Lesson Overview
       CSD U1L03 TFMD_2018: Lesson Overview
+      CSD U1L03 TFMD_2019: Lesson Overview
       CSD U1L04 TFMD_2018: Lesson Overview
+      CSD U1L04 TFMD_2019: Lesson Overview
       CSD U1L05 TFMD_2018: Lesson Overview
+      CSD U1L05 TFMD_2019: Lesson Overview
       CSD U1L06 TFMD_2018: Lesson Overview
+      CSD U1L06 TFMD_2019: Lesson Overview
       CSD U1L07 TFMD_2018: Lesson Overview
+      CSD U1L07 TFMD_2019: Lesson Overview
       CSD U1L08 TFMD_2018: Lesson Overview
       CSD U1L09 TFMD_2018: Lesson Overview
+      CSD U1L09 TFMD_2019: Lesson Overview
       CSD U2 CC Search Map: Creative Commons Search
       CSD U2 CC Search Map_2018: Creative Commons Search
       CSD U2 CSS Classes Map: CSS Classes
@@ -484,6 +492,7 @@ en:
       CSD U6L16 TFMD_2018: Lesson Overview
       CSD What Makes a Computer a Computer Video: 'Video: What Makes a Computer, a Computer?'
       CSD What Makes a Computer a Computer Video_2018: 'Video: What Makes a Computer, a Computer?'
+      CSD What Makes a Computer a Computer Video_2019: 'Video: What Makes a Computer, a Computer?'
       CSD colorLed Map: 'Circuit Playground: Color LEDs'
       CSD colorLed Map_2018: 'Circuit Playground: Color LEDs'
       CSD onBoardEvent Map: Responding to Board Events
@@ -614,6 +623,7 @@ en:
       CSS U2 Body Map_2018: The Body Element
       'Course E: Artist Project': Course E Artist Project
       'Course E: Artist Project_2018': Course E Artist Project
+      'Course E: Artist Project_2019': Course E Artist Project
       'Course F: Artist Project - Revise_2018': Revise Artist Project
       'Course F: Artist Project - Revise_2019': Revise Artist Project
       'Course F: Artist Project_2018': Course F Artist Project
@@ -623,8 +633,10 @@ en:
       CourseEF_video_MakeSprite: How to Make a Sprite
       CourseEF_video_MakeSprite_2019: How to Make a Sprite
       CourseE_Project_SpriteLab: Course E Sprite Lab Project
+      CourseE_Project_SpriteLab_2019: Course E Sprite Lab Project
       CourseE_hoops - take2: Hoops
       CourseE_hoops: 'Bunny '
+      CourseE_hoops_2019: 'Bunny '
       CourseF_Project_Revise_SpriteLab: Revise Sprite Lab Project
       CourseF_Project_Revise_SpriteLab_2019: Revise Sprite Lab Project
       CourseF_Project_SpriteLab: Course F Sprite Lab Project
@@ -639,6 +651,7 @@ en:
       Final Personal Website: Final Personal Website
       Final Personal Website_2018: Final Personal Website
       Geometric Sun_2018: Geometric Sun
+      Geometric Sun_2019: Geometric Sun
       Images, Pixels, and RGB_2018: Images, Pixels, and RGB
       InspirationalArtwork_2018: Inspiration!
       InspirationalArtwork_2019: Inspiration!
@@ -729,6 +742,7 @@ en:
       PS - test - pixelation: Black and White Pixelation Widget
       Revisiting the Counter Pattern_2018: Revisiting the Counter Pattern
       Robot Doodle_2018: Robot Doodle
+      Robot Doodle_2019: Robot Doodle
       SG U3L07 More Subgoals: Documentation
       SG U3L08 comments: Commenting Code
       SG U3L08 how to add comments: Commenting Code
@@ -765,6 +779,7 @@ en:
       courseB_video_Unspotted: Unspotted Bugs
       courseB_video_Unspotted_2018: Unspotted Bugs
       courseE_Dogger_2: Dogger Example
+      courseE_Dogger_2_2019: Dogger Example
       courseF_artist_for1: For Loops Freeplay (Beginning)
       courseF_artist_for1_2018: For Loops Freeplay (Beginning)
       courseF_artist_for1_2019: For Loops Freeplay (Beginning)
@@ -887,3 +902,4 @@ en:
       maker workshop final: 'Challenge: Explore!'
       okToDelete: Tester
       scrat_loops_C-F_video: Loops in Ice Age Video
+      scrat_loops_C-F_video_2019: Loops in Ice Age Video
