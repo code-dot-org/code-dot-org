@@ -1,0 +1,47 @@
+{
+  "category": "",
+  "config": {
+    "func": "ifStandingOn",
+    "blockText": "if standing on {TYPE}\n{STATEMENT}",
+    "args": [
+      {
+        "name": "TYPE",
+        "options": [
+          [
+            "blue coral",
+            "'blueCoralBlock'"
+          ],
+          [
+            "red coral",
+            "'redCoralBlock'"
+          ],
+          [
+            "sand",
+            "'sand'"
+          ],
+          [
+            "deep water",
+            "'wool_blue'"
+          ],
+          [
+            "oak planks",
+            "'planksOak'"
+          ],
+          [
+            "sea lantern",
+            "'seaLantern'"
+          ]
+        ]
+      },
+      {
+        "name": "STATEMENT",
+        "statement": true
+      }
+    ],
+    "color": [
+      197,
+      0.88,
+      0.78
+    ]
+  }
+}

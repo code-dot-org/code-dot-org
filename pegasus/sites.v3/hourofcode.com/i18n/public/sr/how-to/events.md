@@ -1,25 +1,29 @@
 ---
-title: <%= hoc_s(:title_how_to_events) %>
+title: <%= hoc_s(:title_how_to_events).inspect %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to organize an Hour of Code event
+# Како да организујете скуп или догађај везан за Час програмирања
 
-## 1. Prepare for your event
+### Нека се цела Ваша школа или заједница ангажује око Часа програмирања!
 
-- Determine a venue, date, and time.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/promote/press-kit') %>) for help.
+---
 
-## 2. During your event
+## 1. Припреме за Ваш догађај
 
-- Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/promote/stats') %>).   
+- Одредите место, датум и време.
+- Пошаљите [писмо](https://hourofcode.com/promote/resources#sample-emails) Вашем одборнику, градоначелнику, посланику, или утицајном предузетнику у којем их позивате да буду говорници на Вашем догађају. За више информација погледајте наше [упутство](<%=localized_file('/files/elected-official.pdf')%>) за случај да имате неког званичника као госта током Часа програмирања.
+- Обавестите медије, новине, локалне ТВ станице, о Вашем догађају. Ако Вам је потребна помоћ, погледајте део који се односи на [медије](<%= resolve_url('/promote/press-kit') %>).
+
+## 2. Ток Вашег догађаја
+
+- Започните догађај уз неки од надахњујућих видео записа које можете пронаћи [овде](<%= resolve_url('/promote/resources#videos') %>).
+- У уводном делу дајте преглед значаја рачунарства користећи следеће [статистике и графиконе](<%= resolve_url('/promote/stats') %>).   
       
     
-- Other event ideas: 
+- **Остале идеје за догађај**: 
     - Invite a local industry leader to discuss his or her work involving computer science.
     - Invite a local politician and have students teach him or her how to code.
     - Have a group of students demonstrate an unplugged activity.
@@ -28,14 +32,17 @@ nav: how_to_nav
 
 ## 3. Share how it went
 
-- Share pictures of your event on Facebook and Twitter. 
-- Use the hashtag **#HourOfCode**
+Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
+
+---
 
 ## Host a Family Code Night with the Hour of Code and invite parents to participate
 
-Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
-## Example Event Plan
+---
+
+## Example plan for a school assembly or event
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
@@ -43,15 +50,13 @@ Consider hosting a K-5 evening event and inviting parents to join their students
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
-  
-
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
 ## Run of Show
 
 | Time             | Action                                                                                                                                           |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>)                                                       |
+| 10:00 - 10:05 am | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).                                                      |
 | 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>). |
 | 10:15 - 10:30 am | Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.            |
 | 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                        |

@@ -2,21 +2,26 @@ import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import Radium from 'radium';
 import {progressStyles} from "./multiGridConstants";
-import {jumpToLessonDetails} from './sectionProgressRedux';
+import FontAwesome from '../FontAwesome';
 
 class SectionProgressLessonNumberCell extends Component {
   static propTypes = {
-    lessonNumber: PropTypes.number.isRequired,
-    jumpToLessonDetails: PropTypes.func.isRequired,
+    // Sequence number counting all stage types in order
+    position: PropTypes.number.isRequired,
+    // Sequence number which counts lockable and non-lockable stages separately,
+    // explained further in Stage#summarize
+    relativePosition: PropTypes.number.isRequired,
+    lockable: PropTypes.bool.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
     tooltipId: PropTypes.string.isRequired,
+    onSelectDetailView: PropTypes.func.isRequired,
   };
 
   render() {
-    const {lessonNumber, jumpToLessonDetails, lessonOfInterest, tooltipId} = this.props;
+    const {position, relativePosition, lockable, lessonOfInterest, tooltipId} = this.props;
 
     let cellStyle = progressStyles.lessonNumberHeading;
-    if (lessonNumber === lessonOfInterest) {
+    if (position === lessonOfInterest) {
       cellStyle = {
         ...cellStyle,
         ...progressStyles.lessonOfInterest
@@ -26,11 +31,11 @@ class SectionProgressLessonNumberCell extends Component {
     return (
       <div
         style={cellStyle}
-        onClick={() => jumpToLessonDetails(lessonNumber)}
+        onClick={this.props.onSelectDetailView}
         data-tip
         data-for={tooltipId}
       >
-        {lessonNumber}
+        {lockable ? <FontAwesome icon="lock"/> : relativePosition}
       </div>
     );
   }
@@ -40,8 +45,4 @@ export const UnconnectedSectionProgressLessonNumberCell = SectionProgressLessonN
 
 export default connect(state => ({
   lessonOfInterest: state.sectionProgress.lessonOfInterest,
-}), dispatch => ({
-  jumpToLessonDetails(lessonOfInterest) {
-    dispatch(jumpToLessonDetails(lessonOfInterest));
-  }
 }))(Radium(SectionProgressLessonNumberCell));

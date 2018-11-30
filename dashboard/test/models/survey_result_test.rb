@@ -15,33 +15,4 @@ class SurveyResultTest < ActiveSupport::TestCase
         SurveyResult::NON_FREE_RESPONSE_ATTRS.include?(attr)
     end
   end
-
-  test 'clear_open_ended_responses clears open-ended responses' do
-    survey_result = SurveyResult.new(
-      kind: SurveyResult::NET_PROMOTER_SCORE_2015,
-      nps_comment: 'blah blah',
-      nps_value: 10
-    )
-    survey_result.clear_open_ended_responses
-    assert_equal SurveyResult::SYSTEM_DELETED, survey_result.reload.nps_comment
-  end
-
-  test 'clear_open_ended_responses does not mutate multi-choice responses' do
-    survey_result = SurveyResult.new(
-      kind: SurveyResult::NET_PROMOTER_SCORE_2015,
-      nps_comment: 'blah blah',
-      nps_value: 10
-    )
-    survey_result.clear_open_ended_responses
-    assert_equal 10, survey_result.reload.nps_value
-
-    survey_result = SurveyResult.new(
-      kind: SurveyResult::DIVERSITY_2016,
-      diversity_other: 18,
-      diversity_farm: 2
-    )
-    survey_result.clear_open_ended_responses
-    assert_equal 18, survey_result.diversity_other
-    assert_equal 2, survey_result.diversity_farm
-  end
 end

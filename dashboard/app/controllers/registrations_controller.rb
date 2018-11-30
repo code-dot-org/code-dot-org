@@ -1,3 +1,5 @@
+require 'cdo/firehose'
+
 class RegistrationsController < Devise::RegistrationsController
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
@@ -5,11 +7,53 @@ class RegistrationsController < Devise::RegistrationsController
     :migrate_to_multi_auth, :demigrate_from_multi_auth
   ]
   skip_before_action :verify_authenticity_token, only: [:set_age]
+  skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :cancel, :create]
 
+  #
+  # GET /users/sign_up
+  #
   def new
+    # Used by old signup form
     session[:user_return_to] ||= params[:user_return_to]
-    @already_hoc_registered = params[:already_hoc_registered]
-    super
+    # Used by new signup form
+    store_location_for(:user, params[:user_return_to]) if params[:user_return_to]
+
+    if PartialRegistration.in_progress?(session)
+      user_params = params[:user] || {}
+      @user = User.new_with_session(user_params, session)
+    else
+      @already_hoc_registered = params[:already_hoc_registered]
+      SignUpTracking.begin_sign_up_tracking(session, split_test: true)
+      super
+    end
+  end
+
+  #
+  # POST /users/begin_sign_up
+  #
+  # Submit step 1 of the signup process for creating an email/password account.
+  #
+  def begin_sign_up
+    @user = User.new(begin_sign_up_params)
+    @user.validate_for_finish_sign_up
+    SignUpTracking.log_begin_sign_up(@user, session)
+
+    if @user.errors.blank?
+      PartialRegistration.persist_attributes(session, @user)
+      redirect_to new_user_registration_path
+    else
+      render 'new' # Re-render form to display validation errors
+    end
+  end
+
+  #
+  # GET /users/cancel
+  #
+  # Cancels the in-progress partial user registration and redirects to sign-up page.
+  #
+  def cancel
+    PartialRegistration.cancel(session)
+    redirect_to new_user_registration_path
   end
 
   #
@@ -38,6 +82,9 @@ class RegistrationsController < Devise::RegistrationsController
     respond_to_account_update(successfully_updated)
   end
 
+  #
+  # POST /users
+  #
   def create
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       super
@@ -49,6 +96,8 @@ class RegistrationsController < Devise::RegistrationsController
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
     end
+
+    SignUpTracking.log_sign_up_result resource, session
   end
 
   #
@@ -74,7 +123,7 @@ class RegistrationsController < Devise::RegistrationsController
       return
     end
     dependent_students = current_user.dependent_students
-    destroy_users(dependent_students << current_user)
+    destroy_users(current_user, dependent_students)
     TeacherMailer.delete_teacher_email(current_user, dependent_students).deliver_now if current_user.teacher?
     Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
     return head :no_content
@@ -98,6 +147,10 @@ class RegistrationsController < Devise::RegistrationsController
         params[:data_transfer_agreement_at] = DateTime.now
       end
     end
+  end
+
+  def begin_sign_up_params
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
 
   # Set age for the current user if empty - skips CSRF verification because this can be called
@@ -213,20 +266,18 @@ class RegistrationsController < Devise::RegistrationsController
   # GET /users/migrate_to_multi_auth
   #
   def migrate_to_multi_auth
-    was_migrated = current_user.migrated?
     current_user.migrate_to_multi_auth
-    redirect_to after_update_path_for(current_user),
-      notice: "Multi-auth is #{was_migrated ? 'still' : 'now'} enabled on your account."
+    redirect_to edit_registration_path(current_user),
+      notice: I18n.t('auth.migration_success')
   end
 
   #
   # GET /users/demigrate_from_multi_auth
   #
   def demigrate_from_multi_auth
-    was_migrated = current_user.migrated?
     current_user.demigrate_from_multi_auth
-    redirect_to after_update_path_for(current_user),
-      notice: "Multi-auth is #{was_migrated ? 'now' : 'still'} disabled on your account."
+    redirect_to edit_registration_path(current_user),
+      notice: I18n.t('auth.demigration_success')
   end
 
   private
@@ -366,8 +417,38 @@ class RegistrationsController < Devise::RegistrationsController
       )
   end
 
-  def destroy_users(users)
+  def log_account_deletion_to_firehose(current_user, dependent_users)
+    # Log event for user initiating account deletion.
+    FirehoseClient.instance.put_record(
+      study: 'user-soft-delete-audit-v2',
+      event: 'initiated-account-deletion',
+      user_id: current_user.id,
+      data_json: {
+        user_type: current_user.user_type,
+        dependent_user_ids: dependent_users.pluck(:id),
+      }.to_json
+    )
+
+    # Log separate events for dependent users destroyed in user-initiated account deletion.
+    # This should only happen for teachers.
+    dependent_users.each do |user|
+      FirehoseClient.instance.put_record(
+        study: 'user-soft-delete-audit-v2',
+        event: 'dependent-account-deletion',
+        user_id: user[:id],
+        data_json: {
+          user_type: user[:user_type],
+          deleted_by_id: current_user.id,
+        }.to_json
+      )
+    end
+  end
+
+  def destroy_users(current_user, dependent_users)
+    users = [current_user] + dependent_users
     user_ids_to_destroy = users.pluck(:id)
     User.destroy(user_ids_to_destroy)
+
+    log_account_deletion_to_firehose(current_user, dependent_users)
   end
 end

@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_country_resources) %>
+title: <%= hoc_s(:title_country_resources).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -105,14 +105,14 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 - Изискват минимално време за подготовка на организаторите
 - Предвиждат смостоятелна работа, което позволява на учениците да работят по собствените си темпове и ниво на умения
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2) Планирайте нужният ви хардуер - компютрите са задължителни
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
 - **Преди да започнете урока по програмиране, проверете дали програмата работи.** Уверете се, че звукът и видеото работят.
-- **Пуснете поздравителната страница, за** да видите какво ще виждат учениците, когато приключат уроците. 
+- **Пуснете поздравителната страница, за** да видите какво ще виждат учениците, когато приключат уроците.
 - **Осигурете слушалки за класа си**, или помолете учениците да си донесат собствени, ако изберете уроци за начинаещи- работете най-добре със звук.
 
 ## 3) План как да се използва наличната техника

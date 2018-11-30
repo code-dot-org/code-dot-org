@@ -18,6 +18,7 @@ fi:
       messages:
         blank: vaaditaan
         blank_plural: vaaditaan
+        invalid: ei kelpaa
         invalid_plural: eivät kelpaa
     attributes:
       user:
@@ -48,6 +49,7 @@ fi:
   next_resource: Seuraava resurssi
   cancel: Peru
   okay: Selvä
+  or: tai
   heading_x_of_y: "%{heading} (sivu %{x} %{y}) sivusta"
   add_teacher_form:
     code:
@@ -94,6 +96,9 @@ fi:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft-tili
+    microsoft_v2_auth: Microsoft-tili
+    clever: Clever-tili
+    powerschool: Powerschool-tili
     forgot_password: Unohditko salasanasi?
     need_confirmation: Etkö saanut vahvistusviestiä?
     need_unlock: Etkö saanut avausohjeita?
@@ -260,7 +265,7 @@ fi:
     access_denied: Sinulla ei ole pääsyä tähän %{model}.
   nav:
     header:
-      finished_hoc: Olen suorittanut Koodaustuntini
+      finished_hoc: Olen suorittanut Koodituntini
       sign_in_to_save: Kirjaudu, jos haluat tallentaa edistymisesi
       free_play:
         playlab: Tee sovellus
@@ -268,9 +273,7 @@ fi:
         applab: Tee sovellus
         gamelab: Tee Pelilabra projekti
         weblab: Tee Nettilabra (beta) projekti
-      home: Etusivu
       my_dashboard: Kojelauta
-      courses: Kurssit
       course_catalog: Kurssiluettelo
       project_gallery: Projektit
       sections: Osiot
@@ -314,10 +317,16 @@ fi:
       signin: Kirjaudu sisään
       signup: Luo käyttäjätili
       already_registered: Jo rekisteröitynyt?
-      pair_programming: Pariohjelmointi
       team: Tiimi
       driver: Johtaja
       navigator: Neuvonantaja
+      create: Luo
+      applab: Sovelluslabra
+      artist: Taiteilija
+      gamelab: Pelilabra
+      playlab: Pelilabra
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: Käyttäjän %{name} edistyminen
       progress: Sinun edistymisesi
@@ -592,6 +601,8 @@ fi:
     minecraft2016:
       title: Minecraft
       body: Koodaa eläimiä ja muita Minecraft otuksia omalla Minecraft versiollasi.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     unplugged:

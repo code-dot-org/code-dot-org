@@ -804,6 +804,8 @@ sr:
               name: Бинарне наруквице
             Binary Images:
               name: Binarne slike
+            Play Lab:
+              name: Играоница
         csd2-2017:
           stages:
             Lists:
@@ -1193,3 +1195,63 @@ sr:
               name: Пчелица словарица
             Your Digital Footprint:
               name: Твој дигитални траг
+        frozen-2018:
+          stages:
+            Artist:
+              name: Уметник
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Уметник
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Уметник
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Изградња темеља
+            Conditionals with Cards:
+              name: Услови са картама
+            The Artist:
+              name: Уметник
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Relay programming
+            Conditionals with Cards:
+              name: Услови са картама
+            Digital Citizenship:
+              name: Дигитално држављанство
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+            Artist Binary:
+              name: Уметник Бинарно
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Изградња темеља
+            Conditionals with Cards:
+              name: Услови са картама
+            Conditionals:
+              name: Кондиционали
+            Internet:
+              name: Интернет
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Relay programming
+            Conditionals with Cards:
+              name: Услови са картама
+            Binary Bracelets:
+              name: Бинарне наруквице
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+            Artist Binary:
+              name: Уметник Бинарно
+            Internet:
+              name: Интернет
+            Crowdsourcing:
+              name: Crowdsourcing

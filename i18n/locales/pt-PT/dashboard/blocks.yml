@@ -1,101 +1,163 @@
+---
 pt:
   data:
     blocks:
-      Dancelab_changeMove:
+      Dancelab_atTimestamp:
         options:
-          MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
-            '"next"': Seguinte
-            '"prev"': Anterior
+          UNIT:
+            '"seconds"': segundos
+      Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            sprites: tudo
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': tamanho
-            '"x"': posição x
-            '"y"': posição y
-      Dancelab_doMoveOnce:
+            '"height"': altura
+      Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
-            '"next"': Seguinte
-            '"prev"': Anterior
+          GROUP:
+            sprites: tudo
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': segundos
       Dancelab_getProp:
         options:
           PROPERTY:
             '"scale"': tamanho
-            '"x"': posição x
-            '"y"': posição y
+            '"height"': altura
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": para a esquerda
+            "{x: 300, y: 200}": para a direita
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatório
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: tudo
-      Dancelab_mappingProp:
+          FORMAT:
+            '"random"': aleatório
+      Dancelab_makeNewDanceSprite:
         options:
-          PROPERTY:
-            '"scale"': tamanho
-            '"x"': posição x
-            '"y"': posição y
-      Dancelab_mirrorSprite:
+          LOCATION:
+            "{x: 100, y: 200}": para a esquerda
+            "{x: 300, y: 200}": para a direita
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatório
+      Dancelab_makeNewDanceSpriteGroup:
         options:
-          DIRECTION:
-            '"right"': para a direita
-            '"left"': para a esquerda
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"random"': aleatório
       Dancelab_randomColor:
         text: cor aleatória
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: tudo
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
             '"scale"': tamanho
-            '"x"': posição x
-            '"y"': posição y
-      Dancelab_spritesWhere:
+            '"height"': altura
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: tudo
+          PROPERTY:
+            '"scale"': tamanho
+            '"height"': altura
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': tamanho
-            '"x"': posição x
-            '"y"': posição y
+            '"height"': altura
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: tudo
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: tudo
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': tamanho
-            '"x"': posição x
-            '"y"': posição y
+            '"height"': altura
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': tamanho
-            '"x"': posição x
-            '"y"': posição y
+            '"height"': altura
       Dancelab_whenKey:
         options:
           KEY:
             '"up"': para cima
-            '"down"': para baixo
             '"left"': para a esquerda
+            '"down"': para baixo
             '"right"': para a direita
             '"space"': espaço
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': para cima
-            '"down"': para baixo
-            '"left"': para a esquerda
-            '"right"': para a direita
-            '"space"': espaço
+            '"x"': x
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -105,8 +167,8 @@ pt:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'verdadeiro'
-            'false': 'falso'
+            'true': verdadeiro
+            'false': falso
       gamelab_getProp:
         options:
           PROPERTY:
@@ -181,5 +243,167 @@ pt:
             '"left"': para a esquerda
             '"right"': para a direita
             '"space"': espaço
-      Vanilla_randomColor:
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": para a esquerda
+            "{x: 300, y: 200}": para a direita
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": para a esquerda
+            "{x: 300, y: 200}": para a direita
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': tudo
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
+      Mikelab_randomColor:
         text: cor aleatória
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': para a direita
+            '"left"': para a esquerda
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': seta para cima
+            '"down"': seta para baixo
+            '"left"': seta para a esquerda
+            '"right"': seta para a direita
+            '"w"': O
+            '"s"': S
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': seta para cima
+            '"down"': seta para baixo
+            '"left"': seta para a esquerda
+            '"right"': seta para a direita
+            '"w"': O
+            '"s"': S
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': seta para cima
+            '"down"': seta para baixo
+            '"left"': seta para a esquerda
+            '"right"': seta para a direita
+      RyanLab_moveForward:
+        text: segue em frente
+      RyanLab_turnLeft:
+        text: virar à esquerda
+      RyanLab_turnRight:
+        text: virar à direita
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
+      craft_ifPath:
+        text: |-
+          se o caminho seguir para {DIR}
+          {STATEMENT}
+        options:
+          DIR:
+            "'ahead'": à frente
+            "'right'": a direita
+            "'left'": a esquerda
+      craft_ifStandingOn:
+        text: |-
+          se em cima de {TYPE}
+          {STATEMENT}
+        options:
+          TYPE:
+            "'blueCoralBlock'": coral azul
+            "'redCoralBlock'": coral vermelho
+            "'sand'": areia
+            "'wool_blue'": água profunda
+            "'planksOak'": pranchas de carvalho
+            "'seaLantern'": lanterna aquática
+      craft_ifStandingOnLimit:
+        text: |-
+          se em cima de {TYPE}
+          {STATEMENT}
+        options:
+          TYPE:
+            "'sand'": areia
+            "'darkPrismarine'": prismarine escuro
+            "'seaLantern'": lanterna aquática
+      craft_moveForward:
+        text: segue em frente
+      craft_placeBlock:
+        text: colocar {blockType}
+        options:
+          blockType:
+            '"strippedOak"': carvalho despojado
+            '"strippedDarkOak"': carvalho escuro despojado
+            '"stoneBricks"': tijolos de pedra
+            '"mossyStoneBricks"': tijolos de pedra com musgo
+            '"crackedStoneBricks"': tijolos de pedra rachada
+            '"decorativeStoneBricks"': tijolos de pedra decorativa
+            '"blueCoralBlock"': bloco de coral azul
+            '"pinkCoralBlock"': bloco de coral rosa
+            '"magentaCoralBlock"': bloco de coral magenta
+            '"redCoralBlock"': bloco de coral vermelho
+            '"yellowCoralBlock"': bloco de coral amarelo
+            '"blueDeadCoralBlock"': bloco de coral morto azul
+            '"pinkDeadCoralBlock"': bloco de coral morto rosa
+            '"magentaDeadCoralBlock"': bloco de coral morto magenta
+            '"readDeadCoralBlock"': bloco de coral morto vermelho
+            '"yellowDeadCoralBlock"': Bloco de coral morto amarelo
+            '"darkPrismarine"': prismarine escuro
+            '"seaLantern"': lanterna aquática
+            '"packedIce"': gelo compactado
+            '"blueIce"': gelo azul
+            '"blackConcrete"': betão preto
+            '"seaGrass"': ervas marinhas
+            '"kelp"': algas
+            '"polishedGranite"': granito polido
+      craft_placeTorch:
+        text: colocar tocha
+      craft_repeatUntilConduit:
+        text: |-
+          repetir até conclusão do canal
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          repetir até ao objetivo
+          {STATEMENT}
+      craft_spawnEntity:
+        text: gerar {ENTITY}
+      craft_turn:
+        text: virar {DIR}
+        options:
+          DIR:
+            right: direita ↻
+            left: esquerda ↺

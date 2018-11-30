@@ -1,6 +1,7 @@
 ur:
   data:
     function_names:
+      x: x
       draw a circle: ایک دائرہ بنائیں
       draw a hexagon: ایک ھیگزاگون کا خاکہ بنائیں
       draw a flower: ایک پھول بنائیں
@@ -13,6 +14,7 @@ ur:
       do something: کچھ نہ کچھ کرتے ہیں
       jump: چھلانگ لگایں
       test: آزمانا
+      diamond: ہیرے
       move right: دائیں چلیں
       move up: اوپر لائیں
       move down: نیچے لانا

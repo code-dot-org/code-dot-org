@@ -132,6 +132,7 @@ class Notification extends Component {
     details: PropTypes.string.isRequired,
     detailsLinkText: PropTypes.string,
     detailsLink: PropTypes.string,
+    detailsLinkNewWindow: PropTypes.bool,
     buttonText: PropTypes.string,
     buttonLink: PropTypes.string,
     dismissible: PropTypes.bool.isRequired,
@@ -192,6 +193,7 @@ class Notification extends Component {
       details,
       detailsLinkText,
       detailsLink,
+      detailsLinkNewWindow,
       type,
       buttonText,
       buttonLink,
@@ -241,7 +243,11 @@ class Notification extends Component {
                 {detailsLinkText && detailsLink && (
                   <span>
                     &nbsp;
-                    <a href={detailsLink} style={styles.detailsLink}>
+                    <a
+                      href={detailsLink}
+                      style={styles.detailsLink}
+                      target={detailsLinkNewWindow ? "_blank" : null}
+                    >
                       {detailsLinkText}
                     </a>
                   </span>

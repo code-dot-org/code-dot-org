@@ -51,11 +51,9 @@
     "project_template_level_name": "Fish Tank Template_simple",
     "instructions": "Use the `set background color` block to make the background blue.",
     "name_suffix": "_simple",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "include_shared_functions": "false"
+    "include_shared_functions": "false",
+    "block_pool": "gamelab",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

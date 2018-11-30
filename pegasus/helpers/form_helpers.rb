@@ -3,11 +3,10 @@ require_relative '../../deployment'
 require lib_dir 'forms/pegasus_form_validation'
 require lib_dir 'utf8mb4_extensions'
 require_relative '../src/forms'
-require 'cdo/solr'
 
 include PegasusFormValidation
 
-# Deletes a form from the DB and from SOLR.
+# Deletes a form from the DB.
 # @param [String] kind The kind of form to delete.
 # @param [String] secret The secret associated with the form to delete.
 # @return [Boolean] Whether the form was deleted.
@@ -16,7 +15,6 @@ def delete_form(kind, secret)
   return false unless form
 
   DB[:forms].where(id: form[:id]).delete
-  Solr::Server.new(host: CDO.solr_server).delete_by_id(form[:id]) if CDO.solr_server
 
   true
 end
@@ -98,6 +96,7 @@ def update_form(kind, secret, updates)
 
   existing_data = JSON.parse update_form.data, symbolize_names: true
   form_data = JSON.parse updates[:data], symbolize_names: true if updates[:data]
+  updates = updates.transform_keys(&:to_sym)
   merged_info = existing_data.merge updates.merge(form_data || {})
   merged_info = validate_form kind, merged_info, Pegasus.logger
 

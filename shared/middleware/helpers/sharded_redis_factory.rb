@@ -57,6 +57,7 @@ class ShardedRedisFactory
 
     Redis::SlaveRead::Interface::Hiredis.new(
       {
+        read_master: false,
         master: @new_redis_proc[master_url],
         slaves: replica_urls.map {|url| @new_redis_proc[url]}
       }

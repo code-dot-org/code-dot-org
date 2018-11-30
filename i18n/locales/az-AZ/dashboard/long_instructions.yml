@@ -1,0 +1,39 @@
+az:
+  data:
+    long_instructions:
+      2-3 Artist 1 new: "Salam, mən rəssamam. Siz kod yazmaqla mənə, demək olar ki, hər şey çəkdirə bilərsiniz. Şəkildəki boz xətlərin üzərini cızmağım üçün bir neçə blokdan istifadə edin (Hər xəttin uzunluğu 100 pikseldir)\\r\n\\r\n"
+      2-3 Artist 11: 'Stop işarəsini tərəfinin uzunluğu 100 piksel olan səkkizbucaqlı çəkməklə haşiyəyə al. '
+      2-3 Artist 12: "Göz bəbəyini tamamlamaq üçün çevrə çək!\n\\r\n\\r\nƏgər rəssam hər dövrdə 1 dərəcə dönürsə, çevrə çəkmək üçün kodu neçə dəfə təkrar etməlisən? "
+      2-3 Artist 2 new: "Bu evin bir divarı yarımçıqdır.\nHər tərəfin uzunluğu 100-dür, amma yarımçıq divar 50-dir. Divarı tamamlayın."
+      2-3 Artist 3new: "Qırmızı papaq 100 piksel hündürlüyündədir. Hünürlüyü 70 piksel az olan qara papaq çəkin. \\r\n\\r\n*(Qeyd: Hər papağın eni\n50 pikseldir.)*"
+      2-3 Artist 4: Bu pişik üçün evi tamamlamağa mənə kömək edin.
+      2-3 Artist 6: "Bu evə dam lazımdır! Üçbucaq çəkin. \\r\n\\r\nMəsləhət:\nHər üç tərəf eyni uzunluqdadır.\\r\n\\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
+      2-3 Artist 7: "Məktəbin axırıncı pəncərələrini də çəkib qurtarın ki, sinifdəki hamı bayırı görə bilsin. \\r\n\\r\nHər kvadrat formalı pəncərə şüşəsinin tərəfinin uzunluğu 25 pikseldir. "
+      2-3 Artist 8: "Tövlə tikmək vaxtıdır!\\r\n\\r\nTövləni 2 bərabər ölçülü kvadrata bölməklə hər heyvan üçün yer düzəldin.\\r\n\\r\nMəsləhət:\nDüzbucaqlının eni 200 piksel, hündürlüyü 100 pikseldir.\\r\n\\r\nBu tapmacanı həll etmək üçün çoxlu müxtəlif yollar var."
+      2-3 Artist 9 NEW: Bu çərpələngi bitirin
+      2-3 Artist 9 REPLACEMENT: Bu pilleleri cekmeyi bitirin!
+      2-3 Artist 9: Bu çərpələngi bitirin
+      2-3 Artist Assessment 1: "**Yoxlama:** Axırıncı dişi çəkib qurtarın. O, 25 piksel enində və 25 piksel hündürlüyündədir."
+      2-3 Artist Debugging 1: "Bu papağın eni 50 piksel olmalıdır.\\r\nOnu düzəldə bilərsiniz?\\r\n\\r\n<br/>\\r\n"
+      2-3 Artist Debugging 2: "Pisiyin biglari ucun olan bu kod sehvdir.\nHamisi eyni uzunluqda olan biglari cekmek ucun bu kodu duzelt."
+      2-3 Artist Debugging 5: "Qic ve ayaq ucun olan kodumuz sehvdir.\nBunu duzelde bilersiniz?"
+      2-3 Artist Debugging 6: |-
+        Menim oturdugum kreslo bir qici yox imis kimi gorunur.
+        Sonuncu qicini cekmek ucun kodu daxil et.
+      2-3 Artist Debugging 8: |-
+        Müəlliməm deyir ki, başladığlm işi başa çatdırmalıyam! Fır-fıramı bitirməkdə mənə kömək edin. Nəyin səhv olduğunu tapa bilərsiniz?
+      2-3 Artist Free Play: Sərbəst oyun! Nə istəyirsinizə çəkin.
+      2-3 Artist Nested Loops Free Play: Sərbəst oyun, içiçə dövrlərlə fısqırıq bir şey çək.
+      2-3 Bee Functions 2: "Funksiyalar hər hansı bir tapşırığı yerinə yetirən kodlardan ibarət blokdur. 5 nektar əldə etmək üçün \"get 5\" funksiyasından istifadə edin. Əlverişli blok sayı əldə etmək üçün dövrlərdən də istifadə edin."
+      4-5 Maze Conditionals 9: |-
+        "Əgər-əks halda" bloklu bir məşq tapmacası daha!\r
+        \r
+        Barmağınızı üzərində gəzdirin, görün, birinci cəhddən bunu edə bilərsinizmi.
+      course4_artist_fwp_challenge1: Bu proqramı icra etməyə çalışın və dəyişikliklər etdikdə nə baş verdiyini müşahidə edin. Proqramın necə işlədiyini tapa bilərsiniz? (Və ya onu silin və tamamilə fərqlisi ilə əvəzləyin)
+      courseE_bee_functions3: Funksiyalar hər hansı bir tapşırığı yerinə yetirən kodlardan ibarət blokdur. 5 nektar əldə etmək üçün "get 5" funksiyasından istifadə edin. Əlverişli blok sayı əldə etmək üçün dövrlərdən də istifadə edin.
+      courseE_bee_functions3_2018: Funksiyalar hər hansı bir tapşırığı yerinə yetirən kodlardan ibarət blokdur. 5 nektar əldə etmək üçün "get 5" funksiyasından istifadə edin. Əlverişli blok sayı əldə etmək üçün dövrlərdən də istifadə edin.
+      grade2_PuppyLoops_10: |-
+        Müəlliməm deyir ki, başladığlm işi başa çatdırmalıyam! Fır-fıramı bitirməkdə mənə kömək edin. Nəyin səhv olduğunu tapa bilərsiniz?
+      grade2_PuppyLoops_8: "Pisiyin biglari ucun olan bu kod sehvdir.\nHamisi eyni uzunluqda olan biglari cekmek ucun bu kodu duzelt."
+      grade4_bee_functions3: Funksiyalar hər hansı bir tapşırığı yerinə yetirən kodlardan ibarət blokdur. 5 nektar əldə etmək üçün "get 5" funksiyasından istifadə edin. Əlverişli blok sayı əldə etmək üçün dövrlərdən də istifadə edin.
+      grade4_review_artist2: "Bu evə dam lazımdır! Üçbucaq çəkin. \\r\n\\r\nMəsləhət:\nHər üç tərəf eyni uzunluqdadır.\\r\n\\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"

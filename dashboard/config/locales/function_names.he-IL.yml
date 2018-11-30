@@ -153,10 +153,11 @@ he:
       function 2: פונקציה 2
       destroy and move: השמד וזוז
       clear path: פנה דרך
-      place and move: מקם וזוז
+      clear cacti: הסר קקטוסים
+      place and move: הנח וזוז
       build short bridge: בנה גשר קצר
       build long bridge: בנה גשר ארוך
-      create trail: צור מסילה
+      create trail: צור שביל
       move and fill: זוז ומלאה
       fix right corner: תקן פינה ימנית
       fix left corner: תקן פינה שמאלית
@@ -164,7 +165,7 @@ he:
       turn corner: סובב פינה
       fix long path: תקן דרך ארוכה
       fix short path: תקן דרך קצרה
-      place 3 tracks: מקם 3 מסילות
+      place 3 tracks: הנח 3 מסילות
       clear right corner: נקה פינה ימנית
       clear left corner: נקה פינה שמאלית
       draw a spiral edge: צייר פינה ספירלית
@@ -274,7 +275,7 @@ he:
       Choose Number: בחר מספר
       Move Bird: הזז ציפור
       turn left: פנה שמאלה
-      move forward: לזוז קדימה
+      move forward: זוז קדימה
       turn right: פנה ימינה
       drawDot: צייר נקודה
       draw a rectangle: צייר מלבן

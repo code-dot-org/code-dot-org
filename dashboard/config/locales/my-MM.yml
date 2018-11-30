@@ -8,7 +8,10 @@ my:
   hello: မဂၤလာပါ ကမာၻၾကီး
   submit: ပေးပို့ပါ
   cancel: ပယ်ဖျတ်သည်
+  or: သို့မဟုတ်
   continue: ဆက်လုပ်ပါ
+  auth:
+    clever: Clever
   signin_form:
     login: email လိပ္စာ
   password:
@@ -25,6 +28,8 @@ my:
     header:
       my_dashboard: ကျွန်ုပ်ကျောက်သင်ပုံး
       professional_learning: Professional Learning
+    user:
+      create: ဖန်တီးပါ
   teacher:
     panel:
       answer_viewer: ဆရာအဖွဲ့

@@ -39,6 +39,7 @@ fil:
   next_resource: Susunod na resource
   cancel: "Kanselahin"
   okay: "Okey"
+  or: "o"
   heading_x_of_y: "%{heading} (pahina %{x} ng %{y})"
   add_teacher_form:
     code:
@@ -83,6 +84,7 @@ fil:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Account sa Microsoft'
+    microsoft_v2_auth: 'Account sa Microsoft'
     clever: 'Clever na Account'
     forgot_password: 'Hindi matandaan ang password?'
     need_confirmation: "Hindi nakatanggap ng kumpirmasyon?"
@@ -256,9 +258,7 @@ fil:
         applab: 'Lumikha ng App'
         gamelab: 'Gumawa ng Game Lab na proyekto'
         weblab: 'Gumawa ng Web Lab (beta) na proyekto'
-      home: "Home"
       my_dashboard: "Aking Dashboard"
-      courses: "Mga kurso"
       course_catalog: "Katalogo ng Kurso"
       project_gallery: "Mga Proyekto"
       sections: "Mga Seksyon"
@@ -303,10 +303,16 @@ fil:
       signin: 'Sign in'
       signup: 'Gumawa ng account'
       already_registered: 'Nakarehistro na?'
-      pair_programming: 'Pair programming'
       team: 'Koponan'
       driver: 'Maglog-in'
       navigator: 'Kasama'
+      create: 'I-create'
+      applab: 'App na Lab'
+      artist: 'Artista'
+      gamelab: 'Game Lab'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Progreso ni %{name}"
       progress: 'Progreso mo'
@@ -589,6 +595,8 @@ fil:
     minecraft2016:
       title: "Minecraft"
       body: "Mag-program ng mga hayop at iba pang nilalang sa mga Minecraft sa iyong sariling bersyon ng Minecraft."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
       body: "Ang Minecraft ay nagbabalik para sa Oras ng Code na may mga bagong gawain! Maglakbay sa Minecraft sa pamamagitan ng code."

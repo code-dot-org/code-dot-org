@@ -1,0 +1,998 @@
+---
+hu:
+  data:
+    long_instructions:
+      2-3 Artist 1 new: Szia, én egy művész vagyok. Ha kódot írsz nekem, akkor szinte
+        bármit le tudok rajzolni. Használj fel néhány blokkot, hogy a szürke vonalakat
+        követve rajzoljak. (Minden vonal 100 pixel hosszú.)
+      2-3 Artist 11: 'Készítsd el a stoptábla keretét egy olyan nyolcszög megrajzolásával,
+        aminek minden oldala 100 pixel hosszú. '
+      2-3 Artist 12: "Hozzon létre egy kört, hogy befejezze a szemgolyó! \r \r ha
+        a művész 1 fokot fordul minden körben, hányszor kell ismételnie a kódot, hogy
+        egy kört rajzoljon? "
+      2-3 Artist 2 new: Ebben a házban van egy félig kész fal. Minden oldal 100 hosszú,
+        de a félig kész fal csak 50. Fejezd be a falat.
+      2-3 Artist 3.4: |-
+        Az "ugrás" blokk vonalhúzás nélkül mozgatja a művészt.
+        Rajzolj szaggatott vonalat az "ugrás" és a "menj" blokkok segítségével.
+      2-3 Artist 3new: A vörös kalap 100 pixel magas. Fejezd be a fekete kalapot,
+        ami 70 pixellel alacsonyabb. A fekete kalap szélessége 50 pixel
+      2-3 Artist 4: Segíts befejezni a cica házát!
+      2-3 Artist 6: "Erre a házra kell egy tető! Rajzold meg a háromszöget.  \r \r
+        Tipp: mindhárom oldal azonos hosszúságú. \r \r <img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"
+        width=\"300\"/>"
+      2-3 Artist 9 NEW: Fejezd be a sárkányt
+      2-3 Artist 9 REPLACEMENT: Fejezd be a lépcsők megrajzolását!
+      2-3 Artist 9: Fejezd be a sárkányt
+      2-3 Artist Assessment 1: 'Értékelés: Fejezd be az utolsó fog megrajzolását:
+        25 pixel széles és 25 pixel magas.'
+      2-3 Artist Debugging 1: "Ennek a kalapnak csak 50 pixel szélesnek kell lennie.
+        \r Ki tudod javítani? \r \r <br/> \r\n"
+      2-3 Artist Debugging 10: "Az iránytópad a játékban túl szűk. \r \r Ki tudod
+        szélesíteni 10 képponttal? \r \r először próbál a kódot lefuttatni, hogy lásd
+        mi lehet rossz."
+      2-3 Artist Debugging 11: Segíts befejeznem a csodálatos hópelyhemet. Hányszor
+        kell megismételnem a befejezéshez?
+      2-3 Artist Debugging 2: 'A három darukar rajzolásához írt kód láthatóan rossz.
+        Tipp: minden kar 75 pixel hosszú. Javítsd ki a kódot a darukarok megrajzolásához.'
+      2-3 Artist Debugging 3: 'A hajómon van egy lék! Meg tudod javítani a szakaszok
+        által bezárt szögek javításával? Tipp: az utolsó szögnél 15° az eltérés.'
+      2-3 Artist Debugging 5: "A kódot, a lábhoz és a talphoz rossz. \r \r Ki tudod
+        javítani?"
+      2-3 Artist Debugging 6: Úgy néz ki, egy olyan székre ültem, aminek hiányzik
+        az egyik lába. Szerkeszd össze a blokkokat egy székláb megrajzolásához.
+      2-3 Artist Debugging 7: Úgy tűnik, a C-t visszafelé rajzolja meg a kód. Meg
+        tudod csinálni, hogy igazi C-nek nézzen ki?
+      2-3 Artist Debugging 8: A szélkerekem nincs befejezve. Hányszor kell ismételnem
+        a befejezéshez?
+      2-3 Artist Debugging 9: Helytelen a szár kódja. Az eltérés 60°-os.
+      2-3 Artist Free Play: Szabad játék! Rajzolj, amit akarsz.
+      2-3 Artist Functions 11 a: Átneveztük a "rajzolj egy négyzetet" függvényt "rajzolj
+        egy hatszöget"-re, de még mindig négyzetet rajzol! Meg tudod változtatni a
+        "rajzolj egy hatszöget" függvényt úgy, hogy 50 pixeles oldalhosszúságú hatszöget
+        rajzoljon? Rajzold meg a képet az új függvénnyel!
+      2-3 Artist Functions 11.5: Itt van ugyanaz a "Rajzolj egy hatszöget" függvény.
+        Mi történik, ha minden ismétlésnél csak 60 fokkal fordulnál el?
+      2-3 Artist Functions 11: Átneveztük a "rajzolj egy négyzetet" függvényt "rajzolj
+        egy hatszöget"-re, de még mindig négyzetet rajzol! Meg tudod változtatni a
+        "rajzolj egy hatszöget" függvényt úgy, hogy 50 pixeles oldalhosszúságú hatszöget
+        rajzoljon? Rajzold meg a képet az új függvénnyel!
+      2-3 Artist Functions 12 Mike: 'A függvények nagyszerűen használhatók összetett
+        dolgok többszöri megrajzolására. Fel tudod használni a "rajzolj egy virágot"
+        függvényt  az egész láda beültetésére? (Tipp: A növények 100 pixeles távolságban
+        állnak egymástól.)'
+      2-3 Artist Functions 12 a: 'A függvények nagyszerűen használhatók összetett
+        dolgok többszöri megrajzolására. Fel tudod használni a "rajzolj egy virágot"
+        függvényt  az egész láda beültetésére? (Tipp: A növények 100 pixeles távolságban
+        állnak egymástól.)'
+      2-3 Artist Functions 12: 'A függvények nagyszerűen használhatók összetett dolgok
+        többszöri megrajzolására. Fel tudod használni a "rajzolj egy virágot" függvényt  az
+        egész láda beültetésére? (Tipp: A növények 100 pixeles távolságban állnak
+        egymástól.)'
+      2-3 Artist Functions 2: A függvények segítségével új blokkokat határozhatsz
+        meg! A "rajzoljon egy négyzetet" függvény megalkotásához belehúztuk a szükséges
+        blokkokat. Fel tudod használni a "rajzoljon egy négyzetet" függvényt szemüveg
+        készítéséhez? A négyzetek 75 pixel távolságra vannak egymástól.
+      2-3 Artist Functions 3: Módosítsd a függvényt, hogy 115 pixel oldalú négyzetet
+        rajzolj, és nagyobb legyen a szemüveg. A négyzetek most 45 pixel távolságra
+        vannak egymástól.
+      2-3 Artist Functions 4: Használd az "ismételd" blokkot a három négyzet megrajzolásához.
+      2-3 Artist Loops 1: A sejt befejezéséhez tudsz készíteni 100 pixel oldalhosszúságú
+        hatszöget? Ne feledd, ebben az esetben csak 60 fokot kell fordulnod!
+      2-3 Artist Loops 2: Most használj egy ismétlő elemet, hogy a cellából egy kagyló
+        legyen.
+      2-3 Artist Loops New 1: 'Rajzoljuk meg a robot fejét! Tudnál rajzolni egy négyzetet,
+        aminek az oldalai 100 pixel hosszúak
+
+'
+      2-3 Artist Loops New 10: Most kössük össze ezt a sok V alakot! Rajzold őket
+        egy ciklusban!
+      2-3 Artist Loops New 12: 'Rajzold meg a gyémántot 100 pixel hosszú oldalakkal. '
+      2-3 Artist Loops New 13: Most rajzold le a gyémántot háromszor egy ciklusban.
+      2-3 Artist Loops New 15: "Most, rajzolj amit csak akarsz! \r <br/> <br/> \r
+        \r\n\n"
+      2-3 Artist Loops New 2: Itt van egy része annak a kódnak, amivel a négyzetet
+        rajzoltad. Mi történne, ha ezt a részt egy ismétlő elembe raknád, hogy megismétlődjön
+        4-szer?
+      2-3 Artist Loops New 9: Rajzolj egy egyszerű V betűt, aminek mind a két oldala
+        50 pixel hosszú, hogy elkészüljön az nyíl.
+      2-3 Artist Nested Loops 10: Ismételd a ciklust 12-szer, hogy elkészítsd a mintát.
+      2-3 Artist Nested Loops 11: Ismételd 4-szer a kódot, hogy elkészítsd a mintát.
+        Minden kör után fordulj 90 fokot.
+      2-3 Artist Nested Loops 12: Ismételd a ciklust 12-szer, hogy elkészítsd a mintát.
+      2-3 Artist Nested Loops 2: Ismételd a háromszög rajzolást 6-szor. Minden háromszög
+        után el kell fordulnod 60 fokot, mielőtt nekikezdesz a következő rajzolásának.
+      2-3 Artist Nested Loops 3: A háromszög rajzolását 12-szer kell ismételned ennek
+        a mintának a megrajzolásához. Oszd el a teljes körfordulat fokszámát (360)
+        a rajzolni kívánt formák számával (12), hogy kiszámold, hány fokot kell fordulni
+        az egyes formák rajzolása után.
+      2-3 Artist Nested Loops 4: 'Ismételd 12 alkalommal a gyémánt rajzolást a virág
+        megrajzolásához. Tipp: a 12 gyémánt hasonló, mint a korábban rajzolt 12 háromszög
+        - mennyit kell fordulni egy-egy forma megrajzolása után?'
+      2-3 Artist Nested Loops 5: Rajzold meg ennek az épületnek az ablakait egymásba
+        ágyazott ciklusokkal. Az alakok oldalai 20 pixel szélesek, és 20 pixel távolságra
+        vannak egymástól.
+      2-3 Artist Nested Loops 7: Ismételd 10-szer ezt a háromszöget a Nap megrajzolásához.
+        Minden háromszög után el kell fordulnod. Kitalálhatod, hány fokkal kell elfordulni,
+        ha elosztod a teljes fordulat fokszámát a Napot alkotó formák számával.
+      2-3 Artist Nested Loops 8: Most rajzoljunk a képre füvet. A fűcsomók 50 képpont
+        távolságra vannak egymástól.
+      2-3 Artist Nested Loops 9: A kép egy virág rajzolásával lesz teljes. Ismételd
+        a gyémánt rajzolását 12-szer, hogy megrajzold a virágot.
+      2-3 Artist Nested Loops Free Play: Szabad játék! Rajzolj valami izgalmasat egymásba
+        ágyazott ciklusokkal!
+      2-3 Bee Conditionals 11: Gyűjts nektárt azokból a virágokból, amelyekben van
+        nektár.
+      2-3 Bee Conditionals 13: 'Gyűjts nektárt és készíts mézet! Tipp: mi történik,
+        ha a piros virágra alkalmazod a  "ha nektár" feltételt? Meg tudod csinálni
+        ezt a feladatot egy ciklussal?'
+      2-3 Bee Conditionals 15: Mind a négy virágból gyűjts nektárt.
+      2-3 Bee Conditionals 3: Segíts nekem nektárt gyűjteni a virágokból és mézet
+        készíteni. Használj ciklust.
+      2-3 Bee Debugging 3: Ezek a blokkok igazán bogarasak. Javítsd ki a kódot, hogy
+        összegyűjtsük az összes nektárt és elkészítsük az összes mézet.
+      2-3 Bee Debugging 6: Ezek a blokkok igazán bogarasak. Javítsd ki a kódot, hogy
+        összegyűjtsük az összes nektárt és elkészítsük az összes mézet.
+      2-3 Bee Debugging 9: Ezek a blokkok igazán bogarasak. Javítsd ki a kódot, hogy
+        összegyűjtsük az összes nektárt és elkészítsük az összes mézet.
+      2-3 Bee Functions 10: A lila virágokban 1 vagy 0 nektár van. Készíts olyan függvényt,
+        amely csak azokból a virágokból gyűjt nektárt, amelyekben van nektár.
+      2-3 Bee Functions 2: A függvények olyan kódot tartalmazó blokkok, amelyek elvégeznek
+        egy feladatot.  Használd a "gyűjts 5" függvényt, hogy egyszerre 5 egység nektárt
+        össze tudj gyűjteni. Ne felejts el ciklust használni és ügyelj a számlálóra
+        is.
+      2-3 Bee Functions 4: A "menj és gyűjts nektárt" függvény hatására a méh elfordul,
+        nektárt gyűjt, majd visszatér a kiindulási pontra. Használd a függvényt, hogy
+        az összes nektárt összegyűjtsd.
+      2-3 Bee Loops 1: Minden virág egy egység nektárt tartalmaz. Minden virágról
+        gyűjtsd be a nektárt.
+      2-3 Bee Loops 3A: Fel tudsz használni egy ciklust a nektár összegyűjtéséhez?
+      2-3 Bee Loops 3B: Most használd az "ismételd" blokkot, hogy összegyűjtsük az
+        összes nektárt és elkészítsük az összes mézet.
+      2-3 Bee Loops 4A: Mi történik, ha 3 alkalommal ismételed ezt a sorozatot? Ne
+        felejtsd el elkészíteni a mézet a végén!
+      2-3 Bee Loops 8: A lila virágokról nem tudjuk, hogy mennyi nektárral rendelkeznek.
+        Használd az "amíg nektár" ciklust az összes nektár összegyűjtéséhez. Ez a
+        ciklus addig fog futni, amíg a megadott feltétel teljesül, jelen esetben amíg
+        a nektárok száma > 0.
+      2-3 Maze 15: Használd a ciklusokat, hogy kevesebb blokkal jussunk a malacig.
+      2-3 Maze Loops 18: Juttass el a napraforgóhoz!
+      4-5 Artist 10: Nyomd meg a "Futtatás" gombot, hogy kipróbáld a kódot. Majd ismételd,
+        hogy befejezd a rajzot. A színek mindig különbözni fognak.
+      4-5 Artist 2: Megtudnád adni ciklussal a kódot, hogy kitöltsd a négyzetet?
+      4-5 Artist 5: Milyen szöget használsz?
+      4-5 Artist 6: Az egyenlő oldalú háromszög szögei 60, 60 és 60 fokosak. Minden
+        oldal 200 képpont hosszú. Készítsd el a rajzot!
+      4-5 Artist Free Draw 1: Szabadon rajzolhatsz! Rajzolj bármit, amihez kedved
+        van.
+      4-5 Artist Patterns 1: Tudsz négyzetet rajzolni egy ciklus segítségével? Minden
+        oldala legyen 20 pixeles.
+      4-5 Artist Patterns 12: Hogyha lemásolod a ciklust és balra fordulsz jobb helyett,
+        mi történik? Tudod úgy ismételni, hogy ezt a hullámot rajzolja le?
+      4-5 Artist Patterns 13: Most ismételjük a ciklust négyszer, hogy elkészüljön
+        ez a képkeret. Figyelj a sarkokra - nem fordulhatsz csak úgy 90 fokot! Ha
+        egy 3 fokos fordulatot 60-szor ismételve egy félkört kapunk, melyik blokkal
+        kapunk a sarkokhoz egy negyed kört?
+      4-5 Artist Patterns 3: |-
+        Most menjünk egy szinttel mélyebbre! Már beágyaztuk az egész kódblokkot egy másik ciklusba, de a
+        művészt vissza kell helyezned, hogy megrajzold a következő vonalat. Melyik blokkot kell a külső ciklus végére
+        helyezned a teljes rács megrajzolásához?
+      4-5 Artist Patterns 8: Használj ciklust egy 40 pixel hosszú oldalú hatszög rajzolásához.
+        A fordulatok 60 fokosak.
+      4-5 Artist Patterns 9: 'Ismételd ezt a kódot 3-szor, hogy egy teljes sort rajzolj.
+        Tipp: minden hatszög 80 pixel széles.'
+      4-5 Artist Patterns Free Play: Szabad játék! Rajzolj amit szeretnél!
+      4-5 Bee Conditionals 2: A méh most csak nektárt akar gyűjteni. Emlékezz rá,
+        hogy nem minden elrejtett objektum virág, így először ellenőrizni kell, mert
+        csak virágról tud nektárt gyűjteni.
+      4-5 Bee Conditionals 5: Minden felhő alatt egy virágnak vagy egy lépnek kell
+        lennie. Használd a ha/különben blokkot nektár gyűjtésére, ha ott egy virág
+        van, különben készíts mézet (mert ez egy lép).
+      4-5 Bee Conditionals 6: Ennek a lila virágnak 3, 2 vagy 1 nektárja lehet. Itt
+        egy ha/különben blokk van kombinálva egy másik ha/különben blokkal,és így
+        létrejött egy ha, különben-ha, különben blokk. Egészítsd ki ezt a megoldást
+        úgy, hogy ismeretlen mennyiségű nektárt tudjon gyűjteni.
+      4-5 Bee Conditionals 7: Emlékezz, hogy a lila virágnak 3, 2 vagy 1 nektárja
+        lehet. Fejezd be a "check purple flower" (ellenőrizd a lila virágot) függvényt,
+        és használd az összes virág összes nektárjának összegyűjtésére.
+      4-5 Bee Conditionals 8: Írd meg a "check flower make honey" (ellenőrizd a virágot
+        és készíts mézet) függvényt.  A függvényednek ellenőriznie kell, hogy hány
+        nektárja van a lila virágnak, azokat összegyűjteni, előrelépni, és aztán mézet
+        készíteni.
+      4-5 Bee Conditionals Assessment 1: 'Értékelés: Ez a kód hibás. Egészítsd ki
+        a "get nectar or make honey" (gyűjts nektárt vagy készíts mézet) függvényt,
+        majd hívd meg futtatáskor, hogy összegyűjtse az összes nektárt és elkészítse
+        az összes mézet. Emlékezz, hogy a lila virágnak 3, 2 vagy 1 nektárja lehet.'
+      4-5 Bee Debugging 1: Ezek a blokkok zizik. Ki tudod javítani őket?
+      4-5 Bee Debugging 6: A lila virágban nem tudjuk, mennyi nektár van. Javítsd
+        a kódot, hogy összegyűjtsük az összes nektárt a virágból.
+      4-5 Bee Nested Loops 4: Gyűjtsd össze az összes nektárt az összes virágról,
+        és készíts mézet minden lépbe. Használj beágyazott ciklust!
+      4-5 Bee Nested Loops Assessment 1: Értékelés - Gyűjtsd össze az összes nektárt,
+        és készítsd el az összes mézet ciklusok használatával!
+      4-5 Maze 9: Készíts ciklust az "ismételd amíg" blokkal!
+      4-5 Maze Conditionals 1: Használd az "ismételd amíg" blokkot, hogy elvezesd
+        a zombit a napraforgóhoz.
+      4-5 Maze Conditionals 10: "Tudsz segíteni kijutni ebből az összetett útvesztőből
+        mindössze 3 blokk hozzáadásával?\r\n\r\nHa jól csinálod, akkor bármilyen kacskaringós
+        utat\n be tud járni annak hosszától függetlenül!"
+      4-5 Maze Conditionals 2: Használd az "ismételd amíg" blokkot, hogy elvezesd
+        a zombit a napraforgóhoz.
+      4-5 Maze Conditionals 3: 'Használd a "ha" blokkot, annak eldöntésére, hogy merre
+        kell fordulni. Tipp: már csak egy blokkot kell hozzátenni, de jegyezd meg,
+        hogy hogyan készítettük el ezt a kódot, hogy legközelebb neked is menjen.'
+      4-5 Maze Conditionals 4: OK, ez majdnem olyan mint az előző feladvány, de vissza
+        kell emlékezned, hogyan alkalmaztuk együtt a "ha" és az "ismételd amíg" blokkokat.
+      4-5 Maze Conditionals 5: Napraforgót akarok! Használj egy "ha" blokkot, hogy
+        elvigyél engem oda a lehető legkevesebb blokk felhasználásával.
+      4-5 Maze Conditionals 6: Napraforgót akarok! Használj egy "ha" blokkot, hogy
+        elvigyél engem oda a lehető legkevesebb blokk felhasználásával.
+      4-5 Maze Conditionals 7: Oké, csináljuk meg még egyszer gyakorlásképpen -  hasonló
+        a feladat, de vigyázz a húsevő növényekre!
+      4-5 Maze Conditionals 8: A "ha/különben" blokk ellenőriz egy állapotot, és aztán
+        tesz valamit VAGY más valamit. Próbáld ki ezt az új blokkot, és juttass el
+        engem a napraforgóhoz.
+      4-5 Maze Conditionals 9: Még egy gyakorlat a „ha-különben” blokkhoz. Meg tudod
+        csinálni elsőre?
+      4-5 Maze Conditionals Assessment 1: Használj fel egy "ismételd amíg" és egy
+        "ha/különben" blokkot, hogy olyan kevés blokkal juttass el engem a napraforgóhoz,
+        amennyivel csak lehetséges.
+      4-5 Nested Loops 12: Meg tudod rajzolni ezt a 36 darab háromszöget egymásba
+        ágyazott ciklusok segítségével?
+      4-5 Nested Loops 3: "Készíts egy napocskát a kiindulási kód másik ciklusba ágyazásával.
+        Ezt hívják egymásba ágyazott ciklusnak.\r"
+      4-5 Nested Loops 5: Ismételd meg a megadott kódot annyiszor, hogy szélmalmot
+        készíts.
+      4-5 Nested Loops 6: Meg tudod rajzolni a hatszöget a háromszög rajzoló kód ciklusba
+        ágyazásával?
+      4-5 Nested Loops 7: 'Rajzold meg ezt az alakzatot tízszer. Hány fokot kell fordulnod
+        minden egyes ismétlésnél? (Tipp: Mennyi 360 osztva 10-zel?)'
+      4-5 Nested Loops 8: 'Ismételd meg azt az alakzatot hatszor. Hány fokot kell
+        elfordulnod ismétlésenként? (Tipp: Mennyi 360 osztva 6-tal?)'
+      4-5 Nested Loops 9: Rajzold meg az alligátor alsó fogsorát!
+      4-5 While Loops 1: Vigyél el a lyukig, és töltsd fel két lapát földdel. Használd
+        a "töltsd fel" blokkot.
+      4-5 While Loops 2: Vigyél el a földkupachoz, és távolítsd el azt 5 lapátolással.
+        Használd a "távolítsd el" blokkot.
+      4-5 While Loops 3: 'Vigyél el a földkupacig, és távolítsd el az egészet, aztán
+        vigyél a lyukhoz, és töltsd azt fel teljesen. Tipp: A lehető legkevesebb blokkot
+        használd fel.'
+      4-5 While Loops 4: 'Hoppá! Egy tényleg mély lyukat találtam! Nem tudom, hány
+        lapátnyi földre van szükségem. Tudsz olyan programot írni, ami teljesen feltölti
+        a lyukat a föld színéig? Tipp: Most az "amíg van" ciklust használd.'
+      Artist Autorun Test: Használd az "ismételd" blokkot a három négyzet megrajzolásához.
+      CSD U2 create page: "# Hozd létre, és nevezd el az új oldaladat\r\n\r\nMielőtt\nelkezdesz
+        kódolni, meg kell bizonyosodnod róla, hogy minden lap megvan,\namire szükséged
+        lesz a projektben.\r\n\r\n# Tedd a következőt\r\n* Hozz létre egy új HTML
+        oldalt, majd nevezd át.\n(Nézd meg a [6. szint 8. feladványát](/s/csd2/stage/6/puzzle/8),
+        ha elfelejtetted, hogyan kell\ncsinálni.)\r\n* Ismételd meg annyiszor, ahány
+        oldalt szeretnél hozzáadni.\r\n\r\n\n"
+      CSD U2 create page_2018: "# Hozd létre, és nevezd el az új oldaladat\r\n\r\nMielőtt\nelkezdesz
+        kódolni, meg kell bizonyosodnod róla, hogy minden lap megvan,\namire szükséged
+        lesz a projektben.\r\n\r\n# Tedd a következőt\r\n* Hozz létre egy új HTML
+        oldalt, majd nevezd át.\n(Nézd meg a [6. szint 8. feladványát](/s/csd2/stage/6/puzzle/8),
+        ha elfelejtetted, hogyan kell\ncsinálni.)\r\n* Ismételd meg annyiszor, ahány
+        oldalt szeretnél hozzáadni.\r\n\r\n\n"
+      CSD U2 header footer: "# Fejléc és lábléc\r\n\r\nMinden\noldalon legyen fejléc
+        és lábléc.\r\n\r\n# Tedd a következőket\r\n* Minden oldal esetén \nbizonyosodj
+        meg róla, hogy az tartalmazza az oldal címét és egy navigációs menüt, ami\na
+        weblapod további oldalaira hivatkozik. A fejléc átismétléséhez keresd fel
+        a\n [9. szint 3. feladványát](/s/csd2/stage/9/puzzle/3).\r\n* Minden oldal
+        esetén\nbizonyosodj meg róla, hogy van lábléc, amely tartalmazza az oldal
+        felhasználási feltételeit.\r\n\r"
+      CSD U2 header footer_2018: "# Fejléc és lábléc\r\n\r\nMinden\noldalon legyen
+        fejléc és lábléc.\r\n\r\n# Tedd a következőket\r\n* Minden oldal esetén \nbizonyosodj
+        meg róla, hogy az tartalmazza az oldal címét és egy navigációs menüt, ami\na
+        weblapod további oldalaira hivatkozik. A fejléc átismétléséhez keresd fel
+        a\n [9. szint 3. feladványát](/s/csd2/stage/9/puzzle/3).\r\n* Minden oldal
+        esetén\nbizonyosodj meg róla, hogy van lábléc, amely tartalmazza az oldal
+        felhasználási feltételeit.\r\n\r"
+      Course 4 Artist 13: Még mindig játszol? Itt egy üres vászon, amire azt rajzolsz,
+        amit csak akarsz!
+      Course 4 Artist 6: |-
+        Egészítsd ki a kódot, hogy kirajzolódjanak a háromszögek.
+        Segítség: a 3 háromszög egy kör belsejében vannak.
+      Course 4 Artist 8: Rajzold meg ezt a napocskát egy ciklussal, ami 12 háromszöget
+        rajzol.
+      Course 4 Artist 8a: Emlékszel erre az alakzatra? Most megrajzolhatod úgy, hogy
+        nincsenek kiinduló blokkok!
+      Course 4 Artist Binary 1a: "Ez egy olyan függvény, amely egy egyesekből és nullákból
+        álló bináris számsorozatot kap, és a művésszel megrajzoltatja balról jobbra,
+        felülről lefelé. A művész kitölti a négyzetet, amikor egyet lát, és kihagyja
+        a négyzetet, amikor nullát lát.\r\n\r\nFuttasd a kódot, és nézd meg, hogyan
+        rajzolja meg a művész a mintát a bináris sorozatot használva."
+      Course 4 Artist For Loops 4: 'Mit módosítanál a tanultakon, hogy megrajzold
+        ezeket a négyzeteket? 15 képpont oldalhosszú a legkisebb, 300 képpont a legnagyobb
+        négyzet oldalhossza, és minden négyzet 15 képponttal hosszabb oldalakkal rendelkezik,
+        mint az előző. '
+      Course 4 Artist For Loops 6a: Végezz el három kis módosítást az előző kódon,
+        hogy ezt kapd!
+      Course 4 Artist For Loops 8a: Egyetlen kis módosítás az előző kódon ezt a képet
+        eredményezi. Kitalálod, hogy mit kell módosítani?
+      Course 4 Artist For Loops Challenge_a: |-
+        **Kihívás:** Kitalálod, hogy az eddig tanultak felhasználásával, hogyan hozhatod
+        létre ezt a 40 képpont oldalhosszúságú sokszögekből álló képet?
+      Course 4 Bee Params 1: Használd a "gyűjts 3 nektárt" függvényt, amelynek hatására
+        elfordulok, mozgok, nektárt gyűjtök és aztán visszatérek a kiindulási pontra.
+        Írj egy kódot a "gyűjts 3 nektárt" függvény felhasználásával, amellyel az
+        összes nektárt összegyűjtjük.
+      Course 4 Play Lab Params 4: "Itt van egy `patrol` nevű függvény.\n\r\n\r\nSzerkeszd
+        a `patrol`függvényt úgy, hogy a macska 400 pixelt fel, majd 400 pixelt lefele
+        menjen."
+      Course 4 Play Lab Params 8: Használd az "amikor a szereplő megérinti" blokkot,
+        és csak akkor küldd vissza a Kutyát a bal felső sarokba, amikor a Kutya megérint
+        más szereplőket.
+      Course 4 Play Lab Vars 2: Az előző feladvány versenye nem volt igazán fair.
+        Változtasd meg a `dog_speed` változó értékét úgy, hogy biztosan több zászlót
+        szerezz meg, mint a Macska. Az nyer, aki előbb összegyűjt 10 zászlót!
+      Course 4 Play Labs For Loops 1: Mondassuk ki a kutyával az összes számot 1-től
+        100-ig. Használj egy `számold` (for) ciklust és a counter (számláló) blokkot,
+        és mondasd ki a változó aktuális értékét minden cikluslépésben.
+      Course 4 Playlab For Loops 5b: Módosítsd a `számold` (for) ciklusok lépésközét
+        úgy, hogy a két karakter ugyanazon a helyen álljon meg.
+      CourseF_PlayLab_vars2: Az előző feladvány versenye nem volt igazán fair. Változtasd
+        meg a `dog_speed` változó értékét úgy, hogy biztosan több zászlót szerezz
+        meg, mint a Macska. Az nyer, aki előbb összegyűjt 10 zászlót!
+      Dance_Party_01: |-
+        *Induljon a buli és a tánc!*
+
+        Első táncosod létrehozásához húzd az „új készítése“ blokkot a munkaterületre, és csatlakoztasd az „összeállítás“ blokkba.
+
+        * *Ha további információkra van szükséged, vagy újabb feladatokra vágysz, kattints a bal oldalon lévő villanykörtére.*
+      Dance_Party_01_low: |-
+        *Induljon a buli és a tánc!*
+
+        Első táncosod létrehozásához húzd az „új készítése“ blokkot a munkaterületre, és csatlakoztasd az „összeállítás“ blokkba.
+
+        * *Ha további információkra van szükséged, vagy újabb feladatokra vágysz, kattints a bal oldalon lévő villanykörtére.*
+      Dance_Party_02: |-
+        Táncoltassuk meg ezt a jávorszarvast!
+
+        Húzd ki az <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blokkot a munkaterületre. Csatlakoztasd be az <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blokk alá. A táncosod a negyedik ütem után elkezd táncolni.
+
+
+        A zenében **ütemekben** mérjük az időt. Ebben a bemutatóban az ütemek négy negyed hosszúak.
+      Dance_Party_03: |-
+        *Most elkezdünk növekedni!*
+
+        Adj hozzá egy <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> blokkot a munkaterületedhez. Állítsd be, hogy a táncos 6 ütem után új mozdulatot kezdjen.
+      Dance_Party_04: |-
+        *Ehhez a tánchoz kellene valami villanás!*
+
+        Az eszköztáradban keress egy új blokkot, amivel valamilyen háttéreffektet tehetsz a táncosod mögé. Figyeld meg, hogyan változnak az effektek a zenére!
+      Dance_Party_05: |-
+        Egy másik új blokkal érd el, hogy a táncos **2 ütemenként** változtasson a mozgásán!
+
+        * A „(Következő)“, „(Előző)“ vagy „(Véletlen)“ lehetőséget kiválasztva megadhatod, hogy a táncos a kód minden futtatásakor másik mozgást végezzen.
+      Dance_Party_06: |-
+        *Több táncos kell ide!*
+
+        Hozz létre egy „backup_dancer1“ nevű háttértáncost, hogy együtt táncoljon a macskával.
+      Dance_Party_08: |-
+        Minden táncosnak van egy _tulajdonságkészlete_, ami a kinézetét szabályozza.
+
+        Ha azt szeretnéd, hogy egy táncos úgy tűnjön, mintha a háttérben lenne, a _méretét_ kell kisebbre állítanod. Be tudod állítani mindkét háttértáncost ugyanolyan méretűre?
+      Dance_Party_09: |-
+        A táncosoknak van egy „árnyalat“ tulajdonságuk, amivel egy színréteget adhatsz hozzájuk. Próbáld meg módosítani valamelyik táncosod árnyalatát.
+        * Az árnyalat a kiválasztott színt összevegyíti a táncos színeivel.
+      Dance_Party_10: |-
+        Most már tehát tudjuk, hogyan lehet módosítani a táncosok tulajdonságait. Ezzel a blokkal azt is elérhetjük, hogy ugyanezek a tulajdonságok automatikusan reagáljanak a zenére:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Ez a program a zene „basszus“ szólamának (a mély hangoknak) a hangereje alapján szabályozza az egyik táncos magasságát. Be tudod állítani, hogy a másik táncos is reagáljon a zenére?
+      Dance_Party_11.5_test: |-
+        Nézd meg ezt a blokkot:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Most már egyetlen mozdulattal egy csomó táncost létre tudsz hozni!
+
+        Az „összes kacsa“ blokkok használatával próbálj meg olyan kódot írni, ami alapján az összes kacsa ugyanúgy fog táncolni.
+      Dance_Party_11: |-
+        A <xml><block type="Dancelab_whenKey"></block></xml> blokkal a felfelé nyilat lenyomva tudod futtatni a kódot.
+
+        Módosíthatod a táncmozdulatot, módosíthatod egy táncos tulajdonságait, vagy végezhetsz egy egyszeri mozdulatot. Ötletelj bátran, és keresd az új blokkokat!
+      Dance_Party_11_5: |-
+        Nézd meg ezt a blokkot:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Most már egyetlen mozdulattal egy csomó táncost létre tudsz hozni!
+
+        Az „összes kacsa“ blokkok használatával próbálj meg olyan kódot írni, ami alapján az összes kacsa ugyanúgy fog táncolni.
+      Dance_Party_11b: Indulhat a táncverseny! A Macska legyint, amikor megnyomod
+        a balra nyilat. Állítsd be, hogy a Robot „drop“ mozdulatot tegyen, amikor
+        megnyomod a jobbra nyilat.
+      Dance_Party_12: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és oszd
+        meg az ismerőseiddel.
+      Dance_Party_extras_battle: |-
+        # Tánccsapatok
+
+        Íme egy két csapat közti táncverseny. A nyílbillentyűkkel lehet irányítani az egyik, a „w, a, s, d” billentyűkkel a másik táncost. Tartsatok táncversenyt egy ismerősöddel, majd próbáljátok meg továbbfejleszteni ezt a táncversenyt.
+
+        * Adj hozzá további billentyűket a táncok irányítására
+        * Érd el, hogy a billentyűlenyomásokra a háttértáncosok is reagáljanak
+        * A láthatóságuk beállításával 4 ütemenként váltogasd a táncosokat
+      Dance_Party_extras_every_beat: |-
+        # Negyedek
+
+        A legtöbb táncunkban teljes ütemeket alkalmaztunk, azonban minden ütem 4 negyedből áll össze. Ebben a táncban a „0,25 ütemenként” blokk azt adja meg, hogy a táncos minden negyedre tapsoljon.
+
+        A táncban emellett egy _feltételes_ blokk is szerepel, ami azt szabályozza, hogy a „0,25 ütemenként” blokk mikor módosíthatja a táncot. Próbáld meg módosítani a feltételes blokkban szereplő számokat, és figyeld meg, hogyan módosul a tánc.
+
+        * Kísérletezz más ritmusértékekkel (pl. félhez 0,5 vagy nyolcadhoz 0,125).
+        * Adj hozzá „ütem utáni” eseményeket.
+        * Válts át „ütemek”-ről „másodpercek”-re, és próbáld meg így időzíteni a táncaidat.
+      Dance_Party_extras_layout: |-
+        # Álljunk alakzatba!
+
+        Figyeld meg ebben a táncban, hogy az „elrendezés” blokk hogyan módosítja a háttértáncosok alakzatát a tánc folyamán. Az alábbi ötletekkel próbáld meg bővíteni a formációt:
+
+        * Hozz létre egy második táncoscsoportot eltérő elrendezéssel
+        * Érd el, hogy az elrendezés billentyűlenyomásra módosuljon
+        * Amikor a táncosok alakzatot váltanak, módosíts egy tulajdonságot is
+      Dance_Party_extras_on_beat: |-
+        # Basszus, közép- és magashangok
+
+        Ebben a táncban a „csúcs” események olyankor váltanak ki kódrészleteket, amikor a zene bizonyos részei nagy a hangerővel szólalnak meg. Próbáld ki különböző dalokkal, és figyeld meg, hogyan befolyásolják a táncot.
+      Dance_Party_extras_speed: |-
+        # Gyorsítás, lassítás
+
+        Ez az utolsó tánc a „sebesség beállítása” blokkal szabályozza, milyen gyorsan mozogjanak az egyes táncosok. Kísérletezésképpen a dal különböző részein adj meg eltérő sebességeket. Nyugodtan bütykölgesd tovább ezt a táncot, vagy térj vissza bármelyik korábbihoz, és alakítsd őket még menőbbé.
+      Dance_Party_extras_visible: |-
+        # Hová tűntek?
+
+        Ez a tánc két különböző tánccsoportot jelenít meg és tüntet el. Nézd meg, és egészítsd ki a saját ötleteiddel.
+
+        * Adj hozzá még egy tánccsapatot
+        * A nyílbillentyűkkel jelenítsd meg és tüntesd el a táncosokat
+        * Tüntesd el az összes táncost, és válts át egy izgalmas háttéreffektre
+      Function intro Ryan: "Egy \"híd építése\" nevű **funkció** van a munkaterületen.
+        \ Ebben megtalálható a hídon való átkeléshez szükséges minden kód! \r\n \r\nAz
+        út kijavításához és {currentPlayerName} játékos eljuttatásához a vöröskő fáklyához
+        [redstone_torch] illeszd a kis, zöld blokkot kétszer a munkaterületre."
+      Function intro Ryan_2019: "Egy \"híd építése\" nevű **funkció** van a munkaterületen.
+        \ Ebben megtalálható a hídon való átkeléshez szükséges minden kód! \r\n \r\nAz
+        út kijavításához és {currentPlayerName} játékos eljuttatásához a vöröskő fáklyához
+        [redstone_torch] illeszd a kis, zöld blokkot kétszer a munkaterületre."
+      HOC 2018 Level_1: Az előtted álló utazáshoz fel kell töltened a készleteidet.
+        Vegyél ki egy **csónakot** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        a **ládából** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+      HOC 2018 Level_10: A Víz alatti templomban valahol egy **tintahal** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        rejtőzik – meg tudod találni?
+      HOC 2018 Level_11: Építs falat **prizmarinból** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        a fekete beton köré. Ez aktiválni fogja a **csatornát** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png),
+        így teljesítetted a feladatot!
+      HOC 2018 Level_12: Gratulálunk! A nyílt vízi világ már vár rád. Építs korallzátonyt!
+        Vulkánt! Elsüllyedt hajót! Csak rajtad áll.
+      HOC 2018 Level_2: Csónakkal sokkal egyszerűbb, mint úszni a nyílt vízen! Menj
+        a móló végére, ahol vízre szállhatsz.
+      HOC 2018 Level_3: Ragadd meg az evezőt, és hajózz ki a nyílt vizekre, hogy kifoghasd
+        a **tőkehalat** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Hadd egye meg a tőkehalat a **delfin** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Ismétlő blokkal gyorsabban átjutsz az óceánon.
+      HOC 2018 Level_5: Valahol egy **nautiluszhéj** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** ![  (https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      HOC 2018 Level_6: Úgy tűnik, irtó hideg van odakint! A víz alatti romokhoz vezető
+        utad során fogj egy **lazacot** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
+      HOC 2018 Level_7a: Megtaláltad a víz alatti romokat. Keress a homokkőben egy
+        **ládát** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png),
+        ami **prizmarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        kincset rejt.
+      HOC 2018 Level_8: Először jéghegyek, most meg láva? Menj végig ezen a vulkáni
+        szigeten, és keresd meg a **trópusi halat** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        a korallzátonyban.
+      HOC 2018 Level_9b: Elérted a zátonyt, most keresd meg a **Tenger szívét** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! A kék és vörös korall segítségével juss el a kincset tartalmazó **ládához**
+        ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      HOC Dance 4_draft: |-
+        Egy másik új blokkal érd el, hogy a táncos **2 ütemenként** változtasson a mozgásán!
+
+        * A „(Következő)“, „(Előző)“ vagy „(Véletlen)“ lehetőséget kiválasztva megadhatod, hogy a táncos a kód minden futtatásakor másik mozgást végezzen.
+      HOC Dance 5_draft: |-
+        *Több táncos kell ide!*
+
+        Hozz létre egy „backup_dancer1“ nevű háttértáncost, hogy együtt táncoljon a macskával.
+      HOC Dance 9_draft: |-
+        A <xml><block type="Dancelab_whenKey"></block></xml> blokkal a felfelé nyilat lenyomva tudod futtatni a kódot.
+
+        Módosíthatod a táncmozdulatot, módosíthatod egy táncos tulajdonságait, vagy végezhetsz egy egyszeri mozdulatot. Ötletelj bátran, és keresd az új blokkokat!
+      HOC Dance Freeplay: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és
+        oszd meg az ismerőseiddel.
+      HOC Dance Freeplay_draft: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat,
+        és oszd meg az ismerőseiddel.
+      HOC Dance Predraw: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és
+        oszd meg az ismerőseiddel.
+      K-1 Bee Loops 2: Használj egy ciklust, hogy nektárt gyűjts és mézet készíts!
+      K-1 Bee Loops 3: Használj ciklusokat, hogy nektárt gyűjts és mézet készíts!
+      K-1 Bee Loops 4: Használj ciklusokat, hogy nektárt gyűjts, mézet készíts, és
+        hogy mozogj!
+      K-1 Bee Loops 5: Használj ciklusokat, hogy nektárt gyűjts és mézet készíts!
+      K-1 Bee Loops 6: Használj ciklusokat, hogy nektárt gyűjts, mézet készíts, és
+        hogy mozogj!
+      K-1 Maze Loops 11: Juttass el a malachoz! Használd az ismételd ciklust.
+      K-1 Maze Loops 12: Juttass el a malachoz! Használd az ismételd ciklust.
+      K-1 Maze Loops 2: Használd az Ismételd blokkot és juttass el a malachoz!
+      K-1 Maze Loops 8: Juttass el a malachoz! Használd az ismételd ciklust.
+      MC Agent Freeplay: "**Szabad játék:** Most rajtad múlik! Az Agent kódja segítségével
+        fedezd fel a világot."
+      MC_HOC_2017 Agent Test: "A játékos mozgatásához a **nyílgombokkal** kattints
+        a \"Futtatás\" gombra.  \r\n\r\nA szint teljesítéséhez juss el az ajtóhoz,
+        és nyisd ki (a **szóköz** billentyűvel), hogy rá tudj lépni a benti narancssárga
+        négyzetre."
+      MC_HOC_2017_01: "A játékos mozgatásához a **nyílgombokkal** kattints a \"Futtatás\"
+        gombra.  \r\n\r\nA szint teljesítéséhez juss el az ajtóhoz, és nyisd ki (a
+        **szóköz** billentyűvel), hogy rá tudj lépni a benti narancssárga négyzetre."
+      MC_HOC_2017_01_Cole: Ezen az utazáson össze kell szedned az összes szerszámot.
+        A **nyílgombokkal** mozoghatsz, a győzelemhez juss el az úton fekvő ládáig.
+      MC_HOC_2017_01_Kiki: 'Az ezen a szinten való játékhoz kattints a játékterület
+        alatt látható narancssárga "Futtatás" gombra, majd mozgasd a játékost a **nyílgombokkal**.  '
+      MC_HOC_2017_01_RETRY: "{currentPlayerName} a ház foglya, de az Agent a segítségére
+        siet!   \r\n \r\n   \r\nIllessz egy \"mozgás előre\" blokkot az \"amikor fut\"
+        blokkba a munkaterületen, hogy az Agentet a [PressurePlate_Up] nyomólapra
+        vidd, majd nyomd meg a \"Futtatás\" gombot, és a nyílgombokkal juttasd ki
+        {currentPlayerName} játékost a házból a **láda** [chest] felvevéséhez.  "
+      MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} a ház foglya, de az Agent a
+        segítségére siet!   \r\n \r\n   \r\nIllessz egy \"mozgás előre\" blokkot az
+        \"amikor fut\" blokkba a munkaterületen, hogy az Agentet a [PressurePlate_Up]
+        nyomólapra vidd, majd nyomd meg a \"Futtatás\" gombot, és a nyílgombokkal
+        juttasd ki {currentPlayerName} játékost a házból a **láda** [chest] felvevéséhez.
+        \ "
+      MC_HOC_2017_02: A játékosnak be kell jutnia a rejtett ligetbe.  Segíts az Agentnek
+        kinyitni a kaput azzal, hogy úgy programozod, hogy a nyomólapra jusson.
+      MC_HOC_2017_02_Cole: "{currentPlayerName} kalandra készül! Hogy segíts neki,
+        szerezd meg a **térképet** [map_empty] a jobb oldali zárt ajtó mögül. \r\n
+        \r\nAz Agent nyomólapra [PressurePlate_Up] juttatásához és az ajtó kinyitásához
+        {currentPlayerName} számára illeszd a kódot a munkaterületre. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} kalandra készül! Hogy segíts
+        neki, szerezd meg a **térképet** [map_empty] a jobb oldali zárt ajtó mögül.
+        \r\n \r\nAz Agent nyomólapra [PressurePlate_Up] juttatásához és az ajtó kinyitásához
+        {currentPlayerName} számára illeszd a kódot a munkaterületre. "
+      MC_HOC_2017_02_Kiki: "A játékos kalandra készül, de először meg kell szereznie
+        a zárt ajtó mögött található fáklyát. \r\n\r\nProgramozd az Agentet úgy, hogy
+        kétszer előrelépjen a fehér útvonalon, és eljusson a nyomólapra, amely kinyitja
+        azt ajtót a játékos számára."
+      MC_HOC_2017_02_Will: "A szint teljesítéséhez a játékosnak rá kell lépnie a titkos
+        ligetben található narancssárga négyzetre.  \r\n\r\nA munkaterületen lévő
+        kóddal az Agent előrelép, és eljut a nyomólapra, amely kinyitja azt ajtót
+        Alex vagy Steve számára."
+      MC_HOC_2017_03_Cole: "{currentPlayerName} kalandjához egy **iránytűre** [compass]
+        is szükség lesz.  \r\n   \r\nProgramozd úgy az Agentet, hogy kinyissa a kaput. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} kalandjához egy **iránytűre**
+        [compass] is szükség lesz.  \r\n   \r\nProgramozd úgy az Agentet, hogy kinyissa
+        a kaput. "
+      MC_HOC_2017_03_Kiki: "A játékos kalandja a zárt ajtó mögött, a titkos ligetben
+        kezdődik.  \r\n\r\n\r\nSegíts az Agentnek kinyitni az ajtót azzal, hogy úgy
+        programozod, hogy a nyomólapra lépjen."
+      MC_HOC_2017_04: Módosítsd az utolsó kirakós ciklusát, hogy az Agent hidat építsen
+        a folyó szélesebb szakaszán.
+      MC_HOC_2017_04POINT5_Cole: "Kijutottál a mocsárból!  Most segíts a játékosnak
+        biztonságba, a narancssárga négyzetre jutni. \n\n\nNyiss utat az Agenttel
+        úgy, hogy egy egyszerű mintát találsz, és ciklusok segítségével eljutsz az
+        első két nyomólapra."
+      MC_HOC_2017_04POINT5_RYAN: "Keresztüljutottál! \r\n\r\nMost segíts {currentPlayerName}
+        játékosnak keresztüljutni a labirintuson és felvenni a **baltát** [diamond_axe]\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Keresztüljutottál! \r\n\r\nMost segíts {currentPlayerName}
+        játékosnak keresztüljutni a labirintuson és felvenni a **baltát** [diamond_axe]\r\n"
+      MC_HOC_2017_04_Cole: "Az Agent képes a vízen járni!  \r\n \r\nEgy \"ismétlés\"
+        ciklussal oldd meg a kirakóst, és juttasd el {currentPlayerName} játékost
+        az ajtó mögött található **vödörhöz** [bucket_empty]. "
+      MC_HOC_2017_04_Cole_2019: "Az Agent képes a vízen járni!  \r\n \r\nEgy \"ismétlés\"
+        ciklussal oldd meg a kirakóst, és juttasd el {currentPlayerName} játékost
+        az ajtó mögött található **vödörhöz** [bucket_empty]. "
+      MC_HOC_2017_04_Kiki: "A titkos liget után egy gyönyörű oázist találtál!  Ennek
+        a szintnek a teljesítéséhez a játékosnak a pihenőház narancssárga négyzetében
+        kell eljutnia.  \r\n\r\nAz \"ismétlés\" ciklussal segíts az Agentnek eljutni
+        a nyomólapra, amely kinyitja a pihenőház ajtaját."
+      MC_HOC_2017_05: "A ciklusok nem mindig hasznosak. \n\n\nEzek a kaktuszok nem
+        egy szabályos minta szerint nőttek, ezért egy ciklus nem tisztítaná ki őket
+        megfelelően.  Ehelyett egy \"elpusztítás és mozgás\" nevű funkciót kaptál,
+        amely minden alkalommal elvégezi a nehéz munkát, amikor az Agent akadályba
+        ütközik."
+      MC_HOC_2017_05_Cole: "Ó, jaj, a híd leomlott! \r\n\r\nProgramozd az Agentet,
+        hogy építse újra a hidat az \"elhelyezés\" blokkal, hogy {currentPlayerName}
+        eljuthasson az **ásóhoz** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "Ó, jaj, a híd leomlott! \r\n\r\nProgramozd az Agentet,
+        hogy építse újra a hidat az \"elhelyezés\" blokkal, hogy {currentPlayerName}
+        eljuthasson az **ásóhoz** [diamond_shovel]."
+      MC_HOC_2017_05_Josh: "Ó, jaj, a híd leomlott! \r\n\r\nProgramozd az Agentet,
+        hogy építse újra a hidat, hogy a játékos eljuthasson az **ásóhoz**."
+      MC_HOC_2017_05_Kiki: "Itt az ideje, hogy a játékos elhagyja a titkos ligetet,
+        és folytassa a kalandját, de a híd leomlott out! \r\n\r\nSegíts az Agentnek
+        újraépíteni a hidat, majd menj a fapallóhoz, hogy a játékos eljuthasson a
+        narancssárga négyzetbe."
+      MC_HOC_2017_06_Cole: "Egy újabb folyó, de ez sokkal szélesebb! \r\n \r\nJavítsd
+        ki ezt a kódot, és segíts ezzel az Agentnek hidat építeni, hogy {currentPlayerName}
+        eljuthasson a **csákányhoz** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2019: "Egy újabb folyó, de ez sokkal szélesebb! \r\n \r\nJavítsd
+        ki ezt a kódot, és segíts ezzel az Agentnek hidat építeni, hogy {currentPlayerName}
+        eljuthasson a **csákányhoz** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Josh: "Egy újabb folyó, de ez sokkal szélesebb!  \r\n\r\nJavítsd
+        ki ezt a kódot, és segíts ezzel az Agentnek hidat építeni rá."
+      MC_HOC_2017_06_Kiki: "Egy újabb folyó, de ez sokkal szélesebb!  \r\n\r\nJavítsd
+        ki ezt a kódot, és segíts ezzel az Agentnek hidat építeni rá."
+      MC_HOC_2017_07_Cole: "Jég torlaszolja el az utat!  \r\n \r\nAz \"út szabaddá
+        tétele\" funkció segítségével feltörheted a jeget, és eljuttathatod {currentPlayerName}
+        játékost a csilléhez [minecart_normal]. "
+      MC_HOC_2017_07_Cole_2019: "Jég torlaszolja el az utat!  \r\n \r\nAz \"út szabaddá
+        tétele\" funkció segítségével feltörheted a jeget, és eljuttathatod {currentPlayerName}
+        játékost a csilléhez [minecart_normal]. "
+      MC_HOC_2017_07_Kiki: "Nemcsak ciklusokkal ismételhetsz meg egy kódot!  \r\n\r\nItt
+        egy \"kaktuszok elpusztítása\" funkciót adtunk, amely három kaktuszt tüntet
+        el minden alkalommal, amikor használod.  Két \"kaktuszok elpusztítása\" blokkal
+        tedd szabaddá a narancssárga négyzethez vezető utat. "
+      MC_HOC_2017_07a_Kiki: Most szerkeszd ezt a ciklust, hogy az Agent szabaddá tegye
+        az utat a narancssárga négyzet felé.
+      MC_HOC_2017_08_Cole: "Most ahelyett hogy a mozgás előtt pusztítasz, el kell
+        helyezned egy blokkot.   \r\n\r\nMódosítsd a kapott funkciót, hogy a sivatagban
+        működjön."
+      MC_HOC_2017_08_Kiki: "Most ahelyett hogy elpusztítanád a kaktuszokat, követ
+        kell helyezned a lávára, majd el kell pusztítanod a homokkövet.   \r\n\r\nMódosítsd
+        a kapott funkciót, hogy ezen a szinten működjön."
+      MC_HOC_2017_08_RY: "Most **KÉT** funkció közül választhatsz! \n\n\nEzekkel a
+        funkciókkal gyorsan hidat építhetsz a láva fölé {currentPlayerName} számára."
+      MC_HOC_2017_08_Will: "Most **KÉT** funkció közül választhatsz! \n\n\nEzekkel
+        a funkciókkal gyorsan hidat építhetsz a láva fölé a játékos számára."
+      MC_HOC_2017_09_Cole: Használd a funkciókat, hogy segíts az Agentnek elpusztítani
+        azokat a földblokkokat, amelyek elzárják a játékos nyomólaphoz vezető útját.
+      MC_HOC_2017_09_Kiki: "Az induló kód nem távolítható el.\r\n\r\nAdj hozzá parancsokat
+        a \"nyom létrehozása\" funkcióhoz, hogy a munkaterületen lévő program az Agentet
+        a nyomólaphoz irányítsa. "
+      MC_HOC_2017_09_RS_CLONE: Javítsd ki a funkciót a lyukak feltöltéséhez, majd
+        lépj a nyomólapra a fáklyához vezető út szabaddá tételéhez.
+      MC_HOC_2017_10_Cole: A funkciók segítségével tedd szabaddá a csilléhez vezető
+        utat, majd lépj  be az Alvilág-portálon.
+      MC_HOC_2017_10_Cole_old: Próbálj egy olyan funkciót az alapoktól felépíteni,
+        amely megkönnyíti az Agent számára a csille befejezését és a játékos eljuttatását
+        a narancssárga négyzetbe.
+      MC_HOC_2017_10_Kiki: Próbálj egy olyan funkciót az alapoktól felépíteni, amely
+        megkönnyíti az Agent számára a csille befejezését és a játékos eljuttatását
+        a narancssárga négyzetbe.
+      MC_HOC_2017_10_RETRY: "Észreveszed a különbséget a két funkció között a munkaterületen?
+        \r\n \r\nEzeket a funkciókat az eszköztárból származó más kódokkal együtt
+        használva szabaddá teheted az utat a csille előtt, majd felveheted **a kovakövet
+        és az acélt** [flint_and_steel]. \r\n "
+      MC_HOC_2017_10_RETRY_2019: "Észreveszed a különbséget a két funkció között a
+        munkaterületen? \r\n \r\nEzeket a funkciókat az eszköztárból származó más
+        kódokkal együtt használva szabaddá teheted az utat a csille előtt, majd felveheted
+        **a kovakövet és az acélt** [flint_and_steel]. \r\n "
+      MC_HOC_2017_10_RYAN: Próbálj olyan funkciókat az alapoktól felépíteni, amelyek
+        megkönnyítik az Agent számára a csille befejezését és a játékos eljuttatását
+        a narancssárga négyzetbe.
+      MC_HOC_2017_10_RYAN2: Próbálj olyan funkciókat az alapoktól felépíteni, amelyek
+        megkönnyítik az Agent számára a csille befejezését és a játékos eljuttatását
+        a narancssárga négyzetbe.
+      MC_HOC_2017_11_Kiki: Most rajtad múlik! Próbáld ki, mit tudsz alkotni a befagyott
+        tó körül.
+      MC_HOC_2017_13_Cole: "**Szabad játék:** Most rajtad múlik! Az Agent kódja segítségével
+        fedezd fel a világot."
+      MC_HOC_2017_4.5v2: "Kijutottál a mocsárból!  Most segíts a játékosnak biztonságba,
+        a narancssárga négyzetre jutni. \n\n\nNyiss utat az Agenttel úgy, hogy egy
+        egyszerű mintát találsz, és ciklusok segítségével eljutsz az első két nyomólapra."
+      MC_HOC_2017_Ali: 'Nézd meg az alábbi funkciókat.  Hogyan kerülheted el velük
+        a szellemeket, és hogyan segíthetsz velük {currentPlayerName} játékosnak biztonságban
+        eljutni a **varázskönyvhöz** [book_enchanted]?  '
+      MC_HOC_2017_Ali_2019: 'Nézd meg az alábbi funkciókat.  Hogyan kerülheted el
+        velük a szellemeket, és hogyan segíthetsz velük {currentPlayerName} játékosnak
+        biztonságban eljutni a **varázskönyvhöz** [book_enchanted]?  '
+      MC_HOC_2017_FP10x10: "**Szabad játék:** Most rajtad múlik! Össze tudod-e szedni
+        az ezen a szinten található összes gyémántot? "
+      MC_HOC_2017_FP10x10_RE: "**Szabad játék:** Most rajtad múlik! Össze tudod-e
+        szedni az ezen a szinten található összes gyémántot? "
+      MC_HOC_2017_FP20x20: "**Szabad játék:** Most rajtad múlik! Az Agent kódja segítségével
+        fedezd fel a világot."
+      MC_HOC_2017_FP20x20_2019: "**Szabad játék:** Most rajtad múlik! Az Agent kódja
+        segítségével fedezd fel a világot."
+      MC_HOC_2017_Ryan_03: "Tudtad, hogy egy ciklusba több kóddarabot is helyezhetsz?
+        \ \r\n\r\nAz \"ismétlés\" ciklust használva utasítsd az Agentet arra, hogy
+        építsen hidat a folyóra úgy, hogy blokkokat helyezel a vízbe."
+      MC_HOC_2017_Ryan_05: "Néha el kell pusztítanod a játékos útjában álló dolgokat.
+        \ \r\nHasználd a \"pusztítás\" blokkot az összes kaktusz eltüntetéséhez az
+        Agent és a nyomólap között."
+      MC_HOC_Kiki_02: Valakinek a nyomólapon kell állnia ahhoz, hogy az oldalajtó
+        kinyíljon.  Segíts az Agentnek a nyomólaphoz jutni, hogy a játékos elhagyhassa
+        a házat.
+      NEW Course 4 Artist Functions 12: Használd az előző feladvány `draw a line of
+        squares` függvényét az alábbi minta megrajzolásához.
+      NEW Course 4 Artist Functions 3: "Itt van egy új blokktípus. Ezt úgy hívják,
+        hogy `függvény` blokk. Kattints a \"szerkeszt\" gombra, és töltsd ki olyan
+        kóddal, ami egy 100 képpont oldalhosszúságú négyzetet rajzol.\r\n\r\nAmikor
+        végeztél a függvény szerkesztésével, kattints a \"Bezár\" gombra a programhoz
+        való visszatéréshez."
+      NEW Course 4 Artist Functions 9: Meg tudod ezt oldani egyetlen blokk hozzáadásával?
+      NEW Course 4 Artist Params 4: Észreveszel valamilyen különbséget ezekben a függvényekben?
+        Kattints a "Futtatás" gombra, és nézd meg, mi történik.
+      NEW Course 4 Artist Vars 12: Most csináld meg újra az előző pálya fejtörőjét
+        és rajzolj egy ötszöget 150 pixel széles oldalakkal.
+      NEW Course 4 Artist Vars 4: "Próbáljuk meg újra!\r\n\r\nBe tudod állítani a
+        `hossz` változó értékét 60-ra, hogy elkészítsd ezt a hatszögekből álló klassz
+        mintát?"
+      NEW Course 4 Artist Vars 6: "Rajzold meg ezt a 100 képpont oldalhosszúságú ötszögekből
+        álló mintát úgy, hogy beállítod a `hossz` értékét, majd a megfelelő helyekre
+        elhelyezed a `hossz` változót.\r\n\r\nLátod, hogy csak egyszer kell beállítanod
+        a `hossz` változó értékét, és mindenhol a helyes értéket használja a kód?"
+      New Minecraft Hero Project: "**Szabad játék:** Most rajtad múlik! Az Agent kódja
+        segítségével fedezd fel a világot."
+      Overworld Move to Sheep: Adj hozzá egy második előrelépni parancsot, hogy elérd
+        a bárányt.
+      Overworld Move to Sheep_2018: Adj hozzá egy második előrelépni parancsot, hogy
+        elérd a bárányt.
+      Overworld Move to Sheep_2019: Adj hozzá egy második előrelépni parancsot, hogy
+        elérd a bárányt.
+      Testing Quantum Farmer: 'Hoppá! Egy tényleg mély lyukat találtam! Nem tudom,
+        hány lapátnyi földre van szükségem. Tudsz olyan programot írni, ami teljesen
+        feltölti a lyukat a föld színéig? Tipp: Most az "amíg van" ciklust használd.'
+      course4_artist_fwp_challenge1: Próbálja meg futtatni ezt a programot, és változtassa
+        meg, hogy lássa, mi történik. Ki tudja kitalálni, hogyan fog működni? (Akár
+        törölheti az egészet, és írhat helyette valami teljesen mást)
+      courseD_bee_nestedLoops5: Gyűjtsd össze az összes nektárt az összes virágról,
+        és készíts mézet minden lépbe. Használj beágyazott ciklust!
+      courseD_bee_nestedLoops8: Gyűjtsd össze az összes nektárt az összes virágról,
+        és készíts mézet minden lépbe. Használj beágyazott ciklust!
+      courseD_bee_nestedLoops8_2018: Gyűjtsd össze az összes nektárt az összes virágról,
+        és készíts mézet minden lépbe. Használj beágyazott ciklust!
+      courseD_bee_nestedLoops8_2019: Gyűjtsd össze az összes nektárt az összes virágról,
+        és készíts mézet minden lépbe. Használj beágyazott ciklust!
+      courseD_maze_nestedLoops4: Juttass el a napraforgóhoz!
+      courseD_maze_nestedLoops4_2018: Juttass el a napraforgóhoz!
+      courseD_maze_nestedLoops4_2019: Juttass el a napraforgóhoz!
+      courseE_bee_functions3: A függvények olyan kódot tartalmazó blokkok, amelyek
+        elvégeznek egy feladatot.  Használd a "gyűjts 5" függvényt, hogy egyszerre
+        5 egység nektárt össze tudj gyűjteni. Ne felejts el ciklust használni és ügyelj
+        a számlálóra is.
+      courseE_bee_functions3_2018: A függvények olyan kódot tartalmazó blokkok, amelyek
+        elvégeznek egy feladatot.  Használd a "gyűjts 5" függvényt, hogy egyszerre
+        5 egység nektárt össze tudj gyűjteni. Ne felejts el ciklust használni és ügyelj
+        a számlálóra is.
+      courseE_farmer_concept4: |-
+        Most menjünk egy szinttel mélyebbre! Már beágyaztuk az egész kódblokkot egy másik ciklusba, de a
+        művészt vissza kell helyezned, hogy megrajzold a következő vonalat. Melyik blokkot kell a külső ciklus végére
+        helyezned a teljes rács megrajzolásához?
+      courseF_bee_for_challenge2: Oldd meg ezt a feladványt a legkevesebb blokk felhasználásával!
+      courseF_bee_for_challenge2_2018: Oldd meg ezt a feladványt a legkevesebb blokk
+        felhasználásával!
+      courseF_bee_for_challenge2_2019: Oldd meg ezt a feladványt a legkevesebb blokk
+        felhasználásával!
+      frozen circle function in circle: Most rajzoljunk 20 egymást átfedő kört! 18
+        fokot kell fordulni minden kör rajzolása után.
+      frozen circle function with parameter: Van itt egy olyan "készíts kört" blokk,
+        ami különböző méretű köröket tud készíteni. Fel tudod használni arra, hogy
+        készíts egy kicsi, 5 képpont méretű, és egy nagyobb, 10 képpont méretű kört?
+      frozen circle function: Használd a "készíts kört" blokkot, hogy 10 egymást átfedő
+        kör készüljön. Ne felejts el ugrani a körök között!
+      frozen circle: A kör egy különleges forma. Ki tudod találni, mit kell beírni
+        a kérdőjelek helyére, hogy meg tudjunk rajzolni egy kört?
+      frozen cross rotate dense: 'Most ismételjük meg 90-szer! Hányszor fér bele a
+        90 a 360-be? Tipp: egy igazán kis számra gondolok.'
+      frozen cross rotate: Most próbáld meg 10 alkalommal ismételni. Hány fokos szögben
+        kell elfordulnod a vonalak rajzolása közben?
+      frozen cross: Ágyazd be az "ismételd" blokkot az utasítások közé egy plusz jel
+        elkészítéséhez. Észrevetted, hogy Elza előre és hátra is tud mozogni?
+      frozen diamond mini snowflake: 'Tudtad, hogy minden hópehelynek másmilyen a
+        formája? Készítsünk most egy hópelyhet egy második "ismételd" blokkal: rajzoljuk
+        meg a parallelogrammát négyszer, a parallelogrammák között pedig mindig forduljunk
+        el 90 fokot.'
+      frozen diamond snowflake: Most készítsünk hópelyhet úgy, hogy 10 parallelogrammát
+        rajzolunk, és mindegyik után 36 fokot fordulunk jobbra.
+      frozen diamond: |-
+        Rajzolj paralelogrammát! Használj ismétlést a blokkok körül!
+        A paralelogramma olyan, mint a téglalap, de nem csak 90 fokos szögei lehetnek. Ennek például 120 és 60 fokos szögei vannak.
+      frozen freeplay: |-
+        Hivatalosan is egy mester művész lettél!
+        Hozz létre egy téli csodaországot!
+      frozen perpendicular: Most lássuk, sikerül-e két olyan vonalat létrehozni, amelyek
+        90 fokos szöget zárnak be? Használnod kell majd a fordulj és a mozgasd blokkokat.
+      frozen snowflake branch: Próbáld használni a "hozz létre egy hópehely ágat"
+        blokkot, hogy létrehozz három ágat. Ez már kezd úgy kinézni, mint egy hópehely.
+      frozen snowflake full: Most ismételjük meg 8-szor, hogy egy gyönyörű hópelyhet
+        készítsünk!
+      frozen snowflower: Egészen összetett hópihe mintákat is tudunk készíteni egyszerű
+        formákból. Meg tudod rajzolni ezt a mintát 5 darab 5 képpont méretű és 5 darab
+        10 képpont méretű kör felhasználásával?
+      frozen square iterative: Úgy tűnik, fél úton járunk ahhoz, hogy elkészüljön
+        egy négyzet. Rajzoljunk meg négy vonalat, hogy létrehozzuk a négyzetet.
+      frozen square loop 3x: Most készítsünk három négyzetet, és minden négyzet megrajzolása
+        után forduljunk el. Gondoskodj róla, hogy minden négyzet után 120 fokot forduljunk.
+      frozen square loop: Szia! Anna vagyok Arendelle-ből! Készítsünk négyzetet az
+        ismételd blokkal, így kevesebb blokkot kell felhasználnunk. Hányszor (???)
+        kell az ismételd blokknak lejátszania a benne lévő blokkokat, hogy elkészüljön
+        a négyzet?
+      frozen square snowflake: Tudsz készíteni egy hópelyhet az ismételd blokkal?
+        rajzoljunk négyzetet 10 alkalommal, és közben használjuk a fordulj blokkot
+        36 fokos elfordulásokkal minden négyzet után.
+      grade2_MakeDogTag_8: Most kössük össze ezt a sok V alakot! Rajzold őket egy
+        ciklusban!
+      grade2_PuppyLoops_10: A szélkerekem nincs befejezve. Hányszor kell ismételnem
+        a befejezéshez?
+      grade2_PuppyLoops_4: Használd a ciklusokat, hogy kevesebb blokkal jussunk a
+        malacig.
+      grade2_PuppyLoops_8: 'A három darukar rajzolásához írt kód láthatóan rossz.
+        Tipp: minden kar 75 pixel hosszú. Javítsd ki a kódot a darukarok megrajzolásához.'
+      grade2_PuppyLoops_9: Úgy tűnik, a C-t visszafelé rajzolja meg a kód. Meg tudod
+        csinálni, hogy igazi C-nek nézzen ki?
+      grade2_puppy_loops4: Használd a ciklusokat, hogy kevesebb blokkal jussunk a
+        malacig.
+      grade3_ConditionalsElse_2: A méh most csak nektárt akar gyűjteni. Emlékezz rá,
+        hogy nem minden elrejtett objektum virág, így először ellenőrizni kell, mert
+        csak virágról tud nektárt gyűjteni.
+      grade3_ConditionalsElse_5: Minden felhő alatt egy virágnak vagy egy lépnek kell
+        lennie. Használd a ha/különben blokkot nektár gyűjtésére, ha ott egy virág
+        van, különben készíts mézet (mert ez egy lép).
+      grade3_ConditionalsElse_6: Ennek a lila virágnak 3, 2 vagy 1 nektárja lehet.
+        Itt egy ha/különben blokk van kombinálva egy másik ha/különben blokkal,és
+        így létrejött egy ha, különben-ha, különben blokk. Egészítsd ki ezt a megoldást
+        úgy, hogy ismeretlen mennyiségű nektárt tudjon gyűjteni.
+      grade3_ConditionalsElse_7: Emlékezz, hogy a lila virágnak 3, 2 vagy 1 nektárja
+        lehet. Fejezd be a "check purple flower" (ellenőrizd a lila virágot) függvényt,
+        és használd az összes virág összes nektárjának összegyűjtésére.
+      grade3_ConditionalsElse_8: Írd meg a "check flower make honey" (ellenőrizd a
+        virágot és készíts mézet) függvényt.  A függvényednek ellenőriznie kell, hogy
+        hány nektárja van a lila virágnak, azokat összegyűjteni, előrelépni, és aztán
+        mézet készíteni.
+      grade3_ConditionalsElse_9: 'Értékelés: Ez a kód hibás. Egészítsd ki a "get nectar
+        or make honey" (gyűjts nektárt vagy készíts mézet) függvényt, majd hívd meg
+        futtatáskor, hogy összegyűjtse az összes nektárt és elkészítse az összes mézet.
+        Emlékezz, hogy a lila virágnak 3, 2 vagy 1 nektárja lehet.'
+      grade3_ConditionalsElse_TeacherIDo: Minden felhő alatt egy virágnak vagy egy
+        lépnek kell lennie. Használd a ha/különben blokkot nektár gyűjtésére, ha ott
+        egy virág van, különben készíts mézet (mert ez egy lép).
+      grade3_Conditionals_10: 'Gyűjts nektárt és készíts mézet! Tipp: mi történik,
+        ha a piros virágra alkalmazod a  "ha nektár" feltételt? Meg tudod csinálni
+        ezt a feladatot egy ciklussal?'
+      grade3_Conditionals_12: Mind a négy virágból gyűjts nektárt.
+      grade3_Conditionals_2: Segíts nekem nektárt gyűjteni a virágokból és mézet készíteni.
+        Használj ciklust.
+      grade3_Conditionals_8: Gyűjts nektárt azokból a virágokból, amelyekben van nektár.
+      grade3_Debugging_6: Ezek a blokkok igazán bogarasak. Javítsd ki a kódot, hogy
+        összegyűjtsük az összes nektárt és elkészítsük az összes mézet.
+      grade3_Debugging_9: Ezek a blokkok igazán bogarasak. Javítsd ki a kódot, hogy
+        összegyűjtsük az összes nektárt és elkészítsük az összes mézet.
+      grade3_Loops_3: Fel tudsz használni egy ciklust a nektár összegyűjtéséhez?
+      grade3_Loops_4: Most használd az "ismételd" blokkot, hogy összegyűjtsük az összes
+        nektárt és elkészítsük az összes mézet.
+      grade3_Loops_6: Mi történik, ha 3 alkalommal ismételed ezt a sorozatot? Ne felejtsd
+        el elkészíteni a mézet a végén!
+      grade3_Loops_7: Minden virág egy egység nektárt tartalmaz. Minden virágról gyűjtsd
+        be a nektárt.
+      grade3_Loops_TeacherIDo: Minden virág egy egység nektárt tartalmaz. Minden virágról
+        gyűjtsd be a nektárt.
+      grade3_bee_conditionals_quantum2: A méh most csak nektárt akar gyűjteni. Emlékezz
+        rá, hogy nem minden elrejtett objektum virág, így először ellenőrizni kell,
+        mert csak virágról tud nektárt gyűjteni.
+      grade3_maze_loops2: Juttass el a napraforgóhoz!
+      grade3_maze_nestedLoops4: Használd a ciklusokat, hogy kevesebb blokkal jussunk
+        a malacig.
+      grade4_arist_nested_loop_flags1: Ismételd meg a megadott kódot annyiszor, hogy
+        szélmalmot készíts.
+      grade4_arist_nested_loop_polygons1: 'Rajzold meg ezt az alakzatot tízszer. Hány
+        fokot kell fordulnod minden egyes ismétlésnél? (Tipp: Mennyi 360 osztva 10-zel?)'
+      grade4_arist_nested_loop_polygons2: 'Ismételd meg azt az alakzatot hatszor.
+        Hány fokot kell elfordulnod ismétlésenként? (Tipp: Mennyi 360 osztva 6-tal?)'
+      grade4_arist_nested_loop_triangles3: Meg tudod rajzolni a hatszöget a háromszög
+        rajzoló kód ciklusba ágyazásával?
+      grade4_arist_nested_loop_triangles4: Rajzold meg az alligátor alsó fogsorát!
+      grade4_arist_nested_loop_triangles5: "Készíts egy napocskát a kiindulási kód
+        másik ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\r"
+      grade4_arist_nested_loop_triangles6: Meg tudod rajzolni ezt a 36 darab háromszöget
+        egymásba ágyazott ciklusok segítségével?
+      grade4_artist_functions2: A függvények segítségével új blokkokat határozhatsz
+        meg! A "rajzoljon egy négyzetet" függvény megalkotásához belehúztuk a szükséges
+        blokkokat. Fel tudod használni a "rajzoljon egy négyzetet" függvényt szemüveg
+        készítéséhez? A négyzetek 75 pixel távolságra vannak egymástól.
+      grade4_artist_nested_loop_flags1: Ismételd meg a megadott kódot annyiszor, hogy
+        szélmalmot készíts.
+      grade4_artist_nested_loop_polygons1: 'Rajzold meg ezt az alakzatot tízszer.
+        Hány fokot kell fordulnod minden egyes ismétlésnél? (Tipp: Mennyi 360 osztva
+        10-zel?)'
+      grade4_artist_nested_loop_triangles5: "Készíts egy napocskát a kiindulási kód
+        másik ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\r"
+      grade4_artist_nested_loop_triangles6: Meg tudod rajzolni ezt a 36 darab háromszöget
+        egymásba ágyazott ciklusok segítségével?
+      grade4_artist_parameters_triangles2: Észreveszel valamilyen különbséget ezekben
+        a függvényekben? Kattints a "Futtatás" gombra, és nézd meg, mi történik.
+      grade4_bee_conditionals_quantum2: A méh most csak nektárt akar gyűjteni. Emlékezz
+        rá, hogy nem minden elrejtett objektum virág, így először ellenőrizni kell,
+        mert csak virágról tud nektárt gyűjteni.
+      grade4_bee_conditionals_quantum5: Minden felhő alatt egy virágnak vagy egy lépnek
+        kell lennie. Használd a ha/különben blokkot nektár gyűjtésére, ha ott egy
+        virág van, különben készíts mézet (mert ez egy lép).
+      grade4_bee_functions3: A függvények olyan kódot tartalmazó blokkok, amelyek
+        elvégeznek egy feladatot.  Használd a "gyűjts 5" függvényt, hogy egyszerre
+        5 egység nektárt össze tudj gyűjteni. Ne felejts el ciklust használni és ügyelj
+        a számlálóra is.
+      grade4_bee_nestedLoops4: Gyűjtsd össze az összes nektárt az összes virágról,
+        és készíts mézet minden lépbe. Használj beágyazott ciklust!
+      grade4_frozen_freeplay: |-
+        Hivatalosan is egy mester művész lettél!
+        Hozz létre egy téli csodaországot!
+      grade4_frozen_functions0: A kör egy különleges forma. Ki tudod találni, mit
+        kell beírni a kérdőjelek helyére, hogy meg tudjunk rajzolni egy kört?
+      grade4_frozen_functions1a: Használd a "készíts kört" blokkot, hogy 10 egymást
+        átfedő kör készüljön. Ne felejts el ugrani a körök között!
+      grade4_frozen_functions2: Most rajzoljunk 20 egymást átfedő kört! 18 fokot kell
+        fordulni minden kör rajzolása után.
+      grade4_frozen_functions3: Van itt egy olyan "készíts kört" blokk, ami különböző
+        méretű köröket tud készíteni. Fel tudod használni arra, hogy készíts egy kicsi,
+        5 képpont méretű, és egy nagyobb, 10 képpont méretű kört?
+      grade4_frozen_functions4: Egészen összetett hópihe mintákat is tudunk készíteni
+        egyszerű formákból. Meg tudod rajzolni ezt a mintát 5 darab 5 képpont méretű
+        és 5 darab 10 képpont méretű kör felhasználásával?
+      grade4_frozen_nested_loop_diamonds2: 'Tudtad, hogy minden hópehelynek másmilyen
+        a formája? Készítsünk most egy hópelyhet egy második "ismételd" blokkal: rajzoljuk
+        meg a parallelogrammát négyszer, a parallelogrammák között pedig mindig forduljunk
+        el 90 fokot.'
+      grade4_frozen_nested_loop_diamonds3: Most készítsünk hópelyhet úgy, hogy 10
+        parallelogrammát rajzolunk, és mindegyik után 36 fokot fordulunk jobbra.
+      grade4_frozen_square: Szia! Anna vagyok Arendelle-ből! Készítsünk négyzetet
+        az ismételd blokkal, így kevesebb blokkot kell felhasználnunk. Hányszor (???)
+        kell az ismételd blokknak lejátszania a benne lévő blokkokat, hogy elkészüljön
+        a négyzet?
+      grade4_frozen_square_loop1: Szia! Anna vagyok Arendelle-ből! Készítsünk négyzetet
+        az ismételd blokkal, így kevesebb blokkot kell felhasználnunk. Hányszor (???)
+        kell az ismételd blokknak lejátszania a benne lévő blokkokat, hogy elkészüljön
+        a négyzet?
+      grade4_frozen_square_loop2: Most készítsünk három négyzetet, és minden négyzet
+        megrajzolása után forduljunk el. Gondoskodj róla, hogy minden négyzet után
+        120 fokot forduljunk.
+      grade4_frozen_square_loop3: Tudsz készíteni egy hópelyhet az ismételd blokkal?
+        rajzoljunk négyzetet 10 alkalommal, és közben használjuk a fordulj blokkot
+        36 fokos elfordulásokkal minden négyzet után.
+      grade4_review_artist2: "Erre a házra kell egy tető! Rajzold meg a háromszöget.
+        \ \r \r Tipp: mindhárom oldal azonos hosszúságú. \r \r <img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"
+        width=\"300\"/>"
+      grade4_review_artist3: |-
+        Az "ugrás" blokk vonalhúzás nélkül mozgatja a művészt.
+        Rajzolj szaggatott vonalat az "ugrás" és a "menj" blokkok segítségével.
+      grade4_review_bee1: Most használd az "ismételd" blokkot, hogy összegyűjtsük
+        az összes nektárt és elkészítsük az összes mézet.
+      grade5_artist_for_loops1: 'Rajzold ki ezt a háromszöget, aminek az oldalai 50
+        pixel hosszúak. Tipp: használd az "ismételd" blokkot!'
+      grade5_artist_for_loops10: |-
+        **Kihívás:** Kitalálod, hogy az eddig tanultak felhasználásával, hogyan hozhatod
+        létre ezt a 40 képpont oldalhosszúságú sokszögekből álló képet?
+      grade5_artist_for_loops5: "Egyetlen kis módosítás az előző kódon ezt az ábrát
+        eredményezi. Kitalálod, hogy mit kell módosítani?\r\n\r\nTipp: Valamit ki
+        kell törölnöd!"
+      grade5_artist_parameters_triangles2a: Észreveszel valamilyen különbséget ezekben
+        a függvényekben? Kattints a "Futtatás" gombra, és nézd meg, mi történik.
+      grade5_artist_variables_hexagons1: "Próbáljuk meg újra!\r\n\r\nBe tudod állítani
+        a `hossz` változó értékét 60-ra, hogy elkészítsd ezt a hatszögekből álló klassz
+        mintát?"
+      grade5_artist_variables_pentagon9: Most csináld meg újra az előző pálya fejtörőjét
+        és rajzolj egy ötszöget 150 pixel széles oldalakkal.
+      grade5_artist_variables_pentagons1: "Rajzold meg ezt a 100 képpont oldalhosszúságú
+        ötszögekből álló mintát úgy, hogy beállítod a `hossz` értékét, majd a megfelelő
+        helyekre elhelyezed a `hossz` változót.\r\n\r\nLátod, hogy csak egyszer kell
+        beállítanod a `hossz` változó értékét, és mindenhol a helyes értéket használja
+        a kód?"
+      grade5_playlab_variables13: Használd az "amikor a szereplő megérinti" blokkot,
+        és csak akkor küldd vissza a Kutyát a bal felső sarokba, amikor a Kutya megérint
+        más szereplőket.
+      grade5_playlab_variables2: Az előző feladvány versenye nem volt igazán fair.
+        Változtasd meg a `dog_speed` változó értékét úgy, hogy biztosan több zászlót
+        szerezz meg, mint a Macska. Az nyer, aki előbb összegyűjt 10 zászlót!
+      grade5_playlab_variables9: "Itt van egy `patrol` nevű függvény.\n\r\n\r\nSzerkeszd
+        a `patrol`függvényt úgy, hogy a macska 400 pixelt fel, majd 400 pixelt lefele
+        menjen."
+      level 'grade3_Loops_3: Fel tudsz használni egy ciklust a nektár összegyűjtéséhez?
+      level 'grade3_Loops_4: Most használd az "ismételd" blokkot, hogy összegyűjtsük
+        az összes nektárt és elkészítsük az összes mézet.
+      level 'grade3_Loops_6: Mi történik, ha 3 alkalommal ismételed ezt a sorozatot?
+        Ne felejtsd el elkészíteni a mézet a végén!
+      level 'grade3_Loops_7: Minden virág egy egység nektárt tartalmaz. Minden virágról
+        gyűjtsd be a nektárt.

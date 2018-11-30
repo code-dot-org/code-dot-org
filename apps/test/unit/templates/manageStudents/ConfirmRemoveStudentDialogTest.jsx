@@ -5,7 +5,8 @@ import {expect} from '../../../util/configuredChai';
 import ConfirmRemoveStudentDialog, {MINIMUM_TEST_PROPS} from '@cdo/apps/templates/manageStudents/ConfirmRemoveStudentDialog';
 import Button from '@cdo/apps/templates/Button';
 import {Header, ConfirmCancelFooter} from '@cdo/apps/lib/ui/SystemDialog/SystemDialog';
-import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '@cdo/apps/lib/util/urlHelpers';
+import {ADD_A_PERSONAL_LOGIN_HELP_URL, RELEASE_OR_DELETE_RECORDS_EXPLANATION} from '@cdo/apps/lib/util/urlHelpers';
+import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 const studentName = MINIMUM_TEST_PROPS.studentName;
 
@@ -54,10 +55,13 @@ describe('ConfirmRemoveStudentDialog', () => {
       <div>
         <Header text={i18n.removeStudentAndRecordsHeader({studentName})}/>
         <div>
+          <UnsafeRenderedMarkdown
+            markdown={i18n.removeStudentBody1()}
+          />
           <p>
-            <strong>{i18n.removeStudentBody1()}</strong>
-            {' '}
-            {i18n.removeStudentBody2()}
+            <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
+              {i18n.learnMore()}
+            </a>
           </p>
         </div>
         <ConfirmCancelFooter
@@ -85,14 +89,17 @@ describe('ConfirmRemoveStudentDialog', () => {
       <div>
         <Header text={i18n.removeStudentAndRecordsHeader({studentName})}/>
         <div>
+          <UnsafeRenderedMarkdown
+            markdown={i18n.removeStudentBody1()}
+          />
           <p>
-            <strong>{i18n.removeStudentBody1()}</strong>
-            {' '}
-            {i18n.removeStudentBody2()}
+            <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
+              {i18n.learnMore()}
+            </a>
           </p>
           <div>
             <p>
-              {i18n.removeStudentBody3()}
+              {i18n.removeStudentBody2()}
             </p>
             <Button
               text={i18n.removeStudentSendHomeInstructions()}
@@ -102,9 +109,6 @@ describe('ConfirmRemoveStudentDialog', () => {
               size={Button.ButtonSize.large}
               tabIndex="1"
             />
-            <p>
-              {i18n.removeStudentBody4()}
-            </p>
           </div>
         </div>
         <ConfirmCancelFooter

@@ -754,6 +754,10 @@ da:
           stages:
             Creating Functions:
               name: Oprettelse af funktioner
+        csp4-2017:
+          stages:
+            Simple Encryption:
+              name: Enkel kryptering
         csp5-2017:
           stages:
             While Loops:
@@ -904,6 +908,10 @@ da:
           stages:
             Bounce:
               name: Hoppe
+        hoc-encryption:
+          stages:
+            Simple Encryption:
+              name: Enkel kryptering
         fesbinary:
           title: Binære
           stages:
@@ -911,6 +919,8 @@ da:
               name: Binære armbånd
             Binary Images:
               name: Binære billeder
+            Play Lab:
+              name: Play Lab
         csd2-2017:
           stages:
             Lists:
@@ -1230,10 +1240,16 @@ da:
           stages:
             Creating Functions:
               name: Oprettelse af funktioner
+        pwc:
+          stages:
+            Simple Encryption:
+              name: Enkel kryptering
         hero:
           stages:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
+          description: Minecraft er tilbage med en splinterny aktivitet i En Times
+            Kodning! En rejse gennem Minecraft ved hjælp af kode.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1417,6 +1433,10 @@ da:
           stages:
             Creating Functions:
               name: Oprettelse af funktioner
+        csp4-2018:
+          stages:
+            Simple Encryption:
+              name: Enkel kryptering
         csp5-2018:
           stages:
             While Loops:
@@ -1431,3 +1451,96 @@ da:
               name: Flyt det, flyt det
             Your Digital Footprint:
               name: Dit digitale fodspor
+        frozen-2018:
+          stages:
+            Artist:
+              name: Kunstner
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Kunstner
+        dance:
+          stages:
+            Dance Party:
+              name: Dansefest
+          title: Dansefest
+          description_short: Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
+            Ciara og 25 andre!
+          description: Lav din egen dansefest sammen med dine venner.
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Kunstner
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Dansefest
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Dansefest
+        dance-extras:
+          title: Bliv ved med at danse
+          description: Overskrid den første time med udvidede projektideer.
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Opbygge et fundament
+            Conditionals with Cards:
+              name: Betingelser med kortspil
+            Envelope Variables:
+              name: Omslut variabler
+            For Loop Fun:
+              name: For loop sjov
+            The Artist:
+              name: Kunstneren
+        dance-low:
+          stages:
+            Dance Party:
+              name: Dansefest
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Stafet-programmering
+            Conditionals with Cards:
+              name: Betingelser med kortspil
+            Digital Citizenship:
+              name: Digital statsborgerskab
+            'Unplugged: Binary':
+              name: 'Unplugged: Binære'
+            Artist Binary:
+              name: Kunstner binære
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Opbygge et fundament
+            Nested Loops:
+              name: Indlejret Løkker
+            Conditionals with Cards:
+              name: Betingelser med kortspil
+            Conditionals:
+              name: Betingelser
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Stafet-programmering
+            Conditionals with Cards:
+              name: Betingelser med kortspil
+            Envelope Variables:
+              name: Omslut variabler
+            For Loop Fun:
+              name: For loop sjov
+            Binary Bracelets:
+              name: Binære armbånd
+            'Unplugged: Binary':
+              name: 'Unplugged: Binære'
+            Artist Binary:
+              name: Kunstner binære
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing

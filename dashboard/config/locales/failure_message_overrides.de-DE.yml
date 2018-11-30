@@ -69,6 +69,8 @@ de:
         mit dem Eisen Golem zu verfolgen und anzugreifen.
       WhileAdventure_failure_message_override: Herzlichen Glückwunsch!  Sie haben
         X Münzen gesammelt!
+      courseC19_playLab_EOC3_failure_message_override: Du musst deinem Spiel zwei
+        oder mehr Akteure hinzufügen und sie so programmieren dass sie sich bewegen.
       courseE_playLab_scaffold3_failure_message_override: Du musst deinem Spiel zwei
         oder mehr Akteure hinzufügen und sie so programmieren dass sie sich bewegen.
       courseE_playLab_scaffold3_2018_failure_message_override: Du musst deinem Spiel

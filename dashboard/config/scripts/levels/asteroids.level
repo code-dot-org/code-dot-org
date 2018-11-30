@@ -44,6 +44,7 @@
     "custom_helper_library": "function addBehaviorSimple(sprite, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}\r\nfunction draggable(sprite) {\r\n  var behavior = function(sprite) {\r\n  sprite.mouseActive=true;\r\n  if (sprite.mouseIsPressed) {\r\n    sprite.x=camera.mouseX;\r\n    sprite.y=camera.mouseY;\r\n  }\r\n  }\r\n  behavior.name='draggable';\r\n  return behavior;\r\n}\r\nfunction danceBehavior() {\r\n    var behavior = function(sprite) {\r\n    sprite.rotation+=6;\r\n    }\r\n    behavior.name=\"dancing\";\r\n    return behavior;\r\n}",
     "custom_blocks": "[\n  {\n    \"func\": \"draggable\",\n    \"args\": [],\n    \"blockText\": \"draggable\",\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"danceBehavior\",\n    \"args\": [],\n    \"blockText\": \"dancing\",\n    \"returnType\": \"Behavior\"\n  }\n]\n",
     "instructions": "This Corgi has been a good boy! Drag this carrot to him as a special treat.",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

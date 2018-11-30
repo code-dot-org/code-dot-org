@@ -1,0 +1,1128 @@
+---
+de:
+  data:
+    long_instructions:
+      "'pre-assessment survey q25A'": 'Falls ja, welche Informatikkurse hattest du
+        bereits vor deinem aktuellen Informatikkurs besucht?
+
+'
+      2-3 Artist 1 new: "Hallo, ich bin ein Künstler. Du kannst mich mit Code fast
+        alles zeichnen lassen. Benutze ein paar Blöcke um mich dazu zu bringen über
+        die grauen Linien im Bild zu zeichnen. (Jede Linie ist 100 Pixel lang)\r\n\r\n"
+      2-3 Artist 11: Gibt dem Stopp-Schild eine Umrandung, indem Du ein Achteck mit
+        100 Pixeln Kantenlänge zeichnest.
+      2-3 Artist 12: "Zeichne einen Kreis, um den Augapfel fertigzustellen!\n\r\n\r\nWenn
+        der Zeichner sich um 1 Grad mit jedem Schleifenschritt dreht, wie oft musst
+        Du den Code dann wiederholen, um einen Kreis zu zeichnen? "
+      2-3 Artist 2 new: Dieses Haus hat eine halbfertige Wand. Jede Seite ist 100
+        lang, aber die halbfertige nur 50. Vervollständigen sie die Wand.
+      2-3 Artist 3.4: "Der \"springe\"-Block bewegt den Künstler, ohne eine Linie
+        zu zeichnen. \nZeichne die gestrichelte Linie nach. Verwende dazu \"springe\"
+        und \"bewegen\"-Blöcke."
+      2-3 Artist 3new: "Der rote Hut ist 100 Pixel hoch. Zeichne einen schwarzen Hut
+        zu Ende, der 70 Pixel kleiner ist. \r \r\n*(Notiz: Die Breite der Hüte beträgt
+        je 50 Pixel.)*"
+      2-3 Artist 4: Hilf mir, das Haus für diese Katze zu vervollständigen.
+      2-3 Artist 6: "Dieses Haus braucht ein Dach! Zeichne das Dreieck.  \r \n\r \nHinweis:
+        \nalle drei Seiten sind gleich lang. \r\n\r \n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
+      2-3 Artist 7: "Zeichne die letzten Fenster auf die Schule, so dass jeder heraus
+        sehen kann. \r\n\r\nDie Seiten jedes quadratischen Fensters sind 25 Pixel
+        lang. "
+      2-3 Artist 8: "Zeit eine Scheune zu bauen.\r\n\r\nMache die Räume\nfür jedes
+        Tier, indem die Scheune in 2 gleich große Rechtecke aufgeteilt wird. \r\n\r\nHinweis:\nDie
+        Rechtecke sind 200 Pixel weit und 100 Pixel hoch.\r\n\r\nEs gibt viele verschiedene
+        Wege um das Rätsel zu lösen."
+      2-3 Artist 9 NEW: Vervollständige diesen Drachen
+      2-3 Artist 9 REPLACEMENT: Zeichne die restlichen Stufen.
+      2-3 Artist 9: Vervollständige diesen Drachen
+      2-3 Artist Assessment 1: "**Prüfung**: Zeichne den letzten Zahn fertig. Er ist
+        25 Pixel breit und 25 Pixel hoch."
+      2-3 Artist Debugging 1: "Dieser Hut sollte nur 50 Pixel breit sein.\n\r\nKannst
+        du das ändern?\r\n\r\n<br/>\r\n"
+      2-3 Artist Debugging 10: "Das Steuerkreuz auf meinem Game-Controller ist zu
+        klein. \r\n\r\nKannst Du es 10 Pixel breiter machen?.\r\n\r\nStarte das Programm
+        zuerst einmal, um zusehen, was du ändern musst."
+      2-3 Artist Debugging 11: Hilf mir, meine schöne Schneeflocke zu beenden. Wie
+        oft muss ich es „wiederholen“, um es zu beenden?
+      2-3 Artist Debugging 2: 'Der Code für die drei Schnurrhaare, die du siehst,
+        ist falsch. Hinweis: Jedes Schnurrhaar ist 75 Pixel lang. Verbessere diesen
+        Code, um die Schnurrhaare zu zeichnen.'
+      2-3 Artist Debugging 3: 'Mein Boot hat ein Loch! Kannst du es stopfen, indem
+        du den Winkel der Linie änderst? Hinweis: Der letzte Winkel weicht um 15 Grad
+        ab.'
+      2-3 Artist Debugging 5: 'Der Code für das Bein und den Fuß, den du siehst, ist
+        falsch. Hinweis:  Der Fuß ist zu lang, wir müssen möglicherweise einen Schritt
+        (Wortspiel beabsichtigt) löschen.'
+      2-3 Artist Debugging 6: "Ich scheine auf einen Stuhl, dem ein Bein fehlt, zu
+        sitzen.\r\n\r\nÄndere den Code, um das letzte Bein zu zeichnen."
+      2-3 Artist Debugging 7: Es sieht aus als ob C in Code spiegelverkehrt ist. Kannst
+        du es wie ein C aussehen lassen?
+      2-3 Artist Debugging 8: Mein Windrad ist noch nicht fertig. Wie oft muss ich
+        es „wiederholen“, um es zu beenden?
+      2-3 Artist Debugging 9: 'Der Code für diesen Stiel ist falsch. Hinweis:  Der
+        Winkel weicht um 60 Grad ab.'
+      2-3 Artist Debugging Assessment 1: "Warum ist das Quadrat um 75 Pixel zu klein
+        geraten?\r\n\r\nWo ist der Fehler? Kannst du es größer machen?"
+      2-3 Artist Free Play: Freies Spiel! Zeichne was du willst.
+      2-3 Artist Functions 1 a: |+
+        Ich Zombie-Künstler. Ich zeichnen liebe!
+
+        Hilf mir, eine quadratische Brille zu zeichnen.
+
+        Hinweis: Das Quadrat hat eine Seitenlänge von 100 Pixeln. Der Nasensteg zwischenbeiden Gläsern ist 25 Pixel kürzer als die Seitenlänge vom Quadrat.
+
+      2-3 Artist Functions 1: |+
+        Ich Zombie-Künstler. Ich zeichnen liebe!
+
+        Hilf mir, eine quadratische Brille zu zeichnen.
+
+        Hinweis: Das Quadrat hat eine Seitenlänge von 100 Pixeln. Der Nasensteg zwischenbeiden Gläsern ist 25 Pixel kürzer als die Seitenlänge vom Quadrat.
+
+      2-3 Artist Functions 11.5: Hier ist die gleiche „Zeichne ein Sechseck“-Funktion.
+        Was passiert, wenn du bei jeder Wiederholung nur um 60 Grad drehst?
+      2-3 Artist Functions 12 Mike: 'Funktionen sind für das mehrfache Zeichnen von
+        komplexen Dingen wirklich toll. Kannst du die Funktion „zeichne eine Blume“
+        benutzen, um das restliche Feld mit Pflanzen zu füllen? (Hinweis: Die Pflanzen
+        haben alle 100 Pixel Abstand zueinander.)  '
+      2-3 Artist Functions 12 a: 'Funktionen sind für das mehrfache Zeichnen von komplexen
+        Dingen wirklich toll. Kannst du die Funktion „zeichne eine Blume“ benutzen,
+        um das restliche Feld mit Pflanzen zu füllen? (Hinweis: Die Pflanzen haben
+        alle 100 Pixel Abstand zueinander.)  '
+      2-3 Artist Functions 12: 'Funktionen sind für das mehrfache Zeichnen von komplexen
+        Dingen wirklich toll. Kannst du die Funktion „zeichne eine Blume“ benutzen,
+        um das restliche Feld mit Pflanzen zu füllen? (Hinweis: Die Pflanzen haben
+        alle 100 Pixel Abstand zueinander.)  '
+      2-3 Artist Functions 2 a: "Funktionen erlauben dir neue Blöcke zu definieren!
+        \n\nWir haben die Blöcke die du brauchst um ein Quadrat zu zeichnen in eine
+        Funktion namens „zeichne ein Quadrat“ verschoben. Versuche die Funktion „zeichne
+        ein Quadrat“ zu benutzen um die Brille zu erstellen!\n Die Quadrate haben
+        einen Abstand von 75 Pixel."
+      2-3 Artist Functions 2: Funktionen erlauben dir, neue Blöcke zu definieren!
+        Wir haben die Blöcke in eine Funktion namens „zeichne ein Quadrat“ verschoben,
+        um ein Quadrat zu zeichnen. Kannst du die Funktion „zeichne ein Quadrat“ benutzen,
+        um die Gläser zu erstellen? Die Quadrate haben einen Abstand von 75 Pixel.
+      2-3 Artist Functions 3 a: "Ändere die Funktion \"zeichne ein Quadrat\" um die
+        Brillengläser mit Rahmen zu zeichnen, die eine Seitenlänge von 115px haben.
+        \n\nDie Quadrate sind jetzt 45 Pixel auseinander."
+      2-3 Artist Functions 3: Bearbeite die Funktion, um ein Quadrat mit einer Seitenlänge
+        von 115 und zeichne die größeren Gläser. Die Quadrate sind jetzt 45 Pixel
+        auseinander.
+      2-3 Artist Functions 4: Verwende den „Wiederholen"-Block, um diese 3 Quadrate
+        zu zeichnen.
+      2-3 Artist Loops 1: Kannst du ein Sechseck mit Seiten, die 100 Pixel lang sind,
+        zeichnen, um die Zelle zu beenden? Bedenke, das du nur 60 Grad drehen musst!
+      2-3 Artist Loops 2: Jetzt verwende einen Wiederholen-Block, um die Zelle zur
+        Muschel zu machen.
+      2-3 Artist Loops New 1: |
+        Lasst uns den Kopf des Roboters malen! Kannst du ein Quadrat malen, dessen Seiten 100 Pixel lang sind?
+
+        <br/>
+      2-3 Artist Loops New 10: Jetzt lass uns einen Haufen V's miteinander verbinden,
+        sie in einer Schleife zeichnen.
+      2-3 Artist Loops New 12: Zeichne einen Diamanten mit einer Seitenlänge von 100
+        Pixel.
+      2-3 Artist Loops New 13: Zeichne nun den Diamanten 3 Mal in einer Schleife.
+      2-3 Artist Loops New 15: |
+        Zeichne etwas, wozu du gerade Lust hast!
+        <br/><br/>
+      2-3 Artist Loops New 2: Hier ist Teil des Codes, den du verwendet hast, um das
+        Quadrat zu zeichnen. Was passiert, wenn du den Wiederholen-Baustein verwendest,
+        um diesen Code 4 Mal auszuführen?
+      2-3 Artist Loops New 9: Zeichne ein einfaches V, bei dem beide Seiten 50 Pixel
+        lang sind, um den Pfeil zu vervollständigen.
+      2-3 Artist Nested Loops 10: Wiederhole diesen Code 12 Mal, um das Muster zu
+        zeichnen.
+      2-3 Artist Nested Loops 11: Wiederhole diesen Code 4 Mal, um das Muster zu vervollständigen
+        und drehe es um 90 Grad nach jedem Kreis.
+      2-3 Artist Nested Loops 12: Wiederhole diesen Code 12 Mal, um die Wirbel zu
+        vervollständigen.
+      2-3 Artist Nested Loops 2: Jetzt soll das Dreieck 6 Mal wiederholt werden. Nach
+        jedem Dreiecksdurchlauf musst du eine 60-Grad-Drehung ausführen, bevor du
+        das nächste zeichnest.
+      2-3 Artist Nested Loops 4: 'Wiederhole diesen Diamanten 12 Mal, um eine Blume
+        zu zeichnen. Hinweis:  12 Diamanten sind vergleichbar mit den 12 Dreiecken,
+        die du gemacht hast - wie viel Grad musste die Drehung betragen, die Du nach
+        jeder Figur ausführen musstest?'
+      2-3 Artist Nested Loops 5: Setze mithilfe einer verschachtelten Schleife Fenster
+        in das Gebäude. Die Fenster sind 20 Pixel lang und liegen 20 Pixel auseinander.
+      2-3 Artist Nested Loops 6: Dieser Dinosaurier hat 8 Spitzen am Schwanz. Jede
+        Spitze ist 30 Pixel lang. Das Dreieck muss 8 mal durchlaufen werden, aber
+        sorge dafür, dass es sich nach jedem Durchlauf vorwärts bewegt!
+      2-3 Artist Nested Loops 7: Wiederhole dieses Dreieck 10 mal, um die Sonne zu
+        zeichnen. Nach jeder Wiederholung muss eine Verschiebung und eine Drehung
+        erfolgen. Du kannst herausfinden, wie groß die Drehung sein muss, indem du
+        die Gradzahl eines Kreises durch die Anzahl der Figuren teilst, aus denen
+        die Sonne besteht.
+      2-3 Artist Nested Loops 8: Wir wollen nun etwas Gras zu unserem Bild hinzufügen.
+        Die Grasbüschel liegen 50 Pixel auseinander.
+      2-3 Artist Nested Loops 9: Wir vollenden das Bild, indem wir eine Blume hinzufügen.
+        Wiederhole diesen Diamanten 12 Mal, um deine Blume zu zeichnen.
+      2-3 Artist Nested Loops Free Play: Freies Spiel, zeichne irgendetwas Cooles
+        mit verschachtelten Schleifen.
+      2-3 Bee Conditionals 11: Sammle den Nektar dort, wo die Blüten Nektar haben.
+      2-3 Bee Conditionals 13: 'Sammle Nektar und stelle Honig her. Hinweis: Was passiert,
+        wenn du die „Wenn Nektar"- Bedingung auf eine rote Blüte anwendest? Kannst
+        du dies mit einer Schleife vervollständigen?'
+      2-3 Bee Conditionals 15: Sammle Nektar von allen vier Blumen.
+      2-3 Bee Conditionals 2: Hallo, ich bin eine hungrige Biene! Hilf mir dabei,
+        den ganzen Nektar aus den Blüten zu sammeln, indem du sowenige Schleifen wie
+        möglich benutzt.
+      2-3 Bee Conditionals 3: Hilf mir, den ganzen Nektar aus den Blüten zu sammeln
+        und Honig zu erzeugen. Benutze eine Schleife.
+      2-3 Bee Debugging 3: Diese Bausteine nerven mich wirklich. Korrigiere den/die
+        Fehler, sammle den ganzen Nektar und erzeuge den ganzen Honig.
+      2-3 Bee Debugging 6: Diese Bausteine nerven mich wirklich. Korrigiere den/die
+        Fehler, um den gesamten Nektar zu sammeln.
+      2-3 Bee Debugging 9: Diese Bausteine nerven mich wirklich. Korrigiere den/die
+        Fehler, sammle den ganzen Nektar und erzeuge den ganzen Honig.
+      2-3 Bee Functions 10: Lila Blüten haben entweder 1 oder 0 Nektar.  Erstelle
+        eine Funktion, die Nektar nur aus den lila Blüten sammelt, die Nektar haben.
+      2-3 Bee Functions 2: Funktionen sind Programm-Bausteine, die eine Aufgabe ausführen.
+        Verwende die „hohle 5“- Funktion, um gleichzeitig 5 mal Nektar zu holen. Stelle
+        sicher, dass eine Schleife verwendet wird, die eine optimale Blockzählung
+        ermöglicht.
+      2-3 Bee Functions 4: Die „bewege und hole Nektar“- Funktion dreht die Biene,
+        sammelt Nektar und bringt die Biene an den Ausgangsort zurück. Benutze die
+        Funktion, um den ganzen Nektar zu sammeln.
+      2-3 Bee Loops 1: Jede Blüte enthält eine Einheit Nektar. Sammle Nektar von jeder
+        Blüte.
+      2-3 Bee Loops 3A: Kannst du eine Schleife verwenden um den ganzen Nektar einzusammeln?
+      2-3 Bee Loops 3B: Verwende nun den Wiederholen-Baustein um den ganzen Nektar
+        aufzusammeln und den ganzen Honig zu erzeugen.
+      2-3 Bee Loops 4A: Versuche nun diese Sequenz mit Hilfe einer Schleife dreimal
+        zu wiederholen. Vergiss nicht am Schluss Honig zu erzeugen!
+      2-3 Bee Loops 8: 'Diese lila Blüten haben eine unbekannte Menge Nektar. Benutze
+        die „Solange Nektar“- Schleife, um den ganzen Nektar zu sammeln. Diese Schleife
+        wird solange durchlaufen, wie die Bedingung wahr ist - in diesem Fall: Nektar
+        > 0.'
+      2-3 Maze 15: Verwende zwei „Wiederholen“-Schleifen, um das Schwein mit der geringsten
+        Anzahl von Bausteinen zu schaffen.
+      2-3 Maze Loops 18: |-
+        Bring mich zu der Sonnenblume!
+        (Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen.
+      4-5 Artist 10: Drücke auf „Ausführen“, um den Code zu testen. Wiederhole den
+        Vorgang, bis die Zeichnung vollständig ist. Die Farben sind jedes Mal anders.
+      4-5 Artist 2: Kannst du diesen Code in eine Schleife bauen und so das Quadrat
+        vervollständigen?
+      4-5 Artist 5: Welchen Winkel verwendest du?
+      4-5 Artist 6: Dieses gleichseitige Dreieck hat die Winkel 60, 60, 60 Grad. Jede
+        Seite ist 200 Pixel. Vervollständige die Zeichnung.
+      4-5 Artist Free Draw 1: Freies Zeichnen!  Zeichne, was deine Inspiration dir
+        eingibt.
+      4-5 Artist Patterns 1: Kannst du dieses Quadrat mit Hilfe einer Schleife zeichnen?
+        Jede Seite hat eine Länge von 20 Pixeln.
+      4-5 Artist Patterns 12: Wenn du die Schleife kopierst und eine Linksdrehung
+        anstelle einer Rechtsdrehung ausführst, was passiert dann? Kannst du das wiederholen,
+        um diese Welle zu zeichnen?
+      4-5 Artist Patterns 13: Jetzt wollen wir das ganze vier mal durchlaufen lassen
+        und so den Bilderrahmen machen. Pass auf die Ecken auf - du kannst nicht einfach
+        eine 90- Grad- Drehung machen! Wenn eine Verschiebung um 3 Grad, 60 mal ausgeführt,
+        einen Halbkreis erzeugt, welcher dieser Code-Bausteine erzeugt dann einen
+        Viertelkreis für die Ecken?
+      4-5 Artist Patterns 3: Wir gehen jetzt eine Ebene nach unten. Wir haben den
+        ganzen Code- Baustein in eine andere Schleife geschachtelt, aber du musst
+        den Künstler wieder zurückholen, damit er die nächste Zeile zeichnet. Welchen
+        dieser Code- Bausteine kannst du am Schluss der äußeren Schleife einfügen,
+        damit das ganze Gitternetz gezeichnet wird?
+      4-5 Artist Patterns 8: Benutze eine Schleife, um dieses Sechseck mit 40 Pixeln
+        Seitenlänge und 60-Grad-Winkeln zu zeichnen.
+      4-5 Artist Patterns 9: 'Wiederhole nun den Code dreimal, um die ganze Zeile
+        zu zeichnen. Hinweis: Jedes Sechseck ist von den weitesten Punkten von rechts
+        nach links 80 Pixel breit.'
+      4-5 Artist Patterns Free Play: Freies Spielen - versuche dein Glück beim Entwerfen
+        deines eigenen Musters!
+      4-5 Bee Conditionals 2: Die Biene will jetzt nur Nektar. Nicht alle Objekte
+        sind Blumen, also sieh unter jeder Wolke nach, ob dort eine Blume versteckt
+        ist. Falls ja, dann kannst du Nektar sammeln.
+      4-5 Bee Conditionals 5: Vielleicht ist eine Blume oder eine Wabe unter diesen
+        Wolken. Benutze den „wenn/ansonsten"- Baustein um Nektar zu machen, wenn dort
+        eine Blüte ist, „ansonsten", um Honig zu erzeugen (weil dort eine Wabe ist).
+      4-5 Bee Conditionals 6: Diese lila Blüte kann entweder 3, 2 oder 1 Nektar haben.
+        Hier ist ein „wenn/ansonsten“-Baustein mit einem weiteren „wenn/ansonsten“-
+        Baustein kombiniert, damit ein „wenn, ansonsten-wenn, ansonsten“-Block erzeugt
+        wird. Vervollständige die Lösung, um eine unbekannte Menge Nektar zu sammeln.
+      4-5 Bee Conditionals 7: Bedenke, dass lila Blüten 3, 2, oder 1 Nektar tragen
+        können. Vervollständige die „Prüfe lila Blüte"- Funktion und benutze sie,
+        um den ganzen Nektar bei den Blüten zu sammeln.
+      4-5 Bee Conditionals 8: Schreibe innerhalb des Bausteins eine Funktion mit dem
+        Namen „Prüfe Blüte, erzeuge Honig“. Deine Funktion soll prüfen, ob die Blüte
+        3, 2 oder 1 Nektar hat und den ganzen Nektar sammeln. Gehe dann weiter und
+        erzeuge Honig.
+      4-5 Bee Conditionals Assessment 1: 'Prüfung: Dieser Code ist fehlerhaft. Vervollständige
+        die „sammle Nektar oder erzeuge Honig"- Funktion, dann rufe sie auf um den
+        ganzen Nektar einzusammeln und den Honig zu erzeugen. Bedenke, dass lila Blüten
+        3, 2, oder 1 Nektar tragen können.'
+      4-5 Bee Debugging 1: Diese Bausteine nerven mich wirklich. Kannst du sie in
+        Ordnung bringen?
+      4-5 Bee Debugging 6: Die lila Blüte hat eine unbekannte Menge Nektar. Bringe
+        die Bausteine in Ordnung, so dass der ganze Nektar aus der Blüte herausgeholt
+        wird.
+      4-5 Bee Nested Loops 4: Sammle den gesamten Nektar jeder Blüte und erzeuge Honig
+        bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
+      4-5 Bee Nested Loops Assessment 1: Prüfung - Sammle den gesamten Nektar und
+        erzeuge den gesamten Honig, indem du Schleifen benutzt.
+      4-5 Maze 9: Erzeuge eine Schleife mit dem „Wiederholen bis"-Baustein.
+      4-5 Maze Conditionals 1: Benutze den „Wiederholen"-Baustein, um den Zombie zur
+        Sonnenblume zu bringen.
+      4-5 Maze Conditionals 10: |-
+        Kannst Du dem Zombie helfen das schwierigere Labyrinth zu meistern, indem du nur gerade 3 zusätzliche Blocks hinzufügst?
+        Wenn Du es richtig machst, kann er jeden Weg mit Kurven gehen, egal, wie lange der Weg auch ist.
+      4-5 Maze Conditionals 2: Benutze den „Wiederholen"-Baustein, um den Zombie zur
+        Sonnenblume zu bringen.
+      4-5 Maze Conditionals 3: 'Benutze den „Wenn"-Baustein, damit ich entscheiden
+        kann, wann ich mich drehe. Hinweis: Du brauchst nur einen weiteren Baustein,
+        aber sieh dir an, wie wir das machen, damit du es beim nächsten Mal alleine
+        hinbekommst.'
+      4-5 Maze Conditionals 4: Ok, das ist wie die letzte Aufgabe, aber erinnere dich
+        daran, wie du den „Wenn"-Baustein und den „Wiederholen"-Baustein zusammen
+        verwendet hast.
+      4-5 Maze Conditionals 5: Ich will Sonnenblume! Verwende einen „Wenn"-Baustein,
+        um mich mit der geringsten Anzahl an Bausteinen zum Ziel zu bringen.
+      4-5 Maze Conditionals 6: Ich will Sonnenblume! Verwende einen „Wenn"-Baustein,
+        um mich mit der geringsten Anzahl an Bausteinen zum Ziel zu bringen.
+      4-5 Maze Conditionals 7: Ok, lass uns das nochmal üben. Das ist wieder beinahe
+        dasselbe, aber hüte dich vor den fleischfressenden Pflanzen!
+      4-5 Maze Conditionals 8: Die „Wenn-Ansonsten“-Bausteine überprüfen eine Bedingung
+        und führen dann entweder eine ODER eine andere Anweisung aus. Verwende diesen
+        neuen Baustein, um mich zur Sonnenblume zu bringen.
+      4-5 Maze Conditionals 9: Noch eine Übung mit dem „Wenn-Ansonsten" Baustein,
+        schaffst du es mit dem ersten Versuch?
+      4-5 Maze Conditionals Assessment 1: Benutze einen „Wiederholen bis"- und einen
+        „Wenn-Ansonsten"- Baustein und bringe mich so mit der geringstmöglichen Anzahl
+        an Bausteinen zur Sonnenblume.
+      4-5 Nested Loops 12: Kannst du diese 36 Dreiecke mit einer verschachtelten Schleife
+        zeichnen?
+      4-5 Nested Loops 3: Male eine Sonne indem Du den Startbefehl in einer anderen
+        Schleife benutzt. Dies nennt man eine verschachtelte Schleife.
+      4-5 Nested Loops 5: Benutze den angegebenen Code in einer Schleife, um eine
+        Windmühle zu erstellen.
+      4-5 Nested Loops 6: Kannst Du ein Sechseck zeichnen, indem Du den Dreieck-Code
+        in einer Schleife verwendest?
+      4-5 Nested Loops 7: 'Führe dieses Design 10 Mal aus. Um wie viel Grad musst
+        Du Dich bei jeder Wiederholung weiterdrehen? (Hinweis: Was ist 360 geteilt
+        durch 10?)'
+      4-5 Nested Loops 8: 'Führe dieses Design 6 Mal aus. Um wie viel Grad musst Du
+        Dich bei jeder Wiederholung weiterdrehen? (Hinweis: Was ist 360 geteilt durch
+        6?)'
+      4-5 Nested Loops 9: Zeichne die Zähne im Mund des Alligators!
+      4-5 While Loops 1: Bewege mich zu dem Loch und fülle es mit zwei Schaufeln voll
+        Erde, indem du den „Füllen"-Baustein benutzt.
+      4-5 While Loops 2: Bewege mich zu dem Erdhaufen und entferne ihn mit fünf Schöpfern
+        mit der Schaufel. Benutze dazu den „Entfernen"-Baustein.
+      4-5 While Loops 3: 'Bewege mich zum Haufen und entferne ihn vollständig, dann
+        bewege mich zum Loch und fülle es komplett auf.  Hinweis:  Verwende so wenig
+        Bausteine wie möglich.'
+      4-5 While Loops 4: 'Wow, ich habe ein richtig tiefes Loch gefunden! Ich weiß
+        nicht, wie viele Schaufeln Erde ich brauche.  Kannst du ein Programm schreiben,
+        mit dem das Loch gefüllt wird, bis der Boden eben ist?  Hinweis:  Versuche
+        es diesmal mit der Solange-Schleife.'
+      Artist Autorun Test: Verwende den „Wiederholen"-Block, um diese 3 Quadrate zu
+        zeichnen.
+      Course 4 Artist 13: Soll es noch weiter gehen?  Hier ist eine leere Fläche,
+        die Du frei gestalten kannst!
+      Course 4 Artist 6: 'Vervollständige den Code, um diese Dreiecke zu zeichnen.
+        Hinweis: Es gibt 3 Dreiecke innerhalb der 360-Grad-Drehung ... wie oft passt
+        3 in 360?'
+      Course 4 Artist 8: Zeichne diese Sonne, indem du diesen ganzen Code-Baustein
+        mehrmals durchlaufen lässt.
+      Course 4 Artist 8a: |-
+        Erinnerst du dich an diese Form?  Jetzt kannst du sie bauen, bekommst zum Anfang jedoch keine Bausteine von uns!
+        Hinweis: Es gibt 3 Dreiecke innerhalb der 360-Grad-Drehung ... wie oft passt 3 in 360?
+      Course 4 Artist Binary 1a: |-
+        Mit dieser Funktion hier kannst den Bauer auf Feldern mit einer ‚0‘ drehen, während er sich von links nach rechts und von oben nach unten bewegt.  Der Künstler wird die Quadrate ausfüllen, wenn er eine 1 sieht und die Quadrate ignorieren, wenn er eine 0 sieht.
+
+        Führe diesen Code aus, um zu sehen, wie der Künstler die Binärmethode anwendet um dieses Muster auszumalen.
+      Course 4 Artist For Loops 13: Hmm, die Figuren werden jedes Mal größer! Haben
+        wir dieses Problem nicht schon mal mit Variablen gelöst? Wie können wir die
+        Zähler-Variable dazu einsetzen, die Seiten kürzer zu machen, je mehr Seiten
+        es gibt? Versuche (100 / Zähler) Pixel weiter zu springen, anstatt einen festen
+        Abstand einzuhalten.
+      Course 4 Artist For Loops 4: 'Wie würdest du das Erlernte anwenden, um diese
+        Rechtecke zu zeichnen? Das kleinste Rechteck ist 15 Pixel lang, das größte
+        ist 300 Pixel lang, und jedes Rechteck ist 15 Pixel länger als sein Vorgänger. '
+      Course 4 Artist For Loops 6: Freies Spiel! Benutze eine „Zähle mit“-Schleife,
+        um eine Form deiner Wahl immer größer werden zu lassen.
+      Course 4 Artist For Loops 6a: Nimm drei kleine Änderungen an dem Code aus dem
+        vorherigem Level vor, um dies zu erreichen!
+      Course 4 Artist For Loops 8a: Eine kleine Änderung am Code des letzten Bildes
+        kann dieses Bild erzeugen. Kannst du herausfinden, was für eine Änderung es
+        ist?
+      Course 4 Artist For Loops Challenge_a: |-
+        Weißt du noch wie du alles verwenden musst, was du über das Erstellen von diesem Bild gelernt hast?
+
+        Brauchst du ein Hinweis? Klicke hier!
+      Course 4 Artist Vars 3: 'Diese Schleife hier zeichnet ein Quadrat. Es fehlt
+        allerdings noch etwas. Kannst du die Variable „Länge“ verwenden, um die richtige
+        Länge der Seiten herauszubekommen? '
+      Course 4 Bee 7: Wende alles an, was du bisher gelernt hast, um den gesamten
+        Nektar zu einzusammeln. Diese lila Blüte kann entweder 3, 2 oder 1 Nektar
+        haben.
+      Course 4 Bee For Loops 11: Was stimmt mit dieser Schleife nicht? Schaue, ob
+        du das repariert bekommst und lass die Biene allen Nektar sammeln.
+      Course 4 Bee Params 1: Die „Nimm 3 Nektar"-Funktion lässt die Biene sich drehen,
+        zum Nektar gehen und zurückkehren. Setze eine Programmablauf zusammen, der
+        mit dieser Funktion den ganzen Nektar einsammelt.
+      Course 4 Play Lab Params 4: Hier ist eine Funktion namens „Patrouille“. Ändere
+        sie so, dass die Katze sich 400 Pixel auf- und abwärts bewegt.
+      Course 4 Play Lab Params 8: Verwende den „Wenn Figur berührt"-Baustein, um den
+        Hund nach links-oben zurückzuschicken; aber NUR wenn der Hund eine andere
+        Figur berührt.
+      Course 4 Play Lab Vars 2: Das Rennen im letzten Rätsel war nicht sehr fair!
+        Ändere die Variable „Hunde_Geschwindigkeit“ so, dass du mehr Fahnen sammeln
+        kannst als die Katze. Der erste, der 10 Fahnen hat, gewinnt!
+      Course 4 Play Labs For Loops 1: Lass den Hund von 1 bis 100 zählen. Verwende
+        dazu eine „Zähle mit“-Schleife und den Zähler-Baustein, um bei jedem Schleifendurchlauf
+        zu sagen, was in der Zählvariablen steht.
+      Course 4 Playlab For Loops 5b: Passe die Schrittweite in der For-Schleife an,
+        so dass beide Figuren am Schluss an derselben Stelle zu stehen kommen.
+      Course 4 SCFP 1: Schaffe eine Funktion mit Parametern, die es der Figur erlaubt,
+        bei x Pixeln vor und zurück zu springen und bei y Pixeln auch hoch und runter
+        (und dabei positive und negative Zahlen nutzt).
+      Course 4 SCVP 1: Schaffe eine Funktion mit Parametern, die es der Figur erlaubt,
+        bei x Pixeln vor und zurück zu springen und bei y Pixeln auch hoch und runter
+        (und dabei positive und negative Zahlen nutzt).
+      CourseF_PlayLab_vars2: Das Rennen im letzten Rätsel war nicht sehr fair! Ändere
+        die Variable „Hunde_Geschwindigkeit“ so, dass du mehr Fahnen sammeln kannst
+        als die Katze. Der erste, der 10 Fahnen hat, gewinnt!
+      Dance_Party_01: |-
+        *Los geht‘s mit der Tanzparty!*
+
+        Ziehen Sie den Block "einen Neuen erstellen" in den Arbeitsbereich, und verbinden Sie ihn mit dem "Setup" -Block, um Ihren ersten Tänzer zu erstellen.
+
+        * *Sie können auch auf die Glühbirne links klicken, wenn Sie weitere Informationen oder zusätzliche Herausforderungen möchten.*
+      Dance_Party_01_low: |-
+        *Los geht‘s mit der Tanzparty!*
+
+        Ziehen Sie den Block "einen Neuen erstellen" in den Arbeitsbereich, und verbinden Sie ihn mit dem "Setup" -Block, um Ihren ersten Tänzer zu erstellen.
+
+        * *Sie können auch auf die Glühbirne links klicken, wenn Sie weitere Informationen oder zusätzliche Herausforderungen möchten.*
+      Dance_Party_02: |-
+        Lassen Sie den Elch tanzen!
+
+        Ziehen Sie den Block <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinden Sie ihn unterhalb des Blocks <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"Takte"</title></block></xml>. Ihr Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
+
+
+        **Takte** sind die zeitliche Struktur von Musik. In diesem Tutorial ist ein Takt vier Schläge lang.
+      Dance_Party_03: |-
+        *Jetzt grooven wir!*
+
+        Fügen Sie einen Block <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"Takte"</title></block></xml> zu Ihrem Arbeitsbereich hinzu. Lassen Sie den Tänzer nach 6 Takten einen neuen Tanzschritt beginnen.
+      Dance_Party_04: |-
+        *Dieser Tanz braucht etwas Pep!*
+
+        Suchen Sie in Ihrer Toolbox nach einem neuen Block, der Ihrem Tänzer einen Hintergrundeffekt hinzufügt. Beobachten Sie, wie sich die Effekte passend zur Musik verändern.
+      Dance_Party_05: |-
+        Verwenden Sie einen weiteren neuen Block, damit der Tänzer **alle 2 Takte** den Tanzschritt wechselt!
+
+        * Durch Auswahl von "(nächster)", "(vorheriger)" oder "(zufällig)" wird der Tänzer bei jeder Ausführung des Codes einen anderen Tanzschritt ausführen.
+      Dance_Party_06: |-
+        *Wir brauchen noch mehr Tänzer!*
+
+        Erstellen Sie einen Backup-Tänzer namens "backup_dancer1", der mit der Katze tanzt.
+      Dance_Party_08: |-
+        Jeder Tänzer hat eine Reihe von _Eigenschaften_, die steuern, wie er aussieht.
+
+        Sie können es aussehen lassen, als befinde sich der Tänzer im Hintergrund, indem Sie seine _Größe_ kleiner machen. Können Sie beide Backup-Tänzer gleich groß machen?
+      Dance_Party_09: |-
+        Tänzer haben eine "Farbton" -Eigenschaft, mit der man eine Farbschicht hinzufügen kann. Versuchen Sie, den Farbton eines Ihrer Tänzer zu verändern.
+        * Farbtöne mischen die gewählte Farbe mit den Farben des Tänzers.
+      Dance_Party_10: |-
+        Jetzt wissen wir, wie wir die Eigenschaften eines Tänzers ändern. Mit diesem Block können wir dafür sorgen, dass immer die gleichen Eigenschaften automatisch auf die Musik reagieren:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Dieses Programm verwendet den "Bass" (die tiefen Töne) der Musik, um die Höhe eines Tänzers zu kontrollieren. Können Sie die anderen Tänzer auch auf die Musik reagieren lassen?
+      Dance_Party_11.5_test: |-
+        Schauen Sie sich diesen Block an:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"ENTE"</title>
+        <title name="LAYOUT">"Kreis"</title>
+        </block></xml>
+
+        Jetzt können Sie eine ganze Reihe von Tänzern auf einmal erstellen!
+
+        Verwenden Sie einige der "alle Enten“-Blöcke, um Code zu schreiben, der alle Enten gemeinsam tanzen lässt.
+      Dance_Party_11: |-
+        Mit dem Block <xml><block type="Dancelab_whenKey"></block></xml> können Sie Code ausführen, wenn die Pfeiltaste nach oben gedrückt wird.
+
+        Sie können den Tanzschritt verändern, die Eigenschaften eines Tänzers verändern oder einen schnellen einmaligen Tanzschritt tun. Seien Sie kreativ und halten Sie Ausschau nach neuen Blöcken!
+      Dance_Party_11_5: |-
+        Schauen Sie sich diesen Block an:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"ENTE"</title>
+        <title name="LAYOUT">"Kreis"</title>
+        </block></xml>
+
+        Jetzt können Sie eine ganze Reihe von Tänzern auf einmal erstellen!
+
+        Verwenden Sie einige der "alle Enten“-Blöcke, um Code zu schreiben, der alle Enten gemeinsam tanzen lässt.
+      Dance_Party_11b: Es ist Zeit für einen Tanz-Wettbewerb! Die Katze dabt, wenn
+        Sie die linke Pfeiltaste drücken. Lassen Sie den Roboter "droppen", indem
+        Sie die rechte Pfeiltaste drücken.
+      Dance_Party_12: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
+        Sie ihn mit Ihren Freunden.
+      Dance_Party_3: "*Jetzt grooven wir!* \n\nFüge einen zweiten <xml><block type=\"Dancelab_atTimestamp\"><title
+        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"Takt\"</title></block></xml>
+        Block deinem Arbeitsbereich hinzu. Lass den Tänzer eine neue Bewegung machen,
+        nach 6 Takten."
+      Dance_Party_4: |-
+        *Dieser Tanz braucht mehr Biss*
+
+        Suche nach dem neuen Block, welcher dir Hintergrundeffekte ermöglicht. Verfolge wie die Effekte sich im Takt der Musik ändern!
+      Dance_Party_8: |-
+        Jeder Tänzer hat eine Sammlung von _Eigenschaften_, dies legt fest wie er aussieht.
+
+        Ein Tänzer wirkt weiter weg wenn du seine _Größe_ verringerst. Kannst du beiden Hintergrundtänzern die gleiche Größe geben?
+      Dance_Party_extras_battle: |-
+        # Tanz-Crews
+
+        Hier ist ein Tanzduell zwischen zwei Crews. Die Pfeiltasten steuern einen der Tänzer und die Tasten „w, a, s, d“ steuern den anderen. Liefere dir ein Tanzduell mit einem Freund, und versuche dann, dieses Tanzduell zu verbessern.
+
+        * Füge weitere Tasten zum Steuern der Tänzer hinzu
+        * Bringe die Backup-Tänzer dazu, ebenfalls zu reagieren, wenn die Tasten betätigt werden
+        * Wechsle die Tänzer nach jeweils 4 Takten durch das Festlegen ihrer Sichtbarkeit
+      Dance_Party_extras_every_beat: |-
+        # Viertelnoten
+
+        Für die meisten unserer Tänze wurden ganze Takte verwendet, aber jeder Takt setzt sich aus 4 Viertelnoten zusammen. Für diesen Tanz werden „alle 0,25 Takte“ verwendet, um den Tänzer bei jeder Viertelnote zum Klatschen zu bringen.
+
+        Für diesen Tanz wird auch ein _vorbehaltlicher_Block verwendet, um zu kontrollieren, wann der „alle 0,25 Takte“-Block den Tanz ändern kann. Versuche, die Zahlen in dem vorbehaltlichen Block zu ändern, um zu sehen, wie es den Tanz verändert.
+
+        * Experimentiere mit anderen Tondauern (wie 0,5 für eine halbe Note oder 0,125 für eine Achtelnote).
+        * Füge einige Events „nach dem Takt“ hinzu.
+        * Tausche „Takte“ und „Sekunden“ und versuche, deine Tänze auf diese Weise zeitlich abzustimmen.
+      Dance_Party_extras_layout: |-
+        # Nehmen wir die Formation ein!
+
+        Schaue dir diesen Tanz an, der den „Layout“-Block verwendet, um die Formation der Backup-Tänzer während des Tanzes zu ändern. Probiere eine dieser Ideen aus, um ihn zu verlängern:
+
+        * Erstelle eine zweite Gruppe von Tänzern in einem anderen Layout
+        * Ändere das Layout, wenn eine Taste gedrückt wird
+        * Ändere eine Eigenschaft, wenn die Tänzer ihre Formation ändern
+      Dance_Party_extras_on_beat: |-
+        # Bass, mittlerer Ton und Sopran
+
+        Dieser Tanz verwendet „Peak“-Ereignisse, um den Code auszulösen, wenn verschiedene Teile der Musik laut werden. Versuche, mit verschiedenen Liedern herumzuexperimentieren, um zu sehen, wie sie den Tanz verändern.
+      Dance_Party_extras_speed: |-
+        # Beschleunigen, verlangsamen
+
+        Dieser letzte Tanz nutzt den Block „festgelegte Geschwindigkeit“, um zu kontrollieren, wie schnell sich jeder Tänzer bewegt. Versuche, an verschiedenen Stellen im Lied mit unterschiedlichen Geschwindigkeiten zu experimentieren. Zögere nicht, bei diesem Tanz herumzuexperimentieren oder kehre zu einem der bisherigen Tänze zurück, um ihn noch cooler zu machen.
+      Dance_Party_extras_visible: |-
+        # Wo würden sie hingehen?
+
+        Dieser Tanz blendet zwei verschiedene Gruppen von Tänzern ein und aus. Sieh ihn dir an und versuche dann, dein eigenes Flair hinzuzufügen.
+
+        * Füge eine weitere Gruppe von Tänzern hinzu
+        * Blende Tänzer mithilfe der Pfeiltasten ein- und aus
+        * Blende alle der Tänzer aus und wechsle zu einem spannenden Hintergrundeffekt
+      Function intro Ryan: "In deinem Arbeitsbereich befindet sich eine **Funktion**
+        namens \"Brücke bauen\".  Sie umfasst den gesamten Code, den du zum Überqueren
+        des Flusses benötigst! \r\n \r\nDocke den kleinen, grünen Block zweimal in
+        deinem Arbeitsbereich an, um den Weg zu reparieren und {currentPlayerName}
+        zur Redstone-Fackel [redstone_torch] zu bringen."
+      Function intro Ryan_2019: "In deinem Arbeitsbereich befindet sich eine **Funktion**
+        namens \"Brücke bauen\".  Sie umfasst den gesamten Code, den du zum Überqueren
+        des Flusses benötigst! \r\n \r\nDocke den kleinen, grünen Block zweimal in
+        deinem Arbeitsbereich an, um den Weg zu reparieren und {currentPlayerName}
+        zur Redstone-Fackel [redstone_torch] zu bringen."
+      HOC 2018 Level_1: "Du benötigst für deine Reise Vorräte. Sammle ein **Boot**
+        ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        aus der **Truhe** ein![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
+      HOC 2018 Level_10: "Irgendwo in diesem Ozeanmonument versteckt sich ein **Tintenfisch**
+        ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png).
+        Findest du ihn?\n\n"
+      HOC 2018 Level_11: Baue eine Mauer aus **Prismarin** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        um den schwarzen Beton. Dies aktiviert den **Aquisator** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        und schließt die Herausforderung ab!
+      HOC 2018 Level_12: Glückwunsch! Die offene Meereswelt erwartet dich. Baue ein
+        Korallenriff! Einen Vulkan! Ein Schiffswrack! Du hast die Wahl.
+      HOC 2018 Level_2: Boote sind viel bequemer, als im offenen Wasser zu schwimmen!
+        Begib dich zum Ende des Anlegestegs, um an Bord zu gehen.
+      HOC 2018 Level_3: Schnapp dir die Ruder und fahre auf das offene Meer, um den
+        **Kabeljau** zu fangen![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Füttere den **dolphin** mit dem Kabeljau![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Verwende einen "Wiederholen"-Block, um den Ozean schneller zu überqueren.
+      HOC 2018 Level_5: Irgendwo ist eine **Nautilusmuschel** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        versteckt! Erkunde das Schiffswrack, um die **Truhe** zu erreichen![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      HOC 2018 Level_6: Sieht kalt aus! Fange auf dem Weg zu den Unterwasserruinen
+        einen **Lachs** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
+      HOC 2018 Level_7a: "Du hast die Unterwasserruine gefunden. Suche im Sandstein
+        nach eine **Truhe** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        mit **Prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      HOC 2018 Level_8: "Erst Eisberge, nun Lava? Durchquere diese Vulkaninsel, und
+        finde die **Tropenfische** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        im Korallenriff.\n\n"
+      HOC 2018 Level_9b: "Du hast das Riff erreicht. Suche jetzt nach dem **Herz des
+        Meeres** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
+        Verwende blaue und rote Korallen, um die Schatz**truhe** zu erreichen![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
+      HOC Dance 3_draft: |-
+        *Dieser Tanz braucht mehr Biss*
+
+        Suche nach dem neuen Block, welcher dir Hintergrundeffekte ermöglicht. Verfolge wie die Effekte sich im Takt der Musik ändern!
+      HOC Dance 4_draft: |-
+        Verwenden Sie einen weiteren neuen Block, damit der Tänzer **alle 2 Takte** den Tanzschritt wechselt!
+
+        * Durch Auswahl von "(nächster)", "(vorheriger)" oder "(zufällig)" wird der Tänzer bei jeder Ausführung des Codes einen anderen Tanzschritt ausführen.
+      HOC Dance 5_draft: |-
+        *Wir brauchen noch mehr Tänzer!*
+
+        Erstellen Sie einen Backup-Tänzer namens "backup_dancer1", der mit der Katze tanzt.
+      HOC Dance 6_draft: |-
+        Jeder Tänzer hat eine Sammlung von _Eigenschaften_, dies legt fest wie er aussieht.
+
+        Ein Tänzer wirkt weiter weg wenn du seine _Größe_ verringerst. Kannst du beiden Hintergrundtänzern die gleiche Größe geben?
+      HOC Dance 9_draft: |-
+        Mit dem Block <xml><block type="Dancelab_whenKey"></block></xml> können Sie Code ausführen, wenn die Pfeiltaste nach oben gedrückt wird.
+
+        Sie können den Tanzschritt verändern, die Eigenschaften eines Tänzers verändern oder einen schnellen einmaligen Tanzschritt tun. Seien Sie kreativ und halten Sie Ausschau nach neuen Blöcken!
+      HOC Dance Freeplay: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
+        Sie ihn mit Ihren Freunden.
+      HOC Dance Freeplay_draft: Grooven Sie los! Erstellen Sie einen eigenen Tanz
+        und teilen Sie ihn mit Ihren Freunden.
+      HOC Dance Predraw: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
+        Sie ihn mit Ihren Freunden.
+      K-1 Bee Loops 2: Verwende eine „Wiederhole“-Schleife zum Bewegen, dann den Nektar
+        einzusammeln und Honig herzustellen.
+      K-1 Bee Loops 3: Verwende drei „Wiederhole"-Schleifen, um Nektar zu holen und
+        Honig herzustellen.
+      K-1 Bee Loops 4: Verwende „Wiederhole"-Schleifen, um den Nektar einzusammeln,
+        Honig herzustellen und zum Bewegen.
+      K-1 Bee Loops 5: Verwende „Wiederhole"-Schleifen, um den Nektar und den Honig
+        zu sammeln.
+      K-1 Bee Loops 6: Verwende eine „Wiederhole"-Schleife, um den Nektar einzusammeln,
+        Honig herzustellen und zum Bewegen.
+      K-1 Maze Loops 11: |-
+        Bring mich zum Schwein!
+        Mit der „Wiederholen“-Schleife geht es leichter.
+      K-1 Maze Loops 12: |-
+        Bring mich zum Schwein!
+        Mit der „Wiederholen“-Schleife geht es leichter.
+      K-1 Maze Loops 2: Benutze die “Wiederholen"-Schleife, um mich zum Schwein zu
+        bringen.
+      K-1 Maze Loops 8: Benutze „Wiederholen“-Schleifen, um mich zum Schwein zu bringen.
+      MC Agent Freeplay: "**Freies Spiel:** Jetzt bist du dran! Verwende den Code
+        des Agenten, um die Welt zu erkunden."
+      MC_HOC_2017 Agent Test: "Klicke auf \"Ausführen\", um den Spieler mit den **Pfeiltasten**
+        zu bewegen.  \r\n\r\nUm dieses Level zu bestehen, musst du zur Tür gelangen
+        und diese öffnen (verwende die **Leertaste**). So kommst du zum orangenen
+        Quadrat drinnen."
+      MC_HOC_2017_01: "Klicke auf \"Ausführen\", um den Spieler mit den **Pfeiltasten**
+        zu bewegen.  \r\n\r\nUm dieses Level zu bestehen, musst du zur Tür gelangen
+        und diese öffnen (verwende die **Leertaste**). So kommst du zum orangenen
+        Quadrat drinnen."
+      MC_HOC_2017_01_Cole: Du musst auf deinem Weg alle Werkzeuge einsammeln. Bewege
+        dich mit den **Pfeiltasten** umher und erreiche die Truhe, um zu gewinnen.
+      MC_HOC_2017_01_Kiki: 'Klicke auf die orangefarbene "Ausführen"-Schaltfläche
+        unter dem Spielbereich, um dieses Level zu spielen. Bewege dann den Spieler
+        mit den **Pfeiltasten**.  '
+      MC_HOC_2017_01_RETRY: "{currentPlayerName} ist im Haus gefangen. Der Agent steht
+        jedoch zur Hilfe bereit!   \r\n \r\n   \r\nDocke im Arbeitsbereich einen \"vorwärts
+        bewegen\"-Block unter dem \"beim Ausführen\"-Block ein, um den Agenten auf
+        die Druckplatte [PressurePlate_Up] zu bringen. Wähle dann \"Ausführen\" aus
+        und verwende die Pfeiltasten, um {currentPlayerName} aus dem Haus zu bewegen
+        und die **Truhe** [chest] einzusammeln.  "
+      MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} ist im Haus gefangen. Der Agent
+        steht jedoch zur Hilfe bereit!   \r\n \r\n   \r\nDocke im Arbeitsbereich einen
+        \"vorwärts bewegen\"-Block unter dem \"beim Ausführen\"-Block ein, um den
+        Agenten auf die Druckplatte [PressurePlate_Up] zu bringen. Wähle dann \"Ausführen\"
+        aus und verwende die Pfeiltasten, um {currentPlayerName} aus dem Haus zu bewegen
+        und die **Truhe** [chest] einzusammeln.  "
+      MC_HOC_2017_02: Der Spieler muss in den verborgenen Hain gelangen.  Hilf dem
+        Agenten, das Tor zu öffnen, indem du Code schreibst, mit dem er sich zur Druckplatte
+        bewegt.
+      MC_HOC_2017_02_Cole: "{currentPlayerName} geht auf Abenteuertour! Hol die **Karte**
+        [map_empty] hinter der verschlossenen Tür rechts. \r\n \r\nDocke Code im Arbeitsbereich
+        an, um den Agenten auf die Druckplatte zu bewegen [PressurePlate_Up], damit
+        {currentPlayerName} durchkann. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} geht auf Abenteuertour! Hol die
+        **Karte** [map_empty] hinter der verschlossenen Tür rechts. \r\n \r\nDocke
+        Code im Arbeitsbereich an, um den Agenten auf die Druckplatte zu bewegen [PressurePlate_Up],
+        damit {currentPlayerName} durchkann. "
+      MC_HOC_2017_02_Kiki: "Der Spieler zieht zu einem Abenteuer los. Zuerst benötigt
+        er jedoch die Fackel, die sich hinter der verschlossenen Tür befindet. \r\n\r\nProgrammiere
+        den Agenten so, dass er sich zweimal vorwärts bewegt, um dem weißen Weg zu
+        folgen und zur Druckplatte zu gelangen. So kann er dem Spieler die Tür öffnen."
+      MC_HOC_2017_02_Will: "Um dieses Level abzuschließen, muss der Spieler zum orangefarbenen
+        Quadrat im verborgenen Hain gelangen. Es befindet sich hinter der Tür.  \r\n\r\nDer
+        Code im Arbeitsbereich sorgt dafür, dass sich der Agent zweimal vorwärtsbewegt,
+        um die Druckplatte zu erreichen und die Tür für Alex oder Steve zu öffnen."
+      MC_HOC_2017_03_Cole: "{currentPlayerName} setzt sein Abenteuer fort und benötigt
+        den **Kompass** [compass], um sich auf die Reise vorzubereiten.  \r\n   \r\nProgrammiere
+        den Agenten, um das Tor zu öffnen. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} setzt sein Abenteuer fort und
+        benötigt den **Kompass** [compass], um sich auf die Reise vorzubereiten.  \r\n
+        \  \r\nProgrammiere den Agenten, um das Tor zu öffnen. "
+      MC_HOC_2017_03_Kiki: "Das Abenteuer des Spielers beginnt hinter der verschlossenen
+        Tür im verborgenen Hain!  \r\n\r\n\r\nHilf dem Agenten beim Öffnen der Tür,
+        indem du ihn so programmierst, dass er die Druckplatte erreicht."
+      MC_HOC_2017_04: Ändere die Schleife aus der letzten Aufgabe so, dass der Agent
+        einen Weg über den breiteren Teil des Flusses baut.
+      MC_HOC_2017_04POINT5_Cole: "Du hast es aus dem Sumpf geschafft!  Bringe jetzt
+        den Spieler sicher zum orangefarbenen Quadrat. \n\n\nHilf dem Agenten beim
+        Räumen des Weges, indem du ein einfaches Muster entwirfst und es mit Schleifen
+        zum Überqueren der ersten beiden Druckplatten verwendest."
+      MC_HOC_2017_04POINT5_RYAN: "Du bist drüben! \r\n\r\nBringe {currentPlayerName}
+        jetzt sicher durch das Labyrinth, um die **Axt** [diamond_axe] einzusammeln.\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Du bist drüben! \r\n\r\nBringe {currentPlayerName}
+        jetzt sicher durch das Labyrinth, um die **Axt** [diamond_axe] einzusammeln.\r\n"
+      MC_HOC_2017_04_Cole: "Der Agent kann sich über Wasser bewegen!  \r\n \r\nVerwende
+        eine \"wiederholen\"-Schleife, um diese Aufgabe zu lösen und {currentPlayerName}
+        den **Eimer** [bucket_empty] hinter der Tür holen zu lassen. "
+      MC_HOC_2017_04_Cole_2019: "Der Agent kann sich über Wasser bewegen!  \r\n \r\nVerwende
+        eine \"wiederholen\"-Schleife, um diese Aufgabe zu lösen und {currentPlayerName}
+        den **Eimer** [bucket_empty] hinter der Tür holen zu lassen. "
+      MC_HOC_2017_04_Kiki: "Der Eintritt in den verborgenen Hain hat zu dieser wunderschönen
+        Oase geführt!  Um dieses Level zu bestehen, muss der Spieler das orangefarbene
+        Quadrat in der Hütte erreichen.  \r\n\r\nVerwende eine \"wiederholen\"-Schleife,
+        damit der Agent den Weg zur Druckplatte findet. Diese öffnet die Tür der Hütte."
+      MC_HOC_2017_05: "Schleifen sind nicht immer hilfreich. \n\n\nDiese Kakteen wachsen
+        kreuz und quer. Eine Schleife bringt hier also nichts.  Wir haben dir stattdessen
+        eine Funktion namens \"Zerstören und bewegen\" bereitgestellt. Diese erledigt
+        den schwierigen Teil für dich, sobald der Agent ein Hindernis erreicht."
+      MC_HOC_2017_05_Cole: "Oh nein! Die Brücke ist kaputt! \r\n\r\nProgrammiere den
+        Agenten mit dem \"platzieren\"-Block, um die Brücke neu zu bauen. Dann kann
+        {currentPlayerName} die **Schaufel** [diamond_shovel] erreichen."
+      MC_HOC_2017_05_Cole_2019: "Oh nein! Die Brücke ist kaputt! \r\n\r\nProgrammiere
+        den Agenten mit dem \"platzieren\"-Block, um die Brücke neu zu bauen. Dann
+        kann {currentPlayerName} die **Schaufel** [diamond_shovel] erreichen."
+      MC_HOC_2017_05_Josh: "Oh nein! Die Brücke ist kaputt! \n\n\nProgrammiere den
+        Agenten, um die Brücke neu zu bauen. Dann kann der Spieler die **Schaufel**
+        erreichen."
+      MC_HOC_2017_05_Kiki: "Jetzt muss der Spieler den verborgenen Hain verlassen
+        und sein Abenteuer fortsetzen. Die Brücke ist jedoch kaputt! \r\n\r\nHilf
+        dem Agenten beim Aufbauen der Brücke. Bewege dann das Holzbrett, damit der
+        Spieler das orangefarbene Quadrat erreichen kann."
+      MC_HOC_2017_06_Cole: "Noch ein Fluss. Aber dieser ist viel breiter! \r\n \r\nÄndere
+        den Code, damit der Agent eine Brücke baut. Dann kann {currentPlayerName}
+        die **Spitzhacke** [diamond_pickaxe] erreichen. "
+      MC_HOC_2017_06_Cole_2019: "Noch ein Fluss. Aber dieser ist viel breiter! \r\n
+        \r\nÄndere den Code, damit der Agent eine Brücke baut. Dann kann {currentPlayerName}
+        die **Spitzhacke** [diamond_pickaxe] erreichen. "
+      MC_HOC_2017_06_Josh: "Noch ein Fluss. Aber dieser ist viel breiter!  \r\n\r\nÄndere
+        den Code, damit der Agent eine Brücke über den Fluss baut."
+      MC_HOC_2017_06_Kiki: "Noch ein Fluss. Aber dieser ist viel breiter!  \r\n \r\nÄndere
+        den Code, damit der Agent eine Brücke über das Wasser baut."
+      MC_HOC_2017_07_Cole: "Da ist Eis im Weg!  \r\n \r\nDie \"Weg räumen\"-Funktion
+        hilft dir dabei, das Eis zu zerstören und {currentPlayerName} zur Lore [minecart_normal]
+        zu bringen! "
+      MC_HOC_2017_07_Cole_2019: "Da ist Eis im Weg!  \r\n \r\nDie \"Weg räumen\"-Funktion
+        hilft dir dabei, das Eis zu zerstören und {currentPlayerName} zur Lore [minecart_normal]
+        zu bringen! "
+      MC_HOC_2017_07_Kiki: "Schleifen sind nicht die einzige Möglichkeit, um Code
+        zu wiederholen!  \r\n\r\nHier hast du eine Funktion namens \"Kakteen räumen\".
+        Sie kümmert sich bei jeder Verwendung darum, drei Kakteen zu räumen.  Verwende
+        zwei \"Kakteen räumen\"-Blöcke, um den Weg zum orangenen Quadrat frei zu machen. "
+      MC_HOC_2017_07a_Kiki: Bearbeite jetzt die Schleife so, dass der Agent den Weg
+        zum orangefarbenen Quadrat frei macht.
+      MC_HOC_2017_08_Cole: "Statt vor sie dem Bewegen zu zerstören, musst du jetzt
+        einen Block platzieren.  \r\n\r\nÄndere die bereitgestellte Funktion so, dass
+        sie in der Wüste funktioniert."
+      MC_HOC_2017_08_Kiki: "Statt die Kakteen vor dem Bewegen zu zerstören, platzierst
+        du jetzt Stein auf Lava. Dann zerstörst du den Sandstein.  \r\n\r\nÄndere
+        die Funktion so, dass sie in diesem Level funktioniert."
+      MC_HOC_2017_08_RY: "Jetzt gibt es **ZWEI** Funktionen zur Auswahl! \n\n\nVerwende
+        die Funktionen, um schnell für {currentPlayerName} eine Brücke über die Lava
+        zu bauen."
+      MC_HOC_2017_08_Will: "Jetzt gibt es **ZWEI** Funktionen zur Auswahl! \n\n\nVerwende
+        die Funktionen, um dem Spieler schnell eine Brücke über die Lava zu bauen."
+      MC_HOC_2017_09_Cole: Verwende die Funktionen, damit der Agent die riesigen Erdblöcke
+        zerstört, die den Weg des Spielers zur Druckplatte blockieren.
+      MC_HOC_2017_09_Kiki: "Der Anfangscode kann nicht entfernt werden.\r\n\r\nFüge
+        Befehle zur \"Pfad erstellen\"-Funktion hinzu, damit das Programm im Arbeitsbereich
+        den Agenten zur Druckplatte lenkt. "
+      MC_HOC_2017_09_RS_CLONE: Repariere diese Funktion, um die Löcher zu füllen,
+        auf die Druckplatte zu treten und einen Weg zur Fackel zu räumen.
+      MC_HOC_2017_10_Cole: Verwende diese Funktionen, um einen Weg zur Lore zu räumen
+        und in das Netherportal zu gehen.
+      MC_HOC_2017_10_Cole_old: Versuche, eine Funktion neu zu erstellen, mit der der
+        Agent die Lore einfacher erstellt und der Spieler das orangefarbene Quadrat
+        erreicht.
+      MC_HOC_2017_10_Kiki: Versuche, eine Funktion neu zu erstellen, mit der der Agent
+        die Lore einfacher erstellt und der Spieler das orangefarbene Quadrat erreicht.
+      MC_HOC_2017_10_RETRY: "Siehst du den Unterschied zwischen den beiden Funktionen
+        im Arbeitsbereich? \r\n \r\nVerwende die Funktionen und anderen Code aus der
+        Werkzeugkiste, um einen Pfad für die Lore zu räumen und dann das **Feuerzeug**
+        [flint_and_steel] einzusammeln. \r\n "
+      MC_HOC_2017_10_RETRY_2019: "Siehst du den Unterschied zwischen den beiden Funktionen
+        im Arbeitsbereich? \r\n \r\nVerwende die Funktionen und anderen Code aus der
+        Werkzeugkiste, um einen Pfad für die Lore zu räumen und dann das **Feuerzeug**
+        [flint_and_steel] einzusammeln. \r\n "
+      MC_HOC_2017_10_RYAN: Versuche, Funktionen ganz neu zu erstellen, mit denen der
+        Agent seine Lore einfacher erstellt und der Spieler das orangefarbene Quadrat
+        erreicht.
+      MC_HOC_2017_10_RYAN2: Versuche, Funktionen ganz neu zu erstellen, mit denen
+        der Agent seine Lore einfacher erstellt und der Spieler das orangefarbene
+        Quadrat erreicht.
+      MC_HOC_2017_11_Kiki: Jetzt bist du dran! Probiere aus, was du rund um den gefrorenen
+        See machen kannst.
+      MC_HOC_2017_13_Cole: "**Freies Spiel:** Jetzt bist du dran! Verwende den Code
+        des Agenten, um die Welt zu erkunden."
+      MC_HOC_2017_4.5v2: "Du hast es aus dem Sumpf geschafft!  Bringe jetzt den Spieler
+        sicher zum orangefarbenen Quadrat. \n\n\nHilf dem Agenten beim Räumen des
+        Weges, indem du ein einfaches Muster entwirfst und es mit Schleifen zum Überqueren
+        der ersten beiden Druckplatten verwendest."
+      MC_HOC_2017_Ali: 'Sieh dir die Funktionen unten an. Wie kannst du diese verwenden,
+        um die Ghasts zu vermeiden und {currentPlayerName} beim sicheren Erreichen
+        des **Zauberbuchs** [book_enchanted] zu helfen?  '
+      MC_HOC_2017_Ali_2019: 'Sieh dir die Funktionen unten an. Wie kannst du diese
+        verwenden, um die Ghasts zu vermeiden und {currentPlayerName} beim sicheren
+        Erreichen des **Zauberbuchs** [book_enchanted] zu helfen?  '
+      MC_HOC_2017_FP10x10: "**Freies Spiel:** Jetzt bist du dran! Kannst du alle Diamanten
+        in diesem Level einsammeln? "
+      MC_HOC_2017_FP10x10_RE: "**Freies Spiel:** Jetzt bist du dran! Kannst du alle
+        Diamanten in diesem Level einsammeln? "
+      MC_HOC_2017_FP20x20: "**Freies Spiel:** Jetzt bist du dran! Verwende den Code
+        des Agenten, um die Welt zu erkunden."
+      MC_HOC_2017_FP20x20_2019: "**Freies Spiel:** Jetzt bist du dran! Verwende den
+        Code des Agenten, um die Welt zu erkunden."
+      MC_HOC_2017_Ryan_03: "Wusstest du, dass du mehr als ein Code-Element in eine
+        Schleife packen kannst?  \r\n\r\nVerwende eine \"wiederholen\"-Schleife, um
+        den Agenten Blöcke im Wasser platzieren zu lassen. So entstehe eine Brücke
+        über den Fluss."
+      MC_HOC_2017_Ryan_05: "Manchmal musst du Dinge beseitigen, die deinem Spieler
+        im Weg sind.  \r\nVerwende den \"zerstören\"-Block, um alle Kakteen zwischen
+        dem Agenten und der Druckplatte zu räumen."
+      MC_HOC_Kiki_02: Jemand muss auf die Druckplatte treten, damit sich die Tür öffnet.  Hilf
+        dem Agenten dabei, die Platte zu erreichen. Dann kann der Spieler das Haus
+        verlassen.
+      NEW Course 4 Artist Functions 10.1: Benutze die Funktionen aus der vorherigen
+        Aufgabe, um dieses Muster zu zeichnen.
+      NEW Course 4 Artist Functions 12: Zeichne dieses Muster mithilfe der Funktion
+        „Zeichne eine Reihe von Quadraten“ aus der letzten Aufgabe.
+      NEW Course 4 Artist Functions 3: Hier ist eine neue Art von Baustein. Er wird
+        als „Funktions“-Baustein bezeichnet. Klicke auf „Bearbeiten“, fülle ihn dann
+        mit dem Code zum Zeichnen eines Quadrates mit Seiten von 100 Pixeln. Wenn
+        du mit der Bearbeitung der Funktion fertig bist, klicke „Schließen“, um zu
+        deinem Programm zurückzukehren.
+      NEW Course 4 Artist Functions 9: Löse das Problem, indem du nur einen Baustein
+        hinzufügst.
+      NEW Course 4 Artist Params 4: Fällt dir irgendetwas Neues an diesen Funktionsbausteinen
+        auf? Klicke „Ausführen“, um zu sehen, was passiert.
+      NEW Course 4 Artist Vars 12: Schreib den Algorithmus vom letzten Level noch
+        mal hin und erstelle ein Fünfeck mit einer Seitenlänge von 150.
+      NEW Course 4 Artist Vars 4: 'Probieren wir es noch einmal. Kannst du die Variable
+        „Länge“ so einstellen, dass dieses coole Design aus Sechsecken entsteht? Hinweis:
+        Es ist ein Vielfaches von 10.'
+      NEW Course 4 Artist Vars 6: |-
+        Zeichne dieses Muster, indem du die Längenvariable an die richtigen Stellen setzt und dann den richtigen Wert für die Länge eingibst. (Hinweis: Es ist ein Vielfaches von 10).
+
+        So braucht man die Länge nur an einer Stelle zu setzen - und der Code verwendet den richtigen Wert an jeder Stelle!
+      New Minecraft Hero Project: "**Freies Spiel:** Jetzt bist du dran! Verwende
+        den Code des Agenten, um die Welt zu erkunden."
+      Overworld Move to Sheep: Füge einen zweiten „Vorwärts“-Befehl hinzu, um zu den
+        Schafen zu gelangen.
+      Overworld Move to Sheep_2018: Füge einen zweiten „Vorwärts“-Befehl hinzu, um
+        zu den Schafen zu gelangen.
+      Overworld Move to Sheep_2019: Füge einen zweiten „Vorwärts“-Befehl hinzu, um
+        zu den Schafen zu gelangen.
+      Testing Quantum Farmer: 'Wow, ich habe ein richtig tiefes Loch gefunden! Ich
+        weiß nicht, wie viele Schaufeln Erde ich brauche.  Kannst du ein Programm
+        schreiben, mit dem das Loch gefüllt wird, bis der Boden eben ist?  Hinweis:  Versuche
+        es diesmal mit der Solange-Schleife.'
+      course4_artist_fwp_challenge1: Versuche, dieses Programm auszuführen und verändere
+        es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert?
+        (Oder lösche es und ersetze es durch etwas ganz anderes)
+      courseA_maze_seq6_2018: Gehe einen Weg und dann einen anderen, um den Vogel
+        zum Schwein zu bringen!
+      courseA_maze_seq8_2018: Löse dieses Level und bring den Vogel zum Schwein!
+      courseB_artist_loops7: "**Aufgabe:** Es ist ein versteckter Garten! Lauf ein
+        bisschen herum."
+      courseB_artist_loops7_2018: "**Aufgabe:** Es ist ein versteckter Garten! Lauf
+        ein bisschen herum."
+      courseB_maze_seq3: '*"Repariere den Code, damit ich das Schwein bekomme!*"'
+      courseD_bee_nestedLoops5: Sammle den gesamten Nektar jeder Blüte und erzeuge
+        Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
+      courseD_bee_nestedLoops8: Sammle den gesamten Nektar jeder Blüte und erzeuge
+        Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
+      courseD_bee_nestedLoops8_2018: Sammle den gesamten Nektar jeder Blüte und erzeuge
+        Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
+      courseD_bee_nestedLoops8_2019: Sammle den gesamten Nektar jeder Blüte und erzeuge
+        Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
+      courseD_bounce_events1: "Berühre die Fahne. \r\nHänge einen Baustein an den
+        „wenn-Pfeil-nach-links“-Baustein und starte das Programm mit „Ausführen“ \r\n\r\nKlicke
+        mit der Maus auf den Linkspfeil, um den Spieler zur Fahne zu bewegen."
+      courseD_maze_nestedLoops4: |-
+        Bring mich zu der Sonnenblume!
+        (Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen.
+      courseD_maze_nestedLoops4_2018: |-
+        Bring mich zu der Sonnenblume!
+        (Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen.
+      courseD_maze_nestedLoops4_2019: |-
+        Bring mich zu der Sonnenblume!
+        (Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen.
+      courseE_bee_functions3: Funktionen sind Programm-Bausteine, die eine Aufgabe
+        ausführen. Verwende die „hohle 5“- Funktion, um gleichzeitig 5 mal Nektar
+        zu holen. Stelle sicher, dass eine Schleife verwendet wird, die eine optimale
+        Blockzählung ermöglicht.
+      courseE_bee_functions3_2018: Funktionen sind Programm-Bausteine, die eine Aufgabe
+        ausführen. Verwende die „hohle 5“- Funktion, um gleichzeitig 5 mal Nektar
+        zu holen. Stelle sicher, dass eine Schleife verwendet wird, die eine optimale
+        Blockzählung ermöglicht.
+      courseE_farmer_concept4: Wir gehen jetzt eine Ebene nach unten. Wir haben den
+        ganzen Code- Baustein in eine andere Schleife geschachtelt, aber du musst
+        den Künstler wieder zurückholen, damit er die nächste Zeile zeichnet. Welchen
+        dieser Code- Bausteine kannst du am Schluss der äußeren Schleife einfügen,
+        damit das ganze Gitternetz gezeichnet wird?
+      courseE_farmer_functions4b: Benutze deine neue Funktion um dieses Puzzle zu
+        lösen.
+      courseE_farmer_functions4b_2018: Benutze deine neue Funktion um dieses Puzzle
+        zu lösen.
+      courseF_bee_for_challenge2: Löse diese Aufgabe mit so wenig Bausteinen wie möglich.
+      courseF_bee_for_challenge2_2018: Löse diese Aufgabe mit so wenig Bausteinen
+        wie möglich.
+      courseF_bee_for_challenge2_2019: Löse diese Aufgabe mit so wenig Bausteinen
+        wie möglich.
+      frozen circle function in circle: Jetzt erstellen wir 20 überschneidende Kreise
+        und drehen die einzelnen Kreise um 18 Grad.
+      frozen circle function with parameter: Hier ist ein „Erzeuge einen Kreis“-Baustein,
+        der Kreise verschiedener Größe zeichnen kann. Kannst du ihn benutzen, um einen
+        kleinen Kreis, mit der Größe 5, und einen größeren Kreis, mit der Größe 10,
+        zu erstellen?
+      frozen circle function: Verwende den neuen „Erzeuge einen Kreis“-Baustein, um
+        10 sich überschneidende Kreise zu erstellen. Vergiss nicht zwischen den Kreisen
+        nach vorn zu springen.
+      frozen circle: Ein Kreis ist eine besondere Form. Kannst du herausfinden, durch
+        welche Zahl du das Fragezeichen ersetzen musst, um einen Kreis zu zeichnen?
+      frozen cross rotate dense: 'Wiederhole es 90 Mal! Wie oft geht 90 in 360? Hinweis:
+        Es ist eine sehr kleine Zahl.'
+      frozen cross rotate: Jetzt versuche, es zehn Mal zu wiederholen. Wie viel Grad
+        musst du zwischen den einzelnen Linien drehen?
+      frozen cross: Wir brauchen hier noch einen „Wiederholen"-Baustein, um ein Plus-Zeichen
+        zu zeichnen! Hast du bemerkt, dass sich Elsa vor und zurück bewegen kann?
+      frozen diamond mini snowflake: Wusstest du schon, dass jede Schneeflocke eine
+        andere Form hat? Nun erstellen wir eine neue Schneeflocke mit dem Wiederholen-Baustein,
+        um ein Parallelogramm 4 Mal zu wiederholen und dabei jeweils 90 Grad nach
+        rechts zu drehen.
+      frozen diamond snowflake: Nun erstellen wir eine neue Schneeflocke mit dem Wiederholen-Baustein,
+        um ein Parallelogramm 10 Mal zu wiederholen und dabei jeweils 36 Grad nach
+        rechts zu drehen.
+      frozen diamond: Du kannst ein Parallelogramm zeichnen, indem Du um diesen Code
+        einen „wiederholen“-Baustein einfügst. Es ist wie ein Rechteck, hat aber verschiedene
+        große Winkel. Dieses hier hat Winkel von 60 Grad und 120 Grad, statt nur 90-Grad-Winkel.
+      frozen freeplay: Du bist ein richtiger Künstler geworden. Zeichne ein Winter-Wunderland.
+      frozen perpendicular: Jetzt schauen wir mal, ob wir zwei Linien zeichnen können,
+        die in einem 90° Winkel zueinander stehen. Du musst sowohl den „Drehen“-Baustein
+        als auch den „Bewegen“-Baustein benutzen.
+      frozen snowflake branch: Verwende den „Erstelle einen Schneeflockenzweig"-Baustein,
+        um drei Zweige zu erstellen, die beginnen wie eine Schneeflocke auszusehen.
+      frozen snowflake full: Jetzt wiederhole das 8 Mal, um eine schöne Schneeflocke
+        zu machen!
+      frozen snowflower: Komplizierte Schneemuster können mit sehr einfachen Formen
+        erstellt werden. Kannst du ein Muster machen, das 5 Kreise der Größe 5 und
+        5 Kreise der Größe 10 wiederholt?
+      frozen square iterative: Es scheint, als hätten wir die Hälfte eines Quadrates
+        geschafft. Lass uns 4 Linien benutzen, um ein Quadrat zu erstellen.
+      frozen square loop 3x: Lass uns drei Quadrate erstellen und nach jedem Quadrat
+        drehen. Stell sicher, dass du vor jedem neuen Quadrat um 120° drehst.
+      frozen square loop: Hallo, ich bin Anna von Arendelle! Lass uns ein Quadrat
+        mit dem „Wiederholen“-Baustein zeichnen, dadurch brauchen wir weniger Blöcke.
+        Wie oft (???) muss der „Wiederholen“-Baustein die inneren Bausteine durchlaufen,
+        damit ein Quadrat entsteht?
+      frozen square snowflake: Kannst du eine Schneeflocke erstellen, indem du den
+        „Wiederholen"-Baustein 10 mal benutzt, um ein Quadrat zu erstellen und nach
+        jedem Quadrat den „Drehen"-Baustein mit 36° benutzt?
+      grade1_artist_loops6: "**Aufgabe:** Es ist ein versteckter Garten! Lauf ein
+        bisschen herum."
+      grade2_MakeDogTag_8: Jetzt lass uns einen Haufen V's miteinander verbinden,
+        sie in einer Schleife zeichnen.
+      grade2_PuppyLoops_10: Mein Windrad ist noch nicht fertig. Wie oft muss ich es
+        „wiederholen“, um es zu beenden?
+      grade2_PuppyLoops_4: Verwende zwei „Wiederholen“-Schleifen, um das Schwein mit
+        der geringsten Anzahl von Bausteinen zu schaffen.
+      grade2_PuppyLoops_8: 'Der Code für die drei Schnurrhaare, die du siehst, ist
+        falsch. Hinweis: Jedes Schnurrhaar ist 75 Pixel lang. Verbessere diesen Code,
+        um die Schnurrhaare zu zeichnen.'
+      grade2_PuppyLoops_9: Es sieht aus als ob C in Code spiegelverkehrt ist. Kannst
+        du es wie ein C aussehen lassen?
+      grade2_puppy_loops4: Verwende zwei „Wiederholen“-Schleifen, um das Schwein mit
+        der geringsten Anzahl von Bausteinen zu schaffen.
+      grade3_ConditionalsElse_2: Die Biene will jetzt nur Nektar. Nicht alle Objekte
+        sind Blumen, also sieh unter jeder Wolke nach, ob dort eine Blume versteckt
+        ist. Falls ja, dann kannst du Nektar sammeln.
+      grade3_ConditionalsElse_5: Vielleicht ist eine Blume oder eine Wabe unter diesen
+        Wolken. Benutze den „wenn/ansonsten"- Baustein um Nektar zu machen, wenn dort
+        eine Blüte ist, „ansonsten", um Honig zu erzeugen (weil dort eine Wabe ist).
+      grade3_ConditionalsElse_6: Diese lila Blüte kann entweder 3, 2 oder 1 Nektar
+        haben. Hier ist ein „wenn/ansonsten“-Baustein mit einem weiteren „wenn/ansonsten“-
+        Baustein kombiniert, damit ein „wenn, ansonsten-wenn, ansonsten“-Block erzeugt
+        wird. Vervollständige die Lösung, um eine unbekannte Menge Nektar zu sammeln.
+      grade3_ConditionalsElse_7: Bedenke, dass lila Blüten 3, 2, oder 1 Nektar tragen
+        können. Vervollständige die „Prüfe lila Blüte"- Funktion und benutze sie,
+        um den ganzen Nektar bei den Blüten zu sammeln.
+      grade3_ConditionalsElse_8: Schreibe innerhalb des Bausteins eine Funktion mit
+        dem Namen „Prüfe Blüte, erzeuge Honig“. Deine Funktion soll prüfen, ob die
+        Blüte 3, 2 oder 1 Nektar hat und den ganzen Nektar sammeln. Gehe dann weiter
+        und erzeuge Honig.
+      grade3_ConditionalsElse_9: 'Prüfung: Dieser Code ist fehlerhaft. Vervollständige
+        die „sammle Nektar oder erzeuge Honig"- Funktion, dann rufe sie auf um den
+        ganzen Nektar einzusammeln und den Honig zu erzeugen. Bedenke, dass lila Blüten
+        3, 2, oder 1 Nektar tragen können.'
+      grade3_ConditionalsElse_TeacherIDo: Vielleicht ist eine Blume oder eine Wabe
+        unter diesen Wolken. Benutze den „wenn/ansonsten"- Baustein um Nektar zu machen,
+        wenn dort eine Blüte ist, „ansonsten", um Honig zu erzeugen (weil dort eine
+        Wabe ist).
+      grade3_Conditionals_1: Hallo, ich bin eine hungrige Biene! Hilf mir dabei, den
+        ganzen Nektar aus den Blüten zu sammeln, indem du sowenige Schleifen wie möglich
+        benutzt.
+      grade3_Conditionals_10: 'Sammle Nektar und stelle Honig her. Hinweis: Was passiert,
+        wenn du die „Wenn Nektar"- Bedingung auf eine rote Blüte anwendest? Kannst
+        du dies mit einer Schleife vervollständigen?'
+      grade3_Conditionals_12: Sammle Nektar von allen vier Blumen.
+      grade3_Conditionals_2: Hilf mir, den ganzen Nektar aus den Blüten zu sammeln
+        und Honig zu erzeugen. Benutze eine Schleife.
+      grade3_Conditionals_8: Sammle den Nektar dort, wo die Blüten Nektar haben.
+      grade3_Debugging_6: Diese Bausteine nerven mich wirklich. Korrigiere den/die
+        Fehler, um den gesamten Nektar zu sammeln.
+      grade3_Debugging_9: Diese Bausteine nerven mich wirklich. Korrigiere den/die
+        Fehler, sammle den ganzen Nektar und erzeuge den ganzen Honig.
+      grade3_Loops_3: Kannst du eine Schleife verwenden um den ganzen Nektar einzusammeln?
+      grade3_Loops_4: Verwende nun den Wiederholen-Baustein um den ganzen Nektar aufzusammeln
+        und den ganzen Honig zu erzeugen.
+      grade3_Loops_6: Versuche nun diese Sequenz mit Hilfe einer Schleife dreimal
+        zu wiederholen. Vergiss nicht am Schluss Honig zu erzeugen!
+      grade3_Loops_7: Jede Blüte enthält eine Einheit Nektar. Sammle Nektar von jeder
+        Blüte.
+      grade3_Loops_TeacherIDo: Jede Blüte enthält eine Einheit Nektar. Sammle Nektar
+        von jeder Blüte.
+      grade3_bee_conditionals_quantum2: Die Biene will jetzt nur Nektar. Nicht alle
+        Objekte sind Blumen, also sieh unter jeder Wolke nach, ob dort eine Blume
+        versteckt ist. Falls ja, dann kannst du Nektar sammeln.
+      grade3_maze_loops2: |-
+        Bring mich zu der Sonnenblume!
+        (Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen.
+      grade3_maze_nestedLoops4: Verwende zwei „Wiederholen“-Schleifen, um das Schwein
+        mit der geringsten Anzahl von Bausteinen zu schaffen.
+      grade4_arist_nested_loop_flags1: Benutze den angegebenen Code in einer Schleife,
+        um eine Windmühle zu erstellen.
+      grade4_arist_nested_loop_polygons1: 'Führe dieses Design 10 Mal aus. Um wie
+        viel Grad musst Du Dich bei jeder Wiederholung weiterdrehen? (Hinweis: Was
+        ist 360 geteilt durch 10?)'
+      grade4_arist_nested_loop_polygons2: 'Führe dieses Design 6 Mal aus. Um wie viel
+        Grad musst Du Dich bei jeder Wiederholung weiterdrehen? (Hinweis: Was ist
+        360 geteilt durch 6?)'
+      grade4_arist_nested_loop_triangles3: Kannst Du ein Sechseck zeichnen, indem
+        Du den Dreieck-Code in einer Schleife verwendest?
+      grade4_arist_nested_loop_triangles4: Zeichne die Zähne im Mund des Alligators!
+      grade4_arist_nested_loop_triangles5: Male eine Sonne indem Du den Startbefehl
+        in einer anderen Schleife benutzt. Dies nennt man eine verschachtelte Schleife.
+      grade4_arist_nested_loop_triangles6: Kannst du diese 36 Dreiecke mit einer verschachtelten
+        Schleife zeichnen?
+      grade4_artist_functions2: Funktionen erlauben dir, neue Blöcke zu definieren!
+        Wir haben die Blöcke in eine Funktion namens „zeichne ein Quadrat“ verschoben,
+        um ein Quadrat zu zeichnen. Kannst du die Funktion „zeichne ein Quadrat“ benutzen,
+        um die Gläser zu erstellen? Die Quadrate haben einen Abstand von 75 Pixel.
+      grade4_artist_nested_loop_flags1: Benutze den angegebenen Code in einer Schleife,
+        um eine Windmühle zu erstellen.
+      grade4_artist_nested_loop_polygons1: 'Führe dieses Design 10 Mal aus. Um wie
+        viel Grad musst Du Dich bei jeder Wiederholung weiterdrehen? (Hinweis: Was
+        ist 360 geteilt durch 10?)'
+      grade4_artist_nested_loop_triangles5: Male eine Sonne indem Du den Startbefehl
+        in einer anderen Schleife benutzt. Dies nennt man eine verschachtelte Schleife.
+      grade4_artist_nested_loop_triangles6: Kannst du diese 36 Dreiecke mit einer
+        verschachtelten Schleife zeichnen?
+      grade4_artist_parameters_triangles2: Fällt dir irgendetwas Neues an diesen Funktionsbausteinen
+        auf? Klicke „Ausführen“, um zu sehen, was passiert.
+      grade4_bee_conditionals_quantum2: Die Biene will jetzt nur Nektar. Nicht alle
+        Objekte sind Blumen, also sieh unter jeder Wolke nach, ob dort eine Blume
+        versteckt ist. Falls ja, dann kannst du Nektar sammeln.
+      grade4_bee_conditionals_quantum5: Vielleicht ist eine Blume oder eine Wabe unter
+        diesen Wolken. Benutze den „wenn/ansonsten"- Baustein um Nektar zu machen,
+        wenn dort eine Blüte ist, „ansonsten", um Honig zu erzeugen (weil dort eine
+        Wabe ist).
+      grade4_bee_functions3: Funktionen sind Programm-Bausteine, die eine Aufgabe
+        ausführen. Verwende die „hohle 5“- Funktion, um gleichzeitig 5 mal Nektar
+        zu holen. Stelle sicher, dass eine Schleife verwendet wird, die eine optimale
+        Blockzählung ermöglicht.
+      grade4_bee_nestedLoops4: Sammle den gesamten Nektar jeder Blüte und erzeuge
+        Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
+      grade4_frozen_freeplay: Du bist ein richtiger Künstler geworden. Zeichne ein
+        Winter-Wunderland.
+      grade4_frozen_functions0: Ein Kreis ist eine besondere Form. Kannst du herausfinden,
+        durch welche Zahl du das Fragezeichen ersetzen musst, um einen Kreis zu zeichnen?
+      grade4_frozen_functions1a: Verwende den neuen „Erzeuge einen Kreis“-Baustein,
+        um 10 sich überschneidende Kreise zu erstellen. Vergiss nicht zwischen den
+        Kreisen nach vorn zu springen.
+      grade4_frozen_functions2: Jetzt erstellen wir 20 überschneidende Kreise und
+        drehen die einzelnen Kreise um 18 Grad.
+      grade4_frozen_functions3: Hier ist ein „Erzeuge einen Kreis“-Baustein, der Kreise
+        verschiedener Größe zeichnen kann. Kannst du ihn benutzen, um einen kleinen
+        Kreis, mit der Größe 5, und einen größeren Kreis, mit der Größe 10, zu erstellen?
+      grade4_frozen_functions4: Komplizierte Schneemuster können mit sehr einfachen
+        Formen erstellt werden. Kannst du ein Muster machen, das 5 Kreise der Größe
+        5 und 5 Kreise der Größe 10 wiederholt?
+      grade4_frozen_nested_loop_diamonds2: Wusstest du schon, dass jede Schneeflocke
+        eine andere Form hat? Nun erstellen wir eine neue Schneeflocke mit dem Wiederholen-Baustein,
+        um ein Parallelogramm 4 Mal zu wiederholen und dabei jeweils 90 Grad nach
+        rechts zu drehen.
+      grade4_frozen_nested_loop_diamonds3: Nun erstellen wir eine neue Schneeflocke
+        mit dem Wiederholen-Baustein, um ein Parallelogramm 10 Mal zu wiederholen
+        und dabei jeweils 36 Grad nach rechts zu drehen.
+      grade4_frozen_square: Hallo, ich bin Anna von Arendelle! Lass uns ein Quadrat
+        mit dem „Wiederholen“-Baustein zeichnen, dadurch brauchen wir weniger Blöcke.
+        Wie oft (???) muss der „Wiederholen“-Baustein die inneren Bausteine durchlaufen,
+        damit ein Quadrat entsteht?
+      grade4_frozen_square_loop1: Hallo, ich bin Anna von Arendelle! Lass uns ein
+        Quadrat mit dem „Wiederholen“-Baustein zeichnen, dadurch brauchen wir weniger
+        Blöcke. Wie oft (???) muss der „Wiederholen“-Baustein die inneren Bausteine
+        durchlaufen, damit ein Quadrat entsteht?
+      grade4_frozen_square_loop2: Lass uns drei Quadrate erstellen und nach jedem
+        Quadrat drehen. Stell sicher, dass du vor jedem neuen Quadrat um 120° drehst.
+      grade4_frozen_square_loop3: Kannst du eine Schneeflocke erstellen, indem du
+        den „Wiederholen"-Baustein 10 mal benutzt, um ein Quadrat zu erstellen und
+        nach jedem Quadrat den „Drehen"-Baustein mit 36° benutzt?
+      grade4_review_artist2: "Dieses Haus braucht ein Dach! Zeichne das Dreieck.  \r
+        \n\r \nHinweis: \nalle drei Seiten sind gleich lang. \r\n\r \n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
+      grade4_review_artist3: "Der \"springe\"-Block bewegt den Künstler, ohne eine
+        Linie zu zeichnen. \nZeichne die gestrichelte Linie nach. Verwende dazu \"springe\"
+        und \"bewegen\"-Blöcke."
+      grade4_review_bee1: Verwende nun den Wiederholen-Baustein um den ganzen Nektar
+        aufzusammeln und den ganzen Honig zu erzeugen.
+      grade5_artist_for_loops1: 'Zeichne dieses Dreieck, das 50 Pixel groß ist. Hinweis:
+        Benutze einen Wiederholen-Baustein.'
+      grade5_artist_for_loops10: |-
+        Weißt du noch wie du alles verwenden musst, was du über das Erstellen von diesem Bild gelernt hast?
+
+        Brauchst du ein Hinweis? Klicke hier!
+      grade5_artist_for_loops5: |-
+        Eine kleine Änderung am Code des letzten Bildes kann dieses Bild erzeugen. Kannst du herausfinden, was für eine Änderung es ist?
+
+        Hinweis:  Du musst etwas entfernen!
+      grade5_artist_parameters_triangles2a: Fällt dir irgendetwas Neues an diesen
+        Funktionsbausteinen auf? Klicke „Ausführen“, um zu sehen, was passiert.
+      grade5_artist_variables_hexagons1: 'Probieren wir es noch einmal. Kannst du
+        die Variable „Länge“ so einstellen, dass dieses coole Design aus Sechsecken
+        entsteht? Hinweis: Es ist ein Vielfaches von 10.'
+      grade5_artist_variables_pentagon9: Schreib den Algorithmus vom letzten Level
+        noch mal hin und erstelle ein Fünfeck mit einer Seitenlänge von 150.
+      grade5_artist_variables_pentagons1: |-
+        Zeichne dieses Muster, indem du die Längenvariable an die richtigen Stellen setzt und dann den richtigen Wert für die Länge eingibst. (Hinweis: Es ist ein Vielfaches von 10).
+
+        So braucht man die Länge nur an einer Stelle zu setzen - und der Code verwendet den richtigen Wert an jeder Stelle!
+      grade5_bee_parameters_new8a: Benutze deine neue Funktion um die Spirale zu lösen.
+      grade5_bee_parameters_new9a: Benutze deine neue Funktion um die Spirale zu lösen.
+      grade5_playlab_variables13: Verwende den „Wenn Figur berührt"-Baustein, um den
+        Hund nach links-oben zurückzuschicken; aber NUR wenn der Hund eine andere
+        Figur berührt.
+      grade5_playlab_variables2: Das Rennen im letzten Rätsel war nicht sehr fair!
+        Ändere die Variable „Hunde_Geschwindigkeit“ so, dass du mehr Fahnen sammeln
+        kannst als die Katze. Der erste, der 10 Fahnen hat, gewinnt!
+      grade5_playlab_variables9: Hier ist eine Funktion namens „Patrouille“. Ändere
+        sie so, dass die Katze sich 400 Pixel auf- und abwärts bewegt.
+      level 'grade3_Loops_3: Kannst du eine Schleife verwenden um den ganzen Nektar
+        einzusammeln?
+      level 'grade3_Loops_4: Verwende nun den Wiederholen-Baustein um den ganzen Nektar
+        aufzusammeln und den ganzen Honig zu erzeugen.
+      level 'grade3_Loops_6: Versuche nun diese Sequenz mit Hilfe einer Schleife dreimal
+        zu wiederholen. Vergiss nicht am Schluss Honig zu erzeugen!
+      level 'grade3_Loops_7: Jede Blüte enthält eine Einheit Nektar. Sammle Nektar
+        von jeder Blüte.

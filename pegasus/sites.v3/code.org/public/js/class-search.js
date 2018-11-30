@@ -5,7 +5,7 @@ var gmap_loc;
 var selectize;
 
 $(function () {
-  selectize = $('#class-search-facets select').selectize();
+  selectize = $('#class-search-facets select').selectize({plugins: ["remove_button"]});
 
   setFacetDefaults();
 
@@ -90,7 +90,7 @@ function getLocations(results) {
       var lon = coordinates[1];
       var title = places[i].school_name_s;
       var html = compileHTML(index, places[i]);
-      var more_link = '<div><a  id="location-details-trigger-' + index + '" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-' + index + '">More information</a></div>';
+      var more_link = '<div><a id="location-details-trigger-' + index + '" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-' + index + '">More information</a></div>';
 
       var location = {
         lat: lat,
@@ -163,7 +163,7 @@ function compileHTML(index, location) {
   var line;
 
   // Compile HTML.
-  var html = '<h3>' + location.school_name_s + '</h3>';
+  var html = '<h3 class="entry-detail">' + location.school_name_s + '</h3>';
 
   if (location.school_address_s) {
     line = location.school_address_s;
@@ -196,7 +196,7 @@ function compileHTML(index, location) {
   }
 
   $.each(lines, function (key, field) {
-    html+= '<div>' + field + '</div>';
+    html+= '<div class="entry-detail">' + field + '</div>';
   });
 
   // Add details to the page for displaying in a modal popup.

@@ -108,18 +108,6 @@ authoredHintUtils.getFinishedHints_ = function () {
 };
 
 /**
- * This only retrieves the hints stored in localStorage, which likely won't
- * include things from older sessions.
- *
- * TODO(ram): Grab *all* the old hint requests from the server, preferably on
- *   level load
- * @return {FinishedHint[]}
- */
-authoredHintUtils.getOldFinishedHints = function () {
-  return authoredHintUtils.getFromLocalStorage_('old_finished_authored_hint_views', []);
-};
-
-/**
  * @return {AttemptRecord}
  */
 authoredHintUtils.getLastAttemptRecord_ = function () {

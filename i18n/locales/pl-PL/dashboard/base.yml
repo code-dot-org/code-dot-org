@@ -26,6 +26,7 @@ pl:
         age: 'Wiek'
         gender: 'Płeć'
         edit_header: 'Edytuj dane konta'
+        finish_sign_up_subheader_provider: 'Wypełnij poniższe informacje, aby zakończyć tworzenie konta Code.org z <strong>%{provider}</strong> <strong>%{email}</strong>.'
         error:
           future: nie może być w przyszłości
   hello: "Witaj świecie"
@@ -39,6 +40,7 @@ pl:
   next_resource: Kolejne zasoby
   cancel: "Anuluj"
   okay: "OK"
+  or: "lub"
   heading_x_of_y: "%{heading} (strona %{x} z%{y})"
   add_teacher_form:
     code:
@@ -83,6 +85,7 @@ pl:
     twitter: 'Twitter'
     facebook: 'Facebooka'
     windowslive: 'Konto Microsoft'
+    microsoft_v2_auth: 'Konto Microsoft'
     clever: 'Konto Clever'
     forgot_password: 'Nie pamiętasz hasła?'
     need_confirmation: "Czy nie otrzymałeś instrukcji potwierdzającej?"
@@ -114,6 +117,7 @@ pl:
     invalid_password: "Hasło musi zawierać przynajmniej 6 znaków"
     mismatch_password: "Dwa hasła, które podałeś, nie są zgodne"
     under_13_consent: "Jeżeli mam mniej niż 13 lat, potwierdzam, że mój rodzic lub opiekun prawny wyraża zgodę na korzystanie przeze mnie ze strony Code.org services."
+    student_consent: "Jeżeli mam mniej niż 13 lat, to potwierdzam, że mam zgodę mojego rodzica lub prawnego opiekuna na korzystanie przeze mnie z serwisu na stronie Code.org."
     agree_us_website: "Zgadzam się na korzystanie ze strony, której siedziba znajduje się w Stanach Zjednoczonych."
     my_data_to_us: "Dane gromadzone podczas korzystania przeze mnie z tej witryny mogą być wysyłane i przechowywane lub przetwarzane w Stanach Zjednoczonych."
     student_terms: "Zgadzam się na ograniczenia wynikające <a href='http://code.org/tos'> z warunków korzystania z usług </a> oferowanych przez Code.org. Jeśli mam mniej niż 13 lat, to potwierdzam przesyłając ten formularz, że mam zgodę moich rodziców lub prawnego opiekuna na korzystanie z usług Code.org. <br/> <br/> Adresy mailowe nie są przechowywane w postaci, która umożliwiałaby kontakt z uczniami. Uczniowie nie otrzymają maili z Code.org, z wyjątkiem służących do odzyskania hasła. Zobacz nasze <a href='http://code.org/privacy'> zasady ochrony prywatności</a>, aby uzyskać więcej informacji."
@@ -252,7 +256,7 @@ pl:
         personal_login_created_username: 'Udało ci się utworzyć osobisty login. Teraz możesz zalogować się do swojego konta używając swojej nazwy użytkownika (%{username}) i hasła'
   nav:
     header:
-      finished_hoc: "Ukończyłem moją Godzinę Kodowania (Hour of Code)"
+      finished_hoc: "Skończyłem moją Godzinę Kodowania (Hour of Code)"
       sign_in_to_save: 'Zaloguj się, by zapisać postępy'
       free_play:
         playlab: 'Utwórz aplikację w Play Lab'
@@ -261,9 +265,7 @@ pl:
         applab: 'Utwórz aplikację w App Lab'
         gamelab: 'Utwórz projekt w Game Lab'
         weblab: 'Wykonaj projekt Laboratorium Sieci (beta)'
-      home: "Strona główna"
       my_dashboard: "Pulpit"
-      courses: "Kursy"
       course_catalog: "Katalog Kursów"
       project_gallery: "Galeria Projektów"
       sections: "Sekcje"
@@ -308,10 +310,18 @@ pl:
       signin: 'Zaloguj się'
       signup: 'Załóż konto'
       already_registered: 'Czy jesteś Już zarejestrowany?'
-      pair_programming: 'Programowanie w parach'
       team: 'Zespół'
       driver: 'Kierowca'
       navigator: 'Nawigator'
+      create: 'Utwórz'
+      applab: 'App Lab'
+      artist: 'Artysta'
+      gamelab: 'Laboratorium Gier (Game Lab)'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
+      dance: 'Potańcówka'
+      view_all: 'Zobacz wszystkie projekty...'
     popup:
       progress_for_user: "%{name} w toku"
       progress: 'Twoje postępy'
@@ -552,6 +562,8 @@ pl:
       body_short: "Zaprojektuj aplikację i zakoduj za pomocą bloków lub JavaScript, aby działała, następnie natychmiast udostępnij swoją aplikację."
       audience: 'Wiek 13+'
       cta: 'Zobacz instrukcję'
+    dance:
+      title: 'Potańcówka'
     hoc:
       title: 'Klasyczny labirynt'
       body: 'Wypróbuj podstawy informatyki. Miliony dały im już szansę.'
@@ -594,6 +606,8 @@ pl:
     minecraft2016:
       title: "Minecraft"
       body: "Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry Minecraft."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
       body: "Minecraft powraca na Godzinę Kodowania z najnowszą serią zadań! Koduj podróżując po świecie Minecraftu."
@@ -928,6 +942,7 @@ pl:
   return_unit_overview: 'Przejdź do przeglądu jednostek'
   return_course_overview: 'Przejdź do omówienia jednostki'
   view_all_units: 'Zobacz wszystkie jednostki'
+  view_teacher_guide: 'Zobacz przewodnik nauczyciela'
   pd:
     form_labels:
       email: 'e-mail'
@@ -950,6 +965,7 @@ pl:
       robotics:
         kodable: 'Kodable'
       workshop_course:
+        csd: 'Odkrycia CS'
         csp: 'Podstawy Informatyki ''16-''17'
       email_opt_in:
         opt_in_yes: 'Tak'

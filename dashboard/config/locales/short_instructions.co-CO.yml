@@ -1,0 +1,19 @@
+---
+co:
+  data:
+    short_instructions:
+      2-3 Artist 1 new: Salute, sò un artistu. Mi poi scrive codice per fà mi disignà
+        quasgi tuttu. Adupra qualchi blocchi per fà mi didignà e linee grisge di a
+        figura. (Ogni linea hè longa da 100 pixels)
+      2-3 Artist 11: 'Fà un contornu per u panellu fendu 8 lati di 100 pixels per
+        latu. Da quantu gradi devi girà ? (indiziu : quantu facenu 360 per 8 ?)'
+      2-3 Artist 12: Difinisce u bloccu "ripete parechje volte" ch'ellu fia une "ronda"
+        da compie l'ochju. Sè ognu muvimentu gira à a diritta d'un gradu, quantu volta
+        devi ripete lu per compie u rebbiu . 180 ? 360 ? 500 ?
+      2-3 Artist 2 new: "Sta casa hà un muru finitu à a metà. Ogni latu face 100 pixels,
+        mà u muru \nfinitu à a metà face 50 pixels. Finisci u muru.\n"
+      2-3 Artist 2: "Sta casa hà un muru finitu à a metà. Ogni latu face 100 pixels,
+        mà u muru \nfinitu à a metà face 50 pixels. Finisci u muru.\n"
+      grade4_review_artist1: Salute, sò un artistu. Mi poi scrive codice per fà mi
+        disignà quasgi tuttu. Adupra qualchi blocchi per fà mi didignà e linee grisge
+        di a figura. (Ogni linea hè longa da 100 pixels)

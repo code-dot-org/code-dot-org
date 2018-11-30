@@ -39,6 +39,11 @@ class CoursesController < ApplicationController
       return
     end
 
+    if !params[:section_id] && current_user&.last_section_id
+      redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
+      return
+    end
+
     course = Course.get_from_cache(params[:course_name])
     unless course
       # PLC courses have different ways of getting to name. ideally this goes

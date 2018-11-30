@@ -827,6 +827,8 @@ gl:
               name: Pulseiras Binarias
             Binary Images:
               name: Imaxes binárias
+            Play Lab:
+              name: Laboratorio de Xogos
         csd2-2017:
           stages:
             Lists:
@@ -1341,3 +1343,73 @@ gl:
               name: Creando camiños
             Your Digital Footprint:
               name: A túa pegada dixital
+        frozen-2018:
+          stages:
+            Artist:
+              name: Artista
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Artista
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Artista
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Construíndo unha base
+            Conditionals with Cards:
+              name: Condicionais con cartas
+            Envelope Variables:
+              name: Variábeis de sobre
+            For Loop Fun:
+              name: Diversión con bucles "para" (for)
+            The Artist:
+              name: O Artista
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Programación por relevos
+            Conditionals with Cards:
+              name: Condicionais con cartas
+            Digital Citizenship:
+              name: Cidadanía dixital
+            'Unplugged: Binary':
+              name: 'Desconectado: binario'
+            Artist Binary:
+              name: Artista binario
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Construíndo unha base
+            Nested Loops:
+              name: Bucles aniñados
+            Conditionals with Cards:
+              name: Condicionais con cartas
+            Conditionals:
+              name: Condicionais
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Colaboración Aberta
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Programación por relevos
+            Conditionals with Cards:
+              name: Condicionais con cartas
+            Envelope Variables:
+              name: Variábeis de sobre
+            For Loop Fun:
+              name: Diversión con bucles "para" (for)
+            Binary Bracelets:
+              name: Pulseiras Binarias
+            'Unplugged: Binary':
+              name: 'Desconectado: binario'
+            Artist Binary:
+              name: Artista binario
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Colaboración Aberta

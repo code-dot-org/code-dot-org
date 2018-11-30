@@ -93,6 +93,9 @@ uk:
       Function intro Ryan_callout:
         Function_intro_Ryan_1: Ця інструкція каже комп’ютеру запустити ВЕЛИКИЙ фрагмент
           програмного коду з тим самим іменем у робочій області.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Ця інструкція каже комп’ютеру запустити ВЕЛИКИЙ фрагмент
+          програмного коду з тим самим іменем у робочій області.
       Geometric Pattern_callout:
         4-5_Artist_Patterns_Free_Play_1: Всі твої улюблені боки тепер посортовані
           в категорії. Нажми на ці слова, щоб побачити куди все ділось!
@@ -100,6 +103,9 @@ uk:
         4-5_Artist_Patterns_Free_Play_1: Всі твої улюблені боки тепер посортовані
           в категорії. Нажми на ці слова, щоб побачити куди все ділось!
       Geometric Sun_2018_callout:
+        4-5_Artist_Patterns_Free_Play_1: Всі твої улюблені боки тепер посортовані
+          в категорії. Нажми на ці слова, щоб побачити куди все ділось!
+      Geometric Sun_2019_callout:
         4-5_Artist_Patterns_Free_Play_1: Всі твої улюблені боки тепер посортовані
           в категорії. Нажми на ці слова, щоб побачити куди все ділось!
       Infinity_move_collide_callout:
@@ -121,18 +127,27 @@ uk:
       MC_HOC_2017_03_Cole_callout:
         MC_HOC_2017_03_Cole_1: Це цикл "повтор"!  Перемістіть його до робочої області
           та додайте код, який потрібно виконати кілька разів.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Це цикл "повтор"!  Перемістіть його до робочої області
+          та додайте код, який потрібно виконати кілька разів.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Agent може ходити над водою, а гравець – ні!
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: Agent може ходити над водою, а гравець – ні!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Перемістіть це до робочої області та додайте код, який
           потрібно виконати кілька разів!
       MC_HOC_2017_06_Cole_callout:
         MC_HOC_2017_06_Cole_1: Ці блоки не можна відкинути, але можна змінити!
+      MC_HOC_2017_06_Cole_2019_callout:
+        MC_HOC_2017_06_Cole_1: Ці блоки не можна відкинути, але можна змінити!
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: 'Agent може ходити над лавою, а гравець – ні!  '
       MC_HOC_2017_08_Will_callout:
         MC_HOC_2017_08_RY_1: 'Agent може ходити над лавою, а гравець – ні!  '
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'Agent може ходити над лавою, а гравець – ні!  '
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'Agent може ходити над лавою, а гравець – ні!  '
       Mike Playlab Project_callout:
         sign_in_to_save_project: Хочете отримати доступ до вашого проекту пізніше?
@@ -170,19 +185,28 @@ uk:
         craft_callout_preplaced: Ми вже розмістили деякі блоки в заготовці
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Ми вже розмістили деякі блоки в заготовці
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Ми вже розмістили деякі блоки в заготовці
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Цей код розпочне побудову будинку. Можеш його
           завершити?
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Цей код розпочне побудову будинку. Можеш його
           завершити?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Цей код розпочне побудову будинку. Можеш його
+          завершити?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Натисни "Запустити", щоб випробувати програму
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Натисни "Запустити", щоб випробувати програму
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Натисни "Запустити", щоб випробувати програму
       Overworld Place Wall_callout:
         craft_inside_repeat: Повторюй дії, розміщуючи тут блоки
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Повторюй дії, розміщуючи тут блоки
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Повторюй дії, розміщуючи тут блоки
       PS copy 2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: Фіолетові квіти можуть мати або 1 нектар, або 0... проте ти
@@ -219,9 +243,14 @@ uk:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Цей код перевіряє наявність лави, можеш додати
           команду, щоб рухатися вперед?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Цей код перевіряє наявність лави, можеш додати
+          команду, щоб рухатися вперед?
       Underground Iron_callout:
         craft_what_is_iron: Добувай це залізо!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Добувай це залізо!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Добувай це залізо!
       aE1_callout:
         aE1_1: Там будуть тільки два з них і два повороти
@@ -315,10 +344,18 @@ uk:
           бути важкими та можуть може потребувати кілька спроб.
         courseC_maze_programming7_2: Ці блоки виробленні з каміння та не можуть бути
           викинутими.
+      courseC_maze_programming7_2019_callout:
+        courseC_maze_programming7_1: Це твоя перша головоломка виклику! Вони повинні
+          бути важкими та можуть може потребувати кілька спроб.
+        courseC_maze_programming7_2: Ці блоки виробленні з каміння та не можуть бути
+          викинутими.
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ.
           Тобі зовсім не потрібно перевіряти соту.
       courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ.
+          Тобі зовсім не потрібно перевіряти соту.
+      courseD_bee_conditionals2_2019_callout:
         4_5_Bee_Conditionals_2_1: Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ.
           Тобі зовсім не потрібно перевіряти соту.
       courseD_bee_conditionals2_test_callout:
@@ -351,6 +388,12 @@ uk:
       frozen cross rotate_callout:
         replace_questions_degree: Скористайтесь розкривним списком, щоб змінити "???"
           на число
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Скористайтесь розкривним списком, щоб змінити "???"
+          на число
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Скористайтесь розкривним списком, щоб змінити "???"
+          на число
       frozen cross_callout:
         repeat_blocks_1: "(1) Використай цей блок, і розмісти його біля сірих блоків
           у робочій області"
@@ -365,7 +408,19 @@ uk:
       frozen freeplay_callout:
         snowflake_dropdown: Скористайтесь розкривним списком, щоб створювати різні
           сніжинки!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Скористайтесь розкривним списком, щоб створювати різні
+          сніжинки!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Скористайтесь розкривним списком, щоб створювати різні
+          сніжинки!
       frozen line_callout:
+        move_elsa_forward: Перемісти блок "Рухатися вперед" та прикріпи його під блоком
+          "Коли гра починається", щоб змусити Ельзу рухатися вперед
+      frozen line_b_callout:
+        move_elsa_forward: Перемісти блок "Рухатися вперед" та прикріпи його під блоком
+          "Коли гра починається", щоб змусити Ельзу рухатися вперед
+      frozen line_test_callout:
         move_elsa_forward: Перемісти блок "Рухатися вперед" та прикріпи його під блоком
           "Коли гра починається", щоб змусити Ельзу рухатися вперед
       frozen perpendicular_callout:
@@ -373,15 +428,39 @@ uk:
           Число у розкривному списку визначає, наскільки повернеться Ельза
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Скористайтесь блоком "створити гілочку сніжинки"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Скористайтесь блоком "створити гілочку сніжинки"
       frozen square iterative_callout:
         frozen_create_square: Додайте більше блоків, щоб вийшов квадрат
+      frozen square iterative_b_callout:
+        frozen_create_square: Додайте більше блоків, щоб вийшов квадрат
+      frozen square iterative_test_callout:
+        frozen_create_square: Додайте більше блоків, щоб вийшов квадрат
       frozen square loop 3x_callout:
+        replace_questions: Скористайтесь розкривним списком, щоб змінити "???" на
+          число
+      frozen square loop 3x_b_callout:
+        replace_questions: Скористайтесь розкривним списком, щоб змінити "???" на
+          число
+      frozen square loop 3x_test_callout:
         replace_questions: Скористайтесь розкривним списком, щоб змінити "???" на
           число
       frozen square loop_callout:
         replace_questions: Скористайтесь розкривним списком, щоб змінити "???" на
           число
+      frozen square loop_b_callout:
+        replace_questions: Скористайтесь розкривним списком, щоб змінити "???" на
+          число
+      frozen square loop_test_callout:
+        replace_questions: Скористайтесь розкривним списком, щоб змінити "???" на
+          число
       frozen square snowflake_callout:
+        replace_questions: Скористайтесь розкривним списком, щоб змінити "???" на
+          число
+      frozen square snowflake_b_callout:
+        replace_questions: Скористайтесь розкривним списком, щоб змінити "???" на
+          число
+      frozen square snowflake_test_callout:
         replace_questions: Скористайтесь розкривним списком, щоб змінити "???" на
           число
       grade3_ConditionalsElse_2_callout:

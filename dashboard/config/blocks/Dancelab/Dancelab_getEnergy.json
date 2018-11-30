@@ -2,13 +2,13 @@
   "category": "Music",
   "config": {
     "func": "getEnergy",
-    "blockText": "get {RANGE} energy",
+    "blockText": "get {RANGE}",
     "args": [
       {
         "name": "RANGE",
         "options": [
           [
-            "low",
+            "bass",
             "\"low\""
           ],
           [
@@ -16,7 +16,7 @@
             "\"mid\""
           ],
           [
-            "high",
+            "treble",
             "\"high\""
           ]
         ]

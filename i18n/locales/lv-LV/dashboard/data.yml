@@ -339,6 +339,7 @@ lv:
         infinity_playlab_intro: Spēļu laboratorija - ievads
         infinity_playlab_events: Spēļu laboratorija - notikumi
         infinity_playlab_repeat_forever: Spēļu laboratorija - mūžīgie cikli
+        csd_gamelab_velocity: Ātrums
         csp_applab_functions: Ievads funkcijās
         csp_applab_functions_parameters: Funkcijas ar parametriem
         csp_applab_loops: Cikli

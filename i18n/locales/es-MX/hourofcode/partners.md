@@ -1,7 +1,7 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
-La hora del código es conducido por la hora del código ordenador ciencia educación semana asesoramiento y comités de.
+La Hora del Código es dirigida por los comités de asesoramiento y revisión de la Hora del Código y la Semana de Educación en Informática.
 
 El [Comité Consultivo](%= resolve_url('/advisory-committee') %) está integrado por representantes de K-12, academia, sin fines de lucro, con fines de lucro y organizaciones internacionales. Este Comité de guías de la estrategia de la campaña hora de código.
 
@@ -119,19 +119,13 @@ Trabajo y dedicación comités han contribuido al éxito de la hora del código 
 
 * * *
 
-# Principales socios promocionales
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
-
-* * *
-
 # Socios internacionales
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# Socios afiliados
+# Socios de Curriculum y Tutorial
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 

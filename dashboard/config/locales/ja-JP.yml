@@ -42,6 +42,7 @@ ja:
   next_resource: 次のリソース
   cancel: キャンセル
   okay: オッケー
+  or: または
   heading_x_of_y: "%{heading} (%{y} ページ中 %{x} ページ目)"
   add_teacher_form:
     code:
@@ -86,6 +87,7 @@ ja:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft アカウント
+    microsoft_v2_auth: Microsoft アカウント
     clever: Cleverアカウント
     powerschool: Powerschoolアカウント
     forgot_password: パスワードをお忘れですか？
@@ -173,7 +175,7 @@ ja:
     remember: ログイン情報を保存する
     submit: サインイン
   signin:
-    try_heading: 登録せずにコーディングに挑戦してみたいですか？
+    try_heading: 登録する前に体験してみますか？
     try_hoc: 最初に 1 時間分のHour of Codeを試す
     try_20hours: 20 時間分のコンピュータサイエンス入門編を試す
   signinsection:
@@ -226,6 +228,8 @@ ja:
       picture: 画像パスワード
       word: 秘密の言葉
       email: Eメール
+      google_classroom: Google Classroom
+      clever: クレバー
   follower:
     invite_sent: 招待状を送信しました
     added_teacher: "%{name} あなたの先生として追加"
@@ -268,7 +272,7 @@ ja:
           とパスワードを使用してアカウントにサインインすることができます。
   nav:
     header:
-      finished_hoc: Hour of Codeを終了
+      finished_hoc: 終了しました！
       sign_in_to_save: 進捗状況を保存するためにサインインする
       free_play:
         playlab: プレイラボ で作る
@@ -276,10 +280,8 @@ ja:
         applab: アプリラボ で作る
         gamelab: ゲームラボで作る
         weblab: Web 研究室 (ベータ版) のプロジェクトを作る
-      home: ホーム
       my_dashboard: マイ ダッシュボード
-      courses: コース
-      course_catalog: コース カタログ
+      course_catalog: コースカタログ
       project_gallery: プロジェクト
       sections: セクション
       help_support: ヘルプとサポート
@@ -323,10 +325,18 @@ ja:
       signin: サインイン
       signup: アカウントを作る
       already_registered: 既にアカウントをお持ちですか?
-      pair_programming: ペアプログラミング
       team: チーム
       driver: ドライバー
       navigator: ナビゲーター
+      create: つくる
+      applab: アプリ ラボ
+      artist: アーティスト
+      gamelab: ゲーム ラボ
+      playlab: プレイラボ
+      minecraft: マインクラフト
+      flappy: フラッピー
+      dance: ダンスパーティー
+      view_all: すべてのプロジェクトを見る
     popup:
       progress_for_user: "%{name} の進捗状況"
       progress: あなたの進捗状況
@@ -622,6 +632,8 @@ ja:
       body_short: アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。
       audience: 13才以上
       cta: もっと知る
+    dance:
+      title: ダンスパーティー
     hoc:
       title: 古典的な迷路
       body: コンピュータサイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます
@@ -661,8 +673,11 @@ ja:
     minecraft2016:
       title: マインクラフト
       body: ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。
+    aquatic:
+      title: マインクラフト
     hero:
       title: マインクラフト
+      body: Hour of Code（1時間プログラミング）に向けて、マインクラフトの最新アクティビティが出来上がりました。プログラミングを使ってマインクラフトの旅へ
     sports:
       title: スポーツ
       body: バスケットボールゲームや、様々なスポーツの混合競技をつくろう！
@@ -989,7 +1004,9 @@ ja:
     mac: Mac OS X
   locked_stage: このステージはロックされているために、このステージの内容は表示されません。あなたの先生は、作業やあなたの答えを確認する時に、このステージのロックを解除できます。
   hidden_stage: 先生は、あなたの参加を予想していませんでした。どのレッスンに参加すべきか、あなたの先生に尋ねてください。
-  return_course_overview: ユニットの概要へ
+  return_unit_overview: ユニットの概要へ
+  return_course_overview: コースの概要へ
+  view_teacher_guide: 教師用ガイドを表示
   pd:
     form_labels:
       email: Eメール
@@ -1013,7 +1030,8 @@ ja:
       robotics:
         kodable: Kodable
       workshop_course:
-        csp: コンピューター・サイエンス入門
+        csd: コンピューターサイエンス 発展
+        csp: コンピューターサイエンス 入門
       email_opt_in:
         opt_in_yes: はい
         opt_in_no: いいえ

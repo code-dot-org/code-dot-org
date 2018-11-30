@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "Du må lage en danser.",
+  "danceFeedbackNoDancers": "Du har ingen dansere.",
+  "danceFeedbackNoBackground": "Du må legge til en bakgrunn.",
+  "danceFeedbackTooManyDancers": "Vær forsiktig! Hvis du setter `lag en ny`-blokk inni en `hver 2 takt`, vil du opprette en masse dansere.",
+  "danceFeedbackUseSetSize": "Bruk blokken `set backup_dancer2 størrelse` for å gjøre den danseren mindre.",
+  "danceFeedbackUseSetTint": "Bruk blokken `bruk fargetone` for å endre en dansers fargetone.",
+  "danceFeedbackUseStartMapping": "Prøv å legge til blokken <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"skala\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> til programmet.",
+  "danceFeedbackStartNewMove": "Danseren din gjorde ikke en ny bevegelse etter den fjerde takten.",
+  "danceFeedbackNeedDifferentDance": "Du må bruke en annen dans.",
+  "danceFeedbackNeedEveryTwoMeasures": "Kontroller at du bruker blokken `hver 2 takt`",
+  "danceFeedbackNeedMakeANewDancer": "Bruk blokken `lag ny` for å legge til en ny danser.",
+  "measure": "Takter:"
+}

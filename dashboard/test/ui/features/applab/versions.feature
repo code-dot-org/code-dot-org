@@ -9,7 +9,7 @@ Scenario: Script Level Versions
   And I ensure droplet is in block mode
   And I switch to text mode
   And I add code "// comment 1" to ace editor
-  And I click selector "#runButton"
+  And I press "runButton"
   And element ".project_updated_at" eventually contains text "Saved"
 
   # reloading here creates a previous version containing only comment 1
@@ -20,10 +20,10 @@ Scenario: Script Level Versions
   And I switch to text mode
   And I add code "// comment 2" to ace editor
   Then ace editor code is equal to "// comment 2// comment 1"
-  And I click selector "#runButton"
+  And I press "runButton"
   And element ".project_updated_at" eventually contains text "Saved"
 
-  When I click selector "#versions-header"
+  When I press "versions-header"
   And I wait until element "button:contains(Restore this Version):eq(0)" is visible
   And element "button.version-preview" is visible
   And I make all links open in the current tab
@@ -46,7 +46,7 @@ Scenario: Project Load and Reload
 
   When I reload the page
   And I wait for the page to fully load
-  And I click selector "#versions-header"
+  And I press "versions-header"
   And I wait until element "button:contains(Current Version)" is visible
 
   # There is currently no guarantee that Version History will initially be
@@ -65,7 +65,7 @@ Scenario: Project Load and Reload
   # Triggers a save because the thumbnail url has changed
   And I click selector "#runButton" once I see it
   And element ".project_updated_at" eventually contains text "Saved"
-  And I click selector "#versions-header"
+  And I press "versions-header"
   And I wait until element "button:contains(Current Version)" is visible
   Then element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(0)" is visible
   And element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(1)" is not visible
@@ -84,7 +84,7 @@ Scenario: Project Version Checkpoints
   When I add code "// comment A" to ace editor
   And I press "runButton"
   And element ".project_updated_at" eventually contains text "Saved"
-  And I click selector "#versions-header"
+  And I press "versions-header"
   And I wait until element "button:contains(Current Version)" is visible
   # The dialog contains only the initial version and the current version, and
   # possibly some versions created more than 90 seconds ago which we ignore.
@@ -98,14 +98,15 @@ Scenario: Project Version Checkpoints
   And I press "resetButton"
   And I click selector "#runButton" once I see it
   And element ".project_updated_at" eventually contains text "Saved"
-  And I click selector "#versions-header"
+  And I press "versions-header"
   And I wait until element "button:contains(Current Version)" is visible
   # The version containing "comment A" is saved as a checkpoint, because the
   # project version interval time period had passed.
   Then element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(0)" is visible
   And element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(1)" is not visible
 
-@no_mobile
+# Brad (2018-11-14) Skip on IE due to blocked pop-ups
+@no_mobile @no_ie
 Scenario: Project page refreshes when other client adds a newer version
   Given I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
@@ -131,7 +132,7 @@ Scenario: Project page refreshes when other client adds a newer version
   # Browser tab 1 writes version Y
   When I add code "// comment Y" to ace editor
   And ace editor code is equal to "// comment Y// comment X"
-  And I click selector "#runButton"
+  And I press "runButton"
   And element ".project_updated_at" eventually contains text "Saved"
 
   When I close the current tab
@@ -145,7 +146,8 @@ Scenario: Project page refreshes when other client adds a newer version
   And I wait for the page to fully load
   Then ace editor code is equal to "// comment Y// comment X"
 
-@no_mobile
+# Brad (2018-11-14) Skip on IE due to blocked pop-ups
+@no_mobile @no_ie
 Scenario: Project page refreshes when other client replaces current version
   Given I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
@@ -159,7 +161,7 @@ Scenario: Project page refreshes when other client replaces current version
   When I add code "// Alpha" to ace editor
   And I press "runButton"
   And element ".project_updated_at" eventually contains text "Saved"
-  And I click selector "#resetButton"
+  And I press "resetButton"
 
   # Browser tab 1 loads version Alpha
   When I open a new tab

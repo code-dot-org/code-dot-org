@@ -564,6 +564,8 @@ lv:
           stages:
             Functions:
               name: Funkcijas
+            Velocity:
+              name: Ātrums
         CSF_Secret_Sample:
           description_audience: Vecumā no 8 gadiem (pēc 2. kursa)
         algebraFacilitator:
@@ -648,6 +650,8 @@ lv:
               name: 'Lauksaimnieks: Nosacījuma cikli'
         csd3-2017:
           stages:
+            Velocity:
+              name: Ātrums
             Functions:
               name: Funkcijas
             Variables:
@@ -703,6 +707,8 @@ lv:
               name: Binārās aproces
             Binary Images:
               name: Binārie Attēli
+            Play Lab:
+              name: Spēles laboratorija
         csd2-2017:
           stages:
             Lists:
@@ -839,10 +845,14 @@ lv:
               name: Mainīgie
             Conditionals:
               name: Sazarojumi
+            Velocity:
+              name: Ātrums
             Functions:
               name: Funkcijas
         csd3-old:
           stages:
+            Velocity:
+              name: Ātrums
             Functions:
               name: Funkcijas
         csd2-draft:
@@ -855,6 +865,8 @@ lv:
               name: Mainīgie
             Conditionals:
               name: Sazarojumi
+            Velocity:
+              name: Ātrums
             Functions:
               name: Funkcijas
             'null':
@@ -925,6 +937,10 @@ lv:
               name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
             Spelling Bee:
               name: Burtošanas bite
+        subgoal-labels-opt-in:
+          stages:
+            Thanks:
+              name: Paldies
         csp3-research-mxghyt:
           stages:
             Creating Functions:
@@ -1027,6 +1043,8 @@ lv:
               name: Mainīgie
             Conditionals:
               name: Sazarojumi
+            Velocity:
+              name: Ātrums
             Functions:
               name: Funkcijas
         csd3-2018:
@@ -1035,6 +1053,8 @@ lv:
               name: Mainīgie
             Conditionals:
               name: Sazarojumi
+            Velocity:
+              name: Ātrums
             Functions:
               name: Funkcijas
         csd2-2018:
@@ -1177,3 +1197,73 @@ lv:
               name: Ej, ej
             Your Digital Footprint:
               name: Tavs digitālais nospiedums
+        frozen-2018:
+          stages:
+            Artist:
+              name: Mākslinieks
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Mākslinieks
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Mākslinieks
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Veidot pamatus
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            Envelope Variables:
+              name: Aplokšņu mainīgie
+            For Loop Fun:
+              name: Jautrība ar "For" Cikliem
+            The Artist:
+              name: Mākslinieks
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Releju programmēšana
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            Digital Citizenship:
+              name: Digitālā pilsonība
+            'Unplugged: Binary':
+              name: 'Atvienots: binārs'
+            Artist Binary:
+              name: 'Mākslinieks: Binārais'
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Veidot pamatus
+            Nested Loops:
+              name: Cikls ciklā
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            Conditionals:
+              name: Sazarojumi
+            Internet:
+              name: Internets
+            Crowdsourcing:
+              name: Pūļa ieguve
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Releju programmēšana
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            Envelope Variables:
+              name: Aplokšņu mainīgie
+            For Loop Fun:
+              name: Jautrība ar "For" Cikliem
+            Binary Bracelets:
+              name: Binārās aproces
+            'Unplugged: Binary':
+              name: 'Atvienots: binārs'
+            Artist Binary:
+              name: 'Mākslinieks: Binārais'
+            Internet:
+              name: Internets
+            Crowdsourcing:
+              name: Pūļa ieguve

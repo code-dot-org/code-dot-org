@@ -3,6 +3,7 @@ require 'mocha/mini_test'
 require 'files_api'
 require 'channels_api'
 require 'cdo/aws/s3'
+require_relative 'spy_newrelic_agent'
 
 #
 # Base class for tests against the FilesApi (which include SourcesTest,
@@ -87,6 +88,12 @@ class FilesApiTestBase < Minitest::Test
     assert_equal(expected['filename'], actual['filename'])
     assert_equal(expected['category'], actual['category'])
     assert_equal(expected['size'], actual['size'])
+  end
+
+  def assert_newrelic_metrics(names)
+    expected = names.join '\n'
+    actual = NewRelic::Agent.metrics.map(&:first).join '\n'
+    assert_equal expected, actual
   end
 
   def successful?

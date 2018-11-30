@@ -101,6 +101,9 @@ fi:
       Function intro Ryan_callout:
         Function_intro_Ryan_1: Tämä pieni ohje saa tietokoneen suorittamaan ISON möhkäleen
           samannimistä koodia työtilassa.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Tämä pieni ohje saa tietokoneen suorittamaan ISON möhkäleen
+          samannimistä koodia työtilassa.
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Anna äänimerkki, kun tämä tapahtuma toteutuu.
       Infinity_move_directions_callout:
@@ -120,7 +123,12 @@ fi:
       MC_HOC_2017_03_Cole_callout:
         MC_HOC_2017_03_Cole_1: Tämä on toisto-silmukka!  Napsauta sitä työtilassa
           ja lisää koodia, jota haluat toistaa yhä uudelleen.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Tämä on toisto-silmukka!  Napsauta sitä työtilassa
+          ja lisää koodia, jota haluat toistaa yhä uudelleen.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Agent voi leijua veden päällä, mutta pelaaja ei!
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: Agent voi leijua veden päällä, mutta pelaaja ei!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Napsauta tämä työtilaan ja lisää siihen koodia, jotta
@@ -128,11 +136,16 @@ fi:
       MC_HOC_2017_06_Cole_callout:
         MC_HOC_2017_06_Cole_1: Et voi heittää näitä kuutioita pois, mutta voit muokata
           niitä!
+      MC_HOC_2017_06_Cole_2019_callout:
+        MC_HOC_2017_06_Cole_1: Et voi heittää näitä kuutioita pois, mutta voit muokata
+          niitä!
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: 'Agent voi leijua laavan päällä, mutta pelaaja ei!  '
       MC_HOC_2017_08_Will_callout:
         MC_HOC_2017_08_RY_1: 'Agent voi leijua laavan päällä, mutta pelaaja ei!  '
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'Agent voi leijua laavan päällä, mutta pelaaja ei!  '
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'Agent voi leijua laavan päällä, mutta pelaaja ei!  '
       NEW Course 4 Artist Functions 5_callout:
         edit_function: Muokkaa funktiotasi napsauttamalla tästä.
@@ -160,19 +173,28 @@ fi:
         craft_callout_preplaced: Olemme koonneet sinulle muutamia palikoita
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Olemme koonneet sinulle muutamia palikoita
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Olemme koonneet sinulle muutamia palikoita
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Tämä koodi aloittaa talosi rakentamisen. Saatko
           sen viimeisteltyä?
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Tämä koodi aloittaa talosi rakentamisen. Saatko
           sen viimeisteltyä?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Tämä koodi aloittaa talosi rakentamisen. Saatko
+          sen viimeisteltyä?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Kokeile ohjelmaa painamalla "Run" ["Suorita"]
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Kokeile ohjelmaa painamalla "Run" ["Suorita"]
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Kokeile ohjelmaa painamalla "Run" ["Suorita"]
       Overworld Place Wall_callout:
         craft_inside_repeat: Toista toimintoja asettamalla palikoita tänne
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Toista toimintoja asettamalla palikoita tänne
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Toista toimintoja asettamalla palikoita tänne
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö
@@ -180,9 +202,14 @@ fi:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö
           etenemiskomennon?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö
+          etenemiskomennon?
       Underground Iron_callout:
         craft_what_is_iron: Louhi tämä rauta!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Louhi tämä rauta!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Louhi tämä rauta!
       aE3_callout:
         aE3_1: Vain kourallinen näitä saatavilla
@@ -199,6 +226,10 @@ fi:
           muuta kokoa.
       frozen cross rotate_callout:
         replace_questions_degree: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Käytä alasvetovalikkoa ja korvaa "???" numerolla
       frozen cross_callout:
         repeat_blocks_1: "(1) Käytä tätä lohkoa ja laita se harmaiden lohkojen ympärille
           työtilassa"
@@ -210,7 +241,17 @@ fi:
         frozen_diamond_repeat: Käytä "toista"-lohkoa luodaksesi tämä muoto.
       frozen freeplay_callout:
         snowflake_dropdown: Käytä tätä alasvetovalikkoa luodaksesi erilaisia lumihiutaleita!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Käytä tätä alasvetovalikkoa luodaksesi erilaisia lumihiutaleita!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Käytä tätä alasvetovalikkoa luodaksesi erilaisia lumihiutaleita!
       frozen line_callout:
+        move_elsa_forward: Saat Elsan siirtymään eteenpäin, kun vedät "liiku eteenpäin"
+          -lohkoa ja kiinnität sen "suoritettaessa" -lohkon alle
+      frozen line_b_callout:
+        move_elsa_forward: Saat Elsan siirtymään eteenpäin, kun vedät "liiku eteenpäin"
+          -lohkoa ja kiinnität sen "suoritettaessa" -lohkon alle
+      frozen line_test_callout:
         move_elsa_forward: Saat Elsan siirtymään eteenpäin, kun vedät "liiku eteenpäin"
           -lohkoa ja kiinnität sen "suoritettaessa" -lohkon alle
       frozen perpendicular_callout:
@@ -218,13 +259,31 @@ fi:
           oleva numero määrittää kuinka paljon Elsa kääntyy
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Käytä "luo lumihiutalehaara" -lohkoa
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Käytä "luo lumihiutalehaara" -lohkoa
       frozen square iterative_callout:
+        frozen_create_square: Luo neliö liittämällä tähän lisää lohkoja
+      frozen square iterative_b_callout:
+        frozen_create_square: Luo neliö liittämällä tähän lisää lohkoja
+      frozen square iterative_test_callout:
         frozen_create_square: Luo neliö liittämällä tähän lisää lohkoja
       frozen square loop 3x_callout:
         replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen square loop 3x_b_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen square loop 3x_test_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
       frozen square loop_callout:
         replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen square loop_b_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen square loop_test_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
       frozen square snowflake_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen square snowflake_b_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen square snowflake_test_callout:
         replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Lisää funktioosi parametreja napsauttamalla muokkaa

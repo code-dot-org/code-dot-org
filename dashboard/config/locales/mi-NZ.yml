@@ -43,6 +43,7 @@ mi:
   next_resource: Rauemi tōmuri
   cancel: Whakakore
   okay: Āe
+  or: rānei
   heading_x_of_y: "%{heading} (whārangi %{x} o %{y})"
   add_teacher_form:
     code:
@@ -88,6 +89,7 @@ mi:
     twitter: Tīhau
     facebook: Pukamata
     windowslive: Pūkete Microsoft
+    microsoft_v2_auth: Pūkete Microsoft
     forgot_password: Kua wareware i a koe tō kupuhipa?
     need_confirmation: Kāore koe i whiwhi ki ngā tohutohu whakaū?
     need_unlock: Kāore koe i whiwhi ki ngā tohutohu wetemaukati?
@@ -229,7 +231,6 @@ mi:
         playlab: Hangaia tētahi taupānga Taiwhanga Tākaro
         artist: Tāngia tētahi mea
         applab: Hangaia tētahi taupānga Taiwhanga Taupānga
-      courses: Akoranga
       project_gallery: Ngā Tūmahi
     user:
       district_dashboard: Paemana ā-Rohe
@@ -240,10 +241,15 @@ mi:
       signin: Takiuru
       signup: Waihangahia tētahi pūkete
       already_registered: Kua rēhita kē?
-      pair_programming: Papatonotanga ā-Tānga
       team: Tīma
       driver: Kaiurungi
       navigator: Kaiwhakatere
+      create: Waihanga
+      applab: Taiwhanga Taupānga
+      artist: Rehetoi
+      playlab: Taiwhanga Tākaro
+      minecraft: Mahimaina
+      flappy: Flappy
     popup:
       progress_for_user: Te kauneketanga o %{name}
       progress: Tō kauneketanga
@@ -564,6 +570,8 @@ mi:
       title: Mahimaina
       body: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina i tāu ake whakaputanga
         Mahimaina.
+    aquatic:
+      title: Mahimaina
     hero:
       title: Mahimaina
     sports:
@@ -916,6 +924,7 @@ mi:
   hidden_stage: Kāore tō pouako i whakaaro ka eke koe ki konei. Tēnā uia tō pouako
     kia mōhio ai koe ko tēhea te akoranga e tika ana mōu i tēnei wā.
   return_course_overview: Haere ki te tirohanga whānui o te kōwae ako
+  view_teacher_guide: Tirohia te aratohu kaiako
   pd:
     form_labels:
       email: Īmēra

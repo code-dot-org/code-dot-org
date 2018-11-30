@@ -1,0 +1,25 @@
+name 'AP_practice_Qs_rqb_11_CSP_3_2_2'
+wrong 'Backing up data'
+wrong 'Deleting entries from data'
+wrong 'Searching through data'
+right 'Sorting data'
+markdown <<MARKDOWN
+The table below shows the time a computer system takes to complete a specified task on the customer data of different-sized companies. 
+<br><img src="https://curriculum.code.org/media/uploads/csp/8062b849855cb85d58cdd77fa72dfc88" width="300"><br>
+Based on the information in the table, which of the following tasks is likely to take the longest amount of time when scaled up for a very large company of approximately 100,000 customers? 
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **3.2.2** and Essential Knowledge statements: **3.2.2E, 3.2.2F, 3.2.2H**
+<hr>
+ (A) 
+
+<hr>
+ (B) 
+
+<hr>
+ (C) 
+
+<hr>
+ (D) 
+
+MARKDOWN

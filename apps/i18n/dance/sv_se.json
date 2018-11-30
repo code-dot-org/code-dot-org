@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "Du måste skapa en dansare.",
+  "danceFeedbackNoDancers": "Du har inga dansare.",
+  "danceFeedbackNoBackground": "Du behöver lägga till en bakgrundseffekt.",
+  "danceFeedbackTooManyDancers": "Var försiktig! Om du lägger ett ”gör ett nytt”- block inuti ”varannan åtgärd” skapar du en massa dansare.",
+  "danceFeedbackUseSetSize": "Använd ”ställ in storlek för bakgrundsdansare2-blocket för att göra dansaren mindre.",
+  "danceFeedbackUseSetTint": "Använd ”ange färgton”-blocket för att ändra en dansares färgton.",
+  "danceFeedbackUseStartMapping": "Testa att lägga till <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\">”scale”</title><title name=\"RANGE\">”bass”</title></block></xml>-blocket till ditt program.",
+  "danceFeedbackStartNewMove": "Din dansare utförde inte en ny rörelse efter den fjärde åtgärden.",
+  "danceFeedbackNeedDifferentDance": "Du behöver använda en annan dans.",
+  "danceFeedbackNeedEveryTwoMeasures": "Försäkra dig om att du använder ”varannan åtgärd”-blocket",
+  "danceFeedbackNeedMakeANewDancer": "Använd ”gör ett nytt”-blocket för att skapa en andra dansare.",
+  "measure": "Åtgärd:"
+}

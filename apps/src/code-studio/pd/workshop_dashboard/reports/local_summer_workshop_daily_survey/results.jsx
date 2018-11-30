@@ -30,6 +30,7 @@ export default class Results extends React.Component {
       if (['scale', 'singleSelect'].includes(question['answer_type'])) {
         return (
           <SingleChoiceResponses
+            perFacilitator={section === "facilitator"}
             question={question['text']}
             answers={answers[questionId]}
             possibleAnswers={question['options']}

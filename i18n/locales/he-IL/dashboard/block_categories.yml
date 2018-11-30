@@ -15,9 +15,9 @@ he:
       Boolean: ערך בוליאני
       Conditionals: תנאים
       Events: אירועים
-      Games/Score: משחק/נקודות
+      Games/Score: משחקים/נקודות
       Comments: תגובות
-      Category: קטגוריות
+      Category: קטגוריה
       Prebuilt: טרום בניה
       Text: טקסט
       Picker: בוחר
@@ -31,13 +31,18 @@ he:
       Behaviors: התנהגויות
       Advanced: מתקדם
       Start: התחל
+      Locations: מיקומים
       Music: מוסיקה
-      Sprite: מסך
-      Brush: מברשת
-      Make Sprite: צור מסך
-      Movement: תנועה
+      Dancing: ריקוד
+      Dancers: רקדנים
       Groups: קבוצות
+      Sprite: ספרייט
+      Brush: מברשת
+      Make Sprite: צור ספרייט
+      Movement: תנועה
       Functional: תפקוד
+      While Events: מאורעות כל עוד
+      Sprite Properties: מאפייני ספרייט
       Predefined: מוגדרים מראש
       test: בדיקה
       test2: בדיקה2

@@ -44,6 +44,7 @@ uk:
   next_resource: Наступний ресурс
   cancel: Скасувати
   okay: Добре
+  or: або
   heading_x_of_y: "%{heading} (сторінка %{x} з %{y})"
   add_teacher_form:
     code:
@@ -88,6 +89,7 @@ uk:
     twitter: Twitter
     facebook: Facebook
     windowslive: обліковий запис Microsoft
+    microsoft_v2_auth: обліковий запис Microsoft
     forgot_password: Забули пароль?
     need_confirmation: Не отримали вказівок підтвердження?
     need_unlock: Не отримали вказівок розблокування?
@@ -239,8 +241,7 @@ uk:
         playlab: Створити програму
         artist: Намалювати щось
         applab: Створити програму в App Lab
-      home: Головна
-      courses: курси
+      course_catalog: Каталог курсів
       project_gallery: Проекти
       educate_overview: Огляд для педагога
       educate_elementary: Початкова школа
@@ -277,10 +278,17 @@ uk:
       signin: Вхід
       signup: Створити обліковий запис
       already_registered: Вже зареєстровані?
-      pair_programming: Парне програмування
       team: Команда
       driver: Водій
       navigator: Навігатор
+      create: Створити
+      applab: App Lab
+      artist: Художник
+      gamelab: Ігрова лабораторія
+      playlab: Ігрова студія
+      minecraft: Майнкрафт
+      flappy: Пурх
+      dance: Танцювальна вечірка
     popup:
       progress_for_user: Прогрес %{name}
       progress: Ваш прогрес
@@ -504,12 +512,12 @@ uk:
     report_abuse: Повідомити про порушення
     built_on_code_studio: Створено у Студії коду
     make_my_own_app: Створити власну програму
-    how_it_works: Як це працює
+    how_it_works: Як це працює (Переглянути код)
     try_hour_of_code: Спробуйте Годину коду!
   reference_area:
     title: Потрібна допомога?
     subtitle: Переглянути ці відео та підказки
-    teacher: Вирішення
+    teacher: Подивитись рішення
     auth_error: У вас немає прав на перегляд вирішення.
     submit: Оновлення розташування Художника
     direction: Початковий напрямок (у градусах)
@@ -567,6 +575,8 @@ uk:
         поділіться нею з іншими.
       audience: Вік 13+
       cta: Почати навчання
+    dance:
+      title: Танцювальна вечірка
     hoc:
       title: Лабіринт
       body: Спробуйте основи інформатики. Мільйони вже скористались цим шансом.
@@ -609,6 +619,8 @@ uk:
     minecraft2016:
       title: Майнкрафт
       body: Запрограмуй тварин та інших істот Майнкрафт у власній версії цієї гри.
+    aquatic:
+      title: Майнкрафт
     hero:
       title: Майнкрафт
     sports:
@@ -742,9 +754,8 @@ uk:
     tos: Умови надання послуг
     privacy: Політика конфіденційності
     privacy_notice: Конфіденційність
-    accept_label: Я згіден з тим, що можуть бути оновлені <a href="%{tos_url}" target="_blank">Умови
-      використання сервісу</a>, <a href="%{privacy_url}" target="_blank">Конфеденційність
-      Policy</a>
+    accept_label: Я погоджуюсь з <a href="%{tos_url}" target="_blank">Умовами використання
+      сервісу</a> та <a href="%{privacy_url}" target="_blank">Політикою конфіденційності</a>.
     accept: Підтвердити
     print: Друк
     reminder_desc: Увага! Ми оновили <a href="%{tos_url}" target="_blank">Правила

@@ -1,0 +1,32 @@
+{
+  "category": "Start",
+  "config": {
+    "func": "whenSetupSong",
+    "blockText": "setup {SONG} ",
+    "args": [
+      {
+        "name": "SONG",
+        "options": [
+          [
+            "Macklemore - Can't Hold Us",
+            "\"macklemore90\""
+          ],
+          [
+            "MC Hammer - U Can't Touch This",
+            "\"hammer\""
+          ],
+          [
+            "The Black Eyed Peas - I Got a Feeling",
+            "\"peas\""
+          ]
+        ]
+      }
+    ],
+    "eventLoopBlock": true,
+    "color": [
+      39,
+      1,
+      0.99
+    ]
+  }
+}

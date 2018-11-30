@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdo-temp.s3.amazonaws.com/test-delete-key
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 29 Sep 2018 00:35:22 GMT
+      Last-Modified:
+      - Sat, 29 Sep 2018 00:35:21 GMT
+      Etag:
+      - '"adbe13f1e055af794f797a5a104f88c8"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '18'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '0.5488135039273248'
+    http_version: 
+  recorded_at: Sat, 29 Sep 2018 00:35:21 GMT
+- request:
+    method: delete
+    uri: http://cdo-temp.s3.amazonaws.com/test-delete-key?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJKADNJLDLSFUAK2Q/20180929/us-east-1/s3/aws4_request&X-Amz-Date=20180929T003520Z&X-Amz-Expires=900&X-Amz-Signature=a4b2c58fe84adf4f4ac42087bb4bac1bc410814040c93ba4b24b58a322e7a6e6&X-Amz-SignedHeaders=host
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Sat, 29 Sep 2018 00:35:22 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sat, 29 Sep 2018 00:35:21 GMT
+recorded_with: VCR 3.0.3

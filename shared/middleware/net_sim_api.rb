@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'cdo/aws/metrics'
 require 'cdo/sinatra'
 require 'cdo/db'
 require 'cdo/rack/request'
@@ -224,7 +225,7 @@ class NetSimApi < Sinatra::Base
 
     # Block request if payload is unusually large.
     if body_string.length > MAX_REQUEST_SIZE
-      record_metric("InsertTooLarge_#{table_name}", body_string.length)
+      record_metric("InsertTooLarge_#{table_name}", body_string.length, 'Bytes')
       too_large
     end
 
@@ -250,7 +251,7 @@ class NetSimApi < Sinatra::Base
     table = get_table(shard_id, table_name)
     result = values.map {|value| table.insert(value, request.ip)}
 
-    record_metric("InsertBytes_#{table_name}", body_string.length)
+    record_metric("InsertBytes_#{table_name}", body_string.length, 'Bytes')
     record_metric("InsertRows_#{table_name}", values.count)
 
     # Finally, if we are not performing a multi-insert, denormalize our
@@ -354,7 +355,7 @@ class NetSimApi < Sinatra::Base
 
     # Block request if payload is unusually large.
     if body_string.length > MAX_REQUEST_SIZE
-      record_metric("UpdateTooLarge_#{table_name}", body_string.length)
+      record_metric("UpdateTooLarge_#{table_name}", body_string.length, 'Bytes')
       too_large
     end
 
@@ -368,7 +369,7 @@ class NetSimApi < Sinatra::Base
       json_bad_request
     end
 
-    record_metric("UpdateBytes_#{table_name}", body_string.length)
+    record_metric("UpdateBytes_#{table_name}", body_string.length, 'Bytes')
 
     dont_cache
     content_type :json
@@ -498,15 +499,26 @@ class NetSimApi < Sinatra::Base
     message_table.delete(message_ids) unless message_ids.empty?
   end
 
-  # Record a custom metric that will be aggregated and sent to New Relic about
-  # once a minute.
+  # Record a custom metric that will be sent to Cloudwatch.
   # @private
   # @param [String] event_type - unique metric key within NetSimApi
   # @param [Number] value (default 1) value of measurement, omit if we only care
   #   about event counts.
-  def record_metric(event_type, value = 1)
-    return unless CDO.newrelic_logging
-    NewRelic::Agent.record_metric("Custom/NetSimApi/#{event_type}", value)
+  # @param [String] unit (default 'Count') unit of measurement. For allowed units,
+  #   see https://docs.aws.amazon.com/sdkforruby/api/Aws/CloudWatch/Types/MetricDatum.html#unit-instance_method
+  def record_metric(event_type, value = 1, unit = 'Count')
+    return unless CDO.netsim_enable_metrics
+    Cdo::Metrics.push('NetSimApi',
+      [
+        {
+          metric_name: event_type,
+          dimensions: [
+            {name: "Environment", value: CDO.rack_env},
+          ],
+          value: value
+        }
+      ]
+    )
   end
 end
 

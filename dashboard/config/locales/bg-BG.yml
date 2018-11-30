@@ -18,6 +18,7 @@ bg:
       messages:
         blank: е задължително
         blank_plural: са задължителни
+        invalid: е невалиден
         invalid_plural: са невалидни
     attributes:
       user:
@@ -45,6 +46,7 @@ bg:
   next_resource: Следващ ресурс
   cancel: Отмяна
   okay: Добре
+  or: или
   heading_x_of_y: "%{heading} (page %{x} на %{y})"
   add_teacher_form:
     code:
@@ -85,6 +87,7 @@ bg:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft профил
+    microsoft_v2_auth: Microsoft профил
     clever: Умен профил
     forgot_password: Забравена парола?
     need_confirmation: Не сте получили инструкции за потвърждение ?
@@ -283,9 +286,7 @@ bg:
         artist: Начертай нещо
         applab: Направи Play Lab приложение
         gamelab: Направи Game Lab проект
-      home: Начало
       my_dashboard: Моето табло
-      courses: Курсове
       course_catalog: Каталог на курса
       project_gallery: Проекти
       sections: Раздели
@@ -326,10 +327,16 @@ bg:
       signin: Вход
       signup: Създаване на акаунт
       already_registered: Вече сте регистриран?
-      pair_programming: Програмиране по двойки
       team: Екип
       driver: Шофьор
       navigator: Навигатор
+      create: Създай
+      applab: Лаборатория за приложения
+      artist: Художник
+      gamelab: Играта лаборатория
+      playlab: Театрална лаборатория
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: на %{name} в прогрес
       progress: Вашият напредък
@@ -698,6 +705,8 @@ bg:
       title: Minecraft
       body: Програмирай животни и други Minecraft същества в своя собствена версия
         на Minecraft.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
       body: Minecraft се завръща за часът на кода с чисто нова дейност! Пътешествай

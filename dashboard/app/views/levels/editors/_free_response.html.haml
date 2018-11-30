@@ -30,3 +30,6 @@
 .field
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :allow_user_uploads, description: "Allow User Uploads"}
   %p Let users upload files as solutions.
+.field
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :optional, description: "Optional"}
+  %p If checked, an assessment page will still be considered complete even if this question is left blank.

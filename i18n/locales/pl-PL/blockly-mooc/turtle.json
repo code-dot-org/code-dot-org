@@ -38,7 +38,7 @@
   "drawUpperWave": "narysuj górna falę",
   "drawLowerWave": "narysuj dolną falę",
   "drawSticker": "narysuj naklejkę",
-  "drawStickerWithSize": "",
+  "drawStickerWithSize": "narysuj naklejkę o wielkości",
   "heightParameter": "wysokość",
   "hideTurtle": "ukryj artystę",
   "jump": "skocz",
@@ -74,7 +74,7 @@
   "penDown": "opuść ołówek",
   "penTooltip": "Podnosi lub opuszcza ołówek, by zakończyć lub rozpocząć rysowanie.",
   "penUp": "podnieś ołówek",
-  "pointTo": "",
+  "pointTo": "wskaż na",
   "pixels": "piksele",
   "reinfFeedbackMsg": "Oto Twój rysunek! Pracuj nad nim dalej lub przejdź do następnej łamigłówki.",
   "setAlpha": "ustaw alfa",
@@ -94,6 +94,6 @@
   "turnTooltip": "Obraca artystę w lewo lub prawo o określoną liczbę stopni.",
   "turtleVisibilityTooltip": "Artysta staje się widoczny lub niewidoczny.",
   "widthTooltip": "Zmienia grubość ołówka.",
-  "withSize": "",
+  "withSize": "o wielkości",
   "wrongColour": "Twój obrazek ma nieodpowiedni kolor. W tej łamigłówce musi to być %1."
 }

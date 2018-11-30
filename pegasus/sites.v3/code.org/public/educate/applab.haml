@@ -7,10 +7,10 @@ video_player: true
 %link{href: "/css/tools.css", rel: "stylesheet"}
 %link{href: "/css/highlights.css", rel: "stylesheet"}
 
-.tools-banner.responsive-body
+.tools-banner
   .tools-img-box
     %img.tools-img-applab.tools-img{src: CDO.code_org_url("/images/app-lab/applab-tool.png")}
-  .tools-info{style: "max-width: 670px;"}
+  .tools-info{style: "max-width: 688px;"}
     .tools-title-bar
       %h1.tools-title App Lab
     .tools-description
@@ -21,20 +21,20 @@ video_player: true
 
 .clear
 
-#resources.responsive-body
+#resources.tile-container-responsive
   = view :top_hoc_tutorial_applab, image_match_youtube_height: true
 
   .col-50
     .tutorial-tile
       = view :display_video_thumbnail, id: "app_lab_in_classroom", video_code: "e1St8LB4VJA", play_button: 'center', download_path: "//videos.code.org/applab/in-the-classroom.mp4", letterbox: 'false'
-      .tutorial-info
+      .tutorial-info{style: "justify-content: flex-start;"}
         %h3{style: "margin-top: 0px;"} App Lab in the classroom
         .smalltext This launch video introduces five reasons App Lab could be a great tool for students learning programming.
       .clear
 
 .clear
 
-#challenges.responsive-body
+#challenges
   %h2 Starter Projects
   %p Start with a blank project, explore the sample apps and take the challenge to make them even better, or check out projects that other students have built.
   .highlights-content
@@ -148,7 +148,7 @@ video_player: true
 
 
 #videos
-  %h2.responsive-body Video library
+  %h2 Video library
   Watch these videos to learn how to create apps in App Lab and learn new programming concepts with the tool.
 
   - cspunit3_videos = []

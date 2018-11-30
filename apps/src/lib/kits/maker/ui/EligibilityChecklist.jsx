@@ -35,6 +35,7 @@ export default class EligibilityChecklist extends Component {
     initialDiscountCode: PropTypes.string,
     initialExpiration: PropTypes.string,
     adminSetStatus: PropTypes.bool.isRequired,
+    currentlyDistributingDiscountCodes: PropTypes.bool,
   };
 
   state = {
@@ -112,6 +113,17 @@ export default class EligibilityChecklist extends Component {
       );
     }
 
+    if (!this.props.currentlyDistributingDiscountCodes) {
+      return (
+        <div style={styles.main}>
+          <h2>Discount codes are no longer available</h2>
+          <p>
+            Sorry, we are no longer distributing Adafruit discount codes at this time.
+          </p>
+        </div>
+      );
+    }
+
     return (
       <div style={styles.main}>
         <h2>
@@ -151,7 +163,7 @@ export default class EligibilityChecklist extends Component {
           <div style={styles.discountMessage}>
             According to our data, your school has fewer than 50% of students that are
             eligible for free/reduced-price lunches. This means that we can bring down
-            the cost of the $325 kit to just $97.50.{" "}
+            the cost of the $350 kit to just $97.50.{" "}
             <strong style={styles.bold}>
               If this data seems inaccurate and you believe there are over 50% of students
               that are eligible for free/reduced-price lunch at your school, please contact

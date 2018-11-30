@@ -5,7 +5,6 @@ import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import {UnconnectedPersonalProjectsTable as PersonalProjectsTable} from '@cdo/apps/templates/projects/PersonalProjectsTable';
 import {stubFakePersonalProjectData} from '@cdo/apps/templates/projects/generateFakeProjects';
-import {publishMethods} from '@cdo/apps/templates/projects/projectConstants';
 
 describe('PersonalProjectsTable', () => {
   // In the fake data used, the recency of the projects' updatedAt field is consistent with the numbering in the name; for example, the project named "Personal Project 1" has the most recent updatedAt time.
@@ -15,7 +14,6 @@ describe('PersonalProjectsTable', () => {
         <PersonalProjectsTable
           personalProjectsList={stubFakePersonalProjectData}
           canShare={true}
-          publishMethod={publishMethods.CHEVRON}
         />
       </Provider>
     );

@@ -10,6 +10,7 @@ el:
       messages:
         blank: "απαιτείται"
         blank_plural: "απαιτούμενο"
+        invalid: "δεν είναι έγκυρο"
         invalid_plural: "μη έγκυρο"
     attributes:
       user:
@@ -26,6 +27,7 @@ el:
         age: 'Ηλικία'
         gender: 'Φύλο'
         edit_header: 'Στοιχεία Λογαριασμού'
+        finish_sign_up_header: 'Ολοκληρώστε τη δημιουργία του λογαριασμού σας'
         error:
           future: δεν μπορεί να είναι στο μέλλον
   hello: "Γεια σου κόσμε"
@@ -39,6 +41,7 @@ el:
   next_resource: Επόμενος πόρος
   cancel: "Άκυρο"
   okay: "Εντάξει"
+  or: "ή"
   heading_x_of_y: "%{heading} (σελίδα %{x} του %{y})"
   add_teacher_form:
     code:
@@ -73,6 +76,7 @@ el:
   prize: 'βραβείο'
   more_info: 'Περισσότερες πληροφορίες'
   auth:
+    continue_with: 'Συνέχεια μέσω %{provider}'
     sign_in_with: 'Εγγραφή μέσω  %{provider}'
     signed_in: 'Συνδέθηκες!'
     signed_out: 'Αποσυνδεθήκατε από το <a href="%{url}">Code.org</a>.'
@@ -83,6 +87,7 @@ el:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Λογαριασμός Microsoft'
+    microsoft_v2_auth: 'Λογαριασμός Microsoft'
     clever: 'Έξυπνος λογαριασμός'
     powerschool: 'Λογαριασμός Powerschool'
     forgot_password: 'Ξέχασες τον κωδικό σου;'
@@ -178,7 +183,7 @@ el:
       submit: 'Άλλαξε τον κωδικό μου'
   welcome_email:
     subject: 'Μπες στην τάξη μου (στο Code.org)'
-    body: |2
+    body: |
       Κάνε κλικ στον παρακάτω σύνδεσμο να εγγραφείς στα μαθήματα της επιστήμης των υπολογιστών του Code.org (με μένα ως "δάσκαλό" σου):
       
       %{link}
@@ -231,7 +236,6 @@ el:
         playlab: 'Δημιουργήστε μια εφαρμογή'
         artist: 'Ζωγραφίστε κάτι'
         applab: 'Δημιουργήστε μια εφαρμογή'
-      courses: "Τες"
       project_gallery: "Έργα"
       educate_hoc: "Η Ώρα του Κώδικα"
     user:
@@ -244,10 +248,17 @@ el:
       signin: 'Σύνδεση'
       signup: 'Δημιουργήστε ένα λογαριασμό'
       already_registered: 'Έχετε εγγραφεί ήδη;'
-      pair_programming: 'Προγραμματισμός κατά ζεύγη'
       team: 'Ομάδα'
       driver: 'Οδηγός-αρχηγός'
       navigator: 'Πλοηγός'
+      create: 'Δημιουργία'
+      applab: 'Εργαστήριο εφαρμογών'
+      artist: 'Καλλιτέχνης'
+      gamelab: 'Game Lab'
+      playlab: 'Εργαστήριο Παιχνιδιού'
+      minecraft: 'Minecraft'
+      flappy: 'Πουλάκι'
+      dance: 'Πάρτι Χορού'
     popup:
       progress_for_user: "πρόοδος του %{name}"
       progress: 'Η πρόοδός σου'
@@ -443,6 +454,8 @@ el:
       body_short: "Σχεδίασε μια εφαρμογή, κωδικοποίησέ την με μπλοκς ή JavaScript ώστε να λειτουργεί, στη συνέχεια, μοιραστείτε την εφαρμογή σας σε δευτερόλεπτα."
       audience: 'Ηλικίες 13+'
       cta: 'Μάθε πώς'
+    dance:
+      title: 'Πάρτι Χορού'
     hoc:
       title: 'Κλασικός λαβύρινθος'
       body: 'Δοκιμάστε τα βασικά της επιστήμης των υπολογιστών. Εκατομμύρια τα  έχουν ήδη δοκιμάσει.'
@@ -481,8 +494,11 @@ el:
     minecraft2016:
       title: "Minecraft"
       body: "Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην δικιά σου έκδοση του Minecraft."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα."
     unplugged:
       audience: "Ηλικίες 6+"
       body: "Έχουμε συντάξει έναν κατάλογο ανεξάρτητων μαθημάτων για να τα χρησιμοποιήσετε στην τάξη σας. Τώρα μπορείτε να διδάξετε τις βασικές αρχές της επιστήμης των υπολογιστών, είτε έχετε υπολογιστές στην τάξη σας ή όχι! Δοκιμάστε να χρησιμοποιήσετε αυτά τα μαθήματα σαν αυτόνομα ή σαν συμπληρωματικά μαθήματα για κάθε τμήμα επιστήμης υπολογιστών."
@@ -654,6 +670,7 @@ el:
         acknowledge: 'Υποβάλλοντας αυτές τις πληροφορίες, αναγνωρίζετε ότι θα τη μεταχειριστούμε σύμφωνα με τους όρους της Policy%{link_end} το %{link_start_privacy}Privacy και το %{link_start_tos}Terms του Service%{link_end}'
   flex_category:
     required: 'Επισκόπηση'
+  view_teacher_guide: 'Προβολή Οδηγού Εκπαιδευτικού'
   pd:
     form_labels:
       email: 'Ηλεκτρονικό ταχυδρομείο'

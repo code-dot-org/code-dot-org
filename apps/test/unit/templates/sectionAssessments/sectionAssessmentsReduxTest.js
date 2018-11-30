@@ -675,6 +675,15 @@ describe('sectionAssessmentsRedux', () => {
     });
 
     describe('countSubmissionsForCurrentAssessment', () => {
+      it('returns zero with no assessmentId', () => {
+        const state = {
+          sectionAssessments: {}
+        };
+
+        const totalSubmissions = countSubmissionsForCurrentAssessment(state);
+        assert.deepEqual(totalSubmissions, 0);
+      });
+
       it('returns totals for an assessment', () => {
         const stateWithAssessment = {
           ...rootState,

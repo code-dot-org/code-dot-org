@@ -50,7 +50,19 @@ def hoc_canonicalized_i18n_path(uri, query_string)
   end
 
   country_language = HOC_COUNTRIES[@country]['default_language']
-  @language = @user_language || country_language || hoc_detect_language
+
+  # If the user has set their browser to a non-english language, always default
+  # to that language. (Because we can safely assume in this case that changing
+  # that browser setting was a conscious decision that we can respect)
+  #
+  # Otherwise, if we have a geolocation-inferred language for the user, default
+  # to that. (Because some information is better than nothing)
+  #
+  # Otherwise, just default to english.
+  browser_non_english = !hoc_detect_language.nil? && hoc_detect_language != 'en'
+  default_language = browser_non_english ? hoc_detect_language : country_language
+
+  @language = @user_language || default_language
 
   canonical_urls = [File.join(["/#{(@company || @country)}/#{@language}", path].reject(&:nil_or_empty?))]
   canonical_urls << File.join(["/#{(@company || @country)}", path].reject(&:nil_or_empty?)) if @language == country_language
@@ -147,13 +159,8 @@ def company_count
 end
 
 def country_count
-  code = HOC_COUNTRIES[@country]['solr_country_code'] || @country
+  code = HOC_COUNTRIES[@country]['country_code'] || @country
   return fetch_hoc_metrics['hoc_country_totals'][code.upcase]
-end
-
-def solr_country_code
-  code = HOC_COUNTRIES[@country]['solr_country_code'] || @country
-  return code
 end
 
 def country_full_name

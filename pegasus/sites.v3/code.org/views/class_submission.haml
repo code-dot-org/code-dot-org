@@ -181,7 +181,7 @@
   var geocomplete;
 
   $(document).ready(function() {
-    $('#submit-school-form select').selectize();
+    $('#submit-school-form select').selectize({plugins: ["remove_button"]});
 
     geocomplete = $("#school-address").geocomplete();
 

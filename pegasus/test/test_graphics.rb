@@ -20,6 +20,12 @@ class GraphicsTest < Minitest::Test
     assert_image_url "/images/#{mode}/#{path}", columns, rows
   end
 
+  def assert_animated_image(url, frames)
+    resp = get(url)
+    assert_equal 200, resp.status, url
+    assert_equal frames, Magick::ImageList.new.from_blob(resp.body).length
+  end
+
   def test_process_image
     flag = 'avatars/flag_sphere.png'
     kids = 'homepage/kids4.png'
@@ -43,6 +49,9 @@ class GraphicsTest < Minitest::Test
 
     # Didn't find a match at this resolution, look for a match at the other resolution.
     assert_image '320', 'avatars/flag_sphere_2x.jpg', 640, nil
+
+    # Ensure animated images retain multiple layers after transformation.
+    assert_animated_image '/images/fit-x200/animated-examples/flappy-game-space.gif', 61
 
     # Test localized image path routing
     header 'Host', 'hourofcode.com'

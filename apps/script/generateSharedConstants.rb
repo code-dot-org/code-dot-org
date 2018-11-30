@@ -66,6 +66,7 @@ end
 
 def main
   shared_content = generate_multiple_constants %w(
+    ARTIST_AUTORUN_OPTIONS
     GAMELAB_AUTORUN_OPTIONS
     LEVEL_KIND
     LEVEL_STATUS
@@ -83,7 +84,7 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(COURSES SUBJECTS STATES WORKSHOP_TYPES),
+      %w(COURSES SUBJECTS STATES WORKSHOP_APPLICATION_STATES WORKSHOP_SEARCH_ERRORS WORKSHOP_TYPES),
       source_module: Pd::SharedWorkshopConstants,
       transform_keys: false
     ),
@@ -93,24 +94,15 @@ def main
   generate_shared_js_file(
     generate_multiple_constants(
       %w(SECTION_HEADERS PAGE_LABELS LABEL_OVERRIDES NUMBERED_QUESTIONS TEXT_FIELDS),
-      source_module: Pd::Facilitator1819ApplicationConstants,
+      source_module: Pd::Facilitator1920ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/facilitator1819ApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/facilitator1920ApplicationConstants.js"
   )
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS),
-      source_module: Pd::Teacher1819ApplicationConstants,
-      transform_keys: true
-    ),
-    "#{REPO_DIR}/apps/src/generated/pd/teacher1819ApplicationConstants.js"
-  )
-
-  generate_shared_js_file(
-    generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS),
+      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS SCHOLARSHIP_DROPDOWN_OPTIONS),
       source_module: Pd::Teacher1920ApplicationConstants,
       transform_keys: true
     ),
@@ -120,10 +112,10 @@ def main
   generate_shared_js_file(
     generate_multiple_constants(
       %w(PAGE_LABELS TEXT_FIELDS),
-      source_module: Pd::PrincipalApproval1819ApplicationConstants,
+      source_module: Pd::PrincipalApproval1920ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/principalApproval1819ApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/principalApproval1920ApplicationConstants.js"
   )
 
   generate_shared_js_file(

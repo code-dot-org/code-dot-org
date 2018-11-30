@@ -1,0 +1,28 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "getAnim",
+    "blockText": "{SPRITE} {COSTUME}",
+    "returnType": "None",
+    "color": [
+      258,
+      "0.35",
+      "0.62"
+    ],
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "COSTUME",
+        "options": [
+          [
+            "costume",
+            "\"costume\""
+          ]
+        ]
+      }
+    ]
+  }
+}

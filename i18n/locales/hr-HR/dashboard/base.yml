@@ -29,6 +29,7 @@ hr:
   next_page: Sljedeća stranica
   cancel: "Odustani"
   okay: "U redu"
+  or: "ili"
   add_teacher_form:
     code:
       label: 'Dodajte učitelja:'
@@ -69,6 +70,7 @@ hr:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft račun'
+    microsoft_v2_auth: 'Microsoft račun'
     forgot_password: 'Zaboravio si lozinku?'
     need_confirmation: "Nisi primio upute za potvrdu?"
     need_unlock: "Nisi primio upute za otključavanje?"
@@ -177,7 +179,6 @@ hr:
         artist: 'Nacrtaj nešto'
         calculate: 'Izračunajte nešto'
         applab: 'Napravi aplikaciju'
-      courses: "Tečajevi"
       project_gallery: "Projekti"
       educate_hoc: "Hour of Code"
     user:
@@ -189,7 +190,12 @@ hr:
       logout: 'Odjava'
       signin: 'Prijava'
       already_registered: 'Jeste li već registrirani?'
-      pair_programming: 'Programiranje u paru'
+      create: 'Stvori'
+      applab: 'Laboratorij aplikacija'
+      artist: 'Umjetnik'
+      playlab: 'Laboratorij igara'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Napredak %{name}"
       progress: 'Tvoj napredak'
@@ -395,6 +401,8 @@ hr:
       body: "Istraži Minecraft svijet pomoću koda"
     minecraft2016:
       title: "Minecraft"
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
     unplugged_conditionals:
@@ -473,7 +481,7 @@ hr:
   terms_interstitial:
     tos: "Uvjeti"
     privacy: "Pravila privatnosti"
-    print: "Piši"
+    print: "Ispiši"
   school_info_interstitial:
     save: "Spremi"
   race_interstitial:

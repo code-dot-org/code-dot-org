@@ -1,0 +1,177 @@
+<Dancelab>
+  <config><![CDATA[{
+  "game_id": 63,
+  "created_at": "2018-08-29T16:23:39.000Z",
+  "level_num": "custom",
+  "user_id": 182,
+  "properties": {
+    "skin": "dance",
+    "helper_libraries": [
+      "DanceLab"
+    ],
+    "hide_animation_mode": "true",
+    "show_type_hints": "true",
+    "use_modal_function_editor": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "hide_custom_blocks": "true",
+    "use_default_sprites": "false",
+    "markdown_instructions": "Dancer properties are pretty neat, but what they'd be event neater if we could control them with the music. The <xml>\r\n  <block type=\"Dancelab_startMapping\">\r\n    <title name=\"SPRITE\">dancer1</title>\r\n    <title name=\"PROPERTY\">\"scale\"</title>\r\n    <title name=\"RANGE\">\"bass\"</title>\r\n  </block></xml> block uses the music's volume to control a dancer's properties.\r\n\r\nThis program uses the music's \"bass\" volume (the low sounds) to set the shark's height. Try using this new block to make one of the Pineapple's properties respond to the music.",
+    "parent_level_id": 14508,
+    "block_pool": "Dancelab",
+    "validation_code": "if (World.frameCount == 1) {\r\n  validationProps.following_count = 0;\r\n}\r\n\r\nif(getTime(\"measures\") > 8){\r\n  sprites.forEach(function(sprite) {\r\n    // If a sprite has more than one behavior, assume it's following music\r\n    if (sprite.behaviors.length > 1) validationProps.following_count++;\r\n  });\r\n  // We start with one sprite following by default, make sure the student has added another\r\n  if (validationProps.following_count > 1) {\r\n    levelSuccess(0);\r\n  } else {\r\n    levelSuccess(3);\r\n  }\r\n}",
+    "preload_asset_list": [
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/SHARK_Rest.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/SHARK_ClapHigh.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/SHARK_Clown.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/SHARK_Dab.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/SHARK_DoubleJam.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/SHARK_Drop.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/SHARK_Floss.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/SHARK_Fresh.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/SHARK_Kick.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/SHARK_Roll.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/SHARK_ThisOrThat.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/SHARK_Thriller.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/PINEAPPLE_Rest.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/PINEAPPLE_ClapHigh.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/PINEAPPLE_Clown.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/PINEAPPLE_Dab.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/PINEAPPLE_DoubleJam.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/PINEAPPLE_Drop.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/PINEAPPLE_Floss.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/PINEAPPLE_Fresh.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/PINEAPPLE_Kick.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/PINEAPPLE_Roll.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/PINEAPPLE_ThisOrThat.png",
+      "https://curriculum.code.org/images/sprites/spritesheet_sm/PINEAPPLE_Thriller.png"
+    ],
+    "custom_helper_library": "SPRITE_NAMES = [\"ALIEN\", \"BEAR\", \"CAT\", \"DUCK\", \"FROG\", \"MOOSE\", \"PINEAPPLE\", \"ROBOT\", \"SHARK\", \"UNICORN\"];",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-08-29 15:46:23 +0000\",\"changed\":[\"notes\",\"hide_animation_mode\",\"show_type_hints\",\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:47:46 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:48:10 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:53:30 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:55:34 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:57:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:59:27 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:00:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:02:53 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:03:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:04:09 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:07:29 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:08:46 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:09:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:10:46 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:12:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:12:43 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:15:02 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:16:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:17:11 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:18:03 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:18:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:19:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:25:02 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-09-14 15:18:29 +0000\",\"changed\":[\"start_blocks\",\"hide_custom_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 15:22:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 15:35:59 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 05:29:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 05:29:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 05:30:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 15:24:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-09-21 15:24:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-09-21 15:24:43 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-09-21 21:48:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 21:54:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 21:56:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 21:56:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 22:00:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 22:01:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 22:29:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 22:32:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 23:03:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-29 05:25:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-29 05:32:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\",\"preload_asset_list\",\"custom_helper_library\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="Dancelab_whenSetupSong" movable="false">
+          <title name="SONG">"hammer"</title>
+          <statement name="DO">
+            <block type="Dancelab_setBackgroundEffect">
+              <title name="EFFECT">"diamonds"</title>
+              <next>
+                <block type="Dancelab_makeNewDanceSprite">
+                  <title name="COSTUME" config="&quot;ALIEN&quot;, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;MOOSE&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;">"SHARK"</title>
+                  <title name="NAME">dancer1</title>
+                  <title name="LOCATION">{x: 100, y: 200}</title>
+                  <next>
+                    <block type="Dancelab_makeNewDanceSprite">
+                      <title name="COSTUME" config="&quot;ALIEN&quot;, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;MOOSE&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;">"PINEAPPLE"</title>
+                      <title name="NAME">dancer2</title>
+                      <title name="LOCATION">{x: 300, y: 200}</title>
+                      <next>
+                        <block type="Dancelab_startMapping">
+                          <title name="SPRITE">dancer1</title>
+                          <title name="PROPERTY">"height"</title>
+                          <title name="RANGE">"bass"</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="Dancelab_everySeconds">
+          <title name="N">2</title>
+          <title name="UNIT">"measures"</title>
+          <statement name="DO">
+            <block type="Dancelab_changeMoveLR">
+              <title name="SPRITE">dancer1</title>
+              <title name="MOVE">"next"</title>
+              <title name="DIR">-1</title>
+              <next>
+                <block type="Dancelab_changeMoveLR">
+                  <title name="SPRITE">dancer2</title>
+                  <title name="MOVE">"next"</title>
+                  <title name="DIR">1</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="Dancelab_setBackgroundEffect">
+          <title name="EFFECT">"none"</title>
+        </block>
+        <block type="Dancelab_makeNewDanceSprite">
+          <title name="COSTUME" config="&quot;ALIEN&quot;, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;MOOSE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;PINEAPPLE&quot;, &quot;UNICORN&quot;">"DUCK"</title>
+          <title name="NAME">dancer1</title>
+          <title name="LOCATION">{x: 200, y: 100}</title>
+        </block>
+        <block type="Dancelab_changeMoveLR">
+          <title name="SPRITE">dancer1</title>
+          <title name="MOVE">MOVES.ClapHigh</title>
+          <title name="DIR">-1</title>
+        </block>
+        <block type="Dancelab_doMoveLR">
+          <title name="SPRITE">dancer1</title>
+          <title name="MOVE">MOVES.Clown</title>
+          <title name="DIR">-1</title>
+        </block>
+        <block type="Dancelab_setProp">
+          <title name="SPRITE">dancer1</title>
+          <title name="PROPERTY">"scale"</title>
+          <title name="VAL">50</title>
+        </block>
+        <block type="Dancelab_setTint">
+          <title name="SPRITE">dancer1</title>
+          <value name="VAL">
+            <block type="colour_picker">
+              <title name="COLOUR">#66ffff</title>
+            </block>
+          </value>
+        </block>
+        <block type="Dancelab_startMapping">
+          <title name="SPRITE">dancer1</title>
+          <title name="PROPERTY">"scale"</title>
+          <title name="RANGE">"bass"</title>
+        </block>
+        <block type="Dancelab_atTimestamp">
+          <title name="TIMESTAMP">4</title>
+          <title name="UNIT">"measures"</title>
+        </block>
+        <block type="Dancelab_everySeconds">
+          <title name="N">2</title>
+          <title name="UNIT">"measures"</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Dancelab>

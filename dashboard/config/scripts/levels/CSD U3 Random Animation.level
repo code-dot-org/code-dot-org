@@ -32,7 +32,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Use randomNumber() to animate Gary's mouth.",
-    "markdown_instructions": "<img src=\"https://images.code.org/f249b981ead9d196b0f136c402dd0c41-image-1478803334302.gif\" style=\"float:right; width:200px\"/>\r\n# Animation\r\n\r\nLook at this face made from some simple shapes. We put it in the `draw()` loop so that we could animate it, but it doesn't seem to be doing anything. We want the mouth to move like the image on the right, so that it looks like it's talking\r\n\r\n# Do This\r\n* Find the code that draws the mouth and replace the width and height with calls to `randomNumber()`\r\n* Experiment with different ranges of random numbers to get the kind of animation you're looking for.\r\n\r\nHint: Don't worry if it's going too fast.  You'll slow it down on the next level.",
+    "markdown_instructions": "<img src=\"https://images.code.org/f249b981ead9d196b0f136c402dd0c41-image-1478803334302.gif\" style=\"float:right; width:200px\"/>\r\n\r\n# Animation\r\n\r\nLook at this face made from some simple shapes. We put it in the `draw()` loop so that we could animate it, but it doesn't seem to be doing anything. We want the mouth to move like the image on the right, so that it looks like it's talking\r\n\r\n# Do This\r\n* Find the code that draws the mouth and replace the width and height with calls to `randomNumber()`\r\n* Experiment with different ranges of random numbers to get the kind of animation you're looking for.\r\n\r\nHint: Don't worry if it's going too fast.  You'll slow it down on the next level.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

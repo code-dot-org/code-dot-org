@@ -1,0 +1,376 @@
+---
+fi:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': sekuntia
+      Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            sprites: kaikki
+          MOVE:
+            MOVES.Rest: Ei mitään
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            MOVES.Rest: Ei mitään
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"height"': korkeus
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: kaikki
+          MOVE:
+            MOVES.Rest: Ei mitään
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            MOVES.Rest: Ei mitään
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': sekuntia
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"height"': korkeus
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekuntia
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: Ei mitään
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': sekuntia
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": vasemmalle
+            "{x: 300, y: 200}": oikealle
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": satunnainen
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: kaikki
+          FORMAT:
+            '"random"': satunnainen
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": vasemmalle
+            "{x: 300, y: 200}": oikealle
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": satunnainen
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"random"': satunnainen
+      Dancelab_randomColor:
+        text: satunnainen väri
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Ei mitään
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': Ei mitään
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normaali
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: kaikki
+          SPEED:
+            '1': normaali
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Ei mitään
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': Ei mitään
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"height"': korkeus
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: kaikki
+          PROPERTY:
+            '"scale"': koko
+            '"height"': korkeus
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"height"': korkeus
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: kaikki
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: kaikki
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"height"': korkeus
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"height"': korkeus
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': ylös
+            '"left"': vasemmalle
+            '"down"': alas
+            '"right"': oikealle
+            '"space"': avaruus
+            '"x"': x
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': tosi
+            'false': epätosi
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": satunnainen
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': oikealle
+            '"left"': vasemmalle
+      gamelab_randColor:
+        text: satunnainen väri
+      gamelab_randomColor:
+        text: satunnainen väri
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': satunnainen
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"height"': korkeus
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': oikealle
+            '"left"': vasemmalle
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': ylös
+            '"down"': alas
+            '"left"': vasemmalle
+            '"right"': oikealle
+            '"space"': avaruus
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": ylös
+            "'down'": alas
+            "'left'": vasemmalle
+            "'right'": oikealle
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': ylös
+            '"down"': alas
+            '"left"': vasemmalle
+            '"right"': oikealle
+            '"space"': avaruus
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": vasemmalle
+            "{x: 300, y: 200}": oikealle
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": vasemmalle
+            "{x: 300, y: 200}": oikealle
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': kaikki
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      Mikelab_randomColor:
+        text: satunnainen väri
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': kaupunki
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': oikealle
+            '"left"': vasemmalle
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': nuoli ylös
+            '"down"': nuoli alas
+            '"left"': nuoli vasemmalle
+            '"right"': nuoli oikealle
+            '"w"': L
+            '"s"': E
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': nuoli ylös
+            '"down"': nuoli alas
+            '"left"': nuoli vasemmalle
+            '"right"': nuoli oikealle
+            '"w"': L
+            '"s"': E
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': nuoli ylös
+            '"down"': nuoli alas
+            '"left"': nuoli vasemmalle
+            '"right"': nuoli oikealle
+      RyanLab_moveForward:
+        text: siirry eteenpäin
+      RyanLab_turnLeft:
+        text: käänny vasempaan
+      RyanLab_turnRight:
+        text: käänny oikeaan
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": eteen
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": hiekka
+            "'planksOak'": tammilankut
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": hiekka
+      craft_moveForward:
+        text: siirry eteenpäin
+      craft_placeTorch:
+        text: aseta soihtu

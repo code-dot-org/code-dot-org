@@ -361,8 +361,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert Pd::Session.with_deleted.exists? session.attributes
 
     assert enrollment.reload.deleted?
-    refute Pd::Enrollment.exists? enrollment.attributes
-    assert Pd::Enrollment.with_deleted.exists? enrollment.attributes
+    refute Pd::Enrollment.exists? enrollment.id
+    assert Pd::Enrollment.with_deleted.exists? enrollment.id
   end
 
   test 'friendly name' do

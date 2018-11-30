@@ -1,0 +1,1109 @@
+---
+'no':
+  data:
+    long_instructions:
+      "'pre-assessment survey q25A'": 'Hvis ja, hvilke datakurs har du tatt før dette
+        datakurset du er med på nå?
+
+'
+      2-3 Artist 1 new: "Hei, jeg er en kunstner. Du kan skrive kode for å få meg
+        til å tegne nesten hva som helst. \nBruk noen blokker for å få meg til å tegne
+        over de grå linjene i bildet. (Hver linje er 100 piksler lang)\r \r\n"
+      2-3 Artist 11: 'Gi stoppskiltet en ramme ved å lage en åttekant med sider på
+        100 piksler. '
+      2-3 Artist 12: "Lag en sirkel ved å fullføre øyeeplet! \r \r Hvis kunstneren
+        snur 1 grad hver løkke, hvor mange gnager må du gjenta koden for å tegne en
+        sirkel? "
+      2-3 Artist 2 new: |-
+        Dette huset har en halvveis fullført vegg.
+        Hver side er 100 piksler, men den halvveis fullførte veggen er kun 50 piksler. Fullfør veggen.
+      2-3 Artist 3.4: Blokken `hopp` beveger kunstneren uten å tegne. Tegn den stiplede
+        linjen ved hjelp av både `hopp fremover` og `flytt fremover`-blokker.
+      2-3 Artist 3new: "Den røde hatten er 100 piksler høy. Fullfør tegningen ved
+        å tegne en sort hatt som er 70 piksler kortere. \r\n\r\n*(Ps: Vidden på hver
+        hatt er 50 piksler.)*"
+      2-3 Artist 4: Hjelp meg å fullføre juset til denne katten.
+      2-3 Artist 6: "Dette huset trenger et tak! Tegn triangelet. \r\n\r\nHint: Alle
+        tre sider er av samme lengde.\r\n\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
+      2-3 Artist 7: "Tegne ferdig de siste vinduene på skolen slik at alle i klasserommet
+        kan se ut. \r \n\r\nSidene på hver vindusrute er 25 piksler lang. "
+      2-3 Artist 8: "La oss bygge en låve!\r\n\r\nLag rom til hvert dyr ved å dele
+        opp låven i 2 like store kvadrater. \r\n\r\nHint:\nRektangelet er 200 piksler
+        brede og 100 piksler høye.\r\n\r\nDet er mange måter å løse denne oppgaven
+        på."
+      2-3 Artist 9 NEW: Fullfør denne dragen
+      2-3 Artist 9 REPLACEMENT: Tegn ferdig disse trappene!
+      2-3 Artist 9: Fullfør denne dragen
+      2-3 Artist Assessment 1: "**Oppgave:** Tegn den siste tanna. Den er 25 piksler
+        bred og 25 piksler høy."
+      2-3 Artist Debugging 1: "Denne hatten burde bare være 50 piksler bred. \r\nKan
+        du fikse det?\r\n\r\n<br/>\r\n"
+      2-3 Artist Debugging 10: "Retningskontrolleren er for smal. \r\n\r\nKan du gjøre
+        den 10 piksler bredere?\r\n\r\nPrøv å kjøre koden før du endrer koden for
+        å se feilen."
+      2-3 Artist Debugging 11: "Snøfnugget mitt faller fra hverandre!\r\n\r\nKan du
+        finne ut hva som går galt?"
+      2-3 Artist Debugging 2: "Denne koden for kattens værhår er feil. \r\n\r\nFiks
+        koden slik at den tegner alle værhårene like lange."
+      2-3 Artist Debugging 3: "Min båt har hull i seg! \r\n\r\nHva må du gjøre for
+        å få endene til møtes?"
+      2-3 Artist Debugging 5: "Koden for å tegne beinet og foten er feil. \r\n\r\nKan
+        du fikse den?"
+      2-3 Artist Debugging 6: "Ser ut som om jeg sitter på en stol som mangler et
+        ben!\r\n\r\nEndre koden for å tegne det siste benet."
+      2-3 Artist Debugging 7: "Ser ut som om C-en i koden er tegnet feil vei!\r\n\r\nKan
+        du få den til å se ut som en C igjen?"
+      2-3 Artist Debugging 8: "Læreren min sier jeg burde fullføre det jeg starter
+        på!\r\n\r\nHjelp meg med å fullføre tegningen. Kan du finne ut hva som er
+        feil i koden?"
+      2-3 Artist Debugging 9: "Det er noe rart her!\r\n\r\nKoden for stilken er feil.
+        Kan du fikse koden slik at kunstneren tegner stilken riktig vei?"
+      2-3 Artist Debugging Assessment 1: "**Oppgave:**\r\nHvorfor blir dette kvadratet
+        75 piksler for lite på hver side? \r\n\r\nHvor i koden går det galt?"
+      2-3 Artist Free Play: Fritt spill! Tegn hva du vil.
+      2-3 Artist Functions 1 a: "\"Meg zombiekunstner. Meg elsker tegning!\"\n\r\n\r\nHjelp
+        zombien med å tegne firkantede brilleglass. \r\n\r\nHvert brilleglass er 100
+        piksler bredt. Avstanden mellom brilleglassene er 25 piksler kortere enn det.\r\n\r\n"
+      2-3 Artist Functions 1: "\"Meg zombiekunstner. Meg elsker tegning!\"\n\r\n\r\nHjelp
+        zombien med å tegne firkantede brilleglass. \r\n\r\nHvert brilleglass er 100
+        piksler bredt. Avstanden mellom brilleglassene er 25 piksler kortere enn det.\r\n\r\n"
+      2-3 Artist Functions 10: "**Fritt spill:** Her er det to funksjoner, en til
+        å tegne et stort tannhjul og en til å tegne et lite tannhjul. \r\n\r\nBruk
+        den til å tegne innsiden av en maskin!"
+      2-3 Artist Functions 11 a: "Vi har gitt funksjonen `tegn en firkant`det nye
+        navnet, `tegn en sekskant`, men de gir oss fortsatt firkanter! \r\n\r\nKan
+        du endre `tegn en sekskant`-funksjonen til å tegne en sekskant med sider på
+        50 piksler?\n\r\n\r\nTegn bildet ved å bruke den nye funksjonen!"
+      2-3 Artist Functions 11.5 a: "Her er den samme `tegn en sekskant`-funksjonen.
+        \r\n\r\nHva skjer hvis du gjentar hovedprogrammet 6 ganger, snur 60 grader
+        hver gang du gjentar?"
+      2-3 Artist Functions 11.5: "Her er den samme `tegn en sekskant`-funksjonen.
+        \r\n\r\nHva skjer hvis du gjentar hovedprogrammet 6 ganger, snur 60 grader
+        hver gang du gjentar?"
+      2-3 Artist Functions 11: "Vi har gitt funksjonen `tegn en firkant`det nye navnet,
+        `tegn en sekskant`, men de gir oss fortsatt firkanter! \r\n\r\nKan du endre
+        `tegn en sekskant`-funksjonen til å tegne en sekskant med sider på 50 piksler?\n\r\n\r\nTegn
+        bildet ved å bruke den nye funksjonen!"
+      2-3 Artist Functions 12 Mike: "Funksjoner er veldig bra når man skal tegne kompliserte
+        ting mange ganger. \r\n\r\nKan du bruke funksjonen `tegn en blomst` for å
+        fylle ut resten av blomsterkassa?\r\nPlantene er alle 100 piksler fra hverandre."
+      2-3 Artist Functions 12 a: "Funksjoner er veldig bra når man skal tegne kompliserte
+        ting mange ganger. \r\n\r\nKan du bruke funksjonen `tegn en blomst` for å
+        fylle ut resten av blomsterkassa?\r\nPlantene er alle 100 piksler fra hverandre."
+      2-3 Artist Functions 12: "Funksjoner er veldig bra når man skal tegne kompliserte
+        ting mange ganger. \r\n\r\nKan du bruke funksjonen `tegn en blomst` for å
+        fylle ut resten av blomsterkassa?\r\nPlantene er alle 100 piksler fra hverandre."
+      2-3 Artist Functions 2 a: "Funksjoner lar deg lage nye blokker!\r\n\r\nVi har
+        flyttet de nye blokkene du trenger for å lage et kvadrat inn i en funksjon
+        som heter `tegn en firkant`. Bruk denne funksjonen for å lage brillene. \r\n\r\nFirkantene
+        er 75 piksler fra hverandre."
+      2-3 Artist Functions 2: "Funksjoner lar deg lage nye blokker!\r\n\r\nVi har
+        flyttet de nye blokkene du trenger for å lage et kvadrat inn i en funksjon
+        som heter `tegn en firkant`. Bruk denne funksjonen for å lage brillene. \r\n\r\nFirkantene
+        er 75 piksler fra hverandre."
+      2-3 Artist Functions 3 a: "Endre funksjonen \"tegne en firkant\" til å tegne
+        briller med rammer som er 115px på hver side. \n\nRutene er nå 45 piksler
+        fra hverandre."
+      2-3 Artist Functions 3: "Endre funksjonen slik at den tegner sider på 115 piksler.
+        \r\n\r\nDisse firkantene er nå 45 piksler fra hverandre."
+      2-3 Artist Functions 4 a: Plasser funksjonen inni en løkke for og legg til en
+        ekstra gang for å tegne disse kvadratene.
+      2-3 Artist Functions 4: Plasser funksjonen inni en løkke for å tegne disse kvadratene.
+      2-3 Artist Functions 9: "**Fritt spill:** Her er en funksjon for å tegne et
+        snøfnugg. Bruk den for å tegne et vinterbilde!\r\n\r\nHer kan du tegne hva
+        du vil. Ha det gøy!"
+      2-3 Artist Loops 1: Kan du lage en sekskant med sider på 100 piksler? Husk at
+        det betyr at du bare trenger å snu 60 grader!
+      2-3 Artist Loops 2: Bruk gjentablokken for å lage et skall.
+      2-3 Artist Loops New 1: "La oss tegne denne robotens hode!\nKan du lage en firkant
+        med sider på 100 piksler?\r\n\r\n<br/>\r\n"
+      2-3 Artist Loops New 10: La oss koble sammen en haug av V-er ved å bruke en
+        løkke.
+      2-3 Artist Loops New 11: "Nå skal vi lage noe gøy!\n\r\n\r\nGjør det samme som
+        i forrige oppgave, men legg til en blokk for å snu til venstre med 30 grader
+        inni løkka. Gjenta 24 ganger i stedet for 8."
+      2-3 Artist Loops New 12: 'Tegn en diamant med sider på 100 piksler. '
+      2-3 Artist Loops New 13: "Koden i grått lager en diamant. \r\n\r\nGjenta den
+        grå koden for å lage et morsomt mønster!"
+      2-3 Artist Loops New 14: "Prøv deg frem med koden som lager diamanten for å
+        se hvilke andre mønstre du kan lage. \r\n\r\nPrøv å endre hvor mange grander
+        du snur og hvor mange ganger du gjentar."
+      2-3 Artist Loops New 15: "Tegn hva du vil!\r\n<br/><br/>\r\n\r\n\n"
+      2-3 Artist Loops New 2: "Her er den samme oppgaven som du nettopp løste, men
+        denne gangen kan du bare bruke en `flytt fremover`-blokk og bare en `snu`-blokk.\r\n\r\nKan
+        du bruke en `gjenta`-blokk for å løse oppgaven?"
+      2-3 Artist Loops New 9: Tegn en enkel V (hvor begge sider er 50 piksler) for
+        å fullføre pilen.
+      2-3 Artist Nested Loops 1: "Du har brukt løkker for å tegne figurer før, men
+        nå skal vi putte løkker inni andre løkker!\r\n\r\nPutt en \"gjenta\"-blokk
+        rundt denne koden for å tegne mønsteret.\r\n\r<br/>\r\r\n\n"
+      2-3 Artist Nested Loops 10: Gjenta denne koden 12 ganger for å fullføre mønsteret.
+      2-3 Artist Nested Loops 11: Gjenta denne koden 4 ganger for å fullføre mønsteret.
+        Snu 90 grader etter hver sirkel.
+      2-3 Artist Nested Loops 12: Gjenta denne koden 12 ganger for å fullføre sirklene.
+      2-3 Artist Nested Loops 2: "Gjenta triangelet 6 ganger.\n\r\n\r\nEtter hvert
+        triangel må du snu 60 grader før du tegner det neste."
+      2-3 Artist Nested Loops 3: "Du må gjenta triangelet 12 ganger for å tegne dette
+        mønsteret. \r\n\r\nFor å finne ut hvor mye du må snu må du dele antall grader
+        i en sirkel (360) på antall figurer du tegner (12)."
+      2-3 Artist Nested Loops 4: "Gjenta denne diamanten 12 ganger for å tegne en
+        blomst!\r\n\r\nVi bruker den samme vinkelen for å gjenta 12 diamanter som
+        vi gjorde for 12 triangler. \r\nHvor mye må du snu etter hver figur?"
+      2-3 Artist Nested Loops 5: "Fyll inn vinduene i denne bygningen ved å bruke
+        løkke inni løkke. \r\n\r\nVinduene er 20 piksler lange og 20 piksler unna
+        hverandre."
+      2-3 Artist Nested Loops 6: "Denne dinosauren har 8 pigger oppover ryggen.\r\n\r\nHver
+        pigg er 30 piksler lang. \r\n\r\nGjenta triangelet 8 ganger, men pass på å
+        hoppe framover mellom hver!"
+      2-3 Artist Nested Loops 7: "Gjenta dette triangelet 10 ganger for å tegne sola.
+        \r\n\r\nDu må flytte deg fram og så snu deg mellom hvert triangel.\n\r\n\r\nDu
+        kan finne ut hvor mye du må snu ved å dele antall grader i en sirkel med antall
+        triangler."
+      2-3 Artist Nested Loops 8: "La oss legge til gress på dette bildet. \r\n\r\nHver
+        gresstue er 50 piksler fra hverandre."
+      2-3 Artist Nested Loops 9: "Vi skal fullføre dette bildet ved å legge til en
+        blomst. \r\n\r\nGjenta diamanten 12 ganger for å tegne blomsten."
+      2-3 Artist Nested Loops Free Play: Fritt spill! Tegn noe kult med løkker inni
+        løkker.
+      2-3 Bee Conditionals 11: Samle inn nektar dersom blomsten har nektar.
+      2-3 Bee Conditionals 13: 'Samle inn nektar og lag honning. Tips: hva skjer dersom
+        du bruker "hvis nektar" på en rød blomst? Kan du fullføre dette med en løkke?'
+      2-3 Bee Conditionals 14: "La oss sette alt sammen!\r\n\r\nBruk det du har lært
+        for å samle nektar kun fra blomster som har det. Bruk så få blokker som mulig.
+        \r\n\r\nIkke glem å lage honning til slutt."
+      2-3 Bee Conditionals 15: "Dette trappe-mønsteret ser kjent ut. \r\n\r\nSamle
+        nektar fra kun de blomstene som har det. Bruk så få blokker som mulig."
+      2-3 Bee Conditionals 2: "Jeg er en sulten bie!\r\n\r\n\r\nHjelp meg med å samle
+        all nektaren fra blomstene og bruk så få blokker som mulig."
+      2-3 Bee Conditionals 3: Hjelp meg å samle inn nektaren fra alle blomstene og
+        lag honning. Bruk en løkke.
+      2-3 Bee Conditionals 5: "Disse magiske lilla blomstene endrer seg!\r\n\r\nHver
+        gang du kjører koden kan blomstene enten ha 1 nektar eller ingen... Men du
+        vet ikke antall nektar før du kjører koden!\r\n\r\nPass på så du ikke samler
+        nektar fra blomster som ikke har noen. \r\nDu må først sjekke om nektaren
+        er lik 1 ved å bruke \"hvis nektar\"-blokken."
+      2-3 Bee Conditionals Assessment 1: "**Oppgave:** Samle all nektaren. \r\nVær
+        forsiktig så du ikke prøver å samle nektar fra lilla blomster som ikke har."
+      2-3 Bee Debugging 1: "Disse blokkene irriterer meg!\r\n\r\nFiks feilen(e) for
+        å samle all nektaren."
+      2-3 Bee Debugging 10: "Disse blokkene irriterer meg!\n\r\n\r\nFiks feilen(e)
+        for å samle alle nektarene og lage all honningen."
+      2-3 Bee Debugging 2: "Kan du finne problemet her?\r\n\r\nFiks feilen(e) for
+        å samle all nektaren."
+      2-3 Bee Debugging 3: "Det er feil i denne koden!\r\n\r\nFiks feilen(e) slik
+        at du kan samle all nektaren."
+      2-3 Bee Debugging 5: "Den blomsten ser god ut! \r\n\r\nFiks feilen(e) i koden
+        for å samle all nektaren. \r\nDu kan bruke både knappene kjør og trinn."
+      2-3 Bee Debugging 6: "For en fin utfordring!\r\n\r\nFiks feilen(e) for å samle
+        all nektaren."
+      2-3 Bee Debugging 9: 'Disse blokkene plager meg. Fiks feilene og samle inn nektaren
+        for å lage all honningen. '
+      2-3 Bee Debugging Assessment 1: "**Oppgave:** Nå er det på tide å vise hva du
+        kan!\r\n\r\nFiks feilen(e) for å samle all nektaren og lage all honningen."
+      2-3 Bee Functions 1: "Funksjoner er blokker med kode som utfører en oppgave.
+        \r\n\r\nBruk funksjonen 'hent 2 nektar' for å hente nektaren fra hver blomst."
+      2-3 Bee Functions 10: "De lilla blomstene endrer seg. De har enten 1 eller 0
+        nektar hver gang du trykker kjør. \r\n\r\nLag en funksjon som bare samler
+        nektar fra de blomstene som har det."
+      2-3 Bee Functions 2: "Funksjoner er blokker med kode som utfører en oppgave.
+        \r\n\r\nBruk  funksjonen`hent 5` for å hente 5 nektar av gangen."
+      2-3 Bee Functions 4: "Funksjonen `flytt og hent nektar`snur bien, henter nektar
+        og så går tilbake til der bien starta. \r\n\r \nBruk funksjonen for å hente
+        all nektaren."
+      2-3 Bee Functions Assessment 1: "**Oppgave:** Bruk funksjonen for å samle nektar
+        fra hver blomst."
+      2-3 Bee Functions Assessment 2: "**Oppgave:** Lag en funksjon for å snu, flytte
+        fram og lage 3 honning, så flytte bien tilbake til der den starta og snu tilbake
+        til startposisjon."
+      2-3 Bee Loops 1: 'Hver blomst inneholder en enhet med nektar. Samle inn nektar
+        fra alle blomstene. '
+      2-3 Bee Loops 13: "**Oppgave:** Samle all nektaren ved å bruke så få blokker
+        som mulig."
+      2-3 Bee Loops 3A: Bruk en `gjenta`-løkke for å samle all nektaren.
+      2-3 Bee Loops 3B: Bruk en `gjenta`-løkke for å samle all nektaren og lage all
+        honningen.
+      2-3 Bee Loops 4: "For en travel bie!\r\n\r\nHjelp Bie med å samle all nektaren
+        og lage all honningen ved å bruke så få blokker som mulig."
+      2-3 Bee Loops 4A: "Hvor mange ganger burde du gjenta for å få til denne oppgaven?
+        \r\n\r\nGjenta-blokker er din venn! Bruk noen av dem for å fullføre denne
+        oppgaven med så få blokker som mulig."
+      2-3 Bee Loops 5: "Mønsteret på denne stien er litt annerledes enn de andre.\r\n\r\nKan
+        du samle all nektaren ved å bruke så få blokker som mulig?"
+      2-3 Bee Loops 7: "For en vakker blomstereng! \r\n\r\nHjelp bien med å besøke
+        alle blomstene.\r\n\r\nKan du få det til ved å bruke færre enn 7 blokker?"
+      2-3 Bee Loops 8: "Disse lilla blomstene har forskjellige mengder nektar hver
+        gang du kjører oppgaven. \r\n\r\nBruk 'så lenge nektar'-løkka for å samle
+        all nektaren. \r\n\r\nDenne løkka vil kjøre så lenge betingelsen er sann.
+        I dette tilfellet er betingelsen 'nektar > 0'."
+      2-3 Bee Loops Assessment 1: "**Oppgave:** Bruk en 'så lenge'-løkke for å samle
+        all nektaren fra disse blomstene."
+      2-3 Maze 1: "Kan du hjelpe meg med å fange den slemme grisen? \r\n\r\nSett sammen
+        et par 'gå framover'-blokker under 'når kjører'-blokka og trykk på 'Kjør'.\n"
+      2-3 Maze 12 - One Move Block: "Ta den slemme grisen! Men denne gangen kan du
+        bare bruke én 'gå framover'-blokk...\r\n\r\nSe nøye etter - ser du noen andre
+        blokker som kan hjelpe deg med å flytte deg bort til grisen?"
+      2-3 Maze 12: "Plutselig dukket det opp en magisk blokk! Med `gjenta`-blokken
+        kan du gjenta koden om og om igjen.\r\n\r\nKan du komme deg bort til grisen
+        ved å lage en løkke som bruker kun én `gå framover`-blokk inni en `gjenta`-blokk?"
+      2-3 Maze 13: Få meg bort til grisen! Du kan kun bruke én `gå framover`-blokk
+        denne gangen
+      2-3 Maze 15: Bruk to løkker for å bruke færre blokker for å komme frem til grisen.
+      2-3 Maze Loops 18: "Få meg bort til solsikken og bruk så få blokker som mulig!
+        \r\n\r\nPrøv å bruke en `gjenta`-løkke inni en annen `gjenta`-blokk for å
+        kutte ned på antall kode-blokker."
+      2-3 Maze Loops 19: "La oss ta dette til et nytt nivå!\n\r\n\r\nBruk løkker for
+        å få meg bort til solsikken, men bruk så få løkker som mulig."
+      2-3 Maze Loops Assessment 1: "**Oppgave:** Få meg bort til solsikken ved å bruke
+        kun 5 blokker! "
+      4-5 Artist 1: "Hjelp meg tegne ferdig boksen. (Hver linje er 300 piksler lang)
+        \r\n\r\n"
+      4-5 Artist 10: Trykk "Kjør" for å teste koden. Gjenta det så flere ganger for
+        å fullføre tegningen. Fargene vil være forskjellige hver gang.
+      4-5 Artist 11: "Fullfør de grønne linjene. \r\n\r\nLinjene er 300 piksler lange
+        og 15 piksler unna hverandre."
+      4-5 Artist 2: Gjenta denne koden ved å bruke `gjenta`-blokken for å fullføre
+        kvadratet.
+      4-5 Artist 3.5: "Prøv å finne ut hva som skjer hvis du kjører denne koden (og
+        så trykk \"Kjør\" for å prøve den). \r\n\r\nEtter det, gjenta koden mange
+        nok ganger til å fullføre tegningen!"
+      4-5 Artist 3: "Dette rektangulære blomsterbedet har en omkrets 600 piksler.
+        \r\nDen lange siden er 200 piksler lang. \r\n\r\nTegn rektangelet ved å bruke
+        så få blokker som mulig."
+      4-5 Artist 4: "Hvor mange grader er det i en sirkel? \r\n\r\nGjenta blokkene
+        for å lage en sirkel av farger."
+      4-5 Artist 5: Hva må vi erstatte "???" med for å få zombien til å fullføre denne
+        tegningen ved bruk av løkka?
+      4-5 Artist 6: Denne likesidede trekanten har vinkler på 60, 60 og 60 grader.
+        Hver side er 200 piksler. Fullfør tegningen.
+      4-5 Artist 7: "Denne rettvinklede trekanten har vinkler 30, 60 og 90 grader.
+        Lengden på den skrå linjen (lengden på hypotenusen) er 200 piksler. \r\n\r\nFullfør
+        tegningen."
+      4-5 Artist 8: "Midtlinjen på en fotballbane er *vinkelrett* på sidelinjene.
+        \r\nBanen har en omkrets på 800 piksler, og den er 240 piksler lang. Hvor
+        bred er den? \r\n\r\nTegn omrisset og midtlinjen."
+      4-5 Artist 9: "Tegn den andre halvparten av dette bildet så designet blir symmetrisk.
+        \r\nTrianglene er likesidede, og sidene er 50 piksler lange."
+      4-5 Artist Assessment 1: "**Oppgave:** Bruk en løkke for å tegne den likesidede
+        trekanten på bildet. Hver side er 300 piksler lang."
+      4-5 Artist Free Draw 1: Fritegning. Tegn det du føler deg inspirert til.
+      4-5 Artist Patterns 1: Får du til å tegne dette kvadratet ved bruk av en løkke?
+        Hver side er 20 piksler lang.
+      4-5 Artist Patterns 10: "Denne koden tegner to rader med sekskanter - repeter
+        hele kodeblokken 4 ganger for å tegne hele bikubemønsteret. \r\n\r\nDu må
+        hoppe tilbake 120 piksler i den ytterste løkken for å hindre at kunstneren
+        tegner utenfor skjermen."
+      4-5 Artist Patterns 11: Hvor mange ganger må du repetere denne løkken for å
+        tegne en halvsirkel?
+      4-5 Artist Patterns 12: "Hva skjer dersom du kopierer løkken og snur mot venstre
+        fremfor høyre? \r \n\r\nKlarer du å gjenskape denne bølgeformen?"
+      4-5 Artist Patterns 13: "La oss nå gjenta det hele fire ganger for å opprette
+        bilderammen. Se opp for hjørnene – du kan ikke bare snu deg 90 grader! \r\n\r\nEn
+        halvsirkel kan lages ved å repetere 3 grader 60 ganger. Så hvilke av disse
+        kodeblokkene må du bruke for å lage en kvart-sirkel for hjørnene?"
+      4-5 Artist Patterns 2: "Dersom du putter firkant-løkka di inni en annen løkke
+        kaller vi det en nøstet løkke. \r\n\r\nHva må du legge til i den ytre løkken
+        for å få alle 15 firkantene til å komme på linje ved siden av hver andre?"
+      4-5 Artist Patterns 3: |-
+        La oss ta dette videre!
+        Vi har nøstet hele kodeblokken inni en annen løkke, men du må få artisten tilbake på plassen sin for å tegne den neste linja. Hvilken av disse kodeblokkene kan du plassere på slutten av den ytterste løkka for å tegne hele mønsteret?
+      4-5 Artist Patterns 4: "Denne diamanten har sider som er 50 piksler lange og
+        vinkler på 120 og 60 grader. \r\n\r\nTegn den ved hjelp av en løkke."
+      4-5 Artist Patterns 5: "Nå skal vi repetere den for å tegne en rekke med 6 diaamanter.
+        \r\n\r\n Legg merke til at vi har endret på diamantkoden slik at den repeteres
+        3 ganger istedenfor 2 – Hvorfor tror du vi har gjort det?"
+      4-5 Artist Patterns 6: "Hvor mange ganger må vi repetere denne blokken for å
+        tegne hele rutenettet med diamanter?\r\n\r\n"
+      4-5 Artist Patterns 7: "Nå skal vi endre koden fra forrige oppgave for å gjøre
+        mønsteret litt mer komplisert. Legg merke til hvordan diamantene nå overlapper
+        hverandre. Forsøk å endre den første \"hopp tilbake\" fra 100 til 50 (halvparten
+        så langt) – Hvor langt skal artisten nå gå i det andre \"hopp tilbake\"?\r\n\r\n"
+      4-5 Artist Patterns 8: Bruk en løkke til å tegne en sekskant der hver side er
+        40 piksler og vinklene er på 60 grader.
+      4-5 Artist Patterns 9.5: "Nå skal vi repetere denne koden for å tegne to rader
+        med sekskanter. \r\n\r\nLegg merke til hvordan den andre raden er forskjøvet
+        mot høyre."
+      4-5 Artist Patterns 9: "Gjenta denne koden 3 ganger og tegn hele raden. \r\n\r\nDet
+        er 80 piksler mellom det ytterste punktet til venstre og det ytterste punktet
+        til høyre på hver sekskant."
+      4-5 Artist Patterns Free Play: Fritt spill - prøv å lage ditt eget mønster!
+      4-5 Bee Conditionals 1: "Denne skyen blokkerer synet mitt!\n\r\n\r\nSe om det
+        er en blomst under skyen, og hent nektar kun hvis det er en blomst der.   \r\nVær
+        forsiktig, det kan endre seg!"
+      4-5 Bee Conditionals 2: Bien vil bare ha nektar akkurat nå. Husk, ikke alle
+        er blomster, så sjekk etter at du bare samler nektar fra blomster.
+      4-5 Bee Conditionals 4: "Noen ganger skjuler denne skyen en blomst og noen ganger
+        skjuler den en bikube! \r\n\r\nBruk blokken `hvis/ellers` til å samle nektar
+        kun hvis det er en blomst der. \r\nHvis ikke det er det, lag honning (fordi
+        det er en bikube)."
+      4-5 Bee Conditionals 5: Det kan være en blomst eller en bikube under skyene.
+        Bruk "hvis/ellers"-blokken til å samle inn nektar dersom det er en blomst.
+        Hvis ikke så lager du honning (for da er det en bikube).
+      4-5 Bee Conditionals 6: "Jeg er ikke sikker på hvor mye nektar denne blomsten
+        har, men jeg vet at den har enten 1, 2 eller 3 nektar. \r\n\r\nKombiner betingelsene
+        (`hvis` og/eller `hvis/ellers`) for å bare hente mengden nektar som blomsten
+        har. \r\n\r\nHusk at mengen nektar kan endre seg hver gang du kjører oppgaven!"
+      4-5 Bee Conditionals 7: "Disse blomstene har 3, 2 eller 1 nektar. \r\n\r\nFullfør
+        funksjonen `check purple flower` for bruk den for å samle all nektaren i blomstene."
+      4-5 Bee Conditionals 8: "Skriv funksjonen check\nflower make honey`. \r\n\r\nFunksjonen
+        din burde sjekke om de lilla blomstene har 3, 2 eller 1 nektar og hente all
+        nektaren som er der. \r\nSå burde den flytte framover og lage honning."
+      4-5 Bee Conditionals Assessment 1: "**Oppgave:** Skyen skjuler enten en blomst
+        med en nektar eller en bikube som trenger en honning. \r\n\r\nFullfør funksjonen
+        `get nectar or make honey` og så kall den for å samle all nektaren eller honningen.
+        \r\n"
+      4-5 Bee Debugging 1: "Disse blokkene plager meg. \r\n\r\nKan du fikse dem?"
+      4-5 Bee Debugging 6: "Den lilla blomsten har forskjellig antall nektar hver
+        gang du kjører koden. \r\n\r\nFiks blokkene slik at du får tak i all nektaren
+        hver gang."
+      4-5 Bee Debugging Assessment 1: "**Oppgave:** Fiks koden."
+      4-5 Bee Nested Loops 2: "Samle all nektaren fra hver blomst.\r\n\r\nBruk en
+        løkke i løkke. "
+      4-5 Bee Nested Loops 4: "Samle all nektaren fra hver blomst og lag honning i
+        bikubene. \r\n\r\nBruk en løkke i løkke. "
+      4-5 Bee Nested Loops Assessment 1: "**Oppgave:** Samle all nektaren og lag all
+        honningen ved å bruke løkker."
+      4-5 Maze 7: "Få zombien raskt bort til solsikka! \r\n\r\nKan du løse denne oppgaven
+        på færre enn 11 blokker?"
+      4-5 Maze 9: Lag en løkke med "gjenta til" blokk.
+      4-5 Maze Assessment 1: "**Oppgave:** Kom deg bort til solsikken ved å bruke
+        så få blokker som mulig."
+      4-5 Maze Conditionals 1: Bruk blokke `gjenta til` for å få zombien bort til
+        solsikken.
+      4-5 Maze Conditionals 10: "Kan du legge til kun 3 blokker for å få zombien til
+        å løse denne kompliserte labyrinten? \r\n\r\nHvis du gjør det riktig vil han
+        kunne gå alle svingete veier, uavhengig av hvor lange de er!"
+      4-5 Maze Conditionals 2: Bruk blokke `gjenta til` for å få zombien bort til
+        solsikken.
+      4-5 Maze Conditionals 3: "Bruk `hvis`-blokken til å hjelpe meg finne ut når
+        jeg skal snu. \r\n"
+      4-5 Maze Conditionals 4: Ok, løs denne på samme måte som forrige oppgave, men
+        husk hvordan du brukte `hvis`og `gjenta til`-blokkene sammen med hverandre.
+      4-5 Maze Conditionals 5: "\"Jeg vil ha solsikke!\" \r\n\r\nBruk en `hvis`-setning
+        for å få zombien bort til solsikken og bruk så få blokker som mulig."
+      4-5 Maze Conditionals 6: "\"Spise solsikke!\" \r\n\r\nBruk en `hvis`-setning
+        for å få zombien bort til solsikken og bruk så få blokker som mulig."
+      4-5 Maze Conditionals 7: Løsningen på denne oppgaven er ikke så veldig annerledes,
+        men pass de for tyggerene!
+      4-5 Maze Conditionals 8: "Blokken `hvis/ellers` sjekker en betingelse og gjør
+        deretter en ting ELLER en annen. \r\n\r\nBruk denne nye blokka for å få meg
+        bort til solsikken."
+      4-5 Maze Conditionals 9: "Enda en oppgave med blokken `hvis/ellers`!\r\n\r\nSpor
+        ruten med fingeren din for å se om du kan få til oppgaven på første forsøk."
+      4-5 Maze Conditionals Assessment 1: "**Oppgave:** Bruk en `gjenta til` og en
+        `hvis/ellers` for å få meg bort til solsikken med så få blokker som mulig."
+      4-5 Nested Loops 1: "Fullfør koden som tegner disse trekantene. Den første er
+        laget for deg. Hint: 3 trekanter i en 360 graders rotasjon.\r\n\r\n"
+      4-5 Nested Loops 11: "Kan du tegne disse 10 kvadratene på fortauet ved å bruke
+        løkke-i-løkke?\r\n\r\nHvert kvadrat er 30 piksler."
+      4-5 Nested Loops 12: Får du til å tegne disse 36 trianglene ved hjelp av en
+        løkke i løkke?
+      4-5 Nested Loops 2: "Legg denne løkken inni en annen løkke for å tegne 10 trekanter.
+        \r\nDette kalles en nøstet løkke eller løkke-i-løkke.  "
+      4-5 Nested Loops 3: "Lag en sol ved å legge startkoden inni en annen løkke.\r\n\r\nFor
+        å få til dette kule mønsteret med et hult senter må du hoppe fremover med
+        den samme lengden som trekanten sin side før du snur deg."
+      4-5 Nested Loops 5: Bruk en løkke rundt denne koden for å lage en vindmølle.
+      4-5 Nested Loops 6: Kan du tegne en sekskant ved å gjenta trekant-koden?
+      4-5 Nested Loops 7: "Gjenta dette mønsteret 10 ganger. \r\n\r\nHvor mye må du
+        snu hver gang du gjentar?"
+      4-5 Nested Loops 8: 'Repeter designet 6 ganger. Hvor mye må du rotere i hver
+        repetisjon? (Tips: Hva er 360 delt på 6?)'
+      4-5 Nested Loops 9: Tegn tennene i alligatoren sin munn!
+      4-5 Nested Loops Assessment 1: "**Oppgave:** Bruk løkke-i-løkke for å fullføre
+        mønsteret."
+      4-5 While Loops 1: Flytt meg bort til hullet og fyll det med to spader med jord
+        ved å bruke blokka `fyll`.
+      4-5 While Loops 2: Flytt meg til jordhaugen og bruk blokken `fjern 1` til å
+        fjerne den på 5 spadetak.
+      4-5 While Loops 3: "Bruk så få blokker som mulig! \r\n\r\nFlytt meg til jordhaugen
+        og fjern all jorda. Etterpå flytter du meg til hullet og fyller det helt opp."
+      4-5 While Loops 4: "Wow, se på det! \r\n\r\nJeg vet ikke hvor mange spadetak
+        som trengs for å fylle dette hullet. \r\nKan du skrive et program som fortsetter
+        å  bruke blokka`fyll` helt til bakken er jevn?  "
+      AWS applab: |-
+        # Gjøre dette nå
+
+        * trinn
+        * trinn to
+      AWS link: "# Bruk dette verktøyet for ulike ting"
+      AlgPD DR Free Play: Bruk et ord problem fra eksisterende læreplanen eller annet
+        sted, fullfør designoppskriften og programmer en funksjon. Bruk et Design-oppskrift-skjema
+        fra arbeidsboken eller last ned en kopi [here]('https://code.org/curriculum/algebra/docs/worksheets/design_recipe.pdf').
+      Alien Defender: "**Prosjektide**: Lag et forsvarsspill i Play Lab!"
+      Alien Defender_2018: "**Prosjektide**: Lag et forsvarsspill i Play Lab!"
+      Artist Autorun Test: Plasser funksjonen inni en løkke for å tegne disse kvadratene.
+      Bergeron Robot Maze1: "Kan du hjelpe meg med å fange den slemme grisen? \r\n\r\nSett
+        sammen et par 'gå framover'-blokker under 'når kjører'-blokka og trykk på
+        'Kjør'.\n"
+      Course 4 Artist 13: Spiller du fortsatt? Her er et blankt lerret hvor du kan
+        designe alt du vil!
+      Course 4 Artist 6: 'Fullfør koden for å tegne disse triangelen. Tips: 3 triangler
+        rotert til sammen 360 grader.'
+      Course 4 Artist 8: Tegn solen ved å repetere denne kodeblokken 12 ganger.
+      Course 4 Artist 8a: "Husker du denne figuren? Nå skal du bygge den uten at vi
+        gir deg noen blokker å starte med!\r\nHint: Det er 3 triangler innenfor 360
+        graders rotasjon... Hvor mange ganger går 3 opp i 360?"
+      Course 4 Artist Binary 1a: "Her er en funksjon som tar en binær-streng av 1-ere
+        og 0-ere og instruerer kunstneren til å følge dem fra venstre til høyre, opp
+        og ned. Artisten vil fylle inn rutene hvis den ser en 1 og ignorere ruta hvis
+        den ser en 0. \r\n\r\nKjør denne koden for å se hvordan artisten bruker binær-strengen
+        til å tegne dette mønsteret."
+      Course 4 Artist For Loops 13: Hmmm, disse figurene blir større hver gang! Løste
+        vi ikke allerede dette problemet med variabler? Hvordan kan vi bruke teller-variabelen
+        til å gjøre sidene mindre når det er flere av dem? I stedet for å flytte framover
+        med et gitt antall, prøv å flytte framover med (100 / teller) piksler.
+      Course 4 Artist For Loops 4: 'Bruk en for-løkke til å tegne disse firkantene.
+        De starter med sider på 50 piksler, det største har sider på 300 piksler,
+        og hver firkant er 25 piksler større enn den forrige. Jeg har gitt deg nesten
+        all koden du trenger - du mangler en brikke, hvilken er det? '
+      Course 4 Artist For Loops 6: Fritt spill! Prøv å bruke en for-løkke til å tegne
+        et voksende-figur mønster som du designer selv.
+      Course 4 Artist For Loops 6a: Gjør tre små endringer i koden fra forrige nivå
+        for å få til dette!
+      Course 4 Artist For Loops 8a: Den korteste linja i denne kvadrat-spiralen er
+        10, den største er 200 og hver linje er 10 piksler lenger enn den forrige.
+        Kan du fylle inn de manglende blokkene i dette stilige bildet?
+      Course 4 Artist For Loops Challenge_a: "Kan du finne ut hvordan du bruker alle
+        tingene du har lært til å lage dette bildet?\r\n\r\nTrenger du et hint? Klikk
+        her."
+      Course 4 Artist Vars 3: 'Her er en løkke som tegner et kvadrat, men noe mangler.
+        Får du til å fikse det slik at den bruker variabelen lengde til å avgjøre
+        hvor lange de ulike sidene skal være? '
+      Course 4 Bee 7: Bruk alt du har lært så langt for å samle all nektaren. Den
+        lilla blomsten har enten 3, 2 eller 1 nektar.
+      Course 4 Bee For Loops 11: Hva er galt med denne løkka? Se om du kan fikse den
+        og gjøre slik at bia samler alle nektarene.
+      Course 4 Bee Params 1: Bruk funksjonen "hent 3 nektar" som snur, beveger seg
+        for å samle nektar og så returnerer til opprinnelig posisjon. Skriv en sekvens
+        for å samle all nektar ved å bruke "hent 3 nektar"
+      Course 4 Play Lab Params 4: Her er en funksjon kalt "patruljer". Endre den slik
+        at Katt beveger seg opp 400 piksler og så ned 400 piksler.
+      Course 4 Play Lab Params 8: Bruk en "når berører"-blokk til å sende Hund tilbake
+        til øvre venstre hjørne BARE hvis Hund berører noen av de andre spillerne.
+      Course 4 Play Lab Vars 2: Løpet i forrige oppgave var ikke veldig rettferdig!
+        Endre variabelen "hund_fart" for å sikre at du kan samle mer flagg enn Katt.
+        Den første til å samle 10 flagg vinner!
+      Course 4 Play Labs For Loops 1: Hunden skal si alle tallene fra 1 til 100. Bruk
+        en for-løkke og teller-brikke til å si teller-variabelen hver gang løkka kjører.
+      Course 4 Playlab For Loops 5b: Tilpass intervallet i disse "for"-løkkene, sånn
+        at de to figurene ender på nøyaktig samme sted.
+      Course 4 SCFP 1: Opprett en funksjon med parametere som tillater kunstneren
+        å hoppe framover og bakover med x antall piksler, og opp og ned med y antall
+        piksler. Bruk positive og negative tall.
+      Course 4 SCVP 1: Opprett en funksjon med parametere som tillater kunstneren
+        å hoppe framover og bakover med x antall piksler, og opp og ned med y antall
+        piksler. Bruk positive og negative tall.
+      CourseF_PlayLab_vars2: Løpet i forrige oppgave var ikke veldig rettferdig! Endre
+        variabelen "hund_fart" for å sikre at du kan samle mer flagg enn Katt. Den
+        første til å samle 10 flagg vinner!
+      Dance_Party_extras_battle: |-
+        # Dansegrupper
+
+        Her er det en dansekonkurranse mellom to grupper. Piltastene kontrollerer én av danserne, og wasd-tastene kontrollere den andre. Arranger en dansekonkurranse med en venn, og prøv å forbedre denne dansekonkurransen.
+
+        * Legg til flere taster for å kontrollere dansene
+        * Få også bakgrunnsdanserne til å reagere når tastene trykkes ned
+        * Bytt danser hver fjerde takt ved å justere synligheten
+      Dance_Party_extras_every_beat: |-
+        # Firedelsnoter
+
+        De fleste av dansene våre har brukt hele takter, men hver takt består av 4 firedelsnoter. Denne dansen bruker 'hver 0,25. takt' for å få danseren til å klappe på hver firedelsnote.
+
+        Denne dansen bruker også en _betingelsesblokk_ til å kontrollere når ‘hver 0,25. takt’-blokken kan endre dansen. Prøv å endre tallene i betingelsesblokken for å se hvordan dette endrer dansen.
+
+        * Eksperimenter med andre notevarigheter (som 0,5 for halvnote og 0,125 for åttedelsnote).
+        * Legg til noen ‘etter takten'-hendelser.
+        * Bytt "takter" med "sekunder", og prøv å justere timingen på dansen på denne måten isteden.
+      Dance_Party_extras_layout: |-
+        # Kom i formasjon
+
+        Sjekk ut denne dansen som bruker ‘oppsett’-blokken til å endre bakgrunnsdansernes formasjon gjennom dansen. Prøv en av disse ideene for å utvide den:
+
+        * Lag en ny gruppe med dansere i et annet oppsett
+        * Endre oppsett når en tast trykkes ned
+        * Endre en egenskap når danserne endrer formasjon
+      Dance_Party_extras_on_beat: |-
+        # Bass, mellomtone og diskant
+
+        Denne dansen bruker "topphendelser" til å aktivere kode når forskjellige deler av musikken blir høy. Prøv å leke deg litt med forskjellige sanger for å se hvordan de endrer dansen.
+      Dance_Party_extras_speed: |-
+        # Fortere, saktere
+
+        Den siste dansen bruker ‘sett fart’-blokken til å styre hvor raskt hver danser beveger seg. Prøv å eksperimentere med forskjellige hastigheter på forskjellige punkter i sangen. Du kan fortsette å flikke på denne dansen, eller gå tilbake til noen av de tidligere dansene og gjøre dem enda kulere.
+      Dance_Party_extras_visible: |-
+        # Hvor ble det av dem?
+
+        Denne dansen viser og skjuler to forskjellige grupper med dansere. Sjekk den ut, og prøv å gi den din egen stil.
+
+        * Legg til en ny gruppe dansere
+        * Vis og skjul danserne med piltastene
+        * Skjul alle danserne og bytt til en spennende bakgrunnseffekt
+      Function intro Ryan: "I arbeidsområdet finner du nå en **funksjon** kalt `build
+        bridge` (bygg bro). All koden du trenger for å krysse elva er bygd rett inn
+        i den! \r\n \r\nFest den lille grønne blokken to ganger i arbeidsområdet for
+        å fikse stien og få {currentPlayerName} bort til redstonefakkelen [redstone_torch]."
+      Function intro Ryan_2019: "I arbeidsområdet finner du nå en **funksjon** kalt
+        `build bridge` (bygg bro). All koden du trenger for å krysse elva er bygd
+        rett inn i den! \r\n \r\nFest den lille grønne blokken to ganger i arbeidsområdet
+        for å fikse stien og få {currentPlayerName} bort til redstonefakkelen [redstone_torch]."
+      K-1 Bee Loops 2: Bruk en løkke til å bevege deg og så hente nektaren og lage
+        honning!
+      K-1 Bee Loops 3: Bruk løkker til å hente nektar og lage honning!
+      K-1 Bee Loops 4: Bruk løkker til å hente nektar, lage honning og til å bevege
+        deg!
+      K-1 Bee Loops 5: Bruk løkker til å hente nektar og honning!
+      K-1 Bee Loops 6: Bruk løkker for å hente nektar, honning og for å bevege deg!
+      K-1 Maze Loops 11: Få meg bort til grisen! Bruk gjenta-brikken.
+      K-1 Maze Loops 12: Få meg bort til grisen! Bruk gjenta-brikken.
+      K-1 Maze Loops 2: Bruk Gjenta-brikken for å få meg bort til grisen!
+      K-1 Maze Loops 8: Få meg bort til grisen! Bruk gjenta-brikken.
+      MC Agent Freeplay: "**Fritt spill:** Nå er det opp til deg! Bruk agentens kode
+        for å hjelpe deg med å utforske denne verdenen."
+      MC_2017_Ryan_02: "Kode som dette kan gjøres enda kortere ved å bruke løkker!
+        \r\n\r\nFå agenten bort til trykkplaten ved å bruke en `gjenta`-løkke til
+        å hjelpe ham flytte fremover."
+      MC_HOC_2017 Agent Test: "Klikk \"Kjør\" og flytt spilleren ved å bruke **piltastene*.
+        \r\n\r\nFor å fullføre denne oppgaven må du gå bort til døra og åpne den (ved
+        å bruke **mellomromstasten*)  slik at du kan komme deg bort til den oransje
+        ruten på innsiden."
+      MC_HOC_2017_01: "Klikk \"Kjør\" og flytt spilleren ved å bruke **piltastene*.
+        \r\n\r\nFor å fullføre denne oppgaven må du gå bort til døra og åpne den (ved
+        å bruke **mellomromstasten*)  slik at du kan komme deg bort til den oransje
+        ruten på innsiden."
+      MC_HOC_2017_01_Cole: Du må samle alle verktøyene på denne reisen. Beveg deg
+        ved å bruke **piltastene** og vinn ved å komme til skattekisten
+      MC_HOC_2017_01_Kiki: 'For å spille denne oppgaven, klikk på den oransje "Kjør"-knappen
+        under spilleområdet og flytt spilleren rundt ved å bruke **piltastene**.  '
+      MC_HOC_2017_01_RETRY: "Denne døra er låst, men agenten er her for å hjelpe!\r\n\r\nFest
+        en `gå fremover`-blokk under `når den kjører` i arbeidsområdet for å få agenten
+        bort til trykkplaten [PressurePlate_Up]. Trykk deretter \"Kjør\" og bruk piltastene
+        til å flytte spilleren ut av huset og samle **kisten** [chest]."
+      MC_HOC_2017_01_RETRY_2019: "Denne døra er låst, men agenten er her for å hjelpe!\r\n\r\nFest
+        en `gå fremover`-blokk under `når den kjører` i arbeidsområdet for å få agenten
+        bort til trykkplaten [PressurePlate_Up]. Trykk deretter \"Kjør\" og bruk piltastene
+        til å flytte spilleren ut av huset og samle **kisten** [chest]."
+      MC_HOC_2017_02: Spilleren må komme seg inn i det hemmelige skogholtet. Hjelp
+        agenten med å åpne porten ved å skrive kode som får han bort til trykkplaten.
+      MC_HOC_2017_02_Cole: "{currentPlayerName} skal ut på et eventyr! For å hjelpe
+        ham, hent **kartet** [map_empty] bak den låste døra til høyre. \r\n\r\nFest
+        kode i arbeidsområdet for å flytte agenten bort til trykkplaten [PressurePlate_Up]
+        slik at {currentPlayerName} kan komme seg gjennom. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} skal ut på et eventyr! For å
+        hjelpe ham, hent **kartet** [map_empty] bak den låste døra til høyre. \r\n\r\nFest
+        kode i arbeidsområdet for å flytte agenten bort til trykkplaten [PressurePlate_Up]
+        slik at {currentPlayerName} kan komme seg gjennom. "
+      MC_HOC_2017_02_Kiki: "Spilleren skal ut på et eventyr, men først må de hente
+        fakkelen som er gjemt på den andre siden av den låste døra. \r\n\r\nProgrammer
+        agenten til å flytte seg fremover to ganger og bli stående på trykkplaten
+        slik at han åpner døra for spilleren."
+      MC_HOC_2017_02_Will: "For å fullføre denne oppgaven må spilleren komme seg til
+        den oransje ruten inne i det hemmelige skogholtet, som er bak den låste døra.
+        \r\n\r\nKoden i arbeidsområdet får agenten til å flytte seg fremover to ganger
+        bort til trykkplaten og åpne døra for Alex eller Steve."
+      MC_HOC_2017_03_Cole: "{currentPlayerName} fortsetter på sitt eventyr og trenger
+        **kompasset** [compass] for å forberede turen. \r\n  \r\nSkrive kode for å
+        få agenten til å åpne porten. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} fortsetter på sitt eventyr og
+        trenger **kompasset** [compass] for å forberede turen. \r\n  \r\nSkrive kode
+        for å få agenten til å åpne porten. "
+      MC_HOC_2017_03_Kiki: "Spillerens eventyr begynner bak den låste døra, i det
+        hemmelige skogholtet! \r\n\r\n\r\nHjelp agenten med å åpne døra ved å skrive
+        kode som får han bort til trykkplaten."
+      MC_HOC_2017_04: Endre løkka fra forrige oppgave for å hjelpe agenten med å lage
+        en sti over den vide delen av elva.
+      MC_HOC_2017_04POINT5_Cole: "Du kom deg ut av sumpen! Nå må du få spilleren trygt
+        bort til den oransje ruten.\r\n\r\nHjelp agenten rydde veien ved å bruke løkker
+        til å gå over de to første trykkplatene."
+      MC_HOC_2017_04POINT5_RYAN: "Du kom deg over!\r\n\r\nFå {currentPlayerName} trygt
+        gjennom labyrinten for å samle **øksa** [diamond_axe]"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Du kom deg over!\r\n\r\nFå {currentPlayerName}
+        trygt gjennom labyrinten for å samle **øksa** [diamond_axe]"
+      MC_HOC_2017_04_Cole: "Agenten kan flytte seg over vann! \r\n\n\r\nBruk en `gjenta`-løkke
+        for å løse denne oppgaven og hjelp {currentPlayerName} med å komme seg bort
+        til **bøtta** [bucket_empty] bak døra. "
+      MC_HOC_2017_04_Cole_2019: "Agenten kan flytte seg over vann! \r\n\n\r\nBruk
+        en `gjenta`-løkke for å løse denne oppgaven og hjelp {currentPlayerName} med
+        å komme seg bort til **bøtta** [bucket_empty] bak døra. "
+      MC_HOC_2017_04_Kiki: "Inngangen til det hemmelige skogholtet ledet oss til denne
+        vakre oasen! For å fullføre dette nivået må spilleren komme seg til den oransje
+        ruten i hytta. \r\n\r\nBruk en `gjenta`-løkke for å hjelpe agenten hele veien
+        opp til trykkplaten, som åpner hyttedøra."
+      MC_HOC_2017_05: "Løkker er ikke alltid nyttige.\r\n\r\nDisse kaktusene vokser
+        ikke i et tydelig mønster, så en løkke vil ikke hjelpe for å komme deg trygt
+        rundt dem. I stedet har vi gitt deg funksjonen `ødelegg og flytt` som vil
+        gjøre jobben for deg hver gang agenten kommer over en hindring."
+      MC_HOC_2017_05_Cole: "Åh, nei! Broa er borte!\r\n\r\nProgrammer agenten til
+        å bygge broa på nytt ved å bruke `plasser`-blokka slik at {currentPlayerName}
+        kan komme seg til **spaden** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "Åh, nei! Broa er borte!\r\n\r\nProgrammer agenten
+        til å bygge broa på nytt ved å bruke `plasser`-blokka slik at {currentPlayerName}
+        kan komme seg til **spaden** [diamond_shovel]."
+      MC_HOC_2017_05_Josh: "Åh, nei! Broa er borte!\r\n\r\nHjelp agenten bygge broa,
+        slik at spilleren kan komme seg til **spaden**."
+      MC_HOC_2017_05_Kiki: "Nå er det tid for at spilleren skal forlate det hemmelige
+        skogholtet og fortsette på eventyret, men broa er borte! \r\n\r\nHjelp agenten
+        bygge broa på nytt og flytt eikeplanken slik at spilleren kan komme seg bort
+        til den oransje ruten."
+      MC_HOC_2017_06_Cole: "Enda en elv, men denne er mye større!\r\n\r\nFiks koden
+        for å hjelpe agenten bygge en bro slik at {currentPlayerName} kan komme seg
+        bort til **hakken** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2019: "Enda en elv, men denne er mye større!\r\n\r\nFiks
+        koden for å hjelpe agenten bygge en bro slik at {currentPlayerName} kan komme
+        seg bort til **hakken** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Josh: "Enda en elv, men denne er mye større! \r\n\r\nFiks koden
+        for å hjelpe agenten bygge en bro over elva."
+      MC_HOC_2017_06_Kiki: "Enda en elv, men denne er mye større! \r\n\r\nFiks koden
+        for å hjelpe agenten bygge en bro over vannet."
+      MC_HOC_2017_07_Cole: "Det er is i veien! \r\n\r\nFunksjonen `clear path` kan
+        hjelpe deg med å ødelegge is og få {currentPlayerName} bort til minecarten
+        [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2019: "Det er is i veien! \r\n\r\nFunksjonen `clear path`
+        kan hjelpe deg med å ødelegge is og få {currentPlayerName} bort til minecarten
+        [minecart_normal]! "
+      MC_HOC_2017_07_Kiki: "Løkker er ikke den eneste måten å gjenta kode! \r\n\r\nHer
+        har vi gitt deg en funksjon kalt `fjern kaktus` som vil fjerne tre kaktuser
+        hver gang du bruker den. Bruk to `fjern kaktus`-blokker for å rydde veien
+        bort til den oransje ruten. "
+      MC_HOC_2017_07a_Kiki: Endre denne løkka for å hjelpe agenten rydde veien bort
+        til den oransje ruten.
+      MC_HOC_2017_08_Cole: "I stedet for å ødelegge før du flytter er du nødt til
+        å plassere en blokk. \r\n\r\nEndre funksjonen til å fungere for ørkenen."
+      MC_HOC_2017_08_Kiki: "I stedet for å ødelegge kaktus er du nødt til å plassere
+        stein over lavaen og deretter ødelegge sandstein. \r\n\r\nEndre funksjonen
+        slik at den fungerer for denne oppgaven."
+      MC_HOC_2017_08_RY: "Nå er det **TO** funksjoner å velge mellom!\r\n\r\nBruk
+        disse funksjonene til å raskt bygge en bro over laven for {currentPlayerName}."
+      MC_HOC_2017_08_Will: "Nå er det **TO** funksjoner å velge mellom!\r\n\r\nBruk
+        disse funksjonene til å raskt bygge en bro over laven for spilleren."
+      MC_HOC_2017_09_Cole: Bruk funksjoner for å hjelpe agenten ødelegge de store
+        blokkene med jord som blokkerer spillerens vei til trykkplaten.
+      MC_HOC_2017_09_Kiki: "Denne koden kan ikke fjernes.\r\n\r\nLegg til kommandoer
+        til funksjonen `create trail` slik at programmet vil få agenten til trykkplaten. "
+      MC_HOC_2017_09_RS_CLONE: Fiks denne funksjonen for å fylle hullene og gå så
+        på trykkplaten for å rydde veien til fakkelen.
+      MC_HOC_2017_10_Cole: Bruk funksjonen for å rydde veien for minecarten og gå
+        så inn i Nether-portalen.
+      MC_HOC_2017_10_Cole_old: Prøv å bygge en funksjon som gjør det enklere for agenten
+        å fullføre denne minecarten og få spilleren bort til den oransje ruten.
+      MC_HOC_2017_10_Kiki: Prøv å bygge en funksjon som gjør det enklere for agenten
+        å fullføre denne minecarten og få spilleren bort til den oransje ruten.
+      MC_HOC_2017_10_RETRY: "Ser du forskjellen mellom disse to funksjonene i arbeidsområdet
+        ditt?\r\n\r\nBruk disse funksjonene sammen med annen kode fra verktøykassa
+        for å rydde vei for minecarten før du samler **Flint og Stål** [flint_and_steel].
+        \r "
+      MC_HOC_2017_10_RETRY_2019: "Ser du forskjellen mellom disse to funksjonene i
+        arbeidsområdet ditt?\r\n\r\nBruk disse funksjonene sammen med annen kode fra
+        verktøykassa for å rydde vei for minecarten før du samler **Flint og Stål**
+        [flint_and_steel]. \r "
+      MC_HOC_2017_10_RYAN: Prøv å bygge en funksjon som gjør det enklere for agenten
+        å fullføre denne minecarten og få spilleren bort til den oransje ruten.
+      MC_HOC_2017_10_RYAN2: Prøv å bygge en funksjon som gjør det enklere for agenten
+        å fullføre denne minecarten og få spilleren bort til den oransje ruten.
+      MC_HOC_2017_11_Kiki: Nå er det opp til deg! Se hva du kan lage rundt denne frosne
+        innsjøen.
+      MC_HOC_2017_13_Cole: "**Fritt spill:** Nå er det opp til deg! Bruk agentens
+        kode for å hjelpe deg med å utforske denne verdenen."
+      MC_HOC_2017_4.5v2: "Du kom deg ut av sumpen! Nå må du få spilleren trygt bort
+        til den oransje ruten.\r\n\r\nHjelp agenten rydde veien ved å bruke løkker
+        til å gå over de to første trykkplatene."
+      MC_HOC_2017_Ali: 'Se på funksjonene under. Hvordan kan du bruke dem til å unngå
+        Ghastene og få {currentPlayerName} trygt bort til **Enchanted Book** [book_enchanted]?  '
+      MC_HOC_2017_Ali_2019: 'Se på funksjonene under. Hvordan kan du bruke dem til
+        å unngå Ghastene og få {currentPlayerName} trygt bort til **Enchanted Book**
+        [book_enchanted]?  '
+      MC_HOC_2017_FP10x10: "**Fritt spill:** Nå er det opp til deg! Kan du utfordre
+        deg selv til å samle alle diamantene?\n"
+      MC_HOC_2017_FP10x10_RE: "**Fritt spill:** Nå er det opp til deg! Kan du utfordre
+        deg selv til å samle alle diamantene?\n"
+      MC_HOC_2017_FP20x20: "**Fritt spill:** Nå er det opp til deg! Bruk agentens
+        kode for å hjelpe deg med å utforske denne verdenen."
+      MC_HOC_2017_FP20x20_2019: "**Fritt spill:** Nå er det opp til deg! Bruk agentens
+        kode for å hjelpe deg med å utforske denne verdenen."
+      MC_HOC_2017_Ryan_03: "Visste du at du kan putte mer enn én blokk med kode inni
+        en løkke? \r\n\r\nBruk en `gjenta`-løkke for å hjelpe agenten bygge en bro
+        over elva ved å plassere planker i vannet."
+      MC_HOC_2017_Ryan_05: "Noen ganger må du slå ned ting som kommer i veien for
+        spilleren. \r\nBruk `ødelegg blokk`for å rydde veien for all kaktusen mellom
+        agenten og trykkplaten."
+      Mike Test Bee Conditionals 1: "Denne skyen blokkerer synet mitt!\n\r\n\r\nSe
+        om det er en blomst under skyen, og hent nektar kun hvis det er en blomst
+        der.   \r\nVær forsiktig, det kan endre seg!"
+      Mike Test Bee Conditionals 2: "**Oppgave:** Samle all nektaren. \r\nVær forsiktig
+        så du ikke prøver å samle nektar fra lilla blomster som ikke har."
+      NEW Course 4 Artist Functions 10.1: Bruk funksjonene fra forrige de oppgavene
+        til å tegne dette mønsteret.
+      NEW Course 4 Artist Functions 12: Bruk "tegn en linje av firkanter"-funksjonen
+        fra forrige oppgave til å tegne dette mønsteret.
+      NEW Course 4 Artist Functions 3: Her er en ny type brikke. Den er kalt en "funksjon".
+        Trykk på "endre" og så fyll ut koden for å tegne en firkant med sider på 100
+        piksler. Når du er ferdig med å endre funksjonen, trykk "Lukk" for å gå tilbake
+        til programmet.
+      NEW Course 4 Artist Functions 9: Kan du løse dette med å legge til bare en brikke?
+      NEW Course 4 Artist Params 4: Legger du merke til noe annerledes med disse funksjonsblokkene?
+        Klikk "Kjør" for å se hva som skjer.
+      NEW Course 4 Artist Vars 12: Nå kan du lage samme algoritme som i forrige nivå
+        og lage en femkant der sidene har lengde 150.
+      NEW Course 4 Artist Vars 4: La oss prøve det igjen. Nå, la oss tegne denne kule
+        design med med 60 piksel store sekskanter.
+      NEW Course 4 Artist Vars 6: Kan du hjelpe meg trekke dette kule mønsteret ved
+        å slippe i den variable blokken "lengde" på de riktige stedene?
+      New Minecraft Hero Project: "**Fritt spill:** Nå er det opp til deg! Bruk agentens
+        kode for å hjelpe deg med å utforske denne verdenen."
+      Overworld Move to Sheep: Legg til enda en "gå fremover"-kommando for å nå fram
+        til sauen.
+      Overworld Move to Sheep_2018: Legg til enda en "gå fremover"-kommando for å
+        nå fram til sauen.
+      Overworld Move to Sheep_2019: Legg til enda en "gå fremover"-kommando for å
+        nå fram til sauen.
+      PS copy 2-3 Bee Conditionals 5: "Disse magiske lilla blomstene endrer seg!\r\n\r\nHver
+        gang du kjører koden kan blomstene enten ha 1 nektar eller ingen... Men du
+        vet ikke antall nektar før du kjører koden!\r\n\r\nPass på så du ikke samler
+        nektar fra blomster som ikke har noen. \r\nDu må først sjekke om nektaren
+        er lik 1 ved å bruke \"hvis nektar\"-blokken."
+      Testing Quantum Farmer: "Wow, se på det! \r\n\r\nJeg vet ikke hvor mange spadetak
+        som trengs for å fylle dette hullet. \r\nKan du skrive et program som fortsetter
+        å  bruke blokka`fyll` helt til bakken er jevn?  "
+      Underground If Statements: Nå begynner det å bli vanskelig. Utvinn 3 redstone,
+        men ikke fall i lavaen. Bruk en `hvis`-kommando til å plassere brostein over
+        all lava du kommer over.
+      Underground If Statements_2018: Nå begynner det å bli vanskelig. Utvinn 3 redstone,
+        men ikke fall i lavaen. Bruk en `hvis`-kommando til å plassere brostein over
+        all lava du kommer over.
+      Underground If Statements_2019: Nå begynner det å bli vanskelig. Utvinn 3 redstone,
+        men ikke fall i lavaen. Bruk en `hvis`-kommando til å plassere brostein over
+        all lava du kommer over.
+      course3_farmer_until_challenge2: Bruk blokken hvis/ellers til å følge den svingete
+        banen. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne
+        haugene.
+      course4_artist_fwp_challenge1: Prøv å kjøre dette programmet, og gjør endringer
+        for å se hva som skjer. Kan du finne ut hvordan det fungerer? (Eller fjerne
+        det og erstatte det med noe helt annet)
+      courseD_bee_nestedLoops5: Samle inn all nektaren fra hver blomst og lag honning
+        i alle bikubene. Bruk løkke i løkke.
+      courseD_bee_nestedLoops8: Samle inn all nektaren fra hver blomst og lag honning
+        i alle bikubene. Bruk løkke i løkke.
+      courseD_bee_nestedLoops8_2018: Samle inn all nektaren fra hver blomst og lag
+        honning i alle bikubene. Bruk løkke i løkke.
+      courseD_bee_nestedLoops8_2019: Samle inn all nektaren fra hver blomst og lag
+        honning i alle bikubene. Bruk løkke i løkke.
+      courseD_bounce_events1: Kom deg til flagget! Koble en blokk til "når venstre
+        pil"-blokken og trykk "Kjør" for å flytte spillfiguren til flagget.
+      courseD_farmer_until_challenge2: Bruk blokken hvis/ellers for å følge den svingete
+        veien. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne
+        haugene.
+      courseD_farmer_until_challenge2_2018: Bruk blokken hvis/ellers for å følge den
+        svingete veien. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for
+        å fjerne haugene.
+      courseD_farmer_while_challenge1: Fyll inn alle hullene og fjern alle haugene.
+      courseD_farmer_while_challenge1_2018: Fyll inn alle hullene og fjern alle haugene.
+      courseD_farmer_while_challenge1_2019: Fyll inn alle hullene og fjern alle haugene.
+      courseD_farmer_while_challenge2: Fyll inn alle hullene og fjern alle haugene.
+      courseD_farmer_while_challenge2_2018: Fyll inn alle hullene og fjern alle haugene.
+      courseD_maze_nestedLoops4: Få meg til solsikken!
+      courseD_maze_nestedLoops4_2018: Få meg til solsikken!
+      courseD_maze_nestedLoops4_2019: Få meg til solsikken!
+      courseE_bee_functions2: "Funksjoner er blokker med kode som utfører en oppgave.
+        \r\n\r\nBruk funksjonen 'hent 2 nektar' for å hente nektaren fra hver blomst."
+      courseE_bee_functions2_2018: "Funksjoner er blokker med kode som utfører en
+        oppgave. \r\n\r\nBruk funksjonen 'hent 2 nektar' for å hente nektaren fra
+        hver blomst."
+      courseE_bee_functions3: Funksjoner er kodeblokker som utfører en bestemt oppgave.
+        Bruk blokken "hent 5" til å samle inn 5 nektar om gangen. Pass på å bruk en
+        løkke for å bruke ideelt antall blokker.
+      courseE_bee_functions3_2018: Funksjoner er kodeblokker som utfører en bestemt
+        oppgave. Bruk blokken "hent 5" til å samle inn 5 nektar om gangen. Pass på
+        å bruk en løkke for å bruke ideelt antall blokker.
+      courseE_farmer_concept4: |-
+        La oss ta dette videre!
+        Vi har nøstet hele kodeblokken inni en annen løkke, men du må få artisten tilbake på plassen sin for å tegne den neste linja. Hvilken av disse kodeblokkene kan du plassere på slutten av den ytterste løkka for å tegne hele mønsteret?
+      courseF_bee_for_challenge2: Løs denne oppgaven med færrest mulig brikker.
+      courseF_bee_for_challenge2_2018: Løs denne oppgaven med færrest mulig brikker.
+      courseF_bee_for_challenge2_2019: Løs denne oppgaven med færrest mulig brikker.
+      frozen circle function in circle: Nå skal vi lage 20 overlappende sirkler ved
+        å snu 18 grader mellom hver sirkel.
+      frozen circle function with parameter: Her er en "Lag sirkel"-blokk som kan
+        lage sirkler av ulike størrelser. Klarer du å bruke den til å lage en liten
+        sirkel med størrelse 5 og en større sirkel med størrelse 10?
+      frozen circle function: Bruk "Lag ny sirkel"-blokken for å lage 10 overlappende
+        sirkler. Ikke glem å gå fremover mellom sirklene.
+      frozen circle: En sirkel er en spesiell form. Klarer du finne ut hvilket tall
+        som skal erstatte spørsmålstegnene for å tegne en sirkel?
+      frozen cross rotate dense: 'La oss gjenta det 90 ganger! Hvor mange ganger går
+        90 opp i 360? Hint: Det er et ganske lite tall.'
+      frozen cross rotate: Prøv å gjenta det 10 ganger. Hvor mange grader må du snu
+        mellom hver linje?
+      frozen cross: Putt en "gjenta"-blokk rundt disse kommandoene for å lage et plusstegn.
+        La du merke til at Elsa kan bevege seg både framover og bakover?
+      frozen diamond mini snowflake: Visste du at alle snøfnugg har forskjellige former?
+        La oss lage et nytt snøfnugg ved å bruke enda en "Gjenta"-brikke for å repetere
+        mønsteret 4 ganger. Snu 90 grader mellom hvert mønster.
+      frozen diamond snowflake: Nå skal vi lage et snøfnugg ved å bruke "Gjenta"-blokken
+        til å lage et parallelogram 10 ganger ved å snu mot høyre 36 grader etter
+        hvert parallelogram.
+      frozen diamond: Bruk en gjenta-brikke rundt disse brikkene for å lage et parallelogram.
+        Det er en firkant hvor hjørnene har forskjellige vinkler. Denne har vinkler
+        på 60 grader og 120 grader i stedet for at alle har 90 graders vinkler.
+      frozen freeplay: "Du er nå offisielt blitt en mesterkunstner! \nLag et vinterparadis!"
+      frozen perpendicular: Nå skal vi prøve å lage to linjer som står 90 grader i
+        forhold til hverandre. Du må bruke blokken "Snu" og en "Flytt"-blokk.
+      frozen snowflake branch: Prøv å bruke "lag en snøflakgren"-blokken for å lage
+        tre grener som begynner å se ut som et snefnugg.
+      frozen snowflake full: Nå skal vi repetere det 8 ganger for å lage et nydelig
+        snefnugg!
+      frozen snowflower: Det er mulig å lage intrikate snømønstre ved  å sette sammen
+        enkle former. Kan du lage et mønster ved å repetere 5 sirkler med størrelse
+        5 og 5 sirkler med størrelse 10?
+      frozen square iterative: Det ser ut til vi har laget et halvt kvadrat. La oss
+        sette sammen fire linjer for å lage et kvadrat.
+      frozen square loop 3x: La oss lage tre firkanter med spissen mot hverandre.
+        Husk å snu 120 grader før hvert nytt firkant.
+      frozen square loop: Hei, jeg heter Anna av Arendelle! La oss lage et kvadrat
+        ved hjelp av "Gjenta" blokken som bruker færre blokker. Hvor mange ganger
+        trenger "Gjenta" blokken gå gjennom blokkene inni for å lage et kvadrat?
+      frozen square snowflake: Får du til å lage et snøfnugg ved å bruke "repeter"-blokken
+        til å lage 10 kvadrater og "Snu"-blokken for å snu deg 36 grader mellom hvert
+        kvadrat?
+      grade2_MakeDogTag_8: La oss koble sammen en haug av V-er ved å bruke en løkke.
+      grade2_MakeDogTag_9: "Nå skal vi lage noe gøy!\n\r\n\r\nGjør det samme som i
+        forrige oppgave, men legg til en blokk for å snu til venstre med 30 grader
+        inni løkka. Gjenta 24 ganger i stedet for 8."
+      grade2_PuppyLoops_10: "Læreren min sier jeg burde fullføre det jeg starter på!\r\n\r\nHjelp
+        meg med å fullføre tegningen. Kan du finne ut hva som er feil i koden?"
+      grade2_PuppyLoops_2: "Plutselig dukket det opp en magisk blokk! Med `gjenta`-blokken
+        kan du gjenta koden om og om igjen.\r\n\r\nKan du komme deg bort til grisen
+        ved å lage en løkke som bruker kun én `gå framover`-blokk inni en `gjenta`-blokk?"
+      grade2_PuppyLoops_4: Bruk to løkker for å bruke færre blokker for å komme frem
+        til grisen.
+      grade2_PuppyLoops_8: "Denne koden for kattens værhår er feil. \r\n\r\nFiks koden
+        slik at den tegner alle værhårene like lange."
+      grade2_PuppyLoops_9: "Ser ut som om C-en i koden er tegnet feil vei!\r\n\r\nKan
+        du få den til å se ut som en C igjen?"
+      grade2_puppy_loops2: "Plutselig dukket det opp en magisk blokk! Med `gjenta`-blokken
+        kan du gjenta koden om og om igjen.\r\n\r\nKan du komme deg bort til grisen
+        ved å lage en løkke som bruker kun én `gå framover`-blokk inni en `gjenta`-blokk?"
+      grade2_puppy_loops4: Bruk to løkker for å bruke færre blokker for å komme frem
+        til grisen.
+      grade3_ConditionalsElse_1: "Denne skyen blokkerer synet mitt!\n\r\n\r\nSe om
+        det er en blomst under skyen, og hent nektar kun hvis det er en blomst der.
+        \  \r\nVær forsiktig, det kan endre seg!"
+      grade3_ConditionalsElse_2: Bien vil bare ha nektar akkurat nå. Husk, ikke alle
+        er blomster, så sjekk etter at du bare samler nektar fra blomster.
+      grade3_ConditionalsElse_4: "Noen ganger skjuler denne skyen en blomst og noen
+        ganger skjuler den en bikube! \r\n\r\nBruk blokken `hvis/ellers` til å samle
+        nektar kun hvis det er en blomst der. \r\nHvis ikke det er det, lag honning
+        (fordi det er en bikube)."
+      grade3_ConditionalsElse_5: Det kan være en blomst eller en bikube under skyene.
+        Bruk "hvis/ellers"-blokken til å samle inn nektar dersom det er en blomst.
+        Hvis ikke så lager du honning (for da er det en bikube).
+      grade3_ConditionalsElse_6: "Jeg er ikke sikker på hvor mye nektar denne blomsten
+        har, men jeg vet at den har enten 1, 2 eller 3 nektar. \r\n\r\nKombiner betingelsene
+        (`hvis` og/eller `hvis/ellers`) for å bare hente mengden nektar som blomsten
+        har. \r\n\r\nHusk at mengen nektar kan endre seg hver gang du kjører oppgaven!"
+      grade3_ConditionalsElse_7: "Disse blomstene har 3, 2 eller 1 nektar. \r\n\r\nFullfør
+        funksjonen `check purple flower` for bruk den for å samle all nektaren i blomstene."
+      grade3_ConditionalsElse_8: "Skriv funksjonen check\nflower make honey`. \r\n\r\nFunksjonen
+        din burde sjekke om de lilla blomstene har 3, 2 eller 1 nektar og hente all
+        nektaren som er der. \r\nSå burde den flytte framover og lage honning."
+      grade3_ConditionalsElse_9: "**Oppgave:** Skyen skjuler enten en blomst med en
+        nektar eller en bikube som trenger en honning. \r\n\r\nFullfør funksjonen
+        `get nectar or make honey` og så kall den for å samle all nektaren eller honningen.
+        \r\n"
+      grade3_ConditionalsElse_TeacherIDo: Det kan være en blomst eller en bikube under
+        skyene. Bruk "hvis/ellers"-blokken til å samle inn nektar dersom det er en
+        blomst. Hvis ikke så lager du honning (for da er det en bikube).
+      grade3_Conditionals_1: "Jeg er en sulten bie!\r\n\r\n\r\nHjelp meg med å samle
+        all nektaren fra blomstene og bruk så få blokker som mulig."
+      grade3_Conditionals_10: 'Samle inn nektar og lag honning. Tips: hva skjer dersom
+        du bruker "hvis nektar" på en rød blomst? Kan du fullføre dette med en løkke?'
+      grade3_Conditionals_11 BAD: "**Oppgave:** Bruk en 'så lenge'-løkke for å samle
+        all nektaren fra disse blomstene."
+      grade3_Conditionals_11: "La oss sette alt sammen!\r\n\r\nBruk det du har lært
+        for å samle nektar kun fra blomster som har det. Bruk så få blokker som mulig.
+        \r\n\r\nIkke glem å lage honning til slutt."
+      grade3_Conditionals_12: "Dette trappe-mønsteret ser kjent ut. \r\n\r\nSamle
+        nektar fra kun de blomstene som har det. Bruk så få blokker som mulig."
+      grade3_Conditionals_13: "**Oppgave:** Samle all nektaren. \r\nVær forsiktig
+        så du ikke prøver å samle nektar fra lilla blomster som ikke har."
+      grade3_Conditionals_2: Hjelp meg å samle inn nektaren fra alle blomstene og
+        lag honning. Bruk en løkke.
+      grade3_Conditionals_3: "Disse magiske lilla blomstene endrer seg!\r\n\r\nHver
+        gang du kjører koden kan blomstene enten ha 1 nektar eller ingen... Men du
+        vet ikke antall nektar før du kjører koden!\r\n\r\nPass på så du ikke samler
+        nektar fra blomster som ikke har noen. \r\nDu må først sjekke om nektaren
+        er lik 1 ved å bruke \"hvis nektar\"-blokken."
+      grade3_Conditionals_8: Samle inn nektar dersom blomsten har nektar.
+      grade3_Debugging_1: "Disse blokkene irriterer meg!\r\n\r\nFiks feilen(e) for
+        å samle all nektaren."
+      grade3_Debugging_5: "Den blomsten ser god ut! \r\n\r\nFiks feilen(e) i koden
+        for å samle all nektaren. \r\nDu kan bruke både knappene kjør og trinn."
+      grade3_Debugging_6: "For en fin utfordring!\r\n\r\nFiks feilen(e) for å samle
+        all nektaren."
+      grade3_Debugging_9: 'Disse blokkene plager meg. Fiks feilene og samle inn nektaren
+        for å lage all honningen. '
+      grade3_Loops_10: "For en travel bie!\r\n\r\nHjelp Bie med å samle all nektaren
+        og lage all honningen ved å bruke så få blokker som mulig."
+      grade3_Loops_11: "Mønsteret på denne stien er litt annerledes enn de andre.\r\n\r\nKan
+        du samle all nektaren ved å bruke så få blokker som mulig?"
+      grade3_Loops_3: Bruk en `gjenta`-løkke for å samle all nektaren.
+      grade3_Loops_4: Bruk en `gjenta`-løkke for å samle all nektaren og lage all
+        honningen.
+      grade3_Loops_6: "Hvor mange ganger burde du gjenta for å få til denne oppgaven?
+        \r\n\r\nGjenta-blokker er din venn! Bruk noen av dem for å fullføre denne
+        oppgaven med så få blokker som mulig."
+      grade3_Loops_7: 'Hver blomst inneholder en enhet med nektar. Samle inn nektar
+        fra alle blomstene. '
+      grade3_Loops_TeacherIDo: 'Hver blomst inneholder en enhet med nektar. Samle
+        inn nektar fra alle blomstene. '
+      grade3_bee_conditionals_quantum2: Bien vil bare ha nektar akkurat nå. Husk,
+        ikke alle er blomster, så sjekk etter at du bare samler nektar fra blomster.
+      grade3_maze_Loop1: "**Oppgave:** Få meg bort til solsikken ved å bruke kun 5
+        blokker! "
+      grade3_maze_loops2: Få meg til solsikken!
+      grade3_maze_nestedLoops2: "Plutselig dukket det opp en magisk blokk! Med `gjenta`-blokken
+        kan du gjenta koden om og om igjen.\r\n\r\nKan du komme deg bort til grisen
+        ved å lage en løkke som bruker kun én `gå framover`-blokk inni en `gjenta`-blokk?"
+      grade3_maze_nestedLoops3: Få meg bort til grisen! Du kan kun bruke én `gå framover`-blokk
+        denne gangen
+      grade3_maze_nestedLoops4: Bruk to løkker for å bruke færre blokker for å komme
+        frem til grisen.
+      grade4_arist_nested_loop_circles1: "**Oppgave:** Bruk løkke-i-løkke for å fullføre
+        mønsteret."
+      grade4_arist_nested_loop_flags1: Bruk en løkke rundt denne koden for å lage
+        en vindmølle.
+      grade4_arist_nested_loop_polygons1: "Gjenta dette mønsteret 10 ganger. \r\n\r\nHvor
+        mye må du snu hver gang du gjentar?"
+      grade4_arist_nested_loop_polygons2: 'Repeter designet 6 ganger. Hvor mye må
+        du rotere i hver repetisjon? (Tips: Hva er 360 delt på 6?)'
+      grade4_arist_nested_loop_squares1: "Kan du tegne disse 10 kvadratene på fortauet
+        ved å bruke løkke-i-løkke?\r\n\r\nHvert kvadrat er 30 piksler."
+      grade4_arist_nested_loop_triangles2: "Legg denne løkken inni en annen løkke
+        for å tegne 10 trekanter. \r\nDette kalles en nøstet løkke eller løkke-i-løkke.
+        \ "
+      grade4_arist_nested_loop_triangles3: Kan du tegne en sekskant ved å gjenta trekant-koden?
+      grade4_arist_nested_loop_triangles4: Tegn tennene i alligatoren sin munn!
+      grade4_arist_nested_loop_triangles5: "Lag en sol ved å legge startkoden inni
+        en annen løkke.\r\n\r\nFor å få til dette kule mønsteret med et hult senter
+        må du hoppe fremover med den samme lengden som trekanten sin side før du snur
+        deg."
+      grade4_arist_nested_loop_triangles6: Får du til å tegne disse 36 trianglene
+        ved hjelp av en løkke i løkke?
+      grade4_artist_functions2: "Funksjoner lar deg lage nye blokker!\r\n\r\nVi har
+        flyttet de nye blokkene du trenger for å lage et kvadrat inn i en funksjon
+        som heter `tegn en firkant`. Bruk denne funksjonen for å lage brillene. \r\n\r\nFirkantene
+        er 75 piksler fra hverandre."
+      grade4_artist_nested_loop_circles1: "**Oppgave:** Bruk løkke-i-løkke for å fullføre
+        mønsteret."
+      grade4_artist_nested_loop_flags1: Bruk en løkke rundt denne koden for å lage
+        en vindmølle.
+      grade4_artist_nested_loop_polygons1: "Gjenta dette mønsteret 10 ganger. \r\n\r\nHvor
+        mye må du snu hver gang du gjentar?"
+      grade4_artist_nested_loop_squares1: "Kan du tegne disse 10 kvadratene på fortauet
+        ved å bruke løkke-i-løkke?\r\n\r\nHvert kvadrat er 30 piksler."
+      grade4_artist_nested_loop_triangles1: "Fullfør koden som tegner disse trekantene.
+        Den første er laget for deg. Hint: 3 trekanter i en 360 graders rotasjon.\r\n\r\n"
+      grade4_artist_nested_loop_triangles5: "Lag en sol ved å legge startkoden inni
+        en annen løkke.\r\n\r\nFor å få til dette kule mønsteret med et hult senter
+        må du hoppe fremover med den samme lengden som trekanten sin side før du snur
+        deg."
+      grade4_artist_nested_loop_triangles6: Får du til å tegne disse 36 trianglene
+        ved hjelp av en løkke i løkke?
+      grade4_artist_parameters_triangles2: Legger du merke til noe annerledes med
+        disse funksjonsblokkene? Klikk "Kjør" for å se hva som skjer.
+      grade4_bee_conditionals_nested_loops: "**Oppgave:** Samle all nektaren. \r\nVær
+        forsiktig så du ikke prøver å samle nektar fra lilla blomster som ikke har."
+      grade4_bee_conditionals_new1: "**Oppgave:** Samle all nektaren. \r\nVær forsiktig
+        så du ikke prøver å samle nektar fra lilla blomster som ikke har."
+      grade4_bee_conditionals_quantum1: "Denne skyen blokkerer synet mitt!\n\r\n\r\nSe
+        om det er en blomst under skyen, og hent nektar kun hvis det er en blomst
+        der.   \r\nVær forsiktig, det kan endre seg!"
+      grade4_bee_conditionals_quantum2: Bien vil bare ha nektar akkurat nå. Husk,
+        ikke alle er blomster, så sjekk etter at du bare samler nektar fra blomster.
+      grade4_bee_conditionals_quantum4: "Noen ganger skjuler denne skyen en blomst
+        og noen ganger skjuler den en bikube! \r\n\r\nBruk blokken `hvis/ellers` til
+        å samle nektar kun hvis det er en blomst der. \r\nHvis ikke det er det, lag
+        honning (fordi det er en bikube)."
+      grade4_bee_conditionals_quantum5: Det kan være en blomst eller en bikube under
+        skyene. Bruk "hvis/ellers"-blokken til å samle inn nektar dersom det er en
+        blomst. Hvis ikke så lager du honning (for da er det en bikube).
+      grade4_bee_functions2: "Funksjoner er blokker med kode som utfører en oppgave.
+        \r\n\r\nBruk funksjonen 'hent 2 nektar' for å hente nektaren fra hver blomst."
+      grade4_bee_functions3: Funksjoner er kodeblokker som utfører en bestemt oppgave.
+        Bruk blokken "hent 5" til å samle inn 5 nektar om gangen. Pass på å bruk en
+        løkke for å bruke ideelt antall blokker.
+      grade4_bee_nestedLoops4: Samle inn all nektaren fra hver blomst og lag honning
+        i alle bikubene. Bruk løkke i løkke.
+      grade4_frozen_freeplay: "Du er nå offisielt blitt en mesterkunstner! \nLag et
+        vinterparadis!"
+      grade4_frozen_functions0: En sirkel er en spesiell form. Klarer du finne ut
+        hvilket tall som skal erstatte spørsmålstegnene for å tegne en sirkel?
+      grade4_frozen_functions1a: Bruk "Lag ny sirkel"-blokken for å lage 10 overlappende
+        sirkler. Ikke glem å gå fremover mellom sirklene.
+      grade4_frozen_functions2: Nå skal vi lage 20 overlappende sirkler ved å snu
+        18 grader mellom hver sirkel.
+      grade4_frozen_functions3: Her er en "Lag sirkel"-blokk som kan lage sirkler
+        av ulike størrelser. Klarer du å bruke den til å lage en liten sirkel med
+        størrelse 5 og en større sirkel med størrelse 10?
+      grade4_frozen_functions4: Det er mulig å lage intrikate snømønstre ved  å sette
+        sammen enkle former. Kan du lage et mønster ved å repetere 5 sirkler med størrelse
+        5 og 5 sirkler med størrelse 10?
+      grade4_frozen_nested_loop_diamonds2: Visste du at alle snøfnugg har forskjellige
+        former? La oss lage et nytt snøfnugg ved å bruke enda en "Gjenta"-brikke for
+        å repetere mønsteret 4 ganger. Snu 90 grader mellom hvert mønster.
+      grade4_frozen_nested_loop_diamonds3: Nå skal vi lage et snøfnugg ved å bruke
+        "Gjenta"-blokken til å lage et parallelogram 10 ganger ved å snu mot høyre
+        36 grader etter hvert parallelogram.
+      grade4_frozen_square: Hei, jeg heter Anna av Arendelle! La oss lage et kvadrat
+        ved hjelp av "Gjenta" blokken som bruker færre blokker. Hvor mange ganger
+        trenger "Gjenta" blokken gå gjennom blokkene inni for å lage et kvadrat?
+      grade4_frozen_square_loop1: Hei, jeg heter Anna av Arendelle! La oss lage et
+        kvadrat ved hjelp av "Gjenta" blokken som bruker færre blokker. Hvor mange
+        ganger trenger "Gjenta" blokken gå gjennom blokkene inni for å lage et kvadrat?
+      grade4_frozen_square_loop2: La oss lage tre firkanter med spissen mot hverandre.
+        Husk å snu 120 grader før hvert nytt firkant.
+      grade4_frozen_square_loop3: Får du til å lage et snøfnugg ved å bruke "repeter"-blokken
+        til å lage 10 kvadrater og "Snu"-blokken for å snu deg 36 grader mellom hvert
+        kvadrat?
+      grade4_review_artist2: "Dette huset trenger et tak! Tegn triangelet. \r\n\r\nHint:
+        Alle tre sider er av samme lengde.\r\n\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
+      grade4_review_artist3: Blokken `hopp` beveger kunstneren uten å tegne. Tegn
+        den stiplede linjen ved hjelp av både `hopp fremover` og `flytt fremover`-blokker.
+      grade4_review_bee1: Bruk en `gjenta`-løkke for å samle all nektaren og lage
+        all honningen.
+      grade4_review_bee3: "For en travel bie!\r\n\r\nHjelp Bie med å samle all nektaren
+        og lage all honningen ved å bruke så få blokker som mulig."
+      grade5_artist_for_loops1: 'Tegn denne trekanten som er 50 piksler i størrelse.
+        Hing: Bruk en gjenta-blokk.'
+      grade5_artist_for_loops10: "Kan du finne ut hvordan du bruker alle tingene du
+        har lært til å lage dette bildet?\r\n\r\nTrenger du et hint? Klikk her."
+      grade5_artist_for_loops5: Den korteste linja i denne kvadrat-spiralen er 10,
+        den største er 200 og hver linje er 10 piksler lenger enn den forrige. Kan
+        du fylle inn de manglende blokkene i dette stilige bildet?
+      grade5_artist_parameters_triangles2a: Legger du merke til noe annerledes med
+        disse funksjonsblokkene? Klikk "Kjør" for å se hva som skjer.
+      grade5_artist_variables_hexagons1: La oss prøve det igjen. Nå, la oss tegne
+        denne kule design med med 60 piksel store sekskanter.
+      grade5_artist_variables_pentagon9: Nå kan du lage samme algoritme som i forrige
+        nivå og lage en femkant der sidene har lengde 150.
+      grade5_artist_variables_pentagons1: Kan du hjelpe meg trekke dette kule mønsteret
+        ved å slippe i den variable blokken "lengde" på de riktige stedene?
+      grade5_playlab_variables13: Bruk en "når berører"-blokk til å sende Hund tilbake
+        til øvre venstre hjørne BARE hvis Hund berører noen av de andre spillerne.
+      grade5_playlab_variables2: Løpet i forrige oppgave var ikke veldig rettferdig!
+        Endre variabelen "hund_fart" for å sikre at du kan samle mer flagg enn Katt.
+        Den første til å samle 10 flagg vinner!
+      grade5_playlab_variables9: Her er en funksjon kalt "patruljer". Endre den slik
+        at Katt beveger seg opp 400 piksler og så ned 400 piksler.
+      level 'grade3_Loops_10: "For en travel bie!\r\n\r\nHjelp Bie med å samle all
+        nektaren og lage all honningen ved å bruke så få blokker som mulig."
+      level 'grade3_Loops_11: "Mønsteret på denne stien er litt annerledes enn de
+        andre.\r\n\r\nKan du samle all nektaren ved å bruke så få blokker som mulig?"
+      level 'grade3_Loops_3: Bruk en `gjenta`-løkke for å samle all nektaren.
+      level 'grade3_Loops_4: Bruk en `gjenta`-løkke for å samle all nektaren og lage
+        all honningen.
+      level 'grade3_Loops_5: "For en vakker blomstereng! \r\n\r\nHjelp bien med å
+        besøke alle blomstene.\r\n\r\nKan du få det til ved å bruke færre enn 7 blokker?"
+      level 'grade3_Loops_6: "Hvor mange ganger burde du gjenta for å få til denne
+        oppgaven? \r\n\r\nGjenta-blokker er din venn! Bruk noen av dem for å fullføre
+        denne oppgaven med så få blokker som mulig."
+      level 'grade3_Loops_7: 'Hver blomst inneholder en enhet med nektar. Samle inn
+        nektar fra alle blomstene. '

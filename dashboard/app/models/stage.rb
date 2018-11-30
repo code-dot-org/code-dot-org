@@ -127,6 +127,7 @@ class Stage < ActiveRecord::Base
         freeplay_links: script.freeplay_links,
         id: id,
         position: absolute_position,
+        relative_position: relative_position,
         name: localized_name,
         title: localized_title,
         flex_category: localized_category,

@@ -814,8 +814,49 @@ km-KH:
   header_teacher_community: សមាគមន៏នៃគ្រូបង្រៀន
   header_report_bug: រាយការណ៌អំពីកំហុសរបស់កម្មវិធី
   user_header_label: សួស្តី%{username}
+  user_header_team: ក្រុម
   user_header_settings: គណនី​របស់​ខ្ញុំ
   user_header_logout: ចាកចេញ
   user_header_signin: ចូល​គណនី
+  user_header_view_my_projects: មើលគម្រោងរបស់ខ្ញុំ
   view_all_sections: មើលផ្នែកទាំងអស់
   hero_name: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
+  applab_tile_start_tutorial: ចាប់​ផ្ដើម
+  hoc_overview_start_tutorial: ចាប់​ផ្ដើម
+  hoc2018_creativity_create: បង្កើត
+  hoc2018_mc_page_title: មេរៀន Minecraft Hour of Code
+  hoc2018_mc_details: ភាសាជាច្រើន | ឧបករណ៍បើកគេហទំព័រទំនើបៗ និង tablets | ថ្នាក់ទី២ឡើងទៅ
+  hoc2018_mc_aquatic_description: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code
+    ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
+  hoc2018_mc_hero_title: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
+  hoc2018_mc_hero_description: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code
+    ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
+  hoc2018_mc_designer_title: Minecraft Designer
+  hoc2018_mc_adventurer_title: Minecraft Adventurer
+  hoc2018_mc_adventurer_description: ប្រើកូដដើម្បីឲ Alex ឬ Steve ធ្វើដំណើរផ្សងព្រេង។
+  hoc2018_mc_start: ចាប់​ផ្ដើម
+  hoc2018_mc_no_internet: គ្មានអ៊ីនធើណែតប្រើប្រាស់?
+  hoc2018_mc_download_adventurer: ទាញយក Minecraft Adventurer ដែលជាប្រភេទមិនត្រូវការអ៊ីនធើណែត។
+  hoc2018_mc_educators_box2_button: ទាញយក
+  hoc2018_mc_watch_videos: មុនហ្នឹងអ្នកចាប់ផ្តើម សូមមើលវីដេអូបំផុសគំនិតមួយក្នុងចំណោមវីដេអូទាំងនេះ
+  hoc2018_mc_videos_more: "<a href='%{inspiring_videos_playlist}'>វីដេអូបំផុសគំនិត</a>បន្ថែមជាមួយនឹងជនគំរូនិងតារាល្បីៗ"
+  hoc2018_mc_careers_more: "<a href='%{careers_url}' target='_blank'>វីដេអូបំផុសគំនិត</a>
+    បន្ថែមជាមួយអ្នកជំនាញក្នុងវិស័យបច្ចេកវិទ្យា"
+  hoc2018_mc_video_1min: ១នាទី
+  hoc2018_mc_video_2min: ២នាទី
+  hoc2018_mc_video_5min: ៥នាទី
+  hoc2018_mc_video_title_sports: ជំរុញខ្លួនអ្នក។ មនុស្សគ្រប់គ្នាអាចរៀនបាន។
+  hoc2018_mc_video_title_inspire_girl: បំផុសគំនិតក្មេងស្រី
+  hoc2018_mc_video_title_cs_intro: ការណែនាំពីវិទ្យាសាស្ត្រកុំព្យូទ័រ
+  hoc2018_mc_video_title_schools_dont_teach: អ្វីដែលសាលាភាគច្រើនមិនបានបង្រៀន
+  hoc2018_mc_video_title_obama: ការយល់ឃើញរបស់ប្រធានាធិបតី Obama ចំពោះវិទ្យាសាស្រ្តកុំព្យូទ័រ
+  hoc2018_mc_video_title_hoc_is_here: កម្មវិធី Hour of Code នៅទីនេះ - មនុស្សគ្រប់គ្នាអាចសិក្សា
+  hoc2018_mc_video_title_anybody_can_learn: មនុស្សគ្រប់គ្នាអាចរៀនបាន
+  hoc2018_mc_homepage_join_us: ចូលរួមជាមួយយើង
+  hoc2018_mc_homepage_try_it: សាកល្បង
+  hoc2018_mc_back: Minecraft បានត្រលប់មកវិញជាមួយហ្នឹងសកម្មភាពថ្មីសំរាប់ Hour of Code!
+  hoc2018_mc_back_journey: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code ជាមួយសកម្មភាពថ្មី‌!
+    ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
+  hoc2018_dance_party_button: ចាប់​ផ្ដើម
+  hoc2018_dance_amazon_about_future_engineer_button: សិក្សាបន្ថែម
+  hoc2018_dance_amazon_scholarship_programs_button: ចូលរួមឥលូវនេះ

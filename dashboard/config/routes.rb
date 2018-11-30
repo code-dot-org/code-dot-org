@@ -14,7 +14,7 @@ Dashboard::Application.routes.draw do
   get '/terms-and-privacy', to: 'home#terms_and_privacy'
   get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
   get '/dashboardapi/teacher-announcements', to: "home#teacher_announcements"
-  get '/dashboardapi/hoc-courses-narrow', to: "home#hoc_courses_narrow"
+  get '/dashboardapi/hoc-courses-teacher-guides', to: "home#hoc_courses_teacher_guides"
   get '/dashboardapi/hoc-courses-challenge', to: "home#hoc_courses_challenge"
 
   get "/home", to: "home#home"
@@ -133,11 +133,13 @@ Dashboard::Application.routes.draw do
 
   devise_scope :user do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
+    post '/users/begin_sign_up', to: 'registrations#begin_sign_up'
     patch '/dashboardapi/users', to: 'registrations#update'
     patch '/users/upgrade', to: 'registrations#upgrade'
     patch '/users/set_age', to: 'registrations#set_age'
     patch '/users/email', to: 'registrations#set_email'
     patch '/users/user_type', to: 'registrations#set_user_type'
+    get '/users/cancel', to: 'registrations#cancel'
     get '/users/clever_takeover', to: 'sessions#clever_takeover'
     get '/users/clever_modal_dismissed', to: 'sessions#clever_modal_dismissed'
     get '/users/auth/:provider/connect', to: 'authentication_options#connect'
@@ -191,6 +193,7 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
         get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
         get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
+        get "/#{key}/:channel_id/embed_video", to: 'projects#embed_video', key: key.to_s, as: "#{key}_project_embed_video"
       end
       get '/angular', to: 'projects#angular'
     end
@@ -371,10 +374,12 @@ Dashboard::Application.routes.draw do
         end
         member do # See http://guides.rubyonrails.org/routing.html#adding-more-restful-actions
           post :start
+          post :unstart
           post :end
+          post :reopen
           get  :summary
         end
-        resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy]
+        resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy, :create]
 
         get :attendance, action: 'index', controller: 'workshop_attendance'
         get 'attendance/:session_id', action: 'show', controller: 'workshop_attendance'
@@ -415,10 +420,17 @@ Dashboard::Application.routes.draw do
       post :international_opt_ins, to: 'international_opt_ins#create'
       get :regional_partner_workshops, to: 'regional_partner_workshops#index'
       get 'regional_partner_workshops/find', to: 'regional_partner_workshops#find'
+      get 'regional_partners/find', to: 'regional_partners#find'
 
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
-        post :teacher, to: 'teacher_applications#create'
+
+        resources :teacher, controller: 'teacher_applications', only: :create do
+          member do
+            post :send_principal_approval
+            post :principal_approval_not_required
+          end
+        end
         post :principal_approval, to: 'principal_approval_applications#create'
       end
 
@@ -433,6 +445,9 @@ Dashboard::Application.routes.draw do
       end
     end
   end
+
+  get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
+  get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
 
   get 'my-professional-learning', to: 'pd/professional_learning_landing#index', as: 'professional_learning_landing'
 
@@ -466,7 +481,6 @@ Dashboard::Application.routes.draw do
       get 'facilitator', to: 'facilitator_application#new'
       get 'teacher', to: 'teacher_application#new'
       get 'principal_approval/:application_guid', to: 'principal_approval_application#new', as: 'principal_approval'
-      get 'teacher_1920_preview', to: 'teacher_application#new_1920_preview'
     end
 
     # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year

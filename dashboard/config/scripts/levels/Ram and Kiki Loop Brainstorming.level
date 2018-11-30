@@ -44,6 +44,7 @@
     "pause_animations_by_default": "false",
     "auto_run_setup": "DRAW_LOOP",
     "hide_custom_blocks": "false",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

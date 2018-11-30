@@ -106,19 +106,28 @@ gl:
         craft_callout_preplaced: Colocamos algúns bloques aquí para poderes comezar
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Colocamos algúns bloques aquí para poderes comezar
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Colocamos algúns bloques aquí para poderes comezar
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Este código vai comezar a construír a túa casa.
           Consegues terminala?
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Este código vai comezar a construír a túa casa.
           Consegues terminala?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Este código vai comezar a construír a túa casa.
+          Consegues terminala?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Preme en "Correr" para probares o teu programa
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Preme en "Correr" para probares o teu programa
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Preme en "Correr" para probares o teu programa
       Overworld Place Wall_callout:
         craft_inside_repeat: Repite accións colocando bloques aquí
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Repite accións colocando bloques aquí
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Repite accións colocando bloques aquí
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Este código vai verificar se hai lava, consegues
@@ -126,14 +135,25 @@ gl:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Este código vai verificar se hai lava, consegues
           agregarlle un comando para mover cara adiante?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Este código vai verificar se hai lava, consegues
+          agregarlle un comando para mover cara adiante?
       Underground Iron_callout:
         craft_what_is_iron: Escava este ferro!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Escava este ferro!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Escava este ferro!
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Use o bloque "cree un círculo"
           e mude o tamaño.
       frozen cross rotate_callout:
+        replace_questions_degree: Use o menu suspenso para substituír "???" por un
+          número
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Use o menu suspenso para substituír "???" por un
+          número
+      frozen cross rotate_test_callout:
         replace_questions_degree: Use o menu suspenso para substituír "???" por un
           número
       frozen cross_callout:
@@ -148,7 +168,19 @@ gl:
       frozen freeplay_callout:
         snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de
           neve!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de
+          neve!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de
+          neve!
       frozen line_callout:
+        move_elsa_forward: Arrastre un bloque "Avance" e encáixeo baixo o bloque "Cando
+          o xogo comeza" para que Elsa avance
+      frozen line_b_callout:
+        move_elsa_forward: Arrastre un bloque "Avance" e encáixeo baixo o bloque "Cando
+          o xogo comeza" para que Elsa avance
+      frozen line_test_callout:
         move_elsa_forward: Arrastre un bloque "Avance" e encáixeo baixo o bloque "Cando
           o xogo comeza" para que Elsa avance
       frozen perpendicular_callout:
@@ -156,13 +188,31 @@ gl:
           determina canto vai virar Elsa
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Use o bloque "cree unha parte da folerpa"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Use o bloque "cree unha parte da folerpa"
       frozen square iterative_callout:
+        frozen_create_square: Conecte máis bloques aquí para crear un cadrado
+      frozen square iterative_b_callout:
+        frozen_create_square: Conecte máis bloques aquí para crear un cadrado
+      frozen square iterative_test_callout:
         frozen_create_square: Conecte máis bloques aquí para crear un cadrado
       frozen square loop 3x_callout:
         replace_questions: Use o menu suspenso para substituír "???" por un número
+      frozen square loop 3x_b_callout:
+        replace_questions: Use o menu suspenso para substituír "???" por un número
+      frozen square loop 3x_test_callout:
+        replace_questions: Use o menu suspenso para substituír "???" por un número
       frozen square loop_callout:
         replace_questions: Use o menu suspenso para substituír "???" por un número
+      frozen square loop_b_callout:
+        replace_questions: Use o menu suspenso para substituír "???" por un número
+      frozen square loop_test_callout:
+        replace_questions: Use o menu suspenso para substituír "???" por un número
       frozen square snowflake_callout:
+        replace_questions: Use o menu suspenso para substituír "???" por un número
+      frozen square snowflake_b_callout:
+        replace_questions: Use o menu suspenso para substituír "???" por un número
+      frozen square snowflake_test_callout:
         replace_questions: Use o menu suspenso para substituír "???" por un número
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Clic en editar para agregar un par

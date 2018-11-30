@@ -224,6 +224,19 @@ es:
       CourseF_PlayLab_vars10_callout:
         Course_4_Play_Lab_Vars_9_1: "¡Ahora todos sus bloques organizan detrás de
           categorías! Haga clic en una etiqueta para ver las piezas dentro."
+      Dance_Party_01_callout:
+        dance_callout_01: "¡Añade este bloque a tu programa!"
+      Dance_Party_01_low_callout:
+        dance_callout_01: "¡Añade este bloque a tu programa!"
+      Dance_Party_02_callout:
+        dance_callout_02: "¡Añade este bloque a tu programa!"
+      Dance_Party_04_callout:
+        dance_callout_04: "¡Añade este bloque a tu programa!"
+      Dance_Party_06_callout:
+        dance_callout_06: Añade aquí tu nuevo bailarín
+      Dance_Party_11_callout:
+        dance_callout_11_a: "¡Bloque nuevo!"
+        dance_callout_11_b: "¡Bloque nuevo!"
       Eval Design Recipe .1_callout:
         edit_function: Haz clic aquí para editar tu función.
       Frozen Project Test Toolbox_callout:
@@ -235,6 +248,9 @@ es:
       Function intro Ryan_callout:
         Function_intro_Ryan_1: Esta pequeña instrucción hace que el ordenador ejecute
           el GRAN montón de código con el mismo nombre en el espacio de trabajo.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Esta pequeña instrucción hace que el ordenador ejecute
+          el GRAN montón de código con el mismo nombre en el espacio de trabajo.
       Geometric Pattern_callout:
         4-5_Artist_Patterns_Free_Play_1: Ahora todos sus bloques favoritos se organizan
           en categorías.  ¡Haga clic sobre estas palabras para ver-lo todo!
@@ -242,6 +258,9 @@ es:
         4-5_Artist_Patterns_Free_Play_1: Ahora todos sus bloques favoritos se organizan
           en categorías.  ¡Haga clic sobre estas palabras para ver-lo todo!
       Geometric Sun_2018_callout:
+        4-5_Artist_Patterns_Free_Play_1: Ahora todos sus bloques favoritos se organizan
+          en categorías.  ¡Haga clic sobre estas palabras para ver-lo todo!
+      Geometric Sun_2019_callout:
         4-5_Artist_Patterns_Free_Play_1: Ahora todos sus bloques favoritos se organizan
           en categorías.  ¡Haga clic sobre estas palabras para ver-lo todo!
       Infinity_move_collide_callout:
@@ -261,6 +280,9 @@ es:
       InspirationalArtwork_2018_callout:
         InspirationalArtwork_1: "¡Intenta usar el nuevo bloque `comentario` debajo
           de esta etiqueta para dejarte notas dentro de tu programa!"
+      InspirationalArtwork_2019_callout:
+        InspirationalArtwork_1: "¡Intenta usar el nuevo bloque `comentario` debajo
+          de esta etiqueta para dejarte notas dentro de tu programa!"
       MC HOC 2016 Level 2-2_callout:
         craft2_run_button_callout: Cuando estés listo, presiona "Ejecutar" para probar
           tu programa.
@@ -276,13 +298,22 @@ es:
         MC_HOC_2017_03_Cole_1: ¡Esto es un bucle de "repetición"! Haz clic sobre él
           en el espacio de trabajo y añade el código que quieras ejecutar de manera
           repetida.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: ¡Esto es un bucle de "repetición"! Haz clic sobre él
+          en el espacio de trabajo y añade el código que quieras ejecutar de manera
+          repetida.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: El Agent puede desplazarse sobre el agua, pero el jugador
+          no.
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: El Agent puede desplazarse sobre el agua, pero el jugador
           no.
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: "¡Haz clic en este espacio de trabajo y añade algo
           de código que quieras repetir!"
       MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: "¡No puedes eliminar estos bloques, pero puedes editarlos!"
+      MC_HOC_2017_06_Cole_2019_callout:
         MC_HOC_2017_06_Cole_1: "¡No puedes eliminar estos bloques, pero puedes editarlos!"
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: 'El Agent puede desplazarse sobre la lava, pero el jugador
@@ -291,6 +322,9 @@ es:
         MC_HOC_2017_08_RY_1: 'El Agent puede desplazarse sobre la lava, pero el jugador
           no. '
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'El Agent puede desplazarse sobre la lava, pero el jugador
+          no.   '
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'El Agent puede desplazarse sobre la lava, pero el jugador
           no.   '
       Mike Playlab Project_callout:
@@ -348,10 +382,15 @@ es:
         craft_callout_preplaced: Hemos colocado algunos bloques para que empieces.
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Hemos colocado algunos bloques para que empieces.
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Hemos colocado algunos bloques para que empieces.
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Este código empezará a construir tu casa. ¿Puedes
           acabarlo?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Este código empezará a construir tu casa. ¿Puedes
+          acabarlo?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Este código empezará a construir tu casa. ¿Puedes
           acabarlo?
       Overworld Move to Sheep_callout:
@@ -362,9 +401,15 @@ es:
         craft_run_button_callout: Dale a "Ejecutar" para probar el programa.
         craft_drag_block_callout: Arrastra un bloque "avanzar" y ajústalo debajo del
           otro bloque
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Dale a "Ejecutar" para probar el programa.
+        craft_drag_block_callout: Arrastra un bloque "avanzar" y ajústalo debajo del
+          otro bloque
       Overworld Place Wall_callout:
         craft_inside_repeat: Coloca bloques aquí para repetir acciones.
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Coloca bloques aquí para repetir acciones.
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Coloca bloques aquí para repetir acciones.
       PS clone CSD U3 Variables Predict Where XY_callout:
         grid: Clica aquí para mostrar la cuadrícula.
@@ -399,6 +444,9 @@ es:
         4-5_Artist_Patterns_Free_Play_2: "¡Intenta usar el nuevo bloque `comentario`
           debajo de esta etiqueta para dejarte notas dentro de tu programa!"
       Robot Doodle_2018_callout:
+        4-5_Artist_Patterns_Free_Play_2: "¡Intenta usar el nuevo bloque `comentario`
+          debajo de esta etiqueta para dejarte notas dentro de tu programa!"
+      Robot Doodle_2019_callout:
         4-5_Artist_Patterns_Free_Play_2: "¡Intenta usar el nuevo bloque `comentario`
           debajo de esta etiqueta para dejarte notas dentro de tu programa!"
       Robot Drawing_callout:
@@ -454,9 +502,14 @@ es:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Este código comprobará si hay lava. ¿Puedes añadir
           un comando para avanzar?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Este código comprobará si hay lava. ¿Puedes añadir
+          un comando para avanzar?
       Underground Iron_callout:
         craft_what_is_iron: "¡Extrae este hierro!"
       Underground Iron_2018_callout:
+        craft_what_is_iron: "¡Extrae este hierro!"
+      Underground Iron_2019_callout:
         craft_what_is_iron: "¡Extrae este hierro!"
       WebLab PS test - 1-12_callout:
         version_history_button: Ver el historial de versiones
@@ -621,6 +674,9 @@ es:
       courseB_playlab_events6_2018_callout:
         courseB_playlab_events6_a: Use la flecha verde desplegable para cambiar las
           direcciones.
+      courseC19_playLab_EOC3_callout:
+        courseE_playLab_scaffold3_1: Lleva al actor a esta bandera para pasar al siguiente
+          nivel.
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Este bloque te permite mover actores
           a diferentes partes del espacio del juego.
@@ -633,10 +689,16 @@ es:
       courseC_artist_loopsPrePre1a_2018_callout:
         courseC_artist_loopsPrePre1a_1: Comience usando este bloque para llevar al
           artista al centro de la pantalla.
+      courseC_artist_loopsPrePre1a_2019_callout:
+        courseC_artist_loopsPrePre1a_1: Comience usando este bloque para llevar al
+          artista al centro de la pantalla.
       courseC_collector_prog1_callout:
         courseC_collector_prog1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo usarlos más adelante en el escenario."
       courseC_collector_prog1_2018_callout:
+        courseC_collector_prog1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
+          No te preocupes, te mostraremos cómo usarlos más adelante en el escenario."
+      courseC_collector_prog1_2019_callout:
         courseC_collector_prog1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo usarlos más adelante en el escenario."
       courseC_harvester_loops1_callout:
@@ -651,9 +713,14 @@ es:
       courseC_maze_debugging5_2018_callout:
         courseC_maze_debugging5_1: "¡Estos bloques están bloqueados y no pueden ser
           eliminados!"
+      courseC_maze_debugging5_2019_callout:
+        courseC_maze_debugging5_1: "¡Estos bloques están bloqueados y no pueden ser
+          eliminados!"
       courseC_maze_programming3_callout:
         courseC_maze_programming3_3: Estos bloques son de piedra y no se pueden tirar.
       courseC_maze_programming3_2018_callout:
+        courseC_maze_programming3_3: Estos bloques son de piedra y no se pueden tirar.
+      courseC_maze_programming3_2019_callout:
         courseC_maze_programming3_3: Estos bloques son de piedra y no se pueden tirar.
       courseC_maze_programming7_callout:
         courseC_maze_programming7_2: Estos bloques están hechos de piedra y no pueden
@@ -661,10 +728,16 @@ es:
       courseC_maze_programming7_2018_callout:
         courseC_maze_programming7_2: Estos bloques están hechos de piedra y no pueden
           tirarse.
+      courseC_maze_programming7_2019_callout:
+        courseC_maze_programming7_2: Estos bloques están hechos de piedra y no pueden
+          tirarse.
       courseD_artist_nestedLoops1a_callout:
         courseD_artist_nestedLoops1a_1: No tienes que usar colores para acertar con
           este puzzles. Si lo desea, este bloque `color aleatorio` lo hace fácil!
       courseD_artist_nestedLoops1a_2018_callout:
+        courseD_artist_nestedLoops1a_1: No tienes que usar colores para acertar con
+          este puzzles. Si lo desea, este bloque `color aleatorio` lo hace fácil!
+      courseD_artist_nestedLoops1a_2019_callout:
         courseD_artist_nestedLoops1a_1: No tienes que usar colores para acertar con
           este puzzles. Si lo desea, este bloque `color aleatorio` lo hace fácil!
       courseD_artist_ramp11_callout:
@@ -679,8 +752,9 @@ es:
       courseD_bee_conditionals2_2018_callout:
         4_5_Bee_Conditionals_2_1: Recuerde, consulte si cada nube tiene una flor.
           No tienes que comprobar los paneles en todos.
-        4_5_Bee_Conditionals_2_2: "¿Necesitas ayuda? ¡Haga clic aquí para obtener
-          una VíDEO sugerencia!"
+      courseD_bee_conditionals2_2019_callout:
+        4_5_Bee_Conditionals_2_1: Recuerde, consulte si cada nube tiene una flor.
+          No tienes que comprobar los paneles en todos.
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Recuerde, consulte si cada nube tiene una flor.
           No tienes que comprobar los paneles en todos.
@@ -690,6 +764,9 @@ es:
         courseD_bee_conditionals_challenge2_1: Usa este ciclo para recolectar todo
           el néctar (o miel) de una flor (o panal).
       courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: Usa este ciclo para recolectar todo
+          el néctar (o miel) de una flor (o panal).
+      courseD_bee_conditionals_challenge2_2019_callout:
         courseD_bee_conditionals_challenge2_1: Usa este ciclo para recolectar todo
           el néctar (o miel) de una flor (o panal).
       courseD_bee_conditionals_challenge3_callout:
@@ -713,6 +790,8 @@ es:
       courseD_maze_ramp3_callout:
         stone_block_2: Los bloques grises están hechos de piedra y no pueden tirarse.
       courseD_maze_ramp3_2018_callout:
+        stone_block_2: Los bloques grises están hechos de piedra y no pueden tirarse.
+      courseD_maze_ramp3_2019_callout:
         stone_block_2: Los bloques grises están hechos de piedra y no pueden tirarse.
       courseD_maze_ramp6_callout:
         courseD_maze_ramp6_1: Cualquier código que ingrese aquí se repetirá tantas
@@ -747,12 +826,22 @@ es:
           agregando más código al final.
         courseE_artist_functions_challenge1_callout2: "¡Si no te gusta este diseño,
           cámbialo a lo que quieras!"
+      courseE_artist_functions_challenge1_2019_callout:
+        courseE_artist_functions_challenge1_callout1: Mantenga este programa funcionando
+          agregando más código al final.
+        courseE_artist_functions_challenge1_callout2: "¡Si no te gusta este diseño,
+          cámbialo a lo que quieras!"
       courseE_artist_functions_challenge2_callout:
         courseE_artist_functions_challenge2_callout1: Mantenga este programa funcionando
           agregando más código al final.
         courseE_artist_functions_challenge2_callout2: "¡Si no te gusta este diseño,
           cámbialo a lo que quieras!"
       courseE_artist_functions_challenge2_2018_callout:
+        courseE_artist_functions_challenge2_callout1: Mantenga este programa funcionando
+          agregando más código al final.
+        courseE_artist_functions_challenge2_callout2: "¡Si no te gusta este diseño,
+          cámbialo a lo que quieras!"
+      courseE_artist_functions_challenge2_2019_callout:
         courseE_artist_functions_challenge2_callout1: Mantenga este programa funcionando
           agregando más código al final.
         courseE_artist_functions_challenge2_callout2: "¡Si no te gusta este diseño,
@@ -826,6 +915,8 @@ es:
       courseF_bee_for4_callout:
         courseF_bee_for4_1: "¡Aquí encontraras el bucle `para`!"
       courseF_bee_for4_2018_callout:
+        courseF_bee_for4_1: "¡Aquí encontraras el bucle `para`!"
+      courseF_bee_for4_2019_callout:
         courseF_bee_for4_1: "¡Aquí encontraras el bucle `para`!"
       courseF_bee_functions2_callout:
         courseF_bee_functions2_1: Este bloque llama a una función. ¡Haz clic en este
@@ -908,6 +999,12 @@ es:
       frozen cross rotate_callout:
         replace_questions_degree: Usa el menú desplegable para reemplazar "???" con
           un número
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Usa el menú desplegable para reemplazar "???" con
+          un número
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Usa el menú desplegable para reemplazar "???" con
+          un número
       frozen cross_callout:
         repeat_blocks_1: "(1) Usa este bloque y ponlo alrededor de los bloques grises
           en el espacio de trabajo."
@@ -920,7 +1017,21 @@ es:
       frozen freeplay_callout:
         snowflake_dropdown: "¡Usa este menú desplegable para crear diferentes copos
           de nieve!"
+      frozen freeplay_b_callout:
+        snowflake_dropdown: "¡Usa este menú desplegable para crear diferentes copos
+          de nieve!"
+      frozen freeplay_test_callout:
+        snowflake_dropdown: "¡Usa este menú desplegable para crear diferentes copos
+          de nieve!"
       frozen line_callout:
+        run: Dale a "Ejecutar" para probar el programa.
+        move_elsa_forward: Arrastra un bloque "Mover hacia adelante" y pégalo por
+          debajo del bloque "Cuando se ejecuta" para mover a Elsa hacia adelante
+      frozen line_b_callout:
+        run: Dale a "Ejecutar" para probar el programa.
+        move_elsa_forward: Arrastra un bloque "Mover hacia adelante" y pégalo por
+          debajo del bloque "Cuando se ejecuta" para mover a Elsa hacia adelante
+      frozen line_test_callout:
         run: Dale a "Ejecutar" para probar el programa.
         move_elsa_forward: Arrastra un bloque "Mover hacia adelante" y pégalo por
           debajo del bloque "Cuando se ejecuta" para mover a Elsa hacia adelante
@@ -929,13 +1040,31 @@ es:
           desplegable determina cuánto gira Elsa
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Utiliza el bloque de "crear una rama de copo de nieve"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Utiliza el bloque de "crear una rama de copo de nieve"
       frozen square iterative_callout:
+        frozen_create_square: Añade más bloques aquí para crear un cuadrado
+      frozen square iterative_b_callout:
+        frozen_create_square: Añade más bloques aquí para crear un cuadrado
+      frozen square iterative_test_callout:
         frozen_create_square: Añade más bloques aquí para crear un cuadrado
       frozen square loop 3x_callout:
         replace_questions: Usa el menú desplegable para reemplazar "???" con un número
+      frozen square loop 3x_b_callout:
+        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
+      frozen square loop 3x_test_callout:
+        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
       frozen square loop_callout:
         replace_questions: Usa el menú desplegable para reemplazar "???" con un número
+      frozen square loop_b_callout:
+        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
+      frozen square loop_test_callout:
+        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
       frozen square snowflake_callout:
+        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
+      frozen square snowflake_b_callout:
+        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
+      frozen square snowflake_test_callout:
         replace_questions: Usa el menú desplegable para reemplazar "???" con un número
       grade1_maze_sequence6_callout:
         grade1_maze_sequence6_1: "¡Estos bloques grises están hechos de piedra! Eso

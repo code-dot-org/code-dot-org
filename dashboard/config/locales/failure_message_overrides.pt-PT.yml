@@ -90,6 +90,8 @@ pt:
       MC HOC 2016 Village Test_failure_message_override: Você necessita fazer a perseguição
         do Golem de Ferro e atacar os zumbis para ganhar.
       WhileAdventure_failure_message_override: Parabéns! Você reuniu X moedas!
+      courseC19_playLab_EOC3_failure_message_override: É necessário adicionar dois
+        ou mais atores ao seu jogo e programá-los para se mexerem.
       courseE_playLab_scaffold3_failure_message_override: É necessário adicionar dois
         ou mais atores ao seu jogo e programá-los para se mexerem.
       courseE_playLab_scaffold3_2018_failure_message_override: É necessário adicionar

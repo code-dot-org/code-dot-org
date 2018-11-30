@@ -45,6 +45,7 @@ et:
   next_resource: Järgmised materjalid
   cancel: Tühista
   okay: Olgu
+  or: või
   heading_x_of_y: "%{heading} (leht %{x} of %{y})"
   add_teacher_form:
     code:
@@ -91,6 +92,7 @@ et:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsofti konto
+    microsoft_v2_auth: Microsofti konto
     clever: Tark konto
     forgot_password: Unustasid oma salasõna?
     need_confirmation: Ei saanud kinnituse juhiseid?
@@ -244,9 +246,7 @@ et:
         playlab: Loo Play Lab rakendus
         artist: Joonista midagi
         applab: Loo App Lab rakendus
-      home: Kodu
       my_dashboard: Minu töölaud
-      courses: Kursused
       course_catalog: Kursuste kataloog
       project_gallery: Projektid
       help_support: Abi & Klienditugi
@@ -267,10 +267,17 @@ et:
       signin: Logi sisse
       signup: Loo konto
       already_registered: Oled juba liitunud?
-      pair_programming: Paarisprogrammeerimine
       team: Võistkond
       driver: Sisse logitud
       navigator: Parnter
+      create: Loo
+      applab: App Lab
+      artist: Kunstnik
+      gamelab: Game Lab
+      playlab: Play Lab
+      minecraft: Minecraft
+      flappy: Flappy
+      dance: Tantsuõhtu
     popup:
       progress_for_user: "%{name} edusammud"
       progress: Sinu progress
@@ -543,6 +550,8 @@ et:
         rakendus toimiks. Seejärel jaga oma rakendust mõne sekundiga.
       audience: Vanus 13+
       cta: Õpi kuidas
+    dance:
+      title: Tantsuõhtu
     hoc:
       title: Klassikaline labürint
       body: Proovige arvutiteaduse alused. Miljonid on proovinud.
@@ -583,7 +592,9 @@ et:
       body: Uuri Minecrafti maailma koodi kaudu.
     minecraft2016:
       title: Minecraft
-      body: Programmeri loomi ja teisi Minecrafti olendeid sinu enda Minecrafti versioonis.
+      body: Programmeeri loomi ja teisi Minecrafti tegelasi omaenda Minecrafti versioonis.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
       body: Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond läbi Minecrafti
@@ -938,6 +949,7 @@ et:
     tunnis sa peaksid olema.
   return_course_overview: Mine teema ülevaatesse
   view_all_units: Vaata kõik
+  view_teacher_guide: Vaata juhendit õpetajatele
   pd:
     form_labels:
       email: E-post

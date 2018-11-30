@@ -6,7 +6,8 @@
     "args": [
       {
         "name": "N",
-        "type": "Number"
+        "type": "ClampedNumber(0.1,)",
+        "field": true
       },
       {
         "name": "UNIT",

@@ -4,7 +4,6 @@ import CourseCard from './CourseCard';
 import SetUpCourses from './SetUpCourses';
 import SeeMoreCourses from './SeeMoreCourses';
 import TopCourse from './TopCourse';
-import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import styleConstants from '../../styleConstants';
 import i18n from "@cdo/locale";
 import shapes from './shapes';
@@ -31,7 +30,7 @@ export default class RecentCourses extends Component {
     const { courses, topCourse, isTeacher } = this.props;
     const topFourCourses = courses.slice(0,4);
     const moreCourses = courses.slice(4);
-    const hasCourse = courses.length > 0 || topCourse;
+    const hasCourse = courses.length > 0 || topCourse !== null;
 
     return (
       <div id="recent-courses">
@@ -64,23 +63,10 @@ export default class RecentCourses extends Component {
               courses={moreCourses}
             />
           )}
-          {hasCourse && (
-            <div>
-              <Notification
-                type={NotificationType.course}
-                notice={i18n.findCourse()}
-                details={i18n.findCourseDescription()}
-                buttonText={i18n.findCourse()}
-                buttonLink="/courses"
-                dismissible={false}
-              />
-            </div>
-          )}
-          {!hasCourse && (
-            <SetUpCourses
-              isTeacher={isTeacher}
-            />
-          )}
+          <SetUpCourses
+            isTeacher={isTeacher}
+            hasCourse={hasCourse}
+          />
         </ContentContainer>
       </div>
     );

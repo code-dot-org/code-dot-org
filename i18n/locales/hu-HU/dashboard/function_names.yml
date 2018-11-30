@@ -2,6 +2,7 @@ hu:
   data:
     function_names:
       x: x
+      details: részletek
       draw a circle: kör rajzolása
       draw a hexagon: rajzolj egy hatszöget
       draw a flower: rajzolj egy virágot

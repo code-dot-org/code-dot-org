@@ -163,7 +163,7 @@
   dashboard_action_delete_no: 'नहीं'
   dashboard_action_confirm: "मिटाएँ?"
   dashboard_sections_close: "बंद करें"
-  dashboard_students_name: "नाम"
+  dashboard_students_name: 'नाम'
   dashboard_students_male: "पुरूष"
   dashboard_students_female: "महिला"
   dashboard_students_secret_picture_title: "गुप्त चित्र"
@@ -238,3 +238,10 @@
   sphero_beyond_gradelevel: "उम्र 8 +"
   flappy_shortcode: "फ़ड़फ़ड़ाय"
   header_courses: "पाठ्यक्रम"
+  applab_tile_start_tutorial: "शुरू करें"
+  hoc_overview_start_tutorial: "शुरू करें"
+  hoc2018_creativity_create: "बनाए"
+  hoc2018_mc_start: "शुरू करें"
+  hoc2018_mc_homepage_try_it: "कर के देखे"
+  hoc2018_dance_party_button: "शुरू करें"
+  hoc2018_dance_amazon_about_future_engineer_button: "अधिक जानें"
