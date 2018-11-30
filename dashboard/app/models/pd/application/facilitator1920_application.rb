@@ -40,6 +40,10 @@ module Pd::Application
 
     validates_uniqueness_of :user_id
 
+    has_one :pd_fit_weekend1920_registration,
+      class_name: 'Pd::FitWeekend1920Registration',
+      foreign_key: 'pd_application_id'
+
     #override
     def year
       YEAR_19_20
@@ -54,6 +58,10 @@ module Pd::Application
     # @override
     def check_idempotency
       Pd::Application::Facilitator1920Application.find_by(user: user)
+    end
+
+    def fit_weekend_registration
+      Pd::FitWeekend1920Registration.find_by_pd_application_id(id)
     end
 
     # memoize in a hash, per course
