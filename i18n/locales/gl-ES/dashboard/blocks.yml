@@ -1,95 +1,142 @@
+---
 gl:
   data:
     blocks:
-      Dancelab_changeMove:
+      Dancelab_atTimestamp:
         options:
-          MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
-            '"next"': Seguinte
-            '"prev"': Anterior
+          UNIT:
+            '"seconds"': segundos
+      Dancelab_changeMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"x"': posición x
-            '"y"': posición y
-      Dancelab_doMoveOnce:
+            '"height"': altura
+      Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
-            '"next"': Seguinte
-            '"prev"': Anterior
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': segundos
       Dancelab_getProp:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"x"': posición x
-            '"y"': posición y
-      Dancelab_mappingProp:
+            '"height"': altura
+      Dancelab_getTime:
         options:
-          PROPERTY:
-            '"scale"': tamaño
-            '"x"': posición x
-            '"y"': posición y
-      Dancelab_mirrorSprite:
+          UNIT:
+            '"seconds"': segundos
+      Dancelab_ifTime:
         options:
-          DIRECTION:
-            '"right"': dereita
-            '"left"': esquerda
+          UNIT:
+            '"seconds"': segundos
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": esquerda
+            "{x: 300, y: 200}": dereita
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatorio
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': aleatorio
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": esquerda
+            "{x: 300, y: 200}": dereita
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatorio
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"random"': aleatorio
       Dancelab_randomColor:
         text: cor aleatoria
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"x"': posición x
-            '"y"': posición y
-      Dancelab_spritesWhere:
+            '"height"': altura
+      Dancelab_setPropEach:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"x"': posición x
-            '"y"': posición y
+            '"height"': altura
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"x"': posición x
-            '"y"': posición y
+            '"height"': altura
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"x"': posición x
-            '"y"': posición y
+            '"height"': altura
       Dancelab_whenKey:
         options:
           KEY:
             '"up"': arriba
-            '"down"': abaixo
             '"left"': esquerda
-            '"right"': dereita
-            '"space"': espazo
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': arriba
             '"down"': abaixo
-            '"left"': esquerda
             '"right"': dereita
             '"space"': espazo
       gamelab_changePropBy:
@@ -101,8 +148,8 @@ gl:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'verdadeiro'
-            'false': 'falso'
+            'true': verdadeiro
+            'false': falso
       gamelab_getProp:
         options:
           PROPERTY:
@@ -177,5 +224,102 @@ gl:
             '"left"': esquerda
             '"right"': dereita
             '"space"': espazo
-      Vanilla_randomColor:
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": esquerda
+            "{x: 300, y: 200}": dereita
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": esquerda
+            "{x: 300, y: 200}": dereita
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Mikelab_randomColor:
         text: cor aleatoria
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': dereita
+            '"left"': esquerda
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': frecha cara arriba
+            '"down"': frecha cara abaixo
+            '"left"': frecha esquerda
+            '"right"': frecha dereita
+            '"w"': O
+            '"s"': S
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': frecha cara arriba
+            '"down"': frecha cara abaixo
+            '"left"': frecha esquerda
+            '"right"': frecha dereita
+            '"w"': O
+            '"s"': S
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': frecha cara arriba
+            '"down"': frecha cara abaixo
+            '"left"': frecha esquerda
+            '"right"': frecha dereita
+      RyanLab_moveForward:
+        text: avance
+      RyanLab_turnLeft:
+        text: vire á esquerda
+      RyanLab_turnRight:
+        text: vire á dereita
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": diante
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": area
+            "'planksOak'": táboas de carballo
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": area
+      craft_moveForward:
+        text: avance
+      craft_placeTorch:
+        text: coloque a antorcha

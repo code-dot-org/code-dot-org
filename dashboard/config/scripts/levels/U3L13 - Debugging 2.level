@@ -54,7 +54,8 @@
       "functionParams_none": null,
       "functionParams_n": null,
       "callMyFunction": null,
-      "callMyFunction_n": null
+      "callMyFunction_n": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -74,7 +75,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "markdown_instructions": "# Debugging Event-Driven Programs: Ordering Event Handlers\r\n\r\n**Ordering Event Handlers: ** Event handlers must come **after the object they reference in the code**. If your event handler comes before your object (in this case a button) your computer would be looking for an event on an object that does not yet exist. You will get an error message and your code will not work as you intend.<img src=\"https://images.code.org/b5d00d8027dae463eebb7f1c079cb2e2-image-1444156708725.gif\" style=\"float: right; width: 150px\">\r\n\r\n**Target Application:** Just like the last exercise, you'll again try to make an app that has two buttons, one for moving forward and one for turning left.  \r\n\r\nOnce again, we've introduced a new error.\r\n\r\n# Do This:\r\n**Run the Existing program** to see the error that gets generated.\r\n\r\n**Debug ** this program so that it works as intended.\r\n\r\n**Run the program ** and try both buttons to make sure they have the intended functionality.",
+    "markdown_instructions": "# Debugging Event-Driven Programs: Ordering Event Handlers\r\n\r\n**Ordering Event Handlers:** Event handlers must come **after the object they reference in the code**. If your event handler comes before your object (in this case a button) your computer would be looking for an event on an object that does not yet exist. You will get an error message and your code will not work as you intend.<img src=\"https://images.code.org/b5d00d8027dae463eebb7f1c079cb2e2-image-1444156708725.gif\" style=\"float: right; width: 150px\">\r\n\r\n**Target Application:** Just like the last exercise, you'll again try to make an app that has two buttons, one for moving forward and one for turning left.  \r\n\r\nOnce again, we've introduced a new error.\r\n\r\n# Do This:\r\n**Run the Existing program** to see the error that gets generated.\r\n\r\n**Debug** this program so that it works as intended.\r\n\r\n**Run the program** and try both buttons to make sure they have the intended functionality.",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "show_turtle_before_run": "true",
@@ -89,7 +90,19 @@
     "debugger_disabled": "true",
     "encrypted_examples": "rgzF0xYoOHbbnE2nShKCeI+h6KHn5hma/ixKXh1lflfknkxg8OvWT3Uyb84t\ngk0Q\n",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-09-18 17:35:29 +0000\",\"changed\":[\"notes\",\"published\",\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":225,\"changed_by_email\":\"poorva@code.org\"}]",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

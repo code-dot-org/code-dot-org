@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "需要创建一名舞蹈演员。",
+  "danceFeedbackNoDancers": "没有舞蹈演员。",
+  "danceFeedbackNoBackground": "需要添加背景效果。",
+  "danceFeedbackTooManyDancers": "小心！如果将`创建新的`模块放到`每两个节拍`中，会创建出很多的舞蹈演员。",
+  "danceFeedbackUseSetSize": "使用`设置伴舞2的尺寸`模块来让她变小一些。",
+  "danceFeedbackUseSetTint": "使用`设置色调`模块来改变舞蹈演员的色调。",
+  "danceFeedbackUseStartMapping": "试试添加 <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> 模块到程序中。",
+  "danceFeedbackStartNewMove": "舞者在第四个节拍后没有新的动作。",
+  "danceFeedbackNeedDifferentDance": "需要采用不同的舞蹈。",
+  "danceFeedbackNeedEveryTwoMeasures": "确保使用了`每两个节拍`模块",
+  "danceFeedbackNeedMakeANewDancer": "使用`创建一个新的`模块来创建第二个舞者。",
+  "measure": "小节："
+}

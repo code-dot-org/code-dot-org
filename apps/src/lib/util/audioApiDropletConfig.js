@@ -19,6 +19,7 @@ const dropletConfig = {
       0: () => getAssetDropdown('audio'),
       1: ["true", "false"]
     },
+    nativeCallsBackInterpreter: true,
     assetTooltip: { 0: chooseAsset.bind(null, 'audio') }
   },
   stopSound: {

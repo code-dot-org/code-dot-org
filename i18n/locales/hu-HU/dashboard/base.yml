@@ -3,15 +3,22 @@ hu:
     messages:
       not_saved: 'Kérjük, javítsd a következő hibákat:'
       too_young: 'Erre a tartalomra életkori korlátozás van érvényben, és nem elérhető fiatalabb diákok számára.'
+      teacher_must_accept_terms: 'Ez a tartalom életkor korlátozással rendelkezik, és fiatalabb diákok számára nem elérhető. Kérje tanárát, hogy fogadja el a frissített Általános Szerződési Feltételeket, hogy hozzáférjen ehhez a tartalomhoz. A tanár ezt megteheti, ha bejelentkezik a Kód Stúdióba, ha rákattint a Kódex stúdió kezdőlapjának tetején található "Felülvizsgálat frissítések" gombra.'
+      pair_programmer: 'Jelenleg páros programozást végzel olyan diákkal, aki nem fér hozzá ehhez a tartalomhoz. A tartalom eléréséhez állítsd le a programozást, és próbáld újra.'
   activerecord:
     errors:
       messages:
         blank: "szükséges"
+        blank_plural: "szükségesek"
+        invalid: "érvénytelen"
+        invalid_plural: "érvénytelenek"
     attributes:
       user:
         name: 'Megjelenítendő név'
         name_example: 'Megjelenítendő név <br/> (pl. hideg, Coder vagy Jane S.)'
         email: 'Email'
+        parent_email: 'Szülő/gondviselő e-mail'
+        personal_email: "Személyes elektronikus levél cím <a href=\"%{url}\">(kattintson ide, ha nem rendelkezik e-mail címmel)</a>"
         username: 'felhasználónév'
         password: 'Jelszó'
         password_confirmation: 'Jelszó megerősítése'
@@ -20,6 +27,9 @@ hu:
         age: 'Kor'
         gender: 'Nem'
         edit_header: 'Felhasználói Adatok Szerkesztése'
+        finish_sign_up_header: 'A profil létrehozásának befejezése'
+        finish_sign_up_subheader: 'Töltsd ki az alábbi adatokat <strong>%{email}</strong> Code.org fiókod létrehozásához.'
+        finish_sign_up_subheader_provider: 'Töltsd ki az alábbi adatokat a Code.org felhasználó fiókod befejezéséhez <strong>%{provider}</strong><strong>%{email}</strong>.'
         error:
           future: nem lehet a jövőben
   hello: "Helló világ"
@@ -33,12 +43,14 @@ hu:
   next_resource: Következő erőforrás
   cancel: "Mégsem"
   okay: "Oké"
+  or: "vagy"
   heading_x_of_y: "%{heading} (oldal %{x} %{y})"
   add_teacher_form:
     code:
       label: 'Tanár hozzáadása:'
       placeholder: "Szakasz kód (ABCDEF)"
       instructions: "Kélek, írd be a tanárod által megadott kódot. Ez egy 6 betűs kód - például \"ABCDEF\"."
+      instructions_short: "Add meg a 6 karakteres szakasz kódod"
     submit: 'Tanár hozzáadása'
   add_hint_form:
     placeholder: 'Kérjük, írd ide a javaslatod'
@@ -51,6 +63,7 @@ hu:
   courses: 'tanfolyamok'
   courses_page:
     title_student: "Tanulj a Kód Stúdióban"
+    title_teacher: "Taníts Számítástechnikát"
   unplugged_activity: 'Offline tevékenység'
   of: "/"
   more: "TÖBB"
@@ -65,6 +78,7 @@ hu:
   prize: 'díj'
   more_info: 'További információk'
   auth:
+    continue_with: 'Bejelentkezés ezzel: %{provider}'
     sign_in_with: 'Bejelentkezés %{provider} -el'
     signed_in: 'Bejelentkezve!'
     signed_out: 'Kijelentkezett a <a href="%{url}"> Code.org</a> - ról.'
@@ -75,10 +89,21 @@ hu:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft fiók'
+    microsoft_v2_auth: 'Microsoft fiók'
+    clever: 'Okos fiók'
+    powerschool: 'Powerschool fiók'
     forgot_password: 'Elfelejtette jelszavát?'
+    migration_success: 'Sikeresen frissítettél az új felhasználói élményeinkhez.'
+    demigration_success: 'Az új felhasználói élmények nem elérhetők a fiókodban.'
     need_confirmation: "Nem kapta meg a megerősítő instrukciókat?"
     need_unlock: "Nem kaptál a zárolás megszüntetéséhez útmutatót?"
+    not_linked: "Sajnáljuk, de Code.org-fiókja nem kapcsolódik a %{provider}. Úgy kell bejelentkezned, hogy beírod a jelszavad."
+    use_clever: "Sajnáljuk, de Code.org-fiókja nem kapcsolódik a %{provider}. Kérjük jelentkezzen be a okos portálon keresztül."
+    unable_to_connect_provider: "Nem lehet összekötni Code.org-fiókját, a %{provider}. Kérjük, próbálja meg újra."
+    already_in_use: "A %{provider} fiókodat már korábban összekapcsoltuk egy másik Code.org fiókkal."
+    already_linked: "A %{provider} fiókodat már korábban összekapcsoltuk egy másik Code.org fiókkal."
   signup_form:
+    email_signup: 'Regisztrálj az e-mail címeddel'
     student_count: '%{count} tanuló iratkozott már fel.'
     teacher_count: '%{count} tanár iratkozott már fel.'
     overview: 'Regisztrálj fiókot, hogy rögzítsd az előremeneteled vagy hogy egy osztály irányíts. <a href="/">Böngészhetsz a különböző szintek és puzzlek között</a> fiók nélkül is, de az állapotod mentéséhez regisztrálnod kell.'
@@ -100,12 +125,14 @@ hu:
     valid_password: "Érvényes jelszó!"
     invalid_password: "A jelszónak legalább 6 karakter hosszúnak kell lennie"
     mismatch_password: "A megadott két jelszó nem egyezik"
+    student_consent: "Megerősítem, hogy a szülőm vagy törvényes gondviselőm engedélyt adott, hogy használjam Code.org szolgáltatásait."
     additional_information: "Még szükségünk van néhány adatra  a regisztráció folytatásához."
     user_type_label: "Fióktípus"
     user_type_teacher: "Tanár"
     user_type_student: "Diák"
     field_is_required: "szükséges"
     accept_terms: "El kell fogadnia, hogy létre hozzon egy fiókot"
+    email_preference_question: "Küldhetünk neked email üzeneteket az új tanfolyamjainkról, helyi lehetőségekről, és egyéb informatikai hírekről? (kb. havonta egyszer)"
     email_preference_yes: "Igen"
     email_preference_no: "Nem"
   school_info:
@@ -210,8 +237,6 @@ hu:
         playlab: 'Készíts egy Játéklabor applikációt'
         artist: 'Rajzolj valamit'
         applab: 'Készíts egy App Lab applikációt'
-      home: "Főmenü"
-      courses: "tanfolyamok"
       project_gallery: "Projektek"
       sections: "Csoportok"
       help_support: "Súgó és támogatás"
@@ -254,10 +279,16 @@ hu:
       signin: 'Bejelentkezés'
       signup: 'Regisztrálj'
       already_registered: 'Már regisztráltál?'
-      pair_programming: 'Páros programozás'
       team: 'Csapat'
       driver: 'Vezető'
       navigator: 'Navigátor'
+      create: 'Létrehoz'
+      applab: 'App Lab'
+      artist: 'Művész'
+      playlab: 'Játéklabor'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
+      dance: 'Táncos buli'
     popup:
       progress_for_user: "%{name} fejlődése"
       progress: 'Fejlődése'
@@ -447,6 +478,8 @@ hu:
       body_short: "Tervezz egy alkalmazást, kódolj elemekből vagy JavaScript-ben, majd oszd meg néhány másodperc alatt."
       audience: 'Kor 13+'
       cta: 'Ismerd meg hogyan'
+    dance:
+      title: 'Táncos buli'
     hoc:
       title: 'Hagyományos Útvesztö'
       body: 'Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.'
@@ -482,8 +515,11 @@ hu:
     minecraft2016:
       title: "Minecraft"
       body: "Programozz állatokat és egyéb Minecraft lényeket a saját Minecraft verziódban."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével."
     unplugged:
       title: "Offline tanórák"
       audience: "4 éven fellülieknek"
@@ -683,6 +719,7 @@ hu:
     starwars_blocks_name: 'Star Wars: Egy galaxis építése kóddal (Blocks)'
     starwars_javascript_name: 'Star Wars: Egy galaxis építése kóddal (JavaScript)'
     mac: 'Mac OS X'
+  view_teacher_guide: 'Oktatói útmutató megtekintése'
   pd:
     form_labels:
       email: 'Email'

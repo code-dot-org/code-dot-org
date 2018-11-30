@@ -2,8 +2,12 @@
   .row
     .col-md-8
       %br/
-      %h2 Hour of Code 2017
-      %a.twitter-grid{href: "https://twitter.com/codeorg/timelines/925449654308704256?limit=4?ref_src=twsrc%5Etfw?limit=4"} The Hour of Code 2017
+      %h2
+        Hour of Code
+        = campaign_date('year').to_i - 1
+      %a.twitter-grid{href: "https://twitter.com/codeorg/timelines/925449654308704256?limit=4?ref_src=twsrc%5Etfw?limit=4"}
+        The Hour of Code
+        = campaign_date('year').to_i - 1
       %script{async: "", charset: "utf-8", src: "//platform.twitter.com/widgets.js"}
     .col-md-3.highlights-column
       %h2 Highlights from previous years

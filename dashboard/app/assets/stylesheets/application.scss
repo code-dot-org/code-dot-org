@@ -278,6 +278,12 @@ img.video_thumbnail {
     }
   }
 
+  @media screen and (max-width: 1023px) {
+    .create_menu {
+      display: none !important;
+    }
+  }
+
   .headerlinks {
     margin-top: 12px;
     margin-left: 74px;
@@ -317,6 +323,7 @@ img.video_thumbnail {
     font-size: 14px;
     line-height: 20px;
     box-sizing: border-box;
+    float: left;
     cursor: pointer;
     a:hover {
       text-decoration: none;
@@ -330,12 +337,12 @@ img.video_thumbnail {
     }
   }
 
-  .user_menu {
+  .user_menu, .create_menu {
     margin-top: 6px;
     height: 38px;
     user-select: none;
 
-    .user_name {
+    .create_button, .display_name, .pairing_name {
       max-width: 120px;
       display: inline-block;
       float: left;
@@ -344,8 +351,17 @@ img.video_thumbnail {
       white-space: nowrap;
     }
 
+    .pairing_icon {
+      display: inline-block;
+      float: left;
+      padding-right: 5px;
+      padding-top: 3px;
+    }
+
     .user_menu_arrow_down,
-    .user_menu_arrow_up {
+    .user_menu_arrow_up,
+    .create_menu_arrow_down,
+    .create_menu_arrow_up, {
       font-size: 30px;
     }
 
@@ -353,18 +369,65 @@ img.video_thumbnail {
       position: absolute;
       top: 55px;
       right: 55px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .create_options {
+      position: absolute;
+      top: 55px;
+      right: 55px;
+      background-color: $white;
+      width: 260px;
+      z-index: 10000;
+      a {
+        color: $teal;
+        font-family: $gotham-bold;
+        height: 70px;
+        width: 258px;
+        font-size: 14px;
+        float: left;
+        border-left: 1px solid $charcoal;
+        border-right: 1px solid $charcoal;
+        border-top: 1px solid $charcoal;
+      }
+      a:hover {
+        color: $teal;
+        font-family: $gotham-bold;
+        background-color: $white;
+        cursor: pointer;
+      }
+      img {
+        height: 70px;
+        width: 70px;
+        float: left;
+      }
+      .project_link {
+        padding-left: 10px;
+        line-height: 70px;
+        float: left;
+      }
+      #view_all_projects {
+        width: 248px;
+        height: 70px;
+        border-bottom: 1px solid $charcoal;
+      }
     }
 
     .user_menu_arrow_down,
-    .user_menu_arrow_up {
+    .user_menu_arrow_up,
+    .create_menu_arrow_down,
+    .create_menu_arrow_up, {
       font-size: 25px;
     }
 
-    .user_menu_arrow_up {
+    .user_menu_arrow_up,
+    .create_menu_arrow_up {
       margin-top: -3px;
     }
 
-    .user_menu_arrow_down {
+    .user_menu_arrow_down,
+    .create_menu_arrow_down {
       margin-top: -2px;
     }
   }
@@ -980,6 +1043,8 @@ input.header_input {
 .header_user {
   text-align: right;
   margin-left: 5px;
+  margin-top: 6px;
+  height: 38px;
 }
 
 .header_popup {
@@ -1494,53 +1559,6 @@ a.download-video {
   margin: 10px 0;
 }
 
-#signin {
-  .tryfirst {
-    margin-bottom: 10px;
-    a {
-      font-size: 18px;
-      font-family: $gotham-regular;
-      font-weight: normal;
-    }
-  }
-  .itemblock {
-    display: inline-block;
-    width: 600px;
-  }
-  .singleitemblock {
-    padding-left: 144px;
-    width: 364px;
-  }
-  .labelblock {
-    display: inline-block;
-    width: 140px;
-  }
-  .rememberme {
-    font-size: 13px;
-    margin-bottom: 22px;
-
-    #user_remember_me {
-      margin-top: -2px;
-      margin-right: 3px;
-    }
-  }
-  button {
-    width: 220px;
-  }
-  #signin-button {
-    margin-bottom: 7px;
-  }
-  #signup-button {
-    margin-top: 4px;
-  }
-  .forgotpassword {
-    margin-bottom: 10px;
-  }
-  .sidebar {
-    padding-left: 20px;
-  }
-}
-
 #signinsection {
   ul.students, ul.pictures {
     margin-left: 0;
@@ -1581,7 +1599,184 @@ a.download-video {
   }
 }
 
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#signin {
+  $field-width: 310px;
+  $button-width: 324px;
+
+  min-width: 450px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    input[type=text], input[type=password] {
+      width: $field-width;
+      height: 40px;
+      padding: 0 6px;
+    }
+  }
+
+  .field-aligned {
+    width: $button-width;
+    align-self: flex-end;
+  }
+
+  #forgot-password {
+    font-family: $gotham-extra-bold-italics;
+  }
+
+  button {
+    align-self: flex-end;
+    background-color: $orange;
+    border: 1px solid $orange;
+    color: $white;
+    font-family: $gotham-extra-bold;
+    margin: 5px 0;
+    width: $button-width;
+  }
+
+  .blue-button {
+    background-color: $blue;
+    border: 1px solid $blue;
+  }
+}
+
 #signup, #school-info-modal {
+  // NEW SIGN-UP FORM
+  .signup {
+    margin: 20px 0;
+  }
+
+  .finish-signup {
+    width: 800px;
+  }
+
+  .signup, .finish-signup {
+    $school-info-background: #f7f7f7;
+    $school-info-border-color: #e5e5e5;
+
+    #school-info-inputs {
+      width: 100%;
+      background-color: $school-info-background;
+      border: 1px solid $school-info-border-color;
+
+      h5 {
+        font-weight: bold;
+      }
+
+      hr {
+        border: 1px solid $school-info-border-color;
+      }
+    }
+
+    .checkbox {
+      display: flex;
+      width: 600px;
+      padding: 10px;
+
+      label {
+        padding-left: 10px;
+      }
+    }
+
+    .radio {
+      display: flex;
+
+      input[type=radio] {
+        margin-right: 5px;
+      }
+    }
+
+    .field-row {
+      display: flex;
+      align-items: center;
+    }
+
+    .field {
+      width: 600px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .field-sm {
+      width: 400px;
+    }
+
+    .field_with_errors label {
+      color: $black;
+    }
+
+    .field_with_errors > input,
+    .field_with_errors > select {
+      background-color: $white;
+    }
+
+    .error {
+      color: $red;
+      font-style: italic;
+    }
+
+    .padded {
+      padding-left: 10px;
+      max-width: 150px;
+    }
+
+    select, input[type=text], input[type=password] {
+      height: 36px;
+      width: 350px;
+    }
+
+    input[type=text], input[type=password] {
+      width: 338px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .input-sm input {
+      width: 250px;
+    }
+
+    #school-type {
+      width: 370px !important;
+    }
+
+    .submit-section {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .submit {
+      background-color: $orange;
+      border: 1px solid $orange;
+      color: $white;
+      font-weight: bolder;
+      padding: 0 20px;
+      margin: 5px 0;
+    }
+
+    #forgot-password {
+      align-self: center;
+      font-style: italic;
+    }
+  }
+
+  // OLD SIGN-UP FORM
   .signupform {
     padding: 20px;
     margin-bottom: 0;
@@ -1713,12 +1908,98 @@ a.download-video {
   #user_type-block {
     margin-bottom: 20px;
   }
-  .devise_links {
-    padding-left: 20px;
-    margin-top: 20px;
+}
+
+.vertical-or {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: bolder;
+  color: $charcoal;
+
+  hr {
+    width: 1px;
+    height: 100%;
+    background-color: $light_gray;
   }
 }
 
+.horizontal-or {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: bolder;
+  color: $charcoal;
+
+  hr {
+    width: 40%;
+    border-color: $light_gray;
+  }
+}
+
+.signup-header {
+  width: 400px;
+  text-align: center;
+}
+
+// NEW STYLES FOR devise/shared/_new_links
+.devise-links {
+  flex-grow: 2;
+
+  form {
+    margin: 0;
+  }
+
+  .section-sign-in {
+    display: flex;
+    align-items: center;
+
+    input[type=text] {
+      flex-grow: 2;
+      height: 40px;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin: 0;
+    }
+
+    button {
+      background-color: $orange;
+      border: 1px solid $orange;
+      color: $white;
+      font-family: $gotham-extra-bold;
+      padding: 10px 20px;
+      margin-right: 0;
+    }
+  }
+
+  .oauth-sign-in {
+    color: $white;
+    font-family: $gotham-extra-bold;
+    width: 100%;
+    margin: 5px 0;
+
+    &.with-google_oauth2 {
+      background-color: $google_red;
+      border: 1px solid $google_red;
+    }
+
+    &.with-facebook {
+      background-color: $facebook_blue;
+      border: 1px solid $facebook_blue;
+    }
+
+    &.with-windowslive {
+      background-color: $microsoft_blue;
+      border: 1px solid $microsoft_blue;
+    }
+  }
+}
+
+// OLD STYLES FOR devise/shared/_old_links
 .devise_link_section {
   display: flex;
   flex-direction: row;

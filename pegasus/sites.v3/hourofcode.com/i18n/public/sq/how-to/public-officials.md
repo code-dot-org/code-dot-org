@@ -1,43 +1,65 @@
 ---
-title: <%= hoc_s(:title_how_to_officials) %>
+title: <%= hoc_s(:title_how_to_officials).inspect %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Si ta sjellësh Orën e Kodimit në tërë komunitetin tuaj.
+# How to involve your entire community
 
-[col-33]
+### Show your state, district, or city your commitment to computer science
 
-![](/images/fit-275/highlight-obama.png)&nbsp;&nbsp;&nbsp;![](/images/fit-246/dan.jpg)
+---
 
-[/col-33]
+</br>
 
-<p style="clear:both">&nbsp;</p>
+## Are you hosting an elected official at your Hour of Code?
+
+[View our toolkit](/files/elected-official.pdf) with all the information you need to make their visit and your event great!
+
+![](/images/fit-800/hoc_govs.png)
+
+From left to right: *Governors from Arkansas, North Carolina, and Arizona participating in an Hour of Code.*
 
 ## Bëj çdo shkollë te marrë pjesë, çdo student të mësojë!
 
-1. **Lexoni faqen tonë** se pse edukimi në shkenca kompjuterike është i rëndësishëm, dhe se si ju mund të ndihmoni në këtë çështje duke mbështetur Orën e Kodimit. [Get the one-pager here.](/files/hoc-one-pager.pdf)
+### 1. Read our one-pager
 
-2. **Rekruto shkollat vendore dhe rajonet.** Përdor [këtë email](<%= resolve_url('/promote/resources#sample-emails') %>) ose [këtë njoftim](<%= resolve_url('/promote/stats') %>) si një pikë filluese, dhe hidhi një sy këtij [informacioni](<%= resolve_url('/how-to') %>) për shkollat dhe rajonet.
+See [why computer science education is important](/files/hoc-one-pager.pdf), and how you can help the effort by supporting the Hour of Code.
 
-3. **Organizo eventin Ora e Kodimit.**Shiko[udhëzuesin e eventit tonë](<%= resolve_url('/how-to/events') %>) për një numër shfaqjesh të thjeshta dhe burime të tjera planifikimi të eventit. Organizimi i një eventi është një mënyrë e mirë për të reklamuar Orën e Kodimit dhe rritur numrin e pjesmarrësve.
+### 2. Recruit local schools and districts
 
-4. **Ndiq një event gjatë Javës Edukative të Shkencave Kompjuterike (<%= campaign_date('short') %>).** [Gjej klasa dhe shkolla](<%= resolve_url('/events') %>) pjesmarrëse në rrethin, qytetin ose në vendin tuaj.
+Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts.
 
-5. **Nxirr një dekret ose rezolutë.**Shiko këtë [shembull rezolute](<%= resolve_url('resources/proclamation') %>) mbështetëse për Javën Edukative të Shkencave Kompjuterike dhe qëllimet e saj që mund të përdoren nga ligjvënësit lokal dhe shtetëror.
+### 3. Host an Hour of Code event
 
-6. **Harto një editorial**. Konsideroni publikimin e një shkrimi të një opinioni, në gazetën tuaj lokale. Shiko këtë [shembull editoriali](<%= resolve_url('/promote/op-ed') %>) mbështetës të Javës së Edukimit të Shkencave Kompjuterike dhe qëllimet e saj.
+See our [event how-to guide](<%= resolve_url('/how-to/events') %>) for a sample run of show, [media outreach kit](<%= resolve_url('/promote/press-kit') %>), and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
 
-7. **Përhap fjalën.**[Shpërndaj videon e Orës së Kodimit në Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus)dhe[fol për mbështetjen tënde në Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Shpërndaj foto të eventit ose video të tuat dhe të të tjerëve duke zhvilluar Orën e Kodimit. Përdor hashtag-un**#OraEKodimit** në mënyrë që Code.org(@code.org) mund ta shikoj atë dhe të promovojë mbështetje. Ose, përdor këto tweets të thjeshta:
-    
-    - Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode [https://hourofcode.com](<%= resolve_url('/') %>)
-    - Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode [https://hourofcode.com](<%= resolve_url('/') %>)   
-          
-        
+### 4. Attend an event during Computer Science Education Week (<%= campaign_date('short') %>)
 
-8. **Lesho një deklaratë për shtyp.**[Përdor këtë shembull](<%= resolve_url('/promote/official-press-release') %>) si një udhëzues.
+[Find classrooms and schools](<%= resolve_url('/events') %>) participating in your district, city, or state.
 
-9. **Connect locally.** Visit [code.org/promote](<%= codeorg_url('/promote') %>) to learn more about computer science education in your state. Nënshkruaj peticionin këtu dhe do të marrësh përditësimet nga Code.org për përpjekjet e tyre lokale, shtetërore dhe federale.
+### 5. Issue a proclamation or resolution
+
+See this [sample resolution](<%= resolve_url('resources/proclamation') %>) supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+
+### 6. Draft an op-ed
+
+Consider publishing an opinion piece in your local paper. See this [sample op-ed](<%= resolve_url('/promote/op-ed') %>) supporting Computer Science Education Week and its goals.
+
+### 7. Spread the word
+
+[Share the Hour of Code video on Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) and [talk about your support on Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Share pictures of events or a video of you and other adults doing the Hour of Code. Use the hashtag **#HourOfCode** so Code.org (@code.org) can see it and promote the support. Or, use these sample tweets:
+
+- *Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode [https://hourofcode.com](<%= resolve_url('/') %>)*
+- *Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode [https://hourofcode.com](<%= resolve_url('/') %>)*
+
+### 8. Issue a press release
+
+[Use this sample](<%= resolve_url('/promote/official-press-release') %>) as a guide.
+
+### 9. Connect locally
+
+[Learn more about computer science education in your state](<%= codeorg_url('/advocacy') %>). Sign the petition there and you’ll get updates on Code.org's local, state, and federal advocacy efforts.
 
 <%= view :signup_button %>

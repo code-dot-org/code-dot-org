@@ -1,8 +1,10 @@
 require 'test_helper'
+require 'testing/includes_metrics'
+require 'testing/storage_apps_test_utils'
 require 'timecop'
-require_relative '../../../shared/test/spy_newrelic_agent'
 
 class UserTest < ActiveSupport::TestCase
+  include StorageAppsTestUtils
   self.use_transactional_test_case = true
 
   setup_all do
@@ -84,15 +86,30 @@ class UserTest < ActiveSupport::TestCase
     experiment.destroy
   end
 
-  test 'normalize_email' do
+  test 'normalize_email for non-migrated user' do
     teacher = create :teacher, email: 'CAPS@EXAMPLE.COM'
     assert_equal 'caps@example.com', teacher.email
   end
 
-  test 'hash_email' do
+  test 'normalize_email for migrated user' do
+    teacher = create :teacher, :with_migrated_email_authentication_option, email: 'OLD@EXAMPLE.COM'
+    teacher.update!(primary_contact_info: create(:authentication_option, user: teacher, email: 'NEW@EXAMPLE.COM'))
+    assert_equal 'new@example.com', teacher.primary_contact_info.email
+    assert_equal 'new@example.com', teacher.read_attribute(:email)
+  end
+
+  test 'hash_email for non-migrated user' do
     @teacher.update!(email: 'hash_email@example.com')
     assert_equal User.hash_email('hash_email@example.com'),
       @teacher.hashed_email
+  end
+
+  test 'hash_email for migrated user' do
+    teacher = create :teacher, :with_migrated_email_authentication_option, email: 'OLD@EXAMPLE.COM'
+    teacher.update!(primary_contact_info: create(:authentication_option, user: teacher, email: 'NEW@EXAMPLE.COM'))
+    hashed_email = User.hash_email('new@example.com')
+    assert_equal hashed_email, teacher.primary_contact_info.hashed_email
+    assert_equal hashed_email, teacher.read_attribute(:hashed_email)
   end
 
   test "log in with password with pepper" do
@@ -659,6 +676,22 @@ class UserTest < ActiveSupport::TestCase
     # wat you can't do that hax0rs
     assert_nil User.find_for_authentication(email: {'$acunetix' => 1})
     # this used to raise a mysql error, now we sanitize it into a nonsense string
+  end
+
+  test "find_for_authentication with very long query" do
+    # Our username and email columns are 255 characters wide.  We should
+    # fail-fast if the query is longer than that.
+    long_query = 'x' * 256
+
+    User.expects(:from).never
+    User.expects(:where).never
+    User.expects(:find_by_hashed_email).never
+
+    result = User.find_for_authentication login: long_query
+    assert_nil result
+
+    result = User.find_for_authentication hashed_email: long_query
+    assert_nil result
   end
 
   test "find_for_authentication finds migrated multi-auth email user first" do
@@ -1458,6 +1491,18 @@ class UserTest < ActiveSupport::TestCase
     assert student.sponsored?
   end
 
+  test 'should_disable_user_type? true if user_type present and oauth_provided_user_type' do
+    user = build :user, user_type: User::TYPE_TEACHER
+    user.expects(:oauth_provided_user_type).returns(true)
+    assert user.should_disable_user_type?
+  end
+
+  test 'should_disable_user_type? false if user_type present and not oauth_provided_user_type' do
+    user = build :user, user_type: User::TYPE_TEACHER
+    user.expects(:oauth_provided_user_type).returns(false)
+    refute user.should_disable_user_type?
+  end
+
   test 'can_edit_password? is true for user with or without a password' do
     student1 = create :student
     refute_empty student1.encrypted_password
@@ -1736,6 +1781,38 @@ class UserTest < ActiveSupport::TestCase
     )
 
     assert_equal name, student.name
+  end
+
+  test 'update_email_for updates unmigrated user email' do
+    user = create :user
+    user.update_email_for(email: 'new@email.com')
+    user.reload
+    assert_equal User.hash_email('new@email.com'), user.hashed_email
+  end
+
+  test 'update_email_for does not update migrated user AuthenticationOption if provider and uid are not present' do
+    user = create :user, :multi_auth_migrated
+    user.update_email_for(provider: nil, uid: nil, email: 'new@email.com')
+    user.reload
+    refute_equal User.hash_email('new@email.com'), user.hashed_email
+  end
+
+  test 'update_email_for does not update migrated user AuthenticationOption if no matching AuthenticationOption' do
+    user = create :user, :multi_auth_migrated
+    google_auth_option = create :google_authentication_option, user: user, authentication_id: '123456'
+    user.update_email_for(provider: AuthenticationOption::GOOGLE, uid: 'not-my-uid', email: 'new@email.com')
+    google_auth_option.reload
+    refute_equal User.hash_email('new@email.com'), google_auth_option.hashed_email
+  end
+
+  test 'update_email_for updates migrated user AuthenticationOption if matching AuthenticationOption' do
+    uid = '123456'
+    user = create :user, :multi_auth_migrated
+    google_auth_option = create :google_authentication_option, user: user, authentication_id: uid
+    user.reload
+    user.update_email_for(provider: AuthenticationOption::GOOGLE, uid: uid, email: 'new@email.com')
+    google_auth_option.reload
+    assert_equal User.hash_email('new@email.com'), google_auth_option.hashed_email
   end
 
   test 'update_primary_contact_info is false if email and hashed_email are nil' do
@@ -2835,33 +2912,23 @@ class UserTest < ActiveSupport::TestCase
     assert student.reload.deleted?
   end
 
-  test 'soft-deleting a user records a NewRelic metric' do
-    original_newrelic_logging = CDO.newrelic_logging
-    CDO.newrelic_logging = true
-
+  test 'soft-deleting a user records a metric' do
     student = create :student
 
-    NewRelic::Agent.expects(:record_metric).with("Custom/User/SoftDelete", 1)
+    Cdo::Metrics.expects(:push).with('User', includes_metrics(SoftDelete: 1))
     result = student.destroy
 
     assert_equal student, result
-  ensure
-    CDO.newrelic_logging = original_newrelic_logging
   end
 
-  test 'soft-deleting a group of users records NewRelic metrics' do
-    original_newrelic_logging = CDO.newrelic_logging
-    CDO.newrelic_logging = true
-
+  test 'soft-deleting a group of users records metrics' do
     student_a = create :student
     student_b = create :student
 
-    NewRelic::Agent.expects(:record_metric).with("Custom/User/SoftDelete", 1).twice
+    Cdo::Metrics.expects(:push).with('User', includes_metrics(SoftDelete: 1)).twice
     result = User.destroy [student_a.id, student_b.id]
 
     assert_equal [student_a, student_b], result
-  ensure
-    CDO.newrelic_logging = original_newrelic_logging
   end
 
   test 'undestroy restores recent dependents only' do
@@ -2878,6 +2945,36 @@ class UserTest < ActiveSupport::TestCase
     refute teacher.reload.deleted?
     refute new_section.reload.deleted?
     assert old_section.reload.deleted?
+  end
+
+  test 'undestroy restores recently soft-deleted projects' do
+    Timecop.freeze do
+      student = create :student
+      with_channel_for student do |channel_id_a|
+        with_channel_for student do |channel_id_b|
+          # Student deleted channel_id_a a day before they were deleted
+          # so we don't expect it to be restored when we undelete them.
+          storage_apps.where(id: channel_id_a).update state: 'deleted', updated_at: Time.now
+          assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
+          assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
+
+          Timecop.travel 1.day
+
+          # Soft-deleting the student also soft-deletes their projects
+          student.destroy
+          assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
+          assert_equal 'deleted', storage_apps.where(id: channel_id_b).first[:state]
+
+          Timecop.travel 1.day
+
+          # Restoring the student only restores projects that were deleted along
+          # with the student
+          student.undestroy
+          assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
+          assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
+        end
+      end
+    end
   end
 
   test 'undestroy raises for a purged user' do
@@ -3133,7 +3230,7 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'omniauth login stores auth token' do
+  test 'from_omniauth: creates new non-migrated user if user with matching credentials does not exist' do
     auth = OmniAuth::AuthHash.new(
       provider: 'google_oauth2',
       uid: '123456',
@@ -3142,14 +3239,90 @@ class UserTest < ActiveSupport::TestCase
         expires_at: Time.now.to_i + 3600,
         refresh_token: 'fake refresh token',
       },
-      info: {},
+      info: {
+        name: {first: 'Some', last: 'User'},
+        user_type: 'student'
+      },
     )
-
     params = {}
 
-    user = User.from_omniauth(auth, params)
-    assert_equal('fake oauth token', user.oauth_token)
-    assert_equal('fake refresh token', user.oauth_refresh_token)
+    assert_creates(User) do
+      user = User.from_omniauth(auth, params)
+      assert_equal 'fake oauth token', user.oauth_token
+      assert_equal 'fake refresh token', user.oauth_refresh_token
+      assert_equal 'google_oauth2', user.provider
+      assert_equal 'Some User', user.name
+      assert_equal User::TYPE_STUDENT, user.user_type
+    end
+  end
+
+  test 'from_omniauth: updates non-migrated user oauth tokens if user with matching credentials exists' do
+    uid = '123456'
+    provider = 'google_oauth2'
+    create :user, uid: uid, provider: provider
+    auth = OmniAuth::AuthHash.new(
+      provider: provider,
+      uid: uid,
+      credentials: {
+        token: 'fake oauth token',
+        expires_at: Time.now.to_i + 3600,
+        refresh_token: 'fake refresh token',
+      },
+      info: {},
+    )
+    params = {}
+
+    assert_does_not_create(User) do
+      user = User.from_omniauth(auth, params)
+      assert_equal 'fake oauth token', user.oauth_token
+      assert_equal 'fake refresh token', user.oauth_refresh_token
+      assert_equal 'google_oauth2', user.provider
+    end
+  end
+
+  test 'from_omniauth: updates migrated user oauth tokens if authentication option with matching credentials exists' do
+    uid = '654321'
+    user = create :user, :multi_auth_migrated
+    google_auth_option = create :authentication_option, credential_type: AuthenticationOption::GOOGLE, authentication_id: uid, user: user
+    auth = OmniAuth::AuthHash.new(
+      provider: AuthenticationOption::GOOGLE,
+      uid: uid,
+      credentials: {
+        token: 'fake oauth token',
+        expires_at: Time.now.to_i + 3600,
+        refresh_token: 'fake refresh token',
+      },
+      info: {},
+    )
+    params = {}
+
+    assert_does_not_create(User) do
+      User.from_omniauth(auth, params)
+    end
+    google_auth_option.reload
+    assert_equal 'fake oauth token', google_auth_option.data_hash[:oauth_token]
+    assert_equal 'fake refresh token', google_auth_option.data_hash[:oauth_refresh_token]
+  end
+
+  test 'password_required? is false if user is not creating their own account' do
+    user = build :user
+    user.expects(:managing_own_credentials?).returns(false)
+    refute user.password_required?
+  end
+
+  test 'password_required? is true for new users with no encrypted password' do
+    user = build :user, encrypted_password: nil
+    user.expects(:managing_own_credentials?).returns(true)
+    assert user.encrypted_password.nil?
+    assert user.password_required?
+  end
+
+  test 'password_required? is true for user changing their password' do
+    user = create :user
+    user.password = "mypassword"
+    user.password_confirmation = "mypassword"
+    user.expects(:managing_own_credentials?).returns(true)
+    assert user.password_required?
   end
 
   test 'summarize' do
@@ -3300,7 +3473,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     def put_student_in_section(student, teacher, script, course=nil)
-      section = create :section, user_id: teacher.id, script_id: script.id, course_id: course.try(:id)
+      section = create :section, user_id: teacher.id, script_id: script.try(:id), course_id: course.try(:id)
       Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
       section
     end
@@ -3358,6 +3531,38 @@ class UserTest < ActiveSupport::TestCase
 
       # when attached to course, we should hide only if hidden in every section
       assert_equal [@script.id], student.get_hidden_script_ids(@course)
+
+      # ignore any archived sections
+      section2.hidden = true
+      section2.save!
+      student.reload
+      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
+      section1.hidden = true
+      section1.save!
+      student.reload
+      assert_equal [], student.get_hidden_script_ids(@course)
+    end
+
+    test "user in two sections, both attached to course but no script" do
+      student = create :student
+
+      section1 = put_student_in_section(student, @teacher, nil, @course)
+      section2 = put_student_in_section(student, @teacher, nil, @course)
+
+      hide_scripts_in_sections(section1, section2)
+
+      # when attached to course, we should hide only if hidden in every section
+      assert_equal [@script.id], student.get_hidden_script_ids(@course)
+
+      # ignore any archived sections
+      section2.hidden = true
+      section2.save!
+      student.reload
+      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
+      section1.hidden = true
+      section1.save!
+      student.reload
+      assert_equal [], student.get_hidden_script_ids(@course)
     end
 
     test "user in two sections, neither attached to script" do
@@ -3691,7 +3896,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'find_by_email locates a multi-auth teacher by non-primary email' do
     teacher = create :teacher, :with_migrated_email_authentication_option
-    second_option = create :email_authentication_option, user: teacher
+    second_option = create :authentication_option, user: teacher
     assert_equal teacher, User.find_by_email(second_option.email)
   end
 
@@ -3849,5 +4054,50 @@ class UserTest < ActiveSupport::TestCase
     section.students << student
 
     assert_equal [student.summarize], section.teacher.dependent_students
+  end
+
+  test 'last section id' do
+    teacher = create :teacher
+    section1 = create :section, teacher: teacher
+    assert_equal section1.id, teacher.last_section_id
+
+    create :follower, section: section1
+    assert_nil section1.students.first.last_section_id
+
+    # selects the most recently created section
+    section2 = create :section, teacher: teacher
+    assert_equal section2.id, teacher.last_section_id
+
+    # ignores hidden sections
+    section2.hidden = true
+    section2.save!
+    assert_equal section1.id, teacher.last_section_id
+
+    # ignores deleted sections
+    section3 = create :section, teacher: teacher
+    assert_equal section3.id, teacher.last_section_id
+    section3.delete
+    assert_equal section1.id, teacher.last_section_id
+  end
+
+  test 'find_channel_owner finds channel owner' do
+    student = create :student
+    with_channel_for student do |channel_id, storage_id|
+      encrypted_channel_id = storage_encrypt_channel_id storage_id, channel_id
+      result = User.find_channel_owner encrypted_channel_id
+      assert_equal student, result
+    end
+  end
+
+  test 'find_channel_owner returns nil for channel with no owner' do
+    with_anonymous_channel do |channel_id, storage_id|
+      encrypted_channel_id = storage_encrypt_channel_id storage_id, channel_id
+      result = User.find_channel_owner encrypted_channel_id
+      assert_nil result
+    end
+  end
+
+  test 'find_channel_owner returns nil for a malformed channel id' do
+    assert_nil User.find_channel_owner 'not-a-channel-id'
   end
 end

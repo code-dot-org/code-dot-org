@@ -38,7 +38,7 @@
     "block_moving_into_walls": "false",
     "timeout_failure_tick": "850",
     "first_sprite_index": "0",
-    "markdown_instructions": "Use your imagination. What can you do to make this game more fun?\r\n<br/>\r\n\r\n<h5>\r\n<details>\r\n<summary><b>Need some ideas?</b></summary>\r\n\t<br/>\r\n\t<h5>\r\n\t\t<ul>\r\n        \t<li><strong>Conversation</strong> - Add blocks so that the characters say \"Hello!\" when they run into each other. </li>\r\n            <li><strong>Where's the Dragon?</strong> - Have the dragon dissapear when the up arrow key is pressed.</li>\r\n            <li><strong>Super Dragon</strong> - Make the dragon move at a faster speed and then try to catch him with the knight. </li>\r\n        </ul>\r\n\t</h5>\r\n</details>\r\n</h5>",
+    "markdown_instructions": "Use your imagination. What can you do to make this game more fun?\r\n<br/>\r\n\r\n<h5>\r\n<details>\n\n<summary>\n\n<b>Need some ideas?</b>\n\n</summary>\n\n\t<br/>\r\n\t<h5>\r\n\t\t<ul>\r\n        \t<li><strong>Conversation</strong> - Add blocks so that the characters say \"Hello!\" when they run into each other. </li>\r\n            <li><strong>Where's the Dragon?</strong> - Have the dragon dissapear when the up arrow key is pressed.</li>\r\n            <li><strong>Super Dragon</strong> - Make the dragon move at a faster speed and then try to catch him with the knight. </li>\r\n        </ul>\r\n\t</h5>\r\n\n\n</details>\r\n</h5>",
     "contained_level_names": null
   },
   "published": true,

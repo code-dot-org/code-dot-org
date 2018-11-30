@@ -335,6 +335,8 @@ el-GR:
   studiobar_title_nolink: Εξερευνήστε το Code Studio
   studiobar_elementary_title: Βασικά μαθήματα
   studiobar_elementary_body: Τα τρία νέα μαθήματά μας για K &#8209; 5
+  studiobar_dance_title: Πάρτι Χορού
+  studiobar_dance_body: Δημιουργήστε και μοιραστείτε το δικό σας Πάρτι Χορού
   studiobar_hoc_title: Η Ώρα του Κώδικα
   studiobar_hoc_body: Μάθετε κώδικα με τα Θυμωμένα Πουλιά
   studiobar_flappy_title: Flappy κώδικας
@@ -359,8 +361,8 @@ el-GR:
     ώρα του κώδικα&rdquo; Malala, νικητής του Νόμπελ ειρήνης"
   homepage_hero_text_susan: "&ldquo;Αν μπορείτε να αλλάξετε την τεχνολογία, μπορείτε
     να αλλάξετε τον κόσμο. &rdquo;Susan, Διευθύνων Σύμβουλος του YouTube"
-  homepage_hero_text_fistbump: " Μην παίζετε απλά με το τηλέφωνό σας, προγραμματίστε
-    το. &rdquo; Πρόεδρος Μπαράκ Ομπάμα"
+  homepage_hero_text_fistbump: Μην παίζετε απλά με το τηλέφωνό σας, προγραμματίστε
+    το. &rdquo; Πρόεδρος Μπαράκ Ομπάμα
   homepage_hero_text_sheryl: "&ldquo;Τα παιδιά μας &mdash; συμπεριλαμβανομένων και
     των κοριτσιών μας &mdash; χρειάζονται την ευκαιρία να μάθουν την Πληροφορική.&rdquo;
     Sheryl, COO του Facebook"
@@ -532,6 +534,8 @@ el-GR:
   minecraft_tutorials: Μαθήματα Minecraft από την Ώρα του Κώδικα
   minecraft_specs: Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης και tablets |
     Ηλικίες 2+
+  minecraft_agent_description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με
+    μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
   minecraft_agent_button: Έναρξη
   minecraft_designer_description: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft
     στην δικιά σου έκδοση του Minecraft.
@@ -1913,6 +1917,88 @@ el-GR:
   header_help_support: 'Βοήθεια και υποστήριξη '
   csp_name: Βασικές Αρχές της Επιστήμης των Υπολογιστών ' 16-'17
   user_header_label: Γεια σου %{username}
+  user_header_team: Ομάδα
   user_header_settings: Ο λογαριασμός μου
   user_header_logout: Αποσύνδεση
   user_header_signin: Σύνδεση
+  user_header_gamelab: Game Lab
+  user_header_playlab: Εργαστήριο Παιχνιδιού
+  user_header_dance: Πάρτι Χορού
+  user_header_minecraft: Minecraft
+  user_header_flappy: Πουλάκι
+  applab_tile_start_tutorial: Έναρξη
+  applab_tile_teacher_guide: Προβολή Οδηγού Εκπαιδευτικού
+  aquatic_name: 'Minecraft: Υδάτινο Ταξίδι'
+  hoc_overview_dance_title: Πάρτι Χορού
+  hoc_overview_partner_activities_title: Περισσότερες δραστηριότητες από συνεργάτες.
+  hoc_overview_partner_activities_body: Η ιστοσελίδα Ώρα του Κώδικα έχει πάνω από
+    100 δραστηριότητες της επιστήμης των υπολογιστών για όλες τις ηλικίες και τα επίπεδα
+    εμπειρίας, και αναπτύχθηκε από το Code.org και συνεργάτες του.
+  hoc_overview_partner_activities_link: Προβολή Δραστηριοτήτων
+  hoc_overview_start_tutorial: Έναρξη
+  hoc_overview_view_teacher_guide: Προβολή Οδηγού Εκπαιδευτικού
+  hoc2018_creativity_create: Δημιουργία
+  hoc2018_creativity_what_will_you_create: Τι θα δημιουργήσετε;
+  hoc2018_mc_page_title: Μαθήματα Minecraft από την Ώρα του Κώδικα
+  hoc2018_mc_details: Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης και tablets
+    | Ηλικίες 2+
+  hoc2018_mc_aquatic_description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα,
+    με μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
+  hoc2018_mc_hero_description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με
+    μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
+  hoc2018_mc_designer_title: Σχεδιαστής Minecraft
+  hoc2018_mc_designer_description: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft
+    στην δικιά σου έκδοση του Minecraft.
+  hoc2018_mc_adventurer_title: Ζήστε μια περιπέτεια στο Minecraft
+  hoc2018_mc_adventurer_description: Χρησιμοποιήστε κώδικα για να οδηγήσετε τον Alex
+    ή τον Steve σε μια περιπέτεια.
+  hoc2018_mc_start: Έναρξη
+  hoc2018_mc_no_internet: Δεν έχετε Internet;
+  hoc2018_mc_download_adventurer: Κατεβάστε την offline έκδοση της Περιπέτειας στο
+    Minecraft.
+  hoc2018_mc_educators_box2_button: Λήψη
+  hoc2018_mc_watch_videos: Πριν ξεκινήσετε, δείτε ένα από αυτά τα βίντεο
+  hoc2018_mc_videos_more: Περισσότερα <a href='%{inspiring_videos_playlist}'> εμπνευσμένα
+    βίντεο</a> από ανθρώπους που αποτελούν πρότυπα και από διασημότητες
+  hoc2018_mc_careers_more: Περισσότερα <a href='%{careers_url}' target='_blank'> εμπνευσμένα
+    βίντεο</a> από επαγγελματίες σε τομείς της τεχνολογίας
+  hoc2018_mc_video_1min: 1 λεπτό
+  hoc2018_mc_video_2min: 2 λεπτά
+  hoc2018_mc_video_5min: 5 λεπτά
+  hoc2018_mc_video_title_sports: Προσπαθήστε. Οποιοσδήποτε μπορεί να μάθει.
+  hoc2018_mc_video_title_inspire_girl: Εμπνεύστε ένα κορίτσι
+  hoc2018_mc_video_title_cs_intro: Εισαγωγή Πληροφορικής
+  hoc2018_mc_video_title_schools_dont_teach: Τι δεν διδάσκουν στα περισσότερα σχολεία
+  hoc2018_mc_video_title_obama: Ο Πρόεδρος Ομπάμα για την Πληροφορική
+  hoc2018_mc_video_title_hoc_is_here: Η Ώρα του Κώδικα είναι εδώ - Οποιοσδήποτε Μπορεί
+    να Μάθει
+  hoc2018_mc_video_title_anybody_can_learn: Οποιοσδήποτε Μπορεί να Μάθει
+  hoc2018_mc_homepage_hoc_coming: Η Ώρα του Κώδικα πλησιάζει...
+  hoc2018_mc_homepage_what_create: Τι θα δημιουργήσετε;
+  hoc2018_mc_homepage_join_us: Ελάτε μαζί μας
+  hoc2018_mc_homepage_try_it: Δοκιμάστε το
+  hoc2018_mc_back_journey: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με μια
+    ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
+  hoc2018_mc_teacher_guide: Προβολή Οδηγού Εκπαιδευτικού
+  hoc2018_dance_party_main_heading: Πάρτι Χορού
+  hoc2018_dance_create_your_own_dance_title: Δημιουργήστε και μοιραστείτε το δικό
+    σας Πάρτι Χορού
+  hoc2018_dance_party_box_title: Πάρτι Χορού
+  hoc2018_dance_party_box_description: Δημιουργήστε ένα δικό σας Πάρτι Χορού για να
+    το μοιραστείτε με τους φίλους σας!
+  hoc2018_dance_party_button: Έναρξη
+  hoc2018_dance_keep_on_dancing_box_title: Συνεχίστε να Χορεύετε
+  hoc2018_dance_keep_on_dancing_description: Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς
+    ιδέες για πρότζεκτ.
+  hoc2018_dance_keep_on_dancing_button: Έναρξη δεύτερου μέρους
+  hoc2018_dance_teacher_resources_title: Πηγές για εκπαιδευτικούς
+  hoc2018_dance_teacher_resources_tile1_description: Σχέδια μαθήματος, πιστοποιητικά
+    και φίλτρα μουσικής.
+  hoc2018_dance_teacher_resources_tile1_button: Σχέδιο μαθήματος
+  hoc2018_dance_teacher_resources_tile2_title: Πάρτι Χορού χωρίς καλώδια
+  hoc2018_dance_teacher_resources_tile2_description: 'Δεν απαιτούνται υπολογιστές!  Μάθετε
+    έννοιες προγραμματισμού για να χορογραφήσετε μαζί ένα πάρτι χορού. '
+  hoc2018_dance_teacher_resources_tile2_button: Αποσυνδεδεμένη Δραστηριότητα
+  hoc2018_dance_amazon_about_future_engineer_button: Μάθετε περισσότερα
+  hoc2018_dance_measure: Μέτρα
+  hoc2018_dance_measure_colon: 'Μέτρα:'

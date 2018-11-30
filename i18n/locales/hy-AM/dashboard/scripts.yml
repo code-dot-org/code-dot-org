@@ -870,6 +870,8 @@ hy:
               name: Binary Bracelets
             Binary Images:
               name: Binary Images
+            Play Lab:
+              name: Play Lab
         csd2-2017:
           stages:
             Lists:
@@ -1406,3 +1408,73 @@ hy:
               name: Տեղափոխել այն, տեղափոխել այն
             Your Digital Footprint:
               name: Your Digital Footprint
+        frozen-2018:
+          stages:
+            Artist:
+              name: Արտիստ
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Արտիստ
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Արտիստ
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Building a Foundation
+            Conditionals with Cards:
+              name: Conditionals with Cards
+            Envelope Variables:
+              name: Envelope Variables
+            For Loop Fun:
+              name: For Loop Fun
+            The Artist:
+              name: The Artist
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Relay programming
+            Conditionals with Cards:
+              name: Conditionals with Cards
+            Digital Citizenship:
+              name: Digital Citizenship
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+            Artist Binary:
+              name: Artist Binary
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Building a Foundation
+            Nested Loops:
+              name: nested Loops
+            Conditionals with Cards:
+              name: Conditionals with Cards
+            Conditionals:
+              name: conditionals
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Relay programming
+            Conditionals with Cards:
+              name: Conditionals with Cards
+            Envelope Variables:
+              name: Envelope Variables
+            For Loop Fun:
+              name: For Loop Fun
+            Binary Bracelets:
+              name: Binary Bracelets
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+            Artist Binary:
+              name: Artist Binary
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing

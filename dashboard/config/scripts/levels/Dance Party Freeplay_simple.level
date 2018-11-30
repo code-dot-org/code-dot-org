@@ -54,11 +54,9 @@
     "show_type_hints": "true",
     "instructions": "Now create your own alien disco!",
     "name_suffix": "_simple",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "include_shared_functions": "false"
+    "include_shared_functions": "false",
+    "block_pool": "gamelab",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

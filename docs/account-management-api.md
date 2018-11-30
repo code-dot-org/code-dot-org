@@ -40,7 +40,7 @@ Content-Type: application/json
 
 ### Create a section
 
-Create a new section. If "name" is empty or null, set it to a default (e.g. "New Section") to avoid an error case. "login_page" specifies the kind of login page to display for the section ("picture", "word-pair", "none").
+Create a new section. If "name" is empty or null, set it to a default (e.g. "Untitled Section") to avoid an error case. "login_page" specifies the kind of login page to display for the section ("picture", "word-pair", "none").
 
 ```
 POST /v2/sections
@@ -405,4 +405,3 @@ DELETE /v2/teachers/1 (or POST /v2/teachers/1/delete)
 204 NO CONTENT (Success)
 403 FORBIDDEN (Not found/not owner)
 ```
-

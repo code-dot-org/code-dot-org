@@ -17,7 +17,11 @@
             "\"none\""
           ],
           [
-            "Disco",
+            "Colors",
+            "\"color_cycle\""
+          ],
+          [
+            "Squares",
             "\"disco\""
           ],
           [
@@ -27,6 +31,26 @@
           [
             "Diamonds",
             "\"diamonds\""
+          ],
+          [
+            "Bubbles",
+            "\"splatter\""
+          ],
+          [
+            "Hypno",
+            "\"swirl\""
+          ],
+          [
+            "Snow",
+            "\"snowflakes\""
+          ],
+          [
+            "Spiral",
+            "\"spiral\""
+          ],
+          [
+            "(Random)",
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]"
           ]
         ]
       }

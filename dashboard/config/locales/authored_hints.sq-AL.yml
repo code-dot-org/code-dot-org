@@ -7,6 +7,12 @@ sq:
           me 100 piksels", un do te vizatoj automatikisht nje vije.
         2-3_Artist_1_new_b: Keni probleme per tu kthyer ne qoshe? Perdor bllokun "kthehu
           90 grade djathtas".
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: Mund ta përdorësh bllokun e shtegut Nëse, për të ndihmuar veten
+          në marrjen e kthesave te duhura.
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: A i sheh blloqet e koraleve blu dhe të kuqe? Përdori si
+          tabela udhëzuese për t'u kthyer majtas e djathtas në murin koralor.
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -201,6 +207,9 @@ sq:
           </block>
           </xml>
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
       grade2_MakeDogTag_1_authored_hint:

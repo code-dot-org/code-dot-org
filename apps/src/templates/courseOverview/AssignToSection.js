@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Radium from 'radium';
+import { connect } from 'react-redux';
 import $ from 'jquery';
 import queryString from 'query-string';
 import i18n from '@cdo/locale';
@@ -7,6 +8,7 @@ import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import ConfirmAssignment from './ConfirmAssignment';
+import { isScriptHiddenForSection, updateHiddenScript } from '@cdo/apps/code-studio/hiddenStageRedux';
 
 const styles = {
   main: {
@@ -28,6 +30,8 @@ class AssignToSection extends Component {
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
     })).isRequired,
+    hiddenStageState: PropTypes.object,
+    updateHiddenScript: PropTypes.func.isRequired,
   };
 
   state = {
@@ -47,7 +51,8 @@ class AssignToSection extends Component {
   };
 
   updateCourse = () => {
-    const section = this.props.sectionsInfo[this.state.sectionIndexToAssign];
+    const { sectionsInfo, updateHiddenScript, scriptId } = this.props;
+    const section = sectionsInfo[this.state.sectionIndexToAssign];
     $.ajax({
       url: `/dashboardapi/sections/${section.id}`,
       method: 'PATCH',
@@ -57,6 +62,7 @@ class AssignToSection extends Component {
         script_id: this.props.scriptId,
       }),
     }).done(result => {
+      updateHiddenScript(section.id, scriptId, false);
       this.setState({
         sectionIndexToAssign: null
       });
@@ -74,10 +80,12 @@ class AssignToSection extends Component {
   };
 
   render() {
-    const { courseId, scriptId, assignmentName, sectionsInfo } = this.props;
+    const { courseId, scriptId, assignmentName, sectionsInfo, hiddenStageState } = this.props;
     const { sectionIndexToAssign, errorString } = this.state;
     const section = sectionsInfo[sectionIndexToAssign];
     const queryParams = queryString.stringify({courseId, scriptId});
+    const isHiddenFromSection = section && hiddenStageState &&
+      isScriptHiddenForSection(hiddenStageState, section.id, scriptId);
 
     return (
       <div style={styles.main}>
@@ -108,6 +116,7 @@ class AssignToSection extends Component {
             assignmentName={assignmentName}
             onClose={this.onCloseDialog}
             onConfirm={this.updateCourse}
+            isHiddenFromSection={isHiddenFromSection}
           />
         )}
         {errorString && (
@@ -123,4 +132,10 @@ class AssignToSection extends Component {
   }
 }
 
-export default Radium(AssignToSection);
+export const UnconnectedAssignToSection = Radium(AssignToSection);
+
+export default connect(state => ({
+  hiddenStageState: state.hiddenStage,
+}), ({
+  updateHiddenScript,
+}))(UnconnectedAssignToSection);

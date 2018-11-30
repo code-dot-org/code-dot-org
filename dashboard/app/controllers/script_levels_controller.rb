@@ -47,6 +47,7 @@ class ScriptLevelsController < ApplicationController
     else
       client_state.reset
       reset_session
+      destroy_storage_id_cookie
 
       @redirect_path = redirect_path
       render 'levels/reset_and_redirect', formats: [:html], layout: false
@@ -399,6 +400,11 @@ class ScriptLevelsController < ApplicationController
       is_bonus_level: @script_level.bonus,
     )
     readonly_view_options if @level.channel_backed? && params[:version]
+
+    # Add video generation URL for only the last level of Dance
+    # If we eventually want to add video generation for other levels or level
+    # types, this is the condition that should be extended.
+    replay_video_view_options(get_channel_for(@level, current_user)) if @level.channel_backed? && @level.is_a?(Dancelab)
 
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {

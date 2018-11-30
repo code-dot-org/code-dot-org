@@ -38,8 +38,8 @@ export default class DiscountCodeSchoolChoice extends Component {
   handleDropdownChange = (field, event) => {
     if (field === 'nces') {
       this.setState({
-        schoolId: event.value,
-        schoolName: event.label,
+        schoolId: event ? event.value : '',
+        schoolName: event ? event.label : '',
       });
     }
   };

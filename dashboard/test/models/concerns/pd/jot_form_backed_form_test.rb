@@ -201,7 +201,7 @@ module Pd
         mock do |_first_mock_failed_placeholder|
           expects(:sync_from_jotform).raises('Test error 1').twice
           expects(:submission_id).returns(failed_submission_ids[0])
-          expects(:form_id).returns(form_id)
+          expects(:form_id).returns(form_id).twice
           expects(:force_sync_questions)
         end,
         mock do |_second_mock_failed_placeholder|
@@ -213,7 +213,6 @@ module Pd
         mock {|_mock_successful_placeholder| expects(:sync_from_jotform)}
       ]
 
-      DummyForm.expects(:form_id).returns(form_id)
       DummyForm.expects(:placeholders).returns(
         mock do |mock_query|
           mock_query.expects(:find_each).multiple_yields(*mock_placeholders)

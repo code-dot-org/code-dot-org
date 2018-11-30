@@ -919,6 +919,8 @@ fa:
               name: دستبند دودویی
             Binary Images:
               name: تصاویر دوتایی
+            Play Lab:
+              name: آزمایشگاه بازی
         csd2-2017:
           stages:
             Lists:
@@ -1431,3 +1433,73 @@ fa:
               name: حرکت کن، حرکت کن
             Your Digital Footprint:
               name: ردپای دیجیتالی شما
+        frozen-2018:
+          stages:
+            Artist:
+              name: هنرمند
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: هنرمند
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: هنرمند
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: ساختن بنیان
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+            Envelope Variables:
+              name: متغیرهای پاکت
+            For Loop Fun:
+              name: برای تفریح حلقه ای
+            The Artist:
+              name: هنرمند
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: برنامه نویسی دست به دست
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+            Digital Citizenship:
+              name: شهروندی دیجیتالی
+            'Unplugged: Binary':
+              name: 'بدون دستگاه: دودویی'
+            Artist Binary:
+              name: دودویی هنرمند
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: ساختن بنیان
+            Nested Loops:
+              name: حلقه های تو در تو
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+            Conditionals:
+              name: شرطی ها
+            Internet:
+              name: اینترنت
+            Crowdsourcing:
+              name: کمک گیری جمعی
+        express-2019:
+          stages:
+            Relay Programming:
+              name: برنامه نویسی دست به دست
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+            Envelope Variables:
+              name: متغیرهای پاکت
+            For Loop Fun:
+              name: برای تفریح حلقه ای
+            Binary Bracelets:
+              name: دستبند دودویی
+            'Unplugged: Binary':
+              name: 'بدون دستگاه: دودویی'
+            Artist Binary:
+              name: دودویی هنرمند
+            Internet:
+              name: اینترنت
+            Crowdsourcing:
+              name: کمک گیری جمعی

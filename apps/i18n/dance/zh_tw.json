@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "您需要製作一個舞者。",
+  "danceFeedbackNoDancers": "您沒有舞者。",
+  "danceFeedbackNoBackground": "您需要新增背景效果。",
+  "danceFeedbackTooManyDancers": "小心！如果您將「製作新內容」程式積木放進「每 2 個小節」當中，就會建立許多舞者。",
+  "danceFeedbackUseSetSize": "使用「設定 backup_dancer2 尺寸」程式積木，讓該舞者變小。",
+  "danceFeedbackUseSetTint": "使用「設定色調」程式積木來變更舞者的色調。",
+  "danceFeedbackUseStartMapping": "嘗試將 <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> 程式積木新增至您的程式。",
+  "danceFeedbackStartNewMove": "您的舞者沒有在第四個小節之後進行新的動作。",
+  "danceFeedbackNeedDifferentDance": "您需要使用不同的舞蹈。",
+  "danceFeedbackNeedEveryTwoMeasures": "確認您正在使用「每 2 個小節」程式積木",
+  "danceFeedbackNeedMakeANewDancer": "使用「製作新內容」程式積木來建立第二個舞者。",
+  "measure": "小節:"
+}

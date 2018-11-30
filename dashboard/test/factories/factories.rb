@@ -252,6 +252,26 @@ FactoryGirl.define do
         end
       end
 
+      trait :imported_from_google_classroom do
+        unmigrated_google_sso
+        after(:create) do |user|
+          user.update!(email: '', hashed_email: '')
+          section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+          create :follower, student_user: user, section: section
+          user.reload
+        end
+      end
+
+      trait :migrated_imported_from_google_classroom do
+        with_migrated_google_authentication_option
+        after(:create) do |user|
+          user.primary_contact_info.update!(email: '', hashed_email: '')
+          section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+          create :follower, student_user: user, section: section
+          user.reload
+        end
+      end
+
       trait :without_email do
         email ''
         hashed_email nil
@@ -345,7 +365,7 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::GOOGLE,
-          authentication_id: 'abcd123',
+          authentication_id: user.uid,
           data: {
             oauth_token: 'some-google-token',
             oauth_refresh_token: 'some-google-refresh-token',
@@ -472,32 +492,16 @@ FactoryGirl.define do
 
   factory :authentication_option do
     association :user
-    email {''}
-    hashed_email {''}
-    credential_type {AuthenticationOption::EMAIL}
-    authentication_id {''}
-
-    factory :email_authentication_option do
-      sequence(:email) {|n| "testuser#{n}@example.com.xx"}
-      after(:create) do |auth|
-        auth.authentication_id = auth.hashed_email
-      end
-    end
+    sequence(:email) {|n| "testuser#{n}@example.com.xx"}
+    credential_type AuthenticationOption::EMAIL
+    authentication_id {User.hash_email email}
 
     factory :google_authentication_option do
       credential_type AuthenticationOption::GOOGLE
-      sequence(:email) {|n| "testuser#{n}@example.com.xx"}
-      after(:create) do |auth|
-        auth.authentication_id = auth.hashed_email
-      end
     end
 
     factory :facebook_authentication_option do
       credential_type AuthenticationOption::FACEBOOK
-      sequence(:email) {|n| "testuser#{n}@example.com.xx"}
-      after(:create) do |auth|
-        auth.authentication_id = auth.hashed_email
-      end
     end
   end
 
@@ -1042,7 +1046,7 @@ FactoryGirl.define do
 
   factory :school_district do
     # School district ids are provided
-    id {(SchoolDistrict.maximum(:id) + 1)}
+    id {(SchoolDistrict.maximum(:id) || 0) + 1}
 
     name "A school district"
     city "Seattle"
@@ -1087,7 +1091,7 @@ FactoryGirl.define do
 
   factory :school_common, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    id {(School.maximum(:id).to_i + 1).to_s}
+    id {(School.maximum(:id).next).to_s}
     city "Seattle"
     state "WA"
     zip "98122"
@@ -1140,6 +1144,22 @@ FactoryGirl.define do
     sequence(:name) {|n| "Partner#{n}"}
     contact {create :teacher}
     group 1
+  end
+
+  factory :regional_partner_with_summer_workshops, parent: :regional_partner do
+    sequence(:name) {|n| "Partner#{n}"}
+    contact_name "Contact Name"
+    contact_email "contact@code.org"
+    group 1
+    apps_open_date_csp_teacher {Date.today - 1.day}
+    apps_open_date_csd_teacher {Date.today - 2.days}
+    apps_close_date_csp_teacher {Date.today + 3.days}
+    apps_close_date_csd_teacher {Date.today + 4.days}
+    csd_cost 10
+    csp_cost 12
+    cost_scholarship_information "Additional scholarship information will be here."
+    additional_program_information "Additional program information will be here."
+    pd_workshops {[create(:pd_workshop, :local_summer_workshop_upcoming, location_name: "Training building", location_address: "3 Smith Street")]}
   end
 
   factory :regional_partner_program_manager do

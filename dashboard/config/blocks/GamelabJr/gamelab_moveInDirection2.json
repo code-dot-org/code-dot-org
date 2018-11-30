@@ -1,0 +1,21 @@
+{
+  "category": "Actions",
+  "config": {
+    "func": "moveInDirection2",
+    "blockText": "move {SPRITE} pixels {DISTANCE} toward {DIRECTION}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "DISTANCE"
+      },
+      {
+        "name": "DIRECTION",
+        "type": "Location"
+      }
+    ],
+    "inline": false
+  }
+}

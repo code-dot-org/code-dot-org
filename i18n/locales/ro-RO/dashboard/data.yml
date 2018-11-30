@@ -447,7 +447,10 @@ ro:
         applab_intro_sounds: Laborator de applicații - imagini şi sunete
         applab_intro_designmode: Laborator de aplicații - mod de proiectare
         applab_intro_share: Laborator de applicații - Distribuie applicația ta
+        csd_applab_arrays: Introducere în matrice
         CSF_loops_AB: Bucle
+        csd_gamelab_booleans: Expresii booleene
+        csd_gamelab_conditional_statements: Declarații condiționale
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc

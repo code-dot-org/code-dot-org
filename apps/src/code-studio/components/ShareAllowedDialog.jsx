@@ -10,7 +10,9 @@ import SendToPhone from './SendToPhone';
 import color from "../../util/color";
 import * as applabConstants from '../../applab/constants';
 import * as gamelabConstants from '../../gamelab/constants';
+import { SongTitlesToArtistTwitterHandle } from '../dancePartySongArtistTags';
 import { hideShareDialog, unpublishProject } from './shareDialogRedux';
+import DownloadReplayVideoButton from './DownloadReplayVideoButton';
 import { showPublishDialog } from '../../templates/projects/publishDialog/publishDialogRedux';
 import PublishDialog from '../../templates/projects/publishDialog/PublishDialog';
 import { createHiddenPrintWindow } from '@cdo/apps/utils';
@@ -131,10 +133,6 @@ function checkImageReachability(imageUrl, callback) {
   );
 }
 
-function sharingDisabled(userSharingDisabled, appType) {
-  return userSharingDisabled && (appType === 'applab' || appType === 'gamelab' || appType === 'weblab');
-}
-
 /**
  * Share Dialog used by projects
  */
@@ -147,6 +145,8 @@ class ShareAllowedDialog extends React.Component {
     exportApp: PropTypes.func,
     icon: PropTypes.string,
     shareUrl: PropTypes.string.isRequired,
+    // Only applicable to Dance Party projects, used to Tweet at song artist.
+    selectedSong: PropTypes.string,
     thumbnailUrl: PropTypes.string,
     isAbusive: PropTypes.bool.isRequired,
     isOpen: PropTypes.bool.isRequired,
@@ -173,6 +173,7 @@ class ShareAllowedDialog extends React.Component {
     exportError: null,
     isTwitterAvailable: false,
     isFacebookAvailable: false,
+    replayVideoUnavailable: false,
   };
 
   componentDidMount() {
@@ -190,8 +191,29 @@ class ShareAllowedDialog extends React.Component {
     }
   }
 
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (this.props.isOpen && !prevProps.isOpen) {
+      recordShare('open');
+    }
+  }
 
-  close = () => this.props.onClose();
+  replayVideoNotFound = () => {
+    this.setState({
+      replayVideoUnavailable: true
+    });
+  };
+
+  sharingDisabled = () =>
+    this.props.userSharingDisabled &&
+    ['applab', 'gamelab', 'weblab'].includes(this.props.appType);
+
+  close = () => {
+    recordShare('close');
+    this.props.onClose();
+    this.setState({
+      replayVideoUnavailable: false
+    });
+  };
 
   showSendToPhone = (event) => {
     this.setState({
@@ -230,6 +252,8 @@ class ShareAllowedDialog extends React.Component {
       modalClass += ' no-modal-icon';
     }
 
+    const artistTwitterHandle = SongTitlesToArtistTwitterHandle[this.props.selectedSong];
+
     const hasThumbnail = !!this.props.thumbnailUrl;
     const thumbnailUrl = hasThumbnail ?
       this.props.thumbnailUrl :
@@ -237,10 +261,18 @@ class ShareAllowedDialog extends React.Component {
 
     const facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
                            encodeURIComponent(this.props.shareUrl);
-    const twitterShareUrl = "https://twitter.com/intent/tweet?url=" +
+    const twitterShareUrlDefault = "https://twitter.com/intent/tweet?url=" +
                           encodeURIComponent(this.props.shareUrl) +
                           "&amp;text=Check%20out%20what%20I%20made%20@codeorg" +
                           "&amp;hashtags=HourOfCode&amp;related=codeorg";
+    // Check out the dance I made featuring @artist on @codeorg! URL #HourOfCode
+    const twitterShareUrlDance = "https://twitter.com/intent/tweet?url=" +
+                          "&amp;text=Check%20out%20the%20dance%20I%20made%20featuring%20@" + artistTwitterHandle + "%20on%20@codeorg!%20" +
+                          encodeURIComponent(this.props.shareUrl) +
+                          "&amp;hashtags=HourOfCode&amp;related=codeorg";
+
+    const twitterShareUrl = artistTwitterHandle ?
+      twitterShareUrlDance : twitterShareUrlDefault;
 
     const showShareWarning = (
       !this.props.canShareSocial &&
@@ -262,7 +294,7 @@ class ShareAllowedDialog extends React.Component {
         iframeWidth: gamelabConstants.GAME_WIDTH + 32,
       };
     }
-    const {canPrint, canPublish, isPublished, userSharingDisabled, appType, getNextFrame} = this.props;
+    const {canPrint, canPublish, isPublished, getNextFrame} = this.props;
     return (
       <div>
         <BaseDialog
@@ -271,7 +303,7 @@ class ShareAllowedDialog extends React.Component {
           handleClose={this.close}
           hideBackdrop={this.props.hideBackdrop}
         >
-          {sharingDisabled(userSharingDisabled, appType) &&
+          {this.sharingDisabled() &&
             <div style={{position: 'relative'}}>
               <div style={{paddingRight: 10}}>
                 <p>{i18n.sharingBlockedByTeacher()}</p>
@@ -287,7 +319,7 @@ class ShareAllowedDialog extends React.Component {
               </div>
             </div>
           }
-          {!sharingDisabled(userSharingDisabled, appType) &&
+          {!this.sharingDisabled() &&
             <div>
               {image}
               <div id="project-share" className={modalClass} style={{position: 'relative'}}>
@@ -337,7 +369,7 @@ class ShareAllowedDialog extends React.Component {
                   }
                   <a id="sharing-phone" href="" onClick={wrapShareClick(this.showSendToPhone.bind(this), 'send-to-phone')}>
                     <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
-                    <span>Send to phone</span>
+                    <span>{i18n.sendToPhone()}</span>
                   </a>
                   {canPublish && !isPublished &&
                   <button
@@ -361,6 +393,10 @@ class ShareAllowedDialog extends React.Component {
                     className="no-mc"
                   />
                   }
+                  <DownloadReplayVideoButton
+                    style={styles.button}
+                    onError={this.replayVideoNotFound}
+                  />
                   {canPrint && hasThumbnail &&
                     <a href="#" onClick={wrapShareClick(this.print.bind(this), 'print')}>
                       <i className="fa fa-print" style={{fontSize: 26}} />
@@ -395,6 +431,13 @@ class ShareAllowedDialog extends React.Component {
                     <span style={{fontSize: 12}} className="thumbnail-warning">
                       {i18n.thumbnailWarning()}
                       </span>
+                  </div>
+                }
+                {this.state.replayVideoUnavailable &&
+                  <div style={{clear: 'both', marginTop: 10}}>
+                    <span style={{fontSize: 12}} className="thumbnail-warning">
+                      {i18n.downloadReplayVideoButtonError()}
+                    </span>
                   </div>
                 }
                 <div style={{clear: 'both', marginTop: 40}}>

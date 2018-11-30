@@ -76,7 +76,7 @@ class GameLabView extends React.Component {
           style={visualizationColumnStyle}
         >
           {this.props.showVisualizationHeader && <GameLabVisualizationHeader />}
-          <GameLabVisualizationColumn finishButton={showFinishButton}/>
+          <GameLabVisualizationColumn finishButton={showFinishButton} />
         </div>
         {this.props.isIframeEmbed &&
          !this.props.isRunning &&

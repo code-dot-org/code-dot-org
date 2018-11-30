@@ -32,12 +32,13 @@ fr:
       World: Monde
       Behaviors: Comportements
       Advanced: Avancé
+      Start: Commencer
+      Dancers: Danseurs
+      Groups: Groupes
       Sprite: Lutin
       Brush: Pinceau
       Make Sprite: Créer un lutin
       Movement: Mouvement
-      Start: Commencer
-      Groups: Groupes
       Booleans: Booléens
       Functional: Fonctionnel
       Predefined: Prédéfini

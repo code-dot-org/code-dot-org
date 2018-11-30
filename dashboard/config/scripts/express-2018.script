@@ -419,11 +419,11 @@ named_level 'Begin planning your project_2018'
 
 stage 'Build Your Project'
 named_level 'Course F: Artist Project_2018'
-named_level 'Course F: Play Lab Project_2018'
+named_level 'CourseF_Project_SpriteLab'
 
 stage 'Revise Your Project'
 named_level 'Course F: Artist Project - Revise_2018'
-named_level 'Course F: Play Lab Project - Revise_2018'
+named_level 'CourseF_Project_Revise_SpriteLab'
 
 stage 'Present Your Project'
 named_level 'Prepare for your presentation_2018'

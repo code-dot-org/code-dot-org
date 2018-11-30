@@ -99,7 +99,7 @@ cs:
         text: "Užij si používání nového bloku \"opakovat\"!"
     loop_until:
       1:
-        text: "Čau, jsem Chris. Než jsem se přidal k Miami Heat, studoval jsem na Georgia Tech informatiku. Pojďme spolu zkusit nový blok \"opakovat dokud\"."
+        text: "Čau, jsem Chris. Než jsem se přidal k Miami Heat, studoval jsem na Georgia Tech informatiku. Pojďme spolu zkusit nový blok \"opakovat do\"."
       2:
         text: "Co kdybychom nevěděli, jak daleko se ptáček musí posunout, aby se dostal k prasátku?"
       3:

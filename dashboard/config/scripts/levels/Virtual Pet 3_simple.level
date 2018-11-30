@@ -56,10 +56,8 @@
     "instructions": "Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?",
     "name_suffix": "_simple",
     "include_shared_functions": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "block_pool": "gamelab",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -1,4 +1,4 @@
-/* global Blockly, droplet, addToHome */
+/* global Blockly, droplet */
 
 import $ from 'jquery';
 import React from 'react';
@@ -189,6 +189,10 @@ class StudioApp extends EventEmitter {
 
     this.MIN_WORKSPACE_HEIGHT = undefined;
 
+    /**
+     * Levelbuilder-defined helper libraries.
+     */
+    this.libraries = {};
   }
 }
 
@@ -265,9 +269,6 @@ StudioApp.prototype.init = function (config) {
     if (dom.isMobile()) {
       $("body").addClass("legacy-share-view-mobile");
       $('#main-logo').hide();
-    }
-    if (dom.isIOS() && !window.navigator.standalone) {
-      addToHome.show(true);
     }
   }
 
@@ -611,13 +612,20 @@ StudioApp.prototype.scaleLegacyShare = function () {
   var phoneFrameScreen = document.getElementById('phoneFrameScreen');
   var vizWidth = $(vizContainer).width();
 
-  // On mobile, scale phone frame to full screen (portrait). Otherwise use given dimensions from css.
+  // On mobile, scale up phone frame to full screen (portrait) as needed.
+  // Otherwise use given dimensions from css.
   if (dom.isMobile()) {
-    var screenWidth = Math.min(window.innerWidth, window.innerHeight);
-    var screenHeight = Math.max(window.innerWidth, window.innerHeight);
-    $(phoneFrameScreen).width(screenWidth);
-    $(phoneFrameScreen).height(screenHeight);
-    $(vizColumn).width(screenWidth);
+    const { clientHeight, clientWidth } = document.documentElement;
+    const screenWidth = Math.min(clientHeight, clientWidth);
+    const screenHeight = Math.max(clientWidth, clientHeight);
+    // Choose the larger of the document client size and the existing
+    // phoneFrameScreen size:
+    const newWidth = Math.max(screenWidth, $(phoneFrameScreen).width());
+    const newHeight = Math.max(screenHeight, $(phoneFrameScreen).height());
+
+    $(phoneFrameScreen).width(newWidth);
+    $(phoneFrameScreen).height(newHeight);
+    $(vizColumn).width(newWidth);
   }
 
   var frameWidth = $(phoneFrameScreen).width();
@@ -836,6 +844,32 @@ StudioApp.prototype.reset = function (shouldPlayOpeningAnimation) {
  * Override to change run behavior.
  */
 StudioApp.prototype.runButtonClick = function () {};
+
+StudioApp.prototype.addChangeHandler = function (newHandler) {
+  if (!this.changeHandlers) {
+    this.changeHandlers = [];
+  }
+  this.changeHandlers.push(newHandler);
+};
+
+StudioApp.prototype.runChangeHandlers = function () {
+  if (!this.changeHandlers) {
+    return;
+  }
+  this.changeHandlers.forEach(handler => handler());
+};
+
+StudioApp.prototype.setupChangeHandlers = function () {
+  const runAllHandlers = this.runChangeHandlers.bind(this);
+  if (this.isUsingBlockly()) {
+    const blocklyCanvas = Blockly.mainBlockSpace.getCanvas();
+    blocklyCanvas.addEventListener('blocklyBlockSpaceChange', runAllHandlers);
+  } else {
+    this.editor.on('change', runAllHandlers);
+    // Droplet doesn't automatically bubble up aceEditor changes
+    this.editor.aceEditor.on('change', runAllHandlers);
+  }
+};
 
 /**
  * Toggle whether run button or reset button is shown
@@ -1204,30 +1238,31 @@ StudioApp.prototype.onResize = function () {
  * view mode.
  */
 function resizePinnedBelowVisualizationArea() {
-  var pinnedBelowVisualization = document.querySelector(
+  const pinnedBelowVisualization = document.querySelector(
       '#visualizationColumn.pin_bottom #belowVisualization');
   if (!pinnedBelowVisualization) {
     return;
   }
 
-  var top = 0;
+  let top = 0;
 
-  var possibleBelowVisualizationElements = [
+  const possibleElementsAbove = [
     'playSpaceHeader',
     'spelling-table-wrapper',
     'gameButtons',
     'gameButtonExtras',
+    'song-selector-wrapper'
   ];
-  possibleBelowVisualizationElements.forEach(id => {
+  possibleElementsAbove.forEach(id => {
     let element = document.getElementById(id);
     if (element) {
       top += $(element).outerHeight(true);
     }
   });
 
-  var visualization = document.getElementById('visualization');
+  const visualization = document.getElementById('visualization');
   if (visualization) {
-    var parent = $(visualization).parent();
+    const parent = $(visualization).parent();
     if (parent.attr('id') === 'phoneFrameWrapper') {
       // Phone frame itself doesnt have height. Loop through children
       parent.children().each(function () {
@@ -1238,10 +1273,10 @@ function resizePinnedBelowVisualizationArea() {
     }
   }
 
-  var bottom = 0;
-  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
+  let bottom = 0;
+  const smallFooter = document.querySelector('#page-small-footer .small-footer-base');
   if (smallFooter) {
-    var codeApp = $('#codeApp');
+    const codeApp = $('#codeApp');
     bottom += $(smallFooter).outerHeight(true);
     // Footer is relative to the document, not codeApp, so we need to
     // remove the codeApp bottom offset to get the correct margin.
@@ -1978,9 +2013,9 @@ StudioApp.prototype.handleHideSource_ = function (options) {
           // /c/ URLs go to /edit when we click open workspace.
           // /project/ URLs we want to go to /view (which doesnt require login)
           if (/^\/c\//.test(location.pathname)) {
-            location.href += '/edit';
+            location.pathname += '/edit';
           } else {
-            location.href += '/view';
+            location.pathname += '/view';
           }
         });
 
@@ -2062,6 +2097,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
       !!config.level.textModeAtStart
     ),
   });
+  this.setupChangeHandlers();
 
   if (config.level.paletteCategoryAtStart) {
     this.editor.changePaletteGroup(config.level.paletteCategoryAtStart);
@@ -2449,6 +2485,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     });
   this.inject(div, options);
   this.onResize();
+  this.setupChangeHandlers();
 
   if (config.afterInject) {
     config.afterInject();
@@ -2907,8 +2944,8 @@ StudioApp.prototype.isResponsiveFromConfig = function (config) {
 StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const level = config.level;
   const combined = _.assign({
-    ttsInstructionsUrl: level.ttsInstructionsUrl,
-    ttsMarkdownInstructionsUrl: level.ttsMarkdownInstructionsUrl,
+    ttsShortInstructionsUrl: level.ttsShortInstructionsUrl,
+    ttsLongInstructionsUrl: level.ttsLongInstructionsUrl,
     skinId: config.skinId,
     showNextHint: this.showNextHint.bind(this),
     locale: config.locale,
@@ -2972,6 +3009,24 @@ StudioApp.prototype.showRateLimitAlert = function () {
   });
 };
 
+/** @return Promise */
+StudioApp.prototype.loadLibraries = function (helperLibraryNames = []) {
+  if (!this.libraryPreload_) {
+    this.libraryPreload_ = Promise.all(helperLibraryNames.map(this.loadLibrary_.bind(this)));
+  }
+  return this.libraryPreload_;
+};
+
+/** @return Promise */
+StudioApp.prototype.loadLibrary_ = async function (name) {
+  if (this.libraries[name]) {
+    return;
+  }
+
+  const response = await fetch('/libraries/' + name);
+  this.libraries[name] = await response.text();
+};
+
 let instance;
 
 /** @return StudioApp */
@@ -2995,6 +3050,7 @@ if (IN_UNIT_TEST) {
 
   module.exports.restoreStudioApp = function () {
     instance.removeAllListeners();
+    instance.libraries = {};
     if (instance.changeListener) {
       Blockly.removeChangeListener(instance.changeListener);
     }

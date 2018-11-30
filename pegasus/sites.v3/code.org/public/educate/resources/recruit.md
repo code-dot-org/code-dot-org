@@ -105,7 +105,7 @@ Hang these posters in the halls along with the course number for your computer s
 *Learn more about these young tech professionals at [code.org/careers](/careers-in-tech)*
 
 [![image](/images/fit-150/malala.png)](/files/malala-poster.pdf)
-[![image](/images/fit-150/obama-new.png)](/files/obama-poster-new.pdf)
+[![image](/images/fit-150/obama-new-old.png)](/files/obama-poster-new.pdf)
 [![image](/images/fit-150/sheryl-sandberg.png)](/files/sheryl-poster.pdf)
 
 <a id="info"></a>

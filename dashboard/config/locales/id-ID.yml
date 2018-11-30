@@ -48,6 +48,7 @@ id:
   next_resource: Sumber selanjutnya
   cancel: Batal
   okay: Oke
+  or: atau
   heading_x_of_y: "%{heading} (halaman %{x} dari %{y})"
   add_teacher_form:
     code:
@@ -95,6 +96,7 @@ id:
     twitter: Twitter
     facebook: Facebook
     windowslive: Akun Microsoft
+    microsoft_v2_auth: Akun Microsoft
     clever: Akun pintar
     forgot_password: Lupa kata sandi?
     need_confirmation: Tidak menerima instruksi konfirmasi?
@@ -159,6 +161,7 @@ id:
     field_is_required: diperlukan
     accept_terms: Anda menyetujui untuk membuat akun
     error: Sebuah kesalahan terjadi.
+    email_preference_privacy: "(Lihat kebijakan privasi)"
     email_preference_yes: Ya
     email_preference_no: Tidak
   school_info:
@@ -303,9 +306,7 @@ id:
         applab: Buat sebuah aplikasi Lab Aplikasi
         gamelab: Buat sebuah proyek Lab Permainan
         weblab: Membuat proyek Lab Web (beta)
-      home: Beranda
       my_dashboard: Dasbor saya
-      courses: Kursus
       course_catalog: Katalog kursus
       project_gallery: Proyek
       sections: Sesi
@@ -350,10 +351,16 @@ id:
       signin: Masuk
       signup: Buat sebuah akun
       already_registered: Apa Sudah Terdaftar?
-      pair_programming: Pemrograman berpasangan
       team: Tim
       driver: Masuk
       navigator: Mitra
+      create: Buat
+      applab: Laboratorium Aplikasi
+      artist: Artis
+      gamelab: Laboratorium Game
+      playlab: Play Lab/Lab Permainan
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name} kemajuan"
       progress: Kemajuan Anda
@@ -823,6 +830,8 @@ id:
       title: Minecraft
       body: Program animal dan objek - objek Minecraft lainnya dalam versi Minecraft
         Anda sendiri.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     sports:

@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_whole_school) %>
+title: <%= hoc_s(:title_whole_school).inspect %>
 layout: wide
 ---
 

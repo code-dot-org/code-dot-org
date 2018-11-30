@@ -1,0 +1,14 @@
+{
+  "category": "Actions",
+  "config": {
+    "func": "edgesDisplace",
+    "blockText": "edges block {SPRITE} from moving",
+    "args": [
+      {
+        "name": "SPRITE",
+        "assignment": true,
+        "customInput": "spritePicker"
+      }
+    ]
+  }
+}

@@ -35,6 +35,7 @@ gl:
         age: Idade
         gender: Xénero
         edit_header: Editar os Detalles da Conta
+        finish_sign_up_header: Remata de crear a túa conta
         error:
           future: non pode estar no futuro
   hello: Ola, mundo
@@ -48,6 +49,7 @@ gl:
   next_resource: Recurso seguinte
   cancel: Cancelar
   okay: De acordo
+  or: ou
   heading_x_of_y: "%{heading} (páxina %{x} de %{y})"
   add_teacher_form:
     code:
@@ -95,6 +97,7 @@ gl:
     twitter: Twitter
     facebook: Facebook
     windowslive: Conta da Microsoft
+    microsoft_v2_auth: Conta da Microsoft
     clever: Conta intelixente
     forgot_password: Esqueceu o seu contrasinal?
     need_confirmation: Non recebeu as instrucións de confirmación?
@@ -104,6 +107,7 @@ gl:
     use_clever: Sentímolo, pero a súa conta de Code.org non está ligada ao seu %{provider}.
       Terá vostede que iniciar sesión a través do seu Portal Intelixente.
   signup_form:
+    email_signup: Rexístrate co teu enderezo de correo electrónico
     student_count: "%{count} alumnos xa crearon unha conta."
     teacher_count: "%{count} profesores xa crearon unha conta."
     overview: Rexístrese para seguir os seus progresos ou administrar a súa aula.
@@ -127,6 +131,12 @@ gl:
     valid_password: Contrasinal válido!
     invalid_password: O contrasinal  ten que ter, polo menos, 6 caracteres
     mismatch_password: Os dous contrasinais que metiches non se corresponden
+    under_13_consent: De ter menos de 13 anos, confirmo que teño autorización de meus
+      pais ou titores legais para empregar os servizos de Code.org.
+    student_consent: Confirmo que teño autorización de meus pais ou titores legais
+      para empregrar os servizos de Code.org.
+    agree_us_website: Estou de acordo en usar un sitio web localizado nos Estados
+      Unidos.
     student_terms: Acepto os <a href='http://code.org/tos'>Termos de uso</a> de Code.org.
       Se son menor de 13 anos, declaro neste formulario que teño autorización de meus
       pais para usar os servizos de Code.org.<br/><br/>Os enderezos de correo non
@@ -285,9 +295,7 @@ gl:
         applab: Crea unha aplicación do Laboratorio de Aplicacións
         gamelab: Crea un proxecto de Laboratorio de Xogos
         weblab: Crea un proxecto (beta) de Laboratorio Web
-      home: Inicio
       my_dashboard: O meu panel de control
-      courses: Cursos
       course_catalog: Catálogo de cursos
       project_gallery: Proxectos
       sections: Seccións
@@ -328,7 +336,12 @@ gl:
       signin: Iniciar Sesión
       signup: Crear unha conta
       already_registered: Xa creaches unha conta?
-      pair_programming: Programación por parellas
+      create: Crear
+      applab: Laboratorio de aplicacións
+      artist: Artista
+      playlab: Laboratorio de Xogos
+      minecraft: Minecraft
+      flappy: Flappy bird
     popup:
       progress_for_user: progreso de %{name}'s
       progress: O teu progreso
@@ -589,6 +602,8 @@ gl:
       title: Minecraft
       body: Explora o mundo de Minecraft a través do código
     minecraft2016:
+      title: Minecraft
+    aquatic:
       title: Minecraft
     hero:
       title: Minecraft

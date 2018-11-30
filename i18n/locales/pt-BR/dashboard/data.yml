@@ -237,7 +237,7 @@ pt-BR:
         studio_k1_1: Você consegue fazer esse cachorro dizer "Olá, mundo"?
         studio_k1_2: "Você pode fazer o cachorro dizer alguma coisa e,\ndepois, fazer a gata dizer alguma coisa?"
         studio_k1_3: Você consegue desenvolver um programa para fazer este cachorro se mover em direção ao gato?
-        studio_k1_4: Faça o cachorro se mover até o gato e dizer "olá" quando chegar.
+        studio_k1_4: Faça o cachorro se mover até o gato e o gato dizer "olá" a ele quando chegar.
         studio_k1_5: "Você pode adicionar um bloco para deixar o polvo\nfeliz?"
         studio_k1_6: Crie sua própria história! Movimente o gato e o cachorro, e faça com que eles conversem.
         maze_wordsearch_k_1: Faça eu me mover para formar a palavra EAST
@@ -496,6 +496,14 @@ pt-BR:
         CDEF_Video_SpritesInAction: Sprites em Ação
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites em Ação
         CSF_StarWars_ProjectIntro: Introdução para o Projeto Star Wars
+        mc_2018_intro: 'Minecraft: Introdução à Viagem Aquática'
+        MC_2018_loops: 'Minecraft: Viagem Aquática Repetir Até'
+        mc_2018_conditionals: 'Minecraft: Viagem Aquática Condicionais'
+        mc_2018_closing: 'Minecraft: Viagem Aquática Parabéns'
+        hoc_dance_warmup: Festa Dançante - Aquecimento
+        hoc_dance_events: Festa de dança - Eventos
+        hoc_dance_properties: Festa de dança - Propriedades
+        hoc_dance_congrats: Festa Dançante - Festejar!
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

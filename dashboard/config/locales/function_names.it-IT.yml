@@ -103,6 +103,7 @@ it:
       set score: imposta il punteggio
       draw a line of hexagons: disegna una fila di esagoni
       get nectar: prendi il nettare
+      make honey up and over: miele su e prosegui
       patrol left right: pattuglia sinistra e destra
       empty function: funzione vuota
       Jump: Salta
@@ -175,6 +176,7 @@ it:
       draw a plane of squares: disegna un piano di quadrati
       draw hexagon: disegna un esagono
       draw line of hexagons: disegna una fila di esagoni
+      staggered squares: quadrati traslati
       draw line of polygons: disegna una fila di poligoni
       draw polygon: disegna un poligono
       honey nectar: miele nettare
@@ -185,11 +187,12 @@ it:
       harvest: raccogli
       get corn and come back: prendi le pannocchie e torna indietro
       pick along path: raccogli lungo il percorso
-      check square for corn: controlla le pannocchie lungo il quadrato
+      check square for corn: controlla pannocchie
       get all pumpkins: prendi tutte le zucche
       pumpkin square: zucche quadrato
       check and pick: controlla e prendi
       find pumpkin: cerca zucche
+      get produce: raccogli
       check for corn: controlla pannocchie
       corn rectangle: rettangolo di pannocchie
       lettuce stairs: scale di lattuga

@@ -44,6 +44,35 @@ module LevelsHelper
     view_options(callouts: [])
   end
 
+  # Provide a presigned URL that can upload the video log to S3 for processing
+  # in to a video. Currently only used by Dance, in both project mode and for
+  # the last level of the progression.
+  # NOTE: any client that has this value set will be able to upload a log and
+  # regenerate the share video. Make sure this is only provided to views with
+  # edit permission (ie, the project creator, but not the sharing view)
+  def replay_video_view_options(channel = nil)
+    return unless DCDO.get('share_video_generation_enabled', true)
+
+    signed_url = AWS::S3.presigned_upload_url(
+      "cdo-p5-replay-source.s3.amazonaws.com",
+      "source/#{channel || @view_options['channel']}",
+      virtual_host: true
+    )
+
+    # manually force https since the AWS SDK assumes all virtual hosts are
+    # http-only
+    signed_url.sub!('http:', 'https:')
+
+    # manually point to our custom CloudFront domain so we don't have to worry
+    # about whitelists. Note that we _should_ be able to do this by just
+    # passing the custom domain as the first argument to presigned_upload_url,
+    # but the Ruby AWS SDK appears to mess that up.
+    # TODO: elijah: explore other options for doing this
+    signed_url.sub!('cdo-p5-replay-source.s3.amazonaws.com', 'dance-api.code.org')
+
+    view_options(signed_replay_log_url: signed_url)
+  end
+
   # If given a user, find the channel associated with the given level/user.
   # Otherwise, gets the storage_id associated with the (potentially signed out)
   # current user, and either finds or creates a channel for the level
@@ -296,6 +325,7 @@ module LevelsHelper
         use_phaser: use_phaser,
         use_dance: use_dance,
         hide_source: hide_source,
+        preload_asset_list: @level.try(:preload_asset_list),
         static_asset_base_path: app_options[:baseUrl]
       }
   end
@@ -326,8 +356,8 @@ module LevelsHelper
   def set_tts_options(level_options, app_options)
     # Text to speech - set url to empty string if the instructions are empty
     if @script && @script.text_to_speech_enabled?
-      level_options['ttsInstructionsUrl'] = @level.tts_instructions_text.empty? ? "" : @level.tts_url(@level.tts_instructions_text)
-      level_options['ttsMarkdownInstructionsUrl'] = @level.tts_markdown_instructions_text.empty? ? "" : @level.tts_url(@level.tts_markdown_instructions_text)
+      level_options['ttsShortInstructionsUrl'] = @level.tts_short_instructions_text.empty? ? "" : @level.tts_url(@level.tts_short_instructions_text)
+      level_options['ttsLongInstructionsUrl'] = @level.tts_long_instructions_text.empty? ? "" : @level.tts_url(@level.tts_long_instructions_text)
     end
 
     app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
@@ -445,58 +475,14 @@ module LevelsHelper
     fb_options
   end
 
-  # simple helper to set the given key and value on the given hash unless the
-  # value is nil, used to set localized versions of level options without
-  # calling the localization methods twice
-  def set_unless_nil(hash, key, value)
-    hash[key] = value unless value.nil?
-  end
-
   # Options hash for Blockly
   def blockly_options
     l = @level
     raise ArgumentError.new("#{l} is not a Blockly object") unless l.is_a? Blockly
     # Level-dependent options
     app_options = l.blockly_app_options(l.game, l.skin).dup
-    level_options = l.blockly_level_options.dup
+    level_options = l.localized_blockly_level_options(@script).dup
     app_options[:level] = level_options
-
-    # Locale-depdendent option
-    # For historical reasons, `localized_instructions` and
-    # `localized_authored_hints` should happen independent of `should_localize?`
-    # TODO: elijah: update these instructions values to new names once we
-    # migrate to the new keys
-    set_unless_nil(level_options, 'instructions', l.localized_short_instructions)
-    set_unless_nil(level_options, 'authoredHints', l.localized_authored_hints)
-    if l.should_localize?
-      # Don't ever show non-English markdown instructions for Course 1 - 4 or
-      # the 20-hour course. We're prioritizing translation of Course A - F.
-      if @script && (@script.csf_international? || @script.twenty_hour?)
-        level_options.delete('markdownInstructions')
-      else
-        set_unless_nil(level_options, 'markdownInstructions', l.localized_long_instructions)
-      end
-      set_unless_nil(level_options, 'failureMessageOverride', l.localized_failure_message_override)
-
-      # Unintuitively, it is completely possible for a Blockly level to use
-      # Droplet, so we need to confirm the editory style before assuming that
-      # these fields contain Blockly xml.
-      unless l.uses_droplet?
-        set_unless_nil(level_options, 'toolbox', l.localized_toolbox_blocks)
-
-        %w(
-          initializationBlocks
-          startBlocks
-          toolbox
-          levelBuilderRequiredBlocks
-          levelBuilderRecommendedBlocks
-          solutionBlocks
-        ).each do |xml_block_prop|
-          next unless level_options.key? xml_block_prop
-          set_unless_nil(level_options, xml_block_prop, l.localize_function_blocks(level_options[xml_block_prop]))
-        end
-      end
-    end
 
     # Script-dependent option
     script = @script
@@ -571,9 +557,13 @@ module LevelsHelper
       callback: @callback,
       sublevelCallback: @sublevel_callback,
     }
+    dev_with_credentials = rack_env?(:development) && (!!CDO.aws_access_key || !!CDO.aws_role) && !!CDO.cloudfront_key_pair_id
+    use_restricted_songs = CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
+    app_options[:useRestrictedSongs] = use_restricted_songs if @game == Game.dance
 
     if params[:blocks]
       level_options[:sharedBlocks] = Block.for(*params[:blocks].split(','))
+      level_options[:sharedFunctions] = nil # TODO: handle non-standard pools
     end
 
     unless params[:no_last_attempt]

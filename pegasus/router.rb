@@ -143,6 +143,10 @@ class Documents < Sinatra::Base
       @dirs << [File.join(request.site, 'i18n')]
     end
 
+    if request.site == 'code.org'
+      @dirs << File.join(request.site, 'i18n')
+    end
+
     @dirs << request.site
 
     # Implement recursive site-inheritance feature.
@@ -273,7 +277,8 @@ class Documents < Sinatra::Base
     #
     # TODO: Switch to using `dashboard_user_helper` everywhere and remove this
     def dashboard_user
-      @dashboard_user ||= Dashboard.db[:users][id: dashboard_user_id]
+      return nil if (id = dashboard_user_id).nil?
+      @dashboard_user ||= Dashboard.db[:users][id: id]
     end
 
     # Get the current dashboard user wrapped in a helper
@@ -281,7 +286,8 @@ class Documents < Sinatra::Base
     #
     # TODO: When we are using this everywhere, rename to just `dashboard_user`
     def dashboard_user_helper
-      @dashboard_user_helper ||= Dashboard::User.get(dashboard_user_id)
+      return nil if (id = dashboard_user_id).nil?
+      @dashboard_user_helper ||= Dashboard::User.get(id)
     end
 
     # Get the current dashboard user ID
@@ -408,7 +414,7 @@ class Documents < Sinatra::Base
     end
 
     def resolve_document(uri)
-      extnames = settings.non_static_extnames
+      extnames = settings.non_static_extnames + [".#{request.locale}.md"]
 
       path = resolve_template('public', extnames, uri, true)
       return path if path

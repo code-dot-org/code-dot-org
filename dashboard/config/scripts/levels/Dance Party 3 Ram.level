@@ -52,10 +52,8 @@
     "instructions": "Make the sprite do something different when you press the up arrow.",
     "include_shared_functions": "true",
     "validation_code": "(function () {\r\n  if (!validationProps.successCount) {\r\n    validationProps.successCount = 0;\r\n  }\r\n  if (sprites.length) {\r\n    var sprite = sprites[0];\r\n    if (!validationProps.behavior) {\r\n      validationProps.behavior = sprite.behaviors[0];\r\n    }\r\n    if (keyDown('up')) {\r\n      if (sprite.behaviors[0].func != validationProps.behavior.func) {\r\n        validationProps.success = true;\r\n      }\r\n    }\r\n    if (validationProps.success) {\r\n      validationProps.successCount++;\r\n      if (validationProps.successCount > 50) {\r\n        levelSuccess();\r\n      }\r\n    }\r\n  }\r\n})();",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "block_pool": "gamelab",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

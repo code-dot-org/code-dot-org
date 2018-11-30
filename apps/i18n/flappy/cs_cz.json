@@ -98,7 +98,7 @@
   "setSpeed": "nastavit rychlost",
   "setSpeedTooltip": "Nastaví rychlost úrovně",
   "shareFlappyTwitter": "Podívejte se na hru Flappy, kterou jsem vytvořil/a. Napsal/a jsem ji sám/sama s pomocí @codeorg",
-  "shareFlappyTwitterDonor": "",
+  "shareFlappyTwitterDonor": "Podívejte se na hru Flappy, kterou jsem udělal. (Díky {donor}, že podporujete @codeorg)",
   "shareGame": "Sdílej svou hru:",
   "soundRandom": "náhodně",
   "soundBounce": "Odrazit",

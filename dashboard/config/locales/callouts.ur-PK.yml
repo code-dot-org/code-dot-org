@@ -11,7 +11,15 @@ ur:
         frozen_diamond_repeat: اس شیپ کو بنانے کے لیے ریپیٹ بلاک استعمال کریں۔
       frozen snowflake branch_callout:
         frozen_snowflake_branch: '"ایک سنوفلیک برانچ بنائیں" بلاک استعمال کریں'
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: '"ایک سنوفلیک برانچ بنائیں" بلاک استعمال کریں'
       frozen square iterative_callout:
+        frozen_create_square: ایک اسکوائر کری-ایٹ کرنے کے لیے یہاں مزید بلاک اَٹیچ
+          کریں
+      frozen square iterative_b_callout:
+        frozen_create_square: ایک اسکوائر کری-ایٹ کرنے کے لیے یہاں مزید بلاک اَٹیچ
+          کریں
+      frozen square iterative_test_callout:
         frozen_create_square: ایک اسکوائر کری-ایٹ کرنے کے لیے یہاں مزید بلاک اَٹیچ
           کریں
       grade4_frozen_functions3_callout:

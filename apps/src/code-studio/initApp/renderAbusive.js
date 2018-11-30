@@ -1,4 +1,3 @@
-/* global dashboard */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import AbuseExclamation from '../components/AbuseExclamation';
@@ -6,8 +5,10 @@ import showProjectAdmin from '../showProjectAdmin';
 
 /**
  * Renders our AbuseExclamation component, and potentially updates admin box
+ * @param {project.js} project
+ * @param {string} tosText
  */
-export default (tosText) => {
+export default (project, tosText) => {
   ReactDOM.render(React.createElement(AbuseExclamation, {
     i18n: {
       tos: tosText,
@@ -15,9 +16,9 @@ export default (tosText) => {
       edit_project: window.dashboard.i18n.t('project.edit_project'),
       go_to_code_studio: window.dashboard.i18n.t('project.abuse.go_to_code_studio')
     },
-    isOwner: dashboard.project.isOwner()
+    isOwner: project.isOwner()
   }), document.getElementById('codeApp'));
 
   // update admin box (if it exists) with abuse info
-  showProjectAdmin();
+  showProjectAdmin(project);
 };

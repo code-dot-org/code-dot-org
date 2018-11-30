@@ -2,10 +2,11 @@
 require_relative 'files_api_test_base' # Must be required first to establish load paths
 require_relative 'files_api_test_helper'
 require 'helpers/asset_bucket'
-require_relative 'spy_newrelic_agent'
 
 class AssetsTest < FilesApiTestBase
   def setup
+    NewRelic::Agent.reset_stub
+
     # Ensure the s3 path starts empty.
     delete_all_assets('assets_test/1/1')
 
@@ -123,6 +124,22 @@ class AssetsTest < FilesApiTestBase
 
     @api.get_object('nonexistent.jpg')
     assert not_found?
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+    )
   end
 
   def test_set_abuse_score
@@ -178,6 +195,16 @@ class AssetsTest < FilesApiTestBase
 
     @api.delete_object(first_asset)
     @api.delete_object(second_asset)
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+    )
   end
 
   def test_viewing_abusive_assets
@@ -227,6 +254,11 @@ class AssetsTest < FilesApiTestBase
     end
 
     @api.delete_object(asset_name)
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+    )
   end
 
   def test_assets_copy_some
@@ -253,6 +285,14 @@ class AssetsTest < FilesApiTestBase
     assert_fileinfo_equal(expected_sound_info, copy_file_infos[0])
     assert_nil dest_file_infos[1]
     assert_fileinfo_equal(expected_sound_info, dest_file_infos[0])
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+      Custom/ListRequests/AssetBucket/BucketHelper.copy_files
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+    )
 
     src_api.delete_object(URI.encode(image_filename))
     src_api.delete_object(sound_filename)
@@ -293,6 +333,14 @@ class AssetsTest < FilesApiTestBase
     assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, image_filename)
     assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, sound_filename)
 
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+      Custom/ListRequests/AssetBucket/BucketHelper.copy_files
+      Custom/ListRequests/AssetBucket/BucketHelper.list
+    )
+
     src_api.delete_object(URI.encode(image_filename))
     src_api.delete_object(sound_filename)
     dest_api.delete_object(URI.encode(image_filename))
@@ -323,6 +371,10 @@ class AssetsTest < FilesApiTestBase
       refute successful?, 'Non-owner cannot delete a file'
     end
 
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+    )
+
     @api.delete_object(filename)
   end
 
@@ -341,6 +393,15 @@ class AssetsTest < FilesApiTestBase
 
     post_asset_file(@api, "file4.jpg", "ABCD", 'image/jpeg')
     assert last_response.client_error?, "Error when exceeding max app size."
+
+    assert_newrelic_metrics %w(
+      Custom/FilesApi/FileTooLarge_assets
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/FilesApi/QuotaCrossedHalfUsed_assets
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/FilesApi/QuotaExceeded_assets
+    )
 
     @api.delete_object(added_filename1)
     @api.delete_object(added_filename2)
@@ -377,6 +438,15 @@ class AssetsTest < FilesApiTestBase
       assert_assets_custom_metric 3, 'QuotaExceeded'
       assert_assets_custom_event 2, 'QuotaExceeded'
 
+      assert_newrelic_metrics %w(
+        Custom/FilesApi/FileTooLarge_assets
+        Custom/ListRequests/AssetBucket/BucketHelper.app_size
+        Custom/ListRequests/AssetBucket/BucketHelper.app_size
+        Custom/FilesApi/QuotaCrossedHalfUsed_assets
+        Custom/ListRequests/AssetBucket/BucketHelper.app_size
+        Custom/FilesApi/QuotaExceeded_assets
+      )
+
       @api.delete_object(filetodelete1)
       @api.delete_object(filetodelete2)
 
@@ -403,16 +473,20 @@ class AssetsTest < FilesApiTestBase
 
     @api.get_object filename, '', 'HTTP_IF_MODIFIED_SINCE' => v2_last_modified
     assert_equal 304, last_response.status
+
+    assert_newrelic_metrics []
   end
 
   def test_invalid_mime_type_returns_unsupported_media_type
     @api.get_object 'filewithinvalidmimetype.asdasdas%25dasdasd'
     assert_equal 415, last_response.status # 415 = Unsupported media type
+    assert_newrelic_metrics []
   end
 
   def test_bad_channel_id
     get "/v3/assets/undefined"
     assert_equal 400, last_response.status
+    assert_newrelic_metrics []
   end
 
   # Methods below this line are test utilities, not actual tests

@@ -9,6 +9,7 @@ sl:
       messages:
         blank: "se zahtevan(o)"
         blank_plural: "so potrebni"
+        invalid: "je nepravilno"
         invalid_plural: "so nepravilni"
     attributes:
       user:
@@ -23,6 +24,7 @@ sl:
         age: 'Starost'
         gender: 'Spol'
         edit_header: 'Uredi podrobnosti računa'
+        finish_sign_up_header: 'Dokončaj registracijo'
         error:
           future: ne more biti v prihodnosti
   hello: "Pozdravljen svet"
@@ -35,6 +37,7 @@ sl:
   next_resource: Naslednji vir
   cancel: "Prekliči"
   okay: "V redu"
+  or: "ali"
   heading_x_of_y: "%{heading} (stran %{x} od %{y})"
   add_teacher_form:
     code:
@@ -77,6 +80,7 @@ sl:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft račun'
+    microsoft_v2_auth: 'Microsoft račun'
     clever: 'Pameten račun'
     forgot_password: 'Si pozabil/a svoje geslo?'
     need_confirmation: "Nisi prejel/a navodil za potrditev?"
@@ -96,6 +100,7 @@ sl:
     age: 'Starost'
     user_type: 'Ste učenec ali učitelj?'
     submit: 'Prijava'
+    go_to_account: 'Pojdi na moj uporabniški račun'
     teacher: 'Ste učitelj/ica?'
     valid_username: "Na voljo!"
     invalid_username: "Uporabniško ime mora imeti vsaj 5 znakov"
@@ -108,10 +113,15 @@ sl:
     user_type_student: "Učenec"
     field_is_required: "se zahtevan(o)"
     accept_terms: "Moraš se strinjati, če želiš ustvariti račun"
+    error: "Prišlo je do napake."
     email_preference_yes: "Da"
     email_preference_no: "Ne"
   school_info:
+    private: 'zasebna'
     other: 'Drugi'
+    school: 'Šola'
+    school_name: 'Ime šole'
+    school_address: 'Naslov šole'
   signin_form:
     title: 'Že imate račun? Vpišite se'
     login: 'Elektronska pošta'
@@ -195,9 +205,7 @@ sl:
         playlab: 'Ustvari Play Lab app'
         artist: 'Nariši kaj'
         applab: 'Ustvari App Lab app'
-      home: "Domov"
       my_dashboard: "Moja nadzorna plošča"
-      courses: "Predavanja"
       course_catalog: "Katalog tečajev"
       project_gallery: "Projekti"
       educate_overview: "Vzgojiteljev pregled"
@@ -234,10 +242,14 @@ sl:
       signin: 'Prijava'
       signup: 'Ustvari račun'
       already_registered: 'Že registrirani?'
-      pair_programming: 'Programiranje parov'
       team: 'Ekipa'
       driver: 'Voznik'
       navigator: 'Navigator'
+      create: 'Ustvari'
+      artist: 'Umetnik'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Napredek od %{name}"
       progress: 'Tvoj napredek'
@@ -457,6 +469,8 @@ sl:
     minecraft2016:
       title: "Minecraft"
       body: "Sprogramiraj živali in druga Minecraft bitja v svoji lastni različici Minecrafta."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
     unplugged:
@@ -621,6 +635,7 @@ sl:
   pd:
     form_labels:
       email: 'Elektronska pošta'
+      school_name: 'Ime šole'
     form_entries:
       gender:
         male: 'Moški'

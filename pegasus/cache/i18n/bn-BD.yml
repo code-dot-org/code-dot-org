@@ -327,7 +327,7 @@ bn-BD:
   homepage_hero_text_stat_loc: "#লক লাইনের কোড ছাত্রছাত্রীদের দিয়ে লেখা"
   homepage_hero_text_stat_students: "#student_count  কোড স্টুডিওতে ছাত্রছাত্রীদের
     হিসাব"
-  homepage_hero_text_stat_served: 'ঘন্টার কোড: #সেবা সেবা'
+  homepage_hero_text_stat_served: 'ঘন্টার কোড: #served সেবা'
   homepage_slot_text_hoc: কোডিং এর এক ঘণ্টা
   homepage_slot_text_frozen: আন্না এবং এলসার সাথে ফ্রোজেন
   homepage_slot_text_teacher: শিক্ষক ড্যাশবোর্ড
@@ -1620,3 +1620,23 @@ bn-BD:
   user_header_settings: আমার একাউন্ট
   user_header_logout: সাইন আউট
   user_header_signin: সাইন ইন করুন
+  user_header_playlab: প্লে ল্যাব
+  user_header_minecraft: মাইনক্র্যাফট
+  user_header_flappy: ফ্লাপি
+  applab_tile_start_tutorial: শুরু করুন
+  hoc_overview_start_tutorial: শুরু করুন
+  hoc2018_creativity_create: তৈরি করুন
+  hoc2018_mc_start: শুরু করুন
+  hoc2018_mc_no_internet: ইন্টারনেট নেই?
+  hoc2018_mc_video_1min: ১ মিনিট
+  hoc2018_mc_video_2min: 2 মিনিট
+  hoc2018_mc_video_5min: ৫ মিনিট
+  hoc2018_mc_video_title_inspire_girl: একটি মেয়েকে অনুপ্রাণিত করুন
+  hoc2018_mc_video_title_obama: কম্পিউটার বিজ্ঞান বিষয়ে প্রেসিডেন্ট ওবামা
+  hoc2018_mc_video_title_hoc_is_here: Hour of Code কোড এখানে - যেকেউ শিখতে পারে
+  hoc2018_mc_video_title_anybody_can_learn: যে কেউ শিখতে পারে
+  hoc2018_mc_homepage_join_us: আমাদের সাথে যোগ দিন
+  hoc2018_mc_homepage_try_it: এটা চেষ্টা করুন।
+  hoc2018_dance_party_button: শুরু করুন
+  hoc2018_dance_teacher_resources_tile1_button: পাঠ পরিকল্পনা
+  hoc2018_dance_amazon_about_future_engineer_button: আরও জানুন

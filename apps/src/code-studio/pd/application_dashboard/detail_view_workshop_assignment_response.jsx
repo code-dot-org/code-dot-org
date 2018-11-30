@@ -1,5 +1,4 @@
 import React, {PropTypes} from 'react';
-import DetailViewResponse from './detail_view_response';
 import WorkshopAssignmentLoader, {SUBJECT_TYPES} from "./workshop_assignment_loader";
 
 export default class DetailViewWorkshopAssignmentResponse extends React.Component {
@@ -12,6 +11,7 @@ export default class DetailViewWorkshopAssignmentResponse extends React.Componen
       name: PropTypes.string,
       url: PropTypes.string
     }).isRequired,
+    year: PropTypes.number,
     editing: PropTypes.bool.isRequired,
     onChange: PropTypes.func.isRequired
   };
@@ -25,6 +25,7 @@ export default class DetailViewWorkshopAssignmentResponse extends React.Componen
           courseName={this.props.courseName}
           subjectType={this.props.subjectType}
           assignedWorkshopId={this.props.assignedWorkshop.id}
+          year={this.props.year}
           onChange={this.props.onChange}
         />
       );
@@ -42,11 +43,9 @@ export default class DetailViewWorkshopAssignmentResponse extends React.Componen
     }
 
     return (
-      <DetailViewResponse
-        question={this.props.question}
-        answer={answer}
-        layout="lineItem"
-      />
+      <div>
+        {answer}
+      </div>
     );
   }
 }

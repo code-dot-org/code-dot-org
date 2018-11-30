@@ -1,0 +1,154 @@
+az:
+  data:
+    short_instructions:
+      2-3 Artist 1 new: Salam, mən rəssamam. Siz kod yazmaqla mənə, demək olar, hər şey çəkdirə bilərsiniz. Şəkildəki boz xətlərin üzərini cızmağım üçün bir neçə blokdan istifadə edin (hər xəttin uzunluğu 100 piksledir).
+      2-3 Artist 11: "Stop işarəsini eni 100 piksel olan səkkizbucaqlı çəkməklə, haşiyəyə al. \\r\n\\r\n"
+      2-3 Artist 3: Bu papağın hündürlüyü 100 pikseldir. Bundan 70 piksel kiçik bir papaq çəkin.
+      2-3 Artist 3new: "Qırmızı papaq 100 piksel uzunluğundadır. Bundan 70 piksel daha kiçik olan qara papağı çəkməyi bitirin.(Qeyd: Hər bir papaq 50 piksel enindədir)"
+      2-3 Artist 4: Bu pişik üçün evi tamamlamağa mənə kömək edin.
+      2-3 Artist 9 NEW: Bu çərpələngi bitirin
+      2-3 Artist 9 REPLACEMENT: Bu pilleleri cekmeyi bitirin!
+      2-3 Artist 9: Bu çərpələngi bitirin
+      2-3 Artist Assessment 1: "Vergi: sonuncu disi cekmeyi bitirin.\n25 piksel en ve 25 piksel uzunlugundadir."
+      2-3 Artist Debugging 1: "Bu papaq yanliz 50 pixel eninde ola biler.\nBunu yapisdira bilersen?"
+      2-3 Artist Debugging 2: "Pisiyin biglari ucun olan bu kod sehvdir.\nHamisi eyni uzunluqda olan biglari cekmek ucun bu kodu duzelt."
+      2-3 Artist Debugging 5: "Qic ve ayaq ucun olan kodumuz sehvdir.\nBunu duzelde bilersiniz?"
+      2-3 Artist Debugging 6: |-
+        Menim oturdugum kreslo bir qici yox imis kimi gorunur.
+        Sonuncu qicini cekmek ucun kodu daxil et.
+      2-3 Artist Debugging 8: |-
+        Müəlliməm deyir ki, başladığlm işi başa çatdırmalıyam! Fır-fıramı bitirməkdə mənə kömək edin. Nəyin səhv olduğunu tapa bilərsiniz?
+      2-3 Artist Free Play: Sərbəst oyun! Nə istəyirsinizə çəkin.
+      2-3 Artist Match Hex Pic: 'Uzlaşdırma: Altıbucaqlını tamamlamağa kömək edin.'
+      2-3 Artist Match Rho Pic: 'Uzlaşdırma: Çatışmayan kodu bitirin.'
+      2-3 Artist Match Sq Pic: 'Uzlaşdırma: Çatışmayan kodu tamamlayın'
+      2-3 Artist Match Tri pic: 'Uzlaşdırma: Çatışmayan kodu yazın.'
+      2-3 Artist Nested Loops Free Play: Sərbəst oyun, içiçə dövrlərlə fısqırıq bir şey çək.
+      2-3 Bee Conditionals 9: Hər bir çiçəkdən bütün nektarları topla.
+      2-3 Bee Functions 2: "Funksiyalar hər hansı bir tapşırığı yerinə yetirən kodlardan ibarət blokdur. 5 nektar əldə etmək üçün \"get 5\" funksiyasından istifadə edin. Əlverişli blok sayı əldə etmək üçün dövrlərdən də istifadə edin."
+      2-3 Bee Functions 3: Hər bir çiçəkdən bütün nektarları topla.
+      2-3 Maze 10: Məni yaşıl ziyankara aparan yola yönləndirin! (Partladıcı TNT qutusundan ehtiyatlı olun)
+      2-3 Maze 4: Məni yaşıl ziyankara aparan yola yönləndirin! (Partladıcı TNT qutusundan ehtiyatlı olun)
+      2-3 Maze 5: Məni yaşıl ziyankara aparan yola yönləndirin! (Partladıcı TNT qutusundan ehtiyatlı olun)
+      2-3 Maze 7: Məni yaşıl ziyankara aparan yola yönləndirin! (Partladıcı TNT qutusundan ehtiyatlı olun)
+      2-3 Maze 9: Məni yaşıl ziyankara aparan yola yönləndirin! (Partladıcı TNT qutusundan ehtiyatlı olun)
+      2-3 Maze sq3: Məni yaşıl ziyankara aparan yola yönləndirin! (Partladıcı TNT qutusundan ehtiyatlı olun)
+      20hr_farmer_stage9_1: Salam, mən fermerəm.  Əkinə hazır olmağı üçün fermadakı sahəmi hamarlamaqda köməyinizə ehtiyacım var. Məni torpaq təpəciyinə doğru hərəkət etdirin və onu yiğışdırmaq üçün "yığışdır" blokundan istifadə edin.
+      20hr_farmer_stage9_11: 'Bayırda hələ qaranlıqdır. Məni tarladan keçirin. Əgər bir təpəcik varsa, onu yığışdırın, əgər bir çuxur varsa, onu doldurun. Məsləhət: "əgər" blokunda aşağı açılan seçim menyusundan istifadə edin.'
+      20hr_farmer_stage9_2: Sonra məni çuxura doğru hərəkət etdirin və "doldur" blokundan istifadə edərək onu İKİ kürək torpaqla doldurun.
+      20hr_farmer_stage9_3: Məni torpaq təpəciyinə doğru hərəkət etdirin və mümkün qədər az blokdan istifadə edərək mənə deyin ki, neçə kürək torpağı yığışdırım.
+      20hr_farmer_stage9_4: 'Mənə dörd torpaq təpəciyinin hamısını yığışdırmaqda kömək edə bilərsiniz? Məsləhət: bacarırsınızsa, "təkrar et" blokundan istifadə edin.'
+      20hr_farmer_stage9_5: 'Mənə bütün bu çuxurları 5 kürək torpaqla doldurmaqda kömək edin. Məsləhət: siz "təkrar et" blokunu "hələ ki" blokunun içində istifadə edə bilərsiniz.'
+      20hr_farmer_stage9_6: Mümkün qədər az sayda blokdan istifadə etməklə bütün torpaq təpəciklərini yığışdırın. "Hələ ki" blokunun aşağı açılan menyusundaki yeni seçim imkanları mənə təpəcik və ya çuxurun üstündə dayandığımı söyləyir.
+      20hr_farmer_stage9_7: Vay, çox dərin bir çuxur tapdım! Buna neçə kürək torpağın lazım olduğunu bilmirəm. Onu yer hamar olana qədər dolduracaq bir proqram yaza bilərsinizmi?
+      20hr_farmer_stage9_8: Sahənin sonundaki boşluğu minimal sayda blokdan istifadə etməklə doldurmaqda mənə kömək edin.
+      20hr_farmer_stage9_9: 'Torpaq təpəciklərinin hamısını mənə yığışdırtdırın. Mümkün qədər az blokdan istifadə etməyə çalışın. Məsləhət: "hələ ki" blokundan istifadə etməyə çalışın.'
+      20hr_maze_stage2_10: Yaxşı, yeni "təkrar et, ta ki" blokunu sınaqdan keçirin - o mən ta zəhlətökən donuza çatana qədər təkrarlanacaq.
+      20hr_maze_stage2_11: Yaxşı, sonuncu çalışma - bunu yalnız 4 blok istifadə edərək həll edə bilərsinizmi?
+      20hr_maze_stage2_13: Yaxşı, bu oxşardır, amma bir az fərqi var. Yalnız 5 blok istifadə edərək bunu edə bilərsiniz?
+      20hr_maze_stage2_14: 'Nə vaxt dönəcəyim barədə qərar verə bilməyim üçün yeni "əgər" blokundan istifadə edin. Məsləhət: sizə yalnız əlavə bir blok lazımdır, amma bizim bunu necə etdiyimizi öyrənin ki, gələn dəfə özünüz köməksiz edə biləsiniz.'
+      20hr_maze_stage2_15: Yaxşı, bu sonuncu tapmaca kimidir, amma siz "əgər" və "təkrarla" bloklarını bir yerdə necə işlətdiyinizi yadınıza salmalısınız.
+      20hr_maze_stage2_16: Günəbaxan istəyirəm! "əgər" blokundan ən az sayda istifadə etməklə məni ora çatdır.
+      20hr_maze_stage2_17: Yaxşı, məşq üçün bunu bir daha edək - bu çox da fərqli deyil, amma xart-xurtlardan ehtiyatlı ol!
+      20hr_maze_stage2_18: '"Əgər-əks halda" bloku şərti yoxlayır, sonra isə bu VƏ YA digər işi yerinə yetirir. Məni günəbaxana çatdırmaq üçün bu yeni bloku istifadə etməyə çalışın.'
+      20hr_maze_stage2_19: "\"Əgər-əks halda\" blokunu bir daha təcrübədən keçirin, \nbirinci cəhdinizdən bunu düzgün edə bilərsinizmi?"
+      20hr_maze_stage2_2: Bu donuzun əlindən lələklərim biz-biz olur. Mənə kömək edin ki, onu tapım!
+      20hr_maze_stage2_20: Sadəcə 3 blok əlavə etməklə mənə daha çətin labirintdən baş çıxarmaqda kömək edə bilərsinizmi? Əgər bunu düzgün etsəniz mən uzunluğundan asılı olmayaraq ixtiyari əyri yolla gedə bilərəm.
+      20hr_maze_stage2_3: Yolu izləyərək məni səfeh donuza tərəf aparın. Partladıcı TNT qutusundan yayınaq, yoxsa lələklərim göyə sovrular!
+      20hr_maze_stage2_4: Məni yaşıl ziyankara aparan yola yönləndirin! (Partladıcı TNT qutusundan ehtiyatlı olun)
+      20hr_maze_stage2_5: Təmkinli ol və pis donuzu tapmağıma kömək et. Yoxsa mən acıqlana bilərəm!
+      20hr_maze_stage2_6: Mənim yaşıl donuza 2 blokdan istifadə edərək çatmağım üçün bir yol var. Siz onu tapa bilərsinizmi?
+      20hr_maze_stage2_7: Məni ancaq üç blokdan istifadə edərək yaşıl cinayətkara çatıdrmağa çalışın.
+      20hr_maze_stage2_8: Mənə kömək edin ki, ən az sayda blokdan istifadə edərək pis donuzcuğun dərsini verim. Birdən çox "təkrar et, neçə dəfə" blokundan istifadə etməyə çalışın.
+      20hr_maze_stage2_9: 'Blok boz rəngdədirsə, deməli onu poza bilməzsiniz. Bu tapmacanı 3 dəfə icra olunan "təkrar et" blokundan istifadə etməklə həll edin. Növbəti 3 bloku boz "təkrar et" blokunun içinə yerləşdirməklə cəhd edin: get, get, dön.'
+      4-5 Maze Conditionals 9: |-
+        "Əgər-əks halda" bloklu bir məşq tapmacası daha!\r
+        \r
+        Barmağınızı üzərində gəzdirin, görün, birinci cəhddən bunu edə bilərsinizmi.
+      App Lab test: yoxla
+      Course 4 Artist Binary 7: Bu rəsmi bitirin.
+      Course 4 Artist Binary Free Play 2b: İpuclarını görmək üçün buraya basın.
+      Course 4 Artist Functions Inspiration: Yenidən ipuclarını görmək üçün buraya basın.
+      Course 4 Artist Functions challenge: Yenidən ipuclarını görmək üçün buraya basın.
+      Course 4 EC 1a: Qaydalar yox. İpucları yox. Sadəcə meydan oxuma!
+      Course 4 EC 1b: Qaydalar yox. İpucları yox. Sadəcə meydan oxuma!
+      Course 4 EC 2a: Qaydalar yox. İpucları yox. Sadəcə meydan oxuma!
+      Course 4 EC 2b: Qaydalar yox. İpucları yox. Sadəcə meydan oxuma!
+      Course 4 EC 2c: Qaydalar yox. İpucları yox. Sadəcə meydan oxuma!
+      Course 4 EC 2d: Qaydalar yox. İpucları yox. Sadəcə meydan oxuma!
+      Course 4 Maze 1: Qəzəbli quşu donuza yaxınlaşdır!
+      Course 4 Maze 2: TNT-dən yayın!
+      Course 4 SCV 1: Təlimatları bir daha görmək üçün klikləyin.
+      Course 4 SCV 2: Təlimatları bir daha görmək üçün klikləyin.
+      Course 4 SCV 6: Təlimatları bir daha görmək üçün klikləyin.
+      Crack Random Substitution: Təlimatlar
+      Crack Random Substitution_2018: Təlimatlar
+      Crack a Caesar Cipher: Təlimatlar
+      Crack a Caesar Cipher_2018: Təlimatlar
+      K-1 Artist2 Free Draw: Hərhansı birşey çək!
+      KTest2: Yolu izləyərək məni səfeh donuza tərəf aparın. Partladıcı TNT qutusundan yayınaq, yoxsa lələklərim göyə sovrular!
+      Kiki_StarWars_Test_3: mətn
+      Kiki_StarWars_Test_4: mətn
+      Kiki_StarWars_Test_5: mətn
+      Kiki_StarWars_Test_5_Example: mətn
+      NEW Course 4 Artist Functions 14: 'Əyləncə zamanı! '
+      The Vigenere Cipher Widget: Təlimatlar
+      The Vigenere Cipher Widget_2018: Təlimatlar
+      The Vigenere Cipher: Təlimatlar
+      U2 frequency caesar: Təlimatlar
+      U2 frequency random sub: Təlimatlar
+      U2 vigenere cipher: Təlimatlar
+      U4 vigenere cipher 2: Təlimatlar
+      U4L02 - Objects - Template1: Şablon
+      U4L02 - Objects - Template1_2018: Şablon
+      course2_maze_seq_challenge1: Yolu izləyərək məni səfeh donuza tərəf aparın. Partladıcı TNT qutusundan yayınaq, yoxsa lələklərim göyə sovrular!
+      course3_playlab_stage17_6: Arxa fonu və pinqvinin sürətini dəyişmək üçün bloklar əlavə edib, sonra onu oxların köməyi ilə xal qazanana qədər hərəkər etdirə bilərsiniz?
+      course4_artist_fwp_challenge1: Bu proqramı icra etməyə çalışın və dəyişikliklər etdikdə nə baş verdiyini müşahidə edin. Proqramın necə işlədiyini tapa bilərsiniz? (Və ya onu silin və tamamilə fərqlisi ilə əvəzləyin)
+      courseE_bee_functions1: Hər bir çiçəkdən bütün nektarları topla.
+      courseE_bee_functions1_2018: Hər bir çiçəkdən bütün nektarları topla.
+      courseE_bee_functions3: Funksiyalar hər hansı bir tapşırığı yerinə yetirən kodlardan ibarət blokdur. 5 nektar əldə etmək üçün "get 5" funksiyasından istifadə edin. Əlverişli blok sayı əldə etmək üçün dövrlərdən də istifadə edin.
+      courseE_bee_functions3_2018: Funksiyalar hər hansı bir tapşırığı yerinə yetirən kodlardan ibarət blokdur. 5 nektar əldə etmək üçün "get 5" funksiyasından istifadə edin. Əlverişli blok sayı əldə etmək üçün dövrlərdən də istifadə edin.
+      flappy_1: '"basanda" blokuna bir blok əlavə edin və "İcra et" düyməsini sıxın. Ekrana basmaqla Qanadlını hədəfə çatdırın.'
+      flappy_11: Öz Qanadlı oyununuzu düzəldin. Siz bütün görüntüləri və qaydaları dəyişə bilərsiniz, hətta yerin cazibə qüvvəsini belə. Bitirdiyinizdə Son düyməsini basın və oyunu paylaşın ki, dostlarınız da sizin oyununuzu sınaqdan keçirsinlər.
+      flappy_11_2018: Öz Qanadlı oyununuzu düzəldin. Siz bütün görüntüləri və qaydaları dəyişə bilərsiniz, hətta yerin cazibə qüvvəsini belə. Bitirdiyinizdə Son düyməsini basın və oyunu paylaşın ki, dostlarınız da sizin oyununuzu sınaqdan keçirsinlər.
+      flappy_1_2018: '"basanda" blokuna bir blok əlavə edin və "İcra et" düyməsini sıxın. Ekrana basmaqla Qanadlını hədəfə çatdırın.'
+      flappy_2: İndi biz yer səthi də əlavə etmişik. "yerə düşəndə" blokuna bir blok əlavə edin. Sizin kodunuz gərək Qanadlı düşəndə "oyunu bitir"sin.
+      flappy_2_2018: İndi biz yer səthi də əlavə etmişik. "yerə düşəndə" blokuna bir blok əlavə edin. Sizin kodunuz gərək Qanadlı düşəndə "oyunu bitir"sin.
+      flappy_3: '"İcra etdikdə" bloku imkan verir ki, oyun başlayanda kodunuz icra edəsiniz. Mərhələ sürətini təyin etməyə və hədəfə doğru qanad çalmağa çalışın.'
+      flappy_3_2018: '"İcra etdikdə" bloku imkan verir ki, oyun başlayanda kodunuz icra edəsiniz. Mərhələ sürətini təyin etməyə və hədəfə doğru qanad çalmağa çalışın.'
+      flappy_4: Əgər onu toqquşmağa məcbur etməsəniz Qanadlı manelərin içindən keçəcək. "bir maneəyə dəyəndə" blokuna bir blok əlavə edin. Kodunuz gərək Qanadlı birinci dəst borularla toqquşanda "oyunu bitir"sin.
+      flappy_4_2018: Əgər onu toqquşmağa məcbur etməsəniz Qanadlı manelərin içindən keçəcək. "bir maneəyə dəyəndə" blokuna bir blok əlavə edin. Kodunuz gərək Qanadlı birinci dəst borularla toqquşanda "oyunu bitir"sin.
+      flappy_5: Gəlin xallar cədvəli əlavə edək və Qanadlı maneələri keçdikcə xalları sayaq. "maneə keçiləndə" blokuna bir blok əlavə edin və sonra Qanadlını birinci dəst boruların arasından keçirməklə 1 xal qazanın.
+      flappy_5_2018: Gəlin xallar cədvəli əlavə edək və Qanadlı maneələri keçdikcə xalları sayaq. "maneə keçiləndə" blokuna bir blok əlavə edin və sonra Qanadlını birinci dəst boruların arasından keçirməklə 1 xal qazanın.
+      flappy_6: Görək Qanadlıya daha kiçik və ya daha böyük qanad çaldırandan sonra da 1 xal qazana biləcəksiniz.
+      flappy_6_2018: Görək Qanadlıya daha kiçik və ya daha böyük qanad çaldırandan sonra da 1 xal qazana biləcəksiniz.
+      flappy_7: İndi isə "icra etdikdə" blokuna başqa bir blok əlavə etməklə səhnəni dəyişməyə çalışın.
+      flappy_7_2018: İndi isə "icra etdikdə" blokuna başqa bir blok əlavə etməklə səhnəni dəyişməyə çalışın.
+      flappy_8: Siz görüntüləri ancaq oyun başlayanda yox, istənilən vaxt təyin edə bilərsiniz. Başqa bir hadisə baş verdikdə, məsələn, maneə keçildikdə TƏSADÜFİ səhnə təyin etməyi yoxlayın.
+      flappy_8_2018: Siz görüntüləri ancaq oyun başlayanda yox, istənilən vaxt təyin edə bilərsiniz. Başqa bir hadisə baş verdikdə, məsələn, maneə keçildikdə TƏSADÜFİ səhnə təyin etməyi yoxlayın.
+      flappy_9: İşləri qarışdırmaq üçün hansısa maneəyə deyəndə oyunu bitirmək yerinə xalı 0 təyin etməyi yoxlayın.
+      flappy_9_2018: İşləri qarışdırmaq üçün hansısa maneəyə deyəndə oyunu bitirmək yerinə xalı 0 təyin etməyi yoxlayın.
+      grade2_MakeDogTag_3: |-
+        Bu pişik üçün evi tamamlamağa mənə kömək edin.
+      grade2_MakeDogTag_6: 'Sərbəst oyun! Nə istəyirsinizə çəkin.'
+      grade2_PuppyLoops_10: |-
+        Müəlliməm deyir ki, başladığlm işi başa çatdırmalıyam! Fır-fıramı bitirməkdə mənə kömək edin. Nəyin səhv olduğunu tapa bilərsiniz?
+      grade2_PuppyLoops_8: "Pisiyin biglari ucun olan bu kod sehvdir.\nHamisi eyni uzunluqda olan biglari cekmek ucun bu kodu duzelt."
+      grade3_Conditionals_7: Hər bir çiçəkdən bütün nektarları topla.
+      grade3_robotFarmer_ConditionalsIntro_11: 'Bayırda hələ qaranlıqdır. Məni tarladan keçirin. Əgər bir təpəcik varsa, onu yığışdırın, əgər bir çuxur varsa, onu doldurun. Məsləhət: "əgər" blokunda aşağı açılan seçim menyusundan istifadə edin.'
+      grade3_robotFarmer_ConditionalsIntro_6: Mümkün qədər az sayda blokdan istifadə etməklə bütün torpaq təpəciklərini yığışdırın. "Hələ ki" blokunun aşağı açılan menyusundaki yeni seçim imkanları mənə təpəcik və ya çuxurun üstündə dayandığımı söyləyir.
+      grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 'Mənə bütün bu çuxurları 5 kürək torpaqla doldurmaqda kömək edin. Məsləhət: siz "təkrar et" blokunu "hələ ki" blokunun içində istifadə edə bilərsiniz.'
+      grade4_bee_functions1: Hər bir çiçəkdən bütün nektarları topla.
+      grade4_bee_functions3: Funksiyalar hər hansı bir tapşırığı yerinə yetirən kodlardan ibarət blokdur. 5 nektar əldə etmək üçün "get 5" funksiyasından istifadə edin. Əlverişli blok sayı əldə etmək üçün dövrlərdən də istifadə edin.
+      grade4_frozen_functions0: Çevrə çəkmək üçün sual işarəsini hansı rəqəmlə əvəz etmək lazım olduğunu tapa bilərsinizmi?
+      grade4_review_artist1: Salam, mən rəssamam. Siz kod yazmaqla mənə, demək olar, hər şey çəkdirə bilərsiniz. Şəkildəki boz xətlərin üzərini cızmağım üçün bir neçə blokdan istifadə edin (hər xəttin uzunluğu 100 piksledir).
+      grade5_artist_binary10: İpuclarını görmək üçün buraya basın.
+      grade5_artist_binary8: Bu rəsmi bitirin.
+      scrat 16 (copy 1): Palıd qozası! Palıd qozası! Palıd qozası! Mənim oraya ən az sayda blokla çatmağım üçün "əgər" blokundan istifadə edin.
+      scrat 16: Palıd qozası! Palıd qozası! Palıd qozası! Mənim oraya ən az sayda blokla çatmağım üçün "əgər" blokundan istifadə edin.
+      scrat 17: Yaxşı, məşq üçün bunu bir daha edək - əvvəlkindən çox fərqlənmir, amma divardan ehtiyatlı olun!
+      scrat 18 (copy 1): '"Əgər-əks halda" bloku şərti yoxlayır, sonra isə bu VƏ YA digər işi yerinə yetirir. Məni palıd qozasına çatdırmaq üçün bu yeni bloku istifadə etməyə çalışın.'
+      scrat 18: '"Əgər-əks halda" bloku şərti yoxlayır, sonra isə bu VƏ YA digər işi yerinə yetirir. Məni palıd qozasına çatdırmaq üçün bu yeni bloku istifadə etməyə çalışın.'
+      scrat 19 (copy 1): "\"Əgər-əks halda\" blokunu bir daha təcrübədən keçirin, \nbirinci cəhdinizdən bunu düzgün edə bilərsinizmi?"
+      scrat 19: "\"Əgər-əks halda\" blokunu bir daha təcrübədən keçirin, \nbirinci cəhdinizdən bunu düzgün edə bilərsinizmi?"
+      scrat 20: "Cəmi 3 blok artırmaqla daha mürəkkəb labirinti keçməyimə kömək edə bilərsinizmi?\nBunu düzgün etsəniz mən uzunluğundan asılı olmayaraq istənilən əyri yolla gedə bilərəm. \nTələsin! Buz əriyir!"

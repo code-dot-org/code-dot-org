@@ -27,7 +27,7 @@
 // doesn't conflict with the footer and header that are still using
 // Bootstrap 2.2.3
 // TODO: Remove this once Dashboard is upgraded to Bootstrap 3
-#workshop-container,#application-container,#application-header {
+#workshop-container,#application-container,#application-header,#enroll-form {
   @import "bootstrap-sass/assets/stylesheets/bootstrap";
   @include buttons();
   @include user-selects(auto);

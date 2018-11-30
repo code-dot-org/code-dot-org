@@ -3,7 +3,6 @@ import {allAnimationsSingleFrameSelector} from './animationListModule';
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 import * as assetPrefix from '../assetManagement/assetPrefix';
-import {createDanceAPI, teardown} from './DanceLabP5';
 
 const defaultFrameRate = 30;
 
@@ -13,7 +12,6 @@ const defaultFrameRate = 30;
  */
 var GameLabP5 = function () {
   this.p5 = null;
-  this.danceAPI = null;
   this.p5decrementPreload = null;
   this.p5eventNames = [
     'mouseMoved', 'mouseDragged', 'mousePressed', 'mouseReleased',
@@ -141,7 +139,6 @@ GameLabP5.prototype.init = function (options) {
  * Reset GameLabP5 to its initial state. Called before each time it is used.
  */
 GameLabP5.prototype.resetExecution = function () {
-  teardown();
   gameLabSprite.setCreateWithDebug(false);
 
   if (this.p5) {
@@ -176,10 +173,16 @@ GameLabP5.prototype.drawDebugSpriteColliders = function () {
   }
 };
 
+GameLabP5.prototype.loadSound = function (url) {
+  if (this.p5 && this.p5.loadSound) {
+    return this.p5.loadSound(url);
+  }
+};
+
 /**
  * Instantiate a new p5 and start execution
  */
-GameLabP5.prototype.startExecution = function (dancelab) {
+GameLabP5.prototype.startExecution = function () {
   new window.p5(function (p5obj) {
       this.p5 = p5obj;
       // Tell p5.play that we don't want it to have Sprite do anything
@@ -187,9 +190,6 @@ GameLabP5.prototype.startExecution = function (dancelab) {
       this.p5._fixedSpriteAnimationFrameSizes = true;
 
       this.setP5FrameRate();
-      if (dancelab) {
-        this.danceAPI = createDanceAPI(this.p5);
-      }
 
       p5obj.registerPreloadMethod('gamelabPreload', window.p5.prototype);
 
@@ -459,6 +459,7 @@ GameLabP5.prototype.getCustomMarshalObjectList = function () {
     { instance: window.p5 },
     { instance: this.p5.Camera },
     { instance: this.p5.Animation },
+    { instance: this.p5.SpriteSheet },
     { instance: window.p5.Vector },
     { instance: window.p5.Color },
     { instance: window.p5.Image },
@@ -507,11 +508,6 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
   // Create a 'Game' object in the global namespace
   // to make older blocks compatible (alias to p5.World):
   propList.Game = [this.p5.World, this.p5];
-
-  if (this.danceAPI) {
-    // Create a 'Dance' object in the global namespace:
-    propList.Dance = [this.danceAPI, this];
-  }
 
   return propList;
 };

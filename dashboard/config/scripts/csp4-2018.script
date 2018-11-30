@@ -6,7 +6,6 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-18/unit4/"], ["teacherForum", "https://forum.code.org/c/csp4"], ["vocabulary", "https://curriculum.code.org/csp-18/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csp-18/unit4/standards/"], ["professionalLearning", "https://studio.code.org/s/csp4-support"]]
 has_verified_resources true
 has_lesson_plan true
-script_announcements [{"notice"=>"Join our Teacher Insights Group!  ", "details"=>"Share your experiences and get support from other teachers and our team.", "link"=>"http://teacherblog.code.org/post/176699827304/join-the-codeorg-teacher-insight-group", "type"=>"bullhorn"}]
 family_name 'csp4'
 version_year '2018'
 is_stable true

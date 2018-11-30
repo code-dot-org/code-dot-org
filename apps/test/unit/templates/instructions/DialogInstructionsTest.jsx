@@ -6,7 +6,6 @@ import {
 } from '@cdo/apps/templates/instructions/DialogInstructions';
 import Instructions from '@cdo/apps/templates/instructions/Instructions';
 import msg from '@cdo/locale';
-import processMarkdown from 'marked';
 
 const TEST_PUZZLE_NUMBER = 2;
 const TEST_STAGE_TOTAL = 5;
@@ -21,7 +20,6 @@ const SAMPLE_MARKDOWN=`
 - Point one
 - Point two
 `;
-const SAMPLE_RENDERED_MARKDOWN = processMarkdown(SAMPLE_MARKDOWN);
 const SAMPLE_IMAGE_URL="example.gif";
 
 const DEFAULT_PROPS = {
@@ -44,7 +42,7 @@ describe('DialogInstructions', () => {
         puzzleTitle={EXPECTED_PUZZLE_TITLE}
         shortInstructions={TEST_INSTRUCTIONS_1}
         instructions2={TEST_INSTRUCTIONS_2}
-        renderedMarkdown={undefined}
+        longInstructions={undefined}
         imgURL={SAMPLE_IMAGE_URL}
       />
     );
@@ -62,7 +60,7 @@ describe('DialogInstructions', () => {
         puzzleTitle={EXPECTED_PUZZLE_TITLE}
         shortInstructions={TEST_INSTRUCTIONS_1}
         instructions2={TEST_INSTRUCTIONS_2}
-        renderedMarkdown={SAMPLE_RENDERED_MARKDOWN}
+        longInstructions={SAMPLE_MARKDOWN}
         imgURL={SAMPLE_IMAGE_URL}
       />
     );
@@ -81,7 +79,7 @@ describe('DialogInstructions', () => {
         puzzleTitle={EXPECTED_PUZZLE_TITLE}
         shortInstructions={undefined}
         instructions2={undefined}
-        renderedMarkdown={undefined}
+        longInstructions={undefined}
         imgURL={SAMPLE_IMAGE_URL}
       />
     );
@@ -100,7 +98,7 @@ describe('DialogInstructions', () => {
         puzzleTitle={EXPECTED_PUZZLE_TITLE}
         shortInstructions={undefined}
         instructions2={undefined}
-        renderedMarkdown={undefined}
+        longInstructions={undefined}
         imgURL={undefined}
       />
     );

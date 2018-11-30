@@ -8,36 +8,111 @@ class MakerControllerTest < ActionController::TestCase
     @teacher = create :teacher
     @admin = create :admin
     @school = create :school
+
+    @csd_2017 = ensure_course Script::CSD_2017
+    @csd_2018 = ensure_course Script::CSD_2018
+    @csd6_2017 = ensure_script Script::CSD6_NAME
+    @csd6_2018 = ensure_script Script::CSD6_2018_NAME
   end
 
   test_redirect_to_sign_in_for :home
 
   test "home loads for student" do
-    # Fake CSD6 script for progress info
-    csd6_script = create :script, name: Script::CSD6_NAME
-    create :script_level, script: csd6_script
     sign_in @student
 
-    assert_queries 12 do
-      get :home
-    end
+    get :home
 
     assert_response :success
     assert_select '#maker-home'
   end
 
   test "home loads for teacher" do
-    # Fake CSD6 script for progress info
-    csd6_script = create :script, name: Script::CSD6_NAME
-    create :script_level, script: csd6_script
     sign_in @teacher
 
-    assert_queries 13 do
-      get :home
-    end
+    get :home
 
     assert_response :success
     assert_select '#maker-home'
+  end
+
+  test "shows CSD6-2018 when there are no relevant assignments" do
+    assert_empty @student.scripts
+    assert_empty @student.section_courses
+    assert_nil @student.user_script_with_most_recent_progress
+
+    assert_equal @csd6_2018, MakerController.maker_script(@student)
+  end
+
+  test "shows CSD6-2018 if CSD6-2018 is assigned" do
+    create :user_script, user: @student, script: @csd6_2018, assigned_at: Time.now
+    refute_includes @student.scripts, @csd6_2017
+    assert_includes @student.scripts, @csd6_2018
+
+    assert_equal @csd6_2018, MakerController.maker_script(@student)
+  end
+
+  test "shows CSD6-2017 if CSD6-2017 is assigned" do
+    create :user_script, user: @student, script: @csd6_2017, assigned_at: Time.now
+    assert_includes @student.scripts, @csd6_2017
+    refute_includes @student.scripts, @csd6_2018
+
+    assert_equal @csd6_2017, MakerController.maker_script(@student)
+  end
+
+  test "shows CSD6-2018 if both CSD6-2017 and CSD6-2018 are assigned" do
+    create :user_script, user: @student, script: @csd6_2017, assigned_at: Time.now
+    create :user_script, user: @student, script: @csd6_2018, assigned_at: Time.now
+    assert_includes @student.scripts, @csd6_2017
+    assert_includes @student.scripts, @csd6_2018
+
+    assert_equal @csd6_2018, MakerController.maker_script(@student)
+  end
+
+  test "shows CSD6-2018 if CSD-2018 is assigned" do
+    create :follower, section: create(:section, course: @csd_2018), student_user: @student
+    refute_includes @student.section_courses, @csd_2017
+    assert_includes @student.section_courses, @csd_2018
+
+    assert_equal @csd6_2018, MakerController.maker_script(@student)
+  end
+
+  test "shows CSD6-2017 if CSD-2017 is assigned" do
+    create :follower, section: create(:section, course: @csd_2017), student_user: @student
+    assert_includes @student.section_courses, @csd_2017
+    refute_includes @student.section_courses, @csd_2018
+
+    assert_equal @csd6_2017, MakerController.maker_script(@student)
+  end
+
+  test "shows CSD6-2018 if both CSD-2017 and CSD-2018 are assigned" do
+    create :follower, section: create(:section, course: @csd_2017), student_user: @student
+    create :follower, section: create(:section, course: @csd_2018), student_user: @student
+    assert_includes @student.section_courses, @csd_2017
+    assert_includes @student.section_courses, @csd_2018
+
+    assert_equal @csd6_2018, MakerController.maker_script(@student)
+  end
+
+  test "shows CSD6-2018 if both CSD6-2017 and CSD-2018 are assigned" do
+    create :user_script, user: @student, script: @csd6_2017, assigned_at: Time.now
+    create :follower, section: create(:section, course: @csd_2018), student_user: @student
+    assert_includes @student.scripts, @csd6_2017
+    refute_includes @student.section_courses, @csd_2017
+    refute_includes @student.scripts, @csd6_2018
+    assert_includes @student.section_courses, @csd_2018
+
+    assert_equal @csd6_2018, MakerController.maker_script(@student)
+  end
+
+  test "shows CSD6-2018 if both CSD-2017 and CSD6-2018 are assigned" do
+    create :follower, section: create(:section, course: @csd_2017), student_user: @student
+    create :user_script, user: @student, script: @csd6_2018, assigned_at: Time.now
+    refute_includes @student.scripts, @csd6_2017
+    assert_includes @student.section_courses, @csd_2017
+    assert_includes @student.scripts, @csd6_2018
+    refute_includes @student.section_courses, @csd_2018
+
+    assert_equal @csd6_2018, MakerController.maker_script(@student)
   end
 
   test "apply: fails if unit_6_intention not provided" do
@@ -312,5 +387,19 @@ class MakerControllerTest < ActionController::TestCase
     assert_equal expected, JSON.parse(@response.body)
 
     assert_equal 1, CircuitPlaygroundDiscountApplication.where(user_id: @teacher.id).length
+  end
+
+  private
+
+  def ensure_script(script_name)
+    Script.find_by_name(script_name) ||
+      create(:script, name: script_name).tap do |script|
+        create :script_level, script: script
+      end
+  end
+
+  def ensure_course(course_name)
+    Course.find_by_name(course_name) ||
+      create(:course, name: course_name)
   end
 end

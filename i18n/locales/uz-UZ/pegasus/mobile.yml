@@ -384,8 +384,8 @@
   dashboard_navigation_section: 'Bo‘lim: %{section_name}'
   dashboard_navigation_student: 'O‘quvchi: %{student_name}'
   dashboard_sections_new_section: "Yangi bo‘lim"
-  dashboard_sections_name: "Bo‘lim nomi"
-  dashboard_students_name: "Ismi"
+  dashboard_sections_name: 'Bo‘lim nomi'
+  dashboard_students_name: 'Ismi'
   dashboard_students_completed_levels: "O‘tilgan bosqichlar"
   dashboard_students_total_lines: "Kod satrlari"
   dashboard_students_secret_word_title: "Sirli so'z"
@@ -444,3 +444,13 @@
   flappy_shortcode: "qanot qoqmoq"
   header_courses: "Kurslar"
   header_educate_hoc: "Dasturlash soati"
+  applab_tile_start_tutorial: "Boshlash"
+  hoc_overview_start_tutorial: "Boshlash"
+  hoc2018_creativity_create: "Yaratmoq"
+  hoc2018_mc_start: "Boshlash"
+  hoc2018_mc_video_title_inspire_girl: "Qizlarni ruhlantiring"
+  hoc2018_mc_homepage_join_us: "Bizga qo'shiling"
+  hoc2018_mc_homepage_try_it: "Sinab ko‘ring"
+  hoc2018_dance_party_button: "Boshlash"
+  hoc2018_dance_teacher_resources_tile1_button: "Dars rejasi"
+  hoc2018_dance_amazon_about_future_engineer_button: "Ko‘proq bilish"

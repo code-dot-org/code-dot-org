@@ -1,0 +1,589 @@
+---
+da:
+  data:
+    long_instructions:
+      2-3 Artist 11: 'Giv stop-skiltet en ramme ved at lave en ottekant med sider
+        der er 100 pixel. '
+      2-3 Artist 3.4: Hop blokken flytter kunstneren uden at tegne. Tegn de stiplede
+        linjer ved hjælp af både hoppe- og tegneblokkene.
+      2-3 Artist 4: Hjælp mig færdigøre huset for denne kat.
+      2-3 Artist 9 NEW: Færdiggør dragen
+      2-3 Artist 9 REPLACEMENT: Færdiggør tegning af disse trapper!
+      2-3 Artist 9: Færdiggør dragen
+      2-3 Artist Debugging 10: 'Piltasterne på min konsol er for små. Tip: Gør det
+        10 pixel større'
+      2-3 Artist Debugging 11: Hjælp mig med at afslutte mit smukke snefnug. Hvor
+        mange gange skal jeg "gentage" for at færdiggøre det?
+      2-3 Artist Debugging 2: 'Koden du ser for de tre knurhår er forkert. Tip: Hvert
+        knurhår er 75 pixel lang. Ret denne kode for at tegne knurhårene.'
+      2-3 Artist Debugging 3: 'Min båd har et hul! Kan du reparere de ved at ændre
+        vinklen på linjen? Tip: den sidste vinkel er er 15 grader for stor.'
+      2-3 Artist Debugging 5: 'Koden for foden og benet, er forkert. Tip: Foden er
+        for lang, vi bliver nødt til at slette et trin (Ordspillet er med vilje)'
+      2-3 Artist Debugging 6: Det ser ud til at jeg sidder på en stol, hvor der mangler
+        et ben. Ændr blokkene for at tegne benet.
+      2-3 Artist Debugging 7: Det ser ud til at K'et i koden er tegnet baglæns. Kan
+        du få det til at ligne et K?
+      2-3 Artist Debugging 8: Min vindmølle er ikke færdig. Hvor mange gange skal
+        jeg gentage, for at lave den færdig?
+      2-3 Artist Debugging 9: "Koden til denne stilk er forkert. Tip: \nVinklen har
+        en 60 graders fejl"
+      2-3 Artist Free Play: Fri leg! Tegn lige hvad du har lyst til.
+      2-3 Artist Functions 11.5: Her er det samme "Tegne en sekskant"-funktion. Hvad
+        sker der, hvis du kun drejer 60 grader hver gang du looper?
+      2-3 Artist Functions 12 Mike: 'Funktioner er rigtig god til at tegne komplekse
+        ting flere gange. Kan du bruge funktionen "tegn en blomst" til at fylde resten
+        af plantageejer boksen  (Hint: Planterne er alle adskilt med 100 pixel længde)  '
+      2-3 Artist Functions 12 a: 'Funktioner er rigtig god til at tegne komplekse
+        ting flere gange. Kan du bruge funktionen "tegn en blomst" til at fylde resten
+        af plantageejer boksen  (Hint: Planterne er alle adskilt med 100 pixel længde)  '
+      2-3 Artist Functions 12: 'Funktioner er rigtig god til at tegne komplekse ting
+        flere gange. Kan du bruge funktionen "tegn en blomst" til at fylde resten
+        af plantageejer boksen  (Hint: Planterne er alle adskilt med 100 pixel længde)  '
+      2-3 Artist Functions 2: Funktioner lader dig definere nye blokke! Vi har flyttet
+        blokkene for at tegne en firkant til en funktion kaldet "tegn en firkant".
+        Kan du bruge "tegn en firkant"-funktionen til at lave brillerne? Firkanterne
+        er 75 pixel fra hinanden.
+      2-3 Artist Functions 3: Rediger funktionen til at tegne en firkant til en sidelængde
+        på 115 og tegn de større briller. Firkanterne er nu 45 pixel fra hinanden.
+      2-3 Artist Functions 4: Brug "gentagelsesblokken" til at tegne disse tre firkanter.
+      2-3 Artist Loops 1: Kan du afslutte cellen ved at lave en sekskant med sider
+        der er 100 pixels lang. Bemærk - det betyder at du kun behøver at dreje 60
+        grader!
+      2-3 Artist Loops New 10: Lad os forbinde en stak V'er, ved at tegne dem i en
+        løkke.
+      2-3 Artist Loops New 12: 'Tegn en diamant hvor siderne er 100 pixels lange.
+
+'
+      2-3 Artist Loops New 13: Tegn nu diamanten 3 gange i en løkke.
+      2-3 Artist Loops New 2: "Her er noget af den kode du brugte til at tegne kvadratet.
+        \nHvad sker der mon hvis du bruger gentageblokken til at køre denne kode 4
+        gange?"
+      2-3 Artist Loops New 9: "Tegn et simpelt V hvor begge sider er \n50 pixels for
+        at færdiggøre pilen."
+      2-3 Artist Nested Loops 10: Gentag denne kode 12 gange for at gøre mønsteret
+        færdigt.
+      2-3 Artist Nested Loops 11: |-
+        Gentag denne kode 4 gange for at fuldføre
+        mønstret, drej 90 grader efter hver omgang.
+      2-3 Artist Nested Loops 12: Gentag 12 gange for at afslutte krøllerne.
+      2-3 Artist Nested Loops 2: Nu skal du loope trekanten 6 gange. Efter hver trekant
+        skal du dreje 60 grader før du tegner en ny.
+      2-3 Artist Nested Loops 4: 'Gentag denne rombe 12 gange for at tegne en blomst.
+        Tip: 12 romber er ligesom de 12 trekanter du lavede før - Hvor mange grader
+        skal du mon dreje efter hver form/figur?'
+      2-3 Artist Nested Loops 5: Udfyld denne bygnings vinduer ved hjælp af en fastgjort
+        løkke. Vinduerne er 20 pixels brede. Afstanden imellem vinduerne er 20 pixels.
+      2-3 Artist Nested Loops 7: Gentag denne trekant i en løkke 10 gange for at tegne
+        solen. Husk at rykke fremad og dreje efter hver trekant. Du kan regne ud,
+        hvor meget du skal dreje ved at dividere gradtallet af en cirkel (360) med
+        antallet af figurer du vil bruge for at skabe solen.
+      2-3 Artist Nested Loops 8: |-
+        Lad os tilføje lidt græs til billedet.
+        Hvert stykke græs er 50 pixel fra hinanden.
+      2-3 Artist Nested Loops 9: |-
+        Vi vil færdiggøre dette billede ved at tilføje en blomst.
+        Gentag diamanten 12 gange for at tegne blomsten.
+      2-3 Artist Nested Loops Free Play: Fri leg, tegn noget sejt hvor du bruger flere
+        løkker indeni hinanden.
+      2-3 Bee Conditionals 11: Hent nektar når blomsterne har noget.
+      2-3 Bee Conditionals 13: 'Saml nektar og lav honning. Tip: Hvad mon der sker,
+        hvis du benytter "hvis nektar"-blokken på en rød blomst? Kan du gøre den færdig
+        med en løkke?'
+      2-3 Bee Conditionals 15: Saml nektaren fra alle fire blomster.
+      2-3 Bee Conditionals 3: Hjælp mig med at samle al nektaren fra blomsterne og
+        lave honning af den. Brug en løkke.
+      2-3 Bee Debugging 3: Disse blokke irriterer mig virkelig. Ret fejlen(e) for
+        at samle al nektaren og lave al honningen.
+      2-3 Bee Debugging 6: Disse blokke irriterer mig virkelig. Ret fejlen(e) for
+        at samle al nektaren og lave al honningen.
+      2-3 Bee Debugging 9: Disse blokke irriterer mig virkelig. Ret fejlen(e) for
+        at samle al nektaren og lave al honningen.
+      2-3 Bee Functions 10: "Lilla blomster kan have enten 1 eller 0 nektar. Lav en
+        funktion, \nsom kun samler nektar fra de lilla blomster, som har nektar."
+      2-3 Bee Functions 2: Funktioner er blokke/klodser af code som udfører en arbejdsopgave.
+        Brug "saml 5"-funktionen for at samle nektar fra 5 blomster ad gangen. Husk
+        at bruge en løkke-blok/klods, for at bruge et minimum af blokke/klodser.
+      2-3 Bee Functions 4: Funktionen "flytte og få nektar" vender bien, indsamler
+        nektar, og returnerer derefter bien til hvor den startede. Brug funktionen
+        til at samle alt nektaren.
+      2-3 Bee Loops 1: 'Hver blomst indeholder én portion nektar. Hent nektar fra
+        alle blomsterne. '
+      2-3 Bee Loops 3A: Kan du bruge en løkke til at indsamle al nektaren?
+      2-3 Bee Loops 3B: Brug gentag-blokken til både at samle al nektaren og lave
+        honning.
+      2-3 Bee Loops 4A: Hvad sker der hvis du gentager denne sekvens 3 gange? Glem
+        ikke at lave honning til sidst!
+      2-3 Bee Loops 8: Disse lilla blomster har en ukendt mængde nektar. Brug "mens
+        nektar løkke" til at indsamle alt nektaren. Denne løkke vil køre så længe
+        betingelsen er sand, i dette tilfælde nektar > 0.
+      2-3 Maze 15: Bruge to løkker til at komme hen til grisen med færre blokke.
+      2-3 Maze Loops 18: Få mig til solsikken!
+      4-5 Artist 10: Tryk på "Kør" for at prøve koden. Derefter gentag det nok gange
+        til at fuldføre tegningen. Farverne bliver anderledes hver gang.
+      4-5 Artist 2: Kan du gentage denne kode for at fuldføre firkanten?
+      4-5 Artist 5: Hvad vinkel bruger du?
+      4-5 Artist 6: Denne ligesidet trekant har vinkler på 60, 60 og 60 grader. Hver
+        side er 200 pixels. Færdigør tegningen.
+      4-5 Artist Free Draw 1: Fri tegning!  Tegn lige det du føler dig inspireret
+        til at skabe.
+      4-5 Artist Patterns 1: Kan du tegne denne firkant ved hjælp af en løkke? Hver
+        side er 20 pixels lang.
+      4-5 Artist Patterns 12: Hvis du kopierer denne løkke og drejer til venstre i
+        stedet for højre, hvad der sker så? Kan du gentage det for at tegne denne
+        bølge?
+      4-5 Artist Patterns 13: Lad os nu gentage det hele fire gange for at oprette
+        denne billedramme. Hold øje med hjørnerne - du ikke kan bare dreje 90 grader!
+        Hvis 60 gentagende 3 graders drej giver en halv cirkel, hvilke af disse blokke
+        af kode vil lave en kvart cirkel til hjørnerne?
+      4-5 Artist Patterns 3: Lad os nu gå et niveau dybere! Vi har indlejret hele
+        blokken af kode inde i en anden løkke, men du skal få kunstneren tilbage på
+        plads for at trække den næste linje. Hvilke af disse kodeblokke kan du placere
+        i slutningen af den yderste loop for at tegne hele nettet?
+      4-5 Artist Patterns 8: Brug en løkke til at tegne denne sekskant med 40 pixels
+        sider og 60 graders vinkler.
+      4-5 Artist Patterns 9: Gentag nu koden 3 gange for at tegne hele rækken. Tip,
+        hver sekskant er 80 pixels bred fra længst punkterne til venstre mod højre.
+      4-5 Artist Patterns Free Play: Fri leg - prøv at lave dit eget mønster!
+      4-5 Bee Conditionals 2: Bien ønsker kun nektar lige nu. Alle objekter er ikke
+        blomster, så tjek nedenunder hver sky for at se hvis den gemmer en blomst.
+        Hvis der er, kan du samle nektar.
+      4-5 Bee Conditionals 5: Der kan være en blomst eller en honning celle under
+        disse skyer. Brug hvis/ellers blokken for at samle nektar hvis der er en blomst,
+        ellers lav honning (fordi det så er en honning celle).
+      4-5 Bee Conditionals 6: Denne lilla blomst kan have 3, 2 eller 1 nektar. Her
+        er en hvis-ellers blok kombineret med en anden hvis-ellers blok for at oprette
+        en "hvis, ellers-hvis, ellers" blok. Færdiggør løsning til at indsamle den
+        ukendte mængde nektar.
+      4-5 Bee Conditionals 7: Husk at lilla blomster kan have 3, 2 eller 1 nektar.
+        Færdiggør funktionen "tjek lilla blomst" og bruge det til at samle alt nektaren
+        på blomsterne.
+      4-5 Bee Conditionals 8: Skrive inde i funktionen "tjek blomst lave honning".
+        Din funktion bør tjekke hvis den lilla blomst har 3, 2 eller 1 nektar og indsamle
+        alt nektaren. Derefter, gå videre og lav honning.
+      4-5 Bee Conditionals Assessment 1: 'Vurdering: Denne kode er forkert. Færdiggør
+        funktionen "saml nektar eller lav honning", kald den derefter for at indsamle
+        alt nektar og honning. Husk at lilla blomster kan have 3, 2 eller 1 nektar.'
+      4-5 Bee Debugging 1: Disse blokke driller mig virkelig. Kan du lave dem?
+      4-5 Bee Debugging 6: Den lilla blomst har en ukendt mængde nektar. Reparere
+        blokkene for at få alt nektaren fra blomsten.
+      4-5 Bee Nested Loops 4: 'Indsaml al nektar fra alle blomster, og lav honning
+        i alle bikuber. Brug indlejrede løkker. '
+      4-5 Bee Nested Loops Assessment 1: "** Vurdering: ** Saml al nektaren og lav
+        al honningen ved hjælp af løkker."
+      4-5 Nested Loops 9: Tegn tænderne i alligatorens mund!
+      Artist Autorun Test: Brug "gentagelsesblokken" til at tegne disse tre firkanter.
+      Dance_Party_extras_battle: |-
+        # Dansegrupper
+
+        Her er en dansekonkurrence mellem to grupper. Piletasterne styrer en af danserne, og tasterne "w, a, s, d" kontrollere den anden. Dans mod en ven, og gør det endnu bedre i en revanche.
+
+        *Tilføj flere taster for at kontrollere dansene
+        *Få også baggrundsdanserne til at reagere, når der trykkes på tasterne
+        *Forandr danseren hver 4. takt ved at indstille deres synlighed
+      Dance_Party_extras_every_beat: |-
+        # Fjerdedelsnoder
+
+        De fleste af vores danse bruger hele takter, men hver takt består af 4 fjerdedelsnoder. Denne dans bruger 'den enkelte 0,25-takt' til at få danseren til at klappe ved hver fjerdedelsnode.
+
+        Denne dans bruger også blokken _betingelse_ til at styre, hvornår blokken 'den enkelte 0,25-takt' skal ændre dansen. Prøv at ændre tallene i 'betinget'-blokken for at se, hvordan det ændrer dansen.
+
+        *Eksperimentér med andre noder (såsom 0,5 for en halvnode eller 0,125 for en ottendedelsnode).
+        *Tilføj nogle 'eftertakt'-hændelser.
+        *Skift takter ud med sekunder, og prøv at time dine danse på den måde.
+      Dance_Party_extras_layout: |-
+        # Lad os tage stilling!
+
+        Tjek denne dans, der bruger blokken 'layout' til at ændre baggrundsdansernes stilling igennem dansen. Prøv en af disse ideer til at udvidde projektet:
+
+        *Opret en anden gruppe dansere i et andet layout
+        *Skift layout, når der trykkes på en tast
+        *Skift en egenskab, når danserne ændrer stilling
+      Dance_Party_extras_on_beat: |-
+        # Lav, medio og høj
+
+        Denne dans bruger "peak"-hændelser til at udløse kode, når forskellige dele af musikken bliver høj. Prøv dig frem med forskellige sange for at se, hvordan de ændrer dansen.
+      Dance_Party_extras_speed: |-
+        # Sæt fart på, sænk farten
+
+        Denne sidste dans bruger blokken 'sæt hastighed' til at styre, hvor hurtigt hver danser bevæger sig. Prøv at eksperimentere med forskellige hastigheder på forskellige steder i sangen. Det er helt i orden at prøve sig lidt frem i denne dans, eller vend tilbage til en af de tidligere danse for at gøre dem endnu sejere.
+      Dance_Party_extras_visible: |-
+        # Hvor forsvandt de hen?
+
+        Denne dans viser og skjuler to forskellige dansegrupper. Tjek det ud, og giv det derefter dit eget udtryk.
+
+        *Tilføj en anden gruppe dansere
+        *Vis og skjul dansere ved hjælp af piletasterne
+        *Skjul alle danserne, og skift til en spændende baggrundseffekt
+      Function intro Ryan: "Du har en **funktion**, der hedder \"byg bro\" i dit arbejdsområde.
+        \ Den indeholder al den nødvendige kode til at komme over floden! \r\n \r\nKlik
+        den lille grønne blok ind i dit arbejdsområde to gange for at bygge en vej
+        hen til redstone-faklen [redstone_torch] for {currentPlayerName}."
+      Function intro Ryan_2019: "Du har en **funktion**, der hedder \"byg bro\" i
+        dit arbejdsområde.  Den indeholder al den nødvendige kode til at komme over
+        floden! \r\n \r\nKlik den lille grønne blok ind i dit arbejdsområde to gange
+        for at bygge en vej hen til redstone-faklen [redstone_torch] for {currentPlayerName}."
+      K-1 Maze Loops 11: Få mig hen til grisen! Brug gentag-blokken.
+      K-1 Maze Loops 12: Få mig hen til grisen! Brug gentag-blokken.
+      K-1 Maze Loops 2: Brug gentag-blokken for at få mig hen til grisen!
+      K-1 Maze Loops 8: Få mig hen til grisen! Brug gentag-blokken.
+      MC Agent Freeplay: "**Fri leg:** Nu er det op til dig! Brug agentens kode til
+        at hjælpe dig med at udforske verden."
+      MC_HOC_2017 Agent Test: "Klik på \"Kør\", så du kan flytte spilleren med **piletasterne**.
+        \ \r\n\r\nDu løser opgaven ved at nå frem til døren og åbne den (med **mellemrumstasten**),
+        så du kan komme ind til det orange felt indenfor."
+      MC_HOC_2017_01: "Klik på \"Kør\", så du kan flytte spilleren med **piletasterne**.
+        \ \r\n\r\nDu løser opgaven ved at nå frem til døren og åbne den (med **mellemrumstasten**),
+        så du kan komme ind til det orange felt indenfor."
+      MC_HOC_2017_01_Cole: Du skal indsamle alt værktøjet på rejsen. Bevæg dig rundt
+        med **piletasterne**, og nå frem til kisten på stien for at vinde
+      MC_HOC_2017_01_Kiki: 'Du kommer i gang ved at klikke på den orange "Kør" knap
+        neden for spilleområdet. Derefter kan du flytte spilleren rundt med **piletasterne**.  '
+      MC_HOC_2017_01_RETRY: "{currentPlayerName} er fanget inde i huset, men heldigvis
+        er agenten klar til at hjælpe!   \r\n \r\n   \r\nKlik en \"gå fremad\" blok
+        på \"ved kør\" blokken i arbejdsområdet for at få agenten til at gå hen til
+        trykpladen [PressurePlate_Up]. Tryk derefter på \"Kør\", og brug piletasterne
+        til at flytte {currentPlayerName} ud af huset og hen til **kisten** [chest].
+        \ "
+      MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} er fanget inde i huset, men
+        heldigvis er agenten klar til at hjælpe!   \r\n \r\n   \r\nKlik en \"gå fremad\"
+        blok på \"ved kør\" blokken i arbejdsområdet for at få agenten til at gå hen
+        til trykpladen [PressurePlate_Up]. Tryk derefter på \"Kør\", og brug piletasterne
+        til at flytte {currentPlayerName} ud af huset og hen til **kisten** [chest].
+        \ "
+      MC_HOC_2017_02: Spilleren skal ind i den hemmelige lund.  Hjælp agenten med
+        at åbne porten ved at skrive kode, der hjælper den hen til trykpladen.
+      MC_HOC_2017_02_Cole: "{currentPlayerName} er på vej på eventyr! **Kortet** [map_empty]
+        bag den låste dør til højre vil være en stor hjælp. \r\n \r\nKlik kode ind
+        i arbejdsområdet, så agenten bevæger sig hen til trykpladen [PressurePlate_Up]
+        og åbner op for {currentPlayerName}. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} er på vej på eventyr! **Kortet**
+        [map_empty] bag den låste dør til højre vil være en stor hjælp. \r\n \r\nKlik
+        kode ind i arbejdsområdet, så agenten bevæger sig hen til trykpladen [PressurePlate_Up]
+        og åbner op for {currentPlayerName}. "
+      MC_HOC_2017_02_Kiki: "Spilleren er på vej på eventyr, men først gælder det faklen,
+        der er skjult bag den låste dør. \r\n\r\nProgrammér agenten til gå fremad
+        to gange på den hvide sti, så den når frem til trykpladen og åbner døren for
+        spilleren."
+      MC_HOC_2017_02_Will: "Opgaven er løst, når spilleren står på det orange felt
+        i den hemmelige lund bag den låste dør.  \r\n\r\nKoden i arbejdsområdet får
+        agenten til at gå fremad to gange, så den når trykpladen og åbner døren for
+        Alex eller Steve."
+      MC_HOC_2017_03_Cole: "{currentPlayerName} fortsætter sit eventyr og har nu brug
+        for **kompasset** [compass] til turen.  \r\n   \r\nKod agenten til at åbne
+        porten. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} fortsætter sit eventyr og har
+        nu brug for **kompasset** [compass] til turen.  \r\n   \r\nKod agenten til
+        at åbne porten. "
+      MC_HOC_2017_03_Kiki: "Spillerens eventyr begynder i den hemmelige lund bag den
+        låste dør!  \r\n\r\n\r\nHjælp agenten med at åbne døren ved at skrive kode,
+        der får den hen til trykpladen."
+      MC_HOC_2017_04: Rediger loopet fra den seneste opgave, så agenten nu bygger
+        en vej hen over den bredere del af floden.
+      MC_HOC_2017_04POINT5_Cole: "Du slap ud af sumpen!  Nu gælder det om at få spilleren
+        sikkert frem til det orange felt. \n\n\nHjælp agenten med at rydde vejen ved
+        at finde et simpelt mønster og bruge loop til at krydse de første to trykplader."
+      MC_HOC_2017_04POINT5_RYAN: "Du slap over! \r\n\r\nNu gælder det om at få {currentPlayerName}
+        sikkert igennem labyrinten og hen til **øksen** [diamond_axe]\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Du slap over! \r\n\r\nNu gælder det om at få
+        {currentPlayerName} sikkert igennem labyrinten og hen til **øksen** [diamond_axe]\r\n"
+      MC_HOC_2017_04_Cole: "Agenten kan bevæge sig over vand!  \r\n \r\nLøs opgaven
+        med et gentagelsesloop, så {currentPlayerName} kan nå fem til **spanden**
+        [bucket_empty] bag ved døren. "
+      MC_HOC_2017_04_Cole_2019: "Agenten kan bevæge sig over vand!  \r\n \r\nLøs opgaven
+        med et gentagelsesloop, så {currentPlayerName} kan nå fem til **spanden**
+        [bucket_empty] bag ved døren. "
+      MC_HOC_2017_04_Kiki: "Indgangen til den hemmelige lund førte til denne vidunderlige
+        oase!  Du løser opgaven ved at få spilleren hen til det orange felt i hytten.
+        \ \r\n\r\nBrug et gentagelsesloop til at hjælpe agenten hele vejen op til
+        trykpladen, der åbner døren til hytten."
+      MC_HOC_2017_05: "Loop er ikke altid det rigtige. \n\n\nKaktusserne her gror
+        f.eks. ikke i noget indlysende mønster, så det vil være temmelig svært at
+        fjerne dem med et loop.  I stedet får du funktionen \"ødelæg og gå\" til at
+        klare det hårde arbejde for dig, når agenten støder ind i en forhindring."
+      MC_HOC_2017_05_Cole: "Åh nej, broen er væk! \r\n\r\nKod agenten til at genopbygge
+        broen med \"placer\" blokken, så {currentPlayerName} kan nå frem til **skovlen**
+        [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "Åh nej, broen er væk! \r\n\r\nKod agenten til at
+        genopbygge broen med \"placer\" blokken, så {currentPlayerName} kan nå frem
+        til **skovlen** [diamond_shovel]."
+      MC_HOC_2017_05_Josh: "Åh nej, broen er væk! \n\n\nHjælp agenten med at genopbygge
+        broen, så spilleren kan nå frem til **skovlen**."
+      MC_HOC_2017_05_Kiki: "Spilleren er klar til at forlade den hemmelige lund og
+        fortsætte eventyret, men broen er væk! \r\n\r\nHjælp agenten med at genopbygge
+        broen og gå hen til træplanken, så spilleren kan nå frem til det orange felt."
+      MC_HOC_2017_06_Cole: "Endnu en flod – og den er meget bredere! \r\n \r\nRet
+        koden, så agenten bygger en bro, der kan hjælpe {currentPlayerName} over til
+        **hakken** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2019: "Endnu en flod – og den er meget bredere! \r\n \r\nRet
+        koden, så agenten bygger en bro, der kan hjælpe {currentPlayerName} over til
+        **hakken** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Josh: "Endnu en flod – og den er meget bredere!  \r\n\r\nRet
+        koden, så agenten bygger en bro over floden."
+      MC_HOC_2017_06_Kiki: "Endnu en flod – og den er meget bredere!  \r\n\r\nRet
+        koden, så agenten bygger en bro over vandet."
+      MC_HOC_2017_07_Cole: "Der er is i vejen!  \r\n \r\n\"Ryd vej\" funktionen kan
+        hjælpe dig med at ødelægge isen, så {currentPlayerName} kan nå hen til minevognen
+        [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2019: "Der er is i vejen!  \r\n \r\n\"Ryd vej\" funktionen
+        kan hjælpe dig med at ødelægge isen, så {currentPlayerName} kan nå hen til
+        minevognen [minecart_normal]! "
+      MC_HOC_2017_07_Kiki: "Loop er ikke den eneste måde at gentage kode på!  \r\n\r\nHer
+        giver vi dig funktionen \"fjern kaktusser\", der fælder tre kaktusser, hver
+        gang du bruger den.  Brug to \"fjern kaktusser\" blokke til at rydde vejen
+        til det orange felt. "
+      MC_HOC_2017_07a_Kiki: Rediger nu det aktuelle loop, så agenten rydder vejen
+        hen til det orange felt.
+      MC_HOC_2017_08_Cole: "I stedet for at ødelægge, før du går, skal du nu placere
+        en blok.  \r\n\r\nRet funktionen, så den virker i ørkenen."
+      MC_HOC_2017_08_Kiki: "I stedet for at ødelægge kaktusser skal du nu placere
+        sten over lava og derefter ødelægge sandsten.  \r\n\r\nRet funktionen, så
+        den virker i den aktuelle opgave."
+      MC_HOC_2017_08_RY: "Nu har du **TO** funktioner at vælge imellem! \n\n\nBrug
+        funktionerne til at bygge en bro hen over lavaen for {currentPlayerName} i
+        en fart."
+      MC_HOC_2017_08_Will: "Nu har du **TO** funktioner at vælge imellem! \n\n\nBrug
+        funktionerne til at bygge en bro hen over lavaen for spilleren i en fart."
+      MC_HOC_2017_09_Cole: Brug funktionerne til at hjælpe agenten med at ødelægge
+        de enorme jordblokke, der blokerer spillerens vej til trykpladen.
+      MC_HOC_2017_09_Kiki: "Startkoden kan ikke fjernes.\r\n\r\nTilføj kommandoer
+        til \"anlæg spor\" funktionen, så programmet i arbejdsområdet får agenten
+        frem til trykpladen. "
+      MC_HOC_2017_09_RS_CLONE: Ret funktionen, så hullerne udfyldes, og træd derefter
+        på trykpladen, så du rydder vejen til faklen.
+      MC_HOC_2017_10_Cole: Brug funktionerne til at rydde vejen for minevognen, og
+        gå derefter ind i Nether-portalen.
+      MC_HOC_2017_10_Cole_old: Byg en funktion fra bunden, der gør det lettere for
+        at agenten at færdiggøre minevognen og få spilleren hen til det orange felt.
+      MC_HOC_2017_10_Kiki: Byg en funktion fra bunden, der gør det lettere for at
+        agenten at færdiggøre minevognen og få spilleren hen til det orange felt.
+      MC_HOC_2017_10_RETRY: "Kan du se forskellen mellem de to funktioner i dit arbejdsområde?
+        \r\n \r\nKombiner funktionerne med andre koder fra værktøjskassen, så du kan
+        rydde vejen for minevognen og få fat i **fyrtøjet** [flint_and_steel]. \r\n "
+      MC_HOC_2017_10_RETRY_2019: "Kan du se forskellen mellem de to funktioner i dit
+        arbejdsområde? \r\n \r\nKombiner funktionerne med andre koder fra værktøjskassen,
+        så du kan rydde vejen for minevognen og få fat i **fyrtøjet** [flint_and_steel].
+        \r\n "
+      MC_HOC_2017_10_RYAN: Prøv at bygge funktioner fra bunden, der gør det lettere
+        for at agenten at færdiggøre minevognen og få spilleren hen til det orange
+        felt.
+      MC_HOC_2017_10_RYAN2: Prøv at bygge funktioner fra bunden, der gør det lettere
+        for at agenten at færdiggøre minevognen og få spilleren hen til det orange
+        felt.
+      MC_HOC_2017_11_Kiki: Nu er det op til dig! Se, hvad du kan bygge rundt om den
+        tilfrosne sø.
+      MC_HOC_2017_13_Cole: "**Fri leg:** Nu er det op til dig! Brug agentens kode
+        til at hjælpe dig med at udforske verden."
+      MC_HOC_2017_4.5v2: "Du slap ud af sumpen!  Nu gælder det om at få spilleren
+        sikkert frem til det orange felt. \n\n\nHjælp agenten med at rydde vejen ved
+        at finde et simpelt mønster og bruge loop til at krydse de første to trykplader."
+      MC_HOC_2017_Ali: 'Se på funktionerne nedenfor.  Hvordan kan du bruge dem til
+        at undgå ghasterne og hjælpe {currentPlayerName} sikkert frem til den **fortryllede
+        bog** [book_enchanted]?  '
+      MC_HOC_2017_Ali_2019: 'Se på funktionerne nedenfor.  Hvordan kan du bruge dem
+        til at undgå ghasterne og hjælpe {currentPlayerName} sikkert frem til den
+        **fortryllede bog** [book_enchanted]?  '
+      MC_HOC_2017_FP10x10: "**Fri leg:** Nu er det op til dig! Tør du udfordre dig
+        selv til at finde alle diamanterne på kortet? "
+      MC_HOC_2017_FP10x10_RE: "**Fri leg:** Nu er det op til dig! Tør du udfordre
+        dig selv til at finde alle diamanterne på kortet? "
+      MC_HOC_2017_FP20x20: "**Fri leg:** Nu er det op til dig! Brug agentens kode
+        til at hjælpe dig med at udforske verden."
+      MC_HOC_2017_FP20x20_2019: "**Fri leg:** Nu er det op til dig! Brug agentens
+        kode til at hjælpe dig med at udforske verden."
+      MC_HOC_2017_Ryan_03: "Har du opdaget, at der kan være mere end ét kodestykke
+        i et loop?  \r\n\r\nBrug et gentagelsesloop til at hjælpe agenten med at bygge
+        en bro ved at placere blokke i vandet."
+      MC_HOC_2017_Ryan_05: "Nogle gange er du nødt til at fjerne ting, der står i
+        vejen for din spiller.  \r\nBrug \"ødelæg\" blokken til at fælde alle kaktusserne
+        mellem agenten og trykpladen."
+      MC_HOC_Kiki_02: Nogen skal stå på trykpladen, hvis sidedøren skal åbnes.  Hjælp
+        agenten hen til pladen, så spilleren kan komme ud af huset.
+      New Minecraft Hero Project: "**Fri leg:** Nu er det op til dig! Brug agentens
+        kode til at hjælpe dig med at udforske verden."
+      Overworld Move to Sheep: Tilføje en "flyt fremad"-blok mere for at komme hen
+        til fårene.
+      Overworld Move to Sheep_2018: Tilføje en "flyt fremad"-blok mere for at komme
+        hen til fårene.
+      Overworld Move to Sheep_2019: Tilføje en "flyt fremad"-blok mere for at komme
+        hen til fårene.
+      course4_artist_fwp_challenge1: Prøv at køre dette program, og foretag ændringer
+        for at se hvad der sker. Kan du finde ud af hvordan det virker? (Ellers slet
+        det og erstat det med noget helt andet)
+      courseD_bee_nestedLoops5: 'Indsaml al nektar fra alle blomster, og lav honning
+        i alle bikuber. Brug indlejrede løkker. '
+      courseD_bee_nestedLoops8: 'Indsaml al nektar fra alle blomster, og lav honning
+        i alle bikuber. Brug indlejrede løkker. '
+      courseD_bee_nestedLoops8_2018: 'Indsaml al nektar fra alle blomster, og lav
+        honning i alle bikuber. Brug indlejrede løkker. '
+      courseD_bee_nestedLoops8_2019: 'Indsaml al nektar fra alle blomster, og lav
+        honning i alle bikuber. Brug indlejrede løkker. '
+      courseD_maze_nestedLoops4: Få mig til solsikken!
+      courseD_maze_nestedLoops4_2018: Få mig til solsikken!
+      courseD_maze_nestedLoops4_2019: Få mig til solsikken!
+      courseE_bee_functions3: Funktioner er blokke/klodser af code som udfører en
+        arbejdsopgave. Brug "saml 5"-funktionen for at samle nektar fra 5 blomster
+        ad gangen. Husk at bruge en løkke-blok/klods, for at bruge et minimum af blokke/klodser.
+      courseE_bee_functions3_2018: Funktioner er blokke/klodser af code som udfører
+        en arbejdsopgave. Brug "saml 5"-funktionen for at samle nektar fra 5 blomster
+        ad gangen. Husk at bruge en løkke-blok/klods, for at bruge et minimum af blokke/klodser.
+      courseE_farmer_concept4: Lad os nu gå et niveau dybere! Vi har indlejret hele
+        blokken af kode inde i en anden løkke, men du skal få kunstneren tilbage på
+        plads for at trække den næste linje. Hvilke af disse kodeblokke kan du placere
+        i slutningen af den yderste loop for at tegne hele nettet?
+      frozen circle function in circle: Lad os nu lave 20 overlappende cirkler mens
+        vi drejer 18 grader mellem hver cirkel.
+      frozen circle function with parameter: Her er en "Lav cirkel" blok, der laver
+        cirkler af forskellig størrelse. Kan du bruge den til at lave en lille cirkel
+        med størrelse 5 og en stor cirkel med størrelse 10?
+      frozen circle function: Brug den nye "Lav cirkel" blok til at lave 10 overlappende
+        cirkler. Husk at gå fremad mellem cirklerne.
+      frozen circle: En cirkel er en speciel form. Kan du regne ud hvilket tal der
+        skal stå i stedet for spørgsmåls tegnene for at tegne en cirkel?
+      frozen cross rotate dense: 'Lad os gentage det 90 gange! Hvor mange gange går
+        90 op i 360? Tip: Det er et virkeligt lille tal.'
+      frozen cross rotate: Prøv nu at gentage det 10 gange. Hvor mange grader skal
+        du dreje mellem hver linje?
+      frozen cross: Pak en "Gentag" blok rundt om disse kommandoer for at lave et
+        plustegn. Lagde du mærke til at Elsa kan flytte frem og tilbage?
+      frozen diamond mini snowflake: Vidste du at alle snefnug har forskellig form?
+        Lad os skabe et nyt snefnug ved hjælp af "Gentag" blokken, for at gentage
+        et parallelogram 4 gange, og dreje 90 grader mellem hvert parallelogram.
+      frozen diamond snowflake: Lad os nu lave et nyt snefnug ved at bruge gentag
+        blokken til at gentage et parallelogram 10 gange og dreje 36 grader til højre
+        mellem hver.
+      frozen diamond: Brug en gentagelse omkring disse blokke til at oprette et parallelogram.
+        Det er ligesom et rektangel, men har forskellige vinkler. Denne ene har 60
+        grader og 120 graders vinkler i stedet for alle 90 graders vinkler.
+      frozen freeplay: Du er nu officielt en stor kunstner! Lav et vinterdrømmeland.
+      frozen perpendicular: Nu lad os se om vi kan lave to linjer der er i en 90 graders
+        vinkel til hinanden. Du skal bruge "Drej" og "Flyt" blokkene.
+      frozen snowflake branch: Prøv at bruge blokken, "Lav en snefnug-gren", for at
+        lave 3 grene, der nu begynder at ligne et snefnug.
+      frozen snowflake full: Lad os nu gentage det 8 gange for at lave et smukt snefnug!
+      frozen snowflower: Indviklede mønstre kan være laves af meget enkle former.
+        Kan du lave et mønster ved at gentagne 5 cirkler af størrelsen 5 og 5 cirkler
+        af størrelsen 10?
+      frozen square iterative: Det ser ud som om vi er halvvejs fra at have lavet
+        en firkant (kvadrat). Lad os sætte 4 linjer sammen til en hel firkant (kvadrat).
+      frozen square loop 3x: Lad os lave tre kvadrater, og dreje efter hvert kvadrat.
+        Sørg for at at dreje 120 grader før hvert nyt kvadrat.
+      frozen square loop: Hej, er jeg Anna af Arendelle! Lad os lave et kvadrat med
+        "Gentagelse" blokken, som bruger færre blokke. Hvor mange gange skal "Gentagelse"
+        blokken, gentage blokkene indeni for at lave en firkant?
+      frozen square snowflake: Kan du lave et snefnug, ved at bruge "Gentagelse" blokken
+        og lave en firkant 10 gange. Og ved at bruge "Dreje" blokken for at dreje
+        36 grader mellem hvert kvadrat?
+      grade2_MakeDogTag_8: Lad os forbinde en stak V'er, ved at tegne dem i en løkke.
+      grade2_PuppyLoops_10: Min vindmølle er ikke færdig. Hvor mange gange skal jeg
+        gentage, for at lave den færdig?
+      grade2_PuppyLoops_4: Bruge to løkker til at komme hen til grisen med færre blokke.
+      grade2_PuppyLoops_8: 'Koden du ser for de tre knurhår er forkert. Tip: Hvert
+        knurhår er 75 pixel lang. Ret denne kode for at tegne knurhårene.'
+      grade2_PuppyLoops_9: Det ser ud til at K'et i koden er tegnet baglæns. Kan du
+        få det til at ligne et K?
+      grade2_puppy_loops4: Bruge to løkker til at komme hen til grisen med færre blokke.
+      grade3_ConditionalsElse_2: Bien ønsker kun nektar lige nu. Alle objekter er
+        ikke blomster, så tjek nedenunder hver sky for at se hvis den gemmer en blomst.
+        Hvis der er, kan du samle nektar.
+      grade3_ConditionalsElse_5: Der kan være en blomst eller en honning celle under
+        disse skyer. Brug hvis/ellers blokken for at samle nektar hvis der er en blomst,
+        ellers lav honning (fordi det så er en honning celle).
+      grade3_ConditionalsElse_6: Denne lilla blomst kan have 3, 2 eller 1 nektar.
+        Her er en hvis-ellers blok kombineret med en anden hvis-ellers blok for at
+        oprette en "hvis, ellers-hvis, ellers" blok. Færdiggør løsning til at indsamle
+        den ukendte mængde nektar.
+      grade3_ConditionalsElse_7: Husk at lilla blomster kan have 3, 2 eller 1 nektar.
+        Færdiggør funktionen "tjek lilla blomst" og bruge det til at samle alt nektaren
+        på blomsterne.
+      grade3_ConditionalsElse_8: Skrive inde i funktionen "tjek blomst lave honning".
+        Din funktion bør tjekke hvis den lilla blomst har 3, 2 eller 1 nektar og indsamle
+        alt nektaren. Derefter, gå videre og lav honning.
+      grade3_ConditionalsElse_9: 'Vurdering: Denne kode er forkert. Færdiggør funktionen
+        "saml nektar eller lav honning", kald den derefter for at indsamle alt nektar
+        og honning. Husk at lilla blomster kan have 3, 2 eller 1 nektar.'
+      grade3_ConditionalsElse_TeacherIDo: Der kan være en blomst eller en honning
+        celle under disse skyer. Brug hvis/ellers blokken for at samle nektar hvis
+        der er en blomst, ellers lav honning (fordi det så er en honning celle).
+      grade3_Conditionals_10: 'Saml nektar og lav honning. Tip: Hvad mon der sker,
+        hvis du benytter "hvis nektar"-blokken på en rød blomst? Kan du gøre den færdig
+        med en løkke?'
+      grade3_Conditionals_12: Saml nektaren fra alle fire blomster.
+      grade3_Conditionals_2: Hjælp mig med at samle al nektaren fra blomsterne og
+        lave honning af den. Brug en løkke.
+      grade3_Conditionals_8: Hent nektar når blomsterne har noget.
+      grade3_Debugging_6: Disse blokke irriterer mig virkelig. Ret fejlen(e) for at
+        samle al nektaren og lave al honningen.
+      grade3_Debugging_9: Disse blokke irriterer mig virkelig. Ret fejlen(e) for at
+        samle al nektaren og lave al honningen.
+      grade3_Loops_3: Kan du bruge en løkke til at indsamle al nektaren?
+      grade3_Loops_4: Brug gentag-blokken til både at samle al nektaren og lave honning.
+      grade3_Loops_6: Hvad sker der hvis du gentager denne sekvens 3 gange? Glem ikke
+        at lave honning til sidst!
+      grade3_Loops_7: 'Hver blomst indeholder én portion nektar. Hent nektar fra alle
+        blomsterne. '
+      grade3_Loops_TeacherIDo: 'Hver blomst indeholder én portion nektar. Hent nektar
+        fra alle blomsterne. '
+      grade3_bee_conditionals_quantum2: Bien ønsker kun nektar lige nu. Alle objekter
+        er ikke blomster, så tjek nedenunder hver sky for at se hvis den gemmer en
+        blomst. Hvis der er, kan du samle nektar.
+      grade3_maze_loops2: Få mig til solsikken!
+      grade3_maze_nestedLoops4: Bruge to løkker til at komme hen til grisen med færre
+        blokke.
+      grade4_arist_nested_loop_triangles4: Tegn tænderne i alligatorens mund!
+      grade4_artist_functions2: Funktioner lader dig definere nye blokke! Vi har flyttet
+        blokkene for at tegne en firkant til en funktion kaldet "tegn en firkant".
+        Kan du bruge "tegn en firkant"-funktionen til at lave brillerne? Firkanterne
+        er 75 pixel fra hinanden.
+      grade4_bee_conditionals_quantum2: Bien ønsker kun nektar lige nu. Alle objekter
+        er ikke blomster, så tjek nedenunder hver sky for at se hvis den gemmer en
+        blomst. Hvis der er, kan du samle nektar.
+      grade4_bee_conditionals_quantum5: Der kan være en blomst eller en honning celle
+        under disse skyer. Brug hvis/ellers blokken for at samle nektar hvis der er
+        en blomst, ellers lav honning (fordi det så er en honning celle).
+      grade4_bee_functions3: Funktioner er blokke/klodser af code som udfører en arbejdsopgave.
+        Brug "saml 5"-funktionen for at samle nektar fra 5 blomster ad gangen. Husk
+        at bruge en løkke-blok/klods, for at bruge et minimum af blokke/klodser.
+      grade4_bee_nestedLoops4: 'Indsaml al nektar fra alle blomster, og lav honning
+        i alle bikuber. Brug indlejrede løkker. '
+      grade4_frozen_freeplay: Du er nu officielt en stor kunstner! Lav et vinterdrømmeland.
+      grade4_frozen_functions0: En cirkel er en speciel form. Kan du regne ud hvilket
+        tal der skal stå i stedet for spørgsmåls tegnene for at tegne en cirkel?
+      grade4_frozen_functions1a: Brug den nye "Lav cirkel" blok til at lave 10 overlappende
+        cirkler. Husk at gå fremad mellem cirklerne.
+      grade4_frozen_functions2: Lad os nu lave 20 overlappende cirkler mens vi drejer
+        18 grader mellem hver cirkel.
+      grade4_frozen_functions3: Her er en "Lav cirkel" blok, der laver cirkler af
+        forskellig størrelse. Kan du bruge den til at lave en lille cirkel med størrelse
+        5 og en stor cirkel med størrelse 10?
+      grade4_frozen_functions4: Indviklede mønstre kan være laves af meget enkle former.
+        Kan du lave et mønster ved at gentagne 5 cirkler af størrelsen 5 og 5 cirkler
+        af størrelsen 10?
+      grade4_frozen_nested_loop_diamonds2: Vidste du at alle snefnug har forskellig
+        form? Lad os skabe et nyt snefnug ved hjælp af "Gentag" blokken, for at gentage
+        et parallelogram 4 gange, og dreje 90 grader mellem hvert parallelogram.
+      grade4_frozen_nested_loop_diamonds3: Lad os nu lave et nyt snefnug ved at bruge
+        gentag blokken til at gentage et parallelogram 10 gange og dreje 36 grader
+        til højre mellem hver.
+      grade4_frozen_square: Hej, er jeg Anna af Arendelle! Lad os lave et kvadrat
+        med "Gentagelse" blokken, som bruger færre blokke. Hvor mange gange skal "Gentagelse"
+        blokken, gentage blokkene indeni for at lave en firkant?
+      grade4_frozen_square_loop1: Hej, er jeg Anna af Arendelle! Lad os lave et kvadrat
+        med "Gentagelse" blokken, som bruger færre blokke. Hvor mange gange skal "Gentagelse"
+        blokken, gentage blokkene indeni for at lave en firkant?
+      grade4_frozen_square_loop2: Lad os lave tre kvadrater, og dreje efter hvert
+        kvadrat. Sørg for at at dreje 120 grader før hvert nyt kvadrat.
+      grade4_frozen_square_loop3: Kan du lave et snefnug, ved at bruge "Gentagelse"
+        blokken og lave en firkant 10 gange. Og ved at bruge "Dreje" blokken for at
+        dreje 36 grader mellem hvert kvadrat?
+      grade4_review_artist3: Hop blokken flytter kunstneren uden at tegne. Tegn de
+        stiplede linjer ved hjælp af både hoppe- og tegneblokkene.
+      grade4_review_bee1: Brug gentag-blokken til både at samle al nektaren og lave
+        honning.
+      level 'grade3_Loops_3: Kan du bruge en løkke til at indsamle al nektaren?
+      level 'grade3_Loops_4: Brug gentag-blokken til både at samle al nektaren og
+        lave honning.
+      level 'grade3_Loops_6: Hvad sker der hvis du gentager denne sekvens 3 gange?
+        Glem ikke at lave honning til sidst!
+      level 'grade3_Loops_7: 'Hver blomst indeholder én portion nektar. Hent nektar
+        fra alle blomsterne. '

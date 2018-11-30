@@ -12,4 +12,4 @@ Anthony Suarez joined Code.org as Chief Technology Officer in July 2018. His eng
 
 Anthony is passionate about increasing diversity in computer science by helping kids, especially under-represented groups, to have the learning opportunities and mentoring from an early age through adulthood.
 
-Prior to Code.org, Anthony led the Elastic Container Services engineering and product teams at Amazon Web Services where his teams built several core cloud computing services focused on enabling developers to build modern applications. He has spoken internationally on topics ranging from building cloud-native applications to building high-performing teams.
+Prior to Code.org, Anthony led the Elastic Container Services engineering and product teams at Amazon Web Services where his teams built several core cloud computing services focused on enabling developers to build modern applications. He has spoken internationally on topics ranging from building cloud-native applications to building high-performing teams. Anthony is also a member of <a href="https://www.ctosforgood.org/">CTOs For Good</a>.

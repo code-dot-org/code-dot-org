@@ -433,6 +433,9 @@ pt-BR:
           os 360 graus
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Cada item vai precisar da sua própria repetição 'Enquanto'.
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: A artista precisa girar 120 graus entre cada quadrado
+          para concluir este projeto.
       Artist Inspiration_authored_hint:
         brush_width: Nós escolhemos a largura do pincel para 1, e depois a cor azul
           antes de fazer qualquer outra coisa.
@@ -708,8 +711,12 @@ pt-BR:
       Course 4 Artist Functions challenge_authored_hint:
         Course_4_Artist_Functions_challenge_a: Parte da compreensão de como usar funções
           é descobrir quais você precisa, e quais você não precisa.
+        Course_4_Artist_Functions_challenge_b: Use um `laço for`, então use sua variável
+          contadora dentro de um laço `repeat` aninhado.
         Course_4_Artist_Functions_challenge_c: A cada iteração, você deve desenhar
           um quadrado e então pular para frente.
+        Course_4_Artist_Functions_challenge_d: Você precisará virar 90 graus à esquerda
+          do lado de fora de seu `repeat`, mas ainda dentro do `laço for`.
       Course 4 Artist Inspire_authored_hint:
         Course_4_Artist_Inspire_a: Depois que você completar um quadrado, tente pular
           metade do seu comprimento para frente antes de virar e fazer outro.
@@ -894,8 +901,63 @@ pt-BR:
       Course 4 Artist Vars 13_authored_hint:
         Course_4_Artist_Vars_13_a: Você precisa de dois laços de repetição (um dentro
           do outro) ambos repetindo `quantidade de lados` vezes.
+        Course_4_Artist_Vars_13_b: "O laço de repetição interior desenha um octógono
+          (virando para a esquerda).   \n\nPosteriormente, você precisa mover para
+          frente e virar para a direita apenas dentro do laço exterior."
+        Course_4_Artist_Vars_13_c: Para ajustar a forma para que permaneça com o mesmo
+          tamanho quando o número de lados muda, use o bloco de matemática para dividir
+          o comprimento em pixels pelo número de lados.
+      Course 4 Artist Vars 6_authored_hint:
+        Course_4_Artist_Vars_6_a: Para desenhar um polígono regular, vire **360/lados**
+          cada vez.
+      Course 4 Artist Vars 8_authored_hint:
+        Course_4_Artist_Vars_8_a: Se você dividir seu comprimento inicial pelo número
+          de lados, o comprimento de cada lado ficará menor a medida que o número
+          de lados fica maior.
+      Course 4 Bee Params 7_authored_hint:
+        notice_pattern: 'Você vê um padrão em como o número de néctar muda? '
+        count_with_for: Note que o néctar sobe em etapas. Que tipo de bloco você pode
+          usar para realizar a mesma coisa várias vezes enquanto vai contando?
+      Course 4 Bee Params 8_authored_hint:
+        Course_4_Bee_Params_8_a: Está tudo bem em pedir por um número de mel e um
+          número de néctar cada vez. Se não houver nenhum de algo, o número pode ser
+          0.
+      Course 4 Play Lab Params 2_authored_hint:
+        Course_4_Play_Lab_Params_2_a: Você precisará clicar em "editar" na função
+          de pulo e atualizá-la para que ela use o parâmetro `altura`.
+      Course 4 Play Lab Vars 2_authored_hint:
+        Course_4_Play_Lab_Vars_2_a: Certifique-se de defininir o número para `velocidade_do_cachorro`
+          como sendo maior do que o de `velocidade_do_gato`.
+      Course 4 Play Labs For Loops 2_authored_hint:
+        Course_4_Play_Labs_For_Loops_2_a: O que você adicionaria no seu laço `for`
+          toda vez para ele ignorar os números pares?
+      Course 4 Playlab For Loops 4b_authored_hint:
+        Course_4_Playlab_For_Loops_4b_a: As bandeiras estão em torno de 330 pixels
+          de distância dos personagens.
+        Course_4_Playlab_For_Loops_4b_b: Como você pode fazer cada personagem alcançar
+          330 pixels no mesmo número de movimentos com diferentes números de partida
+          e parada?
+        Course_4_Playlab_For_Loops_4b_c: Lembre-se, não importa o quanto um personagem
+          passe da bandeira no seu último passo, contanto que cada personagem use
+          o mesmo número de passos para chegar à bandeira.
+      Course 4 Playlab For Loops 5b_authored_hint:
+        Course_4_Playlab_For_Loops_5b_a: Os personagens estão em torno de 175 pixels
+          longe do centro.
+        Course_4_Playlab_For_Loops_5b_b: Lembre-se, o próximo passo de um personagem
+          será maior que seu último, já que o contador continua aumentando.
       Course 4 SCF 1_authored_hint:
         Course_4_SCF_1_a: Cada hexágono tem 40 pixels de lado.
+        Course_4_SCF_1_b: Há um salto de 120 pixels entre cada hexágono em cada linha
+          horizontal.
+        Course_4_SCF_1_c: "Antes de você desenhar a segunda linha de hexágonos, você
+          precisa virar à direita 60 graus e pular adiante 40 pixels. \n\nAssim que
+          você estiver na localização vertical correta, você tem que virar seu artista
+          novamente para trás e pular para trás 320 pixels."
+        Course_4_SCF_1_d: "Antes de desenhar a terceira linha de hexágonos, você precisa
+          virar à direita em 60 graus e avançar 40 pixels.\n\nUma vez que você esteja
+          no local vertical correto, você tem que virar seu artista de volta e retroceder
+          440 pixels (120 pixels mais distante do que a função `deslocar para baixo
+          / para frente`. "
         Course_4_SCF_1_e: |-
           **Solução:**
 
@@ -1082,6 +1144,13 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCF 1a_authored_hint:
+        Course_4_SCF_1a_a: Lembre-se de suas funções da fase 16.
+        Course_4_SCF_1a_b: |-
+          Veja este caminho como sua rota principal:
+
+          ![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)
+        Course_4_SCF_1a_c: Você deve considerar usar um laço `para`. Não para as etapas,
+          mas para o parâmetro da função.
         Course_4_SCF_1a_d: |-
           **Solução:**
 
@@ -1305,6 +1374,13 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCF 1b_authored_hint:
+        Course_4_SCF_1b_a: |-
+          Observe que a forma de todos os pontos de mel é semelhante.
+
+          Bom lugar para uma função!
+        Course_4_SCF_1b_b: "Veja esta idéia de como a abelha pode viajar: \n\n![](https://images.code.org/996ab4a2de6048cbb99b84c56cc4ad61-image-1469726859769.png)"
+        Course_4_SCF_1b_c: Você deve considerar o uso de um laço 'para' na distância
+          percorrida pela abelha.
         Course_4_SCF_1b_d: |-
           **Solução:**
 
@@ -1419,11 +1495,29 @@ pt-BR:
           </xml>
       Course 4 SCF 2_authored_hint:
         Course_4_SCF_2_a: Cada octógono tem 40 pixels de lado.
+        Course_4_SCF_2_b: Há um salto de 136 pixels entre cada octógono em cada linha
+          horizontal.
+        Course_4_SCF_2_c: "Antes de desenhar a segunda linha de octógonos, você precisa
+          virar à direita em 45 graus e avançar 96 pixels. \n\nQuando estiver no local
+          vertical correto, você terá que virar seu artista de volta novamente e retroceder
+          408 pixels. "
+        Course_4_SCF_2_d: |-
+          Observe que, como há menos octógonos nas linhas pares, você não precisa retroceder mais para chegar ao ponto inicial das linhas ímpares.
+
+          Isso significa que você pode usar a mesma função para todas as linhas.
         Course_4_SCF_2_e: |-
           ** Solução: **
 
           ![Solução blocos] (https://images.code.org/de5a99b0fb4c079504ff7cca9a249f02-image-1469727175091.png)
       Course 4 SCF 3_authored_hint:
+        Course_4_SCF_3_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
+        Course_4_SCF_3_b: 'Esta é uma série de octógonos com lados que são de comprimento
+          do ''contador'' em pixels. '
+        Course_4_SCF_3_c: 'Cada octógono é chamado de dentro de um laço ''for'' que
+          vai de 200 até 2 por 2. '
+        Course_4_SCF_3_d: 'Não esqueça de virar 22,5 graus no final de cada iteração. '
+        Course_4_SCF_3_e: Tanto a cor de cada octógono como a largura da caneta são
+          controladas pela variável 'contador'.
         Course_4_SCF_3_f: |-
           **Solução:**
 
@@ -1571,6 +1665,13 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCFL 1_authored_hint:
+        Course_4_SCFL_1_a: "Dê uma olhada nesta opção de movimento:  \n\n! [a] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
+        Course_4_SCFL_1_b: 'Tente usar dois laços ''para'': um para subir e pegar
+          o néctar e o outro para descer e fazer mel.'
+        Course_4_SCFL_1_c: "Observe que um laço 'para' precisa de várias execuções
+          de seu interior que se repetem o número de vezes do 'contador' para seguir
+          o padrão da escada. \n\nO outro laço 'para' só precisa de uma execução para
+          fazer do 'contador' a quantidade de mel."
         Course_4_SCFL_1_d: |-
           **Solução:**
 
@@ -1705,6 +1806,12 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCFL 1a_authored_hint:
+        Course_4_SCFL_1a_a: Você pode ter que viajar mais longe no geral para usar
+          o menor número de blocos.
+        Course_4_SCFL_1a_b: "Dê uma olhada nesta opção de movimento:  \n\n![](https://images.code.org/253d710ff7d1b494fe8fd20cfc92baaf-image-1469726263579.png)"
+        Course_4_SCFL_1a_c: Um laço 'para' irá ajudá-lo a executar o mesmo padrão,
+          mas com uma mudança no número de passos. Observe que o número de passos
+          necessários diminui de 7 para 5 por 1.
         Course_4_SCFL_1a_d: |-
           **Solução:**
 
@@ -1784,6 +1891,8 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCFL 1b_authored_hint:
+        Course_4_SCFL_1b_a: Tente usar um laço 'para'.
+        Course_4_SCFL_1b_b: "Dê uma olhada nesta opção de movimento:  \n\n![](https://images.code.org/1957633c453f4025a3fd6ce0e201398b-image-1469642319721.png)"
         Course_4_SCFL_1b_c: |-
           **Solução:**
 
@@ -1846,6 +1955,11 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCFL 2_authored_hint:
+        Course_4_SCFL_2_a: "Dê uma olhada nesta opção de movimento:  \n\n![](https://images.code.org/a69c63a039031254097f19231dd7bf95-image-1469726483169.png)"
+        Course_4_SCFL_2_b: Observe que há três pontos durante cada iteração deste
+          laço 'para' onde você para de interagir com objetos.
+        Course_4_SCFL_2_c: Durante cada iteração do laço `for`, o número de cada objeto
+          se relaciona com a variável `contador` de alguma forma.
         Course_4_SCFL_2_d: |-
           **Solução:**
 
@@ -1965,6 +2079,11 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCFL 3_authored_hint:
+        Course_4_SCFL_3_a: A `largura da caneta` é 1. O primeiro quadrado tem lados
+          de 50 pixels, e cada quadrado é 50 pixels mais largo do que o último.
+        Course_4_SCFL_3_b: A opacidade no pincel é sempre `contador`/2.
+        Course_4_SCFL_3_c: Depois de fazer cada quadrado, não se esqueça de pular
+          pra trás, virar, pular novamente, então virar de volta!
         Course_4_SCFL_3_d: |-
           **Solução:**
 
@@ -2099,6 +2218,13 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCFL 4_authored_hint:
+        Course_4_SCFL_4_a: A mudança de cor acontece usando o bloco `defina a cor
+          com vermelho, verde, azul`. Vermelho é sempre o valor do `contador`, verde
+          é sempre `255 - contador`, e azul permanece constante exatamente em 255.
+        Course_4_SCFL_4_b: Cada forma é um quadrado com os lados que possuem `contador`
+          pixels de comprimento, começando com 5px, e aumentando em 5px até completar
+          200px.
+        Course_4_SCFL_4_c: O artista gira 15 graus entre cada quadrado.
         Course_4_SCFL_4_d: |-
           **Solução:**
 
@@ -2204,6 +2330,12 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCFL 6_authored_hint:
+        Course_4_SCFL_6_a: A mudança de cor acontece usando o bloco `defina a cor
+          com vermelho, verde, azul`. Vermelho é definido constante em 255, verde
+          é sempre o valor do`contador`, e azul é sempre `255 - contador`.
+        Course_4_SCFL_6_b: O código para isso é muito mais simples do que você imagina.
+          Apenas defina a cor dentro do `laço for`, mova pra frente, então vire.
+        Course_4_SCFL_6_c: 'O `laço for` vai de 5 a 250 de 2 em 2. '
         Course_4_SCFL_6_d: |-
           **Solução:**
 
@@ -2294,6 +2426,16 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCFL 7_authored_hint:
+        Course_4_SCFL_7_a: A mudança de cor acontece usando o bloco `defina a cor
+          com vermelho, verde, azul`. Vermelho é definido no`contador`. Verde é `255
+          - contador`, e azul é definido constante em 255.
+        Course_4_SCFL_7_b: 'Este desenho é feito usando dois ''for loops'' similares.
+          Um vai de 5 a 200 por 2, o outro vai de 200 a 5 por 2. '
+        Course_4_SCFL_7_c: Dentro de cada 'for loop' você avança 5 pixels antes de
+          virar por '360/counter'. Não esqueça de configurar seu pincel para a largura
+          'counter' antes de fazer!
+        Course_4_SCFL_7_d: Você precisará virar a esquerda por 225 graus entre dois
+          'for loops'.
         Course_4_SCFL_7_e: |-
           **Solução:**
 
@@ -2505,6 +2647,14 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCV 1_authored_hint:
+        Course_4_SCV_1_a: 'Variáveis são úteis porque você pode adicionar à elas cada
+          vez por um laço. '
+        Course_4_SCV_1_b: Este enigma contém um laço que cria o polígono, um laço
+          que repete o polígono 'sides' vezes, então outro laço que faz tudo isto
+          de novo após adicionar 5 à 'sides'.
+        Course_4_SCV_1_c: Usando uma variável para 'sides' e uma para 'length' torna
+          o código mais limpo porque você pode repetir o mesmo código múltiplas vezes,
+          ao invés de criar uma nova cópia para cada conjunto de números.
         Course_4_SCV_1_d: |-
           **Solução:**
 
@@ -2656,6 +2806,16 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCV 2_authored_hint:
+        Course_4_SCV_2_a: "A imagem completa é feita de 10 destas \"flores\": \n![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)\n\n...que
+          são feitas de 10 destes decágonos:  \n![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)"
+        Course_4_SCV_2_b: 'Este projeto usa laços aninhados (três profundos). Todos
+          os laços percorrem ''sides'' vezes. '
+        Course_4_SCV_2_c: O artista vira à esquerda quando cria cada decágono, mas
+          vira a direita em todos os outros laços.
+        Course_4_SCV_2_d: Para prevenir que todas as suas "flores" de 10 pétalas sejam
+          desenhadas no mesmo lugar, assegure-se de pular pra frente por 'length'
+          / 'sides' antes de de virar 360/'sides' graus como parte do seu laço mais
+          externo.
         Course_4_SCV_2_e: |-
           **Solução:**
 
@@ -2829,6 +2989,10 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCV 3_authored_hint:
+        Course_4_SCV_3_a: 'Use seu bloco de matemática para adicionar e subtrair pontos
+          da variável ''point'' quando os desenhos colidem. '
+        Course_4_SCV_3_b: Você pode mudar o parâmetro para quão longe você move seu
+          desenho toda vez que uma das teclas de seta forem pressionadas.
         Course_4_SCV_3_c: |-
           **Solução:**
 
@@ -2859,6 +3023,12 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCV 4_authored_hint:
+        Course_4_SCV_4_a: Três variáveis irão ajudá-lo. Uma para unidades de néctar,
+          uma para unidades de mel, e uma para quão longe a abelha deve mover em cada
+          iteração.
+        Course_4_SCV_4_b: 'Será bastante útil usar três laços dentro de seu laço principal.
+          Um para mover para frente, um para coletar o néctar e um para fazer mel. '
+        Course_4_SCV_4_c: "Veja esta opção para movimento: \n\n![](https://images.code.org/78f8fb83da67c5b80126555a362b8b20-image-1469641782259.png)"
         Course_4_SCV_4_d: |-
           **Solução:**
 
@@ -2995,6 +3165,11 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCV 5_authored_hint:
+        Course_4_SCV_5_a: "Veja esta opção para movimento: \n\n![](https://images.code.org/7f6f09c55cf9552a91fc1d33f44a7315-image-1469641639330.png)"
+        Course_4_SCV_5_b: Toda vez dentro do laço, as flores terão duas vezes menos
+          néctar e a abelha precisará fazer mais um mel.
+        Course_4_SCV_5_c: Veja que no começo do laço externo a abelha se move tantas
+          vezes quanto há de néctar na próxima flor.
         Course_4_SCV_5_d: |-
           **Solução:**
 
@@ -3120,6 +3295,21 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCV 6_authored_hint:
+        Course_4_SCV_6_a: |-
+          Veja como uma forma completa se parece
+
+          ![](https://images.code.org/9e30d3a87186cefe730984feee195806-image-1469642178866.png)
+        Course_4_SCV_6_b: 'Você se beneficiará criando 8 variáveis: red1, green1,
+          blue1, red2, green2, blue2, length e sides.'
+        Course_4_SCV_6_c: Cada uma das formas de 5 lados está dividida em peças de
+          'length' / 'sides onde o zigue é verde-azulado (rgb = 0,175,200) e o zague
+          é roxo (rgb = 100,50,150).
+        Course_4_SCV_6_d: 'Para o zigue, vire a esquerda por ''360'' / ''sides''.
+          Para o zague, vire a direita por  ''360'' / ''sides''. '
+        Course_4_SCV_6_e: 'O restante do programa é bem padrão para fazer rotações
+          de 360 graus de uma forma, porém estamos sobrepondo as formas pela metade,
+          então temos que girar à `180`/`lados`, que significa que precisamos do dobro
+          do usual (`sides`*`2` repetições). '
         Course_4_SCV_6_f: |-
           **Solução:**
 
@@ -3419,9 +3609,335 @@ pt-BR:
           </next>
           </block>
           </xml>
+      CourseF_PlayLab_vars2_authored_hint:
+        Course_4_Play_Lab_Vars_2_a: Certifique-se de defininir o número para `velocidade_do_cachorro`
+          como sendo maior do que o de `velocidade_do_gato`.
+      Dance short test 2_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Você precisa alterar o efeito do plano de fundo durante o sétimo compasso da música.
+
+          *Esta fase termina após 10 compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          Altere o efeito do plano de fundo em diversas partes da música, conectando o novo bloco aos eventos <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance short test_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Você precisa alterar o efeito do plano de fundo durante o sétimo compasso da música.
+
+          *Esta fase termina após 10 compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          Altere o efeito do plano de fundo em diversas partes da música, conectando o novo bloco aos eventos <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+          *Certifique-se de um(a) dançarino(a) apareça na tela.
+
+          *Esta fase termina após quatro compassos.*
+        challenges: |-
+          **Desafios opcionais**
+          *Escolha uma música diferente para tocar.
+          *Escolha um dançarino(a) diferente que se pareça com um alce!
+          *Renomeie seu(sua) dançarino(a).
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+          *Certifique-se de um(a) dançarino(a) apareça na tela.
+
+          *Esta fase termina após quatro compassos.*
+        challenges: |-
+          **Desafios opcionais**
+          *Escolha uma música diferente para tocar.
+          *Escolha um dançarino(a) diferente que se pareça com um alce!
+          *Renomeie seu(sua) dançarino(a).
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+          *O(a) dançarino(a) precisa fazer um novo passo após quatro compassos.
+
+          *A fase termina após oito compassos.*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Após seis compassos, seu(sua) dançarino(a) precisa executar uma dança diferente da que estava fazendo após o quarto compasso.
+
+          *Esta fase termina após doze compassos.*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Você precisa alterar o efeito do plano de fundo durante o sétimo compasso da música.
+
+          *Esta fase termina após 10 compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          Altere o efeito do plano de fundo em diversas partes da música, conectando o novo bloco aos eventos <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Você precisa ter pelo menos dois dançarinos.
+
+          *Esta fase termina após seis compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          * Adicione um terceiro dançarino (ou quantos você quiser!)
+          * Faça todos os seus dançarinos executarem movimentos diferentes em diversas partes da música.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Dois dançarinos precisam ter um tamanho diferente de 100.
+
+          *Esta fase termina após seis compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          * Experimente alterar outras propriedades (largura, altura, rotação, etc.)
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Altere a tonalidade de pelo menos um(a) dançarino(a).
+
+          *Esta fase termina após oito compassos.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+          *Certifique-se de um(a) dançarino(a) apareça na tela.
+
+          *Esta fase termina após quatro compassos.*
+        challenges: |-
+          **Desafios opcionais**
+          *Escolha uma música diferente para tocar.
+          *Escolha um dançarino(a) diferente que se pareça com um alce!
+          *Renomeie seu(sua) dançarino(a).
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * As propriedades de dois ou mais dançarinos devem mudar.
+
+          *Esta fase termina após oito compassos.*
+      Dance_Party_11.5_test_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Seja criativo!
+
+          *Esta fase termina após oito compassos.*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Seja criativo!
+
+          *Esta fase termina após oito compassos.*
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Seja criativo!
+
+          *Esta fase termina após oito compassos.*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Use o bloco 'com a seta para a esquerda pressionada' para fazer o robô executar um movimento de dança ao pressioná-la.
+
+          *Esta fase termina após oito compassos.*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+          *O(a) dançarino(a) precisa fazer um novo passo após quatro compassos.
+
+          *A fase termina após oito compassos.*
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Após seis compassos, seu(sua) dançarino(a) precisa executar uma dança diferente da que estava fazendo após o quarto compasso.
+
+          *Esta fase termina após doze compassos.*
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Você precisa alterar o efeito do plano de fundo durante o sétimo compasso da música.
+
+          *Esta fase termina após 10 compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          Altere o efeito do plano de fundo em diversas partes da música, conectando o novo bloco aos eventos <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Seu(sua) dançarino(a) deve executar movimentos diferentes ao longo dos doze primeiros compassos da música.
+
+          *Esta fase termina após 12 compassos.*
+      Dance_Party_6_authored_hint:
+        challenges: |-
+          **Desafio opcional**
+
+          * Adicione um terceiro dançarino (ou quantos você quiser!)
+          * Faça todos os seus dançarinos executarem movimentos diferentes em diversas partes da música.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Dois dançarinos precisam ter um tamanho diferente de 100.
+
+          *Esta fase termina após seis compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          * Experimente alterar outras propriedades (largura, altura, rotação, etc.)
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Altere a tonalidade de pelo menos um(a) dançarino(a).
+
+          *Esta fase termina após oito compassos.*
+      Farmer for Authored Hint testing_authored_hint:
+        first_hint: |-
+          Esta é a primeira dica.
+
+          Ela tem *algumas* **marcações** `básicas`
+        second_hint: Esta é a segunda dica. Ela tem um vídeo de dica.
+        last_hint: Esta é a terceira e última dica. Não tem nada de especial.
+      Farmer for TTS testing_authored_hint:
+        first_hint: |-
+          Esta é a primeira dica.
+
+          Ela tem *algumas* **marcações** `básicas`
+        second_hint: |-
+          Esta é a segunda dica. Tem uma imagem.
+
+          ! [a] (https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
+        last_hint: Esta é a terceira e última dica. Não tem nada de especial.
       Function intro Ryan_authored_hint:
+        Function_intro_Ryan_b: Se você chamar as funções corretamente, este é o caminho
+          que você vai viajar...
         Function_intro_Ryan_a: Você pode executar uma função muitas vezes dentro de
           seu programa! Tente executá-la duas vezes para resolver este enigma.
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_b: Se você chamar as funções corretamente, este é o caminho
+          que você vai viajar...
+        Function_intro_Ryan_a: Você pode executar uma função muitas vezes dentro de
+          seu programa! Tente executá-la duas vezes para resolver este enigma.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Vê as **Lanternas do Mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Como você pode usar uma condicional nos itens para chegar ao Monumento Oceânico?\n\n"
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: Você pode usar o bloco de caminho se para ajudá-lo a fazer as curvas
+          certas.
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Que recife de corais bonito! O coral azul parece ser o
+          caminho **direito**, e lembre-se também de deixar o coral vermelho no caminho
+          **esquerdo**.
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+          *Certifique-se de um(a) dançarino(a) apareça na tela.
+
+          *Esta fase termina após quatro compassos.*
+        challenges: |-
+          **Desafios opcionais**
+          *Escolha uma música diferente para tocar.
+          *Escolha um dançarino(a) diferente que se pareça com um alce!
+          *Renomeie seu(sua) dançarino(a).
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+          *O(a) dançarino(a) precisa fazer um novo passo após quatro compassos.
+
+          *A fase termina após oito compassos.*
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Após seis compassos, seu(sua) dançarino(a) precisa executar uma dança diferente da que estava fazendo após o quarto compasso.
+
+          *Esta fase termina após doze compassos.*
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Você precisa alterar o efeito do plano de fundo durante o sétimo compasso da música.
+
+          *Esta fase termina após 10 compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          Altere o efeito do plano de fundo em diversas partes da música, conectando o novo bloco aos eventos <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          *Seu(sua) dançarino(a) deve executar movimentos diferentes ao longo dos doze primeiros compassos da música.
+
+          *Esta fase termina após 12 compassos.*
+      HOC Dance 5_draft_authored_hint:
+        challenges: |-
+          **Desafio opcional**
+
+          * Adicione um terceiro dançarino (ou quantos você quiser!)
+          * Faça todos os seus dançarinos executarem movimentos diferentes em diversas partes da música.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Dois dançarinos precisam ter um tamanho diferente de 100.
+
+          *Esta fase termina após seis compassos.*
+        challenges: |-
+          **Desafio opcional**
+
+          * Experimente alterar outras propriedades (largura, altura, rotação, etc.)
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Altere a tonalidade de pelo menos um(a) dançarino(a).
+
+          *Esta fase termina após oito compassos.*
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * As propriedades de dois ou mais dançarinos devem mudar.
+
+          *Esta fase termina após oito compassos.*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Seja criativo!
+
+          *Esta fase termina após oito compassos.*
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Seja criativo!
+
+          *Esta fase termina após oito compassos.*
+      Harvesting_authored_hint:
+        pointer_harvester_test: Que tipo de bloco posso usar para verificar uma coisa
+          e tomar uma decisão?
       Inspirational Artwork_authored_hint:
         brush_width: Nós escolhemos a largura do pincel para 1, e depois a cor azul
           antes de fazer qualquer outra coisa.
@@ -3473,6 +3989,13 @@ pt-BR:
           o código para o Agent.
         MC_HOC_2017_01_RETRY_c: Depois que o Agent executar todo o código, você poderá
           se mover com o jogador com as teclas de seta!
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Arraste um bloco 'mover para a frente' da caixa de
+          ferramentas para a área de trabalho e fixe-o abaixo do bloco 'ao rodar'.
+        MC_HOC_2017_01_RETRY_b: Não esqueça de clicar em "Executar" para executar
+          o código para o Agent.
+        MC_HOC_2017_01_RETRY_c: Depois que o Agent executar todo o código, você poderá
+          se mover com o jogador com as teclas de seta!
       MC_HOC_2017_02_Cole_authored_hint:
         MC_HOC_2017_02_Cole_a: Ande com o Agent dois espaços para a frente e permaneça
           sobre a placa de pressão. Isso abrirá a porta para o seu jogador.
@@ -3481,6 +4004,18 @@ pt-BR:
           até descobrir o que está acontecendo de errado."
         MC_HOC_2017_02_Cole_c: Depois que o Agent abrir a porta, use as teclas de
           seta para mover o jogador pelo mapa!
+        MC_HOC_2017_02_Cole_d: Certifique-se que o agente está seguindo o caminho
+          descrito no mapa!
+      MC_HOC_2017_02_Cole_2019_authored_hint:
+        MC_HOC_2017_02_Cole_a: Ande com o Agent dois espaços para a frente e permaneça
+          sobre a placa de pressão. Isso abrirá a porta para o seu jogador.
+        MC_HOC_2017_02_Cole_b: "Pressione \"Executar\"! \nVocê pode executar seu código,
+          mesmo se ele não estiver certo. Execute e redefina seu código repetidamente,
+          até descobrir o que está acontecendo de errado."
+        MC_HOC_2017_02_Cole_c: Depois que o Agent abrir a porta, use as teclas de
+          seta para mover o jogador pelo mapa!
+        MC_HOC_2017_02_Cole_d: Certifique-se que o agente está seguindo o caminho
+          descrito no mapa!
       MC_HOC_2017_02_Will_authored_hint:
         MC_HOC_2017_02_Cole_a: Ande com o Agent dois espaços para a frente e permaneça
           sobre a placa de pressão. Isso abrirá a porta para o seu jogador.
@@ -3494,10 +4029,20 @@ pt-BR:
           usar as setas do teclado para levar o jogador até a bússola!
         MC_HOC_2017_03_Cole_b: Parece que o código é um pouco longo? Tente usar um
           ciclo 'Repetir' e ver se você consegue descobrir como deixá-lo mais curto!
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_a: Quando o Agent chegar à placa de pressão, você pode
+          usar as setas do teclado para levar o jogador até a bússola!
+        MC_HOC_2017_03_Cole_b: Parece que o código é um pouco longo? Tente usar um
+          ciclo 'Repetir' e ver se você consegue descobrir como deixá-lo mais curto!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: "Cruzar essas duas placas de pressão abrirá o
           caminho para o jogador. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Use o bloco ''virar à direita'' para mudar a
+          direção do Agent '
+        MC_HOC_2017_04POINT5_RYAN_a: O Agent só precisa chegar até a primeira placa
+          de pressão para passar o Alex ou o Steve pelo machado.
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
         MC_HOC_2017_04POINT5_RYAN_b: 'Use o bloco ''virar à direita'' para mudar a
           direção do Agent '
         MC_HOC_2017_04POINT5_RYAN_a: O Agent só precisa chegar até a primeira placa
@@ -3510,10 +4055,26 @@ pt-BR:
           até descobrir o que está acontecendo de errado."
         MC_HOC_2017_04_Cole_b: Quando o Agent chegar à placa de pressão, ele abrirá
           a porta para o jogador.
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_a: O Agent precisa 'mover-se para frente' 7 vezes. Como
+          é possível usar o ciclo 'Repetir' para que isso aconteça?
+        MC_HOC_2017_04_Cole_c: "Pressione \"Executar\"! \nVocê pode executar seu código,
+          mesmo se ele não estiver certo. Execute e redefina seu código repetidamente,
+          até descobrir o que está acontecendo de errado."
+        MC_HOC_2017_04_Cole_b: Quando o Agent chegar à placa de pressão, ele abrirá
+          a porta para o jogador.
       MC_HOC_2017_05_Cole_authored_hint:
         MC_HOC_2017_05_Cole_a: Você sabia que você pode colocar mais de um código
           dentro de um ciclo? Tente colocar uma tábua **e** avançar em vez de 'repetir'
           para completar este enigma.
+        MC_HOC_2017_05_Cole_b: Pegue o agente do outro lado do rio, construindo uma
+          ponte enquanto você vai.
+      MC_HOC_2017_05_Cole_2019_authored_hint:
+        MC_HOC_2017_05_Cole_a: Você sabia que você pode colocar mais de um código
+          dentro de um ciclo? Tente colocar uma tábua **e** avançar em vez de 'repetir'
+          para completar este enigma.
+        MC_HOC_2017_05_Cole_b: Pegue o agente do outro lado do rio, construindo uma
+          ponte enquanto você vai.
       MC_HOC_2017_05_Josh_authored_hint:
         MC_HOC_2017_05_Cole_a: Você sabia que você pode colocar mais de um código
           dentro de um ciclo? Tente colocar uma tábua **e** avançar em vez de 'repetir'
@@ -3521,10 +4082,27 @@ pt-BR:
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: Quantas vezes este ciclo é executado? Quantas vezes
           ele *deve* ser executado?
+        MC_HOC_2017_06_Cole_b: 'Ajude o agente construir uma ponte sobre a água até
+          o outro lado! '
+      MC_HOC_2017_06_Cole_2019_authored_hint:
+        MC_HOC_2017_06_Cole_a: Quantas vezes este ciclo é executado? Quantas vezes
+          ele *deve* ser executado?
+        MC_HOC_2017_06_Cole_b: 'Ajude o agente construir uma ponte sobre a água até
+          o outro lado! '
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Tente colocar mais de uma instrução dentro do um ciclo
           'Repetir'!
       MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_c: Tudo o que você precisa que o agente faça é limpar
+          o caminho para o Minecart.
+        MC_HOC_2017_07_Cole_a: Para resolver este enigma, descubra o que a função
+          'abrir caminho' faz e use-a quantas vezes precisar usando o pequeno bloco
+          'abrir caminho' da caixa de ferramentas.
+        MC_HOC_2017_07_Cole_b: Tente misturar os blocos de função com outros blocos
+          da caixa de ferramentas para ajudá-lo a resolver este enigma.
+      MC_HOC_2017_07_Cole_2019_authored_hint:
+        MC_HOC_2017_07_Cole_c: Tudo o que você precisa que o agente faça é limpar
+          o caminho para o Minecart.
         MC_HOC_2017_07_Cole_a: Para resolver este enigma, descubra o que a função
           'abrir caminho' faz e use-a quantas vezes precisar usando o pequeno bloco
           'abrir caminho' da caixa de ferramentas.
@@ -3545,6 +4123,12 @@ pt-BR:
       MC_HOC_2017_10_Cole_authored_hint:
         MC_HOC_2017_10_Cole_a: Use as funções para resolver este enigma com mais facilidade!
       MC_HOC_2017_10_RETRY_authored_hint:
+        MC_HOC_2017_10_Cole_b: Não sabe onde ir?  Veja se você consegue encontrar
+          a linha pontilhada!
+        MC_HOC_2017_10_Cole_a: Use as funções para resolver este enigma com mais facilidade!
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_b: Não sabe onde ir?  Veja se você consegue encontrar
+          a linha pontilhada!
         MC_HOC_2017_10_Cole_a: Use as funções para resolver este enigma com mais facilidade!
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Tente fazer com que o Agent construa algumas pontes
@@ -3558,9 +4142,42 @@ pt-BR:
           até descobrir o que está acontecendo de errado."
         MC_HOC_2017_08_RY_b: Há MUITAS maneiras de resolver esse enigma. Tente algumas
           delas!
+        MC_HOC_2017_08_RY_c: Tente seguir a linha pontilhada para um simples caminho
+          através da lava.
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: "Pressione \"Executar\"! \nVocê pode executar seu código,
+          mesmo se ele não estiver certo. Execute e redefina seu código repetidamente,
+          até descobrir o que está acontecendo de errado."
+        MC_HOC_2017_08_RY_b: Há MUITAS maneiras de resolver esse enigma. Tente algumas
+          delas!
+        MC_HOC_2017_08_RY_c: Tente seguir a linha pontilhada para um simples caminho
+          através da lava.
       MC_HOC_2017_FP20x20_authored_hint:
         MC_HOC_2017_13_Cole_a: Tente fazer com que o Agent construa algumas pontes
           para que Alex ou Steve possa andar além dos limites do mapa.
+      MC_HOC_2017_FP20x20_2019_authored_hint:
+        MC_HOC_2017_13_Cole_a: Tente fazer com que o Agent construa algumas pontes
+          para que Alex ou Steve possa andar além dos limites do mapa.
+      NEW Course 4 Artist Functions 13_authored_hint:
+        NEW_Course_4_Artist_Functions_13_a: Tente editar a função 'desenhar uma linha
+          de quadrados' para que você não precise chamá-la duas vezes.
+        NEW_Course_4_Artist_Functions_13_c: Qual código você precisaria se você tentasse
+          fazer uma estrela usando linhas em vez de caixas?
+      NEW Course 4 Artist Functions 4_authored_hint:
+        NEW_Course_4_Artist_Functions_4_a: Você terá que usar um bloco de 'virar 120
+          graus à direita' depois de cada quadrado.
+      NEW Course 4 Artist Functions 9_authored_hint:
+        NEW_Course_4_Artist_Functions_9_a: Tente executar o código antes de adicionar
+          qualquer blocos.   O que faz o desenho parecer um pouco estranho?
+        NEW_Course_4_Artist_Functions_9_b: Se o bem não consegue entender bem o que
+          está errado, tente diminuir a velocidade do artista movendo o controle deslizante
+          para a esquerda.
+      NEW Course 4 Artist Params 11_authored_hint:
+        NEW_Course_4_Artist_Params_11_a: Há mais de um número que precisa ser substituído
+          por uma variável dentro da função.
+      NEW Course 4 Artist Params 13_authored_hint:
+        NEW_Course_4_Artist_Params_13_a: 'Você precisa dividir o *perímetro* pelo
+          número de lados, a fim de manter as formas do mesmo tamanho total. '
       NEW Course 4 Artist Params inspire_authored_hint:
         brush_width: Nós escolhemos a largura do pincel para 1, e depois a cor azul
           antes de fazer qualquer outra coisa.
@@ -3683,9 +4300,40 @@ pt-BR:
           </next>
           </block>
           </xml>
+      NEW Course 4 Bee For Loops 8_authored_hint:
+        NEW_Course_4_Bee_For_Loops_8_a: Se seu laço está fazendo contagem progressiva,
+          o incremento é adicionado na sua variável contadora a cada repetição. Qual
+          deve ser seu incremento para obter o número depois dele?
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Tente fazer com que o Agent construa algumas pontes
           para que Alex ou Steve possa andar além dos limites do mapa.
+      Overworld Avoid Monsters_authored_hint:
+        mc_8_a: Você pode escolher entre alguns caminhos. Qual o mais curto?
+        mc_8_b: Use laços `repita` para simplificar seu código.
+        mc_8_c: Seu objetivo é entrar na porta da casa na parte superior da tela.
+      Overworld Avoid Monsters_2018_authored_hint:
+        mc_8_a: Você pode escolher entre alguns caminhos. Qual o mais curto?
+        mc_8_b: Use laços `repita` para simplificar seu código.
+        mc_8_c: Seu objetivo é entrar na porta da casa na parte superior da tela.
+      Overworld Avoid Monsters_2019_authored_hint:
+        mc_8_a: Você pode escolher entre alguns caminhos. Qual o mais curto?
+        mc_8_b: Use laços `repita` para simplificar seu código.
+        mc_8_c: Seu objetivo é entrar na porta da casa na parte superior da tela.
+      Overworld Chop Tree_authored_hint:
+        mc_2_a: 'Você precisa "mover para frente" duas vezes para ficar em frente
+          à árvore.  '
+      Overworld Chop Tree_2018_authored_hint:
+        mc_2_a: 'Você precisa "mover para frente" duas vezes para ficar em frente
+          à árvore.  '
+      Overworld Chop Tree_2019_authored_hint:
+        mc_2_a: 'Você precisa "mover para frente" duas vezes para ficar em frente
+          à árvore.  '
+      Overworld Powered Minecart_authored_hint:
+        mc_13_b: Use laços `repita` para diminuir seu código.
+      Overworld Powered Minecart_2018_authored_hint:
+        mc_13_b: Use laços `repita` para diminuir seu código.
+      Overworld Powered Minecart_2019_authored_hint:
+        mc_13_b: Use laços `repita` para diminuir seu código.
       Quantum Bee - Ryan_authored_hint:
         test_hint: Isso é uma dica-teste.
       aE3_authored_hint:
@@ -3700,6 +4348,11 @@ pt-BR:
       aE4_authored_hint:
         aE4_d: Se seu código ficar muito confuso, você pode sempre clicar em "Começar
           do Início" e tentar novamente!
+      aE7_authored_hint:
+        aE7_b: Você vai precisar de 4 segmentos para completar esse enigma.
+      aE8_authored_hint:
+        aE8_a: "Para fazer um quadrado de sua linha, você precisará: \n-  desenhar
+          a linha \n-  usar o canto arredondado\n\nRepita esses passos 4 vezes."
       artistDebugVideo1_authored_hint:
         courseA_artist_loops7_a: Não consegue descobrir onde colocar o laço? Tente
           escrever o código passo-a-passo e procure um padrão.
@@ -4164,6 +4817,15 @@ pt-BR:
           </block>
           </xml>
       course4_artist_variables_challenge2_authored_hint:
+        courseF_artist_variables_challenge2_a: 'Variáveis são úteis porque você pode
+          adicionar à elas cada vez por um laço. '
+        courseF_artist_variables_challenge2_b: Este enigma contém um laço que cria
+          o polígono, um laço que repete o polígono 'sides' vezes, então outro laço
+          que faz tudo isto de novo após adicionar 5 à 'sides'.
+        courseF_artist_variables_challenge2_c: Usando uma variável para 'sides' e
+          uma para 'length' torna o código mais limpo porque você pode repetir o mesmo
+          código múltiplas vezes, ao invés de criar uma nova cópia para cada conjunto
+          de números.
         courseF_artist_variables_challenge2_d: |-
           **Solução:**
 
@@ -5489,11 +6151,20 @@ pt-BR:
           pixels`, eu desenharei uma linha automaticamente.
         courseC_artist_prog2_b: Você está tendo problemas para virar a esquina? Use
           o bloco 'virar à direita 90 graus'.
+      courseC_artist_prog2_2019_authored_hint:
+        courseC_artist_prog2_a: Se você usar o bloco para me fazer `avançar por 100
+          pixels`, eu desenharei uma linha automaticamente.
+        courseC_artist_prog2_b: Você está tendo problemas para virar a esquina? Use
+          o bloco 'virar à direita 90 graus'.
       courseC_artist_prog5_authored_hint:
         courseC_artist_prog5_b: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
       courseC_artist_prog5_2018_authored_hint:
+        courseC_artist_prog5_b: Não tenha medo de cometer um erro! Tente adicionar
+          blocos e executar o código para ver o que vai acontecer, mesmo se você achar
+          que ainda não resolveu o quebra-cabeça.
+      courseC_artist_prog5_2019_authored_hint:
         courseC_artist_prog5_b: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
@@ -5505,6 +6176,10 @@ pt-BR:
         courseC_artist_prog7_e: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
+      courseC_artist_prog7_2019_authored_hint:
+        courseC_artist_prog7_e: Não tenha medo de cometer um erro! Tente adicionar
+          blocos e executar o código para ver o que vai acontecer, mesmo se você achar
+          que ainda não resolveu o quebra-cabeça.
       courseC_collector_prog2_authored_hint:
         courseC_collector_prog2_b: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
@@ -5513,11 +6188,19 @@ pt-BR:
         courseC_collector_prog2_b: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
+      courseC_collector_prog2_2019_authored_hint:
+        courseC_collector_prog2_b: Não tenha medo de cometer um erro! Tente adicionar
+          blocos e executar o código para ver o que vai acontecer, mesmo se você achar
+          que ainda não resolveu o quebra-cabeça.
       courseC_collector_prog4_authored_hint:
         courseC_collector_prog4_b: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
       courseC_collector_prog4_2018_authored_hint:
+        courseC_collector_prog4_b: Não tenha medo de cometer um erro! Tente adicionar
+          blocos e executar o código para ver o que vai acontecer, mesmo se você achar
+          que ainda não resolveu o quebra-cabeça.
+      courseC_collector_prog4_2019_authored_hint:
         courseC_collector_prog4_b: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
@@ -5533,10 +6216,16 @@ pt-BR:
       courseC_maze_debugging2_2018_authored_hint:
         courseC_maze_debugging2_c: Não consegue descobrir o que está errado? Tente
           rodar o código algumas vezes para ver o que acontece.
+      courseC_maze_debugging2_2019_authored_hint:
+        courseC_maze_debugging2_c: Não consegue descobrir o que está errado? Tente
+          rodar o código algumas vezes para ver o que acontece.
       courseC_maze_debugging3_authored_hint:
         courseC_maze_debugging3_b: Não consegue descobrir o que está errado? Tente
           rodar o código algumas vezes para ver o que acontece.
       courseC_maze_debugging3_2018_authored_hint:
+        courseC_maze_debugging3_b: Não consegue descobrir o que está errado? Tente
+          rodar o código algumas vezes para ver o que acontece.
+      courseC_maze_debugging3_2019_authored_hint:
         courseC_maze_debugging3_b: Não consegue descobrir o que está errado? Tente
           rodar o código algumas vezes para ver o que acontece.
       courseC_maze_loops6_authored_hint:
@@ -5556,9 +6245,15 @@ pt-BR:
         courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu
           código linha a linha. Você consegue descobrir o que você precisa fazer em
           seguida?
+      courseC_maze_programming5_2019_authored_hint:
+        courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu
+          código linha a linha. Você consegue descobrir o que você precisa fazer em
+          seguida?
       courseC_maze_programming6_authored_hint:
         courseC_maze_programming6_a: Existem duas maneiras de resolver este quebra-cabeças!
       courseC_maze_programming6_2018_authored_hint:
+        courseC_maze_programming6_a: Existem duas maneiras de resolver este quebra-cabeças!
+      courseC_maze_programming6_2019_authored_hint:
         courseC_maze_programming6_a: Existem duas maneiras de resolver este quebra-cabeças!
       courseC_maze_programming8_authored_hint:
         courseC_maze_programming8_b: Não tenha medo de cometer um erro! Tente adicionar
@@ -5568,7 +6263,14 @@ pt-BR:
         courseC_maze_programming8_b: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
+      courseC_maze_programming8_2019_authored_hint:
+        courseC_maze_programming8_b: Não tenha medo de cometer um erro! Tente adicionar
+          blocos e executar o código para ver o que vai acontecer, mesmo se você achar
+          que ainda não resolveu o quebra-cabeça.
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
       courseD_artist_functions2_authored_hint:
@@ -5584,11 +6286,20 @@ pt-BR:
           para conseguir ir do topo de um quadrado para o lugar onde você vai começar
           o próxima. \nSe seus quadrados tiverem 20 pixels de altura e estiverem separados
           por 20 pixels entre si, qual distância você precisa saltar?"
+      courseD_artist_nestedLoops3_2019_authored_hint:
+        courseD_artist_nestedLoops3_a: "Tente usar o bloco 'saltar para a frente'
+          para conseguir ir do topo de um quadrado para o lugar onde você vai começar
+          o próxima. \nSe seus quadrados tiverem 20 pixels de altura e estiverem separados
+          por 20 pixels entre si, qual distância você precisa saltar?"
       courseD_bee_conditionals8_authored_hint:
         courseD_bee_conditionals8_a: "** Lembre-se: ** este quebra-cabeça muda cada
           vez que ele é executado.    Você vai querer usar um bloco condicional (`se`
           ou  `se/senão`) para resolver o desafio."
       courseD_bee_conditionals8_2018_authored_hint:
+        courseD_bee_conditionals8_a: "** Lembre-se: ** este quebra-cabeça muda cada
+          vez que ele é executado.    Você vai querer usar um bloco condicional (`se`
+          ou  `se/senão`) para resolver o desafio."
+      courseD_bee_conditionals8_2019_authored_hint:
         courseD_bee_conditionals8_a: "** Lembre-se: ** este quebra-cabeça muda cada
           vez que ele é executado.    Você vai querer usar um bloco condicional (`se`
           ou  `se/senão`) para resolver o desafio."
@@ -5796,11 +6507,71 @@ pt-BR:
           </next>
           </block>
           </xml>
+      courseD_collector_nested_loops_challenge2_2019_authored_hint:
+        courseD_bee_nested_loops_challenge2_d: |-
+          **Solução:**
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseD_maze_ramp1_authored_hint:
         courseC_maze_programming1_b: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
       courseD_maze_ramp1_2018_authored_hint:
+        courseC_maze_programming1_b: Não tenha medo de cometer um erro! Tente adicionar
+          blocos e executar o código para ver o que vai acontecer, mesmo se você achar
+          que ainda não resolveu o quebra-cabeça.
+      courseD_maze_ramp1_2019_authored_hint:
         courseC_maze_programming1_b: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
@@ -5816,6 +6587,12 @@ pt-BR:
           abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique
           sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas.
           \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem.\n"
+      courseD_maze_ramp3_2019_authored_hint:
+        courseC_maze_programming3_a: "! [] (https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+          \nPara excluir um bloco de no meio do seu código, arraste todos os blocos
+          abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique
+          sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas.
+          \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem.\n"
       courseD_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu
           código linha a linha. Você consegue descobrir o que você precisa fazer em
@@ -5826,6 +6603,15 @@ pt-BR:
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
       courseD_maze_ramp5_2018_authored_hint:
+        courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu
+          código linha a linha. Você consegue descobrir o que você precisa fazer em
+          seguida?
+        courseC_maze_programming5_b: Lembre-se de que viradas são na perspectiva do
+          pássaro.
+        courseC_maze_programming5_c: Não tenha medo de cometer um erro! Tente adicionar
+          blocos e executar o código para ver o que vai acontecer, mesmo se você achar
+          que ainda não resolveu o quebra-cabeça.
+      courseD_maze_ramp5_2019_authored_hint:
         courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu
           código linha a linha. Você consegue descobrir o que você precisa fazer em
           seguida?
@@ -5852,6 +6638,15 @@ pt-BR:
         courseC_maze_programming5_c: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
+      courseD_maze_ramp5a_2019_authored_hint:
+        courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu
+          código linha a linha. Você consegue descobrir o que você precisa fazer em
+          seguida?
+        courseC_maze_programming5_b: Lembre-se de que viradas são na perspectiva do
+          pássaro.
+        courseC_maze_programming5_c: Não tenha medo de cometer um erro! Tente adicionar
+          blocos e executar o código para ver o que vai acontecer, mesmo se você achar
+          que ainda não resolveu o quebra-cabeça.
       courseD_maze_ramp5b_authored_hint:
         courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu
           código linha a linha. Você consegue descobrir o que você precisa fazer em
@@ -5862,6 +6657,15 @@ pt-BR:
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
       courseD_maze_ramp5b_2018_authored_hint:
+        courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu
+          código linha a linha. Você consegue descobrir o que você precisa fazer em
+          seguida?
+        courseC_maze_programming5_b: Lembre-se de que viradas são na perspectiva do
+          pássaro.
+        courseC_maze_programming5_c: Não tenha medo de cometer um erro! Tente adicionar
+          blocos e executar o código para ver o que vai acontecer, mesmo se você achar
+          que ainda não resolveu o quebra-cabeça.
+      courseD_maze_ramp5b_2019_authored_hint:
         courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu
           código linha a linha. Você consegue descobrir o que você precisa fazer em
           seguida?
@@ -5936,6 +6740,11 @@ pt-BR:
           de 30 ** e gira para a direita em ** 60 graus **.  '
         courseE_artist_concept_challenge1_b: 'Os 2/3 do triângulo tem um ** comprimento
           de 80 ** e gira para a direita em ** 120 graus **. '
+      courseE_artist_concept_challenge1_2019_authored_hint:
+        courseE_artist_concept_challenge1_a: 'O metade-hexágono tem um ** comprimento
+          de 30 ** e gira para a direita em ** 60 graus **.  '
+        courseE_artist_concept_challenge1_b: 'Os 2/3 do triângulo tem um ** comprimento
+          de 80 ** e gira para a direita em ** 120 graus **. '
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: Cada um dos quadrados tem 100 de pixels de lado,
           o que significa que você terá que movê-lo para frente 175 pixels antes de
@@ -5952,6 +6761,9 @@ pt-BR:
         courseD_artist_functions2_a: "Seu programa deve: \n-Usar função\n- Mover para
           frente 100 + 75 pixels\n- Usar função"
       courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_a: "Seu programa deve: \n-Usar função\n- Mover para
+          frente 100 + 75 pixels\n- Usar função"
+      courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: "Seu programa deve: \n-Usar função\n- Mover para
           frente 100 + 75 pixels\n- Usar função"
       courseE_artist_ramp10_authored_hint:
@@ -6015,6 +6827,9 @@ pt-BR:
         courseE_farmer_ramp12e_b: A solução deste quebra-cabeças vai ser muito parecida
           com a do anterior, mas virando em outra direção.
       courseE_farmer_ramp12e_2018_authored_hint:
+        courseE_farmer_ramp12e_b: A solução deste quebra-cabeças vai ser muito parecida
+          com a do anterior, mas virando em outra direção.
+      courseE_farmer_ramp12e_2019_authored_hint:
         courseE_farmer_ramp12e_b: A solução deste quebra-cabeças vai ser muito parecida
           com a do anterior, mas virando em outra direção.
       courseE_maze_ramp3_authored_hint:
@@ -6081,7 +6896,20 @@ pt-BR:
           De quanto é o aumento cada vez?**
 
           Essas são as questões que você precisa responder para preencher as lacunas no laço `para`.
+      courseF_artist_for4_2019_authored_hint:
+        courseF_artist_for4_a: |-
+          **Qual o menor número que você precisa?
+          Qual é o maior número?
+          De quanto é o aumento cada vez?**
+
+          Essas são as questões que você precisa responder para preencher as lacunas no laço `para`.
       courseF_artist_for_challenge1_authored_hint:
+        courseF_artist_for_challenge1_a: A `largura da caneta` é 1. O primeiro quadrado
+          tem lados de 50 pixels, e cada quadrado é 50 pixels mais largo do que o
+          último.
+        courseF_artist_for_challenge1_b: A opacidade no pincel é sempre `contador`/2.
+        courseF_artist_for_challenge1_c: Depois de fazer cada quadrado, não se esqueça
+          de pular pra trás, virar, pular novamente, então virar de volta!
         courseF_artist_for_challenge1_d: |-
           **Solução:**
 
@@ -6216,6 +7044,152 @@ pt-BR:
           </block>
           </xml>
       courseF_artist_for_challenge1_2018_authored_hint:
+        courseF_artist_for_challenge1_a: A `largura da caneta` é 1. O primeiro quadrado
+          tem lados de 50 pixels, e cada quadrado é 50 pixels mais largo do que o
+          último.
+        courseF_artist_for_challenge1_b: A opacidade no pincel é sempre `contador`/2.
+        courseF_artist_for_challenge1_c: Depois de fazer cada quadrado, não se esqueça
+          de pular pra trás, virar, pular novamente, então virar de volta!
+        courseF_artist_for_challenge1_d: |-
+          **Solução:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_picker">
+          <title name="COLOUR">#0000cd</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">50</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">350</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">50</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="alpha" inline="true" id="alpha">
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">4</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">jumpBackward</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">25</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">jumpBackward</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">25</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseF_artist_for_challenge1_2019_authored_hint:
+        courseF_artist_for_challenge1_a: A `largura da caneta` é 1. O primeiro quadrado
+          tem lados de 50 pixels, e cada quadrado é 50 pixels mais largo do que o
+          último.
+        courseF_artist_for_challenge1_b: A opacidade no pincel é sempre `contador`/2.
+        courseF_artist_for_challenge1_c: Depois de fazer cada quadrado, não se esqueça
+          de pular pra trás, virar, pular novamente, então virar de volta!
         courseF_artist_for_challenge1_d: |-
           **Solução:**
 
@@ -6350,6 +7324,10 @@ pt-BR:
           </block>
           </xml>
       courseF_artist_for_challenge2_authored_hint:
+        courseF_artist_for_challenge2_c: 'O `laço for` vai de 5 a 250 de 2 em 2. '
+        courseF_artist_for_challenge2_a: A mudança de cor acontece usando o bloco
+          `defina a cor com vermelho, verde, azul`. Vermelho é definido constante
+          em 255, verde é sempre o valor do`contador`, e azul é sempre `255 - contador`.
         courseF_artist_for_challenge2_d: |-
           **Solução:**
 
@@ -6442,6 +7420,106 @@ pt-BR:
 
           ![](https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png)
       courseF_artist_for_challenge2_2018_authored_hint:
+        courseF_artist_for_challenge2_c: 'O `laço for` vai de 5 a 250 de 2 em 2. '
+        courseF_artist_for_challenge2_a: A mudança de cor acontece usando o bloco
+          `defina a cor com vermelho, verde, azul`. Vermelho é definido constante
+          em 255, verde é sempre o valor do`contador`, e azul é sempre `255 - contador`.
+        courseF_artist_for_challenge2_d: |-
+          **Solução:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">5</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">250</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_rgb" inline="false">
+          <value name="RED">
+          <block type="math_number">
+          <title name="NUM">255</title>
+          </block>
+          </value>
+          <value name="GREEN">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <value name="BLUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">MINUS</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">255</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">80</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+
+          ![](https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png)
+      courseF_artist_for_challenge2_2019_authored_hint:
+        courseF_artist_for_challenge2_c: 'O `laço for` vai de 5 a 250 de 2 em 2. '
+        courseF_artist_for_challenge2_a: A mudança de cor acontece usando o bloco
+          `defina a cor com vermelho, verde, azul`. Vermelho é definido constante
+          em 255, verde é sempre o valor do`contador`, e azul é sempre `255 - contador`.
         courseF_artist_for_challenge2_d: |-
           **Solução:**
 
@@ -6534,11 +7612,29 @@ pt-BR:
 
           ![](https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png)
       courseF_artist_fwp_challenge2_authored_hint:
+        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
+        courseF_artist_fwp_challenge1_b: 'Esta é uma série de octógonos com lados
+          que são de comprimento do ''contador'' em pixels. '
+        courseF_artist_fwp_challenge1_c: 'Cada octógono é chamado de dentro de um
+          laço ''for'' que vai de 200 até 2 por 2. '
+        courseF_artist_fwp_challenge1_d: 'Não esqueça de virar 22,5 graus no final
+          de cada iteração. '
+        courseF_artist_fwp_challenge1_e: Tanto a cor de cada octógono como a largura
+          da caneta são controladas pela variável 'contador'.
         courseF_artist_fwp_challenge1_f: |-
           **Solução:**
 
           ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       courseF_artist_fwp_challenge2_2018_authored_hint:
+        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
+        courseF_artist_fwp_challenge1_b: 'Esta é uma série de octógonos com lados
+          que são de comprimento do ''contador'' em pixels. '
+        courseF_artist_fwp_challenge1_c: 'Cada octógono é chamado de dentro de um
+          laço ''for'' que vai de 200 até 2 por 2. '
+        courseF_artist_fwp_challenge1_d: 'Não esqueça de virar 22,5 graus no final
+          de cada iteração. '
+        courseF_artist_fwp_challenge1_e: Tanto a cor de cada octógono como a largura
+          da caneta são controladas pela variável 'contador'.
         courseF_artist_fwp_challenge1_f: |-
           **Solução:**
 
@@ -6847,7 +7943,163 @@ pt-BR:
           </next>
           </block>
           </xml>
+      courseF_artist_variables_challenge1_2019_authored_hint:
+        courseF_artist_variables_challenge1_e: |-
+          Aqui está a solução.
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">length</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">18</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">length</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ADD</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">length</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ADD</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseF_artist_variables_challenge1a_authored_hint:
+        courseF_artist_variables_challenge1_a: 'Variáveis são úteis porque você pode
+          adicionar à elas cada vez por um laço. '
+        courseF_artist_variables_challenge1_b: Este enigma contém um laço que cria
+          o polígono, um laço que repete o polígono 'sides' vezes, então outro laço
+          que faz tudo isto de novo após adicionar 5 à 'sides'.
+        courseF_artist_variables_challenge1_c: Usando uma variável para 'sides' e
+          uma para 'length' torna o código mais limpo porque você pode repetir o mesmo
+          código múltiplas vezes, ao invés de criar uma nova cópia para cada conjunto
+          de números.
         courseF_artist_variables_challenge1_d: |-
           **Solução:**
 
@@ -6862,6 +8114,11 @@ pt-BR:
           **Solução:**
 
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
+      courseF_artist_variables_challenge2_2019_authored_hint:
+        courseF_artist_variables_challenge2_d: |-
+          **Solução:**
+
+          ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
       courseF_bee_conditionals8_authored_hint:
         courseF_bee_conditionals8_a: "** Lembre-se: ** este quebra-cabeça muda cada
           vez que ele é executado.    Você vai querer usar um bloco condicional (`se`
@@ -6871,6 +8128,14 @@ pt-BR:
           vez que ele é executado.    Você vai querer usar um bloco condicional (`se`
           ou  `se/senão`) para resolver o desafio."
       courseF_bee_for_challenge2_authored_hint:
+        courseF_bee_for_challenge2_a: "Dê uma olhada nesta opção de movimento:  \n\n!
+          [a] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
+        courseF_bee_for_challenge2_b: 'Tente usar dois laços ''para'': um para subir
+          e pegar o néctar e o outro para descer e fazer mel.'
+        courseF_bee_for_challenge2_c: "Observe que um laço 'para' precisa de várias
+          execuções de seu interior que se repetem o número de vezes do 'contador'
+          para seguir o padrão da escada. \n\nO outro laço 'para' só precisa de uma
+          execução para fazer do 'contador' a quantidade de mel."
         courseF_bee_for_challenge2_d: |-
           **Solução:**
 
@@ -7005,6 +8270,156 @@ pt-BR:
           </block>
           </xml>
       courseF_bee_for_challenge2_2018_authored_hint:
+        courseF_bee_for_challenge2_a: "Dê uma olhada nesta opção de movimento:  \n\n!
+          [a] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
+        courseF_bee_for_challenge2_b: 'Tente usar dois laços ''para'': um para subir
+          e pegar o néctar e o outro para descer e fazer mel.'
+        courseF_bee_for_challenge2_c: "Observe que um laço 'para' precisa de várias
+          execuções de seu interior que se repetem o número de vezes do 'contador'
+          para seguir o padrão da escada. \n\nO outro laço 'para' só precisa de uma
+          execução para fazer do 'contador' a quantidade de mel."
+        courseF_bee_for_challenge2_d: |-
+          **Solução:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">3</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_moveForward"/>
+          </statement>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_moveForward"/>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_moveForward">
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="maze_moveForward">
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_honey"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseF_bee_for_challenge2_2019_authored_hint:
+        courseF_bee_for_challenge2_a: "Dê uma olhada nesta opção de movimento:  \n\n!
+          [a] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
+        courseF_bee_for_challenge2_b: 'Tente usar dois laços ''para'': um para subir
+          e pegar o néctar e o outro para descer e fazer mel.'
+        courseF_bee_for_challenge2_c: "Observe que um laço 'para' precisa de várias
+          execuções de seu interior que se repetem o número de vezes do 'contador'
+          para seguir o padrão da escada. \n\nO outro laço 'para' só precisa de uma
+          execução para fazer do 'contador' a quantidade de mel."
         courseF_bee_for_challenge2_d: |-
           **Solução:**
 
@@ -7139,6 +8554,14 @@ pt-BR:
           </block>
           </xml>
       courseF_bee_for_challenge3_authored_hint:
+        courseF_bee_for_challenge2_a: "Dê uma olhada nesta opção de movimento:  \n\n!
+          [a] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
+        courseF_bee_for_challenge2_b: 'Tente usar dois laços ''para'': um para subir
+          e pegar o néctar e o outro para descer e fazer mel.'
+        courseF_bee_for_challenge2_c: "Observe que um laço 'para' precisa de várias
+          execuções de seu interior que se repetem o número de vezes do 'contador'
+          para seguir o padrão da escada. \n\nO outro laço 'para' só precisa de uma
+          execução para fazer do 'contador' a quantidade de mel."
         courseF_bee_for_challenge2_d: |-
           **Solução:**
 
@@ -8158,8 +9581,30 @@ pt-BR:
           frente 100 + 75 pixels\n- Usar função"
       grade4_artist_functions_challenge_authored_hint:
         Course_4_SCF_1_a: Cada hexágono tem 40 pixels de lado.
+        Course_4_SCF_1_b: Há um salto de 120 pixels entre cada hexágono em cada linha
+          horizontal.
+        Course_4_SCF_1_c: "Antes de você desenhar a segunda linha de hexágonos, você
+          precisa virar à direita 60 graus e pular adiante 40 pixels. \n\nAssim que
+          você estiver na localização vertical correta, você tem que virar seu artista
+          novamente para trás e pular para trás 320 pixels."
+        Course_4_SCF_1_d: "Antes de desenhar a terceira linha de hexágonos, você precisa
+          virar à direita em 60 graus e avançar 40 pixels.\n\nUma vez que você esteja
+          no local vertical correto, você tem que virar seu artista de volta e retroceder
+          440 pixels (120 pixels mais distante do que a função `deslocar para baixo
+          / para frente`. "
       grade4_artist_functions_challenge2_authored_hint:
         Course_4_SCF_1_a: Cada hexágono tem 40 pixels de lado.
+        Course_4_SCF_1_b: Há um salto de 120 pixels entre cada hexágono em cada linha
+          horizontal.
+        Course_4_SCF_1_c: "Antes de você desenhar a segunda linha de hexágonos, você
+          precisa virar à direita 60 graus e pular adiante 40 pixels. \n\nAssim que
+          você estiver na localização vertical correta, você tem que virar seu artista
+          novamente para trás e pular para trás 320 pixels."
+        Course_4_SCF_1_d: "Antes de desenhar a terceira linha de hexágonos, você precisa
+          virar à direita em 60 graus e avançar 40 pixels.\n\nUma vez que você esteja
+          no local vertical correto, você tem que virar seu artista de volta e retroceder
+          440 pixels (120 pixels mais distante do que a função `deslocar para baixo
+          / para frente`. "
       grade4_artist_nestedLoops_challenge2_authored_hint:
         Course_4_Artist_11_a: 'O metade-hexágono tem um ** comprimento de 30 ** e
           gira para a direita em ** 60 graus **.  '
@@ -8259,6 +9704,10 @@ pt-BR:
           O bloco `escolher alfa` usa divisão para enfraquecer a cor quando o contador aumenta.
         after: Quando você acabar com cada "pétala", certifique-se de 'Avançar' 20
           pixels antes de você fazer uma rotação de 60 graus.
+      grade5_artist_variables_freeplay10_authored_hint:
+        Course_4_Artist_Vars_8_a: Se você dividir seu comprimento inicial pelo número
+          de lados, o comprimento de cada lado ficará menor a medida que o número
+          de lados fica maior.
       grade5_artist_variables_freeplay15_authored_hint:
         Course_4_Artist_Inspire_a: Depois que você completar um quadrado, tente pular
           metade do seu comprimento para frente antes de virar e fazer outro.
@@ -8270,6 +9719,15 @@ pt-BR:
       grade5_artist_variables_octagons13_authored_hint:
         Course_4_Artist_Vars_13_a: Você precisa de dois laços de repetição (um dentro
           do outro) ambos repetindo `quantidade de lados` vezes.
+        Course_4_Artist_Vars_13_b: "O laço de repetição interior desenha um octógono
+          (virando para a esquerda).   \n\nPosteriormente, você precisa mover para
+          frente e virar para a direita apenas dentro do laço exterior."
+        Course_4_Artist_Vars_13_c: Para ajustar a forma para que permaneça com o mesmo
+          tamanho quando o número de lados muda, use o bloco de matemática para dividir
+          o comprimento em pixels pelo número de lados.
+      grade5_artist_variables_square7_authored_hint:
+        Course_4_Artist_Vars_6_a: Para desenhar um polígono regular, vire **360/lados**
+          cada vez.
       grade5_artist_variables_triangles1_authored_hint:
         grade5_artist_variables_triangles1_a: Para fazer um ângulo interno de 60 graus
           nesse triângulo, se lembre de virar o artista 120 graus.
@@ -8284,6 +9742,16 @@ pt-BR:
           o seu código.
         grade5_artist_variables_triangles1_c: Dentro da sua repetição, você vai querer
           avançar 50 pixels, então virar a esquerda 120 graus.
+      grade5_artist_variables_triangles1_2019_authored_hint:
+        grade5_artist_variables_triangles1_a: Para fazer um ângulo interno de 60 graus
+          nesse triângulo, se lembre de virar o artista 120 graus.
+        grade5_artist_variables_triangles1_b: Use a repetição `repetir` para encurtar
+          o seu código.
+        grade5_artist_variables_triangles1_c: Dentro da sua repetição, você vai querer
+          avançar 50 pixels, então virar a esquerda 120 graus.
+      grade5_playlab_variables2_authored_hint:
+        Course_4_Play_Lab_Vars_2_a: Certifique-se de defininir o número para `velocidade_do_cachorro`
+          como sendo maior do que o de `velocidade_do_gato`.
       gradeK_sequence_4_authored_hint:
         gradeK_sequence_4_a: Tente escrever os passos no papel para encontrar uma
           solução!

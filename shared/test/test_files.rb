@@ -4,6 +4,7 @@ require 'cdo/aws/s3'
 
 class FilesTest < FilesApiTestBase
   def setup
+    NewRelic::Agent.reset_stub
     @channel_id = create_channel
     @api = FilesApiTestHelper.new(current_session, 'files', @channel_id)
     @api.ensure_aws_credentials
@@ -42,6 +43,11 @@ class FilesTest < FilesApiTestBase
     assert successful?
     assert_equal file_data, last_response.body
 
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+      Custom/ListRequests/FileBucket/BucketHelper.object_and_app_size
+    )
+
     delete_all_manifest_versions
   end
 
@@ -64,6 +70,37 @@ class FilesTest < FilesApiTestBase
 
     @api.delete_object(new_filename)
     assert successful?
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+      Custom/ListRequests/FileBucket/BucketHelper.object_and_app_size
+    )
+
+    delete_all_manifest_versions
+  end
+
+  def test_rename_object_filename_too_long
+    file_data = 'fake-file-data'
+    old_filename = @api.randomize_filename 'old_file.html'
+    new_filename = "long_filename#{'_' * 512}.html"
+    delete_all_file_versions old_filename, URI.escape(old_filename)
+    delete_all_manifest_versions
+    post_file_data @api, old_filename, file_data, 'test/html'
+
+    @api.rename_object old_filename, new_filename
+    assert bad_request?
+    @api.get_object(new_filename)
+    assert not_found?
+    @api.get_object(old_filename)
+    assert successful?
+    assert_equal file_data, last_response.body
+
+    @api.delete_object(old_filename)
+    assert successful?
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+    )
 
     delete_all_manifest_versions
   end
@@ -108,6 +145,11 @@ class FilesTest < FilesApiTestBase
 
     @api.get_root_object(dog_image_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
     assert_equal dog_image_body, last_response.body
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+    )
 
     @api.delete_object(dog_image_filename)
     assert successful?
@@ -155,6 +197,11 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(html_filename)
     assert successful?
 
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+    )
+
     delete_all_manifest_versions
   end
 
@@ -168,6 +215,10 @@ class FilesTest < FilesApiTestBase
 
     @api.delete_object(mismatched_filename)
     assert successful?
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+    )
 
     delete_all_manifest_versions
   end
@@ -198,6 +249,11 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(escaped_filename2)
     assert successful?
 
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+    )
+
     delete_all_manifest_versions
   end
 
@@ -218,6 +274,10 @@ class FilesTest < FilesApiTestBase
 
     @api.delete_object(different_case_filename)
     assert successful?
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+    )
 
     delete_all_manifest_versions
   end
@@ -242,6 +302,10 @@ class FilesTest < FilesApiTestBase
 
     @api.delete_object(dog_image_filename)
     assert successful?
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+    )
 
     delete_all_manifest_versions
   end
@@ -308,12 +372,20 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(filename)
     assert successful?
 
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+      Custom/ListRequests/FileBucket/BucketHelper.list_versions
+      Custom/ListRequests/FileBucket/BucketHelper.list_versions
+    )
+
     delete_all_manifest_versions
   end
 
   def test_invalid_file_extension
     @api.get_object('bad_extension.css%22')
     assert unsupported_media_type?
+    assert_newrelic_metrics []
   end
 
   def test_bad_channel_id
@@ -322,6 +394,7 @@ class FilesTest < FilesApiTestBase
     file_infos = api.list_objects
     assert_equal '', file_infos['filesVersionId']
     assert_equal [], file_infos['files']
+    assert_newrelic_metrics []
   end
 
   def test_thumbnail
@@ -335,6 +408,10 @@ class FilesTest < FilesApiTestBase
     assert successful?
 
     assert_equal thumbnail_body, @api.get_object(thumbnail_filename)
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+    )
 
     @api.delete_object(thumbnail_filename)
     assert successful?
@@ -372,6 +449,10 @@ class FilesTest < FilesApiTestBase
     # file contents has not changed
     assert_equal thumbnail_body, @api.get_object(thumbnail_filename)
 
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+    )
+
     @api.delete_object(thumbnail_filename)
     assert successful?
 
@@ -397,6 +478,8 @@ class FilesTest < FilesApiTestBase
 
     @api.get_object(bogus_metadata_filename)
     assert not_found?
+
+    assert_newrelic_metrics []
   end
 
   def test_rename_mixed_case
@@ -426,6 +509,11 @@ class FilesTest < FilesApiTestBase
 
     @api.delete_object(escaped_filename2)
     assert successful?
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+      Custom/ListRequests/FileBucket/BucketHelper.object_and_app_size
+    )
 
     delete_all_manifest_versions
   end
@@ -482,6 +570,10 @@ class FilesTest < FilesApiTestBase
     refute_equal response_before_rename['filesVersionId'], response_after_rename['filesVersionId']
     assert_equal file_infos[0]['versionId'], file_infos_after_rename[0]['versionId']
 
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+    )
+
     @api.delete_object(escaped_filename2)
     assert successful?
 
@@ -528,6 +620,13 @@ class FilesTest < FilesApiTestBase
     assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, URI.escape(image_filename.downcase))
     assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, URI.escape(sound_filename.downcase))
 
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+      Custom/ListRequests/FileBucket/BucketHelper.list
+      Custom/ListRequests/FileBucket/BucketHelper.copy_files
+    )
+
     src_api.delete_object(URI.escape(image_filename))
     src_api.delete_object(URI.escape(sound_filename))
     delete_all_manifest_versions
@@ -551,6 +650,10 @@ class FilesTest < FilesApiTestBase
     # Has a 5-minute timeout by default
     assert_includes temp_url, 'X-Amz-Expires=300'
 
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+    )
+
     @api.delete_object(thumbnail_filename)
     assert successful?
   end
@@ -569,6 +672,10 @@ class FilesTest < FilesApiTestBase
 
     # Has a 5-minute timeout by default
     assert_includes temp_url, 'X-Amz-Expires=3600'
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
+    )
 
     @api.delete_object(thumbnail_filename)
     assert successful?

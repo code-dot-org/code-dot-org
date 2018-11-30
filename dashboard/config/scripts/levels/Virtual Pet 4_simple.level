@@ -56,10 +56,8 @@
     "instructions": "Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!",
     "include_shared_functions": "false",
     "name_suffix": "_simple",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "block_pool": "gamelab",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

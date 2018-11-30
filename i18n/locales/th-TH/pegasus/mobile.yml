@@ -26,10 +26,14 @@
   twentyhours_heading: "ทดลองเรียนหลักสูตรวิทยาศาสตร์คอมพิวเตอร์เบื้องต้นของเรา"
   twentyhours_text: "เรียนบทแรกของ Hour of Code แล้วใช่ไหม? เรียนรู้เพิ่มเติมเกี่ยวกับหลักสูตรวิทยาการคอมพิวเตอร์ และหลักการเขียนโปรแกรม (Programming Concepts) ได้ในหลักสูตรต่อไปนี้"
   og_title: 'เด็กทุกคนสมควรได้รับโอกาส'
+  og_title_soon: "ชั่วโมงของการเขียนโค้ดกำลังมา"
   og_title_here: "Hour of Code อยู่ที่นี่แล้ว"
   og_description: "นักเรียนทุกคนในทุกโรงเรียนควรได้รับโอกาสศึกษาวิทยาการคอมพิวเตอร์. มันมีการเปลี่ยนแปลงทุกๆ อย่าง."
+  og_description_celeb: "มาทดลองกับการสอนแบบใหม่ ถ้าคุณหรือชั้นเรียนของคุณชนะจะได้โอกาสคุยกับคนที่มีชื่อเสียง"
   csedweek_og_title: "Hour of Code กำลังมา"
   csedweek_og_description: "4-10 ธันวาคม พ.ศ.2560  วิทยาศาสตร์คอมพิวเตอร์คือพื้นฐานสำหรับนักเรียนทุกคนได้เรียนรู้"
+  csedweek_og_description_soon: "ชั่วโมงรหัส หรือ \"Hour of Code\" จัดให้มีขึ้นระหว่างวันที่ 3-9 ธันวาคม 2018 วิทยาการคอมพิวเตอร์นั้นเป็นพื้นฐานสำหรับนักเรียนทุกคนที่ต้องเรียนรู้"
+  csedweek_og_description_here: "ชั่วโมงรหัส หรือ \"Hour of Code\" จัดขึ้นที่นี่ วิทยาการคอมพิวเตอร์นั้นเป็นพื้นฐานสำหรับนักเรียนทุกคนที่ต้องเรียนรู้"
   hoc2014_heading: "เข้าร่วม <a href=\"http://hourofcode.com\">Hour of Code</a><br/> ในวันที่ 8 - 14 ธันวาคม 2014<br/>"
   hoc2014_students: "นักเรียน"
   hoc2014_try: "ลอง"
@@ -66,6 +70,7 @@
   congratulations: "ขอแสดงความยินดี!"
   congratulations_on_completing_hoc: "ขอแสดงความยินดีในการผ่านการเรียนเขียนโปรแกรมกับ Hour of Code 1 หลักสูตร"
   congratulations_volunteer: 'ยินดีด้วย: หลังจากที่คุณได้ลองชั่วโมงแห่งการโค้ด <a href="https://code.org/volunteer">ลงทะเบียนเป็นอาสาสมัครในห้องเรียน</a>และช่วยนักเรียนเรียนรู้เป็นชั่วโมงแห่งการโค้ด'
+  congratulations_on_completing_course: "ยินดีด้วยกับที่คุณทำบทเรียนได้ %{course}"
   congrats_next_tutorials_title: "ลองการแนะนำการสอยอื่นต่อ"
   congrats_next_tutorials_desc: "ลองแบบสั้นกว่านี้ 1 ชั่วโมงสำหรับการทบทวน หรือลอง<a href=\"%{current_path}/next\">บททบทวนที่ใกล้เคียง</a>"
   get_a_certificate_of_achievement: "รับใบประกาศนียบัตร"
@@ -86,7 +91,7 @@
   third_party_platform_all: 'แพลตฟอร์ม: เว็บ iPad และ Android'
   third_party_platform_mobile: 'แพลตฟอร์ม: iPad และ Android'
   third_party_platform_web: 'แพลตฟอร์ม: เว็บ'
-  third_party_price_varies: 'ราคา: แตกต่างกันขึ้นอยู่กับแพลน'
+  third_party_price_varies: 'ราคา: แตกต่างกันขึ้นอยู่กับแพลนอะไร'
   third_party_price_free: 'ราคา: ฟรี'
   third_party_price_299: 'ราคา: $2.99 ต่อการดาวน์โหลด 1 ครั้ง'
   third_party_price_individual: 'ราคารายบุคคล : ทดลองใช้ฟรี และ $25 ต่อเดือน'
@@ -178,6 +183,8 @@
   studiobar_title_nolink: "ทำความรู้จัก Code Studio"
   studiobar_elementary_title: "หลักสูตรพื้นฐาน"
   studiobar_elementary_body: "สามหลักสูตรใหม่ของเราสำหรับ K &#8209; 5"
+  studiobar_dance_title: "งานเต้นรำ"
+  studiobar_dance_body: "สร้างและแชร์เกม Dance Party ของคุณเอง"
   studiobar_hoc_title: "The Hour of Code"
   studiobar_hoc_body: "เรียนรู้การเขียนโค้ดกับเกม Angry Birds"
   studiobar_flappy_body: "สร้างและแชร์เกม Flappy Bird ของคุณ"
@@ -189,18 +196,19 @@
   studiobar_donate_body: "เด็กจะได้รับการศึกษาจากแต่ละดอลลาร์ที่คุณบริจาค"
   studiobar_shop_title: "ร้านค้า"
   studiobar_shop_body: "แตกประเภทออก ใส่โลโก้ของเราด้วยความภาคภูมิใจ"
-  homepage_hero_text_malala: "\"ฉันท้าทายผู้หญิงทุกประเทศ ให้ลองเรียน Hour of Code\" มาลาลา, ผู้ชนะรางวัลโนเบลสันติภาพ"
+  homepage_stats_title: "เรากำลังสร้างให้เกิดความแตกต่าง"
+  homepage_hero_text_malala: "&ldquo;\"ฉันท้าทายผู้หญิงทุกประเทศ ให้ลองเรียนชั่วโมงของการเขียนโค้ด(Hour of Code)สักครั้ง&rdquo;\" (มาลาลา), ผู้ชนะรางวัลโนเบลสาขาสันติภาพ"
   homepage_hero_text_susan: |-
     &ldquo; ถ้าคุณสามารถเปลี่ยนแปลงเทคโนโลยี,
     คุณสามารถเปลี่ยนแปลงโลกของเรา &rdquo;
-    Susan, ประธานกรรมการบริหาร YouTube
+    ซูซาน, ประธานกรรมการบริหารของ YouTube
   homepage_hero_text_fistbump: |-
     &ldquo;อย่าเพียงแค่เล่นเกมบนโทรศัพท์ของคุณ
     ลองสร้างโปรแกรมดูสิ&rdquo;
-    ประธานาธิบดีสหรัฐ บารัก โอบามา
+    ประธานาธิบดี บารัก โอบามา ของสหรัฐ
   homepage_hero_text_sheryl: |-
-    &ldquo;เด็กๆของพวกเรา &mdash; รวมไปถึงเด็กผู้หญิง &mdash;
-    ต้องการโอกาสที่จะได้เรียนรู้วิชาวิทยาการคอมพิวเตอร์ &rdquo;
+    &ldquo;เด็กๆ ของพวกเรา &mdash; รวมถึงเด็กผู้หญิง &mdash;
+    ต้องการโอกาสที่จะได้เรียนรู้วิทยาการคอมพิวเตอร์ &rdquo;
     Sheryl, ประธานฝ่ายปฎิบัติการ Facebook
   homepage_hero_text_satya: |-
     &ldquo;วิทยาการคอมพิวเตอร์สามารถสร้าง
@@ -210,13 +218,12 @@
     &ldquo;หากคุณโค้ด คุณสามารถเลือก
     เส้นทางของชีวิตคุณได้ &rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |2
+  homepage_hero_text_student1: |-
     "ทักษะเหล่านี้ปลี่ยนแปลงอนาคตของฉัน
     ยังไม่ได้พูดถึงความสนุกของมัน"
      Luna นักเรียนชั้นมัธยมศึกษาปีที่ 2
-  homepage_hero_text_student2: |2
-    "ผมไม่เคยเห็นเด็กๆ
-     ตื่นเต้นกับการเรียนรู้มากขนาดนี้"
+  homepage_hero_text_student2: |-
+    &ldquo;ผมไม่เคยเห็นเด็กๆ ตื่นเต้นกับการเรียนรู้มากขนาดนี้&rdquo;
     Michael, ครู
   homepage_hero_text_student3: |-
     &ldquo; วิทยาการคอมพิวเตอร์ เป็นศาสตร์ที่คุณจะ
@@ -231,12 +238,14 @@
   homepage_hero_text_stat_loc: "มีเด็กหญิง 2.5 ล้านคนที่ได้ลงทะเบียนเรียนกับ Code Studio"
   homepage_hero_text_stat_students: "#student_count บัญชี บน Code Studio"
   homepage_hero_text_stat_served: 'มีผู้ใช้บริการ Hour of Code: #served คนแล้ว'
+  homepage_hero_hoc_is_coming: "ชั่วโมงของการเขียนโค้ดกำลังมา"
+  homepage_hero_hoc_is_here: "ชั่วโมงของการเขียนโค้ดมาถึงแล้ว"
   homepage_slot_text_hoc: "The Hour of Code"
   homepage_slot_text_frozen: "Frozen กับ เจ้าหญิงแอนนา และ เอลซ่า"
   homepage_slot_text_studio: "บทเรียนของเราทั้งหมด"
   homepage_slot_text_course4: "คอร์ส 4"
   homepage_slot_text_shop: "ร้านค้า"
-  homepage_action_text_hoc: "กิจกรรมชั่วโมงแห่งการโค้ดเพื่อนักเรียนทุกคน"
+  homepage_action_text_hoc: "ชั่วโมงแห่งการเขียนโค้ดสำหรับนักเรียนทุกคน"
   homepage_action_text_num_served: "# คน เข้าร่วมแล้ว"
   homepage_action_text_join_us: "ร่วมกับเรา"
   homepage_action_text_sign_up: "สมัครสมาชิก"
@@ -248,6 +257,7 @@
   homepage_action_text_girlvideo: "แรงบันดาลใจให้ผู้หญิง"
   homepage_action_text_learn: "เริ่มต้นการเรียนรู้กันเลย"
   homepage_action_text_signpetition: "ลงนามในคำร้อง"
+  homepage_action_text_wincelebritychat: "ได้รับรางวัลเพื่อพูดคุยกับดารา"
   homepage_signpetition_dropdown: "ลงนามในคำร้อง &#x25BE;"
   homepage_diversity_pledge: "รองรับความหลากหลาย"
   homepage_banner_text_prizes: 'ชั่วโมงแห่งการโค้ดจะกลับมาอีกครั้งในวันที่ 7-13 ธันวาคม '
@@ -263,7 +273,7 @@
   homepage_slot_text_link_hoc: "ลองใช้ Hour of Code สิ"
   homepage_slot_text_link_host: "จัดงาน Hour of Code"
   homepage_slot_text_link_hocserved: "# คน เข้าร่วมแล้ว"
-  homepage_solot_text_link_volunteer: "อาสาสมัครชั่วโมงแห่งการโค้ด"
+  homepage_solot_text_link_volunteer: "อาสาสมัครสำหรับชั่วโมงแห่งการเขียนโค้ด"
   homepage_slot_text_title_students: "นักเรียน"
   homepage_slot_text_blurb_students: "สำรวจบทเรียนของเราทั้งหมด"
   homepage_slot_text_blurb_students_courses: "สำรวจหลักสูตรของเรา"
@@ -329,7 +339,7 @@
   playlab_classic_title: "คลาสสิค"
   playlab_gumball_title: "โลกมหัศจรรย์ของ Gumball"
   playlab_iceage_title: "Ice Age - เร็วๆ นี้"
-  playlab_iceage_title_live: "Ice Age"
+  playlab_iceage_title_live: "ยุคน้ำแข็ง (Ice Age)"
   starwars_subtitle: "การสร้าง Galaxy ด้วยโค้ด"
   starwars_javascript_title: "จาวาสคริปต์"
   starwars_javascript_description: "ใช้การลากวางบล็อคและจาวาสคริปต์"
@@ -338,26 +348,26 @@
   starwars_blocks_description: "ใช้การลากวางบล็อค"
   starwars_blocks_specs: "หลายภาษา | เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต | อายุ 6-106 ปี"
   starwars_platform_text: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต"
-  mc_name: "ชั่วโมงแห่งการโค้ดด้วย Minecraft"
-  mc_longdescription: "ใช้บล็อคของโค้ดเพื่อพาสตีฟและอเล็กไปยังการผจญภัยในโลกของ Minecraft"
-  mc_shortdescription: "ใช้บล็อคของโค้ดเพื่อพาสตีฟและอเล็กไปยังการผจญภัยในโลกของ Minecraft"
+  mc_name: "ชั่วโมงแห่งการเขียนโค้ดกับไมน์คราฟท์"
+  mc_longdescription: "ใช้บล็อคของโค้ดเพื่อพาสตีฟหรือแอเล็กซ์สู่การผจญภัยในโลกของไมน์คราฟท์"
+  mc_shortdescription: "ใช้บล็อคของโค้ดเพื่อพาสตีฟหรือแอเล็กซ์สู่การผจญภัยในโลกของไมน์คราฟท์"
   mc_gradelevel: "อายุ 4 - 104 ปี"
   mc_platformtext: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต"
   mc_specs: "หลายภาษา | เบราว์เซอร์ที่ทันสมัย แท็ปเล็ต | อายุ 6-106 ปี"
-  minecraft_agent: 'ไมน์คราฟท์ ภาคการเดินทางของฮีโร่'
+  minecraft_agent: "ไมน์คราฟท์ ภาคการเดินทางของฮีโร่"
   minecraft_designer: "นักออกแบบ Minecraft"
   minecraft_adventurer: "การผจญภัยในไมน์คราฟท์"
   minecraft_tutorials: "สอนชั่วโมงแห่งโค้ดด้วย Minecraft"
-  minecraft_specs: "หลายภาษา | เบราว์เซอร์และแท็บเล็ตรุ่นใหม่ | เกรด 2 +"
-  minecraft_agent_description: "การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด! มาผจญภัยไปกับไมน์คราฟท์ด้วยการใช้โค้ดเป็นเครื่องมือ"
+  minecraft_specs: "หลากหลายภาษา | บราว์เซอร์และแท็บเล็ตรุ่นใหม่ | เกรด 2+"
+  minecraft_agent_description: "การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด! มาท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด"
   minecraft_agent_button: "เริ่มต้น"
   minecraft_designer_description: "เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง"
   minecraft_designer_button: "เริ่มต้น"
-  minecraft_adventurer_description: "ใช้โค้ดเพื่อนำอเล็กซ์หรือสตีฟไปผจญภัย"
+  minecraft_adventurer_description: "ใช้โค้ดเพื่อนำแอเล็กซ์หรือสตีฟสู่การผจญภัย"
   minecraft_adventurer_button: "เริ่มต้น"
   minecraft_no_internet: "ไม่มีอินเทอร์เน็ตใช่หรือไม่"
   minecraft_download_adventurer: "ดาวน์โหลด ผจญภัยใน Minecraft แบบออฟไลน์"
-  minecraft_subtitle: "ชั่วโมงแห่งการโค้ดด้วย Minecraft"
+  minecraft_subtitle: "ชั่วโมงแห่งการเขียนโค้ดกับไมน์คราฟท์"
   minecraft_teach_resources: "แหล่งข้อมูลและแผนการเรียนสำหรับครู"
   sports_watch_video: "ดูวีดีโอ"
   video_title_inspire_girl: "แรงบันดาลใจให้ผู้หญิง"
@@ -481,14 +491,19 @@
   dashboard_navigation_view_stats: "สถิติ"
   dashboard_navigation_section: 'กลุ่ม %{section_name}'
   dashboard_navigation_student: 'นักเรียน %{student_name}'
-  dashboard_progress_not_completed: "ไม่สมบูรณ์"
+  dashboard_progress_not_started: "ยังไม่ได้เริ่ม"
+  dashboard_progress_not_completed: "ไม่เสร็จสมบูรณ์"
+  dashboard_progress_completed_too_many_blocks: "เสร็จเรียบร้อย แต่ใช้บล็อกมากเกินไป"
+  dashboard_progress_completed_perfect: "เสร็จ สมบูรณ์"
+  dashboard_progress_submitted: "ส่งคำตอบแล้ว"
   dashboard_progress_view: 'ดูความคืบหน้า'
   dashboard_sections_new_section: "กลุ่มใหม่"
   dashboard_sections_jumbotron_instruction: "สร้างกลุ่มใหม่ และเพิ่มนักเรียนเข้ากลุ่ม กลุ่มจะช่วยคุณจัดการนักเรียนให้อยู่ในกลุ่มย่อย ซึ่งคุณจะสามารถติดตามผลการเรียนและจัดการบัญชีได้ง่ายขึ้น"
   dashboard_sections_table_secret: "ประเภทการล็อกอิน"
   dashboard_sections_table_course: "หลักสูตร"
+  dashboard_sections_table_pairing_allowed: "การจับคู่เพื่อเขียนโปรแกรม"
   dashboard_sections_table_students: "นักเรียน"
-  dashboard_sections_name: "ชื่อกลุ่ม"
+  dashboard_sections_name: 'ชื่อกลุ่ม'
   dashboard_sections_choose_secret: "ถ้าคุณต้องการให้บัญชีแก้นักเรียนของคุณ ให้เลือก <b>ข้อความลับ</b>หรือ<b>รูปภาพลับ</b>สำหรับกลุ่มนั้น"
   dashboard_sections_secret_word: "<b>ข้อความ</b> จะทำให้คุณสามารถตั้งข้อความลับสำหรับนักเรียนแต่ละคน"
   dashboard_sections_secret_picture: "<b>รูปภาพ</b>  จะทำให้คุณสามารถตั้งรูปภาพลับสำหรับนักเรียนแต่ละคน ซึ่งเหมาะสำหรับเด็กเล็กที่ไม่สามารถพิมพ์ได้"
@@ -498,11 +513,11 @@
   dashboard_sections_assign_activity: "กำหนดหลักสูตร"
   dashboard_students_add_multiple: 'พิมพ์ชื่อของนักเรียนของคุณ หนึ่งชื่อต่อหนึ่งบรรทัด'
   dashboard_students_new_section: "คุณได้สร้างกลุ่มใหม่แล้ว! ตอนนี้ให้คุณ<b>เพิ่มนักเรียน</b>หรือ<b>เพิ่มนักเรียนทีละหลายคน</b> ด้วยปุ่มด้านบน"
-  dashboard_students_name: "ชื่อ"
+  dashboard_students_name: 'ชื่อ'
   dashboard_students_progress: "ความคืบหน้า"
   dashboard_students_male: "ชาย"
   dashboard_students_female: "หญิง"
-  dashboard_students_completed_levels: "ระดับที่สำเร็จ"
+  dashboard_students_completed_levels: "ระดับความเสร็จสมบูรณ์"
   dashboard_students_total_lines: "บรรทัดของโค้ด"
   dashboard_students_share_section: "แชร์หน้าล็อกอินของกลุ่มนี้ให้แก่นักเรียน"
   dashboard_students_print_info: "พิมพ์ข้อมูลสำหรับใช้ล็อกอินให้แก่นักเรียน"
@@ -552,8 +567,9 @@
   dashboard_correctness_unsubmitted: "ยังไม่ส่ง"
   dashboard_correctness_incorrect: "ไม่ถูกต้อง"
   dashboard_submission_submitted: "ส่งแล้ว"
-  dashboard_submission_in_progress: "อยู่ในระหว่างความคืบหน้า"
+  dashboard_submission_in_progress: "อยู่ระหว่างการดำเนินการ"
   dashboard_status: "สถานะ"
+  dashboard_multi_count: "# คำถามแบบปรนัย"
   stats_hoc_2013_heading: 'สถิติที่น่าทึ่งของ Hour of Code.  ในหนึ่งสัปดาห์ '
   stats_hoc_2013_image_alt: "สถิติจาก Hour of Code ปี 2013 "
   dashboard_teacher: "ครู"
@@ -585,6 +601,7 @@
   carousel_heading_javascript: "บทเรียนที่สอน JavaScript"
   carousel_heading_unplugged: "ไม่มีอุปกรณ์ หรือ อินเทอร์เน็ตใช่หรือไม่? ให้ลองเรียน วิทยาการคอมพิวเตอร์สำหรับผู้ไม่มีคอมพิวเตอร์"
   carousel_heading_devices: "บทเรียนแอปพลิเคชันสำหรับโทรศัพท์มือถือและแท็บเล็ต"
+  carousel_heading_beyond_devices: "แอปสำหรับโทรศัพท์มือถือและแท็ปเล็ต"
   carousel_heading_languages: "บทเรียนภาษาโปรแกรมอื่น ๆ"
   carousel_heading_apps_games: "สร้างแอปหรือเกม ของคุณเอง"
   carousel_heading_university: "หลักสูตรมหาวิทยาลัยออนไลน์"
@@ -647,7 +664,8 @@
   coursee_name: "คอร์ส E"
   coursef-draft_name: คอร์ส F
   coursef_name: "คอร์ส F"
-  iceage_name: "Ice Age"
+  iceage_name: "ยุคน้ำแข็ง (Ice Age)"
+  minecraft_name: "ไมน์คราฟท์"
   starwarsblocks_name: "สตาร์วอร์ส (บล็อก)"
   math_category_name: "คำนวณ"
   hoc_category_name: "ช่วงเวลาของ Code"
@@ -716,7 +734,7 @@
   accelerated_gradelevel: "อายุ 10-18 ปี"
   codeorg_platformtext: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต"
   codeintl_platformtext: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต"
-  thinkersmithspanish_platformtext: "ถอดปลั๊กออก"
+  thinkersmithspanish_platformtext: "ถอดปลั๊ก"
   khan_platformtext: "เว็บเบราว์เซอร์ที่ทันสมัย"
   khanes_platformtext: "เว็บเบราว์เซอร์ที่ทันสมัย"
   khanpt_platformtext: "เว็บเบราว์เซอร์ที่ทันสมัย"
@@ -726,7 +744,7 @@
   tynker_platformtext: "เว็บเบราว์เซอร์ที่ทันสมัย"
   scratch_platformtext: "เฉพาะเว็บเบราว์เซอร์ในคอมพิวเตอร์เท่านั้น "
   lightbot_platformtext: "ทุกเบราว์เซอร์ และ iOS, Android รวมทั้งเกมคอนโซล"
-  thinkersmith_platformtext: "ถอดปลั๊กออก"
+  thinkersmith_platformtext: "ถอดปลั๊ก"
   condcards_platformtext: "ถอดปลั๊กออก"
   lightbotintl_platformtext: "iOS, Android (หรือเว็บเบราว์เซอร์)"
   codehs_platformtext: "เบราว์เซอร์ที่ทันสมัย (หลักสูตรต่อมามีค่าใช้จ่าย)"
@@ -747,9 +765,9 @@
   touchdevelop_platformtext: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน อุปกรณ์ทั้งหมด"
   appinventor_platformtext: "เบราว์เซอร์ที่ทันสมัย + Android"
   blockly_platformtext: "เบราว์เซอร์ที่ทันสมัยเท่านั้น"
-  thinkersmith2_platformtext: "ถอดปลั๊กออก"
-  kodableunplugged_platformtext: "ถอดปลั๊กออก"
-  projguts_platformtext: "ถอดปลั๊กออก"
+  thinkersmith2_platformtext: "ถอดปลั๊ก"
+  kodableunplugged_platformtext: "ถอดปลั๊ก"
+  projguts_platformtext: "ถอดปลั๊ก"
   hourofcode_platformtext: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต"
   frozen_platformtext: "เบราว์เซอร์ที่ทันสมัย + แท็บเล็ต"
   starwars_platformtext: "เบราว์เซอร์ที่ทันสมัย + แท็บเล็ต"
@@ -978,14 +996,78 @@
   flappy_shortcode: "บิน"
   header_my_dashboard: "แดชบอร์ดของฉัน"
   header_courses: "คอร์ส"
+  header_course_catalog: "รายการหลักสูตร"
   header_project_gallery: "โปรเจกต์"
   header_professional_learning: "การเรียนรู้อย่างมืออาชีพ"
   header_educate_hoc: "ช่วงเวลาของ Code"
   header_stats: "สถิติ"
   header_help_us: "ช่วยเรา"
   user_header_label: "สวัสดี %{username}"
+  user_header_team: "ทีม"
   user_header_settings: "บัญชีของฉัน"
   user_header_logout: "ออกจากระบบ"
   user_header_signin: "เข้าสู่ระบบ"
+  user_header_gamelab: "เกมแล๊ป (Game Lab)"
+  user_header_dance: "งานเต้นรำ"
+  user_header_minecraft: "ไมน์คราฟท์"
+  user_header_view_my_projects: "ดูโปรเจกต์ต่าง ๆของฉัน"
   signing_in: "เข้าสู่ระบบ"
   hero_name: 'ไมน์คราฟท์: การผจญภัยของฮีโร่'
+  applab_tile_start_tutorial: "เริ่มต้น"
+  applab_tile_teacher_guide: "ดูคำแนะนำสำหรับครู"
+  aquatic_name: 'ไมน์คราฟท์: การผจญภัยใต้น้ำ'
+  hoc_overview_dance_title: "งานเต้นรำ"
+  hoc_overview_partner_activities_title: "กิจกรรมเพิ่มเติมจากพันธมิตร"
+  hoc_overview_partner_activities_body: "เว็บไซต์ Hour of Code มีกิจกรรมที่เกี่ยวกับวิทยาการด้านคอมพิวเตอร์มากกว่า 100 กิจกรรมสำหรับทุกวัยและทุกระดับประสบการณ์ ได้รับการพัฒนาโดย Code.org และพันธมิตร"
+  hoc_overview_partner_activities_link: "ดูกิจกรรม"
+  hoc_overview_start_tutorial: "เริ่มต้น"
+  hoc_overview_view_teacher_guide: "ดูคำแนะนำสำหรับครู"
+  hoc2018_creativity_create: "สร้าง"
+  hoc2018_creativity_what_will_you_create: "คุณจะสร้างอะไร"
+  hoc2018_mc_page_title: "สอนชั่วโมงแห่งโค้ดด้วย Minecraft"
+  hoc2018_mc_details: "หลากหลายภาษา | บราว์เซอร์และแท็บเล็ตรุ่นใหม่ | เกรด 2+"
+  hoc2018_mc_aquatic_description: "การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด! มาท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด"
+  hoc2018_mc_hero_title: "ไมน์คราฟท์ ภาคการเดินทางของฮีโร่"
+  hoc2018_mc_hero_description: "การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด! มาท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด"
+  hoc2018_mc_designer_title: "นักออกแบบ Minecraft"
+  hoc2018_mc_designer_description: "เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง"
+  hoc2018_mc_adventurer_title: "การผจญภัยในไมน์คราฟท์"
+  hoc2018_mc_adventurer_description: "ใช้โค้ดเพื่อนำแอเล็กซ์หรือสตีฟสู่การผจญภัย"
+  hoc2018_mc_start: "เริ่มต้น"
+  hoc2018_mc_no_internet: "ไม่มีอินเทอร์เน็ตใช่หรือไม่"
+  hoc2018_mc_download_adventurer: "ดาวน์โหลด ผจญภัยใน Minecraft แบบออฟไลน์"
+  hoc2018_mc_educators_box2_button: "ดาวน์โหลด"
+  hoc2018_mc_video_1min: "1 นาที"
+  hoc2018_mc_video_2min: "2 นาที"
+  hoc2018_mc_video_5min: "5 นาที"
+  hoc2018_mc_video_title_inspire_girl: "แรงบันดาลใจให้ผู้หญิง"
+  hoc2018_mc_homepage_hoc_coming: "ชั่วโมงของการเขียนโค้ดกำลังมา....."
+  hoc2018_mc_homepage_what_create: "คุณจะสร้างอะไร"
+  hoc2018_mc_homepage_watch_video: "ชมวิดีโอของเรา"
+  hoc2018_mc_homepage_join_us: "ร่วมกับเรา"
+  hoc2018_mc_homepage_try_it: "ลอง"
+  hoc2018_mc_back_journey: "การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด! มาท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด"
+  hoc2018_mc_teacher_guide: "ดูคำแนะนำสำหรับครู"
+  hoc2018_mc_short_description_shorter: "ใช้ความคิดสร้างสรรค์และทักษะต่างๆในการแก้ปัญหาของคุณ เพื่อสำรวจและสร้างโลกใต้น้ำด้วยโค้ด!"
+  hoc2018_mc_journey: "ท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด"
+  hoc2018_dance_party_main_heading: "งานเต้นรำ"
+  hoc2018_dance_create_your_own_dance_title: "สร้างเกม Dance Party ของคุณเอง"
+  hoc2018_dance_party_box_title: "งานเต้นรำ"
+  hoc2018_dance_party_box_description: "สร้างโค้ดของเกม Dance Party เพื่อแชร์กับเพื่อนๆ ของคุณ"
+  hoc2018_dance_party_button: "เริ่มต้น"
+  hoc2018_dance_keep_on_dancing_box_title: "สร้างโค้ดเต้นรำกันต่อไป"
+  hoc2018_dance_keep_on_dancing_description: "ศึกษาต่อเนื่องจากขั้นพื้นฐานด้วยการใส่ไอเดียเพิ่มเติมให้กับโครงงาน"
+  hoc2018_dance_keep_on_dancing_button: "เริ่มส่วนที่ 2"
+  hoc2018_dance_teacher_resources_title: "แหล่งข้อมูลสำหรับครู"
+  hoc2018_dance_teacher_resources_tile1_description: "แผนการเรียน ใบรับรอง และการกรองเพลง"
+  hoc2018_dance_teacher_resources_tile1_button: "แผนการเรียนการสอน"
+  hoc2018_dance_teacher_resources_tile2_title: "สร้างเกม Dance Party แบบไม่ใช้เครื่อง"
+  hoc2018_dance_teacher_resources_tile2_description: "ไม่จำเป็นต้องมีคอมพิวเตอร์  เรียนรู้แนวคิดการเขียนโปรแกรมเพื่อออกแบบท่าเต้นรำไปด้วยกัน"
+  hoc2018_dance_teacher_resources_tile2_button: "กิจกรรมถอดปลั๊ก"
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: "ด้วยความร่วมมือกับ: "
+  hoc2018_dance_amazon_about_future_engineer_button: "สิ่งที่น่าเรียนรู้ยังมีอีก"
+  hoc2018_dance_measure: "ห้องดนตรี"
+  hoc2018_dance_measure_colon: 'ห้องดนตรี:'
+  page_not_found_header: '404: ไม่พบหน้าดังกล่าว'
+  page_not_found_description: "หน้าที่ท่านกำลังหาอยู่นั้นไม่ปรากฎตามที่อยู่ดังกล่าว เช็คที่อยู่ของเว็ปแล้วลองส่งใหม่อีกครั้ง หรือกลับไปที่โฮมเพจของเรา"
+  page_not_found_button: "กลับไปที่หน้าแรก"

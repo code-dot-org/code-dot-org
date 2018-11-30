@@ -6,13 +6,14 @@ import {
   PageLabels as TeacherPageLabels,
   LabelOverrides as TeacherLabelOverrides,
   ValidScores as TeacherValidScores
-} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
+} from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import {
   SectionHeaders as FacilitatorSectionHeaders,
   PageLabels as FacilitatorPageLabels,
   LabelOverrides as FacilitatorLabelOverrides,
   NumberedQuestions
-} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
+} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
+import PrincipalApprovalButtons from './principal_approval_buttons';
 
 const TEACHER = 'Teacher';
 const FACILITATOR = 'Facilitator';
@@ -27,18 +28,25 @@ const paneledQuestions = {
 
 export default class DetailViewApplicationSpecificQuestions extends React.Component {
   static propTypes = {
+    id: PropTypes.string,
     formResponses: PropTypes.object.isRequired,
     applicationType: PropTypes.oneOf([TEACHER, FACILITATOR]).isRequired,
     editing: PropTypes.bool,
     scores: PropTypes.object,
     handleScoreChange: PropTypes.func,
-    applicationGuid: PropTypes.string
+    applicationGuid: PropTypes.string,
+    schoolStats: PropTypes.object,
+    initialPrincipalApproval: PropTypes.string
   };
 
   constructor(props) {
     super(props);
 
-    this.sectionHeaders = props.applicationType === TEACHER ? _.omit(TeacherSectionHeaders, ['section5Submission']) : FacilitatorSectionHeaders;
+    this.state = {
+      principalApproval: this.props.initialPrincipalApproval
+    };
+
+    this.sectionHeaders = props.applicationType === TEACHER ? _.omit(TeacherSectionHeaders, ['section5Submission', 'section6Submission']) : FacilitatorSectionHeaders;
     this.pageLabels = props.applicationType === TEACHER ? TeacherPageLabels : FacilitatorPageLabels;
     this.labelOverrides = props.applicationType === TEACHER ? TeacherLabelOverrides : FacilitatorLabelOverrides;
     this.numberedQuestions = props.applicationType === TEACHER ? [] : NumberedQuestions;
@@ -57,21 +65,61 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
     return questionNumber + questionText;
   };
 
-  renderResponsesForSection(section) {
-    // Lame edge case but has to be done
-    if (section === 'detailViewPrincipalApproval' && !this.props.formResponses['principalApproval']) {
+  handlePrincipalApprovalChange = (_id, principalApproval) => {
+    this.setState({principalApproval});
+  };
+
+  renderNoPrincipalApprovalButtons() {
+    if (!this.state.principalApproval) {
       return (
-        <span>
-          <h4>
-            Not yet submitted
-          </h4>
-          <span>
-            Link to principal approval form: (<a href={`/pd/application/principal_approval/${this.props.applicationGuid}`} target="_blank">
-             {`http://studio.code.org/pd/application/principal_approval/${this.props.applicationGuid}`}
-            </a>)
-          </span>
-        </span>
+        <div>
+          <h4>Select option</h4>
+          <PrincipalApprovalButtons
+            applicationId={this.props.id}
+            showSendEmailButton={true}
+            showNotRequiredButton={true}
+            onChange={this.handlePrincipalApprovalChange}
+          />
+        </div>
       );
+    } else if (this.state.principalApproval === "Not required") {
+      return (
+        <div>
+          <h4>Not required</h4>
+          <p>
+            If you would like to require principal approval for this teacher,
+            please click “Send email” to the principal asking for approval.
+          </p>
+          <PrincipalApprovalButtons
+            applicationId={this.props.id}
+            showSendEmailButton={true}
+            onChange={this.handlePrincipalApprovalChange}
+          />
+        </div>
+      );
+    } else { // incomplete
+      const principalApprovalUrl =
+        `${window.location.origin}/pd/application/principal_approval/${this.props.applicationGuid}`;
+
+      return (
+        <div>
+          <h4>{this.state.principalApproval}</h4>
+          <p>
+            Link to principal approval form:{' '}
+            <a href={principalApprovalUrl} target="_blank">
+              {principalApprovalUrl}
+            </a>
+          </p>
+        </div>
+      );
+    }
+  }
+
+  renderResponsesForSection(section) {
+    if (section === 'detailViewPrincipalApproval' &&
+      !(this.state.principalApproval && this.state.principalApproval.startsWith("Complete"))) {
+      // The principal approval section has special messaging when no principal approval has been received.
+      return this.renderNoPrincipalApprovalButtons();
     } else {
       return Object.keys(this.pageLabels[section]).map((question, j) => {
         return (

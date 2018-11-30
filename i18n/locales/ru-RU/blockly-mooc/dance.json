@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "Необходимо создать танцора.",
+  "danceFeedbackNoDancers": "У вас нет танцоров.",
+  "danceFeedbackNoBackground": "Необходимо добавить фоновый эффект.",
+  "danceFeedbackTooManyDancers": "Осторожно! Разместив блок «создать нового» (make a new) внутри «каждые 2 такта» (every 2 measures), вы создадите много танцоров.",
+  "danceFeedbackUseSetSize": "Используйте блок «установить размер backup_dancer2» (set backup_dancer2 size), чтобы уменьшить этого танцора.",
+  "danceFeedbackUseSetTint": "Используйте блок «задать оттенок» (set tint) для изменения оттенка танцора.",
+  "danceFeedbackUseStartMapping": "Попробуйте добавить в программу блок <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml>.",
+  "danceFeedbackStartNewMove": "Ваш танцор не делал движение после четвертого такта.",
+  "danceFeedbackNeedDifferentDance": "Необходимо использовать другой танец.",
+  "danceFeedbackNeedEveryTwoMeasures": "Убедитесь, что вы используете блок «каждые 2 такта» (every 2 measures).",
+  "danceFeedbackNeedMakeANewDancer": "Используйте блок «создать нового» (make a new) для создания второго танцора.",
+  "measure": "Такты:"
+}

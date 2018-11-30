@@ -32,7 +32,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "markdown_instructions": "# Boolean Expressions\r\n\r\nThe simplest Boolean expressions are questions that the computer can answer with true or false. These expressions are made using **comparison operators**, as shown below.\r\n\r\n|Comparison Operator | Boolean Expression |  Meaning |\r\n|:---:|:---:|:---:|\r\n| <img src=\"https://images.code.org/1a0798d75d4242715e7608d825f95101-image-1447271431312.png\" style=\"width: 100px\"> | `1 < 9` | Is 1 less than 9? | \r\n| <img src=\"https://images.code.org/5ff460ac121f0ac51b569e96a4404c57-image-1447271431310.png\" style=\"width: 100px\"> | `1 > 9` | Is 1 greater than 9 ? |  \r\n| <img src=\"https://images.code.org/a4daa9efccea2278e165592efe343c1a-image-1447271431308.png\" style=\"width: 100px\">| `1 == 9` | Is 1 equal to 9?| \r\n<br>\r\n**Note:** If you saw the statement 3 < 2 in math class, you'd think something was terribly wrong, but this is not math class.  In computer science, the comparison operators **ask a question** that the computer will answer with `true` or `false`. So you can read 3 < 2 as **\"Is 3 less than 2?\"** The answer in this case is no, or `false`.  \r\n\r\nAnother way to say this is that the Boolean expression `3 < 2` **evaluates** to `false`.\r\n\r\n# Do This\r\nCan you modify the values of the sprite properties so that each of the Boolean expressions evaluates to `true`?\r\n\r\n- Read through the entire program to see how `sprite1` and `sprite2` are being created and which properties are compared.\r\n- For each of the Boolean expressions, identify the sprite properties being compared.\r\n- Change the code _in the first **11** lines only_ so that each of the `console.log()` statements print `true`.",
+    "markdown_instructions": "# Boolean Expressions\r\n\r\nThe simplest Boolean expressions are questions that the computer can answer with true or false. These expressions are made using **comparison operators**, as shown below.\r\n\r\n| Comparison Operator | Boolean Expression | Meaning |\r\n|:---:|:---:|:---:|\r\n| <img src=\"https://images.code.org/1a0798d75d4242715e7608d825f95101-image-1447271431312.png\" style=\"width: 100px\"> | `1 < 9` | Is 1 less than 9? |\r\n| <img src=\"https://images.code.org/5ff460ac121f0ac51b569e96a4404c57-image-1447271431310.png\" style=\"width: 100px\"> | `1 > 9` | Is 1 greater than 9 ? |\r\n| <img src=\"https://images.code.org/a4daa9efccea2278e165592efe343c1a-image-1447271431308.png\" style=\"width: 100px\">| `1 == 9` | Is 1 equal to 9?|\r\n\r\n\r\n**Note:** If you saw the statement 3 < 2 in math class, you'd think something was terribly wrong, but this is not math class.  In computer science, the comparison operators **ask a question** that the computer will answer with `true` or `false`. So you can read 3 < 2 as **\"Is 3 less than 2?\"** The answer in this case is no, or `false`.\r\n\r\nAnother way to say this is that the Boolean expression `3 < 2` **evaluates** to `false`.\r\n\r\n# Do This\r\nCan you modify the values of the sprite properties so that each of the Boolean expressions evaluates to `true`?\r\n\r\n- Read through the entire program to see how `sprite1` and `sprite2` are being created and which properties are compared.\r\n- For each of the Boolean expressions, identify the sprite properties being compared.\r\n- Change the code _in the first **11** lines only_ so that each of the `console.log()` statements print `true`.",
     "callout_json": "[]",
     "instructions_important": "false",
     "hide_animation_mode": "false",
@@ -95,11 +95,14 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-15 17:42:06 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 20:17:58 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 17:42:06 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 20:17:58 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-19 01:04:33 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-09-19 01:05:49 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

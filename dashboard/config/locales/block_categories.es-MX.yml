@@ -31,14 +31,19 @@ es-MX:
       World: Mundo
       Behaviors: Comportamientos
       Advanced: Avanzado
+      Start: Inicio
+      Locations: Ubicaciones
+      Music: Música
+      Dancing: Bailando
+      Dancers: Bailarines
+      Groups: Grupos
       Sprite: Sprite
       Brush: Pincel
       Make Sprite: Hacer un Sprite
       Movement: Movimiento
-      Start: Inicio
-      Groups: Grupos
       Booleans: Valores booleanos
       Functional: Funcional
+      Sprite Properties: Propiedades de Sprites
       Predefined: Predefinido
       test: prueba
       test2: prueba2

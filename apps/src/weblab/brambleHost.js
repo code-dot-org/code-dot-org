@@ -1,5 +1,3 @@
-import logToCloud from '../logToCloud';
-
 /* global requirejs */
 
 /**
@@ -601,17 +599,17 @@ function load(Bramble) {
   });
 
   Bramble.once("error", function (err) {
-    console.error("Bramble error", err);
-
     // Send to New Relic
-    logToCloud.addPageAction(logToCloud.PageAction.BrambleError, {
+    webLab_.addPageAction(webLab_.PageAction.BrambleError, {
       error: err && err.message
     });
 
+    console.error("Bramble error", err);
+
     if (err && err.code === "EFILESYSTEMERROR") {
-      alert("Sorry, it looks like we cannot load this project because you are running low on disk space. Please clear some disk space and try again. If you still see errors, please contact support@code.org.");
+      modalError(`We're sorry, Web Lab failed to load for some reason. ${SUPPORT_ARTICLE_HTML}`, Bramble);
     } else {
-      alert("Fatal Error: " + err.message + ". If you're in Private Browsing mode, data can't be written.");
+      modalError(`Fatal Error: ${err.message}. If you're in Private Browsing mode, data can't be written. ${SUPPORT_ARTICLE_HTML}`, Bramble);
     }
   });
 
@@ -620,6 +618,86 @@ function load(Bramble) {
   });
 
   startInitialFileSync(() => {});
+}
+
+const SUPPORT_ARTICLE_URL = 'https://support.code.org/hc/en-us/articles/360016804871';
+const SUPPORT_ARTICLE_HTML = `Please see our support article <a href="${SUPPORT_ARTICLE_URL}">"Troubleshooting Web Lab problems"</a> for more information.`;
+
+// Custom modal for handling Bramble initialization errors and pointing users to our support article.
+function modalError(message, Bramble, showButtons=true) {
+  const overlay = document.createElement('div');
+  overlay.style.position = 'fixed';
+  overlay.style.top = 0;
+  overlay.style.left = 0;
+  overlay.style.right = 0;
+  overlay.style.bottom = 0;
+  overlay.style.display = 'flex';
+  overlay.style.flexDirection = 'column';
+  overlay.style.alignItems = 'center';
+  overlay.style.justifyContent = 'center';
+  overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.75)';
+
+  function reloadWebLab() {
+    parent.location.reload();
+  }
+
+  function hideModal() {
+    document.body.removeChild(overlay);
+  }
+
+  function resetBrambleFilesystem() {
+    hideModal();
+    if (Bramble) {
+      Bramble.formatFileSystem((err) => {
+        if (err) {
+          webLab_.addPageAction(webLab_.PageAction.BrambleFilesystemResetFailed, {
+            error: err && err.message
+          });
+          // Unable to create filesystem, fatal (and highly unlikely) error
+          modalError(`Failed to reset Web Lab. ${err.message}. ${SUPPORT_ARTICLE_HTML}`, Bramble);
+        } else {
+          webLab_.addPageAction(webLab_.PageAction.BrambleFilesystemResetSuccess, {});
+          // filesystem is now clean and empty, use Bramble.getFileSystem() to obtain instance
+          modalError(`Web Lab reset complete.  Reloading...`, Bramble, false);
+          reloadWebLab();
+        }
+      });
+    } else {
+      modalError(`An unexpected error occurred (Bramble not found). ${SUPPORT_ARTICLE_HTML}`);
+    }
+  }
+
+  const messageBox = document.createElement('div');
+  messageBox.style.backgroundColor = 'white';
+  messageBox.style.border = 'solid black medium';
+  messageBox.style.padding = '1em';
+  messageBox.style.maxWidth = '50%';
+  messageBox.style.borderRadius = '1em';
+  overlay.appendChild(messageBox);
+
+  const messageDiv = document.createElement('div');
+  messageDiv.innerHTML = message;
+  messageBox.appendChild(messageDiv);
+
+  function button(text, callback) {
+    const button = document.createElement('button');
+    button.innerHTML = text;
+    button.onclick = callback;
+    button.style.margin = '0.5em';
+    return button;
+  }
+
+  if (showButtons) {
+    const buttons = document.createElement('div');
+    buttons.style.textAlign = 'center';
+    buttons.style.marginTop = '1em';
+    buttons.appendChild(button('Try again', reloadWebLab));
+    buttons.appendChild(button('Reset Web Lab', resetBrambleFilesystem));
+    buttons.appendChild(button('Dismiss', hideModal));
+    messageBox.appendChild(buttons);
+  }
+
+  document.body.appendChild(overlay);
 }
 
 // Load bramble.js

@@ -13,8 +13,8 @@ class DemigrateFromMultiAuthTest < ActionDispatch::IntegrationTest
 
     sign_in teacher
     get '/users/demigrate_from_multi_auth'
-    assert_redirected_to '/home'
-    assert_equal 'Multi-auth is now disabled on your account.', flash[:notice]
+    assert_redirected_to '/users/edit'
+    assert_equal 'The new account experience is now disabled on your account.', flash[:notice]
 
     teacher.reload
     refute teacher.migrated?
@@ -26,8 +26,8 @@ class DemigrateFromMultiAuthTest < ActionDispatch::IntegrationTest
 
     sign_in teacher
     get '/users/demigrate_from_multi_auth'
-    assert_redirected_to '/home'
-    assert_equal 'Multi-auth is still disabled on your account.', flash[:notice]
+    assert_redirected_to '/users/edit'
+    assert_equal 'The new account experience is now disabled on your account.', flash[:notice]
 
     teacher.reload
     refute teacher.migrated?

@@ -10,12 +10,15 @@ sq:
       messages:
         blank: "E domosdoshme"
         blank_plural: "kërkohen"
+        invalid: "është e pavlefshme"
         invalid_plural: "janë pa vlerë"
     attributes:
       user:
         name: 'Shfaq Emrin'
         name_example: 'Shfaq Emrin<br/>(Psh. Cool Coder or Jane S.)'
         email: 'Email'
+        parent_email: 'Prindi/ kujdestari email'
+        personal_email: "Adresa vetjake e email-it <a href=\"%{url}\">(kliko këtu nëse nuk ke një adresë email-i)</a>"
         username: 'Emri i përdoruesit'
         password: 'Fjalëkalimi'
         password_confirmation: 'Konfirmimi i fjalëkalimit'
@@ -24,6 +27,9 @@ sq:
         age: 'Mosha'
         gender: 'Gjini'
         edit_header: 'Ndrysho detajet e llogarisë'
+        finish_sign_up_header: 'Përfundo krijimin e llogarisë'
+        finish_sign_up_subheader: 'Plotëso informacionin e mëposhtëm për të përfunduar krijimin e një llogarie në Code.org <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider: 'Plotëso informacionin e mëposhtëm për të përfunduar krijimin e një llogarie në Code.org <strong>%{provider}</strong> për <strong>%{email}</strong>.'
         error:
           future: nuk mund të jetë në të ardhmen
   hello: "Pershendetje Botë"
@@ -37,12 +43,14 @@ sq:
   next_resource: Burimi tjetër
   cancel: "Anulo"
   okay: "Në rregull"
+  or: "ose"
   heading_x_of_y: "%{heading} (faqja %{x} nga %{y})"
   add_teacher_form:
     code:
       label: 'Shto një mësues:'
       placeholder: "Kodi i Seksionit (ABCDEF)"
       instructions: "Ju lutemi shtypni kodin e ndarë me ju nga mësuesi/ja juaj. Është një kod 6-shkronjësh si për shembull \"ABCDEF\"."
+      instructions_short: "Fut kodin e seksionit me 6 shkronja"
     submit: 'Shto mësues'
   add_hint_form:
     placeholder: 'Të lutem fut udhëzimin tënd këtu'
@@ -70,6 +78,7 @@ sq:
   prize: 'çmim'
   more_info: 'Më shumë informacion'
   auth:
+    continue_with: 'Hyr me %{provider}'
     sign_in_with: 'Logohu me %{provider}'
     signed_in: 'U loguat!'
     signed_out: 'Ti ke dalë nga <a href="%{url}">Code.org</a>.'
@@ -80,10 +89,19 @@ sq:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Llogaria e Microsoft'
+    microsoft_v2_auth: 'Llogaria e Microsoft'
     forgot_password: 'Keni harruar fjalëkalimin?'
+    migration_success: 'Suksese! Ju keni përditësuar përvojën tonë të llogarisë së re.'
+    demigration_success: 'Përvoja e llogarisë së re tani është çaktivizuar në llogarinë tuaj.'
     need_confirmation: "Nuk i keni marr instruksionet e konfirmimit?"
     need_unlock: "Nuk keni marre instruksionet e zhbllokimit?"
+    not_linked: "Ndjese, por llogaria juaj në Code.org nuk është e lidhur me %{provider}. Duhet të identifikohesh duke shtypur fjalëkalimin më poshtë."
+    use_clever: "Ndjesë, por llogaria juaj në Code.org nuk është e lidhur me %{provider}. Ju lutemi, përdorni më mirë portalin Clever, për t'u identifikuar."
+    unable_to_connect_provider: "Nuk mund të lidhim llogarinë tuaj në Code.org me llogarinë tuaj %{provider}. Ju lutemi provojeni sërish."
+    already_in_use: "Llogaria juaj %{provider} është e lidhur tashmë me një tjetër llogari në Code.org."
+    already_linked: "Llogaria juaj %{provider} është tashmë e lidhur me llogarinë tuaj në Code.org account."
   signup_form:
+    email_signup: 'Regjistrohu me adresën tënde të email-it'
     student_count: '%{count} nxënës janë regjistruar tashmë.'
     teacher_count: '%{count}  mesues janë regjistruar tashmë.'
     overview: 'Rregjistrohuni për një llogari për të ndjekur progresin tuaj ose të menaxhuar klasën tuaj. <a href="/"> Ju mund të shfletoni fazat e  ndryshme dhe puzzles </a>   pa një llogari, por do t''ju duhet të rregjistroheni  për të ruajtur progresin dhe projektet tuaja.'
@@ -99,6 +117,7 @@ sq:
     age: 'Mosha'
     user_type: 'A jeni nxënës apo mësues?'
     submit: 'Rregjistrohu'
+    go_to_account: 'Shko te llogaria ime'
     teacher: 'A jeni një mësues?'
     valid_username: "I disponueshëm!"
     invalid_username: "Emri i përdoruesit duhet të ketë të paktën 5 karaktere"
@@ -106,21 +125,50 @@ sq:
     valid_password: "Fjalëkalimi i vlefshëm!"
     invalid_password: "Fjalëkalimi duhet të ketë të paktën 6 karaktere"
     mismatch_password: "Dy fjalëkalimet që vendosët nuk përputhen"
+    agree_tos_privacy: "Unë pajtohem me <a href='http://code.org/tos'>Kushtet e Sherbimit</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "Nëse jam nën moshën 13 vjeç, konfirmoj se kam lejen e prindit ose të kujdestarit ligjor për të përdorur shërbimet e Code.org."
+    student_consent: "Konfirmoj se kam lejen e prindit ose të kujdestarit ligjor për të përdorur shërbimet e Code.org."
+    agree_us_website: "Unë pajtohem me përdorimin e një faqe interneti të themeluar në Shtetet e Bashkuara."
+    my_data_to_us: "Të dhënat nga përdorimi im i kësaj faqeje mund të dërgohen dhe të ruhen ose përpunohen në Shtetet e Bashkuara."
     student_terms: "Unë pranoj tu përmbahem <a href='http://code.org/tos'> kushteve të shërbimit</a> të Code.org. Nëse unë jam nën 13 vjeç, unë konfirmoj me dorëzimin e këtij formulari që kam lejen e prindin tim apo kujdestarit ligjor për të përdorur shërbimet Code.org. <br/> <br/> Adresat e Email-ve nuk janë ruajtur në një formë që na lejon të kontaktojmë studentët. Studentët nuk do të marrin email nga Code.org përveç për të rimarr fjalëkalimin. Shiko <a href='http://code.org/privacy'> Termat e privatesisë</a>tonë për më shumë informacion."
     teacher_terms: "Unë pranoj tu përmbahem <a href='http://code.org/tos'> kushteve të shërbimit</a> të Code.org. Për më shumë informacion shiko <a href='http://code.org/privacy'> Termat e privatesisë</a>."
     additional_information: "Kemi nevojë për disa informacione shtesë për të vazhduar me rregjistrimin tuaj."
+    user_type_button: "Përditëso llojin e llogarisë"
     user_type_label: "Lloji i llogarisë"
     user_type_teacher: "Mësues"
     user_type_student: "Student"
     field_is_required: "E domosdoshme"
     accept_terms: "Ju duhet të jeni dakord për të krijuar një llogari"
+    error: "Ndodhi një gabim."
+    email_preference_question: "A mund t'ju dërgojmë email-e mbi përditësimin e kurseve tona, mundësitë lokale apo të rejat e shkencave kompjuterike? (afërsisht një herë në muaj)"
     email_preference_yes: "Po"
     email_preference_no: "Jo"
+    email_preference_required: "Ju duhet të specifikoni preferencën e postës elektronike."
   school_info:
+    title: 'Informacione për shkollën (opsionale)'
+    school_country: 'Qyteti i shkollës'
+    select_school_type: 'Lloji i shkollës'
+    charter: 'Karta'
+    private: 'Privat'
+    public: 'Publike'
+    homeschool: 'Shtëpi shkollë'
+    after_school: 'Pas shkollës'
     other: 'Të tjera/ë'
+    state: 'Shteti'
+    district: 'Rrethi'
+    other_district_not_listed: 'Rreth tjetër që nuk është shënuar më sipër'
+    district_name: 'Emri i Rrethit'
+    school: 'Shkolla'
+    other_school_not_listed: 'Shkollë tjetër që nuk është shënuar më sipër'
+    school_name: 'Emri i shkollës'
+    school_zip: 'Kodi postar i shkollës'
+    school_address: 'Adresa e shkollës'
+    school_organization_name: 'Emri i shkollës/organizatës'
+    school_organization_zip: 'Kodi postar i shkollës/organizatës'
   signin_form:
     title: 'Ke një llogari ekzistuese? Logohu'
     login: 'Email'
+    login_username: 'Email-i ose emri i përdoruesit'
     password: 'Fjalëkalimi'
     remember: 'Më mbaj mend'
     submit: 'Futu'
@@ -136,12 +184,15 @@ sq:
     login: 'Futu'
     invalid_login: 'Login i pavlefshme, ju lutem provoni përsëri'
     pair_programming: 'Unë kam një partner në kompjuterin tim'
+    student_privacy: "Mëso më shumë rreth arsyes pse nuk e sheh emrin tënd të plotë <a href='%{student_privacy_blog}' target='_blank'>here</a>."
   password:
     reset_form:
       title: 'Keni harruar fjalëkalimin?'
       instructions: "Shkruani adresën tuaj të e-mail më poshtë dhe ne do t`ju dërgojnë instruksionet për të rivendosur fjalëkalimin."
       email: 'Adresa Email-it'
       submit: 'Dorëzo'
+    reset_errors:
+      captcha_required: 'Të lutem plotësoni CAPTCHA për të rivendosur fjalëkalimin tënd.'
     change_form:
       title: 'Ndrysho fjalëkalimin'
       new_password: 'Fjalëkalim i ri'
@@ -201,7 +252,6 @@ sq:
         playlab: 'Bëj një Aplikacion Play Lab'
         artist: 'Vizato Diçka'
         applab: 'Bëj një Aplikacion App Lab'
-      courses: "Kurset"
       project_gallery: "Projekte"
       educate_hoc: "Ora e Kodimit"
     user:
@@ -214,10 +264,15 @@ sq:
       signin: 'Futu'
       signup: 'Krijo një llogari'
       already_registered: 'Jeni i rregistruar?'
-      pair_programming: 'Programim në çift'
       team: 'Skuadra'
       driver: 'Përdorues'
       navigator: 'Lundrues'
+      create: 'Krijo'
+      applab: 'Laboratori i Aplikacioneve'
+      artist: 'Artisti'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Progresi i %{name}"
       progress: 'Progresi yt'
@@ -454,6 +509,8 @@ sq:
     minecraft2016:
       title: "Minecraft"
       body: "Kafshët e programit dhe krijesa të tjera Minecraft në versionin tuaj të Minecraft."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
     unplugged:
@@ -686,6 +743,8 @@ sq:
   pd:
     form_labels:
       email: 'Email'
+      school_name: 'Emri i shkollës'
+      school_country: 'Qyteti i shkollës'
     form_entries:
       gender:
         male: 'Mashkull'

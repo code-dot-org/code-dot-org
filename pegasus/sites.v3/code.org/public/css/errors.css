@@ -1,0 +1,11 @@
+.error-parent {
+  text-align: center
+}
+
+.error-child {
+  display: inline-block
+}
+
+.error-message {
+  max-width: 350px
+}

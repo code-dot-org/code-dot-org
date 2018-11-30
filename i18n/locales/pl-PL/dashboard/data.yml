@@ -479,9 +479,30 @@ pl:
         applab_intro_share: App Lab - Udostępnij Swoją Apkę
         csd_applab_arrays: Wprowadzenie do tablic
         CSF_skinOverview_Harvester: Kombajn
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Pętle z BB-8
         CSF_harvester_skinOverview_K-1: Kombajn
+        CSF_scrat_loops_K1: Pętle w Epoce Lodowcowej
+        CSF_scrat_loops_CF: Pętle w Epoce Lodowcowej
+        CSF_if_allskins: Blok If
+        CSF_ifelse_allskins: Stosowanie Bloków If/Else
+        CSF_ifelseifelse_allskins: Stosowanie Bloków If/ElseIf/Else
         CSF_loops_AB: Pętle
+        csd_gamelab_booleans: Wyrażenia logiczne
+        csd_gamelab_conditional_statements: Instrukcje warunkowe
+        csd_gamelab_if_else: Instrukcje If/Else
+        CSF_SpriteLabIntro_CDEF: To jest Laboratorium Duszków
+        CSF_Spritelab_MakeSprite_CDEF: Jak utworzyć Duszka w Laboratorium Duszków
+        CDEF_Video_SpritesInAction: Duszki w akcji
+        CSF_SpriteLab_SpritesInAction_CDEF: Duszki w akcji
+        CSF_StarWars_ProjectIntro: Wprowadzenie do projektu Star Wars
+        mc_2018_intro: 'Minecraft: Wodna Podróż - Wprowadzenie'
+        MC_2018_loops: 'Minecraft: Wodna Podróż - Powtarzaj aż'
+        mc_2018_conditionals: 'Minecraft: Wodna Podróż - Warunki'
+        mc_2018_closing: 'Minecraft: Wodna Podróż - Gratulacje'
+        hoc_dance_events: Potańcówka - Zdarzenia
+        hoc_dance_properties: Potańcówka - Właściwości
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

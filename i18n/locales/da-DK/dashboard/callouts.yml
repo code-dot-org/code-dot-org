@@ -57,6 +57,8 @@ da:
         snowflake_dropdown: Brug denne drop-down menu til at oprette forskellige snefnug!
       Function intro Ryan_callout:
         Function_intro_Ryan_1: Denne lille instruktion fortæller computeren, at den skal køre et STORT kodestykke med det samme navn i arbejdsområdet.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Denne lille instruktion fortæller computeren, at den skal køre et STORT kodestykke med det samme navn i arbejdsområdet.
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Afspil en lyd, når denne event indtræffer.
       Infinity_move_directions_callout:
@@ -72,17 +74,25 @@ da:
         MC_HOC_2017_02_Cole_1: Nu har din spiller en kammerat!  Du kan skrive kode til agenten, så den hjælper dig igennem opgaverne.
       MC_HOC_2017_03_Cole_callout:
         MC_HOC_2017_03_Cole_1: Dette er et gentagelsesloop!  Træk det ind i arbejdsområdet, og fyld det med den kode, du vil køre igen og igen.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Dette er et gentagelsesloop!  Træk det ind i arbejdsområdet, og fyld det med den kode, du vil køre igen og igen.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Agenten kan svæve over vand, men spilleren kan ikke!
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: Agenten kan svæve over vand, men spilleren kan ikke!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Træk det ind i arbejdsområdet, og fyld det med den kode, du vil gentage igen og igen.
       MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Du kan ikke smide disse blokke væk, men du kan redigere dem!
+      MC_HOC_2017_06_Cole_2019_callout:
         MC_HOC_2017_06_Cole_1: Du kan ikke smide disse blokke væk, men du kan redigere dem!
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: 'Agenten kan svæve over lava, men spilleren kan ikke!  '
       MC_HOC_2017_08_Will_callout:
         MC_HOC_2017_08_RY_1: 'Agenten kan svæve over lava, men spilleren kan ikke!  '
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'Agenten kan svæve over lava, men spilleren kan ikke!  '
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'Agenten kan svæve over lava, men spilleren kan ikke!  '
       NEW Course 4 Artist Functions 5_callout:
         edit_function: Klik her for at redigere din funktion.
@@ -106,29 +116,45 @@ da:
         craft_callout_preplaced: Vi har lagt nogle blokke her, som du kan komme i gang med
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Vi har lagt nogle blokke her, som du kan komme i gang med
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Vi har lagt nogle blokke her, som du kan komme i gang med
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Koden vil starte opførelsen af dit hus. Kan du fuldende den?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Koden vil starte opførelsen af dit hus. Kan du fuldende den?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Koden vil starte opførelsen af dit hus. Kan du fuldende den?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Tryk på "Kør" for at prøve dit program
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Tryk på "Kør" for at prøve dit program
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Tryk på "Kør" for at prøve dit program
       Overworld Place Wall_callout:
         craft_inside_repeat: Gentag handlinger ved at placere blokke herinde
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Gentag handlinger ved at placere blokke herinde
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Gentag handlinger ved at placere blokke herinde
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Denne kode søger efter lava, kan du tilføje en "ryk fremad"-kommando?
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Denne kode søger efter lava, kan du tilføje en "ryk fremad"-kommando?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Denne kode søger efter lava, kan du tilføje en "ryk fremad"-kommando?
       Underground Iron_callout:
         craft_what_is_iron: Udvind jern!
       Underground Iron_2018_callout:
         craft_what_is_iron: Udvind jern!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: Udvind jern!
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Brug "lav en cirkel" blokken og skift størrelsen.
       frozen cross rotate_callout:
+        replace_questions_degree: Brug drop-down menuen til at erstatte "???" med et tal
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Brug drop-down menuen til at erstatte "???" med et tal
+      frozen cross rotate_test_callout:
         replace_questions_degree: Brug drop-down menuen til at erstatte "???" med et tal
       frozen cross_callout:
         repeat_blocks_1: "(1) Brug denne blok og sæt den rundt om de grå i arbejdsområdet"
@@ -139,19 +165,45 @@ da:
         frozen_diamond_repeat: Benyt Gentag Blok, for at oprette denne form.
       frozen freeplay_callout:
         snowflake_dropdown: Brug denne drop-down menu til at oprette forskellige snefnug!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Brug denne drop-down menu til at oprette forskellige snefnug!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Brug denne drop-down menu til at oprette forskellige snefnug!
       frozen line_callout:
+        move_elsa_forward: Træk i en "flyt fremad"-blok og fastgør den under "når programmet kører"-blokken for at få Elsa til at bevæge sig fremad
+      frozen line_b_callout:
+        move_elsa_forward: Træk i en "flyt fremad"-blok og fastgør den under "når programmet kører"-blokken for at få Elsa til at bevæge sig fremad
+      frozen line_test_callout:
         move_elsa_forward: Træk i en "flyt fremad"-blok og fastgør den under "når programmet kører"-blokken for at få Elsa til at bevæge sig fremad
       frozen perpendicular_callout:
         turn_elsa: Brug "drej"-blokken for at få Elsa til at dreje. Tallet i drop-down bestemmer hvor mange grader Elsa drejer
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Benyt "Opret en snefnug-gren"-blokken
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Benyt "Opret en snefnug-gren"-blokken
       frozen square iterative_callout:
+        frozen_create_square: Tilføj flere blokke her for at lave et kvadrat
+      frozen square iterative_b_callout:
+        frozen_create_square: Tilføj flere blokke her for at lave et kvadrat
+      frozen square iterative_test_callout:
         frozen_create_square: Tilføj flere blokke her for at lave et kvadrat
       frozen square loop 3x_callout:
         replace_questions: Brug drop-down menuen til at erstatte "???" med et tal
+      frozen square loop 3x_b_callout:
+        replace_questions: Brug drop-down menuen til at erstatte "???" med et tal
+      frozen square loop 3x_test_callout:
+        replace_questions: Brug drop-down menuen til at erstatte "???" med et tal
       frozen square loop_callout:
         replace_questions: Brug drop-down menuen til at erstatte "???" med et tal
+      frozen square loop_b_callout:
+        replace_questions: Brug drop-down menuen til at erstatte "???" med et tal
+      frozen square loop_test_callout:
+        replace_questions: Brug drop-down menuen til at erstatte "???" med et tal
       frozen square snowflake_callout:
+        replace_questions: Brug drop-down menuen til at erstatte "???" med et tal
+      frozen square snowflake_b_callout:
+        replace_questions: Brug drop-down menuen til at erstatte "???" med et tal
+      frozen square snowflake_test_callout:
         replace_questions: Brug drop-down menuen til at erstatte "???" med et tal
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Klik Redigér for at tilføje en parameter i din funktion

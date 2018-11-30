@@ -10,6 +10,7 @@ nl:
       messages:
         blank: "is vereist"
         blank_plural: "is vereist"
+        invalid: "is ongeldig"
         invalid_plural: "zijn ongeldig"
     attributes:
       user:
@@ -26,6 +27,7 @@ nl:
         age: 'Leeftijd'
         gender: 'Geslacht'
         edit_header: 'Accountdetails bewerken'
+        finish_sign_up_header: 'Voltooi het maken van je account'
         error:
           future: kan niet in de toekomst
   hello: "Hallo wereld"
@@ -39,6 +41,7 @@ nl:
   next_resource: Volgende hulpbron
   cancel: "Annuleren"
   okay: "Oké"
+  or: "of"
   heading_x_of_y: "%{heading} (pagina %{x} van %{y})"
   add_teacher_form:
     code:
@@ -83,6 +86,7 @@ nl:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft Account'
+    microsoft_v2_auth: 'Microsoft Account'
     clever: 'Slimme Account'
     forgot_password: 'Wachtwoord vergeten?'
     need_confirmation: "Geen bevestigingsinstructies ontvangen?"
@@ -250,9 +254,7 @@ nl:
         applab: 'Maak een App'
         gamelab: 'Maak een Game Lab project'
         weblab: 'Maak een Web Lab (beta) project'
-      home: "Home"
       my_dashboard: "Mijn Dashboard"
-      courses: "Cursussen"
       course_catalog: "Cursuscatalogus"
       project_gallery: "Projecten overzicht"
       sections: "Secties"
@@ -294,10 +296,17 @@ nl:
       signin: 'Aanmelden'
       signup: 'Maak een account aan'
       already_registered: 'Al aangemeld?'
-      pair_programming: 'Programmeren in Tweetallen'
       team: 'Team'
       driver: 'Stuurprogramma'
       navigator: 'Navigator'
+      create: 'Maak'
+      applab: 'App Lab'
+      artist: 'Kunstenaar'
+      gamelab: 'Game Lab'
+      playlab: 'Speel Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
+      dance: 'Dansfeest'
     popup:
       progress_for_user: "%{name} de vooruitgang"
       progress: 'Jouw voortgang'
@@ -511,6 +520,8 @@ nl:
       body_short: "Ontwerp een app, codeer met blokken of JavaScript om het te laten werken, en deel je app dan in een paar seconden."
       audience: 'Leeftijd 13+'
       cta: 'Leer hoe'
+    dance:
+      title: 'Dansfeest'
     hoc:
       title: 'Klassiek doolhof'
       body: 'Probeer de beginselen van de informatica. Miljoenen gingen je voor!'
@@ -548,8 +559,11 @@ nl:
     minecraft2016:
       title: "Minecraft"
       body: "Ga dieren en andere Minecraft wezens programmeren in je eigen Minecraft omgeving."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Minecraft is terug bij Hour of Code met een gloednieuwe activiteit! Gebruik code om door Minecraft te reizen."
     unplugged:
       title: "'Unplugged' lessen"
       audience: "Leeftijden 6+"
@@ -772,6 +786,7 @@ nl:
     download_in_Greek: 'Download in het Grieks:'
     windows: 'Windows (64-bit)'
     mac: 'Mac OS X'
+  view_teacher_guide: 'Lerarenhandleiding bekijken'
   pd:
     form_labels:
       email: 'Email'

@@ -1,62 +1,86 @@
 ---
-title: <%= hoc_s(:title_press_kit) %>
+title: <%= hoc_s(:title_press_kit).inspect %>
 layout: wide
 nav: promote_nav
 ---
 <%= view :signup_button %>
 
-## Hvordan få oppmerksomhet i media om Kodetimen
+# How to attract media to your Hour of Code event
+
+### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
 
 *For alle henvendelser fra presse og medier, ta kontakt med <press@code.org>.*
 
-### Noen gode råd
+---
+
+## Key Tips
 
 - Ta kontakt med mediene på e-post et par uker før arrangementet. Følg opp med e-post og telefon om du ikke får svar.
 - Spør en ansatt ved skolen eller en frivillig om å ta bilder som kan deles på nett og sendes til pressen.
 - Skriv om Kodetimen på nettsiden din og i skoleavisen. Legg ut detaljer om arrangementet og bilder av elevene i aksjon. Husk å spørre om tillatelse til å offentliggjøre bilder av personer.
-- Legg ut stadige oppdateringer om planene, reklamer for arrangementet, og legg ut bilder mellom 5.-11. desember. Bruk emneknaggene **#Kodetimen** og **#HourOfCode** slik at Code.org også kan følge med på og promotere din Kodetime.
+- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during <%= campaign_date('year') %>. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
-### Steg-for-steg guide:
+## Step-by-step guide
 
-**1. Planlegging**
+### 1. Plan your event
 
 - Planlegg en sammenkomst for å sparke i gang Kodetimen.
-- Send [en e-post](<%= resolve_url('/promote/resources#sample-emails') %>) til foreldre i nærområdet. Be dem om å spre budskapet videre i sin omgangskrets.
-- Send [en e-post](<%= resolve_url('/promote/resources#sample-emails') %>) hvor du inviterer byens borgemester, andre lokalpolitikere, eller fremtredende næringslivstopper, til å delta på arrangementet og holde en tale for elevene.
+- Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents and ask them to spread the word.
+- Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
 - Organiser ulike gruppeaktiviteter (f. eks. hvordan programmere uten datamaskin), eller vis fram et elevprosjekt.
-- Vis Code.orgs [Kodetimen-video](<%= resolve_url('/') %>), eller en av [disse](<%= resolve_url('/promote/resources#videos') %>).
+- Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these videos](<%= resolve_url('/promote/resources#videos') %>) to inspire students. <br />
 
-**2. Finn ut hvilke lokale journalister som har utdanning og lokalarrangementer som sitt ansvarsområde.**
+### 2. Identify specific reporters that cover education or local events
 
-Tenk lokalavis, lokale tv-stasjoner, radiostasjoner, eller bloggere.
+Like local newspapers, TV station or radio stations, or blogs. <br />
 
-Finn journalistens kontaktinformasjon på nettet. Hvis det vanskelig å finne, kan du ringe publikasjonen og spørre, eller skrive en e-post til 'tips@AVISNAVN.no'' og be om at meldingen videresendes den journalisten som er aktuell.
+### 3. Contact local media
 
-**3. Ta kontakt med lokalpressen**
+The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media](<%= resolve_url('/promote/press-kit#sample-emails') %>)**.
 
-Den beste måten er gjerne å sende en e-post. Hold det kortfattet og prøv å formidle hvorfor folk skulle bry seg om akkurat dette arrangementet. Legg ved kontaktinformasjon (inkludert mobilnummer) til en som kommer til å være tilstede på arrangementet. **Her er et [eksempel](<%= hoc_uri('/resources#sample-emails') %>) på en e-post til pressen.**
+Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
 
-**4. Vær forberedt på å svare på spørsmål om arrangementet. Her er noen eksempler:**
+### 4. Prepare to field questions about your school event. Here are some examples:
 
-*Hvorfor arrangeres Kodetimen på skolen deres?*
+#### Hvorfor arrangeres Kodetimen på skolen deres?
 
 Vi vet alle hvor viktig det er å kunne navigere i dagens stadig mer digitaliserte samfunn, men mange lærere er usikre på hvordan de skal angripe de ulike problemstillingene forbundet med denne teknologien. Et slikt arrangement er en fin anledning til å lære hva informatikk egentlig handler om.
 
-Vi håper å vekke en interesse for å lære mer. Forskning viser at barn forstår enkle programmeringskonsepter allerede før de lærer å lese og skrive. Det er faktisk slik at hjernen mer mottakelig for programmeringsspråk i ung alder, på lik linje med andre språk.
+Vi håper å vekke en interesse for å lære mer. Forskning viser at barn forstår enkle programmeringskonsepter allerede før de lærer å lese og skrive. Det er faktisk slik at hjernen mer mottakelig for programmeringsspråk i ung alder, på lik linje med andre språk. <br /> <br />
 
-*Hvorfor er dette viktig?*
+#### Hvorfor er dette viktig?
 
-Informasjonsteknologi griper etterhvert inn i alle bransjer. I 2015 fantes det 7 millioner ledige jobber i USA innenfor yrker der programmeringsferdigheter verdsettes, bl.a. innen kunst og design. Men kun 25 prosent av amerikanske skoler tilbyr undervisning i datavitenskap. Det er på tide å innse at vi lever i det 21. århundre. Vi vet at uansett hva disse elevene ender opp med å bli her i livet, det være seg medisin, næringsliv, politikk, eller kunst, vil evnen til å skape og styre teknologien gi dem en selvsikkerhet og et konkurransefortrinn.
+Informasjonsteknologi griper etterhvert inn i alle bransjer. I 2015 fantes det 7 millioner ledige jobber i USA innenfor yrker der programmeringsferdigheter verdsettes, bl.a. innen kunst og design. But 60 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st-century. Vi vet at uansett hva disse elevene ender opp med å bli her i livet, det være seg medisin, næringsliv, politikk, eller kunst, vil evnen til å skape og styre teknologien gi dem en selvsikkerhet og et konkurransefortrinn. <br />
 
-**Flere detaljer og et sitat som du kan bruke i presentasjoner:**
+<a id="sample-emails"></a>
 
-"Kodetimen er designet til å avmystifisere og vise at datavitenskap ikke er rakettvitenskap. Alle kan lære grunnleggende programmering," sier Hadi Partovi, grunnlegger og CEO i Code.org. "Mer enn 100 millioner elever verden over har gjennomført en Kodetime. Etterspørselen etter en informatikkutdanning tilpasset det 21. århundre krysser alle grenser og kjenner ingen grenser."
+## Sample email to send to invite local media to your event
 
-**Om Code.org**
+**Subject line**: Local school joins mission to introduce students to computer science
 
-Code.org® er en 501c3 almennyttig non-profit-organisasjon med formål om å utvide deltakelsen i datavitenskap og øke deltakelse av kvinner og andre underrepresenterte grupper. Dens visjon er at alle elever i alle skoler skal få muligheten til å lære programmering. Etter lanseringen i 2013 organiserte Code.org kampanjen Kodetimen, Kodetimen har hittil introdusert over et hundre millioner elever til datavitenskapen og samarbeider med 70 offenlige skolesistrikter over hele Usa for og utvide datavitenskap programmer. Code.org støttes av filantropiske donasjoner fra selskaper, stiftelser og generøse enkeltpersoner, inkludert Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network og andre. For mer informasjon, vennligst besøk: [ < % = resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
+Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. De gode nyhetene er at vi jobber for å endre dette.
+
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
+
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+
+I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
+
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
+
+Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
+
+I look forward to being in touch. <br />
+
+## Additional details and a quote you can use in materials
+
+"Kodetimen er designet til å avmystifisere og vise at datavitenskap ikke er rakettvitenskap. Alle kan lære grunnleggende programmering," sier Hadi Partovi, grunnlegger og CEO i Code.org. "Mer enn 100 millioner elever verden over har gjennomført en Kodetime. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+
+#### Om Code.org
+
+Code.org® er en 501c3 almennyttig non-profit-organisasjon med formål om å utvide deltakelsen i datavitenskap og øke deltakelse av kvinner og andre underrepresenterte grupper. Its vision is that every student in every school has the opportunity to learn computer programming. Etter lanseringen i 2013 organiserte Code.org kampanjen Kodetimen, Kodetimen har hittil introdusert over et hundre millioner elever til datavitenskapen og samarbeider med 70 offenlige skolesistrikter over hele Usa for og utvide datavitenskap programmer. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For mer informasjon, vennligst besøk: [ < % = resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
 
   
-Flere ressurser og eksempler på e-poster kan du finne [her](<%= resolve_url('/promote') %>).
+Find more resources and sample emails [here](<%= resolve_url('/promote/resources#sample-emails') %>).
 
 <%= view :signup_button %>

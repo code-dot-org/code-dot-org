@@ -48,6 +48,7 @@ vi:
   next_resource: Tài nguyên tiếp theo
   cancel: Huỷ
   okay: Đồng ý
+  or: hoặc
   heading_x_of_y: "%{heading} (trang %{x} của %{y})"
   add_teacher_form:
     code:
@@ -94,6 +95,7 @@ vi:
     twitter: Twitter
     facebook: Facebook
     windowslive: Tài khoản Microsoft
+    microsoft_v2_auth: Tài khoản Microsoft
     clever: Tài khoản Clever
     powerschool: Tài khoản Powerschool
     forgot_password: Quên mật khẩu?
@@ -171,6 +173,7 @@ vi:
     email_preference_question: Chúng tôi có thể gửi email cho bạn thông tin cập nhật
       về các khóa học của chúng tôi, các cơ hội ở địa phương hay tin tức về khoa học
       máy tính khác không?
+    email_preference_privacy: "(Xem chính sách bảo mật của chúng tôi)"
     email_preference_yes: Đồng ý
     email_preference_no: Không
   school_info:
@@ -314,9 +317,7 @@ vi:
         applab: Tạo một ứng dụng
         gamelab: Tạo một dự án trò chơi
         weblab: Tạo một dự án Web thử nghiệm (beta)
-      home: Trang chủ
       my_dashboard: Bảng điều khiển của tôi
-      courses: Các khóa học
       course_catalog: Danh mục khóa học
       project_gallery: chương trình
       sections: Mục
@@ -360,10 +361,17 @@ vi:
       signin: Đăng nhập
       signup: Tạo tài khoản
       already_registered: Bạn đã đăng ký?
-      pair_programming: Lập trình đôi
       team: Nhóm
       driver: Người lái xe
       navigator: Định hướng
+      create: Tạo
+      applab: Phòng thí nghiệm ứng dụng
+      artist: Họa sĩ
+      gamelab: Kho Trò chơi
+      playlab: Phòng trò chơi
+      minecraft: Minecraft
+      flappy: Flappy bird
+      dance: Bữa tiệc khiêu vũ
     popup:
       progress_for_user: sự tiến bộ của %{name}
       progress: Qua trình của bạn
@@ -748,6 +756,8 @@ vi:
         và chia sẻ ứng dụng của bạn trong vài giây.
       audience: Lứa tuổi 13 +
       cta: Học cách làm
+    dance:
+      title: Bữa tiệc khiêu vũ
     hoc:
       title: Mê cung cổ điển
       body: Hãy thử những lớp khoa học máy tính că bản. Hàng triệu người đã thử học
@@ -800,10 +810,12 @@ vi:
       title: Minecraft
       body: Chương trình động vật và sinh vật Minecraft khác trong phiên bản Minecraft
         của riêng bạn.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
-      body: Minecraft đã trở lại trong Giờ Lập Trình với một hoạt động mới! Hãy bắt
-        đầu cuộc hành trình Minecraft với việc lập trình.
+      body: Minecraft đã trở lại với một hoạt động hoàn toàn mới cho Hour of Code!
+        Cuộc hành trình đi qua Minecraft với mật mã.
     sports:
       body: Thực hiện một trò chơi bóng rổ hoặc trộn lẫn và kết hợp với thể thao.
     text-compression:
@@ -1168,6 +1180,7 @@ vi:
     xem lại câu trả lời của bạn.
   hidden_stage: Giáo viên của bạn đã không mong đợi bạn ở đây. Hãy hỏi giáo viên của
     bạn về bài học nào bạn nên vào.
+  view_teacher_guide: Xem hướng dẫn cho giáo viên
   pd:
     form_labels:
       email: Thư điện tử

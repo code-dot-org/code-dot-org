@@ -33,7 +33,7 @@
   right: 270px;
 }
 
-.tutorial-box {
+.starwars-container .tutorial-box {
   background-color: rgba(0, 0, 0, 0.4);
   color:white;
   padding: 20px;
@@ -77,17 +77,24 @@
 }
 
 @media screen and (min-width: 0px) and (max-width: 970px) {
-  .starwars-tutorial {
-    width: 50%;
-    float: left;
-    height: 220px;
-    padding: 5px;
-    padding-top: 10px;
-    position: static;
+  .starwars-container .tutorial-box h2 {
+    font-size: 17px;
   }
 
-  .tutorial-box {
+  .starwars-tutorial {
+    width: 100%;
+    height: 220px;
+    padding: 5px;
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  .starwars-container .tutorial-box {
     background-image: url(/images/fit-520/starwars_carousel_background.jpg);
+  }
+
+  .dance-party-container .tutorial-box {
+    background-image: url(/images/fit-1940/dance-hoc/dance_party_landing_main_nophotos.png)
   }
 
   .starwars-heading {
@@ -97,6 +104,12 @@
 
   .img-container {
     padding: 0px 5px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  .starwars-container .tutorial-box h2 {
+    font-size: 14px;
   }
 }
 
@@ -118,7 +131,7 @@
     width: 100%;
   }
 
-  .tutorial-box {
+  .starwars-container .tutorial-box {
     /* Ensure background doesn't repeat in the wider box */
     background-size: cover;
   }

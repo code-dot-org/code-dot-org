@@ -31,12 +31,16 @@ sk:
       World: Svet
       Behaviors: Správanie
       Advanced: Pokročilé
+      Start: Spustiť
+      Locations: Miesta
+      Music: Hudba
+      Dancing: Tancovanie
+      Dancers: Tanečníci
+      Groups: Skupiny
       Sprite: Objekt
       Brush: Štetka
       Make Sprite: Vytvoriť objekt
       Movement: Pohyb
-      Start: Spustiť
-      Groups: Skupiny
       Functional: Funkcie
       Predefined: Preddefinované
       test: test

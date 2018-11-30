@@ -122,7 +122,7 @@
   "setTeam": "{team} csapat beállítása",
   "setTeamRandom": "Csapat véletlenszerű kiválasztása",
   "shareBounceTwitter": "Próbáld ki, milyen visszapattanós játékot készítettem. Magam programoztam a code.org weboldalon",
-  "shareBounceTwitterDonor": "",
+  "shareBounceTwitterDonor": "Nézze meg a Bounce játékot, amit készítettem. (Köszönet {donor} supporting @codeorg)",
   "shareGame": "Oszd meg a játékod:",
   "turnLeft": "fordulj balra",
   "turnRight": "fordulj jobbra",

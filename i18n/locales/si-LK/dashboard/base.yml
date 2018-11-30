@@ -39,6 +39,7 @@ si:
   next_resource: ඊළඟ සම්පත
   cancel: "අවලංගු කරන්න"
   okay: "හරි"
+  or: "හෝ"
   heading_x_of_y: "%{heading} (පිටුව %{y} න් %{x})"
   add_teacher_form:
     code:
@@ -81,6 +82,7 @@ si:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft ගිණුම'
+    microsoft_v2_auth: 'Microsoft ගිණුම'
     clever: 'දක්ෂ ගිණුම'
     forgot_password: 'ඔබගේ මුරපදය අමතකද?'
     need_confirmation: "තහවුරු කිරීමේ උපදෙස් තවමත් ලැබී නැත්ද?"
@@ -205,7 +207,6 @@ si:
         artist: 'යමක් අඳින්න'
         calculate: 'යමක් ගණනය කරන්න'
         applab: 'App එකක් හදන්න'
-      courses: "පාඨමාලාව"
       project_gallery: "ව්යාපෘති"
       educate_hoc: "Hour of Code"
       stats: "සංඛ්‍යාන"
@@ -223,6 +224,12 @@ si:
       team: 'කණ්ඩායම'
       driver: 'රියදුරු'
       navigator: 'යාත්‍රිකයා'
+      create: 'තනන්න'
+      applab: 'මෘදුකාංග විද්‍යාගාරය'
+      artist: 'කලාකරු'
+      playlab: 'ක්‍රීඩා පරීක්ෂණාගාරය'
+      minecraft: 'Minecraft'
+      flappy: 'ෆ්ලැපි'
     popup:
       progress_for_user: "%{name} ගේ ප්‍රගතිය"
       progress: 'ඔබගේ ප්‍රගතිය'
@@ -458,6 +465,8 @@ si:
       title: "Minecraft"
       body: "Minecraft ලෝකය කේතය මගින් ගවේශණය කරන්න"
     minecraft2016:
+      title: "Minecraft"
+    aquatic:
       title: "Minecraft"
     hero:
       title: "Minecraft"

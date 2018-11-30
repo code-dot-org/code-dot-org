@@ -55,6 +55,7 @@
     "instructions": "Create an **event** so that when Geraldine touches the puddle, her color changes to brown.",
     "include_shared_functions": "false",
     "validation_code": "var status = 3;\r\nWorld.spriteTouching = 0;\r\nvar count = World.spriteTouching;\r\n\r\n// Check through all sprites in case student changed the sprite name\r\nfor (var i=0; i<World.allSprites.length; i++) {\r\n  var sprite = World.allSprites[i];\r\n  // ignore edge sprites\r\n  if (!edges.contains(sprite)) {\r\n    if(sprite.getAnimationLabel() == \"giraffe\"){\r\n      if(sprite.isTouching(puddle)){\r\n        count++;\r\n        console.log(\"I'm in!\");\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\nif (World.frameCount > 200) {\r\n  if(count > 0){\r\n    status = 0;\r\n  }\r\n  console.log(count);\r\n  levelSuccess(status);\r\n}",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

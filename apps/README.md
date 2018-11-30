@@ -60,7 +60,7 @@ npm run build
 * `npm run build:dist` builds a minified version suitable for production
 * `npm run clean` will clean the build directory
 
-See also: [Full build with blockly-core](#full-build-with-blockly-core-changes)
+See also: [Full build with blockly changes](#full-build-with-blockly-changes)
 
 #### Running tests
 
@@ -220,6 +220,13 @@ A static version of the styleguide is hosted at https://code-dot-org.github.io/c
 
 1. Check out a local copy of [blockly](https://github.com/code-dot-org/blockly/)
 1. Follow the directions in [Building with apps](https://github.com/code-dot-org/blockly#building-with-apps)
+
+#### Analyzing bundle sizes
+
+![code-studio-common bundle](https://user-images.githubusercontent.com/1070243/44691985-abe8dc80-aa15-11e8-95a3-0835ca3529df.png)
+
+Bloated javascript bundles getting you down? Run `yarn build:analyze` to generate an interactive treemap visualization of the contents of all of our bundles. This will automatically open the report in your browser, or you can find the generated html page in the apps build directory at code-dot-org/apps/build/package/js/report.html. This uses [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer). 
+
 
 ### Localization
 

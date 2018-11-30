@@ -32,6 +32,7 @@ az:
   next_resource: Növbəti resurs
   cancel: "İmtina et"
   okay: "Oldu"
+  or: "və ya"
   add_teacher_form:
     code:
       label: 'Müəllim əlavə edin:'
@@ -68,6 +69,7 @@ az:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft Hesabı'
+    microsoft_v2_auth: 'Microsoft Hesabı'
     forgot_password: 'Parolunuzu unutmusunuz?'
     need_confirmation: "Təsdiq göstərişlərini almamisiniz?"
     need_unlock: "Kilidaçma göstərişlərini almamisiniz?"
@@ -177,8 +179,6 @@ az:
       sign_in_to_save: 'Nəticələri itirməmək üçün daxil olun'
       free_play:
         artist: 'Nə isə çəkin'
-      home: "Ev səhifəsi"
-      courses: "marşrutlar"
       project_gallery: "Layihə qalereyası"
       sections: "Bölmələr"
       teacher_community: "Müəllim icması"
@@ -220,6 +220,12 @@ az:
       already_registered: 'Artıq qeydiyyatdan keçmisiniz?'
       team: 'Komanda'
       driver: 'Sürücü'
+      create: 'Düzəlt'
+      applab: 'Proqram Labı'
+      artist: 'Rəssam'
+      playlab: 'Oyun labı'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "%{name} adlı şagirdin nəticələri"
       progress: 'Sizin nəticələriniz'
@@ -366,6 +372,8 @@ az:
       title: "Minecraft"
       body: "Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin"
     minecraft2016:
+      title: "Minecraft"
+    aquatic:
       title: "Minecraft"
     hero:
       title: "Minecraft"

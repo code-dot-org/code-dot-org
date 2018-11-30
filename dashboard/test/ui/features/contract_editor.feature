@@ -74,14 +74,13 @@ Scenario: Changing Parameter names
   And "add-block" refers to block "41"
   And "i" refers to block "34"
   And "j" refers to block "35"
-  And "do-something" refers to block "62"
+  And "do-something" refers to block "60"
   And "evaluate" refers to block "10"
 
   When I open my eyes to test "changing contract parameters"
   Given I am on "http://studio.code.org/s/allthethings/stage/13/puzzle/11?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
   And I press "modalEditorClose"
   And I resize top instructions to "100" pixels tall
 

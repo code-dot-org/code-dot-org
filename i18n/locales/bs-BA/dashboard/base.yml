@@ -34,6 +34,7 @@ bs:
   next_resource: Sljedeći resurs
   cancel: "Poništi"
   okay: "U redu"
+  or: "ili"
   heading_x_of_y: "%{heading} (strana %{x} od %{y})"
   add_teacher_form:
     code:
@@ -76,6 +77,7 @@ bs:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft Račun'
+    microsoft_v2_auth: 'Microsoft Račun'
     clever: 'Pametni račun'
     forgot_password: 'Zaboravio/la si šifru?'
     need_confirmation: "Nisi primio/la upute za potvrdu?"
@@ -201,7 +203,6 @@ bs:
         playlab: 'Napravi Aplikaciju'
         artist: 'Nacrtaj Nešto'
         applab: 'Napravi Aplikaciju'
-      courses: "Kursevi"
       project_gallery: "Projekti"
       help_support: "Pomoć i podrška"
       documentation: "Dokumentacija"
@@ -225,9 +226,13 @@ bs:
       signin: 'Prijava'
       signup: 'Napravi račun'
       already_registered: 'Jeste li već registrirani?'
-      pair_programming: 'Programiranje u Paru'
       team: 'Tim'
       navigator: 'Partner'
+      create: 'Kreiraj'
+      applab: 'Laboratorij za Aplikacije'
+      artist: 'Umjetnik'
+      playlab: 'Play Lab'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Napredak za %{name}"
       progress: 'Tvoj napredak'

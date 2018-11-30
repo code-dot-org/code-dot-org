@@ -595,9 +595,11 @@ function main() {
 
     $scope.react_progress = true;
     $scope.$on('section-progress-rendered', () => {
-      $scope.section.$promise.then(script =>
-        renderSectionProgress(script, $scope.script_list)
-      );
+      $scope.section.$promise.then(script => {
+        $scope.script_list.$promise.then(validScripts => {
+          renderSectionProgress(script, validScripts);
+        });
+      });
     });
   }]);
 
@@ -631,7 +633,11 @@ function main() {
 
     $scope.react_text_responses = true;
     $scope.$on('text-responses-table-rendered', () => {
-      $scope.section.$promise.then(section => renderTextResponsesTable(section, $scope.script_list));
+      $scope.section.$promise.then(section => {
+        $scope.script_list.$promise.then(validScripts => {
+          renderTextResponsesTable(section, validScripts);
+        });
+      });
     });
   }]);
 

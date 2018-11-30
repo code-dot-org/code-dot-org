@@ -1,47 +1,90 @@
+---
 uz:
   data:
     blocks:
-      Dancelab_changeMove:
+      Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
-            '"next"': Keyingi
-            '"prev"': Avvalgi
-      Dancelab_doMoveOnce:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
-            '"next"': Keyingi
-            '"prev"': Avvalgi
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tasodifiy
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': tasodifiy
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tasodifiy
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"random"': tasodifiy
       Dancelab_randomColor:
         text: tasodifiy rang
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
-      Dancelab_whenKey:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
         options:
-          KEY:
-            '"space"': koinot
-      Dancelab_whileKey:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_whenKey:
         options:
           KEY:
             '"space"': koinot
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'rost'
-            'false': 'yolgʻon'
+            'true': rost
+            'false': yolgʻon
       gamelab_locationDelta:
         options:
           DIR:
@@ -62,5 +105,9 @@ uz:
         options:
           KEY:
             '"space"': koinot
-      Vanilla_randomColor:
+      Mikelab_randomColor:
         text: tasodifiy rang
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': shahar

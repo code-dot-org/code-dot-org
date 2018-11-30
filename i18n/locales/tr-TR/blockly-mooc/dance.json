@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "Bir dansçı yapmanız gerekiyor.",
+  "danceFeedbackNoDancers": "Hiç dansçınız yok.",
+  "danceFeedbackNoBackground": "Bir arka planı efekti eklemeniz gerekiyor.",
+  "danceFeedbackTooManyDancers": "Dikkatli olun! Eğer `yeni yap` bloğunu `her 2 ölçüde bir`in içine yerleştirirseniz çok sayıda dansçı yaratırsınız.",
+  "danceFeedbackUseSetSize": "Dansçıyı daha küçük yapmak için `arkaplan_dançısı2 boyut ayarla` bloğunu kullanın.",
+  "danceFeedbackUseSetTint": "Dansçının rengini değiştirmek için `renk tonu ayarla` bloğunu kullanın.",
+  "danceFeedbackUseStartMapping": "Programınıza <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> bloğunu eklemeyi deneyin.",
+  "danceFeedbackStartNewMove": "Dansçınız dördüncü ölçüden sonra yeni bir hareket yapmıyordu.",
+  "danceFeedbackNeedDifferentDance": "Başka bir dans kullanmanız gerekiyor.",
+  "danceFeedbackNeedEveryTwoMeasures": "`Her 2 ölçüde bir` bloğunu kullandığınızdan emin olun",
+  "danceFeedbackNeedMakeANewDancer": "İkinci bir dansçı yaratmak için `yeni yap` bloğunu kullanın.",
+  "measure": "Ölçü:"
+}

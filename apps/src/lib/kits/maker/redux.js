@@ -26,6 +26,10 @@ export function isEnabled(state) {
   return getRoot(state).enabled;
 }
 
+export function isAvailable(state) {
+  return !!(state && state.maker);
+}
+
 export function isConnecting(state) {
   return getRoot(state).connectionState === CONNECTING;
 }

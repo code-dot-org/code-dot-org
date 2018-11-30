@@ -2,7 +2,7 @@ require 'active_support/core_ext/hash/indifferent_access'
 require 'cdo/firehose'
 
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config]
+  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :embed_video]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config, :export_create_channel]
   protect_from_forgery except: :export_config
@@ -76,6 +76,9 @@ class ProjectsController < ApplicationController
     minecraft_hero: {
       name: 'New Minecraft Hero Project'
     },
+    minecraft_aquatic: {
+      name: 'New Minecraft Aquatic Project'
+    },
     applab: {
       name: 'New App Lab Project',
       login_required: true
@@ -90,6 +93,10 @@ class ProjectsController < ApplicationController
     },
     spritelab: {
       name: 'New Sprite Lab Project',
+    },
+    dance: {
+      name: 'New Dance Lab Project',
+      default_image_url: '/blockly/media/dance/placeholder.png',
     },
     makerlab: {
       name: 'New Maker Lab Project',
@@ -135,9 +142,9 @@ class ProjectsController < ApplicationController
   # GET /projects/public
   def public
     if current_user
-      render template: 'projects/index', locals: {is_public: true}
+      render template: 'projects/index', locals: {is_public: true, limited_gallery: limited_gallery?}
     else
-      render template: 'projects/public'
+      render template: 'projects/public', locals: {limited_gallery: limited_gallery?}
     end
   end
 
@@ -312,10 +319,22 @@ class ProjectsController < ApplicationController
       no_header: sharing,
       small_footer: !no_footer && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
-      game_display_name: data_t("game.name", @game.name)
+      game_display_name: data_t("game.name", @game.name),
     )
+
     if params[:key] == 'artist'
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/_share_image.png", 'https:'
+    end
+
+    if params[:key] == 'dance'
+      @project_image = CDO.studio_url "v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
+      if DCDO.get('share_video_sharing_enabled', true)
+        # TODO: elijah set up test subdomains for dance-api, and situationally
+        # point to those here
+        @project_video = "https://dance-api.code.org/videos/video-#{@view_options['channel']}.mp4"
+        @project_video_stream = dance_project_embed_video_projects_url(key: params[:key], channel_id: params[:channel_id])
+      end
+      replay_video_view_options unless sharing || readonly
     end
 
     begin
@@ -362,18 +381,31 @@ class ProjectsController < ApplicationController
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return head :bad_request
     end
+    project_type = params[:key]
     new_channel_id = ChannelToken.create_channel(
       request.ip,
       StorageApps.new(storage_id('user')),
       src: src_channel_id,
-      type: params[:key],
+      type: project_type,
       remix_parent_id: remix_parent_id,
     )
-    AssetBucket.new.copy_files src_channel_id, new_channel_id
-    animation_list = AnimationBucket.new.copy_files src_channel_id, new_channel_id
+    AssetBucket.new.copy_files src_channel_id, new_channel_id if uses_asset_bucket?(project_type)
+    animation_list = uses_animation_bucket?(project_type) ? AnimationBucket.new.copy_files(src_channel_id, new_channel_id) : []
     SourceBucket.new.remix_source src_channel_id, new_channel_id, animation_list
-    FileBucket.new.copy_files src_channel_id, new_channel_id
+    FileBucket.new.copy_files src_channel_id, new_channel_id if uses_file_bucket?(project_type)
     redirect_to action: 'edit', channel_id: new_channel_id
+  end
+
+  private def uses_asset_bucket?(project_type)
+    %w(applab makerlab gamelab spritelab).include? project_type
+  end
+
+  private def uses_animation_bucket?(project_type)
+    %w(gamelab spritelab).include? project_type
+  end
+
+  private def uses_file_bucket?(project_type)
+    %w(weblab).include? project_type
   end
 
   def export_create_channel
@@ -395,6 +427,7 @@ class ProjectsController < ApplicationController
       data: data,
       type: params[:key],
       remix_parent_id: remix_parent_id,
+      standalone: false,
     )
     render json: {channel_id: new_channel_id}
   end
@@ -411,6 +444,27 @@ class ProjectsController < ApplicationController
   def set_level
     @level = get_from_cache STANDALONE_PROJECTS[params[:key]][:name]
     @game = @level.game
+  end
+
+  # Due to risk of inappropriate content, we can hide non-featured Applab
+  # and Gamelab projects via DCDO. Internally, project_validators should
+  # always have access to all Applab and Gamelab projects, even if there is a
+  # limited gallery for others.
+  def limited_gallery?
+    dcdo_flag = DCDO.get('image_moderation', {})['limited_project_gallery']
+    limited_project_gallery = dcdo_flag.nil? ? true : dcdo_flag
+    project_validator = current_user&.permission? UserPermission::PROJECT_VALIDATOR
+    !project_validator && limited_project_gallery
+  end
+
+  # GET /projects/:key/:channel_id/embed_video
+  def embed_video
+    # explicitly set security related headers so that this page can actually
+    # be embedded.
+    response.headers['X-Frame-Options'] = 'ALLOWALL'
+    response.headers['Content-Security-Policy'] = ''
+    video_src = "https://dance-api.code.org/videos/video-#{params[:channel_id]}.mp4"
+    render template: "projects/embed_video", layout: false, locals: {video_src: video_src}
   end
 
   private

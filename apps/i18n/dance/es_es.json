@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "Tienes que hacer un bailarín.",
+  "danceFeedbackNoDancers": "No tienes bailarines.",
+  "danceFeedbackNoBackground": "Tienes que añadir un efecto de fondo.",
+  "danceFeedbackTooManyDancers": "¡Ten cuidado! Si pones un bloque «hacer uno nuevo» dentro de «cada 2 compases», crearás un montón de bailarines.",
+  "danceFeedbackUseSetSize": "Utiliza el bloque «establecer tamaño de bailarín_fondo2» para reducir el tamaño del bailarín.",
+  "danceFeedbackUseSetTint": "Utiliza el bloque «establecer tonalidad» para cambiar la tonalidad de un bailarín.",
+  "danceFeedbackUseStartMapping": "Trata de añadir el bloque <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">derecha_piña</title><title name=\"PROPERTY\"> «escala»</title><title name=\"RANGE\">«bajo»</title></block></xml> a tu programa.",
+  "danceFeedbackStartNewMove": "Tu bailarín no estaba haciendo un nuevo movimiento después del cuarto compás.",
+  "danceFeedbackNeedDifferentDance": "Debes usar una baile diferente.",
+  "danceFeedbackNeedEveryTwoMeasures": "Asegúrate de utilizar el bloque «cada 2 compases»",
+  "danceFeedbackNeedMakeANewDancer": "Utiliza el bloque «hacer uno nuevo» para crear un segundo bailarín.",
+  "measure": "Compás:"
+}
