@@ -165,10 +165,7 @@ export default class MobileControls {
 
   reset() {
     const { softButtonIds } = this.opts;
-    softButtonIds.forEach(buttonId => {
-      document.getElementById(buttonId).style.display = 'inline';
-
-    });
+    softButtonIds.forEach(buttonId => document.getElementById(buttonId).style.display = 'inline');
     if (softButtonIds.length) {
       $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + softButtonIds.length);
     }
