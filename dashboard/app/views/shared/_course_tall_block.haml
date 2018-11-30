@@ -1,5 +1,4 @@
 - show_teacher_guide ||= false
-- teacher_guide ||= nil
 
 - if id == Script::HOC_NAME
   - url = hoc_reset_url
@@ -94,6 +93,7 @@
   - elsif id == 'dance'
     - url = CDO.code_org_url('/dance')
     - title = t('upsell.dance.title')
+    - image_url = "courses/logo_tall_#{id}.gif"
   - elsif id == Script::ARTIST_NAME
     - title = data_t_suffix('script.name', id, 'title')
     - teacher_guide = CDO.code_org_url("/hourofcode/artist")
@@ -104,28 +104,19 @@
 - if %w(course1 course2 course3 course4 coursea-2017 courseb-2017 coursec-2017 coursed-2017 coursee-2017 coursef-2017).include?(id)
   - audience = data_t_suffix('script.name', id, 'description_audience')
 
-- if id== 'dance'
-  - image_url = "courses/logo_tall_#{id}.gif"
-- else
-  - image_url = "courses/logo_tall_#{id}.jpg"
-
-.courseblock-span3.courseblock-tall{class: 'courseblock-tall'}
+.courseblock-span3.courseblock-tall
   = link_to url do
-    .imgspan
-      = image_tag(CDO.shared_image_url(image_url), height: '120px', width: '100%')
+    - image_url ||= "courses/logo_tall_#{id}.jpg"
+    .imgspan= image_tag(CDO.shared_image_url(image_url), height: '120px', width: '100%')
     .clear
     - if Script.beta? id
       .beta
-        %h3.betatitle
-          = title
-        %h3.betatext
-          = t('beta')
+        %h3.betatitle= title
+        %h3.betatext= t('beta')
     - else
-      .heading
-        %h3
-          = title
+      %h3.heading= title
     .clear
     .smalltext= body
     .clear
-    - if show_teacher_guide && teacher_guide.present?
+    - if show_teacher_guide && teacher_guide&.present?
       .bar.teacher-guide= link_to t('view_teacher_guide'), teacher_guide
