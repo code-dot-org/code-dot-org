@@ -1426,7 +1426,7 @@ ActiveRecord::Schema.define(version: 20181117002905) do
     t.index ["user_id"], name: "index_user_geos_on_user_id", using: :btree
   end
 
-  create_table "user_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "user_levels", id: :bigint, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",                      null: false
     t.integer  "level_id",                     null: false
     t.integer  "attempts",         default: 0, null: false

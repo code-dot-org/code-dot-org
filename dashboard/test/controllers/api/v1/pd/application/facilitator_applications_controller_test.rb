@@ -2,9 +2,10 @@ require 'test_helper'
 
 module Api::V1::Pd::Application
   class FacilitatorApplicationsControllerTest < ::ActionController::TestCase
+    include Pd::Application::ActiveApplicationModels
     setup_all do
       @test_params = {
-        form_data: build(:pd_facilitator1819_application_hash)
+        form_data: build(FACILITATOR_APPLICATION_HASH_FACTORY)
       }
 
       @applicant = create :teacher
@@ -39,10 +40,10 @@ module Api::V1::Pd::Application
     end
 
     test 'submit is idempotent' do
-      create :pd_facilitator1819_application, user: @applicant
+      create :pd_facilitator1920_application, user: @applicant
 
       sign_in @applicant
-      assert_no_difference 'Pd::Application::Facilitator1819Application.count' do
+      assert_no_difference 'Pd::Application::Facilitator1920Application.count' do
         put :create, params: @test_params
       end
       assert_response :success

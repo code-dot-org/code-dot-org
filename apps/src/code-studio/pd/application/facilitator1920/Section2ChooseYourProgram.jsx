@@ -5,7 +5,7 @@ import {
   PageLabels,
   SectionHeaders,
   TextFields
-} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
+} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
 
 const PROGRAM_CSF = "CS Fundamentals (Pre-K - 5th grade)";
 const CSF_AVAILABILITY_ONLY_WEEKEND = "I will only be able to attend Saturday and Sunday of the training";
@@ -37,7 +37,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
           <div>
             <h4>
               If selected for the program, you will be required to attend a
-              Facilitator-in-Training Weekend in the spring of 2018.
+              Facilitator-in-Training Weekend in the spring of 2019.
             </h4>
 
             {this.radioButtonsFor("csfAvailability")}
@@ -52,7 +52,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
           <div>
             <h4>
               If selected for the program, you will be required to attend TeacherCon and a
-              Facilitator-in-Training Weekend in the summer of 2018.
+              Facilitator-in-Training Weekend in the summer of 2019.
             </h4>
 
             {this.checkBoxesWithAdditionalTextFieldsFor("csdCspTeacherconAvailability", {

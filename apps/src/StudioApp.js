@@ -2013,9 +2013,9 @@ StudioApp.prototype.handleHideSource_ = function (options) {
           // /c/ URLs go to /edit when we click open workspace.
           // /project/ URLs we want to go to /view (which doesnt require login)
           if (/^\/c\//.test(location.pathname)) {
-            location.href += '/edit';
+            location.pathname += '/edit';
           } else {
-            location.href += '/view';
+            location.pathname += '/view';
           }
         });
 

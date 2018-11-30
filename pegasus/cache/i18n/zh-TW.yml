@@ -244,6 +244,7 @@ zh-TW:
   studiobar_elementary_title: 國小課程
   studiobar_elementary_body: 我們為 K&#8209;5 設計的 3 個新課程
   studiobar_dance_title: 舞蹈派對
+  studiobar_dance_body: 創建並分享自己的舞蹈派對
   studiobar_hoc_title: 一小時玩程式活動
   studiobar_hoc_body: 與憤怒鳥一起學習編程
   studiobar_flappy_title: 像素鳥程式
@@ -1564,11 +1565,17 @@ zh-TW:
   google_sign_in_instruct: 前提是他們應該要「用 Google 帳戶登入」：
   applab-intro_name: App Lab 介紹
   applab_tile_start_tutorial: 開始
+  applab_tile_teacher_guide: 查看教師指導
   account_sign_up_email_opt_in: 我們是否可以透過電子郵件向您發送有關我們課程、當地機會或其它計算機科學資訊的一些更新？
   account_sign_up_child_accept_terms: '我確定我的監護人已允許我使用 Code.org 提供的服務。 '
   hoc_overview_dance_title: 舞蹈派對
+  hoc_overview_partner_activities_title: 合作夥伴的更多活動
+  hoc_overview_partner_activities_body: 一小時編程網站匯集了由 Code.org 及其合作夥伴設計的超過 100 多項電腦科學活動，適用于所有年齡段和經驗水平的人群。
+  hoc_overview_partner_activities_link: 查看活動
   hoc_overview_start_tutorial: 開始
+  hoc_overview_view_teacher_guide: 查看教師指導
   hoc2018_creativity_create: 建立
+  hoc2018_creativity_what_will_you_create: 你要創建什麼？
   hoc2018_mc_page_title: 一小時玩 Minecraft 教程
   hoc2018_mc_details: 多種語言 | 最新瀏覽器或平板電腦 | 年級 2+
   hoc2018_mc_aquatic_description: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。
@@ -1599,14 +1606,28 @@ zh-TW:
   hoc2018_mc_video_title_hoc_is_here: 任何人都可以學得會的一小時玩程式（Hour of Code）來了
   hoc2018_mc_video_title_anybody_can_learn: 任何人都可以學習
   hoc2018_mc_video_title_my_name_is_aracely: 我是 Aracely
+  hoc2018_mc_homepage_hoc_coming: 一小時程式設計就要開始了...
+  hoc2018_mc_homepage_what_create: 你要創建什麼？
   hoc2018_mc_homepage_join_us: 加入我們
   hoc2018_mc_homepage_try_it: 試一試
   hoc2018_mc_back_journey: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。
+  hoc2018_mc_teacher_guide: 查看教師指導
   hoc2018_mc_go_to_mc_education: 連結到 Minecraft Education
   hoc2018_dance_party_main_heading: 舞蹈派對
+  hoc2018_dance_create_your_own_dance_title: 創建自己的舞蹈派對
   hoc2018_dance_party_box_title: 舞蹈派對
+  hoc2018_dance_party_box_description: 使用代碼創建舞蹈派對，并與朋友分享！
   hoc2018_dance_party_button: 開始
+  hoc2018_dance_keep_on_dancing_box_title: 繼續跳舞
+  hoc2018_dance_keep_on_dancing_description: 在一小時之後嘗試更多奇思妙想。
+  hoc2018_dance_keep_on_dancing_button: 開始第 2 部分
+  hoc2018_dance_teacher_resources_title: 教師資源
+  hoc2018_dance_teacher_resources_tile1_description: 課程計畫、證書和音樂篩選。
   hoc2018_dance_teacher_resources_tile1_button: 教學計畫
+  hoc2018_dance_teacher_resources_tile2_title: 非電聲舞蹈派對
+  hoc2018_dance_teacher_resources_tile2_description: 不需要計算機！ 學習編碼概念，一起組織舞蹈派對。
   hoc2018_dance_teacher_resources_tile2_button: 不插電的活動
   hoc2018_dance_amazon_about_future_engineer_button: 進一步了解
   hoc2018_dance_amazon_scholarship_programs_button: 立即申請
+  hoc2018_dance_measure: 小節
+  hoc2018_dance_measure_colon: '小節:'
