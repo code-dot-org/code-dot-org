@@ -2,7 +2,7 @@ require 'active_support/core_ext/hash/indifferent_access'
 require 'cdo/firehose'
 
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :embed_video]
+  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config, :export_create_channel]
   protect_from_forgery except: :export_config
@@ -328,12 +328,6 @@ class ProjectsController < ApplicationController
 
     if params[:key] == 'dance'
       @project_image = CDO.studio_url "v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
-      if DCDO.get('share_video_sharing_enabled', true)
-        # TODO: elijah set up test subdomains for dance-api, and situationally
-        # point to those here
-        @project_video = "https://dance-api.code.org/videos/video-#{@view_options['channel']}.mp4"
-        @project_video_stream = dance_project_embed_video_projects_url(key: params[:key], channel_id: params[:channel_id])
-      end
       replay_video_view_options unless sharing || readonly
     end
 
@@ -455,16 +449,6 @@ class ProjectsController < ApplicationController
     limited_project_gallery = dcdo_flag.nil? ? true : dcdo_flag
     project_validator = current_user&.permission? UserPermission::PROJECT_VALIDATOR
     !project_validator && limited_project_gallery
-  end
-
-  # GET /projects/:key/:channel_id/embed_video
-  def embed_video
-    # explicitly set security related headers so that this page can actually
-    # be embedded.
-    response.headers['X-Frame-Options'] = 'ALLOWALL'
-    response.headers['Content-Security-Policy'] = ''
-    video_src = "https://dance-api.code.org/videos/video-#{params[:channel_id]}.mp4"
-    render template: "projects/embed_video", layout: false, locals: {video_src: video_src}
   end
 
   private
