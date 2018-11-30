@@ -108,15 +108,12 @@
   = link_to url do
     - image_url ||= "courses/logo_tall_#{id}.jpg"
     .imgspan= image_tag(CDO.shared_image_url(image_url), height: '120px', width: '100%')
-    .clear
     - if Script.beta? id
       .beta
         %h3.betatitle= title
         %h3.betatext= t('beta')
     - else
       %h3.heading= title
-    .clear
     .smalltext= body
-    .clear
     - if show_teacher_guide && teacher_guide&.present?
       .bar.teacher-guide= link_to t('view_teacher_guide'), teacher_guide
