@@ -1,4 +1,3 @@
-- showState ||= false
 - teacher_guide ||= nil
 
 - if id == Script::HOC_NAME
@@ -94,9 +93,6 @@
 
 - block_class = 'courseblock-tall'
 
-- if ! (current_user && showState)
-  - block_class << ' courseblock-noaction'
-
 - if id== 'dance'
   - image_url = "courses/logo_tall_#{id}.gif"
 - else
@@ -122,10 +118,3 @@
     .clear
     - if teacher_guide.present?
       .bar.teacher-guide= link_to t('view_teacher_guide'), teacher_guide
-    .clear
-    - if audience && current_user && showState
-      .bar.audiencebar.audience= audience
-    - elsif audience
-      .bar.audience= audience
-
-    = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
