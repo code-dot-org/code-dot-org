@@ -2,28 +2,28 @@ require 'rmagick'
 require 'cdo/pegasus/object'
 MAX_DIMENSION = 2880
 
-# This method returns a newly-allocated Magick::Image object.
-# NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
+# This method returns a newly-allocated Magick::ImageList object.
+# NOTE: the caller MUST ensure image#destroy! is called on each returned image object to avoid memory leaks.
 def load_manipulated_image(path, mode, width, height, scale = nil)
-  image = Magick::Image.read(path).first
+  ilist = Magick::ImageList.new.read(path)
+  ilist.to_a.each do |image|
+    # If only one dimension provided, assume a square
+    height ||= width
+    width ||= height
 
-  # If only one dimension provided, assume a square
-  height ||= width
-  width ||= height
+    # If both dimensions are nil, assume the original image dimension
+    width ||= image.columns
+    height ||= image.rows
 
-  # If both dimensions are nil, assume the original image dimension
-  width ||= image.columns
-  height ||= image.rows
+    if scale
+      width *= scale
+      height *= scale
+    end
 
-  if scale
-    width *= scale
-    height *= scale
-  end
+    width = [MAX_DIMENSION, width].min
+    height = [MAX_DIMENSION, height].min
 
-  width = [MAX_DIMENSION, width].min
-  height = [MAX_DIMENSION, height].min
-
-  case mode
+    case mode
     when :fill
       image.resize_to_fill!(width, height)
     when :fit
@@ -32,7 +32,9 @@ def load_manipulated_image(path, mode, width, height, scale = nil)
       image.resize!(width, height)
     else
       nil
+    end
   end
+  ilist
 end
 
 def process_image(path, ext_names, language=nil, site=nil)
@@ -97,9 +99,9 @@ def process_image(path, ext_names, language=nil, site=nil)
   end
 
   begin
-    image = load_manipulated_image(path, mode, width, height, scale)
-    image.format = image_format
-    image_blob = image.to_blob do
+    image_list = load_manipulated_image(path, mode, width, height, scale)
+    image_blob = image_list.to_blob do
+      self.format = image_format
       if CDO.image_optim && %w(jpg jpeg).include?(image_format)
         self.compression = Magick::LosslessJPEGCompression
         self.quality = 100
@@ -109,7 +111,7 @@ def process_image(path, ext_names, language=nil, site=nil)
     end
     output.merge(content: image_blob)
   ensure
-    image && image.destroy!
+    image_list && image_list.to_a.map(&:destroy!)
   end
 end
 

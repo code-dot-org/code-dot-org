@@ -2,6 +2,8 @@ import sinon from 'sinon';
 import {expect} from '../../util/configuredChai';
 import {parseElement} from '@cdo/apps/xml';
 import {Position} from '@cdo/apps/constants';
+import {singleton as studioAppSingleton} from '@cdo/apps/StudioApp';
+import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 const Artist = require('@cdo/apps/turtle/artist');
 
 const SHORT_DIAGONAL = 50 * Math.sqrt(2);
@@ -258,6 +260,47 @@ describe('Artist', () => {
     });
   });
 
+  describe('autoArtist', () => {
+    const studioApp = studioAppSingleton();
+
+    it('executes upon reset', done => {
+      const artist = new Artist();
+      const execute = sinon.stub(artist, 'execute');
+      artist.injectStudioApp(studioApp);
+      artist.init({
+        skin: {},
+        level: {
+          autoRun: true,
+        },
+      }).then(done).catch(() => done());
+
+      artist.resetButtonClick();
+
+      expect(execute).to.have.been.called;
+      execute.restore();
+    });
+
+    it('executes upon code changes', done => {
+      const artist = new Artist();
+      const execute = sinon.stub(Artist.prototype, 'execute');
+      const container = document.createElement('div');
+      container.id = 'artistContainer';
+      document.body.appendChild(container);
+      artist.injectStudioApp(studioApp);
+      artist.init({
+        skin: {},
+        level: {
+          autoRun: true,
+        },
+        containerId: 'artistContainer',
+      }).then(done).catch(() => done());
+      studioApp.runChangeHandlers();
+
+      expect(execute).to.have.been.called;
+      execute.restore();
+    });
+  });
+
   describe('prepareForRemix', () => {
     let artist, newDom, oldXml;
 
@@ -357,5 +400,19 @@ describe('Artist', () => {
 
       expect(newDom.querySelector('block[type="when_run"]')).to.be.defined;
     });
+  });
+
+  it('Does not alert for infinite loops', () => {
+    const artist = new Artist();
+    const alertStub = sinon.stub(window, 'alert');
+
+    artist.evalCode('while(true) executionInfo.checkTimeout();', {
+      ...DEFAULT_EXECUTION_INFO,
+      ticks: 10, // Declare an infinite loop after 10 ticks
+    });
+
+    expect(alertStub).to.not.have.been.called;
+
+    alertStub.restore();
   });
 });

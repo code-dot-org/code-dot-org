@@ -8,6 +8,16 @@ const ATTRIBUTES_TO_CLEAN = [
 ];
 const DEFAULT_COLOR = [184, 1.00, 0.74];
 
+// Used for custom field type ClampedNumber(,)
+// Captures two optional arguments from the type string
+// Allows:
+//   ClampedNumber(x,y)
+//   ClampedNumber( x , y )
+//   ClampedNumber(,y)
+//   ClampedNumber(x,)
+//   ClampedNumber(,)
+const CLAMPED_NUMBER_REGEX = /^ClampedNumber\(\s*([\d.]*)\s*,\s*([\d.]*)\s*\)$/;
+
 /**
  * Create the xml for a level's toolbox
  * @param {string} blocks The xml of the blocks to go in the toolbox
@@ -390,14 +400,14 @@ exports.appendNewFunctions = function (blocksXml, functionsXml) {
   const functions = [...sharedFunctionsDom.ownerDocument.firstChild.childNodes];
   for (let func of functions) {
     const name = func.ownerDocument.evaluate(
-      'title[@name="NAME"]/text()', func, null, XPathResult.STRING_TYPE,
+      'title[@name="NAME"]/text()', func, null, XPathResult.STRING_TYPE, null
     ).stringValue;
     const type = func.ownerDocument.evaluate(
-      '@type', func, null, XPathResult.STRING_TYPE,
+      '@type', func, null, XPathResult.STRING_TYPE, null
     ).stringValue;
     const alreadyPresent = startBlocksDom.ownerDocument.evaluate(
       `//block[@type="${type}"]/title[@name="NAME"][text()="${name}"]`,
-      startBlocksDom, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
+      startBlocksDom, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null
     ).snapshotLength > 0;
     if (!alreadyPresent) {
       startBlocksDom.ownerDocument.firstChild.appendChild(func);
@@ -613,13 +623,19 @@ const STANDARD_INPUT_TYPES = {
           .appendTitle(dropdown, inputConfig.name);
     },
     generateCode(block, inputConfig) {
-      return block.getTitleValue(inputConfig.name);
+      let code = block.getTitleValue(inputConfig.name);
+      if (inputConfig.type === Blockly.BlockValueType.STRING && !code.startsWith('"') && !code.startsWith("'")) {
+        // Wraps the value in quotes, and escapes quotes/newlines
+        code = JSON.stringify(code);
+      }
+      return code;
     },
   },
   [FIELD_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
+      const fieldTextInput = new blockly.FieldTextInput('', getFieldInputChangeHandler(blockly, inputConfig.type));
       currentInputRow.appendTitle(inputConfig.label)
-          .appendTitle(new blockly.FieldTextInput(''), inputConfig.name);
+          .appendTitle(fieldTextInput, inputConfig.name);
     },
     generateCode(block, inputConfig) {
       let code = block.getTitleValue(inputConfig.name);
@@ -631,6 +647,27 @@ const STANDARD_INPUT_TYPES = {
     },
   },
 };
+
+
+/**
+ * Given a type string for a field input, returns an appropriate change handler function
+ * for that type, which customizes the input field and provides validation on blur.
+ * @param {Blockly} blockly
+ * @param {string} type
+ * @returns {?function}
+ */
+function getFieldInputChangeHandler(blockly, type) {
+  const clampedNumberMatch = type.match(CLAMPED_NUMBER_REGEX);
+  if (clampedNumberMatch) {
+    const min = parseFloat(clampedNumberMatch[1]);
+    const max = parseFloat(clampedNumberMatch[2]);
+    return Blockly.FieldTextInput.clampedNumberValidator(min, max);
+  } else if ('Number' === type) {
+    return blockly.FieldTextInput.numberValidator;
+  } else {
+    return undefined;
+  }
+}
 
 const groupInputsByRow = function (inputs, inputTypes=STANDARD_INPUT_TYPES) {
   const inputRows = [];
@@ -873,6 +910,9 @@ exports.createJsWrapperBlockCreator = function (
       let prefix = '';
       const values = args.map(arg => {
         const inputConfig = inputConfigs.find(input => input.name === arg.name);
+        if (!inputConfig) {
+          return;
+        }
         let inputCode = inputTypes[inputConfig.mode].generateCode(this, inputConfig);
         if (inputConfig.assignment) {
           prefix += `${inputCode} = `;

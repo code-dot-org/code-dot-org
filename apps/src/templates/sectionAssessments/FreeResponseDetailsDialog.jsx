@@ -5,9 +5,8 @@ import Button from '@cdo/apps/templates/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from "@cdo/locale";
 import DialogFooter from "@cdo/apps/templates/teacherDashboard/DialogFooter";
-import processMarkdown from 'marked';
-import renderer from "@cdo/apps/util/StylelessRenderer";
 import {getCurrentQuestion} from "./sectionAssessmentsRedux";
+import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 const styles = {
   dialog: {
@@ -29,7 +28,6 @@ class FreeResponseDetailsDialog extends Component {
 
   render() {
     // Questions are in markdown format and should not display as plain text in the dialog.
-    const renderedMarkdown = processMarkdown(this.props.questionAndAnswers.question, { renderer });
 
     return (
       <BaseDialog
@@ -41,8 +39,11 @@ class FreeResponseDetailsDialog extends Component {
         <h2>{i18n.questionText()}</h2>
         <div
           style={styles.instructions}
-          dangerouslySetInnerHTML={{ __html: renderedMarkdown }}
-        />
+        >
+          <UnsafeRenderedMarkdown
+            markdown={this.props.questionAndAnswers.question}
+          />
+        </div>
         <DialogFooter>
           <Button
             text={i18n.done()}

@@ -1,0 +1,17 @@
+hidden false
+has_lesson_plan true
+
+stage 'Dance Party'
+level 'Dance_Party_01'
+level 'Dance_Party_02'
+level 'Dance_Party_03'
+level 'Dance_Party_04'
+level 'Dance_Party_05'
+level 'Dance_Party_06'
+level 'Dance_Party_08'
+level 'Dance_Party_09'
+level 'Dance_Party_10'
+level 'Dance_Party_11'
+level 'Dance_Party_11b'
+level 'Dance_Party_11_5'
+level 'Dance_Party_12'

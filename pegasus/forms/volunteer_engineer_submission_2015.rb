@@ -143,11 +143,18 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     rows = params['num_volunteers'] || DEFAULT_NUM_VOLUNTEERS
 
     unless params['location_flexibility_ss'].nil_or_empty?
-      params['location_flexibility_ss'].each do |location|
-        query = query.where(
-          Forms.json('data.location_flexibility_ss') => location
+      location_choices = params['location_flexibility_ss'].map do |location|
+        "\"#{location}\""
+      end.join(',')
+
+      location_choices = "[#{location_choices}]"
+
+      query = query.where(
+        Sequel.function(:json_contains,
+          Forms.json('data.location_flexibility_ss'),
+          location_choices
         )
-      end
+      )
     end
 
     unless params['experience_s'].nil_or_empty?

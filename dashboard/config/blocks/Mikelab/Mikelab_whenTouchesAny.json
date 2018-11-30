@@ -1,0 +1,20 @@
+{
+  "category": "Events",
+  "config": {
+    "color": [
+      140,
+      1,
+      0.74
+    ],
+    "func": "whenTouchesAny",
+    "blockText": "when{SPRITE} touches any sprite",
+    "args": [
+      {
+        "name": "SPRITE",
+        "assignment": true,
+        "customInput": "spritePicker"
+      }
+    ],
+    "eventBlock": true
+  }
+}

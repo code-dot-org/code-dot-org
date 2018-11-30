@@ -122,6 +122,8 @@ class VirtualizedDetailView extends Component {
       return this.studentCellRenderer(studentStartIndex, stageIdIndex, key, cellStyle);
     }
 
+    const stageData = columnIndex > 0 && scriptData.stages[columnIndex - 1];
+
     // Header rows
     return (
       <div className={progressStyles.Cell} key={key} style={cellStyle}>
@@ -140,7 +142,7 @@ class VirtualizedDetailView extends Component {
               data-tip
               data-for={tooltipIdForLessonNumber(columnIndex)}
             >
-              {columnIndex}
+              {stageData.lockable ? <FontAwesome icon="lock"/> : stageData.relative_position}
             </div>
             {(columnWidths[columnIndex] > MAX_COLUMN_WITHOUT_ARROW) &&
               <div style={{...styles.lessonLine, width: columnWidths[columnIndex] - ARROW_PADDING}}>

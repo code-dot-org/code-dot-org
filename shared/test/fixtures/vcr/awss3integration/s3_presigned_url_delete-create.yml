@@ -1,0 +1,34 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://cdo-temp.s3.amazonaws.com/test-delete-key
+    body:
+      encoding: US-ASCII
+      string: '0.5488135039273248'
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - rb4T8eBVr3lPeXpaEE+IyA==
+      Content-Length:
+      - '18'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 29 Sep 2018 00:35:21 GMT
+      Etag:
+      - '"adbe13f1e055af794f797a5a104f88c8"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sat, 29 Sep 2018 00:35:20 GMT
+recorded_with: VCR 3.0.3

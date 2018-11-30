@@ -30,7 +30,7 @@ const styles = {
     margin: '20px 20px 20px auto'
   },
   select: {
-    width: '200px'
+    width: 250
   }
 };
 
@@ -69,7 +69,7 @@ export class QuickView extends React.Component {
 
   componentWillMount() {
     const statusList = ApplicationStatuses[this.props.route.viewType];
-    this.statuses = statusList.map(v => ({value: v.toLowerCase(), label: v}));
+    this.statuses = Object.keys(statusList).map(v => ({value: v, label: statusList[v]}));
     this.statuses.unshift({value: '', label: "All statuses"});
 
     this.load(this.props.regionalPartnerFilter.value);
@@ -195,7 +195,7 @@ export class QuickView extends React.Component {
     return (
       <QuickViewTable
         path={this.props.route.path}
-        data={this.state.applications}
+        applications={this.state.applications}
         statusFilter={this.state.filter}
         regionalPartnerName={this.props.regionalPartnerFilter.label}
         viewType={this.props.route.viewType}

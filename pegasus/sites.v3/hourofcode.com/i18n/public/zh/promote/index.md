@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to_promote) %>
+title: <%= hoc_s(:title_how_to_promote).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -10,15 +10,7 @@ nav: promote_nav
 
     twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
-%> "#HourOfCode"%
-
-# 發動你的社區來參與編程一小時活動
-
-## 1.廣為宣傳
-
-告訴你的朋友 ** #HourOfCode **!
-
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+%>
 
 ## 2. 請你的學校提供全校性的一小時玩程式活動
 

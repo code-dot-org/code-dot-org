@@ -17,16 +17,20 @@
             "\"none\""
           ],
           [
-            "Disco",
-            "\"disco\""
+            "Rain",
+            "\"rain\""
           ],
           [
-            "Rainbow",
-            "\"rainbow\""
+            "Tacos",
+            "\"raining_tacos\""
           ],
           [
-            "Diamonds",
-            "\"diamonds\""
+            "Spotlight",
+            "\"spotlight\""
+          ],
+          [
+            "(Random)",
+            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]"
           ]
         ]
       }

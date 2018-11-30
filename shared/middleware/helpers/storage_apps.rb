@@ -14,7 +14,7 @@ class StorageApps
     @table = PEGASUS_DB[:storage_apps]
   end
 
-  def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil)
+  def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true)
     timestamp = DateTime.now
     row = {
       storage_id: @storage_id,
@@ -27,6 +27,7 @@ class StorageApps
       published_at: published_at,
       remix_parent_id: remix_parent_id,
       skip_content_moderation: false,
+      standalone: standalone,
     }
     row[:id] = @table.insert(row)
 
@@ -55,9 +56,9 @@ class StorageApps
     anonymous_age_restricted_apps = ['applab', 'gamelab', 'weblab']
     if owner != @storage_id && !user_id_for_storage_id(owner)
       begin
-        # row[:projectType] isn't set for channels associated with levels (vs. standalone
+        # row[:project_type] isn't always set for channels associated with levels (vs. standalone
         # projects), so we crack open the JSON blob instead
-        project_type = JSON.parse(row[:value])['projectType']
+        project_type = row[:project_type] || JSON.parse(row[:value])['projectType']
       rescue JSON::ParserError
         nil
       end
@@ -67,7 +68,7 @@ class StorageApps
     StorageApps.merged_row_value(row, channel_id: channel_id, is_owner: owner == @storage_id)
   end
 
-  def update(channel_id, value, ip_address)
+  def update(channel_id, value, ip_address, project_type: nil)
     owner, id = storage_decrypt_channel_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
 
@@ -76,6 +77,7 @@ class StorageApps
       updated_at: DateTime.now,
       updated_ip: ip_address,
     }
+    row[:project_type] = project_type if project_type
     update_count = @table.where(id: id).exclude(state: 'deleted').update(row)
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 

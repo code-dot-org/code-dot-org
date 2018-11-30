@@ -10,6 +10,7 @@ class AdminUsersController < ApplicationController
   RESTRICTED_USER_ATTRIBUTES_FOR_VIEW = %w(
     users.id
     email
+    primary_contact_info_id
     name
     user_type
     current_sign_in_at

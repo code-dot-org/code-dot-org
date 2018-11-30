@@ -2,6 +2,8 @@ import React, {PropTypes} from 'react';
 import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import AssetThumbnail from './AssetThumbnail';
 import i18n from '@cdo/locale';
+import firehoseClient from "@cdo/apps/lib/util/firehose";
+import experiments from "@cdo/apps/util/experiments";
 
 /**
  * A single row in the AssetManager, describing one asset.
@@ -15,7 +17,10 @@ export default class AssetRow extends React.Component {
     useFilesApi: PropTypes.bool.isRequired,
     onChoose: PropTypes.func,
     onDelete: PropTypes.func.isRequired,
-    soundPlayer: PropTypes.object
+    soundPlayer: PropTypes.object,
+
+    //temporary prop to differentiate choosing images and sounds
+    imagePicker: PropTypes.bool
   };
 
   state = {
@@ -51,11 +56,26 @@ export default class AssetRow extends React.Component {
     });
   };
 
+  chooseAsset = () => {
+    if (!this.props.imagePicker) {
+      firehoseClient.putRecord(
+        {
+          study: 'sound-dialog-1',
+          study_group: experiments.isEnabled(experiments.AUDIO_LIBRARY_DEFAULT) ? 'library-tab' : 'files-tab',
+          event: 'choose-uploaded-sound',
+          data_json: this.props.name
+        },
+        {includeUserId: true}
+      );
+    }
+    this.props.onChoose();
+  };
+
   render() {
     let actions, flex;
     // `flex` is the "Choose" button in file-choose mode, or the filesize.
     if (this.props.onChoose) {
-      flex = <button onClick={this.props.onChoose}>{i18n.choose()}</button>;
+      flex = <button onClick={this.chooseAsset}>{i18n.choose()}</button>;
     } else {
       const size = (this.props.size / 1000).toFixed(2);
       flex = size + ' kb';

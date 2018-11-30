@@ -151,11 +151,21 @@ class UsersHelperTest < ActionView::TestCase
       summarize_user_progress(script, user)[:levels], 'level shows as locked again'
     )
 
-    # now lock it by submitting it (even though we don't have a level source attached)
+    # now submit it (the student ui will display this as locked)
     user_level.delete
     user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, unlocked_at: nil, readonly_answers: false, submitted: true
     assert_equal(
-      {level.id => {status: LEVEL_STATUS.locked}},
+      {
+        level.id => {
+          status: "submitted",
+          result: 100,
+          submitted: true,
+          locked: true,
+          pages_completed: [nil, nil]
+        },
+        "#{level.id}_0" => {submitted: true},
+        "#{level.id}_1" => {submitted: true}
+      },
       summarize_user_progress(script, user)[:levels],
       'level shows as locked again'
     )
@@ -174,7 +184,7 @@ class UsersHelperTest < ActionView::TestCase
       'level still shows as locked'
     )
 
-    # now unlock it with a submission
+    # now unlock it
     user_level.delete
     user_level = create :user_level, user: user, best_result: ActivityConstants::UNSUBMITTED_RESULT, level: level, script: script, unlocked_at: nil, readonly_answers: false, submitted: false
     assert_equal(
@@ -187,13 +197,24 @@ class UsersHelperTest < ActionView::TestCase
       'level shows attempted now'
     )
 
-    # auto-locked while viewing answers
+    # appears submitted while viewing answers (appears in student ui as locked)
     user_level.delete
     create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, unlocked_at: 2.days.ago, readonly_answers: true, submitted: true
     assert_equal(
-      {level.id => {status: LEVEL_STATUS.locked}},
+      {
+        level.id => {
+          status: "submitted",
+          result: 100,
+          submitted: true,
+          readonly_answers: true,
+          locked: true,
+          pages_completed: [nil, nil]
+        },
+        "#{level.id}_0" => {submitted: true, readonly_answers: true},
+        "#{level.id}_1" => {submitted: true, readonly_answers: true}
+      },
       summarize_user_progress(script, user)[:levels],
-      'level shows as locked'
+      'level shows as submitted'
     )
   end
 

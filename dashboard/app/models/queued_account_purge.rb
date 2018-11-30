@@ -34,7 +34,7 @@ class QueuedAccountPurge < ApplicationRecord
   # Used by developers to resolve an account purge queued for manual review,
   # after they've investigated the account and decided it's ready to purge.
   def resolve!
-    AccountPurger.new(bypass_safety_constraints: true).purge_data_for_account user
+    AccountPurger.new(bypass_safety_constraints: true).purge_data_for_account User.with_deleted.find(user_id)
     destroy!
   end
 end

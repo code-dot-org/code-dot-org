@@ -45,7 +45,7 @@ export default class ScriptSelector extends Component {
     return (
       <div>
         <select
-          value={scriptId}
+          value={scriptId || undefined}
           onChange={event => onChange(parseInt(event.target.value))}
           style={dropdownStyles.dropdown}
           id="uitest-course-dropdown"

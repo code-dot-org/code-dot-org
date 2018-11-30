@@ -1506,6 +1506,34 @@ bs-BA:
   header_help_support: 'Pomoć i podrška '
   header_documentation: Dokumentacija
   user_header_label: Zdravo, %{username}
+  user_header_team: Tim
   user_header_settings: Moj račun
   user_header_logout: Odjava
   user_header_signin: Prijava
+  user_header_playlab: Play Lab
+  user_header_flappy: Flappy
+  applab_tile_start_tutorial: Počni
+  hoc_overview_start_tutorial: Počni
+  hoc2018_creativity_create: Kreiraj
+  hoc2018_mc_adventurer_description: Upotrijebi kod da odvedeš Alex ili Steve u avanturu.
+  hoc2018_mc_start: Počni
+  hoc2018_mc_no_internet: Nemaš Internet?
+  hoc2018_mc_download_adventurer: Preuzmi offline verziju Minecraft Pustolov.
+  hoc2018_mc_watch_videos: Prije nego počneš, pogledaj ove inspirativne isječke
+  hoc2018_mc_video_1min: 1 min
+  hoc2018_mc_video_2min: 2 min
+  hoc2018_mc_video_5min: 5 min
+  hoc2018_mc_video_title_sports: Daj sve od sebe. Svako može naučiti.
+  hoc2018_mc_video_title_inspire_girl: Inspiriši djevojčicu
+  hoc2018_mc_video_title_cs_intro: Uvod u Računarstvo
+  hoc2018_mc_video_title_schools_dont_teach: Ono što većina škola ne podučava
+  hoc2018_mc_video_title_obama: Predsjednik Obama o računarstvu
+  hoc2018_mc_video_title_hoc_is_here: Sat Kodiranja je ovdje - Svako može naučiti
+  hoc2018_mc_video_title_anybody_can_learn: Svako može naučiti
+  hoc2018_mc_homepage_join_us: Pridruži nam se
+  hoc2018_mc_homepage_try_it: Isprobaj
+  hoc2018_mc_continue_learning: Nastavite učiti sa Minecraft-om.
+  hoc2018_dance_party_button: Počni
+  hoc2018_dance_teacher_resources_tile1_button: Nastavni Plan
+  hoc2018_dance_teacher_resources_tile2_button: Izvanmrežna aktivnost
+  hoc2018_dance_amazon_about_future_engineer_button: Nauči više

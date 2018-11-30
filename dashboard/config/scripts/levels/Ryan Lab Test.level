@@ -1,0 +1,52 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2018-09-28T22:25:50.000Z",
+  "level_num": "custom",
+  "user_id": 182,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "helper_libraries": [
+      "RyanLab"
+    ],
+    "use_default_sprites": "true",
+    "hide_animation_mode": "true",
+    "show_type_hints": "true",
+    "include_shared_functions": "false",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "hide_custom_blocks": "false",
+    "contained_level_names": null,
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "block_pools": [
+      "RyanLab"
+    ]
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-09-28 22:26:05 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"helper_libraries\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-09-28 22:26:32 +0000\",\"changed\":[\"block_pools\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-09-28 22:50:24 +0000\",\"changed\":[\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-09-28 22:54:48 +0000\",\"changed\":[\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</GamelabJr>

@@ -3,6 +3,7 @@ require 'active_support/cache'
 require 'active_job'
 require_relative '../router'
 require 'dynamic_config/gatekeeper'
+require 'rmagick'
 
 class OptimizeTest < Minitest::Test
   include Rack::Test::Methods
@@ -41,6 +42,26 @@ class OptimizeTest < Minitest::Test
     get('/images/logo.png')
     assert_equal 850, last_response.content_length
     refute_equal 10, Rack::Cache::Response.new(*last_response.to_a).max_age
+  end
+
+  def test_optimize_anigif
+    gif = '/images/animated-examples/flappy-game-space.gif'
+    unoptimized_size = 1_712_373
+    optimized_size = 1_197_026
+
+    Timeout.timeout(10) do
+      get gif
+      if Rack::Cache::Response.new(*last_response.to_a).max_age == 10
+        assert_equal unoptimized_size, last_response.content_length
+        raise 'not yet'
+      end
+    rescue RuntimeError
+      sleep(0.1)
+      retry
+    end
+
+    assert_equal optimized_size, last_response.content_length
+    assert_equal 61, Magick::ImageList.new.from_blob(last_response.body).length
   end
 
   def test_skip_large_image

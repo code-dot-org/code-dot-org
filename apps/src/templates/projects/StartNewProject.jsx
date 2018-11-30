@@ -46,12 +46,40 @@ export default class StartNewProject extends React.Component {
   render() {
     const { canViewAdvancedTools, canViewFullList } = this.props;
     const { showFullList } = this.state;
+
+    const GAMES_AND_EVENTS = [
+      'spritelab',
+      'dance',
+      'flappy',
+      'starwarsblocks',
+      'starwars',
+      'bounce',
+      'sports',
+      'basketball'
+    ];
+
+    const DEFAULT_PROJECT_TYPES_ADVANCED = [
+      'spritelab',
+      'artist',
+      'applab',
+      'gamelab'
+    ];
+
+    const DEFAULT_PROJECT_TYPES_BASIC = [
+      'spritelab',
+      'artist',
+      'minecraft_designer',
+      'dance'
+    ];
+
+    const defaultProjectTypes = canViewAdvancedTools ?
+      DEFAULT_PROJECT_TYPES_ADVANCED : DEFAULT_PROJECT_TYPES_BASIC;
+
     return (
       <div>
         <div style={styles.headingStartNew}>{i18n.projectStartNew()}</div>
         <NewProjectButtons
-          projectTypes={this.props.projectTypes}
-          canViewAdvancedTools={canViewAdvancedTools}
+          projectTypes={defaultProjectTypes}
         />
 
         {canViewFullList &&
@@ -75,7 +103,7 @@ export default class StartNewProject extends React.Component {
             />
             <NewProjectButtons
               description={i18n.projectGroupEvents()}
-              projectTypes={['flappy', 'starwarsblocks', 'starwars', 'bounce', 'sports', 'basketball']}
+              projectTypes={GAMES_AND_EVENTS}
             />
             <NewProjectButtons
               description={i18n.projectGroupArtist()}
@@ -83,7 +111,7 @@ export default class StartNewProject extends React.Component {
             />
             <NewProjectButtons
               description={i18n.projectGroupMinecraft()}
-              projectTypes={['minecraft_hero', 'minecraft_designer', 'minecraft_adventurer']}
+              projectTypes={['minecraft_aquatic', 'minecraft_hero', 'minecraft_designer', 'minecraft_adventurer']}
             />
             {canViewAdvancedTools &&
               <NewProjectButtons

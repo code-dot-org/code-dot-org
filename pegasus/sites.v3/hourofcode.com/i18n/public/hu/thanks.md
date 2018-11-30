@@ -27,20 +27,15 @@ social:
 
 # Köszönjük hogy jelentkeztél a Kódolás Órájának megtartására!
 
-As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
-<br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
-
-<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
-
 <br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
 ## 1. Spread the word in your school and community
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Csatlakoztál az "Hour of Code" mozgalomhoz. Meséld el a barátaidnak a **#HourOfCode** hashtaget használva!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Invite a local politician or policy maker to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Nem kell az iskolába járnod ahhoz, hogy új készségeket sajátíts el. Invite a local politician or policy maker to visit your school for the Hour of Code. Ez az egy óra képes növelni a számítástechnika oktatás támogatását a saját térségedben.
 
-Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
+Használd ezeket a [posztereket, hírdetéssket, matricákat, videókat stb.](<%= resolve_url('/promote/resources') %>) a saját rendezvényeden.
 
 ## 2. Keress egy helyi önkéntest, hogy segítsen az esemény során.
 

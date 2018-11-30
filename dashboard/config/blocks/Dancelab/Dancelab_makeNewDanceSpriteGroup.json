@@ -1,0 +1,168 @@
+{
+  "category": "Groups",
+  "config": {
+    "func": "makeNewDanceSpriteGroup",
+    "inline": false,
+    "blockText": "make {N} new {COSTUME}\n in a {LAYOUT}",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "N",
+        "type": "Number",
+        "options": [
+          [
+            "2"
+          ],
+          [
+            "3"
+          ],
+          [
+            "4"
+          ],
+          [
+            "5"
+          ],
+          [
+            "6"
+          ],
+          [
+            "7"
+          ],
+          [
+            "8"
+          ],
+          [
+            "9"
+          ],
+          [
+            "10"
+          ],
+          [
+            "11"
+          ],
+          [
+            "12"
+          ],
+          [
+            "13"
+          ],
+          [
+            "14"
+          ],
+          [
+            "15"
+          ],
+          [
+            "16"
+          ],
+          [
+            "17"
+          ],
+          [
+            "18"
+          ],
+          [
+            "19"
+          ],
+          [
+            "20"
+          ]
+        ]
+      },
+      {
+        "name": "COSTUME",
+        "options": [
+          [
+            "Aliens",
+            "\"ALIEN\""
+          ],
+          [
+            "Bears",
+            "\"BEAR\""
+          ],
+          [
+            "Cats",
+            "\"CAT\""
+          ],
+          [
+            "Dogs",
+            "\"DOG\""
+          ],
+          [
+            "Ducks",
+            "\"DUCK\""
+          ],
+          [
+            "Frogs",
+            "\"FROG\""
+          ],
+          [
+            "Moose",
+            "\"MOOSE\""
+          ],
+          [
+            "Pineapples",
+            "\"PINEAPPLE\""
+          ],
+          [
+            "Robots",
+            "\"ROBOT\""
+          ],
+          [
+            "Sharks",
+            "\"SHARK\""
+          ],
+          [
+            "Unicorns",
+            "\"UNICORN\""
+          ]
+        ]
+      },
+      {
+        "name": "LAYOUT",
+        "options": [
+          [
+            "border",
+            "\"border\""
+          ],
+          [
+            "inside square",
+            "\"inner\""
+          ],
+          [
+            "circle",
+            "\"circle\""
+          ],
+          [
+            "grid",
+            "\"grid\""
+          ],
+          [
+            "row",
+            "\"row\""
+          ],
+          [
+            "column",
+            "\"column\""
+          ],
+          [
+            "criss-cross",
+            "\"x\""
+          ],
+          [
+            "plus",
+            "\"plus\""
+          ],
+          [
+            "random",
+            "\"random\""
+          ]
+        ]
+      }
+    ]
+  }
+}

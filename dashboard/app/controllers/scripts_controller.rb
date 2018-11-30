@@ -21,6 +21,11 @@ class ScriptsController < ApplicationController
       redirect_to canonical_path
       return
     end
+
+    if !params[:section_id] && current_user&.last_section_id
+      redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
+      return
+    end
   end
 
   def index

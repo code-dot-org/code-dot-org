@@ -3,6 +3,7 @@ require_relative 'files_api_test_helper'
 
 class AnimationsTest < FilesApiTestBase
   def setup
+    NewRelic::Agent.reset_stub
     @channel_id = create_channel
     @api = FilesApiTestHelper.new(current_session, 'animations', @channel_id)
     @api.ensure_aws_credentials
@@ -53,6 +54,13 @@ class AnimationsTest < FilesApiTestBase
     @api.get_object(dog_image_filename)
     assert_match 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+    )
+
     soft_delete(dog_image_filename)
     soft_delete(cat_image_filename)
   end
@@ -60,6 +68,9 @@ class AnimationsTest < FilesApiTestBase
   def test_unsupported_media_type
     @api.post_file('executable.exe', 'stub-contents', 'application/x-msdownload')
     assert unsupported_media_type?
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+    )
   end
 
   def test_allow_mismatched_mime_type
@@ -68,6 +79,11 @@ class AnimationsTest < FilesApiTestBase
 
     @api.post_file(mismatched_filename, 'stub-contents', 'application/gif')
     assert successful?
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+    )
 
     soft_delete(mismatched_filename)
   end
@@ -87,6 +103,11 @@ class AnimationsTest < FilesApiTestBase
     @api.get_object(different_case_filename)
     assert not_found?
 
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+    )
+
     soft_delete(filename)
   end
 
@@ -97,8 +118,13 @@ class AnimationsTest < FilesApiTestBase
     soft_delete(filename) # Not a no-op - creates a delete marker
 
     Honeybadger.expects(:notify).never
+    FirehoseClient.any_instance.expects(:put_record).never
     @api.get_object(filename)
     assert not_found?
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+    )
   end
 
   def test_get_bad_version_returns_latest_version
@@ -119,12 +145,21 @@ class AnimationsTest < FilesApiTestBase
     upload(filename, v2_file_data)
 
     # Ask for the missing version
-    Honeybadger.expects(:notify).once
+    Honeybadger.expects(:notify).never
+    FirehoseClient.any_instance.expects(:put_record).once
     @api.get_object_version(filename, v1_version_id)
     assert successful?
 
     # Check that we got the latest version
     assert_equal v2_file_data, last_response.body
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/AnimationBucket.s3_get_object(B)
+    )
 
     delete_all_animation_versions(filename)
   end
@@ -149,12 +184,21 @@ class AnimationsTest < FilesApiTestBase
     soft_delete(filename)
 
     # Ask for the missing version
-    Honeybadger.expects(:notify).once
+    Honeybadger.expects(:notify).never
+    FirehoseClient.any_instance.expects(:put_record).once
     @api.get_object_version(filename, v1_version_id)
     assert successful?
 
     # Check that we got the last version before the delete
     assert_equal v2_file_data, last_response.body
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/AnimationBucket.s3_get_object(B)
+    )
 
     delete_all_animation_versions(filename)
   end
@@ -170,10 +214,17 @@ class AnimationsTest < FilesApiTestBase
     delete_all_animation_versions(filename)
 
     # Ask for an invalid version
-    # No Honeybadger notification on this case - it's an expected 404.
     Honeybadger.expects(:notify).never
+    # No Firehose notification on this case - it's an expected 404.
+    FirehoseClient.any_instance.expects(:put_record).never
     @api.get_object_version(filename, v1_version_id)
     assert not_found?
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/AnimationBucket.s3_get_object(B)
+    )
   end
 
   def test_copy_animation
@@ -197,6 +248,12 @@ class AnimationsTest < FilesApiTestBase
     assert_equal source_image_body, @api.get_object(dest_image_filename)
     assert_match 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/BucketHelper.object_and_app_size
+    )
+
     soft_delete(source_image_filename)
     soft_delete(dest_image_filename)
   end
@@ -212,6 +269,11 @@ class AnimationsTest < FilesApiTestBase
     # Try to copy nonexistent source to destination
     @api.copy_object(source_image_filename, dest_image_filename)
     assert not_found?
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+      Custom/ListRequests/AnimationBucket/BucketHelper.object_and_app_size
+    )
   end
 
   def test_animation_versions
@@ -240,6 +302,13 @@ class AnimationsTest < FilesApiTestBase
 
     # Check cache headers
     assert_match 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/BucketHelper.list_versions
+    )
   end
 
   def test_replace_animation_version
@@ -264,6 +333,13 @@ class AnimationsTest < FilesApiTestBase
 
     # Make sure that one version has the newest content
     assert_equal v2_file_data, @api.get_object_version(filename, new_version_id)
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/BucketHelper.list_versions
+    )
 
     soft_delete(filename)
   end
@@ -291,6 +367,12 @@ class AnimationsTest < FilesApiTestBase
 
     #Check that the restored body is the same as the one to which it was restored
     assert_equal v1_file_data, restored_file_data
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+    )
 
     soft_delete(filename)
   end
@@ -329,6 +411,12 @@ class AnimationsTest < FilesApiTestBase
     refute_nil restored_metadata['failed-restore-at'] ? restored_metadata['failed-restore-at'] : restored_metadata['failed_restore_at']
     assert_equal 'bad_version_id', restored_metadata['failed-restore-from-version'] ? restored_metadata['failed-restore-from-version'] : restored_metadata['failed_restore_from_version']
 
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+    )
+
     soft_delete(filename)
   end
 
@@ -356,6 +444,13 @@ class AnimationsTest < FilesApiTestBase
     versions_new = @api.list_object_versions(filename)
     assert_equal versions_old, versions_new
 
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/BucketHelper.list_versions
+      Custom/ListRequests/AnimationBucket/BucketHelper.list_versions
+    )
+
     soft_delete(filename)
   end
 
@@ -374,6 +469,11 @@ class AnimationsTest < FilesApiTestBase
       restore_version(filename, original_version_id)
     end
 
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+    )
+
     soft_delete(filename)
   end
 
@@ -391,6 +491,13 @@ class AnimationsTest < FilesApiTestBase
     # Attempt to get object with special key to get latestVersion
     response = AnimationBucket.new.get(@channel_id, filename, nil, 'latestVersion')
     assert_equal response[:version_id], latest_version_id
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/AnimationBucket.s3_get_object(A)
+    )
   end
 
   def test_get_object_with_latest_version_of_non_deleted
@@ -405,6 +512,13 @@ class AnimationsTest < FilesApiTestBase
     response = AnimationBucket.new.get(@channel_id, filename, nil, 'latestVersion')
     assert_equal response[:version_id], latest_version_id
 
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/BucketHelper.app_size
+      Custom/ListRequests/AnimationBucket/AnimationBucket.s3_get_object(A)
+    )
+
     soft_delete(filename)
   end
 
@@ -415,6 +529,11 @@ class AnimationsTest < FilesApiTestBase
     # Attempt to get object with special key to get latestVersion
     response = AnimationBucket.new.get(@channel_id, filename, nil, 'latestVersion')
     assert_equal response[:status], 'NOT_FOUND'
+
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/AnimationBucket/BucketHelper.list
+      Custom/ListRequests/AnimationBucket/AnimationBucket.s3_get_object(A)
+    )
   end
 
   private

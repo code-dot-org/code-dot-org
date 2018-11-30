@@ -1,8 +1,11 @@
 /* global Maplace */
+/* exported sendEmail */
 
 var gmap;
 var gmap_loc;
 var selectize;
+
+var firstRetrievalDone = false;
 
 $(document).ready(function () {
   initializeMap();
@@ -10,7 +13,7 @@ $(document).ready(function () {
 });
 
 $(function () {
-  selectize = $('#volunteer-search-facets select').selectize();
+  selectize = $('#volunteer-search-facets select').selectize({plugins: ["remove_button"]});
 
   $("#location").geocomplete()
     .bind("geocode:result", function (event, result) {
@@ -99,6 +102,16 @@ function updateResults(locations) {
     $('#controls').html('');
   } else {
     displayNoResults();
+  }
+
+  // First retrieval shows pins across the entire US.  Subsequent retrievals
+  // show pins much closer to a specified location.  For this reason, we don't
+  // want to show the filter options at first, but only after a location has
+  // been specified by the user.
+  if (firstRetrievalDone) {
+    $('.filter-options').fadeIn();
+  } else {
+    firstRetrievalDone = true;
   }
 
   loadMap(locations);
@@ -196,7 +209,7 @@ function compileHTML(index, location) {
   var line;
 
   // Compile HTML.
-  var html = '<h3>' + location.name_s + '</h3>';
+  var html = '<h3 class="entry-detail">' + location.name_s + '</h3>';
 
   if (location.company_s) {
     line = location.company_s;
@@ -241,7 +254,7 @@ function compileHTML(index, location) {
   }
 
   $.each(lines, function (key, field) {
-    html += '<div class="profile-detail">' + field + '</div>';
+    html += '<div class="profile-detail entry-detail">' + field + '</div>';
   });
 
   return html;
@@ -270,6 +283,45 @@ function contactVolunteer() {
   $('#success-message').hide();
   $('#error-message').hide();
   adjustScroll('volunteer-contact');
+
+  return false;
+}
+
+function processResponse(data) {
+  $('#error-message').hide();
+  $('#success-message').show();
+}
+
+function processError(data) {
+  $('.has-error').removeClass('has-error');
+
+  var errors = Object.keys(data.responseJSON);
+  var errors_count = errors.length;
+
+  for (var i = 0; i < errors_count; ++i) {
+    var error_id = '#volunteer-contact-' + errors[i].replace(/_/g, '-');
+    error_id = error_id.replace(/-[sb]s?$/, '');
+    $(error_id).parents('.form-group').addClass('has-error');
+  }
+
+  var error = '<font color="#a94442">An error occurred. All fields are required. Please check that all fields have been filled out properly.</font>';
+  $('#error-message').html(error).hide().fadeTo("normal", 1);
+  $('#success-message').hide();
+}
+
+function sendEmail(data) {
+  var typeTaskSelected = $('#volunteer-type-task input:checked').length > 0;
+  if (typeTaskSelected) {
+    $.ajax({
+      url: "/forms/VolunteerContact2015",
+      type: "post",
+      dataType: "json",
+      data: $('#contact-volunteer-form').serialize()
+    }).done(processResponse).fail(processError);
+  } else {
+    var error = '<font color="#a94442">Please select at least one way for the volunteer to help.</font>';
+    $('#error-message').html(error).show();
+  }
 
   return false;
 }

@@ -328,6 +328,11 @@ function shouldUpdate() {
   return World.frameCount > 1;
 }
 
+function unitVectorTowards(from, to) {
+  var angle = Math.atan2(to.y - from.y, to.x - from.x);
+  return p5.Vector.fromAngle(angle);
+}
+
 function draw() {
   background(World.background_color || "white");
 

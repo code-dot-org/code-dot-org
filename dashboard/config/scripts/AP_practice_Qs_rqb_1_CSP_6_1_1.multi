@@ -1,0 +1,23 @@
+name 'AP_practice_Qs_rqb_1_CSP_6_1_1'
+wrong 'bandwidth'
+wrong 'hierarchy'
+wrong 'latency'
+right 'redundancy'
+markdown <<MARKDOWN
+In the process of digging, a landscaping company cuts a fiber line. Transmission of Internet traffic is still possible through additional pathways that provide alternate routes between the source and destination. The additional pathways describe a concept known as:
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **6.1.1** and Essential Knowledge statements: **6.1.1B**
+<hr>
+ (A) This option is incorrect. Bandwidth is the data throughput of a network. If a connection is broken, there will be no throughput.
+
+<hr>
+ (B) This option is incorrect. Designing networks in a hierarchal manner allows a complex problem to be broken into smaller manageable parts.
+
+<hr>
+ (C) This option is incorrect. Network latency is an expression of how much time it takes for a packet of data to get from one point to another.
+
+<hr>
+ (D) This option is correct. Network redundancy is a process through which additional or alternate instances of network devices, equipment and communication mediums are installed within network infrastructure. It is a method for ensuring network availability in case of a network device or path failure and unavailability.
+
+MARKDOWN

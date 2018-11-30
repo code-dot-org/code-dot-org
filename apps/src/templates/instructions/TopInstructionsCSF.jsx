@@ -1,12 +1,8 @@
-/* eslint-disable react/no-danger */
-
 import $ from 'jquery';
 import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
-import processMarkdown from 'marked';
 import classNames from 'classnames';
-import renderer from "../../util/StylelessRenderer";
 import { connect } from 'react-redux';
 var instructions = require('../../redux/instructions');
 import { openDialog } from '../../redux/instructionsDialog';
@@ -30,6 +26,8 @@ import ChatBubble from './ChatBubble';
 import LegacyButton from '../LegacyButton';
 import { Z_INDEX as OVERLAY_Z_INDEX } from '../Overlay';
 import msg from '@cdo/locale';
+
+import UnsafeRenderedMarkdown from '../UnsafeRenderedMarkdown';
 
 import {
   getOuterHeight,
@@ -203,8 +201,8 @@ class TopInstructions extends React.Component {
     ),
     noVisualization: PropTypes.bool,
 
-    ttsInstructionsUrl: PropTypes.string,
-    ttsMarkdownInstructionsUrl:  PropTypes.string,
+    ttsShortInstructionsUrl: PropTypes.string,
+    ttsLongInstructionsUrl:  PropTypes.string,
 
     hideOverlay: PropTypes.func.isRequired,
     toggleInstructionsCollapsed: PropTypes.func.isRequired,
@@ -606,14 +604,9 @@ class TopInstructions extends React.Component {
 
     const markdown = this.shouldDisplayShortInstructions() ?
       this.props.shortInstructions : this.props.longInstructions;
-    const renderedMarkdown = processMarkdown(markdown, { renderer });
 
     const ttsUrl = this.shouldDisplayShortInstructions() ?
-      this.props.ttsInstructionsUrl : this.props.ttsMarkdownInstructionsUrl;
-
-    // Only used by star wars levels
-    const instructions2 = this.props.shortInstructions2 ?
-      processMarkdown(this.props.shortInstructions2, { renderer }) : undefined;
+      this.props.ttsShortInstructionsUrl : this.props.ttsLongInstructionsUrl;
 
     const leftColWidth = (this.getAvatar() ? PROMPT_ICON_WIDTH : 10) +
       (this.props.hasAuthoredHints ? AUTHORED_HINTS_EXTRA_WIDTH : 0);
@@ -660,17 +653,16 @@ class TopInstructions extends React.Component {
             <ChatBubble ttsUrl={ttsUrl}>
               <Instructions
                 ref={(c) => { this.instructions = c; }}
-                renderedMarkdown={renderedMarkdown}
+                longInstructions={markdown}
                 onResize={this.adjustMaxNeededHeight}
                 inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
                 imgURL={this.props.aniGifURL}
                 inTopPane
               />
-              {instructions2 &&
-                <div
-                  className="secondary-instructions"
-                  dangerouslySetInnerHTML={{ __html: instructions2 }}
-                />
+              {this.props.shortInstructions2 &&
+                <div className="secondary-instructions">
+                  <UnsafeRenderedMarkdown markdown={this.props.shortInstructions2} />
+                </div>
               }
               {this.props.overlayVisible &&
                 <div>
@@ -741,8 +733,8 @@ class TopInstructions extends React.Component {
 module.exports = connect(function propsFromStore(state) {
   return {
     overlayVisible: state.instructions.overlayVisible,
-    ttsInstructionsUrl: state.pageConstants.ttsInstructionsUrl,
-    ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
+    ttsShortInstructionsUrl: state.pageConstants.ttsShortInstructionsUrl,
+    ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     hints: state.authoredHints.seenHints,
     hasUnseenHint: state.authoredHints.unseenHints.length > 0,

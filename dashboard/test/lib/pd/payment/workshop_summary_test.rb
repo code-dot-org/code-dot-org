@@ -21,5 +21,15 @@ module Pd::Payment
         "/pd/workshop_dashboard/workshops/#{@ended_workshop.id}/attendance/#{@ended_workshop.sessions.first.id}"
       )
     end
+
+    test 'leaves out organizer info when organizer has been deleted' do
+      @ended_workshop.organizer.destroy
+      @ended_workshop.reload
+
+      report = @workshop_summary.generate_organizer_report_line_item
+      assert_nil report[:organizer_email]
+      assert_nil report[:organizer_name]
+      assert_nil report[:organizer_id]
+    end
   end
 end

@@ -17,8 +17,8 @@ end
 
 # @returns [Hash] the dashboard user row associated with the current request.
 def current_user
-  nil if current_user_id.nil?
-  @dashboard_user ||= DASHBOARD_DB[:users][id: current_user_id]
+  return nil if (id = current_user_id).nil?
+  @dashboard_user ||= DASHBOARD_DB[:users][id: id]
 end
 
 # Consider the age of the specified user if user_id is provided, or of the

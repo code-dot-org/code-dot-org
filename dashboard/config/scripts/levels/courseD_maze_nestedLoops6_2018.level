@@ -33,11 +33,16 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-05-30 21:17:37 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-05-30 21:17:37 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 5
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

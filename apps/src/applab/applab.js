@@ -60,6 +60,7 @@ import {
 } from '../lib/tools/jsdebugger/redux';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
+import * as makerToolkitRedux from '../lib/kits/maker/redux';
 import project from '../code-studio/initApp/project';
 import * as thumbnailUtils from '../util/thumbnail';
 import Sounds from '../Sounds';
@@ -627,18 +628,25 @@ Applab.init = function (config) {
 
   Applab.reactMountPoint_ = document.getElementById(config.containerId);
 
-  Applab.render();
+  const loader = studioApp().loadLibraries(level.helperLibraries).then(() => {
+    Applab.render();
 
-  //Scale old-sized apps to fit the new sized display. Old height - 480.
-  if ($(".screen").height() === 480) {
-    const ratio = 450 / 480;
-    if (studioApp().share) { //share and embed pages
-      $("#divApplab").css('transform', 'scale(' + ratio + ', ' + ratio + ')');
-      $(".small-footer-base").css('transform', 'scale('+ ratio + ', 1)');
-    } else { //includes the frame on the edit page
-      $("#phoneFrameWrapper").css('transform', 'scale(' + ratio + ', ' + ratio + ')');
+    //Scale old-sized apps to fit the new sized display. Old height - 480.
+    if ($(".screen").height() === 480) {
+      const ratio = 450 / 480;
+      if (studioApp().share) { //share and embed pages
+        $("#divApplab").css('transform', 'scale(' + ratio + ', ' + ratio + ')');
+        $(".small-footer-base").css('transform', 'scale('+ ratio + ', 1)');
+      } else { //includes the frame on the edit page
+        $("#phoneFrameWrapper").css('transform', 'scale(' + ratio + ', ' + ratio + ')');
+      }
     }
+  });
+
+  if (IN_UNIT_TEST) {
+    return loader.catch(() => {});
   }
+  return loader;
 };
 
 function changedToDataMode(state, lastState) {
@@ -978,8 +986,13 @@ Applab.execute = function () {
 
   // Set event handlers and start the onTick timer
 
-  var codeWhenRun;
-  codeWhenRun = studioApp().getCode();
+  var codeWhenRun = '';
+  if (level.helperLibraries) {
+    codeWhenRun += level.helperLibraries
+      .map((lib) => studioApp().libraries[lib])
+      .join("\n") + '\n';
+  }
+  codeWhenRun += studioApp().getCode();
   Applab.currentExecutionLog = [];
 
   if (typeof codeWhenRun === 'string') {
@@ -1013,7 +1026,7 @@ Applab.execute = function () {
     }
   }
 
-  if (makerToolkit.isEnabled()) {
+  if (makerToolkitRedux.isEnabled(getStore().getState())) {
     makerToolkit.connect({
       interpreter: Applab.JSInterpreter,
       onDisconnect: () => studioApp().resetButtonClick(),

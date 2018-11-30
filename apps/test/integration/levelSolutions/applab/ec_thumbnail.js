@@ -86,8 +86,11 @@ export default {
       editCode: true,
       xml: `write('hello');`,
       runBeforeClick(assert) {
-        sinon.stub(htmlToCanvasWrapper, 'html2canvas').rejects('foobar');
+        sinon.stub(htmlToCanvasWrapper, 'html2canvas').callsFake(() =>
+          new Promise((resolve, reject) => setTimeout(() => reject('foobar'), 0))
+        );
         sinon.stub(console, 'log');
+
         tickWrapper.runOnAppTick(Applab, CAPTURE_TICK_COUNT + 1, () => {
           expect(isCaptureComplete()).to.be.false;
           tickWrapper.tickAppUntil(Applab, isCaptureComplete).then(() => {

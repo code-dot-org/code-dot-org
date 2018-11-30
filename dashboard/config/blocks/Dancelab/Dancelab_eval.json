@@ -2,7 +2,7 @@
   "category": "",
   "config": {
     "func": "eval",
-    "blockText": "Run some arbitrary code {CODE}",
+    "blockText": "eval {CODE}",
     "color": [
       0,
       0.9,

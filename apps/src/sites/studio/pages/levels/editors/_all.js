@@ -54,6 +54,10 @@ function initPage() {
     $("#plusAnswerContainedLevel").prev().clone().insertBefore("#plusAnswerContainedLevel");
   });
 
+  $("#plusPreloadAssetList").on("click", () => {
+    $("#plusPreloadAssetList").prev().clone().insertBefore("#plusPreloadAssetList");
+  });
+
   var videoInfos = config.video_infos;
 
   function updateVideoPreview() {

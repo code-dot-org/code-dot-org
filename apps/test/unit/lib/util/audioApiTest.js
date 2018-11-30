@@ -43,16 +43,16 @@ describe('Audio API', function () {
   describe('playSound', function () {
     it('has two arguments, "url" and "loop"', function () {
       const funcName = 'playSound';
-      // Check droplet config
+      // Check droplet config for the 2 documented params
       expect(dropletConfig[funcName].paletteParams).to.deep.equal(['url', 'loop']);
       expect(dropletConfig[funcName].params).to.have.length(2);
 
       // Check executors map arguments to object correctly
       let spy = sinon.spy();
       injectExecuteCmd(spy);
-      executors[funcName]('one', 'two', 'three');
+      executors[funcName]('one', 'two', 'three', 'four');
       expect(spy).to.have.been.calledOnce;
-      expect(spy.firstCall.args[2]).to.deep.equal({url: 'one', loop: 'two'});
+      expect(spy.firstCall.args[2]).to.deep.equal({url: 'one', loop: 'two', callback: 'three'});
     });
   });
 

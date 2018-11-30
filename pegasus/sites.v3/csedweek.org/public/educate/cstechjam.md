@@ -29,7 +29,7 @@ Are you ready for the next step in Computer Science Education Week? This CSTechJ
 
 Creators of all ages learn to code in a real programming language and watch their commands come to life by drawing a sequence of 13 pictures with code. They’ll learn along the way about video game art history from Pong and other retro games through 8-bit art and Minecraft, weaving together computer science with art, history, and storytelling. The implementation is flexible––you can spend 30 minutes or a few hours over one or multiple sessions. Learners can complete Pixel Hack on their own using guidance within the challenges, or you can turn Pixel Hack into an instructor-led journey, with a comprehensive educator manual full of suggestions. Students will be encouraged to add their own creative flair by hacking our challenges, to earn the Pixel Hacker Certificate.
 
-[<button>Learn more</button>](http://csedweek.kano.me/)
+[<button>Learn more</button>](http://art.kano.me/challenges/pixelhack/)
 
 ## Try a week of 3D coding with AgentCubes
 Students use the online 3D tool AgentCubes, which runs on any WebGL enabled browser (i.e. Chrome) with an Internet connection, to create an epidemiology simulation. This activity takes about a week of class-time (assuming 50 minute classes with time to get settled etc, and ~30 minutes of actual work) and can bridge easily bridge to disciplines outside of CS.  There are two activities involved in this Tech-Jam: A CS Unplugged Activity and a Programming activity. The age-range for this activity is sixth grade to college students.
