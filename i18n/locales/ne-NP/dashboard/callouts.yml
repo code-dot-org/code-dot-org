@@ -86,25 +86,37 @@ ne:
         craft_callout_preplaced: We've put some blocks here to get you started
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: We've put some blocks here to get you started
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: We've put some blocks here to get you started
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: This code will start building your house. Can you finish it?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: This code will start building your house. Can you finish it?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Hit "Run" to try your program
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Hit "Run" to try your program
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Hit "Run" to try your program
       Overworld Place Wall_callout:
         craft_inside_repeat: Repeat actions by placing blocks in here
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Repeat actions by placing blocks in here
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Repeat actions by placing blocks in here
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
       Underground Iron_callout:
         craft_what_is_iron: Mine this iron!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Mine this iron!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Mine this iron!
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Use the "create a circle" block and change the size.

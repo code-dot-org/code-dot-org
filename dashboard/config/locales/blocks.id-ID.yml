@@ -30,10 +30,10 @@ id:
             '"ROBOT"': semua robot
             '"SHARK"': semua hiu
           MOVE:
-            MOVES.ClapHigh: Tepuk tangan di atas
-            MOVES.Clown: Badut
-            MOVES.Dab: Oleskan
             '"rand"': Acak
+            MOVES.ClapHigh: Tepuk tangan di atas
+            MOVES.Dab: Oleskan
+            MOVES.Clown: Badut
             MOVES.Rest: Tidak ada
           DIR:
             '1': "→"
@@ -41,10 +41,10 @@ id:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            MOVES.ClapHigh: Tepuk tangan di atas
-            MOVES.Clown: Badut
-            MOVES.Dab: Oleskan
             '"rand"': Acak
+            MOVES.ClapHigh: Tepuk tangan di atas
+            MOVES.Dab: Oleskan
+            MOVES.Clown: Badut
             MOVES.Rest: Tidak ada
           DIR:
             '1': "→"
@@ -70,9 +70,10 @@ id:
             '"ROBOT"': semua robot
             '"SHARK"': semua hiu
           MOVE:
+            '"rand"': Acak
             MOVES.ClapHigh: Tepuk tangan di atas
-            MOVES.Clown: Badut
             MOVES.Dab: Oleskan
+            MOVES.Clown: Badut
             MOVES.Rest: Tidak ada
           DIR:
             '1': "→"
@@ -80,9 +81,10 @@ id:
       Dancelab_doMoveLR:
         options:
           MOVE:
+            '"rand"': Acak
             MOVES.ClapHigh: Tepuk tangan di atas
-            MOVES.Clown: Badut
             MOVES.Dab: Oleskan
+            MOVES.Clown: Badut
             MOVES.Rest: Tidak ada
           DIR:
             '1': "→"
@@ -185,7 +187,12 @@ id:
         options:
           EFFECT:
             '"none"': Tidak ada
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": Acak
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": Acak
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': Tidak ada
+            '"rand"': Acak
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -219,6 +226,11 @@ id:
           EFFECT:
             '"none"': Tidak ada
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": Acak
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': Tidak ada
+            '"rand"': Acak
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -312,6 +324,7 @@ id:
             '"right"': kanan
             '"space"': luar angkasa
             '"x"': x
+            '"y"': y
       Dancelab_whenPeak:
         options:
           RANGE:
@@ -482,6 +495,17 @@ id:
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Acak
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
+            "{x: 200, y: 200}": Tengah
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Acak
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': semua
       Mikelab_getProp:
         options:
           PROPERTY:

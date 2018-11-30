@@ -898,8 +898,8 @@ fr:
       title: Minecraft
     hero:
       title: Minecraft
-      body: Minecraft est de retour dans l'Heure de Code avec une toute nouvelle activité!
-        Le voyage dans Minecraft avec du code.
+      body: Minecraft est de retour pour l’Heure de code avec une toute nouvelle activité !
+        Exploration de Minecraft avec le code.
     sports:
       title: Sports
       body: Créer un jeu de basket ou un mélange avec d'autres sports.
@@ -1350,6 +1350,7 @@ fr:
   return_unit_overview: Accéder à la vue d'ensemble de l'unité
   return_course_overview: Accéder à la vue d'ensemble de l'unité
   view_all_units: Voir toutes les unités
+  view_teacher_guide: Voir le guide de l'enseignant
   pd:
     form_labels:
       first_name: Prénom

@@ -4173,10 +4173,21 @@ pl:
             Dance Party:
               name: Potańcówka
           title: Potańcówka
+          description_short: Z piosenkami Katy Perry, Madonny, J. Balvina, Sia, Keitha
+            Urbana, Ciary i 25 innych gwiazd!
+          description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją
+            swoim znajomym.
         frozen-2018-test-b:
           stages:
             Artist:
               name: Artysta
+        aquatic:
+          stages:
+            Aquatic:
+              name: Wodny
+          title: 'Minecraft: Wodna podróż'
+          description_short: Minecraft powrócił i proponuje zupełnie nową aktywność
+            na rzecz Godziny Kodowania!
         sconyers:
           stages:
             Linking Screens:
@@ -4189,6 +4200,10 @@ pl:
           stages:
             Dance Party:
               name: Potańcówka
+        dance-extras:
+          title: Nie przestawaj tańczyć
+          description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na
+            projekt.
         coursef-2019:
           description_audience: W wieku 9-13
           stages:
@@ -4214,7 +4229,107 @@ pl:
               description_student: Nareszcie możesz zacząć budować swój projekt!
             new stage:
               name: nowy etap
+            The Artist:
+              name: Artysta/Postać
         dance-low:
           stages:
             Dance Party:
               name: Potańcówka
+        coursed-2019:
+          stages:
+            Introduction to Online Puzzles:
+              name: Wprowadzenie do puzzli online
+            Relay Programming:
+              name: Sztafeta programowania
+            Loops in Ice Age:
+              name: Pętle w Epoce Lodowcowej
+            Nested Loops in Bee:
+              name: Zagnieżdżone pętle w pszczole
+            Conditionals with Cards:
+              name: Warunkowe z kartami
+            Conditionals in Bee:
+              name: Wyrażenie warunkowe w pszczole
+            Digital Citizenship:
+              name: Cyfrowe obywatelstwo
+            'Unplugged: Binary':
+              name: 'Bez komputera: Binarny'
+            Artist Binary:
+              name: 'Artysta: Binarny'
+        coursee-2019:
+          description_audience: W wieku 8-12
+          stages:
+            Sequence in Maze:
+              name: Sekwencje w labiryncie
+            Building a Foundation:
+              name: Kładąc podwaliny (Building a Foundation)
+            Nested Loops:
+              name: Zagnieżdżające się  pętle
+            Conditionals with Cards:
+              name: Warunkowe z kartami
+            Conditionals:
+              name: Warunkowe
+            Explore Project Ideas:
+              name: Odkrywanie pomysłów na projekt
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Praca w grupie (Crowdsourcing)
+            Nested Loops in Bee:
+              name: Zagnieżdżone pętle w pszczole
+        express-2019:
+          description_audience: W wieku 9-18
+          stages:
+            Programming in Maze:
+              name: Programowanie w labiryncie
+            Relay Programming:
+              name: Sztafeta programowania
+            Debugging in Maze:
+              name: Debugowanie labiryntu
+            Loops with Rey and BB-8:
+              name: Pętle z Rey i BB-8
+            Nested Loops in Bee:
+              name: Zagnieżdżone pętle w pszczole
+            Conditionals with Cards:
+              name: Warunkowe z kartami
+            Conditionals in Bee:
+              name: Wyrażenie warunkowe w pszczole
+            Build a Flappy Game:
+              name: Budowanie gry Flappy Bird
+            The Power of Words:
+              name: Moc Słów
+            Envelope Variables:
+              name: Zmienne w kopertach
+            For Loop Fun:
+              name: Zabawa z pętlą "dla"
+            For Loops in Bee:
+              name: Pętle for w pszczole
+            For Loops in Artist:
+              name: Pętle for w artyście
+            Explore Project Ideas:
+              name: Odkrywanie pomysłów na projekt
+            Binary Bracelets:
+              name: Binarne bransoletki
+            'Unplugged: Binary':
+              name: 'Bez komputera: Binarny'
+            Artist Binary:
+              name: 'Artysta: Binarny'
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Praca w grupie (Crowdsourcing)
+        csd1-2019:
+          stages:
+            Intro to Problem Solving:
+              name: Wstęp do rozwiązywania problemów
+            The Problem Solving Process:
+              name: Proces Rozwiązywania Problemów
+            Exploring Problem Solving:
+              name: Odkrywanie rozwiązywania problemów
+            What is a Computer?:
+              name: Czym jest komputer?
+            Input and Output:
+              name: Wejście i wyjście
+            Processing:
+              name: Przetwarzanie
+            Project - Propose an App:
+              name: Projekt - Propozycja aplikacji

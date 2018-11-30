@@ -156,6 +156,7 @@ ga:
       NEW Course 4 Artist Vars 6: "Tarraing an grúpa peinteagán seo, gach taobh 100 picteilín ar fad, trí luach oiriúnach a chur ar an athróg \"length\", agus an athróg a chur sna háiteanna cearta sa chód. Ní gá duit an athróg a shocrú ach uair amháin, agus úsáidfidh an cód an luach ceart i ngach uile áit."
       Overworld Move to Sheep: Cuir ordú "téigh ar aghaidh" eile leis an gcód chun an chaora a shroicheadh.
       Overworld Move to Sheep_2018: Cuir ordú "téigh ar aghaidh" eile leis an gcód chun an chaora a shroicheadh.
+      Overworld Move to Sheep_2019: Cuir ordú "téigh ar aghaidh" eile leis an gcód chun an chaora a shroicheadh.
       Testing Quantum Farmer: "Féach sin anois! Níl a fhios agam cé mhéad sluasaid atá de dhíth. An féidir leat an bloc \"líon\" a úsáid go dtí go mbeidh an talamh réidh?  "
       conditionals_forvideo_harvester: Bailigh an t-arbhar agus an leitís go léir, ansin bain an puimcín.
       course1_maze_debugging_challenge2: Dífhabhtaigh an leibhéal seo. Tá na blocanna cearta agat, ach tá siad san ord mícheart!
@@ -197,8 +198,10 @@ ga:
       courseC_artist_prog_challenge2: "*Cabhraigh liom na línte buí a phéinteáil ar an mbóthar seo!*"
       courseC_collector_prog8: '*"Nár lagaí Dia thú! Cabhraigh liom na seoda go léir a bhailiú."*'
       courseC_collector_prog8_2018: '*"Nár lagaí Dia thú! Cabhraigh liom na seoda go léir a bhailiú."*'
+      courseC_collector_prog8_2019: '*"Nár lagaí Dia thú! Cabhraigh liom na seoda go léir a bhailiú."*'
       courseC_collector_prog9: '*"Bailímis na seoda go léir!"*'
       courseC_collector_prog9_2018: '*"Bailímis na seoda go léir!"*'
+      courseC_collector_prog9_2019: '*"Bailímis na seoda go léir!"*'
       courseC_collector_progA: Cabhraigh le Laurel na seoda go léir a bhailiú.
       courseC_harvester_loops10: Bailigh an t-arbhar agus na puimcíní go léir.
       courseC_harvester_loops10_2018: Bailigh an t-arbhar agus na puimcíní go léir.
@@ -223,12 +226,16 @@ ga:
       courseC_maze_loops4: Sa dúshlán seo, is féidir leat dhá bhloc "athdhéan" a úsáid chun cabhrú leis an éan an mhuc a shroicheadh leis an líon is lú blocanna agus is féidir!
       courseC_maze_programming1: Sa dúshlán seo, tarraing na blocanna go léir le chéile agus cliceáil "Rith" lena chur ar siúl!
       courseC_maze_programming1_2018: Sa dúshlán seo, tarraing na blocanna go léir le chéile agus cliceáil "Rith" lena chur ar siúl!
+      courseC_maze_programming1_2019: Sa dúshlán seo, tarraing na blocanna go léir le chéile agus cliceáil "Rith" lena chur ar siúl!
       courseC_maze_programming8: '*"Tóg go bog é agus cabhraigh liom an mhuc dhána a aimsiú."*'
       courseC_maze_programming8_2018: '*"Tóg go bog é agus cabhraigh liom an mhuc dhána a aimsiú."*'
+      courseC_maze_programming8_2019: '*"Tóg go bog é agus cabhraigh liom an mhuc dhána a aimsiú."*'
       courseC_maze_programming8_predict1: '*"Tóg go bog é agus cabhraigh liom an mhuc dhána a aimsiú."*'
       courseC_maze_programming8_predict1_2018: '*"Tóg go bog é agus cabhraigh liom an mhuc dhána a aimsiú."*'
+      courseC_maze_programming8_predict1_2019: '*"Tóg go bog é agus cabhraigh liom an mhuc dhána a aimsiú."*'
       courseC_maze_programming9: '*"Anois, cabhraigh liom teacht aniar aduaidh ar an muc ar do rogha bealach!"*'
       courseC_maze_programming9_2018: '*"Anois, cabhraigh liom teacht aniar aduaidh ar an muc ar do rogha bealach!"*'
+      courseC_maze_programming9_2019: '*"Anois, cabhraigh liom teacht aniar aduaidh ar an muc ar do rogha bealach!"*'
       courseD_bee_nestedLoops2: An uair seo, cabhraigh leis an mbeach an neachtar go léir a bhailiú leis an líon is lú blocanna agus is féidir.
       courseD_bee_nestedLoops2_2018: An uair seo, cabhraigh leis an mbeach an neachtar go léir a bhailiú leis an líon is lú blocanna agus is féidir.
       courseD_bee_nestedLoops2_2019: An uair seo, cabhraigh leis an mbeach an neachtar go léir a bhailiú leis an líon is lú blocanna agus is féidir.
@@ -251,16 +258,25 @@ ga:
       courseD_bounce_events1: Sroich an bhratach! Ceangail bloc feiliúnach leis an mbloc "nuair a bhrúitear an tsaighead chlé" agus cliceáil "Rith" chun cabhrú leis an imreoir an bhratach a bhaint amach.
       courseD_farmer_condLoops8: Bailigh an t-arbhar agus an leitís go léir, ansin bain an puimcín.
       courseD_farmer_condLoops8_2018: Bailigh an t-arbhar agus an leitís go léir, ansin bain an puimcín.
+      courseD_farmer_condLoops8_2019: Bailigh an t-arbhar agus an leitís go léir, ansin bain an puimcín.
       courseD_farmer_condLoops9: Bailigh an t-arbhar agus an leitís go léir, ansin bain an puimcín.
       courseD_farmer_condLoops9_2018: Bailigh an t-arbhar agus an leitís go léir, ansin bain an puimcín.
+      courseD_farmer_condLoops9_2019: Bailigh an t-arbhar agus an leitís go léir, ansin bain an puimcín.
       courseD_farmer_condLoops9_predict1: Bailigh an t-arbhar agus an leitís go léir, ansin bain an puimcín.
       courseD_farmer_condLoops9_predict1_2018: Bailigh an t-arbhar agus an leitís go léir, ansin bain an puimcín.
+      courseD_farmer_condLoops9_predict1_2019: Bailigh an t-arbhar agus an leitís go léir, ansin bain an puimcín.
       courseD_iceage_loops10: Cabhraigh le Scrat an dearcán a fháil!
+      courseD_iceage_loops10_2019: Cabhraigh le Scrat an dearcán a fháil!
       courseD_iceage_loops11: Cabhraigh le Scrat an dearcán a fháil!
+      courseD_iceage_loops11_2019: Cabhraigh le Scrat an dearcán a fháil!
       courseD_iceage_loops12: Faigh an dearcán cibé slí is féidir leat!
+      courseD_iceage_loops12_2019: Faigh an dearcán cibé slí is féidir leat!
       courseD_iceage_loops6: An féidir leat lúb a chur leis an gcód chun an dearcán a fháil?
+      courseD_iceage_loops6_2019: An féidir leat lúb a chur leis an gcód chun an dearcán a fháil?
       courseD_iceage_loops8: 'An féidir leat an cód seo a dheisiú? '
+      courseD_iceage_loops8_2019: 'An féidir leat an cód seo a dheisiú? '
       courseD_iceage_loops9: Tá an dearcán i bhfad bhfad ar siúl! An féidir leat lúba a úsáid chun cabhrú le Scrat é a fháil?
+      courseD_iceage_loops9_2019: Tá an dearcán i bhfad bhfad ar siúl! An féidir leat lúba a úsáid chun cabhrú le Scrat é a fháil?
       courseD_maze_loops_challenge1: Téimis ag tóraíocht taisce - le lúba! Cabhraigh leis an mbailitheoir ar a laghad dhá charn maoine a shroicheadh gan ach na blocanna sa mbosca uirlisí a úsáid.
       courseD_maze_nestedLoops4: 'Treoraigh go dtí an lus gréine mé leis an líon is lú blocanna agus is féidir! Déan iarracht bloc "athdhéan" amháín a chur isteach i gceann eile, chun an méid cóid a laghdú.'
       courseD_maze_nestedLoops4_2018: 'Treoraigh go dtí an lus gréine mé leis an líon is lú blocanna agus is féidir! Déan iarracht bloc "athdhéan" amháín a chur isteach i gceann eile, chun an méid cóid a laghdú.'
@@ -276,16 +292,21 @@ ga:
       courseD_maze_ramp5d_2019: Cabhraigh leis an éan an mhuc a bhaint amach.
       courseD_maze_until10: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until10_2018: Cabhraigh leis an zombaí an lus gréine a fháil.
+      courseD_maze_until10_2019: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until10_predict2: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until10_predict2_2018: Cabhraigh leis an zombaí an lus gréine a fháil.
+      courseD_maze_until10_predict2_2019: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until6: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until6_2018: Cabhraigh leis an zombaí an lus gréine a fháil.
+      courseD_maze_until6_2019: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until7: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until7_2018: Cabhraigh leis an zombaí an lus gréine a fháil.
+      courseD_maze_until7_2019: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until8: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until8_2018: Cabhraigh leis an zombaí an lus gréine a fháil.
       courseD_maze_until9: "**Dúshlán:** Seachain na fiacla agus cabhraigh leis an zombaí an lus gréine a fháil."
       courseD_maze_until9_2018: "**Dúshlán:** Seachain na fiacla agus cabhraigh leis an zombaí an lus gréine a fháil."
+      courseD_maze_until9_2019: "**Dúshlán:** Seachain na fiacla agus cabhraigh leis an zombaí an lus gréine a fháil."
       courseD_maze_until_challenge1: Gan leideanna, dúshlán amháin. Treoraigh an zombaí go dtí an lus gréine.
       courseD_maze_until_challenge1_2018: Gan leideanna, dúshlán amháin. Treoraigh an zombaí go dtí an lus gréine.
       courseD_scrat_ramp1: Sa dúshlán seo, ceangail na blocanna go léir le chéile agus cliceáil "Rith" lena chur ar siúl!
@@ -340,6 +361,7 @@ ga:
       grade2_collector_9a: "**Dúshlán:** Bailigh na boinn go léir."
       grade2_collector_A: Cabhraigh le Laurel na seoda go léir a bhailiú.
       grade2_collector_A_2018: Cabhraigh le Laurel na seoda go léir a bhailiú.
+      grade2_collector_A_2019: Cabhraigh le Laurel na seoda go léir a bhailiú.
       grade2_maze_debuggingFP: '*"Anois, cabhraigh liom teacht aniar aduaidh ar an muc ar do rogha bealach!"*'
       grade2_puppy_loops4: Sa dúshlán seo, is féidir leat dhá bhloc "athdhéan" a úsáid chun cabhrú leat an mhuc a shroicheadh leis an líon is lú blocanna agus is féidir!
       grade3_ConditionalsElse_2: "Tuilleadh scamall! Féach an bhfuil bláthanna i bhfolach faoi na scamaill sula ndéanann tú iarracht neachtar a bhailiú. Níl an rud céanna faoi gach scamall!"

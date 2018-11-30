@@ -600,14 +600,18 @@ ca:
         ballarí.
       Dance_Party_10: Fés que l'altre dansaire respongui a la música fent servir el
         bloc de `comença a seguir` també.
-      Dance_Party_11.5: Fés servir els blocs de "tots els ànecs" per fer que els ànecs
-        ballin junts.
+      Dance_Party_11.5_test: Fés servir els blocs de "tots els ànecs" per fer que
+        els ànecs ballin junts.
       Dance_Party_11: El bloc `quan prems cap a dalt` et permet executar un codi quan
         prems la fletxa cap a dalt. Intenta que el dansaire faci un moviment ràpid
         quan prems cap a dalt.
+      Dance_Party_11_5: Fés servir els blocs de "tots els ànecs" per fer que els ànecs
+        ballin junts.
       Dance_Party_11b: Fés que el robot "caigui" un cop quan prems la tecla de la
         fletxa dreta, i que "provoqui" una vegada quan prems la fletxa cap a dalt.
         Fés la caiguda-provocació tan ràpidament com puguis!
+      Dance_Party_12: Anima't i segueix el ritme! Crea una dansa pròpia per compartir
+        amb els teus amics.
       Infinity_catch: Pots fer que l'Elsa ("actor 2") atrapi l'Anna utilitzant les
         fletxes del teclat?
       Infinity_finale: Crea qualsevol cosa que t'agradi i comparteix-la!
@@ -648,6 +652,8 @@ ca:
         cuidadosament entre les enfiladisses i arriba a la seguretat de casa teva.
       Overworld Avoid Monsters_2018: Córrer en una enfiladissa és una mala idea. Mou-te
         cuidadosament entre les enfiladisses i arriba a la seguretat de casa teva.
+      Overworld Avoid Monsters_2019: Córrer en una enfiladissa és una mala idea. Mou-te
+        cuidadosament entre les enfiladisses i arriba a la seguretat de casa teva.
       Overworld Chop Tree - allthethings: La fusta és un recurs molt important. Amb
         ella es fan moltes coses. Camina fins l'arbre i utilitza la comanda "destruir
         bloc" per tallar-lo.
@@ -656,9 +662,14 @@ ca:
       Overworld Chop Tree_2018: La fusta és un recurs molt important. Amb ella es
         fan moltes coses. Camina fins l'arbre i utilitza la comanda "destruir bloc"
         per tallar-lo.
+      Overworld Chop Tree_2019: La fusta és un recurs molt important. Amb ella es
+        fan moltes coses. Camina fins l'arbre i utilitza la comanda "destruir bloc"
+        per tallar-lo.
       Overworld Chop Trees: Hem de construir una casa abans que el sol es pongui.
         Les cases requereixen una gran quantitat de fusta. Tala els 3 arbres.
       Overworld Chop Trees_2018: Hem de construir una casa abans que el sol es pongui.
+        Les cases requereixen una gran quantitat de fusta. Tala els 3 arbres.
+      Overworld Chop Trees_2019: Hem de construir una casa abans que el sol es pongui.
         Les cases requereixen una gran quantitat de fusta. Tala els 3 arbres.
       Overworld Free Play 20x20: Felicitats! Has completat tots els nostres puzles!
         Ara excava, construeix i crea una cosa única utilitzant tot el que has après
@@ -666,13 +677,20 @@ ca:
       Overworld Free Play 20x20_2018: Felicitats! Has completat tots els nostres puzles!
         Ara excava, construeix i crea una cosa única utilitzant tot el que has après
         fins ara.
+      Overworld Free Play 20x20_2019: Felicitats! Has completat tots els nostres puzles!
+        Ara excava, construeix i crea una cosa única utilitzant tot el que has après
+        fins ara.
       Overworld House Frame Chosen: Construeix la resta de la teva casa amb el material
         que vulguis. La comanda "repeteix" et serà útil.
       Overworld House Frame Chosen_2018: Construeix la resta de la teva casa amb el
         material que vulguis. La comanda "repeteix" et serà útil.
+      Overworld House Frame Chosen_2019: Construeix la resta de la teva casa amb el
+        material que vulguis. La comanda "repeteix" et serà útil.
       Overworld Move to Sheep: Afegeix una segona instrucció "avança" per arribar
         a l'ovella.
       Overworld Move to Sheep_2018: Afegeix una segona instrucció "avança" per arribar
+        a l'ovella.
+      Overworld Move to Sheep_2019: Afegeix una segona instrucció "avança" per arribar
         a l'ovella.
       Overworld Place Wall: Cada casa es comença amb una paret. Construeix la primera
         part de la teva casa usant les ordres "posa" i "avança" dins del bucle de
@@ -680,9 +698,14 @@ ca:
       Overworld Place Wall_2018: Cada casa es comença amb una paret. Construeix la
         primera part de la teva casa usant les ordres "posa" i "avança" dins del bucle
         de repetició.
+      Overworld Place Wall_2019: Cada casa es comença amb una paret. Construeix la
+        primera part de la teva casa usant les ordres "posa" i "avança" dins del bucle
+        de repetició.
       Overworld Plant Crops: És bo planificar el futur. Planta cultius en ambdós costats
         de l'aigua per tal que no passis gana més endavant.
       Overworld Plant Crops_2018: És bo planificar el futur. Planta cultius en ambdós
+        costats de l'aigua per tal que no passis gana més endavant.
+      Overworld Plant Crops_2019: És bo planificar el futur. Planta cultius en ambdós
         costats de l'aigua per tal que no passis gana més endavant.
       Overworld Powered Minecart: Bona feina! Has recollit una pila de recursos i
         construït una modesta llar. Ara posa via des de la vora del mapa fins a la
@@ -690,9 +713,14 @@ ca:
       Overworld Powered Minecart_2018: Bona feina! Has recollit una pila de recursos
         i construït una modesta llar. Ara posa via des de la vora del mapa fins a
         la teva porta.
+      Overworld Powered Minecart_2019: Bona feina! Has recollit una pila de recursos
+        i construït una modesta llar. Ara posa via des de la vora del mapa fins a
+        la teva porta.
       Overworld Shear Sheep: És hora d'esquilar les ovelles! Utilitza la comanda "tallar"
         per esquilar la llana de les ovelles.
       Overworld Shear Sheep_2018: És hora d'esquilar les ovelles! Utilitza la comanda
+        "tallar" per esquilar la llana de les ovelles.
+      Overworld Shear Sheep_2019: És hora d'esquilar les ovelles! Utilitza la comanda
         "tallar" per esquilar la llana de les ovelles.
       PDK5 Functions 2: Les funcions et permeten definir nous blocs! Hem mogut els
         blocs per dibuixar un quadrat a una funció anomenada "dibuixa un quadrat".
@@ -716,20 +744,31 @@ ca:
       Underground Avoiding Lava_2018: Darrere d'alguns d'aquests blocs hi ha lava
         que hauràs de cobrir per poder avançar. Una comanda "Si" serà útil aquí. Afegeix
         una comanda "avança" al lloc correcte per excavar aquests blocs.
+      Underground Avoiding Lava_2019: Darrere d'alguns d'aquests blocs hi ha lava
+        que hauràs de cobrir per poder avançar. Una comanda "Si" serà útil aquí. Afegeix
+        una comanda "avança" al lloc correcte per excavar aquests blocs.
       Underground If Statements: La cosa s'està tornant delicada. Excava tres pedres
         vermelles, però no caiguis a la lava. Usa una comanda "Si" per posar empedrat
         allà on destapis lava.
       Underground If Statements_2018: La cosa s'està tornant delicada. Excava tres
         pedres vermelles, però no caiguis a la lava. Usa una comanda "Si" per posar
         empedrat allà on destapis lava.
+      Underground If Statements_2019: La cosa s'està tornant delicada. Excava tres
+        pedres vermelles, però no caiguis a la lava. Usa una comanda "Si" per posar
+        empedrat allà on destapis lava.
       Underground Iron: Caminar sobre lava fosa és una mala idea. Col·loca empredrat
         per fer un pont, tot seguit excava com a mínm un parell de blocs de ferro.
       Underground Iron_2018: Caminar sobre lava fosa és una mala idea. Col·loca empredrat
+        per fer un pont, tot seguit excava com a mínm un parell de blocs de ferro.
+      Underground Iron_2019: Caminar sobre lava fosa és una mala idea. Col·loca empredrat
         per fer un pont, tot seguit excava com a mínm un parell de blocs de ferro.
       Underground Mining Coal: Trobaràs els recursos més valuosos sota terra, però
         pot estar fosc. Col·loca com a mínim un parell de torxes i excava com a mínim
         dos carbons.
       Underground Mining Coal_2018: Trobaràs els recursos més valuosos sota terra,
+        però pot estar fosc. Col·loca com a mínim un parell de torxes i excava com
+        a mínim dos carbons.
+      Underground Mining Coal_2019: Trobaràs els recursos més valuosos sota terra,
         però pot estar fosc. Col·loca com a mínim un parell de torxes i excava com
         a mínim dos carbons.
       beeDebugVideo1: Pots usar un bucle per recollir tot el nèctar?

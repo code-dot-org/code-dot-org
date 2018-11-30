@@ -3382,6 +3382,204 @@ it:
           Ecco due fiocchi di neve di dimensioni diverse, disegnati uno dopo l'altro (con un angolo di 30 gradi tra uno e l'altro):
 
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      Dance short test 2_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Devi fare in modo che l’effetto di sfondo cambi nel corso della settima battuta della canzone.
+
+          *L'esercizio terminerà dopo 10 battute. *
+        challenges: |-
+          **Sfida supplementare**
+
+          Modifica l’effetto di sfondo in punti diversi della canzone unendo il nuovo blocco sotto gli eventi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance short test_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Devi fare in modo che l’effetto di sfondo cambi nel corso della settima battuta della canzone.
+
+          *L'esercizio terminerà dopo 10 battute. *
+        challenges: |-
+          **Sfida supplementare**
+
+          Modifica l’effetto di sfondo in punti diversi della canzone unendo il nuovo blocco sotto gli eventi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+          * Assicurati che sullo schermo appaia un ballerino.
+
+          *L'esercizio terminerà dopo 4 battute.*
+        challenges: |-
+          **Sfide supplementari**
+          * Cambia brano musicale.
+          * Rinomina il tuo ballerino.
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+          * Assicurati che sullo schermo appaia un ballerino.
+
+          *L'esercizio terminerà dopo 4 battute.*
+        challenges: |-
+          **Sfide opzionali**
+          * Scegli un brano diverso.
+          * Scegline uno che assomigli ad un alce!
+          * Rinomina il tuo ballerino.
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+          * Il ballerino deve cambiare mossa dopo 4 battute.
+
+          *L'esercizio terminerà dopo 8 battute.*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Dopo 6 battute, il tuo ballerino dovrà ballare in modo diverso rispetto a come ballava dopo 4 battute.
+
+          *L'esercizio terminerà dopo 12 battute.*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Devi fare in modo che lo sfondo cambi effetto prima della settima battuta della canzone.
+
+          *L'esercizio terminerà dopo 10 battute.*
+        challenges: |-
+          **Sfida supplementare**
+
+          Modifica l’effetto di sfondo in punti diversi della canzone unendo il nuovo blocco sotto gli eventi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Devi avere almeno due ballerini.
+
+          *L'esercizio terminerà dopo 6 battute. *
+        challenges: |-
+          **Sfida supplementare**
+
+          * Aggiungi un terzo ballerino (o tutti quelli che vuoi!)
+          * Fai eseguire ai tuoi ballerini delle mosse diverse in momenti diversi della canzone.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Due ballerini devono avere una dimensione diversa da 100.
+
+          *L'esercizio terminerà dopo 6 battute. *
+        challenges: |-
+          **Sfida supplementare**
+
+          * Fai qualche esperimento modificando le altre proprietà (larghezza, altezza, rotazione e così via)
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Modifica la tonalità di almeno un ballerino.
+
+          *L'esercizio terminerà dopo 8 battute.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+          * Assicurati che sullo schermo appaia un ballerino.
+
+          *L'esercizio terminerà dopo 4 battute.*
+        challenges: |-
+          **Sfide opzionali**
+          * Scegli un brano diverso.
+          * Scegline uno che assomigli ad un alce!
+          * Rinomina il tuo ballerino.
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Le proprietà di due o più ballerini devono essere cambiate.
+
+          *L'esercizio terminerà dopo 8 battute. *
+      Dance_Party_11.5_test_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Sii semplicemente creativo!
+
+          *L'esercizio terminerà dopo 8 battute.*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Sii semplicemente creativo!
+
+          *L'esercizio terminerà dopo 8 battute.*
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Sii semplicemente creativo!
+
+          *L'esercizio terminerà dopo 8 battute.*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Usa il blocco `quando si preme a sinistra` per far eseguire al Robot una mossa di ballo premendo quel tasto.
+
+          *L'esercizio terminerà dopo 8 battute.*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+          * Il ballerino deve passare ad una nuova mossa dopo 4 battute.
+
+          *L'esercizio terminerà dopo 8 battute. *
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Dopo 6 battute, il tuo ballerino dovrà ballare in modo diverso rispetto a come ballava dopo 4 battute.
+
+          *L'esercizio terminerà dopo 12 battute. *
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Devi fare in modo che l’effetto di sfondo cambi nel corso della settima battuta della canzone.
+
+          *L'esercizio terminerà dopo 10 battute. *
+        challenges: |-
+          **Sfida supplementare**
+
+          Modifica l’effetto di sfondo in punti diversi della canzone unendo il nuovo blocco sotto gli eventi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Nel corso dell prime 12 battute della canzone il tuo ballerino deve eseguire mosse diverse.
+
+          *L'esercizio terminerà dopo 12 battute. *
+      Dance_Party_6_authored_hint:
+        challenges: |-
+          **Sfida supplementare**
+
+          * Aggiungi un terzo ballerino (o tutti quelli che vuoi!)
+          * Fai eseguire ai tuoi ballerini delle mosse diverse in momenti diversi della canzone.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Due ballerini devono avere una dimensione diversa da 100.
+
+          *L'esercizio terminerà dopo 6 battute. *
+        challenges: |-
+          **Sfida supplementare**
+
+          * Fai qualche esperimento modificando le altre proprietà (larghezza, altezza, rotazione e così via)
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Modifica la tonalità di almeno un ballerino.
+
+          *L'esercizio terminerà dopo 8 battute. *
       Farmer for Authored Hint testing_authored_hint:
         first_hint: Questo è il primo indizio. Ha * alcuni * * * basic * * 'markup'
         second_hint: Questo è il secondo suggerimento. Ha un'immagine. ! [] (https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
@@ -3402,10 +3600,100 @@ it:
           a richiamarla due volte per risolvere questo esercizio.
       HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: "Guarda le **Lanterne marine** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
-          Come puoi usare un condizionale per arrivare al Monumento oceanico?\n\n"
+          Come potresti usare un'istruzione condizionale per attraversare il Monumento
+          oceanico?\n\n"
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: Puoi usare il blocco `se c'è strada` per girare dalla parte giusta.
       HOC 2018 Level_9b_authored_hint:
-        voyage_aquatic_9a: Che bella barriera corallina! Con il corallo blu vai a
-          **destra**, e attento al corallo rosso sulla **sinistra**!
+        voyage_aquatic_9a: Che bella barriera corallina! I coralli blu ti suggeriscono
+          quando girare a **destra** e quelli rossi quando girare a **sinistra**.
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+          * Assicurati che sullo schermo appaia un ballerino.
+
+          *L'esercizio terminerà dopo 4 battute.*
+        challenges: |-
+          **Sfide opzionali**
+          * Scegli un brano diverso.
+          * Scegline uno che assomigli ad un alce!
+          * Rinomina il tuo ballerino.
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+          * Il ballerino deve passare ad una nuova mossa dopo 4 battute.
+
+          *L'esercizio terminerà dopo 8 battute. *
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Dopo 6 battute, il tuo ballerino dovrà ballare in modo diverso rispetto a come ballava dopo 4 battute.
+
+          *L'esercizio terminerà dopo 12 battute. *
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Devi fare in modo che l’effetto di sfondo cambi nel corso della settima battuta della canzone.
+
+          *L'esercizio terminerà dopo 10 battute. *
+        challenges: |-
+          **Sfida supplementare**
+
+          Modifica l’effetto di sfondo in punti diversi della canzone unendo il nuovo blocco sotto gli eventi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Nel corso dell prime 12 battute della canzone il tuo ballerino deve eseguire mosse diverse.
+
+          *L'esercizio terminerà dopo 12 battute. *
+      HOC Dance 5_draft_authored_hint:
+        challenges: |-
+          **Sfida supplementare**
+
+          * Aggiungi un terzo ballerino (o tutti quelli che vuoi!)
+          * Fai eseguire ai tuoi ballerini delle mosse diverse in momenti diversi della canzone.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Due ballerini devono avere una dimensione diversa da 100.
+
+          *L'esercizio terminerà dopo 6 battute. *
+        challenges: |-
+          **Sfida supplementare**
+
+          * Fai qualche esperimento modificando le altre proprietà (larghezza, altezza, rotazione e così via)
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Modifica la tonalità di almeno un ballerino.
+
+          *L'esercizio terminerà dopo 8 battute. *
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Le proprietà di due o più ballerini devono essere cambiate.
+
+          *L'esercizio terminerà dopo 8 battute. *
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Mettici un po’ di creatività!
+
+          *L'esercizio terminerà dopo 8 battute. *
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          * Mettici un po’ di creatività!
+
+          *L'esercizio terminerà dopo 8 battute. *
       Harvesting_authored_hint:
         pointer_harvester_test: Che tipo di blocco è possibile utilizzare per controllare
           qualcosa e prendere una decisione?
@@ -3483,7 +3771,8 @@ it:
           sulla pedana a pressione. Questo farà aprire la porta per il tuo giocatore.
         MC_HOC_2017_02_Cole_b: |-
           Premi "Esegui"!
-          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e ripristina il codice diverse volte finché non hai capito dov'è l'errore.
+
+          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e modifica il codice diverse volte finché non hai capito dov'è l'errore.
         MC_HOC_2017_02_Cole_c: Dopo che l'Agente ha fatto aprire la porta, usa le
           frecce per muovere il giocatore verso la mappa!
         MC_HOC_2017_02_Cole_d: Assicurati che l'Agente stia seguendo il percorso indicato
@@ -3493,7 +3782,8 @@ it:
           sulla pedana a pressione. Questo farà aprire la porta per il tuo giocatore.
         MC_HOC_2017_02_Cole_b: |-
           Premi "Esegui"!
-          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e ripristina il codice diverse volte finché non hai capito dov'è l'errore.
+
+          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e modifica il codice diverse volte finché non hai capito dov'è l'errore.
         MC_HOC_2017_02_Cole_c: Dopo che l'Agente ha fatto aprire la porta, usa le
           frecce per muovere il giocatore verso la mappa!
         MC_HOC_2017_02_Cole_d: Assicurati che l'Agente stia seguendo il percorso indicato
@@ -3535,7 +3825,8 @@ it:
           con meno blocchi?
         MC_HOC_2017_04_Cole_c: |-
           Premi "Esegui"!
-          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e ripristina il codice diverse volte finché non hai capito dov'è l'errore.
+
+          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e modifica il codice diverse volte finché non hai capito dov'è l'errore.
         MC_HOC_2017_04_Cole_b: Quando l'Agente raggiunge la pedana a pressione, la
           porta si apre.
       MC_HOC_2017_04_Cole_2019_authored_hint:
@@ -3544,7 +3835,8 @@ it:
           con meno blocchi?
         MC_HOC_2017_04_Cole_c: |-
           Premi "Esegui"!
-          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e ripristina il codice diverse volte finché non hai capito dov'è l'errore.
+
+          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e modifica il codice diverse volte finché non hai capito dov'è l'errore.
         MC_HOC_2017_04_Cole_b: Quando l'Agente raggiunge la pedana a pressione, la
           porta si apre.
       MC_HOC_2017_05_Cole_authored_hint:
@@ -3628,7 +3920,8 @@ it:
       MC_HOC_2017_Ali_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           Premi "Esegui"!
-          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e ripristina il codice diverse volte finché non hai capito dov'è l'errore.
+
+          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e modifica il codice diverse volte finché non hai capito dov'è l'errore.
         MC_HOC_2017_08_RY_b: Ci sono TANTISSIMI modi per risolvere questo esercizio.
           Provane alcuni!
         MC_HOC_2017_08_RY_c: Prova a seguire la linea tratteggiata per trovare un
@@ -3636,7 +3929,8 @@ it:
       MC_HOC_2017_Ali_2019_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           Premi "Esegui"!
-          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e ripristina il codice diverse volte finché non hai capito dov'è l'errore.
+
+          Puoi eseguire il tuo codice anche se non è corretto.  Esegui e modifica il codice diverse volte finché non hai capito dov'è l'errore.
         MC_HOC_2017_08_RY_b: Ci sono TANTISSIMI modi per risolvere questo esercizio.
           Provane alcuni!
         MC_HOC_2017_08_RY_c: Prova a seguire la linea tratteggiata per trovare un
@@ -3718,6 +4012,11 @@ it:
         mc_8_b: Usa il blocco `ripeti ... volte` per semplificare il tuo programma.
         mc_8_c: Il tuo obiettivo è di raggiungere l'entrata della casa nella parte
           alta dello schermo.
+      Overworld Avoid Monsters_2019_authored_hint:
+        mc_8_a: Puoi scegliere tra diversi percorsi. Qual'è il più corto?
+        mc_8_b: Usa il blocco `ripeti ... volte` per semplificare il tuo programma.
+        mc_8_c: Il tuo obiettivo è di raggiungere l'entrata della casa nella parte
+          alta dello schermo.
       Overworld Chop Tree_authored_hint:
         mc_2_a: Devi usare due volte il blocco `vai avanti` per arrivare di fronte
           all'albero.
@@ -3726,11 +4025,19 @@ it:
         mc_2_a: Devi usare due volte il blocco `vai avanti` per arrivare di fronte
           all'albero.
         mc_2_b: L'istruzione `distruggi` abbatte l'albero di fronte a te.
+      Overworld Chop Tree_2019_authored_hint:
+        mc_2_a: Devi usare due volte il blocco `vai avanti` per arrivare di fronte
+          all'albero.
+        mc_2_b: L'istruzione `distruggi` abbatte l'albero di fronte a te.
       Overworld Chop Trees_authored_hint:
         mc_4_a: Puoi abbattere gli alberi in qualsiasi ordine, ma qual'è il percorso
           che ti fa usare il minor numero possibile di blocchi?
         mc_4_b: L'istruzione `distruggi` abbatte l'albero di fronte a te.
       Overworld Chop Trees_2018_authored_hint:
+        mc_4_a: Puoi abbattere gli alberi in qualsiasi ordine, ma qual'è il percorso
+          che ti fa usare il minor numero possibile di blocchi?
+        mc_4_b: L'istruzione `distruggi` abbatte l'albero di fronte a te.
+      Overworld Chop Trees_2019_authored_hint:
         mc_4_a: Puoi abbattere gli alberi in qualsiasi ordine, ma qual'è il percorso
           che ti fa usare il minor numero possibile di blocchi?
         mc_4_b: L'istruzione `distruggi` abbatte l'albero di fronte a te.
@@ -3746,12 +4053,23 @@ it:
         mc_6_b: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede,
           anche se non hai ancora risolto l'esercizio.
         mc_6_c: Puoi mettere più di un blocco all'interno del blocco `ripeti ... volte`.
+      Overworld House Frame Chosen_2019_authored_hint:
+        mc_6_a: Clicca la freccia sulla destra del blocco `metti` per scegliere il
+          materiale da posizionare.
+        mc_6_b: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede,
+          anche se non hai ancora risolto l'esercizio.
+        mc_6_c: Puoi mettere più di un blocco all'interno del blocco `ripeti ... volte`.
       Overworld Move to Sheep_authored_hint:
         mc_1_a: Il blocco `vai avanti` è in cima alla cassetta degli attrezzi (la
           colonna scura qui sotto).
         mc_1_b: Controlla che entrambi i blocchi `vai avanti` siano agganciati al
           blocco `quando si clicca su "Esegui"`.
       Overworld Move to Sheep_2018_authored_hint:
+        mc_1_a: Il blocco `vai avanti` è in cima alla cassetta degli attrezzi (la
+          colonna scura qui sotto).
+        mc_1_b: Controlla che entrambi i blocchi `vai avanti` siano agganciati al
+          blocco `quando si clicca su "Esegui"`.
+      Overworld Move to Sheep_2019_authored_hint:
         mc_1_a: Il blocco `vai avanti` è in cima alla cassetta degli attrezzi (la
           colonna scura qui sotto).
         mc_1_b: Controlla che entrambi i blocchi `vai avanti` siano agganciati al
@@ -3768,12 +4086,23 @@ it:
           ... volte` per far eseguire il codice più di una volta.
         mc_5_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede,
           anche se non hai ancora risolto l'esercizio.
+      Overworld Place Wall_2019_authored_hint:
+        mc_5_a: Usa prima il blocco `metti` e poi `vai avanti`
+        mc_5_b: Controlla che entrambi i blocchi siano all'interno del blocco `ripeti
+          ... volte` per far eseguire il codice più di una volta.
+        mc_5_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede,
+          anche se non hai ancora risolto l'esercizio.
       Overworld Plant Crops_authored_hint:
         mc_7_a: Usa il blocco `semina del grano` per seminarlo nel punto in cui sei.
         mc_7_b: Bisogna seminare il grano in entrambe le strisce di terra marrone
           scuro a fianco dell'acqua.
         mc_7_c: Puoi mettere più di un blocco all'interno del blocco `ripeti ... volte`.
       Overworld Plant Crops_2018_authored_hint:
+        mc_7_a: Usa il blocco `semina del grano` per seminarlo nel punto in cui sei.
+        mc_7_b: Bisogna seminare il grano in entrambe le strisce di terra marrone
+          scuro a fianco dell'acqua.
+        mc_7_c: Puoi mettere più di un blocco all'interno del blocco `ripeti ... volte`.
+      Overworld Plant Crops_2019_authored_hint:
         mc_7_a: Usa il blocco `semina del grano` per seminarlo nel punto in cui sei.
         mc_7_b: Bisogna seminare il grano in entrambe le strisce di terra marrone
           scuro a fianco dell'acqua.
@@ -3786,6 +4115,10 @@ it:
         mc_13_a: Usa il blocco `metti binario` per posare un tratto di binari nel
           punto in cui ti trovi.
         mc_13_b: Usa il blocco `ripeti ... volte` per accorciare il tuo programma.
+      Overworld Powered Minecart_2019_authored_hint:
+        mc_13_a: Usa il blocco `metti binario` per posare un tratto di binari nel
+          punto in cui ti trovi.
+        mc_13_b: Usa il blocco `ripeti ... volte` per accorciare il tuo programma.
       Overworld Shear Sheep_authored_hint:
         mc_3_a: 'Per usare il blocco `tosa` la pecora deve trovarsi di fronte a te.  '
         mc_3_b: Se hai bisogno di cambiare la direzione verso cui sei rivolto, usa
@@ -3793,6 +4126,12 @@ it:
         mc_3_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede,
           anche se non hai ancora risolto l'esercizio.
       Overworld Shear Sheep_2018_authored_hint:
+        mc_3_a: 'Per usare il blocco `tosa` la pecora deve trovarsi di fronte a te.  '
+        mc_3_b: Se hai bisogno di cambiare la direzione verso cui sei rivolto, usa
+          il blocco `gira a ...`.
+        mc_3_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede,
+          anche se non hai ancora risolto l'esercizio.
+      Overworld Shear Sheep_2019_authored_hint:
         mc_3_a: 'Per usare il blocco `tosa` la pecora deve trovarsi di fronte a te.  '
         mc_3_b: Se hai bisogno di cambiare la direzione verso cui sei rivolto, usa
           il blocco `gira a ...`.
@@ -3824,6 +4163,11 @@ it:
           Quello che resta da fare è aggiungere un blocco `vai avanti`.
         mc_11_b: L'istruzione `vai avanti` deve essere messa all'interno del blocco
           `se` o dopo?
+      Underground Avoiding Lava_2019_authored_hint:
+        mc_11_a: Tutto il codice per controllare se c'è la lava e coprirla è già pronto.
+          Quello che resta da fare è aggiungere un blocco `vai avanti`.
+        mc_11_b: L'istruzione `vai avanti` deve essere messa all'interno del blocco
+          `se` o dopo?
       Underground If Statements_authored_hint:
         mc_12_a: I blocchi con le macchioline rosse sono quelli che contengono la
           pietrarossa.
@@ -3832,6 +4176,13 @@ it:
         mc_12_c: Usa un'istruzione condizionale `se` per verificare la presenza di
           lava, quindi coprila con i ciottoli.
       Underground If Statements_2018_authored_hint:
+        mc_12_a: I blocchi con le macchioline rosse sono quelli che contengono la
+          pietrarossa.
+        mc_12_b: Riesci ad usare un blocco `ripeti ... volte` per accorciare il tuo
+          programma?
+        mc_12_c: Usa un'istruzione condizionale `se` per verificare la presenza di
+          lava, quindi coprila con i ciottoli.
+      Underground If Statements_2019_authored_hint:
         mc_12_a: I blocchi con le macchioline rosse sono quelli che contengono la
           pietrarossa.
         mc_12_b: Riesci ad usare un blocco `ripeti ... volte` per accorciare il tuo
@@ -3852,6 +4203,13 @@ it:
           per creare un passaggio sicuro. Poi ci puoi camminare sopra!
         mc_10_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede,
           anche se non hai ancora risolto l'esercizio.
+      Underground Iron_2019_authored_hint:
+        mc_10_a: Il ferro è nei blocchi maculati dietro alla torcia! Come farai ad
+          andare lì?
+        mc_10_b: Quando sei sul bordo della lava, usa il blocco `metti ciottoli davanti`
+          per creare un passaggio sicuro. Poi ci puoi camminare sopra!
+        mc_10_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede,
+          anche se non hai ancora risolto l'esercizio.
       Underground Mining Coal_authored_hint:
         mc_9_a: Sei girato dalla parte giusta? Il blocco `distruggi` scava nel blocco
           davanti a te.
@@ -3860,6 +4218,13 @@ it:
         mc_9_c: Usa il blocco `metti una torcia` per posizionare una torcia nel punto
           in cui ti trovi.
       Underground Mining Coal_2018_authored_hint:
+        mc_9_a: Sei girato dalla parte giusta? Il blocco `distruggi` scava nel blocco
+          davanti a te.
+        mc_9_b: I granelli neri nel muro sono carbone! Usa il blocco `distruggi` su
+          di essi per estrarre il carbone.
+        mc_9_c: Usa il blocco `metti una torcia` per posizionare una torcia nel punto
+          in cui ti trovi.
+      Underground Mining Coal_2019_authored_hint:
         mc_9_a: Sei girato dalla parte giusta? Il blocco `distruggi` scava nel blocco
           davanti a te.
         mc_9_b: I granelli neri nel muro sono carbone! Usa il blocco `distruggi` su
@@ -7267,6 +7632,19 @@ it:
           </xml>
 
           scegli lo schema che preferisci!
+      courseC_artist_loop1_2019_authored_hint:
+        courseC_artist_loop1_a: Non è necessaria alcuna modifica al ciclo, basta aggiungere
+          un blocco sopra di esso.
+        courseC_artist_loop1_b: |-
+          Questo è il blocco di cui hai bisogno per impostare uno schema:
+
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
+
+          scegli lo schema che preferisci!
       courseC_artist_loops1a_authored_hint:
         courseC_artist_loops1a_a: |-
           Questo è il primo blocco di cui hai bisogno:
@@ -7303,6 +7681,24 @@ it:
           <title name="VALUE">Bird</title>
           </block>
           </xml>
+      courseC_artist_loops1a_2019_authored_hint:
+        courseC_artist_loops1a_a: |-
+          Questo è il primo blocco di cui hai bisogno:
+
+          <xml>
+          <block type="jump_to_xy">
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block>
+          </xml>
+        courseC_artist_loops1a_b: |-
+          Usa questo blocco per disegnare l'adesivo!
+
+          <xml>
+          <block type="sticker">
+          <title name="VALUE">Bird</title>
+          </block>
+          </xml>
       courseC_artist_loops2a_authored_hint:
         courseC_artist_loops2a_a: All'interno del ciclo dovresti saltare a "200 avanti
           200 in basso" (per raggiungere il centro dello schermo), quindi disegnare
@@ -7315,12 +7711,23 @@ it:
           l'adesivo dell'uccello e poi girare di 30 gradi.
         courseC_artist_loops2a_b: Clicca sul numero in cima al blocco `ripeti ...
           volte` per cambiare quante volte deve essere ripetuto il ciclo.
+      courseC_artist_loops2a_2019_authored_hint:
+        courseC_artist_loops2a_a: All'interno del ciclo dovresti saltare a "200 avanti
+          200 in basso" (per raggiungere il centro dello schermo), quindi disegnare
+          l'adesivo dell'uccello e poi girare di 30 gradi.
+        courseC_artist_loops2a_b: Clicca sul numero in cima al blocco `ripeti ...
+          volte` per cambiare quante volte deve essere ripetuto il ciclo.
       courseC_artist_loops3a_authored_hint:
         courseC_artist_loops3a_a: Dovrai aggiungere solo un blocco all'interno del
           ciclo, dopo l'adesivo dell'uccello.
         courseC_artist_loops3a_b: Usa il menù a discesa (▼) del blocco `disegna un
           adesivo` per trovare l'adesivo del pipistrello.
       courseC_artist_loops3a_2018_authored_hint:
+        courseC_artist_loops3a_a: Dovrai aggiungere solo un blocco all'interno del
+          ciclo, dopo l'adesivo dell'uccello.
+        courseC_artist_loops3a_b: Usa il menù a discesa (▼) del blocco `disegna un
+          adesivo` per trovare l'adesivo del pipistrello.
+      courseC_artist_loops3a_2019_authored_hint:
         courseC_artist_loops3a_a: Dovrai aggiungere solo un blocco all'interno del
           ciclo, dopo l'adesivo dell'uccello.
         courseC_artist_loops3a_b: Usa il menù a discesa (▼) del blocco `disegna un
@@ -7349,10 +7756,25 @@ it:
           </xml>
 
           Non dimenticare di cambiare la distanza!
+      courseC_artist_loops4a_2019_authored_hint:
+        courseC_artist_loops4a_a: |-
+          Usa questo blocco per saltare in avanti:
+
+          <xml>
+          <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+          </block>
+          </xml>
+
+          Non dimenticare di cambiare la distanza!
       courseC_artist_loops5a_authored_hint:
         courseC_artist_loops5a_a: Usa i menù a discesa (▼) dei blocchi `disegna un
           adesivo` per cambiare le immagini.
       courseC_artist_loops5a_2018_authored_hint:
+        courseC_artist_loops5a_a: Usa i menù a discesa (▼) dei blocchi `disegna un
+          adesivo` per cambiare le immagini.
+      courseC_artist_loops5a_2019_authored_hint:
         courseC_artist_loops5a_a: Usa i menù a discesa (▼) dei blocchi `disegna un
           adesivo` per cambiare le immagini.
       courseC_artist_loops5b_authored_hint:
@@ -7379,10 +7801,25 @@ it:
         courseC_artist_loops5b_b: Per fare un disegno come quello qui sopra, devi
           far spostare l'artista all'indietro della stessa quantità di cui si è mosso
           in avanti.
+      courseC_artist_loops5b_2019_authored_hint:
+        courseC_artist_loops5b_a: |-
+          Usa questo blocco per impostare lo schema delle tue linee:
+
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
+        courseC_artist_loops5b_b: Per fare un disegno come quello qui sopra, devi
+          far spostare l'artista all'indietro della stessa quantità di cui si è mosso
+          in avanti.
       courseC_artist_loops6a_authored_hint:
         courseC_artist_loops6a_a: Per realizzare un disegno come quello qui sopra,
           salta avanti meno di 75 pixel tra ogni adesivo.
       courseC_artist_loops6a_2018_authored_hint:
+        courseC_artist_loops6a_a: Per realizzare un disegno come quello qui sopra,
+          salta avanti meno di 75 pixel tra ogni adesivo.
+      courseC_artist_loops6a_2019_authored_hint:
         courseC_artist_loops6a_a: Per realizzare un disegno come quello qui sopra,
           salta avanti meno di 75 pixel tra ogni adesivo.
       courseC_artist_loops7a_authored_hint:
@@ -7390,6 +7827,10 @@ it:
           Per disegnare un cerchio completo ci vogliono 360 gradi. Moltiplica i gradi delle curve per il numero di volte che si ripete il ciclo. È uguale a 360?
           Controlla le rotazioni suggerite per vedere che funziona proprio così!
       courseC_artist_loops7a_2018_authored_hint:
+        courseC_artist_loops7a_a: |-
+          Per disegnare un cerchio completo ci vogliono 360 gradi. Moltiplica i gradi delle curve per il numero di volte che si ripete il ciclo. È uguale a 360?
+          Controlla le rotazioni suggerite per vedere che funziona proprio così!
+      courseC_artist_loops7a_2019_authored_hint:
         courseC_artist_loops7a_a: |-
           Per disegnare un cerchio completo ci vogliono 360 gradi. Moltiplica i gradi delle curve per il numero di volte che si ripete il ciclo. È uguale a 360?
           Controlla le rotazioni suggerite per vedere che funziona proprio così!
@@ -7405,6 +7846,12 @@ it:
         courseC_artist_loopsPre1a_b: 'Il ciclo `ripeti ... volte` dovrebbe avere 3
           blocchi al suo interno: `salta a 200 avanti 200 in basso`, `vai avanti di
           50 pixel` e `gira a destra di 60 gradi`.'
+      courseC_artist_loopsPre1a_2019_authored_hint:
+        courseC_artist_loopsPre1a_a: Ricorda di inserire il blocco `gira a ...` all'interno
+          del ciclo `ripeti ... volte`.
+        courseC_artist_loopsPre1a_b: 'Il ciclo `ripeti ... volte` dovrebbe avere 3
+          blocchi al suo interno: `salta a 200 avanti 200 in basso`, `vai avanti di
+          50 pixel` e `gira a destra di 60 gradi`.'
       courseC_artist_loopsPrePre1a_authored_hint:
         courseC_artist_loopsPrePre1a_a: |-
           Il primo blocco di cui avrai bisogno sarà:
@@ -7415,6 +7862,15 @@ it:
 
            <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>
       courseC_artist_loopsPrePre1a_2018_authored_hint:
+        courseC_artist_loopsPrePre1a_a: |-
+          Il primo blocco di cui avrai bisogno sarà:
+
+          <xml> <block type="jump_to_xy" id="callMe"> <title name="XPOS">200</title> <title name="YPOS">200</title> </block></xml>
+        courseC_artist_loopsPrePre1a_b: |-
+          Per andare avanti di 50 pixel usa questo blocco:
+
+           <xml><block type="draw_move_by_constant"> <title name="DIR">moveForward</title> <title name="VALUE">50</title> </block></xml>
+      courseC_artist_loopsPrePre1a_2019_authored_hint:
         courseC_artist_loopsPrePre1a_a: |-
           Il primo blocco di cui avrai bisogno sarà:
 
@@ -7654,12 +8110,20 @@ it:
       courseC_collector_loops_challenge2_2018_authored_hint:
         courseC_maze_loops_challenge2_b: Usa dei cicli per non superare il numero
           massimo di blocchi `raccogli`!
+      courseC_collector_loops_challenge2_2019_authored_hint:
+        courseC_maze_loops_challenge2_b: Usa dei cicli per non superare il numero
+          massimo di blocchi `raccogli`!
       courseC_collector_prog1_authored_hint:
         courseC_collector_prog1_a: Quando hai raggiunto un diamante, usa il blocco
           <xml><block type="collector_collect"/></xml> per raccoglierlo.
         courseC_collector_prog1_b: La soluzione più semplice è fare un passo avanti
           e raccogliere un diamante.
       courseC_collector_prog1_2018_authored_hint:
+        courseC_collector_prog1_a: Quando hai raggiunto un diamante, usa il blocco
+          <xml><block type="collector_collect"/></xml> per raccoglierlo.
+        courseC_collector_prog1_b: La soluzione più semplice è fare un passo avanti
+          e raccogliere un diamante.
+      courseC_collector_prog1_2019_authored_hint:
         courseC_collector_prog1_a: Quando hai raggiunto un diamante, usa il blocco
           <xml><block type="collector_collect"/></xml> per raccoglierlo.
         courseC_collector_prog1_b: La soluzione più semplice è fare un passo avanti
@@ -7673,6 +8137,14 @@ it:
           blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
           ancora risolto l'esercizio.
       courseC_collector_prog2_2018_authored_hint:
+        courseC_collector_prog2_a: Puoi usare quattro blocchi <xml><block type="maze_move"><title
+          name="DIR">moveForward</title></block></xml> oppure usare il blocco <xml><block
+          type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          per rendere il tuo programma più corto.
+        courseC_collector_prog2_b: Non aver paura di sbagliare! Prova ad aggiungere
+          blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
+          ancora risolto l'esercizio.
+      courseC_collector_prog2_2019_authored_hint:
         courseC_collector_prog2_a: Puoi usare quattro blocchi <xml><block type="maze_move"><title
           name="DIR">moveForward</title></block></xml> oppure usare il blocco <xml><block
           type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
@@ -7694,6 +8166,13 @@ it:
           il programma un'istruzione alla volta. Riesci a trovare l'errore?
         courseC_collector_prog3_c: Se hai difficoltà a risolvere questo esercizio,
           prova prima a scrivere le mosse su un pezzo di carta.
+      courseC_collector_prog3_2019_authored_hint:
+        courseC_collector_prog3_a: Verranno eseguiti solo i blocchi collegati al blocco
+          arancione <xml><block type="when_run"/></xml>
+        courseC_collector_prog3_b: Prova ad usare il pulsante "Fai un passo" per eseguire
+          il programma un'istruzione alla volta. Riesci a trovare l'errore?
+        courseC_collector_prog3_c: Se hai difficoltà a risolvere questo esercizio,
+          prova prima a scrivere le mosse su un pezzo di carta.
       courseC_collector_prog4_authored_hint:
         courseC_collector_prog4_a: Se ti blocchi, prova a scrivere i passaggi su un
           foglio.
@@ -7702,6 +8181,13 @@ it:
           ancora risolto l'esercizio.
         courseC_collector_prog4_c: Prova questo percorso.
       courseC_collector_prog4_2018_authored_hint:
+        courseC_collector_prog4_a: Se ti blocchi, prova a scrivere i passaggi su un
+          foglio.
+        courseC_collector_prog4_b: Non aver paura di sbagliare! Prova ad aggiungere
+          blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
+          ancora risolto l'esercizio.
+        courseC_collector_prog4_c: Prova questo percorso.
+      courseC_collector_prog4_2019_authored_hint:
         courseC_collector_prog4_a: Se ti blocchi, prova a scrivere i passaggi su un
           foglio.
         courseC_collector_prog4_b: Non aver paura di sbagliare! Prova ad aggiungere
@@ -7730,6 +8216,17 @@ it:
         courseC_collector_prog5_c: Se ti blocchi, prova a scrivere i passaggi su un
           foglio.
         courseC_collector_prog5_d: Segui il percorso per raccogliere i diamanti.
+      courseC_collector_prog5_2019_authored_hint:
+        courseC_collector_prog5_a: |-
+          "Funziona il primo passo?
+          È corretta la seconda istruzione?
+          Dov'è che il codice comincia a non fare ciò che avevi in mente?"
+        courseC_collector_prog5_b: Se hai corretto un errore e il programma continua
+          a non funzionare, usa la procedura del precedente suggerimento per trovare
+          altri errori.
+        courseC_collector_prog5_c: Se ti blocchi, prova a scrivere i passaggi su un
+          foglio.
+        courseC_collector_prog5_d: Segui il percorso per raccogliere i diamanti.
       courseC_collector_prog6_authored_hint:
         courseC_collector_prog6_a: |-
           Riesci a capire cosa non funziona?
@@ -7738,6 +8235,13 @@ it:
         courseC_collector_prog6_b: Ti sei bloccato? Segui il percorso per raccogliere
           i diamanti.
       courseC_collector_prog6_2018_authored_hint:
+        courseC_collector_prog6_a: |-
+          Riesci a capire cosa non funziona?
+
+          Prova a usare il pulsante "Fai un passo" per trovare errori eseguendo il codice un blocco per volta.
+        courseC_collector_prog6_b: Ti sei bloccato? Segui il percorso per raccogliere
+          i diamanti.
+      courseC_collector_prog6_2019_authored_hint:
         courseC_collector_prog6_a: |-
           Riesci a capire cosa non funziona?
 
@@ -7760,10 +8264,21 @@ it:
           attrezzi.
         courseC_collector_prog7_c: Hai difficoltà ad immaginare un percorso per raccogliere
           tutti i diamanti? Prova questo!
+      courseC_collector_prog7_2019_authored_hint:
+        courseC_collector_prog7_a: Ci sono già tanti ottimi blocchi nell'area di lavoro.
+          Non hai bisogno di cancellarne alcuno per risolvere questo esercizio.
+        courseC_collector_prog7_b: Non trovi il blocco che ti serve per far muovere
+          l'avventuriera nella direzione corretta? Prendine uno dalla cassetta degli
+          attrezzi.
+        courseC_collector_prog7_c: Hai difficoltà ad immaginare un percorso per raccogliere
+          tutti i diamanti? Prova questo!
       courseC_collector_prog_challenge1_authored_hint:
         courseC_collector_prog_challenge1_a: Puoi usare più volte il blocco `raccogli`
           per raccogliere i diamanti supplementari.
       courseC_collector_prog_challenge1_2018_authored_hint:
+        courseC_collector_prog_challenge1_a: Puoi usare più volte il blocco `raccogli`
+          per raccogliere i diamanti supplementari.
+      courseC_collector_prog_challenge1_2019_authored_hint:
         courseC_collector_prog_challenge1_a: Puoi usare più volte il blocco `raccogli`
           per raccogliere i diamanti supplementari.
       courseC_collector_prog_challenge2_authored_hint:
@@ -7776,9 +8291,16 @@ it:
           ad ogni casella.
         courseC_collector_prog_challenge1_b: Ti sei perso? Prova questo percorso per
           risolvere l'esercizio!
+      courseC_collector_prog_challenge2_2019_authored_hint:
+        courseC_collector_prog_challenge1_a: Puoi usare più di un blocco `raccogli`
+          ad ogni casella.
+        courseC_collector_prog_challenge1_b: Ti sei perso? Prova questo percorso per
+          risolvere l'esercizio!
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+      courseC_flappy_events1_2019_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events2_authored_hint:
         courseC_flappy_events2_a: 'Il blocco che devi aggiungere si chiama `imposta
@@ -7790,10 +8312,18 @@ it:
           una velocità ...`. '
         courseC_flappy_events2_b: Collega il blocco `imposta una velocità ...` al
           blocco `quando si clicca su "Esegui"` per risolvere questo esercizio.
+      courseC_flappy_events2_2019_authored_hint:
+        courseC_flappy_events2_a: 'Il blocco che devi aggiungere si chiama `imposta
+          una velocità ...`. '
+        courseC_flappy_events2_b: Collega il blocco `imposta una velocità ...` al
+          blocco `quando si clicca su "Esegui"` per risolvere questo esercizio.
       courseC_flappy_events3_authored_hint:
         courseC_flappy_events3_a: Se qualcosa non funziona correttamente, controlla
           che i blocchi siano collegati agli eventi corretti nell'area di lavoro.
       courseC_flappy_events3_2018_authored_hint:
+        courseC_flappy_events3_a: Se qualcosa non funziona correttamente, controlla
+          che i blocchi siano collegati agli eventi corretti nell'area di lavoro.
+      courseC_flappy_events3_2019_authored_hint:
         courseC_flappy_events3_a: Se qualcosa non funziona correttamente, controlla
           che i blocchi siano collegati agli eventi corretti nell'area di lavoro.
       courseC_flappy_events4_authored_hint:
@@ -7802,10 +8332,16 @@ it:
       courseC_flappy_events4_2018_authored_hint:
         courseC_flappy_events4_a: Per risolvere questo esercizio, collega il blocco
           `fine del gioco` al blocco dell'evento `quando colpisce un ostacolo`.
+      courseC_flappy_events4_2019_authored_hint:
+        courseC_flappy_events4_a: Per risolvere questo esercizio, collega il blocco
+          `fine del gioco` al blocco dell'evento `quando colpisce un ostacolo`.
       courseC_flappy_events5_authored_hint:
         courseC_flappy_events5_a: Dovrai usare il blocco `aggiungi un punto` per completare
           l'esercizio.
       courseC_flappy_events5_2018_authored_hint:
+        courseC_flappy_events5_a: Dovrai usare il blocco `aggiungi un punto` per completare
+          l'esercizio.
+      courseC_flappy_events5_2019_authored_hint:
         courseC_flappy_events5_a: Dovrai usare il blocco `aggiungi un punto` per completare
           l'esercizio.
       courseC_flappy_events6_authored_hint:
@@ -7814,10 +8350,16 @@ it:
       courseC_flappy_events6_2018_authored_hint:
         courseC_flappy_events6_a: Prova a collegare il blocco `sbatti le ali un numero
           di volte ...` all'evento `quando si clicca`.
+      courseC_flappy_events6_2019_authored_hint:
+        courseC_flappy_events6_a: Prova a collegare il blocco `sbatti le ali un numero
+          di volte ...` all'evento `quando si clicca`.
       courseC_flappy_events7_authored_hint:
         courseC_flappy_events7_a: Puoi modificare lo sfondo usando il blocco `imposta
           una scena ...`.
       courseC_flappy_events7_2018_authored_hint:
+        courseC_flappy_events7_a: Puoi modificare lo sfondo usando il blocco `imposta
+          una scena ...`.
+      courseC_flappy_events7_2019_authored_hint:
         courseC_flappy_events7_a: Puoi modificare lo sfondo usando il blocco `imposta
           una scena ...`.
       courseC_flappy_events8_authored_hint:
@@ -7826,10 +8368,16 @@ it:
       courseC_flappy_events8_2018_authored_hint:
         courseC_flappy_events8_a: Per completare l'esercizio, devi collegare un secondo
           blocco `imposta una scena ...` sotto l'evento `quando supera un ostacolo`.
+      courseC_flappy_events8_2019_authored_hint:
+        courseC_flappy_events8_a: Per completare l'esercizio, devi collegare un secondo
+          blocco `imposta una scena ...` sotto l'evento `quando supera un ostacolo`.
       courseC_flappy_events9_authored_hint:
         courseC_flappy_events9_a: Per completare l'esercizio, collega il blocco `imposta
           il punteggio 0` all'evento `quando colpisce un ostacolo`.
       courseC_flappy_events9_2018_authored_hint:
+        courseC_flappy_events9_a: Per completare l'esercizio, collega il blocco `imposta
+          il punteggio 0` all'evento `quando colpisce un ostacolo`.
+      courseC_flappy_events9_2019_authored_hint:
         courseC_flappy_events9_a: Per completare l'esercizio, collega il blocco `imposta
           il punteggio 0` all'evento `quando colpisce un ostacolo`.
       courseC_harvester_loops1_authored_hint:
@@ -8217,6 +8765,12 @@ it:
           la forma di un rettangolo! Deve girare dalla stessa parte ad ogni svolta.
         courseC_maze_debugging_challenge1_c: Se ti stai bloccando, puoi sempre ricominciare
           da capo e provare un percorso nuovo!
+      courseC_maze_debugging_challenge1_2019_authored_hint:
+        courseC_maze_debugging_challenge1_a: Destra o sinistra? A te la scelta!
+        courseC_maze_debugging_challenge1_b: Il percorso che deve seguire Scrat ha
+          la forma di un rettangolo! Deve girare dalla stessa parte ad ogni svolta.
+        courseC_maze_debugging_challenge1_c: Se ti stai bloccando, puoi sempre ricominciare
+          da capo e provare un percorso nuovo!
       courseC_maze_debugging_challenge2_authored_hint:
         courseC_maze_debugging_challenge2_b: Se ti stai bloccando, prova a controllare
           il codice (debugging). C'è qualcosa di sbagliato?
@@ -8225,6 +8779,13 @@ it:
 
           ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
       courseC_maze_debugging_challenge2_2018_authored_hint:
+        courseC_maze_debugging_challenge2_b: Se ti stai bloccando, prova a controllare
+          il codice (debugging). C'è qualcosa di sbagliato?
+        courseC_maze_debugging_challenge2_c: |-
+          Ci sono due diversi percorsi che puoi seguire andando avanti e girando solo quattro volte. Ma se trovi il modo di usare un ciclo, potrebbero essercene anche di più!
+
+          ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
+      courseC_maze_debugging_challenge2_2019_authored_hint:
         courseC_maze_debugging_challenge2_b: Se ti stai bloccando, prova a controllare
           il codice (debugging). C'è qualcosa di sbagliato?
         courseC_maze_debugging_challenge2_c: |-
@@ -8255,6 +8816,11 @@ it:
           diverse. Ognuna ha un suo schema che si ripete.
         courseC_maze_loops_challenge1_b: Ti ricordi come si usano i cicli per ripetere
           uno schema a scalinata?
+      courseC_maze_loops_challenge1a_2019_authored_hint:
+        courseC_maze_loops_challenge1_a: Considera questo percorso diviso in due parti
+          diverse. Ognuna ha un suo schema che si ripete.
+        courseC_maze_loops_challenge1_b: Ti ricordi come si usano i cicli per ripetere
+          uno schema a scalinata?
       courseC_maze_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_b: Usa dei cicli per non superare il numero
           massimo di blocchi `raccogli`!
@@ -8264,6 +8830,9 @@ it:
       courseC_maze_programming1_2018_authored_hint:
         courseC_maze_programming1_0: Controlla che tutti i blocchi siano correttamente
           agganciati tra loro, quindi clicca nuovamente su "Esegui".
+      courseC_maze_programming1_2019_authored_hint:
+        courseC_maze_programming1_0: Controlla che tutti i blocchi siano correttamente
+          agganciati tra loro, quindi clicca nuovamente su "Esegui".
       courseC_maze_programming2_authored_hint:
         courseC_maze_programming2_a: Per usare un blocco <xml><block type="maze_moveForward"/></xml>,
           trascinalo fuori dalla cassetta degli attrezzi e aggancialo al blocco <xml><block
@@ -8271,6 +8840,12 @@ it:
         courseC_maze_programming2_b: Controlla che tutti i blocchi siano correttamente
           agganciati tra loro, quindi clicca nuovamente su "Esegui".
       courseC_maze_programming2_2018_authored_hint:
+        courseC_maze_programming2_a: Per usare un blocco <xml><block type="maze_moveForward"/></xml>,
+          trascinalo fuori dalla cassetta degli attrezzi e aggancialo al blocco <xml><block
+          type="when_run"/></xml>.
+        courseC_maze_programming2_b: Controlla che tutti i blocchi siano correttamente
+          agganciati tra loro, quindi clicca nuovamente su "Esegui".
+      courseC_maze_programming2_2019_authored_hint:
         courseC_maze_programming2_a: Per usare un blocco <xml><block type="maze_moveForward"/></xml>,
           trascinalo fuori dalla cassetta degli attrezzi e aggancialo al blocco <xml><block
           type="when_run"/></xml>.
@@ -8288,6 +8863,17 @@ it:
 
           Infine, rimetti al loro posto gli altri blocchi.
       courseC_maze_programming3_2018_authored_hint:
+        courseC_maze_programming3_a: Prima prova ad eseguire il programma per vedere
+          dove sbaglia.
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Per eliminare un blocco dal bel mezzo del programma, trascina da una parte tutti i blocchi sotto di lui.
+
+          Trascina nella cassetta degli attrezzi il blocco che vuoi cancellare.
+
+          Infine, rimetti al loro posto gli altri blocchi.
+      courseC_maze_programming3_2019_authored_hint:
         courseC_maze_programming3_a: Prima prova ad eseguire il programma per vedere
           dove sbaglia.
         courseC_maze_programming3_b: |-
@@ -8320,6 +8906,17 @@ it:
           - vai avanti,
           - gira dalla parte opposta,
           - vai avanti.
+      courseC_maze_programming4_2019_authored_hint:
+        courseC_maze_programming4_a: Ricorda che quando usi l'istruzione `gira a ...`,
+          devi ragionare secondo il *punto di vista dell'uccellino*. In questo caso,
+          l'istruzione `gira a destra` farà dirigere l'uccellino verso il basso.
+        courseC_maze_programming4_b: |-
+          Per seguire il percorso:
+          - vai avanti,
+          - gira da una parte,
+          - vai avanti,
+          - gira dalla parte opposta,
+          - vai avanti.
       courseC_maze_programming5_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per
           eseguire il codice un'istruzione alla volta. Riesci a capire cosa devi fare
@@ -8329,6 +8926,14 @@ it:
         courseC_maze_programming5_c: La soluzione corretta ha due blocchi `vai avanti`,
           una curva e altri due blocchi `vai avanti`.
       courseC_maze_programming5_2018_authored_hint:
+        courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per
+          eseguire il codice un'istruzione alla volta. Riesci a capire cosa devi fare
+          dopo?
+        courseC_maze_programming5_b: L'uccellino deve fare una curva per portare a
+          termine questo esercizio. Riesci a capire in quale direzione?
+        courseC_maze_programming5_c: La soluzione corretta ha due blocchi `vai avanti`,
+          una curva e altri due blocchi `vai avanti`.
+      courseC_maze_programming5_2019_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per
           eseguire il codice un'istruzione alla volta. Riesci a capire cosa devi fare
           dopo?
@@ -8350,6 +8955,13 @@ it:
         courseC_maze_programming6_c: Ricorda che prima devi far girare l'uccellino,
           visto che inizialmente è rivolto verso un muro.
         courseC_maze_programming6_d: Ti sei bloccato? Guarda questo percorso!
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: Ci sono due modi per risolvere questo esercizio!
+        courseC_maze_programming6_b: Traccia con il tuo dito il percorso dall'uccellino
+          fino al maialino, che movimenti hai fatto?
+        courseC_maze_programming6_c: Ricorda che prima devi far girare l'uccellino,
+          visto che inizialmente è rivolto verso un muro.
+        courseC_maze_programming6_d: Ti sei bloccato? Guarda questo percorso!
       courseC_maze_programming7_authored_hint:
         courseC_maze_programming7_a: Non dimenticare di usare il pulsante "Fai un
           passo" che esegue un blocco per volta permettendoti di notare più facilmente
@@ -8357,6 +8969,12 @@ it:
         courseC_maze_programming7_b: Se hai difficoltà a risolvere questo esercizio,
           prova prima a scrivere le mosse su un pezzo di carta.
       courseC_maze_programming7_2018_authored_hint:
+        courseC_maze_programming7_a: Non dimenticare di usare il pulsante "Fai un
+          passo" che esegue un blocco per volta permettendoti di notare più facilmente
+          gli errori.
+        courseC_maze_programming7_b: Se hai difficoltà a risolvere questo esercizio,
+          prova prima a scrivere le mosse su un pezzo di carta.
+      courseC_maze_programming7_2019_authored_hint:
         courseC_maze_programming7_a: Non dimenticare di usare il pulsante "Fai un
           passo" che esegue un blocco per volta permettendoti di notare più facilmente
           gli errori.
@@ -8374,10 +8992,19 @@ it:
         courseC_maze_programming8_b: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
           ancora risolto l'esercizio.
+      courseC_maze_programming8_2019_authored_hint:
+        courseC_maze_programming8_a: Ricordati che se ti blocchi puoi usare il pulsante
+          "Fai un passo" per analizzare il tuo codice linea per linea.
+        courseC_maze_programming8_b: Non aver paura di sbagliare! Prova ad aggiungere
+          blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
+          ancora risolto l'esercizio.
       courseC_maze_programming_challenge1_authored_hint:
         courseC_maze_programming_challenge1_a: Ci sono molti modi per raggiungere
           il maialino. Usa il tuo dito per trovare un percorso e poi programmalo!
       courseC_maze_programming_challenge1_2018_authored_hint:
+        courseC_maze_programming_challenge1_a: Ci sono molti modi per raggiungere
+          il maialino. Usa il tuo dito per trovare un percorso e poi programmalo!
+      courseC_maze_programming_challenge1_2019_authored_hint:
         courseC_maze_programming_challenge1_a: Ci sono molti modi per raggiungere
           il maialino. Usa il tuo dito per trovare un percorso e poi programmalo!
       courseC_maze_programming_challenge2_authored_hint:
@@ -8388,6 +9015,13 @@ it:
 
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_maze_programming_challenge2_2018_authored_hint:
+        courseC_maze_programming_challenge2_a: '*"Se mi fai muovere all''indietro,
+          stai particolarmente attento a farmi girare dalla parte giusta!"*'
+        courseC_maze_programming_challenge2_b: |-
+          La soluzione più corta usa solo 5 blocchi, ma usa questo blocco:
+
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseC_maze_programming_challenge2_2019_authored_hint:
         courseC_maze_programming_challenge2_a: '*"Se mi fai muovere all''indietro,
           stai particolarmente attento a farmi girare dalla parte giusta!"*'
         courseC_maze_programming_challenge2_b: |-
@@ -8425,7 +9059,22 @@ it:
           `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
         courseC_starWars_loops10_c: Non aver paura di sbagliare! Esegui il codice
           per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
+      courseC_starWars_loops10_2019_authored_hint:
+        courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti
+          ? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi
+          per fare le curve giuste.
+        courseC_starWars_loops10_b: Se vuoi usare meno blocchi, puoi mettere un ciclo
+          `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
+        courseC_starWars_loops10_c: Non aver paura di sbagliare! Esegui il codice
+          per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
       courseC_starWars_loops1_2018_authored_hint:
+        courseC_starWars_loops1_a: Quando BB-8 rotola su un rottame metallico lo recupera
+          automaticamente.
+        courseC_starWars_loops1_b: Non aver paura di sbagliare! Esegui il codice per
+          vedere cosa succede, anche se non hai ancora risolto l'esercizio.
+        courseC_starWars_loops1_c: Devi andare avanti cinque volte per risolvere questo
+          esercizio.
+      courseC_starWars_loops1_2019_authored_hint:
         courseC_starWars_loops1_a: Quando BB-8 rotola su un rottame metallico lo recupera
           automaticamente.
         courseC_starWars_loops1_b: Non aver paura di sbagliare! Esegui il codice per
@@ -8437,6 +9086,10 @@ it:
           nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno
           i blocchi che vuoi ripetere.
       courseC_starWars_loops2_2018_authored_hint:
+        courseC_starWars_loops2_a: Per ripetere una sequenza di istruzioni, trascina
+          nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno
+          i blocchi che vuoi ripetere.
+      courseC_starWars_loops2_2019_authored_hint:
         courseC_starWars_loops2_a: Per ripetere una sequenza di istruzioni, trascina
           nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno
           i blocchi che vuoi ripetere.
@@ -8452,12 +9105,23 @@ it:
         courseC_starWars_loops4_a: Usa due blocchi `ripeti ... volte`.
         courseC_starWars_loops4_b: 'Ogni ciclo `ripeti ... volte` avrà una sola istruzione
           al suo interno: `vai avanti`.'
+      courseC_starWars_loops4_2019_authored_hint:
+        courseC_starWars_loops4_c: Usa il menù a discesa (▼) del blocco `gira a ...`
+          per sostituire "sinistra" con "destra".
+        courseC_starWars_loops4_a: Usa due blocchi `ripeti ... volte`.
+        courseC_starWars_loops4_b: 'Ogni ciclo `ripeti ... volte` avrà una sola istruzione
+          al suo interno: `vai avanti`.'
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: Per far muovere BB-8 verso il basso, devi farlo
           girare e poi farlo andare avanti.
         courseC_starWars_loops5_a: La soluzione migliore usa una curva, un singolo
           `vai avanti`, un'altra curva e infine un ciclo.
       courseC_starWars_loops5_2018_authored_hint:
+        courseC_starWars_loops5_b: Per far muovere BB-8 verso il basso, devi farlo
+          girare e poi farlo andare avanti.
+        courseC_starWars_loops5_a: La soluzione migliore usa una curva, un singolo
+          `vai avanti`, un'altra curva e infine un ciclo.
+      courseC_starWars_loops5_2019_authored_hint:
         courseC_starWars_loops5_b: Per far muovere BB-8 verso il basso, devi farlo
           girare e poi farlo andare avanti.
         courseC_starWars_loops5_a: La soluzione migliore usa una curva, un singolo
@@ -8472,6 +9136,11 @@ it:
           carta e cerca una sequenza che si ripete.
         courseC_starWars_loops6_b: Se vuoi usare meno blocchi, puoi mettere un ciclo
           `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
+      courseC_starWars_loops6_2019_authored_hint:
+        courseC_starWars_loops6_a: Prova a scrivere tutte le mosse su un pezzo di
+          carta e cerca una sequenza che si ripete.
+        courseC_starWars_loops6_b: Se vuoi usare meno blocchi, puoi mettere un ciclo
+          `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
       courseC_starWars_loops7_authored_hint:
         courseC_starWars_loops7_a: Questo schema sembra più difficile di quello che
           è! Inizia con un semplice gradino. Permette di recuperare tutti i rottami
@@ -8482,6 +9151,15 @@ it:
         courseC_starWars_loops7_c: Non aver paura di sbagliare! Esegui il codice per
           vedere cosa succede, anche se non hai ancora risolto l'esercizio.
       courseC_starWars_loops7_2018_authored_hint:
+        courseC_starWars_loops7_a: Questo schema sembra più difficile di quello che
+          è! Inizia con un semplice gradino. Permette di recuperare tutti i rottami
+          metallici?
+        courseC_starWars_loops7_b: Se hai difficoltà nella risoluzione di questo esercizio,
+          prova a scrivere tutte le mosse su un foglio di carta e cerca di trovare
+          uno schema che si ripete.
+        courseC_starWars_loops7_c: Non aver paura di sbagliare! Esegui il codice per
+          vedere cosa succede, anche se non hai ancora risolto l'esercizio.
+      courseC_starWars_loops7_2019_authored_hint:
         courseC_starWars_loops7_a: Questo schema sembra più difficile di quello che
           è! Inizia con un semplice gradino. Permette di recuperare tutti i rottami
           metallici?
@@ -8510,6 +9188,16 @@ it:
           Dai un'occhiata a questo percorso:
 
           ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_2019_authored_hint:
+        course_starWars_loops8_a: Prova a suddividere questo problema in piccole parti.
+          Prenditi tutto il tempo che serve. Non è necessario risolvere l'esercizio
+          al primo tentativo!
+        course_starWars_loops8_b: Pensa alla prima parte di questo esercizio come
+          ad una scalinata. Come puoi risolverla?
+        course_starWars_loops8_c: |-
+          Dai un'occhiata a questo percorso:
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops9_authored_hint:
         course_starWars_loops9_b: Puoi mettere più di un blocco all'interno del ciclo
           `ripeti ... volte`.
@@ -8518,6 +9206,13 @@ it:
 
           ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
       courseC_starWars_loops9_2018_authored_hint:
+        course_starWars_loops9_b: Puoi mettere più di un blocco all'interno del ciclo
+          `ripeti ... volte`.
+        course_starWars_loops9_c: |-
+          Non dovrai mai girare a sinistra per risolvere questo esercizio. Tutte le curve saranno a destra.
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
+      courseC_starWars_loops9_2019_authored_hint:
         course_starWars_loops9_b: Puoi mettere più di un blocco all'interno del ciclo
           `ripeti ... volte`.
         course_starWars_loops9_c: |-
@@ -8583,13 +9278,27 @@ it:
           per scegliere l'angolo che ti serve!
         courseD_artist_project1_b: Ricordati che il blocco `vai avanti` disegna una
           linea, mentre quello `salta in avanti` fa muovere senza lasciare traccia.
+      courseD_artist_1_2018_2019_authored_hint:
+        courseD_artist_project1_a: Usa il menù a discesa (▼) del blocco `gira a ...`
+          per scegliere l'angolo che ti serve!
+        courseD_artist_project1_b: Ricordati che il blocco `vai avanti` disegna una
+          linea, mentre quello `salta in avanti` fa muovere senza lasciare traccia.
       courseD_artist_2_2018_authored_hint:
         courseD_artist_project1_b: Ricordati che i blocchi di tipo `vai ...` disegnano
           una linea, mentre quelli di tipo `salta ...` fanno muovere senza lasciare
           traccia.
         courseD_artist_project1_a: Usa il menù a discesa (▼) del blocco `gira a ...`
           per scegliere l'angolo che ti serve!
+      courseD_artist_2_2018_2019_authored_hint:
+        courseD_artist_project1_b: Ricordati che i blocchi di tipo `vai ...` disegnano
+          una linea, mentre quelli di tipo `salta ...` fanno muovere senza lasciare
+          traccia.
+        courseD_artist_project1_a: Usa il menù a discesa (▼) del blocco `gira a ...`
+          per scegliere l'angolo che ti serve!
       courseD_artist_5_2018_authored_hint:
+        '1': Se stai cambiando le forme, non dimenticare che dovrai cambiare anche
+          i relativi angoli!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': Se stai cambiando le forme, non dimenticare che dovrai cambiare anche
           i relativi angoli!
       courseD_artist_7_2018_authored_hint:
@@ -8623,10 +9332,22 @@ it:
           Ecco come puoi inserire la codifica binaria:
 
           ![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)
+      courseD_artist_binary1_2019_authored_hint:
+        courseD_artist_binary1_a: 'Sostituisci i punti interrogativi "???" nel blocco
+          di testo con la codifica binaria dell''immagine da realizzare: uni e zeri.'
+        courseD_artist_binary1_b: L'artista disegnerà uno spazio bianco per ogni 1
+          e uno spazio nero per ogni 0.
+        courseD_artist_binary1_c: |-
+          Ecco come puoi inserire la codifica binaria:
+
+          ![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)
       courseD_artist_binary2_authored_hint:
         courseD_artist_binary2_a: È già tutto pronto, devi solo cliccare su "Esegui"
           per vedere questo programma in azione!
       courseD_artist_binary2_2018_authored_hint:
+        courseD_artist_binary2_a: È già tutto pronto, devi solo cliccare su "Esegui"
+          per vedere questo programma in azione!
+      courseD_artist_binary2_2019_authored_hint:
         courseD_artist_binary2_a: È già tutto pronto, devi solo cliccare su "Esegui"
           per vedere questo programma in azione!
       courseD_artist_binary3_authored_hint:
@@ -8641,6 +9362,12 @@ it:
         courseD_artist_binary3_b: Non aver paura di sbagliare! Anche se non pensi
           di aver trovato la soluzione corretta, prova ad inserire una sequenza ed
           eseguire il codice per vedere cosa succede.
+      courseD_artist_binary3_2019_authored_hint:
+        courseD_artist_binary3_a: Una delle quattro sequenze binarie che vedi nella
+          cassetta degli attrezzi risolve questo esercizio!
+        courseD_artist_binary3_b: Non aver paura di sbagliare! Anche se non pensi
+          di aver trovato la soluzione corretta, prova ad inserire una sequenza ed
+          eseguire il codice per vedere cosa succede.
       courseD_artist_binary4_authored_hint:
         courseD_artist_binary4_a: Guarda i primi tre quadrati in alto a sinistra.
           Potrebbe bastare la ripetizione di questi tre per completare tutta la figura?
@@ -8648,6 +9375,12 @@ it:
           di aver trovato la soluzione corretta, prova ad inserire una sequenza ed
           eseguire il codice per vedere cosa succede.
       courseD_artist_binary4_2018_authored_hint:
+        courseD_artist_binary4_a: Guarda i primi tre quadrati in alto a sinistra.
+          Potrebbe bastare la ripetizione di questi tre per completare tutta la figura?
+        courseD_artist_binary4_b: Non aver paura di sbagliare! Anche se non pensi
+          di aver trovato la soluzione corretta, prova ad inserire una sequenza ed
+          eseguire il codice per vedere cosa succede.
+      courseD_artist_binary4_2019_authored_hint:
         courseD_artist_binary4_a: Guarda i primi tre quadrati in alto a sinistra.
           Potrebbe bastare la ripetizione di questi tre per completare tutta la figura?
         courseD_artist_binary4_b: Non aver paura di sbagliare! Anche se non pensi
@@ -8669,12 +9402,25 @@ it:
         courseD_artist_binary5_c: Se hai difficoltà nella risoluzione di questo esercizio,
           prova a scrivere le sequenze binarie su un foglio di carta a quadretti e
           cerca di capire lo schema.
+      courseD_artist_binary5_2019_authored_hint:
+        courseD_artist_binary5_a: Per capire che blocchi devi spostare, prova prima
+          ad eseguire il programma.
+        courseD_artist_binary5_b: Per trasformare l'immagine in un sorriso, devi solo
+          invertire due righe.
+        courseD_artist_binary5_c: Se hai difficoltà nella risoluzione di questo esercizio,
+          prova a scrivere le sequenze binarie su un foglio di carta a quadretti e
+          cerca di capire lo schema.
       courseD_artist_binary6_authored_hint:
         courseD_artist_binary6_a: 'Conta partendo dall''alto a sinistra: quante caselle
           devi considerare per trovare la sequenza che si ripete?'
         courseD_artist_binary6_b: Puoi anche costruire la sequenza binaria una cifra
           alla volta e verificarne di volta in volta l'effetto!
       courseD_artist_binary6_2018_authored_hint:
+        courseD_artist_binary6_a: 'Conta partendo dall''alto a sinistra: quante caselle
+          devi considerare per trovare la sequenza che si ripete?'
+        courseD_artist_binary6_b: Puoi anche costruire la sequenza binaria una cifra
+          alla volta e verificarne di volta in volta l'effetto!
+      courseD_artist_binary6_2019_authored_hint:
         courseD_artist_binary6_a: 'Conta partendo dall''alto a sinistra: quante caselle
           devi considerare per trovare la sequenza che si ripete?'
         courseD_artist_binary6_b: Puoi anche costruire la sequenza binaria una cifra
@@ -8686,6 +9432,12 @@ it:
           di aver trovato la soluzione corretta, prova ad inserire una sequenza ed
           eseguire il codice per vedere cosa succede.
       courseD_artist_binary7_2018_authored_hint:
+        courseD_artist_binary7_a: 'Conta partendo dall''alto a sinistra: quante caselle
+          devi considerare per trovare la sequenza che si ripete?'
+        courseD_artist_binary7_b: Non aver paura di sbagliare! Anche se non pensi
+          di aver trovato la soluzione corretta, prova ad inserire una sequenza ed
+          eseguire il codice per vedere cosa succede.
+      courseD_artist_binary7_2019_authored_hint:
         courseD_artist_binary7_a: 'Conta partendo dall''alto a sinistra: quante caselle
           devi considerare per trovare la sequenza che si ripete?'
         courseD_artist_binary7_b: Non aver paura di sbagliare! Anche se non pensi
@@ -8707,10 +9459,21 @@ it:
         courseD_artist_binary8_c: Non aver paura di sbagliare! Anche se non pensi
           di aver trovato la soluzione corretta, prova ad inserire una sequenza ed
           eseguire il codice per vedere cosa succede.
+      courseD_artist_binary8_2019_authored_hint:
+        courseD_artist_binary8_a: A volte la spirale può confondere. Per creare questo
+          disegno ragiona di volta in volta su una sola riga orizzontale.
+        courseD_artist_binary8_b: Per capire che blocchi devi spostare, prova prima
+          ad eseguire il programma.
+        courseD_artist_binary8_c: Non aver paura di sbagliare! Anche se non pensi
+          di aver trovato la soluzione corretta, prova ad inserire una sequenza ed
+          eseguire il codice per vedere cosa succede.
       courseD_artist_binary_challenge2_authored_hint:
         courseD_artist_binary_challenge2_a: Ci sono solo poche righe sbagliate nel
           programma originale.
       courseD_artist_binary_challenge2_2018_authored_hint:
+        courseD_artist_binary_challenge2_a: Ci sono solo poche righe sbagliate nel
+          programma originale.
+      courseD_artist_binary_challenge2_2019_authored_hint:
         courseD_artist_binary_challenge2_a: Ci sono solo poche righe sbagliate nel
           programma originale.
       courseD_artist_functions2_authored_hint:
@@ -8752,6 +9515,14 @@ it:
         courseD_artist_nestedLoops1_c: Prova a scrivere i passaggi su un foglio di
           carta e cerca degli schemi che si ripetono e possano essere semplificati
           con dei cicli.
+      courseD_artist_nestedLoops1_2019_authored_hint:
+        courseD_artist_nestedLoops1_a: Il modo più facile di disegnarlo, è usare il
+          blocco `vai avanti` e il blocco `gira a destra`.
+        courseD_artist_nestedLoops1_b: Puoi disegnare questo triangolo con un ciclo
+          `ripeti ... volte` con due blocchi all'interno. Di quali blocchi hai bisogno?
+        courseD_artist_nestedLoops1_c: Prova a scrivere i passaggi su un foglio di
+          carta e cerca degli schemi che si ripetono e possano essere semplificati
+          con dei cicli.
       courseD_artist_nestedLoops1a_authored_hint:
         courseD_artist_nestedLoops1a_a: "Dovrai disegnare 6 triangoli in tutto. Dopo
           aver terminato ciascun triangolo, ruota di 60 gradi e procedi con il triangolo
@@ -8763,6 +9534,16 @@ it:
           inserire nel programma il blocco `imposta il colore`. Ma sappi che non devi
           per forza usare gli stessi colori dell'immagine di esempio.
       courseD_artist_nestedLoops1a_2018_authored_hint:
+        courseD_artist_nestedLoops1a_a: "Dovrai disegnare 6 triangoli in tutto. Dopo
+          aver terminato ciascun triangolo, ruota di 60 gradi e procedi con il triangolo
+          successivo. \n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)"
+        courseD_artist_nestedLoops1a_b: Se crei un triangolo con un ciclo, alla fine
+          l'artista dovrebbe essere rivolto nella stessa direzione di quando è partito.
+          Questo renderà tutto più semplice.
+        courseD_artist_nestedLoops1a_c: Se vuoi aggiungere un po' di colore, puoi
+          inserire nel programma il blocco `imposta il colore`. Ma sappi che non devi
+          per forza usare gli stessi colori dell'immagine di esempio.
+      courseD_artist_nestedLoops1a_2019_authored_hint:
         courseD_artist_nestedLoops1a_a: "Dovrai disegnare 6 triangoli in tutto. Dopo
           aver terminato ciascun triangolo, ruota di 60 gradi e procedi con il triangolo
           successivo. \n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)"
@@ -8784,6 +9565,12 @@ it:
           ... volte`.'
         courseD_artist_nestedLoops2_b: Ricordati di inserire il blocco `gira` dentro
           al ciclo, per fare in modo che l'artista giri dopo ogni triangolo.
+      courseD_artist_nestedLoops2_2019_authored_hint:
+        courseD_artist_nestedLoops2_a: 'Servono due cicli annidati: il ciclo che realizza
+          il triangolo deve essere a sua volta racchiuso in un altro ciclo `ripeti
+          ... volte`.'
+        courseD_artist_nestedLoops2_b: Ricordati di inserire il blocco `gira` dentro
+          al ciclo, per fare in modo che l'artista giri dopo ogni triangolo.
       courseD_artist_nestedLoops3_authored_hint:
         courseD_artist_nestedLoops3_a: Prova ad usare il blocco `salta in avanti`
           per passare dalla cima di un quadrato alla posizione in cui devi iniziare
@@ -8794,6 +9581,15 @@ it:
           fare un quadrato. Dopo di che, ripeti 8 volte questo quadrato, saltando
           di 40 pixel tra uno e l'altro.
       courseD_artist_nestedLoops3_2018_authored_hint:
+        courseD_artist_nestedLoops3_a: Prova ad usare il blocco `salta in avanti`
+          per passare dalla cima di un quadrato alla posizione in cui devi iniziare
+          il successivo.
+        courseD_artist_nestedLoops3_b: 'Non dimenticare di usare un ciclo annidato
+          per risolvere l''esercizio velocemente. '
+        courseD_artist_nestedLoops3_c: Inizia usando un ciclo `ripeti ... volte` per
+          fare un quadrato. Dopo di che, ripeti 8 volte questo quadrato, saltando
+          di 40 pixel tra uno e l'altro.
+      courseD_artist_nestedLoops3_2019_authored_hint:
         courseD_artist_nestedLoops3_a: Prova ad usare il blocco `salta in avanti`
           per passare dalla cima di un quadrato alla posizione in cui devi iniziare
           il successivo.
@@ -8830,6 +9626,20 @@ it:
           pixel tra un cerchio e l'altro.
         courseD_artist_nestedLoops4_c: Usa un ciclo annidato per disegnare i cerchi
           4 volte.
+      courseD_artist_nestedLoops4_2019_authored_hint:
+        courseD_artist_nestedLoops4_d: 'Attenzione: l''artista deve muoversi **prima**
+          di girare, altrimenti i cerchi saranno leggermente sfasati e l''esercizio
+          non sarà ritenuto corretto!'
+        courseD_artist_nestedLoops4_a: |-
+          Per fare un cerchio:
+
+          - ripeti 360 volte
+          - vai avanti di 1 pixel
+          - gira a sinistra di 1 grado
+        courseD_artist_nestedLoops4_b: Non dimenticarti di saltare in avanti di 50
+          pixel tra un cerchio e l'altro.
+        courseD_artist_nestedLoops4_c: Usa un ciclo annidato per disegnare i cerchi
+          4 volte.
       courseD_artist_nestedLoops5_authored_hint:
         courseD_artist_nestedLoops5_a: |-
           Per farlo in modo semplice:
@@ -8842,6 +9652,17 @@ it:
           `ripeti 360 volte`, all'interno del quale l'artista va avanti di 1 pixel
           e gira di 1 grado.
       courseD_artist_nestedLoops5_2018_authored_hint:
+        courseD_artist_nestedLoops5_a: |-
+          Per farlo in modo semplice:
+
+          - ripeti 4 volte
+          - fai un cerchio
+          - salta in avanti di 50 pixel
+          - gira a destra di 90 gradi
+        courseD_artist_nestedLoops5_b: Per fare un cerchio, devi impostare un ciclo
+          `ripeti 360 volte`, all'interno del quale l'artista va avanti di 1 pixel
+          e gira di 1 grado.
+      courseD_artist_nestedLoops5_2019_authored_hint:
         courseD_artist_nestedLoops5_a: |-
           Per farlo in modo semplice:
 
@@ -8874,6 +9695,17 @@ it:
           - fai un quadrato
           - salta in avanti di **50 pixel**
           - gira di **60 gradi**
+      courseD_artist_nestedLoops7_2019_authored_hint:
+        courseD_artist_nestedLoops7_a: Qui dovrai usare dei cicli annidati. Innanzitutto,
+          serve un ciclo per disegnare un quadrato. Cosa dovrà fare il ciclo esterno
+          se quello interno disegna un quadrato?
+        courseD_artist_nestedLoops7_b: |-
+          Usa un ciclo annidato, nel quale il ciclo interno realizza un quadrato.
+
+          - Ripeti 6 volte
+          - fai un quadrato
+          - salta in avanti di **50 pixel**
+          - gira di **60 gradi**
       courseD_artist_nestedLoops8_authored_hint:
         courseD_artist_nestedLoops8_a: Per ottenere otto esagoni nel tuo disegno,
           dovrai girare di **45 gradi** tra uno e l'altro. Perché? Perché per fare
@@ -8889,6 +9721,20 @@ it:
           - salta in avanti di 50 pixel
           - gira a destra di 45 gradi
       courseD_artist_nestedLoops8_2018_authored_hint:
+        courseD_artist_nestedLoops8_a: Per ottenere otto esagoni nel tuo disegno,
+          dovrai girare di **45 gradi** tra uno e l'altro. Perché? Perché per fare
+          un giro completo servono 360 gradi e se devi distribuire 8 esagoni in un
+          giro completo, devi dividere i 360 gradi in 8 parti, quindi 360:8=45.
+        courseD_artist_nestedLoops8_b: Se sei bloccato, prendi spunto dall'ultimo
+          esercizio e cerca di capire cosa c'è di diverso.
+        courseD_artist_nestedLoops8_c: |-
+          Usa un ciclo annidato:
+
+          - ripeti 8 volte
+          - disegna un esagono
+          - salta in avanti di 50 pixel
+          - gira a destra di 45 gradi
+      courseD_artist_nestedLoops8_2019_authored_hint:
         courseD_artist_nestedLoops8_a: Per ottenere otto esagoni nel tuo disegno,
           dovrai girare di **45 gradi** tra uno e l'altro. Perché? Perché per fare
           un giro completo servono 360 gradi e se devi distribuire 8 esagoni in un
@@ -8932,6 +9778,21 @@ it:
           - disegna un triangolo
           - salta in avanti di 50 pixel
           - gira a destra di 45 gradi
+      courseD_artist_nestedLoops9_2019_authored_hint:
+        courseD_artist_nestedLoops9_a: Inizia utilizzando un ciclo annidato come quello
+          usato in precedenza, ma questa volta fai disegnare dei quadrati.
+        courseD_artist_nestedLoops9_b: Aggiungi un secondo gruppo di cicli annidati
+          dopo il primo gruppo, ma questa volta disegna dei triangoli.
+        courseD_artist_nestedLoops9_c: |-
+          Utilizza due cicli annidati:
+          - ripeti 8 volte
+          - disegna un quadrato
+          - salta in avanti di 50 pixel
+          - gira a destra di 45 gradi
+          - ripeti 8 volte
+          - disegna un triangolo
+          - salta in avanti di 50 pixel
+          - gira a destra di 45 gradi
       courseD_artist_nestedLoopsFP_authored_hint:
         courseD_artist_nestedLoopsFP_a: |-
           <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png" width="200px"/>
@@ -8958,6 +9819,19 @@ it:
           <img src="https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png" width="200px"/>
 
           Questa immagine è stata realizzata con un ciclo annidato che ripete un pentagono (con lati di 50 pixel) per 15 volte, usando un angolo di 48 gradi.
+      courseD_artist_nestedLoopsFP_2019_authored_hint:
+        courseD_artist_nestedLoopsFP_a: |-
+          <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png" width="200px"/>
+
+          Questa immagine è stata realizzata con un ciclo annidato che ripete un esagono (con lati di 50 pixel) 15 volte usando un angolo di 48 gradi.
+        courseD_artist_nestedLoopsFP_b: |-
+          <img src="https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png" width="200px"/>
+
+          Questa immagine è stata realizzata usando un programma simile a quello di un precedente esercizio (ripeti 360 volte: vai avanti 1, gira di un 1 grado).
+        courseD_artist_nestedLoopsFP_c: |-
+          <img src="https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png" width="200px"/>
+
+          Questa immagine è stata realizzata con un ciclo annidato che ripete un pentagono (con lati di 50 pixel) per 15 volte, usando un angolo di 48 gradi.
       courseD_artist_nestedLoops_challenge1_authored_hint:
         courseD_artist_nestedLoops_challenge1_a: Inizia impostando il colore blu,
           poi crea un ottagono con lati di 50 pixel e curve di 45 gradi a sinistra.
@@ -8969,6 +9843,16 @@ it:
         courseD_artist_nestedLoops_challenge1_d: Per concludere, metti tutte le istruzioni
           all'interno di un ciclo `ripeti 4 volte`.
       courseD_artist_nestedLoops_challenge1_2018_authored_hint:
+        courseD_artist_nestedLoops_challenge1_a: Inizia impostando il colore blu,
+          poi crea un ottagono con lati di 50 pixel e curve di 45 gradi a sinistra.
+        courseD_artist_nestedLoops_challenge1_b: Aggiungi le istruzioni per cambiare
+          il colore in verde e disegnare un triangolo con lati di 50 pixel e curve
+          di 120 gradi a sinistra.
+        courseD_artist_nestedLoops_challenge1_c: Dopo aver disegnato entrambe le forme,
+          dovrai saltare avanti di 50 pixel prima di girare a destra di 90 gradi.
+        courseD_artist_nestedLoops_challenge1_d: Per concludere, metti tutte le istruzioni
+          all'interno di un ciclo `ripeti 4 volte`.
+      courseD_artist_nestedLoops_challenge1_2019_authored_hint:
         courseD_artist_nestedLoops_challenge1_a: Inizia impostando il colore blu,
           poi crea un ottagono con lati di 50 pixel e curve di 45 gradi a sinistra.
         courseD_artist_nestedLoops_challenge1_b: Aggiungi le istruzioni per cambiare
@@ -9220,6 +10104,17 @@ it:
         courseD_bee_conditionals2_c: 'Non hai bisogno di controllare se ci sono favi:
           per ora, ci possono essere solo fiori o caselle vuote sotto le nuvole.'
         courseD_bee_conditionals2_hintVid2: Guarda il video per risolvere questo esercizio.
+      courseD_bee_conditionals2_2019_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
+        courseD_bee_conditionals2_a: Qualche volta c'è un fiore, altre volte no. Se
+          vuoi che il tuo programma funzioni in entrambi i casi, assicurati di usare
+          un blocco `se`.
+        courseD_bee_conditionals2_b: Puoi usare un ciclo `ripeti ... volte` o un ciclo
+          `mentre c'è strada in avanti` per muoverti attraverso questo labirinto.
+        courseD_bee_conditionals2_c: 'Non hai bisogno di controllare se ci sono favi:
+          per ora, ci possono essere solo fiori o caselle vuote sotto le nuvole.'
+        courseD_bee_conditionals2_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals2_test_authored_hint:
         courseD_bee_conditionals2_a: Qualche volta c'è un fiore, altre volte no. Se
           vuoi che il tuo programma funzioni in entrambi i casi, assicurati di usare
@@ -9250,6 +10145,17 @@ it:
           blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
           ancora risolto l'esercizio.
         courseD_bee_conditionals3_hintVid2: Guarda il video per risolvere questo esercizio.
+      courseD_bee_conditionals3_2019_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
+        courseD_bee_conditionals3_a: Assicurati di usare un'istruzione condizionale
+          `se` per verificare in ogni casella se c'è un fiore.
+        courseD_bee_conditionals3_b: Per far andare avanti l'ape, puoi usare sia un
+          ciclo `ripeti ... volte` sia un ciclo `mentre`. Usa quello che preferisci!
+        courseD_bee_conditionals3_c: Non aver paura di sbagliare! Prova ad aggiungere
+          blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
+          ancora risolto l'esercizio.
+        courseD_bee_conditionals3_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals4_authored_hint:
         courseD_bee_conditionals4_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
@@ -9262,6 +10168,17 @@ it:
           l'ape se c'è un fiore?
         courseD_bee_conditionals4_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals4_2018_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
+        courseD_bee_conditionals4_a: Puoi sempre trattare ogni casella come se avesse
+          sopra una nuvola, anche se in questo caso riesci a vedere tutto il percorso.
+        courseD_bee_conditionals4_b: Usa un blocco `se` all'interno del ciclo per
+          controllare la presenza di un fiore in ogni casella.
+        courseD_bee_conditionals4_c: Grazie ad un blocco <xml><block type="maze_untilBlocked"/></xml>
+          riesci ad andare avanti e controllare se c'è un fiore. Cosa dovrebbe fare
+          l'ape se c'è un fiore?
+        courseD_bee_conditionals4_hintVid2: Guarda il video per risolvere questo esercizio.
+      courseD_bee_conditionals4_2019_authored_hint:
         courseD_bee_conditionals4_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
         courseD_bee_conditionals4_a: Puoi sempre trattare ogni casella come se avesse
@@ -9304,6 +10221,22 @@ it:
           avanti` devi andare avanti e controllare se c'è un fiore. Come controlli
           se c'è un fiore? Cosa fai se c'è un fiore?
         courseD_bee_conditionals5_hintVid2: Guarda il video per risolvere questo esercizio.
+      courseD_bee_conditionals5_2019_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
+        courseD_bee_conditionals5_a: Pensa ad ogni lato del percorso rettangolare
+          come ad un percorso a sé stante. Imposta un ciclo annidato con un blocco
+          `ripeti ... volte` all'esterno ed uno `mentre c'è strada in avanti` all'interno.
+          Lungo quanti lati deve volare l'ape per ronzare su ogni fiore?
+        courseD_bee_conditionals5_c: Ci sono 3 lati del rettangolo con dei fiori,
+          quindi il codice deve `"ripetersi" 3 volte`. Ad ogni ripetizione, l'ape
+          deve procedere lungo il percorso `mentre c'è strada in avanti`. Per proseguire,
+          l'ape deve `"andare" avanti`. Lungo il percorso, l'ape deve controllare
+          se c'è un fiore. `se c'è un fiore`, l'ape deve `"prendere" il nettare`.
+        courseD_bee_conditionals5_b: All'interno del blocco `mentre c'è strada in
+          avanti` devi andare avanti e controllare se c'è un fiore. Come controlli
+          se c'è un fiore? Cosa fai se c'è un fiore?
+        courseD_bee_conditionals5_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals6_authored_hint:
         courseD_bee_conditionals6_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
@@ -9315,6 +10248,16 @@ it:
           più semplice?
         courseD_bee_conditionals6_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals6_2018_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
+        courseD_bee_conditionals6_a: Assicurati di usare un'istruzione condizionale
+          `se` per verificare sotto ogni nuvola se c'è un favo.
+        courseD_bee_conditionals6_b: In questo caso, non è necessario controllare
+          se ci sono fiori sotto le nuvole.
+        courseD_bee_conditionals6_c: Potresti usare un ciclo per rendere il programma
+          più semplice?
+        courseD_bee_conditionals6_hintVid2: Guarda il video per risolvere questo esercizio.
+      courseD_bee_conditionals6_2019_authored_hint:
         courseD_bee_conditionals6_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
         courseD_bee_conditionals6_a: Assicurati di usare un'istruzione condizionale
@@ -9344,11 +10287,25 @@ it:
           che c'è sicuramente un favo, quindi non hai bisogno di considerare il caso
           di una casella vuota.
         courseD_bee_conditionals7_hintVid2: Guarda il video per risolvere questo esercizio.
+      courseD_bee_conditionals7_2019_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
+        courseD_bee_conditionals7_a: "**Ricorda:** Ogni volta che esegui il programma
+          ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
+          usare il blocco condizionale `se/altrimenti`."
+        courseD_bee_conditionals7_b: Se sotto a una nuvola non c'è un fiore, sappi
+          che c'è sicuramente un favo, quindi non hai bisogno di considerare il caso
+          di una casella vuota.
+        courseD_bee_conditionals7_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals7_predict2_authored_hint:
         courseD_bee_conditionals7_a: "**Ricorda:** Ogni volta che esegui il programma
           ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
           usare il blocco condizionale `se/altrimenti`."
       courseD_bee_conditionals7_predict2_2018_authored_hint:
+        courseD_bee_conditionals7_a: "**Ricorda:** Ogni volta che esegui il programma
+          ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
+          usare il blocco condizionale `se/altrimenti`."
+      courseD_bee_conditionals7_predict2_2019_authored_hint:
         courseD_bee_conditionals7_a: "**Ricorda:** Ogni volta che esegui il programma
           ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
           usare il blocco condizionale `se/altrimenti`."
@@ -9386,6 +10343,23 @@ it:
 
           ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
         courseD_bee_conditionals8_hintVid2: Guarda il video per risolvere questo esercizio.
+      courseD_bee_conditionals8_2019_authored_hint:
+        courseD_bee_conditionals8_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
+        courseD_bee_conditionals8_a: "**Attenzione:** Ogni volta che esegui il programma
+          ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
+          usare il blocco condizionale `se/altrimenti`."
+        courseD_bee_conditionals8_b: |-
+          Questo esercizio è un po' complicato, perché non puoi controllare le caselle vuote, i fiori *e* i favi con un unica istruzione condizionale.
+
+          Controlla solo se c'è un fiore o un favo alla fine di ogni tratto del percorso (dove vedi le nuvole).
+        courseD_bee_conditionals8_c: Come puoi fare in modo di andare avanti fino
+          alla fine di ogni tratto del percorso, indipendentemente dalla sua lunghezza?
+        courseD_bee_conditionals8_d: |-
+          Nonostante ci sia una nuvola proprio davanti a te (alla partenza), non dovresti analizzarla subito. Prova ad ignorarla, iniziando da quella nell'angolo in basso a destra (alla fine del primo tratto rettilineo).
+
+          ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
+        courseD_bee_conditionals8_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: Riesci a trovare un percorso che raggiunga
           tutti i fiori e i favi senza colpire nessun albero? Il percorso migliore
@@ -9394,6 +10368,13 @@ it:
           che ogni casella possa avere un fiore, un favo o nulla. In questo modo portai
           ripetere l'istruzione condizionale `se/altrimenti` ad ogni passo.
       courseD_bee_conditionals_challenge1_2018_authored_hint:
+        courseD_bee_conditionals_challenge1_a: Riesci a trovare un percorso che raggiunga
+          tutti i fiori e i favi senza colpire nessun albero? Il percorso migliore
+          è a spirale.
+        courseD_bee_conditionals_challenge1_b: In questo esercizio, conviene immaginare
+          che ogni casella possa avere un fiore, un favo o nulla. In questo modo portai
+          ripetere l'istruzione condizionale `se/altrimenti` ad ogni passo.
+      courseD_bee_conditionals_challenge1_2019_authored_hint:
         courseD_bee_conditionals_challenge1_a: Riesci a trovare un percorso che raggiunga
           tutti i fiori e i favi senza colpire nessun albero? Il percorso migliore
           è a spirale.
@@ -9412,6 +10393,17 @@ it:
           </statement>
           </block></xml>
       courseD_bee_conditionals_challenge2_2018_authored_hint:
+        courseD_bee_conditionals_challenge1_b: |-
+          Proprio come il blocco `se c'è un fiore`, il codice all'interno del blocco `mentre nettare > 0` verrà eseguito solo se l'ape si trova su un fiore. La differenza è che questo è un ciclo, quindi il codice contenuto all'interno verrà eseguito più e più volte fino a quando non rimarrà più nessuna dose di nettare.  Provare questa struttura:
+
+          <xml>  <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>                    <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block></xml>
+      courseD_bee_conditionals_challenge2_2019_authored_hint:
         courseD_bee_conditionals_challenge1_b: |-
           Proprio come il blocco `se c'è un fiore`, il codice all'interno del blocco `mentre nettare > 0` verrà eseguito solo se l'ape si trova su un fiore. La differenza è che questo è un ciclo, quindi il codice contenuto all'interno verrà eseguito più e più volte fino a quando non rimarrà più nessuna dose di nettare.  Provare questa struttura:
 
@@ -9637,10 +10629,18 @@ it:
           Dovresti avere entrambi questi eventi nel tuo codice:
 
           <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
+      courseD_bounce_events10s_2019_authored_hint:
+        courseD_bounce_events10s_a: |-
+          Dovresti avere entrambi questi eventi nel tuo codice:
+
+          <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
       courseD_bounce_events11s_authored_hint:
         courseD_bounce_events11s_a: Sarà necessario lanciare una palla quando il gioco
           comincia, quando fai canestro e quando la mano manca la palla.
       courseD_bounce_events11s_2018_authored_hint:
+        courseD_bounce_events11s_a: Sarà necessario lanciare una palla quando il gioco
+          comincia, quando fai canestro e quando la mano manca la palla.
+      courseD_bounce_events11s_2019_authored_hint:
         courseD_bounce_events11s_a: Sarà necessario lanciare una palla quando il gioco
           comincia, quando fai canestro e quando la mano manca la palla.
       courseD_bounce_events12s_authored_hint:
@@ -9655,6 +10655,12 @@ it:
           la velocità della mano a ...` e `imposta per la palla un velocità ...`.'
         courseD_bounce_events12s_b: Prova a fare in modo che ogni tiro valga 2 punti
           e modifica il logo della squadra con quello di una città a tua scelta!
+      courseD_bounce_events12s_2019_authored_hint:
+        courseD_bounce_events12s_a: 'Puoi rendere più veloce la palla o la mano attaccando
+          all''evento `quando si clicca su "Esegui"` i seguenti blocchi: `imposta
+          la velocità della mano a ...` e `imposta per la palla un velocità ...`.'
+        courseD_bounce_events12s_b: Prova a fare in modo che ogni tiro valga 2 punti
+          e modifica il logo della squadra con quello di una città a tua scelta!
       courseD_bounce_events1s_authored_hint:
         courseD_bounce_events1s_a: "Per far funzionare questo gioco, devi aggiungere
           il blocco `vai a sinistra` al blocco evento `quando si preme sulla freccia
@@ -9664,6 +10670,14 @@ it:
         courseD_bounce_events1s_b: Per risolvere questo esercizio, dopo aver premuto
           "Esegui", devi muovere la mano fino al canestro disegnato sulla sinistra.
       courseD_bounce_events1s_2018_authored_hint:
+        courseD_bounce_events1s_a: "Per far funzionare questo gioco, devi aggiungere
+          il blocco `vai a sinistra` al blocco evento `quando si preme sulla freccia
+          verso sinistra`:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\"
+          x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n
+          \   </next>\n  </block>\n   \n   </xml>"
+        courseD_bounce_events1s_b: Per risolvere questo esercizio, dopo aver premuto
+          "Esegui", devi muovere la mano fino al canestro disegnato sulla sinistra.
+      courseD_bounce_events1s_2019_authored_hint:
         courseD_bounce_events1s_a: "Per far funzionare questo gioco, devi aggiungere
           il blocco `vai a sinistra` al blocco evento `quando si preme sulla freccia
           verso sinistra`:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\"
@@ -9703,6 +10717,22 @@ it:
           </next>
           </block>
           </xml>
+      courseD_bounce_events2s_2019_authored_hint:
+        courseD_bounce_events2s_a: |-
+          Dovrai programmare due gestori di eventi di movimento per completare questo esercizio:
+
+          <xml>
+          <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+          <next>
+          <block type="bounce_moveLeft"/>
+          </next>
+          </block>
+          <block type="bounce_whenRight" deletable="false" x="180" y="20">
+          <next>
+          <block type="bounce_moveRight"/>
+          </next>
+          </block>
+          </xml>
       courseD_bounce_events5s_authored_hint:
         courseD_bounce_events5s_a: Non avrai bisogno di far muovere la mano per risolvere
           questo esercizio.
@@ -9711,6 +10741,13 @@ it:
 
           <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
       courseD_bounce_events5s_2018_authored_hint:
+        courseD_bounce_events5s_a: Non avrai bisogno di far muovere la mano per risolvere
+          questo esercizio.
+        courseD_bounce_events5s_b: |-
+          Assicurati di aver aggiunto queste istruzioni nell'area di lavoro:
+
+          <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
+      courseD_bounce_events5s_2019_authored_hint:
         courseD_bounce_events5s_a: Non avrai bisogno di far muovere la mano per risolvere
           questo esercizio.
         courseD_bounce_events5s_b: |-
@@ -9731,10 +10768,20 @@ it:
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
         courseD_bounce_events6s_b: Se hai scritto il programma correttamente, non
           avrai bisogno di muovere la mano per vincere.
+      courseD_bounce_events6s_2019_authored_hint:
+        courseD_bounce_events6s_a: |-
+          Hai un evento come questo?
+
+          <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
+        courseD_bounce_events6s_b: Se hai scritto il programma correttamente, non
+          avrai bisogno di muovere la mano per vincere.
       courseD_bounce_events7s_authored_hint:
         courseD_bounce_events7s_a: Se ne hai voglia, puoi aggiungere dei suoni anche
           in altri punti del programma!
       courseD_bounce_events7s_2018_authored_hint:
+        courseD_bounce_events7s_a: Se ne hai voglia, puoi aggiungere dei suoni anche
+          in altri punti del programma!
+      courseD_bounce_events7s_2019_authored_hint:
         courseD_bounce_events7s_a: Se ne hai voglia, puoi aggiungere dei suoni anche
           in altri punti del programma!
       courseD_collector_debugging1_authored_hint:
@@ -9777,6 +10824,15 @@ it:
         courseD_collector_debugging1_c: Ricorda di usare il blocco `raccogli` per
           collezionare tutti i diamanti ogni volta che sei arrivato su di essi.
       courseD_collector_debugging1a_2018_authored_hint:
+        courseD_collector_debugging1_a: |-
+          Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
+
+          E al secondo?
+
+          Dov'è che qualcosa comincia a non funzionare?
+        courseD_collector_debugging1_c: Ricorda di usare il blocco `raccogli` per
+          collezionare tutti i diamanti ogni volta che sei arrivato su di essi.
+      courseD_collector_debugging1a_2019_authored_hint:
         courseD_collector_debugging1_a: |-
           Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
 
@@ -9831,6 +10887,17 @@ it:
           Cosa succede?
           Cosa avrebbe dovuto succedere?
           Questo cosa ti suggerisce?
+      courseD_collector_debugging2a_2019_authored_hint:
+        courseD_collector_debugging2a_a: |-
+          Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
+
+          E al secondo?
+
+          Dov'è che qualcosa comincia a non funzionare?
+        courseD_collector_debugging2a_c: |-
+          Cosa succede?
+          Cosa avrebbe dovuto succedere?
+          Questo cosa ti suggerisce?
       courseD_collector_debugging3_authored_hint:
         courseD_collector_debugging3_a: C'è un punto del programma in cui Laura fa
           qualcosa di sbagliato? Cosa succede quando correggi questi blocchi?
@@ -9845,6 +10912,9 @@ it:
         courseD_collector_debugging3_a: C'è un punto del programma in cui Laura fa
           qualcosa di sbagliato? Cosa succede quando correggi questi blocchi?
       courseD_collector_debugging3a_2018_authored_hint:
+        courseD_collector_debugging3_a: C'è un punto del programma in cui Laura fa
+          qualcosa di sbagliato? Cosa succede quando correggi questi blocchi?
+      courseD_collector_debugging3a_2019_authored_hint:
         courseD_collector_debugging3_a: C'è un punto del programma in cui Laura fa
           qualcosa di sbagliato? Cosa succede quando correggi questi blocchi?
       courseD_collector_debugging4_authored_hint:
@@ -9891,6 +10961,16 @@ it:
         courseD_collector_debugging4_b: "Se hai difficoltà a capire come realizzare
           lo schema a scalinata, prova a tracciarlo con un dito e pronuncia le istruzioni
           ad alta voce. \n\nNon dimenticare di indicare la direzione delle curve!"
+      courseD_collector_debugging4a_2019_authored_hint:
+        courseD_collector_debugging4_a: |-
+          Prova ad usare il processo di correzione degli errori (debugging) un paio di volte di seguito.
+
+          Cos'è che causa il primo problema?
+
+          Una volta risolto questo problema, cos'altro c'è di sbagliato?
+        courseD_collector_debugging4_b: "Se hai difficoltà a capire come realizzare
+          lo schema a scalinata, prova a tracciarlo con un dito e pronuncia le istruzioni
+          ad alta voce. \n\nNon dimenticare di indicare la direzione delle curve!"
       courseD_collector_debugging5_authored_hint:
         courseD_collector_debugging5_a: |-
           Inizia guardando solo il primo ciclo.
@@ -9927,6 +11007,13 @@ it:
           Questo cosa ti suggerisce?
         courseD_collector_debugging5a_b: Una volta collezionata la prima fila di diamanti,
           cosa rimane da raccogliere?
+      courseD_collector_debugging5a_2019_authored_hint:
+        courseD_collector_debugging5a_a: |-
+          Cosa succede?
+          Cosa avrebbe dovuto succedere?
+          Questo cosa ti suggerisce?
+        courseD_collector_debugging5a_b: Una volta collezionata la prima fila di diamanti,
+          cosa rimane da raccogliere?
       courseD_collector_debugging6_authored_hint:
         courseD_collector_debugging6_a: |-
           Prova ad eseguire il codice un blocco per volta usando il pulsante "Fai un passo". È tutto giusto al primo passo?
@@ -9952,6 +11039,16 @@ it:
           pronti nell'area di lavoro. Clicca su "Ripristina" se la situazione è diventata
           troppo confusa.
       courseD_collector_debugging6a_2018_authored_hint:
+        courseD_collector_debugging6_a: |-
+          Prova ad eseguire il codice un blocco per volta usando il pulsante "Fai un passo". È tutto giusto al primo passo?
+
+          E al secondo?
+
+          Dov'è che qualcosa comincia a non funzionare?
+        courseD_collector_debugging6_b: Tutti i blocchi di cui hai bisogno erano già
+          pronti nell'area di lavoro. Clicca su "Ripristina" se la situazione è diventata
+          troppo confusa.
+      courseD_collector_debugging6a_2019_authored_hint:
         courseD_collector_debugging6_a: |-
           Prova ad eseguire il codice un blocco per volta usando il pulsante "Fai un passo". È tutto giusto al primo passo?
 
@@ -10120,6 +11217,73 @@ it:
           </next>
           </block>
           </xml>
+      courseD_collector_nested_loops_challenge2_2019_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Non dimenticare che puoi inserire nel
+          blocco `ripeti ... volte` un singolo comando o uno schema più lungo. E si
+          può anche ripetere un blocco `ripeti ... volte`!
+        courseD_bee_nested_loops_challenge2_b: Per raccogliere tutte e 4 le gemme,
+          prima di tutto usa un ciclo per allontanarti dal centro. Gira a sinistra
+          o a destra, quindi usa un ciclo annidato per passare dal primo diamante
+          al secondo. Se ripeti questo ciclo annidato abbastanza volte, la collezionista
+          si muoverà intorno a *tutta* la grotta!
+        courseD_bee_nested_loops_challenge2_c: Il programma più breve che raggiunge
+          tutti i diamanti usa solo un blocco `raccogli` e due svolte.
+        courseD_bee_nested_loops_challenge2_d: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseD_collector_nested_loops_challenge2a_authored_hint:
         courseD_collector_nested_loops_challenge2a_a: Non dimenticare che puoi inserire
           nel blocco `ripeti ... volte` un singolo comando o uno schema più lungo.
@@ -10207,6 +11371,11 @@ it:
           ... volte`.
         courseD_farmer_condLoops1_b: Se non usi il blocco `se sei su una pannocchia`
           rischi di tentare di raccogliere qualcosa che non c'è!
+      courseD_farmer_condLoops1_2019_authored_hint:
+        courseD_farmer_condLoops1_a: Saranno necessari 5 controlli, usa un ciclo `ripeti
+          ... volte`.
+        courseD_farmer_condLoops1_b: Se non usi il blocco `se sei su una pannocchia`
+          rischi di tentare di raccogliere qualcosa che non c'è!
       courseD_farmer_condLoops2_authored_hint:
         courseD_farmer_condLoops2_a: Il modo migliore per risolvere questo esercizio,
           è di annidare le istruzioni `se` una dentro l'altra.
@@ -10237,6 +11406,21 @@ it:
             - prendi la lattuga
 
           Quindi, se una casella è vuota, la contadina non cerca di raccogliere nulla!
+      courseD_farmer_condLoops2_2019_authored_hint:
+        courseD_farmer_condLoops2_a: Il modo migliore per risolvere questo esercizio,
+          è di annidare le istruzioni `se` una dentro l'altra.
+        courseD_farmer_condLoops2_b: In questo esercizio, dovresti usare un'istruzione
+          `se/altrimenti` e una semplice istruzione `se`.
+        courseD_farmer_condLoops2_c: |-
+          L'insieme di istruzioni condizionali dovrebbe funzionare così:
+
+          - se sei su una pannocchia
+           - prendi la pannocchia
+          - altrimenti
+           - se sei su una lattuga
+            - prendi la lattuga
+
+          Quindi, se una casella è vuota, la contadina non cerca di raccogliere nulla!
       courseD_farmer_condLoops3_authored_hint:
         courseD_farmer_condLoops3_a: |-
           Per raccogliere tutto, prova ad annidare su tre livelli le istruzioni `se`.
@@ -10245,6 +11429,13 @@ it:
         courseD_farmer_condLoops3_b: In questo esercizio, dovresti usare due istruzioni
           `se/altrimenti` e una semplice istruzione `se`.
       courseD_farmer_condLoops3_2018_authored_hint:
+        courseD_farmer_condLoops3_a: |-
+          Per raccogliere tutto, prova ad annidare su tre livelli le istruzioni `se`.
+
+          Questo significa che devi mettere un'istruzione `se` all'interno di un'altra e poi mettere una terza istruzione `se` all'interno della seconda.
+        courseD_farmer_condLoops3_b: In questo esercizio, dovresti usare due istruzioni
+          `se/altrimenti` e una semplice istruzione `se`.
+      courseD_farmer_condLoops3_2019_authored_hint:
         courseD_farmer_condLoops3_a: |-
           Per raccogliere tutto, prova ad annidare su tre livelli le istruzioni `se`.
 
@@ -10263,6 +11454,17 @@ it:
           puoi usare sia un ciclo `mentre c'è strada in avanti` sia un ciclo `ripeti
           ... volte`.
       courseD_farmer_condLoops4_2018_authored_hint:
+        grade3_RunningFarm_4courseD_farmer_condLoops4: |-
+          Nessuno sa quante lattughe crescono da ogni pianta.
+
+          Usa il ciclo `mentre sei su una lattuga` per continuare a raccogliere mentre ci sono ancora lattughe disponibili.
+        grade3_RunningFarm_4courseD_farmer_condLoops4_b: Il ciclo `mentre` gestirà
+          correttamente anche le caselle vuote! Visto che non c'è lattuga, non verrà
+          raccolta ed il codice passerà oltre.
+        grade3_RunningFarm_4courseD_farmer_condLoops4_c: Per analizzare tutte le caselle,
+          puoi usare sia un ciclo `mentre c'è strada in avanti` sia un ciclo `ripeti
+          ... volte`.
+      courseD_farmer_condLoops4_2019_authored_hint:
         grade3_RunningFarm_4courseD_farmer_condLoops4: |-
           Nessuno sa quante lattughe crescono da ogni pianta.
 
@@ -10292,6 +11494,13 @@ it:
           una zucca. Riesci a intuire come usarlo in questo esercizio?'
         courseD_farmer_condLoops5_b: Ci può essere più di una pannocchia o più di
           una lattuga in ogni casella. Usa un ciclo `mentre` per raccogliere tutto!
+      courseD_farmer_condLoops5_2019_authored_hint:
+        courseD_farmer_condLoops5_a: 'C''è un nuovo ciclo: `ripeti fino a che sei
+          su una zucca`, che ripete tutti i blocchi che contiene per tutto il tempo
+          in cui NON sei su una zucca e si interrompe quando finalmente arrivi ad
+          una zucca. Riesci a intuire come usarlo in questo esercizio?'
+        courseD_farmer_condLoops5_b: Ci può essere più di una pannocchia o più di
+          una lattuga in ogni casella. Usa un ciclo `mentre` per raccogliere tutto!
       courseD_farmer_condLoops6_authored_hint:
         courseD_farmer_condLoops6_a: Usa un ciclo `mentre sei su una pannocchia` per
           essere sicuro di raccogliere tutte le pannocchie lungo il tragitto. Questo
@@ -10299,6 +11508,12 @@ it:
         courseD_farmer_condLoops6_b: Controlla `se c'è strada in avanti` prima di
           fare il prossimo passo!
       courseD_farmer_condLoops6_2018_authored_hint:
+        courseD_farmer_condLoops6_a: Usa un ciclo `mentre c'è strada in avanti` per
+          far in modo che la contadina percorra ogni tratto della spirale.
+        courseD_farmer_condLoops6_b: Durante la maggior parte del percorso, devi solo
+          controllare se ci sono pannocchie. La zucca la puoi semplicemente raccogliere
+          alla fine del programma.
+      courseD_farmer_condLoops6_2019_authored_hint:
         courseD_farmer_condLoops6_a: Usa un ciclo `mentre c'è strada in avanti` per
           far in modo che la contadina percorra ogni tratto della spirale.
         courseD_farmer_condLoops6_b: Durante la maggior parte del percorso, devi solo
@@ -10318,6 +11533,13 @@ it:
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
         courseD_farmer_condLoops7_b: Prova ad usare un blocco `mentre c'è strada in
           avanti` per far muovere la contadina lungo il percorso corretto.
+      courseD_farmer_condLoops7_2019_authored_hint:
+        courseD_farmer_condLoops7_a: |-
+          Nota che il percorso più facile per raggiungere tutte le colture è ancora una spirale.
+
+          ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
+        courseD_farmer_condLoops7_b: Prova ad usare un blocco `mentre c'è strada in
+          avanti` per far muovere la contadina lungo il percorso corretto.
       courseD_farmer_condLoops_challenge1_authored_hint:
         courseD_farmer_condLoops_challenge1_a: Il pulsante "Fai un passo" potrebbe
           rivelarsi molto utile per portare a termine questa sfida.
@@ -10330,10 +11552,19 @@ it:
         courseD_farmer_condLoops_challenge1_b: Di solito, quando ci si trova su una
           zucca, si esegue solamente il blocco `prendi zucca`. Cos'altro devi fare
           in questo caso se sei su una zucca?
+      courseD_farmer_condLoops_challenge1_2019_authored_hint:
+        courseD_farmer_condLoops_challenge1_a: Il pulsante "Fai un passo" potrebbe
+          rivelarsi molto utile per portare a termine questa sfida.
+        courseD_farmer_condLoops_challenge1_b: Di solito, quando ci si trova su una
+          zucca, si esegue solamente il blocco `prendi zucca`. Cos'altro devi fare
+          in questo caso se sei su una zucca?
       courseD_farmer_condLoops_challenge2_authored_hint:
         courseD_farmer_condLoops_challenge2_a: La quantità di ortaggi in ogni casella
           può cambiare. Un ciclo `mentre` ti potrebbe essere molto utile!
       courseD_farmer_condLoops_challenge2_2018_authored_hint:
+        courseD_farmer_condLoops_challenge2_a: La quantità di ortaggi in ogni casella
+          può cambiare. Un ciclo `mentre` ti potrebbe essere molto utile!
+      courseD_farmer_condLoops_challenge2_2019_authored_hint:
         courseD_farmer_condLoops_challenge2_a: La quantità di ortaggi in ogni casella
           può cambiare. Un ciclo `mentre` ti potrebbe essere molto utile!
       courseD_farmer_conditionals4_authored_hint:
@@ -10367,6 +11598,11 @@ it:
           il mucchio. Riesci a usare un ciclo `ripeti ... volte` per fare ciò?
         courseD_farmer_while1_b: Quando sarai in piedi sul mucchio di terra, usa il
           blocco `rimuovi 1` per rimuoverlo.
+      courseD_farmer_while1_2019_authored_hint:
+        courseD_farmer_while1_a: Dovrai andare avanti quattro volte per raggiungere
+          il mucchio. Riesci a usare un ciclo `ripeti ... volte` per fare ciò?
+        courseD_farmer_while1_b: Quando sarai in piedi sul mucchio di terra, usa il
+          blocco `rimuovi 1` per rimuoverlo.
       courseD_farmer_while2_authored_hint:
         courseD_farmer_while2_a: Dovrai fare un solo movimento per arrivare alla buca.
         courseD_farmer_while2_b: Sarà necessario il blocco `riempi 1` per sei volte.
@@ -10375,11 +11611,19 @@ it:
         courseD_farmer_while2_a: Dovrai fare un solo movimento per arrivare alla buca.
         courseD_farmer_while2_b: Sarà necessario il blocco `riempi 1` per sei volte.
           Riesci ad usare un ciclo per rendere tutto più semplice?
+      courseD_farmer_while2_2019_authored_hint:
+        courseD_farmer_while2_a: Dovrai fare un solo movimento per arrivare alla buca.
+        courseD_farmer_while2_b: Sarà necessario il blocco `riempi 1` per sei volte.
+          Riesci ad usare un ciclo per rendere tutto più semplice?
       courseD_farmer_while3_authored_hint:
         courseD_farmer_while3_a: Un ciclo può aiutarti a semplificare il programma.
         courseD_farmer_while3_b: Non dovrebbe servire alcun blocco `gira a ...` per
           arrivare fino al mucchio.
       courseD_farmer_while3_2018_authored_hint:
+        courseD_farmer_while3_a: Un ciclo può aiutarti a semplificare il programma.
+        courseD_farmer_while3_b: Non dovrebbe servire alcun blocco `gira a ...` per
+          arrivare fino al mucchio.
+      courseD_farmer_while3_2019_authored_hint:
         courseD_farmer_while3_a: Un ciclo può aiutarti a semplificare il programma.
         courseD_farmer_while3_b: Non dovrebbe servire alcun blocco `gira a ...` per
           arrivare fino al mucchio.
@@ -10393,6 +11637,11 @@ it:
           usa un ciclo `mentre` per far spalare fino a quando il mucchio è terminato.
         courseD_farmer_conditionals4_b: Sembra molto simile ad un esercizio precedente,
           l'unica differenza è nel ciclo da usare.
+      courseD_farmer_while4_2019_authored_hint:
+        courseD_farmer_conditionals4_a: Invece di usare un ciclo `ripeti ... volte`,
+          usa un ciclo `mentre` per far spalare fino a quando il mucchio è terminato.
+        courseD_farmer_conditionals4_b: Sembra molto simile ad un esercizio precedente,
+          l'unica differenza è nel ciclo da usare.
       courseD_farmer_while5_authored_hint:
         courseD_farmer_conditionals5a_a: Prova ad inserire un ciclo `mentre` all'interno
           di un ciclo `ripeti ... volte`.
@@ -10401,6 +11650,13 @@ it:
         courseD_farmer_conditionals5a_c: Vai avanti cinque volte. Ogni volta che vai
           avanti, rimuovi i mucchi di terra usando il blocco `mentre c'è un mucchio`.
       courseD_farmer_while5_2018_authored_hint:
+        courseD_farmer_conditionals5a_a: Prova ad inserire un ciclo `mentre` all'interno
+          di un ciclo `ripeti ... volte`.
+        courseD_farmer_conditionals5a_b: La contadina deve andare avanti 5 volte per
+          arrivare alla fine della riga. Cos'altro deve fare la contadina?
+        courseD_farmer_conditionals5a_c: Vai avanti cinque volte. Ogni volta che vai
+          avanti, rimuovi i mucchi di terra usando il blocco `mentre c'è un mucchio`.
+      courseD_farmer_while5_2019_authored_hint:
         courseD_farmer_conditionals5a_a: Prova ad inserire un ciclo `mentre` all'interno
           di un ciclo `ripeti ... volte`.
         courseD_farmer_conditionals5a_b: La contadina deve andare avanti 5 volte per
@@ -10441,6 +11697,23 @@ it:
           Quante volte devi usare questo schema a scalinata?
 
           Assicurarti di usare il blocco `mentre c'è una buca` per riempire le buche.
+      courseD_farmer_while6_2019_authored_hint:
+        courseD_farmer_conditionals6_a: Assicurati di usare il ciclo `mentre` per
+          riempire ogni buca indipendentemente dal numero di palate che servono.
+        courseD_farmer_conditionals6_b: Nota che la contadina deve andare avanti e
+          girare diverse volte in questo schema a scalinata.
+        courseD_farmer_conditionals6_c: |-
+          Lo schema a scalinata è realizzato da questi blocchi:
+          - vai avanti
+          - riempi la buca
+          - gira a destra
+          - vai avanti
+          - riempi la buca
+          - gira a sinistra
+
+          Quante volte devi usare questo schema a scalinata?
+
+          Assicurarti di usare il blocco `mentre c'è una buca` per riempire le buche.
       courseD_farmer_while7_authored_hint:
         courseD_farmer_conditionals8_a: Il blocco `mentre c'è strada in avanti` ti
           permette di andare avanti, anche se non sai quante caselle devi percorrere.
@@ -10449,6 +11722,13 @@ it:
           volte`.
         courseD_farmer_conditionals8_c: Che cosa dovresti fare alla fine di ogni tratto?
       courseD_farmer_while7_2018_authored_hint:
+        courseD_farmer_conditionals8_a: Il blocco `mentre c'è strada in avanti` ti
+          permette di andare avanti, anche se non sai quante caselle devi percorrere.
+        courseD_farmer_conditionals8_b: In questo esercizio, può essere utile mettere
+          un ciclo `mentre c'è strada in avanti` all'interno di un ciclo `ripeti ...
+          volte`.
+        courseD_farmer_conditionals8_c: Che cosa dovresti fare alla fine di ogni tratto?
+      courseD_farmer_while7_2019_authored_hint:
         courseD_farmer_conditionals8_a: Il blocco `mentre c'è strada in avanti` ti
           permette di andare avanti, anche se non sai quante caselle devi percorrere.
         courseD_farmer_conditionals8_b: In questo esercizio, può essere utile mettere
@@ -10469,6 +11749,13 @@ it:
           `mentre c'è una buca`.
         courseD_farmer_conditionals8_c: Nota che devi ripetere sei volte la sequenza
           `mentre c'è strada in avanti` + `quando c'è una buca`.
+      courseD_farmer_while8_2019_authored_hint:
+        courseD_farmer_conditionals8_a: Avrai bisogno di usare più di un ciclo `mentre`.
+        courseD_farmer_conditionals8_b: Ogni buca è alla fine di un tratto di percorso,
+          quindi usa il blocco `mentre c'è strada in avanti` prima di usare il ciclo
+          `mentre c'è una buca`.
+        courseD_farmer_conditionals8_c: Nota che devi ripetere sei volte la sequenza
+          `mentre c'è strada in avanti` + `quando c'è una buca`.
       courseD_farmer_while_challenge1_authored_hint:
         courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una
           casella **prima** dalla fine del percorso.
@@ -10480,6 +11767,16 @@ it:
           usare alcun blocco `ripeti ... volte`. Per farlo, avrai bisogno di usare
           quattro cicli `mentre`.
       courseD_farmer_while_challenge1_2018_authored_hint:
+        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una
+          casella **prima** dalla fine del percorso.
+        courseD_farmer_while_challenge1_b: Usando un ciclo `mentre`, puoi dire alla
+          contadina di rimuovere un mucchio o riempire una buca, anche se non c'è.
+          Ciò significa che è possibile programmarla per rimuovere qualsiasi mucchio
+          o riempire qualsiasi buca, dovunque lei sia.
+        courseD_farmer_conditionals8_c: È possibile risolvere questo esercizio senza
+          usare alcun blocco `ripeti ... volte`. Per farlo, avrai bisogno di usare
+          quattro cicli `mentre`.
+      courseD_farmer_while_challenge1_2019_authored_hint:
         courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una
           casella **prima** dalla fine del percorso.
         courseD_farmer_while_challenge1_b: Usando un ciclo `mentre`, puoi dire alla
@@ -10515,6 +11812,13 @@ it:
           devi usare più volte il blocco `prendi pannocchia`.
         courseD_harvester_nested_loops_challenge1_c: Per risolvere questo esercizio,
           avrai bisogno di mettere un piccolo ciclo all'interno del ciclo principale!
+      courseD_harvester_nested_loops_challenge1_2019_authored_hint:
+        courseD_harvester_nested_loops_challenge1_a: 'Prova a seguire questo percorso
+          per raggiungere tutte le pannocchie! '
+        courseD_harvester_nested_loops_challenge1_b: Per raccogliere più di una pannocchia,
+          devi usare più volte il blocco `prendi pannocchia`.
+        courseD_harvester_nested_loops_challenge1_c: Per risolvere questo esercizio,
+          avrai bisogno di mettere un piccolo ciclo all'interno del ciclo principale!
       courseD_iceage_loops1_authored_hint:
         courseD_iceage_loops1_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà
           sopra, cadrà in acqua!
@@ -10528,7 +11832,27 @@ it:
         courseB_iceage_loops10_b: Prova a pronunciare i passaggi ad alta voce o a
           scriverli su un foglio di carta. Noti degli schemi che si ripetono?
         courseB_iceage_loops10_c: Questa volta il percorso è lungo! Segui questa traccia.
+      courseD_iceage_loops10_2019_authored_hint:
+        courseB_iceage_loops10_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà
+          sopra, cadrà in acqua!
+        courseB_iceage_loops10_b: Prova a pronunciare i passaggi ad alta voce o a
+          scriverli su un foglio di carta. Noti degli schemi che si ripetono?
+        courseB_iceage_loops10_c: Questa volta il percorso è lungo! Segui questa traccia.
+      courseD_iceage_loops1_2019_authored_hint:
+        courseD_iceage_loops1_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà
+          sopra, cadrà in acqua!
+        courseD_iceage_loops1_b: |-
+          Dovrai usare questo blocco:
+
+          <xml><block type="maze_moveForward"/></xml>
       courseD_iceage_loops2_authored_hint:
+        courseD_iceage_loops2_a: 'Dividi questo esercizio in due parti: una prima
+          dell''angolo e l''altra dopo.'
+        courseD_iceage_loops2_b: Se ti blocchi, prova a pronunciare ad alta voce i
+          vari passaggi.
+        courseD_iceage_loops2_c: Segui questo percorso per far arrivare Scrat fino
+          alla ghianda.
+      courseD_iceage_loops2_2019_authored_hint:
         courseD_iceage_loops2_a: 'Dividi questo esercizio in due parti: una prima
           dell''angolo e l''altra dopo.'
         courseD_iceage_loops2_b: Se ti blocchi, prova a pronunciare ad alta voce i
@@ -10544,7 +11868,22 @@ it:
         courseB_iceage_loops3_b: Per ripetere una sequenza di istruzioni, trascina
           nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno
           i blocchi che vuoi ripetere.
+      courseD_iceage_loops3_2019_authored_hint:
+        courseB_iceage_loops3_a: |-
+          Usa questo nuovo blocco!
+          <xml><block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">5</title>
+          </block></xml>
+        courseB_iceage_loops3_b: Per ripetere una sequenza di istruzioni, trascina
+          nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno
+          i blocchi che vuoi ripetere.
       courseD_iceage_loops4_authored_hint:
+        courseD_iceage_loops4_a: Non aver paura di eseguire il programma e guarda
+          cosa succede!
+        courseD_iceage_loops4_b: Prova a scrivere i passaggi necessari per fare in
+          modo che Scrat raggiunga la ghianda. Noti uno schema che si ripete?
+        courseD_iceage_loops4_c: Questo è il percorso che Scrat dovrebbe seguire.
+      courseD_iceage_loops4_2019_authored_hint:
         courseD_iceage_loops4_a: Non aver paura di eseguire il programma e guarda
           cosa succede!
         courseD_iceage_loops4_b: Prova a scrivere i passaggi necessari per fare in
@@ -10555,7 +11894,17 @@ it:
           `vai avanti`.
         courseD_iceage_loops6_b: Devi aggiungere solo **un** altro ciclo!
         courseD_iceage_loops6_c: Il percorso finale dovrebbe essere questo.
+      courseD_iceage_loops6_2019_authored_hint:
+        courseD_iceage_loops6_a: Il programma finale dovrebbe usare **tre** blocchi
+          `vai avanti`.
+        courseD_iceage_loops6_b: Devi aggiungere solo **un** altro ciclo!
+        courseD_iceage_loops6_c: Il percorso finale dovrebbe essere questo.
       courseD_iceage_loops7_authored_hint:
+        courseB_iceage_loops7_a: Se ti blocchi, prova a scrivere i passaggi su un
+          pezzo di carta. Vedi uno schema che si ripete?
+        courseB_iceage_loops7_b: Questo è il percorso che Scrat dovrebbe seguire per
+          raggiungere la ghianda.
+      courseD_iceage_loops7_2019_authored_hint:
         courseB_iceage_loops7_a: Se ti blocchi, prova a scrivere i passaggi su un
           pezzo di carta. Vedi uno schema che si ripete?
         courseB_iceage_loops7_b: Questo è il percorso che Scrat dovrebbe seguire per
@@ -10567,7 +11916,21 @@ it:
           secondo dovrebbe ripetersi **5** volte, il terzo dovrebbe ripetersi **4**
           volte e anche l'ultimo **4** volte.
         courseD_iceage_loops8_c: Usa i cicli per aiutare Scrat a seguire questo percorso.
+      courseD_iceage_loops8_2019_authored_hint:
+        courseD_iceage_loops8_a: I blocchi `gira a ...` sono corretti? Cos'altro potresti
+          cambiare?
+        courseD_iceage_loops8_b: Il primo ciclo dovrebbe ripetersi **3** volte, il
+          secondo dovrebbe ripetersi **5** volte, il terzo dovrebbe ripetersi **4**
+          volte e anche l'ultimo **4** volte.
+        courseD_iceage_loops8_c: Usa i cicli per aiutare Scrat a seguire questo percorso.
       courseD_iceage_loops9_authored_hint:
+        courseD_iceage_loops9_a: Hai difficoltà? Prova a suddividere questo esercizio
+          in parti più piccole. Non aver paura di eseguire il codice man mano che
+          procedi!
+        courseD_iceage_loops9_b: Il programma finale dovrebbe avere **4** cicli.
+        courseD_iceage_loops9_c: Scrat dovrebbe seguire questo percorso per raggiungere
+          la ghianda.
+      courseD_iceage_loops9_2019_authored_hint:
         courseD_iceage_loops9_a: Hai difficoltà? Prova a suddividere questo esercizio
           in parti più piccole. Non aver paura di eseguire il codice man mano che
           procedi!
@@ -10881,6 +12244,10 @@ it:
         courseD_maze_until1_a: C'è qualche sequenza che si ripete da inserire in un
           ciclo per rendere il programma più breve?
         courseD_maze_until1_b: Prova a risolvere l'esercizio usando dei cicli annidati.
+      courseD_maze_until1_2019_authored_hint:
+        courseD_maze_until1_a: C'è qualche sequenza che si ripete da inserire in un
+          ciclo per rendere il programma più breve?
+        courseD_maze_until1_b: Prova a risolvere l'esercizio usando dei cicli annidati.
       courseD_maze_until3_authored_hint:
         courseD_maze_until3_a: |-
           - Cosa fa il tuo programma?
@@ -10893,6 +12260,17 @@ it:
         courseD_maze_until3_d: Non dimenticare di usare il blocco `ripeti fino a che`
           per rendere il tuo programma più breve.
       courseD_maze_until3_2018_authored_hint:
+        courseD_maze_until3_a: |-
+          - Cosa fa il tuo programma?
+          - Che cosa dovrebbe fare?
+          - Che cosa ti suggerisce questo?
+        courseD_maze_until3_b: Se ti sei bloccato, prova a scrivere i passaggi su
+          un foglio di carta e cerca degli schemi che si ripetono.
+        courseD_maze_until3_c: Puoi seguire uno schema a scalinata per risolvere questo
+          esercizio?
+        courseD_maze_until3_d: Non dimenticare di usare il blocco `ripeti fino a che`
+          per rendere il tuo programma più breve.
+      courseD_maze_until3_2019_authored_hint:
         courseD_maze_until3_a: |-
           - Cosa fa il tuo programma?
           - Che cosa dovrebbe fare?
@@ -10925,6 +12303,17 @@ it:
           esercizio?
         courseD_maze_until4_c: Non dimenticare di usare il blocco `ripeti fino a che`
           per rendere il tuo programma più breve.
+      courseD_maze_until4_2019_authored_hint:
+        courseD_maze_until4_a: |-
+          Usa il pulsante "Fai un passo" per analizzare il tuo programma un blocco alla volta.
+
+          - Al primo passo tutto procede bene?
+          - E al secondo?
+          - Dov'è che qualcosa comincia a non funzionare?
+        courseD_maze_until4_b: Puoi seguire uno schema a scalinata per risolvere questo
+          esercizio?
+        courseD_maze_until4_c: Non dimenticare di usare il blocco `ripeti fino a che`
+          per rendere il tuo programma più breve.
       courseD_maze_until5_authored_hint:
         courseD_maze_until5_a: Non dimenticare di usare l'istruzione condizionale
           `se c'è strada a sinistra` per far in modo che lo zombie continui a cercare
@@ -10934,6 +12323,9 @@ it:
         courseD_maze_until5_c: Dopo ogni passo, lo zombie dovrebbe controllare se
           c'è un percorso verso sinistra. Cosa dovrebbe fare se lo trova?
       courseD_maze_until5_2018_authored_hint:
+        courseD_maze_until5_b: Per usare un solo blocco `vai avanti`, mettilo dentro
+          a un blocco `ripeti fino a che`.
+      courseD_maze_until5_2019_authored_hint:
         courseD_maze_until5_b: Per usare un solo blocco `vai avanti`, mettilo dentro
           a un blocco `ripeti fino a che`.
       courseD_maze_until6_authored_hint:
@@ -10947,6 +12339,9 @@ it:
       courseD_maze_until6_2018_authored_hint:
         courseD_maze_until6_b: Per usare un solo blocco `vai avanti`, mettilo dentro
           a un blocco `ripeti fino a che`.
+      courseD_maze_until6_2019_authored_hint:
+        courseD_maze_until6_b: Per usare un solo blocco `vai avanti`, mettilo dentro
+          a un blocco `ripeti fino a che`.
       courseD_maze_until7_authored_hint:
         courseD_maze_until7_a: Non c'è bisogno che il tuo programma sia più lungo
           dell'ultima volta, solo perché il labirinto lo è!
@@ -10956,6 +12351,12 @@ it:
         courseD_maze_until7_c: Ricordati di cercare strada a sinistra, perché se giri
           a destra finirai in un percorso sbagliato!
       courseD_maze_until7_2018_authored_hint:
+        courseD_maze_until7_a: Non c'è bisogno che il tuo programma sia più lungo
+          dell'ultima volta, solo perché il labirinto lo è!
+        courseD_maze_until7_b: Anche se qui ci sono più curve rispetto all'ultimo
+          esercizio, il programma può essere quasi identico, grazie al blocco `ripeti
+          fino a che`!
+      courseD_maze_until7_2019_authored_hint:
         courseD_maze_until7_a: Non c'è bisogno che il tuo programma sia più lungo
           dell'ultima volta, solo perché il labirinto lo è!
         courseD_maze_until7_b: Anche se qui ci sono più curve rispetto all'ultimo
@@ -10986,6 +12387,9 @@ it:
       courseD_maze_until9_2018_authored_hint:
         courseD_maze_until8_c: Ricordati di usare il blocco `ripeti fino a che` per
           far arrivare lo zombie fino al girasole!
+      courseD_maze_until9_2019_authored_hint:
+        courseD_maze_until8_c: Ricordati di usare il blocco `ripeti fino a che` per
+          far arrivare lo zombie fino al girasole!
       courseD_playLab_cond1_authored_hint:
         courseD_playLab_cond1_a: Per risolvere questa sfida, collega il blocco `sposta
           il personaggio 1 in alto` all'evento `quando si preme sulla freccia verso
@@ -11004,11 +12408,24 @@ it:
           verso la quale devono muoversi.
         courseD_playLab_cond1_c: Dopo aver cliccato su "Esegui", ricorda di muovere
           il pirata verso entrambe le bandierine!
+      courseD_playLab_cond1_2019_authored_hint:
+        courseD_playLab_cond1_a: Per risolvere questa sfida, collega il blocco `sposta
+          il personaggio 1 in alto` all'evento `quando si preme sulla freccia verso
+          l'alto`, poi fai lo stesso per tutte le altre direzioni.
+        courseD_playLab_cond1_b: Usa i menù a discesa (▼) dei blocchi `quando si preme
+          sulla freccia ...` e `sposta il personaggio ...` per cambiare la direzione
+          verso la quale devono muoversi.
+        courseD_playLab_cond1_c: Dopo aver cliccato su "Esegui", ricorda di muovere
+          il pirata verso entrambe le bandierine!
       courseD_playLab_cond2_authored_hint:
         courseD_playLab_cond2_a: Per risolvere questo esercizio, usa il blocco `aggiungi
           un punto` sotto al blocco dell'evento `quando il personaggio 1 tocca il
           personaggio 2`.
       courseD_playLab_cond2_2018_authored_hint:
+        courseD_playLab_cond2_a: Per risolvere questo esercizio, usa il blocco `aggiungi
+          un punto` sotto al blocco dell'evento `quando il personaggio 1 tocca il
+          personaggio 2`.
+      courseD_playLab_cond2_2019_authored_hint:
         courseD_playLab_cond2_a: Per risolvere questo esercizio, usa il blocco `aggiungi
           un punto` sotto al blocco dell'evento `quando il personaggio 1 tocca il
           personaggio 2`.
@@ -11020,10 +12437,17 @@ it:
         courseD_playLab_cond3_a: Dovrai aggiungere due blocchi al ciclo `ripeti per
           sempre`. Uno per scegliere un umore casuale del drago (personaggio 2) e
           l'altro per attendere 1 secondo prima di ricominciare il ciclo.
+      courseD_playLab_cond3_2019_authored_hint:
+        courseD_playLab_cond3_a: Dovrai aggiungere due blocchi al ciclo `ripeti per
+          sempre`. Uno per scegliere un umore casuale del drago (personaggio 2) e
+          l'altro per attendere 1 secondo prima di ricominciare il ciclo.
       courseD_playLab_cond3a_authored_hint:
         courseD_playLab_cond3_c: "- `Se` il drago è felice\n   - `aggiungi un punto`\n
           \  - `aggiungi un punto`\n \n- `Altrimenti` `aggiungi un punto`"
       courseD_playLab_cond3a_2018_authored_hint:
+        courseD_playLab_cond3_c: "- `Se` il drago è felice\n   - `aggiungi un punto`\n
+          \  - `aggiungi un punto`\n \n- `Altrimenti` `aggiungi un punto`"
+      courseD_playLab_cond3a_2019_authored_hint:
         courseD_playLab_cond3_c: "- `Se` il drago è felice\n   - `aggiungi un punto`\n
           \  - `aggiungi un punto`\n \n- `Altrimenti` `aggiungi un punto`"
       courseD_playLab_cond4_authored_hint:
@@ -11044,12 +12468,26 @@ it:
           del pirata!
         courseD_playLab_cond4_c: Metti il blocco `fine del gioco con una sconfitta`
           sotto l'evento `quando il personaggio 1 tocca il personaggio 2`.
+      courseD_playLab_cond4_2019_authored_hint:
+        courseD_playLab_cond4_a: Avrai bisogno di usare l'evento `quando si clicca
+          su "Esegui"` per fare in modo che il ninja insegua il pirata dall'inizio
+          del gioco.
+        courseD_playLab_cond4_b: C'è un blocco speciale chiamato `imponi ad ogni ninja
+          mascherato di inseguire il personaggio ...` che terrà il ninja sulle tracce
+          del pirata!
+        courseD_playLab_cond4_c: Metti il blocco `fine del gioco con una sconfitta`
+          sotto l'evento `quando il personaggio 1 tocca il personaggio 2`.
       courseD_playLab_cond5_authored_hint:
         courseD_playLab_cond5_a: Per portare a termine questa sfida, usa un'istruzione
           `se` che controlli se il `punteggio > 5`.
         courseD_playLab_cond5_b: Puoi avere più di un ciclo `ripeti per sempre` nella
           tua area di lavoro.
       courseD_playLab_cond5_2018_authored_hint:
+        courseD_playLab_cond5_a: Per portare a termine questa sfida, usa un'istruzione
+          `se` che controlli se il `punteggio > 5`.
+        courseD_playLab_cond5_b: Puoi avere più di un ciclo `ripeti per sempre` nella
+          tua area di lavoro.
+      courseD_playLab_cond5_2019_authored_hint:
         courseD_playLab_cond5_a: Per portare a termine questa sfida, usa un'istruzione
           `se` che controlli se il `punteggio > 5`.
         courseD_playLab_cond5_b: Puoi avere più di un ciclo `ripeti per sempre` nella
@@ -11068,12 +12506,24 @@ it:
         courseD_playLab_cond6_b: Per controllare in continuazione se il pirata è al
           di sotto dei polpi, devi usare un blocco `se personaggio 1 posizione y >
           255` all'interno di un ciclo `ripeti per sempre`.
+      courseD_playLab_cond6_2019_authored_hint:
+        courseD_playLab_cond6_a: Per rallentare la velocità del ninja, aggiungi all'inizio
+          del programma il blocco `imposta la velocità di ogni ninja mascherato a
+          ...`.
+        courseD_playLab_cond6_b: Per controllare in continuazione se il pirata è al
+          di sotto dei polpi, devi usare un blocco `se personaggio 1 posizione y >
+          255` all'interno di un ciclo `ripeti per sempre`.
       courseD_playLab_cond6a_authored_hint:
         courseD_playLab_cond6_c: Per evitare che i punti siano tolti troppo velocemente,
           aggiungi un blocco `aspetta per 1 secondo` in cima al ciclo `ripeti per
           sempre` che controlla la posizione del pirata (ma, attenzione, non all'interno
           dell'istruzione `se`).
       courseD_playLab_cond6a_2018_authored_hint:
+        courseD_playLab_cond6_c: Per evitare che i punti siano tolti troppo velocemente,
+          aggiungi un blocco `aspetta per 1 secondo` in cima al ciclo `ripeti per
+          sempre` che controlla la posizione del pirata (ma, attenzione, non all'interno
+          dell'istruzione `se`).
+      courseD_playLab_cond6a_2019_authored_hint:
         courseD_playLab_cond6_c: Per evitare che i punti siano tolti troppo velocemente,
           aggiungi un blocco `aspetta per 1 secondo` in cima al ciclo `ripeti per
           sempre` che controlla la posizione del pirata (ma, attenzione, non all'interno
@@ -11225,6 +12675,13 @@ it:
           più volte il codice per disegnare un esagono.
         courseE_artist_concept1_c: Per cambiare lo spessore della penna, usa il blocco
           `imposta la larghezza` prima di disegnare ogni esagono.
+      courseE_artist_concept1_2019_authored_hint:
+        courseE_artist_concept1_a: Gli esagoni hanno lati di 50 pixel e si disegnano
+          con angoli di 60 gradi verso destra.
+        courseE_artist_concept1_b: Prova ad usare una funzione, così non devi riscrivere
+          più volte il codice per disegnare un esagono.
+        courseE_artist_concept1_c: Per cambiare lo spessore della penna, usa il blocco
+          `imposta la larghezza` prima di disegnare ogni esagono.
       courseE_artist_concept4_authored_hint:
         courseE_artist_concept4_a: Ci sono diversi modi per risolvere questo esercizio.
           Provi a fare un piano?
@@ -11235,6 +12692,15 @@ it:
           fino al lato sinistro e disegnare un'altra riga di quadrati verso destra.
           Che metodo preferisci?
       courseE_artist_concept4_2018_authored_hint:
+        courseE_artist_concept4_a: Ci sono diversi modi per risolvere questo esercizio.
+          Provi a fare un piano?
+        courseE_artist_concept4_b: Prova prima a disegnare un quadrato. Poi realizza
+          una linea di quadrati. Infine cosa manca?
+        courseE_artist_concept4_c: Dopo aver disegnato una linea di quadrati, potresti
+          girarti e disegnarne un'altra verso sinistra oppure fare un bel salto indietro
+          fino al lato sinistro e disegnare un'altra riga di quadrati verso destra.
+          Che metodo preferisci?
+      courseE_artist_concept4_2019_authored_hint:
         courseE_artist_concept4_a: Ci sono diversi modi per risolvere questo esercizio.
           Provi a fare un piano?
         courseE_artist_concept4_b: Prova prima a disegnare un quadrato. Poi realizza
@@ -11265,6 +12731,17 @@ it:
           Questo è lo schema che devi ripetere per realizzare la figura completa:
 
           ![](https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png)
+      courseE_artist_concept_challenge1_2019_authored_hint:
+        courseE_artist_concept_challenge1_a: Nel primo ciclo, per disegnare il mezzo
+          esagono, l'artista percorre tratti di **30 pixel** e gira a destra di **60
+          gradi**.
+        courseE_artist_concept_challenge1_b: Nel secondo ciclo, per disegnare i due
+          lati del triangolo, l'artista percorre tratti di **80 pixel** e gira a destra
+          di **120 gradi**.
+        courseE_artist_concept_challenge1_c: |-
+          Questo è lo schema che devi ripetere per realizzare la figura completa:
+
+          ![](https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png)
       courseE_artist_concept_challenge2_authored_hint:
         courseE_artist_concept_challenge2_a: Dopo aver definito una funzione, la puoi
           richiamare più e più volte, ovunque tu voglia!
@@ -11275,6 +12752,15 @@ it:
           <title name="VALUE">???</title>
           </block></xml>
       courseE_artist_concept_challenge2_2018_authored_hint:
+        courseE_artist_concept_challenge2_a: Dopo aver definito una funzione, la puoi
+          richiamare più e più volte, ovunque tu voglia!
+        courseE_artist_concept_challenge2_b: |-
+          Grazie a questo blocco, puoi saltare direttamente in specifici punti della tela:
+
+          <xml>  <block type="jump_to">
+          <title name="VALUE">???</title>
+          </block></xml>
+      courseE_artist_concept_challenge2_2019_authored_hint:
         courseE_artist_concept_challenge2_a: Dopo aver definito una funzione, la puoi
           richiamare più e più volte, ovunque tu voglia!
         courseE_artist_concept_challenge2_b: |-
@@ -11311,6 +12797,16 @@ it:
           Riesci a vedere dove puoi usare una funzione denominata `disegna una fila di esagoni`?
 
           ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
+      courseE_artist_functions10_2019_authored_hint:
+        courseD_artist_functions10_b: Questo esercizio in realtà è molto simile al
+          precedente, ma ora la funzione `disegna una fila ...` è basata su una forma
+          differente.
+        courseD_artist_functions10_a: Per evitare di usare più di un blocco `vai avanti`,
+          crea la funzione `disegna un esagono` e richiamala tutte le volte che serve.
+        courseD_artist_functions10_c: |-
+          Riesci a vedere dove puoi usare una funzione denominata `disegna una fila di esagoni`?
+
+          ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
       courseE_artist_functions1_2018_authored_hint:
         courseE_artist_functions1_a: Le lenti quadrate hanno i lati da 100 pixel,
           questo significa che dovrai muoverti in avanti di 175 pixel prima di disegnare
@@ -11335,6 +12831,20 @@ it:
           - andare avanti di 100 + 75 pixel
           - usare la funzione
       courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_b: La funzione non deve contenere l'intero programma,
+          ma solo la parte che disegna un singolo quadrato con i lati di 100 pixel.
+        courseD_artist_functions2_c: |-
+          Per "richiamare" la funzione `disegna un quadrato` usa questo blocco verde:
+
+          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="disegna un quadrato"/></block></xml>
+
+          In caso contrario, il codice contenuto nella funzione non verrà mai eseguito.
+        courseD_artist_functions2_a: |-
+          Il programma deve:
+          - usare la funzione
+          - andare avanti di 100 + 75 pixel
+          - usare la funzione
+      courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_b: La funzione non deve contenere l'intero programma,
           ma solo la parte che disegna un singolo quadrato con i lati di 100 pixel.
         courseD_artist_functions2_c: |-
@@ -11388,6 +12898,13 @@ it:
           non solo all'interno di un ciclo!
         courseD_artist_functions5_c: Inizia creando la funzione `disegna una stella`,
           quindi usa questa funzione per disegnare le tre stelle!
+      courseE_artist_functions5_2019_authored_hint:
+        courseD_artist_functions5_a: Non ti arrendere! Ricorda ciò che hai imparato.
+        courseD_artist_functions5_b: Le funzioni servono proprio per richiamare una
+          certa sequenza di istruzioni in un qualsiasi punto del programma principale,
+          non solo all'interno di un ciclo!
+        courseD_artist_functions5_c: Inizia creando la funzione `disegna una stella`,
+          quindi usa questa funzione per disegnare le tre stelle!
       courseE_artist_functions6_authored_hint:
         grade4_artist_functions_windows0_a: Per ora concentrati solamente su come
           realizzare una finestra. Creeremo poi una funzione nel prossimo esercizio.
@@ -11414,6 +12931,13 @@ it:
           piano superiore, poi scenda giù di 150 pixel per disegnare le finestre del
           piano terra.
       courseE_artist_functions7_2018_authored_hint:
+        courseD_artist_functions7_a: Prova prima a creare la funzione e poi aggiungi
+          le finestre una alla volta.
+        courseD_artist_functions7_b: Per passare dalle finestre del piano di sopra
+          a quelle del pian terreno, basta girare l'artista a destra, saltare avanti
+          di 150 pixel e infine girare di nuovo l'artista a destra! Ora si troverà
+          nella giusta direzione per completare il disegno!
+      courseE_artist_functions7_2019_authored_hint:
         courseD_artist_functions7_a: Prova prima a creare la funzione e poi aggiungi
           le finestre una alla volta.
         courseD_artist_functions7_b: Per passare dalle finestre del piano di sopra
@@ -11460,6 +12984,26 @@ it:
           l'artista dovrà saltare in basso e indietro prima di iniziare a disegnare
           quella successiva.
         courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
+      courseE_artist_functions8_2019_authored_hint:
+        courseD_artist_functions8_f: Ti basterà un unico blocco `vai avanti`, ma serviranno
+          parecchi blocchi `salta in avanti` e `salta indietro`!
+        courseD_artist_functions8_a: |-
+          Inizia creando una funzione che disegna un quadrato, poi prova a farne un'altra che disegna una fila di quadrati.
+
+          Come userai la funzione `disegna una fila di quadrati` per creare questa immagine?
+        courseD_artist_functions8_d: |-
+          Per disegnare una fila di quadrati,
+          - ripeti 3 volte
+          - disegna un quadrato con lati di **50 pixel**
+          - salta in avanti di **100 pixel**
+        courseD_artist_functions8_b: |-
+          Immagina ogni riga di questo disegno, come una fila di 3 quadrati. Quante file di quadrati ci sono? e dove inizi a disegnare ognuna di esse?
+
+          ![](https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png)
+        courseD_artist_functions8_c: Alla fine di ogni fila traslata di quadrati,
+          l'artista dovrà saltare in basso e indietro prima di iniziare a disegnare
+          quella successiva.
+        courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
       courseE_artist_functions8b_2018_authored_hint:
         courseD_artist_functions8_f: Hai solo bisogno di un blocco `vai avanti` se
           stai procedendo nel modo corretto!
@@ -11470,7 +13014,25 @@ it:
           - ripeti 3 volte
           - disegna un quadrato
           - salta in avanti di **100 pixel**
+      courseE_artist_functions8b_2019_authored_hint:
+        courseD_artist_functions8_f: Hai solo bisogno di un blocco `vai avanti` se
+          stai procedendo nel modo corretto!
+        courseD_artist_functions8_a: Inizia creando una funzione che disegna un quadrato,
+          poi prova a farne un'altra che disegna una fila di quadrati.
+        courseD_artist_functions8_d: |-
+          Per disegnare una fila di quadrati,
+          - ripeti 3 volte
+          - disegna un quadrato
+          - salta in avanti di **100 pixel**
       courseE_artist_functions8c_2018_authored_hint:
+        courseD_artist_functions8_f: È più facile di quanto sembri! Non dovresti aver
+          bisogno di altri blocchi `vai avanti` o`salta`!
+        courseD_artist_functions8_a: La seconda fila di quadrati può essere disegnata
+          proprio come la prima, dopo che l'artista si è girato di 180 gradi!
+        courseD_artist_functions8_c: Alla fine della prima fila di quadrati, l'artista
+          deve solo ruotare di 180 gradi prima di disegnare la successiva. Metti il
+          tutto in un ciclo`ripeti ... volte` per prepararti al prossimo esercizio!
+      courseE_artist_functions8c_2019_authored_hint:
         courseD_artist_functions8_f: È più facile di quanto sembri! Non dovresti aver
           bisogno di altri blocchi `vai avanti` o`salta`!
         courseD_artist_functions8_a: La seconda fila di quadrati può essere disegnata
@@ -11528,12 +13090,42 @@ it:
           - gira di 60 gradi,
           - disegna una fila di triangoli,
           - gira di 120 gradi.
+      courseE_artist_functions9_2019_authored_hint:
+        courseD_artist_functions9_e: |-
+          Osservando questa animazione, riesci ad individuare tutti e quattro i punti in cui si può usare la funzione `disegna una fila di triangoli`.
+
+          ![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
+        courseD_artist_functions9_a: |-
+          Questo esercizio può essere suddiviso in tre parti:
+          - definisci la funzione `disegna un triangolo`,
+          - definisci la funzione `disegna una fila di triangoli`,
+          - usa quattro volte la funzione `disegna una fila di triangoli` per completare il disegno.
+        courseD_artist_functions9_b: Per fare questo disegno si deve disegnare per
+          quattro volte una fila di triangoli, girando alternativamente di 60 e 120
+          gradi tra una fila e l'altra.
+        courseD_artist_functions9_c: |-
+          Per disegnare una fila di triangoli:
+          - ripeti 4 volte,
+          - disegna un triangolo,
+          - salta in avanti di 50 pixel.
+        courseD_artist_functions9_d: |-
+          Per disegnare il rombo:
+          - ripeti 2 volte,
+          - disegna una fila di triangoli,
+          - gira di 60 gradi,
+          - disegna una fila di triangoli,
+          - gira di 120 gradi.
       courseE_artist_functions_challenge1_authored_hint:
         courseE_artist_functions_challenge1_a: Se richiami la funzione ancora una
           volta, puoi completare il disegno nell'angolo mancante.
         courseE_artist_functions_challenge1_b: Puoi anche saltare in un'altra posizione
           o cambiare l'intero disegno a tuo piacimento!
       courseE_artist_functions_challenge1_2018_authored_hint:
+        courseE_artist_functions_challenge1_a: Se richiami la funzione ancora una
+          volta, puoi completare il disegno nell'angolo mancante.
+        courseE_artist_functions_challenge1_b: Puoi anche saltare in un'altra posizione
+          o cambiare l'intero disegno a tuo piacimento!
+      courseE_artist_functions_challenge1_2019_authored_hint:
         courseE_artist_functions_challenge1_a: Se richiami la funzione ancora una
           volta, puoi completare il disegno nell'angolo mancante.
         courseE_artist_functions_challenge1_b: Puoi anche saltare in un'altra posizione
@@ -11547,6 +13139,14 @@ it:
           egli salterà un certo numero di pixel in avanti ed un altro numero di pixel
           in basso, contando a partire dallo spigolo in alto a sinistra.\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       courseE_artist_functions_challenge2_2018_authored_hint:
+        courseE_artist_functions_challenge1_a: "<xml>\n  <block type=\"jump_to_xy\">\n
+          \   <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n
+          \ </block>\n  </xml>\n\n  \nIl blocco `salta a` ti permette di muovere l'artista
+          zombie su qualsiasi pixel della tela, in qualunque momento. Funziona così:
+          *indipendentemente* dal punto in cui si trova l'artista in quel momento,
+          egli salterà un certo numero di pixel in avanti ed un altro numero di pixel
+          in basso, contando a partire dallo spigolo in alto a sinistra.\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+      courseE_artist_functions_challenge2_2019_authored_hint:
         courseE_artist_functions_challenge1_a: "<xml>\n  <block type=\"jump_to_xy\">\n
           \   <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n
           \ </block>\n  </xml>\n\n  \nIl blocco `salta a` ti permette di muovere l'artista
@@ -11637,6 +13237,11 @@ it:
         courseE_bee_concept1_a: Se non riesci subito a capire come usare i cicli annidati,
           prova a scrivere le singole istruzioni su un foglio di carta. Poi cerchia
           gli schemi ricorrenti.
+      courseE_bee_concept1_2019_authored_hint:
+        courseE_bee_concept1_b: Vedi qualche schema che si *ripete*?
+        courseE_bee_concept1_a: Se non riesci subito a capire come usare i cicli annidati,
+          prova a scrivere le singole istruzioni su un foglio di carta. Poi cerchia
+          gli schemi ricorrenti.
       courseE_bee_concept2_authored_hint:
         courseE_bee_concept2_a: Qui potrebbe essere utile un ciclo `mentre`?
         courseE_bee_concept2_d: Puoi anche controllare le caselle vuote per verificare
@@ -11646,6 +13251,15 @@ it:
         courseE_bee_concept2_c: Da che parte deve girare l'ape alla fine di ogni tratto
           del percorso?
       courseE_bee_concept2_2018_authored_hint:
+        courseE_bee_concept2_a: Qui potrebbe essere utile un ciclo `mentre`?
+        courseE_bee_concept2_d: 'Con questo ciclo `mentre` puoi controllare le caselle
+          vuote per vedere se la quantità di miele è > 0, è lo stesso effetto che
+          si avrebbe con un ciclo "mentre c''è del miele". '
+        courseE_bee_concept2_b: Puoi usare dei cicli `mentre` per muoverti fino alla
+          fine di ogni tratto del percorso e produrre tutto il miele in ogni favo.
+        courseE_bee_concept2_c: Da che parte deve girare l'ape alla fine di ogni tratto
+          del percorso?
+      courseE_bee_concept2_2019_authored_hint:
         courseE_bee_concept2_a: Qui potrebbe essere utile un ciclo `mentre`?
         courseE_bee_concept2_d: 'Con questo ciclo `mentre` puoi controllare le caselle
           vuote per vedere se la quantità di miele è > 0, è lo stesso effetto che
@@ -11668,6 +13282,13 @@ it:
           la sequenza che si ripete.
         courseE_bee_concept3a_c: Ci sono tre gruppi di fiori, quindi il ciclo `ripeti
           ... volte` più esterno deve essere ripetuto tre volte.
+      courseE_bee_concept3_2019_authored_hint:
+        courseE_bee_concept3a_a: Prova a risolvere l'esercizio usando dei cicli annidati.
+        courseE_bee_concept3a_b: Se non riesci a capire dove mettere i cicli, prova
+          a scrivere il codice con tutti i blocchi azzurri e cerca poi di riconoscere
+          la sequenza che si ripete.
+        courseE_bee_concept3a_c: Ci sono tre gruppi di fiori, quindi il ciclo `ripeti
+          ... volte` più esterno deve essere ripetuto tre volte.
       courseE_bee_concept4_authored_hint:
         courseE_bee_concept4_a: Un'istruzione condizionale `se/altrimenti` potrebbe
           davvero risolvere il dilemma.
@@ -11676,6 +13297,13 @@ it:
         courseE_bee_concept4_c: Quando se sei su un fiore, quante dosi di nettare
           devi raccogliere? È lo stesso numero per tutti i fiori?
       courseE_bee_concept4_2018_authored_hint:
+        courseE_bee_concept4_a: Un'istruzione condizionale `se/altrimenti` potrebbe
+          davvero risolvere il dilemma.
+        courseE_bee_concept4_b: Uno schema a scalinata può aiutarti a passare in rassegna
+          tutti i fiori e i favi.
+        courseE_bee_concept4_c: Quando se sei su un fiore, quante dosi di nettare
+          devi raccogliere? È lo stesso numero per tutti i fiori?
+      courseE_bee_concept4_2019_authored_hint:
         courseE_bee_concept4_a: Un'istruzione condizionale `se/altrimenti` potrebbe
           davvero risolvere il dilemma.
         courseE_bee_concept4_b: Uno schema a scalinata può aiutarti a passare in rassegna
@@ -11693,6 +13321,16 @@ it:
         courseE_bee_concept5_b: Puoi controllare in ogni casella se c'è un fiore usando
           il blocco `se`; puoi farlo senza problemi anche nelle caselle vuote.
       courseE_bee_concept5_2018_authored_hint:
+        courseE_bee_concept5_a: I fiori sono disposti lungo un percorso rettangolare.
+          Puoi seguire quel percorso usando un ciclo `mentre c'è strada in avanti`
+          anche se ci sono un diverso numero di caselle per ogni lato.
+        courseE_bee_concept5_c: |-
+          Ecco evidenziato nell'immagine il percorso rettangolare che l'ape potrebbe seguire.
+
+          ![](https://images.code.org/39554a528b5ed168737e846c161f00ee-image-1510202150660.33.23.png)
+        courseE_bee_concept5_b: Puoi controllare in ogni casella se c'è un fiore usando
+          il blocco `se`; puoi farlo senza problemi anche nelle caselle vuote.
+      courseE_bee_concept5_2019_authored_hint:
         courseE_bee_concept5_a: I fiori sono disposti lungo un percorso rettangolare.
           Puoi seguire quel percorso usando un ciclo `mentre c'è strada in avanti`
           anche se ci sono un diverso numero di caselle per ogni lato.
@@ -11934,6 +13572,11 @@ it:
           riempire ogni buca fino quando il terreno sarà livellato.
         courseE_farmer_concept1_b: Puoi usare uno schema a scalinata per raggiungere
           le buche.
+      courseE_farmer_concept1_2019_authored_hint:
+        courseE_farmer_concept1_a: Il blocco `mentre c'è una buca` ti aiuterà a far
+          riempire ogni buca fino quando il terreno sarà livellato.
+        courseE_farmer_concept1_b: Puoi usare uno schema a scalinata per raggiungere
+          le buche.
       courseE_farmer_concept2_authored_hint:
         courseE_farmer_concept2_a: I percorsi laterali con le zucche sono tutti della
           stessa lunghezza, ma non sono alla stessa distanza uno dall'altro. Con un
@@ -11952,6 +13595,15 @@ it:
           e ritorni sul percorso principale.
         courseE_farmer_concept2_c: Nel programma principale puoi richiamare la funzione
           con il blocchetto verde che riporta il suo nome.
+      courseE_farmer_concept2_2019_authored_hint:
+        courseE_farmer_concept2_a: I percorsi laterali con le zucche sono tutti della
+          stessa lunghezza, ma non sono alla stessa distanza uno dall'altro. Con un
+          ciclo non riesci a risolvere l'esercizio. Prova con una funzione.
+        courseE_farmer_concept2_b: Qui potrebbe essere d'aiuto una funzione che giri
+          a destra, vada avanti lungo il percorso laterale, raccolga tutte le zucche
+          e ritorni sul percorso principale.
+        courseE_farmer_concept2_c: Nel programma principale puoi richiamare la funzione
+          con il blocchetto verde che riporta il suo nome.
       courseE_farmer_concept3_authored_hint:
         grade3_robotFarmer_ConditionalsIntro_8_a: Il blocco `mentre c'è strada in
           avanti` ti permette di andare avanti, anche se non sai quante caselle devi
@@ -11961,6 +13613,14 @@ it:
         grade3_robotFarmer_ConditionalsIntro_8_c: Usa un ciclo `ripeti ... volte`
           in modo da eseguire il codice per ogni tratto rettilineo del percorso.
       courseE_farmer_concept3_2018_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_8_a: Il blocco `mentre c'è strada in
+          avanti` ti permette di andare avanti, anche se non sai quante caselle devi
+          percorrere.
+        grade3_robotFarmer_ConditionalsIntro_8_b: Cosa occorre fare una volta raggiunta
+          la fine di ogni tratto di percorso?
+        grade3_robotFarmer_ConditionalsIntro_8_c: Usa un ciclo `ripeti ... volte`
+          in modo da eseguire il codice per ogni tratto rettilineo del percorso.
+      courseE_farmer_concept3_2019_authored_hint:
         grade3_robotFarmer_ConditionalsIntro_8_a: Il blocco `mentre c'è strada in
           avanti` ti permette di andare avanti, anche se non sai quante caselle devi
           percorrere.
@@ -12004,6 +13664,12 @@ it:
           blocchi contengono.
         courseE_farmer_functions1_b: Devi solo raccogliere una zucca, ma potresti
           usare un ciclo per raggiungerla?
+      courseE_farmer_functions1_2019_authored_hint:
+        courseE_farmer_functions1_a: Qui la cassetta degli attrezzi è organizzata
+          in modo leggermente diverso. Clicca sulle varie categorie per vedere che
+          blocchi contengono.
+        courseE_farmer_functions1_b: Devi solo raccogliere una zucca, ma potresti
+          usare un ciclo per raggiungerla?
       courseE_farmer_functions1a_authored_hint:
         courseE_farmer_functions1a_a: Analizza passo dopo passo il funzionamento dell'istruzione
           condizionale `se`. Cosa deve pensare la contadina quando si trova di fronte
@@ -12011,6 +13677,11 @@ it:
         courseE_farmer_functions1a_b: Usa un blocco `ripeti fino a che` per arrivare
           fino alla zucca!
       courseE_farmer_functions1a_2018_authored_hint:
+        courseE_farmer_functions1a_a: Leggi attentamente la definizione della funzione.
+          Riesci a dire che cosa fa?
+        courseE_farmer_functions1a_b: Usa un blocco `ripeti fino a che` per arrivare
+          fino alla zucca!
+      courseE_farmer_functions1a_2019_authored_hint:
         courseE_farmer_functions1a_a: Leggi attentamente la definizione della funzione.
           Riesci a dire che cosa fa?
         courseE_farmer_functions1a_b: Usa un blocco `ripeti fino a che` per arrivare
@@ -12031,6 +13702,14 @@ it:
           lì la contadina deve solo andare avanti e girare.
         courseE_farmer_functions2b_c: Hai bisogno di due differenti blocchi `ripeti
           fino a che` per raccogliere tutti gli ortaggi.
+      courseE_farmer_functions2b_2019_authored_hint:
+        courseE_farmer_functions2b_a: Puoi usare un blocco `ripeti fino a che sei
+          su una zucca` per raggiungere la fine dei due tratti di percorso che si
+          concludono con una zucca.
+        courseE_farmer_functions2b_b: Non ci sono pannocchie nel percorso intermedio,
+          lì la contadina deve solo andare avanti e girare.
+        courseE_farmer_functions2b_c: Hai bisogno di due differenti blocchi `ripeti
+          fino a che` per raccogliere tutti gli ortaggi.
       courseE_farmer_functions2ba_authored_hint:
         courseE_farmer_functions2ba_a: Usa il blocco verde `pannocchie e zucca` per
           richiamare questa funzione.
@@ -12040,12 +13719,20 @@ it:
       courseE_farmer_functions2ba_2018_authored_hint:
         courseE_farmer_functions2ba_a: Usa il blocco verde `prendi tutte le zucche`
           per essere sicuro di raccoglierle tutte!
+      courseE_farmer_functions2ba_2019_authored_hint:
+        courseE_farmer_functions2ba_a: Usa il blocco verde `prendi tutte le zucche`
+          per essere sicuro di raccoglierle tutte!
       courseE_farmer_functions3c_authored_hint:
         courseE_farmer_functions3c_a: Quale sequenza si ripete spesso in questo programma?
           Riesci a trascinare questi blocchi nella funzione?
         courseE_farmer_functions3c_b: Non dimenticare di richiamare la funzione nel
           programma principale ovunque hai tolto i blocchi.
       courseE_farmer_functions3c1_2018_authored_hint:
+        coursee_farmer_functions3c1_2018_a: Per risolvere questo esercizio dovrai
+          usare tre volte la funzione `raccogli lungo il percorso`.
+        coursee_farmer_functions3c1_2018_b: Che codice devi aggiungere per fare le
+          curve?
+      courseE_farmer_functions3c1_2019_authored_hint:
         coursee_farmer_functions3c1_2018_a: Per risolvere questo esercizio dovrai
           usare tre volte la funzione `raccogli lungo il percorso`.
         coursee_farmer_functions3c1_2018_b: Che codice devi aggiungere per fare le
@@ -12095,6 +13782,11 @@ it:
           presente nella sezione "funzioni" nella cassetta degli attrezzi.
         courseE_farmer_functions7a1_2018_b: Dopo che hai creato la funzione, non dimenticati
           di usarla!
+      courseE_farmer_functions7a1_2019_authored_hint:
+        courseE_farmer_functions7a1_2018_a: Crea la funzione usando l'apposito blocco
+          presente nella sezione "funzioni" nella cassetta degli attrezzi.
+        courseE_farmer_functions7a1_2018_b: Dopo che hai creato la funzione, non dimenticati
+          di usarla!
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: In questo caso non sono necessarie delle funzioni,
           ma se vuoi puoi usarne una!
@@ -12117,6 +13809,12 @@ it:
         courseE_farmer_functions8a1_2018b: Dopo aver eseguito la funzione la prima
           volta, dovrai usare un altro blocco `gira a ...` per poterla eseguire di
           nuovo.
+      courseE_farmer_functions8a1_2019_authored_hint:
+        courseE_farmer_functions8a1_2018a: Inizia usando la funzione che hai creato
+          nell'esercizio precedente.
+        courseE_farmer_functions8a1_2018b: Dopo aver eseguito la funzione la prima
+          volta, dovrai usare un altro blocco `gira a ...` per poterla eseguire di
+          nuovo.
       courseE_farmer_functions8b_authored_hint:
         courseE_farmer_functions8b_a: Prova ad eseguire il codice che trovi già pronto
           per scoprire cosa fa. Come puoi procedere?
@@ -12132,6 +13830,14 @@ it:
           volta.
         courseE_farmer_functions8b_c: Quante volte è necessario richiamare la funzione?
       courseE_farmer_functions9a1_2018_authored_hint:
+        courseE_farmer_functions9a1_2018a: Potrai usare la stessa funzione che hai
+          creato negli ultimi due esercizi.
+        courseE_farmer_functions9a1_2018b: Per risolvere la prima metà di questo esercizio,
+          devi seguire gli stessi passaggi dell'esercizio precedente.
+        courseE_farmer_functions9a1_2018c: Prima di poter richiamare di nuovo la funzione,
+          dovrai usare alcuni blocchi `gira a ...` e `vai avanti`per completare la
+          raccolta delle lattughe.
+      courseE_farmer_functions9a1_2019_authored_hint:
         courseE_farmer_functions9a1_2018a: Potrai usare la stessa funzione che hai
           creato negli ultimi due esercizi.
         courseE_farmer_functions9a1_2018b: Per risolvere la prima metà di questo esercizio,

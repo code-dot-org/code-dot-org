@@ -2915,6 +2915,8 @@ es:
           stages:
             Minecraft Hour of Code:
               name: Hora de Code de Minecraft
+          description: "¡Minecraft ha vuelto a la Hora del código con una actividad
+            completamente nueva! Viaje por Minecraft a través del código."
         csp-explore-2017:
           stages:
             Post-Course Survey:
@@ -3547,6 +3549,9 @@ es:
             Dance Party:
               name: Fiesta para bailar
           title: Fiesta para bailar
+          description_short: "¡Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
+            Ciara y otros 25!"
+          description: "¡Programa tu propio baile para compartirlo con tus amigos!"
         frozen-2018-test-b:
           stages:
             Artist:
@@ -3561,6 +3566,9 @@ es:
           stages:
             Dance Party:
               name: Fiesta para bailar
+        dance-extras:
+          title: Sigue bailando
+          description: Ve más allá de la primera hora con más ideas para proyectos.
         coursef-2019:
           description_short: Aprende todos los conceptos de Fundamentos de Informática
             y crea tu propio arte, historia o juego.
@@ -3574,7 +3582,127 @@ es:
               name: Variables de sobre
             For Loop Fun:
               name: Diversión con bucles Para
+            The Artist:
+              name: El artista
         dance-low:
           stages:
             Dance Party:
               name: Fiesta para bailar
+        coursed-2019:
+          description_audience: Edades de 7 a 11 años
+          stages:
+            Relay Programming:
+              name: Programación de Relevos
+            Loops in Ice Age:
+              name: Bucles en la Edad del Hielo
+            Conditionals with Cards:
+              name: Condicionales con tarjetas
+            Digital Citizenship:
+              name: Ciudadanía Digital
+            'Unplugged: Binary':
+              name: 'Desconectado: binario'
+            Artist Binary:
+              name: Artista binario
+            Build a Star Wars Game:
+              name: Construye un juego de la Guerra de las Galaxias
+        coursee-2019:
+          description_audience: Edades de 8 a 12 años
+          stages:
+            Building a Foundation:
+              name: Construyendo una Base
+            Nested Loops:
+              name: Bucles anidados
+            Conditionals with Cards:
+              name: Condicionales con tarjetas
+            Conditionals:
+              name: Condicionales
+            Build a Star Wars Game:
+              name: Construye un juego de la Guerra de las Galaxias
+              description_student: Siente la fuerza cuando construyes tu propio juego
+                de la Guerra de las Galaxias en esta lección.
+              description_teacher: En esta lección, los estudiantes pondrán en práctica
+                utilizando eventos para construir un juego que pueden compartir en
+                línea. Con R2-D2 y otros personajes de Star Wars, los estudiantes
+                serán guiados a través de eventos, luego le dadas espacio para crear
+                su propio juego.
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Colaboración Abierta
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Programación de Relevos
+            Conditionals with Cards:
+              name: Condicionales con tarjetas
+            Envelope Variables:
+              name: Variables de sobre
+            For Loop Fun:
+              name: Diversión con bucles Para
+            Binary Bracelets:
+              name: Pulseras Binarias
+            'Unplugged: Binary':
+              name: 'Desconectado: binario'
+            Artist Binary:
+              name: Artista binario
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Colaboración Abierta
+        csd1-2019:
+          description_short: "  Aprenda cómo los humanos trabajan con computadoras
+            para resolver problemas."
+          stages:
+            Intro to Problem Solving:
+              description_student: 'La clase trabajara en grupos para diseñar barcos
+                de papel aluminio que admitirán tantos centavos como sea posible.
+                Al final de la clase, los grupos reflexionan sobre sus experiencias
+                con la actividad y establecera conexiones con los tipos de resolución
+                de problemas que harán durante el resto del curso. '
+            Exploring Problem Solving:
+              description_student: 'En esta lección, la clase aplicara el proceso
+                de resolución de problemas a tres problemas diferentes: una búsqueda
+                de palabras, un arreglo de asientos para una fiesta de cumpleaños
+                y la planificación de un viaje. Los problemas se vuelven cada vez
+                más complejos y están mal definidos para destacar cómo el proceso
+                de resolución de problemas es particularmente útil cuando se abordan
+                estos tipos de problemas.'
+              description_teacher: |-
+                En esta lección, los estudiantes aplicara el proceso de resolución de problemas a tres problemas diferentes para comprender mejor el valor de cada paso. Resolverán una búsqueda de palabras, organizarán asientos para una fiesta de cumpleaños y planificarán un viaje. Los problemas se vuelven cada vez más complejos y están mal definidos para destacar cómo el proceso de resolución de problemas es particularmente útil cuando se abordan estos tipos de problemas. La lección concluye con los estudiantes reflexionando sobre su experiencia con el proceso de resolución de problemas. Ellos justificarán la inclusión de cada paso y harán una lluvia de ideas con preguntas o estrategias que pueden ayudarlos a definir mejor los problemas abiertos, ya que a menudo es el paso más crítico.
+
+                Esta lección probablemente tomará dos períodos de clase o más para ser completado. Los dos primeros problemas pueden ocupar un solo período de clase, pero el tercero deberá trasladarse a un segundo día.
+            What is a Computer?:
+              description_student: En esta lección, la clase desarrollara una definición
+                preliminar de una computadora. Después de una lluvia de ideas sobre
+                las posibles definiciones de una computadora, la clase trabajara en
+                grupos para clasificar las imágenes en "es una computadora" o "no
+                es una computadora" en un papel y explicaran sus motivaciones para
+                elegir algunas de las categorizaciones más difíciles. Luego, el profesor
+                introduce una definición de la computadora y permite a los grupos
+                revisar sus carteles de acuerdo con la nueva definición.
+            Input and Output:
+              description_teacher: En esta lección, los alumnos consideran una cantidad
+                de dispositivos informáticos para determinar qué tipos de entradas
+                y salidas utilizan. Los grupos se asignan a un dispositivo informático
+                y, según una definición de entrada y salida proporcionada por el maestro,
+                enumeran las entradas y salidas de su dispositivo. Al principio de
+                la actividad, los estudiantes deben enfocarse en entradas y salidas
+                físicas más obvias (por ejemplo, un teclado como entrada o una pantalla
+                como salida) pero las discusiones posteriores llevan a los estudiantes
+                a considerar ejemplos menos obvios (por ejemplo, que una pantalla
+                táctil es tanto una entrada y salida, o el hecho de que Internet puede
+                servir como entrada y salida). A lo largo de la lección, el maestro
+                registra las entradas y salidas que se identifican en un cuadro en
+                el frente del salon. Para concluir la lección, los alumnos examinan
+                las actividades comunes que realizan en un dispositivo informático
+                y seleccionan de la tabla las entradas y salidas utilizadas para esa
+                actividad.
+            Apps and Storage:
+              description_student: 'Esta lección cubre los aspectos de entrada y salida
+                de las computadoras en un contexto que es relevante y familiar para
+                los estudiantes: aplicaciones. La clase evalúa varias aplicaciones
+                web para analizar los problemas específicos que fueron diseñados para
+                resolverse, las entradas que necesitan para trabajar y las salidas
+                que proporcionan a los usuarios. La clase concluye con observaciones
+                de estas aplicaciones, así como una discusión dirigida por el docente
+                sobre el impacto de las aplicaciones en la sociedad. '

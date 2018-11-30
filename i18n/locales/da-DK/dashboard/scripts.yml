@@ -1208,6 +1208,7 @@ da:
           stages:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
+          description: Minecraft er tilbage med en splinterny aktivitet i En Times Kodning! En rejse gennem Minecraft ved hjælp af kode.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1417,10 +1418,28 @@ da:
           stages:
             Artist:
               name: Kunstner
+        dance:
+          stages:
+            Dance Party:
+              name: Dansefest
+          title: Dansefest
+          description_short: Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara og 25 andre!
+          description: Lav din egen dansefest sammen med dine venner.
         frozen-2018-test-b:
           stages:
             Artist:
               name: Kunstner
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Dansefest
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Dansefest
+        dance-extras:
+          title: Bliv ved med at danse
+          description: Overskrid den første time med udvidede projektideer.
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1431,3 +1450,55 @@ da:
               name: Omslut variabler
             For Loop Fun:
               name: For loop sjov
+            The Artist:
+              name: Kunstneren
+        dance-low:
+          stages:
+            Dance Party:
+              name: Dansefest
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Stafet-programmering
+            Conditionals with Cards:
+              name: Betingelser med kortspil
+            Digital Citizenship:
+              name: Digital statsborgerskab
+            'Unplugged: Binary':
+              name: 'Unplugged: Binære'
+            Artist Binary:
+              name: Kunstner binære
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Opbygge et fundament
+            Nested Loops:
+              name: Indlejret Løkker
+            Conditionals with Cards:
+              name: Betingelser med kortspil
+            Conditionals:
+              name: Betingelser
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Stafet-programmering
+            Conditionals with Cards:
+              name: Betingelser med kortspil
+            Envelope Variables:
+              name: Omslut variabler
+            For Loop Fun:
+              name: For loop sjov
+            Binary Bracelets:
+              name: Binære armbånd
+            'Unplugged: Binary':
+              name: 'Unplugged: Binære'
+            Artist Binary:
+              name: Kunstner binære
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing

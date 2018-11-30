@@ -112,6 +112,10 @@ km:
         options:
           EFFECT:
             '"none"': គ្មាន
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': គ្មាន
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -131,6 +135,10 @@ km:
             '0.5': slow
             '0.25': very slow
       Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': គ្មាន
+      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
             '"none"': គ្មាន
@@ -178,6 +186,7 @@ km:
             '"right"': ស្តាំ
             '"space"': លំហ​អាកាស
             '"x"': x
+            '"y"': y
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -274,6 +283,15 @@ km:
           LOCATION:
             "{x: 100, y: 200}": ឆ្វេង
             "{x: 300, y: 200}": ស្តាំ
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ឆ្វេង
+            "{x: 300, y: 200}": ស្តាំ
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': ទាំងអស់
       Mikelab_getProp:
         options:
           PROPERTY:

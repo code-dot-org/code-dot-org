@@ -143,8 +143,129 @@ sv:
       Course 4 SCFP 1: Skapa en funktion med parametrar som gör att konstnären kan hoppa bakåt och framåt med x antal pixlar, och också upp och ner me y antal bildpunkter (med positiva och negativa tal).
       Course 4 SCVP 1: Skapa en funktion med parametrar som gör att konstnären kan hoppa bakåt och framåt med x antal pixlar, och också upp och ner me y antal bildpunkter (med positiva och negativa tal).
       CourseF_PlayLab_vars2: Loppet i det sista pusslet var inte särskilt rättvist! Ändra variabeln "dog_speed" så att du kan samla fler flaggor än Katt. Först att samla in 10 flaggor vinner!
+      Dance_Party_01: |-
+        *Nu ska vi ha ett dansparty!*
+        
+        Dra ”gör ett nytt”-blocket till arbetsytan och anslut den inuti ”installera”-blocket för att skapa din första dansare.
+        
+        * *Du kan även klicka på glödlampan till vänster om du vill ha mer information eller extra utmaningar.*
+      Dance_Party_01_low: |-
+        *Nu ska vi ha ett dansparty!*
+        
+        Dra ”gör ett nytt”-blocket till arbetsytan och anslut den inuti ”installera”-blocket för att skapa din första dansare.
+        
+        * *Du kan även klicka på glödlampan till vänster om du vill ha mer information eller extra utmaningar.*
+      Dance_Party_02: |-
+        Låt oss få denna älg att dansa!
+        
+        Dra ut <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blocket till arbetsytan. Koppla samman det undertill med <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blocket. Din dansare bör starta en ny rörelse efter den fjärde åtgärden.
+        
+        
+        **Åtgärder** används för att mäta tid i musik. I denna handledning är en åtgärd fyra takter lång.
+      Dance_Party_03: "*Nu rockar vi!*\n\nLägg till ett <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> block till din arbetsyta. Gör så att dansaren startar en ny rörelse efter 6 åtgärder."
+      Dance_Party_04: |-
+        *Denna dans behöver lite effekter!*
+        
+        Leta efter ett nytt block i din verktygslåda som lägger till en bakgrundseffekt bakom din dansare. Se effekterna ändras i takt med musiken!
+      Dance_Party_05: |-
+        Använd ett annat nytt block för att få dansaren att ändra rörelse **efter 2 åtgärder**!
+        
+        *Att välja ”(nästa)”, ”(föregående)”, eller ”(slumpad)” säger åt dansaren att utföra en annan rörelse varje gång koden körs.
+      Dance_Party_06: |-
+        *Vi behöver fler dansare!*
+        
+        Skapa en backgrundsdansare som kallas ”backup_dancer1” som ska dansa med katten.
+      Dance_Party_08: |-
+        Varje dansare har en uppsättning _properties_ som styr hur den ser ut.
+        
+        Du kan göra så att det ser ut som att en dansare är i bakgrunden genom att göra deras _size_ mindre. Kan du göra båda bakgrundsdansarna i samma storlek?
+      Dance_Party_09: |-
+        Dansarna har en egenskap för färgtoner som kan lägga till ett lager av färg. Testa att ändra färgtonen på en av dina dansare.
+        * Färgtonerna kommer att blanda färgen som du väljer med dansarens färger.
+      Dance_Party_10: |-
+        Nu vet vi hur man ändrar en dansares egenskaper. Vi kan även göra så att samma egenskaper automatiskt reagerar på musiken med hjälp av detta block:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+        
+        Detta program använder musikens ”bas”-volym (de låga ljuden) för att styra en dansares längd. Kan du göra så att den andra dansaren också reagerar på musiken?
+      Dance_Party_11.5_test: "Kolla in detta block:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nNu kan du skapa ett gäng dansare på samma gång!\n\nTesta att skriva kod som gör så att alla ankor dansar tillsammans med hjälp av några av ”bara ankor”-blocken."
+      Dance_Party_11: "Detta <xml><block type=\"Dancelab_whenKey\"></block></xml> block låter dig köra kod när uppåtpilen trycks in.\n\nDu kan ändra dansrörelser, ändra egenskaperna för en dansare eller göra en snabb rörelse en enda gång. Var kreativ och håll utkik efter nya block!"
+      Dance_Party_11_5: "Kolla in detta block:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nNu kan du skapa ett gäng dansare på samma gång!\n\nTesta att skriva kod som gör så att alla ankor dansar tillsammans med hjälp av några av ”bara ankor”-blocken."
+      Dance_Party_11b: |-
+        Dags för en dansutmaning! Katten klappar när du trycker på vänsterpilen. Gör så att roboten ”faller” när du trycker på högerpilen.
+      Dance_Party_12: Dags att svänga på höfterna! Skapa en egen dans att dela med dina vänner.
+      Dance_Party_extras_battle: |-
+        # Dansgrupper
+        
+        Här är en danstävling mellan två grupper. Piltangenterna styr den ena dansaren och ”w,a,s,d”-tangenterna styr den andra. Ha en danstävling med en vän och försök sedan att förbättra tävlingen.
+        
+        * Lägg till fler tangenter för att styra danserna
+        * Gör så att backgrundsdansarna också reagerar när en tangent trycks in
+        * Växla dansare vid var 4:e åtgärd genom att ange deras synlighet
+      Dance_Party_extras_every_beat: |-
+        # Kvartsnoter
+        
+        De flesta av våra danser har använt sig av hela åtgärder, men varje åtgärd består av 4 kvartsnoter. Denna dans använder ”fjärdedelsåtgärder” (0,25) för att göra så att dansaren klappar på varje kvartsnot.
+        
+        Denna dans använder också ett _villkorat_ block för att styra när blocket med ”fjärdedelsåtgärder” kan ändra dansen. Testa att ändra siffrorna i det villkorade blocket för att se hur det påverkar dansen.
+        
+        * Experimentera med andra notlängder (som 0,5 för en halvnot eller 0,125 för en åttondelsnot).
+        * Lägg till några händelser med ”efteråtgärder”.
+        * Byt ”åtgärder” mot ”sekunder” och försök att på så sätt tajma dina danser.
+      Dance_Party_extras_layout: |-
+        # Uppställning!
+        
+        Kolla in denna dans som använder ”layout”-blocket för att ändra bakgrundsdansarnas formation under dansen. Testa någon av dessa idéer för att utveckla det hela:
+        
+        * Skapa en andra grupp av dansare i en annan utformning
+        * Ändra utformning när en tangent trycks in
+        * Ändra en egenskap när dansarna ändrar formation
+      Dance_Party_extras_on_beat: |-
+        # Bas, mellanregister och diskant
+        
+        Denna dans använder ”topp”-händelser för att starta kod när olika delar av musiken blir hög. Försöka mixtra med olika låtar för att se hur de förändrar dansen.
+      Dance_Party_extras_speed: |-
+        # Öka takten, sakta ner
+        
+        Denna sista dans använder blocket ”ange hastighet” för att styra hur snabbt varje dansare rör sig. Testa att experimentera med olika hastigheter under olika tidpunkter i låten. Fortsätt gärna mixtra med denna dans eller återgå till någon av de tidigare danserna för att göra dem ännu coolare.
+      Dance_Party_extras_visible: |-
+        # Vart tog de vägen?
+        
+        Denna dans visar och döljer två olika grupper av dansare. Kolla in det och försök sedan att lägga till din egen stil.
+        
+        * Lägg till en grupp av dansare
+        * Visa och dölj dansare med hjälp av piltangenterna
+        * Dölj alla dansare och växla till en spännande bakgrundseffekt
       Function intro Ryan: "Du har en **funktion** som heter \"bygg bro\" i arbetsytan.  All kod du behöver för att korsa floden är inbyggd i den!\\r\n \\r\nFäst två av de små, gröna blocken i arbetsytan för att fixa vägen och ta {currentPlayerName} till rödstensfacklan [redstone_torch]."
       Function intro Ryan_2019: "Du har en **funktion** som heter \"bygg bro\" i arbetsytan.  All kod du behöver för att korsa floden är inbyggd i den!\\r\n \\r\nFäst två av de små, gröna blocken i arbetsytan för att fixa vägen och ta {currentPlayerName} till rödstensfacklan [redstone_torch]."
+      HOC 2018 Level_1: "Du behöver förnödenheter för resan framåt. Samla en **båt** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) från **kistan** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png)."
+      HOC 2018 Level_10: "Det finns en **bläckfisk** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) som gömmer sig någonstans i detta havsmonument – kan du hitta den?"
+      HOC 2018 Level_11: Bygg en mur av **prismarin** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) runt den svarta betongen. Detta kommer att aktivera denna **kanal** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) och slutföra din utmaning!
+      HOC 2018 Level_12: Grattis! Den öppna vattenlevande världen väntar på dig. Bygg ett korallrev! En vulkan! Ett skeppsvrak! Det är upp till dig.
+      HOC 2018 Level_2: Att ta en av båtarna är mycket lättare än att simma i öppet vatten! Bege dig till slutet av bryggan för att hoppa ombord.
+      HOC 2018 Level_3: Greppa årorna och styr din båt över öppet hav för att fånga **torsk** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Mata torsken till **delfinen** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png). Använd ett upprepande block för att ta dig över havet snabbare.
+      HOC 2018 Level_5: Det finns ett **skal från en pärlbåtssnäcka** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png) gömd någonstans! Utforska skeppsvraket för att nå **kistan** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      HOC 2018 Level_6: Det ser kallt ut där ute! Fånga en **lax** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) på vägen till undervattensruinerna.
+      HOC 2018 Level_7a: "Du hittade undervattensruinerna. Sök i sandstenen efter en **kista** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) som innehåller en **prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) skatt."
+      HOC 2018 Level_8: "Först isberg – nu lava? Ta dig igenom denna vulkanö och hitta **tropiska fiskar** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) i korallrevet."
+      HOC 2018 Level_9b: "Du tog dig till revet, sök nu efter **Havets hjärta** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Använd den blåa och röda korallen för att nå **skattkistan** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)."
+      HOC Dance 4_draft: |-
+        Använd ett annat nytt block för att få dansaren att ändra rörelse **efter 2 åtgärder**!
+        
+        *Att välja ”(nästa)”, ”(föregående)”, eller ”(slumpad)” säger åt dansaren att utföra en annan rörelse varje gång koden körs.
+      HOC Dance 5_draft: |-
+        *Vi behöver fler dansare!*
+        
+        Skapa en backgrundsdansare som kallas ”backup_dancer1” som ska dansa med katten.
+      HOC Dance 9_draft: "Detta <xml><block type=\"Dancelab_whenKey\"></block></xml> block låter dig köra kod när uppåtpilen trycks in.\n\nDu kan ändra dansrörelser, ändra egenskaperna för en dansare eller göra en snabb rörelse en enda gång. Var kreativ och håll utkik efter nya block!"
+      HOC Dance Freeplay: Dags att svänga på höfterna! Skapa en egen dans att dela med dina vänner.
+      HOC Dance Freeplay_draft: Dags att svänga på höfterna! Skapa en egen dans att dela med dina vänner.
+      HOC Dance Predraw: Dags att svänga på höfterna! Skapa en egen dans att dela med dina vänner.
       K-1 Bee Loops 2: Använd en slinga för att flytta och sedan få nektar och gör honung!
       K-1 Bee Loops 3: Använd loopar att få nektar och göra honung!
       K-1 Bee Loops 4: Använd loopar att få nektar, göra honung och flytta!
@@ -258,6 +379,7 @@ sv:
       New Minecraft Hero Project: "**Spela fritt:** Nu är det upp till dig! Använd agentens kod för att utforska världen."
       Overworld Move to Sheep: Lägg till ett till "gå framåt"-kommando för att komma till fåret.
       Overworld Move to Sheep_2018: Lägg till ett till "gå framåt"-kommando för att komma till fåret.
+      Overworld Move to Sheep_2019: Lägg till ett till "gå framåt"-kommando för att komma till fåret.
       Testing Quantum Farmer: "Wow, jag hittade ett riktigt djupt hål! Jag vet inte hur många spadtag med jord som krävs.  Kan du skriva ett program som fyller det tills marken är jämn?  Tips: Försök att använda en 'medan'-slinga denna gång."
       beeDebugVideo1: Samla all nektar.
       course4_artist_fwp_challenge1: Prova att köra det här programmet och göra ändringar under tiden för att se vad som händer. Kan du lista ut hur det fungerar? (Eller ta bort det och ersätt det med någonting totalt annorlunda)

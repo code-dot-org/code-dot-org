@@ -1,14 +1,14 @@
 {
-  "danceFeedbackNeedNewDancer": "",
-  "danceFeedbackNoDancers": "ダンサーがありません。",
-  "danceFeedbackNoBackground": "",
-  "danceFeedbackTooManyDancers": "",
-  "danceFeedbackUseSetSize": "",
-  "danceFeedbackUseSetTint": "",
-  "danceFeedbackUseStartMapping": "",
-  "danceFeedbackStartNewMove": "",
-  "danceFeedbackNeedDifferentDance": "",
-  "danceFeedbackNeedEveryTwoMeasures": "",
-  "danceFeedbackNeedMakeANewDancer": "",
-  "measure": ""
+  "danceFeedbackNeedNewDancer": "ダンサーを作る必要があります。",
+  "danceFeedbackNoDancers": "ダンサーがいません。",
+  "danceFeedbackNoBackground": "背景エフェクトを追加してください。",
+  "danceFeedbackTooManyDancers": "きをつけて！`新しくつくる`ブロックを`2小節ごとに`の中に置けば、たくさんのダンサーを作れます。",
+  "danceFeedbackUseSetSize": "そのダンサーを小さくするのに 'backup_dancer2 おおきさを設定' ブロックを使用します。",
+  "danceFeedbackUseSetTint": "ダンサーの色合いを変更するには`色合いを設定`ブロックを使用します。",
+  "danceFeedbackUseStartMapping": "<xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\">\"スケール\"</title><title name=\"RANGE\">\"ベース\"</title></block></xml> ブロックをプログラムに追加してみましょう。",
+  "danceFeedbackStartNewMove": "4小節たっても、ダンサーは新しい動きをしませんでした。",
+  "danceFeedbackNeedDifferentDance": "違うダンスを使う必要があります。",
+  "danceFeedbackNeedEveryTwoMeasures": "'2小節ごとに'ブロックを使っているかどうかたしかめてください。",
+  "danceFeedbackNeedMakeANewDancer": "`新しくつくる`ブロックを使って2番目のダンサーを作りましょう。",
+  "measure": "小節:"
 }

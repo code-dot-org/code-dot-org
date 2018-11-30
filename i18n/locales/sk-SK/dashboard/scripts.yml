@@ -223,7 +223,7 @@ sk:
             Binary:
               name: Binárny
             For Loops:
-              name: Slučky For
+              name: Cykly For
             Variables:
               name: Premenné
         algebra:
@@ -345,7 +345,7 @@ sk:
             Creating Functions:
               name: Tvorba funkcií
             While Loops:
-              name: Podmieňovacie slučky While
+              name: Podmieňovacie cykly While
         algebraPD3:
           stages:
             Teacher Dashboard:
@@ -481,7 +481,7 @@ sk:
         cspunit3temp:
           stages:
             While Loops:
-              name: Podmieňovacie slučky While
+              name: Podmieňovacie cykly While
         starwars:
           title: 'Star Wars: Budovanie galaxie pomocou Kódu'
           description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
@@ -529,7 +529,7 @@ sk:
         csp5-2017:
           stages:
             While Loops:
-              name: Podmieňovacie slučky While
+              name: Podmieňovacie cykly While
             Post-Course Survey:
               name: Hodnotenie kurzu
         CSDU3-Draft:
@@ -657,7 +657,7 @@ sk:
             Events:
               name: Udalosti
             For Loops:
-              name: Slučky For
+              name: Cykly For
             Functions:
               name: Funkcie
             Functions with Parameters:
@@ -665,11 +665,11 @@ sk:
             Loops:
               name: Slučky
             Nested Loops:
-              name: Vnorené slučky
+              name: Vnorené cykly
             Variables:
               name: Premenné
             While Loops:
-              name: Podmieňovacie slučky While
+              name: Podmieňovacie cykly While
         algebrapdnext:
           stages:
             Teacher Dashboard:
@@ -752,7 +752,7 @@ sk:
             Artist Binary:
               name: Binárny Umelec
             Nested Loops:
-              name: Vnorené slučky
+              name: Vnorené cykly
             Introduction:
               name: Úvod
             Nested Loops Project in Artist:
@@ -834,7 +834,7 @@ sk:
             Lists:
               name: Zoznamy
             For Loops:
-              name: Slučky For
+              name: Cykly For
             Functions with Parameters:
               name: Funkcie s parametrami
         workshop-gamelab:
@@ -859,7 +859,7 @@ sk:
             Lists:
               name: Zoznamy
             For Loops:
-              name: Slučky For
+              name: Cykly For
             Functions with Parameters:
               name: Funkcie s parametrami
             Functions with Parameters_:
@@ -943,22 +943,20 @@ sk:
             Introduction:
               description_teacher: 'V týchto úlohých študenti začnú úvodom (alebo opakovaním - podľa toho, ako pokročilá je Vaša trieda) do online pracovného prostredia Code.org. Videá Vám vysvetlia ako funguje pracovné prostredie, vrátane tlačidiel "Spustiť", "Obnoviť" a "Krok". Videá tiež ukážu ako presúvať bloky, ako ich vymazať či spájať. Následne si študenti precvičia svoje schopnosti v _postupnostiach_ a _odstraňovaní chýb_. Po tom študenti uvidia nové typy úloh ako napríklad Collector, Umelec a Harvester.'
             Nested Loops:
-              name: Vnorené slučky
+              name: Vnorené cykly
             Nested Loops in Artist:
               name: Vnorené cykly s Umelcom
-              description_student: Tuto používame vnorené slučky a kreslíme pôsobivé kresby, ktorými sa môžeš poschváliť blízkym a rodine.
-              description_teacher: Tak a teraz, keď študenti vedia naskladať vlastné slučky, tvoria množstvo krásnych vecí. V tejto lekcii študenti uvidia sériu cvičení ako si vytvoriť vlastné portfólio útvarov.
             Artist Binary:
               name: Binárny umelec
               description_student: Naviguj svojho umelca tak, aby vytvoril binárny obraz len s použitím príkazu zapnúť a vypnúť pixely.
               description_teacher: Binárna forma je vo svete počítačov dôležitá. Väčšina počítačov dnes ukladá všetky informácie v binárnej sústave. Táto lekcia ukazuje ako je možné preniesť niečo z bežného života do série zapnutí a vypnutí. Študenti skladajú binárne útvary v Umelcovi prenesením núl a jednotiek do zapnutí a vypnutí (alebo čiernych a bielych).
             Nested Loops Project in Artist:
               name: Vnorené cykly vo Frozen
-              description_student: Viac vnorených slučiek! Tentokát vytvoríš ÚŽASNÉ kresby s vnorenými slučkami.
+              description_student: Viac vnorených cyklov! Tentokrát s vnorenými cyklami vytvoríš ÚŽASNÉ kresby.
               description_teacher: V dnešných úlohách študenti s pomocou Umelca vytvoria spletité kresby. Precvičovanie vnorených cyklov v nových, komplexnejších úlohách umožní študentom uvedomiť si širšie možnosti ich využitia. Tieto úlohy tiež ponúkajú vyššiu mieru kreativity s možnosťou vytvorenia vlastnej kresby v poslednej úlohe.
           title: Kurz D
           assignment_family_title: Kurz D
-          description_short: Rýchlo pokryte pojmy z kurzu C, potom choďte ďalej s algoritmami, vnorenými slučkami, podmienkami a ďalším.
+          description_short: Rýchlo pokryte pojmy z kurzu C, potom pokračujte ďalej s algoritmami, vnorenými cyklami, podmienkami a ďalšími konceptami.
         coursee-2017:
           stages:
             Introduction:
@@ -983,8 +981,6 @@ sk:
               name: Funkcie s Umelcom
               description_student: Jednoducho s funkciami vytvor zložitejšie kresby!
               description_teacher: Študenti sa oboznámia s používaním funkcií na stránke Code.org. V Umelcovi budeme tvoriť a upravovať veľkolepé obrázky. Študenti sa naučia viac o vnorených funkciach, čo je vlastne zvolanie jednej funkcie z vnútra inéj, ktoré sú na tvorbu komplexnejších vzorov.
-            Functions in Farmer:
-              description_teacher: Študenti si precvičili tvorbu pôsobivých dizajnov v Umelcovi, navigáciu včielky v bludisku, ale dnes použijú funkcie na zber úrody vo Farmárovi. Táto lekcia študentov posúva ďalej a to použitím funkcií novým spôsobom tak, že ich kombinujú s "kým" slučky a vyhláseniami "ak/ inak".
             Present Your Project:
               description_teacher: V priebehu štyroch hodín budú študenti pracovať na programovaní dizajnu vlastného projektu v kurze Play Lab alebo Umelec. Nakoniec budú študenti schopní prezentovať svoj projekt rovesníkom a blízkym alebo ho zdielať. Príručku kurzu pre všetky štyri úrovne procesu nájdeme v prvom [here](https://curriculum.code.org/csf/coursee/12/).
             Building a Foundation:
@@ -994,7 +990,7 @@ sk:
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             Nested Loops:
-              name: Vnorené slučky
+              name: Vnorené cykly
           title: Kurz E
           assignment_family_title: Kurz E
           description_short: Rýchlo pokryme pojmy v kurzoch C & D a poďme ďalej s funkciami.
@@ -1005,7 +1001,7 @@ sk:
               description_student: Nezabudni do triedy priniesť svoju tvorivosť! V týchto úlohách pomocou premenných vytvoríš fantastické kresby.
               description_teacher: V tejto lekcii študenti objavia tvorbu opakujúcich sa dizajnov s použitím premenných v prostredí Umelca. Študenti sa naučia používať premenné na tvorbu kódu tak aby sa jednoduchšie písal aj chápal. Prejdením riadených úloh, študenti kočia úrovňou volných hier a uvidia čo sa naučili a ako tvoria svoje vlastné dizajny.
             For Loops in Artist:
-              description_student: Priprav sa na tvoje ďalsie majstrovské dielo. Budeš používať "pre" slučky. Všetkým padne sánka dolu z tých obrázkov.
+              description_student: Priprav sa na tvoje ďalsie majstrovské dielo. Budeš používať "pre" cykly. Všetkým z tvojich obrázkov padne sánka.
               description_teacher: V tejto lekcii, použitím Umelca, študenti pokračujú v precvičovaní slučiek. Študenti dokončujú úlohy spájaním možností premenných i slučiek, a v slučkách aj pre tvorbu zložitejších dizajnov. Na koniec, vo volnej hre, budú mať možnosť vytvoriť vlastné diela.
             Functions with Parameters in Artist:
               name: Funkcie s parametrami s Umelcom
@@ -1059,7 +1055,7 @@ sk:
             Building a Foundation:
               name: Stavanie základov
             Nested Loops:
-              name: Vnorené slučky
+              name: Vnorené cykly
           title: Zrýchlený kurz
           assignment_family_title: Zrýchlený kurz
         pre-express-2017:
@@ -1088,7 +1084,7 @@ sk:
             Programming in Artist:
               name: Programovanie s Umelecom
             Nested Loops:
-              name: Vnorené slučky
+              name: Vnorené cykly
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             Conditionals:
@@ -1104,7 +1100,7 @@ sk:
             Introduction:
               name: Úvod
             Nested Loops:
-              name: Vnorené slučky
+              name: Vnorené cykly
             Nested Loops in Artist:
               name: Vnorené cykly s Umelcom
             Nested Loops Project in Artist:
@@ -1118,7 +1114,7 @@ sk:
             Building a Foundation:
               name: Stavanie základov
             Loops in Ice Age:
-              name: Slučky v Dobe Ľadovej
+              name: Cykly v Dobe ľadovej
         new-express:
           stages:
             Introduction:
@@ -1132,7 +1128,7 @@ sk:
             Building a Foundation:
               name: Stavanie základov
             Nested Loops:
-              name: Vnorené slučky
+              name: Vnorené cykly
             Loops in Artist (UPDATED!):
               name: Cykly s Umelcom (AKTUALIZOVANÉ!)
         new-e:
@@ -1215,7 +1211,7 @@ sk:
             Programming in Artist:
               name: Programovanie s Umelecom
             Nested Loops:
-              name: Vnorené slučky
+              name: Vnorené cykly
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             Introduction:
@@ -1253,7 +1249,7 @@ sk:
             Lists:
               name: Zoznamy
             For Loops:
-              name: Slučky For
+              name: Cykly For
         csd3-1819draft:
           stages:
             Variables:
@@ -1306,9 +1302,9 @@ sk:
             Building a Foundation:
               name: Stavanie základov
             Loops in Artist:
-              name: Nálepky v slučkách
+              name: Pečiatkovanie v Cykloch
             Nested Loops:
-              name: Vnorené slučky
+              name: Vnorené cykly
             Nested Loops Project in Frozen:
               name: Projekt s vnorenými cyklami vo Frozen
             'Events: The Big Event':
@@ -1339,6 +1335,8 @@ sk:
               name: Meniace sa premenné s Umelcom
             For Loop Fun:
               name: Zábavné opakovanie
+            Alien Dance Party with Sprite Lab:
+              name: Mimozemská Tanečná Párty
             Binary Bracelets:
               name: Binárne náramky
             'Unplugged: Binary':
@@ -1372,7 +1370,7 @@ sk:
             Building a Foundation:
               name: Stavanie základov
             Nested Loops in Artist:
-              name: Ozdobné tvary použitím vnorených slučiek
+              name: Ozdobné tvary použitím vnorených cyklov
             Conditionals with Cards:
               name: Podmienky s kartami
             Digital Citizenship:
@@ -1382,13 +1380,17 @@ sk:
             Artist Binary:
               name: Binárne obrázky s Umelecom
             Loops in Ice Age:
-              name: Slučky v Dobe Ľadovej
+              name: Cykly v Dobe ľadovej
             Nested Loops in Frozen:
               name: Snehové vločky s Annou a Elsou
             Graph Paper Programming:
               name: Programovanie na milimetrovom papieri
             Relay Programming:
               name: Štafetové programovanie
+        jr-test:
+          stages:
+            Alien Dance Party - Input:
+              name: Mimozemská Tanečná Párty - Vstup
         coursec-2018:
           assignment_family_title: Kurz C
           stages:
@@ -1399,7 +1401,7 @@ sk:
             'Loops: Getting Loopy':
               name: Neustále opakovanie
             Loops in Artist:
-              name: Nálepky v slučkách
+              name: Pečiatkovanie v Cykloch
             'Events: The Big Event':
               name: Veľká udalosť
             Binary Bracelets:
@@ -1444,6 +1446,8 @@ sk:
               name: Podmienky s kartami
             Minecraft Hour of Code:
               name: Minecraft Hodina Kódu
+            Alien Dance Party with Sprite Lab:
+              name: Mimozemská Tanečná Párty
             Copyright and Creativity:
               name: Digitálne zdieľanie
         coursef-2018:
@@ -1455,7 +1459,7 @@ sk:
             Building a Foundation:
               name: Stavanie základov
             Programming in Artist:
-              name: Kódovať Umenie
+              name: Umenie s Kódom
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             Introduction:
@@ -1469,7 +1473,7 @@ sk:
             For Loop Fun:
               name: Zábavné opakovanie
             For Loops in Artist:
-              description_student: Priprav sa na tvoje ďalsie majstrovské dielo. Budeš používať "pre" slučky. Všetkým padne sánka dolu z tých obrázkov.
+              description_student: Priprav sa na tvoje ďalsie majstrovské dielo. Budeš používať "pre" cykly. Všetkým z tvojich obrázkov padne sánka.
               description_teacher: V tejto lekcii, použitím Umelca, študenti pokračujú v precvičovaní slučiek. Študenti dokončujú úlohy spájaním možností premenných i slučiek, a v slučkách aj pre tvorbu zložitejších dizajnov. Na koniec, vo volnej hre, budú mať možnosť vytvoriť vlastné diela.
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
@@ -1495,6 +1499,8 @@ sk:
               name: Premenné s Umelcom
             Variables that Change in Artist:
               name: Meniace sa premenné s Umelcom
+            Alien Dance Party with Sprite Lab:
+              name: Mimozemská Tanečná Párty
         csp1-2018:
           stages:
             The Internet:
@@ -1510,7 +1516,11 @@ sk:
         csp5-2018:
           stages:
             While Loops:
-              name: Podmieňovacie slučky While
+              name: Podmieňovacie cykly While
+        spritelab:
+          stages:
+            Alien Dance Party - Input:
+              name: Mimozemská Tanečná Párty - Vstup
         pre-express-2018:
           stages:
             'Debugging: Unspotted Bugs':
@@ -1529,6 +1539,18 @@ sk:
               name: Je super tvoriť a hrať férovo
             'Persistence & Frustration: Stevie and the Big Project':
               name: Števko a Veľký projekt
+        spritelab-validated:
+          stages:
+            Alien Dance Party - Input:
+              name: Mimozemská Tanečná Párty - Vstup
+        spritelab-simple:
+          stages:
+            Alien Dance Party - Input:
+              name: Mimozemská Tanečná Párty - Vstup
+        spritelab-ee:
+          stages:
+            Alien Dance Party - Input:
+              name: Mimozemská Tanečná Párty - Vstup
         frozen-2018:
           stages:
             Artist:
@@ -1539,6 +1561,12 @@ sk:
           stages:
             Artist:
               name: Umelec
+        dance:
+          stages:
+            Dance Party:
+              name: Tanečná Párty
+          title: Tanečná Párty
+          description: Nakódujte svoju vlastnú tanečnú párty pre zdielanie s kamarátmi!
         frozen-2018-test-b:
           title: Nový Frozen Skript
           stages:
@@ -1547,6 +1575,21 @@ sk:
         aquatic:
           description_short: Pomocou kreativity, schopnosti riešiť problémy a sily kódu objav a vybuduj podvodný svet!
           description: Minecraft je späť s úplne novou aktivitou! Použi tvoju kreativitu, schopnosť riešiť problémy a silu kódu, aby si objavil a vybudoval podvodný svet.
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Tanečná Párty
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Tanečná Párty
+        dance-extras:
+          stages:
+            Dance Party - Go Further:
+              name: Tanečná párty - Pokračuj ďalej
+          title: Pokračuj v tancovaní
+          description_short: Choď za hranice Hodiny Kódu s touto nadväzujúcou aktivitou na Code.org Tanečná Párty tutoriály.
+          description: Pokračuj za hranice prvej hodiny s rozšírenými nápadmi na projekt.
         coursef-2019:
           description_short: Naučme sa všetky pojmy zo základov informatiky a vytvorme si vlastné umenelecké diela, príbeh alebo hru.
           stages:
@@ -1563,8 +1606,10 @@ sk:
             For Loop Fun:
               name: Zábavné opakovanie
             For Loops in Artist:
-              description_student: Priprav sa na tvoje ďalsie majstrovské dielo. Budeš používať "pre" slučky. Všetkým padne sánka dolu z tých obrázkov.
+              description_student: Priprav sa na tvoje ďalsie majstrovské dielo. Budeš používať "pre" cykly. Všetkým z tvojich obrázkov padne sánka.
               description_teacher: V tejto lekcii, použitím Umelca, študenti pokračujú v precvičovaní slučiek. Študenti dokončujú úlohy spájaním možností premenných i slučiek, a v slučkách aj pre tvorbu zložitejších dizajnov. Na koniec, vo volnej hre, budú mať možnosť vytvoriť vlastné diela.
+            Alien Dance Party with Sprite Lab:
+              name: Mimozemská Tanečná Párty so Sprite Labom
             Explore Project Ideas:
               description_teacher: "V záverečnom projekte, nasledujúce štyri lekcie, dostávajú študenti možnosť overiť svoje kódovacie zručnosti v praxi. Projekt umožní jednotlivcom získať skúsenosť s kódovaním tak, že vytvoria exemplár, ktorý môžu zdielať s rovesníkmi a blízkymi. Ide o viac-kurzový alebo viac-týždenný projekt kde majú študenti čas na brainstorming, učia sa o procese dizajnu, stavaní a nakoniec svoju prácu prezentujú.\n\nVo fáze prieskumu môžu študenti vidieť pre-postavené príklady projektov v Umelcovi a aj v Play Labe. Ďalej sa študenti oboznámia s procesom dizajnu a ako ho implementovať do vlastných projektov. Dostanú priestor tvoriť vlastné projekty buď v Umelcovi alebo v Play Labe (toto je pravdepodobne najdlhšia časť projektu). Následne si študenti revidujú a testujú vlastnú tvorbu. Nakoniec, budú študenti schopní prezentovať svoje projekty rovesníkom.\n"
             The Design Process:
@@ -1575,3 +1620,93 @@ sk:
               description_teacher: "V priebehu piatich lekcií budú študenti pracovať na programovaní dizajnu vlastného projektu v kurze Play Lab alebo Umelec. Keďže sú už projekty postavené, získavajú tu spätnú väzbu a majú priestor si projekty zrevidovať. Príručku kurzu pre všetkých päť úrovní procesu nájdeme v prvom [here]\n(https://curriculum.code.org/csf/coursef/15/)."
             Present Your Project:
               description_teacher: V priebehu piatich lekcií budú študenti pracovať na programovaní dizajnu vlastného projektu v kurze Play Lab alebo Umelec. Študenti dostanú priestor vytvoriť vlastný projekt v kurzoch Umelec či Play Lab. Nakoniec, študenti dostanú priesto rprezentovať svoje práce rovesníkom alebo ich zdielať s blízkymi. Príručku kurzu pre všetkých päť úrovní procesu nájdeme v prvom [here](https://curriculum.code.org/csf/coursef/15/).
+            The Artist:
+              name: Umelec
+        dance-low:
+          stages:
+            Dance Party:
+              name: Tanečná Párty
+          title: Tanečná Párty (slabé pripojenie)
+          description_short: Nakódujte svoju vlastnú tanečnú párty pre zdielanie s kamarátmi! (Táto verzia je pre pomalé pripojenie)
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Štafetové programovanie
+            Loops in Ice Age:
+              name: Cykly v Dobe ľadovej
+            Nested Loops in Artist:
+              name: Vnorené cykly s Umelcom
+            Nested Loops in Frozen:
+              name: Vnorené cykly vo Frozen
+            Conditionals with Cards:
+              name: Podmienky s kartami
+            Digital Citizenship:
+              name: Digitálne Občianstvo
+            Artist Binary:
+              name: Binárny Umelec
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Stavanie základov
+            Programming in Artist:
+              name: Programovanie s Umelecom
+            Nested Loops:
+              name: Vnorené cykly
+            Nested Loops with Frozen:
+              name: Vnorené cykly s Frozen
+            Conditionals with Cards:
+              name: Podmienky s kartami
+            Conditionals:
+              name: Podmienky
+            Copyright and Creativity:
+              name: Autorské práva a Kreativita
+            Functions in Artist:
+              name: Funkcie s Umelcom
+              description_student: Jednoducho s funkciami vytvor zložitejšie kresby!
+              description_teacher: Študenti sa oboznámia s používaním funkcií na stránke Code.org. V Umelcovi budeme tvoriť a upravovať veľkolepé obrázky. Študenti sa naučia viac o vnorených funkciach, čo je vlastne zvolanie jednej funkcie z vnútra inéj, ktoré sú na tvorbu komplexnejších vzorov.
+            Alien Dance Party with Sprite Lab:
+              name: Mimozemská Tanečná Párty so Sprite Labom
+            Explore Project Ideas:
+              description_teacher: "V záverečnom projekte, nasledujúce štyri lekcie, dostávajú študenti možnosť overiť svoje kódovacie zručnosti v praxi. Projekt umožní jednotlivcom získať skúsenosť s kódovaním tak, že vytvoria exemplár, ktorý môžu zdielať s rovesníkmi a blízkymi. \n\nVo fáze prieskumu môžu študenti vidieť pre-postavené príklady projektov v Umelcovi a aj v Play Labe. Ďalej sa študenti oboznámia s procesom dizajnu a ako ho implementovať do vlastných projektov. Dostanú priestor tvoriť vlastné projekty buď v Umelcovi alebo v Play Labe (toto je pravdepodobne najdlhšia časť projektu). Nakoniec, budú študenti schopní prezentovať svoje projekty rovesníkom.\n"
+            The Design Process:
+              description_teacher: "V priebehu štyroch hodín budú študenti pracovať na programovaní dizajnu vlastného projektu v kurze Play Lab alebo Umelec. V tejto časti sa študenti dozvedia o procese dizajnu a ako ho použiť vo vlastných projektoch. Príručku kurzu pre všetky štyri úrovne procesu nájdeme v prvom [here]\n(https://curriculum.code.org/csf/coursee/12/)."
+            Build Your Project:
+              description_teacher: "V priebehu štyroch hodín budú študenti pracovať na programovaní dizajnu vlastného projektu v kurze Play Lab alebo Umelec. \n\nŠtudenosti dostanú priestor vytvoriť vlastný projekt v kurzoch Umelec či Play Lab. Toto bude pravdepodovne najdlhšia časť kurzu. Príručku kurzu pre všetky štyri úrovne procesu nájdeme v prvom [here](https://curriculum.code.org/csf/coursee/12/)."
+            Present Your Project:
+              description_teacher: V priebehu štyroch hodín budú študenti pracovať na programovaní dizajnu vlastného projektu v kurze Play Lab alebo Umelec. Nakoniec budú študenti schopní prezentovať svoj projekt rovesníkom a blízkym alebo ho zdielať. Príručku kurzu pre všetky štyri úrovne procesu nájdeme v prvom [here](https://curriculum.code.org/csf/coursee/12/).
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+            Nested Loops in Artist:
+              name: Vnorené cykly s Umelcom
+            Nested Loops in Frozen:
+              name: Vnorené cykly vo Frozen
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Štafetové programovanie
+            Programming in Artist:
+              name: Programovanie s Umelecom
+            Copyright and Creativity:
+              name: Autorské práva a Kreativita
+            Nested Loops in Frozen:
+              name: Vnorené cykly vo Frozen
+            Conditionals with Cards:
+              name: Podmienky s kartami
+            Functions in Artist:
+              name: Funkcie s Umelcom
+            Envelope Variables:
+              name: Obálkové premenné
+            For Loop Fun:
+              name: Zábavné opakovanie
+            Alien Dance Party with Sprite Lab:
+              name: Mimozemská Tanečná Párty so Sprite Labom
+            Binary Bracelets:
+              name: Binárne náramky
+            Artist Binary:
+              name: Binárny Umelec
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing

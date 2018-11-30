@@ -20,6 +20,7 @@ el:
       messages:
         blank: απαιτείται
         blank_plural: απαιτούμενο
+        invalid: δεν είναι έγκυρο
         invalid_plural: μη έγκυρο
     attributes:
       user:
@@ -37,6 +38,7 @@ el:
         age: Ηλικία
         gender: Φύλο
         edit_header: Στοιχεία Λογαριασμού
+        finish_sign_up_header: Ολοκληρώστε τη δημιουργία του λογαριασμού σας
         error:
           future: δεν μπορεί να είναι στο μέλλον
   hello: Γεια σου κόσμε
@@ -87,6 +89,7 @@ el:
   prize: βραβείο
   more_info: Περισσότερες πληροφορίες
   auth:
+    continue_with: Συνέχεια μέσω %{provider}
     sign_in_with: Εγγραφή μέσω  %{provider}
     signed_in: Συνδέθηκες!
     signed_out: Αποσυνδεθήκατε από το <a href="%{url}">Code.org</a>.
@@ -305,6 +308,7 @@ el:
       playlab: Εργαστήριο Παιχνιδιού
       minecraft: Minecraft
       flappy: Πουλάκι
+      dance: Πάρτι Χορού
     popup:
       progress_for_user: πρόοδος του %{name}
       progress: Η πρόοδός σου
@@ -552,6 +556,8 @@ el:
         να λειτουργεί, στη συνέχεια, μοιραστείτε την εφαρμογή σας σε δευτερόλεπτα.
       audience: Ηλικίες 13+
       cta: Μάθε πώς
+    dance:
+      title: Πάρτι Χορού
     hoc:
       title: Κλασικός λαβύρινθος
       body: Δοκιμάστε τα βασικά της επιστήμης των υπολογιστών. Εκατομμύρια τα  έχουν
@@ -603,6 +609,8 @@ el:
       title: Minecraft
     hero:
       title: Minecraft
+      body: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με μια ολοκαίνουργια δραστηριότητα!
+        Ταξίδι στο Minecraft με κώδικα.
     unplugged:
       audience: Ηλικίες 6+
       body: Έχουμε συντάξει έναν κατάλογο ανεξάρτητων μαθημάτων για να τα χρησιμοποιήσετε
@@ -823,6 +831,7 @@ el:
           και το %{link_start_tos}Terms του Service%{link_end}
   flex_category:
     required: Επισκόπηση
+  view_teacher_guide: Προβολή Οδηγού Εκπαιδευτικού
   pd:
     form_labels:
       email: Ηλεκτρονικό ταχυδρομείο

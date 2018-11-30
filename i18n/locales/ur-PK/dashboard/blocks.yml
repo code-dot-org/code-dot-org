@@ -4,24 +4,36 @@ ur:
     blocks:
       Dancelab_changeMoveEachLR:
         options:
+          MOVE:
+            MOVES.Rest: کوئی بھی نہیں
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
+          MOVE:
+            MOVES.Rest: کوئی بھی نہیں
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveEachLR:
         options:
+          MOVE:
+            MOVES.Rest: کوئی بھی نہیں
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
+          MOVE:
+            MOVES.Rest: کوئی بھی نہیں
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: کوئی بھی نہیں
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -36,7 +48,7 @@ ur:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -60,10 +72,18 @@ ur:
             '"random"': بےترتیب
       Dancelab_randomColor:
         text: بے ترتیب رنگ
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': کوئی بھی نہیں
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': کوئی بھی نہیں
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': normal
+            '1': عام
             '2': fast
             '4': very fast
             '0.5': slow
@@ -71,15 +91,25 @@ ur:
       Dancelab_setDanceSpeedEach:
         options:
           SPEED:
-            '1': normal
+            '1': عام
             '2': fast
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': کوئی بھی نہیں
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': کوئی بھی نہیں
       Dancelab_whenKey:
         options:
           KEY:
             '"space"': خلاء
+            '"x"': x
+            '"y"': وائے
       gamelab_debugSprite:
         options:
           VAL:
@@ -115,12 +145,16 @@ ur:
         options:
           KEY:
             '"w"': مغرب
+            '"a"': ایے
             '"s"': جنوب
+            '"d"': ڈی
       Mikelab_whenKeyReleased:
         options:
           KEY:
             '"w"': مغرب
+            '"a"': ایے
             '"s"': جنوب
+            '"d"': ڈی
       RyanLab_moveForward:
         text: آگے چلیں
       RyanLab_turnLeft:
@@ -135,6 +169,7 @@ ur:
         options:
           TYPE:
             "'sand'": ریت
+            "'planksOak'": شاہ بلوط planks
       craft_ifStandingOnLimit:
         options:
           TYPE:

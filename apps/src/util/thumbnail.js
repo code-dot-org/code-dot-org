@@ -99,8 +99,9 @@ export function getThumbnailFromCanvas(canvas, captureIntervalMs, onComplete) {
  * @param {HTMLCanvasElement} canvas
  */
 export function captureThumbnailFromCanvas(canvas) {
-  // Only save thumbnail in callback if a PNG blob is received.
-  const onComplete = (pngBlob) => {
+  // Only attempt to save the thumbnail if we receive a PNG blob
+  // from getThumbnailFromCanvas.
+  const onComplete = pngBlob => {
     if (pngBlob) {
       project.saveThumbnail(pngBlob);
     }
@@ -118,8 +119,7 @@ export function setThumbnailBlobFromCanvas(canvas) {
   /**
    * Since we are storing the PNG blob in memory rather than writing it
    * to S3 in our onComplete callback, we are decreasing our capture interval
-   * to 5 seconds. The thumbnail (captured every 5+ seconds) will then be
-   * saved to S3 when the project is saved.
+   * to 5000ms (5 seconds). The thumbnail will then be saved to the server when the project is saved.
    */
   const OVERRIDE_MIN_CAPTURE_INTERVAL_MS = 5000;
   getThumbnailFromCanvas(canvas, OVERRIDE_MIN_CAPTURE_INTERVAL_MS, project.setThumbnailPngBlob);

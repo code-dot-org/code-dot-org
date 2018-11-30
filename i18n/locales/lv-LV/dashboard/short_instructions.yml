@@ -229,25 +229,35 @@ lv:
       New Bounce Project: Izveido savu spēli "Pong". Vari mainīt visus noteikumus, pielāgot izskatu. Kad pabeigts, spied "Gatavs" un aicini draugus spēlēt tavu spēli.
       Overworld Avoid Monsters: "Ieskriet ložņā ir bīstami.\nUzmanīgi ejiet garām ložņām, kamēr nonākat drošībā mājās."
       Overworld Avoid Monsters_2018: "Ieskriet ložņā ir bīstami.\nUzmanīgi ejiet garām ložņām, kamēr nonākat drošībā mājās."
+      Overworld Avoid Monsters_2019: "Ieskriet ložņā ir bīstami.\nUzmanīgi ejiet garām ložņām, kamēr nonākat drošībā mājās."
       Overworld Chop Tree - allthethings: Koks ir ļoti nozīmīgs resurss. No koka var uztaisīt daudzas lietas. Pieejiet pie koka un lietojiet "iznīcināt bloku", lai to nocirstu.
       Overworld Chop Tree: Koks ir ļoti nozīmīgs resurss. No koka var uztaisīt daudzas lietas. Pieejiet pie koka un lietojiet "iznīcināt bloku", lai to nocirstu.
       Overworld Chop Tree_2018: Koks ir ļoti nozīmīgs resurss. No koka var uztaisīt daudzas lietas. Pieejiet pie koka un lietojiet "iznīcināt bloku", lai to nocirstu.
+      Overworld Chop Tree_2019: Koks ir ļoti nozīmīgs resurss. No koka var uztaisīt daudzas lietas. Pieejiet pie koka un lietojiet "iznīcināt bloku", lai to nocirstu.
       Overworld Chop Trees: Mums jāuzbūvē māja līdz saulrietam. Mājai vajag daudz koku. Nocērt visus 3 kokus.
       Overworld Chop Trees_2018: Mums jāuzbūvē māja līdz saulrietam. Mājai vajag daudz koku. Nocērt visus 3 kokus.
+      Overworld Chop Trees_2019: Mums jāuzbūvē māja līdz saulrietam. Mājai vajag daudz koku. Nocērt visus 3 kokus.
       Overworld Free Play 20x20: "Apsveicam! Tu uzveici visus uzdevumus!\nTagad ievāc resursus un uzbūvē kaut ko pēc savas patikas, izmantojot iegūtās zināšanas."
       Overworld Free Play 20x20_2018: "Apsveicam! Tu uzveici visus uzdevumus!\nTagad ievāc resursus un uzbūvē kaut ko pēc savas patikas, izmantojot iegūtās zināšanas."
+      Overworld Free Play 20x20_2019: "Apsveicam! Tu uzveici visus uzdevumus!\nTagad ievāc resursus un uzbūvē kaut ko pēc savas patikas, izmantojot iegūtās zināšanas."
       Overworld House Frame Chosen: Būvē pārējo māju no jebkuriem materiāliem. Tev noderēs cikla "atkārtot" komandas.
       Overworld House Frame Chosen_2018: Būvē pārējo māju no jebkuriem materiāliem. Tev noderēs cikla "atkārtot" komandas.
+      Overworld House Frame Chosen_2019: Būvē pārējo māju no jebkuriem materiāliem. Tev noderēs cikla "atkārtot" komandas.
       Overworld Move to Sheep: Pievieno otru "pārvieto uz priekšu" komandu, lai sasniegtu aitu.
       Overworld Move to Sheep_2018: Pievieno otru "pārvieto uz priekšu" komandu, lai sasniegtu aitu.
+      Overworld Move to Sheep_2019: Pievieno otru "pārvieto uz priekšu" komandu, lai sasniegtu aitu.
       Overworld Place Wall: Visas mājas sākas ar sienām. Uzbūvē mājas pirmo sienu, ievietojot "nolikt" un "pārvietot uz priekšu" komandas "atkārtot" ciklā.
       Overworld Place Wall_2018: Visas mājas sākas ar sienām. Uzbūvē mājas pirmo sienu, ievietojot "nolikt" un "pārvietot uz priekšu" komandas "atkārtot" ciklā.
+      Overworld Place Wall_2019: Visas mājas sākas ar sienām. Uzbūvē mājas pirmo sienu, ievietojot "nolikt" un "pārvietot uz priekšu" komandas "atkārtot" ciklā.
       Overworld Plant Crops: Jādomā par priekšdienām. Iestādi augus ūdens abās pusēs, lai vēlāk būtu ko ēst.
       Overworld Plant Crops_2018: Jādomā par priekšdienām. Iestādi augus ūdens abās pusēs, lai vēlāk būtu ko ēst.
+      Overworld Plant Crops_2019: Jādomā par priekšdienām. Iestādi augus ūdens abās pusēs, lai vēlāk būtu ko ēst.
       Overworld Powered Minecart: Teicami! Tu savāci daudzus resursus un uzbūvēji jauku māju. Tagad uzbūvē sliedes no kartes malas līdz pat mājas durvīm.
       Overworld Powered Minecart_2018: Teicami! Tu savāci daudzus resursus un uzbūvēji jauku māju. Tagad uzbūvē sliedes no kartes malas līdz pat mājas durvīm.
+      Overworld Powered Minecart_2019: Teicami! Tu savāci daudzus resursus un uzbūvēji jauku māju. Tagad uzbūvē sliedes no kartes malas līdz pat mājas durvīm.
       Overworld Shear Sheep: Aitu cirpšana! Lieto "apcirpt" komandu, lai iegūtu vilnu no abām aitām.
       Overworld Shear Sheep_2018: Aitu cirpšana! Lieto "apcirpt" komandu, lai iegūtu vilnu no abām aitām.
+      Overworld Shear Sheep_2019: Aitu cirpšana! Lieto "apcirpt" komandu, lai iegūtu vilnu no abām aitām.
       PS copy 2-3 Bee Conditionals 5: "Esi uzmanīgs, lai neiegūtu nektāru no tukša zieda (tāda, kuram nektāru skaits ir 0).\nPirms iegūt nektāru ir jāpārbauda vai skaits ir 1, lietojot \"Ja nektārs\" bloku."
       The Vigenere Cipher Widget: Instrukcijas
       The Vigenere Cipher Widget_2018: Instrukcijas
@@ -258,12 +268,16 @@ lv:
       U4 vigenere cipher 2: Instrukcijas
       Underground Avoiding Lava: Zem dažiem blokiem var būt lava, un, pirms pārvietoties tālāk, tā ir jānosedz. Te palīdzēs "if" ("ja") komanda. Pievieno "pārvietot uz priekšu" komandu kodam pareizajā vietā, lai ievāktu resursu blokus.
       Underground Avoiding Lava_2018: Zem dažiem blokiem var būt lava, un, pirms pārvietoties tālāk, tā ir jānosedz. Te palīdzēs "if" ("ja") komanda. Pievieno "pārvietot uz priekšu" komandu kodam pareizajā vietā, lai ievāktu resursu blokus.
+      Underground Avoiding Lava_2019: Zem dažiem blokiem var būt lava, un, pirms pārvietoties tālāk, tā ir jānosedz. Te palīdzēs "if" ("ja") komanda. Pievieno "pārvietot uz priekšu" komandu kodam pareizajā vietā, lai ievāktu resursu blokus.
       Underground If Statements: Tagad uzdevums kļūst grūtāks. Iznīcini trīs sarkanakmeņus, bet neiekrītiet lavā. Lieto "If" ("Ja") komandu, lai atrasto lavu nosegtu ar bruģakmeni.
       Underground If Statements_2018: Tagad uzdevums kļūst grūtāks. Iznīcini trīs sarkanakmeņus, bet neiekrītiet lavā. Lieto "If" ("Ja") komandu, lai atrasto lavu nosegtu ar bruģakmeni.
+      Underground If Statements_2019: Tagad uzdevums kļūst grūtāks. Iznīcini trīs sarkanakmeņus, bet neiekrītiet lavā. Lieto "If" ("Ja") komandu, lai atrasto lavu nosegtu ar bruģakmeni.
       Underground Iron: Iekrist izkusušā lavā ir bīstami. Noliec bruģakmeni, lai izveidotu tiltu, un pēc tam iegūsti vismaz divus dzelzs blokus.
       Underground Iron_2018: Iekrist izkusušā lavā ir bīstami. Noliec bruģakmeni, lai izveidotu tiltu, un pēc tam iegūsti vismaz divus dzelzs blokus.
+      Underground Iron_2019: Iekrist izkusušā lavā ir bīstami. Noliec bruģakmeni, lai izveidotu tiltu, un pēc tam iegūsti vismaz divus dzelzs blokus.
       Underground Mining Coal: "Visvērtīgākie resursi ir pazemē, bet tur var būt tumšs.\nNolieciet vismaz 2 lāpas un nojauciet ne mazāk kā 2 ogļu blokus."
       Underground Mining Coal_2018: "Visvērtīgākie resursi ir pazemē, bet tur var būt tumšs.\nNolieciet vismaz 2 lāpas un nojauciet ne mazāk kā 2 ogļu blokus."
+      Underground Mining Coal_2019: "Visvērtīgākie resursi ir pazemē, bet tur var būt tumšs.\nNolieciet vismaz 2 lāpas un nojauciet ne mazāk kā 2 ogļu blokus."
       birdsDebugVideo1: Izseko maršrutam un aizved mani līdz tai muļķīgajai cūkai. Izvairies no dinamīta, citādi lidos spalvas!
       bounce_1: Pievieno bloku pie "kad kreisā bulta" un spied "Palaist". Parvieto dēlīti ar labo bultu lai sasniegtu mērķi.
       bounce_10: Tagad augšā ir mērķis. Pievieno "pieskaiti punktu" un "pieskaiti pretiniekam punktu" blakus "kad bumba mērķī" un "kad bumba neatsitas pret dēlīti" blokiem, lai veidotu spēli, Paskat, cik punktus tu var nopelnīt, pirms pretinieks nopelna divtik.

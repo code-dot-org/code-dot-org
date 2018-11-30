@@ -159,7 +159,7 @@
         maze_3_3: Hvordan skal jeg komme meg til grisen? Forsikre deg om at jeg ikke kommer borti boksen med TNT!
         maze_3_4: Argh! Skriv meg et program for å komme meg rundt sprengstoffet og helt frem til grisen.
         Custom_builder: Dra blokker fra verktøykassen til arbeidsområdet for å tegne nivået du vil opprette. Trykk "Kjør" når du er klar.
-        jigsaw_1: Klikk blokken
+        jigsaw_1: Klikk på blokken
         jigsaw_2: Dra klossen til målet
         jigsaw_3: Ordne blokkene for å danne bildet
         jigsaw_4: Ordne blokkene for å danne bildet
@@ -201,13 +201,13 @@
         studio_c3_game_5: Kan du legge til en blokk for å skåre et poeng når pingvinen kommer borti blekkspruten, og deretter flytte ham med pilene til du skårer?
         studio_c3_game_6: Kan du legge til blokker for å forandre bakgrunnen og hastigheten til pingvinen, og deretter bevege den med pil-tastene til du score?
         studio_c3_game_7: Lag ditt eget spill. Når du er ferdig, trykk Fullør for å la vennene dine prøve spillet på sine mobiler.
-        studio_playlab_1: Pinvinen ønsker å si "hei" - kan du hjelpe ham?
+        studio_playlab_1: Pingvinen ønsker å si "hei" - kan du hjelpe ham?
         studio_playlab_2: Hulegutt (figur 1) og Hulejente (figur 2) ønsker å si "hei" til hverandre. Kan du hjelpe dem ved å bruke "si"-blokken to ganger?
         studio_playlab_3: Kan du hjelpe Tennisjenta med å få tak i flagget?
         studio_playlab_4: Kan du hjelpe Tennisgutt (figur 1) med å få Tennisjente (figur 2) til å spille av en lyd når han kommer dit?
         studio_playlab_5: Kan du hjelpe Rombot til å si "hilsner jordboere" når den blir klikket på? Ikke glem å klikke på den etter du trykker Kjør
         studio_playlab_6: Kan du hjelpe heksa med å flytte seg rundt ved å bruke piltastene opp/ned/høyre/venstre for å få tak i alle de magiske ildkulene?
-        studio_playlab_7: '"Gjenta alltid" blokken kan du bruke til å kjøre kode kontinuerlig. Kan du knytte sammen blokker for å hjelpe veiviseren flytte seg til høyre og venstre gjentatte ganger?'
+        studio_playlab_7: '"Gjenta alltid"-blokken kan du bruke til å kjøre kode kontinuerlig. Kan du knytte sammen blokker for å hjelpe veiviseren flytte seg til høyre og venstre gjentatte ganger?'
         studio_playlab_8: Kan du legge til en blokk for å få et poeng og en blokk for å spille av en lyd når enhjørningen løper på trollmannen, og så flytte han med pilene til du får et poeng?
         studio_playlab_9: Sett bakgrunnen for denne invasjonen og hjelp Rombot å komme raskere frem til romvesnene ved å endre hastigheten hans. Flytt han dermed med piltastene for å komme til Romboten og advare alle andre
         studio_playlab_10: Lag ditt eget spill. Når du er ferdig, trykk Fullør for å la vennene dine prøve spillet på sine mobiler.
@@ -226,9 +226,9 @@
         studio_gumball_hello2: Darwin (figur 1) og hans bror Gumball (figur 2) er på vei til skolen.  Hjelp dem å hilse på hverandre ved hjelp av "figur si" blokken to ganger.
         studio_gumball_move_to_flag: Banan Joe er om å vinne et felt dag løp!  Hjelpe ham å gå de siste 200 pikslene ved hjelp av "Flytt"-blokk.
         studio_gumball_move_to_actor: Gumball (figur 1) og Darwin (figur 2) er sent ute til utflukten! Hjelp Gumball å gå 200 piksler ned til Darwin ved hjelp av "flytt figur"-blokk.  Så koble en blokk til hendelsen "når figur berører" for å spille en lyd når de finner hverandre.
-        studio_gumball_repeat: Med "gjenta alltid" blokken kan du kjøre kode kontinuerlig.  Kan du knytte blokker for å hjelpe Gumball varme opp til løpet ved å flytte til venstre og høyre flere ganger?
+        studio_gumball_repeat: Med "gjenta alltid"-blokken kan du kjøre kode kontinuerlig.  Kan du knytte blokker for å hjelpe Gumball varme opp til løpet ved å flytte til venstre og høyre flere ganger?
         studio_gumball_click_hello: Kan du hjelpe Anton kunngjøre starten av et løp ved å si "Klar, ferdig, gå!"? For å teste programmet, ikke glem å klikke Anton når du klikker Kjør!
-        studio_gumball_move_events: Darwin er i flagg samle konkurransen! Hjelpe ham løpe rundt ved å feste "Flytt" blokken til hver hendelse. Når du er ferdig, klikk Kjør, og prøv å samle alle flaggene.
+        studio_gumball_move_events: Darwin er i flagg samle konkurransen! Hjelpe ham løpe rundt ved å feste "Flytt"-blokken til hver hendelse. Når du er ferdig, klikk Kjør, og prøv å samle alle flaggene.
         studio_gumball_sound_and_points: Vi har lagt ved mesteparten av koden som holder Anton (figur 2) i bevegelse til venstre og høyre, og koden for å flytte Banana Joe (figur 1) rundt på skjermen.  Kan du fullføre koden og legge blokker til hendelsen "når figur berører" å gjøre det slik at du både spiller av en lyd og scorer poeng når Banana Joe og Anton kolliderer?  Trykk Kjør spillet.
         studio_gumball_warn_food_fight: Darwin rømte nettopp fra en mat-kamp! Endre bakgrunnen til "figur" og sett hastigheten til Darwin til rask. Trykk Kjør og flytt ham bort til Penny for å advare henne.
         studio_gumball_join_food_fight: Delta i mat kampen! Bruk kommandoen "figur kast element høyre" for at Banana Joe (figur 1) skal kaste mat på Anton (figur 2)! Angi humøret til Anton til sint når han blir truffet.
@@ -259,7 +259,7 @@
         maze_intro: Labyrint intro
         artist_intro: Kunstner intro
         farmer_intro: Bonde intro
-        flappy_intro: Introduksjon til Flappy
+        flappy_intro: Introduksjon til Flaksefugl
         loop_times: En blokk for å gjenta noe et antall ganger
         loop_until: Gjenta inntil blokk
         if: Hvis-blokk
@@ -278,21 +278,21 @@
         Unplug6: Betingelser
         Unplug7: Låtskriving
         Unplug8: Abstraksjon
-        Unplug9: Relé programmering
+        Unplug9: Relé-programmering
         Unplug10: Internett
         Unplug11: Oppsummering
         C1_happy_maps_unplugged: Glad Kart
         C1_moveitmoveit_unplugged: Flytt den, flytt den
         C1_bigevent_unplugged: Den store begivenheten
         C1_getting_loopy: Gå i spinn
-        C1_pair_programming: Par Programmering
-        C1_maze_intro_sequencing: Labyrint sekvensering Intro
-        C1_maze_debugging: Labyrint feilsøking
+        C1_pair_programming: Parprogrammering
+        C1_maze_intro_sequencing: 'Labyrint: intro til sekvensering'
+        C1_maze_debugging: 'Labyrint: feilsøking'
         C1_bee_level_intro: Bie nivå - Intro
         C1_artist_intro: Kunstner intro
-        C1_spelling_bee_intro: Stavekonkurranse Intro
+        C1_spelling_bee_intro: 'Stavekonkurranse: Intro'
         C1_zuck_repeat_loop: Labyrint løkker
-        C1_bee_loops: Bie løkker
+        C1_bee_loops: 'Bie: løkker'
         C1_maze_loops: Labyrint løkker
         C1_playlab_storytelling: Spill Lab - lage en historie
         C1_planting_seed: Plante et frø
@@ -301,29 +301,29 @@
         C2_maze_intro: Labyrint intro
         C2_artist_intro: Kunstner intro
         C2_zuck_repeat_loop: Labyrint løkker
-        C2_artist_loops: Kunstner løkker
+        C2_artist_loops: 'Kunstner: løkker'
         C2_artist_debugging: Kunstner Feilsøking
-        C2_bee_loops: Bie løkker
-        C2_bee_debugging: Bie feilsøking
-        C2_bee_conditionals: Bie Betingelser
+        C2_bee_loops: 'Bie: løkker'
+        C2_bee_debugging: 'Bie: feilsøking'
+        C2_bee_conditionals: 'Bie: Betingelser'
         C2_playlab_createstory: Spill Lab - lage en historie
         C2_graph_paper: Millimeterpapirprogrammering
         C2_conditionals_with_cards: Betingelser
         C2_binary_bracelets: Binær armbånd
         C2_relay_programming: Relé programmering
-        C2_paper_airplanes: Papir fly
+        C2_paper_airplanes: Papirfly
         C2_digital_footprint: Dine digitale fotavtrykk
         C2_digital_footprint_v2: Dine digitale fotavtrykk
         C3_maze_level_4: Labyrint løkker
         C3_artist_intro: Kunstner intro
-        C3_artist_functions: Kunstner funksjoner
-        C3_bee_functions: Bie funksjoner
+        C3_artist_functions: 'Kunstner: funksjoner'
+        C3_bee_functions: 'Bie: funksjoner'
         C3_bee_conditionals: Bie Betingelser
-        C3_maze_conditionals: Labyrint Betingelser
+        C3_maze_conditionals: 'Labyrint: betingelser'
         C3_artist_nested_loops: Løkker i løkker
         C3_farmer_while: Gjenta-løkker
         C3_bee_nested_loops: Løkker i løkker
-        C3_bee_debugging: Bie feilsøking
+        C3_bee_debugging: 'Bie: feilsøking'
         C3_bounce: sprett
         C3_playlab_create_game: Spill-Lab – lage et spill
         C3_computational_thinking: Programmeringstenkning
@@ -334,19 +334,19 @@
         C3_songwriting_with_parameters: Låtskriving med parametere
         C4_intro: Introduksjon
         C4_loops_zombie: Løkker
-        C4_bee_conditional: Bie Betingelser
+        C4_bee_conditional: 'Bie: Betingelser'
         C4_variables_artist: Variabler - Kunstner
         C4_variables_playlab: Variabler – Spill-Lab
         C4_for_loops: For-løkker
         C4_for_loops_bee: For-løkker
         C4_for_loops_no_bee: For-løkker
-        C4_math_artist: Programmere Kunstneren med Matematikk
-        C4_function_edit: Redigere Funksjoner
+        C4_math_artist: Programmere kunstneren med matematikk
+        C4_function_edit: Redigere funksjoner
         C4_function_create: Lage Funksjoner
         C4_function_parameters: Funksjoner med parametre
         C4_conditionals: Betingelser
         C4_unplugged_algorithms: Algoritmer med Tangram
-        C4_unplugged_madlibs: Sprø Bibliotek
+        C4_unplugged_madlibs: Sprøtt bibliotek
         C4_unplugged_variables: Variabler i konvolutter
         C4_unplugged_forloops: For-løkker
         C4_unplugged_parameters: Låtskriving med parametere
@@ -382,7 +382,7 @@
         csd_concept_memory_cpu_input_output: 'Hvordan datamaskiner virker: Minne, prosesser, inn- og ut-data'
         csd_concept_hardware_software: 'Hvordan datamaskiner virker: Maskinvare & programvare'
         csd_concept_search: Hvordan søk fungerer
-        csd_external_amazon_data: Hvordan Stordata brukes i Amazon Anbefalings systemer kan endre livene våre
+        csd_external_amazon_data: Hvordan Stordata brukes i Amazona anbefalingssystemer kan endre livene våre
         csd_external_netflix_data: Hvordan lager Netflix forslagene til serier og filmer?
         csd_external_waze_data: Hvorfor er så mange brukere opptatt av «Waze»?
         csd_gamelab_animation_tab: Animasjons-lab
@@ -408,9 +408,9 @@
         mc_if_statements: Minecraft – Hvis-kommandoer
         mc_congrats_share: Minecraft – Gratulerer
         mc_congrats_no_share: Minecraft – Gratulerer
-        gumball_intro: Gumball Hour of Code - introduksjon
-        gumball_events: Gumball Hour of Code - hendelser
-        gumball_repeat: Gumball Hour of Code - Repeter argument
+        gumball_intro: Gumball-kodetimen – introduksjon
+        gumball_events: Gumball-kodetimen – hendelser
+        gumball_repeat: Gumball-kodetimen – Repeter argument
         iceage_intro: Kodetime med istid - introduksjon
         iceage_events: Kodetime med istid - hendelser
         iceage_repeat: Kodetimen med istid - gjentagelser
@@ -419,11 +419,11 @@
         mc_2016_events: Minecraft Kodetimen - Hendelser
         mc_2016_spawn: Minecraft Kodetimen - Sett ut
         mc_2016_congrats: Minecraft Kodetimen - Gratulerer!
-        applab_hoc_welcome: App Lab Kodetimen - Velkommen
-        applab_hoc_setproperty: App Lab Kodetimen - setProperty
-        applab_hoc_onevent: App Lab Kodetimen - onEvent
-        applab_hoc_designmode: AppLab Kodetimen - Utformingsmodus
-        applab_hoc_share: AppLab Kodetimen - Del
+        applab_hoc_welcome: Kodetimen i App-lab – Velkommen
+        applab_hoc_setproperty: Kodetimen i App-lab – setProperty
+        applab_hoc_onevent: Kodetimen i App-lab – onEvent
+        applab_hoc_designmode: Kodetimen i App-lab – Utformingsmodus
+        applab_hoc_share: Kodetimen i App-lab – Del
         mc_2017_agent_intro: Minecraft Kodetimen - Agenten
         mc_2017_repeat: Minecraft Kodetimen - Løkker
         mc_2017_functions: Minecraft Kodetimen - Funksjoner
@@ -446,11 +446,11 @@
         hint_videos_d_11_9_last: 'Hint-videoer: D.11.9 Sist'
         hint_videos_d_11_11_first: 'Hint-videoer: D.11.11 Først'
         hint_videos_d_11_11_last: 'Hint-videoer: D.11.11 Sist'
-        applab_intro_welcome: App Lab - kom i gang
-        applab_intro_events: App Lab - Gjøre det interaktivt
-        applab_intro_sounds: App Lab - Bilder og lyder
-        applab_intro_designmode: 'App Lab: Design modus'
-        applab_intro_share: App Lab - del Appen din
+        applab_intro_welcome: App-lab – kom i gang
+        applab_intro_events: App-lab – Gjør det interaktivt
+        applab_intro_sounds: App-lab – Bilder og lyder
+        applab_intro_designmode: App-lab – Design modus
+        applab_intro_share: App-lab – del appen din
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_loops_AB: Løkker
@@ -465,28 +465,28 @@
         category_explanation: Du har alle de samme blokker, men de har nå blitt ordnet i kategorier
         set_sprite_image: Fest en "angi figur til bilde"-blokk til "når historien starter"-blokken for å aktivere figuren for denne historien
         studio_say_text: Skriv inn hva du vil at din figur skal si mellom "-tegnene
-        jigsaw_click: Klikk denne blokken!
+        jigsaw_click: Klikk på denne blokken!
         move_elsa_forward: Dra en «Flytt Frammover» blokk og fest den under «Når Kjørt» blokk for å få Elsa til å flytte framover
         turn_elsa: Bruk «Snu» blokken for å få Elsa til å snu. Tallet i rullegardinlisten bestemmer hvor mye Elsa snur seg
         replace_questions: Bruk rullegardinlisten for å erstatte «???» med et tall
         replace_questions_degree: Bruk rullegardinlisten for å erstatte «???» med det korrekte antall grader å snu
-        repeat_blocks: Bruk «Gjenta» blokken og legg den rundt blokkene i arbeidsområdet
+        repeat_blocks: Bruk «Gjenta»-blokken og legg den rundt blokkene i arbeidsområdet
         repeat_blocks_1: "(1) Bruk denne blokken og legg den rundt de grå blokkene i arbeidsområdet"
         repeat_blocks_2: (2) Flytt "Gjenta"-blokken og plasser de grå blokkene inni
         snowflake_dropdown: Bruk denne rullegardinlisten for å lage forskjellige snøflak!
         degrees_per_side: Del 360 på antall sider for å få størrelsen på hver vinkel i grader.
         set_sides: Bruk denne blokken for å angi antall "sider" som er nødvendig for å løse oppgaven .
         set_length: Bruk denne blokken for å sette "lengde" til den riktige verdien.
-        which_equation: Hvilken likning gjør hver side kortere for figurer med flere sider?
-        get_nectar: Bruk den nye "få nektar" blokken.
-        actions_category: Verktøykassa fikk et nytt utseende! "Handlinger" blokkene er her nå.
-        draw_square_hint: 'Tips: Bruk firkant løkken som du lagde i den forrige oppgaven.'
+        which_equation: Hvilken ligning gjør hver side kortere for figurer med flere sider?
+        get_nectar: Bruk den nye "få nektar"-blokken.
+        actions_category: Verktøykassa fikk et nytt utseende! "Handlinger"-blokkene er her nå.
+        draw_square_hint: 'Tips: Bruk kvadratløkken som du lagde i den forrige oppgaven.'
         edit_function: Klikk her for å redigere funksjonen.
-        create_function: Klikk her for å åpne"Funksjoner" menyen og klikk deretter "Opprette en funksjon" knappen.
+        create_function: Klikk her for å åpne "Funksjoner"-menyen og klikk deretter "Opprette en funksjon"-knappen.
         house_hint: Det er ok hvis bildet ikke ser ut som et hus ennå. Vi skal fikse det i den neste oppgaven.
         edit_draw_square: Bruk denne knappen for å redigere funksjonen og legge til løkken.
         edit_get_nectar: Bruk denne knappen til å redigere funksjonen og endre retningen som bien skal snu for å få nektar.
-        logic_category: Åpne "Logikk" menyen for å finne "hvis/ellers" blokken.
+        logic_category: Åpne "Logikk"-menyen for å finne "hvis/ellers"-blokken.
         length_parameter: Kan du oppdatere denne funksjonen slik at den bruker parameteret "lengde"?
         frozen_diamond_repeat: Bruk gjenta-blokken for å opprette denne figuren.
         frozen_circle_function_in_circle_turn: Ikke glem å snu når du har opprettet hver sirkel.
@@ -505,16 +505,16 @@
         place_variable: Dra variabelen din inn i denne blokken
         bee_for_loop: Dra det største antallet nektar som du ønsker at bien skal samle hit
         place_counter_variable: Dra teller-variabelen din inn i denne blokken
-        function_editor_draw_square: Dette er din funksjonsdefinisjon. Disse blokkene kjører hver gang du bruker "tegn en firkant"-blokken
+        function_editor_draw_square: Dette er din funksjonsdefinisjon. Disse blokkene kjører hver gang du bruker "tegn et kvadrat"-blokken
         change_here: Gjør din endring her
-        write_draw_square_function: Dra blokkene fra verktøykassen inn hit for å tegne en firkant
+        write_draw_square_function: Dra blokkene fra verktøykassen inn hit for å tegne et kvadrat
         write_draw_triangle_function: Dra blokker fra verktøykassen inn her for å tegne en trekant
         edit_add_parameter: Klikk Rediger for å legge til en parameter i funksjonen din
         add_and_drag_parameter: Skriv inn navnet på parameteren din her, klikk på Legg til og dra den deretter til funksjonsdefinisjonen din
         fill_in_actor: Erstatt ??? med tall som passer for hver figur (1, 2 og 3)
         repeat: Sett blokker inni gjenta-løkken for å gjenta kommandoer
         if_bee_nectar: Bruke "Hvis"-blokken for å avgjøre om bien skal få nektar
-        if_else_bee: Bruk "if/else" blokken slik at bien får nektar fra en blomst og lager honning hvis det ikke er en blomst
+        if_else_bee: Bruk "hvis/ellers" blokken slik at bien får nektar fra en blomst og lager honning hvis det ikke er en blomst
         repeat_full_circle: Angi hvor mange ganger zombien må flytte seg for å lage en full sirkel
         place_length_variable: Dra lengdevariabelen hit for å erstatte spørsmålstegnene
         arrows_move_actor: Bruk pilene til å flytte figuren

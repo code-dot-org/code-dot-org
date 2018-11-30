@@ -259,6 +259,21 @@ vi:
       Crack Random Substitution_2018: lời chỉ đẫn
       Crack a Caesar Cipher: lời chỉ đẫn
       Crack a Caesar Cipher_2018: lời chỉ đẫn
+      Dance_Party_01: Kéo khối `make a new` vào trong không gian làm việc và kết nối nó với bên trong khối `setup`.
+      Dance_Party_01_low: Kéo khối `make a new` vào trong không gian làm việc và kết nối nó với bên trong khối `setup`.
+      Dance_Party_02: Làm nai sừng tấm bắt đầu động tác mới sau 4 nhịp!
+      Dance_Party_03: Bây giờ, hãy làm vũ công bắt đầu động tác mới sau 6 nhịp!
+      Dance_Party_04: Thêm một hiệu ứng nền vào chương trình của bạn.
+      Dance_Party_05: Sử dụng một khối mới khác để làm cho các vũ công thay đổi động tác sau mỗi 2 nhịp.
+      Dance_Party_06: Tạo ra một vũ công dự phòng, gọi là `backup_dancer1` để nhảy cùng con mèo.
+      Dance_Party_08: Bạn có thể làm cho cả hai vũ công dự phòng có cùng kích cỡ không?
+      Dance_Party_09: Sử dụng khối `set tint` để thay đổi màu sắc của một vũ công.
+      Dance_Party_10: Làm cho các vũ công khác phản hồi theo nhạc bằng cách sử dụng khối `begins following`.
+      Dance_Party_11.5_test: Sử dụng các khối "all ducks" để làm cho những con vịt nhảy cùng nhau.
+      Dance_Party_11: Khối `when up pressed` cho phép bạn chạy mã nguồn khi nhấn vào mũi tên lên. Cố gắng làm cho các vũ công thực hiện một động tác nhanh khi bạn bấm mũi tên lên.
+      Dance_Party_11_5: Sử dụng các khối "all ducks" để làm cho những con vịt nhảy cùng nhau.
+      Dance_Party_11b: Làm cho Robot làm động tác "drop" một lần khi bạn nhấn phím mũi tên phải và làm động tác "floss" một lần khi bạn nhấn phím mũi tên lên. Làm động tác drop-floss nhanh nhất có thể!
+      Dance_Party_12: Bắt đầu quẩy thôi! Tạo ra điệu nhảy của riêng bạn để chia sẻ với bạn bè.
       Function intro Ryan: Sử dụng nhóm lệnh chức năng 'xây cầu' hai lần để tạo ra con đường đi tới với ngọn đuốc.
       Function intro Ryan_2019: Sử dụng nhóm lệnh chức năng 'xây cầu' hai lần để tạo ra con đường đi tới với ngọn đuốc.
       HOC 2018 Level_1: Lấy chiếc thuyền ở trong chiếc rương.
@@ -442,25 +457,35 @@ vi:
       New Minecraft Hero Project: "Chơi tự do: Thời gian để bạn tự khám phá và sáng tạo!"
       Overworld Avoid Monsters: Đi thẳng về phía một Creeper là một ý kiến không hay. Hãy di chuyển cẩn thận qua các Creeper và về đến nhà một cách an toàn.
       Overworld Avoid Monsters_2018: Đi thẳng về phía một Creeper là một ý kiến không hay. Hãy di chuyển cẩn thận qua các Creeper và về đến nhà một cách an toàn.
+      Overworld Avoid Monsters_2019: Đi thẳng về phía một Creeper là một ý kiến không hay. Hãy di chuyển cẩn thận qua các Creeper và về đến nhà một cách an toàn.
       Overworld Chop Tree - allthethings: Gỗ là tài nguyên rất quan trọng. Có nhiều thứ được làm từ gỗ. Hãy đi về phía cây và sử dụng lệnh "destroy block" để đốn cây.
       Overworld Chop Tree: Gỗ là tài nguyên rất quan trọng. Có nhiều thứ được làm từ gỗ. Hãy đi về phía cây và sử dụng lệnh "destroy block" để đốn cây.
       Overworld Chop Tree_2018: Gỗ là tài nguyên rất quan trọng. Có nhiều thứ được làm từ gỗ. Hãy đi về phía cây và sử dụng lệnh "destroy block" để đốn cây.
+      Overworld Chop Tree_2019: Gỗ là tài nguyên rất quan trọng. Có nhiều thứ được làm từ gỗ. Hãy đi về phía cây và sử dụng lệnh "destroy block" để đốn cây.
       Overworld Chop Trees: Chúng ta cần phải xây một ngôi nhà trước khi mặt trời lặn. Cần có nhiều gỗ để xây nhà. Hãy đốn cả 3 cây.
       Overworld Chop Trees_2018: Chúng ta cần phải xây một ngôi nhà trước khi mặt trời lặn. Cần có nhiều gỗ để xây nhà. Hãy đốn cả 3 cây.
+      Overworld Chop Trees_2019: Chúng ta cần phải xây một ngôi nhà trước khi mặt trời lặn. Cần có nhiều gỗ để xây nhà. Hãy đốn cả 3 cây.
       Overworld Free Play 20x20: Xin chúc mừng! Bạn đã hoàn thành tất cả các câu đố của chúng tôi! Bây giờ hãy đào, xây và tạo ra điều đặc biệt bằng cách sử dụng tất cả những gì bạn đã học được.
       Overworld Free Play 20x20_2018: Xin chúc mừng! Bạn đã hoàn thành tất cả các câu đố của chúng tôi! Bây giờ hãy đào, xây và tạo ra điều đặc biệt bằng cách sử dụng tất cả những gì bạn đã học được.
+      Overworld Free Play 20x20_2019: Xin chúc mừng! Bạn đã hoàn thành tất cả các câu đố của chúng tôi! Bây giờ hãy đào, xây và tạo ra điều đặc biệt bằng cách sử dụng tất cả những gì bạn đã học được.
       Overworld House Frame Chosen: Xây nốt các phần còn lại của ngôi nhà với bất cứ vật liệu nào mà bạn thích nhé. Hãy sử dụng câu lệnh "repeat" để thực hiện nhanh hơn.
       Overworld House Frame Chosen_2018: Xây nốt các phần còn lại của ngôi nhà với bất cứ vật liệu nào mà bạn thích nhé. Hãy sử dụng câu lệnh "repeat" để thực hiện nhanh hơn.
+      Overworld House Frame Chosen_2019: Xây nốt các phần còn lại của ngôi nhà với bất cứ vật liệu nào mà bạn thích nhé. Hãy sử dụng câu lệnh "repeat" để thực hiện nhanh hơn.
       Overworld Move to Sheep: Hãy thêm một lệnh "move forward" thứ hai để đi đến con cừu.
       Overworld Move to Sheep_2018: Hãy thêm một lệnh "move forward" thứ hai để đi đến con cừu.
+      Overworld Move to Sheep_2019: Hãy thêm một lệnh "move forward" thứ hai để đi đến con cừu.
       Overworld Place Wall: Mỗi ngôi nhà đều bắt đầu bằng một bức tường. Hãy xây phần đầu tiên của ngôi nhà bằng cách đặt các lệnh "place" và "move forward" trong vòng lặp.
       Overworld Place Wall_2018: Mỗi ngôi nhà đều bắt đầu bằng một bức tường. Hãy xây phần đầu tiên của ngôi nhà bằng cách đặt các lệnh "place" và "move forward" trong vòng lặp.
+      Overworld Place Wall_2019: Mỗi ngôi nhà đều bắt đầu bằng một bức tường. Hãy xây phần đầu tiên của ngôi nhà bằng cách đặt các lệnh "place" và "move forward" trong vòng lặp.
       Overworld Plant Crops: Tốt hơn là nên lập kế hoạch trước. Hãy trồng cây ở cả hai bên bờ sông để bạn không bị đói sau này.
       Overworld Plant Crops_2018: Tốt hơn là nên lập kế hoạch trước. Hãy trồng cây ở cả hai bên bờ sông để bạn không bị đói sau này.
+      Overworld Plant Crops_2019: Tốt hơn là nên lập kế hoạch trước. Hãy trồng cây ở cả hai bên bờ sông để bạn không bị đói sau này.
       Overworld Powered Minecart: Tốt lắm! Bạn đã thu thập được nhiều nguồn tài nguyên và xây được một ngôi nhà đơn giản. Bây giờ, hãy đặt đường đi từ bên mép bản đồ đến cửa nhà của bạn.
       Overworld Powered Minecart_2018: Tốt lắm! Bạn đã thu thập được nhiều nguồn tài nguyên và xây được một ngôi nhà đơn giản. Bây giờ, hãy đặt đường đi từ bên mép bản đồ đến cửa nhà của bạn.
+      Overworld Powered Minecart_2019: Tốt lắm! Bạn đã thu thập được nhiều nguồn tài nguyên và xây được một ngôi nhà đơn giản. Bây giờ, hãy đặt đường đi từ bên mép bản đồ đến cửa nhà của bạn.
       Overworld Shear Sheep: Đã đến lúc xén lông cừu rồi! Hãy sử dụng lệnh "shear" để thu thập lông của cả hai con cừu.
       Overworld Shear Sheep_2018: Đã đến lúc xén lông cừu rồi! Hãy sử dụng lệnh "shear" để thu thập lông của cả hai con cừu.
+      Overworld Shear Sheep_2019: Đã đến lúc xén lông cừu rồi! Hãy sử dụng lệnh "shear" để thu thập lông của cả hai con cừu.
       PDK5 Functions 2: "Hàm giúp bạn định nghĩa khối mới! Chúng tôi đã chuyển các khối để vẽ một hình vuông vào một hàm gọi là \"vẽ hình vuông\".\nBạn có thể dùng hàm \"vẽ hình vuông\" để tạo ra chiếc kính không? Các hình vuông các nhau 75 điểm ảnh."
       PS copy 2-3 Bee Conditionals 5: "Hãy cẩn thận không thu thập phấn hoa từ một bông hoa tím nếu nó không có phấn. Trước tiên, bạn phải kiểm tra nếu phấn hoa bằng 1 sử dụng khối lệnh \"nếu phấn hoa/mật hoa\"."
       SpecialFrozenLevel: Bạn đã chính thức trở thành một nghệ sĩ bậc thầy! Tạo một Xứ sở thần tiên vào mùa đông.
@@ -475,12 +500,16 @@ vi:
       U4 vigenere cipher 2: lời chỉ đẫn
       Underground Avoiding Lava: Dung nham đang ẩn bên dưới một số khối đá này, bạn cần phải lấp đi trước khi di chuyển về phía trước. Cần phải sử dụng lệnh "if" ở đây. Hãy thêm lệnh "move forward" vào đúng vị trí để đào các khối đá này.
       Underground Avoiding Lava_2018: Dung nham đang ẩn bên dưới một số khối đá này, bạn cần phải lấp đi trước khi di chuyển về phía trước. Cần phải sử dụng lệnh "if" ở đây. Hãy thêm lệnh "move forward" vào đúng vị trí để đào các khối đá này.
+      Underground Avoiding Lava_2019: Dung nham đang ẩn bên dưới một số khối đá này, bạn cần phải lấp đi trước khi di chuyển về phía trước. Cần phải sử dụng lệnh "if" ở đây. Hãy thêm lệnh "move forward" vào đúng vị trí để đào các khối đá này.
       Underground If Statements: Mọi việc hiện đang trở nên rắc rối. Hãy đào 3 viên đá đỏ, nhưng đừng để rơi vào dung nham. Hãy sử dụng lệnh "If" để đặt đá cuội bên trên bất cứ dung nham nào mà bạn muốn lấp.
       Underground If Statements_2018: Mọi việc hiện đang trở nên rắc rối. Hãy đào 3 viên đá đỏ, nhưng đừng để rơi vào dung nham. Hãy sử dụng lệnh "If" để đặt đá cuội bên trên bất cứ dung nham nào mà bạn muốn lấp.
+      Underground If Statements_2019: Mọi việc hiện đang trở nên rắc rối. Hãy đào 3 viên đá đỏ, nhưng đừng để rơi vào dung nham. Hãy sử dụng lệnh "If" để đặt đá cuội bên trên bất cứ dung nham nào mà bạn muốn lấp.
       Underground Iron: Đi vào dung nham nóng chảy không phải là ý kiến hay. Hãy đặt đá cuội để xây một cây cầu, sau đó đào ít nhất hai khối sắt.
       Underground Iron_2018: Đi vào dung nham nóng chảy không phải là ý kiến hay. Hãy đặt đá cuội để xây một cây cầu, sau đó đào ít nhất hai khối sắt.
+      Underground Iron_2019: Đi vào dung nham nóng chảy không phải là ý kiến hay. Hãy đặt đá cuội để xây một cây cầu, sau đó đào ít nhất hai khối sắt.
       Underground Mining Coal: Bạn sẽ tìm thấy các nguồn tài nguyên giá trị nhất dưới mặt đất, nhưng có thể rất tối. Hãy đặt ít nhất 2 cây đuốc đào ít nhất 2 khối than.
       Underground Mining Coal_2018: Bạn sẽ tìm thấy các nguồn tài nguyên giá trị nhất dưới mặt đất, nhưng có thể rất tối. Hãy đặt ít nhất 2 cây đuốc đào ít nhất 2 khối than.
+      Underground Mining Coal_2019: Bạn sẽ tìm thấy các nguồn tài nguyên giá trị nhất dưới mặt đất, nhưng có thể rất tối. Hãy đặt ít nhất 2 cây đuốc đào ít nhất 2 khối than.
       beeDebugVideo1: Dùng một vòng lặp `repeat`để thu thập tất cả phấn hoa.
       bounce_1: Đính kèm một khối với khối "mũi tên trái" và bấm "chạy". Di chuyển chân vịt sử dụng mũi tên để đến mục tiêu kết thúc.
       bounce_10: Đó là một mục tiêu hàng đầu. Đính kèm khối "điểm số" và "điểm đối thủ" với khối "khi quả bóng vào goal" và "khi quả bóng lỡ chân vịt" để chơi trò chơi. Xem xem bạn cần có bao nhiêu điểm để đứng trước đối thủ của mình hai lần.

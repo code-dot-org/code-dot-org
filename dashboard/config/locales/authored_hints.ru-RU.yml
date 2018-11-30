@@ -558,13 +558,6 @@ ru:
           **Дополнительное задание**
 
           Изменяйте фоновый эффект в разные моменты песни, подключив новый блок под событиями <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"тактов"</title></block></xml>.
-      Dance_Party_05_authored_hint:
-        validation: |-
-          **Как пройти этот уровень?**
-
-          * Танец должен включать разные движения в течение первых 12 тактов песни.
-
-          *Этот уровень заканчивается после 12 тактов.*
       Dance_Party_06_authored_hint:
         validation: |-
           **Как пройти этот уровень?**
@@ -613,7 +606,7 @@ ru:
           * Свойства двух и более танцоров должны измениться.
 
           *Этот уровень заканчивается после 8 тактов.*
-      Dance_Party_11.5_authored_hint:
+      Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Как пройти этот уровень?**
 
@@ -621,6 +614,13 @@ ru:
 
           *Этот уровень заканчивается после 8 тактов.*
       Dance_Party_11_authored_hint:
+        validation: |-
+          **Как пройти этот уровень?**
+
+          * Включите креативность!
+
+          *Этот уровень заканчивается после 8 тактов.*
+      Dance_Party_11_5_authored_hint:
         validation: |-
           **Как пройти этот уровень?**
 
@@ -1254,7 +1254,12 @@ ru:
         courseC_maze_programming6_a: Существует два способа для решения этой головоломки!
       courseC_maze_programming6_2018_authored_hint:
         courseC_maze_programming6_a: Существует два способа для решения этой головоломки!
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: Существует два способа для решения этой головоломки!
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
       courseD_artist_functions2_authored_hint:
@@ -1273,11 +1278,20 @@ ru:
           Попробуй использовать блок "прыжок вперед" что-бы оказаться в верхней части одного квадрата где ты начнешь следующий.
 
           Если твои квадраты 20 пикселей в высоту и находятся на растоянии в 20 пикселей друг от друга, как далеко тебе нужно прыгнуть?
+      courseD_artist_nestedLoops3_2019_authored_hint:
+        courseD_artist_nestedLoops3_a: |-
+          Попробуй использовать блок "прыжок вперед" что-бы оказаться в верхней части одного квадрата где ты начнешь следующий.
+
+          Если твои квадраты 20 пикселей в высоту и находятся на растоянии в 20 пикселей друг от друга, как далеко тебе нужно прыгнуть?
       courseD_bee_conditionals8_authored_hint:
         courseD_bee_conditionals8_a: "** Помните: ** Эта головоломка изменяется при
           каждом выполнении.  Для решения задачи, вам нужен блок условия («если» или
           «если / иначе»)."
       courseD_bee_conditionals8_2018_authored_hint:
+        courseD_bee_conditionals8_a: "** Помните: ** Эта головоломка изменяется при
+          каждом выполнении.  Для решения задачи, вам нужен блок условия («если» или
+          «если / иначе»)."
+      courseD_bee_conditionals8_2019_authored_hint:
         courseD_bee_conditionals8_a: "** Помните: ** Эта головоломка изменяется при
           каждом выполнении.  Для решения задачи, вам нужен блок условия («если» или
           «если / иначе»)."
@@ -1293,6 +1307,11 @@ ru:
         courseE_artist_concept_challenge1_b: '2/3 треугольника имеет **длину в 80
           п.** и поворачивает направо на **120 градусов**. '
       courseE_artist_concept_challenge1_2018_authored_hint:
+        courseE_artist_concept_challenge1_a: 'Половина шестиугольника имеет **длину
+          в 30 п.** и поворачивает направо на **60 градусов**.  '
+        courseE_artist_concept_challenge1_b: '2/3 треугольника имеет **длину в 80
+          п.** и поворачивает направо на **120 градусов**. '
+      courseE_artist_concept_challenge1_2019_authored_hint:
         courseE_artist_concept_challenge1_a: 'Половина шестиугольника имеет **длину
           в 30 п.** и поворачивает направо на **60 градусов**.  '
         courseE_artist_concept_challenge1_b: '2/3 треугольника имеет **длину в 80
@@ -1316,6 +1335,12 @@ ru:
           - Двигайся вперёд на 100 + 75 пикселей
           - Используй функцию
       courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_a: |-
+          Твоя программа может быть такой:
+          - Используй функцию
+          - Двигайся вперёд на 100 + 75 пикселей
+          - Используй функцию
+      courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: |-
           Твоя программа может быть такой:
           - Используй функцию

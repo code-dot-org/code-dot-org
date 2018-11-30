@@ -443,6 +443,174 @@ pl:
       CourseF_PlayLab_vars2: Wyścig w poprzedniej łamigłówce nie był zbyt uczciwy!
         Zmień wartość zmiennej "dog_speed" (prędkość psa), aby być pewnym, że możesz
         zebrać więcej flag niż Kot. Wygrywa ten, kto pierwszy zbierze 10 flag!
+      Dance_Party_01: |-
+        *Urządźmy potańcówkę!*
+
+        Przeciągnij blok „utwórz nowego” do obszaru roboczego i połącz go wewnątrz bloku „układ”, aby utworzyć pierwszego tancerza.
+
+        * * Jeśli chcesz uzyskać dodatkowe informacje lub potrzebujesz ekstra wyzwań, możesz także kliknąć żarówkę po lewej.*
+      Dance_Party_01_low: |-
+        *Urządźmy potańcówkę!*
+
+        Przeciągnij blok „utwórz nowego” do obszaru roboczego i połącz go wewnątrz bloku „układ”, aby utworzyć pierwszego tancerza.
+
+        * * Jeśli chcesz uzyskać dodatkowe informacje lub potrzebujesz ekstra wyzwań, możesz także kliknąć żarówkę po lewej.*
+      Dance_Party_02: |-
+        Stwórzmy ten taniec łosi!
+
+        Przeciągnij do pola roboczego blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Podłącz go pod blokiem <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Twój tancerz powinien zacząć nowy ruch po czwartym takcie.
+
+        **Takty** służą w muzyce do odmierzania czasu. W tym samouczku takt składa się z 4 uderzeń.
+      Dance_Party_03: |-
+        * Teraz się bawimy! *
+
+        Dodaj do swojego obszaru roboczego blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml>. Spraw, aby tancerz zaczął nowy ruch po 6 taktach.
+      Dance_Party_04: |-
+        * Ten taniec wymaga trochę świateł!*
+
+        W swoim zestawie narzędzi znajdź blok, który dodaje efekt tła za twoim tancerzem. Zobacz, jak w rytm muzyki zmieniają się efekty!
+      Dance_Party_05: |-
+        Użyj kolejnego nowego bloku, aby tancerz zmieniał ruchy ** co 2 takty **!
+
+        * Wybranie "(Następny)", "(Poprzedni)", or "(Losowy)" mówi tancerzowi, aby za każdym razem, gdy uruchamiany jest kod, wykonywał inny ruch.
+      Dance_Party_06: |-
+        * Potrzebujemy więcej tancerzy! *
+
+        Utwórz kopię tancerza do tańca z kotem i nazwij go „kopia_tancerza1”.
+      Dance_Party_08: |-
+        Każdy tancerz odznacza się zestawem _właściwości_, które decydują o tym, jak wygląda.
+
+        Zmniejszając _wielkość_ tancerza możesz spowodować, że będzie wyglądał, jak gdyby był tancerzem drugiego planu. Czy możesz sprawić, by obie kopie tancerzy były tej samej wielkości?
+      Dance_Party_09: |-
+        Tancerze mają właściwość „odcień”, która pozwala dodać warstwę koloru. Spróbuj zmienić odcień jednego ze swoich tancerzy.
+        * Wybór odcienia spowoduje zmieszanie wybranego koloru z kolorami tancerza.
+      Dance_Party_1: "*Zróbmy potańcówkę!*\n\nPrzeciągnij blok <xml><block type=\"Dancelab_makeNewDanceSprite\"><title
+        name=\"COSTUME\" config=\"&quot;CAT&quot;, &quot;CAT&quot;\">\"CAT\"</title><title
+        name=\"NAME\">my&#95;first&#95;dancer</title><title name=\"LOCATION\">{x:
+        200, y: 200}</title></block></xml> do obszaru roboczego. \n\nWłącz go do bloku
+        <xml><block type=\"Dancelab_whenSetupSong\" movable=\"false\"><title name=\"SONG\">\"hammer\"</title><statement
+        name=\"DO\"></statement></block></xml>, aby utworzyć swojego pierwszego tancerza.\n\n*
+        * Możesz kliknąć na żarówce z lewej strony, jeśli chcesz więcej informacji
+        lub dodatkowe wyzwania.*"
+      Dance_Party_10: |-
+        Teraz wiemy, jak zmieniać właściwości tancerza. Stosując poniższy blok możemy także sprawić, że te same właściwości będą automatycznie reagować na muzykę:
+        <xml>
+        <block type="Dancelab_startMapping">
+        < nazwa tytuł = "SPRITE" > right_pineapple < / title >
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Ten program wykorzystuje „basy” (niskie tony) w muzyce do sterowania wysokością tancerza. Czy możesz spowodować, aby drugi tancerz także reagował na muzykę?
+      Dance_Party_11.5_test: |-
+        Sprawdź ten blok:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Teraz możesz utworzyć wielu tancerzy na raz!
+
+        Spróbuj użyć kilku bloków „wszystkie kaczki", aby napisać kod, który sprawi, że wszystkie kaczki będą tańczyć razem.
+      Dance_Party_11: |-
+        Blok <xml><block type="Dancelab_whenKey"></block></xml> pozwoli Ci uruchomić kod po naciśnięciu strzałki w górę.
+
+        Możesz zmienić ruchy w tańcu, właściwości tancerza lub spowodować szybki ruch dokładnie raz. Bądź twórczy i wypatruj nowych bloków!
+      Dance_Party_11_5: |-
+        Sprawdź ten blok:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Teraz możesz utworzyć wielu tancerzy na raz!
+
+        Spróbuj użyć kilku bloków „wszystkie kaczki", aby napisać kod, który sprawi, że wszystkie kaczki będą tańczyć razem.
+      Dance_Party_11b: "Czas, by potańczyć! Po naciśnięciu strzałki w lewo, Kot podnosi
+        ręce do góry (ruch \"dab\"). Gdy naciśniesz strzałkę w prawo, Robot robi szpagat
+        (ruch \"drop\") a klaszcze (ruch \"clap\"), gdy naciśniesz strzałkę do góry.
+        \n\n**Użyj klawiszy, by Robot na przemian klaskał i robił szpagat tak szybko,
+        jak potrafisz!**"
+      Dance_Party_12: Dobrej zabawy! Utwórz własny taniec i udostępnij go znajomym.
+      Dance_Party_2: "Spowodujmy, że łoś zatańczy! \n\nPrzeciągnij blok <xml><block
+        type=\"Dancelab_changeMoveLR\"><title name=\"SPRITE\">new&#95;dancer</title><title
+        name=\"MOVE\" config=\"MOVES.Dab, MOVES.Drop, MOVES.Floss\">MOVES.Floss</title><title
+        name=\"DIR\">-1</title></block></xml> do obszaru roboczego. Podłącz go pod
+        blokiem <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title
+        name=\"UNIT\">\"measures\"</title></block></xml>. Twój tancerz powinien rozpocząć
+        nowy ruch po czwartym takcie.\n\n** Takty ** są używane w muzyce do odmierzania
+        czasu. W tym samouczku takt składa się z czterech uderzeń."
+      Dance_Party_3: |-
+        * Teraz się bawimy! *
+
+        Dodaj do swojego pola roboczego drugi blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml>. Spraw, aby tancerz rozpoczynał nowy ruch po 6 taktach.
+      Dance_Party_4: |-
+        * Ten taniec wymaga trochę świateł!*
+
+        W swoim zestawie narzędzi znajdź nowy blok, który dodaje efekt tła za twoim tancerzem. Zobacz, jak w rytm muzyki zmieniają się efekty!
+      Dance_Party_5: |-
+        Możesz powtórzyć kod w czasie piosenki używając bloku <xml>
+        <block type="Dancelab_everySeconds">
+        <title name="N">2</title>
+        <title name="UNIT">"measures"</title>
+        </block></xml>.
+
+        Użyj bloku <xml>
+        <block type="Dancelab_changeMoveLR">
+        <title name="SPRITE">dancer1</title>
+        <title name="MOVE">"next"</title>
+        <title name="DIR">-1</title>
+        </block></xml>, aby tancerz co dwa takty wykonywał inny ruch.
+      Dance_Party_6: |-
+        *Potrzebujemy więcej tancerzy!*
+
+        Użyj bloku <xml><block type="Dancelab_makeNewDanceSprite"><title name="COSTUME">"DUCK"</title><title name="NAME">backup&#95;dancer1</title><title name="LOCATION">{x: 300, y: 200}</title></block></xml>, aby utworzyć kopię tancerza "kopia_tancerza1" do tańca z kotem.
+      Dance_Party_8: Każdy tancerz odznacza się zestawem _właściwości_, które decydują
+        o tym, jak wygląda. Zmniejszając wielkość tancerza możesz spowodować, że będzie
+        wyglądał, jak gdyby był na drugim planie. Czy możesz sprawić, by obie kopie
+        tancerzy były tej samej wielkości?
+      Dance_Party_9: Tancerze mają właściwość "odcień", która może dodać warstwę koloru.
+        Spróbuj zmienić odcień jednego z Twoich tancerzy.
+      Dance_Party_extras_battle: "# Zespoły taneczne \n\nOto taniec między dwoma zespołami.
+        Klawisze ze strzałkami sterują jednym z tancerzy, a klawisze \"w, a, s, d\"
+        sterują drugim. Zatańcz z przyjacielem, a następnie spróbuj udoskonalić ten
+        taniec.\n \n* Dodaj więcej klawiszy, aby sterować tańcami \n* Spraw, aby kopie
+        tancerzy również reagowały po naciśnięciu klawiszy\n* Zmieniaj tancerza co
+        4 takty, ustawiając jego widoczność"
+      Dance_Party_extras_every_beat: "# Ćwierć nuty \n\nWiększość naszych tańców wykorzystuje
+        całe takty, ale każdy takt składa się z 4 ćwierćnut. Ten taniec używa \"co
+        0,25 taktu\", aby tancerz klasnął co ćwierćnuty. \n\nTen taniec wykorzystuje
+        także blok warunkowy do sterowania, kiedy blok \"co 0,25 taktu\" może zmienić
+        taniec. Spróbuj zmieniać liczby w bloku warunkowym, aby zobaczyć, jak zmienia
+        on taniec. \n\n* Eksperymentuj z innymi czasami trwania nut (np. 0,5 dla półnuty
+        lub 0,125 dla ósemki). \n* Dodaj jakieś zdarzenia \"po zakończeniu taktu\".
+        \n* Przełącz \"takty\" na \"sekundy\" i spróbuj w ten sposób taktować swoje
+        tańce."
+      Dance_Party_extras_layout: "# Twórzmy formację\n\nSprawdź ten taniec, który
+        wykorzystuje blok \"formacja tancerzy\", aby zmienić ustawienie tancerzy drugiego
+        planu podczas tańca. Wypróbuj jeden z następujących pomysłów, aby go rozszerzyć:
+        \n\n* Twórz drugą grupę tancerzy w innej formacji\n* Zmieniaj formację tancerzy
+        po naciśnięciu klawisza \n* Zmieniaj właściwość, gdy tancerze zmieniają formację"
+      Dance_Party_extras_on_beat: |-
+        # Bas, średni i wysoki ton
+
+        Ten taniec wykorzystuje zdarzenia "szczyt" do wywołania kodu, gdy różne partie muzyki stają się głośne. Spróbuj pomajsterkować z różnymi piosenkami, aby zobaczyć, jak one zmieniają taniec.
+      Dance_Party_extras_speed: "# Przyspiesz, spowolnij \n\nTen ostatni taniec wykorzystuje
+        blok \"ustaw prędkość\" do sterowania szybkością poruszania się tancerzy.
+        Spróbuj poeksperymentować z różnymi prędkościami podczas różnych fragmentów
+        piosenki. Nie przestawaj majstrować przy tym tańcu lub powróć do któregokolwiek
+        z poprzednich tańców, aby uczynić je bardziej porywającymi."
+      Dance_Party_extras_visible: "# Gdzie oni poszli? \n\nTen taniec pokazuje i ukrywa
+        dwie różne grupy tancerzy. Sprawdź to, a następnie spróbuj dodać coś od siebie.
+        \n\n* Dodaj kolejną grupę tancerzy \n* Pokazuj i ukrywaj tancerzy za pomocą
+        klawiszy strzałek \n* Ukryj wszystkich tancerzy i przełącz się na ekscytujący
+        efekt tła"
       Function intro Ryan: "W Twoim polu roboczym znajduje się funkcja o nazwie \"build
         bridget\".  Zawiera ona cały kod potrzebny do przekroczenia rzeki! \r\n \r\nUmieść
         zielony bloczek dwukrotnie w polu roboczym, aby naprawić ścieżkę, by doprowadzić
@@ -451,6 +619,59 @@ pl:
         \"build bridget\".  Zawiera ona cały kod potrzebny do przekroczenia rzeki!
         \r\n \r\nUmieść zielony bloczek dwukrotnie w polu roboczym, aby naprawić ścieżkę,
         by doprowadzić {currentPlayerName} do pochodni z czerwonego kamienia [redstone_torch]."
+      HOC 2018 Level_1: Potrzebujesz zapasów na czekającą Cię wyprawę. Weź**łódkę**
+        ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        z **kufra** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+      HOC 2018 Level_10: Gdzieś w tym Monumencie oceanicznym ukrywa się ** kałamarnica
+        ** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png),
+        potrafisz ją znaleźć?
+      HOC 2018 Level_11: Zbuduj mur z ** pryzmarynu ** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        wokół czarnego betonu. Spowoduje to uaktywnienie ** kanału ** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        i zakończy Twoje wyzwanie!
+      HOC 2018 Level_12: Gratulacje! Otwarty akwen wodny czeka na Ciebie. Zbuduj rafę
+        koralową! Wulkan! Wrak statku! Decyzja należy do Ciebie.
+      HOC 2018 Level_2: Znacznie łatwiej pływać łodzią niż wpław! Przemieść się do
+        końca doku, aby wskoczyć na pokład.
+      HOC 2018 Level_3: Chwyć wiosła i kieruj się łodzią przez otwarte morza, aby
+        złowić ** dorsza ** na na otwartym morzu! [](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Nakarm ** Delfina** dorszem ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Aby szybciej przemieścić się przez ocean, używaj bloku "powtarzaj aż".
+      HOC 2018 Level_5: Gdzieś jest ukryta **muszla łodzika** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)!
+        Zbadaj wrak i postaraj się dostać do **komody** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      HOC 2018 Level_6: Wygląda na to, że marzną! Złów ** łososia **! [] (Https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+        na swojej drodze do podwodnych ruin.
+      HOC 2018 Level_7a: "Znalazłeś podwodne ruiny. Przeszukaj piaskowiec,, by odnaleźć
+        ** kufer ** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        zawierający ** pryzmaryn ** skarb ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      HOC 2018 Level_8: "Najpierw góry lodowe, a teraz lawa? Przeszukaj tę wulkaniczną
+        wyspę i znajdź w rafie koralowej ** tropikalną rybę ** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png).\n\n"
+      HOC 2018 Level_9b: Zrobiłeś to na rafie, teraz przeszukaj **Serce morza** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! Wykorzystaj niebieski i czerwony koral, aby dotrzeć do **kufra** ze skarbem
+        ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      HOC Dance 3_draft: |-
+        * Ten taniec wymaga trochę świateł!*
+
+        W swoim zestawie narzędzi znajdź nowy blok, który dodaje efekt tła za twoim tancerzem. Zobacz, jak w rytm muzyki zmieniają się efekty!
+      HOC Dance 4_draft: |-
+        Użyj kolejnego nowego bloku, aby tancerz zmieniał ruchy ** co 2 takty **!
+
+        * Wybranie "(Następny)", "(Poprzedni)", or "(Losowy)" mówi tancerzowi, aby za każdym razem, gdy uruchamiany jest kod, wykonywał inny ruch.
+      HOC Dance 5_draft: |-
+        * Potrzebujemy więcej tancerzy! *
+
+        Utwórz kopię tancerza do tańca z kotem i nazwij go „kopia_tancerza1”.
+      HOC Dance 6_draft: Każdy tancerz odznacza się zestawem _właściwości_, które
+        decydują o tym, jak wygląda. Zmniejszając wielkość tancerza możesz spowodować,
+        że będzie wyglądał, jak gdyby był na drugim planie. Czy możesz sprawić, by
+        obie kopie tancerzy były tej samej wielkości?
+      HOC Dance 9_draft: |-
+        Blok <xml><block type="Dancelab_whenKey"></block></xml> pozwoli Ci uruchomić kod po naciśnięciu strzałki w górę.
+
+        Możesz zmienić ruchy w tańcu, właściwości tancerza lub spowodować szybki ruch dokładnie raz. Bądź twórczy i wypatruj nowych bloków!
+      HOC Dance Freeplay: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
+      HOC Dance Freeplay_draft: Dobrej zabawy! Utwórz własny taniec i udostępnij go
+        przyjaciołom.
+      HOC Dance Predraw: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
       K-1 Bee Loops 2: Użyj pętli "powtórz", aby przesunąć się a później zebrać nektar
         i zrobić miód!
       K-1 Bee Loops 3: Użyj trzech pętli "powtórz", aby zebrać nektar i zrobić miód!
@@ -675,9 +896,13 @@ pl:
         do owcy.
       Overworld Move to Sheep_2018: Dodaj drugie polecenie "idź do przodu", aby dotrzeć
         do owcy.
+      Overworld Move to Sheep_2019: Dodaj drugie polecenie "idź do przodu", aby dotrzeć
+        do owcy.
       Overworld Shear Sheep: Czas strzyżenia owiec! Użyj polecenia `shear`, aby zebrać
         wełnę z obu owiec.
       Overworld Shear Sheep_2018: Czas strzyżenia owiec! Użyj polecenia `shear`, aby
+        zebrać wełnę z obu owiec.
+      Overworld Shear Sheep_2019: Czas strzyżenia owiec! Użyj polecenia `shear`, aby
         zebrać wełnę z obu owiec.
       PS copy 2-3 Bee Conditionals 5: "Te magiczne, fioletowe kwiatki się zmieniają!\r\n\r\nZa
         każdym razem, gdy próbujesz rozwiązać zagadkę, kwiatki mogą mieć zarówno 1
@@ -778,6 +1003,9 @@ pl:
       courseC_artist_loopsPrePre1a_2018: Użyj bloku `jump to 200 over 200 down`aby
         artysta znalazł się w centrum obszaru gry, następnie narysuj linię o długości
         50 pikseli za pomocą bloku `move forward 50 pixels`.
+      courseC_artist_loopsPrePre1a_2019: Użyj bloku `jump to 200 over 200 down`aby
+        artysta znalazł się w centrum obszaru gry, następnie narysuj linię o długości
+        50 pikseli za pomocą bloku `move forward 50 pixels`.
       courseC_artist_prog_challenge1: Narysuj pomieszczenia dla każdego ze zwierząt.
         Istnieje wiele sposobów, aby rozwiązać tą zagadkę, więc zabaw się! Każdy kwadrat
         ma bok o długości 100 pikseli.
@@ -790,17 +1018,24 @@ pl:
       courseC_artist_prog_challenge2: "*Pomóż mi narysować żółte linie na tej drodze!*"
       courseC_collector_prog9: '*"Zbierzmy cały skarb!"*'
       courseC_collector_prog9_2018: '*"Zbierzmy cały skarb!"*'
+      courseC_collector_prog9_2019: '*"Zbierzmy cały skarb!"*'
       courseC_collector_prog_challenge2: W tej jaskini znajduje się 20 części skarbu.
         Zbierz przynajmniej **10** aby ukończyć to wyzwanie!
       courseC_collector_prog_challenge2_2018: W tej jaskini znajduje się 20 części
+        skarbu. Zbierz przynajmniej **10** aby ukończyć to wyzwanie!
+      courseC_collector_prog_challenge2_2019: W tej jaskini znajduje się 20 części
         skarbu. Zbierz przynajmniej **10** aby ukończyć to wyzwanie!
       courseC_flappy_events7: Następnie, spróbuj zmienić scenę dołączając inny blok
         do bloku "po uruchomieniu".
       courseC_flappy_events7_2018: Następnie, spróbuj zmienić scenę dołączając inny
         blok do bloku "po uruchomieniu".
+      courseC_flappy_events7_2019: Następnie, spróbuj zmienić scenę dołączając inny
+        blok do bloku "po uruchomieniu".
       courseC_flappy_events9: Po uderzeniu w przeszkodę, zamiast kończyć grę, spróbuj
         ustawić wynik z powrotem na 0.
       courseC_flappy_events9_2018: Po uderzeniu w przeszkodę, zamiast kończyć grę,
+        spróbuj ustawić wynik z powrotem na 0.
+      courseC_flappy_events9_2019: Po uderzeniu w przeszkodę, zamiast kończyć grę,
         spróbuj ustawić wynik z powrotem na 0.
       courseC_harvester_loops10: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops10_2018: Zbierz całą kukurydzę o wszystkie dynie.
@@ -826,15 +1061,23 @@ pl:
         tego samego problemu. Czasami szybciej jest się cofnąć niż iść na przód!
       courseC_maze_programming_challenge2_2018: Czasami jest więcej sposobów na rozwiązanie
         tego samego problemu. Czasami szybciej jest się cofnąć niż iść na przód!
+      courseC_maze_programming_challenge2_2019: Czasami jest więcej sposobów na rozwiązanie
+        tego samego problemu. Czasami szybciej jest się cofnąć niż iść na przód!
       courseD_artist_binary_challenge1: Możesz użyć tylko binarnych wartości (0 lub
         1). Spróbuj użyć zagnieżdżonych pętli, aby ukończyć ten rysunek.
       courseD_artist_binary_challenge1_2018: Możesz użyć tylko binarnych wartości
+        (0 lub 1). Spróbuj użyć zagnieżdżonych pętli, aby ukończyć ten rysunek.
+      courseD_artist_binary_challenge1_2019: Możesz użyć tylko binarnych wartości
         (0 lub 1). Spróbuj użyć zagnieżdżonych pętli, aby ukończyć ten rysunek.
       courseD_bee_conditionals7_predict2: "Czasami chmura zakrywa kwiatka, a czasami
         zakrywa plaster miodu! \r\n\r\nUżyj bloku `if/else` aby zebrać nektar z kwiatków
         i miód z plastrów miodu. Pamiętaj:\nza każdą chmurą będzie tylko *jeden* plaster
         miodu lub *jeden* kwiat."
       courseD_bee_conditionals7_predict2_2018: "Czasami chmura zakrywa kwiatka, a
+        czasami zakrywa plaster miodu! \r\n\r\nUżyj bloku `if/else` aby zebrać nektar
+        z kwiatków i miód z plastrów miodu. Pamiętaj:\nza każdą chmurą będzie tylko
+        *jeden* plaster miodu lub *jeden* kwiat."
+      courseD_bee_conditionals7_predict2_2019: "Czasami chmura zakrywa kwiatka, a
         czasami zakrywa plaster miodu! \r\n\r\nUżyj bloku `if/else` aby zebrać nektar
         z kwiatków i miód z plastrów miodu. Pamiętaj:\nza każdą chmurą będzie tylko
         *jeden* plaster miodu lub *jeden* kwiat."
@@ -876,6 +1119,8 @@ pl:
         błąd(błędy) aby zebrać cały skarb."
       courseD_collector_debugging1a_2018: "*\"O nie! Zauważyłem błąd.\"*\r\n\r\nNapraw
         błąd(błędy) aby zebrać cały skarb."
+      courseD_collector_debugging1a_2019: "*\"O nie! Zauważyłem błąd.\"*\r\n\r\nNapraw
+        błąd(błędy) aby zebrać cały skarb."
       courseD_collector_debugging6: "**Wyzwanie:** Wszystkie bloki których potrzebujesz
         już tutaj są...Wykorzystaj swoje umiejętności debugowania aby naprawić błąd
         i zebrać cały skarb."
@@ -886,11 +1131,15 @@ pl:
         uzyskać co najmniej **6** części skarbu!'
       courseD_collector_debugging6a_2018: 'Wyzwanie: Użyj kodu w obszarze roboczym,
         aby uzyskać co najmniej **6** części skarbu!'
+      courseD_collector_debugging6a_2019: 'Wyzwanie: Użyj kodu w obszarze roboczym,
+        aby uzyskać co najmniej **6** części skarbu!'
       courseD_collector_until_challenge1: Zobacz, jak pszczółka zbiera nektar. Czy
         dasz radę użyć tego samego wzorca, żeby pomóc pszczółce zrobić cały miód?
       courseD_farmer_while_challenge1: Wypełnij wszystkie dziury i usuń wszystkie
         stosy.
       courseD_farmer_while_challenge1_2018: Wypełnij wszystkie dziury i usuń wszystkie
+        stosy.
+      courseD_farmer_while_challenge1_2019: Wypełnij wszystkie dziury i usuń wszystkie
         stosy.
       courseD_farmer_while_challenge2: Wypełnij wszystkie dziury i usuń wszystkie
         stosy.

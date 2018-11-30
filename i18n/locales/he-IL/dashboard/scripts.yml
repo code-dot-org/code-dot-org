@@ -812,8 +812,12 @@ he:
               description_student: שיעור זה ממשיך את ההיכרות עם תגיות HTML, הפעם עם כותרות. הכיתה מתרגלת שימוש בתגיות מסוג כותרת כדי לייצר כותרות דף ומקטעים ולומדים כיצד הכותרות מוצגות כברירת מחדל. לאחר מכן, הכיתה תתכנן כיצד לארגן את התוכן בדפי האינטרנט הפרטיים שלהם אשר יבנו לאורך כל יחידת הלימוד ויתחילו את הדף הראשון בפרויקט שלהם.
               description_teacher: בשיעור זה, תלמידים ממשיכים להשתמש ב-HTML כדי לשבץ טקסט באתר שלהם, הפעם בעזרת כותרות. התלמידים לומדים איך הכותרות השונות מופיעים כברירת מחדל ומתרגלים שימוש בהם כדי לייצר כותרות דף וכותרות מקטעים. לאחר מכן, התלמידים מתחילים להחליט כיצד הם רוצים לארגן את התוכן שלהם בדפי האינטרנט הפרטיים שלהם. בשלב האחרון, התלמידים יתחילו את הפרויקט שעליו ימשיכו לעבוד לאורך כל יחידת הלימוד.
         minecraft:
+          title: מעצבי מיינקראפט
           description_short: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקרפט משלך.
           description: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקרפט משלך.
+          stages:
+            Minecraft Hour of Code Designer:
+              name: מעצבי מיינקראפט
         flappy-impact-study:
           stages:
             Flappy Code:
@@ -1217,6 +1221,7 @@ he:
           stages:
             Minecraft Hour of Code:
               name: 'שעת הקוד: גרסת מיינקראפט'
+          title: 'מיינקראפט: המסע של הירו'
         csp-explore-2017:
           stages:
             Post-Course Survey:
@@ -1488,6 +1493,8 @@ he:
           stages:
             Artist:
               name: אמן
+        aquatic:
+          title: 'מיינקראפט: מסע ימי'
         dance--draft:
           stages:
             Dance Party:
@@ -1496,6 +1503,9 @@ he:
           stages:
             Dance Party:
               name: מסיבת ריקודים
+        dance-extras:
+          title: המשיכו לרקוד
+          description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
         coursef-2019:
           stages:
             Sequence in Maze:
@@ -1510,7 +1520,63 @@ he:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
               name: לולאות עבור עם האמן
+            The Artist:
+              name: האמן
         dance-low:
           stages:
             Dance Party:
               name: מסיבת ריקודים
+        coursed-2019:
+          description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
+          stages:
+            Introduction to Online Puzzles:
+              name: היכרות עם חידות מבוכים
+            Relay Programming:
+              name: הרץ פעולה בשנית
+            Loops in Ice Age:
+              name: לולאות בעידן הקרח
+            Until Loops in Maze:
+              name: לולאות "עד" במבוך
+            Conditionals with Cards:
+              name: התניות עם כרטיסים
+            Build a Play Lab Game:
+              name: צור משחק במעבדת הצעצועים
+            Artist Binary:
+              name: אמן בינארי
+        coursee-2019:
+          stages:
+            Sequence in Maze:
+              name: רצף במבוך
+            Debugging with Scrat:
+              name: ניפוי שגיאות עם סקראט
+            Conditionals with Cards:
+              name: התניות עם כרטיסים
+            Conditionals:
+              name: תנאים
+              description_teacher: שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'. _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם מתקיים (אמת). תכניתן ישתמש בלולאות עד כאשר הוא לא יודע מראש כמה פעמים הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר.
+            Internet:
+              name: אינטרנט
+        express-2019:
+          stages:
+            Programming in Maze:
+              name: תכנות במבוך
+            Relay Programming:
+              name: הרץ פעולה בשנית
+            Debugging in Maze:
+              name: איתור באגים במבוך
+            Until Loops in Maze:
+              name: לולאות "עד" במבוך
+            Conditionals with Cards:
+              name: התניות עם כרטיסים
+            For Loop Fun:
+              name: כיף עם לולאת "עבור"
+            For Loops in Bee:
+              name: לולאות עבור עם הדבורה
+            For Loops in Artist:
+              name: לולאות עבור עם האמן
+            Binary Bracelets:
+              name: צמידים בינארים
+            Artist Binary:
+              name: אמן בינארי
+            Internet:
+              name: אינטרנט

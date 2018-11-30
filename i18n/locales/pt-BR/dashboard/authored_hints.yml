@@ -3345,13 +3345,6 @@ pt-BR:
           **Desafio opcional**
           
           Altere o efeito do plano de fundo em diversas partes da música, conectando o novo bloco aos eventos <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
-      Dance_Party_05_authored_hint:
-        validation: |-
-          **Como passar desta fase?**
-          
-          *Seu(sua) dançarino(a) deve executar movimentos diferentes ao longo dos doze primeiros compassos da música.
-          
-          *Esta fase termina após 12 compassos.*
       Dance_Party_06_authored_hint:
         validation: |-
           **Como passar desta fase?**
@@ -3400,7 +3393,7 @@ pt-BR:
           * As propriedades de dois ou mais dançarinos devem mudar.
           
           *Esta fase termina após oito compassos.*
-      Dance_Party_11.5_authored_hint:
+      Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Como passar desta fase?**
           
@@ -3408,6 +3401,13 @@ pt-BR:
           
           *Esta fase termina após oito compassos.*
       Dance_Party_11_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+          
+          * Seja criativo!
+          
+          *Esta fase termina após oito compassos.*
+      Dance_Party_11_5_authored_hint:
         validation: |-
           **Como passar desta fase?**
           
@@ -3476,9 +3476,28 @@ pt-BR:
           * Altere a tonalidade de pelo menos um(a) dançarino(a).
           
           *Esta fase termina após oito compassos.*
+      Farmer for Authored Hint testing_authored_hint:
+        first_hint: |-
+          Esta é a primeira dica.
+          
+          Ela tem *algumas* **marcações** `básicas`
+        second_hint: Esta é a segunda dica. Ela tem um vídeo de dica.
+        last_hint: Esta é a terceira e última dica. Não tem nada de especial.
+      Farmer for TTS testing_authored_hint:
+        first_hint: |-
+          Esta é a primeira dica.
+          
+          Ela tem *algumas* **marcações** `básicas`
+        second_hint: |-
+          Esta é a segunda dica. Tem uma imagem.
+          
+          ! [a] (https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
+        last_hint: Esta é a terceira e última dica. Não tem nada de especial.
       Function intro Ryan_authored_hint:
+        Function_intro_Ryan_b: Se você chamar as funções corretamente, este é o caminho que você vai viajar...
         Function_intro_Ryan_a: Você pode executar uma função muitas vezes dentro de seu programa! Tente executá-la duas vezes para resolver este enigma.
       Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_b: Se você chamar as funções corretamente, este é o caminho que você vai viajar...
         Function_intro_Ryan_a: Você pode executar uma função muitas vezes dentro de seu programa! Tente executá-la duas vezes para resolver este enigma.
       HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: "Vê as **Lanternas do Mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Como você pode usar uma condicional nos itens para chegar ao Monumento Oceânico?\n\n"
@@ -3573,6 +3592,8 @@ pt-BR:
           * Seja criativo!
           
           *Esta fase termina após oito compassos.*
+      Harvesting_authored_hint:
+        pointer_harvester_test: Que tipo de bloco posso usar para verificar uma coisa e tomar uma decisão?
       Inspirational Artwork_authored_hint:
         brush_width: Nós escolhemos a largura do pincel para 1, e depois a cor azul antes de fazer qualquer outra coisa.
         double_loop: Tente colocar uma 'repetição para' dentro de uma repetição 'repetir'.
@@ -3616,12 +3637,14 @@ pt-BR:
           Pressione "Executar"! 
           Você pode executar seu código, mesmo se ele não estiver certo. Execute e redefina seu código repetidamente, até descobrir o que está acontecendo de errado.
         MC_HOC_2017_02_Cole_c: Depois que o Agent abrir a porta, use as teclas de seta para mover o jogador pelo mapa!
+        MC_HOC_2017_02_Cole_d: Certifique-se que o agente está seguindo o caminho descrito no mapa!
       MC_HOC_2017_02_Cole_2019_authored_hint:
         MC_HOC_2017_02_Cole_a: Ande com o Agent dois espaços para a frente e permaneça sobre a placa de pressão. Isso abrirá a porta para o seu jogador.
         MC_HOC_2017_02_Cole_b: |-
           Pressione "Executar"! 
           Você pode executar seu código, mesmo se ele não estiver certo. Execute e redefina seu código repetidamente, até descobrir o que está acontecendo de errado.
         MC_HOC_2017_02_Cole_c: Depois que o Agent abrir a porta, use as teclas de seta para mover o jogador pelo mapa!
+        MC_HOC_2017_02_Cole_d: Certifique-se que o agente está seguindo o caminho descrito no mapa!
       MC_HOC_2017_02_Will_authored_hint:
         MC_HOC_2017_02_Cole_a: Ande com o Agent dois espaços para a frente e permaneça sobre a placa de pressão. Isso abrirá a porta para o seu jogador.
         MC_HOC_2017_02_Cole_b: |-
@@ -3658,20 +3681,26 @@ pt-BR:
         MC_HOC_2017_04_Cole_b: Quando o Agent chegar à placa de pressão, ele abrirá a porta para o jogador.
       MC_HOC_2017_05_Cole_authored_hint:
         MC_HOC_2017_05_Cole_a: Você sabia que você pode colocar mais de um código dentro de um ciclo? Tente colocar uma tábua **e** avançar em vez de 'repetir' para completar este enigma.
+        MC_HOC_2017_05_Cole_b: Pegue o agente do outro lado do rio, construindo uma ponte enquanto você vai.
       MC_HOC_2017_05_Cole_2019_authored_hint:
         MC_HOC_2017_05_Cole_a: Você sabia que você pode colocar mais de um código dentro de um ciclo? Tente colocar uma tábua **e** avançar em vez de 'repetir' para completar este enigma.
+        MC_HOC_2017_05_Cole_b: Pegue o agente do outro lado do rio, construindo uma ponte enquanto você vai.
       MC_HOC_2017_05_Josh_authored_hint:
         MC_HOC_2017_05_Cole_a: Você sabia que você pode colocar mais de um código dentro de um ciclo? Tente colocar uma tábua **e** avançar em vez de 'repetir' para completar este enigma.
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: Quantas vezes este ciclo é executado? Quantas vezes ele *deve* ser executado?
+        MC_HOC_2017_06_Cole_b: 'Ajude o agente construir uma ponte sobre a água até o outro lado! '
       MC_HOC_2017_06_Cole_2019_authored_hint:
         MC_HOC_2017_06_Cole_a: Quantas vezes este ciclo é executado? Quantas vezes ele *deve* ser executado?
+        MC_HOC_2017_06_Cole_b: 'Ajude o agente construir uma ponte sobre a água até o outro lado! '
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Tente colocar mais de uma instrução dentro do um ciclo 'Repetir'!
       MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_c: Tudo o que você precisa que o agente faça é limpar o caminho para o Minecart.
         MC_HOC_2017_07_Cole_a: Para resolver este enigma, descubra o que a função 'abrir caminho' faz e use-a quantas vezes precisar usando o pequeno bloco 'abrir caminho' da caixa de ferramentas.
         MC_HOC_2017_07_Cole_b: Tente misturar os blocos de função com outros blocos da caixa de ferramentas para ajudá-lo a resolver este enigma.
       MC_HOC_2017_07_Cole_2019_authored_hint:
+        MC_HOC_2017_07_Cole_c: Tudo o que você precisa que o agente faça é limpar o caminho para o Minecart.
         MC_HOC_2017_07_Cole_a: Para resolver este enigma, descubra o que a função 'abrir caminho' faz e use-a quantas vezes precisar usando o pequeno bloco 'abrir caminho' da caixa de ferramentas.
         MC_HOC_2017_07_Cole_b: Tente misturar os blocos de função com outros blocos da caixa de ferramentas para ajudá-lo a resolver este enigma.
       MC_HOC_2017_08_RY_authored_hint:
@@ -3687,8 +3716,10 @@ pt-BR:
       MC_HOC_2017_10_Cole_authored_hint:
         MC_HOC_2017_10_Cole_a: Use as funções para resolver este enigma com mais facilidade!
       MC_HOC_2017_10_RETRY_authored_hint:
+        MC_HOC_2017_10_Cole_b: Não sabe onde ir?  Veja se você consegue encontrar a linha pontilhada!
         MC_HOC_2017_10_Cole_a: Use as funções para resolver este enigma com mais facilidade!
       MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_b: Não sabe onde ir?  Veja se você consegue encontrar a linha pontilhada!
         MC_HOC_2017_10_Cole_a: Use as funções para resolver este enigma com mais facilidade!
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Tente fazer com que o Agent construa algumas pontes para que Alex ou Steve possa andar além dos limites do mapa.
@@ -3701,15 +3732,29 @@ pt-BR:
           Pressione "Executar"! 
           Você pode executar seu código, mesmo se ele não estiver certo. Execute e redefina seu código repetidamente, até descobrir o que está acontecendo de errado.
         MC_HOC_2017_08_RY_b: Há MUITAS maneiras de resolver esse enigma. Tente algumas delas!
+        MC_HOC_2017_08_RY_c: Tente seguir a linha pontilhada para um simples caminho através da lava.
       MC_HOC_2017_Ali_2019_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           Pressione "Executar"! 
           Você pode executar seu código, mesmo se ele não estiver certo. Execute e redefina seu código repetidamente, até descobrir o que está acontecendo de errado.
         MC_HOC_2017_08_RY_b: Há MUITAS maneiras de resolver esse enigma. Tente algumas delas!
+        MC_HOC_2017_08_RY_c: Tente seguir a linha pontilhada para um simples caminho através da lava.
       MC_HOC_2017_FP20x20_authored_hint:
         MC_HOC_2017_13_Cole_a: Tente fazer com que o Agent construa algumas pontes para que Alex ou Steve possa andar além dos limites do mapa.
       MC_HOC_2017_FP20x20_2019_authored_hint:
         MC_HOC_2017_13_Cole_a: Tente fazer com que o Agent construa algumas pontes para que Alex ou Steve possa andar além dos limites do mapa.
+      NEW Course 4 Artist Functions 13_authored_hint:
+        NEW_Course_4_Artist_Functions_13_a: Tente editar a função 'desenhar uma linha de quadrados' para que você não precise chamá-la duas vezes.
+        NEW_Course_4_Artist_Functions_13_c: Qual código você precisaria se você tentasse fazer uma estrela usando linhas em vez de caixas?
+      NEW Course 4 Artist Functions 4_authored_hint:
+        NEW_Course_4_Artist_Functions_4_a: Você terá que usar um bloco de 'virar 120 graus à direita' depois de cada quadrado.
+      NEW Course 4 Artist Functions 9_authored_hint:
+        NEW_Course_4_Artist_Functions_9_a: Tente executar o código antes de adicionar qualquer blocos.   O que faz o desenho parecer um pouco estranho?
+        NEW_Course_4_Artist_Functions_9_b: Se o bem não consegue entender bem o que está errado, tente diminuir a velocidade do artista movendo o controle deslizante para a esquerda.
+      NEW Course 4 Artist Params 11_authored_hint:
+        NEW_Course_4_Artist_Params_11_a: Há mais de um número que precisa ser substituído por uma variável dentro da função.
+      NEW Course 4 Artist Params 13_authored_hint:
+        NEW_Course_4_Artist_Params_13_a: 'Você precisa dividir o *perímetro* pelo número de lados, a fim de manter as formas do mesmo tamanho total. '
       NEW Course 4 Artist Params inspire_authored_hint:
         brush_width: Nós escolhemos a largura do pincel para 1, e depois a cor azul antes de fazer qualquer outra coisa.
         double_loop: Tente colocar uma 'repetição para' dentro de uma repetição 'repetir'.
@@ -3827,8 +3872,34 @@ pt-BR:
           </next>
           </block>
           </xml>
+      NEW Course 4 Bee For Loops 8_authored_hint:
+        NEW_Course_4_Bee_For_Loops_8_a: "Se seu laço está fazendo contagem progressiva, o incremento é adicionado na sua variável contadora a cada repetição. Qual deve ser seu incremento para obter o número depois dele?"
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Tente fazer com que o Agent construa algumas pontes para que Alex ou Steve possa andar além dos limites do mapa.
+      Overworld Avoid Monsters_authored_hint:
+        mc_8_a: Você pode escolher entre alguns caminhos. Qual o mais curto?
+        mc_8_b: Use laços `repita` para simplificar seu código.
+        mc_8_c: Seu objetivo é entrar na porta da casa na parte superior da tela.
+      Overworld Avoid Monsters_2018_authored_hint:
+        mc_8_a: Você pode escolher entre alguns caminhos. Qual o mais curto?
+        mc_8_b: Use laços `repita` para simplificar seu código.
+        mc_8_c: Seu objetivo é entrar na porta da casa na parte superior da tela.
+      Overworld Avoid Monsters_2019_authored_hint:
+        mc_8_a: Você pode escolher entre alguns caminhos. Qual o mais curto?
+        mc_8_b: Use laços `repita` para simplificar seu código.
+        mc_8_c: Seu objetivo é entrar na porta da casa na parte superior da tela.
+      Overworld Chop Tree_authored_hint:
+        mc_2_a: 'Você precisa "mover para frente" duas vezes para ficar em frente à árvore.  '
+      Overworld Chop Tree_2018_authored_hint:
+        mc_2_a: 'Você precisa "mover para frente" duas vezes para ficar em frente à árvore.  '
+      Overworld Chop Tree_2019_authored_hint:
+        mc_2_a: 'Você precisa "mover para frente" duas vezes para ficar em frente à árvore.  '
+      Overworld Powered Minecart_authored_hint:
+        mc_13_b: Use laços `repita` para diminuir seu código.
+      Overworld Powered Minecart_2018_authored_hint:
+        mc_13_b: Use laços `repita` para diminuir seu código.
+      Overworld Powered Minecart_2019_authored_hint:
+        mc_13_b: Use laços `repita` para diminuir seu código.
       Quantum Bee - Ryan_authored_hint:
         test_hint: Isso é uma dica-teste.
       aE3_authored_hint:
@@ -3839,6 +3910,10 @@ pt-BR:
         aE4alternateB_d: Se seu código ficar muito confuso, você pode sempre clicar em "Começar do Início" e tentar novamente!
       aE4_authored_hint:
         aE4_d: Se seu código ficar muito confuso, você pode sempre clicar em "Começar do Início" e tentar novamente!
+      aE7_authored_hint:
+        aE7_b: Você vai precisar de 4 segmentos para completar esse enigma.
+      aE8_authored_hint:
+        aE8_a: "Para fazer um quadrado de sua linha, você precisará: \n-  desenhar a linha \n-  usar o canto arredondado\n\nRepita esses passos 4 vezes."
       artistDebugVideo1_authored_hint:
         courseA_artist_loops7_a: Não consegue descobrir onde colocar o laço? Tente escrever o código passo-a-passo e procure um padrão.
       course1_artist_loops_challenge1_authored_hint:
@@ -5201,9 +5276,13 @@ pt-BR:
         courseC_collector_prog2_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
       courseC_collector_prog2_2018_authored_hint:
         courseC_collector_prog2_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseC_collector_prog2_2019_authored_hint:
+        courseC_collector_prog2_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
       courseC_collector_prog4_authored_hint:
         courseC_collector_prog4_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
       courseC_collector_prog4_2018_authored_hint:
+        courseC_collector_prog4_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseC_collector_prog4_2019_authored_hint:
         courseC_collector_prog4_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
       courseC_harvester_loops2_authored_hint:
         courseC_harvester_loops2_a: Se você ficar preso, tente escrever os passos no papel e olhar por padrões que se repetem.
@@ -5229,15 +5308,23 @@ pt-BR:
         courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu código linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
       courseC_maze_programming5_2018_authored_hint:
         courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu código linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
+      courseC_maze_programming5_2019_authored_hint:
+        courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu código linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
       courseC_maze_programming6_authored_hint:
         courseC_maze_programming6_a: Existem duas maneiras de resolver este quebra-cabeças!
       courseC_maze_programming6_2018_authored_hint:
+        courseC_maze_programming6_a: Existem duas maneiras de resolver este quebra-cabeças!
+      courseC_maze_programming6_2019_authored_hint:
         courseC_maze_programming6_a: Existem duas maneiras de resolver este quebra-cabeças!
       courseC_maze_programming8_authored_hint:
         courseC_maze_programming8_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
       courseC_maze_programming8_2018_authored_hint:
         courseC_maze_programming8_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseC_maze_programming8_2019_authored_hint:
+        courseC_maze_programming8_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
@@ -5249,9 +5336,13 @@ pt-BR:
         courseD_artist_nestedLoops3_a: "Tente usar o bloco 'saltar para a frente' para conseguir ir do topo de um quadrado para o lugar onde você vai começar o próxima. \nSe seus quadrados tiverem 20 pixels de altura e estiverem separados por 20 pixels entre si, qual distância você precisa saltar?"
       courseD_artist_nestedLoops3_2018_authored_hint:
         courseD_artist_nestedLoops3_a: "Tente usar o bloco 'saltar para a frente' para conseguir ir do topo de um quadrado para o lugar onde você vai começar o próxima. \nSe seus quadrados tiverem 20 pixels de altura e estiverem separados por 20 pixels entre si, qual distância você precisa saltar?"
+      courseD_artist_nestedLoops3_2019_authored_hint:
+        courseD_artist_nestedLoops3_a: "Tente usar o bloco 'saltar para a frente' para conseguir ir do topo de um quadrado para o lugar onde você vai começar o próxima. \nSe seus quadrados tiverem 20 pixels de altura e estiverem separados por 20 pixels entre si, qual distância você precisa saltar?"
       courseD_bee_conditionals8_authored_hint:
         courseD_bee_conditionals8_a: "** Lembre-se: ** este quebra-cabeça muda cada vez que ele é executado.    Você vai querer usar um bloco condicional (`se` ou  `se/senão`) para resolver o desafio."
       courseD_bee_conditionals8_2018_authored_hint:
+        courseD_bee_conditionals8_a: "** Lembre-se: ** este quebra-cabeça muda cada vez que ele é executado.    Você vai querer usar um bloco condicional (`se` ou  `se/senão`) para resolver o desafio."
+      courseD_bee_conditionals8_2019_authored_hint:
         courseD_bee_conditionals8_a: "** Lembre-se: ** este quebra-cabeça muda cada vez que ele é executado.    Você vai querer usar um bloco condicional (`se` ou  `se/senão`) para resolver o desafio."
       courseD_collector_debugging_challenge2_authored_hint:
         courseD_collector_debugging_challenge2_d: |-
@@ -5457,6 +5548,62 @@ pt-BR:
           </next>
           </block>
           </xml>
+      courseD_collector_nested_loops_challenge2_2019_authored_hint:
+        courseD_bee_nested_loops_challenge2_d: |-
+          **Solução:**
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseD_maze_ramp1_authored_hint:
         courseC_maze_programming1_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
       courseD_maze_ramp1_2018_authored_hint:
@@ -5539,6 +5686,9 @@ pt-BR:
       courseE_artist_concept_challenge1_2018_authored_hint:
         courseE_artist_concept_challenge1_a: 'O metade-hexágono tem um ** comprimento de 30 ** e gira para a direita em ** 60 graus **.  '
         courseE_artist_concept_challenge1_b: 'Os 2/3 do triângulo tem um ** comprimento de 80 ** e gira para a direita em ** 120 graus **. '
+      courseE_artist_concept_challenge1_2019_authored_hint:
+        courseE_artist_concept_challenge1_a: 'O metade-hexágono tem um ** comprimento de 30 ** e gira para a direita em ** 60 graus **.  '
+        courseE_artist_concept_challenge1_b: 'Os 2/3 do triângulo tem um ** comprimento de 80 ** e gira para a direita em ** 120 graus **. '
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: Cada um dos quadrados tem 100 de pixels de lado, o que significa que você terá que movê-lo para frente 175 pixels antes de desenhar o seu segundo quadrado.
         courseE_artist_functions1_b: É okey desenhar linhas sobrepostas para fazer seus óculos.
@@ -5552,6 +5702,12 @@ pt-BR:
           - Mover para frente 100 + 75 pixels
           - Usar função
       courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_a: |-
+          Seu programa deve: 
+          -Usar função
+          - Mover para frente 100 + 75 pixels
+          - Usar função
+      courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: |-
           Seu programa deve: 
           -Usar função

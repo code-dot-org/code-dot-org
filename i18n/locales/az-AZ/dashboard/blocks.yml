@@ -84,7 +84,7 @@ az:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": təsadüfi
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -177,6 +177,7 @@ az:
             '"down"': aşağı
             '"right"': sağa
             '"space"': kosmos
+            '"x"': x
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -261,6 +262,15 @@ az:
           LOCATION:
             "{x: 100, y: 200}": sola
             "{x: 300, y: 200}": sağa
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": sola
+            "{x: 300, y: 200}": sağa
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': bütün
       Mikelab_getProp:
         options:
           PROPERTY:

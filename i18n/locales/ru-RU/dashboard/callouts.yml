@@ -152,6 +152,8 @@ ru:
         4-5_Artist_Patterns_Free_Play_1: Теперь все ваши любимые блоки рассортированы по категориям. Нажмите на на эти слова, чтобы посмотреть куда ушли ваши блоки!
       Geometric Sun_2018_callout:
         4-5_Artist_Patterns_Free_Play_1: Теперь все ваши любимые блоки рассортированы по категориям. Нажмите на на эти слова, чтобы посмотреть куда ушли ваши блоки!
+      Geometric Sun_2019_callout:
+        4-5_Artist_Patterns_Free_Play_1: Теперь все ваши любимые блоки рассортированы по категориям. Нажмите на на эти слова, чтобы посмотреть куда ушли ваши блоки!
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Воспроизведение звука, когда это событие происходит
       Infinity_move_directions_callout:
@@ -229,9 +231,13 @@ ru:
         craft_callout_preplaced: Мы поместили сюда несколько блоков, чтобы помочь тебе начать работу
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Мы поместили сюда несколько блоков, чтобы помочь тебе начать работу
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Мы поместили сюда несколько блоков, чтобы помочь тебе начать работу
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Этот код начнет строить твой дом. Сможешь закончить эту задачу?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Этот код начнет строить твой дом. Сможешь закончить эту задачу?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Этот код начнет строить твой дом. Сможешь закончить эту задачу?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Нажмите «Выполнить», чтобы протестировать свою программу
@@ -239,9 +245,14 @@ ru:
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Нажмите «Выполнить», чтобы протестировать свою программу
         craft_drag_block_callout: Перенеси блок "двигаться вперед" и прикрепи его снизу другого блока
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Нажмите «Выполнить», чтобы протестировать свою программу
+        craft_drag_block_callout: Перенеси блок "двигаться вперед" и прикрепи его снизу другого блока
       Overworld Place Wall_callout:
         craft_inside_repeat: Повторяй действия, помещая блоки сюда
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Повторяй действия, помещая блоки сюда
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Повторяй действия, помещая блоки сюда
       PS copy 2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: У фиолетовых цветов могут быть значения "1" или "0" нектара... но вы не будете знать наверняка, пока не запустите выполнение кода!
@@ -269,9 +280,13 @@ ru:
         craft_callout_moveforward: Этот код проверит наличие лавы, можешь добавить команду движения вперед?
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Этот код проверит наличие лавы, можешь добавить команду движения вперед?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Этот код проверит наличие лавы, можешь добавить команду движения вперед?
       Underground Iron_callout:
         craft_what_is_iron: Добывайте это железо!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Добывайте это железо!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Добывайте это железо!
       aE1_callout:
         aE1_1: Здесь можно использовать лишь 2 этих действия и 2 поворота
@@ -325,11 +340,15 @@ ru:
         courseC_collector_prog1_1: Вы видите несколько новых блоков на панели инструментов? Не волнуйтесь, мы покажем как их использовать позже.
       courseC_collector_prog1_2018_callout:
         courseC_collector_prog1_1: Вы видите несколько новых блоков на панели инструментов? Не волнуйтесь, мы покажем как их использовать позже.
+      courseC_collector_prog1_2019_callout:
+        courseC_collector_prog1_1: Вы видите несколько новых блоков на панели инструментов? Не волнуйтесь, мы покажем как их использовать позже.
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: Вы можете изменить это число.
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет свой цветок. Вам вовсе не нужно проверять для этого соты.
       courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет свой цветок. Вам вовсе не нужно проверять для этого соты.
+      courseD_bee_conditionals2_2019_callout:
         4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет свой цветок. Вам вовсе не нужно проверять для этого соты.
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет свой цветок. Вам вовсе не нужно проверять для этого соты.

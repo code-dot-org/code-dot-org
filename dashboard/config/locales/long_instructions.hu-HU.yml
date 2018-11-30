@@ -333,6 +333,135 @@ hu:
       CourseF_PlayLab_vars2: Az előző feladvány versenye nem volt igazán fair. Változtasd
         meg a `dog_speed` változó értékét úgy, hogy biztosan több zászlót szerezz
         meg, mint a Macska. Az nyer, aki előbb összegyűjt 10 zászlót!
+      Dance_Party_01: |-
+        *Induljon a buli és a tánc!*
+
+        Első táncosod létrehozásához húzd az „új készítése“ blokkot a munkaterületre, és csatlakoztasd az „összeállítás“ blokkba.
+
+        * *Ha további információkra van szükséged, vagy újabb feladatokra vágysz, kattints a bal oldalon lévő villanykörtére.*
+      Dance_Party_01_low: |-
+        *Induljon a buli és a tánc!*
+
+        Első táncosod létrehozásához húzd az „új készítése“ blokkot a munkaterületre, és csatlakoztasd az „összeállítás“ blokkba.
+
+        * *Ha további információkra van szükséged, vagy újabb feladatokra vágysz, kattints a bal oldalon lévő villanykörtére.*
+      Dance_Party_02: |-
+        Táncoltassuk meg ezt a jávorszarvast!
+
+        Húzd ki az <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blokkot a munkaterületre. Csatlakoztasd be az <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blokk alá. A táncosod a negyedik ütem után elkezd táncolni.
+
+
+        A zenében **ütemekben** mérjük az időt. Ebben a bemutatóban az ütemek négy negyed hosszúak.
+      Dance_Party_03: |-
+        *Most elkezdünk növekedni!*
+
+        Adj hozzá egy <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> blokkot a munkaterületedhez. Állítsd be, hogy a táncos 6 ütem után új mozdulatot kezdjen.
+      Dance_Party_04: |-
+        *Ehhez a tánchoz kellene valami villanás!*
+
+        Az eszköztáradban keress egy új blokkot, amivel valamilyen háttéreffektet tehetsz a táncosod mögé. Figyeld meg, hogyan változnak az effektek a zenére!
+      Dance_Party_05: |-
+        Egy másik új blokkal érd el, hogy a táncos **2 ütemenként** változtasson a mozgásán!
+
+        * A „(Következő)“, „(Előző)“ vagy „(Véletlen)“ lehetőséget kiválasztva megadhatod, hogy a táncos a kód minden futtatásakor másik mozgást végezzen.
+      Dance_Party_06: |-
+        *Több táncos kell ide!*
+
+        Hozz létre egy „backup_dancer1“ nevű háttértáncost, hogy együtt táncoljon a macskával.
+      Dance_Party_08: |-
+        Minden táncosnak van egy _tulajdonságkészlete_, ami a kinézetét szabályozza.
+
+        Ha azt szeretnéd, hogy egy táncos úgy tűnjön, mintha a háttérben lenne, a _méretét_ kell kisebbre állítanod. Be tudod állítani mindkét háttértáncost ugyanolyan méretűre?
+      Dance_Party_09: |-
+        A táncosoknak van egy „árnyalat“ tulajdonságuk, amivel egy színréteget adhatsz hozzájuk. Próbáld meg módosítani valamelyik táncosod árnyalatát.
+        * Az árnyalat a kiválasztott színt összevegyíti a táncos színeivel.
+      Dance_Party_10: |-
+        Most már tehát tudjuk, hogyan lehet módosítani a táncosok tulajdonságait. Ezzel a blokkal azt is elérhetjük, hogy ugyanezek a tulajdonságok automatikusan reagáljanak a zenére:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Ez a program a zene „basszus“ szólamának (a mély hangoknak) a hangereje alapján szabályozza az egyik táncos magasságát. Be tudod állítani, hogy a másik táncos is reagáljon a zenére?
+      Dance_Party_11.5_test: |-
+        Nézd meg ezt a blokkot:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Most már egyetlen mozdulattal egy csomó táncost létre tudsz hozni!
+
+        Az „összes kacsa“ blokkok használatával próbálj meg olyan kódot írni, ami alapján az összes kacsa ugyanúgy fog táncolni.
+      Dance_Party_11: |-
+        A <xml><block type="Dancelab_whenKey"></block></xml> blokkal a felfelé nyilat lenyomva tudod futtatni a kódot.
+
+        Módosíthatod a táncmozdulatot, módosíthatod egy táncos tulajdonságait, vagy végezhetsz egy egyszeri mozdulatot. Ötletelj bátran, és keresd az új blokkokat!
+      Dance_Party_11_5: |-
+        Nézd meg ezt a blokkot:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Most már egyetlen mozdulattal egy csomó táncost létre tudsz hozni!
+
+        Az „összes kacsa“ blokkok használatával próbálj meg olyan kódot írni, ami alapján az összes kacsa ugyanúgy fog táncolni.
+      Dance_Party_11b: Indulhat a táncverseny! A Macska legyint, amikor megnyomod
+        a balra nyilat. Állítsd be, hogy a Robot „drop“ mozdulatot tegyen, amikor
+        megnyomod a jobbra nyilat.
+      Dance_Party_12: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és oszd
+        meg az ismerőseiddel.
+      Dance_Party_extras_battle: |-
+        # Tánccsapatok
+
+        Íme egy két csapat közti táncverseny. A nyílbillentyűkkel lehet irányítani az egyik, a „w, a, s, d” billentyűkkel a másik táncost. Tartsatok táncversenyt egy ismerősöddel, majd próbáljátok meg továbbfejleszteni ezt a táncversenyt.
+
+        * Adj hozzá további billentyűket a táncok irányítására
+        * Érd el, hogy a billentyűlenyomásokra a háttértáncosok is reagáljanak
+        * A láthatóságuk beállításával 4 ütemenként váltogasd a táncosokat
+      Dance_Party_extras_every_beat: |-
+        # Negyedek
+
+        A legtöbb táncunkban teljes ütemeket alkalmaztunk, azonban minden ütem 4 negyedből áll össze. Ebben a táncban a „0,25 ütemenként” blokk azt adja meg, hogy a táncos minden negyedre tapsoljon.
+
+        A táncban emellett egy _feltételes_ blokk is szerepel, ami azt szabályozza, hogy a „0,25 ütemenként” blokk mikor módosíthatja a táncot. Próbáld meg módosítani a feltételes blokkban szereplő számokat, és figyeld meg, hogyan módosul a tánc.
+
+        * Kísérletezz más ritmusértékekkel (pl. félhez 0,5 vagy nyolcadhoz 0,125).
+        * Adj hozzá „ütem utáni” eseményeket.
+        * Válts át „ütemek”-ről „másodpercek”-re, és próbáld meg így időzíteni a táncaidat.
+      Dance_Party_extras_layout: |-
+        # Álljunk alakzatba!
+
+        Figyeld meg ebben a táncban, hogy az „elrendezés” blokk hogyan módosítja a háttértáncosok alakzatát a tánc folyamán. Az alábbi ötletekkel próbáld meg bővíteni a formációt:
+
+        * Hozz létre egy második táncoscsoportot eltérő elrendezéssel
+        * Érd el, hogy az elrendezés billentyűlenyomásra módosuljon
+        * Amikor a táncosok alakzatot váltanak, módosíts egy tulajdonságot is
+      Dance_Party_extras_on_beat: |-
+        # Basszus, közép- és magashangok
+
+        Ebben a táncban a „csúcs” események olyankor váltanak ki kódrészleteket, amikor a zene bizonyos részei nagy a hangerővel szólalnak meg. Próbáld ki különböző dalokkal, és figyeld meg, hogyan befolyásolják a táncot.
+      Dance_Party_extras_speed: |-
+        # Gyorsítás, lassítás
+
+        Ez az utolsó tánc a „sebesség beállítása” blokkal szabályozza, milyen gyorsan mozogjanak az egyes táncosok. Kísérletezésképpen a dal különböző részein adj meg eltérő sebességeket. Nyugodtan bütykölgesd tovább ezt a táncot, vagy térj vissza bármelyik korábbihoz, és alakítsd őket még menőbbé.
+      Dance_Party_extras_visible: |-
+        # Hová tűntek?
+
+        Ez a tánc két különböző tánccsoportot jelenít meg és tüntet el. Nézd meg, és egészítsd ki a saját ötleteiddel.
+
+        * Adj hozzá még egy tánccsapatot
+        * A nyílbillentyűkkel jelenítsd meg és tüntesd el a táncosokat
+        * Tüntesd el az összes táncost, és válts át egy izgalmas háttéreffektre
       Function intro Ryan: "Egy \"híd építése\" nevű **funkció** van a munkaterületen.
         \ Ebben megtalálható a hídon való átkeléshez szükséges minden kód! \r\n \r\nAz
         út kijavításához és {currentPlayerName} játékos eljuttatásához a vöröskő fáklyához
@@ -371,6 +500,24 @@ hu:
       HOC 2018 Level_9b: Elérted a zátonyt, most keresd meg a **Tenger szívét** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! A kék és vörös korall segítségével juss el a kincset tartalmazó **ládához**
         ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      HOC Dance 4_draft: |-
+        Egy másik új blokkal érd el, hogy a táncos **2 ütemenként** változtasson a mozgásán!
+
+        * A „(Következő)“, „(Előző)“ vagy „(Véletlen)“ lehetőséget kiválasztva megadhatod, hogy a táncos a kód minden futtatásakor másik mozgást végezzen.
+      HOC Dance 5_draft: |-
+        *Több táncos kell ide!*
+
+        Hozz létre egy „backup_dancer1“ nevű háttértáncost, hogy együtt táncoljon a macskával.
+      HOC Dance 9_draft: |-
+        A <xml><block type="Dancelab_whenKey"></block></xml> blokkal a felfelé nyilat lenyomva tudod futtatni a kódot.
+
+        Módosíthatod a táncmozdulatot, módosíthatod egy táncos tulajdonságait, vagy végezhetsz egy egyszeri mozdulatot. Ötletelj bátran, és keresd az új blokkokat!
+      HOC Dance Freeplay: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és
+        oszd meg az ismerőseiddel.
+      HOC Dance Freeplay_draft: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat,
+        és oszd meg az ismerőseiddel.
+      HOC Dance Predraw: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és
+        oszd meg az ismerőseiddel.
       K-1 Bee Loops 2: Használj egy ciklust, hogy nektárt gyűjts és mézet készíts!
       K-1 Bee Loops 3: Használj ciklusokat, hogy nektárt gyűjts és mézet készíts!
       K-1 Bee Loops 4: Használj ciklusokat, hogy nektárt gyűjts, mézet készíts, és
@@ -584,6 +731,8 @@ hu:
       Overworld Move to Sheep: Adj hozzá egy második előrelépni parancsot, hogy elérd
         a bárányt.
       Overworld Move to Sheep_2018: Adj hozzá egy második előrelépni parancsot, hogy
+        elérd a bárányt.
+      Overworld Move to Sheep_2019: Adj hozzá egy második előrelépni parancsot, hogy
         elérd a bárányt.
       Testing Quantum Farmer: 'Hoppá! Egy tényleg mély lyukat találtam! Nem tudom,
         hány lapátnyi földre van szükségem. Tudsz olyan programot írni, ami teljesen

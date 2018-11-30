@@ -204,6 +204,7 @@ de:
     type:
       word: 'Geheimwort'
       email: 'E-Mail'
+      google_classroom: 'Google Classroom'
       clever: 'Schlau'
   follower:
     invite_sent: 'Einladung gesendet'
@@ -299,7 +300,7 @@ de:
       playlab: 'Spielelabor'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
-      dance: 'Dance-Party'
+      dance: 'Tanzparty'
     popup:
       progress_for_user: "%{name}'s Fortschritt"
       progress: 'Dein Fortschritt'
@@ -528,7 +529,7 @@ de:
       audience: 'Ab 13 Jahren'
       cta: 'Lerne wie'
     dance:
-      title: 'Dance-Party'
+      title: 'Tanzparty'
     hoc:
       title: 'Klassisches Labyrinth'
       body: 'Lerne die Grundlagen der Informatik kennen. Millionen Menschen haben es schon ausprobiert.'
@@ -574,6 +575,7 @@ de:
       title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke die Welt von Minecraft mit Code."
     unplugged:
       title: "Offline Lektionen"
       audience: "Alter 4+"
@@ -855,6 +857,7 @@ de:
   locked_stage: 'Der Inhalt dieser Stufe ist gegenwärtig nicht sichtbar, weil sie noch gesperrt ist. Dein Lehrer wird diese Stufe entsperren, sobald es Zeit ist daran zu arbeiten oder um deine Antworten zu überprüfen.'
   hidden_stage: "Dein Lehrer erwartet DIch hier nicht. Bitte frage Deinen Lehrer, bei welcher Lektion Du sein solltest!"
   return_course_overview: 'Gehe zur Übersicht'
+  view_teacher_guide: 'Lehrer-Leitfaden anzeigen'
   pd:
     form_labels:
       email: 'E-Mail'

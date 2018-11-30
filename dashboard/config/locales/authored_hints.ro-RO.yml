@@ -2396,16 +2396,34 @@ ro:
           </xml>
 
           Nu uitați să schimbați cât de departe!
+      courseC_artist_loops4a_2019_authored_hint:
+        courseC_artist_loops4a_a: |-
+          Utilizați acest bloc pentru a sări înainte:
+
+          <xml>
+          <block type="jump_by_constant">
+          <title name="DIR">saltÎnainte</title>
+          <title name="VALUE">100</title>
+          </block>
+          </xml>
+
+          Nu uitați să schimbați cât de departe!
       courseC_artist_loops5b_authored_hint:
         courseC_artist_loops5b_b: Pentru a realiza un design ca cel de mai sus, veți
           dori să mutați înapoi pe aceeași distanță pe care vă deplasați înainte.
       courseC_artist_loops5b_2018_authored_hint:
         courseC_artist_loops5b_b: Pentru a realiza un design ca cel de mai sus, veți
           dori să mutați înapoi pe aceeași distanță pe care vă deplasați înainte.
+      courseC_artist_loops5b_2019_authored_hint:
+        courseC_artist_loops5b_b: Pentru a realiza un design ca cel de mai sus, veți
+          dori să mutați înapoi pe aceeași distanță pe care vă deplasați înainte.
       courseC_artist_loops6a_authored_hint:
         courseC_artist_loops6a_a: Pentru a realiza un design ca cel de mai sus, săriți
           înainte mai puțin de 75 de pixel, între fiecare autocolant.
       courseC_artist_loops6a_2018_authored_hint:
+        courseC_artist_loops6a_a: Pentru a realiza un design ca cel de mai sus, săriți
+          înainte mai puțin de 75 de pixel, între fiecare autocolant.
+      courseC_artist_loops6a_2019_authored_hint:
         courseC_artist_loops6a_a: Pentru a realiza un design ca cel de mai sus, săriți
           înainte mai puțin de 75 de pixel, între fiecare autocolant.
       courseC_artist_loopsPre1a_authored_hint:
@@ -2416,12 +2434,24 @@ ro:
         courseC_artist_loopsPre1a_b: 'Bucla "repetă" ar trebui să aibă 3 blocuri în
           interiorul său: "săriți la 200 peste 200 în jos", "mergeți înainte cu 50
           de pixeli" și "întoarceți la dreapta cu 60 de grade".'
+      courseC_artist_loopsPre1a_2019_authored_hint:
+        courseC_artist_loopsPre1a_b: 'Bucla "repetă" ar trebui să aibă 3 blocuri în
+          interiorul său: "săriți la 200 peste 200 în jos", "mergeți înainte cu 50
+          de pixeli" și "întoarceți la dreapta cu 60 de grade".'
       courseC_artist_loopsPrePre1a_authored_hint:
         courseC_artist_loopsPrePre1a_b: |-
           Pentru a vă deplasa înainte cu 50 de pixeli, utilizați acest bloc:
 
           ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
       courseC_artist_loopsPrePre1a_2018_authored_hint:
+        courseC_artist_loopsPrePre1a_b: |-
+          Pentru a vă deplasa înainte cu 50 de pixeli, utilizați acest bloc:
+
+          <xml><block type="draw_move_by_constant">
+          <title name="DIR">mutăÎnainte</title>
+          <title name="VALUE">50</title>
+          </block></xml>
+      courseC_artist_loopsPrePre1a_2019_authored_hint:
         courseC_artist_loopsPrePre1a_b: |-
           Pentru a vă deplasa înainte cu 50 de pixeli, utilizați acest bloc:
 
@@ -2591,6 +2621,8 @@ ro:
         courseC_maze_programming6_a: Există două metode de a rezolva acest puzzle!
       courseC_maze_programming6_2018_authored_hint:
         courseC_maze_programming6_a: Există două metode de a rezolva acest puzzle!
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: Există două metode de a rezolva acest puzzle!
       courseC_puppy_loops8courseC_maze_loops8_authored_hint:
         courseC_puppy_loops8courseC_maze_loops8_c: "Există modalități diferite de
           a rezolva aceasta. \n\nVeți dori să utilizați cel puțin două bucle și repetați
@@ -2603,6 +2635,9 @@ ro:
           \ \n\n- Încercați 72 de grade dacă repetați bucla exterioară de 5 ori\n-
           Încercați 60 de grade dacă repetați bucla exterioară de 6 ori"
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
       courseD_artist_functions2_authored_hint:
@@ -2622,12 +2657,20 @@ ro:
       courseD_artist_nestedLoops1_2018_authored_hint:
         courseD_artist_nestedLoops1_c: Încercați să scrieți pașii pe hârtie și să
           căutați modele care pot fi simplificate cu bucle.
+      courseD_artist_nestedLoops1_2019_authored_hint:
+        courseD_artist_nestedLoops1_c: Încercați să scrieți pașii pe hârtie și să
+          căutați modele care pot fi simplificate cu bucle.
       courseD_artist_nestedLoops3_authored_hint:
         courseD_artist_nestedLoops3_a: |-
           Încercați să utilizați blocul "sări înainte" pentru a ajunge din partea de sus a unui pătrat în locul de unde veți începe următorul.
 
           Dacă pătratele dvs. au 20 de pixeli înălțime și au 20 de pixeli distanță între ele, cât de departe trebuie să săriți?
       courseD_artist_nestedLoops3_2018_authored_hint:
+        courseD_artist_nestedLoops3_a: |-
+          Încercați să utilizați blocul "sări înainte" pentru a ajunge din partea de sus a unui pătrat în locul de unde veți începe următorul.
+
+          Dacă pătratele dvs. au 20 de pixeli înălțime și au 20 de pixeli distanță între ele, cât de departe trebuie să săriți?
+      courseD_artist_nestedLoops3_2019_authored_hint:
         courseD_artist_nestedLoops3_a: |-
           Încercați să utilizați blocul "sări înainte" pentru a ajunge din partea de sus a unui pătrat în locul de unde veți începe următorul.
 
@@ -2644,6 +2687,17 @@ ro:
           - sări înainte 50 de pixeli
           - întoarce la dreapta cu 45 de grade
       courseD_artist_nestedLoops9_2018_authored_hint:
+        courseD_artist_nestedLoops9_c: |-
+          Utilizați două bucle imbricate:
+          - Repetă de 8 ori
+          - desenează un pătrat
+          - sari înainte 50 de pixeli
+          - întoarce la dreapta cu 45 de grade
+          - Repetă de 8 ori
+          - desenează un triunghi
+          - sări înainte 50 de pixeli
+          - întoarce la dreapta cu 45 de grade
+      courseD_artist_nestedLoops9_2019_authored_hint:
         courseD_artist_nestedLoops9_c: |-
           Utilizați două bucle imbricate:
           - Repetă de 8 ori
@@ -2683,6 +2737,10 @@ ro:
         courseD_bee_conditionals8_a: "**Amintiți-vă:** Acest puzzle se schimbă de
           fiecare dată când este executat.  \n\nVeți dori să utilizați un bloc condițional
           (\"dacă\" sau \"dacă/altfel\") pentru a rezolva provocarea."
+      courseD_bee_conditionals8_2019_authored_hint:
+        courseD_bee_conditionals8_a: "**Amintiți-vă:** Acest puzzle se schimbă de
+          fiecare dată când este executat.  \n\nVeți dori să utilizați un bloc condițional
+          (\"dacă\" sau \"dacă/altfel\") pentru a rezolva provocarea."
       courseD_bee_nestedLoops2_authored_hint:
         courseD_bee_nestedLoops2_b: Nu reușiți să vă dați seama unde să puneți buclele?
           Încercați să scrieți pe hârtie codul pas cu pas și căutați un model.
@@ -2704,7 +2762,14 @@ ro:
         courseD_iceage_loops1_a: Ferește-te de gheață! Scrat va cădea prin ea!
       courseD_iceage_loops10_authored_hint:
         courseB_iceage_loops10_a: Ferește-te de gheață! Scrat va cădea în apă!
+      courseD_iceage_loops10_2019_authored_hint:
+        courseB_iceage_loops10_a: Ferește-te de gheață! Scrat va cădea în apă!
+      courseD_iceage_loops1_2019_authored_hint:
+        courseD_iceage_loops1_a: Ferește-te de gheață! Scrat va cădea prin ea!
       courseD_iceage_loops2_authored_hint:
+        courseD_iceage_loops2_a: Împărțiți acest puzzle în două bucăți, unul în fața
+          colțului și unul după colț.
+      courseD_iceage_loops2_2019_authored_hint:
         courseD_iceage_loops2_a: Împărțiți acest puzzle în două bucăți, unul în fața
           colțului și unul după colț.
       courseD_maze_nestedLoops3_authored_hint:
@@ -2762,6 +2827,11 @@ ro:
           de 30** și se întoarce la dreapta cu **60 grade**.  '
         courseE_artist_concept_challenge1_b: 'Cele 2/3 din triunghi au o lungime **
           de 80 ** și se întorc spre dreapta de **120 grade**. '
+      courseE_artist_concept_challenge1_2019_authored_hint:
+        courseE_artist_concept_challenge1_a: 'Jumătatea de hexagon are o **lungime
+          de 30** și se întoarce la dreapta cu **60 grade**.  '
+        courseE_artist_concept_challenge1_b: 'Cele 2/3 din triunghi au o lungime **
+          de 80 ** și se întorc spre dreapta de **120 grade**. '
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: Pătratele au, fiecare, laturi de câte 100 de
           pixeli, ceea ce înseamnă că va trebui să mutați înainte cu 175 de pixeli,
@@ -2784,6 +2854,9 @@ ro:
         courseE_bee_concept3a_b: Dacă nu reușiți să vă dați seama unde să puneți buclele,
           încercați să vă scrieți codul pas cu pas și să căutați modele.
       courseE_bee_concept3_2018_authored_hint:
+        courseE_bee_concept3a_b: Dacă nu reușiți să vă dați seama unde să puneți buclele,
+          încercați să vă scrieți codul pas cu pas și să căutați modele.
+      courseE_bee_concept3_2019_authored_hint:
         courseE_bee_concept3a_b: Dacă nu reușiți să vă dați seama unde să puneți buclele,
           încercați să vă scrieți codul pas cu pas și să căutați modele.
       courseE_bee_functions6_authored_hint:

@@ -163,6 +163,27 @@ Feature: Using the teacher dashboard
     # Wait for the thumbnail URL to be sent to the server.
     And I wait until element ".project_updated_at" contains text "Saved"
 
+    # Create a dance party project level and generate a thumbnail.
+
+    # We don't want to have to write the code by dragging blocks, so just remix
+    # an existing project-backed level, and then run the project.
+
+    When I am on "http://studio.code.org/s/dance/stage/1/puzzle/13"
+    And I wait for the page to fully load
+    And I wait for 3 seconds
+    And I wait until I don't see selector "#p5_loading"
+    And I click selector "#x-close" once I see it
+    And I close the instructions overlay if it exists
+    And I press the first ".project_remix" element to load a new page
+    And I wait for the page to fully load
+    And I press "runButton"
+    And I wait until element ".project_updated_at" contains text "Saved"
+    And I wait until initial thumbnail capture is complete
+    And I press "resetButton"
+    And I click selector "#runButton" once I see it
+    # Wait for the thumbnail URL to be sent to the server.
+    And I wait until element ".project_updated_at" contains text "Saved"
+
     And I sign out
 
     # Load the section projects page
@@ -178,6 +199,7 @@ Feature: Using the teacher dashboard
     And I wait until the image within element "tr:eq(2)" has loaded
     And I wait until the image within element "tr:eq(3)" has loaded
     And I wait until the image within element "tr:eq(4)" has loaded
+    And I wait until the image within element "tr:eq(5)" has loaded
 
     Then I see no difference for "projects list view"
     And I close my eyes

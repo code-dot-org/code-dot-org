@@ -131,7 +131,7 @@ ca:
             Digital Citizenship:
               name: Ciutadania digital
             'Farmer: While Loops':
-              name: Pagesa - bucles mentre
+              name: 'Pagesa: bucles mentre'
             Internet:
               name: Internet
             Maze:
@@ -242,7 +242,7 @@ ca:
             'Bee: Nested Loops':
               name: 'Abella: bucles imbricats'
             'Farmer: While Loops':
-              name: Pagesa - bucles mentre
+              name: 'Pagesa: bucles mentre'
             'Maze: Sequence':
               name: 'Laberint: seqüència'
         usability:
@@ -681,7 +681,7 @@ ca:
             Bounce:
               name: Rebota
             'Farmer: While Loops':
-              name: Pagesa - bucles mentre
+              name: 'Pagesa: bucles mentre'
         csd3-2017:
           stages:
             Functions:
@@ -1021,6 +1021,8 @@ ca:
           stages:
             Minecraft Hour of Code:
               name: Hora del Codi de Minecraft
+          description: Minecraft torna amb l'Hora del Codi amb una activitat nova
+            de trinca! Viatja a través de Minecraft amb el codi.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1207,13 +1209,82 @@ ca:
           stages:
             Artist:
               name: Artista
+        dance:
+          stages:
+            Dance Party:
+              name: Festa amb ball
+          title: Festa amb ball
+          description_short: Amb música de Katy Perry, Madonna, J. Balvin, Sia, Keith
+            Urban, Ciara, i 25 més!
+          description: Crea un codi amb la teva pròpia festa amb ball i comparteix-la
+            amb els teus amics!
         frozen-2018-test-b:
           stages:
             Artist:
               name: Artista
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Festa amb ball
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Festa amb ball
+        dance-extras:
+          title: Seguir ballant
+          description: Anar més enllà de la primera hora amb idees desenvolupades
+            del projecte.
         coursef-2019:
           stages:
             Building a Foundation:
               name: Posant les bases
             Conditionals with Cards:
               name: Condicionals amb targetes
+            The Artist:
+              name: L'artista
+        dance-low:
+          stages:
+            Dance Party:
+              name: Festa amb ball
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Programació en relleus
+            Conditionals with Cards:
+              name: Condicionals amb targetes
+            Digital Citizenship:
+              name: Ciutadania digital
+            'Unplugged: Binary':
+              name: 'Sense connexió: Binari'
+            Artist Binary:
+              name: Artista binari
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Posant les bases
+            Nested Loops:
+              name: Bucles imbricats
+            Conditionals with Cards:
+              name: Condicionals amb targetes
+            Conditionals:
+              name: Condicionals
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Col·laboració oberta
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Programació en relleus
+            Conditionals with Cards:
+              name: Condicionals amb targetes
+            Binary Bracelets:
+              name: Polseres binàries
+            'Unplugged: Binary':
+              name: 'Sense connexió: Binari'
+            Artist Binary:
+              name: Artista binari
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Col·laboració oberta

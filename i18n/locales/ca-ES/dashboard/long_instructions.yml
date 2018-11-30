@@ -133,11 +133,54 @@ ca:
         </block></xml>
         
         Aquest programa utilitza el volum de "baix" de la música (els sons greus) per controlar l'alçada d'un ballarí. Pots fer que l'altre dansaire respongui també a la música?
-      Dance_Party_11.5: "Fés una ullada a aquest bloc:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"ÀNEC\"</title>\n<title name=\"LAYOUT\">\"cercle\"</title>\n</block></xml>\n\nAra ja pots crear tot un grup de dansaires alhora!\n\nIntenta utilitzar alguns dels blocs \"tots els ànecs\" per escriure un codi que farà que tots els ànecs dansin junts."
+      Dance_Party_11.5_test: "Fés una ullada a aquest bloc:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"ÀNEC\"</title>\n<title name=\"LAYOUT\">\"cercle\"</title>\n</block></xml>\n\nAra ja pots crear tot un grup de dansaires alhora!\n\nIntenta utilitzar alguns dels blocs \"tots els ànecs\" per escriure un codi que farà que tots els ànecs dansin junts."
       Dance_Party_11: "El bloc <xml><block type=\"Dancelab_whenKey\"></block></xml> et permet executar un codi quan es prem la fletxa cap amunt.\n\nPots canviar el moviment de la dansa, les propietats d'un ballarí, o fer un moviment ràpid només una vegada. Sigues creatiu i cerca nous blocs!"
+      Dance_Party_11_5: "Fés una ullada a aquest bloc:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"ÀNEC\"</title>\n<title name=\"LAYOUT\">\"cercle\"</title>\n</block></xml>\n\nAra ja pots crear tot un grup de dansaires alhora!\n\nIntenta utilitzar alguns dels blocs \"tots els ànecs\" per escriure un codi que farà que tots els ànecs dansin junts."
       Dance_Party_11b: |-
         És l'hora de ballar! El gat remena les potes quan prems la fletxa esquerra. Fés que el robot «caigui» quan prems la fletxa dreta.
       Dance_Party_12: Anima't i segueix el ritme! Crea una dansa pròpia per compartir amb els teus amics.
+      Dance_Party_extras_battle: |-
+        # Grups de dansa
+        
+        Aquí tens una dansa entre dos equips. Les tecles de fletxes controlen un dels ballarins i les tecles "w, a, s, d" controlen l'altre. Balleu amb un amic i després intenteu millorar aquesta dansa poc a poc.
+        
+        * Afegir més tecles per controlar les danses
+        * Fer que els ballarins de reserva també responguin quan es premin les tecles
+        * Canvia el ballarí cada quatre mesures tot configurant-ne la visibilitat
+      Dance_Party_extras_every_beat: |-
+        # Notes negres
+        
+        La majoria de les nostres danses han fet servir mesures senceres, però cada mesura està feta de quatre notes negres. Aquest ball fa servir «cada 0,25 mesures» per fer que el dansaire piqui de mans cada quart de nota.
+        
+        Aquesta dansa també fa servir un_bloc_condicional per controlar quan el bloc de «cada 0,25 mesures» pot canviar la dansa. Proveu de canviar els nombres del bloc condicional per veure com canvia la dansa.
+        
+        * Experimenta amb d'altres durades de notes (com ara 0,5 per una nota blanca o 0,125 per una vuitena).
+        * Afegir alguns esdeveniments `després de la mesura`.
+        * Intercanvia "mesures" amb "segons" i intenta fer quadrar el temps dels teus balls així.
+      Dance_Party_extras_layout: |-
+        # Posem-nos en formació!
+        
+        Mira't aquesta dansa que fa servir el bloc `disposició` per canviar la formació dels ballarins de reserva a través de tota la dansa. Prova una d'aquestes idees per allargar-la:
+        
+        * Crea un segon grup de dansaires amb una disposició diferent
+        * Canvia la disposició quan premis una tecla
+        * Canvia una propietat quan els ballarins canviïn la formació
+      Dance_Party_extras_on_beat: |-
+        # Greus, mitjans i aguts
+        
+        Aquesta dansa utilitza esdeveniments "pic" per activar un codi quan diferents parts de la música fan molt soroll. Prova de jugar amb diferents cançons per veure com canvien la dansa.
+      Dance_Party_extras_speed: |-
+        # Vés més ràpid, vés més lent
+        
+        Aquesta dansa final empra el bloc 'Configurar velocitat' per controlar la velocitat de cada ballarí en moure's. Prova d'experimentar amb diferents velocitats a diferents punts de la cançó. Segueix jugant a tocar coses d'aquesta dansa tant com vulguis, o torna a qualsevulla de les danses anteriors per fer-les encara més genials.
+      Dance_Party_extras_visible: |-
+        # A on han anat?
+        
+        Aquesta dansa mostra i amaga dos grups diferents de ballarins. Mira-t'ho i després prova a afegir-hi el teu estil propi.
+        
+        * Afegir un altre grup de ballarins
+        * Mostrar i amagar els dansaires amb les tecles de fletxes
+        * Amagar tots els ballarins i canviar a un emocionant efecte de fons
       HOC Dance 4_draft: |-
         Fés servir un nou bloc per fer que el dansaire canviï els moviments **cada 2 mesures**!
         
@@ -147,8 +190,12 @@ ca:
         
         Crea un dansaire de reserva anomenat `backup_dancer1` que balli amb el gat.
       HOC Dance 9_draft: "El bloc <xml><block type=\"Dancelab_whenKey\"></block></xml> et permet executar un codi quan es prem la fletxa cap amunt.\n\nPots canviar el moviment de la dansa, les propietats d'un ballarí, o fer un moviment ràpid només una vegada. Sigues creatiu i cerca nous blocs!"
+      HOC Dance Freeplay: Anima't i segueix el ritme! Crea una dansa pròpia per compartir amb els teus amics.
+      HOC Dance Freeplay_draft: Anima't i segueix el ritme! Crea una dansa pròpia per compartir amb els teus amics.
+      HOC Dance Predraw: Anima't i segueix el ritme! Crea una dansa pròpia per compartir amb els teus amics.
       Overworld Move to Sheep: Afegeix una segona instrucció "avança" per arribar a l'ovella.
       Overworld Move to Sheep_2018: Afegeix una segona instrucció "avança" per arribar a l'ovella.
+      Overworld Move to Sheep_2019: Afegeix una segona instrucció "avança" per arribar a l'ovella.
       course4_artist_fwp_challenge1: Intenta executar aquest programa, i fer canvis per veure què passa. Pots averiguar com funciona? (O borra'l i reemplaça'l amb algo totalment diferent)
       courseD_maze_nestedLoops4: 'Porta''m fins al girasol!'
       courseD_maze_nestedLoops4_2018: 'Porta''m fins al girasol!'

@@ -1526,6 +1526,29 @@ cs:
       Dance Party Predict: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
       Dance Party Predict_2019: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
       Dance Party Predict_simple: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
+      Dance_Party_01: Do pracovního prostoru přetáhni blok `vytvořit nový` a připoj
+        ho dovnitř bloku `nastavení`.
+      Dance_Party_01_low: Do pracovního prostoru přetáhni blok `vytvořit nový` a připoj
+        ho dovnitř bloku `nastavení`.
+      Dance_Party_02: Přiměj losa začít po 4 taktech nový pohyb!
+      Dance_Party_03: Nyní přiměj tanečníka začít po 6 taktech nový pohyb!
+      Dance_Party_04: Do svého programu přidej efekt pozadí.
+      Dance_Party_05: Další nový blok použij k tomu, aby tanečník každé 2 takty měnil
+        pohyby.
+      Dance_Party_06: Vytvoř záložního tanečníka nazvaného `záložní_tanečník1`, který
+        bude tančit s kočkou.
+      Dance_Party_08: Dokážeš, aby oba záložní tanečníci měli stejnou velikost?
+      Dance_Party_09: Pomocí bloku `nastavit odstín` změň barvu tanečníka.
+      Dance_Party_10: Přiměj dalšího tanečníka také reagovat na hudbu pomocí bloku
+        `začíná následující`.
+      Dance_Party_11.5_test: Pomocí bloků "všechny kachny" přiměj kachny tančit spolu.
+      Dance_Party_11: Blok `když nahoru stisknuta` ti umožní spustit kód stisknutím
+        na šipku nahoru. Zkus přimět tanečníka hýbat se rychleji po stisknutí šipky
+        nahoru.
+      Dance_Party_11_5: Pomocí bloků "všechny kachny" přiměj kachny tančit spolu.
+      Dance_Party_11b: Přiměj Robota, aby "poklesl", když stiskneš šipku vpravo, a
+        "high clap", když stiskneš šipku nahoru. Střídej pokles-clap co nejrychleji!
+      Dance_Party_12: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
       Eval Define Funcs 2: Pojďme se podívat dovnitř funkce "zelený trojúhelník" abychom
         viděli, jak funguje. Můžete ji upravit tak, aby funkce "zelený trojúhelník"
         vždy nakreslila obrys zeleného trojúhelníku?
@@ -1549,6 +1572,17 @@ cs:
       Guess The Number 2: Vytvořte, co chcete. Toto je příklad hry kde hádáte čísla!
       Guess The Number: Vytvořte, co chcete. Toto je příklad hry kde hádáte čísla!
       Guess The Number_2018: Vytvořte, co chcete. Toto je příklad hry kde hádáte čísla!
+      HOC 2018 Level_1: Seber loď z truhly.
+      HOC 2018 Level_10: Dostaň se do vchodu tohoto Mořského monumentu.
+      HOC 2018 Level_11: Uvnitř Mořského monumentu vybuduj potrubí.
+      HOC 2018 Level_12: Navrhni pod vodou své vlastní prostředí. Záleží to na tobě!
+      HOC 2018 Level_2: Vydej se na konec doku.
+      HOC 2018 Level_3: Vydej se na otevřené moře k tresce.
+      HOC 2018 Level_4: Pomocí smyčky se dostaň k delfínovi.
+      HOC 2018 Level_5: Prozkoumej vrak a dostaň se k truhle.
+      HOC 2018 Level_6: Procházej přes led a dostaň se lososovi.
+      HOC 2018 Level_7a: V podmořských ruinách hledej truhlu.
+      HOC 2018 Level_9b: Použij korál jako souřadnice k dosažení pokladu.
       Infinity_catch: |-
         Dokážeš s Elzou ("herec 2")  chytit Annu
         pomocí šipek na klávesnici?
@@ -2006,43 +2040,64 @@ cs:
         pohybuj kolem Creeperů, abys ses dostal do bezpečí domova.
       Overworld Avoid Monsters_2018: Vběhnutí ke Creeperovi je špatný nápad. Opatrně
         se pohybuj kolem Creeperů, abys ses dostal do bezpečí domova.
+      Overworld Avoid Monsters_2019: Vběhnutí ke Creeperovi je špatný nápad. Opatrně
+        se pohybuj kolem Creeperů, abys ses dostal do bezpečí domova.
       Overworld Chop Tree - allthethings: Dřevo je velmi důležitá surovina. Vyrábí
         se z něj mnoho věcí. Jdi ke stromu a příkazem "znič blok" jej pokácej.
       Overworld Chop Tree: Dřevo je velmi důležitá surovina. Vyrábí se z něj mnoho
         věcí. Jdi ke stromu a příkazem "znič blok" jej pokácej.
       Overworld Chop Tree_2018: Dřevo je velmi důležitá surovina. Vyrábí se z něj
         mnoho věcí. Jdi ke stromu a příkazem "znič blok" jej pokácej.
+      Overworld Chop Tree_2019: Dřevo je velmi důležitá surovina. Vyrábí se z něj
+        mnoho věcí. Jdi ke stromu a příkazem "znič blok" jej pokácej.
       Overworld Chop Trees: Potřebujeme postavit dům před západem slunce. Na dům je
         potřeba hodně dřeva. Pokácej všechny 3 stromy.
       Overworld Chop Trees_2018: Potřebujeme postavit dům před západem slunce. Na
+        dům je potřeba hodně dřeva. Pokácej všechny 3 stromy.
+      Overworld Chop Trees_2019: Potřebujeme postavit dům před západem slunce. Na
         dům je potřeba hodně dřeva. Pokácej všechny 3 stromy.
       Overworld Free Play 20x20: Blahopřejeme! Dokončil jsi všechny naše hádanky!
         Teď těž, buduj a vytvoř něco jedinečného cokoli, co jsi se naučil až dosud.
       Overworld Free Play 20x20_2018: Blahopřejeme! Dokončil jsi všechny naše hádanky!
         Teď těž, buduj a vytvoř něco jedinečného cokoli, co jsi se naučil až dosud.
+      Overworld Free Play 20x20_2019: Blahopřejeme! Dokončil jsi všechny naše hádanky!
+        Teď těž, buduj a vytvoř něco jedinečného cokoli, co jsi se naučil až dosud.
       Overworld House Frame Chosen: Postav zbytek tvého domu z jakéhokoliv materiálu,
         který se ti líbí. Povel "opakuj" se bude hodit.
       Overworld House Frame Chosen_2018: Postav zbytek tvého domu z jakéhokoliv materiálu,
         který se ti líbí. Povel "opakuj" se bude hodit.
+      Overworld House Frame Chosen_2019: Postav zbytek tvého domu z jakéhokoliv materiálu,
+        který se ti líbí. Povel "opakuj" se bude hodit.
       Overworld Move to Sheep: Abys došel k ovci, přidej druhý příkaz "posunout vpřed".
       Overworld Move to Sheep_2018: Abys došel k ovci, přidej druhý příkaz "posunout
+        vpřed".
+      Overworld Move to Sheep_2019: Abys došel k ovci, přidej druhý příkaz "posunout
         vpřed".
       Overworld Place Wall: Každý dům začíná stavbou zdí. Vytvoř první část domu tím,
         že vložíš povely "polož" a "posunout vpřed" dovnitř cyklu.
       Overworld Place Wall_2018: Každý dům začíná stavbou zdí. Vytvoř první část domu
         tím, že vložíš povely "polož" a "posunout vpřed" dovnitř cyklu.
+      Overworld Place Wall_2019: Každý dům začíná stavbou zdí. Vytvoř první část domu
+        tím, že vložíš povely "polož" a "posunout vpřed" dovnitř cyklu.
       Overworld Plant Crops: Je dobré dopředu plánovat. Zasaď plodiny po obou stranách
         vody, abys neměl později hlad.
       Overworld Plant Crops_2018: Je dobré dopředu plánovat. Zasaď plodiny po obou
+        stranách vody, abys neměl později hlad.
+      Overworld Plant Crops_2019: Je dobré dopředu plánovat. Zasaď plodiny po obou
         stranách vody, abys neměl později hlad.
       Overworld Powered Minecart: Skvělá práce! Shromáždil jsi spoustu zdrojů a postavil
         skromný dům. Nyní polož železnici od okraje mapy ke dveřím tvého domu.
       Overworld Powered Minecart_2018: Skvělá práce! Shromáždil jsi spoustu zdrojů
         a postavil skromný dům. Nyní polož železnici od okraje mapy ke dveřím tvého
         domu.
+      Overworld Powered Minecart_2019: Skvělá práce! Shromáždil jsi spoustu zdrojů
+        a postavil skromný dům. Nyní polož železnici od okraje mapy ke dveřím tvého
+        domu.
       Overworld Shear Sheep: Čas stříhání ovcí! Použij povel "ostříhej" k získání
         vlny z obou ovcí.
       Overworld Shear Sheep_2018: Čas stříhání ovcí! Použij povel "ostříhej" k získání
+        vlny z obou ovcí.
+      Overworld Shear Sheep_2019: Čas stříhání ovcí! Použij povel "ostříhej" k získání
         vlny z obou ovcí.
       PDK5 Conditionals 1: Fialové květiny mohou mít buď 1 nebo 0 nektaru, ale neznáš
         kolik! Buď opatrný, nesbírej nektar z fialového květu, pokud tam žádný není.
@@ -2179,19 +2234,29 @@ cs:
       Underground Avoiding Lava_2018: Pod některými z těchto bloků je ukrytá láva,
         kterou musíš před přesunem vpřed zakrýt. K tomu se hodí příkaz "pokud". Přidej
         jeden příkaz "posunout vpřed" na správné místo a vytěž bloky.
+      Underground Avoiding Lava_2019: Pod některými z těchto bloků je ukrytá láva,
+        kterou musíš před přesunem vpřed zakrýt. K tomu se hodí příkaz "pokud". Přidej
+        jeden příkaz "posunout vpřed" na správné místo a vytěž bloky.
       Underground If Statements: Teď to začíná být obtížnější. Vytěž 3 rudity, ale
         nespadni při tom do lávy. Použij příkaz "pokud" k položení dlažebního kamene
         na každou lávu, kterou odkryješ.
       Underground If Statements_2018: Teď to začíná být obtížnější. Vytěž 3 rudity,
         ale nespadni při tom do lávy. Použij příkaz "pokud" k položení dlažebního
         kamene na každou lávu, kterou odkryješ.
+      Underground If Statements_2019: Teď to začíná být obtížnější. Vytěž 3 rudity,
+        ale nespadni při tom do lávy. Použij příkaz "pokud" k položení dlažebního
+        kamene na každou lávu, kterou odkryješ.
       Underground Iron: Vejít do žhavé lávy není dobrý nápad. Postav most položením
         dlažebního kamene, a pak vytěž nejméně dva bloky železa.
       Underground Iron_2018: Vejít do žhavé lávy není dobrý nápad. Postav most položením
         dlažebního kamene, a pak vytěž nejméně dva bloky železa.
+      Underground Iron_2019: Vejít do žhavé lávy není dobrý nápad. Postav most položením
+        dlažebního kamene, a pak vytěž nejméně dva bloky železa.
       Underground Mining Coal: Nejcennější suroviny najdeš v podzemí, ale je tam tma.
         Rozmísti alespoň dvě pochodně a natěž nejméně 2 kusy uhlí.
       Underground Mining Coal_2018: Nejcennější suroviny najdeš v podzemí, ale je
+        tam tma. Rozmísti alespoň dvě pochodně a natěž nejméně 2 kusy uhlí.
+      Underground Mining Coal_2019: Nejcennější suroviny najdeš v podzemí, ale je
         tam tma. Rozmísti alespoň dvě pochodně a natěž nejméně 2 kusy uhlí.
       Virtual Pet 1 Predict: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
       Virtual Pet 1 Predict_2019: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
@@ -2344,6 +2409,8 @@ cs:
         **10** kousků pokladu?
       courseC_collector_prog_challenge1_2018: Podívejte se pozorně! Můžete získat
         všech **10** kousků pokladu?
+      courseC_collector_prog_challenge1_2019: Podívejte se pozorně! Můžete získat
+        všech **10** kousků pokladu?
       courseC_harvester_loops_challenge1: Sesbírej všechnu kukuřici.
       courseC_harvester_loops_challenge1a: Sesbírej všechnu kukuřici.
       courseC_harvester_loops_challenge1a_2018: Sesbírej všechnu kukuřici.
@@ -2356,6 +2423,8 @@ cs:
       courseC_maze_loops_challenge1a: 'Scrat chce teď použít cykly k nalezení žaludu! '
       courseC_maze_loops_challenge1a_2018: 'Scrat chce teď použít cykly k nalezení
         žaludu! '
+      courseC_maze_loops_challenge1a_2019: 'Scrat chce teď použít cykly k nalezení
+        žaludu! '
       courseD_artist_binary1: "Binární soubor je způsob, jak zobrazit informace pomocí
         jen dvou možností.  Jedna z možností  \"vypnuto\" (představované číslem 0)
         a \"zapnuto\" (představované číslem 1).  \r \r Poskytli jsme mřížku \"pixelů\",
@@ -2366,17 +2435,28 @@ cs:
         0) a \"zapnuto\" (představované číslem 1).  \r \r Poskytli jsme mřížku \"pixelů\",
         které můžete procházet a udělat návrhy zapnutím pouze některých políček.  Můžete
         mít umělce, který nakreslí \"01010101\"  binárně v prvním řádku?"
+      courseD_artist_binary1_2019: "Binární soubor je způsob, jak zobrazit informace
+        pomocí jen dvou možností.  Jedna z možností  \"vypnuto\" (představované číslem
+        0) a \"zapnuto\" (představované číslem 1).  \r \r Poskytli jsme mřížku \"pixelů\",
+        které můžete procházet a udělat návrhy zapnutím pouze některých políček.  Můžete
+        mít umělce, který nakreslí \"01010101\"  binárně v prvním řádku?"
       courseD_artist_binary4: Mohl bys nakreslit tento vzor opakováním tří číslicovým
         binárním řetězcem?
       courseD_artist_binary4_2018: Mohl bys nakreslit tento vzor opakováním tří číslicovým
+        binárním řetězcem?
+      courseD_artist_binary4_2019: Mohl bys nakreslit tento vzor opakováním tří číslicovým
         binárním řetězcem?
       courseD_artist_binary6: Který 6 číslicový binární řetězec 11 krát opakovaný
         nakreslí tento obrázek?
       courseD_artist_binary6_2018: Který 6 číslicový binární řetězec 11 krát opakovaný
         nakreslí tento obrázek?
+      courseD_artist_binary6_2019: Který 6 číslicový binární řetězec 11 krát opakovaný
+        nakreslí tento obrázek?
       courseD_artist_binary7: Jaký je nejkratší binární řetězec, který lze opakovat
         k nakreslení tohoto obrázku?
       courseD_artist_binary7_2018: Jaký je nejkratší binární řetězec, který lze opakovat
+        k nakreslení tohoto obrázku?
+      courseD_artist_binary7_2019: Jaký je nejkratší binární řetězec, který lze opakovat
         k nakreslení tohoto obrázku?
       courseD_autorun_binary4_2019: Mohl bys nakreslit tento vzor opakováním tří číslicovým
         binárním řetězcem?
@@ -2386,11 +2466,15 @@ cs:
         k nakreslení tohoto obrázku?
       courseD_bee_conditionals10: Sesbírej všechen nektar a vyrob všechen med.
       courseD_bee_conditionals10_2018: Sesbírej všechen nektar a vyrob všechen med.
+      courseD_bee_conditionals10_2019: Sesbírej všechen nektar a vyrob všechen med.
       courseD_bee_conditionals9: Sesbírej všechen nektar a vyrob všechen med.
       courseD_bee_conditionals9_2018: Sesbírej všechen nektar a vyrob všechen med.
+      courseD_bee_conditionals9_2019: Sesbírej všechen nektar a vyrob všechen med.
       courseD_bee_conditionals_challenge2: Sesbírej všechen nektar a vyrob všechen
         med.
       courseD_bee_conditionals_challenge2_2018: Sesbírej všechen nektar a vyrob všechen
+        med.
+      courseD_bee_conditionals_challenge2_2019: Sesbírej všechen nektar a vyrob všechen
         med.
       courseD_bee_conditionals_challenge3: Sesbírej všechen nektar a vyrob všechen
         med.
@@ -2456,6 +2540,8 @@ cs:
       courseE_bee_concept1: Sesbírat všechen nektar z každého květu. Použij vnořené
         cykly.
       courseE_bee_concept1_2018: Sesbírat všechen nektar z každého květu. Použij vnořené
+        cykly.
+      courseE_bee_concept1_2019: Sesbírat všechen nektar z každého květu. Použij vnořené
         cykly.
       courseE_bee_functions1: Sesbírejte všechen nektar z každého květu.
       courseE_bee_functions1_2018: Sesbírejte všechen nektar z každého květu.

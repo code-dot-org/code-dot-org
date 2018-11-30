@@ -265,7 +265,8 @@ de-DE:
   studiobar_title_nolink: Entdecke das Code Studio
   studiobar_elementary_title: Grundkurse
   studiobar_elementary_body: Unsere drei neuen Kurse für Grundschüler
-  studiobar_dance_title: Dance-Party
+  studiobar_dance_title: Tanzparty
+  studiobar_dance_body: Erstelle und teile deine eigene Tanzparty
   studiobar_hoc_title: Die Hour of Code
   studiobar_hoc_body: Mit Angry Birds programmieren lernen
   studiobar_flappy_title: Flappy Code
@@ -439,6 +440,8 @@ de-DE:
   mc_platformtext: Moderne Browser, Smartphones, Tablets
   mc_specs: 'Viele Sprachen | Moderne Browser, Tablets | Alter: 6-106'
   minecraft_adventurer: Minecraft Abenteurer
+  minecraft_agent_description: Minecraft präsentiert eine brandneue Aktivität zur
+    Hour of Code! Entdecke die Welt von Minecraft mit Code.
   minecraft_agent_button: Start
   minecraft_designer_description: Baue ein Minecraft-Spiel. Erschaffe deine eigene
     Version von Hühnern, Schafen, Creepern, Zombies und mehr.
@@ -1727,7 +1730,7 @@ de-DE:
   user_header_create: 'Erstelle '
   user_header_gamelab: Spielelabor
   user_header_playlab: Spielelabor
-  user_header_dance: Dance-Party
+  user_header_dance: Tanzparty
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_my_projects: Meine Projekte anzeigen
@@ -1740,10 +1743,17 @@ de-DE:
   google_sign_in_instruct: 'Von dort sollten sie die Option "Anmelden mit Google-Konto"
     auswählen:'
   applab_tile_start_tutorial: Start
+  applab_tile_teacher_guide: Lehrer-Leitfaden anzeigen
   account_sign_up_email_opt_in: Dürfen wir dich per E-Mail über Neuigkeiten zu unseren
     Kursen, lokale Möglichkeiten oder andere Neuigkeiten zur Informatik informieren?
-  hoc_overview_dance_title: Dance-Party
+  hoc_overview_dance_title: Tanzparty
+  hoc_overview_partner_activities_title: Weitere Aktivitäten von Partnern
+  hoc_overview_partner_activities_body: Die Hour of Code-Website hat mehr als 100
+    Informatik-Aktivitäten für alle Altersgruppen- und Erfahrungsstufen, die von Code.org
+    und Partnern entwickelt wurden.
+  hoc_overview_partner_activities_link: Aktivitäten anzeigen
   hoc_overview_start_tutorial: Start
+  hoc_overview_view_teacher_guide: Lehrer-Leitfaden anzeigen
   hoc2018_creativity: Kreativität
   hoc2018_creativity_create: Erstellen
   hoc2018_creativity_hoc_coming: Hour of Code steht vor der Tür...
@@ -1760,6 +1770,10 @@ de-DE:
   hoc2018_creativity_courses: Tauche weiter ein, mit den Code.org Kursen
   hoc2018_creativity_courses_link: Tauche weiter ein, mit den <a href="https://studio.code.org/courses">Code.org
     Kursen</a>
+  hoc2018_mc_aquatic_description: Minecraft präsentiert eine brandneue Aktivität zur
+    Hour of Code! Entdecke die Welt von Minecraft mit Code.
+  hoc2018_mc_hero_description: Minecraft präsentiert eine brandneue Aktivität zur
+    Hour of Code! Entdecke die Welt von Minecraft mit Code.
   hoc2018_mc_designer_description: Baue ein Minecraft-Spiel. Erschaffe deine eigene
     Version von Hühnern, Schafen, Creepern, Zombies und mehr.
   hoc2018_mc_adventurer_title: Minecraft Abenteurer
@@ -1777,13 +1791,32 @@ de-DE:
     wird
   hoc2018_mc_video_title_obama: President Obama über Informatik
   hoc2018_mc_video_title_anybody_can_learn: Jeder kann lernen
+  hoc2018_mc_homepage_hoc_coming: Die Hour of Code rückt näher ...
   hoc2018_mc_homepage_what_create: Was wirst du erschaffen?
   hoc2018_mc_homepage_join_us: Mitmachen
   hoc2018_mc_homepage_try_it: Ausprobieren
-  hoc2018_dance_party_main_heading: Dance-Party
-  hoc2018_dance_party_box_title: Dance-Party
+  hoc2018_mc_back_journey: Minecraft präsentiert eine brandneue Aktivität zur Hour
+    of Code! Entdecke die Welt von Minecraft mit Code.
+  hoc2018_mc_teacher_guide: Lehrer-Leitfaden anzeigen
+  hoc2018_dance_party_main_heading: Tanzparty
+  hoc2018_dance_create_your_own_dance_title: Erstelle deine eigene Tanzparty
+  hoc2018_dance_party_box_title: Tanzparty
+  hoc2018_dance_party_box_description: Codiere eine Tanzparty, um sie mit deinen Freunden
+    zu teilen!
   hoc2018_dance_party_button: Start
+  hoc2018_dance_keep_on_dancing_box_title: Tanzt weiter
+  hoc2018_dance_keep_on_dancing_description: Überschreite die erste Stunde mit erweiterten
+    Projektideen.
+  hoc2018_dance_keep_on_dancing_button: Beginne mit Teil 2
+  hoc2018_dance_teacher_resources_title: Lehrer-Ressourcen
+  hoc2018_dance_teacher_resources_tile1_description: Filtern von Unterrichtsplänen,
+    Zertifikaten und Musik.
   hoc2018_dance_teacher_resources_tile1_button: Stundenplan
+  hoc2018_dance_teacher_resources_tile2_title: Unplugged-Tanzparty
+  hoc2018_dance_teacher_resources_tile2_description: Keine Computer erforderlich!  Lerne
+    Codier-Konzepte, um gemeinsam eine Tanzparty zu choreografieren.
   hoc2018_dance_teacher_resources_tile2_button: Aktivität ohne Computer
   hoc2018_dance_amazon_about_future_engineer_button: Mehr erfahren
   hoc2018_dance_amazon_scholarship_programs_button: Jetzt bewerben!
+  hoc2018_dance_measure: Takt
+  hoc2018_dance_measure_colon: 'Takt:'

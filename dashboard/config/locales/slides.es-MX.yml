@@ -3014,52 +3014,53 @@ es-MX:
           la pantalla sólo añade más código al evento
       9:
         image: notes/applab_intro_events_9.png
-        text: Para hacer que su programa responda a más eventos añada mas bloques
-          de onEvent. Solo asegñurese de no colocarlos uno dentro del otro. Ahora
-          es momento de intentarlo por cuenta propia. ¡Diviértase!
+        text: Para hacer que tu programa responda a más eventos, añade mas bloques
+          de onEvent. Solo asegúrate de no colocarlos uno dentro del otro. Ahora es
+          momento de intentarlo por tu propia cuenta. ¡Diviértete!
     applab_intro_sounds:
       1:
         image: notes/applab_intro_sounds_1.png
-        text: A continuación usted aprenderá sobre agregar imágenes y sonidos a su
-          aplicación. Empecemos revisando las opciones de sonido.
+        text: Ahora aprenderás sobre agregar imágenes y sonidos a tu aplicación. Empecemos
+          revisando las opciones de sonido.
       2:
         image: notes/applab_intro_sounds_2.png
-        text: En la caja de herramientas usted encontrará un nuevo bloque llamado
-          "playSound". Arrástrelo al área de trabajo. Usted puede seleccionar un sonido
-          haciendo clic en el menú desplegable y luego haciendo clic en "Choose".
+        text: En la caja de herramientas encontrarás un nuevo bloque llamado "playSound".
+          Arrástralo al área de trabajo. Puedes seleccionar un sonido haciendo clic
+          en el menú desplegable y luego haciendo clic en "Escoger".
       3:
         image: notes/applab_intro_sounds_3.png
-        text: Desde aquí usted puede carga un archivo de sonido desde su computadora,
-          o buscar un sonido de la librería de sonidos. Esta tiene diferentes categorías
-          como instrumentos, música de fondo o animales.
+        text: Desde aquí puedes subir un archivo de sonido de tu computadora, o buscando
+          un sonido desde la biblioteca de sonidos. La biblioteca de sonidos tiene
+          un montón de diferentes categorías como instrumentos, música de fondo o
+          animales.
       4:
         image: notes/applab_intro_sounds_4.png
-        text: Una vez que haya escogido el sonido que quiere, haga clic en "Choose".
-          Cuando el bloque se ejecute, se reproducirá el sonido que se escogió.
+        text: Una vez que tengas el sonido que deseas, haz clic en "Seleccionar".
+          Cuando este bloque se ejecuta, se reproducirá el sonido que elegiste.
       5:
         image: notes/applab_intro_sounds_5.png
-        text: Para agregar imágenes a sus elementos usted puede usar el bloque setProperty.
-          Seleccione la propiedad de la imagen en el segundo menú desplegable
+        text: Para agregar imágenes a tus elementos puedes usar el bloque setProperty.
+          Selecciona las características de la imagen en el segundo menú desplegable
       6:
         image: notes/applab_intro_sounds_6.png
-        text: Luego selecione "Choose" de la tercera pestaña desplegable.
+        text: Luego selecciona "Elegir" del tercer menú.
       7:
         image: notes/applab_intro_sounds_7.png
-        text: Desde acá usted puede subir una imagen de su computadora o bueno revisar
-          una gran librería de iconos en la librería de iconos.
+        text: Desde aquí puedes subir una imagen desde tu computadora o puedes buscar
+          a través de una enorme biblioteca de iconos en la biblioteca de icono.
       8:
         image: notes/applab_intro_sounds_8.png
         text: De vuelta en el modo de código usted puede usar el bloque "setProperty"
-          para cambiar el color de icono de su icono. Una vez que haya seleccionado
-          que icono va a usar haga clic en "Run" para ver como se ve.
+          para cambiar el color de icono de tu icono. Una vez que hayas seleccionado
+          qué icono vas a usar haz clic en "Correr" para ver cómo se ve.
       9:
         image: notes/applab_intro_sounds_9.png
-        text: "¡Esto es todo al respecto! Ahora usted ya puede a empezar a agregar
-          imágenes y sonidos para hacer sus aplicaciones aún mas divertidas y dinámicas."
+        text: "¡Esto es todo a eso! Ahora puedes a empezar a agregar imágenes y sonidos
+          para hacer tus aplicaciones aún mas divertidas y dinámicas."
     applab_intro_designmode:
       1:
         image: notes/applab_intro_designmode_1.png
-        text: Para construir tus propias aplicaciones vas a necesitar empezar diseñando
+        text: Para construir tus propias aplicaciones necesitarás a empezar diseñando
           pantallas y elementos desde cero. App Lab hace esto fácil de hacer con el
           Modo de Diseño.
       2:
@@ -3108,24 +3109,59 @@ es-MX:
     applab_intro_share:
       1:
         image: notes/applab_intro_share_1.png
+        text: Ahora que has aprendido los fundamentos de App Lab como añadir botones,
+          sonido, imágenes, texto y nuevas pantallas puedes crear todo tipo de apps.
       2:
         image: notes/applab_intro_share_2.png
+        text: En el siguiente nivel encontrarás la app que acabas de construir. Con
+          un poco de creatividad puedes convertirla en un test de personalidad para
+          tus amigos.
       3:
         image: notes/applab_intro_share_3.png
+        text: Una vez que hayas terminado con tu app puedes enviarla fácilmente a
+          tu teléfono y ver cómo ha quedado. Simplemente haz clic en "Compartir" e
+          introduce tu número de teléfono aquí.
       4:
         image: notes/applab_intro_share_4.png
+        text: Recibirás un mensaje de texto que te permitirá abrir tu app instantáneamente.
       5:
         image: notes/applab_intro_share_5.png
+        text: También puedes compartir un enlace a tu app en los medios sociales o
+          enviarla a la galería de code.org para que otras personas puedan jugar y
+          compartir.
       6:
         image: notes/applab_intro_share_6.png
+        text: Solo has arañado la superficie de lo que App Lab puede hacer. La aplicación
+          al completo presenta interacciones de usuario más avanzadas, nuevos elementos
+          de pantalla e incluso una base de datos para que puedas construir rápidamente
+          apps con todas las características. En "code.org/applab" podrás encontrar
+          la herramienta completa y montones de ideas si quieres seguir avanzando.
       7:
         image: notes/applab_intro_share_7.png
+        text: Gracias por acompañarnos en el recorrido. Ahora construye y comparte
+          tu primera app. ¡Y no dejes de crear apps con App Lab!
     mc_2017_agent_intro:
       1:
         image: notes/mc_2017_agent_intro_1.png
-      2: 
-      3: 
-      4: 
+        text: 'Stacy: Stampy, Lizzy, Preston - Gracias por venir conmigo. Lo que quiero
+          enseñaros está justo en esta meseta de mesas. ¡Creo que os va a encantar!'
+      2:
+        text: Espera un minuto. ¡Hay un agujero en la pista! (gritando)
+      3:
+        text: "¿Estáis bien todos? Stampy: Ah, ya veo el problema. ¡Mira! Hay un agujero
+          en la pista. Stacy: ¿De verdad, Stampy? Lizzy: Puede que tengamos que agrupar
+          bloques para arreglarlo. Preston: Hagamos una carrera. El primero que vuelva
+          a la cima gana. Stacy: Ok. Preparados, listos, ¡YA! Ok, voy a reunir algunos
+          de estos bloques de terracota. Esperad. Chicos, No puedo 'minar'. Preston:
+          Yo tampoco. Lizzy: Yo tampoco puedo. Stacy: Ok, esto es muy raro. Stampy,
+          ¿puedes minar? Stampy: No puedo. Stampy: Ok, todos tranquilos. Stampy: ¿Está
+          roto el juego? Stacy: Si es así, ¿cómo lo arreglamos? Lizzy: No sé. Stampy:
+          ¿Sabe alguien cómo escribir código Minecraft?"
+      4:
+        text: "(ufff) Preston: ¿Qué es eso? Stampy: Nunca había visto uno de esos
+          antes. Lizzy: ¡Qué adorable! Stacy: ¿Es.. es domesticable? Preston: Vale,
+          ¿qué está pasando? Alguien tiene que volver al mundo real y arreglar esto.
+          Todos: ¡Yo no! Stacy: Yo n.. (suspira). Ok, yo iré."
       5: 
       6: 
       7: 

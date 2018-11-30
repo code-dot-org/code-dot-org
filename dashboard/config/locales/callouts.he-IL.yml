@@ -140,6 +140,9 @@ he:
       Geometric Sun_2018_callout:
         4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך
           קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
+      Geometric Sun_2019_callout:
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך
+          קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
       Mike Playlab Project_callout:
         New Play Lab Project_callout1: לחצו על הקטגוריות על מנת לראות את הבלוקים שזמינים
           לכם! גררו בלוקים לתוך איזור העבודה כדי להוסיף אותם לתוכנה שלכם
@@ -160,19 +163,28 @@ he:
         craft_callout_preplaced: הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו
           לסיים אותו?
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו
           לסיים אותו?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו
+          לסיים אותו?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: לחצו על "התחל" כדי לנסות את התוכנית שלכם
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: לחצו על "התחל" כדי לנסות את התוכנית שלכם
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: לחצו על "התחל" כדי לנסות את התוכנית שלכם
       Overworld Place Wall_callout:
         craft_inside_repeat: חזרו על הפעולות באמצעות הצבת בלוקים כאן
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: חזרו על הפעולות באמצעות הצבת בלוקים כאן
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: חזרו על הפעולות באמצעות הצבת בלוקים כאן
       PS clone CSD U3 Variables Predict Where XY_callout:
         grid: לחצו כאן על מנת להציג את הרשת.
@@ -216,9 +228,14 @@ he:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: הקוד הזה יבדוק האם יש לבה. האם תוכלו להוסיף פקודה
           על מנת לנוע קדימה?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: הקוד הזה יבדוק האם יש לבה. האם תוכלו להוסיף פקודה
+          על מנת לנוע קדימה?
       Underground Iron_callout:
         craft_what_is_iron: כרו את הברזל הזה!
       Underground Iron_2018_callout:
+        craft_what_is_iron: כרו את הברזל הזה!
+      Underground Iron_2019_callout:
         craft_what_is_iron: כרו את הברזל הזה!
       courseA_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
@@ -229,16 +246,25 @@ he:
       courseC_maze_programming3_2018_callout:
         courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
           כדי להיפטר מהם.
+      courseC_maze_programming3_2019_callout:
+        courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
+          כדי להיפטר מהם.
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
           צורך לבדוק את הכוורות כלל.
       courseD_bee_conditionals2_2018_callout:
         4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
           צורך לבדוק את הכוורות כלל.
+      courseD_bee_conditionals2_2019_callout:
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
+          צורך לבדוק את הכוורות כלל.
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
           צורך לבדוק את הכוורות כלל.
       courseD_farmer_while7_2018_callout:
+        courseD_farmer_while7_2018_PathAhead: תצטרך להשתמש בבלוק "כל עוד דרך לפניך"
+          כדי לפתור את החידה.
+      courseD_farmer_while7_2019_callout:
         courseD_farmer_while7_2018_PathAhead: תצטרך להשתמש בבלוק "כל עוד דרך לפניך"
           כדי לפתור את החידה.
       courseD_maze_ramp3_callout:
@@ -284,9 +310,9 @@ he:
         move_elsa_forward: גרור בלוק "הזז קדימה" והצמד מתחת לבלוק "מתי לרוץ", בשביל
           שאלזה תזוז קדימה
       frozen snowflake branch_callout:
-        frozen_snowflake_branch: השתמש בבלוק מסוג "צור ענף של פתיתי שלג"
+        frozen_snowflake_branch: השתמש בבלוק "צור ענף של פתית שלג"
       frozen snowflake branch_test_callout:
-        frozen_snowflake_branch: השתמש בבלוק מסוג "צור ענף של פתיתי שלג"
+        frozen_snowflake_branch: השתמש בבלוק "צור ענף של פתית שלג"
       grade2_CaringForNewPet_2_callout:
         grade2_CaringForNewPet_2_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
           כדי להיפטר מהם.

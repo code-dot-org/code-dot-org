@@ -70,13 +70,6 @@ ca:
           **Repte opcional**
 
           Canvia l'efecte de fons en diferents punts mentre dura la cançó tot connectant el nou bloc sota els esdeveniments de <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
-      Dance_Party_05_authored_hint:
-        validation: |-
-          **Com passo aquest nivell?**
-
-          * La teva dansa ha de realitzar moviments diferents durant les primeres 12 mesures de la cançó.
-
-          *Aquest nivell acaba després de 12 mesures.*
       Dance_Party_06_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
@@ -125,7 +118,7 @@ ca:
           * Les propietats de dos o més ballarins han de canviar.
 
           *Aquest nivell acaba després de 8 mesures.*
-      Dance_Party_11.5_authored_hint:
+      Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
@@ -133,6 +126,13 @@ ca:
 
           *Aquest nivell acaba després de 8 mesures.*
       Dance_Party_11_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Sigues creatiu!
+
+          *Aquest nivell acaba després de 8 mesures.*
+      Dance_Party_11_5_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
@@ -482,5 +482,8 @@ ca:
           </block>
           </xml>
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!

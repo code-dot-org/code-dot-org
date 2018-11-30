@@ -277,6 +277,8 @@ ur-PK:
   volunteer_engineer_submission_field_description: تفصیل
   volunteer_engineer_submission_field_email: ای میل ایڈریس
   volunteer_engineer_submission_field_email_placeholder: ای میل ایڈریس
+  volunteer_engineer_submission_field_email_preference_privacy: "(ہماری رازداری کی
+    پالیسی دیکھیں)"
   volunteer_engineer_submission_field_email_preference_yes: جی
   volunteer_engineer_submission_field_email_preference_no: نہيں
   volunteer_engineer_submission_submit: جمع کرائیں
@@ -395,13 +397,23 @@ ur-PK:
     مزہ لیں! اپنے والدین اور ٹیچرس کو بتایں کے آپ Ruby پروگرامنگ سیکھ رہے ہیں... بالکل
     مفت اور کسی بھی کمپیوٹر پر!! [نوٹ: ڈیسک ٹاپ انسٹالیشن کی ضرورت ہوتی ہے]'
   flappy_shortcode: پھڑپھڑایں
+  header_my_dashboard: ڈیش بورڈ
   header_courses: کورسز
+  header_professional_learning: پیشہ ورانہ تعلیم
   header_educate_hoc: آور-آف-کوڈ
+  user_header_view_my_projects: تمام منصوبوں کو دیکھیں
+  view_all_sections: تمام سیکشن دیکھیں
   applab_tile_start_tutorial: شروع کریں
   hoc_overview_start_tutorial: شروع کریں
   hoc2018_creativity_create: بنائیں
+  hoc2018_creativity_what_will_you_create: آپ کیا بنائیں گے؟
   hoc2018_mc_start: شروع کریں
+  hoc2018_mc_educators_box2_button: ڈاؤن لوڈ، اتارنا
   hoc2018_mc_video_title_inspire_girl: ایک لڑکی کی حوصلہ افزائی
+  hoc2018_mc_homepage_what_create: آپ کیا بنائیں گے؟
   hoc2018_mc_homepage_join_us: ہمارے ساتھ شامل ہوں
+  hoc2018_mc_minecraft_education: Minecraft تعلیم کے لئے جانا
+  hoc2018_mc_continue_learning: Minecraft کے ساتھ تعلیم جاری رکھیں ۔
+  hoc2018_mc_go_to_mc_education: Minecraft تعلیم کے لئے جانا
   hoc2018_dance_party_button: شروع کریں
   hoc2018_dance_amazon_about_future_engineer_button: مزید سیکھے

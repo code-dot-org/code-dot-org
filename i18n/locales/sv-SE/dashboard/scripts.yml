@@ -1543,6 +1543,7 @@ sv:
           stages:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
+          description: Minecraft är tillbaka för Hour of Code med en helt ny aktivitet! Res genom Minecraft via koden.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1769,10 +1770,34 @@ sv:
           stages:
             Artist:
               name: Konstnären
+        dance:
+          stages:
+            Dance Party:
+              name: Dansparty
+          title: Dansparty
+          description_short: Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara och 25 andra!
+          description: Koda ditt egna dansparty som du kan dela med dina vänner.
         frozen-2018-test-b:
           stages:
             Artist:
               name: Konstnären
+        aquatic:
+          stages:
+            Aquatic:
+              name: Vatten
+          title: 'Minecraft: Resande vattenlevande'
+          description_short: Minecraft är tillbaka med en helt ny aktivitet för “Hour of Code”!
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Dansparty
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Dansparty
+        dance-extras:
+          title: Fortsätt att dansa
+          description: Med ytterligare projektidéer kan du fortsätta efter den första timmen.
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1783,3 +1808,55 @@ sv:
               name: Envelope variabler
             For Loop Fun:
               name: '''För'' loop skoj'
+            The Artist:
+              name: Konstnären
+        dance-low:
+          stages:
+            Dance Party:
+              name: Dansparty
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Stafettprogrammering
+            Conditionals with Cards:
+              name: Villkorssatser med kort
+            Digital Citizenship:
+              name: Digitalt medborgarskap
+            'Unplugged: Binary':
+              name: 'Ouppkopplad: Binärt'
+            Artist Binary:
+              name: Artist binär
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Bygga en grund
+            Nested Loops:
+              name: Kapslade slingor(loopar)
+            Conditionals with Cards:
+              name: Villkorssatser med kort
+            Conditionals:
+              name: Villkor
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Stafettprogrammering
+            Conditionals with Cards:
+              name: Villkorssatser med kort
+            Envelope Variables:
+              name: Envelope variabler
+            For Loop Fun:
+              name: '''För'' loop skoj'
+            Binary Bracelets:
+              name: Binära armband
+            'Unplugged: Binary':
+              name: 'Ouppkopplad: Binärt'
+            Artist Binary:
+              name: Artist binär
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
