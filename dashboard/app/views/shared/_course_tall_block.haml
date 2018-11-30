@@ -1,14 +1,17 @@
+- show_teacher_guide ||= false
 - teacher_guide ||= nil
 
 - if id == Script::HOC_NAME
   - url = hoc_reset_url
   - title = t('upsell.hoc.title')
   - body = t('upsell.hoc.body')
+  - teacher_guide = CDO.code_org_url("/hourofcode/hourofcode")
 
 - elsif id == Script::FLAPPY_NAME
   - url = script_reset_url('flappy')
   - title = t('upsell.flappy.title')
   - body = t('upsell.flappy.body')
+  - teacher_guide = CDO.code_org_url("/hourofcode/flappy")
 
 - elsif id == Script::TWENTY_HOUR_NAME
   - url = script_url(id)
@@ -36,6 +39,7 @@
   - url = CDO.code_org_url('/hourofcode/unplugged-conditionals-with-cards')
   - title = t('upsell.unplugged_conditionals.title')
   - body = t('upsell.unplugged_conditionals.body')
+  - teacher_guide = CDO.code_org_url("/hourofcode/unplugged-conditionals-with-cards")
 
 - elsif id == 'sports'
   - url = CDO.code_org_url('/athletes')
@@ -46,11 +50,13 @@
   - url = CDO.studio_url('/s/text-compression/reset')
   - title = t('upsell.text-compression.title')
   - body = t('upsell.text-compression.body')
+  - teacher_guide = "https://curriculum.code.org/hoc/2016/1/"
 
 - elsif id == 'hoc_encryption'
   - url = CDO.studio_url('/s/hoc-encryption/reset')
   - title = t('upsell.hoc-encryption.title')
   - body = t('upsell.hoc-encryption.body')
+  - teacher_guide = "https://curriculum.code.org/hoc/2016/2/"
 
 - elsif [Script::COURSE1_NAME, Script::COURSE2_NAME,Script::COURSE3_NAME, Script::COURSE4_NAME, Script::COURSEA_NAME, Script::COURSEB_NAME, Script::COURSEC_NAME, Script::COURSED_NAME, Script::COURSEE_NAME, Script::COURSEF_NAME].include? id
   - url = script_url(id)
@@ -61,9 +67,11 @@
   - url = script_reset_url(id)
   - if id == 'frozen'
     - title = t('upsell.frozen.title')
+    - teacher_guide = CDO.code_org_url("/hourofcode/frozen")
   - elsif id == 'starwars' || id == 'starwarsblocks'
     - title = t('upsell.starwars.title')
     - url = CDO.code_org_url('/starwars')
+    - teacher_guide = CDO.code_org_url("/hourofcode/starwars")
   - elsif id == 'mc'
     - title = t('upsell.minecraft.title')
     - url = CDO.code_org_url('/api/hour/begin/mc')
@@ -78,12 +86,17 @@
     - url = CDO.code_org_url('/api/hour/begin/mc')
   - elsif id == 'infinity'
     - title = t('upsell.infinity.title')
+    - teacher_guide = CDO.code_org_url("/hourofcode/infinity")
   - elsif id == 'iceage' || id == 'gumball' || id == 'playlab'
     - url = CDO.code_org_url('/playlab')
     - title = data_t_suffix('script.name', id, 'title')
+    - teacher_guide = CDO.code_org_url("/hourofcode/playlab")
   - elsif id == 'dance'
     - url = CDO.code_org_url('/dance')
     - title = t('upsell.dance.title')
+  - elsif id == Script::ARTIST_NAME
+    - title = data_t_suffix('script.name', id, 'title')
+    - teacher_guide = CDO.code_org_url("/hourofcode/artist")
   - else
     - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
@@ -91,15 +104,13 @@
 - if %w(course1 course2 course3 course4 coursea-2017 courseb-2017 coursec-2017 coursed-2017 coursee-2017 coursef-2017).include?(id)
   - audience = data_t_suffix('script.name', id, 'description_audience')
 
-- block_class = 'courseblock-tall'
-
 - if id== 'dance'
   - image_url = "courses/logo_tall_#{id}.gif"
 - else
   - image_url = "courses/logo_tall_#{id}.jpg"
 
-.courseblock-span3.courseblock-tall{class: block_class}
-  =link_to url do
+.courseblock-span3.courseblock-tall{class: 'courseblock-tall'}
+  = link_to url do
     .imgspan
       = image_tag(CDO.shared_image_url(image_url), height: '120px', width: '100%')
     .clear
@@ -116,5 +127,5 @@
     .clear
     .smalltext= body
     .clear
-    - if teacher_guide.present?
+    - if show_teacher_guide && teacher_guide.present?
       .bar.teacher-guide= link_to t('view_teacher_guide'), teacher_guide
