@@ -619,7 +619,7 @@ zh-TW:
         </block></xml>
 
         此程式使用音樂的「低音」音量（低音）來控制一個舞者的高度。您是否能讓另一個舞者也回應音樂？
-      Dance_Party_11.5: |-
+      Dance_Party_11.5_test: |-
         查看此程式積木：
 
         <xml>
@@ -636,8 +636,63 @@ zh-TW:
         <xml><block type="Dancelab_whenKey"></block></xml> 程式積木可讓您在按下向上箭頭時執行程式碼。
 
         您可以變更舞蹈動作、變更舞者的屬性或者只進行一次快速動作。發揮創意，尋找新的程式積木！
+      Dance_Party_11_5: |-
+        查看此程式積木：
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        現在您可以一次建立一群舞者了！
+
+        嘗試使用一些「所有鴨子」程式積木來編寫程式碼，這將使所有的鴨子一起跳舞。
       Dance_Party_11b: 是時候跳舞了！按下向左鍵時，貓會輕拍。按下向右鍵時，可讓機器人「掉落」。
       Dance_Party_12: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
+      Dance_Party_extras_battle: |-
+        #舞蹈團隊
+
+        這是兩個隊員之間的舞蹈。方向鍵控制其中一位舞者，“w、a、s、d”鍵控制另一位舞者。可以和朋友一起跳支舞，然後努力改進你的舞蹈。
+
+        * 添加更多按鍵來控制舞蹈
+        * 讓後備舞者也在按下按鍵時做出反應
+        * 通過設置舞者的可見度，每 4 個節拍替換舞者一次
+      Dance_Party_extras_every_beat: |-
+        # 四分音符
+
+        我們的舞蹈大多採用了完整節拍，但每個節拍都由 4 個四分音符組成。這種舞蹈使用“1/4 節拍”使舞者在每個四分音符拍手。
+
+        這種舞蹈還使用_conditional_塊來控制在什麼時候“每 1/4 個節拍”塊可以改變舞蹈。嘗試更改條件塊中的數字，看看這會如何改變舞蹈。
+
+        * 嘗試使用其他音符長度（1/2 節拍或 1/8 節拍）。
+        * 添加一些 “節拍后”事件。
+        * 用“秒”替換“節拍”，並嘗試以這種方式為舞蹈計時。
+      Dance_Party_extras_layout: |-
+        # 讓我們進入陣型！
+
+        查看這種舞蹈的效果，使用“佈局”塊來改變整個舞蹈中後備舞者的陣型。請嘗試以下任一方法進行擴展練習：
+
+        * 在不同的佈局中創建第二組舞者
+        * 按下按鍵時更改佈局
+        * 當舞者改變陣型時改變屬性
+      Dance_Party_extras_on_beat: |-
+        # 低音、中音和高音
+
+        這種舞蹈會在音樂的不同部分響起時使用“峰值”事件來觸發代碼。嘗試換用不同的歌曲，看看這會如何改變舞蹈。
+      Dance_Party_extras_speed: |-
+        # 加快速度、減慢速度
+
+        最後一種舞蹈使用“設定速度”塊來控制每位舞者的移動速度。嘗試在歌曲中的不同節點使用不同的速度。隨意對舞蹈進行修改，或恢復以前的舞蹈，取得更好的效果。
+      Dance_Party_extras_visible: |-
+        # 他們要去哪？
+
+        這鐘舞蹈可以顯示和隱藏了兩組不同的舞者。看看效果如何，然後嘗試發揮自己的天分。
+
+        * 添加另一組舞者
+        * 使用方向鍵來顯示和隱藏舞者
+        * 隱藏所有舞者並切換到令人興奮的背景效果
       ECS Unit 3 Challenge Selection: "# 挑戰概覽\n> 你的挑戰有哪些？ \r\n\r\n## Enter the lesson
         you selected for your\nchallenge in the text box below.\r\n\r\nHTML Beginners:\r\n\r\n-
         Day 3-4,5:\nBasic HTML - Paragraph, Header, Strong, and EM Tags\r\n- Day 6--7:
@@ -690,6 +745,7 @@ zh-TW:
       Geometric Pattern: "**專案點子：** 創作一個圖案，用幾何思維，這需要毅力和規劃！"
       Geometric Sun: "**專案點子：** 創作一個圖案，用幾何思維，這需要毅力和規劃！"
       Geometric Sun_2018: "**專案點子：** 創作一個圖案，用幾何思維，這需要毅力和規劃！"
+      Geometric Sun_2019: "**專案點子：** 創作一個圖案，用幾何思維，這需要毅力和規劃！"
       HOC 2018 Level_1: "您需要補給才能踏上前方等著您的旅途。打開**箱子** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png)
         以取得**小船** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)。\n\n"
       HOC 2018 Level_10: "有一隻**烏賊** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
@@ -721,6 +777,9 @@ zh-TW:
         <xml><block type="Dancelab_whenKey"></block></xml> 程式積木可讓您在按下向上箭頭時執行程式碼。
 
         您可以變更舞蹈動作、變更舞者的屬性或者只進行一次快速動作。發揮創意，尋找新的程式積木！
+      HOC Dance Freeplay: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
+      HOC Dance Freeplay_draft: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
+      HOC Dance Predraw: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
       Harvesting: |-
         喔哦，我弄丟了地圖，種了什麼也搞不清楚！每個芽苗可以種出**玉米** ![picture of corn](https://images.code.org/cac3133c40781553a70066a67298b2b5-image-1472493202556.png)
         、**豌豆** ![picture of beans](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png)
@@ -926,6 +985,7 @@ zh-TW:
       New Minecraft Hero Project: "**自由遊戲：**現在，就看您的表現了！使用 Agent 的代碼來探索這個世界。"
       Overworld Move to Sheep: 添加第二個「移動-向前」指令，到達綿羊的位置。
       Overworld Move to Sheep_2018: 添加第二個「移動-向前」指令，到達綿羊的位置。
+      Overworld Move to Sheep_2019: 添加第二個「移動-向前」指令，到達綿羊的位置。
       PS - test - pixelation: "# 做做看\r\n\r\n輸入 0 或是 1 來完成這個 X 形的圖案，如果你想要清除重來，可以點擊「可讀格式」。"
       PS copy 2-3 Bee Conditionals 5: "這些神奇的紫花又開始變化了！\r\n\r\n每次你在過這個關卡時，紫色的花上可能會有
         1 個花蜜，或是什麼也沒有…但除非你開始運行程式，否則你不會知道確切的數量！\r\n\r\n小心不要在沒有任何花蜜的花朵上採集。\r\n你必須先用`如果花蜜…`積木檢查看看是否花蜜數等於
@@ -1133,8 +1193,10 @@ zh-TW:
       courseB_maze_seqCold: "**挑戰：**找出這個關卡的錯誤，添加積木以修正程式，讓鳥可以抓到這頭豬！"
       courseC_collector_prog8: "*「就是這樣！繼續幫助我收集所有的硬幣。」*"
       courseC_collector_prog8_2018: "*「就是這樣！繼續幫助我收集所有的硬幣。」*"
+      courseC_collector_prog8_2019: "*「就是這樣！繼續幫助我收集所有的硬幣。」*"
       courseC_collector_prog9: "*「讓我們獲得所有的硬幣！」*"
       courseC_collector_prog9_2018: "*「讓我們獲得所有的硬幣！」*"
+      courseC_collector_prog9_2019: "*「讓我們獲得所有的硬幣！」*"
       courseC_collector_progA: 幫 Laurel 收集到所有寶石。
       courseC_harvester_loops_challenge1: 收集所有的玉米。
       courseC_harvester_loops_challenge2: |-
@@ -1147,20 +1209,28 @@ zh-TW:
       courseC_maze_loops5: "*「愈快抓到豬愈好！」*"
       courseC_maze_programming1: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
       courseC_maze_programming1_2018: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
+      courseC_maze_programming1_2019: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
       courseC_maze_programming4: "*「順著路徑讓我抓到那隻蠢豬。」\r\n\r\n當心別碰到 TNT 炸藥，不然我的羽毛會滿天飛！"
       courseC_maze_programming4_2018: "*「順著路徑讓我抓到那隻蠢豬。」\r\n\r\n當心別碰到 TNT 炸藥，不然我的羽毛會滿天飛！"
+      courseC_maze_programming4_2019: "*「順著路徑讓我抓到那隻蠢豬。」\r\n\r\n當心別碰到 TNT 炸藥，不然我的羽毛會滿天飛！"
       courseC_maze_programming5: "*「順著路徑，讓我抓到那頭豬！」\r\n\r\n注意別被 TNT 炸到。"
       courseC_maze_programming5_2018: "*「順著路徑，讓我抓到那頭豬！」\r\n\r\n注意別被 TNT 炸到。"
+      courseC_maze_programming5_2019: "*「順著路徑，讓我抓到那頭豬！」\r\n\r\n注意別被 TNT 炸到。"
       courseC_maze_programming8: "*「保持冷靜，幫我找到那隻壞豬豬」*"
       courseC_maze_programming8_2018: "*「保持冷靜，幫我找到那隻壞豬豬」*"
+      courseC_maze_programming8_2019: "*「保持冷靜，幫我找到那隻壞豬豬」*"
       courseC_maze_programming8_predict1: "*「保持冷靜，幫我找到那隻壞豬豬」*"
       courseC_maze_programming8_predict1_2018: "*「保持冷靜，幫我找到那隻壞豬豬」*"
+      courseC_maze_programming8_predict1_2019: "*「保持冷靜，幫我找到那隻壞豬豬」*"
       courseC_maze_programming9: "*「現在，幫我偷襲這隻豬，不管用什麼辦法，你想得到的都行！」*"
       courseC_maze_programming9_2018: "*「現在，幫我偷襲這隻豬，不管用什麼辦法，你想得到的都行！」*"
+      courseC_maze_programming9_2019: "*「現在，幫我偷襲這隻豬，不管用什麼辦法，你想得到的都行！」*"
       courseD_artist_functions8: "**挑戰：**盡可能做出你想要的函式，用函式來繪製邊長為 50 像素的正方形。"
       courseD_artist_nestedLoops9_predict1: "**挑戰：** 想想看要怎麼畫出像這樣的圖案？ \r\n\r\n- 兩個形狀的邊長都是
         50 像素"
       courseD_artist_nestedLoops9_predict1_2018: "**挑戰：** 想想看要怎麼畫出像這樣的圖案？ \r\n\r\n-
+        兩個形狀的邊長都是 50 像素"
+      courseD_artist_nestedLoops9_predict1_2019: "**挑戰：** 想想看要怎麼畫出像這樣的圖案？ \r\n\r\n-
         兩個形狀的邊長都是 50 像素"
       courseD_artist_ramp11: "太好了，現在我們用小藝術家畫出一個正方形！這些方塊有些不同，但是概念是一樣的。\r\n<hr/>\r\n每個正方形的邊長是
         200 像素，每個角是 90 度。"
@@ -1169,8 +1239,10 @@ zh-TW:
       courseD_bee_conditionals1: "*「這雲擋住了我的視線 ！」* \r\n\r\n檢查看看雲下面藏了什麼，如果是花，就把花蜜採集起來。"
       courseD_bee_conditionals1_predict1: "*「這雲擋住了我的視線 ！」* \r\n\r\n檢查看看雲下面藏了什麼，如果是花，就把花蜜採集起來。"
       courseD_bee_conditionals1_predict1_2018: "*「這雲擋住了我的視線 ！」* \r\n\r\n檢查看看雲下面藏了什麼，如果是花，就把花蜜採集起來。"
+      courseD_bee_conditionals1_predict1_2019: "*「這雲擋住了我的視線 ！」* \r\n\r\n檢查看看雲下面藏了什麼，如果是花，就把花蜜採集起來。"
       courseD_bee_conditionals7_predict2: "有時雲裡面有花朵，有時雲裡藏著蜂窩！\r\n\r\n使用`如果…否則`積木，如果是花朵就收集花蜜。\n否則，就釀造蜂蜜（因為它是蜂窩）。"
       courseD_bee_conditionals7_predict2_2018: "有時雲裡面有花朵，有時雲裡藏著蜂窩！\r\n\r\n使用`如果…否則`積木，如果是花朵就收集花蜜。\n否則，就釀造蜂蜜（因為它是蜂窩）。"
+      courseD_bee_conditionals7_predict2_2019: "有時雲裡面有花朵，有時雲裡藏著蜂窩！\r\n\r\n使用`如果…否則`積木，如果是花朵就收集花蜜。\n否則，就釀造蜂蜜（因為它是蜂窩）。"
       courseD_bee_nestedLoops2: 這次，幫蜜蜂收集到所有花蜜，用的積木愈少愈好。
       courseD_bee_nestedLoops2_2018: 這次，幫蜜蜂收集到所有花蜜，用的積木愈少愈好。
       courseD_bee_nestedLoops2_2019: 這次，幫蜜蜂收集到所有花蜜，用的積木愈少愈好。
@@ -1190,23 +1262,31 @@ zh-TW:
       courseD_collector_ramp9: 有更多寶藏了，你可以幫 Laurel 收集到所有的寶藏嗎？
       courseD_farmer_condLoops7: "**挑戰：**收集所有的玉米和生菜，然後收成南瓜。"
       courseD_farmer_condLoops7_2018: "**挑戰：**收集所有的玉米和生菜，然後收成南瓜。"
+      courseD_farmer_condLoops7_2019: "**挑戰：**收集所有的玉米和生菜，然後收成南瓜。"
       courseD_farmer_condLoops8: 收集所有的玉米和生菜，然後收成南瓜。
       courseD_farmer_condLoops8_2018: 收集所有的玉米和生菜，然後收成南瓜。
+      courseD_farmer_condLoops8_2019: 收集所有的玉米和生菜，然後收成南瓜。
       courseD_farmer_condLoops9: 收集所有的玉米和生菜，然後收成南瓜。
       courseD_farmer_condLoops9_2018: 收集所有的玉米和生菜，然後收成南瓜。
+      courseD_farmer_condLoops9_2019: 收集所有的玉米和生菜，然後收成南瓜。
       courseD_farmer_condLoops9_predict1: 收集所有的玉米和生菜，然後收成南瓜。
       courseD_farmer_condLoops9_predict1_2018: 收集所有的玉米和生菜，然後收成南瓜。
+      courseD_farmer_condLoops9_predict1_2019: 收集所有的玉米和生菜，然後收成南瓜。
       courseD_farmer_conditionals1: "*「嗨，我是個農夫。我需要你幫我將農地整平，好讓我可以耕作！」*\r\n\r\n移到土堆那兒，使用「移除」積木來把土堆刪掉。"
       courseD_farmer_conditionals4: "*「我不知道這堆土裡有多少污泥！」*\r\n\r\n使用`當…時`迴圈，幫助農夫移除全部的土堆。"
       courseD_farmer_conditionals8: "**挑戰：**填滿所有的洞，使用的積木愈少愈好。 "
       courseD_farmer_while1: "*「嗨，我是個農夫。我需要你幫我將農地整平，好讓我可以耕作！」*\r\n\r\n移到土堆那兒，使用「移除」積木來把土堆刪掉。"
       courseD_farmer_while1_2018: "*「嗨，我是個農夫。我需要你幫我將農地整平，好讓我可以耕作！」*\r\n\r\n移到土堆那兒，使用「移除」積木來把土堆刪掉。"
+      courseD_farmer_while1_2019: "*「嗨，我是個農夫。我需要你幫我將農地整平，好讓我可以耕作！」*\r\n\r\n移到土堆那兒，使用「移除」積木來把土堆刪掉。"
       courseD_farmer_while4: "*「我不知道這堆土裡有多少污泥！」*\r\n\r\n使用`當…時`迴圈，幫助農夫移除全部的土堆。"
       courseD_farmer_while4_2018: "*「我不知道這堆土裡有多少污泥！」*\r\n\r\n使用`當…時`迴圈，幫助農夫移除全部的土堆。"
+      courseD_farmer_while4_2019: "*「我不知道這堆土裡有多少污泥！」*\r\n\r\n使用`當…時`迴圈，幫助農夫移除全部的土堆。"
       courseD_farmer_while4_predict1: "*「我不知道這堆土裡有多少污泥！」*\r\n\r\n使用`當…時`迴圈，幫助農夫移除全部的土堆。"
       courseD_farmer_while4_predict1_2018: "*「我不知道這堆土裡有多少污泥！」*\r\n\r\n使用`當…時`迴圈，幫助農夫移除全部的土堆。"
+      courseD_farmer_while4_predict1_2019: "*「我不知道這堆土裡有多少污泥！」*\r\n\r\n使用`當…時`迴圈，幫助農夫移除全部的土堆。"
       courseD_farmer_while8: "**挑戰：**填滿所有的洞，使用的積木愈少愈好。 "
       courseD_farmer_while8_2018: "**挑戰：**填滿所有的洞，使用的積木愈少愈好。 "
+      courseD_farmer_while8_2019: "**挑戰：**填滿所有的洞，使用的積木愈少愈好。 "
       courseD_maze_nestedLoops4: 帶我到那朵向日葵的位置!
       courseD_maze_nestedLoops4_2018: 帶我到那朵向日葵的位置!
       courseD_maze_nestedLoops4_2019: 帶我到那朵向日葵的位置!
@@ -1229,16 +1309,21 @@ zh-TW:
       courseD_maze_ramp7: "*「我真的要憤怒了！」*\r\n\r\n\r\n**挑戰：**\n使用你學到的方法來讓我抓到這頭豬！"
       courseD_maze_until10: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until10_2018: 幫助殭屍，讓牠吃到向日葵。
+      courseD_maze_until10_2019: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until10_predict2: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until10_predict2_2018: 幫助殭屍，讓牠吃到向日葵。
+      courseD_maze_until10_predict2_2019: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until6: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until6_2018: 幫助殭屍，讓牠吃到向日葵。
+      courseD_maze_until6_2019: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until7: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until7_2018: 幫助殭屍，讓牠吃到向日葵。
+      courseD_maze_until7_2019: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until8: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until8_2018: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until9: "**挑戰：**避開食僵花，並幫助僵屍移動到向日葵那兒。"
       courseD_maze_until9_2018: "**挑戰：**避開食僵花，並幫助僵屍移動到向日葵那兒。"
+      courseD_maze_until9_2019: "**挑戰：**避開食僵花，並幫助僵屍移動到向日葵那兒。"
       courseD_scrat_ramp1: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
       courseD_scrat_ramp1_2018: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
       courseD_scrat_ramp2: 從工具箱中拖曳出另一個`移動-向前`積木，把它放在`當運行時`積木下，就可以完成編碼。
@@ -1246,6 +1331,8 @@ zh-TW:
       courseE_artist_concept_challenge1: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\r\n\r\n挑戰時間到了！
         \ \r\n\r\n這裡有個圖案，只用了你見到的積木做出來的。想一想，要怎麼重建它？你可以邊做邊試，錯了也沒關係。我們不要求你一次就做對。\r\n\r\n這些重複的圖形和上個關卡的圖案幾乎相同，除了第一個迴圈裡用的長度比較小以外。 "
       courseE_artist_concept_challenge1_2018: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\r\n\r\n挑戰時間到了！
+        \ \r\n\r\n這裡有個圖案，只用了你見到的積木做出來的。想一想，要怎麼重建它？你可以邊做邊試，錯了也沒關係。我們不要求你一次就做對。\r\n\r\n這些重複的圖形和上個關卡的圖案幾乎相同，除了第一個迴圈裡用的長度比較小以外。 "
+      courseE_artist_concept_challenge1_2019: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\r\n\r\n挑戰時間到了！
         \ \r\n\r\n這裡有個圖案，只用了你見到的積木做出來的。想一想，要怎麼重建它？你可以邊做邊試，錯了也沒關係。我們不要求你一次就做對。\r\n\r\n這些重複的圖形和上個關卡的圖案幾乎相同，除了第一個迴圈裡用的長度比較小以外。 "
       courseE_artist_ramp11: "太好了，現在我們用小藝術家畫出一個正方形！這些方塊有些不同，但是概念是一樣的。\r\n<hr/>\r\n每個正方形的邊長是
         200 像素，每個角是 90 度。"
@@ -1423,6 +1510,7 @@ zh-TW:
       grade2_collector_9a: "**挑戰：**拿到所有的硬幣。"
       grade2_collector_A: 幫 Laurel 收集到所有寶石。
       grade2_collector_A_2018: 幫 Laurel 收集到所有寶石。
+      grade2_collector_A_2019: 幫 Laurel 收集到所有寶石。
       grade2_collector_pre1: "*「哈囉，我是 Laurel。我正在狗狗公園找寶石！」*  \n\n利用這些程式積木，看看你能不能幫 Laurel
         收集到寶石。"
       grade2_link_RunMarco_partner: |-

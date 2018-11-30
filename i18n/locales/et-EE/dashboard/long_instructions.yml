@@ -202,6 +202,7 @@ et:
         
         See program kasutab muusika "bassi" -heli (madalad noodid), et kontrollida tantsija pikkust. Kas saad panna ka teise tantsija muusikale vastavalt muutuma?
       Dance_Party_11.5: "Vaata seda plokki:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"PART\"</title>\n    <title name=\"LAYOUT\">\"ring\"</title>\n  </block></xml>\n  \nNüüd saad korraga luua terve hulga tantsijaid!\n\nProovi kasutada mõnda plokki \"kõik pardid\", et kirjutada kood, mis paneb kõik pardid koos tantsima."
+      Dance_Party_11.5_test: "Vaata seda plokki:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"PART\"</title>\n    <title name=\"LAYOUT\">\"ring\"</title>\n  </block></xml>\n  \nNüüd saad korraga luua terve hulga tantsijaid!\n\nProovi kasutada mõnda plokki \"kõik pardid\", et kirjutada kood, mis paneb kõik pardid koos tantsima."
       Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> plokk laseb koodi käivitada siis, kui vajutatakse ülesse suunatud noolt. \n\nVõid muuta tontsuliigutust, muuta tantsija omadusi või teha korra kiire liigutuse. Ole loominguline ja otsi uusi plokke!"
       Dance_Party_11b: |-
         On aeg tantsuvõistluseks! Kass teeb dabi kui vajutad vasakut nooleklahvi. Pane Robot üks kord "kükitama", kui vajutatakse paremat nooleklahvi ja tegema üks "kõrge plaks", kui vajutatakse ülemist nooleklahvi.
@@ -348,6 +349,7 @@ et:
       New Minecraft Hero Project: "**Vaba mängimine: ** Nüüd on kõik sinu kätes! Kasuta Agendi koodi maailma avastamiseks."
       Overworld Move to Sheep: Lisa teine käsk „liigu edasi“, et jõuda lambani.
       Overworld Move to Sheep_2018: Lisa teine käsk „liigu edasi“, et jõuda lambani.
+      Overworld Move to Sheep_2019: Lisa teine käsk „liigu edasi“, et jõuda lambani.
       Testing Quantum Farmer: "Uskumatu, ma leidsin tõeliselt sügava augu!\\r\\rMa ei tea, kui mitu labidatäit mulda selle täitmiseks vaja on. \\r Kas sa saaksid kirjutada programmi, millega täidetakse auk, kuni maapind on tasane? Vihje: proovi see kord kasutada tsüklit „kuni“?  "
       course4_artist_fwp_challenge1: Proovi see programm käivitada, tee muudatused ja vaata, mis juhtub. Kas saad aru, kuidas see toimib? (Või kustuta see ja lisa selle asemel hoopis midagi muud)
       courseD_bee_nestedLoops5: 'Kogu kõikidest lilledest kogu nektar kokku ja tee meekärje juures mett.\r\r Kasuta pesaga tsüklit. '

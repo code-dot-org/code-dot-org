@@ -28,16 +28,16 @@ ko:
       Start: '시작:'
       Locations: 위치
       Dancing: 춤을 추고 있는
-      Dancers: 댄스를 하는 사람들
-      Groups: 조
+      Dancers: 댄서
+      Groups: 그룹
       Sprite: 스프라이트
       Brush: 붓
       Make Sprite: 스프라이트 만들기
       Movement: 움직임
       Booleans: 불(참 또는 거짓)값들
       Functional: 함수
-      Sprite Properties: 스프라이트 속성
       While Events: 이벤트가 일어나는 동안
+      Sprite Properties: 스프라이트 속성
       test: 검사
       test2: 두번째 테스트
       Name: 이름

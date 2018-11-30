@@ -345,6 +345,11 @@ et:
         \   <title name=\"LAYOUT\">\"ring\"</title>\n  </block></xml>\n  \nNüüd saad
         korraga luua terve hulga tantsijaid!\n\nProovi kasutada mõnda plokki \"kõik
         pardid\", et kirjutada kood, mis paneb kõik pardid koos tantsima."
+      Dance_Party_11.5_test: "Vaata seda plokki:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+        \   <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"PART\"</title>\n
+        \   <title name=\"LAYOUT\">\"ring\"</title>\n  </block></xml>\n  \nNüüd saad
+        korraga luua terve hulga tantsijaid!\n\nProovi kasutada mõnda plokki \"kõik
+        pardid\", et kirjutada kood, mis paneb kõik pardid koos tantsima."
       Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> plokk
         laseb koodi käivitada siis, kui vajutatakse ülesse suunatud noolt. \n\nVõid
         muuta tontsuliigutust, muuta tantsija omadusi või teha korra kiire liigutuse.
@@ -639,6 +644,7 @@ et:
         Agendi koodi maailma avastamiseks."
       Overworld Move to Sheep: Lisa teine käsk „liigu edasi“, et jõuda lambani.
       Overworld Move to Sheep_2018: Lisa teine käsk „liigu edasi“, et jõuda lambani.
+      Overworld Move to Sheep_2019: Lisa teine käsk „liigu edasi“, et jõuda lambani.
       Testing Quantum Farmer: "Uskumatu, ma leidsin tõeliselt sügava augu!\r\rMa ei
         tea, kui mitu labidatäit mulda selle täitmiseks vaja on. \r Kas sa saaksid
         kirjutada programmi, millega täidetakse auk, kuni maapind on tasane? Vihje:

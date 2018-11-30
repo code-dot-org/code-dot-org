@@ -773,9 +773,11 @@ fr:
       Dance_Party_08: Pouvez-vous donner la même taille aux deux danseurs de sauvegarde ?
       Dance_Party_09: Utilisez le bloc « définir la nuance » pour changer la couleur d'un danseur.
       Dance_Party_10: Demandez également à l’autre danseur de répondre à la musique à l’aide du bloc « commencer à suivre ».
-      Dance_Party_11.5: Utiliser les blocs « tous les canards » pour faire danser les canards ensemble.
+      Dance_Party_11.5_test: Utiliser les blocs « tous les canards » pour faire danser les canards ensemble.
       Dance_Party_11: Le bloc « lorsqu’on appuie vers le haut » vous permet d'exécuter un programme lorsque vous appuyez sur la flèche vers le haut. Essayez de faire faire un mouvement rapide au danseur lorsque vous appuyez vers le haut.
+      Dance_Party_11_5: Utiliser les blocs « tous les canards » pour faire danser les canards ensemble.
       Dance_Party_11b: Faites le Robot faire le « drop » une fois lorsque vous appuyez sur la touche fléchée droite et faire le « floss » une fois lorsque vous appuyez sur la touche fléchée haut. Réalisez le « drop-floss » aussi vite que possible !
+      Dance_Party_12: Prends ton rythme ! Créez votre propre danse à partager avec vos amis.
       Food Fight!: "Nous avons ajouté une dernière fonction pour toi.\n\nUtilise une instruction « Si » pour programmer ton jeu et qu’il appelle la fonction «level_up» uniquement lorsque «player_score» devient supérieur à un certain nombre.\n\nPar exemple : «player_score» > 6\n\nJoue le jeu et franchis le niveau 4 pour passer au puzzle suivant."
       FoodFight: C'est un exemple de jeu que tu peux créer dans le Labo de jeux.
       FoodFight_2018: C'est un exemple de jeu que tu peux créer dans le Labo de jeux.
@@ -1085,25 +1087,35 @@ fr:
       New Sports Project: 'Créez votre propre jeu! Vous êtes responsable ici: vous pouvez changer toutes les règles, mélanger et faire correspondre les sports, soyez créatifs! Lorsque vous avez terminé, cliquez sur Terminer pour laisser les amis essayer votre jeu sur leurs téléphones.'
       Overworld Avoid Monsters: Courir dans une plante grimpante est une mauvaise idée. Faufile-toi entre les plantes grimpantes avec précaution et mets-toi à l’abri dans ta maison.
       Overworld Avoid Monsters_2018: Courir dans une plante grimpante est une mauvaise idée. Faufile-toi entre les plantes grimpantes avec précaution et mets-toi à l’abri dans ta maison.
+      Overworld Avoid Monsters_2019: Courir dans une plante grimpante est une mauvaise idée. Faufile-toi entre les plantes grimpantes avec précaution et mets-toi à l’abri dans ta maison.
       Overworld Chop Tree - allthethings: Le bois est une ressource très importante. Beaucoup de choses sont faites à partir du bois. Marche jusqu’à l'arbre et utilise la commande « Détruire bloc » pour l’abattre.
       Overworld Chop Tree: Le bois est une ressource très importante. Beaucoup de choses sont faites à partir du bois. Marche jusqu’à l'arbre et utilise la commande « Détruire bloc » pour l’abattre.
       Overworld Chop Tree_2018: Le bois est une ressource très importante. Beaucoup de choses sont faites à partir du bois. Marche jusqu’à l'arbre et utilise la commande « Détruire bloc » pour l’abattre.
+      Overworld Chop Tree_2019: Le bois est une ressource très importante. Beaucoup de choses sont faites à partir du bois. Marche jusqu’à l'arbre et utilise la commande « Détruire bloc » pour l’abattre.
       Overworld Chop Trees: Nous devons construire une maison avant que le soleil se couche. Les maisons demandent beaucoup de bois. Abats les 3 arbres.
       Overworld Chop Trees_2018: Nous devons construire une maison avant que le soleil se couche. Les maisons demandent beaucoup de bois. Abats les 3 arbres.
+      Overworld Chop Trees_2019: Nous devons construire une maison avant que le soleil se couche. Les maisons demandent beaucoup de bois. Abats les 3 arbres.
       Overworld Free Play 20x20: Félicitations ! Tu as terminé tous nos puzzles ! Maintenant, extrais, construis et crée quelque chose d'unique à l'aide de tout ce que tu as appris jusqu'ici.
       Overworld Free Play 20x20_2018: Félicitations ! Tu as terminé tous nos puzzles ! Maintenant, extrais, construis et crée quelque chose d'unique à l'aide de tout ce que tu as appris jusqu'ici.
+      Overworld Free Play 20x20_2019: Félicitations ! Tu as terminé tous nos puzzles ! Maintenant, extrais, construis et crée quelque chose d'unique à l'aide de tout ce que tu as appris jusqu'ici.
       Overworld House Frame Chosen: Construis le reste de ta maison avec les matériaux que tu veux. La commande « Répéter » sera très utile.
       Overworld House Frame Chosen_2018: Construis le reste de ta maison avec les matériaux que tu veux. La commande « Répéter » sera très utile.
+      Overworld House Frame Chosen_2019: Construis le reste de ta maison avec les matériaux que tu veux. La commande « Répéter » sera très utile.
       Overworld Move to Sheep: Ajoute une deuxième commande « avancer plus » pour atteindre le mouton.
       Overworld Move to Sheep_2018: Ajoute une deuxième commande « avancer plus » pour atteindre le mouton.
+      Overworld Move to Sheep_2019: Ajoute une deuxième commande « avancer plus » pour atteindre le mouton.
       Overworld Place Wall: Chaque maison commence par un mur. Construis la première partie de ta maison en mettant les commandes « Poser » et « Avancer » à l'intérieur de la boucle « Répéter ».
       Overworld Place Wall_2018: Chaque maison commence par un mur. Construis la première partie de ta maison en mettant les commandes « Poser » et « Avancer » à l'intérieur de la boucle « Répéter ».
+      Overworld Place Wall_2019: Chaque maison commence par un mur. Construis la première partie de ta maison en mettant les commandes « Poser » et « Avancer » à l'intérieur de la boucle « Répéter ».
       Overworld Plant Crops: Il est toujours utile de prévoir à l'avance. Plantez des cultures sur les deux rives pour ne pas manquer de nourriture par la suite.
       Overworld Plant Crops_2018: Il est toujours utile de prévoir à l'avance. Plantez des cultures sur les deux rives pour ne pas manquer de nourriture par la suite.
+      Overworld Plant Crops_2019: Il est toujours utile de prévoir à l'avance. Plantez des cultures sur les deux rives pour ne pas manquer de nourriture par la suite.
       Overworld Powered Minecart: Beau travail ! Tu as rassemblé beaucoup de ressources et construit une maison modeste. Maintenant, pose le rail du bord de la carte jusqu’à la porte de ta maison.
       Overworld Powered Minecart_2018: Beau travail ! Tu as rassemblé beaucoup de ressources et construit une maison modeste. Maintenant, pose le rail du bord de la carte jusqu’à la porte de ta maison.
+      Overworld Powered Minecart_2019: Beau travail ! Tu as rassemblé beaucoup de ressources et construit une maison modeste. Maintenant, pose le rail du bord de la carte jusqu’à la porte de ta maison.
       Overworld Shear Sheep: Il est l’heure de tondre les moutons ! Utilise la commande «Tondre» pour recueillir la laine des deux moutons.
       Overworld Shear Sheep_2018: Il est l’heure de tondre les moutons ! Utilise la commande «Tondre» pour recueillir la laine des deux moutons.
+      Overworld Shear Sheep_2019: Il est l’heure de tondre les moutons ! Utilise la commande «Tondre» pour recueillir la laine des deux moutons.
       PDK5 Conditionals 1: Les fleurs pourpres peuvent avoir 1 ou 0 nectar, mais tu ne sais pas lesquelles en ont! Veille à ne pas butiner une fleur pourpre si elle n'a pas de nectar. Vérifier si le nectar est égal à 1 à l'aide du bloc «Si».
       PDK5 Functions 2: Les fonctions te permettent de définir de nouveaux blocs ! Nous avons déplacé les blocs pour dessiner un carré dans une fonction appelée «Dessiner un carré». Peut-tu utiliser la fonction «Dessiner un carré» pour créer les lunettes ? Les carrés sont à 75 pixels les uns des autres.
       PS copy 2-3 Bee Conditionals 5: "Les fleurs pourpres peuvent avoir 1 ou 0 nectar, mais tu ne sais pas lesquelles en ont! Veille à ne pas butiner une fleur pourpre si elle n'a pas de nectar. Vérifier si le nectar est égal à 1 à l'aide du bloc «Si»."
@@ -1139,12 +1151,16 @@ fr:
       U4L02 - Objects - Template1_2018: Modèle
       Underground Avoiding Lava: La lave se cache sous certains de ces blocs, que tu devras couvrir avant d'avancer. Une commande « Si » serait très utile ici. Ajoute une commande «Avancer» au bon endroit pour extraire ces blocs.
       Underground Avoiding Lava_2018: La lave se cache sous certains de ces blocs, que tu devras couvrir avant d'avancer. Une commande « Si » serait très utile ici. Ajoute une commande «Avancer» au bon endroit pour extraire ces blocs.
+      Underground Avoiding Lava_2019: La lave se cache sous certains de ces blocs, que tu devras couvrir avant d'avancer. Une commande « Si » serait très utile ici. Ajoute une commande «Avancer» au bon endroit pour extraire ces blocs.
       Underground If Statements: Maintenant, les choses deviennent difficiles. Extrais 3 pierres rouges mais ne tombe pas dans la lave. Utilise une commande « Si » pour placer des pavés sur toute la lave que tu découvres.
       Underground If Statements_2018: Maintenant, les choses deviennent difficiles. Extrais 3 pierres rouges mais ne tombe pas dans la lave. Utilise une commande « Si » pour placer des pavés sur toute la lave que tu découvres.
+      Underground If Statements_2019: Maintenant, les choses deviennent difficiles. Extrais 3 pierres rouges mais ne tombe pas dans la lave. Utilise une commande « Si » pour placer des pavés sur toute la lave que tu découvres.
       Underground Iron: Marcher dans la lave en fusion est une mauvaise idée. Place des pavés pour créer un pont, puis extrais au moins deux blocs de fer.
       Underground Iron_2018: Marcher dans la lave en fusion est une mauvaise idée. Place des pavés pour créer un pont, puis extrais au moins deux blocs de fer.
+      Underground Iron_2019: Marcher dans la lave en fusion est une mauvaise idée. Place des pavés pour créer un pont, puis extrais au moins deux blocs de fer.
       Underground Mining Coal: Les ressources les plus précieuses sont en sous-sol, mais il fait sombre là-dessous. Placez au moins 2 torches et minez au moins 2 blocs de charbon.
       Underground Mining Coal_2018: Les ressources les plus précieuses sont en sous-sol, mais il fait sombre là-dessous. Placez au moins 2 torches et minez au moins 2 blocs de charbon.
+      Underground Mining Coal_2019: Les ressources les plus précieuses sont en sous-sol, mais il fait sombre là-dessous. Placez au moins 2 torches et minez au moins 2 blocs de charbon.
       aE1: "Tu as choisi de faire une serviette carrée ! \\r\n\\r\nPour terminer, trace un carré de 20 pixels de côté. "
       aE2: Si tu places ta boucle de carré à l'intérieur d'une autre boucle, on appelle ça une boucle imbriquée. Que faut-il ajouter à ta boucle externe pour s'assurer que les 14 serviettes sont bien alignées côte à côte ?
       aE3: "Nous devons avoir une nappe!  \\r\n\\r\nPrenez votre rangée de 14 serviettes et cousez-les ensemble grâce à une autre **boucle externe** pour fabriquer une nappe."
@@ -1261,32 +1277,46 @@ fr:
       courseC_flappy_events1: Attache le bloc `faire une quantité normale de battements d'ailes` sous l'évènement `lors d'un clic`, et appuie sur "Démarrer". Clique ou tape sur l'espace de jeu pour déplacer Flappy vers la cible.
       courseC_flappy_events10: 'Créé ton propre jeu de Flappy! '
       courseC_flappy_events10_2018: 'Créé ton propre jeu de Flappy! '
+      courseC_flappy_events10_2019: 'Créé ton propre jeu de Flappy! '
       courseC_flappy_events1_2018: Attache le bloc `faire une quantité normale de battements d'ailes` sous l'évènement `lors d'un clic`, et appuie sur "Démarrer". Clique ou tape sur l'espace de jeu pour déplacer Flappy vers la cible.
+      courseC_flappy_events1_2019: Attache le bloc `faire une quantité normale de battements d'ailes` sous l'évènement `lors d'un clic`, et appuie sur "Démarrer". Clique ou tape sur l'espace de jeu pour déplacer Flappy vers la cible.
       courseC_flappy_events2: Essaie d'ajouter un bloc qui définit la vitesse du niveau quand on appuie sur le bouton "Démarrer". Joue avec le jeu et bat des ailes jusqu'à la cible pour continuer.
       courseC_flappy_events2_2018: Essaie d'ajouter un bloc qui définit la vitesse du niveau quand on appuie sur le bouton "Démarrer". Joue avec le jeu et bat des ailes jusqu'à la cible pour continuer.
+      courseC_flappy_events2_2019: Essaie d'ajouter un bloc qui définit la vitesse du niveau quand on appuie sur le bouton "Démarrer". Joue avec le jeu et bat des ailes jusqu'à la cible pour continuer.
       courseC_flappy_events3: Attache le bloc `terminer le jeu` à l'évènement `au contact du sol`. Joue et fait tomber l'oiseau sur le sol pour continuer.
       courseC_flappy_events3_2018: Attache le bloc `terminer le jeu` à l'évènement `au contact du sol`. Joue et fait tomber l'oiseau sur le sol pour continuer.
+      courseC_flappy_events3_2019: Attache le bloc `terminer le jeu` à l'évènement `au contact du sol`. Joue et fait tomber l'oiseau sur le sol pour continuer.
       courseC_flappy_events4: Attache un bloc à l'évènement `au contact d'un obstacle` pour que le jeu se termine lorsque Flappy s'écrase dans les premiers tuyaux.
       courseC_flappy_events4_2018: Attache un bloc à l'évènement `au contact d'un obstacle` pour que le jeu se termine lorsque Flappy s'écrase dans les premiers tuyaux.
+      courseC_flappy_events4_2019: Attache un bloc à l'évènement `au contact d'un obstacle` pour que le jeu se termine lorsque Flappy s'écrase dans les premiers tuyaux.
       courseC_flappy_events5: Ajoute un bloc à l'évènement `au passage d'un obstacle`, appuie sur "Démarrer" pour marquer un point en faisant passer Flappy à travers les premiers tuyaux.
       courseC_flappy_events5_2018: Ajoute un bloc à l'évènement `au passage d'un obstacle`, appuie sur "Démarrer" pour marquer un point en faisant passer Flappy à travers les premiers tuyaux.
+      courseC_flappy_events5_2019: Ajoute un bloc à l'évènement `au passage d'un obstacle`, appuie sur "Démarrer" pour marquer un point en faisant passer Flappy à travers les premiers tuyaux.
       courseC_flappy_events6: Regarde si tu peux toujours marquer un point en changeant l'énergie que Flappy met dans ses battements d'ailes à chaque fois que tu cliques.
       courseC_flappy_events6_2018: Regarde si tu peux toujours marquer un point en changeant l'énergie que Flappy met dans ses battements d'ailes à chaque fois que tu cliques.
+      courseC_flappy_events6_2019: Regarde si tu peux toujours marquer un point en changeant l'énergie que Flappy met dans ses battements d'ailes à chaque fois que tu cliques.
       courseC_flappy_events7: Ensuite, essaie de changer l'arrière-plan en attachant un autre bloc à l'évènement `quand l'exécution commence`.
       courseC_flappy_events7_2018: Ensuite, essaie de changer l'arrière-plan en attachant un autre bloc à l'évènement `quand l'exécution commence`.
+      courseC_flappy_events7_2019: Ensuite, essaie de changer l'arrière-plan en attachant un autre bloc à l'évènement `quand l'exécution commence`.
       courseC_flappy_events8: Essaie de changer l'arrière-plan de manière aléatoire lorsque qu'un autre évènement se produit... par exemple, au passage d'un obstacle.
       courseC_flappy_events8_2018: Essaie de changer l'arrière-plan de manière aléatoire lorsque qu'un autre évènement se produit... par exemple, au passage d'un obstacle.
+      courseC_flappy_events8_2019: Essaie de changer l'arrière-plan de manière aléatoire lorsque qu'un autre évènement se produit... par exemple, au passage d'un obstacle.
       courseC_flappy_events9: Pour varier un peu, au lieu de terminer le jeu lorsque Flappy rencontre un obstacle, essaie de remettre le score à 0.
       courseC_flappy_events9_2018: Pour varier un peu, au lieu de terminer le jeu lorsque Flappy rencontre un obstacle, essaie de remettre le score à 0.
+      courseC_flappy_events9_2019: Pour varier un peu, au lieu de terminer le jeu lorsque Flappy rencontre un obstacle, essaie de remettre le score à 0.
       courseC_maze_debugging10: Débogue ce niveau en réorganisant et en changeant des blocs afin de m'amener au cochon !
       courseD_artist_binary1: "Le binaire est une manière de représenter des informations à l'aide de seulement deux options.  Ici, nous allons utiliser les options « Éteint » (représentée par le numéro 0) et « Allumé » (représentée par le numéro 1).\n\nNous t’avons fourni une grille de « Pixels » que tu peux parcourir pour faire des dessins en tournant sur certains carrés seulement.  Peux-tu faire que l'artiste dessine « 01010101 » en binaire dans la première ligne ?"
       courseD_artist_binary1_2018: "Le binaire est une manière de représenter des informations à l'aide de seulement deux options.  Ici, nous allons utiliser les options « Éteint » (représentée par le numéro 0) et « Allumé » (représentée par le numéro 1).\n\nNous t’avons fourni une grille de « Pixels » que tu peux parcourir pour faire des dessins en tournant sur certains carrés seulement.  Peux-tu faire que l'artiste dessine « 01010101 » en binaire dans la première ligne ?"
+      courseD_artist_binary1_2019: "Le binaire est une manière de représenter des informations à l'aide de seulement deux options.  Ici, nous allons utiliser les options « Éteint » (représentée par le numéro 0) et « Allumé » (représentée par le numéro 1).\n\nNous t’avons fourni une grille de « Pixels » que tu peux parcourir pour faire des dessins en tournant sur certains carrés seulement.  Peux-tu faire que l'artiste dessine « 01010101 » en binaire dans la première ligne ?"
       courseD_artist_binary4: Peux-tu dessiner ce modèle en bouclant une chaîne binaire à trois chiffres ?
       courseD_artist_binary4_2018: Peux-tu dessiner ce modèle en bouclant une chaîne binaire à trois chiffres ?
+      courseD_artist_binary4_2019: Peux-tu dessiner ce modèle en bouclant une chaîne binaire à trois chiffres ?
       courseD_artist_binary6: Quelle chaîne binaire de 6 chiffres répétée 11 fois dessinera cette image ?
       courseD_artist_binary6_2018: Quelle chaîne binaire de 6 chiffres répétée 11 fois dessinera cette image ?
+      courseD_artist_binary6_2019: Quelle chaîne binaire de 6 chiffres répétée 11 fois dessinera cette image ?
       courseD_artist_binary7: Quelle est la chaîne binaire la plus courte que tu peux répéter pour dessiner cette image ?
       courseD_artist_binary7_2018: Quelle est la chaîne binaire la plus courte que tu peux répéter pour dessiner cette image ?
+      courseD_artist_binary7_2019: Quelle est la chaîne binaire la plus courte que tu peux répéter pour dessiner cette image ?
       courseD_autorun_binary4_2019: Peux-tu dessiner ce modèle en bouclant une chaîne binaire à trois chiffres ?
       courseD_autorun_binary6_2019: Quelle chaîne binaire de 6 chiffres répétée 11 fois dessinera cette image ?
       courseD_autorun_binary7_2019: Quelle est la chaîne binaire la plus courte que tu peux répéter pour dessiner cette image ?
@@ -1319,6 +1349,7 @@ fr:
       courseE_artist_functions1_2018: "Salut. Moi artiste zombie. Moi aime dessiner ! Toi aider moi à dessiner les verres carrés. Astuce : le pont entre les verres fait 25 pixels de moins que la longueur du carré."
       courseE_bee_concept1: Recueille tout le nectar de chaque fleur. Utilise une boucle imbriquée.
       courseE_bee_concept1_2018: Recueille tout le nectar de chaque fleur. Utilise une boucle imbriquée.
+      courseE_bee_concept1_2019: Recueille tout le nectar de chaque fleur. Utilise une boucle imbriquée.
       courseE_bee_functions1: Récolte tout le nectar de chaque fleur.
       courseE_bee_functions1_2018: Récolte tout le nectar de chaque fleur.
       courseE_bee_functions3: Les fonctions sont des blocs de code qui effectuent une tâche. Utilise la fonction « Obtenir 5 » pour obtenir 5 nectars à la fois. Veille également à utiliser une boucle pour obtenir un compte de bloc idéal.

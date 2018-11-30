@@ -264,6 +264,7 @@ sv:
       playlab: 'Spel-labb'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
+      dance: 'Dansparty'
     popup:
       progress_for_user: "%{name}s framsteg"
       progress: 'Dina framsteg'
@@ -468,6 +469,8 @@ sv:
       body_short: "Utveckla en app, bygg den med blocks eller JavaScript. När du har fått den att fungerar som du tänkte kan du inom några sekunder dela med dig av den till andra."
       audience: 'Ålder 13+'
       cta: 'Läs mer'
+    dance:
+      title: 'Dansparty'
     hoc:
       title: 'Klassisk labyrint'
       body: 'Lär dig grunderna i programmering. Miljoner har provat denna.'
@@ -507,6 +510,7 @@ sv:
       title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Minecraft är tillbaka för Hour of Code med en helt ny aktivitet! Res genom Minecraft via koden."
     sports:
       title: "Sport"
     text-compression:
@@ -750,6 +754,7 @@ sv:
   locked_stage: 'Innehållet i detta steg syns inte eftersom det för närvarande är låst. Din lärare kan låsa upp steget när det är dags att arbeta på det eller för att granska dina svar.'
   hidden_stage: "Din lärare förväntar sig inte att du är på denna lektion. Fråga gärna din lärare vilka lektion som du bör vara på."
   return_course_overview: 'Gå till avsnittets översikt'
+  view_teacher_guide: 'Visa lärarhandledning'
   pd:
     form_labels:
       email: 'E-post'

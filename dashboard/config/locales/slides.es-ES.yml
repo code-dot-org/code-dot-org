@@ -3111,24 +3111,59 @@ es:
     applab_intro_share:
       1:
         image: notes/applab_intro_share_1.png
+        text: Ahora que has aprendido los fundamentos de App Lab como añadir botones,
+          sonido, imágenes, texto y nuevas pantallas puedes crear todo tipo de apps.
       2:
         image: notes/applab_intro_share_2.png
+        text: En el siguiente nivel encontrarás la app que acabas de construir. Con
+          un poco de creatividad puedes convertirla en un test de personalidad para
+          tus amigos.
       3:
         image: notes/applab_intro_share_3.png
+        text: Una vez que hayas terminado con tu app puedes enviarla fácilmente a
+          tu teléfono y ver cómo ha quedado. Simplemente haz clic en "Compartir" e
+          introduce tu número de teléfono aquí.
       4:
         image: notes/applab_intro_share_4.png
+        text: Recibirás un mensaje de texto que te permitirá abrir tu app instantáneamente.
       5:
         image: notes/applab_intro_share_5.png
+        text: También puedes compartir un enlace a tu app en los medios sociales o
+          enviarla a la galería de code.org para que otras personas puedan jugar y
+          compartir.
       6:
         image: notes/applab_intro_share_6.png
+        text: Solo has arañado la superficie de lo que App Lab puede hacer. La aplicación
+          al completo presenta interacciones de usuario más avanzadas, nuevos elementos
+          de pantalla e incluso una base de datos para que puedas construir rápidamente
+          apps con todas las características. En "code.org/applab" podrás encontrar
+          la herramienta completa y montones de ideas si quieres seguir avanzando.
       7:
         image: notes/applab_intro_share_7.png
+        text: Gracias por acompañarnos en el recorrido. Ahora construye y comparte
+          tu primera app. ¡Y no dejes de crear apps con App Lab!
     mc_2017_agent_intro:
       1:
         image: notes/mc_2017_agent_intro_1.png
-      2: 
-      3: 
-      4: 
+        text: 'Stacy: Stampy, Lizzy, Preston - Gracias por venir conmigo. Lo que quiero
+          enseñaros está justo en esta meseta de mesas. ¡Creo que os va a encantar!'
+      2:
+        text: Espera un minuto. ¡Hay un agujero en la pista! (gritando)
+      3:
+        text: "¿Estáis bien todos? Stampy: Ah, ya veo el problema. ¡Mira! Hay un agujero
+          en la pista. Stacy: ¿De verdad, Stampy? Lizzy: Puede que tengamos que agrupar
+          bloques para arreglarlo. Preston: Hagamos una carrera. El primero que vuelva
+          a la cima gana. Stacy: Ok. Preparados, listos, ¡YA! Ok, voy a reunir algunos
+          de estos bloques de terracota. Esperad. Chicos, No puedo 'minar'. Preston:
+          Yo tampoco. Lizzy: Yo tampoco puedo. Stacy: Ok, esto es muy raro. Stampy,
+          ¿puedes minar? Stampy: No puedo. Stampy: Ok, todos tranquilos. Stampy: ¿Está
+          roto el juego? Stacy: Si es así, ¿cómo lo arreglamos? Lizzy: No sé. Stampy:
+          ¿Sabe alguien cómo escribir código Minecraft?"
+      4:
+        text: "(ufff) Preston: ¿Qué es eso? Stampy: Nunca había visto uno de esos
+          antes. Lizzy: ¡Qué adorable! Stacy: ¿Es.. es domesticable? Preston: Vale,
+          ¿qué está pasando? Alguien tiene que volver al mundo real y arreglar esto.
+          Todos: ¡Yo no! Stacy: Yo n.. (suspira). Ok, yo iré."
       5: 
       6: 
       7: 

@@ -1868,6 +1868,8 @@ id:
         perlahan melewati Creeper dan capai keselamatan rumah kamu.
       Overworld Avoid Monsters_2018: Berlari memasuki Creeper bukan ide yang bagus.
         Bergerak perlahan melewati Creeper dan capai keselamatan rumah kamu.
+      Overworld Avoid Monsters_2019: Berlari memasuki Creeper bukan ide yang bagus.
+        Bergerak perlahan melewati Creeper dan capai keselamatan rumah kamu.
       Overworld Chop Tree - allthethings: Kayu adalah sumber daya yang sangat penting.
         Banyak barang terbuat darinya. Pergilah ke pohon dan gunakan perintah "hancurkan
         balok" untuk menebangnya.
@@ -1877,9 +1879,14 @@ id:
       Overworld Chop Tree_2018: Kayu adalah sumber daya yang sangat penting. Banyak
         barang terbuat darinya. Pergilah ke pohon dan gunakan perintah "hancurkan
         balok" untuk menebangnya.
+      Overworld Chop Tree_2019: Kayu adalah sumber daya yang sangat penting. Banyak
+        barang terbuat darinya. Pergilah ke pohon dan gunakan perintah "hancurkan
+        balok" untuk menebangnya.
       Overworld Chop Trees: Kita harus membangun rumah sebelum matahari terbenam.
         Rumah memerlukan sangat banyak kayu. Tebang ke-3 pohon.
       Overworld Chop Trees_2018: Kita harus membangun rumah sebelum matahari terbenam.
+        Rumah memerlukan sangat banyak kayu. Tebang ke-3 pohon.
+      Overworld Chop Trees_2019: Kita harus membangun rumah sebelum matahari terbenam.
         Rumah memerlukan sangat banyak kayu. Tebang ke-3 pohon.
       Overworld Free Play 20x20: Selamat! Kamu telah menyelesaikan semua teka-teki
         kita! Sekarang tambang, bangun, dan buat sesuatu yang unik menggunakan semua
@@ -1887,13 +1894,20 @@ id:
       Overworld Free Play 20x20_2018: Selamat! Kamu telah menyelesaikan semua teka-teki
         kita! Sekarang tambang, bangun, dan buat sesuatu yang unik menggunakan semua
         yang sejauh ini telah kamu pelajari.
+      Overworld Free Play 20x20_2019: Selamat! Kamu telah menyelesaikan semua teka-teki
+        kita! Sekarang tambang, bangun, dan buat sesuatu yang unik menggunakan semua
+        yang sejauh ini telah kamu pelajari.
       Overworld House Frame Chosen: Membangun sisa rumah Anda dari setiap materi yang
         Anda ingin. Perintah "Ulangi" akan berguna.
       Overworld House Frame Chosen_2018: Membangun sisa rumah Anda dari setiap materi
         yang Anda ingin. Perintah "Ulangi" akan berguna.
+      Overworld House Frame Chosen_2019: Membangun sisa rumah Anda dari setiap materi
+        yang Anda ingin. Perintah "Ulangi" akan berguna.
       Overworld Move to Sheep: Tambahkan perintah "bergerak maju" kedua untuk mencapai
         domba
       Overworld Move to Sheep_2018: Tambahkan perintah "bergerak maju" kedua untuk
+        mencapai domba
+      Overworld Move to Sheep_2019: Tambahkan perintah "bergerak maju" kedua untuk
         mencapai domba
       Overworld Place Wall: Setiap rumah dimulai dengan dinding. Bangun bagian pertama
         rumah kamu dengan menempatkan perintah "tempatkan" dan "bergerak maju" di
@@ -1901,9 +1915,14 @@ id:
       Overworld Place Wall_2018: Setiap rumah dimulai dengan dinding. Bangun bagian
         pertama rumah kamu dengan menempatkan perintah "tempatkan" dan "bergerak maju"
         di dalam putaran pengulangan.
+      Overworld Place Wall_2019: Setiap rumah dimulai dengan dinding. Bangun bagian
+        pertama rumah kamu dengan menempatkan perintah "tempatkan" dan "bergerak maju"
+        di dalam putaran pengulangan.
       Overworld Plant Crops: Sebaiknya rencanakan dahulu. Tanam bibit di kedua sisi
         air agar kamu kelak tidak kelaparan.
       Overworld Plant Crops_2018: Sebaiknya rencanakan dahulu. Tanam bibit di kedua
+        sisi air agar kamu kelak tidak kelaparan.
+      Overworld Plant Crops_2019: Sebaiknya rencanakan dahulu. Tanam bibit di kedua
         sisi air agar kamu kelak tidak kelaparan.
       Overworld Powered Minecart: Bagus! Kamu telah mengumpulkan banyak sumber daya
         dan membangun rumah sederhana. Sekarang letakkan jalan rel dari tepi peta
@@ -1911,9 +1930,14 @@ id:
       Overworld Powered Minecart_2018: Bagus! Kamu telah mengumpulkan banyak sumber
         daya dan membangun rumah sederhana. Sekarang letakkan jalan rel dari tepi
         peta ke pintu rumah kamu.
+      Overworld Powered Minecart_2019: Bagus! Kamu telah mengumpulkan banyak sumber
+        daya dan membangun rumah sederhana. Sekarang letakkan jalan rel dari tepi
+        peta ke pintu rumah kamu.
       Overworld Shear Sheep: Waktunya mencukur domba! Gunakan perintah "cukur" untuk
         mengumpulkan wol dari kedua domba.
       Overworld Shear Sheep_2018: Waktunya mencukur domba! Gunakan perintah "cukur"
+        untuk mengumpulkan wol dari kedua domba.
+      Overworld Shear Sheep_2019: Waktunya mencukur domba! Gunakan perintah "cukur"
         untuk mengumpulkan wol dari kedua domba.
       PDK5 Functions 2: |-
         Fungsi membiarkan Anda mendefinisikan blok baru! Kami sudah
@@ -2066,10 +2090,17 @@ id:
         yang harus kamu tutup sebelum bergerak maju. Perintah "jika" akan berguna
         di sini. Tambahkan perintah "bergerak maju" di tempat yang tepat untuk menambang
         balok ini.
+      Underground Avoiding Lava_2019: Lava bersembunyi di bawah beberapa balok ini
+        yang harus kamu tutup sebelum bergerak maju. Perintah "jika" akan berguna
+        di sini. Tambahkan perintah "bergerak maju" di tempat yang tepat untuk menambang
+        balok ini.
       Underground If Statements: Sekarang permainan mulai sulit. Tambang 3 batu merah,
         tapi jangan sampai jatuh di lava. Gunakan perintah "Jika" untuk menempatkan
         batu alam di atas lava yang kamu buka.
       Underground If Statements_2018: Sekarang permainan mulai sulit. Tambang 3 batu
+        merah, tapi jangan sampai jatuh di lava. Gunakan perintah "Jika" untuk menempatkan
+        batu alam di atas lava yang kamu buka.
+      Underground If Statements_2019: Sekarang permainan mulai sulit. Tambang 3 batu
         merah, tapi jangan sampai jatuh di lava. Gunakan perintah "Jika" untuk menempatkan
         batu alam di atas lava yang kamu buka.
       Underground Iron: Jalan kaki memasuki lava mencair bukan ide yang bagus. Tempatkan
@@ -2077,10 +2108,16 @@ id:
       Underground Iron_2018: Jalan kaki memasuki lava mencair bukan ide yang bagus.
         Tempatkan batu alam untuk membuat jembatan, lalu tambang setidaknya dua balok
         besi.
+      Underground Iron_2019: Jalan kaki memasuki lava mencair bukan ide yang bagus.
+        Tempatkan batu alam untuk membuat jembatan, lalu tambang setidaknya dua balok
+        besi.
       Underground Mining Coal: Kamu akan menemukan sumber daya paling berharga di
         bawah tanah, tapi di sana bisa jadi gelap. Tempatkan setidaknya 2 obor dan
         tambang setidaknya 2 batu bara.
       Underground Mining Coal_2018: Kamu akan menemukan sumber daya paling berharga
+        di bawah tanah, tapi di sana bisa jadi gelap. Tempatkan setidaknya 2 obor
+        dan tambang setidaknya 2 batu bara.
+      Underground Mining Coal_2019: Kamu akan menemukan sumber daya paling berharga
         di bawah tanah, tapi di sana bisa jadi gelap. Tempatkan setidaknya 2 obor
         dan tambang setidaknya 2 batu bara.
       aE7: "Jika Anda membuat lingkaran lain seperti ini, tapi belok kiri bukan kanan,
@@ -2250,19 +2287,29 @@ id:
       courseD_artist_binary1_2018: |-
         Gunakan blok di bawah ini agar
         seniman menggambar "01010101" dalam biner pada baris pertama.
+      courseD_artist_binary1_2019: |-
+        Gunakan blok di bawah ini agar
+        seniman menggambar "01010101" dalam biner pada baris pertama.
       courseD_artist_binary4: |-
         Bisakah Anda menggambar pola ini dengan putaran
          hanya tiga angka biner (0s dan 1s)?
       courseD_artist_binary4_2018: |-
         Bisakah Anda menggambar pola ini dengan putaran
          hanya tiga angka biner (0s dan 1s)?
+      courseD_artist_binary4_2019: |-
+        Bisakah Anda menggambar pola ini dengan putaran
+         hanya tiga angka biner (0s dan 1s)?
       courseD_artist_binary6: String biner 6 digit yang manakah, yang diulangi 11
         kali yang akan menghasilkan gambar ini?
       courseD_artist_binary6_2018: String biner 6 digit yang manakah, yang diulangi
         11 kali yang akan menghasilkan gambar ini?
+      courseD_artist_binary6_2019: String biner 6 digit yang manakah, yang diulangi
+        11 kali yang akan menghasilkan gambar ini?
       courseD_artist_binary7: String biner terpendek apakah yang dapat Anda ulangi
         untuk membuat gambar ini?
       courseD_artist_binary7_2018: String biner terpendek apakah yang dapat Anda ulangi
+        untuk membuat gambar ini?
+      courseD_artist_binary7_2019: String biner terpendek apakah yang dapat Anda ulangi
         untuk membuat gambar ini?
       courseD_autorun_binary4_2019: |-
         Bisakah Anda menggambar pola ini dengan putaran
@@ -2333,6 +2380,8 @@ id:
       courseE_bee_concept1: "Kumpulkan semua nektar nya dari setiap bunga.\nGunakan
         loop bersarang. "
       courseE_bee_concept1_2018: "Kumpulkan semua nektar nya dari setiap bunga.\nGunakan
+        loop bersarang. "
+      courseE_bee_concept1_2019: "Kumpulkan semua nektar nya dari setiap bunga.\nGunakan
         loop bersarang. "
       courseE_bee_functions1: Kumpulkan semua madu bunga dari setiap bunga.
       courseE_bee_functions1_2018: Kumpulkan semua madu bunga dari setiap bunga.

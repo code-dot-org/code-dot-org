@@ -105,7 +105,7 @@ sk:
         desc: Abstrahovanie je jednou z dôležitých schopností, ktoré informatik musí mať. V tejto aktivite budú Vaši študenti analyzovať príbehy a hľadať v nich rozdiely, aby sa mohli od nich abstrahovať. Tieto abstrahované príbehy sa stanú základov pre ďaľšie vtipné a veselé príbehy.
       ForLoopFun:
         title: Zábavné opakovanie
-        desc: Vieme, že slučky nám umožňujú robiť veci dookola, ale teraz sa naučíme, ako používať slučky so zabudovanou extra štruktúrou.
+        desc: Vieme, že cykly nám umožňujú robiť veci dookola, ale teraz sa naučíme, ako používať cykly so zabudovanou extra štruktúrou.
       SongwritingWithParameters:
         title: Písanie pesničiek s parametrami
         desc: 'Jedným z najkrajších elementov vo svete informatiky je funkcia. Funkcie (niekedy ich voláme procedúry) sú malé programy, ktore môžete dookola používať vo Vašom väčšom programe. Táto lekcia pomôže študentom intuitívne pochopiť, prečo je kombinovanie kúskov kódu do funkcií tak užitočné.  '
@@ -131,13 +131,13 @@ sk:
         title: Kolízna detekcia a Pytagorova veta
         desc: Určenie, kedy sa objekty na obrazovke dotýkajú je dôležitou súčasťou väčšiny hier. V tejto lekcií sa pozrieme na to, ako sa Pytagorová veta a vzorec na vzdialenosť môžu použiť pre zmeranie vzdialenosti medzi dvoma bodmi a na rozhodnutie, či sa tieto body (alebo herné postavy) dotýkajú.
       courseA_unplugged_loops:
-        desc: V tejto lekcií sa naučíte niečo o cykloch!
+        desc: V tejto lekcií sa naučíš niečo o cykloch!
       courseB_unplugged_MRF:
         title: Aktivity bez počítača
         desc: V tejto lekcií sa naučíte "programovať" Vašich kamarátov!
       courseB_unplugged_loopyMRF:
         title: Aktivity bez počítača
-        desc: Tak, ako v "Moji robotickí kamaráti" budete aj tu "programovať" Vašich kamarátov, tentokrát však so slučkami!
+        desc: Tak, ako hodine "Moji robotickí kamaráti", aj tu budete "programovať" kamarátov, tentokrát však s cyklami!
       courseC_Unplugged_ScreenOutTheMean:
         title: Aktivity bez počítača
         desc: Dnes sa naučíte, čo robiť, ak je niekto drzý v online svete.
@@ -214,7 +214,7 @@ sk:
         desc: Premenné v informatike umožňujú voľnosť. V tejto lekcií sa dozviete, čo sú premenné a akými rozličnými spôsobmi ich môžeme používať. Použite aktivitu pred (alebo spolu s) lekciou abstrakcie pre úplne pochopenie tohto konceptu.
       courseF_unplugged_forLoopFun:
         title: Zábavné opakovanie
-        desc: Vieme, že slučky nám umožňujú robiť veci dookola, ale teraz sa naučíme, ako používať slučky so zabudovanou extra štruktúrou.
+        desc: Vieme, že cykly nám umožňujú robiť veci dookola, ale teraz sa naučíme, ako používať cykly so zabudovanou extra štruktúrou.
       courseF_unplugged_songwritingParameters:
         title: Písanie pesničiek s parametrami
         desc: 'Jedným z najkrajších elementov vo svete informatiky je funkcia. Funkcie (niekedy ich voláme procedúry) sú malé programy, ktore môžete dookola používať vo Vašom väčšom programe. Táto lekcia pomôže študentom intuitívne pochopiť, prečo je kombinovanie kúskov kódu do funkcií tak užitočné.  '
@@ -240,7 +240,7 @@ sk:
         title: Bezpečné premiestňovanie
         desc: Internet je mocným, ale zavše nebezpečným miestom. Učitelia vysvetlia, ako bezpečne surfovať po Internete.
       courseA_unplugged_loops_2018:
-        desc: V tejto lekcií sa naučíte niečo o cykloch!
+        desc: V tejto lekcií sa naučíš niečo o cykloch!
       BigEvent_2018:
         title: Veľká udalosť
         desc: Študenti sú oboznámený s úvodným konceptom programovania "events" udalostí, ktoré počítač neustále monitoruje. Učiteľ bude stláčať tlačidlá na papierovom diaľkovom ovládači, pričom študenti budú reagovať podľa toho, ktoré tlačidlo je práve stlačené.
@@ -288,3 +288,30 @@ sk:
       Conditionals_2019:
         title: Podmienky
         desc: Pre naučenie sa o podmieňovacích spôsoboch si študenti zahrajú kartovú hru a vytvoria pravidlá ako "ak zahrám červenú kartu, dostanem bod" a "ak zahrám čiernu kartu, ty dostaneš bod."
+      GraphPaperProgramming_2019:
+        title: Programovanie na milimetrovom papieri
+        desc: Študenti napíšu algoritmus (sadu inštrukcií) použitím sady preddefinovaných príkazov, aby mohli ich spolužiaci pomocou týchto pokynov reprodukovať obrázok.
+      RelayProgramming_2018_2019:
+        title: Štafetové programovanie
+        desc: Táto aktivita začne krátkym školením o hľadaní a opravovaní chýb a o potrebe vytrvalosti. Následne sa študenti rozdelia do skupín, v ktorých, pretekajúc s časom, postupne po jednotlivých príkazoch vytvoria program.
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Aktivity bez počítača
+        desc: Dnes sa naučíte, čo to znamená byť Občanom v digitálnom svete.
+      BinaryImages_2019:
+        title: Binárne obrázky
+        desc: Hosi si veľa ľudí pod pojmom binárny predstaví len jednotky a nuly, naše predošlé lekcie naučili študentov, že informácie môžu byť reprezentované v rozličných binárnych variantoch. Táto lekcia pokračuje v tomto koncepte ukázaním toho, ako môže počítač ukladať ešte komplexnejšie informácie (ako obrázky či farby) binárnym spôsobom.
+      courseE_unplugged_CnC_2019:
+        title: Digitálne zdieľanie
+        desc: Táto lekcia, vytvorená s pomocou tímu Autorských práv a Kreativity, pomôže študentom lepšie porozumieť výzvam aj výhodám rešpektovania vlastníckych a autorských práv, s dôrazom na digitálne prostredie. Študenti by mali byť vedení k dodržiavaniu autorských práv umelcov, čo je dôležitá súčasť ich existencie ako etického digitálneho občana.
+      GettingLoopy_2019:
+        title: Neustále opakovanie
+        desc: Táto lekcia je úvodom do programovacieho konceptu slučiek (opakujúcich sa inštrukcií) prostredníctvom tanca. Študenti sa naučia jednoduchú choreografiu, ktorú budú na základe inštrukcíí opakovať.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Aktivity bez počítača
+        desc: Dnes sa naučíte, čo robiť, ak je niekto drzý v online svete.
+      BigEvent_2019:
+        title: Veľká udalosť
+        desc: Študenti sú oboznámený s úvodným konceptom programovania "events" udalostí, ktoré počítač neustále monitoruje. Učiteľ bude stláčať tlačidlá na papierovom diaľkovom ovládači, pričom študenti budú reagovať podľa toho, ktoré tlačidlo je práve stlačené.
+      BinaryBracelets_2019:
+        title: Binárne náramky
+        desc: Študenti vytvoria náramky ako binárne znázornenia prvého písmena ich krstného mena. Študenti sa naučia, že údaje môžu byť reprezentované a uložené viac ako jedným spôosobom.

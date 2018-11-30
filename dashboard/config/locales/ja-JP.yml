@@ -281,7 +281,7 @@ ja:
         gamelab: ゲームラボで作る
         weblab: Web 研究室 (ベータ版) のプロジェクトを作る
       my_dashboard: マイ ダッシュボード
-      course_catalog: コース カタログ
+      course_catalog: コースカタログ
       project_gallery: プロジェクト
       sections: セクション
       help_support: ヘルプとサポート
@@ -335,6 +335,7 @@ ja:
       playlab: プレイラボ
       minecraft: マインクラフト
       flappy: フラッピー
+      dance: ダンスパーティー
       view_all: すべてのプロジェクトを見る
     popup:
       progress_for_user: "%{name} の進捗状況"
@@ -631,6 +632,8 @@ ja:
       body_short: アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。
       audience: 13才以上
       cta: もっと知る
+    dance:
+      title: ダンスパーティー
     hoc:
       title: 古典的な迷路
       body: コンピュータサイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます
@@ -674,6 +677,7 @@ ja:
       title: マインクラフト
     hero:
       title: マインクラフト
+      body: Hour of Code（1時間プログラミング）に向けて、マインクラフトの最新アクティビティが出来上がりました。プログラミングを使ってマインクラフトの旅へ
     sports:
       title: スポーツ
       body: バスケットボールゲームや、様々なスポーツの混合競技をつくろう！
@@ -1002,6 +1006,7 @@ ja:
   hidden_stage: 先生は、あなたの参加を予想していませんでした。どのレッスンに参加すべきか、あなたの先生に尋ねてください。
   return_unit_overview: ユニットの概要へ
   return_course_overview: コースの概要へ
+  view_teacher_guide: 教師用ガイドを表示
   pd:
     form_labels:
       email: Eメール

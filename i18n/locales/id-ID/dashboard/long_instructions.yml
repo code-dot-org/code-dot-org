@@ -261,6 +261,7 @@ id:
         *langkah pertama\r
         *
         langkah kedua
+      AWS link: "Gunakan alat ini untuk bahan"
       AppLab Intro 2 - Edit place1 2: |-
         Ingin memikirkan bagaimana tentang petualangan anda tekan tombol lanjutkan pada layar ini. Kemudian tambahkan beberapa teks untuk memberitahukan cerita anda!\r
         \r
@@ -297,6 +298,18 @@ id:
         Klik "Run" dan kemudian "Finish" untuk berpindah
         dan mulai menambahkan ke layar anda.
       AppLab Intro 2 - Try Cat Commander: "Inilah kode seperti untuk Kucing Komandan. Luangkan waktu satu menit untuk membaca kode\ndan melihat jika anda dapat memahami cara kerjanya. Berbicara tentang hal itu dengan pasangan programer.\nPola kerjakan apa yang anda ihat? \\r\n\\r\nSetelah anda selesai, lanjutkan dengan mengklik \"Run\"\nlalu \"Finish\", untuk belajar membangun petualangan anda sendiri."
+      AppLab Intro 2 - finish and share: |-
+        Selamat kamu telah menyelesaikan Hour of Code! Kamu dapat membagikan pekerjaanmu kepada teman-teman! Klik "Bagikan" untuk mendapatkan tautan atau bahkan Sms ke mereka.
+        
+        Kamu dapat terus mengerjakan proyekmu di sini. Setiap kali teman kamu membuka tautan yang kamu bagikan, mereka akan mendapatkan versi terbaru yang kamu buat. Seberapa jauh kamu akan membangun petualanganmu?
+      AppLab Intro 3 - share and keep going: |-
+        Buat aplikasi ini atau itu. Tentukan apa yang terjadi pada layar dan teks ketika pengguna mengklik setiap tombol.
+        
+        Setelah kamu selesai dengan aplikasimu, klik "Bagikan" di bagian atas untuk mengirim kepada teman untuk bermain! Klik gambar untuk melihat cara berbagi
+      AppLab Intro 3 - thisOrThat: |-
+        Buat aplikasi ini atau itu. Tentukan apa yang terjadi pada layar dan teks ketika pengguna mengklik setiap tombol.
+        
+        Setelah kamu selesai dengan aplikasimu, klik "Bagikan" di bagian atas untuk mengirim kepada teman untuk bermain! Klik gambar untuk melihat cara berbagi
       AppLab Intro 4 - Video share your work: "# buat dan bagikan aplikasi anda!"
       AppLab Intro 4 - Video share: "# buat dan bagikan aplikasi anda!"
       Artist Autorun Test: "Sekarang, letakkan fungsinya ke dalam\nsebuah lingkaran untuk menggambar tiga kotak yang ini."
@@ -583,6 +596,7 @@ id:
       New Minecraft Hero Project: "**Main bebas:** Sekarang terserah kamu! Gunakan kode Agent untuk membantu kamu menjelajahi dunia ini."
       Overworld Move to Sheep: Tambahkan perintah "bergerak maju" kedua untuk mencapai domba
       Overworld Move to Sheep_2018: Tambahkan perintah "bergerak maju" kedua untuk mencapai domba
+      Overworld Move to Sheep_2019: Tambahkan perintah "bergerak maju" kedua untuk mencapai domba
       PS copy 2-3 Bee Conditionals 5: "Ini perubahan sihir bunga-bunga ungu!\\r\n\\r\nSetiap\nsaat anda mencoba teka-teki, bunga ungu dapat memiliki 1 nektar atau tidak sama sekali...tapi anda tidak akan tahu jumlahnya sampai anda menjalankan kode! \\r\n\\r\nBerhati-hati jangan sampai pertamamengumpulkan nektar dari bunga ungu jika itu tidak memiliki apapun. \\r\nPertama Anda harus terlebih dahulu memeriksa apakah nektar sama dengan 1 `jika...`menggunakan blok."
       Revisiting the Counter Pattern: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
       Revisiting the Counter Pattern_2018: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"

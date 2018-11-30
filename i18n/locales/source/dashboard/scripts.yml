@@ -9707,10 +9707,10 @@ en:
           stages:
             Dance Party - Go Further:
               name: Dance Party - Go Further
-          title: ''
+          title: Keep On Dancing
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Go beyond the Hour of Code with this follow-up activity to Code.org's Dance Party tutorial.
+          description: Go beyond the first hour with extended project ideas.
         coursef-2019:
           title: Course F (2019)
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
@@ -9831,6 +9831,10 @@ en:
               description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             new stage:
               name: new stage
+            The Artist:
+              name: The Artist
+            Nested Loops in the Maze:
+              name: Nested Loops in the Maze
         dance-low:
           stages:
             Dance Party:
@@ -9839,3 +9843,456 @@ en:
           description_audience: ''
           description_short: Code your own dance party to share with your friends! (This version is for slow connections)
           description: ''
+        coursed-2019:
+          title: Course D (2019)
+          description: Students develop their understanding of nested loops, while loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+          description_short: Learn about conditional statements and create your own art, story or game.
+          description_audience: 'Ages: 7-11'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+              description_student: ''
+              description_teacher: ''
+            Introduction to Online Puzzles:
+              name: Introduction to Online Puzzles
+              description_student: ''
+              description_teacher: ''
+            Relay Programming:
+              name: Relay Programming
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: Debugging in Collector
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: Events in Bounce
+              description_student: ''
+              description_teacher: ''
+            Loops in Ice Age:
+              name: Loops in Ice Age
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Artist:
+              name: Nested Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Frozen:
+              name: Nested Loops in Frozen
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Until Loops in Maze:
+              name: Until Loops in Maze
+              description_student: ''
+              description_teacher: ''
+            Conditionals with Cards:
+              name: Conditionals with Cards
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Bee:
+              name: Conditionals in Bee
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Harvester:
+              name: Conditionals & Loops in Harvester
+              description_student: ''
+              description_teacher: ''
+            Digital Citizenship:
+              name: Digital Citizenship
+              description_student: ''
+              description_teacher: ''
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+              description_student: ''
+              description_teacher: ''
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+              description_student: ''
+              description_teacher: ''
+            Artist Binary:
+              name: Artist Binary
+              description_student: ''
+              description_teacher: ''
+            Build a Star Wars Game:
+              name: Build a Star Wars Game
+        coursee-2019:
+          title: Course E (2019)
+          description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
+          description_short: Review concepts in Courses C & D, then go further by learning functions.
+          description_audience: 'Ages: 8-12'
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Sequence in Maze:
+              name: Sequence in Maze
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: Building a Foundation
+              description_student: ''
+              description_teacher: ''
+            Debugging with Scrat:
+              name: Debugging with Scrat
+              description_student: ''
+              description_teacher: ''
+            Programming in Artist:
+              name: Programming in Artist
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops:
+              name: Nested Loops
+              description_student: ''
+              description_teacher: ''
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+              description_student: ''
+              description_teacher: ''
+            Conditionals with Cards:
+              name: Conditionals with Cards
+              description_student: ''
+              description_teacher: ''
+            Conditionals:
+              name: Conditionals
+              description_student: You will get to tell the computer what to do under certain conditions in this fun and challenging series.
+              description_teacher: This lesson introduces students to `while` loops and `if / else` statements. _While loops_ are loops that continue to repeat commands as long as a condition is true. While loops are used when the programmer doesn't know the exact number of times the commands need to be repeated, but the programmer does know what condition needs to be true in order for the loop to continue looping. `If / Else` statements offer flexibility in programming by running entire sections of code only if something is true, otherwise it runs something else.
+            Private and Personal Information:
+              name: Private and Personal Information
+              description_student: The internet is fun and exciting, but it's important to stay safe too. This lesson teaches you the difference between information that is safe to share and information that is private.
+              description_teacher: |-
+                Developed by Common Sense Education, this lesson is about the difference between information that is safe to share online and information that is not.
+
+                As students visit sites that request information about their identities, they learn to adopt a critical inquiry process that empowers them to protect themselves and their families from identity theft. In this lesson, students learn to think critically about the user information that some websites request or require. They learn the difference between private information and personal information, as well as how to distinguish what is safe or unsafe to share online.
+            Build a Star Wars Game:
+              name: Build a Star Wars Game
+              description_student: Feel the force as you build your own Star Wars game in this lesson.
+              description_teacher: In this lesson, students will practice using events to build a game that they can share online. Featuring R2-D2 and other Star Wars characters, students will be guided through events, then given space to create their own game.
+            'Functions: Songwriting':
+              name: 'Functions: Songwriting'
+              description_student: Even rockstars need programming skills. This lesson will teach you about functions using lyrics from songs.
+              description_teacher: One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.
+            Functions in Minecraft:
+              name: Functions in Minecraft
+              description_student: ''
+              description_teacher: ''
+            Functions in Harvester:
+              name: Functions in Harvester
+              description_student: ''
+              description_teacher: ''
+            Copyright and Creativity:
+              name: Copyright and Creativity
+              description_student: ''
+              description_teacher: ''
+            Functions in Artist:
+              name: Functions in Artist
+              description_student: Make complex drawings more easily with functions!
+              description_teacher: Students will be introduced to using functions on Code.org. Magnificent images will be created and modified with functions in Artist. For more complicated patterns, students will learn about nesting functions by calling one function from inside another.
+            Determine the Concept:
+              name: Determine the Concept
+              description_student: "We aren't giving away any secrets! \nThis lesson could use any of the skills you've learned so far."
+              description_teacher: This lesson brings together concepts from the previous lessons and gives students a chance to think critically about how they would solve each problem, but without telling them which concept to apply. Students will review basic algorithms, debugging, `repeat` loops, conditionals, `while` loops, and functions.
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Pet Giraffe with Sprite Lab:
+              name: Pet Giraffe with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Explore Project Ideas:
+              name: Explore Project Ideas
+              description_student: Here are several games and drawings. Play with each of them to get ideas for projects of your own!
+              description_teacher: "The next four lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. Intended to be a multi-lesson or multi-week experience, students will spend time exploring brainstorming, learning about the design process, building, and presenting their final work. \n\nIn the explore stage, students will be able to view pre-built examples of projects in both Artist and Play Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in either Artist or Play Lab (this is likely the longest stage of the project). Finally, students will be able to present their finished work to their peers."
+            The Design Process:
+              name: The Design Process
+              description_student: Projects this big take time and plenty planning. Here, you will learn about the design process that you'll use to build your own creation.
+              description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
+            Build Your Project:
+              name: Build Your Project
+              description_student: Get those hands ready for plenty of coding! It's time to start building your project.
+              description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This is likely to be the longest stage of the project. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
+            Present Your Project:
+              name: Present Your Project
+              description_student: Get ready to show off! It's time to present your finished project to your peers.
+              description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
+            Internet:
+              name: Internet
+              description_student: Ever wondered how information travels across the internet? It's not magic! This lesson will teach you the basics of how the internet works.
+              description_teacher: Even though many people use the internet daily, not very many know how it works. In this lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.
+            Crowdsourcing:
+              name: Crowdsourcing
+              description_student: This lesson will teach you about crowdsourcing, the process of building a project with a team.
+              description_teacher: In computer science, we face some big, daunting problems. Challenges such as finding large prime numbers or sequencing DNA are almost impossible to do as an individual. Adding the power of others makes these tasks manageable. This lesson will show your students how helpful teamwork can be in the industry of computer science.
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+            Nested Loops in Artist:
+              name: Nested Loops in Artist
+            Nested Loops in Frozen:
+              name: Nested Loops in Frozen
+            Sequencing in the Maze:
+              name: Sequencing in the Maze
+            Programming and Loops with the Artist:
+              name: Programming and Loops with the Artist
+            End of Course Project:
+              name: End of Course Project
+        express-2019:
+          title: Express Course (2019)
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
+          description_audience: 'Ages: 9-18'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: Programming in Maze
+              description_student: ''
+              description_teacher: ''
+            Relay Programming:
+              name: Relay Programming
+              description_student: ''
+              description_teacher: ''
+            Debugging in Maze:
+              name: Debugging in Maze
+              description_student: ''
+              description_teacher: ''
+            Programming in Collector:
+              name: Programming in Collector
+              description_student: ''
+              description_teacher: ''
+            Programming in Artist:
+              name: Programming in Artist
+              description_student: ''
+              description_teacher: ''
+            'Loops: Getting Loopy':
+              name: 'Loops: Getting Loopy'
+              description_student: ''
+              description_teacher: ''
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Copyright and Creativity:
+              name: Copyright and Creativity
+              description_student: ''
+              description_teacher: ''
+            'Concept Practice with Minecraft ':
+              name: 'Concept Practice with Minecraft '
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Frozen:
+              name: Nested Loops in Frozen
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Until Loops in Maze:
+              name: Until Loops in Maze
+              description_student: ''
+              description_teacher: ''
+            Conditionals with Cards:
+              name: Conditionals with Cards
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Bee:
+              name: Conditionals in Bee
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Harvester:
+              name: Conditionals & Loops in Harvester
+              description_student: ''
+              description_teacher: ''
+            'Functions: Songwriting':
+              name: 'Functions: Songwriting'
+              description_student: ''
+              description_teacher: ''
+            Functions in Minecraft:
+              name: Functions in Minecraft
+              description_student: ''
+              description_teacher: ''
+            Functions in Harvester:
+              name: Functions in Harvester
+              description_student: ''
+              description_teacher: ''
+            Functions in Artist:
+              name: Functions in Artist
+              description_student: ''
+              description_teacher: ''
+            Screen Out the Mean:
+              name: Screen Out the Mean
+              description_student: ''
+              description_teacher: ''
+            Determine the Concept:
+              name: Determine the Concept
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Build a Flappy Game:
+              name: Build a Flappy Game
+              description_student: ''
+              description_teacher: ''
+            The Power of Words:
+              name: The Power of Words
+              description_student: ''
+              description_teacher: ''
+            Envelope Variables:
+              name: Envelope Variables
+              description_student: ''
+              description_teacher: ''
+            Variables as Constant in Artist:
+              name: Variables as Constant in Artist
+              description_student: ''
+              description_teacher: ''
+            Variables that Change in Bee:
+              name: Variables that Change in Bee
+              description_student: ''
+              description_teacher: ''
+            Variables that Change in Artist:
+              name: Variables that Change in Artist
+              description_student: ''
+              description_teacher: ''
+            For Loop Fun:
+              name: For Loop Fun
+              description_student: ''
+              description_teacher: ''
+            For Loops in Bee:
+              name: For Loops in Bee
+              description_student: ''
+              description_teacher: ''
+            For Loops in Artist:
+              name: For Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Pet Giraffe with Sprite Lab:
+              name: Pet Giraffe with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Explore Project Ideas:
+              name: Explore Project Ideas
+              description_student: ''
+              description_teacher: ''
+            The Design Process:
+              name: The Design Process
+              description_student: ''
+              description_teacher: ''
+            Build Your Project:
+              name: Build Your Project
+              description_student: ''
+              description_teacher: ''
+            Revise Your Project:
+              name: Revise Your Project
+              description_student: ''
+              description_teacher: ''
+            Present Your Project:
+              name: Present Your Project
+              description_student: ''
+              description_teacher: ''
+            Binary Bracelets:
+              name: Binary Bracelets
+              description_student: ''
+              description_teacher: ''
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+              description_student: ''
+              description_teacher: ''
+            Artist Binary:
+              name: Artist Binary
+              description_student: ''
+              description_teacher: ''
+            Internet:
+              name: Internet
+              description_student: ''
+              description_teacher: ''
+            Crowdsourcing:
+              name: Crowdsourcing
+              description_student: ''
+              description_teacher: ''
+        csd1-2019:
+          title: CSD Unit 1 - Problem Solving ('19-'20)
+          description: " \r\nUnit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
+          description_short: "  Learn how humans work with computers to solve problems."
+          description_audience: ''
+          stages:
+            CS Discoveries Pre-survey:
+              name: CS Discoveries Pre-survey
+              description_student: ''
+              description_teacher: ''
+            Intro to Problem Solving:
+              name: Intro to Problem Solving
+              description_student: 'The class works in groups to design aluminum foil boats that will support as many pennies as possible.  At the end of the lesson groups reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course. '
+              description_teacher: In this lesson, students work in groups to design aluminum foil boats that will support as many pennies as possible. Groups have two rounds to work on their boats, with the goal of trying to hold more pennies than they did in round 1. The structure of the activity foreshadows different steps of the problem solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson students reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course.
+            The Problem Solving Process:
+              name: The Problem Solving Process
+              description_student: This lesson introduces the formal problem solving process that the class will use over the course of the year, Define - Prepare - Try - Reflect.  The class relates these steps to the aluminum boats problem from the previous lesson, then a problem they are good at solving, then a problem they want to improve at solving. At the end of the lesson the class collects a list of generally useful strategies for each step of the process to put on posters that will be used throughout the unit and year.
+              description_teacher: This lesson introduces the formal problem solving process that students will use over the course of the year, Define - Prepare - Try - Reflect. The lesson begins by asking students to brainstorm all the different types of problems that they encounter in everyday life. Students are then shown the four steps of the problem solving process and work together to relate these abstract steps to their actual experiences solving problems. First students relate these steps to the aluminum boats problem from the previous lesson, then a problem they are good at solving, then a problem they want to improve at solving. At the end of the lesson the class collects a list of generally useful strategies for each step of the process to put on posters that will be used throughout the unit and year.
+            Exploring Problem Solving:
+              name: Exploring Problem Solving
+              description_student: 'In this lesson the class applies the problem solving process to three different problems: a word search, a seating arrangement for a birthday party, and planning a trip. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems.'
+              description_teacher: "In this lesson students apply the problem solving process to three different problems in order to better understand the value of each step. They will solve a word search, arrange seating for a birthday party, and plan a trip. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\r\n\r\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day."
+            What is a Computer?:
+              name: What is a Computer?
+              description_student: In this lesson the class develops a preliminary definition of a computer. After brainstorming the possible definitions for a computer, the class works in groups to sort pictures into “is a computer” or “is not a computer” on poster paper and explain their motivations for choosing some of the most difficult categorizations.  The teacher then introduces a definition of the computer and allows groups to revise their posters according to the new definition.
+              description_teacher: "In this lesson students develop a preliminary definition of a computer. To begin the lesson, the class will brainstorm possible definitions for a computer and place the results of this brainstorm on the board. Next, students will work in groups to sort pictures into “is a computer” or “is not a computer” on poster paper. Groups will place their posters around the room and briefly explain their motivations for choosing some of their most difficult categorizations.  The teacher will then introduce a definition of the computer and allow students to revise their posters according to the new definition.\r\n"
+            Input and Output:
+              name: Input and Output
+              description_student: In this the class students consider a number of computing devices to determine what types of inputs and outputs they use. Groups are assigned to a computing device and based on a teacher-provided definition of input and output, list the inputs and outputs of their device.  To conclude the lesson the class examines common activities they do on a computing device and select the inputs and outputs used for that activity from the chart.
+              description_teacher: In this lesson students consider a number of computing devices to determine what types of inputs and outputs they use. Groups are assigned to a computing device and based on a teacher-provided definition of input and output, list the inputs and outputs of their device. Earlier in the activity students are prompted to focus on more obvious physical inputs and outputs (e.g. a keyboard as an input or a screen as an output) but later discussions lead students to consider less obvious examples (e.g. that a touch screen is both an input and output, or the fact that the Internet can serve as both input and output). Throughout the lesson the teacher records inputs and outputs that are identified on a T-Chart at the front of the room. To conclude the lesson students examine common activities they do on a computing device and select the inputs and outputs used for that activity from the chart.
+            Processing:
+              name: Processing
+              description_student: This lesson dives deeper into the concept of processing that was introduced as part of the definition of a computer.  Pairs work together to put a deck of cards in order, a form of processing information.  In the end, the class discusses what processing means within the context of solving information problems.
+              description_teacher: Students complete two unplugged card sorting activities to explore the meaning of processing and its relationship to problem-solving. The first activity has few constraints and is used to introduce a high-level definition of processing. The next introduces more constraints that force students to develop an algorithm that will always successfully process the cards. Students iteratively develop, test, and share their algorithms with classmates. A wrap-up discussion has students reflect on the different types of problem-solving they used in these activities and the value of producing an algorithm to solve a problem.
+            Apps and Storage:
+              name: Apps and Storage
+              description_student: 'This lesson covers the input and output aspects of computers in a context that is relevant and familiar to students: apps. The class evaluates various web applications to analyze the specific problems that they were designed to solve, the inputs that they need to work, and the outputs they provide to users. The class concludes with observations of these apps as well as a teacher led discussion about the impact of apps on society. '
+              description_teacher: 'This lesson reviews the input, output, storage, and processing aspects of a computer in a context that is relevant and familiar to students: apps. In pairs, students evaluate smartphone applications to analyze the specific problems that they were designed to solve, the inputs that they need to work, and the processing that turns those inputs into the desired output, and what information they would want to store for later. The class concludes with a discussion that connects the lesson to apps students are more familiar with. '
+            Project - Propose an App:
+              name: Project - Propose an App
+              description_student: To conclude the study of the problem solving process and the input/output/store/process model of a computer, the class proposes apps designed to solve real world problems. This project is completed across multiple days and culminates in a poster presentation highlighting the features of each app. The project is designed to be completed in pairs though it can be completed individually.
+              description_teacher: To conclude their study of the problem solving process and the input/output/store/process model of a computer, students will propose an app designed to solve a real world problem. This project will be completed across multiple days and will result in students creating a poster highlighting the features of their app that they will present to their classmates. A project guide provides step by step instructions for students and helps them organize their thoughts. The project is designed to be completed in pairs though it can be completed individually.

@@ -60,7 +60,7 @@ ne:
             "{x: 300, y: 200}": दाँया
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -204,6 +204,11 @@ ne:
           PROPERTY:
             '"scale"': size
       Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": बाँया
+            "{x: 300, y: 200}": दाँया
+      Mikelab_createNewSprite2:
         options:
           LOCATION:
             "{x: 100, y: 200}": बाँया

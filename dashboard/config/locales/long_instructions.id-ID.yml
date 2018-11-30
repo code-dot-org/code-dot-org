@@ -466,6 +466,7 @@ id:
         yang \nterus menggunakan `isi` blok sampai tanah merata?  "
       AWS applab: "# lakukan hal ini sekarang\r\n\r\n*langkah pertama\r\n*\nlangkah
         kedua"
+      AWS link: Gunakan alat ini untuk bahan
       AppLab Intro 2 - Edit place1 2: "Ingin memikirkan bagaimana tentang petualangan
         anda tekan tombol lanjutkan pada layar ini. Kemudian tambahkan beberapa teks
         untuk memberitahukan cerita anda!\r\n\r\n1. Gunakan layar pemilihan Untuk
@@ -492,6 +493,18 @@ id:
         kerjakan apa yang anda ihat? \r\n\r\nSetelah anda selesai, lanjutkan dengan
         mengklik \"Run\"\nlalu \"Finish\", untuk belajar membangun petualangan anda
         sendiri."
+      AppLab Intro 2 - finish and share: |-
+        Selamat kamu telah menyelesaikan Hour of Code! Kamu dapat membagikan pekerjaanmu kepada teman-teman! Klik "Bagikan" untuk mendapatkan tautan atau bahkan Sms ke mereka.
+
+        Kamu dapat terus mengerjakan proyekmu di sini. Setiap kali teman kamu membuka tautan yang kamu bagikan, mereka akan mendapatkan versi terbaru yang kamu buat. Seberapa jauh kamu akan membangun petualanganmu?
+      AppLab Intro 3 - share and keep going: |-
+        Buat aplikasi ini atau itu. Tentukan apa yang terjadi pada layar dan teks ketika pengguna mengklik setiap tombol.
+
+        Setelah kamu selesai dengan aplikasimu, klik "Bagikan" di bagian atas untuk mengirim kepada teman untuk bermain! Klik gambar untuk melihat cara berbagi
+      AppLab Intro 3 - thisOrThat: |-
+        Buat aplikasi ini atau itu. Tentukan apa yang terjadi pada layar dan teks ketika pengguna mengklik setiap tombol.
+
+        Setelah kamu selesai dengan aplikasimu, klik "Bagikan" di bagian atas untuk mengirim kepada teman untuk bermain! Klik gambar untuk melihat cara berbagi
       AppLab Intro 4 - Video share your work: "# buat dan bagikan aplikasi anda!"
       AppLab Intro 4 - Video share: "# buat dan bagikan aplikasi anda!"
       Artist Autorun Test: |-
@@ -895,6 +908,8 @@ id:
       Overworld Move to Sheep: Tambahkan perintah "bergerak maju" kedua untuk mencapai
         domba
       Overworld Move to Sheep_2018: Tambahkan perintah "bergerak maju" kedua untuk
+        mencapai domba
+      Overworld Move to Sheep_2019: Tambahkan perintah "bergerak maju" kedua untuk
         mencapai domba
       PS copy 2-3 Bee Conditionals 5: "Ini perubahan sihir bunga-bunga ungu!\r\n\r\nSetiap\nsaat
         anda mencoba teka-teki, bunga ungu dapat memiliki 1 nektar atau tidak sama

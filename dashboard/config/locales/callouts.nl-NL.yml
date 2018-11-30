@@ -201,6 +201,9 @@ nl:
       Geometric Sun_2018_callout:
         4-5_Artist_Patterns_Free_Play_1: Al je favoriete blokken nu ingedeeld in verschillende
           categorieën. Klik op deze woorden om te zien waar alles is ingedeeld!
+      Geometric Sun_2019_callout:
+        4-5_Artist_Patterns_Free_Play_1: Al je favoriete blokken nu ingedeeld in verschillende
+          categorieën. Klik op deze woorden om te zien waar alles is ingedeeld!
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Speel een geluid af wanneer deze gebeurtenis
           plaatsvindt.
@@ -294,19 +297,29 @@ nl:
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: We hebben hier al wat blokken geplaatst om je op
           weg te helpen
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: We hebben hier al wat blokken geplaatst om je op
+          weg te helpen
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Met dit programma begin je je huis te bouwen.
           Kun jij het afmaken?
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Met dit programma begin je je huis te bouwen.
           Kun jij het afmaken?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Met dit programma begin je je huis te bouwen.
+          Kun jij het afmaken?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Klik op "Run" om je programma te proberen
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Klik op "Run" om je programma te proberen
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Klik op "Run" om je programma te proberen
       Overworld Place Wall_callout:
         craft_inside_repeat: Herhaal acties door blokken hier in te plaatsen
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Herhaal acties door blokken hier in te plaatsen
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Herhaal acties door blokken hier in te plaatsen
       PS clone CSD U3 Variables Predict Where XY_callout:
         grid: Klik hier om het raster te tonen.
@@ -346,9 +359,14 @@ nl:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Deze code kijkt of er lava is, kun jij een opdracht
           toevoegen om vooruit te bewegen?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Deze code kijkt of er lava is, kun jij een opdracht
+          toevoegen om vooruit te bewegen?
       Underground Iron_callout:
         craft_what_is_iron: Delf dit ijzer!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Delf dit ijzer!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Delf dit ijzer!
       WebLab PS test - 1-12_callout:
         version_history_button: Bekijk versie geschiedenis
@@ -396,10 +414,16 @@ nl:
       courseC_collector_prog7_2018_callout:
         courseC_collector_prog7_1: Je kunt meer blokken uit het menu gebruiken als
           je ze nodig hebt!
+      courseC_collector_prog7_2019_callout:
+        courseC_collector_prog7_1: Je kunt meer blokken uit het menu gebruiken als
+          je ze nodig hebt!
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Vergeet niet, controleer of ELKE wolk een BLOEM
           heeft. Je hoeft niet voor honingraten te checken.
       courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Vergeet niet, controleer of ELKE wolk een BLOEM
+          heeft. Je hoeft niet voor honingraten te checken.
+      courseD_bee_conditionals2_2019_callout:
         4_5_Bee_Conditionals_2_1: Vergeet niet, controleer of ELKE wolk een BLOEM
           heeft. Je hoeft niet voor honingraten te checken.
       courseD_bee_conditionals2_test_callout:

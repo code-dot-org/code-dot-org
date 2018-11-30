@@ -66,7 +66,7 @@ hr:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slučajno odabran
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -232,6 +232,11 @@ hr:
             '"x"': x pozicija
             '"y"': y pozicija
       Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": lijevo
+            "{x: 300, y: 200}": desno
+      Mikelab_createNewSprite2:
         options:
           LOCATION:
             "{x: 100, y: 200}": lijevo

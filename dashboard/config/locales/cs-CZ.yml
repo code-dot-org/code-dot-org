@@ -373,7 +373,7 @@ cs:
       playlab: Play Lab
       minecraft: Minecraft
       flappy: Flappy
-      dance: Taneční párty
+      dance: Taneční večírek
     popup:
       progress_for_user: pokrok je %{name}
       progress: Tvůj pokrok
@@ -656,7 +656,7 @@ cs:
       audience: Věk 13 +
       cta: Jak na to
     dance:
-      title: Taneční párty
+      title: Taneční večírek
     hoc:
       title: Klasické bludiště
       body: Zkuste základy informatiky. Miliony lidí to už zkusili.
@@ -706,8 +706,8 @@ cs:
       title: Minecraft
     hero:
       title: Minecraft
-      body: Minecraft je zpět se zbrusu novou aktivitou pro Hodinu kódu! Projděte
-        Minecraftem s kódem.
+      body: Minecraft je zpět pro hodinu kódu se zcela novou aktivitou! Cestuj hrou
+        Minecraft s kódem.
     unplugged:
       title: Lekce bez počítače
       audience: Od 4 let
@@ -1076,6 +1076,7 @@ cs:
   return_unit_overview: Přejít na přehled jednotky
   return_course_overview: Přejít na přehled
   view_all_units: Zobrazit všechny jednotky
+  view_teacher_guide: Zobrazit příručku učitele
   pd:
     form_labels:
       email: E-mail

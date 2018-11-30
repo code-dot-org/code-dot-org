@@ -27,6 +27,8 @@ hu:
         age: 'Kor'
         gender: 'Nem'
         edit_header: 'Felhasználói Adatok Szerkesztése'
+        finish_sign_up_header: 'A profil létrehozásának befejezése'
+        finish_sign_up_subheader: 'Töltsd ki az alábbi adatokat <strong>%{email}</strong> Code.org fiókod létrehozásához.'
         finish_sign_up_subheader_provider: 'Töltsd ki az alábbi adatokat a Code.org felhasználó fiókod befejezéséhez <strong>%{provider}</strong><strong>%{email}</strong>.'
         error:
           future: nem lehet a jövőben
@@ -76,6 +78,7 @@ hu:
   prize: 'díj'
   more_info: 'További információk'
   auth:
+    continue_with: 'Bejelentkezés ezzel: %{provider}'
     sign_in_with: 'Bejelentkezés %{provider} -el'
     signed_in: 'Bejelentkezve!'
     signed_out: 'Kijelentkezett a <a href="%{url}"> Code.org</a> - ról.'
@@ -90,12 +93,17 @@ hu:
     clever: 'Okos fiók'
     powerschool: 'Powerschool fiók'
     forgot_password: 'Elfelejtette jelszavát?'
+    migration_success: 'Sikeresen frissítettél az új felhasználói élményeinkhez.'
+    demigration_success: 'Az új felhasználói élmények nem elérhetők a fiókodban.'
     need_confirmation: "Nem kapta meg a megerősítő instrukciókat?"
     need_unlock: "Nem kaptál a zárolás megszüntetéséhez útmutatót?"
     not_linked: "Sajnáljuk, de Code.org-fiókja nem kapcsolódik a %{provider}. Úgy kell bejelentkezned, hogy beírod a jelszavad."
     use_clever: "Sajnáljuk, de Code.org-fiókja nem kapcsolódik a %{provider}. Kérjük jelentkezzen be a okos portálon keresztül."
     unable_to_connect_provider: "Nem lehet összekötni Code.org-fiókját, a %{provider}. Kérjük, próbálja meg újra."
+    already_in_use: "A %{provider} fiókodat már korábban összekapcsoltuk egy másik Code.org fiókkal."
+    already_linked: "A %{provider} fiókodat már korábban összekapcsoltuk egy másik Code.org fiókkal."
   signup_form:
+    email_signup: 'Regisztrálj az e-mail címeddel'
     student_count: '%{count} tanuló iratkozott már fel.'
     teacher_count: '%{count} tanár iratkozott már fel.'
     overview: 'Regisztrálj fiókot, hogy rögzítsd az előremeneteled vagy hogy egy osztály irányíts. <a href="/">Böngészhetsz a különböző szintek és puzzlek között</a> fiók nélkül is, de az állapotod mentéséhez regisztrálnod kell.'
@@ -280,6 +288,7 @@ hu:
       playlab: 'Játéklabor'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
+      dance: 'Táncos buli'
     popup:
       progress_for_user: "%{name} fejlődése"
       progress: 'Fejlődése'
@@ -469,6 +478,8 @@ hu:
       body_short: "Tervezz egy alkalmazást, kódolj elemekből vagy JavaScript-ben, majd oszd meg néhány másodperc alatt."
       audience: 'Kor 13+'
       cta: 'Ismerd meg hogyan'
+    dance:
+      title: 'Táncos buli'
     hoc:
       title: 'Hagyományos Útvesztö'
       body: 'Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.'
@@ -508,6 +519,7 @@ hu:
       title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével."
     unplugged:
       title: "Offline tanórák"
       audience: "4 éven fellülieknek"
@@ -707,6 +719,7 @@ hu:
     starwars_blocks_name: 'Star Wars: Egy galaxis építése kóddal (Blocks)'
     starwars_javascript_name: 'Star Wars: Egy galaxis építése kóddal (JavaScript)'
     mac: 'Mac OS X'
+  view_teacher_guide: 'Oktatói útmutató megtekintése'
   pd:
     form_labels:
       email: 'Email'

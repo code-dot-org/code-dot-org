@@ -30,13 +30,13 @@ ja-JP:
   twentyhours_heading: コンピュータサイエンスコースを紹介する
   twentyhours_text: 初めてのHour of Codeを修了しましたか？フォローアップコースでコンピュータサイエンスやプログラミング概念をさらに学びましょう。
   og_title: 全ての子供に機会を得る権利があります
-  og_title_soon: Hour of Codeがやってくる
+  og_title_soon: もうすぐHour of Codeです
   og_title_here: Hour of Codeがやってきた！
   og_description: すべての学校のすべての学生が、コンピュータ サイエンスを学ぶ機会を得られる。それはすべてを変えるでしょう。
   og_description_celeb: 新しいチュートリアルに挑戦し、1人もしくはクラスで著名人とのビデオチャットを勝ちとりましょう！
   csedweek_og_title: Hour of Code がやってくる
   csedweek_og_description: Hour of Codeは、すでに180 以上の国々と45 以上の言語で、数千万人の生徒を対象に行われた、世界的な運動です。
-  csedweek_og_description_soon: Hour of Codeが2018年12月3~9日にやってきます。コンピューター科学は、すべての生徒たちが学ぶべき基礎です。
+  csedweek_og_description_soon: もうすぐ2018年12月3～9日がHour of Codeです。コンピューターサイエンスはすべての生徒たちが学ぶべき基礎です。
   csedweek_og_description_here: Hour of Codeがやってきました。コンピューターサイエンスはすべての生徒たちが学ぶべき基礎です。
   hoc2014_heading: <a href="http://hourofcode.com">Hour of Code</a> に挑戦しよう <br/> 2014年12月8日から14
     日まで<br/>
@@ -253,6 +253,8 @@ ja-JP:
   studiobar_title_nolink: Code Studio を試す
   studiobar_elementary_title: 初級コース
   studiobar_elementary_body: K&#8209;5 の生徒のための、3つの新しいコース
+  studiobar_dance_title: ダンスパーティー
+  studiobar_dance_body: 自分だけのダンスパーティーを作成して共有しよう
   studiobar_hoc_title: Hour of Code
   studiobar_hoc_body: アングリーバードでコードを学ぶ
   studiobar_flappy_title: Flappyのコード
@@ -301,7 +303,7 @@ ja-JP:
   homepage_hero_text_stat_loc: 850万人の女の子がCode.orgに参加して学んでいます。
   homepage_hero_text_stat_students: 'コードスタジオの学生アカウント #student_count  '
   homepage_hero_text_stat_served: 'Hour of Code: #served 提供'
-  homepage_hero_hoc_is_coming: Hour of Codeがやってくる
+  homepage_hero_hoc_is_coming: もうすぐHour of Codeです
   homepage_hero_hoc_is_here: Hour of Codeがやってきました
   homepage_slot_text_hoc: Hour of Code
   homepage_slot_text_frozen: "「アナと雪の女王」のアナとエルサ"
@@ -434,6 +436,7 @@ ja-JP:
   minecraft_adventurer: Minecraftアドベンチャー
   minecraft_tutorials: MinecraftのHour of Codeチュートリアル
   minecraft_specs: 多言語対応 | 最新ブラウザ、タブレット | 小学校2年生以上
+  minecraft_agent_description: Hour of Code（1時間プログラミング）に向けて、マインクラフトの最新アクティビティが出来上がりました。プログラミングを使ってマインクラフトの旅へ
   minecraft_agent_button: 始める
   minecraft_designer_description: ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。
   minecraft_designer_button: 始める
@@ -1559,6 +1562,7 @@ ja-JP:
   user_header_artist: 'アーティスト '
   user_header_gamelab: ゲーム ラボ
   user_header_playlab: プレイラボ
+  user_header_dance: ダンスパーティー
   user_header_minecraft: マインクラフト
   user_header_flappy: フラッピー
   user_header_view_all: すべてのプロジェクトを見る
@@ -1595,14 +1599,27 @@ ja-JP:
   google_sign_in_instruct: ここでは、「グーグルアカウントでサインイン」のオプションを選ぶことができます。
   applab-intro_name: App Labの紹介
   applab_tile_start_tutorial: 始める
+  applab_tile_teacher_guide: 教師用ガイドを表示
   account_sign_up_email_opt_in: 当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？
+  hoc_overview_dance_title: ダンスパーティー
+  hoc_overview_partner_activities_title: パートナー提供によるアクティビティを追加
+  hoc_overview_partner_activities_body: Hour of Codeウェブサイトは、年齢や経験レベルを問わずに利用可能な、Code.org
+    とパートナーが開発した 100 以上のコンピューター科学のアクティビティを掲載しています。
+  hoc_overview_partner_activities_link: アクティビティを表示
   hoc_overview_start_tutorial: 始める
+  hoc_overview_view_teacher_guide: 教師用ガイドを表示
   hoc2018_creativity_create: つくる
+  hoc2018_creativity_hoc_coming: もうすぐHour of Codeです...
+  hoc2018_creativity_what_will_you_create: 何を作りますか。
+  hoc2018_creativity_courses: Code.orgコースに進む
+  hoc2018_creativity_courses_link: <a href="https://studio.code.org/courses">Code.orgコース</a>に進む
   hoc2018_mc_page_title: MinecraftのHour of Codeチュートリアル
   hoc2018_mc_details: 多言語対応 | 最新ブラウザ、タブレット | 小学校2年生以上
   hoc2018_mc_aquatic_announcement: クラスを登録して150以上ある新しいHour of Code（12月3～9日）向けアクティビティのひとつを試してみてください。2018年の新しいMinecraftアクティビティであるVoyage
     Aquaticを確認することをお忘れなく！今日クラスを登録しましょう。
+  hoc2018_mc_aquatic_description: Hour of Code（1時間プログラミング）に向けて、マインクラフトの最新アクティビティが出来上がりました。プログラミングを使ってマインクラフトの旅へ
   hoc2018_mc_hero_title: 'Minecraft: 主人公の旅'
+  hoc2018_mc_hero_description: Hour of Code（1時間プログラミング）に向けて、マインクラフトの最新アクティビティが出来上がりました。プログラミングを使ってマインクラフトの旅へ
   hoc2018_mc_designer_title: Minecraftデザイナー
   hoc2018_mc_designer_description: ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。
   hoc2018_mc_adventurer_title: Minecraftアドベンチャー
@@ -1629,14 +1646,31 @@ ja-JP:
   hoc2018_mc_video_title_hoc_is_here: Hour of Code - 誰でも学べるプログラミング
   hoc2018_mc_video_title_anybody_can_learn: 誰もが学ぶことができます
   hoc2018_mc_video_title_my_name_is_aracely: 私はAracelyといいます
+  hoc2018_mc_homepage_hoc_coming: Hour of Code(1時間プログラミング)は間もなく利用可能です。
+  hoc2018_mc_homepage_what_create: 何を作りますか。
   hoc2018_mc_homepage_join_us: 参加しませんか
   hoc2018_mc_homepage_try_it: 挑戦してみる
+  hoc2018_mc_back_journey: Hour of Code（1時間プログラミング）に向けて、マインクラフトの最新アクティビティが出来上がりました。プログラミングを使ってマインクラフトの旅へ
+  hoc2018_mc_teacher_guide: 教師用ガイドを表示
   hoc2018_mc_continue_learning: マインクラフトで学習をつづける
   hoc2018_mc_go_to_mc_education: マインクラフト　エデュケーションへ
   hoc2018_mc_short_description: 創造性と問題解決スキルを発揮して、プログラムの力でお宝を探して水中世界を探検しましょう。
   hoc2018_mc_short_description_shorter: 創造性と問題解決スキルを発揮して、プログラムで水中世界を探検し構築しましょう。
+  hoc2018_dance_party_main_heading: ダンスパーティー
+  hoc2018_dance_create_your_own_dance_title: 自分だけのダンスパーティーを作成しよう
+  hoc2018_dance_party_box_title: ダンスパーティー
+  hoc2018_dance_party_box_description: ダンスパーティーをプログラムして友達と共有しましょう。
   hoc2018_dance_party_button: 始める
+  hoc2018_dance_keep_on_dancing_box_title: ダンスを続ける
+  hoc2018_dance_keep_on_dancing_description: 最初の 1 時間を越えて、応用編のプロジェクトのアイデアを活用しよう。
+  hoc2018_dance_keep_on_dancing_button: パート 2を開始する
+  hoc2018_dance_teacher_resources_title: 教師向けのリソース
+  hoc2018_dance_teacher_resources_tile1_description: レッスンプラン、証明書、音楽のフィルタリング。
   hoc2018_dance_teacher_resources_tile1_button: 学習計画
+  hoc2018_dance_teacher_resources_tile2_title: ダンスパーティーアンプラグド
+  hoc2018_dance_teacher_resources_tile2_description: コンピューター不要! プログラミングの概念を学んで、一緒にダンスパーティーの振り付をしよう。
   hoc2018_dance_teacher_resources_tile2_button: アンプラグド　アクティビティ
   hoc2018_dance_amazon_about_future_engineer_button: もっと詳しく知る
   hoc2018_dance_amazon_scholarship_programs_button: 今すぐ申し込む
+  hoc2018_dance_measure: 小節
+  hoc2018_dance_measure_colon: '小節:'

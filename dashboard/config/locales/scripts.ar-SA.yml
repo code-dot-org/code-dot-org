@@ -1159,8 +1159,8 @@ ar:
               name: ساعة البرمجة ماين كرافت
           title: 'ماين كرافت: رحلة البطل'
           description_short: ماين كرافت عادت بنشاط جديد من انشطة ساعة من البرمجة!
-          description: ماين كرافت عادت لساعة من البرمجة بنشاط جديد! رحلة في عالم ماين
-            كرافت مع البرمجة.
+          description: عاد Minecraft بأنشطة جديدة تمامًا ومخصصة لساعة من البرمجة!
+            رحلة عبر Minecraft مع البرمجة.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1362,10 +1362,29 @@ ar:
           stages:
             Artist:
               name: الرسام
+        dance:
+          stages:
+            Dance Party:
+              name: حفلة رقص
+          title: حفلة رقص
+          description_short: تحييها كاتي بيري ومادونا وجيه بالفين وسيا وكيث أوربان
+            وسيارا و 25 شخصية أخرى!
+          description: برمِج حفلة الرقص الخاصة بك لمشاركتها مع أصدقائك.
         frozen-2018-test-b:
           stages:
             Artist:
               name: الرسام
+        dance--draft:
+          stages:
+            Dance Party:
+              name: حفلة رقص
+        dance-draft:
+          stages:
+            Dance Party:
+              name: حفلة رقص
+        dance-extras:
+          title: استمر في الرقص
+          description: تجاوز الساعة الأولى بأفكار مشاريع موسعة.
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1376,3 +1395,55 @@ ar:
               name: المتغيرات المغلف
             For Loop Fun:
               name: حلقة فور، مرح
+            The Artist:
+              name: الاعب
+        dance-low:
+          stages:
+            Dance Party:
+              name: حفلة رقص
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: برمجة السباق
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            Digital Citizenship:
+              name: المواطنة الرقمية
+            'Unplugged: Binary':
+              name: 'موصول: ثنائي'
+            Artist Binary:
+              name: ثنائي الفنان
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: بناء قاعدة
+            Nested Loops:
+              name: الحلقات المتداخلة
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            Conditionals:
+              name: الجمل الشرطية
+            Internet:
+              name: الإنترنت
+            Crowdsourcing:
+              name: حشد المصادر
+        express-2019:
+          stages:
+            Relay Programming:
+              name: برمجة السباق
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            Envelope Variables:
+              name: المتغيرات المغلف
+            For Loop Fun:
+              name: حلقة فور، مرح
+            Binary Bracelets:
+              name: أساور الثنائية
+            'Unplugged: Binary':
+              name: 'موصول: ثنائي'
+            Artist Binary:
+              name: ثنائي الفنان
+            Internet:
+              name: الإنترنت
+            Crowdsourcing:
+              name: حشد المصادر

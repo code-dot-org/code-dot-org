@@ -1738,8 +1738,8 @@ ru:
           title: 'Майнкрафт: Путешествие Героя'
           description_short: Майнкрафт снова с вами и предлагает выполнить новые задания
             за Час Кода!
-          description: Майнкрафт возвращается с новыми заданиями для Часа Кода! Путешествуй
-            и программируй с Майнкрафт.
+          description: Возвращение Minecraft с новыми возможностями на «Час кода»!
+            Путешествие по миру программирования с Minecraft.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -2107,6 +2107,9 @@ ru:
             Dance Party:
               name: Танцевальная вечеринка
           title: Танцевальная вечеринка
+          description_short: Участвуют Кэти Перри, Мадонна, Джей Бальвин, Сиа, Кит
+            Урбан, Кьяра и еще 25 звезд!
+          description: Создавайте свой собственный танец и делитесь им с друзьями.
         frozen-2018-test-b:
           stages:
             Artist:
@@ -2119,6 +2122,10 @@ ru:
           stages:
             Dance Party:
               name: Танцевальная вечеринка
+        dance-extras:
+          title: Продолжайте танцевать
+          description: Дополнительные идеи для проектов уведут вас за пределы первого
+            часа.
         coursef-2019:
           description_audience: 'Возраст: 9-13'
           stages:
@@ -2136,7 +2143,81 @@ ru:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
+            The Artist:
+              name: Художник
         dance-low:
           stages:
             Dance Party:
               name: Танцевальная вечеринка
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Эстафетное программирование
+            Loops in Artist:
+              name: Циклы в исполнителе Художник
+            Nested Loops in Bee:
+              name: Вложенные циклы в Пчеле
+            Nested Loops in Artist:
+              name: Вложенные циклы в Художнике
+            While Loops in Farmer:
+              name: Цикл while в Фермере
+            Conditionals with Cards:
+              name: Условные выражения с картами
+            Digital Citizenship:
+              name: Цифровое гражданство
+            'Unplugged: Binary':
+              name: 'Урок без компьютера: Двоичный'
+            Artist Binary:
+              name: 'Художник: двоичная система'
+        coursee-2019:
+          description_audience: 'Возраст: 8-12'
+          stages:
+            Building a Foundation:
+              name: Создание основы
+            Loops in Artist:
+              name: Циклы в исполнителе Художник
+            Nested Loops:
+              name: Вложенные циклы
+            Conditionals with Cards:
+              name: Условные выражения с картами
+            Conditionals:
+              name: Условные команды
+            Internet:
+              name: интернет
+            Crowdsourcing:
+              name: Краудсорсинг
+            Nested Loops in Bee:
+              name: Вложенные циклы в Пчеле
+            Nested Loops in Artist:
+              name: Вложенные циклы в Художнике
+        express-2019:
+          description_audience: 'Возраст: 9-18'
+          stages:
+            Relay Programming:
+              name: Эстафетное программирование
+            Loops in Artist:
+              name: Циклы в исполнителе Художник
+            Nested Loops in Bee:
+              name: Вложенные циклы в Пчеле
+            While Loops in Farmer:
+              name: Цикл while в Фермере
+            Conditionals with Cards:
+              name: Условные выражения с картами
+            Envelope Variables:
+              name: Конвертные переменные
+            For Loop Fun:
+              name: Игры с циклами
+            For Loops in Bee:
+              name: Цикл for в Пчеле
+            For Loops in Artist:
+              name: Цикл for в Художнике
+            Binary Bracelets:
+              name: Двоичные браслеты
+            'Unplugged: Binary':
+              name: 'Урок без компьютера: Двоичный'
+            Artist Binary:
+              name: 'Художник: двоичная система'
+            Internet:
+              name: интернет
+            Crowdsourcing:
+              name: Краудсорсинг

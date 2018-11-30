@@ -379,9 +379,13 @@ km:
         \r\n\r\nAvoid TNT or feathers will fly!"
       courseC_maze_programming4_2018: "*\"Trace the path and lead me to\nthe silly
         pig.\"* \r\n\r\nAvoid TNT or feathers will fly!"
+      courseC_maze_programming4_2019: "*\"Trace the path and lead me to\nthe silly
+        pig.\"* \r\n\r\nAvoid TNT or feathers will fly!"
       courseC_maze_programming5: "*\"Follow this path to get me to\nthe pig!\"*\\\r\n\\\r\nAvoid
         the TNT."
       courseC_maze_programming5_2018: "*\"Follow this path to get me to\nthe pig!\"*\\\r\n\\\r\nAvoid
+        the TNT."
+      courseC_maze_programming5_2019: "*\"Follow this path to get me to\nthe pig!\"*\\\r\n\\\r\nAvoid
         the TNT."
       courseD_bee_conditionals1: "*\"This cloud is\nblocking my view!\"*\\\r\n\\\r\nCheck
         to see if there's a flower under the cloud.\nIf there's a flower, get nectar."
@@ -391,14 +395,22 @@ km:
       courseD_bee_conditionals10_2018: "Conditionals can be helpful,\neven when you
         know exactly what is in each spot!\\\r\n\\\r\nCollect all of the\nnectar and
         make all of the honey."
+      courseD_bee_conditionals10_2019: "Conditionals can be helpful,\neven when you
+        know exactly what is in each spot!\\\r\n\\\r\nCollect all of the\nnectar and
+        make all of the honey."
       courseD_bee_conditionals1_predict1: "*\"This cloud is\nblocking my view!\"*\\\r\n\\\r\nCheck
         to see if there's a flower under the cloud.\nIf there's a flower, get nectar."
       courseD_bee_conditionals1_predict1_2018: "*\"This cloud is\nblocking my view!\"*\\\r\n\\\r\nCheck
+        to see if there's a flower under the cloud.\nIf there's a flower, get nectar."
+      courseD_bee_conditionals1_predict1_2019: "*\"This cloud is\nblocking my view!\"*\\\r\n\\\r\nCheck
         to see if there's a flower under the cloud.\nIf there's a flower, get nectar."
       courseD_bee_conditionals4: "In this puzzle, we know that\nevery flower has exactly
         one nectar, but the flowers aren't spaced evenly.\\\r\n\\\r\nGet\nall of the
         nectar using as few blocks as possible."
       courseD_bee_conditionals4_2018: "In this puzzle, we know that\nevery flower
+        has exactly one nectar, but the flowers aren't spaced evenly.\\\r\n\\\r\nGet\nall
+        of the nectar using as few blocks as possible."
+      courseD_bee_conditionals4_2019: "In this puzzle, we know that\nevery flower
         has exactly one nectar, but the flowers aren't spaced evenly.\\\r\n\\\r\nGet\nall
         of the nectar using as few blocks as possible."
       courseD_maze_ramp4: "*\"Trace the path and lead me to\nthe silly pig.\"* \r\n\r\nAvoid
@@ -2707,6 +2719,8 @@ km:
       grade2_collector_10: "You're almost done!  \r\n\r\nCollect\nas many pieces of
         treasure as you can to finish the stage!"
       grade2_collector_10_2018: "You're almost done!  \r\n\r\nCollect\nas many pieces
+        of treasure as you can to finish the stage!"
+      grade2_collector_10_2019: "You're almost done!  \r\n\r\nCollect\nas many pieces
         of treasure as you can to finish the stage!"
       grade2_collector_3: "*\"Sequence matters!\"*\\\r\n\\\r\nThe\nblocks you need
         are already in the workspace, but not connected.  Put these\nblocks in order

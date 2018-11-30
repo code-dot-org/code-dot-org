@@ -112,6 +112,10 @@ fi:
         options:
           EFFECT:
             '"none"': Ei mitään
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': Ei mitään
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -131,6 +135,10 @@ fi:
             '0.5': slow
             '0.25': very slow
       Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Ei mitään
+      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
             '"none"': Ei mitään
@@ -274,6 +282,15 @@ fi:
           LOCATION:
             "{x: 100, y: 200}": vasemmalle
             "{x: 300, y: 200}": oikealle
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": vasemmalle
+            "{x: 300, y: 200}": oikealle
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': kaikki
       Mikelab_getProp:
         options:
           PROPERTY:

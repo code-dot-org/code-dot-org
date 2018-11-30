@@ -10,7 +10,7 @@ nn:
         desc: Uten anna enn penn og papir kan elevane lære seg de fire stega i tenkemåten innan programmering. Etter ein kort introduksjon, bør elevane delast inn i grupper der dei må lage instruksjonar for korleis andre elevar skal teikne eit bestemt monster (frå ein kataolog av utvalde monster). Heile oppgåva må brytast ned, så gruppene kan analysere alle monstrene i kataologen for mønstere, abstrahere forskjellige detaljer fra monstrene for å så bruke den informasjonen til å lage ei algoritme (en rekkje instruksjonar) til eit anna lag som skal teikne monsteret. Lagane skal så byte algoritmer med en annan gruppe og teikne monsteret basert på kva algoritma indikerer. Er teikninga slik det opprinnelige laget tenkte seg?
       Unplug3:
         title: Programmering på millimeterpapir
-        desc: Ved å programmere kvarandre til å teikne bilder, vil elevane begynne å forstå kva programmering eigentleg går ut på. Leksjonen vil starte med at elevar instruerer kvarandre til å fargelegge firkantar på millimeterpapir for å reprodusere eit eksisterande bilde. Hvis det blir tid til det, kan timen avsluttast med bilder som elevane lagar sjølv.
+        desc: Ved å programmere kvarandre til å teikne bilder, vil elevane begynne å forstå kva programmering eigentleg går ut på. Leksjonen vil starte med at elevar instruerer kvarandre til å fargelegge kvadrat på millimeterpapir for å reprodusere eit eksisterande bilde. Hvis det blir tid til det, kan timen avsluttast med bilete som elevane lagar sjølv.
       Unplug4:
         title: Algoritmer
         desc: Denne leksjonen dekkjer algoritmer.  Ved å bruke tangram figurar og millimeterpapir, viser den første øvelsen kor viktig det er å gjere kvar instruksjon så klart og tydeleg som mulig.  Etterpå vil leksjonen utforske kor mange måtar du kan brette papir til et rektangel, og leggje merke til korleis nokre metodar brukar fleire eller ferre brett enn andre.
@@ -84,7 +84,7 @@ nn:
         title: Låtskriving
         desc: Elevar bruker konseptet med refrenget i ein song for å lære om å definere og kalle på funksjonar.
       DiceRace:
-        title: 'Verkelige algoritmar: Terningrace'
+        title: 'Verkelige algoritmar: Terningkamp'
         desc: Denne leksjonen viser måtar vi brukar algoritmar i det daglege. Som ein del av dette, vil elevane identifisere og skrive ned algoritmen for terningracet.
       Internet:
         title: Internett
@@ -134,22 +134,22 @@ nn:
       courseA_unplugged_loops:
         desc: I denne oppgåve skal du lære om løkker!
       courseB_unplugged_MRF:
-        title: Aktivitet utan datamaskinar
+        title: Aktivitet utan datamaskiner
         desc: I denne oppgåva skal du 'programmere' venene dine!
       courseB_unplugged_loopyMRF:
-        title: Aktivitet utan datamaskinar
+        title: Aktivitet utan datamaskiner
         desc: Akkurat som i "Mine robotvener" skal du "programmere" venene dine, men denne gongen med løkker!
       courseC_Unplugged_ScreenOutTheMean:
-        title: Aktivitet utan datamaskinar
+        title: Aktivitet utan datamaskiner
         desc: I dag skal du lære kva du skal gjere om nokon er slemme på nett.
       courseD_unplugged_digitalCitizenship:
-        title: Aktivitet utan datamaskinar
+        title: Aktivitet utan datamaskiner
         desc: I dag skal du lære kva det vil seie å vere ein digital borgar.
       courseE_unplugged_privateInformation:
         title: 'Opplæring i sunn fornuft: Privat og personleg informasjon '
         desc: I dag vil du lære skilnaden mellom privat og personleg informasjon!
       courseF_unplugged_powerOfWords:
-        title: Aktivitet utan datamaskinar
+        title: Aktivitet utan datamaskiner
         desc: I dag skal du lære kva du skal gjere om nokon er slemme på nett.
       deeper learning description:
         desc: 'oversetting manglar: en-US.data.unplugged.desc'
@@ -193,7 +193,7 @@ nn:
         title: Binære bilete
         desc: Selv om mange tenker på binærsystemet som kun 0 og 1, viser det førre kurset vårt at den informasjonen kan bli representert i ei rekke av binære alternativer. Denne leksjonen tar det konseptet eit steg vidare då det illustrerer korleis ei datamaskin kan lagre enda meir kompleks informasjon (som til dømes bilete og fargar) binært óg.
       courseE_unplugged_diceRace:
-        title: 'Verkelige algoritmar: Terningrace'
+        title: 'Verkelige algoritmar: Terningkamp'
         desc: Denne leksjonen viser måtar vi brukar algoritmar i det daglege. Som ein del av dette, vil elevane identifisere og skrive ned algoritmen for terningracet.
       courseE_unplugged_songwritingParameters:
         title: Låtskriving med parameter
@@ -245,10 +245,10 @@ nn:
         title: Programmering på millimeterpapir
         desc: Elevene nyttar forhåndsbestemte kommandoar til å lage ei algoritme (ei samling med instruksjonar) for å styre klassekameratane sine til å lage e teikning.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Aktivitet utan datamaskinar
+        title: Aktivitet utan datamaskiner
         desc: I dag skal du lære kva det vil seie å vere ein digital borgar.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Aktivitet utan datamaskinar
+        title: Aktivitet utan datamaskiner
         desc: I dag skal du lære kva du skal gjere om nokon er slemme på nett.
       Conditionals_2018:
         title: Betingelser
@@ -277,3 +277,26 @@ nn:
       Conditionals_2019:
         title: Betingelser
         desc: For å lære om betinga instruksjonar skal elevane spele eit kortspill og lage reglar som "Viss eg trekk eit raudt kort, får eg eit poeng" og "Viss eg trekk eit svart kort, får du poeng."
+      GraphPaperProgramming_2019:
+        title: Programmering på millimeterpapir
+        desc: Elevene nyttar forhåndsbestemte kommandoar til å lage ei algoritme (ei samling med instruksjonar) for å styre klassekameratane sine til å lage e teikning.
+      RelayProgramming_2018_2019:
+        title: Programmeringsstafett
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Aktivitet utan datamaskiner
+        desc: I dag skal du lære kva det vil seie å vere ein digital borgar.
+      BinaryImages_2019:
+        title: Binære bilete
+        desc: Selv om mange tenker på binærsystemet som kun 0 og 1, viser det førre kurset vårt at den informasjonen kan bli representert i ei rekke av binære alternativer. Denne leksjonen tar det konseptet eit steg vidare då det illustrerer korleis ei datamaskin kan lagre enda meir kompleks informasjon (som til dømes bilete og fargar) binært óg.
+      GettingLoopy_2019:
+        title: Me blir sløyfete
+        desc: Denne leksjonen introduserer programmeringskonseptet løkker (gjentatt instruksjon) gjennom ein danseaktivitet. Elevane vil lære enkel koreografi, og deretter bli bedt om å gjenta den.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Aktivitet utan datamaskiner
+        desc: I dag skal du lære kva du skal gjere om nokon er slemme på nett.
+      BigEvent_2019:
+        title: Den store hendinga
+        desc: Eleven blir introdusert for programmeringskonseptet "hending" som er handlingar som datamaskina overvåkar. Læraren trykker på knappar på ein papirfjernkontroll og elevane svarer basert på kva knapp som er trykka på.
+      BinaryBracelets_2019:
+        title: Binær armbånd
+        desc: Elevene skal lage armbånd som ein binær representasjon av den første bokstaven i navnet sitt. Elevane lærar at data kan bli representert og lagra på meir enn ein måte.

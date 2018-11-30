@@ -77,7 +77,7 @@ lv:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nejaušs
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -272,6 +272,11 @@ lv:
           PROPERTY:
             '"scale"': izmērs
       Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": pa kreisi
+            "{x: 300, y: 200}": pa labi
+      Mikelab_createNewSprite2:
         options:
           LOCATION:
             "{x: 100, y: 200}": pa kreisi

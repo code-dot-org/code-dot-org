@@ -39,11 +39,15 @@ ro:
         options:
           GROUP:
             sprites: toate
+          MOVE:
+            '"rand"': Aleatoriu
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
+          MOVE:
+            '"rand"': Aleatoriu
           DIR:
             '1': "→"
             "-1": "←"
@@ -149,7 +153,15 @@ ro:
             '"disco"': Discotecă
             '"rainbow"': Curcubeu
             '"diamonds"': Diamante
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": Aleatoriu
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": Aleatoriu
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"rand"': Aleatoriu
+            '"color_cycle"': Curcubeu
+            '"diamonds"': Diamante
+            '"rainbow"': Curcubeu
+            '"disco"': Discotecă
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -172,6 +184,10 @@ ro:
         options:
           EFFECT:
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": Aleatoriu
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"rand"': Aleatoriu
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -493,6 +509,21 @@ ro:
             "{x: 100, y: 300}": stânga jos
             "{x: 300, y: 300}": dreapta jos
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatoriu
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": stânga
+            "{x: 300, y: 200}": dreapta
+            "{x: 200, y: 200}": centru
+            "{x: 100, y: 100}": stânga sus
+            "{x: 300, y: 100}": dreapta sus
+            "{x: 100, y: 300}": stânga jos
+            "{x: 300, y: 300}": dreapta jos
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatoriu
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': toate
       Mikelab_getProp:
         options:
           PROPERTY:

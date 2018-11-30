@@ -745,13 +745,6 @@ zh-TW:
           **可選挑戰**
 
           在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 事件之下，連接新的程式積木，以在歌曲期間的不同時間點變更背景效果。
-      Dance_Party_05_authored_hint:
-        validation: |-
-          **我如何通過此層級？**
-
-          * 您的舞蹈必須在歌曲的前 12 個小節當中執行不同的動作。
-
-          *此層級在 12 個小節後結束。*
       Dance_Party_06_authored_hint:
         validation: |-
           **我如何通過此層級？**
@@ -800,7 +793,7 @@ zh-TW:
           * 兩個或更多的舞者屬性必須變更。
 
           *此層級在 8 個小節後結束。*
-      Dance_Party_11.5_authored_hint:
+      Dance_Party_11.5_test_authored_hint:
         validation: |-
           **我如何通過此層級？**
 
@@ -808,6 +801,13 @@ zh-TW:
 
           *此層級在 8 個小節後結束。*
       Dance_Party_11_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+
+          * 發揮創意即可！
+
+          *此層級在 8 個小節後結束。*
+      Dance_Party_11_5_authored_hint:
         validation: |-
           **我如何通過此層級？**
 
@@ -1151,16 +1151,26 @@ zh-TW:
         mc_8_a: 你可以走幾條路。哪條是最短的？
         mc_8_b: 使用“重複”循環來簡化代碼。
         mc_8_c: 你的目標是進入屏幕頂端的房子的門口。
+      Overworld Avoid Monsters_2019_authored_hint:
+        mc_8_a: 你可以走幾條路。哪條是最短的？
+        mc_8_b: 使用“重複”循環來簡化代碼。
+        mc_8_c: 你的目標是進入屏幕頂端的房子的門口。
       Overworld Chop Tree_authored_hint:
         mc_2_a: 你需要“前進”兩次才能站在樹前。
         mc_2_b: "“銷毀程式積木”命令會把你面前的樹砍倒。"
       Overworld Chop Tree_2018_authored_hint:
         mc_2_a: 你需要“前進”兩次才能站在樹前。
         mc_2_b: "“銷毀程式積木”命令會把你面前的樹砍倒。"
+      Overworld Chop Tree_2019_authored_hint:
+        mc_2_a: 你需要“前進”兩次才能站在樹前。
+        mc_2_b: "“銷毀程式積木”命令會把你面前的樹砍倒。"
       Overworld Chop Trees_authored_hint:
         mc_4_a: 你可以按任何順序砍伐樹木。哪條路徑佔用最小的程式積木？
         mc_4_b: "“銷毀程式積木”命令會把你面前的樹砍倒。"
       Overworld Chop Trees_2018_authored_hint:
+        mc_4_a: 你可以按任何順序砍伐樹木。哪條路徑佔用最小的程式積木？
+        mc_4_b: "“銷毀程式積木”命令會把你面前的樹砍倒。"
+      Overworld Chop Trees_2019_authored_hint:
         mc_4_a: 你可以按任何順序砍伐樹木。哪條路徑佔用最小的程式積木？
         mc_4_b: "“銷毀程式積木”命令會把你面前的樹砍倒。"
       Overworld House Frame Chosen_authored_hint:
@@ -1171,10 +1181,17 @@ zh-TW:
         mc_6_a: 單擊“位置”程式積木的箭頭，選擇要放置的內容。
         mc_6_b: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
         mc_6_c: 您可以在“重複”循環中放入多個程式積木。
+      Overworld House Frame Chosen_2019_authored_hint:
+        mc_6_a: 單擊“位置”程式積木的箭頭，選擇要放置的內容。
+        mc_6_b: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
+        mc_6_c: 您可以在“重複”循環中放入多個程式積木。
       Overworld Move to Sheep_authored_hint:
         mc_1_a: "“前進”程式積木在工具箱的頂部。"
         mc_1_b: 確保兩個“向前移動”程式積木在“運行”程式積木的時候被捕捉了。
       Overworld Move to Sheep_2018_authored_hint:
+        mc_1_a: "“前進”程式積木在工具箱的頂部。"
+        mc_1_b: 確保兩個“向前移動”程式積木在“運行”程式積木的時候被捕捉了。
+      Overworld Move to Sheep_2019_authored_hint:
         mc_1_a: "“前進”程式積木在工具箱的頂部。"
         mc_1_b: 確保兩個“向前移動”程式積木在“運行”程式積木的時候被捕捉了。
       Overworld Place Wall_authored_hint:
@@ -1182,6 +1199,10 @@ zh-TW:
         mc_5_b: 確保兩個塊都在“重複”循環的內部，以便多次運行代碼。
         mc_5_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       Overworld Place Wall_2018_authored_hint:
+        mc_5_a: 先使用“放置”程式積木，然後使用“移動”程式積木。
+        mc_5_b: 確保兩個塊都在“重複”循環的內部，以便多次運行代碼。
+        mc_5_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
+      Overworld Place Wall_2019_authored_hint:
         mc_5_a: 先使用“放置”程式積木，然後使用“移動”程式積木。
         mc_5_b: 確保兩個塊都在“重複”循環的內部，以便多次運行代碼。
         mc_5_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
@@ -1193,10 +1214,17 @@ zh-TW:
         mc_7_a: 使用“植物作物”程式積木在你站立的地方種植作物。
         mc_7_b: 兩條帶深棕色的土地都需要種滿莊稼。
         mc_7_c: 您可以在“重複”循環中放入多個程式積木。
+      Overworld Plant Crops_2019_authored_hint:
+        mc_7_a: 使用“植物作物”程式積木在你站立的地方種植作物。
+        mc_7_b: 兩條帶深棕色的土地都需要種滿莊稼。
+        mc_7_c: 您可以在“重複”循環中放入多個程式積木。
       Overworld Powered Minecart_authored_hint:
         mc_13_a: 在你所站的廣場上使用“放置鐵路”鋪設鐵路。
         mc_13_b: 使用“重複”循環來縮短代碼。
       Overworld Powered Minecart_2018_authored_hint:
+        mc_13_a: 在你所站的廣場上使用“放置鐵路”鋪設鐵路。
+        mc_13_b: 使用“重複”循環來縮短代碼。
+      Overworld Powered Minecart_2019_authored_hint:
         mc_13_a: 在你所站的廣場上使用“放置鐵路”鋪設鐵路。
         mc_13_b: 使用“重複”循環來縮短代碼。
       Overworld Shear Sheep_authored_hint:
@@ -1204,6 +1232,10 @@ zh-TW:
         mc_3_b: 如果你需要改變你面對的方式，那就用“轉動”程式積木。
         mc_3_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       Overworld Shear Sheep_2018_authored_hint:
+        mc_3_a: "“剪切”程式積木把羊放在你的前面。你面對著羊群嗎?"
+        mc_3_b: 如果你需要改變你面對的方式，那就用“轉動”程式積木。
+        mc_3_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
+      Overworld Shear Sheep_2019_authored_hint:
         mc_3_a: "“剪切”程式積木把羊放在你的前面。你面對著羊群嗎?"
         mc_3_b: 如果你需要改變你面對的方式，那就用“轉動”程式積木。
         mc_3_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
@@ -1227,11 +1259,18 @@ zh-TW:
       Underground Avoiding Lava_2018_authored_hint:
         mc_11_a: 所有的代碼都是用來檢查熔岩並處理它的。您所需要做的就是添加一個程式積木來移動。
         mc_11_b: 你的“前進”命令是否應該進入“if”語句或之後再進入？
+      Underground Avoiding Lava_2019_authored_hint:
+        mc_11_a: 所有的代碼都是用來檢查熔岩並處理它的。您所需要做的就是添加一個程式積木來移動。
+        mc_11_b: 你的“前進”命令是否應該進入“if”語句或之後再進入？
       Underground If Statements_authored_hint:
         mc_12_a: 紅色斑點的空間是你找到紅石的地方。
         mc_12_b: 你能使用“重複”循環來縮短你的代碼嗎?
         mc_12_c: '使用“if”語句檢查熔岩空間，然後放置鵝卵石。 '
       Underground If Statements_2018_authored_hint:
+        mc_12_a: 紅色斑點的空間是你找到紅石的地方。
+        mc_12_b: 你能使用“重複”循環來縮短你的代碼嗎?
+        mc_12_c: '使用“if”語句檢查熔岩空間，然後放置鵝卵石。 '
+      Underground If Statements_2019_authored_hint:
         mc_12_a: 紅色斑點的空間是你找到紅石的地方。
         mc_12_b: 你能使用“重複”循環來縮短你的代碼嗎?
         mc_12_c: '使用“if”語句檢查熔岩空間，然後放置鵝卵石。 '
@@ -1243,11 +1282,19 @@ zh-TW:
         mc_10_a: 鐵塊是火炬背後的斑點空間！你打算怎麼去那兒？
         mc_10_b: 當你站在熔岩邊緣的時候，用“將鵝卵石放在前面”就能使路線安全。然後，你就可以走過去了。
         mc_10_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
+      Underground Iron_2019_authored_hint:
+        mc_10_a: 鐵塊是火炬背後的斑點空間！你打算怎麼去那兒？
+        mc_10_b: 當你站在熔岩邊緣的時候，用“將鵝卵石放在前面”就能使路線安全。然後，你就可以走過去了。
+        mc_10_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       Underground Mining Coal_authored_hint:
         mc_9_a: 你面對的是正確的方式嗎?“破壞程式積木”把你前面的程式積木埋起來。
         mc_9_b: 牆上的黑點是煤！用“摧毀程式積木”來開採煤炭。
         mc_9_c: 用“放置火炬”把火炬放在你站的地方。
       Underground Mining Coal_2018_authored_hint:
+        mc_9_a: 你面對的是正確的方式嗎?“破壞程式積木”把你前面的程式積木埋起來。
+        mc_9_b: 牆上的黑點是煤！用“摧毀程式積木”來開採煤炭。
+        mc_9_c: 用“放置火炬”把火炬放在你站的地方。
+      Underground Mining Coal_2019_authored_hint:
         mc_9_a: 你面對的是正確的方式嗎?“破壞程式積木”把你前面的程式積木埋起來。
         mc_9_b: 牆上的黑點是煤！用“摧毀程式積木”來開採煤炭。
         mc_9_c: 用“放置火炬”把火炬放在你站的地方。
@@ -2752,9 +2799,14 @@ zh-TW:
       courseC_maze_debugging_challenge1_2018_authored_hint:
         courseC_maze_debugging_challenge1_a: 左邊還是右邊？你決定就好！
         courseC_maze_debugging_challenge1_b: 鼠奎特走的路徑是個四邊形！所以每次都轉向同要是同一邊！
+      courseC_maze_debugging_challenge1_2019_authored_hint:
+        courseC_maze_debugging_challenge1_a: 左邊還是右邊？你決定就好！
+        courseC_maze_debugging_challenge1_b: 鼠奎特走的路徑是個四邊形！所以每次都轉向同要是同一邊！
       courseC_maze_debugging_challenge2_authored_hint:
         courseC_maze_debugging_challenge2_b: 如果你卡關了，你可以重頭開始，或者移除所有的程式碼後再試試別的方法！
       courseC_maze_debugging_challenge2_2018_authored_hint:
+        courseC_maze_debugging_challenge2_b: 如果你卡關了，你可以重頭開始，或者移除所有的程式碼後再試試別的方法！
+      courseC_maze_debugging_challenge2_2019_authored_hint:
         courseC_maze_debugging_challenge2_b: 如果你卡關了，你可以重頭開始，或者移除所有的程式碼後再試試別的方法！
       courseC_maze_loops6_authored_hint:
         courseC_maze_loops6_b: |-
@@ -2767,23 +2819,36 @@ zh-TW:
         courseC_maze_programming6_a: 有 2 個方法可以完成這個關卡！
       courseC_maze_programming6_2018_authored_hint:
         courseC_maze_programming6_a: 有 2 個方法可以完成這個關卡！
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: 有 2 個方法可以完成這個關卡！
       courseC_starWars_loops1_authored_hint:
         courseC_starWars_loops1_b: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       courseC_starWars_loops10_authored_hint:
         courseC_starWars_loops10_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       courseC_starWars_loops10_2018_authored_hint:
         courseC_starWars_loops10_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
+      courseC_starWars_loops10_2019_authored_hint:
+        courseC_starWars_loops10_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       courseC_starWars_loops1_2018_authored_hint:
+        courseC_starWars_loops1_b: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
+      courseC_starWars_loops1_2019_authored_hint:
         courseC_starWars_loops1_b: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       courseC_starWars_loops7_authored_hint:
         courseC_starWars_loops7_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       courseC_starWars_loops7_2018_authored_hint:
         courseC_starWars_loops7_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
+      courseC_starWars_loops7_2019_authored_hint:
+        courseC_starWars_loops7_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       courseC_starWars_loops9_authored_hint:
         course_starWars_loops9_b: 記得在一個重複迴圈裡你可以用多於一塊程式積木。
       courseC_starWars_loops9_2018_authored_hint:
         course_starWars_loops9_b: 記得在一個重複迴圈裡你可以用多於一塊程式積木。
+      courseC_starWars_loops9_2019_authored_hint:
+        course_starWars_loops9_b: 記得在一個重複迴圈裡你可以用多於一塊程式積木。
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
       courseD_artist_functions2_authored_hint:
@@ -2802,6 +2867,11 @@ zh-TW:
           試著用`跳躍-向前`積木，讓小藝術家在畫完一個正方形後，跳到下一個要開始的地方。
 
           如果你的正方形是 20 像素高，而且兩個正方形相隔 20 像素遠，你需要跳多遠？
+      courseD_artist_nestedLoops3_2019_authored_hint:
+        courseD_artist_nestedLoops3_a: |-
+          試著用`跳躍-向前`積木，讓小藝術家在畫完一個正方形後，跳到下一個要開始的地方。
+
+          如果你的正方形是 20 像素高，而且兩個正方形相隔 20 像素遠，你需要跳多遠？
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: 若要繪製一條邊，請用`移動向前 100 像素`積木，並把 100 改成 200。
         courseD_artist_ramp11b: 若要畫出 4 條邊，可以把`移動-向前 200 像素`積木放到重複迴圈裡，並設定重複次數為 4 次。
@@ -2813,6 +2883,11 @@ zh-TW:
 
           你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。
       courseD_bee_conditionals8_2018_authored_hint:
+        courseD_bee_conditionals8_a: |-
+          **記住：**這個關卡在每次運行時都會有變化。
+
+          你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。
+      courseD_bee_conditionals8_2019_authored_hint:
         courseD_bee_conditionals8_a: |-
           **記住：**這個關卡在每次運行時都會有變化。
 
@@ -2847,6 +2922,10 @@ zh-TW:
         courseE_artist_concept_challenge1_a: '這個半六邊形有一個**30 像素的邊**還有需要轉向**60 度**。  '
         courseE_artist_concept_challenge1_b: '這個 2/3 的三角形有一個**80 像素的邊**還有需要轉向**120
           度**。 '
+      courseE_artist_concept_challenge1_2019_authored_hint:
+        courseE_artist_concept_challenge1_a: '這個半六邊形有一個**30 像素的邊**還有需要轉向**60 度**。  '
+        courseE_artist_concept_challenge1_b: '這個 2/3 的三角形有一個**80 像素的邊**還有需要轉向**120
+          度**。 '
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: 正方形每邊都有 100 像素，這代表你需要向前移動 175 像素之後才能開始畫第二個正方形。
         courseE_artist_functions1_b: 畫出眼鏡時可以讓你的兩條線重疊沒關係。
@@ -2860,6 +2939,12 @@ zh-TW:
           - 向前移動 100 + 75 像素
           - 使用函式
       courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_a: |-
+          你的程式應該要：
+          - 使用函式
+          - 向前移動 100 + 75 像素
+          - 使用函式
+      courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: |-
           你的程式應該要：
           - 使用函式

@@ -3669,10 +3669,7 @@ ro:
           description_short: "[șir gol]"
           description: "[șir gol]"
         dance-extras:
-          title: "[șir gol]"
           description_audience: "[șir gol]"
-          description_short: "[șir gol]"
-          description: "[șir gol]"
         coursef-2019:
           description_short: Învățați toate conceptele din fundamentele informaticii
             şi creați propria dvs. artă, poveste sau joc.
@@ -3737,6 +3734,289 @@ ro:
             Pet Giraffe with Sprite Lab:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
+            The Artist:
+              name: Artistul
         dance-low:
           description_audience: "[șir gol]"
           description: "[șir gol]"
+        coursed-2019:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Introduction to Online Puzzles:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Relay Programming:
+              name: Programare de releu
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Debugging in Collector:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Events in Bounce:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Loops in Ice Age:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Loops in Artist:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Nested Loops in Bee:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Nested Loops in Artist:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Nested Loops in Frozen:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            While Loops in Farmer:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Until Loops in Maze:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Conditionals in Bee:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Conditionals & Loops in Harvester:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Digital Citizenship:
+              name: Cetățenia Digitală
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Build a Play Lab Game:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Unplugged: Binary':
+              name: 'Fără calculator: Binar'
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Artist Binary:
+              name: Binar cu artist
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        coursee-2019:
+          stages:
+            'Programming: My Robotic Friends':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Sequence in Maze:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Debugging with Scrat:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Programming in Artist:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Loops: My Loopy Robotic Friends':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Loops in Artist:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Nested Loops:
+              name: Repetiții imbricate
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Nested Loops with Frozen:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Conditionals:
+              name: Condiţionale
+            Functions in Minecraft:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Functions in Harvester:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Copyright and Creativity:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Learning Sprites with Sprite Lab:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Alien Dance Party with Sprite Lab:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Pet Giraffe with Sprite Lab:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Obţinând Informaţii/Critici
+        express-2019:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Programming in Maze:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Relay Programming:
+              name: Programare de releu
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Debugging in Maze:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Programming in Collector:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Programming in Artist:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Loops: Getting Loopy':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Loops with Rey and BB-8:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Loops in Artist:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Copyright and Creativity:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Concept Practice with Minecraft ':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Nested Loops in Bee:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Nested Loops in Frozen:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            While Loops in Farmer:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Until Loops in Maze:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Conditionals in Bee:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Conditionals & Loops in Harvester:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Functions: Songwriting':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Functions in Minecraft:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Functions in Harvester:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Functions in Artist:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Screen Out the Mean:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Determine the Concept:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Events: The Big Event':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Build a Flappy Game:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            The Power of Words:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Envelope Variables:
+              name: Variabile de tip plic
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Variables as Constant in Artist:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Variables that Change in Bee:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Variables that Change in Artist:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            For Loop Fun:
+              name: Pentru distracția cu bucle
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            For Loops in Bee:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            For Loops in Artist:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Learning Sprites with Sprite Lab:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Alien Dance Party with Sprite Lab:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Pet Giraffe with Sprite Lab:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Explore Project Ideas:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            The Design Process:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Build Your Project:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Revise Your Project:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Present Your Project:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Binary Bracelets:
+              name: Brăţări Binare
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Unplugged: Binary':
+              name: 'Fără calculator: Binar'
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Artist Binary:
+              name: Binar cu artist
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Internet:
+              name: Internet
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Crowdsourcing:
+              name: Obţinând Informaţii/Critici
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        csd1-2019:
+          description_audience: "[șir gol]"
+          stages:
+            CS Discoveries Pre-survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"

@@ -30,20 +30,21 @@ zh-TW:
             '"PINEAPPLE"': 所有鳳梨
             '"ROBOT"': 所有機器人
             '"SHARK"': 所有鯊魚
+            '"UNICORN"': 全部獨角獸
           MOVE:
-            MOVES.ClapHigh: 高舉擊掌
-            MOVES.Clown: 小丑
-            MOVES.Dab: 輕拍
-            MOVES.DoubleJam: 即興二重奏
-            MOVES.Drop: 掉落
-            MOVES.Floss: 跳牙線舞
-            MOVES.Fresh: 新鮮
-            MOVES.Roll: 滾動
-            MOVES.Kick: 踢
-            MOVES.ThisOrThat: 這個或那個
             '"next"': "（下一個）"
             '"prev"': "（上一個）"
             '"rand"': "（隨機）"
+            MOVES.Roll: 轉體
+            MOVES.ClapHigh: 高舉擊掌
+            MOVES.Dab: 輕拍
+            MOVES.DoubleJam: 踢躂舞
+            MOVES.Drop: 掉落
+            MOVES.Floss: 跳牙線舞
+            MOVES.Fresh: 新鮮
+            MOVES.Clown: 江南舞
+            MOVES.Kick: 星星舞
+            MOVES.ThisOrThat: 這個或那個
             MOVES.Rest: 無
           DIR:
             '1': "→"
@@ -52,19 +53,19 @@ zh-TW:
         text: "{SPRITE} 永遠進行 {MOVE} {DIR}"
         options:
           MOVE:
-            MOVES.ClapHigh: 高舉擊掌
-            MOVES.Clown: 小丑
-            MOVES.Dab: 輕拍
-            MOVES.DoubleJam: 即興二重奏
-            MOVES.Drop: 掉落
-            MOVES.Floss: 跳牙線舞
-            MOVES.Fresh: 新鮮
-            MOVES.Roll: 滾動
-            MOVES.Kick: 踢
-            MOVES.ThisOrThat: 這個或那個
             '"next"': "（下一個）"
             '"prev"': "（上一個）"
             '"rand"': "（隨機）"
+            MOVES.Roll: 轉體
+            MOVES.ClapHigh: 高舉擊掌
+            MOVES.Dab: 輕拍
+            MOVES.DoubleJam: 踢躂舞
+            MOVES.Drop: 掉落
+            MOVES.Floss: 跳牙線舞
+            MOVES.Fresh: 新鮮
+            MOVES.Clown: 江南舞
+            MOVES.Kick: 星星舞
+            MOVES.ThisOrThat: 這個或那個
             MOVES.Rest: 無
           DIR:
             '1': "→"
@@ -94,16 +95,18 @@ zh-TW:
             '"PINEAPPLE"': 所有鳳梨
             '"ROBOT"': 所有機器人
             '"SHARK"': 所有鯊魚
+            '"UNICORN"': 全部獨角獸
           MOVE:
+            '"rand"': "（隨機）"
+            MOVES.Roll: 轉體
             MOVES.ClapHigh: 高舉擊掌
-            MOVES.Clown: 小丑
             MOVES.Dab: 輕拍
-            MOVES.DoubleJam: 即興二重奏
+            MOVES.DoubleJam: 踢躂舞
             MOVES.Drop: 掉落
             MOVES.Floss: 跳牙線舞
             MOVES.Fresh: 新鮮
-            MOVES.Roll: 滾動
-            MOVES.Kick: 踢
+            MOVES.Clown: 江南舞
+            MOVES.Kick: 星星舞
             MOVES.ThisOrThat: 這個或那個
             MOVES.Rest: 無
           DIR:
@@ -113,15 +116,16 @@ zh-TW:
         text: "{SPRITE} 進行一次 {MOVE} {DIR}"
         options:
           MOVE:
+            '"rand"': "（隨機）"
+            MOVES.Roll: 轉體
             MOVES.ClapHigh: 高舉擊掌
-            MOVES.Clown: 小丑
             MOVES.Dab: 輕拍
-            MOVES.DoubleJam: 即興二重奏
+            MOVES.DoubleJam: 踢躂舞
             MOVES.Drop: 掉落
             MOVES.Floss: 跳牙線舞
             MOVES.Fresh: 新鮮
-            MOVES.Roll: 滾動
-            MOVES.Kick: 踢
+            MOVES.Clown: 江南舞
+            MOVES.Kick: 星星舞
             MOVES.ThisOrThat: 這個或那個
             MOVES.Rest: 無
           DIR:
@@ -175,14 +179,14 @@ zh-TW:
         options:
           DANCE:
             MOVES.ClapHigh: 高舉擊掌
-            MOVES.Clown: 小丑
+            MOVES.Clown: 江南舞
             MOVES.Dab: 輕拍
-            MOVES.DoubleJam: 即興二重奏
+            MOVES.DoubleJam: 踢躂舞
             MOVES.Drop: 掉落
             MOVES.Floss: 跳牙線舞
             MOVES.Fresh: 新鮮
-            MOVES.Roll: 滾動
-            MOVES.Kick: 踢
+            MOVES.Roll: 轉體
+            MOVES.Kick: 星星舞
             MOVES.ThisOrThat: 這個或那個
             MOVES.Rest: 無
       Dancelab_ifTime:
@@ -219,11 +223,16 @@ zh-TW:
             '"PINEAPPLE"': 所有鳳梨
             '"ROBOT"': 所有機器人
             '"SHARK"': 所有鯊魚
+            '"UNICORN"': 全部獨角獸
           FORMAT:
+            '"border"': 邊框
+            '"inner"': 正方形內部
             '"circle"': 圓形
             '"grid"': 網格
             '"row"': 列
             '"column"': 欄
+            '"x"': 十字交叉
+            '"plus"': 添加
             '"random"': 隨機
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -234,6 +243,7 @@ zh-TW:
             '"ALIEN"': 外星人
             '"BEAR"': 熊
             '"CAT"': 貓
+            '"DOG"': 狗
             '"DUCK"': 鴨子
             '"FROG"': 青蛙
             '"MOOSE"': 麋鹿
@@ -290,10 +300,14 @@ zh-TW:
             '"SHARK"': 鯊魚
             '"UNICORN"': 獨角獸
           LAYOUT:
+            '"border"': 邊框
+            '"inner"': 正方形內部
             '"circle"': 圓形
             '"grid"': 網格
             '"row"': 列
             '"column"': 欄
+            '"x"': 十字交叉
+            '"plus"': 添加
             '"random"': 隨機
       Dancelab_mixColors:
         text: 混合 {COLOR1} 和 {COLOR2}
@@ -317,7 +331,32 @@ zh-TW:
             '"disco"': 正方形
             '"rainbow"': 顏色
             '"diamonds"': 方塊
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": "（隨機）"
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "（隨機）"
+      Dancelab_setBackgroundEffectWithPalette:
+        text: 設定背景效果 {EFFECT} {PALETTE}
+        options:
+          EFFECT:
+            '"none"': 無
+            '"rand"': "（隨機）"
+            '"circles"': 隧道
+            '"diamonds"': 方塊
+            '"disco_ball"': 迪斯科球
+            '"kaleidoscope"': 萬花筒
+            '"lasers"': 鐳射舞池
+            '"splatter"': 油漆飛濺
+            '"rainbow"': 顏色
+            '"text"': 歌曲標題
+            '"sparkles"': 火花
+            '"disco"': 正方形
+            '"stars"': 星星
+          PALETTE:
+            '"rave"': 黑白
+            '"cool"': 藍調
+            '"default"': 光亮
+            '"neon"': 霓虹
+            '"tropical"': 熱帶
+            '"vintage"': 復古
+            '"warm"': 紅色
       Dancelab_setDanceSpeed:
         text: 將 {SPRITE} 舞蹈速度變更為 {SPEED}
         options:
@@ -341,6 +380,7 @@ zh-TW:
             '"PINEAPPLE"': 所有鳳梨
             '"ROBOT"': 所有機器人
             '"SHARK"': 所有鯊魚
+            '"UNICORN"': 全部獨角獸
           SPEED:
             '1': 普通
             '2': 快
@@ -355,6 +395,20 @@ zh-TW:
             '"rain"': 下雨
             '"raining_tacos"': 墨西哥捲餅
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "（隨機）"
+      Dancelab_setForegroundEffectExtended:
+        text: 設定前景效果 {EFFECT}
+        options:
+          EFFECT:
+            '"none"': 無
+            '"rand"': "（隨機）"
+            '"confetti"': 紙屑
+            '"hearts_red"': 心形
+            '"music_notes"': 音樂音符
+            '"pineapples"': 鳳梨
+            '"smiling_poop"': 船尾
+            '"rain"': 下雨
+            '"floating_rainbows"': 彩虹
+            '"raining_tacos"': 墨西哥捲餅
       Dancelab_setProp:
         text: '將 {SPRITE} {PROPERTY} 設定為 {VAL} '
         options:
@@ -381,6 +435,7 @@ zh-TW:
             '"PINEAPPLE"': 所有鳳梨
             '"ROBOT"': 所有機器人
             '"SHARK"': 所有鯊魚
+            '"UNICORN"': 全部獨角獸
           PROPERTY:
             '"scale"': 尺寸
             '"width"': 寬度
@@ -416,7 +471,10 @@ zh-TW:
             '"PINEAPPLE"': 所有鳳梨
             '"ROBOT"': 所有機器人
             '"SHARK"': 所有鯊魚
+      Dancelab_setTintInline:
+        text: 將 {SPRITE} 色調設定為 {VAL}
       Dancelab_setVisible:
+        text: 將 {SPRITE} 可見設置為 {VISIBILITY}
         options:
           VISIBILITY:
             'true': 可見
@@ -436,6 +494,7 @@ zh-TW:
             '"PINEAPPLE"': 所有鳳梨
             '"ROBOT"': 所有機器人
             '"SHARK"': 所有鯊魚
+            '"UNICORN"': 全部獨角獸
           VISIBILITY:
             'true': 可見
             'false': 不可見
@@ -640,6 +699,22 @@ zh-TW:
             "{x: 300, y: 100}": 右上
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": 頂端
+            "{x: 200, y: 300}": 底部
+            "{x: 100, y: 200}": 到左方
+            "{x: 300, y: 200}": 到右方
+            "{x: 200, y: 200}": 中心
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': 全部
       Mikelab_getProp:
         options:
           PROPERTY:

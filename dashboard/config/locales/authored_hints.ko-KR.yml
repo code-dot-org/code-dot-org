@@ -3562,13 +3562,6 @@ ko:
           **선택 과제**
 
           <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 이벤트 아래 있는 새로운 블록에 연결하여 노래 중간 여러 시점에 배경 효과를 변경하세요.
-      Dance_Party_05_authored_hint:
-        validation: |-
-          **이 단계를 어떻게 통과하나요?**
-
-          *노래의 첫 12마디 동안 댄스에 다양한 움직임이 수행되어야 합니다.
-
-          *이 단계는 12번째 마디 후에 끝납니다.*
       Dance_Party_06_authored_hint:
         validation: |-
           **이 단계를 어떻게 통과하나요?**
@@ -3617,7 +3610,7 @@ ko:
           * 댄서 두 명 이상의 속성을 변경해야 합니다.
 
           *이 단계는 8번째 마디 이후에 끝납니다.
-      Dance_Party_11.5_authored_hint:
+      Dance_Party_11.5_test_authored_hint:
         validation: |-
           **이 단계를 어떻게 통과하나요?**
 
@@ -3625,6 +3618,13 @@ ko:
 
           *이 단계는 8번째 마디 이후에 끝납니다.
       Dance_Party_11_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 창의력을 발휘하세요!
+
+          *이 단계는 8번째 마디 이후에 끝납니다.
+      Dance_Party_11_5_authored_hint:
         validation: |-
           **이 단계를 어떻게 통과하나요?**
 
@@ -4096,10 +4096,17 @@ ko:
         mc_8_a: 당신이 취할 수 있는 몇 가지 경로가 있습니다. 어느 것이 가장 짧습니까?
         mc_8_b: 코드를 단순화하려면`반복` 루프를 사용 하십시오.
         mc_8_c: 당신의 목표는 화면 상단의 집 출입구에 들어가는 것입니다.
+      Overworld Avoid Monsters_2019_authored_hint:
+        mc_8_a: 당신이 취할 수 있는 몇 가지 경로가 있습니다. 어느 것이 가장 짧습니까?
+        mc_8_b: 코드를 단순화하려면`반복` 루프를 사용 하십시오.
+        mc_8_c: 당신의 목표는 화면 상단의 집 출입구에 들어가는 것입니다.
       Overworld Chop Tree_authored_hint:
         mc_2_a: '나무 앞에서 두 번 ''앞으로 이동'' 움직여야 합니다.  '
         mc_2_b: "`블록 파괴하기` 명령은 여러분 앞에있는 나무를 자릅니다."
       Overworld Chop Tree_2018_authored_hint:
+        mc_2_a: '나무 앞에서 두 번 ''앞으로 이동'' 움직여야 합니다.  '
+        mc_2_b: "`블록 파괴하기` 명령은 여러분 앞에있는 나무를 자릅니다."
+      Overworld Chop Tree_2019_authored_hint:
         mc_2_a: '나무 앞에서 두 번 ''앞으로 이동'' 움직여야 합니다.  '
         mc_2_b: "`블록 파괴하기` 명령은 여러분 앞에있는 나무를 자릅니다."
       Overworld Chop Trees_authored_hint:
@@ -4108,10 +4115,16 @@ ko:
       Overworld Chop Trees_2018_authored_hint:
         mc_4_a: '어떤 순서로든 나무를 자를 수 있습니다. 어떤 경로가 가장 작은 블록 수를 차지합니까?  '
         mc_4_b: "`블록 파괴하기` 명령은 여러분 앞에있는 나무를 자릅니다."
+      Overworld Chop Trees_2019_authored_hint:
+        mc_4_a: '어떤 순서로든 나무를 자를 수 있습니다. 어떤 경로가 가장 작은 블록 수를 차지합니까?  '
+        mc_4_b: "`블록 파괴하기` 명령은 여러분 앞에있는 나무를 자릅니다."
       Overworld House Frame Chosen_authored_hint:
         mc_6_a: "'놓기'블록의 화살표를 클릭하여 놓을 항목을 선택하십시오."
         mc_6_c: 몇개의 블럭을 '반복'문 안에 놓을 수 있습니다.
       Overworld House Frame Chosen_2018_authored_hint:
+        mc_6_a: "'놓기'블록의 화살표를 클릭하여 놓을 항목을 선택하십시오."
+        mc_6_c: 몇개의 블럭을 '반복'문 안에 놓을 수 있습니다.
+      Overworld House Frame Chosen_2019_authored_hint:
         mc_6_a: "'놓기'블록의 화살표를 클릭하여 놓을 항목을 선택하십시오."
         mc_6_c: 몇개의 블럭을 '반복'문 안에 놓을 수 있습니다.
       Overworld Move to Sheep_authored_hint:
@@ -4120,10 +4133,16 @@ ko:
       Overworld Move to Sheep_2018_authored_hint:
         mc_1_a: "'앞으로 이동' 블럭은 도구 상자의 맨 위에 있습니다.  "
         mc_1_b: "'앞으로 이동` 블록이`실행하면` 블록에 붙여지는지 확인하십시오.  "
+      Overworld Move to Sheep_2019_authored_hint:
+        mc_1_a: "'앞으로 이동' 블럭은 도구 상자의 맨 위에 있습니다.  "
+        mc_1_b: "'앞으로 이동` 블록이`실행하면` 블록에 붙여지는지 확인하십시오.  "
       Overworld Place Wall_authored_hint:
         mc_5_a: "`놓기` 블록을 먼저 사용하고,`이동` 블록을 사용하십시오."
         mc_5_b: 코드를 두 번 이상 실행하려면 두 블록 모두`반복`문 안에 있어야 합니다.
       Overworld Place Wall_2018_authored_hint:
+        mc_5_a: "`놓기` 블록을 먼저 사용하고,`이동` 블록을 사용하십시오."
+        mc_5_b: 코드를 두 번 이상 실행하려면 두 블록 모두`반복`문 안에 있어야 합니다.
+      Overworld Place Wall_2019_authored_hint:
         mc_5_a: "`놓기` 블록을 먼저 사용하고,`이동` 블록을 사용하십시오."
         mc_5_b: 코드를 두 번 이상 실행하려면 두 블록 모두`반복`문 안에 있어야 합니다.
       Overworld Plant Crops_authored_hint:
@@ -4134,10 +4153,17 @@ ko:
         mc_7_a: "'작물 심기' 블럭을 이용하여 지금 서 있는 곳에 심으세요."
         mc_7_b: 짙은 갈색 땅의 줄무늬는 물로 채워야 합니다.
         mc_7_c: 몇개의 블럭을 '반복'문 안에 놓을 수 있습니다.
+      Overworld Plant Crops_2019_authored_hint:
+        mc_7_a: "'작물 심기' 블럭을 이용하여 지금 서 있는 곳에 심으세요."
+        mc_7_b: 짙은 갈색 땅의 줄무늬는 물로 채워야 합니다.
+        mc_7_c: 몇개의 블럭을 '반복'문 안에 놓을 수 있습니다.
       Overworld Powered Minecart_authored_hint:
         mc_13_a: 현재 서 있는 정사각형에 레일을 놓기 위해`놓기 레일'을 사용하십시오.
         mc_13_b: 코드를 짧게 만드려면 '반복'문을 사용하세요.
       Overworld Powered Minecart_2018_authored_hint:
+        mc_13_a: 현재 서 있는 정사각형에 레일을 놓기 위해`놓기 레일'을 사용하십시오.
+        mc_13_b: 코드를 짧게 만드려면 '반복'문을 사용하세요.
+      Overworld Powered Minecart_2019_authored_hint:
         mc_13_a: 현재 서 있는 정사각형에 레일을 놓기 위해`놓기 레일'을 사용하십시오.
         mc_13_b: 코드를 짧게 만드려면 '반복'문을 사용하세요.
       Overworld Shear Sheep_authored_hint:
@@ -4145,6 +4171,10 @@ ko:
         mc_3_b: '만약 당신이 직면하고 있는 방향을 바꿀 필요가 있다면,`회전` 블록을 사용하십시오.  '
         mc_3_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤 일이 발생하는지 확인하십시오.  '
       Overworld Shear Sheep_2018_authored_hint:
+        mc_3_a: "`털 깍기'블록은 당신 앞에서 양을 잡습니다. 양 앞에 있습니까?  "
+        mc_3_b: '만약 당신이 직면하고 있는 방향을 바꿀 필요가 있다면,`회전` 블록을 사용하십시오.  '
+        mc_3_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤 일이 발생하는지 확인하십시오.  '
+      Overworld Shear Sheep_2019_authored_hint:
         mc_3_a: "`털 깍기'블록은 당신 앞에서 양을 잡습니다. 양 앞에 있습니까?  "
         mc_3_b: '만약 당신이 직면하고 있는 방향을 바꿀 필요가 있다면,`회전` 블록을 사용하십시오.  '
         mc_3_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤 일이 발생하는지 확인하십시오.  '
@@ -4165,6 +4195,8 @@ ko:
       Underground If Statements_authored_hint:
         mc_12_b: "'반복' 루프를 사용해서 코드를 더 짧게 만들 수 있을까요?"
       Underground If Statements_2018_authored_hint:
+        mc_12_b: "'반복' 루프를 사용해서 코드를 더 짧게 만들 수 있을까요?"
+      Underground If Statements_2019_authored_hint:
         mc_12_b: "'반복' 루프를 사용해서 코드를 더 짧게 만들 수 있을까요?"
       aE3_authored_hint:
         aE3_d: 코드가 너무 복잡해지면 언제든지 "다시 시작하기"을 클릭하고 다시 시도하십시오!
@@ -4578,7 +4610,12 @@ ko:
         courseC_maze_programming6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
       courseC_maze_programming6_2018_authored_hint:
         courseC_maze_programming6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
       courseD_artist_functions2_authored_hint:
@@ -4595,12 +4632,21 @@ ko:
         courseD_artist_nestedLoops3_a: |-
           다음번에 그릴 사각형 꼭대기로 이동하기 위해서 '앞으로 점프' 블록을 이용해보세요.
           만약 사각형이 20픽셀이고, 사각형끼리 20픽셀 씩 떨어져 있다면 얼마만큼이나 점프해야 할까요?
+      courseD_artist_nestedLoops3_2019_authored_hint:
+        courseD_artist_nestedLoops3_a: |-
+          다음번에 그릴 사각형 꼭대기로 이동하기 위해서 '앞으로 점프' 블록을 이용해보세요.
+          만약 사각형이 20픽셀이고, 사각형끼리 20픽셀 씩 떨어져 있다면 얼마만큼이나 점프해야 할까요?
       courseD_bee_conditionals8_authored_hint:
         courseD_bee_conditionals8_a: |-
           **기억하세요** 이 퍼즐은 실행될 때마다 바뀝니다.
 
           문제를 해결하기 위해 조건 블록(`만약` 또는 `만약/아니면`)을 사용해보세요.
       courseD_bee_conditionals8_2018_authored_hint:
+        courseD_bee_conditionals8_a: |-
+          **기억하세요** 이 퍼즐은 실행될 때마다 바뀝니다.
+
+          문제를 해결하기 위해 조건 블록(`만약` 또는 `만약/아니면`)을 사용해보세요.
+      courseD_bee_conditionals8_2019_authored_hint:
         courseD_bee_conditionals8_a: |-
           **기억하세요** 이 퍼즐은 실행될 때마다 바뀝니다.
 
@@ -4717,6 +4763,62 @@ ko:
           </next>
           </block>
           </xml>
+      courseD_collector_nested_loops_challenge2_2019_authored_hint:
+        courseD_bee_nested_loops_challenge2_d: |-
+          **예제 답안:**
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
       courseD_scrat_ramp7_authored_hint:
@@ -4729,6 +4831,11 @@ ko:
         courseE_artist_concept_challenge1_b: '2/3 삼각형은 ** 길이가 80 **이며 ** 120도 **만큼
           우회전 합니다. '
       courseE_artist_concept_challenge1_2018_authored_hint:
+        courseE_artist_concept_challenge1_a: '반 육각형은 ** 길이가 30 **이며 **는 ** 60도 오른쪽으로
+          회전합니다 **.  '
+        courseE_artist_concept_challenge1_b: '2/3 삼각형은 ** 길이가 80 **이며 ** 120도 **만큼
+          우회전 합니다. '
+      courseE_artist_concept_challenge1_2019_authored_hint:
         courseE_artist_concept_challenge1_a: '반 육각형은 ** 길이가 30 **이며 **는 ** 60도 오른쪽으로
           회전합니다 **.  '
         courseE_artist_concept_challenge1_b: '2/3 삼각형은 ** 길이가 80 **이며 ** 120도 **만큼
@@ -4748,6 +4855,12 @@ ko:
           -100 + 75픽셀 앞으로 이동
           -함수 사용
       courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_a: |-
+          여러분의 프로그램은 반드시:
+          -함수 사용
+          -100 + 75픽셀 앞으로 이동
+          -함수 사용
+      courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: |-
           여러분의 프로그램은 반드시:
           -함수 사용

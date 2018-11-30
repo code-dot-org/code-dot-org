@@ -5,9 +5,9 @@
   "danceFeedbackTooManyDancers": "זהירות! אם תשימו בלוק 'צור חדש' בתוך בלוק 'כל 2 תיבות', אתם תייצרו הרבה מאוד רקדנים.",
   "danceFeedbackUseSetSize": "השתמשו בבלוק 'שנה גודל backup_dancer2' כדי להקטין את הרקדן.",
   "danceFeedbackUseSetTint": "השתמשו בבלוק 'הגדר גוון' כדי לשנות את הגוון של הרקדן.",
-  "danceFeedbackUseStartMapping": "נסו להוסיף בלוק <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> לתוכנית שלכם.",
+  "danceFeedbackUseStartMapping": "נסו להוסיף בלוק \n<xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\">גודל</title><title name=\"RANGE\">באס</title></block></xml> \nלתוכנית שלכם.",
   "danceFeedbackStartNewMove": "הרקדן שלכם לא השתמש בתנועה חדשה אחרי התיבה הרביעית.",
-  "danceFeedbackNeedDifferentDance": "אתם צריכים להשתמש ברקדן אחר.",
+  "danceFeedbackNeedDifferentDance": "אתם צריכים להשתמש בצעד ריקוד אחר.",
   "danceFeedbackNeedEveryTwoMeasures": "ודאו כי אתם משתמשים בבלוק 'כל 2 תיבות'",
   "danceFeedbackNeedMakeANewDancer": "השתמשו בבלוק 'צור חדש' על מנת ליצור רקדן שני.",
   "measure": "תיבה:"

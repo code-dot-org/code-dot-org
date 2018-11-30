@@ -457,7 +457,7 @@ nl:
         </block></xml>
 
         Dit programma gebruikt het "bas" volume (de lage tonen) om de hoogte van een danser in te stellen. Kun je de andere danser ook laten reageren op de muziek?
-      Dance_Party_11.5: |-
+      Dance_Party_11.5_test: |-
         Bekijk dit blok eens:
 
         <xml>
@@ -474,10 +474,65 @@ nl:
         Met het <xml><block type="Dancelab_whenKey"></block></xml> blok kun je code uitvoeren door de pijlomhoogtoets in te drukken.
 
         Je kunt de dansmoves veranderen, eigenschappen van dansers aanpassen, of een move tussendoor doen. Wees creatief en ga op zoek naar nieuwe blokken!
+      Dance_Party_11_5: |-
+        Bekijk dit blok eens:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Nu kun je een heleboel dansers tegelijk maken!
+
+        Probeer met een deel van de "alle eenden" blokken code te schrijven waarmee alle eenden samen gaan dansen.
       Dance_Party_11b: Hoog tijd voor een danswedstrijd! De kat doet een dab wanneer
         je op de linkerpijltoets drukt. Zorg dat de Robot "naar de grond gaat" door
         op de rechterpijltoets te drukken.
       Dance_Party_12: Ga helemaal los! Maak je eigen dans om te delen met je vrienden.
+      Dance_Party_extras_battle: |-
+        # Dancecrews
+
+        Hier is een danswedstrijd tussen twee crews: De pijltoetsen besturen één van de dansers en de "w, a, s, d"-toetsen besturen de andere. Ga een danswedstrijd aan met een vriend, en probeer de wedstrijd vervolgens te verbeteren.
+
+        * Voeg meer toetsen toe om de dans te besturen
+        * Zorg ervoor dat de achtergronddansers ook meedoen als je de toetsen ingedrukt
+        * Wissel elke 4 maten van danser door hun zichtbaarheid in te stellen
+      Dance_Party_extras_every_beat: |-
+        # kwartnoten
+
+        De meeste dansen die we kennen bestaan uit hele maten, maar elke maat bestaat uit 4 kwartnoten. Deze dans gebruikt 'elke 0,25 maat' om de danser op elke kwartnoot te laten klappen.
+
+        Deze dans gebruikt ook een _voorwaardelijk_ blok om te bepalen wanneer het blok "elke 0,25 maat" de dans kan wijzigen. Probeer de nummers in het voorwaardelijke blok te veranderen om te zien hoe deze de dans verandert.
+
+        * Experimenteer met andere nootlengtes (zoals 0,5 voor een halve noot of 0,125 voor een achtste noot).
+        * Voeg gebeurtenissen 'na de maat' toe.
+        * Wissel "maten" om met "seconden" en probeer de dans op die manier te timen.
+      Dance_Party_extras_layout: |-
+        # Ga in positie staan!
+
+        Bekijk deze dans die het 'lay-out'-blok gebruikt om de positie van de achtergronddansers tijdens de dans te veranderen. Probeer het uit te breiden met één van deze ideeën:
+
+        * Maak een tweede groep dansers met een andere lay-out
+        * Verander de lay-out door een toets in te drukken
+        * Verander een eigenschap wanneer de dansers van positie wisselen
+      Dance_Party_extras_on_beat: |-
+        # Bass, mid en treble
+
+        Deze dans gebruikt "piek"-gebeurtenissen om code te activeren wanneer verschillende delen van de muziek extra luid worden. Probeer het met verschillende liedjes uit om te zien hoe het de dans verandert.
+      Dance_Party_extras_speed: |-
+        # Versnellen, vertragen
+
+        Deze laatste dans gebruikt het blok 'snelheid instellen' om te bepalen hoe snel elke danser beweegt. Probeer tijdens het lied te experimenteren met verschillende snelheden. Blijf aan deze dans knutselen, of ga terug naar de eerdere dansen om ze nog cooler te maken.
+      Dance_Party_extras_visible: |-
+        # Waar zijn ze heen?
+
+        Deze dans toont en verbergt twee verschillende groepen van dansers. Bekijk hem eens, en probeer dan je eigen touch toe te voegen.
+
+        * Voeg nog een groep dansers toe
+        * Laat dansers verschijnen en verdwijnen met behulp van de pijltoetsen
+        * Verberg alle dansers en schakel over naar een spannend achtergrondeffect
       Function intro Ryan: "Er is een **function** genaamd 'brug bouwen' in de werkruimte.
         \ Alle code die je nodig hebt om de rivier over te steken, zit hierin! \r\n
         \r\nMaak twee kleine, groene blokjes vast in je werkruimte om het pad te repareren
@@ -532,6 +587,10 @@ nl:
         Met het <xml><block type="Dancelab_whenKey"></block></xml> blok kun je code uitvoeren door de pijlomhoogtoets in te drukken.
 
         Je kunt de dansmoves veranderen, eigenschappen van dansers aanpassen, of een move tussendoor doen. Wees creatief en ga op zoek naar nieuwe blokken!
+      HOC Dance Freeplay: Ga helemaal los! Maak je eigen dans om te delen met je vrienden.
+      HOC Dance Freeplay_draft: Ga helemaal los! Maak je eigen dans om te delen met
+        je vrienden.
+      HOC Dance Predraw: Ga helemaal los! Maak je eigen dans om te delen met je vrienden.
       K-1 Bee Loops 2: Gebruik een lus om te verplaatsen en pak dan te nectar en maak
         honing!
       K-1 Bee Loops 3: Gebruik lussen om nectar te pakken en honing te maken!
@@ -750,6 +809,8 @@ nl:
         schapen te bereiken.
       Overworld Move to Sheep_2018: Voeg een tweede "beweeg vooruit"-commando toe
         om de schapen te bereiken.
+      Overworld Move to Sheep_2019: Voeg een tweede "beweeg vooruit"-commando toe
+        om de schapen te bereiken.
       Testing Quantum Farmer: 'Wow, ik heb een heel diep gat gevonden! Ik weet niet
         hoeveel scheppen vuil daarvoor nodig zijn. Kan je een programma schrijven
         dat het gat vult tot boven vult? Hint: probeer dit keer een zolang-lus.'
@@ -801,19 +862,27 @@ nl:
         in een hoek van 30 graden.
       courseC_artist_loops2a_2018: Gebruik nu een lus om je vogel 12 keer te laten
         draaien in een hoek van 30 graden.
+      courseC_artist_loops2a_2019: Gebruik nu een lus om je vogel 12 keer te laten
+        draaien in een hoek van 30 graden.
       courseC_artist_prog_challenge1-doghouse: Laten we een hondenhok voor Jorge bouwen!
       courseC_artist_prog_challenge2: Help me de gele lijnen op deze weg schilderen!
         *
       courseC_collector_prog9: '*"Laten we alle schatten verzamelen!"*'
       courseC_collector_prog9_2018: '*"Laten we alle schatten verzamelen!"*'
+      courseC_collector_prog9_2019: '*"Laten we alle schatten verzamelen!"*'
       courseC_flappy_events7: Probeer vervolgens het landschap te veranderen door
         een blok toe te voegen aan de `als gestart` gebeurtenis.
       courseC_flappy_events7_2018: Probeer vervolgens het landschap te veranderen
+        door een blok toe te voegen aan de `als gestart` gebeurtenis.
+      courseC_flappy_events7_2019: Probeer vervolgens het landschap te veranderen
         door een blok toe te voegen aan de `als gestart` gebeurtenis.
       courseC_flappy_events9: |-
         Laten we wat dingen dooreen mengen. In de plaats van het spel te beëindigen wanneer Flappy een obstakel raakt,
         laten we de score opnieuw op 0 zetten.
       courseC_flappy_events9_2018: |-
+        Laten we wat dingen dooreen mengen. In de plaats van het spel te beëindigen wanneer Flappy een obstakel raakt,
+        laten we de score opnieuw op 0 zetten.
+      courseC_flappy_events9_2019: |-
         Laten we wat dingen dooreen mengen. In de plaats van het spel te beëindigen wanneer Flappy een obstakel raakt,
         laten we de score opnieuw op 0 zetten.
       courseC_harvester_loops_challenge1: Verzamel alle maïs.
@@ -831,15 +900,23 @@ nl:
         op "Start" om het te zien gaan!
       courseC_maze_programming1_2018: Versleep in deze puzzel alle blokken tezamen
         en klik op "Start" om het te zien gaan!
+      courseC_maze_programming1_2019: Versleep in deze puzzel alle blokken tezamen
+        en klik op "Start" om het te zien gaan!
       courseC_maze_programming_challenge2: Soms is er meer dan één manier om hetzelfde
         probleem op te lossen. Soms is het sneller om achterwaarts te gaan dan voorwaarts!
       courseC_maze_programming_challenge2_2018: Soms is er meer dan één manier om
+        hetzelfde probleem op te lossen. Soms is het sneller om achterwaarts te gaan
+        dan voorwaarts!
+      courseC_maze_programming_challenge2_2019: Soms is er meer dan één manier om
         hetzelfde probleem op te lossen. Soms is het sneller om achterwaarts te gaan
         dan voorwaarts!
       courseD_artist_binary_challenge1: Je kan elk van de binaire waardes (0 of 1)
         slechts éénmaal gebruiken in deze puzzel. Maak gebruik vaan geneste lussen
         om deze tekening te voltooien.
       courseD_artist_binary_challenge1_2018: Je kan elk van de binaire waardes (0
+        of 1) slechts éénmaal gebruiken in deze puzzel. Maak gebruik vaan geneste
+        lussen om deze tekening te voltooien.
+      courseD_artist_binary_challenge1_2019: Je kan elk van de binaire waardes (0
         of 1) slechts éénmaal gebruiken in deze puzzel. Maak gebruik vaan geneste
         lussen om deze tekening te voltooien.
       courseD_artist_project_embedded: Hier is wat je zo dadelijk zal maken!

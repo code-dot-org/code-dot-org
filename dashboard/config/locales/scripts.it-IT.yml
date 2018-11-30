@@ -3115,8 +3115,6 @@ it:
               name: Divertiti usando i Cicli con Contatore
             Learning Sprites with Sprite Lab:
               name: Introduzione al Laboratorio dei Personaggi
-            Alien Dance Party with Sprite Lab:
-              name: Discoteca Aliena
             Pet Giraffe with Sprite Lab:
               name: Giraffa Domestica
             Binary Bracelets:
@@ -3425,8 +3423,6 @@ it:
               name: Funzioni con Minecraft
             Learning Sprites with Sprite Lab:
               name: Introduzione al Laboratorio dei Personaggi
-            Alien Dance Party with Sprite Lab:
-              name: Discoteca Aliena
             Pet Giraffe with Sprite Lab:
               name: Giraffa Domestica
             Copyright and Creativity:
@@ -3591,8 +3587,6 @@ it:
               name: Modifica delle Variabili con l'Artista
             Learning Sprites with Sprite Lab:
               name: Introduzione al Laboratorio dei Personaggi
-            Alien Dance Party with Sprite Lab:
-              name: Discoteca Aliena
             Pet Giraffe with Sprite Lab:
               name: Giraffa Domestica
             Functions in Minecraft:
@@ -3680,10 +3674,40 @@ it:
           stages:
             Artist:
               name: Artista
+        dance:
+          stages:
+            Dance Party:
+              name: Ballando col codice
+          title: Ballando col codice
+          description_short: Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
+            Ciara e altri 25!
+          description: Crea un ballo tutto tuo e condividilo con i tuoi amici!
         frozen-2018-test-b:
           stages:
             Artist:
               name: Artista
+        aquatic:
+          title: 'Minecraft: Viaggio Acquatico'
+          description_short: Usa la tua creatività e le competenze di problem solving
+            per esplorare e costruire mondi sottomarini con la programmazione!
+          description: Anche quest'anno Minecraft propone un'attività nuova di zecca!
+            Usa la tua creatività e le competenze di problem solving per esplorare
+            e creare mondi sottomarini grazie alla potenza della programmazione.
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Ballando col codice
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Ballando col codice
+        dance-extras:
+          stages:
+            Dance Party - Go Further:
+              name: Ballando col codice - Spingiti oltre
+          title: Continua a ballare
+          description: Vai oltre alla prima ora di programmazione creando progetti
+            più complessi.
         coursef-2019:
           description: Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni
             condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi
@@ -3822,3 +3846,281 @@ it:
                 i lavori completati ai loro compagni o di condividerli con amici e
                 parenti con un apposito link. La guida alle lezioni che descrive tutte
                 e cinque le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursef/24/).
+            The Artist:
+              name: L'artista
+        dance-low:
+          stages:
+            Dance Party:
+              name: Ballando col codice
+          title: Ballando col codice (versione per connessioni lente)
+          description_short: Crea un ballo tutto tuo e condividilo con i tuoi amici!
+            (Versione per connessioni lente)
+        coursed-2019:
+          description: Gli studenti sviluppano la comprensione dei cicli annidati,
+            dei cicli "mentre", delle istruzioni condizionali e degli eventi. Oltre
+            alla programmazione, gli studenti vengono introdotti al concetto di cittadinanza
+            digitale.
+          description_short: Impara le istruzioni condizionali e sviluppa le tue capacità
+            artistiche per cerare un disegno, una storia o un gioco.
+          description_audience: Da 7 a 11 anni
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algoritmi: Programmazione su carta a quadretti'
+            Introduction to Online Puzzles:
+              name: Introduzione agli Esercizi Online
+            Relay Programming:
+              name: Programmazione a Staffetta
+            Debugging in Collector:
+              name: Debugging con la Collezionista
+            Events in Bounce:
+              name: Eventi con Ping-Pong
+            Loops in Ice Age:
+              name: Cicli con l'Era Glaciale
+            Loops in Artist:
+              name: Cicli con l'Artista
+            Nested Loops in Bee:
+              name: Cicli Annidati con l'Ape
+            Nested Loops in Artist:
+              name: Cicli Annidati con l'Artista
+            Nested Loops in Frozen:
+              name: Cicli Annidati con Frozen
+            While Loops in Farmer:
+              name: Cicli "Mentre" con la Contadina
+            Until Loops in Maze:
+              name: Cicli "Fino a Che" con il Labirinto
+            Conditionals with Cards:
+              name: Istruzioni condizionali con le Carte da Gioco
+            Conditionals in Bee:
+              name: Istruzioni Condizionali con l'Ape
+            Conditionals & Loops in Harvester:
+              name: Istruzioni Condizionali & Cicli con la Contadina
+            Digital Citizenship:
+              name: Cittadinanza Digitale
+            Build a Play Lab Game:
+              name: Realizzare un gioco col Laboratorio
+            'Unplugged: Binary':
+              name: Binario
+            Artist Binary:
+              name: 'Artista: Binario'
+            Build a Star Wars Game:
+              name: Realizza un gioco con Star Wars
+        coursee-2019:
+          description: Si inizia con algoritmi, cicli, istruzioni condizionali ed
+            eventi per poi introdurre le funzioni. Nella seconda parte di questo corso,
+            puoi progettare e creare un progetto finale che potrai condividere con
+            i tuoi amici e familiari.
+          description_audience: Da 8 a 12 anni
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programmazione: I Miei Amici Robotici'
+            Sequence in Maze:
+              name: Sequenze di Istruzioni con il Labirinto
+            Building a Foundation:
+              name: Costruire le Fondamenta
+            Debugging with Scrat:
+              name: Debugging con Scrat
+            Programming in Artist:
+              name: Programmare l'Artista
+            'Loops: My Loopy Robotic Friends':
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
+            Loops in Artist:
+              name: Cicli con l'Artista
+            Nested Loops:
+              name: Cicli annidati
+            Nested Loops with Frozen:
+              name: Cicli Annidati con Frozen
+            Conditionals with Cards:
+              name: Istruzioni condizionali con le Carte da Gioco
+            Conditionals:
+              name: Istruzioni condizionali
+              description_teacher: Questa lezione introduce gli studenti allo studio
+                dei cicli `mentre` e delle istruzioni `se / altrimenti`. _I cicli
+                mentre_ sono cicli che continuano a ripetere le istruzioni finché
+                una certa condizione è vera. I cicli mentre sono usati quando il programmatore
+                non conosce a priori il numero esatto di volte che le istruzioni devono
+                essere ripetute, ma conosce quale condizione debba essere vera per
+                consentire al ciclo di continuare. Le istruzioni `se / altrimenti`
+                offrono flessibilità nella programmazione eseguendo intere sezioni
+                di codice solo se una certa condizione è vera, altrimenti viene eseguito
+                un insieme di istruzioni alternativo.
+            Private and Personal Information:
+              name: Cittadinanza Digitale - Dati Personali
+              description_teacher: |-
+                In questa lezione realizzata da Common Sense Education si sottolinea la differenza tra dati sicuri da condividere online e dati che non lo sono.
+
+                Mentre gli studenti visitano siti che richiedono dati sulla loro identità, imparano ad adottare un processo di indagine critico che gli consenta di proteggere se stessi e le loro famiglie dal furto di identità. In questa lezione, gli studenti imparano a pensare in modo critico ai dati che alcuni siti web richiedono o esigono. Imparano la differenza tra dati personali e altre informazioni meno critiche e a distinguere ciò che è sicuro o non sicuro da condividere online.
+            Build a Star Wars Game:
+              name: Realizza un gioco con Star Wars
+              description_teacher: In questa lezione, gli studenti metteranno in pratica
+                l'uso degli eventi per creare un gioco che potranno poi condividere
+                online. Con R2-D2 e altri personaggi di Star Wars, gli studenti saranno
+                guidati attraverso gli eventi, infine avranno un loro spazio per creare
+                il loro gioco.
+            'Functions: Songwriting':
+              name: 'Funzioni: Composizione di Canzoni'
+              description_teacher: Una delle strutture più belle nell'informatica
+                è la funzione. Le funzioni (a volte chiamate procedure) sono dei mini-programmi
+                che è possibile utilizzare più e più volte all'interno di un programma
+                più grande. Questa lezione aiuta gli studenti a comprendere intuitivamente
+                perché raggruppare blocchi di codice all'interno di funzioni possa
+                essere una pratica utile.
+            Functions in Minecraft:
+              name: Funzioni con Minecraft
+            Functions in Harvester:
+              name: Funzioni con la Contadina
+            Copyright and Creativity:
+              name: Diritti d'Autore e Creatività
+            Functions in Artist:
+              name: Funzioni con l'Artista
+              description_teacher: Gli studenti saranno introdotti all'uso delle funzioni
+                su Code.org. Nell'ambiente dell'Artista verranno create e modificate
+                figure magnifiche sfruttando la potenza delle funzioni. Per schemi
+                più complessi, gli studenti impareranno ad usare le funzioni annidate,
+                richiamando una funzione dall'interno di un'altra.
+            Determine the Concept:
+              name: Fissare i Concetti
+              description_teacher: Questa lezione riunisce i concetti delle lezioni
+                precedenti e offre agli studenti la possibilità di riflettere in modo
+                critico su come risolvere ciascun problema, ma senza suggerire quale
+                concetto applicare. Gli studenti ripasseranno algoritmi di base, debugging,
+                cicli `ripeti ... volte`, istruzioni condizionali, cicli `mentre`
+                e funzioni.
+            Explore Project Ideas:
+              name: Idee di Progetto
+              description_teacher: |-
+                Le prossime quattro lezioni forniscono agli studenti l'opportunità di utilizzare le proprie capacità di programmazione in un progetto di fine corso. Questo progetto li aiuterà ad acquisire esperienza con la programmazione, producendo una realizzazione da condividere con compagni, amici e parenti. È un percorso pensato per essere distribuito su più lezioni, gli studenti trascorreranno del tempo ragionando insieme, imparando a conoscere il processo di progettazione, costruendo e presentando il loro lavoro finale.
+
+                Nella lezione di esplorazione, gli studenti potranno osservare degli esempi già pronti ai quali ispirarsi sia per l'Artista che per il Laboratorio. Successivamente, gli studenti impareranno il processo di progettazione e come implementarlo nei propri progetti. A loro verrà quindi dato uno spazio per creare il proprio progetto nell'Artista o nel Laboratorio (questa è probabilmente la parte più lunga del progetto). Infine, gli studenti potranno presentare il lavoro finito ai compagni.
+            The Design Process:
+              name: Il Processo di Progettazione
+              description_student: I progetti cosi grandi richiedono tempo e molta
+                pianificazione. Qui, imparerai il processo di progettazione che utilizzerai
+                per realizzare la tua creazione.
+              description_teacher: Nel corso delle quattro lezioni, gli studenti si
+                dedicheranno alla programmazione di un progetto di propria ideazione
+                usando sia Play Lab che Artist come ambiente di programmazione. In
+                questa parte del progetto, gli studenti apprenderanno il processo
+                di progettazione e come implementarlo nei propri progetti. La guida
+                alle lezioni per tutte e quattro le fasi del processo può essere trovata
+                nella prima fase di questo processo del progetto[here](https://curriculum.code.org/csf/coursee/12/).
+            Build Your Project:
+              name: Realizza il Tuo Progetto
+              description_teacher: Nel corso delle quattro lezioni, gli studenti si
+                dedicheranno alla realizzazione di un progetto di loro ideazione,
+                usando come ambienti di programmazione sia il Laboratorio che l'Artista.
+                Ora agli studenti verrà dato il proprio spazio per creare il loro
+                progetto con l'Artista o il Laboratorio. Questa sarà la fase più lunga
+                del percorso di creazione. La guida alle lezioni che descrive tutte
+                e quattro le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursee/23/).
+            Present Your Project:
+              name: Presenta il Tuo Progetto
+              description_teacher: Nel corso delle quattro lezioni, gli studenti si
+                dedicheranno alla realizzazione di un progetto di loro ideazione,
+                usando come ambienti di programmazione sia il Laboratorio che l'Artista.
+                Alla fine, gli studenti saranno messi nella condizione di presentare
+                i lavori completati ai loro compagni o di condividerli con amici e
+                parenti con un apposito link. La guida alle lezioni che descrive tutte
+                e quattro le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursee/23/).
+            Internet:
+              name: Internet
+              description_teacher: Anche se molte persone usano Internet ogni giorno,
+                non molti sanno come funziona. In questa lezione, gli studenti faranno
+                finta di navigare in Internet, imparando a conoscere connessioni,
+                URL, indirizzi IP e DNS.
+            Crowdsourcing:
+              name: Intelligenza Collettiva
+              description_teacher: In informatica affrontiamo alcuni problemi che
+                possono scoraggiare. Sfide come la ricerca di grandi numeri primi
+                o il sequenziamento del DNA sono quasi impossibili da risolvere come
+                singoli individui. Affrontare queste attività in gruppo permette di
+                ridimensionarle e renderle gestibili. Questa lezione mostrerà ai tuoi
+                studenti quanto utile possa essere il lavoro di squadra nel settore
+                dell'informatica.
+            Nested Loops in Bee:
+              name: Cicli Annidati con l'Ape
+            Nested Loops in Artist:
+              name: Cicli Annidati con l'Artista
+            Nested Loops in Frozen:
+              name: Cicli Annidati con Frozen
+            End of Course Project:
+              name: Progetto di Fine Corso
+        express-2019:
+          description: Impara le basi dell'informatica e della sicurezza su Internet.
+            Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algoritmi: Programmazione su carta a quadretti'
+            Programming in Maze:
+              name: Programmazione nel Labirinto
+            Relay Programming:
+              name: Programmazione a Staffetta
+            Debugging in Maze:
+              name: 'Labirinto: Correzione di Errori'
+            Programming in Collector:
+              name: Programmare la Collezionista
+            Programming in Artist:
+              name: Programmare l'Artista
+            'Loops: Getting Loopy':
+              name: 'Cicli: Diventare Ripetitivi'
+            Loops with Rey and BB-8:
+              name: Cicli con Rey e BB-8
+            Loops in Artist:
+              name: Cicli con l'Artista
+            Copyright and Creativity:
+              name: Diritti d'Autore e Creatività
+            Nested Loops in Bee:
+              name: Cicli Annidati con l'Ape
+            Nested Loops in Frozen:
+              name: Cicli Annidati con Frozen
+            While Loops in Farmer:
+              name: Cicli "Mentre" con la Contadina
+            Until Loops in Maze:
+              name: Cicli "Fino a Che" con il Labirinto
+            Conditionals with Cards:
+              name: Istruzioni condizionali con le Carte da Gioco
+            Conditionals in Bee:
+              name: Istruzioni Condizionali con l'Ape
+            Conditionals & Loops in Harvester:
+              name: Istruzioni Condizionali & Cicli con la Contadina
+            'Functions: Songwriting':
+              name: 'Funzioni: Composizione di Canzoni'
+            Functions in Minecraft:
+              name: Funzioni con Minecraft
+            Functions in Harvester:
+              name: Funzioni con la Contadina
+            Functions in Artist:
+              name: Funzioni con l'Artista
+            Screen Out the Mean:
+              name: Cittadinanza Digitale - Caccia Via le Cattiverie dallo Schermo
+            Determine the Concept:
+              name: Fissare i Concetti
+            'Events: The Big Event':
+              name: Eventi
+            Build a Flappy Game:
+              name: Realizzare un gioco Flappy
+            The Power of Words:
+              name: Cittadinanza Digitale - Il Potere delle Parole
+            Envelope Variables:
+              name: Variabili e Buste
+            For Loop Fun:
+              name: Divertiti usando i Cicli con Contatore
+            Explore Project Ideas:
+              name: Idee di Progetto
+            The Design Process:
+              name: Il Processo di Progettazione
+            Build Your Project:
+              name: Realizza il Tuo Progetto
+            Revise Your Project:
+              name: Riesamina il Tuo Progetto
+            Present Your Project:
+              name: Presenta il Tuo Progetto
+            Binary Bracelets:
+              name: Braccialetti Binari
+            'Unplugged: Binary':
+              name: Binario
+            Artist Binary:
+              name: 'Artista: Binario'
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Intelligenza Collettiva

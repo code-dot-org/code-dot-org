@@ -66,7 +66,7 @@ fa:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -220,6 +220,11 @@ fa:
           PROPERTY:
             '"scale"': اندازه
       Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": سمت چپ
+            "{x: 300, y: 200}": سمت راست
+      Mikelab_createNewSprite2:
         options:
           LOCATION:
             "{x: 100, y: 200}": سمت چپ

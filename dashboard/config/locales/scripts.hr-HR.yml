@@ -1362,3 +1362,49 @@ hr:
               name: Uvjeti s kartama
             For Loop Fun:
               name: For Petlja Zabava
+            The Artist:
+              name: Umjetnik
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Odnosno programiranje
+            Conditionals with Cards:
+              name: Uvjeti s kartama
+            Digital Citizenship:
+              name: Digitalno građanstvo
+            'Unplugged: Binary':
+              name: 'Izvanmrežno: Logički operatori'
+            Artist Binary:
+              name: Umjetnik binarno
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Izrada temelja
+            Nested Loops:
+              name: Ugniježđene petlje
+            Conditionals with Cards:
+              name: Uvjeti s kartama
+            Conditionals:
+              name: Uvjeti
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Odnosno programiranje
+            Conditionals with Cards:
+              name: Uvjeti s kartama
+            For Loop Fun:
+              name: For Petlja Zabava
+            Binary Bracelets:
+              name: Binarne narukvice
+            'Unplugged: Binary':
+              name: 'Izvanmrežno: Logički operatori'
+            Artist Binary:
+              name: Umjetnik binarno
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing

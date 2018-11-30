@@ -431,6 +431,7 @@ es:
       example: Solución de ejemplo
       example_with_number: Ejemplo de solución %{solution_number}
       submitted_on: Enviado el %{date}
+      last_updated: 'Última actualización:'
       unsubmit: NO enviado
       worked_with: Trabajado con
       update_lock_settings: Actualiza las opciones de bloqueo aquí.
@@ -875,6 +876,8 @@ es:
       title: Minecraft
     hero:
       title: Minecraft
+      body: "¡Minecraft ha vuelto a la Hora del código con una actividad completamente
+        nueva! Viaje por Minecraft a través del código."
     sports:
       title: Спорт
       body: Crea un partido de baloncesto o una mezcla de otros deportes.
@@ -1314,6 +1317,7 @@ es:
   return_unit_overview: Ir al resumen de la unidad
   return_course_overview: Ir al resumen de la unidad
   view_all_units: Ver todas las unidades
+  view_teacher_guide: Ver la guía del profesor
   pd:
     form_labels:
       first_name: Primer nombre

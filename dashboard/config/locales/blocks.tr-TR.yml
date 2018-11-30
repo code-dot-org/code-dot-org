@@ -30,16 +30,17 @@ tr:
             '"PINEAPPLE"': tüm ananaslar
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
+            '"UNICORN"': tüm tek boynuzlu atlar
           MOVE:
-            MOVES.ClapHigh: Yüksek Alkış
-            MOVES.Clown: Palyaço
-            MOVES.DoubleJam: Çift Jam
-            MOVES.Roll: Yuvarlanma
-            MOVES.Kick: Tekme
-            MOVES.ThisOrThat: Şu ya da Bu
             '"next"': "(Sonraki)"
             '"prev"': "(Önceki)"
             '"rand"': "(Rastgele)"
+            MOVES.Roll: Yuvarlanma
+            MOVES.ClapHigh: Yüksek Alkış
+            MOVES.DoubleJam: Çift Aşağı
+            MOVES.Clown: Palyaço
+            MOVES.Kick: Yıldız
+            MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
           DIR:
             '1': "→"
@@ -48,15 +49,15 @@ tr:
         text: "{SPRITE} sürekli {MOVE} {DIR} yap"
         options:
           MOVE:
-            MOVES.ClapHigh: Yüksek Alkış
-            MOVES.Clown: Palyaço
-            MOVES.DoubleJam: Çift Jam
-            MOVES.Roll: Yuvarlanma
-            MOVES.Kick: Tekme
-            MOVES.ThisOrThat: Şu ya da Bu
             '"next"': "(Sonraki)"
             '"prev"': "(Önceki)"
             '"rand"': "(Rastgele)"
+            MOVES.Roll: Yuvarlanma
+            MOVES.ClapHigh: Yüksek Alkış
+            MOVES.DoubleJam: Çift Aşağı
+            MOVES.Clown: Palyaço
+            MOVES.Kick: Yıldız
+            MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
           DIR:
             '1': "→"
@@ -86,12 +87,14 @@ tr:
             '"PINEAPPLE"': tüm ananaslar
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
+            '"UNICORN"': tüm tek boynuzlu atlar
           MOVE:
-            MOVES.ClapHigh: Yüksek Alkış
-            MOVES.Clown: Palyaço
-            MOVES.DoubleJam: Çift Jam
+            '"rand"': "(Rastgele)"
             MOVES.Roll: Yuvarlanma
-            MOVES.Kick: Tekme
+            MOVES.ClapHigh: Yüksek Alkış
+            MOVES.DoubleJam: Çift Aşağı
+            MOVES.Clown: Palyaço
+            MOVES.Kick: Yıldız
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
           DIR:
@@ -101,11 +104,12 @@ tr:
         text: "{SPRITE} bir kere {MOVE} {DIR} yap"
         options:
           MOVE:
-            MOVES.ClapHigh: Yüksek Alkış
-            MOVES.Clown: Palyaço
-            MOVES.DoubleJam: Çift Jam
+            '"rand"': "(Rastgele)"
             MOVES.Roll: Yuvarlanma
-            MOVES.Kick: Tekme
+            MOVES.ClapHigh: Yüksek Alkış
+            MOVES.DoubleJam: Çift Aşağı
+            MOVES.Clown: Palyaço
+            MOVES.Kick: Yıldız
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
           DIR:
@@ -160,9 +164,9 @@ tr:
           DANCE:
             MOVES.ClapHigh: Yüksek Alkış
             MOVES.Clown: Palyaço
-            MOVES.DoubleJam: Çift Jam
+            MOVES.DoubleJam: Çift Aşağı
             MOVES.Roll: Yuvarlanma
-            MOVES.Kick: Tekme
+            MOVES.Kick: Yıldız
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
       Dancelab_ifTime:
@@ -199,11 +203,16 @@ tr:
             '"PINEAPPLE"': tüm ananaslar
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
+            '"UNICORN"': tüm tek boynuzlu atlar
           FORMAT:
+            '"border"': kenarlık
+            '"inner"': iç kare
             '"circle"': çember
             '"grid"': ızgara
             '"row"': satır
             '"column"': sütun
+            '"x"': çapraz geçiş
+            '"plus"': artı
             '"random"': gelişigüzel
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -214,6 +223,7 @@ tr:
             '"ALIEN"': Uzaylı
             '"BEAR"': Ayı
             '"CAT"': Kedi
+            '"DOG"': Köpek
             '"DUCK"': Ördek
             '"FROG"': Kurbağa
             '"MOOSE"': Geyik
@@ -269,10 +279,14 @@ tr:
             '"SHARK"': Köpek balıkları
             '"UNICORN"': Tek boynuzlu atlar
           LAYOUT:
+            '"border"': kenarlık
+            '"inner"': iç kare
             '"circle"': çember
             '"grid"': ızgara
             '"row"': satır
             '"column"': sütun
+            '"x"': çapraz geçiş
+            '"plus"': artı
             '"random"': gelişigüzel
       Dancelab_mixColors:
         text: "{COLOR1} ve {COLOR2}’yi karıştır"
@@ -296,7 +310,30 @@ tr:
             '"disco"': Kareler
             '"rainbow"': Renkler
             '"diamonds"': Karolar
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": "(Rastgele)"
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Rastgele)"
+      Dancelab_setBackgroundEffectWithPalette:
+        text: arka plan efektini {EFFECT} {PALETTE} olarak ayarla
+        options:
+          EFFECT:
+            '"none"': Hiçbiri
+            '"rand"': "(Rastgele)"
+            '"circles"': Tünel
+            '"diamonds"': Karolar
+            '"disco_ball"': Disko Topu
+            '"kaleidoscope"': Kaleydoskop
+            '"lasers"': Lazer Dans Pisti
+            '"splatter"': Boya Lekesi
+            '"rainbow"': Renkler
+            '"text"': Şarkı Adı
+            '"sparkles"': Kıvılcımlar
+            '"disco"': Kareler
+            '"stars"': Yıldızlar
+          PALETTE:
+            '"rave"': Siyah Beyaz
+            '"cool"': Maviler
+            '"default"': Aydınlık
+            '"tropical"': Tropikal
+            '"warm"': Kırmızılar
       Dancelab_setDanceSpeed:
         text: "{SPRITE} dans hızını {SPEED} olarak değiştir"
         options:
@@ -320,6 +357,7 @@ tr:
             '"PINEAPPLE"': tüm ananaslar
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
+            '"UNICORN"': tüm tek boynuzlu atlar
           SPEED:
             '1': normal
             '2': hızlı
@@ -334,6 +372,20 @@ tr:
             '"rain"': Yağmur
             '"raining_tacos"': Tacolar
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Rastgele)"
+      Dancelab_setForegroundEffectExtended:
+        text: ön plan efektini {EFFECT} olarak ayarla
+        options:
+          EFFECT:
+            '"none"': Hiçbiri
+            '"rand"': "(Rastgele)"
+            '"confetti"': Konfeti
+            '"hearts_red"': Kalpler
+            '"music_notes"': Müzik Notaları
+            '"pineapples"': Ananaslar
+            '"smiling_poop"': Kaka
+            '"rain"': Yağmur
+            '"floating_rainbows"': Gökkuşağı
+            '"raining_tacos"': Tacolar
       Dancelab_setProp:
         text: "{SPRITE} {PROPERTY}’i {VAL} olarak ayarla "
         options:
@@ -360,6 +412,7 @@ tr:
             '"PINEAPPLE"': tüm ananaslar
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
+            '"UNICORN"': tüm tek boynuzlu atlar
           PROPERTY:
             '"scale"': boyut
             '"width"': genişlik
@@ -395,7 +448,10 @@ tr:
             '"PINEAPPLE"': tüm ananaslar
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
+      Dancelab_setTintInline:
+        text: "{SPRITE} renk tonunu {VAL} olarak ayarla"
       Dancelab_setVisible:
+        text: "{SPRITE} görünürlüğünü {VISIBILITY} olarak ayarla"
         options:
           VISIBILITY:
             'true': görünür
@@ -415,6 +471,7 @@ tr:
             '"PINEAPPLE"': tüm ananaslar
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
+            '"UNICORN"': tüm tek boynuzlu atlar
           VISIBILITY:
             'true': görünür
             'false': görünmez
@@ -459,6 +516,7 @@ tr:
             '"right"': sağ
             '"space"': uzay
             '"x"': x
+            '"y"': y
       Dancelab_whenPeak:
         text: "{RANGE} en üst seviyedeyken"
         options:
@@ -619,6 +677,22 @@ tr:
             "{x: 300, y: 100}": sağ üst
             "{x: 100, y: 300}": sol alt
             "{x: 300, y: 300}": sağ alt
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": üst
+            "{x: 200, y: 300}": alt
+            "{x: 100, y: 200}": sol
+            "{x: 300, y: 200}": sağ
+            "{x: 200, y: 200}": merkez
+            "{x: 100, y: 100}": sol üst
+            "{x: 300, y: 100}": sağ üst
+            "{x: 100, y: 300}": sol alt
+            "{x: 300, y: 300}": sağ alt
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': tüm
       Mikelab_getProp:
         options:
           PROPERTY:

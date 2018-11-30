@@ -223,6 +223,23 @@ sk:
       CourseF_PlayLab_vars10_callout:
         Course_4_Play_Lab_Vars_9_1: Všetky Vaše bloky sú odteraz usporiadané do kategórií!
           Kliknite na nadpis pre zobrazenie blokov v danej kategórií.
+      Dance_Party_01_callout:
+        dance_callout_01: Pridaj tento blok do svojho programu!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Pridaj tento blok do svojho programu!
+      Dance_Party_02_callout:
+        dance_callout_02: Pridaj tento blok do svojho programu!
+      Dance_Party_04_callout:
+        dance_callout_04: Pridaj tento blok do svojho programu!
+      Dance_Party_06_callout:
+        dance_callout_06: Pridaj svojho nového tanečníka sem
+      Dance_Party_11.5_test_callout:
+        dance_party_11.5_groups: Tu hľadaj blok "všetky kačice"
+      Dance_Party_11_callout:
+        dance_callout_11_a: Nový blok!
+        dance_callout_11_b: Nový blok!
+      Dance_Party_11_5_callout:
+        dance_party_11_5_groups: Tu hľadaj blok "všetky kačice"
       Eval Design Recipe .1_callout:
         edit_function: Kliknite sem pre úpravu Vašej funkcie.
       Frozen Project Test Toolbox_callout:
@@ -246,11 +263,14 @@ sk:
       Geometric Sun_2018_callout:
         4-5_Artist_Patterns_Free_Play_1: Všetky tvoje obľúbené bloky sú usporiadané
           do kategórií.  Klikni na tieto slová aby si videl, kam  všetko odišlo!
+      Geometric Sun_2019_callout:
+        4-5_Artist_Patterns_Free_Play_1: Všetky tvoje obľúbené bloky sú usporiadané
+          do kategórií.  Klikni na tieto slová aby si videl, kam  všetko odišlo!
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Keď nastane táto udalosť prehraj zvuk.
       Infinity_move_directions_callout:
-        Infinity_move_directions_callout: Ktorý blok presunie Baymaxa postlačení šípky
-          hore smerom nahor?
+        Infinity_move_directions_callout: Ktorý blok presunie Baymaxa po stlačení
+          šípky hore smerom nahor?
         Infinity_move_directions_callout_arrow: Tieto šípky použi na riadenie
       Infinity_move_right_callout:
         Infinity_move_right_runbutton: Tu pridaj blok posunúť
@@ -316,8 +336,8 @@ sk:
           aby vytvorila štvorec.
       NEW Course 4 Artist Functions 5_callout:
         edit_function: Kliknite sem pre úpravu Vašej funkcie.
-        function_editor_draw_square: Toto je definícia Vašej funkcie. Tieto bloky
-          sa spustia vždy pri použití bloku "Nakresli štvorec"
+        function_editor_draw_square: Toto je definícia tvojej funkcie. Tieto bloky
+          sa spustia vždy keď použiješ blok "Nakresli štvorec"
       NEW Course 4 Artist Functions 7_callout:
         edit_function: Kliknite sem pre úpravu Vašej funkcie.
       NEW Course 4 Artist Functions 8_callout:
@@ -360,10 +380,15 @@ sk:
         craft_callout_preplaced: Umiestnili sme sem nejaké bloky aby si mohol začať
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Umiestnili sme sem nejaké bloky aby si mohol začať
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Umiestnili sme sem nejaké bloky aby si mohol začať
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Tento kód začne stavať tvoj dom. Dokážeš to
           dokončiť?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Tento kód začne stavať tvoj dom. Dokážeš to
+          dokončiť?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Tento kód začne stavať tvoj dom. Dokážeš to
           dokončiť?
       Overworld Move to Sheep_callout:
@@ -374,9 +399,15 @@ sk:
         craft_run_button_callout: Stlačte "Spustiť" pre vyskúšanie programu
         craft_drag_block_callout: Potiahnite blok "posunúť vpred" a zapojte ho pod
           iný blok
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Stlačte "Spustiť" pre vyskúšanie programu
+        craft_drag_block_callout: Potiahnite blok "posunúť vpred" a zapojte ho pod
+          iný blok
       Overworld Place Wall_callout:
         craft_inside_repeat: Opakuj akcie umiestnením blokov tu
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Opakuj akcie umiestnením blokov tu
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Opakuj akcie umiestnením blokov tu
       PS clone CSD U3 Variables Predict Where XY_callout:
         grid: Kliknite sem pre zobrazenie mriežky.
@@ -409,6 +440,9 @@ sk:
         4-5_Artist_Patterns_Free_Play_2: Vyskúšajte použitie nového bloku "komentovať"
           v tejto sekcií a zanechajte si poznámky vo vnútri Vášho programu!
       Robot Doodle_2018_callout:
+        4-5_Artist_Patterns_Free_Play_2: Vyskúšajte použitie nového bloku "komentovať"
+          v tejto sekcií a zanechajte si poznámky vo vnútri Vášho programu!
+      Robot Doodle_2019_callout:
         4-5_Artist_Patterns_Free_Play_2: Vyskúšajte použitie nového bloku "komentovať"
           v tejto sekcií a zanechajte si poznámky vo vnútri Vášho programu!
       Robot Drawing_callout:
@@ -463,9 +497,14 @@ sk:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Tento kód bude kontrolovať lávu, môžeš zadať príkaz
           pre pohyb dopredu?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Tento kód bude kontrolovať lávu, môžeš zadať príkaz
+          pre pohyb dopredu?
       Underground Iron_callout:
         craft_what_is_iron: Vyťaž toto železo!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Vyťaž toto železo!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Vyťaž toto železo!
       WebLab PS test - 1-12_callout:
         version_history_button: Skontrolujte si históriu zmien
@@ -675,16 +714,25 @@ sk:
       courseC_artist_loopsPrePre1a_2018_callout:
         courseC_artist_loopsPrePre1a_1: Začnite použitím tohto bloku pre premiestnenie
           herca do stredu obrazovky.
+      courseC_artist_loopsPrePre1a_2019_callout:
+        courseC_artist_loopsPrePre1a_1: Začnite použitím tohto bloku pre premiestnenie
+          herca do stredu obrazovky.
       courseC_collector_prog1_callout:
         courseC_collector_prog1_1: Vidíš nové bloky v paneli nástrojov? Neboj sa,
           neskôr ti ukážeme, ako ich používať.
       courseC_collector_prog1_2018_callout:
         courseC_collector_prog1_1: Vidíte nejaké nové bloky v paneli nástrojov? Nebojte
           sa, neskôr Vám ukážeme, ako ich používať.
+      courseC_collector_prog1_2019_callout:
+        courseC_collector_prog1_1: Vidíte nejaké nové bloky v paneli nástrojov? Nebojte
+          sa, neskôr Vám ukážeme, ako ich používať.
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: Z panela nástrojov si môžete zobrať viac blokov,
           ak ich potrebujete!
       courseC_collector_prog7_2018_callout:
+        courseC_collector_prog7_1: Z panela nástrojov si môžete zobrať viac blokov,
+          ak ich potrebujete!
+      courseC_collector_prog7_2019_callout:
         courseC_collector_prog7_1: Z panela nástrojov si môžete zobrať viac blokov,
           ak ich potrebujete!
       courseC_harvester_loops1_callout:
@@ -707,10 +755,16 @@ sk:
       courseC_maze_programming1_2018_callout:
         grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť"
           pre spustenie vášho programu.
+      courseC_maze_programming1_2019_callout:
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť"
+          pre spustenie vášho programu.
       courseC_maze_programming2_callout:
         courseC_maze_programming2_1: Toto je panel nástrojov. Tu nájdete extra bloky
           pre dokončenie Vaších cvičení.
       courseC_maze_programming2_2018_callout:
+        courseC_maze_programming2_1: Toto je panel nástrojov. Tu nájdete extra bloky
+          pre dokončenie Vaších cvičení.
+      courseC_maze_programming2_2019_callout:
         courseC_maze_programming2_1: Toto je panel nástrojov. Tu nájdete extra bloky
           pre dokončenie Vaších cvičení.
       courseC_maze_programming3_callout:
@@ -721,10 +775,17 @@ sk:
         courseC_maze_programming3_2: Extra bloky môžete presunúť na panel nástrojov
           pre ich odstránenie.
         courseC_maze_programming3_3: Tieto bloky sú z kamena a nemôžu byť zahodené.
+      courseC_maze_programming3_2019_callout:
+        courseC_maze_programming3_2: Extra bloky môžete presunúť na panel nástrojov
+          pre ich odstránenie.
+        courseC_maze_programming3_3: Tieto bloky sú z kamena a nemôžu byť zahodené.
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: Toto je Váš počet blokov. Podľa toho viete, koľko
           takýchto blokov ešte môžete použiť.
       courseC_maze_programming4_2018_callout:
+        courseC_maze_programming4_1: Toto je Váš počet blokov. Podľa toho viete, koľko
+          takýchto blokov ešte môžete použiť.
+      courseC_maze_programming4_2019_callout:
         courseC_maze_programming4_1: Toto je Váš počet blokov. Podľa toho viete, koľko
           takýchto blokov ešte môžete použiť.
       courseC_maze_programming7_callout:
@@ -735,9 +796,15 @@ sk:
         courseC_maze_programming7_1: Toto je Vaše prvé cvičenie s výzvou! Tieto sú
           náročné a možno ich vyriešite až na niekoľkatý pokus.
         courseC_maze_programming7_2: Tieto bloky sú z kamena a nemôžu byť zahodené.
+      courseC_maze_programming7_2019_callout:
+        courseC_maze_programming7_1: Toto je Vaše prvé cvičenie s výzvou! Tieto sú
+          náročné a možno ich vyriešite až na niekoľkatý pokus.
+        courseC_maze_programming7_2: Tieto bloky sú z kamena a nemôžu byť zahodené.
       courseC_starWars_loops2_callout:
         courseC_starWars_loops2: V tejto hre máte iba jeden takýto blok k dispozícií.
       courseC_starWars_loops2_2018_callout:
+        courseC_starWars_loops2: V tejto hre máte iba jeden takýto blok k dispozícií.
+      courseC_starWars_loops2_2019_callout:
         courseC_starWars_loops2: V tejto hre máte iba jeden takýto blok k dispozícií.
       courseD_artist_functions2_callout:
         courseD_artist_functions2_1: Keď je spustený tento zelený blok, spustí sa
@@ -751,6 +818,9 @@ sk:
       courseD_artist_nestedLoops1a_2018_callout:
         courseD_artist_nestedLoops1a_1: Nemusíte použiť farby pre vyriešenie tohto
           cvičenia. Ak chcete, tento blok "náhodná farba" Vám to uľahčí!
+      courseD_artist_nestedLoops1a_2019_callout:
+        courseD_artist_nestedLoops1a_1: Nemusíte použiť farby pre vyriešenie tohto
+          cvičenia. Ak chcete, tento blok "náhodná farba" Vám to uľahčí!
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: Toto číslo môžete zmeniť.
         courseD_artist_ramp11_2: Kliknite sem pre zadanie počtu opakovaní Vášho kódu.
@@ -759,6 +829,9 @@ sk:
           Nemusíš vôbec vyhľadávať včelie plásty.
         4_5_Bee_Conditionals_2_2: Potrebujete pomoc?  Kliknite sem pre videonápovedu!
       courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
+          Nemusíš vôbec vyhľadávať včelie plásty.
+      courseD_bee_conditionals2_2019_callout:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
           Nemusíš vôbec vyhľadávať včelie plásty.
       courseD_bee_conditionals2_test_callout:
@@ -772,9 +845,12 @@ sk:
       courseD_bee_conditionals_challenge2_2018_callout:
         courseD_bee_conditionals_challenge2_1: Použite túto slučku pre pozbieranie
           všetkého nektáru (alebo medu) z jednej kvetinky (alebo medového plástu).
+      courseD_bee_conditionals_challenge2_2019_callout:
+        courseD_bee_conditionals_challenge2_1: Použite túto slučku pre pozbieranie
+          všetkého nektáru (alebo medu) z jednej kvetinky (alebo medového plástu).
       courseD_bee_conditionals_challenge3_callout:
-        courseD_bee_conditionals_challenge3_1: Skúste zopakovať bloky s posunom dopredu
-          pomocou tejto slučky.
+        courseD_bee_conditionals_challenge3_1: Skús zopakovať bloky, ktoré posúvajú
+          včelu dopredu pomocou tohoto cyklu.
       courseD_bee_debugging_challenge1_callout:
         courseD_bee_debugging_challenge1_callout1: Použite tento príkaz pre posunutie
           včely dozadu.
@@ -790,6 +866,9 @@ sk:
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Použite tento blok pre zber jedného kusu pokladu.  '
       courseD_farmer_while7_2018_callout:
+        courseD_farmer_while7_2018_PathAhead: Musíte použiť blok "biely chodník dopredu"
+          pre vyriešenie tejto úlohy.
+      courseD_farmer_while7_2019_callout:
         courseD_farmer_while7_2018_PathAhead: Musíte použiť blok "biely chodník dopredu"
           pre vyriešenie tejto úlohy.
       courseD_maze_ramp1_callout:
@@ -841,6 +920,9 @@ sk:
         courseD_playLab_condFP_1: sme zoradili bloky do kategórií, aby ste mali viac
           kódu na hranie sa! Kliknite sem a pozrite sa, kam sme všetko dali.
       courseD_playLab_condFP_2018_callout:
+        courseD_playLab_condFP_1: sme zoradili bloky do kategórií, aby ste mali viac
+          kódu na hranie sa! Kliknite sem a pozrite sa, kam sme všetko dali.
+      courseD_playLab_condFP_2019_callout:
         courseD_playLab_condFP_1: sme zoradili bloky do kategórií, aby ste mali viac
           kódu na hranie sa! Kliknite sem a pozrite sa, kam sme všetko dali.
       courseD_playLab_condFP_a_callout:
@@ -903,10 +985,16 @@ sk:
       courseE_artist_functions2_2018_callout:
         courseD_artist_functions2_1: Keď je spustený tento zelený blok, spustí sa
           všetok kód vo funkcií. Čo by mal urobiť umelec po nakreslení prvého štvorca?
+      courseE_artist_functions2_2019_callout:
+        courseD_artist_functions2_1: Keď je spustený tento zelený blok, spustí sa
+          všetok kód vo funkcií. Čo by mal urobiť umelec po nakreslení prvého štvorca?
       courseE_artist_functions8_callout:
         courseD_artist_functions8_1: Vaše bloky pre vytvorenie funkcí boli presunuté
           pod túto sekciu v paneli nástrojov.
       courseE_artist_functions8a_2018_callout:
+        courseD_artist_functions8_1: Vaše bloky pre vytvorenie funkcí boli presunuté
+          pod túto sekciu v paneli nástrojov.
+      courseE_artist_functions8a_2019_callout:
         courseD_artist_functions8_1: Vaše bloky pre vytvorenie funkcí boli presunuté
           pod túto sekciu v paneli nástrojov.
       courseE_artist_functions_challenge_callout:
@@ -924,12 +1012,22 @@ sk:
           ďaľšieho kódu na jeho spodok.
         courseE_artist_functions_challenge1_callout2: Ak sa Vám nepáči tento dizajn,
           zmeňte ho na čo len chcete!
+      courseE_artist_functions_challenge1_2019_callout:
+        courseE_artist_functions_challenge1_callout1: Pokračujte v behu programu pridaním
+          ďaľšieho kódu na jeho spodok.
+        courseE_artist_functions_challenge1_callout2: Ak sa Vám nepáči tento dizajn,
+          zmeňte ho na čo len chcete!
       courseE_artist_functions_challenge2_callout:
         courseE_artist_functions_challenge2_callout1: Pokračujte v behu programu pridaním
           ďaľšieho kódu na jeho spodok.
         courseE_artist_functions_challenge2_callout2: Ak sa Vám nepáči tento dizajn,
           zmeňte ho na čo len chcete!
       courseE_artist_functions_challenge2_2018_callout:
+        courseE_artist_functions_challenge2_callout1: Pokračujte v behu programu pridaním
+          ďaľšieho kódu na jeho spodok.
+        courseE_artist_functions_challenge2_callout2: Ak sa Vám nepáči tento dizajn,
+          zmeňte ho na čo len chcete!
+      courseE_artist_functions_challenge2_2019_callout:
         courseE_artist_functions_challenge2_callout1: Pokračujte v behu programu pridaním
           ďaľšieho kódu na jeho spodok.
         courseE_artist_functions_challenge2_callout2: Ak sa Vám nepáči tento dizajn,
@@ -954,10 +1052,16 @@ sk:
       courseE_farmer_functions13_2018_callout:
         courseE_farmer_functions1a_1: Táto zelenina je vybraná náhodne. Pri každom
           spustení programu sa zobrazí iný jej druh.
+      courseE_farmer_functions13_2019_callout:
+        courseE_farmer_functions1a_1: Táto zelenina je vybraná náhodne. Pri každom
+          spustení programu sa zobrazí iný jej druh.
       courseE_farmer_functions1a_callout:
         courseE_farmer_functions1a_1: Táto zelenina je vybraná náhodne. Pri každom
           spustení programu sa zobrazí iný jej druh.
       courseE_farmer_functions1a_2018_callout:
+        courseE_farmer_functions1a_1: Táto zelenina je vybraná náhodne. Pri každom
+          spustení programu sa zobrazí iný jej druh.
+      courseE_farmer_functions1a_2019_callout:
         courseE_farmer_functions1a_1: Táto zelenina je vybraná náhodne. Pri každom
           spustení programu sa zobrazí iný jej druh.
       courseE_farmer_functions2a_callout:
@@ -970,6 +1074,9 @@ sk:
         courseE_farmer_functions1a_1: Táto zelenina je vybraná náhodne. Pri každom
           spustení programu sa zobrazí iný jej druh.
       courseE_farmer_functions2b_2018_callout:
+        courseE_farmer_functions1a_1: Táto zelenina je vybraná náhodne. Pri každom
+          spustení programu sa zobrazí iný jej druh.
+      courseE_farmer_functions2b_2019_callout:
         courseE_farmer_functions1a_1: Táto zelenina je vybraná náhodne. Pri každom
           spustení programu sa zobrazí iný jej druh.
       courseE_farmer_functions3b_callout:
@@ -1028,14 +1135,14 @@ sk:
       courseF_IceAge_9_callout:
         playlab_add_blocks_1: Pridajte bloky sem
       courseF_artist_for1_callout:
-        courseF_artist_for1_1: Panel s nástrojmi je v móde "kategórie", aby ste mali
-          viac miesta pre Váš kód. Slučky "for" nájdete tuto.
+        courseF_artist_for1_1: Panel s nástrojmi je v móde "kategórie", aby si mal
+          viac miesta pre tvoj kód. Cykly "for" nájdeš v ňom.
       courseF_artist_for1_2018_callout:
-        courseF_artist_for1_1: Panel s nástrojmi je v móde "kategórie", aby ste mali
-          viac miesta pre Váš kód. Slučky "for" nájdete tuto.
+        courseF_artist_for1_1: Panel s nástrojmi je v móde "kategórie", aby si mal
+          viac miesta pre tvoj kód. Cykly "for" nájdeš v ňom.
       courseF_artist_for1_2019_callout:
-        courseF_artist_for1_1: Panel s nástrojmi je v móde "kategórie", aby ste mali
-          viac miesta pre Váš kód. Slučky "for" nájdete tuto.
+        courseF_artist_for1_1: Panel s nástrojmi je v móde "kategórie", aby si mal
+          viac miesta pre tvoj kód. Cykly "for" nájdeš v ňom.
       courseF_artist_fwp1_callout:
         courseF_artist_fwp1_1: Kliknite na tlačidlo "upraviť" pre zmenu kódu vo vnútri
           funkcie.
@@ -1107,8 +1214,8 @@ sk:
         courseF_bee_conditionals5_1: Tento blok použite, keď sa zmení dĺžka cesty
           (ako pri stranách obdĺžnika!)
       courseF_bee_for3_callout:
-        courseF_bee_for3_1: Slučka "for" je tak široká, že sme zmenili panel nástrojov
-          do módu Kategórie pre ušetrenie miesta. Novú slučku "for" nájdete tu!
+        courseF_bee_for3_1: Cyklus "for" je taký široký, že sme zmenili panel nástrojov
+          do módu Kategórie, ktorý nám ušetrí miesto. Nový cyklus "for" nájdeš v ňom!
       courseF_bee_for4_callout:
         courseF_bee_for4_1: Slučku "for" nájdete tu!
       courseF_bee_for4_2018_callout:
@@ -1246,8 +1353,8 @@ sk:
       course_playlab_variables3_callout:
         course_playlab_variables3_1: Takto nastavíte hodnotu Vašej premennej.
       coursea_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: Po pospájaní všetkých blokov stlačte "Spustiť"
-          pre spustenie vášho programu.
+        grade2_CaringForNewPet_0_1: Po pospájaní všetkých blokov stlač tlačidlo "Spustiť",
+          ktoré spustí tvoj program.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: Extra bloky môžete presunúť na panel nástrojov
           pre ich odstránenie.
