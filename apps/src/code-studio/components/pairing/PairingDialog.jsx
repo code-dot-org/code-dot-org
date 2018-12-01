@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react';
-
-import Pairing from './pairing.jsx';
+import Pairing from './Pairing.jsx';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
 /**

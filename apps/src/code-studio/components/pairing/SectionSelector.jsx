@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import { studentsShape } from './types';
+import i18n from "@cdo/locale";
 
 /**
  * Section selector component, for students in multiple sections.
@@ -26,7 +27,7 @@ export default class SectionSelector extends React.Component {
         value={this.props.selectedSectionId}
         onChange={this.props.handleChange}
       >
-        <option key="blank" value="">Choose your section</option>
+        <option key="blank" value="">{i18n.chooseSection()}</option>
         {this.props.sections.map(section =>
           <option key={section.id} value={section.id}>{section.name}</option>
         )}

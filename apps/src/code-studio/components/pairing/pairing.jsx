@@ -2,9 +2,9 @@
 
 import $ from 'jquery';
 import React, {PropTypes} from 'react';
-
-import SectionSelector from './section_selector.jsx';
-import StudentSelector from './student_selector.jsx';
+import SectionSelector from './SectionSelector.jsx';
+import StudentSelector from './StudentSelector.jsx';
+import i18n from "@cdo/locale";
 
 /**
  * A component for managing pair programming.
@@ -115,8 +115,8 @@ export default class Pairing extends React.Component {
   renderPairingSelector() {
     return (
       <div style={{maxHeight: window.innerHeight * 0.8 - 100, overflowY: 'auto'}}>
-        <p className="dialog_title">Pair programming</p>
-        <h1>Choose partners:</h1>
+        <p className="dialog_title">{i18n.pairProgramming()}</p>
+        <h1>{i18n.pairProgrammingChosePartners()}</h1>
         <br/>
         <form>
           <SectionSelector
@@ -137,8 +137,8 @@ export default class Pairing extends React.Component {
   renderPairingState() {
     return (
       <div>
-        <h1>Pair Programming</h1>
-        <h2>You are Pair Programming with:</h2>
+        <h1>{i18n.pairProgramming()}</h1>
+        <h2>{i18n.pairProgrammingWith()}</h2>
         {this.state.pairings.map(student =>
           <div
             key={student.id}
@@ -150,7 +150,7 @@ export default class Pairing extends React.Component {
         )}
         <div className="clear"/>
         <button className="stop" onClick={this.handleStop}>
-          Stop Pair Programming
+          {i18n.pairProgrammingStop()}
         </button>
         <button className="ok" onClick={this.props.handleClose}>
           OK
