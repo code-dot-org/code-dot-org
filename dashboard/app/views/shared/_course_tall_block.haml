@@ -28,7 +28,7 @@
   - title = t('upsell.applab.title')
   - body = t('upsell.applab.body_short')
 
-- elsif id == 'applab-intro'
+- elsif id == Script::APPLAB_INTRO
   / Goes to the App Lab *script* (/s/applab-intro/reset)
   - url = CDO.studio_url('/s/applab-intro/reset')
   - title = t('upsell.applab.title')
@@ -40,17 +40,19 @@
   - body = t('upsell.unplugged_conditionals.body')
   - teacher_guide = CDO.code_org_url("/hourofcode/unplugged-conditionals-with-cards")
 
-- elsif id == 'sports'
+- elsif id == Script::SPORTS_NAME
   - url = CDO.code_org_url('/athletes')
   - title = t('upsell.sports.title')
   - body = t('upsell.sports.body')
 
+  -# TODO: fix text_compression vs. text-compression???
 - elsif id == 'text_compression'
   - url = CDO.studio_url('/s/text-compression/reset')
   - title = t('upsell.text-compression.title')
   - body = t('upsell.text-compression.body')
   - teacher_guide = "https://curriculum.code.org/hoc/2016/1/"
 
+  -# TODO: fix hoc_encryption vs. hoc-encryption???
 - elsif id == 'hoc_encryption'
   - url = CDO.studio_url('/s/hoc-encryption/reset')
   - title = t('upsell.hoc-encryption.title')
@@ -64,33 +66,34 @@
 
 - elsif [Script::ARTIST_NAME, Script::PLAYLAB_NAME, Script::HOC_NAME, Script::FROZEN_NAME, Script::INFINITY_NAME, Script::STARWARS_NAME, Script::STARWARS_BLOCKS_NAME, Script::MINECRAFT_NAME, Script::MINECRAFT_DESIGNER_NAME, Script::MINECRAFT_HERO_NAME, Script::MINECRAFT_AQUATIC_NAME, Script::DANCE_PARTY_NAME].include? id
   - url = script_reset_url(id)
-  - if id == 'frozen'
+  - body = data_t_suffix('script.name', id, 'description_short')
+  - if id == Script::FROZEN_NAME
     - title = t('upsell.frozen.title')
     - teacher_guide = CDO.code_org_url("/hourofcode/frozen")
-  - elsif id == 'starwars' || id == 'starwarsblocks'
+  - elsif id == Script::STARWARS_NAME || id == Script::STARWARS_BLOCKS_NAME
     - title = t('upsell.starwars.title')
     - url = CDO.code_org_url('/starwars')
     - teacher_guide = CDO.code_org_url("/hourofcode/starwars")
-  - elsif id == 'mc'
+  - elsif id == Script::MINECRAFT_NAME
     - title = t('upsell.minecraft.title')
     - url = CDO.code_org_url('/api/hour/begin/mc')
-  - elsif id == 'minecraft'
+  - elsif id == Script::MINECRAFT_DESIGNER_NAME
     - title = t('upsell.minecraft2016.title')
     - url = CDO.code_org_url('/api/hour/begin/mc')
-  - elsif id == 'hero'
+  - elsif id == Script::MINECRAFT_HERO_NAME
     - title = t('upsell.hero.title')
     - url = CDO.code_org_url('/api/hour/begin/mc')
-  - elsif id == 'aquatic'
+  - elsif id == Script::MINECRAFT_AQUATIC_NAME
     - title = t('upsell.aquatic.title')
     - url = CDO.code_org_url('/api/hour/begin/mc')
-  - elsif id == 'infinity'
+  - elsif id == Script::INFINITY_NAME
     - title = t('upsell.infinity.title')
     - teacher_guide = CDO.code_org_url("/hourofcode/infinity")
-  - elsif id == 'iceage' || id == 'gumball' || id == 'playlab'
+  - elsif id == Script::ICEAGE_NAME || id == Script::GUMBALL_NAME || id == Script::PLAYLAB_NAME
     - url = CDO.code_org_url('/playlab')
     - title = data_t_suffix('script.name', id, 'title')
     - teacher_guide = CDO.code_org_url("/hourofcode/playlab")
-  - elsif id == 'dance'
+  - elsif id == Script::DANCE_PARTY_NAME
     - url = CDO.code_org_url('/dance')
     - title = t('upsell.dance.title')
     - image_url = "courses/logo_tall_#{id}.gif"
@@ -99,9 +102,8 @@
     - teacher_guide = CDO.code_org_url("/hourofcode/artist")
   - else
     - title = data_t_suffix('script.name', id, 'title')
-  - body = data_t_suffix('script.name', id, 'description_short')
 
-- if %w(course1 course2 course3 course4 coursea-2017 courseb-2017 coursec-2017 coursed-2017 coursee-2017 coursef-2017).include?(id)
+- if [Script::COURSE1_NAME, Script::COURSE2_NAME, Script::COURSE3_NAME, Script::COURSE4_NAME, Script::COURSEA_NAME, Script::COURSEB_NAME, Script::COURSEC_NAME, Script::COURSED_NAME, Script::COURSEE_NAME, Script::COURSEF_NAME].include? id
   - audience = data_t_suffix('script.name', id, 'description_audience')
 
 .courseblock-span3.courseblock-tall
