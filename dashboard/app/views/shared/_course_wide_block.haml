@@ -39,8 +39,7 @@
         %h4= data_t_suffix('script.name', '20-hour', 'description_audience')
         .smalltext= t('upsell.20-hour.body')
 
-- elsif [Script::TWENTY_HOUR_NAME, "twenty_hour"].include?(id) && view == 'small'
-  - id = Script::TWENTY_HOUR_NAME
+- elsif id == Script::TWENTY_HOUR_NAME && view == 'small'
   - url = script_reset_url(id)
   - audience = data_t_suffix('script.name', id, 'description_audience')
   .courseblock-span6.courseblock-wide-small{style: "min-height: 120px;"}
