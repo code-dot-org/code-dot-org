@@ -45,15 +45,13 @@
   - title = t('upsell.sports.title')
   - body = t('upsell.sports.body')
 
-  -# TODO: fix text_compression vs. text-compression???
-- elsif id == 'text_compression'
+- elsif id == Script::TEXT_COMPRESSION_NAME
   - url = CDO.studio_url('/s/text-compression/reset')
   - title = t('upsell.text-compression.title')
   - body = t('upsell.text-compression.body')
   - teacher_guide = "https://curriculum.code.org/hoc/2016/1/"
 
-  -# TODO: fix hoc_encryption vs. hoc-encryption???
-- elsif id == 'hoc_encryption'
+- elsif id == Script::HOC_ENCRYPTION_NAME
   - url = CDO.studio_url('/s/hoc-encryption/reset')
   - title = t('upsell.hoc-encryption.title')
   - body = t('upsell.hoc-encryption.body')
