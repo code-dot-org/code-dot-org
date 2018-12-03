@@ -1,0 +1,22 @@
+%p
+  Hi
+  = @application.first_name + ","
+
+%p
+  Thank you for applying to Code.org's Facilitator Development Program. Our
+  team appreciated the opportunity to review your application and learn about
+  your commitment to computer science education. We are unfortunately unable
+  to offer you a space in the program this year.
+
+%p
+  Please don't hesitate to continue to access all of our free resources and
+  materials for educators at
+  = link_to('code.org/educate', CDO.code_org_url('/educate', CDO.default_scheme)) + '.'
+  We wish you the best this year!
+
+%p
+  = signed_by(@application)
+  %br
+  Education Program Manager
+  %br
+  Code.org

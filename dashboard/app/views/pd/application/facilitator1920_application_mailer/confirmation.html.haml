@@ -1,7 +1,13 @@
 %p
   Hello! Thank you for applying to Code.org's Facilitator Development Program.
-  We have received your application, and will review it with our Regional Partners soon.
-  We will provide a status update to all applicants in January 2018.
+  - if @application.regional_partner
+    We have received your application, and will review it with our Regional Partners soon.
+  - else
+    Please note that we prioritize applicants in regions where we currently have a Regional Partner and there is
+    a need for additional facilitators. Code.org will review your application and contact you if there is a need
+    for facilitators in a nearby region.
+
+  We will provide a status update to all applicants in February 2019.
 
 %p
   Due to the volume of applications we will receive, we are not able to respond to individual
@@ -29,4 +35,6 @@
   %br
   = signed_by(@application)
   %br
-  Education Program Manager, Code.org
+  Education Program Manager
+  %br
+  Code.org
