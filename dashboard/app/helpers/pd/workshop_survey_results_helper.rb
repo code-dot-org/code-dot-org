@@ -192,6 +192,7 @@ module Pd::WorkshopSurveyResultsHelper
   def generate_workshop_daily_session_summary(workshop)
     summary = {
       this_workshop: {},
+      course_name: workshop.course
     }
 
     questions = get_questions_for_forms(workshop)
@@ -213,7 +214,13 @@ module Pd::WorkshopSurveyResultsHelper
 
     summary[:facilitators] = Hash[*workshop.facilitators.pluck(:id, :name).flatten]
 
+    if should_only_show_current_user?
+      summary[:facilitators].slice! current_user.id
+    end
+
     generate_facilitator_averages(summary)
+
+    generate_facilitator_response_counts(summary, workshop, related_workshops)
 
     summary
   end
@@ -227,11 +234,7 @@ module Pd::WorkshopSurveyResultsHelper
     # if the current user is a facilitator and not a program manager, workshop
     # organizer, or workshop admin, only show them responses about themselves,
     # not any other facilitator
-    show_only_user = current_user &&
-      current_user.facilitator? &&
-      !(current_user.program_manager? ||
-        current_user.workshop_organizer? ||
-        current_user.workshop_admin?)
+    show_only_user = should_only_show_current_user?
 
     # Each session has a general response section.
     # Some also have a facilitator response section
@@ -391,9 +394,10 @@ module Pd::WorkshopSurveyResultsHelper
     end
 
     facilitator_averages = facilitators.map {|name| [name, {}]}.to_h
+    facilitator_averages[:questions] = {}
 
-    facilitators.each do |facilitator|
-      QUESTIONS_FOR_FACILITATOR_AVERAGES_LIST.each do |question_group|
+    QUESTIONS_FOR_FACILITATOR_AVERAGES_LIST.each do |question_group|
+      facilitators.each do |facilitator|
         histogram_for_this_workshop = (question_group[:all_ids] || [question_group[:primary_id]]).map {|x| flattened_this_workshop_histograms[x]}.compact.first
         histogram_for_this_workshop = histogram_for_this_workshop.try(:[], facilitator) || histogram_for_this_workshop
         histogram_for_all_my_workshops = (question_group[:all_ids] || [question_group[:primary_id]]).map {|x| flattened_all_my_workshop_histograms[x]}.compact.first
@@ -403,9 +407,10 @@ module Pd::WorkshopSurveyResultsHelper
 
         next if histogram_for_this_workshop.nil?
 
-        puts question_group
-
         total_responses_for_this_workshop = histogram_for_this_workshop.values.reduce(:+) || 0
+
+        puts question
+
         total_answer_for_this_workshop_sum = histogram_for_this_workshop.map {|k, v| question[:option_map][k] * v}.reduce(:+) || 0
         facilitator_averages[facilitator][question_group[:primary_id]] = {this_workshop: (total_answer_for_this_workshop_sum / total_responses_for_this_workshop.to_f).round(2)}
 
@@ -413,9 +418,34 @@ module Pd::WorkshopSurveyResultsHelper
         total_answer_for_all_workshops_sum = histogram_for_all_my_workshops.map {|k, v| question[:option_map][k] * v}.reduce(:+) || 0
         facilitator_averages[facilitator][question_group[:primary_id]][:all_my_workshops] = (total_answer_for_all_workshops_sum / total_responses_for_all_workshops.to_f).round(2)
       end
+
+      facilitator_averages[:questions][question_group[:primary_id]] = question_group[:all_ids] ? question_group[:all_ids].map {|x| flattened_questions[x]}.compact.first[:text] : flattened_questions[question_group[:primary_id]][:text]
+    end
+
+    facilitators.each do |facilitator|
+      QUESTIONS_FOR_FACILITATOR_AVERAGES.each do |category, questions|
+        facilitator_averages[facilitator][category.to_s.downcase.to_sym] = {}
+        [:this_workshop, :all_my_workshops].each do |column|
+          average = facilitator_averages[facilitator].slice(*(questions.map {|question| question[:primary_id]})).values.map {|x| x[column]}.reduce(:+) / questions.size.to_f
+          facilitator_averages[facilitator][category.to_s.downcase.to_sym][column] = average.round(2)
+        end
+      end
     end
 
     summary[:facilitator_averages] = facilitator_averages
+  end
+
+  def generate_facilitator_response_counts(summary, workshop, related_workshops)
+    facilitator_response_counts = {
+      this_workshop: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop_id: workshop.id).group(:facilitator_id).size,
+      all_my_workshops: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop_id: related_workshops.map(&:id)).group(:facilitator_id).size
+    }
+
+    if should_only_show_current_user?
+      facilitator_response_counts.transform_values! {|v| v.slice current_user.id}
+    end
+
+    summary[:facilitator_response_counts] = facilitator_response_counts
   end
 
   private
@@ -431,5 +461,13 @@ module Pd::WorkshopSurveyResultsHelper
     end
 
     summary
+  end
+
+  def should_only_show_current_user?
+    current_user &&
+      current_user.facilitator? &&
+      !(current_user.program_manager? ||
+        current_user.workshop_organizer? ||
+        current_user.workshop_admin?)
   end
 end

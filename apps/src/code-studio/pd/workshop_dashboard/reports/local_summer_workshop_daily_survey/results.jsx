@@ -1,15 +1,19 @@
 import React, {PropTypes} from 'react';
 import {Tab, Tabs} from 'react-bootstrap';
 import SingleChoiceResponses from '../../components/survey_results/single_choice_responses';
+import FacilitatorAveragesTable from '../../components/survey_results/facilitator_averages_table';
 import TextResponses from '../../components/survey_results/text_responses';
 import _ from 'lodash';
 
 export default class Results extends React.Component {
   static propTypes = {
-    questions: PropTypes.object,
-    thisWorkshop: PropTypes.object,
-    sessions: PropTypes.arrayOf(PropTypes.string),
-    facilitators: PropTypes.object
+    questions: PropTypes.object.isRequired,
+    thisWorkshop: PropTypes.object.isRequired,
+    sessions: PropTypes.arrayOf(PropTypes.string).isRequired,
+    facilitators: PropTypes.object.isRequired,
+    facilitatorAverages: PropTypes.object.isRequired,
+    facilitatorResponseCounts: PropTypes.object.isRequired,
+    courseName: PropTypes.string.isRequired
   };
 
   state = {
@@ -93,10 +97,26 @@ export default class Results extends React.Component {
     ));
   }
 
+  renderFacilitatorAverages() {
+    return Object.keys(this.props.facilitators).map((facilitator_id, i) => (
+      <Tab eventKey={this.props.sessions.length + i + 1} key={i} title={this.props.facilitators[facilitator_id]}>
+        <FacilitatorAveragesTable
+          facilitatorAverages={this.props.facilitatorAverages[this.props.facilitators[facilitator_id]]}
+          facilitatorId={parseInt(facilitator_id, 10)}
+          facilitatorName={this.props.facilitators[facilitator_id]}
+          questions={this.props.facilitatorAverages['questions']}
+          courseName={this.props.courseName}
+          facilitatorResponseCounts={this.props.facilitatorResponseCounts}
+        />
+      </Tab>
+    ));
+  }
+
   render() {
     return (
       <Tabs id="SurveyTab">
         {this.renderAllSessionsResults()}
+        {this.renderFacilitatorAverages()}
       </Tabs>
     );
   }
