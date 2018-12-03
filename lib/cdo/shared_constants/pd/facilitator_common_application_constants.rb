@@ -7,7 +7,7 @@ module Pd
 
     BASE_SECTION_HEADERS = {
       section_1_about_you: 'About You',
-      section_2_choose_your_program: 'Choose Your Program',
+      section_2_choose_your_program: 'Professional Learning Program',
       section_3_leading_students: 'Leading Students',
       section_4_facilitation_experience: 'Facilitation Experience',
       section_5_your_approach_to_learning_and_leading: 'Your Approach to Learning and Leading',
@@ -34,24 +34,14 @@ module Pd
 
       section_2_choose_your_program: {
         program: clean_multiline(
-          'We offer our Facilitator Development Program for three Code.org curricula.
-         Please choose one curriculum for which you would like to become a facilitator this year.
+          'We offer our Facilitator Development Program for three Code.org courses.
          For more details about the requirements to facilitate each program, please visit the
-         [2018-19 Facilitator Development Program Description](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U).'
+         [2019-20 Facilitator Development Program Description](https://code.org/files/facilitator/overview-2019-20.pdf).
+         Please choose one course for which you would like to become a facilitator this year.'
         ),
-        plan_on_teaching: 'Do you plan on teaching this course in the 2018-19 school year?',
-        ability_to_meet_requirements: clean_multiline(
-          'After reviewing the [Program Description](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U)
-         how would you rate your ability to meet the requirements and commitments for this program?'
-        ),
-        csf_availability: 'Are you available to attend the three-day Facilitator-in-Training workshop from Saturday, March 3 - Monday, March 5, 2018?',
-        csf_partial_attendance_reason: 'Please explain why you will be unable to attend the Monday portion of the training',
-        csd_csp_teachercon_availability:
-          'Are you available to attend one of the following five-day TeacherCons? (You only have to attend one. Mark all that you can attend)',
-        csd_csp_fit_availability: clean_multiline(
-          'Are you available to attend one of the following two-day Facilitator-in-Training workshops?
-        (You only have to attend one. Mark all that you can attend):'
-        )
+        code_org_facilitator: 'Are you currently or (have you been) a Code.org facilitator?',
+        code_org_facilitator_years: 'In which years did you work as a Code.org facilitator (mark all that apply)?',
+        code_org_facilitator_programs: "Please check the Code.org programs you currently facilitate, or have facilitated in the past (mark all that apply):",
       },
 
       section_3_leading_students: {
@@ -66,9 +56,6 @@ module Pd
       },
 
       section_4_facilitation_experience: {
-        code_org_facilitator: 'Are you currently or have you been a Code.org facilitator in the past?',
-        code_org_facilitator_years: 'In which years did you work as a Code.org facilitator (mark all that apply)?',
-        code_org_facilitator_programs: "Please check the Code.org programs you've facilitated for us in the past (mark all that apply):",
         have_led_pd: 'Have you led professional development in the past?',
         groups_led_pd: 'What groups have you led professional development for in the past? (check all that apply)',
         describe_prior_pd: 'Please describe your prior experience leading professional development experiences. (500 characters max)'
