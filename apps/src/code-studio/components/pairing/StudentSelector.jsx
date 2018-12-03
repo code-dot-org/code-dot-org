@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import { studentsShape } from './types';
+import i18n from "@cdo/locale";
 
 /**
  * A component for selecting one or more students in a section.
@@ -37,7 +38,7 @@ export default class StudentSelector extends React.Component {
     if (!this.props.students) {
       return null;
     } else if (this.props.students.length === 0) {
-      return <span>There are no other students in this section.</span>;
+      return <span>{i18n.noStudentsInSection()}</span>;
     }
 
     const studentDivs = this.props.students.map(student => {
@@ -66,7 +67,7 @@ export default class StudentSelector extends React.Component {
             onClick={this.handleSubmit}
             className="addPartners"
           >
-            Add Partners
+            {i18n.addPartners()}
           </button>
         }
       </div>
