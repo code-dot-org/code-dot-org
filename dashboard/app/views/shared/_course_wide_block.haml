@@ -7,7 +7,7 @@
         %h3= t('upsell.hoc.title')
         .smalltext= t('upsell.hoc.body')
 
-- elsif id == 'flappy'
+- elsif id == Script::FLAPPY_NAME
   .courseblock-span6.courseblock-wide-small
     = link_to script_reset_url(Script::FLAPPY_NAME) do
       .courseblock-span2.imgspan
@@ -71,7 +71,7 @@
         %h3= t("upsell.#{id}.title")
         .smalltext= t("upsell.#{id}.body_short")
 
-- elsif id == Script::ARTIST_NAME || id == Script::PLAYLAB_NAME
+- elsif [Script::ARTIST_NAME, Script::PLAYLAB_NAME].include? id
   - url = script_reset_url(id)
   - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
