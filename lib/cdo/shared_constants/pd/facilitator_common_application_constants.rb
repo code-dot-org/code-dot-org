@@ -8,7 +8,7 @@ module Pd
     BASE_SECTION_HEADERS = {
       section_1_about_you: 'About You',
       section_2_choose_your_program: 'Professional Learning Program',
-      section_3_leading_students: 'Leading Students',
+      section_3_experience_and_commitments: 'Experience and Commitments',
       section_4_facilitation_experience: 'Facilitation Experience',
       section_5_your_approach_to_learning_and_leading: 'Your Approach to Learning and Leading',
       section_6_logistics: 'Logistics',
@@ -44,9 +44,9 @@ module Pd
         code_org_facilitator_programs: "Please check the Code.org programs you currently facilitate, or have facilitated in the past (mark all that apply):",
       },
 
-      section_3_leading_students: {
+      section_3_experience_and_commitments: {
+        teaching_experience: 'Do you have experience as a classroom teacher?',
         led_cs_extracurriculars: 'Have you led or organized extracurricular computer science learning experiences? Please mark all that apply.',
-        teaching_experience: 'Do you have classroom teaching experience for K-12 students or adults?',
         grades_taught: 'What grade levels have you taught __in the past?__ Check all that apply.',
         grades_currently_teaching: 'What grade levels do you __currently__ teach? Check all that apply.',
         subjects_taught: 'Which subjects do you currently or have you previously taught? Check all that apply.',
