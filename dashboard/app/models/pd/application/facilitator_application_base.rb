@@ -55,7 +55,7 @@ module Pd::Application
     end
 
     PROGRAMS = {
-      csf: 'CS Fundamentals (Pre-K - 5th grade)',
+      csf: 'CS Fundamentals (K - 5th grade)',
       csd: 'CS Discoveries (6 - 10th grade)',
       csp: 'CS Principles (9 - 12th grade)'
     }.freeze
@@ -115,22 +115,6 @@ module Pd::Application
           'Tech company',
           TEXT_FIELDS[:other_with_text]
         ],
-
-        worked_in_cs_job: [YES, NO],
-
-        completed_cs_courses_and_activities: [
-          'Intro CS in high school',
-          'Intro CS in college',
-          'Advanced CS in high school or college',
-          'Online (Udacity, Coursera, etc.)',
-          'Attended a coding or CS camp',
-          'Attended a CS professional development workshop',
-          'I have a minor, major, certificate',
-          NONE,
-          TEXT_FIELDS[:other_with_text]
-        ],
-
-        diversity_training: [YES, NO],
 
         how_heard: [
           'Code.org email',
@@ -251,19 +235,17 @@ module Pd::Application
           '2014-15 school year',
           '2015-16 school year',
           '2016-17 school year',
-          '2017-18 school year'
+          '2017-18 school year',
+          '2018-19 school year'
         ],
 
         code_org_facilitator_programs: [
+          'CS Discoveries',
           'CS Fundamentals',
           'CS in Algebra',
           'CS in Science',
-          'Summer CS Discoveries workshop',
-          'School year CS Discoveries workshop',
-          'Summer CS Principles workshop',
-          'School year CS Principles workshops',
-          'Summer Exploring Computer Science workshop',
-          'School year Exploring Computer Science workshops'
+          'CS Principles',
+          'Exploring Computer Science'
         ],
 
         have_led_pd: [YES, NO],
