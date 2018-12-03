@@ -4,7 +4,7 @@ import TestUtils from 'react-addons-test-utils';
 import assert from 'assert';
 import sinon from 'sinon';
 
-import Pairing from '@cdo/apps/code-studio/components/pairing/pairing.jsx';
+import Pairing from '@cdo/apps/code-studio/components/pairing/Pairing.jsx';
 
 describe('Pairing component', function () {
   var div;
