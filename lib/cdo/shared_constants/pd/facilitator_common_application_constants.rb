@@ -18,28 +18,18 @@ module Pd
     BASE_PAGE_LABELS = {
       section_1_about_you: {
         title: 'Title',
-        first_name: 'First Name',
-        preferred_first_name: 'Preferred First Name',
-        last_name: 'Last Name',
-        account_email: 'Account Email',
-        alternate_email: 'If you use another email, enter it here:',
-        phone: 'Phone',
-        address: 'Home Address',
+        first_name: 'First name',
+        last_name: 'Last name',
+        account_email: 'Code.org account email',
+        alternate_email: 'If you use another email (especially during summer months), enter it here:',
+        phone: 'Home or cell phone',
+        address: 'Home address',
         city: 'City',
         state: 'State',
-        zip_code: 'Zip Code',
-        gender_identity: 'Gender Identity',
-        race: 'Race',
+        zip_code: 'Zip code',
         institution_type: 'What type of institution do you work for?',
         current_employer: 'Current employer',
         job_title: 'What is your job title?',
-        resume_link: 'Please provide a link to your resume, LinkedIn profile, website, or summarize your relevant past experience. (500 characters max)',
-        worked_in_cs_job: 'Have you worked in a job that requires computer science knowledge?',
-        cs_related_job_requirements: 'What were your CS-related job requirements? (500 characters max)',
-        completed_cs_courses_and_activities: 'Which of the following computer science education courses or activities have you completed?',
-        diversity_training: 'Have you engaged in training and development focused on diversity, equity, and/or inclusion?',
-        diversity_training_description: 'Please briefly describe (500 characters max)',
-        how_heard: 'How did you hear about this opportunity?'
       },
 
       section_2_choose_your_program: {
@@ -133,6 +123,8 @@ module Pd
       },
 
       section_7_submission: {
+        gender_identity: 'Gender Identity',
+        race: 'Race',
         additional_info:
           "Please provide any additional information you'd like Code.org to have about your application. (500 characters max)",
 
