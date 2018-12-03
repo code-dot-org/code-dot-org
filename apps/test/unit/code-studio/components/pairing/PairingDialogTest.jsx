@@ -2,8 +2,8 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/configuredChai';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Pairing from '@cdo/apps/code-studio/components/pairing/pairing';
-import PairingDialog from '@cdo/apps/code-studio/components/pairing/pairing_dialog';
+import Pairing from '@cdo/apps/code-studio/components/pairing/Pairing';
+import PairingDialog from '@cdo/apps/code-studio/components/pairing/PairingDialog';
 
 describe('PairingDialog', () => {
   it('renders a dialog containing the Pairing component', () => {
