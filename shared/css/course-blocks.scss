@@ -153,49 +153,18 @@
     padding-left: 10px;
     padding-right: 10px;
     font-family: $gotham-regular;
-    font-weight:normal;
-    color:$charcoal;
-  }
-
-  .bar {
-    width: 100%;
-    font-size: 13px;
-    line-height: 13px;
-    padding: 4px 10px;
-    margin: 0;
-    bottom: 0;
-    float: left;
-    position: absolute;
+    font-weight: normal;
+    color: $charcoal;
   }
 
   .teacher-guide {
-    bottom: 40px;
+    font-size: 13px;
+    padding: 16px;
     text-align: right;
 
     &:hover {
       text-decoration: underline;
     }
-  }
-
-  .audiencebar {
-    bottom: 20px;
-  }
-
-  .audience {
-    background-color: $light_gray;
-    color: white;
-  }
-  .continue {
-    background-color: $yellow;
-    color: white;
-  }
-  .trynow {
-    background-color: $green;
-    color: white;
-  }
-  .printcertificate {
-    background-color: $cyan;
-    color: white;
   }
 }
 
@@ -268,82 +237,6 @@
     padding-right: 10px;
   }
 
-  .audiencebar {
-    width: 100%;
-    padding: 4px 30px;
-    margin: 0;
-    bottom: 25px;
-    float: left;
-    position: absolute;
-  }
-
-  .bottombar {
-    width: 100%;
-    padding-left: 30px;
-    padding-right: 10px;
-    padding-top: 4px;
-    padding-bottom:4px;
-    margin: 0;
-    bottom: 0;
-    float: left;
-    position: absolute;
-
-    html[dir=rtl] & {
-      padding-right: 30px;
-      padding-left: 10px;
-    }
-  }
-
-  .bottombartext {
-    font-size: 13px;
-    line-height: 17px;
-    font-family: $gotham-regular;
-    font-weight:normal;
-    color:$charcoal;
-    float: left;
-    padding-left: 10px;
-  }
-
-  .bar {
-    width: 100%;
-    font-size: 13px;
-    padding: 4px 30px;
-    margin: 0;
-    bottom: 0;
-    float: left;
-    position: absolute;
-  }
-
-  .audience {
-    background-color: $light_gray;
-    color: white;
-  }
-
-  .continue {
-    background-color: $yellow;
-    color: white;
-  }
-  .trynow {
-    background-color: $green;
-    color: white;
-  }
-  .printcertificate {
-    background-color: $cyan;
-    color: white;
-  }
-  .continuelight {
-    background-color: $light_yellow;
-    color: white;
-  }
-  .trynowlight {
-    background-color: $light_green;
-    color: white;
-  }
-  .printcertificatelight {
-    background-color: $light_cyan;
-    color: white;
-  }
-
   html[dir=rtl] & {
     float: right;
   }
@@ -410,28 +303,6 @@
     background-color: $light_gray;
     border-radius: 4px;
     padding: 0 5px;
-  }
-
-  .bottombar {
-    width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 4px;
-    padding-bottom:4px;
-    margin: 0;
-    bottom: 0;
-    position: absolute;
-    font-size: 13px;
-    line-height: 17px;
-    font-family: $gotham-regular;
-    font-weight:normal;
-    color:$charcoal;
-    float: left;
-  }
-
-  .trynow {
-    background-color: $green;
-    color: white;
   }
 }
 
