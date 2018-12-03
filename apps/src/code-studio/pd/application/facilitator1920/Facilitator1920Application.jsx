@@ -4,7 +4,7 @@ import FormController from '../../form_components/FormController';
 import Section1AboutYou from './Section1AboutYou';
 import Section2ChooseYourProgram from './Section2ChooseYourProgram';
 import Section3ExperienceAndCommitments from './Section3ExperienceAndCommitments';
-import Section4FacilitationExperience from './Section4FacilitationExperience';
+import Section4LeadingStudents from './Section4LeadingStudents';
 import Section5YourApproachToLearningAndLeading from './Section5YourApproachToLearningAndLeading';
 import Section6Logistics from './Section6Logistics';
 import Section7Submission from './Section7Submission';
@@ -27,7 +27,7 @@ export default class Facilitator1920Application extends FormController {
       Section1AboutYou,
       Section2ChooseYourProgram,
       Section3ExperienceAndCommitments,
-      Section4FacilitationExperience,
+      Section4LeadingStudents,
       Section5YourApproachToLearningAndLeading,
       Section6Logistics,
       Section7Submission

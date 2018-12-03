@@ -9,7 +9,7 @@ module Pd
       section_1_about_you: 'About You',
       section_2_choose_your_program: 'Professional Learning Program',
       section_3_experience_and_commitments: 'Experience and Commitments',
-      section_4_facilitation_experience: 'Facilitation Experience',
+      section_4_leading_students: 'Leading Students',
       section_5_your_approach_to_learning_and_leading: 'Your Approach to Learning and Leading',
       section_6_logistics: 'Logistics',
       section_7_submission: 'Submission'
@@ -55,7 +55,7 @@ module Pd
         completed_pd: 'Which of the following Code.org professional learning programs did you complete __as a teacher__ (mark all that apply)?'
       },
 
-      section_4_facilitation_experience: {
+      section_4_leading_students: {
         have_led_pd: 'Have you led professional development in the past?',
         groups_led_pd: 'What groups have you led professional development for in the past? (check all that apply)',
         describe_prior_pd: 'Please describe your prior experience leading professional development experiences. (500 characters max)'
