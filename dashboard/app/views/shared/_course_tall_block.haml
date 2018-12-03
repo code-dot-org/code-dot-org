@@ -61,6 +61,7 @@
   - url = script_url(id)
   - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
+  - audience = data_t_suffix('script.name', id, 'description_audience')
 
 - elsif [Script::ARTIST_NAME, Script::PLAYLAB_NAME, Script::HOC_NAME, Script::FROZEN_NAME, Script::INFINITY_NAME, Script::STARWARS_NAME, Script::STARWARS_BLOCKS_NAME, Script::MINECRAFT_NAME, Script::MINECRAFT_DESIGNER_NAME, Script::MINECRAFT_HERO_NAME, Script::MINECRAFT_AQUATIC_NAME, Script::DANCE_PARTY_NAME].include? id
   - url = script_reset_url(id)
@@ -100,9 +101,6 @@
     - teacher_guide = CDO.code_org_url("/hourofcode/artist")
   - else
     - title = data_t_suffix('script.name', id, 'title')
-
-- if [Script::COURSE1_NAME, Script::COURSE2_NAME, Script::COURSE3_NAME, Script::COURSE4_NAME, Script::COURSEA_NAME, Script::COURSEB_NAME, Script::COURSEC_NAME, Script::COURSED_NAME, Script::COURSEE_NAME, Script::COURSEF_NAME].include? id
-  - audience = data_t_suffix('script.name', id, 'description_audience')
 
 .courseblock-span3.courseblock-tall
   = link_to url do
