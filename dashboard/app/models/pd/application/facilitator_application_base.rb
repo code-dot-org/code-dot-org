@@ -166,7 +166,11 @@ module Pd::Application
           TEXT_FIELDS[:other_please_list]
         ],
 
-        teaching_experience: [YES, NO],
+        teaching_experience: [
+          'Yes, I am a current classroom teacher',
+          'Yes. I am not currently a classroom teacher, but I have taught in a classroom in the past.',
+          'No, I do not have classroom teaching experience'
+        ],
 
         grades_taught: [
           *GRADES,

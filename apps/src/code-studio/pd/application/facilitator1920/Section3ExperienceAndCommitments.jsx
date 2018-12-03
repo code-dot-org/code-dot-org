@@ -8,11 +8,11 @@ import {
 } from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
 import {YES, NONE} from '../ApplicationConstants';
 
-export default class Section3LeadingStudents extends LabeledFormComponent {
-  static labels = PageLabels.section3LeadingStudents;
+export default class Section3ExperienceAndCommitments extends LabeledFormComponent {
+  static labels = PageLabels.Section3ExperienceAndCommitments;
 
   static associatedFields = [
-    ...Object.keys(PageLabels.section3LeadingStudents),
+    ...Object.keys(PageLabels.Section3ExperienceAndCommitments),
     "gradesTaught_other",
     "gradesCurrentlyTeaching_other",
     "subjectsTaught_other",
@@ -22,7 +22,7 @@ export default class Section3LeadingStudents extends LabeledFormComponent {
   render() {
     return (
       <FormGroup>
-        <h3>Section 3: {SectionHeaders.section3LeadingStudents}</h3>
+        <h3>Section 3: {SectionHeaders.Section3ExperienceAndCommitments}</h3>
 
         {this.radioButtonsFor("teachingExperience")}
 
