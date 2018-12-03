@@ -4,26 +4,17 @@ import LabeledFormComponent from "../../form_components/LabeledFormComponent";
 import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
 import {YES} from '../ApplicationConstants';
 
-export default class Section4FacilitationExperience extends LabeledFormComponent {
-  static labels = PageLabels.section4FacilitationExperience;
+export default class Section4LeadingStudents extends LabeledFormComponent {
+  static labels = PageLabels.Section4LeadingStudents;
 
   static associatedFields = [
-    ...Object.keys(PageLabels.section4FacilitationExperience)
+    ...Object.keys(PageLabels.Section4LeadingStudents)
   ];
 
   render() {
     return (
       <FormGroup>
-        <h3>Section 4: {SectionHeaders.section4FacilitationExperience}</h3>
-
-        {this.radioButtonsFor("codeOrgFacilitator")}
-
-        {this.props.data.codeOrgFacilitator === YES &&
-          <div>
-            {this.checkBoxesFor("codeOrgFacilitatorYears")}
-            {this.checkBoxesFor("codeOrgFacilitatorPrograms")}
-          </div>
-        }
+        <h3>Section 4: {SectionHeaders.Section4LeadingStudents}</h3>
 
         {this.radioButtonsFor("haveLedPd")}
 
@@ -43,13 +34,6 @@ export default class Section4FacilitationExperience extends LabeledFormComponent
   static getDynamicallyRequiredFields(data) {
     const requiredFields = [];
 
-    if (data.codeOrgFacilitator === YES) {
-      requiredFields.push(
-        "codeOrgFacilitatorYears",
-        "codeOrgFacilitatorPrograms"
-      );
-    }
-
     if (data.haveLedPd === YES) {
       requiredFields.push(
         "groupsLedPd",
@@ -65,11 +49,6 @@ export default class Section4FacilitationExperience extends LabeledFormComponent
    */
   static processPageData(data) {
     const changes = {};
-
-    if (data.codeOrgFacilitator !== YES) {
-      changes.codeOrgFacilitatorYears = undefined;
-      changes.codeOrgFacilitatorPrograms = undefined;
-    }
 
     if (data.haveLedPd !== YES) {
       changes.groupsLedPd = undefined;
