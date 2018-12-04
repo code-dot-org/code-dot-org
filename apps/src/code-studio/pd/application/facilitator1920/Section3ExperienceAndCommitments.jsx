@@ -9,10 +9,10 @@ import {
 import {YES, NONE} from '../ApplicationConstants';
 
 export default class Section3ExperienceAndCommitments extends LabeledFormComponent {
-  static labels = PageLabels.Section3ExperienceAndCommitments;
+  static labels = PageLabels.section3ExperienceAndCommitments;
 
   static associatedFields = [
-    ...Object.keys(PageLabels.Section3ExperienceAndCommitments),
+    ...Object.keys(PageLabels.section3ExperienceAndCommitments),
     "gradesTaught_other",
     "gradesCurrentlyTeaching_other",
     "subjectsTaught_other",
@@ -22,7 +22,7 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
   render() {
     return (
       <FormGroup>
-        <h3>Section 3: {SectionHeaders.Section3ExperienceAndCommitments}</h3>
+        <h3>Section 3: {SectionHeaders.section3ExperienceAndCommitments}</h3>
 
         {this.radioButtonsFor("teachingExperience")}
 
