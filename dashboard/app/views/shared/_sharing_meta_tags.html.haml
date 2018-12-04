@@ -11,7 +11,11 @@
 
     -# twitter boilerplate
     = tag 'meta', name: 'twitter:site', content: '@codeorg'
-    = tag 'meta', name: 'twitter:card', content: 'photo'
+
+    - if @level.game.app == Game::DANCE
+      = tag 'meta', name: 'twitter:card', content: 'summary'
+    - else
+      = tag 'meta', name: 'twitter:card', content: 'photo'
 
     - if @level.game.app == Game::ARTIST
       - meta_image_width = 500
@@ -34,18 +38,6 @@
         = tag 'meta', attr => "#{namespace}:image:secure_url", content: meta_image_url(level_source: @level_source, level: @level)
       = tag 'meta', attr => "#{namespace}:image:width", content: meta_image_width
       = tag 'meta', attr => "#{namespace}:image:height", content: meta_image_height
-
-    - if @project_video
-      = tag 'meta', name: "twitter:card", content: "player"
-      = tag 'meta', name: "twitter:player", content: @project_video_embed
-      = tag 'meta', name: "twitter:player:stream", content: @project_video
-      = tag 'meta', name: "twitter:player:stream:content_type", content: "video/mp4"
-      = tag 'meta', property: "og:video", content: @project_video
-      = tag 'meta', property: "og:video:secure_url", content: @project_video
-      - {'og:video' => 'property', 'twitter:player' => 'name', 'twitter:player:stream' => 'name'}.each do |namespace, attr|
-        = tag 'meta', attr => "#{namespace}:width", content: 400
-        = tag 'meta', attr => "#{namespace}:height", content: 400
-
 
     = tag :meta, name: 'mobile-web-app-capable', content: 'yes'
     = tag :meta, name: 'apple-mobile-web-app-capable', content: 'yes'

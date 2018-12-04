@@ -13,9 +13,9 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@3.4.0":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.4.0.tgz#4ef12403f816666a83281cc1f8cd748b2d672679"
+"@code-dot-org/blockly@3.4.2":
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.4.2.tgz#3e5543fd64436f6b3b7ff8da930df9f7962c295e"
 
 "@code-dot-org/bramble@0.1.26":
   version "0.1.26"
@@ -58,9 +58,9 @@
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.2.0.tgz#3354090ecb81c60386b33931c7c64c4c9948e8b3"
 
-"@code-dot-org/dance-party@0.0.36":
-  version "0.0.36"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-0.0.36.tgz#eaa71c505b278ff529341abe9b2be58c8a48df24"
+"@code-dot-org/dance-party@0.0.41":
+  version "0.0.41"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-0.0.41.tgz#27ac861f0c0d21b0d20b98e471d2e8995945cdb2"
 
 "@code-dot-org/johnny-five@0.11.1-cdo.2":
   version "0.11.1-cdo.2"
@@ -7431,10 +7431,6 @@ lodash@3.7.x:
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.7.0.tgz#3678bd8ab995057c07ade836ed2ef087da811d45"
 
-lodash@4.15.0:
-  version "4.15.0"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.15.0.tgz#3162391d8f0140aa22cf8f6b3c34d6b7f63d3aa9"
-
 lodash@4.x.x, lodash@^4.0.0, lodash@^4.0.1, lodash@^4.14.0, lodash@^4.16.1, lodash@^4.17.2, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.5.0, lodash@^4.7.0, lodash@^4.8.0:
   version "4.17.5"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
@@ -7442,6 +7438,10 @@ lodash@4.x.x, lodash@^4.0.0, lodash@^4.0.1, lodash@^4.14.0, lodash@^4.16.1, loda
 lodash@^3.10.1, lodash@^3.8.0:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
+
+lodash@^4.17.5:
+  version "4.17.11"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
 lodash@~0.9.2:
   version "0.9.2"

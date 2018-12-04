@@ -4,16 +4,13 @@ module Api::V1::Pd
   class ApplicationsControllerTest < ::ActionController::TestCase
     include Pd::Application::ActiveApplicationModels
 
-    # include Pd::Teacher1819ApplicationConstants
-    include Pd::Facilitator1819ApplicationConstants
-
     freeze_time
 
     setup_all do
-      csf_facilitator_application_hash = build :pd_facilitator1819_application_hash,
+      csf_facilitator_application_hash = build FACILITATOR_APPLICATION_HASH_FACTORY,
         program: Pd::Application::Facilitator1819Application::PROGRAMS[:csf]
 
-      @csf_facilitator_application_no_partner = create :pd_facilitator1819_application,
+      @csf_facilitator_application_no_partner = create FACILITATOR_APPLICATION_FACTORY,
         form_data_hash: csf_facilitator_application_hash
 
       @workshop_admin = create :workshop_admin
@@ -23,7 +20,7 @@ module Api::V1::Pd
         program_managers: [@workshop_organizer, @program_manager],
         cohort_capacity_csd: 25,
         cohort_capacity_csp: 50
-      @csf_facilitator_application_with_partner = create :pd_facilitator1819_application,
+      @csf_facilitator_application_with_partner = create FACILITATOR_APPLICATION_FACTORY,
         regional_partner: @regional_partner, form_data_hash: csf_facilitator_application_hash
 
       @test_show_params = {
@@ -42,7 +39,7 @@ module Api::V1::Pd
       @csd_teacher_application = create TEACHER_APPLICATION_FACTORY, course: 'csd'
       @csd_teacher_application_with_partner = create TEACHER_APPLICATION_FACTORY, course: 'csd', regional_partner: @regional_partner
       @csp_teacher_application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
-      @csp_facilitator_application = create :pd_facilitator1819_application, course: 'csp'
+      @csp_facilitator_application = create FACILITATOR_APPLICATION_FACTORY, course: 'csp'
 
       @serializing_teacher = create(:teacher,
         email: 'minerva@hogwarts.edu',
@@ -88,14 +85,14 @@ module Api::V1::Pd
     end
 
     test "quick view returns appropriate application type" do
-      create :pd_facilitator1819_application, course: 'csf'
-      create :pd_facilitator1819_application, course: 'csp'
+      create FACILITATOR_APPLICATION_FACTORY, course: 'csf'
+      create FACILITATOR_APPLICATION_FACTORY, course: 'csp'
       user = create :workshop_admin
       sign_in user
 
       get :quick_view, params: @test_quick_view_params
       assert_response :success
-      assert_equal Pd::Application::Facilitator1819Application.csf.count, JSON.parse(@response.body).length
+      assert_equal FACILITATOR_APPLICATION_CLASS.csf.count, JSON.parse(@response.body).length
     end
 
     test "quick view returns applications with appropriate regional partner filter" do
@@ -125,7 +122,7 @@ module Api::V1::Pd
       regional_partner = create :regional_partner, program_managers: [program_manager]
       sign_in program_manager
 
-      create_list :pd_facilitator1819_application, 3, :locked, regional_partner: regional_partner
+      create_list FACILITATOR_APPLICATION_FACTORY, 3, :locked, regional_partner: regional_partner
       get :index
       assert_response :success
       data = JSON.parse(response.body)
@@ -137,7 +134,7 @@ module Api::V1::Pd
       regional_partner = create :regional_partner, program_managers: [program_manager]
       sign_in program_manager
 
-      create_list :pd_facilitator1819_application, 3, :locked, regional_partner: regional_partner
+      create_list FACILITATOR_APPLICATION_FACTORY, 3, :locked, regional_partner: regional_partner
       get :index
       assert_response :success
       data = JSON.parse(response.body)
@@ -151,8 +148,8 @@ module Api::V1::Pd
       regional_partner = create :regional_partner, program_managers: [program_manager]
       sign_in program_manager
 
-      create_list :pd_facilitator1819_application, 3, :locked, regional_partner: regional_partner
-      create_list :pd_facilitator1819_application, 2, regional_partner: regional_partner
+      create_list FACILITATOR_APPLICATION_FACTORY, 3, :locked, regional_partner: regional_partner
+      create_list FACILITATOR_APPLICATION_FACTORY, 2, regional_partner: regional_partner
 
       get :index
       assert_response :success
@@ -167,8 +164,8 @@ module Api::V1::Pd
       regional_partner = create :regional_partner, program_managers: [program_manager]
       sign_in program_manager
 
-      create_list :pd_facilitator1819_application, 3, :locked, regional_partner: regional_partner
-      create_list :pd_facilitator1819_application, 2, regional_partner: regional_partner
+      create_list FACILITATOR_APPLICATION_FACTORY, 3, :locked, regional_partner: regional_partner
+      create_list FACILITATOR_APPLICATION_FACTORY, 2, regional_partner: regional_partner
 
       get :index
       assert_response :success
@@ -447,11 +444,11 @@ module Api::V1::Pd
       assert_response :success
       response_csv = CSV.parse @response.body
 
-      assert Pd::Facilitator1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+      assert Pd::Facilitator1920ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
         :csf_availability
       ).values.all? {|x| response_csv.first.include?(x)}
 
-      assert Pd::Facilitator1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+      assert Pd::Facilitator1920ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
         :csd_csp_teachercon_availability, :csd_csp_fit_availability
       ).values.any? {|x| response_csv.first.exclude?(x)}
     end
@@ -463,11 +460,11 @@ module Api::V1::Pd
       assert_response :success
       response_csv = CSV.parse @response.body
 
-      assert Pd::Facilitator1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+      assert Pd::Facilitator1920ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
         :csd_csp_teachercon_availability, :csd_csp_fit_availability
       ).values.all? {|x| response_csv.first.include?(x)}
 
-      assert Pd::Facilitator1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+      assert Pd::Facilitator1920ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
         :csf_availability
       ).values.any? {|x| response_csv.first.exclude?(x)}
     end
@@ -527,6 +524,11 @@ module Api::V1::Pd
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
             status: 'accepted_not_notified',
+            notes: nil,
+            notes_2: nil,
+            notes_3: nil,
+            notes_4: nil,
+            notes_5: nil,
             friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -564,6 +566,11 @@ module Api::V1::Pd
             assigned_workshop: nil,
             registered_workshop: nil,
             status: 'accepted_not_notified',
+            notes: nil,
+            notes_2: nil,
+            notes_3: nil,
+            notes_4: nil,
+            notes_5: nil,
             friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -576,7 +583,7 @@ module Api::V1::Pd
 
       Timecop.freeze(time) do
         application = create(
-          :pd_facilitator1819_application,
+          FACILITATOR_APPLICATION_FACTORY,
           course: 'csp',
           regional_partner: @regional_partner,
           user: @serializing_teacher
@@ -602,6 +609,11 @@ module Api::V1::Pd
             assigned_workshop: nil,
             registered_workshop: nil,
             status: 'accepted',
+            notes: nil,
+            notes_2: nil,
+            notes_3: nil,
+            notes_4: nil,
+            notes_5: nil,
             assigned_fit: nil,
             registered_fit: 'No',
             locked: true
@@ -646,6 +658,11 @@ module Api::V1::Pd
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
             status: 'accepted_not_notified',
+            notes: nil,
+            notes_2: nil,
+            notes_3: nil,
+            notes_4: nil,
+            notes_5: nil,
             friendly_scholarship_status: 'No'
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -682,6 +699,11 @@ module Api::V1::Pd
             assigned_workshop: nil,
             registered_workshop: nil,
             status: 'accepted_not_notified',
+            notes: nil,
+            notes_2: nil,
+            notes_3: nil,
+            notes_4: nil,
+            notes_5: nil,
             friendly_scholarship_status: nil
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -693,7 +715,7 @@ module Api::V1::Pd
 
       Timecop.freeze(time) do
         application = create(
-          :pd_facilitator1819_application,
+          FACILITATOR_APPLICATION_FACTORY,
           course: 'csp',
           regional_partner: @regional_partner,
           user: @serializing_teacher
@@ -721,6 +743,11 @@ module Api::V1::Pd
             assigned_fit: nil,
             registered_fit: 'No',
             status: 'accepted',
+            notes: nil,
+            notes_2: nil,
+            notes_3: nil,
+            notes_4: nil,
+            notes_5: nil,
             locked: true
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -745,6 +772,10 @@ module Api::V1::Pd
         "Scholarship teacher?",
         "Bonus Points",
         "Notes",
+        "Notes 2",
+        "Notes 3",
+        "Notes 4",
+        "Notes 5",
         "Title",
         "First name",
         "Last name",
@@ -847,7 +878,7 @@ module Api::V1::Pd
     end
 
     test 'cohort csv download returns expected columns for facilitators' do
-      create :pd_facilitator1819_application, :locked, course: 'csf'
+      create FACILITATOR_APPLICATION_FACTORY, :locked, course: 'csf'
       sign_in @workshop_admin
       get :cohort_view, format: 'csv', params: {role: 'csf_facilitators'}
       assert_response :success
@@ -860,7 +891,12 @@ module Api::V1::Pd
         'School Name',
         'Email',
         'Status',
-        'Assigned Workshop'
+        'Assigned Workshop',
+        'Notes',
+        'Notes 2',
+        'Notes 3',
+        'Notes 4',
+        'Notes 5'
       ]
       assert_equal expected_headers, response_csv.first
       assert_equal expected_headers.length, response_csv.second.length
