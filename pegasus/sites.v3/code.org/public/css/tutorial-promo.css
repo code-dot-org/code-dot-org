@@ -46,7 +46,7 @@
   color: white;
 }
 
-.tutorial-info {
+.tutorial-details {
   height: 100px;
 }
 
@@ -84,6 +84,10 @@
 
   #starwars-mobile-image {
     background-image: url(/images/fit-520/starwars_carousel_background.jpg);
+  }
+
+  #minecraft-mobile-image {
+    background-image: url(/images/fill-520x800/mc/minecraft_teacher_background.jpg);
   }
 }
 
