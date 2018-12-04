@@ -56,9 +56,12 @@ module Pd
       },
 
       section_4_leading_students: {
-        have_led_pd: 'Have you led professional development in the past?',
-        groups_led_pd: 'What groups have you led professional development for in the past? (check all that apply)',
-        describe_prior_pd: 'Please describe your prior experience leading professional development experiences. (500 characters max)'
+        currently_involved_in_cs_education: 'How are you currently involved in CS education? Mark all that apply.',
+        grades_taught: 'If you do have classroom teaching experience, what grade levels have you taught? Mark all that apply.',
+        experience_teaching_this_course: 'Do you have experience teaching the full {{CS Program}} curriculum to students? Mark all that apply.',
+        plan_on_teaching: 'Do you plan on teaching this course in the 2019-20 school year?',
+        completed_pd: "Have you participated as a teacher in Code.org's full Professional Learning Program for {{CS Program}}?",
+        facilitator_availability: 'When do you anticipate being able to facilitate? Note that depending on the program, workshops may be hosted on Saturdays or Sundays. Mark all that apply.',
       },
 
       section_5_your_approach_to_learning_and_leading: {
@@ -125,7 +128,7 @@ module Pd
       grades_taught: 'What grade levels have you taught in the past?',
       grades_currently_teaching: 'What grade levels do you teach?',
       experience_leading: 'Which of the following do you have experience leading as a teacher?',
-      completed_pd: 'Which of the following Code.org professional learning programs did you complete as a teacher?'
+      completed_pd: 'Which of the following Code.org professional learning programs did you complete as a teacher?',
     }.freeze
 
     NUMBERED_QUESTIONS = %w(
@@ -143,6 +146,7 @@ module Pd
       other_with_text: 'Other:'.freeze,
       other_please_list: 'Other (Please List):'.freeze,
       other_please_explain: 'Other (Please Explain):'.freeze,
+      other_please_describe: 'Other (Please Describe):'.freeze,
       how_heard_facilitator: 'A Code.org facilitator (please share name):'.freeze,
       how_heard_code_org_staff: 'A Code.org staff member (please share name):'.freeze,
       how_heard_regional_partner: 'A Code.org Regional Partner (please share name):'.freeze,
