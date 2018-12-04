@@ -42,7 +42,7 @@ const styles = {
     lineHeight: "21px",
     height: 140,
     marginBottom: 5,
-    overflowY: 'scroll'
+    overflowY: 'auto'
   },
   button: {
     marginLeft: 20,
