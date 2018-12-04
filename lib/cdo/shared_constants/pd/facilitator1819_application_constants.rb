@@ -1,6 +1,10 @@
 module Pd
   module Facilitator1819ApplicationConstants
     include FacilitatorCommonApplicationConstants
+    # Remove newlines and leading whitespace from multiline strings
+    def self.clean_multiline(string)
+      string.gsub(/\n\s*/, ' ')
+    end
 
     SECTION_HEADERS = {
       section_1_about_you: 'About You',
