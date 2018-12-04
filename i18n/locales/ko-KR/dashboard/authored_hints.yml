@@ -3534,13 +3534,6 @@ ko:
           * 댄서 두 명 이상의 속성을 변경해야 합니다.
           
           *이 단계는 8번째 마디 이후에 끝납니다.
-      Dance_Party_11.5_authored_hint:
-        validation: |-
-          **이 단계를 어떻게 통과하나요?**
-          
-          * 창의력을 발휘하세요!
-          
-          *이 단계는 8번째 마디 이후에 끝납니다.
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **이 단계를 어떻게 통과하나요?**
@@ -3549,6 +3542,13 @@ ko:
           
           *이 단계는 8번째 마디 이후에 끝납니다.
       Dance_Party_11_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+          
+          * 창의력을 발휘하세요!
+          
+          *이 단계는 8번째 마디 이후에 끝납니다.
+      Dance_Party_11_5_authored_hint:
         validation: |-
           **이 단계를 어떻게 통과하나요?**
           

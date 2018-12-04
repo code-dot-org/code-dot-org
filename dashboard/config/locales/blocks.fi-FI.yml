@@ -112,6 +112,10 @@ fi:
         options:
           EFFECT:
             '"none"': Ei mitään
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': Ei mitään
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -131,6 +135,10 @@ fi:
             '0.5': slow
             '0.25': very slow
       Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Ei mitään
+      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
             '"none"': Ei mitään

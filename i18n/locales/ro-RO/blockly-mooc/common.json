@@ -421,6 +421,8 @@
   "dontForget": "Nu uita",
   "downloadCSV": "Descarca CSV",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Animaţie",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "Adaugă două numere",
   "dropletBlock_addOperator_signatureOverride": "Adaugă operatorul",

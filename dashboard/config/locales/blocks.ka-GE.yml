@@ -157,6 +157,15 @@ ka:
             '"rainbow"': ცისარტყელა
             '"diamonds"': ბრილიანტები
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": შემთხვევითი
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': არცერთი
+            '"rand"': შემთხვევითი
+            '"color_cycle"': ცისარტყელა
+            '"diamonds"': ბრილიანტები
+            '"rainbow"': ცისარტყელა
+            '"disco"': დისკო
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -180,6 +189,11 @@ ka:
           EFFECT:
             '"none"': არცერთი
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": შემთხვევითი
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': არცერთი
+            '"rand"': შემთხვევითი
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -252,6 +266,7 @@ ka:
             '"s"': s
             '"w"': w
             '"x"': x
+            '"y"': y
       Dancelab_whenPeak:
         options:
           RANGE:

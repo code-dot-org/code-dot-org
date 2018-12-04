@@ -289,11 +289,11 @@ pl:
       Dance_Party_08: |-
         Każdy tancerz odznacza się zestawem _właściwości_, które decydują o tym, jak wygląda.
         
-        Zmniejszając _wielkość_ tancerza możesz spowodować, że będzie wyglądał, jak gdyby był w tle. Czy możesz sprawić, by obie kopie tancerzy były tej samej wielkości?
+        Zmniejszając _wielkość_ tancerza możesz spowodować, że będzie wyglądał, jak gdyby był tancerzem drugiego planu. Czy możesz sprawić, by obie kopie tancerzy były tej samej wielkości?
       Dance_Party_09: |-
         Tancerze mają właściwość „odcień”, która pozwala dodać warstwę koloru. Spróbuj zmienić odcień jednego ze swoich tancerzy.
         * Wybór odcienia spowoduje zmieszanie wybranego koloru z kolorami tancerza.
-      Dance_Party_1: "*Zróbmy potańcówkę!*\n\nPrzeciągnij blok <xml><block type=\"Dancelab_makeNewDanceSprite\"><title name=\"COSTUME\" config=\"&quot;CAT&quot;, &quot;CAT&quot;\">\"CAT\"</title><title name=\"NAME\">my&#95;first&#95;dancer</title><title name=\"LOCATION\">{x: 200, y: 200}</title></block></xml> do obszaru roboczego. \n\nWłącz go do bloku <xml><block type=\"Dancelab_whenSetupSong\" movable=\"false\"><title name=\"SONG\">\"hammer\"</title><statement name=\"DO\"></statement></block></xml>, aby utworzyć swojego pierwszego tancerza.\n\n* * Możesz kliknąć na żarówce z lewej strony, jeśli chcesz więcej informacji lub dodatkowe wyzwanie.*"
+      Dance_Party_1: "*Zróbmy potańcówkę!*\n\nPrzeciągnij blok <xml><block type=\"Dancelab_makeNewDanceSprite\"><title name=\"COSTUME\" config=\"&quot;CAT&quot;, &quot;CAT&quot;\">\"CAT\"</title><title name=\"NAME\">my&#95;first&#95;dancer</title><title name=\"LOCATION\">{x: 200, y: 200}</title></block></xml> do obszaru roboczego. \n\nWłącz go do bloku <xml><block type=\"Dancelab_whenSetupSong\" movable=\"false\"><title name=\"SONG\">\"hammer\"</title><statement name=\"DO\"></statement></block></xml>, aby utworzyć swojego pierwszego tancerza.\n\n* * Możesz kliknąć na żarówce z lewej strony, jeśli chcesz więcej informacji lub dodatkowe wyzwania.*"
       Dance_Party_10: |-
         Teraz wiemy, jak zmieniać właściwości tancerza. Stosując poniższy blok możemy także sprawić, że te same właściwości będą automatycznie reagować na muzykę:
         <xml>
@@ -304,14 +304,14 @@ pl:
         </block></xml>
         
         Ten program wykorzystuje „basy” (niskie tony) w muzyce do sterowania wysokością tancerza. Czy możesz spowodować, aby drugi tancerz także reagował na muzykę?
-      Dance_Party_11.5: "Sprawdź ten blok:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nTeraz możesz utworzyć wielu tancerzy na raz!\n\nSpróbuj użyć kilku bloków „wszystkie kaczki\", aby napisać kod, który sprawi, że wszystkie kaczki będą tańczyć razem."
       Dance_Party_11.5_test: "Sprawdź ten blok:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nTeraz możesz utworzyć wielu tancerzy na raz!\n\nSpróbuj użyć kilku bloków „wszystkie kaczki\", aby napisać kod, który sprawi, że wszystkie kaczki będą tańczyć razem."
-      Dance_Party_11: "Blok <xml><block type=\"Dancelab_whenKey\"></block></xml> pozwoli ci uruchomić kod po naciśnięciu strzałki w górę.\n\nMożesz zmienić ruchy w tańcu, właściwości tancerza lub spowodować szybki ruch dokładnie raz. Bądź twórczy i wypatruj nowych bloków!"
+      Dance_Party_11: "Blok <xml><block type=\"Dancelab_whenKey\"></block></xml> pozwoli Ci uruchomić kod po naciśnięciu strzałki w górę.\n\nMożesz zmienić ruchy w tańcu, właściwości tancerza lub spowodować szybki ruch dokładnie raz. Bądź twórczy i wypatruj nowych bloków!"
+      Dance_Party_11_5: "Sprawdź ten blok:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nTeraz możesz utworzyć wielu tancerzy na raz!\n\nSpróbuj użyć kilku bloków „wszystkie kaczki\", aby napisać kod, który sprawi, że wszystkie kaczki będą tańczyć razem."
       Dance_Party_11b: |-
         Czas, by potańczyć! Po naciśnięciu strzałki w lewo, Kot podnosi ręce do góry (ruch "dab"). Gdy naciśniesz strzałkę w prawo, Robot robi szpagat (ruch "drop") a klaszcze (ruch "clap"), gdy naciśniesz strzałkę do góry. 
         
         **Użyj klawiszy, by Robot na przemian klaskał i robił szpagat tak szybko, jak potrafisz!**
-      Dance_Party_12: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
+      Dance_Party_12: Dobrej zabawy! Utwórz własny taniec i udostępnij go znajomym.
       Dance_Party_2: |-
         Spowodujmy, że łoś zatańczy! 
         
@@ -340,7 +340,7 @@ pl:
         *Potrzebujemy więcej tancerzy!*
         
         Użyj bloku <xml><block type="Dancelab_makeNewDanceSprite"><title name="COSTUME">"DUCK"</title><title name="NAME">backup&#95;dancer1</title><title name="LOCATION">{x: 300, y: 200}</title></block></xml>, aby utworzyć kopię tancerza "kopia_tancerza1" do tańca z kotem.
-      Dance_Party_8: Każdy tancerz odznacza się zestawem _właściwości_, które decydują o tym, jak wygląda. Zmniejszając wielkość tancerza możesz spowodować, że będzie wyglądał, jak gdyby był w tle. Czy możesz sprawić, by obie kopie tancerzy były tej samej wielkości?
+      Dance_Party_8: Każdy tancerz odznacza się zestawem _właściwości_, które decydują o tym, jak wygląda. Zmniejszając wielkość tancerza możesz spowodować, że będzie wyglądał, jak gdyby był na drugim planie. Czy możesz sprawić, by obie kopie tancerzy były tej samej wielkości?
       Dance_Party_9: Tancerze mają właściwość "odcień", która może dodać warstwę koloru. Spróbuj zmienić odcień jednego z Twoich tancerzy.
       Dance_Party_extras_battle: |-
         # Zespoły taneczne 
@@ -349,13 +349,13 @@ pl:
          
         * Dodaj więcej klawiszy, aby sterować tańcami 
         * Spraw, aby kopie tancerzy również reagowały po naciśnięciu klawiszy
-        * Zmieniaj tancerza co 4 takty, ustawiając ich widoczność
+        * Zmieniaj tancerza co 4 takty, ustawiając jego widoczność
       Dance_Party_extras_every_beat: |-
         # Ćwierć nuty 
         
         Większość naszych tańców wykorzystuje całe takty, ale każdy takt składa się z 4 ćwierćnut. Ten taniec używa "co 0,25 taktu", aby tancerz klasnął co ćwierćnuty. 
         
-        Ten taniec wykorzystuje także blok warunkowy _conditional_ do sterowania, kiedy blok "co 0,25 taktu" może zmienić taniec. Spróbuj zmieniać liczby w bloku warunkowym, aby zobaczyć, jak zmienia on taniec. 
+        Ten taniec wykorzystuje także blok warunkowy do sterowania, kiedy blok "co 0,25 taktu" może zmienić taniec. Spróbuj zmieniać liczby w bloku warunkowym, aby zobaczyć, jak zmienia on taniec. 
         
         * Eksperymentuj z innymi czasami trwania nut (np. 0,5 dla półnuty lub 0,125 dla ósemki). 
         * Dodaj jakieś zdarzenia "po zakończeniu taktu". 
@@ -363,10 +363,10 @@ pl:
       Dance_Party_extras_layout: |-
         # Twórzmy formację
         
-        Sprawdź ten taniec, który wykorzystuje blok "układ", aby zmienić ustawienie kopii tancerzy podczas tańca. Wypróbuj jeden z następujących pomysłów, aby go rozszerzyć: 
+        Sprawdź ten taniec, który wykorzystuje blok "formacja tancerzy", aby zmienić ustawienie tancerzy drugiego planu podczas tańca. Wypróbuj jeden z następujących pomysłów, aby go rozszerzyć: 
         
-        * Twórz drugą grupę tancerzy w innym układzie 
-        * Zmieniaj układ po naciśnięciu klawisza 
+        * Twórz drugą grupę tancerzy w innej formacji
+        * Zmieniaj formację tancerzy po naciśnięciu klawisza 
         * Zmieniaj właściwość, gdy tancerze zmieniają formację
       Dance_Party_extras_on_beat: |-
         # Bas, średni i wysoki ton
@@ -410,8 +410,11 @@ pl:
         * Potrzebujemy więcej tancerzy! *
         
         Utwórz kopię tancerza do tańca z kotem i nazwij go „kopia_tancerza1”.
-      HOC Dance 6_draft: Każdy tancerz odznacza się zestawem _właściwości_, które decydują o tym, jak wygląda. Zmniejszając wielkość tancerza możesz spowodować, że będzie wyglądał, jak gdyby był w tle. Czy możesz sprawić, by obie kopie tancerzy były tej samej wielkości?
-      HOC Dance 9_draft: "Blok <xml><block type=\"Dancelab_whenKey\"></block></xml> pozwoli ci uruchomić kod po naciśnięciu strzałki w górę.\n\nMożesz zmienić ruchy w tańcu, właściwości tancerza lub spowodować szybki ruch dokładnie raz. Bądź twórczy i wypatruj nowych bloków!"
+      HOC Dance 6_draft: Każdy tancerz odznacza się zestawem _właściwości_, które decydują o tym, jak wygląda. Zmniejszając wielkość tancerza możesz spowodować, że będzie wyglądał, jak gdyby był na drugim planie. Czy możesz sprawić, by obie kopie tancerzy były tej samej wielkości?
+      HOC Dance 9_draft: "Blok <xml><block type=\"Dancelab_whenKey\"></block></xml> pozwoli Ci uruchomić kod po naciśnięciu strzałki w górę.\n\nMożesz zmienić ruchy w tańcu, właściwości tancerza lub spowodować szybki ruch dokładnie raz. Bądź twórczy i wypatruj nowych bloków!"
+      HOC Dance Freeplay: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
+      HOC Dance Freeplay_draft: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
+      HOC Dance Predraw: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
       K-1 Bee Loops 2: Użyj pętli "powtórz", aby przesunąć się a później zebrać nektar i zrobić miód!
       K-1 Bee Loops 3: Użyj trzech pętli "powtórz", aby zebrać nektar i zrobić miód!
       K-1 Bee Loops 4: Użyj pętli "powtórz", aby zebrać nektar, zrobić miód i przesunąć się!

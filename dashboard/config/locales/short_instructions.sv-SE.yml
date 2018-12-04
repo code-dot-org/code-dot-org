@@ -1455,16 +1455,18 @@ sv:
       Dance_Party_09: Använd ”ange färgton”-blocket för att ändra en dansares färg.
       Dance_Party_10: Gör så att också de övriga dansarna reagerar på musiken med
         ”börjar imitera”-blocket.
-      Dance_Party_11_5: Använd ”bara ankor”-blocken för att göra så att ankorna dansar
-        tillsammans.
       Dance_Party_11.5_test: Använd ”bara ankor”-blocken för att göra så att ankorna
         dansar tillsammans.
       Dance_Party_11: "”Knapptryck uppåt”-blocket låter dig köra koden när du trycker
         på uppåtpilen. Försök att få dansaren att göra en snabb rörelse när du trycker
         uppåt."
+      Dance_Party_11_5: Använd ”bara ankor”-blocken för att göra så att ankorna dansar
+        tillsammans.
       Dance_Party_11b: Gör så att roboten ”faller” en gång när du trycker på högerpilen
         och ”reser sig” när du trycker på uppåtpilen. Genomför ”fall-ihop-res-upp”
         så fort du kan!
+      Dance_Party_12: Dags att svänga på höfterna! Skapa en egen dans att dela med
+        dina vänner.
       Food Fight!: "Vi har lagt till en sista funktion åt dig. \r \r Använd ett \"om-uttalande\"
         för att programmera ditt spel att anropa funktionen \"level_up\" först när
         \"player_score\" blir större än ett visst antal. \r \r T ex: \"player_score\"

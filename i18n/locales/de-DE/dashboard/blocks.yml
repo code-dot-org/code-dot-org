@@ -30,14 +30,15 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"UNICORN"': alle Einhörner
           MOVE:
             '"next"': "(nächster)"
             '"prev"': "(vorheriger)"
             '"rand"': "(zufällig)"
             MOVES.Roll: Roll
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Intensivieren
             MOVES.Clown: Clown
-            MOVES.Kick: Kick
+            MOVES.Kick: Stern
             MOVES.Rest: Keiner
           DIR:
             '1': "→"
@@ -50,9 +51,9 @@ de:
             '"prev"': "(vorheriger)"
             '"rand"': "(zufällig)"
             MOVES.Roll: Roll
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Intensivieren
             MOVES.Clown: Clown
-            MOVES.Kick: Kick
+            MOVES.Kick: Stern
             MOVES.Rest: Keiner
           DIR:
             '1': "→"
@@ -82,12 +83,13 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"UNICORN"': alle Einhörner
           MOVE:
             '"rand"': "(zufällig)"
             MOVES.Roll: Roll
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Intensivieren
             MOVES.Clown: Clown
-            MOVES.Kick: Kick
+            MOVES.Kick: Stern
             MOVES.Rest: Keiner
           DIR:
             '1': "→"
@@ -98,9 +100,9 @@ de:
           MOVE:
             '"rand"': "(zufällig)"
             MOVES.Roll: Roll
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Intensivieren
             MOVES.Clown: Clown
-            MOVES.Kick: Kick
+            MOVES.Kick: Stern
             MOVES.Rest: Keiner
           DIR:
             '1': "→"
@@ -153,9 +155,9 @@ de:
         options:
           DANCE:
             MOVES.Clown: Clown
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Intensivieren
             MOVES.Roll: Roll
-            MOVES.Kick: Kick
+            MOVES.Kick: Stern
             MOVES.Rest: Keiner
       Dancelab_ifTime:
         options:
@@ -191,11 +193,15 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"UNICORN"': alle Einhörner
           FORMAT:
+            '"border"': Grenze
+            '"inner"': Quadrat im Inneren
             '"circle"': Kreis
             '"grid"': Raster
             '"row"': Zeile
             '"column"': Spalte
+            '"x"': kreuz und quer
             '"random"': zufällig
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -205,6 +211,7 @@ de:
           COSTUME:
             '"BEAR"': Bär
             '"CAT"': Katze
+            '"DOG"': Hund
             '"DUCK"': Ente
             '"FROG"': Frosch
             '"MOOSE"': Elch
@@ -228,7 +235,7 @@ de:
           machen Sie {N} neues {COSTUME}
           in einem {LAYOUT}
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -260,10 +267,13 @@ de:
             '"SHARK"': Haie
             '"UNICORN"': Einhörner
           LAYOUT:
+            '"border"': Grenze
+            '"inner"': Quadrat im Inneren
             '"circle"': Kreis
             '"grid"': Raster
             '"row"': Zeile
             '"column"': Spalte
+            '"x"': kreuz und quer
             '"random"': zufällig
       Dancelab_mixColors:
         text: Mischen Sie {COLOR1} und {COLOR2}
@@ -288,6 +298,29 @@ de:
             '"rainbow"': Farben
             '"diamonds"': Rauten
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(zufällig)"
+      Dancelab_setBackgroundEffectWithPalette:
+        text: Hintergrundeffekt einstellen {EFFECT} {PALETTE}
+        options:
+          EFFECT:
+            '"none"': Keiner
+            '"rand"': "(zufällig)"
+            '"circles"': Tunnel
+            '"diamonds"': Rauten
+            '"disco_ball"': Disco-Kugel
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laser-Tanzfläche
+            '"splatter"': Farbspritzer
+            '"rainbow"': Farben
+            '"text"': Song-Titel
+            '"sparkles"': Funkeln
+            '"disco"': Quadrate
+            '"stars"': Sterne
+          PALETTE:
+            '"rave"': Schwarzweiß
+            '"cool"': Blaus
+            '"default"': Hell
+            '"tropical"': Tropisch
+            '"warm"': Rots
       Dancelab_setDanceSpeed:
         text: verändern Sie die {SPRITE} Tanzgeschwindigkeit zu {SPEED}
         options:
@@ -311,6 +344,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"UNICORN"': alle Einhörner
           SPEED:
             '1': Normal
             '2': schnell
@@ -324,6 +358,19 @@ de:
             '"none"': Keiner
             '"rain"': Regen
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(zufällig)"
+      Dancelab_setForegroundEffectExtended:
+        text: Vordergrundeffekt einstellen {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Keiner
+            '"rand"': "(zufällig)"
+            '"confetti"': Konfetti
+            '"hearts_red"': Herzen
+            '"music_notes"': Musiknoten
+            '"pineapples"': Ananas
+            '"smiling_poop"': Kacke
+            '"rain"': Regen
+            '"floating_rainbows"': Regenbogen
       Dancelab_setProp:
         text: 'stellen Sie {SPRITE} {PROPERTY} auf {VAL} '
         options:
@@ -350,6 +397,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"UNICORN"': alle Einhörner
           PROPERTY:
             '"scale"': Größe
             '"width"': Breite
@@ -385,7 +433,10 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+      Dancelab_setTintInline:
+        text: stellen Sie {SPRITE} Farbton auf {VAL}
       Dancelab_setVisible:
+        text: "{SPRITE} für {VISIBILITY} sichtbar machen"
         options:
           VISIBILITY:
             'true': sichtbar
@@ -405,6 +456,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"UNICORN"': alle Einhörner
           VISIBILITY:
             'true': sichtbar
             'false': unsichtbar
@@ -449,6 +501,7 @@ de:
             '"right"': rechts
             '"space"': Weltall
             '"x"': x
+            '"y"': 'y'
       Dancelab_whenPeak:
         text: wenn {RANGE} Höhepunkt
         options:

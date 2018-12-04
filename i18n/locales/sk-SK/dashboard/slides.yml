@@ -145,9 +145,9 @@ sk:
       1:
         text: "Ahoj, volám sa Trina, a pracujem pre spoločnosť Pixar. Pracovala som na množstve filmov, vrátane Šreka."
       2:
-        text: "Toto je naša nová slučka \"počítadlo\". Bude robiť akcie dookola, pričom ich môžete jemne upraviť pri každom opakovaní."
+        text: "Toto je náš nový cyklus \"počítadlo\". Bude dookola opakovať akcie dookola, pričom ich môžeme pri každom opakovaní mierne upraviť."
       3:
-        text: "V tomto prípade hovorí naša slučka \"počítadlo\" \"počítaj od 50 do 90 v násobkoch 10tich\" a vo vnútri nej máme blok \"nakresli štvorec\". Presuň blok \"počítadlo\" zo sekcie \"Premenné\" do pozície \"dĺžka\"."
+        text: "V tomto prípade náš cyklus \"počítadlo\" hovorí \"počítaj od 50 do 90 v násobkoch 10tich\" a vo vnútri nej máme blok \"nakresli štvorec\". Presuň blok \"počítadlo\" zo sekcie \"Premenné\" do pozície \"dĺžka\"."
       4:
         text: "To znamená, že náš umelec nakreslí štvorec so stranou dlhou 50 pixelov, potom pridá k nej 10 a nakreslí štvorec s dĺžkou 60 pixelov. Potom bude pridávať 10 a kresliť štvorce až kým nedosiahne hodnotu 90. Takto budeme mať štvorce dlhé 50, 60, 70, 80 a 90 pixelov."
     parameters:
@@ -232,7 +232,7 @@ sk:
       3:
     C1_bee_loops:
       1:
-        text: "Slučka znamená opakovanie činnosti. Takže idúc do úľa na inšpekciu sa pozriem na snímku a potom ju vrátim, takže viackrát opakujem tú istú činnosť. To je vlastne slučka/cyklenie, robenie rovnakej činnosti viackrát."
+        text: "Cyklus znamená opakovanie činnosti. Keď kontrolujem úľ, vytiahnem a skontrolujem jeden rám a potom ho vrátim a túto činnosť opakujem viackrát. Toto je vlastne cyklus - vykonávanie rovnakej činnosti opakovane."
       2:
     C1_bigevent_unplugged:
       1:
@@ -652,7 +652,7 @@ sk:
         text: "Katie: Nuž, musíš sa naučiť, ako používať cykly. Vývojári píšu cykly, aby dávali počítaču príkazy, ktoré môžu byť znova a znova opakované. Stacy: Rozumiem, a myslím si, že niečo také nás čaká v nasledujúcich úrovniach. Tak poď na to a vyskúšaj si používanie cyklov."
       7:
         image: 'notes/mc_2017_repeat_7.png'
-        text: "V ďalšej úrovni môžeš pomocou cyklov presunúť Agenta popri ceste. Presuň blok \"Opakuj\" do pracovného priestoru a umiestnite blok \"Posuň sa dopredu\" do vnútra bloku \"Opakuj\". Toto informuje počítač, aby opakoval ten istý príkaz veľa krát za sebou, bez toho, aby si musel presunúť celé bloky do pracovného priestoru. Môžeš si vybrať, koľkokrát sa príkaz zopakuje vložením čísla do bloku \"Opakuj\"."
+        text: "V ďalšej úrovni môžeš pomocou cyklov presunúť Agenta popri ceste. Presuň blok \"Opakuj\" do pracovného priestoru a umiestni blok \"Posuň sa dopredu\" do vnútra bloku \"Opakuj\". Toto informuje počítač, aby opakoval ten istý príkaz veľa krát za sebou, bez toho, aby si musel do pracovného priestoru presunúť celé stohy blokov. Vložením čísla do bloku \"Opakuj\" si môžeš vybrať, koľkokrát sa príkaz zopakuje."
       8:
         image: 'notes/mc_2017_repeat_8.png'
         text: "Do bloku \"Opakuj\" môžeš pridať aj otočky a iné príkazy, teraz ale skús blok \"Opakuj\" použiť na to, aby si Agenta posunul o niekoľko krokov dopredu. Nezabúdaj, že ak sa v úlohe zasekneš, môžeš vždy stlačiť modré tlačidlo \"Obnoviť\" a skúsiť to znova."
@@ -690,7 +690,7 @@ sk:
         text: "Stampy: Gratulujem, zvládol si to!"
       4:
         image: 'notes/mc_2017_congratulations_4.png'
-        text: "Stacy: Gratulujem, zvládol si to! A teraz, keď si ukončil Hodinu Kódu, môžeš začať programovať v Minecrafte. Naučil si sa vytvárať cykly, funkcie a čo robí softvérový Agent."
+        text: "Stacy: Gratulujem, zvládol si to! A teraz, keď si ukončil Hodinu Kódu, môžeš začať programovať v Minecrafte. Naučil si sa o cykloch, funkciách a práci softvérového Agenta."
       5:
         image: 'notes/mc_2017_congratulations_5.png'
         text: "Teraz je čas zahrať si voľný level, kde budeš ty vývojárom. Využi svoj voľný čas na napísanie svojich vlastných funkcií a objavuj, doluj a stavaj."
@@ -839,3 +839,87 @@ sk:
         image: 'notes/csd_concept_hardware_software_16.png'
       17:
         image: 'notes/csd_concept_hardware_software_17.png'
+    hoc_dance_warmup:
+      1:
+        text: "Hodina Kódu | Tanečná Párty: Zahrej sa"
+      2:
+        text: "Ahoj! Volám sa Miral Kotb a som tanečníčka, softvérová vývojárka a zakladateľka iLuminate."
+      3:
+        text: "Takže, informatika súvisí s kreativitou vo veľkom množstve smerov. Nemerateľne veľa, naozaj. Mám na mysli, raz keď máš schopnosť písať softvér, môžeš vložiť myšlienky do čohokoľvek. Ja to robím so sveteľným oblekmi. Je toho tak veľa čo môžeš robiť akonáhle máš nástroje na písanie softvéru a možnosti sú neobmedzené."
+      4:
+        text: "Behom nadchádzajúcej hodiny začneš s informatikou programovaním svojej vlastnej tanečnej párty! Dali sme dokopy viacero hitov a tím výborných tanečníkov s ktorými sa môžeš hrať."
+      5:
+        text: "Budeš používať bloky kódu aby zvoliľ rôznych tanečníkov, zmenil ich tanečné kroky, donútil ich reagovať na hudbu a spravil ich interaktívnymi."
+      6:
+        text: "Uvidíš, že obrazovku máš rozdelenú na tri hlavné časti. Na ľavej strane je hracia plocha. Tu sa objavia tvoji tanečníci."
+      7:
+        text: "Stredná časť sú tvoje nástroje. V tejto časti sa budú sprístupňovať nové bloky kódu, ako budeš prechádzať cez jednotlivé lekcie."
+      8:
+        text: "Priestor vpravo je pracovná plocha. Bloky z ponuky nástrojov môžeš presunút na pracovnú plochu aby si budoval svoj program."
+      9:
+        text: "Inštrukcie ku každej úrovni budú tu na vrchu obrazovky. Ak potrebuješ poradiť, stačí kliknút na žiarovku."
+      10:
+        text: "Začnime tým, že vytvoríme novú tanečníčku s použitím tohto červeného bloku. Ako prvé presuň blok z nástrojov a pripni ho pod tento oranžový blok \"nastavenie\". Táto tanečníčka je mačka a volá sa \"my_first_dancer\". Môžeš ju premenovať na čokoľvek chceš, keď klikneš sem."
+      11:
+        text: "S týmto môžeš tiež zmeniť kde sa tanečníčka objaví v rámci tvojej hernej plochy."
+      12:
+        text: "Nad hernou plochou je menu pre výber hudby. Sú tu tony pesničiek z ktorých môžeš vyberať, takže sa zabav pri hľadaní svojej obľúbenej. Pod hracou plochou je tlačítko na spustenie. Keď ho stlačíš, tanečníci z tvojho programu sa objavia na hracej ploche a spustí sa hudba."
+      13:
+        text: "Skús to samostatne! Ak sa zasekneš, je to ok! Vstaň a začni sa hýbať a skôr ako sa nazdáš, budeš mať vytvorenú svojú vlastnú tanečnú párty. Takže, čo vytvoríš ty?"
+    hoc_dance_events:
+      1:
+        text: "Hodina Kódu | Tanečná Párty: Udalosti"
+      2:
+        text: "Som Aloe Blacc. Som spevák, skladateľ a zabávač. Myslím si, že je veľmi dôležité učiť sa informatiku, lebo informatika je budúcnosť a myslím si, že je dôležité pre ľudí, aby ovládali technológiu, ktorá doslovne ovláda naše životy."
+      3:
+        text: "Aby sa rôzne tanečné kroky spúšťali v správny čas s hudbou, môžeš použiť niečo zvané udalosti. Udalosť povie tvojmu programu, aby sledoval či sa niečo stane a potom na to reagoval správnym spôsobom."
+      4:
+        text: "Príkladmi udalostí sú čakanie kliknutie myši, stlačenie tlačítka, alebo kliknutie na obrazovku. Udalosť, ktorú teraz použijeme my sleduje zmeny v pesničke. Zmena spustí u tvojho tanečníka nový tanec."
+      5:
+        text: "Profesionálni tanečníci trénujú svoju choreografiu počítaním dôb v pesničke."
+      6:
+        text: "V hudbe označujeme určitý počet dôb ako takt. Vo väčšine populárnych pesničiek trvá takt štyri doby."
+      7:
+        text: "Aby to tvoji tanečníci roztočili, budeš potrebovať zelený blok s udalosťou. Táto blok s udalosťou hovorí \"po 4 taktoch\"."
+      8:
+        text: "Ak vytiahneš fialový blok \"nekonečne krát\", môžeš zvoliť tanec, ktorý bude tvoj tanečník tancovať. Keďže je pod blokom \"po 4 taktoch\", tvoj tanečník bude čakať štyri takty pesničky pred tým ako začne tancovať."
+      9:
+        text: "Sleduj počítadlo taktov na vrchu hracej plochy."
+      10:
+        text: "Sleduj a počúvaj aká udalosť spustí tanečný kód. A presne v správny čas sa rozbieha náš tanec."
+    hoc_dance_properties:
+      1:
+        text: "Hodina Kódu | Tanečná Párty: Vlastnosti"
+      2:
+        text: "Volám sa Maria a som študentkou tretieho ročníka na University of Washington a som Inžinier Budúcnosti v Amazone."
+      3:
+        text: "Zbožňujem informatiku, lebo kombinuje riešenie problémov a kritické myslenie a po tom ako vložíš hodiny práce do niečoho, môžeš z toho dostať niečo skutočne cool a hodnotné."
+      4:
+        text: "Zatiaľ sme sa zahrali s zopár tanečníkmi a naprogramovali sme ich, aby robili rôzne tanečné kroky. Ako skutočne ale tieto kroky fungujú?"
+      5:
+        text: "Každý z krokov sa skladá zo série obrázkov nazývaných snímky. Každá snímka sa trochu líši od tej predchádzajúcej. Keď sa tvoj program spustí, počítač ukazuje jednu snímku za druhou. Sú zobrazené tak rýchlo, že to vyzerá ako keby sa tanečník hýbal. Toto je tajomstvo za každou animáciou."
+      6:
+        text: "Môžeš meniť nie len to kroky tvojho tanečníka, ale môžeš zmeniť aj jeho vlastnosti. Vlastnosti určujú veci tanečníkova pozícia na obrazovke, jeho veľkosť, alebo farba."
+      7:
+        text: "Pre zmenu vlastností tanečníka použiješ blok nastav. Použime blok nastav na to, aby náš tanečník vyzeral menšie. Najprv presuň blok nastav do svojho programu. Potom vyber tanečníka, ktorého chceš zmeniť a napíš veľkosť s akou sa objaví na obrazovke."
+      8:
+        text: "Plná veľkosť je 100. Ak zvolíš menšie číslo, tvoj tanečník bude menší. Čím je tanečník menší, tým vyzerá byť viac v diaľke. Toto je skvelý spôsob ako vytvoriť záložných tanečníkov."
+      9:
+        text: "Použitím bloku nastav, môžeš tiež zmeniť tanečníkove rozmery, otočenie, pozíciu a sfarbenie. Hraním sa s týmito parametrami môžeš vytvoriť celú plejádu zmien a naviazať ich na rôzne časti pesničky."
+      10:
+        text: "Pamätaj, že môžeš nastaviť vlastnosti tanečníka, iba ak už existuje. Uisti sa, že blok nastav nasleduje až po bloku \"vytvor\". Neváhaj experimentovať, buď kreatívny a zabav sa."
+    hoc_dance_congrats:
+      1:
+        text: "Hodina Kódu | Tanečná Párty: Párty pokračuje!"
+      2:
+        text: "Gratulujem! Práve sa ti podarilo naučiť základy informatiky. Teraz môžeš použiť tieto bloky na vytvorenie svojej vlastnej tanečnej párty, ktorú môžeš zdielať s kamarátmi."
+      3:
+        text: "Ak sa pozrieš do ponuky nástrojov, nájdeš zopár úplne nových blokov, ktoré si ešte nevidel. Napríklad môžeš použiť blok rozmiestni na usporiadanie tanečníkov na obrazovke rôznymi spôsobmi."
+      4:
+        text: "Poobzeraj sa a experimentuj s týmito novými blokmi a vlastnosťami. Vytvoríš starostlivo navrhunú choreografiu tanca na svoju obľúbenú pesničku?"
+      5:
+        text: "Alebo tanečný súbor s kamarátmi?"
+      6:
+        text: "Alebo niečo úplne iného?"
+      7:
+        text: "Na konci lekcie môžeš zdielať odkaz na svoj výtvor so svojimi kamarátmi. Potráp svoju predstavivosť a hlavne si to uži!"

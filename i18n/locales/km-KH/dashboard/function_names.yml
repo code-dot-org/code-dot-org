@@ -2,6 +2,7 @@ km:
   data:
     function_names:
       x: x
+      details: ព័ត៌មាន​លម្អិត
       draw a circle: គូរ​រង្វង់​មួយ
       draw a hexagon: គូរឆកោនមួយ
       draw a flower: គូរផ្កាមួយ

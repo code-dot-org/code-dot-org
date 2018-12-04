@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'state_abbr'
 
 module Pd::Application
   class Facilitator1819ApplicationTest < ActiveSupport::TestCase
@@ -133,9 +132,9 @@ module Pd::Application
       csv_row = @application.to_csv_row(nil)
       csv_answers = csv_row.split(',')
       assert_equal "#{@regional_partner.name}\n", csv_answers[-1]
-      assert_equal 'notes', csv_answers[-2]
-      assert_equal 'false', csv_answers[-3]
-      assert_equal 'accepted', csv_answers[-4]
+      assert_equal 'notes', csv_answers[-6]
+      assert_equal 'false', csv_answers[-7]
+      assert_equal 'accepted', csv_answers[-8]
     end
 
     test 'csv_header and row return same number of columns' do

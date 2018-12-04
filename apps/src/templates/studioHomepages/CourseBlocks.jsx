@@ -135,26 +135,18 @@ export class CourseBlocksHoc extends Component {
   static propTypes = {
     rowCount: PropTypes.number.isRequired,
     isInternational: PropTypes.bool,
-    hocLaunch: PropTypes.string,
   };
 
   getFirstRowTiles = () => {
-    switch (this.props.hocLaunch) {
-      case 'mc':
-        return ['#aquatic', '#starwars', '#frozen', '#hourofcode'];
-      case 'dance':
-        if (this.props.isInternational) {
-          return ['#dance', '#aquatic', '#frozen', '#hourofcode'];
-        } else {
-          return ['#dance', '#aquatic', '#applab-intro', '#flappy'];
-        }
-      default:
-        return ['#hero', '#starwars', '#frozen', '#hourofcode'];
+    if (this.props.isInternational) {
+      return ['#dance', '#aquatic', '#frozen', '#hourofcode'];
+    } else {
+      return ['#dance', '#aquatic', '#applab-intro', '#flappy'];
     }
   };
 
   componentDidMount() {
-    // First row, dynamically created based on hocLaunch value
+    // First row, dynamically created based on isInternational value
     const tiles = this.getFirstRowTiles();
     tiles.forEach((tile, index) => {
       $(tile).appendTo(ReactDOM.findDOMNode(this.refs[index]));
@@ -200,7 +192,6 @@ export class CourseBlocksAll extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired,
     showModernElementaryCourses: PropTypes.bool.isRequired,
-    hocLaunch: PropTypes.string,
   };
 
   componentDidMount() {
@@ -220,7 +211,6 @@ export class CourseBlocksAll extends Component {
         >
           <CourseBlocksHoc
             rowCount={1}
-            hocLaunch={this.props.hocLaunch}
             isInternational={!this.props.isEnglish}
           />
         </ContentContainer>
