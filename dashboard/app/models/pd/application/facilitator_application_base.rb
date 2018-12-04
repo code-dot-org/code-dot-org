@@ -172,9 +172,30 @@ module Pd::Application
           'No, I do not have classroom teaching experience'
         ],
 
+        currently_involved_in_cs_education: [
+          'I teach CS courses for credit to K-12, community college, or university students',
+          'I teach CS courses in a CS bootcamp program',
+          'I lead an afterschool or enrichment program focused on CS',
+          'I advocate for CS education within my community',
+          'I work at an organization that supports CS education advocacy and access',
+          'I am not currently involved with CS education',
+          TEXT_FIELDS[:other_please_describe]
+        ],
+
         grades_taught: [
-          *GRADES,
-          TEXT_FIELDS[:other_with_text]
+          'Elementary school',
+          'Middle school ',
+          'High school ',
+          'Post-secondary ',
+          'N/A: I don’t have classroom teaching experience'
+        ],
+
+        experience_teaching_this_course: [
+          'Yes, to elementary school students',
+          'Yes, to middle school students',
+          'Yes, to high school students',
+          'I do not have experience teaching this curriculum to students, but I do have experience teaching a different CS curriculum to students',
+          'I do not have experience teaching any CS curriculum to students',
         ],
 
         grades_currently_teaching: [
@@ -223,14 +244,18 @@ module Pd::Application
         ],
 
         completed_pd: [
-          'CS Fundamentals (1 day workshop)',
-          'CS in Algebra (one year professional learning program)',
-          'CS in Science (one year professional learning program)',
-          'CS Discoveries (pilot program)',
-          'CS Discoveries (currently completing one year professional learning program)',
-          'CS Principles (one year professional learning program)',
-          'Exploring Computer Science (one year professional learning program)',
-          "I haven't completed a Code.org Professional Learning Program as a teacher"
+          'Yes, I have participated in the Code.org Professional Learning Program for this curriculum.',
+          'I have participated in the Code.org Professional Learning Program, but for a different curriculum.',
+          'No, I have not participated in a Code.org Professional Learning Program for any curriculum.',
+        ],
+
+        facilitator_availability: [
+          'Weekdays during the school year',
+          'Weekdays during the summer',
+          'Saturdays during the school year',
+          'Saturdays during the summer',
+          'Sundays during the school year',
+          'Sundays during the summer'
         ],
 
         code_org_facilitator: [YES, NO],
@@ -399,6 +424,7 @@ module Pd::Application
     def additional_text_fields
       [
         [:institution_type],
+        [:currently_involved_in_cs_education],
         [:completed_cs_courses_and_activities],
         [:how_heard, TEXT_FIELDS[:how_heard_facilitator], :how_heard_facilitator],
         [:how_heard, TEXT_FIELDS[:how_heard_code_org_staff], :how_heard_code_org_staff],
@@ -406,7 +432,6 @@ module Pd::Application
         [:how_heard],
         [:plan_on_teaching],
         [:led_cs_extracurriculars, TEXT_FIELDS[:other_please_list]],
-        [:grades_taught],
         [:grades_currently_teaching],
         [:subjects_taught],
         [:experience_leading]

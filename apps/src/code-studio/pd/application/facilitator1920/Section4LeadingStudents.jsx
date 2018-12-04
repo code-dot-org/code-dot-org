@@ -1,60 +1,50 @@
 import React from 'react';
 import {FormGroup} from "react-bootstrap";
 import LabeledFormComponent from "../../form_components/LabeledFormComponent";
-import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
-import {YES} from '../ApplicationConstants';
+import {
+  PageLabels,
+  SectionHeaders,
+  TextFields
+} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
 
 export default class Section4LeadingStudents extends LabeledFormComponent {
-  static labels = PageLabels.Section4LeadingStudents;
+  static labels = PageLabels.section4LeadingStudents;
 
   static associatedFields = [
-    ...Object.keys(PageLabels.Section4LeadingStudents)
+    ...Object.keys(PageLabels.section4LeadingStudents),
+    "currentlyInvolvedInCsEducation_other"
   ];
+
+  program() {
+    switch (this.props.data.program) {
+      case 'CS Fundamentals (K - 5th grade)':
+        return 'CS Fundamentals';
+      case 'CS Discoveries (6 - 10th grade)':
+        return 'CS Discoveries';
+      case 'CS Principles (9 - 12th grade)':
+        return 'CS Principles';
+    }
+  }
 
   render() {
     return (
       <FormGroup>
-        <h3>Section 4: {SectionHeaders.Section4LeadingStudents}</h3>
-
-        {this.radioButtonsFor("haveLedPd")}
-
-        {this.props.data.haveLedPd === YES &&
-          <div>
-            {this.checkBoxesFor("groupsLedPd")}
-            {this.largeInputFor("describePriorPd")}
-          </div>
-        }
+        <h3>Section 4: {SectionHeaders.section4LeadingStudents}</h3>
+        {this.checkBoxesWithAdditionalTextFieldsFor("currentlyInvolvedInCsEducation", {
+          [TextFields.otherWithText] : "other"
+        })}
+        {this.checkBoxesFor("gradesTaught")}
+        {this.radioButtonsWithAdditionalTextFieldsFor("planOnTeaching", {
+          [TextFields.otherWithText] : "other"
+        })}
+        {this.checkBoxesFor("experienceTeachingThisCourse", {
+          label: `Do you have experience teaching the full ${this.program()} curriculum to students? Mark all that apply.`
+        })}
+        {this.checkBoxesFor("completedPd", {
+          label: `Have you participated as a teacher in Code.org’s full Professional Learning Program for ${this.program()}?`
+        })}
+        {this.checkBoxesFor("facilitatorAvailability")}
       </FormGroup>
     );
-  }
-
-  /**
-   * @override
-   */
-  static getDynamicallyRequiredFields(data) {
-    const requiredFields = [];
-
-    if (data.haveLedPd === YES) {
-      requiredFields.push(
-        "groupsLedPd",
-        "describePriorPd"
-      );
-    }
-
-    return requiredFields;
-  }
-
-  /**
-   * @override
-   */
-  static processPageData(data) {
-    const changes = {};
-
-    if (data.haveLedPd !== YES) {
-      changes.groupsLedPd = undefined;
-      changes.describePriorPd = undefined;
-    }
-
-    return changes;
   }
 }
