@@ -26,7 +26,7 @@
   h1 + h2 {
     margin-top: 10px;
   }
-  
+
   h2 {
     margin-bottom: 5px;
   }
@@ -67,7 +67,7 @@
   position: relative;
   float: left;
   box-sizing: border-box;
-  margin-top: 20px;
+  margin-top: 30px;
 
   &:hover {
     border-color: $dark_charcoal;
@@ -77,43 +77,33 @@
     }
   }
 
+  .course-container {
+    padding: 8px 16px 16px 16px;
+  }
+
   .heading {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     overflow:hidden;
-    padding: 0 10px
   }
 
   a {
-      &:hover, &:link, &:active, &:visited {
-        text-decoration: none;
-      }
-    }
-
-  a.whitelink {
     &:hover, &:link, &:active, &:visited {
-      color:white;
+      text-decoration: none;
     }
-  }
-
-  .imgspan {
-    margin: 0 0 5px 0;
-    float: left;
-    width: 100%;
   }
 
   h3 {
-    margin: 5px 0;
     color: $charcoal;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     font-family: $gotham-bold;
-    font-weight: normal;
     display: block;
-    float: left;
     font-size: 24px;
-    width: 200px;
+    line-height: 30px;
+    width: 186px;
+    margin: 0;
   }
 
   .beta {
@@ -124,7 +114,6 @@
     .betatitle {
       line-height: 40px;
       width: 135px;
-      padding-left: 10px;
       float: left;
     }
 
@@ -137,31 +126,31 @@
       white-space: nowrap;
       overflow: hidden;
       background-color: $light_gray;
-      padding-left: 5px;
-      padding-right: 5px;
       font-size: 20px;
       height: 35px;
       line-height: 40px;
       width: 60px;
       border-radius: 4px;
-      margin-right: 2px;
     }
   }
 
-  .smalltext {
-    font-size: 13px;
+  .text {
+    font-size: 14px;
     line-height: 17px;
-    padding-left: 10px;
-    padding-right: 10px;
     font-family: $gotham-regular;
     font-weight: normal;
     color: $charcoal;
   }
 
+  .smalltext {
+    font-size: 13px;
+    padding-top: 12px;
+  }
+
   .teacher-guide {
     font-size: 13px;
-    padding: 16px;
     text-align: right;
+    padding-top: 16px;
 
     &:hover {
       text-decoration: underline;
@@ -308,7 +297,7 @@
 }
 
 .courseblock-tall + .courseblock-tall {
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .courseblock-wide-small + .courseblock-wide-small {

@@ -105,13 +105,16 @@
 .courseblock-span3.courseblock-tall
   = link_to url do
     - image_url ||= "courses/logo_tall_#{id}.jpg"
-    .imgspan= image_tag(CDO.shared_image_url(image_url), height: '120px', width: '100%')
-    - if Script.beta? id
-      .beta
-        %h3.betatitle= title
-        %h3.betatext= t('beta')
-    - else
-      %h3.heading= title
-    .smalltext= body
-    - if show_teacher_guide && teacher_guide&.present?
-      .teacher-guide= link_to t('view_teacher_guide'), teacher_guide
+    = image_tag(CDO.shared_image_url(image_url), height: '120px', width: '100%')
+    .course-container
+      - if Script.beta? id
+        .beta
+          %h3.betatitle= title
+          %h3.betatext= t('beta')
+      - else
+        %h3.heading= title
+      - if audience
+        .text= audience
+      .text.smalltext= body
+      - if show_teacher_guide && teacher_guide&.present?
+        .teacher-guide= link_to t('view_teacher_guide'), teacher_guide
