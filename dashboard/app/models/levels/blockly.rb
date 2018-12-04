@@ -409,19 +409,16 @@ class Blockly < Level
     options.freeze
   end
 
-  # @param resolve [Boolean] if true (default), localize property using I18n#t.
-  #   if false, just return computed property key directly.
   # @param extra_identifier [Boolean] we for some reason use the property name
   #   twice in the internationalization key: once pluralized as a category name,
   #   and once again singularized as an addition to the level name itself. This
   #   is unnecessary, so we are gradually removing the extra key. If this is
   #   true, keep the extra key in. If false, exclude it. TODO elijah: remove all
   #   instances of this extra key and then this property.
-  def get_localized_property(property_name, resolve: true, extra_identifier: true)
+  def get_localized_property(property_name, extra_identifier: true)
     if should_localize? && try(property_name)
       key = name
       key += "_#{property_name.singularize}" if extra_identifier
-      return key unless resolve
       I18n.t(
         key,
         scope: [:data, property_name.pluralize],
