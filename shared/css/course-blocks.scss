@@ -149,8 +149,9 @@
 
   .teacher-guide {
     font-size: 13px;
-    text-align: right;
-    padding-top: 16px;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
 
     &:hover {
       text-decoration: underline;
