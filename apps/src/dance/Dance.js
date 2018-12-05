@@ -171,7 +171,22 @@ Dance.prototype.initSongs = async function (config) {
   getStore().dispatch(setSelectedSong(selectedSong));
   getStore().dispatch(setSongData(songData));
 
-  loadSong(selectedSong, songData);
+  loadSong(selectedSong, songData, status => {
+    if (status === 403) {
+      // Something is wrong, because we just fetched cloudfront credentials.
+      firehoseClient.putRecord(
+        {
+          study: 'restricted-song-auth',
+          event: 'initial-auth-error',
+          data_json: JSON.stringify({
+            currentUrl: window.location.href,
+            channelId: config.channel,
+          }),
+        },
+        {includeUserId: true}
+      );
+    }
+  });
   this.updateSongMetadata(selectedSong);
 
   if (config.channel) {
