@@ -218,9 +218,13 @@ module Pd::WorkshopSurveyResultsHelper
       summary[:facilitators].slice! current_user.id
     end
 
+    # The facilitator averages get generated entirely from data in the summary for each
+    # facilitator (or just the logged in user)
     generate_facilitator_averages(summary)
 
-    generate_facilitator_response_counts(summary, workshop, related_workshops)
+    # We also need counts for how many responses each facilitator got. Its easier to
+    # recompute this than infer from the summary
+    summary[:facilitator_response_counts] = generate_facilitator_response_counts(workshop, related_workshops)
 
     summary
   end
@@ -382,13 +386,20 @@ module Pd::WorkshopSurveyResultsHelper
     questions
   end
 
+  # Take the existing survey summary and generate averages for each question as well as
+  # the three averages for each category of question
   def generate_facilitator_averages(summary)
     facilitators = summary[:facilitators].values
 
+    # The workshop summary has questions broken down by general vs. facilitator and by each
+    # day. We need to just have a hash map of all questions and a histogram of all their
+    # responses, which the reduce_summary function does (see below)
     flattened_this_workshop_histograms = reduce_summary(summary[:this_workshop].values.flat_map(&:values).select {|x| x.is_a? Hash})
 
     flattened_all_my_workshop_histograms = reduce_summary(summary[:all_my_workshops].values.flat_map(&:values).select {|x| x.is_a? Hash})
 
+    # Questions are also sorted by day and general vs. facilitator - that distinction needs
+    # to be removed. Then we need to map each response option to the value that we assign it
     flattened_questions = summary[:questions].values.flat_map(&:values).reduce(:merge)
     flattened_questions.transform_values do |question|
       question[:option_map] = question[:options].each_with_index.map {|x, i| [x, i + 1]}.to_h if question[:options]
@@ -397,12 +408,19 @@ module Pd::WorkshopSurveyResultsHelper
     facilitator_averages = facilitators.map {|name| [name, {}]}.to_h
     facilitator_averages[:questions] = {}
 
+    # In some cases, the same question has different IDs in different forms. To get around
+    # this, the QUESTIONS_FOR_FACILITATOR_AVERAGES contains a primary_id (what we use
+    # here) and optional all_ids (what is used in multiple forms)
     QUESTIONS_FOR_FACILITATOR_AVERAGES_LIST.each do |question_group|
       question = flattened_questions[question_group[:primary_id]] || question_group[:all_ids]&.map {|x| flattened_questions[x]}&.compact&.first
 
       next if question.nil?
 
       facilitators.each do |facilitator|
+        # For each facilitator, get the histogram that applies to them. If its facilitator
+        # specific, we need to go one level deeper in the hash to get the question
+        # histogram. Do the same thing for both this_workshop and all_my_workshops.
+        # When all_workshops is implemented, it will be in S3 and not computed on the fly
         histogram_for_this_workshop = (question_group[:all_ids] || [question_group[:primary_id]]).map {|x| flattened_this_workshop_histograms[x]}.compact.first
         histogram_for_this_workshop = histogram_for_this_workshop.try(:[], facilitator) || histogram_for_this_workshop
         histogram_for_all_my_workshops = (question_group[:all_ids] || [question_group[:primary_id]]).map {|x| flattened_all_my_workshop_histograms[x]}.compact.first
@@ -410,6 +428,8 @@ module Pd::WorkshopSurveyResultsHelper
 
         next if histogram_for_this_workshop.nil?
 
+        # Now that we have the histogram, the average is just the sum of option values
+        # divided by the total number of responses for this particular question
         total_responses_for_this_workshop = histogram_for_this_workshop.values.reduce(:+) || 0
 
         total_answer_for_this_workshop_sum = histogram_for_this_workshop.map {|k, v| question[:option_map][k] * v}.reduce(:+) || 0
@@ -420,10 +440,13 @@ module Pd::WorkshopSurveyResultsHelper
         facilitator_averages[facilitator][question_group[:primary_id]][:all_my_workshops] = (total_answer_for_all_workshops_sum / total_responses_for_all_workshops.to_f).round(2)
       end
 
+      # Finally, keep hold of the question text to render in the averages table
       facilitator_averages[:questions][question_group[:primary_id]] = question_group[:all_ids] ? question_group[:all_ids].map {|x| flattened_questions[x]}.compact.first[:text] : flattened_questions[question_group[:primary_id]][:text]
     end
 
     facilitators.each do |facilitator|
+      # Now compute the average for all 3 categories with their relevant questions for
+      # each facilitator
       QUESTIONS_FOR_FACILITATOR_AVERAGES.each do |category, questions|
         facilitator_averages[facilitator][category.to_s.downcase.to_sym] = {}
         [:this_workshop, :all_my_workshops].each do |column|
@@ -436,7 +459,12 @@ module Pd::WorkshopSurveyResultsHelper
     summary[:facilitator_averages] = facilitator_averages
   end
 
-  def generate_facilitator_response_counts(summary, workshop, related_workshops)
+  # Count how many responses each facilitator received for daily surveys
+  # @param summary hash that will receive the response
+  # @param workshop this workshop
+  # @param related_workshops workshops that this user facilitated (or organized)
+  # @returns the response count, as well as assigning it to the summary
+  def generate_facilitator_response_counts(workshop, related_workshops)
     facilitator_response_counts = {
       this_workshop: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop_id: workshop.id).group(:facilitator_id).size,
       all_my_workshops: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop_id: related_workshops.map(&:id)).group(:facilitator_id).size
@@ -473,8 +501,40 @@ module Pd::WorkshopSurveyResultsHelper
   end
 
   def reduce_summary(summary)
+    # Gnarly piece of code to reduce the summary from
+    # {
+    #   'Day 1' => {
+    #     general: {
+    #       q1: {...histogram...},
+    #       q2: {...histogram...}
+    #     },
+    #     facilitator: {
+    #       q3: {
+    #         'Facilitator 1' => {...histogram...},
+    #         'Facilitator 2' => {...histogram...}
+    #       }
+    #     }
+    #   },
+    #   'Day 2' => {
+    #     q4: {...histogram...},
+    #     q1: {...histogram...}
+    #     etc...
+    #   }
+    # }
+    # to
+    # {
+    #   q1: <merge of Day 1 and Day 2 histograms>
+    #   q2: q2 histogram
+    #   q3: {'Facilitator 1' => <merge of Day 1 and Day 2 q3 answers>, 'Facilitator 2' => ...}
+    #   q4: q4 histogram
+    # }
+
+    # First divide the questions by facilitator specific and facilitator non-specific.
     facilitator_specific_questions = summary.select {|x| x.values.first.values.first.is_a? Hash}
     general_questions = summary.reject {|x| x.values.first.values.first.is_a? Hash}
+
+    # Now reduce them all to one big hash. When we merge one histogram with the other,
+    # resolve conflicts by taking the sum of the two values
     reduced_facilitator_questions = facilitator_specific_questions.reduce {|memo, obj| memo.merge(obj) {|_, o, n| o.merge(n) {|_, o1, n1| o1.merge(n1) {|_, o2, n2| o2 + n2}}}}
     reduced_general_questions = general_questions.reduce {|memo, obj| memo.merge(obj) {|_, o, n| o.merge(n) {|_, o1, n1| o1 + n1}}}
 
