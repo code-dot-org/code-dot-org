@@ -7,6 +7,8 @@
     font-size: 14px;
   }
 
+%link{href: CDO.code_org_url("/css/video-js.min.css"), rel: "stylesheet"}
+
 %div.video-page
   %h1 Video Test Page
 
@@ -85,7 +87,6 @@
 
   var videoInfo = #{Video.first.summarize.to_json};
   videoInfo['enable_fallback'] = true;
-  videoInfo['src'] = videoInfo['src'].replace('#{Video.youtube_base_url}', 'https://www.youtube.com');
 
   window.dashboard.videos.createVideoWithFallback($('#video-container'), videoInfo, 600, 400);
 
