@@ -9,7 +9,6 @@ require 'cdo/languages'
 require 'fileutils'
 require 'json'
 require 'tempfile'
-require 'yaml'
 
 require_relative 'i18n_script_utils'
 

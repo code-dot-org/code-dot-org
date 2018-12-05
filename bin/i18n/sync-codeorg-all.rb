@@ -79,7 +79,7 @@ def create_in_up_pr
 
   git_add_and_commit(
     [
-      "dashboard/config/locales/*.en.yml",
+      "dashboard/config/locales/*.en.json",
       "i18n/locales/source/dashboard"
     ],
     "dashboard i18n sync"
@@ -128,7 +128,7 @@ def create_down_out_pr
     next if locale == 'en-US'
     git_add_and_commit(
       [
-        "dashboard/config/locales/*#{locale}.yml",
+        "dashboard/config/locales/*#{locale}.json",
         "i18n/locales/#{locale}/dashboard",
       ],
       "dashboard i18n updates - #{prop[:crowdin_name_s]}"

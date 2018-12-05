@@ -88,19 +88,15 @@ def redact(source, dest, *plugins)
   FileUtils.mkdir_p File.dirname(dest)
 
   plugins = plugins_to_arg(plugins)
-  data = YAML.load_file(source)
-  stdout, _status = Open3.capture2(
+  system(
     [
       'bin/i18n/node_modules/.bin/redact',
+      source,
       '-c bin/i18n/plugins/nonCommonmarkLinebreak.js',
-      '-p ' + plugins,
-    ].join(" "),
-    stdin_data: JSON.generate(data)
+      "-p #{plugins}",
+      "-o #{dest}",
+    ].join(" ")
   )
-  data = JSON.parse(stdout)
-  File.open(dest, "w+") do |file|
-    file.write(to_crowdin_yaml(data))
-  end
 end
 
 def restore(source, redacted, dest, *plugins)

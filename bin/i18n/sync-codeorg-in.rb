@@ -8,7 +8,6 @@
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'fileutils'
 require 'json'
-require 'yaml'
 require 'tempfile'
 
 require_relative 'i18n_script_utils'
@@ -17,7 +16,9 @@ def sync_in
   localize_level_content
   localize_block_content
   run_bash_script "bin/i18n-codeorg/in.sh"
-  localize_pegasus_markdown_content
+  # disable localization of pegasus markdown content until we can create a
+  # standalone sync process for the new crodwin project it lives in
+  #localize_pegasus_markdown_content
   # disable redaction of level content until the switch to remark is complete
   #redact_level_content
   redact_block_content
@@ -45,9 +46,13 @@ def localize_pegasus_markdown_content
   end
 end
 
-def copy_to_yml(label, data)
-  File.open("dashboard/config/locales/#{label}.en.yml", "w+") do |f|
-    f.write(to_crowdin_yaml({"en" => {"data" => {label => data}}}))
+def copy_to_json(label, data)
+  File.open("dashboard/config/locales/#{label}.en.json", "w+") do |f|
+    f.write(JSON.pretty_generate({"en" => {"data" => {label => data}}}))
+  end
+
+  File.open("i18n/locales/source/dashboard/#{label}.json", "w+") do |f|
+    f.write(JSON.pretty_generate(data))
   end
 end
 
@@ -58,8 +63,8 @@ def sanitize(string)
 end
 
 def redact_block_content
-  source = 'i18n/locales/source/dashboard/blocks.yml'
-  dest = 'i18n/locales/redacted/dashboard/blocks.yml'
+  source = 'i18n/locales/source/dashboard/blocks.json'
+  dest = 'i18n/locales/redacted/dashboard/blocks.json'
   redact(source, dest, 'blockfield')
 end
 
@@ -89,7 +94,7 @@ def localize_block_content
     blocks[name]['options'] = args_with_options unless args_with_options.empty?
   end
 
-  copy_to_yml('blocks', blocks)
+  copy_to_json('blocks', blocks)
 end
 
 def redact_level_content
@@ -101,8 +106,8 @@ def redact_level_content
     long_instructions
   ).each do |content_type|
     puts "\t#{content_type}"
-    source = "i18n/locales/source/dashboard/#{content_type}.yml"
-    dest = "i18n/locales/redacted/dashboard/#{content_type}.yml"
+    source = "i18n/locales/source/dashboard/#{content_type}.json"
+    dest = "i18n/locales/redacted/dashboard/#{content_type}.json"
     redact(source, dest, 'nonPedanticEmphasis')
   end
 end
@@ -188,14 +193,14 @@ def localize_level_content
     end
   end
 
-  copy_to_yml("display_name", level_display_name)
-  copy_to_yml("short_instructions", level_short_instructions)
-  copy_to_yml("long_instructions", level_long_instructions)
-  copy_to_yml("failure_message_overrides", level_failure_message_overrides)
-  copy_to_yml("authored_hints", level_authored_hints)
-  copy_to_yml("callouts", level_callouts)
-  copy_to_yml("block_categories", level_block_categories)
-  copy_to_yml("function_names", level_function_names)
+  copy_to_json("display_name", level_display_name)
+  copy_to_json("short_instructions", level_short_instructions)
+  copy_to_json("long_instructions", level_long_instructions)
+  copy_to_json("failure_message_overrides", level_failure_message_overrides)
+  copy_to_json("authored_hints", level_authored_hints)
+  copy_to_json("callouts", level_callouts)
+  copy_to_json("block_categories", level_block_categories)
+  copy_to_json("function_names", level_function_names)
 end
 
 sync_in if __FILE__ == $0
