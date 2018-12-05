@@ -17,6 +17,7 @@ social:
 %link{href: "/css/student.css", rel: "stylesheet"}
 %link{href: "/css/tools.css", rel: "stylesheet"}
 %link{href: "/shared/css/course-blocks.css", rel: "stylesheet", type: "text/css"}
+%script{type: "text/javascript", src: "/js/hoc-overview.js"}
 
 %h1= I18n.t(:hoc_overview_title)
 
@@ -51,8 +52,3 @@ social:
         %button.tutorial-info-start.tutorial-gray= I18n.t(:hoc_overview_partner_activities_link)
 
 .hoc-tiles-container
-
-:javascript
-  $(document).ready(function() {
-    $(".hoc-tiles-container").load("/dashboardapi/hoc_courses_teacher_guides");
-  })
