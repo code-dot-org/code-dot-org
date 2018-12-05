@@ -50,51 +50,31 @@
   text-decoration: underline;
 }
 
-.mc-store {
-  width: 478px;
-  height: 360px;
-  background-color: #0094ca;
-  color: white;
-  float: left;
-  padding: 0 20px;
-}
-
-.mc-host-event {
-  width: 478px;
-  height: 360px;
-  background-color: #b9bf15;
-  color: white;
-  float: right;
-  padding: 0 20px;
-}
-
-.mc-continue-learning {
-  width: 478px;
-  height: 360px;
-  background-color: #7665a0;
-  color: white;
-  margin-top: 15px;
-  font-size: 14px;
-  float: left;
-  padding: 0 20px;
-}
-
-.mc-future {
-  width: 478px;
-  height: 360px;
-  background-color: #00adbc;
-  margin-top: 15px;
-  color: white;
-  float: right;
-  padding: 0 20px;
-}
-
 .mc-videos {
   margin-top: 20px;
 }
 
 .padded-button {
   margin-top: 22px;
+}
+
+.responsive-padding {
+  margin-top: 10px;
+}
+
+.microsoft-partnership {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.microsoft-thanks {
+  font-size: 14px;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 85px;
+  margin-left: 18%;
+  margin-right: 18%;
 }
 
 @media screen and (min-width: 971px) {
@@ -136,11 +116,6 @@
 
   .color-block {
     width: 100%;
-  }
-
-  .mc-host-event, .mc-youth-spark, .mc-store {
-    padding-bottom: 15px;
-    height: auto;
   }
 
   .responsive-padding {
