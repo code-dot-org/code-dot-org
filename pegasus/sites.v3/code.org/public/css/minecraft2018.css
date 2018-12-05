@@ -129,6 +129,10 @@
 }
 
 @media screen and (min-width: 0px) and (max-width: 970px) {
+  #minecraft-mobile-image {
+    background-image: url(/images/fill-520x800/mc/minecraft_teacher_background.jpg);
+  }
+  
   .tutorial-box {
     margin-bottom: 15px;
   }
