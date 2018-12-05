@@ -46,15 +46,14 @@ def restore_redacted_files
     next if locale == 'en-US'
     next unless File.directory?("i18n/locales/#{locale}/")
 
-    Dir.glob("i18n/locales/redacted/**/*.*").each do |redacted_path|
-      source_path = redacted_path.sub("redacted", "source")
-      translated_path = redacted_path.sub("redacted", locale)
+    Dir.glob("i18n/locales/original/**/*.*").each do |original_path|
+      translated_path = original_path.sub("original", locale)
 
       plugin = 'nonPedanticEmphasis'
-      if redacted_path == 'i18n/locales/redacted/dashboard/blocks.yml'
+      if original_path == 'i18n/locales/original/dashboard/blocks.yml'
         plugin = 'blockfield'
       end
-      restore(source_path, translated_path, translated_path, plugin)
+      restore(original_path, translated_path, translated_path, plugin)
     end
   end
 end

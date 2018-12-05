@@ -57,10 +57,16 @@ def sanitize(string)
   return string.gsub(/\r(\n)?/, "\n")
 end
 
+def redact_translated_data(path, plugins = nil)
+  source = "i18n/locales/source/#{path}"
+  backup = "i18n/locales/original/#{path}"
+  FileUtils.mkdir_p(File.dirname(backup))
+  FileUtils.cp(source, backup)
+  redact(source, source, plugins)
+end
+
 def redact_block_content
-  source = 'i18n/locales/source/dashboard/blocks.yml'
-  dest = 'i18n/locales/redacted/dashboard/blocks.yml'
-  redact(source, dest, 'blockfield')
+  redact_translated_data('dashboard/blocks.yml', 'blockfield')
 end
 
 # Pull in various fields for custom blocks from .json files and save them to
@@ -93,17 +99,12 @@ def localize_block_content
 end
 
 def redact_level_content
-  FileUtils.mkdir_p 'i18n/locales/redacted/dashboard'
-  puts "Redacting"
   %w(
     authored_hints
     short_instructions
     long_instructions
   ).each do |content_type|
-    puts "\t#{content_type}"
-    source = "i18n/locales/source/dashboard/#{content_type}.yml"
-    dest = "i18n/locales/redacted/dashboard/#{content_type}.yml"
-    redact(source, dest, 'nonPedanticEmphasis')
+    redact_translated_data("dashboard/#{content_type}.yml", 'nonPedanticEmphasis')
   end
 end
 
