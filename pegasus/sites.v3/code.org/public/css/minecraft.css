@@ -41,15 +41,6 @@
   text-decoration: underline;
 }
 
-.mc-store {
-  width: 478px;
-  height: 360px;
-  background-color: #0094ca;
-  color: white;
-  float: left;
-  padding: 0 20px;
-}
-
 .mc-host-event {
   width: 478px;
   height: 360px;
@@ -122,11 +113,7 @@
     width: 100%;
   }
 
-  .mc-store {
-    margin-bottom: 15px;
-  }
-
-  .mc-host-event, .mc-youth-spark, .mc-store {
+  .mc-host-event, .mc-youth-spark {
     padding-bottom: 15px;
     height: auto;
   }

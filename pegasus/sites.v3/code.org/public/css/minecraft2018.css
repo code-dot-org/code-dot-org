@@ -131,14 +131,11 @@
 @media screen and (min-width: 0px) and (max-width: 970px) {
   .tutorial-box {
     margin-bottom: 15px;
+    padding-left: 10px;
   }
 
   .color-block {
     width: 100%;
-  }
-
-  .mc-store {
-    margin-bottom: 15px;
   }
 
   .mc-host-event, .mc-youth-spark, .mc-store {
@@ -149,18 +146,12 @@
   .responsive-padding {
     padding: 10px;
   }
-}
 
-@media screen and (min-width: 0px) and (max-width: 970px) {
   .mc-tutorial-info {
     position: absolute;
     right: 5px;
     top: 0;
     bottom: 0;
-  }
-
-  .tutorial-box {
-    padding-left: 10px;
   }
 
   .mc-tutorial-details {
