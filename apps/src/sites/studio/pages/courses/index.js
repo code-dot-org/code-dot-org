@@ -23,7 +23,6 @@ function showCourses() {
   const showInitialTips = !coursesData.initialtipsdismissed;
   const userId = coursesData.userid;
   const modernElementaryCoursesAvailable = coursesData.modernelementarycoursesavailable;
-  const hocLaunch = coursesData.hocLaunch;
 
   ReactDOM.render (
     <Provider store={getStore()}>
@@ -37,7 +36,6 @@ function showCourses() {
         showInitialTips={showInitialTips}
         userId={userId}
         modernElementaryCoursesAvailable={modernElementaryCoursesAvailable}
-        hocLaunch={hocLaunch}
       />
     </Provider>,
     document.getElementById('courses-container')
