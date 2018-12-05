@@ -31,10 +31,9 @@ files: [
   #
   # hourofcode content is handled by the hourofcode-specific sync
   # dsls content is temporarily disabled until it can be refactored
-  # authord hints, instructions, and markdown instructions should be redacted
-  #   rather than uploading the source directly
   "ignore" : [
     "/source/hourofcode/**",
+    "/source/dashboard/dsls.yml",
   ],
 
   #
