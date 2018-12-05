@@ -1685,17 +1685,19 @@ fr:
         d'un danseur.
       Dance_Party_10: Demandez également à l’autre danseur de répondre à la musique
         à l’aide du bloc « commencer à suivre ».
-      Dance_Party_11.5: Utiliser les blocs « tous les canards » pour faire danser
-        les canards ensemble.
       Dance_Party_11.5_test: Utiliser les blocs « tous les canards » pour faire danser
         les canards ensemble.
       Dance_Party_11: Le bloc « lorsqu’on appuie vers le haut » vous permet d'exécuter
         un programme lorsque vous appuyez sur la flèche vers le haut. Essayez de faire
         faire un mouvement rapide au danseur lorsque vous appuyez vers le haut.
+      Dance_Party_11_5: Utiliser les blocs « tous les canards » pour faire danser
+        les canards ensemble.
       Dance_Party_11b: Faites le Robot faire le « drop » une fois lorsque vous appuyez
         sur la touche fléchée droite et faire le « floss » une fois lorsque vous appuyez
         sur la touche fléchée haut. Réalisez le « drop-floss » aussi vite que possible
         !
+      Dance_Party_12: Prends ton rythme ! Créez votre propre danse à partager avec
+        vos amis.
       Food Fight!: |-
         Nous avons ajouté une dernière fonction pour toi.
 

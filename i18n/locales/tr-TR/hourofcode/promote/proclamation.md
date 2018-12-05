@@ -5,26 +5,26 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-# Sample Computer Science Education Week resolution
+# Örnek Bilgisayar Bilimi Eğitim haftasi onerisi
 
-### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
+### Aşağıda, Bilgisayar Bilimleri Eğitim Haftasını destekleyen bir örnek onerge ve bu programın eyalet ve yerel yasama organları tarafından kullanılabilecek hedefleri bulunmaktadır.
 
 * * *
 
-#### **RESOLUTION**  
+#### **çözüm**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### "Bilgisayar bilim eğitim haftası" nın hedeflerini ve ideallerini destekleme
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+Madem ki Bilgisayar Bilimleri Egitim Haftasi bilgisayar bilimlerinin toplumumuzu donustrumede oynadigi kritik rolu ve nasil bilgisayar bilimleri yenilige yon verdigini ve ekonomik olanaklar sagladiginin altini ciziyor;
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Madem ki bilgisayar teknolojileri modern kulturun vazgecilmez bir parcasi ve o, insanlarin nasil birbirileri ile ve etrafindaki dunya ile iletisimini degistiriyor;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Madem ki bilgisayar bilimleri sanayii donusturuyor, yeni ticari alanlar olusturuyor, tum bilim dallarinda yenilige oncu oluyor, ve varolan ekonomik sektorlerde uretkenligi desekliyor;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Madem ki bilgisayar bilimleri alani American ekonomik uretimine onemli destek saglayan ekonomimizin bilgi teknolojileri sektorune zemin teskil ediyor;
 
-Whereas the field of computer science is a foundational science for the digital age;
+Madem ki bilgisayar bilimleri alani dijital cag icin bit temel bilimdir;
 
 Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
 

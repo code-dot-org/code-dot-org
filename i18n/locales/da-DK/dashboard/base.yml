@@ -270,6 +270,7 @@ da:
       playlab: 'Play Lab'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
+      dance: 'Dansefest'
     popup:
       progress_for_user: "%{name}s fremskridt"
       progress: 'Dine fremskridt'
@@ -454,6 +455,8 @@ da:
     applab:
       title: 'App Lab'
       audience: 'Alder 13+'
+    dance:
+      title: 'Dansefest'
     hoc:
       title: 'Klassisk labyrint'
       body: 'Prøv grundlæggende kodning. Millioner har allerede gjort det.'
@@ -492,6 +495,7 @@ da:
       title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Minecraft er tilbage med en splinterny aktivitet i En Times Kodning! En rejse gennem Minecraft ved hjælp af kode."
     unplugged:
       audience: "Alder 4+"
     unplugged_conditionals:
@@ -651,6 +655,7 @@ da:
       name: 'Eskalerede'
   flex_category:
     required: 'Oversigt'
+  view_teacher_guide: 'Vis lærervejledning'
   pd:
     form_labels:
       email: 'E-mail'

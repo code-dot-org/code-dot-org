@@ -3948,7 +3948,7 @@ vi:
               name: Minecraft Hour of Code
           title: 'Minecraft: Hero''s Journey'
           description_short: Minecraft đã trở lại với hoạt động mới cho Giờ Lập Trình!
-          description: Minecraft đã trở lại trong Giờ Lập Trình với một hoạt động mới! Hãy bắt đầu cuộc hành trình Minecraft với việc lập trình.
+          description: Minecraft đã trở lại với một hoạt động hoàn toàn mới cho Hour of Code! Cuộc hành trình đi qua Minecraft với mật mã.
         applab-intro-staging:
           stages:
             Intro to AppLab - Your First App:
@@ -4686,6 +4686,8 @@ vi:
             Dance Party:
               name: Bữa tiệc khiêu vũ
           title: Bữa tiệc khiêu vũ
+          description_short: Hợp tác với Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara và 25 nghệ sĩ khác!
+          description: Viết mã bữa tiệc khiêu vũ của riêng bạn để chia sẻ với bạn bè của mình!
         frozen-2018-test-b:
           stages:
             Artist:
@@ -4700,6 +4702,9 @@ vi:
           stages:
             Dance Party:
               name: Bữa tiệc khiêu vũ
+        dance-extras:
+          title: Hãy Tiếp tục Nhảy
+          description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự án mở rộng.
         coursef-2019:
           stages:
             Building a Foundation:

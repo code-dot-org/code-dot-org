@@ -793,13 +793,6 @@ zh-TW:
           * 兩個或更多的舞者屬性必須變更。
 
           *此層級在 8 個小節後結束。*
-      Dance_Party_11.5_authored_hint:
-        validation: |-
-          **我如何通過此層級？**
-
-          * 發揮創意即可！
-
-          *此層級在 8 個小節後結束。*
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **我如何通過此層級？**
@@ -808,6 +801,13 @@ zh-TW:
 
           *此層級在 8 個小節後結束。*
       Dance_Party_11_authored_hint:
+        validation: |-
+          **我如何通過此層級？**
+
+          * 發揮創意即可！
+
+          *此層級在 8 個小節後結束。*
+      Dance_Party_11_5_authored_hint:
         validation: |-
           **我如何通過此層級？**
 

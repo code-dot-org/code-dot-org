@@ -563,6 +563,7 @@ nl:
       title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Minecraft is terug bij Hour of Code met een gloednieuwe activiteit! Gebruik code om door Minecraft te reizen."
     unplugged:
       title: "'Unplugged' lessen"
       audience: "Leeftijden 6+"
@@ -785,6 +786,7 @@ nl:
     download_in_Greek: 'Download in het Grieks:'
     windows: 'Windows (64-bit)'
     mac: 'Mac OS X'
+  view_teacher_guide: 'Lerarenhandleiding bekijken'
   pd:
     form_labels:
       email: 'Email'

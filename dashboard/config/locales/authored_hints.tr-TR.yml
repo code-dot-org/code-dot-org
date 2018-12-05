@@ -1029,13 +1029,6 @@ tr:
           * İki veya daha fazla dansçının özellikleri değişmelidir.
 
           *Bu seviye 8 ölçüden sonra biter.*
-      Dance_Party_11.5_authored_hint:
-        validation: |-
-          **Bu seviyeyi nasıl geçerim?**
-
-          * Yaratıcı olmanız yeterli!
-
-          *Bu seviye 8 ölçüden sonra biter.*
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Bu seviyeyi nasıl geçerim?**
@@ -1044,6 +1037,13 @@ tr:
 
           *Bu seviye 8 ölçüden sonra biter.*
       Dance_Party_11_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          * Yaratıcı olmanız yeterli!
+
+          *Bu seviye 8 ölçüden sonra biter.*
+      Dance_Party_11_5_authored_hint:
         validation: |-
           **Bu seviyeyi nasıl geçerim?**
 
@@ -3441,14 +3441,14 @@ tr:
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_b: Bir hata yapmaktan korkmayın! Bloklar ekleyin ve ne
           olacağını görmek için kodu çalıştırmayı deneyin.
-        courseA_maze_seq13_c: |2
-           <xml><block type="maze_moveNorth"/></xml>
+        courseA_maze_seq13_c: |-
+          <xml><block type="maze_moveNorth"/></xml>
           <xml><block type="maze_moveEast"/></xml> blokları domuza yaklaşmanıza yardımcı olur.
       courseA_maze_seq13_2018_authored_hint:
         courseA_maze_seq13_b: Bir hata yapmaktan korkmayın! Bloklar ekleyin ve ne
           olacağını görmek için kodu çalıştırmayı deneyin.
-        courseA_maze_seq13_c: |2
-           <xml><block type="maze_moveNorth"/></xml>
+        courseA_maze_seq13_c: |-
+          <xml><block type="maze_moveNorth"/></xml>
           <xml><block type="maze_moveEast"/></xml> blokları domuza yaklaşmanıza yardımcı olur.
       courseA_maze_seq2_authored_hint:
         courseA_maze_seq2_b: Kuşun nereye gittiğini görmek için önce kodu çalıştırmayı
@@ -8574,17 +8574,17 @@ tr:
         courseE_bee_concept4_c: Eğer bir çiçekte iseniz, kaç kez nektar almak zorundasınız?
           Bu sayı bütün çiçekler için aynı mıdır?
       courseE_bee_concept5_authored_hint:
-        courseE_bee_concept5_c: " Arının gidebileceği dikdörtgen yolun bir resmi var.
+        courseE_bee_concept5_c: "Arının gidebileceği dikdörtgen yolun bir resmi var.
           \n![](https://images.code.org/b0ab0f9ec823fd8fbc9b032d68fd69d0-image-1493152066638.7.8
-          Hint Drawing.png)\n"
+          Hint Drawing.png)"
       courseE_bee_concept5_2018_authored_hint:
-        courseE_bee_concept5_c: " Arının gidebileceği dikdörtgen yolun bir resmi var.
+        courseE_bee_concept5_c: "Arının gidebileceği dikdörtgen yolun bir resmi var.
           \n![](https://images.code.org/b0ab0f9ec823fd8fbc9b032d68fd69d0-image-1493152066638.7.8
-          Hint Drawing.png)\n"
+          Hint Drawing.png)"
       courseE_bee_concept5_2019_authored_hint:
-        courseE_bee_concept5_c: " Arının gidebileceği dikdörtgen yolun bir resmi var.
+        courseE_bee_concept5_c: "Arının gidebileceği dikdörtgen yolun bir resmi var.
           \n![](https://images.code.org/b0ab0f9ec823fd8fbc9b032d68fd69d0-image-1493152066638.7.8
-          Hint Drawing.png)\n"
+          Hint Drawing.png)"
       courseE_bee_functions1_authored_hint:
         courseE_bee_functions1_b: Kodunuzu kısaltmak için nektar toplarken bir tane
           'tekrarla' döngüsü kullanın.

@@ -492,6 +492,7 @@ th:
     required: ภาพรวม
   hoc_download:
     minecraft_name: ชั่วโมงแห่งโค้ดตอนไมน์คราฟท์
+  view_teacher_guide: ดูคำแนะนำสำหรับครู
   pd:
     form_labels:
       email: อีเมล
