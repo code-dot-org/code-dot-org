@@ -385,8 +385,9 @@ module Pd::WorkshopSurveyResultsHelper
   def generate_facilitator_averages(summary)
     facilitators = summary[:facilitators].values
 
-    flattened_this_workshop_histograms = summary[:this_workshop].values.flat_map(&:values).select {|x| x.is_a? Hash}.reduce(&:merge)
-    flattened_all_my_workshop_histograms = summary[:all_my_workshops].values.flat_map(&:values).select {|x| x.is_a? Hash}.reduce(&:merge)
+    flattened_this_workshop_histograms = reduce_summary(summary[:this_workshop].values.flat_map(&:values).select {|x| x.is_a? Hash})
+
+    flattened_all_my_workshop_histograms = reduce_summary(summary[:all_my_workshops].values.flat_map(&:values).select {|x| x.is_a? Hash})
 
     flattened_questions = summary[:questions].values.flat_map(&:values).reduce(:merge)
     flattened_questions.transform_values do |question|
@@ -397,19 +398,19 @@ module Pd::WorkshopSurveyResultsHelper
     facilitator_averages[:questions] = {}
 
     QUESTIONS_FOR_FACILITATOR_AVERAGES_LIST.each do |question_group|
+      question = flattened_questions[question_group[:primary_id]] || question_group[:all_ids]&.map {|x| flattened_questions[x]}&.compact&.first
+
+      next if question.nil?
+
       facilitators.each do |facilitator|
         histogram_for_this_workshop = (question_group[:all_ids] || [question_group[:primary_id]]).map {|x| flattened_this_workshop_histograms[x]}.compact.first
         histogram_for_this_workshop = histogram_for_this_workshop.try(:[], facilitator) || histogram_for_this_workshop
         histogram_for_all_my_workshops = (question_group[:all_ids] || [question_group[:primary_id]]).map {|x| flattened_all_my_workshop_histograms[x]}.compact.first
         histogram_for_all_my_workshops = histogram_for_all_my_workshops.try(:[], facilitator) || histogram_for_all_my_workshops
 
-        question = flattened_questions[question_group[:primary_id]] || question_group[:all_ids].map {|x| flattened_questions[x]}.compact.first
-
         next if histogram_for_this_workshop.nil?
 
         total_responses_for_this_workshop = histogram_for_this_workshop.values.reduce(:+) || 0
-
-        puts question
 
         total_answer_for_this_workshop_sum = histogram_for_this_workshop.map {|k, v| question[:option_map][k] * v}.reduce(:+) || 0
         facilitator_averages[facilitator][question_group[:primary_id]] = {this_workshop: (total_answer_for_this_workshop_sum / total_responses_for_this_workshop.to_f).round(2)}
@@ -426,7 +427,7 @@ module Pd::WorkshopSurveyResultsHelper
       QUESTIONS_FOR_FACILITATOR_AVERAGES.each do |category, questions|
         facilitator_averages[facilitator][category.to_s.downcase.to_sym] = {}
         [:this_workshop, :all_my_workshops].each do |column|
-          average = facilitator_averages[facilitator].slice(*(questions.map {|question| question[:primary_id]})).values.map {|x| x[column]}.reduce(:+) / questions.size.to_f
+          average = (facilitator_averages[facilitator].slice(*(questions.map {|question| question[:primary_id]})).values.map {|x| x[column]}.reduce(:+) || 0) / questions.size.to_f
           facilitator_averages[facilitator][category.to_s.downcase.to_sym][column] = average.round(2)
         end
       end
@@ -469,5 +470,14 @@ module Pd::WorkshopSurveyResultsHelper
       !(current_user.program_manager? ||
         current_user.workshop_organizer? ||
         current_user.workshop_admin?)
+  end
+
+  def reduce_summary(summary)
+    facilitator_specific_questions = summary.select {|x| x.values.first.values.first.is_a? Hash}
+    general_questions = summary.reject {|x| x.values.first.values.first.is_a? Hash}
+    reduced_facilitator_questions = facilitator_specific_questions.reduce {|memo, obj| memo.merge(obj) {|_, o, n| o.merge(n) {|_, o1, n1| o1.merge(n1) {|_, o2, n2| o2 + n2}}}}
+    reduced_general_questions = general_questions.reduce {|memo, obj| memo.merge(obj) {|_, o, n| o.merge(n) {|_, o1, n1| o1 + n1}}}
+
+    reduced_general_questions.merge reduced_facilitator_questions
   end
 end

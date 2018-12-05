@@ -629,17 +629,40 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
           },
           facilitator: {
             'howOften56' => {
-              'Facilitator 1' => {
+              'Facilitator Person 1' => {
                 'All the time' => 5,
                 'Often' => 1
               },
-              'Facilitator 2' => {
+              'Facilitator Person 2' => {
                 'Sometimes' => 5,
                 'Almost never' => 2
               }
             }
           }
-        }
+        },
+        'Day 2' => {
+          general: {
+            'iFeel133' => {
+              'Fantastic' => 5,
+              'Pretty good' => 3
+            },
+            'overallHow' => {
+              'A tremendous amount' => 5
+            }
+          },
+          facilitator: {
+            'howOften56' => {
+              'Facilitator Person 1' => {
+                'All the time' => 4,
+                'Often' => 2
+              },
+              'Facilitator Person 2' => {
+                'Sometimes' => 3,
+                'Almost never' => 5
+              }
+            }
+          }
+        },
       },
       all_my_workshops: {
         'Day 1' => {
@@ -654,25 +677,56 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
           },
           facilitator: {
             'howOften56' => {
-              'Facilitator 1' => {
+              'Facilitator Person 1' => {
                 'All the time' => 5,
                 'Often' => 4,
                 'Sometimes' => 3
               },
-              'Facilitator 2' => {
+              'Facilitator Person 2' => {
                 'Sometimes' => 10,
                 'Once in a while' => 9,
                 'Almost never' => 8
               }
             }
           }
-        }
+        },
+        'Day 2' => {
+          general: {
+            'overallHow' => {
+              'A tremendous amount' => 5,
+              'Quite a bit' => 6,
+              'Some' => 9,
+              'A little bit' => 2,
+              'Almost nothing' => 3
+            },
+            'iFeel133' => {
+              'Fantastic' => 10,
+              'Pretty good' => 5,
+              'So-so' => 1
+            }
+          },
+          facilitator: {
+            'howOften56' => {
+              'Facilitator Person 1' => {
+                'All the time' => 10,
+                'Often' => 6,
+                'Sometimes' => 5
+              },
+              'Facilitator Person 2' => {
+                'Often' => 1,
+                'Sometimes' => 10,
+                'Once in a while' => 20,
+                'Almost never' => 15
+              }
+            }
+          }
+        },
       },
       questions: {
         'Day 1' => {
           general: {
             'overallHow' => {
-              text: 'Overall how do you like this course?',
+              text: 'Overall how much did you learn from this course?',
               answer_type: 'singleSelect',
               options: [
                 'Almost nothing',
@@ -695,34 +749,109 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
               ]
             }
           }
+        },
+        'Day 2' => {
+          general: {
+            'overallHow' => {
+              text: 'Overall how much did you learn from this course?',
+              answer_type: 'singleSelect',
+              options: [
+                'Almost nothing',
+                'A little bit',
+                'Some',
+                'Quite a bit',
+                'A tremendous amount'
+              ]
+            },
+            'iFeel133' => {
+              text: 'Overall, how do you feel about computer science?',
+              answer_type: 'singleSelect',
+              options: [
+                'Awful',
+                'Not great',
+                'So-so',
+                'Pretty good',
+                'Fantastic'
+              ]
+            }
+          },
+          facilitator: {
+            'howOften56' => {
+              text: 'How often did your facilitator help you?',
+              options: [
+                'Almost never',
+                'Once in a while',
+                'Sometimes',
+                'Often',
+                'All the time'
+              ]
+            }
+          }
         }
       },
-      facilitators: ['Facilitator 1', 'Facilitator 2']
+      facilitators: @workshop.facilitators.map {|f| [f.id, f.name]}.to_h
     }
 
     generate_facilitator_averages(existing_summary)
 
     assert_equal(
       {
-        'Facilitator 1' => {
+        'Facilitator Person 1' => {
           'overallHow' => {
-            this_workshop: 4.44,
-            all_my_workshops: 3.57
+            this_workshop: 4.64,
+            all_my_workshops: 3.47
           },
           'howOften56' => {
-            this_workshop: 4.83,
-            all_my_workshops: 4.17
+            this_workshop: 4.75,
+            all_my_workshops: 4.21
+          },
+          'iFeel133' => {
+            this_workshop: 4.63,
+            all_my_workshops: 4.56,
+          },
+          facilitator_effectiveness: {
+            this_workshop: 1.34,
+            all_my_workshops: 1.1
+          },
+          teacher_engagement: {
+            this_workshop: 0,
+            all_my_workshops: 0,
+          },
+          overall_success: {
+            this_workshop: 0.93,
+            all_my_workshops: 0.91
           }
         },
-        'Facilitator 2' => {
+        'Facilitator Person 2' => {
           'overallHow' => {
-            this_workshop: 4.44,
-            all_my_workshops: 3.57
+            this_workshop: 4.64,
+            all_my_workshops: 3.47
           },
           'howOften56' => {
-            this_workshop: 2.43,
-            all_my_workshops: 2.07
+            this_workshop: 2.07,
+            all_my_workshops: 1.99
+          },
+          'iFeel133' => {
+            this_workshop: 4.63,
+            all_my_workshops: 4.56,
+          },
+          facilitator_effectiveness: {
+            this_workshop: 0.96,
+            all_my_workshops: 0.78
+          },
+          teacher_engagement: {
+            this_workshop: 0,
+            all_my_workshops: 0,
+          },
+          overall_success: {
+            this_workshop: 0.93,
+            all_my_workshops: 0.91
           }
+        },
+        questions: {
+          'overallHow' => "Overall how much did you learn from this course?",
+          'howOften56' => "How often did your facilitator help you?",
+          'iFeel133' => "Overall, how do you feel about computer science?"
         }
       },
 
