@@ -28,6 +28,7 @@ import {
   fetchSignedCookies,
 } from './songs';
 import { SongTitlesToArtistTwitterHandle } from '../code-studio/dancePartySongArtistTags';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const ButtonState = {
   UP: 0,
@@ -196,7 +197,22 @@ Dance.prototype.setSongCallback = function (songId) {
   loadSong(songId, songData, status => {
     if (status === 403) {
       // The cloudfront signed cookies may have expired.
-      fetchSignedCookies().then(() => loadSong(songId, songData));
+      fetchSignedCookies().then(() => loadSong(songId, songData, status => {
+        if (status === 403) {
+          // Something is wrong, because we just re-fetched cloudfront credentials.
+          firehoseClient.putRecord(
+            {
+              study: 'restricted-song-auth',
+              event: 'repeated-auth-error',
+              data_json: JSON.stringify({
+                currentUrl: window.location.href,
+                channelId: getStore().getState().pageConstants.channelId,
+              }),
+            },
+            {includeUserId: true}
+          );
+        }
+      }));
     }
   });
 
