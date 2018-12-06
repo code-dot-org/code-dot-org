@@ -65,8 +65,8 @@ const styles = {
   },
 };
 
-const ChallengeDialog = Radium(React.createClass({
-  propTypes: {
+class ChallengeDialog extends React.Component {
+  static propTypes = {
     avatar: PropTypes.string,
     cancelButtonLabel: PropTypes.string,
     children: PropTypes.oneOfType([
@@ -83,25 +83,26 @@ const ChallengeDialog = Radium(React.createClass({
     showPuzzleRatingButtons: PropTypes.bool,
     text: PropTypes.string,
     title: PropTypes.string,
-  },
+  };
 
-  getInitialState() {
-    return {
+  constructor(props) {
+    super(props);
+    this.state = {
       isOpen: this.props.isOpen === undefined || this.props.isOpen,
       confettiActive: false,
       confettiOnTop: false,
     };
-  },
+  }
 
-  handlePrimary() {
+  handlePrimary = () => {
     this.props.handlePrimary && this.props.handlePrimary();
     this.setState({ isOpen: false });
-  },
+  };
 
-  handleCancel() {
+  handleCancel = () => {
     this.props.handleCancel && this.props.handleCancel();
     this.setState({ isOpen: false });
-  },
+  };
 
   componentDidMount() {
     if (this.props.complete && !this.props.isIntro) {
@@ -113,7 +114,7 @@ const ChallengeDialog = Radium(React.createClass({
       // front of it. Fake it by changing the z-index from -1 to 1 after 700ms
       window.setTimeout(() => this.setState({ confettiOnTop: true }), 700);
     }
-  },
+  }
 
   render() {
     const confettiZIndex = this.state.confettiOnTop ? 1: -1;
@@ -165,7 +166,7 @@ const ChallengeDialog = Radium(React.createClass({
         </div>}
       </BaseDialog>
     );
-  },
-}));
+  }
+}
 
-export default ChallengeDialog;
+export default Radium(ChallengeDialog);
