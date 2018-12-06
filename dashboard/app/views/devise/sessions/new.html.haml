@@ -47,8 +47,8 @@
   - else
     - course_blocks = [Script::DANCE_PARTY_NAME, Script::MINECRAFT_AQUATIC_NAME, Script::FROZEN_NAME, Script::HOC_NAME]
 
-  - course_blocks.each do |course|
-    = render partial: 'shared/course_tall_block', locals: { id: course, showState: false }
+  - course_blocks.each do |course_id|
+    = render partial: 'shared/course_tall_block', locals: { id: course_id }
 
 
 %br/
