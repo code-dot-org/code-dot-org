@@ -229,8 +229,8 @@ def check_for_mismatching_links_or_images
     mismatch_found = false
 
     categories_to_check.each do |category|
-      locale_file = "dashboard/config/locales/#{category}.#{locale}.yml"
-      source_file = "dashboard/config/locales/#{category}.en.yml"
+      locale_file = "dashboard/config/locales/#{category}.#{locale}.json"
+      source_file = "dashboard/config/locales/#{category}.en.json"
 
       # this absurd little dance is necessary because of the format of
       # each of these yaml files; they each have a hash with a single
@@ -238,8 +238,8 @@ def check_for_mismatching_links_or_images
       # value is a hash with the single key 'data' whose value is a hash
       # with a single key representing the category name whose value is
       # (finally) the data we actually want.
-      source_data = YAML.load(File.open(source_file)).values.first.values.first.values.first
-      locale_data = YAML.load(File.open(locale_file)).values.first.values.first.values.first
+      source_data = JSON.parse(File.read(source_file)).values.first.values.first.values.first
+      locale_data = JSON.parse(File.read(locale_file)).values.first.values.first.values.first
 
       if source_data.keys != locale_data.keys
         outputfile.write "mismatching keys in #{locale_file}"
@@ -253,7 +253,7 @@ def check_for_mismatching_links_or_images
       next if mismatching_keys.empty?
       mismatch_found = true
       outputfile.write("mismatching values in #{locale_file}\n")
-      outputfile.write("and therefore also in i18n/locales/#{locale}/dashboard/#{category}.yml:\n")
+      outputfile.write("and therefore also in i18n/locales/#{locale}/dashboard/#{category}.json:\n")
       mismatching_keys.each do |key|
         outputfile.write("\t#{key}\n")
         outputfile.write("\t\ten:\n")
