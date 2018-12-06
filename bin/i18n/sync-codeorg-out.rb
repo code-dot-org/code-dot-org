@@ -9,6 +9,7 @@ require 'cdo/languages'
 require 'fileutils'
 require 'json'
 require 'tempfile'
+require 'yaml'
 
 require_relative 'i18n_script_utils'
 
@@ -45,15 +46,23 @@ def restore_redacted_files
     next if locale == 'en-US'
     next unless File.directory?("i18n/locales/#{locale}/")
 
-    Dir.glob("i18n/locales/redacted/**/*.*").each do |redacted_path|
+    Dir.glob("i18n/locales/redacted/**/*.json").each do |redacted_path|
       source_path = redacted_path.sub("redacted", "source")
       translated_path = redacted_path.sub("redacted", locale)
 
       plugin = 'nonPedanticEmphasis'
-      if redacted_path == 'i18n/locales/redacted/dashboard/blocks.yml'
+      if redacted_path == 'i18n/locales/redacted/dashboard/blocks.json'
         plugin = 'blockfield'
       end
-      restore(source_path, translated_path, translated_path, plugin)
+
+      # Dashboard i18n data has locale-specific keys as per Rails requirements,
+      # which will prevent restoration from working correctly unless accounted
+      # for
+      if source_path.start_with? 'i18n/locales/source/dashboard'
+        restore_with_locale_key(source_path, translated_path, translated_path, plugin)
+      else
+        restore(source_path, translated_path, translated_path, plugin)
+      end
     end
   end
 end
@@ -117,13 +126,13 @@ def distribute_translations
     next unless File.directory?("i18n/locales/#{locale}/")
 
     ### Dashboard
-    Dir.glob("i18n/locales/#{locale}/dashboard/*.yml") do |loc_file|
-      relname = File.basename(loc_file, '.yml')
+    Dir.glob("i18n/locales/#{locale}/dashboard/*.json") do |loc_file|
+      relname = File.basename(loc_file, '.json')
 
       # Special case the un-prefixed Yaml file.
       destination = (relname == "base") ?
-        "dashboard/config/locales/#{locale}.yml" :
-        "dashboard/config/locales/#{relname}.#{locale}.yml"
+        "dashboard/config/locales/#{locale}.json" :
+        "dashboard/config/locales/#{relname}.#{locale}.json"
 
       sanitize_and_write(loc_file, destination)
     end
