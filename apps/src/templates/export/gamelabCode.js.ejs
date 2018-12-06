@@ -1,6 +1,17 @@
+var p5Inst = new p5(null, 'sketch');
+var _globalInit = function() {
+  initMobileControls(p5Inst);
+};
+
+if (document.readyState === 'complete') {
+  _globalInit();
+} else {
+  window.addEventListener('load', _globalInit , false);
+}
+
 function preload() {
-  p5.instance._predefinedSpriteAnimations = {};
-  p5.instance._pauseSpriteAnimationsByDefault = <%- animationOpts.pauseAnimationsByDefault -%>;
+  p5Inst._predefinedSpriteAnimations = {};
+  p5Inst._pauseSpriteAnimationsByDefault = <%- animationOpts.pauseAnimationsByDefault -%>;
   var animationListJSON = <%- animationOpts.animationListJSON -%>;
   var orderedKeys = animationListJSON.orderedKeys;
   var allAnimationsSingleFrame = <%- animationOpts.allAnimationsSingleFrame -%>;
@@ -15,9 +26,9 @@ function preload() {
           props.frameSize.y,
           frameCount
       );
-      p5.instance._predefinedSpriteAnimations[props.name] = loadAnimation(spriteSheet);
-      p5.instance._predefinedSpriteAnimations[props.name].looping = props.looping;
-      p5.instance._predefinedSpriteAnimations[props.name].frameDelay = props.frameDelay;
+      p5Inst._predefinedSpriteAnimations[props.name] = loadAnimation(spriteSheet);
+      p5Inst._predefinedSpriteAnimations[props.name].looping = props.looping;
+      p5Inst._predefinedSpriteAnimations[props.name].frameDelay = props.frameDelay;
     });
   }
 

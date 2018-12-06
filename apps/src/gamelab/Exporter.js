@@ -24,14 +24,20 @@ import logToCloud from '../logToCloud';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {GAME_WIDTH, GAME_HEIGHT} from './constants';
 
+const CONTROLS_HEIGHT = 165;
+
 export default {
   async exportAppToZip(appName, code, animationOpts, expoMode) {
 
+    const appHeight = GAME_HEIGHT + CONTROLS_HEIGHT;
+    const appWidth = GAME_WIDTH;
     const jQueryBaseName = 'jquery-1.12.1.min';
     var html;
     if (expoMode) {
       html = exportGamelabExpoIndexEjs({
         appName,
+        appHeight,
+        appWidth,
         jQueryPath: jQueryBaseName + ".j",
         gamelabApiPath: 'gamelab-api.j',
         p5Path: 'p5.j',
@@ -40,6 +46,8 @@ export default {
     } else {
       html = exportGamelabWebExport({
         appName,
+        appHeight,
+        appWidth,
       });
     }
     const cacheBust = '?__cb__='+''+new String(Math.random()).slice(2);
@@ -85,8 +93,8 @@ export default {
         projectId: project.getCurrentId()
       });
       const appJs = exportExpoAppEjs({
-        appHeight: GAME_HEIGHT,
-        appWidth: GAME_WIDTH,
+        appHeight,
+        appWidth,
         hasDataAPIs: false,
       });
 
@@ -246,16 +254,20 @@ export default {
       `${origin}/blockly/js/gamelab-api.min.js`;
     const p5Path = `${origin}/blockly/js/p5play/p5.js`;
     const p5playPath = `${origin}/blockly/js/p5play/p5.play.js`;
+    const appHeight = GAME_HEIGHT + CONTROLS_HEIGHT;
+    const appWidth = GAME_WIDTH;
     const html = exportGamelabExpoIndexEjs({
       appName,
+      appHeight,
+      appWidth,
       jQueryPath: "https://code.jquery.com/jquery-1.12.1.min.js",
       gamelabApiPath,
       p5Path,
       p5playPath,
     });
     const appJs = exportExpoAppEjs({
-      appHeight: GAME_HEIGHT,
-      appWidth: GAME_WIDTH,
+      appHeight,
+      appWidth,
       hasDataAPIs: false,
     });
 
