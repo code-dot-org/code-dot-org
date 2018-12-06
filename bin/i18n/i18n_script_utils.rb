@@ -2,6 +2,8 @@ require 'fileutils'
 require 'open3'
 require 'psych'
 require 'tempfile'
+require 'json'
+require 'yaml'
 
 CODEORG_CONFIG_FILE = File.join(File.dirname(__FILE__), "codeorg_crowdin.yml")
 CODEORG_IDENTITY_FILE = File.join(File.dirname(__FILE__), "codeorg_credentials.yml")
@@ -102,35 +104,55 @@ end
 def restore(source, redacted, dest, *plugins)
   return unless File.exist?(source)
   return unless File.exist?(redacted)
+  FileUtils.mkdir_p File.dirname(dest)
 
   plugins = plugins_to_arg(plugins)
-  source_data = YAML.load_file(source)
-  redacted_data = YAML.load_file(redacted)
+  system(
+    [
+      'bin/i18n/node_modules/.bin/restore',
+      source,
+      '-c bin/i18n/plugins/nonCommonmarkLinebreak.js',
+      "-p #{plugins}",
+      "-s #{source}",
+      "-r #{redacted}",
+      "-o #{dest}",
+    ].join(" ")
+  )
+end
+
+# Support a version of restoration that works on files with the locale as a
+# top-level key, as required by Ruby i18n data. The source data will have "en"
+# as the key, but the redacted data we get back from crowdin will have the key
+# replaced by the appropriate two- or four-character locale code, so we have
+# run the restoration on the data within the key but not including the key
+# itself.
+def restore_with_locale_key(source, redacted, dest, *plugins)
+  return unless File.exist?(source)
+  return unless File.exist?(redacted)
+
+  source_data = JSON.parse(File.read(source))
+  redacted_data = JSON.parse(File.read(redacted))
   source_json = Tempfile.new(['source', '.json'])
   redacted_json = Tempfile.new(['redacted', '.json'])
 
   source_json.write(JSON.generate(source_data.values.first))
   redacted_json.write(JSON.generate(redacted_data.values.first))
-
   source_json.flush
   redacted_json.flush
 
-  stdout, _status = Open3.capture2(
-    [
-      'bin/i18n/node_modules/.bin/restore',
-      '-c bin/i18n/plugins/nonCommonmarkLinebreak.js',
-      '-p ' + plugins,
-      "-s #{source_json.path}",
-      "-r #{redacted_json.path}",
-    ].join(" ")
-  )
+  restored_json = Tempfile.new(['restored', '.json'])
+
+  restore(source_json.path, redacted_json.path, restored_json.path, *plugins)
+
   redacted_key = redacted_data.keys.first
   restored_data = {}
-  restored_data[redacted_key] = JSON.parse(stdout)
+  restored_data[redacted_key] = JSON.parse(File.read(restored_json))
+
   File.open(dest, "w+") do |file|
-    file.write(to_crowdin_yaml(restored_data))
+    file.write(JSON.pretty_generate(restored_data))
   end
 
   source_json.close
   redacted_json.close
+  restored_json.close
 end
