@@ -1,5 +1,4 @@
 import React from 'react';
-
 import DialogButtons from './DialogButtons';
 
 export default storybook => {
@@ -21,9 +20,6 @@ export default storybook => {
         }, {
           name: 'confirmText',
           story: () => <DialogButtons confirmText="Custom Confirm Text"/>,
-        }, {
-          name: 'previousLevel',
-          story: () => <DialogButtons previousLevel={true}/>,
         }, {
           name: 'nextLevel',
           story: () => <DialogButtons nextLevel={true} continueText="Custom Continue Text"/>,
