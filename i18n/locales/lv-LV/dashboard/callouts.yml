@@ -1,0 +1,200 @@
+lv:
+  data:
+    callouts:
+      CSD U6 colorLeds intensity_callout:
+        CSDU6L10_rainbow: Pievieno savu kodu šeit
+      CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: Pievieno savu kodu šeit
+      CSD U6 light show predict_callout:
+        CSDUDL03P09: Ko dara šī līnija?
+      CSD U6 light show predict_2018_callout:
+        CSDUDL03P09: Ko dara šī līnija?
+      CSD U6 light show_callout:
+        CSDUDL03P09: Ko dara šī līnija?
+      CSD U6 light show_2018_callout:
+        CSDUDL03P09: Ko dara šī līnija?
+      Course 4 Artist 4_callout:
+        repeat_full_circle: Ievadi skaitli, cik reižu zombijam jāpakustas, lai izveidotu pilnu apli
+      Course 4 Artist 7_callout:
+        repeat_blocks: Izmanto bloku "atkārtot" un ietver tajā visus blokus uz darbagalda
+      Course 4 Artist For Loops 4_callout:
+        place_counter_variable: Ievelc savu skaitītāju šajā blokā.
+      Course 4 Artist Functions 4_callout:
+        create_function: Spied šeit, lau atvērtu Funkciju paneli, tad nospied "Izveidot funkciju" pogu.
+      Course 4 Artist Functions 5 OLD_callout:
+        house_hint: Tas nekas, ja bildes pagaidām neizskatās pēc mājas. Mēs to labosim nākamajā uzdevumā.
+      Course 4 Artist Functions 8_callout:
+        edit_function: Klikšķi te, lai rediģētu savu funkciju.
+      Course 4 Artist Params 2_callout:
+        length_parameter: Vai vari pārveidot šo funkciju tā, lai tā izmantotu "garums" parametru?
+      Course 4 Artist Params 4_callout:
+        create_function: Spied šeit, lau atvērtu Funkciju paneli, tad nospied "Izveidot funkciju" pogu.
+      Course 4 Artist Vars 1_callout:
+        repeat_blocks: Izmanto bloku "atkārtot" un ietver tajā visus blokus uz darbagalda
+      Course 4 Artist Vars 10_callout:
+        set_sides: Izmanto šo bloku, lai iestatītu " malas"  uz vajadzīgo skaitli, lai pabeigt uzdevumu.
+      Course 4 Artist Vars 12_callout:
+        set_length: Izmanto šo bloku, lai iestatītu "garums" pareizajā vērtībā.
+      Course 4 Artist Vars 2_callout:
+        set_length: Izmanto šo bloku, lai iestatītu "garums" pareizajā vērtībā.
+      Course 4 Artist Vars 3_callout:
+        place_variable: Ievelc mainīgo šajā blokā
+      Course 4 Artist Vars 6_callout:
+        degrees_per_side: Izdali 360 ar malu skaitu, lai iegūtu katra leņķa lielumu grādos.
+      Course 4 Artist Vars 9_callout:
+        set_sides: Izmanto šo bloku, lai iestatītu " malas"  uz vajadzīgo skaitli, lai pabeigt uzdevumu.
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: Izmanto jauno "savākt nektāru" bloku.
+      Course 4 Bee For Loops 6_callout:
+        actions_category: Rīku josla ir ieguvusi jaunu dizainu! Tagad tajā ir "Darbības" bloki.
+      Course 4 Bee Params 2_callout:
+        edit_get_nectar: Izmanto šo pogu, lai rediģētu funkciju un mainītu virzienu, kurā bite griezīsies, lai savāktu nektāru.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: Nospied "Palaist", lai izmēģinātu programmu
+      Course 4 Maze 4_callout:
+        repeat: Velc blokus iekšā ciklā, lai atkārtotu komandas
+      Course 4 Play Lab Params 3_callout:
+        edit_function: Klikšķi te, lai rediģētu savu funkciju.
+      Course 4 Play Lab Params 6_callout:
+        edit_add_parameter: Klikšķini labot, lai pievienotu savai funkcijai parametru
+      Course 4 Play Lab Vars 1_callout:
+        arrows_move_actor: Izmato bultas, lai pārvietotu tēlu
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: Izmato bultas, lai pārvietotu tēlu
+      Eval Design Recipe .1_callout:
+        edit_function: Klikšķi te, lai rediģētu savu funkciju.
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: Izmanto šo izvēlni, lai veidotu dažādas sniegpārslas!
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: Izmanto šo izvēlni, lai veidotu dažādas sniegpārslas!
+      Infinity_move_collide_callout:
+        Infinity_move_collide_callout: Atskaņot skaņu, kad notiek šis notikums.
+      Infinity_move_directions_callout:
+        Infinity_move_directions_callout: Kurš bloks liks Maymax kustēties augšup, kad būs piespiesta bulta uz augšu?
+        Infinity_move_directions_callout_arrow: Izmanto šīs bultiņas, lai vadītu
+      Infinity_move_right_callout:
+        Infinity_move_right_runbutton: Pievieno pārvietošanas bloku šeit
+      Infinity_repeat_callout:
+        Infinity_repeat_callout: Novieto pārvietošanas blokus šeit iekšā
+      NEW Course 4 Artist Functions 5_callout:
+        edit_function: Klikšķi te, lai rediģētu savu funkciju.
+        function_editor_draw_square: Šādi definē funkciju. Šis bloks tiek palaists katru reizi, kad izmanto bloku "zīmēt kvadrātu"
+      NEW Course 4 Artist Functions 7_callout:
+        edit_function: Klikšķi te, lai rediģētu savu funkciju.
+      NEW Course 4 Artist Functions 8_callout:
+        edit_function: Klikšķi te, lai rediģētu savu funkciju.
+      NEW Course 4 Artist Params 10_callout:
+        create_function: Spied šeit, lau atvērtu Funkciju paneli, tad nospied "Izveidot funkciju" pogu.
+      NEW Course 4 Artist Params 9_callout:
+        edit_add_parameter: Klikšķini labot, lai pievienotu savai funkcijai parametru
+        add_and_drag_parameter: Ieraksti parametra vārdu te, klikšķini pievienot un tad velc to savā definētajā funkcijā.
+      NEW Course 4 Artist Vars 6_callout:
+        place_length_variable: Velc garuma mainīgo te, lai aizstātu jautājuma zīmes
+      NEW Course 4 Bee For Loops 5_callout:
+        actions_category: Rīku josla ir ieguvusi jaunu dizainu! Tagad tajā ir "Darbības" bloki.
+      New Frozen Project_callout:
+        snowflake_dropdown: Izmanto šo izvēlni, lai veidotu dažādas sniegpārslas!
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: Nospied "Palaist", lai izmēģinātu programmu
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: Nospied "Palaist", lai izmēģinātu programmu
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Nospied "Palaist", lai izmēģinātu programmu
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: Izmanto bloku "zīmē apli" un maini izmēru.
+      frozen cross rotate_callout:
+        replace_questions_degree: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      frozen cross_callout:
+        repeat_blocks_1: "(1) Izmanto šo bloku un apliec to ap pelēkajiem blokiem darba vietā"
+        repeat_blocks_2: (2) Pārvieto bloku "atkārtot" bloku uz šejieni un ievieto iekšā pelēkos blokus
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: Izmato atkārtošanās bloku, lai izveidotu šo figūru.
+      frozen diamond_callout:
+        frozen_diamond_repeat: Izmato atkārtošanās bloku, lai izveidotu šo figūru.
+      frozen freeplay_callout:
+        snowflake_dropdown: Izmanto šo izvēlni, lai veidotu dažādas sniegpārslas!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Izmanto šo izvēlni, lai veidotu dažādas sniegpārslas!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Izmanto šo izvēlni, lai veidotu dažādas sniegpārslas!
+      frozen line_callout:
+        move_elsa_forward: Velc "Iet uz priekšu" bloku un pieliec zem "Kad palaists" bloka, lai Elza ietu uz priekšu
+      frozen line_b_callout:
+        move_elsa_forward: Velc "Iet uz priekšu" bloku un pieliec zem "Kad palaists" bloka, lai Elza ietu uz priekšu
+      frozen line_test_callout:
+        move_elsa_forward: Velc "Iet uz priekšu" bloku un pieliec zem "Kad palaists" bloka, lai Elza ietu uz priekšu
+      frozen perpendicular_callout:
+        turn_elsa: Izmanto "Pagriezties" bloku, lai Elza pagrieztos. Skaitlis izkrītošajā izvēlnē nosaka, par cik Elza pagriezīsies
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: Izmanto bloku "zīmēt sniegpārsliņas zaru"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Izmanto bloku "zīmēt sniegpārsliņas zaru"
+      frozen square iterative_callout:
+        frozen_create_square: Savieno vairākus blokus, lai uzzīmētu kvadrātu
+      frozen square iterative_b_callout:
+        frozen_create_square: Savieno vairākus blokus, lai uzzīmētu kvadrātu
+      frozen square iterative_test_callout:
+        frozen_create_square: Savieno vairākus blokus, lai uzzīmētu kvadrātu
+      frozen square loop 3x_callout:
+        replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      frozen square loop 3x_b_callout:
+        replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      frozen square loop 3x_test_callout:
+        replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      frozen square loop_callout:
+        replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      frozen square loop_b_callout:
+        replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      frozen square loop_test_callout:
+        replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      frozen square snowflake_callout:
+        replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      frozen square snowflake_b_callout:
+        replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      frozen square snowflake_test_callout:
+        replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      grade4_artist_parameters_squares1_callout:
+        edit_add_parameter: Klikšķini labot, lai pievienotu savai funkcijai parametru
+        add_and_drag_parameter: Ieraksti parametra vārdu te, klikšķini pievienot un tad velc to savā definētajā funkcijā.
+      grade4_frozen_freeplay_callout:
+        snowflake_dropdown: Izmanto šo izvēlni, lai veidotu dažādas sniegpārslas!
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: Izmanto bloku "zīmē apli" un maini izmēru.
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: Izmato atkārtošanās bloku, lai izveidotu šo figūru.
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: Izmato atkārtošanās bloku, lai izveidotu šo figūru.
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: Izmato atkārtošanās bloku, lai izveidotu šo figūru.
+      grade4_frozen_square_callout:
+        replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      grade4_frozen_square_loop1_callout:
+        replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      grade4_frozen_square_loop2_callout:
+        replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      grade4_frozen_square_loop3_callout:
+        replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      grade5_artist_parameters_squares1_callout:
+        edit_add_parameter: Klikšķini labot, lai pievienotu savai funkcijai parametru
+        add_and_drag_parameter: Ieraksti parametra vārdu te, klikšķini pievienot un tad velc to savā definētajā funkcijā.
+      grade5_artist_parameters_triangles1aa_callout:
+        edit_add_parameter: Klikšķini labot, lai pievienotu savai funkcijai parametru
+        add_and_drag_parameter: Ieraksti parametra vārdu te, klikšķini pievienot un tad velc to savā definētajā funkcijā.
+      grade5_artist_variables_pentagons1_callout:
+        place_length_variable: Velc garuma mainīgo te, lai aizstātu jautājuma zīmes
+      grade5_artist_variables_pentagons12_callout:
+        set_length: Izmanto šo bloku, lai iestatītu "garums" pareizajā vērtībā.
+      grade5_artist_variables_square7_callout:
+        degrees_per_side: Izdali 360 ar malu skaitu, lai iegūtu katra leņķa lielumu grādos.
+      grade5_artist_variables_triangles2_callout:
+        set_length: Izmanto šo bloku, lai iestatītu "garums" pareizajā vērtībā.
+      grade5_playlab_variables1_callout:
+        arrows_move_actor: Izmato bultas, lai pārvietotu tēlu
+      grade5_playlab_variables11_callout:
+        edit_add_parameter: Klikšķini labot, lai pievienotu savai funkcijai parametru
+      grade5_playlab_variables1ask_callout:
+        arrows_move_actor: Izmato bultas, lai pārvietotu tēlu

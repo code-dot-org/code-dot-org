@@ -1,0 +1,231 @@
+ca:
+  data:
+    callouts:
+      Course 4 Artist 4_callout:
+        repeat_full_circle: Introdueix el nombre de vegades que el zombie ha de moure's fer un cercle complet
+      Course 4 Artist 7_callout:
+        repeat_blocks: Utilitza el bloc "Repeteix" i fica-hi a dins els blocs en l'àrea de treball
+      Course 4 Artist For Loops 4_callout:
+        place_counter_variable: Arrossegueu la variable comptador dins d'aquest bloc
+      Course 4 Artist Functions 4_callout:
+        create_function: Fes clic aquí per obrir el desplegable "Funcions", després fes clic al botó "Crea una funció".
+      Course 4 Artist Functions 5 OLD_callout:
+        house_hint: Està bé si la imatge encara no es veu com una casa. Ho arreglarem en el següent puzzle.
+      Course 4 Artist Functions 8_callout:
+        edit_function: Fes clic aquí per editar la teva funció.
+      Course 4 Artist Params 2_callout:
+        length_parameter: Pots actualitzar aquesta funció utilitzant el paràmetre "longitud"?
+      Course 4 Artist Params 4_callout:
+        create_function: Fes clic aquí per obrir el desplegable "Funcions", després fes clic al botó "Crea una funció".
+      Course 4 Artist Vars 1_callout:
+        repeat_blocks: Utilitza el bloc "Repeteix" i fica-hi a dins els blocs en l'àrea de treball
+      Course 4 Artist Vars 10_callout:
+        set_sides: Utilitza aquest bloc per establir "costats" com el valor necessari per completar el trencaclosques.
+      Course 4 Artist Vars 12_callout:
+        set_length: Utilitza aquest bloc per establir el valor correcte de "longitud".
+      Course 4 Artist Vars 2_callout:
+        set_length: Utilitza aquest bloc per establir el valor correcte de "longitud".
+      Course 4 Artist Vars 3_callout:
+        place_variable: Arrossega la teva variable dins d'aquest bloc
+      Course 4 Artist Vars 6_callout:
+        degrees_per_side: Divideix 360 pel número de costats per obtenir la mida de cada angle en graus.
+      Course 4 Artist Vars 9_callout:
+        set_sides: Utilitza aquest bloc per establir "costats" com el valor necessari per completar el trencaclosques.
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: Utilitza el nou bloc "obtenir nèctar".
+      Course 4 Bee For Loops 6_callout:
+        actions_category: La caixa d'eines té un nou look! Els blocs de "Accions" són aquí ara.
+      Course 4 Bee Params 2_callout:
+        edit_get_nectar: Fes servir aquest botó per editar la funció i canviar la direcció en que l'abella ha de girar per obtenir el nèctar.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: Fes clic a "Executa" per provar el teu programa
+      Course 4 Maze 4_callout:
+        repeat: Posa els blocs dins del bucle per repetir les ordres
+      Course 4 Play Lab Params 3_callout:
+        edit_function: Fes clic aquí per editar la teva funció.
+      Course 4 Play Lab Params 6_callout:
+        edit_add_parameter: Fes clic a Edita per afegir un paràmetre a la funció
+      Course 4 Play Lab Vars 1_callout:
+        arrows_move_actor: Utilitza les fletxes per moure l'actor
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: Utilitza les fletxes per moure l'actor
+      Dance_Party_01_callout:
+        dance_callout_01: Afegir aquest bloc al teu programa!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Afegir aquest bloc al teu programa!
+      Dance_Party_02_callout:
+        dance_callout_02: Afegir aquest bloc al teu programa!
+      Dance_Party_04_callout:
+        dance_callout_04: Afegir aquest bloc al teu programa!
+      Dance_Party_06_callout:
+        dance_callout_06: Afegir el teu nou dansaire aquí
+      Dance_Party_11_callout:
+        dance_callout_11_a: Nou bloc!
+        dance_callout_11_b: Nou bloc!
+      Eval Design Recipe .1_callout:
+        edit_function: Fes clic aquí per editar la teva funció.
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: Utilitza aquesta llista desplegable per crear diferents flocs de neu!
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: Utilitza aquesta llista desplegable per crear diferents flocs de neu!
+      Infinity_move_collide_callout:
+        Infinity_move_collide_callout: Reprodueix un so quan tingui lloc aquest fet.
+      Infinity_move_directions_callout:
+        Infinity_move_directions_callout: Quin bloc farà que Baymax pugi quan es premi la fletxa amunt?
+        Infinity_move_directions_callout_arrow: Usa les fletxes per dirigir
+      Infinity_move_right_callout:
+        Infinity_move_right_runbutton: Afegeix un bloc de moviment aquí
+      Infinity_repeat_callout:
+        Infinity_repeat_callout: Col·loca els blocs de moviment aquí dins
+      NEW Course 4 Artist Functions 5_callout:
+        edit_function: Fes clic aquí per editar la teva funció.
+        function_editor_draw_square: Aquesta és la definició de funció. Aquests blocs s'executen cada vegada que utilitzeu el bloc "dibuixa un quadrat"
+      NEW Course 4 Artist Functions 7_callout:
+        edit_function: Fes clic aquí per editar la teva funció.
+      NEW Course 4 Artist Functions 8_callout:
+        edit_function: Fes clic aquí per editar la teva funció.
+      NEW Course 4 Artist Params 10_callout:
+        create_function: Fes clic aquí per obrir el desplegable "Funcions", després fes clic al botó "Crea una funció".
+      NEW Course 4 Artist Params 9_callout:
+        edit_add_parameter: Fes clic a Edita per afegir un paràmetre a la funció
+        add_and_drag_parameter: Escriu el nom del teu paràmetre aquí, fes clic a Afegeix i llavors arrossega-ho a la teva definició de funció
+      NEW Course 4 Artist Vars 6_callout:
+        place_length_variable: Arrossega la variable de longitud aquí per substituir els interrogants
+      NEW Course 4 Bee For Loops 5_callout:
+        actions_category: La caixa d'eines té un nou look! Els blocs de "Accions" són aquí ara.
+      New Frozen Project_callout:
+        snowflake_dropdown: Utilitza aquesta llista desplegable per crear diferents flocs de neu!
+      Overworld Chop Trees_callout:
+        craft_callout_preplaced: Hem posat alguns blocs aquí per a que puguis començar
+      Overworld Chop Trees_2018_callout:
+        craft_callout_preplaced: Hem posat alguns blocs aquí per a que puguis començar
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Hem posat alguns blocs aquí per a que puguis començar
+      Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: Aquest codi començarà a construir la teva casa. Pots acabar-lo?
+      Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Aquest codi començarà a construir la teva casa. Pots acabar-lo?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Aquest codi començarà a construir la teva casa. Pots acabar-lo?
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: Fes clic a "Executa" per provar el teu programa
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: Fes clic a "Executa" per provar el teu programa
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Fes clic a "Executa" per provar el teu programa
+      Overworld Place Wall_callout:
+        craft_inside_repeat: Repeteix accions posant blocs d'aquí
+      Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Repeteix accions posant blocs d'aquí
+      Overworld Place Wall_2019_callout:
+        craft_inside_repeat: Repeteix accions posant blocs d'aquí
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: Aquest codi buscarà lava, pots afegir una ordre per a seguir endavant?
+      Underground Avoiding Lava_2018_callout:
+        craft_callout_moveforward: Aquest codi buscarà lava, pots afegir una ordre per a seguir endavant?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Aquest codi buscarà lava, pots afegir una ordre per a seguir endavant?
+      Underground Iron_callout:
+        craft_what_is_iron: Aquest ferro és meu!
+      Underground Iron_2018_callout:
+        craft_what_is_iron: Aquest ferro és meu!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: Aquest ferro és meu!
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: Utilitza el bloc "crear un cercle" i canvia la mida.
+      frozen cross rotate_callout:
+        replace_questions_degree: Utilitza la llista desplegable per substituir "???" per un valor
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Utilitza la llista desplegable per substituir "???" per un valor
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Utilitza la llista desplegable per substituir "???" per un valor
+      frozen cross_callout:
+        repeat_blocks_1: "(1) Utilitza aquest bloc i posa-ho al voltant dels blocs grisos en l'àrea de treball"
+        repeat_blocks_2: (2) Mou el bloc "Repetir" aquí i posa els blocs grisos dins
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: Utilitza el bloc de repetició per crear aquesta forma.
+      frozen diamond_callout:
+        frozen_diamond_repeat: Utilitza el bloc de repetició per crear aquesta forma.
+      frozen freeplay_callout:
+        snowflake_dropdown: Utilitza aquesta llista desplegable per crear diferents flocs de neu!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Utilitza aquesta llista desplegable per crear diferents flocs de neu!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Utilitza aquesta llista desplegable per crear diferents flocs de neu!
+      frozen line_callout:
+        move_elsa_forward: Arrossega un bloc "Avança" i col·loca'l sota el bloc "Quan s'executi" per fer avançar l'Elsa
+      frozen line_b_callout:
+        move_elsa_forward: Arrossega un bloc "Avança" i col·loca'l sota el bloc "Quan s'executi" per fer avançar l'Elsa
+      frozen line_test_callout:
+        move_elsa_forward: Arrossega un bloc "Avança" i col·loca'l sota el bloc "Quan s'executi" per fer avançar l'Elsa
+      frozen perpendicular_callout:
+        turn_elsa: Utilitza el bloc "Gira" per fer girar l'Elsa. El valor que triem en el desplegable determina quants graus girarà l'Elsa
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: Utilitza el bloc "crear una branca de floquet de neu"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Utilitza el bloc "crear una branca de floquet de neu"
+      frozen square iterative_callout:
+        frozen_create_square: Uniu més blocs aquí per crear un quadrat
+      frozen square iterative_b_callout:
+        frozen_create_square: Uniu més blocs aquí per crear un quadrat
+      frozen square iterative_test_callout:
+        frozen_create_square: Uniu més blocs aquí per crear un quadrat
+      frozen square loop 3x_callout:
+        replace_questions: Utilitza la llista desplegable per substituir "???" per un valor
+      frozen square loop 3x_b_callout:
+        replace_questions: Utilitza la llista desplegable per substituir "???" per un valor
+      frozen square loop 3x_test_callout:
+        replace_questions: Utilitza la llista desplegable per substituir "???" per un valor
+      frozen square loop_callout:
+        replace_questions: Utilitza la llista desplegable per substituir "???" per un valor
+      frozen square loop_b_callout:
+        replace_questions: Utilitza la llista desplegable per substituir "???" per un valor
+      frozen square loop_test_callout:
+        replace_questions: Utilitza la llista desplegable per substituir "???" per un valor
+      frozen square snowflake_callout:
+        replace_questions: Utilitza la llista desplegable per substituir "???" per un valor
+      frozen square snowflake_b_callout:
+        replace_questions: Utilitza la llista desplegable per substituir "???" per un valor
+      frozen square snowflake_test_callout:
+        replace_questions: Utilitza la llista desplegable per substituir "???" per un valor
+      grade4_artist_parameters_squares1_callout:
+        edit_add_parameter: Fes clic a Edita per afegir un paràmetre a la funció
+        add_and_drag_parameter: Escriu el nom del teu paràmetre aquí, fes clic a Afegeix i llavors arrossega-ho a la teva definició de funció
+      grade4_frozen_freeplay_callout:
+        snowflake_dropdown: Utilitza aquesta llista desplegable per crear diferents flocs de neu!
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: Utilitza el bloc "crear un cercle" i canvia la mida.
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: Utilitza el bloc de repetició per crear aquesta forma.
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: Utilitza el bloc de repetició per crear aquesta forma.
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: Utilitza el bloc de repetició per crear aquesta forma.
+      grade4_frozen_square_callout:
+        replace_questions: Utilitza la llista desplegable per substituir "???" per un valor
+      grade4_frozen_square_loop1_callout:
+        replace_questions: Utilitza la llista desplegable per substituir "???" per un valor
+      grade4_frozen_square_loop2_callout:
+        replace_questions: Utilitza la llista desplegable per substituir "???" per un valor
+      grade4_frozen_square_loop3_callout:
+        replace_questions: Utilitza la llista desplegable per substituir "???" per un valor
+      grade5_artist_parameters_squares1_callout:
+        edit_add_parameter: Fes clic a Edita per afegir un paràmetre a la funció
+        add_and_drag_parameter: Escriu el nom del teu paràmetre aquí, fes clic a Afegeix i llavors arrossega-ho a la teva definició de funció
+      grade5_artist_parameters_triangles1aa_callout:
+        edit_add_parameter: Fes clic a Edita per afegir un paràmetre a la funció
+        add_and_drag_parameter: Escriu el nom del teu paràmetre aquí, fes clic a Afegeix i llavors arrossega-ho a la teva definició de funció
+      grade5_artist_variables_pentagons1_callout:
+        place_length_variable: Arrossega la variable de longitud aquí per substituir els interrogants
+      grade5_artist_variables_pentagons12_callout:
+        set_length: Utilitza aquest bloc per establir el valor correcte de "longitud".
+      grade5_artist_variables_square7_callout:
+        degrees_per_side: Divideix 360 pel número de costats per obtenir la mida de cada angle en graus.
+      grade5_artist_variables_triangles2_callout:
+        set_length: Utilitza aquest bloc per establir el valor correcte de "longitud".
+      grade5_playlab_variables1_callout:
+        arrows_move_actor: Utilitza les fletxes per moure l'actor
+      grade5_playlab_variables11_callout:
+        edit_add_parameter: Fes clic a Edita per afegir un paràmetre a la funció
+      grade5_playlab_variables1ask_callout:
+        arrows_move_actor: Utilitza les fletxes per moure l'actor

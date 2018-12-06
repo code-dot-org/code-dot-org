@@ -1,0 +1,25 @@
+---
+ta:
+  data:
+    function_names:
+      x: x
+      draw a circle: ஒரு வட்டத்தை வரையவும்
+      draw a hexagon: அறுங்கோணம் வரைக
+      draw a flower: மலர் வரைக
+      draw a square: ஒரு சதுரத்தை வரையவும்
+      draw a snowflake: பனிமலர் வரைக
+      draw a tree: ஒரு மரத்தை வரையவும்
+      draw a triangle: ஒரு முக்கோணத்தை வரையவும்
+      draw a house: ஒரு வீட்டை வரையவும்
+      draw a star: நட்சத்திரம் வரைக
+      do something: ஏதேனும் இயக்கு
+      get nectar: மலர்த்தேனை எடு
+      test: சோதனை
+      move right: வலது பக்கம் நகரு
+      move up: மேலே நகரு
+      move down: கீழே நகர்த்த
+      move left: இடது பக்கம் நகரு
+      collect: சேகரி
+      turn left: இடதுபுறம் திரும்பவும்
+      move forward: முன்னோக்கி நகர்த்த
+      turn right: வலதுபுறம் திரும்பவும்

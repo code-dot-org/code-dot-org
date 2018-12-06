@@ -1,0 +1,107 @@
+---
+nl:
+  data:
+    failure_message_overrides:
+      Code Studio Puzzle Challenge 1 - Artist_failure_message_override: |-
+        Mooie poging!
+        Probeer opnieuw om het juist te hebben.
+      Code Studio Puzzle Challenge 10 - Bee_failure_message_override: |-
+        Mooie poging!
+        Probeer opnieuw om het juist te hebben.
+      Code Studio Puzzle Challenge 10b - Bee_failure_message_override: |-
+        Mooie poging!
+        Probeer opnieuw om het juist te hebben.
+      Code Studio Puzzle Challenge 11 - Artist_failure_message_override: |-
+        Mooie poging!
+        Probeer opnieuw om het juist te hebben.
+      Code Studio Puzzle Challenge 12 - Artist_failure_message_override: |-
+        Mooie poging!
+        Probeer opnieuw om het juist te hebben.
+      Code Studio Puzzle Challenge 13 - Artist_failure_message_override: |-
+        Mooie poging!
+        Probeer opnieuw om het juist te hebben.
+      Code Studio Puzzle Challenge 14 - Artist_failure_message_override: |-
+        Mooie poging!
+        Probeer opnieuw om het juist te hebben.
+      Code Studio Puzzle Challenge 2 - Artist_failure_message_override: |-
+        Mooie poging!
+        Probeer opnieuw om het juist te hebben.
+      Code Studio Puzzle Challenge 3 - Artist_failure_message_override: |-
+        Mooie poging!
+        Probeer opnieuw om het juist te hebben.
+      Code Studio Puzzle Challenge 4 - Artist_failure_message_override: |-
+        Mooie poging!
+        Probeer opnieuw om het juist te hebben.
+      Code Studio Puzzle Challenge 5 - Bee_failure_message_override: |-
+        Mooie poging!
+        Probeer opnieuw om het juist te hebben.
+      Code Studio Puzzle Challenge 6 - Bee_failure_message_override: |-
+        Mooie poging!
+        Probeer opnieuw om het juist te hebben.
+      Code Studio Puzzle Challenge 7 - Bee_failure_message_override: |-
+        Mooie poging!
+        Probeer opnieuw om het juist te hebben.
+      Code Studio Puzzle Challenge 8 - Bee_failure_message_override: |-
+        Mooie poging!
+        Probeer opnieuw om het juist te hebben.
+      Code Studio Puzzle Challenge 9 - Bee_failure_message_override: |-
+        Mooie poging!
+        Probeer opnieuw om het juist te hebben.
+      Code Studio Puzzle Challenge Var - Artist_failure_message_override: |-
+        Mooie poging!
+        Probeer opnieuw om het juist te hebben.
+      Course 4 Artist Vars 10_failure_message_override: Wees zeker dat u de afgeleide
+        variabelen gebruikt!
+      Course 4 Playlab For Loops 4b_failure_message_override: Vergeet niet dat beide
+        personages hun vlaggen moeten bereiken in hetzelfde aantal stappen!
+      Course 4 Playlab For Loops 5b_failure_message_override: Vergeet niet dat beide
+        personages op dezelfde plaats moeten stoppen.
+      Eval Strings Images .2_failure_message_override: Wees er zeker van dat je de
+        tekst "Universe" aan het einde toevoegt om de code "Hello, Universe" te laten
+        maken
+      Kiki_StarWars_Test_5_failure_message_override: Afgelopen uit!
+      Kiki_StarWars_Test_5_Example_failure_message_override: Afgelopen uit!
+      MC HOC 2016 Level 2-2_failure_message_override: Gebruik 'vooruit' en 'draai'
+        opdrachten om je kip verplaatsen.
+      MC HOC 2016 Level 3_failure_message_override: Gebruik een 'voor altijd' blok
+        en 'vooruit' en 'draai' opdrachten om je kip te laten rondlopen.
+      MC HOC 2016 Level 4_failure_message_override: Als de kippen allemaal dezelfde
+        kant op gaan, gebruikt je 'zet willekeurig' om de kippen willekeurig links
+        of rechts te laten draaien.
+      MC HOC 2016 Level 5_failure_message_override: Probeer 'Voor altijd doen' en
+        'Zet een stap richting de speler'.
+      MC HOC 2016 Level 6_failure_message_override: Gebruik het 'maak zombie' commando
+        onder 'bij nacht' om ten minste drie zombies te maken. Dan voeg je 'zet een
+        stap richting speler' toe aan het 'wanneer gemaakt' evenement, met een lus
+        om ze je te laten achtervolgen. Als ze te snel gaan, voeg dan een 'wachten'
+        opdracht toe om ze langzamer te laten gaan.
+      MC HOC 2016 Level 8_failure_message_override: Maak gebruik van de exploderende
+        Creeper om de muur op te blazen zodat je je schaap kan bereiken.
+      MC HOC 2016 New Drop_failure_message_override: Gebruik de pijltjestoetsen om
+        naar het schaap te wandelen en druk op de spatiebalk of klik op het spelbord
+        om de schapen te besturen. Vergeet ook niet om het 'laten vallen' blok toe
+        te voegen aan je code.
+      MC HOC 2016 New Spawn_failure_message_override: Voeg 'maak schaap' toe onder
+        'als gestart'.
+      MC HOC 2016 New Walk_failure_message_override: Om de deur te openen, druk op
+        de spatiebalk of raak het gamebord aan terwijl je personage ernaar kijkt.
+        Wandel naar binnen om door te gaan.
+      MC HOC 2016 SCORE LEVEL_failure_message_override: Als je moeite hebt om 5 Golems
+        te tikken, probeer dan de code te veranderen naar 2 punten per tik.
+      MC HOC 2016 Village Test_failure_message_override: Je moet de Ijzeren Golem
+        op de zombies laten jagen en aanvallen om te winnen.
+      WhileAdventure_failure_message_override: Gefeliciteerd!  Je hebt X munten verzameld!
+      courseC19_playLab_EOC3_failure_message_override: Je moet twee of meer nieuwe
+        actoren aan het spel toevoegen en ze programmeren om te bewegen.
+      courseE_playLab_scaffold3_failure_message_override: Je moet twee of meer nieuwe
+        actoren aan het spel toevoegen en ze programmeren om te bewegen.
+      courseE_playLab_scaffold3_2018_failure_message_override: Je moet twee of meer
+        nieuwe actoren aan het spel toevoegen en ze programmeren om te bewegen.
+      grade4_scaffolded_project3_failure_message_override: Je moet 2 of meer nieuwe
+        personages toevoegen die je spel vooruit brengen.
+      kikiTesta_failure_message_override: Gefeliciteerd!  Je hebt X munten verzameld!
+      sample1_failure_message_override: Gefeliciteerd!  Je hebt X munten verzameld!
+      sample4_failure_message_override: Gefeliciteerd!  Je hebt X munten verzameld!
+      sample6_failure_message_override: Niet helemaal.  Blijf proberen!  [Verplaatsen
+        naar Play Zone]
+      sample8_failure_message_override: Gefeliciteerd!  Je hebt X munten verzameld!

@@ -1,0 +1,13 @@
+it:
+  data:
+    course:
+      name:
+        csp-2017:
+          description_short: Impara i concetti fondamentali dell'informatica.
+        allthethingscourse:
+          title: allthethingscourse
+          description_short: Si tratta di un corso globale
+          description_student: Questo è un corso per globale e ha una corposa descrizione per gli studenti
+          description_teacher: Questo è un corso per globale e ha una corposa descrizione per gli insegnanti
+        csp-2018:
+          description_short: Impara i concetti fondamentali dell'informatica.

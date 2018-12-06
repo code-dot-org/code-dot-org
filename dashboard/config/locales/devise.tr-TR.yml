@@ -1,0 +1,95 @@
+---
+tr:
+  devise:
+    confirmations:
+      confirmed: E-posta adresin başarıyla onaylandı.
+      send_instructions: Birkaç dakika içinde hesabınızı nasıl onaylayacağınızı anlatan
+        bir e-posta alacaksınız.
+      send_paranoid_instructions: Eğer e-posta adresiniz veritabanımızda kayıtlı ise,
+        birkaç dakika içinde hesabınızı nasıl onaylayacağınızı anlatan bir e-posta
+        alacaksınız.
+    failure:
+      already_authenticated: Zaten oturum açtınız.
+      inactive: Hesap henüz aktif değil.
+      invalid: Geçersiz e-posta veya şifre.
+      invalid_token: Geçersiz kimlik doğrulama işareti.
+      locked: Hesabınız kilitlendi.
+      not_found_in_database: Geçersiz e-posta veya şifre.
+      timeout: Oturumunun süresi doldu, lütfen devam etmek için tekrar oturum aç.
+      unauthenticated: Devam etmeden önce kayıt olun veya giriş yapın.
+      unconfirmed: Devam etmeden önce hesabınızı onaylamanız gerekir.
+    mailer:
+      confirmation_instructions:
+        subject: Code.org onay yönergeleri
+      reset_password_instructions:
+        subject: Code.org parola sıfırlama yönergeleri
+      unlock_instructions:
+        subject: Talimatların kilidini aç
+    omniauth_callbacks:
+      failure: "%{kind} kimliği %{reason} nedeniyle doğrulanamadı."
+      success: "%{kind} hesabından başarıyla kimlik doğrulandı."
+    passwords:
+      no_token: Şifre sıfırlama e-postası dışında  bu sayfaya erişemezsin. Eğer şifre
+        sıfırlama e-postasından geldiysen, lütfen verilen URL'nin tamamını kullandığına
+        emin ol.
+      send_instructions: Birkaç dakika içinde parolanızı nasıl sıfırlayacağınız hakkında
+        talimatlar içeren bir eposta alacaksınız.
+      send_paranoid_instructions: Eğer e-posta adresiniz veritabanımızda kayıtlı ise,
+        birkaç dakika içinde parola kurtarma bağlantısı içeren bir e-posta alacaksınız.
+      updated: Şifreniz başarıyla değiştirildi. Şu anda oturum açtın.
+      updated_not_active: Şifreniz başarıyla değiştirildi.
+    registrations:
+      destroyed: Hoşçakal! Hesabın başarıyla iptal edildi. Seni tekrar aramızda görmeyi
+        umuyoruz.
+      signed_up: Hoşgeldiniz! Kaydınız başarı ile oluşturuldu.
+      signed_up_but_inactive: Kaydınız başarı ile oluşturuldu. Ancak hesabınız henüz
+        onaylanmadığı için giriş yapamıyorsunuz.
+      signed_up_but_locked: Kaydınız başarı ile yapıldı. Ancak hesabınız kilitli olduğu
+        için giriş yapamıyorsunuz.
+      signed_up_but_unconfirmed: E-posta adresine onay bağlantısını içeren bir mesaj
+        gönderildi. Lütfen bağlantıyı açarak hesabınızı aktifleştirin.
+      update_needs_confirmation: Hesabın başarı ile güncelleştirildi, ancak yeni eposta
+        adresini doğrulamamız gerekiyor. Lütfen eposta adresini kontrol ederek onay
+        bağlantısına tıkla ve eposta hesabını onaylama işlemini bitir.
+      updated: Hesabınızı başarı ile güncelleştirdiniz.
+    sessions:
+      signed_out: Başarıyla oturum kapatıldı.
+    unlocks:
+      send_instructions: Birkaç dakika içinde hesabınızın kilidini nasıl açacağınızı
+        anlatan bir e-posta alacaksınız.
+      send_paranoid_instructions: Eğer hesabınız varsa, birkaç dakika içinde hesabınızın
+        kilidini nasıl kaldırılacağını anlatan bir e-posta alacaksınız.
+      unlocked: Hesabınızın kilidi başarı ile kaldırıldı. Lütfen devam etmek için
+        giriş yapınız.
+  errors:
+    messages:
+      already_confirmed: zaten onaylandı, lütfen giriş yapmayı dene
+      confirmation_period_expired: "%{period} içinde onaylanması gerekliydi.Lütfen
+        yeni bir istekte bulunun"
+      expired: süresi doldu, lütfen yeni bir tane iste
+      not_found: bulunamadı
+      not_locked: kilitli değil
+      not_saved:
+        one: '1 hata %{resource} nesnesinin kaydedilmesini engelledi:'
+        other: "%{count} hata %{resource} kaynağının kaydedilmesini engelledi:"
+    invitations:
+      send_instructions: "%{email} adresine davetiye epostası gönderildi."
+      invitation_token_invalid: Sağlanan davet işareti geçerli değil!
+      updated: Şifreniz başarıyla değiştirildi. Şimdi giriş yaptınız.
+      no_invitations_remaining: Davet kalmadı
+      invitation_removed: Davetin kaldırıldı.
+      new:
+        header: Davetiye gönder
+        submit_button: Bir davetiye gönder
+      edit:
+        header: Şifreni belirle
+        submit_button: Şifremi belirle
+    mailer:
+      invitation_instructions:
+        subject: Davetiye yönergeleri
+        hello: Merhaba  %{email}
+        someone_invited_you: Birisi seni %{url}, adresine davet etti, aşağıdaki bağlantıdan
+          kabul edebilirsin.
+        accept: Daveti  kabul et
+        ignore: Davetiyeyi kabul etmek istemiyorsan, lütfen bu e-postayı yok say.
+          <br /> Aşağıdaki bağlantıya tıklamadan ve şifre oluşturmadan hesabın oluşturulmayacak.

@@ -1,0 +1,28 @@
+sr:
+  data:
+    function_names:
+      x: x
+      draw a circle: нацртај круг
+      draw a hexagon: нацртајте шестоугао
+      draw a flower: нацртајте цвет
+      draw a square: нацртај квадрат
+      draw a snowflake: нацртајте пахуљицу
+      draw a tree: Нацртај дрво
+      draw a triangle: нацртај троугао
+      draw a house: нацртај кућу
+      draw a star: нацртајте звезду
+      do something: урадити нешто
+      jump: скок
+      set score: постави резултат
+      get nectar: узми нектар
+      test: тест
+      diamond: дијамант
+      move: помери
+      move right: помери десно
+      move up: помери се горе
+      move down: помери доле
+      move left: помери лево
+      collect: сакупи
+      turn left: окрени се лево
+      move forward: помери се напред
+      turn right: окрени се десно

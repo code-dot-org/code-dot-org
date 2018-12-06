@@ -1,0 +1,25 @@
+---
+hi:
+  data:
+    function_names:
+      draw a circle: एक चक्र बनाएं
+      draw a hexagon: एक हेक्सागोन खींचे
+      draw a flower: एक फूल खींचे
+      draw a square: एक वर्ग खींचें
+      draw a snowflake: एक हिमस्खलन खींचें
+      draw a tree: एक पेड़ खींचें
+      draw a triangle: एक त्रिकोण खींचें
+      draw a house: एक घर खींचे
+      draw a star: एक सितारा खींचे
+      do something: कुछ कीजिए
+      get nectar: मधुरस ​​पाने के लिए
+      test: परिक्षा
+      diamond: हीरा
+      move right: दाहिना चले
+      move up: ऊपर चले
+      move down: नीचे चले
+      move left: बायें चले
+      collect: एकत्र
+      turn left: बाएँ मुड़ें
+      move forward: आगे जाएं
+      turn right: दाएँ मुड़ें

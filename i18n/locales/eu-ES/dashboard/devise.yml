@@ -1,0 +1,75 @@
+eu:
+  devise:
+    confirmations:
+      confirmed: "Zure eposta helbidea zuzen ziurtatu da."
+      send_instructions: "Posta mezu bat jasoko duzu minutu gutxi barru zure kontua baieztatzeko argibideekin."
+      send_paranoid_instructions: "Zure eposta helbidea gure zerbitzarietan badago, mezu bat jasoko duzu zure kontua baieztatzeko argibideekin."
+    failure:
+      already_authenticated: "Dagoeneko barruan zaude."
+      inactive: "Zure kontua ez dago aktibatua oraindik."
+      invalid: "Okerreko helbide edo pasahitza."
+      invalid_token: "Balioztatze ikur baliogabea."
+      locked: "Zure kontua giltzatuta dago."
+      not_found_in_database: "Okerreko helbide edo pasahitza."
+      timeout: "Zure sesioa iraungitu da; mesedez, sartu berriro."
+      unauthenticated: "Izena eman edo sisteman sartu behar duzu jarraitu aurretik."
+      unconfirmed: "Zure kontua baieztatu behar duzu jarraitu aurretik."
+    mailer:
+      confirmation_instructions:
+        subject: "Code.org baieztapen jarraibideak"
+      reset_password_instructions:
+        subject: "Code.org pasahitza berrezartzeko jarraibideak"
+      unlock_instructions:
+        subject: "Desblokeatzeko argibideak"
+    omniauth_callbacks:
+      failure: "Ezin zaitugu  %{kind}etik autentifikatu %{reason}gatik."
+      success: "Ondo kautotu da %{kind} kontutik."
+    passwords:
+      no_token: "Ezin duzu web orri hau atzitu pasahitz berrezartze mezutik ez bazatoz. Pasahitz berrezartze mezutik bazatoz, ziurtatu emandako URL osoa erabili duzula."
+      send_instructions: "Zure pasahitza berrezartzeko argibideak jasoko dituzu minutu gutxi batzuen buruan."
+      send_paranoid_instructions: "Zure eposta helbidea gure datu basean badago, pasahitza berreskuratzeko esteka bat jasoko duzu zure epostan."
+      updated: "Zure pasahitza egoki aldatu da. Orain barruan zaude."
+      updated_not_active: "Zure pasahitza egoki aldatu da."
+    registrations:
+      destroyed: "Agur! Zure kontua egoki ezeztatu da. Espero dugu laister elkar ikustea."
+      signed_up: "Ongi etorri! Ondo eman duzu izena."
+      signed_up_but_inactive: "Zure izena ondo eman duzu. Hala ere, ezin zara sartu zure kontua ez dagoelako oraindik aktibatuta."
+      signed_up_but_locked: "Zure izena ondo eman duzu. Hala ere, ezin zara sartu zure kontua blokeatuta dagoelako."
+      signed_up_but_unconfirmed: "Baieztapen estekadun mezu bat bidali da zure epostara. Mesedez, ireki esteka zure kontua aktibatzeko."
+      update_needs_confirmation: "Zure kontua ondo eguneratu duzu, baina zure eposta helbidea baieztatu behar dugu. Mesedez, begiratu zure epostan eta klikatu baieztapen esteka zure helbide berria baieztatzen bukatzeko."
+      updated: "Zure kontua ondo eguneratu da."
+    sessions:
+      signed_out: "Kanpoan zaude."
+    unlocks:
+      send_instructions: "Posta mezu bat jasoko duzu minutu gutxi barru zure kontua desblokeatzeko argibideekin."
+      send_paranoid_instructions: "Zure kontua existitzen bada, posta mezu bat jasoko duzu minutu gutxi barru zure kontua desblokeatzeko argibideekin."
+      unlocked: "Zure kontua ondo desblokeatu da. Mesedez, sartu jarraitzeko."
+  errors:
+    messages:
+      already_confirmed: "dagoeneko baieztatuta zegoen, mesedez saiatu sartzen"
+      confirmation_period_expired: "%{period}ean baieztapena behar du, mesedez eskatu berri bat"
+      expired: "iraungi da; mesedez, eskatu berri bat"
+      not_found: "ez da aurkitu"
+      not_locked: "ez zegoen blokeatuta"
+      not_saved:
+        one: "Errore batek %{resource} hau gordetzea ekidin du:"
+        other: "%{count} errorek %{resource} hau gordetzea ekidin dute:\n:"
+    invitations:
+      send_instructions: 'Gonbidapen emaila bidali zaio %{email}-ri.'
+      invitation_token_invalid: 'Emandako gonbidapen ikurra ez da baliagarria!'
+      updated: 'Zure pasahitza ondo ezarri da. Orain barruan zaude.'
+      no_invitations_remaining: "Ez dago gonbidapenik"
+      invitation_removed: 'Zure gonbidapena ezabatua izan da.'
+      new:
+        header: "Bidali gonbidapena"
+        submit_button: "Bidali gonbidapen bat"
+      edit:
+        header: "Ezarri zure pasahitza"
+        submit_button: "Ezarri nire pasahitza"
+    mailer:
+      invitation_instructions:
+        subject: 'Gonbidapenaren jarraibideak'
+        hello: 'Kaixo %{email}'
+        someone_invited_you: 'Norbaitek zu gonbidatu zaitu %{url} gunera; beheko lotura erabiliz onar dezakezu gonbidapena.'
+        accept: 'Gonbidapena onartu'
+        ignore: "Ez baduzu gonbidapena onartu nahi, mesedez, utzi alde batera mezu hau.<br /> Zure kontua ez da sortuko zuk lotura atzitu eta pasahitza finkatzen duzun arte."

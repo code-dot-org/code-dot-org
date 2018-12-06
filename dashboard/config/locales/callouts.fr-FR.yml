@@ -1,0 +1,355 @@
+---
+fr:
+  data:
+    callouts:
+      CSD U6 colorLeds intensity_callout:
+        CSDU6L10_rainbow: Ajoute tes blocs ici
+      CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: Ajoute tes blocs ici
+      CSD U6 light show predict_callout:
+        CSDUDL03P09: Que fait cette ligne?
+      CSD U6 light show predict_2018_callout:
+        CSDUDL03P09: Que fait cette ligne?
+      CSD U6 light show_callout:
+        CSDUDL03P09: Que fait cette ligne?
+      CSD U6 light show_2018_callout:
+        CSDUDL03P09: Que fait cette ligne?
+      CSD U6 tugowar variables 1_callout:
+        CSD_U6_startGame: Définie startGame ici
+      CSD U6 tugowar variables 1_2018_callout:
+        CSD_U6_startGame: Définie startGame ici
+      CSD U6 tugowar variables 2_callout:
+        CSD_U6_movePlayer: Définie movePlayer() ici
+      CSD U6 tugowar variables 2_2018_callout:
+        CSD_U6_movePlayer: Définie movePlayer() ici
+      CSD U6 tugowar variables 3_callout:
+        CSD_U6_checkWin: Vérifie si un joueur a gagné
+      CSD U6 tugowar variables 3_2018_callout:
+        CSD_U6_checkWin: Vérifie si un joueur a gagné
+      Course 4 Artist 4_callout:
+        repeat_full_circle: Entre le nombre de fois que le zombie doit se déplacer
+          pour faire un cercle complet
+      Course 4 Artist 7_callout:
+        repeat_blocks: Utiliser le bloc «Répéter» et enroule-le autour des blocs dans
+          l'espace de travail.
+      Course 4 Artist For Loops 4_callout:
+        place_counter_variable: Fais glisser ta variable « Compteur » à l'intérieur
+          de ce bloc
+      Course 4 Artist Functions 4_callout:
+        create_function: Clique ici pour ouvrir la fenêtre « Fonctions » et clique
+          ensuite sur le bouton « Créer une fonction ».
+      Course 4 Artist Functions 5 OLD_callout:
+        house_hint: Ce n'est pas grave si l'image ne ressemble pas encore à une maison.
+          Nous arrangerons cela dans le prochain puzzle.
+      Course 4 Artist Functions 8_callout:
+        edit_function: Clique ici pour modifier ta fonction.
+      Course 4 Artist Params 2_callout:
+        length_parameter: Peux-tu mettre à jour cette fonction de façon à ce qu'elle
+          utilise le paramètre «Longueur» ?
+      Course 4 Artist Params 4_callout:
+        create_function: Clique ici pour ouvrir la fenêtre « Fonctions » et clique
+          ensuite sur le bouton « Créer une fonction ».
+      Course 4 Artist Vars 1_callout:
+        repeat_blocks: Utiliser le bloc «Répéter» et enroule-le autour des blocs dans
+          l'espace de travail.
+      Course 4 Artist Vars 10_callout:
+        set_sides: Utilise ce bloc pour définir le nombre de « Côtés » nécessaires
+          pour terminer ce puzzle.
+      Course 4 Artist Vars 12_callout:
+        set_length: Utilise ce bloc pour définir la valeur correcte de la « Longueur ».
+      Course 4 Artist Vars 2_callout:
+        set_length: Utilise ce bloc pour définir la valeur correcte de la « Longueur ».
+      Course 4 Artist Vars 3_callout:
+        place_variable: Fais glisser ta variable à l'intérieur de ce bloc
+      Course 4 Artist Vars 6_callout:
+        degrees_per_side: Divise 360 par le nombre de côtés pour obtenir la taille
+          de chaque angle en degrés.
+      Course 4 Artist Vars 9_callout:
+        set_sides: Utilise ce bloc pour définir le nombre de « Côtés » nécessaires
+          pour terminer ce puzzle.
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: Utilise le bloc « Recueillir du nectar ».
+      Course 4 Bee For Loops 6_callout:
+        actions_category: La boîte à outils a un nouvel aspect ! Les blocs «Actions
+          » sont maintenant ici.
+      Course 4 Bee Params 2_callout:
+        edit_get_nectar: Utilise ce bouton pour modifier la fonction et changer la
+          direction dans laquelle l'abeille va tourner pour butiner le nectar.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: Clique sur « Exécuter » pour tester ton programme.
+      Course 4 Maze 4_callout:
+        repeat: Place des blocs à l'intérieur de la boucle pour répéter les commandes
+      Course 4 Play Lab Params 3_callout:
+        edit_function: Clique ici pour modifier ta fonction.
+      Course 4 Play Lab Params 6_callout:
+        edit_add_parameter: Clique sur » Modifier » pour ajouter un paramètre à ta
+          fonction
+      Course 4 Play Lab Vars 1_callout:
+        arrows_move_actor: Utilise les flèches pour déplacer l'acteur
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: Utilise les flèches pour déplacer l'acteur
+      Dance_Party_01_callout:
+        dance_callout_01: Ajoutez ce bloc à votre programme!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Ajoutez ce bloc à votre programme!
+      Dance_Party_02_callout:
+        dance_callout_02: Ajoutez ce bloc à votre programme!
+      Dance_Party_04_callout:
+        dance_callout_04: Ajoutez ce bloc à votre programme!
+      Dance_Party_06_callout:
+        dance_callout_06: Ajoutez votre nouveau danseur ici
+      Dance_Party_11_callout:
+        dance_callout_11_a: Nouveau bloc !
+        dance_callout_11_b: Nouveau bloc !
+      Eval Design Recipe .1_callout:
+        edit_function: Clique ici pour modifier ta fonction.
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: Utilise ce menu déroulant pour créer différents flocons
+          de neige !
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: Utilise ce menu déroulant pour créer différents flocons
+          de neige !
+      Function intro Ryan_callout:
+        Function_intro_Ryan_1: Cette petite instruction indique à l'ordinateur d'exécuter
+          un GROS morceau de code avec le même nom dans l'espace de travail.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Cette petite instruction indique à l'ordinateur d'exécuter
+          un GROS morceau de code avec le même nom dans l'espace de travail.
+      Infinity_move_collide_callout:
+        Infinity_move_collide_callout: Joue un son lorsque cet événement se produit.
+      Infinity_move_directions_callout:
+        Infinity_move_directions_callout: Quel bloc soulèvera Baymax lorsque tu appuies
+          sur la flèche «vers le haut» ?
+        Infinity_move_directions_callout_arrow: Utilise ces flèches pour te diriger
+      Infinity_move_right_callout:
+        Infinity_move_right_runbutton: Ajouter le bloc « Déplacer » ici
+      Infinity_repeat_callout:
+        Infinity_repeat_callout: Place les bloc « Déplacer » ici à l'intérieur
+      MC_HOC_2017_01_Cole_callout:
+        MC_HOC_2017_01_Cole_2: Utilisez les touches de direction ou cliquez ici pour
+          déplacer le joueur.
+      MC_HOC_2017_02_Will_callout:
+        MC_HOC_2017_02_Cole_1: Votre joueur a un nouvel ami !  Vous pouvez écrire
+          du code pour que l'Agent vous aide à franchir les niveaux.
+      MC_HOC_2017_03_Cole_callout:
+        MC_HOC_2017_03_Cole_1: Ceci est une boucle « répéter » !  Cliquez dessus dans
+          l'espace de travail et ajoutez le code que vous voulez exécuter en boucle.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Ceci est une boucle « répéter » !  Cliquez dessus dans
+          l'espace de travail et ajoutez le code que vous voulez exécuter en boucle.
+      MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: L'Agent peut survoler l'eau, mais votre joueur ne le
+          peut pas !
+      MC_HOC_2017_04_Cole_2019_callout:
+        MC_HOC_2017_04_Cole_a: L'Agent peut survoler l'eau, mais votre joueur ne le
+          peut pas !
+      MC_HOC_2017_04_Kiki_callout:
+        MC_HOC_2017_04_Kiki_1: Cliquez dessus dans l'espace de travail et ajoutez
+          du code pour le répéter en boucle !
+      MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Vous ne pouvez pas jeter ces blocs, mais vous pouvez
+          les modifier !
+      MC_HOC_2017_06_Cole_2019_callout:
+        MC_HOC_2017_06_Cole_1: Vous ne pouvez pas jeter ces blocs, mais vous pouvez
+          les modifier !
+      MC_HOC_2017_08_RY_callout:
+        MC_HOC_2017_08_RY_1: 'L''Agent peut survoler la lave, mais votre joueur ne
+          le peut pas !  '
+      MC_HOC_2017_08_Will_callout:
+        MC_HOC_2017_08_RY_1: 'L''Agent peut survoler la lave, mais votre joueur ne
+          le peut pas !  '
+      MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'L''Agent peut survoler la lave, mais votre joueur ne
+          le peut pas !  '
+      MC_HOC_2017_Ali_2019_callout:
+        MC_HOC_2017_08_RY_1: 'L''Agent peut survoler la lave, mais votre joueur ne
+          le peut pas !  '
+      NEW Course 4 Artist Functions 5_callout:
+        edit_function: Clique ici pour modifier ta fonction.
+        function_editor_draw_square: C’est la définition de ta fonction Ces blocs
+          sont exécutés chaque fois que tu utilises le bloc « Dessiner un carré ».
+      NEW Course 4 Artist Functions 7_callout:
+        edit_function: Clique ici pour modifier ta fonction.
+      NEW Course 4 Artist Functions 8_callout:
+        edit_function: Clique ici pour modifier ta fonction.
+      NEW Course 4 Artist Params 10_callout:
+        create_function: Clique ici pour ouvrir la fenêtre « Fonctions » et clique
+          ensuite sur le bouton « Créer une fonction ».
+      NEW Course 4 Artist Params 9_callout:
+        edit_add_parameter: Clique sur » Modifier » pour ajouter un paramètre à ta
+          fonction
+        add_and_drag_parameter: Écris le nom de ton paramètre ici, clique sur «Ajouter»,
+          et glisse-le ensuite dans la définition de ta fonction.
+      NEW Course 4 Artist Vars 6_callout:
+        place_length_variable: Glisse la variable de longueur ici pour remplacer les
+          points d'interrogation
+      NEW Course 4 Bee For Loops 5_callout:
+        actions_category: La boîte à outils a un nouvel aspect ! Les blocs «Actions
+          » sont maintenant ici.
+      New Frozen Project_callout:
+        snowflake_dropdown: Utilise ce menu déroulant pour créer différents flocons
+          de neige !
+      Overworld Chop Trees_callout:
+        craft_callout_preplaced: Nous avons préparé des blocs pour vous aider à commencer.
+      Overworld Chop Trees_2018_callout:
+        craft_callout_preplaced: Nous avons préparé des blocs pour vous aider à commencer.
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Nous avons préparé des blocs pour vous aider à commencer.
+      Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: Ce code va commencer la construction de ta
+          maison. Peux-tu le finir?
+      Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Ce code va commencer la construction de ta
+          maison. Peux-tu le finir?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Ce code va commencer la construction de ta
+          maison. Peux-tu le finir?
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: Clique sur « Exécuter » pour tester ton programme.
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: Clique sur « Exécuter » pour tester ton programme.
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Clique sur « Exécuter » pour tester ton programme.
+      Overworld Place Wall_callout:
+        craft_inside_repeat: Répète des actions en plaçant des blocs ici à l'intérieur
+      Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Répète des actions en plaçant des blocs ici à l'intérieur
+      Overworld Place Wall_2019_callout:
+        craft_inside_repeat: Répète des actions en plaçant des blocs ici à l'intérieur
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: Ce code recherchera de la lave, peux-tu ajouter
+          une commande pour avancer ?
+      Underground Avoiding Lava_2018_callout:
+        craft_callout_moveforward: Ce code recherchera de la lave, peux-tu ajouter
+          une commande pour avancer ?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Ce code recherchera de la lave, peux-tu ajouter
+          une commande pour avancer ?
+      Underground Iron_callout:
+        craft_what_is_iron: Minez ce fer !
+      Underground Iron_2018_callout:
+        craft_what_is_iron: Minez ce fer !
+      Underground Iron_2019_callout:
+        craft_what_is_iron: Minez ce fer !
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: Utilise le bloc « Créer un cercle »
+          et change la taille.
+      frozen cross rotate_callout:
+        replace_questions_degree: Utilise le menu déroulant pour remplacer «???» par
+          un nombre.
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Utilise le menu déroulant pour remplacer «???» par
+          un nombre.
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Utilise le menu déroulant pour remplacer «???» par
+          un nombre.
+      frozen cross_callout:
+        repeat_blocks_1: "(1) Utilise ce bloc et place-le autour des blocs gris dans
+          l'espace de travail"
+        repeat_blocks_2: "(2) Fais glisser le bloc « Répéter » ici et place les blocs
+          gris à l'intérieur"
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: Utilise le bloc « Répéter » pour créer cette forme.
+      frozen diamond_callout:
+        frozen_diamond_repeat: Utilise le bloc « Répéter » pour créer cette forme.
+      frozen freeplay_callout:
+        snowflake_dropdown: Utilise ce menu déroulant pour créer différents flocons
+          de neige !
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Utilise ce menu déroulant pour créer différents flocons
+          de neige !
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Utilise ce menu déroulant pour créer différents flocons
+          de neige !
+      frozen line_callout:
+        move_elsa_forward: Fais glisser un bloc «Avancer» et emboite-le sous le bloc
+          « Lors du lancement » pour faire avancer Elsa.
+      frozen line_b_callout:
+        move_elsa_forward: Fais glisser un bloc «Avancer» et emboite-le sous le bloc
+          « Lors du lancement » pour faire avancer Elsa.
+      frozen line_test_callout:
+        move_elsa_forward: Fais glisser un bloc «Avancer» et emboite-le sous le bloc
+          « Lors du lancement » pour faire avancer Elsa.
+      frozen perpendicular_callout:
+        turn_elsa: Utilise le bloc « Tourner » pour faire tourner Elsa. Le nombre
+          dans le menu déroulant détermine de combien de degrés Elsa tournera.
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: Utilise le bloc « Créer un flocon de neige ».
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Utilise le bloc « Créer un flocon de neige ».
+      frozen square iterative_callout:
+        frozen_create_square: Attache plus de blocs ici pour créer un carré
+      frozen square iterative_b_callout:
+        frozen_create_square: Attache plus de blocs ici pour créer un carré
+      frozen square iterative_test_callout:
+        frozen_create_square: Attache plus de blocs ici pour créer un carré
+      frozen square loop 3x_callout:
+        replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      frozen square loop 3x_b_callout:
+        replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      frozen square loop 3x_test_callout:
+        replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      frozen square loop_callout:
+        replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      frozen square loop_b_callout:
+        replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      frozen square loop_test_callout:
+        replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      frozen square snowflake_callout:
+        replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      frozen square snowflake_b_callout:
+        replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      frozen square snowflake_test_callout:
+        replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      grade4_artist_parameters_squares1_callout:
+        edit_add_parameter: Clique sur » Modifier » pour ajouter un paramètre à ta
+          fonction
+        add_and_drag_parameter: Écris le nom de ton paramètre ici, clique sur «Ajouter»,
+          et glisse-le ensuite dans la définition de ta fonction.
+      grade4_frozen_freeplay_callout:
+        snowflake_dropdown: Utilise ce menu déroulant pour créer différents flocons
+          de neige !
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: Utilise le bloc « Créer un cercle »
+          et change la taille.
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: Utilise le bloc « Répéter » pour créer cette forme.
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: Utilise le bloc « Répéter » pour créer cette forme.
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: Utilise le bloc « Répéter » pour créer cette forme.
+      grade4_frozen_square_callout:
+        replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      grade4_frozen_square_loop1_callout:
+        replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      grade4_frozen_square_loop2_callout:
+        replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      grade4_frozen_square_loop3_callout:
+        replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      grade5_artist_parameters_squares1_callout:
+        edit_add_parameter: Clique sur » Modifier » pour ajouter un paramètre à ta
+          fonction
+        add_and_drag_parameter: Écris le nom de ton paramètre ici, clique sur «Ajouter»,
+          et glisse-le ensuite dans la définition de ta fonction.
+      grade5_artist_parameters_triangles1aa_callout:
+        edit_add_parameter: Clique sur » Modifier » pour ajouter un paramètre à ta
+          fonction
+        add_and_drag_parameter: Écris le nom de ton paramètre ici, clique sur «Ajouter»,
+          et glisse-le ensuite dans la définition de ta fonction.
+      grade5_artist_variables_pentagons1_callout:
+        place_length_variable: Glisse la variable de longueur ici pour remplacer les
+          points d'interrogation
+      grade5_artist_variables_pentagons12_callout:
+        set_length: Utilise ce bloc pour définir la valeur correcte de la « Longueur ».
+      grade5_artist_variables_square7_callout:
+        degrees_per_side: Divise 360 par le nombre de côtés pour obtenir la taille
+          de chaque angle en degrés.
+      grade5_artist_variables_triangles2_callout:
+        set_length: Utilise ce bloc pour définir la valeur correcte de la « Longueur ».
+      grade5_playlab_variables1_callout:
+        arrows_move_actor: Utilise les flèches pour déplacer l'acteur
+      grade5_playlab_variables11_callout:
+        edit_add_parameter: Clique sur » Modifier » pour ajouter un paramètre à ta
+          fonction
+      grade5_playlab_variables1ask_callout:
+        arrows_move_actor: Utilise les flèches pour déplacer l'acteur

@@ -1,0 +1,37 @@
+sk:
+  data:
+    course:
+      name:
+        csp-2017:
+          assignment_family_title: Princípy Informatiky
+          title: Základy informatiky ('17-'18)
+          version_title: "'17-'18"
+          description_student: V roku 2016 na jeseň uviedla Rada škôl a gymnáziá najnovší AP® kurz, AP princípy informatiky. Kurz prináša študentom základné koncepty informatiky a vyzýva ich k objavovaniu spôsobov, akými počítače a technológie ovplyvňujú svet. AP program vytvoril AP kurz princípov informatiky s cieľom vytvoriť lídrov v IT oblastiach a prilákať a zapojiť tých, ktorí su tradične menej zastúpení v IT oblasti použitím základných IT nástrojov a rôznych medzidisciplinárných možností.
+          description_teacher: V roku 2016 na jeseň uviedla Rada škôl a gymnáziá najnovší AP® kurz, AP princípy informatiky. Kurz prináša študentom základné koncepty informatiky a vyzýva ich k objavovaniu spôsobov, akými počítače a technológie ovplyvňujú svet. AP program vytvoril AP kurz princípov informatiky s cieľom vytvoriť lídrov v IT oblastiach a prilákať a zapojiť tých, ktorí su tradične menej zastúpení v IT oblasti použitím základných IT nástrojov a rôznych medzidisciplinárných možností.
+          description_short: Naučte sa základné koncepty informatiky.
+        csd-2017:
+          assignment_family_title: Objavy v informatike
+          title: Objavy v informatike ('17-'18)
+          version_title: "'17-'18"
+          description_student: Objavy v informatike (IT objavy) je úvodný kurz informatiky, ktorý motivuje študentov k vytvoreniu jedinečných výtvorov a používa informatiku ako prostriedok pre kreativitu, komunikáciu, riešenie problémov a zábavu.
+          description_teacher: Objavy v informatike (IT objavy) je úvodný kurz informatiky, ktorý motivuje študentov k vytvoreniu jedinečných výtvorov a používa informatiku ako prostriedok pre kreativitu, komunikáciu, riešenie problémov a zábavu.
+          description_short: Úvodný kurz informatiky, ktorý motivuje študentov k vytvoreniu jedinečných výtvorov.
+        allthethingscourse:
+          title: kurzvšetkého
+          description_short: Toto je lekcia ovšetkom
+          description_student: Toto je lekcia ovšetkom a má dlhší popis pre študentov
+          description_teacher: Toto je lekcia ovšetkom a má dlhší popis pre školiteľov
+        csd-2018:
+          assignment_family_title: Objavy v informatike
+          title: Objavy v informatike ('18-'19)
+          version_title: "'18-'19"
+          description_short: Úvodný kurz informatiky, ktorý motivuje študentov k vytvoreniu jedinečných výtvorov.
+          description_student: Objavy v informatike (IT objavy) je úvodný kurz informatiky, ktorý motivuje študentov k vytvoreniu jedinečných výtvorov a používa informatiku ako prostriedok pre kreativitu, komunikáciu, riešenie problémov a zábavu.
+          description_teacher: Objavy v informatike (IT objavy) je úvodný kurz informatiky, ktorý motivuje študentov k vytvoreniu jedinečných výtvorov a používa informatiku ako prostriedok pre kreativitu, komunikáciu, riešenie problémov a zábavu.
+        csp-2018:
+          assignment_family_title: Princípy Informatiky
+          title: Princípy informatiky ('17-'18)
+          version_title: "'18-'19"
+          description_short: Naučte sa základné koncepty informatiky.
+          description_student: V roku 2016 na jeseň uviedla Rada škôl a gymnáziá najnovší AP® kurz, AP princípy informatiky. Kurz prináša študentom základné koncepty informatiky a vyzýva ich k objavovaniu spôsobov, akými počítače a technológie ovplyvňujú svet. AP program vytvoril AP kurz princípov informatiky s cieľom vytvoriť lídrov v IT oblastiach a prilákať a zapojiť tých, ktorí su tradične menej zastúpení v IT oblasti použitím základných IT nástrojov a rôznych medzidisciplinárných možností.
+          description_teacher: V roku 2016 na jeseň uviedla Rada škôl a gymnáziá najnovší AP® kurz, AP princípy informatiky. Kurz prináša študentom základné koncepty informatiky a vyzýva ich k objavovaniu spôsobov, akými počítače a technológie ovplyvňujú svet. AP program vytvoril AP kurz princípov informatiky s cieľom vytvoriť lídrov v IT oblastiach a prilákať a zapojiť tých, ktorí su tradične menej zastúpení v IT oblasti použitím základných IT nástrojov a rôznych medzidisciplinárných možností.

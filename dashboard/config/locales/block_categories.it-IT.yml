@@ -1,0 +1,44 @@
+---
+it:
+  data:
+    block_categories:
+      Actions: Azioni
+      Loops: Ripetizioni
+      Functions: Funzioni
+      Color: Colore
+      Brushes: Pennelli
+      Math: Matematica
+      Logic: Logica
+      Variables: Variabili
+      Number: Numero
+      String: Stringa
+      Image: Immagine
+      Boolean: Booleano
+      Conditionals: Istruzioni condizionali
+      Events: Eventi
+      Games/Score: Gioco/Punteggio
+      Comments: Commenti
+      Category: Categoria
+      Text: Testo
+      Picker: Selezione
+      Comment: Commento
+      'Variables ': 'Variabili '
+      everythingelse: qualunque altra cosa
+      numbers: numeri
+      Numbers: Numeri
+      Default: Impostazione predefinita
+      World: Ambiente
+      Sprites: Personaggi
+      Behaviors: Comportamenti
+      Start: Inizia
+      Music: Musica
+      Dancing: Danza
+      Dancers: Ballerini
+      Groups: Gruppi
+      Sprite: Personaggio
+      Brush: Pennello
+      Booleans: Valori Booleani
+      test: test
+      Name: Nome
+      'Functions ': 'Funzioni '
+      Function: Funzione

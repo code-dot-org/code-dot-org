@@ -1,0 +1,17 @@
+sl:
+  data:
+    block_categories:
+      Actions: Dejanja
+      Loops: Zanke
+      Functions: Funkcije
+      Color: Barva
+      Math: Matematika
+      Logic: Logika
+      Variables: Spremenljivke
+      Conditionals: Pogoji
+      Events: Dogodki
+      Text: Besedilo
+      Start: Začni
+      test: preizkusi
+      Name: Ime
+      Function: Funkcija

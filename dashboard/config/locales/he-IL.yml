@@ -1,0 +1,1185 @@
+---
+he:
+  errors:
+    messages:
+      not_saved: 'אנא תקן את השגיאות הבאות:'
+      too_young: התוכן מכיל הגבלות גיל ואינו זמין לתלמידים צעירים.
+      teacher_must_accept_terms: בתוכן זה יש מגבלת גיל במקום והוא אינו זמין לתלמידים
+        הצעירים. בקש מהמורה שלך לעדכן את תנאי השירות כדי לתת לך גישה לתוכן זה. המורה
+        שלך יכול לעשות זאת על ידי התחברות לקוד סטודיו ולחיצה על כפתור 'סקירת עדכון
+        תנאים' בסמוך לחלקו העליון של דף הבית של קוד סטודיו.
+      pair_programmer: אתה כרגע נמצא במצב תכנות משותף עם תלמיד אחר אשר אין לו הרשאות
+        לתוכן זה. כדי לגשת לתוכן זה, הפסק את מצב התכנות המשותף ונסה שוב.
+  activerecord:
+    errors:
+      messages:
+        blank: נדרש
+        blank_plural: הנם נדרשים
+        invalid: לא חוקי
+        invalid_plural: אינם חוקיים
+    attributes:
+      user:
+        name: שם תצוגה
+        name_example: 'שם לתצוגה<br/> (לדוגמה: תכניתן מגניב או ישראל י.)'
+        email: דואר אלקטרוני
+        parent_email: דוא"ל של הורה/אפוטרופוס
+        personal_email: כתובת דוא"ל אישי <a href="%{url}"> (לחץ כאן אם אין לך כתובת
+          דואר אלקטרוני)</a>
+        username: שם משתמש
+        password: סיסמה
+        password_confirmation: וידוא סיסמא
+        current_password: הסיסמה הנוכחית
+        locale: שפה
+        age: גיל
+        gender: מין
+        edit_header: שינוי פרטי החשבון
+        finish_sign_up_header: סיים ליצור את החשבון שלך
+        finish_sign_up_subheader: מלא את הפרטים הבאים על מנת לסיים ליצור חשבון Code.org
+          עבור <strong>%{email}</strong>.
+        error:
+          future: לא יכול להיות בעתיד
+  hello: הי עולם
+  welcome_back: ברוך שובך, %{name}
+  your_professional_learning_plan: תוכנית הלמידה המקצועית שלך
+  see_your_learning_plan: צפה בתכנית הלמידה שלך
+  submit: שלח
+  unsubmit: בטל הגשה
+  previous_page: דף קודם
+  next_page: הדף הבא
+  next_resource: המשאב הבא
+  cancel: בטל
+  okay: בסדר
+  or: או
+  heading_x_of_y: "%{heading} (עמוד %{x} מתוך %{y})"
+  add_teacher_form:
+    code:
+      label: 'הוסף מורה:'
+      placeholder: קוד קבוצה (ABCDEF)
+      instructions: אנא הזן את הקוד ששותף איתך בידי המורה. זה קוד בן 6 תווים כמו "ABCDEF".
+      instructions_short: הזן את קוד הקבוצה שלך באורך 6 תווים
+    submit: הוסף מורה
+  add_hint_form:
+    placeholder: הכניסו בבקשה את הרמז שלכם כאן
+    submit: הוסף רמז
+  appname: Code.org
+  stage: שלב
+  stage_number: שיעור %{number}
+  puzzle: חידה
+  trophies: גביעי ניצחון
+  courses: מסלולים
+  courses_page:
+    title_student: למד מדעי המחשב
+    title_teacher: למד מדעי המחשב
+  unplugged_activity: פעילות ללא עבודה במחשב
+  of: של
+  more: יותר
+  less: פחות
+  beta: בטא
+  try_hoc: 'נסה את שעת קוד, לחץ כאן >> '
+  try_k8intro: נסה את הקורס מבוא למדעי המחשב לכיתות גן-ח'(15-25 שעות)
+  k8intro: ק-8 מבוא לקורס במדעי המחשב (15-25 שעות)
+  already_started: 'כבר התחלת? המשך כאן >> '
+  demos: 'מנהל: כל הדוגמאות'
+  continue: המשך
+  prize: פרס
+  more_info: מידע נוסף
+  auth:
+    sign_in_with: היכנס באמצעות %{provider}
+    signed_in: נכנסת!
+    signed_out: התנתקת מ<a href="%{url}">Code.org</a>.
+    sign_out_of: השתמשת ב- %{provider} להכנס. in. <a href="%{url}"> לחץ כאן</a> כדי
+      לצאת מ- %{provider}.
+    already_signedup: כבר נרשמת?
+    notyet_signedup: לא הצטרפת עדיין?
+    google_oauth2: חשבון גוגל
+    twitter: טוויטר
+    facebook: פייסבוק
+    windowslive: חשבון מיקרוסופט
+    microsoft_v2_auth: חשבון מיקרוסופט
+    clever: חשבון חכם
+    powerschool: חשבון בית-ספר חזק
+    forgot_password: שכחת את הסיסמא שלך?
+    need_confirmation: לא קיבלת את  ההוראות האישור?
+    need_unlock: לא קיבלת את ההוראות הפתיחה?
+    not_linked: מצטערים, חשבון Code.org שלך אינו מקושר ל%{provider}. עליך להתחבר בעזרת
+      הקלדת ססמתך מטה.
+    use_clever: מצטערים, חשבון Code.org שלך אינו מקושר ל%{provider}. עליך להתחבר דרך
+      "הפורטל החכם" שלך במקום.
+    unable_to_connect_provider: אין אפשרות להתחבר לחשבון Code.org שלך אל ה%{provider}
+      שלך. אנא נסה שוב.
+  signup_form:
+    student_count: "%{count} תלמידים כבר נרשמו."
+    teacher_count: "%{count} מורים כבר נרשמו."
+    overview: הרשם לקבלת חשבון בכדי לעקוב אחר התקדמות וניהול הכיתה שלך. <a href="/">באפשרותך
+      לדפדף בין השלבים והפאזלים השונים</a> ללא חשבון, אבל תידרש להירשם בכדי לשמור
+      את התקדמותך ואת הפרויקטים שלך.
+    hoc_already_signed_up_heading: התחל ללא כניסה לחשבון
+    hoc_already_signed_up_content: אתה רשום כמורה של "שעת קוד"! אתה ותלמידיך אינם
+      נדרשים להיכנס לסטודיו קוד בכדי להשתתף באירוע זה. כדי להתחיל <a href="%{learn_url}">בחר
+      הדרכה</a> עבור כיתתך ושתף את הקישור איתם.<br/><br/>אם נהנית מ"שעת קוד" וברצונך
+      להתקדם הלאה, באפשרותך להגדיר סיסמא ולצור חשבון קוד סטודיו מטה ולרשום את תלמידך
+      לכל אחד מ<a href="%{educate_url}">הקורסים הארוכים יותר</a> שלנו.
+    hoc_already_signed_up_content_post_hoc: תודה לך עבור אירוח שעת קוד. לכניסה לסטודיו
+      קוד, תידרש להגדיר סיסמה לחשבונך. זה יאפשר לך לשמור את ההתקדמות וניהול כיתתך.
+      תהיה באפשרותך להקצות קורסים לתלמידים ולעקוב אחר התקדמותם. <a href="%{studio_url}">באפשרותך
+      להמשיך ולתור אחר שלבים ופאזלים</a> בלי יצירת חשבון.
+    teacher_educator_guide: ראה מדריך למחנך
+    title: הרשם לCode.org
+    school_name: שם בית הספר (אופציונלי)
+    school_address: כתובת בית הספר (אופציונלי)
+    address_placeholder: כתובת, עיר, מדינה, מיקוד
+    gender: מגדר (אופציונלי)
+    birthday: יום הולדת (אופציונלי)
+    age: גיל
+    user_type: האם אתה תלמיד או מורה?
+    submit: הירשם
+    go_to_account: עבור לחשבון שלי
+    teacher: האם אתה מורה?
+    valid_username: זמין!
+    invalid_username: שם המשתמש חייב להיות לפחות 5 תווים
+    taken_username: שם המשתמש כבר תפוס
+    valid_password: סיסמה תקינה!
+    invalid_password: הסיסמא חייבת להכיל לפחות 6 תווים
+    mismatch_password: שתי הסיסמאות שהזנת אינן תואמות
+    agree_tos_privacy: אני מסכים ל-<a href='http://code.org/tos'>תנאי השימוש</a> ו-<a
+      href='http://code.org/privacy'>תנאי הפרטיות</a>.
+    under_13_consent: אני תחת גיל 13, אני מאשר שהורי או האפוטרופוסים החוקיים שלי מאשרים
+      לי להשתמש בשירותי Code.org.
+    student_consent: אני מאשר שיש לי אישור הורה או אפוטרופוס להשתמש בשירותי Code.org.
+    agree_us_website: אני מאשר להשתמש באתר אינטרנט אשר נמצא בארצות הברית.
+    my_data_to_us: יתכן כי נתוני השימוש שלי ישלחו או ישמרו או יעובדו בארצות הברית.
+    student_terms: כתובות דוא"ל אינם נשמרים בצורה המאפשרת לנו ליצור קשר עם תלמידים.
+      תלמידים לעולם לא יקבלו דוא"ל מCode.org למעט עבור שחזור סיסמא. צפה ב<a href='http://code.org/privacy'>מדיניות
+      הפרטיות</a> לפרטים נוספים.
+    teacher_terms: אני מסכים להיות מחויב לתנאי השירות של Code.org. לקבלת מידע נוסף
+      אודות פרטיות, עיין ב-<a href='http://code.org/privacy'>מדיניות הפרטיות</a>.
+    additional_information: יש צורך במידע נוסף כדי להמשיך ביצירת החשבון שלך.
+    user_type_button: עדכן סוג חשבון
+    user_type_label: סוג חשבון
+    user_type_teacher: מורה
+    user_type_student: תלמיד
+    field_is_required: נדרש
+    accept_terms: עליך להסכים ליצירת חשבון
+    error: אירעה שגיאה.
+    email_preference_question: האם ניתן לשלוח דוא"ל עבור עדכונים בקורסים, הזדמנויות
+      מקומיות, או חדשות במדעי המחשב?
+    email_preference_privacy: "(ראה את מדיניות הפרטיות שלנו)"
+    email_preference_yes: כן
+    email_preference_no: לא
+    email_preference_required: עליך לציין העדפה של דואר אלקטרוני.
+  school_info:
+    title: מידע על בית הספר (רשות)
+    school_country: ארץ בית הספר
+    select_school_type: סוג בית הספר
+    charter: פרטי למחצה
+    private: פרטי
+    public: ציבורי
+    homeschool: למידה ביתית
+    after_school: אחרי בית הספר
+    other: אחר
+    state: איזורי
+    district: מחוז
+    other_district_not_listed: מחוז אחר שאינו ברשימה
+    district_name: שם המחוז
+    school: בית ספר
+    other_school_not_listed: בית ספר אחר שאינו ברשימה
+    school_name: שם בית הספר
+    school_zip: מיקוד בית הספר
+    school_address: כתובת בית הספר
+    school_organization_name: שם בית הספר או הארגון
+    school_organization_zip: מיקוד בית הספר או הארגון
+  signin_form:
+    title: כבר יצרת משתמש? היכנס למערכת
+    login: דואר אלקטרוני
+    login_username: דוא"ל או שם משתמש
+    password: סיסמה
+    remember: זכור אותי
+    submit: התחבר
+  signin:
+    try_heading: רוצה לנסות לכתוב קוד ללא הרשמה?
+    try_hoc: נסה קודם את שעת הקוד
+    try_20hours: נסה את קורס ה-20 שעות שלנו - מבוא למדעי המחשב
+  signinsection:
+    welcome: ברוך הבא לקבוצה %{section_name}
+    name: בחר את השם שלך
+    picture: עכשיו מצא את התמונה הסודית שלך
+    words: כעת הכנס את המילים הסודיות שלך
+    login: התחבר
+    invalid_login: נתוני חיבור שגויים, אנא נסה שנית
+    pair_programming: אני יחד עם שותף במחשב שלי
+    student_privacy: למד עוד מדוע אינך רואה את שמך המלא <a href='%{student_privacy_blog}'
+      target='_blank'>כאן</a>.
+  password:
+    reset_form:
+      title: שכחת את הסיסמא שלך?
+      instructions: הזן את הדוא"ל אשר מקושר לחשבון שלך מטה ונשלח לך את ההוראות לאיפוס
+        סיסמתך.
+      email: כתובת דואר אלקטרוני
+      submit: שלח
+    reset_errors:
+      captcha_required: אנא מלא את הCAPTCHA בכדי לאפס את סיסמתך.
+      invalid_email: נראה כי נרשמת עם כתובת דואר אלקטרוני שגויה. אנא שלך דוא"ל לsupport@code.org
+        בכדי לקבל קישור לאיפוס סיסמה.
+    change_form:
+      title: שנה את הסיסמא שלך
+      new_password: סיסמא חדשה
+      confirm_password: אשר סיסמא חדשה
+      submit: שנה את הסיסמא שלי
+  welcome_email:
+    subject: הצטרפו לשיעור (Code.org)
+    body: |
+      לחץ על הקישור להלן כדי להירשם לקבלת הדרכות מדעי המחשב ב- Code.org (איתי בתור ה"מורה" שלך):
+
+      %{link}
+
+      הלימוד כיפים, מועברים באופן חזותי, ומלמדים את המושגים הבסיסיים של מדעי המחשב באמצעות חוויה פשוטה, מדריכים, משחקי דמוי.
+      ללמוד קוד מביל גייטס, מארק צוקרברג, כועס ציפורים, וצמחים נגד זומבים! :-)
+
+      %{name}
+  parent_mailer:
+    student_associated_subject: פרטי החיבור עבור Code.org
+  teacher_mailer:
+    new_teacher_subject: ברוך הבא לCode.org!
+    delete_teacher_subject: 'הודעת Code.org: החשבון שלך נמחק'
+  section:
+    your_section:
+      one: 'הקבוצה שלך:'
+      other: 'הקבוצות שלך:'
+    code_with_teacher: "%{section_code} יחד עם %{teacher_name}"
+    confirm:
+      remove: האם אתה בטוח שברצונך לצאת מקבוצה זו?
+    default_name: סעיף ללא כותרת
+    remove: "(הסר קבוצה)"
+    type:
+      picture: תמונת סיסמה
+      email: דואר אלקטרוני
+      google_classroom: כיתת גוגל
+      clever: Clever
+  follower:
+    invite_sent: הזמנה נשלחה
+    added_teacher: "%{name} נוסף כמורה שלך"
+    registered: נרשמת לקבוצה %{section_name}.
+    error:
+      signed_in: בבקשה תצא לפני שתמשיך
+      username_not_found: שם משתמש %{username} לא נמצא
+      username_in_use: "%{username} כבר תפוס. בבקשה תבחר אחר"
+      no_teacher: |-
+        לא נמצא משתמש רשום ע״י ״%{teacher_email_or_code}״.
+        אנא בקש מהם להירשם כאן ונסה להוסיף אותם שנית
+      section_not_found: לא היתה אפשרות למצוא את קוד הקבוצה '%{section_code}'.
+      blank_code: אנא הזן קוד הקבוצה
+      cant_join_own_section: מצטערים, לא תוכל להצטרף לתוך קבוצה משלך.
+      provider_managed_section: קבוצה זו מנוהלת ע"י ספק חיצוני אחר ולא ניתן להצטרף
+        אליו באופן ישיר. אנא בקש מהמורה שלך להוסיף אותך דרך %{provider} ושיסנכרן את
+        הקבוצה מחדש.
+    mail:
+      student_disassociated:
+        subject: 'הודעה מCode.org: %{student_name} כבר לא רשום כתלמיד שלך.'
+  reports:
+    error:
+      access_denied: אין לך גישה לסטטיסטיקות של האדם הזה
+  crud:
+    new_model: חדש %{model}
+    show: הצג
+    edit: ערוך
+    edit_model: ערוך %{model}
+    update: עדכון
+    submit: שלח
+    destroy: להשמיד
+    back: חזור
+    confirm: אתה בטוח?
+    created: "%{model} נוצר בהצלחה."
+    updated: "%{model} עודכן בהצלחה."
+    destroyed: "%{model} נמחק בהצלחה."
+    access_denied: אין לך גישה ל%{model}.
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: כתובת הדוא"ל שסיפקת אינו תואמת לכתובת הדוא"ל
+          שסופקה לחשבון זה
+        personal_login_created_email: יצרת חשבון משתמש אישי בהצלחה. באפשרותך להתחבר
+          עם חשבונך בעזרת כתובת הדוא"ל והסיסמה
+        personal_login_created_username: יצרת חשבון משתמש אישי בהצלחה. באפשרותך להתחבר
+          עם חשבונך בעזרת שם המשתמש (%{username}) והסיסמה שלך
+  nav:
+    header:
+      finished_hoc: סיימתי את שעת הקוד שלי
+      sign_in_to_save: התחבר כדי לשמור את התקדמות
+      free_play:
+        playlab: צור אפליקציה במעבדת הצעצועים
+        artist: צייר משהו
+        applab: צור אפליקציה במעבדת המשחקים
+        gamelab: צור פרויקט מעבדת משחקים
+        weblab: צור פרויקט מעבדת אינטרנט (ביטה)
+      my_dashboard: לוח הבקרה שלי
+      course_catalog: קטלוג קורסים
+      project_gallery: פרויקטים
+      sections: קבוצות
+      help_support: עזרה ותמיכה
+      report_bug: דווח תקלה
+      teacher_community: קהילת המורים
+      professional_learning: לימוד מקצועי
+      documentation: מסמכים
+      tutorials: מדריכים
+      educate_overview: סקירת המורה
+      educate_elementary: בית ספר יסודי
+      educate_middle: חטיבת ביניים
+      educate_high: תיכון
+      educate_hoc: שעה של קוד
+      educate_partner: שותף יחד איתנו
+      educate_beyond: מעבר ל-Code.org
+      educate_inspire: הנחל השראה לתלמיד
+      educate_community: קהילה אינטרנטית
+      educate_tools: כלים וסרטונים
+      about_us: אודותינו
+      about_leadership: הנהגה
+      about_donors: תורמים
+      about_partners: שותפים
+      about_team: כל הקבוצה
+      about_news: חדר החדשות
+      about_evaluation: הערכה
+      about_jobs: עבודות
+      about_contact: צור קשר
+      about_faqs: שאלות נפוצות
+      learn: למד
+      stats: סטטיסטיקות
+      help_us: עזור לנו
+      teach: למד
+      about: אודות
+    user:
+      classroom: דף הבית של המורה
+      district_dashboard: לוח ניהול מחוזי
+      label: היי %{username}
+      stats: ההתקדמות שלי
+      settings: החשבון שלי
+      logout: התנתק
+      signin: התחבר
+      signup: צור חשבון
+      already_registered: כבר נרשמת?
+      team: צוות
+      driver: מחובר/ת
+      navigator: נווט
+      create: צור
+      applab: מעבדת היישומים
+      artist: אמן
+      gamelab: מעבדת המשחקים
+      playlab: מעבדת הצעצועים
+      minecraft: מיינקראפט
+      flappy: פלאפי
+      dance: מסיבת ריקודים
+    popup:
+      progress_for_user: ההתקדמות של %{name}
+      progress: ההתקדמות שלך
+      lines: 'סה כ שורות קוד: %{lines}'
+      close: קרוב
+      mastery: עקרונות
+      puzzle_map: שלבים
+      prizes: אסוף את כל ה-%{total_trophies} פרסים כדי לזכות בפרס אמיתי!
+      prize_earned: כל %{total_trophies} הפרסים נאספו! זכית בפרס!
+      prize_us_only: "(תלמידי ארצות-הברית בלבד!)"
+      prizes_link: מידע נוסף
+  teacher:
+    answer: 'תשובה
+
+'
+    for_teachers_only: למורים בלבד
+    title:
+      one: 'המורה שלך :'
+      other: 'המורים שלך:'
+    remove: "(מחק מורה)"
+    confirm:
+      remove: האם אתה בטוח שברצונך להסיר את המורה הזה?
+    students:
+      dashboard: לגשת לתצגת המורה
+    user_not_found: לא היה ניתן לאתר את המורה.
+    student_teacher_disassociated: עזבת את הקבוצה %{section_code} המנוהלת ע"י המורה
+      %{teacher_name}.
+    panel:
+      answer_viewer: פאנל מורים
+      student: תלמיד
+      viewing_solution: הצג פתרון
+      try_it_yourself: נסה זאת בעצמך
+      section: קבוצה
+      example: דוגמא לפתרון
+      example_with_number: דוגמה לפתרון %{solution_number}
+      submitted_on: הוגש ב-
+      unsubmit: בטל הגשה
+      worked_with: עובד יחד עם
+      update_lock_settings: עדכן את הגדרות הנעילה כאן.
+      clear_response: נקה תגובה
+  user:
+    email_confirm_needed: 'כתובת הדוא"ל עוד לא אושרה:'
+    email_confirm_needed_required: 'כתובת האימייל שלך %{email} לא אושרה:'
+    email_confirm_wrong_email: "(כתובת דוא״ל שגויה?)"
+    email_resend_confirm: שלח מחדש הוראות אישור דוא"ל
+    new_email_hint: (ודא שתוכל לקבל הודעות דוא"ל לכתובת דוא"ל זו)
+    new_password_hint: "(השאר ריק אם אין ברצונך לשנות)"
+    current_password_hint: "(אנחנו צריכים את הסיסמה הנוכחית שלך כדי לאשר את השינויים
+      שלך)"
+    delete: מחק את החשבון שלך
+    delete_text: לחיצה על הכפתור למטה תמחק את החשבון שלך.
+    delete_text_teacher_managed_note: אין לך הרשאות למחוק חשבון זה בגלל שהוא מנוהל
+      על ידי המורה שלך. המורה(ים) שלך יצטרך להסיר אותך מהקבוצה שלו לפני שתוכל למחוק
+      את החשבון שלך.
+    delete_text_teacher_note: 'שים לב: מחיקת החשבון שלך לא תגרום למחיקת חשבונות התלמידים
+      שלך.'
+    delete_confirm: האם אתה בטוח שברצונך למחוק את החשבון שלך?
+    deleted_user: משתמש שנמחק
+    no_password_because_oauth: אין סיסמה כי נכנסת לחשבונך עם ספק צד שלישי.
+    no_password_because_sponsored: צפה במורה שלך בכדי לנהל את סיסמתך.
+    create_personal_login: צור חשבון כניסה אישי
+    create_personal_login_under_13_info: אם ברצונך להמשיך להשתמש בחשבון Code.org שלך
+      גם לאחר סיום שנת הלימודים, בקש מההורה/אפוטרופוס שלך כדי לסייע לך ליצור חשבון
+      כניסה אישי משלך מטה.
+    create_personal_login_under_13_username: שם משתמש (אין להשתמש בשם האמיתי שלך!)
+    create_personal_login_under_13_parent_email: דוא"ל של הורה/אפוטרופוס
+    create_personal_login_info: אם ברצונך להמשיך להשתמש בחשבון Code.org שלך גם לאחר
+      סיום שנת הלימודים, באפשרותך ליצור חשבון כניסה אישי משלך מטה.
+    create_personal_login_terms: על-ידי יצירת חשבון כניסה אישי, אני מסכים להיות מחויב
+      ל<a href='%{terms_of_service_url}', target='_blank'>תנאי השימוש</a> של Code.org.
+      אם אני תחת גיל 13, אני מאשר שיש בידי אישור מהורה או אפוטרופוס חוקי רשות להשתמש
+      בשירותי Code.org גם ללא מורה.
+    create_personal_login_email_note: 'שים לב: כתובות דוא"ל אינם נשמרים בצורה המאפשרת
+      לנו ליצור קשר עם תלמידים. תלמידים לעולם לא יקבלו דוא"ל מCode.org למעט עבור שחזור
+      סיסמה. צפה ב<a href=''%{privacy_policy_url}'', target=''_blank''>מדיניות הפרטיות</a>
+      לפרטים נוספים.'
+    enter_new_login_info: הזן את פרטי ההתחברות החדשים שלך
+    confirm_secret_words: אשר שזה אתה על-ידי הזנת המילים הסודיות הנוכחיות שלך
+    parent_email_label: כתובת אימייל של הורה/אפוטרופוס (אופציונלי)
+    parent_email_hint: "(ישמש לטובת שחזור סיסמה)"
+    enter_parent_email: הזן את כתובת הדוא"ל של ההורה או האופוטרופוס החוקי (לצורך שחזור
+      סיסמה)
+    update: עדכן חשבון
+    account_successfully_updated: חשבון עודכן בהצלחה.
+  user_level:
+    completed: הושלם
+    tried: נוסה
+  home:
+    title: ההתקדמות שלי
+    description: ב"code studio"  נמצאים קורסים אינטרנטיים שמיוצרים על ידי code.org
+    lines_of_code: "%{lines_count} שורות קוד נכתבו על ידי תלמידים"
+    lines_of_code_linebreak: "%{lines_count} שורות של קוד<br/>נכתבו על ידי %{students_count}
+      מיליון תלמידים"
+    all_courses: סקירה של קורסים 1, 2 ו- 3
+    lesson_plans: מערכי שיעור
+    signin_message: כבר רשום?  %{link}
+    student_reg_link: הירשמות תלמיד
+    teacher_reg_link: הירשמות מורה
+    signin_directions: השתמש בחשבון כדי לעקוב אחרי התקדמות.<br/> מורים, עקבו אחרי
+      כל הכיתה.
+    teacher_dashboard: לראות התקדמות לוח המחוונים
+    teacher_student_count_one: יש לך %{count} תלמיד.
+    teacher_student_count: יש לך %{count} תלמידים.
+    teacher_averages: בממוצע, התלמידים שלך הרוויחו %{trophy_average} פרסים, מתוך %{trophy_max}
+      אפשריים.
+    teacher_print_certificates: הדפס תעודות לתלמידים שגמרו את הקורס הזה
+    teacher_read_blog: קרא על חדשות ועדכונים לחומרים שלנו ב"בלוג מחנכים"
+    classroom: הכיתה שלך
+    student_progress: התקדמות הלמידה שלך
+    student_stats: הרווחת %{trophy_count} פרסים מתוך %{trophy_max} אפשריים.
+    student_left_off: 'היכן שהפסקתם:'
+    student_finished: את/ה גמרת את כל שיעורי ההדרכה. בחר כיתה אחרת %{online_link}
+      או ב%{local_school_link}
+    local_school: בה"ס מקומי
+    online: באינטרנט
+    see_details: ראה פרטים
+    view_course: צפה בקורס
+    prize_info: 'פרסים על השתתפות(מורים מארצות הברית בלבד): עד ל 1000$ בפרסי כיתה.'
+    tryfirst: 'או, שתוכל לנסות זאת קודם כל, ולהירשם לאחר מכן:'
+    trynow: נסה עכשיו
+    add_hint_help: אנא עזור לנו להוסים רמזים חכמים למדריכים code.org
+    20hour_overview: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות.
+      הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
+    test_videos_help: נסה את נגן הוידאו החדש שלנו בבית ספרך
+    try_beta_courses: חדש! נסה את קורסי הבטה שלנו לגילאי גן חובה-כיתה ה'
+    use_as_teacher: השתמש באתר הזה כמורה
+    heading_hoc2014: "<h2>שעת הקוד עבור</h2><h1>כל הגילאים</h1>"
+    heading_elementary: "<h2>20 שעות קורסים עבור</h2><h1>יסודות מדעי המחשב (כל הגילאים)</h1>"
+    heading_apps: "<h2>כיף</h1><h2>לכולם</h1>"
+    heading_tools: "<h2>מוכן לשלב הבא?</h2><h1>כלים לחטיבות והתיכונים</h1>"
+    heading_legacy: "<h2>הקורס המואץ שלנו עבור</h2><h1>כל הגילאים</h1>"
+    your_gallery: גלריה
+    no_primary_course: נסה קורס קוד סטודיו
+    choose_next_course: נסה קורס מסטודיו קוד ע"י בחירת אחד מטה
+    print_certificate: הדפס תעודה
+    announcement_title: הודעות
+    announcement_message_fall2016_features: ניצלנו את הקיץ בכדי להפוך את המשובים שלכם
+      עבור תכונות חדשות. כעת, אתה יכול <a href="%{pp_url}" target="_blank">לעקוב אחר
+      התקדמות מספר תלמידים</a> אפילו אם הם מתכנתים במצב משותף על מכשיר יחיד. באפשרותך
+      להשתמש <a href="%{csp_widgets_url}" target="_blank">בכלים האינטראקטיביים הכי
+      טובים</a> מקורס יסודות מדעי המחשב <i>בכל</i> כיתה. ותלמידיך יכולים <a href="%{unused_code_url}"
+      target="_blank">לשמור קוד שאינו בשימוש</a> בסביבת העבודה שלהם כדי לעודד התנסות!
+      נסה את כל התכונות החדשות ושתף אותנו מה דעתך עליהם.
+    announcement_csp_widgets_message: מחפש אחר דרכים מהנות ללמד את כיתתך איך עובד
+      האינטרנט, כיצד הצפנה שומרת נתונים מאובטחים ועקרונות נוספים? לקחנו את מיטב הקלים
+      האינטראקטיביים מתוכנית הלמידה של מדעי המחשב שלנו ושחררנו ווידג'טים עצמאיים שבאפשרותך
+      להשתמש בכל עת!
+    announcement_learn_more_button: למד עוד
+    announcement_try_now_button: נסה עכשיו
+    announcement_host_an_hour_button: ארחו שעה
+    announcement_watch_video_button: צפה בסרטון
+    announcement_petition: כמורה, אתה מתווה את דרכך על הדרך כדי לאפשר לתלמיד בכל כיתה
+      את ההזדמנות ללמוד מדעי המחשב. כעת, זה הזמן לתת לאחראים עליך לשמוע ממך. בשבוע
+      הזה, מומחי חינוך מובילים, 28 מושלים, ומנהלים כלליים של החברות הגדולות באמריקה
+      הצטרפו יחד למכתב פתוח המבקש מהקונגרס האמריקאי לממן את K-12 ללימוד מדעי המחשב.
+    announcement_petition_button: הוסף את שמך
+    announcement_go_beyond_button: לך מעבר
+    announcement_apply_now: הצטרף עכשיו
+    announcement_all: הישאר מעודכן בתכונות חדשות בבלוג המורים שלנו. <a href='%{teacher_blog_url}'
+      target='_blank'>צפה בהודעות קודמות.</a>
+    announcement_hoc_launch: אלפי מחנכים ב יותר מ-180 מדינות יחלו בהוראת מדעי המחשב
+      במסגרת שעת קוד בין 5-11 בדצמבר הקרובים. אנחנו סומכים עליך לעזור לנו להגיע אל
+      יותר תלמידים מאשר אי פעם בעבר. <a href='%{signup_url}' target='_blank'>רשום
+      את אירוע שעת קוד שלך</a> וידע מורה נוסף שכולם יכולים להתחיל ללמד מדעי המחשב.
+    announcement_mc_launch: לאחד מהמדריכים הפופולריים שלנו יצא מדריך המשך! כל המעצב
+      החדש של מיינקרפט שעת קוד נותן לתלמידים להגדיר את החוקים של עולם המיינקרפט. הם
+      יכולים לייצר חוויה יחודית במיינקרפט ואז לשתף אותם עם חברים או לשחק בטלפונים
+      שלהם. עשה זאת עם כיתתך כחלק משעת קוד.
+    announcement_how_code_studio: אינך זקוק לניסיון בלימוד מדעי המחשב לכיתתך. Code.org
+      מציע תוכנית לימודים, מערכי שיעור, ותוכנות הדרכה מקצועיות ואיכותיות ועוד המון
+      כלים לכל הכיתות והרמות.&mdash; כל שתצטרך והכל ללא עלות. לא בטוח כיצד להתחיל?
+      הורד <a href='%{video_download_url}'>את הסרטון הזה</a>!
+    announcement_go_beyond: המשך מעבר לשעת קוד וחקור רעיונות נוספים במדעי המחשב עם
+      התלמידים שלך בכל שבוע. Code.org מציע לך מערכי שיעור, תכניות שיעור ללימוד מתקדם
+      באיכות גבוהה ועוד הרבה כלים לכל הגילאים&mdash;והכל בחינם. :) אינך נדרש לניסיון
+      בלימוד מדעי המחשב בכיתתך. <b>מצא את השלב הבא המתאים לכיתה שלך.</b>
+    announcement_teacher_recruitment: מורים כמוך מובילים את תנועת החינוך ללימוד מדעי
+      המחשב. באפשרותך להשתתף בלימוד מקצועי מגילאי גן עד כיתה י"ב <strong>ללא תשלום
+      לך או לבית הספר שלך</strong>. באפשרותך להוביל את תחום מדעי המחשב בבית הספר שלך
+      ולהחיל למידה מקצועית.
+    announcement_teacher_recruitment2: מורים כמוך מובילים את תנועת החינוך ללימוד מדעי
+      המחשב. באפשרותך להשתתף בלימוד מקצועי מגילאי גן עד כיתה י"ב <strong>ללא תשלום
+      לך או לבית הספר שלך</strong>. באפשרותך להוביל את תחום מדעי המחשב בבית הספר שלך
+      ולהחיל למידה מקצועית. מורים לחטיבות ביניים ותיכונים, הצטרפו עד ה-17 במרץ.
+    announcement_csf_pilot: "<strong>מורים בבתי הספר היסודיים:</strong> היו חלק בעדכון
+      הקורסים שלנו ליסודות מדעי המחשב! אנחנו מחפשים מורים שישתתפו בפילוט לתכנית הלימודים
+      העדכנית שלנו בנושא יסודות מדעי המחשב במהלך החורף ואביב של 2017. אנו משתוקקים
+      לשמוע את המשוב שלך לפני שהעדכונים האלו יעלו באוגוסט 2017."
+    announcement_student_privacy: אנו ב-Code.org לוקחים מאוד ברצינות את נושא פרטיות
+      התלמיד. כדי להגן על פרטיות תלמידי ביצענו שינוי למסך הכניסה לקבוצה שלך כדי להימנע
+      מהצגה של שמות מלאים. אפילו ששינוי זה מוריד מעט את החשדות ממסך החיבור, אנו עדיין
+      מעודדים משתמשים <i>שלא להשתמש בשמות מלאים עבור התלמידים</i>.
+    announcement_navigation_redesign: "<b>שינויים קרובים בניווט באתר</b><br/> מגיעים
+      בקיץ הקרוב, אנו משפרים את הניווט בכל האתר של Code.org כדי שתוכל לגשת למשאבים
+      החשובים שלך מכל מקום באתר. ברגע שתתחבר לחשבון המורה שלך, בכל דף יהיה סרגל ניווט
+      חדש עם לינקים לדף הבית, לקורסים, לגלריות הפרויקט, קבוצות ולימוד מקצועי."
+  move_students:
+    new_section_dne: מצטערים, אבל הקבוצה %{new_section_code} איננה קיימת. אנה בחר
+      קוד קבוצה אחרת.
+    section_code_cant_be_current_section: הקבוצה הנוכחית אינה יכולה להיות זהה כמו
+      הקבוצה החדשה.
+    current_section_dne: מצטערים, אבל הקבוצה %{current_section_code} איננה קיימת.
+      אנה בחר קוד קבוצה אחרת.
+    student_ids_not_entered: אנא ספק את מזהי התלמידים.
+    student_not_found: תלמיד אחד או יותר לא נמצאו.
+    all_students_must_be_in_current_section: כל התלמידים חייבים להיות משוייכים לקבוצה
+      שלך.
+    already_enrolled_in_new_section: אינך יכול להעביר תלמידים אלה מכיוון שהם כבר נמצאים
+      בקבוצה החדשה.
+    third_party_login: אינך יכול להעביר תלמידים לקבוצה אשר מסונכרנת עם ספק צד שלישי.
+  share:
+    title: למד בסטודיו קוד
+    description: כל אחד יכול ללמוד מדעי המחשב. ליצור משחקים, אפליקציות ואמנות בעזרת
+      קוד.
+    try_hour_of_code: נסה את שעת קוד!
+  gender:
+    male: גבר
+    female: אישה
+    not_listed: המונח המועדף אינו מופיע ברשימה
+    none: מעדיף לא לענות
+  user_type:
+    student: תלמיד
+    teacher: מורה
+  footer:
+    thank_you: אנו מודים <a href="https://code.org/about/donors">לתורמים</a> שלנו,
+      <a href="https://code.org/about/partners">שותפים</a>, <a href="https://code.org/about/team">הצוות
+      המורחב</a>, צוות הסרטונים וגם <a href="https://code.org/about/advisors">ליועצי
+      התוכן הלימודי</a> על התמיכה ביצירת סטודיו קוד.
+    help_from_html: אנחנו בעיקר רוצים להכיר תודה להמהנדסים של גוגל, מיקרוסופט, פייסבוק,
+      טוויטר, ועוד רבים אחרים שעזרו ליצור חומרים אלו.
+    help_from_html_old: המהנדסים של גוגל, מיקרוסופט, פייסבוק, טוויטר עזרו לנו ליצור
+      חומרים אלה.
+    powered_by_aws: ממונע ע"י Amazon Web Services
+    copyright: זכויות יוצרים
+    more: יותר
+    feedback: משוב
+    translate: עזרו לנו לתרגם לשפתך
+    support: עזרה וקהילה
+    tos_short: תנאים
+    tos: תנאים
+    privacy: הצהרת פרטיות
+    secure: גרסה מאובטחת
+    report_abuse: דווח על התעללות
+    built_on_code_studio: נבנה בסטודיו קוד
+    make_my_own_app: פיתוח האפליקציה שלי
+    how_it_works: איך זה עובד
+    try_hour_of_code: נסה את שעת קוד!
+  reference_area:
+    title: צריך עזרה?
+    subtitle: לראות את קטעי וידאו ורמזים
+    teacher: הצג את הפתרון
+    teacher_no_solution: הפסק צפייה בפתרון
+    auth_error: אינך מורשה לראות את הפתרון.
+    submit: עדכן מיקום אומן
+    direction: התחל כיוון (במעלות)
+  video:
+    tab: וידאו.
+    notes: אין וידאו? הצג הערות.
+    notes_coming_soon: הערות עבור וידאו זה יתווספו בקרוב.
+    autoplay_option: הפעלה אוטומטית של סרטונים
+    download: הורד סרטון
+    show_notes: הצג הערות
+    show_video: הצג סרטון
+  compatibility:
+    upgrade:
+      unsupported_message: הדפדפן שלך אינו נתמך. אנא שדרג אותו <a href='%{supported_browsers_url}',
+        target='_blank'> לאחד מהדפדפנים הנתמכים</a>. תוכל לנסות ולצפות בדף, אבל צפה
+        בעיות בחלק מן הפונקציונליות הקיימת.
+      link: למד עוד
+      weblab_unsupported_locale_storage: יתכן ותחווה תקלות בעת שימוש במעבדת האינטרנט
+        תחת גלישה במצב "מוסתר". אנא טען את הדף במצב רגיל. מצטערים על אי הנוחות.
+  slow_loading: זה לוקח זמן רב מהרגיל...
+  try_reloading: נסה טעינה מחדש של הדף
+  next_stage: סיימת! המשך לשלב הבא
+  download_pdf: פתח מערך שיעור
+  lesson_plan: מערך שיעור
+  view_lesson_plan: הצג מערך השיעור
+  pdf_download: הורדת PDF
+  download_coming_soon: פעילות להורדה בקרוב.
+  video_coming_soon: וידאו בקרוב!
+  not_started: התלמיד לא ניגש לבצע את השלב הזה.
+  share_code:
+    title: לחץ'ריצה' כדי לראות את התקדמותי בזמן פעולה
+    bounce_og_title: תראה את המשחק קפיצה שלי
+    flappy_og_title: תראה את משחק ההתנופפות שלי
+    studio_og_title: בוא תראה את האפליקצייה שייצרתי במעבדת הצעצועים
+    check_out_what_i_made: בדוק מה הכנתי
+    og_description: כתבתי קוד בעצמי באמצעות code.org
+    phone_number_not_allowed: נראה שיש שם מספר טלפון. נסה להחליף את הטקסט.
+    address_not_allowed: נראה שיש פה כתובת. נסה לשנות את הטקסט.
+    email_not_allowed: נראה שיש פה כתובת דוא"ל. נסה לשנות את הטקסט.
+    profanity_not_allowed: נראה שיש פה מילים לא ראויות. נסה לשנות את הטקסט.
+  builder:
+    created: יצרתי תסריט חדש.
+    destroyed: הרסתי תסריט.
+    manage: בנה שלבים
+    view: צפייה
+    back: בחזרה לתסריטים
+    success: ערכת בהצלחה לבנים
+    level:
+      create: צור שלב חדש
+      current: שלבים נוכחיים
+      unused: שלבים שלא נוצלו
+  upsell:
+    applab:
+      title: מעבדת היישומים
+      body: מעבדת האפליקציות זו סביבת תכנות שבה תוכל לייצר אפליקציות פשוטות. תכנן
+        אפליקציה, קודד אותה בעזרת בלוקים או JavaScript כדי לגרום לזה לעבוד, לאחר מכן
+        שתף את האפליקציה בתוך שניות.
+      body_short: עצב אפליקציה, תכנת אותה בעזרת בלוקים או JavaScript כדי לתת בה חיים
+        ובסוף שתף אותה עם חבריך.
+      audience: גילאי 13+
+      cta: למד כיצד
+    dance:
+      title: מסיבת ריקודים
+    hoc:
+      title: מבוך קלאסי
+      body: נסה את הבסיס של מדעי המחשב.מיליונים כבר ניסו.
+    flappy:
+      title: קוד מתנופף
+      body: רוצה לכתוב משחק משלך בפחות מ10 דקות?נסה את מדריך קוד ההתעופפות שלנו!
+    20-hour:
+      title: קורס מואץ
+      body: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות. הקורס
+        מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
+      body_short: למד את הבסיס למדעי המחשב עם גרסה מואצת של קורסים 2-4.
+    hoc2014:
+      try_new_tutorial: נסה את גרסת הביתא של ההדרכות החדשות של שעת קוד
+      try_frozen: צייר עם אנה ואלזה מלשבור את הקרח
+    gallery:
+      title: גלריה
+      body: הצג גלריה של אפליקציות ותמונות אמן שנוצרו על-ידי המשתמשים שלנו
+    gamelab:
+      title: מעבדת המשחקים
+      body: מעבדת המשחקים זו סביבת תכנות שבה תוכל לייצר אנימציות פשוטות עם אובייקטים
+        ודמויות אשר מתקשרות אחת עם השנייה.
+      audience: גילאי 13+
+      cta: למד כיצד
+    hoc-encryption:
+      body: התלמידים ילמדו טכניקות ליצירה ופיצוח הודעות מוצפנות.
+    weblab:
+      title: מעבדת האתרים (בטא)
+      body: מעבדת האתרים זו סביבת תכנות שבה תוכל לייצר אתרים פשוטים בעזרת HTML ו-CSS.
+        תכנן את האתר שלך ושתף אותו בתוך שניות.
+      audience: גילאי 13+
+      cta: למד כיצד
+    frozen:
+      title: לשבור את הקרח
+    starwars:
+      title: מלחמת הכוכבים
+    infinity:
+      title: אינסוף מעבדת הצעצועים
+      body: השתמש במעבדת הצעצועים כדי ליצור סיפור או משחק בו מככבות דמויות האינסוף
+        של דיסני.
+    minecraft:
+      title: מיינקראפט
+      body: גלה את העולם של מיינקראפט באמצעות קוד
+    minecraft2016:
+      title: מיינקראפט
+      body: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקרפט משלך.
+    aquatic:
+      title: מיינקראפט
+    hero:
+      title: מיינקראפט
+    text-compression:
+      body: בשיעור זה, התלמידים ישתמשו בווידג'ט של דחיסת טקסט כדי לכווץ אותו על-ידי
+        החלפת תבניות עם סמלים.
+    unplugged:
+      title: שיעורים ללא מחשב
+      audience: גילאי 4+
+      body: הרכבנו עבורך מספר שיעורים ללא מחשב לשימוש בכיתתך. כעת תוכל ללמד את יסודות
+        מדעי המחשב, גם אם אין ברשותך מחשבים בכיתה! נסה להשתמש בשיעורים אלו כקורס בפני
+        עצמו או כקורס משלים לשיעורים במדעי המחשב.
+      body_short: אם אין ברשותך מחשבים, נסה להשתמש בשיעורים ללא מחשב בכיתתך.
+    unplugged_conditionals:
+      title: תנאים
+      body: למד על אלגוריתמים והתניות בפעילות הזו ללא מחשב בעזרת סט קלפים.
+    widgets:
+      title: ווידג'טים
+      body: תלמידים יכולים להרחיב אופקים מקורסי העקרונות במדעי המחשב שלנו ולהתנסות
+        בעזרת הכלים הדיגיטליים שלנו. השתמש בווידג'טים לבדם או צור שיעור מבוסס עיקרון
+        יחיד לכיתתך.
+      audience: גילאי 14+
+      cta: למד כיצד
+  gallery:
+    students_drew_these_with_code: תלמידים ציירו את אלה בעזרת קוד!
+    students_made_these_with_code: תלמידים יצרו את אלה בעזרת קוד!
+    picture_count: בימים<b>%{days}</b> האחרונים, תלמידים ציירו  <b>%{count}</b> תמונות
+      בעזרת כתיבת תוכנות במחשב שלהם. לחץ על כל תמונה כדי לראות את ההתקדמות של כל אחד.
+    activity_count: בימים<b>%{days}</b> האחרונים, תלמידים יצרו <b>%{count}</b> אפליקציות
+      ותמונות בעזרת כתיבת תוכנות מחשב משלהם. לחץ על כל תמונה וצילום מסך כדי לראות
+      את ההתקדמות של כל אחד.
+    want_to_make_your_own: רוצה להכין אחד משלך?
+    how_to_save: בשלב האחרון של מדריכים אלו, לחץ "סיים" ו "שמור" כדי לשמור את העבודה
+      שלך בגלריה.
+    more: עוד &rarr;
+    caption_by_name_age: מאת %{name}, גיל %{age}
+    caption_time_ago: "%{time_ago} לפני"
+    header: גלריה
+    header_playlab: סיפורים ומשחקים
+    header_artist: אמן
+    report_abuse: דווח על התעללות
+  landing:
+    prerelease: קורס זה נמצא בגרסת <span class='betatext'>ביטא</span>. זה אומר שזו
+      לא גירסה סופית של הקורס, והוא נמצא בפוטנציאל לשינויים בהתאם לתגובות שיתקבלו
+      ושיפורים שיעשו.
+    prerelease_hoc2014: הדרכה זו נמצא בגרסת <span class='betatext'>ביטא</span>. היא
+      בפוטנציאל לשינויים בהתאם לתגובות שיתקבלו ושיפורים שיבוצעו בה.
+    report_bug: דווח על באג
+    support: קבל עזרה
+    help_resources: עזרה ומשאבים
+    help_support: עזרה ותמיכה
+    documentation: מסמכים
+    tutorials: מדריכים
+  multi:
+    wrong_title: תשובה לא נכונה
+    wrong_body: התשובה שענית אינה נכונה. נא נסה שנית!
+    correct_title: נכון
+    correct_body: זאת התשובה הנכונה.
+  multi-submittable:
+    wrong_title: תודה רבה
+    wrong_body: תודה ששלחת תשובה.
+    correct_title: תודה רבה
+    correct_body: תודה ששלחת תשובה.
+  level_group:
+    wrong_title: תודה רבה
+    wrong_body: תודה ששלחת תשובות.
+    correct_title: תודה רבה
+    correct_body: תודה ששלחת תשובות.
+    hide_survey_last_answer: משוב זה הוא אנונימי. אנא בקש לוח הבקרה למורה לתוצאות
+      סיכומיות. שים לב שניתן לראות תוצאות רק אם לפחות 5 תלמידים מילאו את המשוב.
+    survey_submission_thankyou: תודה ששלחת תגובה לסקר זה! המשוב נוקה כך שהתגובה שלך
+      תישאר אנונימית. שים לב שהמורה שלך עדיין יוכל לראות את התגובות של כל הכיתה, אבל
+      בצורה אנונימית בלבד.
+  level_group-submittable:
+    wrong_title: תודה רבה
+    wrong_body: תודה ששלחת תשובות.
+    correct_title: תודה רבה
+    correct_body: תודה ששלחת תשובות.
+    unsubmit-title: בטל שליחת הערכה שלך
+    unsubmit-body: ביטול שליחת התשובה שלך יאפסו גם את התאריך והשעה של מועד השליחה.
+      האם אתה בטוח?
+    submit-incomplete-title: שלח את ההערכה שלך
+    submit-incomplete-body: השארת חלק מהשאלות במשוב ללא תגובה. לא תוכל לערוך את הערכתך
+      לאחר השליחה. האם אתה בטוח?
+    submit-complete-title: שלח את ההערכה שלך
+    submit-complete-body: אינך יכול לערוך את התשובות לאחר השליחה. האם אתה בטוח?
+  match:
+    wrong_title: פתרון לא נכון
+    wrong_body: הפתרון שענית אינו נכון.נא נסה שנית!
+    correct_title: נכון
+    correct_body: זאת התשובה הנכונה.
+  contract_match:
+    wrong_title: תשובה לא נכונה
+    badname: בחוזה שלך יש את השם הלא נכון.
+    badname_case: שמות הפונקציות מובדלות בין אותיות עם אותיות גדולות (Case Sensitive).
+      נסה לשנות את המקרה של החוזה שלך.
+    badrange: החוזה שלך מכיל טווח שגוי.
+    baddomainsize: בחוזה שלך אין את המספר הנכון של פריטים כפי שמופיע בקבוצת המחשבים.
+    baddomainname: לאחד או יותר מן הפריטים בתחום יש שם לא נכון.
+  text_match:
+    placeholder: הכנס את התשובה שלך כאן
+    open_response_title: תודה
+    open_response_body: תודה על תגובתך!
+    correct_title: נכון
+    correct_body: זאת התשובה הנכונה.
+  dialog:
+    ok: אישור
+    startover_title: האם אתה בטוח שאתה רוצה להתחיל מחדש?
+    startover_body: פעולה זו תחזיר את החידה למצב ההתחלתי שלה ותמחוק את כל השינויים
+      שלך.
+    startover_ok: התחל מחדש
+    startover_cancel: בטל
+  time:
+    hour: שעה אחת
+    day: יום
+    week: שבוע
+  age_interstitial:
+    age: הגיל שלך
+    header: פרטי החשבון עודכנו
+    sign_out: אם אינך מעוניין לציין את הגיל שלך, ניתן <a href="%{url}">להתנתק מהמשתמש</a>.
+  terms_interstitial:
+    title: תנאי השירות ותנאי הפרטיות עודכנו
+    intro_desc: 'עדכנו את תנאי השירות ותנאי הפרטיות שלנו כפי שמופיע מטה. השינויים
+      יחלו ב-24 לאוגוסט 2016. השינויים המשמעותיים הם: אנחנו <i>לא שומרים יותר כתובות
+      דוא"ל של תלמידים במעבדת הקוד.</i> זה משהו משמעותי עבורנו ואנחנו מקוויים שזה
+      יציב סטנדרט חדש לשמירת פרטיות התלמיד בטכנולוגיות למידה. שלחנו לך סיכום של שינויים
+      נוספים שבוצעו בדוא"ל.'
+    intro_instructions: עליך לאשר את התנאים החדשים עבור תלמידים אשר מתחת לגיל 13 בכיתה
+      שלך כדי לקבל הרשאות מלאות לכל האפשרויות החדשות שהוספנו למעבדת הקוד. כאשר מבצעים
+      רישום של חשבון עבור תלמיד שמתחת לגיל 13, יש לאשר שלבית הספר שלך יש אישור הורי
+      לאיסוף מידע אישי של התלמידים, בין היתר לשימוש בתכניות לימוד כמו מעבדת הקוד.
+    tos: תנאים
+    privacy: הצהרת פרטיות
+    privacy_notice: הערה בנושא פרטיות
+    accept_label: אני מאשר את <a href="%{tos_url}" target="_blank">תנאי השימוש</a>
+      וגם את <a href="%{privacy_url}" target="_blank">תנאי הפרטיות</a>.
+    accept: אשר
+    print: הדפס
+    reminder_desc: עדכנו את <a href="%{tos_url}" target="_blank">תנאי השירות</a> שלנו
+      ואת <a href="%{privacy_url}" target="_blank">מדיניות הפרטיות</a>. אנא קרא אותם
+      היטב בטרם תסכים להם. שים לב שכלי הלימוד של JavaScript לא יהיו זמינים לתלמידים
+      בטרם יסכימו לתנאי השירות המעודכנים.
+    review_terms: סקור את התנאים המעודכנים
+  school_info_interstitial:
+    title: אנו רוצים לאפשר לכל תלמיד ללמוד מדעי המחשב - עזור לנו לעקוב אחר ההתקדמות!
+    message: אנא הכנס את פרטי בית הספר למטה.
+    message_with_suggestion: אנא ודא שהפרטים שהזנת נכונים, או עדכן אם נדרש.
+    save: שמור
+  race_interstitial:
+    title: 'אופציונלי: עזור לנו לעקוב אחר ההתקדמות שלנו לשיפור הגיוון והשונות במדעי
+      המחשב'
+    message: אנא ספר לנו על הגזע שלך (סמן את כל המתאימים)
+    races:
+      white: לבן
+      black: שחור או אפרואמריקאי
+      hispanic: היספני או לטיני
+      asian: אסייתי
+      hawaiian: יליד הוואי או כל אי פסיפי אחר
+      american_indian: אינדיאני אמריקאי/יליד אלסקה
+      other: אחר
+      opt_out: מעדיף שלא לומר
+    submit: שלח
+    decline: סגור
+  zendesk_too_young_message: מצטערים, משתמשים צעירים אינם יכולים להתחבר לאתר התמיכה
+    שלנו. תוכל לגלוש ל- <a href="http://support.code.org">support.code.org</a> ללא
+    הזדהות או בקש מהוריך או המורה שלך ליצור איתנו קשר בשימך.
+  progress:
+    not_started: לא החל
+    in_progress: בביצוע
+    completed_too_many_blocks: הושלם, בלוקים רבים מדי
+    completed_perfect: הושלם, מושלם
+    furthest_level_attempted: רמת הרחוקה ניסיון
+    assessment: הערכה
+    submitted: נשלח
+  studio:
+    courses_working_on: קורסים שאתה עובד עליהם
+    completed_courses: קורסים שהושלמו
+    all_courses: כל המסלולים
+  project:
+    projects: פרויקטים
+    create: צור פרויקט
+    create_a_project: 'צור פרויקט חדש:'
+    new: צור חדש
+    rename: שנה שם
+    save: שמור
+    delete: מחק
+    import: ייבא
+    share_link_import_error_header: משהו השתבש.
+    exit: חזור לקורס
+    my_projects: הפרויקטים שלי
+    project_gallery: פרויקטים
+    publish: פרסם
+    unpublish: בטל פרסום
+    share: שתף
+    share_title: שתף את הפרויקט שלך
+    share_copy_link: 'העתק קישור:'
+    share_embed_description: תוכל להדביק את הקוד לתוך דף HTML כדי להציג את הפרויקט
+      כדף אינטרנט.
+    share_u13_warning: שאל את המורה שלך לפני שתשתף. שתף רק עם חברים אחרים מבית הספר
+      שלך.
+    embed: הטמע
+    advanced_share: הצג אפשרויות מתקדמות
+    no_projects: כרגע אין לך פרויקטים. לחץ על אחד מהכפתורים למעלה כדי להתחיל פרויקט
+      חדש.
+    close: סגור
+    more: יותר
+    name: שם
+    updated: עודכן
+    project_type: סוג פרויקט
+    help_text: לחץ <strong>צור אפליקציה</strong> או <strong>צייר משהו</strong> למטה
+      כדי להתחיל פרויקט חדש!<br/>תוכל לחזור ולעבוד על הפרויקטים שלך בכל זמן שתרצה.
+    need_help: נסה את הקורסים הללו כדי לעזור לך להתחיל עם הפרויקט החדש שלך
+    thumbnail_help: לא רואה תמונה ממוזערת של הפרויקט שלך? הרץ את האפליקציה כדי לייצר
+      תמונה חדשה שכזו. שים לב שיתכן ויעברו כמה שעות עד שהתמונה הממוזערת תעדכן בכל
+      המקומות.
+    really_delete: למחוק?
+    delete_yes: כן
+    delete_no: לא
+    saved: נשמר
+    not_saved: לא נשמר
+    cancel: בטל
+    delete_confirm_title: האם אתה בטוח שברצונך למחוק את הפרויקט הזה?
+    delete_confirm_text: מחיקת הפרויקט שלך תסיר אותה לתמיד מרשימת הפרויקטים שלך. כל
+      מי ששיתפת איתו את הקישור לפרויקט לא יוכל עוד לצפות בו.
+    view_all: הצג את הפרויקטים שלי
+    remix: צור משלך
+    click_to_remix: לחץ "צור משלך" כדי ליצר גרסה משלך לפרויקט!
+    edit_project: ערוך פרויקט
+    sharing_disabled: מצטערים, פרויקט זה אינו זמין לשיתוף. אם זה הפרויקט שלך או הפרויקט
+      של אחד מתלמידיך, אנא <a href='https://studio.code.org/users/sign_in'>התחבר</a>
+      לחשבונך כדי לצפות בפרויקט.
+    abuse:
+      tos: פרויקט זה דווח כמפר את <a href='http://code.org/tos'>תנאי השימוש</a> של
+        Code.org ואין אפשרות לשתף אותו עם אחרים.
+      policy_violation: פרויקט זה מכיל מידע אשר לא ניתן לשיתוף עם אחרים. אנא צור קשר
+        עם בעלי האפליקציה כדי לתקן את התוכן של האפליקציה שלהם.
+      contact_us: אם אתה חושב שזו טעות, אנא <a href='https://code.org/contact'>צור
+        קשר.</a>
+      go_to_code_studio: עבור לסטודיו קוד
+      report_abuse_form:
+        intro: אם נתקלת בתוכן תוקפני, מאיים, בריונות רשת, הטרדה, או כל סוג הפרת זכויות
+          היוצרים של תוכן שלך בזמן שימוש באפליקציות שנבנו בעזרת סטודיו קוד, אנא מלא
+          את הטופס שלמטה. אנו ניקח את הדיווח שלך לתשומת ליבנו ברצינות, נחקור בהתאם
+          לכך, וננקוט בפעולות הנדרשות.
+        validation:
+          email: אנא ספק כתובת דואר אלקטרוני
+          age: אנא ציין גיל
+          abuse_type: אנא השב כיצד התוכן מפר את תנאי השימוש
+          abuse_detail: אנא ספק מידע נוסף על התוכן שאתה מדווח עליו
+        abusive_url: דיווח על תוכן הכתובת נשלח
+        abuse_type:
+          question: איך התוכן מפתר את %{link_start}תנאי השימוש%{link_end}?
+          harassment: איומים, בריונות רשת, הטרדה
+          offensive: תוכן פוגעני
+          infringement: הפרת זכויות יוצרים
+          other: אחר
+        detail: אנא ספק כמה שיותר מידע אודות התוכן עליו אתה מדווח.
+        acknowledge: בעת שליחת המידע הזה, אתה מכיר בעובדה שהוא יטופל בהתאם לתנאי %{link_start_privacy}מדיניות
+          הפרטיות%{link_end} %{link_start_tos}ותנאי השימוש%{link_end}.
+  peer_review:
+    accepted:
+      name: אושר
+      description: "<strong>כן</strong>, השליחה הזו <strong>עונה</strong> על הדרישות"
+    rejected:
+      name: נדחה
+      description: "<strong>לא</strong>, השליחה הזו <strong>לא עונה</strong> על הדרישות"
+    escalated:
+      name: הועבר לאישור
+      description: אני מבקש שמדריך יבדוק את הטופס
+    instructor_feedback: התייחסות המדריך
+    outdated: משוב זה נוסף לגרסה הקודמת שנשלחה
+  flex_category:
+    required: סקירה
+    ramp_up: העלה רמה
+    main_course: קורס ראשי
+    extra_course_content: תוכן נוסף של הקורס
+    csf_e_1: המשך אל קורס ה (רשות)
+    csf_e_2: תכני קורס ה
+    csf_f_1: המשך אל קורס ו (רשות)
+    csf_f_2: תכני קורס ו
+    csd1_1: 'פרק 1: הדרך לפתרון תהליך'
+    csd1_2: 'פרק 2: מחשבים ופתרון בעיות'
+    csd2_1: 'פרק 1: תוכן אינטרנט ו-HTML'
+    csd2_2: 'פרק 2: עיצוב ו-CSS'
+    csd3_1: 'פרק 1: תמונות ואנימציות'
+    csd3_2: 'פרק 2: יצירת משחקים'
+    csd4_1: 'פרק 1: עיצוב מכוון משתמש'
+    csd4_2: 'פרק 2: תכנון אפליקציה'
+    csd5_1: 'פרק 1: ייצוג מידע'
+    csd5_2: 'פרק 2: פתרון בעיות נתונים'
+    csd6_1: 'פרק 1: תכנות עם חומרה'
+    csd6_2: 'פרק 2: יצור אב טיפוס פיזי'
+    csd_survey: סקר שלאחר הקורס
+    csp1_1: 'פרק 1: ייצוג ושליחת מידע'
+    csp1_2: 'פרק 2: המצאת האינטרנט'
+    csp2_1: 'פרק 1: קידוד וכיווץ מידע מורכב'
+    csp3_1: 'פרק 1: שפות תכנות ואלגוריתמים'
+    cspSurvey: סקר
+    cspAssessment: הערכה לפרק
+    csp_postap_2: 'פרק 2: אפליקציות ומסדי נתונים'
+    csp3_1_2018: 'יחידה 3: מבוא לתכנות'
+  external_links:
+    disclaimer: כתב ויתור
+    leaving_domain: אתה עוזב כעת את התחום הזה לעבר אתר אשר אינו מנוהל על-ידי Code.org.
+  hoc_download:
+    title: הורדות של שעת קוד
+    capsule_title: האם יש ברשותך גישה לאינטרנט?
+    capsule_desc: השתמש באפליקציה מבוססת אינטרנט <a href="%{url}">%{app_name}</a>.
+    instructions_headline: אין אינטרנט?
+    instructions: 'הדרכה למורים: אם יש ברשותך שירות אינטרנט לקוי, מדריכי שעת קוד הללו
+      זמינים להורדה או התקנה לשימוש בלא רשת. בחר את השפה והפלטפורמה בה אתם עובדים,
+      הורד והתקן את זה על כל המחשבים בכיתה שלך. מומלץ שתשתמש בכונן USB להוריד פעם
+      אחת ולהשתמש בו להתקנה בכל המחשבים. שים לב: התלמידים לא יוכלו להתחבר לסטודיו
+      קוד, לשמור התקדמות ולהדפיס תעודות. באפשרות המורים להדפיס תעודות בטרם השיעור
+      <a href="%{url}">כאן</a>.'
+    minecraft_name: שעת קוד של מיינקרפט
+    starwars_blocks_name: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד (בלוקים)'
+    starwars_javascript_name: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד (JavaScript)'
+    download_message: הורד %{app_name} לשימוש ללא אינטרנט (136MB)
+    download_in_Albanian: 'הורד באלבנית:'
+    download_in_Arabic: 'הורד בערבית:'
+    download_in_Azerbaijani: 'הורד באזרבייג''נית:'
+    download_in_Basque: 'הורד בבסקית:'
+    download_in_Bosnian: 'הורד בבוסנית:'
+    download_in_Bulgarian: 'הורד בבולגרית:'
+    download_in_Catalan: 'הורד בקטלונית:'
+    download_in_Chinese-Taiwan: 'הורד בסינית-טיוואנית:'
+    download_in_Chinese: 'הורד בסינית:'
+    download_in_Croatian: 'הורד בקרואטית:'
+    download_in_Czech: 'הורד בצ''כית:'
+    download_in_Danish: 'הורד בדנית:'
+    download_in_Dutch: 'הורד בהולדנית:'
+    download_in_English: 'הורד באנגלית:'
+    download_in_Finnish: 'הורד בפינית:'
+    download_in_French: 'הורד בצרפתית:'
+    download_in_German: 'הורד בגרמנית:'
+    download_in_Greek: 'הורד ביוונית:'
+    download_in_Hebrew: 'הורד בעברית:'
+    download_in_Hungarian: 'הורד בהונגרית:'
+    download_in_Icelandic: 'הורד באיסלנדית:'
+    download_in_Indonesian: 'הורד באינדונזית:'
+    download_in_Irish: 'הורד באירית:'
+    download_in_Italian: 'הורד באיטלקית:'
+    download_in_Japanese: 'הורד ביפנית:'
+    download_in_Korean: 'הורד בקוריאנית:'
+    download_in_Latvian: 'הורד בלטבית:'
+    download_in_Lithuanian: 'הורד בליטאית:'
+    download_in_Norwegian: 'הורד בנורבגית:'
+    download_in_Norwegian-Nynorsk: 'הורד בנורבגית-ניורסקית:'
+    download_in_Polish: 'הורד בפולנית:'
+    download_in_Portuguese-Brazil: 'הורד בפורטוגזית (ברזיל):'
+    download_in_Portuguese: 'הורד בפורטוגזית:'
+    download_in_Romanian: 'הורד ברומנית:'
+    download_in_Russian: 'הורד ברוסית:'
+    download_in_Serbian: 'הורד בסרבית:'
+    download_in_Slovenian: 'הורד בסלובנית:'
+    download_in_Spanish: 'הורד בספרדית:'
+    download_in_Swedish: 'הורד בשבדית:'
+    download_in_Turkish: 'הורד בטורקית:'
+    download_in_Ukrainian: 'הורד באוקראינית:'
+    download_in_Vietnamese: 'הורד בוייטנאמית:'
+    windows: חלונות (64-סיביות)
+    mac: Mac OS X
+  stage_extras_teacher_message: כיבית את האפשרות לתוספות לשיעור עבור חלק מהקבוצות
+    שלך. התלמידים שלך לא יוכלו לראות את הדפים האלו אלא אם כן תאפשר זאת. תוכל לאפשר
+    את התוספות לשיעור ע"י ניווט ל <a href='http://code.org/teacher-dashboard'>לוח
+    הבקרה למורה</a> שלך.
+  locked_stage: התכנים בשלב זה אינם ניתנים לשימוש מכיוון ששלב זה נעול כרגע. המורה
+    שלך יכול לשחרר את הנעילה של השלב ברגע שיגיע הזמן לעבוד עליו או הזמן לבדוק את תשובותיך.
+  hidden_stage: המורה שלך לא ציפה לראות אותך כאן. אנא בקש עזרה מהמורה שלך שיכוון אותך
+    לשיעור שאתה אמור להיות בו.
+  hidden_script: המורה שלך לא ציפה לראות אותך כאן. אנא בקש עזרה מהמורה שלך שיכוון
+    אותך ליחידה שאתה אמור להיות בה.
+  return_unit_overview: עבור לסקירת יחידת הלימוד
+  return_course_overview: עבור לסקירת הקורס
+  view_all_units: הצג את כל היחידות
+  pd:
+    form_labels:
+      first_name: שם פרטי
+      first_name_preferred: שם פרטי מועדף
+      last_name: שם משפחה
+      email: דואר אלקטרוני
+      email_alternate: דוא"ל חלופי
+      gender: זהות מגדרית
+      school_name: שם בית הספר
+      school_city: יישוב בית הספר
+      school_country: ארץ בית הספר
+      ages: איזה גיל(אים) אתה מלמד השנה?
+      subjects: איזה נושא(אים) אתה מלמד השנה?
+      resources: באיזה מהמשאבים הבאים ללימוד מדעי המחשב אתה משתמש?
+      robotics: באיזה מהרובוטים הבאים אתה משתמש?
+      workshop_organizer: מארגן הסדנה
+      workshop_facilitator: מנחה הסדנה
+      workshop_course: קורס הסדנה
+      email_opt_in: האם נוכל לשלוח לך דוא"ל בנוגע לתכנית הבינלאומית של Code.org, לעדכן
+        אותך בקורסים, או חדשות נוספות בעולם מדעי המחשב?
+      legal_opt_in: 'על-ידי שליחת טופס זה, אתה מסכים לאפשר ל-Code.org לשתף מידע בנושא
+        אופן השימוש שלך בשירותים ובלימוד המקצועי שלך עם שותף בינלאומי של Code.org
+        הנמצא בארצך, מחוז בית הספר, ומנחי קורסים. אנו נשתף את פרטי הקשר שלך, איזה
+        קורסים/יחידות אתה משתמש ומידע סיכומי על הכיתה שלך עם שותפים אלו. זה כולל את
+        מספר התלמידים בכיתותיך, חתך דמוגרפי של הכיתה שלך, ושם בית הספר והמחוז. אנו
+        לא נשתף מידע על תלמידים בודדים עם השותפים שלנו: כל המידע על התלמידים יטושטשו
+        ויסוכמו. השותפים הבינלאומיים והמנחים שלנו מחויבים בחוזה לשימוש במידע שנשלח
+        אליהם באותה רמת סודיות כמו Code.org.'
+    form_entries:
+      gender:
+        male: גבר
+        female: אישה
+        not_listed: המונח המועדף אינו מופיע ברשימה
+        none: מעדיף לא לענות
+      school_country:
+        canada: קנדה
+        chile: צ'ילה
+        israel: ישראל
+        malaysia: מלזיה
+        mexico: מקסיקו
+        thailand: תאילנד
+      ages:
+        ages_under_6: "< גילאי 6"
+        ages_7_8: גילאי 7-8
+        ages_9_10: גילאי 9-10
+        ages_11_12: גילאי 11-12
+        ages_13_14: גילאי 13-14
+        ages_15_16: גילאי 15-16
+        ages_17_18: גילאי 17-18
+        ages_19_over: גילאי 19+
+      subjects:
+        cs: מדעי המחשב
+        math: מתמטיקה
+        science: מדע
+        history: היסטוריה / מדעי החברה
+        la: יסודות השפה
+        efl: אנגלית כשפה זרה
+        music: מוסיקה
+        art: אמנות
+        other: 'אחר:'
+      resources:
+        kodable: Kodable
+        other: 'אחר:'
+      robotics:
+        kodable: Kodable
+        other: 'אחר:'
+      email_opt_in:
+        opt_in_yes: כן
+        opt_in_no: לא
+  cookie_banner:
+    more_information: הצג את מדיניות הפרטיות של Code.org.
+    accept: מסכים
+  gdpr_dialog:
+    heading: האם אתה מאשר להשתמש באתר המבוסס בשטח ארצות הברית?
+    message: יתכן ונתוני השימוש שלך באתר ישלחו, ישמרו או יעובדו בארצות הברית.
+    link_intro: לפרטים נוספים ראה את
+    privacy_policy: מדיניות פרטיות
+    logout: התנתק
+    true: כן

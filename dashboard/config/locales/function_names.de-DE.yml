@@ -1,0 +1,65 @@
+---
+de:
+  data:
+    function_names:
+      x: x
+      details: Details
+      draw eyebrow: zeichne Augenbrauen
+      draw pupil: zeichne Pupillen
+      draw a circle: Zeichne einen Kreis
+      draw a car: zeichne ein Auto
+      draw_rect: zeichne_rechteck
+      draw square: zeichne Quadrat
+      jump to middle: springe in die Mitte
+      draw a button: zeichne einen Knopf
+      draw cord: zeichne Schnur
+      draw left leg: zeichne linkes Bein
+      draw right leg: zeichne rechtes Bein
+      draw O: O zeichnen
+      draw D: D zeichnen
+      draw E: E zeichnen
+      draw a hexagon: zeichne ein Sechseck
+      draw a flower: zeichne eine Blume
+      draw a square: zeichne ein Quadrat
+      draw a snowflake: zeichne eine Schneeflocke
+      draw 3 hexagons: 3 Hexagone zeichnen
+      draw 4 hexagons: 4 Hexagone zeichnen
+      draw 5 hexagons: 5 Hexagone zeichnen
+      draw a tree: zeichne einen Baum
+      graph: Graph
+      draw waves: zeichne Wellen
+      draw a wave: zeichne eine Welle
+      draw a small triangle: zeichne ein kleines Dreieck
+      draw a triangle: zeichne ein Dreieck
+      draw a house: Zeichne ein Haus
+      draw a star: zeichne einen Stern
+      draw: zeichne
+      draw bit: zeichne ein bisschen
+      draw a polygon: zeichne ein Vieleck
+      draw a shape: zeichne eine Form
+      do something: Funktionsblock
+      story: Handlung
+      jump: springen
+      Draw a triangle: Zeichne ein Dreieck
+      Draw a Cube: Zeichne ein Würfel
+      draw a cube: zeichne ein Dreieck
+      draw an octagon 20: zeichne einen Oktagon 20
+      Draw a square: Zeichne ein Quader
+      cube: Würfel
+      triangle: dreieck
+      draw an octagon: zeichne einen Oktagon
+      draw octagons: zeichne Oktagon
+      set score: Punktestand setzen
+      get nectar: hole Nektar
+      Jump: Springen
+      test: prüfe
+      diamond: Diamant
+      move: bewege
+      move right: nach rechts bewegen
+      move up: nach oben bewegen
+      move down: nach unten bewegen
+      move left: nach links bewegen
+      collect: sammle
+      turn left: nach links drehen
+      move forward: vorwärts bewegen
+      turn right: nach rechts drehen

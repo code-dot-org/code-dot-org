@@ -1,0 +1,29 @@
+---
+sq:
+  data:
+    function_names:
+      x: x
+      draw a circle: vizato një rreth
+      draw a hexagon: vizato një gjashtëkëndësh
+      draw a flower: vizato një lule
+      draw a square: vizato një katror
+      draw a snowflake: vizato një flok dëbore
+      draw a tree: vizato një pemë
+      draw a triangle: vizato nje trekendesh
+      draw a house: vizato një shtëpi
+      draw a star: vizato një yll
+      do something: bëj diqka
+      jump: hidhu
+      set score: vendos pikët
+      get nectar: merr nektar
+      test: test
+      diamond: diamant
+      move: lëviz
+      move right: lëviz djathtas
+      move up: lëviz sipër
+      move down: lëviz poshtë
+      move left: lëviz majtas
+      collect: mbledh
+      turn left: kthehu majtas
+      move forward: lëviz përpara
+      turn right: kthehu djathtas

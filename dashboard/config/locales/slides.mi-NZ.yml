@@ -1,0 +1,1972 @@
+---
+mi:
+  slides:
+    maze_intro:
+      1:
+        text: Nau mai ki tō hour of code tuatahi! Tēnā me wawe te koke kia rongo ai
+          koe i tēnei mea te papatongotanga.
+      2:
+        text: Ka whakamahi tātou i te Blockly, he reo papatonotanga ā-atanga, ā, ko
+          tāu he tō me te waiho paraka ki te tuhi waehere.
+      3:
+        text: Ko te nuinga o ngā waehere he mea patotuhi, heoi anō a Blockly, he mea
+          atanga. He rite ia paraka ki tētahi rārangi waehere "tūturu".
+      4:
+        text: Ka ako ki te pūtake o te pūtaiao rorohiko, koia ko ngā ariā ka whakamahia
+          i ngā mahi hanga taupānga tae atu ki ngā mahi hautū i te waka karore o Matawhero.
+      5:
+        text: He rārangi tohutohu te papatono hei whai mā tō rorohiko.
+      6:
+        text: Ko te whāinga o tō papatono tuatahi ko te ārahi i tētahi Manu Takariri
+          i tētahi rīrapa ki te patu i te Poaka Kākāriki.
+      7:
+        text: Kei te taha mauī o te rīrapa te wāhi ka whakahaerehia ai tō papatono.
+          Kei raro i te rīrapa ngā tohutohu mō ia panga.
+      8:
+        text: Kei te pouaka utauta o waenganui ngā whakahau mā te Manu Takariri. Māu
+          ēnei e whakamahi ki te hanga i tō waehere.
+      9:
+        text: Kei te taha matau tō papamahi, te wāhi ka hangaia ai tō papatono mā
+          te tō i ngā paraka i te pouaka utauta. Ki te muku i tētahi paraka me tō
+          i taua paraka ki te ipu para kei te kokona.
+      10:
+        text: He tohutohu ia paraka. Ki te tō koe i te paraka "neke ki mua" ki tō
+          papamahi me te pana i te "Whakahaerehia te Papatono", ka neke te manu kotahi
+          te hipanga ki mua i te rīrapa.
+      11:
+        text: Mā te tō i ngā paraka ki tō papamahi me te whakapiri i aua paraka, ka
+          nui ake ngā hohenga ka taea. Ka mahi te manu i tā ngā whakahau mai runga
+          ki raro.
+      12:
+        text: Ki te whakahaere koe i tētahi papatono kātahi ka tipu te hiahia ki te
+          whakatika me te whakamātau anō, me pēhi i te pātene "Tautuhi Anō".
+      13:
+        text: Hoake tātou ki te hopu i ngā poaka!
+    artist_intro:
+      1:
+        text: Tēnā koe, ko JR ahau! E toa ai tētahi tīma whakataetae waka tere me
+          whai kaipūtaiao rorohiko. Māna ngā raraunga o te waka e tātari kia tere
+          ake ai te rere.
+      2:
+        text: Ko koe tētahi rehetoi i ēnei panga ka tā i tētahi rārangi ki muri i
+          a ia i a koe e haere ana.
+      3:
+        text: Kei te kī mai te paraka "neke ki mua mā te 100 pika". He tongi moroiti
+          noa iho nei ngā pika kei te mata o tō rorohiko.
+      4:
+        text: Kei te kī mai tēnei paraka "huri whakatematau mā te 90 putu." Mā tēnei
+          e huri ai tō rehetoi kia rite tonu āna nekehanga ki ērā o ngā paraka "huri"
+          kei ngā panga rīrapa.
+      5:
+        text: Pāwhiritia tētahi o ngā pere o ēnei paraka ki te panoni i te nui o ngā
+          wā ka neke te rehetoi ki mua, ka huri rānei ia. Rāwekehia kia waia haere
+          koe ki ēnei paraka hou.
+    farmer_intro:
+      1:
+        text: Kia ora rā, ko Paola ahau! I ēnei panga ko koe te kaiahuwhenua māu tō
+          pātiki e whakapapatahi kia rite pai mō te whakatō i ngā huakai.
+      2:
+        text: Māu ia e āwhina ki te tango i ngā pūkei oneone katoa me te whakakī i
+          ngā rua.
+      3:
+        text: Mā ngā paraka hou e tango i te kārehukī 1 o te oneone i te pūkei me
+          te whakakī i te rua ki te kārehukī 1 o te oneone.
+      4:
+        text: He rerekē te rahi o ēnei pūkei me ēnei rua, nā reira, māu te kaiahuwhenua
+          e whakamōhio kia hia ngā kārehukī e tika ana kia whakamahia.
+    flappy_intro:
+      1:
+        text: Tēnā koe, ko Katie ahau! Ko tētahi o ngā āhuatanga tino nanawe o te
+          pūtaiao rorohiko ko te pāhekohekotanga ka taea i tētahi papatono rorohiko.
+      2:
+        text: I ia wā ka pāwhiri rānei, ka patopato rānei, ka patotuhi rānei tētahi
+          tangata ki tētahi rorohiko, tētahi waea rānei, ka hangaia e ia tētahi TAKAHANGA,
+          ā, mā ētahi waehere e whakatau me aha ina puta mai tētahi TAKAHANGA.
+      3:
+        text: 'Hei tauira, tērā pea he PŪNANAO-TAKAHANGA e meatia ana "ki te pāwhiritia
+          te kiore whakatangihia mai tētahi oro" '
+      4:
+        text: Kua rongo kōrero koe mō te kēmu FlappyBird? Ka ako tātou ki te papatono
+          i tā tātou ake putanga motuhake o FlappyBird mā te whakamahi i ngā pūnanao
+          Takahanga!
+      5:
+        text: I te waehere ka tuhia e koe ka tō, ka tuku hoki i ngā paraka e whakaatu
+          ana i ngā whakahau mō te rorohiko. Kei ōna pūtake, he whakaahuatanga ēnei
+          paraka katoa o te waehere tūturu.
+      6:
+        text: 'Tēnā, tirohia te papamahi, kei konā ētahi paraka kākāriki kua whakakīia
+          kētia mōu - he "pūnanao takahanga" ēnei '
+      7:
+        text: Mēnā e hiahia ana koe kia PAKI te manu ina PĀWHIRITIA te kiore, ka taea
+          e koe tēnā te whakarite mā te whakapiri i te paraka "PAKI" ki te pūnanao
+          takahanga whaitake, ā, ka auau te paki a te manu i tō kēmu i ngā wā ka pāwhiritia
+          te kiore.
+      8:
+        text: Ka whakaaturia i ia panga o tēnei ngohe ngā momo takahanga hou hei paraka
+          kākāriki i te papamahi, ā, māu e whakatau ko ēhea paraka whaitake ka tāpiritia
+          hei urupare ki aua takahanga.
+      9:
+        text: Ki te kite koe i tētahi pere takaiho pēnei i tēnei, he tohu e meatia
+          ana e wātea ana ngā tautuhinga kia panonihia - pēnei i te oro ka whakatangihia
+          i te pānga o flappy ki te papa.
+      10:
+        text: Hei te panga whakamutunga māu tāu ake kēmu e waihanga ka tiria ai ki
+          ō hoa. Kia ngahau!
+    loop_times:
+      1:
+        text: Kia ora, ko Mark ahau! Kia ako tātou e pā ana ki ngā koromeke. Māu te
+          rorohiko e whakahau ki te tōai i tētahi tautuhinga hohenga kia mano, kia
+          piriona rānei wā mā te whakamahi koromeke.
+      2:
+        text: I tēnei panga e hiahia ana tātou kia neke te manu ki mua e rima mokowā
+          kia tae atu ia ki te poaka.
+      3:
+        text: Hei āwhina i a tātou, e pai ana kia whakamahia e tātou te paraka "tōai"
+          hou.
+      4:
+        text: Tē tō atu ai i ngā paraka "neke ki mua" e rima...
+      5:
+        text: Ka taea e tātou te paraka "neke ki mua" te hoatu ki roto i tētahi paraka
+          "toāi" me te tuhi i te nui o ngā wā ka tōaitia ki taua paraka tonu.
+      6:
+        text: 'Ā, he tino kōrero tēnei: e whakaae ana kia nui atu i te kotahi whakahau
+          ka hoatu ki roto i ia paraka "tōai".'
+      7:
+        text: Kia pai te mahi me tō paraka "tōai" hou!
+    loop_until:
+      1:
+        text: Tēnā koe, ko Chris ahau. I mua i taku piri atu ki Miami Heat i uru ahau
+          ki Georgia Tech ki te ako i te Pūtaiao Rorohiko. Me whakamātau tātou i tā
+          tātou paraka hou, te paraka "toaitia kia".
+      2:
+        text: Ka pēhea mehemea kāore tātou i te mōhio ki te tawhiti me neke te manu
+          kia tae atu ia ki te poaka?
+      3:
+        text: Ki te hoatu tātou i tētahi paraka "neke ki mua" ki roto i tētahi paraka
+          "tōaitia kia", ka neke tonu te manu ki mua kia tae rā anō ia ki te manu
+          (kia tuki rānei ia ki tētahi pātū).
+      4:
+        text: 'Ā, he tino kōrero tēnei: pēnei i tā tātou i mua, e whakaae ana kia
+          nui atu i te kotahi whakahau ka hoatu ki roto i ia paraka "tōai", ā, ka
+          tōaitia te katoa.'
+    if:
+      1:
+        text: 'Kia ora rā, ko Bill ahau! Tēnā kia ako tātou e pā ana ki tētahi ariā
+          taketake hou: ngā tauākī "mēnā". Koinei te ara e hanga whakatau ai te rorohiko.'
+      2:
+        text: Ka whakamahi koe i ngā tauākī "Mēnā" i ia rā. I mua i te puta ki waho
+          ka whakaaro ake MĒNĀ e ua ana me tomo koti ahau.
+      3:
+        text: Mā tātou e mea atu ki te kairoro ki te rangahau MĒNĀ he ara ki te taha
+          mauī, ā, mēnā ka kitea tētahi ara ki te taha mauī ka meatia kia huri atu
+          ia ki taua ahunga.
+      4:
+        text: Ki te tuhi waehere mō tēnei āhuatanga me tō tātou i tā tātou paraka
+          "mēnā" me te hoatu i tētahi paraka "huri whakatemauī" ki roto.
+      5:
+        text: Nā, ki te hoatu e tātou tētahi paraka "neke ki mua" ki runga ake i taua
+          paraka me tētahi paraka "tōai" e karapoti ana i te katoa, i ia wā ka neke
+          te kairoro ka rangahau ia kia kitea mēnā he ara ki te taha mauī kātahi ia
+          ka huri. E kore e tutuki te rangahau me te huri i ia hipanga ki te kore
+          te whakahau "tōai".
+      6:
+        text: He nui te wāhi ki ngā tauākī "Mēnā" i te pūtaiao rorohiko. Ko tētahi
+          o ngā papatono tuatahi i tuhia e au ko te kēmu tic-tac-toe, ā, i tuhia tētahi
+          tauākī mēnā e meatia ana, MĒNĀ e tata ana te toa o tērā atu tangata, āraia
+          te āputa mā reira ia e toa ai.
+      7:
+        text: Kia ngahau te mahi me te paraka "mēnā"!
+    if_else:
+      1:
+        text: Tēnā koe, ko Saloni tōku ingoa. Whakamahi ai au te pūtaiao rorohiko
+          ki te tautoko i te whakataunga o ngā take hauora, rongoā hoki. Tēnā kia
+          ako tātou e pā ana ki te paraka "mēnā kē". He rite tōna hanga ki te paraka
+          "mēnā" heoi anō, he āpitihanga kē tōna, arā, ko te "kē" tēnā.
+      2:
+        text: Ki te hoatu e au tētahi paraka "neke ki mua" ki te wāhi e kī "mahia
+          atu" ana me tētahi paraka "huri whakatemauī" ki te wāhi e kī "kē" ana he
+          tohu kei te kairoro e rua ngā kōwiringa. MĒNĀ he ara kei mua ka neke te
+          kairoro ki mua, mēnā kāore he ara ki mua ka huri KĒ te kairoro ki te taha
+          mauī.
+      3:
+        text: E whakaae ana kia hoatu e tātou ngā paraka "mēnā kē" ki roto i ngā paraka
+          "tōai" kia neke tonu te kairoro, pēnei i te paraka "mēnā", ā, mā te paraka
+          "mēnā kē" ka rangahau tonu te kairoro mēnā rā he wāhi hei huri mōna.
+      4:
+        text: Na, nekehia aua kairoro ki ngā wāhi e tika ana!
+    if_else_scrat:
+      1:
+        text: He whakatau i ngā kōwhiringa e rua te tauākī mēnā-kē. Tēnā kia rangahau
+          tātou ka pēhea tā tatou whakamahi i te tauākī mēnā-kē me tō tātou hoa a
+          Scrat te rīroi.
+      2:
+        text: He rite tonu te hanga o tēnei paraka ki te paraka "mēnā", otirā, he
+          āpitihanga tōna kei te mutunga e kī ana "kē". Ki te hoatu e au tētahi paraka
+          "neke ki mua" ki te wāhi e kī "mahia atu" ana me tētahi paraka "huri whakatemauī"
+          ki te wāhi e kī "kē" ana, ka neke a Scrat te rīroi ki mua mēnā rā he ara
+          ki mua. Mēnā kāore he ara ki mua, ka huri kē a Scrat ki te taha mauī.
+      3:
+        text: E whakatau ana, ā, e kawe ana i tētahi hohenga o ngā hohenga e rua i
+          runga i taua whakatau. Ā, he rite tonu te āhei o te paraka "mēnā", arā,
+          e whakaae ana kia hoatu i ngā pāraka "mēnā-kē" ki roto i ngā paraka "tōai".
+      4:
+        text: Tēnā, ā tātou a Scrat te rīroi e tiki atu i te kano oke!
+    function:
+      1:
+        text: Tēnā koe, ko Brina ahau, he kaipūkaha ahau ki Paeāhua (Instagram). Ko
+          te taumahi tētahi rārangi waehere ka rite tonu te whakamahinga ōna hoki
+          atu, hoki atu. Nā reira, kia kaua te tangata e mate ki te tuhi i taua waehere
+          i ia wā ka whakamahia, ka whakamahi ia i tētahi paraka anake.
+      2:
+        text: Ka ako tātou ki te whakamahuki taumahi. He whetū kei te kokona o ngā
+          whakamahukitanga taumahi. Kua tuhia te ingoa o te taumahi ki te rārangi
+          o runga.
+      3:
+        text: Ko ngā paraka ka noho ki roto i taua whakamahukitanga he whakahau mā
+          tātou. Nā reira kua tapaina tēnei whakamahukitanga taumahi ki te ingoa "whakakīia
+          kia 5", ā, he mea hanga ki tētahi paraka "tōai" me tētahi paraka "whakakīia".
+      4:
+        text: Ka noho te whakamahukitanga ki te papamahi, engari, kāore tā tātou kaiahuwhenua
+          e whakahaere i te taumahi ki tōia rā anō e tātou tā tātou paraka taumahi
+          "whakakīia kia 5" i te kāwai taumahi.
+      5:
+        text: 'Tēnā kia whakahokia e tātou te harikoa ki ngā mahi Taumahi '
+    loop_while:
+      1:
+        text: 'Tēnā koe, ko Makinde ahau! Tēnā kia ako tātou e pā ana ki te "paraka
+          i te." '
+      2:
+        text: Ka mahi te "paraka i te" i te aha rānei ka hoatu ki roto MĒNĀ e PONO
+          ana te tauākī kei runga.
+      3:
+        text: Hei tauira, mēnā e tū ana te kaiahuwhenua ki runga i te pūkei, ka haere
+          tonu tana tango i tētahi kārehukī 1 I TE pūkei i raro i a ia.
+    loop_for:
+      1:
+        text: Kia ora rā, ko Trina ahau, he kaimahi ahau ki Pixar. He nui aku mahi
+          kiriata, ā, ko Shrek tētahi.
+      2:
+        text: Koinei tā tātou koromeke "pūtatau" hou. Ka auau tana kawe hohenga, ā,
+          e taea ana e koe aua hohenga te paku panoni.
+      3:
+        text: I tēnei o ngā tauira kei te kī mai tā tātou koromeke "pūtatau" "tātai
+          mawhiti 10 me te pūtatau mai i te 50 ki te 90", ā, ko tā tātou paraka "tāngia
+          he tapawhā kei roto. Tōia te paraka "pūtatau" i te wāhanga "Ngā Taumahi"
+          ki te takiwā "roanga".
+      4:
+        text: Nā reira, ka tā e tā tātou rehetoi tētahi tapawhā he 50 pika te roanga
+          o ōna taha kātahi ka tāpiri i te 10 ki taua 50 me te tā i tētahi tapawhā
+          he 60 pika te roanga o ōna taha. Ka pēnei tonu tana tāpiri i te 10 me te
+          tā i ngā tapawhā tae noa atu ki te wā ka eke ki te 90. Mutunga iho he tapawhā
+          ā tatou e 50, 60, 70, 80 me te 90 te rahi.
+    parameters:
+      1:
+        text: Tēnā koe, ko Janete ahau, he kaipūkaha ahau ki Zynga.
+      2:
+        text: Ka pēhea mēnā e hiahia ana tātou ki te tā i tētahi huinga tapatoru,
+          he rerekē ngā rahi?
+      3:
+        text: Ka taea tērā waehere te tuhi ā-ringa nei, ka taea rānei te whakamahi
+          i tētahi taumahi he tawhā ōna.
+      4:
+        text: Kia tutuki tēnei mahi tēnā pawhiritia te whetū kahurangi kei te whakamahukitanga
+          taumahi "tāngia he tapatoru". Kātahi me tō i te "ingoa tāuru" ki roto i
+          te paraka "tāuru".
+      5:
+        text: Kātahi ki te tuhi koe i te "roanga" ki te takiwā kei reira te "x" me
+          te pēhi i te "Tāuru" ka waihangahia e koe tētahi tāuru roanga mō te taumahi.
+      6:
+        text: Kātahi me pāwhiri i te whetū. Me pāwhiri i te kāwai taurangi ka tōia
+          ai te paraka "roanga" ki roro i te paraka "neke ki mua" o te whakamahukitanga
+          taumahi. Tēnā tōia atu te paraka tau o mua.
+      7:
+        text: Ki te whakamahi i tō taumahi me te tawhā me pāwhiri i te kāwai taumahi,
+          ā, me tō atu i tō taumahi "tāngia he tapatoru me te roanga".
+      8:
+        text: Kua wātea ināianei ki te whakamahi i tō paraka pāngarau ki te tāuru
+          i ētahi tau rerekē kia rerekē ai te rahi o ngā tapatoru ka tāngia.
+    hoc_wrapup:
+      1:
+        text: Hūrō! I te āhua o tāu whakaoti i te panga whakamutunga, nāu anō tētahi
+          waehere i tuhi nā reira ka pai te haere o tētahi karetao ahakoa kairoro
+          mai, manu atu; he waka karore o Matawhero, he waka hautū-aunoa rānei, i
+          roto i tētahi rīrapa pekanga-kore, i tētahi arapoka ahakoa te roanga.
+      2:
+        text: Ko ngā ariā waiwai i whakamahia e koe ērā kei te pūtake o ia papatono,
+          o ia taupānga rānei ka whakamātauria e koe. I ako tātou e pā ana ki ngā
+          koromeke tōai, ngā koromeke toāi ki, ngā tauākī mēnā me ngā tauākī mēnā
+          kē.
+      3:
+        text: Mēnā i rata ki a koe tō hour of code tuatahi tēnā toro atu ki code.org
+          ki te ako tonu e pā ana ki te pūtaiao rorohiko! Kia tutuki i a koe tā mātou
+          whakaakoranga 20 haora te roa kua mātanga koe ki roto i ngā āhuatanga waiwai
+          o te papatonotanga, ā, ka wātea koe ki te ako me pēhea te tuhi i ngā taupānga
+          waea, ngā tohutohu karetao, ngā kēmu, he aha atu rānei.
+      4:
+        text: 'Ko te hangarau te take kua rerekē ā tātou mahi katoa, ka mutu, ahakoa
+          tō pakeke: he ngahau te papatonotanga, he auaha, ā, e taea ana e te katoa!'
+    20_wrapup:
+      1:
+        text: Ākuanei ka puta gā taipitopito o te Whakaaturanga!
+    frozen_intro:
+      1:
+        text: Tēnā koe ko Lyndsey ahau. He kaiwhakaatu, he kaitapere, he kaitārai
+          taupānga hoki ana. Tēnā kia whakamahi tātou i te waehere ki te piri atu
+          ki a Anna rāua ko Else i a rāua ka tūhura i te mīharotanga me te ātaahua
+          o te tio.
+      2:
+        text: Ka waihangahia e koe ētahi tarahī huka me ētahi tauira i a koe e reti
+          ana i te papa tio kia whenua taurikua te hanga, ā, ka tiria ki ō hoa.
+      3:
+        text: I te haora e whai ake nei ka ako koe i ngā āhuatanga waiwai o te tuhi
+          waehere. Ko ngā mahi papatonotanga o mua he hanga me te kuputuhi, heoi anō,
+          ka whakamahi tātou i te Blockly, ko tāna he hanga me ngā paraka atanga ka
+          tōia kātahi ka hoatu ki te tuhi papatono. Koinei hoki te ara ka whāia e
+          ngā ākonga kei te wānanga ki te ako i ngā āhuatanga waiwai. Ahakoa te āhua,
+          ko te waehere tonu tēnā e waihangahia ana.
+      4:
+        text: He tautuhinga tohutohu te papatono e whakahau ana i te rorohiko ki te
+          pēnei, ki te pēnā. Me hanga tātou i tētahi waehere, he papatono rānei ki
+          te tautoko i a Elsa te ki waihanga i tētahi rārangi māmā. Ka whakamahia
+          anō ā tōna wā ki te waihanga i ētahi tauira matatini ake.
+      5:
+        text: Kua wāhia tō mata ki ngā wāhanga e toru. Kei te taha mauī te papa tio,
+          ā, koinei te wāhi whakahaere i tō papatono. Ko ngā tohutohu mō ia taumata
+          kua tuhia ki raro tonu i te pae.
+      6:
+        text: He pouaka utauta te wāhanga o waenganui, ā, he hohenga ia paraka e taea
+          ana e Elsa rāua ko Anna te kawe.
+      7:
+        text: Ko te mokowā kei te taha matau te papamahi, ā, koinei te wāhi ka hanga
+          tātou i tā tātou papatono. Ka whakamahi koe i te paraka "Neke ki Mua" ki
+          te neke haere i te pae tio.
+      8:
+        text: I konei kei te kī mai te paraka "Neke ki Mua" "neke ki mua mā te 100
+          pika." He aha te hua ki te pāwhiri tātou i te "Whakahaerehia"? Ka paku neke
+          a Elsa, ka neke mā te 100 pika! He tongi moroiti noa iho nei ngā pika i
+          tō mata rorohiko.
+      9:
+        text: Kei te kī mai tērā atu paraka kei te panga nei "huri whakatematau mā
+          te 90 putu." Ā, ki te whakamahi tātou i te paraka "Huri Whakatemauī" ka
+          huri a Elsa. Kei te pai kia rawekehia kia huri a Elsa ki tāu e hiahia ana.
+          Kua inehia te koki mai i te ara kei mua i a Elsa. Nā reira he huringa e
+          90 putu te rahi tēnei huringa. Ā, he huringa 120 putu tēnei.
+      10:
+        text: Kia maumahara, e āhei ana koe ki te panoni i te nui o ngā pika me ngā
+          putu mā te pāwhiri i ngā pere kei o rātou taha.
+    frozen_loops:
+      1:
+        text: Tēnā koe ko Paola ahau! He tohunga ngā rorohiko ki te tōai hohenga.
+          E taea ana e koe te tātai ki te 10, te 20, te 100 rānei. Heoi anō te rorohiko,
+          ka taea e ia te tātai ki te piriona, te tiriona rānei. Kāore e hōhā, ā,
+          ka tutuki i roto i ngā hēkona iti noa iho nei. Mēnā e tātai ana rānei, e
+          tā ana rānei, e aha ana rānei ka taea e te rorohiko ngā mea katoa te tōai
+          te rau wā, te piriona wā rānei.
+      2:
+        text: I te papatonotanga, ka kīia tēnei momo he koromeke. Ko te koromeke te
+          take ka rite tonu te tōaitanga o te waehere. I te panga e whai mai ana,
+          ko tō whāinga ko te āwhina i a Anna ki te waihanga i tētahi tapawhā me te
+          paraka "Tōai".
+      3:
+        text: Ko ngā paraka o te waehere ka waiho ki roro i te paraka "Tōai" ērā ka
+          tōaitia i tōna raupapatanga i te nui o ngā wā ka hiahiatia.
+      4:
+        text: Ka taea te whakamahi i te paraka "Neke ki Mua" me te paraka "Huri Whakatematau"
+          e whā ngā wā ki te tā i te tapawhā. Otirā, he māmā ake mēnā koe ka whakahau
+          i tō rorohiko ki te "Neke ki Mua" me te "Huri Whakatematau mā te 90 putu"
+          kia kotahi anake te wā, ā, ka kī atu me tōai i ēnei hohenga e rua kia 4
+          ngā wā. E tutuki ai, me hoatu i te paraka "Neke ki Mua" me te paraka "Huri
+          Whakatematau" ki roto i te paraka "Tōai".
+      5:
+        text: Kia mahara ake, e āhei ana te tau kei te paraka "Tōai" te panoni ki
+          te aha rānei, ā, ka tōaitia e ai ki tāu i tohutohu ai.
+    frozen_functions:
+      1:
+        text: Tēnā koe, ko Chris Bosh ahau. He kaitākaro poitūkohu ngaio ahau, ā,
+          i mahi waehere ahau i te whare wānanga.
+      2:
+        text: Ko tētahi o ngā tino ariā o te pūtaiao rorohiko ko te whakamahukitanga
+          o ngā whakahau hou. Kei te takiwā o te 100 te nui o ngā kupu, ngā whakahau
+          rānei o ngā reo rorohiko. Ā, kei te whakamahukitanga o ngā kupu hou kua
+          hangaia me ēnei paraka te mīharotanga me te auahatanga o tēnei mahi.
+      3:
+        text: Mutu ana tō whakaako i te rorohiko ki te mahi i tētahi hohenga mā te
+          whakamahi i taua raupapatanga whakahau, ka tapa koe i tētahi ingoa ki taua
+          hohenga kia māmā ake ai te tōai tōna wā. Kia whakamahuki i tō whakahau,
+          kātahi ka tapaina ki tētahi ingoa, ka huri hei taumahi.
+      4:
+        text: Tēnā koe, ko Jess ahau. I a koe e papatono ana me ngā paraka ka whakamahi
+          koe i ngā taumahi mēnā he tautuhinga hohenga ka hiahia kia tōaitia. Hei
+          tauira, kua tuhi koe i tētahi waehere ki te tā i tētahi tapawhā.
+      5:
+        text: 'Ka whakamahukitia tēnei hei taumahi e kīia nei ko "waihanga i tētahi
+          tapawhā." '
+      6:
+        text: He paraka hou tāu inaianei e āhei ana te whakamahi i ngā wā maha ki
+          te waihanga i te maha o ngā tapawhā.
+      7:
+        text: He pai te whakamahi i ngā āhua māmā maha ki te waihanga i ētahi tauira
+          matatini ake. I te panga e whai mai ana, e wātea ana ki a koe te waehere
+          nāu i tuhi i mua ki te waihanga i tētahi porohita hei taumahi hou ki te
+          hanga i ētahi porohita, rerekē ngā rahi. Tēnā māu e whakamahi ki te āwhina
+          i a Elsa ki te waihanga i ētahi tauira manganga, ātaahua hoki ki te huka?
+    playlab_intro:
+      1:
+        text: Ka waihanga tātou i ētahi kēmu mā Taiwhanga Tākaro. He paki pai tō ia
+          kēmu, he kaitapere tō ia paki. Ka ako tātou ki te hanga i ā tātou ake kaitapere
+          pēnei i ngā wahine wetiweti, ngā kaituarangi; ka kōrero tahi, ka neke, ka
+          mahitahi hoki ngā kararehe. Hei te mutunga o tēnei whakaakoranga kua tutuki
+          i a koe tāu ake kēmu te hanga i tōna ōrokohanga hei tiri ki o hoa.
+      2:
+        text: Kua wāhia tō mata ki ngā wāhanga e toru. Kei te taha mauī te papa tio,
+          ā, koinei te wāhi whakahaere i tō papatono. Ko ngā tohutohu mō ia taumata
+          kua tuhia ki raro.
+      3:
+        text: Ko te pouaka utauta te wāhanga o waenganui, ā, he wāhanga ēnei paraka
+          katoa o tētahi waehere. Ko te mokowā mā kei te taha matau te wāhanga e kīia
+          nei ko te papamahi, ki konei hangaia ai tā tātou papatono.
+      4:
+        text: Hei tīmatanga, me tūhono i o paraka ki te paraka "ina whakahaerehia"
+          karaka. Ka taea ngā paraka huhua te tūhonohono mā te tō atu i aua paraka
+          tae noa ki te wā ka kite koe i tētahi rārangi kātahi aua paraka ka piri.
+      5:
+        text: I tēnei panga tuatahi he kororā te kaitapere, ā, mā tātou ia e whakakōrero
+          kia mihi "Kia ora!" ia mā te tō i te paraka kī me te tūhono atu ki te paraka
+          mēnā me te patotuhi i te kupu "Kia ora." Ka taea hoki e tātou te kororā
+          te whaka neke mā te whakamahi i te paraka neke whakatematau, neke whakatemauī.
+          Kia tika te noho o ngā paraka katoa, pāwhiritia te pātene whakahaerehia
+          ki te kite i tāua i papatono ai.
+      6:
+        text: Tīmata māi, ā, hei te mutunga kua mōhio koe ki te waihanga i tāu ake
+          kēmu me ngā momo kaitātakaro rerekē ka pāhekoheko, ka harikoa, ka pōuri,
+          ka whiwhi piro, ka whiu poiahi rānei, ka whakanumi rānei i a rātou anō.
+          Kei a koe te tikanga, kei te āhua o tāu e hiahia ana.
+    playlab_events:
+      1:
+        text: Ka huri tātou ki te ako i tētahi mea ka whakamahi e ngā kaipapatono
+          kēmu i ia rā. He takahanga. Ko tā te takahanga he whakahau i tō papatono
+          kia whakarongo ina puta tētahi āhuatanga. Kia puta taua āhuatanga, ka tutuki
+          i a ia tētahi hohenga.
+      2:
+        text: Ko te tangi a te kiore, te pātene pere, te pato rānei ki te mata ētahi
+          tauira o te takahanga e whakarongo ana.
+      3:
+        text: I konei ka mahi tātou kia mihi te karetao tuaranga ki ngā tāngata ina
+          pāwhiritia a ia e te kaitākaro. Ka whakamahi tātou i te paraka "ina pāwhiritia"
+          me te whakapiri ki taua paraka tētahi paraka "kōrero". Ina pāwhiritia te
+          karetao tuarangi ka whakatutukihia ngā mahi katoa e piri ana ki te paraka
+          takahanga "ina pāwhiritia". He aha tā te kaituarangi?
+      4:
+        text: He paraka "ina pere" hoki. Ki te tūhonotia ngā paraka "neke" ki aua
+          paraka ka taea e koe ō kaitapere te whakaneke ki runga, raro, taha mauī,
+          taha mata rānei. Mā ia hipanga ka kaha ake te pāhekohekotanga o tō kēmu.
+    playlab_repeat_forever:
+      1:
+        text: Koinei te paraka "tōaitia āke, āke". Katoa ngā mea ka noho ki roto i
+          tēnei momo paraka kāore e tū, ka haere tonu āke, āke.
+      2:
+        text: Mēnā e hiahia ana kia auau tētahi mahi a te kaitapere, ka hoatu i aua
+          paraka ki rōto i tētahi paraka "tōaitia āke, āke".
+      3:
+        text: I te panga e whai mai ana, ko te whāinga ia kia auau te neke o te ruānuku
+          ki te taha mauī me te taha matau i a ia e tū ana hei tūtei ki ngā roherohenga
+          o te whenua rangatira. Mā te ako ki te whakamahinga o te whakahau tōai ka
+          penapenatia te wā i a koe e hanga ana i tō ake kēmu ā tōna wā.
+    C1_artist_intro:
+      1:
+        text: Koinei o paraka tā. Whakamahia te mea tika ki te neke i te rehetoi ki
+          te wāhi e tika ana kia pai ai tana whakakī i ngā rārangi kiwikiwi.
+      2:
+        text: He paraka tarapeke ēnei. Kia whakamahi koe i ēnei ka neke tō rehetoi
+          engari kāore ia e tā, nā reira, whakamahi ēnei ki te peke ki te rārangi
+          kiwikiwi e whai atu ana.
+    C1_bee_level_intro:
+      1:
+        text: Kātahi te tīno koiora ko te pī, nē? Hei te tautuhinga panga e whai atu
+          ana ko tō whāinga ko te hari i te pī ki ngā putiputi me te tiki i te waireka
+          i ngā putiputi, kātahi ka rere atu atu ki te hanikoma ki te mahi mīere.
+          Me mātua whakamahi i te paraka "tiki waireka" me te paraka "mahi mīere}"
+          i tēnei ngohe.
+      2:
+        text: 'He rerekē te nui o te waireka kei tēnā putiputi, kei tēnā putiputi:
+          1, 2, 3, neke atu rānei. E mōhio ana tātou i te nui o te waireka kei ngā
+          putiputi whero, nā te tau iti kei te kokona. Nā reira, me mātua tiki koe
+          i te katoa o te waireka i te putiputi i mua i te haere tonu. Hei āpiti atu,
+          he 1, 2, 3, rānei te nui o te mīere ka taea e tēnā hanikoma te pupuri. Nā
+          reira me tika te hanga i te nui o te mīere ka taea e te hanikoma te pupuri.'
+      3:
+        text: Mēnā e taea ana e koe te katoa o te waireka te tiki me te mahi i te
+          katoa o te mīere ka angitu ka, ā, ka eke ki te taumata o mutu. Ki te kore
+          e taea, me ngana anō koe. Tēnā rawekehia mō tētahi wā kia rongo koe i ngā
+          āhuatanga ka pā ki te kaipapatono!
+    C1_bee_loops:
+      1:
+        text: Ko te koromeke te tōaitanga o tētahi mahi. Ka haere atu au ki te whare
+          pī ki te tirotiro haere, ka titiro ki tētahi taitapa ka whakahokia, ā, ka
+          tōaitia tēnei mahi kia maha ngā wā. Kei te hoki atu me te mahi i te mahi
+          ōrite e hia kē nei ngā wā.
+      2:
+        text: I tēnei taumata kei te hiahia tātou ki te kohikohi i ngā waireka e toru
+          i te putiputi. Ka whakamahi koe i te paraka tōai ki te tiki i te waireka
+          e toru ngā wā, kaua kē ia ngā paraka "tiki waireka" e toru ngā wā. Pāwhiritia
+          te "Whakahaerehia" kia kite mēnā i tika tāu. Rawe!
+    C1_bigevent_unplugged:
+      1:
+        text: Ko te takahanga nui te ingoa kua tapaina ki tēnei akoranga. E hāngai
+          pū ana ki te mana whakahaere papatono me te mana panoni i te rerenga aunoa
+          o te papatono mā te takahanga pēnei i te pēhitanga o tētahi pātene, i te
+          pāwhiritanga rānei o te kiore.
+      2:
+        text: I tēnei akoranga ka whakahaerehia ko e tētahi raumamao pepa. Ānō nei
+          hei kēmu ataata ao-tūturu.
+      3:
+        text: Ko te takahanga tētahi hohenga mā reira e oti ai tētahi mahi. Ki te
+          pāwhiritia te pātene o te kiore ka tīmata te utanga o tētahi whārangi tukutuku.
+          He takahanga tēnā. Ki te pā koe ki te mata o tō paparorohiko ki te panuku,
+          he takahanga hoki tēnā. Mā te takahanga ka āhei te kaiwhakahaere ki te whakahaere
+          i te papatono i te ngā wā e whaitake ana, i ngā wā e hiahia ana rānei.
+      4:
+        text: He āhuatanga ka puta ka uruparetia e tātou. I a tātou e hiakai ana,
+          ka whati atu ki te pātaka mātao. Ki te rongo tātou i te tangata mēra e tuku
+          mēra ana ki te pouaka, ka puta tātou ki te tiki. He rite tonu aua takahanga
+          ki te takahanga pēhi i te pātene, neke rānei i tetahi kakautohu. He āhuatanga
+          ka puta nā reira me urupare tātou.
+      5:
+        text: Kei roto i ngā kēmu ataata ko tētahi takahanga e kīia nei ko te "Whakahou",
+          ā, ka puta tēnei āhuatanga e 30, e 60 rānei ngā wā i te hēkona kotahi. He
+          nui ake pea te whaitake o tēnei hei takahanga i tērā o te pātene, o te kakautohu
+          rānei.
+      6:
+        text: E mātai ana tātou i te putanga o te takahanga matua, arā, te tohu "Whakahou".
+          Kātahi tātou ka taki i te kakautohu i te tohu. "Nā tētahi te pātene i pēhi
+          i tēnei tāpare? Āe, kāore rānei?" Mei kore ake ngā takahanga kua kore te
+          kaitākaro e neke, kua kore e peke, kua kore hoki koe e whakahaere i te aha.
+          Tē taea e te kēmu ataata tētahi mea te paku whakahākori.
+    C1_building_foundation:
+      1:
+        text: Kua mōhio koe, nā te hanga o te whakapakoko kirikiri, he wāhanga te
+          rahunga o te papatono. Heoi anō, ki te ū tonu koe, ka kino kē te pai, ka
+          hiamo kē atu mōu. Ko te tōngakingaki te mea nui. E rongo ai koe i te reka,
+          me ū tonu.
+      2:
+        text: Ko te whakaakoranga hanga tūāpapa tēnei. I tēnei whakaakoranga ka aro
+          tātou ki tētahi mahi ko tōna tikanga he papatoiake nei. Ka ako koe ki te
+          whakatū i tētahi hanganga he rite te teitei ki tētahi o ēnei kapu, he pērā
+          hoki te kaha ka āhei taua hanganga te taumaha o tētahi pukapuka te pīkau.
+      3:
+        text: He wā ōna ka kore ā tātou waihangatanga e tika. He wā hoki ōna ka pōkaikaha
+          tātou, ka mate wheke. Ka auau pea te putanga o aua āhuatanga. Otirā, ki
+          te ngana tonu tātou, ki te kounga ā tātou mahi ia te wā ka ngana, kāore
+          e kore ka puta tātou ki te māramatanga.
+      4:
+        text: Ko te tikanga o te tōngakingaki ko te ū tonu ahakoa tō hiahia ki te
+          mate wheke. Ki te hiahia koe ki te waihanga i tētahi mea hou, i tētahi mea
+          rerekē hoki, ka nui ngā rahunga ka puta i te ara ki te tika.
+      5:
+        text: Kua mōhio koe ki te tōngakingaki mēnā e mārama ana koe ko te kōwhiringa
+          pai ko te mahi tonu ahakoa ngā rahunga, ko te ū tonu kia kaua e manawatoa
+          ahakoa tō pōkaikaha. Ko tā te pōkaikaha he tohu i te painga ki tua atu i
+          a ia. Kaua e mate wheke i mua i tō taenga atu ki tua o te pōkaikaha. Ki
+          te hoe!
+    C1_getting_loopy:
+      1:
+        text: Tēnā koe, ko Miral Kotb tōku ingoa, ko au te kaiwaihanga o Illuminate.
+          I roto i aku mahi he mea ka whakamahia e mātou i ngā mahi kanikani me ngā
+          taiwhanga papatonotanga. Ko te koromeke tēnā! Kei te tōaitia takaruretia
+          tētahi hohenga e te koromeke.
+      2:
+        text: I a koe ka tōai i tētahi mahi e hia kē nei ngā wā, pēnei i aku takahanga
+          whakahuri i te tarawhiti hula kia huri tonu, e kawe ana ahau i tētahi koromeke
+          o taua takahanga. He koromeke tēnei. He koromeke tēnei. He koromeke hoki
+          tēnei.
+      3:
+        text: He pāti kanikani kei te haere tēnei rā. Ka whakaaturia ngā koromeke
+          ki tētahi kanikani hou. Te Whitiauau. Ka ako tātou e pā ana ki ngā koromeke
+          mā roto mai i te kanikani. Ka ako koe ki ētahi nekehanga māmā, ā, ka tōāitia
+          takaruretia ki te whakaoti i te kanikani.
+      4:
+        text: Anei ngā nekehanga hei ako māu. Pakia ō ringa. Hoatu ō ringa ki muri
+          i tō upoko. Hoatu ō ringa ki tō hope. Hikina tō ringa mauī ki runga. Hikina
+          tō ringa matau ki runga. Waingōhia, nē? Mā te hoatu i ētahi o ngā nekehanga
+          kanikani ki ngā koromeke, ka poto ake ai ngā tohutohu.
+      5:
+        text: Pono mārika ka whakamahi mātou i ngā koromeke i ā mātou kanikani. Kei
+          te mau ngā kaikanikani i ngā rorohiko kei te whatunga kotahi. Tērā pea ka
+          koromeketia takaruretia e ahau ngā rama ki waenganui i ngā kaikanikani ōrite.
+          Tērā pea ka hoatu i tētahi whitiauau ki te koromeke e meatia ana me haere
+          te koromeke mā ēnei kaikanikani tokoono, ā, ka whakatere ake hoki i te horo
+          o ngā rama ki roto tonu i te koromeke. Katoa ēnei āhuatanga ka taea nā te
+          koromeke. E tino whaitake ana ngā koromeke i roto te te pūtaiao rorohiko,
+          nā te mea, ka tere ake, ka māmā ake hoki ngā mahi i ngā koromeke.
+    C1_happy_maps_unplugged:
+      1:
+        text: Ko Mahere Harikoa te ingoa o tēnei akoranga. I tēnei rā ka āwhina tātou
+          i a Flurb, tō tātou hoa huruhuru, ki te tatū atu ki tana huarākau.
+      2:
+        text: Meatia kia haere tō Flurb ki te huarākau. E tutuki ai, me rapu koe i
+          te ara hei whai mōna kātahi ka whakaahu i a ia me nga pere. E tae atu ai
+          a Flurb ki te āporo, me ahu atu ia mā hea.
+      3:
+        text: Kia pai ai tana tae atu, porohitangia te ahunga hei haere mōna.
+      4:
+        text: Waihangahia tō hātepe mā te whakarapa i ngā pere ki te taha o te mahere
+          e ngana ana koe ki te whakaoti. He ōrite te mea tuarua, heoi anō, e heke
+          kē ana ki raro.
+      5:
+        text: He pēnei i te papatonotanga me te pepa. Koia!
+    C1_maze_debugging:
+      1:
+        text: Ko te Patuirotanga te rapu me te whakatika i ngā raru. He nui ngā ara
+          patuiro. Ko tētahi o ngā ara māmā ko te āta rapu ā-hipanga kia tūpono atu
+          koe ki tētahi raru. Kei konei ahau e ngana ana ki te takapore whakamuri
+          i te kurupae engari he taka iho noa iho te hua.
+      2:
+        text: I āta titiro ahau ki ia wāhanga ā-hipanga kātahi ahau ka kite i tōku
+          hē. I te hē taku hoatu i ōku ringa ki te kurupae. Nā reira, i ngana anō
+          ahau, i hoatu i tōku ringa ki te wāhi tika, i tutuki. Harikoa katoa ahau
+          i tutuki taku patu i ngā iro o taku takapore.
+      3:
+        text: Hei ako e pā ana ki te patuirotanga ka tīmata me te tautahinga paraka
+          kei te papa kē. Ka mārama koe ka kore koe e tae atu ki te kuru me ēnei paraka.
+          Me mātua patu tātou i te iro kātahi ka whakatika. He aha te raru? Kāore
+          e kore kua mārama koe me haere tonu ki te uru mā tētahi paraka anō.
+      4:
+        text: Me whakatika tātou me te tāpiri i tētahi paraka uru me te pāwhiri i
+          te whakahaerehia me te kite mēnā i tika i a koe. Hūrō, kua tika i a koe!
+    C1_maze_intro_sequencing:
+      1:
+        text: Mō tēnei panga, me kawe koe i te manu ki te poaka. Tirohia te panga
+          ka whakatauhia ai me ahu atu ki hea.
+      2:
+        text: Me tō i ngā paraka i te pouaka utauta ki te papamahi. Me mātua hoatu
+          ki raro i te paraka "ina whakahaerehia", ā, i te wā kua tika ki ōu whakaaro,
+          pāwhiritia te "Whakahaerehia", kātahi me mātakitaki i te manu e haere ana
+          ki te poaka.
+    C1_maze_loops:
+      1:
+        text: He tohunga te rorohiko i te mahi tōai whakahau. Ka tere hōhā te tangata
+          mēnā ia ka mate ki te mahi i te mahi ōrite ao noa, pō noa. Heoi anō te rorohiko
+          ka mahi i te mahi ōrite kia miriona, kia piriona rānei ngā wā me te kore
+          paku hōhā, ka mutu, ka tino rangatira tana kawe i aua mahi.
+      2:
+        text: Hei tauira, mēnā i te hiahia koe ki te mihi hari huritau atu ki ngā
+          tāngata katoa o Pukamata mā te tuku īmēra, ka pau te kotahi rau tau ki te
+          patotuhi i te katoa. Otirā, mā ētahi rārangi waehere ka taea e au tētahi
+          pūnaha te waihanga kia pai ai taku tuku īmēra hari huritau atu ki ngā tāngata
+          katoa o Pukamata.
+      3:
+        text: Hei kawe i te manu ki te poaka i tēnei taumata... ka whakamahi koe i
+          te paraka "tōai" kaua kē ia ngā paraka Raki e toru ka tōia ki te papamahi.
+          Tōia te paraka "tōai" ki te papamahi ka whakaurua ai te tau 3. Tēnā, tōia
+          tētahi paraka "neke ki te Raki" ki roto i te paraka "tōai" ka pāwhiritia
+          ai te "Whakahaerehia" ki te kite mēnā i tika i a koe. Ka nui te mihi, i
+          tika i a koe!
+    C1_moveitmoveit_unplugged:
+      1:
+        text: Koinei te akoranga e kīia nei ko e neke, e neke. Ka mahi tahi tātou
+          ki te tuhi i tētahi papatono kia tae atu ō tātou hoa ki te kuru kanohi harikoa
+          i te kāpehu rōhi.
+      2:
+        text: Engari kei te anga te kanohi harikoa ki te papa, ā, kotahi anake te
+          tangata e mōhio ana i te ara ki reira. Kia tīmataria tēnei papatono.
+      3:
+        text: He hātepe te papatono kua waeheretia hei mea whakahaere e tētahi pūrere.
+          E pōhēhē ana te nuinga o tātou ko te papatono tērā ka tuhia e tātou mō te
+          rorohiko. He tino whaitake ngā papatoono i taua mahi, heoi anō, he wāhi
+          anō ka whaitake te papatono. Ka taea e koe tāu ake kēmu te hanga, te papatono
+          rānei i tētahi karetao ki te whai i ō tohutohu.
+    C1_going_places_safely:
+      1:
+        text: Ko Jeremiah tōku ingoa. Kia ora! E whitu ōku tau. He pai katoa ki ahau
+          te korikori ki te rorohiko a tōku māmā engari, me tono whakaae ahau i te
+          tuatahi. "Māmā, kei te pai māku te rorohiko? Āe e tama!"
+      2:
+        text: E tino rata ana ahau ki te rorohiko a tōku māmā, i te mea, e āhei ana
+          ahau ki te tirotiro i te ipurangi. Hanga rite te ipurangi ki tō whaitua.
+          Ka haere ki ētahi wahi pai, ka kōrero ki tō whānau me ō hoa, ā, ka wātea
+          hoki ki te ako ngā ngā mea hou.
+      3:
+        text: Inanahi rā, i haere atu ahau ki tētahi whare kararehe e tata ana ki
+          tōku whare. I kite ahau i tētahi punua hēpara. I whakaahuangia ia e au kātahi
+          au ka panoni i te tae o ōna tāhei, i hoatu hoki i tētahi pōtae kātahi ka
+          tāpiri atu ki taku kohinga kararehe rerekē. Wananei! I muri atu i haere
+          atu ahau ki tētahi whenua pāmamao. I haere atu ahau ki Kenya. He whenua
+          tērā i Awherika. He maha tonu ngā hēpara ka noho ki reira.
+      4:
+        text: I ētahi wā ka kōrero ahau mā te Ipurangi ki ētahi tāngata e mōhio nei
+          ahau, pēnei i tōku kuia kei tētahi atu rohe ia e noho ana. Kia ora e Kui!
+          Kei te tunu ia i ngā pihikete ka tukuna mai hei kai māku i taku huritau.
+          "Mmm reka, me he āheinga hongi pūkarakaka tō te Ipurangi!" Ka kōrero hoki
+          ahau ki ētahi atu i te Ipurangi, pēnei i taku whanaunga engari, ko kōrero
+          noa iho ahau ki ngā tāngata e mōhio ana ahau.
+      5:
+        text: Ko te mea e tino kaingākautia ana e ahau i te ipurangi ko te korikori
+          i ngā kēmu ngahau. Pāia! He pai hoki ki ahau te tā pikitia me te waihanga
+          i ngā mea hou hei tiritiri ki ōku hoa. Rawe! I ētahi wā ka toro atu ahau
+          ki ngā pae tukutuku ki te ako engari, ka noho tonu ki ngā pae tukutuku e
+          tika ana mōku. Anana, he mokoweri!
+      6:
+        text: 'He wāhi ngahau ake nei te Ipurangi. Otirā, i a koe ka whakawhiti i
+          te huarahi i tō whaitua me tūpato, ā, me rite tonu tō tūpato i a koe ka
+          hono ki te ipurangi. Ture 1: Me pātai ki o mātua i te tuatahi. Ture 2: Me
+          kōrero noa iho ki ngā tāngata e mōhio ana koe. Ture 3: Me noho ki ngā wāhi
+          e tino tika ana mōu.'
+      7:
+        text: Anana, te pai hoki! Ko te wā kai o te pō. E takiputa ana ahau ināianei.
+          E hīkaka ana ki te takiuru anō kia kite ai au i ngā wāhi hei toro atu māku.
+    C1_pair_programming:
+      1:
+        text: Ka ako tātou e pā ana ki te Papatonotanga ā-Takirua. I te papatonotanga
+          ā-takirua ka mahi tahi kōrua hei tīma. He aha te take me mahi tahi tētahi
+          tokorua ki te rorohiko kotahi? Nā te mea, he nui ake te whaitake o ngā roro
+          o te takirua i ērā o te tangata kotahi. I te papatonotanga ā-takirua ka
+          nohotahi kōrua ko tō hoa ki tētahi rorohiko, ka mahi tahi hoki ki tētahi
+          tūmahi.
+      2:
+        text: I te papatonotanga ā-takirua, ko tētahi tangata te kaihautū, ko tērā
+          atu tangata te kaiwhakatere, he pēnei i te hautū motukā. Ko te kaihautū
+          ka noho ki te rorohiko, ā, ko ia hoki e whakamahi ana i te papapātuhi me
+          te kiore, te matapā rānei. Māna hoki e whakahaere o ngā hohenga matua o
+          te rorohiko. Ko tērā atu tangata te kaiwhakatere. Ko tā te kaiwhakatere
+          he āwhina i te kaihautū mā te whakautu i ngā pātai a te kaihautū me te tohu
+          i ngā raruraru, i ngā hē rānei, tērā peā, ka puta mai.
+      3:
+        text: E angitu ai te papatonotanga ā-takirua me mātua whakawhiti kōrero te
+          tokorua. Me kaua e whakaparahako, me kaua hoki e takahi mana; kaua e noho
+          hei kaiwhakatere tonotono, nā te mea, kāore tētahi i te rata ki taua momo
+          āhua. Me mātua kōrero kōrua ko tō hoa i ngā wā katoa. Mā te kaihautū e whakamārama
+          e aha ana ia. Mā te kaiwhakatere e whakatakoto whakaaro tautoko i te kokenga
+          ki mua.
+      4:
+        text: Me whakaaro pikitia nui te kaiwhakatere, me aronui te kaihautū ki ngā
+          mokamoka. He whaitake ngā tūranga e rua. Hāngai katoa ana te papatonotanga
+          ā-takirua ki te mahi tahi hei tīma.
+    C1_planting_seed:
+      1:
+        text: Ko te whakatō kano te ingoa o tēnei akoranga, ā, mā tēnei ka mārama
+          tātou ki ngā hātepe. He rārangi tohutohu hāngai pū ngā hātepe ka whakamārama
+          i te raupapatanga o tētahi mahi. He hātepe ngā mahi o ia rā pēnei i te kai
+          parakuihi, i te taitai niho me whai hipanga iti ki te whakatutuki i aua
+          mahi.
+      2:
+        text: He atamai ngā rorohiko, heoi anō, ka mārama noa iho rātou ki a koe mēnā
+          ka hāngai tō tohutohu i a rātou. Ko te mea tino pai o te hātepe ko tēnei
+          - ki te whai koe i ngā tohutohu i tōna raupapatanga, ka tutuki i a koe tētahi
+          mahi kāore i āhei te mahi i mua. He rite ki te whai i tētahi tohutao.
+      3:
+        text: I tēnei rā ka whakatō tātou i ā tātou ake kano mā te whakamahi i tētahi
+          hātepe. Waihangahia tō ake hātepe mā te tapahi i ngā pikitia. Pāwhiritia
+          ērā o ngā pikitia e whakaatu ana i ngā hipanga ka whāia i te whakatōnga
+          o te kano, kātahi me whakarite i aua pikitia ki te raupapatanga tika.
+      4:
+        text: Kua eke te wā e mōhio ai koe mēnā ka tika tō hātepe. Me āta whai i ngā
+          hipanga kei te hātepe. E tika ana te raupapatanga? I angitu koe i te mahi
+          whakatō kano mā te whai hātepe? He pēnei tēnei i te papatonotanga me ngā
+          pikitia!
+      5:
+        text: Mēnā e hiahia ana koe ki te taka tiakarete, he maha ngā hipanga nui
+          i taua tūkanga, ā, mō ia hipanga nui he tautuhinga hipanga iti. He rerekē
+          ngā tohutao, nā hātepe rānei. Kei te āhua o te tāwara e hiahiatia ana. he
+          whaitake ngā hipanga katoa, ahakoa te rahi, nā te mea, ki te ngaro tētahi
+          o ngā hipanga, ka raru te katoa. Koina te take me āta tuhi i ngā hipanga
+          katoa, kia rite tonu te huanga i ia wā, ahakoa te kaikawe.
+    C1_playlab_storytelling:
+      1:
+        text: Tēnā whakamahia ō pūkenga waehere ki te kōrero paki, kia auaha. He kaitapere
+          kei tō paki, ā, māu ka kōrero, ka pāhekoheko hoki rātou ki a rātou. Me tīmata
+          tō kohikohi whakaaro e pā ana ki te paki ka kōrerohia e koe.
+      2:
+        text: Kua roa te ngeru e wehi ana ki te kurī. Ka pēhea mehemea ka mārama ki
+          te ngeru i te hiahia te kurī ki te whakararata kē? Mā te paraka "ina whakahaerehia"
+          ngā mea katoa e whakahaere. Mā te paraka "neke" tō kiripuaki e neke, ā,
+          mā te patotuhi ki te paraka "kōrero" to kiripuaki e kōrero i tāu e hiahia
+          ana.
+      3:
+        text: Koinei te paraka "ina tuki ngā kaitapere." He mea wahakahono ki ētahi
+          atu paraka.
+      4:
+        text: I te tohu ahau i te kurī ki te whakatata mai me te kī "Kia ora", engari
+          ka wehi te ngeru, ka oma atu. "Aaaa" Mēnā he nui ake te wā ki au, kua oti
+          i runga i te wairua pai. Kua mutu!
+    C1_spelling_bee_intro:
+      1:
+        text: He taumata ohu takikupu tēnei. Whakamahia ngā poro panga ki te whakaneke
+          i te pī. I te pī e neke ana, ka kohikohi ia i ngā pū ki te tātaki kupu.
+      2:
+        text: Me kite mēnā e taea ana e koe ngā kupu, ka hoatu e rātou ki te pouaka
+          ki raro i te pae, te tātaki. Kia tūpato! Ki te hē tō ara ka kohikohi koe
+          i ētahi pū kāore i te pīrangitia.
+    C1_zuck_repeat_loop:
+      1:
+        text: He tohunga te rorohiko i te mahi tōai whakahau. Ka tere hōhā te tangata
+          mēnā ia ka mate ki te mahi i te mahi ōrite ao noa, pō noa. Heoi anō te rorohiko
+          ka mahi i te mahi ōrite kia miriona, kia piriona rānei ngā wā me te kore
+          paku hōhā, ka mutu, ka tino rangatira tana kawe i aua mahi.
+      2:
+        text: Hei tauira, mēnā i te hiahia koe ki te mihi hari huritau atu ki ngā
+          tāngata katoa o Pukamata mā te tuku īmēra, ka pau te kotahi rau tau ki te
+          patotuhi i te katoa. Otirā, mā ētahi rārangi waehere ka taea e au tētahi
+          pūnaha te waihanga kia pai ai taku tuku īmēra hari huritau atu ki ngā tāngata
+          katoa o Pukamata.
+      3:
+        text: I tēnei tauira ko tō whāinga ko te neke i te manu kia tikina te poaka
+          e ia. Kia māmā ake ai te whakatutukitanga o tēnei mahi, ka taea e tātou
+          te paraka tōai te whakamahi. Ka taea te pēnei mā te hoatu i te whakahau
+          neke ki mua ki te rorohiko e rima ngā wā kia tata atu te manu ki te poaka,
+          ka taea rānei te whakahau i te rorohiko ki te neke ki mua kotahi te wā,
+          kātahi ka whakahau atu kia tōaitia e rima ngā wā. Ka rite te huanga.
+      4:
+        text: Kia tutuki i a koe tēnei mahi me tō i te whakahau neke ki mua ka waiho
+          ai ki roto i tētahi paraka tōai. Kātahi ka pāwhiritia, ka meatia kia hia
+          ngā hipanga neke ki mua.
+      5:
+        text: Hei āpiti atu, ka taea ngā whakahau huhua te hoatu ki roto i te paraka
+          tōai. Nā reira, i tēnei tauira, e meatia ana koe kia neke ki mua me te huri
+          whakatemauī, ā, ka pēnei e rima wā. Kia ngahau!
+    C2_artist_intro:
+      1:
+        text: E kore koe e paku kōwhiritia mō te whakataetae mēnā kāore ō tāngata
+          matatau ki te pūtaiao rorohiko. Nā te nui o ngā raraunga ka kohikohia e
+          ngā waka, e tika ana kia tirohia e tētahi hunga e mōhio ana ki te tuhi papatono
+          kia mārama ai koe ki ngā mahi e tika ana kia koke tonu, kia pai ai tō whakawhanake
+          i tō mahinga hautū waka.
+      2:
+        text: Ko koe hei rehetoi i ēnei panga, ka whakamahi i te penerākau ki te tā
+          i ngā āhua rerekē. Ahakoa haere ai tō rehetoi ki hea, ka tāngia he rārangi
+          ki muri i a ia.
+      3:
+        text: Ki te neke haere i te papatā ka whakamahi koe i te paraka neke ki mua.
+          I konei kei te kī mai te paraka neke ki mua mā te 100 pika. He aha te hua
+          ki te pāwhiri tātou i te "Whakahaerehia"? Ka paku neke te rehetoi ki mua,
+          ka neke mā te 100 pika. He tongi moroiti noa iho nei ngā pika i tō mata
+          rorohiko.
+      4:
+        text: Kei te kī mai tērā atu paraka kei te panga nei huri whakatematau mā
+          te 90 putu. Ā, ina tātou ka tō i taua paraka ka paku huri te rehetoi. E
+          whakaae ana kia rawekehia kia whakatauhia ka pēhea te nui o tana huri. He
+          huringa 90 putu tēnei.
+      5:
+        text: He huringa 120 putu tēnei. Kia mahara ake, e whakaae ana kia panonihia
+          ēnei uara mā te pāwhiti i ngā pere kei te taha o ngā tau pika, putu hoki.
+          Kia ngahau te tā me tāu rehetoi!
+    C2_bee_conditionals:
+      1:
+        text: He paraka whai here tēnei. E meatia ana MĒNĀ he waireka, he mīere rānei
+          he iti iho, he rite tonu, he nui ake rānei i te nui o te tau, ME mahi i
+          tētahi mahi.
+      2:
+        text: Ka whaitake tēnei i ngā wā kāore tātou i te mōhio ki te nui o te waireka,
+          o te mīere rānei hei tiki atu mā tātou. E kitea ana i konei me tēnei tohu
+          pātai.
+      3:
+        text: I tēnei tauira ka mea atu tātou MĒNĀ he waireka tō te putiputi tawa
+          he nui ake i te 0, tikina atu te waireka. Mā tēnei ka whakahautia tā tātou
+          pī ki te kohikohi i te waireka mēnā rā he waireka. Ana!
+    C2_binary_bracelets:
+      1:
+        text: Koinei te akoranga kōmore tāhūrua. Ka waeheretia e tātou ō tātou pū
+          ingoa ki tētahi kōmore ka mau e tātou me te whakaatu ki ō tātou hoa!
+      2:
+        text: He ara whakaatu mōhiohio te tāhūrua, e rua noa iho ōna kōwhiringa. Ka
+          pōhēhē ētahi tāngata ko te 1 me te 0 noa iho tēnā. Ehara, e taea ana hoki
+          ngā tauritenga kā, weto; runga, raro; roto, waho, ka mutu, ngā tautuhinga
+          taurite katoa.
+      3:
+        text: Tēnā koe, ko Orion ahau, ko tāku i konei, i Play-im, he papatono karetau.
+          I te pūtake rawa he kēti tāhiko ngā roro o ngā rorohiko me ngā karetao katoa.
+          Mēnā e tuwhera ana te kēti ka rere te hiko, mēnā e kati ana, karekau.
+      4:
+        text: Ko tētahi tauira o te tāhūrua o te karetao kei ōna whatu. He rama LED
+          ngā whatu o te karetao, ā, he rama ka kā mai, ka weto atu rānei. He pūnaha
+          tāhūrua, ko tēnei, ko tēnā rānei. Ka taea e tātou ngā rama te whakamahi
+          ki te whakaatu i ngā tau tāhūrua. Mēnā i a tātou tētahi tautuhinga karetao,
+          kua taea e tātou te kī ko te karetao tuatahi te uara 1, ā, ko te karetao
+          tuarua te uara 2, te karetao tuatoru te uara 4, haere tonu, haere tonu.
+          Koinā te ara whakaatu i tētahi tau tāhūrua. Mā ngā karetao e tātai māu me
+          ō rātou whatu tāhūrua.
+    C2_conditionals_with_cards:
+      1:
+        text: Ko te akoranga ngā here me ngā kāri. I ia rā ka hanga whakatau i runga
+          i tāu i kitea ai, i rangona ai hoki.
+      2:
+        text: E hiahia ana ahau ki te hīkoi ki te pāka engari me whakatau ahau mēnā
+          he take o te kawe i tētahi hamarara, kāore rānei. Nā reira ka titiro ki
+          waho. Mēnā e kāpuapua ana, ka kawe ahau i taku hamarara. Mēnā karekau, ka
+          kawe kē ahau i ōku mōhiti. I runga i tāku i kitea ai, i rangona ai hoki,
+          me kawe ahau i taku hamarara.
+      3:
+        text: Whakamahia ai ngā here i ngā kēmu hoki. I tēnei rā ka whakawai tātou
+          me ngā here i tētahi kēmu kāri. I tēnei kēmu ko te kāri ka tikina e au tērā
+          ka whakatau ka aha ōku hoa. Mēnā au ka tiki i tētahi whitu, me pakipaki
+          te katoa. Mēnā he kāri kē ka kī "ka aroha" te katoa. Tēnā kia whakamātauria!
+          "Ka aroha" "Ngā mihi"
+      4:
+        text: Kāore e kore ka ngahau ake ngā kēmu ka hangaia me ngā here. Tēnā whakamātauria!
+          Ko ngā here ērā e hāpai ana i te hanga atamai o ngā rorohiko. Ko ngā rorohiko
+          kua papatonotia me ngā here ka tauhohe ki te kaiwhakahaere me te panoni
+          i tōna ara.
+      5:
+        text: Whakaarohia tō tino kēmu ataata. Ka nui ake ngā piro ka whakawhiwhia
+          mō ētahi hohenga i ētahi atu? Ka puta tēnei āhuatanga, nā te mea, e whakamahi
+          ana te rorohiko i ngā here. Pēhea tēnei, mēnā ka patu koe i te ūnga ka whakawhiwhia
+          koe ki te tekau piro, mēnā ka hipa, ka tango kē i te toru piro. Kia mārama
+          koe ki te wāhi ki ngā here, ka taea e koe ētahi kēmu hiamo ake nei te waihanga.
+    C2_artist_debugging:
+      1:
+        text: He paraka kē kei tā tātou papamahi. Heoi anō, e hē ana tētahi āhuatanga.
+      2:
+        text: Me patu tātou i te iro o tēnei waehere, Me whakapōturi i te tere o te
+          rere, ā, ka mātakina ā-hipanga.
+      3:
+        text: Kātahi rā, koina te mate! E 75 pika te roa o ngā kumikumi o te ngeru,
+          kaua te 25.
+    C2_bee_debugging:
+      1:
+        text: Kua rongo kōrero koe mō tētahi papatono patuiro? Koinei te ara e mōhio
+          ai koe he aha e raru ana. Ki te patu i te iro waehere ka tautohu i ngā hapa,
+          ka tangohia hoki.
+      2:
+        text: Kei tā tātou papamahi ētahi paraka i whakaratoa kētia. Ka whakamahi
+          tātou i te pātene hipanga ki te hīkoi i waenganui i ngā paraka, ā-hipanga,
+          ki te kite mēnā koinā te otinga tika ka tahi, ka rua ngā wāhanga e tika
+          ana kia whakatikahia.
+      3:
+        text: Te āhua nei koinā te mate! Me whiwhi tātou ki tētahi paraka neke ki
+          mua anō. Mā te pātene hipanga tātou e āwhina ki te patu i te iro mā te tautohu
+          i te wāhi kei reira te mate kia taea e tātou te whakatika.
+    C2_digital_footprint:
+      1:
+        text: On your head you hold your hat and your smarts will tell you where you're
+          at and to think about the zoo, and to nod hello to you and you! Use your
+          head when you're online to keep what's yours inside your mind and to know
+          how to be safe, how to give your life some private space! From your head
+          down to your toes, pause, think about it. From your feet up to your nose,
+          pause and think online!
+      2:
+        text: Use your heart to grow and grow, and to give yourself a healthy glow,
+          and to make a valentine, tell someone that you'll be mine! Use your heart
+          when you're online, feel what's right and always kind, and show your friends
+          respect, to be fair and nice on the Internet. From your head down to your
+          toes, pause, think about it. From your feet up to your nose, pause and think
+          online!
+      3:
+        text: Use your arms to hug your pet, to keep your clothes from getting wet,
+          and to wear your favorite sleeves and to help you fly and make believe.
+          Use your arms when you're online, to take break and balance time and leave
+          your tech behind and to find yourself a tree to climb. From your head down
+          to your toes, pause, think about it. From your feet up to your nose, pause
+          and think online!
+      4:
+        text: Use your gut to store your food, and to listen to its growling mood,
+          to make a belly flop, and to feel the gas in soda pop. Use your gut when
+          you're online, to know to watch for certain signs, and to let it guide the
+          way and tell you when it's not ok. From your head down to your toes, pause,
+          think about it. From your feet up to your nose, pause and think online!
+      5:
+        text: So think with your head, and feel with your heart, balance with your
+          arms, listen to your gut, online. Use your legs to run and kick, and to
+          jump and bounce on a pogo stick, and to dance around the block, and to skip
+          along in your smelly socks. Use your legs when you're online, to stand up
+          to bullies who cross the line, and remember to stand tall, be nice to creatures
+          great and small.
+      6:
+        text: From your head down to your toes, pause, think about it. From your feet
+          up to your nose, pause and think online! So think with your head, and feel
+          with your heart, balance with your arms, listen to your gut, stand up with
+          your legs. From your head down to your toes, pause, think about it. From
+          your feet up to your nose, pause and think online!
+    C2_digital_footprint_v2:
+      1:
+        text: Kia mōhio ai koe, ia te wā ka haere ki tuihono, ka mahue atu tō tapuwae
+          e taea ana e wai rānei te rapu, te tārua, te tiri, te whakapāoho, ā, ka
+          noho pūmau atu. He aha te āhua o tō tapuwae matihiko? E hiahia ana koe kia
+          pēhea te āhua o tō tapuwae matihiko?
+    C2_graph_paper:
+      1:
+        text: Ko te akoranga "Papatonotanga Pepa Kauwhata" tēnei, ā, e hāngai pū ana
+          ki ngā hātepe. I tēnei rā ka ako tātou ki te tuhi papatono hei whakaatu
+          me pēhea te waihanga houtia ngā atahanga pango me te mā, mā te whakamahi
+          noa iho i ngā pere kua tuhia ki te ringa.
+      2:
+        text: He rārangi tohutohu whakaoti mai te hātepe. Ka whai tātou i tēnei tautuhinga
+          tohutohu ki te hanga oko. Ka mārama ake ai te tangata ki te mahi i tētahi
+          mahi i te hātepe.
+      3:
+        text: Mēnā kei te tuhi hātepe mō te rorohiko me āta wetewete ki ngā hipanga
+          moroiti. Kia pēnei, whakaotihia tēnei rārangi, haere tonu ki te mea whai
+          muri atu, ā, kia mutu rā anō.
+      4:
+        text: Whakamahia ai au te hātepe i aku mahi. Ki te tuhi ahau i ngā hipanga
+          ka taea e au tētahi hanga te waihanga houtia, ka ako rānei i tētahi atu
+          tangata ki te mahi. Hoatu te kōata ki te umu kōata, ka kōmitimitia ai, kātahi
+          me whai i te toenga o ngā tohutohu ki te hanga oko. Ko tā te hātepe he whakatakoto
+          mahere whakatutuki mahi.
+    C2_artist_loops:
+      1:
+        text: I konei tātou ka whakamahi i te paraka tōai hei āwhina i a tātou ki
+          te whakarāpopoto i ngā mahi i a tātou e papatono ana i tā tātou rehetoi.
+          He paraka kē kei te papamahi, heoi anō, he tīmatanga noa iho ēnei.
+      2:
+        text: Kia koromeketia aua paraka e whā ngā wā ki te tā i te katoa o tētahi
+          tapawhā, ka tōia te paraka tōai ki te papamahi, ka hoatu i te paraka neke
+          ki mua, me te paraka neke whakatematau ki roto i te paraka tōai. Ina pāwhiritia
+          te whakahaerehia ka tōaitia ērā hipanga e te rehetoi e whā ngā wā, ki te
+          whakaoti i te tapawhā.
+    C2_bee_loops:
+      1:
+        text: Ko te koromeke te tōaitanga o tētahi mahi. Ka haere atu au ki te whare
+          pī ki te tirotiro haere, ka titiro ki tētahi taitapa ka whakahokia. Ka tōaitia
+          tēnei mahi kia maha ngā wā. Kei te hoki atu me te mahi i te mahi ōrite e
+          hia kē nei ngā wā.
+      2:
+        text: Ko te paraka tōai tēnei. Kia hoatu koe i te aha rānei ki roto i te paraka
+          tōai ka tōaitia aua hohenga i te nui o ngā wā kua tohua. Hei tauira, i tēnei
+          taumata, kāore tātou e tō i te neke ki mua me te tiki waireka e toru ngā
+          wā, ka tōia kē kia kotahi te wā me te tōai i te hohenga e toru ngā wā. I
+          māmā ake tēnā nē!
+    C2_maze_intro:
+      1:
+        text: He mea tuhi te papatonotanga i te nuinga o te wā engari ka whakamahi
+          tātou i te Blockly. Whakamahia ai te Blockly i ngā paraka atanga ka tōia,
+          ka waiho hoki ki te tuhi papatonotanga. He hanga waehere tonu te mahi ahakoa
+          pēhea. Hei tīmatanga, ka hanga e tātou tētahi papatonotanga ki te āwhina
+          i tēnei Manu Takariri ki te haere mā te rīrapa ki ngā poaka kino kua tāhae
+          i āna hua.
+      2:
+        text: Kua wāhia te Blockly ki ngā wāhanga matua e toau. Kei te taha mauī ko
+          te rīrapa manu, te wāhi whakahaere i tō papatono. Kua tuhi ngā tohutohu
+          mō ia taumata ki raro iho i te rīrapa. Ko te wāhanga o waenganui te pouaka
+          utauta. He whakahau ēnei paraka katoa kia mārama te manu me aha ia. Kei
+          te taha matau te mokowā e kīia nei ko te, papamahi, te wāhi hanga i tā tātou
+          papatono.
+      3:
+        text: Ki te tō ahau i tētahi paraka neke ki tā tātou papamahi me pāwhiri i
+          te "Whakahaerehia", he aha te hua? Ka neke whakamua te manu kia kotahi te
+          hipanga. Ka pēhea mēnā e hiahia ana ahau kia kawe te manu i tētahi atu mahi
+          i muri i tana neke ki mua? Ka taea e au tētahi paraka anō te tāpiri ki tā
+          tātou papatono.
+      4:
+        text: Ka whiriwhiria e au te paraka "huri whakatematau", ka tōia atu ki raro
+          i te paraka nek kia puta rā anō te pere kōwhai. Ka tukuna, kātahi ka hono
+          ngā paraka. Ina pāwhiritia anō te "Whakahaerehia" ka tutuki e te manu ngā
+          whakahau kua putuhia mai i runga ki raro i tā tātou papamahi.
+      5:
+        text: Ki te hiahia koe ki te muku i tētahi paraka, tēnā, tangohia i te putunga
+          ka tōia ai ki te ipu para. Mutu ana tō pāwhiri i te whakahaerehia, ka wātea
+          kia pāwhiritia te pātene tautuhi anō kia hoki atu te manu ki te tīmatanga.
+          Hoake tātou ki te tiki i ngā poaka!
+    C2_paper_airplanes:
+      1:
+        text: Koinei te akoranga Hātepe Ao-Tūturu. He mea whakaahua te hātepe i ngā
+          mahi o ia rā. Ko te tohutao pihikete me te tohutohu hanga wharemanu he tauira
+          o ētahi hātepe o ia rā.
+      2:
+        text: I tēnei rā ka hanga, ka waihanga, ka whakamātau hoki tātou i tētahi
+          hātepe mō te waka rererangi pepa. Heoi anō, ko te mahi tuatahi, ko te wāhi
+          i te tūmahi nei ki ngā hipanga iti, māmā te whai atu. Mēnā e hanga ana i
+          tētahi waka rererangi pepa me whakatau tātou he aha ngā hipanga me te raupapatanga
+          o aua hipanga hei whai mā te kaihanga.
+      3:
+        text: Māu te hātepe tuatahi e waihanga mā te tapahi i ngā pikitia. Mutu ana,
+          māu e whiriwhiri i ngā pikitia e ono e whakaatu ana i ngā hipanga ki te
+          hanga i te waka rererangi pepa me te whakaraupapa i aua pikitia ki te raupapatanga
+          tika. Mutu ana te whakaraupapatanga me whakawhiti koutou ko tētahi atu rōpū
+          ākonga ki te whakamātau i te pai o tāu hātepe. Mā te hātepe kounga e tino
+          eke ai te hanganga o tētahi tino waka rererangi pepa.
+      4:
+        text: Mēnā e hiahia ana koe ki te taka tiakarete, he maha ngā hipanga nui
+          i taua tūkanga, ā, mō ia hipanga nui he tautuhinga hipanga iti. He rerekē
+          ngā tohutao, nā hātepe rānei. Kei te āhua o te tāwara e hiahiatia ana. he
+          whaitake ngā hipanga katoa, ahakoa te rahi, nā te mea, ki te ngaro tētahi
+          o ngā hipanga, ka raru te katoa. Koina te take me āta tuhi i ngā hipanga
+          katoa, kia rite tonu te huanga i ia wā, ahakoa te kaikawe.
+    C2_playlab_createstory:
+      1:
+        text: Ā mohoa nei ko tāu he hanga i tētahi hākoritanga, tētahi paki rānei
+          ka tōai i ōna āhuatanga ia te wā ka whakahaerehia. Nā reira, e wātea ana
+          ināianei ki te hanga i tētahi kēmu pāhekoheko e āhei ana koe te tākaro.
+      2:
+        text: He paraka hou hei whakamātau māu. Ko te paraka "ina pere" tētahi, ko
+          te paraka "neke i te kaitapere" tērā atu. Ka taea e koe ēnei paraka te whakahono
+          kia neke haere te kaitapere me ngā kī pere. He paraka hoki ka kawe i tētahi
+          āhuatanga ki te tuki ngā kaitapere, ki te pāwhiritia rānei rātou. Tēnā tirohia!
+    C2_relay_programming:
+      1:
+        text: I te rangi nei ka mahi tātou i te papatonotanga ā-tānga. E hāngai pū
+          ana ki te papatonotanga i ngā wā e tāmia ana me te patuirotanga, arā, te
+          whakatika i ngā hapa ka puta i a koe e horo haere ana, e mahitahi ana rānei
+          hei tīma. Ka whakamahi tātou i te pepa kauwhata hei whakaritenga ki te mahi
+          waehere me ngā whakataetae tānga hei whakaritenga ki te wā me oti te mahi.
+      2:
+        text: I te papatonotanga ā-tānga ka whakataetae ngā tīma ki te whakaoti i
+          te papatono pepa kauwhata. Me āta titiro koe ki ngā mahi o tō hoa, me patu
+          rānei i te iro, mēnā he hapa me whakatika, me tāpiri i tō pere, kātahi ka
+          oma atu ki te pā ki tō hoa.
+      3:
+        text: Whakamahia ai te patuirotanga e ngā kaipapatono ki te rapu me te whakatika
+          hapa i ā rātou hātepe, waehere rānei. He nui ngā ara patuiro. Ko tētahi
+          o ngā ara māmā ko te āta titiro, hipanga ā hipanga kia kitea rā anō te hapa,
+          kātahi ka whakatikaina.
+      4:
+        text: Kei konei ahau e ngana ana ki te takapore whakamuri engari ia te wā
+          ka ngana, ka taka. Ka āta tirohia ngā nekehanga katoa, kātahi au ka kite
+          i taku hē. Nā taku kaiwhakangungu ahau i whakaatu mai i te hē o taku waiho
+          i toku ringa ki te kurupae. Nā reira, ka ngana anō ahau, ka waiho i tōku
+          ringa ki te wāhi tika i te kurupae, ka tutuki i au! Harikoa katoa ahau i
+          tutuki taku patu i ngā iro o taku takapore whakamuri. Ko tā te patuirotanga
+          he rapu, he whakatika i ngā raru. Me he tē!
+    C2_zuck_repeat_loop:
+      1:
+        text: He tohunga te rorohiko i te mahi tōai whakahau. Ka tere hōhā te tangata
+          mēnā ia ka mate ki te mahi i te mahi ōrite ao noa, pō noa. Heoi anō te rorohiko
+          ka mahi i te mahi ōrite kia miriona, kia piriona rānei ngā wā me te kore
+          paku hōhā, ka mutu, ka tino rangatira tana kawe i aua mahi.
+      2:
+        text: Hei tauira, mēnā i te hiahia koe ki te mihi hari huritau atu ki ngā
+          tāngata katoa o Pukamata mā te tuku īmēra, ka pau te kotahi rau tau ki te
+          patotuhi i te katoa. Otirā, mā ētahi rārangi waehere ka taea e au tētahi
+          pūnaha te waihanga kia pai ai taku tuku īmēra hari huritau atu ki ngā tāngata
+          katoa o Pukamata. Nā reira koinei te koromeke, te take hoki e tino whaitake
+          ana me tētahi o ngā mahi tohunga a te rorohiko.
+      3:
+        text: I tēnei tauira ko tō whāinga ko te neke i te manu kia tikina te poaka
+          e ia. Kia māmā ake ai te whakatutukitanga o tēnei mahi, ka taea e tātou
+          te paraka "tōai" te whakamahi. Ka taea te pēnei mā te hoatu i te whakahau
+          "neke ki mua" ki te rorohiko e rima ngā wā kia tata atu te manu ki te poaka.
+      4:
+        text: Ka taea rānei te whakahau i te rorohiko ki te "neke ki mua" kia kotahi
+          te wā, kātahi ka whakahau atu kia "tōai" i taua nekehanga e rima ngā wā.
+          Ka rite te huanga. Nā reira, e tutuki ai tēnei, me tō i te whakahau "neke
+          ki mua", me hoatu ki roto i te paraka "tōai". Ka pāwhiritia me te kī atu
+          e hia ngā wā e hiahia koe kia tōaitia taua mahi, te neke ki mua.
+      5:
+        text: Hei āpiti atu, ka taea ngā whakahau huhua te hoatu ki roto i te paraka
+          "tōai". Nā reira, i tēnei tauira, e meatia ana koe kia neke ki mua me te
+          huri whakatemauī, ā, ka pēnei e rima wā. Ka wani kē! Kia ngahau!
+    C3_artist_functions:
+      1:
+        text: Mutu ana tō ako i te rorohiko ki te kawe i tētahi hohenga kua wātea
+          tēra taumahi kia karangahia anō ā tōna wā, ā, koinei tētahi o ngā tino painga
+          o te papatonotanga rorohiko. Ka tapaina atu he ingoa, ka karangahia. Ānō
+          nei e whakawhanake ana i te reo.
+      2:
+        text: I te papatono i hangaia e tātou, i ako tātou ki te tā i tētahi tapawhā
+          mā te neke me te huri e whā ngā wā. Ka taea e tātou tērā taumahi te tapa
+          ki te ingoa, tāngia he tapawhā, kia eke te wā ka hiahia tā tapawā tātou,
+          ko tā tātou he kī noa atu tāngia he tapawhā, ā, ka hoki atu te rorohiko
+          ki te whakaara i taua taumahi, taua waehere. Ka ea mā tātou. Kua tāpiritia
+          tērā ariā ki tō tātou reo papatonotanga.
+    C3_artist_intro:
+      1:
+        text: E kore koe e paku kōwhiritia mō te whakataetae mēnā kāore ō tāngata
+          matatau ki te pūtaiao rorohiko. Nā te nui o ngā raraunga ka kohikohia e
+          ngā waka, e tika ana kia tirohia e tētahi hunga e mōhio ana ki te tuhi papatono
+          kia mārama ai koe ki ngā mahi e tika ana kia koke tonu, kia pai ai tō whakawhanake
+          i tō mahinga hautū waka.
+      2:
+        text: Ko koe hei rehetoi i ēnei panga, ka whakamahi i te penerākau ki te tā
+          i ngā āhua rerekē. Ahakoa haere ai tō rehetoi ki hea, ka tāngia he rārangi
+          ki muri i a ia.
+      3:
+        text: Ki te neke haere i te papatā ka whakamahi koe i te paraka neke ki mua.
+          I konei kei te kī mai te paraka neke ki mua mā te 100 pika. He aha te hua
+          ki te pāwhiri tātou i te "Whakahaerehia"? Ka paku neke te rehetoi ki mua,
+          ka neke mā te 100 pika. He tongi moroiti noa iho nei ngā pika i tō mata
+          rorohiko.
+      4:
+        text: Kei te kī mai tērā atu paraka kei te panga nei huri whakatematau mā
+          te 90 putu. Ā, ina tātou ka tō i taua paraka ka paku huri te rehetoi. E
+          whakaae ana kia rawekehia kia whakatauhia ka pēhea te nui o tana huri. He
+          huringa 90 putu tēnei.
+      5:
+        text: He huringa 120 putu tēnei. Kia mahara ake, e whakaae ana kia panonihia
+          ēnei uara mā te pāwhiti i ngā pere kei te taha o ngā tau pika, putu hoki.
+          Kia ngahau te tā me tāu rehetoi!
+    C3_artist_nested_loops:
+      1:
+        text: Ki te hoatu i tētahi koromeke ki roto i tētahi atu koromeke ka kīia
+          tēnei he, koromeke tauroto. Hei tauira, i konei kua wātea kē ki a tātou
+          tētahi waehere ki te tā i tētahi tapatoru 100 pika te roanga o ngā tapa
+          mā te whakamahi i te paraka ngā wā tōai, kia toru ngā wā, ko tētahi wā mō
+          ia tapa o te tapatoru.
+      2:
+        text: Engari e hiahia ana tātou ki te tā i ngā tapatoru e ono. E tutuki ai
+          tēnā, ka tango tātou i taua koromeke me te hoatu ki roto i tētahi atu paraka
+          ngā wā tōai. Pāia!
+    C3_bee_conditionals:
+      1:
+        text: He paraka whai here tēnei. E meatia ana MĒNĀ he waireka, he mīere rānei
+          he iti iho, he rite tonu, he nui ake rānei i te nui o te tau, ME mahi i
+          tētahi mahi.
+      2:
+        text: Ka whaitake tēnei i ngā wā kāore tātou i te mōhio ki te nui o te waireka,
+          o te mīere rānei hei tiki atu mā tātou. E kitea ana i konei me tēnei tohu
+          pātai.
+      3:
+        text: I tēnei tauira ka mea atu tātou MĒNĀ he waireka tō te putiputi tawa
+          he nui ake i te 0, tikina atu te waireka. Mā tēnei ka whakahautia tā tātou
+          pī ki te kohikohi i te waireka mēnā rā he waireka. Ana!
+    C3_bee_debugging:
+      1:
+        text: Kua rongo kōrero koe mō tētahi papatono patuiro? Koinei te ara e mōhio
+          ai koe he aha e raru ana. Ki te patu i te iro waehere ka tautohu i ngā hapa,
+          ka tangohia hoki.
+      2:
+        text: Kei tā tātou papamahi ētahi paraka i whakaratoa kētia. Ka whakamahi
+          tātou i te pātene hipanga ki te hīkoi i waenganui i ngā paraka, ā-hipanga,
+          ki te kite mēnā koinā te otinga tika ka tahi, ka rua ngā wāhanga e tika
+          ana kia whakatikahia.
+      3:
+        text: Te āhua nei koinā te mate! Me whiwhi tātou ki tētahi paraka neke ki
+          mua anō. Mā te pātene hipanga tātou e āwhina ki te patu i te iro mā te tautohu
+          i te wāhi kei reira te mate kia taea e tātou te whakatika.
+    C3_bee_functions:
+      1:
+        text: Ko tētahi o ngā tino ariā o te pūtaiao rorohiko ko te whakamahukitanga
+          o ngā whakahau hou, arā, te tāpiri i ō ake kupu ki te reo rororhiko. Kei
+          te takiwā o te kotahi rau te nui o ngā kupu, ngā whakahau rānei o ngā reo
+          rorohiko. Kei te whakamahukitanga kē o ngā kupu hou kua hangaia me ēnei
+          paraka te mīharotanga me te auahatanga o tēnei mahi.
+      2:
+        text: Ka rite tonu tā tātou pēnei i ngā wā e tākaro hākinakina ana. Hei tauira,
+          i te poitūkohu, ka tīmata i te tūpana poi, ki te pūhunga, ki te turapa.
+          Kia mau i a koe ēnei nekehanga waiwai ka tīmata tō ako i ngā nekehanga hou.
+          Kia whakakotahitia ēnei, ka noho hei paraka hanga pēnei i te nekehanga ārai-hipa
+          me te nekehanga maka-oma. I konei ka koke ki ngā nekehanga matatini. Kia
+          ako koe ki taua nekehanga me te tapa ki tētahi ingoa, kua mōhio tō tīma
+          me pēhea te mahi.
+      3:
+        text: Tōna rite hoki ki tō whakaako i te rorohiko ki te mahi i tētahi hohenga
+          mā te whakamahi i ēnei raupapatanga whakahau, ka tapa koe i tētahi ingoa
+          ki taua hohenga kia māmā ake ai te tōai tōna wā. Kia whakamahuki i tō whakahau,
+          kātahi ka tapaina ki tētahi ingoa, ka huri hei taumahi. Ka whakamahia i
+          te taumahi ki te āwhina i te pī.
+      4:
+        text: I tēnei tauira kua tapaina tā tātou taumahi ki te ingoa tiki waireka
+          2, tēnei paraka kākāriki kei konei. E mōhio ana tātou ka aha te taumahi
+          tiki waireka 2 nā tōna whakamahukitanga kei tēnei pouaka kiwikiwi. Ki te
+          titiro tātou ki roto rā mā te taumahi tiki waireka 2 e tiki i te waireka,
+          kātahi ka tika waireka anō. Me rite tonu tō titiro ki roto i te pouaka kiwikiwi
+          kia mōhio ai koe ki te āheinga o ēnei paraka taumahi.
+    C3_bee_nested_loops:
+      1:
+        text: Ka whakamahi tātou i ngā koromeke tauroto ināianei me te pī. Kua hoatu
+          e mātou tētahi waehere whakatere e whakahau ana i te pī ki te neke ki mua
+          me te tiki waireka e toru ngā wā, kātahi me huri whakatematau. Kia tango
+          tātou i taua waehere katoa me to hoatu ki roto i tētahi paraka tōai me te
+          tautuhi kia tōaitia e toru ngā wā. Kua mutu!
+    C3_bounce:
+      1:
+        text: Ka waihangahia e koe tāu ake kēmu tupana ka āhei te tiri ki ō hoa! Te
+          mutunga kē mai!
+      2:
+        text: Hei tīmatanga, me whakahono tātou i ngā whakahaere patu ki ngā kī pere
+          kei tō papapatotuhi.
+      3:
+        text: Ka taea e tātou tēnei mā te tūhono i te paraka ina pere mauī ki te paraka
+          neke whakatemauī, mā te tūhono hoki i te paraka ina pere matau ki te paraka
+          neke whakatematau. Whakamātauria, ā kāore e roa ka riro māu tō kēmu tupana
+          e papatonotia!
+    C3_computational_thinking:
+      1:
+        text: Ko te whakaaro ā-rorohiko tēnei akoranga. Ka uaua i ētahi wā te ako
+          i tētahi kēmu hou, nē? I te tīmatanga ka rangirua, ā, i ētahi wā kāore he
+          tangata hei whakaako i a koe ki ngā ture, nā reira, māu anō koe e ako.
+      2:
+        text: Ka pai ake tō ako i a koe anō i te wā kua mau i a koe ētahi hārau whakaaroaro,
+          ā, koinei te rongopai. He mea motuhake ēnei hārau hei ara mātai me te whakaoti
+          rapanga. I tēnei akoranga ka ako koe ki ngā hārau e whā, ā, ka whakaharatau
+          me ō hoa kia mārama ki a koutou ngā ture o te kēmu.
+      3:
+        text: I a koe ka wetewete i tētahi rapanga nui ki ngā wāhanga iti kei te whakamahi
+          koe i ō roro ki te wāhi i te rapanga nui. Mutu ana, he nui ngā rapanga iti
+          ka toe mai. Ka tika tonu atu tātou ki tā tātou hārau tuatahi, tērā e kīia
+          nei ko te whakataurite tauira.
+      4:
+        text: Ko te rapu tauritenga tēnei mahi. Kia kitea e tātou ētahi āhuatanga
+          taurite, ka mōhio haere tātou ki ngā āhuatanga rerekē. Ki te tango ahau
+          i aua rerekētanga ko te whakawaitara tēnā.
+      5:
+        text: Kia mārama ahau ki ngā hipanga whakaoti i tētahi rapanga ka taea e au
+          ērā hipanga te whakaraupapa ki tētahi hātepe kia āhei ai te tangata, ahakoa
+          ko wai, aku tohutohu whakaoti rapanga te whai. Ka whakamahi tātou i ngā
+          hipanga e whā kia mārama ai tātou me pēhea te tākaro i tētahi kēmu kāore
+          ōna ture. Hei te mutunga o te kēmu, ka mōhio koe ki te tākaro ki tētahi
+          kēmu āhua pēnei te hanga!
+    C3_crowdsourcing:
+      1:
+        text: Ko te mahi ā-ohu te ingoa o tēnei akoranga, I tēnei akoranga ka whakamahi
+          tātou i tētahi pākete kāri ki te ako e pā ana ki te māmā ake o ētahi mahi
+          mēnā ka mahi ā-ohu, kaua ā-tangata takitahi. Tōia mai ō hoa, hangaia tētahi
+          mea mīharo. Ko te tikanga o te mahi ā-ohu ko te tono āwhina i tētahi ohu
+          nui kia wawe ake ai te whakatutukitanga o tētahi mahi.
+      2:
+        text: Ka whakamahi mātou i te mahi ā-ohu i te pūtaiao rorohiko i ngā wā katoa.
+          He manomano pia, ringa rehe hoki ka tūhono i ā rātou rorohiko ki te tirotiro
+          haere i ngā mōhiohio piriona nei. E rapu haere nei i te tau toitū Marsenne
+          hou, i ngā whakawhitiwhitinga kaituarangi rānei.
+      3:
+        text: Ki te mātakitaki koe i tētahi kiriata, kei ia hēkona o taua kiriata
+          e 24 atahanga takitahi e kīia nei he tapa. Nā reira, me mātua waihanga,
+          whakamāori, whakahono hoki i aua atahanga katoa. he kaiwhakawhanake pūmanawa
+          mātou ko tōku tīma. Ka mahitahi mātou ki te waihanga i te momo pūmanawa
+          māna tētahi atahanga e waihanga, te atahanga whakamutunga ka kitea o tō
+          mata. He utauta tēnā ka whakamahia e ētahi rehetoi, e ētahi atu kaiwhakawhanake
+          hoki i ā rātou e mahitahi ana hei tīma, i ā rātou hoki e whai ana i tētahi
+          tukanga ki te waihanga i ngā atahanga ka whakakitea ki te mata.
+      4:
+        text: Hei tauira, i te kiriata Finding Nemo, i a Crush rāua ko Squirt, ko
+          ō rāua hoa e tere ana i te Aumoana Rāwhiti o Ahitereiria. Kei te kite koe
+          i ngā atahanga o te wai e rere ana, kei te kite koe i ngā tae kei te anga
+          o te honu, ā, kei te kite hoki koe i ngā taha o ngā ika. He mea hanga ēnei
+          mā roto mai i te pāngarau me ngā pūmanawa rorohiko ka tuhi e mātou, kātahi
+          ka hoatu ki te rehetoi, ā, māna e kawe me te whakamahi ki te waihanga, te
+          whakatika, me te whakapaipai i te atahanga whakamutunga.
+    C3_dice_race:
+      1:
+        text: Ko te whakataetae mataono te ingoa o tēnei akoranga. Ko te nuinga o
+          ngā tāngata e rata ana ki te tākaro kēmu rorohiko. Kua whakaarohia e koe
+          te mahi ā ngā kaipapatono rorohiko i a rātou ka huri i ngā hipanga o te
+          kēmu hei papatono? Ko te mahi tuatahi i te mahi hanga kēmu rorohiko me ngā
+          mahi whakaoti rapanga ko te whakaaro me te whakamahere.
+      2:
+        text: Ka hua mai te hātepe i te hipanga whakaaro o te whakaoti rapanga, arā
+          ia he, mahere ā-hipanga mō te whakaoti rapanga, mō te whakaoti mahi rānei.
+          I tēnei whakaakoranga waihangahia e koe tētahi hātepe mō te kēmu whakataetae
+          mataono. Kātahi koe ka tono atu ki ō hoa ki te whakamātau i tō mahere mā
+          te whai i ngā hipanga mō te tākaro i te kēmu. Kia mōhio rā anō te kaipapatono
+          kei te tika ngā hipanga, ka eke te wā ki te whakamāori i te hātepe hei papatono
+          i tētahi reo e mārama ana ki te rorohiko.
+      3:
+        text: He hātepe e kawe ana i te nuinga o ā mātou mahi o ia rā. He rārangi
+          hipanga hei whai mā mātou ki te whakaoti i tētahi mahi. Tēnā whakaarohia
+          ngā āhuatanga o te whakarite i a koe anō mō te kura, te whakamahere rānei
+          i tētahi rangi ngahau me o hoa, te whakarite timo kai rānei. Hei whakaoti
+          i aua mahi me āta wetewete ki ngā hipanga iti, ā, i ētahi wā me whai raupapatanga
+          hoki aua hipanga.
+      4:
+        text: Whakaarohia te taka hanawiti. Ehara i te mea he aha te momo raunga ka
+          tikina tuatahitia i te kāpata, e kore noa iho e taea e koe te pata pīnati
+          te pani ki te paraoa kia tuwhera rā anō te ipu. Me whai hātepe, me whai
+          papatono hoki ngā rorohiko kia mōhio ai rātou ki te whakatutuki aunoa i
+          ngā mahi katoa, ahakoa te iti o taua mahi.
+      5:
+        text: Ko te hātepe te whakaaro nui e hāpai ana i te mahi, engari te papatono,
+          māna te rorohiko e tohutohu kia tutuki. Me whakamāori i te hātepe hei papatono
+          kia āhei te rorohiko te whakahaere. He mea uaua, i ētahi wā, te wetewete
+          i te hātepe ki ngā hipanga, Heoi anō, he pēnei i te ako i ngā pūkenga hou,
+          mā te whakaharatau ka māmā ake.
+    C3_farmer_while:
+      1:
+        text: He tino rite ngā koromeke ki ngā mahi ka kawea e te tangata i ia rā.
+          Tēnā pohewatia tēnei, kei te horoi koe i to waka, ka horoi tonu kia mā rā
+          anō. I te waka e paru tonu ana ka haere tonu tō horoi. Kei te arotakehia
+          ēnei tūāhuatanga i te katoa o te wā.
+      2:
+        text: He tirohanga hou tēnei hei tautoko i tō kaiahuwhenua. Ko te paraka-i
+          te. He tino māmā. I te tika o te tauākī o runga, mahia atu he mahi. Hei
+          tauira, i te pūkei i konā, nekehia tētahi pāera. Kawea ake, whakamātauria
+          me tō kaiahuwhenua.
+    C3_functional_suncatchers:
+      1:
+        text: Ko te akoranga ngā hopurā taumahinga. Ka waihangahia e koe ngā hopurā
+          ātaahua nei mā te whakamahi i ngā taumahi. He nui ngā hipanga ka whāia ki
+          te hanga i tētahi o ēnei hopurā. Me nui te tōai o ētahi o ngā hipanga.
+      2:
+        text: Ko te hipanga tuatahi hei whakamāmā i te tukanga hanga hopurā ko te
+          mārama ki ngā āhuatanga e tika ana kia tōai ake, kia tōai ake. Ka taea e
+          tātou ēnei hipanga te whakarōpū hei taumahi.
+      3:
+        text: Heoi anō, inā kē ngā āhuatanga waihanga i tētahi hopurā ātaahua i te
+          whai i ngā hipanga hāngai pū. I ētahi ka hiahia tātou ki auaha tā tātou
+          mahi me te panoni i te tae o ngā perepere e whakamahia ana. Ki te whakamahi
+          tātou i ngā perepere tae rerekē ka tino motuhake te āhua o ia hopurā.
+      4:
+        text: Ka motuhake tō hopurā mēnā koe ka whakaaro taurangi e pā ana ki ō perepere.
+          He āhuatanga te taurangi ka noho hei puriwāhi mō ngā mōhiohio ka huri. Kia
+          ngahau te mahi hanga hopurā ātaahua mā te whakamahi i ngā taumahi me ngā
+          taurangi!
+    C3_internet:
+      1:
+        text: Hānga pū ana tēnei akoranga ki te ipurangi. Kei te ipuranga te mahi
+          a te tangata, he ōrite ki tēnei huarahi. Kei te rere haere ngā karere pēnei
+          i ēnei motukā kia tae atu ki tōna ūnga. He hohoro te rere o ngā karere i
+          te ipurangi.
+      2:
+        text: Mā te whakaari atu i te mahi ā te ipurangi ka mārama ake ai te tangata
+          ki ngā āhuatanga kei te kawea i a koe ka whakamahi i te ipurangi. Ka ako
+          koe e pā ana ki te rere o ngā karere i tō rorohiko ki tētahi o āu tino pae
+          tukutuku, i tētahi hoa ki tētahi pouakauru īmērā. Ki te mōhio koe ki ngā
+          huarahi e takahia ana, ki te pānui hoki i ngā tohu ka māmā ake te taraiwa
+          haere i tō motukā. He rite hoki te ipurangi, arā, ka māmā ake ina koe ka
+          mōhio ki ngā mahi e kawea ana i muri.
+      3:
+        text: He āhua rite te tuku karere mā te ipurangi ki te tuku karere mā te mēra,
+          engari, he rerekē hoki. Kei Google.com ahau. Ko te wāhitau ipurangi (IP
+          address) mō tēnei pae tukutuku ko tēnei tau. Whakaarohia te wāhitau ipurangi
+          ānō nei, wāhinoho whakahoki i te mēra. Kia whakaaro pohewa tātou, ā, kei
+          te hiahia koe ki te tuku karere ki te tari o raro. Kei te kite atu koe i
+          te wāhitau tukutuku (URL) me te wāhitau ipurangi (IP) ki te tatau? Kua tuhia
+          e au tēnei karere, kua patua te tuku.
+      4:
+        text: Ko te mahi tuatahi ka mahi e te ipurangi ko te wāhi i te karere ki ngā
+          wāhanga iti kia māmā ake ai te tuku, he rerekē tēnei i tā te Ratonga Tuku
+          Mēra. Ko te pākete te ingoa mō ēnei wāhanga iti. Ka tukuna ia pākete ki
+          te ūnga, ā-pākete kātahi, ka whakaemihia, ka whakaraupapahia kia pai ai
+          tā te kaiwhiwhi pānui tika. He nui noa atu ngā mea hei aku māu e pā ana
+          ki te ipurangi, otirā, he tīmatanga pai tēnei. Kei te whanake haere ō pūkenga
+          ipurangi! Me mātua kī atu tāu i ako ai ki tō whānau me ō hoa!
+      5:
+        text: Ko Amanda Camp tōku ingoa, he kaipūkaha pūmanawa ahau ki Google. Ka
+          mahi ahau i te tīma ka tiaki i te tūmau kāinga, tērā ka rokiroki i ngā kōtaha
+          me ngā hoapā. I taku umanga ka whakaaro nui mātou e pā ana te tukutanga
+          o ō hoapā ki ētahi atu pūrere, pēnei i tō waea. He tokomaha ngā hoapā o
+          te nuinga o ngā tāngata, tōna 1000 pea, ā, kāore mātou i te hiahia kia tukuna
+          aua hoapā ki tō waea i te wā kotahi nā te mea hei tino rahi taua karere.
+          He āhua rite tā mātou mahi wāwāhi ki tā te ipurangi wāhi i ngā karere nui
+          ki pākete te hanga. Ka whakamahi mātou i tētahi ariā e kīia nei ko te whakawhārangi
+          (paging). Ka tukuna e mātou te 100 hoapā ki tō waea kātahi ka whanga kia
+          uruparetia e tō waea, ā, ka tukuna he 100 anō.
+      6:
+        text: Ko te āhuatanga hiamo rawa o ngā pūmanawa, ko te āhua o tana pā ki te
+          ao whānui. Tekau mā iwa tau tōku pakeke i te wā i tīmata ahau ki te ako
+          e pā ana ki te papatonotanga, I te kāreti kē ahau. Ko te papatono tuatahi
+          nāku i tuhi ko tētahi i panoni i te Tohurau (Celsius) ki te Fahrenheit.
+          I rata ahau ki te papatonotanga, nā te mea, e rata ana ahau ki te āwhina
+          i te tangata. Ka taea e au ētahi papatono te waihanga i Google hei āwhina
+          i ngā tāngata puta noa i te ao. Hīkaka katoa ahau i tērā tūāhuatanga.
+    C3_maze_conditionals:
+      1:
+        text: Ka hanga whakatau ngā tāngata i ia rā. Hei tauira, i mua i tō puta ki
+          wahi, he tauākī mēnā tāu e meatia ana, mēnā e rere ana te ua, me tiki ahau
+          i taku koti. Rawe katoa ngā rorohiko, kia whakatauhia e koe ngā tauākī pēnā,
+          me tana mōhio, tana wawe hoki ki te kawe. He mea hanga te papatono rorohiko
+          i te pāngarau me ētahi tauākī mēnā.
+      2:
+        text: Mā te paraka mēnā te kairoro e hanga whakatau. Ka tirohia tētahi mea.
+          Hei tauira, me whakamahi tātou i te paraka mēnā he ara ki te taha mauī,
+          ā, ka hoatu i tētahi whakahau huri whakatemauī ki roto. Ki whakahau ana
+          tātou i te kairoro kia tirohia te wāhi me te kite mēnā he ara kei te taha
+          mauī, ā, mēnā āe, me huri.
+      3:
+        text: Kātahi tātou ka whakamahi i te paraka neke ki mua ki roto i te paraka
+          tōai kia neke tonu ia ki mua. Kātahi ka tupono atu ki tētahi huringa, ā,
+          mā te paraka mēnā e whakahau i a ia kia huri. Ka kite koe, ina tātou kā
+          pēnā, ina tātou ka hui whakatemauī, me te koke whakamua, ka tutuki i a tātou,
+          tō tātou whāinga.
+      4:
+        text: He tauira tēnei o te whakamahinga o te tauākī mēnā, tētahi o ngā tino
+          ariā o te papatonotanga rorohiko. Ko tētahi o ngā mea tuatahi i ako, ko
+          te tuhi papatono mō te kēmu tic-tac-toe. I tuhia e au tētahi tauākī e meatia
+          ana, mēnā e tata ana te toa o tērā atu kaitākaro, haere, ārahia taua mokowā.
+          Kia harikoa ngā mahi ako ki te whakamahi i ngā tauākī mēnā, he ariā matua
+          tēnā.
+    C3_maze_level_4:
+      1:
+        text: Ko tō whāinga i tēnei tauira, ko te kawe i te kairoro ki te putiputirā.
+          Ka taea e tātou ngā paraka neke ki mua e rima te whakamahi, ka taea rānei
+          e tātou te rorohiko whakahau me neke ki mua ki kotahi te wā, kātahi, me
+          tōai i taua nekehanga e ringa ngā wā mā te whakamahi i te paraka tōai kotahi.
+      2:
+        text: Ka poto ake, ka māmā ake hoki te mahi. Hei whakamahi, hoatu te paraka
+          neke ki mua ki roto i te paraka tōai. Pāwhiritia te whakahaerehia, ā, ka
+          neke te kairoro ki mua, ki te putiputirā namunamuā e rima wā.
+    C3_playlab_create_game:
+      1:
+        text: Ā mohoa nei ko tāu he hanga i tētahi hākoritanga, tētahi paki rānei
+          ka tōai i ōna āhuatanga ia te wā ka whakahaerehia. Nā reira, e wātea ana
+          ināianei ki te hanga i tētahi kēmu pāhekoheko e āhei ana koe te tākaro.
+      2:
+        text: He paraka hou hei whakamātau māu. Ko te paraka "ina pere" tētahi, ko
+          te paraka "neke i te kaitapere" tērā atu. Ka taea e koe ēnei paraka te whakahono
+          kia neke haere te kaitapere me ngā kī pere. He paraka hoki ka kawe i tētahi
+          āhuatanga ki te tuki ngā kaitapere, ki te pāwhiritia rānei rātou. Tēnā tirohia!
+    C3_songwriting_with_parameters:
+      1:
+        text: Koinei te akoranga tito waiata. He tino rite te pūoro ki tētahi papatono
+          rorohiko. Mā ngā oro me ngā kupu kua tuhia te tangata e mōhio me aha rawa
+          ia. Ko ētahi wāhanga pūoro ka tōaitia, ka tōaitia.
+      2:
+        text: Ko te puku tēnei. I tētahi papatono rorohiko, ko ngā wāhanga o te papatono
+          ka whakamahia anō ko ngā taumahi. Ki te pānui koe i ngā kupu o tētahi waiata,
+          ā, ka kī puku, ka waiata rānei koe i te kupu puku? Kāori, ka hoki atu koe
+          ki te wāhanga o runga o te whārangi kia kite koe i te puku.
+      3:
+        text: I tēnei akoranga ka ako koe i tētahi waiata whakangahau ko rāpeti whū
+          whū te ingoa. He puku tō te waiata nei ka nui te tōatia. Ko te taumahi tētahi
+          wāhanga waehere ka karangahia, ka whakamahia takaruretia. Ka māmā ake, ka
+          pai ake hoki te papatonotanga, nā te mea, kāore koe e mate ki te tuhi i
+          ngā hipanga o tō taumahi e hia kē nei ngā wā. Ka tuhia kia kotahi noa iho
+          te wā!
+    C4_bee_conditional:
+      1:
+        text: He paraka here tēnei. Ka mea atu, mēnā kei te putiputi, te hanikoma
+          rānei, me mahi koe i tētahi mahi. Ka whaitake tēnei mēnā kāore tātou i te
+          mōhio he aha te nui o te mīere, o te waireka rānei me tiki e tātou, ā, kei
+          te tohu pātai nei te tohu.
+      2:
+        text: I tēnei tauira ka kī tātou, mēnā he putiputi, me tiki i te katoa o te
+          waireka kātahi ka whakamahia tērā atu ki te kī, mēnā he hanikoma, mahi mīere.
+          Ana!
+    C4_conditionals:
+      1:
+        text: He paraka hou tā tātou ko te paraka mēnā/kē. He tauākī whai here pēnei
+          i te paraka mēnā kua whakamahi i ērā atu panga i mua. Heoi anō, he wāhanga
+          hou tōna kei raro e kī ana kē. Mā te paraka mēnā/kē ka taea e te pī te whakatau
+          me aha i ngā kōwhiringa e rua. Mēnā kei te putiputi te pī ka mahi ia i te
+          tautuhinga hohenga i tuhia e koe ki te wāhanga tuatahi o te wāhi kei reira
+          e kī ana, mahia. Mēnā kāore te pī i te putiputi, ka mahi ia i tētahi tautuhinga
+          hohenga kē ka tuhia e koe ki te wāhi e kī kē ana.
+      2:
+        text: Ko te take e āhei ana te rorohiko ki te hanga whakatau, ko ngā tauākī
+          mēnā. Ko tā te tangata he whakarite here mō te rorohiko e kī ana, me pēnei
+          ki te puta tēnei āhuatanga, me pēnā kē rānei. Kei runga i te paraka mēnā/kē
+          ka kī mēnā kei te putiputi. Heoi anō, e āhei ana ētahi atu tauākī hoki pēnei
+          i tēnei, mēnā ka 2 te tapeke waireka, mēnā he ara ki mua rānei, ka pērā
+          tā tātou paraka. Mēnā e pono ana te tauākī o runga, ka kawea te tautuhinga
+          hohenga tuatahi. Otirā, mēnā e hē ana te tauākī o runga, ka kawea te tautuhinga
+          hohenga tuarua.
+    C4_for_loops:
+      1:
+        text: Kia whakamahi koe i te paraka tōai ki te koromeke i tō waehere, ka pēhea
+          tō rorohiko e mōhio kua eke ki te nui o ngā wā e tika ana kia tōaitia? He
+          huna te paraka tōai i tētahi momo waehere mātanga e kīia nei ko te koromeke
+          kia. Ko tāna he tātai i tētahi uara tīmatanga ki tētahi uara mutunga mā
+          te nui kua tohua.
+      2:
+        text: Hei tauira, ko tā te paraka tōai toru ka tātai i te 1 ki te 3 māwhiti
+          1. I ia wā ka tātai, ka whakahaerehia te waehere ki roto i te koromeke.
+          E mōhio ana te koromeke kia i te nui o te wā ka whakahaerehia mā te whakamahi
+          i te pūtatau taurangi, tērā kua tautuhia kia tīmata i te uara tīmatanga
+          kei te tīmatanga o te koromeke, ā, he māwhiti kua tāpititia i ia wā ka whakahaerehia
+          te koromeke. Kia nui ake te pūtatau taurangi i te uara whakamutunga, ka
+          tū te rere o te koromeke.
+      3:
+        text: Ko te painga o te whakamahi i tētahi koromeke kia tūturu, kaua kē ia
+          te paraka tōai, ko te kite koe i te pūtatau taurangi, ā, e taea ana tēnā
+          te whakamahi ki tō koromeke. Hei tauira, mēnā i au tētahi rārangi putiputi,
+          ā, he waireka kotahi tō te mea tuatahi, e rua ngā waireka o te mea tuatoru,
+          e toru ngā waireka o te mea tuatoru, ka taea e au te koromeke kia te whakamahi
+          ki te kī atu ki te pī me kohikohi ia o ngā waireka "pūtatau" i ia wā. Arā,
+          kotahi i te putiputi tuatahi, e rua i te putiputi tuarua, e toru i te putiputi
+          tuatoru.
+      4:
+        text: Mō te koromeke kia, ka taea te whakarite pūtautau ki te tātai i te māwhiti
+          mā aha rānei i ia wā. Tērā pea ka taea te tātai māwhiti mā 2, mā 4, mā tētahi
+          atu tau ka rerekē i ia wā.
+    C4_for_loops_bee:
+      1:
+        text: Kia whakamahi koe i te paraka tōai ki te koromeke i tō waehere, ka pēhea
+          tō rorohiko e mōhio kua eke ki te nui o ngā wā e tika ana kia tōaitia? He
+          huna te paraka tōai i tētahi momo waehere mātanga e kīia nei ko te koromeke
+          kia. Ko tāna he tātai i tētahi uara tīmatanga ki tētahi uara mutunga mā
+          te nui kua tohua.
+      2:
+        text: Hei tauira, ko tā te paraka tōai toru ka tātai i te 1 ki te 3 māwhiti
+          1. I ia wā ka tātai, ka whakahaerehia te waehere ki roto i te koromeke.
+          E mōhio ana te koromeke kia i te nui o te wā ka whakahaerehia mā te whakamahi
+          i te pūtatau taurangi, tērā kua tautuhia kia tīmata i te uara tīmatanga
+          kei te tīmatanga o te koromeke, ā, he māwhiti kua tāpititia i ia wā ka whakahaerehia
+          te koromeke. Kia nui ake te pūtatau taurangi i te uara whakamutunga, ka
+          tū te rere o te koromeke.
+      3:
+        text: Ko te painga o te whakamahi i tētahi koromeke kia tūturu, kaua kē ia
+          te paraka tōai, ko te kite koe i te pūtatau taurangi, ā, e taea ana tēnā
+          te whakamahi ki tō koromeke. Hei tauira, mēnā i au tētahi rārangi putiputi,
+          ā, he waireka kotahi tō te mea tuatahi, e rua ngā waireka o te mea tuatoru,
+          e toru ngā waireka o te mea tuatoru, ka taea e au te koromeke kia te whakamahi
+          ki te kī atu ki te pī me kohikohi ia o ngā waireka "pūtatau" i ia wā. Arā,
+          kotahi i te putiputi tuatahi, e rua i te putiputi tuarua, e toru i te putiputi
+          tuatoru.
+      4:
+        text: Mō te koromeke kia, ka taea te whakarite pūtautau ki te tātai i te māwhiti
+          mā aha rānei i ia wā. Tērā pea ka taea te tātai māwhiti mā 2, mā 4, mā tētahi
+          atu tau ka rerekē i ia wā.
+    C4_for_loops_no_bee:
+      1:
+        text: Kia whakamahi koe i te paraka tōai ki te koromeke i tō waehere, ka pēhea
+          tō rorohiko e mōhio kua eke ki te nui o ngā wā e tika ana kia tōaitia? He
+          huna te paraka tōai i tētahi momo waehere mātanga e kīia nei ko te koromeke
+          kia. Ko tāna he tātai i tētahi uara tīmatanga ki tētahi uara mutunga mā
+          te nui kua tohua.
+      2:
+        text: Hei tauira, ko tā te paraka tōai toru ka tātai i te 1 ki te 3 māwhiti
+          1. I ia wā ka tātai, ka whakahaerehia te waehere ki roto i te koromeke.
+          E mōhio ana te koromeke kia i te nui o te wā ka whakahaerehia mā te whakamahi
+          i te pūtatau taurangi, tērā kua tautuhia kia tīmata i te uara tīmatanga
+          kei te tīmatanga o te koromeke, ā, he māwhiti kua tāpititia i ia wā ka whakahaerehia
+          te koromeke. Kia nui ake te pūtatau taurangi i te uara whakamutunga, ka
+          tū te rere o te koromeke. Ko te painga o te whakamahi i tētahi koromeke
+          kia tūturu, kaua kē ia te paraka tōai, ko te kite koe i te pūtatau taurangi,
+          ā, e taea ana tēnā te whakamahi ki tō koromeke.
+    C4_function_create:
+      1:
+        text: Nā te mea kua oti i a koe ngā paraka taumahi te whakatika, kua āhei
+          koe ki te waihanga i tētahi paraka taumahi hou mai i te tīmatanga. He māmā
+          noa iho. E kite ana koe, kei te pouaka utauta tētahi kāwai taumahi. Ki te
+          pāwhiritia tēnei ka kite koe i tētahi pātene karaka, waihangahia he taumahi
+          te ingoa. Mā te pāwhiri i tēnei ka puta mai te whakatikatika taumahi kua
+          whakamahia kētia e koe ki te whakatika o ngā paraka taumahi onāianei.
+      2:
+        text: Kia rite ki ngā mahi i kawea i mua, i tīmata koe mā te tapa ingoa ki
+          tō taumahi me te tuhi i tētahi whakamahukitanga o te mahi ka kawea e taua
+          taumahi. Hei tauira, te tikanga ia, mā te taumahi e tā i tētahi tapawhā,
+          i tētahi tapatoru rānei kātahi ka tō i ētahi paraka i te pouaka utauta ki
+          te papamahi mā kei raro iho. Me maumahara koe ki te tō i ēnei paraka ki
+          roto i tētahi paraka karapoti kākāriki mō te taumahi.
+      3:
+        text: Mutu ana, pāwhiritia te tiaki, ā, me takiputa. Ka whakahokia koe ki
+          te mokowā mahi panga matua. Ka kitea te taumahi hou hei paraka kākāriki
+          i te kāwai taumahi o tō pouaka utauta. Tōia atu, kātahi ka waiho ki te papamahi
+          matua. He rite te whakamahinga o tēnei paraka ki ērā atu ka whakamahia ki
+          te whakaoti i te panga.
+    C4_function_edit:
+      1:
+        text: Mutu ana tō ako i te rorohiko ki te kawe i tētahi hohenga kua wātea
+          tēra taumahi kia karangahia anō ā tōna wā, ā, koinei tētahi o ngā tino painga
+          o te papatonotanga rorohiko. Ka tapaina atu he ingoa, ka karangahia. Ānō
+          nei e whakawhanake ana i te reo.
+      2:
+        text: I te papatono i hangaia e tātou, i ako tātou ki te tā i tētahi tapawhā
+          mā te neke me te huri e whā ngā wā. Ka taea e tātou tērā taumahi te tapa
+          ki te ingoa, tāngia he tapawhā, kia eke te wā ka hiahia tā tapawā tātou,
+          ko tā tātou he kī noa atu tāngia he tapawhā, ā, ka hoki atu te rorohiko
+          ki te whakaara i taua taumahi, taua waehere. Ka ea mā tātou. Kua tāpiritia
+          tērā ariā ki tō tātou reo papatonotanga.
+      3: 
+      4: 
+    C4_intro:
+      1:
+        text: He mea tuhi te papatonotanga i te nuinga o te wā engari ka whakamahi
+          tātou i te Blockly. Whakamahia ai te Blockly i ngā paraka atanga ka tōia,
+          ka waiho hoki ki te tuhi papatonotanga. He hanga waehere tonu te mahi ahakoa
+          pēhea. Hei tīmatanga, ka hanga e tātou tētahi papatonotanga ki te āwhina
+          i tēnei Manu Takariri ki te haere mā te rīrapa ki ngā poaka kino kua tāhae
+          i āna hua.
+      2:
+        text: Kua wāhia te Blockly ki ngā wāhanga matua e toau. Kei te taha mauī ko
+          te rīrapa manu, te wāhi whakahaere i tō papatono. Kua tuhi ngā tohutohu
+          mō ia taumata ki raro iho i te rīrapa. Ko te wāhanga o waenganui te pouaka
+          utauta. He whakahau ēnei paraka katoa kia mārama te manu me aha ia. Kei
+          te taha matau te mokowā e kīia nei ko te, papamahi, te wāhi hanga i tā tātou
+          papatono.
+      3:
+        text: Ki te tō ahau i tētahi paraka neke ki tā tātou papamahi me pāwhiri i
+          te "whakahaerehia", he aha te hua? Ka neke whakamua te manu kia kotahi te
+          hipanga. Ka pēhea mēnā e hiahia ana ahau kia kawe te manu i tētahi atu mahi
+          i muri i tana neke ki mua? Ka taea e au tētahi paraka anō te tāpiri ki tā
+          tātou papatono.
+      4:
+        text: Ka whiriwhiria e au te paraka "huri whakatematau", ka tōia atu ki raro
+          i te paraka nek kia puta rā anō te pere kōwhai. Ka tukuna, kātahi ka hono
+          ngā paraka. Ina pāwhiritia anō te "whakahaerehia" ka tutuki e te manu ngā
+          whakahau kua putuhia mai i runga ki raro i tā tātou papamahi.
+      5:
+        text: Ki te hiahia koe ki te muku i tētahi paraka, tēnā, tangohia i te putunga
+          ka tōia ai ki te ipu para. Mutu ana tō pāwhiri i te whakahaerehia, ka wātea
+          kia pāwhiritia te pātene tautuhi anō kia hoki atu te manu ki te tīmatanga.
+          Hoake tātou ki te tiki i ngā poaka!
+    infinity_playlab_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7:
+        text: Tīmata mai, ā, hei te mutunga kua mōhio koe ki te waihanga i tāu ake
+          kēmu me ngā momo kaitapere ka pāhekoheko, ka whiwhi piro, ka maka karetaoriki,
+          tīere, kōhua, kōrikoriko, me te tio... ka whakanumi hoki i a rātou anō.
+          Kei a koe te tikanga!
+    starwars_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5:
+        text: He pouaka utauta te wāhanga o waenganui, ā, he whakahau ia paraka e
+          taea ana e BB-8 te mārama hoki.
+      6:
+        text: Ko te mokowā kei te taha matau tērā e kīia nei ko te papamahi, ā, koinei
+          te wāhi ka hanga tātou i tā tātou papatono.
+      7: 
+      8: 
+      9: 
+      10: 
+    starwars_events:
+      1: 
+      2: 
+      3: 
+      4:
+        text: Ko te tangi a te kiore, te pātene pere, te pato rānei ki te mata ētahi
+          tauira o te takahanga e whakarongo ana.
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+    starwars_blocks_intro:
+      1: 
+      2: 
+      3: 
+      4:
+        text: Kua wāhia tō mata ki ngā wāhanga matua e toru. Kei te taha mauī te mokowā
+          mō te kēmu Star Wars, te wāhi whakahaere i tō waehere. Ko ngā tohutohu mō
+          ia taumata kua tuhia ki raro i te mokowā kēmu.
+      5:
+        text: He pouaka utauta te wāhanga o waenganui, ā, he whakahau ia paraka e
+          taea ana e BB-8 te mārama hoki.
+      6:
+        text: Ko te mokowā kei te taha matau tērā e kīia nei ko te papamahi, ā, koinei
+          te wāhi ka hanga tātou i tā tātou papatono.
+      7: 
+      8: 
+      9:
+        text: Ki te hiahia koe ki te muku i tētahi paraka me tango noa iho i te raupapatanga,
+          me tō ki roto i te pouaka utauta.
+      10: 
+    starwars_blocks_events:
+      1: 
+      2: 
+      3: 
+      4:
+        text: Ko te tangi a te kiore, te pātene pere, te pato rānei ki te mata ētahi
+          tauira o te takahanga e whakarongo ana.
+      5: 
+      6: 
+      7: 
+    mc_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6:
+        text: Kua wāhia tō mata ki ngā wāhanga e toru. Kei te taha mauī te papatākaro
+          Mahimaina, ā, koinei te wāhi whakahaere i tō papatono. Ko ngā tohutohu mō
+          ia taumata kua tuhia ki raro.
+      7:
+        text: He pouaka utauta te wāhanga o waenganui, ā, he whakahau ia paraka e
+          whakahaere ana i ngā hohenga o Alex.
+      8:
+        text: Ko te wāhanga kei te taha matau tērā e kīia nei ko te papamahi, ā, koinei
+          te wāhi ka hanga tātou i tā tātou papatono.
+      9: 
+      10: 
+      11:
+        text: Ki te hiahia koe ki te muku i tētahi paraka me tō noa iho i te pūkei
+          ki te pouaka utauta.
+      12: 
+    gumball_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6:
+        text: Ko te wāhanga kei te taha matau tērā e kīia nei ko te papamahi, ā, koinei
+          te wāhi ka hanga tātou i tā tātou papatono.
+      7: 
+      8: 
+      9:
+        text: Tīmata māi, ā, hei te mutunga kua mōhio koe ki te waihanga i tāu ake
+          kēmu me ngā momo kaitātakaro rerekē ka pāhekoheko, ka maka mea, ka whiwhi
+          piro, ka whakanumi rānei i a rātou anō. Kei a koe te tikanga!
+    gumball_events:
+      1:
+        text: Ka huri tātou ki te ako i tētahi mea ka whakamahi e ngā kaipapatono
+          kēmu i ia rā. He takahanga. Ko tā te takahanga he whakahau i tō papatono
+          kia whakarongo ina puta tētahi āhuatanga. Kia puta taua āhuatanga, ka tutuki
+          i a ia tētahi hohenga.
+      2:
+        text: Ko te tangi a te kiore, te pātene pere, te pato rānei ki te mata ētahi
+          tauira o te takahanga e whakarongo ana.
+      3:
+        text: I konei ka mahi tātou kia kōrero te rehetoi ina pāwhiritia a ia e te
+          kaitākaro. Ka whakamahi tātou i te paraka "ina pāwhiritia" me te whakapiri
+          ki taua paraka tētahi paraka "kōrero". Ina pāwhiritia ka whakatutukihia
+          ngā mahi katoa e piri ana ki te paraka takahanga.
+      4:
+        text: He paraka "ina pere" hoki. Ki te tūhonotia ngā paraka "neke" ki ēnā
+          paraka ka taea e koe ō kaitapere te whakaneke ki runga, raro, taha mauī,
+          taha mata rānei me ngā kī pere. Mā ia hipanga ka kaha ake te pāhekohekotanga
+          o tō kēmu.
+    gumball_repeat:
+      1:
+        text: Mehemea i meatia ki tōaitia e koe tētahi mahi āke, āke, ka ēhea ki a
+          koe? Te manako ia, nā te tino pai o te rorohiko ki te tōai, kāore e riro
+          i a koe taua mahi.
+      2:
+        text: Ko te paraka tōiatia āke, āke tēnei. Ko ngā mea kei roto i taua paraka
+          ka tōaitia āke, āke i roto i te kēmu. Mēnā e hiahia ana tātou kia tōatitia
+          e te rehetoi tētahi mahi āke, āke, ā, kia kaua e riro mā te kaitātakro tētahi
+          mahi, ka hoatu i aua paraka ki roto i te paraka tōaitia, āke, āke.
+      3:
+        text: I te panga e whai mai ana, ko te whāinga ia kia auau te mahi a te rehetoi.
+          Mā te ako ki te whakamahinga o te whakahau tōai ka penapenatia te wā i a
+          koe e hanga ana i tō ake kēmu ā tōna wā.
+    iceage_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6:
+        text: Ko te wāhanga kei te taha matau tērā e kīia nei ko te papamahi, ā, koinei
+          te wāhi ka hanga tātou i tā tātou papatono.
+      7: 
+      8: 
+      9:
+        text: Tīmata māi, ā, hei te mutunga kua mōhio koe ki te waihanga i tāu ake
+          kēmu me ngā momo kaitātakaro rerekē ka pāhekoheko, ka maka mea, ka whiwhi
+          piro, ka whakanumi rānei i a rātou anō. Kei a koe te tikanga!
+    iceage_events:
+      1:
+        text: Ka huri tātou ki te ako i tētahi mea ka whakamahi e ngā kaipapatono
+          kēmu i ia rā. He takahanga. Ko tā te takahanga he whakahau i tō papatono
+          kia whakarongo ina puta tētahi āhuatanga. Kia puta taua āhuatanga, ka tutuki
+          i a ia tētahi hohenga.
+      2:
+        text: Ko te tangi a te kiore, te pātene pere, te pato rānei ki te mata ētahi
+          tauira o te takahanga e whakarongo ana.
+      3:
+        text: I konei ka mahi tātou kia kōrero te rehetoi ina pāwhiritia a ia e te
+          kaitākaro. Ka whakamahi tātou i te paraka "ina pāwhiritia" me te whakapiri
+          ki taua paraka tētahi paraka "kōrero". Ina pāwhiritia ka whakatutukihia
+          ngā mahi katoa e piri ana ki te paraka takahanga.
+      4:
+        text: He paraka "ina pere" hoki. Ki te tūhonotia ngā paraka "neke" ki ēnā
+          paraka ka taea e koe ō kaitapere te whakaneke ki runga, raro, taha mauī,
+          taha mata rānei me ngā kī pere. Mā ia hipanga ka kaha ake te pāhekohekotanga
+          o tō kēmu.
+    iceage_repeat:
+      1:
+        text: Mehemea i meatia ki tōaitia e koe tētahi mahi āke, āke, ka ēhea ki a
+          koe? Te manako ia, nā te tino pai o te rorohiko ki te tōai, kāore e riro
+          i a koe taua mahi.
+      2:
+        text: Ko te paraka tōiatia āke, āke tēnei. Ko ngā mea kei roto i taua paraka
+          ka tōaitia āke, āke i roto i te kēmu. Mēnā e hiahia ana tātou kia tōatitia
+          e te rehetoi tētahi mahi āke, āke, ā, kia kaua e riro mā te kaitātakro tētahi
+          mahi, ka hoatu i aua paraka ki roto i te paraka tōaitia, āke, āke.
+      3:
+        text: I te panga e whai mai ana, ko te whāinga ia kia auau te mahi a te rehetoi.
+          Mā te ako ki te whakamahinga o te whakahau tōai ka penapenatia te wā i a
+          koe e hanga ana i tō ake kēmu ā tōna wā.
+    mc_2016_intro:
+      1:
+        text: |-
+          Tēnā koe, ko Jens tōku ingoa, ko au te kaihoahoa matua o Mahimaina. I roto i te haora e whai ake nei, ka hangaia e koe tāu ake kēmu Mahimaina. He rite tōna hanga ki Mahimaina, heoi anō, kua rerekē nā te mea, kua tū te ao. Kāore ngā hipi i te neke, kāore ngā heihei i te whānau hēki, ka mutu, e tū pakoko ana ngā kairoro. Kua riro māu e tāpiri i te waehere
+          kia rere anō ai te ao Mahimaina.
+      2:
+        text: 'Ko Melissa tōku ingoa, he kairangahau kaiwhakmahi ahau ki Mahimaina.
+          Ko tāku e aro nui nei ko te āhua o te tō te tangata whakaaro me tana mahi
+          me te hangarau. Nā reira, ko tēnei umanga taku tino, nā te mea e āhei ana
+          ahau ki te whakakotahi i te mātai pūhanga ki te mātai hinengaro: tō te tangata
+          whakaaro, whanonga hoki.'
+      3:
+        text: Kei te kite atu koe, kua wāhia tō mata ki ngā wāhanga matua e toru.
+          1) Kei te taha mauī te kēmu Mahimaina. Kua tū te ao i tēnei wā, heoi anō,
+          mā tātou tērā e whakatika me te waehere.
+      4:
+        text: 2) Ko te wāhanga o waenganui nei te pouaka utauta. He whakahau ēnei
+          paraka katoa e mārama ana ki ngā heihei, ngā hipi me ētahi atu koiora o
+          Mahimaina.
+      5:
+        text: 3) Ko te wāhanga kei te taha matau tērā e kīia nei ko te papamahi, ā,
+          koinei te wāhi ka mahi tātou ki te hanga i tā tātou papatono.
+      6:
+        text: Kei runga ngā tohutohu mō ia taumata ki te wareware i a koe me aha koe.
+      7:
+        text: Hei tīmatanga, ka papatonotia e tātou tētahi heihei. Me tō tātou i te
+          whakahau "neke ki mua" ki te papamahi. Ka neke te heihei ki mua kotahi te
+          hipanga ina pāwhiri au i te "Whakahaerehia". Ka tōia e au tētahi atu paraka
+          "neke ki mua" kia noho ki raro i te paraka "neke ki mua" tuatahi kia minamina
+          rā anō, kia neke tonu. Kātahi au ka tuku, ā, ka piri tahi ngā paraka e rua.
+          Ki te pāwhiri anō ahau i te "Whakahaerehia" ka rua hipanga te nekehanga
+          o te heihei.
+      8:
+        text: Ki te hiahia koe ki te muku i tētahi paraka me tango noa iho i te raupapatanga,
+          me tō ki te pouaka utauta.
+      9:
+        text: Kia pāwhiri koe i te "Whakahaerehia" e wātea ana kia pāwhritia te pātene
+          "Tautuhi Anō" ki te tautuhi anō i te kēmu me te tīmata anō!
+    mc_2016_loops:
+      1:
+        text: Kia ora, ko Lisa ahau. Ko ahau tētahi o ngā kaiwhakawhanake pūmanawa
+          o Mahimaina, ā, ka mahi ahau me ētahi o ngā kararehe me ngā hoariri i te
+          kēmu. Ko tētahi o ngā kararehe nāku i whakawhanake ko te rēpara. Nāku i
+          taea ai te rēpara te whāngai ki te ika kia pai ai tō whakamōkai i a ia hei
+          ngeru māu.
+      2:
+        text: Mehemea he auau te mahi ka kaha te hongehongeā o tātou, o te tangata.
+          Heoi anō, ko te mea pai rawa atu o te rorohiko, ko tana āhei ki te mahi
+          auau ao noa, pō noa, me tana kore e hōhā. Ko te koromeke te mahi tōai e
+          kōrerohia ana, ā, ka whakamahi te katoa o ngā koiora o Mahimaina i ngā koromeke.
+      3:
+        text: I mua rā, i whakaneke tātou i tētahi heihei whakawhiti i te mata kātahi,
+          ia ka tū. Ka hīkoi haere ngā heihei i Mahimaina āke, āke. Me whakamahi tātou
+          i tētahi koromeke "mahia atu āke, āke" i tā tātou pouaka utauta kia neke
+          āke, āke tonu ā tātou heihei. Mā te mana o te koromeke e poto ake ai te
+          mahi, e tūwhera ai hoki ngā kōwhiringa pai i a koe e hanga ana i tō ake
+          whakaputanga Mahimaina.
+    mc_2016_events:
+      1:
+        text: Māu e whiriwhiri i a Steve, i a Alex rānei i tēnei taumata. Me pēhi
+          koe i ngā pātene kei tō papapātuhi ki te neke ki runga, ki raro, ki te taha
+          mauī, ki te taha matau hoki. Nā ināianei, e wātea ana koe ki te neke haere
+          ki ngā wāhi e hiahia ana i te taumata. Ki te whakamahi i tētahi koiora me
+          hīkoi atu koe ki a ia, me huri ki a ia, kātahi ke pēhi i te paemokowā.
+      2:
+        text: Mēnā e whakamahi ana koe i tētahi mata whakapā me mātua miri ki runga,
+          ki raro. ki te taha mauī, ki te taha matau hoki ki te neke haere. Kātahi
+          me pato koe i te kēmu ki te whakamahi i te tuemi kei tō aroaro.
+      3:
+        text: Ina whakamahia, he aha te hua? I te ao Mahimaina ka tuku wūru te hipi
+          ki te kuti koe i ōna huruhuru, ka oma atu ngā kau ina patua, ā, ka pahū
+          mai ngā konihi ki te tata atu koe ki a rātou. He tauhohenga ēnei nā ngā
+          takahanga. Ko tā te takahanga mahi he kī atu ki tō papatono me whakarongo,
+          me whanga rānei kia hua mai tētahi āhuatanga. Ā, i te huatanga mai ka kawea
+          tētahi hohenga.
+      4:
+        text: Ā mohoa noa nei kua whakamahia e koe tētahi takahanga. Ko tā te waehere
+          ka purua ki te kāniwha "ina whakaputa" he rere i te waihangatanga o tō koiora,
+          i te tīmatanga rānei o te kēmu. Hei ngā taumata e whai atu ana ka wātea
+          ki a koe ētahi kāniwha mō ētahi takahanga pēnei i te "ina pāngia" ka rere
+          ina koe ka pā ki tētahi koiora, i te "ina whakamahia" rānei ina koe ka whakamahi
+          i tētahi koiora. Māna, mēnā e hiahia ana koe kia nunumi tō kairoro i te
+          urunga mai o te rā, hoatu tēnā ki te kāniwha "i te awatea"
+    mc_2016_spawn:
+      1:
+        text: He rite te tikanga o te whakaputa ki te waihanga i ngā kemu. I tēnei
+          taumata me whakarite tātou ki te whakaputa kairoro i te tōnga o te rā. Ka
+          whakamahi tātou i te paraka "i te pō" ki te whakatutuki.
+      2:
+        text: Nā te mea e hiahia tātou ki te whakaputa kairoro i te pō me tāpiri i
+          te paraka "whakaputa kairoro" ki te paraka "i te pō". Kia puta, ka whakatinanahia
+          e ngā kairoro te waehere ka hoatu e koe ki ō rātou kāniwha takahanga "ina
+          whakaputa". Kia ngahau te whakaputa kairoro!
+    mc_2016_congrats:
+      1:
+        text: Ka wani kē! Kua ako koe ki te whakamahi i ngā whakahau pūtaiao rorohiko
+          kia ora anō te ao Mahimaina. Ko koe te kaihoahoa ināianei. Kua wetea e koe
+          ngā aukatitanganga o ngā whakahau me ngā koiora katoa. Māu e whiriwhiri
+          ka aha haere ake nei.
+      2:
+        text: Mutu ana tō hanga i tō kēmu, pāwhiritia te tiri kia riro i a koe te
+          honongaitua hei tiritiri ki ō hoa, hei korikori rānei māu ki tō waea. Kia
+          ngahau! E hīkaka ana ahau ki te tākaro i tō putanga o Mahimaina.
+    mc_2017_agent_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+      10: 
+      11:
+        text: Kei runga ngā tohutohu mō ia taumata ki te wareware i a koe me aha koe.
+      12: 

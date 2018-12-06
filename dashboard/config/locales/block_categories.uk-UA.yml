@@ -1,0 +1,36 @@
+---
+uk:
+  data:
+    block_categories:
+      Actions: Дії
+      Loops: Цикли
+      Functions: функції
+      Color: Колір
+      Math: Математика
+      Logic: Логіка
+      Variables: змінні
+      Number: Число
+      String: Рядок
+      Image: Зображення
+      Boolean: Логічне
+      Conditionals: Умови
+      Events: Події
+      Comments: Коментарі
+      Category: Категорія
+      Text: Текст
+      Comment: Коментар
+      numbers: числа
+      Numbers: Числа
+      Default: Типова
+      World: Світ
+      Advanced: Розширені
+      Start: Початок
+      Locations: Розташування
+      Dancers: Виконавці
+      Groups: Групи
+      Booleans: Логічні вирази
+      Functional: Функції
+      test: тест
+      Name: Ім’я
+      'Functions ': 'Функції '
+      Function: Функція

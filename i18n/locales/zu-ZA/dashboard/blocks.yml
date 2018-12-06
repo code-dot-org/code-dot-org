@@ -1,0 +1,110 @@
+---
+zu:
+  data:
+    blocks:
+      Dancelab_changeMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"height"': ubude
+      Dancelab_doMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"height"': ubude
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"height"': ubude
+      Dancelab_setPropEach:
+        options:
+          PROPERTY:
+            '"height"': ubude
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"height"': ubude
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"height"': ubude
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"height"': ubude
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"height"': ubude
+      RyanLab_moveForward:
+        text: qubekela phambili
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": ngaphambili
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": isihlabathi
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": isihlabathi
+      craft_moveForward:
+        text: qubekela phambili

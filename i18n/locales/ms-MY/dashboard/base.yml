@@ -1,0 +1,350 @@
+ms:
+  activerecord:
+    errors:
+      messages:
+        blank: "adalah diperlukan"
+    attributes:
+      user:
+        name: 'Nama Paparan'
+        email: 'E-mel'
+        username: 'nama pengguna'
+        password: 'Kata laluan'
+        password_confirmation: 'Pengesahan kata laluan'
+        current_password: 'Kata laluan semasa'
+        locale: 'Bahasa'
+        age: 'Umur'
+        gender: 'Jantina'
+        edit_header: 'Edit Maklumat Akaun'
+        error:
+          future: tidak boleh ada di masa depan
+  hello: "Helo dunia"
+  welcome_back: "Selamat datang kembali, % {nama}"
+  submit: Hantar
+  cancel: "Batal"
+  or: "atau"
+  add_teacher_form:
+    code:
+      label: 'Tambahkan guru:'
+      placeholder: "Kod Seksyen (ABCDEF)"
+    submit: 'Tambah guru'
+  add_hint_form:
+    placeholder: 'Sila masukkan petunjuk anda di sini'
+    submit: 'Tambah petunjuk'
+  appname: "Code.org"
+  stage: "peringkat"
+  stage_number: "Peringkat %{number}"
+  puzzle: "Teka-teki"
+  trophies: "Piala"
+  courses: 'kursus-kursus'
+  unplugged_activity: 'Cabut aktiviti'
+  of: "dari"
+  more: "LAGI"
+  less: "KURANG"
+  beta: "beta"
+  try_hoc: "Cuba Kod Sejam, klik di sini >> "
+  try_k8intro: "Cuba pengenalan K-8 kami untuk kursus Sains Komputer (15-25 jam)"
+  k8intro: "Pengenalan K-8 untuk kursus Sains Komputer (15-25 jam)"
+  already_started: "Sudah mulakan? Sambung di sini >> "
+  demos: "Admin: Semua Demo"
+  continue: 'Teruskan'
+  prize: 'hadiah'
+  more_info: 'Maklumat lanjut'
+  auth:
+    sign_in_with: 'Daftar Masuk dengan % {pembekal}'
+    signed_in: 'Daftar masuk!'
+    signed_out: 'Anda telah mendaftar keluar daripada <a href="%{url}">Code.org</a>.'
+    sign_out_of: 'Anda telah mengunakkan %{provider} untuk mendaftar masuk. <a href="%{url}">Klik di sini</a> untuk mendaftar keluar daripada %{provider}.'
+    already_signedup: 'Sudah mendaftar?'
+    notyet_signedup: "Belum menyertai lagi?"
+    google_oauth2: 'Akaun Google'
+    twitter: 'Twitter'
+    facebook: 'Facebook'
+    windowslive: 'Akaun Microsoft'
+    microsoft_v2_auth: 'Akaun Microsoft'
+    forgot_password: 'Lupa kata laluan anda?'
+    need_confirmation: "Tidak menerima arahan pengesahan?"
+    need_unlock: "Tidak menerima kunci arahan?"
+  signup_form:
+    teacher_educator_guide: 'Lihat panduan pendidik'
+    school_name: 'Nama sekolah (pilihan)'
+    school_address: 'Alamat sekolah (pilihan)'
+    address_placeholder: 'alamat, bandar, Negeri, zip'
+    gender: 'Jantina (pilihan)'
+    birthday: 'Hari Lahir (pilihan)'
+    age: 'Umur'
+    user_type: 'Adakah anda seorang pelajar atau guru?'
+    submit: 'Mendaftar'
+    teacher: 'Adakah anda seorang guru?'
+    valid_username: "Boleh digunakan!"
+    invalid_username: "Nama pengguna mestilah sekurang-kurangnya 5 aksara"
+    taken_username: "Nama pengguna telah diambil"
+    valid_password: "Kata laluan sah!"
+    invalid_password: "Kata laluan mestilah sekurang-kurangnya 6 aksara"
+    mismatch_password: "Dua kata laluan yang anda masukkan tidak sepadan"
+    user_type_teacher: "Guru"
+    user_type_student: "pelajar"
+    field_is_required: "adalah diperlukan"
+    email_preference_yes: "Ya"
+    email_preference_no: "Tidak"
+  school_info:
+    other: 'Lain-lain'
+  signin_form:
+    title: 'Sudah ada akaun? log masuk'
+    login: 'E-mel'
+    password: 'Kata laluan'
+    remember: 'Ingat saya'
+    submit: 'Log masuk'
+  signin:
+    try_heading: 'Ingin mencuba mengekod tanpa mendaftar?'
+    try_hoc: 'Cuba satu jam kod dahulu'
+    try_20hours: 'Cuba 20 jam pengenalan kepada Sains komputer kami'
+  signinsection:
+    welcome: 'Selamat datang ke %{section_name}'
+    name: 'Pilih nama anda'
+    picture: 'Sekarang cari gambar rahsia anda'
+    login: 'Log masuk'
+  password:
+    reset_form:
+      title: 'Lupa kata laluan anda?'
+      email: 'Alamat e-mel'
+      submit: 'Hantar'
+    change_form:
+      title: 'Tukar kata laluan'
+      new_password: 'Kata laluan baru'
+      confirm_password: 'Sahkan kata laluan baru'
+      submit: 'Tukar kata laluan'
+  welcome_email:
+    subject: 'Sertai kelas saya (di Code.org)'
+    body: |
+      Klik pautan di bawah untuk mendaftar bagi tutorial Sains Komputer di Code.org (dengan saya sebagai "guru"): % {link} tutorial ini adalah menyeronokkan, penglibatan visual, dan mengajar konsep asas sains komputer melalui pendekatan mudah, berpandu, seperti-permainan. Belajar kod dari Bill Gates, Mark Zuckerberg, Angry Birds, dan Plants vs Zombie! :-) % {nama}
+  section:
+    type:
+      email: 'E-mel'
+  follower:
+    invite_sent: 'Jemputan dihantar'
+    added_teacher: '%{name} ditambah sebagai guru anda'
+    registered: "Anda telah berdaftar untuk %{section_name}."
+    error:
+      signed_in: 'Sila daftar keluar sebelum teruskan'
+      username_not_found: 'Pengguna %{username} tidak dijumpai'
+      username_in_use: '%{username} telah dipilih, silih pilih yang lain'
+      no_teacher: "Tidak dapat menemui sesiapa yang mendaftar masuk  dengan '%{teacher_email_or_code}'. Sila minta mereka untuk mendaftar di sini dan cuba tambah mereka lagi"
+      section_not_found: "Tidak dapat mencari bahagian dengan kod '%{section_code}'."
+      blank_code: "Sila masukkan kod bahagian"
+      cant_join_own_section: "Maaf, anda tidak dapat menyertai bahagian anda sendiri."
+    mail:
+      student_disassociated:
+        subject: "Code.org pemberitahuan: %{student_name} ini tidak lagi dianggap sebagai pelajar anda."
+  reports:
+    error:
+      access_denied: "Anda tidak mempunyai akses kepada statistik orang ini"
+  crud:
+    new_model: 'Baru %{model}'
+    show: 'Papar'
+    edit: 'Edit'
+    edit_model: 'Edit %{model}'
+    update: 'Kemas kini'
+    submit: 'Hantar'
+    destroy: 'Hapuskan'
+    back: 'Belakang'
+    confirm: 'Adakah anda pasti?'
+    created: '%{model} telah berjaya dicipta.'
+    updated: '%{model} telah berjaya diperbaharui.'
+    destroyed: '%{model} telah berjaya dihapuskan.'
+    access_denied: 'Anda tidak mempunyai akses kepada %{model} ini.'
+  nav:
+    header:
+      finished_hoc: "Saya telah menyelesaikan Hour of Code saya"
+      sign_in_to_save: 'Daftar Masuk untuk menyimpan kemajuan'
+      educate_hoc: "Hour of Code"
+    user:
+      classroom: 'Laman Utama Guru'
+      label: 'Hi %{username}'
+      stats: 'Kemajuan saya'
+      settings: 'Akaun saya'
+      logout: 'Daftar keluar'
+      signin: 'Log masuk'
+      create: 'Buat'
+      flappy: 'Flappy'
+    popup:
+      progress: 'Kemajuan anda'
+      lines: 'Total baris kod: %{lines}'
+      close: 'TUTUP'
+      mastery: 'Konsep-konsep'
+      puzzle_map: 'Peringkat'
+      prizes: 'Kumpul semua %{total_trophies} trofi dan menangi hadiah-hadiah!'
+      prize_earned: 'Semua %{total_trophies} Piala telah dikumpul. Menang Hadiah!'
+      prize_us_only: '(Pelajar dari  A.S. sahaja)'
+      prizes_link: 'maklumat lanjut'
+  teacher:
+    title:
+      one: 'Guru anda:'
+      other: 'Guru anda:'
+    remove: '(keluarkan guru)'
+    confirm:
+      remove: 'Adakah anda pasti anda mahu keluarkan guru ini?'
+    panel:
+      answer_viewer: 'Panel Guru'
+      student: 'pelajar'
+  user:
+    email_confirm_needed: 'Alamat e-mel belum disahkan:'
+    email_resend_confirm: 'Hantar semula arahan pengesahan'
+    new_password_hint: "(biarkan kosong jika anda tidak mahu mengubahnya)"
+    current_password_hint: '(kami memerlukan kata laluan semasa anda untuk mengesahkan perubahan anda)'
+  user_level:
+    completed: 'Lengkap'
+    tried: 'Telah dicuba'
+  home:
+    title: "Kemajuan saya"
+    signin_message: "Sudah mendaftar? %{link}"
+    student_reg_link: 'Daftar Pelajar'
+    teacher_reg_link: 'Daftar Guru'
+    signin_directions: 'Gunakan akaun untuk merekod kemajuan. <br/> Guru, melihat semua kelas anda.'
+    teacher_dashboard: Lihat dashboard kemajuan
+    teacher_student_count_one: Anda mempunyai %{count} orang pelajar.
+    teacher_student_count: Anda mempunyai %{count} pelajar.
+    teacher_averages: Secara puratanya, pelajar anda mendapat %{trophy_average} daripada %{trophy_max} "Concept Mastery" trofi.
+    teacher_print_certificates: 'Cetak Sijil bagi pelajar yang menamatkan kursus ini'
+    teacher_read_blog: Baca tentang berita dan maklumat terkini mengenai bahan-bahan kami di Blog pendidik kami
+    classroom: Kelas anda
+    student_progress: Kemajuan pembelajaran anda
+    student_stats: Anda telah memperolehi %{trophy_count} daripada %{trophy_max} "Concept Mastery" trofi.
+    student_left_off: 'Mana anda tinggalkan:'
+    student_finished: Anda telah selesaikan semua tutorial, pilih kelas lain %{online_link} atau %{local_school_link}
+    local_school: sekolah tempatan
+    online: online
+    see_details: Lihat butiran
+    prize_info: 'Hadiah untuk penyertaan (guru-guru sekolah awam A.S. sahaja): sehingga $1,000 dalam ganjaran bilik darjah.'
+    tryfirst: 'Atau, anda boleh cuba dahulu, dan mendaftar kemudian:'
+    trynow: 'Cuba sekarang'
+    add_hint_help: 'Sila bantu kami untuk menambah petunjuk pintar ke tutorial Code.org'
+    20hour_overview: 'Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep programming. Kursus ini direka untuk kegunaan di bilik darjah bagi gred K-8, tetapi ia adalah menyeronokkan untuk belajar di semua peringkat umur.'
+    test_videos_help: 'Uji pemain video baru kami di sekolah anda'
+    announcement_learn_more_button: "Ketahui lebih lanjut"
+    announcement_try_now_button: "Cuba sekarang"
+  gender:
+    male: 'Lelaki'
+    female: 'Perempuan'
+    none: 'Memilih untuk tidak menjawab'
+  user_type:
+    student: 'pelajar'
+    teacher: 'Guru'
+  footer:
+    more: 'Lagi'
+    feedback: 'Sediakan maklum balas'
+    translate: 'Bantu kami menterjemahkan ke bahasa anda'
+    support: 'Bantuan dan Komuniti'
+    tos: 'Terma'
+    privacy: 'Dasar privasi'
+    secure: 'Versi Dilindungi'
+  reference_area:
+    title: 'Perlukan bantuan?'
+    subtitle: 'Lihat video dan petunjuk ini'
+    teacher: 'Lihat penyelesaian'
+    auth_error: 'Anda tidak disahkan untuk melihat penyelesaian tersebut.'
+    submit: 'Kemaskini Lokasi Pelukis'
+  video:
+    tab: 'Video.'
+    notes: 'Tiada video? Lihat nota.'
+    autoplay_option: 'Video AutoMain'
+    download: 'Muat turun Video'
+  compatibility:
+    upgrade:
+      link: "Ketahui lebih lanjut"
+  slow_loading: 'Ini memakan masa lebih lama daripada biasa...'
+  try_reloading: 'Cuba memuat semula halaman'
+  next_stage: 'Selesai! Teruskan ke tahap seterusnya'
+  download_pdf: 'Bukan Plan Pembelajaran'
+  share_code:
+    title: "Klik 'Mainkan' untuk lihat program saya berfungsi"
+    bounce_og_title: "Semak permainan Lantun saya"
+    flappy_og_title: "Semak permainan Flappy saya"
+    og_description: "Saya menulis kod sendiri dengan Code.org"
+  builder:
+    created: "Anda mencipta skrip baru."
+    destroyed: "Anda telah musnahkan skrip."
+    manage: "Membina tahap"
+    view: "Lihat"
+    back: "Kembali kepada skrip"
+    success: "Anda berjaya menyunting blok."
+    level:
+      create: "Cipta tahap baru"
+      current: "Tahap semasa"
+      unused: "Tahap yang tidak digunakan"
+  upsell:
+    hoc:
+      body: 'Cuba asas-asas sains komputer. Ramai yang telah mencuba.'
+    flappy:
+      title: 'Kod Flappy'
+      body: 'ingin menulis permainan anda sendiri dalam masa kurang dari 10 minit? Cuba tutorial kod Flappy kami!'
+    20-hour:
+      body: 'Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep programming. Kursus ini direka untuk kegunaan di bilik darjah bagi gred K-8, tetapi ia adalah menyeronokkan untuk belajar di semua peringkat umur.'
+    unplugged_conditionals:
+      title: "Bersyarat"
+  gallery:
+    students_drew_these_with_code: "Pelajar telah melukis ini dengan kod!"
+    picture_count: "Sebelum ini <b>%{days}</b> hari, pelajar telah melukis <b>%{count}</b> gambar dengan menulis program komputer mereka sendiri. Klik pada gambar untuk melihat program dimainkan."
+    want_to_make_your_own: "Ingin buat anda punya sendiri?"
+    more: "Lagi &rarr;"
+  multi:
+    wrong_title: "Jawapan yang salah"
+    wrong_body: "Jawapan yang telah anda masukkan adalah tidak betul.  Sila cuba lagi!"
+    correct_title: "Betul"
+    correct_body: "Itulah jawapan yang betul."
+  match:
+    wrong_title: "Penyelesaian salah"
+    wrong_body: "Penyelesaian yang anda masukkan tidak betul.  Sila cuba lagi!"
+    correct_title: "Betul"
+    correct_body: "Itulah jawapan yang betul."
+  contract_match:
+    wrong_title: "Jawapan yang salah"
+  text_match:
+    correct_title: "Betul"
+    correct_body: "Itulah jawapan yang betul."
+  dialog:
+    ok: "OK"
+    startover_title: "Adakah anda pasti anda ingin bermula?"
+    startover_ok: "Mula Sekali Lagi"
+    startover_cancel: "Batal"
+  terms_interstitial:
+    tos: "Terma"
+    privacy: "Dasar privasi"
+    print: "Cetak"
+  school_info_interstitial:
+    save: "Simpan"
+  race_interstitial:
+    races:
+      other: "Lain-lain"
+    submit: "Hantar"
+  project:
+    save: "Simpan"
+    delete: "Padam"
+    share: "Kongsi"
+    more: "Lagi"
+    name: "Nama"
+    really_delete: 'Padam?'
+    delete_yes: 'Ya'
+    delete_no: 'Tidak'
+    saved: "Disimpan di dalam galeri!"
+    cancel: 'Batal'
+    abuse:
+      report_abuse_form:
+        abuse_type:
+          other: 'Lain-lain'
+  pd:
+    form_labels:
+      email: 'E-mel'
+    form_entries:
+      gender:
+        male: 'Lelaki'
+        female: 'Perempuan'
+        none: 'Memilih untuk tidak menjawab'
+      subjects:
+        math: 'Matematik'
+      email_opt_in:
+        opt_in_yes: 'Ya'
+        opt_in_no: 'Tidak'
+  cookie_banner:
+    accept: 'saya setuju'
+  gdpr_dialog:
+    yes: 'Ya'

@@ -1,0 +1,773 @@
+---
+hi:
+  data:
+    evaluation_multi:
+      U5 evaluation q1:
+        'No': नहीं
+        'Yes': हाँ
+    external:
+      PDK5 CS Video:
+        Computer Science: कंप्यूटर विज्ञान
+    match:
+      2-3 Maze Match 2:
+        Instructions: निर्देश
+      4-5 maze match 1:
+        Instructions: निर्देश
+      CSD U3 CSS Vocab Match:
+        '1': '1'
+        '2': '2'
+      K-1 Maze Match 1:
+        Instructions: निर्देश
+      PDAlg Design Recipe Video:
+        Definition: Iska matlab hai
+      'U2L06 - Matching: Label the Diagram':
+        A: अ
+        E: E
+      U3L19 - MATCH what are values of abc:
+        '10': '10'
+        '12': '12'
+        '13': '13'
+        '15': '15'
+        '16': '16'
+        '21': '21'
+        '3': '3'
+        '5': '5'
+        '7': '7'
+        '8': '8'
+      U4L06 Create Record Id Matching Q:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      test matching image:
+        Instructions: निर्देश
+      test matching text:
+        blue: नीला
+    multi:
+      2-3 bee conditionals multi 2:
+        Choose the best blocks.: सर्वश्रेष्ठ ब्लॉक का चयन करें।
+      2-3 bee conditionals multi 3:
+        Choose the best blocks.: सर्वश्रेष्ठ ब्लॉक का चयन करें।
+      4-5 bee conditionals multi 1:
+        0: "? A purple flower may have either 3, 2 or 1 nectars, but you don't know
+          how many. Which blocks correctly check and collect all of the nectar from
+          a purple flower?"
+        1: ": A purple flower may have either 3, 2 or 1 nectars, but you don't know
+          how many. Which blocks correctly check and collect all of the nectar from
+          a purple flower?"
+        Choose the best blocks.: सर्वश्रेष्ठ ब्लॉक का चयन करें।
+      CB_Question_3:
+        A: अ
+        Y: true
+      CSP Unit 1 Ch 1 MC binary to dec simple:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_2018:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_exam_prep:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP verify 18:
+        'No': नहीं
+        'Yes': हाँ
+      CommuteAssess - loops 1 - block:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block B:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_2018:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_exam_prep:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 2 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_2018:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_exam_prep:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      Multi Define Funcs 1:
+        '3': '3'
+        y: true
+      Multi Define Funcs 2:
+        '3': '3'
+        y: true
+      Multi Define Funcs 3:
+        '5': '5'
+        '6': '6'
+        y: true
+      PDAlg DR Multi 1:
+        Domain: डोमेन
+        Name: नाम
+        Range: क्षेत्र
+        0: "? The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+        1: ": The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+      PDAlg PreQ 1:
+        'No': नहीं
+        'Yes': हाँ
+      PDAlg PreQ 2:
+        'No': नहीं
+        'Yes': हाँ
+      PDAlg functional:
+        'No': नहीं
+      PDK5 Blockly Intro:
+        'Yes': हाँ
+      PDK5 Classroom Culture:
+        'Yes': हाँ
+      PDK5 Course Maps:
+        'Yes': हाँ
+      PDK5 Course Overview:
+        'Yes': हाँ
+      PDK5 Glossary:
+        'Yes': हाँ
+      PDK5 Intro:
+        'No': नहीं
+        'Yes': हाँ
+      PDK5 Teacher Dashboard:
+        'Yes': हाँ
+      PDK5 UVideo Overview:
+        'Yes': हाँ
+      PDK5 Unplugged Intro:
+        'Yes': हाँ
+      SG U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      Submittable Multi:
+        blue: नीला
+        green: हरा
+        red: लाल
+      Test Contained Multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '4': '4'
+      U1L07 Assessment 1:
+        A: अ
+        E: E
+      U1L6 Assessment multiple choice:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L6 Assessment multiple choice_2018:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L8 Multiple Choice:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      U1L8 Multiple Choice_2018:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      'U2L06 - MC: Which is an MST?':
+        0: ': "<p>The images below all show the same map (or graph) but have different
+          paths between the points highlighted.</p>\n<p>Please choose the image that
+          is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The
+          “distance” between points is depicted by the number of line segments connecting
+          any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
+        A: अ
+        E: E
+      U2L08 Assessment 1:
+        '11': '11'
+        '5': '5'
+        '6': '6'
+        '8': '8'
+        '9': '9'
+      U2L13 Assessment4:
+        '26': '26'
+      U2L13 Assessment4_2018:
+        '26': '26'
+      U2L14 Assessment3:
+        'false': 'गलत '
+        'true': 'सही '
+      U2L19 multichoice 13 MOD 17:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      U2L19 multichoice 13 MOD 17_2018:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      'U2L19 mutlichoice ':
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15_2018:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L07 - MC remove line of code loops_2018:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L30 Assessment1:
+        '6': '6'
+        '7': '7'
+        '8': '8'
+      U3L30 Assessment2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+      U3L30 Assessment3:
+        '19': '19'
+        '20': '20'
+        '21': '21'
+      U4L06 Reflection Q 1:
+        random: यादृच्छिक
+      Warmup questions:
+        random: यादृच्छिक
+      commute assess - loops 4 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        '50': '50'
+      courseC_multi_harvester_loops11_predict1:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseD_multi_artist_binary8_predict1:
+        A: अ
+      courseD_multi_artist_binary8_predict1_2018:
+        A: अ
+      courseD_multi_artist_nestedLoops9_predict1:
+        A: अ
+      courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: अ
+      courseD_multi_bee_nestedLoops9_predict2:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      csd-post-survey-2018-topic-ai:
+        'No': नहीं
+        'Yes': हाँ
+      csd-post-survey-2018-topic-cryptocurrency:
+        'No': नहीं
+        'Yes': हाँ
+      csd-post-survey-2018-topic-cybersecurity:
+        'No': नहीं
+        'Yes': हाँ
+      csd-post-survey-2018-topic-databases:
+        'No': नहीं
+        'Yes': हाँ
+      csd-post-survey-2018-topic-datascience:
+        'No': नहीं
+        'Yes': हाँ
+      csd-post-survey-2018-topic-gamedev:
+        'No': नहीं
+        'Yes': हाँ
+      csd-post-survey-2018-topic-hardware:
+        'No': नहीं
+        'Yes': हाँ
+      csd-post-survey-2018-topic-internet:
+        'No': नहीं
+        'Yes': हाँ
+      csd-post-survey-2018-topic-mobile:
+        'No': नहीं
+        'Yes': हाँ
+      csd-post-survey-2018-topic-parallel:
+        'No': नहीं
+        'Yes': हाँ
+      csd-post-survey-2018-topic-programming:
+        'No': नहीं
+        'Yes': हाँ
+      csd-post-survey-2018-topic-robotics:
+        'No': नहीं
+        Robotics: रोबोटिक्स
+        'Yes': हाँ
+      csd-post-survey-2018-topic-web:
+        'No': नहीं
+        'Yes': हाँ
+      csp-post-survey-2017-q64:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': नहीं
+        'Yes': हाँ
+      csp-post-survey-2017-q64_2018:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': नहीं
+        'Yes': हाँ
+      csp-post-survey-2017-q65:
+        'No': नहीं
+        'Yes': हाँ
+      csp-post-survey-2017-q65_2018:
+        'No': नहीं
+        'Yes': हाँ
+      csp-post-survey-2018-topic-ai:
+        'No': नहीं
+        'Yes': हाँ
+      csp-post-survey-2018-topic-cryptocurrency:
+        'No': नहीं
+        'Yes': हाँ
+      csp-post-survey-2018-topic-cybersecurity:
+        'No': नहीं
+        'Yes': हाँ
+      csp-post-survey-2018-topic-databases:
+        'No': नहीं
+        'Yes': हाँ
+      csp-post-survey-2018-topic-datascience:
+        'No': नहीं
+        'Yes': हाँ
+      csp-post-survey-2018-topic-gamedev:
+        'No': नहीं
+        'Yes': हाँ
+      csp-post-survey-2018-topic-hardware:
+        'No': नहीं
+        'Yes': हाँ
+      csp-post-survey-2018-topic-internet:
+        'No': नहीं
+        'Yes': हाँ
+      csp-post-survey-2018-topic-mobile:
+        'No': नहीं
+        'Yes': हाँ
+      csp-post-survey-2018-topic-parallel:
+        'No': नहीं
+        'Yes': हाँ
+      csp-post-survey-2018-topic-programming:
+        'No': नहीं
+        'Yes': हाँ
+      csp-post-survey-2018-topic-robotics:
+        'No': नहीं
+        Robotics: रोबोटिक्स
+        'Yes': हाँ
+      csp-post-survey-2018-topic-web:
+        'No': नहीं
+        'Yes': हाँ
+      csp_ap_exam_signup:
+        'No': नहीं
+        'Yes': हाँ
+      csp_ap_previous_years:
+        'No': नहीं
+        'Yes': हाँ
+      csp_ap_taking_ap_class:
+        'No': नहीं
+        'Yes': हाँ
+      cspu5_assess1_fivemore:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_2018:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_exam_prep:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_flowchart:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_2018:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_exam_prep:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_increase:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_2018:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_exam_prep:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess2_addstrings:
+        result: रिजल्ट
+      cspu5_assess2_addstrings_2018:
+        result: रिजल्ट
+      cspu5_assess2_addstrings_exam_prep:
+        result: रिजल्ट
+      cspu5_assess2_combineString:
+        '10': '10'
+        '55': '55'
+        result: रिजल्ट
+      cspu5_assess2_combineString_2018:
+        '10': '10'
+        '55': '55'
+        result: रिजल्ट
+      cspu5_assess2_combineString_exam_prep:
+        '10': '10'
+        '55': '55'
+        result: रिजल्ट
+      cspu5_assess2_oldEnough:
+        '35': '35'
+        'false': 'गलत '
+        'true': 'सही '
+      cspu5_assess2_oldEnough_2018:
+        '35': '35'
+        'false': 'गलत '
+        'true': 'सही '
+      cspu5_assess2_oldEnough_exam_prep:
+        '35': '35'
+        'false': 'गलत '
+        'true': 'सही '
+      cspu5_assess2_weight:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_2018:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_exam_prep:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess3_array1:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_2018:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_exam_prep:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array4:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_2018:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_exam_prep:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_listAppend:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_2018:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_exam_prep:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_loopValue1:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue2:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess4_dataReturns:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_2018:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_exam_prep:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_listOutput:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_2018:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_exam_prep:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      msm variables multi 1:
+        '15': '15'
+      msm variables multi 10:
+        '17': '17'
+      msm variables multi 11:
+        '17': '17'
+      msm variables multi 12:
+        '17': '17'
+      msm variables multi 13:
+        '117': '117'
+        '17': '17'
+      msm variables multi 2:
+        '8': '8'
+      msm variables multi 3:
+        '5': '5'
+      msm variables multi 4:
+        '15': '15'
+        '3': '3'
+        '8': '8'
+      msm variables multi 5:
+        '3': '3'
+        '5': '5'
+      msm variables multi 6:
+        '1': '1'
+        '5': '5'
+      msm variables multi 7:
+        '3': '3'
+      msm variables multi 8:
+        '3': '3'
+      msm variables multi 9:
+        '5': '5'
+        '6': '6'
+      post-assessment survey q34:
+        Easy: आसान
+        Hard: कठिन
+      pre-assessment survey q24:
+        'No': नहीं
+        'Yes': हाँ
+      pre-assessment survey q26:
+        0: "? Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        1: ": Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        'No': नहीं
+        'Yes': हाँ
+      pre-assessment survey q28:
+        '10': '10'
+        '11': '11'
+        '12': '12'
+        '8': '8'
+        '9': '9'
+      pre-assessment survey q29:
+        Female: महिला
+        Male: पुरूष
+      sarah_test_maggie:
+        test: परिक्षा
+      sciPD PreQ 1:
+        'No': नहीं
+        'Yes': हाँ
+      sciPD PreQ 2:
+        'No': नहीं
+        'Yes': हाँ
+      test anonymous student survey educational:
+        'No': नहीं
+        'Yes': हाँ
+    text_match:
+      U2L07 Assessment4:
+        '43': '43'

@@ -1,0 +1,19 @@
+---
+sq:
+  data:
+    block_categories:
+      Actions: Veprime
+      Loops: cikle
+      Functions: funksione
+      Color: Ngjyra
+      Math: Matematikë
+      Logic: Logjikë
+      Variables: variabla
+      Conditionals: Kushtet
+      Events: Ngjarje
+      Text: Tekst
+      Start: Fillo
+      Booleans: Booleans
+      test: test
+      Name: Emri
+      Function: Funksion

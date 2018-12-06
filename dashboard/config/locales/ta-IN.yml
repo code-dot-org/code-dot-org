@@ -1,0 +1,154 @@
+---
+ta:
+  errors:
+    messages:
+      not_saved: 'பின்வரும் பிழைகளைத் திருத்துக:'
+      too_young: இந்த உள்ளடக்கத்தை இடத்தில் வயது வரையறை செய்துள்ளது மற்றும் இளைய மாணவர்களுக்கும்
+        அல்ல.
+      teacher_must_accept_terms: இந்த உள்ளடக்கத்தை இடத்தில் வயது வரையறை செய்துள்ளது
+        மற்றும் இளைய மாணவர்களுக்கும் அல்ல. இந்த உள்ளடக்கத்தை அணுக புதுப்பிக்கப்பட்ட
+        சேவை விதிமுறைகளை நீங்கள் அளிக்க ஏற்றுக்கொள்ள உங்கள் ஆசிரியர் கேட்கவும். உங்கள்
+        ஆசிரியர் இதை செய்யலாம்-குறியீடு ஸ்டூடியோ பதிவெடுத்தல் மற்றும் குறியீடு ஸ்டூடியோ
+        முகப்புப்பக்கம் மேல் அருகே 'ஆய்வு விதிமுறைகள் புதுப்பிக்க' பொத்தானை கிளிக்
+        செய்வதன் மூலம்.
+      pair_programmer: நீங்கள் தற்போது இந்த உள்ளடக்கத்தை அணுக கொண்டிருக்கவில்லை ஒரு
+        மாணவி உடன் நிரலாக்க ஜோடி. இந்த உள்ளடக்கத்தை அணுக, ஜோடி நிரலமைத்தல் நிறுத்து,
+        மீண்டும் முயற்சிக்கவும்.
+  activerecord:
+    errors:
+      messages:
+        blank: தேவைப்படுகிறது
+    attributes:
+      user:
+        name: காட்டப்படும் பெயர்
+        email: மின்னஞ்சல்
+        username: பயனர் பெயர்
+        password: கடவுச்சொல்
+        password_confirmation: கடவுச்சொல் உறுதிப்பாடு
+        current_password: தற்போதைய கடவுச்சொல்
+        locale: மொழி
+        age: வயது
+        gender: பாலினம்
+        edit_header: கணக்கு விவரங்களை திருத்து
+  hello: ஹலோ உலகம்
+  welcome_back: மீண்டும் வருக, %{name}
+  see_your_learning_plan: உங்கள் கற்றல் திட்டத்தைக் காண்க
+  submit: சமர்ப்பிக்க
+  next_page: அடுத்த பக்கம்
+  cancel: ரத்து செய்
+  or: அல்லது
+  add_teacher_form:
+    submit: ஆசிரியரை சேர்
+  add_hint_form:
+    placeholder: உங்கள் குறிப்பை இங்கே உள்ளிடவும்
+    submit: உதவிக்குறிப்பு சேர்
+  stage: மேடை
+  puzzle: புதிர்
+  trophies: வெற்றிக் கிண்ணங்கள்
+  courses: பாடங்கள்
+  more: மேலும்
+  less: குறைவாக
+  already_started: 'ஏற்கனவே ஆரம்பிக்கப்பட்டதா ? இங்கே தொடர்க >> '
+  continue: தொடர்ந்து
+  more_info: மேலதிக தகவல்
+  auth:
+    sign_in_with: "%{provider} மூலம் உள்நுழையவும்"
+    signed_in: உள்நுளைந்தீர்கள்!
+    twitter: Twitter
+    facebook: Facebook
+    forgot_password: உங்கள் கடவுச்சொல் மறந்துவிட்டதா?
+  signup_form:
+    age: வயது
+    user_type_student: மாணவர்
+    field_is_required: தேவைப்படுகிறது
+    email_preference_yes: ஆம்
+    email_preference_no: இல்லை
+  school_info:
+    other: வேறு
+  signin_form:
+    login: மின்னஞ்சல்
+    password: கடவுச்சொல்
+    submit: உள்நுழை
+  signinsection:
+    login: உள்நுழை
+  password:
+    reset_form:
+      title: உங்கள் கடவுச்சொல் மறந்துவிட்டதா?
+      submit: சமர்ப்பிக்க
+  welcome_email:
+    subject: எனது வகுப்பில் இணையவும் (Code.org இல்)
+  section:
+    type:
+      email: மின்னஞ்சல்
+  follower:
+    invite_sent: அழைப்பு அனுப்பப்பட்டது
+    added_teacher: "%{name} உங்களது ஆசிரியராக சேர்க்கப்பட்டுள்ளார்"
+    error:
+      username_not_found: பயனர் பெயர் %{username} காணப்படவில்லை
+      username_in_use: "%{username} ஆனது ஏற்கனவே எடுக்கப்பட்டுள்ளது. தயவு செய்து வேறொன்றை
+        தேர்ந்தெடுக்கவும்"
+  crud:
+    show: காண்பி
+    edit: திருத்து
+    update: புதுப்பிக்கவும்
+    submit: சமர்ப்பிக்க
+    destroy: அழிக்கவும்
+  nav:
+    header:
+      educate_hoc: நிரல்வரி நேரம்
+    user:
+      label: வணக்கம் %{username}
+      settings: எனது கணக்கு
+      logout: வெளியேறு
+      signin: உள்நுழை
+      create: உருவாக்கு
+    popup:
+      close: மூடு
+  teacher:
+    panel:
+      student: மாணவர்
+  user_level:
+    completed: நிறைவடைந்தது
+    tried: முயற்சிக்கப்பட்டது
+  home:
+    classroom: உங்கள் வகுப்பறை
+    trynow: இப்பொழுது முயற்சிக்கவும்
+    announcement_try_now_button: இப்பொழுது முயற்சிக்கவும்
+  user_type:
+    student: மாணவர்
+  dialog:
+    ok: சரி
+    startover_title: உறுதியாக மீண்டும் தொடங்க வேண்டுகிறீரா?
+    startover_ok: மீண்டும் துவங்கு
+    startover_cancel: ரத்து செய்
+  terms_interstitial:
+    print: அச்சிடு
+  race_interstitial:
+    races:
+      other: வேறு
+    submit: சமர்ப்பிக்க
+  project:
+    share: பகிர்
+    name: பெயர்
+    delete_yes: ஆம்
+    delete_no: இல்லை
+    saved: சேமித்தது
+    cancel: ரத்து செய்
+    abuse:
+      report_abuse_form:
+        abuse_type:
+          other: வேறு
+  pd:
+    form_labels:
+      email: மின்னஞ்சல்
+    form_entries:
+      subjects:
+        cs: கணினி அறிவியல்
+        math: கணிதம்
+      email_opt_in:
+        opt_in_yes: ஆம்
+        opt_in_no: இல்லை
+  cookie_banner:
+    accept: நான் ஒப்புக்கொள்கிறேன்
+  gdpr_dialog:
+    true: ஆம்

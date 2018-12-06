@@ -1,0 +1,218 @@
+hr:
+  data:
+    callouts:
+      Course 4 Artist 4_callout:
+        repeat_full_circle: Upiši broj koliko puta se zombi treba pomaknuti da načini puni krug
+      Course 4 Artist 7_callout:
+        repeat_blocks: Uzmi blok "ponovi" i omotaj ga oko blokova na radnoj površini
+      Course 4 Artist For Loops 4_callout:
+        place_counter_variable: Dovuci svoju varijablu brojača unutar ovog bloka
+      Course 4 Artist Functions 4_callout:
+        create_function: Klikni ovdje da otvoriš izbornik "Funkcije", a zatim klikni na gumb "Napravi funkciju".
+      Course 4 Artist Functions 5 OLD_callout:
+        house_hint: U redu je ako slika još ne izgleda kao kuća. To ćemo popraviti u idućem zadatku.
+      Course 4 Artist Functions 8_callout:
+        edit_function: Klikni ovdje da bi uredio svoju funkciju.
+      Course 4 Artist Params 2_callout:
+        length_parameter: Možeš li doraditi ovu funkciju tako da koristi parametar "duljina"?
+      Course 4 Artist Params 4_callout:
+        create_function: Klikni ovdje da otvoriš izbornik "Funkcije", a zatim klikni na gumb "Napravi funkciju".
+      Course 4 Artist Vars 1_callout:
+        repeat_blocks: Uzmi blok "ponovi" i omotaj ga oko blokova na radnoj površini
+      Course 4 Artist Vars 10_callout:
+        set_sides: Koristi ovaj blok da postaviš "stranice" na broj potreban za rješavanje ovog zadatka.
+      Course 4 Artist Vars 12_callout:
+        set_length: Koristi ovaj blok da postaviš "duljinu" na točnu vrijednost.
+      Course 4 Artist Vars 2_callout:
+        set_length: Koristi ovaj blok da postaviš "duljinu" na točnu vrijednost.
+      Course 4 Artist Vars 3_callout:
+        place_variable: Dovuci svoju varijablu unutar ovog bloka
+      Course 4 Artist Vars 6_callout:
+        degrees_per_side: Podijeli 360 s brojem stranica da dobiješ veličinu kuteva u stupnjevima.
+      Course 4 Artist Vars 9_callout:
+        set_sides: Koristi ovaj blok da postaviš "stranice" na broj potreban za rješavanje ovog zadatka.
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: Koristi novi blok "uzmi nektar".
+      Course 4 Bee For Loops 6_callout:
+        actions_category: Alatna traka ima novi izgled! Blokovi "Akcije" su sada ovdje.
+      Course 4 Bee Params 2_callout:
+        edit_get_nectar: Koristi ovaj gumb da urediš funkciju i promijeniš smjer Pčele da se vrati po nektar.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: Klikni na "Pokreni" da isprobaš svoj program
+      Course 4 Maze 4_callout:
+        repeat: Stavi blokove unutar petlje da bi se naredbe ponavljale
+      Course 4 Play Lab Params 3_callout:
+        edit_function: Klikni ovdje da bi uredio svoju funkciju.
+      Course 4 Play Lab Params 6_callout:
+        edit_add_parameter: Klikni na Uredi da bi dodao parametar u svoju funkciju
+      Course 4 Play Lab Vars 1_callout:
+        arrows_move_actor: Koristi strelice za pomicanje lika
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: Koristi strelice za pomicanje lika
+      Eval Design Recipe .1_callout:
+        edit_function: Klikni ovdje da bi uredio svoju funkciju.
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: Koristi ovaj padajući izbornik za stvaranje različitih pahuljica!
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: Koristi ovaj padajući izbornik za stvaranje različitih pahuljica!
+      Infinity_move_collide_callout:
+        Infinity_move_collide_callout: Reporduciraj zvuk kada se ovaj događaj dogodi.
+      Infinity_move_directions_callout:
+        Infinity_move_directions_callout: Koji blok će učiniti da Baymax ide gore kad se pritisne tipka sa strelicom prema gore?
+        Infinity_move_directions_callout_arrow: Koristite ove strelice za upravljanje
+      Infinity_move_right_callout:
+        Infinity_move_right_runbutton: Ovdje dodaj blok za kretanje
+      Infinity_repeat_callout:
+        Infinity_repeat_callout: Blokove za kretanje umetni ovdje
+      NEW Course 4 Artist Functions 5_callout:
+        edit_function: Klikni ovdje da bi uredio svoju funkciju.
+        function_editor_draw_square: Ovo je definicija tvoje funkcije. Ovi blokovi se pokreću svaki put kad koristiš blok "nacrtaj kvadrat"
+      NEW Course 4 Artist Functions 7_callout:
+        edit_function: Klikni ovdje da bi uredio svoju funkciju.
+      NEW Course 4 Artist Functions 8_callout:
+        edit_function: Klikni ovdje da bi uredio svoju funkciju.
+      NEW Course 4 Artist Params 10_callout:
+        create_function: Klikni ovdje da otvoriš izbornik "Funkcije", a zatim klikni na gumb "Napravi funkciju".
+      NEW Course 4 Artist Params 9_callout:
+        edit_add_parameter: Klikni na Uredi da bi dodao parametar u svoju funkciju
+        add_and_drag_parameter: Ovdje napiši ime svog parametra, klikni na Dodaj, a zatim ga odvuci u definiciju svoje funkcije
+      NEW Course 4 Artist Vars 6_callout:
+        place_length_variable: Dovuci ovdje varijablu duljine da bi zamijenio upitnike
+      NEW Course 4 Bee For Loops 5_callout:
+        actions_category: Alatna traka ima novi izgled! Blokovi "Akcije" su sada ovdje.
+      New Frozen Project_callout:
+        snowflake_dropdown: Koristi ovaj padajući izbornik za stvaranje različitih pahuljica!
+      Overworld Chop Trees_callout:
+        craft_callout_preplaced: Stavili smo malo blokovi za početak
+      Overworld Chop Trees_2018_callout:
+        craft_callout_preplaced: Stavili smo malo blokovi za početak
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Stavili smo malo blokovi za početak
+      Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: Ovaj kod će početi graditi svoju kuću. Može li to završiti?
+      Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Ovaj kod će početi graditi svoju kuću. Može li to završiti?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Ovaj kod će početi graditi svoju kuću. Može li to završiti?
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: Klikni na "Pokreni" da isprobaš svoj program
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: Klikni na "Pokreni" da isprobaš svoj program
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Klikni na "Pokreni" da isprobaš svoj program
+      Overworld Place Wall_callout:
+        craft_inside_repeat: Ponavljanje akcije stavljanjem blokova ovdje
+      Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Ponavljanje akcije stavljanjem blokova ovdje
+      Overworld Place Wall_2019_callout:
+        craft_inside_repeat: Ponavljanje akcije stavljanjem blokova ovdje
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: Ovaj kod htijenje ček za lava, možete dodati naredbu da se krene naprijed?
+      Underground Avoiding Lava_2018_callout:
+        craft_callout_moveforward: Ovaj kod htijenje ček za lava, možete dodati naredbu da se krene naprijed?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Ovaj kod htijenje ček za lava, možete dodati naredbu da se krene naprijed?
+      Underground Iron_callout:
+        craft_what_is_iron: Meni ovo glačalo!
+      Underground Iron_2018_callout:
+        craft_what_is_iron: Meni ovo glačalo!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: Meni ovo glačalo!
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: Koristi blok "napravi krug" i promijeni veličinu.
+      frozen cross rotate_callout:
+        replace_questions_degree: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      frozen cross_callout:
+        repeat_blocks_1: "(1) Uzmi ovaj blok i stavi ga oko sivih blokova na radnoj površini"
+        repeat_blocks_2: (2) Pomakni blok "ponovi" ovamo i stavi sive blokove unutar njega
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: Koristi blok "ponovi" da napraviš ovakav oblik.
+      frozen diamond_callout:
+        frozen_diamond_repeat: Koristi blok "ponovi" da napraviš ovakav oblik.
+      frozen freeplay_callout:
+        snowflake_dropdown: Koristi ovaj padajući izbornik za stvaranje različitih pahuljica!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Koristi ovaj padajući izbornik za stvaranje različitih pahuljica!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Koristi ovaj padajući izbornik za stvaranje različitih pahuljica!
+      frozen line_callout:
+        move_elsa_forward: Dovuci blok "idi naprijed" i prikači ga ispod bloka "pri pokretanju" da bi Elsa išla naprijed
+      frozen line_b_callout:
+        move_elsa_forward: Dovuci blok "idi naprijed" i prikači ga ispod bloka "pri pokretanju" da bi Elsa išla naprijed
+      frozen line_test_callout:
+        move_elsa_forward: Dovuci blok "idi naprijed" i prikači ga ispod bloka "pri pokretanju" da bi Elsa išla naprijed
+      frozen perpendicular_callout:
+        turn_elsa: Koristi blok "okreni" da bi se Elsa okrenula. Broj na padajućem izborniku određuje koliko će se Elsa okrenuti
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: Koristi blok "napravi krak pahuljice"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Koristi blok "napravi krak pahuljice"
+      frozen square iterative_callout:
+        frozen_create_square: Dodaj ovdje još blokova da napraviš kvadrat
+      frozen square iterative_b_callout:
+        frozen_create_square: Dodaj ovdje još blokova da napraviš kvadrat
+      frozen square iterative_test_callout:
+        frozen_create_square: Dodaj ovdje još blokova da napraviš kvadrat
+      frozen square loop 3x_callout:
+        replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      frozen square loop 3x_b_callout:
+        replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      frozen square loop 3x_test_callout:
+        replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      frozen square loop_callout:
+        replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      frozen square loop_b_callout:
+        replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      frozen square loop_test_callout:
+        replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      frozen square snowflake_callout:
+        replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      frozen square snowflake_b_callout:
+        replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      frozen square snowflake_test_callout:
+        replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      grade4_artist_parameters_squares1_callout:
+        edit_add_parameter: Klikni na Uredi da bi dodao parametar u svoju funkciju
+        add_and_drag_parameter: Ovdje napiši ime svog parametra, klikni na Dodaj, a zatim ga odvuci u definiciju svoje funkcije
+      grade4_frozen_freeplay_callout:
+        snowflake_dropdown: Koristi ovaj padajući izbornik za stvaranje različitih pahuljica!
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: Koristi blok "napravi krug" i promijeni veličinu.
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: Koristi blok "ponovi" da napraviš ovakav oblik.
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: Koristi blok "ponovi" da napraviš ovakav oblik.
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: Koristi blok "ponovi" da napraviš ovakav oblik.
+      grade4_frozen_square_callout:
+        replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      grade4_frozen_square_loop1_callout:
+        replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      grade4_frozen_square_loop2_callout:
+        replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      grade4_frozen_square_loop3_callout:
+        replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      grade5_artist_parameters_squares1_callout:
+        edit_add_parameter: Klikni na Uredi da bi dodao parametar u svoju funkciju
+        add_and_drag_parameter: Ovdje napiši ime svog parametra, klikni na Dodaj, a zatim ga odvuci u definiciju svoje funkcije
+      grade5_artist_parameters_triangles1aa_callout:
+        edit_add_parameter: Klikni na Uredi da bi dodao parametar u svoju funkciju
+        add_and_drag_parameter: Ovdje napiši ime svog parametra, klikni na Dodaj, a zatim ga odvuci u definiciju svoje funkcije
+      grade5_artist_variables_pentagons1_callout:
+        place_length_variable: Dovuci ovdje varijablu duljine da bi zamijenio upitnike
+      grade5_artist_variables_pentagons12_callout:
+        set_length: Koristi ovaj blok da postaviš "duljinu" na točnu vrijednost.
+      grade5_artist_variables_square7_callout:
+        degrees_per_side: Podijeli 360 s brojem stranica da dobiješ veličinu kuteva u stupnjevima.
+      grade5_artist_variables_triangles2_callout:
+        set_length: Koristi ovaj blok da postaviš "duljinu" na točnu vrijednost.
+      grade5_playlab_variables1_callout:
+        arrows_move_actor: Koristi strelice za pomicanje lika
+      grade5_playlab_variables11_callout:
+        edit_add_parameter: Klikni na Uredi da bi dodao parametar u svoju funkciju
+      grade5_playlab_variables1ask_callout:
+        arrows_move_actor: Koristi strelice za pomicanje lika

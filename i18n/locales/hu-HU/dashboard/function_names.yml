@@ -1,0 +1,29 @@
+hu:
+  data:
+    function_names:
+      x: x
+      details: részletek
+      draw a circle: kör rajzolása
+      draw a hexagon: rajzolj egy hatszöget
+      draw a flower: rajzolj egy virágot
+      draw a square: rajzoljon egy négyzetet
+      draw a snowflake: rajzolj egy hópelyhet
+      draw a tree: rajzolj egy fát
+      draw a triangle: Rajzolj egy háromszöget
+      draw a house: rajzoljon egy házat
+      draw a star: rajzolj egy csillagot
+      do something: csinálj valamit
+      jump: Ugorj
+      set score: Pontszám beállítása
+      get nectar: gyűjts nektárt
+      test: 'kifejezés:'
+      diamond: gyémánt
+      move: mozogj
+      move right: jobbra
+      move up: feljebb
+      move down: lejjebb
+      move left: balra
+      collect: begyűjtés
+      turn left: fordulj balra
+      move forward: előrelépni
+      turn right: fordulj jobbra

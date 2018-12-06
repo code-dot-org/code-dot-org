@@ -1,0 +1,20 @@
+---
+zh-TW:
+  data:
+    course:
+      name:
+        csp-2017:
+          assignment_family_title: 計算機科學原理
+          title: 計算機科學原理 ('17-'18)
+          version_title: 17-18
+          description_short: 學習計算機科學的基礎概念。
+        csd-2017:
+          version_title: 17-18
+        csd-2018:
+          title: 計算機科學探索 ('18-'19)
+          version_title: "'18-'19"
+        csp-2018:
+          assignment_family_title: 計算機科學原理
+          title: 計算機科學原理 ('18-'19)
+          version_title: "'18-'19"
+          description_short: 學習計算機科學的基礎概念。

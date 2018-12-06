@@ -1,0 +1,541 @@
+pt:
+  slides:
+    maze_intro:
+      1:
+        image: 'notes/hoc1_1.jpg'
+        text: "Bem-vindo à tua primeira hora de código! Vamos mergulhar logo no teu primeiro contacto com a programação."
+      2:
+        text: "Estaremos a usar o Blockly, uma linguagem de programação visual onde podes arrastar e soltar blocos para escrever código."
+      3:
+        text: "Grande parte do código é digitado, mas o Blockly é visual. Cada bloco corresponde a uma linha de código \"real\"."
+      4:
+        text: "Vais aprender os fundamentos da ciência da computação, conceitos que são usados para fazer aplicações para telemóveis ou até para controlar o robô que está em Marte."
+      5:
+        text: "Um programa é um conjunto de instruções para o teu computador seguir."
+      6:
+        text: "O objetivo do teu primeiro programa é conseguir que o Angry Bird atravesse um labirinto para chegar ao Porco Verde."
+      7:
+        text: "O lado esquerdo é o labirinto onde o programa é executado. As instruções para cada quebra-cabeça estão abaixo do labirinto."
+      8:
+        text: "A caixa de ferramentas do meio possui os comandos para o Angry Bird. Usarás estas para construir o teu código."
+      9:
+        text: "À direita está o teu espaço de trabalho, que é a área para onde irás arrastar os blocos da caixa de ferramentas que vais usar para criares o teu programa. Para apagares um bloco, arrasta-o para o lixo que aparece no canto."
+      10:
+        text: "Cada bloco é uma instrução. Se arrastares o bloco \"mover para a frente\" para o teu espaço de trabalho e clicares em \"Executar\", o pássaro anda um espaço no labirinto."
+      11:
+        text: "Para fazer mais do que uma ação, você pode arrastar vários blocos para sua área de trabalho e conectá-los uns aos outros. O passarinho obedecerá os comandos de cima para baixo."
+      12:
+        text: "Se corres um programa e depois quiseres corrigi-lo e tentar novamente, pressiona o botão \"Redefinir\"."
+      13:
+        text: "Vamos apanhar esses porcos!"
+    artist_intro:
+      1:
+        image: 'notes/stage5_1.jpg'
+        text: "Olá! Eu sou o JR. Qualquer equipa de carros de corrida precisa de um programador de computadores para vencer. Eles analisam os dados do veículo para o tornarem mais rápido."
+      2:
+        image: 'notes/stage5_2.jpg'
+        text: "Nesses desafios, você vai ser um artista que desenha por todo lugar que passa."
+      3:
+        image: 'notes/stage5_3.jpg'
+        text: "Este bloco diz \"avançar 100 pixeis.\" Os pixeis são apenas pequenos pontos no teu ecrã."
+      4:
+        image: 'notes/stage5_4.jpg'
+        text: "Este bloco diz \"virar à direita 90 graus.\" Isto fará com que o teu artista se vire tanto quanto os blocos se virarem no labirinto."
+      5:
+        image: 'notes/stage5_5.jpg'
+        text: "Carrega na seta, sobre qualquer destes blocos, para mudares a quantidade que o artista vira ou avança. Ambienta-te com estes passos, de forma a familiarizares-te com estes novos blocos."
+    farmer_intro:
+      1:
+        image: 'notes/stage9_1.jpg'
+        text: "Olá! Eu sou a Paola! Nestes puzzles tu serás um agricultor que tem de chegar à sua quinta, completamente plana, para começar a cultivar algo."
+      2:
+        image: 'notes/stage9_2.jpg'
+        text: "Você precisa ajudá-la a remover todos os montes de terra e preencher todos os buracos."
+      3:
+        image: 'notes/stage9_3.jpg'
+        text: "Os novos blocos removem 1 pá de terra de um monte, e preenchem o buraco com 1 pá de terra."
+      4:
+        image: 'notes/stage9_4.jpg'
+        text: "Os montes e buracos têm tamanhos diferentes, pelo que terás de dizer ao agricultor quantas pás serão necessárias usar."
+    flappy_intro:
+      1:
+        image: 'notes/flappy01.jpg'
+        text: "Oi, eu sou Katie! Uma das coisas mais emocionantes sobre ciência da computação é que um programa de computador pode ser interativo."
+      2:
+        image: 'notes/flappy02.jpg'
+        text: "Sempre que alguém clica, digita, ou toca na tela de um celular, é gerado um EVENTO, e existe alguns códigos que decidem o que fazer quando um EVENTO ocorre."
+      3:
+        image: 'notes/flappy03.jpg'
+        text: "Por exemplo, você poderia ter um MANIPULADOR DE EVENTOS que diz \"quando o mouse for clicado, toque um som\" "
+      4:
+        image: 'notes/flappy04.jpg'
+        text: "Alguma vez ouviste falar do jogo FlappyBird? Se utilizarmos manipuladores de eventos, podemos programar a nossa própria versão do FlappyBird!"
+      5:
+        image: 'notes/flappy05.jpg'
+        text: "O código que você vai escrever consiste em arrastar e soltar blocos que representam os comandos para o computador. Na verdade, cada um desses blocos é representado pelo código real."
+      6:
+        image: 'notes/flappy06.jpg'
+        text: "Se você der uma olhada na área de trabalho, existem alguns blocos verdes que são preenchidos para você - esses são os \"manipuladores de evento\" "
+      7:
+        image: 'notes/flappy07.jpg'
+        text: "Se você quer que o passarinho VOE quando você CLICAR, você pode anexar o bloco \"FLAP\" ao manipulador de evento apropriado. Assim, sempre que você clicar, o passarinho vai voar."
+      8:
+        image: 'notes/flappy08.jpg'
+        text: "Em cada desafio dessa atividade, vamos introduzir novos tipos de eventos, como os blocos verdes na área de trabalho, e você pode decidir que blocos são apropriados para adicionar em resposta a esses eventos."
+      9:
+        image: 'notes/flappy09.jpg'
+        text: "Quando você observar uma seta suspensa como essa, significa que você pode alterar as configurações, como o som a ser reproduzido quando o pássaro bater no chão."
+      10:
+        image: 'notes/flappy10.jpg'
+        text: "No desafio final, você vai poder criar seu próprio jogo e compartilhar com seus amigos. Divirta-se!"
+    loop_times:
+      1:
+        text: "Olá, sou o Mark! Vamos aprender sobre ciclos. Usando ciclos podes dizer um computador para repetir qualquer conjunto de ações repetidamente, milhares ou mesmo milhões de vezes."
+      2:
+        text: "Neste puzzle, queremos que o pássaro se mova para a frente 5 espaços para chegar ao porco."
+      3:
+        text: "Podemos usar o novo bloco \"repetir\" para nos ajudar."
+      4:
+        text: "Em vez de usares 5 blocos \"mover para a frente\"..."
+      5:
+        text: "Podemos colocar o bloco \"mover para a frente\" dentro do bloco \"repetir\" e escrever um número no bloco para definirmos quantas vezes a instrução será repetida."
+      6:
+        text: "E isto é importante: podes colocar mais do que um comando dentro de um bloco \"repetir\"."
+      7:
+        text: "Diverte-te a usar o teu novo bloco \"repetir\"!"
+    loop_until:
+      1:
+        text: "Olá, eu sou o Chris. Antes de entrar para os Miami Heat, estive na escola Georgia Tech a estudar ciência da computação. Vamos tentar o nosso novo bloco, o bloco \"repeat até\"."
+      2:
+        text: "E se nós não soubéssemos quão longe o pássaro teve que se mover para chegar ao porco?"
+      3:
+        text: "Se colocarmos um bloco \"mover para a frente\" dentro do bloco \"repetir até\", o pássaro irá mover-se para a frente ATÉ chegar ao porquinho malvado (ou chocar contra o muro)."
+      4:
+        text: 'E isto é importante: tal como anteriormente, podemos por múltiplos blocos dentro de um bloco "repetir até", e todos eles serão repetidos.'
+    if:
+      1:
+        text: "Olá, eu sou o Bill! Vamos aprender um novo conceito fundamental: instrução \"se\". É assim que os computadores tomam decisões."
+      2:
+        text: "Usas instruções \"se\" todos os dias. Antes de saíres de casa todas as manhãs, tu dizes  SE estiver a chover lá fora, vou precisar de levar o meu casaco."
+      3:
+        text: "Podemos dizer ao zombie para verificar SE há algum caminho à esquerda, e se ele encontrar o caminho à esquerda, podemos fazer com que ele vire nessa direção."
+      4:
+        text: "Para escrever código para este, vamos arrastar o nosso bloco \"se\" e inserimos dentro dele um bloco \"virar esquerda\"."
+      5:
+        text: "Agora, se pusermos um bloco \"mover para a frente\" por cima e envolvermos tudo num ciclo com o bloco \"repetir\", cada vez que o zombie se mover, irá verificar se existe algum caminho à esquerda e mudar de direção. O comando \"repetir\" é fundamental para verificar, a cada passo, se existe uma mudança de direção."
+      6:
+        text: "Instruções se são muito importantes nas ciências da computação. Um dos primeiros programas que escrevi foi o jogo do galo, e há uma instrução que diz: SE a outra pessoa estiver perto de ganhar, bloquear o espaço que a permite ganhar."
+      7:
+        text: "Diverte-te usando o bloco \"se\"!"
+    if_else:
+      1:
+        text: "Olá, meu nome é Saloni. A ciência da computação me ajuda a resolver problemas das áreas da saúde e medicina. Vamos aprender sobre o bloco \"se-senão\". Ele parece o bloco \"se\", mas com uma parte extra no final que diz \"senão\"."
+      2:
+        text: "Se eu colocar um bloco \"avance\" na instrução \"faça\", e um bloco \"vire à esquerda\" na instrução \"senão\", significa que o zumbi vai escolher entre 2 opções. SE existir um caminho à frente, o zumbi vai avançar e, CASO CONTRÁRIO (não há um caminho em frente), o zumbi vai virar à esquerda."
+      3:
+        text: "Assim como o bloco \"se\", nós podemos colocar blocos \"se-senão\" dentro de blocos \"repita\", assim o zumbi continuará se movendo, e o bloco \"se-senão\" continuará verificando se é possível virar para algum lugar."
+      4:
+        text: "Agora, coloque os zumbis em seus devidos lugares!"
+    if_else_scrat:
+      1:
+        text: "Um comando se-senão é uma decisão entre duas opções. Vamos ver como podemos usar um comando se-senão com nosso amigo Scrat, o esquilo."
+      2:
+        text: "Este bloco parece igual ao bloco \"se\", mas há uma parte extra no final que diz \"senão\". Se eu colocar um bloco \"avance\" na instrução \"faça\", e um bloco \"vire à esquerda\" na instrução \"senão\", significa que o esquilo Scrat vai avançar se houver um caminho à frente. Se não houver caminho à frente, o Scrat vai virar à esquerda."
+      3:
+        text: "Significa tomar uma decisão e fazer uma das duas ações com base nessa decisão. E, assim como os blocos \"se\", você pode colocar blocos \"se-senão\" dentro de blocos \"repita\"."
+      4:
+        text: "Agora vamos ajudar Scrat, o esquilo, a pegar essa bolota!"
+    function:
+      1:
+        image: 'notes/stage13_1.jpg'
+        text: "Oi, eu sou a Brina, uma engenheira do Instagram. Uma função é um conjunto de linhas de código que você deseja usar várias vezes. Então, ao invés de escrever esse código toda vez, você pode usar apenas um bloco."
+      2:
+        image: 'notes/stage13_2.jpg'
+        text: "Vamos aprender a definir funções. A definição de funções tem uma estrela na ponta. O nome de uma função é escrito logo na primeira linha."
+      3:
+        image: 'notes/stage13_3.jpg'
+        text: "Os blocos que vão dentro da definição nos dizem o que ela faz. Então, essa definição de função se chama \"preencha 5\", e é composta por um bloco \"repita\" e um bloco \"preencha\"."
+      4:
+        image: 'notes/stage13_4.jpg'
+        text: "A definição está na área de trabalho, mas a fazendeira não vai executar a função até que arrastemos o bloco \"preencha 5\" para fora da categoria funções."
+      5:
+        image: 'notes/stage13_5.jpg'
+        text: "Vamos agir em \"função\" da diversão! "
+    loop_while:
+      1:
+        image: 'notes/stage9_5.jpg'
+        text: "Oi, eu sou o Makinde! Vamos aprender sobre o bloco \"enquanto\". "
+      2:
+        image: 'notes/stage9_6.jpg'
+        text: "O bloco \"enquanto\" vai fazer tudo o que você colocar no seu interior, DESDE QUE a declaração na parte superior seja VERDADEIRA."
+      3:
+        image: 'notes/stage9_7.jpg'
+        text: "Por exemplo, se a fazendeira está em um monte de terra, ela continuará a remover 1 pá ENQUANTO houver terra debaixo dela."
+    loop_for:
+      1:
+        image: 'notes/stage11_1.jpg'
+        text: "Oi, eu sou a Trina, e trabalho para a Pixar. Já trabalhei em um monte de filmes, incluindo o Shrek."
+      2:
+        image: 'notes/stage11_2.jpg'
+        text: "Este é nosso novo laço \"contador\". Ele executará ações repetidamente, e você pode fazer com que as ações mudem aos poucos."
+      3:
+        image: 'notes/stage11_3.jpg'
+        text: "Neste exemplo, nosso laço \"contador\" diz \"conte de 50 até 90, indo de 10 em 10\" e, dentro dele, temos o nosso bloco \"desenhe um quadrado\". Arraste o bloco \"contador\" da seção \"Variáveis\" para local que indica \"comprimento\"."
+      4:
+        image: 'notes/stage11_4.jpg'
+        text: "Isso significa que nosso artista vai desenhar um quadrado com lados de 50 pixels de comprimento, e então vai acrescentar 10 e desenhar um quadrado com lados de 60 pixels de comprimento. Ele vai continuar adicionando 10 e desenhando quadrados até que ele atinja 90 pixels. Assim, vamos ter quadrados de 50, 60, 70, 80 e 90 pixels."
+    parameters:
+      1:
+        image: 'notes/stage15_1.jpg'
+        text: "Oi, eu sou a Janete, e eu sou uma engenheira da Zynga."
+      2:
+        image: 'notes/stage15_2.jpg'
+        text: "E se quisermos desenhar um monte de triângulos de tamanhos diferentes?"
+      3:
+        image: 'notes/stage15_3.jpg'
+        text: "Podemos escrever todo o código à mão, ou podemos usar uma função com parâmetros."
+      4:
+        image: 'notes/stage15_4.jpg'
+        text: "Para fazer isso, clique na estrela azul sobre a definição da função \"desenhe um triângulo\". Arraste o \"nome de entrada\" para o bloco \"entrada\"."
+      5:
+        image: 'notes/stage15_5.jpg'
+        text: "Então, se você escrever \"comprimento\" no local onde há um \"x\" e apertar \"Enter\", você vai criar um comprimento de entrada para sua função."
+      6:
+        image: 'notes/stage15_6.jpg'
+        text: "Então, clique na estrela. Agora, você vai clicar na categoria de variáveis e arrastar o bloco \"comprimento\" para dentro do bloco \"avance\" da sua definição da função. E arraste para fora o antigo bloco de número."
+      7:
+        image: 'notes/stage15_7.jpg'
+        text: "Para usar sua função com parâmetros, clique na categoria funções e arraste para fora a função \"desenhe um triângulo com comprimento\"."
+      8:
+        image: 'notes/stage15_8.jpg'
+        text: "Agora você pode usar o bloco de matemática para entrar com números diferentes e desenhar triângulos de tamanhos diferentes."
+    hoc_wrapup:
+      1:
+        text: "Parabéns! Com o último enigma que resolveste, acabaste de escrever código que pode dizer a qualquer robô como encontrar o seu caminho através de um labirinto de não-ramificação ou túnel de qualquer comprimento, sendo um zombie, um pássaro, uma missão a Marte ou até mesmo um carro de auto-condução."
+      2:
+        text: "Os conceitos básicos que usaste são o coração de todos os programas ou apps que irás utilizar.  Aprendemos sobre ciclos de repetição, declarações repita até, declarações se e se-então."
+      3:
+        text: "Se gostaste da tua primeira hora de código, visita code.org e continua a tua educação em ciências da computação! Assim que completares as 20 horas de curso, irás dominar as bases da programação e poderás começar a escrever aplicações para telemóveis, instruções para robôs, jogos, etc."
+      4:
+        text: "A tecnologia está a mudar tudo o que fazemos e não importa se és novo ou menos novo: a programação é divertida, é criativa e toda a gente pode aprender!"
+    20_wrapup:
+      1:
+        text: "Mostrar notas vem em breve!"
+    frozen_intro:
+      1:
+        text: "Olá, meu nome é Lyndsey. Eu sou modelo, atriz e também escrevo meus próprios aplicativos. Vamos usar a programação para explorar a magia e a beleza do gelo com Anna e Elsa."
+      2:
+        text: "Você vai criar flocos de neve e padrões enquanto esquia, e um país das maravilhas congelante para compartilhar com seus amigos."
+      3:
+        text: "Na próxima hora, você vai aprender os conceitos básicos da programação. A programação tradicional é escrita, mas nós usaremos Blockly, blocos visuais que você pode arrastar e soltar para escrever programas. Também é assim que estudantes universitários aprendem o básico. E por trás desses blocos, você está criando códigos."
+      4:
+        text: "Um programa é um conjunto de instruções que diz a um computador o que ele deve fazer. Vamos construir um código, ou programa, que ajudará Elsa a criar uma reta simples. Mais adiante, nós vamos usar isso para criar padrões mais complexos."
+      5:
+        text: "Sua tela é dividida em três partes principais. À esquerda você tem a superfície de gelo onde vai executar seu programa. As instruções de cada nível estão escritas logo abaixo da superfície."
+      6:
+        text: "A parte do meio é onde fica a caixa de ferramentas, e cada um desses blocos representa uma ação que pode ser realizada por Elsa e Anna."
+      7:
+        text: "O espaço em branco à direita é chamado de área de trabalho, e é onde vamos criar nosso programa. Para se mover pela superfície de gelo, você usará o bloco \"avance\"."
+      8:
+        text: "Aqui, o bloco \"avance\" diz: \"avance por 100 pixels\". Quando clicamos em \"Executar\", o que acontece? Elsa se move por uma certa distância na tela, 100 pixels, na verdade! Os pixels são, basicamente, minúsculos quadrados na tela do seu computador."
+      9:
+        text: "O outro bloco que temos neste desafio diz \"vire à direita 90 graus\". Quando usamos o bloco \"vire à direita\", Elsa faz uma determinada curva. Você pode brincar com o quanto deseja que Elsa vire. O ângulo é medido a partir do caminho à frente de Elsa. Então, este é um giro de 90 graus. E este é um giro de 120 graus."
+      10:
+        text: "Lembre-se de que é possível mudar o número de pixels e graus, clicando nas setas ao lado deles."
+    frozen_loops:
+      1:
+        text: "Olá, eu sou a Paola! Os computadores são realmente muito bons em repetir ações. Você pode contar até 10, 20 ou até 100, mas um computador pode contar até um bilhão ou um trilhão sem se cansar, e ele só levará alguns segundos. Seja contar, desenhar ou qualquer outra atividade, os computadores podem repetir ações centenas ou até bilhões de vezes."
+      2:
+        text: "Na programação, isto chama-se um ciclo. Um ciclo é uma repetição contínua de um determinado código. No próximo desafio, o teu objetivo é ajudar a Anna a criar um quadrado com o bloco \"repetir\"."
+      3:
+        text: "Todos os blocos de código que colocar dentro do bloco \"repita\" serão repetidos em sequência, quantas vezes você quiser."
+      4:
+        text: "Para desenhar um quadrado, você pode usar os blocos \"avance\" e \"vire à direita\" quatro vezes. Mas o modo mais fácil de fazer isso é dizer ao computador \"avance\" e \"vire à direita 90 graus\" uma vez e, depois, fazer ele repetir este par de ações quatro vezes. Para isso, você precisa colocar os blocos \"avance\" e \"vire à direita\" dentro de um bloco \"repita\"."
+      5:
+        text: "Lembre-se de que é possível mudar o valor no bloco \"repita\" para qualquer número, e ele repetirá o que está dentro do bloco de acordo com o número que você escolher."
+    frozen_functions:
+      1:
+        text: "Olá, eu sou Chris Bosh. Sou jogador de basquete profissional, e já programei quando estava na faculdade."
+      2:
+        text: "Um dos conceitos mais importantes da ciência da computação é como definir novos comandos. A maioria das linguagens de computador tem apenas 100 palavras ou comandos. A arte e a magia estão, então, em definir suas próprias palavras novas a partir do básico."
+      3:
+        text: "Depois de ensinar a um computador como fazer uma ação uma vez usando esta sequência de comandos, você pode criar o nome que quiser para essa ação, assim será mais fácil repeti-la depois. Ao definir e nomear seu próprio comando, você estará criando uma função."
+      4:
+        text: "Olá, eu sou Jess. Na programação com blocos, use funções quando houver um conjunto de ações que você quer repetir várias vezes. Por exemplo, você escreveu um código para criar um quadrado."
+      5:
+        text: "Você pode definir isso como uma função chamada \"crie um quadrado\". "
+      6:
+        text: "Agora você tem um novo bloco que pode ser usado várias vezes para criar diversos quadrados."
+      7:
+        text: "Inúmeras formas simples podem ser usadas para criar padrões mais complexos. No próximo desafio, o código que você acabou de escrever para fazer um círculo estará disponível como uma nova função que pode fazer círculos de diferentes tamanhos. Você pode usá-la para ajudar Elsa a criar padrões belos e intrincados na neve?"
+    playlab_intro:
+      1:
+        image: 'notes/playlab_intro_1.png'
+        text: "Nós vamos criar jogos usando o Laboratório. Os bons jogos têm histórias, e toda história tem personagens. Nós vamos aprender como criar nossos personagens, como bruxas, alienígenas e animais que falam, andam e interagem uns com os outros. Ao final deste tutorial, você poderá criar um jogo a partir do zero e compartilhá-lo com seus amigos."
+      2:
+        image: 'notes/playlab_intro_2.png'
+        text: "Sua tela está dividida em três partes principais. À esquerda está o espaço do jogo, onde seu programa será executado. As instruções para cada nível estão escritas abaixo."
+      3:
+        image: 'notes/playlab_intro_3.png'
+        text: "A parte do meio é onde fica a caixa de ferramentas, e cada um desses blocos representa uma parte do código. O espaço em branco à direita é chamado de área de trabalho e é onde criaremos nosso programa."
+      4:
+        image: 'notes/playlab_intro_4.png'
+        text: "Para começar, você terá que conectar seus blocos ao bloco laranja \"quando executar\". É possível conectar diversos blocos uns aos outros, arrastando-os até ver a linha amarela e, então, eles se encaixam."
+      5:
+        image: 'notes/playlab_intro_5.png'
+        text: "Neste primeiro desafio, nosso personagem é um pinguim, e nós o faremos dizer \"Olá!\", arrastando o bloco \"diga\", conectando-o ao bloco \"quando executar\" e digitando \"Olá\". Nós também podemos fazer com que o pinguim se mova usando os blocos \"mova à direita\" e \"mova à esquerda\". Depois que seus blocos estiverem no lugar certo, aperte o botão \"executar\" para ver o que você programou."
+      6:
+        image: 'notes/playlab_intro_6.png'
+        text: "Comece agora mesmo! Ao final, você conseguirá criar seu próprio jogo, com todos os tipos de jogadores que poderão interagir, ficar felizes ou tristes, marcar pontos ou lançar bolas de fogo, ou até mesmo fazer desaparecer uns aos outros. Depende da sua imaginação e do jogo que você quer criar."
+    playlab_events:
+      1:
+        image: 'notes/playlab_events_1.png'
+        text: "Agora, vamos aprender um pouco sobre algo que os programadores de jogos usam todos os dias: os eventos. Um evento diz ao seu programa que ele deve ouvir quando algo acontece. Quando tal coisa acontece, ele realiza uma ação."
+      2:
+        image: 'notes/playlab_events_2.png'
+        text: "Alguns exemplos de eventos são: ouvir o clique do rato, pressionar uma seta no teclado ou tocar no ecrã."
+      3:
+        image: 'notes/playlab_events_3.png'
+        text: "Agora, vamos fazer o robô espacial cumprimentar os terráqueos quando um jogador clicar nele. Nós usaremos o bloco \"quando clicado\" e conectaremos o bloco \"diga\" a ele. Quando o jogador clicar no robô espacial, tudo que estiver conectado ao bloco de evento \"quando clicado\" será realizado. O que seu alienígena diz?"
+      4:
+        image: 'notes/playlab_events_4.png'
+        text: "Há também os blocos \"quando a seta estiver pressionada\". Se você conectar os blocos \"mova\" a eles, será possível começar a mover seus personagens para cima, para baixo, para esquerda e para a direita. Pouco a pouco, seu jogo está ficando cada vez mais interativo."
+    playlab_repeat_forever:
+      1:
+        image: 'notes/playlab_repeat_forever_1.png'
+        text: "Este é o bloco \"repita infinitamente\". Tudo que estiver contido neste bloco acontecerá repetidamente no jogo."
+      2:
+        image: 'notes/playlab_repeat_forever_2.png'
+        text: "Se quisermos que um personagem faça algo repetidamente, sem nenhuma ação do jogador, colocaremos esses blocos dentro do bloco \"repita infinitamente\"."
+      3:
+        image: 'notes/playlab_repeat_forever_3.png'
+        text: "Neste desafio, nosso objetivo é ajudar o mago a proteger as fronteiras do reino, andando da esquerda para a direita e vice-versa, continuamente. Aprender como repetir ações de comandos vai economizar muito do seu tempo no futuro, quando você for criar seu próprio jogo."
+    C1_artist_intro:
+      1:
+        text: "Estes são os teus blocos de desenho. Usa o bloco correto para mover o artista para onde ele precisa ir, para preencher as linhas cinzentas."
+      2:
+        text: "Estes são blocos de salto. Quando usares estes blocos o teu artista move-se, mas sem desenhar. Usa estes blocos para saltares para a próxima linha cinzenta."
+    C1_bee_level_intro:
+      1:
+        text: "As abelhas são fantásticas, não são? Neste próximo conjunto de quebra-cabeças, o teu objetivo é ajudar a abelha a chegar às flores, apanhar o néctar das flores e voar até ao favo de mel para fazer mel. Vais precisar de usar os blocos \"apanhar néctar\" e \"fazer mel\" neste exercício."
+      2:
+        text: "Cada flor tem um número diferente de néctares: 1, 2, 3 ou mais. Sabemos quanto néctar está nas flores vermelhas, pelo pequeno número no canto. Certifica-te que apanhas todo o néctar das flores antes de continuares. Além disso, cada favo de mel só pode ter tanto mel quanto o indicado: 1, 2, 3 ou mais. Certifica-te que todos os favos de mel estão cheios."
+      3:
+        text: "Se conseguires retirar todo o néctar e fazer todo o mel, continuas para o próximo nível. Caso contrário, terás que repetir o quebra-cabeças novamente. Deves ser \"abelhudo\" e experimentares mexer no código para te sentires como um verdadeiro programador!"
+    C1_bee_loops:
+      1:
+        text: "Um loop é uma repetição de uma atividade ou tarefa. Assim que abro uma colmeia para a inspecionar, retiro uma moldura, inspeciono-a, e depois coloco-a de volta no seu local. Seguidamente, eu repito essa tarefa várias vezes. vezes. Isso é um loop, ou seja, fazer a mesma atividade várias vezes."
+      2:
+        text: "Neste nível, queremos que a abelha recolha três néctares das flor. Em vez de usar três blocos \"obter néctar\", vais usar o bloco de repetição para obteres néctar três vezes. Clica em \"Executar\" e vê se conseguiste. Parabéns!"
+    C1_bigevent_unplugged:
+      1:
+        text: "Esta lição chama-se o grande evento. É sobre como podemos controlar os nossos programas e realmente mudar a forma como eles são executados em tempo real usando eventos, como o premir de uma tecla ou um clique no rato."
+      2:
+        text: "Para esta lição, vais ser controlado com um controle remoto de papel. É como um jogo de vídeo em direto."
+      3:
+        text: "Um evento é uma ação que faz com que algo aconteça. É como quando clicas no botão do rato e o computador carrega uma nova página Web. Isso é um evento. Quando tocas e arrastas no ecrã de um tablet para rolares o ecrã, isso também é um evento. Os eventos são uma ótima maneira de deixar os utilizadores controlarem um programa sempre que quiserem ou precisarem."
+      4:
+        text: "No nosso dia-a-dia acontecem coisas a que temos que  responder. Sentimos fome e abrimos o frigorífico em busca de algo para comer. Ouvimos o carteiro chegar, ele coloca correio na nossa caixa de correio e depois vamos buscar a correspondência. Estes são eventos iguais a premir um botão no ecrã ou mover o ponteiro do rato. Eles são algo que acontece e que nos leva a fazer alguma coisa."
+      5:
+        text: "Nos jogos vídeo, há um evento chamado \"Atualizar\" que acontece 30 ou 60 vezes por segundo. Para os programadores de jogos, este evento é quase mais importante do que o premir de um botão ou o movimento do rato."
+      6:
+        text: "O evento principal, aquele que faz tudo acontecer é o \"Atualizar\", e funciona como o tic-tac dos ponteiros do relógio. É quando o evento acontece que verificamos se algo aconteceu. É nesse momento que podemos dizer, \" Alguém premiu o botão no ecrã? Sim ou não?\" Sem eventos, o jogador não se podia mover, saltar nem fazer nada. Não serias capaz de controlar o que está a acontecer. O jogo de vídeo seria incapaz de animar qualquer coisa."
+    C1_building_foundation:
+      1:
+        text: "Nas esculturas de areia, em que pequenas partes estão constantemente a cair, já sabemos que o fracasso é parte do processo. Mas se persistires, só melhora e fica mais interessante para ti, Persistência é o nome deste jogo. Continua, vais adorá-lo."
+      2:
+        text: "Esta lição chama-se construir uma fundação. Nesta lição, vamos trabalhar numa tarefa que é suposto ser realmente difícil. Vais descobrir como fazer uma estrutura pelo menos tão alta quanto um destes copos e que tem que ser forte o suficiente para suportar o peso de um livro."
+      3:
+        text: "Pode haver momentos em que nossa criação não funciona. Pode haver vezes em ficamos frustrados e queremos desistir. Pode haver muitos desses momentos. Mas se continuamos a tentar e darmos o nosso melhor, uma e outra vez, acabamos por conseguir. E mais cedo que esperamos."
+      4:
+        text: "Persistência tem tudo a ver com continuar quando o queremos mesmo é desistir. Se queres criar algo novo e diferente, vais falhar muitas vezes ao longo do caminho."
+      5:
+        text: "O truque da persistência é escolheres continuar sempre em frente, e aprenderes com os teus fracassos em vez de desistires, só porque estás frustrado. A frustração apenas significa realmente que algo maravilhoso está à tua espera logo ao virar da esquina. Não desistas antes de chegares a ele. Wooo!"
+    C1_getting_loopy:
+      1:
+        text: "Olá, o meu nome é Miral Kotb e eu sou o criador de Iluminate. No meu trabalho, há algo que usamos em ambas as danças e na programação de lightsuits. E isso são os loops! Os loops são ações que se repetem, uma e outra vez."
+      2:
+        text: "Quando repetes algo múltiplas vezes, como as minhas ações para manter o arco a girar, estou a realizar um loop dessa acção. Isto é um loop. Isto é um loop. E isto é um loop."
+      3:
+        text: "Hoje vamos ter uma festa de dança. Vamos treinar loops com uma nova dança. A Iteração. Vamos aprender sobre loops usando uma dança. Vais aprender alguns passos fáceis e repeti-los várias vezes para completar a dança."
+      4:
+        text: "Aqui estão os passos que precisas aprender. Bate palmas. Coloca as mãos atrás da cabeça. Põe as mãos na cintura. Levanta a mão esquerda. Levante a mão direita. Muito simples, certo? Vais descobrir que podes encurtar as instruções, colocando alguns passos de dança em loops."
+      5:
+        text: "Na verdade usamos loops na nossa dança. Os dançarinos vestem computadores, todos na mesma rede. Eu poderia repetir as luzes nos mesmos dançarinos vezes sem conta. No loop tenho uma iteração onde eu vou dizer para repetir pelos seis dançarinos vezes sem conta e depois dentro do loop dizer para aumentar a velocidade da luz. E que tudo isso é criado através de loops. Loops são importantes na ciência da computação, porque eles fazem nosso trabalho mais curto e fácil."
+    C1_happy_maps_unplugged:
+      1:
+        text: "Esta lição é chamada Mapas felizes. Hoje vamos ajudar o nosso amiguinho peludo Flurb chegar ao seu fruto."
+      2:
+      3:
+      4:
+        text: "Crie o seu algoritmo colando setas no mapa que está a tentar resolver. O segundo é o mesmo, mas vai para baixo."
+      5:
+    C2_playlab_createstory:
+      1:
+        text: "Até agora, você fez animações ou histórias que fazem exatamente as mesmas coisas quando você as executa. Agora, você pode fazer um jogo interativo e jogá-lo de verdade."
+      2:
+        text: "Há os blocos \"quando a seta estiver pressionada\" e \"mova o personagem\". Você pode usar esses blocos juntos para mover os personagens usando as teclas de direção."
+    C3_playlab_create_game:
+      1:
+        image: 'notes/C3_playlab_create_game_1.png'
+        text: "Até agora, você fez animações ou histórias que fazem exatamente as mesmas coisas quando você as executa. Agora, você pode fazer um jogo interativo e jogá-lo de verdade."
+      2:
+        image: 'notes/C3_playlab_create_game_2.png'
+        text: "Há os blocos \"quando a seta estiver pressionada\" e \"mova o personagem\". Você pode usar esses blocos juntos para mover os personagens usando as teclas de direção."
+    infinity_playlab_intro:
+      1:
+      2:
+        text: "A ciência de computação é a base para muitas coisas que os alunos universitários e profissionais irão fazer nos próximos vinte ou trinta anos. Eu gosto de programação porque eu gosto de ajudar as pessoas. Eu tenho a oportunidade de criar algo que vai facilitar a vida das pessoas. Eu acho que é a coisa mais próxima que temos de uma superpotência. A parte mais importante é a de começar. Eu sou um principiante e eu quero aprender comigo próprio."
+      3:
+      4:
+      5:
+      6:
+      7:
+    mc_intro:
+      1:
+        text: "O meu nome é Jens Bergensten, mas conhecem-me por Jeb. Sou o diretor de programação de Minecraft aqui na Mojang, em Estocolmo. Acho que comecei a programar com 11 ou 12 anos, porque queria fazer jogos. Um dos amigos do meu pai disse-me que, para fazer jogos, temos de aprender a programar. Foi assim que comecei. Gosto de conceber e perceber a arquitetura dos jogos. É disso que gosto mesmo em Minecraft."
+      2:
+        text: "Durante a próxima hora vão aprender o básico da programação ao programarem a Alex ou o Steve para avançarem através de uma simulação de parte de um mundo Minecraft."
+      3:
+        text: "A programação tradicional faz-se normalmente em texto, mas hoje vamos usar Blockly, um sistema que utiliza blocos visuais de arrastar e largar para escrever programas. No interior, estás a criar código JavaScript. "
+      4:
+        text: "Os conceitos que vais aprender são os mesmos que os programadores utilizam todos os dias e são a base da programação. Aqui, na Mojang, utilizamos esses mesmos conceitos para fazer com que Minecraft funcione."
+      5:
+        text: "Antes de começares, vais escolher a tua personagem. Eu vou escolher a Alex. Vamos produzir código para um programa que a ajude a mover-se pelo ecrã. "
+      6:
+        text: "O teu ecrã está dividido em três partes principais. À esquerda, tens o espaço de jogo de Minecraft, onde o teu programa vai correr. As instruções para cada nível estão escritas em baixo."
+      7:
+        text: "Esta zona intermédia é a caixa de ferramentas, e cada um destes blocos é um comando que dirige as ações da Alex."
+      8:
+        text: "O espaço branco à direita é chamado o espaço de trabalho, e é aí que vamos construir o nosso programa. "
+      9:
+        text: "Se arrastarmos o bloco \"mover para a frente\" para o nosso espaço de trabalho e clicarmos em Correr, o que acontece? A Alex avança um espaço na grelha."
+      10:
+        text: "E se quisermos fazer qualquer coisa depois de ela avançar um espaço? Podemos adicionar outro bloco ao nosso programa. Vou escolher o bloco \"virar à direita\", e vou arrastá-lo para debaixo do meu bloco \"mover para a frente\" até aparecer esta linha cor-de-laranja. Depois, largo-o e os dois blocos encaixam-se. Quando premirmos Correr outra vez, a Alex vai executar os comandos que estão empilhados de cima a baixo no nosso espaço de trabalho."
+      11:
+        text: "Se quiseres apagar um bloco, basta arrastá-lo da pilha de volta para a caixa de ferramentas."
+      12:
+        text: "Para anular as mudanças e para voltar ao início do nível, utiliza o botão Começar Outra Vez no extremo superior direito do espaço de trabalho. Mais uma coisa, vês o pequeno triângulo nos blocos de virar? Quando vires esses triângulos, isso quer dizer que podes escolher uma opção diferente. Vamos começar a codificar!"
+    mc_repeat:
+      1:
+        text: "Chamo-me Lydia Winters e sou a diretora de marca da Mojang, e nós fizemos um pequeno jogo chamado Minecraft."
+      2:
+        text: "O que eu gosto mais de fazer em Minecraft é explorar. Adoro aventurar-me por grutas e ver o que consigo encontrar. Não sendo uma programadora, estou mesmo empolgada por ver as lições de Minecraft e aprender a programar."
+      3:
+        text: "O último nível exigia imensos blocos de \"mover para a frente\". Seria mais fácil se pudéssemos dizer ao computador para executar esse comando quatro ou cinco vezes. Felizmente para nós, os computadores são muito bons a repetir comandos em sequências de repetição. "
+      4:
+        text: "Ao construir Minecraft, utilizamos sequências de repetição para colocar todos os materiais iniciais necessários à criação de um novo mundo. São milhares e milhares de blocos. Nós também utilizamos sequências para coisas mais pequenas, como para mover os pés da Alex para a frente e para trás, quando ela caminha. As sequências de repetição são uma parte importante da programação."
+      5:
+        text: "Está a chegar a noite. Por isso, nos próximos níveis, vamos construir uma casa para nos mantermos em segurança. Vamos utilizar o bloco de repetição para fazer isto com facilidade. "
+      6:
+        text: "Para construir uma parede da nossa casa, podemos dizer à Alex para se \"mover para a frente\" e colocar pranchas quatro vezes, ou então dizemos-lhe para se \"mover para a frente\" e colocar uma prancha, e depois pegamos neste comando e utilizamos o bloco de repetição para que ela repita a ação várias vezes. Agora vamos clicar no bloco de repetição e dizer-lhe quantas vezes queremos que ela repita esta ação. Agora vamos construir a nossa casa antes que a noite caia! Diverte-te."
+    mc_if_statements:
+      1:
+        text: "Agora vamos aprender o que são as declarações de \"se\". As declarações de \"se\" são uma parte fundamental da aprendizagem da programação. Elas ajudam os computadores a tomar decisões."
+      2:
+        text: "Todos os computadores utilizam declarações de \"se\", incluindo o meu telemóvel. Por exemplo, quando desbloqueio o meu telemóvel, ele corre programação que diz que se eu introduzir a palavra-passe correta, desbloqueará o telemóvel. Caso contrário, apresentará uma mensagem de erro."
+      3:
+        text: "Podes utilizar declarações de \"se\" na tua programação para fazer com que o Steve e a Alex reajam ao que veem no mundo. Por exemplo, se houver uma rocha à frente deles, podem virar à esquerda. Ou à direita, se encontrarem uma árvore."
+      4:
+        text: "Neste caso, não queremos cair na lava. Planear tendo em conta a lava é fácil. Vemo-la no ecrã. Mas e a lava que não vemos debaixo da pedra?"
+      5:
+        text: "Depois de escavar a pedra, temos de verificar se há lava nesse local antes de avançarmos. Se houver lava, vamos colocar uma pedra à frente da nossa personagem antes de avançarmos. Assim, podemos avançar em segurança. Está na hora de escavar um pouco mais! E lembra-te de utilizar a declaração de \"se\" para te manteres em segurança."
+    mc_congrats_share:
+      1:
+        text: "Parabéns! Acabaste de aprender os fundamentos da programação."
+      2:
+        text: "Agora podes utilizar estes blocos para construíres a tua própria criação. Acabaram as instruções e os quebra-cabeças. Podes construir o que quiseres. Tu é que escolhes."
+      3:
+        text: "[estudantes a falar] Agora é que vai ser. Tosquiar. Fiz um L com tochas. Eu fiz um A com pranchas de bétula. Funcionou, funcionou. Construímos uma casa com lã!"
+      4:
+        text: "Quando acabares a tua criação, escolhe \"partilhar\" para obteres uma hiperligação que te permitirá partilhar com os teus amigos! Diverte-te!"
+    mc_congrats_no_share:
+      1:
+        text: "Parabéns! Acabaste de aprender os fundamentos da programação."
+      2:
+        text: "Agora podes utilizar estes blocos para construíres a tua própria criação. Acabaram as instruções e os quebra-cabeças. Podes construir o que quiseres. Tu é que escolhes."
+      3:
+        text: "[estudantes a falar] Agora é que vai ser. Tosquiar. Fiz um L com tochas. Eu fiz um A com pranchas de bétula. Funcionou, funcionou. Construímos uma casa com lã!"
+      4:
+        text: "Agora podes construir o que quiseres. Diverte-te!"
+    gumball_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+        text: "O espaço branco à direita é chamado o espaço de trabalho, e é aí que vamos construir o nosso programa. "
+      7:
+      8:
+      9:
+    iceage_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+        text: "O espaço branco à direita é chamado o espaço de trabalho, e é aí que vamos construir o nosso programa. "
+      7:
+      8:
+      9:
+    mc_2016_intro:
+      1:
+        text: "Olá, chamo-me Jens e sou o designer criativo principal de Minecraft. Durante a próxima hora, vais criar o teu próprio jogo Minecraft. Isto parece-se com Minecraft, mas o mundo parou. As ovelhas não se mexem, as galinhas não põem ovos e os mortos-vivos estão parados. Cabe-te a ti adicionar o código para que o mundo Minecraft funcione."
+      2:
+        text: "My name is Melissa and I am a user researcher at Minecraft. What I'm really interested in is how people think and interact with technology and so this job is the perfect job for me to put together the computer engineering with the psychology: como as pessoas pensam e se comportam."
+      3:
+        text: "Verás que o teu ecrã está dividido em três partes principais. 1) À esquerda está o jogo Minecraft. Neste momento, o mundo está parado, mas vamos resolver isso com código."
+      4:
+        text: "2) Esta zona intermédia é a caixa de ferramentas. Cada um destes blocos é um comando que as galinhas, as ovelhas e outras criaturas de Minecraft entendem."
+      5:
+        text: "3) O espaço à direita chama-se espaço de trabalho e é lá que vamos construir o nosso programa."
+      6:
+        text: "Se te esqueceres do que tens de fazer, tens as instruções para cada nível ao cimo."
+      7:
+        text: "Para começar, vamos programar uma galinha. Vamos arrastar o comando “avançar” para o espaço de trabalho. Quando eu clicar em “Executar”, a galinha avança um passo. Para ir mais longe, vou arrastar outro bloco de “avançar” para debaixo do primeiro bloco de “avançar” até aparecer o contorno. Depois, eu largo-o e os dois blocos encaixam-se. Se eu clicar em “Executar” de novo, a galinha anda dois passos."
+      8:
+        text: "Se quiseres eliminar um bloco, basta removê-lo da pilha e arrastá-lo de volta para a caixa de ferramentas."
+      9:
+        text: "Depois de clicares em “Executar”, podes clicar no botão “Repor” para reiniciar o jogo e começar de novo. Agora é a tua vez de criar a tua própria versão de Minecraft. Diverte-te!"
+    mc_2016_loops:
+      1:
+        text: "Olá, eu sou a Lisa. Sou programadora em Minecraft e trabalho em alguns dos animais e inimigos no jogo. Um dos animais em que trabalhei foi o ocelote. Trabalhei na parte em que podes dar um peixe ao ocelote para o domesticar e torná-lo no teu gato."
+      2:
+        text: "Enquanto humanos, aborrecemo-nos muito se tivermos de fazer a mesma coisa vezes sem conta. Mas a coisa boa dos computadores é que eles fazem a mesma coisa milhões ou mesmo milhares de milhões de vezes seguidas sem se aborrecerem. Esta repetição chama-se loop e todas as criaturas em Minecraft as utilizam."
+      3:
+        text: "Há pouco, conseguimos que uma galinha atravessasse o ecrã, mas depois parou. Em Minecraft, as galinhas andam para sempre para lá e para cá. Vamos utilizar um loop de “fazer para sempre”, da nossa caixa de ferramentas, para manter as nossas galinhas em movimento. O poder dos loops vai poupar-te muito tempo e dar-te muitas opções fixes enquanto constróis a tua própria versão de Minecraft."
+    mc_2016_events:
+      1:
+        text: "Neste nível, podes escolher ser Steve ou Alex. Prime as teclas de seta para te moveres para cima, para baixo, para a esquerda e para a direita. Agora podes circular num nível para onde quiseres. Para utilizares uma criatura, avança para ela, vira-te de frente para ela e prime a barra de espaços."
+      2:
+        text: "Se utilizares um ecrã tátil, desliza o dedo para baixo, para a esquerda e para a direita para te moveres. Depois toca no jogo para utilizar o item à tua frente."
+      3:
+        text: "Mas o que acontece quando o utilizas? Em Minecraft, as ovelhas largam lã quando as tosquias, as vacas fogem quando as atinges e os creepers explodem quando te aproximas deles. Estas reações acontecem graças a uma coisa chamada eventos. Os eventos dizem ao teu programa para esperar que algo aconteça. E, quando isso acontece, executam uma ação."
+      4:
+        text: "Até agora, utilizaste um evento. O código que puseste na vaga “quando gerado” é executado quando a tua criatura é criada ou quando o jogo começa. Nos próximos níveis, vais ter novas vagas para eventos como “quando tocado”, que é executado quando tocas na criatura, ou “quando utilizado” para quando utilizas a criatura. Ou, se quiseres que o teu morto-vivo desapareça quando o sol nascer, coloca essa instrução na vaga “quando é dia”."
+    mc_2016_spawn:
+      1:
+        text: "Nos jogos, gerar significa o mesmo que criar. Neste nível, vamos fazer com que os mortos-vivos se gerem quando o sol se põe. Para isso, vamos utilizar o bloco “quando é noite”."
+      2:
+        text: "Como queremos que os mortos-vivos se gerem à noite, vamos adicionar o bloco “gerar morto-vivo” debaixo do bloco “quando é noite”. Logo que são gerados, os mortos-vivos vão executar o código que colocaste na sua vaga de eventos “quando gerado”. Diverte-te a gerar mortos-vivos!"
+    mc_2016_congrats:
+      1:
+        text: "Parabéns! Aprendeste a utilizar comandos de informática para dar vida ao mundo de Minecraft. Agora, o programador és tu. Desbloqueaste todos os comandos e todas as criaturas. Tu escolhes o que acontece."
+      2:
+        text: "Quando acabares de criar o teu jogo, escolhe partilhar para obter uma hiperligação para partilhar com os teus amigos ou para jogar no teu telemóvel. Diverte-te! Estou à espera de jogar a tua versão de Minecraft."
+    mc_2017_agent_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+      9:
+      10:
+      11:
+        text: "Se te esqueceres do que tens de fazer, tens as instruções para cada nível ao cimo."
+      12:

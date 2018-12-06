@@ -1,0 +1,715 @@
+---
+kk:
+  errors:
+    messages:
+      not_saved: 'Өтінеміз көрсетілген қателерді түзетіңіз:'
+  activerecord:
+    errors:
+      messages:
+        blank: толтырылуы тиіс
+    attributes:
+      user:
+        name: Аты
+        email: Электронды пошта
+        username: Логин
+        password: Құпия сөз
+        password_confirmation: Құпия сөзді растау
+        current_password: Ағымдағы құпия сөз
+        locale: Тілі
+        age: Жасы
+        gender: Жынысы
+        edit_header: Жеке парақша мәліметтерін өзгерту
+        error:
+          future: болашақта болуы мүмкін емес
+  hello: Сәлем, әлем
+  welcome_back: Қайта оралуыңызбен, %{name}
+  submit: Жіберу
+  unsubmit: Жібермеу
+  previous_page: Алдыңғы парақша
+  next_page: Келесі бет
+  next_resource: Келесі ресурс
+  cancel: Болдырмау
+  okay: Жақсы
+  or: немесе
+  add_teacher_form:
+    code:
+      label: 'Мұғалімді қосу:'
+      placeholder: Бөлім Коды (ABCDEF)
+      instructions: Мұғалімің бөліскен кодты жаз. Ол "ABCDEF" сияқты 6 әріптен тұратын
+        код.
+    submit: Мұғалімді қосу
+  add_hint_form:
+    placeholder: Өтінеміз, мұнда көмек сөзін қосыңыз
+    submit: Көмек сөзін қосу
+  appname: Code.org
+  stage: Деңгей
+  stage_number: "%{number} деңгей"
+  puzzle: Басқатырғыш
+  trophies: Кубоктар
+  courses: Курстар
+  courses_page:
+    title_student: Код Студиясында үйрену
+  unplugged_activity: Іс-әрекеттерді өшіру
+  of: дан
+  more: КӨБІРЕК
+  less: АЗЫРАҚ
+  beta: бета
+  try_hoc: 'Код Жазу Сағатын байқап көру үшін шертіңіз >> '
+  try_k8intro: K-8 Информатика пәніне кіріспе курсын байқап көріңіз (15-25 сағат)
+  k8intro: K-8 Информатика пәніне кіріспе (15-25 сағат)
+  already_started: 'Бастап қойдыңыз ба? Жалғастырыңыз >> '
+  demos: 'Админ: Барлық Көрсетілімдер'
+  continue: Жалғастыру
+  prize: сыйлық
+  more_info: Көбірек ақпарат
+  auth:
+    sign_in_with: "%{provider} әлеуметтік желісі арқылы кіру"
+    signed_in: Кірдіңіз!
+    signed_out: Сіз <a href="%{url}">Code.org</a> сайтынан шықтыңыз.
+    sign_out_of: Сіз кіру үшін %{provider} әлеуметтік желісін пайдаландыңыз. %{provider}
+      әлеуметтік желісінен шығу үшін <a href="%{url}">мұнда шертіңіз</a>.
+    already_signedup: Тіркеліп қойдыңыз ба?
+    notyet_signedup: Сіз әлі бізге қосылмадыңыз ба?
+    google_oauth2: Google Аккаунт
+    twitter: Твиттер
+    facebook: Facebook
+    windowslive: Microsoft Аккаунт
+    microsoft_v2_auth: Microsoft Аккаунт
+    forgot_password: Құпия сөзіңізді ұмыттыңыз ба?
+    need_confirmation: Растау жөніндегі нұсқауларды алмадыңыз ба?
+    need_unlock: Құлыптан шығару жөніндегі нұсқауларды алмадыңыз ба?
+  signup_form:
+    student_count: "%{count} оқушы тіркелді."
+    teacher_count: "%{count} оқытушы тіркелді."
+    teacher_educator_guide: Тәрбиеші нұсқаулығын қараңыз
+    title: Code.org сайтына тіркелу
+    school_name: Мектеп Аты (міндетті емес)
+    school_address: Мектеп Адресі (міндетті емес)
+    address_placeholder: адрес, қала, штат, индекс
+    gender: Жынысыңыз (міндетті емес)
+    birthday: Туған күніңіз (міндетті емес)
+    age: Жасы
+    user_type: Сіз оқушысыз ба немесе оқутышысыз ба?
+    submit: Тіркелу
+    teacher: Сіз оқутышысыз ба?
+    valid_username: Бұл логин бос!
+    invalid_username: Логин 5 символдан кем болмауы керек
+    taken_username: Бұл логин бос емес
+    valid_password: Жарамды құпия сөз!
+    invalid_password: Құпия сөз 6 символдан кем болмауы керек
+    mismatch_password: Еңгізілген құпия сөздер сәйкес келмейді
+    additional_information: Сізді тіркеу үшін бізге қосымша ақпарат керек.
+    user_type_label: Аккаунт Түрі
+    user_type_teacher: Мұғалім
+    user_type_student: Оқушы
+    field_is_required: толтырылуы тиіс
+    accept_terms: Аккаунт құрі үшін келісуіңіз қажет
+    email_preference_yes: Иә
+    email_preference_no: Жоқ
+  school_info:
+    other: Басқасы
+  signin_form:
+    title: Жеке парақшаңыз бар ма? Кіру
+    login: Электронды пошта
+    password: Құпия сөз
+    remember: Мені сақтап қалу
+    submit: Кіру
+  signin:
+    try_heading: Тіркелместен код жазып көргіңіз келеді ме?
+    try_hoc: Бірінші Код Жазу Сағатын байқап көру
+    try_20hours: Біздің 20 сағаттық Информатика пәніне кіріспе курсымызды байқап көріңіз
+  signinsection:
+    welcome: "%{section_name} секциясына қош келдіңіз"
+    name: Атыңызды таңдаңыз
+    picture: Құпия суретіңізді іздеңіз
+    words: Құпия сөзіңізді еңгізіңіз
+    login: Кіру
+    invalid_login: Қате логин, қайтадан көріңіз
+  password:
+    reset_form:
+      title: Құпия сөзіңізді ұмыттыңыз ба?
+      email: Электронды поштаңыз
+      submit: Жіберу
+    change_form:
+      title: Құпия сөзіңізді өзгертіңіз
+      new_password: Жаңа құпия сөз
+      confirm_password: Жаңа құпия сөзді растаңыз
+      submit: Құпия сөзімді өзгерту
+  welcome_email:
+    subject: Менің сыныбыма қосыл (Code.org-та)
+    body: |
+      Code.org сайтындағы информатика пәніне кіріспе сабағын бастау үшін төмендегі сілтемеге басыңыз:
+
+      %{link}
+
+      Сабақтар көңілді, көзге қарағанда жағымды, және ойын түріндегі тәжірибені пайдалана отырып информатика пәні негіздерін оңай үйреніңіз. Код жазуды Бил Гейтс, Марк Цукербергпен және Ашулы Құстар, Өсімдіктер Зомбилерге қарсы ойындарымен үйреніңіз! :-)
+
+      %{name}
+  section:
+    type:
+      word: Құпия сөз
+      email: Электронды пошта
+  follower:
+    invite_sent: Шақыру жіберілді
+    added_teacher: "%{name} сізді оқытушы ретінде қосты"
+    registered: Сіз %{section_name} секциясына тіркелгенсіз.
+    error:
+      signed_in: Өтінеміз жалғастыру үшін алдымен тіркеліңіз
+      username_not_found: "%{username} логині табылған жоқ"
+      username_in_use: "%{username} логині бос емес, өтінеміз басқасын таңдаңыз"
+      no_teacher: "'%{teacher_email_or_code}' электронды поштасымен тіркелген ешқандай
+        қолданушы табылмады. Өтінеміз олардың алдымен тіркелгенін сұрап, одан кейін
+        оларды қосыңыз."
+      section_not_found: "'%{section_code}' кодты секция табылмады."
+      blank_code: Өтінеміз секция кодын еңгізіңіз
+      cant_join_own_section: Кешіріңіз, сіз өз бөліміңізге қосыла алмайсыз.
+    mail:
+      student_disassociated:
+        subject: 'Code.org хабарландыруы: енді %{student_name} сіздің оқушыңыз емес.'
+  reports:
+    error:
+      access_denied: Сіз бұл қолданушының статистикасын оқи алмайсыз
+  crud:
+    new_model: Жаңа %{model}
+    show: Көрсету
+    edit: Өзгерту
+    edit_model: "%{model} моделін өзгерту"
+    update: Өзгерту
+    submit: Жіберу
+    destroy: Өшіру
+    back: Оралу
+    confirm: Сенімдісіз бе?
+    created: "%{model} моделі қатесіз құрылды."
+    updated: "%{model} моделі қатесіз өзгертілді."
+    destroyed: "%{model} моделі қатесіз өшірілді."
+    access_denied: "%{model} моделіне сізге рұқсат жоқ."
+  nav:
+    header:
+      finished_hoc: Мен Код Жазу Сағатымды аяқтадым
+      sign_in_to_save: Прогрессті сақтау үшін тіркеліңіз
+      free_play:
+        playlab: Қосымша бағдарлама жасау
+        artist: Кез келген нәрсе салу
+        applab: Қосымша бағдарлама жасау
+      project_gallery: Жобалар
+      educate_hoc: Код жазу Сағаты
+    user:
+      classroom: Оқытушының жеке парақшасы
+      district_dashboard: Ақпарат панелі
+      label: Сәлем %{username}
+      stats: Код Студиясы
+      settings: Менің жеке парақшам
+      logout: Шығу
+      signin: Кіру
+      signup: Жеке парақшаны құрыңыз
+      already_registered: Тіркелгенсіз бе?
+      team: Топ
+      navigator: Навигатор
+      create: Құру
+      applab: Қосымшалар Лабораториясы
+      artist: Кейіпкер
+      playlab: Ойындар Лабораториясы
+      minecraft: Minecraft
+      flappy: Flappy
+    popup:
+      progress_for_user: "%{name} сабақ оқу барысы"
+      progress: Сіздің сабақ оқу барысыңыз
+      lines: 'Жазылған жалпы код жолы: %{lines}'
+      close: ЖАБУ
+      mastery: Ұғымдар
+      puzzle_map: Деңгейлер
+      prizes: Барлық %{total_trophies} кубоктар мен сыйлықтар жинаңыз!
+      prize_earned: Барлық %{total_trophies} кубок жиналды. Жүлдені ұттыңыз!
+      prize_us_only: "(А.Қ.Ш. студенттері ғана)"
+      prizes_link: көбірек білу
+  teacher:
+    answer: Жауап
+    for_teachers_only: Тек Мұғалімдерге арналған
+    title:
+      one: 'Сіздің оқытушыңыз:'
+      other: 'Сіздің оқытушыларыңыз:'
+    remove: "(оқытушыны алып тастау)"
+    confirm:
+      remove: Сіз бұл оқытушыны өшіргіңіз келеді ме?
+    students:
+      dashboard: Оқытушылар Терезесіне өту
+    user_not_found: Оқытушы табылмады.
+    student_teacher_disassociated: Сіз %{teacher_name} оқытушылар тізімінен жойылдыңыз.
+    panel:
+      student: Оқушы
+      viewing_solution: Шешімін көру
+      try_it_yourself: Өзіңіз байқап көріңіз
+      section: Секция
+      example: Шешім Мысалы
+      example_with_number: Шешім Мысалы %{solution_number}
+      submitted_on: "%{date} күні жіберілді"
+      unsubmit: Жібермеу
+  user:
+    email_confirm_needed: 'Электрондық пошта расталмады:'
+    email_confirm_needed_required: 'Сіздің %{email} электрондық поштаңыз расталмады:'
+    email_confirm_wrong_email: "(Қате электрондық пошта?)"
+    email_resend_confirm: Нұсқаулықты қайта жіберу
+    new_password_hint: "(өзгеркіңіз келмесе бос қалдырыңыз)"
+    current_password_hint: "(өзгертулерді еңгізу үшін ағымдағы құпия сөзіңіз қажет)"
+    delete: Аккаунтты өшіру
+    delete_text: Төмендегі батырманы басу, аккаунтты өшіреді.
+    delete_text_teacher_note: 'Есте сақтаңыз: өзіңіздің аккаунтыңызды өшіргеніңізбен,
+      оқушыларыңыздың аккаунттары өшпейді.'
+    delete_confirm: Сіз аккаунтыңызды өшіргіңіз келеді ме?
+  user_level:
+    completed: Аяқталған
+    tried: Байқап көру саны
+  home:
+    title: Код Студиясы
+    description: Код Студиясы Code.org бағдарламаушыларымен жасалған онлайн курстар
+      жинағы болып табылады
+    lines_of_code: ОҚУШЫЛАРМЕН %{lines_count} ЖОЛ КОД ЖАЗЫЛДЫ
+    lines_of_code_linebreak: "%{students_count} МИЛЛИОН ОҚУШЫ<br/>%{lines_count} КОД
+      ЖОЛЫН ЖАЗДЫ"
+    all_courses: 1, 2, және 3 курстарға шолу жасау
+    lesson_plans: Оқу Жоспары
+    signin_message: Тіркеліп қойдыңыз ба? %{link}
+    student_reg_link: Оқушы ретінде тіркелу
+    teacher_reg_link: Оқытушы ретінде тіркелу
+    signin_directions: Оқу барысын қадағалау үшін аккаунтты пайдаланыңыз.<br/> Оқытушылар,
+      сыныбыңызды бақылаңыз.
+    teacher_dashboard: Прогресс панелін көру
+    teacher_student_count_one: Сіздің %{count} оқушыңыз бар.
+    teacher_student_count: Сіздің %{count} оқушыларыңыз бар.
+    teacher_averages: Сіздің оқушыларыңыз орташа есеппен "Шеберлік түсінігі" кубогінің
+      барлық мүмкін %{trophy_max} кубоктың %{trophy_count} жинады.
+    teacher_print_certificates: Осы курсты бітірген оқушылардың сертификаттарын басып
+      шығару
+    teacher_read_blog: Біздің Оқытушы Блогымыздан жаңалықтар мен жаңартулар жайында
+      оқыңыз
+    classroom: Сіздің сыныбыңыз
+    student_progress: Сіздің сабақ оқу барысыңыз
+    student_stats: Сіз "Шеберлік түсінігі" кубогінің барлық мүмкін %{trophy_max} кубоктың
+      %{trophy_count} жинадыңыз.
+    student_left_off: 'Қай жерден тоқтадыңыз:'
+    student_finished: Сіз Code.org сабақтарының барлығын бітірдіңіз. Басқа %{online_link}
+      немесе жергілікті сыныпты %{local_school_link} таңдаңыз.
+    local_school: жергілікті мектеп
+    online: онлайн
+    see_details: Көбірек білу
+    view_course: Курсты көру
+    prize_info: 'Қатысу жүлделері (Қ.Ш. мектеп оқытушылары үшін): мектеп сыйақысы
+      $1,000 дейін жетеді.'
+    tryfirst: 'Немесе бірінші байқап көріп, одан кейін тіркелсеңіз болады:'
+    trynow: Қазір қолданып көріңіз
+    add_hint_help: Өтінеміз бізге Code.org сабақтарына көмексөздерді қосуға көмектесіңіз
+    20hour_overview: Бұл 20-сағаттық курстың 2-4 сабағы информатика пәні негіздері
+      мен бағдарламау қағидаларын қамтиды. Бұл курс K-8 сыныбында оқитын оқушыларға
+      мектепте қолданулары үшін жасалған, бірақ барлық жастағылар үшін де қызық болады.
+    test_videos_help: Біздің жаңа видео ойнатқышты сыныбыңызда тексеріп көріңіз
+    try_beta_courses: Жаңа! Біздің K-5 оқушыларына арналған бета курсымызды байқап
+      көріңіз
+    use_as_teacher: Бұл сайтты оқытушы ретінде қолдану
+    heading_hoc2014: "<h2>Код Жазу Сағаты</h2><h1>Барлық жастағылар үшін</h1>"
+    heading_elementary: "<h2>20 сағаттық курс</h2><h1>Информатика пәні негіздерінен
+      (барлық жастағылар үшін)</h1>"
+    heading_apps: "<h1>Барлығына</h1><h2>қызықты</h2>"
+    heading_tools: "<h2>Келесі қадамға дайынсын ба?</h2><h1>Жоғары сынып үшін құралдар</h1>"
+    heading_legacy: "<h2>Біздің жеделдетілген курстарымыз</h2><h1>Барлық жастағыларға
+      арналған</h1>"
+    your_gallery: Галерея
+    no_primary_course: Код Студиясы курсын байқап көру
+    choose_next_course: Төмендегі Код Студиясы курсының біреуін байқап көріңіз
+    print_certificate: Сертификатты басып шығару
+    announcement_title: Хабарландыру
+    announcement_learn_more_button: толығырақ білу
+    announcement_try_now_button: Қазір қолданып көріңіз
+    announcement_watch_video_button: Бейнені көріңіз
+  move_students:
+    student_not_found: Бір немесе одан көбірек оқушы табылмады.
+  share:
+    title: Код Студиясында үйрену
+    description: Информатика пәнін барлығы үйрене алады. Ойындар, қосымшалар және
+      сурет салыңыз.
+    try_hour_of_code: Код Жазу Сағатын байқап көріңіз!
+  gender:
+    male: Ер
+    female: Әйел
+    none: Жауап беруден бас тартамын
+  user_type:
+    student: Оқушы
+    teacher: Мұғалім
+  footer:
+    thank_you: Біз <a href="https://code.org/about/donors">көмек көрсетушілерге</a>,
+      <a href="https://code.org/about/partners">серіктестерге</a>, біздің <a href="https://code.org/about/team">кеңейтілген
+      командаға</a>, видео түсірушілерге, және біздің <a href="https://code.org/about/advisors">білім
+      кеңесшілерімізге</a> Код Студиясын қолдағандарыы үшін алғысымызды айтамыз.
+    help_from_html: Осы материалдарды жасауға көмектескен, әсіресе Google, Microsoft,
+      Facebook, Twitter инженерлеріне және басқа да көптеген көмек көрсетушілерге
+      алғысымызды айтамыз.
+    help_from_html_old: Google, Microsoft, Facebook, және Twitter инженерлері бұл
+      материалдарды жасауға көмектесті.
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Барлық құқықтар
+      қорғалған.<br />Жұлдызды Соғыстар&#8482; &copy; %{current_year} Disney және
+      Lucasfilm. Барлық құқықтар қорғалған.<br />Frozen&#8482; &copy; %{current_year}
+      Disney. Барлық құқықтар қорғалған.<br />Мұзды Дәуір&#8482; &copy; %{current_year}
+      20th Century Fox. Барлық құқықтар қорғалған.<br />Ашулы Құстар&#8482; &copy;
+      2009-%{current_year} Rovio Entertainment Ltd. Барлық құқықтар қорғалған.<br
+      />Өсімдіктер Зомбилерге қарсы&#8482; &copy; %{current_year} Electronic Arts
+      Inc. Барлық құқықтар қорғалған.<br />Гамболаның таңғажайып әлемі сауда белгісі
+      болып табылады және &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Барлық құқықтар
+      қорғалған.<br />Жұлдызды Соғыстар&#8482; &copy; %{current_year} Disney және
+      Lucasfilm. Барлық құқықтар қорғалған.<br />Frozen&#8482; &copy; %{current_year}
+      Disney. Барлық құқықтар қорғалған.<br />Мұзды Дәуір&#8482; &copy; %{current_year}
+      20th Century Fox. Барлық құқықтар қорғалған.<br />Ашулы Құстар&#8482; &copy;
+      2009-%{current_year} Rovio Entertainment Ltd. Барлық құқықтар қорғалған.<br
+      />Өсімдіктер Зомбилерге қарсы&#8482; &copy; %{current_year} Electronic Arts
+      Inc. Барлық құқықтар қорғалған.<br />Гамболаның таңғажайып әлемі сауда белгісі
+      болып табылады және &copy; 2015 Cartoon Network.
+    code_from_html: Code.org, <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
+      LGPL 2.1</a> лицензияланған p5.play қолданады.
+    powered_by_aws: Amazon Web Services серверінде жұмыс істейді
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE логотипі және
+      Код Жазу Сағаты&reg; Code.org сауда белгісі болып табылады."
+    copyright: Авторлық құқық
+    more: Тағы да
+    feedback: Кері байланысты қамтамасыз ету
+    translate: Бізге сайтты өзіңіздің тіліңізге аударуға көмектесіңіз
+    support: Қолдау
+    tos_short: Ережелер
+    tos: Қызмет көрсету шарттары
+    privacy: Құпиялылық саясаты
+    secure: Қауіпсіз Нұсқасы
+    report_abuse: Құқық бұзушылық туралы хабарлау
+    built_on_code_studio: Код Студияда жасалған
+    make_my_own_app: Өзімнің бағдарламамды жасау
+    how_it_works: Қалай жұмыс істейді
+    try_hour_of_code: Код Жазу Сағатын байқап көріңіз!
+  reference_area:
+    title: Көмек керек пе?
+    subtitle: Видеолар мен көмексөздерді көру
+    teacher: Шешімін көру
+    auth_error: Шешімін көру үшін тіркелу қажет.
+    submit: Кейіпкер орнын жаңарту
+    direction: Бағытты көру (градуста)
+  video:
+    tab: Видео.
+    notes: Видео жоқ па? Жазбаларды оқу.
+    notes_coming_soon: Бұл видео үшін жазбалар жақында қосылады.
+    autoplay_option: Видеоны авто ойнату
+    download: Видеоны жүктеп алу
+  compatibility:
+    upgrade:
+      link: толығырақ білу
+  slow_loading: Бұл әдеттегіден ұзақ уақыт алады...
+  try_reloading: Бетті қайта жүктеп көріңіз
+  next_stage: Аяқталды! Келесі деңгейді бастау
+  download_pdf: Оқу Жоспарын Ашу
+  lesson_plan: Оқу Жоспары
+  view_lesson_plan: Оқу Жоспарын көру
+  pdf_download: PDF файлды жүктеп алу
+  download_coming_soon: Жүктеп алу қызметі жақында.
+  video_coming_soon: Видеосы Жақында!
+  not_started: Оқушы бұл деңгейді бастаған жоқ.
+  share_code:
+    title: Бағдарламаның жұмыс істеу барысын көру үшін 'Іске қосу' батырмасын шертіңіз
+    bounce_og_title: Менің Шар Ойынымды тексеру
+    flappy_og_title: Менің Қанат Қағу Ойынымды тексеру
+    studio_og_title: Менің Ойын Лабораториясы Қосымшасын тексеру
+    check_out_what_i_made: Жазған кодымды тексеру
+    og_description: Мен Code.org сайтында код жаздым.
+    phone_number_not_allowed: Бұл жерде телефон нөмірі көрсетілуі керек. Мәтінді өзгертіп
+      көріңіз.
+    address_not_allowed: Бұл жерде мекен-жай көрсетілуі керек. Мәтінді өзгертіп көріңіз.
+    email_not_allowed: Бұл жерде электронды пошта көрсетілуі керек. Мәтінді өзгертіп
+      көріңіз.
+    profanity_not_allowed: Бұл жерде электронды пошта көрсетілуі керек. Мәтінді өзгертіп
+      көріңіз.
+  builder:
+    created: Сіз жаңа сценарий құрдыңыз.
+    destroyed: Сіз сценарийді өшірдіңіз.
+    manage: Деңгей жасау
+    view: Қарау
+    back: Сценарий жазуға қайтып оралу
+    success: Бөлшек қатесіз өзгертілді.
+    level:
+      create: Жаңа деңгей бастау
+      current: Ағымдағы деңгей
+      unused: Пайдаланылмаған деңгей
+  upsell:
+    applab:
+      title: Қосымшалар Лабораториясы
+      body: App Lab онай қосымшалар жасау үшін бағдарламалау ортасы. Код блоктары
+        немесе JavaScript арқылы бір қосымша жаса да бөлес.
+      body_short: Код блоктары немесе JavaScript арқылы бір қосымша жаса да бөлес.
+      audience: 13+ жастағылар үшін
+      cta: Қалай жасауды үйрең
+    hoc:
+      title: Классикалық лабиринт
+      body: Информатика пәні негіздерін оқыңыз. Миллиондаған адам байқап көрді.
+    flappy:
+      title: Қанат Қағу Коды
+      body: Өз ойыныңызды 10 минут ішінде жасағыңыз келеді ме? Онда біздің Қанат Қағу
+        Коды сабағын байқап көріңіз!
+    20-hour:
+      title: Жеделдетілген курс
+      body: Бұл 20-сағаттық курс информатика саласы мен бағдарламалау негіздерінің
+        2-4 курсын қамтиды. Курс 10-18 жастағыларға арналған. Тереңдетіп оқу үшін
+        2-4 курстарды қараңыз!
+      body_short: 2-4 сабақтан тұратын информатика пәнінің жеделдетілген курсын оқыңыз.
+    hoc2014:
+      try_new_tutorial: Біздің жаңа Код Жазу Сағаты сабағын бета нұсқасында көріңіз
+      try_frozen: Мұзды жүрек кейіпкерлері, Анна және Эльзамен суретші бол
+    gallery:
+      title: Галерея
+      body: Галереядан біздің қолданушылар жасаған қосымшалар мен кейіпкерлер суретін
+        көріңіз
+    gamelab:
+      audience: 13+ жастағылар үшін
+      cta: Қалай жасауды үйрең
+    weblab:
+      audience: 13+ жастағылар үшін
+      cta: Қалай жасауды үйрең
+    frozen:
+      title: Мұзды жүрек
+    starwars:
+      title: Жұлдызды Соғыстар
+    infinity:
+      title: Шексіз Ойын Лабораториясы
+      body: Ойындар Лабораториясын пайдаланып оқиға немесе Шексіз Диснейдің танымал
+        кейіпкерлерімен ойын жасаңыз.
+    minecraft:
+      title: Minecraft
+      body: Код арқылы Minecraft әлемінде саяхаттаңыз.
+    minecraft2016:
+      title: Minecraft
+      body: Бағдарламалау жануарлары мен басқа да Minecraft жаратылыстары сенің өз
+        Minecraft ойынының нұсқасында.
+    aquatic:
+      title: Minecraft
+    hero:
+      title: Minecraft
+    sports:
+      title: Спорттар
+    unplugged:
+      audience: Жас аралық 4+
+    unplugged_conditionals:
+      title: Шарттар
+    widgets:
+      cta: Қалай жасауды үйрең
+  gallery:
+    students_drew_these_with_code: Оқушылар кодпен бірге суретін салады!
+    students_made_these_with_code: Оқушылар кодын жазады!
+    picture_count: Өткен <b>%{days}</b> күнде, оқушылар компьютерлік бағдарламаларына
+      <b>%{count}</b> сурет салды. Әрбір бағдарламаны көру үшін суретке және скриншотқа
+      шертіңіз.
+    activity_count: Өткен <b>%{days}</b> күнде, оқушылар <b>%{count}</b> қосымша мен
+      компьютерлік ойындарына сурет салды. Әрбір бағдарламаны көру үшін суретке және
+      скриншотқа шертіңіз.
+    want_to_make_your_own: Өзіңіз жасап көргіңіз келеді ме?
+    more: Көбірек &rarr;
+    caption_by_name_age: "%{name}, жасы %{age}"
+    caption_time_ago: "%{time_ago} бұрын"
+    header: Галерея
+    header_playlab: Хикаялар мен ойындар
+    header_artist: Өнерді кодтау
+    report_abuse: Құқық бұзушылық туралы хабарлау
+  landing:
+    prerelease: Бұл курс <span class='betatext'>бета нұсқада</span>. Бұл деген курстың
+      әлі толық жасалып бітпегенін көрсетеді және кері байланыс кезінде өзгертулер
+      еңгізіледі.
+    prerelease_hoc2014: Бұл сабақ <span class='betatext'>бета нұсқада</span>. Бұл
+      сабаққа кері байланыс кезінде өзгертулер еңгізіледі..
+    report_bug: Қате туралы хабарлау
+    support: Көмек Сұрау
+    help_resources: Көмек және ресурстар
+  multi:
+    wrong_title: Дұрыс емес жауап
+    wrong_body: Сіз еңгізген жауап дұрыс емес. Қайталап көріңіз!
+    correct_title: Дұрыс
+    correct_body: Бұл дұрыс жауап.
+  multi-submittable:
+    wrong_title: Рахмет
+    wrong_body: Жауабың үшін рақмет.
+    correct_title: Рахмет
+    correct_body: Жауабың үшін рақмет.
+  level_group:
+    wrong_title: Рахмет
+    wrong_body: Жауаптарың үшін рақмет.
+    correct_title: Рахмет
+    correct_body: Жауаптарың үшін рақмет.
+  level_group-submittable:
+    wrong_title: Рахмет
+    wrong_body: Жауаптарың үшін рақмет.
+    correct_title: Рахмет
+    correct_body: Жауаптарың үшін рақмет.
+  match:
+    wrong_title: Дұрыс емес шешім
+    wrong_body: Сіз еңгізген жауап дұрыс емес. Қайталап көріңіз!
+    correct_title: Дұрыс
+    correct_body: Бұл дұрыс жауап.
+  contract_match:
+    wrong_title: Дұрыс емес жауап
+    badname: Сіздің келісімшартыңыздың атауы қате.
+    badname_case: Функция атаулары регистр талдағыш. Келісімшарт атауын өзгертіп көріңіз.
+    badrange: Сіздің келісімшартыңыздың жол саны қате.
+    baddomainsize: Сіздің келісімшартыңыздың тиісті жолдары толтырылмады.
+    baddomainname: Сіз жазған бір немесе бірнеше жолдың атауы дұрыс емес.
+    baddomaintype: Сіз жазған бір немесе бірнеше жолдың түрі дұрыс емес, немесе дұрыс
+      емес ретпен еңгізілді.
+  text_match:
+    placeholder: Жауабыңызды мұнда еңгізіңіз
+    open_response_title: Рахмет
+    open_response_body: Жауап бергеніңіз үшін рахмет!
+    correct_title: Дұрыс
+    correct_body: Бұл дұрыс жауап.
+  dialog:
+    ok: OK
+    startover_title: Сіз басынан бастауға сенімдісіз бе?
+    startover_body: Сіз өзгерткен немесе қосқан барлық мәліметтер өшіріліп, басқатырғыш
+      бастапқы қалпына келеді.
+    startover_ok: Басынан бастау
+    startover_cancel: Болдырмау
+  time:
+    hour: 1 сағат
+    day: күн
+    week: апта
+  age_interstitial:
+    age: Сіздің жасыңыз
+    header: Жеке парақша Ақпаратын жаңарту
+    message: Біз өзіміздің құпиялылығымызды қорғау мақсатында тәжірибемізді көтерудеміз.
+      Сондықтан қолданушылардан жасын көрсетуін талап етеміз.<br/>Әдеттегідей, code.org
+      ешқашан сіз туралы ақпаратпен үшінші жақпен бөліспейді.
+    sign_out: Егер сіз жасыңызды көрсеткіңіз келмесе, онда <a href="%{url}">шығып
+      кетуіңізге</a> болады.
+  terms_interstitial:
+    tos: Қызмет көрсету шарттары
+    privacy: Құпиялылық саясаты
+    accept: Қабылдау
+    print: Шығару
+  school_info_interstitial:
+    save: Сақтау
+  race_interstitial:
+    races:
+      white: Ақ
+      asian: Азиялық
+      other: Басқасы
+      opt_out: Жауап беруден бас тартамын
+    submit: Жіберу
+    decline: Жабу
+  zendesk_too_young_message: Кешіріңіз, кішкентай қолданушылар біздің көмек көрсету
+    сайтымызға тіркеле алмайды. Сіз біздің <a href="http://support.code.org">support.code.org</a>
+    парақшамызды тіркелместен көруіңізге болады немесе өзіңіздің ата-анаңыздан, оқутышыңыздан
+    бізбен хабарласуын сұрасаңыз болады.
+  progress:
+    not_started: басталмады
+    in_progress: оқу барысында
+    completed_too_many_blocks: аяқталды, тым көп бөлімдер
+    completed_perfect: аяқталды, тамаша
+    furthest_level_attempted: жетілген ең жоғарғы деңгей
+    assessment: баға
+    submitted: жіберілді
+  studio:
+    courses_working_on: Сіз жұмыс жасап жатқан курстар
+    completed_courses: Аяқталған курстар
+    all_courses: Барлық курстар
+  project:
+    projects: Жобалар
+    create: Жоба Құру
+    create_a_project: 'Жаңа Жоба құру:'
+    new: Жаңасын құру
+    rename: Жоба атын өзгерту
+    save: Сақтау
+    delete: Өшіру
+    exit: Курсқа қайта оралу
+    my_projects: Менің Жобаларым
+    project_gallery: Жобалар
+    share: Бөлісу
+    share_title: Жобаңызбен бөлісіңіз
+    share_copy_link: 'Сілтемені көшіру:'
+    share_u13_warning: Бөлісуден бұрын мұғаліміңізден сұраңыз. Тек өз мектебіңіздегі
+      басқа адамдармен бөлісіңіз.
+    advanced_share: Кеңейтілген баптауларды көрі
+    close: Жабу
+    more: Тағы да
+    name: Атыңыз
+    updated: Жаңартылды
+    project_type: Жобаның Түрі
+    help_text: Жаңа Ойын Лабораториясын немесе Кейіпкер жобасын құру үшін <strong>Қосымша
+      Жасау</strong> немесе <strong>Кез келген нәрсе Салуға</strong> шертіңіз!<br/>Сіз
+      кез келген уақытта жобаңызға қайта оралып, жұмысыңызды жалғастыра аласыз.
+    need_help: Жаңа жобаңды бастау үшін, осы курстарды қарап шық
+    really_delete: Өшіру?
+    delete_yes: Иә
+    delete_no: Жоқ
+    saved: Сақталды
+    not_saved: Сақталған жоқ
+    cancel: Болдырмау
+    delete_confirm_title: Сіздің бұл жобаны өшіргіңіз келеді ме?
+    delete_confirm_text: Жобаңызды өшірсеңіз, Менің Жобалар тізімім парағынан біржола
+      өшіріледі. Бұл жобамен бөліскен сілтемелер жұмысын тоқтатады.
+    view_all: Менің Жобамды көру
+    remix: Ремикс
+    click_to_remix: Өзіңіздің нұсқаңызды белгілеу үшін "Ремикске" шертіңіз!
+    edit_project: Жобаны өңдеу
+    abuse:
+      tos: Бұл жоба Code.org-тың <a href='http://code.org/tos'>Қызмет көрсету шарттарын</a>
+        бұзғандығы жайында хабарлануына байланысты, басқалармен бөлісе алмайсыз.
+      contact_us: Егер қате бар екеніне сенімді болсаңыз, өтінеміз <a href='https://code.org/contact'>бізбен
+        хабарласыңыз.</a>
+      go_to_code_studio: Код Студиясына кіру
+      report_abuse_form:
+        intro: Егер сіз әдепсіз контент, қатерлер, киберқорқыту, жеке өмірге қол сұғу
+          немесе Код Студиясында жасалған қосымшаның авторлық құқығы бұзылғандығын
+          байқасаңыз, онда төмендегі үлгіні толтырыңыз. Біз бұл хабарламаға үлкен
+          жауапкершілікпен қараймыз және тиісті іс-әрекеттер қолданамыз.
+        validation:
+          email: Өтінеміз, электронды поштаңызды көрсетіңіз
+          age: Өтінеміз, жасыңызды көрсетіңіз
+          abuse_type: Өтінеміз, бұл контент Қызмет көрсету шарттарының қай пунктін
+            бұзғанын хабарлаңыз
+          abuse_detail: Өтінеміз, хабарламаны барынша түсінікті және толық жазыңыз.
+        abusive_url: Контент URL-і хабарланады
+        abuse_type:
+          question: Бұл хабарлама %{link_start}Қызмет көрсету шарттарының%{link_end}
+            қайсысын жайында?
+          harassment: Қатерлер, киберқорқыту, жеке өмірге қол сұғу
+          offensive: Әдепсіз контент
+          infringement: Авторлық құқықтың бұзылуы
+          other: Басқасы
+        detail: Өтінеміз, хабарламаны барынша түсінікті және толық жазыңыз.
+        acknowledge: Сіз бұл хабарламаны жіберу арқылы %{link_start_privacy}Құпиялылық
+          Саясаты%{link_end} және %{link_start_tos}Қызмет көрсету шарттары%{link_end}
+          аясында қаралатынына келісесіз бе?
+  peer_review:
+    accepted:
+      name: Қабылданды
+    rejected:
+      name: Қабылданбады
+  flex_category:
+    required: Қысқаша шолу
+    content: Контент
+    practice: Сабақ беру Практикалары
+  hoc_download:
+    instructions_headline: Интернет жоқ па?
+    minecraft_name: Minecraft Кодтау Сағаты
+  pd:
+    form_labels:
+      email: Электронды пошта
+    form_entries:
+      gender:
+        male: Ер
+        female: Әйел
+        none: Жауап беруден бас тартамын
+      subjects:
+        cs: Информатика
+        math: Математика
+        science: Ғылым
+        la: Тіл Өнерлері
+      resources:
+        kodable: Kodable
+      robotics:
+        kodable: Kodable
+      email_opt_in:
+        opt_in_yes: Иә
+        opt_in_no: Жоқ
+  cookie_banner:
+    accept: Мен келісемін
+  gdpr_dialog:
+    true: Иә

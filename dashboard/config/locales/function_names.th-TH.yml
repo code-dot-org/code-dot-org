@@ -1,0 +1,66 @@
+---
+th:
+  data:
+    function_names:
+      x: x
+      draw a circle: วาดวงกลม
+      draw square: วาดสี่เหลี่ยมจตุรัส
+      draw a hexagon: วาดรูปหกเหลี่ยม
+      draw a flower: วาดดอกไม้
+      draw a square: วาดสี่เหลี่ยมจตุรัส
+      draw a snowflake: วาดรูปเกล็ดหิมะ
+      draw 3 hexagons: วาดรูปหกเหลี่ยม 3 รูป
+      draw 4 hexagons: วาดรูปหกเหลี่ยม 4 รูป
+      draw 5 hexagons: วาดรูปหกเหลี่ยม 5 รูป
+      get 2 nectar: เก็บน้ำหวาน 2 ครั้ง
+      collect purple nectar: เก็บนำหวานจากเกสรสีม่วง
+      get 5: เก็บ 5 ครั้ง
+      move and get nectar: บินไปและเก็บน้ำหวาน
+      move and get 4: บินไปและเก็บ 4 ครั้ง
+      get 7 nectar make 7 honey: เก็บน้ำหวาน 7 ครั้ง ทำน้ำผึ้ง 7 ครั้ง
+      get 7 make 7: เก็บ 7 ทำ 7
+      get 7: เก็บ 7 ครั้ง
+      move and get 3: บินไปและเก็บ 3 ครั้ง
+      draw a tree: วาดรูปต้นไม้
+      draw a triangle: วาดสามเหลี่ยม
+      draw a house: วาดรูปบ้าน
+      check purple flower: เช็คดอกไม้สีม่วง
+      check flower make honey: เช็คน้ำหวานทำน้ำผึ้ง
+      get nectar or make honey: เก็บน้ำหวานหรือทำน้ำผึ้ง
+      make 3 honey: ทำน้ำผึ้ง 3 ครั้ง
+      get 5 nectar: เก็บนำหวาน 5 ครั้ง
+      draw a star: วาดรูปดวงดาว
+      get 2 and make 2: เก็บ 2 และทำ 2
+      do something: ทำบางสิ่ง
+      jump: กระโดดออกไปทาง
+      Draw a square: วาดรูปสี่เหลี่ยมจตุรัส
+      draw a line of squares: วาดเส้นสีเหลี่ยมจตุรัส
+      Draw a Square: วาดสี่เหลี่ยมจตุรัส
+      draw a square 20: วาดสี่เหลี่ยมจตุรัส 20
+      draw a square 40: วาดสี่เหลี่ยมจตุรัส 40
+      set score: ตั้งค่า คะแนน
+      draw a line of hexagons: วาดด้านหนึ่งของรูปหกเหลี่ยม
+      get nectar: เก็บน้ำหวาน
+      test: ทดสอบ
+      build bridge: สร้างสะพาน
+      diamond: เพชร
+      move: เคลื่อนไปทาง
+      function 1: ฟังก์ชั่น 1
+      function 2: ฟังก์ชั่น 2
+      clear path: เคลียร์เส้นทาง
+      build short bridge: สร้างสะพานสั้น
+      build long bridge: สร้างสะพานยาว
+      fix long path: ซ่อมทางระยะยาว
+      fix short path: ซ่อมทางระยะสั้น
+      move right: ย้ายไปทางขวา
+      move up: เคลื่อนขึ้น
+      move down: เคลื่อนลง
+      move left: ย้ายไปทางซ้าย
+      keep playing: เล่นอีกที
+      move and get nectar with counter: บินไปและเก็บน้ำหวานด้วยตัวนับจำนวน
+      draw hexagon: วาดรูปหกเหลี่ยม
+      draw a square2: วาดสี่เหลี่ยมจตุรัส2
+      collect: เก็บ
+      turn left: หันซ้าย
+      move forward: ไว้ข้างหน้า
+      turn right: หันขวา

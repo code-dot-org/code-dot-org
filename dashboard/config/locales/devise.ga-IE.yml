@@ -1,0 +1,95 @@
+---
+ga:
+  devise:
+    confirmations:
+      confirmed: Deimhníodh do sheoladh ríomhphoist.
+      send_instructions: Gheobhaidh tú ríomhphost ina bhfuil treoracha maidir le deimhniú
+        do chuntais go luath.
+      send_paranoid_instructions: Má tá do sheoladh ríomhphoist inár mbunachar sonraí,
+        gheobhaidh tú ríomhphost ina bhfuil treoracha maidir le deimhniú do chuntais
+        go luath.
+    failure:
+      already_authenticated: Tá tú logáilte isteach cheana.
+      inactive: Níl do chuntas deimhnithe fós.
+      invalid: Seoladh ríomhphoist nó focal faire mícheart.
+      invalid_token: Ceadchomhartha neamhbhailí.
+      locked: Tá do chuntas faoi ghlas.
+      not_found_in_database: Seoladh ríomhphoist nó focal faire mícheart.
+      timeout: Chuaigh do sheisiún thar am. Caithfidh tú logáil isteach arís.
+      unauthenticated: Caithfidh tú logáil isteach nó cláraigh ar dtús.
+      unconfirmed: Caithfidh tú do chuntas a dheimhniú.
+    mailer:
+      confirmation_instructions:
+        subject: Treoracha maidir le deimhniú do chuntais Code.org
+      reset_password_instructions:
+        subject: Treoracha maidir le hathshocrú d'fhocail faire Code.org
+      unlock_instructions:
+        subject: Treoracha Díghlasála
+    omniauth_callbacks:
+      failure: 'Níorbh fhéidir linn thú a dheimhniú ó %{kind} ar an ábhar seo: "%{reason}".'
+      success: D'éirigh leis an deimhniú ó chuntas %{kind}.
+    passwords:
+      no_token: Ní féidir leat an leathanach seo a úsáid murar tháinig tú ó ríomhphost
+        athshocraithe. Má tháinig tú ó ríomhphost athshocraithe, bí cinnte gur úsáid
+        tú an URL iomlán a bhí ann.
+      send_instructions: Gheobhaidh tú ríomhphost ina bhfuil treoracha maidir le hathshocrú
+        d'fhocail faire go luath.
+      send_paranoid_instructions: Má tá do sheoladh ríomhphoist inár mbunachar sonraí,
+        gheobhaidh tú ríomhphost ina bhfuil treoracha maidir le hathshocrú d'fhocail
+        faire go luath.
+      updated: Athraíodh d'fhocal faire. Tá tú logáilte isteach anois.
+      updated_not_active: Athraíodh d'fhocal faire.
+    registrations:
+      destroyed: Slán! Cealaíodh do chuntas. Go n-éirí leat.
+      signed_up: Fáilte romhat! Cruthaíodh do chuntas.
+      signed_up_but_inactive: D'éirigh leis an gclárú. Ach ní raibh tú in ann logáil
+        isteach toisc nach bhfuil do chuntas deimhnithe fós.
+      signed_up_but_locked: D'éirigh leis an gclárú. Ach ní raibh tú in ann logáil
+        isteach toisc go bhfuil do chuntas faoi ghlas.
+      signed_up_but_unconfirmed: Seoladh teachtaireacht ina bhfuil nasc deimhnithe
+        chuig do sheoladh ríomhphoist. Cliceáil an nasc sin chun do chuntas a dheimhniú.
+      update_needs_confirmation: D'éirigh leat do chuntas a nuashonrú, ach caithfimid
+        do sheoladh ríomhphoist nua a dheimhniú. Féach ar do bhosca isteach agus cliceáil
+        an nasc sa teachtaireacht uainn chun do sheoladh ríomhphoist nua a dheimhniú.
+      updated: D'éirigh leat do chuntas a nuashonrú.
+    sessions:
+      signed_out: Tá tú logáilte amach anois.
+    unlocks:
+      send_instructions: Gheobhaidh tú ríomhphost ina bhfuil treoracha maidir le díghlasáil
+        do chuntais go luath.
+      send_paranoid_instructions: Má tá do chuntas ann, gheobhaidh tú ríomhphost ina
+        bhfuil treoracha maidir lena dhíghlasáil go luath.
+      unlocked: Díghlásáladh do chuntas. Logáil isteach le dul ar aghaidh.
+  errors:
+    messages:
+      already_confirmed: deimhnithe cheana, déan iarracht logáil isteach anois
+      confirmation_period_expired: "- is gá é seo a dheimhniú faoi cheann %{period},
+        ba chóir duit ceann nua a iarraidh"
+      expired: thar am, ba chóir duit ceann nua a iarraidh
+      not_found: gan aimsiú
+      not_locked: gan glasáil
+      not_saved:
+        one: 'Níor sábháladh an %{resource} seo mar gheall ar earráid amháin:'
+        other: 'Níor sábháladh an %{resource} seo mar gheall ar %{count} earráid:'
+    invitations:
+      send_instructions: Seoladh cuireadh chuig %{email}.
+      invitation_token_invalid: Tá an ceadchomhartha ón chuireadh neamhbhailí!
+      updated: Socraíodh d'fhocal faire. Tá tú logáilte isteach anois.
+      no_invitations_remaining: Níl aon chuirí fágtha
+      invitation_removed: Baineadh do chuireadh.
+      new:
+        header: Seol cuireadh
+        submit_button: Seol cuireadh
+      edit:
+        header: Socraigh d'fhocal faire
+        submit_button: Socraigh m'fhocal faire
+    mailer:
+      invitation_instructions:
+        subject: Treoracha
+        hello: Dia dhuit a %{email}
+        someone_invited_you: Thug duine éigin cuireadh chun %{url} duit. Is féidir
+          leat glacadh leis tríd an nasc thíos.
+        accept: Glac leis an gcuireadh
+        ignore: Mura mian leat glacadh leis an gcuireadh, déan neamhaird den ríomhphost.<br
+          />Ní chruthófar cuntas ar do shon go dtí go gcliceálfaidh tú an nasc thuas
+          chun focal faire a roghnú.

@@ -1,0 +1,41 @@
+hi:
+  data:
+    game:
+      name:
+        Unplug1: कंप्यूटर विज्ञान का परिचय
+        Unplug5: कार्य
+        Unplug6: शर्तें
+        Unplug10: इंटरनेट
+    trophy:
+      name:
+        Silver: चाँदी
+        Gold: सोना
+    concept:
+      description:
+        function: कार्य
+    video:
+      name:
+        function: कार्य
+        Unplug1: CS क्या है?
+        Unplug5: कार्य
+        Unplug6: शर्तें
+        C2_conditionals_with_cards: शर्तें
+        C4_loops_zombie: फंदे
+        C4_conditionals: शर्तें
+        csp_applab_loops: फंदे
+        mc_intro: Minecraft - परिचय
+        mc_repeat: Minecraft - दोहराव
+        mc_if_statements: Minecraft - If स्टेटमेंट
+        mc_congrats_share: Minecraft - बधाई
+        mc_congrats_no_share: Minecraft - बधाई
+        CSF_loops_AB: फंदे
+    callout:
+      text:
+        run: अपने प्रोग्राम को आज़माने के लिए "Run" चलाएँ
+        craft_run_button_callout: अपने प्रोग्राम को आज़माने के लिए "Run" चलाएँ
+        craft_drag_block_callout: '"moveForward();" ब्लॉक को खींचें और उसे दूसरे ब्लॉक के नीचे इस्तेमाल करें'
+        craft_callout_preplaced: आपके द्वारा शुरूआत करने के लिए हमने यहाँ कुछ ब्लॉक रखे हैं
+        craft_inside_repeat: ब्लॉक को यहाँ रखते हुए कार्रवाई दोहराएँ
+        craft_callout_preplaced_house: यह कोड आपके घर का निर्माण शुरू करेगा। क्या आप इसे खत्म कर सकते हैं?
+        craft_what_is_iron: इस लौह का खनन करें!
+        craft_callout_moveforward: यह कोड लावा की जाँच करेगा, क्या आप आगे बढ़ने के लिए कमांड जोड़ सकते हैं?

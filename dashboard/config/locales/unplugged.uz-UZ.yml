@@ -1,0 +1,46 @@
+---
+uz:
+  data:
+    unplugged:
+      Unplug1:
+        title: Informatikaga kirish
+      Unplug2:
+        title: Dasturiy fikrlash
+      Unplug3:
+        title: Katakchali varaqda dasturlash
+      Unplug4:
+        title: Algoritmlar
+      Unplug5:
+        title: Funksiyalar
+      Unplug7:
+        title: Musiqa yozish
+      Unplug8:
+        title: Abstraksiya
+      Unplug9:
+        title: Estafetali dasturlash
+      Unplug10:
+        title: Internet
+      RelayProgramming:
+        title: Estafetali dasturlash
+      Conditionals:
+        title: Shart buyruqlari
+      GraphPaperProgramming:
+        title: Katakchali varaqda dasturlash
+      ComputationalThinking:
+        title: Dasturiy fikrlash
+      courseD_unplugged_graphPaperProgramming:
+        title: Katakchali varaqda dasturlash
+      courseD_unplugged_relayProgramming:
+        title: Estafetali dasturlash
+      GraphPaperProgramming_2018:
+        title: Katakchali varaqda dasturlash
+      Conditionals_2018:
+        title: Shart buyruqlari
+      RelayProgramming_2018:
+        title: Estafetali dasturlash
+      Conditionals_2019:
+        title: Shart buyruqlari
+      GraphPaperProgramming_2019:
+        title: Katakchali varaqda dasturlash
+      RelayProgramming_2018_2019:
+        title: Estafetali dasturlash

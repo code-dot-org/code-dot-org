@@ -1,0 +1,18 @@
+fi:
+  data:
+    block_categories:
+      Actions: Toiminnot
+      Loops: Silmukat
+      Functions: Funktiot
+      Color: Väri
+      Math: Matematiikka
+      Logic: Logiikka
+      Variables: Muuttujat
+      Conditionals: Ehtolausekkeet
+      Events: Tapahtumat
+      Text: teksti
+      Start: Aloita
+      Booleans: Totuusarvot
+      test: ehto
+      Name: Nimi
+      Function: Funktio

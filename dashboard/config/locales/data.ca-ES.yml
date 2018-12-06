@@ -1,0 +1,687 @@
+---
+ca:
+  data:
+    game:
+      name:
+        Unplug1: Introducció a la informàtica
+        Maze: El Laberint
+        Multi: Coses d'elecció múltiple
+        Unplug2: Pensament computacional
+        Unplug3: Programació de paper quadriculat
+        Artist: L'artista
+        Unplug4: Algorismes
+        Artist2: L'artista 2
+        Unplug5: Funcions
+        Farmer: La pagesa
+        Unplug6: Condicionals
+        Artist3: L'artista 3
+        Unplug7: Escriptura de la cançó
+        Farmer2: La pagesa 2
+        Unplug8: Abstracció
+        Artist4: L'artista 4
+        Unplug9: Programació en relleus
+        Farmer3: La pagesa 3
+        Unplug10: Internet
+        Artist5: L'artista 5
+        Unplug11: Recapitulació
+        MazeEC: El Laberint
+        Bounce: Rebota
+        Flappy: Flappy Bird
+        Jigsaw: Puzzle
+        MazeStep: 'Laberint: pas a pas'
+        Wordsearch: Sopa de lletres
+        Webapp: Laboratori d'aplicacions
+        ArtistEC: L'artista
+        TextMatch: Relacionar text
+        StudioEC: Play Lab
+        Applab: Laboratori d'aplicacions
+        NetSim: Simulador d'Internet
+        Custom: Artista
+        CustomStudio: Play Lab
+    trophy:
+      name:
+        Bronze: Bronze
+        Silver: Plata
+        Gold: Or
+    concept:
+      description:
+        sequence: Seqüència
+        if: Bloc Si
+        if_else: Bloc Si-Sino
+        loop_times: Bloc Repetir Vegades
+        loop_until: Repetir Bloc Fins
+        loop_while: Bloc Mentre
+        loop_for: Bloc Comptador
+        function: Funcions
+        parameters: Funcions amb Paràmetres
+    level:
+      instructions:
+        maze_2_2: 'Em pots ajudar a atrapar aquest porc entremaliat? Apila un conjunt
+          de blocs "Avança" i prem "Executa" per ajudar-me a arribar-hi. '
+        maze_2_1: Aquest porc està enfadant-me. Ajuda'm a trobar-lo!
+        maze_2_2_5: Traça el camí i guia'm a l'estúpid porc . Evita el TNT o les plomes
+          volaran!
+        maze_2_3: Guia'm al dimoni verd! (Ves en compte amb el TNT)
+        maze_2_4: Estigues tranquil i ajuda'm a trobar el porc dolent. Si no m'ajudes
+          pot ser que m'enfadi!
+        maze_2_5: Hi ha una forma d' arribar al porc ximple utilitzant només 2 blocs.
+          T'ho pots imaginar?
+        maze_2_6: Intenta fer-me agafar l'intrús verd utilitzant només 3 blocs.
+        maze_2_7: Ajuda'm a desterrar aquest porque te roïn utilitzant el menor nombre
+          possible de blocs. Intenta-ho utilitzant més d'un bloc repetir.
+        maze_2_8: 'Quan un bloc és gris, això vol dir que no pots suprimir-lo. Resol
+          aquest trencaclosques utilitzant el bloc "repetir" que es repeteix 3 vegades.
+          Intenta posant aquests 3 bloc dins del bloc gris "repetir": avança, avança,
+          gira.'
+        maze_2_9: Ok, prova el nou bloc "repetició fins" - es repetirà fins que arribi
+          el porc molest.
+        maze_2_10: Ok, última vegada per a practicar - pots resoldre aquest utilitzant
+          només 4 blocs?
+        maze_2_11: Estimada persona. Jo zombie. Jo gana. Necessito... arribar... al
+          gira-sol... Pots moure'm fins allà només amb 5 blocs?
+        maze_2_12: Ok, això és semblant, però lleugerament diferent. Pots fer-ho només
+          amb 5 blocs?
+        maze_2_13: 'Utilitza el nou bloc "si" per deixar-me decidir quan girar. Pista:
+          només necessites un bloc més, però aprèn com ho hem establert nosaltres
+          per fer-ho tu en la teva pròxima vegada.'
+        maze_2_14: Ok, aquest és com l'últim puzzle, però necessites recordar com
+          vas utilitzar els blocs "si" i "repetir" junts.
+        maze_2_15: Jo voler gira-sol! Utilitza un bloc "si" per portar-me allà amb
+          el menor nombre de blocs possibles.
+        maze_2_16: Ok, anem a fer allò una altra vegada per practicar - aquest no
+          és molt diferent, però ves amb compte amb els mossegadors!
+        maze_2_17: Els blocs "si-sino" comproven una condició, i llavors fa una cosa
+          O una altra. Per portar-me al gira-sol prova d'utilitzar aquet nou bloc.
+        maze_2_18: Una pràctica més del blocs "si-sino", pots fer-ho bé en el primer
+          intent?
+        maze_2_19: Pots afegir només 3 blocs per ajudar-me a resoldre un laberint
+          més complex? Si ho fas bé, puc caminar qualsevol camí amb corbes sense importar
+          la longitud.
+        turtle_1_1: Hola, sóc un artista. Pots escriure codi per fer-me dibuixar quasi
+          qualsevol cosa. Utilitza uns blocs per fer-me dibuixar sobre les línies
+          grises de la imatge.
+        turtle_1_2: 'Ara, dibuixa un quadrat. NOTA: utilitza el teu color favorit
+          escollint-lo en el nou bloc "estableix color".'
+        turtle_1_3: Fes un quadrat utilitzant només 3 blocs.
+        turtle_1_4: 'Dibuixa un triangle amb els costats de diferents colors, utilitzant
+          la opció de "color aleatori" que elegeix un color diferent cada vegada.
+          Pista: tindràs que averiguar quant rotar fent click en el nombre del bloc
+          girar.'
+        turtle_1_5: Ara, per a practicar, dibuixa un triangle i després un quadrat
+          per dibuixar un sobre.
+        turtle_1_6: 'Pots esbrinar com dibuixar aquest triangle i quadrat? Pista:
+          Fer primer el triangle, després descobreix quant girar abans de dibuixar
+          el quadrat.'
+        turtle_1_7: Ok, anem a fer-ho una mica més difícil - a veure si pots dibuixar
+          aquestes ulleres verdes. Els quadrats són de 100 píxels a cada costat, i
+          estan separats per 50 píxels. No t'oblidis de dibuixar-ho en verd!
+        turtle_1_8: Ok, tracta d'esbrinar què passa si executes aquest codi (o prems
+          "Executa" per provar-ho). A continuació, repeteix-ho suficient vegades per
+          a completar el dibuix. Els colors seran diferents cada vegada.
+        turtle_1_9: Pots averiguar amb quin nombre reemplaçaries els signes d'interrogació
+          per a dibuixar un cercle?
+        turtle_1_10: 'Ho has aconseguit! Ara, dibuixa el que vulguis. Algunes idees
+          divertides: un ninot de pals, un floc de neu, o una espiral. També prova
+          el nou bloc "ajust d''amplada". Diverteix-te!'
+        turtle_4_1: 'Pots dibuixar un triangle (amb vores de 100 píxels) amb només
+          3 blocs? Pista: utilitza un bloc "repetir".'
+        turtle_4_2: Afegeix un bloc "gira a la dreta 90 graus" en algun lloc en el
+          centre del programa que ja tens enmig de l'àrea de treball per dibuixar
+          aquests triangles.
+        turtle_4_3: Ok, aquest és el codi que vas escriure per a dibuixar un únic
+          triangle. Pots afegir un bloc "repeat" i un bloc "girar" per a crear una
+          bonica flor?
+        turtle_4_4: 'Aquí hi ha el mateix codi que en el puzzle anterior, però girat
+          només 36 graus després de dibuixar cada triangle. Quantes vegades es necessita
+          repetir això? (Pista: després de girar el dibuix 360 graus, aquest es converitrà
+          en un cercle complet)'
+        turtle_4_5: 'Aquí està el mateix codi que el puzzle anterior, però repetint
+          els girs 36 vegades. De quants graus haurien de ser els girs? (Pista: després
+          de girar el dibuix 360 graus, aquest es tornarà un cercle complet)'
+        turtle_4_6: Utilitzant només 3 blocs, pots dibuixar un quadrat amb les vores
+          de 20 píxels?
+        turtle_4_7: 'Aquí està el codi per a dibuixar el quadrat del puzzle anterior.
+          Pots repetir-ho pero dibuixar 10 quadrats adjacents com si fós una escala?
+          Pista: només necessitaràs 2 blocs més.'
+        turtle_4_8: Aquí està la solució del puzzle anterior. Pots afegir només 2
+          blocs més per a completar el dibuix?
+        turtle_4_9: Aquí està la solució del puzzle anterior. Quants graus hauries
+          degirar per a completar el dibuix? (És probable que necessitis uns quants
+          intents)
+        turtle_4_10: Aquí hi ha la solució al puzzle anterior. Quantes vegades hauríeu
+          de repetir-ho per completar el dibuix?
+        turtle_4_11: Prova de canviar els nombres en els blocs "girar" i "repetir"
+          per a crear patrons diferents. O, experimenta canviant la resta del codi
+          per a dibuixar el que tu vulguis.
+        maze_karel_1_1: Hola, sóc una pagesa. Necessito la teva ajuda per aplanar
+          el camp a la meva granja, així estarà llest per plantar. Mou-me a la pila
+          de terra i utilitza el bloc "eliminar" per treure-la.
+        maze_karel_1_2: A continuació, mou-me al forat i omple'l amb DOS palades de
+          terra, utilitzant el bloc "omplir".
+        maze_karel_1_3: Mou-me a la pila de terra i digue'm quantes palades treure
+          utilitzant la menor quantitat de blocs possibles.
+        maze_karel_1_4: 'Pots ajudar-me a llevar les quatre piles de terra? Pista:
+          utilitza un bloc repetir si pots.'
+        maze_karel_1_5: 'Ajuda''m a omplir tots aquests forats amb 5 palades de terra.
+          Pista: pots posar un bloc "repetir" dins el bloc "mentre".'
+        maze_karel_1_6: Lleva totes les piles de terra, utilitzant la menor quantitat
+          de blocs possibles. Les noves opcions en el menú desplegable del bloc "mentre",
+          em diuen si estic aturat en una pila o en un forat.
+        maze_karel_1_7: Vaja, he trobat un forat molt profund! No sé quantes palades
+          de terra necessita. Pots escriure un programa que l'ompli fins que la terra
+          estigui plana?
+        maze_karel_1_8: Ajuda'm a omplir el forat al final del camp, utilitzant la
+          menor quantitat de blocs possibles.
+        maze_karel_1_9: 'Fes-me llevar totes aquestes piles de terra. Intenta utilitzar
+          la menor quantitat de blocs possibles. Pista: prova d''utilitzar el bloc
+          "mentre".'
+        maze_karel_1_10: Estic treballant fins tard, així que és fosc a fora, i no
+          sé com altes són les piles. Ara no tenc totes les opcions que solia tenir
+          en el bloc "mentre". Mou-me per el camp, i si hi ha una pila, treu-la.
+        maze_karel_1_11: 'Encara és fosc fora. Mou-me pel camp. Si hi ha una pila,
+          elimina-la, i si hi ha un forat, ompli''l. Pista: usa el bloc "si" del menú
+          desplegable d''opcions.'
+        turtle_2_1: 'Hola. Jo sóc el zombi artista. M''encanta dibuixar! Ajuda''m
+          a dibuixar un quadrat en un color especial. Nota important: tu tens els
+          mateixos blocs però ara han sigut organitzats en categories.'
+        turtle_2_2: Benvingut a la utilització de funcions, que te permeten definir
+          nous blocs! Prova el nou "dibuixar un quadrat", trobat en la categoria de
+          "Funcions", per dibuixar un petit quadrat verd 50x50.
+        turtle_2_3: Utilitza el bloc "repetir" (en la categoria "Bucles") per dibuixar
+          3 quadrats de mida 100, separats 120 graus. I fes-ho en 3 colors diferents
+          a l'atzar.
+        turtle_2_4: 'Ara anem a decorar-lo. Canvia el codi per dibuixar 36 quadrats,
+          d''ample 100 píxels i cadascun amb 10 graus de separació. Pista: pots voler
+          usar un deslliçador per fer-me anar més ràpid.'
+        turtle_2_5: Dibuixar quadrats amb costats de 50, 60, 70, 80 i 90 píxels.  Haureu
+          d'utilitzar la funció "dibuixar un quadrat" cinc vegades.
+        turtle_2_6: 'Correcte, aquest programa farà servir un comptador, per dibuixar
+          els mateixos quadrats que l''última vegada. Vols que el quadrat siga de
+          la mateixa mida que el comptador així que usa el bloc "comptador". Pista:
+          Està en la categoria de Variables.'
+        turtle_2_7: Aquest és un programa per a dibuixar una espiral, però el blocs
+          estan desactivats així que no funcionaran. Fes un programa nou utilitzant
+          un bloc "comptar amb" (a la categoria de Bucles) i un bloc "comptador" (a
+          la categoria de Variables) per a dibuixar la mateixa espiral.
+        turtle_2_7_5: Hi ha una nova funció de "dibuixar un ninot de neu" (a la categoria
+          Funcions). Dibuixa dos ninots de neu, de 250 i 100 d'alçada.
+        turtle_2_8: Aquest és una mica difícil. Utilitza la funció "dibuixar un ninot
+          de neu" i el nou bloc "saltar endavant" (a la categoria d'Accions). Dibuixa
+          3 ninots de neu en diferents colors, separats per 100 píxels.
+        turtle_2_9: Utilitza el bucle "comptar amb" per a dibuixar una família de
+          ninots de neu de 110, 100, 90, 80 i 70 d'alçada. Tindrien que estar separats
+          per 60 píxels.
+        turtle_2_10: Aquí hi ha algo de codi per intentar experimentar amb diferents
+          espirals. Què passa si canvies la quantitat de gir? O estableixes un color
+          aleatori en el bucle? Dibuixa el que vulguis.
+        maze_karel_2_1: 'Intenta utilitzar els blocs per ajudar-me a llevar totes
+          les piles i omplir tots els florats del terra. Tracta d''utilitzar bucles
+          en comptes de d''utilitzar massa blocs. Pista: pots posar un bucle dins
+          d''un altre.'
+        maze_karel_2_2: Hem definit el nostre propi bloc anomenat "omplir 5", que
+          està ara en la categoria de Funcions. Utilitza'l per ajudar-me a omplir
+          aquest forat.
+        maze_karel_2_3: Utilitza el nou bloc de funció "omplir 5" per fer-me omplir
+          tots els forats. Tindràs que arrossegar  el bloc "omplir 5" de la categoria
+          Funcions.
+        maze_karel_2_4: Defineix una nova funció que llevi 7 palades de terra. A continuació,
+          utilitza-la per escriure un programa que m'ajudi a llevar totes les piles.
+        maze_karel_2_5: Crea una nova funció que llevi 6 palades de terra d'una pila,
+          i utilitza-la per ajudar-me a anivellar totes les piles.
+        maze_karel_2_6: Utilitza dos funcions noves, "omplir 8" i "llevar 8", per
+          ajudar-me a anivellar la pila i omplir el forat.
+        maze_karel_2_7: Hi ha una vaca en el meu camp! Escriu una nova funció que
+          m'ajudi a evitar la vaca i llevar la pila. Posa tots els teus blocs dins
+          una nova funció.
+        maze_karel_2_8: Utilitza aquesta nova funció, "evitar la vaca i llevar 1",
+          per ajudar-me a llevar totes les piles.
+        maze_karel_2_9: Ok, aquí hi ha una funció que lleva 4 piles diferents de terra
+          en una columna vertical. Intenta posar aquesta funció dins una bucle, de
+          manera que puguis llevar totes les piles de terra utilitzant només un parell
+          de blocs.
+        maze_karel_2_10: Mou-me a través del camp, i utilitza aquestes dos funcions
+          per ajudar-me a llevar totes les piles i omplir tots els forats.
+        turtle_3_1: Aquest puzzle et mostra com estan definides les funcions "dibuixa
+          un quadrat" i "dibuixa un cercle". Definir una funció no executa els seus
+          blocs. Tens que utilitzar el bloc "dibuixa un quadrat" per realment dibuixar
+          un quadrat.
+        turtle_3_2: Utilitzant la funció "dibuixa un quadrat" com a exemple, crea
+          la funció "dibuixa un triangle" i utilitza-la.
+        turtle_3_3: 'Dibuixa tanques triangulars al voltant dels gats i una tanca
+          quadrada al voltant de la vaca. Consell: ves provant el programa a mesura
+          que avances.'
+        turtle_3_4: A veure si pots descobrir com utilitzar els blocs "dibuixa un
+          quadrat" i "dibuixa un triangle" (entre d'altres) per a dibuixar una casa
+          al voltant del lleó.
+        turtle_3_5: 'Ara crea una funció, "dibuixar una casa", i utilitza-la per allotjar
+          dos gats. Pista: crea una nova funció utilitzant el bloc "fer algo",  i
+          escriu el teu propi text per anomenar el bloc.'
+        turtle_3_6: 'Utilitzant com a exemple "dibuixar un quadrat", afegeix una dada
+          d''entrada anomenada "longitud" per a "dibuixar un triangle". A continuació,
+          dibuixa triangles de diferents tamanys. (Pista: clica en l''estrella per
+          afegir una dada d''entrada a la funció)'
+        turtle_3_7: Afegeix una dada d'entrada anomenada "longitud" per a "dibuixar
+          una casa" i construir una gran casa per a l'elefant (amb vores de 150 píxels
+          de llarg)
+        turtle_3_8: Modifica "dibuixa una casa" de manera que jo acabi al cantó de
+          baix a la dreta després de dibuixar una nova casa. Usa aquesta funció modificada
+          per dibuixar tres cases.
+        turtle_3_9: Pots tornar a crear la funció "dibuixar una casa" sense ajuda?
+          Intenta-ho, i després dibuixa una fila de cases.
+        turtle_3_10: Has après molt! Ara utilitza-ho per a dibuixar el que vulguis.
+          Intenta dibuixar una estrella, o una espiral, o un floc de neu amb un toc
+          de fantasia.
+        maze_karel_debug_seq_1: Benvingut a la correcció d'errors! El meu codi no
+          funciona bé. Pots detectar el problema i solucionar-ho per a que pugui aplanar
+          el meu camp i deixar-lo llest per a sembrar?
+        maze_karel_debug_seq_2: Què està mal en aquest programa? Com tindries que
+          solucionar-ho per a que pugui llevar aquella pila?
+        maze_karel_debug_repeat: Corregeix aquest programa per mi per a que el meu
+          camp sigui agradable i pla.
+        maze_karel_debug_while: Com hauries de canviar aquest programa per ajudar-me
+          a omplir el forat?
+        maze_karel_debug_if: Ajuda! Corregeix el programa per a que el meu camp estigui
+          completament plà.
+        maze_karel_debug_if_else: Corregeix els errors d'aquest programa per a que
+          pugui omplir els forats i llevar les piles.
+        maze_karel_debug_function_1: Que hauries que canviar d'aquest programa per
+          ajudar-me a llevar totes les piles?
+        maze_karel_debug_function_2: Podeu corregir el programa per a que pugui deixar
+          el camp pla?
+        maze_karel_debug_function_3: 'Edita aquest programa per a que pugui llevar
+          totes les piles del meu camp. '
+        turtle_5_1: Intenta executar aquest programa, i fer canvis per veure què passa.
+          Pots averiguar com funciona? (O borra'l i reemplaça'l amb algo totalment
+          diferent)
+        turtle_5_2: Intenta executar aquest programa, i fer canvis per veure què passa.
+          Pots averiguar com funciona? (O borra'l i reemplaça'l amb algo totalment
+          diferent)
+        turtle_5_3: Intenta executar aquest programa, i fer canvis per veure què passa.
+          Pots averiguar com funciona? (O borra'l i reemplaça'l amb algo totalment
+          diferent)
+        turtle_5_4: Intenta executar aquest programa, i fer canvis per veure què passa.
+          Pots averiguar com funciona? (O borra'l i reemplaça'l amb algo totalment
+          diferent)
+        turtle_5_5: Intenta executar aquest programa, i fer canvis per veure què passa.
+          Pots averiguar com funciona? (O borra'l i reemplaça'l amb algo totalment
+          diferent)
+        turtle_5_6: Intenta executar aquest programa, i fer canvis per veure què passa.
+          Pots averiguar com funciona? (O borra'l i reemplaça'l amb algo totalment
+          diferent)
+        maze_3_1: Necessito arribar a aquell porc! Escriu un parell de vegades move();
+          per a que pugui recuperar els meus ous.
+        maze_3_2: Escriu-me un programa per a que pugui fer el camí fins el porc.
+        maze_3_3: Com arribo al porc? Assegura't que no acabo executat a la caixa
+          de TNT!
+        maze_3_4: Argh! Escriu-me un programa que em porti al voltant de la TNT i
+          al porc.
+        Custom_builder: Arrossega el blocs de la caixa d'eines a l'àrea de treball
+          per a dibuixar el nivell que vulguis crear. Prem "Executa" quan estiguis
+          a punt.
+        jigsaw_1: Fés clic en el bloc
+        jigsaw_2: Arrossegueu el bloc a l'objectiu
+        jigsaw_3: Organitzar els blocs per formar la imatge
+        jigsaw_4: Organitzar els blocs per formar la imatge
+        jigsaw_5: Organitzar els blocs per formar la imatge
+        jigsaw_6: Organitzar els blocs per formar la imatge
+        jigsaw_7: Organitzar els blocs per formar la imatge
+        jigsaw_8: Organitzar els blocs per formar la imatge
+        jigsaw_9: Organitzar els blocs per formar la imatge
+        jigsaw_10: Organitzar els blocs per formar la imatge
+        jigsaw_11: Organitzar els blocs per formar la imatge
+        jigsaw_12: Organitzar els blocs per formar la imatge
+        jigsaw_13: Corregeix el trencaclosques!
+        mazestep_1: Descripció dels passos del laberint aquí
+        mazestep_2: Descripció dels passos del laberint aquí
+        mazestep_3: Descripció dels passos del laberint aquí
+        mazestep_4: Descripció dels passos del laberint aquí
+        mazestep_5: Descripció dels passos del laberint aquí
+        studio_c2_1: Pots fer que aquest gos digui "hola món"?
+        studio_c2_2: Pots fer que el gos digui alguna cosa i després ho digui el gat?
+        studio_c2_3: Pots escriure un programa per fer que el gos es mogui cap al
+          gat?
+        studio_c2_4: Pot escriure un programa que fa que el gos es mogui cap al gat,
+          i el gat digui "hola" quan el gos el toqui?
+        studio_c2_5: Pots escriure un programa per fer que el pop digui "hola" quan
+          li facis clic?
+        studio_c2_6: Pots escriure un programa per fer que aquest pingüí es mogui
+          amb les tecles amunt / avall / esquerra/dreta per colpejar tots els objectius?
+        studio_c2_7: El bloc "repetir per sempre" et permet executar el codi contínuament.
+          Pot adjuntar blocs per moure aquest dinosaure amunt i avall en repetidament?
+        studio_c2_8: Pots fer que el pingüí digui "Ai!" i reproduir un so "cop" si
+          ell corre cap al dinosaure, i llavors moure'l amb les fletxes per fer que
+          això passi?
+        studio_c2_9: Pots afegir un bloc per anotar un punt quan el pingüí corre cap
+          al polp, i llavors moure'l amb les fletxes fins que puntuïs?
+        studio_c2_10: Pots afegir blocs per canviar el fons i la velocitat del pingüí,
+          i llavors moure'l amb les fletxes fins que puntuïs?
+        studio_c2_11: Crea la teva pròpia història. Quan hagis acabat, fes clic a
+          Finalitza per fer que els teus amics provin la teva història als seus mòbils.
+        studio_c3_story_1: Pots fer que aquest gos digui "hola món"?
+        studio_c3_story_2: Pots fer que el gos digui alguna cosa i després ho digui
+          el gat?
+        studio_c3_story_3: Pots escriure un programa per fer que el gos es mogui cap
+          al gat?
+        studio_c3_story_4: Pot escriure un programa que fa que el gos es mogui cap
+          al gat, i el gat digui "hola" quan el gos el toqui?
+        studio_c3_story_5: Pots afegir un bloc per fer feliç al polp?
+        studio_c3_story_6: Crea la teva pròpia història. Quan hagis acabat, fes clic
+          a Finalitza per fer que els teus amics provin la teva història als seus
+          mòbils.
+        studio_c3_game_1: Pots escriure un programa per fer que el pop digui "hola"
+          quan li facis clic?
+        studio_c3_game_2: Pots escriure un programa per fer que aquest pingüí es mogui
+          amb les tecles amunt / avall / esquerra/dreta per colpejar tots els objectius?
+        studio_c3_game_3: El bloc "repetir per sempre" et permet executar el codi
+          contínuament. Pot adjuntar blocs per moure aquest dinosaure amunt i avall
+          en repetidament?
+        studio_c3_game_4: Pots fer que el pingüí digui "Ai!" i reproduir un so "cop"
+          si ell corre cap al dinosaure, i llavors moure'l amb les fletxes per fer
+          que això passi?
+        studio_c3_game_5: Pots afegir un bloc per anotar un punt quan el pingüí corre
+          cap al polp, i llavors moure'l amb les fletxes fins que puntuïs?
+        studio_c3_game_6: Pots afegir blocs per canviar el fons i la velocitat del
+          pingüí, i llavors moure'l amb les fletxes fins que puntuïs?
+        studio_c3_game_7: Crea el teu propi joc. Quan hagis acabat, fes clic a Finalitza
+          per fer que els teus amics provin el teu joc als seus mòbils.
+        studio_playlab_1: El pingüí vol dir "Hola" - el pots ajudar?
+        studio_playlab_2: El noi de la Cova (actor 1) i la noia de la Cova (actor
+          2) volen dir-se "hola" mútuament. Pots ajudar-los utilitzant el bloc "dir"
+          dues vegades?
+        studio_playlab_3: Pots ajudar a la tennista a arribar a la bandera?
+        studio_playlab_4: Pots ajudar al tennista (actor 1) a  trobar la tennista
+          (actor 2) i reproduir un so quan aconsegueix arribar?
+        studio_playlab_5: Pots ajudar al Robot espacial dir "salutacions terrícoles"
+          quan se li fa clic? No t'oblidis de fer-hi clic en ell després de fer clic
+          a Executar
+        studio_playlab_6: Pots ajudar a la bruixa a  moure's amb les tecles de fletxa
+          amunt/avall/dreta/esquerra per arribar a totes les boles de foc màgiques?
+        studio_playlab_7: El bloc "repetir per sempre" et permet executar codi contínuament.
+          Pots incloure-hi blocs per ajudar al mag a moure's a dreta i esquerra constantment?
+        studio_playlab_8: Pots afegir un bloc d'anotar un punt i un bloc que reprodueix
+          un so quan l'unicorn corre cap al mag i llavors moure'l amb les fletxes
+          fins que  facis punt?
+        studio_playlab_9: Fes el fons per a aquesta invasió alienígena i ajuda el
+          Robot Espacial a obtenir a l'alien més ràpid canviant la seva velocitat.
+          Llavors mou-lo amb les tecles de fletxa per arribar al Robot Espacial i
+          avisa tothom
+        studio_playlab_10: Crea el teu propi joc. Quan hagis acabat, fes clic a Finalitza
+          per fer que els teus amics provin el teu joc als seus mòbils.
+        studio_full_sandbox: Crea el teu propi joc. Quan hagis acabat, fes clic a
+          Finalitza per fer que els teus amics provin el teu joc als seus mòbils.
+        studio_k1_1: Pots fer que aquest gos digui "hola món"?
+        studio_k1_2: Pots fer que el gos digui alguna cosa i després ho digui el gat?
+        studio_k1_3: Pots escriure un programa per fer que el gos es mogui cap al
+          gat?
+        studio_k1_4: Fes que el gos es mogui cap al gat i el gat digui "hola" quan
+          el gos hi arribi.
+        studio_k1_5: Pots afegir un bloc per fer feliç al polp?
+        studio_k1_6: Creeu la vostra pròpia història! Féu que el gat i el gos es moguin
+          i que diguin coses.
+        maze_wordsearch_k_1: Mou-me per lletrejar la paraula EST
+        maze_wordsearch_k_2: Mou-me per lletrejar la paraula SUD
+        maze_wordsearch_k_3: Mou-me per lletrejar la paraula OEST
+        maze_wordsearch_k_4: Mou-me per lletrejar la paraula NORD
+        maze_wordsearch_k_6: Mou-me cap a l'Est i despres cap al Sud per lletrejar
+          la paraula SALT
+        maze_wordsearch_k_9: Mou-me en una direcció i després en una altra per  lletrejar
+          la paraula CODI
+        maze_wordsearch_k_13: Mou-me en una direcció i després en una altra per  lletrejar
+          la paraula DEPURAR
+        maze_wordsearch_k_15: Mou-me en una direcció i després en una altra per  lletrejar
+          la paraula AMUNT
+        maze_wordsearch_k_16: Mou-me en una direcció i després en una altra per  lletrejar
+          la paraula SOTA
+        maze_wordsearch_k_20: Això es una prova! Mou-me en una direcció i després
+          en una altre per lletrejar la paraula HISTÒRIA
+        applab_ec_simple: Crea la teva aplicació usant els blocs de la caixa d'eines.
+        turtle_ec_1_2: 'Ara, dibuixa un quadrat. Nota: utilitza el teu color preferit
+          agafant-lo en el nou bloc "llapisdecolor".'
+        turtle_ec_1_10: 'Ho has aconseguit! Ara dibuixa el que vulguis. Algunes idees
+          divertides: una figura de pal, un floc de neu o un espira. Prova el nou
+          bloc "ampladadellapis". Diverteix-te!'
+        studio_ec_sandbox: Crea el teu propi joc. Quan hagis acabat, fes clic a Finalitza
+          per fer que els teus amics provin el teu joc als seus mòbils.
+    video:
+      name:
+        maze_intro: Introducció al Laberint
+        artist_intro: Introducció a l'Artista
+        farmer_intro: 'Pagesa: introducció'
+        flappy_intro: 'Flappy: Introducció'
+        loop_times: Bloc Repetir Vegades
+        loop_until: Repetir Bloc Fins
+        if: Bloc Si
+        if_else: Bloc Si/Sinó
+        if_else_scrat: Bloc Si/Sinó
+        function: Funcions
+        loop_while: Bloc Mentre
+        loop_for: Bloc Comptador
+        parameters: Funcions amb Paràmetres
+        hoc_wrapup: Repàs de l'Hora del Codi
+        Unplug1: Què és CS?
+        Unplug2: Pensament computacional
+        Unplug3: Programació de paper quadriculat
+        Unplug4: Algorismes
+        Unplug5: Funcions
+        Unplug6: Condicionals
+        Unplug7: Composició de cançons
+        Unplug8: Abstracció
+        Unplug9: Programació en relleus
+        Unplug10: Internet
+        Unplug11: Recapitulació
+        C1_happy_maps_unplugged: Mapes feliços
+        C1_moveitmoveit_unplugged: Mou-lo, Mou-lo
+        C1_bigevent_unplugged: El gran esdeveniment
+        C1_getting_loopy: Fent bucles
+        C1_pair_programming: Programació per parelles
+        C1_maze_intro_sequencing: Introducció a la Seqüenciació  del Laberint
+        C1_maze_debugging: 'Laberint: Depuració'
+        C1_bee_level_intro: Introducció - Nivell Abella
+        C1_artist_intro: Introducció a l'Artista
+        C1_spelling_bee_intro: Introducció Abella deletrejant
+        C1_zuck_repeat_loop: 'Laberint: bucles'
+        C1_bee_loops: 'Abella: bucles'
+        C1_maze_loops: 'Laberint: bucles'
+        C1_playlab_storytelling: 'Play Lab: Creeu una història'
+        C1_planting_seed: Plantant una llavor
+        C1_building_foundation: Posant les bases
+        C1_going_places_safely: Anant a llocs segurs
+        C2_maze_intro: Introducció al Laberint
+        C2_artist_intro: Introducció a l'Artista
+        C2_zuck_repeat_loop: 'Laberint: bucles'
+        C2_artist_loops: 'Artista: bucles'
+        C2_artist_debugging: 'Artista: Correcció d''errors'
+        C2_bee_loops: 'Abella: bucles'
+        C2_bee_debugging: 'Abella: Correcció d''errors'
+        C2_bee_conditionals: 'Abella: Condicionals'
+        C2_playlab_createstory: 'Play Lab: Creeu una història'
+        C2_graph_paper: Programació de paper quadriculat
+        C2_conditionals_with_cards: Condicionals
+        C2_binary_bracelets: Polseres binàries
+        C2_relay_programming: Programació en relleus
+        C2_paper_airplanes: Avions de paper
+        C2_digital_footprint: La vostra empremta digital
+        C2_digital_footprint_v2: La vostra empremta digital
+        C3_maze_level_4: 'Laberint: bucles'
+        C3_artist_intro: Introducció a l'Artista
+        C3_artist_functions: 'Artista: Funcions'
+        C3_bee_functions: 'Abella: funcions'
+        C3_bee_conditionals: 'Abella: Condicionals'
+        C3_maze_conditionals: 'Laberint: els condicionals'
+        C3_artist_nested_loops: Bucles imbricats
+        C3_farmer_while: Bucles Mentres
+        C3_bee_nested_loops: Bucles imbricats
+        C3_bee_debugging: 'Abella: Correcció d''errors'
+        C3_bounce: Rebota
+        C3_playlab_create_game: 'Play Lab: Crea un joc'
+        C3_computational_thinking: Pensament computacional
+        C3_dice_race: Cursa de daus
+        C3_internet: Internet
+        C3_crowdsourcing: Col·laboració oberta
+        C3_songwriting_with_parameters: Composició de cançons Amb Paràmetres
+        C4_intro: Introducció
+        C4_loops_zombie: Bucles
+        C4_bee_conditional: 'Abella: Condicionals'
+        C4_variables_artist: Variables - Artista
+        C4_variables_playlab: Variables - Play Lab
+        C4_for_loops: Per bucles
+        C4_for_loops_bee: Per bucles
+        C4_for_loops_no_bee: Per bucles
+        C4_math_artist: Programant l'Artista amb matemàtiques
+        C4_function_edit: Editant Funcions
+        C4_function_create: Creant Funcions
+        C4_function_parameters: Funcions amb Paràmetres
+        C4_conditionals: Condicionals
+        C4_unplugged_algorithms: Algorismes amb Tangrams
+        C4_unplugged_madlibs: Biblioteques boges
+        C4_unplugged_variables: Variables en Sobres
+        C4_unplugged_forloops: Per bucles
+        C4_unplugged_parameters: Composició amb paràmetres
+        C4_unplugged_binary: Binari
+        CSF_my_robotic_friends: Els meus amics robòtics
+        frozen_intro: Introducció a l'Hora del Codi
+        frozen_loops: Introducció als bucles
+        frozen_functions: Introducció a les funcions
+        playlab_intro: Introducció a Play Lab
+        playlab_events: Esdeveniments de Play Lab
+        playlab_repeat_forever: Repetir per sempre Play Lab
+        tutorial_puzzle_challenge: Desafiament del Puzzle Tutorial
+        infinity_playlab_intro: Play Lab - introducció
+        infinity_playlab_events: Play Lab - esdeveniments
+        infinity_playlab_repeat_forever: Play Lab - repeteix per sempre
+        csp_applab_functions: Introducció a les funcions
+        csp_applab_functions_parameters: Funcions amb Paràmetres
+        csp_applab_loops: Bucles
+        starwars_intro: 'Star Wars: Construint una Galaxia amb Codi - Introducció'
+        starwars_typing: 'Star Wars: Creant una Galaxia amb Codi - JavaScript'
+        starwars_events: 'Star Wars: Creant una galaxia amb codi - Esdeveniments'
+        starwars_congrats: 'Star Wars: Creant una Galaxia amb codi - Enhorabona'
+        starwars_blocks_intro: 'Star Wars: Construint una Galaxia amb Codi - Introducció'
+        starwars_blocks_events: 'Star Wars: Creant una galaxia amb codi - Esdeveniments'
+        starwars_blocks_congrats: 'Star Wars: Creant una Galaxia amb codi - Enhorabona'
+        mc_intro: Minecraft - Introducció
+        mc_repeat: Minecraft - Repeticions
+        mc_if_statements: Minecraft - Condicionals amb si
+        mc_congrats_share: Minecraft - Enhorabona
+        mc_congrats_no_share: Minecraft - Enhorabona
+        CSF_loops_AB: Bucles
+    callout:
+      text:
+        drag_blocks: Arrossegueu un bloc "mou" i enganxeu-lo sota l'altre bloc
+        run: Fes clic a "Executa" per provar el teu programa
+        watch_again: Feu clic aquí per veure el vídeo de nou
+        gray_block_explanation: Els blocs que són de color gris no es poden esborrar.
+          Pots resoldre el puzzle de totes maneres?
+        show_code_explanation: Fe clic aquí per veure el codi del programa que estàs
+          fent
+        instructions_repeat_explanation: Les instruccions per a cada puzle es repeteixen
+          aquí
+        category_explanation: Tens tots els mateixos blocs però han estat organitzats
+          en categories
+        set_sprite_image: Uneix un bloc "Assigna actor a la imatge" al bloc "Quan
+          la història comenci" per habilitar un actor per a aquesta història
+        studio_say_text: Escriu el que vols que digui el teu actor dins d'aquestes
+          cometes
+        jigsaw_click: Feu clic en aquest bloc!
+        move_elsa_forward: Arrossega un bloc "Avança" i col·loca'l sota el bloc "Quan
+          s'executi" per fer avançar l'Elsa
+        turn_elsa: Utilitza el bloc "Gira" per fer girar l'Elsa. El valor que triem
+          en el desplegable determina quants graus girarà l'Elsa
+        replace_questions: Utilitza la llista desplegable per substituir "???" per
+          un valor
+        replace_questions_degree: Utilitza la llista desplegable per substituir "???"
+          pel nombre correcte de graus a girar
+        repeat_blocks: Utilitza el bloc "Repeteix" i fica-hi a dins els blocs en l'àrea
+          de treball
+        repeat_blocks_1: "(1) Utilitza aquest bloc i posa-ho al voltant dels blocs
+          grisos en l'àrea de treball"
+        repeat_blocks_2: (2) Mou el bloc "Repetir" aquí i posa els blocs grisos dins
+        snowflake_dropdown: Utilitza aquesta llista desplegable per crear diferents
+          flocs de neu!
+        degrees_per_side: Divideix 360 pel número de costats per obtenir la mida de
+          cada angle en graus.
+        set_sides: Utilitza aquest bloc per establir "costats" com el valor necessari
+          per completar el trencaclosques.
+        set_length: Utilitza aquest bloc per establir el valor correcte de "longitud".
+        which_equation: Quina equació fa els costats més curts per obtenir formes
+          amb més costats?
+        get_nectar: Utilitza el nou bloc "obtenir nèctar".
+        actions_category: La caixa d'eines té un nou look! Els blocs de "Accions"
+          són aquí ara.
+        draw_square_hint: 'Pista: Fes servir el el bucle del quadrat que acabes de
+          fer a l''últim puzzle.'
+        edit_function: Fes clic aquí per editar la teva funció.
+        create_function: Fes clic aquí per obrir el desplegable "Funcions", després
+          fes clic al botó "Crea una funció".
+        house_hint: Està bé si la imatge encara no es veu com una casa. Ho arreglarem
+          en el següent puzzle.
+        edit_draw_square: Fes servir aquest botó per editar la funció i afegir el
+          bucle.
+        edit_get_nectar: Fes servir aquest botó per editar la funció i canviar la
+          direcció en que l'abella ha de girar per obtenir el nèctar.
+        logic_category: Obre el desplegable "Lògica" per trobar el bloc "si/sino".
+        length_parameter: Pots actualitzar aquesta funció utilitzant el paràmetre
+          "longitud"?
+        frozen_diamond_repeat: Utilitza el bloc de repetició per crear aquesta forma.
+        frozen_circle_function_in_circle_turn: No t'oblidis de girar després de crear
+          cada cercle.
+        frozen_circle_function_with_parameter_circle: Utilitza el bloc "crear un cercle"
+          i canvia la mida.
+        frozen_snowflake_branch: Utilitza el bloc "crear una branca de floquet de
+          neu"
+        frozen_create_square: Uniu més blocs aquí per crear un quadrat
+        playlab_drag_say: Arrossegueu el bloc "dir" aquí i escriviu "Hola"
+        playlab_use_twice: Utilitzeu aquest bloc dues vegades i recordeu canviar el
+          nombre de l'actor
+        playlab_move_girl: Utilitza el bloc "mou-te a la dreta" per moure la tennista
+        playlab_play_sound: Afegeix el bloc "reprodueix un so" aquí
+        playlab_arrow_keys: Recorda utilitzar això per moure la bruixa després de
+          fer clic a Executar
+        playlab_add_move: Afegeix els blocs "mou" dins d'aquest bloc de repetició
+        playlab_add_score: Afegeix els blocs de puntuació aquí
+        playlab_add_blocks: Afegiu els blocs aquí
+        set_variable: Arrossega un bloc número aquí per definir la teva variable
+        place_variable: Arrossega la teva variable dins d'aquest bloc
+        bee_for_loop: Arrossega el major nombre de nèctar que vols que l'abella recollisca
+          aquí
+        place_counter_variable: Arrossegueu la variable comptador dins d'aquest bloc
+        function_editor_draw_square: Aquesta és la definició de funció. Aquests blocs
+          s'executen cada vegada que utilitzeu el bloc "dibuixa un quadrat"
+        change_here: Feu el canvi aquí
+        write_draw_square_function: Arrossega blocs de la caixa d'eines aquí per dibuixar
+          un quadrat
+        write_draw_triangle_function: Arrossega blocs de la caixa d'eines fins aquí
+          que dibuixin un triangle
+        edit_add_parameter: Fes clic a Edita per afegir un paràmetre a la funció
+        add_and_drag_parameter: Escriu el nom del teu paràmetre aquí, fes clic a Afegeix
+          i llavors arrossega-ho a la teva definició de funció
+        fill_in_actor: Omple els ??? amb números que corresponen a cada actor (1,
+          2 i 3)
+        repeat: Posa els blocs dins del bucle per repetir les ordres
+        if_bee_nectar: Utilitzar el bloc "si" per decidir si l'abella ha d'obtenir
+          nèctar
+        if_else_bee: Utilitzar el bloc "si/sino" per tal que l'abella aconsegueixi
+          el nèctar d'una flor, i fagi mel si no és una flor
+        repeat_full_circle: Introdueix el nombre de vegades que el zombie ha de moure's
+          fer un cercle complet
+        place_length_variable: Arrossega la variable de longitud aquí per substituir
+          els interrogants
+        arrows_move_actor: Utilitza les fletxes per moure l'actor
+        right_arrow_fireball: Utilitza la fletxa dreta per disparar boles de foc
+        name_function: Escriu el nom de la teva funció aquí
+        Infinity_move_right_runbutton: Afegeix un bloc de moviment aquí
+        Infinity_move_directions_callout: Quin bloc farà que Baymax pugi quan es premi
+          la fletxa amunt?
+        Infinity_move_directions_callout_arrow: Usa les fletxes per dirigir
+        Infinity_move_collide_callout: Reprodueix un so quan tingui lloc aquest fet.
+        Infinity_repeat_callout: Col·loca els blocs de moviment aquí dins
+        craft_run_button_callout: Fes clic a "Executa" per provar el teu programa
+        craft_drag_block_callout: Arrossega un "moveForward()"; bloc i porta'l sota
+          l'altre bloc
+        craft_callout_preplaced: Hem posat alguns blocs aquí per a que puguis començar
+        craft_inside_repeat: Repeteix accions posant blocs d'aquí
+        craft_callout_preplaced_house: Aquest codi començarà a construir la teva casa.
+          Pots acabar-lo?
+        craft_what_is_iron: Aquest ferro és meu!
+        craft_callout_moveforward: Aquest codi buscarà lava, pots afegir una ordre
+          per a seguir endavant?

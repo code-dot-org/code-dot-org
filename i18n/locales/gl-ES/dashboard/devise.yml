@@ -1,0 +1,75 @@
+gl:
+  devise:
+    confirmations:
+      confirmed: "O teu enderezo de correo electrónico foi confirmado con éxito."
+      send_instructions: "Vas receber un e-mail coas instrucións de confirmación da túa conta dentro de algúns minutos."
+      send_paranoid_instructions: "Se o teu enderezo de e-mail existe na nosa base de datos, reciberás un e-mail con instrucións sobre como confirmar a túa conta en poucos minutos."
+    failure:
+      already_authenticated: "Xa iniciaches sesión."
+      inactive: "A túa conta aínda non foi activada."
+      invalid: "O e-mail ou o contrasinal inválido."
+      invalid_token: "Token de autenticación inválido."
+      locked: "A túa conta está bloqueada."
+      not_found_in_database: "O e-mail ou o contrasinal inválido."
+      timeout: "A túa sesión expirou. Por favor, volta a iniciar sesión para continuares."
+      unauthenticated: "Tes que iniciar sesión ou crear conta antes de continuares."
+      unconfirmed: "Tes de confirmar a túa conta antes de continuar."
+    mailer:
+      confirmation_instructions:
+        subject: "Instrucións de confirmación do Code.org"
+      reset_password_instructions:
+        subject: "Instrucións de reposición do contradinal do Code.org"
+      unlock_instructions:
+        subject: "Instrucións de desbloqueo"
+    omniauth_callbacks:
+      failure: "Non foi posíbel autenticalo como %{kind} porque \"%{reason}\"."
+      success: "Autenticado con éxito coa conta %{kind}."
+    passwords:
+      no_token: "Non podes acceder a esta páxina sen teres vido de un e-mail de reposición da contrasinal. Se ves dun e-mail de reposición da contrasinal, verifica que usaches a ligazón completa."
+      send_instructions: "Vas reciber um e-mail coas instrucións de reposición do contrasinal dentro de algúns minutos."
+      send_paranoid_instructions: "Se o teu enderezo de e-mail existise na nosa base de datos, recibirás unha ligazón de recuperación de contrasinal no teu e-mail en breves minutos."
+      updated: "O teu contrasinal foi alterado e iniciaches sesión con éxito."
+      updated_not_active: "O teu contrasinal foi alterado con éxito."
+    registrations:
+      destroyed: "Adeus! A túa conta foi cancelada com éxito. Esperamos verte novamente en breve."
+      signed_up: "Benvido! Creaches a túa conta con éxito."
+      signed_up_but_inactive: "Creaches unha conta con éxito. No entanto, non podes iniciar sessión porque a túa conta ainda non foi confirmada."
+      signed_up_but_locked: "Creaches unha conta con éxito. No entanto, non podes iniciar sessión porque a túa conta está bloqueada."
+      signed_up_but_unconfirmed: "A mensaxe coa ligazón de confirmación enviouse para o teu e-mail. Por favor, clica na ligazón para activares a túa conta."
+      update_needs_confirmation: "Atualizaches a túa conta con éxito, pero precisamos verificar de novo o teu enderezo de e-mail. Por favor verifica o teu e-mail e clica no link para finalizar a confirmación do teu novo enderezo de e-mail."
+      updated: "Actualizaches a túa conta con éxito."
+    sessions:
+      signed_out: "Terminaches sesión con éxito."
+    unlocks:
+      send_instructions: "Vas reciber un e-mail coas instrucións de confirmación de como desbloquear a túa conta dentro de algúns minutos."
+      send_paranoid_instructions: "Se a túa conta existe, recebirás um e-mail com instrucións sobre como desbloqueala dentro de poucos minutos."
+      unlocked: "A tua conta foi desbloqueada con éxito. Por favor, Inscríbete para continuar."
+  errors:
+    messages:
+      already_confirmed: "xa foi confirmado, por favor, tenta entrar"
+      confirmation_period_expired: "ten que ser confirmado dentro de %{period}. Por favor, pide un novo"
+      expired: "caducou, por favor pide unha nova"
+      not_found: "non encontrado"
+      not_locked: "non foi bloqueado"
+      not_saved:
+        one: "1 erro prohibiu este %{resource} de ser salvo:"
+        other: "%{count} erros non permite que este %{resource} sexa salvo:"
+    invitations:
+      send_instructions: 'Foi enviado un convite por e-mail para %{email}.'
+      invitation_token_invalid: 'O teu convite non é válido!'
+      updated: 'O teu contrasinal foi alterado e iniciaches sesión con éxito.'
+      no_invitations_remaining: "Ningún convite restante"
+      invitation_removed: 'O teu convite foi removido.'
+      new:
+        header: "Enviar convite"
+        submit_button: "Enviar un convite"
+      edit:
+        header: "Define o teu contrasinal"
+        submit_button: "Definir contrasinal"
+    mailer:
+      invitation_instructions:
+        subject: 'Instrucións da invitación'
+        hello: 'Ola, %{email}!'
+        someone_invited_you: 'Alguén te convidou para o %{url}. Para aceptares o convite, accede á seguinte ligazón.'
+        accept: 'Aceptar convite'
+        ignore: "Se non queres aceptar o convite, ignora este e-mail.<br />A túa conta non se creará até que accedas á ligazón de enriba e metas o teu contrasinal."

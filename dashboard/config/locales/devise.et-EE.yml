@@ -1,0 +1,94 @@
+---
+et:
+  devise:
+    confirmations:
+      confirmed: Sinu meiliaadress kinnitati edukalt.
+      send_instructions: Paari minuti jooksul saad meili juhistega, kuidas oma kasutajakonto
+        kinnitada.
+      send_paranoid_instructions: Kui sinu meiliaadress on meie andmebaasis olemas,
+        saad paari minuti jooksul meili juhistega, kuidas oma konto kinnitada.
+    failure:
+      already_authenticated: Sa oled juba sisse logitud.
+      inactive: Sinu konto ei ole veel aktiveeritud.
+      invalid: Sobimatu meiliaadress või parool.
+      invalid_token: Sobimatu autentimisluba.
+      locked: Sinu konto on suletud.
+      not_found_in_database: Sobimatu meiliaadress või parool.
+      timeout: Sinu seanss on lõppenud, jätkamiseks logige sisse.
+      unauthenticated: Enne jätkamist pead sisse logima või registreeruma.
+      unconfirmed: Enne jätkamist pead oma kasutajakonto kinnitama.
+    mailer:
+      confirmation_instructions:
+        subject: Code.org-i kinnitamise juhised
+      reset_password_instructions:
+        subject: Code.org-i parooli lähtestusjuhised
+      unlock_instructions:
+        subject: Lahtilukustamise juhised
+    omniauth_callbacks:
+      failure: '%{kind} autentimine ei õnnestunud, sest "%{reason}".'
+      success: Edukalt kinnitatud %{kind} konto.
+    passwords:
+      no_token: See leht on kätte saadav ainult juhul, kui tuled parooli lähtestamise
+        meili kaudu. Kui tuled parooli lähtestamise meili kaudu, siis veendu, et kasutad
+        täielikku URLi.
+      send_instructions: Paari minuti jooksul saadetakse sulle meil parooli lähtestamise
+        juhistega.
+      send_paranoid_instructions: Kui sinu meiliaadress on meie andmebaasis olemas,
+        saadetakse sulle paari minuti jooksul meil juhistega parooli lähtestamiseks.
+      updated: Parool edukalt vahetatud. Oled sisse logitud.
+      updated_not_active: Parool edukalt vahetatud.
+    registrations:
+      destroyed: Nägemist! Kasutajakonto edukalt tühistatud. Loodame sind peatselt
+        uuesti näha.
+      signed_up: Tere tulemast! Kasutajakonto loomine õnnestus.
+      signed_up_but_inactive: Kasutajakonto edukalt loodud, kuid sisse logida me sind
+        ei saa, sest sa ei ole oma kontot veel aktiveerinud.
+      signed_up_but_locked: Kasutajakonto on loodud, kuid sisse ei ole võimalik logida,
+        sest sinu konto on lukus.
+      signed_up_but_unconfirmed: Sinu meiliaadressile on saadetud kiri kinnitamise
+        lingiga. Palun ava link, et oma konto aktiveerida.
+      update_needs_confirmation: Kasutajakonto andmed edukalt uuendatud, kuid meil
+        on vaja, et kinnitaksid oma uue meiliaadressi. Palun kontrolli oma meili ja
+        vajuta kinnituslinki, et meili uuendamine lõpule viia.
+      updated: Kasutajakonto andmed edukalt uuendatud.
+    sessions:
+      signed_out: Väljalogimine õnnestus.
+    unlocks:
+      send_instructions: Mõne minuti jooksul saadetakse sulle meil juhistega, kuidas
+        oma kasutajakonto lahti lukustada.
+      send_paranoid_instructions: Kui kasutajakonto on olemas, saadetakse sulle mõne
+        minuti jooksul meil juhistega, kuidas oma konto lahti lukustada.
+      unlocked: Kasutajakonto edukalt lahti lukustatud. Logi sisse, et jätkata.
+  errors:
+    messages:
+      already_confirmed: oli juba kinnitatud, proovi sisse logida
+      confirmation_period_expired: on vaja kinnitada %{period} jooksul, telli palun
+        uus
+      expired: on aegunud, palun telli uus
+      not_found: ei leitud
+      not_locked: ei olnud lukustatud
+      not_saved:
+        one: '1 viga keelas %{resource} salvestamast:'
+        other: "%{count} viga ei lasknud seda %{resource} salvestada:"
+    invitations:
+      send_instructions: Kutse on saadetud %{email}.
+      invitation_token_invalid: Kutse ei ole kehtiv!
+      updated: Parool on edukalt seatud. Olete nüüd sisse logitud.
+      no_invitations_remaining: Kutseid ei ole saadaval
+      invitation_removed: Sinu kutse eemaldati.
+      new:
+        header: Saada kutse
+        submit_button: Saada kutse
+      edit:
+        header: Määra oma parool
+        submit_button: Määra minu parool
+    mailer:
+      invitation_instructions:
+        subject: Kutse juhised
+        hello: Tere %{email}
+        someone_invited_you: Keegi on teid kutsunud %{url}, saad selle kinnitada alloleva
+          lingi kaudu.
+        accept: Nõustu kutsega
+        ignore: Kui sa ei taha selle kutsega nõustuda, siis ignoreeri seda meili.<br
+          />Sulle ei looda kontot, kuni pöördud allolevale lingile ja sead endale
+          parooli.

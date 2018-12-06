@@ -1,0 +1,27 @@
+da:
+  data:
+    function_names:
+      x: x
+      draw a circle: tegn en cirkel
+      draw a hexagon: tegn en sekskant
+      draw a flower: tegn en blomst
+      draw a square: tegn en firkant
+      draw a snowflake: tegn et snefnug
+      draw a tree: tegn et træ
+      draw a triangle: tegn en trekant
+      draw a house: tegn et hus
+      draw a star: tegn en stjerne
+      do something: gør noget
+      jump: hop
+      set score: sæt score
+      get nectar: hent nektar
+      test: test
+      diamond: diamant
+      move: flyt
+      move right: Flyt til højre
+      move up: Flyt op
+      move down: Flyt ned
+      move left: Flyt til venstre
+      turn left: drej til venstre
+      move forward: flyt fremad
+      turn right: drej til højre

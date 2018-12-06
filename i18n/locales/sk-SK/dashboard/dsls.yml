@@ -1,0 +1,1791 @@
+---
+en:
+  data:
+    evaluation_multi:
+      U5 evaluation q1:
+        'No': 'Nie'
+        'Yes': 'Áno'
+      U5 evaluation q2:
+        0: '? Modules in this unit are organized based on lessons that build towards a common project. Once a programming concept is introduced, we will use that again concept in later lessons. Which concept are you least familiar with?'
+        1: ': Modules in this unit are organized based on lessons that build towards a common project. Once a programming concept is introduced, we will use that again concept in later lessons. Which concept are you least familiar with?'
+        While Loops: Podmieňovacie slučky While
+    external:
+      Algo How Routers Learn Student Lesson Introduction:
+        title: nadpis
+      Algo Shortest Path Student Lesson Introduction:
+        title: nadpis
+      Basic mechanics of variables:
+        title: nadpis
+      Basic mechanics of variables_2018:
+        title: nadpis
+      Begin planning your project:
+        title: nadpis
+      'Big Picture: If-statements':
+        title: nadpis
+      'Big Picture: If-statements_2018':
+        title: nadpis
+      Boolean Expressions and Comparison Operators:
+        title: nadpis
+      Boolean Expressions and Comparison Operators_2018:
+        title: nadpis
+      CSD U1 Input Output C2:
+        title: nadpis
+      CSD U1 Input Output C3:
+        title: nadpis
+      CSD U1 Input Output C4:
+        title: nadpis
+      CSD U1 Input Output Intro:
+        title: nadpis
+      CSD U2 Design Project:
+        title: nadpis
+      CSD U2 Design Project_2018:
+        title: nadpis
+      CSD U2 L1 Overview:
+        title: nadpis
+      CSD U2 L1 Overview_2018:
+        title: nadpis
+      CSD U2 L2 Overview:
+        title: nadpis
+      CSD U2 L2 Overview_2018:
+        title: nadpis
+      CSD U2 L3 Overview:
+        title: nadpis
+      CSD U2 L3 Overview_2018:
+        title: nadpis
+      CSD U2 L4 Overview:
+        title: nadpis
+      CSD U2 L4 Overview_2018:
+        title: nadpis
+      CSD U2 L5 Overview:
+        title: nadpis
+      CSD U2 L5 Overview_2018:
+        title: nadpis
+      CSD U2 L6 Overview:
+        title: nadpis
+      CSD U2 L6 Overview_2018:
+        title: nadpis
+      CSD U2 Social Sleuth:
+        title: nadpis
+      CSD U2 expand project:
+        title: nadpis
+      CSD U2 expand project_2018:
+        title: nadpis
+      CSD U2 layout style review:
+        title: nadpis
+      CSD U2 more CSS:
+        title: nadpis
+      CSD U3 L2 Challenges:
+        title: nadpis
+      CSD U3 SFLP Sprites and Images:
+        title: nadpis
+      CSD U3 abstraction intro:
+        title: nadpis
+      CSD U3 combining rep:
+        title: nadpis
+      CSD U3 combining rep_2018:
+        title: nadpis
+      CSD U5 Encryption 1:
+        title: nadpis
+      CSD U5 Encryption 1_2018:
+        title: nadpis
+      CSD U5 L13 SFLP Interpreting Data:
+        title: nadpis
+      CSD U5 L13 SFLP Interpreting Data_2018:
+        title: nadpis
+      CSD U5 Representing Information:
+        title: nadpis
+      CSD U5 collection UPS2:
+        title: nadpis
+      CSD U5 collection ads2:
+        title: nadpis
+      CSD U5 data visualization:
+        title: nadpis
+      CSD U5 data visualization sheet:
+        title: nadpis
+      CSD U5 data visualization_2018:
+        title: nadpis
+      CSD U5 student record:
+        title: nadpis
+      CSD U5 student record_2018:
+        title: nadpis
+      CSD U5 video2:
+        title: nadpis
+      CSD-U3-SFLP Drawing:
+        title: nadpis
+      CSDU2L01 SFLP:
+        title: nadpis
+      CSP ExploreL02 SFLP:
+        title: nadpis
+      CSP Journal Entry Placeholder2:
+        title: nadpis
+      CSPStudentLessonPlanTemplate:
+        title: nadpis
+      CSPU5 Making a Multi Screen Chaser Game:
+        title: nadpis
+      CSPU5_ChoosingGoodIds:
+        title: nadpis
+      CSPU5_EventDrivenProgrammingPatterns:
+        title: nadpis
+      CSPU5_FirstTimeDesignMode:
+        title: nadpis
+      CSPU5_FirstTimeDesignMode_2018:
+        title: nadpis
+      CSPU5_HowImagesWork:
+        title: nadpis
+      CSPU5_HowOnEventWorks_v2:
+        title: nadpis
+      CSPU5_U3L14 - Message - Other ways to assign values:
+        title: nadpis
+      CSPU5_U3L14 - Message - basic mechanics of variables:
+        title: nadpis
+      CSPU5_U3L15 - explanation of IF and =v==:
+        title: nadpis
+      CSPU5_U3L15 Student Lesson Intro - new:
+        title: nadpis
+      CSPU5_U3L20 - combining And and Or explanation:
+        title: nadpis
+      CSPU5_goodbyeTurtle_setPosition:
+        title: nadpis
+      CSPU5_introToDebugging:
+        title: nadpis
+      CSPU5_makingPredictions_ref:
+        title: nadpis
+      CSPU5_onEventBreakdown:
+        title: nadpis
+      CSP_Final_instructions:
+        title: nadpis
+      CSP_U4_rawMovieData:
+        title: nadpis
+      Color Sleuth - Epilogue:
+        title: nadpis
+      Color Sleuth - Epilogue_2018:
+        title: nadpis
+      Color Sleuth - How does it end?:
+        title: nadpis
+      Color Sleuth - How does it end?_2018:
+        title: nadpis
+      Color Sleuth - How to switch player turns:
+        title: nadpis
+      Color Sleuth - How to switch player turns_2018:
+        title: nadpis
+      Color Sleuth - Keeping score:
+        title: nadpis
+      Color Sleuth - Keeping score_2018:
+        title: nadpis
+      Color Sleuth - Planning the App:
+        title: nadpis
+      Color Sleuth - Planning the App_2018:
+        title: nadpis
+      Controlling Memory - Other ways to assign values:
+        title: nadpis
+      Controlling Memory - Other ways to assign values_2018:
+        title: nadpis
+      Cups and Beans Activity:
+        title: nadpis
+      Cups and Beans Activity_2018:
+        title: nadpis
+      Debugging with Console.log:
+        title: nadpis
+      Debugging with Console.log_2018:
+        title: nadpis
+      Digital Footprint Chirpr lillizard:
+        title: nadpis
+      Digital Footprint FaceSpace Haley:
+        title: nadpis
+      Digital Footprint FaceSpace Lizzie:
+        title: nadpis
+      Digital Footprint instantframe wiz_kid_liz:
+        title: nadpis
+      DigitalCitizenship2:
+        Digital Citizenship: Digitálne Občianstvo
+      ECSPD Challenge Rubric:
+        title: nadpis
+      ECSPD Online U1D11-14:
+        title: nadpis
+      ECSPD Online U1D15-16 Forum:
+        title: nadpis
+      ECSPD Online intro:
+        Introduction: Úvod
+      ECSPD U2 Challenge Plan:
+        title: nadpis
+      ECSPD Unit 2 Stage11:
+        title: nadpis
+      ECSPD Unit 2 Stage13:
+        title: nadpis
+      ECSPD Unit 2 Stage6:
+        title: nadpis
+      Encoding Numbers Real World Student Lesson Introduction:
+        title: nadpis
+      Event Driven Programming Recap:
+        title: nadpis
+      Event Driven Programming Recap_2018:
+        title: nadpis
+      Event-Driven Programming Patterns:
+        title: nadpis
+      Event-Driven Programming Patterns_2018:
+        title: nadpis
+      External MD column Test:
+        title: nadpis
+      External MD column Test bootstrap:
+        title: nadpis
+      GoodBadVisualizations_v1:
+        title: nadpis
+      GoodBadVisualizations_v2:
+        title: nadpis
+      How "if-else-if" Works:
+        title: nadpis
+      How "if-else-if" Works_2018:
+        title: nadpis
+      How Compound Boolean Expressions Work:
+        title: nadpis
+      How Compound Boolean Expressions Work_2018:
+        title: nadpis
+      How Dropdown Menus Work:
+        title: nadpis
+      How Dropdown Menus Work_2018:
+        title: nadpis
+      How If Statements Work pt 1:
+        title: nadpis
+      How If Statements Work pt 1_2018:
+        title: nadpis
+      How If-Else Statements Work:
+        title: nadpis
+      How If-Else Statements Work_2018:
+        title: nadpis
+      How Images Work:
+        title: nadpis
+      How Images Work_2018:
+        title: nadpis
+      How Secure Is Your Password?:
+        title: nadpis
+      How Secure Is Your Password?_2018:
+        title: nadpis
+      How Set Property Works:
+        title: nadpis
+      How Set Property Works_2018:
+        title: nadpis
+      How onEvent Works:
+        title: nadpis
+      How onEvent Works_2018:
+        title: nadpis
+      How setPosition and screen dimensions work:
+        title: nadpis
+      How setPosition and screen dimensions work_2018:
+        title: nadpis
+      How the Boolean &&, || and ! Operators Work:
+        title: nadpis
+      How the Boolean &&, || and ! Operators Work_2018:
+        title: nadpis
+      How to make a random color:
+        title: nadpis
+      How to make a random color_2018:
+        title: nadpis
+      How to pick a random button:
+        title: nadpis
+      How to pick a random button_2018:
+        title: nadpis
+      Internet Simulator Setup 2:
+        title: nadpis
+      Intro to Debugging and Common Problems:
+        title: nadpis
+      Intro to Debugging and Common Problems_2018:
+        title: nadpis
+      Making Multiple Screens:
+        title: nadpis
+      Making Multiple Screens_2018:
+        title: nadpis
+      Making a Multi Screen Chaser Game v.2:
+        title: nadpis
+      Making a Multi Screen Chaser Game v.2_2018:
+        title: nadpis
+      Multi-Screen Apps:
+        title: nadpis
+      New Challenge Introduction:
+        title: nadpis
+      New Challenge Introduction_2018:
+        title: nadpis
+      OPD-K5 Stage3aGo:
+        title: nadpis
+      PDAlg Facilitator Test:
+        title: nadpis
+      PDK5 CS Video:
+        Computer Science: Počítačová veda
+      PDK5 Glossary C:
+        Vocabulary: Slovník
+      PDK5 Pair Programming 1:
+        Pair Programming: Programovanie v páre
+      PDK5 Teacher Dashboard C:
+        Teacher Dashboard: Nástenka učiteľa
+      PS - Responding to User Input:
+        title: nadpis
+      PS - draft - Longitudinal study description:
+        title: nadpis
+      Prepare for your presentation:
+        title: nadpis
+      Public Key Crypto Widget Instructions:
+        title: nadpis
+      Public Key Crypto Widget Instructions_2018:
+        title: nadpis
+      Recruitment-Scenarios-Passthrough:
+        Recruitment Scenarios Session: Lekcia pracovných pohovorov
+      Rules About Choosing Good IDs:
+        title: nadpis
+      Rules About Choosing Good IDs_2018:
+        title: nadpis
+      SG U3 whats a comment:
+        title: nadpis
+      SG v2 U3L01 Student Lesson Introduction:
+        title: nadpis
+      SG v2 U3L02 Student Lesson Introduction:
+        title: nadpis
+      SG v2 U3L03 Student Lesson Introduction:
+        title: nadpis
+      SG v2 U3L05 Student Lesson Introduction:
+        title: nadpis
+      SG v2 U3L07 Student Lesson Introduction:
+        title: nadpis
+      SG v2 U3L08 Student Lesson Introduction:
+        title: nadpis
+      Sending Bits Real World Student Lesson Introduction:
+        title: nadpis
+      Simple Decisions with if-statements:
+        title: nadpis
+      Simple Decisions with if-statements_2018:
+        title: nadpis
+      Tips For Working on Your Own:
+        title: nadpis
+      Tips For Working on Your Own_2018:
+        title: nadpis
+      U1L10 Student Lesson Introduction:
+        title: nadpis
+      U1L11 Student Lesson Introduction:
+        title: nadpis
+      U1L12 Student Lesson Introduction:
+        title: nadpis
+      U1L13 Student Lesson Summary:
+        title: nadpis
+      U1L14 Student Lesson Summary:
+        title: nadpis
+      U1L15 Student Lesson Summary:
+        title: nadpis
+      U1L17 Student Lesson Introduction:
+        title: nadpis
+      U1L2 Student Lesson Introduction:
+        title: nadpis
+      U1L3 Student Lesson Introduction:
+        title: nadpis
+      U1L4 Student Lesson Introduction:
+        title: nadpis
+      U1L5 Student Lesson Introduction:
+        title: nadpis
+      U1L6 Student Lesson Introduction:
+        title: nadpis
+      U1L7 Student Lesson Introduction:
+        title: nadpis
+      U1L8 Student Lesson Introduction:
+        title: nadpis
+      U1L9 Student Lesson Introduction:
+        title: nadpis
+      U2L1 Student Lesson Introduction:
+        title: nadpis
+      U2L12 Student Lesson Introduction:
+        title: nadpis
+      U2L7 Student Lesson Introduction:
+        title: nadpis
+      U2L8 Student Lesson Introduction:
+        title: nadpis
+      U3 whats a comment:
+        title: nadpis
+      U3 whats a comment_2018:
+        title: nadpis
+      U3L12 - Mission Unsortable:
+        title: nadpis
+      U3L13 - Explanation of Ids:
+        title: nadpis
+      U3L13 - Make a Prediction Explanation:
+        title: nadpis
+      U3L13 Add Button Instrucitons:
+        title: nadpis
+      U3L13 Add Button Instructions:
+        title: nadpis
+      U3L14 - Message - Other ways to assign values:
+        title: nadpis
+      U3L14 - Message - basic mechanics of variables:
+        title: nadpis
+      U3L14 - Student Intro Page:
+        title: nadpis
+      U3L15 - explanation of IF and =v==:
+        title: nadpis
+      U3L15 Student Lesson Intro - new:
+        title: nadpis
+      U3L19 - done with variables finally:
+        title: nadpis
+      U3L20 - combining And and Or explanation:
+        title: nadpis
+      U4 - Cleaning Data - Activity Guide:
+        title: nadpis
+      U4 - Making Data Visualizations - Bar Chart:
+        title: nadpis
+      U4 - Making Data Visualizations - Edit Chart Appearance:
+        title: nadpis
+      U4 - Making Data Visualizations - Free Play:
+        title: nadpis
+      U4 - Making Data Visualizations - Free Play_2018:
+        title: nadpis
+      U4 - Making Data Visualizations - Getting Started:
+        title: nadpis
+      U4 - Making Data Visualizations - Line Chart:
+        title: nadpis
+      U4 - Making Data Visualizations - Scatter Plot:
+        title: nadpis
+      U4 - Making Data Visualizations - Student Introduction:
+        title: nadpis
+      U4 - Privacy Abandoned - Hot On Your Trail Video:
+        title: nadpis
+      U4 - Unique Ids Explanation:
+        title: nadpis
+      U4 - Unique Ids Explanation_2018:
+        title: nadpis
+      U4 Cleaning Data Activity Guide Pt2:
+        title: nadpis
+      U4 Cleaning Data Activity Guide Pt3:
+        title: nadpis
+      U4L01 Student Lesson Introduction:
+        title: nadpis
+      U4L02 Student Lesson Introduction:
+        title: nadpis
+      U4L02 Student Lesson Introduction_2018:
+        title: nadpis
+      U4L02v2 - Finding Trends:
+        title: nadpis
+      U4L03 Student Lesson Introduction:
+        title: nadpis
+      U4L03 Student Lesson Introduction_2018:
+        title: nadpis
+      U4L03v2 - Student Introduction:
+        title: nadpis
+      U4L04 Student Lesson Introduction:
+        title: nadpis
+      U4L04 Student Lesson Introduction_2018:
+        title: nadpis
+      U4L04v2 - Student Introduction:
+        title: nadpis
+      U4L05 Student Lesson Introduction:
+        title: nadpis
+      U4L06 Student Lesson Introduction:
+        title: nadpis
+      U4L06v2 Student Lesson Introduction:
+        title: nadpis
+      U4L07 Student Introduction public key crypto:
+        title: nadpis
+      U4L07 Student Lesson Introduction:
+        title: nadpis
+      U4L08 - mod clock instructions:
+        title: nadpis
+      U4L08 Student Lesson Introduction:
+        title: nadpis
+      U4L08v2 Making Pivot Tables:
+        title: nadpis
+      U4L08v2 Making Pivot Tables Part 2:
+        title: nadpis
+      U4L08v2 Making Pivot Tables Part 3:
+        title: nadpis
+      U4L08v2 Making Pivot Tables Part 3_2018:
+        title: nadpis
+      U4L08v2 Student Intro:
+        title: nadpis
+      U4L09 Student Lesson Intro Practice PT big data dilemma:
+        title: nadpis
+      U4L09 Student Lesson Introduction:
+        title: nadpis
+      U4L10 Student Lesson Introduction:
+        title: nadpis
+      U4L11 Student Lesson Introduction:
+        title: nadpis
+      U4L12 - Student Introduction:
+        title: nadpis
+      U4L12 Student Lesson Introduction:
+        title: nadpis
+      U4L13 Student Lesson Introduction:
+        title: nadpis
+      U4L14 Student Lesson Introduction:
+        title: nadpis
+      U4L15 Student Lesson Introduction:
+        title: nadpis
+      U4L16 Student Lesson Introduction:
+        title: nadpis
+      U4L17 Student Lesson Introduction:
+        title: nadpis
+      U4L18 Student Lesson Introduction:
+        title: nadpis
+      U4L19 Student Lesson Introduction:
+        title: nadpis
+      U4L20 Student Lesson Introduction:
+        title: nadpis
+      U4L21 Student Lesson Introduction:
+        title: nadpis
+      U4L22 Student Lesson Introduction:
+        title: nadpis
+      U4L23 Student Lesson Introduction:
+        title: nadpis
+      U4L24 Student Lesson Introduction:
+        title: nadpis
+      U4L5 random subst challenge page:
+        title: nadpis
+      U5 - Create PT - Student Introduction:
+        title: nadpis
+      U5 - Create PT Prep - Student Introduction:
+        title: nadpis
+      U5 - Create PT review - Student Introduction:
+        title: nadpis
+      U5 - Explore PT - Student Introduction:
+        title: nadpis
+      U5 - Explore PT Prep - Student Introduction:
+        title: nadpis
+      U5 - Explore PT Review - Student Introduction:
+        title: nadpis
+      U5 - PT Prep - Digital Portfolio and tech setup:
+        title: nadpis
+      U5 color sleuth check correct:
+        title: nadpis
+      U5 color sleuth check correct_2018:
+        title: nadpis
+      U5L08 - Student Intro If statements:
+        title: nadpis
+      U6 - Charts - Student Introduction:
+        title: nadpis
+      U6 - Charts - Student Introduction_2018:
+        title: nadpis
+      U6 - Final Project - Student Introduction:
+        title: nadpis
+      U6 - Final Project - Student Introduction_2018:
+        title: nadpis
+      U6 - ImportExport - Student Introduction:
+        title: nadpis
+      U6 - ImportExport - Student Introduction_2018:
+        title: nadpis
+      U6 - Sample Apps - Student Introduction:
+        title: nadpis
+      U6 - Sample Apps - Student Introduction_2018:
+        title: nadpis
+      U6 - deleteRecord - Student Introduction:
+        title: nadpis
+      U6 - deleteRecord - Student Introduction_2018:
+        title: nadpis
+      U6 - updateRecord - Student Introduction:
+        title: nadpis
+      U6 - updateRecord - Student Introduction_2018:
+        title: nadpis
+      U6 AP Performance Task Tech Setup - Student Links:
+        title: nadpis
+      U6 Create PT - Complete the Task - Student Links:
+        title: nadpis
+      U6 Create PT - Complete the Task - Student Links_2018:
+        title: nadpis
+      U6 Create PT Review - Student Links:
+        title: nadpis
+      U6 Create PT Review - Student Links_2018:
+        title: nadpis
+      U6 Explore PT - Complete the Task - Student Links:
+        title: nadpis
+      U6 Explore PT - Complete the Task - Student Links_2018:
+        title: nadpis
+      U6 Explore PT - Make a Plan - Student Links:
+        title: nadpis
+      U6 Explore PT - Make a Plan - Student Links_2018:
+        title: nadpis
+      U6 Explore PT Review - Student Links:
+        title: nadpis
+      U6 Explore PT Review - Student Links_2018:
+        title: nadpis
+      Unit 2 Lesson 1 Overview Clone:
+        title: nadpis
+      Unit 4 Lesson 1 Introduction:
+        title: nadpis
+      Unit 4 Lesson 1 Introduction_2018:
+        title: nadpis
+      Unit 4 Lesson 2 Introduction:
+        title: nadpis
+      Unit 4 Lesson 2 Introduction_2018:
+        title: nadpis
+      Unit 4 Lesson 5 Introduction:
+        title: nadpis
+      Unit 4 Lesson 5 Introduction_2018:
+        title: nadpis
+      Unit 5 Lesson 1:
+        title: nadpis
+      Unit 5 Lesson 1 Introduction:
+        title: nadpis
+      Unit 5 Lesson 1 Introduction_2018:
+        title: nadpis
+      Unit 5 Lesson 10 Introduction:
+        title: nadpis
+      Unit 5 Lesson 10 Introduction_2018:
+        title: nadpis
+      Unit 5 Lesson 2 Introduction:
+        title: nadpis
+      Unit 5 Lesson 2 Introduction_2018:
+        title: nadpis
+      Unit 5 Lesson 3 Introduction:
+        title: nadpis
+      Unit 5 Lesson 3 Introduction_2018:
+        title: nadpis
+      Unit 5 Lesson 4 Introduction:
+        title: nadpis
+      Unit 5 Lesson 4 Introduction_2018:
+        title: nadpis
+      Unit 5 Lesson 5:
+        title: nadpis
+      Unit 5 Lesson 5 Introduction:
+        title: nadpis
+      Unit 5 Lesson 5 Introduction_2018:
+        title: nadpis
+      Unit 5 Lesson 6:
+        title: nadpis
+      Unit 5 Lesson 6 Introduction:
+        title: nadpis
+      Unit 5 Lesson 6 Introduction_2018:
+        title: nadpis
+      Unit 5 Lesson 7 Introduction:
+        title: nadpis
+      Unit 5 Lesson 7 Introduction_2018:
+        title: nadpis
+      Unit 5 Lesson 8 Introduction:
+        title: nadpis
+      Unit 5 Lesson 8 Introduction_2018:
+        title: nadpis
+      Unit 5 Lesson 9 Introduction:
+        title: nadpis
+      Unit 5 Lesson 9 Introduction_2018:
+        title: nadpis
+      'Worked Example: If-statements and Robot':
+        title: nadpis
+      'Worked Example: If-statements and Robot_2018':
+        title: nadpis
+      brad-repro-bug-000:
+        Brad Repro Bug 000: Brand Repro Chyba 000
+      courseB_external_MRF:
+        title: nadpis
+      courseB_external_loopMRF:
+        title: nadpis
+      courseB_story_unspottedBugs10:
+        title: nadpis
+      courseB_story_unspottedBugs11:
+        title: nadpis
+      courseB_story_unspottedBugs12:
+        title: nadpis
+      courseB_story_unspottedBugs13:
+        title: nadpis
+      courseB_story_unspottedBugs14:
+        title: nadpis
+      courseB_story_unspottedBugs15:
+        title: nadpis
+      courseB_story_unspottedBugs16:
+        title: nadpis
+      courseB_story_unspottedBugs17:
+        title: nadpis
+      courseB_story_unspottedBugs18:
+        title: nadpis
+      courseB_story_unspottedBugs2:
+        title: nadpis
+      courseB_story_unspottedBugs3:
+        title: nadpis
+      courseB_story_unspottedBugs4:
+        title: nadpis
+      courseB_story_unspottedBugs5:
+        title: nadpis
+      courseB_story_unspottedBugs6:
+        title: nadpis
+      courseB_story_unspottedBugs7:
+        title: nadpis
+      courseB_story_unspottedBugs8:
+        title: nadpis
+      courseB_story_unspottedBugs9:
+        title: nadpis
+      courseB_unplugged_mrfProgramming:
+        title: nadpis
+      courseC_screenoutthemean:
+        title: nadpis
+      courseF_firstFunctions_map:
+        title: nadpis
+      coursef_functionsSummary_map:
+        title: nadpis
+      coursef_powerofwords:
+        title: nadpis
+      csd-post-survey-unit1-preamble:
+        title: nadpis
+      csd-post-survey-unit2-preamble:
+        title: nadpis
+      csd-post-survey-unit3-preamble:
+        title: nadpis
+      csd-post-survey-unit4-preamble:
+        title: nadpis
+      csd-post-survey-unit5-preamble:
+        title: nadpis
+      csd-post-survey-unit6-preamble:
+        title: nadpis
+      csp-post-survey-2018-AP-preamble:
+        title: nadpis
+      csp-post-survey-2018-topics-preamble:
+        title: nadpis
+      csp-post-survey-2018-unit-feedback-preamble:
+        title: nadpis
+      csp-post-survey-createPT-preamble:
+        title: nadpis
+      csp-post-survey-explorePT-preamble:
+        title: nadpis
+      csp-post-survey-unit1-preamble:
+        title: nadpis
+      csp-post-survey-unit2-preamble:
+        title: nadpis
+      csp-post-survey-unit3-preamble:
+        title: nadpis
+      csp-post-survey-unit4-preamble:
+        title: nadpis
+      csp-post-survey-unit5-preamble:
+        title: nadpis
+      csp_unit5_finalassessment_overview:
+        title: nadpis
+      csp_unit5_finalassessment_overview_2018:
+        title: nadpis
+      csp_unit5_finalassessment_overview_exam_prep:
+        title: nadpis
+      csp_unit_assessment_overview:
+        title: nadpis
+      csp_unit_assessment_overview_2018:
+        title: nadpis
+      csp_unit_assessment_overview_exam_prep:
+        title: nadpis
+      dsl link test:
+        title: nadpis
+      grade2_maze_intro1:
+        title: nadpis
+      grade2_unplugged_neighborhood:
+        title: nadpis
+      grade4_project_design:
+        title: nadpis
+      grade4_project_design_image:
+        title: nadpis
+      grade4_project_presentation:
+        title: nadpis
+      grade5_project_design:
+        title: nadpis
+      grade5_project_presentation:
+        title: nadpis
+      more encryption algorithms:
+        title: nadpis
+      post-assessment survey heading4:
+        title: nadpis
+      pwc_appdev:
+        title: nadpis
+      pwc_appdevunplugged:
+        title: nadpis
+      pwc_cybersecurity:
+        title: nadpis
+      pwc_internetofthings:
+        title: nadpis
+      pwc_programming:
+        title: nadpis
+      pwc_webdevelopment:
+        title: nadpis
+      sciPD framework video:
+        Framework: Rámec
+      sciPD2Part4_S1_L3:
+        title: nadpis
+      sciPD2Part4_S2_L1:
+        title: nadpis
+      sciPD2Part4_S2_L2:
+        title: nadpis
+      sciPD2Part4_S3_L1:
+        title: nadpis
+      sciPD2Part4_S3_L2:
+        title: nadpis
+      sciPD2Part4_S3_L3:
+        title: nadpis
+      sciPD3 mods2:
+        title: nadpis
+      sciPD33 earth1:
+        title: nadpis
+      sciPD33 earth2:
+        title: nadpis
+      sciPDpart4_S1_L1:
+        title: nadpis
+      swipeRightPassThrough:
+        Recruitment Scenarios Session: Lekcia pracovných pohovorov
+      swipeRightPassThrough-test123:
+        Recruitment Scenarios Session: Lekcia pracovných pohovorov
+      test discourse level type:
+        title: nadpis
+      v2 U1 Internet is for Everyone Student Lesson Introduction:
+        title: nadpis
+      v2 U1 Internet is for Everyone Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U1L14 Student Lesson Introduction:
+        title: nadpis
+      v2 U1L14 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U1L2 Student Lesson Introduction:
+        title: nadpis
+      v2 U1L2 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U1L3 Student Lesson Introduction:
+        title: nadpis
+      v2 U1L3 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U1L4 Student Lesson Introduction:
+        title: nadpis
+      v2 U1L4 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U1L5 Student Lesson Introduction:
+        title: nadpis
+      v2 U1L5 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U1L8 Student Lesson Introduction:
+        title: nadpis
+      v2 U1L8 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L1 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L1 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L10 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L10 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L11 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L11 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L12 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L12 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L13 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L13 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L14 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L14 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L15 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L15 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L2 Student Lesson Summary:
+        title: nadpis
+      v2 U2L2 Student Lesson Summary_2018:
+        title: nadpis
+      v2 U2L3 Student Lesson Summary:
+        title: nadpis
+      v2 U2L3 Student Lesson Summary_2018:
+        title: nadpis
+      v2 U2L4 Student Lesson Summary:
+        title: nadpis
+      v2 U2L4 Student Lesson Summary_2018:
+        title: nadpis
+      v2 U2L6 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L6 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L7 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L7 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L8 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L8 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L9 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L9 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U3L04 Student Lesson Introduction:
+        title: nadpis
+      v2 U3L04 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U3L05 Student Lesson Introduction:
+        Creating Functions: Tvorba funkcií
+      v2 U3L05 Student Lesson Introduction_2018:
+        Creating Functions: Tvorba funkcií
+      v2 U4L05 Student Lesson Intro Encryption Caesar:
+        title: nadpis
+    match:
+      2-3 Maze Match 2:
+        Instructions: Inštrukcie
+      4-5 maze match 1:
+        Instructions: Inštrukcie
+      CSD U3 CSS Vocab Match:
+        '1': '1'
+        '2': '2'
+      CSD U3 keyinput match:
+        Question: Otázka
+      CSDU2 Match RGB Colors:
+        Question: Otázka
+      CSPU5_U3L14 - Matching Events to Description:
+        click: klikni
+      K-1 Maze Match 1:
+        Instructions: Inštrukcie
+      PDAlg Design Recipe Video:
+        Definition: Definícia
+      PDAlg Types Video:
+        Image: Obrázok
+        Number: Číslo
+        String: Reťazec
+      PDK5 What is unplugged:
+        Question: Otázka
+      'U2L06 - Matching: Label the Diagram':
+        A: A
+        B: B
+        C: C
+        D: D
+        E: V
+      U3L14 - Matching Events to Description:
+        click: klikni
+      U3L19 - MATCH what are values of abc:
+        '10': '10'
+        '12': '12'
+        '13': '13'
+        '15': '15'
+        '16': '16'
+        '21': '21'
+        '3': '3'
+        '5': '5'
+        '7': '7'
+        '8': '8'
+        title: nadpis
+      U3L19 - MC what are values of abc:
+        title: nadpis
+      U4L06 Create Record Id Matching Q:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      test matching image:
+        Instructions: Inštrukcie
+      test matching text:
+        blue: modrá
+      unique level name here:
+        Question: Otázka
+        title: nadpis
+0:
+1:
+  CB_Question_3:
+    A: A
+    Y: true
+  CSD Prediction Header Size:
+    Question: Otázka
+  CSD U3 Boolean MC:
+    title: nadpis
+  CSD U3 Boolean MC_2018:
+    title: nadpis
+  CSDU4 Screens Predict Multi:
+    About: O nás
+    Contact Us: Kontaktujte nás
+  'CSP U4L04 Assessment 1 ':
+    Question: Otázka
+  CSP Unit 1 Ch 1 MC binary to dec simple:
+    '0010': '0010'
+    '0101': '0101'
+    '0110': '0110'
+    '1010': '1010'
+  CSP Unit 1 Ch 1 MC binary to dec simple_2018:
+    '0010': '0010'
+    '0101': '0101'
+    '0110': '0110'
+    '1010': '1010'
+  CSP Unit 1 Ch 1 MC binary to dec simple_exam_prep:
+    '0010': '0010'
+    '0101': '0101'
+    '0110': '0110'
+    '1010': '1010'
+  CSP verify 18:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  CSPU5_predict_mc_whichOfTwoEvents:
+    title: nadpis
+  CSPU5_predict_onEvent_withWrongID:
+    Question: Otázka
+    title: nadpis
+  CommuteAssess - loops 1 - block:
+    '10': '10'
+    '18': '18'
+    '3': '3'
+    '6': '6'
+  CommuteAssess - loops 1 - block B:
+    '10': '10'
+    '18': '18'
+    '3': '3'
+    '6': '6'
+  CommuteAssess - loops 1 - block_2018:
+    '10': '10'
+    '18': '18'
+    '3': '3'
+    '6': '6'
+  CommuteAssess - loops 1 - block_exam_prep:
+    '10': '10'
+    '18': '18'
+    '3': '3'
+    '6': '6'
+  CommuteAssess - loops 2 - block:
+    '0': '0'
+    '1': '1'
+    '10': '10'
+    '5': '5'
+    11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'''
+    12: ': ''How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'''
+  CommuteAssess - loops 2 - block_2018:
+    '0': '0'
+    '1': '1'
+    '10': '10'
+    '5': '5'
+    11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'''
+    12: ': ''How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'''
+  CommuteAssess - loops 2 - block_exam_prep:
+    '0': '0'
+    '1': '1'
+    '10': '10'
+    '5': '5'
+    11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'''
+    12: ': ''How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'''
+  ECSPD2 question:
+    Question: Otázka
+    title: nadpis
+  K-1 Maze Multiple Choice 2:
+    Maze: Bludisko
+  Multi Define Funcs 1:
+    '3': '3'
+    y: true
+  Multi Define Funcs 2:
+    '3': '3'
+    y: true
+  Multi Define Funcs 3:
+    '5': '5'
+    '6': '6'
+    y: true
+  PDAlg Blocks Video:
+    Toolbox: Nástroje
+  PDAlg DR Multi 1:
+    Domain: Doména
+    Name: Meno
+    Range: Rozsah
+    0: '? The first step in the Design Recipe is to create a contract based on the word problem. Which part of this contract has the student gotten wrong?'
+    1: ': The first step in the Design Recipe is to create a contract based on the word problem. Which part of this contract has the student gotten wrong?'
+  PDAlg PreQ 1:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  PDAlg PreQ 2:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  PDAlg functional:
+    'No': 'Nie'
+  PDK5 Blockly Intro:
+    'Yes': 'Áno'
+  PDK5 Classroom Culture:
+    'Yes': 'Áno'
+  PDK5 Course Maps:
+    'Yes': 'Áno'
+  PDK5 Course Overview:
+    'Yes': 'Áno'
+  PDK5 Glossary:
+    Glossary: Slovník pojmov
+    'Yes': 'Áno'
+  PDK5 Intro:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  PDK5 Teacher Dashboard:
+    Teacher Dashboard: Nástenka učiteľa
+    'Yes': 'Áno'
+  PDK5 Test1:
+    Question: Otázka
+    title: nadpis
+  PDK5 UVideo Overview:
+    'Yes': 'Áno'
+  PDK5 Unplugged Intro:
+    'Yes': 'Áno'
+  PS U3-bakertest:
+    title: nadpis
+  SG U3L07 - MC remove line of code loops:
+    '1': '1'
+    '14': '14'
+    '5': '5'
+    '6': '6'
+    '7': '7'
+  Submittable Multi:
+    blue: modrá
+    green: zelená
+    red: červená
+  Test Contained Multi:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '4': '4'
+  U1L07 Assessment 1:
+    A: A
+    B: B
+    C: C
+    D: D
+    E: V
+  U1L6 Assessment multiple choice:
+    '10': '10'
+    '12': '12'
+    '4': '4'
+    '6': '6'
+    '8': '8'
+  U1L6 Assessment multiple choice_2018:
+    '10': '10'
+    '12': '12'
+    '4': '4'
+    '6': '6'
+    '8': '8'
+  U1L8 Multiple Choice:
+    '10': '10'
+    '13': '13'
+    '14': '14'
+    '16': '16'
+    17: '? You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
+    18: ': You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
+  U1L8 Multiple Choice_2018:
+    '10': '10'
+    '13': '13'
+    '14': '14'
+    '16': '16'
+    17: '? You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
+    18: ': You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
+  'U2L06 - MC: Which is an MST?':
+    0: ': "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
+    A: A
+    B: B
+    C: C
+    D: D
+    E: V
+  U2L08 Assessment 1:
+    '11': '11'
+    '5': '5'
+    '6': '6'
+    '8': '8'
+    '9': '9'
+  U2L13 Assessment4:
+    '26': '26'
+  U2L13 Assessment4_2018:
+    '26': '26'
+  U2L14 Assessment3:
+    'false': 'nepravda'
+    'true': 'pravda'
+  U2L19 multichoice 13 MOD 17:
+    '0': '0'
+    '13': '13'
+    '17': '17'
+    '4': '4'
+  U2L19 multichoice 13 MOD 17_2018:
+    '0': '0'
+    '13': '13'
+    '17': '17'
+    '4': '4'
+  'U2L19 mutlichoice ':
+    '0': '0'
+    '1.5': '1.5'
+    '15': '15'
+    '20': '20'
+    '5': '5'
+  U2L19 mutlichoice 20 mod 15:
+    '0': '0'
+    '1.5': '1.5'
+    '15': '15'
+    '20': '20'
+    '5': '5'
+  U2L19 mutlichoice 20 mod 15_2018:
+    '0': '0'
+    '1.5': '1.5'
+    '15': '15'
+    '20': '20'
+    '5': '5'
+  U3L07 - MC remove line of code loops:
+    '1': '1'
+    '14': '14'
+    '5': '5'
+    '6': '6'
+    '7': '7'
+  U3L07 - MC remove line of code loops_2018:
+    '1': '1'
+    '14': '14'
+    '5': '5'
+    '6': '6'
+    '7': '7'
+  U3L30 Assessment1:
+    '6': '6'
+    '7': '7'
+    '8': '8'
+  U3L30 Assessment2:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+  U3L30 Assessment3:
+    '19': '19'
+    '20': '20'
+    '21': '21'
+  U4L01 Multiple Choice:
+    right: vpravo
+  U4L02 Multiple Choice:
+    right: vpravo
+  U4L03 Multiple Choice:
+    right: vpravo
+  U4L04 Multiple Choice:
+    right: vpravo
+  U4L05 Multiple Choice:
+    right: vpravo
+  U4L06 Multiple Choice:
+    right: vpravo
+  U4L06 Reflection Q 1:
+    Question: Otázka
+    random: náhodný
+  U4L07 Multiple Choice:
+    right: vpravo
+  U4L08 Multiple Choice:
+    right: vpravo
+  U4L09 Multiple Choice:
+    right: vpravo
+  U4L10 Multiple Choice:
+    right: vpravo
+  U4L11 Multiple Choice:
+    right: vpravo
+  U4L12 Multiple Choice:
+    right: vpravo
+  U4L13 Multiple Choice:
+    right: vpravo
+  U4L14 Multiple Choice:
+    right: vpravo
+  U4L15 Multiple Choice:
+    right: vpravo
+  U4L16 Multiple Choice:
+    right: vpravo
+  U4L17 Multiple Choice:
+    right: vpravo
+  U4L18 Multiple Choice:
+    right: vpravo
+  U4L19 Multiple Choice:
+    right: vpravo
+  U4L20 Multiple Choice:
+    right: vpravo
+  U4L21 Multiple Choice:
+    right: vpravo
+  U4L22 Multiple Choice:
+    right: vpravo
+  U4L23 Multiple Choice:
+    right: vpravo
+  U4L24 Multiple Choice:
+    right: vpravo
+  U4LXX Multiple Choice:
+    right: vpravo
+  U5 assess_weight_v2:
+    Question: Otázka
+    title: nadpis
+  Warmup questions:
+    random: náhodný
+  commute assess - loops 4 - block:
+    '0': '0'
+    '1': '1'
+    '10': '10'
+    '5': '5'
+    '50': '50'
+  courseC_multi_harvester_loops11_predict1:
+    '12': '12'
+    '15': '15'
+    '4': '4'
+  courseC_multi_harvester_loops11_predict1_2018:
+    '12': '12'
+    '15': '15'
+    '4': '4'
+  courseC_multi_starWars_predict1:
+    I don't know: Neviem
+  courseC_multi_starWars_predict1_2018:
+    I don't know: Neviem
+  courseD_multi_artist_binary8_predict1:
+    A: A
+    B: B
+    C: C
+    D: D
+  courseD_multi_artist_binary8_predict1_2018:
+    A: A
+    B: B
+    C: C
+    D: D
+  courseD_multi_artist_nestedLoops9_predict1:
+    A: A
+    B: B
+    C: C
+  courseD_multi_artist_nestedLoops9_predict1_2018:
+    A: A
+    B: B
+    C: C
+  courseD_multi_bee_nestedLoops9_predict2:
+    '12': '12'
+    '4': '4'
+    '8': '8'
+    13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+    14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+    15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+    16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+  courseD_multi_bee_nestedLoops9_predict2_2018:
+    '12': '12'
+    '4': '4'
+    '8': '8'
+    13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+    14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+    15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+    16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+  courseE_multi_farmer_predict1:
+    I don't know: Neviem
+    0: '? Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    1: ': Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    2: '? The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    3: ': The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+  courseE_multi_farmer_predict1_2018:
+    I don't know: Neviem
+    0: '? Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    1: ': Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    2: '? The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    3: ': The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+  csd-post-survey-2018-topic-ai:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csd-post-survey-2018-topic-cryptocurrency:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csd-post-survey-2018-topic-cybersecurity:
+    Cybersecurity: Kybernetická bezpečnosť
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csd-post-survey-2018-topic-databases:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csd-post-survey-2018-topic-datascience:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csd-post-survey-2018-topic-gamedev:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csd-post-survey-2018-topic-hardware:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csd-post-survey-2018-topic-internet:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csd-post-survey-2018-topic-mobile:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csd-post-survey-2018-topic-parallel:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csd-post-survey-2018-topic-programming:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csd-post-survey-2018-topic-robotics:
+    'No': 'Nie'
+    Robotics: Robotika
+    'Yes': 'Áno'
+  csd-post-survey-2018-topic-web:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csp-post-survey-2017-q64:
+    0: '? ''Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '''
+    1: ': ''Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '''
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csp-post-survey-2017-q64_2018:
+    0: '? ''Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '''
+    1: ': ''Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '''
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csp-post-survey-2017-q65:
+    I don't know: Neviem
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csp-post-survey-2017-q65_2018:
+    I don't know: Neviem
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csp-post-survey-2018-topic-ai:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csp-post-survey-2018-topic-cryptocurrency:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csp-post-survey-2018-topic-cybersecurity:
+    Cybersecurity: Kybernetická bezpečnosť
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csp-post-survey-2018-topic-databases:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csp-post-survey-2018-topic-datascience:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csp-post-survey-2018-topic-gamedev:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csp-post-survey-2018-topic-hardware:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csp-post-survey-2018-topic-internet:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csp-post-survey-2018-topic-mobile:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csp-post-survey-2018-topic-parallel:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csp-post-survey-2018-topic-programming:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csp-post-survey-2018-topic-robotics:
+    'No': 'Nie'
+    Robotics: Robotika
+    'Yes': 'Áno'
+  csp-post-survey-2018-topic-web:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csp-pre-survey-2017-q40:
+    0: '? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    1: ': If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    Other: Ostatné
+  csp-pre-survey-2017-q40_2018:
+    0: '? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    1: ': If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    Other: Ostatné
+  csp_ap_exam_signup:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csp_ap_previous_years:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  csp_ap_taking_ap_class:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  cspu5_assess1_fivemore:
+    "-2": "-2"
+    '3': '3'
+    '5': '5'
+    '8': '8'
+  cspu5_assess1_fivemore_2018:
+    "-2": "-2"
+    '3': '3'
+    '5': '5'
+    '8': '8'
+  cspu5_assess1_fivemore_exam_prep:
+    "-2": "-2"
+    '3': '3'
+    '5': '5'
+    '8': '8'
+  cspu5_assess1_flowchart:
+    '10': '10'
+    '5': '5'
+  cspu5_assess1_flowchart_2018:
+    '10': '10'
+    '5': '5'
+  cspu5_assess1_flowchart_exam_prep:
+    '10': '10'
+    '5': '5'
+  cspu5_assess1_increase:
+    '10': '10'
+    '13': '13'
+    '5': '5'
+    '8': '8'
+  cspu5_assess1_increase_2018:
+    '10': '10'
+    '13': '13'
+    '5': '5'
+    '8': '8'
+  cspu5_assess1_increase_exam_prep:
+    '10': '10'
+    '13': '13'
+    '5': '5'
+    '8': '8'
+  cspu5_assess2_addstrings:
+    result: výsledok
+  cspu5_assess2_addstrings_2018:
+    result: výsledok
+  cspu5_assess2_addstrings_exam_prep:
+    result: výsledok
+  cspu5_assess2_combineString:
+    '10': '10'
+    '55': '55'
+    result: výsledok
+  cspu5_assess2_combineString_2018:
+    '10': '10'
+    '55': '55'
+    result: výsledok
+  cspu5_assess2_combineString_exam_prep:
+    '10': '10'
+    '55': '55'
+    result: výsledok
+  cspu5_assess2_oldEnough:
+    '35': '35'
+    'false': 'nepravda'
+    'true': 'pravda'
+  cspu5_assess2_oldEnough_2018:
+    '35': '35'
+    'false': 'nepravda'
+    'true': 'pravda'
+  cspu5_assess2_oldEnough_exam_prep:
+    '35': '35'
+    'false': 'nepravda'
+    'true': 'pravda'
+  cspu5_assess2_weight:
+    '125': '125'
+    '200': '200'
+    '30': '30'
+    '50': '50'
+    '75': '75'
+  cspu5_assess2_weight_2018:
+    '125': '125'
+    '200': '200'
+    '30': '30'
+    '50': '50'
+    '75': '75'
+  cspu5_assess2_weight_exam_prep:
+    '125': '125'
+    '200': '200'
+    '30': '30'
+    '50': '50'
+    '75': '75'
+  cspu5_assess3_array1:
+    '10': '10'
+    '4': '4'
+    '7': '7'
+    '9': '9'
+  cspu5_assess3_array1_2018:
+    '10': '10'
+    '4': '4'
+    '7': '7'
+    '9': '9'
+  cspu5_assess3_array1_exam_prep:
+    '10': '10'
+    '4': '4'
+    '7': '7'
+    '9': '9'
+  cspu5_assess3_array2:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_array2_2018:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_array2_exam_prep:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_array4:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '8': '8'
+  cspu5_assess3_array4_2018:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '8': '8'
+  cspu5_assess3_array4_exam_prep:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '8': '8'
+  cspu5_assess3_listAppend:
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '6': '6'
+  cspu5_assess3_listAppend_2018:
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '6': '6'
+  cspu5_assess3_listAppend_exam_prep:
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '6': '6'
+  cspu5_assess3_loopValue1:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+  cspu5_assess3_loopValue1_2018:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+  cspu5_assess3_loopValue1_exam_prep:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+  cspu5_assess3_loopValue2:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_loopValue2_2018:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_loopValue2_exam_prep:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_loopValue3:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_loopValue3_2018:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_loopValue3_exam_prep:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess4_dataReturns:
+    '10': '10'
+    '16': '16'
+    '3': '3'
+    '4': '4'
+    '9': '9'
+  cspu5_assess4_dataReturns_2018:
+    '10': '10'
+    '16': '16'
+    '3': '3'
+    '4': '4'
+    '9': '9'
+  cspu5_assess4_dataReturns_exam_prep:
+    '10': '10'
+    '16': '16'
+    '3': '3'
+    '4': '4'
+    '9': '9'
+  cspu5_assess4_listOutput:
+    '17': '17'
+    '3': '3'
+    '42': '42'
+    '9': '9'
+  cspu5_assess4_listOutput_2018:
+    '17': '17'
+    '3': '3'
+    '42': '42'
+    '9': '9'
+  cspu5_assess4_listOutput_exam_prep:
+    '17': '17'
+    '3': '3'
+    '42': '42'
+    '9': '9'
+  msm variables multi 1:
+    '15': '15'
+    x: x
+  msm variables multi 10:
+    '17': '17'
+    x: x
+  msm variables multi 11:
+    '17': '17'
+    x: x
+  msm variables multi 12:
+    '17': '17'
+    x: x
+  msm variables multi 13:
+    '117': '117'
+    '17': '17'
+    x: x
+  msm variables multi 2:
+    '8': '8'
+  msm variables multi 3:
+    '5': '5'
+    x: x
+  msm variables multi 4:
+    '15': '15'
+    '3': '3'
+    '8': '8'
+  msm variables multi 5:
+    '3': '3'
+    '5': '5'
+  msm variables multi 6:
+    '1': '1'
+    '5': '5'
+    hello: ahoj
+  msm variables multi 7:
+    '3': '3'
+    x: x
+  msm variables multi 8:
+    '3': '3'
+    x: x
+  msm variables multi 9:
+    '5': '5'
+    '6': '6'
+    x: x
+  post-assessment survey q34:
+    Easy: Jednoduchý
+    Hard: Ťažký
+  pre-assessment survey q24:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  pre-assessment survey q26:
+    0: '? Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?'
+    1: ': Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?'
+    'No': 'Nie'
+    'Yes': 'Áno'
+  pre-assessment survey q27:
+    0: '? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    1: ': If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    Other: Ostatné
+  pre-assessment survey q28:
+    '10': '10'
+    '11': '11'
+    '12': '12'
+    '8': '8'
+    '9': '9'
+    Other: Ostatné
+  pre-assessment survey q29:
+    Female: Žena
+    Male: Muž
+    Other: Ostatné
+    Prefer not to answer: Preferujem neodpovedať
+  pre-assessment survey q30:
+    Asian: Ázijská
+    Black or African American: Africká alebo Afroamerická
+    Other: Ostatné
+    Prefer not to answer: Preferujem neodpovedať
+    White: Biela
+  sarah_test_maggie:
+    Question: Otázka
+    test: test
+  sciPD PreQ 1:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  sciPD PreQ 2:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  test anonymous student survey educational:
+    'No': 'Nie'
+    'Yes': 'Áno'
+  test me:
+    Question: Otázka
+    title: nadpis
+  unique level name here:
+    Question: Otázka
+    title: nadpis
+  text_match:
+    U2L07 Assessment4:
+      '43': '43'

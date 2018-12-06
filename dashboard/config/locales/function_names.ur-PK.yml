@@ -1,0 +1,25 @@
+---
+ur:
+  data:
+    function_names:
+      x: x
+      draw a circle: ایک دائرہ بنائیں
+      draw a hexagon: ایک ھیگزاگون کا خاکہ بنائیں
+      draw a flower: ایک پھول بنائیں
+      draw a square: ایک مربع بنائیں
+      draw a snowflake: ایک سنوفلیک کا خاکہ بنائیں
+      draw a tree: ایک درخت کا خاکہ بنائیں
+      draw a triangle: ایک مثلث بنائیں
+      draw a house: ایک گھر بنائیں
+      draw a star: ایک ستارہ کا خاکہ بنائیں
+      do something: کچھ نہ کچھ کرتے ہیں
+      jump: چھلانگ لگایں
+      test: آزمانا
+      diamond: ہیرے
+      move right: دائیں چلیں
+      move up: اوپر لائیں
+      move down: نیچے لانا
+      move left: بائیں چلیں
+      turn left: بائیں طرف مڑیں
+      move forward: آگے چلیں
+      turn right: دائیں طرف مڑیں

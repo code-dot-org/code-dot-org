@@ -1,0 +1,93 @@
+az:
+  data:
+    function_names:
+      x: x
+      details: detallar
+      draw eyebrow: bir qaş çək
+      draw pupil: bir göz bəbəyi çək
+      draw a circle: çevrə çək
+      draw a car: bir avtomobil çək
+      draw square: bir kvadrat çək
+      draw a button: bir düymə çək
+      draw left leg: sol ayaq çək
+      draw right leg: sağ ayaq çək
+      draw a head: bir baş çək
+      draw head: baş çək
+      draw arms: qolları çək
+      draw O: O çək
+      draw D: D çək
+      draw E: E çək
+      big gear: böyük dişli çarx
+      small gear: kiçik dişli çarx
+      draw a hexagon: altıbucaqlı çək
+      draw a flower: gül çək
+      draw a square: kvadrat çək
+      draw a snowflake: qar dənəsi çək
+      draw 3 hexagons: 3 altıbucaqlı çək
+      draw 4 hexagons: 4 altıbucaqlı çək
+      draw 5 hexagons: 5 altıbucaqlı çək
+      get 2 nectar: 2 nektar al
+      collect purple nectar: bənövşəyi nektarı topla
+      get 5: 5 ədəd götür
+      get 7: 7 ədəd götür
+      move and get 3: hərəkət elə və 3 ədəd götür
+      draw a tree: bir ağac çək
+      draw triangle: üçbucaq çək
+      draw circle: dairə çək
+      draw goal: hədəf çək
+      graph: qrafika
+      draw waves: dalğalar çək
+      draw a wave: bir dalğa çək
+      draw a small triangle: kiçik bir üçbucaq çək
+      draw a medium triangle: orta boy bir üçbucaq çək
+      draw a large triangle: çox böyük bir üçbucaq çək
+      draw a big triangle: böyük bir üçbucaq çək
+      draw a triangle: üçbucaq çək
+      draw a house: ev çək
+      draw a star: bir ulduz çək
+      draw: çək
+      draw a shape: bir forma çək
+      drawSky: səmaÇək
+      swap: dəyişdirmək
+      dropR: buraxR
+      grabL: tutL
+      dropL: buraxL
+      init: başlat
+      grabR: tutR
+      do something: bir şey etmək
+      draw_image: şəkil_çək
+      story: hekayə
+      jump: atıl
+      patrol: patrul
+      draw lines: xətt çək
+      Draw a triangle: Bir üçbucaq çək
+      Draw a Cube: Bir Kub çək
+      draw a cube: bir kub çək
+      Draw a square: Bir kvadrat çək
+      cube: kub
+      triangle: üçbucaq
+      get 3 nectar: 3 nektar al
+      get many nectar: çoxlu nektar al
+      get nectar make honey: nektar al bal hazırla
+      set score: skoru təyin et
+      get nectar: nektarı al
+      Jump: Tullan
+      test: yoxla
+      sun: günəş
+      square: kvadrat
+      diamond: almaz
+      window: pəncərə
+      move: get
+      draw eye: göz çək
+      move right: sağa get
+      move up: yuxarı get
+      move down: aşağı get
+      move left: sola get
+      click: klik
+      booster: təkanverici
+      harvest: yığım
+      collect: topla
+      physics: fizik
+      turn left: sola dön
+      move forward: irəli get
+      turn right: sağa dön

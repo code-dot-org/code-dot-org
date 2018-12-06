@@ -1,0 +1,153 @@
+---
+tg:
+  activerecord:
+    attributes:
+      user:
+        email: Почтаи электронӣ
+        username: Номи корбар
+        password: Парол
+        password_confirmation: Тасдиқи парол
+        current_password: Пароли ҷорӣ
+        locale: Забон
+        gender: Ҷинс
+        edit_header: Таҳрир кардани тафсилоти ҳисоб
+  hello: Салом ҷаҳон
+  submit: Пешниҳод кардан
+  add_teacher_form:
+    submit: Илова кардани муаллим
+  stage: Давра
+  puzzle: Муаммо
+  trophies: Ҷомҳо
+  courses: Дарсҳо
+  of: аз
+  more: БЕШТАР
+  less: КАМТАР
+  prize: ҷоиза
+  auth:
+    signed_in: Ворид шудед!
+    facebook: Фейсбук
+  signup_form:
+    submit: Худро ба қайд гиред
+    teacher: Шумо муаллим ҳастед?
+    user_type_teacher: Муаллим
+    user_type_student: Донишҷӯ
+  school_info:
+    other: Дигар
+  signin_form:
+    login: Почтаи электронӣ
+    password: Парол
+    remember: Маро дар хотир доред
+    submit: Ворид шудан
+  signinsection:
+    login: Ворид шудан
+  password:
+    reset_form:
+      email: Суроғаи почтаи электронӣ
+      submit: Пешниҳод кардан
+    change_form:
+      title: Тағйир додани пароли худ
+      new_password: Пароли нав
+      confirm_password: Пароли навро тасдиқ кунед
+      submit: Тағйир додани пароли ман
+  welcome_email:
+    subject: Ба дарси ман ҳамроҳ шавед (дар Code.org)
+  section:
+    type:
+      email: Почтаи электронӣ
+  follower:
+    invite_sent: Даъват фиристода шуд
+    added_teacher: "%{name} ҳамчун муаллими шумо илова карда шуд"
+    error:
+      signed_in: Лутфан, пеш аз идома бароед
+      username_not_found: Номи корбари %{username} ёфт нашуд
+      username_in_use: "%{username} аллакай вуҷуд дорад, лутфан, дигареро интихоб
+        намоед"
+  crud:
+    new_model: "%{model}-и нав"
+    show: Намоиш додан
+    edit: Таҳрир кардан
+    edit_model: Таҳрир кардани %{model}
+    update: Навсозӣ кардан
+    submit: Пешниҳод кардан
+    destroy: Вайрон кардан
+    back: Бозгашт
+    confirm: Мутмаин ҳастед?
+    created: "%{model} бо муваффақият эҷод карда шуд."
+    updated: "%{model} бо муваффақият навсозӣ карда шуд."
+  nav:
+    header:
+      sign_in_to_save: Барои захира кардани муваффақият, ворид шавед
+      project_gallery: Лоиҳаҳо
+      educate_hoc: Соати рамз
+      stats: Омор
+    user:
+      label: Салом %{username}
+      settings: Ҳисоби ман
+      logout: Хориҷ шудан
+      signin: Ворид шудан
+      create: Сохтан
+    popup:
+      progress: Муваффақияти шумо
+      lines: 'Хатҳои умумии рамз: %{lines}'
+      close: ПӮШИДАН
+      puzzle_map: Давраҳо
+      prizes_link: маълумоти бештар
+  teacher:
+    title:
+      other: 'Муаллимони шумо:'
+    panel:
+      student: Донишҷӯ
+  user:
+    new_password_hint: "(агар нахоҳед, ки онро тағйир диҳед, холӣ монед)"
+  home:
+    online: онлайн
+    view_course: Намоиш додани дарс
+    announcement_title: Эълонҳо
+    announcement_learn_more_button: Маълумоти бештар
+  gender:
+    male: Мард
+    female: Зан
+  user_type:
+    student: Донишҷӯ
+    teacher: Муаллим
+  footer:
+    feedback: Таъмини изҳори назар
+    support: Дастгирӣ
+  reference_area:
+    title: Кумак лозим аст?
+  compatibility:
+    upgrade:
+      link: Маълумоти бештар
+  race_interstitial:
+    races:
+      other: Дигар
+    submit: Пешниҳод кардан
+    decline: Пӯшидан
+  project:
+    projects: Лоиҳаҳо
+    create: Эҷод кардани лоиҳа
+    new: Эҷод кардани нав
+    rename: Иваз кардани ном
+    exit: Бозгашт ба дарс
+    my_projects: Лоиҳаи ман
+    project_gallery: Лоиҳаҳо
+    share_title: Лоиҳаи худро мубодила кунед
+    share_copy_link: 'Нусхабардории пайванд:'
+    close: Пӯшидан
+    name: Ном
+    updated: Навсозӣ шуд
+    project_type: Навъи лоиҳа
+    really_delete: Нест мекунед?
+    abuse:
+      report_abuse_form:
+        abuse_type:
+          other: Дигар
+  pd:
+    form_labels:
+      email: Почтаи электронӣ
+    form_entries:
+      gender:
+        male: Мард
+        female: Зан
+  cookie_banner:
+    accept: Ман розӣ ҳастам

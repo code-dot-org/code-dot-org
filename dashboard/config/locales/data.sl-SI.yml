@@ -1,0 +1,545 @@
+---
+sl:
+  data:
+    game:
+      name:
+        Unplug1: Uvod v računalništvo
+        Maze: Labirint
+        Multi: Možnih je več odgovorov
+        Unplug2: Računalniško razmišljanje
+        Unplug3: Obarvajmo kvadratke
+        Artist: Umetnik
+        Unplug4: Algoritmi
+        Artist2: Umetnik 2
+        Unplug5: Funkcije
+        Farmer: Kmetovanje
+        Unplug6: Pogoji
+        Artist3: Umetnik 3
+        Unplug7: Pisanje pesmi
+        Farmer2: Kmetovanje 2
+        Unplug8: Abstrakcija
+        Artist4: Umetnik 4
+        Unplug9: Relejsko programiranje
+        Farmer3: Kmetovanje 3
+        Unplug10: Internet
+        Artist5: Umetnik 5
+        Unplug11: Povzetek
+        MazeEC: Labirint
+        Bounce: Skokica
+        Flappy: Plahutač (Flappy)
+        Jigsaw: Sestavljanka
+        MazeStep: Vključi labirint
+        Wordsearch: Besedne igre
+        ArtistEC: Umetnik
+        TextMatch: Poveži besede
+        StudioEC: Play Lab
+        Custom: Umetnik
+        CustomStudio: Play Lab
+    trophy:
+      name:
+        Bronze: Bronasta
+        Silver: Srebrna
+        Gold: Zlata
+    concept:
+      description:
+        sequence: Zaporedje
+        if: Če (if) blok
+        if_else: Če-sicer blok
+        loop_times: Ponovi
+        loop_until: Ponavljaj dokler ne velja
+        loop_while: Dokler velja
+        loop_for: Števec
+        function: Funkcije
+        parameters: Funkcije s parametri
+    level:
+      instructions:
+        maze_2_2: Mi pomagaš ujeti prašička? Poskusi z večimi ukazi "Premakni se",
+          da me premakneš v smeri prašička in klikni "Zaženi".
+        maze_2_1: Ta prašiček mi kodra perje. Pomagaj mi ga najti!
+        maze_2_2_5: Najdi pot do prašička in me popelji po njej. Izogni se TNTju,
+          sicer bo perje frčalo!
+        maze_2_3: Pelji me k tej zeleni zlobi! (Pazi se TNTja)
+        maze_2_4: Ostani miren in mi pomagaj najti slabega prašička. Sicer se lahko
+          zelo razjezim!
+        maze_2_5: Obstaja način, ki me do neumnega prašička pripelje z uporabo zgolj
+          dveh (2) blokov. Ti ga uspe najti?
+        maze_2_6: Poizkusi me pripeljati do zelenega vsiljivca z uporabo zgolj treh
+          blokov.
+        maze_2_7: Uporabi čim manj ukazov, da me pripelješ do prašička. Pomagaj si
+          tako, da uporabiš blok "Ponovi" in to večkrat.
+        maze_2_8: 'Ko je blok siv, ga ne moreš izbrisati. Namig: uporabi število tri
+          v bloku "Ponovi". Vnesi v sivi blok naslednje ukaze: premakni se, premakni
+          se, obrni se.'
+        maze_2_9: Ok, vidiš nov ukaz "Ponavljaj dokler"? Uporabljaj ta ukaz - dokler
+          ne dosežem prašička.
+        maze_2_10: Poskusi še zadnjič ali lahko to rešiš s samo štirimi bloki?
+        maze_2_11: Draga oseba. Jaz zombi. Jaz lačen. Moram... najti... sončnico...
+          Ti mene spraviti tja... s samo pet bloki?
+        maze_2_12: Ja, skoraj ti je uspelo, a poskusi še malo drugače. Bi šlo le s
+          petimi bloki?
+        maze_2_13: 'Pomagaj mi ugotoviti kdaj naj zavijem. Vidiš blok, na katerem
+          piše "če (if) blok"? Uporabi ga. Namig: dodaj še en blok. Naslednjič ti
+          bo uspelo tudi brez namiga.'
+        maze_2_14: Ok, podobno je prejšnji uganki. Se spomniš, kako si uporabil/a
+          ukaz "če (if) blok" in ukaz "ponovi"...?
+        maze_2_15: Jaz... sončnico... hočem! (Pomagaj si z uporabo ukaza "če (if)
+          blok" in uporabi čim manj ukazov).
+        maze_2_16: Pa še to, za vajo. Ne bo zelo drugače kot v prejšnji vaji. Le pazi
+          se, da te Žvečko ne dobi!
+        maze_2_17: Bloki "če-sicer" preverijo pogoj in nato naredi eno stvar ali drugo.
+          Uporabi ta nov blok in me pripelji do sončnice.
+        maze_2_18: |-
+          Še ena vaja za "če drugo" kocko. Ti lahko
+          uspe že v prvem poskusu?
+        maze_2_19: Poskusi uporabiti še tri dodatne bloke in ta zapletenejši labirint
+          ne bo več težava. Če jih prav sestaviš, lahko prehodim vse ovinke in vse
+          razdalje.
+        turtle_1_1: Živjo, sem umetnica in s pomočjo tvojih blokov lahko rišem zelo
+          različne like. Vidiš sive črte po katerih se moram zadrsati? Uporabite nekaj
+          blokov, da bom lahko drsala po črtah.
+        turtle_1_2: 'Zdaj pa poskusi narisati kvadrat. Svojo najljubšo barvo lahko
+          izbireš z ukazom: "izberi barvo pisala" (ang.: "pick color").'
+        turtle_1_3: Nariši kvadrat z uporabo le treh blokov.
+        turtle_1_4: 'Nariši trikotnik s stranicami različnih barv. Uporabi možnost
+          izbire naključne barve. Pomoč: za koliko se obrniti na koncu stranice, boš
+          izvedel/a s poskušanjem različnih številke v bloku: "Obrni se".'
+        turtle_1_5: Zdaj, za vajo, nariši trikotnik in nato kvadrat za ovojnico.
+        turtle_1_6: 'Ugotovi, kako narisati trikotnik in kvadrat. Pomoč: najprej nariši
+          trikotnik, nato pa ugotovi za koliko se je treba obrniti (zasukati) preden
+          narišeš kvadrat.'
+        turtle_1_7: 'Ok, poskusimo nekaj zapletenejšega: ali lahko narišeš taka zelena
+          očala? Kvadrata sta narazen za 50 pik in imata vsak po 100 pik dolge stranice.
+          Barvo pisala nastavi na zeleno!'
+        turtle_1_8: Če večkrat zaženeš ta program (klikni "Zaženi"), se zgodi nekaj
+          zanimivega. Poskusi tolikokrat, da boš dokončal/a risbo. Barve bodo vsakič
+          drugačne.
+        turtle_1_9: Ali lahko ugotoviš s katerimi številkami namesto vprašajev bo
+          program narisal krog?
+        turtle_1_10: 'Uspelo ti je! Zdaj lahko narišeš, kar želiš. Nekaj idej: možic,
+          snežinka ali spirala. Pri tem lahko uporabiš tudi blok "nastavi širino".
+          Veliko zabave!'
+        turtle_4_1: 'Izziv: ali lahko uporabiš le tri bloke, da z njimi narišeš trikotnik
+          (z dolžino stranic 100 pik)? Namig: uporabi blok: "ponavljaj".'
+        turtle_4_2: Če želiš narisati te trikotnike, dodaj blok "obrni se desno za
+          90 stopinj" v svoj program.
+        turtle_4_3: Ok, s tem programom je nastal en trikotnik. Kaj pa, če uporabiš
+          bloka "ponavljaj" in  "obrni se" - ter tako narišeš ljubko cvetlico?
+        turtle_4_4: 'Ta program je podoben kot v prejšnji nalogi, le da, ko nariše
+          posamezen trikotnik, naredi obrat za 36 stopinj. Koliko ponovitev je potrebnih
+          tokrat? (Namig: po 360 stopinjah si se obrnil kolikor je bilo potrebno za
+          to nalogo)'
+        turtle_4_5: 'Ta program je podoben kot v prejšnji nalogi, le da skupno naredi
+          36 obratov. Koliko stopinj je torej dolg posamezen obrat? (Namig: po 360
+          stopinjah si se obrnil kolikor je bilo potrebno za to nalogo)'
+        turtle_4_6: Poskusi narisati kvadrat s stranicami po 20 pik z uporabo le 3
+          blokov. Bo šlo?
+        turtle_4_7: 'Tu je koda iz prejšnje naloge. Jo lahko ponoviš, da bo narisala
+          10 kvadratov enega poleg drugega, da bo videti kot lestev? Namig: potrebuješ
+          le dva dodatna bloka.'
+        turtle_4_8: Tukaj je rešitev prejšnje uganke. Ali lahko dodaš dva bloka, da
+          bo risba dokončana?
+        turtle_4_9: Tukaj je rešitev prejšnje uganke. Za koliko stopinj se je treba
+          obrniti, da je risba dokončana? (Najbrž boš moral/a nekajkrat ugibati)
+        turtle_4_10: Tukaj je rešitev prejšnje uganke. Koliko ponovitev je potrebnih,
+          da bo risba končana?
+        turtle_4_11: Poskusi spremeniti številke v blokih za obračanje in ponavljanje,
+          da bodo nastali različni vzorci. Poskusi kaj nastane, če v kodi spremeniš
+          še kaj drugega.
+        maze_karel_1_1: Pozdravljeni! Sem kmetica, ki zate prideluje hrano in potrebujem
+          tvojo pomoč. Na kmetiji je potrebno zravnati polja in jih pripraviti za
+          sajenje. Premakni me, prosim, h kupu zemlje in uporabi blok "odstrani",
+          da ga ne bo več.
+        maze_karel_1_2: 'Nato me premakni k luknji in jo napolni z dvema lopatama
+          zemlje. Namig: uporabi blok "zapolni".'
+        maze_karel_1_3: Poskusi uporabiti čim manj blokov, da me najprej premakneš
+          k kupu zemlje in narediš tako, da kupa ne bo več.
+        maze_karel_1_4: 'Mi lahko pomagaš odstraniti vse štiri kupe umazanije? Namig:
+          uporabi ponovitveni blok, če ga lahko.'
+        maze_karel_1_5: 'Pomagaj mi zapolniti vse te luknje, v vsako luknjo stresi
+          5 lopat zemlje. Namig: uporabi blok "dokler" in vanj povleci blok "ponavljaj".'
+        maze_karel_1_6: 'Odstrani vse kupe zemlje z uporabo čim manj blokov. Pomoč:
+          uporabi blok "dokler" in v spustnem seznamu izberi možnost, ki pove ali
+          stojim na kupu ali na luknji.'
+        maze_karel_1_7: O, kako globoka je ta luknja! Le koliko lopat zemlje bo potrebnih.
+          Poskusi sestaviti program, ki mu tega ni treba vedeti, saj bo polnil luknjo
+          vse dokler ne bo zemlje do tal.
+        maze_karel_1_8: Pomagaj mi s čim manj bloki napolniti luknjo na koncu polja.
+        maze_karel_1_9: 'Vse te kupe zemlje je treba poravnati. Poskusi uporabiti
+          čim manj blokov. Namig: uporabi blok "dokler".'
+        maze_karel_1_10: 'Pozno je in zunaj je že tema, zato ne vidim kako veliki
+          so kupi zemlje. Ali ti bo uspelo rešiti uganko brez bloka "dokler"? Namig:
+          premikaj me po polju, in če obstaja kup, ga odstrani.'
+        maze_karel_1_11: 'Še vedno je mrak. Premikaj me po polju. Če naletim na kup,
+          ga odstrani, in če naletim na luknjo, jo napolni. Namig: v bloku "če (if)"
+          uporabi spustni seznam z možnostmi.'
+        turtle_2_1: 'Živ''. Jaz zombi-umetnik. Jaz rad risati! Jaz narisati kvadrat
+          s posebno barvo. Pomembna opomba: na voljo imaš iste bloke, le da so zdaj
+          razvrščeni v kategorije.'
+        turtle_2_2: S funkcijami lahko zdaj ustvariš čisto svoje bloke! Poglej v kategorijo
+          "Funkcije", kjer imaš zdaj na voljo nov blok "nariši kvadrat".  Narisal
+          bo zelen kvadrat s stranicami 50 x 50 pik.
+        turtle_2_3: Uporabi kocko "ponovi" (v kategoriji "zanke") za risanje treh
+          kvadratov velikosti 100, 120 stopinj narazen. To naredi v treh različnih,
+          naključnih, barvah.
+        turtle_2_4: 'Stedaj bomo postali posebni. Spremeni kodo tako, da bo narisala
+          36 kvadratov z širino 100 in 10 stopinj narazen. Namig: Uporabi drsnik in
+          me nastavi na višjo hitrost.'
+        turtle_2_5: Nariši kvadrate z stranicami velikosti 50, 60, 70, 80 in 90 slikovnih
+          točk (pixel). Funkcijo "nariši kvadrat" bo potrebno uporabiti pet-krat.
+        turtle_2_6: 'Ta program bo uporabil števec za risanje enakih kvadratov kot
+          prejšnjič. Želimo, da je kvadrat iste velikosti kot števec, zato uporabi
+          kocko "števec." Namig: Nahaja se v kategoriji "spremenljivke."'
+        turtle_2_7: Tukaj je program, ki nariše spiralo, a kocke so onemogočene zato
+          ne bodo delovale. Naredi nov program in uporabi kocko "štej z" (v kategoriji
+          "Zanke") in kocko "Števec" (v kategoriji "Spremenljivke"), ki bo narisal
+          enako spiralo.
+        turtle_2_7_5: Obstaja nova funkcija "nariši snežaka" (v kategoriji "Funkcije").
+          Nariši dva smežaka, ki bosta visoka 250 in 100.
+        turtle_2_8: Ta je malce zagonetna. Uporabi funkcij "nariši snežaka" in novi
+          blok "skoči naprej" (v kategoriji Dejanja). Nariši 3 snežake z različnimi
+          barvami 100 pik narazen.
+        turtle_2_9: Uporabi zanko "štej z" in nariši družino snežakov višin 110, 100,
+          90, 80, in 70. Snežaki naj bodo 60 pik narazen.
+        turtle_2_10: Tukaj je nekaj kode za eksperimentiranje z različnimi spiralami.  Kaj
+          se zgodi, če spremeniš velikost obrata? Ali pa nastavi naključno barvo v
+          zanki?  Nariši, karkoli, kar ti je všeč.
+        maze_karel_2_1: 'Z uporabo blokov mi pomagaj odstraniti vse kupe in zapolniti
+          vse luknje na terenu. Poskusi uporabiti zanke namesto, da uporabiš preveč
+          blokov. Namig: zanko lahko postaviš tudi znotraj druge zanke.'
+        maze_karel_2_2: Definirali smo lastni blok imenovan "napolni 5", ki je zdaj
+          v kategoriji funkcij. Uporabi ga in mi pomagaj zapolniti to luknjo.
+        maze_karel_2_3: Uporabi nov funkcijski blok "napolni 5" in mi zapolni vse
+          luknje. Blok "napolni 5" moraš povleci iz kategorije Funkcije.
+        maze_karel_2_4: Definiraj novo funkcijo, ki odstrani 7 lopat. Nato jo uporabi
+          v programu,  ki mi bo pomagal odstraniti vsi kupe.
+        maze_karel_2_5: Ustvari novo funkcijo, ki odstrani 6 lopat iz kupa, in jo
+          uporabi, da mi pomagaš zravnati vse kupe.
+        maze_karel_2_6: Uporabi dve novi funkciji "napolni 8" in "odstrani 8" in mi
+          pomagaj zravnati kupe in zapolniti luknje.
+        maze_karel_2_7: Na mojem polju je krava! Napiši novo funkcijo, ki mi pomaga,
+          da se izognem kravi in odstranim kup. Daj vse bloke v novo funkcijo.
+        maze_karel_2_8: S to novo funkcijo, "izogni se kravi in odstrani 1" mi pomagaj
+          odstraniti vse kupe.
+        maze_karel_2_9: Ok, tukaj je funkcija, ki odstrani 4 različne kupe zemlje
+          v navpičnem stolpcu. Poskusi postaviti to funkcijo znotraj zanke, tako da
+          lahko odstraniš vse kupe z uporabo le nekaj novih blokov.
+        maze_karel_2_10: Premakni me čez polje in uporabi ti dve funkciji in mi pomagaj
+          odstraniti vse kupe in zapolnite vse luknje.
+        turtle_3_1: Te uganka ti pokaže, kako so definirane funkcije "nariši kvadrat"
+          in "nariši krog".  Če samo definiraš funkcijo, se njeni bloki ne izvedejo.  Če
+          hočeš narisati kvadrat, moraš povleci blok "nariši kvadrat".
+        turtle_3_2: Vzemi funkcijo "nariši kvadrat" za primer in ustvari funkcijo
+          "nariši trikotnik" in jo uporabi.
+        turtle_3_3: 'Nariši trikotne ograje okoli mačke in kvadratno ograjo okoli
+          krave.  Namig: preizkušaj program sproti, ko napreduješ.'
+        turtle_3_4: Ali lahko ugotoviš, kako uporabljati "nariši kvadrat" in "nariši
+          trikotnik" (in nekatere druge bloke), da narišeš hišo okoli leva.
+        turtle_3_5: 'Napiši še funkcijo "nariši hišo". Pomoč: ustvarite novo funkcijo
+          z uporabo ukaza "Naredi nekaj" (angl.: "do something") in vnesite besedilo
+          za ime novega bloka.'
+        turtle_3_6: 'Zgleduj se po bloku "nariši kvadrat" in dodaj "dolžino" v ukaz
+          "nariši trikotnik", da boš lahko risal/a trikotnike s stranicami različnih
+          dolžin. Pomoč: če klikneš zvezdico, lahko dodaš vnos "dolžine" v funkcijo'
+        turtle_3_7: V funkcijo "nariši hišo" dodaj "dolžino" in zgradi bivališče za
+          slona (s stranicami dolžine 150 pik)
+        turtle_3_9: Lahko še enkrat narediš funkcijo »nariši hišo« brez pomoči? Poskusi
+          in nato nariši vrsto hiš.
+        turtle_3_10: Zdaj imaš že kar nekaj znanja! Uporabi ga in nariši nekaj novega.
+          Poskusi narisati zvezdo, spiralo ali snežinko.
+        maze_karel_debug_seq_1: Bodi detektiv! V tej kodi se skriva napaka. Najdi
+          jo. Če jo odpraviš, bo moja njiva lepo zravnana in pripravljena na sajenje.
+        maze_karel_debug_seq_2: Ali lahko najdeš napako? Kako jo popraviti, da kupa
+          zemlje ne bo več?
+        maze_karel_debug_repeat: Razhrošči (najdi napako/"hrošča" in jo odpravi),
+          da bo moja njiva lepo zravnana.
+        maze_karel_debug_while: Kako bi spremenil/a program, da bi se luknjo napolnila
+          z zemljo?
+        maze_karel_debug_if: Na pomoč! Popravi program, da se bo moja njiva zravnala.
+        maze_karel_debug_if_else: Razhrošči (najdi napako/"hrošča" in jo odpravi),
+          da bodo luknje v zemlji zapolnjene in kupi odstranjeni.
+        maze_karel_debug_function_1: Kaj je potrebno spremeniti v programu, da bo
+          kupe zemlje lepo odstranil?
+        maze_karel_debug_function_2: Ali lahko poskusiš razhroščiti ta program, da
+          bo moja njiva lepo zravnana?
+        maze_karel_debug_function_3: Popravi ta program, da se bodo odstranili kupi
+          na moji njivi.
+        turtle_5_1: Zaženi program ter preveri kaj se dogaja, če ga spreminjaš. Poskusi
+          ugotoviti kako deluje? (Lahko ga tudi povsem zbrišeš in nadomestiš s povsem
+          drugačnim)
+        turtle_5_2: Zaženi program ter preveri kaj se dogaja, če ga spreminjaš. Poskusi
+          ugotoviti kako deluje? (Lahko ga tudi povsem zbrišeš in nadomestiš s povsem
+          drugačnim)
+        turtle_5_3: Zaženi program ter preveri kaj se dogaja, če ga spreminjaš. Poskusi
+          ugotoviti kako deluje? (Lahko ga tudi povsem zbrišeš in nadomestiš s povsem
+          drugačnim)
+        turtle_5_4: Zaženi program ter preveri kaj se dogaja, če ga spreminjaš. Poskusi
+          ugotoviti kako deluje? (Lahko ga tudi povsem zbrišeš in nadomestiš s povsem
+          drugačnim)
+        turtle_5_5: Zaženi program ter preveri kaj se dogaja, če ga spreminjaš. Poskusi
+          ugotoviti kako deluje? (Lahko ga tudi povsem zbrišeš in nadomestiš s povsem
+          drugačnim)
+        turtle_5_6: Zaženi program ter preveri kaj se dogaja, če ga spreminjaš. Poskusi
+          ugotoviti kako deluje? (Lahko ga tudi povsem zbrišeš in nadomestiš s povsem
+          drugačnim)
+        maze_3_1: Hočem priti do prašiča! Nekajkrat pokliči funkcijo move(); ter mi
+          omogoči, da pridem do jajc, ki mi jih je ukradel.
+        maze_3_2: Napiši mi program, da bom dosegel prašiča.
+        maze_3_3: Kako naj pridem do prašiča? Izogni se TNT razstrelivu!
+        maze_3_4: Grrr! Napiši mi program, ki me popelje mimo TNT in k prašiču.
+        jigsaw_2: Povleci blok do cilja
+        jigsaw_3: Uredi bloke tako, da tvorijo sliko
+        jigsaw_4: Uredi bloke tako, da tvorijo sliko
+        jigsaw_5: Uredi bloke tako, da tvorijo sliko
+        jigsaw_6: Uredi bloke tako, da tvorijo sliko
+        jigsaw_7: Uredi bloke tako, da tvorijo sliko
+        jigsaw_8: Uredi bloke tako, da tvorijo sliko
+        jigsaw_9: Uredi bloke tako, da tvorijo sliko
+        jigsaw_10: Uredi bloke tako, da tvorijo sliko
+        jigsaw_11: Uredi bloke tako, da tvorijo sliko
+        jigsaw_12: Uredi bloke tako, da tvorijo sliko
+        jigsaw_13: Popraviti sestavljanko!
+        studio_c2_1: Lahko narediš, da bo pes rekel "Pozdravljen, svet"?
+        studio_c2_2: Lahko narediš, da bo pes nekaj rekel, potem pa bo mačka rekla
+          nekaj nazaj?
+        studio_c2_3: Lahko napišeš program tako, da se bo pes premaknil do mačke?
+        studio_c2_4: Lahko napišeš program, da se bo pes premaknil k mački, mačka
+          pa bo rekla "zdravo", ko bo pes prišel do nje?
+        studio_c2_5: Lahko napišeš program, da bo hobotnica rekla "zdravo", ko jo
+          klikneš?
+        studio_c2_6: Lahko napišeš program, ki bo pingvinu omogočal, da se premika
+          z uporabo gumbov gor / dol / levo / desno, da bi prišel do vseh ciljev?
+        studio_c2_7: Blok "ponavljaj neskončno" ti omogoča, da izvajaš kodo ponavljajoče.
+          Ali lahko dodaš bloke tako, da se bo dinozaver premikal gor in dol ponavljajoče?
+        studio_c2_8: Lahko narediš, da bo pingvin rekel "Avč" in se bo predvajal zvok
+          "udarec", če se zaleti v dinozavra? Nato premikaj dinozavra s pomočjo puščic,
+          da se bo to zgodilo.
+        studio_c2_9: Lahko dodaš blok za dodajanje točk kadar pingvin naleti na hobotnico,
+          potem pa ga premikaš s pomočjo tipk s puščicami, dokler ne dobiš točke?
+        studio_c2_10: Lahko dodaš blok, da spremeniš ozadje in hitrost pingvina, nato
+          pa ga premikaš s pomočjo tipk s puščicami dokler ne dobiš točke?
+        studio_c2_11: Ustvari svojo zgodbo. Ko končaš, klikni Končaj, da omogočiš
+          prijateljem, da preizkusijo tvojo igrico na svojih telefonih.
+        studio_c3_story_1: Lahko narediš, da bo pes rekel "Pozdravljen, svet"?
+        studio_c3_story_2: Lahko narediš, da bo pes nekaj rekel, potem pa bo mačka
+          rekla nekaj nazaj?
+        studio_c3_story_3: Lahko napišeš program tako, da se bo pes premaknil do mačke?
+        studio_c3_story_4: Lahko napišeš program, da se bo pes premaknil k mački,
+          mačka pa bo rekla "zdravo", ko bo pes prišel do nje?
+        studio_c3_story_5: Lahko dodaš blok, da narediš hobotnico srečno?
+        studio_c3_story_6: Ustvari svojo zgodbo. Ko končaš, klikni Končaj, da omogočiš
+          prijateljem, da preizkusijo tvojo igrico na svojih telefonih.
+        studio_c3_game_1: Lahko napišeš program, da bo hobotnica rekla "zdravo", ko
+          jo klikneš?
+        studio_c3_game_2: Lahko napišeš program, ki bo pingvinu omogočal, da se premika
+          z uporabo gumbov gor / dol / levo / desno, da bi prišel do vseh ciljev?
+        studio_c3_game_3: Blok "ponavljaj neskončno" ti omogoča, da izvajaš kodo ponavljajoče.
+          Ali lahko dodaš bloke tako, da se bo dinozaver premikal gor in dol ponavljajoče?
+        studio_c3_game_4: Lahko narediš, da bo pingvin rekel "Avč" in se bo predvajal
+          zvok "udarec", če se zaleti v dinozavra? Nato premikaj dinozavra s pomočjo
+          puščic, da se bo to zgodilo.
+        studio_c3_game_5: Lahko dodaš blok za dodajanje točk kadar pingvin naleti
+          na hobotnico, potem pa ga premikaš s pomočjo tipk s puščicami, dokler ne
+          dobiš točke?
+        studio_c3_game_6: Lahko dodaš blok, da spremeniš ozadje in hitrost pingvina,
+          nato pa ga premikaš s pomočjo tipk s puščicami dokler ne dobiš točke?
+        studio_c3_game_7: Ustvari svojo igro. Ko končaš, klikni končaj, da omogočiš
+          prijateljem, da preizkusijo tvojo igrico na svojih telefonih.
+        studio_playlab_7: Blok "ponavljaj neskončno" ti omogoča, da izvajaš kodo ponavljajoče.
+          Ali lahko dodaš bloke tako, da se bo čarovnik premikal desno in levo ponavljajoče?
+        studio_playlab_10: Ustvari svojo igro. Ko končaš, klikni končaj, da omogočiš
+          prijateljem, da preizkusijo tvojo igrico na svojih telefonih.
+        studio_iceage_repeat: Blok "ponavljaj neskončno" ti omogoča, da izvajaš kodo
+          ponavljajoče. Ali lahko dodaš bloke tako, da bo Granny malo telovadil s
+          premikanjem levo in desno ponavljajoče?
+        studio_gumball_repeat: Blok "ponavljaj neskončno" ti omogoča, da izvajaš kodo
+          ponavljajoče. Ali lahko dodaš bloke tako, da se bo Gumball malo ogrel za
+          dirko s premikanjem levo in desno ponavljajoče?
+        studio_full_sandbox: Ustvari svojo igro. Ko končaš, klikni končaj, da omogočiš
+          prijateljem, da preizkusijo tvojo igrico na svojih telefonih.
+        studio_k1_1: Lahko narediš, da bo pes rekel "Pozdravljen, svet"?
+        studio_k1_2: Lahko narediš, da bo pes nekaj rekel, potem pa bo mačka rekla
+          nekaj nazaj?
+        studio_k1_3: Lahko napišeš program tako, da se bo pes premaknil do mačke?
+        studio_k1_4: Naredi, da se bo pes premaknil k mački, mačka pa bo rekla "zdravo",
+          ko bo pes tam.
+        studio_k1_5: Lahko dodaš blok, da narediš hobotnico srečno?
+        studio_k1_6: Ustvari svojo lastno zgodbo! Premikaj mačko in psa, ter jima
+          ukaži, naj govorita.
+        maze_wordsearch_k_1: Premakni me, da črkujem besedo EAST
+        maze_wordsearch_k_2: Premakni me, da črkujem besedo SOUTH
+        maze_wordsearch_k_3: Premakni me, da črkujem besedo WEST
+        maze_wordsearch_k_4: Premakni me, da črkujem besedo NORTH
+        maze_wordsearch_k_6: Premakni me proti vzhodu in nato proti jugu, da črkujem
+          besedo JUMP
+        maze_wordsearch_k_9: Premakni me v eno smer, nato v drugo, da črkujem besedo
+          CODE
+        maze_wordsearch_k_13: Premakni me v eno smer, nato v drugo, da črkujem besedo
+          DEBUG
+        maze_wordsearch_k_15: Premakni me v eno smer, nato v drugo, da črkujem besedo
+          ABOVE
+        maze_wordsearch_k_16: Premakni me v eno smer, nato v drugo, da črkujem besedo
+          BELOW
+        maze_wordsearch_k_20: To je preizkus! Premakni me v eno smer, nato v drugo,
+          da črkujem besedo STORY
+        turtle_ec_1_10: 'Uspelo ti je! Zdaj lahko narišeš, kar želiš. Nekaj idej:
+          možic, snežinka ali spirala. Pri tem lahko uporabiš tudi blok "širina pisala".
+          Veliko zabave!'
+        studio_ec_sandbox: Ustvari svojo igro. Ko končaš, klikni končaj, da omogočiš
+          prijateljem, da preizkusijo tvojo igrico na svojih telefonih.
+    video:
+      name:
+        maze_intro: 'Labirint: uvod'
+        artist_intro: 'Umetnik: uvod'
+        farmer_intro: 'Kmetovanje: uvod'
+        flappy_intro: Plahutavčkov uvod
+        loop_times: Ponovi
+        loop_until: Ponavljaj dokler ne velja
+        if: '"Če" blok'
+        if_else: Če/sicer blok
+        if_else_scrat: Če/sicer blok
+        function: Funkcije
+        loop_while: Dokler velja
+        loop_for: Števec
+        parameters: Funkcije s parametri
+        hoc_wrapup: Povzetek Ure kodiranja
+        Unplug1: Kaj je računalništvo?
+        Unplug2: Računalniško razmišljanje
+        Unplug3: Obarvajmo kvadratke
+        Unplug4: Algoritmi
+        Unplug5: Funkcije
+        Unplug6: Pogoji
+        Unplug7: Napiši pesem
+        Unplug8: Abstrakcija
+        Unplug9: Relejsko programiranje
+        Unplug10: Internet
+        Unplug11: Povzetek
+        C1_happy_maps_unplugged: Veseli zemljevidi
+        C1_moveitmoveit_unplugged: Premakni se, premakni
+        C1_bigevent_unplugged: Veliki dogodek
+        C1_pair_programming: Programiranje parov
+        C1_maze_intro_sequencing: Uvod v reševanje labirinta
+        C1_maze_debugging: 'Labirint: odpravljanje napak'
+        C1_bee_level_intro: 'Čebelica: uvodni nivo'
+        C1_artist_intro: 'Umetnik: uvod'
+        C1_spelling_bee_intro: 'Čebelica črkuje: uvod'
+        C1_zuck_repeat_loop: Labirint zanke
+        C1_bee_loops: Čebelica zanke
+        C1_maze_loops: Labirint zanke
+        C1_playlab_storytelling: 'Play Lab: ustvari zgodbo'
+        C1_planting_seed: Posadi seme
+        C1_building_foundation: Graditi temelje
+        C1_going_places_safely: Kako varno potovati
+        C2_maze_intro: 'Labirint: uvod'
+        C2_artist_intro: 'Umetnik: uvod'
+        C2_zuck_repeat_loop: Labirint zanke
+        C2_artist_loops: Umetnik Zanke
+        C2_artist_debugging: Umetnik Razhroščevanje
+        C2_bee_loops: Čebelica zanke
+        C2_bee_debugging: Čebelica razhroščevanje
+        C2_bee_conditionals: Čebelica pogoji
+        C2_playlab_createstory: 'Play Lab: ustvari zgodbo'
+        C2_graph_paper: Obarvajmo kvadratke
+        C2_conditionals_with_cards: Pogoji
+        C2_relay_programming: Relejsko programiranje
+        C2_paper_airplanes: Papirnata letala
+        C3_maze_level_4: Labirint zanke
+        C3_artist_intro: 'Umetnik: uvod'
+        C3_artist_functions: Umetnik Funkcije
+        C3_bee_functions: Čebelica funkcije
+        C3_bee_conditionals: Čebelica pogoji
+        C3_artist_nested_loops: Gnezdenje zank
+        C3_farmer_while: 'Zanka: dokler velja'
+        C3_bee_nested_loops: Gnezdenje zank
+        C3_bee_debugging: Čebelica razhroščevanje
+        C3_bounce: Skokica
+        C3_playlab_create_game: Play Lab - ustvari igrico
+        C3_computational_thinking: Računalniško razmišljanje
+        C3_internet: Internet
+        C3_crowdsourcing: Crowdsourcing
+        C3_functional_suncatchers: Funkcionalni lovilci svetlobe
+        C3_songwriting_with_parameters: Pisanje pesmi s parametri
+        C4_intro: Uvod
+        C4_loops_zombie: Zanke
+        C4_bee_conditional: Čebelica pogoji
+        C4_variables_artist: Spremenljivke - Umetnik
+        C4_function_parameters: Funkcije s parametri
+        C4_conditionals: Pogoji
+        C4_unplugged_variables: Spremenljivke v ovojnicah
+        C4_unplugged_parameters: Pisanje pesmi s parametri
+        C4_unplugged_binary: Binarno
+        CSF_my_robotic_friends: Moji robotski prijatelji
+        frozen_intro: Uvod v Uro kodiranja
+        frozen_loops: Uvod v zanke
+        frozen_functions: Uvod v funkcije
+        playlab_repeat_forever: Play Lab Ponavljaj Neskončno
+        infinity_playlab_repeat_forever: Play Lab - Ponavljaj Neskončno
+        csp_applab_functions: Uvod v funkcije
+        csp_applab_functions_parameters: Funkcije s parametri
+        csp_applab_loops: Zanke
+        mc_2016_spawn: Minecraft Ura za kodo - Kreiranje
+        CSF_loops_AB: Zanke
+    callout:
+      text:
+        drag_blocks: Povleci blok "premakni se" in ga postavi pod drugi blok
+        run: Klikni "Zaženi" in preizkusi
+        watch_again: Klikni za ponoven ogled videa
+        gray_block_explanation: Sivih blokov se ne da izbrisati. Lahko vseeno rešiš
+          sestavljanko?
+        show_code_explanation: Klikni za prikaz kode programa, ki ga izdeluješ
+        instructions_repeat_explanation: Tukaj se ponavljajo navodila za vsako sestavljanko
+        category_explanation: Bloki so isti, le da so zdaj razporejeni po kategorijah
+        set_sprite_image: Pod blok "ko začneš zgodbo" povleci blok "določi igralcu
+          sliko", da igralec dobi vlogo v zgodbi
+        studio_say_text: Med narekovaje dodaj besede, ki jih bo igralec povedal
+        jigsaw_click: Klikni ta blok!
+        move_elsa_forward: Pod blok "Ko zaženeš" povleci blok "premakni naprej", da
+          boš premaknil/a Elso
+        turn_elsa: Uporabi blok "obrni se", da boš obrnil/a Elso. S številko povej
+          še za koliko stopinj naj se obrne
+        replace_questions: Namesto "???" vnesi številko iz spustnega menuja
+        replace_questions_degree: V spustnem menuju nadomesti "???" z ustreznim številom
+          stopinj
+        repeat_blocks: Uporabi blok "Ponovi" in spravi vanj vse bloke, ki jih imaš
+          v svojem delovnem prostoru
+        snowflake_dropdown: Uporabi ta spustni seznam za ustvarjanje različnih snežink!
+        degrees_per_side: Če deliš 360 s številom stranic, je rezultat število stopinj
+          za posamezen kot (obrat).
+        set_sides: Uporabi ta blok za število "stranic", potrebnih za rešitev naloge.
+        set_length: Uporabi ta blok in "dolžini" dodeli pravo količino.
+        get_nectar: Uporabi nov blok "vzami nektar".
+        actions_category: 'V galeriji pripomočkov je nekaj novega! Dodali smo bloke
+          za "dejanja" (ang.: "Actions").'
+        draw_square_hint: 'Namig: Uporabi zanko "kvadrat", ki si jo izdelal/a v prejšnji
+          uganki.'
+        create_function: Klikni tukaj, če želiš delati s funkcijami; nato klikni na
+          "ustvari funkcijo".
+        house_hint: Čeprav risba še ni podobna hiši, smo z njo zadovoljni. V naslednji
+          nalogi bo še bolj podobna hiši.
+        edit_draw_square: Uporabi ta gumb za urejanje funkcije in dodaj zanko.
+        edit_get_nectar: Če želiš spremeniti smer Čebelice zato,  da bo našla nektar,
+          potem uporabi ta gumb za urejanje funkcije.
+        logic_category: 'Odpri list "Logika" in poišči ukaz "če- sicer pa" (ang.:
+          "if/else").'
+        length_parameter: Znaš popraviti to funkcijo tako, da bo uporabljala parameter
+          "dolžina"?
+        frozen_diamond_repeat: Uporabi blok "ponovi", da boš ustvaril/a tako obliko.
+        frozen_circle_function_in_circle_turn: Ne pozabi vsakič, ko narišeš krog,
+          narediti še obrat.
+        frozen_circle_function_with_parameter_circle: Uporabi blok "ustvari krog"
+          in mu spremeni velikost.
+        frozen_snowflake_branch: Uporabi blok "ustvari snežinkino vejo"
+        frozen_create_square: Dodaj več blokov, da bo nastal kvadrat
+        playlab_drag_say: Privleci še blok "reci (napiši)" in dodaj v blok besedo
+          "zdravo"
+        playlab_use_twice: Uporabi ta blok dvakrat in vsakič uporabi drugo številko
+          igralca
+        playlab_move_girl: Uporabi blok "premakni se desno", da premakneš Tenisačico
+        playlab_play_sound: Dodaj blok "predvajaj zvok"
+        playlab_arrow_keys: Ko zaženeš program, s puščicami premikaš čarovnico
+        playlab_add_move: V blok "ponavljaj" dodaj bloke za premikanje
+        playlab_add_score: Tukaj dodaj bloke za izpisovanje rezultatov
+        playlab_add_blocks: Tukaj dodaj svoje bloke
+        repeat: Dodaj bloke v zanko, da bi ponavljal ukaze
+        if_else_bee: Uporabi "če/sicer" blok tako, da bo čebelica nabrala nektar iz
+          cveta in naredila med če ni cvet
+        craft_run_button_callout: Klikni "Zaženi" in preizkusi

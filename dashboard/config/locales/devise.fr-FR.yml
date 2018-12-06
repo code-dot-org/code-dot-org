@@ -1,0 +1,100 @@
+---
+fr:
+  devise:
+    confirmations:
+      confirmed: Ton adresse e-mail a été confirmée avec succès.
+      send_instructions: Dans quelques minutes, tu vas recevoir un e-mail contenant
+        les instructions à suivre pour confirmer ton compte.
+      send_paranoid_instructions: Si ton adresse e-mail existe dans notre base de
+        données, tu recevras dans quelques minutes un e-mail contenant les instructions
+        pour confirmer ton compte.
+    failure:
+      already_authenticated: Tu es déjà connecté.
+      inactive: Ton compte n'a pas encore été activé.
+      invalid: Adresse de messagerie ou mot de passe non valide.
+      invalid_token: Jeton d'authentification invalide.
+      locked: Ton compte est verrouillé.
+      not_found_in_database: Adresse de messagerie ou mot de passe non valide.
+      timeout: Ta session a expiré, reconnecte-toi pour continuer.
+      unauthenticated: Tu dois te connecter ou t’inscrire pour continuer.
+      unconfirmed: Tu dois confirmer ton compte avant de continuer.
+    mailer:
+      confirmation_instructions:
+        subject: Instructions de confirmation de Code.org
+      reset_password_instructions:
+        subject: Instructions de Code.org pour réinitialiser ton mot de passe
+      unlock_instructions:
+        subject: Instructions de déverrouillage
+    omniauth_callbacks:
+      failure: 'Ton authentification en tant que %{kind} a échoué: «%{reason}».'
+      success: Authentification réussie du compte %{kind}.
+    passwords:
+      no_token: Tu ne peux pas accéder à cette page sans avoir été transféré d'un
+        e-mail de réinitialisation du mot de passe. Si tu as été transféré d'un e-mail
+        de réinitialisation du mot de passe, assure-toi que tu as utilisé toute l'URL
+        fournie.
+      send_instructions: Dans quelques minutes, tu recevras un e-mail contenant les
+        instructions pour réinitialiser ton mot de passe.
+      send_paranoid_instructions: Si ton adresse e-mail existe dans notre base de
+        données, dans quelques minutes, tu recevras un e-mail contenant un lien qui
+        te servira à récupérer ton mot de passe.
+      updated: Ton mot de passe a été modifié avec succès. Tu es maintenant connecté.
+      updated_not_active: Ton mot de passe a été modifié avec succès.
+    registrations:
+      destroyed: Au revoir ! Ton compte a été correctement annulé. Nous espérons te
+        revoir bientôt.
+      signed_up: Bienvenue ! Tu t’es inscrit avec succès.
+      signed_up_but_inactive: Tu t’es inscrit avec succès. Cependant, nous ne pouvons
+        pas te connecter car ton compte n'est pas encore activé.
+      signed_up_but_locked: Tu t’es inscrit avec succès. Cependant, nous ne pouvons
+        pas te connecter car ton compte est verrouillé.
+      signed_up_but_unconfirmed: Un message contenant un lien de confirmation a été
+        envoyé à ton adresse e-mail. Merci d’ouvrir le lien pour activer ton compte.
+      update_needs_confirmation: Tu as réussi à mettre à jour ton compte, mais nous
+        devons vérifier ta nouvelle adresse e-mail. Vérifie bien ton e-mail et de
+        clique sur le lien de confirmation pour finaliser la confirmation de ta nouvelle
+        adresse e-mail.
+      updated: Tu as réussi à mettre à jour ton compte.
+    sessions:
+      signed_out: Déconnecté avec succès.
+    unlocks:
+      send_instructions: Dans quelques minutes, tu vas recevoir un e-mail contenant
+        les instructions sur la façon de déverrouiller ton compte.
+      send_paranoid_instructions: Si ton compte existe, dans quelques minutes tu vas
+        recevoir un e-mail contenant les instructions sur la façon de déverrouiller
+        ton compte.
+      unlocked: Ton compte a été déverrouillé avec succès. Merci de te connecter pour
+        continuer.
+  errors:
+    messages:
+      already_confirmed: a déjà été confirmé, essaie de te connecter
+      confirmation_period_expired: doit être confirmé dans %{period}, merci d’en demander
+        un nouveau
+      expired: a expiré, merci d’en demander un nouveau
+      not_found: non trouvé
+      not_locked: n'a pas été verrouillé
+      not_saved:
+        one: 'Une erreur a empêché ce %{resource} d''être sauvegardé:'
+        other: "%{count} erreurs ont empêché ce %{resource} d'être sauvegardé:"
+    invitations:
+      send_instructions: Un e-mail d'invitation a été envoyé à %{email}.
+      invitation_token_invalid: Le jeton d'invitation fourni n'est pas valide !
+      updated: Ton mot de passe a été défini avec succès. Tu es maintenant connecté.
+      no_invitations_remaining: Pas d'invitations restantes
+      invitation_removed: Ton invitation a été supprimée.
+      new:
+        header: Envoie l'invitation
+        submit_button: Envoie une invitation
+      edit:
+        header: Définis ton mot de passe
+        submit_button: Définir mon mot de passe
+    mailer:
+      invitation_instructions:
+        subject: Instructions pour l’invitation
+        hello: Bonjour %{email}
+        someone_invited_you: Quelqu'un t’a invité à %{url}, tu peux accepter à partir
+          du lien ci-dessous.
+        accept: Accepter l'invitation
+        ignore: Si tu ne veux pas accepter l'invitation, merci d’ignorer cet e-mail.<br
+          />Ton compte ne sera pas créé avant que tu n’accèdes au lien ci-dessus et
+          définisses ton mot de passe.

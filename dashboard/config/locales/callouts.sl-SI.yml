@@ -1,0 +1,148 @@
+---
+sl:
+  data:
+    callouts:
+      Course 4 Artist 7_callout:
+        repeat_blocks: Uporabi blok "Ponovi" in spravi vanj vse bloke, ki jih imaš
+          v svojem delovnem prostoru
+      Course 4 Artist Functions 4_callout:
+        create_function: Klikni tukaj, če želiš delati s funkcijami; nato klikni na
+          "ustvari funkcijo".
+      Course 4 Artist Functions 5 OLD_callout:
+        house_hint: Čeprav risba še ni podobna hiši, smo z njo zadovoljni. V naslednji
+          nalogi bo še bolj podobna hiši.
+      Course 4 Artist Params 2_callout:
+        length_parameter: Znaš popraviti to funkcijo tako, da bo uporabljala parameter
+          "dolžina"?
+      Course 4 Artist Params 4_callout:
+        create_function: Klikni tukaj, če želiš delati s funkcijami; nato klikni na
+          "ustvari funkcijo".
+      Course 4 Artist Vars 1_callout:
+        repeat_blocks: Uporabi blok "Ponovi" in spravi vanj vse bloke, ki jih imaš
+          v svojem delovnem prostoru
+      Course 4 Artist Vars 10_callout:
+        set_sides: Uporabi ta blok za število "stranic", potrebnih za rešitev naloge.
+      Course 4 Artist Vars 12_callout:
+        set_length: Uporabi ta blok in "dolžini" dodeli pravo količino.
+      Course 4 Artist Vars 2_callout:
+        set_length: Uporabi ta blok in "dolžini" dodeli pravo količino.
+      Course 4 Artist Vars 6_callout:
+        degrees_per_side: Če deliš 360 s številom stranic, je rezultat število stopinj
+          za posamezen kot (obrat).
+      Course 4 Artist Vars 9_callout:
+        set_sides: Uporabi ta blok za število "stranic", potrebnih za rešitev naloge.
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: Uporabi nov blok "vzami nektar".
+      Course 4 Bee For Loops 6_callout:
+        actions_category: 'V galeriji pripomočkov je nekaj novega! Dodali smo bloke
+          za "dejanja" (ang.: "Actions").'
+      Course 4 Bee Params 2_callout:
+        edit_get_nectar: Če želiš spremeniti smer Čebelice zato,  da bo našla nektar,
+          potem uporabi ta gumb za urejanje funkcije.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: Klikni "Zaženi" in preizkusi
+      Course 4 Maze 4_callout:
+        repeat: Dodaj bloke v zanko, da bi ponavljal ukaze
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: Uporabi ta spustni seznam za ustvarjanje različnih snežink!
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: Uporabi ta spustni seznam za ustvarjanje različnih snežink!
+      NEW Course 4 Artist Params 10_callout:
+        create_function: Klikni tukaj, če želiš delati s funkcijami; nato klikni na
+          "ustvari funkcijo".
+      NEW Course 4 Bee For Loops 5_callout:
+        actions_category: 'V galeriji pripomočkov je nekaj novega! Dodali smo bloke
+          za "dejanja" (ang.: "Actions").'
+      New Frozen Project_callout:
+        snowflake_dropdown: Uporabi ta spustni seznam za ustvarjanje različnih snežink!
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: Klikni "Zaženi" in preizkusi
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: Klikni "Zaženi" in preizkusi
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Klikni "Zaženi" in preizkusi
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: Uporabi blok "ustvari krog"
+          in mu spremeni velikost.
+      frozen cross rotate_callout:
+        replace_questions_degree: Namesto "???" vnesi številko iz spustnega menuja
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Namesto "???" vnesi številko iz spustnega menuja
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Namesto "???" vnesi številko iz spustnega menuja
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: Uporabi blok "ponovi", da boš ustvaril/a tako obliko.
+      frozen diamond_callout:
+        frozen_diamond_repeat: Uporabi blok "ponovi", da boš ustvaril/a tako obliko.
+      frozen freeplay_callout:
+        snowflake_dropdown: Uporabi ta spustni seznam za ustvarjanje različnih snežink!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Uporabi ta spustni seznam za ustvarjanje različnih snežink!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Uporabi ta spustni seznam za ustvarjanje različnih snežink!
+      frozen line_callout:
+        move_elsa_forward: Pod blok "Ko zaženeš" povleci blok "premakni naprej", da
+          boš premaknil/a Elso
+      frozen line_b_callout:
+        move_elsa_forward: Pod blok "Ko zaženeš" povleci blok "premakni naprej", da
+          boš premaknil/a Elso
+      frozen line_test_callout:
+        move_elsa_forward: Pod blok "Ko zaženeš" povleci blok "premakni naprej", da
+          boš premaknil/a Elso
+      frozen perpendicular_callout:
+        turn_elsa: Uporabi blok "obrni se", da boš obrnil/a Elso. S številko povej
+          še za koliko stopinj naj se obrne
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: Uporabi blok "ustvari snežinkino vejo"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Uporabi blok "ustvari snežinkino vejo"
+      frozen square iterative_callout:
+        frozen_create_square: Dodaj več blokov, da bo nastal kvadrat
+      frozen square iterative_b_callout:
+        frozen_create_square: Dodaj več blokov, da bo nastal kvadrat
+      frozen square iterative_test_callout:
+        frozen_create_square: Dodaj več blokov, da bo nastal kvadrat
+      frozen square loop 3x_callout:
+        replace_questions: Namesto "???" vnesi številko iz spustnega menuja
+      frozen square loop 3x_b_callout:
+        replace_questions: Namesto "???" vnesi številko iz spustnega menuja
+      frozen square loop 3x_test_callout:
+        replace_questions: Namesto "???" vnesi številko iz spustnega menuja
+      frozen square loop_callout:
+        replace_questions: Namesto "???" vnesi številko iz spustnega menuja
+      frozen square loop_b_callout:
+        replace_questions: Namesto "???" vnesi številko iz spustnega menuja
+      frozen square loop_test_callout:
+        replace_questions: Namesto "???" vnesi številko iz spustnega menuja
+      frozen square snowflake_callout:
+        replace_questions: Namesto "???" vnesi številko iz spustnega menuja
+      frozen square snowflake_b_callout:
+        replace_questions: Namesto "???" vnesi številko iz spustnega menuja
+      frozen square snowflake_test_callout:
+        replace_questions: Namesto "???" vnesi številko iz spustnega menuja
+      grade4_frozen_freeplay_callout:
+        snowflake_dropdown: Uporabi ta spustni seznam za ustvarjanje različnih snežink!
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: Uporabi blok "ustvari krog"
+          in mu spremeni velikost.
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: Uporabi blok "ponovi", da boš ustvaril/a tako obliko.
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: Uporabi blok "ponovi", da boš ustvaril/a tako obliko.
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: Uporabi blok "ponovi", da boš ustvaril/a tako obliko.
+      grade4_frozen_square_callout:
+        replace_questions: Namesto "???" vnesi številko iz spustnega menuja
+      grade4_frozen_square_loop1_callout:
+        replace_questions: Namesto "???" vnesi številko iz spustnega menuja
+      grade4_frozen_square_loop2_callout:
+        replace_questions: Namesto "???" vnesi številko iz spustnega menuja
+      grade4_frozen_square_loop3_callout:
+        replace_questions: Namesto "???" vnesi številko iz spustnega menuja
+      grade5_artist_variables_pentagons12_callout:
+        set_length: Uporabi ta blok in "dolžini" dodeli pravo količino.
+      grade5_artist_variables_square7_callout:
+        degrees_per_side: Če deliš 360 s številom stranic, je rezultat število stopinj
+          za posamezen kot (obrat).
+      grade5_artist_variables_triangles2_callout:
+        set_length: Uporabi ta blok in "dolžini" dodeli pravo količino.

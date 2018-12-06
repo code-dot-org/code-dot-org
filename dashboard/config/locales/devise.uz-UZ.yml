@@ -1,0 +1,96 @@
+---
+uz:
+  devise:
+    confirmations:
+      confirmed: Elektron pochtangiz muvaffaqiyatli tasdiqlandi.
+      send_instructions: Sanoqli daqiqalarda pochtangizga hisobingizni qanday tasdiqlash
+        bo‘yicha xat jo‘natiladi.
+      send_paranoid_instructions: Agar elektron pochtangiz bazamizda bo‘lsa, sanoqli
+        daqiqalarda pochtangizga hisobingizni qanday tasdiqlash bo‘yicha xat jo‘natiladi.
+    failure:
+      already_authenticated: Siz allaqachon tizimga kirgansiz.
+      inactive: Hisobingiz hali faollashtirilmagan.
+      invalid: Email yoki parol xato.
+      invalid_token: Xato token.
+      locked: Hisobingiz qulflangan.
+      not_found_in_database: Email yoki parol xato.
+      timeout: Sessiyangiz yopilgan, davom etish uchun qaytadan kiring.
+      unauthenticated: Davom etish uchun kirishingiz yoki ro‘yxatdan o‘tishingiz kerak.
+      unconfirmed: Davom etishdan avval hisobingizni tasdiqlashingiz kerak.
+    mailer:
+      confirmation_instructions:
+        subject: Code.org tasdiqlash yo‘riqnomasi
+      reset_password_instructions:
+        subject: Code.org parolni qayta tuzish yo‘riqnomasi
+      unlock_instructions:
+        subject: Qulfdan chiqarish yo‘riqnomasi
+    omniauth_callbacks:
+      failure: "%{kind} bo‘yicha tekshirish omadsiz, sababi: %{reason}."
+      success: "%{kind} bo‘yicha tekshirish omadli yakunlandi."
+    passwords:
+      no_token: Siz bu sahifaga parolni qayta tuzish xabari orqaligina kirolasiz.
+        Agar shu emaildan foydalanib kirgan bo‘lsangiz, havolaning butunligicha ko‘chirilganini
+        tekshiring.
+      send_instructions: Sanoqli daqiqalarda parolni qayta tuzish haqidagi yo‘riqnoma
+        pochtangizga jo‘natiladi.
+      send_paranoid_instructions: Agar elektron pochtangiz bazamizda mavjud bo‘lsa,
+        unga parolni tiklash yo‘riqnomasi jo‘natiladi.
+      updated: Parolingiz muvaffaqiyatli o‘zgartirildi. Siz tizimga kirgansiz.
+      updated_not_active: Parolingiz muvaffaqiyatli o‘zgartirildi.
+    registrations:
+      destroyed: Hisobingiz muvaffaqiyatli o‘chirildi. Siz bilan yana diydorlashish
+        umididamiz. Ko‘rishguncha!
+      signed_up: Xush kelibsiz! Tizimga muvaffaqiyatli kirdingiz.
+      signed_up_but_inactive: Muvaffaqiyatli ro‘yxatdan o‘tdingiz. Lekin hisobingizni
+        faollashtirmaganingiz sababli sizni tizimga kiritolmaymiz.
+      signed_up_but_locked: Muvaffaqiyatli ro‘yxatdan o‘tdingiz. Lekin hisobingiz
+        qulflanganligi sababli sizni tizimga kiritolmaymiz.
+      signed_up_but_unconfirmed: Tasdiqlash linki joylashgan xabar elektron pochtangizga
+        jo‘natildi. Iltimos, linkni ochib hisobingizni faollashtiring.
+      update_needs_confirmation: Hisobingizni muvaffaqiyatli yangiladingiz, lekin
+        biz yangi pochtangizni tasdiqlashimiz kerak. Iltimos, pochtangizni ochib biz
+        jo‘natgan xabardagi link bo‘yicha yangi pochtangizni tasdiqlang.
+      updated: Hisobingizni muvaffaqiyatli yangiladingiz.
+    sessions:
+      signed_out: Tizimdan muvaffaqiyatli chiqdingiz.
+    unlocks:
+      send_instructions: Sanoqli daqiqalarda pochtangizga hisobingizni qulfdan chiqarish
+        yo‘riqnomasi jo‘natiladi.
+      send_paranoid_instructions: Agar hisobingiz mavjud bo‘lsa, pochtangizga uni
+        qanday qulfdan ochish yo‘riqnomasi jo‘natiladi.
+      unlocked: Hisobingiz muvaffaqiyatli qulfdan ochildi. Iltimos, davom etish uchun
+        tizimga kiring.
+  errors:
+    messages:
+      already_confirmed: allaqachon tasdiqlangan, iltimos, tizimga qaytadan kirib
+        ko‘ring
+      confirmation_period_expired: "%{period} muddat ichida tasdiqlash kerak, iltimos
+        yangisini so‘rang"
+      expired: tugagan, iltimos yangisini so‘rang
+      not_found: topilmadi
+      not_locked: qulflanmagan
+      not_saved:
+        one: '1 ta xato %{resource} ni saqlashga yo‘l qo‘ymayapti:'
+        other: "%{count} ta xatolar %{resource} ni saqlashga yo‘l qo‘ymayapti:"
+    invitations:
+      send_instructions: Taklifnoma %{email} ga jo‘natildi.
+      invitation_token_invalid: Keltirilgan taklifnoma tokeni mavjud emas!
+      updated: Parolingiz muvaffaqiyatli o‘rnatildi. Endi tizimga kirishingiz mumkin.
+      no_invitations_remaining: Taklifnoma qolmadi
+      invitation_removed: Taklifnomangiz o‘chirilgan.
+      new:
+        header: Taklifnoma jo‘nating
+        submit_button: Taklifnoma jo‘natish
+      edit:
+        header: Parolingizni o‘rnating
+        submit_button: Mening parolimni o‘rnat
+    mailer:
+      invitation_instructions:
+        subject: Taklifnoma yo‘riqnomasi
+        hello: Salom %{email}
+        someone_invited_you: Kimdir sizni %{url}‘ga taklif qildi, siz uni quyidagi
+          link bo‘yicha qabul qilishingiz mumkin.
+        accept: Taklifnomani qabul qilish
+        ignore: Agar siz taklifnomani qabul qilishni istamasangiz, bu xabarni e‘tiborsiz
+          qoldirishingiz mumkin.<br />Hisobingiz yuqoridagi link bo‘yicha kirib tasdiqlanmaguncha
+          faollashmaydi.

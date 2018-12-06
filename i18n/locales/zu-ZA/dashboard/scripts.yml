@@ -1,0 +1,34 @@
+zu:
+  data:
+    script:
+      category:
+        math_category_name: Izibalo
+      name:
+        infinity:
+          stages:
+            Infinity:
+              name: Akugcini noma utalagu
+        csd2-2017:
+          stages:
+            Lists:
+              name: Umbhalo olandelanayo
+        csd6-draft:
+          stages:
+            Lists:
+              name: Umbhalo olandelanayo
+        csd6-2017:
+          stages:
+            Lists:
+              name: Umbhalo olandelanayo
+        csd2-draft:
+          stages:
+            Lists:
+              name: Umbhalo olandelanayo
+        csd6-old:
+          stages:
+            Lists:
+              name: Umbhalo olandelanayo
+        csd2-2018:
+          stages:
+            Lists:
+              name: Umbhalo olandelanayo

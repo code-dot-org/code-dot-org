@@ -1,0 +1,278 @@
+---
+sq:
+  data:
+    callouts:
+      Course 4 Artist 4_callout:
+        repeat_full_circle: Fut numrin e herëve që zombi duhet të lëvizë për të bërë
+          një rreth të plotë
+      Course 4 Artist 7_callout:
+        repeat_blocks: Përdor bllokun "Repeat" dhe përmblidhe rreth blloqeve në vendin
+          e punës
+      Course 4 Artist For Loops 4_callout:
+        place_counter_variable: Zhvendos ndryshoren tënde të numërimit brenda këtij
+          blloku
+      Course 4 Artist Functions 4_callout:
+        create_function: Kliko këtu për të hapur "Funksionet", më pas kliko butonin
+          "Krijo një Funksion".
+      Course 4 Artist Functions 5 OLD_callout:
+        house_hint: Është gjithçka në rregull nëse figura nuk duket si shtëpi akoma.
+          Ne do ta riparojmë atë në puzzle-in tjetër.
+      Course 4 Artist Functions 8_callout:
+        edit_function: Kliko këtu për të redaktuar funksionin tënd.
+      Course 4 Artist Params 2_callout:
+        length_parameter: A mund ta përditësosh këtë funksion në mënyrë që të përdorë
+          parametrin e "gjatësisë"?
+      Course 4 Artist Params 4_callout:
+        create_function: Kliko këtu për të hapur "Funksionet", më pas kliko butonin
+          "Krijo një Funksion".
+      Course 4 Artist Vars 1_callout:
+        repeat_blocks: Përdor bllokun "Repeat" dhe përmblidhe rreth blloqeve në vendin
+          e punës
+      Course 4 Artist Vars 10_callout:
+        set_sides: Përdor këtë bllok për të vendosur "anët" tek numri i nevojshëm
+          që të përfundosh puzzle-in.
+      Course 4 Artist Vars 12_callout:
+        set_length: Përdor këtë bllok për të vendosur "gjatësinë" tek vlera e duhur.
+      Course 4 Artist Vars 2_callout:
+        set_length: Përdor këtë bllok për të vendosur "gjatësinë" tek vlera e duhur.
+      Course 4 Artist Vars 3_callout:
+        place_variable: Zhvendos ndryshoren tënde brenda këtij blloku
+      Course 4 Artist Vars 6_callout:
+        degrees_per_side: Ndaje 360 nga numri i anëve për të gjetur masën e çdo këndi
+          në gradë.
+      Course 4 Artist Vars 9_callout:
+        set_sides: Përdor këtë bllok për të vendosur "anët" tek numri i nevojshëm
+          që të përfundosh puzzle-in.
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: Përdor bllokun e ri "get nectar".
+      Course 4 Bee For Loops 6_callout:
+        actions_category: Shiriti i mjeteve mori një pamje të re! Blloqet "Actions"
+          janë këtu tani.
+      Course 4 Bee Params 2_callout:
+        edit_get_nectar: Përdor këtë buton për të redaktuar funksionin dhe ndrysho
+          drejtimin që Bleta do kthehet të marrë nektarin.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: Shtyp "Run" për të provuar programin tënd
+      Course 4 Maze 4_callout:
+        repeat: Vendos blloqe brenda ciklit për të përsëritur komandat
+      Course 4 Play Lab Params 3_callout:
+        edit_function: Kliko këtu për të redaktuar funksionin tënd.
+      Course 4 Play Lab Params 6_callout:
+        edit_add_parameter: Kliko redakto për të shtuar një parametër në funksionin
+          tënd
+      Course 4 Play Lab Vars 1_callout:
+        arrows_move_actor: Përdor shigjetat për të lëvizur aktorin
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: Përdor shigjetat për të lëvizur aktorin
+      Eval Design Recipe .1_callout:
+        edit_function: Kliko këtu për të redaktuar funksionin tënd.
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: Përdor këtë listë për të krijuar flokë të ndryshme dëbore!
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: Përdor këtë listë për të krijuar flokë të ndryshme dëbore!
+      Infinity_move_collide_callout:
+        Infinity_move_collide_callout: Vendos një tingull kur të ndodhi ky event.
+      Infinity_move_directions_callout:
+        Infinity_move_directions_callout: Cili bllok do e bëjë Baymax-in të lëvizi
+          sipër kur shigjeta e sipërme është e shtypur?
+        Infinity_move_directions_callout_arrow: Përdor këto shigjeta për orientim
+      Infinity_move_right_callout:
+        Infinity_move_right_runbutton: Shto lëviz bllokun këtu
+      Infinity_repeat_callout:
+        Infinity_repeat_callout: Vendos bllogjet e Lëvizjes këtu brënda
+      NEW Course 4 Artist Functions 5_callout:
+        edit_function: Kliko këtu për të redaktuar funksionin tënd.
+        function_editor_draw_square: Ky është përcaktimi i funkisonit tënd. Keto blloqe
+          ekzekutohen sa herë ti përdor bllokun "draw a square"
+      NEW Course 4 Artist Functions 7_callout:
+        edit_function: Kliko këtu për të redaktuar funksionin tënd.
+      NEW Course 4 Artist Functions 8_callout:
+        edit_function: Kliko këtu për të redaktuar funksionin tënd.
+      NEW Course 4 Artist Params 10_callout:
+        create_function: Kliko këtu për të hapur "Funksionet", më pas kliko butonin
+          "Krijo një Funksion".
+      NEW Course 4 Artist Params 9_callout:
+        edit_add_parameter: Kliko redakto për të shtuar një parametër në funksionin
+          tënd
+        add_and_drag_parameter: Shkruaj emrin e parametrit tënd këtu, kliko shto,
+          dhe më pas zhvendos atë në përcaktimin e funksionit tënd
+      NEW Course 4 Artist Vars 6_callout:
+        place_length_variable: Zhvendos ndryshorin e gjatësisë këtu për të rivendosur
+          pikëpyetjet
+      NEW Course 4 Bee For Loops 5_callout:
+        actions_category: Shiriti i mjeteve mori një pamje të re! Blloqet "Actions"
+          janë këtu tani.
+      New Frozen Project_callout:
+        snowflake_dropdown: Përdor këtë listë për të krijuar flokë të ndryshme dëbore!
+      Overworld Chop Trees_callout:
+        craft_callout_preplaced: Ne kemi vendosur disa blloqe këtu që ju të filloni
+      Overworld Chop Trees_2018_callout:
+        craft_callout_preplaced: Ne kemi vendosur disa blloqe këtu që ju të filloni
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Ne kemi vendosur disa blloqe këtu që ju të filloni
+      Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: Ky kod do të fillojë ndërtimin e shtëpisë tuaj.
+          Mund të përfundoni atë?
+      Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Ky kod do të fillojë ndërtimin e shtëpisë tuaj.
+          Mund të përfundoni atë?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Ky kod do të fillojë ndërtimin e shtëpisë tuaj.
+          Mund të përfundoni atë?
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: Shtyp "Run" për të provuar programin tënd
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: Shtyp "Run" për të provuar programin tënd
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Shtyp "Run" për të provuar programin tënd
+      Overworld Place Wall_callout:
+        craft_inside_repeat: Përsëritni veprimet duke vendosur blloqe këtu
+      Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Përsëritni veprimet duke vendosur blloqe këtu
+      Overworld Place Wall_2019_callout:
+        craft_inside_repeat: Përsëritni veprimet duke vendosur blloqe këtu
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: Ky kod do të kontrollojë për llava, mund të shtoni
+          një komandë për të lëvizur përpara?
+      Underground Avoiding Lava_2018_callout:
+        craft_callout_moveforward: Ky kod do të kontrollojë për llava, mund të shtoni
+          një komandë për të lëvizur përpara?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Ky kod do të kontrollojë për llava, mund të shtoni
+          një komandë për të lëvizur përpara?
+      Underground Iron_callout:
+        craft_what_is_iron: Hidhe në erë këtë hekur!
+      Underground Iron_2018_callout:
+        craft_what_is_iron: Hidhe në erë këtë hekur!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: Hidhe në erë këtë hekur!
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: Përdor bllokun "create a circle"
+          dhe ndrysho madhësinë.
+      frozen cross rotate_callout:
+        replace_questions_degree: Përdor listën drop-down për të zëvendësuar "???"
+          me një numër
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Përdor listën drop-down për të zëvendësuar "???"
+          me një numër
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Përdor listën drop-down për të zëvendësuar "???"
+          me një numër
+      frozen cross_callout:
+        repeat_blocks_1: "(1) Përdor këtë bllok dhe vendose rreth blloqeve gri në
+          vendin tënd të punës"
+        repeat_blocks_2: (2) Lëviz bllokun "Repeat" këtu dhe vendosi blloqet gri brenda
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: Përdor bllokun përsërit për të krijuar këtë formë.
+      frozen diamond_callout:
+        frozen_diamond_repeat: Përdor bllokun përsërit për të krijuar këtë formë.
+      frozen freeplay_callout:
+        snowflake_dropdown: Përdor këtë listë për të krijuar flokë të ndryshme dëbore!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Përdor këtë listë për të krijuar flokë të ndryshme dëbore!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Përdor këtë listë për të krijuar flokë të ndryshme dëbore!
+      frozen line_callout:
+        move_elsa_forward: Lëviz një bllok "Move Forward" dhe vendose poshtë bllokut
+          "When Run" për ta bërë Elsën të ecë përpara
+      frozen line_b_callout:
+        move_elsa_forward: Lëviz një bllok "Move Forward" dhe vendose poshtë bllokut
+          "When Run" për ta bërë Elsën të ecë përpara
+      frozen line_test_callout:
+        move_elsa_forward: Lëviz një bllok "Move Forward" dhe vendose poshtë bllokut
+          "When Run" për ta bërë Elsën të ecë përpara
+      frozen perpendicular_callout:
+        turn_elsa: Përdor bllokun "turn" për ta bërë Elsën të kthehet. Numri në listën
+          drop down përcakton sa herë kthehet Elsa
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: Përdor bllokun "create a snowflake"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Përdor bllokun "create a snowflake"
+      frozen square iterative_callout:
+        frozen_create_square: Bashko më shumë blloqe këtu për të krijuar një katror
+      frozen square iterative_b_callout:
+        frozen_create_square: Bashko më shumë blloqe këtu për të krijuar një katror
+      frozen square iterative_test_callout:
+        frozen_create_square: Bashko më shumë blloqe këtu për të krijuar një katror
+      frozen square loop 3x_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      frozen square loop 3x_b_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      frozen square loop 3x_test_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      frozen square loop_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      frozen square loop_b_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      frozen square loop_test_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      frozen square snowflake_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      frozen square snowflake_b_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      frozen square snowflake_test_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      grade4_artist_parameters_squares1_callout:
+        edit_add_parameter: Kliko redakto për të shtuar një parametër në funksionin
+          tënd
+        add_and_drag_parameter: Shkruaj emrin e parametrit tënd këtu, kliko shto,
+          dhe më pas zhvendos atë në përcaktimin e funksionit tënd
+      grade4_frozen_freeplay_callout:
+        snowflake_dropdown: Përdor këtë listë për të krijuar flokë të ndryshme dëbore!
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: Përdor bllokun "create a circle"
+          dhe ndrysho madhësinë.
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: Përdor bllokun përsërit për të krijuar këtë formë.
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: Përdor bllokun përsërit për të krijuar këtë formë.
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: Përdor bllokun përsërit për të krijuar këtë formë.
+      grade4_frozen_square_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      grade4_frozen_square_loop1_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      grade4_frozen_square_loop2_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      grade4_frozen_square_loop3_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      grade5_artist_parameters_squares1_callout:
+        edit_add_parameter: Kliko redakto për të shtuar një parametër në funksionin
+          tënd
+        add_and_drag_parameter: Shkruaj emrin e parametrit tënd këtu, kliko shto,
+          dhe më pas zhvendos atë në përcaktimin e funksionit tënd
+      grade5_artist_parameters_triangles1aa_callout:
+        edit_add_parameter: Kliko redakto për të shtuar një parametër në funksionin
+          tënd
+        add_and_drag_parameter: Shkruaj emrin e parametrit tënd këtu, kliko shto,
+          dhe më pas zhvendos atë në përcaktimin e funksionit tënd
+      grade5_artist_variables_pentagons1_callout:
+        place_length_variable: Zhvendos ndryshorin e gjatësisë këtu për të rivendosur
+          pikëpyetjet
+      grade5_artist_variables_pentagons12_callout:
+        set_length: Përdor këtë bllok për të vendosur "gjatësinë" tek vlera e duhur.
+      grade5_artist_variables_square7_callout:
+        degrees_per_side: Ndaje 360 nga numri i anëve për të gjetur masën e çdo këndi
+          në gradë.
+      grade5_artist_variables_triangles2_callout:
+        set_length: Përdor këtë bllok për të vendosur "gjatësinë" tek vlera e duhur.
+      grade5_playlab_variables1_callout:
+        arrows_move_actor: Përdor shigjetat për të lëvizur aktorin
+      grade5_playlab_variables11_callout:
+        edit_add_parameter: Kliko redakto për të shtuar një parametër në funksionin
+          tënd
+      grade5_playlab_variables1ask_callout:
+        arrows_move_actor: Përdor shigjetat për të lëvizur aktorin

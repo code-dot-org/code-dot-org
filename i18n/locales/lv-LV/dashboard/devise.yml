@@ -1,0 +1,62 @@
+lv:
+  devise:
+    confirmations:
+      confirmed: "Tava e-pasta adrese ir apstiprināta."
+      send_instructions: "Pēc dažām minūtēm tu saņemsi e-pastu ar instrukcijām kā apstiprināt savu kontu."
+      send_paranoid_instructions: "Ja tava e-pasta adrese eksistē mūsu datubāze, tu pēc dažām minūtēm saņemsi e-pastu ar instrukcijām kā apstiprināt savu kontu."
+    failure:
+      already_authenticated: "Tu esi jau pierakstījies."
+      inactive: "Tavs konts vēl nav aktivizēts."
+      invalid: "Nepareizs e-pasts vai parole."
+      invalid_token: "Nekorekts autentifikācijas kods."
+      locked: "Tavs konts ir bloķēts."
+      not_found_in_database: "Nepareizs e-pasts vai parole."
+      timeout: "Tava lietotāja sesija ir beigusies, pieraksties lai turpinātu."
+      unauthenticated: "Lai turpinātu ir nepieciešams pierakstīties vai piereģistrēties."
+      unconfirmed: "Lai turpinātu, tev ir jāapstiprina savs konts."
+    mailer:
+      confirmation_instructions:
+        subject: "Code.org apstiprinājuma instrukcijas"
+      reset_password_instructions:
+        subject: "Code.org paroles atiestatīšana"
+      unlock_instructions:
+        subject: "Atslēgšanas instrukcijas"
+    omniauth_callbacks:
+      failure: "Nevarējām tevi autentificēt no %{kind} jo \"%{reason}\"."
+      success: "Veiksmīgi autentificēts no %{kind} konta."
+    passwords:
+      no_token: "Tu nevari piekļūt šai lapai, ja neizmanto paroles atiestatīšanas e-pastu. Ja izmanto paroles atiestatīšanas e-pastu, pārliecinies, ka izmantoju visu saiti."
+      send_instructions: "Tu pēc dažām minūtēm saņemsi e-pastu ar instrukcijām kā atiestatīt paroli."
+      send_paranoid_instructions: "Ja tavs e-pasts ir mūsu datubāze, tu saņemsi paroles atiestatīšanas saiti savā e-pastā pēc dažām minūtēm."
+      updated: "Tava parole nomainīta veiksmīgi. Tagad tu esi pierakstījies."
+      updated_not_active: "Tava parole nomainīta veiksmīgi."
+    registrations:
+      destroyed: "Atā! Tavs konts ir veiksmīgi noslēgts. Mēs ceram atkal tevi satikt drīzumā."
+      signed_up: "Laipni lūdzu! Tu esi veiksmīgi piereģistrējies."
+      signed_up_but_inactive: "Tu esi veiksmīgi piereģistrējies. Tomēr tu nevarēji pierakstīties, jo tavs konts nav aktivizēts."
+      signed_up_but_locked: "Tu esi veiksmīgi piereģistrēties! Tomēr tu nevarēji pierakstīties, jo tavs konts ir bloķēts."
+      signed_up_but_unconfirmed: "Ziņa ar apstiprinājuma saiti ir nosūtīta uz tavu e-pastu. Atver šo saiti, lai aktivizētu savu kontu."
+      update_needs_confirmation: "Tu atjaunoji sava konta informāciju veiksmīgi, bet mums ir jāapstiprina tava jaunā e-pasta adrese. Lūdzu pārbaudi savu e-pastu un uzklikšķini uz apstiprinājuma saites, lai apstiprinātu tavu jauno e-pasta adresi."
+      updated: "Tu atjaunoji sava konta informāciju veiksmīgi."
+    sessions:
+      signed_out: "Atrakstīšanās veiksmīga."
+    unlocks:
+      send_instructions: "Tu pēc dažam minūtēm saņemsi e-pastu ar instrukciju kā atslēgt savu kontu."
+      send_paranoid_instructions: "Ja tavs konts eksistē, tu pēc dažām minūtēm saņemsi e-pastu ar instrukcijām kā atslēgt savu kontu."
+      unlocked: "Tavs konts ir atslēgts veiksmīgi. Lūdzu pieraksties lai turpinātu."
+  errors:
+    messages:
+      already_confirmed: "jau ir apstiprināts, lūdzu mēģini pierakstīties"
+      confirmation_period_expired: "ir jāapstiprina periodā: %{period}, lūdzu pieprasi jaunu"
+      expired: "ir iztecējis, lūdzu pieprasi jaunu"
+      not_found: "nav atrasts"
+      not_locked: "nav slēgts"
+      not_saved:
+        one: "%{resource} netika saglabāts šādas kļūdas dēļ:"
+        other: "%{resource} netika saglabāts %{count} kļūdu dēļ:"
+    invitations:
+      send_instructions: 'Ielūguma e-pasts ir nosūtīts uz %{email}.'
+    mailer:
+      invitation_instructions:
+        subject: 'Ielūguma instrukcijas'
+        accept: 'Apstiprināt ielūgumu'

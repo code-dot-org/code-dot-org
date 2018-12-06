@@ -1,0 +1,51 @@
+---
+az:
+  data:
+    failure_message_overrides:
+      Code Studio Puzzle Challenge 1 - Artist_failure_message_override: Yaxsi cehddi.
+        yeniden dogru yolla yoxla.
+      Code Studio Puzzle Challenge 10 - Bee_failure_message_override: Yaxsi cehddi.
+        yeniden dogru yolla yoxla.
+      Code Studio Puzzle Challenge 10b - Bee_failure_message_override: Yaxsi cehddi.
+        yeniden dogru yolla yoxla.
+      Code Studio Puzzle Challenge 11 - Artist_failure_message_override: Yaxsi cehddi.
+        yeniden dogru yolla yoxla.
+      Code Studio Puzzle Challenge 12 - Artist_failure_message_override: Yaxsi cehddi.
+        yeniden dogru yolla yoxla.
+      Code Studio Puzzle Challenge 13 - Artist_failure_message_override: Yaxsi cehddi.
+        yeniden dogru yolla yoxla.
+      Code Studio Puzzle Challenge 14 - Artist_failure_message_override: Yaxsi cehddi.
+        yeniden dogru yolla yoxla.
+      Code Studio Puzzle Challenge 2 - Artist_failure_message_override: Yaxsi cehddi.
+        yeniden dogru yolla yoxla.
+      Code Studio Puzzle Challenge 3 - Artist_failure_message_override: Yaxsi cehddi.
+        yeniden dogru yolla yoxla.
+      Code Studio Puzzle Challenge 4 - Artist_failure_message_override: Yaxsi cehddi.
+        yeniden dogru yolla yoxla.
+      Code Studio Puzzle Challenge 5 - Bee_failure_message_override: Yaxsi cehddi.
+        yeniden dogru yolla yoxla.
+      Code Studio Puzzle Challenge 6 - Bee_failure_message_override: Yaxsi cehddi.
+        yeniden dogru yolla yoxla.
+      Code Studio Puzzle Challenge 7 - Bee_failure_message_override: Yaxsi cehddi.
+        yeniden dogru yolla yoxla.
+      Code Studio Puzzle Challenge 8 - Bee_failure_message_override: Yaxsi cehddi.
+        yeniden dogru yolla yoxla.
+      Code Studio Puzzle Challenge 9 - Bee_failure_message_override: Yaxsi cehddi.
+        yeniden dogru yolla yoxla.
+      Code Studio Puzzle Challenge Var - Artist_failure_message_override: Yaxsi cehddi.
+        yeniden dogru yolla yoxla.
+      Kiki_StarWars_Test_5_failure_message_override: Oyun bitdi!
+      Kiki_StarWars_Test_5_Example_failure_message_override: Oyun bitdi!
+      WhileAdventure_failure_message_override: Təbriklər! sən X qəpiklərini eldə etdin!
+      courseC19_playLab_EOC3_failure_message_override: Sen oyununa və proqramına hərəkət
+        etmələri üçün 2 ve yaxud daha çox oyunçu elve etməlisən.
+      courseE_playLab_scaffold3_failure_message_override: Sen oyununa və proqramına
+        hərəkət etmələri üçün 2 ve yaxud daha çox oyunçu elve etməlisən.
+      courseE_playLab_scaffold3_2018_failure_message_override: Sen oyununa və proqramına
+        hərəkət etmələri üçün 2 ve yaxud daha çox oyunçu elve etməlisən.
+      grade4_scaffolded_project3_failure_message_override: Sen oyununa 2 ve yaxud
+        daha çox oyunçu elve etməlisən.
+      kikiTesta_failure_message_override: Təbriklər! sən X qəpiklərini eldə etdin!
+      sample1_failure_message_override: Təbriklər! sən X qəpiklərini eldə etdin!
+      sample4_failure_message_override: Təbriklər! sən X qəpiklərini eldə etdin!
+      sample8_failure_message_override: Təbriklər! sən X qəpiklərini eldə etdin!

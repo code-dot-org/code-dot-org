@@ -1,0 +1,107 @@
+sr:
+  data:
+    callouts:
+      Counting_callout:
+        sign_in_to_save_project: Желиш да поново приступиш свом пројекту касније? Пријави се да га сачуваш на свом налогу!
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: Искористите нову "узми нектар" наредбу.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: Притисни "Изврши" дугме да покренеш програм
+      Mike Playlab Project_callout:
+        sign_in_to_save_project: Желиш да поново приступиш свом пројекту касније? Пријави се да га сачуваш на свом налогу!
+      New Artist Project_callout:
+        sign_in_to_save_project: Желиш да поново приступиш свом пројекту касније? Пријави се да га сачуваш на свом налогу!
+      New Play Lab Project_callout:
+        sign_in_to_save_project: Желиш да поново приступиш свом пројекту касније? Пријави се да га сачуваш на свом налогу!
+      Overworld Chop Trees_callout:
+        craft_callout_preplaced: Неки блокови су већ постављени за почетак
+      Overworld Chop Trees_2018_callout:
+        craft_callout_preplaced: Неки блокови су већ постављени за почетак
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Неки блокови су већ постављени за почетак
+      Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: Овај кôд ће започети изградњу твоје куће. Можеш ли га довршити?
+      Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Овај кôд ће започети изградњу твоје куће. Можеш ли га довршити?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Овај кôд ће започети изградњу твоје куће. Можеш ли га довршити?
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: Притисни "Изврши" дугме да покренеш програм
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: Притисни "Изврши" дугме да покренеш програм
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Притисни "Изврши" дугме да покренеш програм
+      Overworld Place Wall_callout:
+        craft_inside_repeat: Понови команде постављањем блокова овде
+      Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Понови команде постављањем блокова овде
+      Overworld Place Wall_2019_callout:
+        craft_inside_repeat: Понови команде постављањем блокова овде
+      Rock Paper Scissors_callout:
+        sign_in_to_save_project: Желиш да поново приступиш свом пројекту касније? Пријави се да га сачуваш на свом налогу!
+      Test Play Lab Project With Walls_callout:
+        sign_in_to_save_project: Желиш да поново приступиш свом пројекту касније? Пријави се да га сачуваш на свом налогу!
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: Овај кôд ће проверити да ли има лаве, можеш ли додати команду да се помери напред?
+      Underground Avoiding Lava_2018_callout:
+        craft_callout_moveforward: Овај кôд ће проверити да ли има лаве, можеш ли додати команду да се помери напред?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Овај кôд ће проверити да ли има лаве, можеш ли додати команду да се помери напред?
+      Underground Iron_callout:
+        craft_what_is_iron: Ископај ово гвожђе!
+      Underground Iron_2018_callout:
+        craft_what_is_iron: Ископај ово гвожђе!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: Ископај ово гвожђе!
+      aE3_callout:
+        aE3_1: Доступно је само неколико ових
+      aE3alternate_callout:
+        aE3_1: Доступно је само неколико ових
+      aE3alternateB_callout:
+        aE3_1: Доступно је само неколико ових
+      aE4_callout:
+        aE3_1: Доступно је само неколико ових
+      aE5_callout:
+        aE3_1: Доступно је само неколико ових
+      courseA_maze_seq1_callout:
+        courseA_maze_seq1_1: Кликни сијалицу када ти треба савет!
+      courseA_maze_seq1_2018_callout:
+        courseA_maze_seq1_1: Кликни сијалицу када ти треба савет!
+      courseA_playLab_events4_callout:
+        courseA_playlab_events4_callout1: Ово је облачић
+      courseA_playLab_events4_2018_callout:
+        courseA_playlab_events4_callout1: Ово је облачић
+      courseB_maze_seq1_callout:
+        courseB_maze_seq1: Кликни сијалицу када ти треба савет!
+      courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: Кликни сијалицу када ти треба савет!
+      courseF_playLab_func2_callout:
+        sign_in_to_save_project: Желиш да поново приступиш свом пројекту касније? Пријави се да га сачуваш на свом налогу!
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: Користите блок "направи круг" и промените величину.
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: Користите понављај блок да направите овај облик.
+      frozen diamond_callout:
+        frozen_diamond_repeat: Користите понављај блок да направите овај облик.
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: Користите блок "Направи грану пахуљице"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Користите блок "Направи грану пахуљице"
+      frozen square iterative_callout:
+        frozen_create_square: Додајте више блокова да направите квадрат
+      frozen square iterative_b_callout:
+        frozen_create_square: Додајте више блокова да направите квадрат
+      frozen square iterative_test_callout:
+        frozen_create_square: Додајте више блокова да направите квадрат
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: Користите блок "направи круг" и промените величину.
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: Користите понављај блок да направите овај облик.
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: Користите понављај блок да направите овај облик.
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: Користите понављај блок да направите овај облик.
+      grade4_playLab_proj_example2_callout:
+        sign_in_to_save_project: Желиш да поново приступиш свом пројекту касније? Пријави се да га сачуваш на свом налогу!
+      small_actors_playlab_projects_callout:
+        sign_in_to_save_project: Желиш да поново приступиш свом пројекту касније? Пријави се да га сачуваш на свом налогу!

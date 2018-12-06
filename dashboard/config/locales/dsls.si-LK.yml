@@ -1,0 +1,2130 @@
+---
+si:
+  data:
+    evaluation_multi:
+      U5 evaluation q1:
+        'No': නැහැ
+        'Yes': ඔව්
+      U5 evaluation q2:
+        0: "? Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        1: ": Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        While Loops: නැවත සිදුවන ලුප
+    external:
+      Algo How Routers Learn Student Lesson Introduction:
+        title: මාතෘකාව
+      Algo Shortest Path Student Lesson Introduction:
+        title: මාතෘකාව
+      Basic mechanics of variables:
+        title: මාතෘකාව
+      Basic mechanics of variables_2018:
+        title: මාතෘකාව
+      Begin planning your project:
+        title: මාතෘකාව
+      'Big Picture: If-statements':
+        title: මාතෘකාව
+      'Big Picture: If-statements_2018':
+        title: මාතෘකාව
+      Boolean Expressions and Comparison Operators:
+        title: මාතෘකාව
+      Boolean Expressions and Comparison Operators_2018:
+        title: මාතෘකාව
+      CSD U1 Input Output C2:
+        title: මාතෘකාව
+      CSD U1 Input Output C3:
+        title: මාතෘකාව
+      CSD U1 Input Output C4:
+        title: මාතෘකාව
+      CSD U1 Input Output Intro:
+        title: මාතෘකාව
+      CSD U2 Design Project:
+        title: මාතෘකාව
+      CSD U2 Design Project_2018:
+        title: මාතෘකාව
+      CSD U2 L1 Overview:
+        title: මාතෘකාව
+      CSD U2 L1 Overview_2018:
+        title: මාතෘකාව
+      CSD U2 L2 Overview:
+        title: මාතෘකාව
+      CSD U2 L2 Overview_2018:
+        title: මාතෘකාව
+      CSD U2 L3 Overview:
+        title: මාතෘකාව
+      CSD U2 L3 Overview_2018:
+        title: මාතෘකාව
+      CSD U2 L4 Overview:
+        title: මාතෘකාව
+      CSD U2 L4 Overview_2018:
+        title: මාතෘකාව
+      CSD U2 L5 Overview:
+        title: මාතෘකාව
+      CSD U2 L5 Overview_2018:
+        title: මාතෘකාව
+      CSD U2 L6 Overview:
+        title: මාතෘකාව
+      CSD U2 L6 Overview_2018:
+        title: මාතෘකාව
+      CSD U2 Social Sleuth:
+        title: මාතෘකාව
+      CSD U2 expand project:
+        title: මාතෘකාව
+      CSD U2 expand project_2018:
+        title: මාතෘකාව
+      CSD U2 layout style review:
+        title: මාතෘකාව
+      CSD U2 more CSS:
+        title: මාතෘකාව
+      CSD U3 L2 Challenges:
+        title: මාතෘකාව
+      CSD U3 SFLP Sprites and Images:
+        title: මාතෘකාව
+      CSD U3 abstraction intro:
+        title: මාතෘකාව
+      CSD U3 combining rep:
+        title: මාතෘකාව
+      CSD U3 combining rep_2018:
+        title: මාතෘකාව
+      CSD U5 Encryption 1:
+        title: මාතෘකාව
+      CSD U5 Encryption 1_2018:
+        title: මාතෘකාව
+      CSD U5 L13 SFLP Interpreting Data:
+        title: මාතෘකාව
+      CSD U5 L13 SFLP Interpreting Data_2018:
+        title: මාතෘකාව
+      CSD U5 Representing Information:
+        title: මාතෘකාව
+      CSD U5 collection UPS2:
+        title: මාතෘකාව
+      CSD U5 collection ads2:
+        title: මාතෘකාව
+      CSD U5 data visualization:
+        title: මාතෘකාව
+      CSD U5 data visualization sheet:
+        title: මාතෘකාව
+      CSD U5 data visualization_2018:
+        title: මාතෘකාව
+      CSD U5 student record:
+        title: මාතෘකාව
+      CSD U5 student record_2018:
+        title: මාතෘකාව
+      CSD U5 video2:
+        title: මාතෘකාව
+      CSD-U3-SFLP Drawing:
+        title: මාතෘකාව
+      CSDU2L01 SFLP:
+        title: මාතෘකාව
+      CSP ExploreL02 SFLP:
+        title: මාතෘකාව
+      CSP Journal Entry Placeholder2:
+        title: මාතෘකාව
+      CSPPD3-u2 Welcome:
+        Welcome!: ආයුබෝවන්!
+      CSPStudentLessonPlanTemplate:
+        title: මාතෘකාව
+      CSPU5 Making a Multi Screen Chaser Game:
+        title: මාතෘකාව
+      CSPU5_ChoosingGoodIds:
+        title: මාතෘකාව
+      CSPU5_EventDrivenProgrammingPatterns:
+        title: මාතෘකාව
+      CSPU5_FirstTimeDesignMode:
+        title: මාතෘකාව
+      CSPU5_FirstTimeDesignMode_2018:
+        title: මාතෘකාව
+      CSPU5_HowImagesWork:
+        title: මාතෘකාව
+      CSPU5_HowOnEventWorks_v2:
+        title: මාතෘකාව
+      CSPU5_U3L14 - Message - Other ways to assign values:
+        title: මාතෘකාව
+      CSPU5_U3L14 - Message - basic mechanics of variables:
+        title: මාතෘකාව
+      CSPU5_U3L15 - explanation of IF and =v==:
+        title: මාතෘකාව
+      CSPU5_U3L15 Student Lesson Intro - new:
+        title: මාතෘකාව
+      CSPU5_U3L20 - combining And and Or explanation:
+        title: මාතෘකාව
+      CSPU5_goodbyeTurtle_setPosition:
+        title: මාතෘකාව
+      CSPU5_introToDebugging:
+        title: මාතෘකාව
+      CSPU5_makingPredictions_ref:
+        title: මාතෘකාව
+      CSPU5_onEventBreakdown:
+        title: මාතෘකාව
+      CSP_Final_instructions:
+        title: මාතෘකාව
+      CSP_U4_rawMovieData:
+        title: මාතෘකාව
+      Color Sleuth - Epilogue:
+        title: මාතෘකාව
+      Color Sleuth - Epilogue_2018:
+        title: මාතෘකාව
+      Color Sleuth - How does it end?:
+        title: මාතෘකාව
+      Color Sleuth - How does it end?_2018:
+        title: මාතෘකාව
+      Color Sleuth - How to switch player turns:
+        title: මාතෘකාව
+      Color Sleuth - How to switch player turns_2018:
+        title: මාතෘකාව
+      Color Sleuth - Keeping score:
+        title: මාතෘකාව
+      Color Sleuth - Keeping score_2018:
+        title: මාතෘකාව
+      Color Sleuth - Planning the App:
+        title: මාතෘකාව
+      Color Sleuth - Planning the App_2018:
+        title: මාතෘකාව
+      Controlling Memory - Other ways to assign values:
+        title: මාතෘකාව
+      Controlling Memory - Other ways to assign values_2018:
+        title: මාතෘකාව
+      Cups and Beans Activity:
+        title: මාතෘකාව
+      Cups and Beans Activity_2018:
+        title: මාතෘකාව
+      Debugging with Console.log:
+        title: මාතෘකාව
+      Debugging with Console.log_2018:
+        title: මාතෘකාව
+      Digital Footprint Chirpr lillizard:
+        title: මාතෘකාව
+      Digital Footprint FaceSpace Haley:
+        title: මාතෘකාව
+      Digital Footprint FaceSpace Lizzie:
+        title: මාතෘකාව
+      Digital Footprint instantframe wiz_kid_liz:
+        title: මාතෘකාව
+      DigitalCitizenship2:
+        Digital Citizenship: ඩිජිටල් පුරවැසිකම
+      ECSPD Challenge Rubric:
+        title: මාතෘකාව
+      ECSPD Online U1D11-14:
+        title: මාතෘකාව
+      ECSPD Online U1D15-16 Forum:
+        title: මාතෘකාව
+      ECSPD Online intro:
+        Introduction: හැදින්වීම
+      ECSPD U2 Challenge Plan:
+        title: මාතෘකාව
+      ECSPD Unit 2 Stage11:
+        title: මාතෘකාව
+      ECSPD Unit 2 Stage13:
+        title: මාතෘකාව
+      ECSPD Unit 2 Stage6:
+        title: මාතෘකාව
+      Encoding Numbers Real World Student Lesson Introduction:
+        title: මාතෘකාව
+      Event Driven Programming Recap:
+        title: මාතෘකාව
+      Event Driven Programming Recap_2018:
+        title: මාතෘකාව
+      Event-Driven Programming Patterns:
+        title: මාතෘකාව
+      Event-Driven Programming Patterns_2018:
+        title: මාතෘකාව
+      External MD column Test:
+        title: මාතෘකාව
+      External MD column Test bootstrap:
+        title: මාතෘකාව
+      GoodBadVisualizations_v1:
+        title: මාතෘකාව
+      GoodBadVisualizations_v2:
+        title: මාතෘකාව
+      How "if-else-if" Works:
+        title: මාතෘකාව
+      How "if-else-if" Works_2018:
+        title: මාතෘකාව
+      How Compound Boolean Expressions Work:
+        title: මාතෘකාව
+      How Compound Boolean Expressions Work_2018:
+        title: මාතෘකාව
+      How Dropdown Menus Work:
+        title: මාතෘකාව
+      How Dropdown Menus Work_2018:
+        title: මාතෘකාව
+      How If Statements Work pt 1:
+        title: මාතෘකාව
+      How If Statements Work pt 1_2018:
+        title: මාතෘකාව
+      How If-Else Statements Work:
+        title: මාතෘකාව
+      How If-Else Statements Work_2018:
+        title: මාතෘකාව
+      How Images Work:
+        title: මාතෘකාව
+      How Images Work_2018:
+        title: මාතෘකාව
+      How Secure Is Your Password?:
+        title: මාතෘකාව
+      How Secure Is Your Password?_2018:
+        title: මාතෘකාව
+      How Set Property Works:
+        title: මාතෘකාව
+      How Set Property Works_2018:
+        title: මාතෘකාව
+      How onEvent Works:
+        title: මාතෘකාව
+      How onEvent Works_2018:
+        title: මාතෘකාව
+      How setPosition and screen dimensions work:
+        title: මාතෘකාව
+      How setPosition and screen dimensions work_2018:
+        title: මාතෘකාව
+      How the Boolean &&, || and ! Operators Work:
+        title: මාතෘකාව
+      How the Boolean &&, || and ! Operators Work_2018:
+        title: මාතෘකාව
+      How to make a random color:
+        title: මාතෘකාව
+      How to make a random color_2018:
+        title: මාතෘකාව
+      How to pick a random button:
+        title: මාතෘකාව
+      How to pick a random button_2018:
+        title: මාතෘකාව
+      Internet Simulator Setup 2:
+        title: මාතෘකාව
+      Intro to Debugging and Common Problems:
+        title: මාතෘකාව
+      Intro to Debugging and Common Problems_2018:
+        title: මාතෘකාව
+      Making Multiple Screens:
+        title: මාතෘකාව
+      Making Multiple Screens_2018:
+        title: මාතෘකාව
+      Making a Multi Screen Chaser Game v.2:
+        title: මාතෘකාව
+      Making a Multi Screen Chaser Game v.2_2018:
+        title: මාතෘකාව
+      Multi-Screen Apps:
+        title: මාතෘකාව
+      New Challenge Introduction:
+        title: මාතෘකාව
+      New Challenge Introduction_2018:
+        title: මාතෘකාව
+      OPD-K5 Stage3aGo:
+        title: මාතෘකාව
+      PDAlg Facilitator Test:
+        title: මාතෘකාව
+      PDK5 CS Video:
+        Computer Science: පරිගණක විද්‍යාව
+      PDK5 Pair Programming 1:
+        Pair Programming: යුගල වශයෙන් ක්‍රමලේඛනය
+      PDK5 Teacher Dashboard C:
+        Teacher Dashboard: ගුරු උපකරණ පුවරුව
+      PS - Responding to User Input:
+        title: මාතෘකාව
+      PS - draft - Longitudinal study description:
+        title: මාතෘකාව
+      Prepare for your presentation:
+        title: මාතෘකාව
+      Public Key Crypto Widget Instructions:
+        title: මාතෘකාව
+      Public Key Crypto Widget Instructions_2018:
+        title: මාතෘකාව
+      Rules About Choosing Good IDs:
+        title: මාතෘකාව
+      Rules About Choosing Good IDs_2018:
+        title: මාතෘකාව
+      SG U3 whats a comment:
+        title: මාතෘකාව
+      SG v2 U3L01 Student Lesson Introduction:
+        title: මාතෘකාව
+      SG v2 U3L02 Student Lesson Introduction:
+        title: මාතෘකාව
+      SG v2 U3L03 Student Lesson Introduction:
+        title: මාතෘකාව
+      SG v2 U3L05 Student Lesson Introduction:
+        title: මාතෘකාව
+      SG v2 U3L07 Student Lesson Introduction:
+        title: මාතෘකාව
+      SG v2 U3L08 Student Lesson Introduction:
+        title: මාතෘකාව
+      Sending Bits Real World Student Lesson Introduction:
+        title: මාතෘකාව
+      Simple Decisions with if-statements:
+        title: මාතෘකාව
+      Simple Decisions with if-statements_2018:
+        title: මාතෘකාව
+      Tips For Working on Your Own:
+        title: මාතෘකාව
+      Tips For Working on Your Own_2018:
+        title: මාතෘකාව
+      U1L10 Student Lesson Introduction:
+        title: මාතෘකාව
+      U1L11 Student Lesson Introduction:
+        title: මාතෘකාව
+      U1L12 Student Lesson Introduction:
+        title: මාතෘකාව
+      U1L13 Student Lesson Summary:
+        title: මාතෘකාව
+      U1L14 Student Lesson Summary:
+        title: මාතෘකාව
+      U1L15 Student Lesson Summary:
+        title: මාතෘකාව
+      U1L17 Student Lesson Introduction:
+        title: මාතෘකාව
+      U1L2 Student Lesson Introduction:
+        title: මාතෘකාව
+      U1L3 Student Lesson Introduction:
+        title: මාතෘකාව
+      U1L4 Student Lesson Introduction:
+        title: මාතෘකාව
+      U1L5 Student Lesson Introduction:
+        title: මාතෘකාව
+      U1L6 Student Lesson Introduction:
+        title: මාතෘකාව
+      U1L7 Student Lesson Introduction:
+        title: මාතෘකාව
+      U1L8 Student Lesson Introduction:
+        title: මාතෘකාව
+      U1L9 Student Lesson Introduction:
+        title: මාතෘකාව
+      U2L1 Student Lesson Introduction:
+        title: මාතෘකාව
+      U2L12 Student Lesson Introduction:
+        title: මාතෘකාව
+      U2L7 Student Lesson Introduction:
+        title: මාතෘකාව
+      U2L8 Student Lesson Introduction:
+        title: මාතෘකාව
+      U3 whats a comment:
+        title: මාතෘකාව
+      U3 whats a comment_2018:
+        title: මාතෘකාව
+      U3L12 - Mission Unsortable:
+        title: මාතෘකාව
+      U3L13 - Explanation of Ids:
+        title: මාතෘකාව
+      U3L13 - Make a Prediction Explanation:
+        title: මාතෘකාව
+      U3L13 Add Button Instrucitons:
+        title: මාතෘකාව
+      U3L13 Add Button Instructions:
+        title: මාතෘකාව
+      U3L14 - Message - Other ways to assign values:
+        title: මාතෘකාව
+      U3L14 - Message - basic mechanics of variables:
+        title: මාතෘකාව
+      U3L14 - Student Intro Page:
+        title: මාතෘකාව
+      U3L15 - explanation of IF and =v==:
+        title: මාතෘකාව
+      U3L15 Student Lesson Intro - new:
+        title: මාතෘකාව
+      U3L19 - done with variables finally:
+        title: මාතෘකාව
+      U3L20 - combining And and Or explanation:
+        title: මාතෘකාව
+      U4 - Cleaning Data - Activity Guide:
+        title: මාතෘකාව
+      U4 - Making Data Visualizations - Bar Chart:
+        title: මාතෘකාව
+      U4 - Making Data Visualizations - Edit Chart Appearance:
+        title: මාතෘකාව
+      U4 - Making Data Visualizations - Free Play:
+        title: මාතෘකාව
+      U4 - Making Data Visualizations - Free Play_2018:
+        title: මාතෘකාව
+      U4 - Making Data Visualizations - Getting Started:
+        title: මාතෘකාව
+      U4 - Making Data Visualizations - Line Chart:
+        title: මාතෘකාව
+      U4 - Making Data Visualizations - Scatter Plot:
+        title: මාතෘකාව
+      U4 - Making Data Visualizations - Student Introduction:
+        title: මාතෘකාව
+      U4 - Privacy Abandoned - Hot On Your Trail Video:
+        title: මාතෘකාව
+      U4 - Unique Ids Explanation:
+        title: මාතෘකාව
+      U4 - Unique Ids Explanation_2018:
+        title: මාතෘකාව
+      U4 Cleaning Data Activity Guide Pt2:
+        title: මාතෘකාව
+      U4 Cleaning Data Activity Guide Pt3:
+        title: මාතෘකාව
+      U4L01 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L02 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L02 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      U4L02v2 - Finding Trends:
+        title: මාතෘකාව
+      U4L03 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L03 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      U4L03v2 - Student Introduction:
+        title: මාතෘකාව
+      U4L04 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L04 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      U4L04v2 - Student Introduction:
+        title: මාතෘකාව
+      U4L05 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L06 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L06v2 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L07 Student Introduction public key crypto:
+        title: මාතෘකාව
+      U4L07 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L08 - mod clock instructions:
+        title: මාතෘකාව
+      U4L08 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L08v2 Making Pivot Tables:
+        title: මාතෘකාව
+      U4L08v2 Making Pivot Tables Part 2:
+        title: මාතෘකාව
+      U4L08v2 Making Pivot Tables Part 3:
+        title: මාතෘකාව
+      U4L08v2 Making Pivot Tables Part 3_2018:
+        title: මාතෘකාව
+      U4L08v2 Student Intro:
+        title: මාතෘකාව
+      U4L09 Student Lesson Intro Practice PT big data dilemma:
+        title: මාතෘකාව
+      U4L09 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L10 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L11 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L12 - Student Introduction:
+        title: මාතෘකාව
+      U4L12 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L13 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L14 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L15 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L16 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L17 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L18 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L19 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L20 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L21 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L22 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L23 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L24 Student Lesson Introduction:
+        title: මාතෘකාව
+      U4L5 random subst challenge page:
+        title: මාතෘකාව
+      U5 - Create PT - Student Introduction:
+        title: මාතෘකාව
+      U5 - Create PT Prep - Student Introduction:
+        title: මාතෘකාව
+      U5 - Create PT review - Student Introduction:
+        title: මාතෘකාව
+      U5 - Explore PT - Student Introduction:
+        title: මාතෘකාව
+      U5 - Explore PT Prep - Student Introduction:
+        title: මාතෘකාව
+      U5 - Explore PT Review - Student Introduction:
+        title: මාතෘකාව
+      U5 - PT Prep - Digital Portfolio and tech setup:
+        title: මාතෘකාව
+      U5 color sleuth check correct:
+        title: මාතෘකාව
+      U5 color sleuth check correct_2018:
+        title: මාතෘකාව
+      U5L08 - Student Intro If statements:
+        title: මාතෘකාව
+      U6 - Charts - Student Introduction:
+        title: මාතෘකාව
+      U6 - Charts - Student Introduction_2018:
+        title: මාතෘකාව
+      U6 - Final Project - Student Introduction:
+        title: මාතෘකාව
+      U6 - Final Project - Student Introduction_2018:
+        title: මාතෘකාව
+      U6 - ImportExport - Student Introduction:
+        title: මාතෘකාව
+      U6 - ImportExport - Student Introduction_2018:
+        title: මාතෘකාව
+      U6 - Sample Apps - Student Introduction:
+        title: මාතෘකාව
+      U6 - Sample Apps - Student Introduction_2018:
+        title: මාතෘකාව
+      U6 - deleteRecord - Student Introduction:
+        title: මාතෘකාව
+      U6 - deleteRecord - Student Introduction_2018:
+        title: මාතෘකාව
+      U6 - updateRecord - Student Introduction:
+        title: මාතෘකාව
+      U6 - updateRecord - Student Introduction_2018:
+        title: මාතෘකාව
+      U6 AP Performance Task Tech Setup - Student Links:
+        title: මාතෘකාව
+      U6 Create PT - Complete the Task - Student Links:
+        title: මාතෘකාව
+      U6 Create PT - Complete the Task - Student Links_2018:
+        title: මාතෘකාව
+      U6 Create PT Review - Student Links:
+        title: මාතෘකාව
+      U6 Create PT Review - Student Links_2018:
+        title: මාතෘකාව
+      U6 Explore PT - Complete the Task - Student Links:
+        title: මාතෘකාව
+      U6 Explore PT - Complete the Task - Student Links_2018:
+        title: මාතෘකාව
+      U6 Explore PT - Make a Plan - Student Links:
+        title: මාතෘකාව
+      U6 Explore PT - Make a Plan - Student Links_2018:
+        title: මාතෘකාව
+      U6 Explore PT Review - Student Links:
+        title: මාතෘකාව
+      U6 Explore PT Review - Student Links_2018:
+        title: මාතෘකාව
+      Unit 2 Lesson 1 Overview Clone:
+        title: මාතෘකාව
+      Unit 4 Lesson 1 Introduction:
+        title: මාතෘකාව
+      Unit 4 Lesson 1 Introduction_2018:
+        title: මාතෘකාව
+      Unit 4 Lesson 2 Introduction:
+        title: මාතෘකාව
+      Unit 4 Lesson 2 Introduction_2018:
+        title: මාතෘකාව
+      Unit 4 Lesson 5 Introduction:
+        title: මාතෘකාව
+      Unit 4 Lesson 5 Introduction_2018:
+        title: මාතෘකාව
+      Unit 5 Lesson 1:
+        title: මාතෘකාව
+      Unit 5 Lesson 1 Introduction:
+        title: මාතෘකාව
+      Unit 5 Lesson 1 Introduction_2018:
+        title: මාතෘකාව
+      Unit 5 Lesson 10 Introduction:
+        title: මාතෘකාව
+      Unit 5 Lesson 10 Introduction_2018:
+        title: මාතෘකාව
+      Unit 5 Lesson 2 Introduction:
+        title: මාතෘකාව
+      Unit 5 Lesson 2 Introduction_2018:
+        title: මාතෘකාව
+      Unit 5 Lesson 3 Introduction:
+        title: මාතෘකාව
+      Unit 5 Lesson 3 Introduction_2018:
+        title: මාතෘකාව
+      Unit 5 Lesson 4 Introduction:
+        title: මාතෘකාව
+      Unit 5 Lesson 4 Introduction_2018:
+        title: මාතෘකාව
+      Unit 5 Lesson 5:
+        title: මාතෘකාව
+      Unit 5 Lesson 5 Introduction:
+        title: මාතෘකාව
+      Unit 5 Lesson 5 Introduction_2018:
+        title: මාතෘකාව
+      Unit 5 Lesson 6:
+        title: මාතෘකාව
+      Unit 5 Lesson 6 Introduction:
+        title: මාතෘකාව
+      Unit 5 Lesson 6 Introduction_2018:
+        title: මාතෘකාව
+      Unit 5 Lesson 7 Introduction:
+        title: මාතෘකාව
+      Unit 5 Lesson 7 Introduction_2018:
+        title: මාතෘකාව
+      Unit 5 Lesson 8 Introduction:
+        title: මාතෘකාව
+      Unit 5 Lesson 8 Introduction_2018:
+        title: මාතෘකාව
+      Unit 5 Lesson 9 Introduction:
+        title: මාතෘකාව
+      Unit 5 Lesson 9 Introduction_2018:
+        title: මාතෘකාව
+      'Worked Example: If-statements and Robot':
+        title: මාතෘකාව
+      'Worked Example: If-statements and Robot_2018':
+        title: මාතෘකාව
+      courseB_external_MRF:
+        title: මාතෘකාව
+      courseB_external_loopMRF:
+        title: මාතෘකාව
+      courseB_story_unspottedBugs10:
+        title: මාතෘකාව
+      courseB_story_unspottedBugs11:
+        title: මාතෘකාව
+      courseB_story_unspottedBugs12:
+        title: මාතෘකාව
+      courseB_story_unspottedBugs13:
+        title: මාතෘකාව
+      courseB_story_unspottedBugs14:
+        title: මාතෘකාව
+      courseB_story_unspottedBugs15:
+        title: මාතෘකාව
+      courseB_story_unspottedBugs16:
+        title: මාතෘකාව
+      courseB_story_unspottedBugs17:
+        title: මාතෘකාව
+      courseB_story_unspottedBugs18:
+        title: මාතෘකාව
+      courseB_story_unspottedBugs2:
+        title: මාතෘකාව
+      courseB_story_unspottedBugs3:
+        title: මාතෘකාව
+      courseB_story_unspottedBugs4:
+        title: මාතෘකාව
+      courseB_story_unspottedBugs5:
+        title: මාතෘකාව
+      courseB_story_unspottedBugs6:
+        title: මාතෘකාව
+      courseB_story_unspottedBugs7:
+        title: මාතෘකාව
+      courseB_story_unspottedBugs8:
+        title: මාතෘකාව
+      courseB_story_unspottedBugs9:
+        title: මාතෘකාව
+      courseB_unplugged_mrfProgramming:
+        title: මාතෘකාව
+      courseC_screenoutthemean:
+        title: මාතෘකාව
+      courseF_firstFunctions_map:
+        title: මාතෘකාව
+      coursef_functionsSummary_map:
+        title: මාතෘකාව
+      coursef_powerofwords:
+        title: මාතෘකාව
+      csd-post-survey-unit1-preamble:
+        title: මාතෘකාව
+      csd-post-survey-unit2-preamble:
+        title: මාතෘකාව
+      csd-post-survey-unit3-preamble:
+        title: මාතෘකාව
+      csd-post-survey-unit4-preamble:
+        title: මාතෘකාව
+      csd-post-survey-unit5-preamble:
+        title: මාතෘකාව
+      csd-post-survey-unit6-preamble:
+        title: මාතෘකාව
+      csp-post-survey-2018-AP-preamble:
+        title: මාතෘකාව
+      csp-post-survey-2018-topics-preamble:
+        title: මාතෘකාව
+      csp-post-survey-2018-unit-feedback-preamble:
+        title: මාතෘකාව
+      csp-post-survey-createPT-preamble:
+        title: මාතෘකාව
+      csp-post-survey-explorePT-preamble:
+        title: මාතෘකාව
+      csp-post-survey-unit1-preamble:
+        title: මාතෘකාව
+      csp-post-survey-unit2-preamble:
+        title: මාතෘකාව
+      csp-post-survey-unit3-preamble:
+        title: මාතෘකාව
+      csp-post-survey-unit4-preamble:
+        title: මාතෘකාව
+      csp-post-survey-unit5-preamble:
+        title: මාතෘකාව
+      csp_unit5_finalassessment_overview:
+        title: මාතෘකාව
+      csp_unit5_finalassessment_overview_2018:
+        title: මාතෘකාව
+      csp_unit5_finalassessment_overview_exam_prep:
+        title: මාතෘකාව
+      csp_unit_assessment_overview:
+        title: මාතෘකාව
+      csp_unit_assessment_overview_2018:
+        title: මාතෘකාව
+      csp_unit_assessment_overview_exam_prep:
+        title: මාතෘකාව
+      dsl link test:
+        title: මාතෘකාව
+      grade2_maze_intro1:
+        title: මාතෘකාව
+      grade2_unplugged_neighborhood:
+        title: මාතෘකාව
+      grade4_project_design:
+        title: මාතෘකාව
+      grade4_project_design_image:
+        title: මාතෘකාව
+      grade4_project_presentation:
+        title: මාතෘකාව
+      grade5_project_design:
+        title: මාතෘකාව
+      grade5_project_presentation:
+        title: මාතෘකාව
+      more encryption algorithms:
+        title: මාතෘකාව
+      newCSFsample:
+        Intro: හැඳින්වීම
+      post-assessment survey heading4:
+        title: මාතෘකාව
+      pwc_appdev:
+        title: මාතෘකාව
+      pwc_appdevunplugged:
+        title: මාතෘකාව
+      pwc_cybersecurity:
+        title: මාතෘකාව
+      pwc_internetofthings:
+        title: මාතෘකාව
+      pwc_programming:
+        title: මාතෘකාව
+      pwc_webdevelopment:
+        title: මාතෘකාව
+      sciPD framework video:
+        Framework: රාමුව
+      sciPD2Part4_S1_L3:
+        title: මාතෘකාව
+      sciPD2Part4_S2_L1:
+        title: මාතෘකාව
+      sciPD2Part4_S2_L2:
+        title: මාතෘකාව
+      sciPD2Part4_S3_L1:
+        title: මාතෘකාව
+      sciPD2Part4_S3_L2:
+        title: මාතෘකාව
+      sciPD2Part4_S3_L3:
+        title: මාතෘකාව
+      sciPD3 mods2:
+        title: මාතෘකාව
+      sciPD33 earth1:
+        title: මාතෘකාව
+      sciPD33 earth2:
+        title: මාතෘකාව
+      sciPDpart4_S1_L1:
+        title: මාතෘකාව
+      test discourse level type:
+        title: මාතෘකාව
+      v2 U1 Internet is for Everyone Student Lesson Introduction:
+        title: මාතෘකාව
+      v2 U1 Internet is for Everyone Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      v2 U1L14 Student Lesson Introduction:
+        title: මාතෘකාව
+      v2 U1L14 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      v2 U1L2 Student Lesson Introduction:
+        title: මාතෘකාව
+      v2 U1L2 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      v2 U1L3 Student Lesson Introduction:
+        title: මාතෘකාව
+      v2 U1L3 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      v2 U1L4 Student Lesson Introduction:
+        title: මාතෘකාව
+      v2 U1L4 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      v2 U1L5 Student Lesson Introduction:
+        title: මාතෘකාව
+      v2 U1L5 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      v2 U1L8 Student Lesson Introduction:
+        title: මාතෘකාව
+      v2 U1L8 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      v2 U2L1 Student Lesson Introduction:
+        title: මාතෘකාව
+      v2 U2L1 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      v2 U2L10 Student Lesson Introduction:
+        title: මාතෘකාව
+      v2 U2L10 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      v2 U2L11 Student Lesson Introduction:
+        title: මාතෘකාව
+      v2 U2L11 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      v2 U2L12 Student Lesson Introduction:
+        title: මාතෘකාව
+      v2 U2L12 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      v2 U2L13 Student Lesson Introduction:
+        title: මාතෘකාව
+      v2 U2L13 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      v2 U2L14 Student Lesson Introduction:
+        title: මාතෘකාව
+      v2 U2L14 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      v2 U2L15 Student Lesson Introduction:
+        title: මාතෘකාව
+      v2 U2L15 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      v2 U2L2 Student Lesson Summary:
+        title: මාතෘකාව
+      v2 U2L2 Student Lesson Summary_2018:
+        title: මාතෘකාව
+      v2 U2L3 Student Lesson Summary:
+        title: මාතෘකාව
+      v2 U2L3 Student Lesson Summary_2018:
+        title: මාතෘකාව
+      v2 U2L4 Student Lesson Summary:
+        title: මාතෘකාව
+      v2 U2L4 Student Lesson Summary_2018:
+        title: මාතෘකාව
+      v2 U2L6 Student Lesson Introduction:
+        title: මාතෘකාව
+      v2 U2L6 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      v2 U2L7 Student Lesson Introduction:
+        title: මාතෘකාව
+      v2 U2L7 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      v2 U2L8 Student Lesson Introduction:
+        title: මාතෘකාව
+      v2 U2L8 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      v2 U2L9 Student Lesson Introduction:
+        title: මාතෘකාව
+      v2 U2L9 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      v2 U3L04 Student Lesson Introduction:
+        title: මාතෘකාව
+      v2 U3L04 Student Lesson Introduction_2018:
+        title: මාතෘකාව
+      v2 U3L05 Student Lesson Introduction:
+        Creating Functions: ශ්‍රිතය නිර්මාණය කරන්න
+      v2 U3L05 Student Lesson Introduction_2018:
+        Creating Functions: ශ්‍රිතය නිර්මාණය කරන්න
+      v2 U4L05 Student Lesson Intro Encryption Caesar:
+        title: මාතෘකාව
+    match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: නර්තනය වෙනස් කිරීමට අවශ්‍ය
+          යතුරු ගලපන්න.
+        Matching: ගැලපෙනවා
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>P</strong>"
+        Matching: ගැලපෙනවා
+        Use the key to match each code to its letter: යතුර භාවිතෙයෙන් එක් එක් කෙත
+          සදහා ගලෙපෙනේ අකුරු සොයන්න
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: පරිගනක වැඩසටහනේ කොටු ගැලපන්න
+        Matching: ගැලපෙනවා
+      2-3 Maze Match 2:
+        Instructions: උපදෙස්
+        Match the puzzles to the blocks: ප්‍රේහෙලිකාව වැඩසටහන සමග ගලපන්න
+        Maze Match: වංකගිරි තරගය
+      2-3 Relay Programming Match 1:
+        Matching: ගැලපෙනවා
+      2-3 artist loops match 1:
+        Match the loop to the shape: ලුපය ගලපන්න හැඩයට
+      2-3 artist match 1:
+        Artist Matching: කලාකරුවා ගැලපීම
+        Match the shape with the blocks that complete it.: "   සම්පුරෙනේ කල ආකෘති
+          සමග හැඩතල  ගැලපන්න"
+      2-3 bounce match 1:
+        Matching: ගැලපෙනවා
+      2-3 flappy match 1:
+        Matching: ගැලපෙනවා
+      2-3 maze match 1:
+        Match the puzzles to the blocks: ප්‍රේහෙලිකාව වැඩසටහන සමග ගලපන්න
+        Maze Match One: වංකගිරි තරගය එක
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>මුළු ලකුණු වලට පළමු ක්‍රීඩකයාගේ
+          කොටස එකතු කරන්න</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>දිනුවේ කවුද කියා බලා
+          ගැනීමට ක්‍රීඩකයන්ගේ ලකුණු සසඳා බලන්න</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>1 වන ක්‍රීඩකයාගේ චරිතය අක්‍රිය වුනා</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>ක්‍රීඩකයාගේ ලකුණු 0 කරන්න</h4>"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: ඇල්ගොරිතමයේ
+          ඇතුලත් විය යුතු පිලිවෙලට දාදු කැට රේස් ගේම් එකේ පියවර අනුපිලිවෙලට සකසන්න.
+        Matching: ගැලපෙනවා
+      4-5 Computational Thinking Match 1:
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Wheels/side: 2<br/>Windows/side:
+          0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Wheels/side: 2<br/>Windows/side:
+          1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Wheels/side: 2<br/>Windows/side:
+          6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Wheels/side: 3<br/>Windows/side:
+          2</h3>"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: සෑම
+          වාහනයක් ම කුඩා කොටස් වලට වෙන් කර ඇත. සෑම වාහනයක් ම එම වාහනයේ කොටස් එකතුවට
+          යා කරන්න.
+        Matching: ගැලපෙනවා
+      4-5 Suncatchers Match 1:
+        Match each program to the word it makes, using the provided group of skills.: දී
+          ඇති හැකියාවන් භාවිත කරමින් ඒ ඒ වචනය සැදෙන්නේ කුමන වැඩසටහන මගින් ද යන්න තෝරන්න.
+        Matching: ගැලපෙනවා
+      4-5 maze match 1:
+        Instructions: උපදෙස්
+        Match the puzzles to the blocks: ප්‍රේහෙලිකාව වැඩසටහන සමග ගලපන්න
+        Maze Match: වංකගිරි තරගය
+      CSD U3 CSS Vocab Match:
+        '1': '1'
+        '2': '2'
+      CSD U3 keyinput match:
+        Question: ප්‍රශ්නය
+      CSDU2 Match RGB Colors:
+        Question: ප්‍රශ්නය
+      K-1 Artist 2 Match 1:
+        Matching: ගැලපෙනවා
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: වර්ගය මත පදනම් වූ හැඩ ගලපන්න.
+        Matching: ගැලපෙනවා
+      K-1 Artist 2 Match 3:
+        Match the shapes based on type.: වර්ගය මත පදනම් වූ හැඩ ගලපන්න.
+        Matching: ගැලපෙනවා
+      K-1 Artist Loops Match 1:
+        Matching: ගැලපෙනවා
+      K-1 Bee Loops Match 1:
+        Match the blocks: බ්ලොක් ගලපන්න
+        Matching: ගැලපෙනවා
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: නර්තනය වෙනස් කිරීමට අවශ්‍ය
+          යතුරු ගලපන්න.
+        Matching: ගැලපෙනවා
+      K-1 Flappy Match 1:
+        Match the blocks: බ්ලොක් ගලපන්න
+        Matching: ගැලපෙනවා
+      K-1 Happy Maps Match 1:
+        Matching: ගැලපෙනවා
+      K-1 Maze Match 1:
+        Instructions: උපදෙස්
+        Match the puzzles and blocks: ප්‍රහේලිකා හා බ්ලොක්ස් ගලපන්න
+        Matching: ගැලපෙනවා
+      K-1 Move It Match 1:
+        Matching: ගැලපෙනවා
+      PDAlg Design Recipe Video:
+        Definition: අර්ථ දැක්වීම
+      PDK5 Pair programming match:
+        Pair programming: යුගල වශයෙන් ක්‍රමලේඛනය
+      PDK5 What is unplugged:
+        Question: ප්‍රශ්නය
+      'U2L06 - Matching: Label the Diagram':
+        E: නැ
+      U3L19 - MATCH what are values of abc:
+        '10': '10'
+        '12': '12'
+        '13': '13'
+        '15': '15'
+        '16': '16'
+        '21': '21'
+        '3': '3'
+        '5': '5'
+        '7': '7'
+        '8': '8'
+        title: මාතෘකාව
+      U3L19 - MC what are values of abc:
+        title: මාතෘකාව
+      U4L06 Create Record Id Matching Q:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      parts of contract:
+        image: අනුරුව
+      test matching image:
+        Instructions: උපදෙස්
+      test matching text:
+        Matching: ගැලපෙනවා
+        blue: නිල්
+      unique level name here:
+        Question: ප්‍රශ්නය
+        title: මාතෘකාව
+    multi:
+      2-3 Algorithms Multi 1:
+        Choose an algorithm for the image provided.: ඇල්ගොරිතම් එකක් තෝරා ගන්න සපයා
+          ඇති පින්තුරය සදහා.
+        Multiple Choice: බහුවරණ
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: සමචතුරස්රයෙන්
+          ඇරඹ කර <br/>ඒහි උඩට සමාන්තරාශ්‍රා යක් එකතු  කරන්න<br/>සමාන්තරාශ්‍රායේ දකුණු
+          පසට ත්‍රිකොණයක් අදින්න
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: සමචතුරශ්‍රයකින්
+          ආරම්බ කරන්න <br/>සමචතුරශ්‍රයට ඉහලින් ත්‍රිකෝණයක් දමන්න <br/>සමචතුරශ්‍රයට
+          පහලින් ත්‍රිකෝණයක් දමන්න
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: සමචතුරශ්‍රයකින්
+          ආරම්බ කරන්න <br/>සමචතුරශ්‍රයට පහලින් ත්‍රිකෝණයක් දමන්න <br/> ත්‍රිකෝණයට
+          දකුණු පසින් සමාන්තරාශ්‍රයක් දමන්න
+        0: "? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram"
+        1: ": Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram"
+      2-3 Algorithms Multi 2:
+        Multiple Choice: බහුවරණ
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: ත්‍රිකෝණයක්
+          අඳින්න.<br/> එයට යටින් සමචතුරශ්‍රයක් අඳින්න.<br/> ඊට යටින් තවත් ත්‍රිකෝණයක්
+          අඳින්න
+        Which image does <em>not</em> follow this algorithm?: කුමන ජායාරූපය ඇල්ගොරිදමය
+          අනුගමනය <em>නොකරයිද</em>?
+      2-3 Binary Multi 1:
+        Multiple Choice: බහුවරණ
+        Which program makes this image?: කුමන වැඩ සටහනකින්ද මේ පින්තුරය සකස් කර ඇත්තේ?
+      2-3 Conditionals Multi 1:
+        According to the rules of the game, which set of cards is scored correctly?: ක්‍රීඩාවේ
+          නීති රීති වලට අනුව, කුමන කාඩ් කට්ටලයද නිවැරදිව ලකුණු කර ඇත්තේ?
+        Multiple Choice: බහුවරණ
+      2-3 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: ඔබ කෙසේද ලෙහෙසි කර ගන්නේ
+          මෙම පටිපාටිය ලුපයක් සමගින්?
+        Multiple Choice: බහුවරණ
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: බහුවරණ
+        Which program makes this image?: කුමන වැඩ සටහනකින්ද මේ පින්තුරය සකස් කර ඇත්තේ?
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: වංකගිරියේ විවිධ තේරීම්
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: බහුවරණ
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: බහුවරණ
+        Which image-program combo does not contain mistakes?: කුමන ජායාරූපය-වැඩසටහන
+          දෝෂ සහිත නොවේද?
+      2-3 artist functions multi 1:
+        Artist Functions Multiple Choice One: කලාකරුවාගේ ශ්‍රිත බහුගුන තීරණ එක
+        Pick the correct blocks to draw this image using the given functions: දී ඇති
+          ශ්‍රිතයන් යොදා ගනිමින් පින්තුරය ඇදීම සදහා නිවැරදි බ්ලොක් එක තෝරන්න
+      2-3 artist loops multi 1:
+        Artist Loops Multiple Choice: කලාකරුවාගේ ලුප බහුගුණ තීරණ
+        Which shape is made by this loop?: මෙම ලුපයෙන් කුමන හැඩයක් නිර්මාණය වෙයි ද?
+      2-3 artist loops multi 2:
+        Artist Loops Multiple Choice: කලාකරුවාගේ ලුප බහුගුණ තීරණ
+        Which shape is made by this program?: මෙම වැඩසටහනින් කුමන හැඩයක් නිර්මාණය
+          වෙයි ද?
+      2-3 bee conditionals multi 1:
+        Which comparison below is true?: පහත සදහන් කිනම් උපමාව සත්‍යද?
+      2-3 bee conditionals multi 2:
+        Choose the best blocks.: හොදම බ්ලොක්ස් තෝරන්න.
+      2-3 bee conditionals multi 3:
+        Choose the best blocks.: හොදම බ්ලොක්ස් තෝරන්න.
+      2-3 bee loops multi 1:
+        Bee Loops Multiple Choice One: මී මැස්සාගේ ලුප බහුගුණ තීරණ එක
+        Which blocks collect all of the nectar?: කුමන බ්ලොක්ස් වලින්ද සියලුම මල් පැණි
+          එකතු කරන්නේ?
+      2-3 maze multi 1:
+        Maze Multiple Choice One: බහුවරණ වංකගිරිය එක
+        Which set of blocks is the correct answer?: කුමන බ්ලොක්ස් කුට්ටමද නිවැරදි
+          පිළිතුර වන්නේ?
+      4-5 Algorithms Multi 1:
+        Baking cookies: උදුනේ ඇති බිස්කට්
+        Banana: කෙසෙල්
+        Brushing your teeth: ඔබේ දත් මැදීම
+        Multiple Choice: බහුවරණ
+        Shopping from a grocery list: සාප්පු සවාරි ඇති වෙළෙඳ ලැයිස්තුවෙන්
+        Which one of these items is hardest to describe an algorithm for?: ඇල්ගොරිතමයක්
+          සඳහා නොගැලපෙන නිර්වචනයක් වන්නේ කුමක්ද?
+      4-5 Computational Thinking Multi 1:
+        Eugene is a _____ city.: Eugene යනු _____ නගරයකි.
+        0: "? Here are three sentences. Which of the templates below correctly abstracts
+          so that all three match the same pattern as the template?"
+        1: ": මෙන්න වාක්‍යය තුනක්. කුමන අච්චුව භාවිතා කර මෙම වාක්‍යය තුන අච්චුවේ ඇති
+          පිලිවෙලට ම සැකසිය හැකිද?"
+        Multiple Choice: බහුවරණ
+        Seattle _____ a _____ _____.: සියැටල්ය _____ යනු _____ _____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
+          යනු ලොකු නගරයකි.<br/> Eugene මධ්‍යම ප්‍රමාණයේ නගරයකි.<br/> Hillview කුඩා
+          නගරයකි.
+        _____ is _____ a _____.: _____ _____ _____
+        _____ is a _____ city.: _____ යනු _____ නගරයකි.
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: බහුවරණ
+        Which of these pictures best represents crowdsourcing?: මෙම පින්තුර වලින්
+          crowdsourcing වඩාත්ම හොදින් පෙන්වන්නේ?
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: ඔබේ හිසකෙස් මැදීම
+        Cleaning your room: ඔබේ කාමරය පිරිසිදු කරමින්
+        Eating your dessert: ඔබේ අතුරුපස කනගමන්
+        Multiple Choice: බහුවරණ
+        Washing your face: ඔබේ මුහුණ සෝදමින්
+        Which one of these activities would be best for practicing crowdsourcing?: සමූහයක්
+          ලෙස එකතු වී කල හැකි වැඩකට උදාහරණයක් වන්නේ කුමක්ද?
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: බහුවරණ
+        Which piece of information listed below is okay to share on the internet?: පහත
+          ලැයිස්තුගත තොරතුරු වලින් කුමක් ඉන්තර්ජාලයේ බෙදාහැරීමට සුදුසු වේද?
+        Your address: ඔබේ ලිපිනය
+        Your birthday: ඔයාගේ උපන්දිනය
+        Your favorite food: ඔබේ ප්රියතම කෑම
+        Your parent's credit card number: ඔබේ මවගේ හෝ පියාගේ ණයපත් අංකය
+      4-5 Internet Multi 1:
+        Multiple Choice: බහුවරණ
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: ඔබ
+          මෙහි ඇතුලත් වන විට කුමන IP හා DNS ලිපින ඇතුලත් වනවාටද ඔබ කැමති?
+      4-5 Internet Multi 2:
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: DNS
+          විසින් 100.42.50.110 ලිපිනයේ ඇති වෙබ් අඩවිය ඔබ වෙත එවා තිබේනම්. ඔබට එවා
+          තිබෙන්නේ කුමන වෙබ් අඩවියද?
+        Multiple Choice: බහුවරණ
+      4-5 Songwriting Multi 1:
+        0: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin."
+        1: ": Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin."
+        2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,"
+        3: ": Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,"
+        Multiple Choice: බහුවරණ
+        4: "? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?"
+        5: ": What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?"
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: බහුවරණ
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: පහත
+          කුමන ක්‍රමලේක අනුලේකන 1 හි අනුක්‍රමය සමග සම්පුර්ණයෙන් <em>නොගැලපේද</em>?
+      4-5 artist loops multi 1:
+        Artist Loops Multiple Choice: කලාකරුවාගේ ලුප බහුගුණ තීරණ
+        Which blocks will create the design?: කුමන කොටස රටාවක් නිර්මාණය නොකරයිද?
+      4-5 artist multi 1:
+        Artist Multiple Choice: කලාකරුවාගේ බහුවිධි වරණ
+        Which blocks draw a rectangle with a perimeter of 100?: කුමන බ්ලොක් එක පරිමිතිය
+          100 වන සමචාතුරස්රක් අදින්නේ ද?
+      4-5 artist multi 2:
+        Artist Multiple Choice: කලාකරුවාගේ බහුවිධි වරණ
+        Which drawing is symmetric?: මොන ඇඳීමද සමමිතික?
+      4-5 bee conditionals multi 1:
+        0: "? A purple flower may have either 3, 2 or 1 nectars, but you don't know
+          how many. Which blocks correctly check and collect all of the nectar from
+          a purple flower?"
+        1: ":දම් පට මලෙහි රේණු 3,2 හෝ 1 ක් තිබිය හැක එය නිශ්චිතව නොදනී. කුමන බ්ලොක්
+          එක දම්පට මලෙහි රේණු ඔක්කොම පරික්ෂ කර එකතු කරන්නේ ද?"
+        Bee Conditionals Multiple Choice: මී මැස්සාගේ කොන්දේසි බහුගුණ තීරණ
+        Choose the best blocks.: හොදම බ්ලොක්ස් තෝරන්න.
+      4-5 bee debug multi 1:
+        Bee Debug Multiple Choice: මී මැස්ස වැරදි නිවැරදි කරනවා බහුගුණ තිරණ
+        Which version of the function will work?: ශිතයේ කුමන පිටපත වැඩ කරාවිද?
+      4-5 bee loops multi 1:
+        Bee Loops Multiple Choice: මී මැස්ස ලුප බැහුගුණ තීරණ
+        Which blocks will solve the puzzle?: කුමන කොටස විසඳාවිද ප්‍රෙහේලිකාව?
+      4-5 farmer loops multi 1:
+        Which blocks solve the puzzle?: කුමන කොටස විසඳාවිද ප්‍රෙහේලිකාව?
+      4-5 maze conditionals multi 1:
+        Maze Conditionals Multiple Choice: අවුල් ජාල තීරණය බහුගුණ තීරණ
+        Which blocks solve the puzzle?: කුමන කොටස විසඳාවිද ප්‍රෙහේලිකාව?
+      4-5 maze multi 1:
+        Maze Multiple Choice: වංකගිරියේ විවිධ තේරීම්
+        Which blocks solve the puzzle?: කුමන කොටස විසඳාවිද ප්‍රෙහේලිකාව?
+      CB_Question_3:
+        Y: true
+      CSD Prediction Header Size:
+        Question: ප්‍රශ්නය
+      CSD U3 Boolean MC:
+        title: මාතෘකාව
+      CSD U3 Boolean MC_2018:
+        title: මාතෘකාව
+      'CSP U4L04 Assessment 1 ':
+        Question: ප්‍රශ්නය
+      CSP Unit 1 Ch 1 MC binary to dec simple:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_2018:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_exam_prep:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP verify 18:
+        'No': නැහැ
+        'Yes': ඔව්
+      CSPU5_predict_mc_whichOfTwoEvents:
+        title: මාතෘකාව
+      CSPU5_predict_onEvent_withWrongID:
+        Question: ප්‍රශ්නය
+        title: මාතෘකාව
+      CommuteAssess - loops 1 - block:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block B:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_2018:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_exam_prep:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 2 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_2018:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_exam_prep:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      ECSPD2 question:
+        Question: ප්‍රශ්නය
+        title: මාතෘකාව
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: බහුවරණ
+        Which blocks solve this puzzle?: කුමන කොටස විසඳාවිද ප්‍රෙහේලිකාව?
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: බහුවරණ
+        Which blocks draw the square?: කුමන කොටස අඳිවිද සමචතුරස්‍රාය?
+      K-1 Artist 2 Multi 1:
+        Multiple Choice: බහුවරණ
+      K-1 Artist Loops Multi 1:
+        Multiple Choice: බහුවරණ
+      K-1 Bee 1 Multi 1:
+        How many nectars is this?: කොපමණ මල් පැණි තියෙනවද මෙහි?
+        Multiple Choice: බහුවරණ
+      K-1 Bee 1 Multi 2:
+        How many nectars is this?: කොපමණ මල් පැණි තියෙනවද මෙහි?
+        Multiple Choice: බහුවරණ
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: බහුවරණ
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: කුමන
+          සත්වයාගේ පාසටහන් <strong>ඔහු හෝ ඇය බොහෝ <strong>අනාරක්ෂිත</strong> තත්වයට
+          පත් කරයිද?
+      K-1 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: ඔබ කෙසේද ලෙහෙසි කර ගන්නේ
+          මෙම පටිපාටිය ලුපයක් සමගින්?
+        Multiple Choice: බහුවරණ
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: බහුවරණ
+        Which arrow gets the Flurb to the treasure?: පුද්ගලයාව නිධානය වෙතට ගෙනයන්නේ
+          කුමන ඊතලයෙන්ද?
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: බහුවරණ
+        Which information should you <strong>not</strong> share online?: ඔබ කුමන තොරතුරු
+          අන්තර්ජාලය හරහා බෙදා <strong>නොහරින්නේද</strong>?
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: බහුවරණ
+        Which choice should be the final block?: කුමන තීරණයද අවසාන කොටස විය යුතුද?
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: බහුවරණ
+        Which repeat block is the same?: නැවත එන කොටස් අතුරෙන් සමාන වන්නේ කුමන කොටස
+          ද?
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: බහුවරණ
+        Pick the correct repeat block.: තෝරා ගන්න නිවැරදි නැවත සිද්ධ වෙන කොටස.
+      K-1 Maze Multiple Choice 2:
+        Maze: පැටලිලි සහිත මාර්ගය
+        Which answer solves this level?: මෙම පියවර විසඳෙන්නේ කුමන පිලිතුරෙන් ද?
+      K-1 Move It Multi 1:
+        Multiple Choice: බහුවරණ
+        Which algorithm gets the Flurb to the flowers?: කුමන අල්ග්රිතමය Flurb එක මලක්
+          කරන්නේ ද?
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: බහුවරණ
+        Which step should go at the beginning of this algorithm?: කුමන අදියර ය යුතුද
+          ඇල්ගොරිතමයේ මුලටම?
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: බහුවරණ
+        Which step should fill in the blank for this algorithm?: කුමන අදියර පිරවිය
+          යුතුද ඇල්ගොරිතමයේ හිස්තැන?
+      K-1 Word Search Multi 1:
+        Multiple Choice: බහුවරණ
+        Which blocks spell "MOVE"?: '"MOVE" සෑදෙන්නේ කුමන කොටස් වලින් ද?'
+      K-1 Word Search Multi 2:
+        Multiple Choice: බහුවරණ
+      K-1 Word Search Multi 3:
+        Multiple Choice: බහුවරණ
+        Which word is spelled?: කුමන වචනය අක්ෂර වින්‍යාසය දක්වයිද?
+      Multi Define Funcs 1:
+        '3': '3'
+        y: true
+      Multi Define Funcs 2:
+        '3': '3'
+        y: true
+      Multi Define Funcs 3:
+        '5': '5'
+        '6': '6'
+        y: true
+      PDAlg Blocks Video:
+        Toolbox: මෙවලම්පෙට්ටිය
+      PDAlg DR Multi 1:
+        Domain: විෂයපථය
+        Name: නම
+        Range: පරාසය
+        0: "? The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+        1: ": The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+      PDAlg PreQ 1:
+        'No': නැහැ
+        'Yes': ඔව්
+      PDAlg PreQ 2:
+        'No': නැහැ
+        'Yes': ඔව්
+      PDAlg functional:
+        'No': නැහැ
+      PDK5 Blockly Intro:
+        'Yes': ඔව්
+      PDK5 Classroom Culture:
+        'Yes': ඔව්
+      PDK5 Course Maps:
+        'Yes': ඔව්
+      PDK5 Course Overview:
+        'Yes': ඔව්
+      PDK5 Glossary:
+        Glossary: පදමාලාව
+        'Yes': ඔව්
+      PDK5 Intro:
+        'No': නැහැ
+        Welcome!: ආයුබෝවන්!
+        'Yes': ඔව්
+      PDK5 Teacher Dashboard:
+        Teacher Dashboard: ගුරු උපකරණ පුවරුව
+        'Yes': ඔව්
+      PDK5 Test1:
+        Question: ප්‍රශ්නය
+        title: මාතෘකාව
+      PDK5 UVideo Overview:
+        'Yes': ඔව්
+      PDK5 Unplugged Intro:
+        'Yes': ඔව්
+      PS U3-bakertest:
+        title: මාතෘකාව
+      SG U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      Submittable Multi:
+        blue: නිල්
+        green: කොළ
+        red: රතු
+      Test Contained Multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '4': '4'
+      U1L07 Assessment 1:
+        E: නැ
+      U1L6 Assessment multiple choice:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L6 Assessment multiple choice_2018:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L8 Multiple Choice:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      U1L8 Multiple Choice_2018:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      'U2L06 - MC: Which is an MST?':
+        0: ': "<p>The images below all show the same map (or graph) but have different
+          paths between the points highlighted.</p>\n<p>Please choose the image that
+          is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The
+          “distance” between points is depicted by the number of line segments connecting
+          any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
+        E: නැ
+      U2L08 Assessment 1:
+        '11': '11'
+        '5': '5'
+        '6': '6'
+        '8': '8'
+        '9': '9'
+      U2L13 Assessment4:
+        '26': '26'
+      U2L13 Assessment4_2018:
+        '26': '26'
+      U2L14 Assessment3:
+        'false': 'false'
+        'true': සත්‍ය
+      U2L19 multichoice 13 MOD 17:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      U2L19 multichoice 13 MOD 17_2018:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      'U2L19 mutlichoice ':
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15_2018:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L07 - MC remove line of code loops_2018:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L30 Assessment1:
+        '6': '6'
+        '7': '7'
+        '8': '8'
+      U3L30 Assessment2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+      U3L30 Assessment3:
+        '19': '19'
+        '20': '20'
+        '21': '21'
+      U4L01 Multiple Choice:
+        right: දකුණ
+      U4L02 Multiple Choice:
+        right: දකුණ
+      U4L03 Multiple Choice:
+        right: දකුණ
+      U4L04 Multiple Choice:
+        right: දකුණ
+      U4L05 Multiple Choice:
+        right: දකුණ
+      U4L06 Multiple Choice:
+        right: දකුණ
+      U4L06 Reflection Q 1:
+        Question: ප්‍රශ්නය
+        random: අහඹු
+      U4L07 Multiple Choice:
+        right: දකුණ
+      U4L08 Multiple Choice:
+        right: දකුණ
+      U4L09 Multiple Choice:
+        right: දකුණ
+      U4L10 Multiple Choice:
+        right: දකුණ
+      U4L11 Multiple Choice:
+        right: දකුණ
+      U4L12 Multiple Choice:
+        right: දකුණ
+      U4L13 Multiple Choice:
+        right: දකුණ
+      U4L14 Multiple Choice:
+        right: දකුණ
+      U4L15 Multiple Choice:
+        right: දකුණ
+      U4L16 Multiple Choice:
+        right: දකුණ
+      U4L17 Multiple Choice:
+        right: දකුණ
+      U4L18 Multiple Choice:
+        right: දකුණ
+      U4L19 Multiple Choice:
+        right: දකුණ
+      U4L20 Multiple Choice:
+        right: දකුණ
+      U4L21 Multiple Choice:
+        right: දකුණ
+      U4L22 Multiple Choice:
+        right: දකුණ
+      U4L23 Multiple Choice:
+        right: දකුණ
+      U4L24 Multiple Choice:
+        right: දකුණ
+      U4LXX Multiple Choice:
+        right: දකුණ
+      U5 assess_weight_v2:
+        Question: ප්‍රශ්නය
+        title: මාතෘකාව
+      Warmup questions:
+        random: අහඹු
+      commute assess - loops 4 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        '50': '50'
+      courseC_multi_harvester_loops11_predict1:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseD_multi_bee_nestedLoops9_predict2:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      csd-post-survey-2018-topic-ai:
+        'No': නැහැ
+        'Yes': ඔව්
+      csd-post-survey-2018-topic-cryptocurrency:
+        'No': නැහැ
+        'Yes': ඔව්
+      csd-post-survey-2018-topic-cybersecurity:
+        'No': නැහැ
+        'Yes': ඔව්
+      csd-post-survey-2018-topic-databases:
+        'No': නැහැ
+        'Yes': ඔව්
+      csd-post-survey-2018-topic-datascience:
+        'No': නැහැ
+        'Yes': ඔව්
+      csd-post-survey-2018-topic-gamedev:
+        'No': නැහැ
+        'Yes': ඔව්
+      csd-post-survey-2018-topic-hardware:
+        'No': නැහැ
+        'Yes': ඔව්
+      csd-post-survey-2018-topic-internet:
+        'No': නැහැ
+        'Yes': ඔව්
+      csd-post-survey-2018-topic-mobile:
+        'No': නැහැ
+        'Yes': ඔව්
+      csd-post-survey-2018-topic-parallel:
+        'No': නැහැ
+        'Yes': ඔව්
+      csd-post-survey-2018-topic-programming:
+        'No': නැහැ
+        'Yes': ඔව්
+      csd-post-survey-2018-topic-robotics:
+        'No': නැහැ
+        Robotics: රොබෝ විද්‍යාව
+        'Yes': ඔව්
+      csd-post-survey-2018-topic-web:
+        'No': නැහැ
+        'Yes': ඔව්
+      csp-post-survey-2017-q64:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': නැහැ
+        'Yes': ඔව්
+      csp-post-survey-2017-q64_2018:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': නැහැ
+        'Yes': ඔව්
+      csp-post-survey-2017-q65:
+        'No': නැහැ
+        'Yes': ඔව්
+      csp-post-survey-2017-q65_2018:
+        'No': නැහැ
+        'Yes': ඔව්
+      csp-post-survey-2018-topic-ai:
+        'No': නැහැ
+        'Yes': ඔව්
+      csp-post-survey-2018-topic-cryptocurrency:
+        'No': නැහැ
+        'Yes': ඔව්
+      csp-post-survey-2018-topic-cybersecurity:
+        'No': නැහැ
+        'Yes': ඔව්
+      csp-post-survey-2018-topic-databases:
+        'No': නැහැ
+        'Yes': ඔව්
+      csp-post-survey-2018-topic-datascience:
+        'No': නැහැ
+        'Yes': ඔව්
+      csp-post-survey-2018-topic-gamedev:
+        'No': නැහැ
+        'Yes': ඔව්
+      csp-post-survey-2018-topic-hardware:
+        'No': නැහැ
+        'Yes': ඔව්
+      csp-post-survey-2018-topic-internet:
+        'No': නැහැ
+        'Yes': ඔව්
+      csp-post-survey-2018-topic-mobile:
+        'No': නැහැ
+        'Yes': ඔව්
+      csp-post-survey-2018-topic-parallel:
+        'No': නැහැ
+        'Yes': ඔව්
+      csp-post-survey-2018-topic-programming:
+        'No': නැහැ
+        'Yes': ඔව්
+      csp-post-survey-2018-topic-robotics:
+        'No': නැහැ
+        Robotics: රොබෝ විද්‍යාව
+        'Yes': ඔව්
+      csp-post-survey-2018-topic-web:
+        'No': නැහැ
+        'Yes': ඔව්
+      csp-pre-survey-2017-q40:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: වෙනත්
+      csp-pre-survey-2017-q40_2018:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: වෙනත්
+      csp_ap_exam_signup:
+        'No': නැහැ
+        'Yes': ඔව්
+      csp_ap_previous_years:
+        'No': නැහැ
+        'Yes': ඔව්
+      csp_ap_taking_ap_class:
+        'No': නැහැ
+        'Yes': ඔව්
+      cspu5_assess1_fivemore:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_2018:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_exam_prep:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_flowchart:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_2018:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_exam_prep:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_increase:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_2018:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_exam_prep:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess2_addstrings:
+        result: ප්‍රතිඑලය
+      cspu5_assess2_addstrings_2018:
+        result: ප්‍රතිඑලය
+      cspu5_assess2_addstrings_exam_prep:
+        result: ප්‍රතිඑලය
+      cspu5_assess2_combineString:
+        '10': '10'
+        '55': '55'
+        result: ප්‍රතිඑලය
+      cspu5_assess2_combineString_2018:
+        '10': '10'
+        '55': '55'
+        result: ප්‍රතිඑලය
+      cspu5_assess2_combineString_exam_prep:
+        '10': '10'
+        '55': '55'
+        result: ප්‍රතිඑලය
+      cspu5_assess2_oldEnough:
+        '35': '35'
+        'false': 'false'
+        'true': සත්‍ය
+      cspu5_assess2_oldEnough_2018:
+        '35': '35'
+        'false': 'false'
+        'true': සත්‍ය
+      cspu5_assess2_oldEnough_exam_prep:
+        '35': '35'
+        'false': 'false'
+        'true': සත්‍ය
+      cspu5_assess2_weight:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_2018:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_exam_prep:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess3_array1:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_2018:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_exam_prep:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array4:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_2018:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_exam_prep:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_listAppend:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_2018:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_exam_prep:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_loopValue1:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue2:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess4_dataReturns:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_2018:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_exam_prep:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_listOutput:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_2018:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_exam_prep:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      msm variables multi 1:
+        '15': '15'
+        x: x
+      msm variables multi 10:
+        '17': '17'
+        x: x
+      msm variables multi 11:
+        '17': '17'
+        x: x
+      msm variables multi 12:
+        '17': '17'
+        x: x
+      msm variables multi 13:
+        '117': '117'
+        '17': '17'
+        x: x
+      msm variables multi 2:
+        '8': '8'
+      msm variables multi 3:
+        '5': '5'
+        x: x
+      msm variables multi 4:
+        '15': '15'
+        '3': '3'
+        '8': '8'
+      msm variables multi 5:
+        '3': '3'
+        '5': '5'
+      msm variables multi 6:
+        '1': '1'
+        '5': '5'
+        hello: ඔබට කොහොමද
+      msm variables multi 7:
+        '3': '3'
+        x: x
+      msm variables multi 8:
+        '3': '3'
+        x: x
+      msm variables multi 9:
+        '5': '5'
+        '6': '6'
+        x: x
+      post-assessment survey q34:
+        Easy: පහසු
+        Hard: ඉතා අමාරු
+      pre-assessment survey q24:
+        'No': නැහැ
+        'Yes': ඔව්
+      pre-assessment survey q26:
+        0: "? Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        1: ": Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        'No': නැහැ
+        'Yes': ඔව්
+      pre-assessment survey q27:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: වෙනත්
+      pre-assessment survey q28:
+        '10': '10'
+        '11': '11'
+        '12': '12'
+        '8': '8'
+        '9': '9'
+        Other: වෙනත්
+      pre-assessment survey q29:
+        Female: ගැහැණු
+        Male: පිරිමි
+        Other: වෙනත්
+        Prefer not to answer: පිළිතුරු නොදීමට කැමතියි
+      pre-assessment survey q30:
+        Asian: ආසියානු
+        Black or African American: අප්‍රිකානු ඇමෙරිකානු සම්භවයක් සහිත
+        Other: වෙනත්
+        Prefer not to answer: පිළිතුරු නොදීමට කැමතියි
+        White: සුදු ජාතික
+      sarah_test_maggie:
+        Question: ප්‍රශ්නය
+        test: පරික්ෂාව
+      sciPD PreQ 1:
+        'No': නැහැ
+        'Yes': ඔව්
+      sciPD PreQ 2:
+        'No': නැහැ
+        'Yes': ඔව්
+      test anonymous student survey educational:
+        'No': නැහැ
+        'Yes': ඔව්
+      test me:
+        Question: ප්‍රශ්නය
+        title: මාතෘකාව
+      unique level name here:
+        Question: ප්‍රශ්නය
+        title: මාතෘකාව
+    text_match:
+      U2L07 Assessment4:
+        '43': '43'

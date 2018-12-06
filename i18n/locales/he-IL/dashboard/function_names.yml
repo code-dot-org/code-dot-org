@@ -1,0 +1,282 @@
+he:
+  data:
+    function_names:
+      x: x
+      details: פרטים
+      draw eyebrow: צייר גבות
+      draw pupil: צייר תלמיד
+      draw a circle: צייר מעגל
+      draw a car: צייר מכונית
+      draw_rect: צייר מרובע
+      draw square: צייר ריבוע
+      jump to controller top left: קפוץ עם הבקר לפינה שמאלית עליונה
+      jump to middle: קפוץ לאמצע
+      draw a button: צייר כפתור
+      draw cord: צייר מיתר
+      draw left leg: צייר רגל שמאל
+      draw right leg: צייר רגל ימין
+      draw body and arms: צייר גוף וזרועות
+      draw a head: צייר ראש
+      draw head: צייר ראש
+      draw arms: צייר זרועות
+      jump to neck: קפוץ לצוואר
+      draw O: צייר O
+      draw D: צייר D
+      draw E: צייר E
+      big gear: מנוע גדול
+      small gear: מנוע קטן
+      draw a hexagon: צייר משושה
+      draw a flower: צייר פרח
+      draw a square: צייר ריבוע
+      draw a snowflake: צייר פתית שלג
+      draw 3 hexagons: צייר 3 משושים
+      draw 4 hexagons: צייר 4 משושים
+      draw 5 hexagons: צייר 5 משושים
+      get 2 nectar: אסוף 2 צופים
+      collect purple nectar: אסוף צוף סגול
+      get 5: הבא 5
+      move and get nectar: זוז ואסוף צוף
+      move and get 4: זוז והבא 4
+      get 7 nectar make 7 honey: אסוף 7 צופים ויצר 7 דבשים
+      get 7 make 7: אסוף 7 וצור 7
+      get 7: אסוף 7
+      move and get 3: זוז ואסוף 3
+      draw a tree: צייר עץ
+      draw triangle: צייר משולש
+      draw circle: צייר עיגול
+      draw goal: צייר מטרה
+      graph: גרף
+      draw waves: צייר גלים
+      draw a wave: צייר גל
+      draw a small triangle: צייר משולש קטן
+      draw a medium triangle: צייר משולש בינוני
+      draw a large triangle: צייר משולש רחב
+      draw a big triangle: צייר משולש גדול
+      draw a triangle: צייר משולש
+      draw a house: צייר בית
+      check purple flower: צייר פרח סגול
+      check flower make honey: בדוק פרח צור דבש
+      get nectar or make honey: אסוף צוף או צור דבש
+      make 3 honey: צור 3 דבש
+      get 5 nectar: אסוף 5 צופים
+      make all honey: צור את כל הדבש
+      draw a star: צייר כוכב
+      game has been won: המשחק הסתיים בניצחון
+      draw: צייר
+      draw a polygon: צייר מצולע
+      draw a shape: צייר צורה
+      get 2 and make 2: הבא 2 וצור 2
+      draw a pinwheel: צייר גלגל רוח
+      drawTree: צייר עץ
+      drawHouse: צייר בית
+      drawBranch: צייר ספסל
+      drawSky: צייר שמיים
+      fillScreen: מלא מסך
+      drawHouseLayer: צור שכבת בית
+      swap: החלף
+      init: אתחל
+      do something: עשה משהו
+      filter_pixel: סנן פיקסל
+      draw_image: צייר תמונה
+      story: סיפור
+      starting path: תחילת הדרך
+      jump: קפוץ
+      patrol: סייר
+      fill in bg: מלא ברקע
+      draw grid1: צייר רשת1
+      draw lines: צייר קווים
+      Draw a Square Line: צייר קו ריבוע
+      Draw a triangle: צייר משולש
+      Draw a Cube: צייר קוביה
+      draw a cube: צייר קוביה
+      draw an octagon 20: צייר מתומן 20
+      Draw a square: צייר מרובע
+      cube: קוביה
+      do something2: עשה משהו2
+      jump upper right: קפוץ לפינה ימנית עליונה
+      draw a line of  squares: צייר קו של מרובעים
+      draw a line of squares: צייר קו של מרובעים
+      Draw Square Line: צייר קו ריבוע
+      jump upper left: קפוץ לפינה שמאלית עליונה
+      draw a line of octagons: צור קו של מתומן
+      draw a square line: צייר קו ריבוע
+      Draw a Square: צייר ריבוע
+      draw a square 20: צור ריבוע 20
+      draw a square 40: צור ריבוע 40
+      draw a triangle with length: צייר משולש עם אורך
+      Draw a Triangle with length: צייר משולש עם אורך
+      draw a triangle wioth length: צייר משולש עם אורך
+      draw a sqaure: צייר ריבוע
+      triangle: משולש
+      draw a spiral shape: צייר צורה ספירלית
+      get 3 nectar: אסוף 3 צופים
+      get many nectar: אסוף כמה צופים
+      get nectar make honey: אסוף צופים וצור דבש
+      draw an octagon: צייר מתומן
+      draw octagons: צייר מתומנים
+      shift down: הזז מטה
+      level_up: שלב הבא
+      score_points: נקודות
+      set score: הגדר ניקוד
+      draw a line of hexagons: צייר קו של משושה
+      shift down/forward: הזז למטה/קדימה
+      shift down/backward: הזז למטה/אחורה
+      get nectar: תשיג צוף
+      make honey up and over: ייצר דבש למעלה וסיים
+      setActors: הגדר שחקנים
+      popCharacter: הצג דמות
+      patrol left right: סייר שמאלה וימינה
+      empty function: פונקציה ריקה
+      check guess: בדוק ניחוש
+      Jump: קפוץ
+      test: בדיקה
+      build bridge: בנה גשר
+      run right: רוץ ימינה
+      spin right: הסתובב ימינה
+      grow forever: גדול לתמיד
+      draw grass: צייר דשא
+      sun: שמש
+      draw windows: צייר חלונות
+      square: ריבוע
+      draw a door: צייר דלת
+      rectangle: מלבן
+      diamond: יהלום
+      window: חלון
+      n-sided shape: צורה עם n צדדים
+      draw a loop: צייר לולאה
+      draw spiral circle: צייר עיגול ספירלי
+      draw roof: צייר גג
+      draw rectangle: צייר מלבן
+      move: זוז
+      function 1: פונקציה 1
+      function 2: פונקציה 2
+      destroy and move: השמד וזוז
+      clear path: פנה דרך
+      clear cacti: הסר קקטוסים
+      place and move: הנח וזוז
+      build short bridge: בנה גשר קצר
+      build long bridge: בנה גשר ארוך
+      create trail: צור שביל
+      move and fill: זוז ומלאה
+      fix right corner: תקן פינה ימנית
+      fix left corner: תקן פינה שמאלית
+      make segment: צור רווח
+      turn corner: סובב פינה
+      fix long path: תקן דרך ארוכה
+      fix short path: תקן דרך קצרה
+      place 3 tracks: הנח 3 מסילות
+      clear right corner: נקה פינה ימנית
+      clear left corner: נקה פינה שמאלית
+      draw a spiral edge: צייר פינה ספירלית
+      draw a pentagon: צייר מחומש
+      artist jump around: אמן קופץ סביב
+      Draw lenses: צייר עדשות
+      25 pixel square: ריבוע בגודל 25 פיקסלים
+      draw eye: צייר עין
+      Make a Dot: צור נקודה
+      bubble sort: מיון בועות
+      move right: זוז ימינה
+      say number: אמור מספר
+      move up: זוז למעלה
+      move down: הזז למטה
+      move left: זוז שמאלה
+      kill alien: הרוג חייזר
+      click: לחיצה
+      Send Actor 1 to opposite: שלח שחקן 1 ליריב
+      blink actor 1: הבהב שחקן 1
+      my function: הפונקציה שלי
+      Squares row: שורת ריבועים
+      draw first part of heart: צייר חלק ראשון של לב
+      check win: בדוק ניצחון
+      curvy corner: פינה מעוקלת
+      make triangle: צור משולש
+      my behavior: ההתנהגות שלי
+      '"simple" solution': 'פתרון "פשוט"'
+      potential solution: פוטנציאל לפתרון
+      my design: העיצוב שלי
+      get 3 nectar or honey: אסוף 3 צופים או דבש
+      move and collect: זוז ואסוף
+      check nectar or honey: בדוק צוף או דבש
+      row of nectar: שורה של צוף
+      rowOfNectar: שורה של צוף
+      move and check: זוז ובדוק
+      win game: נצח משחק
+      lose game: הפסד משחק
+      keep playing: המשך לשחק
+      Ask a question: שאל שאלה
+      draw pinwheel: צייר גלגל רוח
+      draw background: צייר רקע
+      move and get nectar with counter: זוז ואסוף צוף עם מונה
+      pick row: בחר שורה
+      draw flame: צייר להבה
+      draw fire: צייר אש
+      booster: מאיץ
+      draw line of triangles: צייר קו של משולשים
+      draw a window: צייר חלון
+      stop_everything: עצור הכל
+      draw a plane of squares: צייר מטוס של מרובעים
+      draw hexagon: צייר משושה
+      draw line of hexagons: צייר קו של משושים
+      staggered squares: נענע מרובעים
+      draw line of polygons: צייר קו של מצולע
+      draw polygon: צייר מצולע
+      honey nectar: דבש מצוף
+      move and make honey: זוז וייצר דבש
+      collect all nectar: אסוף את כל הצוף
+      get all nectar: אסוף את כל הצוף
+      get pumpkin: הבא דלעת
+      harvest: קציר
+      get corn and come back: הבא תירס וחזור חזרה
+      pick along path: אסוף לאורך הדרך
+      check square for corn: בדוק ריבוע עבור תירס
+      get all pumpkins: הבא את כל הדלועים
+      pumpkin square: מרובע דלעת
+      navigate: נווט
+      check and pick: בדוק ואסוף
+      find pumpkin: מצא דלעת
+      wander path: לך לאורך השביל
+      get produce: התחל לייצר
+      check for corn: בדוק עבור תירס
+      corn rectangle: ריבוע תירס
+      lettuce stairs: מדרגות חסה
+      pick veggie: אסוף ירק
+      corn and pumpkin: תירס ודלעת
+      go get pumpkins: לך ואסוף דלועים
+      go get lettuce: לך והבא חסה
+      garden square: מרובע גינה
+      get corn come back: אסוף תירס וחזור
+      checker: בודק
+      Make gingham: ייצר בגד
+      draw a square2: צור ריבוע2
+      get only nectar: אסוף רק צוף
+      only make honey: רק ייצר דבש
+      collect row: אסוף שורה
+      rowOfNectarOrHoney: שורה של צוף או דבש
+      collect stairs: אסוף מדרגות
+      collect: אסוף
+      move and increment: זוז והוסף
+      do something3: עשה משהו3
+      Robot Jump: רובוט קופץ
+      Center Dragon: מרכז דרקון
+      Dragon Fly: דרקון עף
+      Stop Dragon: עצור דרקון
+      Knight Jump: אביר קופץ
+      robotThinking: רובוט חושב
+      fill area with color: מלא איזור עם צבע
+      draw a line of triangles: צייר קו של משולשים
+      check flower: בדוק פרח
+      get next row: הבא שורה הבאה
+      check space: בדוק מרווח
+      follow path: עקוב אחר הדרך
+      physics: פיזיקה
+      initialization: איתחול
+      Make Actor 1 Jump: עשה ששחקן 1 יקפוץ
+      Choose Number: בחר מספר
+      Move Bird: הזז ציפור
+      turn left: פנה שמאלה
+      move forward: זוז קדימה
+      turn right: פנה ימינה
+      drawDot: צייר נקודה
+      draw a rectangle: צייר מלבן
+      Which Course for My Students?: איזה קורס לתלמידים שלי?
+      draw a heart: צייר לב

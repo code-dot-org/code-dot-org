@@ -1,0 +1,13 @@
+ko:
+  data:
+    course:
+      name:
+        csp-2017:
+          description_short: 기초적인 컴퓨터 과학의 원리를 배우기
+        allthethingscourse:
+          title: 모든 것을 포함한 코스
+          description_short: 이 코스는 모든것을 위한 것입니다.
+          description_student: 이 코스는 모든것을 위한 것이며 학생들을 위해 좀 더 긴 설명이 있습니다.
+          description_teacher: 이 코스는 모든것을 위한 것이며 선생님들을 위해 좀 더 긴 설명이 있습니다.
+        csp-2018:
+          description_short: 기초적인 컴퓨터 과학의 원리를 배우기

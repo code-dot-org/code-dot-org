@@ -1,0 +1,2825 @@
+---
+sv:
+  data:
+    evaluation_multi:
+      U5 evaluation q1:
+        'No': Nej
+        'Yes': Ja
+      U5 evaluation q2:
+        0: "? Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        1: ": Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        While Loops: "'Medan' loopar(slingor)"
+    external:
+      AWS Demo:
+        description here: Beskrivning här
+      Algo How Routers Learn Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      Algo Shortest Path Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      App Lab Feedback:
+        description here: Beskrivning här
+      AppLab Level U3L19 - variable re-assignment challenge pt1:
+        description here: Beskrivning här
+      Basic mechanics of variables:
+        description here: Beskrivning här
+        title: titel
+      Basic mechanics of variables_2018:
+        description here: Beskrivning här
+        title: titel
+      Begin planning your project:
+        description here: Beskrivning här
+        title: titel
+      Begin planning your project_2018:
+        description here: Beskrivning här
+      'Big Picture: If-statements':
+        description here: Beskrivning här
+        title: titel
+      'Big Picture: If-statements_2018':
+        description here: Beskrivning här
+        title: titel
+      Boolean Expressions and Comparison Operators:
+        description here: Beskrivning här
+        title: titel
+      Boolean Expressions and Comparison Operators_2018:
+        description here: Beskrivning här
+        title: titel
+      CSD U1 Input Output C1:
+        description here: Beskrivning här
+      CSD U1 Input Output C2:
+        description here: Beskrivning här
+        title: titel
+      CSD U1 Input Output C3:
+        description here: Beskrivning här
+        title: titel
+      CSD U1 Input Output C4:
+        description here: Beskrivning här
+        title: titel
+      CSD U1 Input Output Intro:
+        description here: Beskrivning här
+        title: titel
+      CSD U2 CSS explain:
+        description here: Beskrivning här
+      CSD U2 Classes Introduction:
+        description here: Beskrivning här
+      CSD U2 Design Project:
+        description here: Beskrivning här
+        title: titel
+      CSD U2 Design Project_2018:
+        description here: Beskrivning här
+        title: titel
+      CSD U2 L1 Overview:
+        description here: Beskrivning här
+        title: titel
+      CSD U2 L1 Overview_2018:
+        description here: Beskrivning här
+        title: titel
+      CSD U2 L2 Overview:
+        description here: Beskrivning här
+        title: titel
+      CSD U2 L2 Overview_2018:
+        description here: Beskrivning här
+        title: titel
+      CSD U2 L3 Overview:
+        description here: Beskrivning här
+        title: titel
+      CSD U2 L3 Overview_2018:
+        description here: Beskrivning här
+        title: titel
+      CSD U2 L4 Overview:
+        description here: Beskrivning här
+        title: titel
+      CSD U2 L4 Overview_2018:
+        description here: Beskrivning här
+        title: titel
+      CSD U2 L5 Overview:
+        description here: Beskrivning här
+        title: titel
+      CSD U2 L5 Overview_2018:
+        description here: Beskrivning här
+        title: titel
+      CSD U2 L6 Overview:
+        description here: Beskrivning här
+        title: titel
+      CSD U2 L6 Overview_2018:
+        description here: Beskrivning här
+        title: titel
+      CSD U2 Lesson 6 Overview:
+        description here: Beskrivning här
+      CSD U2 Lesson 6 Overview_2018:
+        description here: Beskrivning här
+      CSD U2 RGB Colors:
+        description here: Beskrivning här
+      CSD U2 Social Sleuth:
+        description here: Beskrivning här
+        title: titel
+      CSD U2 expand project:
+        description here: Beskrivning här
+        title: titel
+      CSD U2 expand project_2018:
+        description here: Beskrivning här
+        title: titel
+      CSD U2 layout style review:
+        description here: Beskrivning här
+        title: titel
+      CSD U2 more CSS:
+        description here: Beskrivning här
+        title: titel
+      CSD U2 project guide:
+        description here: Beskrivning här
+      CSD U2 project guide_2018:
+        description here: Beskrivning här
+      CSD U2 text style review:
+        description here: Beskrivning här
+      CSD U3 Card Examples_2018:
+        description here: Beskrivning här
+      CSD U3 Describe the Picture:
+        description here: Beskrivning här
+      CSD U3 L2 Challenges:
+        description here: Beskrivning här
+        title: titel
+      CSD U3 SFLP Sprites and Images:
+        description here: Beskrivning här
+        title: titel
+      CSD U3 abstraction intro:
+        description here: Beskrivning här
+        title: titel
+      CSD U3 collisions STOP isTouching:
+        description here: Beskrivning här
+      CSD U3 combining rep:
+        description here: Beskrivning här
+        title: titel
+      CSD U3 combining rep_2018:
+        description here: Beskrivning här
+        title: titel
+      CSD U3 game intro:
+        description here: Beskrivning här
+      CSD U3 game intro_2018:
+        description here: Beskrivning här
+      CSD U3 platform intro:
+        description here: Beskrivning här
+      CSD U3 platform intro_2018:
+        description here: Beskrivning här
+      CSD U3 setSpeed STOP:
+        description here: Beskrivning här
+      CSD U5 Encryption 1:
+        description here: Beskrivning här
+        title: titel
+      CSD U5 Encryption 1_2018:
+        description here: Beskrivning här
+        title: titel
+      CSD U5 Encryption 2:
+        description here: Beskrivning här
+      CSD U5 Encryption 2_2018:
+        description here: Beskrivning här
+      CSD U5 L13 SFLP Interpreting Data:
+        description here: Beskrivning här
+        title: titel
+      CSD U5 L13 SFLP Interpreting Data_2018:
+        description here: Beskrivning här
+        title: titel
+      CSD U5 Representing Information:
+        description here: Beskrivning här
+        title: titel
+      CSD U5 collection UPS2:
+        description here: Beskrivning här
+        title: titel
+      CSD U5 collection ads2:
+        description here: Beskrivning här
+        title: titel
+      CSD U5 crosstab warmup:
+        description here: Beskrivning här
+      CSD U5 crosstab warmup_2018:
+        description here: Beskrivning här
+      CSD U5 data visualization:
+        description here: Beskrivning här
+        title: titel
+      CSD U5 data visualization sheet:
+        description here: Beskrivning här
+        title: titel
+      CSD U5 data visualization_2018:
+        description here: Beskrivning här
+        title: titel
+      CSD U5 fixed-bits:
+        description here: Beskrivning här
+      CSD U5 student record:
+        description here: Beskrivning här
+        title: titel
+      CSD U5 student record_2018:
+        description here: Beskrivning här
+        title: titel
+      CSD U5 video2:
+        description here: Beskrivning här
+        title: titel
+      CSD U6 LED create intro:
+        description here: Beskrivning här
+      CSD U6 LED create intro_2018:
+        description here: Beskrivning här
+      CSD U6 final intro:
+        description here: Beskrivning här
+      CSD U6 final intro_2018:
+        description here: Beskrivning här
+      CSD-U3-SFLP Drawing:
+        description here: Beskrivning här
+        title: titel
+      CSDU2L01 SFLP:
+        description here: Beskrivning här
+        title: titel
+      CSP ExploreL02 SFLP:
+        description here: Beskrivning här
+        title: titel
+      CSP Journal Entry Placeholder2:
+        description here: Beskrivning här
+        title: titel
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        description here: Beskrivning här
+      CSP Unit 3 - Learning JavaScript Resources:
+        description here: Beskrivning här
+      CSP assessment Hex interstitial:
+        description here: Beskrivning här
+      CSPPD impact of CS:
+        description here: Beskrivning här
+      CSPPD3-u2 Welcome:
+        Welcome!: Välkommen!
+      CSPStudentLessonPlanTemplate:
+        description here: Beskrivning här
+        title: titel
+      CSPU5 Making a Multi Screen Chaser Game:
+        description here: Beskrivning här
+        title: titel
+      CSPU5_ChoosingGoodIds:
+        description here: Beskrivning här
+        title: titel
+      CSPU5_EventDrivenProgrammingPatterns:
+        description here: Beskrivning här
+        title: titel
+      CSPU5_FirstTimeDesignMode:
+        description here: Beskrivning här
+        title: titel
+      CSPU5_FirstTimeDesignMode_2018:
+        description here: Beskrivning här
+        title: titel
+      CSPU5_HowImagesWork:
+        description here: Beskrivning här
+        title: titel
+      CSPU5_HowOnEventWorks_v2:
+        description here: Beskrivning här
+        title: titel
+      CSPU5_U3L14 - Message - Other ways to assign values:
+        description here: Beskrivning här
+        title: titel
+      CSPU5_U3L14 - Message - basic mechanics of variables:
+        description here: Beskrivning här
+        title: titel
+      CSPU5_U3L15 - explanation of IF and =v==:
+        description here: Beskrivning här
+        title: titel
+      CSPU5_U3L15 Student Lesson Intro - new:
+        description here: Beskrivning här
+        title: titel
+      CSPU5_U3L19 - variable scope explanation pt2:
+        description here: Beskrivning här
+      CSPU5_U3L20 - combining And and Or explanation:
+        description here: Beskrivning här
+        title: titel
+      CSPU5_goodbyeTurtle_setPosition:
+        description here: Beskrivning här
+        title: titel
+      CSPU5_introToDebugging:
+        description here: Beskrivning här
+        title: titel
+      CSPU5_makingPredictions_ref:
+        description here: Beskrivning här
+        title: titel
+      CSPU5_onEventBreakdown:
+        description here: Beskrivning här
+        title: titel
+      CSP_Final_instructions:
+        description here: Beskrivning här
+        title: titel
+      CSP_U4_rawMovieData:
+        description here: Beskrivning här
+        title: titel
+      Color Sleuth - Epilogue:
+        description here: Beskrivning här
+        title: titel
+      Color Sleuth - Epilogue_2018:
+        description here: Beskrivning här
+        title: titel
+      Color Sleuth - How does it end?:
+        description here: Beskrivning här
+        title: titel
+      Color Sleuth - How does it end?_2018:
+        description here: Beskrivning här
+        title: titel
+      Color Sleuth - How to switch player turns:
+        description here: Beskrivning här
+        title: titel
+      Color Sleuth - How to switch player turns_2018:
+        description here: Beskrivning här
+        title: titel
+      Color Sleuth - Keeping score:
+        description here: Beskrivning här
+        title: titel
+      Color Sleuth - Keeping score_2018:
+        description here: Beskrivning här
+        title: titel
+      Color Sleuth - Planning the App:
+        description here: Beskrivning här
+        title: titel
+      Color Sleuth - Planning the App_2018:
+        description here: Beskrivning här
+        title: titel
+      Controlling Memory - Other ways to assign values:
+        description here: Beskrivning här
+        title: titel
+      Controlling Memory - Other ways to assign values_2018:
+        description here: Beskrivning här
+        title: titel
+      Cups and Beans Activity:
+        description here: Beskrivning här
+        title: titel
+      Cups and Beans Activity_2018:
+        description here: Beskrivning här
+        title: titel
+      Debugging with Console.log:
+        description here: Beskrivning här
+        title: titel
+      Debugging with Console.log_2018:
+        description here: Beskrivning här
+        title: titel
+      Deeper Learning Overview:
+        description here: Beskrivning här
+      Digital Footprint Chirpr lillizard:
+        description here: Beskrivning här
+        title: titel
+      Digital Footprint FaceSpace Haley:
+        description here: Beskrivning här
+        title: titel
+      Digital Footprint FaceSpace Lizzie:
+        description here: Beskrivning här
+        title: titel
+      Digital Footprint instantframe wiz_kid_liz:
+        description here: Beskrivning här
+        title: titel
+      DigitalCitizenship2:
+        Digital Citizenship: Digitalt medborgarskap
+      ECSPD Challenge Rubric:
+        description here: Beskrivning här
+        title: titel
+      ECSPD Online U1D1-2:
+        description here: Beskrivning här
+      ECSPD Online U1D1-2 Resources:
+        description here: Beskrivning här
+      ECSPD Online U1D11-14:
+        title: titel
+      ECSPD Online U1D15-16 Forum:
+        description here: Beskrivning här
+        title: titel
+      ECSPD Online intro:
+        Introduction: Introduktion
+      ECSPD U2 Challenge Plan:
+        description here: Beskrivning här
+        title: titel
+      ECSPD Unit 2 Stage11:
+        description here: Beskrivning här
+        title: titel
+      ECSPD Unit 2 Stage13:
+        description here: Beskrivning här
+        title: titel
+      ECSPD Unit 2 Stage6:
+        description here: Beskrivning här
+        title: titel
+      ECSPD impact of CS:
+        description here: Beskrivning här
+      Encoding Numbers Real World Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      Event Driven Programming Recap:
+        description here: Beskrivning här
+        title: titel
+      Event Driven Programming Recap_2018:
+        description here: Beskrivning här
+        title: titel
+      Event-Driven Programming Patterns:
+        description here: Beskrivning här
+        title: titel
+      Event-Driven Programming Patterns_2018:
+        description here: Beskrivning här
+        title: titel
+      External MD column Test:
+        description here: Beskrivning här
+        title: titel
+      External MD column Test bootstrap:
+        description here: Beskrivning här
+        title: titel
+      GoodBadVisualizations_v1:
+        description here: Beskrivning här
+        title: titel
+      GoodBadVisualizations_v2:
+        description here: Beskrivning här
+        title: titel
+      How "if-else-if" Works:
+        description here: Beskrivning här
+        title: titel
+      How "if-else-if" Works_2018:
+        description here: Beskrivning här
+        title: titel
+      How Compound Boolean Expressions Work:
+        description here: Beskrivning här
+        title: titel
+      How Compound Boolean Expressions Work_2018:
+        description here: Beskrivning här
+        title: titel
+      How Dropdown Menus Work:
+        description here: Beskrivning här
+        title: titel
+      How Dropdown Menus Work_2018:
+        description here: Beskrivning här
+        title: titel
+      How If Statements Work pt 1:
+        description here: Beskrivning här
+        title: titel
+      How If Statements Work pt 1_2018:
+        description here: Beskrivning här
+        title: titel
+      How If-Else Statements Work:
+        description here: Beskrivning här
+        title: titel
+      How If-Else Statements Work_2018:
+        description here: Beskrivning här
+        title: titel
+      How Images Work:
+        description here: Beskrivning här
+        title: titel
+      How Images Work_2018:
+        description here: Beskrivning här
+        title: titel
+      How Secure Is Your Password?:
+        description here: Beskrivning här
+        title: titel
+      How Secure Is Your Password?_2018:
+        description here: Beskrivning här
+        title: titel
+      How Set Property Works:
+        description here: Beskrivning här
+        title: titel
+      How Set Property Works_2018:
+        description here: Beskrivning här
+        title: titel
+      How onEvent Works:
+        description here: Beskrivning här
+        title: titel
+      How onEvent Works_2018:
+        description here: Beskrivning här
+        title: titel
+      How setPosition and screen dimensions work:
+        description here: Beskrivning här
+        title: titel
+      How setPosition and screen dimensions work_2018:
+        description here: Beskrivning här
+        title: titel
+      How the Boolean &&, || and ! Operators Work:
+        description here: Beskrivning här
+        title: titel
+      How the Boolean &&, || and ! Operators Work_2018:
+        description here: Beskrivning här
+        title: titel
+      How to make a random color:
+        description here: Beskrivning här
+        title: titel
+      How to make a random color_2018:
+        description here: Beskrivning här
+        title: titel
+      How to pick a random button:
+        description here: Beskrivning här
+        title: titel
+      How to pick a random button_2018:
+        description here: Beskrivning här
+        title: titel
+      Internet Simulator Setup:
+        description here: Beskrivning här
+      Internet Simulator Setup 2:
+        description here: Beskrivning här
+        title: titel
+      Internet Simulator Setup 3:
+        description here: Beskrivning här
+      Intro to Debugging and Common Problems:
+        description here: Beskrivning här
+        title: titel
+      Intro to Debugging and Common Problems_2018:
+        description here: Beskrivning här
+        title: titel
+      Making Multiple Screens:
+        description here: Beskrivning här
+        title: titel
+      Making Multiple Screens_2018:
+        description here: Beskrivning här
+        title: titel
+      Making a Multi Screen Chaser Game v.2:
+        description here: Beskrivning här
+        title: titel
+      Making a Multi Screen Chaser Game v.2_2018:
+        description here: Beskrivning här
+        title: titel
+      Multi-Screen Apps:
+        description here: Beskrivning här
+        title: titel
+      New Challenge Introduction:
+        description here: Beskrivning här
+        title: titel
+      New Challenge Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      OPD-K5 Stage3aGo:
+        description here: Beskrivning här
+        title: titel
+      PDAlg Facilitator Test:
+        description here: Beskrivning här
+        title: titel
+      PDK5 CS Video:
+        Computer Science: Datavetenskap
+      PDK5 Pair Programming 1:
+        Pair Programming: Par-programmering
+      PDK5 Teacher Dashboard C:
+        Teacher Dashboard: Lärare Dashboard
+      PS - Responding to User Input:
+        description here: Beskrivning här
+        title: titel
+      PS - draft - Longitudinal study description:
+        description here: Beskrivning här
+        title: titel
+      Pixelation - Lesson 14 - Instructions Make Your Own:
+        description here: Beskrivning här
+      Pixelation - Lesson 14 - Instructions one bit error:
+        description here: Beskrivning här
+      Pixelation - Lesson 15 - Favicon Instructions:
+        description here: Beskrivning här
+      Pixelation - Lesson 15 - Task 1 instructions:
+        description here: Beskrivning här
+      Pixelation - Lesson 15 - Task 2 instructions:
+        description here: Beskrivning här
+      Pixelation - Lesson 15 - Task 3 instructions:
+        description here: Beskrivning här
+      Pixelation - Video - Color 1:
+        description here: Beskrivning här
+      Pixelation - Video - Color 2:
+        description here: Beskrivning här
+      Pixelation - Video - Color 3:
+        description here: Beskrivning här
+      Pixelation - Video - Tips and Tricks:
+        description here: Beskrivning här
+      Prepare for your presentation:
+        description here: Beskrivning här
+        title: titel
+      Public Key Crypto Widget Instructions:
+        description here: Beskrivning här
+        title: titel
+      Public Key Crypto Widget Instructions_2018:
+        description here: Beskrivning här
+        title: titel
+      Rules About Choosing Good IDs:
+        description here: Beskrivning här
+        title: titel
+      Rules About Choosing Good IDs_2018:
+        description here: Beskrivning här
+        title: titel
+      SG U3 whats a comment:
+        description here: Beskrivning här
+        title: titel
+      SG v2 U3L01 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      SG v2 U3L02 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      SG v2 U3L03 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      SG v2 U3L05 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      SG v2 U3L07 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      SG v2 U3L08 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      Sending Bits Real World Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      Simple Decisions with if-statements:
+        description here: Beskrivning här
+        title: titel
+      Simple Decisions with if-statements_2018:
+        description here: Beskrivning här
+        title: titel
+      'Technique: Frequency Analysis':
+        description here: Beskrivning här
+      'Technique: Frequency Analysis_2018':
+        description here: Beskrivning här
+      Terminology Recap:
+        description here: Beskrivning här
+      Terminology Recap_2018:
+        description here: Beskrivning här
+      Tips For Working on Your Own:
+        description here: Beskrivning här
+        title: titel
+      Tips For Working on Your Own_2018:
+        description here: Beskrivning här
+        title: titel
+      U1L1 Student Lesson Introduction:
+        description here: Beskrivning här
+      U1L1 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+      U1L10 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U1L11 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U1L12 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U1L13 Student Lesson Summary:
+        description here: Beskrivning här
+        title: titel
+      U1L14 Student Lesson Summary:
+        description here: Beskrivning här
+        title: titel
+      U1L15 Student Lesson Summary:
+        description here: Beskrivning här
+        title: titel
+      U1L16 Student Lesson Introduction:
+        description here: Beskrivning här
+      U1L17 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U1L2 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U1L3 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U1L4 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U1L4 Widget Demo - Video:
+        description here: Beskrivning här
+      U1L5 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U1L6 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U1L7 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U1L8 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U1L9 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U2L1 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U2L12 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U2L17 Student Lesson Introduction:
+        description here: Beskrivning här
+      U2L7 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U2L8 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U3 whats a comment:
+        description here: Beskrivning här
+        title: titel
+      U3 whats a comment_2018:
+        description here: Beskrivning här
+        title: titel
+      U3L12 - Mission Unsortable:
+        description here: Beskrivning här
+        title: titel
+      U3L13 - Explanation of Ids:
+        description here: Beskrivning här
+        title: titel
+      U3L13 - Make a Prediction Explanation:
+        description here: Beskrivning här
+        title: titel
+      U3L13 Add Button Instrucitons:
+        description here: Beskrivning här
+        title: titel
+      U3L13 Add Button Instructions:
+        description here: Beskrivning här
+        title: titel
+      U3L14 - Message - Other ways to assign values:
+        description here: Beskrivning här
+        title: titel
+      U3L14 - Message - basic mechanics of variables:
+        description here: Beskrivning här
+        title: titel
+      U3L14 - Student Intro Page:
+        description here: Beskrivning här
+        title: titel
+      U3L15 - explanation of IF and =v==:
+        description here: Beskrivning här
+        title: titel
+      U3L15 Student Lesson Intro - new:
+        description here: Beskrivning här
+        title: titel
+      U3L19 - Arithmetic v Concatenation:
+        description here: Beskrivning här
+      U3L19 - Intro to variables:
+        description here: Beskrivning här
+      U3L19 - concatenate string with var:
+        description here: Beskrivning här
+      U3L19 - done with variables finally:
+        description here: Beskrivning här
+        title: titel
+      U3L19 - explanation diff between string and var name:
+        description here: Beskrivning här
+      U3L19 - improve your clicker game:
+        description here: Beskrivning här
+      U3L19 - misconception variable assignment order pt1:
+        description here: Beskrivning här
+      U3L19 - misconception variable assignment order pt2:
+        description here: Beskrivning här
+      U3L19 - variable breakdown - Assigning a value:
+        description here: Beskrivning här
+      U3L19 - variable breakdown - common mistake - declaring twice:
+        description here: Beskrivning här
+      U3L19 - variable breakdown - declaration:
+        description here: Beskrivning här
+      U3L19 - variable breakdown - setText in label:
+        description here: Beskrivning här
+      U3L19 - variable breakdown - ways to read pt1:
+        description here: Beskrivning här
+      U3L19 - variable breakdown intro:
+        description here: Beskrivning här
+      U3L19 - variable scope explanation:
+        description here: Beskrivning här
+      U3L19 - variable scope explanation pt2:
+        description here: Beskrivning här
+      U3L19 - variable scope explanation pt3:
+        description here: Beskrivning här
+      U3L20 - combining And and Or explanation:
+        description here: Beskrivning här
+        title: titel
+      U4 - Cleaning Data - Activity Guide:
+        description here: Beskrivning här
+        title: titel
+      U4 - Making Data Visualizations - Bar Chart:
+        description here: Beskrivning här
+        title: titel
+      U4 - Making Data Visualizations - Edit Chart Appearance:
+        description here: Beskrivning här
+        title: titel
+      U4 - Making Data Visualizations - Free Play:
+        description here: Beskrivning här
+        title: titel
+      U4 - Making Data Visualizations - Free Play_2018:
+        description here: Beskrivning här
+        title: titel
+      U4 - Making Data Visualizations - Getting Started:
+        description here: Beskrivning här
+        title: titel
+      U4 - Making Data Visualizations - Line Chart:
+        description here: Beskrivning här
+        title: titel
+      U4 - Making Data Visualizations - Scatter Plot:
+        description here: Beskrivning här
+        title: titel
+      U4 - Making Data Visualizations - Student Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4 - Privacy Abandoned - Hot On Your Trail Video:
+        description here: Beskrivning här
+        title: titel
+      U4 - Unique Ids Explanation:
+        title: titel
+      U4 - Unique Ids Explanation_2018:
+        title: titel
+      U4 Cleaning Data Activity Guide Pt2:
+        description here: Beskrivning här
+        title: titel
+      U4 Cleaning Data Activity Guide Pt3:
+        description here: Beskrivning här
+        title: titel
+      U4 caesar cipher interstitial:
+        description here: Beskrivning här
+      U4 how to crack substitution cipher:
+        description here: Beskrivning här
+      U4L01 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L02 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L02 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      U4L02v2 - Finding Trends:
+        description here: Beskrivning här
+        title: titel
+      U4L03 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L03 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      U4L03v2 - Student Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L04 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L04 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      U4L04v2 - Student Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L05 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L06 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L06v2 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L07 Public Key Crypto Interstitial:
+        description here: Beskrivning här
+      U4L07 Student Introduction public key crypto:
+        description here: Beskrivning här
+        title: titel
+      U4L07 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L08 - mod clock instructions:
+        description here: Beskrivning här
+        title: titel
+      U4L08 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L08v2 Making Pivot Tables:
+        description here: Beskrivning här
+        title: titel
+      U4L08v2 Making Pivot Tables Part 2:
+        description here: Beskrivning här
+        title: titel
+      U4L08v2 Making Pivot Tables Part 3:
+        description here: Beskrivning här
+        title: titel
+      U4L08v2 Making Pivot Tables Part 3_2018:
+        description here: Beskrivning här
+        title: titel
+      U4L08v2 Student Intro:
+        description here: Beskrivning här
+        title: titel
+      U4L09 Student Lesson Intro Practice PT big data dilemma:
+        description here: Beskrivning här
+        title: titel
+      U4L09 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L10 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L11 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L12 - Student Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L12 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L13 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L14 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L15 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L16 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L17 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L18 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L19 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L20 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L21 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L22 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L23 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L24 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      U4L5 random subst challenge page:
+        description here: Beskrivning här
+        title: titel
+      U5 - Create PT - Student Introduction:
+        description here: Beskrivning här
+        title: titel
+      U5 - Create PT Prep - Student Introduction:
+        description here: Beskrivning här
+        title: titel
+      U5 - Create PT review - Student Introduction:
+        description here: Beskrivning här
+        title: titel
+      U5 - Explore PT - Student Introduction:
+        description here: Beskrivning här
+        title: titel
+      U5 - Explore PT Prep - Student Introduction:
+        description here: Beskrivning här
+        title: titel
+      U5 - Explore PT Review - Student Introduction:
+        description here: Beskrivning här
+        title: titel
+      U5 - PT Prep - Digital Portfolio and tech setup:
+        description here: Beskrivning här
+        title: titel
+      U5 color sleuth check correct:
+        description here: Beskrivning här
+        title: titel
+      U5 color sleuth check correct_2018:
+        description here: Beskrivning här
+        title: titel
+      U5L08 - Student Intro If statements:
+        description here: Beskrivning här
+        title: titel
+      U6 - Charts - Student Introduction:
+        description here: Beskrivning här
+        title: titel
+      U6 - Charts - Student Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      U6 - Final Project - Student Introduction:
+        description here: Beskrivning här
+        title: titel
+      U6 - Final Project - Student Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      U6 - ImportExport - Student Introduction:
+        description here: Beskrivning här
+        title: titel
+      U6 - ImportExport - Student Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      U6 - Sample Apps - Student Introduction:
+        description here: Beskrivning här
+        title: titel
+      U6 - Sample Apps - Student Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      U6 - deleteRecord - Student Introduction:
+        description here: Beskrivning här
+        title: titel
+      U6 - deleteRecord - Student Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      U6 - updateRecord - Student Introduction:
+        description here: Beskrivning här
+        title: titel
+      U6 - updateRecord - Student Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      U6 AP Performance Task Tech Setup - Student Links:
+        description here: Beskrivning här
+        title: titel
+      U6 Create PT - Complete the Task - Student Links:
+        description here: Beskrivning här
+        title: titel
+      U6 Create PT - Complete the Task - Student Links_2018:
+        description here: Beskrivning här
+        title: titel
+      U6 Create PT Review - Student Links:
+        description here: Beskrivning här
+        title: titel
+      U6 Create PT Review - Student Links_2018:
+        description here: Beskrivning här
+        title: titel
+      U6 Explore PT - Complete the Task - Student Links:
+        description here: Beskrivning här
+        title: titel
+      U6 Explore PT - Complete the Task - Student Links_2018:
+        description here: Beskrivning här
+        title: titel
+      U6 Explore PT - Make a Plan - Student Links:
+        description here: Beskrivning här
+        title: titel
+      U6 Explore PT - Make a Plan - Student Links_2018:
+        description here: Beskrivning här
+        title: titel
+      U6 Explore PT Review - Student Links:
+        description here: Beskrivning här
+        title: titel
+      U6 Explore PT Review - Student Links_2018:
+        description here: Beskrivning här
+        title: titel
+      Unit 2 Lesson 1 Overview Clone:
+        description here: Beskrivning här
+        title: titel
+      Unit 4 Lesson 1 Introduction:
+        description here: Beskrivning här
+        title: titel
+      Unit 4 Lesson 1 Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      Unit 4 Lesson 2 Introduction:
+        description here: Beskrivning här
+        title: titel
+      Unit 4 Lesson 2 Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      Unit 4 Lesson 5 Introduction:
+        description here: Beskrivning här
+        title: titel
+      Unit 4 Lesson 5 Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 1:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 1 Introduction:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 1 Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 10 Introduction:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 10 Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 2 Introduction:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 2 Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 3 Introduction:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 3 Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 4 Introduction:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 4 Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 5:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 5 Introduction:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 5 Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 6:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 6 Introduction:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 6 Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 7 Introduction:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 7 Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 8 Introduction:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 8 Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 9 Introduction:
+        description here: Beskrivning här
+        title: titel
+      Unit 5 Lesson 9 Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      'Variable Scope: Local vs. Global':
+        description here: Beskrivning här
+      'Variable Scope: Local vs. Global_2018':
+        description here: Beskrivning här
+      'Worked Example: If-statements and Robot':
+        description here: Beskrivning här
+        title: titel
+      'Worked Example: If-statements and Robot_2018':
+        description here: Beskrivning här
+        title: titel
+      brad-repro-bug-000:
+        description here: Beskrivning här
+      brad-test-continue-buttons-in-markdown:
+        description here: Beskrivning här
+      courseB_external_MRF:
+        description here: Beskrivning här
+        title: titel
+      courseB_external_loopMRF:
+        description here: Beskrivning här
+        title: titel
+      courseB_story_unspottedBugs10:
+        description here: Beskrivning här
+        title: titel
+      courseB_story_unspottedBugs11:
+        description here: Beskrivning här
+        title: titel
+      courseB_story_unspottedBugs12:
+        description here: Beskrivning här
+        title: titel
+      courseB_story_unspottedBugs13:
+        description here: Beskrivning här
+        title: titel
+      courseB_story_unspottedBugs14:
+        description here: Beskrivning här
+        title: titel
+      courseB_story_unspottedBugs15:
+        description here: Beskrivning här
+        title: titel
+      courseB_story_unspottedBugs16:
+        description here: Beskrivning här
+        title: titel
+      courseB_story_unspottedBugs17:
+        description here: Beskrivning här
+        title: titel
+      courseB_story_unspottedBugs18:
+        description here: Beskrivning här
+        title: titel
+      courseB_story_unspottedBugs2:
+        description here: Beskrivning här
+        title: titel
+      courseB_story_unspottedBugs3:
+        description here: Beskrivning här
+        title: titel
+      courseB_story_unspottedBugs4:
+        description here: Beskrivning här
+        title: titel
+      courseB_story_unspottedBugs5:
+        description here: Beskrivning här
+        title: titel
+      courseB_story_unspottedBugs6:
+        description here: Beskrivning här
+        title: titel
+      courseB_story_unspottedBugs7:
+        description here: Beskrivning här
+        title: titel
+      courseB_story_unspottedBugs8:
+        description here: Beskrivning här
+        title: titel
+      courseB_story_unspottedBugs9:
+        description here: Beskrivning här
+        title: titel
+      courseB_unplugged_mrfProgramming:
+        description here: Beskrivning här
+        title: titel
+      courseC_screenoutthemean:
+        description here: Beskrivning här
+        title: titel
+      courseF_firstFunctions_map:
+        description here: Beskrivning här
+        title: titel
+      coursef_functionsSummary_map:
+        description here: Beskrivning här
+        title: titel
+      coursef_powerofwords:
+        description here: Beskrivning här
+        title: titel
+      csd deeper learning timeline:
+        description here: Beskrivning här
+      csd deeper learning timeline 2018-2019:
+        description here: Beskrivning här
+      csd-post-survey-unit1-preamble:
+        description here: Beskrivning här
+        title: titel
+      csd-post-survey-unit2-preamble:
+        description here: Beskrivning här
+        title: titel
+      csd-post-survey-unit3-preamble:
+        description here: Beskrivning här
+        title: titel
+      csd-post-survey-unit4-preamble:
+        description here: Beskrivning här
+        title: titel
+      csd-post-survey-unit5-preamble:
+        description here: Beskrivning här
+        title: titel
+      csd-post-survey-unit6-preamble:
+        description here: Beskrivning här
+        title: titel
+      csp deeper learning timeline:
+        description here: Beskrivning här
+      csp-post-survey-2018-AP-preamble:
+        description here: Beskrivning här
+        title: titel
+      csp-post-survey-2018-topics-preamble:
+        description here: Beskrivning här
+        title: titel
+      csp-post-survey-2018-unit-feedback-preamble:
+        description here: Beskrivning här
+        title: titel
+      csp-post-survey-createPT-preamble:
+        description here: Beskrivning här
+        title: titel
+      csp-post-survey-explorePT-preamble:
+        description here: Beskrivning här
+        title: titel
+      csp-post-survey-unit1-preamble:
+        description here: Beskrivning här
+        title: titel
+      csp-post-survey-unit2-preamble:
+        description here: Beskrivning här
+        title: titel
+      csp-post-survey-unit3-preamble:
+        description here: Beskrivning här
+        title: titel
+      csp-post-survey-unit4-preamble:
+        description here: Beskrivning här
+        title: titel
+      csp-post-survey-unit5-preamble:
+        description here: Beskrivning här
+        title: titel
+      csp_unit5_finalassessment_overview:
+        description here: Beskrivning här
+        title: titel
+      csp_unit5_finalassessment_overview_2018:
+        description here: Beskrivning här
+        title: titel
+      csp_unit5_finalassessment_overview_exam_prep:
+        description here: Beskrivning här
+        title: titel
+      csp_unit_assessment_overview:
+        description here: Beskrivning här
+        title: titel
+      csp_unit_assessment_overview_2018:
+        description here: Beskrivning här
+        title: titel
+      csp_unit_assessment_overview_exam_prep:
+        description here: Beskrivning här
+        title: titel
+      deeper learning:
+        description here: Beskrivning här
+      deeper learning recommendations- csd:
+        description here: Beskrivning här
+      deeper learning recommendations- csp:
+        description here: Beskrivning här
+      deeper learning recommendations- csp - 2018:
+        description here: Beskrivning här
+      dlp supports - csd:
+        description here: Beskrivning här
+      dsl link test:
+        description here: Beskrivning här
+        title: titel
+      equity discussion:
+        description here: Beskrivning här
+      grade2_maze_intro1:
+        description here: Beskrivning här
+        title: titel
+      grade2_unplugged_neighborhood:
+        description here: Beskrivning här
+        title: titel
+      grade4_project_design:
+        description here: Beskrivning här
+        title: titel
+      grade4_project_design_image:
+        description here: Beskrivning här
+        title: titel
+      grade4_project_presentation:
+        description here: Beskrivning här
+        title: titel
+      grade5_project_design:
+        description here: Beskrivning här
+        title: titel
+      grade5_project_presentation:
+        description here: Beskrivning här
+        title: titel
+      more encryption algorithms:
+        description here: Beskrivning här
+        title: titel
+      newCSFsample:
+        Intro: Introduktion
+        description here: Beskrivning här
+      post-assessment survey heading4:
+        description here: Beskrivning här
+        title: titel
+      pwc_appdev:
+        description here: Beskrivning här
+        title: titel
+      pwc_appdevunplugged:
+        description here: Beskrivning här
+        title: titel
+      pwc_cybersecurity:
+        description here: Beskrivning här
+        title: titel
+      pwc_data:
+        description here: Beskrivning här
+      pwc_internetofthings:
+        description here: Beskrivning här
+        title: titel
+      pwc_problemsolving:
+        description here: Beskrivning här
+      pwc_programming:
+        description here: Beskrivning här
+        title: titel
+      pwc_technologyfoundations:
+        description here: Beskrivning här
+      pwc_webdevelopment:
+        description here: Beskrivning här
+        title: titel
+      sciPD framework video:
+        Framework: Ramverk
+      sciPD2Part4_S1_L3:
+        description here: Beskrivning här
+        title: titel
+      sciPD2Part4_S2_L1:
+        description here: Beskrivning här
+        title: titel
+      sciPD2Part4_S2_L2:
+        description here: Beskrivning här
+        title: titel
+      sciPD2Part4_S3_L1:
+        description here: Beskrivning här
+        title: titel
+      sciPD2Part4_S3_L2:
+        description here: Beskrivning här
+        title: titel
+      sciPD2Part4_S3_L3:
+        description here: Beskrivning här
+        title: titel
+      sciPD3 mods2:
+        description here: Beskrivning här
+        title: titel
+      sciPD33 earth1:
+        description here: Beskrivning här
+        title: titel
+      sciPD33 earth2:
+        description here: Beskrivning här
+        title: titel
+      sciPDpart4_S1_L1:
+        description here: Beskrivning här
+        title: titel
+      test cb level:
+        description here: Beskrivning här
+      test discourse level type:
+        title: titel
+      v2 U1 Internet is for Everyone Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      v2 U1 Internet is for Everyone Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U1L14 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      v2 U1L14 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U1L2 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      v2 U1L2 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U1L3 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      v2 U1L3 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U1L4 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      v2 U1L4 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U1L5 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      v2 U1L5 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U1L6 Student Lesson Introduction:
+        description here: Beskrivning här
+      v2 U1L6 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+      v2 U1L8 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      v2 U1L8 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L1 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L1 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L10 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L10 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L11 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L11 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L12 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L12 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L13 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L13 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L14 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L14 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L15 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L15 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L2 Student Lesson Summary:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L2 Student Lesson Summary_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L3 Student Lesson Summary:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L3 Student Lesson Summary_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L4 Student Lesson Summary:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L4 Student Lesson Summary_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L5 Student Lesson Introduction:
+        description here: Beskrivning här
+      v2 U2L5 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+      v2 U2L6 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L6 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L7 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L7 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L8 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L8 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L9 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      v2 U2L9 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U3L04 Student Lesson Introduction:
+        description here: Beskrivning här
+        title: titel
+      v2 U3L04 Student Lesson Introduction_2018:
+        description here: Beskrivning här
+        title: titel
+      v2 U3L05 Student Lesson Introduction:
+        Creating Functions: Skapa funktioner
+      v2 U3L05 Student Lesson Introduction_2018:
+        Creating Functions: Skapa funktioner
+      v2 U4L05 Student Lesson Intro Encryption Caesar:
+        description here: Beskrivning här
+        title: titel
+    match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: Matcha knapp- kombinationen
+          med dansrörelserna.
+        Matching: Matchning
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>D</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: Matchning
+        Use the key to match each code to its letter: Använd nyckeln för att matcha
+          varje kod till sin bokstav
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: Matcha nätet till programmet.
+        Matching: Matchning
+      2-3 Maze Match 2:
+        Instructions: Instruktioner
+        Match the puzzles to the blocks: Matcha pusslet till blocken
+        Maze Match: Labyrint matchning
+      2-3 Relay Programming Match 1:
+        Matching: Matchning
+      2-3 artist loops match 1:
+        Match the loop to the shape: Matcha slingan till formen
+      2-3 artist match 1:
+        Artist Matching: Artist matchande
+        Match the shape with the blocks that complete it.: Matcha formen med de block
+          som slutför den.
+      2-3 bounce match 1:
+        Matching: Matchning
+      2-3 flappy match 1:
+        Matching: Matchning
+      2-3 maze match 1:
+        Match the puzzles to the blocks: Matcha pusslet till blocken
+        Maze Match One: Labyrint matchar en
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>1)</h4>"
+        "<h4>3)</h4>": "<h4>1)</h4>"
+        "<h4>4)</h4>": "<h4>1)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>Lägg till spelare 1 rulla
+          till totalpoäng</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>Jämför spelar- poäng
+          för att se vem som vinner</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>Spelare 1 rullar tärningen</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>Set spelare 1 poäng  0</h4>"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Matcha
+          stegen i Dice Race spelet i den ordning som de ska visas i algoritmen.
+        Matching: Matchning
+      4-5 Computational Thinking Match 1:
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Hjul/sida: 2 <br/>Fönster/sida:
+          0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Hjul/sida: 2 <br/>Fönster/sida:
+          1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Hjul/sida: 2 <br/>Fönster/sida:
+          6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Hjul/sida: 2 <br/>Fönster/sida:
+          2</h3>"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Vart
+          och ett av dessa fordon har brutits ned i mindre bitar. Matcha varje fordon
+          med dess lista av delar.
+        Matching: Matchning
+      4-5 Suncatchers Match 1:
+        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
+        "<h4>STACK</h4>": "<h4>STACK</h4>"
+        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
+        "<h4>STAR</h4>": "<h4>STJÄRNA</h4>"
+        Match each program to the word it makes, using the provided group of skills.: Matcha
+          varje program till ordet som det gör, med hjälp av medföljande grupp av
+          kunskaper.
+        Matching: Matchning
+      4-5 maze match 1:
+        Instructions: Instruktioner
+        Match the puzzles to the blocks: Matcha pusslet till blocken
+        Maze Match: Labyrint matchning
+      CSD U3 CSS Vocab Match:
+        '1': '1'
+        '2': '2'
+      CSD U3 keyinput match:
+        Question: Fråga
+      CSDU2 Match RGB Colors:
+        Question: Fråga
+      K-1 Artist 2 Match 1:
+        Matching: Matchning
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: Matcha formerna baserat på typ.
+        Matching: Matchning
+      K-1 Artist 2 Match 3:
+        Match the shapes based on type.: Matcha formerna baserat på typ.
+        Matching: Matchning
+      K-1 Artist Loops Match 1:
+        Matching: Matchning
+      K-1 Bee Loops Match 1:
+        Match the blocks: Matcha blocken
+        Matching: Matchning
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: Matcha knapp- kombinationen
+          med dansrörelserna.
+        Matching: Matchning
+      K-1 Flappy Match 1:
+        Match the blocks: Matcha blocken
+        Matching: Matchning
+      K-1 Happy Maps Match 1:
+        Matching: Matchning
+      K-1 Maze Match 1:
+        Instructions: Instruktioner
+        Match the puzzles and blocks: Matcha pussel och block
+        Matching: Matchning
+      K-1 Move It Match 1:
+        Matching: Matchning
+      PDAlg Design Recipe Video:
+        Definition: Definition
+      PDK5 What is unplugged:
+        Question: Fråga
+      'U2L06 - Matching: Label the Diagram':
+        E: Ö
+      U3L19 - MATCH what are values of abc:
+        '10': '10'
+        '12': '12'
+        '13': '13'
+        '15': '15'
+        '16': '16'
+        '21': '21'
+        '3': '3'
+        '5': '5'
+        '7': '7'
+        '8': '8'
+        description here: Beskrivning här
+        title: titel
+      U3L19 - MC what are values of abc:
+        description here: Beskrivning här
+        title: titel
+      U4L06 Create Record Id Matching Q:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      test matching image:
+        Instructions: Instruktioner
+      test matching text:
+        Matching: Matchning
+        blue: blå
+      unique level name here:
+        Question: Fråga
+        description here: Beskrivning här
+        title: titel
+    multi:
+      2-3 Algorithms Multi 1:
+        Choose an algorithm for the image provided.: Välj en algoritm till den givna
+          bilden.
+        Multiple Choice: Flervalsfråga
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Börja
+          med en fyrkant <br/> sätta ett parallellogram ovanför fyrkanten <br/> sätt
+          en triangel till höger om parallellogrammet
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Börja
+          med en fyrkant <br/> sätt en triangel ovanför fyrkanten <br/> sätt en triangel
+          under fyrkanten
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Börja
+          med en fyrkant <br/> sätt en triangel under fyrkanten <br/> sätt ett parallelogram
+          till höger om triangeln
+        0: "? Börja med en fyrkant <br/> sätt en triangel till höger om fyrkanten
+          <br/> sätt ett parallellogram nedanför fyrkanten <br/> rSätt triangeln till
+          höger om parallellogrammet"
+        1: ": Start med en fyrkant <br/> sätt en triangel till höger om fyrkanten
+          <br/> sätt ett parallellogram nedanför fyrkanten <br/> Sätt triangeln till
+          höger om parallellogrammet"
+      2-3 Algorithms Multi 2:
+        Multiple Choice: Flervalsfråga
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Börja
+          med en triangel <br/> sätta en fyrkant under triangeln <br/> sätt en annan
+          triangel under fyrkanten
+        Which image does <em>not</em> follow this algorithm?: Vilken bild följer <em>inte</em>  denna
+          algoritm?
+      2-3 Binary Multi 1:
+        Multiple Choice: Flervalsfråga
+        Which program makes this image?: Vilket program gör denna bild?
+      2-3 Conditionals Multi 1:
+        According to the rules of the game, which set of cards is scored correctly?: Enligt
+          reglerna för spelet, vilken uppsättning kort har rätt poäng?
+        Multiple Choice: Flervalsfråga
+      2-3 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Hur vill du förenkla denna
+          sekvens med slingor?
+        Multiple Choice: Flervalsfråga
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: Flervalsfråga
+        Which program makes this image?: Vilket program gör denna bild?
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: Labyrint Flerval
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: Flervalsfråga
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: Flervalsfråga
+        Which image-program combo does not contain mistakes?: Vilket bild-program
+          combo innehåller inga misstag?
+      2-3 artist functions multi 1:
+        Artist Functions Multiple Choice One: Artist Funktioner Flerval Ett
+        Pick the correct blocks to draw this image using the given functions: Välj
+          de korrekta blocken för att rita denna bild med de givna funktionerna
+      2-3 artist loops multi 1:
+        Artist Loops Multiple Choice: Artist Loops Flerval
+        Which shape is made by this loop?: Vilken form är gjord av denna loop?
+      2-3 artist loops multi 2:
+        Artist Loops Multiple Choice: Artist Loops Flerval
+        Which shape is made by this program?: Vilken form är gjord av detta program?
+      2-3 bee conditionals multi 1:
+        Which comparison below is true?: Vilken jämförelse nedan är sann?
+      2-3 bee conditionals multi 2:
+        Choose the best blocks.: Välj de bästa blocken.
+      2-3 bee conditionals multi 3:
+        Choose the best blocks.: Välj de bästa blocken.
+      2-3 bee loops multi 1:
+        Bee Loops Multiple Choice One: Bee Loopar Flerval Ett
+        Which blocks collect all of the nectar?: Vilket block samlar all nektar?
+      2-3 maze multi 1:
+        Maze Multiple Choice One: Labyrint Flerval Ett
+        Which set of blocks is the correct answer?: Vilken uppsättning block är det
+          rätta svaret?
+      4-5 Algorithms Multi 1:
+        Baking cookies: Baka kakor
+        Banana: Banan
+        Brushing your teeth: Borsta tänderna
+        Multiple Choice: Flervalsfråga
+        Shopping from a grocery list: Handla från en inköpslista
+        Which one of these items is hardest to describe an algorithm for?: Vilken
+          av dessa objekt är svårast att skriva en algoritm för?
+      4-5 Computational Thinking Multi 1:
+        Eugene is a _____ city.: Eugene är en _____ stad.
+        0: "? Här är tre meningar. Vilken av mallarna nedan abstraherar korrekt så
+          att alla tre matchar samma mönster som mallen?"
+        1: ": Här är tre meningar. Vilken av mallarna nedan abstraherar korrekt så
+          att alla tre matchar samma mönster som mallen?"
+        Multiple Choice: Flervalsfråga
+        Seattle _____ a _____ _____.: Seattle _____ en _____ _____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
+          är en storstad. <br/>Eugene är en medelstor stad <br/> Hillview är en liten
+          stad.
+        _____ is _____ a _____.: _____ är _____ en _____.
+        _____ is a _____ city.: _____ är en _____ stad.
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: Flervalsfråga
+        Which of these pictures best represents crowdsourcing?: Vilken av dessa bilder
+          representerar bäst crowdsourcing?
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: Borsta håret
+        Cleaning your room: Städa ditt rum
+        Eating your dessert: Ät din dessert
+        Multiple Choice: Flervalsfråga
+        Washing your face: Tvätta ansiktet
+        Which one of these activities would be best for practicing crowdsourcing?: Vilken
+          av dessa verksamheter skulle vara bäst för crowdsourcing?
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: Flervalsfråga
+        Which piece of information listed below is okay to share on the internet?: Vilken
+          del av informationen nedan är okej att dela på internet?
+        Your address: Din adress
+        Your birthday: Din födelsedag
+        Your favorite food: Din favoritmat
+        Your parent's credit card number: Dina föräldrars kreditkortsnummer
+      4-5 Internet Multi 1:
+        Multiple Choice: Flervalsfråga
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: När
+          du försöker logga in på code.org, vilken IP-adress är mest sannolikt att
+          DNS-servern tar dig till?
+      4-5 Internet Multi 2:
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Om
+          DNS-servern har skickat dig till sidan på IP-adressen 100.42.50.110, vilken
+          hemsida är du på?
+        Multiple Choice: Flervalsfråga
+      4-5 Songwriting Multi 1:
+        0: "? Flugor i mjölken <br/> Shoo, fluga, shoo, <br/> flugor i mjölken, <br/>
+          Shoo, fluga, shoo, <br/> flugor i mjölken, <br/> Shoo, fluga, shoo, <br/>
+          hoppa till min Lou, min älskling."
+        1: ":  Flugor i mjölken <br/> Shoo, fluga, shoo, <br/> flugor i mjölken, <br/>
+          Shoo, fluga, shoo, <br/> flugor i mjölken, <br/> Shoo, fluga, shoo, <br/>
+          hoppa till min Lou, min älskling."
+        Lou, Lou, skip to my Lou,: Lou Lou, hoppa till min Lou,
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
+          Lou, hoppa till min Lou, <br/> Lou, Lou, hoppa till min Lou, <br/> Lou,
+          Lou, hoppa till min Lou, <br/> hoppa till min Lou, min älskling.
+        2: "? Lou, Lou, hoppa till min Lou, <br/> Lou, Lou, hoppa till min Lou, <br/>
+          Lou, Lou, hoppa till min Lou, <br/> hoppa till min Lou, min älskling. <br/>
+          <br/><p>Flugor i mjölken, <br/>Shoo, fluga, shoo,"
+        3: ": Lou, Lou, hoppa till min Lou, <br/> Lou, Lou, hoppa till min Lou, <br/>
+          Lou, Lou, hoppa till min Lou, <br/> hoppa till min Lou, min älskling. <br/>
+          <br/><p>Flugor i mjölken, <br/>Shoo, fluga, shoo,"
+        Multiple Choice: Flervalsfråga
+        4: "? Vilken är den största bit av låten som du kan definiera som refräng
+          så att refrängen repeteras exakt varje gång den är kallad?"
+        5: ": Vilken är den största bit av låten som du kan definiera som refräng
+          så att refrängen repeteras exakt varje gång den är kallad?"
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: Flervalsfråga
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Vilket
+          av programmen nedan <em>inte</em> skapar exakt samma sekvens som programmet
+          1?
+      4-5 artist loops multi 1:
+        Artist Loops Multiple Choice: Artist Loops Flerval
+        Which blocks will create the design?: Vilka block kommer att skapa designen?
+      4-5 artist multi 1:
+        Artist Multiple Choice: Artist Flerval
+        Which blocks draw a rectangle with a perimeter of 100?: Vilket block ritar
+          en rektangel med en omkrets av 100?
+      4-5 artist multi 2:
+        Artist Multiple Choice: Artist Flerval
+        Which drawing is symmetric?: Vilken teckning är symmetrisk?
+      4-5 bee conditionals multi 1:
+        0: "? En lila blomma kan ha antingen 3, 2 eller 1 nektar, men du vet inte
+          hur många. Vilket block kontrollerar och samlar in nektar från en lila blomma
+          korrekt?"
+        1: "? En lila blomma kan ha antingen 3, 2 eller 1 nektar, men du vet inte
+          hur många. Vilket block kontrollerar och samlar in nektar från en lila blomma
+          korrekt?"
+        Bee Conditionals Multiple Choice: Bee Villkorssatser Flerval
+        Choose the best blocks.: Välj de bästa blocken.
+      4-5 bee debug multi 1:
+        Bee Debug Multiple Choice: Bee Felsökning Flerval
+        Which version of the function will work?: Vilken version av funktionen fungerar?
+      4-5 bee loops multi 1:
+        Bee Loops Multiple Choice: Bee Loops Flerval
+        Which blocks will solve the puzzle?: Vilka block löser pusslet?
+      4-5 farmer loops multi 1:
+        Which blocks solve the puzzle?: Vilket block löser detta pussel?
+      4-5 maze conditionals multi 1:
+        Maze Conditionals Multiple Choice: Labyrint Villkorssatser Flerval
+        Which blocks solve the puzzle?: Vilket block löser detta pussel?
+      4-5 maze multi 1:
+        Maze Multiple Choice: Labyrint Flerval
+        Which blocks solve the puzzle?: Vilket block löser detta pussel?
+      CB_Question_3:
+        Y: true
+      CSD Prediction Header Size:
+        Question: Fråga
+      CSD U3 Boolean MC:
+        title: titel
+      CSD U3 Boolean MC_2018:
+        title: titel
+      CSDU4 Screens Predict Multi:
+        About: Om
+        Contact Us: Kontakta oss
+      'CSP U4L04 Assessment 1 ':
+        Question: Fråga
+      CSP Unit 1 Ch 1 MC binary to dec simple:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_2018:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_exam_prep:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP verify 18:
+        'No': Nej
+        'Yes': Ja
+      CSPU5_predict_mc_whichOfTwoEvents:
+        title: titel
+      CSPU5_predict_onEvent_withWrongID:
+        Question: Fråga
+        title: titel
+      CommuteAssess - loops 1 - block:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block B:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_2018:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_exam_prep:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 2 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_2018:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_exam_prep:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      Destroy me multi test:
+        description here: Beskrivning här
+      ECSPD2 question:
+        Question: Fråga
+        title: titel
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: Flervalsfråga
+        Which blocks solve this puzzle?: Vilket block löser detta pussel?
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: Flervalsfråga
+        Which blocks draw the square?: Vilket block ritar fyrkanten?
+      K-1 Artist 2 Multi 1:
+        Multiple Choice: Flervalsfråga
+      K-1 Artist Loops Multi 1:
+        Multiple Choice: Flervalsfråga
+      K-1 Bee 1 Multi 1:
+        How many nectars is this?: Hur många nektar är detta?
+        Multiple Choice: Flervalsfråga
+      K-1 Bee 1 Multi 2:
+        How many nectars is this?: Hur många nektar är detta?
+        Multiple Choice: Flervalsfråga
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: Flervalsfråga
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Vilket
+          djur har det digitala fotavtryck som lämnar honom eller henne i den <strong>mest
+          osäkra</strong>?
+      K-1 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Hur vill du förenkla denna
+          sekvens med slingor?
+        Multiple Choice: Flervalsfråga
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: Flervalsfråga
+        Which arrow gets the Flurb to the treasure?: Vilken pil får Flurb till skatten?
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: Flervalsfråga
+        Which information should you <strong>not</strong> share online?: Vilken information
+          bör du <strong>inte</strong> dela online?
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: Flervalsfråga
+        Which choice should be the final block?: Vilket val bör vara det sista blocket?
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: Flervalsfråga
+        Which repeat block is the same?: Vilka 'upprepa' block är identiska?
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: Flervalsfråga
+        Pick the correct repeat block.: Väljdet rätt 'upprepa'- blocket.
+      K-1 Maze Multiple Choice 2:
+        Maze: Labyrint
+        Which answer solves this level?: Vilket svar löser denna nivå?
+      K-1 Move It Multi 1:
+        Multiple Choice: Flervalsfråga
+        Which algorithm gets the Flurb to the flowers?: Vilken algoritm får Flurb
+          till blommorna?
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: Flervalsfråga
+        Which step should go at the beginning of this algorithm?: Vilka steg ska stå
+          i början av denna algoritm?
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: Flervalsfråga
+        Which step should fill in the blank for this algorithm?: Vilket/vilka steg
+          ska fylla i tomrummet i den här algoritmen?
+      K-1 Word Search Multi 1:
+        Multiple Choice: Flervalsfråga
+        Which blocks spell "MOVE"?: Vilka block stavar ordet 'MOVE'(flytta)?
+      K-1 Word Search Multi 2:
+        Multiple Choice: Flervalsfråga
+      K-1 Word Search Multi 3:
+        Multiple Choice: Flervalsfråga
+        SOUTH: SÖDER
+        Which word is spelled?: Vilket ord stavas?
+      Multi Define Funcs 1:
+        '3': '3'
+        y: true
+      Multi Define Funcs 2:
+        '3': '3'
+        y: true
+      Multi Define Funcs 3:
+        '5': '5'
+        '6': '6'
+        y: true
+      PDAlg Blocks Video:
+        Toolbox: Verktygslåda
+      PDAlg DR Multi 1:
+        Domain: Domän
+        Name: Namn
+        Range: Utbud
+        0: "? The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+        1: ": The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+      PDAlg PreQ 1:
+        'No': Nej
+        'Yes': Ja
+      PDAlg PreQ 2:
+        'No': Nej
+        'Yes': Ja
+      PDAlg functional:
+        'No': Nej
+      PDK5 Blockly Intro:
+        'Yes': Ja
+      PDK5 Classroom Culture:
+        'Yes': Ja
+      PDK5 Course Maps:
+        'Yes': Ja
+      PDK5 Course Overview:
+        'Yes': Ja
+      PDK5 Glossary:
+        Glossary: Ordlista
+        'Yes': Ja
+      PDK5 Intro:
+        'No': Nej
+        Welcome!: Välkommen!
+        'Yes': Ja
+      PDK5 Teacher Dashboard:
+        Teacher Dashboard: Lärare Dashboard
+        'Yes': Ja
+      PDK5 Test1:
+        Question: Fråga
+        description here: Beskrivning här
+        title: titel
+      PDK5 UVideo Overview:
+        'Yes': Ja
+      PDK5 Unplugged Intro:
+        'Yes': Ja
+      PS U3-bakertest:
+        description here: Beskrivning här
+        title: titel
+      SG U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      Submittable Multi:
+        blue: blå
+        green: grön
+        red: röd
+      Test Contained Multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '4': '4'
+      U1L07 Assessment 1:
+        E: Ö
+      U1L6 Assessment multiple choice:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L6 Assessment multiple choice_2018:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L8 Multiple Choice:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      U1L8 Multiple Choice_2018:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      'U2L06 - MC: Which is an MST?':
+        0: ': "<p>The images below all show the same map (or graph) but have different
+          paths between the points highlighted.</p>\n<p>Please choose the image that
+          is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The
+          “distance” between points is depicted by the number of line segments connecting
+          any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
+        E: Ö
+      U2L08 Assessment 1:
+        '11': '11'
+        '5': '5'
+        '6': '6'
+        '8': '8'
+        '9': '9'
+      U2L13 Assessment4:
+        '26': '26'
+      U2L13 Assessment4_2018:
+        '26': '26'
+      U2L14 Assessment3:
+        'false': falskt
+        'true': sant
+      U2L19 multichoice 13 MOD 17:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      U2L19 multichoice 13 MOD 17_2018:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      'U2L19 mutlichoice ':
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15_2018:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L07 - MC remove line of code loops_2018:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L13 - Making Predications MC:
+        0: '? "<h1>Make a prediction - Learning to Code Better, Faster</h1>\n<p>As
+          you are learning to program you will encounter more and more new features
+          of a language and be naturally curious about how things work.  Research
+          has shown that when you encounter a new piece of code or new situation,
+          you learn faster by simply making a prediction about what will happen before
+          you run the program for the first time.  \n</p><p>Making a prediction forces
+          you to study the code and use your intuitions based on what you already
+          know. Even experienced programmers might disagree about what a piece of
+          code would do!  So making a prediction is not like some sort of test about
+          how smart you are.  <strong>By making a prediction first, when you run the
+          code you learn so much more whether you were right, wrong or somewhere in
+          between.  You construct a stronger mental model for how code works than
+          if you just ran the program to see what happened.</strong></p>\n<p>  So
+          let''s try it...</p>\n<h1> What do you think will happen?</h1>\n<p><img
+          src=\"https://images.code.org/34f6a627f0d62b6dc015c9e318372de9-image-1444076081470.png\"
+          align=right>Here is a piece of code with two buttons and two event handlers.  Notice
+          that both buttons still have the default IDs of \"id\". You will need to
+          fix this because we know it causes a warning message.  But it turns out
+          the program can still run and it does do <i>something.</i></p>\n<p><strong>What
+          do you think will happen with this code is run?</strong></p>"'
+        1: ': "<h1>Make a prediction - Learning to Code Better, Faster</h1>\n<p>As
+          you are learning to program you will encounter more and more new features
+          of a language and be naturally curious about how things work.  Research
+          has shown that when you encounter a new piece of code or new situation,
+          you learn faster by simply making a prediction about what will happen before
+          you run the program for the first time.  \n</p><p>Making a prediction forces
+          you to study the code and use your intuitions based on what you already
+          know. Even experienced programmers might disagree about what a piece of
+          code would do!  So making a prediction is not like some sort of test about
+          how smart you are.  <strong>By making a prediction first, when you run the
+          code you learn so much more whether you were right, wrong or somewhere in
+          between.  You construct a stronger mental model for how code works than
+          if you just ran the program to see what happened.</strong></p>\n<p>  So
+          let''s try it...</p>\n<h1> What do you think will happen?</h1>\n<p><img
+          src=\"https://images.code.org/34f6a627f0d62b6dc015c9e318372de9-image-1444076081470.png\"
+          align=right>Here is a piece of code with two buttons and two event handlers.  Notice
+          that both buttons still have the default IDs of \"id\". You will need to
+          fix this because we know it causes a warning message.  But it turns out
+          the program can still run and it does do <i>something.</i></p>\n<p><strong>What
+          do you think will happen with this code is run?</strong></p>"'
+        description here: Beskrivning här
+      U3L30 Assessment1:
+        '6': '6'
+        '7': '7'
+        '8': '8'
+      U3L30 Assessment2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+      U3L30 Assessment3:
+        '19': '19'
+        '20': '20'
+        '21': '21'
+      U4L01 Multiple Choice:
+        right: höger
+      U4L02 Multiple Choice:
+        right: höger
+      U4L03 Multiple Choice:
+        right: höger
+      U4L04 Multiple Choice:
+        right: höger
+      U4L05 Multiple Choice:
+        right: höger
+      U4L06 Multiple Choice:
+        right: höger
+      U4L06 Reflection Q 1:
+        Question: Fråga
+        random: slumpad
+      U4L07 Multiple Choice:
+        right: höger
+      U4L08 Multiple Choice:
+        right: höger
+      U4L09 Multiple Choice:
+        right: höger
+      U4L10 Multiple Choice:
+        right: höger
+      U4L11 Multiple Choice:
+        right: höger
+      U4L12 Multiple Choice:
+        right: höger
+      U4L13 Multiple Choice:
+        right: höger
+      U4L14 Multiple Choice:
+        right: höger
+      U4L15 Multiple Choice:
+        right: höger
+      U4L16 Multiple Choice:
+        right: höger
+      U4L17 Multiple Choice:
+        right: höger
+      U4L18 Multiple Choice:
+        right: höger
+      U4L19 Multiple Choice:
+        right: höger
+      U4L20 Multiple Choice:
+        right: höger
+      U4L21 Multiple Choice:
+        right: höger
+      U4L22 Multiple Choice:
+        right: höger
+      U4L23 Multiple Choice:
+        right: höger
+      U4L24 Multiple Choice:
+        right: höger
+      U4LXX Multiple Choice:
+        right: höger
+      U5 assess_weight_v2:
+        Question: Fråga
+        description here: Beskrivning här
+        title: titel
+      Warmup questions:
+        random: slumpad
+      commute assess - loops 4 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        '50': '50'
+      courseC_multi_harvester_loops11_predict1:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseD_multi_bee_nestedLoops9_predict2:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      csd-post-survey-2018-topic-ai:
+        'No': Nej
+        'Yes': Ja
+      csd-post-survey-2018-topic-cryptocurrency:
+        'No': Nej
+        'Yes': Ja
+      csd-post-survey-2018-topic-cybersecurity:
+        'No': Nej
+        'Yes': Ja
+      csd-post-survey-2018-topic-databases:
+        'No': Nej
+        'Yes': Ja
+      csd-post-survey-2018-topic-datascience:
+        'No': Nej
+        'Yes': Ja
+      csd-post-survey-2018-topic-gamedev:
+        'No': Nej
+        'Yes': Ja
+      csd-post-survey-2018-topic-hardware:
+        'No': Nej
+        'Yes': Ja
+      csd-post-survey-2018-topic-internet:
+        'No': Nej
+        'Yes': Ja
+      csd-post-survey-2018-topic-mobile:
+        'No': Nej
+        'Yes': Ja
+      csd-post-survey-2018-topic-parallel:
+        'No': Nej
+        'Yes': Ja
+      csd-post-survey-2018-topic-programming:
+        'No': Nej
+        'Yes': Ja
+      csd-post-survey-2018-topic-robotics:
+        'No': Nej
+        Robotics: Robotar
+        'Yes': Ja
+      csd-post-survey-2018-topic-web:
+        'No': Nej
+        'Yes': Ja
+      csp-post-survey-2017-q64:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': Nej
+        'Yes': Ja
+      csp-post-survey-2017-q64_2018:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': Nej
+        'Yes': Ja
+      csp-post-survey-2017-q65:
+        'No': Nej
+        'Yes': Ja
+      csp-post-survey-2017-q65_2018:
+        'No': Nej
+        'Yes': Ja
+      csp-post-survey-2018-topic-ai:
+        'No': Nej
+        'Yes': Ja
+      csp-post-survey-2018-topic-cryptocurrency:
+        'No': Nej
+        'Yes': Ja
+      csp-post-survey-2018-topic-cybersecurity:
+        'No': Nej
+        'Yes': Ja
+      csp-post-survey-2018-topic-databases:
+        'No': Nej
+        'Yes': Ja
+      csp-post-survey-2018-topic-datascience:
+        'No': Nej
+        'Yes': Ja
+      csp-post-survey-2018-topic-gamedev:
+        'No': Nej
+        'Yes': Ja
+      csp-post-survey-2018-topic-hardware:
+        'No': Nej
+        'Yes': Ja
+      csp-post-survey-2018-topic-internet:
+        'No': Nej
+        'Yes': Ja
+      csp-post-survey-2018-topic-mobile:
+        'No': Nej
+        'Yes': Ja
+      csp-post-survey-2018-topic-parallel:
+        'No': Nej
+        'Yes': Ja
+      csp-post-survey-2018-topic-programming:
+        'No': Nej
+        'Yes': Ja
+      csp-post-survey-2018-topic-robotics:
+        'No': Nej
+        Robotics: Robotar
+        'Yes': Ja
+      csp-post-survey-2018-topic-web:
+        'No': Nej
+        'Yes': Ja
+      csp-pre-survey-2017-q40:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Annat
+      csp-pre-survey-2017-q40_2018:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Annat
+      csp_ap_exam_signup:
+        'No': Nej
+        'Yes': Ja
+      csp_ap_previous_years:
+        'No': Nej
+        'Yes': Ja
+      csp_ap_taking_ap_class:
+        'No': Nej
+        'Yes': Ja
+      cspu5_assess1_fivemore:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_2018:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_exam_prep:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_flowchart:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_2018:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_exam_prep:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_increase:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_2018:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_exam_prep:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess2_addstrings:
+        result: resultat
+      cspu5_assess2_addstrings_2018:
+        result: resultat
+      cspu5_assess2_addstrings_exam_prep:
+        result: resultat
+      cspu5_assess2_combineString:
+        '10': '10'
+        '55': '55'
+        result: resultat
+      cspu5_assess2_combineString_2018:
+        '10': '10'
+        '55': '55'
+        result: resultat
+      cspu5_assess2_combineString_exam_prep:
+        '10': '10'
+        '55': '55'
+        result: resultat
+      cspu5_assess2_oldEnough:
+        '35': '35'
+        'false': falskt
+        'true': sant
+      cspu5_assess2_oldEnough_2018:
+        '35': '35'
+        'false': falskt
+        'true': sant
+      cspu5_assess2_oldEnough_exam_prep:
+        '35': '35'
+        'false': falskt
+        'true': sant
+      cspu5_assess2_weight:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_2018:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_exam_prep:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess3_array1:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_2018:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_exam_prep:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array4:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_2018:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_exam_prep:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_listAppend:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_2018:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_exam_prep:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_loopValue1:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue2:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess4_dataReturns:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_2018:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_exam_prep:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_listOutput:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_2018:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_exam_prep:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      msm variables multi 1:
+        '15': '15'
+        x: x
+      msm variables multi 10:
+        '17': '17'
+        x: x
+      msm variables multi 11:
+        '17': '17'
+        x: x
+      msm variables multi 12:
+        '17': '17'
+        x: x
+      msm variables multi 13:
+        '117': '117'
+        '17': '17'
+        x: x
+      msm variables multi 2:
+        '8': '8'
+      msm variables multi 3:
+        '5': '5'
+        x: x
+      msm variables multi 4:
+        '15': '15'
+        '3': '3'
+        '8': '8'
+      msm variables multi 5:
+        '3': '3'
+        '5': '5'
+      msm variables multi 6:
+        '1': '1'
+        '5': '5'
+        hello: hej
+      msm variables multi 7:
+        '3': '3'
+        x: x
+      msm variables multi 8:
+        '3': '3'
+        x: x
+      msm variables multi 9:
+        '5': '5'
+        '6': '6'
+        x: x
+      post-assessment survey q34:
+        Easy: Lätt
+        Hard: Svårt
+      pre-assessment survey q24:
+        'No': Nej
+        'Yes': Ja
+      pre-assessment survey q26:
+        0: "? Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        1: ": Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        'No': Nej
+        'Yes': Ja
+      pre-assessment survey q27:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Annat
+      pre-assessment survey q28:
+        '10': '10'
+        '11': '11'
+        '12': '12'
+        '8': '8'
+        '9': '9'
+        Other: Annat
+      pre-assessment survey q29:
+        Female: Kvinna
+        Male: Man
+        Other: Annat
+        Prefer not to answer: Föredrar att inte svara
+      pre-assessment survey q30:
+        Black or African American: Svart eller afroamerikansk
+        Other: Annat
+        Prefer not to answer: Föredrar att inte svara
+        White: Vit
+      sarah_test_maggie:
+        Question: Fråga
+        test: test
+      sciPD PreQ 1:
+        'No': Nej
+        'Yes': Ja
+      sciPD PreQ 2:
+        'No': Nej
+        'Yes': Ja
+      test anonymous student survey educational:
+        'No': Nej
+        'Yes': Ja
+      test me:
+        Question: Fråga
+        description here: Beskrivning här
+        title: titel
+      unique level name here:
+        Question: Fråga
+        description here: Beskrivning här
+        title: titel
+    text_match:
+      U2L07 Assessment4:
+        '43': '43'

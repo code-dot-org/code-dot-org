@@ -1,0 +1,17 @@
+ne:
+  data:
+    block_categories:
+      Actions: Actions
+      Loops: Loops
+      Functions: Functions
+      Color: Color
+      Math: Math
+      Logic: Logic
+      Variables: Variables
+      Conditionals: Conditionals
+      Events: कार्य 
+      Text: Text
+      Start: Start
+      test: test
+      Name: नाम
+      Function: Function

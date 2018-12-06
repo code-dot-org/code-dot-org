@@ -1,0 +1,1132 @@
+---
+cs:
+  data:
+    authored_hints:
+      2-3 Artist 1 new_authored_hint:
+        2-3_Artist_1_new_a: Když použiješ příkazový blok, který mě posílají dopředu
+          o 100 pixelů, nakreslím automaticky cestou čáru.
+        2-3_Artist_1_new_b: Máš problém s otáčením v rohu? Použij příkaz "otočení
+          o 90° doprava".
+      2-3 Artist 11_authored_hint:
+        2-3_Artist_11_a: 'Potíže s úhly? Budeš muset obsáhnout 360 stupňů v 8 krocích.
+          Kolik je 360/8? '
+      2-3 Artist 12_authored_hint:
+        2-3_Artist_12_a: V kruhu je 360°, takže když se malíř otočí o 1° každou smyčku,
+          bude ji potřebovat zopakovat 360x.
+      2-3 Artist 2 new_authored_hint:
+        2-3_Artist_2_new_a: Zdá se že umělec není otočen správným směrem. Zkusíš ho
+          nejprve otočit a poté nakreslit čáru?
+      2-3 Artist 3new_authored_hint:
+        2-3_Artist_3new_a: Kolik je 100-70? Podle příběhu by měl právě tak být být
+          vysoký klobouk!
+        2-3_Artist_3new_b: Zdá se že umělec není otočen správným směrem. Zkusíš ho
+          nejprve otočit a poté nakreslit čáru?
+      2-3 Artist 4_authored_hint:
+        2-3_Artist_4_a: Vše co je třeba pro dokončení domu je nakreslit čtverec!
+      2-3 Artist 6_authored_hint:
+        2-3_Artist_6_b: Protože už jsem otočen doprava, je pri vytvoření trojúhelníku
+          jednodušší začít tím že půjdu dopředu a potom se otočím doleva.
+        2-3_Artist_6_c: Každá strana trojúhelníku je stejně dlouhá jako každá strana
+          čtverce... 100 pixelů!
+      2-3 Artist 7_authored_hint:
+        2-3_Artist_7_a: Nejsnazší způsob jak dokončit tuto hádanku je nakreslit první
+          čtverec a zakončit umělcem směřujícím dolů a až poté začít s druhým čtvercem.
+      2-3 Artist 8_authored_hint:
+        2-3_Artist_8_a: Pokud rozdělíš 200 na polovinu, kolik pixelů na šířku musí
+          mít každý čtverec?
+      2-3 Artist 9 NEW_authored_hint:
+        2-3_Artist_9_a: Tvar diamantu je jen pootočený čtverec
+      2-3 Artist 9_authored_hint:
+        2-3_Artist_9_a: Tento diamant je jen čtverec pootočený o 45 stupňů.
+        2-3_Artist_9_b: Předtím než začneš kreslit svůj čtverec, nezapomeň umělce
+          pootočit o 45 stupňů doleva!
+      2-3 Artist Debugging 10_authored_hint:
+        2-3_Artist_Debugging_10_a: Pamatuj, chceš udělat ovládací tlačítka 10 pixelů
+          *širší* ...tak nezapomeň **přidat** 10 k číslu, které se mění.
+        2-3_Artist_Debugging_10_b: |-
+          **Pokus a omyl je zde dobrá cesta!**
+
+          Zkus měnit vždy jedno číslo.
+
+          Které číslo co dělá?
+
+          Pokud se ztratíš, prostě klikni "Začít znovu" a celý kód se vrátí do původního stavu.
+      2-3 Artist Debugging 2_authored_hint:
+        2-3_Artist_Debugging_2_a: 'Tip: Každý vous je dlouhý 75 pixelů.'
+      2-3 Artist Debugging 3_authored_hint:
+        2-3_Artist_Debugging_3_a: Jedno z otočení je o 15 stupňů menší.
+        2-3_Artist_Debugging_3_b: Pokud program běží příliš rychle na to, abyste stihli
+          sledovat průběh, zkuste ho zpomalit stáhnutím posuvníku rychlosti.
+      2-3 Artist Debugging 7_authored_hint:
+        2-3_Artist_Debugging_7_a: Co se stane, pokud necháte umělce posunout nebo
+          skočit zpět, poté co nakreslí první čáru?
+      2-3 Artist Debugging 8_authored_hint:
+        2-3_Artist_Debugging_8_a: |-
+          Kolikrát se můj tvar opakuje?
+
+          Kolikrát se *má* opakovat?
+
+          Kde to můžeš v programu změnit?
+      2-3 Artist Debugging 9_authored_hint:
+        2-3_Artist_Debugging_9_a: Umělec se potřebuje otočit o 60 stupňů více doleva,
+          než začne kreslit!
+        2-3_Artist_Debugging_9_b: K úplnému otočení není potřeba přidat další blok.
+          Stačí přidat 60 stupňů do bloku `otočit vlevo`, který už tam je!
+      2-3 Artist Functions 3 a_authored_hint:
+        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Artist Functions 3_authored_hint:
+        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Artist Loops New 11_authored_hint:
+        2-3_Artist_Loops_New_11_a: |-
+          Vzpomeňte si, že kód z předchozí hádanky byl:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">8</title>
+          <statement name="DO">
+          <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+          <block type="colour_random"/>
+          </value>
+          <next>
+          <block type="draw_turn_by_constant_dropdown">VpravoBok,</title>,
+          ,<title name="VALUE" config="45,60,90,120,180">45,
+          <title name="DIR">,</title>
+          <next>
+          <block type="draw_move_by_constant">
+          <title name="DIR">moveForward 50</title>
+          <title name="VALUE"></title>
+          <next>
+          <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">Vlevobok</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <next>
+          <block type="draw_move_by_constant">
+          <title name="DIR">
+          ,<title name="VALUE">50,</title>,
+          , moveForward</title>,</block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </xml>
+      2-3 Artist Loops New 12_authored_hint:
+        2-3_Artist Loops_New_12_a: Než začne diamant, umělec se potřebuje otočit doleva
+          o 60 stupňů, aby byl správně nasměrován.
+        2-3_Artist Loops_New_12_b: Až se umělec posune dopředu o 100 pixelů, bude
+          se potřebovat otočit doprava o 120 stupňů, aby udělal ostrý roh.
+        2-3_Artist Loops_New_12_c: Umělec se bude muset k vytvoření širokého rohu
+          otočit vpravo jen o 60 stupňů.
+      2-3 Artist Loops New 13_authored_hint:
+        2-3_Artist_Loops_New_13_a: |-
+          Na konci každého diamantu stojí již umělec správný směrem, aby mohl začít kreslit další.
+
+          Proto nepotřebujeme přidávat další blok `otoč vlevo`, než znovu začne.
+        2-3_Artist_Loops_New_13_b: |-
+          Pro každý diamant umělec:
+          - posun vpřed
+          - otočit vpravo o 120 stupňů
+          - posun vpřed
+          - otočit vpravo o 60 stupňů
+
+          A pak celé znovu!
+      2-3 Artist Loops New 9_authored_hint:
+        2-3_Artist_Loops_New_9_a: Umělec se potřebuje otočit o 45 stupňů doprava,
+          než začne kreslit.
+        2-3_Artist_Loops_New_9_b: Tohle V je ve skutečnosti prostě polovina čtverce.
+          Jaký by byl kód k nakreslení půlky čtverce?
+      2-3 Bee Conditionals 14_authored_hint:
+        2-3_Bee_Conditionals_14_a: Těžko najít způsob, jak vyzrát na bloky? Zkus zacházet
+          s červenou květinou úplně stejně jako s fialovou květinou!
+        2-3_Bee_Conditionals_14_b: Pokud by červená květina byla fialová, našel bys
+          jak použít blok `opakuj` abys zmenšil kód?
+        2-3_Bee_Conditionals_14_c: "Zkus to rozložit na dva samostatné úkoly:\n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1)
+          Získat nektar 3 krát\n  - Posun vpřed 5 krát\n  - Zkontroluj, jestli je
+          tam nektar: pokud ano, získej ho\n  - Otoč se doleva\n  \n2) Vyrob med\n
+          \ - Posuň se vpřed 2 krát\n  - Vyrob dva medy"
+      2-3 Bee Conditionals 15_authored_hint:
+        2-3_Bee_Conditionals_15_a: 'Pamatuj: Fialová květina může mít 0 nebo 1 nektaru
+          and mohou se změnit pokaždé, když spustíš program.'
+      2-3 Bee Conditionals 3_authored_hint:
+        2-3_Bee_Conditionals_3_a: Kód bude co nejkratší, pokud použiješ smyčku pokaždé,
+          když se budeš pohybovat vpřed, další smyčku pro získání nektaru a další
+          na výrobu medu.
+      2-3 Bee Conditionals 6_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'Pamatuj: Fialové květiny mění nektar mezi 0 a 1,
+          když program spustíš!'
+      2-3 Bee Debugging 1_authored_hint:
+        2-3_Bee_Debugging_1_a: Až najdete a opravíte chybný blok, vidíte nějaké vzory,
+          které se dají zjednodušit pomocí cyklu `opakuj`?
+      2-3 Bee Debugging 2_authored_hint:
+        2-3_Bee_Debugging_2_a: Až najdete a opravíte chybný blok, vidíte nějaké vzory,
+          které se dají zjednodušit pomocí cyklu `opakuj`?
+      2-3 Bee Debugging 4_authored_hint:
+        2-3_Bee_Debugging_4_a: Je místo, kde včela dělá něco, co nedává smysl? Co
+          se stane, pokud ten blok změníš?
+      2-3 Bee Loops 3_authored_hint:
+        2-3_Bee_Loops_3_a: Uvnitř své smyčky bys měl mít 6 bloků.
+      2-3 Bee Loops 3B_authored_hint:
+        2-3_Bee_Loops_3B_a: Budeš potřebovat dva různé cykly `opakuj` za sebou.
+      2-3 Bee Loops 4_authored_hint:
+        2-3_Bee_Loops_4_a: Měl bys skončit s pěti bloky uvnitř své smyčky.
+      2-3 Bee Loops 4A_authored_hint:
+        2-3_Bee_Loops_4A_a: První akce bude spíše otočení než posun.
+        2-3_Bee_Loops_4A_b: Poslední část programu může být dokončena kódem mimo cyklus.
+        2-3_Bee_Loops_4A_c: Pokud se nedaří najít cykly, zkus nejprve kódování dlouhou
+          cestou (bez cyklů) a až nakonec zkus najít, co by šlo zkombinovat do cyklů
+          `opakuj`.
+      2-3 Bee Loops 5_authored_hint:
+        2-3_Bee_Loops_5_a: Pokud se ti hned nedaří objevit bloky do cyklu `opakuj`,
+          začni kódováním každého posunu a hledej vzor.
+      2-3 Bee Loops 6_authored_hint:
+        2-3_Bee_Loops_6_a: Pokud nevíš, co má přijít do cyklu `opakuj`, zkus posunovat
+          bloky jeden po druhém a zkoušej najít vzor.
+      2-3 Bee Loops 7_authored_hint:
+        2-3_Bee_Loops_7_a: První akce bude spíše otočení než posun.
+        2-3_Bee_Loops_7_b: 'Pokud tě nenapadá cyklus hned od počátku, zkus vytvořit
+          dlouhý kód (bez cyklů) a pak v něm hledej opakující se vzor.  '
+      2-3 Maze 1_authored_hint:
+        2-3_Maze_1_a: Chcete-li použití blok `posunout vpřed`, přetáhněte ho z panelu
+          bloků do pracovního prostoru a připojte ho k bloku `při spuštění`.
+      2-3 Maze 16_authored_hint:
+        2-3_Maze_16_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte
+          nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
+      2-3 Maze 6_authored_hint:
+        2-3_Maze_6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      2-3 Maze Loops 17_authored_hint:
+        2-3_Maze_Loops_17_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte
+          nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
+      2-3 Maze Loops 18_authored_hint:
+        2-3_Maze_Loops_18_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte
+          nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
+      2-3 Maze Loops 19_authored_hint:
+        2-3_Maze_Loops_19_a: Pokud se zaseknete, zkuste nejprve napsat kód bez smyček
+          a hledejte v něm opakující se vzory.
+        2-3_Maze_Loops_19_b: Vložení jednoho cyklu opakování dovnitř jiného může zmenšit
+          počet použitých bloků.
+      2-3 Maze Loops 21_authored_hint:
+        2-3_Maze_Loops_21_a: Pokud se ti nedaří najít schodovitý vzor, zkus si zakrýt
+          blokované cesty prstem.
+      4-5 Artist 4_authored_hint:
+        4-5_Artist_4_a: |-
+          V kruhu je 360 stupňů!
+
+          To je, kolikrát je potřeba kód opakovat (s otočením o 1 stupeň pokaždé), aby se kruh dokončil!
+      Bergeron Robot Maze1_authored_hint:
+        2-3_Maze_1_a: Chcete-li použití blok `posunout vpřed`, přetáhněte ho z panelu
+          bloků do pracovního prostoru a připojte ho k bloku `při spuštění`.
+      Dance short test 2_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+
+          *Tato úroveň končí po 10 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          Změň efekt pozadí v různých bodech během písně tak, že připojíš nový blok pod událostmi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance short test_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+
+          *Tato úroveň končí po 10 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          Změň efekt pozadí v různých bodech během písně tak, že připojíš nový blok pod událostmi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Zajisti, aby se tanečník zobrazil na obrazovce.
+
+          *Tato úroveň končí po 4 taktech.*
+        challenges: |-
+          **Volitelné výzvy**
+          * Zvol jinou píseň k přehrání.
+          * Zvol jiného tanečníka, který vypadá jako los!
+          * Přejmenuj tanečníka.
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Zajisti, aby se tanečník zobrazil na obrazovce.
+
+          *Tato úroveň končí po 4 taktech.*
+        challenges: |-
+          **Volitelné výzvy**
+          * Zvol jinou píseň k přehrání.
+          * Zvol jiného tanečníka, který vypadá jako los!
+          * Přejmenuj tanečníka.
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Tanečník musí po 4 taktech přejít na nový pohyb.
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
+
+          *Tato úroveň končí po 12 taktech.*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+
+          *Tato úroveň končí po 10 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          Změň efekt pozadí v různých bodech během písně tak, že připojíš nový blok pod událostmi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Potřebuješ mít alespoň dva tanečníky.
+
+          *Tato úroveň končí po 6 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          * Přidej třetího tanečníka (nebo tolik, kolik chceš!)
+          * Přiměj všechny tanečníky provádět během různých bodů písně různé pohyby.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Dva tanečníci musí mít velikost jinou než 100.
+
+          *Tato úroveň končí po 6 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          * Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Změň odstín nejméně jednoho tanečníka.
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Zajisti, aby se tanečník zobrazil na obrazovce.
+
+          *Tato úroveň končí po 4 taktech.*
+        challenges: |-
+          **Volitelné výzvy**
+          * Zvol jinou píseň k přehrání.
+          * Zvol jiného tanečníka, který vypadá jako los!
+          * Přejmenuj tanečníka.
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musí se změnit vlastnosti dvou nebo více tanečníků.
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_11.5_test_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Buď prostě kreativní!
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Buď prostě kreativní!
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Buď prostě kreativní!
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Použij blok `když je stisknuta šipka vlevo`, abys přiměl(a) Robota k tanečnímu pohybu, když stiskneš tuto klávesu.
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Tanečník musí po 4 taktech přejít na nový pohyb.
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
+
+          *Tato úroveň končí po 12 taktech.*
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+
+          *Tato úroveň končí po 10 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          Změň efekt pozadí v různých bodech během písně tak, že připojíš nový blok pod událostmi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Tanečník musí provádět různé pohyby během prvních 12 taktů písně.
+
+          *Tato úroveň končí po 12 taktech.*
+      Dance_Party_6_authored_hint:
+        challenges: |-
+          **Volitelná výzva**
+
+          * Přidej třetího tanečníka (nebo tolik, kolik chceš!)
+          * Přiměj všechny tanečníky provádět během různých bodů písně různé pohyby.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Dva tanečníci musí mít velikost jinou než 100.
+
+          *Tato úroveň končí po 6 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          * Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Změň odstín nejméně jednoho tanečníka.
+
+          *Tato úroveň končí po 8 taktech.*
+      Function intro Ryan_authored_hint:
+        Function_intro_Ryan_a: Funkci můžete ve svém programu zavolat vícekrát. Zkuste
+          ji zavolat dvakrát, abyste vyřešili tuto hádanku.
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_a: Funkci můžete ve svém programu zavolat vícekrát. Zkuste
+          ji zavolat dvakrát, abyste vyřešili tuto hádanku.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Vidíš **Mořské lucerny** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Jak je můžeš využít, aby ses dostal skrz oceánský monument?\n\n"
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: Můžeš použít bloky "pokud je cesta", aby ti pomohly otočit se doprava.
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Vidíš červené a modré korálové bloky? Použij je jako orientační
+          body pro otočení doprava nebo doleva.
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Zajisti, aby se tanečník zobrazil na obrazovce.
+
+          *Tato úroveň končí po 4 taktech.*
+        challenges: |-
+          **Volitelné výzvy**
+          * Zvol jinou píseň k přehrání.
+          * Zvol jiného tanečníka, který vypadá jako los!
+          * Přejmenuj tanečníka.
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Tanečník musí po 4 taktech přejít na nový pohyb.
+
+          *Tato úroveň končí po 8 taktech.*
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
+
+          *Tato úroveň končí po 12 taktech.*
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+
+          *Tato úroveň končí po 10 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          Změň efekt pozadí v různých bodech během písně tak, že připojíš nový blok pod událostmi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Tanečník musí provádět různé pohyby během prvních 12 taktů písně.
+
+          *Tato úroveň končí po 12 taktech.*
+      HOC Dance 5_draft_authored_hint:
+        challenges: |-
+          **Volitelná výzva**
+
+          * Přidej třetího tanečníka (nebo tolik, kolik chceš!)
+          * Přiměj všechny tanečníky provádět během různých bodů písně různé pohyby.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Dva tanečníci musí mít velikost jinou než 100.
+
+          *Tato úroveň končí po 6 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          * Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Změň odstín nejméně jednoho tanečníka.
+
+          *Tato úroveň končí po 8 taktech.*
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musí se změnit vlastnosti dvou nebo více tanečníků.
+
+          *Tato úroveň končí po 8 taktech.*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Buď prostě kreativní!
+
+          *Tato úroveň končí po 8 taktech.*
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Buď prostě kreativní!
+
+          *Tato úroveň končí po 8 taktech.*
+      MC Agent Freeplay_authored_hint:
+        MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla
+          Alex nebo Steve projít za kraj mapy.
+      MC_HOC_2017_01_Cole_authored_hint:
+        MC_HOC_2017_01_Cole_a: Nasměrujte hráče do domu pomocí kláves se šipkami.
+          Abyste vyhráli, musíte skončit na oranžovém políčku.
+      MC_HOC_2017_01_RETRY_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Přetáhněte jeden blok „pohyb vpřed“ z panelu nástrojů
+          do pracovního prostoru a přichyťte ho k bloku „při spuštění“.
+        MC_HOC_2017_01_RETRY_b: Nezapomeňte kliknout na tlačítko „Spustit“, aby agent
+          mohl provést kód.
+        MC_HOC_2017_01_RETRY_c: Jakmile agent provede celý kód, můžete hráčem pohybovat
+          pomocí kláves se šipkami.
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Přetáhněte jeden blok „pohyb vpřed“ z panelu nástrojů
+          do pracovního prostoru a přichyťte ho k bloku „při spuštění“.
+        MC_HOC_2017_01_RETRY_b: Nezapomeňte kliknout na tlačítko „Spustit“, aby agent
+          mohl provést kód.
+        MC_HOC_2017_01_RETRY_c: Jakmile agent provede celý kód, můžete hráčem pohybovat
+          pomocí kláves se šipkami.
+      MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Posuňte agenta vpřed o dvě políčka a postavte ho na
+          nášlapnou desku. Otevře tak hráči dveře.
+        MC_HOC_2017_02_Cole_b: "Stiskněte tlačítko „Spustit“. \nKód můžete spustit,
+          i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud
+          nepřijdete na to, kde je chyba."
+        MC_HOC_2017_02_Cole_c: Jakmile agent otevře dveře, nasměrujte hráče k mapě
+          pomocí kláves se šipkami.
+      MC_HOC_2017_02_Cole_2019_authored_hint:
+        MC_HOC_2017_02_Cole_a: Posuňte agenta vpřed o dvě políčka a postavte ho na
+          nášlapnou desku. Otevře tak hráči dveře.
+        MC_HOC_2017_02_Cole_b: "Stiskněte tlačítko „Spustit“. \nKód můžete spustit,
+          i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud
+          nepřijdete na to, kde je chyba."
+        MC_HOC_2017_02_Cole_c: Jakmile agent otevře dveře, nasměrujte hráče k mapě
+          pomocí kláves se šipkami.
+      MC_HOC_2017_02_Will_authored_hint:
+        MC_HOC_2017_02_Cole_a: Posuňte agenta vpřed o dvě políčka a postavte ho na
+          nášlapnou desku. Otevře tak hráči dveře.
+        MC_HOC_2017_02_Cole_b: "Stiskněte tlačítko „Spustit agenta“. \nKód můžete
+          spustit, i když není správný. Spouštějte a resetujte neustále dokola svůj
+          kód, dokud nepřijdete na to, kde je chyba."
+        MC_HOC_2017_02_Cole_c: Jakmile agent otevře dveře, nasměrujte hráče na oranžové
+          políčko pomocí kláves se šipkami.
+      MC_HOC_2017_03_Cole_authored_hint:
+        MC_HOC_2017_03_Cole_a: Když dostanete agenta na nášlapnou desku, můžete hráče
+          nasměrovat ke kompasu pomocí kláves se šipkami.
+        MC_HOC_2017_03_Cole_b: Připadá vám kód příliš dlouhý? Zkuste použít cyklus
+          „opakovat“ a uvidíte, jestli dokážete přijít na to, jak ho zkrátit.
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_a: Když dostanete agenta na nášlapnou desku, můžete hráče
+          nasměrovat ke kompasu pomocí kláves se šipkami.
+        MC_HOC_2017_03_Cole_b: Připadá vám kód příliš dlouhý? Zkuste použít cyklus
+          „opakovat“ a uvidíte, jestli dokážete přijít na to, jak ho zkrátit.
+      MC_HOC_2017_04POINT5_Cole_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: "Přechodem přes tyto dvě nášlapné desky otevřete
+          hráči cestu. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
+      MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: Pomocí bloku „otočit vpravo“ změníte směr agenta.
+        MC_HOC_2017_04POINT5_RYAN_a: Agent se musí dostat jen na první nášlapnou desku,
+          aby uvolnil Alex nebo Stevovi cestu k sekeře.
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: Pomocí bloku „otočit vpravo“ změníte směr agenta.
+        MC_HOC_2017_04POINT5_RYAN_a: Agent se musí dostat jen na první nášlapnou desku,
+          aby uvolnil Alex nebo Stevovi cestu k sekeře.
+      MC_HOC_2017_04_Cole_authored_hint:
+        MC_HOC_2017_04_Cole_a: Agent se musí sedmkrát „posunout vpřed“. Jak k tomu
+          lze využít cyklus „opakovat“?
+        MC_HOC_2017_04_Cole_c: "Stiskněte tlačítko „Spustit“. \nKód můžete spustit,
+          i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud
+          nepřijdete na to, kde je chyba."
+        MC_HOC_2017_04_Cole_b: Jakmile se agent dostane na nášlapnou desku, otevře
+          hráči dveře.
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_a: Agent se musí sedmkrát „posunout vpřed“. Jak k tomu
+          lze využít cyklus „opakovat“?
+        MC_HOC_2017_04_Cole_c: "Stiskněte tlačítko „Spustit“. \nKód můžete spustit,
+          i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud
+          nepřijdete na to, kde je chyba."
+        MC_HOC_2017_04_Cole_b: Jakmile se agent dostane na nášlapnou desku, otevře
+          hráči dveře.
+      MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Věděli jste, že do cyklu můžete vložit více částí kódu?
+          Zkuste do cyklu „opakovat“ vložit umístění prkna **a** posun vpřed pro dokončení
+          této hádanky.
+      MC_HOC_2017_05_Cole_2019_authored_hint:
+        MC_HOC_2017_05_Cole_a: Věděli jste, že do cyklu můžete vložit více částí kódu?
+          Zkuste do cyklu „opakovat“ vložit umístění prkna **a** posun vpřed pro dokončení
+          této hádanky.
+      MC_HOC_2017_05_Josh_authored_hint:
+        MC_HOC_2017_05_Cole_a: Věděli jste, že do cyklu můžete vložit více částí kódu?
+          Zkuste do cyklu „opakovat“ vložit umístění prkna **a** posun vpřed pro dokončení
+          této hádanky.
+      MC_HOC_2017_06_Cole_authored_hint:
+        MC_HOC_2017_06_Cole_a: Kolikrát tento cyklus proběhne? Kolikrát by *měl* proběhnout?
+      MC_HOC_2017_06_Cole_2019_authored_hint:
+        MC_HOC_2017_06_Cole_a: Kolikrát tento cyklus proběhne? Kolikrát by *měl* proběhnout?
+      MC_HOC_2017_06_Josh_authored_hint:
+        MC_HOC_2017_06_Cole_a: Zkuste do cyklu „opakovat“ vložit více pokynů!
+      MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_a: K vyřešení této hádanky musíte přijít na to, co dělá
+          funkce „uvolnit cestu“ a zavolat ji tolikrát, kolikrát bude třeba, pomocí
+          malého zeleného bloku „uvolnit cestu“ v panelu nástrojů.
+        MC_HOC_2017_07_Cole_b: Zkuste zkombinovat bloky funkcí s ostatními bloky z
+          panelu nástrojů. Pomůže vám to vyřešit tuto hádanku.
+      MC_HOC_2017_07_Cole_2019_authored_hint:
+        MC_HOC_2017_07_Cole_a: K vyřešení této hádanky musíte přijít na to, co dělá
+          funkce „uvolnit cestu“ a zavolat ji tolikrát, kolikrát bude třeba, pomocí
+          malého zeleného bloku „uvolnit cestu“ v panelu nástrojů.
+        MC_HOC_2017_07_Cole_b: Zkuste zkombinovat bloky funkcí s ostatními bloky z
+          panelu nástrojů. Pomůže vám to vyřešit tuto hádanku.
+      MC_HOC_2017_08_RY_authored_hint:
+        MC_HOC_2017_08_RY_a: "Stiskněte tlačítko „Spustit agenta“. \nKód můžete spustit,
+          i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud
+          nepřijdete na to, kde je chyba."
+        MC_HOC_2017_08_RY_b: Tuto hádanku lze vyřešit MNOHA způsoby. Pár jich vyzkoušejte!
+      MC_HOC_2017_08_Will_authored_hint:
+        MC_HOC_2017_08_RY_a: "Stiskněte tlačítko „Spustit agenta“. \nKód můžete spustit,
+          i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud
+          nepřijdete na to, kde je chyba."
+        MC_HOC_2017_08_RY_b: Tuto hádanku lze vyřešit MNOHA způsoby. Pár jich vyzkoušejte!
+      MC_HOC_2017_10_Cole_authored_hint:
+        MC_HOC_2017_10_Cole_a: Pomocí funkcí tuto hádanku vyřešíte snadněji!
+      MC_HOC_2017_10_RETRY_authored_hint:
+        MC_HOC_2017_10_Cole_a: Pomocí funkcí tuto hádanku vyřešíte snadněji!
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_a: Pomocí funkcí tuto hádanku vyřešíte snadněji!
+      MC_HOC_2017_13_Cole_authored_hint:
+        MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla
+          Alex nebo Steve projít za kraj mapy.
+      MC_HOC_2017_4.5v2_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: "Přechodem přes tyto dvě nášlapné desky otevřete
+          hráči cestu. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
+      MC_HOC_2017_Ali_authored_hint:
+        MC_HOC_2017_08_RY_a: "Stiskněte tlačítko „Spustit“. \nKód můžete spustit,
+          i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud
+          nepřijdete na to, kde je chyba."
+        MC_HOC_2017_08_RY_b: Tuto hádanku lze vyřešit MNOHA způsoby. Pár jich vyzkoušejte!
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: "Stiskněte tlačítko „Spustit“. \nKód můžete spustit,
+          i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud
+          nepřijdete na to, kde je chyba."
+        MC_HOC_2017_08_RY_b: Tuto hádanku lze vyřešit MNOHA způsoby. Pár jich vyzkoušejte!
+      MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla
+          Alex nebo Steve projít za kraj mapy.
+      MC_HOC_2017_FP20x20_2019_authored_hint:
+        MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla
+          Alex nebo Steve projít za kraj mapy.
+      New Minecraft Hero Project_authored_hint:
+        MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla
+          Alex nebo Steve projít za kraj mapy.
+      course2_bee_conditionals_challenge2_authored_hint:
+        courseD_bee_conditionals_challenge1_b: |-
+          Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř se bude opakovat, dokud zbývá nějaký nektar. Zkus tento vzor:
+
+          <xml>  <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>                    <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block></xml>
+      course2_collector_loops_challenge2_authored_hint:
+        courseC_maze_loops_challenge2_a: Původní kód by fungoval skvěle - pokud by
+          tam byl jeden kousek pokladu na každé hromádce!
+        courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
+      course2_collector_prog_challenge1_authored_hint:
+        courseC_collector_prog_challenge1_a: Můžeš použít příkaz `sbírat` vícekrát,
+          abys sesbíral další poklad.
+      course2_collector_prog_challenge2_authored_hint:
+        courseC_collector_prog_challenge1_a: Můžeš použít příkaz `sbírat` vícekrát,
+          abys sesbíral další poklad.
+      course2_harvester_loops_challenge1_authored_hint:
+        courseC_harvester_loops_challenge1_a: Ani nepřemýšlej, že bys to zkoušel bez
+          cyklů!
+      course2_maze_loops_challenge1_authored_hint:
+        courseC_maze_loops_challenge1_a: Přemýšlejte nad touto cestou jako o třech
+          různých úsecích. Každý z nich má vzor, který můžete opakovat.
+        courseC_maze_loops_challenge1_b: Mezi bloky `opakuj` budete potřebovat bloky
+          `otočit vlevo` nebo `otočit vpravo`, aby byl Scrat připraven na další vzor.
+        courseC_maze_loops_challenge1_c: |-
+          Pokud jste se dostali až sem, potřebujete jen `otočit vlevo` a pak párkrát `posunout vpřed`. Nevzdávejte to!
+
+          ![](https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png)
+      courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2a_2018_authored_hint:
+        '1': Snap both `East` blocks to the bottom of the `when run` block.
+      courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5a_2018_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have
+          been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
+          try something else!
+      courseB_Scrat_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_maze_seq6_authored_hint:
+        courseB_maze_seq5_c: Tuto hádanku lze vyřešit dvěma způsoby.
+      courseB_maze_seq6_2018_authored_hint:
+        courseB_maze_seq5_c: Tuto hádanku lze vyřešit dvěma způsoby.
+      courseB_maze_seq8_authored_hint:
+        courseB_maze_seq8_b: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseB_maze_seq9_authored_hint:
+        courseB_maze_seq9_c: Tuto hádanku lze vyřešit dvěma způsoby.
+      courseB_maze_seq9_2018_authored_hint:
+        courseB_maze_seq9_c: Tuto hádanku lze vyřešit dvěma způsoby.
+      courseC_collector_loops_challenge2_authored_hint:
+        courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
+      courseC_collector_loops_challenge2_2018_authored_hint:
+        courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
+      courseC_collector_loops_challenge2_2019_authored_hint:
+        courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
+      courseC_maze_loops7_authored_hint:
+        courseC_maze_loops7_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte
+          nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
+      courseC_maze_loops_challenge1_authored_hint:
+        courseC_maze_loops_challenge1_a: Přemýšlejte nad touto cestou jako o třech
+          různých úsecích. Každý z nich má vzor, který můžete opakovat.
+        courseC_maze_loops_challenge1_b: Mezi bloky `opakuj` budete potřebovat bloky
+          `otočit vlevo` nebo `otočit vpravo`, aby byl Scrat připraven na další vzor.
+      courseC_maze_loops_challenge2_authored_hint:
+        courseC_maze_loops_challenge2_a: Původní kód by fungoval skvěle - pokud by
+          tam byl jeden kousek pokladu na každé hromádce!
+        courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
+      courseC_maze_programming6_authored_hint:
+        courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseC_maze_programming6_2018_authored_hint:
+        courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_bee_conditionals_challenge2_authored_hint:
+        courseD_bee_conditionals_challenge1_b: |-
+          Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř poběží, dokud zbývá nějaký nektar.  Zkus tento vzor:
+
+          <xml>  <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>                    <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block></xml>
+      courseD_bee_conditionals_challenge2_2018_authored_hint:
+        courseD_bee_conditionals_challenge1_b: |-
+          Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř poběží, dokud zbývá nějaký nektar.  Zkus tento vzor:
+
+          <xml>  <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>                    <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block></xml>
+      courseD_bee_conditionals_challenge2_2019_authored_hint:
+        courseD_bee_conditionals_challenge1_b: |-
+          Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř poběží, dokud zbývá nějaký nektar.  Zkus tento vzor:
+
+          <xml>  <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>                    <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block></xml>
+      courseD_bee_conditionals_challenge3_authored_hint:
+        courseD_bee_conditionals_challenge1_b: |-
+          Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř se bude opakovat, dokud zbývá nějaký nektar. Zkus tento vzor:
+
+          <xml>  <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>                    <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block></xml>
+      courseD_maze_ramp6_authored_hint:
+        courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseD_scrat_ramp7_authored_hint:
+        courseD_scrat_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseD_scrat_ramp7_2018_authored_hint:
+        courseD_scrat_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseE_bee_ramp14_authored_hint:
+        courseE_bee_ramp14_a: Včela pracuje jako farmář v předchozí hádance. Jdi po
+          cestě a sbírej nektar, dokud tam nějaký je (dokud nektar > 0) a vyrob všechen
+          med.
+      courseE_bee_ramp14_2018_authored_hint:
+        courseE_bee_ramp14_a: Včela pracuje jako farmář v předchozí hádance. Jdi po
+          cestě a sbírej nektar, dokud tam nějaký je (dokud nektar > 0) a vyrob všechen
+          med.
+      courseE_maze_ramp6_authored_hint:
+        courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseE_maze_ramp6_2018_authored_hint:
+        courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseF_maze_ramp6_authored_hint:
+        courseF_maze_ramp6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseF_maze_ramp6_2018_authored_hint:
+        courseF_maze_ramp6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      grade2_CaringForNewPet_4_authored_hint:
+        2-3_Maze_6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      grade2_MakeDogTag_1_authored_hint:
+        2-3_Artist_1_new_a: Když použiješ příkazový blok, který mě posílají dopředu
+          o 100 pixelů, nakreslím automaticky cestou čáru.
+        2-3_Artist_1_new_b: Máš problém s otáčením v rohu? Použij příkaz "otočení
+          o 90° doprava".
+      grade2_PuppyLoops_10_authored_hint:
+        2-3_Artist_Debugging_8_a: |-
+          Kolikrát se můj tvar opakuje?
+
+          Kolikrát se *má* opakovat?
+
+          Kde to můžeš v programu změnit?
+      grade2_PuppyLoops_6_authored_hint:
+        2-3_Maze_16_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte
+          nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
+      grade2_PuppyLoops_7_authored_hint:
+        2-3_Maze_Loops_17_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte
+          nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
+      grade2_PuppyLoops_8_authored_hint:
+        2-3_Artist_Debugging_2_a: 'Tip: Každý vous je dlouhý 75 pixelů.'
+      grade2_PuppyLoops_9_authored_hint:
+        2-3_Artist_Debugging_7_a: Co se stane, pokud necháte umělce posunout nebo
+          skočit zpět, poté co nakreslí první čáru?
+      grade2_puppy_loops6_authored_hint:
+        2-3_Maze_16_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte
+          nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
+      grade2_puppy_loops7_authored_hint:
+        2-3_Maze_Loops_17_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte
+          nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
+      grade3_Conditionals_11_authored_hint:
+        2-3_Bee_Conditionals_14_a: Těžko najít způsob, jak vyzrát na bloky? Zkus zacházet
+          s červenou květinou úplně stejně jako s fialovou květinou!
+        2-3_Bee_Conditionals_14_b: Pokud by červená květina byla fialová, našel bys
+          jak použít blok `opakuj` abys zmenšil kód?
+      grade3_Conditionals_12_authored_hint:
+        2-3_Bee_Conditionals_15_a: 'Pamatuj: Fialová květina může mít 0 nebo 1 nektaru
+          and mohou se změnit pokaždé, když spustíš program.'
+      grade3_Conditionals_2_authored_hint:
+        2-3_Bee_Conditionals_3_a: Kód bude co nejkratší, pokud použiješ smyčku pokaždé,
+          když se budeš pohybovat vpřed, další smyčku pro získání nektaru a další
+          na výrobu medu.
+      grade3_Conditionals_4_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'Pamatuj: Fialové květiny mění nektar mezi 0 a 1,
+          když program spustíš!'
+      grade3_Conditionals_TeacherIDo_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'Pamatuj: Fialové květiny mění nektar mezi 0 a 1,
+          když program spustíš!'
+      grade3_Debugging_1_authored_hint:
+        2-3_Bee_Debugging_1_a: Až najdete a opravíte chybný blok, vidíte nějaké vzory,
+          které se dají zjednodušit pomocí cyklu `opakuj`?
+      grade3_Debugging_TeacherIDo_authored_hint:
+        2-3_Bee_Debugging_4_a: Je místo, kde včela dělá něco, co nedává smysl? Co
+          se stane, pokud ten blok změníš?
+      grade3_Loops_10_authored_hint:
+        2-3_Bee_Loops_4_a: Měl bys skončit s pěti bloky uvnitř své smyčky.
+      grade3_Loops_11_authored_hint:
+        2-3_Bee_Loops_5_a: Pokud se ti hned nedaří objevit bloky do cyklu `opakuj`,
+          začni kódováním každého posunu a hledej vzor.
+      grade3_Loops_12_authored_hint:
+        2-3_Bee_Loops_6_a: Pokud nevíš, co má přijít do cyklu `opakuj`, zkus posunovat
+          bloky jeden po druhém a zkoušej najít vzor.
+      grade3_Loops_4_authored_hint:
+        2-3_Bee_Loops_3B_a: Budeš potřebovat dva různé cykly `opakuj` za sebou.
+      grade3_Loops_5_authored_hint:
+        2-3_Bee_Loops_7_a: První akce bude spíše otočení než posun.
+        2-3_Bee_Loops_7_b: 'Pokud tě nenapadá cyklus hned od počátku, zkus vytvořit
+          dlouhý kód (bez cyklů) a pak v něm hledej opakující se vzor.  '
+      grade3_Loops_6_authored_hint:
+        2-3_Bee_Loops_4A_a: První akce bude spíše otočení než posun.
+        2-3_Bee_Loops_4A_b: Poslední část programu může být dokončena kódem mimo cyklus.
+        2-3_Bee_Loops_4A_c: Pokud se nedaří najít cykly, zkus nejprve kódování dlouhou
+          cestou (bez cyklů) a až nakonec zkus najít, co by šlo zkombinovat do cyklů
+          `opakuj`.
+      grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: Uvnitř své smyčky bys měl mít 6 bloků.
+      grade3_maze_loops2_authored_hint:
+        grade3_maze_loops2_b: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte
+          nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
+      grade3_maze_loops5_authored_hint:
+        2-3_Maze_Loops_21_a: Pokud se ti nedaří najít schodovitý vzor, zkus si zakrýt
+          blokované cesty prstem.
+      grade4_review_artist1_authored_hint:
+        2-3_Artist_1_new_a: Když použiješ příkazový blok, který mě posílají dopředu
+          o 100 pixelů, nakreslím automaticky cestou čáru.
+        2-3_Artist_1_new_b: Máš problém s otáčením v rohu? Použij příkaz "otočení
+          o 90° doprava".
+      grade4_review_artist2_authored_hint:
+        2-3_Artist_6_b: Protože už jsem otočen doprava, je pri vytvoření trojúhelníku
+          jednodušší začít tím že půjdu dopředu a potom se otočím doleva.
+        2-3_Artist_6_c: Každá strana trojúhelníku je stejně dlouhá jako každá strana
+          čtverce... 100 pixelů!
+      grade4_review_bee1_authored_hint:
+        2-3_Bee_Loops_3B_a: Budeš potřebovat dva různé cykly `opakuj` za sebou.
+      grade4_review_bee2_authored_hint:
+        2-3_Bee_Loops_3_a: Uvnitř své smyčky bys měl mít 6 bloků.
+      grade4_review_bee3_authored_hint:
+        2-3_Bee_Loops_4_a: Měl bys skončit s pěti bloky uvnitř své smyčky.
+      level 'grade3_Loops_10_authored_hint:
+        2-3_Bee_Loops_4_a: Měl bys skončit s pěti bloky uvnitř své smyčky.
+      level 'grade3_Loops_11_authored_hint:
+        2-3_Bee_Loops_5_a: Pokud se ti hned nedaří objevit bloky do cyklu `opakuj`,
+          začni kódováním každého posunu a hledej vzor.
+      level 'grade3_Loops_12_authored_hint:
+        2-3_Bee_Loops_6_a: Pokud nevíš, co má přijít do cyklu `opakuj`, zkus posunovat
+          bloky jeden po druhém a zkoušej najít vzor.
+      level 'grade3_Loops_4_authored_hint:
+        2-3_Bee_Loops_3B_a: Budeš potřebovat dva různé cykly `opakuj` za sebou.
+      level 'grade3_Loops_5_authored_hint:
+        2-3_Bee_Loops_7_a: První akce bude spíše otočení než posun.
+        2-3_Bee_Loops_7_b: 'Pokud tě nenapadá cyklus hned od počátku, zkus vytvořit
+          dlouhý kód (bez cyklů) a pak v něm hledej opakující se vzor.  '
+      level 'grade3_Loops_6_authored_hint:
+        2-3_Bee_Loops_4A_a: První akce bude spíše otočení než posun.
+        2-3_Bee_Loops_4A_b: Poslední část programu může být dokončena kódem mimo cyklus.
+        2-3_Bee_Loops_4A_c: Pokud se nedaří najít cykly, zkus nejprve kódování dlouhou
+          cestou (bez cyklů) a až nakonec zkus najít, co by šlo zkombinovat do cyklů
+          `opakuj`.
+      level 'grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: Uvnitř své smyčky bys měl mít 6 bloků.

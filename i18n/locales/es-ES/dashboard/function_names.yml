@@ -1,0 +1,88 @@
+es:
+  data:
+    function_names:
+      x: x
+      details: detalles
+      draw eyebrow: dibujar la ceja
+      draw pupil: dibujar la pupila
+      draw a circle: dibujar un círculo
+      draw a car: dibuja un carro
+      draw_rect: dibuja_rectangulo
+      draw square: dibuja cuadro
+      jump to controller top left: salta sobre el controlador izquierdo
+      jump to middle: salta al medio
+      draw a button: dibuja un boton
+      draw cord: dibuja cuerda
+      draw left leg: dibuja la pierna izquierda
+      draw right leg: dibuja la pierna derecha
+      draw body and arms: dibujar el cuerpo y los brazos
+      draw a head: dibujar una cabeza
+      draw sitting stick figure: dibujar figura de palo sentándose
+      draw head: dibujar una cabeza
+      draw arms: dibujar los brazos
+      jump to neck: saltar al cuello
+      draw O: dibujar O
+      draw D: dibujar D
+      draw E: dibujar E
+      big gear: engranaje grande
+      small gear: engranaje pequeño
+      draw a hexagon: dibujar un hexágono
+      draw a flower: dibujar una flor
+      draw a square: Dibuja un cuadrado
+      draw a snowflake: dibujar un copo de nieve
+      draw 3 hexagons: dibujar 3 hexágonos
+      draw 4 hexagons: dibujar 4 hexágonos
+      draw 5 hexagons: dibujar 5 hexágonos
+      get 2 nectar: obtener 2 néctar
+      collect purple nectar: recolectar néctar púrpura
+      get 5: obtener 5
+      move and get nectar: mover y obtener néctar
+      move and get 4: mover y obtener 4
+      get 7 nectar make 7 honey: obtener 7 néctar hacer 7 miel
+      get 7 make 7: obtener 7 hacer 7
+      get 7: obtener 7
+      move and get 3: mover y obtener 3
+      draw a tree: dibujar un árbol
+      draw triangle: dibujar un triángulo
+      draw circle: dibujar un círculo
+      draw goal: dibujar la meta
+      graph: gráfico
+      draw waves: dibujar ondas
+      draw a wave: dibujar una onda
+      draw a small triangle: dibujar un triángulo pequeño
+      draw a medium triangle: dibujar un triángulo mediano
+      draw a large triangle: dibuja un triángulo grande
+      draw a big triangle: dibuja un triángulo grande
+      draw a triangle: dibujar un triángulo
+      draw a house: dibujar una casa
+      check purple flower: verificar flor púrpura
+      check flower make honey: verificar flor hace miel
+      get nectar or make honey: obtener néctar o hacer miel
+      make 3 honey: hacer 3 miel
+      get 5 nectar: obtener 5 néctar
+      make all honey: hacer todo miel
+      draw a star: dibujar una estrella
+      game has been won: el juego ha sido ganado
+      draw: dibujar
+      draw bit: dibujar un poco
+      draw a polygon: dibujar un polígono
+      draw a shape: dibujar una forma
+      get 2 and make 2: obtener 2 y hacer 2
+      draw a pinwheel: dibujar un molinillo
+      drawTree: dibujarárbol
+      drawHouse: dibujarcasa
+      do something: hacer algo
+      jump: salta
+      set score: Establece el puntaje
+      get nectar: obtener néctar
+      test: prueba
+      diamond: diamante
+      move: mover
+      move right: mover hacia la derecha
+      move up: mover hacia arriba
+      move down: mover hacia abajo
+      move left: mover hacia la izquierda
+      collect: junta
+      turn left: girar a la izquierda
+      move forward: avanzar
+      turn right: girar a la derecha

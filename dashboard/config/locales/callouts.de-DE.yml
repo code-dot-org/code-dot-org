@@ -1,0 +1,482 @@
+---
+de:
+  data:
+    callouts:
+      2-3 Bee Conditionals 5_callout:
+        Bee_Cond_5_1a: Violette Blumen haben entweder 1 oder 0 Nektar.... doch das
+          weißt du nicht, bis du den Code ausführst!
+      4-5 Bee Conditionals - FC Test_callout:
+        4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
+          hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+      4-5 Bee Conditionals 2_callout:
+        4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
+          hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+      Counting_callout:
+        New Play Lab Project_callout2: Drücken Sie "Ausführen" um ihr Programm zu
+          speichern und auszuführen
+        sign_in_to_save_project: Möchtest du dein Projekt später abrufen? Logg dich
+          ein um dieses Projekt in deinem Account zu speichern!
+      Course 4 Artist 4_callout:
+        repeat_full_circle: Füge die Anzahl der Bewegungen ein, die der Zombie machen
+          muss, um eine volle Runde zu laufen
+      Course 4 Artist 7_callout:
+        repeat_blocks: Verwende den "Wiederholen"-Baustein und lege diesen um die
+          Bausteine im Arbeitsbereich.
+      Course 4 Artist For Loops 4_callout:
+        place_counter_variable: Ziehe deine Zählervariable in diesen Baustein
+      Course 4 Artist Functions 4_callout:
+        create_function: Klicke hier, um das "Funktionsmenü" zu öffnen, dann klicke
+          auf "Erstelle eine Funktion".
+      Course 4 Artist Functions 5 OLD_callout:
+        house_hint: Es ist ok, wenn das Bild noch nicht wie ein Haus aussieht. Wir
+          werden es in der nächsten Aufgabe verbessern.
+      Course 4 Artist Functions 8_callout:
+        edit_function: Klicke hier, um die Funktion zu bearbeiten.
+      Course 4 Artist Functions challenge_callout:
+        Course_4_Artist_Functions_challenge_1: Beachten Sie, dass wir alle Blöcke
+          sortiert und in Kategorien eingeteilt haben um Dinge ordentlich zu halten.  Klicken
+          Sie hier, um alle Blöcke zu finden, die Sie benötigen.
+      Course 4 Artist Params 2_callout:
+        length_parameter: Kannst Du diese Funktion so anpassen, dass sie den "Länge"-Parameter
+          benutzt?
+      Course 4 Artist Params 4_callout:
+        create_function: Klicke hier, um das "Funktionsmenü" zu öffnen, dann klicke
+          auf "Erstelle eine Funktion".
+      Course 4 Artist Vars 1_callout:
+        repeat_blocks: Verwende den "Wiederholen"-Baustein und lege diesen um die
+          Bausteine im Arbeitsbereich.
+      Course 4 Artist Vars 10_callout:
+        set_sides: Verwende diesen Baustein um "Seiten" auf die nötige Anzahl einzustellen.
+      Course 4 Artist Vars 12_callout:
+        set_length: Verwende diesen Baustein, um "Länge" auf den richtigen Wert festzulegen.
+      Course 4 Artist Vars 2_callout:
+        set_length: Verwende diesen Baustein, um "Länge" auf den richtigen Wert festzulegen.
+      Course 4 Artist Vars 3_callout:
+        place_variable: Ziehe deine Variable in diesen Baustein.
+      Course 4 Artist Vars 6_callout:
+        degrees_per_side: Teile 360 durch die Anzahl der Seiten, um die Größe der
+          einzelnen Winkel in Grad zu erhalten.
+      Course 4 Artist Vars 9_callout:
+        set_sides: Verwende diesen Baustein um "Seiten" auf die nötige Anzahl einzustellen.
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: Verwende den neuen "nimm Nektar"-Baustein.
+      Course 4 Bee For Loops 6_callout:
+        actions_category: Die Werkzeugkiste hat einen neuen Look! Die „Aktion“-Bausteine
+          sind jetzt hier drin.
+      Course 4 Bee Params 2_callout:
+        edit_get_nectar: Verwende diese Taste, um die Funktion zu bearbeiten und die
+          Richtung der Biene zu ändern, um den Nektar zu holen.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: Drücke auf "Ausführen", um dein Programm auszuprobieren.
+      Course 4 Maze 4_callout:
+        repeat: Setze Bausteine in die Schleife, um Befehle zu wiederholen
+      Course 4 Play Lab Params 3_callout:
+        edit_function: Klicke hier, um die Funktion zu bearbeiten.
+      Course 4 Play Lab Params 6_callout:
+        edit_add_parameter: Klicke auf "Bearbeiten", um einen Parameter zu deiner
+          Funktion hinzuzufügen
+      Course 4 Play Lab Vars 1_callout:
+        arrows_move_actor: Benutze die Pfeile, um die Figur zu bewegen
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: Benutze die Pfeile, um die Figur zu bewegen
+      Dance_Party_01_callout:
+        dance_callout_01: Fügen Sie diesen Block Ihrem Programm hinzu!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Fügen Sie diesen Block Ihrem Programm hinzu!
+      Dance_Party_02_callout:
+        dance_callout_02: Fügen Sie diesen Block Ihrem Programm hinzu!
+      Dance_Party_04_callout:
+        dance_callout_04: Fügen Sie diesen Block Ihrem Programm hinzu!
+      Dance_Party_06_callout:
+        dance_callout_06: Fügen Sie Sie hier Ihren neuen Tänzer hinzu
+      Dance_Party_11_callout:
+        dance_callout_11_a: Neuer Block!
+        dance_callout_11_b: Neuer Block!
+      Eval Design Recipe .1_callout:
+        edit_function: Klicke hier, um die Funktion zu bearbeiten.
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: Verwende dieses Dropdown-Menü, um verschiedene Schneeflocken
+          zu erstellen!
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: Verwende dieses Dropdown-Menü, um verschiedene Schneeflocken
+          zu erstellen!
+      Function intro Ryan_callout:
+        Function_intro_Ryan_1: Diese kleine Anweisung sagt dem Computer, dass er ein
+          GROSSES Code-Stück mit dem entsprechenden Namen im Arbeitsbereich ausführen
+          soll.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Diese kleine Anweisung sagt dem Computer, dass er ein
+          GROSSES Code-Stück mit dem entsprechenden Namen im Arbeitsbereich ausführen
+          soll.
+      Infinity_move_collide_callout:
+        Infinity_move_collide_callout: Spiele einen Geräusch ab, wenn dieses Ereignis
+          passiert.
+      Infinity_move_directions_callout:
+        Infinity_move_directions_callout: Welcher Baustein bewegt Baymax nach oben,
+          wenn Pfeil-nach-oben gedrückt wird?
+        Infinity_move_directions_callout_arrow: Benutze die Pfeiltasten zum Bewegen
+      Infinity_move_right_callout:
+        Infinity_move_right_runbutton: Füge den "bewegen"-Baustein hier hinzu
+      Infinity_repeat_callout:
+        Infinity_repeat_callout: Setze "bewegen"-Bausteine hier hinein
+      MC HOC 2016 Level 2-2_callout:
+        craft2_run_button_callout: Mit "Ausführen" testest du dein Programm, wenn
+          du fertig bist.
+      MC_HOC_2017_01_Cole_callout:
+        MC_HOC_2017_01_Cole_2: Verwende die Pfeiltasten oder klicke hier, um den Spieler
+          zu bewegen.
+      MC_HOC_2017_02_Will_callout:
+        MC_HOC_2017_02_Cole_1: Jetzt hat dein Spieler einen Kumpel.  Du kannst Code
+          für den Agenten schreiben, um ihn durch die Levels zu führen.
+      MC_HOC_2017_03_Cole_callout:
+        MC_HOC_2017_03_Cole_1: Dies ist eine "wiederholen"-Schleife.  Klicke in den
+          Arbeitsbereich und füge den Code hinzu, der immer wieder ausgeführt werden
+          soll.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Dies ist eine "wiederholen"-Schleife.  Klicke in den
+          Arbeitsbereich und füge den Code hinzu, der immer wieder ausgeführt werden
+          soll.
+      MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Der Agent kann über Wasser schweben. Der Spieler kann
+          das nicht!
+      MC_HOC_2017_04_Cole_2019_callout:
+        MC_HOC_2017_04_Cole_a: Der Agent kann über Wasser schweben. Der Spieler kann
+          das nicht!
+      MC_HOC_2017_04_Kiki_callout:
+        MC_HOC_2017_04_Kiki_1: Klicke in den Arbeitsbereich und füge den Code hinzu,
+          der immer wieder ausgeführt werden soll.
+      MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Du kannst diese Blöcke nicht verwerfen. Du kannst sie
+          jedoch bearbeiten!
+      MC_HOC_2017_06_Cole_2019_callout:
+        MC_HOC_2017_06_Cole_1: Du kannst diese Blöcke nicht verwerfen. Du kannst sie
+          jedoch bearbeiten!
+      MC_HOC_2017_08_RY_callout:
+        MC_HOC_2017_08_RY_1: 'Der Agent kann über Lava schweben. Der Spieler kann
+          das nicht!  '
+      MC_HOC_2017_08_Will_callout:
+        MC_HOC_2017_08_RY_1: 'Der Agent kann über Lava schweben. Der Spieler kann
+          das nicht!  '
+      MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'Der Agent kann über Lava schweben. Der Spieler kann
+          das nicht!  '
+      MC_HOC_2017_Ali_2019_callout:
+        MC_HOC_2017_08_RY_1: 'Der Agent kann über Lava schweben. Der Spieler kann
+          das nicht!  '
+      Mike Playlab Project_callout:
+        New Play Lab Project_callout2: Drücken Sie "Ausführen" um ihr Programm zu
+          speichern und auszuführen
+        sign_in_to_save_project: Möchtest du dein Projekt später abrufen? Logg dich
+          ein um dieses Projekt in deinem Account zu speichern!
+      NEW Course 4 Artist Functions 5_callout:
+        edit_function: Klicke hier, um die Funktion zu bearbeiten.
+        function_editor_draw_square: Dies ist deine Funktionsdefinition. Diese Bausteine
+          werden jedesmal ausgeführt, wenn du die "Zeichne ein Quadrat"-Funktion verwendest
+      NEW Course 4 Artist Functions 7_callout:
+        edit_function: Klicke hier, um die Funktion zu bearbeiten.
+      NEW Course 4 Artist Functions 8_callout:
+        edit_function: Klicke hier, um die Funktion zu bearbeiten.
+      NEW Course 4 Artist Params 10_callout:
+        create_function: Klicke hier, um das "Funktionsmenü" zu öffnen, dann klicke
+          auf "Erstelle eine Funktion".
+      NEW Course 4 Artist Params 9_callout:
+        edit_add_parameter: Klicke auf "Bearbeiten", um einen Parameter zu deiner
+          Funktion hinzuzufügen
+        add_and_drag_parameter: Schreibe den Namen deines Parameters hier hin, klicke
+          „Hinzufügen“ und ziehe ihn dann in deine Funktionsdefinition
+      NEW Course 4 Artist Vars 6_callout:
+        place_length_variable: Ziehe die Längenvariable hier her, um die Fragezeichen
+          zu ersetzen
+      NEW Course 4 Bee For Loops 5_callout:
+        actions_category: Die Werkzeugkiste hat einen neuen Look! Die „Aktion“-Bausteine
+          sind jetzt hier drin.
+      New Artist Project_callout:
+        New Artist Project_callout2: Drücken Sie "Ausführen" um ihr Programm zu speichern
+          und auszuführen
+        sign_in_to_save_project: Möchtest du dein Projekt später abrufen? Logg dich
+          ein um dieses Projekt in deinem Account zu speichern!
+      New Frozen Project_callout:
+        snowflake_dropdown: Verwende dieses Dropdown-Menü, um verschiedene Schneeflocken
+          zu erstellen!
+      New Play Lab Project_callout:
+        New Play Lab Project_callout2: Drücken Sie "Ausführen" um ihr Programm zu
+          speichern und auszuführen
+        sign_in_to_save_project: Möchtest du dein Projekt später abrufen? Logg dich
+          ein um dieses Projekt in deinem Account zu speichern!
+      Overworld Chop Trees_callout:
+        craft_callout_preplaced: Hier haben wir ein paar Bausteine für den Anfang.
+      Overworld Chop Trees_2018_callout:
+        craft_callout_preplaced: Hier haben wir ein paar Bausteine für den Anfang.
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Hier haben wir ein paar Bausteine für den Anfang.
+      Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: Dieser Code wird anfangen dein Haus zu bauen.
+          Kannst du es fertigstellen?
+      Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Dieser Code wird anfangen dein Haus zu bauen.
+          Kannst du es fertigstellen?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Dieser Code wird anfangen dein Haus zu bauen.
+          Kannst du es fertigstellen?
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: Drücke auf "Ausführen", um dein Programm auszuprobieren.
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: Drücke auf "Ausführen", um dein Programm auszuprobieren.
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Drücke auf "Ausführen", um dein Programm auszuprobieren.
+      Overworld Place Wall_callout:
+        craft_inside_repeat: Wiederhole Aktionen, indem du hier Bausteine hineinsetzt.
+      Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Wiederhole Aktionen, indem du hier Bausteine hineinsetzt.
+      Overworld Place Wall_2019_callout:
+        craft_inside_repeat: Wiederhole Aktionen, indem du hier Bausteine hineinsetzt.
+      PS copy 2-3 Bee Conditionals 5_callout:
+        Bee_Cond_5_1a: Violette Blumen haben entweder 1 oder 0 Nektar.... doch das
+          weißt du nicht, bis du den Code ausführst!
+      Rock Paper Scissors_callout:
+        New Play Lab Project_callout2: Drücken Sie "Ausführen" um ihr Programm zu
+          speichern und auszuführen
+        sign_in_to_save_project: Möchtest du dein Projekt später abrufen? Logg dich
+          ein um dieses Projekt in deinem Account zu speichern!
+      Ryan - 4-5 Bee Conditionals 2_callout:
+        4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
+          hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+      Ryan - Bee Conditionals_callout:
+        4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
+          hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+      Test Play Lab Project With Walls_callout:
+        New Play Lab Project_callout2: Drücken Sie "Ausführen" um ihr Programm zu
+          speichern und auszuführen
+        sign_in_to_save_project: Möchtest du dein Projekt später abrufen? Logg dich
+          ein um dieses Projekt in deinem Account zu speichern!
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: Dieser Code sucht nach Lava. Kannst du einen Befehl
+          zum Vorwärtsbewegen hinzufügen?
+      Underground Avoiding Lava_2018_callout:
+        craft_callout_moveforward: Dieser Code sucht nach Lava. Kannst du einen Befehl
+          zum Vorwärtsbewegen hinzufügen?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Dieser Code sucht nach Lava. Kannst du einen Befehl
+          zum Vorwärtsbewegen hinzufügen?
+      Underground Iron_callout:
+        craft_what_is_iron: Baue dieses Eisen ab!
+      Underground Iron_2018_callout:
+        craft_what_is_iron: Baue dieses Eisen ab!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: Baue dieses Eisen ab!
+      aE3_callout:
+        aE3_1: Nur eine Handvoll von diesen zur Verfügung
+      aE3alternate_callout:
+        aE3_1: Nur eine Handvoll von diesen zur Verfügung
+      aE3alternateB_callout:
+        aE3_1: Nur eine Handvoll von diesen zur Verfügung
+      aE4_callout:
+        aE3_1: Nur eine Handvoll von diesen zur Verfügung
+      aE5_callout:
+        aE3_1: Nur eine Handvoll von diesen zur Verfügung
+      artistLoopsK2_callout:
+        artistLoopsK2_1: Diese Zahl gibt an, wie viele dieser Blöcke in diesem Puzzle
+          verwendet werden können.
+      artistLoopsK2gradek_artist_loops3_callout:
+        artistLoopsK2_1: Diese Zahl gibt an, wie viele dieser Blöcke in diesem Puzzle
+          verwendet werden können.
+      courseA_artist_loops4_callout:
+        courseA_artist_loops4_1: Diese Zahl gibt an, wie viele dieser Blöcke in diesem
+          Puzzle verwendet werden können.
+      courseA_artist_loops4_2018_callout:
+        courseA_artist_loops4_1: Diese Zahl gibt an, wie viele dieser Blöcke in diesem
+          Puzzle verwendet werden können.
+      courseA_collector_loops3_callout:
+        gradek_adventurer_loops2_1: Diese Zahl gibt an, wie viele dieser Blöcke in
+          diesem Puzzle verwendet werden können.
+      courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: Diese Zahl gibt an, wie viele dieser Blöcke in
+          diesem Puzzle verwendet werden können.
+      courseD_bee_conditionals2_callout:
+        4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
+          hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+      courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
+          hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+      courseD_bee_conditionals2_2019_callout:
+        4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
+          hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+      courseD_bee_conditionals2_test_callout:
+        4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
+          hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+      courseF_playLab_func2_callout:
+        New Play Lab Project_callout2: Drücken Sie "Ausführen" um ihr Programm zu
+          speichern und auszuführen
+        sign_in_to_save_project: Möchtest du dein Projekt später abrufen? Logg dich
+          ein um dieses Projekt in deinem Account zu speichern!
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: Nutze den "Erzeuge einen Kreis"-Baustein
+          und ändere die Größe.
+      frozen cross rotate_callout:
+        replace_questions_degree: Verwende den Dropdown-Pfeil, um  "???" mit einer
+          Zahl zu ersetzen.
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Verwende den Dropdown-Pfeil, um  "???" mit einer
+          Zahl zu ersetzen.
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Verwende den Dropdown-Pfeil, um  "???" mit einer
+          Zahl zu ersetzen.
+      frozen cross_callout:
+        repeat_blocks_1: "(1) Nutze diesen Baustein und platziere ihn um die grauen
+          Bausteine im Arbeitsraum."
+        repeat_blocks_2: (2) Bewege den "Wiederholen"- Baustein hierher und platziere
+          die grauen Bausteine im Inneren.
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: Nutze den „Wiederholen“-Baustein, um diese Form zu
+          erstellen.
+      frozen diamond_callout:
+        frozen_diamond_repeat: Nutze den „Wiederholen“-Baustein, um diese Form zu
+          erstellen.
+      frozen freeplay_callout:
+        snowflake_dropdown: Verwende dieses Dropdown-Menü, um verschiedene Schneeflocken
+          zu erstellen!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Verwende dieses Dropdown-Menü, um verschiedene Schneeflocken
+          zu erstellen!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Verwende dieses Dropdown-Menü, um verschiedene Schneeflocken
+          zu erstellen!
+      frozen line_callout:
+        move_elsa_forward: Ziehe einen "Vorwärts bewegen"-Baustein unter den "Ausführen"-Baustein,
+          um Elsa vorwärts zu bewegen.
+      frozen line_b_callout:
+        move_elsa_forward: Ziehe einen "Vorwärts bewegen"-Baustein unter den "Ausführen"-Baustein,
+          um Elsa vorwärts zu bewegen.
+      frozen line_test_callout:
+        move_elsa_forward: Ziehe einen "Vorwärts bewegen"-Baustein unter den "Ausführen"-Baustein,
+          um Elsa vorwärts zu bewegen.
+      frozen perpendicular_callout:
+        turn_elsa: Verwende den „Drehen“-Baustein, um Elsa zu drehen. Die Zahl in
+          der Dropdown-Liste bestimmt, wie weit Elsa sich dreht.
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: Verwende den Baustein "Erstelle einen Schneeflocken-Zweig"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Verwende den Baustein "Erstelle einen Schneeflocken-Zweig"
+      frozen square iterative_callout:
+        frozen_create_square: Füge hier mehr Bausteine an, um ein Quadrat zu erstellen
+      frozen square iterative_b_callout:
+        frozen_create_square: Füge hier mehr Bausteine an, um ein Quadrat zu erstellen
+      frozen square iterative_test_callout:
+        frozen_create_square: Füge hier mehr Bausteine an, um ein Quadrat zu erstellen
+      frozen square loop 3x_callout:
+        replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
+          ersetzen.
+      frozen square loop 3x_b_callout:
+        replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
+          ersetzen.
+      frozen square loop 3x_test_callout:
+        replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
+          ersetzen.
+      frozen square loop_callout:
+        replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
+          ersetzen.
+      frozen square loop_b_callout:
+        replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
+          ersetzen.
+      frozen square loop_test_callout:
+        replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
+          ersetzen.
+      frozen square snowflake_callout:
+        replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
+          ersetzen.
+      frozen square snowflake_b_callout:
+        replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
+          ersetzen.
+      frozen square snowflake_test_callout:
+        replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
+          ersetzen.
+      grade3_ConditionalsElse_2_callout:
+        4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
+          hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+      grade3_Conditionals_3_callout:
+        Bee_Cond_5_1a: Violette Blumen haben entweder 1 oder 0 Nektar.... doch das
+          weißt du nicht, bis du den Code ausführst!
+      grade3_bee_conditionals_quantum2_callout:
+        4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
+          hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+      grade4_artist_parameters_squares1_callout:
+        edit_add_parameter: Klicke auf "Bearbeiten", um einen Parameter zu deiner
+          Funktion hinzuzufügen
+        add_and_drag_parameter: Schreibe den Namen deines Parameters hier hin, klicke
+          „Hinzufügen“ und ziehe ihn dann in deine Funktionsdefinition
+      grade4_bee_conditionals_quantum2_callout:
+        4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
+          hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+      grade4_frozen_freeplay_callout:
+        snowflake_dropdown: Verwende dieses Dropdown-Menü, um verschiedene Schneeflocken
+          zu erstellen!
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: Nutze den "Erzeuge einen Kreis"-Baustein
+          und ändere die Größe.
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: Nutze den „Wiederholen“-Baustein, um diese Form zu
+          erstellen.
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: Nutze den „Wiederholen“-Baustein, um diese Form zu
+          erstellen.
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: Nutze den „Wiederholen“-Baustein, um diese Form zu
+          erstellen.
+      grade4_frozen_square_callout:
+        replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
+          ersetzen.
+      grade4_frozen_square_loop1_callout:
+        replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
+          ersetzen.
+      grade4_frozen_square_loop2_callout:
+        replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
+          ersetzen.
+      grade4_frozen_square_loop3_callout:
+        replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
+          ersetzen.
+      grade4_playLab_proj_example1_callout:
+        New Play Lab Project_callout2: Drücken Sie "Ausführen" um ihr Programm zu
+          speichern und auszuführen
+      grade4_playLab_proj_example2_callout:
+        New Play Lab Project_callout2: Drücken Sie "Ausführen" um ihr Programm zu
+          speichern und auszuführen
+        sign_in_to_save_project: Möchtest du dein Projekt später abrufen? Logg dich
+          ein um dieses Projekt in deinem Account zu speichern!
+      grade5_artist_parameters_squares1_callout:
+        edit_add_parameter: Klicke auf "Bearbeiten", um einen Parameter zu deiner
+          Funktion hinzuzufügen
+        add_and_drag_parameter: Schreibe den Namen deines Parameters hier hin, klicke
+          „Hinzufügen“ und ziehe ihn dann in deine Funktionsdefinition
+      grade5_artist_parameters_triangles1aa_callout:
+        edit_add_parameter: Klicke auf "Bearbeiten", um einen Parameter zu deiner
+          Funktion hinzuzufügen
+        add_and_drag_parameter: Schreibe den Namen deines Parameters hier hin, klicke
+          „Hinzufügen“ und ziehe ihn dann in deine Funktionsdefinition
+      grade5_artist_variables_pentagons1_callout:
+        place_length_variable: Ziehe die Längenvariable hier her, um die Fragezeichen
+          zu ersetzen
+      grade5_artist_variables_pentagons12_callout:
+        set_length: Verwende diesen Baustein, um "Länge" auf den richtigen Wert festzulegen.
+      grade5_artist_variables_square7_callout:
+        degrees_per_side: Teile 360 durch die Anzahl der Seiten, um die Größe der
+          einzelnen Winkel in Grad zu erhalten.
+      grade5_artist_variables_triangles2_callout:
+        set_length: Verwende diesen Baustein, um "Länge" auf den richtigen Wert festzulegen.
+      grade5_playlab_variables1_callout:
+        arrows_move_actor: Benutze die Pfeile, um die Figur zu bewegen
+      grade5_playlab_variables11_callout:
+        edit_add_parameter: Klicke auf "Bearbeiten", um einen Parameter zu deiner
+          Funktion hinzuzufügen
+      grade5_playlab_variables1ask_callout:
+        arrows_move_actor: Benutze die Pfeile, um die Figur zu bewegen
+      gradek_adventurer_loops2_callout:
+        gradek_adventurer_loops2_1: Diese Zahl gibt an, wie viele dieser Blöcke in
+          diesem Puzzle verwendet werden können.
+      gradek_artist_loops3_callout:
+        artistLoopsK2_1: Diese Zahl gibt an, wie viele dieser Blöcke in diesem Puzzle
+          verwendet werden können.
+      small_actors_playlab_projects_callout:
+        New Play Lab Project_callout2: Drücken Sie "Ausführen" um ihr Programm zu
+          speichern und auszuführen
+        sign_in_to_save_project: Möchtest du dein Projekt später abrufen? Logg dich
+          ein um dieses Projekt in deinem Account zu speichern!

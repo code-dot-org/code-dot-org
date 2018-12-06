@@ -1,0 +1,765 @@
+hu:
+  slides:
+    maze_intro:
+      1:
+        text: "Üdvözlünk az első kódolás órádon! Kezdjük is el az első programozási leckét."
+      2:
+        text: "A Blockly nevű vizuális programozási nyelvet fogjuk használni, amelyben blokkok egymáshoz illesztésével tudsz kódot írni."
+      3:
+        text: "A kódot legtöbbször gépelik, de a Blockly vizuális. Minden blokk megfelel egy „igazi” sor kódnak."
+      4:
+        text: "Olyan számítógép-tudományi alapokat, fogalmakat fogsz megtanulni, amelyeket az alkalmazások készítésétől a marsjáró vezérléséig mindenütt használnak."
+      5:
+        text: "Minden program a számítógép által végrehajtandó utasítások listája."
+      6:
+        text: "Első programodban egy Angry Birds madarat kell irányítanod az útvesztőn át, hogy eljusson a Zöld Disznóig."
+      7:
+        text: "A bal oldal egy útvesztő, ahol a programod fut. A pálya megoldásához szükséges útmutató az útvesztő alatt olvasható."
+      8:
+        text: "A középső eszköztár tartalmazza az Angry Birds madár irányításához szükséges utasításokat. Ezeket fogod használni a kód felépítéséhez."
+      9:
+        text: "A középső eszköztárból a jobb oldali munkaterületre kell majd áthúznod a blokkokat a program felépítéséhez. Egy blokk törléséhez húzd azt a sarokban lévő kukára."
+      10:
+        text: "Minden blokk egy utasítás. Ha egy „menj” blokkot húzol a munkaterületre, majd megnyomod a „Futtatás” gombot, akkor a madár egy pozíciót lép előre a labirintusban."
+      11:
+        text: "Egynél több művelet elvégzéséhez több blokkot is áthúzhatsz a munkafelületre, és összeillesztheted őket. A madár az utasításokat fentről lefelé végzi majd el."
+      12:
+        text: "Ha egy már lefutott programot szeretnél javítani és újra lefuttatni, akkor nyomd meg a „Visszaállítás” gombot."
+      13:
+        text: "Gyerünk, kapjuk el azokat a disznókat!"
+    artist_intro:
+      1:
+        text: "Szia, a nevem JR! Minden versenyzői csapatnak szüksége van egy számítógéptudósra a nyeréshez. Analizálják az adatokat a járműből, hogy gyorsabbá tehessék azt."
+      2:
+        text: "Ezeknél a rejtvényeknél te leszel a művész, aki vonalat húz maga mögött, bármerre megy."
+      3:
+        text: "Ez a blokk azt mondja: \" előrelépni 100 pixel. \" A pixelek csak nagyon apró pontok a képernyőn."
+      4:
+        text: "Ez a blokk azt mondja \"forduljon jobbra 90 fokban.\" Ez el fogja fordítani a művészt ugyanabban a mennyiségben, mint amennyiben a \"fordulj\" blokkok a labirintus rejtvényekben."
+      5:
+        text: "Kattints valamelyik blokkra, hogy megváltoztasd a művész lépéseinek számát, vagy a fordulások mértékét.  Játssz ezekkel, hogy jobban megismerd ezeket az új blokkokat."
+    farmer_intro:
+      1:
+        text: "Szia, a nevem Paola! Ezekben a rejtvényekben te egy farmer leszel, akinek ki kell simítania a földét, hogy elkezdhesse az ültetvények elültetését."
+      2:
+        text: "Segítened kell neki eltávolítani az összes halmot, és kitölteni a lyukakat."
+      3:
+        text: "Az új blokkok eltüntetnek egy lapátnyi földet a halomból, illetve egy lapátnyi földdel feltöltenek egy gödröt."
+      4:
+        text: "A halmok és a lyukak különböző méretűek, így meg kell mondd a farmernek, hogy hányat lapátoljon."
+    flappy_intro:
+      1:
+        image: 'Megjegyzések/flappy01.jpg'
+        text: "Szia, Kati vagyok!  Az egyik legizgalmasabb dolog a számítógéppel, hogy egy program lehet interaktív."
+      2:
+        image: 'Megjegyzések/flappy02.jpg'
+        text: "Mindig amikor kattintanak az egérrel, az érintő képernyőt megbökik vagy gépelnek egy számítógépen vagy telefonon, az egy ESEMÉNY-t generál. Amikor ez az ESEMÉNY megtörténik, egy előre megírt kód határozza meg mi történjen."
+      3:
+        image: 'Megjegyzések/flappy03.jpg'
+        text: "Mondjuk lehet egy ESEMÉNYKEZELŐ, ami ezt tartalmazza: \"amikor az egéren kattintanak, lejátszom egy hangot\" "
+      4:
+        image: 'Megjegyzések/flappy04.jpg'
+        text: "Hallottál már a FlappyBird játék-ról ? Eseménykezelők használatával fogunk megtanulni hogyan lehet a saját egyéni  FlappyBird változat programját elkészíteni!"
+      5:
+        image: 'Megjegyzések/flappy05.jpg'
+        text: "A  kódot, a számítógépnek parancsokat jelentő blokkokat  felkapva és átrakva (drag and drop) fogja írni. Az grafikusan ábrázolt blokkok valódi kódot reprezentálnak."
+      6:
+        image: 'Megjegyzések/flappy06.jpg'
+        text: "Ha egy pillantást vet a munkaterületre, lát néhány zöld blokkot, amiket kitöltöttek az Ön részére- ezek a \"eseménykezelők\" "
+      7:
+        image: 'Megjegyzések/flappy07.jpg'
+        text: "Ha azt szeretnéd, hogy a madár csapjon szárnyával, ha RÁKATTINTASZ az egérrel, arra ott van a \"csapj\" blokk. Ezt hozzárendeli a megfelelő eseménykezelőhöz, és akkor a te játékodban valahányszor kattintanak, a madár csap egyet a szárnyával."
+      8:
+        image: 'Megjegyzések/flappy08.jpg'
+        text: "Minden egyes rejtvény bemutat egy új típusú eseményt, mint zöld blokkot a munkaterületen. Ön kiválaszthatja a megfelelő blokkokat, az  eseményekre adott válaszként."
+      9:
+        image: 'Megjegyzések/flappy09.jpg'
+        text: "Amikor vagy lát egy lefelé nyilat, mint ez, ez azt jelenti, meg lehet változtatni a beállításokat - például az akkor lejátszandó hangot, amikor flappy eléri a talajt."
+      10:
+        image: 'Megjegyzések/flappy10.jpg'
+        text: "Az utolsó lépcsőn már képes létrehozni a saját játékát, és megosztani azt barátaival. Jó szórakozást!"
+    loop_times:
+      1:
+        text: "Helló, Mark vagyok. Gyere, tanuljuk meg a ciklusok használatát! A ciklust használva megmondhatod a számítógépnek, hogy egy bizonyos utasítást újra és újra, ezerszer vagy milliószor ismételjen meg."
+      2:
+        text: "Ebben a rejtvényben azt szeretnénk, ha a madár ötöt lépne előre, hogy elérjen a malachoz."
+      3:
+        text: "A feladat megoldásához használhatjuk a új „Ismétlés” blokkot."
+      4:
+        text: "Ahelyett, hogy 5 külön „előrelépni” blokkot használnánk..."
+      5:
+        text: "Betehetjük az „előrelépni” blokkot az „ismétlés” blokk belsejébe, majd beírhatjuk a blokkba a szükséges ismétlések számát."
+      6:
+        text: "Fontos: az „ismétlés” blokkba több mint egy utasítást is betehetsz."
+      7:
+        text: "Élvezd az új „ismétlés” blokk használatát!"
+    loop_until:
+      1:
+        text: "Szia, Chris vagyok. Mielőtt a Miami Heathez csatlakoztam a Georgia Techbe jártam, hogy számítástechnikát tanulhassak. Gyere, próbáljuk ki az új „ismételd amíg” blokkot."
+      2:
+        text: "Mi van, ha nem tudjuk, milyen messzire kell a madárnak mennie, hogy eljusson a malachoz?"
+      3:
+        text: "Ha a \"lépj előre\" blokkot az \"ismételd amíg\" blokkba helyezzük, akkor a madár addig fog előre haladni, AMÍG eléri a malacot (vagy a falnak ütközik)."
+      4:
+        text: 'Fontos: akárcsak az ismételd blokkba, az „ismételd amíg” blokkba is több utasítást helyezhetsz, és mindegyiket ismételni fogja a program.'
+    if:
+      1:
+        text: "Szia, Bill vagyok! Tanuljunk meg egy új alapvető fogalmat, a „ha” feltételt. A számítógépek ezt felhasználva hoznak döntéseket."
+      2:
+        text: "A „ha” állítást Te is naponta használod. Minden reggel, mielőtt elindulnál, azt mondod: HA esik az eső, fel kell vennem a kabátom."
+      3:
+        text: "Megmondhatjuk egy zombinak: HA van út balra és ha megtalálja az utat, akkor forduljon abba az irányba."
+      4:
+        text: "Ahhoz, hogy megírjuk ezt a kódot húzzuk ki a „ha” blokkot, és helyezzük a „fordulj balra” blokkot a belsejébe."
+      5:
+        text: "Most ha az „előrelépés” blokkot föléje és az „ismétlés” blokkot a kód köré helyezzük, akkor a zombi minden lépésnél ellenőrzi, hogy létezik-e út balra. Ha igen, akkor arra fordul. A ismétlő parancs fontos, mivel minden lépésnél ellenőriznie kell, hogy létezik-e út."
+      6:
+        text: "A ha állítás nagyon fontos a számítástechnikában. Az első programjaim között volt egy amőba játék, amelyben az egyik ha feltétel így szólt: HA az ellenfél nyerő helyzetben van, akkor blokkolni kell a pozíciót, amivel nyerni tudna."
+      7:
+        text: "Jó szórakozást a „ha” blokk használatához!"
+    if_else:
+      1:
+        text: "Szia, Saloni vagyok. Én az egészségügyben és az orvostudományban felmerülő problémák megoldására használom a számítástechnikát. Tanuljuk meg a „ha különben” blokk használatát. Ez a blokk hasonlít a „ha” blokkhoz, de van egy extra kiegészítése „különben” néven."
+      2:
+        text: "Ha a feltétel „csináld” részéhez egy „előrelépni”, a „különben” részéhez egy „fordulj balra” blokkot teszel, akkor a zombi e közül a két lehetőség közül fog választani. Ha van út előre, akkor a zombi előre megy, minden más esetben (tehát ha nincs előre út) a zombi balra fog fordulni."
+      3:
+        text: "Pont mint a \"ha\" blokknál, tehetünk \"ha különben\" blokkokat \"ismételd\" blokkokba, így a zombi mozgásban marad, a \"ha különben\" blokk pedig ellenőrizni fogja, hogy van-e hova fordulni."
+      4:
+        text: "Most vidd a zombikat oda, ahova tartoznak!"
+    if_else_scrat:
+      1:
+        text: "A ha-különben utasítás egy döntés két dolog között. Most lássuk, hogyan tudjuk használni a ha-különben utasítást a barátunkkal, Motkánnyal."
+      2:
+        text: "A blokk hasonló a sima \"ha\" blokkhoz, de van egy extra része az alján, amit a \"különben\" szó jelöl. Ha egy \"előrelépni\" blokkot teszek a \"csináld\" részhez, egy \"fordulj balra\" blokkot a \"különben\" részhez, akkor Motkány a mókus előre fog menni, ha van előre út. Ha nincs tovább út előre, akkor Motkány balra fog fordulni."
+      3:
+        text: "Ez egy döntéshozás, és a két utasítás közül az egyiket fogja végrehajtani a döntés alapján. És csakúgy, mint a \"ha\" blokkokat, a \"ha-különben\" blokkokat is beleteheted \"ismételd\" blokkokba."
+      4:
+        text: "Most segítsünk Motkánynak a mókusnak, hogy megszerezze a makkot!"
+    function:
+      1:
+        text: "Szia, Brina vagyok, mérnök az Instagramnál. Egy függvény lehetővé teszi, hogy ha egy kód bizonyos sorait újra és újra használni szeretnéd, akkor ne kelljen mindig az összes sort újra beírni. Helyette használhatsz egyetlen blokkot."
+      2:
+        text: "Itt az idő, hogy megtanuljunk függvényeket definiálni. A függvény definíciókat csillaggal jelezzük. A függvény nevét a legfelső sorba írjuk."
+      3:
+        text: "A blokkok a definíción belül mutatják meg, hogy mit is csinál. Ez a függvény, amit \"feltölt 5\"-nek hívunk egy repeat/ismételd és egy feltölt blokkból áll."
+      4:
+        text: "A definíció csak ott csücsül a munkapadon, de a farmer nem tudja futtatni, amíg mi ki nem húzzuk a \"feltölt 5\" függvényblokkot a függvények közül."
+      5:
+        text: "Let's put the \"fun\" back in \"FUNction!\""
+    loop_while:
+      1:
+        text: "Hi, I'm Makinde! Let's learn about the \"while block.\""
+      2:
+        text: "A \"While\"/\"Amíg\" blokk addig csinálja amit beletettél, amíg a feltétel amit az elején tettél igaz."
+      3:
+        text: "Például ha a farmer áll egy földkupacnál, ő ADDIG tüntet el 1-1 lapátnyi földet, AMÍG van ott egyáltalán kupac."
+    loop_for:
+      1:
+        text: "Szia én Trina vagyok, és a Pixar-nál dolgozom. Már egy csomó filmen dolgoztam, beleértve a Shreket."
+      2:
+        text: "Ez az új számlálós ciklus. Ez végrehajtja a feladatait újra és újra, minden alkalommal egy kicsit másképp."
+      3:
+        text: "Ebben a példában a mi \"számláló\" ciklusunk azt mondja: \"Számolj a számlálóval 50-től 90-ig 10-esével\", és a cikluson belül van a \"rajzoljon egy négyzetet\" blokk. Húzd a \"számláló\" blokkot a  \"Változók\" közül a  \"hossza\" helyére."
+      4:
+        text: "Ez azt jelenti, hogy a művészünk rajzol egy 50 képpontos négyzetet, majd hozzáad  10-et, és rajzol egy 60 képpontosat,. Majd újra hozzáad 10-et és rajzol egy négyzetet, amíg eléri a 90-et. Végül lesz 50, 60, 70, 80 és 90 oldalú négyzetünk."
+    parameters:
+      1:
+        text: "Szia Janete vagyok, egy mernok vagyok Zynganal."
+      2:
+        text: "Mit tegyünk, ha egy csomó, különböző méretű háromszöget akarunk rajzolni?"
+      3:
+        text: "Legépelhetjük az egész, hosszú kódot, vagy használhatunk függvényt paraméterekkel."
+      4:
+        text: "Hogy ezt megtehessük, kattintsunk a kék csillagra a\"rajzolj háromszöget\" függvény definícióján. Ezután húzd a \"bemenet neve\" változót az \"input\"/\"bemenet\" blokkba."
+      5:
+        text: "Ekkor ha \"hosszúság\"-ot írsz a mezőbe, amikor az írja \"x\" és lenyomod az \"Enter\"-t, akkor megadod a \"hosszúság\" bemenetét a függvényednek."
+      6:
+        text: "Ezután kattints a csillagra. Most kattints a változók kategóriára és húzd a \"hossz\" elemet a \"haladj előre\" elemre a függvényeden belül. Ezután dobd ki a régi szám blokkot."
+      7:
+        text: "Hogy egy függvényt paraméterekkel használj, kattints a függvények kategóriájára és húzd ki a \"rajzolj egy megadott méretű háromszöget\" függvényt."
+      8:
+        text: "Most a matematikai blokkot használva számokat adhatsz meg, hogy különböző méretű háromszögeket rajzolj."
+    hoc_wrapup:
+      1:
+        text: "Gratulálok! Az utolsó játék megoldásakor egy olyan kódot írtál, amely bármilyen robotnak segítene végigmenni egy nem elágazó útvesztőben vagy alagútban, függetlenül annak hosszától. Ez a robot nem csak zombi vagy madár, de akár marsjáró vagy önmagát vezető autó is lehet."
+      2:
+        text: "Ezek az alap koncepciók alkotják a szívét minden programnak vagy alkalmazásnak, amit valaha használni fogsz. Megismertük az ismétlés, az ismétlés amíg, a ha és a ha másképp utasításokat."
+      3:
+        text: "Ha tetszett az első kódolás órád akkor látogass el a code.org weboldalra, hogy tovább folytathasd a tanulást. A 20 órás kurzusunk befejezése után tisztában leszel a programozás alapjaival, és elkezdhetsz telefon alkalmazásokat, robot utasításokat, játékokat vagy bármi mást írni."
+      4:
+        text: "A technológia mindent megváltoztat, amit csinálunk, és nem számít, ha fiatal vagy öreg vagy: a programozás szórakoztató, kreatív és bárki megtanulhatja!"
+    20_wrapup:
+      1:
+        text: "Útmutató jegyzetek hamarosan!"
+    frozen_intro:
+      1:
+        text: "Sziasztok, a nevem Lindsey. Modellkedem, színészkedek, és a saját appjaimat írom. Használjuk a kódot, hogy csatlakozzunk Annához és Elsához, ahogy felfedezik a jég varázsát és szépségét."
+      2:
+        text: "Hópelyheket és mintákat fogsz majd létrehozni ahogy jégkorcsolyázol és létrehozol egy téli csodaországot, amit aztán majd megoszthatsz a barátaiddal."
+      3:
+        text: "A következő órában meg fogod megtanulni az alapjait a kódolásnak. A hagyományos programozás általában szöveges, de mi a Blockly-t fogjuk használni, amely vizuális elemeket használ, amit használva fogd és vidd módszerrel tudsz programokat írni. Még az egyetemi hallgatók is így tanulják az alapokat. Az álarc alatt, továbbra is kódot írsz."
+      4:
+        text: "Egy program utasítások sora, amely megmondja a számítógépnek, hogy mit csináljon. Építsünk egy kódot, vagy egy programot, amely segít Elsának egy egyszerű vonalat létrehozni. Ezt arra fogjuk használni a későbbiekben, hogy más bonyolult mintákat készítsünk."
+      5:
+        text: "A képernyőd három fő részből áll. A bal oldalon van a jég felülete, ahol a programod futtathatod. Minden szinthez a leírás pont ott a felület alatt található."
+      6:
+        text: "Ez a középső terület az eszköztár, minden ilyen blokk egy utasítás, amit Elsa és Anna megtehet."
+      7:
+        text: "A fehér hely a jobb oldalon a munkaterület, ez az, ahol a programot építjük majd. A jégen való mozgáshoz használnod kell a \"Menj előre\" blokkot."
+      8:
+        text: "Itt, a \"Menj előre\" blokk azt jelenti, hogy \"lépj előre 100 pixelt\". Amikor megnyomjuk a \"Futtatás\"-t, mi történik? Elsa előrehalad egy bizonyos távolságra a képernyőn, pontosan 100 képpontnyit! A pixelek alapvetően nagyon apró négyzetek a számítógép képernyőjén."
+      9:
+        text: "A másik blokk ami ebben a feladványban van, azt mondja hogy \"Fordulj jobbra 90 fokkal\". Amikor használjuk ezt a \"Fordulj jobbra\" blokkot, attól Elsa elfordul egy bizonyos mértékben. Tudsz játszani azzal, hogy mennyire szeretnéd hogy Elsa elforduljon. A szög az Elsa előtti útból van számítva. Szóval, ez egy 90 fokos fordulat. És ez egy 120 fokos fordulat."
+      10:
+        text: "Ne feledd, meg tudod változtatni a pixelek számát és a szöget a mellettük levő nyilakra kattintva."
+    frozen_loops:
+      1:
+        text: "Helló, Paola vagyok! A számítógépek nagyon jók műveletek ismétlésében. El tudsz számolni a 10-ig, 20-ig, vagy 100-ig. De egy számítógép el tud számolni egy milliárdig vagy billióig. Nem fog unatkozni, és ez csak egy pár másodpercet vesz igénybe. Mindegy, hogy számolás, vagy rajzolás, vagy bármi más - a számítógépek megismételhetik a dolgokat több százszor, vagy akár több milliárdszor."
+      2:
+        text: "A programozásban ezt nevezzük ciklusnak. A ciklus az, ahogyan megismétled a kódod újra és újra. A következő feladatban, az a cél, hogy segíts Annának létrehozni egy négyzetet, az \"Ismételd\" blokkal."
+      3:
+        text: "Amilyen kódblokkot teszel az \"Ismételd\" blokkba, az annyiszor lesz ismételve ahányszor csak akarod."
+      4:
+        text: "Hogy egy négyzetet rajzolj, használhatod a \"Menj előre\" és a \"Fordulj jobbra\" blokkokat 4-szer. De a könnyebb út, ha megmondod a számítógépnek, hogy \"Menj előre\" és \"Fordulj jobbra 90 fokkal\" egyszer, aztán azt mondani, hogy ismételje meg ezt a pár műveletet 4-szer. Ehhez be kell tenni a \"Menj előre\" és a \"Fordulj jobbra\" blokkokat egy \"Ismételd\" blokkba."
+      5:
+        text: "Ne feledd, meg tudod változtatni a számot az \"Ismételd\" blokkban bármire, és ez annyiszor fogja megismételni azt, ami a blokkon belül van."
+    frozen_functions:
+      1:
+        text: "Üdv, Chris Bosh vagyok. Profi kosaras vagyok, és én a fősulin programoztam."
+      2:
+        text: "Egyike legfontosabb ötleteknek a számítástechnikában, hogy hogyan határozzunk meg új parancsokat. A legtöbb számítógépes nyelv csak mintegy 100 szót vagy parancsot tartalmaz. És valóban, a művészet és a varázslat a saját új szavak ezen építőelemekből való meghatározása."
+      3:
+        text: "Ha már egyszer megtanítottad a számítógépet, hogyan kell csinálni egy műveletet bizonyos utasítások sorával, akkor kitalálhatsz egy nevet a művelethez, hogy később könnyen megismételhesse. Ha a saját parancsod hozol létre, és nevet adsz neki, azt függvénynek hívják."
+      4:
+        text: "Helló, Jess vagyok. A blokkokkal való programozás során úgy használnád a függvényeket, mintha olyan utasítások gyűjteményei lennének, amelyeket sokszor akarsz használni. Például írtál egy kódot, ami egy négyzetet rajzol."
+      5:
+        text: "Készíthetsz egy függvényt erre mint \"Hozz létre egy négyzetet\". "
+      6:
+        text: "Most van egy új blokk, melynek segítségével több alkalommal használhatsz, hogy négyzeteket készíts."
+      7:
+        text: "Sok egyszerű formából bonyolultabb minták hozhatóak létre. A következő feladványban a kód amit nemrég írtál arra, hogy egy kört készíts, elérhető mint egy új függvény, amellyel különböző méretű köröket készíthetsz. Tudod használni, hogy segíts Elsának tekervényes és gyönyörű mintákat készíteni a hóban?"
+    playlab_intro:
+      1:
+        text: "Játékokat fogunk létrehozni a Játéklabor használatával. A jó játékoknak van egy története, és minden történetnek vannak szereplői. Megtanuljuk, hogyan bírhatjuk rá a szereplőinket, mint a boszorkányokat, az űrlényeket és az állatokat arra, hogy beszéljenek, mozogjanak és kölcsönhatásba lépjenek egymással. E tanfolyam végére képes leszel arra, hogy elkészíts egy játékot a semmiből és meg tudd osztani azt a barátaiddal."
+      2:
+        text: "3 fő részre van felosztva a képernyőd. A bal oldalon van a játéktér, ahol a program fog futni. Az utasítások minden egyes szinthez alól vannak odaírva."
+      3:
+        text: "A középső területen az eszközkészlet van, és minden egyes blokk - egy kódrészlet. A jobb oldalon lévő üres területet munkaterületnek nevezik, és itt készítjük majd el a programunkat."
+      4:
+        text: "Az indításhoz, a blokkjaidat hozzá kell csatolnod a narancssárga \"amikor fut\" blokkhoz. Több blokkot is összekapcsolhatsz úgy, hogy elhúzod őket a sárga vonalig, és akkor majd összekapcsolódnak."
+      5:
+        text: "Ebben az első feladványban a szereplőnk egy pingvin, akit ráveszünk arra, hogy mondjon egy \"Helló!\"-t. Ehhez áthúzzuk a \"szereplő mondja\" blokkot, összekapcsoljuk a  \"futtatáskor\" blokkal, és beleírjuk azt, hogy \"Helló.\" A pingvint a \"mozogj jobbra\" és a \"mozogj balra\" blokkok használatával is mozgásra bírhatjuk. Miután elhelyezted a blokkokat, nyomd meg a futtatás gombot, hogy lásd mit programoztál."
+      6:
+        text: "A kezdj hozzá, és a végére majd el tudsz készíteni egy saját játékot mindenféle egymással kölcsönhatásba lépő szereplővel, akik boldoggá vagy szomorúvá válhatnak, pontokat szerezhetnek, tűgolyókat dobhatnak egymásra, vagy akár el is tudják tüntetni egymást. Az egész rajtad múlik és a játékon, amit el szeretnél készíteni."
+    playlab_events:
+      1:
+        text: "Most mi arról fogunk tanulni, amit nap mint nap minden játékprogramozó használ. Ezt eseménynek nevezzük. Az esemény arra készteti a programodat, hogy figyelje, ha valami történik. Amikor ez az esemény bekövetkezik, akkor a programod végrehajt egy műveletet."
+      2:
+        text: "Például eseményeknek tekintjük az egérkattintást, a nyilakat ábrázoló gombok leütését vagy a képernyő megérintését."
+      3:
+        text: "Itt az űrrobotot fogjuk rávenni arra, hogy köszöntse a Földlakókat ha egy játékos rákattint. A \"kattintásra\" blokkot fogjuk használni, és hozzácsatolni a \"mondd\" blokkhoz. Ha a játékos rákattint az űrrobotra, minden végre lesz hajtva ami a \"kattintásra\" esemény blokkhoz csatlakozik.  Mit mond az idegened?"
+      4:
+        text: "Vannak \"ha nyíl\" blokkok is. Ha a \"mozogj\" blokkokat hozzárendeled ezekhez, akkor máris tudod mozgatni a szereplőket fel, le, balra, vagy jobbra. A játékod lépésről lépésre egyre interaktívabbá válik."
+    playlab_repeat_forever:
+      1:
+        text: "Ez az \"ismételd mindig\" blokk. Minden ezen a blokkon belül örökké ismétlődni fog a játék ideje alatt."
+      2:
+        text: "Ha azt akarjuk, hogy egy szereplő valamit többször, a játékos beavatkozása nélkül csináljon meg, a végrehajtandó blokkokat berakjuk a \"végtelen ismétlés\" blokkba."
+      3:
+        text: "Ebben a feladványban a célunk, hogy segítünk a varázslónak felvigyázni a Királyság határait, folyamatosan járőrözve balról jobbra. Megtanuljuk, hogyan működnek az ismétléses utasítások, amivel egy csomó időt takaríthatunk meg, ha majd saját játékot fogunk készíteni."
+    C1_artist_intro:
+      1:
+        text: "Ezek a rajzolási blokkjaid. Használd közülük az egyiket a művész mozgatásához arra a helyre, ahol megrajzolhatja a szürke vonalakat."
+      2:
+        text: "Ezek az ugrás blokk tagjai. Mikor ezeket használod, a művészed nem rajzol, hanem a következő szürke vonalra ugrik."
+    C1_bee_level_intro:
+      1:
+        text: "Ugye milyen jó pofák ezek a méhek? A következő lépés a feladványban, hogy segíts a méhnek eljutni a virágokhoz, hogy összegyűjtse a nektárt és elrepüljön a méhsejtre, hogy mézet készítsen. Használnod kell a \"get nectar\" azaz nektár begyűjtés, és a \"make honey\" azaz készíts mézet blokkokat ebben a gyakorlatban."
+      2:
+        text: "Minden virágon különböző számú nektár van: 1, 2, 3 vagy több. Tudjuk, hogy mennyi nektár van piros virágban, amit a sarkában lévő kis szám mutat. Bizonyosodj meg róla, hogy minden nektárt összeszedtél, mielőtt tovább mész. Továbbá minden méhsejt 1, 2, 3 vagy többet tartalmazhat. Győződj meg róla, hogy csak annyi nektárt tegyél a sejtbe, amennyit elbír."
+      3:
+        text: "Ha összegyűjtöttél minden nektárt, és elkészítetted az összes mézet, akkor vagy készen, és léphetsz a következő szintre. Ellenkező esetben meg kell ismételni a feladatot. Játszd végig és meg fogod érezni, milyen egy igazi programozó méh!"
+    C1_bee_loops:
+      1:
+        text: "A ciklus egy tevékenység ismételgetése. Tehát ha egy kaptárt vizsgálok meg, kiveszek egy keretet, megnézem, visszateszem, aztán ugyanezt megcsinálom a többi kerettel. Elölről kezdek mindent, ugyanazokat a lépéseket csinálom újra és újra."
+      2:
+        text: "Ezen a pályán azt szeretnénk, ha a méhecske három nektárt gyűjtene össze a virágokról. Ahelyett, hogy három \"Gyűjts nektárt\" blokkot használnánk, egy ciklus segítségével ismételjük ugyanazt a blokkot háromszor. Kattintsz a \"Futtatás\" gombra, és nézd meg, hogy sikerült-e! Ügyes voltál!"
+    C1_bigevent_unplugged:
+      1:
+        text: "Ennek a leckének a Nagy Esemény nevet adtuk. Arról szól, hogy hogyan irányítjuk a programjainkat és hogyan hogyan változik a programunk futása futtatás közben események segítségével - például amikor lenyomunk egy billentyűt, vagy amikor az egérrel kattintunk."
+      2:
+      3:
+      4:
+      5:
+        text: "A számítógépes játékokban van egy \"Update\", vagyis \"Frissítés\" esemény, ami 30-60-szer történik meg másodpercenként. Játékfejlesztőknek ez az esemény szinte fontosabb, mint a billentyűk vagy az egér eseményei."
+      6:
+    C1_happy_maps_unplugged:
+      1:
+      2:
+      3:
+      4:
+      5:
+        text: "Mintha papíron programoznál. Ennyi az egész!"
+    C1_maze_debugging:
+      1:
+      2:
+      3:
+      4:
+        text: "Javítsuk ki ezt egy új nyugat blokk hozzáadásával és indítsuk el újra. Hurrá! Megcsináltad!"
+    C1_maze_intro_sequencing:
+      1:
+        text: "Segíts a madárnak a malachoz jutni. Nézd meg a labirintust és döntsd el merre menjen."
+      2:
+        text: "Húzd a blokkokat az eszközkészletből a munkaterületre. Bizonyosodj meg róla, hogy a \"futtatáskor\" blokk alatt szerepel a helyes megoldásod, majd kattints a \"Futtatás\" gombra, és nézd meg, hogyan megy oda a madár a malachoz."
+    C1_moveitmoveit_unplugged:
+      1:
+      2:
+      3:
+        text: "A program egy olyan algoritmus, amit olyan formában kódoltak, hogy azt egy gép futtatni tudja. A legtöbbünk a program alatt a számítógépes programot értjük, de máshol is hasznosak tudnak lenni. Meg tudod írni a saját játékodat vagy akár egy robotot is programozhatsz, hogy helyetted csináljon meg dolgokat."
+    C1_going_places_safely:
+      1:
+        text: "A nevem Jeremiah. Szia! Hét éves vagyok. Szeretek játszani anyukám számítógépn de mindig megkérdezem szabad-e. \"Anyu, játszhatok a számítógéppel? Persze!\""
+      2:
+        text: "Szeretem anyukám számítógépét, mert meg tudom nézni az internetet. Az internet olyan mint a lakókörnyék. Király helyekre mehetsz, tudsz beszélgetni a családoddal és a barátaiddal és egy csomó új dolgot tanulhatsz."
+      3:
+        text: "Tegnap meglátogattam egy állatkertet, amely házam közelében van. Láttam egy zebracsikót. Lefényképeztem és megváltoztattam a csíkjai színét, adtam neki egy kalapot és hozzáadtam a fura állatok gyűjteményemhez. Menő! Egy messzi tájra utaztam, Kenyába. Ez egy ország Afrikában. Ott sok zebra él."
+      4:
+      5:
+      6:
+      7:
+    C1_pair_programming:
+      1:
+      2:
+      3:
+      4:
+        text: "A navigátornak a teljes képet kell látnia, míg a vezető a részletekre koncentrál. Mindegyik szerep fontos. A páros programozás a csapatmunkáról szól."
+    C1_planting_seed:
+      1:
+      2:
+        text: "A számítógépek nagyon okosak, de csak akkor, ha lépésről-lépésre megmondod nekik mit csináljanak. Az algoritmusokban az a jó, hogy ha pontosan követed az utasításokat, akkor olyan dolgot is meg tudsz csinálni, amit addig nem. Egy algoritmus olyan, mint egy recept."
+      3:
+      4:
+      5:
+    C1_playlab_storytelling:
+      1:
+      2:
+      3:
+        text: "Ez az \"amikor összeütköznek\" blokk, amihez újabb blokkokat csatlakoztathatsz."
+      4:
+        text: "Beállítottam, hogy a kutya idejöjjön, és azt mondja, hogy \"Szia\", de ekkor a macska megijedt, és elfutott. \"Ahhh.\" Ha több időm lenne, akkor biztosan jól végződött volna. Vége!"
+    C1_zuck_repeat_loop:
+      1:
+      2:
+      3:
+      4:
+        text: "Ehhez húzd a \"lépj előre\" parancsot, majd tedd az \"ismételd\" blokkba. Ezután kattints rá, majd add meg, hogy mennyiszer kell ismételni a blokkot, vagyis, hogy mennyi lépést kell előre menni."
+      5:
+    C2_artist_intro:
+      1:
+      2:
+        text: "Ezekben a fejtőrökben egy művész leszek, aki a ceruzájával különböző alakzatokat fog rajzolni. Bármerre megy a művészed, egy vonalat fog rajzolni."
+      3:
+        text: "A vásznon való mozgáshoz használd a \"lépj előre\" blokkot. Itt a \"lépj előre\" blokk 100 képpontnyi előre lépést jelent. Mi történik, amikor a \"Futtatás\" gombra kattintasz? A művész előre lép egy bizonyos mennyiséget, és ez a mennyiség 100 képpont. A képpontok lényegében nagyon pici négyzetek a számítógép képernyőjén."
+      4:
+        text: "A másik blokk, ami ebben a feladványban szerepel a \"fordulj jobbra 90 fokot\" blokk. És amikor ezt használjuk, a művész egy bizonyos mértékben elfordul. Játszhatsz azzal, hogy mennyit forduljon el a művész. Ez egy 90 fokos fordulat."
+      5:
+        text: "Ez pedig egy 120 fokos fordulat. Ne felejtsd el, hogy ezeket az értékeket a képpont, illetve a fok melletti nyílra kattintva megváltoztathatod. Jó szórakozást a rajzoláshoz!"
+    C2_bee_conditionals:
+      1:
+      2:
+        text: "Ez akkor hasznos, ha nem tudjuk mennyi nektárt vagy mézet kell összegyűjtenünk, mint ahogy itt látjuk, az a kérdőjellel."
+      3:
+    C2_binary_bracelets:
+      1:
+      2:
+        text: "A bináris számrendszer arra alkalmas, hogy csak két értéket jelentsünk meg. Sokszor az emberek csak 1-esekre és 0-kra gondolnak, de a bináris számrendszer alkalmas \"be\" vagy \"ki\", \"fel\" vagy \"le\", vagy bármilyen ellentét leírására."
+      3:
+        text: "Szia, a nevem Orion és robotokat programozok a Play-im-nél. Minden számítógép és robot legelemibb építőeleme elektromos kapukból áll. Ha a kapu nyitva van, az áram át tud rajta folyni, ha zárva van, nem tud."
+      4:
+    C2_conditionals_with_cards:
+      1:
+      2:
+      3:
+      4:
+        text: "Fogadok, hogy tudsz olyan játékot készíteni, amely feltételes elágazások használatával még szórakoztatóbb. Próbáld meg! A számítógépek feltételes elágazások miatt tűnnek okosnak. A feltételeket tartalmazó programok reagálni tudnak a felhasználói tevékenységekre, és az alapján hajtanak végre műveleteket."
+      5:
+    C2_artist_debugging:
+      1:
+        text: "Már elhelyeztünk pár blokkot, de valami nem működik."
+      2:
+        text: "Keressük meg a hibát a kódban: lassítsuk le a játékot, és figyeljük meg mi történik lépésről-lépésre."
+      3:
+        text: "Ott a hiba! A cica bajsza 75 pixel hosszú, nem 25."
+    C2_bee_debugging:
+      1:
+        text: "Hallottál már a programok hibakereséséről? Így lehet megtalálni, ha egy program nem működik helyesen. Amikor hibakeresel, megtalálod és kijavítod a hibákat."
+      2:
+        text: "Már elhelyeztünk pár blokkot. A \"Lépés\" gombot fogjuk használni hogy minden blokkot lépésről-lépésre vizsgálhassunk. Így meg tudjuk nézni, hogy helyes-e a megoldás, és ha nem, hol kell kijavítani a kódot."
+      3:
+        text: "Úgy tűnik ott a hiba. Szükség van még egy \"lépj előre\" blokkra. A \"Lépés\" gomb segít a programunk hibakeresésében, hogy megtaláljuk és kijavítsuk a hibákat."
+    C2_bee_loops:
+      1:
+        text: "A ciklus egy tevékenység ismételgetése. Tehát ha egy kaptárt vizsgálok meg, kiveszek egy keretet, megnézem, visszateszem, aztán ugyanezt megcsinálom a többi kerettel. Elölről kezdek mindent, ugyanazokat a lépéseket csinálom újra és újra."
+      2:
+    C2_maze_intro:
+      1:
+      2:
+      3:
+      4:
+        text: "Most a \"fordulj jobbra\" blokkot fogom használni, és addig húzom, amíg meg nem jelenik a sárga nyíl. Ekkor elengedem, és a két blokk összekapcsolódik. Amikor újra megnyomom a \"Futtatás\" gombot, a madár felülről lefelé haladva végrehajtja a munkaterületen egymás után pakolt parancsokat."
+      5:
+    C2_playlab_createstory:
+      1:
+        text: "Eddig egy animációt vagy történetet készítettél, ami pontosan ugyanazt csinálja mindig, amikor futtatod. Most egy interaktív játékot csinálhatsz, amivel valóban játszani lehet."
+      2:
+        text: "Itt van a \"ha nyíl\" blokk és a \"mozgasd a szereplőt\" blokk. Ezeket a blokkokat összeillesztheted, hogy a szereplőket a nyilakkal mozgatni tudd."
+    C2_zuck_repeat_loop:
+      1:
+        text: "A számítógépek különösen jók a parancsok ismétlésében. Emberként elég hamar megunjuk, ha ugyanazokat a dolgokat sokszor kell megismételnünk. De a számítógép ugyanazt a dolgot képes milliószor, vagy akár milliárdszor is megcsinálni, és nem fogja megunni, hanem rendben végre fogja hajtani."
+      2:
+        text: "Tegyük fel, hogy a Facebookon mindenkinek születésnapi köszöntőlevelet szeretnél küldeni. Ha valójában meg akarnánk írni ezeket az e-maileket, akkor több, mint egy századba telne ezt megtennünk. Azonban néhány sor kóddal megoldható, hogy a rendszer mindenkinek a Facebookon elküldjön egy születésnapi köszöntőt. Szóval valójában ez a ciklus, és ezért olyan fontos a létezésük, és a számítógépek nagyon jók a ciklusok végrehajtásában."
+      3:
+        text: "Ebben a példában a célod, hogy eljuttasd a madarat a malachoz. Most már használhatjuk az \"ismételd\" blokkot a feladat egyszerűbb megoldására. Megcsinálhatod úgy is a feladatot, hogy ötször adod ki a \"lépj előre\" parancsot, hogy minden lépéssel eggyel közelebb legyél a malachoz."
+      4:
+        text: "Vagy mondhatod a számítógépnek, hogy \"lépj előre\" egyszer, majd ezt pedig \"ismételd\" 5 alkalommal, és így ennyiszer fogja ugyanazt csinálni. Szóval ehhez húzd a \"lépj előre\" parancsot az \"ismételd\" blokkba. Majd kattints rá, és állítsd be, hogy mennyiszer kell ismételni a blokkot, vagyis hányszor szeretnél előre lépni."
+      5:
+        text: "Még egy dolog: annyi parancsot helyezhetsz el az \"ismételd\" blokkban, amennyit csak akarsz. Ebben a példában azt mondjuk, hogy lépj előre, majd fordulj balra, és ezt ötször tesszük meg. Ügyes munka, jó szórakozást!"
+    C3_artist_functions:
+      1:
+        text: "Az egyik nagyszerű dolog a számítógépes programozásban, hogy miután megtanítottad a számítógépet, hogyan kell egy dolgot megcsinálni, meg tudod hívni ugyanazt a függvényt újra. Adsz neki egy nevet, majd meghívod. Ez valójában a nyelv kibővítése."
+      2:
+        text: "Az általunk készített programban megtanultuk, hogyan kell négyzetet rajzolni négyszeri előrelépéssel és fordulással. Vegyük ezt a függvényt, és adjuk neki a \"rajzoljon egy négyzetet\" nevet. Szóval akármikor négyzetet szeretnénk rajzolni, csak annyit mondunk, hogy \"rajzoljon egy négyzetet\", ekkor meghívja a függvényt, az abban lévő kódot. Megcsinálja nekünk a rajzolást. Hozzáadtuk ezt a fogalmat a programozási nyelvünkhöz."
+    C3_artist_intro:
+      1:
+      2:
+        text: "Ezekben a fejtőrökben egy művész leszek, aki a ceruzájával különböző alakzatokat fog rajzolni. Bármerre megy a művészed, egy vonalat fog rajzolni."
+      3:
+        text: "A vásznon való mozgáshoz használd a \"lépj előre\" blokkot. Itt a \"lépj előre\" blokk 100 képpontnyi előre lépést jelent. Mi történik, amikor a \"Futtatás\" gombra kattintasz? A művész előre lép egy bizonyos mennyiséget, és ez a mennyiség 100 képpont. A képpontok lényegében nagyon pici négyzetek a számítógép képernyőjén."
+      4:
+        text: "A másik blokk, ami ebben a feladványban szerepel a \"fordulj jobbra 90 fokot\" blokk. És amikor ezt használjuk, a művész egy bizonyos mértékben elfordul. Játszhatsz azzal, hogy mennyit forduljon el a művész. Ez egy 90 fokos fordulat."
+      5:
+        text: "Ez pedig egy 120 fokos fordulat. Ne felejtsd el, hogy ezeket az értékeket a képpont, illetve a fok melletti nyílra kattintva megváltoztathatod. Jó szórakozást a rajzoláshoz!"
+    C3_artist_nested_loops:
+      1:
+        text: "Amikor egy ciklust egy másik ciklusba helyezünk el, azt beágyazott ciklusnak nevezzük. Például itt a kódunk egy háromszöget rajzol 100 képpont hosszúságú oldalakkal úgy, hogy az ismételd blokkban 3 alkalom van megadva, a háromszög minden oldalának megrajzolásához."
+      2:
+        text: "De mi most 6 darab háromszöget szeretnénk rajzolni. Ehhez vesszük azt a ciklust, és betesszük egy másik ismételd blokkba. Egész menő!"
+    C3_bee_conditionals:
+      1:
+      2:
+        text: "Ez akkor hasznos, ha nem tudjuk mennyi nektárt vagy mézet kell összegyűjtenünk, mint ahogy itt látjuk, az a kérdőjellel."
+      3:
+    C3_bee_debugging:
+      1:
+        text: "Hallottál már a programok hibakereséséről? Így lehet megtalálni, ha egy program nem működik helyesen. Amikor hibakeresel, megtalálod és kijavítod a hibákat."
+      2:
+        text: "Már elhelyeztünk pár blokkot. A \"Lépés\" gombot fogjuk használni hogy minden blokkot lépésről-lépésre vizsgálhassunk. Így meg tudjuk nézni, hogy helyes-e a megoldás, és ha nem, hol kell kijavítani a kódot."
+      3:
+        text: "Úgy tűnik ott a hiba. Szükség van még egy \"lépj előre\" blokkra. A \"Lépés\" gomb segít a programunk hibakeresésében, hogy megtaláljuk és kijavítsuk a hibákat."
+    C3_bee_functions:
+      1:
+      2:
+      3:
+      4:
+        text: "Ebben a példában a függvényünket \"get 2 nectar\"-nak neveztük el, ez a zöld blokk itt. A szürke dobozra nézve, látjuk, hogy mit csinál a get 2 nectar függvény, vagyis ez a függvény definíciója. Ha belenézünk, látjuk, hogy a get 2 nectar először begyűjt egy nektárt, majd megint begyűjt egy nektárt. Mindig azt nézd, hogy mi van a szürke dobozban, hogy megtudd, mire képesek ezek a zöld függvény blokkok."
+    C3_internet:
+      1:
+      2:
+      3:
+      4:
+        text: "A postai szolgáltatásokkal szemben az első dolog ami történik, hogy az internet az üzenetet kisebb részekre osztja szét, hogy azokat egyszerűbb legyen elküldeni. Ezeket a kis részeket nevezik csomagokban. A csomagokat egyesével küldi el a címzettnek. A csomagokat ezután a megfelelő sorrendbe rendezi, hogy a fogadó fél számára megfelelően olvashatóan jelenjen meg. Természetesen rengeteg mindent kell még megismerni az internet működésével kapcsolatban, de ez egy remek kezdés. Kezdesz hozzáértő internet-felhasználó lenni! Ne felejtsd el megosztani a családoddal és barátaiddal, amit tanultál!"
+      5:
+      6:
+    C3_maze_conditionals:
+      1:
+      2:
+      3:
+      4:
+        text: "Egy egy példa az if (ha) utasítás használatára, amely egy alapvető fogalom a számítógépes programozásban. Az egyik első dolog, amit megtanultam leprogramozni, a tic-tac-toe. Voltak benne if utasítások, amelyek azt mondták, hogy oké, ha a másik személy nyerni fog, akkor akadályozd meg. Jó szórakozást az if utasítások megismeréséhez, amely tényleg kulcsfontosságú."
+    C3_maze_level_4:
+      1:
+        text: "Ebben a példában a cél, hogy a zombi eljusson a napraforgóhoz. Használhatjuk ötször a lépj előre blokkot, vagy mondhatjuk azt a számítógépnek, hogy ismételje ötször az előrelépést az ismételd blokk használatával."
+      2:
+        text: "Ezzel időt takarítunk meg és egyszerűbb is lesz a dolgunk. A használatához tedd a lépj előre blokkot az ismételd blokk belsejébe. Kattints a Futtatás gombra, és a zombi ötször előre lép a fincsi napraforgóhoz."
+    C3_playlab_create_game:
+      1:
+        text: "Eddig egy animációt vagy történetet készítettél, ami pontosan ugyanazt csinálja mindig, amikor futtatod. Most egy interaktív játékot csinálhatsz, amivel valóban játszani lehet."
+      2:
+        text: "Itt van a \"ha nyíl\" blokk és a \"mozgasd a szereplőt\" blokk. Ezeket a blokkokat összeillesztheted, hogy a szereplőket a nyilakkal mozgatni tudd."
+    C4_bee_conditional:
+      1:
+        text: "Ez egy feltételes blokk. Azt mondja, ha egy virágnál vagy lépnél vagy, akkor csinálj valamit. Ez akkor hasznos, ha nem tudjuk, hogy mennyi mézet vagy nektárt kell gyűjtenünk, mint például itt, és ezt kérdőjel jelzi."
+      2:
+        text: "Ebben a példában azt mondjuk, hogy ha egy virágnál vagyunk, akkor gyűjtsük be az összes nektárt, aztán egy másikkal pedig azt, hogy ha egy lépnél vagyunk, akkor készítsünk mézet. Kész is!"
+    C4_conditionals:
+      1:
+        text: "Van egy új blokkunk, amit ha/különben blokknak hívunk. Ez egy feltételes utasítás, ugyanúgy, mint az if blokk, amit már korábbi feladványainkban használtunk. Azonban most van egy új tagja, ez a különben rész az alján. A ha/különben blokk lehetővé teszi, hogy a méh döntsön két művelet között. Ha a méh virágnál van, akkor azokat az utasításokat fogja elvégezni, amelyeket az első részbe teszel. Ha a méh nincs virágnál éppen, akkor azokat fogja végrehajtani, amiket a különbenhez tartozó részhez teszel."
+      2:
+        text: "Az if elágazások teszik lehetővé, hogy a számítógépek döntéseket hozzanak. Az emberek feltételeket alkotnak meg a számítógép számára, amelyek megmondják, hogy ha számítógép egy bizonyos szituációval találkozik, akkor tegye ezt. Különben pedig tegye azt. A ha/különben blokkunk tetején az áll, ha virágnál. De persze más is lehet a blokkunk tetején, például ha nektár egyenlő 2, vagy van előtted út, és a blokkunk ugyanúgy fog működni. Vagyis ha a blokk tetején lévő feltétel igaz, akkor az első részben lévő parancsokat hajtja végre. Azonban ha a tetején lévő feltétel hamis, akkor a második részben lévő utasításokat hajtja végre."
+    C4_for_loops:
+      1:
+        text: "Amikor egy ismételd blokkot használsz a kódod ciklusba szervezésére, honnan tudja a számítógép, hogy mikor ismételte meg elégszer az utasításokat? Az ismételd blokk valójában egy kifinomultabb blokkot rejt magában, mégpedig a for ciklust, amely egy kezdő értéktől egy végső értékig számol megadott lépésközzel."
+      2:
+        text: "Például az ismételd 3 alkalommal blokk 1-től 3-ig számol egyesével. Minden számolásnál végrehajtja a benne lévő utasításokat. A for ciklus egy számláló változó segítségével tudja, hogy mennyiszer futott le, amely az elején a kezdő értékre van beállítva, és a lépésköz a ciklus minden egyes futtatásakor hozzáadódik. Amint a változó értéke nagyobb lesz, mint a végső érték, a ciklus leáll."
+      3:
+        text: "Az ismételd blokk helyett azért érdemes a valódi for ciklust használni, mivel láthatod a számláló (változó) értékét, és felhasználhatod a ciklusodban. Például ha több virágunk is van, az elsőben egy nektár, a másodikban két nektár, a harmadikban pedig három nektár van, akkor használhatom a for ciklust arra, hogy a méh \"számláló\" mennyiségű nektárt gyűjtsön össze minden alkalommal, vagyis egyet az első virágnál, kettőt a másodiknál, és hármat a harmadiknál."
+      4:
+        text: "A számlálós (for) ciklusban a számláló értékét nemcsak eggyel, hanem más értékkel is növelheted. Léphetsz kettesével, négyesével, de akár folyamatosan változó értékkel is."
+    C4_for_loops_bee:
+      1:
+        text: "Amikor egy ismételd blokkot használsz a kódod ciklusba szervezésére, honnan tudja a számítógép, hogy mikor ismételte meg elégszer az utasításokat? Az ismételd blokk valójában egy kifinomultabb blokkot rejt magában, mégpedig a for ciklust, amely egy kezdő értéktől egy végső értékig számol megadott lépésközzel."
+      2:
+        text: "Például az ismételd 3 alkalommal blokk 1-től 3-ig számol egyesével. Minden számolásnál végrehajtja a benne lévő utasításokat. A for ciklus egy számláló változó segítségével tudja, hogy mennyiszer futott le, amely az elején a kezdő értékre van beállítva, és a lépésköz a ciklus minden egyes futtatásakor hozzáadódik. Amint a változó értéke nagyobb lesz, mint a végső érték, a ciklus leáll."
+      3:
+        text: "Az ismételd blokk helyett azért érdemes a valódi for ciklust használni, mivel láthatod a számláló (változó) értékét, és felhasználhatod a ciklusodban. Például ha több virágunk is van, az elsőben egy nektár, a másodikban két nektár, a harmadikban pedig három nektár van, akkor használhatom a for ciklust arra, hogy a méh \"számláló\" mennyiségű nektárt gyűjtsön össze minden alkalommal, vagyis egyet az első virágnál, kettőt a másodiknál, és hármat a harmadiknál."
+      4:
+        text: "A számlálós (for) ciklusban a számláló értékét nemcsak eggyel, hanem más értékkel is növelheted. Léphetsz kettesével, négyesével, de akár folyamatosan változó értékkel is."
+    C4_for_loops_no_bee:
+      1:
+        text: "Amikor egy ismételd blokkot használsz a kódod ciklusba szervezésére, honnan tudja a számítógép, hogy mikor ismételte meg elégszer az utasításokat? Az ismételd blokk valójában egy kifinomultabb blokkot rejt magában, mégpedig a for ciklust, amely egy kezdő értéktől egy végső értékig számol megadott lépésközzel."
+      2:
+        text: "Például az ismételd 3 alkalommal blokk 1-től 3-ig számol egyesével. Minden számolásnál végrehajtja a benne lévő utasításokat. A for ciklus egy számláló változó segítségével tudja, hogy mennyiszer futott le, amely az elején a kezdő értékre van beállítva, és a lépésköz a ciklus minden egyes futtatásakor hozzáadódik. Amint a változó értéke nagyobb lesz, mint a végső érték, a ciklus leáll. A for ciklus használatának előnye az ismételd blokkal szemben, hogy láthatod a számláló (változó) értékét a ciklusodban."
+    C4_function_create:
+      1:
+        text: "Most, hogy már módosítottál függvényblokkokat, itt az ideje, hogy teljesen nulláról te hozz létre egy függvényblokkot. Láthatod, hogy az eszköztáron lett egy függvények nevű kategória. Ha erre rákattintasz, láthatsz egy narancssárga gombot, amely a \"Függvény létrehozása\" nevet viseli. Erre kattintva megjelenik a függvényszerkesztő, amelyet már használtál a függvény blokk módosításakor."
+      2:
+        text: "Ahogy korábban, a függvény elnevezésével kell kezdeni, vagyis annak a leírásával, hogy mit fog csinálni a függvényed. Például, hogy rajzoljon egy négyzetet vagy rajzoljon egy háromszöget, majd pedig bele kell húznod a blokkokat az eszközkészletből a munkaterületre. Ne felejtsd el, hogy ezeket a függvényt alkotó zöld blokkon belülre kell húznod."
+      3:
+        text: "Miután végeztél, kattints a mentésre, majd lépj ki. Ezzel visszatérsz a fő munkaterületre. Az újonnan létrehozott függvény a függvény kategóriában egy zöld blokként fog megjelenni. Húzd ezt a blokkot a munkaterületre, és használd ezt a feladvány megoldására ugyanúgy, mint bármely más blokkot."
+    C4_function_edit:
+      1:
+        text: "Az egyik nagyszerű dolog a számítógépes programozásban, hogy miután megtanítottad a számítógépet, hogyan kell egy dolgot megcsinálni, meg tudod hívni ugyanazt a függvényt újra. Adsz neki egy nevet, majd meghívod. Ez valójában a nyelv kibővítése."
+      2:
+        text: "Az általunk készített programban megtanultuk, hogyan kell négyzetet rajzolni négyszeri előrelépéssel és fordulással. Vegyük ezt a függvényt, és adjuk neki a \"rajzoljon egy négyzetet\" nevet. Szóval akármikor négyzetet szeretnénk rajzolni, csak annyit mondunk, hogy \"rajzoljon egy négyzetet\", ekkor meghívja a függvényt, az abban lévő kódot. Megcsinálja nekünk a rajzolást. Hozzáadtuk ezt a fogalmat a programozási nyelvünkhöz."
+      3:
+        text: "Ebben a feladványban már létrehoztunk számodra egy rajzoljon egy négyzetet függvényt. Az eszközkészletben zöld blokként jelenik meg. A dolgod az lesz, hogy írd meg ugyanazt a kódot, amit korábban a négyzet megrajzolására írtál, és helyezd el ebben a függvényben. Ehhez kattints a szerkeszt gombra a zöld rajzoljon egy négyzetet blokkon. Ekkor megnyílik a függvényszerkesztő. A függvényszerkesztőnek három része van. Egy hely, ahol elnevezheted a függvényedet. Ez fog megjelenni a zöld blokkon a függvény utasításai előtt. Ezután írhatsz egy rövid leírást, hogy mit kell tegyen a függvényed."
+      4:
+        text: "Ebben az esetben egy négyzetet kell rajzoljon. Az alatta lévő fehér terület ugyanúgy működik, mint a korábbi munkaterület. Az eszközkészletből idehúzhatod a blokkokat. A négyzetet rajzoló blokkokat a zöld függvényblokkon belülre kell elhelyezned. Miután végeztél, kattints a mentés gombra, majd lépj ki. Ezzel visszatérsz a fő feladvány munkaterületére. Most már a többi blokkhoz hasonlóan használhatod is a négyzet megrajzolására szolgáló függvényblokkot a feladvány megoldásához."
+    C4_function_parameters:
+      1:
+        text: "Ez egy olyan függvény, amely 50 képpont oldalhosszúságú négyzetet rajzol. Ez jól jön akkor, amikor 50 képpont oldalhosszúságú négyzetet akarunk rajzolni, de mi van a 100 képpont méretű négyzettel? Nem kellene két olyan függvényt létrehoznunk, amik majdnem ugyanazt csinálják. Ehelyett a függvényt paraméterrel használjuk."
+      2:
+        text: "A paraméterek lehetővé teszik, hogy értékeket adjunk át a függvénynek, amelyek a függvényen belül változók lesznek. Adjunk egy paramétert ehhez a függvényhez, amellyel különböző méretű négyzeteket tudunk rajzolni. A függvényszerkesztőben ugyanúgy szerkesztheted a nevet és a leírást, mint korábban, de most már paraméter hozzáadására is lehetőséged van. Írd a paraméter nevét a rendelkezésre álló fehér területre, majd kattints a Paraméter hozzáadása gombra. Ez létrehoz egy piros blokkot azzal a névvel, amit paraméterként az előbb megadtál. Most már kicserélhetjük a lépj előre 100 lépést blokkot a Length (hossz) paraméterrel, így Length (hossz) lépést fog előre lépni."
+      3:
+        text: "Kattints a mentésre, majd lép ki. Ezután húzd az újonnan alkotott függvényedet a munkaterületre az eszközkészletből. Észreveheted, hogy van egy üres hely a hossz mellett, mivel a függvény tudni szeretné, hogy mi legyen a Length (hossz) paraméter értéke. Húzz egy szám blokkot a Matematika (Math) kategóriából az üres helyre. Nézd meg, hogyan használhatod a függvényt újra és újra különböző hosszúságokkal, hogy különböző méretű négyzeteket rajzolj. Próbáld ki magad!"
+    C4_math_artist:
+      1:
+        text: "Ha egy olyan téglalapot szeretnénk rajzolni, amely 50 képpont magas és kétszer olyan széles, mint amilyen magas, akkor ezt hogyan programozhatjuk le a számítógép számára? Hát, mondhatom a művésznek, hogy menjen fel 50-et, majd forduljon jobbra, majd menjen előre 100-at, és ezt kétszer tegye meg. De ekkor én végzem el a számítást a számítógép helyett."
+      2:
+        text: "Az ötvenet fejben kettővel összeszorozni nem tűnik nehéznek, de a számítógépek nagyon jók a számolásban, így érdemes rájuk bízni, amikor csak lehetséges. Ha az 50 helyett inkább egy \"height\" (magasság) nevű változót használok, akkor egyszerűen módosíthatom az algoritmust úgy, hogy menjen fel magasságnyit, forduljon jobbra, majd menjen 2-szer magasságnyit, amely egy olyan téglalapot eredményez, ami kétszer olyan széles, mint amilyen magas."
+    C4_variables_artist:
+      1:
+        text: "A változó egy olyan tároló, amelyben egy értéket tudunk megőrizni. Amikor egy algoritmusban használod ezt a változót, az kinyitja a tárolót, és megnézi, hogy milyen érték található benne. Ezzel okosabb algoritmusokat írhatsz, amelyek a változóban tárolt értéktől függően másképpen viselkednek."
+      2:
+        text: "Például, ha azt az algoritmust szeretném megírni, hogy \"Boldog születésnapot, 10 éves lettél!\" a testvéremnek, akkor ez jól működhet, de következő évben már azt akarom mondani, hogy \"Boldog születésnapot, 11 éves lettél!\". Használhatok egy \"kor\" (age) nevű változót a testvérem életkorának tárolására, és az algoritmusom lehet az az előző helyett, hogy \"Boldog születésnapot, \"kor\" éves lettél!\". Mivel a változók változhatnak, ezért a \"kor\" változó értékét frissítenem kell \"kor\" plusz 1 értékre."
+      3:
+        text: "Ebben a feladványban egy olyan változót fogunk használni, amely megadja a művész által rajzolt vonal hosszát. Később a kódunkban a \"lépj előre\" blokk megnézi, hogy milyen érték van beállítva a \"length\" (hossz) változóban."
+    C4_variables_playlab:
+      1:
+        text: "A változó egy olyan tároló, amelyben egy értéket tudunk megőrizni. Amikor egy algoritmusban használod ezt a változót, az kinyitja a tárolót, és megnézi, hogy milyen érték található benne. Ezzel okosabb algoritmusokat írhatsz, amelyek a változóban tárolt értéktől függően másképpen viselkednek."
+      2:
+        text: "A játéklaborban fogsz most próbálkozni, és különböző játékokban kell a változók, úgy mint sebesség, magasság, pontszám, értékét módosítanod, és ezáltal a játék is változni fog. Nem kell a játék algoritmusát módosítanod, csak a változó értékét."
+      3:
+        text: "A Kindle és a könyv X-ray számára végzett munkám során számos különböző módon használjuk a változókat. Például egy változóban el lehet menteni a könyv oldalainak a számát. A felhasználó növelheti vagy csökkentheti az oldalon található betűk méretét. A betűméret módosításával pedig módosulhat a könyv oldalainak száma. Ezt a könyv oldalszámának változóban tárolásával tudjuk beállítani."
+    starwars_intro:
+      1:
+        text: "Szia, Kathleen Kennedy vagyok, a Star Wars Ébredő erő producere. Ma egy filmcsillagunkkal fogsz dolgozni, BB-8-tel, aki egy szférikus droid. Mindent, amit csinál, és minden mozgását számítógépes szoftver irányítja. A számítógép-tudomány minden iparágban jelen van a marketingtől az egészségügyön át a filmig. Valójában informatikai mérnökök százai dolgoznak együtt az olyan filmeken, mint az Ébredő erő."
+      2:
+        text: "Szia, Rachel Rose vagyok, vezető kutatásfejlesztő mérnök az ILM-nél és én vezetem az animációs és karakterfejlesztő csapatot. Az erő ébredésében én segítek a művészeknek kidolgozni a mozgó ruhákat. Ezek a karakterek szerves részét képezik, és valósághűvé teszik őket a messzi-messzi galaxisban."
+      3:
+        text: "A következő egy órában a saját Star Wars játékunkat fogjuk elkészíteni. Megtanítjuk neked a programozás alapvető fogalmait. A programozás általában szövegesen történik, de mi vonszolható blokkokat fogunk használni a programíráshoz. A felszín alatt továbbra is kód lapul. Miután a blokkokkal kapcsolatos alapokat megtanultad, átváltunk JavaScriptre, az egyik népszerű webes programozási nyelvre."
+      4:
+        text: "Kezdetben Rey-jel fogsz dolgozni, aki beprogramozza BB-8-et, hogy minden ócskavasat összegyűjtsön. A képernyő három részre oszlik. A bal oldal a Star Wars játéktér, ahol a kód futni fog. A feladatokhoz kapcsolódó utasítások a játéktér alatt vannak."
+      5:
+        text: "A középső részben van az eszköztár, és benne minden blokk egy parancs, amit BB-8 megért."
+      6:
+        text: "A fehér terület a Munkaterület, és itt fogjuk építeni a programot."
+      7:
+        text: "Ha a mozdulj balra blokkot a munkaterületre vonszolod, és a Futtatásra kattintasz, mi fog történni? BB-8 balra mozdul egyet a rácson."
+      8:
+        text: "És mi a helyzet, ha BB-8-nek valami mást is kell csinálnia a mozdulj balra blokk után? Hozzáadhatsz még egy blokkot a programhoz. Én most a mozdulj fel blokkot választom, és a mozdulj balra alá vonszolom, amíg a kiemelés meg nem jelenik. Ekkor elengedem, és a két blokk összekattan."
+      9:
+        text: "Ha ezután megnyomom a Futtatást, BB-8 minden a munkafelületen található parancsot teljesíteni fog föntről lefelé haladó sorrendben. Ha törölni szeretnél egy blokkot, csak vonszold vissza az eszköztárba."
+      10:
+        text: "Ha már megnyomtad a futtatást, bármikor rányomhatsz a Visszaállítás gombra, és újrakezdheted a munkát BB-8-tel. Nos, lássunk hozzá!"
+    starwars_typing:
+      1:
+        text: "A blokkok JavaScript parancsokat takarnak. A professzionális programozók körében manapság a JavaScript a legnépszerűbb programnyelv. Blokkokkal nagyon jól el lehet kezdeni tanulni a programozást, és valójában olyan vezető egyetemeken is, mint a Harvard vagy a Berkeley így kezdik tanítani a programozást. De miután az alapokat elsajátították, a mérnökök gépelik a kódot, mert így gyorsabban haladnak."
+      2:
+        text: "Több száz fajta parancsot begépelhetünk anélkül, hogy az eszköztárban kellene keresgélnünk őket. A tanulás során a gépelés lassabbnak tűnik, de azért érdemes megpróbálni."
+      3:
+        text: "A munkafelület jobb fölső sarkában a Kód megjelenítésére kattintva kattinthatsz a blokkokról a gépelős üzemmódba."
+      4:
+        text: "A következő leckében gépelési módban kezdünk. Még mindig behúzhatod az eszköztárból a blokkot, de beírhatod a parancs nevét is. Ahogy elkezdesz gépelni, látni fogod a lehetséges utasítások neveit az alatt, ahol gépelsz. Hogy gyorsabban haladj, ahelyett, hogy begépelnéd a teljes utasítás nevét, kiválaszthatod a felsorolásból az egyiket. Én mindig alkalmazom a munkámban ezt az automatikus-kiegészítés funkciót."
+      5:
+        text: "Amikor a kódot gépeled, akkor a számítógép elvárja, hogy nagyon precíz legyél. Pontosan kell gépelned az utasításneveket, figyelve a kis és nagybetűkre, a zárójelekre és a pontosvesszőkre. A legkisebb gépelési hiba is azt jelentheti, hogy BB-8 nem tudja megérteni a kódot és nem fog tudni mozogni."
+      6:
+        text: "Amikor egy sorban hibázol, akkor a szerkesztő kiemeli azt, így meg tudod próbálni kijavítani a szöveget."
+      7:
+        text: "Ha elakadsz, akkor az újrakezdés gomb megnyomásával bármikor elkezdheted az elejéről a feladatot, de visszaválthatsz blokk módba is a jobb felső sarokba kattintva. Akkor próbáljuk meg a gépelést! Ne keseredj el, ha hibázol. Mindenki próbálkozik egy darabig, mire összejön."
+    starwars_events:
+      1:
+        text: "Szia, az én nevem Charita Carter. Vezető kreatív producer vagyok a Walt Disney Imagineeringnél. Én vagyok felelős azokért a játékokért, amelyekkel a látogatóink találkoznak. Mindig keressük a lehetőségét annak, hogy fejlődjünk és emlékezetesebb élményt nyújtsunk a látogatóinknak, és a technológia alapvető ebben a folyamatban."
+      2:
+        text: "Gratulálunk, megcsináltad! Ügyesen programoztad a BB-8-et. Most itt az ideje, hogy valami nehezebbe kezdjünk. Vágjunk bele! Miután a programozás alapjait megtanultad, visszamegyünk az időben és a saját játékunkat fogjuk elkészíteni R2-D2 és C3PO szereplésével."
+      3:
+        text: "Hogy játékot tudjunk csinálni, meg kell ismerned egy fogalmat, amit a programozók minden nap használnak: ezek az események. Az események mondják a programnak hogy hallgassanak vagy várjanak addig, amíg valami nem történik, és amint az a dolog megtörténik, tegyenek valamit."
+      4:
+        text: "Esemény például egy kattintás az egérrel, egy nyíl billentyű lenyomása vagy az érintőképernyő megérintése."
+      5:
+        text: "Most R2-D2-nak felfelé kell mozognia, hogy elvigyen egy üzenetet egy lázadó pilótáknak, majd lefelé kell mozognia a másik Lázadóhoz. Eseményeket fogunk használni a mozgatáshoz, amikor a játékos a föl-le billentyűket vagy gombokat használja."
+      6:
+        text: "A \"ha van felfelé nyíl\" esemény blokkot fogjuk használni, és hozzácsatoljuk a menj fel blokkot. Ha a játékos megnyomja a felfelé nyilat, akkor a \"ha van felfelé nyíl\"-hoz kapcsolódó blokk elkezd futni. És ugyanezt fogjuk csinálni, hogy R2-D2 lefelé mozogjon."
+      7:
+        text: "Ehhez a \"ha van felfelé nyíl\" whenUp() parancsot fogjuk használni. Amikor a parancsot kihúzod az eszköztárból, akkor látni fogod, hogy az egy-egy kapcsos zárójellel kezdődik és végződik a pontosvessző helyett. Ez lehetővé teszi, hogy középre más parancsokat illesszünk. Minden olyan parancs, amit ide beteszünk lefut majd, amikor a játékos megnyomja a felfelé mutató nyilat."
+      8:
+        text: "Azt akarjuk, hogy R2-D2 felfelé menjen, így tegyünk be egy menj fel blokkot a parancsba. És ugyanezt fogjuk tenni, hogy R2-D2 lefelé menjen."
+      9:
+        text: "Így ahelyett, hogy a droid minden mozgását előre megterveznénk, R2-D2 a gombnyomásokra fog reagálni, és így fog mozogni a képernyőn. Lépésről lépésre egyre interaktívabb lesz a játék."
+    starwars_congrats:
+      1:
+        text: "Szia, az én nevem Alice és én vezetem a projektet és a fejlesztő csapatot itt, a code.org-nál. Ezen a feladatsoron is dolgoztam, amit éppen elvégzel."
+      2:
+        text: "Az utolsó szinten is túljutottál. Gratulálunk! Mindent megtanultál, ami ahhoz szükséges, hogy elkészítsd a saját Star Wars játékodat. Nincs több utasítás és megoldandó feladat. Elkészítheted a saját játékod és kitalálhatod, hogy működjön. Még egy dolog: új hangok és parancsok állnak a rendelkezésedre, hogy még több dolgot tudj csinálni."
+      3:
+        text: "[tanulók beszélnek] Olyan játékot készítettünk, hogy akkor kapsz pontot, ha elkapsz egy Malacot. Viszont az a csavar, hogy valahányszor elkapsz egy Malacot, megjelenik egy Rohamosztagos. Az egész képernyő tele van Malacokkal, és ha 10 000-et elkapsz, akkor nyersz."
+      4:
+        text: "[tanulók beszélnek] Olyan játékot készítettünk, hogy nem veszthetsz, és minden, amit megölsz, pontot ér. Én a programomhoz megfordítottam a nyilak irányát, így ha a föl nyilat megnyomod, a szereplő lefelé megy, és ha a jobb gombot megnyomod, balra megy. Elég nehéz! Néha előnyhöz jutsz, igazságtalan előnyhöz, ha te vagy a játék fejlesztője. Megcsináltad? Jaj!"
+      5:
+        text: "Ha elkészültél az alkotásoddal, válaszd a megosztást, hogy a link segítségével meg tudd mutatni a barátaidnak. Jó szórakozást!"
+    starwars_blocks_intro:
+      1:
+        text: "Szia, Kathleen Kennedy vagyok, a Star Wars Ébredő erő producere. Ma egy filmcsillagunkkal fogsz dolgozni, BB-8-tel, aki egy szférikus droid. Mindent, amit csinál, és minden mozgását számítógépes szoftver irányítja. A számítógép-tudomány minden iparágban jelen van a marketingtől az egészségügyön át a filmig. Valójában informatikai mérnökök százai dolgoznak együtt az olyan filmeken, mint az Ébredő erő."
+      2:
+        text: "Szia, Rachel Rose vagyok, vezető kutatásfejlesztő mérnök az ILM-nél és én vezetem az animációs és karakterfejlesztő csapatot. Az erő ébredésében én segítek a művészeknek kidolgozni a mozgó ruhákat. Ezek a karakterek szerves részét képezik, és valósághűvé teszik őket a messzi-messzi galaxisban."
+      3:
+        text: "A következő egy órában a saját Star Wars játékunkat fogjuk elkészíteni. Megtanítjuk neked a programozás alapvető fogalmait. A programozás általában szövegesen történik, de mi vonszolható blokkokat fogunk használni a programíráshoz. Kezdetben Rey-jel fogsz dolgozni, aki beprogramozza BB-8-et, hogy minden ócskavasat összegyűjtsön."
+      4:
+        text: "A képernyő három részre oszlik. A bal oldal a Star Wars játéktér, ahol a kód futni fog. A feladatokhoz kapcsolódó utasítások a játéktér alatt vannak."
+      5:
+        text: "A középső részben van az eszköztár, és benne minden blokk egy parancs, amit BB-8 megért."
+      6:
+        text: "A fehér terület a Munkaterület, és itt fogjuk építeni a programot."
+      7:
+        text: "Ha a mozdulj balra blokkot a munkaterületre vonszolod, és a Futtatásra kattintasz, mi fog történni? BB-8 balra mozdul egyet a rácson."
+      8:
+        text: "És mi a helyzet, ha BB-8-nek valami mást is kell csinálnia a mozdulj balra blokk után? Hozzáadhatsz még egy blokkot a programhoz. Én most a mozdulj fel blokkot választom, és a mozdulj balra alá vonszolom, amíg a kiemelés meg nem jelenik. Ekkor elengedem, és a két blokk összekattan. Ha ezután megnyomom a Futtatást, BB-8 minden a munkafelületen található parancsot teljesíteni fog föntről lefelé haladó sorrendben."
+      9:
+        text: "Ha ki akarsz törölni egy blokkot, csak húzd vissza az eszköztárba."
+      10:
+        text: "Ha törölni szeretnél egy blokkot, csak vonszold vissza az eszköztárba."
+    starwars_blocks_events:
+      1:
+        text: "Szia, az én nevem Charita Carter. Vezető kreatív producer vagyok a Walt Disney Imagineeringnél. Én vagyok felelős azokért a játékokért, amelyekkel a látogatóink találkoznak. Mindig keressük a lehetőségét annak, hogy fejlődjünk és emlékezetesebb élményt nyújtsunk a látogatóinknak, és a technológia alapvető ebben a folyamatban."
+      2:
+        text: "Gratulálunk, megcsináltad! Ügyesen programoztad a BB-8-et. Most itt az ideje, hogy valami nehezebbe kezdjünk. Vágjunk bele! Miután a programozás alapjait megtanultad, visszamegyünk az időben és a saját játékunkat fogjuk elkészíteni R2-D2 és C3PO szereplésével."
+      3:
+        text: "Hogy játékot tudjunk csinálni, meg kell ismerned egy fogalmat, amit a programozók minden nap használnak: ezek az események. Az események mondják a programnak hogy hallgassanak vagy várjanak addig, amíg valami nem történik, és amint az a dolog megtörténik, tegyenek valamit."
+      4:
+        text: "Esemény például egy kattintás az egérrel, egy nyíl billentyű lenyomása vagy az érintőképernyő megérintése."
+      5:
+        text: "Most R2-D2-nak felfelé kell mozognia, hogy elvigyen egy üzenetet egy lázadó pilótáknak, majd lefelé kell mozognia a másik Lázadóhoz. Eseményeket fogunk használni a mozgatáshoz, amikor a játékos a föl-le billentyűket vagy gombokat használja."
+      6:
+        text: "A \"ha van felfelé nyíl\" esemény blokkot fogjuk használni, és hozzácsatoljuk a menj fel blokkot. Ha a játékos megnyomja a felfelé nyilat, akkor a \"ha van felfelé nyíl\"-hoz kapcsolódó blokk elkezd futni. És ugyanezt fogjuk csinálni, hogy R2-D2 lefelé mozogjon. Így ahelyett, hogy a kóddal előre meghatároznánk a droid mozgását, R2-D2 a gombok nyomására fog reagálni és így fog mozogni a képernyőn."
+      7:
+        text: "Lépésről lépésre egyre interaktívabb lesz a játék."
+    starwars_blocks_congrats:
+      1:
+        text: "Szia, az én nevem Alice és én vezetem a projektet és a fejlesztő csapatot itt, a code.org-nál. Ezen a feladatsoron is dolgoztam, amit éppen elvégzel."
+      2:
+        text: "Az utolsó szinten is túljutottál. Gratulálunk! Mindent megtanultál, ami ahhoz szükséges, hogy elkészítsd a saját Star Wars játékodat. Nincs több utasítás és megoldandó feladat. Elkészítheted a saját játékod és kitalálhatod, hogy működjön. Még egy dolog: új hangok és parancsok állnak a rendelkezésedre, hogy még több dolgot tudj csinálni."
+      3:
+        text: "[tanulók beszélnek] Olyan játékot készítettünk, hogy akkor kapsz pontot, ha elkapsz egy Malacot. Viszont az a csavar, hogy valahányszor elkapsz egy Malacot, megjelenik egy Rohamosztagos. Az egész képernyő tele van Malacokkal, és ha 10 000-et elkapsz, akkor nyersz."
+      4:
+        text: "[tanulók beszélnek] Olyan játékot készítettünk, hogy nem veszthetsz, és minden, amit megölsz, pontot ér. Én a programomhoz megfordítottam a nyilak irányát, így ha a föl nyilat megnyomod, a szereplő lefelé megy, és ha a jobb gombot megnyomod, balra megy. Elég nehéz! Néha előnyhöz jutsz, igazságtalan előnyhöz, ha te vagy a játék fejlesztője. Megcsináltad? Jaj!"
+      5:
+        text: "Ha elkészültél az alkotásoddal, válaszd a megosztást, hogy a link segítségével meg tudd mutatni a barátaidnak. Jó szórakozást!"
+    mc_intro:
+      1:
+        text: "Az én nevem Jens Bergensten, de a legtöbben Jebnek hívnak. A Minecraft vezető fejlesztője vagyok itt a Mojangnál Stockholmban. Azt hiszem, tizenegy vagy tizenkét éves voltam, amikor programozni kezdtem, mert játékokat akartam készíteni. Az apukám egyik barátja mondta, hogy ha játékokat akarok csinálni, akkor meg kell tanulnom programozni. Így kezdtem el. Szeretek alkotni és kitalálni a játékok alapjait. Ez az, amit igazán szeretek a Minecraftban."
+      2:
+        text: "A következő egy órában meg fogod ismerni a számítógép-tudomány alapjait, miközben Alexet vagy Steve-et vezérled, hogy a Minecraft világ egy kis szimulált darabjában mozogjanak."
+      3:
+        text: "A programozás hagyományosan szövegesen történik, de ma a Blocky-t fogjuk használni, egy rendszert, amiben látványos, vonszolható blokkokkal lehet programokat írni. A felszín alatt JavaScript kód születik."
+      4:
+        text: "A fogalmakat, amiket meg fogsz ismerni, a számítógép programozók nap mint nap használják, ezek a számítógép-tudomány alapjai. Itt a Mojangnál mi arra használjuk őket, hogy a Minecraftot programozzuk."
+      5:
+        text: "Mielőtt elkezdjük, válassz egy karaktert. Én Alexet választom. Építsünk egy olyan kódot, ami segít nekünk a képernyőn mozogni."
+      6:
+        text: "A képernyő három fő részre van osztva. A bal oldalon látod a Minecraft játékteret, ahol a program futni fog. Alatta találhatóak minden pályán az utasítások."
+      7:
+        text: "A középső rész az eszköztár, és minden blokk benne egy parancs, amely irányítja Alexet."
+      8:
+        text: "A jobb oldali fehér rész a Munkaterület, ahol a programot fogjuk írni."
+      9:
+        text: "Ha a munkafelületre húzzuk az előrelépni parancsot, és aztán a Futtatásra kattintunk, mi fog történni? Alex előremozdul egy lépéssel a rácson."
+      10:
+        text: "És mi van, ha még valamit kellene csinálnia, miután előrelépett egyet? Még egy blokkot hozzáadhatunk a programhoz. Én most a fordulj jobbra parancsot választom, és az előrelépni blokk alá vonszolom, amíg a narancssárga csík meg nem jelenik. Ekkor elengedem, és a két blokk összepattan. Ezután újra megnyomhatjuk a futtatást. Alex a Munkaterületen szereplő utasításokat fentről lefelé történő sorrendben fogja végrehajtani."
+      11:
+        text: "Ha ki akarsz törölni egy blokkot, csak húzd vissza az eszköztárba."
+      12:
+        text: "Ha szeretnél mindent törölni, és visszatérni a kiindulási állapothoz, nyomd meg az Újrakezdés gombot a Munkaterület jobb fölső sarkában. Még egy dolog: látod a kis háromszöget a fordulj blokkokon? Valahányszor ezt a háromszöget látod, az azt jelenti, hogy több lehetőség közül választhatsz! Kezdjünk kódolni!"
+    mc_repeat:
+      1:
+        text: "Az én nevem Lydia Winters, brand igazgató vagyok a Mojangnál, és mi készítettük a kis Minecraft nevű játékot."
+      2:
+        text: "Nekem a kedvenc elfoglaltságom a Minecraftban a felfedezés. Szeretek barlangokban kalandozni, és mindenfélét találni. Mivel én nem vagyok programozó, izgatottam várom, hogy végigcsináljam a Minecraft feladatokat és magam is tanuljak egy kis programozást."
+      3:
+        text: "Az előző feladványban nagyon sokszor kellett használni az előrelépni blokkot. Sokkal egyszerűbb lenne, ha megmondhatnánk a számítógépnek, hogy végezze el az előrelépni parancsot négyszer vagy ötször. Szerencsére az ismétlő ciklusokkal a számítógépek ezt nagyon jól tudják csinálni."
+      4:
+        text: "Amikor a Minecraftot fejlesztjük, az ismétlő ciklusokat használjuk, hogy egy új világ létrehozásához szükséges összes alapanyagot elhelyezzük. Ez ezer meg ezer blokkot jelent. Apróbb esetekben is használunk ciklusokat, például, hogy Alex lábai mozogjanak előre-hátra, ahogy megy. Az ismétlő ciklusok hatásos részei a programozásnak."
+      5:
+        text: "A következő szinteken beköszönt az est, így egy házat kell építenünk, hogy biztonságban legyünk. Az ismételd blokkot fogjuk használni, így ez nagyon könnyű lesz."
+      6:
+        text: "Hogy a ház falát megépítsük, vagy négyszer azt mondjuk Alexnek, hogy az előrelépni paranccsal menjen előre és helyezzen el egy deszkát, vagy ezeket a parancsokat az ismételd blokkba tesszük, hogy többször is megismételje ezeket a folyamatokat. Most rá kell kattintanunk az ismételd blokkra és meg kell mondjuk, hányszor ismételje a műveleteket. Most építsük fel a házat, mielőtt este lesz! Jó szórakozást!"
+    mc_if_statements:
+      1:
+        text: "Most a ha utasításról fogunk tanulni. A ha utasítás alapvető része a programozás tanulásának. Ezek segítenek a számítógépnek döntéseket hozni."
+      2:
+        text: "Minden számítógép használ ha utasításokat, a telefonom is. Például ha lezárom, fut egy olyan program, ami beenged, ha helyes jelszót adok meg. Ellenkező esetben zárolja a telefont, és egy hibaüzenetet ír ki."
+      3:
+        text: "Használhatsz ha feltételeket, hogy Steve és Alice reagáljon arra, amit a világban tapasztal. Ha például van előttük egy szikla, akkor balra fordulhatnak. Vagy jobbra fordulhatnak, ha egy fának ütköznek."
+      4:
+        text: "Nem akarunk a lávába esni. Könnyű elkerülni, látjuk a képernyőn, hol helyezkedik el. De mi van azzal a lávával, ami a kövek alatt van?"
+      5:
+        text: "Miután kibányásztuk a követ, meg kell bizonyosodnunk róla, hogy nincs alatta láva, mielőtt tovább haladnánk. Ha láva van alatta, akkor egy kő hidat kell a szereplőnk elé helyeznünk, mielőtt tovább tudnánk haladni. Így már biztonsággal tovább mehetünk. Ideje újra bányászni! Ne feledd el használni a ha blokkot, és vigyázz a lépteidre!"
+    mc_congrats_share:
+      1:
+        text: "Gratulálunk! Megismerted a számítógép-tudomány alapvető elemeit."
+      2:
+        text: "Most használhatod az összes blokkot, hogy a saját világodat megalkosd. Nincsen több utasítás és megoldandó feladvány. Bármit építhetsz, amit csak szeretnél. A választás a tiéd."
+      3:
+        text: "[tanulók beszélnek] Nagyon valódi. Birkanyírás! Fáklyákból csináltam egy L betűt. Én egy A-t készítettem nyírfa deszkából. Építettünk egy házat gyapjúból!"
+      4:
+        text: "Ha elkészültél az alkotásoddal, válaszd a megosztást, hogy a link segítségével meg tudd mutatni a barátaidnak. Jó szórakozást!"
+    mc_congrats_no_share:
+      1:
+        text: "Gratulálunk! Megismerted a számítógép-tudomány alapvető elemeit."
+      2:
+        text: "Most használhatod az összes blokkot, hogy a saját világodat megalkosd. Nincsen több utasítás és megoldandó feladvány. Bármit építhetsz, amit csak szeretnél. A választás a tiéd."
+      3:
+        text: "[tanulók beszélnek] Nagyon valódi. Birkanyírás! Fáklyákból csináltam egy L betűt. Én egy A-t készítettem nyírfa deszkából. Építettünk egy házat gyapjúból!"
+      4:
+        text: "Most bármit építhetsz, amit csak szeretnél! Jó szórakozást!"
+    gumball_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+        text: "A jobb oldali fehér rész a Munkaterület, ahol a programot fogjuk írni."
+      7:
+      8:
+      9:
+    iceage_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+        text: "A jobb oldali fehér rész a Munkaterület, ahol a programot fogjuk írni."
+      7:
+      8:
+      9:

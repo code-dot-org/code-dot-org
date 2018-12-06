@@ -1,0 +1,287 @@
+---
+en-GB:
+  data:
+    authored_hints:
+      Function intro Ryan_authored_hint:
+        Function_intro_Ryan_a: You can call a function many times inside your program!
+          Try calling it twice to solve this puzzle.
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_a: You can call a function many times inside your program!
+          Try calling it twice to solve this puzzle.
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: What a beautiful coral reef! Blue coral is the **right**
+          way to go, and make sure red coral isn't **left**!
+      MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_b: "Press \"Run\"! \nYou can run your code even if it's
+          not right.  Run and reset your code over and over again until you work out
+          what's going wrong."
+      MC_HOC_2017_02_Cole_2019_authored_hint:
+        MC_HOC_2017_02_Cole_b: "Press \"Run\"! \nYou can run your code even if it's
+          not right.  Run and reset your code over and over again until you work out
+          what's going wrong."
+      MC_HOC_2017_02_Will_authored_hint:
+        MC_HOC_2017_02_Cole_b: "Press \"Run Agent\"! \nYou can run your code even
+          if it's not right.  Run and reset your code over and over again until you
+          work out what's going wrong."
+      MC_HOC_2017_03_Cole_authored_hint:
+        MC_HOC_2017_03_Cole_b: Does the code feel a little long?  Try using a `repeat`
+          loop and see if you can work out how to make it shorter!
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_b: Does the code feel a little long?  Try using a `repeat`
+          loop and see if you can work out how to make it shorter!
+      MC_HOC_2017_04POINT5_Cole_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: "Crossing these two pressure plates will open
+          the path for the player. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
+      MC_HOC_2017_04_Cole_authored_hint:
+        MC_HOC_2017_04_Cole_c: "Press \"Run\"! \nYou can run your code even if it's
+          not right.  Run and reset your code over and over again until you work out
+          what's going wrong."
+        MC_HOC_2017_04_Cole_b: Once the Agent gets to the pressure plate, he will
+          open the door for the player.
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_c: "Press \"Run\"! \nYou can run your code even if it's
+          not right.  Run and reset your code over and over again until you work out
+          what's going wrong."
+        MC_HOC_2017_04_Cole_b: Once the Agent gets to the pressure plate, he will
+          open the door for the player.
+      MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
+          code inside of a loop?  Try placing a plank **and** moving forward inside
+          a `repeat` to complete this puzzle.
+      MC_HOC_2017_05_Cole_2019_authored_hint:
+        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
+          code inside of a loop?  Try placing a plank **and** moving forward inside
+          a `repeat` to complete this puzzle.
+      MC_HOC_2017_05_Josh_authored_hint:
+        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
+          code inside of a loop?  Try placing a plank **and** moving forward inside
+          a `repeat` to complete this puzzle.
+      MC_HOC_2017_06_Josh_authored_hint:
+        MC_HOC_2017_06_Cole_a: Try putting more than one instruction inside a `repeat`
+          loop!
+      MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_a: To solve this puzzle, work out what the `clear path`
+          function does and call it as many times as you need using the small green
+          `clear path` block from the toolbox.
+      MC_HOC_2017_07_Cole_2019_authored_hint:
+        MC_HOC_2017_07_Cole_a: To solve this puzzle, work out what the `clear path`
+          function does and call it as many times as you need using the small green
+          `clear path` block from the toolbox.
+      MC_HOC_2017_08_RY_authored_hint:
+        MC_HOC_2017_08_RY_a: "Press \"Run Agent\"! \nYou can run your code even if
+          it's not right.  Run and reset your code over and over again until you work
+          out what's going wrong."
+      MC_HOC_2017_08_Will_authored_hint:
+        MC_HOC_2017_08_RY_a: "Press \"Run Agent\"! \nYou can run your code even if
+          it's not right.  Run and reset your code over and over again until you work
+          out what's going wrong."
+      MC_HOC_2017_4.5v2_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: "Crossing these two pressure plates will open
+          the path for the player. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
+      MC_HOC_2017_Ali_authored_hint:
+        MC_HOC_2017_08_RY_a: "Press \"Run\"! \nYou can run your code even if it's
+          not right.  Run and reset your code over and over again until you work out
+          what's going wrong."
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: "Press \"Run\"! \nYou can run your code even if it's
+          not right.  Run and reset your code over and over again until you work out
+          what's going wrong."
+      courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2a_2018_authored_hint:
+        '1': Snap both `East` blocks to the bottom of the `when run` block.
+      courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5a_2018_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have
+          been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
+          try something else!
+      courseB_Scrat_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!

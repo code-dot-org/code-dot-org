@@ -1,0 +1,1252 @@
+---
+fr:
+  data:
+    authored_hints:
+      2-3 Artist 1 new_authored_hint:
+        2-3_Artist_1_new_a: Si vous utilisez le bloc pour me faire "avancer de 100
+          pixels", je tracerais une ligne automatiquement.
+        2-3_Artist_1_new_b: Vous avez des problèmes pour tourner ? Utilisez le bloc
+          "tourner de 90° à droite".
+      2-3 Artist 11_authored_hint:
+        2-3_Artist_11_a: 'Vous avez des problèmes avec les angles ? Vous devez faire
+          360° en 8 virages. Combien fait 360 : 9 ? '
+      2-3 Artist 12_authored_hint:
+        2-3_Artist_12_a: Il y a 360° dans un cercle, donc si l'artiste tourne d'un
+          degré à chaque répétition de la boucle, il devra le faire 360 fois.
+      2-3 Artist 2 new_authored_hint:
+        2-3_Artist_2_new_a: L'artiste ne semble pas être dirigé dans la bonne direction.
+          Pourriez-vous le faire tourner avant de tracer la ligne ?
+      2-3 Artist 3new_authored_hint:
+        2-3_Artist_3new_a: Combien font 100-70 ? Dans le problème de l'histoire, c'est
+          la hauteur que doit avoir le chapeau!
+        2-3_Artist_3new_b: L'artiste ne semble pas être dirigé dans la bonne direction.
+          Pourriez-vous le faire tourner avant de tracer la ligne ?
+      2-3 Artist 4_authored_hint:
+        2-3_Artist_4_a: Pour finir la maison, tout ce qu'on a besoin de faire est
+          tracer un carré!
+      2-3 Artist 6_authored_hint:
+        2-3_Artist_6_a: 'Pour faire ces petits angles, vous devez tourner * plus *
+          chaque fois que vous avez fait un carré.   '
+        2-3_Artist_6_b: Étant donné que je suis déjà orienté vers la droite, il est
+          plus simple de commencer par avancer, puis de tourner à gauche pour créer
+          le triangle.
+        2-3_Artist_6_c: Chaque côtés du triangle ont la même longueur que chaque côtés
+          du carré... 100 pixels!
+      2-3 Artist 7_authored_hint:
+        2-3_Artist_7_a: La manière la plus simple de réussir ce puzzle est de commencer
+          par le premier carré en de finir avec l'artiste regardant vers le bas avant
+          de commencer le second carré.
+      2-3 Artist 8_authored_hint:
+        2-3_Artist_8_a: Si vous coupez 200 en deux, combien de pixels de large devront
+          faire chaque carrés ?
+      2-3 Artist 9 NEW_authored_hint:
+        2-3_Artist_9_a: Ce diamant est vraiment juste un carré sur le côté
+      2-3 Artist 9 REPLACEMENT_authored_hint:
+        step_size: Chaque marches fait 100 pixels de haut et 100 pixels de large.
+      2-3 Artist 9_authored_hint:
+        2-3_Artist_9_a: Ce diamant n'est vraiment juste qu'un carré tourné à 45 degrés.
+        2-3_Artist_9_b: |-
+          N'oubliez pas de faire pivoter votre artiste de 45° dans le sens anti-horaire avant de commencer à dessiner le carré!
+
+          ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
+      2-3 Artist Debugging 10_authored_hint:
+        2-3_Artist_Debugging_10_a: Souvenez-vous, si vous souhaitez que le panneau
+          de contrôle soit 10 pixels *plus large*...alors soyez sûr **d'ajouter**
+          10 à chaque nombres que vous modifiez.
+        2-3_Artist_Debugging_10_b: "**C'est ok de procéder par essais et erreurs ici!**
+          \ \n\nCommence par changer un nombre à la fois. \n\nQuels nombres font quoi?
+          \ \n\nSi tu es perdu, clique \"Recommencer\" et ton code sera réinitialisé."
+      2-3 Artist Debugging 2_authored_hint:
+        2-3_Artist_Debugging_2_a: 'Indice: Chaque cheveux mesure 75 pixels.'
+      2-3 Artist Debugging 3_authored_hint:
+        2-3_Artist_Debugging_3_a: Un des tournants est trop petit de 15 degrés.
+        2-3_Artist_Debugging_3_b: Si le programme s'exécute trop rapidement pour voir
+          ce qui se passe, essayez de le ralentir avec le curseur.
+      2-3 Artist Debugging 7_authored_hint:
+        2-3_Artist_Debugging_7_a: Que se passe-t-il si l’artiste recule ou saute en
+          arrière après qu’il dessine la première ligne ?
+      2-3 Artist Debugging 8_authored_hint:
+        2-3_Artist_Debugging_8_a: |-
+          Combien de fois est-ce que ma forme se répète?
+          Combien de fois est-ce que ma forme *devrait* se répéter?
+          Où pouvez-vous changer cela dans le programme?
+      2-3 Artist Debugging 9_authored_hint:
+        2-3_Artist_Debugging_9_a: L'artiste doit tourner à 60 degrés plus loin à gauche
+          avant de commencer à dessiner!
+        2-3_Artist_Debugging_9_b: Vous n’avez pas besoin d’ajouter un autre bloc pour
+          faire le tour complet, il suffit d’ajouter 60 degrés vers le bloc « tournez
+          à gauche » qui est déjà là !
+      2-3 Artist Functions 1 a_authored_hint:
+        2-3_Artist_Functions_1_a: Les carrés ont chacun des côtés de 100 pixels, ce
+          qui signifie que vous devrez avancer de 175 pixels avant de dessiner votre
+          deuxième carré.
+        2-3_Artist_Functions_1_b: C'est ok de dessiner des lignes qui se superposent
+          pour dessiner les lunettes.
+      2-3 Artist Functions 1_authored_hint:
+        2-3_Artist_Functions_1_a: Les carrés ont chacun des côtés de 100 pixels, ce
+          qui signifie que vous devrez avancer de 175 pixels avant de dessiner votre
+          deuxième carré.
+        2-3_Artist_Functions_1_b: C'est ok de dessiner des lignes qui se superposent
+          pour dessiner les lunettes.
+      2-3 Artist Functions 11 a_authored_hint:
+        2-3_Artist_Functions_11_a: Vous devrez modifier non seulement le nombre et
+          la longueur des côtés au sein de la fonction, mais aussi l’angle que l’artiste
+          tourne entre chaque côté.
+      2-3 Artist Functions 11_authored_hint:
+        2-3_Artist_Functions_11_a: Vous devrez modifier non seulement le nombre et
+          la longueur des côtés au sein de la fonction, mais aussi l’angle que l’artiste
+          tourne entre chaque côté.
+      2-3 Artist Functions 12 a_authored_hint:
+        2-3_Artist_Functions_12_a: Essayez d'exécuter le code tout d'abord pour voir
+          ce qu'il faut ajouter.
+      2-3 Artist Functions 12_authored_hint:
+        2-3_Artist_Functions_12_a: Essayez d'exécuter le code tout d'abord pour voir
+          ce qu'il faut ajouter.
+      2-3 Artist Functions 2 a_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          Votre programme devrait:
+          - Utiliser une fonction
+          - Avancer de 100 + 75 pixels
+          - Utiliser une fonction
+      2-3 Artist Functions 2_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          Votre programme devrait:
+          - Utiliser une fonction
+          - Avancer de 100 + 75 pixels
+          - Utiliser une fonction
+      2-3 Artist Functions 3 a_authored_hint:
+        2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
+      2-3 Artist Functions 3_authored_hint:
+        2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
+      2-3 Artist Functions 4 a_authored_hint:
+        2-3_Artist_Functions_4_a: L'artiste doit tourner de 120 degrés entre chaque
+          carré pour compléer ce design.
+      2-3 Artist Functions 4_authored_hint:
+        2-3_Artist_Functions_4_a: L'artiste doit tourner de 120 degrés entre chaque
+          carré pour compléer ce design.
+      2-3 Artist Loops New 11_authored_hint:
+        2-3_Artist_Loops_New_11_a: |-
+          N’oubliez pas que le code du dernier puzzle était : 
+          ![](https://images.code.org/15288d042780242ec5edeed5204c6ebb-image-1469640792081.png)
+        2-3_Artist_Loops_New_11_b: Votre nouveau tournant devrait aller à la **fin**
+          du code dans la boucle.
+      2-3 Artist Loops New 12_authored_hint:
+        2-3_Artist Loops_New_12_a: Avant de commencer le diamant, l’artiste doit tourner
+          à gauche de 60 degrés pour se retrouver sur la bonne voie.
+        2-3_Artist Loops_New_12_b: Après que l’artiste avance 100 pixels, il devra
+          tourner à droite à 120 degrés pour faire un coin pointu.
+        2-3_Artist Loops_New_12_c: L'artiste devra tourner à droite de seulement 60
+          degrés pour créer un coin large.
+      2-3 Artist Loops New 13_authored_hint:
+        2-3_Artist_Loops_New_13_a: |-
+          À la fin de chaque diamant, l’artiste est déjà dans la bonne direction pour commencer celui qui suit.
+          Pour cette raison, nous n’avons pas besoin d’ajouter un bloc supplémentaire « tourner à gauche de » avant de recommencer.
+        2-3_Artist_Loops_New_13_b: "Pour faire chaque diamant, l'artiste doit:   \n-
+          avancer\n- tourner à droite de 120 degrés\n- avancer\n- tourner à droite
+          de 60 degrés  \n\nPuis, recommencer!"
+      2-3 Artist Loops New 9_authored_hint:
+        2-3_Artist_Loops_New_9_a: L'artiste doit tourner à 45 degrés vers la droite
+          avant de commencer à dessiner.
+        2-3_Artist_Loops_New_9_b: Ce V est en fait simplement un demi carré. Quel
+          serait le code pour dessiner un demi carré?
+      2-3 Artist Nested Loops 1_authored_hint:
+        2-3_Artist_Nested_Loops_1_a: N'oublie pas de mettre tous les blocs gris dans
+          ta boucle.
+      2-3 Artist Nested Loops 3_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: Besoin d’aide avec les angles?   **360/12 = 30**
+        2-3_Artist_Nested_Loops_3_b: N'oublie pas de mettre tout le code en gris et
+          ton virage à l'intérieur d'une boucle.
+      2-3 Artist Nested Loops 4_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: Besoin d’aide avec les angles?   **360/12 = 30**
+      2-3 Artist Nested Loops 5_authored_hint:
+        2-3_Artist_Nested_Loops_5_a: "Essaie d'utiliser le bloc 'sauter en avant'
+          pour aller du sommet d'un carré à l'endroit où tu veux commencer le suivant.
+          \n\nSi tes carrés font 20 pixels de côté et sont séparés de 20 pixels, de
+          combien dois-tu sauter?"
+      2-3 Artist Nested Loops 7_authored_hint:
+        2-3_Artist_Nested_Loops_7_a: |-
+          De combien faut-il tourner à chaque boucle?
+
+          Combien font 360/10?
+      2-3 Artist Nested Loops 9_authored_hint:
+        2-3_Artist_Nested_Loops_9_a: "Vous avez besoin d'aide pour trouver l'angle
+          correct? \n\n**360/12 = 30**"
+      2-3 Bee Conditionals 14_authored_hint:
+        2-3_Bee_Conditionals_14_a: Difficile de trouver ciomment faire descendre les
+          blocs? Essaie la fleur rouge exactement comme une fleur mauve!
+        2-3_Bee_Conditionals_14_b: Si la fleur rouge était mauve, pourriez-vous trouver
+          un moyen d'utiliser une boucle de répétition supplémentaire pour réduire
+          le code?
+        2-3_Bee_Conditionals_14_c: "Essaie de couper ceci en deux blocs:  \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1)
+          Obtenir du nectar 3 fois\n  - Avancer plus 5 fois\n  - Vérifier s'il y a
+          du nectar, s'il y en a, l'obtenir\n  - Tourner à gauche\n  \n2) Fabriquer
+          du miel \n  - Avancer plus 1 fois\n  - Fabriquer du miel 2 fois"
+      2-3 Bee Conditionals 15_authored_hint:
+        2-3_Bee_Conditionals_15_a: 'N''oubliez pas: Les fleurs mauves n''ont seulement
+          que 0 ou 1 nectar et ils peuvent changer à chaque fois que vous exécutez
+          le programme.'
+      2-3 Bee Conditionals 3_authored_hint:
+        2-3_Bee_Conditionals_3_a: Le code sera plus court si vous utilisez une boucle
+          à chaque fois que vous aller de l’avant, une autre boucle pour recueillir
+          le nectar et l’autre pour faire le miel.
+      2-3 Bee Conditionals 6_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'N''oubliez pas: Les fleurs mauves changent entre
+          0 et 1 nectar lorsque vous exécutez votre programme!'
+      2-3 Bee Debugging 1_authored_hint:
+        2-3_Bee_Debugging_1_a: Une fois que tu as trouvé et corrigé le bloc incorrect,
+          est-ce que tu fois des séquences que tu pourrais simplifier en utilisant
+          une boucle 'répéter'?
+      2-3 Bee Debugging 2_authored_hint:
+        2-3_Bee_Debugging_2_a: Une fois que tu as trouvé et corrigé le bloc incorrect,
+          est-ce que tu fois des séquences que tu pourrais simplifier en utilisant
+          une boucle 'répéter'?
+      2-3 Bee Debugging 4_authored_hint:
+        2-3_Bee_Debugging_4_a: Y a-t-il un endroit où l’abeille fait quelque chose
+          qui n’a aucun sens ? Que se passe-t-il lorsque vous modifiez ce bloc ?
+      2-3 Bee Functions 4_authored_hint:
+        2-3_Bee_Functions_4_a: Vous n’avez pas à utiliser une boucle avec une fonction.
+          Essayez de bouger, à l’aide de la fonction, puis en déplaçant et en utilisant
+          la fonction à nouveau.
+      2-3 Bee Functions 6_authored_hint:
+        2-3_Bee_Functions_6_a: Vous n’avez pas à utiliser une boucle avec une fonction.
+          Essayez de bouger, à l’aide de la fonction, puis en déplaçant et en utilisant
+          la fonction à nouveau.
+      2-3 Bee Functions 8_authored_hint:
+        2-3_Bee_Functions_8_a: |-
+          Si le puzzle semble difficile, essaye de construire ta fonction petit à peit.
+
+          Ajoutes quelques blocs, puis essaye-les. Ajoutes-en d’autres, puis réessaye. Bientôt, ,
+           tu y arriveras !
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+      2-3 Bee Functions 9_authored_hint:
+        2-3_Bee_Functions_8_a: Si le puzzle semble difficile, essayez de construire
+          votre fonction peu à peu. Ajoutez quelques blocs, puis essayez-le. Ajoutez-en
+          d’autres, puis réessayez. Bientôt, vous y arriverez!
+        2-3_Bee_Functions_8_b: |-
+          N’oubliez pas de placer votre code dans le bloc de fonction vert.
+
+          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+      2-3 Bee Loops 2_authored_hint:
+        2-3_Bee_Loops_2_a: Vous devriez avoir quatre blocs à l’intérieur de la boucle.
+      2-3 Bee Loops 3_authored_hint:
+        2-3_Bee_Loops_3_a: Vous devriez avoir 6 blocs à l’intérieur de la boucle.
+      2-3 Bee Loops 3B_authored_hint:
+        2-3_Bee_Loops_3B_a: Vous aurez besoin de deux differents boucles « répéter »,
+          l’un après l’autre.
+      2-3 Bee Loops 4_authored_hint:
+        2-3_Bee_Loops_4_a: Vous devriez retrouver cinq blocs à l’intérieur de la boucle.
+      2-3 Bee Loops 4A_authored_hint:
+        2-3_Bee_Loops_4A_a: La première action sera un tournant, plutôt que d’un mouvement.
+        2-3_Bee_Loops_4A_b: Le dernier morceau du programme peut être fini en écrivant
+          le code à la fin du programme hors de votre boucle.
+        2-3_Bee_Loops_4A_c: Si vous ne pouvez pas encore repérer les boucles, essayez
+          de coder de la façon longue d'abord, et puis regardez ce que vous pouvez
+          combiner pour faire une boucle "répéter" à la fin.
+      2-3 Bee Loops 7_authored_hint:
+        2-3_Bee_Loops_7_a: La première action sera un tournant, plutôt que d’un mouvement.
+      4-5 Artist 7_authored_hint:
+        4-5_Artist_7_a: 'Quel angle est le plus petit?  À quel angle l’artiste est-il
+          debout? '
+      4-5 Nested Loops 12_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
+      4-5 While Loops 8_authored_hint:
+        4-5_While_Loops_8_a: Chaque élément devra sa propre boucle « while ».
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: L'artiste doit tourner de 120 degrés entre chaque
+          carré pour compléer ce design.
+      Dance short test 2_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Vous devez faire en sorte que l’effet de fond change parfois à la septième mesure de la chanson.
+
+          *Ce niveau se termine après 10 mesures.*
+        challenges: |-
+          **Défis optionnels**
+
+          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      Dance short test_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Vous devez faire en sorte que l’effet de fond change parfois à la septième mesure de la chanson.
+
+          *Ce niveau se termine après 10 mesures.*
+        challenges: |-
+          **Défis optionnels**
+
+          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Assurez-vous qu'un danseur apparaît à l'écran.
+
+          *Ce niveau se termine après 4 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          *Choisissez une autre chanson à jouer.
+          *Choisissez un autre qui ressemble à un orignal !
+          *Renommez votre danseur.
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Assurez-vous qu'un danseur apparaît à l'écran.
+
+          *Ce niveau se termine après 4 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          *Choisissez une autre chanson à jouer.
+          *Choisissez un autre qui ressemble à un orignal !
+          *Renommez votre danseur.
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Le danseur doit passer à un nouveau mouvement après 4 mesures.
+
+          *Le niveau se termine après 8 mesures.*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Après 6 mesures, votre danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.
+
+          *Le niveau se termine après 12 mesures.*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Vous devez faire en sorte que l’effet de fond change parfois à la septième mesure de la chanson.
+
+          *Ce niveau se termine après 10 mesures.*
+        challenges: |-
+          **Défis optionnels**
+
+          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Vous devez avoir au moins deux danseurs.
+
+          *Ce niveau se termine après 6 mesures.*
+        challenges: |-
+          **Défis optionnels**
+
+          *Ajoutez un troisième danseur (ou autant que vous voulez !)
+          *Faites en sorte que tous vos danseurs exécutent différents mouvements à différents moments de la chanson.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Deux danseurs doivent avoir une taille autre que 100.
+
+          *Ce niveau se termine après 6 mesures.*
+        challenges: |-
+          **Défis optionnels**
+
+          *Expérimentez en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Changez la nuance d'au moins un danseur.
+
+          *Ce niveau se termine après 8 mesures.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Assurez-vous qu'un danseur apparaît à l'écran.
+
+          *Ce niveau se termine après 4 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          *Choisissez une autre chanson à jouer.
+          *Choisissez un autre qui ressemble à un orignal !
+          *Renommez votre danseur.
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Les propriétés de deux ou plusieurs danseurs doivent changer.
+
+          *Ce niveau se termine après 8 mesures.*
+      Dance_Party_11.5_test_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Soyez créatif !
+
+          *Ce niveau se termine après 8 mesures.*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Soyez créatif !
+
+          *Ce niveau se termine après 8 mesures.*
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Soyez créatif !
+
+          *Ce niveau se termine après 8 mesures.*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Appuyez sur le bloc « lorsque la flèche gauche est appuyée » pour que le Robot fasse un mouvement de danse.
+
+          *Ce niveau se termine après 8 mesures.*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Le danseur doit passer à un nouveau mouvement après 4 mesures.
+
+          *Le niveau se termine après 8 mesures.*
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Après 6 mesures, votre danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.
+
+          *Le niveau se termine après 12 mesures.*
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Vous devez faire en sorte que l’effet de fond change parfois à la septième mesure de la chanson.
+
+          *Ce niveau se termine après 10 mesures.*
+        challenges: |-
+          **Défis optionnels**
+
+          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Votre danseur doit effectuer différents mouvements au cours des 12 premières mesures de la chanson.
+
+          *Ce niveau se termine après 12 mesures.*
+      Dance_Party_6_authored_hint:
+        challenges: |-
+          **Défis optionnels**
+
+          *Ajoutez un troisième danseur (ou autant que vous voulez !)
+          *Faites en sorte que tous vos danseurs exécutent différents mouvements à différents moments de la chanson.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Deux danseurs doivent avoir une taille autre que 100.
+
+          *Ce niveau se termine après 6 mesures.*
+        challenges: |-
+          **Défis optionnels**
+
+          *Expérimentez en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Changez la nuance d'au moins un danseur.
+
+          *Ce niveau se termine après 8 mesures.*
+      Function intro Ryan_authored_hint:
+        Function_intro_Ryan_a: Dans votre programme, vous pouvez appeler une fonction
+          autant de fois que vous le voulez !  Essayez de l'appeler deux fois pour
+          résoudre ce casse-tête.
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_a: Dans votre programme, vous pouvez appeler une fonction
+          autant de fois que vous le voulez !  Essayez de l'appeler deux fois pour
+          résoudre ce casse-tête.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Vous voyez les **lanternes aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ?
+          Comment les combiner à un bloc conditionnel pour traverser le monument sous-marin ?\n\n"
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Quel manifique récif de corail ! Si le corail bleu est
+          dans son bon **droit**, le corail rouge n'est pas non plus très **gauche** !
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Assurez-vous qu'un danseur apparaît à l'écran.
+
+          *Ce niveau se termine après 4 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          *Choisissez une autre chanson à jouer.
+          *Choisissez un autre qui ressemble à un orignal !
+          *Renommez votre danseur.
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Le danseur doit passer à un nouveau mouvement après 4 mesures.
+
+          *Le niveau se termine après 8 mesures.*
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Après 6 mesures, votre danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.
+
+          *Le niveau se termine après 12 mesures.*
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Vous devez faire en sorte que l’effet de fond change parfois à la septième mesure de la chanson.
+
+          *Ce niveau se termine après 10 mesures.*
+        challenges: |-
+          **Défis optionnels**
+
+          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Votre danseur doit effectuer différents mouvements au cours des 12 premières mesures de la chanson.
+
+          *Ce niveau se termine après 12 mesures.*
+      HOC Dance 5_draft_authored_hint:
+        challenges: |-
+          **Défis optionnels**
+
+          *Ajoutez un troisième danseur (ou autant que vous voulez !)
+          *Faites en sorte que tous vos danseurs exécutent différents mouvements à différents moments de la chanson.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Deux danseurs doivent avoir une taille autre que 100.
+
+          *Ce niveau se termine après 6 mesures.*
+        challenges: |-
+          **Défis optionnels**
+
+          *Expérimentez en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Changez la nuance d'au moins un danseur.
+
+          *Ce niveau se termine après 8 mesures.*
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Les propriétés de deux ou plusieurs danseurs doivent changer.
+
+          *Ce niveau se termine après 8 mesures.*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Soyez créatif !
+
+          *Ce niveau se termine après 8 mesures.*
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Soyez créatif !
+
+          *Ce niveau se termine après 8 mesures.*
+      MC Agent Freeplay_authored_hint:
+        MC_HOC_2017_13_Cole_a: Essayez de faire construire des ponts à l'Agent afin
+          qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte.
+      MC_HOC_2017_01_Cole_authored_hint:
+        MC_HOC_2017_01_Cole_a: Utilisez les touches de direction pour diriger le joueur
+          dans la maison. Terminez sur le carré orange pour gagner.
+      MC_HOC_2017_01_RETRY_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Faites glisser un bloc « avancer » depuis la boîte
+          à outils vers l'espace de travail et placez-le en dessous du bloc « après
+          exécution ».
+        MC_HOC_2017_01_RETRY_b: N'oubliez pas de cliquer sur « Démarrer » pour que
+          l'Agent exécute le code.
+        MC_HOC_2017_01_RETRY_c: Une fois que l'Agent a exécuté tout le code, vous
+          pouvez déplacer le joueur avec les touches de direction !
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Faites glisser un bloc « avancer » depuis la boîte
+          à outils vers l'espace de travail et placez-le en dessous du bloc « après
+          exécution ».
+        MC_HOC_2017_01_RETRY_b: N'oubliez pas de cliquer sur « Démarrer » pour que
+          l'Agent exécute le code.
+        MC_HOC_2017_01_RETRY_c: Une fois que l'Agent a exécuté tout le code, vous
+          pouvez déplacer le joueur avec les touches de direction !
+      MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Faites avancer l'Agent de deux cases en avant pour
+          qu'il se tienne sur la plaque de détection.  Cela ouvrira la porte pour
+          votre joueur.
+        MC_HOC_2017_02_Cole_b: "Appuyez sur « Démarrer » ! \nVous pouvez exécuter
+          votre code même si ce n'est pas correct.  Exécutez et recommencez votre
+          code jusqu'à trouver ce qui ne va pas."
+        MC_HOC_2017_02_Cole_c: Une fois que l'Agent a ouvert la porte, utilisez les
+          touches de direction pour déplacer le joueur sur la carte !
+      MC_HOC_2017_02_Cole_2019_authored_hint:
+        MC_HOC_2017_02_Cole_a: Faites avancer l'Agent de deux cases en avant pour
+          qu'il se tienne sur la plaque de détection.  Cela ouvrira la porte pour
+          votre joueur.
+        MC_HOC_2017_02_Cole_b: "Appuyez sur « Démarrer » ! \nVous pouvez exécuter
+          votre code même si ce n'est pas correct.  Exécutez et recommencez votre
+          code jusqu'à trouver ce qui ne va pas."
+        MC_HOC_2017_02_Cole_c: Une fois que l'Agent a ouvert la porte, utilisez les
+          touches de direction pour déplacer le joueur sur la carte !
+      MC_HOC_2017_02_Will_authored_hint:
+        MC_HOC_2017_02_Cole_a: Faites avancer l'Agent de deux cases en avant pour
+          qu'il se tienne sur la plaque de détection.  Cela ouvrira la porte pour
+          votre joueur.
+        MC_HOC_2017_02_Cole_b: "Appuyez sur « Démarrer l'Agent » ! \nVous pouvez exécuter
+          votre code même si ce n'est pas correct.  Exécutez et recommencez votre
+          code jusqu'à trouver ce qui ne va pas."
+        MC_HOC_2017_02_Cole_c: Une fois que l'Agent a ouvert la porte, utilisez les
+          touches de direction pour déplacer le joueur sur le carré orange.
+      MC_HOC_2017_03_Cole_authored_hint:
+        MC_HOC_2017_03_Cole_a: Une fois que l'Agent est placé sur la plaque de détection,
+          utilisez les touches de direction pour déplacer le joueur jusqu'à la boussole !
+        MC_HOC_2017_03_Cole_b: Le code semble trop long ?  Essayez de le raccourcir
+          en utilisant une boucle « répéter » !
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_a: Une fois que l'Agent est placé sur la plaque de détection,
+          utilisez les touches de direction pour déplacer le joueur jusqu'à la boussole !
+        MC_HOC_2017_03_Cole_b: Le code semble trop long ?  Essayez de le raccourcir
+          en utilisant une boucle « répéter » !
+      MC_HOC_2017_04POINT5_Cole_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: "Traverser ces deux plaques de détection ouvrira
+          le chemin pour le joueur. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
+      MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Utilisez le bloc « tourner à droite » pour changer
+          l''orientation de l''Agent '
+        MC_HOC_2017_04POINT5_RYAN_a: Pour permettre à Alex ou Steve d'atteindre la
+          hache, il suffit que l'Agent soit sur la première plaque de détection.
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Utilisez le bloc « tourner à droite » pour changer
+          l''orientation de l''Agent '
+        MC_HOC_2017_04POINT5_RYAN_a: Pour permettre à Alex ou Steve d'atteindre la
+          hache, il suffit que l'Agent soit sur la première plaque de détection.
+      MC_HOC_2017_04_Cole_authored_hint:
+        MC_HOC_2017_04_Cole_a: L'Agent a besoin d'« avancer » 7 fois.  Comment pouvez-vous
+          faire cela en utilisant une boucle « répéter » ?
+        MC_HOC_2017_04_Cole_c: "Appuyez sur « Démarrer » ! \nVous pouvez exécuter
+          votre code même si ce n'est pas correct.  Exécutez et recommencez votre
+          code jusqu'à trouver ce qui ne va pas."
+        MC_HOC_2017_04_Cole_b: Une fois que l'Agent est sur la plaque de détection,
+          cela ouvrira la porte pour le joueur.
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_a: L'Agent a besoin d'« avancer » 7 fois.  Comment pouvez-vous
+          faire cela en utilisant une boucle « répéter » ?
+        MC_HOC_2017_04_Cole_c: "Appuyez sur « Démarrer » ! \nVous pouvez exécuter
+          votre code même si ce n'est pas correct.  Exécutez et recommencez votre
+          code jusqu'à trouver ce qui ne va pas."
+        MC_HOC_2017_04_Cole_b: Une fois que l'Agent est sur la plaque de détection,
+          cela ouvrira la porte pour le joueur.
+      MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Saviez-vous que vous pouvez placer plusieurs bouts
+          de code à l'intérieur d'une boucle ?  Essayez de placer une planche **et**
+          avancer à l'intérieur d'une boucle « répéter » pour résoudre ce casse-tête.
+      MC_HOC_2017_05_Cole_2019_authored_hint:
+        MC_HOC_2017_05_Cole_a: Saviez-vous que vous pouvez placer plusieurs bouts
+          de code à l'intérieur d'une boucle ?  Essayez de placer une planche **et**
+          avancer à l'intérieur d'une boucle « répéter » pour résoudre ce casse-tête.
+      MC_HOC_2017_05_Josh_authored_hint:
+        MC_HOC_2017_05_Cole_a: Saviez-vous que vous pouvez placer plusieurs bouts
+          de code à l'intérieur d'une boucle ?  Essayez de placer une planche **et**
+          avancer à l'intérieur d'une boucle « répéter » pour résoudre ce casse-tête.
+      MC_HOC_2017_06_Cole_authored_hint:
+        MC_HOC_2017_06_Cole_a: Combien de fois cette boucle va-t-elle se répéter ?  Combien
+          de fois *devrait*-elle se répéter ?
+      MC_HOC_2017_06_Cole_2019_authored_hint:
+        MC_HOC_2017_06_Cole_a: Combien de fois cette boucle va-t-elle se répéter ?  Combien
+          de fois *devrait*-elle se répéter ?
+      MC_HOC_2017_06_Josh_authored_hint:
+        MC_HOC_2017_06_Cole_a: Essayez de placer plusieurs instructions à l'intérieur
+          d'une boucle « répéter » !
+      MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_a: Pour résoudre ce casse-tête, découvrez à quoi sert
+          la fonction « supprimer obstacle ». Appelez-la autant de fois que nécessaire
+          en utilisant le petit bloc vert « supprimer obstacle » depuis la boîte à
+          outils.
+        MC_HOC_2017_07_Cole_b: Essayez de mélanger les blocs de fonctions avec d'autres
+          blocs de la boîte à outils pour résoudre ce casse-tête.
+      MC_HOC_2017_07_Cole_2019_authored_hint:
+        MC_HOC_2017_07_Cole_a: Pour résoudre ce casse-tête, découvrez à quoi sert
+          la fonction « supprimer obstacle ». Appelez-la autant de fois que nécessaire
+          en utilisant le petit bloc vert « supprimer obstacle » depuis la boîte à
+          outils.
+        MC_HOC_2017_07_Cole_b: Essayez de mélanger les blocs de fonctions avec d'autres
+          blocs de la boîte à outils pour résoudre ce casse-tête.
+      MC_HOC_2017_08_RY_authored_hint:
+        MC_HOC_2017_08_RY_a: "Appuyez sur « Démarrer l'Agent » ! \nVous pouvez exécuter
+          votre code même si ce n'est pas correct.  Exécutez et recommencez votre
+          code jusqu'à trouver ce qui ne va pas."
+        MC_HOC_2017_08_RY_b: Il existe de NOMBREUSES manières de résoudre ce casse-tête.  Essayez-en
+          quelques-unes !
+      MC_HOC_2017_08_Will_authored_hint:
+        MC_HOC_2017_08_RY_a: "Appuyez sur « Démarrer l'Agent » ! \nVous pouvez exécuter
+          votre code même si ce n'est pas correct.  Exécutez et recommencez votre
+          code jusqu'à trouver ce qui ne va pas."
+        MC_HOC_2017_08_RY_b: Il existe de NOMBREUSES manières de résoudre ce casse-tête.  Essayez-en
+          quelques-unes !
+      MC_HOC_2017_10_Cole_authored_hint:
+        MC_HOC_2017_10_Cole_a: Utilisez des fonctions pour résoudre plus facilement
+          ce casse-tête !
+      MC_HOC_2017_10_RETRY_authored_hint:
+        MC_HOC_2017_10_Cole_a: Utilisez des fonctions pour résoudre plus facilement
+          ce casse-tête !
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_a: Utilisez des fonctions pour résoudre plus facilement
+          ce casse-tête !
+      MC_HOC_2017_13_Cole_authored_hint:
+        MC_HOC_2017_13_Cole_a: Essayez de faire construire des ponts à l'Agent afin
+          qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte.
+      MC_HOC_2017_4.5v2_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: "Traverser ces deux plaques de détection ouvrira
+          le chemin pour le joueur. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
+      MC_HOC_2017_Ali_authored_hint:
+        MC_HOC_2017_08_RY_a: "Appuyez sur « Démarrer » ! \nVous pouvez exécuter votre
+          code même si ce n'est pas correct.  Exécutez et recommencez votre code jusqu'à
+          trouver ce qui ne va pas."
+        MC_HOC_2017_08_RY_b: Il existe de NOMBREUSES manières de résoudre ce casse-tête.  Essayez-en
+          quelques-unes !
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: "Appuyez sur « Démarrer » ! \nVous pouvez exécuter votre
+          code même si ce n'est pas correct.  Exécutez et recommencez votre code jusqu'à
+          trouver ce qui ne va pas."
+        MC_HOC_2017_08_RY_b: Il existe de NOMBREUSES manières de résoudre ce casse-tête.  Essayez-en
+          quelques-unes !
+      MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Essayez de faire construire des ponts à l'Agent afin
+          qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte.
+      MC_HOC_2017_FP20x20_2019_authored_hint:
+        MC_HOC_2017_13_Cole_a: Essayez de faire construire des ponts à l'Agent afin
+          qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte.
+      New Minecraft Hero Project_authored_hint:
+        MC_HOC_2017_13_Cole_a: Essayez de faire construire des ponts à l'Agent afin
+          qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte.
+      aE7_authored_hint:
+        aE7_b: Vous aurez besoin de 4 segments pour compléter ce puzzle.
+      artistLoopsK4_authored_hint:
+        artistLoopsK4_a: Coincé ? Essayez d’exécuter le code pour afficher le bloc
+          qui est incorrect.
+      course1_maze_debugging_challenge2_authored_hint:
+        courseB_maze_seq_challenge2_a: Vous n’avez pas besoin d’ajouter ou de retirer
+          des blocs pour résoudre ce problème.
+      course1_maze_seq_challenge2_authored_hint:
+        courseB_maze_seq_challenge1_b: Essayez de vous déplacer vers le Ouest pour
+          commencer.
+      course2_maze_seq_challenge2_authored_hint:
+        courseB_maze_seq_challenge1_b: Essayez de vous déplacer vers le Ouest pour
+          commencer.
+      course3_bee_functions_challenge1_authored_hint:
+        courseE_bee_functions_challenge1_a: Si le puzzle semble difficile, essayez
+          de construire votre fonction peu à peu. Ajoutez quelques blocs, puis essayez-le.
+          Ajoutez-en d’autres, puis réessayez. Bientôt, vous y arriverez!
+      course3_bee_functions_challenge2_authored_hint:
+        courseE_bee_functions_challenge1_a: Si le puzzle semble difficile, essayez
+          de construire votre fonction peu à peu. Ajoutez quelques blocs, puis essayez-le.
+          Ajoutez-en d’autres, puis réessayez. Bientôt, vous y arriverez!
+      courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2a_2018_authored_hint:
+        '1': Snap both `East` blocks to the bottom of the `when run` block.
+      courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5a_2018_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have
+          been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
+          try something else!
+      courseB_Scrat_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_maze_seq_challenge1_authored_hint:
+        courseB_maze_seq_challenge1_b: Essayez de vous déplacer vers le Ouest pour
+          commencer.
+      courseB_maze_seq_challenge1_2018_authored_hint:
+        courseB_maze_seq_challenge1_b: Essayez de vous déplacer vers le Ouest pour
+          commencer.
+      courseB_maze_seq_challenge2_authored_hint:
+        courseB_maze_seq_challenge2_a: Vous n’avez pas besoin d’ajouter ou de retirer
+          des blocs pour résoudre ce problème.
+      courseB_maze_seq_challenge2_2018_authored_hint:
+        courseB_maze_seq_challenge2_a: Vous n’avez pas besoin d’ajouter ou de retirer
+          des blocs pour résoudre ce problème.
+      courseC_artist_prog2_authored_hint:
+        courseC_artist_prog2_a: Si vous utilisez le bloc pour me faire "avancer de
+          100 pixels", je tracerais une ligne automatiquement.
+        courseC_artist_prog2_b: Vous avez des problèmes pour tourner ? Utilisez le
+          bloc "tourner de 90° à droite".
+      courseC_artist_prog2_2018_authored_hint:
+        courseC_artist_prog2_a: Si vous utilisez le bloc pour me faire "avancer de
+          100 pixels", je tracerais une ligne automatiquement.
+        courseC_artist_prog2_b: Vous avez des problèmes pour tourner ? Utilisez le
+          bloc "tourner de 90° à droite".
+      courseC_artist_prog2_2019_authored_hint:
+        courseC_artist_prog2_a: Si vous utilisez le bloc pour me faire "avancer de
+          100 pixels", je tracerais une ligne automatiquement.
+        courseC_artist_prog2_b: Vous avez des problèmes pour tourner ? Utilisez le
+          bloc "tourner de 90° à droite".
+      courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_functions2_authored_hint:
+        courseD_artist_functions2_a: |-
+          Votre programme devrait:
+          - Utiliser une fonction
+          - Avancer de 100 + 75 pixels
+          - Utiliser une fonction
+      courseD_artist_nestedLoops3_authored_hint:
+        courseD_artist_nestedLoops3_a: "Essaie d'utiliser le bloc 'sauter en avant'
+          pour aller du sommet d'un carré à l'endroit où tu veux commencer le suivant.
+          \n\nSi tes carrés font 20 pixels de côté et sont séparés de 20 pixels, de
+          combien dois-tu sauter?"
+      courseD_artist_nestedLoops3_2018_authored_hint:
+        courseD_artist_nestedLoops3_a: "Essaie d'utiliser le bloc 'sauter en avant'
+          pour aller du sommet d'un carré à l'endroit où tu veux commencer le suivant.
+          \n\nSi tes carrés font 20 pixels de côté et sont séparés de 20 pixels, de
+          combien dois-tu sauter?"
+      courseD_artist_nestedLoops3_2019_authored_hint:
+        courseD_artist_nestedLoops3_a: "Essaie d'utiliser le bloc 'sauter en avant'
+          pour aller du sommet d'un carré à l'endroit où tu veux commencer le suivant.
+          \n\nSi tes carrés font 20 pixels de côté et sont séparés de 20 pixels, de
+          combien dois-tu sauter?"
+      courseE_artist_functions1_authored_hint:
+        courseE_artist_functions1_a: Les carrés ont chacun des côtés de 100 pixels,
+          ce qui signifie que vous devrez avancer de 175 pixels avant de dessiner
+          votre deuxième carré.
+        courseE_artist_functions1_b: C'est ok de dessiner des lignes qui se superposent
+          pour dessiner les lunettes.
+      courseE_artist_functions1_2018_authored_hint:
+        courseE_artist_functions1_a: Les carrés ont chacun des côtés de 100 pixels,
+          ce qui signifie que vous devrez avancer de 175 pixels avant de dessiner
+          votre deuxième carré.
+        courseE_artist_functions1_b: C'est ok de dessiner des lignes qui se superposent
+          pour dessiner les lunettes.
+      courseE_artist_functions2_authored_hint:
+        courseD_artist_functions2_a: |-
+          Votre programme devrait:
+          - Utiliser une fonction
+          - Avancer de 100 + 75 pixels
+          - Utiliser une fonction
+      courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_a: |-
+          Votre programme devrait:
+          - Utiliser une fonction
+          - Avancer de 100 + 75 pixels
+          - Utiliser une fonction
+      courseE_artist_functions2_2019_authored_hint:
+        courseD_artist_functions2_a: |-
+          Votre programme devrait:
+          - Utiliser une fonction
+          - Avancer de 100 + 75 pixels
+          - Utiliser une fonction
+      courseE_bee_functions6_authored_hint:
+        courseE_bee_functions6_a: |-
+          Si le puzzle semble difficile, essaye de construire ta fonction petit à peit.
+
+          Ajoutes quelques blocs, puis essaye-les. Ajoutes-en d’autres, puis réessaye. Bientôt, ,
+           tu y arriveras !
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+      courseE_bee_functions6_2018_authored_hint:
+        courseE_bee_functions6_a: |-
+          Si le puzzle semble difficile, essaye de construire ta fonction petit à peit.
+
+          Ajoutes quelques blocs, puis essaye-les. Ajoutes-en d’autres, puis réessaye. Bientôt, ,
+           tu y arriveras !
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+      courseE_bee_functions6test_authored_hint:
+        courseE_bee_functions6_a: |-
+          Si le puzzle semble difficile, essaye de construire ta fonction petit à peit.
+
+          Ajoutes quelques blocs, puis essaye-les. Ajoutes-en d’autres, puis réessaye. Bientôt, ,
+           tu y arriveras !
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+      courseE_bee_functions7_authored_hint:
+        courseE_bee_functions7_a: Si le puzzle semble difficile, essayez de construire
+          votre fonction peu à peu. Ajoutez quelques blocs, puis essayez-le. Ajoutez-en
+          d’autres, puis réessayez. Bientôt, vous y arriverez!
+        courseE_bee_functions7_b: |-
+          N’oubliez pas de placer votre code dans le bloc de fonction vert.
+
+          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+      courseE_bee_functions7_2018_authored_hint:
+        courseE_bee_functions7_a: Si le puzzle semble difficile, essayez de construire
+          votre fonction peu à peu. Ajoutez quelques blocs, puis essayez-le. Ajoutez-en
+          d’autres, puis réessayez. Bientôt, vous y arriverez!
+        courseE_bee_functions7_b: |-
+          N’oubliez pas de placer votre code dans le bloc de fonction vert.
+
+          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+      courseE_bee_functions_challenge1_authored_hint:
+        courseE_bee_functions_challenge1_a: Si le puzzle semble difficile, essayez
+          de construire votre fonction peu à peu. Ajoutez quelques blocs, puis essayez-le.
+          Ajoutez-en d’autres, puis réessayez. Bientôt, vous y arriverez!
+      courseE_bee_functions_challenge1_2018_authored_hint:
+        courseE_bee_functions_challenge1_a: Si le puzzle semble difficile, essayez
+          de construire votre fonction peu à peu. Ajoutez quelques blocs, puis essayez-le.
+          Ajoutez-en d’autres, puis réessayez. Bientôt, vous y arriverez!
+      courseE_bee_functions_challenge2_authored_hint:
+        courseE_bee_functions_challenge1_a: Si le puzzle semble difficile, essayez
+          de construire votre fonction peu à peu. Ajoutez quelques blocs, puis essayez-le.
+          Ajoutez-en d’autres, puis réessayez. Bientôt, vous y arriverez!
+      courseE_bee_functions_challenge2_2018_authored_hint:
+        courseE_bee_functions_challenge1_a: Si le puzzle semble difficile, essayez
+          de construire votre fonction peu à peu. Ajoutez quelques blocs, puis essayez-le.
+          Ajoutez-en d’autres, puis réessayez. Bientôt, vous y arriverez!
+      courseF_bee_functions6_authored_hint:
+        courseF_bee_functions6_a: |-
+          Si le puzzle semble difficile, essaye de construire ta fonction petit à peit.
+
+          Ajoutes quelques blocs, puis essaye-les. Ajoutes-en d’autres, puis réessaye. Bientôt, ,
+           tu y arriveras !
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+      courseF_bee_functions6_2018_authored_hint:
+        courseF_bee_functions6_a: |-
+          Si le puzzle semble difficile, essaye de construire ta fonction petit à peit.
+
+          Ajoutes quelques blocs, puis essaye-les. Ajoutes-en d’autres, puis réessaye. Bientôt, ,
+           tu y arriveras !
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+      courseF_bee_functions8a_authored_hint:
+        courseF_bee_functions8a_a: Si le puzzle semble difficile, essayez de construire
+          votre fonction peu à peu. Ajoutez quelques blocs, puis essayez-le. Ajoutez-en
+          d’autres, puis réessayez. Bientôt, vous y arriverez!
+      courseF_bee_functions8a_2018_authored_hint:
+        courseF_bee_functions8a_a: Si le puzzle semble difficile, essayez de construire
+          votre fonction peu à peu. Ajoutez quelques blocs, puis essayez-le. Ajoutez-en
+          d’autres, puis réessayez. Bientôt, vous y arriverez!
+      courseF_bee_functionsPre7_authored_hint:
+        courseF_bee_functions7_a: Si le puzzle semble difficile, essayez de construire
+          votre fonction peu à peu. Ajoutez quelques blocs, puis essayez-le. Ajoutez-en
+          d’autres, puis réessayez. Bientôt, vous y arriverez!
+      courseF_bee_functionsPre7_2018_authored_hint:
+        courseF_bee_functions7_a: Si le puzzle semble difficile, essayez de construire
+          votre fonction peu à peu. Ajoutez quelques blocs, puis essayez-le. Ajoutez-en
+          d’autres, puis réessayez. Bientôt, vous y arriverez!
+      courseF_bee_functions_challenge2_recursion_authored_hint:
+        courseF_bee_functions8a_a: Si le puzzle semble difficile, essayez de construire
+          votre fonction peu à peu. Ajoutez quelques blocs, puis essayez-le. Ajoutez-en
+          d’autres, puis réessayez. Bientôt, vous y arriverez!
+      grade2_MakeDogTag_1_authored_hint:
+        2-3_Artist_1_new_a: Si vous utilisez le bloc pour me faire "avancer de 100
+          pixels", je tracerais une ligne automatiquement.
+        2-3_Artist_1_new_b: Vous avez des problèmes pour tourner ? Utilisez le bloc
+          "tourner de 90° à droite".
+      grade2_MakeDogTag_9_authored_hint:
+        2-3_Artist_Loops_New_11_b: Votre nouveau tournant devrait aller à la **fin**
+          du code dans la boucle.
+      grade2_PuppyLoops_10_authored_hint:
+        2-3_Artist_Debugging_8_a: |-
+          Combien de fois est-ce que ma forme se répète?
+          Combien de fois est-ce que ma forme *devrait* se répéter?
+          Où pouvez-vous changer cela dans le programme?
+      grade2_PuppyLoops_8_authored_hint:
+        2-3_Artist_Debugging_2_a: 'Indice: Chaque cheveux mesure 75 pixels.'
+      grade2_PuppyLoops_9_authored_hint:
+        2-3_Artist_Debugging_7_a: Que se passe-t-il si l’artiste recule ou saute en
+          arrière après qu’il dessine la première ligne ?
+      grade3_Conditionals_11_authored_hint:
+        2-3_Bee_Conditionals_14_a: Difficile de trouver ciomment faire descendre les
+          blocs? Essaie la fleur rouge exactement comme une fleur mauve!
+        2-3_Bee_Conditionals_14_b: Si la fleur rouge était mauve, pourriez-vous trouver
+          un moyen d'utiliser une boucle de répétition supplémentaire pour réduire
+          le code?
+      grade3_Conditionals_12_authored_hint:
+        2-3_Bee_Conditionals_15_a: 'N''oubliez pas: Les fleurs mauves n''ont seulement
+          que 0 ou 1 nectar et ils peuvent changer à chaque fois que vous exécutez
+          le programme.'
+      grade3_Conditionals_2_authored_hint:
+        2-3_Bee_Conditionals_3_a: Le code sera plus court si vous utilisez une boucle
+          à chaque fois que vous aller de l’avant, une autre boucle pour recueillir
+          le nectar et l’autre pour faire le miel.
+      grade3_Conditionals_4_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'N''oubliez pas: Les fleurs mauves changent entre
+          0 et 1 nectar lorsque vous exécutez votre programme!'
+      grade3_Conditionals_TeacherIDo_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'N''oubliez pas: Les fleurs mauves changent entre
+          0 et 1 nectar lorsque vous exécutez votre programme!'
+      grade3_Debugging_1_authored_hint:
+        2-3_Bee_Debugging_1_a: Une fois que tu as trouvé et corrigé le bloc incorrect,
+          est-ce que tu fois des séquences que tu pourrais simplifier en utilisant
+          une boucle 'répéter'?
+      grade3_Debugging_TeacherIDo_authored_hint:
+        2-3_Bee_Debugging_4_a: Y a-t-il un endroit où l’abeille fait quelque chose
+          qui n’a aucun sens ? Que se passe-t-il lorsque vous modifiez ce bloc ?
+      grade3_Loops_10_authored_hint:
+        2-3_Bee_Loops_4_a: Vous devriez retrouver cinq blocs à l’intérieur de la boucle.
+      grade3_Loops_4_authored_hint:
+        2-3_Bee_Loops_3B_a: Vous aurez besoin de deux differents boucles « répéter »,
+          l’un après l’autre.
+      grade3_Loops_5_authored_hint:
+        2-3_Bee_Loops_7_a: La première action sera un tournant, plutôt que d’un mouvement.
+      grade3_Loops_6_authored_hint:
+        2-3_Bee_Loops_4A_a: La première action sera un tournant, plutôt que d’un mouvement.
+        2-3_Bee_Loops_4A_b: Le dernier morceau du programme peut être fini en écrivant
+          le code à la fin du programme hors de votre boucle.
+        2-3_Bee_Loops_4A_c: Si vous ne pouvez pas encore repérer les boucles, essayez
+          de coder de la façon longue d'abord, et puis regardez ce que vous pouvez
+          combiner pour faire une boucle "répéter" à la fin.
+      grade3_Loops_8_authored_hint:
+        2-3_Bee_Loops_2_a: Vous devriez avoir quatre blocs à l’intérieur de la boucle.
+      grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: Vous devriez avoir 6 blocs à l’intérieur de la boucle.
+      grade4_arist_nested_loop_triangles6_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
+      grade4_artist_functions1_authored_hint:
+        2-3_Artist_Functions_1_a: Les carrés ont chacun des côtés de 100 pixels, ce
+          qui signifie que vous devrez avancer de 175 pixels avant de dessiner votre
+          deuxième carré.
+        2-3_Artist_Functions_1_b: C'est ok de dessiner des lignes qui se superposent
+          pour dessiner les lunettes.
+      grade4_artist_functions2_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          Votre programme devrait:
+          - Utiliser une fonction
+          - Avancer de 100 + 75 pixels
+          - Utiliser une fonction
+      grade4_artist_nested_loop_triangles6_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
+      grade4_bee_functions7_authored_hint:
+        2-3_Bee_Functions_8_a: |-
+          Si le puzzle semble difficile, essaye de construire ta fonction petit à peit.
+
+          Ajoutes quelques blocs, puis essaye-les. Ajoutes-en d’autres, puis réessaye. Bientôt, ,
+           tu y arriveras !
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+      grade4_bee_functions8_authored_hint:
+        2-3_Bee_Functions_8_a: Si le puzzle semble difficile, essayez de construire
+          votre fonction peu à peu. Ajoutez quelques blocs, puis essayez-le. Ajoutez-en
+          d’autres, puis réessayez. Bientôt, vous y arriverez!
+        2-3_Bee_Functions_8_b: |-
+          N’oubliez pas de placer votre code dans le bloc de fonction vert.
+
+          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+      grade4_review_artist1_authored_hint:
+        2-3_Artist_1_new_a: Si vous utilisez le bloc pour me faire "avancer de 100
+          pixels", je tracerais une ligne automatiquement.
+        2-3_Artist_1_new_b: Vous avez des problèmes pour tourner ? Utilisez le bloc
+          "tourner de 90° à droite".
+      grade4_review_artist2_authored_hint:
+        2-3_Artist_6_a: 'Pour faire ces petits angles, vous devez tourner * plus *
+          chaque fois que vous avez fait un carré.   '
+        2-3_Artist_6_b: Étant donné que je suis déjà orienté vers la droite, il est
+          plus simple de commencer par avancer, puis de tourner à gauche pour créer
+          le triangle.
+        2-3_Artist_6_c: Chaque côtés du triangle ont la même longueur que chaque côtés
+          du carré... 100 pixels!
+      grade4_review_bee1_authored_hint:
+        2-3_Bee_Loops_3B_a: Vous aurez besoin de deux differents boucles « répéter »,
+          l’un après l’autre.
+      grade4_review_bee2_authored_hint:
+        2-3_Bee_Loops_3_a: Vous devriez avoir 6 blocs à l’intérieur de la boucle.
+      grade4_review_bee3_authored_hint:
+        2-3_Bee_Loops_4_a: Vous devriez retrouver cinq blocs à l’intérieur de la boucle.
+      level 'grade3_Loops_10_authored_hint:
+        2-3_Bee_Loops_4_a: Vous devriez retrouver cinq blocs à l’intérieur de la boucle.
+      level 'grade3_Loops_4_authored_hint:
+        2-3_Bee_Loops_3B_a: Vous aurez besoin de deux differents boucles « répéter »,
+          l’un après l’autre.
+      level 'grade3_Loops_5_authored_hint:
+        2-3_Bee_Loops_7_a: La première action sera un tournant, plutôt que d’un mouvement.
+      level 'grade3_Loops_6_authored_hint:
+        2-3_Bee_Loops_4A_a: La première action sera un tournant, plutôt que d’un mouvement.
+        2-3_Bee_Loops_4A_b: Le dernier morceau du programme peut être fini en écrivant
+          le code à la fin du programme hors de votre boucle.
+        2-3_Bee_Loops_4A_c: Si vous ne pouvez pas encore repérer les boucles, essayez
+          de coder de la façon longue d'abord, et puis regardez ce que vous pouvez
+          combiner pour faire une boucle "répéter" à la fin.
+      level 'grade3_Loops_8_authored_hint:
+        2-3_Bee_Loops_2_a: Vous devriez avoir quatre blocs à l’intérieur de la boucle.
+      level 'grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: Vous devriez avoir 6 blocs à l’intérieur de la boucle.

@@ -1,0 +1,2801 @@
+---
+en:
+  data:
+    contract_match:
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        Big Triangle: Triângulo grande
+        Big Triangle|Image|Number|String: Triângulo grande|Imagem|Número|String
+        EXAMPLE 1.solution_blocks, 300: EXEMPLO 1.solution_blocks, 300
+        Write a contract for a big red triangle that is 100 pixels in size: Escreva um contrato para um grande triângulo vermelho tem 100 pixels de tamanho
+      Creating Contracts From Examples 2:
+        Example 2.solution_blocks, 300: Exemplo 2.solution_blocks, 300
+        Square Contract: Contrato de quadrado
+        Square|Image|Number|String: Quadrado|Imagem|Número|String
+        Write a contract for a purple square that is 15 pixels in size.: Escreva um contrato para um quadrado roxo que tem 15 pixels de tamanho.
+      Creating Contracts From Examples 3A:
+        Banner Contract: Contrato de banner
+        Banner Function block: Bloco de função banner
+        Examples 3.solution_blocks, 300: Exemplos 3.solution_blocks, 300
+        banner|Image|String: banner|Imagem|String
+      Creating Contracts From Examples 4:
+        Examples 4.solution_blocks, 300: Exemplos 4.solution_blocks, 300
+        Shrink Contract: Contrato de encolhimento
+        Try using the "shrink" function.: Tente usar a função "encolher".
+        shrink|Image|Image: encolher|Imagem|Imagem
+      Design Recipe 1.contract:
+        Design Recipe 1 Contract: Receita de design 1 Contrato
+        0: '? Escreva o contrato para a função chamada "ret-largo" que cria um retângulo de altura e cores dadas e cuja largura seja duas vezes maior que a altura.'
+        1: ': Escreva o contrato para a função chamada "ret-largo" que cria um retângulo de altura e cores dadas e cuja largura seja duas vezes maior que a altura.'
+        wide-rect|Image|Number|String: ret-largo|Imagem|Número|String
+      Enter name here:
+        Contract Name|Number|Number|String: Nome do contrato|Número|Número|String
+        Enter prompt here: Digite a mensagem aqui
+        Enter title here: Insira o título aqui
+      Eval Contracts 1 B:
+        Eval Contracts 1 A.solution_blocks, 300: Avaliar Contratos 1 A.solution_blocks, 300
+        Star Contract: Contrato de estrela
+        Write a contract for the star function: Escrever um contrato para a função estrela
+        star|Image|String|Number|String: estrela|Imagem|String|Número|String
+      Eval Contracts 2 B:
+        Eval Contracts 2 A.solution_blocks, 300: Avaliar Contratos 2 A.solution_blocks, 300
+        Rotate Contract: Contrato de rotação
+        Write a contract for the rotate function: Escreva um contrato para a função de rotação
+        rotate|Image|Number|Image: rotação|Imagem|Número|Imagem
+      Eval Contracts 3 B:
+        Eval Contracts 3 A.solution_blocks, 300: Avaliar Contratos 3 A.solution_blocks, 300
+        Text Contract: Contrato de texto
+        Write a contract for the text function: Escreva um contrato para a função de texto
+        text|Image|String|Number|String: texto|Imagem|String|Número|String
+      Eval Contracts 4 B:
+        Eval Contracts 4.solution_blocks, 350: Avaliar Contratos 4.solution_blocks, 350
+        Scale Contract: Contrato de escala
+        Write a contract for the scale function: Escreva um contrato para a função de escala
+        scale|Image|Number|Image: escala|Imagem|Número|Imagem
+      Eval Contracts B:
+        Eval Contracts A.solution_blocks, 300: Avaliar Contratos A.solution_blocks, 300
+        Star Contract: Contrato de estrela
+        Write a contract for the star function: Escrever um contrato para a função estrela
+        star|Image|Number|String|String: estrela|Imagem|Número|String|String
+      Eval Contracts D:
+        Eval Contracts C.solution_blocks, 350: Avaliar Contratos C.solution_blocks, 350
+        Rotate Contract: Contrato de rotação
+        Write a contract for the rotate function: Escreva um contrato para a função de rotação
+        rotate|Image|Number|Image: rotação|Imagem|Número|Imagem
+      Eval Contracts F:
+        Eval Contracts E.solution_blocks, 300: Avaliar Contratos E.solution_blocks, 300
+        Text Contract: Contrato de texto
+        Write a contract for the text function: Escreva um contrato para a função de texto
+        text|Image|String|Number|String: texto|Imagem|String|Número|String
+      Eval Design Recipe 1.contract:
+        Design Recipe 1 Contract: Receita de design 1 Contrato
+        0: '? Escreva o contrato para a função chamada "ret-largo" que cria um retângulo de altura e cores dadas e cuja largura seja duas vezes maior que a altura.'
+        1: ': Escreva o contrato para a função chamada "ret-largo" que cria um retângulo de altura e cores dadas e cuja largura seja duas vezes maior que a altura.'
+        wide-rect|Image|Number|String: ret-largo|Imagem|Número|String
+      Rocket Contract 1:
+        0: '? Um foguete decola, viajando a 15 metros por segundo. Escreva um contrato para a função altura-foguete que recebe o número de segundos que se passaram desde a decolagem e que retorna a altura do foguete passado esse tempo.'
+        1: ': Um foguete decola, viajando a 15 metros por segundo. Escreva um contrato para a função altura-foguete que recebe o número de segundos que se passaram desde a decolagem e que retorna a altura do foguete passado esse tempo.'
+        Contract for rocket-height: Contrato para altura do foguete
+        rocket-height|Number|Number: altura-foguete|Número|Número
+    evaluation_multi:
+      CSP PD Example Question 1:
+        The encoding numbers unit: Unidade codificação de números
+        The sending binary messages unit: Unidade enviando mensagens binárias
+        Which unit will you teach first: Qual unidade você irá ensinar primeiro
+      CSP PD Example Question 2:
+        How will you teach students?: Como você irá ensinar os estudantes?
+        I will make them learn from peers: Eu vou fazê-los aprender com os colegas
+        I will make them write: Eu vou fazê-los escrever
+      CSP PD Q2:
+        How will you teach students?: Como você irá ensinar os estudantes?
+        I will make them learn from peers: Eu vou fazê-los aprender com os colegas
+        I will make them write: Eu vou fazê-los escrever
+      TeacherCon Eval Q1:
+        '1.10: Routing and Redundancy': '1.10: Roteamento e Redundância'
+        '1.11: Packets and Making a Reliable Internet': '1.11: Pacotes e Fazendo uma Internet Confiável'
+        '1.4: Number Systems - Circle Triangle Square': '1.4: Sistemas Numéricos - Círculo Triângulo Quadrado'
+        '1.6: Sending Numbers': '1.6: Enviando Números'
+        '1.9: Internet Addressing (Battleship)': '1.9: Endereçamento de Internet (Navio de guerra)'
+        '2.10: Good and Bad Data Visualization': '2.10: Visualização de Dados Bons e Ruins'
+        '2.2: Text Compression': '2.2: Compressão de Texto'
+        '2.3: Black and White Pixelation': '2.3: Pixelização Preta e Branca'
+        What lesson are you planning and teaching at TeacherCon?: Que lições você está planejando e ensinando na TeacherCon?
+      TeacherCon Eval Q2:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: Quão confortável você está em ensinar lições onde os alunos fazem a maioria das atividades em computadores?
+        Not Comfortable: Nada Confortável
+        Very Comfortable: Muito Confortável
+      TeacherCon Eval Q3:
+        Students working in small groups to build knowledge: Alunos trabalhando em grupos pequenos para gerar conhecimento
+        Students working on projects of their own interest that have clear rubrics and guidelines: Alunos trabalhando em projetos de seu próprio interesse que possuem direções e diretrizes bem claras
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: O processo Demonstre-Faça, onde você demonstra algo para o grupo, e então eles o fazem sozinhos ou em grupos
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
+      TeacherCon Eval Q5:
+        How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
+      TeacherCon Eval Q6:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
+      TeacherCon Eval Q7:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
+        Not comfortable: Nada confortável
+        Very comfortable: Muito confortável
+      TeacherCon Evaluation Q4:
+        Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
+      U1 Eval q10:
+        How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
+      U1 Eval q11:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
+      U1 Eval q12:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
+        Not comfortable: Nada confortável
+        Very comfortable: Muito confortável
+      U1 Eval q7:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: Quão confortável você está em ensinar lições onde os alunos fazem a maioria das atividades em computadores?
+        Not Comfortable: Nada Confortável
+        Very Comfortable: Muito Confortável
+      U1 Eval q8:
+        Students working in small groups to build knowledge: Alunos trabalhando em grupos pequenos para gerar conhecimento
+        Students working on projects of their own interest that have clear rubrics and guidelines: Alunos trabalhando em projetos de seu próprio interesse que possuem direções e diretrizes bem claras
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: O processo Demonstre-Faça, onde você demonstra algo para o grupo, e então eles o fazem sozinhos ou em grupos
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
+      U1 Eval q9:
+        Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
+      U1 eval q1:
+        Brand new!: Novo em folha!
+        How experienced would you say you are with computer science?: Quão experiente você diria que você é com ciência da computação?
+        Somewhat Experienced: Um pouco experiente
+        Very Experienced: Muito Experiente
+      U1 eval q2:
+        Are you comfortable with the underlying concepts behind how non-decimal number systems work?: Você está confortável com os conceitos subjacentes sobre como sistemas numéricos não-decimais funcionam?
+        I have no idea what you're talking about!: Eu não faço ideia do que você está falando!
+        I know how to convert between number systems, but I don't know about the underlying rules of how they work: Eu sei como converter entre sistemas numéricos, mas eu não sei sobre as regras subjacentes sobre como eles funcionam
+        Yes!: Sim!
+      U1 eval q3:
+        Are you comfortable with HTML or Markdown?: Você é confortável com HTML ou Markdown?
+        Nope!: Não!
+        Yes!: Sim!
+      U1 eval q4:
+        Do you know how IP addresses work?: Você sabe como endereços de IP funcionam?
+        Nope!: Não!
+        Yes!: Sim!
+      U1 eval q5:
+        Do you know how messages are broken down and routed on the internet?: Você sabe como mensagens são quebradas e roteadas na internet?
+        Nope!: Não!
+        Yes!: Sim!
+      U1 eval q6:
+        Have you ever looked at the traffic in your web browser when you request a website?: Você já olhou o tráfego no seu navegador web quando você faz uma requisição para um website?
+        Nope!: Não!
+        Yes!: Sim!
+      U1 evaluation q1:
+        Brand new!: Novo em folha!
+        How experienced would you say you are with computer science?: Quão experiente você diria que você é com ciência da computação?
+        Somewhat Experienced: Um pouco experiente
+        Very Experienced: Muito Experiente
+      U1 evaluation q10:
+        How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
+      U1 evaluation q11:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
+      U1 evaluation q12:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
+        Not comfortable: Nada confortável
+        Very comfortable: Muito confortável
+      U1 evaluation q2:
+        Are you comfortable with the underlying concepts behind how non-decimal number systems work?: Você está confortável com os conceitos subjacentes sobre como sistemas numéricos não-decimais funcionam?
+        I have no idea what you're talking about!: Eu não faço ideia do que você está falando!
+        I know how to convert between number systems, but I don't know about the underlying rules of how they work: Eu sei como converter entre sistemas numéricos, mas eu não sei sobre as regras subjacentes sobre como eles funcionam
+        Yes!: Sim!
+      U1 evaluation q3:
+        Are you comfortable with HTML or Markdown?: Você é confortável com HTML ou Markdown?
+        Nope!: Não!
+        Yes!: Sim!
+      U1 evaluation q4:
+        Do you know how IP addresses work?: Você sabe como endereços de IP funcionam?
+        Nope!: Não!
+        Yes!: Sim!
+      U1 evaluation q5:
+        Do you know how messages are broken down and routed on the internet?: Você sabe como mensagens são quebradas e roteadas na internet?
+        Nope!: Não!
+        Yes!: Sim!
+      U1 evaluation q6:
+        Have you ever looked at the traffic in your web browser when you request a website?: Você já olhou o tráfego no seu navegador web quando você faz uma requisição para um website?
+        Nope!: Não!
+        Yes!: Sim!
+      U1 evaluation q7:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: Quão confortável você está em ensinar lições onde os alunos fazem a maioria das atividades em computadores?
+        Not Comfortable: Nada Confortável
+        Very Comfortable: Muito Confortável
+      U1 evaluation q8:
+        Students working in small groups to build knowledge: Alunos trabalhando em grupos pequenos para gerar conhecimento
+        Students working on projects of their own interest that have clear rubrics and guidelines: Alunos trabalhando em projetos de seu próprio interesse que possuem direções e diretrizes bem claras
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: O processo Demonstre-Faça, onde você demonstra algo para o grupo, e então eles o fazem sozinhos ou em grupos
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
+      U1 evaluation q9:
+        Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
+      U2 evaluation q0:
+        Creating visualizations in order to communicate about a topic: Criação de visualizações para comunicar sobre um tópico
+        Digitally representing images: Representando imagens digitalmente
+        In general, which topic sounds most like something you do not already have experience with?: De forma geral, qual tópico mais soa como algo que você ainda não tem experiência?
+        Interpreting visual data to better understand a topic: Interpretando dados visuais para entender melhor um tópico
+        The pros and cons of different file types, as well at the types of compression found in common applications: Os prós e contras de diferentes tipos de arquivo, bem como os tipos de compressão encontrados em aplicações comuns
+        Understanding why different file types are often different sizes and looking at the units of measure common to file types: Entendendo porque tipos diferentes de arquivos frequentemente têm tamanhos diferentes e olhando para as unidades de medidas comuns para tipos de arquivos
+      U2 evaluation q1:
+        Very comfortable!: Muito confortável!
+      U2 evaluation q10:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: Quão confortável você está em ensinar lições onde os alunos fazem a maioria das atividades em computadores?
+        Not Comfortable: Nada Confortável
+        Very Comfortable: Muito Confortável
+      U2 evaluation q11:
+        Students working in small groups to build knowledge: Alunos trabalhando em grupos pequenos para gerar conhecimento
+        Students working on projects of their own interest that have clear rubrics and guidelines: Alunos trabalhando em projetos de seu próprio interesse que possuem direções e diretrizes bem claras
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: O processo Demonstre-Faça, onde você demonstra algo para o grupo, e então eles o fazem sozinhos ou em grupos
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
+      U2 evaluation q12:
+        Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
+      U2 evaluation q13:
+        How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
+      U2 evaluation q14:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
+      U2 evaluation q15:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
+        Not comfortable: Nada confortável
+        Very comfortable: Muito confortável
+      U2 evaluation q4:
+        I know a decent amount: Eu sei uma quantidade decente
+      U2 evaluation q6:
+        Do you have experience using Google Trends?: Você tem experiência usando o Google Trends?
+      U3 evaluation q10:
+        How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
+      U3 evaluation q11:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
+      U3 evaluation q12:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
+        Not comfortable: Nada confortável
+        Very comfortable: Muito confortável
+      U3 evaluation q2:
+        Not comfortable: Nada confortável
+        Very comfortable: Muito confortável
+      U3 evaluation q6:
+        In general, which topic sounds most like something you do not already have experience with?: De forma geral, qual tópico mais soa como algo que você ainda não tem experiência?
+      U3 evaluation q7:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: Quão confortável você está em ensinar lições onde os alunos fazem a maioria das atividades em computadores?
+        Not Comfortable: Nada Confortável
+        Very Comfortable: Muito Confortável
+      U3 evaluation q8:
+        Students working in small groups to build knowledge: Alunos trabalhando em grupos pequenos para gerar conhecimento
+        Students working on projects of their own interest that have clear rubrics and guidelines: Alunos trabalhando em projetos de seu próprio interesse que possuem direções e diretrizes bem claras
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: O processo Demonstre-Faça, onde você demonstra algo para o grupo, e então eles o fazem sozinhos ou em grupos
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
+      U3 evaluation q9:
+        Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
+      U4 evaluation q10:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
+      U4 evaluation q11:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
+        Not comfortable: Nada confortável
+        Very comfortable: Muito confortável
+      U4 evaluation q6:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: Quão confortável você está em ensinar lições onde os alunos fazem a maioria das atividades em computadores?
+        Not Comfortable: Nada Confortável
+        Very Comfortable: Muito Confortável
+      U4 evaluation q7:
+        Students working in small groups to build knowledge: Alunos trabalhando em grupos pequenos para gerar conhecimento
+        Students working on projects of their own interest that have clear rubrics and guidelines: Alunos trabalhando em projetos de seu próprio interesse que possuem direções e diretrizes bem claras
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: O processo Demonstre-Faça, onde você demonstra algo para o grupo, e então eles o fazem sozinhos ou em grupos
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
+      U4 evaluation q8:
+        Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
+      U4 evaluation q9:
+        How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
+      U5 evaluation q1:
+        'No': 'Não'
+        'Yes': 'Sim'
+      U5 evaluation q2:
+        0: '? Modules in this unit are organized based on lessons that build towards a common project. Once a programming concept is introduced, we will use that again concept in later lessons. Which concept are you least familiar with?'
+        1: ': Modules in this unit are organized based on lessons that build towards a common project. Once a programming concept is introduced, we will use that again concept in later lessons. Which concept are you least familiar with?'
+        While Loops: Laços enquanto
+      U5 evaluation q3:
+        Students working in small groups to build knowledge: Alunos trabalhando em grupos pequenos para gerar conhecimento
+        Students working on projects of their own interest that have clear rubrics and guidelines: Alunos trabalhando em projetos de seu próprio interesse que possuem direções e diretrizes bem claras
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: O processo Demonstre-Faça, onde você demonstra algo para o grupo, e então eles o fazem sozinhos ou em grupos
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
+      U5 evaluation q4:
+        Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
+      U5 evaluation q5:
+        How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
+      U5 evaluation q6:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
+      U5 evaluation q7:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
+        Not comfortable: Nada confortável
+        Very comfortable: Muito confortável
+    external:
+      Algo How Routers Learn Student Lesson Introduction:
+        title: título
+      Algo Shortest Path Student Lesson Introduction:
+        title: título
+      Basic mechanics of variables:
+        title: título
+      Basic mechanics of variables_2018:
+        title: título
+      Begin planning your project:
+        title: título
+      'Big Picture: If-statements':
+        title: título
+      'Big Picture: If-statements_2018':
+        title: título
+      Boolean Expressions and Comparison Operators:
+        title: título
+      Boolean Expressions and Comparison Operators_2018:
+        title: título
+      CSD U1 Input Output C2:
+        title: título
+      CSD U1 Input Output C3:
+        title: título
+      CSD U1 Input Output C4:
+        title: título
+      CSD U1 Input Output Intro:
+        title: título
+      CSD U2 Design Project:
+        title: título
+      CSD U2 Design Project_2018:
+        title: título
+      CSD U2 L1 Overview:
+        title: título
+      CSD U2 L1 Overview_2018:
+        title: título
+      CSD U2 L2 Overview:
+        title: título
+      CSD U2 L2 Overview_2018:
+        title: título
+      CSD U2 L3 Overview:
+        title: título
+      CSD U2 L3 Overview_2018:
+        title: título
+      CSD U2 L4 Overview:
+        title: título
+      CSD U2 L4 Overview_2018:
+        title: título
+      CSD U2 L5 Overview:
+        title: título
+      CSD U2 L5 Overview_2018:
+        title: título
+      CSD U2 L6 Overview:
+        title: título
+      CSD U2 L6 Overview_2018:
+        title: título
+      CSD U2 Social Sleuth:
+        title: título
+      CSD U2 expand project:
+        title: título
+      CSD U2 expand project_2018:
+        title: título
+      CSD U2 layout style review:
+        title: título
+      CSD U2 more CSS:
+        title: título
+      CSD U3 L2 Challenges:
+        title: título
+      CSD U3 SFLP Sprites and Images:
+        title: título
+      CSD U3 abstraction intro:
+        title: título
+      CSD U3 combining rep:
+        title: título
+      CSD U3 combining rep_2018:
+        title: título
+      CSD U5 Encryption 1:
+        title: título
+      CSD U5 Encryption 1_2018:
+        title: título
+      CSD U5 L13 SFLP Interpreting Data:
+        title: título
+      CSD U5 L13 SFLP Interpreting Data_2018:
+        title: título
+      CSD U5 Representing Information:
+        title: título
+      CSD U5 collection UPS2:
+        title: título
+      CSD U5 collection ads2:
+        title: título
+      CSD U5 data visualization:
+        title: título
+      CSD U5 data visualization sheet:
+        title: título
+      CSD U5 data visualization_2018:
+        title: título
+      CSD U5 student record:
+        title: título
+      CSD U5 student record_2018:
+        title: título
+      CSD U5 video2:
+        title: título
+      CSD-U3-SFLP Drawing:
+        title: título
+      CSDU2L01 SFLP:
+        title: título
+      CSP ExploreL02 SFLP:
+        title: título
+      CSP Journal Entry Placeholder2:
+        title: título
+      CSPPD impact of CS:
+        Impact of Computer Science: Impacto da ciência da computação
+      CSPPD3-u2 Welcome:
+        Welcome!: Bem-vindo!
+      CSPStudentLessonPlanTemplate:
+        title: título
+      CSPU5 Making a Multi Screen Chaser Game:
+        title: título
+      CSPU5_ChoosingGoodIds:
+        title: título
+      CSPU5_EventDrivenProgrammingPatterns:
+        title: título
+      CSPU5_FirstTimeDesignMode:
+        title: título
+      CSPU5_FirstTimeDesignMode_2018:
+        title: título
+      CSPU5_HowImagesWork:
+        title: título
+      CSPU5_HowOnEventWorks_v2:
+        title: título
+      CSPU5_U3L12 - Student Introduction 1:
+        Events Unplugged: Eventos offline
+      CSPU5_U3L14 - Message - Other ways to assign values:
+        title: título
+      CSPU5_U3L14 - Message - basic mechanics of variables:
+        title: título
+      CSPU5_U3L15 - explanation of IF and =v==:
+        title: título
+      CSPU5_U3L15 Student Lesson Intro - new:
+        title: título
+      CSPU5_U3L20 - combining And and Or explanation:
+        title: título
+      CSPU5_goodbyeTurtle_setPosition:
+        title: título
+      CSPU5_introToDebugging:
+        title: título
+      CSPU5_makingPredictions_ref:
+        title: título
+      CSPU5_onEventBreakdown:
+        title: título
+      CSP_Final_instructions:
+        title: título
+      CSP_U4_rawMovieData:
+        title: título
+      Color Sleuth - Epilogue:
+        title: título
+      Color Sleuth - Epilogue_2018:
+        title: título
+      Color Sleuth - How does it end?:
+        title: título
+      Color Sleuth - How does it end?_2018:
+        title: título
+      Color Sleuth - How to switch player turns:
+        title: título
+      Color Sleuth - How to switch player turns_2018:
+        title: título
+      Color Sleuth - Keeping score:
+        title: título
+      Color Sleuth - Keeping score_2018:
+        title: título
+      Color Sleuth - Planning the App:
+        title: título
+      Color Sleuth - Planning the App_2018:
+        title: título
+      Controlling Memory - Other ways to assign values:
+        title: título
+      Controlling Memory - Other ways to assign values_2018:
+        title: título
+      Cups and Beans Activity:
+        title: título
+      Cups and Beans Activity_2018:
+        title: título
+      Debugging with Console.log:
+        title: título
+      Debugging with Console.log_2018:
+        title: título
+      Digital Footprint Chirpr lillizard:
+        title: título
+      Digital Footprint FaceSpace Haley:
+        title: título
+      Digital Footprint FaceSpace Lizzie:
+        title: título
+      Digital Footprint instantframe wiz_kid_liz:
+        title: título
+      DigitalCitizenship2:
+        Digital Citizenship: Cidadania digital
+      ECSPD Challenge Rubric:
+        title: título
+      ECSPD Online U1D11-14:
+        title: título
+      ECSPD Online U1D15-16 Forum:
+        title: título
+      ECSPD Online intro:
+        Introduction: Introdução
+      ECSPD U2 Challenge Plan:
+        title: título
+      ECSPD Unit 2 Stage11:
+        title: título
+      ECSPD Unit 2 Stage13:
+        title: título
+      ECSPD Unit 2 Stage6:
+        title: título
+      ECSPD impact of CS:
+        Impact of Computer Science: Impacto da ciência da computação
+      Encoding Numbers Real World Student Lesson Introduction:
+        title: título
+      Event Driven Programming Recap:
+        title: título
+      Event Driven Programming Recap_2018:
+        title: título
+      Event-Driven Programming Patterns:
+        title: título
+      Event-Driven Programming Patterns_2018:
+        title: título
+      External MD column Test:
+        title: título
+      External MD column Test bootstrap:
+        title: título
+      GoodBadVisualizations_v1:
+        title: título
+      GoodBadVisualizations_v2:
+        title: título
+      How "if-else-if" Works:
+        title: título
+      How "if-else-if" Works_2018:
+        title: título
+      How Compound Boolean Expressions Work:
+        title: título
+      How Compound Boolean Expressions Work_2018:
+        title: título
+      How Dropdown Menus Work:
+        title: título
+      How Dropdown Menus Work_2018:
+        title: título
+      How If Statements Work pt 1:
+        title: título
+      How If Statements Work pt 1_2018:
+        title: título
+      How If-Else Statements Work:
+        title: título
+      How If-Else Statements Work_2018:
+        title: título
+      How Images Work:
+        title: título
+      How Images Work_2018:
+        title: título
+      How Secure Is Your Password?:
+        title: título
+      How Secure Is Your Password?_2018:
+        title: título
+      How Set Property Works:
+        title: título
+      How Set Property Works_2018:
+        title: título
+      How onEvent Works:
+        title: título
+      How onEvent Works_2018:
+        title: título
+      How setPosition and screen dimensions work:
+        title: título
+      How setPosition and screen dimensions work_2018:
+        title: título
+      How the Boolean &&, || and ! Operators Work:
+        title: título
+      How the Boolean &&, || and ! Operators Work_2018:
+        title: título
+      How to make a random color:
+        title: título
+      How to make a random color_2018:
+        title: título
+      How to pick a random button:
+        title: título
+      How to pick a random button_2018:
+        title: título
+      Internet Simulator Setup 2:
+        title: título
+      Intro to Debugging and Common Problems:
+        title: título
+      Intro to Debugging and Common Problems_2018:
+        title: título
+      Making Multiple Screens:
+        title: título
+      Making Multiple Screens_2018:
+        title: título
+      Making a Multi Screen Chaser Game v.2:
+        title: título
+      Making a Multi Screen Chaser Game v.2_2018:
+        title: título
+      Multi-Screen Apps:
+        title: título
+      New Challenge Introduction:
+        title: título
+      New Challenge Introduction_2018:
+        title: título
+      OPD-K5 Stage3aGo:
+        title: título
+      PDAlg End of P1:
+        End of Phase 1: Fim da Fase 1
+      PDAlg Facilitator Test:
+        title: título
+      PDAlg Facilitators:
+        Meet Your Facilitators: Conheça Seus Facilitadores
+      PDAlg Scope:
+        Scope and Sequence: Escopo e Sequência
+      PDAlg Teacher Dashboard:
+        Course Progress: Progresso do curso
+      PDAlg Teacher Introduction:
+        Introduce yourself: Apresente-se
+      PDK5 Beyond C:
+        Beyond: Além
+      PDK5 CS Video:
+        Computer Science: Ciência da Computação
+      PDK5 Connections:
+        Connections: Conexões
+      PDK5 Glossary C:
+        Vocabulary: Vocabulário
+      PDK5 Pair Programming 1:
+        Pair Programming: Programação em duplas
+      PDK5 Teacher Dashboard 3:
+        Course Progress: Progresso do curso
+      PDK5 Teacher Dashboard 4:
+        Course Progress: Progresso do curso
+      PDK5 Teacher Dashboard C:
+        Teacher Dashboard: Painel de controle do professor
+      PS - Responding to User Input:
+        title: título
+      PS - draft - Longitudinal study description:
+        title: título
+      Prepare for your presentation:
+        title: título
+      Public Key Crypto Widget Instructions:
+        title: título
+      Public Key Crypto Widget Instructions_2018:
+        title: título
+      Recruitment-Scenarios-Passthrough:
+        Recruitment Scenarios Session: Sessão de cenários de recrutamento
+      Rules About Choosing Good IDs:
+        title: título
+      Rules About Choosing Good IDs_2018:
+        title: título
+      SG U3 whats a comment:
+        title: título
+      SG v2 U3L01 Student Lesson Introduction:
+        title: título
+      SG v2 U3L02 Student Lesson Introduction:
+        title: título
+      SG v2 U3L03 Student Lesson Introduction:
+        title: título
+      SG v2 U3L05 Student Lesson Introduction:
+        title: título
+      SG v2 U3L07 Student Lesson Introduction:
+        title: título
+      SG v2 U3L08 Student Lesson Introduction:
+        title: título
+      SG v2 U3L09 Student Lesson Introduction:
+        Looping and Random Numbers: Repetição e números aleatórios
+      Sending Bits Real World Student Lesson Introduction:
+        title: título
+      Simple Decisions with if-statements:
+        title: título
+      Simple Decisions with if-statements_2018:
+        title: título
+      Tips For Working on Your Own:
+        title: título
+      Tips For Working on Your Own_2018:
+        title: título
+      U1L10 Student Lesson Introduction:
+        title: título
+      U1L11 Student Lesson Introduction:
+        title: título
+      U1L12 Student Lesson Introduction:
+        title: título
+      U1L13 Student Lesson Summary:
+        title: título
+      U1L14 Student Lesson Summary:
+        title: título
+      U1L15 Student Lesson Summary:
+        title: título
+      U1L17 Student Lesson Introduction:
+        title: título
+      U1L2 Student Lesson Introduction:
+        title: título
+      U1L3 Student Lesson Introduction:
+        title: título
+      U1L4 Student Lesson Introduction:
+        title: título
+      U1L5 Student Lesson Introduction:
+        title: título
+      U1L6 Student Lesson Introduction:
+        title: título
+      U1L7 Student Lesson Introduction:
+        title: título
+      U1L8 Student Lesson Introduction:
+        title: título
+      U1L9 Student Lesson Introduction:
+        title: título
+      U2L1 Student Lesson Introduction:
+        title: título
+      U2L12 Student Lesson Introduction:
+        title: título
+      U2L2 Student Lesson Introduction:
+        The Need for Addressing: A Necessidade de Endereçar
+      U2L7 Student Lesson Introduction:
+        title: título
+      U2L8 Student Lesson Introduction:
+        title: título
+      U2L9 Student Lesson Introduction:
+        The Need for DNS: A Necessidade de DNS
+      U3 whats a comment:
+        title: título
+      U3 whats a comment_2018:
+        title: título
+      U3L06 Student Lesson Introduction:
+        APIs and Function Parameters: APIs e parâmetros de função
+      U3L07 Student Lesson Introduction:
+        Looping and Random Numbers: Repetição e números aleatórios
+      U3L08 Student Lesson Introduction:
+        Creating Functions with Parameters: Criação de funções com parâmetros
+      U3L12 - Mission Unsortable:
+        title: título
+      U3L12 - Student Introduction 1:
+        Events Unplugged: Eventos offline
+      U3L13 - Explanation of Ids:
+        title: título
+      U3L13 - Make a Prediction Explanation:
+        title: título
+      U3L13 Add Button Instrucitons:
+        title: título
+      U3L13 Add Button Instructions:
+        title: título
+      U3L14 - Message - Other ways to assign values:
+        title: título
+      U3L14 - Message - basic mechanics of variables:
+        title: título
+      U3L14 - Student Intro Page:
+        title: título
+      U3L15 - explanation of IF and =v==:
+        title: título
+      U3L15 Student Lesson Intro - new:
+        title: título
+      U3L19 - done with variables finally:
+        title: título
+      U3L20 - combining And and Or explanation:
+        title: título
+      U4 - Cleaning Data - Activity Guide:
+        title: título
+      U4 - Making Data Visualizations - Bar Chart:
+        title: título
+      U4 - Making Data Visualizations - Edit Chart Appearance:
+        title: título
+      U4 - Making Data Visualizations - Free Play:
+        title: título
+      U4 - Making Data Visualizations - Free Play_2018:
+        title: título
+      U4 - Making Data Visualizations - Getting Started:
+        title: título
+      U4 - Making Data Visualizations - Line Chart:
+        title: título
+      U4 - Making Data Visualizations - Scatter Plot:
+        title: título
+      U4 - Making Data Visualizations - Student Introduction:
+        title: título
+      U4 - Privacy Abandoned - Hot On Your Trail Video:
+        title: título
+      U4 - Unique Ids Explanation:
+        title: título
+      U4 - Unique Ids Explanation_2018:
+        title: título
+      U4 Cleaning Data Activity Guide Pt2:
+        title: título
+      U4 Cleaning Data Activity Guide Pt3:
+        title: título
+      U4L01 Student Lesson Introduction:
+        title: título
+      U4L02 Student Lesson Introduction:
+        title: título
+      U4L02 Student Lesson Introduction_2018:
+        title: título
+      U4L02v2 - Finding Trends:
+        title: título
+      U4L03 Student Lesson Introduction:
+        title: título
+      U4L03 Student Lesson Introduction_2018:
+        title: título
+      U4L03v2 - Student Introduction:
+        title: título
+      U4L04 Student Lesson Introduction:
+        title: título
+      U4L04 Student Lesson Introduction_2018:
+        title: título
+      U4L04v2 - Student Introduction:
+        title: título
+      U4L05 Student Lesson Introduction:
+        title: título
+      U4L06 Student Lesson Introduction:
+        title: título
+      U4L06v2 Student Lesson Introduction:
+        title: título
+      U4L07 Student Introduction public key crypto:
+        title: título
+      U4L07 Student Lesson Introduction:
+        title: título
+      U4L08 - mod clock instructions:
+        title: título
+      U4L08 Student Lesson Introduction:
+        title: título
+      U4L08v2 Making Pivot Tables:
+        title: título
+      U4L08v2 Making Pivot Tables Part 2:
+        title: título
+      U4L08v2 Making Pivot Tables Part 3:
+        title: título
+      U4L08v2 Making Pivot Tables Part 3_2018:
+        title: título
+      U4L08v2 Student Intro:
+        title: título
+      U4L09 Student Lesson Intro Practice PT big data dilemma:
+        title: título
+      U4L09 Student Lesson Introduction:
+        title: título
+      U4L10 Student Lesson Introduction:
+        title: título
+      U4L11 Student Lesson Introduction:
+        title: título
+      U4L12 - Student Introduction:
+        title: título
+      U4L12 Student Lesson Introduction:
+        title: título
+      U4L13 Student Lesson Introduction:
+        title: título
+      U4L14 Student Lesson Introduction:
+        title: título
+      U4L15 Student Lesson Introduction:
+        title: título
+      U4L16 Student Lesson Introduction:
+        title: título
+      U4L17 Student Lesson Introduction:
+        title: título
+      U4L18 Student Lesson Introduction:
+        title: título
+      U4L19 Student Lesson Introduction:
+        title: título
+      U4L20 Student Lesson Introduction:
+        title: título
+      U4L21 Student Lesson Introduction:
+        title: título
+      U4L22 Student Lesson Introduction:
+        title: título
+      U4L23 Student Lesson Introduction:
+        title: título
+      U4L24 Student Lesson Introduction:
+        title: título
+      U4L5 random subst challenge page:
+        title: título
+      U5 - Create PT - Student Introduction:
+        title: título
+      U5 - Create PT Prep - Student Introduction:
+        title: título
+      U5 - Create PT review - Student Introduction:
+        title: título
+      U5 - Explore PT - Student Introduction:
+        title: título
+      U5 - Explore PT Prep - Student Introduction:
+        title: título
+      U5 - Explore PT Review - Student Introduction:
+        title: título
+      U5 - PT Prep - Digital Portfolio and tech setup:
+        title: título
+      U5 color sleuth check correct:
+        title: título
+      U5 color sleuth check correct_2018:
+        title: título
+      U5L08 - Student Intro If statements:
+        title: título
+      U6 - Charts - Student Introduction:
+        title: título
+      U6 - Charts - Student Introduction_2018:
+        title: título
+      U6 - Final Project - Student Introduction:
+        title: título
+      U6 - Final Project - Student Introduction_2018:
+        title: título
+      U6 - ImportExport - Student Introduction:
+        title: título
+      U6 - ImportExport - Student Introduction_2018:
+        title: título
+      U6 - Sample Apps - Student Introduction:
+        title: título
+      U6 - Sample Apps - Student Introduction_2018:
+        title: título
+      U6 - deleteRecord - Student Introduction:
+        title: título
+      U6 - deleteRecord - Student Introduction_2018:
+        title: título
+      U6 - updateRecord - Student Introduction:
+        title: título
+      U6 - updateRecord - Student Introduction_2018:
+        title: título
+      U6 AP Performance Task Tech Setup - Student Links:
+        title: título
+      U6 Create PT - Complete the Task - Student Links:
+        title: título
+      U6 Create PT - Complete the Task - Student Links_2018:
+        title: título
+      U6 Create PT Review - Student Links:
+        title: título
+      U6 Create PT Review - Student Links_2018:
+        title: título
+      U6 Explore PT - Complete the Task - Student Links:
+        title: título
+      U6 Explore PT - Complete the Task - Student Links_2018:
+        title: título
+      U6 Explore PT - Make a Plan - Student Links:
+        title: título
+      U6 Explore PT - Make a Plan - Student Links_2018:
+        title: título
+      U6 Explore PT Review - Student Links:
+        title: título
+      U6 Explore PT Review - Student Links_2018:
+        title: título
+      Unit 2 Lesson 1 Overview Clone:
+        title: título
+      Unit 4 Lesson 1 Introduction:
+        title: título
+      Unit 4 Lesson 1 Introduction_2018:
+        title: título
+      Unit 4 Lesson 2 Introduction:
+        title: título
+      Unit 4 Lesson 2 Introduction_2018:
+        title: título
+      Unit 4 Lesson 5 Introduction:
+        title: título
+      Unit 4 Lesson 5 Introduction_2018:
+        title: título
+      Unit 5 Lesson 1:
+        title: título
+      Unit 5 Lesson 1 Introduction:
+        title: título
+      Unit 5 Lesson 1 Introduction_2018:
+        title: título
+      Unit 5 Lesson 10 Introduction:
+        title: título
+      Unit 5 Lesson 10 Introduction_2018:
+        title: título
+      Unit 5 Lesson 2 Introduction:
+        title: título
+      Unit 5 Lesson 2 Introduction_2018:
+        title: título
+      Unit 5 Lesson 3 Introduction:
+        title: título
+      Unit 5 Lesson 3 Introduction_2018:
+        title: título
+      Unit 5 Lesson 4 Introduction:
+        title: título
+      Unit 5 Lesson 4 Introduction_2018:
+        title: título
+      Unit 5 Lesson 5:
+        title: título
+      Unit 5 Lesson 5 Introduction:
+        title: título
+      Unit 5 Lesson 5 Introduction_2018:
+        title: título
+      Unit 5 Lesson 6:
+        title: título
+      Unit 5 Lesson 6 Introduction:
+        title: título
+      Unit 5 Lesson 6 Introduction_2018:
+        title: título
+      Unit 5 Lesson 7 Introduction:
+        title: título
+      Unit 5 Lesson 7 Introduction_2018:
+        title: título
+      Unit 5 Lesson 8 Introduction:
+        title: título
+      Unit 5 Lesson 8 Introduction_2018:
+        title: título
+      Unit 5 Lesson 9 Introduction:
+        title: título
+      Unit 5 Lesson 9 Introduction_2018:
+        title: título
+      'Worked Example: If-statements and Robot':
+        title: título
+      'Worked Example: If-statements and Robot_2018':
+        title: título
+      brad-repro-bug-000:
+        Brad Repro Bug 000: Brad Repro Bug 000
+      courseB_external_MRF:
+        title: título
+      courseB_external_loopMRF:
+        title: título
+      courseB_story_unspottedBugs10:
+        title: título
+      courseB_story_unspottedBugs11:
+        title: título
+      courseB_story_unspottedBugs12:
+        title: título
+      courseB_story_unspottedBugs13:
+        title: título
+      courseB_story_unspottedBugs14:
+        title: título
+      courseB_story_unspottedBugs15:
+        title: título
+      courseB_story_unspottedBugs16:
+        title: título
+      courseB_story_unspottedBugs17:
+        title: título
+      courseB_story_unspottedBugs18:
+        title: título
+      courseB_story_unspottedBugs2:
+        title: título
+      courseB_story_unspottedBugs3:
+        title: título
+      courseB_story_unspottedBugs4:
+        title: título
+      courseB_story_unspottedBugs5:
+        title: título
+      courseB_story_unspottedBugs6:
+        title: título
+      courseB_story_unspottedBugs7:
+        title: título
+      courseB_story_unspottedBugs8:
+        title: título
+      courseB_story_unspottedBugs9:
+        title: título
+      courseB_unplugged_mrfProgramming:
+        title: título
+      courseC_screenoutthemean:
+        title: título
+      courseF_firstFunctions_map:
+        title: título
+      coursef_functionsSummary_map:
+        title: título
+      coursef_powerofwords:
+        title: título
+      csd-post-survey-unit1-preamble:
+        title: título
+      csd-post-survey-unit2-preamble:
+        title: título
+      csd-post-survey-unit3-preamble:
+        title: título
+      csd-post-survey-unit4-preamble:
+        title: título
+      csd-post-survey-unit5-preamble:
+        title: título
+      csd-post-survey-unit6-preamble:
+        title: título
+      csp-post-survey-2018-AP-preamble:
+        title: título
+      csp-post-survey-2018-topics-preamble:
+        title: título
+      csp-post-survey-2018-unit-feedback-preamble:
+        title: título
+      csp-post-survey-createPT-preamble:
+        title: título
+      csp-post-survey-explorePT-preamble:
+        title: título
+      csp-post-survey-unit1-preamble:
+        title: título
+      csp-post-survey-unit2-preamble:
+        title: título
+      csp-post-survey-unit3-preamble:
+        title: título
+      csp-post-survey-unit4-preamble:
+        title: título
+      csp-post-survey-unit5-preamble:
+        title: título
+      csp_unit5_finalassessment_overview:
+        title: título
+      csp_unit5_finalassessment_overview_2018:
+        title: título
+      csp_unit5_finalassessment_overview_exam_prep:
+        title: título
+      csp_unit_assessment_overview:
+        title: título
+      csp_unit_assessment_overview_2018:
+        title: título
+      csp_unit_assessment_overview_exam_prep:
+        title: título
+      dsl link test:
+        title: título
+      grade2_maze_intro1:
+        title: título
+      grade2_unplugged_neighborhood:
+        title: título
+      grade4_project_design:
+        title: título
+      grade4_project_design_image:
+        title: título
+      grade4_project_presentation:
+        title: título
+      grade5_project_design:
+        title: título
+      grade5_project_presentation:
+        title: título
+      gradeK_unplugged_loops:
+        Loops Unplugged: Loops off-line
+      more encryption algorithms:
+        title: título
+      newCSFsample:
+        Intro: Introdução
+      post-assessment survey heading4:
+        title: título
+      pwc_appdev:
+        title: título
+      pwc_appdevunplugged:
+        title: título
+      pwc_cybersecurity:
+        title: título
+      pwc_internetofthings:
+        title: título
+      pwc_programming:
+        title: título
+      pwc_webdevelopment:
+        title: título
+      sciPD StarLogo intro video:
+        Introduction to StarLogo Nova: Introdução ao StarLogo Nova
+      sciPD class models video:
+        Using Models in the Classroom: Usando modelos na sala de aula
+      sciPD computer models forum:
+        Using Computer Models in Science: Usando modelos de computadores em ciência
+      sciPD computer models video:
+        Using Computer Models in Science: Usando modelos de computadores em ciência
+      sciPD culture forum:
+        Dispositions and Classroom Culture: Disposições e cultura de sala de aula
+      sciPD framework video:
+        Framework: Quadro
+      sciPD what to expect:
+        What to Expect: O que esperar
+      sciPD what to expect 16-17:
+        What to Expect: O que esperar
+      sciPD2 thanks:
+        Great Job!: Ótimo trabalho!
+      sciPD2Part4_S1_L3:
+        title: título
+      sciPD2Part4_S2_L1:
+        title: título
+      sciPD2Part4_S2_L2:
+        title: título
+      sciPD2Part4_S3_L1:
+        title: título
+      sciPD2Part4_S3_L2:
+        title: título
+      sciPD2Part4_S3_L3:
+        title: título
+      sciPD2b end:
+        Thank You!: Obrigado!
+      sciPD3 end:
+        Thank You!: Obrigado!
+      sciPD3 mods2:
+        title: título
+      sciPD3 thanks:
+        Great Job!: Ótimo trabalho!
+      sciPD33 earth1:
+        title: título
+      sciPD33 earth2:
+        title: título
+      sciPD3pre1 thanks:
+        Thank You: Obrigado
+        Thanks for your time: Obrigado pelo seu tempo
+      sciPDpart4_S1_L1:
+        title: título
+      swipeRightPassThrough:
+        Recruitment Scenarios Session: Sessão de cenários de recrutamento
+      swipeRightPassThrough-test123:
+        Recruitment Scenarios Session: Sessão de cenários de recrutamento
+      test discourse level type:
+        title: título
+      v1 U1L13 Student Lesson Introduction:
+        The Need for DNS: A Necessidade de DNS
+      v2 U1 Internet is for Everyone Student Lesson Introduction:
+        title: título
+      v2 U1 Internet is for Everyone Student Lesson Introduction_2018:
+        title: título
+      v2 U1L12 Student Lesson Introduction:
+        The Need for DNS: A Necessidade de DNS
+      v2 U1L12 Student Lesson Introduction_2018:
+        The Need for DNS: A Necessidade de DNS
+      v2 U1L14 Student Lesson Introduction:
+        title: título
+      v2 U1L14 Student Lesson Introduction_2018:
+        title: título
+      v2 U1L2 Student Lesson Introduction:
+        title: título
+      v2 U1L2 Student Lesson Introduction_2018:
+        title: título
+      v2 U1L3 Student Lesson Introduction:
+        title: título
+      v2 U1L3 Student Lesson Introduction_2018:
+        title: título
+      v2 U1L4 Student Lesson Introduction:
+        title: título
+      v2 U1L4 Student Lesson Introduction_2018:
+        title: título
+      v2 U1L5 Student Lesson Introduction:
+        title: título
+      v2 U1L5 Student Lesson Introduction_2018:
+        title: título
+      v2 U1L6 Student Lesson Introduction:
+        Sending Numbers: Envio de números
+      v2 U1L6 Student Lesson Introduction_2018:
+        Sending Numbers: Envio de números
+      v2 U1L8 Student Lesson Introduction:
+        title: título
+      v2 U1L8 Student Lesson Introduction_2018:
+        title: título
+      v2 U1L9 Student Lesson Introduction:
+        The Need for Addressing: A Necessidade de Endereçar
+      v2 U1L9 Student Lesson Introduction_2018:
+        The Need for Addressing: A Necessidade de Endereçar
+      v2 U2L1 Student Lesson Introduction:
+        title: título
+      v2 U2L1 Student Lesson Introduction_2018:
+        title: título
+      v2 U2L10 Student Lesson Introduction:
+        title: título
+      v2 U2L10 Student Lesson Introduction_2018:
+        title: título
+      v2 U2L11 Student Lesson Introduction:
+        title: título
+      v2 U2L11 Student Lesson Introduction_2018:
+        title: título
+      v2 U2L12 Student Lesson Introduction:
+        title: título
+      v2 U2L12 Student Lesson Introduction_2018:
+        title: título
+      v2 U2L13 Student Lesson Introduction:
+        title: título
+      v2 U2L13 Student Lesson Introduction_2018:
+        title: título
+      v2 U2L14 Student Lesson Introduction:
+        title: título
+      v2 U2L14 Student Lesson Introduction_2018:
+        title: título
+      v2 U2L15 Student Lesson Introduction:
+        title: título
+      v2 U2L15 Student Lesson Introduction_2018:
+        title: título
+      v2 U2L2 Student Lesson Summary:
+        title: título
+      v2 U2L2 Student Lesson Summary_2018:
+        title: título
+      v2 U2L3 Student Lesson Summary:
+        title: título
+      v2 U2L3 Student Lesson Summary_2018:
+        title: título
+      v2 U2L4 Student Lesson Summary:
+        title: título
+      v2 U2L4 Student Lesson Summary_2018:
+        title: título
+      v2 U2L6 Student Lesson Introduction:
+        title: título
+      v2 U2L6 Student Lesson Introduction_2018:
+        title: título
+      v2 U2L7 Student Lesson Introduction:
+        title: título
+      v2 U2L7 Student Lesson Introduction_2018:
+        title: título
+      v2 U2L8 Student Lesson Introduction:
+        title: título
+      v2 U2L8 Student Lesson Introduction_2018:
+        title: título
+      v2 U2L9 Student Lesson Introduction:
+        title: título
+      v2 U2L9 Student Lesson Introduction_2018:
+        title: título
+      v2 U3L04 Student Lesson Introduction:
+        title: título
+      v2 U3L04 Student Lesson Introduction_2018:
+        title: título
+      v2 U3L05 Student Lesson Introduction:
+        Creating Functions: Criando funções
+      v2 U3L05 Student Lesson Introduction_2018:
+        Creating Functions: Criando funções
+      v2 U3L07 Student Lesson Introduction:
+        APIs and Function Parameters: APIs e parâmetros de função
+      v2 U3L07 Student Lesson Introduction_2018:
+        APIs and Function Parameters: APIs e parâmetros de função
+      v2 U3L08 Student Lesson Introduction:
+        Creating Functions with Parameters: Criação de funções com parâmetros
+      v2 U3L08 Student Lesson Introduction_2018:
+        Creating Functions with Parameters: Criação de funções com parâmetros
+      v2 U3L09 Student Lesson Introduction:
+        Looping and Random Numbers: Repetição e números aleatórios
+      v2 U3L09 Student Lesson Introduction_2018:
+        Looping and Random Numbers: Repetição e números aleatórios
+      v2 U4L05 Student Lesson Intro Encryption Caesar:
+        title: título
+    match:
+      2-3 Big Event Match 1:
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png": "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
+      2-3 Binary Match 1:
+        "/script_assets/2-3_images/unplugged/binary_1_a1.png": "/script_assets/2-3_images/unplugged/binary_1_a1.png"
+        "/script_assets/2-3_images/unplugged/binary_1_a2.png": "/script_assets/2-3_images/unplugged/binary_1_a2.png"
+        "/script_assets/2-3_images/unplugged/binary_1_a3.png": "/script_assets/2-3_images/unplugged/binary_1_a3.png"
+        "/script_assets/2-3_images/unplugged/binary_1_a4.png": "/script_assets/2-3_images/unplugged/binary_1_a4.png"
+        "/script_assets/2-3_images/unplugged/binary_1_q.png, 250": "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Use the key to match each code to its letter: Use a chave para relacionar cada código a sua letra
+      2-3 Graph Paper Match 1:
+        "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
+      2-3 Maze Match 2:
+        "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
+        Instructions: Instruções
+      2-3 Relay Programming Match 1:
+        "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
+      4-5 Algorithms Match 1:
+        "<h4>Compare player scores to see who wins</h4>": "<h4>Compara a pontuação dos jogadores para ver quem vence</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>O jogador 1 joga o dado</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>Define a pontuação do jogador 1 como 0</h4>"
+      4-5 maze match 1:
+        Instructions: Instruções
+      CSD U3 CSS Vocab Match:
+        '1': '1'
+        '2': '2'
+      CSD U3 keyinput match:
+        Question: Pergunta
+      CSD U6 LED match:
+        "<img src=\"https://images.code.org/705a5d0ce82fb28f85f0e148212c43a7-image-1510946591583.21.42 AM.png\">": <img src="https://images.code.org/705a5d0ce82fb28f85f0e148212c43a7-image-1510946591583.21.42 AM.png">
+        Match the Block: Associe os Blocos
+      CSDU2 Match RGB Colors:
+        Question: Pergunta
+      CSPPD unit matching:
+        Unit 1: Unidade 1
+        Unit 2: Unidade 2
+        Unit 3: Unidade 3
+        Unit 4: Unidade 4
+        Unit 5: Unidade 5
+        data extraction, modeling, and processing: extração de dados, modelagem e processamento
+        foundations in the digital representation of information: princípios básicos da representação digital de informações
+        planning, organizing, and completion of performance tasks: planejamento, organização e realização de tarefas de desempenho
+        programming principles and JavaScript: princípios de programação e JavaScript
+        structure and design of the internet: estrutura e design da internet
+      CSPU5_U3L14 - Matching Events to Description:
+        click: clicar
+      ECSPD Growth Mindset Reflection Q:
+        Growth Mindset: Mentalidade de crescimento
+        Not Yet: Ainda não
+      ECSPD Online U1D10 Assessment 1:
+        0: '? Difficult for a computer to draw conclusions. Not easily converted to a graph or data set. Difficult to compare empirically or quantitatively with similar representations of data.'
+        1: ': Difficult for a computer to draw conclusions. Not easily converted to a graph or data set. Difficult to compare empirically or quantitatively with similar representations of data.'
+        2: '? Easily converted to a graph or data table. Can easily generate statistics and draw simple conclusions. Can easily compare with similar representations of data.'
+        3: ': Easily converted to a graph or data table. Can easily generate statistics and draw simple conclusions. Can easily compare with similar representations of data.'
+        'Image: Advantages': 'Imagem: Vantagens'
+        'Image: Disadvantages': 'Imagem: Desantagens'
+        'List of objects: Advantages': 'Lista de objetos: Vantagens'
+        'List of objects: Disadvantages': 'Lista de objetos: Desvantagens'
+        4: '? More comprehensive set of data. Can be used to generate multiple different data sets. Easy for a person to draw intuitive conclusions.'
+        5: ': More comprehensive set of data. Can be used to generate multiple different data sets. Easy for a person to draw intuitive conclusions.'
+      ECSPD Online U1D17-19 Assessment 2:
+        Artificial Intelligence: Inteligência Artificial
+        Machine Learning: Aprendizado de Máquina
+      ECSPD unit matching:
+        Unit 1: Unidade 1
+        Unit 2: Unidade 2
+        Unit 3: Unidade 3
+        Unit 4: Unidade 4
+        Unit 5: Unidade 5
+        create programs to solve computational problems: crie programas para resolver problemas computacionais
+        introduction to the concepts of computer and computing: introdução aos conceitos de computador e computação
+        use computing to manage and interpret data: use a computação para gerenciar e interpretar dados
+        website development and design: desenvolvimento e design de websites
+      ECSPD1 Matching Unit Descriptions and Numbers:
+        Unit 1: Unidade 1
+        Unit 2: Unidade 2
+        Unit 3: Unidade 3
+        Unit 4: Unidade 4
+        Unit 5: Unidade 5
+        create programs to solve computational problems: crie programas para resolver problemas computacionais
+        introduction to the concepts of computer and computing: introdução aos conceitos de computador e computação
+        use computing to manage and interpret data: use a computação para gerenciar e interpretar dados
+        website development and design: desenvolvimento e design de websites
+      K-1 Artist 2 Match 1:
+        "/script_assets/k_1_images/artist_images/square_above_ball.png": "/script_assets/k_1_images/artist_images/square_above_ball.png"
+        "/script_assets/k_1_images/artist_images/square_below_ball.png": "/script_assets/k_1_images/artist_images/square_below_ball.png"
+        "/script_assets/k_1_images/artist_images/square_next_ball.png": "/script_assets/k_1_images/artist_images/square_next_ball.png"
+        "<br/><br/>above": "<br/><br/>acima"
+        "<br/><br/>below": "<br/><br/>abaixo"
+      K-1 Artist 2 Match 2:
+        "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
+        Match the shapes based on type.: Associe as formas com base no tipo.
+      K-1 Artist 2 Match 3:
+        "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
+        Match the shapes based on type.: Associe as formas com base no tipo.
+      K-1 Big Event Match 1:
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png": "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
+      K-1 Maze Match 1:
+        Instructions: Instruções
+      K-1 Move It Match 1:
+        "/script_assets/k_1_images/unplugged_images/leftup.png": "/script_assets/k_1_images/unplugged_images/leftup.png"
+      Match math to circles:
+        "(2 + 3 * 5) / 2": "(2 + 3 * 5) / 2"
+      PDAlg Design Recipe Video:
+        Definition: Definição
+      PDAlg Types Video:
+        Image: Imagem
+        Number: Número
+        String: String
+      PDK5 Pair programming match:
+        Pair programming: Programação em duplas
+      PDK5 What is unplugged:
+        Question: Pergunta
+      'U2L06 - Matching: Label the Diagram':
+        A: A
+        B: B
+        C: C
+        D: D
+        E: L
+      U3L14 - Matching Events to Description:
+        click: clicar
+      U3L19 - MATCH what are values of abc:
+        '10': '10'
+        '12': '12'
+        '13': '13'
+        '15': '15'
+        '16': '16'
+        '21': '21'
+        '3': '3'
+        '5': '5'
+        '7': '7'
+        '8': '8'
+        a: a
+        title: título
+      U3L19 - MC what are values of abc:
+        title: título
+      U4L06 Create Record Id Matching Q:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      parts of contract:
+        image: image
+      test matching image:
+        Instructions: Instruções
+      test matching text:
+        blue: azul
+      unique level name here:
+        Question: Pergunta
+        title: título
+0:
+1:
+  CB_Question_3:
+    A: A
+    Y: true
+  CSD Prediction Header Size:
+    Question: Pergunta
+  CSD U3 Boolean MC:
+    title: título
+  CSD U3 Boolean MC_2018:
+    title: título
+  CSDU4 Screens Predict Multi:
+    About: Sobre
+    Contact Us: Fale Conosco
+  CSDU6 - timed loop predict counter multi:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+  'CSP U4L04 Assessment 1 ':
+    Question: Pergunta
+  CSP Unit 1 Ch 1 MC binary to dec simple:
+    '0010': '0010'
+    '0101': '0101'
+    '0110': '0110'
+    '1010': '1010'
+  CSP Unit 1 Ch 1 MC binary to dec simple_2018:
+    '0010': '0010'
+    '0101': '0101'
+    '0110': '0110'
+    '1010': '1010'
+  CSP Unit 1 Ch 1 MC binary to dec simple_exam_prep:
+    '0010': '0010'
+    '0101': '0101'
+    '0110': '0110'
+    '1010': '1010'
+  CSP verify 18:
+    'No': 'Não'
+    'Yes': 'Sim'
+  CSPU5_predict_mc_whichOfTwoEvents:
+    title: título
+  CSPU5_predict_onEvent_withWrongID:
+    Question: Pergunta
+    title: título
+  CommuteAssess - loops 1 - block:
+    '10': '10'
+    '18': '18'
+    '3': '3'
+    '6': '6'
+  CommuteAssess - loops 1 - block B:
+    '10': '10'
+    '18': '18'
+    '3': '3'
+    '6': '6'
+  CommuteAssess - loops 1 - block_2018:
+    '10': '10'
+    '18': '18'
+    '3': '3'
+    '6': '6'
+  CommuteAssess - loops 1 - block_exam_prep:
+    '10': '10'
+    '18': '18'
+    '3': '3'
+    '6': '6'
+  CommuteAssess - loops 2 - block:
+    '0': '0'
+    '1': '1'
+    '10': '10'
+    '5': '5'
+    11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'''
+    12: ': ''How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'''
+  CommuteAssess - loops 2 - block_2018:
+    '0': '0'
+    '1': '1'
+    '10': '10'
+    '5': '5'
+    11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'''
+    12: ': ''How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'''
+  CommuteAssess - loops 2 - block_exam_prep:
+    '0': '0'
+    '1': '1'
+    '10': '10'
+    '5': '5'
+    11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'''
+    12: ': ''How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'''
+  ECSPD2 question:
+    Question: Pergunta
+    title: título
+  K-1 Maze Multiple Choice 2:
+    Maze: Labirinto
+  Multi Define Funcs 1:
+    '3': '3'
+    y: true
+  Multi Define Funcs 2:
+    '3': '3'
+    y: true
+  Multi Define Funcs 3:
+    '5': '5'
+    '6': '6'
+    y: true
+  PDAlg Blocks Video:
+    Toolbox: Caixa de ferramentas
+  PDAlg DR Multi 1:
+    Domain: Domínio
+    Name: Nome
+    Range: Intervalo
+    0: '? The first step in the Design Recipe is to create a contract based on the word problem. Which part of this contract has the student gotten wrong?'
+    1: ': The first step in the Design Recipe is to create a contract based on the word problem. Which part of this contract has the student gotten wrong?'
+  PDAlg PreQ 1:
+    'No': 'Não'
+    'Yes': 'Sim'
+  PDAlg PreQ 2:
+    'No': 'Não'
+    'Yes': 'Sim'
+  PDAlg functional:
+    'No': 'Não'
+  PDK5 Blockly Intro:
+    'Yes': 'Sim'
+  PDK5 Classroom Culture:
+    'Yes': 'Sim'
+  PDK5 Course Maps:
+    'Yes': 'Sim'
+  PDK5 Course Overview:
+    'Yes': 'Sim'
+  PDK5 Glossary:
+    Glossary: Glossário
+    'Yes': 'Sim'
+  PDK5 Intro:
+    'No': 'Não'
+    Welcome!: Bem-vindo!
+    'Yes': 'Sim'
+  PDK5 Teacher Dashboard:
+    Teacher Dashboard: Painel de controle do professor
+    'Yes': 'Sim'
+  PDK5 Test1:
+    Question: Pergunta
+    title: título
+  PDK5 UVideo Overview:
+    'Yes': 'Sim'
+  PDK5 Unplugged Intro:
+    'Yes': 'Sim'
+  PS U3-bakertest:
+    title: título
+  SG U3L07 - MC remove line of code loops:
+    '1': '1'
+    '14': '14'
+    '5': '5'
+    '6': '6'
+    '7': '7'
+  SG csp_U3_turtle_subgoal_q2_mc:
+    "<img src=\"https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png\">": <img src="https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png">
+  Submittable Multi:
+    blue: azul
+    green: verde
+    red: vermelho
+    yellow: amarelo
+  Test Contained Multi:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '4': '4'
+    No, that is 1 * 1.: Não, isso é 1 * 1.
+  U1L07 Assessment 1:
+    A: A
+    B: B
+    C: C
+    D: D
+    E: L
+  U1L2 Multiple Choice Assessment Question:
+    Two questions which share the same answer: Duas questões que compartilham a mesma resposta
+  U1L2 Multiple Choice Assessment Question_2018:
+    Two questions which share the same answer: Duas questões que compartilham a mesma resposta
+  U1L3 Multiple Choice:
+    1 bit: 1 bit
+  U1L3 Multiple Choice_2018:
+    1 bit: 1 bit
+  U1L4 Multiple Choice:
+    AAAA: AAAA
+    AABB: AABB
+    ABAB: ABAB
+    ABBB: ABBB
+    BBBB: BBBB
+  U1L4 Multiple Choice_2018:
+    AAAA: AAAA
+    AABB: AABB
+    ABAB: ABAB
+    ABBB: ABBB
+    BBBB: BBBB
+  U1L6 Assessment multiple choice:
+    '10': '10'
+    '12': '12'
+    '4': '4'
+    '6': '6'
+    '8': '8'
+    'Multiple Choice: Number Systems': 'Múltipla escolha: Sistemas numéricos'
+  U1L6 Assessment multiple choice_2018:
+    '10': '10'
+    '12': '12'
+    '4': '4'
+    '6': '6'
+    '8': '8'
+    'Multiple Choice: Number Systems': 'Múltipla escolha: Sistemas numéricos'
+  U1L8 Multiple Choice:
+    '10': '10'
+    '13': '13'
+    '14': '14'
+    '16': '16'
+    17: '? You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
+    18: ': You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
+  U1L8 Multiple Choice_2018:
+    '10': '10'
+    '13': '13'
+    '14': '14'
+    '16': '16'
+    17: '? You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
+    18: ': You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
+  U2L02 Assessment 3:
+    algorithm: algoritmo
+  U2L02 Assessment 3_2018:
+    algorithm: algoritmo
+  U2L02 Assessment 4:
+    From: De
+    To: Para
+  U2L02 Assessment 4_2018:
+    From: De
+    To: Para
+  'U2L06 - MC: Which is an MST?':
+    0: ': "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
+    A: A
+    B: B
+    C: C
+    D: D
+    E: L
+  U2L07 Assessment3:
+    Question 3: Questão 3
+  U2L08 Assessment 1:
+    '11': '11'
+    '5': '5'
+    '6': '6'
+    '8': '8'
+    '9': '9'
+  U2L10 Assessment1:
+    A. Redundancy: A. Redundância
+    B. Hierarchy: B. Hierarquia
+  U2L10 Assessment1_2018:
+    A. Redundancy: A. Redundância
+    B. Hierarchy: B. Hierarquia
+  U2L13 Assessment4:
+    '26': '26'
+    26 x 25: 26 x 25
+  U2L13 Assessment4_2018:
+    '26': '26'
+    26 x 25: 26 x 25
+  U2L14 Assessment3:
+    'false': 'falso'
+    'true': 'verdadeiro'
+  U2L17 - One Way functions Def MC:
+    Easy to create and easy to solve: Fácil de criar e fácil de solucionar
+    Easy to create and hard to solve: Fácil de criar e difícil de solucionar
+    Hard to create and easy to solve: Difícil de criar e fácil de solucionar
+    Hard to create and hard to solve: Difícil de criar e difícil de solucionar
+  U2L17 Free Responses Assessment 1:
+    Easy to create and easy to solve: Fácil de criar e fácil de solucionar
+    Easy to create and hard to solve: Fácil de criar e difícil de solucionar
+    Hard to create and easy to solve: Difícil de criar e fácil de solucionar
+    Hard to create and hard to solve: Difícil de criar e difícil de solucionar
+  U2L19 multichoice 13 MOD 17:
+    '0': '0'
+    '13': '13'
+    '17': '17'
+    '4': '4'
+  U2L19 multichoice 13 MOD 17_2018:
+    '0': '0'
+    '13': '13'
+    '17': '17'
+    '4': '4'
+  'U2L19 mutlichoice ':
+    '0': '0'
+    '1.5': '1.5'
+    '15': '15'
+    '20': '20'
+    '5': '5'
+  U2L19 mutlichoice 20 mod 15:
+    '0': '0'
+    '1.5': '1.5'
+    '15': '15'
+    '20': '20'
+    '5': '5'
+  U2L19 mutlichoice 20 mod 15_2018:
+    '0': '0'
+    '1.5': '1.5'
+    '15': '15'
+    '20': '20'
+    '5': '5'
+  U2L3 Assessment 2:
+    12 users: 12 usuários
+    32 users: 32 usuários
+    6 users: 6 usuários
+    64 users: 64 usuários
+  U2L3 Assessment 2_2018:
+    12 users: 12 usuários
+    32 users: 32 usuários
+    6 users: 6 usuários
+    64 users: 64 usuários
+  U3L07 - MC remove line of code loops:
+    '1': '1'
+    '14': '14'
+    '5': '5'
+    '6': '6'
+    '7': '7'
+  U3L07 - MC remove line of code loops_2018:
+    '1': '1'
+    '14': '14'
+    '5': '5'
+    '6': '6'
+    '7': '7'
+  U3L20 Assessment9:
+    "=": "="
+    ">": ">"
+  U3L30 Assessment1:
+    '6': '6'
+    '7': '7'
+    '8': '8'
+  U3L30 Assessment2:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+  U3L30 Assessment3:
+    '19': '19'
+    '20': '20'
+    '21': '21'
+  U4L01 Multiple Choice:
+    right: para direita
+  U4L02 Multiple Choice:
+    right: para direita
+  U4L03 Multiple Choice:
+    right: para direita
+  U4L04 Multiple Choice:
+    right: para direita
+  U4L05 Multiple Choice:
+    right: para direita
+  U4L06 Assessment 2:
+    column: coluna
+    row: linha
+  U4L06 Assessment 3:
+    column: coluna
+    row: linha
+  U4L06 Multiple Choice:
+    right: para direita
+  U4L06 Reflection Q 1:
+    Question: Pergunta
+    random: aleatório
+  U4L07 Multiple Choice:
+    right: para direita
+  U4L08 Multiple Choice:
+    right: para direita
+  U4L09 Multiple Choice:
+    right: para direita
+  U4L10 Multiple Choice:
+    right: para direita
+  U4L11 Multiple Choice:
+    right: para direita
+  U4L12 Multiple Choice:
+    right: para direita
+  U4L13 Multiple Choice:
+    right: para direita
+  U4L14 Multiple Choice:
+    right: para direita
+  U4L15 Multiple Choice:
+    right: para direita
+  U4L16 Multiple Choice:
+    right: para direita
+  U4L17 Multiple Choice:
+    right: para direita
+  U4L18 Multiple Choice:
+    right: para direita
+  U4L19 Multiple Choice:
+    right: para direita
+  U4L20 Multiple Choice:
+    right: para direita
+  U4L21 Multiple Choice:
+    right: para direita
+  U4L22 Multiple Choice:
+    right: para direita
+  U4L23 Multiple Choice:
+    right: para direita
+  U4L24 Multiple Choice:
+    right: para direita
+  U4LXX Multiple Choice:
+    right: para direita
+  U5 assess_weight_v2:
+    Question: Pergunta
+    title: título
+  Warmup questions:
+    random: aleatório
+  commute assess - loops 4 - block:
+    '0': '0'
+    '1': '1'
+    '10': '10'
+    '5': '5'
+    '50': '50'
+  courseA_multi_artist_loops11_predict2:
+    The artist won't move at all.: O artista não se moverá de forma alguma.
+  courseA_multi_collector_loops3_predict1:
+    Laurel won't move at all.: Laurel não se moverá de forma alguma.
+  courseB_multi_collector_loops3_predict1:
+    Laurel won't move at all.: Laurel não se moverá de forma alguma.
+  courseB_multi_maze_seq10_predict1:
+    The bird will not move at all.: O pássaro não se moverá de forma alguma.
+  courseB_multi_maze_seq10_predict1_2018:
+    Scrat will not move at all.: Scrat não se moverá de forma alguma.
+  courseC_multi_harvester_loops11_predict1:
+    '12': '12'
+    '15': '15'
+    '4': '4'
+  courseC_multi_harvester_loops11_predict1_2018:
+    '12': '12'
+    '15': '15'
+    '4': '4'
+  courseC_multi_maze_loops2_predict1:
+    The bird will not move.: O pássaro não irá se mover.
+  courseC_multi_starWars_predict1:
+    I don't know: Eu não sei
+  courseC_multi_starWars_predict1_2018:
+    I don't know: Eu não sei
+  courseD_multi_artist_binary8_predict1:
+    A: A
+    B: B
+    C: C
+    D: D
+  courseD_multi_artist_binary8_predict1_2018:
+    A: A
+    B: B
+    C: C
+    D: D
+  courseD_multi_artist_nestedLoops9_predict1:
+    A: A
+    B: B
+    C: C
+  courseD_multi_artist_nestedLoops9_predict1_2018:
+    A: A
+    B: B
+    C: C
+  courseD_multi_bee_nestedLoops9_predict2:
+    '12': '12'
+    '4': '4'
+    '8': '8'
+    13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+    14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+    15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+    16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+  courseD_multi_bee_nestedLoops9_predict2_2018:
+    '12': '12'
+    '4': '4'
+    '8': '8'
+    13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+    14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+    15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+    16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+  courseD_multi_maze_until2_predict1:
+    0: '? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
+    1: ': Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
+    2: '? Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+    3: ': Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+    The bird will not move at all.: O pássaro não se moverá de forma alguma.
+  courseD_multi_maze_until2_predict1_2018:
+    0: '? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
+    1: ': Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
+    2: '? Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+    3: ': Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+    The bird will not move at all.: O pássaro não se moverá de forma alguma.
+  courseE_multi_farmer_predict1:
+    I don't know: Eu não sei
+    0: '? Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    1: ': Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    2: '? The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    3: ': The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+  courseE_multi_farmer_predict1_2018:
+    I don't know: Eu não sei
+    0: '? Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    1: ': Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    2: '? The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    3: ': The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+  csd-post-survey-2018-topic-ai:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csd-post-survey-2018-topic-cryptocurrency:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csd-post-survey-2018-topic-cybersecurity:
+    Cybersecurity: Segurança Cibernética
+    'No': 'Não'
+    'Yes': 'Sim'
+  csd-post-survey-2018-topic-databases:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csd-post-survey-2018-topic-datascience:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csd-post-survey-2018-topic-gamedev:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csd-post-survey-2018-topic-hardware:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csd-post-survey-2018-topic-internet:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csd-post-survey-2018-topic-mobile:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csd-post-survey-2018-topic-parallel:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csd-post-survey-2018-topic-programming:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csd-post-survey-2018-topic-robotics:
+    'No': 'Não'
+    Robotics: Robótica
+    'Yes': 'Sim'
+  csd-post-survey-2018-topic-web:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csp-post-survey-2017-q64:
+    0: '? ''Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '''
+    1: ': ''Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '''
+    'No': 'Não'
+    'Yes': 'Sim'
+  csp-post-survey-2017-q64_2018:
+    0: '? ''Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '''
+    1: ': ''Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '''
+    'No': 'Não'
+    'Yes': 'Sim'
+  csp-post-survey-2017-q65:
+    I don't know: Eu não sei
+    'No': 'Não'
+    'Yes': 'Sim'
+  csp-post-survey-2017-q65_2018:
+    I don't know: Eu não sei
+    'No': 'Não'
+    'Yes': 'Sim'
+  csp-post-survey-2018-topic-ai:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csp-post-survey-2018-topic-cryptocurrency:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csp-post-survey-2018-topic-cybersecurity:
+    Cybersecurity: Segurança Cibernética
+    'No': 'Não'
+    'Yes': 'Sim'
+  csp-post-survey-2018-topic-databases:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csp-post-survey-2018-topic-datascience:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csp-post-survey-2018-topic-gamedev:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csp-post-survey-2018-topic-hardware:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csp-post-survey-2018-topic-internet:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csp-post-survey-2018-topic-mobile:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csp-post-survey-2018-topic-parallel:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csp-post-survey-2018-topic-programming:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csp-post-survey-2018-topic-robotics:
+    'No': 'Não'
+    Robotics: Robótica
+    'Yes': 'Sim'
+  csp-post-survey-2018-topic-web:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csp-pre-survey-2017-q40:
+    0: '? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    1: ': If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    Other: Outros
+  csp-pre-survey-2017-q40_2018:
+    0: '? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    1: ': If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    Other: Outros
+  csp_U3_turtle_subgoal_q2_mc:
+    "<img src=\"https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png\">": <img src="https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png">
+  csp_U3_turtle_subgoal_q2_mc_2018:
+    "<img src=\"https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png\">": <img src="https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png">
+  csp_ap_exam_signup:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csp_ap_number_exams:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '3': '3'
+  csp_ap_previous_years:
+    'No': 'Não'
+    'Yes': 'Sim'
+  csp_ap_taking_ap_class:
+    'No': 'Não'
+    'Yes': 'Sim'
+  cspu5_assess1_fivemore:
+    "-2": "-2"
+    '3': '3'
+    '5': '5'
+    '8': '8'
+  cspu5_assess1_fivemore_2018:
+    "-2": "-2"
+    '3': '3'
+    '5': '5'
+    '8': '8'
+  cspu5_assess1_fivemore_exam_prep:
+    "-2": "-2"
+    '3': '3'
+    '5': '5'
+    '8': '8'
+  cspu5_assess1_flowchart:
+    '10': '10'
+    '5': '5'
+  cspu5_assess1_flowchart_2018:
+    '10': '10'
+    '5': '5'
+  cspu5_assess1_flowchart_exam_prep:
+    '10': '10'
+    '5': '5'
+  cspu5_assess1_increase:
+    '10': '10'
+    '13': '13'
+    '5': '5'
+    '8': '8'
+  cspu5_assess1_increase_2018:
+    '10': '10'
+    '13': '13'
+    '5': '5'
+    '8': '8'
+  cspu5_assess1_increase_exam_prep:
+    '10': '10'
+    '13': '13'
+    '5': '5'
+    '8': '8'
+  cspu5_assess2_addstrings:
+    result: resultado
+  cspu5_assess2_addstrings_2018:
+    result: resultado
+  cspu5_assess2_addstrings_exam_prep:
+    result: resultado
+  cspu5_assess2_combineString:
+    '10': '10'
+    '55': '55'
+    result: resultado
+  cspu5_assess2_combineString_2018:
+    '10': '10'
+    '55': '55'
+    result: resultado
+  cspu5_assess2_combineString_exam_prep:
+    '10': '10'
+    '55': '55'
+    result: resultado
+  cspu5_assess2_oldEnough:
+    '35': '35'
+    'false': 'falso'
+    'true': 'verdadeiro'
+  cspu5_assess2_oldEnough_2018:
+    '35': '35'
+    'false': 'falso'
+    'true': 'verdadeiro'
+  cspu5_assess2_oldEnough_exam_prep:
+    '35': '35'
+    'false': 'falso'
+    'true': 'verdadeiro'
+  cspu5_assess2_pseudoCode:
+    "<code>Time to start studying again!</code>": "<code>Hora de começar a estudar de novo!</code>"
+    "<code>You passed!</code>": "<code>Você passou!</code>"
+  cspu5_assess2_pseudoCode_2018:
+    "<code>Time to start studying again!</code>": "<code>Hora de começar a estudar de novo!</code>"
+    "<code>You passed!</code>": "<code>Você passou!</code>"
+  cspu5_assess2_pseudoCode_exam_prep:
+    "<code>Time to start studying again!</code>": "<code>Hora de começar a estudar de novo!</code>"
+    "<code>You passed!</code>": "<code>Você passou!</code>"
+  cspu5_assess2_setAlarm:
+    "(day == “Saturday”) && (day == “Sunday”)": "(dia == ”Sábado”) && (dia == ”Domingo”)"
+    "(day == “Saturday”) || (day == “Sunday”)": "(dia == ”Sábado”) || (dia == ”Domingo”)"
+    day != “Monday”: dia != "Segunda-feira"
+    day == “Saturday”: dia == "Sábado"
+    day == “Sunday”: dia == "Domingo"
+  cspu5_assess2_setAlarm_2018:
+    (day == "Saturday") && (day == "Sunday"): (dia == "Sábado") && (dia == "Domingo")
+    (day == "Saturday") || (day == "Sunday"): (dia == "Sábado") || (dia == "Domingo")
+    day != "Monday": dia != "Segunda-feira"
+    day == "Saturday": dia == "Sábado"
+    day == "Sunday": dia == "Domingo"
+  cspu5_assess2_setAlarm_exam_prep:
+    (day == "Saturday") && (day == "Sunday"): (dia == "Sábado") && (dia == "Domingo")
+    (day == "Saturday") || (day == "Sunday"): (dia == "Sábado") || (dia == "Domingo")
+    day != "Monday": dia != "Segunda-feira"
+    day == "Saturday": dia == "Sábado"
+    day == "Sunday": dia == "Domingo"
+  cspu5_assess2_weight:
+    '125': '125'
+    '200': '200'
+    '30': '30'
+    '50': '50'
+    '75': '75'
+  cspu5_assess2_weight_2018:
+    '125': '125'
+    '200': '200'
+    '30': '30'
+    '50': '50'
+    '75': '75'
+  cspu5_assess2_weight_exam_prep:
+    '125': '125'
+    '200': '200'
+    '30': '30'
+    '50': '50'
+    '75': '75'
+  cspu5_assess3_array1:
+    '10': '10'
+    '4': '4'
+    '7': '7'
+    '9': '9'
+    ab: ab
+  cspu5_assess3_array1_2018:
+    '10': '10'
+    '4': '4'
+    '7': '7'
+    '9': '9'
+    ab: ab
+  cspu5_assess3_array1_exam_prep:
+    '10': '10'
+    '4': '4'
+    '7': '7'
+    '9': '9'
+    ab: ab
+  cspu5_assess3_array2:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_array2_2018:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_array2_exam_prep:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_array3:
+    "<img src=\"https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png\">": <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">
+    "<img src=\"https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png\">": <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">
+    "<img src=\"https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png\">": <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">
+    "<img src=\"https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png\">": <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">
+    "<img src=\"https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png\">": <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">
+  cspu5_assess3_array3_2018:
+    "<img src=\"https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png\">": <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">
+    "<img src=\"https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png\">": <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">
+    "<img src=\"https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png\">": <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">
+    "<img src=\"https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png\">": <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">
+    "<img src=\"https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png\">": <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">
+  cspu5_assess3_array3_exam_prep:
+    "<img src=\"https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png\">": <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">
+    "<img src=\"https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png\">": <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">
+    "<img src=\"https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png\">": <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">
+    "<img src=\"https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png\">": <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">
+    "<img src=\"https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png\">": <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">
+  cspu5_assess3_array4:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '8': '8'
+  cspu5_assess3_array4_2018:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '8': '8'
+  cspu5_assess3_array4_exam_prep:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '8': '8'
+  cspu5_assess3_array5:
+    "<img src=\"https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png\">": <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">
+    "<img src=\"https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png\">": <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">
+    "<img src=\"https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png\">": <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">
+    "<img src=\"https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png\">": <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">
+    "<img src=\"https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png\">": <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">
+  cspu5_assess3_array5_2018:
+    "<img src=\"https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png\">": <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">
+    "<img src=\"https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png\">": <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">
+    "<img src=\"https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png\">": <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">
+    "<img src=\"https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png\">": <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">
+    "<img src=\"https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png\">": <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">
+  cspu5_assess3_array5_exam_prep:
+    "<img src=\"https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png\">": <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">
+    "<img src=\"https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png\">": <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">
+    "<img src=\"https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png\">": <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">
+    "<img src=\"https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png\">": <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">
+    "<img src=\"https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png\">": <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">
+  cspu5_assess3_counter:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+  cspu5_assess3_counter_2018:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+  cspu5_assess3_counter_exam_prep:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+  cspu5_assess3_listAppend:
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '6': '6'
+  cspu5_assess3_listAppend_2018:
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '6': '6'
+  cspu5_assess3_listAppend_exam_prep:
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '6': '6'
+  cspu5_assess3_loopValue1:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+  cspu5_assess3_loopValue1_2018:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+  cspu5_assess3_loopValue1_exam_prep:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+  cspu5_assess3_loopValue2:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_loopValue2_2018:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_loopValue2_exam_prep:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_loopValue3:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_loopValue3_2018:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_loopValue3_exam_prep:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_mysterySwap:
+    a: a
+    d: d
+  cspu5_assess3_mysterySwap_2018:
+    a: a
+    d: d
+  cspu5_assess3_mysterySwap_exam_prep:
+    a: a
+    d: d
+  cspu5_assess3_swap:
+    "<img src=\"https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png\">": <img src="https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png">
+    "<img src=\"https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png\">": <img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">
+    "<img src=\"https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png\">": <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">
+    "<img src=\"https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png\">": <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">
+  cspu5_assess3_swap_2018:
+    "<img src=\"https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png\">": <img src="https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png">
+    "<img src=\"https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png\">": <img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">
+    "<img src=\"https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png\">": <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">
+    "<img src=\"https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png\">": <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">
+  cspu5_assess3_swap_exam_prep:
+    "<img src=\"https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png\">": <img src="https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png">
+    "<img src=\"https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png\">": <img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">
+    "<img src=\"https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png\">": <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">
+    "<img src=\"https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png\">": <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">
+  cspu5_assess4_arrayContains:
+    "<img src=\"https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png\">": <img src="https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png">
+    "<img src=\"https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png\">": <img src="https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png">
+    "<img src=\"https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png\">": <img src="https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png">
+    "<img src=\"https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png\">": <img src="https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png">
+    "<img src=\"https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png\">": <img src="https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png">
+  cspu5_assess4_arrayContains_2018:
+    "<img src=\"https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png\">": <img src="https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png">
+    "<img src=\"https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png\">": <img src="https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png">
+    "<img src=\"https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png\">": <img src="https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png">
+    "<img src=\"https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png\">": <img src="https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png">
+    "<img src=\"https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png\">": <img src="https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png">
+  cspu5_assess4_arrayContains_exam_prep:
+    "<img src=\"https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png\">": <img src="https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png">
+    "<img src=\"https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png\">": <img src="https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png">
+    "<img src=\"https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png\">": <img src="https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png">
+    "<img src=\"https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png\">": <img src="https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png">
+    "<img src=\"https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png\">": <img src="https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png">
+  cspu5_assess4_dataReturns:
+    '10': '10'
+    '16': '16'
+    '3': '3'
+    '4': '4'
+    '9': '9'
+  cspu5_assess4_dataReturns_2018:
+    '10': '10'
+    '16': '16'
+    '3': '3'
+    '4': '4'
+    '9': '9'
+  cspu5_assess4_dataReturns_exam_prep:
+    '10': '10'
+    '16': '16'
+    '3': '3'
+    '4': '4'
+    '9': '9'
+  cspu5_assess4_listContains:
+    "<img src=\"https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png\">": <img src="https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png">
+    "<img src=\"https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png\">": <img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">
+    "<img src=\"https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png\">": <img src="https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png">
+    "<img src=\"https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png\">": <img src="https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png">
+  cspu5_assess4_listContains_2018:
+    "<img src=\"https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png\">": <img src="https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png">
+    "<img src=\"https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png\">": <img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">
+    "<img src=\"https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png\">": <img src="https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png">
+    "<img src=\"https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png\">": <img src="https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png">
+  cspu5_assess4_listContains_exam_prep:
+    "<img src=\"https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png\">": <img src="https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png">
+    "<img src=\"https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png\">": <img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">
+    "<img src=\"https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png\">": <img src="https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png">
+    "<img src=\"https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png\">": <img src="https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png">
+  cspu5_assess4_listOutput:
+    '17': '17'
+    '3': '3'
+    '42': '42'
+    '9': '9'
+  cspu5_assess4_listOutput_2018:
+    '17': '17'
+    '3': '3'
+    '42': '42'
+    '9': '9'
+  cspu5_assess4_listOutput_exam_prep:
+    '17': '17'
+    '3': '3'
+    '42': '42'
+    '9': '9'
+  cspu5_assess4_robot:
+    "<img src=\"https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png\">": <img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">
+    "<img src=\"https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png\">": <img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">
+    "<img src=\"https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png\">": <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">
+    "<img src=\"https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png\">": <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">
+    "<img src=\"https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png\">": <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">
+  cspu5_assess4_robot_2018:
+    "<img src=\"https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png\">": <img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">
+    "<img src=\"https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png\">": <img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">
+    "<img src=\"https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png\">": <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">
+    "<img src=\"https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png\">": <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">
+    "<img src=\"https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png\">": <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">
+  cspu5_assess4_robot_exam_prep:
+    "<img src=\"https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png\">": <img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">
+    "<img src=\"https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png\">": <img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">
+    "<img src=\"https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png\">": <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">
+    "<img src=\"https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png\">": <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">
+    "<img src=\"https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png\">": <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">
+  kiki_multi_test:
+    The bird will not move at all: O pássaro não irá se mover de forma alguma
+    The bird will reach the pig: O pássaro vai alcançar o porco
+  msm variables multi 1:
+    '15': '15'
+    a function: uma função
+    x: x
+  msm variables multi 10:
+    '17': '17'
+    x: x
+  msm variables multi 11:
+    '17': '17'
+    x: x
+  msm variables multi 12:
+    '17': '17'
+    x: x
+  msm variables multi 13:
+    '117': '117'
+    '17': '17'
+    x: x
+  msm variables multi 2:
+    '8': '8'
+    a function: uma função
+    ab: ab
+  msm variables multi 3:
+    '5': '5'
+    a function: uma função
+    x: x
+  msm variables multi 4:
+    '15': '15'
+    '3': '3'
+    '8': '8'
+  msm variables multi 5:
+    '3': '3'
+    '5': '5'
+  msm variables multi 6:
+    '1': '1'
+    '5': '5'
+    hello: olá
+  msm variables multi 7:
+    '3': '3'
+    x: x
+  msm variables multi 8:
+    '3': '3'
+    x: x
+  msm variables multi 9:
+    '5': '5'
+    '6': '6'
+    x: x
+  post-assessment survey q34:
+    Easy: Fácil
+    Hard: Difícil
+  pre-assessment survey q24:
+    'No': 'Não'
+    'Yes': 'Sim'
+  pre-assessment survey q26:
+    0: '? Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?'
+    1: ': Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?'
+    'No': 'Não'
+    'Yes': 'Sim'
+  pre-assessment survey q27:
+    0: '? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    1: ': If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    N/A: N/A
+    Other: Outros
+  pre-assessment survey q28:
+    '10': '10'
+    '11': '11'
+    '12': '12'
+    '8': '8'
+    '9': '9'
+    Other: Outros
+    What grade are you in?: Em que série você está?
+  pre-assessment survey q29:
+    Female: Feminino
+    'I identify my gender as:': 'Eu identifico meu gênero como:'
+    Male: Masculino
+    Other: Outros
+    Prefer not to answer: Prefiro não responder
+  pre-assessment survey q30:
+    American Indian or Alaska Native: Índio Americano ou Nativo do Alaska
+    Asian: Asiático
+    Black or African American: Negro ou Afro-americano
+    Hispanic or Latino/Latina: Hispânico ou Latino/Latina
+    Native Hawaiian or Other Pacific Islander: Nativo do Havaí ou de outra ilha do Pacífico
+    Other: Outros
+    Prefer not to answer: Prefiro não responder
+    White: Branco
+  sarah_test_maggie:
+    Question: Pergunta
+    test: teste
+  sciPD PreQ 1:
+    'No': 'Não'
+    'Yes': 'Sim'
+  sciPD PreQ 2:
+    'No': 'Não'
+    'Yes': 'Sim'
+  sciPD agent based 1:
+    agents interact with both their environment and other agents: agentes interagem com seu ambiente e também com outros agentes
+    agents interact with other agents: agentes interagem com outros agentes
+    agents interact with their environment: agentes interagem com seus ambientes
+  sciPD agent based 2:
+    complex adaptive systems: sistemas adaptativos complexos
+    simple mechanical systems: sistemas mecânicos simples
+    systems of mathematical equations: sistemas de equações matemáticas
+  sciPD class models 1:
+    Using Models in the Classroom: Usando modelos na sala de aula
+    building relationships between old and new knowledge: construir relações entre conhecimentos antigos e novos
+    constructing social relationships: construção de relações sociais
+    creating artifacts of social relevance: criar artefatos de relevância social
+    interacting with others: interação com os outros
+  sciPD class models 2:
+    Constructionism: Construcionismo
+    creation of learning artifacts: criação de artefatos de aprendizagem
+    design of learning artifacts: design de artefatos de aprendizagem
+    discussion of learning artifacts: discussão de artefatos de aprendizagem
+  sciPD complex adaptive 1:
+    generates emergent patterns: gera padrões emergentes
+    has a leader: tem um líder
+    has centralized control: tem controle centralizado
+    is predictable: é previsível
+  sciPD complex adaptive 2:
+    Examples of Complex Adaptive Systems: Exemplos de sistemas adaptativos complexos
+    Which of the following is NOT an example of a complex adaptive system?: Qual dos seguintes exemplos NÃO é um exemplo de um sistema adaptativo complexo?
+    a bee hive: uma colmeia de abelhas
+    a traffic jam: um engarrafamento
+    a wall clock: um relógio de parede
+    the internet: a internet
+  sciPD computer models 1:
+    It can be easily automated: Ele pode ser automatizado facilmente
+    It has fixed percentages of different elements: Ele tem porcentagens fixas de elementos diferentes
+    It includes some randomness: Ele inclui algum tipo de aleatoriedade
+    It is predictable: Ele é previsível
+    Multiple Choice - Stochastic Models: Múltipla escolha - Modelos estocásticos
+    What does it mean for a model to be stochastic?: O que significa para um modelo ser estocástico?
+  sciPD computer models 2:
+    Which of the following are common to both lab experiments and computational science experiments?: Quais das seguintes características são comuns tanto aos experimentos de laboratório quanto aos experimentos de ciência computacional?
+    automation of experiments is easy: a automação dos experimentos é fácil
+    changing physical properties like the gravitational constant: altera propriedades físicas, como a constante gravitacional
+    sweeping a set of variables: varre um conjunto de variáveis
+    the need for controlled experiments: a necessidade de experimentos controlados
+  sciPD culture 1:
+    Multiple Choice - Getting Unstuck: Múltipla escolha - Desempacando
+    Which of the following was NOT suggested as a way to get unstuck?: Qual das seguintes opções NÃO foi sugerida como uma forma de desempacar?
+    looking at other similar pieces of code: olhar para outros trechos de código que sejam similares
+    meditating: meditar
+    reading through your code line by line: ler o código linha por linha
+    taking a break: fazer uma pausa
+  sciPD culture 2:
+    Multiple Choice - Role Of Teacher: Múltipla escolha - O papel do professor
+    What role for a teacher incorporating models and simulations into the classroom was proposed?: Qual papel foi proposto para um professor incorporar modelos e simulações na sala de aula?
+    classroom manager: gerente de sala de aula
+    expert in a computer language: expert em uma linguagem de computador
+  sciPD framework 1:
+    a human thought process: um processo de pensamento humano
+    a process that computers use to think: um processos que os computadores usam para pensar
+    a subfield of computer science: um subcampo da ciência da computação
+    a way of communicating with a computer: uma forma de se comunicar com um computador
+  sciPD framework 2:
+    algorithms: algoritmos
+    analysis: análise
+    automation: automação
+  sciPD intro to CS 1:
+    too dangerous to study in the real world: muito perigosos para estudar no mundo real
+    too expensive to study in the real world: muito caros para estudar no mundo real
+    too time consuming to study in the real world: muito demorados para estudar no mundo real
+  sciPD intro to CS 2:
+    What is computational science good for?: Para que a ciência computacional é boa?
+    'it complements lab and theoretical science ': 'ela complementa a ciência teórica e de laboratório '
+    it replaces traditional science labs: ela substitui os laboratórios de ciência tradicionais
+    it slows the process of discovery: ela retarda o processo de descoberta
+    nothing at all: absolutamente nada
+  test anonymous student survey educational:
+    'No': 'Não'
+    'Yes': 'Sim'
+  test me:
+    Question: Pergunta
+    title: título
+  test multi 124124:
+    Question 1: Questão 1
+  unique level name here:
+    Question: Pergunta
+    title: título
+  text_match:
+    Blocks to Bools 1:
+      4+5 > 9: 4+5 > 9
+      Convert Blocks to Math: Converta Blocos em Matemática
+    Blocks to Bools 2:
+      "(10 > 11) OR (7 <= 9)": "(10 > 11) OU (7 <= 9)"
+      "(10 > 11) or (7 <= 9)": "(10 > 11) Ou (7 <= 9)"
+      "(10 > 11) || (7 <= 9)": "(10 > 11) || (7 <= 9)"
+      "/script_assets/msm/unit6/blockstomath2.png, 500": "/script_assets/msm/unit6/blockstomath2.png, 500"
+      Convert Blocks to Math: Converta Blocos em Matemática
+    Blocks to Bools 3:
+      "((5 < 10 < 15))": "((5 < 10 < 15))"
+      "((5 < 10) & (10 < 15))": "((5 < 10) & (10 < 15))"
+      "((5 < 10) && (10 < 15))": "((5 < 10) && (10 < 15))"
+      "((5 < 10) AND (10 < 15))": "((5 < 10) E (10 < 15))"
+      "((5 < 10) And (10 < 15))": "((5 < 10) e (10 < 15))"
+      "((5 < 10) and (10 < 15))": "((5 < 10) e (10 < 15))"
+      "(5 < 10 < 15)": "(5 < 10 < 15)"
+      "(5 < 10) & (10 < 15)": "(5 < 10) & (10 < 15)"
+      "(5 < 10) && (10 < 15)": "(5 < 10) && (10 < 15)"
+      "(5 < 10) AND (10 < 15)": "(5 < 10) E (10 < 15)"
+      "(5 < 10) And (10 < 15)": "(5 < 10) e (10 < 15)"
+      "(5 < 10) and (10 < 15)": "(5 < 10) E (10 < 15)"
+      "/script_assets/msm/unit6/blockstomath3.png, 500": "/script_assets/msm/unit6/blockstomath3.png, 500"
+      Convert Blocks to Math: Converta Blocos em Matemática
+    Blocks to Bools 4:
+      "(((1 < X) & (X < 5)) || ((8 < X) & (X < 10)))": "(((1 < X) & (X < 5)) || ((8 < X) & (X < 10)))"
+      "(((1 < X) && (X < 5)) || ((8 < X) && (X < 10)))": "(((1 < X) && (X < 5)) || ((8 < X) && (X < 10)))"
+      "(((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10)))": "(((1 < X) E (X < 5)) OU ((8 < X) E (X < 10)))"
+      "(((1 < X) And (X < 5)) Or ((8 < X) And (X < 10)))": "(((1 < X) e (X < 5)) ou ((8 < X) e (X < 10)))"
+      "(((1 < X) and (X < 5)) or ((8 < X) and (X < 10)))": "(((1 < X) e (X < 5)) ou ((8 < X) e (X < 10)))"
+      "(((1 < x) & (x < 5)) || ((8 < x) & (x < 10)))": "(((1 < x) & (x < 5)) || ((8 < x) & (x < 10)))"
+      "(((1 < x) && (x < 5)) || ((8 < x) && (x < 10)))": "(((1 < x) && (x < 5)) || ((8 < x) && (x < 10)))"
+      "(((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)))": "(((1 < x) E (x < 5)) OU ((8 < x) E (x < 10)))"
+      "(((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)))": "(((1 < x) e (x < 5)) ou ((8 < x) e (x < 10)))"
+      "(((1 < x) and (x < 5)) or ((8 < x) and (x < 10)))": "(((1 < x) e (x < 5)) ou ((8 < x) e (x < 10)))"
+      "((1 < X) & (X < 5) || (8 < X) & (X < 10))": "((1 < X) & (X < 5) || (8 < X) & (X < 10))"
+      "((1 < X) & (X < 5)) || ((8 < X) & (X < 10))": "((1 < X) & (X < 5)) || ((8 < X) & (X < 10))"
+      "((1 < X) && (X < 5) || (8 < X) && (X < 10))": "((1 < X) && (X < 5) || (8 < X) && (X < 10))"
+      "((1 < X) && (X < 5)) || ((8 < X) && (X < 10))": "((1 < X) && (X < 5)) || ((8 < X) && (X < 10))"
+      "((1 < X) AND (X < 5) OR (8 < X) AND (X < 10))": "((1 < X) E (X < 5) OU (8 < X) E (X < 10))"
+      "((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10))": "((1 < X) E (X < 5)) OU ((8 < X) E (X < 10))"
+      "((1 < X) And (X < 5) Or (8 < X) And (X < 10))": "((1 < X) e (X < 5) ou (8 < X) e (X < 10))"
+      "((1 < X) And (X < 5)) Or ((8 < X) And (X < 10))": "((1 < X) e (X < 5)) ou ((8 < X) e (X < 10))"
+      "((1 < X) and (X < 5) or (8 < X) and (X < 10))": "((1 < X) e (X < 5) ou (8 < X) e (X < 10))"
+      "((1 < X) and (X < 5)) or ((8 < X) and (X < 10))": "((1 < X) e (X < 5)) ou ((8 < X) e (X < 10))"
+      "((1 < x) & (x < 5) || (8 < x) & (x < 10))": "((1 < x) & (x < 5) || (8 < x) & (x < 10))"
+      "((1 < x) & (x < 5)) || ((8 < x) & (x < 10))": "((1 < x) & (x < 5)) || ((8 < x) & (x < 10))"
+      "((1 < x) && (x < 5) || (8 < x) && (x < 10))": "((1 < x) && (x < 5) || (8 < x) && (x < 10))"
+      "((1 < x) && (x < 5)) || ((8 < x) && (x < 10))": "((1 < x) && (x < 5)) || ((8 < x) && (x < 10))"
+      "((1 < x) AND (x < 5) OR (8 < x) AND (x < 10))": "((1 < x) E (x < 5) OU (8 < x) E (x < 10))"
+      "((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))": "((1 < x) e (x < 5)) ou ((8 < x) e (x < 10))"
+      "((1 < x) And (x < 5) Or (8 < x) And (x < 10))": "((1 < x) e (x < 5) ou (8 < x) e (x < 10))"
+      "((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))": "((1 < x) e (x < 5)) ou ((8 < x) e (x < 10))"
+      "((1 < x) and (x < 5) or (8 < x) and (x < 10))": "((1 < x) e (x < 5) ou (8 < x) e (x < 10))"
+      "((1 < x) and (x < 5)) or ((8 < x) and (x < 10))": "((1 < x) e (x < 5)) ou ((8 < x) e (x < 10))"
+      "(1 < X < 5) OR (8 < X < 10)": "(1 < X < 5) OU (8 < X < 10)"
+      "(1 < X < 5) Or (8 < X < 10)": "(1 < X < 5) ou (8 < X < 10)"
+      Convert Blocks to Math: Converta Blocos em Matemática
+    Blocks to Math 1:
+      Convert Blocks to Math: Converta Blocos em Matemática
+    Blocks to Math 2:
+      Convert Blocks to Math: Converta Blocos em Matemática
+    Blocks to Math 3:
+      Convert Blocks to Math: Converta Blocos em Matemática
+    Blocks to Math 4:
+      Convert Blocks to Math: Converta Blocos em Matemática
+    Blocks to Math 5:
+      Convert Blocks to Math: Converta Blocos em Matemática
+    Blocks to Math 6:
+      Convert Blocks to Math: Converta Blocos em Matemática
+    Blocks to Math 7:
+      "(10 / (2 * (3 + 1))": "(10 / (2 * (3 + 1))"
+      10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
+      Convert Blocks to Math: Converta Blocos em Matemática
+    'CSP U4L04 Assessment 2 ':
+      Enter answer here: Insira a resposta aqui
+      Enter prompt here: Digite a mensagem aqui
+      Enter title here: Insira o título aqui
+    PS U3 Q1-7:
+      Enter answer here: Insira a resposta aqui
+      Enter prompt here: Digite a mensagem aqui
+    U1L13 - Assess Text Compression reverse process:
+      Act as the computer!: Aja como o computador!
+    U1L13 - Assess Text Compression reverse process_2018:
+      Act as the computer!: Aja como o computador!
+    U2L07 Assessment4:
+      '43': '43'
+      Question 4: Questão 4
+    text match test:
+      "(9-3)+(4*7)": "(9-3)+(4*7)"
+      "(9-3)+4*7": "(9-3)+4*7"
+      9-3+4: null
+      Mathematical Expression Assessment: Avaliação de Expressão Matemática
+      Type out the arithmetic expression that this circle of evaluation evaluates to: Insira a expressão aritmética avaliada por este círculo de avaliação

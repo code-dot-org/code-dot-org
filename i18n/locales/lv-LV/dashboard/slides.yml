@@ -1,0 +1,273 @@
+lv:
+  slides:
+    maze_intro:
+      1:
+        text: "Laipni lūgts tavā pirmajā \"Programmēšanas stundā\"! Sāksim ar pirmajiem soļiem programmēšanā."
+      2:
+        text: "Izmantojot vizuālās programmēšanas valodu Blockly, kur tu velc un noliec blokus, lai uzrakstītu kodu."
+      3:
+        text: "Liela koda daļa ir uzrakstīta, taču Blockly ir vizuāla programmēšanas valoda. Katrs bloks atbilst \"īstā\" koda rindiņai."
+      4:
+        text: "Tu iemācīsies datorzinātnes pamatus, jēdzienus, ko izmanto jebkur, sākot ar lietotņu izstrādi līdz pat Marsa ceļotāja kontrolēšanai."
+      5:
+        text: "Programma ir instrukciju kopums, kuram seko tavs dators."
+      6:
+        text: "Tavas pirmās programmas mērķis ir izvadīt Dusmīgo putnu cauri labirintam līdz Zaļajai cūkai."
+      7:
+        text: "Kreisā puse ir labirints, kurā tava programma tiek darbināta. Instrukcijas katrai puzlei ir zem labirinta."
+      8:
+        text: "Vidējā rīku kastē atrodas Dusmīgā putna komandas. Tās tu izmantosi, lai uzrakstītu savu kodu."
+      9:
+        text: "Labajā pusē atrodas tava darbvirsma, uz kuras tu uzvilksi klucīšus no rīku kastes, lai izveidotu savu kodu. Lai izdzēstu klucīti, aizvelc to līdz miskastei, kas novietota stūrī."
+      10:
+        text: "Katrs klucītis ir viena instrukcija. Ja tu savā darbvirsmā ievelc \"pakusties uz priekšu\" klucīti un nospied \"Sākt programmu\", putns pavirzīsies vienu vietu uz priekšu labirintā."
+      11:
+        text: "Lai veiktu vairāk kā vienu darbību, vari darba vietā ievilkt vairākus blokus un tos savienot. Putns izpildīs komandas secībā no augšas uz leju."
+      12:
+        text: "Ja esi sācis programmu un vēlies to izlabot un mēģināt vēlreiz, nospied \"atsākšanas\" pogu."
+      13:
+        text: "Aiziet, laiks uzveikt tās cūkas!"
+    artist_intro:
+      1:
+        text: "Sveiki, es esmu JR! Katrai sacīkšu komandai ir nepieciešams datorzinātņu speciālists, lai uzvarētu. Viņi analizē datus, kas iegūti no sacīkšu mašīnas, lai palīdzētu tai uzvarēt."
+      2:
+        text: "Šajā puzlē tu būsi mākslinieks, kas novelk līniju aiz viņiem, visur, kur tie iet."
+      3:
+        text: "Šis klucītis saka \" pavirzies uz priekšu par 100 pikseļiem\". Pikseļi patiesībā ir mazi punktiņi tavā ekrānā."
+      4:
+        text: "Šis klucītis saka \" pagriezies pa labi pa 90 grādiem\". Šis pagriezīs tavu mākslinieku tā pat kā \"pagriezt\" klucītis labirintā."
+      5:
+        text: "Lai izmainītu apjomu par kādu mākslinieks pagriežas vai pavirzās uz priekšu, noklikšķini uz bultas jebkurā no klucīšiem. Lai iepazītu šos jaunos klucīšus, droši paspēlējies ar tiem."
+    farmer_intro:
+      1:
+        text: "Sveiki, es esmu Paola! Šajā puzlē tu esi zemkopis, kuram ir jānolīdzina savs lauks, lai sāktu stādīt augus."
+      2:
+        text: "Tev ir jāpalīdz viņai atbrīvoties no netīrumu kaudzēm un jāaizpilda visas bedrītes."
+      3:
+        text: "Jaunie klucīši noņem 1 lāpstu ar netīrumiem no kaudzes un vienu lāpstu ar netīrumiem ieber bedrītē."
+      4:
+        text: "Kaudzes un bedrītes ir dažāda lieluma, tāpēc tev ir jāizstāsta zemkopim, cik lāpstas izmantot."
+    flappy_intro:
+      1:
+        text: "Sveiki, es esmu Katie! Viena no visaizraujošākajām lietām datorzinātnē ir tā, ka datorprogrammas spēj būt interaktīvas."
+      2:
+        text: "Katru reizi, kad kāds noklikšķina, pieskaras vai ievada tekstu datorā vai savā viedtālrunī, tas izraisa notikumu un kāds no kodiem izlemj, ko darīt, kad šis notikums parādās."
+      3:
+        text: "Piemēram, tev varētu būt notikumu kopums, kas saka \"kad tiek noklikšķināta pelīte, atskaņo skaņu\" "
+      4:
+        text: "Vai tu kādreiz esi dzirdējis par spēli FlappyBird? Izmantojot notikumu kopumus, mēs iemācīsimies kā uzprogrammēt pielāgotu FlappyBird versiju!"
+      5:
+        text: "Kods, ko tu rakstīsi ietver sevī klucīšu, kas apzīmē komandas datoram, vilkšanu un nolikšanu. Zem pārsega katrs klucītis ir attēlots kā reāls kods."
+      6:
+        text: "Ja tu paskaties uz darbvirsmu, tur ir redzami daži zaļi klucīši, kas jau ir aizpildīti priekš tevis - šie ir \"notikumu kopumi\" "
+      7:
+        text: "Ja tu vēlies, lai putns pavicina spārnus, kad tu noklikšķini peli, tu to vari izdarīt pievienojot \"pavicināt spārnus\" klucīti attiecīgajam notikumu kopumam un tagad ikreiz, kad tu noklikšķināsi peli, putns savicinās spārnus."
+      8:
+        text: "Katrā šīs aktivitātes puzlē mēs sniegsim arvien jaunus notikumu tipus kā zaļus klucīšus tavā darbvirsmā un tu varēsi izlemt, kuri klucīši ir piemērotākie, lai to pievienotu kā atbildi konkrētajiem notikumiem."
+      9:
+        text: "Kad redzi šādu nolaižamo bultiņu, tas nozīmē, ka tu vari mainīt iestatījumus, piemēram, to kādu skaņu atskaņo, kad Flapijs nokrīt uz zemes."
+      10:
+        text: "Pēdējā puzlē tu varēsi izveidot pats savu spēli un parādīt to saviem draugiem. Izpriecājies!"
+    loop_times:
+      1:
+        text: "Sveiki, es esmu Marks! Iemācīsimies ko jaunu par cikliem. Izmantojot ciklus tu vari likt datoram atkārtot jebkuru darbību kopu atkal un atkal, pat tūkstošiem vai miljoniem daudz reižu."
+      2:
+        text: "Šajā puzlē mēs vēlamies likt putnam pakustēties 5 lauciņus tālāk, lai sasniegtu cūku."
+      3:
+        text: "Lai palīdzētu to izdarīt, mēs varam izmantot jauno \"atkārtot\" pogu."
+      4:
+        text: "Tā vietā, lai izmantotu 5 \"pakusties uz priekšu\" klucīšus..."
+      5:
+        text: "Mēs varam ielikt \"pakusties uz priekšu\" klucīti iekšā \"atkārtot\" klucītī un ierakstīt tajā to ciparu, cik lauciņus uz priekšu ir jāpakustas."
+      6:
+        text: "Šis ir svarīgi: \"atkārtot\" klucītī tu vari likt vairāk kā vienu komandu."
+      7:
+        text: "Izbaudi visas \"atkārtot\" klucīša iespējas!"
+    loop_until:
+      1:
+        text: "Sveiki, es esmu Kris! Pirms es pievienojos basketbola komandai \"Miami Heat\", es studēju datorzinātnes Džordžijas Tehniskajā universitātē. Laiks izmēģināt jauno \"atkārtot līdz\" klucīti."
+      2:
+        text: "Kas būtu, ja mēs nezinātu, cik tālu putnam ir jāpakustas, lai nokļūtu pie cūkas?"
+      3:
+        text: "Ja mēs ieliekam \"pakustēties uz priekšu\" klucīti iekšā \"atkārtot līdz\" klucītī, putns kustēsies uz priekšu LĪDZ tas sasniegs cūku (vai ietrieksies sienā)."
+      4:
+        text: 'Šis ir svarīgi: tieši tā pat kā pirms tam, mēs varam ielikt vairākus klucīšus iekšā "atkārtot līdz" klucītī un tie atkārtosies.'
+    if:
+      1:
+        text: "Sveiki, es esmu Bils! Laiks iemācīties jaunu būtisku jēdzienu: \"ja\" apgalvojums. Šādi dators pieņem lēmumus."
+      2:
+        text: "Tu pats izmanto \"ja\" apgalvojumus katru dienu. Pirms tu izej no mājas katru rītu, tu saki - ja ārā līst, man ir jāuzvelk mana jaka."
+      3:
+        text: "Mēs varam likt zombijam pārbaudīt, vai kreisajā pusē ir ceļš, un, ja viņš atrod šo ceļu kreisajā pusē, mēs varam viņam likt nogriezties šajā virzienā."
+      4:
+        text: "Lai uzrakstītu kodu šim, jāizvelk \"ja\" klucītis un tajā jāieliek \"pagriezties pa kreisi\" klucītis."
+      5:
+        text: "Tagad, ja mēs ieliekam \"pakustēties uz priekšu\" klucīti virs tā un \"atkārtot\"klucīti apkārt visam, katru reizi, kad zombijs pakustas, tas pārbaudīs, vai kreisajā pusē ir ceļš un pagriezīsies. \"Atkārtot\" komanda ir būtiska, lai katrā solī pārbaudītu, vai ir pagrieziens."
+      6:
+        text: "\"Ja\" apgalvojumi ir ļoti svarīgi datorzinātnē. Viena no pirmajām programmām, ko es uzrakstīju, bija spēle \"Krustiņi un nullītes\", kurā \"ja\" apgalvojums apgalvoja, JA otrs spēlētājs tūlīt uzvarēs, nobloķēt brīvo vietu, kas atļautu viņam to izdarīt."
+      7:
+        text: "Izpriecājies, pielietojot \"ja\" klucīti!"
+    if_else:
+      1:
+        text: "Sveiki, mans vārds ir Saloni. Es izmantoju datorzinātni, lai risinātu problēmas veselības nozarē un medicīnā. Mācīsimies par  bloku \"ja citādāk\". Tas ir īdzīgs blokam \"ja\", taču tam ir beigās ir daļa \"citādāk\"."
+      2:
+        text: "Ja es ielikšu \"iet uz priekšu\" bloku vietā, kur teikts \"darīt\" un \"pagriezties pa kreisi\" bloku vietā, kur teikts \"citādi\", nozīmēs, ka zimbijs izvēlēsies no divām iespējām. Ja priekšā būs ceļš, viņš ie taisni pa to, ja ceļa nebūš - pagriezīsies pa kreisi."
+      3:
+        text: "Gluži kā \"ja\" bloku, mēs arī \"ja tad\" bloku varam likt iekšā \"atkārtot\" blokos un zombijs turpinās kustēties, un \"ja tad\" bloks palīdzēs viņam pārbaudīt, kad pagriezties."
+      4:
+        text: "Tagad parādi zombijiem, kur tiem ir vieta!"
+    if_else_scrat:
+      1:
+        text: "Ja-tad nosacījums ir izvēle starp divām darbībām. Paskatīsimies, kā izmantot ja-tad nosacījumu ar vāveri Skretu."
+      2:
+        text: "Šis bloks izskatās līdzīgs \"ja\" blokam, bet tam ir papildus daļa apakšā \"citādi\". Ja ieliksim \"ej uz priekšu\" bloku, kur teikts \"dari\" un \"pagriezies pa kreisi\" bloku, kur teikts \"citādi\", vāvere Skrets ies taisni, ja būs ceļš pa ko iet uz priekšu, ja nē, tad vāvere nogriezīsies pa kreisi."
+      3:
+        text: "Tā ir lēmuma pieņemšana un atkarībā no nolemtā, tiek darīta viena vai otra darbība. Un tāpat kā \"ja\" blokus, tu vari likt \"ja-tad\" blokus iekš \"atkārtot\" blokiem."
+      4:
+        text: "Palīdzi vāverei Skretam dabūt zīli!"
+    function:
+      1:
+        text: "Sveiki, es esmu Brian, inženieris no Instagram. Funkcija ir konkrēta programmas rinda ko vēlies izmantos atkal un atkal, tāpēc tā vietā, lai rakstītu katru reizi jaunu programmas rindu, tu vari vienkārši izmantot vienu programmas bloku."
+      2:
+        text: "Mēs mācīsimies, kā veidot funkcijas. Funkciju definīcijām stūrī ir zvaigznīte, un funkcijas nosaukums ir uzrakstīts augšājā rindā."
+      3:
+        text: "Bloki, kas atrodas funkcijā, paskaidro, ko tā dara. Šī funkcija saucas \"aizpildīt 5\" un tā satur blokus \"atkārtot\" un \"aizpildīt\"."
+      4:
+        text: "Funkcija atrodas uz darba galda, bet mūsu fermeris nevar to izpildīt, kamēr neizvelkam bloku \"aizpildīt 5\" no funkciju grupas."
+      5:
+        text: "Laiks izklaidēties"
+    loop_while:
+      1:
+        text: "Sveiki, mani sauc Makinde! Mācīsimies par bloku \"kamēr\"."
+      2:
+        text: "\"While (kamēr)\" bloks darīs visu, ko tajā ieliksi, KAMĒR apgalvojums virs tā būs PATIESS."
+      3:
+        text: "Piemēram, ja fermeris stāv uz kaudzes, tā turpinās izmest pa vienai lāpstai ar zemi, KAMĒR zem tās ir kaudze."
+    loop_for:
+      1:
+        text: "Sveiki, esmu Trina, un es strādāju Pixar. esmu strādājusi ar daudzām filmām, Šreku ieskaitot."
+      2:
+        text: "Šis ir jauns \"skaitītaja\" cikls. Tas atkārto darbības atkal un atkal, un tu vari katru reizi nedaudz tās izmainīt."
+      3:
+        text: "Šajā piemērā cikls \"atkārtot\" saka \"skaiti no 50 līdz 90 ar soli 10\" un iekš tā ir bloks \"zīmē kvadrātu\". Velc \"skaitītāja\" bloku no sadaļas \"mainīgie\" uz vietu, kur ir parametrs \"garums\"."
+      4:
+        text: "Tas nozīmē, ka mūsu mākslinieks uzzīmēs kvadrātu, kam būs 50 pikseļu garas malas, tad tas pieskaitīs klāt 10 un uzzīmēs kvadrātu ar 60 pikseļu garām malām.  Tad tas turpinās pieskaitīt 10 un zīmēt kvadrātu, līdz sasniegs 90. Mēs iegūsim kvadrātus ar 50, 60, 70, 80 un 90 pikseļu garām malām."
+    parameters:
+      1:
+        text: "Sveiki, esmu Janete un es esmu inženieris kompānijā Zynga."
+      2:
+        text: "Kas notiks, ja mēs gribam uzzīmēt vairākus trīsstūrus ar dažādiem garumiem?"
+      3:
+        text: "Mēs varam rakstīt šo visu kodu ar roku vai izmantot funkcijas ar parametriem."
+      4:
+        text: "Lai to izdarītu, noklikšķiniet zilo zvaigzni funkciju definēšanai \"zīmēt trijstūri\". Tad ievelciet \"ievadiet vārdu\" iekš \"ievadiet\" bloka."
+      5:
+        text: "Tālāk ja tu rakstīsi \"garums\" vietās, kur teikts \"x\" un nospiedīsi \"Enter\", tad tu izveidosi garuma ievadi savai funkcijai."
+      6:
+        text: "Tad klikšķini uz zvaigznes. Tagad tu vari klikšķināt uz mainīgo kategorijas un savā definētajā funkcijā ievilkt bloku \"garums\" blokā \"iet uz priekšu\". Un iepriekšējo skaitļa bloku var mest ārā."
+      7:
+        text: "Lai izmantotu savu funkciju ar parametriem, klikšķini uz funkciju kategorijas un izvelc savu funkciju \"zīmēt trijstūri ar garumu\"."
+      8:
+        text: "Tagad tu vari izmantot matemātikas bloku, lai spētu ievadīt dažādus skaitļus un iespēju zīmēt dažāda izmēra trijstūrus."
+    hoc_wrapup:
+      1:
+        text: "Apsveicu! Atrisinot pēdējo uzdevumu, tu uzrakstīji kodu, kas JEBKURAM robotam var pateikt, kā izkļūt no nesazarota labirinta vai jebkura garuma tuneļa, neatkarīgi no tā, vai tas ir zombijs, putns, marsa visurgājējs vai pat bez-šofera automobilis."
+      2:
+        text: "Pamatkoncepcijas, ko tu izmantoji, ir pamats katrai programmai vai aplikācijai, kuru jebkad izmantosi. Mēs mācījāmies par atkārtotajiem cikliem, atkārtot līdz nosacījumiem, ja nosacījumiem un ja cits nosacījumiem."
+      3:
+        text: "Ja tev patika tava pirmā \"programmēšanas stunda\" , apmeklē code.org, lai turpinātu savu izglītību datorzinātnē! Kad pabeigsi mūsu 20 stundu kursu, tu būsi apguvis programmēšanas pamatus un sāksi mācīties kā izveidot aplikācijas viedtālruņiem, instrukcijas robotiem, spēles un jebko citu, ko vēlies."
+      4:
+        text: "Tehnoloģijas maina visu, ko mēs darām, un neatkarīgi no tā, vai esi jauns vai vecs programmēšana ir jautra, radoša un ikviens var to iemācīties!"
+    20_wrapup:
+      1:
+        text: "Raidījuma pieraksti būs drīzumā!"
+    frozen_intro:
+      1:
+        text: "Sveiki, mani sauc Lindsija. Es projektēju, darbinu un veidoju savas programmas. Izmantosim kodu, lai pievienotos Annai un Elzai atklājot ledus skaistumu un burvību."
+      2:
+        text: "Tu slidojot izveidosi rakstus un sniegpārslas, tā veidojot ziemas brīnumzemi, ar kuru pēc tam varēsi dalīties ar draugiem."
+      3:
+        text: "Tuvākās stundas laikā tu apgūsi programmēšanas pamatus. Ierasti programmēšana no tiek teksta veidā, bet mēs izmantosim Blockly, kas izmanto vizuālus blokus, kurus savienojot kā puzles gabaliņus veidosies programma. Tā  pamatus mācās arī augstskolās. Īstenībā jūs arī tā radiet kodu."
+      4:
+        text: "Programma ir instrukciju kopa, kas liek datoram kaut ko darīt. Izveidosim kodu jeb brogrammu, kas palīdzēs Elzai novilkt vienu līniju. Mēs to izmantosim arī vēlāk, lai veidotu sarežģītākus rakstus."
+      5:
+        text: "Tavs ekrāns ir sadalīts trīs galvenajās daļās. Pa kreisi ir ledus, kur redzēsi savu programmu strādājot. Pamācības katram līmenim ir rakstītas tieši zem šī ledus attēla."
+      6:
+        text: "Vidējā laukumā ir rīku josla, un katrs no šiem blokiem ir darbība, ko Elza un Anna var izpildīt."
+      7:
+        text: "Baltais laukums labajā pusē ir darba virsma, un te tu veidosi savu programmu. Lai pakustētos pa ledu, izmanto \"iet uz priekšu\" bloku."
+      8:
+        text: "\"Ej uz priekšu\" bloks saka, \"paej uz priekšu par 100 pikseļiem\". Kas notiek, kad nospiežam \"Palaist\"? Elza iet uz priekšu noteiktu daudzumu, 100 pikseļus. Pikseļi ir mazi kvadrātiņi mūsu datora ekrānā."
+      9:
+        text: "Cits bloks šajā puzlē saka \"pagriezies pa labi par 90 grādiem\". Mēs izmantosim šo \"pa labi\" bloku, lai liktu Elzai pagriezties par noteiktu daudzumu. Izmēģini, cik ļoti tu viņai vari likt pagriezties. Leņķis tiek mērīts no virziena, kādā elza iet. Šis ir 90 grādu pagrieziens, toties šis - 120 grādu."
+      10:
+        text: "Atceries, ka vari mainīt pikseļu un grādu daudzumu, klikšķinot uz bultām blakus tiem."
+    frozen_loops:
+      1:
+        text: "Sveiki, esmu Paola! Datori ir lieliski, lai atkārtotu darbības. Tu vari izskaitīt līdz 10, 20 vai 100. Bet dators var izskaitīt līdz miljonam vai miljardam. Viņam neapniks un arī aizņems ļoti maz laika. Nav svarīgi vai skaitīt, zīmēt vai vēl ko citu - datori var atkārtot darbības simtiem un miljoniem reižu."
+      2:
+        text: "Programmēšanā to sauc par ciklu. Cikls atkārto programmas kodu vēl un vēl. Nākamajā puzlē tavs mērķis ir palīdzēt Annai izveidot kvadrātu ar \"Atkārtot\" bloku."
+      3:
+        text: "Ikviens bloks, ko ieliksi iekš \"Atkārtot\", tiks secībā izpildīts, tik reizes, cik vien gribi."
+      4:
+        text: "Lai uzzīmētu kvadrātu, vari izmantot \"Ej uz priekšu\" un \"Pagriezies pa labi\" 4 reizes. Bet datoram vienkāršāk ir izpildīt darbību \"Ej uz priekšu\" un \"Pagriezies pa labi par 90 grādiem\" vienreiz un tad atkārtot šīs darbības 4 reizes. Lai to izdarītu, ievieto \"Ej uz priekšu\" un \"Pagriezies pa labi\" bloku iekš \"Atkārtot\"."
+      5:
+        text: "Atceries, tu vari mainīt skaitli \"Atkārtot\" blokā uz jebkādu, un tad tas tieši tik reizes atkārtos šajā blokā iekļauto."
+    frozen_functions:
+      1:
+        text: "Sveiki, esmu Kriss Bošs. Esmu profesionāls basketbolists un esmu programmējis koledžā."
+      2:
+        text: "Viens no svarīgākajiem jēdzieniem programmēšana ir jaunu komandu veidošana. Lielākā daļa programmēšanas valodu satur ap 100 komandām. Un tā patiesi ir māksla un burvestība prast izdomāt savas komandas, izmantojot jau dotās."
+      3:
+        text: "Kad esi licis datoram veikt kādu darbību ar vairākām komandām, vari šīm komandām dot savu nosaukumu, lai tās vēlāk būtu vienkāršāk atkārtot. Šādi izveidotu komandu kopumu ar savu nosaukumu sauc par funkciju."
+      4:
+        text: "Sveiki, esmu Džess. Programmējot ar blokiem, vari izmantot funkcijas, lai kādas darbības atkārtotu vairākas reizes. Piemēram, kad esi sastādījis kodu kvadrāta zīmēšanai."
+      5:
+        text: "Tu to vari nodefinēt kā funkciju un nosaukt \"veidot kvadrātu\"."
+      6:
+        text: "Tagad vari izmantot jauno bloku vairākas reizes, lai veidotu daudz kvadrātus."
+      7:
+        text: "Vienkāršās figūras varam izmantot, lai veidotu sarežģītākus rakstus. Nākamajā puzlē kods, ko rakstīji, lai zīmētu apļus, ir pieejams kā jauna funkcija, kas apļus var veidot dažādos izmēros. Vai vari to izmantot, lai palīdzētu Elzai skaistus rakstus sniegā?"
+    playlab_intro:
+      1:
+        text: "Spēļu laboratorijā mēs veidosim spēles. Labai spēlei ir stāsts, un katrā stāstā ir savi tēli. Iemācīsimies kā mūsu tēliem raganai, citplanētiešiem un dzīvniekiem runāt, pārvietoties un reaģēt citam ar citu. Pamācības beigās varēsi veidot spēli no pašiem pamatiem un dalīties ar to ar draugiem."
+      2:
+        text: "Tavs ekrāns ir sadalīts trīs galvenajās daļās. Kreisajā pusē ir spēles laukums, kur programma izpildīsies. Pamācība katram līmenim ir rakstīta zem laukuma."
+      3:
+        text: "Vidējā daļa ir rīku josla, un katrs no šiem blokiem ir koda fragments. Baltais laukums labajā pusē ir darba virsmā - tajā mēs veidosiem programmu."
+      4:
+        text: "Lai sāktu, tev nepieciešam savienot tavus blokus ar oranžo \"kad palaists\" bloku. Tu vari savienot vairākus blokus kopā, tuvinot tos, kamēr ieraugi dzeltenu līniju un tad bloki saķersies kopā."
+      5:
+        text: "Pirmajā puzlē mūsu tēls ir pingvīns un mēs liksim viņam teikt \"Sveiki!\", izvelkot ārā \"teikt\" bliku, savienojot to ar ar \"kad palaists\" bloku, un ierakstot \"Sveiki!\". Varam pingvīnam arī likt kustēties, izmantojot \"pārvietot pa labi\" un \"pārvietot pa kreisi\" blokus. Kad bloki salikti pa vietām, spied pogu \"Palaist\" un skaties, ko esi uzprogrammējis."
+      6:
+        text: "Sāc darīt un beigās varēsi izveidot savu spēli ar dažādiem tēliem, kuri viens uz otru reaģē, var priecāties vai bēdāties, skaitīt punktus vai ķert ugunsbumbas vai pat likt cits citam izzust. Viss tavās rokas un iztēlē, kādu spēli vēlies veidot."
+    playlab_events:
+      1:
+        text: "Tagad iemācīsimies ko tādu, ko visi spēļu programmētāji izmanto ikdienā. Tie ir notikumi. Notikumi liek programmai pamanīt, kad notiek kāda darbība. Kad šī darbība notiek, izpildās daļa programmas."
+      2:
+        text: "Daži notikumi piemēri: gaidīt peles klikšķi, klavietūras bultiņas piespiešanu vai pieskārienu ekrānam."
+      3:
+        text: "Tagad izdarīsim lai kosmosa robotiņš, ja uz viņa uzklikšķināts ar peli, sasveicinās ar zemes iedzīvotājiem. Izmantosim bloku \"kad noklikšķināts\" un savienosim ar \"teik\" bloku. Kad spēlētājs noklikšķinās uz robotiņa, tiks izpildītas visas darbības, kas pievienotas pie \"kad noklišķināts bloka. Ko tavs citplanētietis teiks?"
+      4:
+        text: "Ir pieejami \"kad bulta\" bloku. Ja savienosi \"pārvietot\" blokus ar šiem, varēsi kustināt savus tēlus uz augšu, leju, pa labi un kreisi. Soli pa solim tava spēle kļūst interaktīvāka."
+    playlab_repeat_forever:
+      1:
+        text: "Šis ir \"atkārtot nepārtraukti\" bloks. Jebkas, kas tajā būš iekšā, atkārtosies visas spēles laiku."
+      2:
+        text: "Ja vēlamies, lai tēls kaut ko nemitīgi atkārto bez spēlētāja iejaukšanās, šo darbību blokus ievietosim iekš \"atkārtot nepārtraukti\" bloka."
+      3:
+        text: "Šajā puzlē mūsu mērķis ir palīdzēt burvim visu laiku no labās puses uz kreiso kontrolēt karalistes robežas. Iemācies kā atkārtot komandas, tā ietaupīsi daudz laika, kad veidosi savu spēli."
+    C1_artist_intro:
+      1:
+      2:
+        text: "Tie ir lēkšanas bloki. Kad tos lieto, mākslinieks kustās, bet nezīmē, tāpēc izmanto tos, lai lēktu uz nākamo pelēko līniju."
+    C2_playlab_createstory:
+      1:
+        text: "Līdz šim tu veidoji animācijas vai stāstus, kas dara vienu un to pašu katru reizi, kad to palaiž. Nu tu varēsi veidot interaktīvas spēles, kuras tiešām var spēlēt."
+      2:
+        text: "Ir pieejams \"kad bultiņa\" bloks un \"pārvietot tēlu\" bloks. Savienojot šos blokus varēsi pārvietot tēlu ar klaviatūras bultiņām."
+    C3_playlab_create_game:
+      1:
+        text: "Līdz šim tu veidoji animācijas vai stāstus, kas dara vienu un to pašu katru reizi, kad to palaiž. Nu tu varēsi veidot interaktīvas spēles, kuras tiešām var spēlēt."
+      2:
+        text: "Ir pieejams \"kad bultiņa\" bloks un \"pārvietot tēlu\" bloks. Savienojot šos blokus varēsi pārvietot tēlu ar klaviatūras bultiņām."

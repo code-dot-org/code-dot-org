@@ -1,0 +1,33 @@
+---
+ku:
+  devise:
+    confirmations:
+      confirmed: ناونیسانی ئیمێڵەكەت بە سەرەوتوویی پشتڕاست كرا.
+      send_instructions: Tu dê vê gavê E-Mailek wergirî, kîjan dê alîkarî ya te bo
+        Erêkirin ya Konto yê te kit
+      send_paranoid_instructions: Heker Adres ya E-Mail ya te nik me hebit, tu dê
+        vê gavê berîdek wergirî, kîjan dê alîkarî ya te bo Erêkirin ya Konto yê te
+        kit
+    failure:
+      invalid: ئیمەیڵ یان تێپەڕەوشە نادروستە.
+      locked: ئەكاونتەكەت قفڵ دراوە.
+      not_found_in_database: ئیمەیڵ یان تێپەڕەوشە نادروستە.
+    registrations:
+      destroyed: خواحافیز! ئەكاونتەكەت بە سەركەوتوویی قەپاتكرا. هیوادارین دووبارە
+        بتبینینەوە.
+    sessions:
+      signed_out: بەسەرکەوتوویی دەرچووی.
+  errors:
+    messages:
+      not_found: نەدۆزرایەوە
+    invitations:
+      new:
+        header: ناردنی بانگێشت
+        submit_button: ناردنی بانگێشتێک
+      edit:
+        header: تێپەڕەوشە دابنێ
+        submit_button: تێپەڕەوشەکەم دانێ
+    mailer:
+      invitation_instructions:
+        subject: ڕێنماییەکانی بانگێشتکردن
+        hello: سڵاو %{email}

@@ -1,0 +1,2124 @@
+---
+kk:
+  data:
+    evaluation_multi:
+      U5 evaluation q1:
+        'No': Жоқ
+        'Yes': Иә
+      U5 evaluation q2:
+        0: "? Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        1: ": Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        While Loops: Шарт орындалғанша Циклдері
+    external:
+      Algo How Routers Learn Student Lesson Introduction:
+        title: ат
+      Algo Shortest Path Student Lesson Introduction:
+        title: ат
+      Basic mechanics of variables:
+        title: ат
+      Basic mechanics of variables_2018:
+        title: ат
+      Begin planning your project:
+        title: ат
+      'Big Picture: If-statements':
+        title: ат
+      'Big Picture: If-statements_2018':
+        title: ат
+      Boolean Expressions and Comparison Operators:
+        title: ат
+      Boolean Expressions and Comparison Operators_2018:
+        title: ат
+      CSD U1 Input Output C2:
+        title: ат
+      CSD U1 Input Output C3:
+        title: ат
+      CSD U1 Input Output C4:
+        title: ат
+      CSD U1 Input Output Intro:
+        title: ат
+      CSD U2 Design Project:
+        title: ат
+      CSD U2 Design Project_2018:
+        title: ат
+      CSD U2 L1 Overview:
+        title: ат
+      CSD U2 L1 Overview_2018:
+        title: ат
+      CSD U2 L2 Overview:
+        title: ат
+      CSD U2 L2 Overview_2018:
+        title: ат
+      CSD U2 L3 Overview:
+        title: ат
+      CSD U2 L3 Overview_2018:
+        title: ат
+      CSD U2 L4 Overview:
+        title: ат
+      CSD U2 L4 Overview_2018:
+        title: ат
+      CSD U2 L5 Overview:
+        title: ат
+      CSD U2 L5 Overview_2018:
+        title: ат
+      CSD U2 L6 Overview:
+        title: ат
+      CSD U2 L6 Overview_2018:
+        title: ат
+      CSD U2 Social Sleuth:
+        title: ат
+      CSD U2 expand project:
+        title: ат
+      CSD U2 expand project_2018:
+        title: ат
+      CSD U2 layout style review:
+        title: ат
+      CSD U2 more CSS:
+        title: ат
+      CSD U3 L2 Challenges:
+        title: ат
+      CSD U3 SFLP Sprites and Images:
+        title: ат
+      CSD U3 abstraction intro:
+        title: ат
+      CSD U3 combining rep:
+        title: ат
+      CSD U3 combining rep_2018:
+        title: ат
+      CSD U5 Encryption 1:
+        title: ат
+      CSD U5 Encryption 1_2018:
+        title: ат
+      CSD U5 L13 SFLP Interpreting Data:
+        title: ат
+      CSD U5 L13 SFLP Interpreting Data_2018:
+        title: ат
+      CSD U5 Representing Information:
+        title: ат
+      CSD U5 collection UPS2:
+        title: ат
+      CSD U5 collection ads2:
+        title: ат
+      CSD U5 data visualization:
+        title: ат
+      CSD U5 data visualization sheet:
+        title: ат
+      CSD U5 data visualization_2018:
+        title: ат
+      CSD U5 student record:
+        title: ат
+      CSD U5 student record_2018:
+        title: ат
+      CSD U5 video2:
+        title: ат
+      CSD-U3-SFLP Drawing:
+        title: ат
+      CSDU2L01 SFLP:
+        title: ат
+      CSP ExploreL02 SFLP:
+        title: ат
+      CSP Journal Entry Placeholder2:
+        title: ат
+      CSPPD3-u2 Welcome:
+        Welcome!: Қош келдіңіз!
+      CSPStudentLessonPlanTemplate:
+        title: ат
+      CSPU5 Making a Multi Screen Chaser Game:
+        title: ат
+      CSPU5_ChoosingGoodIds:
+        title: ат
+      CSPU5_EventDrivenProgrammingPatterns:
+        title: ат
+      CSPU5_FirstTimeDesignMode:
+        title: ат
+      CSPU5_FirstTimeDesignMode_2018:
+        title: ат
+      CSPU5_HowImagesWork:
+        title: ат
+      CSPU5_HowOnEventWorks_v2:
+        title: ат
+      CSPU5_U3L14 - Message - Other ways to assign values:
+        title: ат
+      CSPU5_U3L14 - Message - basic mechanics of variables:
+        title: ат
+      CSPU5_U3L15 - explanation of IF and =v==:
+        title: ат
+      CSPU5_U3L15 Student Lesson Intro - new:
+        title: ат
+      CSPU5_U3L20 - combining And and Or explanation:
+        title: ат
+      CSPU5_goodbyeTurtle_setPosition:
+        title: ат
+      CSPU5_introToDebugging:
+        title: ат
+      CSPU5_makingPredictions_ref:
+        title: ат
+      CSPU5_onEventBreakdown:
+        title: ат
+      CSP_Final_instructions:
+        title: ат
+      CSP_U4_rawMovieData:
+        title: ат
+      Color Sleuth - Epilogue:
+        title: ат
+      Color Sleuth - Epilogue_2018:
+        title: ат
+      Color Sleuth - How does it end?:
+        title: ат
+      Color Sleuth - How does it end?_2018:
+        title: ат
+      Color Sleuth - How to switch player turns:
+        title: ат
+      Color Sleuth - How to switch player turns_2018:
+        title: ат
+      Color Sleuth - Keeping score:
+        title: ат
+      Color Sleuth - Keeping score_2018:
+        title: ат
+      Color Sleuth - Planning the App:
+        title: ат
+      Color Sleuth - Planning the App_2018:
+        title: ат
+      Controlling Memory - Other ways to assign values:
+        title: ат
+      Controlling Memory - Other ways to assign values_2018:
+        title: ат
+      Cups and Beans Activity:
+        title: ат
+      Cups and Beans Activity_2018:
+        title: ат
+      Debugging with Console.log:
+        title: ат
+      Debugging with Console.log_2018:
+        title: ат
+      Digital Footprint Chirpr lillizard:
+        title: ат
+      Digital Footprint FaceSpace Haley:
+        title: ат
+      Digital Footprint FaceSpace Lizzie:
+        title: ат
+      Digital Footprint instantframe wiz_kid_liz:
+        title: ат
+      DigitalCitizenship2:
+        Digital Citizenship: Сандық Азаматтық
+      ECSPD Challenge Rubric:
+        title: ат
+      ECSPD Online U1D11-14:
+        title: ат
+      ECSPD Online U1D15-16 Forum:
+        title: ат
+      ECSPD Online intro:
+        Introduction: Кіріспе
+      ECSPD U2 Challenge Plan:
+        title: ат
+      ECSPD Unit 2 Stage11:
+        title: ат
+      ECSPD Unit 2 Stage13:
+        title: ат
+      ECSPD Unit 2 Stage6:
+        title: ат
+      Encoding Numbers Real World Student Lesson Introduction:
+        title: ат
+      Event Driven Programming Recap:
+        title: ат
+      Event Driven Programming Recap_2018:
+        title: ат
+      Event-Driven Programming Patterns:
+        title: ат
+      Event-Driven Programming Patterns_2018:
+        title: ат
+      External MD column Test:
+        title: ат
+      External MD column Test bootstrap:
+        title: ат
+      GoodBadVisualizations_v1:
+        title: ат
+      GoodBadVisualizations_v2:
+        title: ат
+      How "if-else-if" Works:
+        title: ат
+      How "if-else-if" Works_2018:
+        title: ат
+      How Compound Boolean Expressions Work:
+        title: ат
+      How Compound Boolean Expressions Work_2018:
+        title: ат
+      How Dropdown Menus Work:
+        title: ат
+      How Dropdown Menus Work_2018:
+        title: ат
+      How If Statements Work pt 1:
+        title: ат
+      How If Statements Work pt 1_2018:
+        title: ат
+      How If-Else Statements Work:
+        title: ат
+      How If-Else Statements Work_2018:
+        title: ат
+      How Images Work:
+        title: ат
+      How Images Work_2018:
+        title: ат
+      How Secure Is Your Password?:
+        title: ат
+      How Secure Is Your Password?_2018:
+        title: ат
+      How Set Property Works:
+        title: ат
+      How Set Property Works_2018:
+        title: ат
+      How onEvent Works:
+        title: ат
+      How onEvent Works_2018:
+        title: ат
+      How setPosition and screen dimensions work:
+        title: ат
+      How setPosition and screen dimensions work_2018:
+        title: ат
+      How the Boolean &&, || and ! Operators Work:
+        title: ат
+      How the Boolean &&, || and ! Operators Work_2018:
+        title: ат
+      How to make a random color:
+        title: ат
+      How to make a random color_2018:
+        title: ат
+      How to pick a random button:
+        title: ат
+      How to pick a random button_2018:
+        title: ат
+      Internet Simulator Setup 2:
+        title: ат
+      Intro to Debugging and Common Problems:
+        title: ат
+      Intro to Debugging and Common Problems_2018:
+        title: ат
+      Making Multiple Screens:
+        title: ат
+      Making Multiple Screens_2018:
+        title: ат
+      Making a Multi Screen Chaser Game v.2:
+        title: ат
+      Making a Multi Screen Chaser Game v.2_2018:
+        title: ат
+      Multi-Screen Apps:
+        title: ат
+      New Challenge Introduction:
+        title: ат
+      New Challenge Introduction_2018:
+        title: ат
+      OPD-K5 Stage3aGo:
+        title: ат
+      PDAlg Facilitator Test:
+        title: ат
+      PDK5 CS Video:
+        Computer Science: Информатика
+      PDK5 Pair Programming 1:
+        Pair Programming: Жұптасып Бағдарламалау
+      PS - Responding to User Input:
+        title: ат
+      PS - draft - Longitudinal study description:
+        title: ат
+      Prepare for your presentation:
+        title: ат
+      Public Key Crypto Widget Instructions:
+        title: ат
+      Public Key Crypto Widget Instructions_2018:
+        title: ат
+      Rules About Choosing Good IDs:
+        title: ат
+      Rules About Choosing Good IDs_2018:
+        title: ат
+      SG U3 whats a comment:
+        title: ат
+      SG v2 U3L01 Student Lesson Introduction:
+        title: ат
+      SG v2 U3L02 Student Lesson Introduction:
+        title: ат
+      SG v2 U3L03 Student Lesson Introduction:
+        title: ат
+      SG v2 U3L05 Student Lesson Introduction:
+        title: ат
+      SG v2 U3L07 Student Lesson Introduction:
+        title: ат
+      SG v2 U3L08 Student Lesson Introduction:
+        title: ат
+      Sending Bits Real World Student Lesson Introduction:
+        title: ат
+      Simple Decisions with if-statements:
+        title: ат
+      Simple Decisions with if-statements_2018:
+        title: ат
+      Tips For Working on Your Own:
+        title: ат
+      Tips For Working on Your Own_2018:
+        title: ат
+      U1L10 Student Lesson Introduction:
+        title: ат
+      U1L11 Student Lesson Introduction:
+        title: ат
+      U1L12 Student Lesson Introduction:
+        title: ат
+      U1L13 Student Lesson Summary:
+        title: ат
+      U1L14 Student Lesson Summary:
+        title: ат
+      U1L15 Student Lesson Summary:
+        title: ат
+      U1L17 Student Lesson Introduction:
+        title: ат
+      U1L2 Student Lesson Introduction:
+        title: ат
+      U1L3 Student Lesson Introduction:
+        title: ат
+      U1L4 Student Lesson Introduction:
+        title: ат
+      U1L5 Student Lesson Introduction:
+        title: ат
+      U1L6 Student Lesson Introduction:
+        title: ат
+      U1L7 Student Lesson Introduction:
+        title: ат
+      U1L8 Student Lesson Introduction:
+        title: ат
+      U1L9 Student Lesson Introduction:
+        title: ат
+      U2L1 Student Lesson Introduction:
+        title: ат
+      U2L12 Student Lesson Introduction:
+        title: ат
+      U2L7 Student Lesson Introduction:
+        title: ат
+      U2L8 Student Lesson Introduction:
+        title: ат
+      U3 whats a comment:
+        title: ат
+      U3 whats a comment_2018:
+        title: ат
+      U3L12 - Mission Unsortable:
+        title: ат
+      U3L13 - Explanation of Ids:
+        title: ат
+      U3L13 - Make a Prediction Explanation:
+        title: ат
+      U3L13 Add Button Instrucitons:
+        title: ат
+      U3L13 Add Button Instructions:
+        title: ат
+      U3L14 - Message - Other ways to assign values:
+        title: ат
+      U3L14 - Message - basic mechanics of variables:
+        title: ат
+      U3L14 - Student Intro Page:
+        title: ат
+      U3L15 - explanation of IF and =v==:
+        title: ат
+      U3L15 Student Lesson Intro - new:
+        title: ат
+      U3L19 - done with variables finally:
+        title: ат
+      U3L20 - combining And and Or explanation:
+        title: ат
+      U4 - Cleaning Data - Activity Guide:
+        title: ат
+      U4 - Making Data Visualizations - Bar Chart:
+        title: ат
+      U4 - Making Data Visualizations - Edit Chart Appearance:
+        title: ат
+      U4 - Making Data Visualizations - Free Play:
+        title: ат
+      U4 - Making Data Visualizations - Free Play_2018:
+        title: ат
+      U4 - Making Data Visualizations - Getting Started:
+        title: ат
+      U4 - Making Data Visualizations - Line Chart:
+        title: ат
+      U4 - Making Data Visualizations - Scatter Plot:
+        title: ат
+      U4 - Making Data Visualizations - Student Introduction:
+        title: ат
+      U4 - Privacy Abandoned - Hot On Your Trail Video:
+        title: ат
+      U4 - Unique Ids Explanation:
+        title: ат
+      U4 - Unique Ids Explanation_2018:
+        title: ат
+      U4 Cleaning Data Activity Guide Pt2:
+        title: ат
+      U4 Cleaning Data Activity Guide Pt3:
+        title: ат
+      U4L01 Student Lesson Introduction:
+        title: ат
+      U4L02 Student Lesson Introduction:
+        title: ат
+      U4L02 Student Lesson Introduction_2018:
+        title: ат
+      U4L02v2 - Finding Trends:
+        title: ат
+      U4L03 Student Lesson Introduction:
+        title: ат
+      U4L03 Student Lesson Introduction_2018:
+        title: ат
+      U4L03v2 - Student Introduction:
+        title: ат
+      U4L04 Student Lesson Introduction:
+        title: ат
+      U4L04 Student Lesson Introduction_2018:
+        title: ат
+      U4L04v2 - Student Introduction:
+        title: ат
+      U4L05 Student Lesson Introduction:
+        title: ат
+      U4L06 Student Lesson Introduction:
+        title: ат
+      U4L06v2 Student Lesson Introduction:
+        title: ат
+      U4L07 Student Introduction public key crypto:
+        title: ат
+      U4L07 Student Lesson Introduction:
+        title: ат
+      U4L08 - mod clock instructions:
+        title: ат
+      U4L08 Student Lesson Introduction:
+        title: ат
+      U4L08v2 Making Pivot Tables:
+        title: ат
+      U4L08v2 Making Pivot Tables Part 2:
+        title: ат
+      U4L08v2 Making Pivot Tables Part 3:
+        title: ат
+      U4L08v2 Making Pivot Tables Part 3_2018:
+        title: ат
+      U4L08v2 Student Intro:
+        title: ат
+      U4L09 Student Lesson Intro Practice PT big data dilemma:
+        title: ат
+      U4L09 Student Lesson Introduction:
+        title: ат
+      U4L10 Student Lesson Introduction:
+        title: ат
+      U4L11 Student Lesson Introduction:
+        title: ат
+      U4L12 - Student Introduction:
+        title: ат
+      U4L12 Student Lesson Introduction:
+        title: ат
+      U4L13 Student Lesson Introduction:
+        title: ат
+      U4L14 Student Lesson Introduction:
+        title: ат
+      U4L15 Student Lesson Introduction:
+        title: ат
+      U4L16 Student Lesson Introduction:
+        title: ат
+      U4L17 Student Lesson Introduction:
+        title: ат
+      U4L18 Student Lesson Introduction:
+        title: ат
+      U4L19 Student Lesson Introduction:
+        title: ат
+      U4L20 Student Lesson Introduction:
+        title: ат
+      U4L21 Student Lesson Introduction:
+        title: ат
+      U4L22 Student Lesson Introduction:
+        title: ат
+      U4L23 Student Lesson Introduction:
+        title: ат
+      U4L24 Student Lesson Introduction:
+        title: ат
+      U4L5 random subst challenge page:
+        title: ат
+      U5 - Create PT - Student Introduction:
+        title: ат
+      U5 - Create PT Prep - Student Introduction:
+        title: ат
+      U5 - Create PT review - Student Introduction:
+        title: ат
+      U5 - Explore PT - Student Introduction:
+        title: ат
+      U5 - Explore PT Prep - Student Introduction:
+        title: ат
+      U5 - Explore PT Review - Student Introduction:
+        title: ат
+      U5 - PT Prep - Digital Portfolio and tech setup:
+        title: ат
+      U5 color sleuth check correct:
+        title: ат
+      U5 color sleuth check correct_2018:
+        title: ат
+      U5L08 - Student Intro If statements:
+        title: ат
+      U6 - Charts - Student Introduction:
+        title: ат
+      U6 - Charts - Student Introduction_2018:
+        title: ат
+      U6 - Final Project - Student Introduction:
+        title: ат
+      U6 - Final Project - Student Introduction_2018:
+        title: ат
+      U6 - ImportExport - Student Introduction:
+        title: ат
+      U6 - ImportExport - Student Introduction_2018:
+        title: ат
+      U6 - Sample Apps - Student Introduction:
+        title: ат
+      U6 - Sample Apps - Student Introduction_2018:
+        title: ат
+      U6 - deleteRecord - Student Introduction:
+        title: ат
+      U6 - deleteRecord - Student Introduction_2018:
+        title: ат
+      U6 - updateRecord - Student Introduction:
+        title: ат
+      U6 - updateRecord - Student Introduction_2018:
+        title: ат
+      U6 AP Performance Task Tech Setup - Student Links:
+        title: ат
+      U6 Create PT - Complete the Task - Student Links:
+        title: ат
+      U6 Create PT - Complete the Task - Student Links_2018:
+        title: ат
+      U6 Create PT Review - Student Links:
+        title: ат
+      U6 Create PT Review - Student Links_2018:
+        title: ат
+      U6 Explore PT - Complete the Task - Student Links:
+        title: ат
+      U6 Explore PT - Complete the Task - Student Links_2018:
+        title: ат
+      U6 Explore PT - Make a Plan - Student Links:
+        title: ат
+      U6 Explore PT - Make a Plan - Student Links_2018:
+        title: ат
+      U6 Explore PT Review - Student Links:
+        title: ат
+      U6 Explore PT Review - Student Links_2018:
+        title: ат
+      Unit 2 Lesson 1 Overview Clone:
+        title: ат
+      Unit 4 Lesson 1 Introduction:
+        title: ат
+      Unit 4 Lesson 1 Introduction_2018:
+        title: ат
+      Unit 4 Lesson 2 Introduction:
+        title: ат
+      Unit 4 Lesson 2 Introduction_2018:
+        title: ат
+      Unit 4 Lesson 5 Introduction:
+        title: ат
+      Unit 4 Lesson 5 Introduction_2018:
+        title: ат
+      Unit 5 Lesson 1:
+        title: ат
+      Unit 5 Lesson 1 Introduction:
+        title: ат
+      Unit 5 Lesson 1 Introduction_2018:
+        title: ат
+      Unit 5 Lesson 10 Introduction:
+        title: ат
+      Unit 5 Lesson 10 Introduction_2018:
+        title: ат
+      Unit 5 Lesson 2 Introduction:
+        title: ат
+      Unit 5 Lesson 2 Introduction_2018:
+        title: ат
+      Unit 5 Lesson 3 Introduction:
+        title: ат
+      Unit 5 Lesson 3 Introduction_2018:
+        title: ат
+      Unit 5 Lesson 4 Introduction:
+        title: ат
+      Unit 5 Lesson 4 Introduction_2018:
+        title: ат
+      Unit 5 Lesson 5:
+        title: ат
+      Unit 5 Lesson 5 Introduction:
+        title: ат
+      Unit 5 Lesson 5 Introduction_2018:
+        title: ат
+      Unit 5 Lesson 6:
+        title: ат
+      Unit 5 Lesson 6 Introduction:
+        title: ат
+      Unit 5 Lesson 6 Introduction_2018:
+        title: ат
+      Unit 5 Lesson 7 Introduction:
+        title: ат
+      Unit 5 Lesson 7 Introduction_2018:
+        title: ат
+      Unit 5 Lesson 8 Introduction:
+        title: ат
+      Unit 5 Lesson 8 Introduction_2018:
+        title: ат
+      Unit 5 Lesson 9 Introduction:
+        title: ат
+      Unit 5 Lesson 9 Introduction_2018:
+        title: ат
+      'Worked Example: If-statements and Robot':
+        title: ат
+      'Worked Example: If-statements and Robot_2018':
+        title: ат
+      courseB_external_MRF:
+        title: ат
+      courseB_external_loopMRF:
+        title: ат
+      courseB_story_unspottedBugs10:
+        title: ат
+      courseB_story_unspottedBugs11:
+        title: ат
+      courseB_story_unspottedBugs12:
+        title: ат
+      courseB_story_unspottedBugs13:
+        title: ат
+      courseB_story_unspottedBugs14:
+        title: ат
+      courseB_story_unspottedBugs15:
+        title: ат
+      courseB_story_unspottedBugs16:
+        title: ат
+      courseB_story_unspottedBugs17:
+        title: ат
+      courseB_story_unspottedBugs18:
+        title: ат
+      courseB_story_unspottedBugs2:
+        title: ат
+      courseB_story_unspottedBugs3:
+        title: ат
+      courseB_story_unspottedBugs4:
+        title: ат
+      courseB_story_unspottedBugs5:
+        title: ат
+      courseB_story_unspottedBugs6:
+        title: ат
+      courseB_story_unspottedBugs7:
+        title: ат
+      courseB_story_unspottedBugs8:
+        title: ат
+      courseB_story_unspottedBugs9:
+        title: ат
+      courseB_unplugged_mrfProgramming:
+        title: ат
+      courseC_screenoutthemean:
+        title: ат
+      courseF_firstFunctions_map:
+        title: ат
+      coursef_functionsSummary_map:
+        title: ат
+      coursef_powerofwords:
+        title: ат
+      csd-post-survey-unit1-preamble:
+        title: ат
+      csd-post-survey-unit2-preamble:
+        title: ат
+      csd-post-survey-unit3-preamble:
+        title: ат
+      csd-post-survey-unit4-preamble:
+        title: ат
+      csd-post-survey-unit5-preamble:
+        title: ат
+      csd-post-survey-unit6-preamble:
+        title: ат
+      csp-post-survey-2018-AP-preamble:
+        title: ат
+      csp-post-survey-2018-topics-preamble:
+        title: ат
+      csp-post-survey-2018-unit-feedback-preamble:
+        title: ат
+      csp-post-survey-createPT-preamble:
+        title: ат
+      csp-post-survey-explorePT-preamble:
+        title: ат
+      csp-post-survey-unit1-preamble:
+        title: ат
+      csp-post-survey-unit2-preamble:
+        title: ат
+      csp-post-survey-unit3-preamble:
+        title: ат
+      csp-post-survey-unit4-preamble:
+        title: ат
+      csp-post-survey-unit5-preamble:
+        title: ат
+      csp_unit5_finalassessment_overview:
+        title: ат
+      csp_unit5_finalassessment_overview_2018:
+        title: ат
+      csp_unit5_finalassessment_overview_exam_prep:
+        title: ат
+      csp_unit_assessment_overview:
+        title: ат
+      csp_unit_assessment_overview_2018:
+        title: ат
+      csp_unit_assessment_overview_exam_prep:
+        title: ат
+      dsl link test:
+        title: ат
+      grade2_maze_intro1:
+        title: ат
+      grade2_unplugged_neighborhood:
+        title: ат
+      grade4_project_design:
+        title: ат
+      grade4_project_design_image:
+        title: ат
+      grade4_project_presentation:
+        title: ат
+      grade5_project_design:
+        title: ат
+      grade5_project_presentation:
+        title: ат
+      more encryption algorithms:
+        title: ат
+      newCSFsample:
+        Intro: Кіріспе
+      post-assessment survey heading4:
+        title: ат
+      pwc_appdev:
+        title: ат
+      pwc_appdevunplugged:
+        title: ат
+      pwc_cybersecurity:
+        title: ат
+      pwc_internetofthings:
+        title: ат
+      pwc_programming:
+        title: ат
+      pwc_webdevelopment:
+        title: ат
+      sciPD framework video:
+        Framework: Құрылым
+      sciPD2Part4_S1_L3:
+        title: ат
+      sciPD2Part4_S2_L1:
+        title: ат
+      sciPD2Part4_S2_L2:
+        title: ат
+      sciPD2Part4_S3_L1:
+        title: ат
+      sciPD2Part4_S3_L2:
+        title: ат
+      sciPD2Part4_S3_L3:
+        title: ат
+      sciPD3 mods2:
+        title: ат
+      sciPD33 earth1:
+        title: ат
+      sciPD33 earth2:
+        title: ат
+      sciPDpart4_S1_L1:
+        title: ат
+      test discourse level type:
+        title: ат
+      v2 U1 Internet is for Everyone Student Lesson Introduction:
+        title: ат
+      v2 U1 Internet is for Everyone Student Lesson Introduction_2018:
+        title: ат
+      v2 U1L14 Student Lesson Introduction:
+        title: ат
+      v2 U1L14 Student Lesson Introduction_2018:
+        title: ат
+      v2 U1L2 Student Lesson Introduction:
+        title: ат
+      v2 U1L2 Student Lesson Introduction_2018:
+        title: ат
+      v2 U1L3 Student Lesson Introduction:
+        title: ат
+      v2 U1L3 Student Lesson Introduction_2018:
+        title: ат
+      v2 U1L4 Student Lesson Introduction:
+        title: ат
+      v2 U1L4 Student Lesson Introduction_2018:
+        title: ат
+      v2 U1L5 Student Lesson Introduction:
+        title: ат
+      v2 U1L5 Student Lesson Introduction_2018:
+        title: ат
+      v2 U1L8 Student Lesson Introduction:
+        title: ат
+      v2 U1L8 Student Lesson Introduction_2018:
+        title: ат
+      v2 U2L1 Student Lesson Introduction:
+        title: ат
+      v2 U2L1 Student Lesson Introduction_2018:
+        title: ат
+      v2 U2L10 Student Lesson Introduction:
+        title: ат
+      v2 U2L10 Student Lesson Introduction_2018:
+        title: ат
+      v2 U2L11 Student Lesson Introduction:
+        title: ат
+      v2 U2L11 Student Lesson Introduction_2018:
+        title: ат
+      v2 U2L12 Student Lesson Introduction:
+        title: ат
+      v2 U2L12 Student Lesson Introduction_2018:
+        title: ат
+      v2 U2L13 Student Lesson Introduction:
+        title: ат
+      v2 U2L13 Student Lesson Introduction_2018:
+        title: ат
+      v2 U2L14 Student Lesson Introduction:
+        title: ат
+      v2 U2L14 Student Lesson Introduction_2018:
+        title: ат
+      v2 U2L15 Student Lesson Introduction:
+        title: ат
+      v2 U2L15 Student Lesson Introduction_2018:
+        title: ат
+      v2 U2L2 Student Lesson Summary:
+        title: ат
+      v2 U2L2 Student Lesson Summary_2018:
+        title: ат
+      v2 U2L3 Student Lesson Summary:
+        title: ат
+      v2 U2L3 Student Lesson Summary_2018:
+        title: ат
+      v2 U2L4 Student Lesson Summary:
+        title: ат
+      v2 U2L4 Student Lesson Summary_2018:
+        title: ат
+      v2 U2L6 Student Lesson Introduction:
+        title: ат
+      v2 U2L6 Student Lesson Introduction_2018:
+        title: ат
+      v2 U2L7 Student Lesson Introduction:
+        title: ат
+      v2 U2L7 Student Lesson Introduction_2018:
+        title: ат
+      v2 U2L8 Student Lesson Introduction:
+        title: ат
+      v2 U2L8 Student Lesson Introduction_2018:
+        title: ат
+      v2 U2L9 Student Lesson Introduction:
+        title: ат
+      v2 U2L9 Student Lesson Introduction_2018:
+        title: ат
+      v2 U3L04 Student Lesson Introduction:
+        title: ат
+      v2 U3L04 Student Lesson Introduction_2018:
+        title: ат
+      v2 U3L05 Student Lesson Introduction:
+        Creating Functions: Функцияларды Құру
+      v2 U3L05 Student Lesson Introduction_2018:
+        Creating Functions: Функцияларды Құру
+      v2 U4L05 Student Lesson Intro Encryption Caesar:
+        title: ат
+    match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: Үйлестіру батырмасын би
+          қимылдарымен салыстыру.
+        Matching: Сәйкестік
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>О</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: Сәйкестік
+        Use the key to match each code to its letter: Өз хатыңыздағы әр бір кодты
+          сәйкестендіру үшін кілтті қолданыңыз.
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: Бағдарлама торымен сәйкестендіру.
+        Matching: Сәйкестік
+      2-3 Maze Match 2:
+        Instructions: Нұсқаулар
+        Match the puzzles to the blocks: Блоктармен сәйкестендіру бас қатырғышы
+        Maze Match: Сәйкестендіру лабиринті
+      2-3 Relay Programming Match 1:
+        Matching: Сәйкестік
+      2-3 artist loops match 1:
+        Match the loop to the shape: Ілмектерді формасына сай сәйкестіру
+      2-3 artist match 1:
+        Artist Matching: Орындаушыны салыстыру
+        Match the shape with the blocks that complete it.: Форманы аяқтау үшін блоктармен
+          салыстыру.
+      2-3 bounce match 1:
+        Matching: Сәйкестік
+      2-3 flappy match 1:
+        Matching: Сәйкестік
+      2-3 maze match 1:
+        Match the puzzles to the blocks: Блоктармен сәйкестендіру бас қатырғышы
+        Maze Match One: Бірінші лабиринтпен сәйкестік
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>1 ойыншының жалпы ұпайына
+          қосу</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>Ойыншы ұпайларын кім
+          жеңгендігін көру мақсатында салыстыру</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>1 ойыншы сүйек тастайды</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>1 ойыншының ұпайларын 0 теңестіру</h4>"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Қадамдардың
+          Dice Race ойынында шығуы қажет алгоритмдермен сәйкестір.
+        Matching: Сәйкестік
+      4-5 Computational Thinking Match 1:
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Дөңгелектер/жақ: 2<br/>Терезелер/жақ:
+          0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Дөңгелектер/жақ: 2<br/>Терезелер/жақ:
+          1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Дөңгелектер/жақ: 2<br/>Терезелер/жақ:
+          6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Дөңгелектер/жақ: 3<br/>Терезелер/жақ:
+          2</h3>"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Әр
+          машина кішкене боліктерге болінген. Машинаны және оның бөліктерін сәйкестіріңіз.
+        Matching: Сәйкестік
+      4-5 Suncatchers Match 1:
+        Match each program to the word it makes, using the provided group of skills.: Көрсетілген
+          дағдылар тобын қолдана отырып сөздердің әр бір бағдарламамен сәйкестігін
+          табу.
+        Matching: Сәйкестік
+      4-5 maze match 1:
+        Instructions: Нұсқаулар
+        Match the puzzles to the blocks: Блоктармен сәйкестендіру бас қатырғышы
+        Maze Match: Сәйкестендіру лабиринті
+      CSD U3 CSS Vocab Match:
+        '1': '1'
+        '2': '2'
+      CSD U3 keyinput match:
+        Question: Сұрақ
+      CSDU2 Match RGB Colors:
+        Question: Сұрақ
+      K-1 Artist 2 Match 1:
+        Matching: Сәйкестік
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: Типке тәуелді формаларды сәйкестір.
+        Matching: Сәйкестік
+      K-1 Artist 2 Match 3:
+        Match the shapes based on type.: Типке тәуелді формаларды сәйкестір.
+        Matching: Сәйкестік
+      K-1 Artist Loops Match 1:
+        Matching: Сәйкестік
+      K-1 Bee Loops Match 1:
+        Match the blocks: Блоктарды сәйкестіру
+        Matching: Сәйкестік
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: Үйлестіру батырмасын би
+          қимылдарымен салыстыру.
+        Matching: Сәйкестік
+      K-1 Flappy Match 1:
+        Match the blocks: Блоктарды сәйкестіру
+        Matching: Сәйкестік
+      K-1 Happy Maps Match 1:
+        Matching: Сәйкестік
+      K-1 Maze Match 1:
+        Instructions: Нұсқаулар
+        Match the puzzles and blocks: Бас қатырғыштарды және блоктарды сәйкестендір
+        Matching: Сәйкестік
+      K-1 Move It Match 1:
+        Matching: Сәйкестік
+      PDAlg Design Recipe Video:
+        Definition: Анықтама
+      PDK5 What is unplugged:
+        Question: Сұрақ
+      'U2L06 - Matching: Label the Diagram':
+        E: Ш
+      U3L19 - MATCH what are values of abc:
+        '10': '10'
+        '12': '12'
+        '13': '13'
+        '15': '15'
+        '16': '16'
+        '21': '21'
+        '3': '3'
+        '5': '5'
+        '7': '7'
+        '8': '8'
+        title: ат
+      U3L19 - MC what are values of abc:
+        title: ат
+      U4L06 Create Record Id Matching Q:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      parts of contract:
+        image: бейне
+      test matching image:
+        Instructions: Нұсқаулар
+      test matching text:
+        Matching: Сәйкестік
+        blue: көк
+      unique level name here:
+        Question: Сұрақ
+        title: ат
+    multi:
+      2-3 Algorithms Multi 1:
+        Choose an algorithm for the image provided.: Бұл бейне үшін алгоритмді таңдау
+        Multiple Choice: Сұрақтар
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Төртбұрыштан
+          бастаңыз<br/>Төртбұрыш үстіне параллелограмм койыңыз<br/>Параллелограммның
+          оң жағына үшбұрыш қойыңыз
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Төртбұрыштан
+          бастаңыз<br/>Үшбұрышты төртбұрыш үстіне койыңыз<br/>Үшбұрышты төртбұрыш
+          астына қойыңыз
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Төртбұрыштан
+          бастаңыз<br/>Үшбұрышты төртбұрыш астына койыңыз<br/>Параллелограммды үшбұрыштын
+          оң жағына қойыңыз
+        0: "? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram"
+        1: ": Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram"
+      2-3 Algorithms Multi 2:
+        Multiple Choice: Сұрақтар
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Төртбұрыштан
+          бастаңыз<br/>Төртбұрышты үшбұрыштың астына қойыңыз<br/>Басқа үшбұрышты төртбұрыштын
+          астына қойыңыз
+        Which image does <em>not</em> follow this algorithm?: Бұл алгоритміді бейнелердің
+          қайсысы <em>оқымайды</em>?
+      2-3 Binary Multi 1:
+        Multiple Choice: Сұрақтар
+        Which program makes this image?: Бұл бейнені қай бағдарлама жасайды?
+      2-3 Conditionals Multi 1:
+        According to the rules of the game, which set of cards is scored correctly?: Ойынның
+          ережесіне сай, қай карталар жиыны дұрыс жинақталған?
+        Multiple Choice: Сұрақтар
+      2-3 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Бұл қайталанатын тізбекті
+          қалай жеңілдетуге болады?
+        Multiple Choice: Сұрақтар
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: Сұрақтар
+        Which program makes this image?: Бұл бейнені қай бағдарлама жасайды?
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: Лабиринтке арналған сұрақтар
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: Сұрақтар
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: Сұрақтар
+        Which image-program combo does not contain mistakes?: Қандай бейне-бағдарлама
+          комбинациясында қателік жоқ?
+      2-3 artist functions multi 1:
+        Artist Functions Multiple Choice One: Артист Функцияларға арналған Сұрақтар
+          Бірінші
+        Pick the correct blocks to draw this image using the given functions: Көрсетілген
+          функцияларды қолдана отырып осы суретті жасауға қажетті дұрыс блоктарды
+          таңдаңыз
+      2-3 artist loops multi 1:
+        Artist Loops Multiple Choice: Артист Ілмектерге арналған Сұрақтар
+        Which shape is made by this loop?: Бұл циклда қандай формалар жасалынады?
+      2-3 artist loops multi 2:
+        Artist Loops Multiple Choice: Артист Ілмектерге арналған Сұрақтар
+        Which shape is made by this program?: Бұл бағдарламада қандай формалар жасалынады?
+      2-3 bee conditionals multi 1:
+        Which comparison below is true?: Төмендегі салыстырулардың қайсысы дұрыс?
+      2-3 bee conditionals multi 2:
+        Choose the best blocks.: Ең жақсы блотарды таңдаңыз.
+      2-3 bee conditionals multi 3:
+        Choose the best blocks.: Ең жақсы блотарды таңдаңыз.
+      2-3 bee loops multi 1:
+        Bee Loops Multiple Choice One: Ара Ілмектерге арналған Сұрақтар Бірінші
+        Which blocks collect all of the nectar?: Қандай блоктар барлық балшырынды
+          жинақтайды?
+      2-3 maze multi 1:
+        Maze Multiple Choice One: Лабиринтке арналған Сұрақтар Бірінші
+        Which set of blocks is the correct answer?: Қандай блоктар жинағы дұрыс жауап
+          болып табылады?
+      4-5 Algorithms Multi 1:
+        Baking cookies: Печенье дайындау
+        Banana: Банан
+        Brushing your teeth: Тісінізді тазалау
+        Multiple Choice: Сұрақтар
+        Shopping from a grocery list: Tізіммен азық-түлік сатып алу
+        Which one of these items is hardest to describe an algorithm for?: Бұл элементтердін
+          қайсысы ең қиын алгоритм арқылы сипатталады?
+      4-5 Computational Thinking Multi 1:
+        Eugene is a _____ city.: Юджин _____ қала.
+        0: "? Here are three sentences. Which of the templates below correctly abstracts
+          so that all three match the same pattern as the template?"
+        1: ": Мұнда үш сөйлем берілген. Төмендегі шаблондардың қайсысына барлық үш
+          сөйлем шаблон сызбасына ұқсас сәйкестендіріледі?"
+        Multiple Choice: Сұрақтар
+        Seattle _____ a _____ _____.: Сиэтл _____ _____ _____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Сиэтл
+          үлкен қала.<br/>Юджин орташа қала<br/>Хилвью шағын қала.
+        _____ is _____ a _____.: _____ бұл _____  _____.
+        _____ is a _____ city.: _____  _____ қала болып келеді.
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: Сұрақтар
+        Which of these pictures best represents crowdsourcing?: Көрсетілген суреттердің
+          қайсысы краудсорсингті жақсырақ береді?
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: Шашыңызды жуу
+        Cleaning your room: Бөлмеңізді жинау
+        Eating your dessert: Өз десертіңізден дәм тату
+        Multiple Choice: Сұрақтар
+        Washing your face: Бетіңізді жуу
+        Which one of these activities would be best for practicing crowdsourcing?: Краудсорсингті
+          үйреніп жүргендер үшін көрсетілген қызметтердің қайсысы жақсырақ болады?
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: Сұрақтар
+        Which piece of information listed below is okay to share on the internet?: Интернетте
+          бөлісу үшін төмендегі тізімде ақпараттың қандай бөлігі көрсетілген?
+        Your address: Сіздің адресіңіз
+        Your birthday: Сіздің туылған күніңіз
+        Your favorite food: Сіздің сүйікті тағамыңыз
+        Your parent's credit card number: Ата-анаңыздың кредиттік карта номері
+      4-5 Internet Multi 1:
+        Multiple Choice: Сұрақтар
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Сіз
+          code.org-қа кіруге талпынған кезде, сізге үшін қандай  IP адрессті DNS-ті
+          қабылдаған дұрыс?
+      4-5 Internet Multi 2:
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Егерде
+          DNS сізге 100.42.50.110 ІР адресіндегі парақшаға сіз сайтта отырсыз деген
+          хабарлама жіберсе?
+        Multiple Choice: Сұрақтар
+      4-5 Songwriting Multi 1:
+        0: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin."
+        1: ": Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin."
+        2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,"
+        3: ": Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,"
+        Multiple Choice: Сұрақтар
+        4: "? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?"
+        5: ": What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?"
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: Сұрақтар
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Төмендегі
+          бағдарламалардың қайсысы 1-бағдарламадағыдай тізбекті <em>орындай алмайд</em>?
+      4-5 artist loops multi 1:
+        Artist Loops Multiple Choice: Артист Ілмектерге арналған Сұрақтар
+        Which blocks will create the design?: Қандай блоктар дизайнды құрады?
+      4-5 artist multi 1:
+        Artist Multiple Choice: Артист Сұрақтар
+        Which blocks draw a rectangle with a perimeter of 100?: Қандай блоктар периметрі
+          100-ге тең болатын тік төртбұрыш салады?
+      4-5 artist multi 2:
+        Artist Multiple Choice: Артист Сұрақтар
+        Which drawing is symmetric?: Қандай сурет симетриялы?
+      4-5 bee conditionals multi 1:
+        0: "? A purple flower may have either 3, 2 or 1 nectars, but you don't know
+          how many. Which blocks correctly check and collect all of the nectar from
+          a purple flower?"
+        1: ": Лала гүлінде 3, 2 немесе 1 шырын болуы мүмкін, бірақ сен қанша екенін
+          білмейсің. Лала гүлдегі барлық шырындарды жинап алу үшін қандай блоктарды
+          тексерген дұрыс?"
+        Bee Conditionals Multiple Choice: Ара Шарттар Сұрақтар
+        Choose the best blocks.: Ең жақсы блотарды таңдаңыз.
+      4-5 bee debug multi 1:
+        Bee Debug Multiple Choice: Ара Тексерулерге арналған Сұрақтар
+        Which version of the function will work?: Функцияның қай түрі жұмыс жасайды?
+      4-5 bee loops multi 1:
+        Bee Loops Multiple Choice: Ара ілмектерге арналған Сұрақтар
+        Which blocks will solve the puzzle?: Қандай блоктар бас қатырғыштың шешімін
+          табады?
+      4-5 farmer loops multi 1:
+        Which blocks solve the puzzle?: Қандай блоктар бас қатырғыштың шешімін табады?
+      4-5 maze conditionals multi 1:
+        Maze Conditionals Multiple Choice: Лабиринт Шарттарға арналған Сұрақтар
+        Which blocks solve the puzzle?: Қандай блоктар бас қатырғыштың шешімін табады?
+      4-5 maze multi 1:
+        Maze Multiple Choice: Лабиринтке арналған сұрақтар
+        Which blocks solve the puzzle?: Қандай блоктар бас қатырғыштың шешімін табады?
+      CB_Question_3:
+        Y: true
+      CSD Prediction Header Size:
+        Question: Сұрақ
+      CSD U3 Boolean MC:
+        title: ат
+      CSD U3 Boolean MC_2018:
+        title: ат
+      'CSP U4L04 Assessment 1 ':
+        Question: Сұрақ
+      CSP Unit 1 Ch 1 MC binary to dec simple:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_2018:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_exam_prep:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP verify 18:
+        'No': Жоқ
+        'Yes': Иә
+      CSPU5_predict_mc_whichOfTwoEvents:
+        title: ат
+      CSPU5_predict_onEvent_withWrongID:
+        Question: Сұрақ
+        title: ат
+      CommuteAssess - loops 1 - block:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block B:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_2018:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_exam_prep:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 2 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_2018:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_exam_prep:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      ECSPD2 question:
+        Question: Сұрақ
+        title: ат
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: Сұрақтар
+        Which blocks solve this puzzle?: Қандай блоктар бас қатырғыштың шешімін табады?
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: Сұрақтар
+        Which blocks draw the square?: Қандай блоктар шаршыны салады?
+      K-1 Artist 2 Multi 1:
+        Multiple Choice: Сұрақтар
+      K-1 Artist Loops Multi 1:
+        Multiple Choice: Сұрақтар
+      K-1 Bee 1 Multi 1:
+        How many nectars is this?: Мұнда қанша шырын бар?
+        Multiple Choice: Сұрақтар
+      K-1 Bee 1 Multi 2:
+        How many nectars is this?: Мұнда қанша шырын бар?
+        Multiple Choice: Сұрақтар
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: Сұрақтар
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Қандай
+          жануарда оны <strong>барынша қорғалмаған</strong> ететін сандық ізі бар?
+      K-1 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Бұл қайталанатын тізбекті
+          қалай жеңілдетуге болады?
+        Multiple Choice: Сұрақтар
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: Сұрақтар
+        Which arrow gets the Flurb to the treasure?: Flurb қазынаға дейін қандай бағдарларды
+          қабылдайды?
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: Сұрақтар
+        Which information should you <strong>not</strong> share online?: Қандай ақпарат
+          онлайн түрде <strong>таратылмауы</strong> қажет?
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: Сұрақтар
+        Which choice should be the final block?: Қандай таңдау ақырғы блок болуы қажет?
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: Сұрақтар
+        Which repeat block is the same?: Қандай қайталанатын блоктар бірдей?
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: Сұрақтар
+        Pick the correct repeat block.: Дұрыс қайталанатын блокты таңдаңыз
+      K-1 Maze Multiple Choice 2:
+        Maze: Лабиринт
+        Which answer solves this level?: Бұл деңгейдің шешімі қандай жауап болады?
+      K-1 Move It Multi 1:
+        Multiple Choice: Сұрақтар
+        Which algorithm gets the Flurb to the flowers?: Flurb гүл үшін қандай алгоитм
+          қабылдайды?
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: Сұрақтар
+        Which step should go at the beginning of this algorithm?: Бұл алгортмнің басында
+          қандай қадам болуы қажет?
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: Сұрақтар
+        Which step should fill in the blank for this algorithm?: Бұл алгортм үшін
+          бланкті қандай қадам толтыруы қажет?
+      K-1 Word Search Multi 1:
+        Multiple Choice: Сұрақтар
+        Which blocks spell "MOVE"?: Қандай блоктар "ҚИМЫЛ"-ды білдіреді?
+      K-1 Word Search Multi 2:
+        Multiple Choice: Сұрақтар
+      K-1 Word Search Multi 3:
+        Multiple Choice: Сұрақтар
+        Which word is spelled?: Қандай сөз жазылған?
+      Multi Define Funcs 1:
+        '3': '3'
+        y: true
+      Multi Define Funcs 2:
+        '3': '3'
+        y: true
+      Multi Define Funcs 3:
+        '5': '5'
+        '6': '6'
+        y: true
+      PDAlg Blocks Video:
+        Toolbox: Құрал-жабдықтар
+      PDAlg DR Multi 1:
+        Domain: Домен
+        Name: Атыңыз
+        Range: Диапазон
+        0: "? The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+        1: ": The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+      PDAlg PreQ 1:
+        'No': Жоқ
+        'Yes': Иә
+      PDAlg PreQ 2:
+        'No': Жоқ
+        'Yes': Иә
+      PDAlg functional:
+        'No': Жоқ
+      PDK5 Blockly Intro:
+        'Yes': Иә
+      PDK5 Classroom Culture:
+        'Yes': Иә
+      PDK5 Course Maps:
+        'Yes': Иә
+      PDK5 Course Overview:
+        'Yes': Иә
+      PDK5 Glossary:
+        Glossary: Терминдер сөздігі
+        'Yes': Иә
+      PDK5 Intro:
+        'No': Жоқ
+        Welcome!: Қош келдіңіз!
+        'Yes': Иә
+      PDK5 Teacher Dashboard:
+        'Yes': Иә
+      PDK5 Test1:
+        Question: Сұрақ
+        title: ат
+      PDK5 UVideo Overview:
+        'Yes': Иә
+      PDK5 Unplugged Intro:
+        'Yes': Иә
+      PS U3-bakertest:
+        title: ат
+      SG U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      Submittable Multi:
+        blue: көк
+        green: жасыл
+        red: қызыл
+      Test Contained Multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '4': '4'
+      U1L07 Assessment 1:
+        E: Ш
+      U1L6 Assessment multiple choice:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L6 Assessment multiple choice_2018:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L8 Multiple Choice:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      U1L8 Multiple Choice_2018:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      'U2L06 - MC: Which is an MST?':
+        0: ': "<p>The images below all show the same map (or graph) but have different
+          paths between the points highlighted.</p>\n<p>Please choose the image that
+          is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The
+          “distance” between points is depicted by the number of line segments connecting
+          any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
+        E: Ш
+      U2L08 Assessment 1:
+        '11': '11'
+        '5': '5'
+        '6': '6'
+        '8': '8'
+        '9': '9'
+      U2L13 Assessment4:
+        '26': '26'
+      U2L13 Assessment4_2018:
+        '26': '26'
+      U2L14 Assessment3:
+        'false': Жалған
+        'true': дұрыс
+      U2L19 multichoice 13 MOD 17:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      U2L19 multichoice 13 MOD 17_2018:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      'U2L19 mutlichoice ':
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15_2018:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L07 - MC remove line of code loops_2018:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L30 Assessment1:
+        '6': '6'
+        '7': '7'
+        '8': '8'
+      U3L30 Assessment2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+      U3L30 Assessment3:
+        '19': '19'
+        '20': '20'
+        '21': '21'
+      U4L01 Multiple Choice:
+        right: оңға
+      U4L02 Multiple Choice:
+        right: оңға
+      U4L03 Multiple Choice:
+        right: оңға
+      U4L04 Multiple Choice:
+        right: оңға
+      U4L05 Multiple Choice:
+        right: оңға
+      U4L06 Multiple Choice:
+        right: оңға
+      U4L06 Reflection Q 1:
+        Question: Сұрақ
+        random: кездейсоқ
+      U4L07 Multiple Choice:
+        right: оңға
+      U4L08 Multiple Choice:
+        right: оңға
+      U4L09 Multiple Choice:
+        right: оңға
+      U4L10 Multiple Choice:
+        right: оңға
+      U4L11 Multiple Choice:
+        right: оңға
+      U4L12 Multiple Choice:
+        right: оңға
+      U4L13 Multiple Choice:
+        right: оңға
+      U4L14 Multiple Choice:
+        right: оңға
+      U4L15 Multiple Choice:
+        right: оңға
+      U4L16 Multiple Choice:
+        right: оңға
+      U4L17 Multiple Choice:
+        right: оңға
+      U4L18 Multiple Choice:
+        right: оңға
+      U4L19 Multiple Choice:
+        right: оңға
+      U4L20 Multiple Choice:
+        right: оңға
+      U4L21 Multiple Choice:
+        right: оңға
+      U4L22 Multiple Choice:
+        right: оңға
+      U4L23 Multiple Choice:
+        right: оңға
+      U4L24 Multiple Choice:
+        right: оңға
+      U4LXX Multiple Choice:
+        right: оңға
+      U5 assess_weight_v2:
+        Question: Сұрақ
+        title: ат
+      Warmup questions:
+        random: кездейсоқ
+      commute assess - loops 4 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        '50': '50'
+      courseC_multi_harvester_loops11_predict1:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseD_multi_bee_nestedLoops9_predict2:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      csd-post-survey-2018-topic-ai:
+        'No': Жоқ
+        'Yes': Иә
+      csd-post-survey-2018-topic-cryptocurrency:
+        'No': Жоқ
+        'Yes': Иә
+      csd-post-survey-2018-topic-cybersecurity:
+        'No': Жоқ
+        'Yes': Иә
+      csd-post-survey-2018-topic-databases:
+        'No': Жоқ
+        'Yes': Иә
+      csd-post-survey-2018-topic-datascience:
+        'No': Жоқ
+        'Yes': Иә
+      csd-post-survey-2018-topic-gamedev:
+        'No': Жоқ
+        'Yes': Иә
+      csd-post-survey-2018-topic-hardware:
+        'No': Жоқ
+        'Yes': Иә
+      csd-post-survey-2018-topic-internet:
+        'No': Жоқ
+        'Yes': Иә
+      csd-post-survey-2018-topic-mobile:
+        'No': Жоқ
+        'Yes': Иә
+      csd-post-survey-2018-topic-parallel:
+        'No': Жоқ
+        'Yes': Иә
+      csd-post-survey-2018-topic-programming:
+        'No': Жоқ
+        'Yes': Иә
+      csd-post-survey-2018-topic-robotics:
+        'No': Жоқ
+        Robotics: Robotics
+        'Yes': Иә
+      csd-post-survey-2018-topic-web:
+        'No': Жоқ
+        'Yes': Иә
+      csp-post-survey-2017-q64:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': Жоқ
+        'Yes': Иә
+      csp-post-survey-2017-q64_2018:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': Жоқ
+        'Yes': Иә
+      csp-post-survey-2017-q65:
+        'No': Жоқ
+        'Yes': Иә
+      csp-post-survey-2017-q65_2018:
+        'No': Жоқ
+        'Yes': Иә
+      csp-post-survey-2018-topic-ai:
+        'No': Жоқ
+        'Yes': Иә
+      csp-post-survey-2018-topic-cryptocurrency:
+        'No': Жоқ
+        'Yes': Иә
+      csp-post-survey-2018-topic-cybersecurity:
+        'No': Жоқ
+        'Yes': Иә
+      csp-post-survey-2018-topic-databases:
+        'No': Жоқ
+        'Yes': Иә
+      csp-post-survey-2018-topic-datascience:
+        'No': Жоқ
+        'Yes': Иә
+      csp-post-survey-2018-topic-gamedev:
+        'No': Жоқ
+        'Yes': Иә
+      csp-post-survey-2018-topic-hardware:
+        'No': Жоқ
+        'Yes': Иә
+      csp-post-survey-2018-topic-internet:
+        'No': Жоқ
+        'Yes': Иә
+      csp-post-survey-2018-topic-mobile:
+        'No': Жоқ
+        'Yes': Иә
+      csp-post-survey-2018-topic-parallel:
+        'No': Жоқ
+        'Yes': Иә
+      csp-post-survey-2018-topic-programming:
+        'No': Жоқ
+        'Yes': Иә
+      csp-post-survey-2018-topic-robotics:
+        'No': Жоқ
+        Robotics: Robotics
+        'Yes': Иә
+      csp-post-survey-2018-topic-web:
+        'No': Жоқ
+        'Yes': Иә
+      csp-pre-survey-2017-q40:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Басқасы
+      csp-pre-survey-2017-q40_2018:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Басқасы
+      csp_ap_exam_signup:
+        'No': Жоқ
+        'Yes': Иә
+      csp_ap_previous_years:
+        'No': Жоқ
+        'Yes': Иә
+      csp_ap_taking_ap_class:
+        'No': Жоқ
+        'Yes': Иә
+      cspu5_assess1_fivemore:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_2018:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_exam_prep:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_flowchart:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_2018:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_exam_prep:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_increase:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_2018:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_exam_prep:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess2_addstrings:
+        result: нәтиже
+      cspu5_assess2_addstrings_2018:
+        result: нәтиже
+      cspu5_assess2_addstrings_exam_prep:
+        result: нәтиже
+      cspu5_assess2_combineString:
+        '10': '10'
+        '55': '55'
+        result: нәтиже
+      cspu5_assess2_combineString_2018:
+        '10': '10'
+        '55': '55'
+        result: нәтиже
+      cspu5_assess2_combineString_exam_prep:
+        '10': '10'
+        '55': '55'
+        result: нәтиже
+      cspu5_assess2_oldEnough:
+        '35': '35'
+        'false': Жалған
+        'true': дұрыс
+      cspu5_assess2_oldEnough_2018:
+        '35': '35'
+        'false': Жалған
+        'true': дұрыс
+      cspu5_assess2_oldEnough_exam_prep:
+        '35': '35'
+        'false': Жалған
+        'true': дұрыс
+      cspu5_assess2_weight:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_2018:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_exam_prep:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess3_array1:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_2018:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_exam_prep:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array4:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_2018:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_exam_prep:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_listAppend:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_2018:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_exam_prep:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_loopValue1:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue2:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess4_dataReturns:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_2018:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_exam_prep:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_listOutput:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_2018:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_exam_prep:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      msm variables multi 1:
+        '15': '15'
+        x: x
+      msm variables multi 10:
+        '17': '17'
+        x: x
+      msm variables multi 11:
+        '17': '17'
+        x: x
+      msm variables multi 12:
+        '17': '17'
+        x: x
+      msm variables multi 13:
+        '117': '117'
+        '17': '17'
+        x: x
+      msm variables multi 2:
+        '8': '8'
+      msm variables multi 3:
+        '5': '5'
+        x: x
+      msm variables multi 4:
+        '15': '15'
+        '3': '3'
+        '8': '8'
+      msm variables multi 5:
+        '3': '3'
+        '5': '5'
+      msm variables multi 6:
+        '1': '1'
+        '5': '5'
+        hello: сәлем
+      msm variables multi 7:
+        '3': '3'
+        x: x
+      msm variables multi 8:
+        '3': '3'
+        x: x
+      msm variables multi 9:
+        '5': '5'
+        '6': '6'
+        x: x
+      post-assessment survey q34:
+        Easy: оңай
+        Hard: қиын
+      pre-assessment survey q24:
+        'No': Жоқ
+        'Yes': Иә
+      pre-assessment survey q26:
+        0: "? Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        1: ": Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        'No': Жоқ
+        'Yes': Иә
+      pre-assessment survey q27:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Басқасы
+      pre-assessment survey q28:
+        '10': '10'
+        '11': '11'
+        '12': '12'
+        '8': '8'
+        '9': '9'
+        Other: Басқасы
+      pre-assessment survey q29:
+        Female: Әйел
+        Male: Ер
+        Other: Басқасы
+        Prefer not to answer: Жауап беруден бас тартамын
+      pre-assessment survey q30:
+        Asian: Азиялық
+        Other: Басқасы
+        Prefer not to answer: Жауап беруден бас тартамын
+        White: Ақ
+      sarah_test_maggie:
+        Question: Сұрақ
+        test: таңдау
+      sciPD PreQ 1:
+        'No': Жоқ
+        'Yes': Иә
+      sciPD PreQ 2:
+        'No': Жоқ
+        'Yes': Иә
+      test anonymous student survey educational:
+        'No': Жоқ
+        'Yes': Иә
+      test me:
+        Question: Сұрақ
+        title: ат
+      unique level name here:
+        Question: Сұрақ
+        title: ат
+    text_match:
+      U2L07 Assessment4:
+        '43': '43'

@@ -1,0 +1,358 @@
+---
+he:
+  data:
+    callouts:
+      2-3 Artist Debugging 1_callout:
+        2-3_Artist_Debugging_1_a: אין אפשרות להזיז את האמן רק צעד אחד בכל פעם, אבל
+          אתה יכול לגרור את המחוון שמאלה כדי שהתוכנית תרוץ לאט יותר.
+      2-3 Bee Conditionals 5_callout:
+        Bee_Cond_5_1a: פרחים סגולים יכולים להכיל או 0 או 1 צופים... אבל אתה לא תדע
+          כמה עד שלא תריץ את הקוד!
+      4-5 Artist Patterns Free Play_callout:
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך
+          קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
+      4-5 Bee Conditionals - FC Test_callout:
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
+          צורך לבדוק את הכוורות כלל.
+      4-5 Bee Conditionals 2_callout:
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
+          צורך לבדוק את הכוורות כלל.
+      AppLab Intro 2 - Edit place1 2_callout:
+        dragTextAreaIn: לחץ וגרור "אזור טקסט" לתוך המסך
+        screenSelectorCallout3: בחר את המסך שיצרת
+      AppLab Intro 2 - Edit place1_callout:
+        screenSelectorCallout2: זהו בוחרן המסכים
+        changePlace1ID: שנה את הזיהוי של המסך כאן.
+      AppLab Intro 2 - Edit startScreen_callout:
+        applabIntro2_1: לחץ על הכותרת של האפליקציה שלך
+        appLabIntro2_designMenu: השתמש בתפריטים אלו כדי לשנות את הטקסט של האפליקציה
+        appLabIntro2_textColor: גלול מטה כדי לשנות את "צבע הטקסט"
+      AppLab Intro 2 - Edit startScreen2_callout:
+        applabIntro2storyText: לחץ על טקסט הסיפור שעל המסך הזה
+        appLabIntro2_editStoryText: גרור את הפינה התחתונה של קופסת הטקסט כדי לקבל
+          עוד מקום. אז כתוב את טקסט הסיפור שלך
+        appLabIntro2_textColor: נסה לשנות חלק מן האפשרויות הקיימות כאן למטה
+      AppLab Intro 2 - add Button_callout:
+        designToolboxCallOut: גרור כפתור אל תוך המסך.
+        changeButtonID: בחר במזהה ברור לכפתור שלך. לדוגמא, "כפתורהתקשרלחבר" או "לךמחוץלכפתור"
+          ("callFriendButton" or "goOutsideButton")
+        screenSelectorCallout3: גש למסך ההתחלה שלך
+      AppLab Intro 2 - add onEvent_callout:
+        onEventFirstTime: לחץ וגרור בלוק "onEvent" לתוך איזור העבודה בצד ימין
+        setScreenFirstTime: לחצו וגררו לתוך החלל בבלוק "onEvent"
+      AppLab Intro 7 - Change Screen Color_callout:
+        applab_hoc_finish: האם המסך שלכם הפך ירוק? אם כן, לחצו על 'סיים'. אם לא, לחצו
+          על 'אפס', שנו את הקוד שלכם, ולחצו שוב 'הרץ'.
+      AppLab Intro 7 - thisOrThatAddButton_callout:
+        AppLabHoCFinal11: אתם עכשיו במצב עיצוב.
+      CSD U3 Variables Predict Where X_callout:
+        CSD_U3_variables: שנו את המספר כאן
+      CSD U3 Variables Predict Where XY Embed_callout:
+        grid: לחצו כאן על מנת להציג את הרשת.
+      CSD U3 Variables Predict Where XY Embed_2018_callout:
+        grid: לחצו כאן על מנת להציג את הרשת.
+      CSD U3 Variables Predict Where XY_callout:
+        grid: לחצו כאן על מנת להציג את הרשת.
+      CSD U3 Variables Predict Where XY_2018_callout:
+        grid: לחצו כאן על מנת להציג את הרשת.
+      CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: שנו את המספר כאן
+      CSD U3 debug_callout:
+        CSD_U3_rect_c1: הנה הקוד
+        CSD_U3_rect_c2: גררו את הבלוק הזה לתוך איזור הקוד.
+      CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: הנה הקוד
+        CSD_U3_rect_c2: גררו את הבלוק הזה לתוך איזור הקוד.
+      CSD U3 ellipse_callout:
+        CSD_U3_rect_c1: הנה הקוד
+        CSD_U3_rect_c2: גררו את הבלוק הזה לתוך איזור הקוד.
+      CSD U3 ellipse_2018_callout:
+        CSD_U3_rect_c1: הנה הקוד
+        CSD_U3_rect_c2: גררו את הבלוק הזה לתוך איזור הקוד.
+      CSD U3 fill_callout:
+        CSD_U3_rect_c1: הנה הקוד
+        CSD_U3_rect_c2: גררו את הבלוק הזה לתוך איזור הקוד.
+      CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: הנה הקוד
+        CSD_U3_rect_c2: גררו את הבלוק הזה לתוך איזור הקוד.
+      CSD U3 my-rect_callout:
+        CSD_U3_rect_c1: הנה הקוד
+        CSD_U3_rect_c2: כאן מופיע כפתור 'הרץ'.
+      CSD U3 rect_callout:
+        CSD_U3_rect_c1: הנה הקוד
+        CSD_U3_rect_c2: כאן מופיע כפתור 'הרץ'.
+      CSD U3 rect_2018_callout:
+        CSD_U3_rect_c1: הנה הקוד
+      CSD U3 sequence_callout:
+        CSD_U3_rect_c1: הנה הקוד
+        CSD_U3_rect_c2: גררו את הבלוק הזה לתוך איזור הקוד.
+      CSD U3 sequence_2018_callout:
+        CSD_U3_rect_c1: הנה הקוד
+        CSD_U3_rect_c2: גררו את הבלוק הזה לתוך איזור הקוד.
+      CSD U6 colorLeds intensity_callout:
+        CSDU6L10_rainbow: הוסיפו את הקוד שלכם כאן
+      CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: הוסיפו את הקוד שלכם כאן
+      CSD U6 light show predict_callout:
+        CSDUDL03P09: מה עושה השורה הזאת?
+      CSD U6 light show predict_2018_callout:
+        CSDUDL03P09: מה עושה השורה הזאת?
+      CSD U6 light show_callout:
+        CSDUDL03P09: מה עושה השורה הזאת?
+      CSD U6 light show_2018_callout:
+        CSDUDL03P09: מה עושה השורה הזאת?
+      CSD U6 tugowar variables 3_callout:
+        CSD_U6_checkWin: בדוק אם השחקן ניצח
+      CSD U6 tugowar variables 3_2018_callout:
+        CSD_U6_checkWin: בדוק אם השחקן ניצח
+      Counting_callout:
+        New Play Lab Project_callout1: לחצו על הקטגוריות על מנת לראות את הבלוקים שזמינים
+          לכם! גררו בלוקים לתוך איזור העבודה כדי להוסיף אותם לתוכנה שלכם
+        New Play Lab Project_callout2: לחץ על "הרץ" כדי לשמור ולהריץ את התוכנה שלך
+        sign_in_to_save_project: רוצים להמשיך את הפרויקט מאוחר יותר? היכנסו למערכת
+          ושמרו את הפרויקט הזה לחשבון שלכם!
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: השתמש בבלוק החדש "אסוף צוף".
+      Course 4 Bee Params 2_callout:
+        edit_get_nectar: השתמש בכפתור הזה לערוך את הפונקציה ולשנות את הכיוון שהדבורה
+          תסתובב אליה כדי לאסוף את הצוף.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: לחצו על "התחל" כדי לנסות את התוכנית שלכם
+      Dance_Party_01_callout:
+        dance_callout_01: הוסיפו את הבלוק הזה לתוכנה שלכם!
+      Dance_Party_01_low_callout:
+        dance_callout_01: הוסיפו את הבלוק הזה לתוכנה שלכם!
+      Dance_Party_02_callout:
+        dance_callout_02: הוסיפו את הבלוק הזה לתוכנה שלכם!
+      Dance_Party_04_callout:
+        dance_callout_04: הוסיפו את הבלוק הזה לתוכנה שלכם!
+      Dance_Party_06_callout:
+        dance_callout_06: הוסיפו רקדן חדש כאן
+      Dance_Party_11_callout:
+        dance_callout_11_a: בלוק חדש!
+        dance_callout_11_b: בלוק חדש!
+      Geometric Pattern_callout:
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך
+          קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
+      Geometric Sun_callout:
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך
+          קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
+      Geometric Sun_2018_callout:
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך
+          קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
+      Geometric Sun_2019_callout:
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך
+          קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
+      Mike Playlab Project_callout:
+        New Play Lab Project_callout1: לחצו על הקטגוריות על מנת לראות את הבלוקים שזמינים
+          לכם! גררו בלוקים לתוך איזור העבודה כדי להוסיף אותם לתוכנה שלכם
+        New Play Lab Project_callout2: לחץ על "הרץ" כדי לשמור ולהריץ את התוכנה שלך
+        sign_in_to_save_project: רוצים להמשיך את הפרויקט מאוחר יותר? היכנסו למערכת
+          ושמרו את הפרויקט הזה לחשבון שלכם!
+      New Artist Project_callout:
+        New Artist Project_callout2: לחץ על "הרץ" כדי לשמור ולהריץ את התוכנה שלך
+        sign_in_to_save_project: רוצים להמשיך את הפרויקט מאוחר יותר? היכנסו למערכת
+          ושמרו את הפרויקט הזה לחשבון שלכם!
+      New Play Lab Project_callout:
+        New Play Lab Project_callout1: לחצו על הקטגוריות על מנת לראות את הבלוקים שזמינים
+          לכם! גררו בלוקים לתוך איזור העבודה כדי להוסיף אותם לתוכנה שלכם
+        New Play Lab Project_callout2: לחץ על "הרץ" כדי לשמור ולהריץ את התוכנה שלך
+        sign_in_to_save_project: רוצים להמשיך את הפרויקט מאוחר יותר? היכנסו למערכת
+          ושמרו את הפרויקט הזה לחשבון שלכם!
+      Overworld Chop Trees_callout:
+        craft_callout_preplaced: הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל
+      Overworld Chop Trees_2018_callout:
+        craft_callout_preplaced: הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל
+      Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו
+          לסיים אותו?
+      Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו
+          לסיים אותו?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו
+          לסיים אותו?
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: לחצו על "התחל" כדי לנסות את התוכנית שלכם
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: לחצו על "התחל" כדי לנסות את התוכנית שלכם
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: לחצו על "התחל" כדי לנסות את התוכנית שלכם
+      Overworld Place Wall_callout:
+        craft_inside_repeat: חזרו על הפעולות באמצעות הצבת בלוקים כאן
+      Overworld Place Wall_2018_callout:
+        craft_inside_repeat: חזרו על הפעולות באמצעות הצבת בלוקים כאן
+      Overworld Place Wall_2019_callout:
+        craft_inside_repeat: חזרו על הפעולות באמצעות הצבת בלוקים כאן
+      PS clone CSD U3 Variables Predict Where XY_callout:
+        grid: לחצו כאן על מנת להציג את הרשת.
+      PS copy - CSD U3 Variables Predict Where XY Embed_callout:
+        grid: לחצו כאן על מנת להציג את הרשת.
+      PS copy 2-3 Bee Conditionals 5_callout:
+        Bee_Cond_5_1a: פרחים סגולים יכולים להכיל או 0 או 1 צופים... אבל אתה לא תדע
+          כמה עד שלא תריץ את הקוד!
+      PS copy CSD U3 Variables Predict Where XY_callout:
+        grid: לחצו כאן על מנת להציג את הרשת.
+      Pizza on a Plate_callout:
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך
+          קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
+      Robot Drawing_callout:
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך
+          קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
+      Robot_callout:
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך
+          קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
+      Rock Paper Scissors_callout:
+        New Play Lab Project_callout1: לחצו על הקטגוריות על מנת לראות את הבלוקים שזמינים
+          לכם! גררו בלוקים לתוך איזור העבודה כדי להוסיף אותם לתוכנה שלכם
+        New Play Lab Project_callout2: לחץ על "הרץ" כדי לשמור ולהריץ את התוכנה שלך
+        sign_in_to_save_project: רוצים להמשיך את הפרויקט מאוחר יותר? היכנסו למערכת
+          ושמרו את הפרויקט הזה לחשבון שלכם!
+      Ryan - 4-5 Bee Conditionals 2_callout:
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
+          צורך לבדוק את הכוורות כלל.
+      Ryan - Bee Conditionals_callout:
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
+          צורך לבדוק את הכוורות כלל.
+      Test Play Lab Project With Walls_callout:
+        New Play Lab Project_callout1: לחצו על הקטגוריות על מנת לראות את הבלוקים שזמינים
+          לכם! גררו בלוקים לתוך איזור העבודה כדי להוסיף אותם לתוכנה שלכם
+        New Play Lab Project_callout2: לחץ על "הרץ" כדי לשמור ולהריץ את התוכנה שלך
+        sign_in_to_save_project: רוצים להמשיך את הפרויקט מאוחר יותר? היכנסו למערכת
+          ושמרו את הפרויקט הזה לחשבון שלכם!
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: הקוד הזה יבדוק האם יש לבה. האם תוכלו להוסיף פקודה
+          על מנת לנוע קדימה?
+      Underground Avoiding Lava_2018_callout:
+        craft_callout_moveforward: הקוד הזה יבדוק האם יש לבה. האם תוכלו להוסיף פקודה
+          על מנת לנוע קדימה?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: הקוד הזה יבדוק האם יש לבה. האם תוכלו להוסיף פקודה
+          על מנת לנוע קדימה?
+      Underground Iron_callout:
+        craft_what_is_iron: כרו את הברזל הזה!
+      Underground Iron_2018_callout:
+        craft_what_is_iron: כרו את הברזל הזה!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: כרו את הברזל הזה!
+      courseA_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
+          כדי להיפטר מהם.
+      courseC_maze_programming3_callout:
+        courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
+          כדי להיפטר מהם.
+      courseC_maze_programming3_2018_callout:
+        courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
+          כדי להיפטר מהם.
+      courseC_maze_programming3_2019_callout:
+        courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
+          כדי להיפטר מהם.
+      courseD_bee_conditionals2_callout:
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
+          צורך לבדוק את הכוורות כלל.
+      courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
+          צורך לבדוק את הכוורות כלל.
+      courseD_bee_conditionals2_2019_callout:
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
+          צורך לבדוק את הכוורות כלל.
+      courseD_bee_conditionals2_test_callout:
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
+          צורך לבדוק את הכוורות כלל.
+      courseD_farmer_while7_2018_callout:
+        courseD_farmer_while7_2018_PathAhead: תצטרך להשתמש בבלוק "כל עוד דרך לפניך"
+          כדי לפתור את החידה.
+      courseD_farmer_while7_2019_callout:
+        courseD_farmer_while7_2018_PathAhead: תצטרך להשתמש בבלוק "כל עוד דרך לפניך"
+          כדי לפתור את החידה.
+      courseD_maze_ramp3_callout:
+        courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
+          כדי להיפטר מהם.
+      courseD_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
+          כדי להיפטר מהם.
+      courseD_maze_ramp3_2019_callout:
+        courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
+          כדי להיפטר מהם.
+      courseD_scrat_ramp3_callout:
+        courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
+          כדי להיפטר מהם.
+      courseD_scrat_ramp3_2018_callout:
+        courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
+          כדי להיפטר מהם.
+      courseE_maze_ramp3_callout:
+        courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
+          כדי להיפטר מהם.
+      courseE_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
+          כדי להיפטר מהם.
+      courseF_playLab_func2_callout:
+        New Play Lab Project_callout1: לחצו על הקטגוריות על מנת לראות את הבלוקים שזמינים
+          לכם! גררו בלוקים לתוך איזור העבודה כדי להוסיף אותם לתוכנה שלכם
+        New Play Lab Project_callout2: לחץ על "הרץ" כדי לשמור ולהריץ את התוכנה שלך
+        sign_in_to_save_project: רוצים להמשיך את הפרויקט מאוחר יותר? היכנסו למערכת
+          ושמרו את הפרויקט הזה לחשבון שלכם!
+      coursef_maze_ramp3_callout:
+        courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
+          כדי להיפטר מהם.
+      coursef_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
+          כדי להיפטר מהם.
+      frozen line_callout:
+        move_elsa_forward: גרור בלוק "הזז קדימה" והצמד מתחת לבלוק "מתי לרוץ", בשביל
+          שאלזה תזוז קדימה
+      frozen line_b_callout:
+        move_elsa_forward: גרור בלוק "הזז קדימה" והצמד מתחת לבלוק "מתי לרוץ", בשביל
+          שאלזה תזוז קדימה
+      frozen line_test_callout:
+        move_elsa_forward: גרור בלוק "הזז קדימה" והצמד מתחת לבלוק "מתי לרוץ", בשביל
+          שאלזה תזוז קדימה
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: השתמש בבלוק "צור ענף של פתית שלג"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: השתמש בבלוק "צור ענף של פתית שלג"
+      grade2_CaringForNewPet_2_callout:
+        grade2_CaringForNewPet_2_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
+          כדי להיפטר מהם.
+      grade2_CaringForNewPet_2courseC_maze_programming3_callout:
+        courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
+          כדי להיפטר מהם.
+      grade3_ConditionalsElse_2_callout:
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
+          צורך לבדוק את הכוורות כלל.
+      grade3_Conditionals_3_callout:
+        Bee_Cond_5_1a: פרחים סגולים יכולים להכיל או 0 או 1 צופים... אבל אתה לא תדע
+          כמה עד שלא תריץ את הקוד!
+      grade3_bee_conditionals_quantum2_callout:
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
+          צורך לבדוק את הכוורות כלל.
+      grade4_artist_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך
+          קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
+      grade4_artist_functions_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך
+          קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
+      grade4_bee_conditionals_quantum2_callout:
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין
+          צורך לבדוק את הכוורות כלל.
+      grade4_playLab_proj_example1_callout:
+        New Play Lab Project_callout1: לחצו על הקטגוריות על מנת לראות את הבלוקים שזמינים
+          לכם! גררו בלוקים לתוך איזור העבודה כדי להוסיף אותם לתוכנה שלכם
+        New Play Lab Project_callout2: לחץ על "הרץ" כדי לשמור ולהריץ את התוכנה שלך
+      grade4_playLab_proj_example2_callout:
+        New Play Lab Project_callout1: לחצו על הקטגוריות על מנת לראות את הבלוקים שזמינים
+          לכם! גררו בלוקים לתוך איזור העבודה כדי להוסיף אותם לתוכנה שלכם
+        New Play Lab Project_callout2: לחץ על "הרץ" כדי לשמור ולהריץ את התוכנה שלך
+        sign_in_to_save_project: רוצים להמשיך את הפרויקט מאוחר יותר? היכנסו למערכת
+          ושמרו את הפרויקט הזה לחשבון שלכם!
+      grade5_artist_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך
+          קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
+      small_actors_playlab_projects_callout:
+        New Play Lab Project_callout1: לחצו על הקטגוריות על מנת לראות את הבלוקים שזמינים
+          לכם! גררו בלוקים לתוך איזור העבודה כדי להוסיף אותם לתוכנה שלכם
+        New Play Lab Project_callout2: לחץ על "הרץ" כדי לשמור ולהריץ את התוכנה שלך
+        sign_in_to_save_project: רוצים להמשיך את הפרויקט מאוחר יותר? היכנסו למערכת
+          ושמרו את הפרויקט הזה לחשבון שלכם!

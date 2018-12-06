@@ -1,0 +1,365 @@
+---
+ko:
+  data:
+    callouts:
+      2-3 Artist Debugging 1_callout:
+        2-3_Artist_Debugging_1_a: 제작자들은 "Step" 을 누르지 않아도 됩니다. 하지만 프로그램을 더 잘 돌아가게 하려면
+          슬라이더를 왼쪽으로 옮기십시오.
+      2-3 Bee Conditionals 5_callout:
+        Bee_Cond_5_1a: 보라색 꽃은 한 개나 0개의 꿀이 나올 수 있지만... 코드를 실행하기 전까지는 알 수 없습니다!
+      4-5 Artist Patterns Free Play_callout:
+        4-5_Artist_Patterns_Free_Play_1: 당신이 좋아하는 블럭들은 모두 카테고리 안에 모여있습니다. 그 모든 것들을
+          보려면 이 단어를 클릭하세요!
+      4-5 Bee Conditionals - FC Test_callout:
+        4_5_Bee_Conditionals_2_1: 모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다.
+      4-5 Bee Conditionals 2_callout:
+        4_5_Bee_Conditionals_2_1: 모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다.
+      CSD U3 Variables Predict Where X_callout:
+        CSD_U3_variables: 여기 번호를 변경하세요.
+      CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: 여기 번호를 변경하세요.
+      CSD U3 debug_callout:
+        CSD_U3_rect_c1: 여기 코드가 있습니다.
+      CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: 여기 코드가 있습니다.
+      CSD U3 ellipse_callout:
+        CSD_U3_rect_c1: 여기 코드가 있습니다.
+      CSD U3 ellipse_2018_callout:
+        CSD_U3_rect_c1: 여기 코드가 있습니다.
+      CSD U3 fill_callout:
+        CSD_U3_rect_c1: 여기 코드가 있습니다.
+      CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: 여기 코드가 있습니다.
+      CSD U3 my-rect_callout:
+        CSD_U3_rect_c1: 여기 코드가 있습니다.
+        CSD_U3_rect_c2: 여기 "실행" 버튼이 있습니다.
+      CSD U3 rect_callout:
+        CSD_U3_rect_c1: 여기 코드가 있습니다.
+        CSD_U3_rect_c2: 여기 "실행" 버튼이 있습니다.
+      CSD U3 rect_2018_callout:
+        CSD_U3_rect_c1: 여기 코드가 있습니다.
+      CSD U3 sequence_callout:
+        CSD_U3_rect_c1: 여기 코드가 있습니다.
+      CSD U3 sequence_2018_callout:
+        CSD_U3_rect_c1: 여기 코드가 있습니다.
+      Course 4 Artist 4_callout:
+        repeat_full_circle: 원을 만들기 위해서 좀비가 움직여야하는 횟수를 입력하세요.
+      Course 4 Artist 7_callout:
+        repeat_blocks: '"반복" 블럭의 안에 다른 블럭들을 넣어보세요.'
+      Course 4 Artist For Loops 4_callout:
+        place_counter_variable: 이 블럭의 안에 수를 세기 위한 카운터 블럭을 드래그 하세요.
+      Course 4 Artist Functions 4_callout:
+        create_function: '"함수" 메뉴를 열어 함수를 만들기 위해, 여기를 누르세요. 그 다음에 "함수 만들기" 버튼을 누르세요. '
+      Course 4 Artist Functions 5 OLD_callout:
+        house_hint: 그림이 집처럼 보이지 않아도 괜찮습니다. 다음 퍼즐에서 해결할 것입니다.
+      Course 4 Artist Functions 8_callout:
+        edit_function: 함수를 수정하기 위해서 여기를 클릭하세요.
+      Course 4 Artist Params 2_callout:
+        length_parameter: 이 함수를 수정해서 "길이"를 매개변수로 사용할 수 있도록 해 보세요.
+      Course 4 Artist Params 4_callout:
+        create_function: '"함수" 메뉴를 열어 함수를 만들기 위해, 여기를 누르세요. 그 다음에 "함수 만들기" 버튼을 누르세요. '
+      Course 4 Artist Vars 1_callout:
+        repeat_blocks: '"반복" 블럭의 안에 다른 블럭들을 넣어보세요.'
+      Course 4 Artist Vars 10_callout:
+        set_sides: 퍼즐을 해결하기 위해 필요한 면의 수를 설정하기 위해 이 블럭을 사용하세요.
+      Course 4 Artist Vars 12_callout:
+        set_length: 정확한 값으로 "길이"를 설정하기 위해 이 블럭을 사용하세요.
+      Course 4 Artist Vars 2_callout:
+        set_length: 정확한 값으로 "길이"를 설정하기 위해 이 블럭을 사용하세요.
+      Course 4 Artist Vars 3_callout:
+        place_variable: 이 블럭의 안쪽에 변수 블럭을 드래그 하세요.
+      Course 4 Artist Vars 6_callout:
+        degrees_per_side: 각각의 회전 각도를 얻어내기 위해, 면의 개수를 360으로 나누세요.
+      Course 4 Artist Vars 9_callout:
+        set_sides: 퍼즐을 해결하기 위해 필요한 면의 수를 설정하기 위해 이 블럭을 사용하세요.
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: 새로운 "꽃꿀 얻기" 블럭을 사용하세요.
+      Course 4 Bee For Loops 6_callout:
+        actions_category: 도구 상자가 새로운 모습으로 바뀌었습니다! 이제 "실행" 블럭들을 사용할 수 있습니다.
+      Course 4 Bee Params 2_callout:
+        edit_get_nectar: 이 버튼을 사용해 함수를 수정해서, 꿀벌이 꽃꿀 방향으로 회전할 수 있도록 하세요.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: '"실행하기"를 눌러 프로그램을 실행시켜보세요'
+      Course 4 Maze 4_callout:
+        repeat: 루프(loop) 안에 블럭을 넣어 반복하도록 하세요.
+      Course 4 Play Lab Params 3_callout:
+        edit_function: 함수를 수정하기 위해서 여기를 클릭하세요.
+      Course 4 Play Lab Params 6_callout:
+        edit_add_parameter: 함수에 매개 변수를 추가하기 위해서 편집(edit)을 누르세요.
+      Course 4 Play Lab Vars 1_callout:
+        arrows_move_actor: 캐릭터를 움직이기 위해 방향키를 사용하세요.
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: 캐릭터를 움직이기 위해 방향키를 사용하세요.
+      Dance_Party_01_callout:
+        dance_callout_01: 이 블록을 프로그램에 추가하세요!
+      Dance_Party_01_low_callout:
+        dance_callout_01: 이 블록을 프로그램에 추가하세요!
+      Dance_Party_02_callout:
+        dance_callout_02: 이 블록을 프로그램에 추가하세요!
+      Dance_Party_04_callout:
+        dance_callout_04: 이 블록을 프로그램에 추가하세요!
+      Dance_Party_06_callout:
+        dance_callout_06: 여기에 새로운 댄서를 추가하세요
+      Dance_Party_11_callout:
+        dance_callout_11_a: 새 블록!
+        dance_callout_11_b: 새 블록!
+      Eval Design Recipe .1_callout:
+        edit_function: 함수를 수정하기 위해서 여기를 클릭하세요.
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: 다른 모양의 눈송이를 만들기 위해서 사용해 보세요.
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: 다른 모양의 눈송이를 만들기 위해서 사용해 보세요.
+      Function intro Ryan_callout:
+        Function_intro_Ryan_1: 이 작은 지시문을 사용하면 컴퓨터에서 작업 공간에 보이는 이름이 같은 '대형' 코드를 실행하게
+          됩니다.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: 이 작은 지시문을 사용하면 컴퓨터에서 작업 공간에 보이는 이름이 같은 '대형' 코드를 실행하게
+          됩니다.
+      Geometric Pattern_callout:
+        4-5_Artist_Patterns_Free_Play_1: 당신이 좋아하는 블럭들은 모두 카테고리 안에 모여있습니다. 그 모든 것들을
+          보려면 이 단어를 클릭하세요!
+      Geometric Sun_callout:
+        4-5_Artist_Patterns_Free_Play_1: 당신이 좋아하는 블럭들은 모두 카테고리 안에 모여있습니다. 그 모든 것들을
+          보려면 이 단어를 클릭하세요!
+      Geometric Sun_2018_callout:
+        4-5_Artist_Patterns_Free_Play_1: 당신이 좋아하는 블럭들은 모두 카테고리 안에 모여있습니다. 그 모든 것들을
+          보려면 이 단어를 클릭하세요!
+      Geometric Sun_2019_callout:
+        4-5_Artist_Patterns_Free_Play_1: 당신이 좋아하는 블럭들은 모두 카테고리 안에 모여있습니다. 그 모든 것들을
+          보려면 이 단어를 클릭하세요!
+      Infinity_move_collide_callout:
+        Infinity_move_collide_callout: 이 이벤트가 발생하면 소리를 재생 합니다.
+      Infinity_move_directions_callout:
+        Infinity_move_directions_callout: 어느 블록이 '위쪽 화살표'가 눌렸을 때 Baymax를 위로 움직이게 할까요?
+        Infinity_move_directions_callout_arrow: 이 화살표를 이용해서 조정하세요
+      Infinity_move_right_callout:
+        Infinity_move_right_runbutton: 이곳에 이동 블록을 추가합니다.
+      Infinity_repeat_callout:
+        Infinity_repeat_callout: 여기로 '이동 블록'을 이동 시키세요
+      MC_HOC_2017_01_Cole_callout:
+        MC_HOC_2017_01_Cole_2: 방향키를 사용하거나 여기를 클릭해서 플레이어를 움직이세요.
+      MC_HOC_2017_02_Will_callout:
+        MC_HOC_2017_02_Cole_1: 플레이어에게 친구가 생겼어요! Agent는 여러분이 만든 코드를 실행해 각 레벨을 완료할 수
+          있답니다.
+      MC_HOC_2017_03_Cole_callout:
+        MC_HOC_2017_03_Cole_1: "'반복' 루프를 소개합니다! 작업 공간에서 이 루프를 클릭하고 원하는 코드를 추가해 실행해보세요.
+          여러 번 실행해도 좋아요."
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: "'반복' 루프를 소개합니다! 작업 공간에서 이 루프를 클릭하고 원하는 코드를 추가해 실행해보세요.
+          여러 번 실행해도 좋아요."
+      MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Agent와는 달리 플레이어는 물을 그냥 건널 수 없어요!
+      MC_HOC_2017_04_Cole_2019_callout:
+        MC_HOC_2017_04_Cole_a: Agent와는 달리 플레이어는 물을 그냥 건널 수 없어요!
+      MC_HOC_2017_04_Kiki_callout:
+        MC_HOC_2017_04_Kiki_1: 이 블록을 클릭해 작업 공간으로 가져온 다음 원하는 코드를 추가해 원하는 만큼 반복해보세요!
+      MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: 블록은 삭제는 안 되지만 대신 수정할 수 있어요!
+      MC_HOC_2017_06_Cole_2019_callout:
+        MC_HOC_2017_06_Cole_1: 블록은 삭제는 안 되지만 대신 수정할 수 있어요!
+      MC_HOC_2017_08_RY_callout:
+        MC_HOC_2017_08_RY_1: 'Agent와는 달리 플레이어는 용암을 그냥 건널 수 없어요! '
+      MC_HOC_2017_08_Will_callout:
+        MC_HOC_2017_08_RY_1: 'Agent와는 달리 플레이어는 용암을 그냥 건널 수 없어요! '
+      MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'Agent와는 달리 플레이어는 용암을 그냥 건널 수 없어요! '
+      MC_HOC_2017_Ali_2019_callout:
+        MC_HOC_2017_08_RY_1: 'Agent와는 달리 플레이어는 용암을 그냥 건널 수 없어요! '
+      NEW Course 4 Artist Functions 5_callout:
+        edit_function: 함수를 수정하기 위해서 여기를 클릭하세요.
+        function_editor_draw_square: 이것이 여러분이 만든 함수의 정의입니다. 이 블럭들은 "사각형 그리기" 블럭을 사용할
+          때마다 실행됩니다.
+      NEW Course 4 Artist Functions 7_callout:
+        edit_function: 함수를 수정하기 위해서 여기를 클릭하세요.
+      NEW Course 4 Artist Functions 8_callout:
+        edit_function: 함수를 수정하기 위해서 여기를 클릭하세요.
+      NEW Course 4 Artist Params 10_callout:
+        create_function: '"함수" 메뉴를 열어 함수를 만들기 위해, 여기를 누르세요. 그 다음에 "함수 만들기" 버튼을 누르세요. '
+      NEW Course 4 Artist Params 9_callout:
+        edit_add_parameter: 함수에 매개 변수를 추가하기 위해서 편집(edit)을 누르세요.
+        add_and_drag_parameter: 만든 매개 변수의 이름을 여기에 작성하고, 추가하기를 누른 다음, 여러분이 만든 함수 정의
+          안에 드래그해 넣으세요.
+      NEW Course 4 Artist Vars 6_callout:
+        place_length_variable: 여기에 길이(length) 변수를 드래그해서 물음표 표시를 바꾸세요.
+      NEW Course 4 Bee For Loops 5_callout:
+        actions_category: 도구 상자가 새로운 모습으로 바뀌었습니다! 이제 "실행" 블럭들을 사용할 수 있습니다.
+      New Frozen Project_callout:
+        snowflake_dropdown: 다른 모양의 눈송이를 만들기 위해서 사용해 보세요.
+      Overworld Chop Trees_callout:
+        craft_callout_preplaced: 여러분이 시작할 수 있게 여기에 블록을 몇 개 놓아두었어요
+      Overworld Chop Trees_2018_callout:
+        craft_callout_preplaced: 여러분이 시작할 수 있게 여기에 블록을 몇 개 놓아두었어요
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: 여러분이 시작할 수 있게 여기에 블록을 몇 개 놓아두었어요
+      Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: 이 코드는 집짓기를 시작합니다. 끝낼 수 있나요?
+      Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: 이 코드는 집짓기를 시작합니다. 끝낼 수 있나요?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: 이 코드는 집짓기를 시작합니다. 끝낼 수 있나요?
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: '"실행하기"를 눌러 프로그램을 실행시켜보세요'
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: '"실행하기"를 눌러 프로그램을 실행시켜보세요'
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: '"실행하기"를 눌러 프로그램을 실행시켜보세요'
+      Overworld Place Wall_callout:
+        craft_inside_repeat: 블록들을 이곳에 놓아서 행동을 반복하세요
+      Overworld Place Wall_2018_callout:
+        craft_inside_repeat: 블록들을 이곳에 놓아서 행동을 반복하세요
+      Overworld Place Wall_2019_callout:
+        craft_inside_repeat: 블록들을 이곳에 놓아서 행동을 반복하세요
+      PS copy 2-3 Bee Conditionals 5_callout:
+        Bee_Cond_5_1a: 보라색 꽃은 한 개나 0개의 꿀이 나올 수 있지만... 코드를 실행하기 전까지는 알 수 없습니다!
+      Pizza on a Plate_callout:
+        4-5_Artist_Patterns_Free_Play_1: 당신이 좋아하는 블럭들은 모두 카테고리 안에 모여있습니다. 그 모든 것들을
+          보려면 이 단어를 클릭하세요!
+      Robot Drawing_callout:
+        4-5_Artist_Patterns_Free_Play_1: 당신이 좋아하는 블럭들은 모두 카테고리 안에 모여있습니다. 그 모든 것들을
+          보려면 이 단어를 클릭하세요!
+      Robot_callout:
+        4-5_Artist_Patterns_Free_Play_1: 당신이 좋아하는 블럭들은 모두 카테고리 안에 모여있습니다. 그 모든 것들을
+          보려면 이 단어를 클릭하세요!
+      Ryan - 4-5 Bee Conditionals 2_callout:
+        4_5_Bee_Conditionals_2_1: 모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다.
+      Ryan - Bee Conditionals_callout:
+        4_5_Bee_Conditionals_2_1: 모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다.
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: 이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?
+      Underground Avoiding Lava_2018_callout:
+        craft_callout_moveforward: 이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: 이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?
+      Underground Iron_callout:
+        craft_what_is_iron: 이 철을 채굴하세요!
+      Underground Iron_2018_callout:
+        craft_what_is_iron: 이 철을 채굴하세요!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: 이 철을 채굴하세요!
+      courseD_bee_conditionals2_callout:
+        4_5_Bee_Conditionals_2_1: 모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다.
+      courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: 모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다.
+      courseD_bee_conditionals2_2019_callout:
+        4_5_Bee_Conditionals_2_1: 모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다.
+      courseD_bee_conditionals2_test_callout:
+        4_5_Bee_Conditionals_2_1: 모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다.
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: '"원 만들기" 블럭을 사용하고 그 크기를 바꾸세요.'
+      frozen cross rotate_callout:
+        replace_questions_degree: '"???" 부분에 수를 입력하면 됩니다.'
+      frozen cross rotate_b_callout:
+        replace_questions_degree: '"???" 부분에 수를 입력하면 됩니다.'
+      frozen cross rotate_test_callout:
+        replace_questions_degree: '"???" 부분에 수를 입력하면 됩니다.'
+      frozen cross_callout:
+        repeat_blocks_1: "(1) 이 블럭을 회색 블럭들에 사용하세요."
+        repeat_blocks_2: (2) "반복(Repeat)" 블럭을 여기에 이동시킨 후, 회색 블럭들의 안에 넣어주세요.
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: 반복 블럭을 사용해 이 모양을 만들어보세요.
+      frozen diamond_callout:
+        frozen_diamond_repeat: 반복 블럭을 사용해 이 모양을 만들어보세요.
+      frozen freeplay_callout:
+        snowflake_dropdown: 다른 모양의 눈송이를 만들기 위해서 사용해 보세요.
+      frozen freeplay_b_callout:
+        snowflake_dropdown: 다른 모양의 눈송이를 만들기 위해서 사용해 보세요.
+      frozen freeplay_test_callout:
+        snowflake_dropdown: 다른 모양의 눈송이를 만들기 위해서 사용해 보세요.
+      frozen line_callout:
+        move_elsa_forward: '"앞으로 이동" 블럭을 드래그해서 "실행하면" 블럭의 아래에 붙여 엘사가 앞으로 이동하게 해보세요.'
+      frozen line_b_callout:
+        move_elsa_forward: '"앞으로 이동" 블럭을 드래그해서 "실행하면" 블럭의 아래에 붙여 엘사가 앞으로 이동하게 해보세요.'
+      frozen line_test_callout:
+        move_elsa_forward: '"앞으로 이동" 블럭을 드래그해서 "실행하면" 블럭의 아래에 붙여 엘사가 앞으로 이동하게 해보세요.'
+      frozen perpendicular_callout:
+        turn_elsa: '"돌기(회전)" 블럭을 사용해 엘사가 방향을 바꾸도록 해보세요. 선택 메뉴에서의 수는 엘사가 회전해야할 정도를
+          의미합니다.'
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: '"가지치기 눈송이 만들기(create a snowflake branch)" 블럭을 사용하세요.'
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: '"가지치기 눈송이 만들기(create a snowflake branch)" 블럭을 사용하세요.'
+      frozen square iterative_callout:
+        frozen_create_square: 사각형을 만들기 위해서 여기에 블럭들을 더 붙여주세요.
+      frozen square iterative_b_callout:
+        frozen_create_square: 사각형을 만들기 위해서 여기에 블럭들을 더 붙여주세요.
+      frozen square iterative_test_callout:
+        frozen_create_square: 사각형을 만들기 위해서 여기에 블럭들을 더 붙여주세요.
+      frozen square loop 3x_callout:
+        replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      frozen square loop 3x_b_callout:
+        replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      frozen square loop 3x_test_callout:
+        replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      frozen square loop_callout:
+        replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      frozen square loop_b_callout:
+        replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      frozen square loop_test_callout:
+        replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      frozen square snowflake_callout:
+        replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      frozen square snowflake_b_callout:
+        replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      frozen square snowflake_test_callout:
+        replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      grade3_ConditionalsElse_2_callout:
+        4_5_Bee_Conditionals_2_1: 모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다.
+      grade3_Conditionals_3_callout:
+        Bee_Cond_5_1a: 보라색 꽃은 한 개나 0개의 꿀이 나올 수 있지만... 코드를 실행하기 전까지는 알 수 없습니다!
+      grade3_bee_conditionals_quantum2_callout:
+        4_5_Bee_Conditionals_2_1: 모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다.
+      grade4_artist_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: 당신이 좋아하는 블럭들은 모두 카테고리 안에 모여있습니다. 그 모든 것들을
+          보려면 이 단어를 클릭하세요!
+      grade4_artist_functions_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: 당신이 좋아하는 블럭들은 모두 카테고리 안에 모여있습니다. 그 모든 것들을
+          보려면 이 단어를 클릭하세요!
+      grade4_artist_parameters_squares1_callout:
+        edit_add_parameter: 함수에 매개 변수를 추가하기 위해서 편집(edit)을 누르세요.
+        add_and_drag_parameter: 만든 매개 변수의 이름을 여기에 작성하고, 추가하기를 누른 다음, 여러분이 만든 함수 정의
+          안에 드래그해 넣으세요.
+      grade4_bee_conditionals_quantum2_callout:
+        4_5_Bee_Conditionals_2_1: 모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다.
+      grade4_frozen_freeplay_callout:
+        snowflake_dropdown: 다른 모양의 눈송이를 만들기 위해서 사용해 보세요.
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: '"원 만들기" 블럭을 사용하고 그 크기를 바꾸세요.'
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: 반복 블럭을 사용해 이 모양을 만들어보세요.
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: 반복 블럭을 사용해 이 모양을 만들어보세요.
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: 반복 블럭을 사용해 이 모양을 만들어보세요.
+      grade4_frozen_square_callout:
+        replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      grade4_frozen_square_loop1_callout:
+        replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      grade4_frozen_square_loop2_callout:
+        replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      grade4_frozen_square_loop3_callout:
+        replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      grade5_artist_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: 당신이 좋아하는 블럭들은 모두 카테고리 안에 모여있습니다. 그 모든 것들을
+          보려면 이 단어를 클릭하세요!
+      grade5_artist_parameters_squares1_callout:
+        edit_add_parameter: 함수에 매개 변수를 추가하기 위해서 편집(edit)을 누르세요.
+        add_and_drag_parameter: 만든 매개 변수의 이름을 여기에 작성하고, 추가하기를 누른 다음, 여러분이 만든 함수 정의
+          안에 드래그해 넣으세요.
+      grade5_artist_parameters_triangles1aa_callout:
+        edit_add_parameter: 함수에 매개 변수를 추가하기 위해서 편집(edit)을 누르세요.
+        add_and_drag_parameter: 만든 매개 변수의 이름을 여기에 작성하고, 추가하기를 누른 다음, 여러분이 만든 함수 정의
+          안에 드래그해 넣으세요.
+      grade5_artist_variables_pentagons1_callout:
+        place_length_variable: 여기에 길이(length) 변수를 드래그해서 물음표 표시를 바꾸세요.
+      grade5_artist_variables_pentagons12_callout:
+        set_length: 정확한 값으로 "길이"를 설정하기 위해 이 블럭을 사용하세요.
+      grade5_artist_variables_square7_callout:
+        degrees_per_side: 각각의 회전 각도를 얻어내기 위해, 면의 개수를 360으로 나누세요.
+      grade5_artist_variables_triangles2_callout:
+        set_length: 정확한 값으로 "길이"를 설정하기 위해 이 블럭을 사용하세요.
+      grade5_playlab_variables1_callout:
+        arrows_move_actor: 캐릭터를 움직이기 위해 방향키를 사용하세요.
+      grade5_playlab_variables11_callout:
+        edit_add_parameter: 함수에 매개 변수를 추가하기 위해서 편집(edit)을 누르세요.
+      grade5_playlab_variables1ask_callout:
+        arrows_move_actor: 캐릭터를 움직이기 위해 방향키를 사용하세요.

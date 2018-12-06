@@ -1,0 +1,202 @@
+ar:
+  data:
+    function_names:
+      x: x
+      details: تفاصيل
+      draw eyebrow: ارسم حاجب العين
+      draw pupil: ارسم التلميذ
+      draw a circle: رسم دائرة
+      draw a car: ارسم سيارة
+      draw_rect: ارسم_مثلث
+      draw square: ارسم مربع
+      jump to controller top left: الانتقال إلى وحدة التحكم لأعلى اليسار
+      jump to middle: اقفز للوسط
+      draw a button: ارسم زر
+      draw cord: ارسم حبل
+      draw left leg: ارسم القدم اليسرى
+      draw right leg: ارسم القدم اليمنى
+      draw body and arms: ارسم جسم وذراعين
+      draw a head: ارسم رأس
+      draw sitting stick figure: ارسم شكل عصا جالسة
+      draw head: ارسم رأس
+      draw arms: ارسم ذراعين
+      jump to neck: اقفز للرقبة
+      draw O: ارسم حرف O
+      draw D: ارسم حرف D
+      draw E: ارسم حرف E
+      big gear: معدات كبيرة
+      small gear: معدات صغيرة
+      draw a hexagon: رسم شكل سداسي
+      draw a flower: رسم زهرة
+      draw a square: رسم مربع
+      draw a snowflake: رسم ندفة الثلج
+      draw 3 hexagons: ارسم ٣ أشكال سداسية
+      draw 4 hexagons: ارسم ٤ أشكال سداسية
+      draw 5 hexagons: ارسم ٥ أشكال سداسية
+      get 2 nectar: احصل على ٢ من الرحيق
+      collect purple nectar: اجمع الرحيق الأرجواني
+      get 5: احصل على ٥
+      move and get nectar: انتقل واحصل على رحيق
+      move and get 4: تحرك واحصل على ٤
+      get 7 nectar make 7 honey: احصل على ٧ من الرحيق واصنع ٧ من العسل
+      get 7 make 7: احصل على ٧ اصنع ٧
+      get 7: احصل على ٧
+      move and get 3: تحرك واحصل على ٣
+      draw a tree: رسم شجرة
+      draw triangle: ارسم مثلث
+      draw circle: ارسم دائرة
+      draw goal: ارسم هدف
+      graph: رسم بياني
+      draw waves: ارسم موجات
+      draw a wave: ارسم موجة
+      draw a small triangle: ارسم مثلث صغير
+      draw a medium triangle: ارسم مثلث متوسط
+      draw a large triangle: ارسم مثلث كبير
+      draw a big triangle: ارسم مثلث كبير
+      draw a triangle: رسم مثلث
+      draw a house: رسم منزل
+      check purple flower: تحقق من الزهور الأرجوانية
+      check flower make honey: تحقق من الزهر واصنع العسل
+      get nectar or make honey: احصل على الرحيق أو اصنع العسل
+      make 3 honey: اصنع ٣ من العسل
+      get 5 nectar: احصل على ٥ من الرحيق
+      make all honey: اصنع كل العسل
+      draw a star: رسم نجمة
+      game has been won: قد فاز أحد باللعبة
+      draw: تعادل
+      draw bit: ارسم بت
+      draw a polygon: ارسم مضلع
+      draw a shape: ارسم شكل
+      get 2 and make 2: احصل على ٢ واصنع ٢
+      draw a pinwheel: ارسم دولاب الهواء
+      drawTree: ارسم_شجرة
+      drawHouse: ارسم_منزل
+      drawBranch: ارسم_فرع
+      drawSky: ارسم_سماء
+      fillScreen: املأ_الشاشة
+      drawHouseLayer: ارسم_طبقة_منزل
+      swap: تبديل
+      dropR: اترك_R
+      grabL: امسك_L
+      dropL: اترك_L
+      init: التهيئة
+      grabR: امسك_R
+      do something: القيام بشيء ما
+      draw_image: ارسم_صورة
+      story: قصة
+      starting path: طريق البداية
+      jump: قفز
+      patrol: دورية
+      draw grid1: ارسم شبكة١
+      draw lines: ارسم خطوط
+      Draw a Square Line: ارسم خط مربع
+      Draw a triangle: ارسم مثلث
+      Draw a Cube: ارسم مكعب
+      draw a cube: ارسم مكعب
+      draw an octagon 20: ارسم ثماني ٢٠
+      Draw a square: ارسم مربع
+      cube: مكعب
+      do something2: افعل شيئاً٢
+      jump upper right: القفز أعلى اليمين
+      draw a line of  squares: ارسم خط من المربعات
+      draw a line of squares: ارسم خط من المربعات
+      Draw Square Line: ارسم خط مربع
+      jump upper left: القفز أعلى اليسار
+      draw a line of octagons: ارسم خط من الأشكال الثمانية
+      draw a square line: ارسم خط مربع
+      Draw a Square: ارسم مربع
+      draw a square 20: ارسم مربع ٢٠
+      draw a square 40: ارسم مربع ٤٠
+      draw a triangle with length: ارسم مثلث بطول
+      Draw a Triangle with length: ارسم مثلث بطول
+      draw a sqaure: ارسم مربع
+      triangle: مثلث
+      draw a spiral shape: ارسم شكل حلزوني
+      get 3 nectar: احصل على ٣ من الرحيق
+      get many nectar: احصل على كثير من الرحيق
+      get nectar make honey: احصل على الرحيق اصنع العسل
+      draw an octagon: ارسم شكل ثماني
+      draw octagons: ارسم أشكال ثمانية
+      shift down: إزاحة إلى الأسفل
+      score_points: سجل_نقاط
+      set score: تعيين النتيجة
+      draw a line of hexagons: ارسم خط من الأشكال السداسية
+      shift down/forward: الانتقال لأسفل/إلى الأمام
+      shift down/backward: الانتقال لأسفل/للخلف
+      get nectar: الحصول على الرحيق
+      setActors: ضع_ممثلين
+      check guess: تحقق من تخمين
+      Jump: اقفز
+      test: اختبار
+      build bridge: بناء جسر
+      run right: اركض لليمين
+      grow forever: النمو للأبد
+      draw grass: ارسم عشب
+      sun: شمس
+      draw windows: ارسم نوافذ
+      square: مربع
+      draw a door: ارسم باب
+      rectangle: مستطيل
+      diamond: ماسة
+      window: نافذة
+      move: تحريك
+      bubble sort: الترتيب الفقاعي
+      move right: تحريك لليمين
+      say number: افرض رقم
+      move up: تحريك لأعلى
+      move down: تحريك لأسفل
+      move left: تحرك لليسار
+      click: اضغط
+      draw first part of heart: ارسم أول جزء من القلب
+      check win: التحقق من الفوز
+      make triangle: اصنع مثلث
+      my behavior: تصرفي
+      '"simple" solution': 'حل "بسيط"'
+      potential solution: حل محتمل
+      my design: تصميمي
+      get 3 nectar or honey: احصل على ٣ من الرحيق اول عسل
+      move and collect: تحرك واجمع
+      check nectar or honey: تحقق من الرحيق او العسل
+      row of nectar: سطر من الرحيق
+      rowOfNectar: سطر_من_الرحيق
+      move and check: تحرك وتأكد
+      win game: الفوز باللعبة
+      lose game: الخسارة باللعبة
+      keep playing: استمر باللعب
+      Ask a question: اسأل سؤال
+      draw pinwheel: ارسم دولاب الهواء
+      draw background: ارسم خلفية
+      move and get nectar with counter: انتقل واحصل على الرحيق مع العداد
+      pick row: اختر سطر
+      draw flame: ارسم شعلة
+      draw fire: ارسم نار
+      booster: الداعم
+      draw line of triangles: ارسم سطر من المثلثات
+      draw a window: ارسم نافذة
+      stop_everything: توقف_كل_شيء
+      lose: اخسر
+      draw a plane of squares: ارسم سطح من المربعات
+      draw hexagon: ارسم شكل سداسي
+      draw line of hexagons: ارسم خط من الأشكال السداسية
+      draw line of polygons: ارسم خط من المضلعات
+      draw polygon: ارسم مضلع
+      honey nectar: رحيق العسل
+      move and make honey: تحرك واصنع عسل
+      collect all nectar: اجمع كل الرحيق
+      get all nectar: احصل على كل الرحيق
+      get pumpkin: احصل على يقطين
+      harvest: المحصول
+      get corn and come back: احصل على ذرة وارجع
+      check square for corn: تفقد المربع من الذرة
+      get all pumpkins: احصل على كل اليقطين
+      collect: جمع
+      Make Actor 1 Jump: اجعل ممثل ١ يقفز
+      Choose Number: اختر رقم
+      Move Bird: حرك الطائر
+      turn left: اتجه إلى اليسار
+      move forward: تحريك إلى الأمام
+      turn right: اتجه إلى اليمين
+      drawDot: ارسم_نقطة
+      draw a rectangle: ارسم مستطيل
+      Which Course for My Students?: أي دورة لطلابي ؟
+      draw a heart: ارسم قلب

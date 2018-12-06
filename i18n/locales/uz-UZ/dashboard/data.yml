@@ -1,0 +1,97 @@
+uz:
+  data:
+    game:
+      name:
+        Unplug1: Informatikaga kirish
+        Maze: Labirint
+        Multi: Turli variantlar tanlash
+        Unplug2: Dasturiy fikrlash
+        Unplug3: Katakchali varaqda dasturlash
+        Artist: Rassom
+        Unplug4: Algoritmlar
+        Artist2: Rassom 2
+        Unplug5: Funksiyalar
+        Farmer: Fermer
+        Unplug6: Shart buyruqlari
+        Artist3: Rassom 3
+        Unplug7: Musiqa yozish
+        Farmer2: Fermer 2
+        Unplug8: Abstraksiya
+        Artist4: Rassom 4
+        Unplug9: Estafetali dasturlash
+        Farmer3: Fermer 3
+        Unplug10: Internet
+        Artist5: Rassom 5
+        Unplug11: Yakun
+        MazeEC: Labirint
+        Bounce: Sakrash
+        Flappy: Pirilloq qushcha
+        Jigsaw: Topishmoq
+        MazeStep: Labirint qadam holati
+        Wordsearch: So'z izlash
+        Webapp: Ilova labaratoriyasi
+        ArtistEC: Rassom
+        TextMatch: So'z Mos
+        Applab: Ilova labaratoriyasi
+        NetSim: Internet simulyator
+    trophy:
+      name:
+        Bronze: Bronza
+        Silver: Kumush
+        Gold: Oltin
+    concept:
+      description:
+        sequence: Ketma-ketlik
+        if: Agar blogi
+        if_else: Agar-bo'lmasa blogi
+        loop_times: Marta takrorlash blok
+        loop_until: '-gacha takrorlash blok'
+        loop_while: Toki blogi
+        loop_for: Sanovchi blok
+        function: Funksiyalar
+        parameters: Funksiyalar (parameterlari bilan)
+    level:
+      instructions:
+        maze_2_2: 'Quloqsiz cho‘chqachani tutishda yordam berolmaysizmi? Keraklicha “oldinga yur” bloklarini tagma-tag taxlab, “bajar” tugmasini bosib, menga uni tutishga ko‘maklashing. '
+        maze_2_1: Bu cho‘chqacha asablarimni o‘ynayapti. Uni tutishga yordam bering!
+        maze_2_2_5: Mani yo‘lak bo‘ylab yurgizib, ahmoq cho‘chqachani tutishimga ko‘maklashing. TNT bombacha va patimni yulinishidan ehtiyot bo‘ling!
+        maze_2_3: Meni yashil maxluqcha tomon boshqaring! (TNT bombachaga tega ko‘rmang)
+        maze_2_4: O‘zingizni bosib, jin urgur cho‘chqachani topishga yordamlashing. Aks holda mening qonim qaynaydi!
+        maze_2_5: Ahmoq cho‘chqachaga 2 ta blok orqali yetish imkoni bor. Qandayligini sezgandirsiz?
+        maze_2_6: Mani uchta blok orqali yashil buzg‘unchiga olib boring.
+        maze_2_7: Iloji boricha kamroq blok ishlatib, meni qing‘ir cho‘chqachani tutishga yordamlashing. Bir necha marta "marta takrorlash" blogini ishlatib ko‘ring.
+        maze_2_8: 'Kulrang blok siz uni o‘chira olmasligingizni bildiradi. Boshqotirmani 3 marta takrorlaydigan kulrang blok amali ichida 3 ta blok joylab yechishga harakat qilib ko‘ring.'
+        maze_2_9: Endi yangi "... maguncha takrorla" blokchasi yordamida bajaring. Bu blok cho‘chqachani tutmaguncha takrorlanaveradi.
+        maze_2_10: Xo‘sh, yana bitta mashq qilib ko‘ramiz — bunisini 4 ta blok ishlatib bajarish kerak.
+        maze_2_11: Hurmatli dasturchi. Men zombiman. Judayam ochman. Men... kungaboqarga... yetib... olishim kerak... Faqat 5 ta blok ishlatib unga yetkaza olasanmi?
+        maze_2_12: Mayli, bunisi oson, lekin boshqacharoq. 5 ta blok bilan hal qila olasanmi?
+        maze_2_13: 'Yangi “agar” blogini ishlatib menga qachon burilishim kerakligini ayt. Yordam: sen yana bitta blok qo‘shishing kerak, lekin “agar” shartini qanday qo‘shishni keyingi safar ko‘rasan.'
+        maze_2_14: Yaxshi, bunisi oxirgi masalaga o‘xshaydi, ammo sen "agar" va "takrorla" bloklarini birga ishlatganingni eslashingga to‘g‘ri keladi.
+        maze_2_15: Men kungaboqarga yetishishim kerak! “agar” va boshqa bloklardan eng kam foydalanib, meni uning oldiga yetkaz.
+        maze_2_16: Xo‘sh, yana bir mashq qilib olaylik — bunisi unchalik qiyin emas. Faqat yamlovchilardan ehtiyot bo‘l!
+        maze_2_17: '“Agar-aks holda” blogi bitta shartni tekshiradi va natijaga qarab u yoki bu amalni bajaradi. Yangi blokdan foydalanib, meni kungaboqarning oldiga olib bor.'
+        maze_2_18: '“Agar-aks holda” blogi uchun yana bitta mashq. Bir urinishdayoq bajara olasanmi?'
+        maze_2_19: Faqat 3 ta blokdan foydalanib, qiyinroq masalani yecha olasanmi? Agar eplay olsang, undan keyin qancha uzun bo‘lmasin men har qanday egri yo‘llardan yura olaman.
+        turtle_1_1: Salom, men rassomman. Men barcha narsani chiza olishim uchun sen kod yozishing mumkin. Meni rasmdagi kulrang chiziqlar uztidan chizishim uchun bir nechta bloklarni ishlat.
+        turtle_1_2: 'Endi, kvadrat chizamiz. ESLATMA: "rang tanlash" blokidan o''zing yoqtirgan rangni tanla.'
+        turtle_1_3: 3 ta blok ishlatib, to'rtburchak yasang.
+        turtle_1_4: 'Har bir tomoni har xil rangda bo''lgan uchburchak chizing. Har doim har xil rang ko''rsatish uchun "Tasodifiy rang" tanlovini belgilang. Maslahat: "Burilish" blokidagi raqam ustiga bosib, qanchalik ko''p burilishingiz kerakligini aniqlashingiz mumkin.'
+    video:
+      name:
+        function: Funksiyalar
+        Unplug2: Dasturiy fikrlash
+        Unplug3: Katakchali varaqda dasturlash
+        Unplug4: Algoritmlar
+        Unplug5: Funksiyalar
+        Unplug6: Shart buyruqlari
+        Unplug8: Abstraksiya
+        Unplug11: Yakun
+        C2_graph_paper: Katakchali varaqda dasturlash
+        C2_conditionals_with_cards: Shart buyruqlari
+        C2_relay_programming: Estafetali dasturlash
+        C3_bounce: Sakrash
+        C3_computational_thinking: Dasturiy fikrlash
+        C4_loops_zombie: Sikllar
+        C4_conditionals: Shart buyruqlari
+        csp_applab_loops: Sikllar
+        CSF_loops_AB: Sikllar

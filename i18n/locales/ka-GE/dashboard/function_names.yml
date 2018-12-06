@@ -1,0 +1,183 @@
+ka:
+  data:
+    function_names:
+      x: x
+      details: დეტალები
+      draw eyebrow: წარბის დახატვა
+      draw pupil: მოსწავლის დახატვა
+      draw a circle: წრის დახატვა
+      draw a car: მანქანის დახატვა
+      draw_rect: მართკუთხედის_დახატვა
+      draw square: კვადრატის დახატვა
+      jump to middle: შუაში გადახტომა
+      draw a button: ღილაკის დახატვა
+      draw left leg: მარცხენა ფეხის დახატვა
+      draw right leg: მარჯვენა ფეხის დახატვა
+      draw body and arms: სხეულისა და ხელების დახატვა
+      draw a head: თავის დახატვა
+      draw head: თავის დახატვა
+      draw arms: ხელების დახატვა
+      draw O: O-ს დახატვა
+      draw D: D-ს დახატვა
+      draw E: E-ს დახატვა
+      big gear: დიდი კბილანა
+      small gear: პატარა კბილანა
+      draw a hexagon: ექვსკუთხედის დახატვა
+      draw a flower: ყვავილის დახატვა
+      draw a square: კვადრატის დახატვა
+      draw a snowflake: ფიფქის დახატვა
+      draw 3 hexagons: 3 ექვსკუთხედის დახატვა
+      draw 4 hexagons: 4 ექვსკუთხედის დახატვა
+      draw 5 hexagons: 5 ექვსკუთხედის დახატვა
+      get 2 nectar: 2 ნექტარის აღება
+      collect purple nectar: მეწამული ნექტარის შეგროვება
+      move and get nectar: გადაადგილება და ნექტარის აღება
+      draw a tree: ხის დახატვა
+      draw triangle: სამკუთხედის დახატვა
+      draw circle: წრის დახატვა
+      draw waves: ტალღების დახატვა
+      draw a wave: ტალღის დახატვა
+      draw a small triangle: პატარა სამკუთხედის დახატვა
+      draw a medium triangle: საშუალო სამკუთხედის დახატვა
+      draw a large triangle: დიდი სამკუთხედის დახატვა
+      draw a big triangle: დიდი სამკუთხედის დახატვა
+      draw a triangle: სამკუთხედის დახატვა
+      draw a house: სახლის დახატვა
+      check purple flower: მეწამული ყვავილის შემოწმება
+      check flower make honey: ყვავილის შემოწმება თაფლის დამზადება
+      get nectar or make honey: ნექარის აღება ან თაფლის დამზადება
+      make 3 honey: 3 თაფლის დამზადება
+      get 5 nectar: 5 ნექტარის აღება
+      draw a star: ვარსკვლავის დახატვა
+      draw: დახატვა
+      draw a polygon: მრავალკუთხედის დახატვა
+      draw a shape: ფორმის დახატვა
+      draw a pinwheel: ბზრიალას დახატვა
+      swap: გადაცვლა
+      do something: გააკეთეთ რამე
+      story: ამბავი
+      jump: ახტომა
+      Draw a triangle: სამკუთხედის დახატვა
+      Draw a Cube: კუბის დახატვა
+      draw a cube: კუბის დახატვა
+      Draw a square: კვადრატის დახატვა
+      cube: კუბი
+      draw a line of  squares: კვადრატების ხაზის დახატვა
+      draw a line of squares: კვადრატების ხაზის დახატვა
+      draw a line of octagons: რვაკუთხედების ხაზის დახატვა
+      draw a square line: კვადრატის ხაზის დახატვა
+      Draw a Square: კვადრატის დახატვა
+      draw a sqaure: კვადრატის დახატვა
+      triangle: სამკუთხედი
+      draw a spiral shape: სპირალური ფორმის დახატვა
+      get 3 nectar: 3 ნექტარის აღება
+      get many nectar: ბევრი ნექტარის აღება
+      get nectar make honey: ნექტარის აღება თაფლის გაკეთება
+      draw an octagon: რვაკუთხედის დახატვა
+      draw octagons: რვაკუთხედების დახატვა
+      set score: ქულის განსაზღვრა
+      draw a line of hexagons: ექვსკუთხედების ხაზის დახატვა
+      get nectar: ნექტარის აღება
+      empty function: ცარიელი ფუნქცია
+      Jump: ახტომა
+      test: ტესტი
+      build bridge: ხიდის აგება
+      run right: მარჯვნივ გაქცევა
+      spin right: მარჯვნივ დატრიალება
+      draw grass: ბალახის დახატვა
+      sun: მზე
+      draw windows: ფანჯრების დახატვა
+      square: კვადრატი
+      draw a door: კარის დახატვა
+      rectangle: მართკუთხედი
+      diamond: ბრილიანტი
+      window: ფანჯარა
+      draw roof: სახურავის დახატვა
+      draw rectangle: მართკუთხედის დახატვა
+      move: გადაადგილება
+      function 1: ფუნქცია 1
+      function 2: ფუნქცია 2
+      destroy and move: განადგურება და გადაადგილება
+      clear path: გზის გასუფთავება
+      place and move: დადება და გადაადგილება
+      cover lava: ლავით დაფარვა
+      build short bridge: მოკლე ხიდის აგება
+      build long bridge: გრძელი ხიდის აგება
+      create trail: ბილიკის შექმნა
+      move and fill: გადაადგილება და შევსება
+      fix right corner: მარჯვენა კუთხის შეკეთება
+      fix left corner: მარცხენა კუთხის შეკეთება
+      make segment: სეგმენტის შექმნა
+      clear right corner: მარჯვენა კუთხის გასუფთავება
+      clear left corner: მარცხენა კუთხის გასუფთავება
+      draw a pentagon: ხუთკუთხედის დახატვა
+      Draw lenses: ლინზების დახატვა
+      draw eye: თვალის დახატვა
+      Make a Dot: წერტილის შექმნა
+      move right: მარჯვნივ გადაადგილება
+      say number: რიცხვის თქმა
+      move up: გადაადგილება ზემოთ
+      move down: გადაადგილება ქვემოთ
+      move left: გადაადგილება მარცხნივ
+      kill alien: უცხოს მოკვლა
+      click: დაწკაპუნება
+      my function: ჩემი ფუნქცია
+      draw first part of heart: გულის პირველი ნაწილის დახატვა
+      curvy corner: მრუდე კუთხე
+      make triangle: სამკუთხედის შექმნა
+      '"simple" solution': '"მარტივი" გადაწყვეტა'
+      potential solution: მოსალოდნელი გადაწყვეტა
+      my design: ჩემი დიზაინი
+      get 3 nectar or honey: 3 ნექტარის ან თაფლის აღება
+      move and collect: გადაადგილება და შეგროვება
+      check nectar or honey: ნექტარის ან თაფლის შემოწმება
+      row of nectar: ნექტარის მწკრივი
+      move and check: გადაადგილება და შემოწმება
+      win game: თამაშის მოგება
+      lose game: თამაშის წაგება
+      keep playing: თამაშის გაგრძელება
+      Ask a question: კითხვის დასმა
+      draw pinwheel: ბზრიალას დახატვა
+      draw background: ფონის დახატვა
+      pick row: მწკრივის არჩევა
+      draw flame: ალის დახატვა
+      draw fire: ცეცხლის დახატვა
+      draw line of triangles: სამკუთხედების ხაზის დახატვა
+      draw a window: ფანჯრის დახატვა
+      draw hexagon: ექვსკუთხედის დახატვა
+      draw line of hexagons: ექვსკუთხედების ხაზის დახატვა
+      draw line of polygons: მრავალკუთხედების ხაზის დახატვა
+      draw polygon: მრავალკუთხედის დახატვა
+      honey nectar: თაფლის ნექტარი
+      move and make honey: გადაადგილება და თაფლის გაკეთება
+      collect all nectar: ყველა ნექტარის შეგროვება
+      get all nectar: ყველა ნექტარის აღება
+      get pumpkin: გოგრის აღება
+      harvest: მოსავალი
+      get corn and come back: ხობლის აღება და დაბრუნება
+      check square for corn: კვადრატის ხორბალზე შემოწმება
+      get all pumpkins: ყველა გოგრის აღება
+      pumpkin square: გოგრის კვადრატი
+      check and pick: შემოწმება და აღება
+      find pumpkin: გოგრის პოვნა
+      check for corn: ხორბალზე შემოწმება
+      corn rectangle: ხორბლის მართკუთხედი
+      lettuce stairs: სალათის კიბე
+      corn and pumpkin: ხორბალი და გოგრა
+      garden square: ბაღის კვადრატი
+      get corn come back: ხორბლის აღება დაბრუნება
+      filled square: შევსებული კვადრატი
+      get only nectar: მხოლოდ ნექტრის აღება
+      only make honey: მხოლოდ თაფლის გაკეთება
+      collect stairs: კიბეების შეგროვება
+      collect: შეგროვება
+      fill area with color: ფართობის ფერით შევსება
+      draw a line of triangles: სამკუთხედების ხაზის დახატვა
+      check flower: ყვავილის შემოწმება
+      check space: სივრცის შემოწმება
+      physics: ფიზიკა
+      turn left: მარცხნივ მობრუნება
+      move forward: წინ გადაადგილება
+      turn right: მარჯვნივ მობრუნება
+      draw a rectangle: მართკუთხედის დახატვა
+      draw a heart: გულის დახატვა

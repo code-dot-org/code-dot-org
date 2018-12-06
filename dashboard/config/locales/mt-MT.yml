@@ -1,0 +1,434 @@
+---
+mt:
+  errors:
+    messages:
+      not_saved: 'Jekk jogħġbok ikkoreġu dawn l-iżbalji:'
+  activerecord:
+    errors:
+      messages:
+        blank: hija meħtieġa
+    attributes:
+      user:
+        name: Isem li jintwera
+        email: Ittre
+        username: Isem l-utent
+        password: Password
+        password_confirmation: Konfermazzjoni tal-password
+        current_password: Il-password eziztenti
+        locale: Lingwa
+        age: Età
+        gender: Sess
+        edit_header: Editja id-dettalji tal-Account
+        error:
+          future: ma tistax tkun fil-futur
+  hello: Haw Lilly
+  welcome_back: Merħba lura, %{name}
+  unsubmit: Unsubmit
+  or: jew
+  add_teacher_form:
+    code:
+      label: 'Żid Għalliem:'
+      placeholder: Sezzjoni kodiċi (ABCDEF)
+    submit: Żid għalliem
+  add_hint_form:
+    placeholder: Daħħal suġġeriment tiegħek hawn
+    submit: Żid suġġeriment
+  appname: Core.org
+  stage: Stadju
+  stage_number: Stadju numru %{number}
+  puzzle: Loghba
+  trophies: Trofej
+  courses: Korsijiet
+  courses_page:
+    title_student: Tgħallem fil-Code Studio
+  unplugged_activity: Attivita bla kompjuter
+  of: ta'
+  more: AKTAR
+  less: ANQAS
+  beta: verzjoni beta
+  try_hoc: 'Ipprova l-Hour of Code, ikklikkja hawn >> '
+  try_k8intro: Ipprova il-kors 'Introduzzjoni tax-xjenza tal-kompjuter' ghal studenti
+    tal-primarja (15-25 siegha)
+  k8intro: Introduzzjoni ghall-kors tax-xjenza tal-kompjuter ghal-studenti tal-primarja
+    (15-25 siegha)
+  already_started: 'Diġà bdejt? Kompli hawn >> '
+  demos: 'Admin: Demos kollha'
+  prize: premju
+  more_info: Aktar informazzjoni
+  auth:
+    sign_in_with: Idħol bl-%{provider}
+    signed_in: Dhalt!
+    signed_out: Inti hrigt mis-sit <a href="%{url}">Code.org</a>.
+    sign_out_of: Inti użajt %{provider} biex tidhol fis sit. <a href="%{url}"> Ikklikkja
+      hawnhekk</a> biex toħroġ minn %{provider}.
+    already_signedup: Diga miktub bhala user?
+    notyet_signedup: Ghadek ma inghaqadx?
+    google_oauth2: Account tal-Google
+    twitter: Twitter
+    facebook: Facebook
+    windowslive: Account tal-Microsoft
+    microsoft_v2_auth: Account tal-Microsoft
+    forgot_password: Insejt il-Password?
+    need_confirmation: Ma rcevejtx istruzzjonijiet tal-konferma?
+    need_unlock: Ma rcevejtx istruxzzjonijiet biex tanlokkja?
+  signup_form:
+    student_count: "%{count} l-istudenti diġà irregistraw."
+    teacher_count: "%{count} għalliema diġà irregistraw."
+    teacher_educator_guide: Ara l-gwida ta'l-edukaturi
+    school_name: L-isem ta ' l-iskola (mhux obbligatorju)
+    school_address: L-indirizz ta ' l-iskola (mhux obbligatorju)
+    address_placeholder: indirizz, Belt, l-Istat, kodici postali
+    gender: Sess (mhux obbligatorju)
+    birthday: Birthday (mhux obbligatorju)
+    age: Età
+    user_type: Inti student jew għalliem?
+    submit: Irreġistra
+    teacher: Inti għalliem?
+    valid_username: Disponibbli!
+    invalid_username: Isem l-utent għandu jkun mill-inqas 5 karattri
+    taken_username: Isem l-utent huwa diġà meħud
+    valid_password: Il-password valida!
+    invalid_password: Il-password irid ikun mill-inqas 6 karattri
+    mismatch_password: "-Żewġ passwords li daħħalt ma jaqblux"
+    additional_information: Hemm bżonn xi informazzjoni addizzjonali biex tkompli
+      tirregistra.
+    field_is_required: hija meħtieġa
+  signin_form:
+    title: Diġà ghandek kont? Illogja
+    login: Ittre
+    password: Password
+    remember: Ftakarni
+    submit: Idħol fis-sistema
+  signin:
+    try_heading: Tixtieq ipprova tikkowdja mingħajr kont?
+    try_hoc: L-ewwel prova Hour of Code wahda
+    try_20hours: Ipprova l-20 siegħa Introduzzjoni għax-Xjenza tal-kompjuter tagħna
+  signinsection:
+    welcome: Merħba għall %{section_name}
+    name: Agħżel l-isem tiegħek
+    picture: Issa Sib l-istampa sigrieta tiegħek
+    words: Issa dahhal l-kliem sigrieti tiegħek
+    login: Idħol fis-sistema
+  password:
+    reset_form:
+      title: Insejt il-Password?
+      email: Indirizz elettroniku
+    change_form:
+      title: Ibdel il-password tiegħek
+      new_password: Password ġdida
+      confirm_password: Ikkonferma l-password il-ġdida
+      submit: Ibdel il-password
+  welcome_email:
+    subject: Ingħaqad mal-klassi tiegħi (fuq Code.org l)
+    body: 'Ikklikkja l-link t''hawn taħt biex tirregistra għal lezzjonijiet tax-xjenza
+      tal-kompjuter fuq Code.org (miegħi bħala "teacher" tiegħek):%{link} il-lezzjonijiet
+      huma pjaċevoli, viżwalment impenjati, u jgħallmu l-kunċetti bażiċi tax-xjenza
+      tal-kompjuter bl-użu tal-esperjenza sempliċi, Ggwidata, simili ta'' logħba .
+      Jitgħallmu kodiċi minn Bill Gates, Mark Zuckerberg, Angry Brids u Plants vs
+      Zombies! :-) %{name}
+
+'
+  section:
+    type:
+      email: Ittre
+  follower:
+    invite_sent: Lis-stedina mibgħuta
+    added_teacher: "%{name} miżjuda bħala l-għalliem tiegħek"
+    registered: Inti rreġistrajt għall-%{section_name}.
+    error:
+      signed_in: Jekk jogħġbok ghamel signout qabel ma tipproċedi
+      username_not_found: "%{username} isem l-utent ma nstabx"
+      username_in_use: "%{username} huwa diġà meħud, jekk jogħġbok agħżel ieħor"
+      section_not_found: Ma' nistax insib taqsima bil-kodiċi "%{section_code}".
+      blank_code: Daħħal kodiċi tas-Sezzjoni
+      cant_join_own_section: Jiddispjaċina, ma tistax tinghaqad mas-sezzjoni tiegħek
+        stess.
+    mail:
+      student_disassociated:
+        subject: 'Notifika minghand Code.org: %{student_name} m''għadux assoċjat bhala
+          student tiegħek.'
+  reports:
+    error:
+      access_denied: M'għandekx aċċess għal istatistici ta' din il-persuna
+  crud:
+    new_model: "%{model} ġdid"
+    show: Uri
+    edit: Editja
+    edit_model: Editja l-%{model}
+    update: Aggorna
+    destroy: Eqred
+    back: Lura
+    confirm: Cert?
+    created: "%{model} kien maħluq."
+    updated: "%{model} ġie aġġornat."
+    destroyed: "%{model} gie imħassar."
+    access_denied: M'għandekx aċċess għal %{model}.
+  nav:
+    header:
+      finished_hoc: Jien lestejt l'Hour of Code tieghi
+      sign_in_to_save: Idħol biex tissejvja l-progress
+      free_play:
+        playlab: Agħmel App
+        artist: Pinġi Xi Ħaġa
+        applab: Agħmel App
+      project_gallery: Il-Proġetti
+    user:
+      district_dashboard: Pannell tal-Kontroll Distrettwali
+      label: Insellmulek %{username}
+      stats: Code Stuwdjo
+      settings: Il-kont tiegħi
+      logout: Oħroġ il-barra
+      signin: Idħol fis-sistema
+      already_registered: Diġà rreġistrat?
+    popup:
+      progress_for_user: Il-progress ta' %{name}
+      progress: Il-progress tiegħek
+      close: AGĦLAQ
+      mastery: Kunċetti
+      puzzle_map: Stadji
+      prizes_link: aktar tagħrif
+  teacher:
+    title:
+      one: 'L-għalliem tiegħek:'
+      other: 'L-għalliema tiegħek:'
+    remove: "(neħħi l-għalliem)"
+    confirm:
+      remove: Żgur tixtieq tneħħi dan l-għalliem?
+    students:
+      dashboard: Żur il-Pannell tal-Kontroll tal-Għalliem
+    panel:
+      viewing_solution: Wirja tas-soluzzjoni
+      try_it_yourself: Ipprova inti
+      section: It-Taqsima
+      example: Soluzzjoni ta' l-Ezempju
+      example_with_number: Soluzzjoni ta' l-ezempju %{solution_number}
+      submitted_on: 'Sottomess: %{date}'
+      unsubmit: Unsubmit
+  user:
+    email_confirm_needed: 'Indirizz elettroniku ma giex ikkonfermat:'
+    email_confirm_needed_required: 'L-indirizz tal-email: tiegħek %{email} ma ġiex
+      ikkonfermat:'
+    email_confirm_wrong_email: "(Indirizz elettroniku ħażin?)"
+    email_resend_confirm: Erga ibghat l'istruzzjonijiet tal-konferma
+    new_password_hint: "(ħalli vojt jekk ma tixtieqx tibdel)"
+    current_password_hint: "(neħtieġu il-password attwali biex nikkonfermaw it-tibdiliet
+      tiegħek)"
+    delete: Ħassar l'Account tiegħek
+    delete_text: Meta tikklikkja l-buttuna hawn taħt jithassarlek l'Account.
+    delete_text_teacher_note: 'Innota: Billi tħassar tal-kont tiegħek mhux se jħassar
+      il-kontijiet ta'' l-istudenti tiegħek.'
+    delete_confirm: Żgur tixtieq tħassar l'Account tiegħek?
+  user_level:
+    completed: Lesta
+    tried: Ppruvat
+  home:
+    title: Code Stuwdjo
+    description: Code Studio huwa id-dar tal-korsijiet online maħluqa mill-Code.org
+    lines_of_code: "%{lines_count} LINJI TAL-KODIĊI MIKTUBA MILL-ISTUDENTI"
+    lines_of_code_linebreak: "%{lines_count} linji tal-Kodiċi <br/> miktuba minn %{students_count}
+      MILJUNI ta ' studenti"
+    all_courses: Ħarsa ġenerali tal-korsijiet 1, 2 u 3
+    lesson_plans: Pjanijiet tal-Lezzjoni
+    signin_message: Diġà rreġistrat? %{link}
+    student_reg_link: Registrazzjoni ta' lis-Studenti
+    teacher_reg_link: Registrazzjoni ta' l-ghalliema
+    signin_directions: Uża Account biex issegwei il-progress.<br/> Għalliema, segwu
+      il-klassi taghkhom kollha.
+    teacher_dashboard: Ara l-progress dashboard
+    teacher_student_count_one: Għandek %{count} l-istudent.
+    teacher_student_count: Għandek %{count} l-istudenti.
+    teacher_averages: Fuq medja l-istudenti tiegħek akkwistaw %{trophy_average} mill-%{trophy_max}
+      trofej "Concept Mastery".
+    teacher_print_certificates: Pprintja certifikati ghal studenti li jtemmu dan il-kors
+    teacher_read_blog: Aqra aħbarijiet u aġġornamenti tal-materjali tagħna fil-Blog
+      ta l'Edukaturi
+    classroom: Il-Klassi tiegħek
+    student_progress: L-progress tat-tagħlim tiegħek
+    student_stats: Int akwistajt %{trophy_count} minn %{trophy_max} trofej "Concept
+      Master".
+    student_left_off: 'Fejn ħallejt:'
+    student_finished: Lestejt l-lezzjonijiet kollha, agħżel klassi ohra %{online_link}
+      jew fil-%{local_school_link}
+    local_school: skola lokali
+    online: online
+    see_details: Ara d-dettalji
+    view_course: Ara il-Kors
+    prize_info: 'Premjijiet għall-parteċipazzjoni (Għalliema fl-Iskola pubblici Amerikani
+      biss): sa $1,000 f''benefiċċji ghall-klassi.'
+    tryfirst: 'Jew, tista '' tipprovaha l-ewwel, u tirregistra aktar tard:'
+    add_hint_help: Jekk jogħġbok tgħinna biex iżżid suġġerimenti smart fil-lezzjonijiet
+      Code.org
+    20hour_overview: Dan il-kors ta ' 20 siegħa jintroduċi tax-xjenza tal-kompjuter
+      u l-kunċetti tal-ipprogrammar. Il-kors huwa maħsub għal użu fil-klassijiet għall-gradi
+      mil-primarja sas-sekondarja, iżda huwa gost li wieħed jitgħallem f'kull età.
+    test_videos_help: Ittestja il-Video Plyer il-gdid taghna flis-skola tieghek
+    try_beta_courses: Ġodda! Ipprova korsijiet beta tagħna għall-istudenti tal-primarja
+    use_as_teacher: Uża dan is-sit bħala għalliem
+    heading_hoc2014: "<h2>Is-siegħa tal-Kodiċi għall-</h2> <h1>L-etajiet kollha</h1>"
+    heading_elementary: "<h2> korsijiet t-20 siegħa għall-</h2> <h1>fundamenti tax-Xjenza
+      fil-Kompjuter (etajiet kollha)</h1>"
+    heading_apps: "<h2>Gost għal</h2> <h1>Kulħadd.</h1>"
+    heading_legacy: "<h2>Il-kors aċċellerata għall-</h2> <h1>L-etajiet kollha</h1>"
+    your_gallery: Gallery
+    no_primary_course: Ipprova kors tal-Code Studio
+    choose_next_course: Ipprova kors mill-Course Studio billi tagħżel wieħed minn
+      hawn taħt
+    print_certificate: Stampa ic-certifikat
+  share:
+    title: Tgħallem fil-Code Studio
+    description: Kulħadd jistgħa jitgħallem ix-xjenza tal-kompjuter. Ghamel logħob,
+      apps u arti b ' kodiċi.
+  gender:
+    male: Maskili
+    female: Femminili
+    none: Nippreferi li ma nwegiebx
+  footer:
+    thank_you: Aħna jirringrazzjaw <a href="https://code.org/about/donors"> donaturi</a>,
+      <a href="https://code.org/about/partners"> imsieħba</a>, <a href="https://code.org/about/team">
+      tim estiż</a>, tagħna, tal-vidjo, tagħna <a href="https://code.org/about/advisors">
+      konsulenti ta ' l-edukazzjoni</a> għall-appoġġ tagħhom fil-ħolqien tal-Code
+      Studio.
+    help_from_html: Irridu speċjalment li jirrikonoxxu l-inġiniera minn Google, Microsoft,
+      Facebook, Twitter, u ħafna oħrajn li għenu fil-holqien ta' dawn il-materjali.
+    help_from_html_old: Inġiniera minn Google, Microsoft, Facebook u Twitter għenu
+      biex jinholqu dawn il-materjali.
+    copyright: Drittijiet tal-Awtur
+    tos_short: It-Termini
+    tos: It-Termini tas-Servizz
+    privacy: Poliza dwar il-Privatezza
+    secure: Verżjoni Sigura
+    report_abuse: Irrapporta l-Abbuż
+  reference_area:
+    title: Teħtieġ l-għajnuna?
+    subtitle: Ara dawn il-vidjos u suġġerimenti
+    teacher: Ara s-soluzzjoni
+    auth_error: M'intix awtorizzat tara s-soluzzjoni.
+    submit: Aġġorna l-Lokalità tal-Artist
+  video:
+    notes: M'hemmx vidjo? Uri n-noti.
+    download: Niżżel il-vidjo
+  download_pdf: Iftaħ il-Pjan tal-Lezzjoni
+  lesson_plan: Pjan tal-Lezzjoni
+  view_lesson_plan: Ara l-Pjan tal-Lezzjoni
+  pdf_download: Niżżel il-PDF
+  download_coming_soon: Attività downloadable gejja daqt.
+  video_coming_soon: Filmat Ġej Daqt!
+  share_code:
+    title: Ikklikkja 'Ħaddem' biex tara l-programm
+    bounce_og_title: Ara il-loghba tieghi Bounce Game
+    flappy_og_title: Ara il-loghba tieghi Flappy
+    studio_og_title: Ara l'App tieghi Play Lab
+    check_out_what_i_made: Ara x'ghamilt
+    og_description: Ktibt il-programm jien stess b'Code.org
+    phone_number_not_allowed: Jidher li hemm numru tat-telefown fih. Prova biddel
+      it-test.
+    address_not_allowed: Jidher li hemm indirizz fih. Prova biddel it-test.
+    email_not_allowed: Jidher li hemm indirizz tal-posta elettronika fih. Prova biddel
+      it-test.
+    profanity_not_allowed: Jidher li hemm kliem hazin fih. Prova biddel it-test.
+  builder:
+    created: Inti hloqt script gdid.
+    destroyed: Inti qridt script.
+    manage: Livelli ta' bini
+    view: Ara
+    back: Lura lejn l-iskripts
+    success: Irnexxielek teditja il-blokki.
+    level:
+      create: Ohloq livell gdid
+      current: Livelli kurrenti
+      unused: Livelli mhux użati
+  upsell:
+    hoc:
+      body: Ipprova dan it-taghlim baziku tax-xjenza tal-kompjuter. Milljuni bhalek
+        pprovaw diga.
+    flappy:
+      title: Code ta' Flappy
+      body: Tixtieq tibni loghba originali f'inqas minn 10 minuti? Prova il-lezzjoni
+        ta' Flappy Code!
+    20-hour:
+      title: Kors Aċċellerat
+    hoc2014:
+      try_new_tutorial: Prova il-kors gdid Hour of Code fis-sezzjoni beta
+      try_frozen: Artist ma' Anna u Elsa mil film Frozen
+    gallery:
+      title: Gallery
+      body: Ara it-tpingijiet u stampi krejati mil-users taghna
+    frozen:
+      title: Frozen
+    infinity:
+      title: Infinity Play Lab
+  gallery:
+    students_drew_these_with_code: Studenti pingewhom billi jiprogrammaw!
+    students_made_these_with_code: Studenti ghamluhom billi jiprogrammaw!
+    picture_count: Fil-passat<b>%{days}</b>, l-istudenti pingew <b>%{count}</b> stampi
+      billi kitbu programmi tal-kompjuter taghhom. Ikklikkja fuq l-istampi biex tara
+      kull programm jahdem.
+    activity_count: Fil-passat <b>%{days}</b> il-gurnata, l-istudenti għamlu <b>%{count}</b>
+      app u stampi biilli kitbu il-programmi tal-kompjuter taghhom stess. Ikklikkja
+      fuq l-istampi u screenshots biex tara kull programm jahdem.
+    want_to_make_your_own: Tixtieq tikteb il-porgramm tieghek stess?
+    more: Aktar &rarr;
+    caption_time_ago: "%{time_ago} ilu"
+    header: Gallery
+    report_abuse: Irrapporta l-Abbuż
+  landing:
+    support: Ikseb l-Għajnuna
+  multi:
+    wrong_title: It-tweġiba żbaljata
+    correct_title: Korrett
+    correct_body: Dik hi t-tweġiba t-tajba.
+  match:
+    wrong_title: Soluzzjoni mhux korretta
+    correct_title: Korrett
+    correct_body: Dik hi t-tweġiba t-tajba.
+  contract_match:
+    wrong_title: It-tweġiba żbaljata
+  text_match:
+    open_response_title: Grazzi
+    correct_title: Korrett
+    correct_body: Dik hi t-tweġiba t-tajba.
+  time:
+    hour: siegħa
+    day: jum
+    week: ġimgħa
+  terms_interstitial:
+    tos: It-Termini tas-Servizz
+    privacy: Poliza dwar il-Privatezza
+  race_interstitial:
+    decline: Agħlaq
+  progress:
+    assessment: evalwazzjoni
+  studio:
+    all_courses: Il-korsijiet kollha
+  project:
+    projects: Il-Proġetti
+    create: Oħloq Proġett
+    create_a_project: 'Oħloq proġett ġdid:'
+    new: Oħloq Ġdid
+    rename: Ibdel l-isem
+    exit: Lura għall-kors
+    my_projects: Il-Proġetti Tiegħi
+    project_gallery: Il-Proġetti
+    share_title: Aqsam il-proġett tiegħek
+    close: Agħlaq
+    updated: Aġġornat
+    saved: Ssalvat
+    not_saved: Mhux issalvat
+    view_all: Ara l-Proġetti Tiegħi
+    remix: Remix
+    edit_project: Editja l-proġett
+    abuse:
+      report_abuse_form:
+        validation:
+          age: Jekk jogħġbok ispeċifika l-età
+        abuse_type:
+          offensive: Kontenut offensiv
+          infringement: Infrazzjoni tad-Drittiniet tal-Awtur
+  pd:
+    form_labels:
+      email: Ittre
+    form_entries:
+      gender:
+        male: Maskili
+        female: Femminili
+        none: Nippreferi li ma nwegiebx

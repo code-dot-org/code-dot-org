@@ -1,0 +1,27 @@
+---
+gl:
+  data:
+    function_names:
+      draw a circle: debuxar un círculo
+      draw a hexagon: debuxar un hexágono
+      draw a flower: debuxar unha flor
+      draw a square: debuxar un cadrado
+      draw a snowflake: debuxar unha folerpa de neve
+      draw a tree: debuxar unha árbore
+      draw a triangle: debuxar un triángulo
+      draw a house: debuxar unha casa
+      draw a star: debuxar unha estrela
+      do something: facer algo
+      jump: saltar
+      set score: defina a puntuación
+      get nectar: obteña néctar
+      test: test
+      move: mover
+      move right: mover cara a dereita
+      move up: mover hacia arriba
+      move down: baixar
+      move left: mover hacia a esquerda
+      collect: apañar
+      turn left: vire á esquerda
+      move forward: avance
+      turn right: vire á dereita

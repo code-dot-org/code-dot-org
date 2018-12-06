@@ -1,0 +1,54 @@
+ka:
+  data:
+    block_categories:
+      Actions: მოქმედებები
+      Loops: ციკლები
+      Functions: ფუნქციები
+      Color: ფერი
+      Brushes: ფუნჯები
+      Math: მათემატიკა
+      Logic: ლოგიკა
+      Variables: ცვლადები
+      Number: რიცხვი
+      String: სტრიქონი
+      Image: სურათი
+      Boolean: ბულის ცვლადი
+      Conditionals: პირობითი ბრძანებები
+      Events: მოვლენები
+      Games/Score: თამაშები/ქულა
+      Comments: კომენტარები
+      Category: კატეგორია
+      Prebuilt: წინასწარ ჩაშენებული
+      Text: ტექსტი
+      Picker: ამომრჩევი
+      Comment: კომენტარი
+      'Variables ': 'ცვლადები '
+      everythingelse: ყველაფერი სხვა
+      numbers: რიცხვები
+      Numbers: რიცხვები
+      Input: შემომავალი ინფორმაცია
+      Default: ნაგულისხმევი
+      World: სამყარო
+      Sprites: სპრაიტები
+      Behaviors: ქცევა
+      Advanced: დამატებით
+      Start: დაწყება
+      Locations: მდებარეობები
+      Music: მუსიკა
+      Dancing: ცეკვა
+      Groups: ჯგუფები
+      Sprite: სპრაიტი
+      Brush: ფუნჯი
+      Make Sprite: სპრაიტის შექმნა
+      Movement: მოძრაობა
+      Booleans: ბულის ტიპის მონაცემები (ლოგიკური ოპერატორები)
+      Functional: ფუნქციები
+      Predefined: წინასწარ განსაზღვრული
+      test: ტესტი
+      test2: ტესტი2
+      Foo: Foo
+      Name: სახელი
+      NEW BLOCKS: ახალი ბლოკები
+      'Functions ': 'ფუნქციები '
+      Game/Score: თამაში/ქულა
+      Function: ფუნქცია

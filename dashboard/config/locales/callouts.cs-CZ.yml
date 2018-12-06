@@ -1,0 +1,317 @@
+---
+cs:
+  data:
+    callouts:
+      2-3 Artist Debugging 1_callout:
+        2-3_Artist_Debugging_1_a: Umělec nemá tlačítko "Krok". Můžete však potáhnout
+          posuvník rychlosti doleva, abyste mohli pečlivěji sledovat průběh programu.
+      CSD U3 Variables Predict Where XY Embed_callout:
+        grid: K zobrazení mřížky klikněte zde.
+      CSD U3 Variables Predict Where XY Embed_2018_callout:
+        grid: K zobrazení mřížky klikněte zde.
+      CSD U3 Variables Predict Where XY_callout:
+        grid: K zobrazení mřížky klikněte zde.
+      CSD U3 Variables Predict Where XY_2018_callout:
+        grid: K zobrazení mřížky klikněte zde.
+      Course 4 Artist 4_callout:
+        repeat_full_circle: Zadej počet zombie k přemístění, aby vytvořily celý kruh
+      Course 4 Artist 7_callout:
+        repeat_blocks: Použij blok "Opakování" a zabal je kolem bloků v pracovním
+          prostoru
+      Course 4 Artist For Loops 4_callout:
+        place_counter_variable: Přetáhni proměnnou čítadlo dovnitř tohoto bloku
+      Course 4 Artist Functions 4_callout:
+        create_function: Klepnutím sem se otevře vysouvací "Funkce", pak klepni na
+          tlačítko "Vytvoř funkci".
+      Course 4 Artist Functions 5 OLD_callout:
+        house_hint: Je to v pořádku, nevypadá-li obrázek ještě jako dům. Opravíme
+          to v dalším puzzlu.
+      Course 4 Artist Functions 8_callout:
+        edit_function: Klepnutím sem upravíš svou funkci.
+      Course 4 Artist Params 2_callout:
+        length_parameter: Můžeš aktualizovat tuto funkci tak, že použije parametr
+          "Délka"?
+      Course 4 Artist Params 4_callout:
+        create_function: Klepnutím sem se otevře vysouvací "Funkce", pak klepni na
+          tlačítko "Vytvoř funkci".
+      Course 4 Artist Vars 1_callout:
+        repeat_blocks: Použij blok "Opakování" a zabal je kolem bloků v pracovním
+          prostoru
+      Course 4 Artist Vars 10_callout:
+        set_sides: Použij tento blok k nastavení "stran" na číslo potřebné k dokončení
+          puzzlu.
+      Course 4 Artist Vars 12_callout:
+        set_length: Použij tento blok k nastavení "Délka" na správnou hodnotu.
+      Course 4 Artist Vars 2_callout:
+        set_length: Použij tento blok k nastavení "Délka" na správnou hodnotu.
+      Course 4 Artist Vars 3_callout:
+        place_variable: Přetáhni proměnnou dovnitř tohoto bloku
+      Course 4 Artist Vars 6_callout:
+        degrees_per_side: Vyděl 360 počtem stran, aby si získal velikost každého úhlu
+          ve stupních.
+      Course 4 Artist Vars 9_callout:
+        set_sides: Použij tento blok k nastavení "stran" na číslo potřebné k dokončení
+          puzzlu.
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: Používej nový blok "získat nektar".
+      Course 4 Bee For Loops 6_callout:
+        actions_category: Panel nástrojů má nový vzhled! Bloky "Akce" jsou nyní zde.
+      Course 4 Bee Params 2_callout:
+        edit_get_nectar: Použij toto tlačítko k upravě funkce a změně směru, kterým
+          se včela obrátí, aby dostala nektar.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: Stisknutím tlačítka "Spustit" si vyzkoušíš program
+      Course 4 Maze 4_callout:
+        repeat: Polož bloky dovnitř cyklu k opakování příkazů
+      Course 4 Play Lab Params 3_callout:
+        edit_function: Klepnutím sem upravíš svou funkci.
+      Course 4 Play Lab Params 6_callout:
+        edit_add_parameter: Klepni na tlačítko Upravit k přidání parametru do funkce
+      Course 4 Play Lab Vars 1_callout:
+        arrows_move_actor: Použij šipek k přemístění aktéra
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: Použij šipek k přemístění aktéra
+      Dance_Party_01_callout:
+        dance_callout_01: Přidej do svého programu tento blok!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Přidej do svého programu tento blok!
+      Dance_Party_02_callout:
+        dance_callout_02: Přidej do svého programu tento blok!
+      Dance_Party_04_callout:
+        dance_callout_04: Přidej do svého programu tento blok!
+      Dance_Party_06_callout:
+        dance_callout_06: Zde přidej svého nového tanečníka
+      Dance_Party_11_callout:
+        dance_callout_11_a: Nový blok!
+        dance_callout_11_b: Nový blok!
+      Eval Design Recipe .1_callout:
+        edit_function: Klepnutím sem upravíš svou funkci.
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: Použij tento drop-down k vytváření různých sněhových vloček!
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: Použij tento drop-down k vytváření různých sněhových vloček!
+      Function intro Ryan_callout:
+        Function_intro_Ryan_1: Tento malý pokyn říká počítači, aby spustil VELKÝ kus
+          kódu se stejným názvem v pracovním prostoru.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Tento malý pokyn říká počítači, aby spustil VELKÝ kus
+          kódu se stejným názvem v pracovním prostoru.
+      Infinity_move_collide_callout:
+        Infinity_move_collide_callout: Přehraj zvuk, když dojde k této události.
+      Infinity_move_directions_callout:
+        Infinity_move_directions_callout: Který blok bude uděla Baymaxa nahoru po
+          stisknutí šipky nahoru?
+        Infinity_move_directions_callout_arrow: Použij těchto šipek k řízení
+      Infinity_move_right_callout:
+        Infinity_move_right_runbutton: Přidej zde blok
+      Infinity_repeat_callout:
+        Infinity_repeat_callout: Umísti dovnit přesouvací bloky
+      MC_HOC_2017_01_Cole_callout:
+        MC_HOC_2017_01_Cole_2: Pomocí kláves se šipkami nebo kliknutím sem začnete
+          pohybovat hráčem.
+      MC_HOC_2017_02_Will_callout:
+        MC_HOC_2017_02_Cole_1: Váš hráč si našel kamaráda! Můžete psát kód pro agenta,
+          aby vám pomohl projít další úrovně.
+      MC_HOC_2017_03_Cole_callout:
+        MC_HOC_2017_03_Cole_1: Toto je cyklus „opakovat“! Klikněte na pracovní prostor
+          a vložte kód, který chcete pořád opakovat.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Toto je cyklus „opakovat“! Klikněte na pracovní prostor
+          a vložte kód, který chcete pořád opakovat.
+      MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Agent se dokáže vznášet nad vodou, ale hráč ne!
+      MC_HOC_2017_04_Cole_2019_callout:
+        MC_HOC_2017_04_Cole_a: Agent se dokáže vznášet nad vodou, ale hráč ne!
+      MC_HOC_2017_04_Kiki_callout:
+        MC_HOC_2017_04_Kiki_1: Umístěte tento blok do pracovního prostoru a vložte
+          do něj nějaký kód. Bude se opakovat pořád dokola!
+      MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Tyto bloky nemůžete zahodit, ale můžete je upravit.
+      MC_HOC_2017_06_Cole_2019_callout:
+        MC_HOC_2017_06_Cole_1: Tyto bloky nemůžete zahodit, ale můžete je upravit.
+      MC_HOC_2017_08_RY_callout:
+        MC_HOC_2017_08_RY_1: Agent se dokáže vznášet nad lávou, ale hráč ne!
+      MC_HOC_2017_08_Will_callout:
+        MC_HOC_2017_08_RY_1: Agent se dokáže vznášet nad lávou, ale hráč ne!
+      MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: Agent se dokáže vznášet nad lávou, ale hráč ne!
+      MC_HOC_2017_Ali_2019_callout:
+        MC_HOC_2017_08_RY_1: Agent se dokáže vznášet nad lávou, ale hráč ne!
+      NEW Course 4 Artist Functions 5_callout:
+        edit_function: Klepnutím sem upravíš svou funkci.
+        function_editor_draw_square: To je definice funkce. Tyto bloky poběží pokaždé,
+          když použiješ blok "nakreslit čtverec"
+      NEW Course 4 Artist Functions 7_callout:
+        edit_function: Klepnutím sem upravíš svou funkci.
+      NEW Course 4 Artist Functions 8_callout:
+        edit_function: Klepnutím sem upravíš svou funkci.
+      NEW Course 4 Artist Params 10_callout:
+        create_function: Klepnutím sem se otevře vysouvací "Funkce", pak klepni na
+          tlačítko "Vytvoř funkci".
+      NEW Course 4 Artist Params 9_callout:
+        edit_add_parameter: Klepni na tlačítko Upravit k přidání parametru do funkce
+        add_and_drag_parameter: Napiš jméno tvého parametru, klepni na tlačítko Přidat
+          a přetáhni jej do definice funkce
+      NEW Course 4 Artist Vars 6_callout:
+        place_length_variable: Přetáhni proměnnou délku k nahrazení otazníků
+      NEW Course 4 Bee For Loops 5_callout:
+        actions_category: Panel nástrojů má nový vzhled! Bloky "Akce" jsou nyní zde.
+      New Frozen Project_callout:
+        snowflake_dropdown: Použij tento drop-down k vytváření různých sněhových vloček!
+      Overworld Chop Trees_callout:
+        craft_callout_preplaced: Položme zde určité bloky, které ti pomohou začít
+      Overworld Chop Trees_2018_callout:
+        craft_callout_preplaced: Položme zde určité bloky, které ti pomohou začít
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Položme zde určité bloky, které ti pomohou začít
+      Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: Tento kód zahájí budování tvého domu. Umíš
+          to dokončit?
+      Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Tento kód zahájí budování tvého domu. Umíš
+          to dokončit?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Tento kód zahájí budování tvého domu. Umíš
+          to dokončit?
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: Stisknutím tlačítka "Spustit" si vyzkoušíš program
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: Stisknutím tlačítka "Spustit" si vyzkoušíš program
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Stisknutím tlačítka "Spustit" si vyzkoušíš program
+      Overworld Place Wall_callout:
+        craft_inside_repeat: Opakuj akce umístěním bloků zde
+      Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Opakuj akce umístěním bloků zde
+      Overworld Place Wall_2019_callout:
+        craft_inside_repeat: Opakuj akce umístěním bloků zde
+      PS clone CSD U3 Variables Predict Where XY_callout:
+        grid: K zobrazení mřížky klikněte zde.
+      PS copy - CSD U3 Variables Predict Where XY Embed_callout:
+        grid: K zobrazení mřížky klikněte zde.
+      PS copy CSD U3 Variables Predict Where XY_callout:
+        grid: K zobrazení mřížky klikněte zde.
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: Tento kód kontroluje za lavu, umíš přidat povel
+          k posunu dopředu?
+      Underground Avoiding Lava_2018_callout:
+        craft_callout_moveforward: Tento kód kontroluje za lavu, umíš přidat povel
+          k posunu dopředu?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Tento kód kontroluje za lavu, umíš přidat povel
+          k posunu dopředu?
+      Underground Iron_callout:
+        craft_what_is_iron: Vytěž toto železo!
+      Underground Iron_2018_callout:
+        craft_what_is_iron: Vytěž toto železo!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: Vytěž toto železo!
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: Použij blok "vytvořit kruh"
+          a změň velikost.
+      frozen cross rotate_callout:
+        replace_questions_degree: Použij drop-down k nahrazení "???" číslem
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Použij drop-down k nahrazení "???" číslem
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Použij drop-down k nahrazení "???" číslem
+      frozen cross_callout:
+        repeat_blocks_1: "(1) Použij tento blok a polož je kolem šedých bloků v pracovním
+          prostoru"
+        repeat_blocks_2: (2) Přesuň blok "Opakovat" sem a umísti šedé bloky dovnitř
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: Použij k vytvoření tohoto tvaru bloku opakování.
+      frozen diamond_callout:
+        frozen_diamond_repeat: Použij k vytvoření tohoto tvaru bloku opakování.
+      frozen freeplay_callout:
+        snowflake_dropdown: Použij tento drop-down k vytváření různých sněhových vloček!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Použij tento drop-down k vytváření různých sněhových vloček!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Použij tento drop-down k vytváření různých sněhových vloček!
+      frozen line_callout:
+        move_elsa_forward: Přetáhni blok "Posunout vpřed" a umístěte ho pod blok "Při
+          spuštění", aby se Elsa posunula vpřed
+      frozen line_b_callout:
+        move_elsa_forward: Přetáhni blok "Posunout vpřed" a umístěte ho pod blok "Při
+          spuštění", aby se Elsa posunula vpřed
+      frozen line_test_callout:
+        move_elsa_forward: Přetáhni blok "Posunout vpřed" a umístěte ho pod blok "Při
+          spuštění", aby se Elsa posunula vpřed
+      frozen perpendicular_callout:
+        turn_elsa: Použij blok "Turn" k otočení Elsy. Číslo v drop-down určuje, kolikrát
+          se Elsa otočí
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: Použij blok "vytvořit větev vločky"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Použij blok "vytvořit větev vločky"
+      frozen square iterative_callout:
+        frozen_create_square: Přidej více bloků k vytvoření čtverce
+      frozen square iterative_b_callout:
+        frozen_create_square: Přidej více bloků k vytvoření čtverce
+      frozen square iterative_test_callout:
+        frozen_create_square: Přidej více bloků k vytvoření čtverce
+      frozen square loop 3x_callout:
+        replace_questions: Použij drop-down k nahrazení "???" číslem
+      frozen square loop 3x_b_callout:
+        replace_questions: Použij drop-down k nahrazení "???" číslem
+      frozen square loop 3x_test_callout:
+        replace_questions: Použij drop-down k nahrazení "???" číslem
+      frozen square loop_callout:
+        replace_questions: Použij drop-down k nahrazení "???" číslem
+      frozen square loop_b_callout:
+        replace_questions: Použij drop-down k nahrazení "???" číslem
+      frozen square loop_test_callout:
+        replace_questions: Použij drop-down k nahrazení "???" číslem
+      frozen square snowflake_callout:
+        replace_questions: Použij drop-down k nahrazení "???" číslem
+      frozen square snowflake_b_callout:
+        replace_questions: Použij drop-down k nahrazení "???" číslem
+      frozen square snowflake_test_callout:
+        replace_questions: Použij drop-down k nahrazení "???" číslem
+      grade4_artist_parameters_squares1_callout:
+        edit_add_parameter: Klepni na tlačítko Upravit k přidání parametru do funkce
+        add_and_drag_parameter: Napiš jméno tvého parametru, klepni na tlačítko Přidat
+          a přetáhni jej do definice funkce
+      grade4_frozen_freeplay_callout:
+        snowflake_dropdown: Použij tento drop-down k vytváření různých sněhových vloček!
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: Použij blok "vytvořit kruh"
+          a změň velikost.
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: Použij k vytvoření tohoto tvaru bloku opakování.
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: Použij k vytvoření tohoto tvaru bloku opakování.
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: Použij k vytvoření tohoto tvaru bloku opakování.
+      grade4_frozen_square_callout:
+        replace_questions: Použij drop-down k nahrazení "???" číslem
+      grade4_frozen_square_loop1_callout:
+        replace_questions: Použij drop-down k nahrazení "???" číslem
+      grade4_frozen_square_loop2_callout:
+        replace_questions: Použij drop-down k nahrazení "???" číslem
+      grade4_frozen_square_loop3_callout:
+        replace_questions: Použij drop-down k nahrazení "???" číslem
+      grade5_artist_parameters_squares1_callout:
+        edit_add_parameter: Klepni na tlačítko Upravit k přidání parametru do funkce
+        add_and_drag_parameter: Napiš jméno tvého parametru, klepni na tlačítko Přidat
+          a přetáhni jej do definice funkce
+      grade5_artist_parameters_triangles1aa_callout:
+        edit_add_parameter: Klepni na tlačítko Upravit k přidání parametru do funkce
+        add_and_drag_parameter: Napiš jméno tvého parametru, klepni na tlačítko Přidat
+          a přetáhni jej do definice funkce
+      grade5_artist_variables_pentagons1_callout:
+        place_length_variable: Přetáhni proměnnou délku k nahrazení otazníků
+      grade5_artist_variables_pentagons12_callout:
+        set_length: Použij tento blok k nastavení "Délka" na správnou hodnotu.
+      grade5_artist_variables_square7_callout:
+        degrees_per_side: Vyděl 360 počtem stran, aby si získal velikost každého úhlu
+          ve stupních.
+      grade5_artist_variables_triangles2_callout:
+        set_length: Použij tento blok k nastavení "Délka" na správnou hodnotu.
+      grade5_playlab_variables1_callout:
+        arrows_move_actor: Použij šipek k přemístění aktéra
+      grade5_playlab_variables11_callout:
+        edit_add_parameter: Klepni na tlačítko Upravit k přidání parametru do funkce
+      grade5_playlab_variables1ask_callout:
+        arrows_move_actor: Použij šipek k přemístění aktéra

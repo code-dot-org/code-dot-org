@@ -1,0 +1,33 @@
+---
+ur:
+  data:
+    callouts:
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: '"کری-ایٹ اے سرکل" بلاک استعمال
+          کریں اور سائز تبدیل کریں۔'
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: اس شیپ کو بنانے کے لیے ریپیٹ بلاک استعمال کریں۔
+      frozen diamond_callout:
+        frozen_diamond_repeat: اس شیپ کو بنانے کے لیے ریپیٹ بلاک استعمال کریں۔
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: '"ایک سنوفلیک برانچ بنائیں" بلاک استعمال کریں'
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: '"ایک سنوفلیک برانچ بنائیں" بلاک استعمال کریں'
+      frozen square iterative_callout:
+        frozen_create_square: ایک اسکوائر کری-ایٹ کرنے کے لیے یہاں مزید بلاک اَٹیچ
+          کریں
+      frozen square iterative_b_callout:
+        frozen_create_square: ایک اسکوائر کری-ایٹ کرنے کے لیے یہاں مزید بلاک اَٹیچ
+          کریں
+      frozen square iterative_test_callout:
+        frozen_create_square: ایک اسکوائر کری-ایٹ کرنے کے لیے یہاں مزید بلاک اَٹیچ
+          کریں
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: '"کری-ایٹ اے سرکل" بلاک استعمال
+          کریں اور سائز تبدیل کریں۔'
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: اس شیپ کو بنانے کے لیے ریپیٹ بلاک استعمال کریں۔
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: اس شیپ کو بنانے کے لیے ریپیٹ بلاک استعمال کریں۔
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: اس شیپ کو بنانے کے لیے ریپیٹ بلاک استعمال کریں۔

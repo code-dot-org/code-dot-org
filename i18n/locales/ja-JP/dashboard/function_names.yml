@@ -1,0 +1,81 @@
+ja:
+  data:
+    function_names:
+      x: x
+      details: 詳細
+      draw eyebrow: まゆげを かく
+      draw pupil: ひとみを かく
+      draw a circle: 円 を かく
+      draw a car: 車を かく
+      draw_rect: 四角形を かく
+      draw square: 正方形を かく
+      jump to middle: ちゅうおうに とぶ
+      draw a button: ボタンを かく
+      draw left leg: 左足を かく
+      draw right leg: 右足を かく
+      draw body and arms: 体と うでを かく
+      draw a head: あたまを かく
+      draw head: あたまを かく
+      draw arms: うでを かく
+      jump to neck: くびに とぶ
+      draw O: Oを かく
+      draw D: Dを かく
+      draw E: Eを かく
+      draw a hexagon: 六角形 を かく
+      draw a flower: 花 を かく
+      draw a square: 正方形 を かく
+      draw a snowflake: 雪のけっしょう を かく
+      draw 3 hexagons: 六角形を3つ描く
+      draw 4 hexagons: 六画形を4つ描く
+      draw 5 hexagons: 六角形を5つ描く
+      get 2 nectar: 蜜を2つ取る
+      collect purple nectar: 紫の花の蜜を集める
+      get 5: 5つとる
+      move and get nectar: 移動し、蜜を取る
+      move and get 4: 移動して4つ取る
+      get 7 nectar make 7 honey: 7つ蜜を取り、7つ蜂蜜を作る
+      get 7 make 7: ７つとり、7つ作る
+      get 7: 7つ取る
+      move and get 3: 移動して、3つ取る
+      draw a tree: 木 を かく
+      draw triangle: 三角形を かく
+      draw circle: 円 を かく
+      graph: グラフ
+      draw waves: ふくすうの なみを かく
+      draw a wave: なみを かく
+      draw a small triangle: ちいさな 三角形を かく
+      draw a medium triangle: 中くらいの 三角形を かく
+      draw a large triangle: おおきな 三角形を かく
+      draw a big triangle: とてもおおきな 三角形を かく
+      draw a triangle: 三角形を描画します。
+      draw a house: 家 を かく
+      check purple flower: むらさきの 花を チェックする
+      check flower make honey: 花を確認し、蜂ミルを作る
+      get nectar or make honey: 蜜を採るか蜂蜜を作る
+      make 3 honey: 蜂蜜を3つ作る
+      get 5 nectar: 蜜を5つ取る
+      make all honey: 蜂蜜を全部作る
+      draw a star: 星形 を かく
+      draw: かく
+      draw a polygon: 多角形を描く
+      drawTree: 木を描く
+      drawHouse: 家を描く
+      drawSky: 空を描く
+      fillScreen: 全画面
+      do something: 何かしてください
+      jump: ジャンプ
+      set score: スコアは
+      get nectar: 花のミツをとる
+      test: テスト
+      diamond: ダイヤモンド
+      move: 移動 (いどう)
+      fix long path: 長い道を直す
+      fix short path: 短い道を直す
+      move right: 右に うごかす
+      move up: 上に うごかす
+      move down: 下に うごかす
+      move left: 左に うごかす
+      collect: あつめる
+      turn left: 左に回転
+      move forward: 前に すすむ
+      turn right: 右に回転

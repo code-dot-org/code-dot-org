@@ -1,0 +1,377 @@
+---
+pt:
+  data:
+    authored_hints:
+      Function intro Ryan_authored_hint:
+        Function_intro_Ryan_a: Podes chamar uma função várias vezes no teu programa!  Experimenta
+          chamá-la duas vezes para resolver este quebra-cabeças.
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_a: Podes chamar uma função várias vezes no teu programa!  Experimenta
+          chamá-la duas vezes para resolver este quebra-cabeças.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Confere as **Lanternas Aquáticas** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Como podes usar um condicional com estes para atravessar o Monumento do
+          Oceano?\n\n"
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Que bonito recife de coral! O coral azul é a maneira **direita**
+          e certifica-te de que o coral vermelho não seja **esquerda**!
+      MC Agent Freeplay_authored_hint:
+        MC_HOC_2017_13_Cole_a: Faz com que o Agent construa algumas pontes para que
+          Alex ou Steve se possa deslocar para além da orla do mapa.
+      MC_HOC_2017_01_Cole_authored_hint:
+        MC_HOC_2017_01_Cole_a: Utiliza as teclas de seta para mover o jogador até
+          à casa. Chega ao quadrado cor de laranja para ganhar.
+      MC_HOC_2017_01_RETRY_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Arrasta um bloco "avançar" da caixa de ferramentas
+          para o espaço de trabalho e encaixa-o no bloco "quando executado".
+        MC_HOC_2017_01_RETRY_b: Não te esqueças de clicar em "Executar" para executar
+          o código do Agent.
+        MC_HOC_2017_01_RETRY_c: Quando o código do Agent tiver sido todo executado,
+          podes mover o jogador com as teclas de seta!
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Arrasta um bloco "avançar" da caixa de ferramentas
+          para o espaço de trabalho e encaixa-o no bloco "quando executado".
+        MC_HOC_2017_01_RETRY_b: Não te esqueças de clicar em "Executar" para executar
+          o código do Agent.
+        MC_HOC_2017_01_RETRY_c: Quando o código do Agent tiver sido todo executado,
+          podes mover o jogador com as teclas de seta!
+      MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Faz o Agent avançar dois espaços até ficar em cima
+          da placa de pressão.  Desta forma, a porta abre-se para o jogador.
+        MC_HOC_2017_02_Cole_b: "Prime \"Executar\"! \nPodes executar o teu código
+          mesmo que não esteja correto.  Executa e repõe o código as vezes que forem
+          necessárias até perceberes o que está mal."
+        MC_HOC_2017_02_Cole_c: Depois de o Agent abrir a porta, utiliza as teclas
+          de seta para mover o jogador até ao mapa!
+      MC_HOC_2017_02_Cole_2019_authored_hint:
+        MC_HOC_2017_02_Cole_a: Faz o Agent avançar dois espaços até ficar em cima
+          da placa de pressão.  Desta forma, a porta abre-se para o jogador.
+        MC_HOC_2017_02_Cole_b: "Prime \"Executar\"! \nPodes executar o teu código
+          mesmo que não esteja correto.  Executa e repõe o código as vezes que forem
+          necessárias até perceberes o que está mal."
+        MC_HOC_2017_02_Cole_c: Depois de o Agent abrir a porta, utiliza as teclas
+          de seta para mover o jogador até ao mapa!
+      MC_HOC_2017_02_Will_authored_hint:
+        MC_HOC_2017_02_Cole_a: Faz o Agent avançar dois espaços até ficar em cima
+          da placa de pressão.  Desta forma, a porta abre-se para o jogador.
+        MC_HOC_2017_02_Cole_b: "Prime \"Executar Agent\"! \nPodes executar o teu código
+          mesmo que não esteja correto.  Executa e repõe o código as vezes que forem
+          necessárias até perceberes o que está mal."
+        MC_HOC_2017_02_Cole_c: Depois de o Agent abrir a porta, utiliza as teclas
+          de seta para mover o jogador até ao quadrado cor de laranja.
+      MC_HOC_2017_03_Cole_authored_hint:
+        MC_HOC_2017_03_Cole_a: Depois de o Agent chegar à placa de pressão, podes
+          utilizar as teclas de seta para fazer o jogador caminhar até à bússola!
+        MC_HOC_2017_03_Cole_b: O código parece-te comprido?  Experimenta utilizar
+          uma ação circular "repetir" para descobrir uma forma de o encurtar!
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_a: Depois de o Agent chegar à placa de pressão, podes
+          utilizar as teclas de seta para fazer o jogador caminhar até à bússola!
+        MC_HOC_2017_03_Cole_b: O código parece-te comprido?  Experimenta utilizar
+          uma ação circular "repetir" para descobrir uma forma de o encurtar!
+      MC_HOC_2017_04POINT5_Cole_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: "A passagem por estas duas placas de pressão
+          abre o caminho para o jogador. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
+      MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Utiliza o bloco "virar à direita" para mudar
+          a direção do Agent '
+        MC_HOC_2017_04POINT5_RYAN_a: Basta o Agent chegar à primeira placa de pressão
+          para que Alex ou Steve faça o percurso até ao machado.
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Utiliza o bloco "virar à direita" para mudar
+          a direção do Agent '
+        MC_HOC_2017_04POINT5_RYAN_a: Basta o Agent chegar à primeira placa de pressão
+          para que Alex ou Steve faça o percurso até ao machado.
+      MC_HOC_2017_04_Cole_authored_hint:
+        MC_HOC_2017_04_Cole_a: O Agent tem de "avançar" 7 vezes.  De que forma podes
+          utilizar uma ação circular "repetir" para que isso aconteça?
+        MC_HOC_2017_04_Cole_c: "Prime \"Executar\"! \nPodes executar o teu código
+          mesmo que não esteja correto.  Executa e repõe o código as vezes que forem
+          necessárias até perceberes o que está mal."
+        MC_HOC_2017_04_Cole_b: Depois de o Agent chegar à placa de pressão, a porta
+          abre-se para o jogador.
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_a: O Agent tem de "avançar" 7 vezes.  De que forma podes
+          utilizar uma ação circular "repetir" para que isso aconteça?
+        MC_HOC_2017_04_Cole_c: "Prime \"Executar\"! \nPodes executar o teu código
+          mesmo que não esteja correto.  Executa e repõe o código as vezes que forem
+          necessárias até perceberes o que está mal."
+        MC_HOC_2017_04_Cole_b: Depois de o Agent chegar à placa de pressão, a porta
+          abre-se para o jogador.
+      MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Sabias que podes colocar mais do que um bloco de código
+          numa ação circular?  Experimenta colocar "tábuas" **e** "avançar" em "repetir"
+          para resolver este quebra-cabeças.
+      MC_HOC_2017_05_Cole_2019_authored_hint:
+        MC_HOC_2017_05_Cole_a: Sabias que podes colocar mais do que um bloco de código
+          numa ação circular?  Experimenta colocar "tábuas" **e** "avançar" em "repetir"
+          para resolver este quebra-cabeças.
+      MC_HOC_2017_05_Josh_authored_hint:
+        MC_HOC_2017_05_Cole_a: Sabias que podes colocar mais do que um bloco de código
+          numa ação circular?  Experimenta colocar "tábuas" **e** "avançar" em "repetir"
+          para resolver este quebra-cabeças.
+      MC_HOC_2017_06_Cole_authored_hint:
+        MC_HOC_2017_06_Cole_a: Quantas vezes se repete esta ação circular?  Quantas
+          vezes *deveria* repetir-se?
+      MC_HOC_2017_06_Cole_2019_authored_hint:
+        MC_HOC_2017_06_Cole_a: Quantas vezes se repete esta ação circular?  Quantas
+          vezes *deveria* repetir-se?
+      MC_HOC_2017_06_Josh_authored_hint:
+        MC_HOC_2017_06_Cole_a: Experimenta colocar mais do que uma instrução numa
+          ação circular "repetir"!
+      MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_a: Para resolver este quebra-cabeças, descobre o que faz
+          a função "abrir caminho" e chama-a as vezes que forem necessárias utilizando
+          o pequeno bloco verde "abrir caminho" na caixa de ferramentas.
+        MC_HOC_2017_07_Cole_b: Experimenta misturar os blocos de função com outros
+          blocos da caixa de ferramentas para resolver este quebra-cabeças.
+      MC_HOC_2017_07_Cole_2019_authored_hint:
+        MC_HOC_2017_07_Cole_a: Para resolver este quebra-cabeças, descobre o que faz
+          a função "abrir caminho" e chama-a as vezes que forem necessárias utilizando
+          o pequeno bloco verde "abrir caminho" na caixa de ferramentas.
+        MC_HOC_2017_07_Cole_b: Experimenta misturar os blocos de função com outros
+          blocos da caixa de ferramentas para resolver este quebra-cabeças.
+      MC_HOC_2017_08_RY_authored_hint:
+        MC_HOC_2017_08_RY_a: "Prime \"Executar Agent\"! \nPodes executar o teu código
+          mesmo que não esteja correto.  Executa e repõe o código as vezes que forem
+          necessárias até perceberes o que está mal."
+        MC_HOC_2017_08_RY_b: Há MUITAS formas de resolver este quebra-cabeças.  Experimenta
+          algumas!
+      MC_HOC_2017_08_Will_authored_hint:
+        MC_HOC_2017_08_RY_a: "Prime \"Executar Agent\"! \nPodes executar o teu código
+          mesmo que não esteja correto.  Executa e repõe o código as vezes que forem
+          necessárias até perceberes o que está mal."
+        MC_HOC_2017_08_RY_b: Há MUITAS formas de resolver este quebra-cabeças.  Experimenta
+          algumas!
+      MC_HOC_2017_10_Cole_authored_hint:
+        MC_HOC_2017_10_Cole_a: Utiliza funções para facilitar a resolução deste quebra-cabeças!
+      MC_HOC_2017_10_RETRY_authored_hint:
+        MC_HOC_2017_10_Cole_a: Utiliza funções para facilitar a resolução deste quebra-cabeças!
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_a: Utiliza funções para facilitar a resolução deste quebra-cabeças!
+      MC_HOC_2017_13_Cole_authored_hint:
+        MC_HOC_2017_13_Cole_a: Faz com que o Agent construa algumas pontes para que
+          Alex ou Steve se possa deslocar para além da orla do mapa.
+      MC_HOC_2017_4.5v2_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: "A passagem por estas duas placas de pressão
+          abre o caminho para o jogador. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
+      MC_HOC_2017_Ali_authored_hint:
+        MC_HOC_2017_08_RY_a: "Prime \"Executar\"! \nPodes executar o teu código mesmo
+          que não esteja correto.  Executa e repõe o código as vezes que forem necessárias
+          até perceberes o que está mal."
+        MC_HOC_2017_08_RY_b: Há MUITAS formas de resolver este quebra-cabeças.  Experimenta
+          algumas!
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: "Prime \"Executar\"! \nPodes executar o teu código mesmo
+          que não esteja correto.  Executa e repõe o código as vezes que forem necessárias
+          até perceberes o que está mal."
+        MC_HOC_2017_08_RY_b: Há MUITAS formas de resolver este quebra-cabeças.  Experimenta
+          algumas!
+      MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Faz com que o Agent construa algumas pontes para que
+          Alex ou Steve se possa deslocar para além da orla do mapa.
+      MC_HOC_2017_FP20x20_2019_authored_hint:
+        MC_HOC_2017_13_Cole_a: Faz com que o Agent construa algumas pontes para que
+          Alex ou Steve se possa deslocar para além da orla do mapa.
+      New Minecraft Hero Project_authored_hint:
+        MC_HOC_2017_13_Cole_a: Faz com que o Agent construa algumas pontes para que
+          Alex ou Steve se possa deslocar para além da orla do mapa.
+      courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2a_2018_authored_hint:
+        '1': Snap both `East` blocks to the bottom of the `when run` block.
+      courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5a_2018_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have
+          been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
+          try something else!
+      courseB_Scrat_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!

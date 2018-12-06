@@ -1,0 +1,23 @@
+"no":
+  data:
+    course:
+      name:
+        csp-2017:
+          assignment_family_title: Informatikkprinsipper
+        csd-2017:
+          assignment_family_title: Informatikkoppdagelser
+          description_short: En introduksjon til kurs i datavitenskap som gir elevene muligheten til å skape autentiske artifakter.
+        allthethingscourse:
+          title: allthethingscourse
+          description_short: Dette er et kurs for allthethings
+          description_student: Dette er et kurs for allthethings og har en lenger beskrivelse for elever
+          description_teacher: Dette er et kurs for allthethings og har en lenger beskrivelse for lærere
+        csd-2018:
+          assignment_family_title: Informatikkoppdagelser
+          title: Informatikkoppdagelser ('18-'19)
+          version_title: "'18-'19"
+          description_short: En introduksjon til kurs i datavitenskap som gir elevene muligheten til å skape autentiske artifakter.
+        csp-2018:
+          assignment_family_title: Informatikkprinsipper
+          title: Informatikkprinsipper ('18-'19)
+          version_title: "'18-'19"

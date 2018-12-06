@@ -1,0 +1,2252 @@
+---
+en:
+  data:
+    evaluation_multi:
+      U5 evaluation q1:
+        'No': 'No'
+        'Yes': 'Sì'
+      U5 evaluation q2:
+        0: '? Modules in this unit are organized based on lessons that build towards a common project. Once a programming concept is introduced, we will use that again concept in later lessons. Which concept are you least familiar with?'
+        1: ': Modules in this unit are organized based on lessons that build towards a common project. Once a programming concept is introduced, we will use that again concept in later lessons. Which concept are you least familiar with?'
+        While Loops: Cicli "Mentre"
+    external:
+      Algo How Routers Learn Student Lesson Introduction:
+        title: titolo
+      Algo Shortest Path Student Lesson Introduction:
+        title: titolo
+      Basic mechanics of variables:
+        title: titolo
+      Basic mechanics of variables_2018:
+        title: titolo
+      Begin planning your project:
+        title: titolo
+      'Big Picture: If-statements':
+        title: titolo
+      'Big Picture: If-statements_2018':
+        title: titolo
+      Boolean Expressions and Comparison Operators:
+        title: titolo
+      Boolean Expressions and Comparison Operators_2018:
+        title: titolo
+      CSD U1 Input Output C2:
+        title: titolo
+      CSD U1 Input Output C3:
+        title: titolo
+      CSD U1 Input Output C4:
+        title: titolo
+      CSD U1 Input Output Intro:
+        title: titolo
+      CSD U2 Design Project:
+        title: titolo
+      CSD U2 Design Project_2018:
+        title: titolo
+      CSD U2 L1 Overview:
+        title: titolo
+      CSD U2 L1 Overview_2018:
+        title: titolo
+      CSD U2 L2 Overview:
+        title: titolo
+      CSD U2 L2 Overview_2018:
+        title: titolo
+      CSD U2 L3 Overview:
+        title: titolo
+      CSD U2 L3 Overview_2018:
+        title: titolo
+      CSD U2 L4 Overview:
+        title: titolo
+      CSD U2 L4 Overview_2018:
+        title: titolo
+      CSD U2 L5 Overview:
+        title: titolo
+      CSD U2 L5 Overview_2018:
+        title: titolo
+      CSD U2 L6 Overview:
+        title: titolo
+      CSD U2 L6 Overview_2018:
+        title: titolo
+      CSD U2 Social Sleuth:
+        title: titolo
+      CSD U2 expand project:
+        title: titolo
+      CSD U2 expand project_2018:
+        title: titolo
+      CSD U2 layout style review:
+        title: titolo
+      CSD U2 more CSS:
+        title: titolo
+      CSD U3 L2 Challenges:
+        title: titolo
+      CSD U3 SFLP Sprites and Images:
+        title: titolo
+      CSD U3 abstraction intro:
+        title: titolo
+      CSD U3 combining rep:
+        title: titolo
+      CSD U3 combining rep_2018:
+        title: titolo
+      CSD U5 Encryption 1:
+        title: titolo
+      CSD U5 Encryption 1_2018:
+        title: titolo
+      CSD U5 L13 SFLP Interpreting Data:
+        title: titolo
+      CSD U5 L13 SFLP Interpreting Data_2018:
+        title: titolo
+      CSD U5 Representing Information:
+        title: titolo
+      CSD U5 collection UPS2:
+        title: titolo
+      CSD U5 collection ads2:
+        title: titolo
+      CSD U5 data visualization:
+        title: titolo
+      CSD U5 data visualization sheet:
+        title: titolo
+      CSD U5 data visualization_2018:
+        title: titolo
+      CSD U5 student record:
+        title: titolo
+      CSD U5 student record_2018:
+        title: titolo
+      CSD U5 video2:
+        title: titolo
+      CSD-U3-SFLP Drawing:
+        title: titolo
+      CSDU2L01 SFLP:
+        title: titolo
+      CSP ExploreL02 SFLP:
+        title: titolo
+      CSP Journal Entry Placeholder2:
+        title: titolo
+      CSPPD3-u2 Welcome:
+        Welcome!: Benvenuto!
+      CSPStudentLessonPlanTemplate:
+        title: titolo
+      CSPU5 Making a Multi Screen Chaser Game:
+        title: titolo
+      CSPU5_ChoosingGoodIds:
+        title: titolo
+      CSPU5_EventDrivenProgrammingPatterns:
+        title: titolo
+      CSPU5_FirstTimeDesignMode:
+        title: titolo
+      CSPU5_FirstTimeDesignMode_2018:
+        title: titolo
+      CSPU5_HowImagesWork:
+        title: titolo
+      CSPU5_HowOnEventWorks_v2:
+        title: titolo
+      CSPU5_U3L14 - Message - Other ways to assign values:
+        title: titolo
+      CSPU5_U3L14 - Message - basic mechanics of variables:
+        title: titolo
+      CSPU5_U3L15 - explanation of IF and =v==:
+        title: titolo
+      CSPU5_U3L15 Student Lesson Intro - new:
+        title: titolo
+      CSPU5_U3L20 - combining And and Or explanation:
+        title: titolo
+      CSPU5_goodbyeTurtle_setPosition:
+        title: titolo
+      CSPU5_introToDebugging:
+        title: titolo
+      CSPU5_makingPredictions_ref:
+        title: titolo
+      CSPU5_onEventBreakdown:
+        title: titolo
+      CSP_Final_instructions:
+        title: titolo
+      CSP_U4_rawMovieData:
+        title: titolo
+      Color Sleuth - Epilogue:
+        title: titolo
+      Color Sleuth - Epilogue_2018:
+        title: titolo
+      Color Sleuth - How does it end?:
+        title: titolo
+      Color Sleuth - How does it end?_2018:
+        title: titolo
+      Color Sleuth - How to switch player turns:
+        title: titolo
+      Color Sleuth - How to switch player turns_2018:
+        title: titolo
+      Color Sleuth - Keeping score:
+        title: titolo
+      Color Sleuth - Keeping score_2018:
+        title: titolo
+      Color Sleuth - Planning the App:
+        title: titolo
+      Color Sleuth - Planning the App_2018:
+        title: titolo
+      Controlling Memory - Other ways to assign values:
+        title: titolo
+      Controlling Memory - Other ways to assign values_2018:
+        title: titolo
+      Cups and Beans Activity:
+        title: titolo
+      Cups and Beans Activity_2018:
+        title: titolo
+      Debugging with Console.log:
+        title: titolo
+      Debugging with Console.log_2018:
+        title: titolo
+      Digital Footprint Chirpr lillizard:
+        title: titolo
+      Digital Footprint FaceSpace Haley:
+        title: titolo
+      Digital Footprint FaceSpace Lizzie:
+        title: titolo
+      Digital Footprint instantframe wiz_kid_liz:
+        title: titolo
+      DigitalCitizenship2:
+        Digital Citizenship: Cittadinanza Digitale
+      ECSPD Challenge Rubric:
+        title: titolo
+      ECSPD Online U1D11-14:
+        title: titolo
+      ECSPD Online U1D15-16 Forum:
+        title: titolo
+      ECSPD Online intro:
+        Introduction: Introduzione
+      ECSPD U2 Challenge Plan:
+        title: titolo
+      ECSPD Unit 2 Stage11:
+        title: titolo
+      ECSPD Unit 2 Stage13:
+        title: titolo
+      ECSPD Unit 2 Stage6:
+        title: titolo
+      Encoding Numbers Real World Student Lesson Introduction:
+        title: titolo
+      Event Driven Programming Recap:
+        title: titolo
+      Event Driven Programming Recap_2018:
+        title: titolo
+      Event-Driven Programming Patterns:
+        title: titolo
+      Event-Driven Programming Patterns_2018:
+        title: titolo
+      External MD column Test:
+        title: titolo
+      External MD column Test bootstrap:
+        title: titolo
+      GoodBadVisualizations_v1:
+        title: titolo
+      GoodBadVisualizations_v2:
+        title: titolo
+      How "if-else-if" Works:
+        title: titolo
+      How "if-else-if" Works_2018:
+        title: titolo
+      How Compound Boolean Expressions Work:
+        title: titolo
+      How Compound Boolean Expressions Work_2018:
+        title: titolo
+      How Dropdown Menus Work:
+        title: titolo
+      How Dropdown Menus Work_2018:
+        title: titolo
+      How If Statements Work pt 1:
+        title: titolo
+      How If Statements Work pt 1_2018:
+        title: titolo
+      How If-Else Statements Work:
+        title: titolo
+      How If-Else Statements Work_2018:
+        title: titolo
+      How Images Work:
+        title: titolo
+      How Images Work_2018:
+        title: titolo
+      How Secure Is Your Password?:
+        title: titolo
+      How Secure Is Your Password?_2018:
+        title: titolo
+      How Set Property Works:
+        title: titolo
+      How Set Property Works_2018:
+        title: titolo
+      How onEvent Works:
+        title: titolo
+      How onEvent Works_2018:
+        title: titolo
+      How setPosition and screen dimensions work:
+        title: titolo
+      How setPosition and screen dimensions work_2018:
+        title: titolo
+      How the Boolean &&, || and ! Operators Work:
+        title: titolo
+      How the Boolean &&, || and ! Operators Work_2018:
+        title: titolo
+      How to make a random color:
+        title: titolo
+      How to make a random color_2018:
+        title: titolo
+      How to pick a random button:
+        title: titolo
+      How to pick a random button_2018:
+        title: titolo
+      Internet Simulator Setup 2:
+        title: titolo
+      Intro to Debugging and Common Problems:
+        title: titolo
+      Intro to Debugging and Common Problems_2018:
+        title: titolo
+      Making Multiple Screens:
+        title: titolo
+      Making Multiple Screens_2018:
+        title: titolo
+      Making a Multi Screen Chaser Game v.2:
+        title: titolo
+      Making a Multi Screen Chaser Game v.2_2018:
+        title: titolo
+      Multi-Screen Apps:
+        title: titolo
+      New Challenge Introduction:
+        title: titolo
+      New Challenge Introduction_2018:
+        title: titolo
+      OPD-K5 Stage3aGo:
+        title: titolo
+      PDAlg Facilitator Test:
+        title: titolo
+      PDK5 CS Video:
+        Computer Science: Informatica
+      PDK5 Glossary C:
+        Vocabulary: Vocabolario
+      PDK5 Pair Programming 1:
+        Pair Programming: Programmazione in Coppia
+      PDK5 Teacher Dashboard C:
+        Teacher Dashboard: Cruscotto dell'Insegnante
+      PS - Responding to User Input:
+        title: titolo
+      PS - draft - Longitudinal study description:
+        title: titolo
+      Prepare for your presentation:
+        title: titolo
+      Public Key Crypto Widget Instructions:
+        title: titolo
+      Public Key Crypto Widget Instructions_2018:
+        title: titolo
+      Rules About Choosing Good IDs:
+        title: titolo
+      Rules About Choosing Good IDs_2018:
+        title: titolo
+      SG U3 whats a comment:
+        title: titolo
+      SG v2 U3L01 Student Lesson Introduction:
+        title: titolo
+      SG v2 U3L02 Student Lesson Introduction:
+        title: titolo
+      SG v2 U3L03 Student Lesson Introduction:
+        title: titolo
+      SG v2 U3L05 Student Lesson Introduction:
+        title: titolo
+      SG v2 U3L07 Student Lesson Introduction:
+        title: titolo
+      SG v2 U3L08 Student Lesson Introduction:
+        title: titolo
+      Sending Bits Real World Student Lesson Introduction:
+        title: titolo
+      Simple Decisions with if-statements:
+        title: titolo
+      Simple Decisions with if-statements_2018:
+        title: titolo
+      Tips For Working on Your Own:
+        title: titolo
+      Tips For Working on Your Own_2018:
+        title: titolo
+      U1L10 Student Lesson Introduction:
+        title: titolo
+      U1L11 Student Lesson Introduction:
+        title: titolo
+      U1L12 Student Lesson Introduction:
+        title: titolo
+      U1L13 Student Lesson Summary:
+        title: titolo
+      U1L14 Student Lesson Summary:
+        title: titolo
+      U1L15 Student Lesson Summary:
+        title: titolo
+      U1L17 Student Lesson Introduction:
+        title: titolo
+      U1L2 Student Lesson Introduction:
+        title: titolo
+      U1L3 Student Lesson Introduction:
+        title: titolo
+      U1L4 Student Lesson Introduction:
+        title: titolo
+      U1L5 Student Lesson Introduction:
+        title: titolo
+      U1L6 Student Lesson Introduction:
+        title: titolo
+      U1L7 Student Lesson Introduction:
+        title: titolo
+      U1L8 Student Lesson Introduction:
+        title: titolo
+      U1L9 Student Lesson Introduction:
+        title: titolo
+      U2L1 Student Lesson Introduction:
+        title: titolo
+      U2L12 Student Lesson Introduction:
+        title: titolo
+      U2L7 Student Lesson Introduction:
+        title: titolo
+      U2L8 Student Lesson Introduction:
+        title: titolo
+      U3 whats a comment:
+        title: titolo
+      U3 whats a comment_2018:
+        title: titolo
+      U3L12 - Mission Unsortable:
+        title: titolo
+      U3L13 - Explanation of Ids:
+        title: titolo
+      U3L13 - Make a Prediction Explanation:
+        title: titolo
+      U3L13 Add Button Instrucitons:
+        title: titolo
+      U3L13 Add Button Instructions:
+        title: titolo
+      U3L14 - Message - Other ways to assign values:
+        title: titolo
+      U3L14 - Message - basic mechanics of variables:
+        title: titolo
+      U3L14 - Student Intro Page:
+        title: titolo
+      U3L15 - explanation of IF and =v==:
+        title: titolo
+      U3L15 Student Lesson Intro - new:
+        title: titolo
+      U3L19 - done with variables finally:
+        title: titolo
+      U3L20 - combining And and Or explanation:
+        title: titolo
+      U4 - Cleaning Data - Activity Guide:
+        title: titolo
+      U4 - Making Data Visualizations - Bar Chart:
+        title: titolo
+      U4 - Making Data Visualizations - Edit Chart Appearance:
+        title: titolo
+      U4 - Making Data Visualizations - Free Play:
+        title: titolo
+      U4 - Making Data Visualizations - Free Play_2018:
+        title: titolo
+      U4 - Making Data Visualizations - Getting Started:
+        title: titolo
+      U4 - Making Data Visualizations - Line Chart:
+        title: titolo
+      U4 - Making Data Visualizations - Scatter Plot:
+        title: titolo
+      U4 - Making Data Visualizations - Student Introduction:
+        title: titolo
+      U4 - Privacy Abandoned - Hot On Your Trail Video:
+        title: titolo
+      U4 - Unique Ids Explanation:
+        title: titolo
+      U4 - Unique Ids Explanation_2018:
+        title: titolo
+      U4 Cleaning Data Activity Guide Pt2:
+        title: titolo
+      U4 Cleaning Data Activity Guide Pt3:
+        title: titolo
+      U4L01 Student Lesson Introduction:
+        title: titolo
+      U4L02 Student Lesson Introduction:
+        title: titolo
+      U4L02 Student Lesson Introduction_2018:
+        title: titolo
+      U4L02v2 - Finding Trends:
+        title: titolo
+      U4L03 Student Lesson Introduction:
+        title: titolo
+      U4L03 Student Lesson Introduction_2018:
+        title: titolo
+      U4L03v2 - Student Introduction:
+        title: titolo
+      U4L04 Student Lesson Introduction:
+        title: titolo
+      U4L04 Student Lesson Introduction_2018:
+        title: titolo
+      U4L04v2 - Student Introduction:
+        title: titolo
+      U4L05 Student Lesson Introduction:
+        title: titolo
+      U4L06 Student Lesson Introduction:
+        title: titolo
+      U4L06v2 Student Lesson Introduction:
+        title: titolo
+      U4L07 Student Introduction public key crypto:
+        title: titolo
+      U4L07 Student Lesson Introduction:
+        title: titolo
+      U4L08 - mod clock instructions:
+        title: titolo
+      U4L08 Student Lesson Introduction:
+        title: titolo
+      U4L08v2 Making Pivot Tables:
+        title: titolo
+      U4L08v2 Making Pivot Tables Part 2:
+        title: titolo
+      U4L08v2 Making Pivot Tables Part 3:
+        title: titolo
+      U4L08v2 Making Pivot Tables Part 3_2018:
+        title: titolo
+      U4L08v2 Student Intro:
+        title: titolo
+      U4L09 Student Lesson Intro Practice PT big data dilemma:
+        title: titolo
+      U4L09 Student Lesson Introduction:
+        title: titolo
+      U4L10 Student Lesson Introduction:
+        title: titolo
+      U4L11 Student Lesson Introduction:
+        title: titolo
+      U4L12 - Student Introduction:
+        title: titolo
+      U4L12 Student Lesson Introduction:
+        title: titolo
+      U4L13 Student Lesson Introduction:
+        title: titolo
+      U4L14 Student Lesson Introduction:
+        title: titolo
+      U4L15 Student Lesson Introduction:
+        title: titolo
+      U4L16 Student Lesson Introduction:
+        title: titolo
+      U4L17 Student Lesson Introduction:
+        title: titolo
+      U4L18 Student Lesson Introduction:
+        title: titolo
+      U4L19 Student Lesson Introduction:
+        title: titolo
+      U4L20 Student Lesson Introduction:
+        title: titolo
+      U4L21 Student Lesson Introduction:
+        title: titolo
+      U4L22 Student Lesson Introduction:
+        title: titolo
+      U4L23 Student Lesson Introduction:
+        title: titolo
+      U4L24 Student Lesson Introduction:
+        title: titolo
+      U4L5 random subst challenge page:
+        title: titolo
+      U5 - Create PT - Student Introduction:
+        title: titolo
+      U5 - Create PT Prep - Student Introduction:
+        title: titolo
+      U5 - Create PT review - Student Introduction:
+        title: titolo
+      U5 - Explore PT - Student Introduction:
+        title: titolo
+      U5 - Explore PT Prep - Student Introduction:
+        title: titolo
+      U5 - Explore PT Review - Student Introduction:
+        title: titolo
+      U5 - PT Prep - Digital Portfolio and tech setup:
+        title: titolo
+      U5 color sleuth check correct:
+        title: titolo
+      U5 color sleuth check correct_2018:
+        title: titolo
+      U5L08 - Student Intro If statements:
+        title: titolo
+      U6 - Charts - Student Introduction:
+        title: titolo
+      U6 - Charts - Student Introduction_2018:
+        title: titolo
+      U6 - Final Project - Student Introduction:
+        title: titolo
+      U6 - Final Project - Student Introduction_2018:
+        title: titolo
+      U6 - ImportExport - Student Introduction:
+        title: titolo
+      U6 - ImportExport - Student Introduction_2018:
+        title: titolo
+      U6 - Sample Apps - Student Introduction:
+        title: titolo
+      U6 - Sample Apps - Student Introduction_2018:
+        title: titolo
+      U6 - deleteRecord - Student Introduction:
+        title: titolo
+      U6 - deleteRecord - Student Introduction_2018:
+        title: titolo
+      U6 - updateRecord - Student Introduction:
+        title: titolo
+      U6 - updateRecord - Student Introduction_2018:
+        title: titolo
+      U6 AP Performance Task Tech Setup - Student Links:
+        title: titolo
+      U6 Create PT - Complete the Task - Student Links:
+        title: titolo
+      U6 Create PT - Complete the Task - Student Links_2018:
+        title: titolo
+      U6 Create PT Review - Student Links:
+        title: titolo
+      U6 Create PT Review - Student Links_2018:
+        title: titolo
+      U6 Explore PT - Complete the Task - Student Links:
+        title: titolo
+      U6 Explore PT - Complete the Task - Student Links_2018:
+        title: titolo
+      U6 Explore PT - Make a Plan - Student Links:
+        title: titolo
+      U6 Explore PT - Make a Plan - Student Links_2018:
+        title: titolo
+      U6 Explore PT Review - Student Links:
+        title: titolo
+      U6 Explore PT Review - Student Links_2018:
+        title: titolo
+      Unit 2 Lesson 1 Overview Clone:
+        title: titolo
+      Unit 4 Lesson 1 Introduction:
+        title: titolo
+      Unit 4 Lesson 1 Introduction_2018:
+        title: titolo
+      Unit 4 Lesson 2 Introduction:
+        title: titolo
+      Unit 4 Lesson 2 Introduction_2018:
+        title: titolo
+      Unit 4 Lesson 5 Introduction:
+        title: titolo
+      Unit 4 Lesson 5 Introduction_2018:
+        title: titolo
+      Unit 5 Lesson 1:
+        title: titolo
+      Unit 5 Lesson 1 Introduction:
+        title: titolo
+      Unit 5 Lesson 1 Introduction_2018:
+        title: titolo
+      Unit 5 Lesson 10 Introduction:
+        title: titolo
+      Unit 5 Lesson 10 Introduction_2018:
+        title: titolo
+      Unit 5 Lesson 2 Introduction:
+        title: titolo
+      Unit 5 Lesson 2 Introduction_2018:
+        title: titolo
+      Unit 5 Lesson 3 Introduction:
+        title: titolo
+      Unit 5 Lesson 3 Introduction_2018:
+        title: titolo
+      Unit 5 Lesson 4 Introduction:
+        title: titolo
+      Unit 5 Lesson 4 Introduction_2018:
+        title: titolo
+      Unit 5 Lesson 5:
+        title: titolo
+      Unit 5 Lesson 5 Introduction:
+        title: titolo
+      Unit 5 Lesson 5 Introduction_2018:
+        title: titolo
+      Unit 5 Lesson 6:
+        title: titolo
+      Unit 5 Lesson 6 Introduction:
+        title: titolo
+      Unit 5 Lesson 6 Introduction_2018:
+        title: titolo
+      Unit 5 Lesson 7 Introduction:
+        title: titolo
+      Unit 5 Lesson 7 Introduction_2018:
+        title: titolo
+      Unit 5 Lesson 8 Introduction:
+        title: titolo
+      Unit 5 Lesson 8 Introduction_2018:
+        title: titolo
+      Unit 5 Lesson 9 Introduction:
+        title: titolo
+      Unit 5 Lesson 9 Introduction_2018:
+        title: titolo
+      'Worked Example: If-statements and Robot':
+        title: titolo
+      'Worked Example: If-statements and Robot_2018':
+        title: titolo
+      courseB_external_MRF:
+        title: titolo
+      courseB_external_loopMRF:
+        title: titolo
+      courseB_story_unspottedBugs10:
+        title: titolo
+      courseB_story_unspottedBugs11:
+        title: titolo
+      courseB_story_unspottedBugs12:
+        title: titolo
+      courseB_story_unspottedBugs13:
+        title: titolo
+      courseB_story_unspottedBugs14:
+        title: titolo
+      courseB_story_unspottedBugs15:
+        title: titolo
+      courseB_story_unspottedBugs16:
+        title: titolo
+      courseB_story_unspottedBugs17:
+        title: titolo
+      courseB_story_unspottedBugs18:
+        title: titolo
+      courseB_story_unspottedBugs2:
+        title: titolo
+      courseB_story_unspottedBugs3:
+        title: titolo
+      courseB_story_unspottedBugs4:
+        title: titolo
+      courseB_story_unspottedBugs5:
+        title: titolo
+      courseB_story_unspottedBugs6:
+        title: titolo
+      courseB_story_unspottedBugs7:
+        title: titolo
+      courseB_story_unspottedBugs8:
+        title: titolo
+      courseB_story_unspottedBugs9:
+        title: titolo
+      courseB_unplugged_mrfProgramming:
+        title: titolo
+      courseC_screenoutthemean:
+        title: titolo
+      courseF_firstFunctions_map:
+        title: titolo
+      coursef_functionsSummary_map:
+        title: titolo
+      coursef_powerofwords:
+        title: titolo
+      csd-post-survey-unit1-preamble:
+        title: titolo
+      csd-post-survey-unit2-preamble:
+        title: titolo
+      csd-post-survey-unit3-preamble:
+        title: titolo
+      csd-post-survey-unit4-preamble:
+        title: titolo
+      csd-post-survey-unit5-preamble:
+        title: titolo
+      csd-post-survey-unit6-preamble:
+        title: titolo
+      csp-post-survey-2018-AP-preamble:
+        title: titolo
+      csp-post-survey-2018-topics-preamble:
+        title: titolo
+      csp-post-survey-2018-unit-feedback-preamble:
+        title: titolo
+      csp-post-survey-createPT-preamble:
+        title: titolo
+      csp-post-survey-explorePT-preamble:
+        title: titolo
+      csp-post-survey-unit1-preamble:
+        title: titolo
+      csp-post-survey-unit2-preamble:
+        title: titolo
+      csp-post-survey-unit3-preamble:
+        title: titolo
+      csp-post-survey-unit4-preamble:
+        title: titolo
+      csp-post-survey-unit5-preamble:
+        title: titolo
+      csp_unit5_finalassessment_overview:
+        title: titolo
+      csp_unit5_finalassessment_overview_2018:
+        title: titolo
+      csp_unit5_finalassessment_overview_exam_prep:
+        title: titolo
+      csp_unit_assessment_overview:
+        title: titolo
+      csp_unit_assessment_overview_2018:
+        title: titolo
+      csp_unit_assessment_overview_exam_prep:
+        title: titolo
+      dsl link test:
+        title: titolo
+      grade2_maze_intro1:
+        title: titolo
+      grade2_unplugged_neighborhood:
+        title: titolo
+      grade4_project_design:
+        title: titolo
+      grade4_project_design_image:
+        title: titolo
+      grade4_project_presentation:
+        title: titolo
+      grade5_project_design:
+        title: titolo
+      grade5_project_presentation:
+        title: titolo
+      gradeK_unplugged_loops:
+        Loops Unplugged: 'Cicli: Lezioni Tradizionali'
+      more encryption algorithms:
+        title: titolo
+      newCSFsample:
+        Intro: Introduzione
+      post-assessment survey heading4:
+        title: titolo
+      pwc_appdev:
+        title: titolo
+      pwc_appdevunplugged:
+        title: titolo
+      pwc_cybersecurity:
+        title: titolo
+      pwc_internetofthings:
+        title: titolo
+      pwc_programming:
+        title: titolo
+      pwc_webdevelopment:
+        title: titolo
+      sciPD framework video:
+        Framework: Framework
+      sciPD2Part4_S1_L3:
+        title: titolo
+      sciPD2Part4_S2_L1:
+        title: titolo
+      sciPD2Part4_S2_L2:
+        title: titolo
+      sciPD2Part4_S3_L1:
+        title: titolo
+      sciPD2Part4_S3_L2:
+        title: titolo
+      sciPD2Part4_S3_L3:
+        title: titolo
+      sciPD3 mods2:
+        title: titolo
+      sciPD33 earth1:
+        title: titolo
+      sciPD33 earth2:
+        title: titolo
+      sciPDpart4_S1_L1:
+        title: titolo
+      test discourse level type:
+        title: titolo
+      v2 U1 Internet is for Everyone Student Lesson Introduction:
+        title: titolo
+      v2 U1 Internet is for Everyone Student Lesson Introduction_2018:
+        title: titolo
+      v2 U1L14 Student Lesson Introduction:
+        title: titolo
+      v2 U1L14 Student Lesson Introduction_2018:
+        title: titolo
+      v2 U1L2 Student Lesson Introduction:
+        title: titolo
+      v2 U1L2 Student Lesson Introduction_2018:
+        title: titolo
+      v2 U1L3 Student Lesson Introduction:
+        title: titolo
+      v2 U1L3 Student Lesson Introduction_2018:
+        title: titolo
+      v2 U1L4 Student Lesson Introduction:
+        title: titolo
+      v2 U1L4 Student Lesson Introduction_2018:
+        title: titolo
+      v2 U1L5 Student Lesson Introduction:
+        title: titolo
+      v2 U1L5 Student Lesson Introduction_2018:
+        title: titolo
+      v2 U1L8 Student Lesson Introduction:
+        title: titolo
+      v2 U1L8 Student Lesson Introduction_2018:
+        title: titolo
+      v2 U2L1 Student Lesson Introduction:
+        title: titolo
+      v2 U2L1 Student Lesson Introduction_2018:
+        title: titolo
+      v2 U2L10 Student Lesson Introduction:
+        title: titolo
+      v2 U2L10 Student Lesson Introduction_2018:
+        title: titolo
+      v2 U2L11 Student Lesson Introduction:
+        title: titolo
+      v2 U2L11 Student Lesson Introduction_2018:
+        title: titolo
+      v2 U2L12 Student Lesson Introduction:
+        title: titolo
+      v2 U2L12 Student Lesson Introduction_2018:
+        title: titolo
+      v2 U2L13 Student Lesson Introduction:
+        title: titolo
+      v2 U2L13 Student Lesson Introduction_2018:
+        title: titolo
+      v2 U2L14 Student Lesson Introduction:
+        title: titolo
+      v2 U2L14 Student Lesson Introduction_2018:
+        title: titolo
+      v2 U2L15 Student Lesson Introduction:
+        title: titolo
+      v2 U2L15 Student Lesson Introduction_2018:
+        title: titolo
+      v2 U2L2 Student Lesson Summary:
+        title: titolo
+      v2 U2L2 Student Lesson Summary_2018:
+        title: titolo
+      v2 U2L3 Student Lesson Summary:
+        title: titolo
+      v2 U2L3 Student Lesson Summary_2018:
+        title: titolo
+      v2 U2L4 Student Lesson Summary:
+        title: titolo
+      v2 U2L4 Student Lesson Summary_2018:
+        title: titolo
+      v2 U2L6 Student Lesson Introduction:
+        title: titolo
+      v2 U2L6 Student Lesson Introduction_2018:
+        title: titolo
+      v2 U2L7 Student Lesson Introduction:
+        title: titolo
+      v2 U2L7 Student Lesson Introduction_2018:
+        title: titolo
+      v2 U2L8 Student Lesson Introduction:
+        title: titolo
+      v2 U2L8 Student Lesson Introduction_2018:
+        title: titolo
+      v2 U2L9 Student Lesson Introduction:
+        title: titolo
+      v2 U2L9 Student Lesson Introduction_2018:
+        title: titolo
+      v2 U3L04 Student Lesson Introduction:
+        title: titolo
+      v2 U3L04 Student Lesson Introduction_2018:
+        title: titolo
+      v2 U3L05 Student Lesson Introduction:
+        Creating Functions: Creazione di funzioni
+      v2 U3L05 Student Lesson Introduction_2018:
+        Creating Functions: Creazione di funzioni
+      v2 U4L05 Student Lesson Intro Encryption Caesar:
+        title: titolo
+    match:
+      2-3 Maze Match 2:
+        Instructions: Istruzioni
+      4-5 maze match 1:
+        Instructions: Istruzioni
+      CSD U3 CSS Vocab Match:
+        '1': '1'
+        '2': '2'
+      CSD U3 keyinput match:
+        Question: Domanda
+      CSDU2 Match RGB Colors:
+        Question: Domanda
+      K-1 Maze Match 1:
+        Instructions: Istruzioni
+      PDAlg Design Recipe Video:
+        Definition: Definizione
+      PDAlg Types Video:
+        Image: Immagine
+        Number: Numero
+        String: Stringa
+      PDK5 What is unplugged:
+        Question: Domanda
+      'U2L06 - Matching: Label the Diagram':
+        A: A
+        B: B
+        C: C
+        D: D
+        E: E
+      U3L19 - MATCH what are values of abc:
+        '10': '10'
+        '12': '12'
+        '13': '13'
+        '15': '15'
+        '16': '16'
+        '21': '21'
+        '3': '3'
+        '5': '5'
+        '7': '7'
+        '8': '8'
+        a: a
+        title: titolo
+      U3L19 - MC what are values of abc:
+        title: titolo
+      U4L06 Create Record Id Matching Q:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      test matching image:
+        Instructions: Istruzioni
+      test matching text:
+        blue: blu
+      unique level name here:
+        Question: Domanda
+        title: titolo
+0:
+1:
+  CB_Question_3:
+    A: A
+    Y: true
+  CSD Prediction Header Size:
+    Question: Domanda
+  CSD U3 Boolean MC:
+    title: titolo
+  CSD U3 Boolean MC_2018:
+    title: titolo
+  CSDU4 Screens Predict Multi:
+    About: Informazioni
+    Contact Us: Contattaci
+  'CSP U4L04 Assessment 1 ':
+    Question: Domanda
+  CSP Unit 1 Ch 1 MC binary to dec simple:
+    '0010': '0010'
+    '0101': '0101'
+    '0110': '0110'
+    '1010': '1010'
+  CSP Unit 1 Ch 1 MC binary to dec simple_2018:
+    '0010': '0010'
+    '0101': '0101'
+    '0110': '0110'
+    '1010': '1010'
+  CSP Unit 1 Ch 1 MC binary to dec simple_exam_prep:
+    '0010': '0010'
+    '0101': '0101'
+    '0110': '0110'
+    '1010': '1010'
+  CSP verify 18:
+    'No': 'No'
+    'Yes': 'Sì'
+  CSPU5_predict_mc_whichOfTwoEvents:
+    title: titolo
+  CSPU5_predict_onEvent_withWrongID:
+    Question: Domanda
+    title: titolo
+  CommuteAssess - loops 1 - block:
+    '10': '10'
+    '18': '18'
+    '3': '3'
+    '6': '6'
+  CommuteAssess - loops 1 - block B:
+    '10': '10'
+    '18': '18'
+    '3': '3'
+    '6': '6'
+  CommuteAssess - loops 1 - block_2018:
+    '10': '10'
+    '18': '18'
+    '3': '3'
+    '6': '6'
+  CommuteAssess - loops 1 - block_exam_prep:
+    '10': '10'
+    '18': '18'
+    '3': '3'
+    '6': '6'
+  CommuteAssess - loops 2 - block:
+    '0': '0'
+    '1': '1'
+    '10': '10'
+    '5': '5'
+    11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'''
+    12: ': ''How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'''
+  CommuteAssess - loops 2 - block_2018:
+    '0': '0'
+    '1': '1'
+    '10': '10'
+    '5': '5'
+    11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'''
+    12: ': ''How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'''
+  CommuteAssess - loops 2 - block_exam_prep:
+    '0': '0'
+    '1': '1'
+    '10': '10'
+    '5': '5'
+    11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'''
+    12: ': ''How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'''
+  ECSPD2 question:
+    Question: Domanda
+    title: titolo
+  K-1 Maze Multiple Choice 2:
+    Maze: 'Labirinto: Sequenze e Cicli'
+  Multi Define Funcs 1:
+    '3': '3'
+    y: true
+  Multi Define Funcs 2:
+    '3': '3'
+    y: true
+  Multi Define Funcs 3:
+    '5': '5'
+    '6': '6'
+    y: true
+  PDAlg Blocks Video:
+    Toolbox: Cassetta degli attrezzi
+  PDAlg DR Multi 1:
+    Domain: Dominio
+    Name: Nome
+    Range: Estensione
+    0: '? The first step in the Design Recipe is to create a contract based on the word problem. Which part of this contract has the student gotten wrong?'
+    1: ': The first step in the Design Recipe is to create a contract based on the word problem. Which part of this contract has the student gotten wrong?'
+  PDAlg PreQ 1:
+    'No': 'No'
+    'Yes': 'Sì'
+  PDAlg PreQ 2:
+    'No': 'No'
+    'Yes': 'Sì'
+  PDAlg functional:
+    'No': 'No'
+  PDK5 Blockly Intro:
+    'Yes': 'Sì'
+  PDK5 Classroom Culture:
+    'Yes': 'Sì'
+  PDK5 Course Maps:
+    'Yes': 'Sì'
+  PDK5 Course Overview:
+    'Yes': 'Sì'
+  PDK5 Glossary:
+    Glossary: Glossary
+    'Yes': 'Sì'
+  PDK5 Intro:
+    'No': 'No'
+    Welcome!: Benvenuto!
+    'Yes': 'Sì'
+  PDK5 Teacher Dashboard:
+    Teacher Dashboard: Cruscotto dell'Insegnante
+    'Yes': 'Sì'
+  PDK5 Test1:
+    Question: Domanda
+    title: titolo
+  PDK5 UVideo Overview:
+    'Yes': 'Sì'
+  PDK5 Unplugged Intro:
+    'Yes': 'Sì'
+  PS U3-bakertest:
+    title: titolo
+  SG U3L07 - MC remove line of code loops:
+    '1': '1'
+    '14': '14'
+    '5': '5'
+    '6': '6'
+    '7': '7'
+  Submittable Multi:
+    blue: blu
+    green: verde
+    red: rosso
+  Test Contained Multi:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '4': '4'
+  U1L07 Assessment 1:
+    A: A
+    B: B
+    C: C
+    D: D
+    E: E
+  U1L6 Assessment multiple choice:
+    '10': '10'
+    '12': '12'
+    '4': '4'
+    '6': '6'
+    '8': '8'
+  U1L6 Assessment multiple choice_2018:
+    '10': '10'
+    '12': '12'
+    '4': '4'
+    '6': '6'
+    '8': '8'
+  U1L8 Multiple Choice:
+    '10': '10'
+    '13': '13'
+    '14': '14'
+    '16': '16'
+    17: '? You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
+    18: ': You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
+  U1L8 Multiple Choice_2018:
+    '10': '10'
+    '13': '13'
+    '14': '14'
+    '16': '16'
+    17: '? You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
+    18: ': You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
+  'U2L06 - MC: Which is an MST?':
+    0: ': "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
+    A: A
+    B: B
+    C: C
+    D: D
+    E: E
+  U2L08 Assessment 1:
+    '11': '11'
+    '5': '5'
+    '6': '6'
+    '8': '8'
+    '9': '9'
+  U2L13 Assessment4:
+    '26': '26'
+  U2L13 Assessment4_2018:
+    '26': '26'
+  U2L14 Assessment3:
+    'false': 'falso'
+    'true': 'vero'
+  U2L19 multichoice 13 MOD 17:
+    '0': '0'
+    '13': '13'
+    '17': '17'
+    '4': '4'
+  U2L19 multichoice 13 MOD 17_2018:
+    '0': '0'
+    '13': '13'
+    '17': '17'
+    '4': '4'
+  'U2L19 mutlichoice ':
+    '0': '0'
+    '1.5': '1.5'
+    '15': '15'
+    '20': '20'
+    '5': '5'
+  U2L19 mutlichoice 20 mod 15:
+    '0': '0'
+    '1.5': '1.5'
+    '15': '15'
+    '20': '20'
+    '5': '5'
+  U2L19 mutlichoice 20 mod 15_2018:
+    '0': '0'
+    '1.5': '1.5'
+    '15': '15'
+    '20': '20'
+    '5': '5'
+  U3L07 - MC remove line of code loops:
+    '1': '1'
+    '14': '14'
+    '5': '5'
+    '6': '6'
+    '7': '7'
+  U3L07 - MC remove line of code loops_2018:
+    '1': '1'
+    '14': '14'
+    '5': '5'
+    '6': '6'
+    '7': '7'
+  U3L20 Assessment9:
+    "=": "="
+    ">": ">"
+  U3L30 Assessment1:
+    '6': '6'
+    '7': '7'
+    '8': '8'
+  U3L30 Assessment2:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+  U3L30 Assessment3:
+    '19': '19'
+    '20': '20'
+    '21': '21'
+  U4L01 Multiple Choice:
+    right: a destra
+  U4L02 Multiple Choice:
+    right: a destra
+  U4L03 Multiple Choice:
+    right: a destra
+  U4L04 Multiple Choice:
+    right: a destra
+  U4L05 Multiple Choice:
+    right: a destra
+  U4L06 Assessment 2:
+    column: colonna
+  U4L06 Assessment 3:
+    column: colonna
+  U4L06 Multiple Choice:
+    right: a destra
+  U4L06 Reflection Q 1:
+    Question: Domanda
+    random: un oggetto a caso
+  U4L07 Multiple Choice:
+    right: a destra
+  U4L08 Multiple Choice:
+    right: a destra
+  U4L09 Multiple Choice:
+    right: a destra
+  U4L10 Multiple Choice:
+    right: a destra
+  U4L11 Multiple Choice:
+    right: a destra
+  U4L12 Multiple Choice:
+    right: a destra
+  U4L13 Multiple Choice:
+    right: a destra
+  U4L14 Multiple Choice:
+    right: a destra
+  U4L15 Multiple Choice:
+    right: a destra
+  U4L16 Multiple Choice:
+    right: a destra
+  U4L17 Multiple Choice:
+    right: a destra
+  U4L18 Multiple Choice:
+    right: a destra
+  U4L19 Multiple Choice:
+    right: a destra
+  U4L20 Multiple Choice:
+    right: a destra
+  U4L21 Multiple Choice:
+    right: a destra
+  U4L22 Multiple Choice:
+    right: a destra
+  U4L23 Multiple Choice:
+    right: a destra
+  U4L24 Multiple Choice:
+    right: a destra
+  U4LXX Multiple Choice:
+    right: a destra
+  U5 assess_weight_v2:
+    Question: Domanda
+    title: titolo
+  Warmup questions:
+    random: un oggetto a caso
+  commute assess - loops 4 - block:
+    '0': '0'
+    '1': '1'
+    '10': '10'
+    '5': '5'
+    '50': '50'
+  courseA_multi_artist_loops11_predict2:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseA_multi_collector_loops11_predict2:
+    I don't know.: Non lo so.
+    0: '? Incorrect.  The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.'
+    1: ': Incorrect.  The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.'
+    2: '? The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.'
+    3: ': The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.'
+  courseA_multi_collector_loops3_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseA_multi_maze_seq12_predict2:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseA_multi_maze_seq2_predict1:
+    I don't know.: Non lo so.
+  courseB_multi_artist_loops8_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    The artist will draw a single line.: L'artista disegnerà una singola linea.
+  courseB_multi_collector_loops3_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseB_multi_maze_seq10_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseB_multi_maze_seq10_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseB_multi_maze_seq1_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseB_multi_maze_seq1_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseC_multi_artist_prog6_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    Incorrect.  The artist draws a square.: Sbagliato. L'artista disegna un quadrato.
+    Look carefully at the code below.  What will happen when you click "Run"?: Guarda molto attentamente il codice riportato nell'area di lavoro. Cosa succede quando si clicca su "Esegui"?
+    The artist draws a square.: L'artista disegna un quadrato.
+    The artist will draw a single line.: L'artista disegnerà una singola linea.
+    The artist will draw a triangle with three equal sides.: L'artista disegnerà un triangolo con tre lati uguali.
+  courseC_multi_artist_prog6_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    Incorrect.  The artist draws a square.: Sbagliato. L'artista disegna un quadrato.
+    Look carefully at the code below.  What will happen when you click "Run"?: Guarda molto attentamente il codice riportato nell'area di lavoro. Cosa succede quando si clicca su "Esegui"?
+    The artist draws a square.: L'artista disegna un quadrato.
+    The artist will draw a single line.: L'artista disegnerà una singola linea.
+    The artist will draw a square.: L'artista disegnerà un quadrato.
+    The artist will draw a triangle with three equal sides.: L'artista disegnerà un triangolo con tre lati uguali.
+  courseC_multi_harvester_loops11_predict1:
+    '12': '12'
+    '15': '15'
+    '4': '4'
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseC_multi_harvester_loops11_predict1_2018:
+    '12': '12'
+    '15': '15'
+    '4': '4'
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseC_multi_maze_debugging8_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    Incorrect. Scrat goes the wrong way after his final turn.: Sbagliato. Scrat va nella direzione sbagliata dopo l'ultima curva.
+    Incorrect. Taking one too few steps happens after Scrat turns the wrong way.: Sbagliato. Il fatto che Scrat non faccia abbastanza passi avviene dopo che ha già girato nella direzione sbagliata.
+    'Look closely at the code below.  What is the first bug that will make this program fail? ': 'Guarda attentamente il codice riportato di seguito.  Qual è il primo errore che farà fallire l''esecuzione di questo programma? '
+    Scrat takes one too few steps and ends up short of the acorn.: Scrat non fa abbastanza passi e si ferma prima di aver raggiunto la ghianda.
+    Scrat will go the wrong way after his final turn.: Scrat andrà nella direzione sbagliata dopo l'ultima curva.
+    'The first error is that Scrat goes the wrong way after his final turn. ': 'Il primo errore è che Scrat va nella direzione sbagliata dopo l''ultima curva. '
+    The program won't fail. Scrat will get to the acorn.: Il programma non fallirà. Scrat riuscirà a raggiungere la ghianda.
+  courseC_multi_maze_debugging8_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    Incorrect. Scrat goes the wrong way after his final turn.: Sbagliato. Scrat va nella direzione sbagliata dopo l'ultima curva.
+    Incorrect. Taking one too few steps happens after Scrat turns the wrong way.: Sbagliato. Il fatto che Scrat non faccia abbastanza passi avviene dopo che ha già girato nella direzione sbagliata.
+    'Look closely at the code below.  What is the first bug that will make this program fail? ': 'Guarda attentamente il codice riportato di seguito.  Qual è il primo errore che farà fallire l''esecuzione di questo programma? '
+    Scrat takes one too few steps and ends up short of the acorn.: Scrat non fa abbastanza passi e si ferma prima di aver raggiunto la ghianda.
+    Scrat will go the wrong way after his final turn.: Scrat andrà nella direzione sbagliata dopo l'ultima curva.
+    'The first error is that Scrat goes the wrong way after his final turn. ': 'Il primo errore è che Scrat va nella direzione sbagliata dopo l''ultima curva. '
+    The program won't fail. Scrat will get to the acorn.: Il programma non fallirà. Scrat riuscirà a raggiungere la ghianda.
+  courseC_multi_maze_loops10_predict2:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseC_multi_maze_loops2_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseC_multi_maze_programming8_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseC_multi_maze_programming8_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseC_multi_starWars_predict1:
+    Correct!: Corretto!
+    I don't know: Non lo so
+  courseC_multi_starWars_predict1_2018:
+    Correct!: Corretto!
+    I don't know: Non lo so
+  courseC_multi_starWars_predict2:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseC_multi_starWars_predict2_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseD_multi_artist_binary8_predict1:
+    A: A
+    B: B
+    C: C
+    Correct!: Corretto!
+    D: D
+    Incorrect.: Sbagliato.
+    Take a close look at the code below.  Which image will it create after you click "Run"?: Dai una bella occhiata al codice presente nell'area di lavoro. Che immagine verrà creata quando cliccherai su "Esegui"?
+  courseD_multi_artist_binary8_predict1_2018:
+    A: A
+    B: B
+    C: C
+    Correct!: Corretto!
+    D: D
+    Incorrect.: Sbagliato.
+    Take a close look at the code below.  Which image will it create after you click "Run"?: Dai una bella occhiata al codice presente nell'area di lavoro. Che immagine verrà creata quando cliccherai su "Esegui"?
+  courseD_multi_artist_nestedLoops9_predict1:
+    A: A
+    B: B
+    C: C
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseD_multi_artist_nestedLoops9_predict1_2018:
+    A: A
+    B: B
+    C: C
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseD_multi_bee_conditionals1_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+    1: ': The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+  courseD_multi_bee_conditionals1_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+    1: ': The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+  courseD_multi_bee_conditionals7_predict2:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: ': ''Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'''
+  courseD_multi_bee_conditionals7_predict2_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: ': ''Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'''
+  courseD_multi_bee_debugging9_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: ': ''Look closely at the code below.  Why won''''t the bee collect all of the nectar when you click "Run"? Warning: This is a tricky question, make sure you read all of the options before answering!'''
+  courseD_multi_bee_nestedLoops2_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
+    Look closely at the nested loops below.  What will happen when you click "Run"?: Guarda molto attentamente i cicli annidati presenti nell'area di lavoro. Cosa succederà quando cliccherai su "Esegui"?
+    The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
+    The bee will get all of the nectar.: L'ape raccoglierà tutto il nettare.
+    The bee will get only 2 units of nectar.: L'ape raccoglierà solo 2 dosi di nettare.
+    The bee will move forward and get nectar only one time.: L'ape andrà avanti e raccoglierà il nettare solo una volta.
+  courseD_multi_bee_nestedLoops2_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
+    Look closely at the nested loops below.  What will happen when you click "Run"?: Guarda molto attentamente i cicli annidati presenti nell'area di lavoro. Cosa succederà quando cliccherai su "Esegui"?
+    The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
+    The bee will get all of the nectar.: L'ape raccoglierà tutto il nettare.
+    The bee will get only 2 units of nectar.: L'ape raccoglierà solo 2 dosi di nettare.
+    The bee will move forward and get nectar only one time.: L'ape andrà avanti e raccoglierà il nettare solo una volta.
+  courseD_multi_bee_nestedLoops9_predict2:
+    '12': '12'
+    '4': '4'
+    '8': '8'
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    13: '? Sbagliato. L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+    14: ': Sbagliato. L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+    Look closely at the code below. How much honey will the bee make when you click "Run"?: Guarda molto attentamente il codice presente nell'area di lavoro. Quanto miele verrà prodotto quando cliccherai su "Esegui"?
+    15: '? L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+    16: ': L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+  courseD_multi_bee_nestedLoops9_predict2_2018:
+    '12': '12'
+    '4': '4'
+    '8': '8'
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    13: '? Sbagliato. L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+    14: ': Sbagliato. L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+    Look closely at the code below. How much honey will the bee make when you click "Run"?: Guarda molto attentamente il codice presente nell'area di lavoro. Quanto miele verrà prodotto quando cliccherai su "Esegui"?
+    15: '? L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+    16: ': L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+  courseD_multi_collector_debugging10_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: ': ''Look closely at the code below.  Why won''''t Laurel collect all of the treasure when you click "Run"? Warning: This is a tricky question, make sure you read all of the options before answering!'''
+  courseD_multi_collector_debugging10_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: ': ''Look closely at the code below.  Why won''''t Laurel collect all of the treasure when you click "Run"? Warning: This is a tricky question, make sure you read all of the options before answering!'''
+  courseD_multi_farmer_condLoops9_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Sbagliato. Il programma farà in modo che la contadina esegua ripetutamente un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che incontrerà. Ma alla fine non raccoglierà la zucca.'
+    1: ': Sbagliato. Il programma farà in modo che la contadina esegua ripetutamente un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che incontrerà. Ma alla fine non raccoglierà la zucca.'
+    Incorrect. There is no code here for collecting the pumpkin.: Sbagliato. Non c'è alcuna istruzione per raccogliere la zucca.
+    Take a close look at the code below.  What will happen after you click "Run"?: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa succederà quando cliccherai su "Esegui"?
+    2: '? Il programma farà in modo che la contadina esegua ripetutamente un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che incontrerà. Ma alla fine non raccoglierà la zucca.'
+    3: ': Il programma farà in modo che la contadina esegua ripetutamente un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che incontrerà. Ma alla fine non raccoglierà la zucca.'
+    The harvester will collect all of the crops, except the pumpkin.: La contadina raccoglierà tutte le colture, eccetto la zucca.
+    The harvester will collect all of the crops.: La contadina raccoglierà tutte le colture.
+    The harvester will not collect any of the crops with the path she is taking.: La contadina non riuscirà a raccogliere nulla seguendo il percorso programmato.
+  courseD_multi_farmer_condLoops9_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Sbagliato. Il programma farà in modo che la contadina esegua ripetutamente un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che incontrerà. Ma alla fine non raccoglierà la zucca.'
+    1: ': Sbagliato. Il programma farà in modo che la contadina esegua ripetutamente un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che incontrerà. Ma alla fine non raccoglierà la zucca.'
+    Incorrect. There is no code here for picking the pumpkin.: Sbagliato. Non c'è alcuna istruzione per raccogliere la zucca.
+    Take a close look at the code below.  What will happen after you click "Run"?: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa succederà quando cliccherai su "Esegui"?
+    2: '? Il programma farà in modo che la contadina esegua ripetutamente un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che incontrerà. Ma alla fine non raccoglierà la zucca.'
+    3: ': Il programma farà in modo che la contadina esegua ripetutamente un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che incontrerà. Ma alla fine non raccoglierà la zucca.'
+    The harvester will collect all of the crops.: La contadina raccoglierà tutte le colture.
+    The harvester will not pick any of the crops with the path she is taking.: La contadina non riuscirà a raccogliere nulla seguendo il percorso programmato.
+    The harvester will pick all of the crops, except the pumpkin.: La contadina raccoglierà tutte le colture, eccetto la zucca.
+  courseD_multi_farmer_ramp13:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.'
+    1: ': Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.'
+  courseD_multi_farmer_ramp14:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.'
+    1: ': Incorrect. The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.'
+    2: '? The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.'
+    3: ': The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.'
+  courseD_multi_farmer_while10_predict2:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseD_multi_farmer_while10_predict2_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseD_multi_farmer_while4_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: Sbagliato. La contadina rimuove la terra mentre ce n'è, smettendo appena il mucchio è finito
+    Look closely at the code below.  What will happen after you click "Run"?: Guarda molto attentamente il codice presente nell'area di lavoro. Cosa succederà quando cliccherai su "Esegui"?
+    Nothing will happen.: Non succederà nulla.
+    The farmer will never stop removing dirt.: La contadina non smetterà più di rimuovere palate di terra.
+    The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: La contadina rimuove la terra mentre ce n'è, smettendo appena il mucchio è finito
+    The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.: La contadina rimuoverà la terra mentre ce ne sarà, smettendo appena il mucchio sarà finito.
+  courseD_multi_farmer_while4_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: Sbagliato. La contadina rimuove la terra mentre ce n'è, smettendo appena il mucchio è finito
+    Look closely at the code below.  What will happen after you click "Run"?: Guarda molto attentamente il codice presente nell'area di lavoro. Cosa succederà quando cliccherai su "Esegui"?
+    Nothing will happen.: Non succederà nulla.
+    The farmer will never stop removing dirt.: La contadina non smetterà più di rimuovere palate di terra.
+    The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: La contadina rimuove la terra mentre ce n'è, smettendo appena il mucchio è finito
+    The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.: La contadina rimuoverà la terra mentre ce ne sarà, smettendo appena il mucchio sarà finito.
+  courseD_multi_maze_until10_predict2:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.'
+    1: ': Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.'
+    2: '? Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.'
+    3: ': Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.'
+  courseD_multi_maze_until10_predict2_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseD_multi_maze_until2_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
+    1: ': Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
+    2: '? Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+    3: ': Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+  courseD_multi_maze_until2_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
+    1: ': Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
+    2: '? Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+    3: ': Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+  courseD_multi_scrat_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times.: Sbagliato. Visto che il blocco 'vai avanti' è inserito in un blocco 'ripeti ... volte', Scrat si muoverà avanti per tre volte.
+    Nothing. Scrat will not move at all.: Niente. Scrat non si muoverà.
+    0: '? Visto che il blocco ''vai avanti'' è inserito in un blocco ''ripeti ... volte'', Scrat si muoverà avanti per tre volte. Poi si girerà e andrà avanti altre tre volte, arrivando quindi fino alla ghianda!'
+    1: ': Visto che il blocco ''vai avanti'' è inserito in un blocco ''ripeti ... volte'', Scrat si muoverà avanti per tre volte. Poi si girerà e andrà avanti altre tre volte, arrivando quindi fino alla ghianda!'
+    Scrat will move forward three times, turn, then move forward three more times, making it to the acorn!: Scrat andrà avanti tre volte, girerà, quindi andrà avanti altre tre volte, facendolo arrivare alla ghianda!
+    Scrat will move forward, then turn and crash.: Scrat andrà avanti, quindi girerà e andrà a sbattere.
+    This code uses a new block. What do you think will happen when you press "Run"?: In questo programma c'è un nuovo blocco. Cosa pensi che succederà quando cliccherai su "Esegui"?
+  courseD_multi_scrat_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times.: Sbagliato. Visto che il blocco 'vai avanti' è inserito in un blocco 'ripeti ... volte', Scrat si muoverà avanti per tre volte.
+    Nothing. Scrat will not move at all.: Niente. Scrat non si muoverà.
+    0: '? Visto che il blocco ''vai avanti'' è inserito in un blocco ''ripeti ... volte'', Scrat si muoverà avanti per tre volte. Poi si girerà e andrà avanti altre tre volte, arrivando quindi fino alla ghianda!'
+    1: ': Visto che il blocco ''vai avanti'' è inserito in un blocco ''ripeti ... volte'', Scrat si muoverà avanti per tre volte. Poi si girerà e andrà avanti altre tre volte, arrivando quindi fino alla ghianda!'
+    Scrat will move forward three times, turn, then move forward three more times, making it to the acorn!: Scrat andrà avanti tre volte, girerà, quindi andrà avanti altre tre volte, facendolo arrivare alla ghianda!
+    Scrat will move forward, then turn and crash.: Scrat andrà avanti, quindi girerà e andrà a sbattere.
+    This code uses a new block. What do you think will happen when you press "Run"?: In questo programma c'è un nuovo blocco. Cosa pensi che succederà quando cliccherai su "Esegui"?
+  courseE_multi_artist_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.'
+    1: ': Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.'
+    2: '? Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.'
+    3: ': Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.'
+    4: '? The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.'
+    5: ': The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.'
+  courseE_multi_artist_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.'
+    1: ': Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.'
+    2: '? Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.'
+    3: ': Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.'
+    4: '? The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.'
+    5: ': The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.'
+  courseE_multi_bee_functions_predict1:
+    Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Corretto! Non importa che la quantità di miele sia diversa. La funzione è stata costruita proprio per gestire qualsiasi quantità di miele.
+    0: '? Qui trovi lo stesso programma del precedente esercizio, ma la quantità di miele da produrre in questo caso è diversa. Cosa accadrà quando cliccherai su "Esegui"?'
+    1: ': Qui trovi lo stesso programma del precedente esercizio, ma la quantità di miele da produrre in questo caso è diversa. Cosa accadrà quando cliccherai su "Esegui"?'
+    I don't know.: Non lo so.
+    Incorrect. The function is programmed to handle any amount of honey over 0.: Sbagliato. Il codice presente nella funzione è in grado di gestire qualsiasi quantità di miele.
+    The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.: Il programma funzionerà anche per risolvere questo esercizio. Il codice presente nella funzione è in grado di gestire qualsiasi quantità di miele.
+    The same program will work to solve this puzzle, too.: Lo stesso programma funzionerà anche per risolvere questo esercizio.
+  courseE_multi_bee_functions_predict1_2018:
+    Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Corretto! Non importa che la quantità di miele sia diversa. La funzione è stata costruita proprio per gestire qualsiasi quantità di miele.
+    0: '? Qui trovi lo stesso programma del precedente esercizio, ma la quantità di miele da produrre in questo caso è diversa. Cosa accadrà quando cliccherai su "Esegui"?'
+    1: ': Qui trovi lo stesso programma del precedente esercizio, ma la quantità di miele da produrre in questo caso è diversa. Cosa accadrà quando cliccherai su "Esegui"?'
+    I don't know.: Non lo so.
+    Incorrect. The function is programmed to handle any amount of honey over 0.: Sbagliato. Il codice presente nella funzione è in grado di gestire qualsiasi quantità di miele.
+    The bee will try to collect too much honey from the flowers.: L'ape cercherà di produrre più miele del necessario.
+    The bee won't collect enough honey from the flowers.: L'ape non produrrà la quantità di miele richiesta.
+    The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.: Il programma funzionerà anche per risolvere questo esercizio. Il codice presente nella funzione è in grado di gestire qualsiasi quantità di miele.
+    The same program will work to solve this puzzle, too.: Lo stesso programma funzionerà anche per risolvere questo esercizio.
+  courseE_multi_farmer_functions11_predict:
+    Correct!: Corretto!
+    Look at the functions defined below.  What will the harvester pick?: Guarda le funzioni definite qui sotto.  Cosa raccoglierà la contadina?
+    The harvester will pick all of the pumpkins.: La contadina raccoglierà tutte le zucche.
+    The harvester will pick the corn.: La contadina raccoglierà la pannocchia.
+    The harvester will pick the lettuce.: La contadina raccoglierà la lattuga.
+    The harvester will pick two pumpkins.: La contadina raccoglierà due zucche.
+  courseE_multi_farmer_functions11_predict_2018:
+    Correct!: Corretto!
+    Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce.: Sbagliato. La contadina va avanti fino alla fine del percorso, poi si gira e torna indietro fino a quando raccoglie la lattuga.
+    Look at the functions defined below.  What will the harvester pick?: Guarda le funzioni definite qui sotto.  Cosa raccoglierà la contadina?
+    The harvester will pick all of the pumpkins.: La contadina raccoglierà tutte le zucche.
+    The harvester will pick the corn.: La contadina raccoglierà la pannocchia.
+    The harvester will pick the lettuce.: La contadina raccoglierà la lattuga.
+    The harvester will pick two pumpkins.: La contadina raccoglierà due zucche.
+  courseE_multi_farmer_predict1:
+    Correct!: Corretto!
+    I don't know: Non lo so
+    0: '? Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    1: ': Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    2: '? The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    3: ': The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+  courseE_multi_farmer_predict1_2018:
+    Correct!: Corretto!
+    I don't know: Non lo so
+    0: '? Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    1: ': Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    2: '? The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    3: ': The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+  courseE_multi_farmer_predict2:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. There is a pumpkin and the ''repeat until at pumpkin'' block will make sure that the farmer does not keep going once she reaches the pumpkin.'
+    1: ': Incorrect. There is a pumpkin and the ''repeat until at pumpkin'' block will make sure that the farmer does not keep going once she reaches the pumpkin.'
+    2: '? The ''repeat until at pumpkin'' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.'
+    3: ': The ''repeat until at pumpkin'' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.'
+  courseE_multi_farmer_predict2_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. There is a pumpkin and the ''repeat until at pumpkin'' block will make sure that the farmer does not keep going once she reaches the pumpkin.'
+    1: ': Incorrect. There is a pumpkin and the ''repeat until at pumpkin'' block will make sure that the farmer does not keep going once she reaches the pumpkin.'
+    2: '? The ''repeat until at pumpkin'' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.'
+    3: ': The ''repeat until at pumpkin'' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.'
+  courseE_multi_maze_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Putting the ''move forward'' block inside the ''repeat'' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!'
+    1: ': Putting the ''move forward'' block inside the ''repeat'' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!'
+  courseE_multi_maze_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Putting the ''move forward'' block inside the ''repeat'' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!'
+    1: ': Putting the ''move forward'' block inside the ''repeat'' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!'
+  courseF_bee_variables_8a_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.'
+    1: ': The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.'
+  courseF_multi_artist_for10_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseF_multi_artist_for10_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseF_multi_artist_fwp2_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseF_multi_artist_fwp2_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseF_multi_artist_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.'
+    1: ': Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.'
+    2: '? Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.'
+    3: ': Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.'
+    4: '? The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.'
+    5: ': The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.'
+  courseF_multi_artist_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.'
+    1: ': Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.'
+    2: '? Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.'
+    3: ': Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.'
+    4: '? The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.'
+    5: ': The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.'
+  courseF_multi_artist_variables3a_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.'
+    1: ': The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.'
+  courseF_multi_artist_variables3a_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.'
+    1: ': The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.'
+  courseF_multi_bee_conditionals1_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+    1: ': If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+  courseF_multi_bee_conditionals1_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+    1: ': If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+  courseF_multi_bee_conditionals7_predict2:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there''s not a flower (therefore a honeycomb.).'
+    1: ': Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there''s not a flower (therefore a honeycomb.).'
+  courseF_multi_bee_conditionals7_predict2_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there''s not a flower (therefore a honeycomb.).'
+    1: ': Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there''s not a flower (therefore a honeycomb.).'
+  courseF_multi_bee_for3_predict1:
+    Correct!: Corretto!
+  courseF_multi_bee_for3_predict1_2018:
+    Correct!: Corretto!
+    'I don''t know. ': 'Non lo so. '
+  courseF_multi_bee_functions_predict1:
+    Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Corretto! Non importa che la quantità di miele sia diversa. La funzione è stata costruita proprio per gestire qualsiasi quantità di miele.
+    0: '? Qui trovi lo stesso programma del precedente esercizio, ma la quantità di miele da produrre in questo caso è diversa. Cosa accadrà quando cliccherai su "Esegui"?'
+    1: ': Qui trovi lo stesso programma del precedente esercizio, ma la quantità di miele da produrre in questo caso è diversa. Cosa accadrà quando cliccherai su "Esegui"?'
+    I don't know.: Non lo so.
+    Incorrect. The function is programmed to handle any amount of honey over 0.: Sbagliato. Il codice presente nella funzione è in grado di gestire qualsiasi quantità di miele.
+    The bee will try to collect too much honey from the flowers.: L'ape cercherà di produrre più miele del necessario.
+    The bee won't collect enough honey from the flowers.: L'ape non produrrà la quantità di miele richiesta.
+    The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.: Il programma funzionerà anche per risolvere questo esercizio. Il codice presente nella funzione è in grado di gestire qualsiasi quantità di miele.
+    The same program will work to solve this puzzle, too.: Lo stesso programma funzionerà anche per risolvere questo esercizio.
+  courseF_multi_bee_fwp9_predict1:
+    0: '? Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.'
+    1: ': Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.'
+    I don't know.: Non lo so.
+  courseF_multi_bee_fwp9_predict1_2018:
+    0: '? Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.'
+    1: ': Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.'
+    I don't know.: Non lo so.
+  courseF_multi_playlab_variables4c_predictive1:
+    I don't know.: Non lo so.
+  courseF_multi_playlab_variables4c_predictive1_2018:
+    I don't know.: Non lo so.
+  coursee_prediction_artistfunction2:
+    Correct!: Corretto!
+  coursee_prediction_artistfunction2_2018:
+    Correct!: Corretto!
+  csd-post-survey-2018-topic-ai:
+    'No': 'No'
+    'Yes': 'Sì'
+  csd-post-survey-2018-topic-cryptocurrency:
+    'No': 'No'
+    'Yes': 'Sì'
+  csd-post-survey-2018-topic-cybersecurity:
+    Cybersecurity: Sicurezza informatica
+    'No': 'No'
+    'Yes': 'Sì'
+  csd-post-survey-2018-topic-databases:
+    'No': 'No'
+    'Yes': 'Sì'
+  csd-post-survey-2018-topic-datascience:
+    'No': 'No'
+    'Yes': 'Sì'
+  csd-post-survey-2018-topic-gamedev:
+    'No': 'No'
+    'Yes': 'Sì'
+  csd-post-survey-2018-topic-hardware:
+    'No': 'No'
+    'Yes': 'Sì'
+  csd-post-survey-2018-topic-internet:
+    'No': 'No'
+    'Yes': 'Sì'
+  csd-post-survey-2018-topic-mobile:
+    'No': 'No'
+    'Yes': 'Sì'
+  csd-post-survey-2018-topic-parallel:
+    'No': 'No'
+    'Yes': 'Sì'
+  csd-post-survey-2018-topic-programming:
+    'No': 'No'
+    'Yes': 'Sì'
+  csd-post-survey-2018-topic-robotics:
+    'No': 'No'
+    Robotics: Robotica
+    'Yes': 'Sì'
+  csd-post-survey-2018-topic-web:
+    'No': 'No'
+    'Yes': 'Sì'
+  csp-post-survey-2017-q64:
+    0: '? ''Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '''
+    1: ': ''Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '''
+    'No': 'No'
+    'Yes': 'Sì'
+  csp-post-survey-2017-q64_2018:
+    0: '? ''Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '''
+    1: ': ''Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '''
+    'No': 'No'
+    'Yes': 'Sì'
+  csp-post-survey-2017-q65:
+    I don't know: Non lo so
+    'No': 'No'
+    'Yes': 'Sì'
+  csp-post-survey-2017-q65_2018:
+    I don't know: Non lo so
+    'No': 'No'
+    'Yes': 'Sì'
+  csp-post-survey-2018-topic-ai:
+    'No': 'No'
+    'Yes': 'Sì'
+  csp-post-survey-2018-topic-cryptocurrency:
+    'No': 'No'
+    'Yes': 'Sì'
+  csp-post-survey-2018-topic-cybersecurity:
+    Cybersecurity: Sicurezza informatica
+    'No': 'No'
+    'Yes': 'Sì'
+  csp-post-survey-2018-topic-databases:
+    'No': 'No'
+    'Yes': 'Sì'
+  csp-post-survey-2018-topic-datascience:
+    'No': 'No'
+    'Yes': 'Sì'
+  csp-post-survey-2018-topic-gamedev:
+    'No': 'No'
+    'Yes': 'Sì'
+  csp-post-survey-2018-topic-hardware:
+    'No': 'No'
+    'Yes': 'Sì'
+  csp-post-survey-2018-topic-internet:
+    'No': 'No'
+    'Yes': 'Sì'
+  csp-post-survey-2018-topic-mobile:
+    'No': 'No'
+    'Yes': 'Sì'
+  csp-post-survey-2018-topic-parallel:
+    'No': 'No'
+    'Yes': 'Sì'
+  csp-post-survey-2018-topic-programming:
+    'No': 'No'
+    'Yes': 'Sì'
+  csp-post-survey-2018-topic-robotics:
+    'No': 'No'
+    Robotics: Robotica
+    'Yes': 'Sì'
+  csp-post-survey-2018-topic-web:
+    'No': 'No'
+    'Yes': 'Sì'
+  csp-pre-survey-2017-q40:
+    0: '? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    1: ': If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    Other: Altro
+  csp-pre-survey-2017-q40_2018:
+    0: '? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    1: ': If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    Other: Altro
+  csp_ap_exam_signup:
+    'No': 'No'
+    'Yes': 'Sì'
+  csp_ap_previous_years:
+    'No': 'No'
+    'Yes': 'Sì'
+  csp_ap_taking_ap_class:
+    'No': 'No'
+    'Yes': 'Sì'
+  cspu5_assess1_fivemore:
+    "-2": "-2"
+    '3': '3'
+    '5': '5'
+    '8': '8'
+  cspu5_assess1_fivemore_2018:
+    "-2": "-2"
+    '3': '3'
+    '5': '5'
+    '8': '8'
+  cspu5_assess1_fivemore_exam_prep:
+    "-2": "-2"
+    '3': '3'
+    '5': '5'
+    '8': '8'
+  cspu5_assess1_flowchart:
+    '10': '10'
+    '5': '5'
+  cspu5_assess1_flowchart_2018:
+    '10': '10'
+    '5': '5'
+  cspu5_assess1_flowchart_exam_prep:
+    '10': '10'
+    '5': '5'
+  cspu5_assess1_increase:
+    '10': '10'
+    '13': '13'
+    '5': '5'
+    '8': '8'
+  cspu5_assess1_increase_2018:
+    '10': '10'
+    '13': '13'
+    '5': '5'
+    '8': '8'
+  cspu5_assess1_increase_exam_prep:
+    '10': '10'
+    '13': '13'
+    '5': '5'
+    '8': '8'
+  cspu5_assess2_addstrings:
+    result: risultato
+  cspu5_assess2_addstrings_2018:
+    result: risultato
+  cspu5_assess2_addstrings_exam_prep:
+    result: risultato
+  cspu5_assess2_combineString:
+    '10': '10'
+    '55': '55'
+    result: risultato
+  cspu5_assess2_combineString_2018:
+    '10': '10'
+    '55': '55'
+    result: risultato
+  cspu5_assess2_combineString_exam_prep:
+    '10': '10'
+    '55': '55'
+    result: risultato
+  cspu5_assess2_oldEnough:
+    '35': '35'
+    'false': 'falso'
+    'true': 'vero'
+  cspu5_assess2_oldEnough_2018:
+    '35': '35'
+    'false': 'falso'
+    'true': 'vero'
+  cspu5_assess2_oldEnough_exam_prep:
+    '35': '35'
+    'false': 'falso'
+    'true': 'vero'
+  cspu5_assess2_weight:
+    '125': '125'
+    '200': '200'
+    '30': '30'
+    '50': '50'
+    '75': '75'
+  cspu5_assess2_weight_2018:
+    '125': '125'
+    '200': '200'
+    '30': '30'
+    '50': '50'
+    '75': '75'
+  cspu5_assess2_weight_exam_prep:
+    '125': '125'
+    '200': '200'
+    '30': '30'
+    '50': '50'
+    '75': '75'
+  cspu5_assess3_array1:
+    '10': '10'
+    '4': '4'
+    '7': '7'
+    '9': '9'
+  cspu5_assess3_array1_2018:
+    '10': '10'
+    '4': '4'
+    '7': '7'
+    '9': '9'
+  cspu5_assess3_array1_exam_prep:
+    '10': '10'
+    '4': '4'
+    '7': '7'
+    '9': '9'
+  cspu5_assess3_array2:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_array2_2018:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_array2_exam_prep:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_array4:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '8': '8'
+  cspu5_assess3_array4_2018:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '8': '8'
+  cspu5_assess3_array4_exam_prep:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '8': '8'
+  cspu5_assess3_listAppend:
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '6': '6'
+  cspu5_assess3_listAppend_2018:
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '6': '6'
+  cspu5_assess3_listAppend_exam_prep:
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '6': '6'
+  cspu5_assess3_loopValue1:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+  cspu5_assess3_loopValue1_2018:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+  cspu5_assess3_loopValue1_exam_prep:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+  cspu5_assess3_loopValue2:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_loopValue2_2018:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_loopValue2_exam_prep:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_loopValue3:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_loopValue3_2018:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_loopValue3_exam_prep:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_mysterySwap:
+    a: a
+    d: d
+  cspu5_assess3_mysterySwap_2018:
+    a: a
+    d: d
+  cspu5_assess3_mysterySwap_exam_prep:
+    a: a
+    d: d
+  cspu5_assess4_dataReturns:
+    '10': '10'
+    '16': '16'
+    '3': '3'
+    '4': '4'
+    '9': '9'
+  cspu5_assess4_dataReturns_2018:
+    '10': '10'
+    '16': '16'
+    '3': '3'
+    '4': '4'
+    '9': '9'
+  cspu5_assess4_dataReturns_exam_prep:
+    '10': '10'
+    '16': '16'
+    '3': '3'
+    '4': '4'
+    '9': '9'
+  cspu5_assess4_listOutput:
+    '17': '17'
+    '3': '3'
+    '42': '42'
+    '9': '9'
+  cspu5_assess4_listOutput_2018:
+    '17': '17'
+    '3': '3'
+    '42': '42'
+    '9': '9'
+  cspu5_assess4_listOutput_exam_prep:
+    '17': '17'
+    '3': '3'
+    '42': '42'
+    '9': '9'
+  grade2_multi_collector_A_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?'
+    1: ': Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?'
+  grade2_multi_collector_A_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  grade2_multi_collector_A_predict1_copy_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  msm variables multi 1:
+    '15': '15'
+    x: x
+  msm variables multi 10:
+    '17': '17'
+    x: x
+  msm variables multi 11:
+    '17': '17'
+    x: x
+  msm variables multi 12:
+    '17': '17'
+    x: x
+  msm variables multi 13:
+    '117': '117'
+    '17': '17'
+    x: x
+  msm variables multi 2:
+    '8': '8'
+  msm variables multi 3:
+    '5': '5'
+    x: x
+  msm variables multi 4:
+    '15': '15'
+    '3': '3'
+    '8': '8'
+  msm variables multi 5:
+    '3': '3'
+    '5': '5'
+  msm variables multi 6:
+    '1': '1'
+    '5': '5'
+    hello: ciao
+  msm variables multi 7:
+    '3': '3'
+    x: x
+  msm variables multi 8:
+    '3': '3'
+    x: x
+  msm variables multi 9:
+    '5': '5'
+    '6': '6'
+    x: x
+  post-assessment survey q34:
+    Easy: Facile
+    Hard: Difficile
+  pre-assessment survey q24:
+    'No': 'No'
+    'Yes': 'Sì'
+  pre-assessment survey q26:
+    0: '? Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?'
+    1: ': Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?'
+    'No': 'No'
+    'Yes': 'Sì'
+  pre-assessment survey q27:
+    0: '? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    1: ': If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    Other: Altro
+  pre-assessment survey q28:
+    '10': '10'
+    '11': '11'
+    '12': '12'
+    '8': '8'
+    '9': '9'
+    Other: Altro
+  pre-assessment survey q29:
+    Female: Femminile
+    Male: Maschile
+    Other: Altro
+    Prefer not to answer: Preferisco non rispondere
+  pre-assessment survey q30:
+    Asian: Asiatico
+    Black or African American: Neri o afroamericani
+    Other: Altro
+    Prefer not to answer: Preferisco non rispondere
+    White: Bianco
+  sarah_test_maggie:
+    Question: Domanda
+    test: test
+  sciPD PreQ 1:
+    'No': 'No'
+    'Yes': 'Sì'
+  sciPD PreQ 2:
+    'No': 'No'
+    'Yes': 'Sì'
+  test anonymous student survey educational:
+    'No': 'No'
+    'Yes': 'Sì'
+  test me:
+    Question: Domanda
+    title: titolo
+  unique level name here:
+    Question: Domanda
+    title: titolo
+  text_match:
+    U2L07 Assessment4:
+      '43': '43'

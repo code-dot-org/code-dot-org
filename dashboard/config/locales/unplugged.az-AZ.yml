@@ -1,0 +1,114 @@
+---
+az:
+  data:
+    unplugged:
+      Unplug1:
+        title: İnformatikaya giriş
+        desc: Bu dərs Informatika haqda ilkin anlayışı təqdim edərək onun əslində
+          nə etdiyini izah edəcək. Bu, həmçinin tələbələrə kompüter bilicisinin hansı
+          rola malik olduğunu təsəvvür etməyə də şans yaradacaq. Çalışmalar və tapşırıqlar
+          bitənə qədər, hər bir tələbəyə nə öyrəndiyinə dair qısa məzmunlu xatirlatmalar
+          ediləcək. Dərslərlə birbaşa əlaqəli olan lüğət sözlərinin tədrisini etməməyin
+          tərəfdarı ola  bilərsiniz, amma daha yüksək nailiyyətləri gözləməkdənsə,
+          həmin sözləri daha əyləncəli yolla təqdim etmək daha məhsuldar və faydalı
+          hesab olunur.
+      Unplug2:
+        title: Hesablama təfəkkürü
+        desc: Yanlız kağız və keçəli qələm ilə şagirdlər hesablayıcı fikirləşmənin
+          dörd addımını öyrənəcək. qısa başlanğıcdan sonra şagirdlər qruplara paylana
+          bilər haradaki onlar başqa şagirdlərin müəyyən canavarı çəkməsi üçün(qabaqcadan
+          secilmiş canavarların kataloqundan) istiqamət yaratmalı olacaqlar. bütün
+          tapşırıq çürümüş olmalıdır, sonra komandalar canavarlardan mücərrəd muxtəlif
+          detalları, nümunə üçün kataloqdakı bütün canavarları analiz edecek, sonra
+          həmin informasiyani başqa bir komandanın müəyyən canavarı çəkməsi üçün alqoritm
+          (istiqamət) yaratmağa istifadə edəcək. komandalar sonra alqoritmləri başqa
+          bir qrup ilə döndərəcək və alqoritmin bildirişindən qaynaqlanan canavarı
+          çəkəcək. şəkil əsl komandanın hədəflədiyidir?
+      Unplug3:
+        title: Millimetrlik kağızda proqramlaşdırma
+      Unplug4:
+        title: Alqoritmlər
+        desc: Bu dərs alqoritmləri əhatə edir. Tangram şəkilləri və qrafik kağızdan
+          istifadə edərək birinci çalışma hər təlimin mümkün olduğu qədər aydın və
+          dəqiq olaraq istifadə edilə bilərliyinin nə qədər mühüm olduğunu göstərir.
+          sonra isə, sinif  bir kağızı tetraedr olaraq qatlayabilmənin neçə yolu olduğunu
+          kəşfetməyə çalışır, necə bəzi metodların digərlərindən daha çox və ya daha
+          az qatlamalı olduğunu incələyir.
+      Unplug5:
+        title: funksiyalar
+      Unplug6:
+        title: Şərti ifadələr
+      Unplug7:
+        title: Mahnı bəstələmə
+      Unplug8:
+        title: Mücərrədlik
+      Unplug9:
+        title: Estafet proqramlaşdırması
+      Unplug10:
+        title: İnternet
+      Unplug11:
+        title: Sarımaq
+      UnplugHappyMaps:
+        title: Şən xəritələr
+      RelayProgramming:
+        title: Estafet proqramlaşdırması
+      Conditionals:
+        title: Şərti ifadələr
+      GraphPaperProgramming:
+        title: Millimetrlik kağızda proqramlaşdırma
+      ComputationalThinking:
+        title: Hesablama təfəkkürü
+      Internet:
+        title: İnternet
+        desc: Şagirdlər kağız parçalarından istifadə edərək müxtəlif internet yayım
+          metodlarını təmsil edən ismarışlar göndərirlər.
+      BinaryImages:
+        title: İkilik təsvirlər
+      courseB_unplugged_MRF:
+        title: Sərbəst fəaliyyət
+      courseB_unplugged_loopyMRF:
+        title: Sərbəst fəaliyyət
+      courseC_Unplugged_ScreenOutTheMean:
+        title: Sərbəst fəaliyyət
+      courseD_unplugged_digitalCitizenship:
+        title: Sərbəst fəaliyyət
+      courseF_unplugged_powerOfWords:
+        title: Sərbəst fəaliyyət
+      courseA_unplugged_happyMaps:
+        title: Şən xəritələr
+      courseD_unplugged_graphPaperProgramming:
+        title: Millimetrlik kağızda proqramlaşdırma
+      courseD_unplugged_relayProgramming:
+        title: Estafet proqramlaşdırması
+      courseD_unplugged_binaryImages:
+        title: İkilik təsvirlər
+      courseE_unplugged_internet:
+        title: İnternet
+        desc: Şagirdlər kağız parçalarından istifadə edərək müxtəlif internet yayım
+          metodlarını təmsil edən ismarışlar göndərirlər.
+      UnplugHappyMaps_2018:
+        title: Şən xəritələr
+      GraphPaperProgramming_2018:
+        title: Millimetrlik kağızda proqramlaşdırma
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Sərbəst fəaliyyət
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Sərbəst fəaliyyət
+      Conditionals_2018:
+        title: Şərti ifadələr
+      BinaryImages_2018:
+        title: İkilik təsvirlər
+      RelayProgramming_2018:
+        title: Estafet proqramlaşdırması
+      Conditionals_2019:
+        title: Şərti ifadələr
+      GraphPaperProgramming_2019:
+        title: Millimetrlik kağızda proqramlaşdırma
+      RelayProgramming_2018_2019:
+        title: Estafet proqramlaşdırması
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Sərbəst fəaliyyət
+      BinaryImages_2019:
+        title: İkilik təsvirlər
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Sərbəst fəaliyyət

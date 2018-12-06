@@ -1,0 +1,978 @@
+---
+et:
+  errors:
+    messages:
+      not_saved: 'Palun parandage järgmised vead:'
+      too_young: Sellel sisul on vanusepiirang ning see ei ole kättesaadav noorematele
+        õpilastele.
+      teacher_must_accept_terms: See sisu ei ole noorematele õpilastele kättesaadav.
+        Palu, et õpetaja võtaks vastu uuendatud teenusetingimused, et sisule juurdepääsu
+        saada. Õpetaja peab selleks Code Studiosse sisse logima ja klikkima nuppu
+        "Vaata uuendatud tingimusi".
+      pair_programmer: Teie programmeerimispaariline on õpilane, kellel ei ole sellele
+        sisule juurdepääsu. Sellele sisule juurdepääsemiseks lõpeta paaris programmeerimine
+        ja proovi uuesti.
+  activerecord:
+    errors:
+      messages:
+        blank: on nõutud
+        blank_plural: on nõutud
+    attributes:
+      user:
+        name: Kuvatav nimi
+        email: E-post
+        parent_email: Lapsevanema/hooldaja e-posti aadress
+        personal_email: Isiklik e-posti aadress <a href="%{url}"> (vajuta siia, kui
+          teil ei ole e-posti aadressi)</a>
+        username: Kasutajanimi
+        password: Salasõna
+        password_confirmation: Salasõna kinnitus
+        current_password: Praegune salasõna
+        locale: Keel
+        age: Vanus
+        gender: Sugu
+        edit_header: Muuda kasutajakonto üksikasju
+        error:
+          future: ei saa olla tulevikus
+  hello: Tere maailm
+  welcome_back: Tere tulemast tagasi, %{name}
+  your_professional_learning_plan: Sinu professionaalne õppeplaan
+  see_your_learning_plan: Vaata oma õppeplaani
+  submit: Esita
+  unsubmit: Võta vastus tagasi
+  previous_page: Eelmine leht
+  next_page: Järgmine leht
+  next_resource: Järgmised materjalid
+  cancel: Tühista
+  okay: Olgu
+  or: või
+  heading_x_of_y: "%{heading} (leht %{x} of %{y})"
+  add_teacher_form:
+    code:
+      label: 'Lisa õpetaja:'
+      placeholder: Üksuse kood (ABCDEF)
+      instructions: Palun sisesta kood, mille andis sulle su õpetaja. See on 6-kohaline
+        tähtedest koosnev kood, näiteks "ABCDEF".
+      instructions_short: Sisestage oma 6-täheline sektsiooni kood
+    submit: Lisa õpetaja
+  add_hint_form:
+    placeholder: Palun sisesta oma vihje siia
+    submit: Lisa vihje
+  appname: Code.org
+  stage: Tase
+  stage_number: Õppetund %{number}
+  puzzle: Mõistatus
+  trophies: Trofeed
+  courses: Kursused
+  courses_page:
+    title_student: Õpi Code stuudios
+    title_teacher: Õpeta koos Code Studioga
+  unplugged_activity: Lahutatud tegevus
+  of: kohta
+  more: NÄITA ROHKEM
+  less: NÄITA VÄHEM
+  beta: beeta
+  try_hoc: 'Proovi Koodi Tundi, kliki siia >> '
+  try_k8intro: Proovige meie K-8 Sissejuhatus arvutiteadusesse kursust (15-25 tundi)
+  k8intro: K-8 Sissejuhatus Arvutiteadusesse kursusele (15-25 tundi)
+  already_started: 'Oled juba alustanud? Jätka siin>> '
+  demos: 'Admin: Kõik demod'
+  continue: Jätka
+  prize: auhind
+  more_info: Rohkem infot
+  auth:
+    sign_in_with: Logige sisse %{provider}
+    signed_in: Olete sisse logitud!
+    signed_out: Olete välja loginud <a href="%{url}">Code.org</a>.
+    sign_out_of: Kasutasid %{provider} sisselogimiseks. <a href="%{url}">Vajuta siia</a>
+      et logida välja%{provider}.
+    already_signedup: Oled juba registreerunud?
+    notyet_signedup: Pole veel liitunud?
+    google_oauth2: Google'i konto
+    twitter: Twitter
+    facebook: Facebook
+    windowslive: Microsofti konto
+    microsoft_v2_auth: Microsofti konto
+    clever: Tark konto
+    forgot_password: Unustasid oma salasõna?
+    need_confirmation: Ei saanud kinnituse juhiseid?
+    need_unlock: Ei saanud lahtilukustamise juhiseid?
+    not_linked: Kahjuks sinu Code.org konto ei ole seotud teie %{provider}. Sisselogimiseks
+      palun sisestage parool.
+  signup_form:
+    student_count: "%{count} õpilast on juba registreerunud."
+    teacher_count: "%{count} õpetajat on juba registreerunud."
+    overview: Registreeri kasutajaks, et oma edusamme jälgida ja tundi planeerida.
+      <a href="/">Mõistatusi ja nende erinevaid etappe on võimalik</a> ilma kasutajakontota
+      sirvida, kuid projektide edusammude salvestamiseks on vaja kasutajat.
+    hoc_already_signed_up_heading: Alusta ilma sisse logimata
+    hoc_already_signed_up_content: Olete registreerinud KoodiTunni külalisõpetajaks!
+      Sina ja sinu õpilased ei pea Code Studiosse sisse logima, et sellest üritusest
+      osa võtta. Alustamiseks<a href="https://code.org/learn">vali oma klassile juhend</a>ja
+      jaga nendega linki.<br/>Kui teile meeldis KoodiTund ja soovite enamat, võite
+      allpool luua Code Studio konto ja registreerida oma õpilased meie<a href="https://code.org/educate">pikematele
+      kursustele.
+    teacher_educator_guide: Vaata õpetajate juhendit
+    title: Registreerumine Code.org-i
+    school_name: Kooli nimi (ei ole kohustuslik)
+    school_address: Kooli aadress (ei ole kohustuslik)
+    address_placeholder: aadress, linn, riik, postiindeks
+    gender: Sugu (ei ole kohustuslik)
+    birthday: Sünnikuupäev (ei ole kohustuslik)
+    age: Vanus
+    user_type: Kas sa oled õpilane või õpetaja?
+    submit: Liitu
+    teacher: Kas sa oled õpetaja?
+    valid_username: Vaba!
+    invalid_username: Kasutajanimi peab olema vähemalt 5 tähemärgi pikkune
+    taken_username: Selline kasutajanimi on juba kasutusel
+    valid_password: Sobilik salasõna!
+    invalid_password: Salasõna peab olema vähemalt 6 tähemärgi pikkune
+    mismatch_password: Sinu poolt sisestatud salasõnad ei ühti
+    student_terms: Nõustun Code.org<a href='http://code.org/tos'>teenusetingimustega</a>.
+      Kui ma olen alla 13 aasta vana, kinnitan ma käesoleva vormi esitamisega, et
+      mul on enda vanema või seadusliku eestkostja luba Code.org teenuseid kasutada.<br/><br/>E-posti
+      aadresse ei salvestata viisil, mis lubaks meil õpilastega ühendust võtta. Õpilased
+      ei saa Code.org'ilt e-kirju v.a parooli seadistamiseks. Vaata meie<a href='http://code.org/privacy'>privaatsuspoliitikat</a>,
+      et saada rohkem informatsiooni.
+    teacher_terms: Nõustun Code.org teenusetingimustega. Vaata meie<a href='http://code.org/privacy'>privaatsuspoliitikat</a>,
+      et saada rohkem informatsiooni.
+    additional_information: Meil on vaja täiendavat teavet, et sind registreerida.
+    user_type_label: Konto tüüp
+    user_type_teacher: Õpetaja
+    user_type_student: Õpilane
+    field_is_required: on nõutud
+    accept_terms: Pead konto loomiseks nõustuma
+    email_preference_yes: Jah
+    email_preference_no: Ei
+  school_info:
+    private: Privaatne
+    public: Avalik
+    homeschool: Kodukool
+    other: Muu
+    school: Kool
+    school_name: Kooli nimi
+    school_zip: Kooli postiindeks
+    school_address: Kooli aadress
+    school_organization_name: Kooli/organisatsiooni nimi
+    school_organization_zip: Kooli/organisatsiooni postiindeks
+  signin_form:
+    title: Sul juba on konto? Logi sisse
+    login: E-post
+    login_username: E-post või kasutajanimi
+    password: Salasõna
+    remember: Jäta mind meelde
+    submit: Logi sisse
+  signin:
+    try_heading: Tahad proovida koodi kirjutamist ilma registreerimata?
+    try_hoc: Proovi enne KoodiTundi
+    try_20hours: Proovige meie 20-tunnist arvutiõpetuse sissejuhatust
+  signinsection:
+    welcome: Tere tulemast %{section_name}
+    name: Vali oma nimi
+    picture: Nüüd leia oma salajane pilt
+    words: Nüüd sisestage oma salajased sõnad
+    login: Logi sisse
+    invalid_login: Vale parool, proovi uuesti
+    pair_programming: Mul on paariline arvuti juures
+  password:
+    reset_form:
+      title: Unustasid oma salasõna?
+      instructions: Sisesta oma e-maili aadress ja me saadame sulle juhised parooli
+        uuesti seadistamiseks.
+      email: E-posti aadress
+      submit: Esita
+    change_form:
+      title: Muuda salasõna
+      new_password: Uus salasõna
+      confirm_password: Kinnita uus parool
+      submit: Muuda mu parool
+  welcome_email:
+    subject: Liitu minu klassiga (Code.org lehel)
+    body: 'Kliki lingile, et registreeruda arvutiõpetuse kursustele Code.org-is (koos
+      minuga oma "õpetaja"):%{link} Õpetused on lõbusad, visuaalselt kütkestavad ja
+      õpetavad arvutiõpetuse põhitõdesid kasutades lihtsat, giidiga, mängu-sarnaseid
+      kogemusi. Õpi koodi kirjutama Bill Gatesilt, Mark Zuckerbergilt, Angry birdsilt
+      ja Plants vs Zombielt! :-) %{name}
+
+'
+  teacher_mailer:
+    new_teacher_subject: Tere tulemast Code.org!
+  section:
+    code_with_teacher: "%{section_code} ja %{teacher_name}"
+    type:
+      word: Salajane sõna
+      email: E-post
+      google_classroom: Google Classroom
+  follower:
+    invite_sent: Kutse saadetud
+    added_teacher: "%{name} lisatud kui sinu õpetaja"
+    registered: Te olete registreeritud %{section_name}.
+    error:
+      signed_in: Palun logige enne jätkamist välja
+      username_not_found: Kasutajanime %{username} ei leitud
+      username_in_use: "%{username} on juba võetud, palun vali teine"
+      no_teacher: Ei leitud kedagi sisse logitud '%{teacher_email_or_code}'. Paluge
+        neil siin registreeruda ja proovige siis neid uuesti lisada
+      section_not_found: Ei leidnud jaotist koodiga "%{section_code}".
+      blank_code: Sisestage jaotise kood
+      cant_join_own_section: Kahjuks te ei saa ühineda iseenda osaga.
+    mail:
+      student_disassociated:
+        subject: 'Code.org teade: %{student_name} pole enam seotud teiega kui teie
+          õpilane.'
+  reports:
+    error:
+      access_denied: Teil pole juurdepääsu selle isiku andmetele
+  crud:
+    new_model: Uus %{model}
+    show: Kuva
+    edit: Muuda
+    edit_model: Muuda %{model}
+    update: Uuenda
+    submit: Esita
+    destroy: Kustuta
+    back: Tagasi
+    confirm: Oled kindel?
+    created: "%{model} on edukalt loodud."
+    updated: "%{model} on edukalt uuendatud."
+    destroyed: "%{model} on edukalt kustutatud."
+    access_denied: Sul ei ole sellele %{model} juurdepääsu.
+  nav:
+    header:
+      finished_hoc: Olen lõpetanud oma KoodiTunni
+      sign_in_to_save: Edusammude salvestamiseks logi sisse
+      free_play:
+        playlab: Loo Play Lab rakendus
+        artist: Joonista midagi
+        applab: Loo App Lab rakendus
+      my_dashboard: Minu töölaud
+      course_catalog: Kursuste kataloog
+      project_gallery: Projektid
+      help_support: Abi & Klienditugi
+      documentation: Dokumentatsioon
+      educate_elementary: Algkool
+      educate_middle: Põhikool
+      educate_high: Gümnaasium
+      educate_hoc: KoodiTund
+      teach: Õpeta
+      about: Info
+    user:
+      classroom: Õpetaja kodulehekülg
+      district_dashboard: Piirkondlik juhtpaneel
+      label: Tere, %{username}
+      stats: Code Studio
+      settings: Minu konto
+      logout: Logi välja
+      signin: Logi sisse
+      signup: Loo konto
+      already_registered: Oled juba liitunud?
+      team: Võistkond
+      driver: Sisse logitud
+      navigator: Parnter
+      create: Loo
+      applab: App Lab
+      artist: Kunstnik
+      gamelab: Game Lab
+      playlab: Play Lab
+      minecraft: Minecraft
+      flappy: Flappy
+      dance: Tantsuõhtu
+    popup:
+      progress_for_user: "%{name} edusammud"
+      progress: Sinu progress
+      lines: 'Koodiridade koguarv: %{lines}'
+      close: SULGE
+      mastery: Mõisted
+      puzzle_map: Etapid
+      prizes: Kogu kõik %{total_trophies} trofeed ja võida auhindu!
+      prize_earned: Kõik %{total_trophies} trofeed korjatud. Võitsid auhinna!
+      prize_us_only: "(Ainult USA õpilased)"
+      prizes_link: rohkem infot
+  teacher:
+    answer: Vastus
+    for_teachers_only: Ainult õpetajatele
+    title:
+      one: 'Sinu õpetaja:'
+      other: 'Sinu õpetajad:'
+    remove: "(eemalda õpetaja)"
+    confirm:
+      remove: Oled kindel, et tahad seda õpetajat eemaldada?
+    students:
+      dashboard: Mine õpetaja menüüsse
+    user_not_found: Õpetajat ei leitud.
+    student_teacher_disassociated: Olete lahkunud oma õpetaja %{teacher_name} tunnist
+      %{section_code}.
+    panel:
+      answer_viewer: Õpetaja paneel
+      student: Õpilane
+      viewing_solution: Lahenduse vaatamine
+      try_it_yourself: Proovi seda ise
+      section: Jaotis
+      example: Näidislahendus
+      example_with_number: Näidislahend %{solution_number}
+      submitted_on: 'Esitatud:'
+      unsubmit: Võta vastus tagasi
+      worked_with: Töötas koos
+      update_lock_settings: Uuenda lukustatud seadeid siin.
+      clear_response: Puhasta vastus
+  user:
+    email_confirm_needed: 'E posti aadress on kinnitamata:'
+    email_confirm_needed_required: 'Teie e-posti aadress %{email} ei ole kinnitatud:'
+    email_confirm_wrong_email: "(Vale e-posti aadress?)"
+    email_resend_confirm: Saada kinnituse juhendid uuesti
+    new_password_hint: "(Jäta tühjaks, kui ei soovi seda muuta)"
+    current_password_hint: "(sisesta oma parool muudatuste kinnitamiseks)"
+    delete: Kustuta oma konto
+    delete_text: Allolevale nupule klikkimine kustutab sinu konto.
+    delete_text_teacher_note: 'Pange tähele: konto kustutamine ei kustuta sinu õpilaste
+      kontosid.'
+    delete_confirm: Kas soovite kindlasti kustutada oma konto?
+    create_personal_login: Loo isiklik login
+    create_personal_login_under_13_username: Kasutajanimi (ärge kasutage oma pärisnime!)
+    create_personal_login_under_13_parent_email: Lapsevanem/hooldaja e-posti aadress
+  user_level:
+    completed: Tehtud
+    tried: Proovisin
+  home:
+    title: Code Studio
+    description: Code Stuudio on koduks online kursustele, mis on loodud Code.org
+      poolt.
+    lines_of_code: "%{lines_count} RIDA KOODI ON ÕPILASTE POOLT KIRJUTATUD"
+    lines_of_code_linebreak: "%{lines_count} koodiread <br/> kirjutatud %{students_count}
+      miljonite õpilaste poolt"
+    all_courses: Kursuste 1, 2 ja 3 ülevaade
+    lesson_plans: Tunnikavad
+    signin_message: Oled juba registreerunud? %{link}
+    student_reg_link: Õpilaste registreerimine
+    teacher_reg_link: Õpetajate registreerimine
+    signin_directions: Konto abil saate jälgida oma edusamme. <br/> Õpetajad, Jälgige
+      kogu oma klassi.
+    teacher_dashboard: Vaata edusammudee armatuurlauda
+    teacher_student_count_one: Sul on %{count} õpilane.
+    teacher_student_count: sul on %{count} õpilast.
+    teacher_averages: Teie Õpilased on keskmiselt teeninud %{trophy_average}/%{trophy_max}
+      "Kontseptsiooni Meisterlikkuse" trofeed.
+    teacher_print_certificates: Saate printida tunnistusi õpilastele, kes selle kursuse
+      lõpetasid
+    teacher_read_blog: Loe uudiseid ja värskendusi meie materjale meie hariduslikust
+      blogist
+    classroom: Sinu klass
+    student_progress: Sinu õppeprogress
+    student_stats: Sa oled saanud %{trophy_count}/%{trophy_max} "Kontseptsiooni Meisterlikkuse"
+      trofeed.
+    student_left_off: 'Kus sa pooleli jäid:'
+    student_finished: Sa oled lõpetanud kõik Code.org õpetused. Vali teine klass %{online_link}
+      või ka %{local_school_link}.
+    local_school: kohalik kool
+    online: onlain
+    see_details: Vaata detaile
+    view_course: Vaata kursust
+    prize_info: 'Auhinnad osalemise eest (ainult Ameerika Ühendriikide avalike koolide
+      õpetajatele): Kuni $1,000 eest koolitarbeid.'
+    tryfirst: 'Või võite proovida ja hiljem registreerida:'
+    trynow: Lisateave
+    add_hint_help: Palun aidake meil lisada kasulikke vihjeid Code.org õpetusvideotesse
+    20hour_overview: See 20-tunnine kursus tutvustab arvutiteaduse ja programmeerimise
+      põhilisi aspekte ja mõisteid. Kursus on mõeldud õpilastele kuni 8, klassini,
+      aga sellest on lõbus õppida igas vanuses.
+    test_videos_help: Proovige meie uut videomängijat enda koolis
+    try_beta_courses: Uus! Proovi meie beta kursuseid õpilastele kuni 5. klassini
+    use_as_teacher: Kasuta seda lehte kui õpetaja
+    heading_hoc2014: "<h2>Koodi Tund </h2><h1>Kõikidele vanustele</h1>"
+    heading_elementary: "<h2>20-tunnised kursused </h2><h1> Arvutiteaduse Põhialused
+      (kõik vanused)</h1>"
+    heading_apps: "<h2>Lõbu</h2> <h1>Kõigile</h1>"
+    heading_tools: "<h2>Valmis järgmiseks sammuks?</h2><h1>Tööriistad keskkoolile</h1>"
+    heading_legacy: "<h2>Meie kiirendatud kursus</h2> <h1>Igas vanuses</h1>"
+    your_gallery: Galerii
+    no_primary_course: Proovige Code Studio kursust
+    choose_next_course: Proovige Code Studio kursuseid. Selleks valige üks altpoolt
+    print_certificate: Prindi tunnistus
+    announcement_title: Teated
+    announcement_learn_more_button: Lisateave
+    announcement_try_now_button: Lisateave
+    announcement_host_an_hour_button: Vii läbi KoodiTund
+    announcement_watch_video_button: Vaata videot
+    announcement_petition: Õpetajana oled sa teejuht liikumises, mis annab igale õpilasele
+      igas koolis võimaluse arvutiteadust õppida. Nüüd on aeg, et ka sinu esindajad
+      sinu arvamust kuuleksid. Sel nädalal kirjutasid haridusjuhid, 28 kuberneri,
+      ameerika suurimate ettevõtete juhid ühise avatud kirja, kus palusid, et U.S.A.
+      kongress rahastaks K-12 hariduse arvutiteaduse programmi.
+    announcement_petition_button: Lisa oma nimi
+    announcement_apply_now: Taotle nüüd
+    announcement_all: Hoia end kursis uute funktsioonide ja uudistega meie õpetajate
+      blogis. <a href='%{teacher_blog_url}' target='_blank'>Vaata vanemaid teadaandeid.</a>
+    announcement_hoc_launch: Tuhanded õpetajad rohkem kui 180 riigis hakkavad 5.-11.
+      detsembril toimuva KoodiTunni jooksul arvutiteadusi õpetama. Me loodame, et
+      aitate meil jõuda rohkemate õpilasteni kui kunagi varem. <a href='%{signup_url}'
+      target='_blank'> Registreeri oma KoodiTund</a> ja andke ja teistele õpetajatele
+      teada, et igaühest võib saada arvutiteaduste õpetaja.
+    announcement_mc_launch: Ühel meie kõige populaarsemal juhendil on nüüd järg! Uus
+      KoodiTunni Minecraft Designer laseb õpilastel ise luua Minecrafti maailma reegleid.
+      Nad saavad luua täiesti unikaalse Minecrafti kogemuse ning jagada seda sõpradega,
+      kes saavad seda oma telefonides mängida. Kasuta seda oma klassi KoodiTunnis.
+    announcement_how_code_studio: Selleks, et arvutiteadusi oma klassis õpetada ei
+      ole teil vaja eelnevat kogemust. Code.org pakub õppe- ja tunnikavasid, kõrge
+      kvaliteediga õppeprogramme ja hulgaliselt vahendeid kõikidele tasemetele&mdash;
+      kõike, mida vajate, ja seda täiesti tasuta. Kust alustada? Lae alla<a href='%{video_download_url}'>see
+      video</a>!
+  move_students:
+    new_section_dne: Vabandame, kuid seda sektsiooni ei ole olemas %{new_section_code}
+      Palun lisa teine sektsiooni kood.
+    section_code_cant_be_current_section: Käesolev sektsioon ei saa olla sama kui
+      uus sektsioon.
+    current_section_dne: Vabandame, kuid seda sektsiooni ei ole olemas %{current_section_code}
+      Palun lisa teine sektsioonikood.
+    student_ids_not_entered: Palun sisesta õpilaste_id-d.
+    student_not_found: Ühte või mitut õpilast ei leitud.
+    all_students_must_be_in_current_section: Kõik õpilased peavad praegu sinu sektsiooni
+      registreeritud olema.
+    already_enrolled_in_new_section: Sa ei saa neid õpilasi liigutada, sest nad on
+      selle õpetaja uues sektsioonis.
+  share:
+    title: Õpi Code stuudios
+    description: Igaüks saab õppida arvutiteadust. Tee mänge, äppe ja kunsti koodimisega.
+    try_hour_of_code: Proovi Koodi Tundi!
+  gender:
+    male: Mees
+    female: Naine
+    none: Ei soovi vastata
+  user_type:
+    student: Õpilane
+    teacher: Õpetaja
+  footer:
+    thank_you: Me täname oma <a href="https://code.org/about/donors"> sponsoreid </a>,<a
+      href="https://code.org/about/partners">partnereid</a>, meie <a href="https://code.org/about/team">
+      tervet meeskonda</a>, video tiimi, ja meie <a href="https://code.org/about/advisors">
+      haridusnõustajaid</a> nende teenete eest Code Studio valmimisele.
+    help_from_html: Insenerid Google´st, Microsoftist, Facebookist ja Twitterist aitasid
+      luua selle õppekeskkonna.
+    help_from_html_old: Insenerid Google'st, Microsoft'st, Facebook'st ja Twitter'st
+      aitasid luua neid materjale.
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Kõik õigused
+      kaitstud.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
+      Kõik õigused kaitstud.<br />Frozen&#8482; &copy; %{current_year} Disney. Kõik
+      õigused kaitstud.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox.
+      Kõik õigused kaitstud.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. Kõik õigused kaitstud.<br />Plants vs. Zombies&#8482; &copy;
+      %{current_year} Electronic Arts Inc. Kõik õigused kaitstud.<br />The Amazing
+      World of Gumball on kaubamärk ja &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Kõik õigused
+      kaitstud. Star Wars&#8482; &copy; %{current_year} Disney ja Lucasfilm. Kõik
+      õigused kaitstud. Frozen&#8482; &copy; %{current_year} Disney. Kõik õigused
+      kaitstud. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Kõik õigused
+      kaitstud. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment
+      Ltd. Kõik õigused kaitstud. Plants vs. Zombies&#8482; &copy; %{current_year}
+      Electronic Arts Inc. Kõik õigused kaitstud. The Amazing World of Gumball on
+      kaubamärk ja &copy; 2015 Cartoon Network.
+    code_from_html: Code.org kasutab p5.play, mis on litsenseeritud vastavalt <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      GNU LGPL 2.1</a>.
+    powered_by_aws: Amazoni poolt toetatud
+    trademark: "&copy;Code.org,%{current_year}. Code.org&reg;, CODE-i logo ja KoodiTund&reg;
+      on Code.org kaubamärgid."
+    copyright: Autoriõigus
+    more: Veel
+    feedback: Tagasiside
+    translate: Tule vabatahtlikuks ja aita meil tõlkida
+    support: Abi ja kogukond
+    tos_short: Tingimused
+    tos: Teenuse tingimused
+    privacy: Privaatsuspoliitika
+    secure: Turvaline versioon
+    report_abuse: Teata rikkumisest
+    built_on_code_studio: Code Studio abil loodud
+    make_my_own_app: Oma rakenduse loomine
+    how_it_works: Kuidas see töötab (vaata koodi)
+    try_hour_of_code: Proovi Koodi Tundi!
+  reference_area:
+    title: Vajad abi?
+    subtitle: Vaata neid videosid ja vihjeid
+    teacher: Vaata lahendust
+    auth_error: Sul ei ole õigusi lahenduse vaatamiseks.
+    submit: Uuenda kunstniku asukohta
+    direction: Alustus suund (kraadides)
+  video:
+    tab: Video.
+    notes: Videot pole? Näita märkmeid.
+    notes_coming_soon: Märkmeid selle video peatsest saabumisest.
+    autoplay_option: Käivita videod automaatselt
+    download: Lae video alla
+    show_notes: Näita märkmeid
+    show_video: Näita videot
+  compatibility:
+    upgrade:
+      unsupported_message: Sinu veebilehitsejat ei toetata. Palun asenda oma veebilehitseja<a
+        href='%{supported_browsers_url}', target='_blank'>ühe veebilehitsejaga, mida
+        me toetame</a>. Võite proovida veebilehte vaadata, kuid selle toimimine võib
+        olla häiritud.
+      link: Lisateave
+  slow_loading: See võtab tavapärasest rohkem aega...
+  try_reloading: Proovige lehte uuendada
+  next_stage: Valmis! Mine edasi järgmisele tasemele
+  download_pdf: Ava tunnikava
+  lesson_plan: Tunnikava
+  view_lesson_plan: Vaata tunnikava
+  pdf_download: Lae alla PDF-fail
+  download_coming_soon: Allalaaditav tegevus tuleb varsti.
+  video_coming_soon: Video tuleb varsti!
+  not_started: Õpilane pole seda taset veel proovinud.
+  share_code:
+    title: Klikka 'Run', et programm alustaks
+    bounce_og_title: Tsekka mu Põrke mängu (Bounce Game)
+    flappy_og_title: Tutvu minu Flappy mänguga
+    studio_og_title: Vaata minu Play Lab äppi
+    check_out_what_i_made: Vaadake mida ma tegin
+    og_description: Ma kirjutasin selle koodi ise Code.org abiga
+    phone_number_not_allowed: Tundub, et see sisaldab telefoninumbrit. Proovi teksti
+      muuta.
+    address_not_allowed: Tundub, et see sisaldab aadressi. Proovi teksti muuta.
+    email_not_allowed: Tundub, et see sisaldab emaili. Proovi teksti muuta.
+    profanity_not_allowed: Tundub, et see sisaldab vandumist. Proovi teksti muuta.
+  builder:
+    created: Oled loonud uue skripti.
+    destroyed: Sa hävitasid skripti.
+    manage: Ehita tabeleid
+    view: Vaata
+    back: Tagasi skriptide juurde
+    success: Olete edukalt plokke muutnud.
+    level:
+      create: Loo uus tase
+      current: Olemasolevad tasemed
+      unused: Kasutamata tasemed
+  upsell:
+    applab:
+      title: App Lab
+      body: App Lab on programmeerimise keskkond, milles saab teha lihtsamaid rakendusi.
+        Kujunda rakendus, programmeeri see plokkide või JavaScriptiga, et rakendus
+        toimiks. Seejärel jaga oma rakendust mõne sekundiga.
+      body_short: Kujunda rakendus, programmeeri see plokkide või JavaScriptiga, et
+        rakendus toimiks. Seejärel jaga oma rakendust mõne sekundiga.
+      audience: Vanus 13+
+      cta: Õpi kuidas
+    dance:
+      title: Tantsuõhtu
+    hoc:
+      title: Klassikaline labürint
+      body: Proovige arvutiteaduse alused. Miljonid on proovinud.
+    flappy:
+      title: Flappy kood
+      body: Tahad kirjutada oma enda mängu vähem kui 10 minutiga? Proovi meie Flappy
+        Code õpetusvideot!
+    20-hour:
+      title: Kiirendatud kursus
+      body: See 20-tunnine kursus käsitleb peamisi arvutiteaduse ja programmeerimise
+        kontseptsioone kursustel 2-4. Kursus on mõeldud kasutamiseks vanuses 10-18
+        aastat. Tutvu kursustega 2-4 põhjalikuma kogemuse saamiseks!
+      body_short: Õppige arvutiteaduse põhitõed kiirendatud versioonis kursustel 2-4.
+    hoc2014:
+      try_new_tutorial: Proovi meie uut KoodiTunni beta õpetusvideot
+      try_frozen: Näitleja Anna ja Elsaga, filmist "Lumekuninganna ja Igavene talv"
+    gallery:
+      title: Galerii
+      body: Vaata meie kasutajate poolt tehtud galeriid, kus on äpid ja pildid tegelaskujudest
+    gamelab:
+      title: Game Lab
+      audience: Vanus 13+
+      cta: Õpi kuidas
+    weblab:
+      title: Web Lab (beta)
+      audience: Vanus 13+
+      cta: Õpi kuidas
+    frozen:
+      title: Frozen
+    starwars:
+      title: Star Wars
+    infinity:
+      title: Lõpmatu Play Lab
+      body: Kasuta Play Labi, et luua lugu või mäng, kus peaosa mängivad Disney Infinity
+        tegelased.
+    minecraft:
+      title: Minecraft
+      body: Uuri Minecrafti maailma koodi kaudu.
+    minecraft2016:
+      title: Minecraft
+      body: Programmeeri loomi ja teisi Minecrafti tegelasi omaenda Minecrafti versioonis.
+    aquatic:
+      title: Minecraft
+    hero:
+      title: Minecraft
+      body: Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond läbi Minecrafti
+        koos koodiga.
+    unplugged:
+      title: Seadmeteta tunnid
+      audience: Vanusele 4+
+      body: Oleme kokku seadnud nimekirja seadmeteta tundidest, mida saad oma klassis
+        läbi viia. Nüüd saad õpetada arvutiteaduste põhialuseid ka siis kui sinu klassis
+        ei ole arvuteid! Proovi neid tunnikavasid kas eraldiseisva kursusena või lisaks
+        teistele arvutiõpetuse tundidele.
+      body_short: Kui sul ei ole arvuteid, proovi neid tunnikavasid seadmeteta tunni
+        läbiviimiseks oma klassis.
+    unplugged_conditionals:
+      title: Tingimuslaused
+    widgets:
+      title: Vidinad
+      audience: Vanuses 14 +
+      cta: Õpi kuidas
+  gallery:
+    students_drew_these_with_code: Õpilased joonistasid need koodi kasutades!
+    students_made_these_with_code: Õpilased tegid need koodiga!
+    picture_count: Viimastel <b>%{days}</b> päevadel on õpilased joonistanud <b>%{count}</b>
+      pilte oma enda kirjutatud arvutiprogrammidega. Klikka piltidel, et nende programmide
+      tööd ise näha.
+    activity_count: Viimastel <b>%{days}</b> päevadel on õpilased joonistanud <b>%{count}</b>
+      pilte oma enda kirjutatud arvutiprogrammidega. Klikka piltidel ja ekraanipiltidel,
+      et näha nende programmide tööd.
+    want_to_make_your_own: Tahad teha enda oma?
+    how_to_save: Nende juhendite viimases staadiumis vajuta "Lõpeta" ja "Salvesta",
+      et oma töö galeriisse salvestada.
+    more: Rohkem &rarr;
+    caption_by_name_age: 'Nimi: %{name}, Vanus: %{age}'
+    caption_time_ago: "%{time_ago} tagasi"
+    header: Galerii
+    header_playlab: Play Lab
+    header_artist: Kunstnik
+    report_abuse: Teata rikkumisest
+  landing:
+    prerelease: See kursus on <span class='betatext'> beeta</span>.  See tähendab,
+      et see ei ole  lõplik versioon ja  tuleb läbi vaadata, kui saadakse tagasisidet
+      ja parandused on tehtud.
+    prerelease_hoc2014: See õpetus on <span class='betatext'> Beta</span>.  Tuleb
+      läbi vaadata, kui on saabunud tagasiside ja parandused on tehtud.
+    report_bug: Raporteeri veast
+    support: Abi saamine
+    help_resources: Abiinfo ja ressursid
+    help_support: Abi & Klienditugi
+    documentation: Dokumentatsioon
+  multi:
+    wrong_title: Vale vastus
+    wrong_body: Sinu poolt sisestatud vastus ei ole õige. Palun proovi uuesti!
+    correct_title: Õige
+    correct_body: See on õige vastus.
+  multi-submittable:
+    wrong_title: Aitäh
+    wrong_body: Aitäh, et vastasid.
+    correct_title: Aitäh
+    correct_body: Aitäh, et vastasid.
+  level_group:
+    wrong_title: Aitäh
+    wrong_body: Aitäh, et vastasid.
+    correct_title: Aitäh
+    correct_body: Aitäh, et vastasid.
+    hide_survey_last_answer: See küsitlus on anonüümne. Palun mine õpetaja pealehele,
+      et tulemusi koondada. Pane tähele, et tulemusi on võimalik näha vaid siis kui
+      vähemalt viis õpilast küsitlusele vastasid.
+  level_group-submittable:
+    wrong_title: Aitäh
+    wrong_body: Aitäh, et vastasid.
+    correct_title: Aitäh
+    correct_body: Aitäh, et vastasid.
+    unsubmit-title: Esitada oma projekt
+    unsubmit-body: Projekti esitamata jätmisel muutub esitamise kellaaeg ja kuupäev.
+      Olete kindel?
+    submit-incomplete-title: Esitada oma hinnang
+    submit-incomplete-body: Sa jätsid mõned küsimused vastamata. Peale esitamist ei
+      saa oma lahendust enam muuta. Olete kindel?
+    submit-complete-title: Esitada oma hinnang
+    submit-complete-body: Te ei saa oma projekti pärast esitamist muuta. Kas soovite
+      kindlasti esitada?
+  match:
+    wrong_title: Vale lahendus
+    wrong_body: Sinu poolt sisestatud lahendus ei ole õige. Palun proovi uuesti!
+    correct_title: Õige
+    correct_body: See on õige vastus.
+  contract_match:
+    wrong_title: Vale vastus
+    badname: Sinu kontaktil on vale nimi
+    badname_case: Funktsiooni nimed on suure tähe osas tundlikud. Proovige oma lepingu
+      nime muuta.
+    badrange: Sinu kontaktil on vale vahemik.
+    baddomainsize: Sinu lepingule ei ole domeenis õiget esemete arvu.
+    baddomainname: Ühel või mitmel sinu domeeni üksusel on vale nimi.
+    baddomaintype: Ühel või mitu sinu domeeni üksust on vale tüüpi või need on vales
+      järjekorras.
+  text_match:
+    placeholder: Sisesta siia oma vastus
+    open_response_title: Tänud
+    open_response_body: Täname vastuse eest!
+    correct_title: Õige
+    correct_body: See on õige vastus.
+  dialog:
+    ok: Olgu
+    startover_title: Oled sa kindel et tahad uuesti alustada?
+    startover_body: See viib mõistatuse esimesse faasi ja kustutab sinu poolt lisatud
+      või muudetud andmed.
+    startover_ok: Alusta uuesti
+    startover_cancel: Tühista
+  time:
+    hour: 1 tund
+    day: päev
+    week: nädal
+  age_interstitial:
+    age: Sinu vanus
+    header: Konto teabe värskendamine
+    message: Me uuendame praegu oma kogemust, et tagada teie turvalisus veel suuremal
+      määral. Selle jaoks vajame me, et kasutajad sisestaks siia oma vanuse.<br/>Nagu
+      alati, code.org ei rendi, müü ega jaga kasutajalt saadud informatsiooni kolmanda
+      osapoolega.
+    sign_out: Kui te ei soovi oma vanust avaldada, võite <a href="%{url}">välja logida</a>.
+  terms_interstitial:
+    title: Uuendatud teenusetingimused ja privaatsustingimused
+    intro_desc: 'Oleme uuendanud oma Teenusetingimusi ja Privaatsustingimusi. Muudatused
+      kehtivad alates 24. augustist 2016. Suurim muutus: me ei salvesta enam Code
+      Studios <i> õpilaste kasutajakontode jaoks nende e-posti aadresse. </i> See
+      on meile oluline ja me loodame, et sellest saab haridustehnoloogias õpilaste
+      privaatsuse uus standard. Kokkuvõtte teistest muudatustest saatsime teile e-posti
+      aadressile.'
+    intro_instructions: Selleks, et saada ligipääs kõikidele Code Studio uutele võimalustele
+      pead nõustuma uute tingimustega, mis on seotud alla 13-aastaste õpilastega sinu
+      klassis. Õpilase kontot registreerides palume kinnitada, et teie koolil on vanemate
+      nõusolek õpilaste isiklike andmete kogumiseks ja kasutamiseks kooliga seotud
+      eesmärkidel k. a. hariduslikes programmides nagu Code Studio.
+    tos: Teenuse tingimused
+    privacy: Privaatsuspoliitika
+    privacy_notice: Privaatsuse teade
+    accept_label: Olen uuendustega nõus<a href="%{tos_url}" target="_blank">Teenusetingimused</a>ja<a
+      href="%{privacy_url}" target="_blank">Privaatsustingimused</a>
+    accept: Nõustu
+    print: Trüki välja
+    reminder_desc: Oleme uuendanud oma<a href="%{tos_url}" target="_blank">Teenusetingimusi</a>ja<a
+      href="%{privacy_url}" target="_blank">Privaatsustingimusi</a>. Palun lugege
+      neid hoolikalt enne tingimustega nõustumist. Pange tähele, et meie nõuanded
+      JavaScripti õpetamiseks ei pruugi teie õpilastele olla kättesaadavad enne, kui
+      olete uuendatud tingimustega nõustunud.
+    review_terms: Vaata muudetud tingimusi
+  school_info_interstitial:
+    save: Salvesta
+  race_interstitial:
+    title: 'Valikuline: aita meil jälgida meie edusamme mitmekesisuse parendamisel
+      arvutiteaduses'
+    message: Palun ütle meile, millisesse rassi kuulud (märgi kõik, millega end identifitseerid)
+    races:
+      white: Valge
+      black: Mustanahaline või afroameeriklane
+      hispanic: Hispaania või ladina päritolu
+      asian: aasialane
+      hawaiian: Havai põlisrahvusest või pärit vaikse ookeani saartelt
+      american_indian: põlisameeriklane või Alaska põliselanik
+      other: Muu
+      opt_out: Ei soovi vastata
+    submit: Esita
+    decline: Sulge
+  zendesk_too_young_message: Vabandame, nooremad kasutajad ei saa meie kasutajatoe
+    lehele sisse logida. Võid sirvida <a href="http://support.code.org"> support.code.org</a>
+    ilma sisse logimata või paluda oma emal ja isal või õpetajal meiega ühendust võtta.
+  progress:
+    not_started: pole alustatud
+    in_progress: pooleli
+    completed_too_many_blocks: lõpetatud, liiga palju plokke
+    completed_perfect: tehtud, suurepärane
+    furthest_level_attempted: kõige viimane tase proovitud
+    assessment: hinnang
+    submitted: esitatud
+  studio:
+    courses_working_on: Kursused, millega töötate
+    completed_courses: Lõpetatud kursused
+    all_courses: Kõik kursused
+  project:
+    projects: Projektid
+    create: Loo projekt
+    create_a_project: 'Uue projekti loomine:'
+    new: Loo uus
+    rename: Nimeta ümber
+    save: Salvesta
+    delete: Kustuta
+    import: Impordi
+    share_link_import_bad_link_header: Jagamise linki ei tuvastatud
+    share_link_import_bad_link_body: 'Me ei saanud importida jagamise linki. Veenduge,
+      et kasutate Minecrafti linki: Agent puzzle ja et olete kopeerinud terve lingi.'
+    share_link_import_error_header: Midagi läks valesti.
+    share_link_import_error_body: Ilmnes probleem lingi importimisel. Palun proovige
+      uuesti.
+    exit: Tagasi kursuse juurde
+    my_projects: Minu projektid
+    project_gallery: Projektid
+    share: Jaga
+    share_title: Jaga oma projekti
+    share_copy_link: 'Kopeeri link:'
+    share_embed_description: Kleepi vistustatud kood HTML leheküljele, et oma projekti
+      veebilehel kuvada.
+    share_u13_warning: Küsi õpetajalt enne jagamist luba. Jaga ainult oma kooli õpilastega.
+    embed: Vistusta
+    advanced_share: Kuva täpsemad valikud
+    close: Sulge
+    more: Veel
+    name: Nimi
+    updated: Uuendatud
+    project_type: Projekti tüüp
+    help_text: Klõpsake <strong>tee rakendus</strong> või <strong>Joonista midagi</strong>
+      allpool, et teha uus Play Lab või kunstniku projekt<br/> Sa võid oma projektide
+      juurde tagasi tulla ja jätkata tööd nendega igal ajal.
+    need_help: Proovi neid kursusi, et oma uue projektiga alustada
+    really_delete: Kas kustutan?
+    delete_yes: Jah
+    delete_no: Ei
+    saved: Salvestatud
+    not_saved: Ei ole salvestatud
+    cancel: Tühista
+    delete_confirm_title: Kas soovite kindlasti kustutada selle projekti?
+    delete_confirm_text: Projekti kustutamine eemaldab selle jäädavalt "Minu Projektide"
+      nimekirjast. Kui sa oled kellegagi linki jaganud, siis neil ei ole enam võimalik
+      sinu projekti vaadata.
+    view_all: Vaata minu projekte
+    remix: Remix
+    click_to_remix: Vajuta "Remix" et liigendada oma versioon!
+    edit_project: Muuda projekti
+    abuse:
+      tos: Selle projekti kohta on teada antud, et see rikub code.org <a href='http://code.org/tos'>
+        kasutajatingimusi</a>ja seda ei saa teistega jagada.
+      policy_violation: Selles projektis on informatsiooni, mida ei saa teistega jagada.
+        Palun võta ühendust rakenduse omanikuga, et nende rakenduse sisu parandada.
+      contact_us: Kui sa arvad, et tegemist on veaga, palun <a href='https://code.org/contact'>
+        kontakteeru meiega </a>
+      go_to_code_studio: Mine koodistuudiosse
+      report_abuse_form:
+        intro: Kui puutute kokku ebasündsa tekstiga, ohtudega, kübersolvamisega, ahistamisega
+          või autoriõiguste rikkumisega kasutades koodistuudio äppe, palun täitke
+          järgnev vorm. Me võtame teie avaldust väga tõsiselt ja uurime omalt poolt
+          juhtumit, et rakendada kohaseid meetmeid.
+        validation:
+          email: Palun kirjutage enda e-maili aadress
+          age: Palun täpsustage oma vanus
+          abuse_type: Palun vastake, kuidas see sisu on vastuolus kasutajatingimustega
+          abuse_detail: Palun täpsustage raporteeritud teksti detailid
+        abusive_url: Raporteeritud sisu URL
+        abuse_type:
+          question: Kuidas see sisu on vastuolus%{link_start} kasutajatingimustega
+            %{link_end}?
+          harassment: Ohud, kübersolvamine, ahistamine
+          offensive: Solvav sisu
+          infringement: Autoriõiguste rikkumine
+          other: Muu
+        detail: Palun kirjeldage võimalikult detailselt teksti, mida raporteerite.
+        acknowledge: Selle informatsiooni esitamisel nõustute, et seda käsitletakse
+          vastavalt %{link_start_privacy} privaatsuse tingimustele %{link_end}ja %{link_start_tos}
+          kasutajatingimustele %{link_end}
+  peer_review:
+    accepted:
+      name: Nõustutud
+      description: "<strong>Jah</strong>, esitatud töö <strong>vastab</strong> vastab
+        nõuetele"
+    rejected:
+      name: Tagasi lükatud
+      description: "<strong>Ei</strong>, esitatud töö <strong>ei vasta</strong> nõuetele"
+    escalated:
+      name: Hoogustus
+      description: Ma tahaksin, et juhendaja esitatud töö üle vaataks
+    instructor_feedback: Õpetaja tagasiside
+    peer_feedback: Kaaslaste tagasiside
+    outdated: See tagasiside lisati varem esitatud versioonile
+  flex_category:
+    required: Ülevaade
+    content: Sisu
+    practice: Õpetamise tavad
+    peer_review: Vastastikune hindamine
+    csf_f_2: Kursuse F sisu
+    cspSurvey: Uuring
+  external_links:
+    disclaimer: Lahtiütlemine
+    leaving_domain: Olete lahkumas sellest domeenist leheküljele, mida ei halda Code.org.
+    disclaimer_text: Selle veebilehe privaatsuse tingimused võivad olla erinevad Code.org-i
+      privaatsuspoliitikast. Oleme valinud need kolmandate osapoolte vahendid, sest
+      arvame, et neist võib teile kasu olla. Kuigi me ei ole otseselt vastutavad selle
+      veebilehe sisu eest, palun, <a href='%{support_url}'> võtke ühendust klienditoega</a>
+      kui leiate, et sisu on taunitav või kui lingitud veebilehekülg pole enam saadaval.
+  hoc_download:
+    title: Allalaetavad KoodiTunni materjalid
+    capsule_title: Kas teil on Internet?
+    capsule_desc: Kasuta veebipõhist <a href="%{url}">%{app_name}</a>.
+    instructions_headline: Kui Internetti pole?
+    instructions: 'Juhised õpetajale: need KoodiTunni juhendid on saadaval allalaadimiseks
+      ja installimiseks ühenduseta kasutamiseks kui teil on kehv internetiühendus.
+      Vali oma keel ja platvorm, lae see alla ja installi kõikidesse klassiruumi arvutitesse.
+      Võite kasutada USB mälupulka, et need üks kord alla laadida ja kõikidesse arvutitesse
+      installida. Märkus: õpilased ei saa Code Studiosse sisse logida, edusamme salvestada
+      või tunnistusi printida. Õpetajad võivad tünnistused enne KoodiTundi trükkida
+      <a href="%{url}"> siin</a>.'
+    minecraft_name: Minecrafti KoodiTund
+    starwars_blocks_name: 'Star Wars: galaktika loomine koodiga – (Sündmused)'
+    starwars_javascript_name: 'Star Wars: galaktika loomine koodiga – (JavaScript)'
+    download_message: Lae alla %{app_name} ühenduseta kasutamiseks (136MB)
+    download_in_Albanian: 'Lae alla albaania keeles:'
+    download_in_Arabic: 'Lae alla araabia keeles:'
+    download_in_Azerbaijani: 'Lae alla aserbaidžaani keeles:'
+    download_in_Basque: 'Lae alla baski keeles:'
+    download_in_Bosnian: 'Lae alla bosnia keeles:'
+    download_in_Bulgarian: 'Lae alla bulgaaria keeles:'
+    download_in_Catalan: 'Lae alla katalaani keeles:'
+    download_in_Chinese-Taiwan: 'Lae alla Taiwani hiina keeles:'
+    download_in_Chinese: 'Lae alla hiina keeles:'
+    download_in_Croatian: 'Lae alla horvaatia keeles:'
+    download_in_Czech: 'Lae alla tšehhi keeles:'
+    download_in_Danish: 'Lae alla taani keeles:'
+    download_in_Dutch: 'Lae alla hollandi keeles:'
+    download_in_English: 'Lae alla inglise keeles:'
+    download_in_Finnish: 'Lae alla soome keeles:'
+    download_in_French: 'Lae alla prantsuse keeles:'
+    download_in_German: 'Lae alla saksa keeles:'
+    download_in_Greek: 'Lae alla kreeka keeles:'
+    download_in_Hebrew: 'Lae alla heebrea keeles:'
+    download_in_Hungarian: 'Lae alla ungari keeles:'
+    download_in_Icelandic: 'Lae alla islandi keeles:'
+    download_in_Indonesian: 'Lae alla indoneesia keeles:'
+    download_in_Irish: 'Lae alla iiri keeles:'
+    download_in_Italian: 'Lae alla itaalia keeles:'
+    download_in_Japanese: 'Lae alla jaapani keeles:'
+    download_in_Korean: 'Lae alla korea keeles:'
+    download_in_Latvian: 'Lae alla läti keeles:'
+    download_in_Lithuanian: 'Lae alla leedu keeles:'
+    download_in_Norwegian: 'Lae alla norra keeles:'
+    download_in_Norwegian-Nynorsk: 'Lae alla uusnorra keeles:'
+    download_in_Polish: 'Lae alla poola keeles:'
+    download_in_Portuguese-Brazil: 'Lae alla portugali (Brasiilia) keeles:'
+    download_in_Portuguese: 'Lae alla portugali keeles:'
+    download_in_Romanian: 'Lae alla rumeenia keeles:'
+    download_in_Russian: 'Lae alla vene keeles:'
+    download_in_Serbian: 'Lae alla serbia keeles:'
+    download_in_Slovenian: 'Lae alla sloveenia keeles:'
+    download_in_Spanish: 'Lae alla hispaania keeles:'
+    download_in_Swedish: 'Lae alla rootsi keeles:'
+    download_in_Turkish: 'Lae alla türgi keeles:'
+    download_in_Ukrainian: 'Lae alla ukraina keeles:'
+    download_in_Vietnamese: 'Lae alla vietnami keeles:'
+    windows: Windows (64-bitine)
+    mac: Mac OS X
+  locked_stage: Selle etapi sisu ei ole nähtav, sest see etapp on praegu lukus. Õpetaja
+    saab selle etapi avada, kui on aeg selle kallal tööd teha või oma vastused üle
+    vaadata.
+  hidden_stage: Õpetaja ei oodanud, et sa sind siin. Palun küsi oma õpetajalt, millises
+    tunnis sa peaksid olema.
+  return_course_overview: Mine teema ülevaatesse
+  view_all_units: Vaata kõik
+  view_teacher_guide: Vaata juhendit õpetajatele
+  pd:
+    form_labels:
+      email: E-post
+      school_name: Kooli nimi
+    form_entries:
+      gender:
+        male: Mees
+        female: Naine
+        none: Ei soovi vastata
+      subjects:
+        cs: Arvutiteadus
+        math: Matemaatika
+        science: Teadus
+        la: Keeled
+      resources:
+        kodable: Kodable
+        lightbot: Lightbot
+      robotics:
+        kodable: Kodable
+      email_opt_in:
+        opt_in_yes: Jah
+        opt_in_no: Ei
+  cookie_banner:
+    accept: Olen nõus
+  gdpr_dialog:
+    true: Jah

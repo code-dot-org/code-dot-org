@@ -1,0 +1,28 @@
+id:
+  data:
+    function_names:
+      x: x
+      draw a circle: Gambar sebuah lingkaran
+      draw a hexagon: menggambar segi enam
+      draw a flower: menggambar bunga
+      draw a square: menggambar sebuah persegi empat
+      draw a snowflake: menggambar kristal salju
+      draw a tree: Gambar sebuah pohon
+      draw a triangle: menggambar sebuah segitiga
+      draw a house: gambar sebuah rumah
+      draw a star: menggambar bintang
+      do something: buat sesuatu
+      jump: lompat
+      set score: tetapkan skor
+      get nectar: Dapatkan madu
+      test: test
+      diamond: berlian
+      move: bergerak
+      move right: Gerak ke kanan
+      move up: Gerak ke atas
+      move down: Pindahkan ke bawah
+      move left: Gerak ke kiri
+      collect: kumpulkan
+      turn left: belok kiri
+      move forward: Gerak maju
+      turn right: belok kanan

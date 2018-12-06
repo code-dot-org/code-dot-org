@@ -1,0 +1,195 @@
+nn:
+  data:
+    function_names:
+      x: x
+      details: detaljar
+      draw eyebrow: teikn augebryn
+      draw pupil: teikn pupille
+      draw a circle: teikn ein sirkel
+      draw a car: teikn ein bil
+      draw_rect: teikn_kvad
+      draw square: teikn kvadrat
+      jump to controller top left: gå til kontrollaren øvst til venstre
+      jump to middle: gå til midten
+      draw a button: teikn ein knapp
+      draw cord: teikn leidning
+      draw left leg: teikn venstre bein
+      draw right leg: teikn høgre bein
+      draw body and arms: teikn kropp og armar
+      draw a head: teikn eit hovud
+      draw head: teikn hovud
+      draw arms: teikn armar
+      jump to neck: gå til hals
+      draw O: teikn O
+      draw D: teikn D
+      draw E: teikn E
+      big gear: stort utstyr
+      small gear: lite utstyr
+      draw a hexagon: teikn ein sekskant
+      draw a flower: teikn ein blome
+      draw a square: teikn eit kvadrat
+      draw a snowflake: teikn eit snøfnugg
+      draw 3 hexagons: teikn 3 sekskantar
+      draw 4 hexagons: teikn 4 sekskantar
+      draw 5 hexagons: teikn 5 sekskantar
+      get 2 nectar: få 2 nektar
+      collect purple nectar: samle lilla nektar
+      get 5: få 5
+      move and get nectar: flytt og få nektar
+      move and get 4: flytt og få 4
+      get 7 nectar make 7 honey: få 7 nektar lag 7 honning
+      get 7 make 7: få 7 lag 7
+      get 7: få 7
+      move and get 3: flytt og få 3
+      draw a tree: teikn eit tre
+      draw triangle: teikn trekant
+      draw circle: teikn sirkel
+      draw goal: teikn målet
+      graph: graf
+      draw waves: teikn bølgjer
+      draw a wave: teikn ei bølgje
+      draw a small triangle: teikn ein liten trekant
+      draw a medium triangle: teikn ein middels trekant
+      draw a large triangle: teikn ein stor trekant
+      draw a big triangle: teikn ein stor trekant
+      draw a triangle: teikn ein trekant
+      draw a house: teikn eit hus
+      check purple flower: sjekk lilla blom
+      check flower make honey: sjekk blom lag honning
+      get nectar or make honey: få nektar eller lag honning
+      make 3 honey: lag 3 honning
+      get 5 nectar: få 5 nektar
+      draw a star: teikn ei stjerne
+      do something: gjer noko
+      jump: hopp
+      draw a triangle wioth length: teikn trekant med lengde
+      draw a sqaure: teikn eit kvadrat
+      triangle: trekant
+      draw a spiral shape: teikn ein spiral-figur
+      get 3 nectar: få 3 nektar
+      get many nectar: få mange nektar
+      get nectar make honey: få nektar lag honning
+      draw an octagon: teikn ein åttekant
+      draw octagons: teikn åttekantar
+      shift down: skift ned
+      level_up: nivå_opp
+      score_points: score_poeng
+      set score: set poengsum
+      draw a line of hexagons: teikn ei linje av sekskantar
+      shift down/forward: skift ned/framover
+      shift down/backward: skift ned/bakover
+      get nectar: få nektar
+      make honey up and over: lag honning opp og over
+      setActors: settSkodespelar
+      popCharacter: popKarakter
+      patrol left right: patrulje venstre høgre
+      empty function: tom funksjon
+      check guess: sjekk gjetning
+      Jump: hopp
+      test: test
+      build bridge: bygg bru
+      run right: spring mot høgre
+      spin right: snu mot høgre
+      grow forever: voks for alltid
+      draw grass: teikn gras
+      sun: sol
+      draw windows: teikn vindauge
+      square: kvadrat
+      draw a door: teikn ei dør
+      rectangle: rektangel
+      diamond: diamant
+      window: vindauge
+      n-sided shape: n-sidig figur
+      draw a loop: teikn ei løkke
+      draw spiral circle: teikn spiralsirkel
+      draw roof: teikn tak
+      draw rectangle: teikn rektangel
+      move: flytt
+      function 1: funksjon 1
+      function 2: funksjon 2
+      destroy and move: øydelegg og flytt
+      clear path: fjern bane
+      clear cacti: fjern kaktus
+      place and move: plasser og flytt
+      cover lava: dekk lava
+      build short bridge: bygg kort bru
+      build long bridge: bygg lang bru
+      create trail: opprette spor
+      move and fill: flytt og fyll
+      fix right corner: fastsett høgre hjørne
+      move right: flytt høgre
+      move up: flytt opp
+      move down: flytt ned
+      move left: flytt til venstre
+      stop_everything: stopp_alt
+      lose: mist
+      draw a plane of squares: teikn eit fly av kvadrat
+      draw hexagon: teikn sekskant
+      draw line of hexagons: teikn ei linje av sekskantar
+      staggered squares: forskjøvne kvadrat
+      draw line of polygons: teikn linje av polygon
+      draw polygon: teikn polygon
+      honey nectar: honningnektar
+      move and make honey: flytt og lag honning
+      collect all nectar: samle all nektar
+      get all nectar: få all nektar
+      get pumpkin: få gresskar
+      harvest: høst inn
+      get corn and come back: få korn og kom tilbake
+      pick along path: plukk opp langs banen
+      check square for corn: sjekk kvadrat for korn
+      get all pumpkins: få alle gresskar
+      pumpkin square: gresskarkvadrat
+      navigate: naviger
+      check and pick: sjekk og plukk
+      find pumpkin: finn gresskar
+      wander path: gå langs bana
+      get produce: få produksjon
+      check for corn: sjekk for korn
+      corn rectangle: kornrektangel
+      lettuce stairs: salat trapper
+      pick veggie: plukk grønnsak
+      corn and pumpkin: korn og gresskar
+      go get pumpkins: få gresskar
+      go get lettuce: få salat
+      garden square: hagekvadrat
+      get corn come back: få korn og kom tilbake
+      checker: sjekkar
+      Make gingham: Lag gingham
+      black outline: svart ramme
+      draw a square2: teikn eit kvadrat2
+      filled square: fyll kvadrat
+      get only nectar: få berre nektar
+      only make honey: berre lag honning
+      collect row: samle rad
+      rowOfNectarOrHoney: radAvNektarEllerHonning
+      collect stairs: samle trapper
+      collect: samle
+      move and increment: flytt og øk
+      do something3: gjer noko3
+      Robin Fly: Robin-fluga
+      Robot Jump: Robothopp
+      Center Dragon: Senterdragen
+      Dragon Fly: Drage fly
+      Knight Surge: Riddartrekk
+      Stop Dragon: Stopp Drage
+      Knight Jump: Riddar-hopp
+      robotThinking: robotTenkning
+      fill area with color: fyll området med farge
+      draw a line of triangles: teikn ei linje av trekantar
+      check flower: sjekk blom
+      get next row: ta neste rad
+      check space: sjekk området
+      follow path: følg bane
+      physics: fysikk
+      initialization: initialisering
+      Make Actor 1 Jump: Få spelar 1 til å hoppe
+      Choose Number: Vel tal
+      Move Bird: Flytt fugl
+      turn left: snu mot venstre
+      move forward: gå framover
+      turn right: snu mot høgre
+      drawDot: teiknPrikk
+      draw a rectangle: teikn eit rektangel
+      Which Course for My Students?: Kva for eit kurs for elevane mine?
+      draw a heart: teikn eit hjarte

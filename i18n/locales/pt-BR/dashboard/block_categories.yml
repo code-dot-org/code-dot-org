@@ -1,0 +1,57 @@
+pt-BR:
+  data:
+    block_categories:
+      Actions: Ações
+      Loops: laços
+      Functions: funções
+      Color: Cor
+      Brushes: Pincéis
+      Math: Matemática
+      Logic: Lógica
+      Variables: variáveis
+      Number: Número
+      String: String
+      Image: Imagem
+      Boolean: Booleano
+      Conditionals: Condições
+      Events: Eventos
+      Games/Score: Jogos/Pontuação
+      Comments: Comentários
+      Category: Categoria
+      Prebuilt: Pré-construídos
+      Text: Texto
+      Picker: Seletor
+      Comment: Comentário
+      'Variables ': 'Variáveis '
+      everythingelse: todoresto
+      numbers: números
+      Numbers: Números
+      Input: Entrada
+      Default: Padrão
+      World: Mundo
+      Sprites: Sprite
+      Behaviors: Comportamentos
+      Advanced: Avançado
+      Start: Começar
+      Locations: Localizações
+      Music: Música
+      Dancing: Dança
+      Dancers: Bailarinos
+      Groups: Grupos
+      Sprite: Sprite
+      Brush: Pincel
+      Make Sprite: Fazer Sprite
+      Movement: Movimento
+      Booleans: Booleanos
+      Functional: Funcional
+      While Events: Eventos Enquanto
+      Sprite Properties: Propriedades do Sprite
+      Predefined: Predefinido
+      test: teste
+      test2: teste2
+      Foo: Foo
+      Name: Nome
+      NEW BLOCKS: NOVOS BLOCOS
+      'Functions ': 'Funções '
+      Game/Score: Jogo/Pontuação
+      Function: Função

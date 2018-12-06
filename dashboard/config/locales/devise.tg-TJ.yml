@@ -1,0 +1,11 @@
+---
+tg:
+  devise:
+    confirmations:
+      confirmed: Нишонии почтаи электронии шумо бо муваффақият тасдиқ карда шуд.
+    failure:
+      invalid: Почтаи электронӣ ё ниҳонвожа нодуруст аст.
+      not_found_in_database: Почтаи электронӣ ё ниҳонвожа нодуруст аст.
+  errors:
+    messages:
+      not_found: ёфт нашуд

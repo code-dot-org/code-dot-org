@@ -1,0 +1,27 @@
+sv:
+  data:
+    failure_message_overrides:
+      Code Studio Puzzle Challenge 1 - Artist_failure_message_override: Bra försök! Försök igen att få det rätt.
+      Code Studio Puzzle Challenge 10 - Bee_failure_message_override: Bra försök! Försök igen att få det rätt.
+      Code Studio Puzzle Challenge 10b - Bee_failure_message_override: Bra försök! Försök igen att få det rätt.
+      Code Studio Puzzle Challenge 11 - Artist_failure_message_override: Bra försök! Försök igen att få det rätt.
+      Code Studio Puzzle Challenge 12 - Artist_failure_message_override: Bra försök! Försök igen att få det rätt.
+      Code Studio Puzzle Challenge 13 - Artist_failure_message_override: Bra försök! Försök igen att få det rätt.
+      Code Studio Puzzle Challenge 14 - Artist_failure_message_override: Bra försök! Försök igen att få det rätt.
+      Code Studio Puzzle Challenge 2 - Artist_failure_message_override: Bra försök! Försök igen att få det rätt.
+      Code Studio Puzzle Challenge 3 - Artist_failure_message_override: Bra försök! Försök igen att få det rätt.
+      Code Studio Puzzle Challenge 4 - Artist_failure_message_override: Bra försök! Försök igen att få det rätt.
+      Code Studio Puzzle Challenge 5 - Bee_failure_message_override: Bra försök! Försök igen att få det rätt.
+      Code Studio Puzzle Challenge 6 - Bee_failure_message_override: Bra försök! Försök igen att få det rätt.
+      Code Studio Puzzle Challenge 7 - Bee_failure_message_override: Bra försök! Försök igen att få det rätt.
+      Code Studio Puzzle Challenge 8 - Bee_failure_message_override: Bra försök! Försök igen att få det rätt.
+      Code Studio Puzzle Challenge 9 - Bee_failure_message_override: Bra försök! Försök igen att få det rätt.
+      Code Studio Puzzle Challenge Var - Artist_failure_message_override: Bra försök! Försök igen att få det rätt.
+      Kiki_StarWars_Test_5_failure_message_override: Game over!
+      Kiki_StarWars_Test_5_Example_failure_message_override: Game over!
+      WhileAdventure_failure_message_override: Grattis!  Du samlat X mynt!
+      kikiTesta_failure_message_override: Grattis!  Du samlat X mynt!
+      sample1_failure_message_override: Grattis!  Du samlat X mynt!
+      sample4_failure_message_override: Grattis!  Du samlat X mynt!
+      sample6_failure_message_override: Inte riktigt.  Fortsätta att försöka!  [Flytta till Play Zone]
+      sample8_failure_message_override: Grattis!  Du samlat X mynt!

@@ -1,0 +1,489 @@
+---
+ca:
+  data:
+    authored_hints:
+      Dance short test 2_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.
+
+          *Aquest nivell acaba després de 10 mesures.*
+        challenges: |-
+          **Repte opcional**
+
+          Canvia l'efecte de fons en diferents punts mentre dura la cançó tot connectant el nou bloc sota els esdeveniments de <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      Dance short test_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.
+
+          *Aquest nivell acaba després de 10 mesures.*
+        challenges: |-
+          **Repte opcional**
+
+          Canvia l'efecte de fons en diferents punts mentre dura la cançó tot connectant el nou bloc sota els esdeveniments de <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+          * Assegura-te'n que el ballarí aparegui a la pantalla.
+
+          *Aquest nivell acaba després de quatre mesures.*
+        challenges: |-
+          **Reptes opcionals**
+          * Escull una cançó diferent per reproduir.
+          * Escull-ne un de diferent que sembli un ant!
+          * Torna a posar-li nom al dansaire.
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+          * Assegura-te'n que el ballarí aparegui a la pantalla.
+
+          *Aquest nivell acaba després de quatre mesures.*
+        challenges: |-
+          **Reptes opcionals**
+          * Escull una cançó diferent per reproduir.
+          * Escull-ne un de diferent que sembli un ant!
+          * Torna a posar-li nom al dansaire.
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+          * El ballarí ha de canviar a un nou moviment després de 4 mesures.
+
+          *Aquest nivell acaba després de 8 mesures.*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Després de 6 mesures, el teu ballarí necessita estar fent una dansa diferent a la que feia 4 mesures abans.
+
+          *Aquest nivell acaba després de 12 mesures.*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.
+
+          *Aquest nivell acaba després de 10 mesures.*
+        challenges: |-
+          **Repte opcional**
+
+          Canvia l'efecte de fons en diferents punts mentre dura la cançó tot connectant el nou bloc sota els esdeveniments de <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Has de tenir com a mínim dos dansaires.
+
+          *Aquest nivell acaba després de 6 mesures.*
+        challenges: |-
+          **Repte opcional**
+
+          * Afegeix un tercer dansaire (o tants com vulguis!)
+          * Fés que tots els teus ballarins realitzin diferents moviments a diferents punts de la cançó.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Els dos ballarins necessiten tenir una mida diferent de 100.
+
+          *Aquest nivell acaba després de 6 mesures.*
+        challenges: |-
+          **Repte opcional**
+
+          * Experimenta tot canviant d'altres propietats (amplada, alçada, rotació, etc.)
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Canvia la tinta de, com a mínim, un dansaire.
+
+          *Aquest nivell acaba després de 8 mesures.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+          * Assegura-te'n que el ballarí aparegui a la pantalla.
+
+          *Aquest nivell acaba després de quatre mesures.*
+        challenges: |-
+          **Reptes opcionals**
+          * Escull una cançó diferent per reproduir.
+          * Escull-ne un de diferent que sembli un ant!
+          * Torna a posar-li nom al dansaire.
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Les propietats de dos o més ballarins han de canviar.
+
+          *Aquest nivell acaba després de 8 mesures.*
+      Dance_Party_11.5_test_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Sigues creatiu!
+
+          *Aquest nivell acaba després de 8 mesures.*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Sigues creatiu!
+
+          *Aquest nivell acaba després de 8 mesures.*
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Sigues creatiu!
+
+          *Aquest nivell acaba després de 8 mesures.*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Emprar el bloc `quan prems la fletxa esquerra` per fer que el robot faci un moviment de dansa quan el prems.
+
+          *Aquest nivell acaba després de 8 mesures.*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+          * El ballarí ha de canviar a un nou moviment després de 4 mesures.
+
+          *Aquest nivell acaba després de 8 mesures.*
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Després de 6 mesures, el teu ballarí necessita estar fent una dansa diferent a la que feia 4 mesures abans.
+
+          *Aquest nivell acaba després de 12 mesures.*
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.
+
+          *Aquest nivell acaba després de 10 mesures.*
+        challenges: |-
+          **Repte opcional**
+
+          Canvia l'efecte de fons en diferents punts mentre dura la cançó tot connectant el nou bloc sota els esdeveniments de <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * La teva dansa ha de realitzar moviments diferents durant les primeres 12 mesures de la cançó.
+
+          *Aquest nivell acaba després de 12 mesures.*
+      Dance_Party_6_authored_hint:
+        challenges: |-
+          **Repte opcional**
+
+          * Afegeix un tercer dansaire (o tants com vulguis!)
+          * Fés que tots els teus ballarins realitzin diferents moviments a diferents punts de la cançó.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Els dos ballarins necessiten tenir una mida diferent de 100.
+
+          *Aquest nivell acaba després de 6 mesures.*
+        challenges: |-
+          **Repte opcional**
+
+          * Experimenta tot canviant d'altres propietats (amplada, alçada, rotació, etc.)
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Canvia la tinta de, com a mínim, un dansaire.
+
+          *Aquest nivell acaba després de 8 mesures.*
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+          * Assegura-te'n que el ballarí aparegui a la pantalla.
+
+          *Aquest nivell acaba després de quatre mesures.*
+        challenges: |-
+          **Reptes opcionals**
+          * Escull una cançó diferent per reproduir.
+          * Escull-ne un de diferent que sembli un ant!
+          * Torna a posar-li nom al dansaire.
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+          * El ballarí ha de canviar a un nou moviment després de 4 mesures.
+
+          *Aquest nivell acaba després de 8 mesures.*
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Després de 6 mesures, el teu ballarí necessita estar fent una dansa diferent a la que feia 4 mesures abans.
+
+          *Aquest nivell acaba després de 12 mesures.*
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.
+
+          *Aquest nivell acaba després de 10 mesures.*
+        challenges: |-
+          **Repte opcional**
+
+          Canvia l'efecte de fons en diferents punts mentre dura la cançó tot connectant el nou bloc sota els esdeveniments de <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * La teva dansa ha de realitzar moviments diferents durant les primeres 12 mesures de la cançó.
+
+          *Aquest nivell acaba després de 12 mesures.*
+      HOC Dance 5_draft_authored_hint:
+        challenges: |-
+          **Repte opcional**
+
+          * Afegeix un tercer dansaire (o tants com vulguis!)
+          * Fés que tots els teus ballarins realitzin diferents moviments a diferents punts de la cançó.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Els dos ballarins necessiten tenir una mida diferent de 100.
+
+          *Aquest nivell acaba després de 6 mesures.*
+        challenges: |-
+          **Repte opcional**
+
+          * Experimenta tot canviant d'altres propietats (amplada, alçada, rotació, etc.)
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Canvia la tinta de, com a mínim, un dansaire.
+
+          *Aquest nivell acaba després de 8 mesures.*
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Les propietats de dos o més ballarins han de canviar.
+
+          *Aquest nivell acaba després de 8 mesures.*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Sigues creatiu!
+
+          *Aquest nivell acaba després de 8 mesures.*
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Sigues creatiu!
+
+          *Aquest nivell acaba després de 8 mesures.*
+      courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2a_2018_authored_hint:
+        '1': Snap both `East` blocks to the bottom of the `when run` block.
+      courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5a_2018_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have
+          been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
+          try something else!
+      courseB_Scrat_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!

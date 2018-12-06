@@ -1,0 +1,16 @@
+---
+pl:
+  data:
+    course:
+      name:
+        csp-2017:
+          description_short: Poznaj podstawowe pojęcia informatyczne.
+        allthethingscourse:
+          title: allthethingscourse
+          description_short: To jest kurs dla allthethings
+          description_student: Ten kurs jest dla allthethings i ma dłuższe objaśnienie
+            dla uczniów
+          description_teacher: Ten kurs jest dla allthethings i ma dłuższe objaśnienie
+            dla nauczycieli
+        csp-2018:
+          description_short: Poznaj podstawowe pojęcia informatyczne.

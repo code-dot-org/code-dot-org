@@ -1,0 +1,184 @@
+---
+ur:
+  errors:
+    messages:
+      not_saved: 'براے مہربانی نیچے دی گئی غلطیاں درست کیجئے:'
+  activerecord:
+    errors:
+      messages:
+        blank: مطلوب ہے
+    attributes:
+      user:
+        name: ڈسپلے نام
+        email: Email
+        username: یوزر کا نام
+        password: پاس ورڈ
+        password_confirmation: پاس ورڈ کنفرم کرین
+        current_password: موجودہ پاس ورڈ
+        locale: زبان
+        age: عمر
+        gender: Jinss
+        edit_header: اکاؤنٹ کی تفصیلات میں ترمیم کیجیے
+        error:
+          future: مستقبل میں نہیں ہو سکتا
+  hello: hello dunia
+  welcome_back: خوش آمدید، %{name}
+  submit: جمع کرائیں
+  next_page: اگلا صفحہ
+  cancel: منسوخ کریں
+  or: یا
+  add_teacher_form:
+    code:
+      label: 'ٹیچر شامل کریں:'
+    submit: استاد شامل کریں
+  add_hint_form:
+    placeholder: براے مہربانی اپنا اشارہ یہاں enter کریں
+    submit: اشارہ شامل کریں
+  appname: Code.org
+  stage: اسٹیج
+  stage_number: اسٹیج %{number}
+  puzzle: پزل(Puzzle)
+  trophies: ٹرافیاں
+  courses: کورسز
+  more: مزید دیکھیے
+  less: کم دیکھیے
+  beta: beta
+  try_hoc: 'آور آف کوڈ کھیلنے کے لئے یہاں کلک کریں>> '
+  try_k8intro: ١٢ سال تک کی عمر کے لئے موزوں کمپیوٹر کورس  (١٥ سے ٢٥ گھنٹے) کا تعارف
+    دیکھیے
+  k8intro: ١٢ سال تک کی عمر کے لئے موزوں کمپیوٹر کورس کا تعارف (١٥ سے ٢٥ گھنٹے)
+  already_started: 'شروع کر چکے ہیں؟ جاری رکھیے>> '
+  demos: 'ایڈمن: تمام demos'
+  continue: جاری رکھیے
+  prize: انعام
+  more_info: مزید معلومات
+  auth:
+    sign_in_with: "%{provider} کے ساتھ sign in"
+    signed_in: "!!Signed in"
+    signed_out: آپ<a href="%{url}">Code.org</a>سے sign out ہو چکے ہیں.
+    already_signedup: sign up کر چکے ہیں؟
+    notyet_signedup: ابھی جوائن نہیں کیا؟
+    google_oauth2: گوگل اکاؤنٹ
+    twitter: ٹوئٹر
+    facebook: فیس بک
+    windowslive: Microsoft اکاؤنٹ
+    microsoft_v2_auth: Microsoft اکاؤنٹ
+    clever: ہوشیار
+    forgot_password: password یاد نہیں؟
+    need_confirmation: کنفرمیشن کی ہدایات موصول نہیں ہویں؟
+    need_unlock: " Unlock کی ہدایات موصول نہیں ہویں؟  "
+  signup_form:
+    student_count: اب تک %{count} طالبعلم جوائن کر چکے ہیں.
+    teacher_count: اب تک %{count} اساتذہ جوائن کر چکے ہیں.
+    teacher_educator_guide: اساتذہ کے لئے ہدایت نامہ دیکھئے
+    school_name: اسکول کا نام (اختیاری)
+    school_address: اسکول کا ایڈریس (اختیاری)
+    address_placeholder: پتا، شہر، صوبہ، پوسٹ کوڈ
+    gender: جنس (اختیاری)
+    birthday: تاریخ پیدائش (اختیاری)
+    age: عمر
+    user_type: آپ استاد ہیں یا طالبعلم؟
+    teacher: کیا آپ استاد ہیں؟
+    invalid_username: username کم از کم ٥ حروف کا ہونا چاہیے
+    taken_username: یہ username کسی اور کے استعمال میں ہے
+    valid_password: تصدیق شدہ پاس ورڈ!
+    invalid_password: پاس ورڈ کم از کم ٦ حروف کا ہونا چاہیے
+    mismatch_password: داخل کے گئے دونوں پاس ورڈزمختلف ہیں
+    additional_information: ہمیں آپ کو sign in کرنے لئے کچھ مزید معلومات درکار ہے.
+    user_type_student: Talib-e-ilm
+    field_is_required: مطلوب ہے
+    email_preference_privacy: "(ہماری رازداری کی پالیسی دیکھیں)"
+    email_preference_yes: جی
+    email_preference_no: نہيں
+  school_info:
+    other: دیگر
+  signin_form:
+    title: " کیا آپ پہلے ہی اکاؤنٹ بنا چکے ہیں؟ sign in کیجیے"
+    login: Email
+    password: پاس ورڈ
+    remember: مجھے یاد رکھیے
+  signin:
+    try_heading: کیا آپ بغیرsign up کے کوڈنگ کرنا چاہتے ہیں؟
+    try_hoc: سب سے پہلے ایک گھنٹہ Hour of Code کھیل کر دیکھیں
+  password:
+    reset_form:
+      title: password یاد نہیں؟
+      email: ای میل ایڈریس
+      submit: جمع کرائیں
+  section:
+    type:
+      email: Email
+      google_classroom: Google کلاس روم
+      clever: ہوشیار
+  follower:
+    error:
+      cant_join_own_section: ہم معذرت خواہ ہیں، آپ اپنے سیکشن میں داخل نہیں ہو سکتے.
+  reports:
+    error:
+      access_denied: آپ اس شخص کے اعداد و شمار نہیں دیکھ سکتے
+  crud:
+    submit: جمع کرائیں
+  nav:
+    header:
+      my_dashboard: ڈیش بورڈ
+      professional_learning: پیشہ ورانہ تعلیم
+      educate_hoc: آور-آف-کوڈ
+    user:
+      classroom: استاد کی ہوم پیج
+      create: بنائیں
+  teacher:
+    panel:
+      student: Talib-e-ilm
+  home:
+    announcement_learn_more_button: مزید سیکھے
+  user_type:
+    student: Talib-e-ilm
+  footer:
+    more: مزید
+  compatibility:
+    upgrade:
+      link: مزید سیکھے
+  upsell:
+    hoc2014:
+      try_frozen: آرٹسٹ اینا اور ایلسا کے ساتھ، فروزن سے ماخوذ
+    frozen:
+      title: فروزن
+    unplugged_conditionals:
+      title: شرائط
+  dialog:
+    ok: ٹھيک ہے
+    startover_title: کیا آپ یقینی طور پر دوبارہ شروع (اسٹارٹ اوور) کرنا چاہتے ہیں؟
+    startover_ok: آغاز(اسٹارٹ اوور)
+    startover_cancel: منسوخ کریں
+  terms_interstitial:
+    print: پرنٹ
+  race_interstitial:
+    races:
+      other: دیگر
+    submit: جمع کرائیں
+  project:
+    share: دوسروں کو بتائیں
+    more: مزید
+    name: نام
+    delete_yes: جی
+    delete_no: نہيں
+    saved: Saved
+    cancel: منسوخ کریں
+    abuse:
+      report_abuse_form:
+        abuse_type:
+          other: دیگر
+  pd:
+    form_labels:
+      email: Email
+    form_entries:
+      subjects:
+        cs: کمپیوٹر سائنس
+        math: ریاضی
+      email_opt_in:
+        opt_in_yes: جی
+        opt_in_no: نہيں
+  cookie_banner:
+    accept: ma manta ho
+  gdpr_dialog:
+    true: جی

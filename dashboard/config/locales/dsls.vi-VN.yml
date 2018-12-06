@@ -1,0 +1,2352 @@
+---
+vi:
+  data:
+    evaluation_multi:
+      U5 evaluation q1:
+        'No': Không
+        'Yes': Đồng ý
+      U5 evaluation q2:
+        Conditionals and Boolean Logic: Các điều kiện và logic Boolean
+        0: "? Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        1: ": Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        Processing Arrays: Mảng xử lý
+        Variables and Strings: Các biến số và các chuỗi
+        While Loops: Vòng lặp "trong khi"
+    external:
+      Algo How Routers Learn Student Lesson Introduction:
+        title: tiêu đề
+      Algo Shortest Path Student Lesson Introduction:
+        title: tiêu đề
+      Basic mechanics of variables:
+        title: tiêu đề
+      Basic mechanics of variables_2018:
+        title: tiêu đề
+      Begin planning your project:
+        title: tiêu đề
+      'Big Picture: If-statements':
+        title: tiêu đề
+      'Big Picture: If-statements_2018':
+        title: tiêu đề
+      Boolean Expressions and Comparison Operators:
+        title: tiêu đề
+      Boolean Expressions and Comparison Operators_2018:
+        title: tiêu đề
+      CSD U1 Input Output C2:
+        title: tiêu đề
+      CSD U1 Input Output C3:
+        title: tiêu đề
+      CSD U1 Input Output C4:
+        title: tiêu đề
+      CSD U1 Input Output Intro:
+        title: tiêu đề
+      CSD U2 Design Project:
+        title: tiêu đề
+      CSD U2 Design Project_2018:
+        title: tiêu đề
+      CSD U2 L1 Overview:
+        title: tiêu đề
+      CSD U2 L1 Overview_2018:
+        title: tiêu đề
+      CSD U2 L2 Overview:
+        title: tiêu đề
+      CSD U2 L2 Overview_2018:
+        title: tiêu đề
+      CSD U2 L3 Overview:
+        title: tiêu đề
+      CSD U2 L3 Overview_2018:
+        title: tiêu đề
+      CSD U2 L4 Overview:
+        title: tiêu đề
+      CSD U2 L4 Overview_2018:
+        title: tiêu đề
+      CSD U2 L5 Overview:
+        title: tiêu đề
+      CSD U2 L5 Overview_2018:
+        title: tiêu đề
+      CSD U2 L6 Overview:
+        title: tiêu đề
+      CSD U2 L6 Overview_2018:
+        title: tiêu đề
+      CSD U2 Social Sleuth:
+        title: tiêu đề
+      CSD U2 expand project:
+        title: tiêu đề
+      CSD U2 expand project_2018:
+        title: tiêu đề
+      CSD U2 layout style review:
+        title: tiêu đề
+      CSD U2 more CSS:
+        title: tiêu đề
+      CSD U3 L2 Challenges:
+        title: tiêu đề
+      CSD U3 SFLP Sprites and Images:
+        title: tiêu đề
+      CSD U3 abstraction intro:
+        title: tiêu đề
+      CSD U3 combining rep:
+        title: tiêu đề
+      CSD U3 combining rep_2018:
+        title: tiêu đề
+      CSD U5 Encryption 1:
+        title: tiêu đề
+      CSD U5 Encryption 1_2018:
+        title: tiêu đề
+      CSD U5 L13 SFLP Interpreting Data:
+        title: tiêu đề
+      CSD U5 L13 SFLP Interpreting Data_2018:
+        title: tiêu đề
+      CSD U5 Representing Information:
+        title: tiêu đề
+      CSD U5 collection UPS2:
+        title: tiêu đề
+      CSD U5 collection ads2:
+        title: tiêu đề
+      CSD U5 data visualization:
+        title: tiêu đề
+      CSD U5 data visualization sheet:
+        title: tiêu đề
+      CSD U5 data visualization_2018:
+        title: tiêu đề
+      CSD U5 student record:
+        title: tiêu đề
+      CSD U5 student record_2018:
+        title: tiêu đề
+      CSD U5 video2:
+        title: tiêu đề
+      CSD-U3-SFLP Drawing:
+        title: tiêu đề
+      CSDU2L01 SFLP:
+        title: tiêu đề
+      CSP ExploreL02 SFLP:
+        title: tiêu đề
+      CSP Journal Entry Placeholder2:
+        title: tiêu đề
+      CSPPD impact of CS:
+        Impact of Computer Science: Tác động của khoa học máy tính
+      CSPPD3-u2 Welcome:
+        Welcome!: hoan nghênh!
+      CSPStudentLessonPlanTemplate:
+        title: tiêu đề
+      CSPU5 Making a Multi Screen Chaser Game:
+        title: tiêu đề
+      CSPU5_ChoosingGoodIds:
+        title: tiêu đề
+      CSPU5_EventDrivenProgrammingPatterns:
+        title: tiêu đề
+      CSPU5_FirstTimeDesignMode:
+        title: tiêu đề
+      CSPU5_FirstTimeDesignMode_2018:
+        title: tiêu đề
+      CSPU5_HowImagesWork:
+        title: tiêu đề
+      CSPU5_HowOnEventWorks_v2:
+        title: tiêu đề
+      CSPU5_U3L12 - Student Introduction 1:
+        Events Unplugged: Sự kiện lập trình không cần máy tính
+      CSPU5_U3L14 - Message - Other ways to assign values:
+        title: tiêu đề
+      CSPU5_U3L14 - Message - basic mechanics of variables:
+        title: tiêu đề
+      CSPU5_U3L15 - explanation of IF and =v==:
+        title: tiêu đề
+      CSPU5_U3L15 Student Lesson Intro - new:
+        title: tiêu đề
+      CSPU5_U3L20 - combining And and Or explanation:
+        title: tiêu đề
+      CSPU5_goodbyeTurtle_setPosition:
+        title: tiêu đề
+      CSPU5_introToDebugging:
+        title: tiêu đề
+      CSPU5_makingPredictions_ref:
+        title: tiêu đề
+      CSPU5_onEventBreakdown:
+        title: tiêu đề
+      CSP_Final_instructions:
+        title: tiêu đề
+      CSP_U4_rawMovieData:
+        title: tiêu đề
+      Color Sleuth - Epilogue:
+        title: tiêu đề
+      Color Sleuth - Epilogue_2018:
+        title: tiêu đề
+      Color Sleuth - How does it end?:
+        title: tiêu đề
+      Color Sleuth - How does it end?_2018:
+        title: tiêu đề
+      Color Sleuth - How to switch player turns:
+        title: tiêu đề
+      Color Sleuth - How to switch player turns_2018:
+        title: tiêu đề
+      Color Sleuth - Keeping score:
+        title: tiêu đề
+      Color Sleuth - Keeping score_2018:
+        title: tiêu đề
+      Color Sleuth - Planning the App:
+        title: tiêu đề
+      Color Sleuth - Planning the App_2018:
+        title: tiêu đề
+      Controlling Memory - Other ways to assign values:
+        title: tiêu đề
+      Controlling Memory - Other ways to assign values_2018:
+        title: tiêu đề
+      Cups and Beans Activity:
+        title: tiêu đề
+      Cups and Beans Activity_2018:
+        title: tiêu đề
+      Debugging with Console.log:
+        title: tiêu đề
+      Debugging with Console.log_2018:
+        title: tiêu đề
+      Digital Footprint Chirpr lillizard:
+        title: tiêu đề
+      Digital Footprint FaceSpace Haley:
+        title: tiêu đề
+      Digital Footprint FaceSpace Lizzie:
+        title: tiêu đề
+      Digital Footprint instantframe wiz_kid_liz:
+        title: tiêu đề
+      DigitalCitizenship2:
+        Digital Citizenship: Dân kỹ thuật số
+      ECSPD Challenge Rubric:
+        title: tiêu đề
+      ECSPD Online U1D11-14:
+        title: tiêu đề
+      ECSPD Online U1D15-16 Forum:
+        title: tiêu đề
+      ECSPD Online intro:
+        Introduction: Giới thiệu
+      ECSPD U2 Challenge Plan:
+        title: tiêu đề
+      ECSPD Unit 2 Stage11:
+        title: tiêu đề
+      ECSPD Unit 2 Stage13:
+        title: tiêu đề
+      ECSPD Unit 2 Stage6:
+        title: tiêu đề
+      ECSPD impact of CS:
+        Impact of Computer Science: Tác động của khoa học máy tính
+      Encoding Numbers Real World Student Lesson Introduction:
+        title: tiêu đề
+      Event Driven Programming Recap:
+        title: tiêu đề
+      Event Driven Programming Recap_2018:
+        title: tiêu đề
+      Event-Driven Programming Patterns:
+        title: tiêu đề
+      Event-Driven Programming Patterns_2018:
+        title: tiêu đề
+      External MD column Test:
+        title: tiêu đề
+      External MD column Test bootstrap:
+        title: tiêu đề
+      GoodBadVisualizations_v1:
+        title: tiêu đề
+      GoodBadVisualizations_v2:
+        title: tiêu đề
+      How "if-else-if" Works:
+        title: tiêu đề
+      How "if-else-if" Works_2018:
+        title: tiêu đề
+      How Compound Boolean Expressions Work:
+        title: tiêu đề
+      How Compound Boolean Expressions Work_2018:
+        title: tiêu đề
+      How Dropdown Menus Work:
+        title: tiêu đề
+      How Dropdown Menus Work_2018:
+        title: tiêu đề
+      How If Statements Work pt 1:
+        title: tiêu đề
+      How If Statements Work pt 1_2018:
+        title: tiêu đề
+      How If-Else Statements Work:
+        title: tiêu đề
+      How If-Else Statements Work_2018:
+        title: tiêu đề
+      How Images Work:
+        title: tiêu đề
+      How Images Work_2018:
+        title: tiêu đề
+      How Secure Is Your Password?:
+        title: tiêu đề
+      How Secure Is Your Password?_2018:
+        title: tiêu đề
+      How Set Property Works:
+        title: tiêu đề
+      How Set Property Works_2018:
+        title: tiêu đề
+      How onEvent Works:
+        title: tiêu đề
+      How onEvent Works_2018:
+        title: tiêu đề
+      How setPosition and screen dimensions work:
+        title: tiêu đề
+      How setPosition and screen dimensions work_2018:
+        title: tiêu đề
+      How the Boolean &&, || and ! Operators Work:
+        title: tiêu đề
+      How the Boolean &&, || and ! Operators Work_2018:
+        title: tiêu đề
+      How to make a random color:
+        title: tiêu đề
+      How to make a random color_2018:
+        title: tiêu đề
+      How to pick a random button:
+        title: tiêu đề
+      How to pick a random button_2018:
+        title: tiêu đề
+      Internet Simulator Setup 2:
+        title: tiêu đề
+      Intro to Debugging and Common Problems:
+        title: tiêu đề
+      Intro to Debugging and Common Problems_2018:
+        title: tiêu đề
+      Making Multiple Screens:
+        title: tiêu đề
+      Making Multiple Screens_2018:
+        title: tiêu đề
+      Making a Multi Screen Chaser Game v.2:
+        title: tiêu đề
+      Making a Multi Screen Chaser Game v.2_2018:
+        title: tiêu đề
+      Multi-Screen Apps:
+        title: tiêu đề
+      New Challenge Introduction:
+        title: tiêu đề
+      New Challenge Introduction_2018:
+        title: tiêu đề
+      OPD-K5 Stage3aGo:
+        title: tiêu đề
+      PDAlg Facilitator Test:
+        title: tiêu đề
+      PDK5 CS Video:
+        Computer Science: Khoa học máy tính
+      PDK5 Glossary C:
+        Vocabulary: Từ vựng
+      PDK5 Pair Programming 1:
+        Pair Programming: Lập trình đôi
+      PS - Responding to User Input:
+        title: tiêu đề
+      PS - draft - Longitudinal study description:
+        title: tiêu đề
+      Prepare for your presentation:
+        title: tiêu đề
+      Public Key Crypto Widget Instructions:
+        title: tiêu đề
+      Public Key Crypto Widget Instructions_2018:
+        title: tiêu đề
+      Recruitment-Scenarios-Passthrough:
+        Recruitment Scenarios Session: Phần kịch bản tuyển dụng
+      Rules About Choosing Good IDs:
+        title: tiêu đề
+      Rules About Choosing Good IDs_2018:
+        title: tiêu đề
+      SG U3 whats a comment:
+        title: tiêu đề
+      SG v2 U3L01 Student Lesson Introduction:
+        title: tiêu đề
+      SG v2 U3L02 Student Lesson Introduction:
+        title: tiêu đề
+      SG v2 U3L03 Student Lesson Introduction:
+        title: tiêu đề
+      SG v2 U3L05 Student Lesson Introduction:
+        title: tiêu đề
+      SG v2 U3L07 Student Lesson Introduction:
+        title: tiêu đề
+      SG v2 U3L08 Student Lesson Introduction:
+        title: tiêu đề
+      SG v2 U3L09 Student Lesson Introduction:
+        Looping and Random Numbers: Vòng lặp và biến số ngẫu nhiên
+      SG v2 U3L6 Student Lesson Introduction:
+        Functions and Top-Down Design: Chức năng và thiết kế từ trên xuống dưới
+      Sending Bits Real World Student Lesson Introduction:
+        title: tiêu đề
+      Simple Decisions with if-statements:
+        title: tiêu đề
+      Simple Decisions with if-statements_2018:
+        title: tiêu đề
+      Tips For Working on Your Own:
+        title: tiêu đề
+      Tips For Working on Your Own_2018:
+        title: tiêu đề
+      U1L10 Student Lesson Introduction:
+        title: tiêu đề
+      U1L11 Student Lesson Introduction:
+        title: tiêu đề
+      U1L12 Student Lesson Introduction:
+        title: tiêu đề
+      U1L13 Student Lesson Summary:
+        title: tiêu đề
+      U1L14 Student Lesson Summary:
+        title: tiêu đề
+      U1L15 Student Lesson Summary:
+        title: tiêu đề
+      U1L16 Student Lesson Introduction:
+        Lossy Compression and File Formats: Việc nén và định dạng tập tin
+      U1L17 Student Lesson Introduction:
+        title: tiêu đề
+      U1L2 Student Lesson Introduction:
+        title: tiêu đề
+      U1L3 Student Lesson Introduction:
+        title: tiêu đề
+      U1L4 Student Lesson Introduction:
+        title: tiêu đề
+      U1L5 Student Lesson Introduction:
+        title: tiêu đề
+      U1L6 Student Lesson Introduction:
+        title: tiêu đề
+      U1L7 Student Lesson Introduction:
+        title: tiêu đề
+      U1L8 Student Lesson Introduction:
+        title: tiêu đề
+      U1L9 Student Lesson Introduction:
+        title: tiêu đề
+      U2L1 Student Lesson Introduction:
+        title: tiêu đề
+      U2L11 Student Lesson Introduction:
+        HTTP and Abstraction: HTTP và hình ảnh trừu tượng
+      U2L12 Student Lesson Introduction:
+        title: tiêu đề
+      U2L14 Student Lesson Introduction:
+        Cracking the Code: Phá mã hoá
+      U2L2 Student Lesson Introduction:
+        The Need for Addressing: Sự cần thiết cho các địa chỉ
+      U2L5 Student Lesson Introduction:
+        Packets and Making a Reliable Internet: Gói dữ liệu và tạo một mạng Internet
+          đáng tin cậy
+      U2L7 Student Lesson Introduction:
+        title: tiêu đề
+      U2L8 Student Lesson Introduction:
+        title: tiêu đề
+      U2L9 Student Lesson Introduction:
+        The Need for DNS: Sự cần thiết cho DNS
+      U3 whats a comment:
+        title: tiêu đề
+      U3 whats a comment_2018:
+        title: tiêu đề
+      U3L06 Student Lesson Introduction:
+        APIs and Function Parameters: API và các thông số chức năng
+      U3L07 Student Lesson Introduction:
+        Looping and Random Numbers: Vòng lặp và biến số ngẫu nhiên
+      U3L08 Student Lesson Introduction:
+        Creating Functions with Parameters: Tạo ra Chức năng với các tham số
+      U3L12 - Mission Unsortable:
+        title: tiêu đề
+      U3L12 - Student Introduction 1:
+        Events Unplugged: Sự kiện lập trình không cần máy tính
+      U3L13 - Explanation of Ids:
+        title: tiêu đề
+      U3L13 - Make a Prediction Explanation:
+        title: tiêu đề
+      U3L13 Add Button Instrucitons:
+        title: tiêu đề
+      U3L13 Add Button Instructions:
+        title: tiêu đề
+      U3L14 - Message - Other ways to assign values:
+        title: tiêu đề
+      U3L14 - Message - basic mechanics of variables:
+        title: tiêu đề
+      U3L14 - Student Intro Page:
+        title: tiêu đề
+      U3L15 - explanation of IF and =v==:
+        title: tiêu đề
+      U3L15 Student Lesson Intro - new:
+        title: tiêu đề
+      U3L19 - done with variables finally:
+        title: tiêu đề
+      U3L20 - combining And and Or explanation:
+        title: tiêu đề
+      U3L22 Student Lesson Introduction:
+        Permanent Data Storage: Lưu trữ dữ liệu vĩnh viễn
+      U4 - Cleaning Data - Activity Guide:
+        title: tiêu đề
+      U4 - Making Data Visualizations - Bar Chart:
+        title: tiêu đề
+      U4 - Making Data Visualizations - Edit Chart Appearance:
+        title: tiêu đề
+      U4 - Making Data Visualizations - Free Play:
+        title: tiêu đề
+      U4 - Making Data Visualizations - Free Play_2018:
+        title: tiêu đề
+      U4 - Making Data Visualizations - Getting Started:
+        title: tiêu đề
+      U4 - Making Data Visualizations - Line Chart:
+        title: tiêu đề
+      U4 - Making Data Visualizations - Scatter Plot:
+        title: tiêu đề
+      U4 - Making Data Visualizations - Student Introduction:
+        title: tiêu đề
+      U4 - Privacy Abandoned - Hot On Your Trail Video:
+        title: tiêu đề
+      U4 - Unique Ids Explanation:
+        title: tiêu đề
+      U4 - Unique Ids Explanation_2018:
+        title: tiêu đề
+      U4 Cleaning Data Activity Guide Pt2:
+        title: tiêu đề
+      U4 Cleaning Data Activity Guide Pt3:
+        title: tiêu đề
+      U4L01 Student Lesson Introduction:
+        title: tiêu đề
+      U4L02 Student Lesson Introduction:
+        title: tiêu đề
+      U4L02 Student Lesson Introduction_2018:
+        title: tiêu đề
+      U4L02v2 - Finding Trends:
+        title: tiêu đề
+      U4L03 Student Lesson Introduction:
+        title: tiêu đề
+      U4L03 Student Lesson Introduction_2018:
+        title: tiêu đề
+      U4L03v2 - Student Introduction:
+        title: tiêu đề
+      U4L04 Student Lesson Introduction:
+        title: tiêu đề
+      U4L04 Student Lesson Introduction_2018:
+        title: tiêu đề
+      U4L04v2 - Student Introduction:
+        title: tiêu đề
+      U4L05 Student Lesson Introduction:
+        title: tiêu đề
+      U4L06 Student Lesson Introduction:
+        title: tiêu đề
+      U4L06v2 Student Lesson Introduction:
+        title: tiêu đề
+      U4L07 Student Introduction public key crypto:
+        title: tiêu đề
+      U4L07 Student Lesson Introduction:
+        title: tiêu đề
+      U4L08 - mod clock instructions:
+        title: tiêu đề
+      U4L08 Student Lesson Introduction:
+        title: tiêu đề
+      U4L08v2 Making Pivot Tables:
+        title: tiêu đề
+      U4L08v2 Making Pivot Tables Part 2:
+        title: tiêu đề
+      U4L08v2 Making Pivot Tables Part 3:
+        title: tiêu đề
+      U4L08v2 Making Pivot Tables Part 3_2018:
+        title: tiêu đề
+      U4L08v2 Student Intro:
+        title: tiêu đề
+      U4L09 Student Lesson Intro Practice PT big data dilemma:
+        title: tiêu đề
+      U4L09 Student Lesson Introduction:
+        title: tiêu đề
+      U4L10 Student Lesson Introduction:
+        title: tiêu đề
+      U4L11 Student Lesson Introduction:
+        title: tiêu đề
+      U4L12 - Student Introduction:
+        title: tiêu đề
+      U4L12 Student Lesson Introduction:
+        title: tiêu đề
+      U4L13 Student Lesson Introduction:
+        title: tiêu đề
+      U4L14 Student Lesson Introduction:
+        title: tiêu đề
+      U4L15 Student Lesson Introduction:
+        title: tiêu đề
+      U4L16 Student Lesson Introduction:
+        title: tiêu đề
+      U4L17 Student Lesson Introduction:
+        title: tiêu đề
+      U4L18 Student Lesson Introduction:
+        title: tiêu đề
+      U4L19 Student Lesson Introduction:
+        title: tiêu đề
+      U4L20 Student Lesson Introduction:
+        title: tiêu đề
+      U4L21 Student Lesson Introduction:
+        title: tiêu đề
+      U4L22 Student Lesson Introduction:
+        title: tiêu đề
+      U4L23 Student Lesson Introduction:
+        title: tiêu đề
+      U4L24 Student Lesson Introduction:
+        title: tiêu đề
+      U4L5 random subst challenge page:
+        title: tiêu đề
+      U5 - Create PT - Student Introduction:
+        title: tiêu đề
+      U5 - Create PT Prep - Student Introduction:
+        title: tiêu đề
+      U5 - Create PT review - Student Introduction:
+        title: tiêu đề
+      U5 - Explore PT - Student Introduction:
+        title: tiêu đề
+      U5 - Explore PT Prep - Student Introduction:
+        title: tiêu đề
+      U5 - Explore PT Review - Student Introduction:
+        title: tiêu đề
+      U5 - PT Prep - Digital Portfolio and tech setup:
+        title: tiêu đề
+      U5 color sleuth check correct:
+        title: tiêu đề
+      U5 color sleuth check correct_2018:
+        title: tiêu đề
+      U5L08 - Student Intro If statements:
+        title: tiêu đề
+      U6 - Charts - Student Introduction:
+        title: tiêu đề
+      U6 - Charts - Student Introduction_2018:
+        title: tiêu đề
+      U6 - Final Project - Student Introduction:
+        title: tiêu đề
+      U6 - Final Project - Student Introduction_2018:
+        title: tiêu đề
+      U6 - ImportExport - Student Introduction:
+        title: tiêu đề
+      U6 - ImportExport - Student Introduction_2018:
+        title: tiêu đề
+      U6 - Sample Apps - Student Introduction:
+        title: tiêu đề
+      U6 - Sample Apps - Student Introduction_2018:
+        title: tiêu đề
+      U6 - deleteRecord - Student Introduction:
+        title: tiêu đề
+      U6 - deleteRecord - Student Introduction_2018:
+        title: tiêu đề
+      U6 - updateRecord - Student Introduction:
+        title: tiêu đề
+      U6 - updateRecord - Student Introduction_2018:
+        title: tiêu đề
+      U6 AP Performance Task Tech Setup - Student Links:
+        title: tiêu đề
+      U6 Create PT - Complete the Task - Student Links:
+        title: tiêu đề
+      U6 Create PT - Complete the Task - Student Links_2018:
+        title: tiêu đề
+      U6 Create PT Review - Student Links:
+        title: tiêu đề
+      U6 Create PT Review - Student Links_2018:
+        title: tiêu đề
+      U6 Explore PT - Complete the Task - Student Links:
+        title: tiêu đề
+      U6 Explore PT - Complete the Task - Student Links_2018:
+        title: tiêu đề
+      U6 Explore PT - Make a Plan - Student Links:
+        title: tiêu đề
+      U6 Explore PT - Make a Plan - Student Links_2018:
+        title: tiêu đề
+      U6 Explore PT Review - Student Links:
+        title: tiêu đề
+      U6 Explore PT Review - Student Links_2018:
+        title: tiêu đề
+      Unit 2 Lesson 1 Overview Clone:
+        title: tiêu đề
+      Unit 4 Lesson 1 Introduction:
+        title: tiêu đề
+      Unit 4 Lesson 1 Introduction_2018:
+        title: tiêu đề
+      Unit 4 Lesson 2 Introduction:
+        title: tiêu đề
+      Unit 4 Lesson 2 Introduction_2018:
+        title: tiêu đề
+      Unit 4 Lesson 5 Introduction:
+        title: tiêu đề
+      Unit 4 Lesson 5 Introduction_2018:
+        title: tiêu đề
+      Unit 4 Lesson 6 Introduction:
+        Cracking the Code: Phá mã hoá
+      Unit 4 Lesson 6 Introduction_2018:
+        Cracking the Code: Phá mã hoá
+      Unit 5 Lesson 1:
+        title: tiêu đề
+      Unit 5 Lesson 1 Introduction:
+        title: tiêu đề
+      Unit 5 Lesson 1 Introduction_2018:
+        title: tiêu đề
+      Unit 5 Lesson 10 Introduction:
+        title: tiêu đề
+      Unit 5 Lesson 10 Introduction_2018:
+        title: tiêu đề
+      Unit 5 Lesson 2 Introduction:
+        title: tiêu đề
+      Unit 5 Lesson 2 Introduction_2018:
+        title: tiêu đề
+      Unit 5 Lesson 3 Introduction:
+        title: tiêu đề
+      Unit 5 Lesson 3 Introduction_2018:
+        title: tiêu đề
+      Unit 5 Lesson 4 Introduction:
+        title: tiêu đề
+      Unit 5 Lesson 4 Introduction_2018:
+        title: tiêu đề
+      Unit 5 Lesson 5:
+        title: tiêu đề
+      Unit 5 Lesson 5 Introduction:
+        title: tiêu đề
+      Unit 5 Lesson 5 Introduction_2018:
+        title: tiêu đề
+      Unit 5 Lesson 6:
+        title: tiêu đề
+      Unit 5 Lesson 6 Introduction:
+        title: tiêu đề
+      Unit 5 Lesson 6 Introduction_2018:
+        title: tiêu đề
+      Unit 5 Lesson 7 Introduction:
+        title: tiêu đề
+      Unit 5 Lesson 7 Introduction_2018:
+        title: tiêu đề
+      Unit 5 Lesson 8 Introduction:
+        title: tiêu đề
+      Unit 5 Lesson 8 Introduction_2018:
+        title: tiêu đề
+      Unit 5 Lesson 9 Introduction:
+        title: tiêu đề
+      Unit 5 Lesson 9 Introduction_2018:
+        title: tiêu đề
+      'Worked Example: If-statements and Robot':
+        title: tiêu đề
+      'Worked Example: If-statements and Robot_2018':
+        title: tiêu đề
+      brad-repro-bug-000:
+        Brad Repro Bug 000: Brad Repro Bug 000
+      challenges sample 3:
+        Life Science Challenges: Thử thách khoa học cuộc sống
+      challenges sample 4:
+        Life Science Challenges: Thử thách khoa học cuộc sống
+      challenges sample 5:
+        Life Science Challenges: Thử thách khoa học cuộc sống
+      challenges sample 6:
+        Life Science Challenges: Thử thách khoa học cuộc sống
+      challenges sample 7:
+        Life Science Challenges: Thử thách khoa học cuộc sống
+      courseB_external_MRF:
+        title: tiêu đề
+      courseB_external_loopMRF:
+        title: tiêu đề
+      courseB_story_unspottedBugs10:
+        title: tiêu đề
+      courseB_story_unspottedBugs11:
+        title: tiêu đề
+      courseB_story_unspottedBugs12:
+        title: tiêu đề
+      courseB_story_unspottedBugs13:
+        title: tiêu đề
+      courseB_story_unspottedBugs14:
+        title: tiêu đề
+      courseB_story_unspottedBugs15:
+        title: tiêu đề
+      courseB_story_unspottedBugs16:
+        title: tiêu đề
+      courseB_story_unspottedBugs17:
+        title: tiêu đề
+      courseB_story_unspottedBugs18:
+        title: tiêu đề
+      courseB_story_unspottedBugs2:
+        title: tiêu đề
+      courseB_story_unspottedBugs3:
+        title: tiêu đề
+      courseB_story_unspottedBugs4:
+        title: tiêu đề
+      courseB_story_unspottedBugs5:
+        title: tiêu đề
+      courseB_story_unspottedBugs6:
+        title: tiêu đề
+      courseB_story_unspottedBugs7:
+        title: tiêu đề
+      courseB_story_unspottedBugs8:
+        title: tiêu đề
+      courseB_story_unspottedBugs9:
+        title: tiêu đề
+      courseB_unplugged_mrfProgramming:
+        title: tiêu đề
+      courseC_screenoutthemean:
+        title: tiêu đề
+      courseF_firstFunctions_map:
+        title: tiêu đề
+      coursef_functionsSummary_map:
+        title: tiêu đề
+      coursef_powerofwords:
+        title: tiêu đề
+      csd-post-survey-unit1-preamble:
+        title: tiêu đề
+      csd-post-survey-unit2-preamble:
+        title: tiêu đề
+      csd-post-survey-unit3-preamble:
+        title: tiêu đề
+      csd-post-survey-unit4-preamble:
+        title: tiêu đề
+      csd-post-survey-unit5-preamble:
+        title: tiêu đề
+      csd-post-survey-unit6-preamble:
+        title: tiêu đề
+      csp-post-survey-2018-AP-preamble:
+        title: tiêu đề
+      csp-post-survey-2018-topics-preamble:
+        title: tiêu đề
+      csp-post-survey-2018-unit-feedback-preamble:
+        title: tiêu đề
+      csp-post-survey-createPT-preamble:
+        title: tiêu đề
+      csp-post-survey-explorePT-preamble:
+        title: tiêu đề
+      csp-post-survey-unit1-preamble:
+        title: tiêu đề
+      csp-post-survey-unit2-preamble:
+        title: tiêu đề
+      csp-post-survey-unit3-preamble:
+        title: tiêu đề
+      csp-post-survey-unit4-preamble:
+        title: tiêu đề
+      csp-post-survey-unit5-preamble:
+        title: tiêu đề
+      csp_unit5_finalassessment_overview:
+        title: tiêu đề
+      csp_unit5_finalassessment_overview_2018:
+        title: tiêu đề
+      csp_unit5_finalassessment_overview_exam_prep:
+        title: tiêu đề
+      csp_unit_assessment_overview:
+        title: tiêu đề
+      csp_unit_assessment_overview_2018:
+        title: tiêu đề
+      csp_unit_assessment_overview_exam_prep:
+        title: tiêu đề
+      dsl link test:
+        title: tiêu đề
+      grade2_maze_intro1:
+        title: tiêu đề
+      grade2_unplugged_neighborhood:
+        title: tiêu đề
+      grade4_project_design:
+        title: tiêu đề
+      grade4_project_design_image:
+        title: tiêu đề
+      grade4_project_presentation:
+        title: tiêu đề
+      grade5_project_design:
+        title: tiêu đề
+      grade5_project_presentation:
+        title: tiêu đề
+      more encryption algorithms:
+        title: tiêu đề
+      newCSFsample:
+        Intro: Giới thiệu
+      post-assessment survey heading4:
+        title: tiêu đề
+      pwc_appdev:
+        title: tiêu đề
+      pwc_appdevunplugged:
+        title: tiêu đề
+      pwc_cybersecurity:
+        title: tiêu đề
+      pwc_internetofthings:
+        title: tiêu đề
+      pwc_programming:
+        title: tiêu đề
+      pwc_webdevelopment:
+        title: tiêu đề
+      sciPD StarLogo intro video:
+        Introduction to StarLogo Nova: Giới thiệu về StarLogo Nova
+      sciPD class models video:
+        Using Models in the Classroom: Sử dụng mô hình trong lớp học
+      sciPD computer models forum:
+        Using Computer Models in Science: Sử dụng mô hình máy tính trong khoa học
+      sciPD computer models video:
+        Using Computer Models in Science: Sử dụng mô hình máy tính trong khoa học
+      sciPD culture forum:
+        Dispositions and Classroom Culture: Sự sắp xếp và văn hoá lớp học
+      sciPD framework video:
+        Framework: Khung làm việc
+      sciPD what to expect:
+        What to Expect: Những gì mong đợi
+      sciPD what to expect 16-17:
+        What to Expect: Những gì mong đợi
+      sciPD2 mods:
+        Reviewing the Modules: Xem xét các mô-đun
+      sciPD2Part4_S1_L3:
+        title: tiêu đề
+      sciPD2Part4_S2_L1:
+        title: tiêu đề
+      sciPD2Part4_S2_L2:
+        title: tiêu đề
+      sciPD2Part4_S3_L1:
+        title: tiêu đề
+      sciPD2Part4_S3_L2:
+        title: tiêu đề
+      sciPD2Part4_S3_L3:
+        title: tiêu đề
+      sciPD3 mods:
+        Reviewing the Modules: Xem xét các mô-đun
+      sciPD3 mods2:
+        title: tiêu đề
+      sciPD33 earth1:
+        title: tiêu đề
+      sciPD33 earth2:
+        title: tiêu đề
+      sciPDpart4_S1_L1:
+        title: tiêu đề
+      swipeRightPassThrough:
+        Recruitment Scenarios Session: Phần kịch bản tuyển dụng
+      swipeRightPassThrough-test123:
+        Recruitment Scenarios Session: Phần kịch bản tuyển dụng
+      test discourse level type:
+        title: tiêu đề
+      v1 U1L13 Student Lesson Introduction:
+        The Need for DNS: Sự cần thiết cho DNS
+      v2 U1 Internet is for Everyone Student Lesson Introduction:
+        title: tiêu đề
+      v2 U1 Internet is for Everyone Student Lesson Introduction_2018:
+        title: tiêu đề
+      v2 U1L11 Student Lesson Introduction:
+        Packets and Making a Reliable Internet: Gói dữ liệu và tạo một mạng Internet
+          đáng tin cậy
+      v2 U1L11 Student Lesson Introduction_2018:
+        Packets and Making a Reliable Internet: Gói dữ liệu và tạo một mạng Internet
+          đáng tin cậy
+      v2 U1L12 Student Lesson Introduction:
+        The Need for DNS: Sự cần thiết cho DNS
+      v2 U1L12 Student Lesson Introduction_2018:
+        The Need for DNS: Sự cần thiết cho DNS
+      v2 U1L13 Student Lesson Introduction:
+        HTTP and Abstraction: HTTP và hình ảnh trừu tượng
+      v2 U1L13 Student Lesson Introduction_2018:
+        HTTP and Abstraction: HTTP và hình ảnh trừu tượng
+      v2 U1L14 Student Lesson Introduction:
+        title: tiêu đề
+      v2 U1L14 Student Lesson Introduction_2018:
+        title: tiêu đề
+      v2 U1L2 Student Lesson Introduction:
+        title: tiêu đề
+      v2 U1L2 Student Lesson Introduction_2018:
+        title: tiêu đề
+      v2 U1L3 Student Lesson Introduction:
+        title: tiêu đề
+      v2 U1L3 Student Lesson Introduction_2018:
+        title: tiêu đề
+      v2 U1L4 Student Lesson Introduction:
+        title: tiêu đề
+      v2 U1L4 Student Lesson Introduction_2018:
+        title: tiêu đề
+      v2 U1L5 Student Lesson Introduction:
+        title: tiêu đề
+      v2 U1L5 Student Lesson Introduction_2018:
+        title: tiêu đề
+      v2 U1L6 Student Lesson Introduction:
+        Sending Numbers: Gửi các con số
+      v2 U1L6 Student Lesson Introduction_2018:
+        Sending Numbers: Gửi các con số
+      v2 U1L8 Student Lesson Introduction:
+        title: tiêu đề
+      v2 U1L8 Student Lesson Introduction_2018:
+        title: tiêu đề
+      v2 U1L9 Student Lesson Introduction:
+        The Need for Addressing: Sự cần thiết cho các địa chỉ
+      v2 U1L9 Student Lesson Introduction_2018:
+        The Need for Addressing: Sự cần thiết cho các địa chỉ
+      v2 U2L1 Student Lesson Introduction:
+        title: tiêu đề
+      v2 U2L1 Student Lesson Introduction_2018:
+        title: tiêu đề
+      v2 U2L10 Student Lesson Introduction:
+        title: tiêu đề
+      v2 U2L10 Student Lesson Introduction_2018:
+        title: tiêu đề
+      v2 U2L11 Student Lesson Introduction:
+        title: tiêu đề
+      v2 U2L11 Student Lesson Introduction_2018:
+        title: tiêu đề
+      v2 U2L12 Student Lesson Introduction:
+        title: tiêu đề
+      v2 U2L12 Student Lesson Introduction_2018:
+        title: tiêu đề
+      v2 U2L13 Student Lesson Introduction:
+        title: tiêu đề
+      v2 U2L13 Student Lesson Introduction_2018:
+        title: tiêu đề
+      v2 U2L14 Student Lesson Introduction:
+        title: tiêu đề
+      v2 U2L14 Student Lesson Introduction_2018:
+        title: tiêu đề
+      v2 U2L15 Student Lesson Introduction:
+        title: tiêu đề
+      v2 U2L15 Student Lesson Introduction_2018:
+        title: tiêu đề
+      v2 U2L2 Student Lesson Summary:
+        title: tiêu đề
+      v2 U2L2 Student Lesson Summary_2018:
+        title: tiêu đề
+      v2 U2L3 Student Lesson Summary:
+        title: tiêu đề
+      v2 U2L3 Student Lesson Summary_2018:
+        title: tiêu đề
+      v2 U2L4 Student Lesson Summary:
+        title: tiêu đề
+      v2 U2L4 Student Lesson Summary_2018:
+        title: tiêu đề
+      v2 U2L5 Student Lesson Introduction:
+        Lossy Compression and File Formats: Việc nén và định dạng tập tin
+      v2 U2L5 Student Lesson Introduction_2018:
+        Lossy Compression and File Formats: Việc nén và định dạng tập tin
+      v2 U2L6 Student Lesson Introduction:
+        title: tiêu đề
+      v2 U2L6 Student Lesson Introduction_2018:
+        title: tiêu đề
+      v2 U2L7 Student Lesson Introduction:
+        title: tiêu đề
+      v2 U2L7 Student Lesson Introduction_2018:
+        title: tiêu đề
+      v2 U2L8 Student Lesson Introduction:
+        title: tiêu đề
+      v2 U2L8 Student Lesson Introduction_2018:
+        title: tiêu đề
+      v2 U2L9 Student Lesson Introduction:
+        title: tiêu đề
+      v2 U2L9 Student Lesson Introduction_2018:
+        title: tiêu đề
+      v2 U3L02 Student Lesson Introduction:
+        The Need for Algorithms: Sự cần thiết cho các thuật toán
+      v2 U3L02 Student Lesson Introduction_2018:
+        The Need for Algorithms: Sự cần thiết cho các thuật toán
+      v2 U3L03 Student Lesson Introduction:
+        Creativity in Algorithms: Sự sáng tạo trong thuật toán
+      v2 U3L03 Student Lesson Introduction_2018:
+        Creativity in Algorithms: Sự sáng tạo trong thuật toán
+      v2 U3L04 Student Lesson Introduction:
+        title: tiêu đề
+      v2 U3L04 Student Lesson Introduction_2018:
+        title: tiêu đề
+      v2 U3L05 Student Lesson Introduction:
+        Creating Functions: Tạo ra hàm
+      v2 U3L05 Student Lesson Introduction_2018:
+        Creating Functions: Tạo ra hàm
+      v2 U3L07 Student Lesson Introduction:
+        APIs and Function Parameters: API và các thông số chức năng
+      v2 U3L07 Student Lesson Introduction_2018:
+        APIs and Function Parameters: API và các thông số chức năng
+      v2 U3L08 Student Lesson Introduction:
+        Creating Functions with Parameters: Tạo ra Chức năng với các tham số
+      v2 U3L08 Student Lesson Introduction_2018:
+        Creating Functions with Parameters: Tạo ra Chức năng với các tham số
+      v2 U3L09 Student Lesson Introduction:
+        Looping and Random Numbers: Vòng lặp và biến số ngẫu nhiên
+      v2 U3L09 Student Lesson Introduction_2018:
+        Looping and Random Numbers: Vòng lặp và biến số ngẫu nhiên
+      v2 U3L6 Student Lesson Introduction:
+        Functions and Top-Down Design: Chức năng và thiết kế từ trên xuống dưới
+      v2 U3L6 Student Lesson Introduction_2018:
+        Functions and Top-Down Design: Chức năng và thiết kế từ trên xuống dưới
+      v2 U4L05 Student Lesson Intro Encryption Caesar:
+        title: tiêu đề
+      v2 U4L06 Student Lesson Introduction Encryption Vigenere:
+        Cracking the Code: Phá mã hoá
+    match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: Ghép tổ hợp phím với các
+          bước nhảy phù hợp.
+        Matching: Phù hợp với/ khớp với / Chính xác với
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: Phù hợp với/ khớp với / Chính xác với
+        Use the key to match each code to its letter: sử dụng chìa khóa để nối mật
+          mã với ký hiệu của nó
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: Nối hình với chương trình phù hợp.
+        Matching: Phù hợp với/ khớp với / Chính xác với
+      2-3 Maze Match 2:
+        Instructions: lời chỉ đẫn
+        Match the puzzles to the blocks: Nối các câu đố với các khối phù hợp
+        Maze Match: Nối Mê Cung
+      2-3 Relay Programming Match 1:
+        Matching: Phù hợp với/ khớp với / Chính xác với
+      2-3 artist loops match 1:
+        Match the loop to the shape: Nối vòng lặp với hình phù hợp
+      2-3 artist match 1:
+        Artist Matching: Nối vói nghệ sĩ phù hợp
+        Match the shape with the blocks that complete it.: Nối hình với khối phù hợp.
+      2-3 bounce match 1:
+        Matching: Phù hợp với/ khớp với / Chính xác với
+      2-3 flappy match 1:
+        Matching: Phù hợp với/ khớp với / Chính xác với
+      2-3 maze match 1:
+        Match the puzzles to the blocks: Nối các câu đố với các khối phù hợp
+        Maze Match One: Nối các mê cung - Phần 1
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>Thêm số xúc xắc Người chơi
+          1 vừa tung vào tổng số điểm</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>So sánh điểm số của
+          tất cả các người chơi để xem ai thắng</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>Người chơi 1 gieo xúc xắc</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>Đặt điểm người chơi 1 bằng 0</h4>"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Nối
+          những bước của trò "Đua xúc xắc" sao cho chúng xuất hiện lần lượt từ đầu
+          đến cuối như trong thuật toán.
+        Matching: Phù hợp với/ khớp với / Chính xác với
+      4-5 Computational Thinking Match 1:
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Wheels/side: 2<br/>Windows/side:
+          0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Wheels/side: 2<br/>Windows/side:
+          1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Wheels/side: 2<br/>Windows/side:
+          6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Wheels/side: 3<br/>Windows/side:
+          2</h3>"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Mỗi
+          chiếc xe đã bị phân huỷ thành từng miếng nhỏ. Khớp mỗi xe với danh sách
+          phân huỷ.
+        Matching: Phù hợp với/ khớp với / Chính xác với
+      4-5 Suncatchers Match 1:
+        Match each program to the word it makes, using the provided group of skills.: Khớp
+          mỗi chương trình với từ ngữ tạo ra nó, sử dụng nhóm kỹ năng đã được cung
+          cấp.
+        Matching: Phù hợp với/ khớp với / Chính xác với
+      4-5 maze match 1:
+        Instructions: lời chỉ đẫn
+        Match the puzzles to the blocks: Nối các câu đố với các khối phù hợp
+        Maze Match: Nối Mê Cung
+      CSD U3 CSS Vocab Match:
+        '1': '1'
+        '2': '2'
+      CSD U3 keyinput match:
+        Question: Câu hỏi
+      CSDU2 Match RGB Colors:
+        Question: Câu hỏi
+      ECSPD Growth Mindset Reflection Q:
+        Growth Mindset: Tư duy tăng trưởng
+      K-1 Artist 2 Match 1:
+        Matching: Phù hợp với/ khớp với / Chính xác với
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: Nối các hình cùng loại.
+        Matching: Phù hợp với/ khớp với / Chính xác với
+      K-1 Artist 2 Match 3:
+        Match the shapes based on type.: Nối các hình cùng loại.
+        Matching: Phù hợp với/ khớp với / Chính xác với
+      K-1 Artist Loops Match 1:
+        Matching: Phù hợp với/ khớp với / Chính xác với
+      K-1 Bee Loops Match 1:
+        Match the blocks: Nối các khối
+        Matching: Phù hợp với/ khớp với / Chính xác với
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: Ghép tổ hợp phím với các
+          bước nhảy phù hợp.
+        Matching: Phù hợp với/ khớp với / Chính xác với
+      K-1 Flappy Match 1:
+        Match the blocks: Nối các khối
+        Matching: Phù hợp với/ khớp với / Chính xác với
+      K-1 Happy Maps Match 1:
+        Matching: Phù hợp với/ khớp với / Chính xác với
+      K-1 Maze Match 1:
+        Instructions: lời chỉ đẫn
+        Match the puzzles and blocks: Nối câu đố với khối lệnh phù hợp
+        Matching: Phù hợp với/ khớp với / Chính xác với
+      K-1 Move It Match 1:
+        Matching: Phù hợp với/ khớp với / Chính xác với
+      PDAlg Design Recipe Video:
+        Definition: Định nghĩa
+      PDAlg Types Video:
+        Image: Hình ảnh
+        Number: Số
+        String: Chuỗi
+      PDK5 What is unplugged:
+        Question: Câu hỏi
+      'U2L06 - Matching: Label the Diagram':
+        A: A
+        B: B
+        C: C
+        D: D
+        E: Đông
+      U3L19 - MATCH what are values of abc:
+        '10': '10'
+        '12': '12'
+        '13': '13'
+        '15': '15'
+        '16': '16'
+        '21': '21'
+        '3': '3'
+        '5': '5'
+        '7': '7'
+        '8': '8'
+        title: tiêu đề
+      U3L19 - MC what are values of abc:
+        title: tiêu đề
+      U4L06 Create Record Id Matching Q:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      test matching image:
+        Instructions: lời chỉ đẫn
+      test matching text:
+        Matching: Phù hợp với/ khớp với / Chính xác với
+        blue: màu xanh dương
+      unique level name here:
+        Question: Câu hỏi
+        title: tiêu đề
+    multi:
+      2-3 Algorithms Multi 1:
+        Choose an algorithm for the image provided.: Chọn thuật toán cho hình đã cho
+          sẵn.
+        Multiple Choice: Nhiều lựa chọn
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Bắt
+          đầu với một hình vuông <br/> đặt một hình bình hành trên hình vuông <br/>
+          đặt một tam giác bên phải của hình bình hành
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Bắt
+          đầu với một hình vuông <br/> đặt một hình tam giác trên hình vuông <br/>
+          đặt một tam giác bên dưới hình vuông
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Bắt
+          đầu với một hình vuông <br/> đặt một tam giác bên dưới hình vuông <br/>
+          đặt một hình bình hành bên phải của tam giác
+        0: "? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram"
+        1: ": Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram"
+      2-3 Algorithms Multi 2:
+        Multiple Choice: Nhiều lựa chọn
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Bắt
+          đầu với một hình tam giác <br/> đặt một hình vuông bên dưới khu vực tam
+          giác <br/> đặt một tam giác bên dưới hình vuông
+        Which image does <em>not</em> follow this algorithm?: Hiện hình ảnh nào <em>không</em>
+          làm theo thuật toán này?
+      2-3 Binary Multi 1:
+        Multiple Choice: Nhiều lựa chọn
+        Which program makes this image?: Chương trình nào làm nên hình ảnh này?
+      2-3 Conditionals Multi 1:
+        According to the rules of the game, which set of cards is scored correctly?: Theo
+          các quy tắc của trò chơi, bộ thẻ nào được ghi một cách chính xác?
+        Multiple Choice: Nhiều lựa chọn
+      2-3 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Bạn sẽ đơn giản hóa trình
+          tự này với vòng như thế nào?
+        Multiple Choice: Nhiều lựa chọn
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: Nhiều lựa chọn
+        Which program makes this image?: Chương trình nào làm nên hình ảnh này?
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: Mê cung nhiều sự lựa chọn
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: Nhiều lựa chọn
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: Nhiều lựa chọn
+        Which image-program combo does not contain mistakes?: Kết hợp hình ảnh chương
+          trình nào không chứa lỗi?
+      2-3 artist functions multi 1:
+        Artist Functions Multiple Choice One: 'Nghệ sĩ - Hàm: Chọn đáp án đúng - Phần
+          1'
+        Pick the correct blocks to draw this image using the given functions: Chọn
+          khối lệnh đúng để vẽ hình này sử dụng nhữ hàm đã cho
+      2-3 artist loops multi 1:
+        Artist Loops Multiple Choice: 'Nghệ sĩ - Vòng lặp: Chọn đáp án đúng - Phần
+          1'
+        Which shape is made by this loop?: Hình nào tạo bởi vòng lặp này?
+      2-3 artist loops multi 2:
+        Artist Loops Multiple Choice: 'Nghệ sĩ - Vòng lặp: Chọn đáp án đúng - Phần
+          1'
+        Which shape is made by this program?: Hình nào tạo bởi chương trình này?
+      2-3 bee conditionals multi 1:
+        Which comparison below is true?: So sánh nào đúng?
+      2-3 bee conditionals multi 2:
+        Choose the best blocks.: Chọn các khối tốt nhất.
+      2-3 bee conditionals multi 3:
+        Choose the best blocks.: Chọn các khối tốt nhất.
+      2-3 bee loops multi 1:
+        Bee Loops Multiple Choice One: 'Ong - Vòng lặp: Chọn đáp án đúng - Phần 1'
+        Which blocks collect all of the nectar?: Khối lệnh nào sẽ thu thập hết mật
+          ong?
+      2-3 maze multi 1:
+        Maze Multiple Choice One: 'Mê cung: Chọn đáp án đúng - Phần 1'
+        Which set of blocks is the correct answer?: Khối lệnh nào đúng?
+      4-5 Algorithms Multi 1:
+        Baking cookies: Nướng bánh qui
+        Banana: Quả chuối
+        Brushing your teeth: Chải răng của bạn
+        Multiple Choice: Nhiều lựa chọn
+        Shopping from a grocery list: Mua sắm theo danh sách
+        Which one of these items is hardest to describe an algorithm for?: Đâu không
+          phải là một ví dụ về thuật toán trong đời sống hàng ngày?
+      4-5 Computational Thinking Multi 1:
+        Eugene is a _____ city.: Eugene là một thành phố _____.
+        0: "? Here are three sentences. Which of the templates below correctly abstracts
+          so that all three match the same pattern as the template?"
+        1: ": Dưới đây là ba câu. Mẫu nào bên dướng  tóm tắt một cách chính xác rằng
+          cả 3 đều phù hợp một mẫu với mẫu đó ?"
+        Multiple Choice: Nhiều lựa chọn
+        Seattle _____ a _____ _____.: Bang Seattle _____ a _____ _____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
+          là một thành phố lớn.<br/>Eugene là một thành phố khá lớn<br/>Hillview là
+          một thành phố nhỏ.
+        _____ is _____ a _____.: _____ là một _____ _____.
+        _____ is a _____ city.: _____ là một thành phố_____.
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: Nhiều lựa chọn
+        Which of these pictures best represents crowdsourcing?: Ảnh nào sau đây đặc
+          trưng cho crowdsourcing?
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: Chải tóc
+        Cleaning your room: Dọn phòng
+        Eating your dessert: Thưởng thức bữa tráng miệng
+        Multiple Choice: Nhiều lựa chọn
+        Washing your face: Rửa mặt
+        Which one of these activities would be best for practicing crowdsourcing?: Hoạt
+          động nào có thể dễ dàng áp dụng crowdsourcing nhất?
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: Nhiều lựa chọn
+        Which piece of information listed below is okay to share on the internet?: Phần
+          thông tin nào được liệt ra ở dưới là ổn để chia sẻ trên mạng internet?
+        Your address: Địa chỉ của bạn
+        Your birthday: Sinh nhật của bạn
+        Your favorite food: Món ăn yêu thích của bạn
+        Your parent's credit card number: Số thẻ tín dụng của quý phụ huynh
+      4-5 Internet Multi 1:
+        Multiple Choice: Nhiều lựa chọn
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Khi
+          bạn cố gắng đăng nhập vào code.org, địa chỉ IP nào là tên miền (DNS) đưa
+          bạn đến ?
+      4-5 Internet Multi 2:
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Nếu
+          DNS đã gửi cho bạn đến trang địa chỉ IP 100.42.50.110, trang web nào bạn
+          đang dùng?
+        Multiple Choice: Nhiều lựa chọn
+      4-5 Songwriting Multi 1:
+        0: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin."
+        1: ": Bay trong kho thực phẩm, <br/>Xua, bay, xua, <br/>Bay trong kho thực
+          phẩm, <br/>Xua, bay, xua, <br/>Bay trong kho thực phẩm, <br/>Xua, bay, xua,
+          <br/>Bỏ qua Lou của tôi nào, cục cưng."
+        Lou, Lou, skip to my Lou,: Lou, Lou, Lou, chuyển qua Lou của tôi nào,
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
+          Lou, chuyển qua Lou của tôi nào, <br/>Lou, Lou, chuyển qua Lou của tôi,
+          <br/>Lou, Lou, chuyển qua Lou của tôi, <br/>Chuyển qua Lou của tôi, người
+          yêu .
+        2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,"
+        3: ": Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,"
+        Multiple Choice: Nhiều lựa chọn
+        4: "? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?"
+        5: ": What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?"
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: Nhiều lựa chọn
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Chương
+          trình nào dưới đây <em>không</em> thực hiện trình tự chính xác như ở Chương
+          trình 1?
+      4-5 artist loops multi 1:
+        Artist Loops Multiple Choice: 'Nghệ sĩ - Vòng lặp: Chọn đáp án đúng - Phần
+          1'
+        Which blocks will create the design?: Khối nào sẽ vẽ đúng ra hình này?
+      4-5 artist multi 1:
+        Artist Multiple Choice: 'Nghệ sĩ: Chọn đáp án đúng'
+        Which blocks draw a rectangle with a perimeter of 100?: Khối nào vẽ một hình
+          chữ nhật có chu vi 100 pixels?
+      4-5 artist multi 2:
+        Artist Multiple Choice: 'Nghệ sĩ: Chọn đáp án đúng'
+        Which drawing is symmetric?: Hình vẽ nào là đối xứng?
+      4-5 bee conditionals multi 1:
+        0: "? A purple flower may have either 3, 2 or 1 nectars, but you don't know
+          how many. Which blocks correctly check and collect all of the nectar from
+          a purple flower?"
+        1: ":Một bông hoa tím có thể có 3,2 hoặc một nhị hoa, nhưng bạn không thể
+          biết được chính xác nó có bao nhiêu. Khối nào sau đây kiểm tra và lấy đúng
+          số nhị hoa trong mỗi bông hoa tím?"
+        Bee Conditionals Multiple Choice: 'Ong - Cấu trúc rẽ nhánh: Chọn câu trả lời
+          đúng'
+        Choose the best blocks.: Chọn các khối tốt nhất.
+      4-5 bee debug multi 1:
+        Bee Debug Multiple Choice: 'Ong - Gỡ Lỗi: Chọn đáp án đúng'
+        Which version of the function will work?: Hàm nào sẽ hoạt động?
+      4-5 bee loops multi 1:
+        Bee Loops Multiple Choice: 'Ong - Vòng lặp: Chọn câu trả lời đúng'
+        Which blocks will solve the puzzle?: Khối nào sẽ giải quyết các câu đố?
+      4-5 farmer loops multi 1:
+        Which blocks solve the puzzle?: Những khối nào giải quyết câu đố này?
+      4-5 maze conditionals multi 1:
+        Maze Conditionals Multiple Choice: 'Mê cung - Cấu trúc rẽ nhánh: Chọn câu
+          trả lời đúng'
+        Which blocks solve the puzzle?: Những khối nào giải quyết câu đố này?
+      4-5 maze multi 1:
+        Maze Multiple Choice: Mê cung nhiều sự lựa chọn
+        Which blocks solve the puzzle?: Những khối nào giải quyết câu đố này?
+      CB_Question_3:
+        A: A
+        Y: true
+      CSD Prediction Header Size:
+        Question: Câu hỏi
+      CSD U3 Boolean MC:
+        title: tiêu đề
+      CSD U3 Boolean MC_2018:
+        title: tiêu đề
+      CSDU4 Screens Predict Multi:
+        About: Thông tin
+        Contact Us: Liên hệ
+      'CSP U4L04 Assessment 1 ':
+        Question: Câu hỏi
+      CSP Unit 1 Ch 1 MC binary to dec simple:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_2018:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_exam_prep:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP verify 18:
+        'No': Không
+        'Yes': Đồng ý
+      CSPU5_predict_mc_whichOfTwoEvents:
+        title: tiêu đề
+      CSPU5_predict_onEvent_withWrongID:
+        Question: Câu hỏi
+        title: tiêu đề
+      CommuteAssess - loops 1 - block:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block B:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_2018:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_exam_prep:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 2 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_2018:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_exam_prep:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      ECSPD unit:
+        ECS Curriculum: Giáo trình ECS
+      ECSPD2 question:
+        Question: Câu hỏi
+        title: tiêu đề
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: Nhiều lựa chọn
+        Which blocks solve this puzzle?: Những khối nào giải quyết câu đố này?
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: Nhiều lựa chọn
+        Which blocks draw the square?: Những khối nào vẽ ra hình vuông?
+      K-1 Artist 2 Multi 1:
+        Multiple Choice: Nhiều lựa chọn
+      K-1 Artist Loops Multi 1:
+        Multiple Choice: Nhiều lựa chọn
+      K-1 Bee 1 Multi 1:
+        How many nectars is this?: Có bao nhiêu mật hoa?
+        Multiple Choice: Nhiều lựa chọn
+      K-1 Bee 1 Multi 2:
+        How many nectars is this?: Có bao nhiêu mật hoa?
+        Multiple Choice: Nhiều lựa chọn
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: Nhiều lựa chọn
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Con
+          vật nào để lại dấu chân kỹ thuật số làm nó <strong>không an toàn nhất</strong>
+          so với các con vật còn lại?
+      K-1 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Bạn sẽ đơn giản hóa trình
+          tự này với vòng như thế nào?
+        Multiple Choice: Nhiều lựa chọn
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: Nhiều lựa chọn
+        Which arrow gets the Flurb to the treasure?: Mũi tên nào đưa Flurb tới kho
+          báu?
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: Nhiều lựa chọn
+        Which information should you <strong>not</strong> share online?: Thông tin
+          nào bạn <strong>không nên</strong> chia sẻ trực tuyến?
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: Nhiều lựa chọn
+        Which choice should be the final block?: Khối nào nên chọn cuối cùng?
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: Nhiều lựa chọn
+        Which repeat block is the same?: Khối lặp lại nào là giống nhau?
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: Nhiều lựa chọn
+        Pick the correct repeat block.: Chọn chính xác khối lặp lại.
+      K-1 Maze Multiple Choice 2:
+        Maze: Mê cung
+        Which answer solves this level?: Câu trả lời nào giải quyết cho mức độ này?
+      K-1 Move It Multi 1:
+        Multiple Choice: Nhiều lựa chọn
+        Which algorithm gets the Flurb to the flowers?: Thuật toàn nào đưa Flurb tới
+          những bông hoa?
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: Nhiều lựa chọn
+        Which step should go at the beginning of this algorithm?: Bước nào nên thực
+          hiện đầu tiên trong thuật toán này?
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: Nhiều lựa chọn
+        Which step should fill in the blank for this algorithm?: Bước mà nên điền
+          vào chỗ trống cho thuật toán này?
+      K-1 Word Search Multi 1:
+        Multiple Choice: Nhiều lựa chọn
+        Which blocks spell "MOVE"?: Khối nào có nghĩa "DI CHUYỂN"?
+      K-1 Word Search Multi 2:
+        Multiple Choice: Nhiều lựa chọn
+      K-1 Word Search Multi 3:
+        Multiple Choice: Nhiều lựa chọn
+        SET: THIẾT LẬP
+        SOUTH: PHÍA NAM
+        SQUARE: QUẢNG TRƯỜNG
+        Which word is spelled?: Từ nào được đánh vần?
+      Multi Define Funcs 1:
+        '3': '3'
+        y: true
+      Multi Define Funcs 2:
+        '3': '3'
+        y: true
+      Multi Define Funcs 3:
+        '5': '5'
+        '6': '6'
+        y: true
+      PDAlg Blocks Video:
+        Toolbox: Hộp công cụ
+      PDAlg DR Multi 1:
+        Domain: Tên miền
+        Name: Tên
+        Range: Khoảng
+        0: "? The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+        1: ": The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+      PDAlg PreQ 1:
+        'No': Không
+        'Yes': Đồng ý
+      PDAlg PreQ 2:
+        'No': Không
+        'Yes': Đồng ý
+      PDAlg functional:
+        'No': Không
+      PDK5 Blockly Intro:
+        'Yes': Đồng ý
+      PDK5 Classroom Culture:
+        'Yes': Đồng ý
+      PDK5 Course Maps:
+        'Yes': Đồng ý
+      PDK5 Course Overview:
+        'Yes': Đồng ý
+      PDK5 Glossary:
+        Glossary: Bảng thuật ngữ
+        'Yes': Đồng ý
+      PDK5 Intro:
+        'No': Không
+        Welcome!: hoan nghênh!
+        'Yes': Đồng ý
+      PDK5 Teacher Dashboard:
+        'Yes': Đồng ý
+      PDK5 Test1:
+        Question: Câu hỏi
+        title: tiêu đề
+      PDK5 UVideo Overview:
+        'Yes': Đồng ý
+      PDK5 Unplugged Intro:
+        'Yes': Đồng ý
+      PS U3-bakertest:
+        title: tiêu đề
+      SG U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      Submittable Multi:
+        blue: màu xanh dương
+        green: màu xanh lá
+        red: màu đỏ
+      Test Contained Multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '4': '4'
+      U1L07 Assessment 1:
+        A: A
+        B: B
+        C: C
+        D: D
+        E: Đông
+      U1L6 Assessment multiple choice:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L6 Assessment multiple choice_2018:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L8 Multiple Choice:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      U1L8 Multiple Choice_2018:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      'U2L06 - MC: Which is an MST?':
+        0: ': "<p>The images below all show the same map (or graph) but have different
+          paths between the points highlighted.</p>\n<p>Please choose the image that
+          is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The
+          “distance” between points is depicted by the number of line segments connecting
+          any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
+        A: A
+        B: B
+        C: C
+        D: D
+        E: Đông
+      U2L08 Assessment 1:
+        '11': '11'
+        '5': '5'
+        '6': '6'
+        '8': '8'
+        '9': '9'
+      U2L13 Assessment4:
+        '26': '26'
+      U2L13 Assessment4_2018:
+        '26': '26'
+      U2L14 Assessment3:
+        'false': sai
+        'true': đúng
+      U2L19 multichoice 13 MOD 17:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      U2L19 multichoice 13 MOD 17_2018:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      'U2L19 mutlichoice ':
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15_2018:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L3 Assessment 3:
+        Invent an Addressing Protocol: Phát minh ra một giao thức địa chỉ
+      U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L07 - MC remove line of code loops_2018:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L30 Assessment1:
+        '6': '6'
+        '7': '7'
+        '8': '8'
+      U3L30 Assessment2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+      U3L30 Assessment3:
+        '19': '19'
+        '20': '20'
+        '21': '21'
+      U4L01 Multiple Choice:
+        right: phải
+      U4L02 Multiple Choice:
+        right: phải
+      U4L03 Multiple Choice:
+        right: phải
+      U4L04 Multiple Choice:
+        right: phải
+      U4L05 Multiple Choice:
+        right: phải
+      U4L06 Multiple Choice:
+        right: phải
+      U4L06 Reflection Q 1:
+        Question: Câu hỏi
+        random: ngẫu nhiên
+      U4L07 Multiple Choice:
+        right: phải
+      U4L08 Multiple Choice:
+        right: phải
+      U4L09 Multiple Choice:
+        right: phải
+      U4L10 Multiple Choice:
+        right: phải
+      U4L11 Multiple Choice:
+        right: phải
+      U4L12 Multiple Choice:
+        right: phải
+      U4L13 Multiple Choice:
+        right: phải
+      U4L14 Multiple Choice:
+        right: phải
+      U4L15 Multiple Choice:
+        right: phải
+      U4L16 Multiple Choice:
+        right: phải
+      U4L17 Multiple Choice:
+        right: phải
+      U4L18 Multiple Choice:
+        right: phải
+      U4L19 Multiple Choice:
+        right: phải
+      U4L20 Multiple Choice:
+        right: phải
+      U4L21 Multiple Choice:
+        right: phải
+      U4L22 Multiple Choice:
+        right: phải
+      U4L23 Multiple Choice:
+        right: phải
+      U4L24 Multiple Choice:
+        right: phải
+      U4LXX Multiple Choice:
+        right: phải
+      U5 assess_weight_v2:
+        Question: Câu hỏi
+        title: tiêu đề
+      Warmup questions:
+        random: ngẫu nhiên
+      commute assess - loops 4 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        '50': '50'
+      courseC_multi_harvester_loops11_predict1:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_starWars_predict1:
+        I don't know: Tôi không biết
+      courseC_multi_starWars_predict1_2018:
+        I don't know: Tôi không biết
+      courseD_multi_artist_binary8_predict1:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_binary8_predict1_2018:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_nestedLoops9_predict1:
+        A: A
+        B: B
+        C: C
+      courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: A
+        B: B
+        C: C
+      courseD_multi_bee_nestedLoops9_predict2:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseE_multi_farmer_predict1:
+        I don't know: Tôi không biết
+        0: "? Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        1: ": Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        2: "? The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+        3: ": The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+      courseE_multi_farmer_predict1_2018:
+        I don't know: Tôi không biết
+        0: "? Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        1: ": Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        2: "? The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+        3: ": The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+      csd-post-survey-2018-topic-ai:
+        'No': Không
+        'Yes': Đồng ý
+      csd-post-survey-2018-topic-cryptocurrency:
+        'No': Không
+        'Yes': Đồng ý
+      csd-post-survey-2018-topic-cybersecurity:
+        Cybersecurity: An ninh mạng
+        'No': Không
+        'Yes': Đồng ý
+      csd-post-survey-2018-topic-databases:
+        'No': Không
+        'Yes': Đồng ý
+      csd-post-survey-2018-topic-datascience:
+        'No': Không
+        'Yes': Đồng ý
+      csd-post-survey-2018-topic-gamedev:
+        'No': Không
+        'Yes': Đồng ý
+      csd-post-survey-2018-topic-hardware:
+        'No': Không
+        'Yes': Đồng ý
+      csd-post-survey-2018-topic-internet:
+        'No': Không
+        'Yes': Đồng ý
+      csd-post-survey-2018-topic-mobile:
+        'No': Không
+        'Yes': Đồng ý
+      csd-post-survey-2018-topic-parallel:
+        'No': Không
+        'Yes': Đồng ý
+      csd-post-survey-2018-topic-programming:
+        'No': Không
+        'Yes': Đồng ý
+      csd-post-survey-2018-topic-robotics:
+        'No': Không
+        Robotics: Lắp ráp robot
+        'Yes': Đồng ý
+      csd-post-survey-2018-topic-web:
+        'No': Không
+        'Yes': Đồng ý
+      csp-post-survey-2017-q64:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': Không
+        'Yes': Đồng ý
+      csp-post-survey-2017-q64_2018:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': Không
+        'Yes': Đồng ý
+      csp-post-survey-2017-q65:
+        I don't know: Tôi không biết
+        'No': Không
+        'Yes': Đồng ý
+      csp-post-survey-2017-q65_2018:
+        I don't know: Tôi không biết
+        'No': Không
+        'Yes': Đồng ý
+      csp-post-survey-2018-topic-ai:
+        'No': Không
+        'Yes': Đồng ý
+      csp-post-survey-2018-topic-cryptocurrency:
+        'No': Không
+        'Yes': Đồng ý
+      csp-post-survey-2018-topic-cybersecurity:
+        Cybersecurity: An ninh mạng
+        'No': Không
+        'Yes': Đồng ý
+      csp-post-survey-2018-topic-databases:
+        'No': Không
+        'Yes': Đồng ý
+      csp-post-survey-2018-topic-datascience:
+        'No': Không
+        'Yes': Đồng ý
+      csp-post-survey-2018-topic-gamedev:
+        'No': Không
+        'Yes': Đồng ý
+      csp-post-survey-2018-topic-hardware:
+        'No': Không
+        'Yes': Đồng ý
+      csp-post-survey-2018-topic-internet:
+        'No': Không
+        'Yes': Đồng ý
+      csp-post-survey-2018-topic-mobile:
+        'No': Không
+        'Yes': Đồng ý
+      csp-post-survey-2018-topic-parallel:
+        'No': Không
+        'Yes': Đồng ý
+      csp-post-survey-2018-topic-programming:
+        'No': Không
+        'Yes': Đồng ý
+      csp-post-survey-2018-topic-robotics:
+        'No': Không
+        Robotics: Lắp ráp robot
+        'Yes': Đồng ý
+      csp-post-survey-2018-topic-web:
+        'No': Không
+        'Yes': Đồng ý
+      csp-pre-survey-2017-q40:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Khác
+      csp-pre-survey-2017-q40_2018:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Khác
+      csp_ap_exam_signup:
+        'No': Không
+        'Yes': Đồng ý
+      csp_ap_previous_years:
+        'No': Không
+        'Yes': Đồng ý
+      csp_ap_taking_ap_class:
+        'No': Không
+        'Yes': Đồng ý
+      cspu5_assess1_fivemore:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_2018:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_exam_prep:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_flowchart:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_2018:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_exam_prep:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_increase:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_2018:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_exam_prep:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess2_addstrings:
+        result: Kết quả
+      cspu5_assess2_addstrings_2018:
+        result: Kết quả
+      cspu5_assess2_addstrings_exam_prep:
+        result: Kết quả
+      cspu5_assess2_combineString:
+        '10': '10'
+        '55': '55'
+        result: Kết quả
+      cspu5_assess2_combineString_2018:
+        '10': '10'
+        '55': '55'
+        result: Kết quả
+      cspu5_assess2_combineString_exam_prep:
+        '10': '10'
+        '55': '55'
+        result: Kết quả
+      cspu5_assess2_oldEnough:
+        '35': '35'
+        'false': sai
+        'true': đúng
+      cspu5_assess2_oldEnough_2018:
+        '35': '35'
+        'false': sai
+        'true': đúng
+      cspu5_assess2_oldEnough_exam_prep:
+        '35': '35'
+        'false': sai
+        'true': đúng
+      cspu5_assess2_weight:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_2018:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_exam_prep:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess3_array1:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_2018:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_exam_prep:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array4:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_2018:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_exam_prep:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_listAppend:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_2018:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_exam_prep:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_loopValue1:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue2:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess4_dataReturns:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_2018:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_exam_prep:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_listOutput:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_2018:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_exam_prep:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      msm variables multi 1:
+        '15': '15'
+        x: x
+      msm variables multi 10:
+        '17': '17'
+        x: x
+      msm variables multi 11:
+        '17': '17'
+        x: x
+      msm variables multi 12:
+        '17': '17'
+        x: x
+      msm variables multi 13:
+        '117': '117'
+        '17': '17'
+        x: x
+      msm variables multi 2:
+        '8': '8'
+      msm variables multi 3:
+        '5': '5'
+        x: x
+      msm variables multi 4:
+        '15': '15'
+        '3': '3'
+        '8': '8'
+      msm variables multi 5:
+        '3': '3'
+        '5': '5'
+      msm variables multi 6:
+        '1': '1'
+        '5': '5'
+        hello: Xin chào
+      msm variables multi 7:
+        '3': '3'
+        x: x
+      msm variables multi 8:
+        '3': '3'
+        x: x
+      msm variables multi 9:
+        '5': '5'
+        '6': '6'
+        x: x
+      post-assessment survey q34:
+        Easy: Dễ
+        Hard: Khó
+      pre-assessment survey q24:
+        'No': Không
+        'Yes': Đồng ý
+      pre-assessment survey q26:
+        0: "? Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        1: ": Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        'No': Không
+        'Yes': Đồng ý
+      pre-assessment survey q27:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Khác
+      pre-assessment survey q28:
+        '10': '10'
+        '11': '11'
+        '12': '12'
+        '8': '8'
+        '9': '9'
+        Other: Khác
+      pre-assessment survey q29:
+        Female: Nữ
+        Male: Nam
+        Other: Khác
+        Prefer not to answer: Tùy chọn không muốn trả lời
+      pre-assessment survey q30:
+        Asian: Châu á
+        Black or African American: Người da đen hoặc người Mỹ gốc Phi
+        Other: Khác
+        Prefer not to answer: Tùy chọn không muốn trả lời
+        White: Màu trắng
+      sarah_test_maggie:
+        Question: Câu hỏi
+        test: kiểm thử
+      sciPD PreQ 1:
+        'No': Không
+        'Yes': Đồng ý
+      sciPD PreQ 2:
+        'No': Không
+        'Yes': Đồng ý
+      sciPD class models 1:
+        Using Models in the Classroom: Sử dụng mô hình trong lớp học
+      test anonymous student survey educational:
+        'No': Không
+        'Yes': Đồng ý
+      test me:
+        Question: Câu hỏi
+        title: tiêu đề
+      unique level name here:
+        Question: Câu hỏi
+        title: tiêu đề
+    text_match:
+      U2L07 Assessment4:
+        '43': '43'

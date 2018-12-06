@@ -1,0 +1,75 @@
+sl:
+  devise:
+    confirmations:
+      confirmed: "Vaš e-poštni naslov je bil uspešno potrjen."
+      send_instructions: "E-pošto z navodilom o tem, kako potrdite svoj račun, boste prejeli v nekaj minutah."
+      send_paranoid_instructions: "Če vaš email naslov obstaja v naši bazi podatkov, boste v nekaj minutah prejeli e-pošto z navodili o tem, kako potrdite svoj račun."
+    failure:
+      already_authenticated: "Ste že vpisani."
+      inactive: "Vaš račun še ni bil aktiviran."
+      invalid: "Neveljaven elektronski naslov ali geslo."
+      invalid_token: "Neveljaven avtentikacijski žeton."
+      locked: "Vaš račun je zaklenjen."
+      not_found_in_database: "Neveljaven elektronski naslov ali geslo."
+      timeout: "Vaša seja je potekla, za nadaljevanje se prosimo ponovno vpišite."
+      unauthenticated: "Pred nadaljevanjem se je potrebno vpisati ali prijaviti."
+      unconfirmed: "Pred nadaljevanjem morate potrditi vaš račun."
+    mailer:
+      confirmation_instructions:
+        subject: "Code.org navodila za potrditev"
+      reset_password_instructions:
+        subject: "Code.org navodila za ponastavitev gesla"
+      unlock_instructions:
+        subject: "Navodila za odklep"
+    omniauth_callbacks:
+      failure: "Ni mogoče preveriti vaše istovetnosti z %{kind} zaradi \"%{reason}\"."
+      success: "Uspešna  avtentikacija z računom %{kind}."
+    passwords:
+      no_token: "Nimate dostopa do te strani, če niste prišli do nje preko e-pošte za povrnitev gesla. Če ste prišli do sem preko e-pošte za povrnitev gesla, prosimo, da uporabite poln URL."
+      send_instructions: "V nekaj minutah boste prejeli e-pošto z navodili o tem, kako ponastaviti vaše geslo."
+      send_paranoid_instructions: "Če vaš naslov e-pošte obstaja v naši bazi podatkov, boste prejeli povezavo za povrnitev gesla na vaš e-poštni naslov v nekaj minutah."
+      updated: "Tvoje geslo je bilo uspešno spremenjeno. Sedaj si se registriral/a."
+      updated_not_active: "Vaše geslo je bilo uspešno spremenjeno."
+    registrations:
+      destroyed: "Nasvidenje! Vaš račun je bil uspešno preklican. Upamo, da se kmalu spet vidimo."
+      signed_up: "Dobrodošli! Uspešno ste se prijavili."
+      signed_up_but_inactive: "Uspešno ste se prijavili. Vendar vas ne moremo vpisati zato, ker vaš račun še ni aktiviran."
+      signed_up_but_locked: "Uspešno ste se prijavili. Vendar vas ne moremo vpisati zato, ker je vaš račun zaklenjen."
+      signed_up_but_unconfirmed: "Sporočilo s potrditveno povezavo je bilo poslano na vaš e-poštni naslov. Prosimo, odprite povezavo za aktivacijo vašega računa."
+      update_needs_confirmation: "Vaš račun ste uspešno posodobili, vendar moramo preveriti vaš novi e-poštni naslov. Prosim poglejte svojo e-pošto in kliknite na povezavo, da dokončate potrditev vašega novega e-poštnega naslova."
+      updated: "Uspešno ste posodobili vaš račun."
+    sessions:
+      signed_out: "Uspešen izpis."
+    unlocks:
+      send_instructions: "V naslednjih minutah boste prejeli e-pošto z navodilom kako odkleniti vaš račun."
+      send_paranoid_instructions: "Če ste že bili registrirani, boste v naslednjih minutah prejeli e-pošto z navodilom kako odkleniti vaš račun."
+      unlocked: "Vaš račun je bil uspešno odklenjen. Če želite nadaljevati, se vpišite."
+  errors:
+    messages:
+      already_confirmed: "je že bil potrjen, zato se zdaj poskusite vpisati"
+      confirmation_period_expired: "mora biti potrjen v %{period}, zahtevajte novega"
+      expired: "je potekel čas za potrditev, zato vas prosimo, da zahtevate novega"
+      not_found: "ni mogoče najti"
+      not_locked: "ni bil zaklenjen"
+      not_saved:
+        one: "1 napaka je onemogočila shranjevanje %{resource}:"
+        other: "%{count} napak je onemogočilo shranjevanje %{resource}:"
+    invitations:
+      send_instructions: 'Na naslov %{email} je bilo poslano vabilo.'
+      invitation_token_invalid: 'Vabilo ni veljavno!'
+      updated: 'Geslo je bilo uspešno določeno. Sedaj ste vpisani.'
+      no_invitations_remaining: "Ni preostalih povabil"
+      invitation_removed: 'Vaše povabilo je bilo odstranjeno.'
+      new:
+        header: "Pošlji povabilo"
+        submit_button: "Pošlji povabilo"
+      edit:
+        header: "Nastavite svoje geslo"
+        submit_button: "Nastavi moje geslo"
+    mailer:
+      invitation_instructions:
+        subject: 'Navodila za vabila'
+        hello: 'Pozdravljeni %{email}'
+        someone_invited_you: 'Nekdo vas je povabil na %{url}. Vabilo lahko sprejmete na spodnji povezavi.'
+        accept: 'Sprejmite vabilo'
+        ignore: "Če ne želite sprejeti povabila, prosim ignorirajte ta email.<br />Vaš račun ne bo narejen dokler ne dostopate preko zgornje povezave in nastavite svojega gesla."

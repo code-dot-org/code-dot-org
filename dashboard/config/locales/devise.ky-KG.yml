@@ -1,0 +1,13 @@
+---
+ky:
+  devise:
+    confirmations:
+      confirmed: Эмейл адресиңиз ийгиликтүү ырасталды.
+    failure:
+      already_authenticated: Сиз системге киргенсиз.
+      inactive: Эсебиңиз активация боло элек.
+      invalid: Жараксыз эмейл же сырсөз.
+      invalid_token: Жараксыз аутентификация токени.
+      locked: Эсебиңиз бөгөттөлгөн.
+      not_found_in_database: Жараксыз эмейл же сырсөз.
+      timeout: Сессияңыз эскирди, улантуу үчүн кайра киргиле.

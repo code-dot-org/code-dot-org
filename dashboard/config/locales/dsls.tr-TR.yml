@@ -1,0 +1,3107 @@
+---
+tr:
+  data:
+    contract_match:
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        Big Triangle: Büyük Üçgen
+        Big Triangle|Image|Number|String: Büyük üçgen |Resim | Sayı | Sicim
+        EXAMPLE 1.solution_blocks, 300: Örnek 1.çözüm_blokları, 300
+        Write a contract for a big red triangle that is 100 pixels in size: 100 pixel
+          büyüklüğünde olan bir büyük kırmızı üçgen için kontrat yazın
+      Creating Contracts From Examples 2:
+        Example 2.solution_blocks, 300: Örnek 2.çözüm_blokları,300
+        Square Contract: Kare Kontrat
+        Square|Image|Number|String: Kare|Resim| Sayı| Cisim
+        Write a contract for a purple square that is 15 pixels in size.: 15 pixel
+          büyüklüğünde olan bir büyük kırmızı üçgen için kontrat yazın.
+      Creating Contracts From Examples 3A:
+        Banner Contract: Afiş Kontratı
+        Banner Function block: Afiş Fonksiyon Bloğu
+        Examples 3.solution_blocks, 300: Örnek 3.çözüm_blokları,300
+    evaluation_multi:
+      CSP PD Example Question 2:
+        How will you teach students?: Öğrencilere nasıl öğreteceksiniz?
+      CSP PD Q2:
+        How will you teach students?: Öğrencilere nasıl öğreteceksiniz?
+      TeacherCon Eval Q2:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: Öğrencilerin
+          çoğu aktiviteyi bilgisayarlarında yaptığı dersleri öğretme konusunda ne
+          kadar konforlusunuz?
+        Not Comfortable: Konforsuz
+        Very Comfortable: Çok Konforlu
+      TeacherCon Eval Q3:
+        Students working in small groups to build knowledge: Öğrencilerin küçük gruplar
+          halinde bilgi edinmek için çalışması
+      U1 Eval q7:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: Öğrencilerin
+          çoğu aktiviteyi bilgisayarlarında yaptığı dersleri öğretme konusunda ne
+          kadar konforlusunuz?
+        Not Comfortable: Konforsuz
+        Very Comfortable: Çok Konforlu
+      U1 Eval q8:
+        Students working in small groups to build knowledge: Öğrencilerin küçük gruplar
+          halinde bilgi edinmek için çalışması
+      U1 evaluation q7:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: Öğrencilerin
+          çoğu aktiviteyi bilgisayarlarında yaptığı dersleri öğretme konusunda ne
+          kadar konforlusunuz?
+        Not Comfortable: Konforsuz
+        Very Comfortable: Çok Konforlu
+      U1 evaluation q8:
+        Students working in small groups to build knowledge: Öğrencilerin küçük gruplar
+          halinde bilgi edinmek için çalışması
+      U2 evaluation q10:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: Öğrencilerin
+          çoğu aktiviteyi bilgisayarlarında yaptığı dersleri öğretme konusunda ne
+          kadar konforlusunuz?
+        Not Comfortable: Konforsuz
+        Very Comfortable: Çok Konforlu
+      U2 evaluation q11:
+        Students working in small groups to build knowledge: Öğrencilerin küçük gruplar
+          halinde bilgi edinmek için çalışması
+      U3 evaluation q7:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: Öğrencilerin
+          çoğu aktiviteyi bilgisayarlarında yaptığı dersleri öğretme konusunda ne
+          kadar konforlusunuz?
+        Not Comfortable: Konforsuz
+        Very Comfortable: Çok Konforlu
+      U3 evaluation q8:
+        Students working in small groups to build knowledge: Öğrencilerin küçük gruplar
+          halinde bilgi edinmek için çalışması
+      U4 evaluation q6:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: Öğrencilerin
+          çoğu aktiviteyi bilgisayarlarında yaptığı dersleri öğretme konusunda ne
+          kadar konforlusunuz?
+        Not Comfortable: Konforsuz
+        Very Comfortable: Çok Konforlu
+      U4 evaluation q7:
+        Students working in small groups to build knowledge: Öğrencilerin küçük gruplar
+          halinde bilgi edinmek için çalışması
+      U5 evaluation q1:
+        'No': Hayır
+        'Yes': Evet
+      U5 evaluation q2:
+        Conditionals and Boolean Logic: Koşullar ve Boolean Mantığı
+        0: "? Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        1: ": Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        Processing Arrays: Dizileri işleme
+        Variables and Strings: Değişkenler ve Metinler
+        While Loops: While(...durumunda) Döngüleri
+      U5 evaluation q3:
+        Students working in small groups to build knowledge: Öğrencilerin küçük gruplar
+          halinde bilgi edinmek için çalışması
+    external:
+      AWS Demo:
+        description here: açıklama burada
+      Algo How Routers Learn Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      Algo Shortest Path Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      App Lab Feedback:
+        description here: açıklama burada
+      AppLab Level U3L19 - variable re-assignment challenge pt1:
+        description here: açıklama burada
+      Basic mechanics of variables:
+        description here: açıklama burada
+        title: başlık
+      Basic mechanics of variables_2018:
+        description here: açıklama burada
+        title: başlık
+      Begin planning your project:
+        description here: açıklama burada
+        title: başlık
+      Begin planning your project_2018:
+        description here: açıklama burada
+      'Big Picture: If-statements':
+        description here: açıklama burada
+        title: başlık
+      'Big Picture: If-statements_2018':
+        description here: açıklama burada
+        title: başlık
+      Boolean Expressions and Comparison Operators:
+        description here: açıklama burada
+        title: başlık
+      Boolean Expressions and Comparison Operators_2018:
+        description here: açıklama burada
+        title: başlık
+      CSD U1 Input Output C1:
+        description here: açıklama burada
+      CSD U1 Input Output C2:
+        description here: açıklama burada
+        title: başlık
+      CSD U1 Input Output C3:
+        description here: açıklama burada
+        title: başlık
+      CSD U1 Input Output C4:
+        description here: açıklama burada
+        title: başlık
+      CSD U1 Input Output Intro:
+        description here: açıklama burada
+        title: başlık
+      CSD U2 CSS explain:
+        description here: açıklama burada
+      CSD U2 Classes Introduction:
+        description here: açıklama burada
+      CSD U2 Design Project:
+        description here: açıklama burada
+        title: başlık
+      CSD U2 Design Project_2018:
+        description here: açıklama burada
+        title: başlık
+      CSD U2 L1 Overview:
+        description here: açıklama burada
+        title: başlık
+      CSD U2 L1 Overview_2018:
+        description here: açıklama burada
+        title: başlık
+      CSD U2 L2 Overview:
+        description here: açıklama burada
+        title: başlık
+      CSD U2 L2 Overview_2018:
+        description here: açıklama burada
+        title: başlık
+      CSD U2 L3 Overview:
+        description here: açıklama burada
+        title: başlık
+      CSD U2 L3 Overview_2018:
+        description here: açıklama burada
+        title: başlık
+      CSD U2 L4 Overview:
+        description here: açıklama burada
+        title: başlık
+      CSD U2 L4 Overview_2018:
+        description here: açıklama burada
+        title: başlık
+      CSD U2 L5 Overview:
+        description here: açıklama burada
+        title: başlık
+      CSD U2 L5 Overview_2018:
+        description here: açıklama burada
+        title: başlık
+      CSD U2 L6 Overview:
+        description here: açıklama burada
+        title: başlık
+      CSD U2 L6 Overview_2018:
+        description here: açıklama burada
+        title: başlık
+      CSD U2 Lesson 6 Overview:
+        description here: açıklama burada
+      CSD U2 Lesson 6 Overview_2018:
+        description here: açıklama burada
+      CSD U2 RGB Colors:
+        description here: açıklama burada
+      CSD U2 Social Sleuth:
+        description here: açıklama burada
+        title: başlık
+      CSD U2 expand project:
+        description here: açıklama burada
+        title: başlık
+      CSD U2 expand project_2018:
+        description here: açıklama burada
+        title: başlık
+      CSD U2 layout style review:
+        description here: açıklama burada
+        title: başlık
+      CSD U2 more CSS:
+        description here: açıklama burada
+        title: başlık
+      CSD U2 project guide:
+        description here: açıklama burada
+      CSD U2 project guide_2018:
+        description here: açıklama burada
+      CSD U2 text style review:
+        description here: açıklama burada
+      CSD U3 Card Examples_2018:
+        description here: açıklama burada
+      CSD U3 Describe the Picture:
+        description here: açıklama burada
+      CSD U3 L2 Challenges:
+        description here: açıklama burada
+        title: başlık
+      CSD U3 SFLP Sprites and Images:
+        description here: açıklama burada
+        title: başlık
+      CSD U3 abstraction intro:
+        description here: açıklama burada
+        title: başlık
+      CSD U3 collisions STOP isTouching:
+        description here: açıklama burada
+      CSD U3 combining rep:
+        description here: açıklama burada
+        title: başlık
+      CSD U3 combining rep_2018:
+        description here: açıklama burada
+        title: başlık
+      CSD U3 game intro:
+        description here: açıklama burada
+      CSD U3 game intro_2018:
+        description here: açıklama burada
+      CSD U3 platform intro:
+        description here: açıklama burada
+      CSD U3 platform intro_2018:
+        description here: açıklama burada
+      CSD U3 setSpeed STOP:
+        description here: açıklama burada
+      CSD U5 Encryption 1:
+        description here: açıklama burada
+        title: başlık
+      CSD U5 Encryption 1_2018:
+        description here: açıklama burada
+        title: başlık
+      CSD U5 Encryption 2:
+        description here: açıklama burada
+      CSD U5 Encryption 2_2018:
+        description here: açıklama burada
+      CSD U5 L13 SFLP Interpreting Data:
+        description here: açıklama burada
+        title: başlık
+      CSD U5 L13 SFLP Interpreting Data_2018:
+        description here: açıklama burada
+        title: başlık
+      CSD U5 Representing Information:
+        description here: açıklama burada
+        title: başlık
+      CSD U5 collection UPS2:
+        description here: açıklama burada
+        title: başlık
+      CSD U5 collection ads2:
+        description here: açıklama burada
+        title: başlık
+      CSD U5 crosstab warmup:
+        description here: açıklama burada
+      CSD U5 crosstab warmup_2018:
+        description here: açıklama burada
+      CSD U5 data visualization:
+        description here: açıklama burada
+        title: başlık
+      CSD U5 data visualization sheet:
+        description here: açıklama burada
+        title: başlık
+      CSD U5 data visualization_2018:
+        description here: açıklama burada
+        title: başlık
+      CSD U5 fixed-bits:
+        description here: açıklama burada
+      CSD U5 student record:
+        description here: açıklama burada
+        title: başlık
+      CSD U5 student record_2018:
+        description here: açıklama burada
+        title: başlık
+      CSD U5 video2:
+        description here: açıklama burada
+        title: başlık
+      CSD U6 LED create intro:
+        description here: açıklama burada
+      CSD U6 LED create intro_2018:
+        description here: açıklama burada
+      CSD U6 final intro:
+        description here: açıklama burada
+      CSD U6 final intro_2018:
+        description here: açıklama burada
+      CSD-U3-SFLP Drawing:
+        description here: açıklama burada
+        title: başlık
+      CSDU2L01 SFLP:
+        description here: açıklama burada
+        title: başlık
+      CSP ExploreL02 SFLP:
+        description here: açıklama burada
+        title: başlık
+      CSP Journal Entry Placeholder2:
+        description here: açıklama burada
+        title: başlık
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        description here: açıklama burada
+      CSP Unit 3 - Learning JavaScript Resources:
+        description here: açıklama burada
+      CSP assessment Hex interstitial:
+        description here: açıklama burada
+      CSPPD impact of CS:
+        Impact of Computer Science: Bilgisayar bilimi etkisi
+        description here: açıklama burada
+      CSPPD3-u2 Welcome:
+        Welcome!: Hoşgeldiniz!
+      CSPStudentLessonPlanTemplate:
+        description here: açıklama burada
+        title: başlık
+      CSPU5 Making a Multi Screen Chaser Game:
+        description here: açıklama burada
+        title: başlık
+      CSPU5_ChoosingGoodIds:
+        description here: açıklama burada
+        title: başlık
+      CSPU5_EventDrivenProgrammingPatterns:
+        description here: açıklama burada
+        title: başlık
+      CSPU5_FirstTimeDesignMode:
+        description here: açıklama burada
+        title: başlık
+      CSPU5_FirstTimeDesignMode_2018:
+        description here: açıklama burada
+        title: başlık
+      CSPU5_HowImagesWork:
+        description here: açıklama burada
+        title: başlık
+      CSPU5_HowOnEventWorks_v2:
+        description here: açıklama burada
+        title: başlık
+      CSPU5_U3L12 - Student Introduction 1:
+        Events Unplugged: Serbest-olaylar
+      CSPU5_U3L14 - Message - Other ways to assign values:
+        description here: açıklama burada
+        title: başlık
+      CSPU5_U3L14 - Message - basic mechanics of variables:
+        description here: açıklama burada
+        title: başlık
+      CSPU5_U3L15 - explanation of IF and =v==:
+        description here: açıklama burada
+        title: başlık
+      CSPU5_U3L15 Student Lesson Intro - new:
+        description here: açıklama burada
+        title: başlık
+      CSPU5_U3L19 - variable scope explanation pt2:
+        description here: açıklama burada
+      CSPU5_U3L20 - combining And and Or explanation:
+        description here: açıklama burada
+        title: başlık
+      CSPU5_goodbyeTurtle_setPosition:
+        description here: açıklama burada
+        title: başlık
+      CSPU5_introToDebugging:
+        description here: açıklama burada
+        title: başlık
+      CSPU5_makingPredictions_ref:
+        description here: açıklama burada
+        title: başlık
+      CSPU5_onEventBreakdown:
+        description here: açıklama burada
+        title: başlık
+      CSP_Final_instructions:
+        description here: açıklama burada
+        title: başlık
+      CSP_U4_rawMovieData:
+        description here: açıklama burada
+        title: başlık
+      Color Sleuth - Epilogue:
+        description here: açıklama burada
+        title: başlık
+      Color Sleuth - Epilogue_2018:
+        description here: açıklama burada
+        title: başlık
+      Color Sleuth - How does it end?:
+        description here: açıklama burada
+        title: başlık
+      Color Sleuth - How does it end?_2018:
+        description here: açıklama burada
+        title: başlık
+      Color Sleuth - How to switch player turns:
+        description here: açıklama burada
+        title: başlık
+      Color Sleuth - How to switch player turns_2018:
+        description here: açıklama burada
+        title: başlık
+      Color Sleuth - Keeping score:
+        description here: açıklama burada
+        title: başlık
+      Color Sleuth - Keeping score_2018:
+        description here: açıklama burada
+        title: başlık
+      Color Sleuth - Planning the App:
+        description here: açıklama burada
+        title: başlık
+      Color Sleuth - Planning the App_2018:
+        description here: açıklama burada
+        title: başlık
+      Controlling Memory - Other ways to assign values:
+        description here: açıklama burada
+        title: başlık
+      Controlling Memory - Other ways to assign values_2018:
+        description here: açıklama burada
+        title: başlık
+      Cups and Beans Activity:
+        description here: açıklama burada
+        title: başlık
+      Cups and Beans Activity_2018:
+        description here: açıklama burada
+        title: başlık
+      Debugging with Console.log:
+        description here: açıklama burada
+        title: başlık
+      Debugging with Console.log_2018:
+        description here: açıklama burada
+        title: başlık
+      Deeper Learning Overview:
+        description here: açıklama burada
+      Digital Footprint Chirpr lillizard:
+        description here: açıklama burada
+        title: başlık
+      Digital Footprint FaceSpace Haley:
+        description here: açıklama burada
+        title: başlık
+      Digital Footprint FaceSpace Lizzie:
+        description here: açıklama burada
+        title: başlık
+      Digital Footprint instantframe wiz_kid_liz:
+        description here: açıklama burada
+        title: başlık
+      DigitalCitizenship2:
+        Digital Citizenship: Sayısal Vatandaşlık
+      ECSPD Challenge Rubric:
+        description here: açıklama burada
+        title: başlık
+      ECSPD Online U1D1-2:
+        description here: açıklama burada
+      ECSPD Online U1D1-2 Resources:
+        description here: açıklama burada
+      ECSPD Online U1D11-14:
+        title: başlık
+      ECSPD Online U1D15-16 Forum:
+        description here: açıklama burada
+        title: başlık
+      ECSPD Online intro:
+        Introduction: Giriş
+      ECSPD U2 Challenge Plan:
+        description here: açıklama burada
+        title: başlık
+      ECSPD Unit 2 Stage11:
+        description here: açıklama burada
+        title: başlık
+      ECSPD Unit 2 Stage13:
+        description here: açıklama burada
+        title: başlık
+      ECSPD Unit 2 Stage6:
+        description here: açıklama burada
+        title: başlık
+      ECSPD impact of CS:
+        Impact of Computer Science: Bilgisayar bilimi etkisi
+        description here: açıklama burada
+      Encoding Numbers Real World Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      Event Driven Programming Recap:
+        description here: açıklama burada
+        title: başlık
+      Event Driven Programming Recap_2018:
+        description here: açıklama burada
+        title: başlık
+      Event-Driven Programming Patterns:
+        description here: açıklama burada
+        title: başlık
+      Event-Driven Programming Patterns_2018:
+        description here: açıklama burada
+        title: başlık
+      External MD column Test:
+        description here: açıklama burada
+        title: başlık
+      External MD column Test bootstrap:
+        description here: açıklama burada
+        title: başlık
+      GoodBadVisualizations_v1:
+        description here: açıklama burada
+        title: başlık
+      GoodBadVisualizations_v2:
+        description here: açıklama burada
+        title: başlık
+      How "if-else-if" Works:
+        description here: açıklama burada
+        title: başlık
+      How "if-else-if" Works_2018:
+        description here: açıklama burada
+        title: başlık
+      How Compound Boolean Expressions Work:
+        description here: açıklama burada
+        title: başlık
+      How Compound Boolean Expressions Work_2018:
+        description here: açıklama burada
+        title: başlık
+      How Dropdown Menus Work:
+        description here: açıklama burada
+        title: başlık
+      How Dropdown Menus Work_2018:
+        description here: açıklama burada
+        title: başlık
+      How If Statements Work pt 1:
+        description here: açıklama burada
+        title: başlık
+      How If Statements Work pt 1_2018:
+        description here: açıklama burada
+        title: başlık
+      How If-Else Statements Work:
+        description here: açıklama burada
+        title: başlık
+      How If-Else Statements Work_2018:
+        description here: açıklama burada
+        title: başlık
+      How Images Work:
+        description here: açıklama burada
+        title: başlık
+      How Images Work_2018:
+        description here: açıklama burada
+        title: başlık
+      How Secure Is Your Password?:
+        description here: açıklama burada
+        title: başlık
+      How Secure Is Your Password?_2018:
+        description here: açıklama burada
+        title: başlık
+      How Set Property Works:
+        description here: açıklama burada
+        title: başlık
+      How Set Property Works_2018:
+        description here: açıklama burada
+        title: başlık
+      How onEvent Works:
+        description here: açıklama burada
+        title: başlık
+      How onEvent Works_2018:
+        description here: açıklama burada
+        title: başlık
+      How setPosition and screen dimensions work:
+        description here: açıklama burada
+        title: başlık
+      How setPosition and screen dimensions work_2018:
+        description here: açıklama burada
+        title: başlık
+      How the Boolean &&, || and ! Operators Work:
+        description here: açıklama burada
+        title: başlık
+      How the Boolean &&, || and ! Operators Work_2018:
+        description here: açıklama burada
+        title: başlık
+      How to make a random color:
+        description here: açıklama burada
+        title: başlık
+      How to make a random color_2018:
+        description here: açıklama burada
+        title: başlık
+      How to pick a random button:
+        description here: açıklama burada
+        title: başlık
+      How to pick a random button_2018:
+        description here: açıklama burada
+        title: başlık
+      Internet Simulator Setup:
+        description here: açıklama burada
+      Internet Simulator Setup 2:
+        description here: açıklama burada
+        title: başlık
+      Internet Simulator Setup 3:
+        description here: açıklama burada
+      Intro to Debugging and Common Problems:
+        description here: açıklama burada
+        title: başlık
+      Intro to Debugging and Common Problems_2018:
+        description here: açıklama burada
+        title: başlık
+      Making Multiple Screens:
+        description here: açıklama burada
+        title: başlık
+      Making Multiple Screens_2018:
+        description here: açıklama burada
+        title: başlık
+      Making a Multi Screen Chaser Game v.2:
+        description here: açıklama burada
+        title: başlık
+      Making a Multi Screen Chaser Game v.2_2018:
+        description here: açıklama burada
+        title: başlık
+      Multi-Screen Apps:
+        description here: açıklama burada
+        title: başlık
+      New Challenge Introduction:
+        description here: açıklama burada
+        title: başlık
+      New Challenge Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      OPD-K5 Stage3aGo:
+        description here: açıklama burada
+        title: başlık
+      PDAlg Facilitator Test:
+        description here: açıklama burada
+        title: başlık
+      PDK5 CS Video:
+        Computer Science: Bilgisayar Bilimi
+      PDK5 Glossary C:
+        Vocabulary: Kelime Haznesi
+      PDK5 Pair Programming 1:
+        Pair Programming: Eşli Programlama
+      PDK5 Teacher Dashboard C:
+        Teacher Dashboard: Öğretmen Panosu
+      PS - Responding to User Input:
+        description here: açıklama burada
+        title: başlık
+      PS - draft - Longitudinal study description:
+        description here: açıklama burada
+        title: başlık
+      Pixelation - Lesson 14 - Instructions Make Your Own:
+        description here: açıklama burada
+      Pixelation - Lesson 14 - Instructions one bit error:
+        description here: açıklama burada
+      Pixelation - Lesson 15 - Favicon Instructions:
+        description here: açıklama burada
+      Pixelation - Lesson 15 - Task 1 instructions:
+        description here: açıklama burada
+      Pixelation - Lesson 15 - Task 2 instructions:
+        description here: açıklama burada
+      Pixelation - Lesson 15 - Task 3 instructions:
+        description here: açıklama burada
+      Pixelation - Video - Color 1:
+        description here: açıklama burada
+      Pixelation - Video - Color 2:
+        description here: açıklama burada
+      Pixelation - Video - Color 3:
+        description here: açıklama burada
+      Pixelation - Video - Tips and Tricks:
+        description here: açıklama burada
+      Prepare for your presentation:
+        description here: açıklama burada
+        title: başlık
+      Public Key Crypto Widget Instructions:
+        description here: açıklama burada
+        title: başlık
+      Public Key Crypto Widget Instructions_2018:
+        description here: açıklama burada
+        title: başlık
+      Recruitment-Scenarios-Passthrough:
+        Recruitment Scenarios Session: İşe Alma Senaryoları Toplantısı
+      Rules About Choosing Good IDs:
+        description here: açıklama burada
+        title: başlık
+      Rules About Choosing Good IDs_2018:
+        description here: açıklama burada
+        title: başlık
+      SG U3 whats a comment:
+        description here: açıklama burada
+        title: başlık
+      SG v2 U3L01 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      SG v2 U3L02 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      SG v2 U3L03 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      SG v2 U3L05 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      SG v2 U3L07 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      SG v2 U3L08 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      SG v2 U3L09 Student Lesson Introduction:
+        Looping and Random Numbers: Döngü ve rastgele sayılar
+      SG v2 U3L6 Student Lesson Introduction:
+        Functions and Top-Down Design: Fonksiyonlar ve yukarıdan aşağıya tasarım
+      Sending Bits Real World Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      Simple Decisions with if-statements:
+        description here: açıklama burada
+        title: başlık
+      Simple Decisions with if-statements_2018:
+        description here: açıklama burada
+        title: başlık
+      'Technique: Frequency Analysis':
+        description here: açıklama burada
+      'Technique: Frequency Analysis_2018':
+        description here: açıklama burada
+      Terminology Recap:
+        description here: açıklama burada
+      Terminology Recap_2018:
+        description here: açıklama burada
+      Tips For Working on Your Own:
+        description here: açıklama burada
+        title: başlık
+      Tips For Working on Your Own_2018:
+        description here: açıklama burada
+        title: başlık
+      U1L1 Student Lesson Introduction:
+        description here: açıklama burada
+      U1L1 Student Lesson Introduction_2018:
+        description here: açıklama burada
+      U1L10 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U1L11 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U1L12 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U1L13 Student Lesson Summary:
+        description here: açıklama burada
+        title: başlık
+      U1L14 Student Lesson Summary:
+        description here: açıklama burada
+        title: başlık
+      U1L15 Student Lesson Summary:
+        description here: açıklama burada
+        title: başlık
+      U1L16 Student Lesson Introduction:
+        Lossy Compression and File Formats: Kayıplı sıkıştırma ve dosya formatları
+        description here: açıklama burada
+      U1L17 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U1L2 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U1L3 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U1L4 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U1L4 Widget Demo - Video:
+        description here: açıklama burada
+      U1L5 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U1L6 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U1L7 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U1L8 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U1L9 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U2L1 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U2L11 Student Lesson Introduction:
+        HTTP and Abstraction: HTTP ve soyutlama
+      U2L12 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U2L14 Student Lesson Introduction:
+        Cracking the Code: Kodu çözmek
+      U2L17 Student Lesson Introduction:
+        description here: açıklama burada
+      U2L2 Student Lesson Introduction:
+        The Need for Addressing: Adresleme için ihtiyaç
+      U2L5 Student Lesson Introduction:
+        Packets and Making a Reliable Internet: Paketler ve güvenilir bir Internet
+          oluşturma
+      U2L7 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U2L8 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U2L9 Student Lesson Introduction:
+        The Need for DNS: DNS için ihtiyaç
+      U3 whats a comment:
+        description here: açıklama burada
+        title: başlık
+      U3 whats a comment_2018:
+        description here: açıklama burada
+        title: başlık
+      U3L06 Student Lesson Introduction:
+        APIs and Function Parameters: API'lar ve fonksiyon parametreleri
+      U3L07 Student Lesson Introduction:
+        Looping and Random Numbers: Döngü ve rastgele sayılar
+      U3L08 Student Lesson Introduction:
+        Creating Functions with Parameters: Parametreli Fonksiyonlar yaratma
+      U3L12 - Mission Unsortable:
+        description here: açıklama burada
+        title: başlık
+      U3L12 - Student Introduction 1:
+        Events Unplugged: Serbest-olaylar
+      U3L13 - Explanation of Ids:
+        description here: açıklama burada
+        title: başlık
+      U3L13 - Make a Prediction Explanation:
+        description here: açıklama burada
+        title: başlık
+      U3L13 Add Button Instrucitons:
+        description here: açıklama burada
+        title: başlık
+      U3L13 Add Button Instructions:
+        description here: açıklama burada
+        title: başlık
+      U3L14 - Message - Other ways to assign values:
+        description here: açıklama burada
+        title: başlık
+      U3L14 - Message - basic mechanics of variables:
+        description here: açıklama burada
+        title: başlık
+      U3L14 - Student Intro Page:
+        description here: açıklama burada
+        title: başlık
+      U3L15 - explanation of IF and =v==:
+        description here: açıklama burada
+        title: başlık
+      U3L15 Student Lesson Intro - new:
+        description here: açıklama burada
+        title: başlık
+      U3L19 - Arithmetic v Concatenation:
+        description here: açıklama burada
+      U3L19 - Intro to variables:
+        description here: açıklama burada
+      U3L19 - concatenate string with var:
+        description here: açıklama burada
+      U3L19 - done with variables finally:
+        description here: açıklama burada
+        title: başlık
+      U3L19 - explanation diff between string and var name:
+        description here: açıklama burada
+      U3L19 - improve your clicker game:
+        description here: açıklama burada
+      U3L19 - misconception variable assignment order pt1:
+        description here: açıklama burada
+      U3L19 - misconception variable assignment order pt2:
+        description here: açıklama burada
+      U3L19 - variable breakdown - Assigning a value:
+        description here: açıklama burada
+      U3L19 - variable breakdown - common mistake - declaring twice:
+        description here: açıklama burada
+      U3L19 - variable breakdown - declaration:
+        description here: açıklama burada
+      U3L19 - variable breakdown - setText in label:
+        description here: açıklama burada
+      U3L19 - variable breakdown - ways to read pt1:
+        description here: açıklama burada
+      U3L19 - variable breakdown intro:
+        description here: açıklama burada
+      U3L19 - variable scope explanation:
+        description here: açıklama burada
+      U3L19 - variable scope explanation pt2:
+        description here: açıklama burada
+      U3L19 - variable scope explanation pt3:
+        description here: açıklama burada
+      U3L20 - combining And and Or explanation:
+        description here: açıklama burada
+        title: başlık
+      U3L22 Student Lesson Introduction:
+        Permanent Data Storage: Kalıcı veri depolama
+      U4 - Cleaning Data - Activity Guide:
+        description here: açıklama burada
+        title: başlık
+      U4 - Making Data Visualizations - Bar Chart:
+        description here: açıklama burada
+        title: başlık
+      U4 - Making Data Visualizations - Edit Chart Appearance:
+        description here: açıklama burada
+        title: başlık
+      U4 - Making Data Visualizations - Free Play:
+        description here: açıklama burada
+        title: başlık
+      U4 - Making Data Visualizations - Free Play_2018:
+        description here: açıklama burada
+        title: başlık
+      U4 - Making Data Visualizations - Getting Started:
+        description here: açıklama burada
+        title: başlık
+      U4 - Making Data Visualizations - Line Chart:
+        description here: açıklama burada
+        title: başlık
+      U4 - Making Data Visualizations - Scatter Plot:
+        description here: açıklama burada
+        title: başlık
+      U4 - Making Data Visualizations - Student Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4 - Privacy Abandoned - Hot On Your Trail Video:
+        description here: açıklama burada
+        title: başlık
+      U4 - Unique Ids Explanation:
+        title: başlık
+      U4 - Unique Ids Explanation_2018:
+        title: başlık
+      U4 Cleaning Data Activity Guide Pt2:
+        description here: açıklama burada
+        title: başlık
+      U4 Cleaning Data Activity Guide Pt3:
+        description here: açıklama burada
+        title: başlık
+      U4 caesar cipher interstitial:
+        description here: açıklama burada
+      U4 how to crack substitution cipher:
+        description here: açıklama burada
+      U4L01 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L02 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L02 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      U4L02v2 - Finding Trends:
+        description here: açıklama burada
+        title: başlık
+      U4L03 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L03 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      U4L03v2 - Student Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L04 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L04 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      U4L04v2 - Student Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L05 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L06 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L06v2 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L07 Public Key Crypto Interstitial:
+        description here: açıklama burada
+      U4L07 Student Introduction public key crypto:
+        description here: açıklama burada
+        title: başlık
+      U4L07 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L08 - mod clock instructions:
+        description here: açıklama burada
+        title: başlık
+      U4L08 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L08v2 Making Pivot Tables:
+        description here: açıklama burada
+        title: başlık
+      U4L08v2 Making Pivot Tables Part 2:
+        description here: açıklama burada
+        title: başlık
+      U4L08v2 Making Pivot Tables Part 3:
+        description here: açıklama burada
+        title: başlık
+      U4L08v2 Making Pivot Tables Part 3_2018:
+        description here: açıklama burada
+        title: başlık
+      U4L08v2 Student Intro:
+        description here: açıklama burada
+        title: başlık
+      U4L09 Student Lesson Intro Practice PT big data dilemma:
+        description here: açıklama burada
+        title: başlık
+      U4L09 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L10 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L11 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L12 - Student Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L12 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L13 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L14 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L15 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L16 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L17 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L18 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L19 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L20 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L21 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L22 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L23 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L24 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      U4L5 random subst challenge page:
+        description here: açıklama burada
+        title: başlık
+      U5 - Create PT - Student Introduction:
+        description here: açıklama burada
+        title: başlık
+      U5 - Create PT Prep - Student Introduction:
+        description here: açıklama burada
+        title: başlık
+      U5 - Create PT review - Student Introduction:
+        description here: açıklama burada
+        title: başlık
+      U5 - Explore PT - Student Introduction:
+        description here: açıklama burada
+        title: başlık
+      U5 - Explore PT Prep - Student Introduction:
+        description here: açıklama burada
+        title: başlık
+      U5 - Explore PT Review - Student Introduction:
+        description here: açıklama burada
+        title: başlık
+      U5 - PT Prep - Digital Portfolio and tech setup:
+        description here: açıklama burada
+        title: başlık
+      U5 color sleuth check correct:
+        description here: açıklama burada
+        title: başlık
+      U5 color sleuth check correct_2018:
+        description here: açıklama burada
+        title: başlık
+      U5L08 - Student Intro If statements:
+        description here: açıklama burada
+        title: başlık
+      U6 - Charts - Student Introduction:
+        description here: açıklama burada
+        title: başlık
+      U6 - Charts - Student Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      U6 - Final Project - Student Introduction:
+        description here: açıklama burada
+        title: başlık
+      U6 - Final Project - Student Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      U6 - ImportExport - Student Introduction:
+        description here: açıklama burada
+        title: başlık
+      U6 - ImportExport - Student Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      U6 - Sample Apps - Student Introduction:
+        description here: açıklama burada
+        title: başlık
+      U6 - Sample Apps - Student Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      U6 - deleteRecord - Student Introduction:
+        description here: açıklama burada
+        title: başlık
+      U6 - deleteRecord - Student Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      U6 - updateRecord - Student Introduction:
+        description here: açıklama burada
+        title: başlık
+      U6 - updateRecord - Student Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      U6 AP Performance Task Tech Setup - Student Links:
+        description here: açıklama burada
+        title: başlık
+      U6 Create PT - Complete the Task - Student Links:
+        description here: açıklama burada
+        title: başlık
+      U6 Create PT - Complete the Task - Student Links_2018:
+        description here: açıklama burada
+        title: başlık
+      U6 Create PT Review - Student Links:
+        description here: açıklama burada
+        title: başlık
+      U6 Create PT Review - Student Links_2018:
+        description here: açıklama burada
+        title: başlık
+      U6 Explore PT - Complete the Task - Student Links:
+        description here: açıklama burada
+        title: başlık
+      U6 Explore PT - Complete the Task - Student Links_2018:
+        description here: açıklama burada
+        title: başlık
+      U6 Explore PT - Make a Plan - Student Links:
+        description here: açıklama burada
+        title: başlık
+      U6 Explore PT - Make a Plan - Student Links_2018:
+        description here: açıklama burada
+        title: başlık
+      U6 Explore PT Review - Student Links:
+        description here: açıklama burada
+        title: başlık
+      U6 Explore PT Review - Student Links_2018:
+        description here: açıklama burada
+        title: başlık
+      Unit 2 Lesson 1 Overview Clone:
+        description here: açıklama burada
+        title: başlık
+      Unit 4 Lesson 1 Introduction:
+        description here: açıklama burada
+        title: başlık
+      Unit 4 Lesson 1 Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      Unit 4 Lesson 2 Introduction:
+        description here: açıklama burada
+        title: başlık
+      Unit 4 Lesson 2 Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      Unit 4 Lesson 5 Introduction:
+        description here: açıklama burada
+        title: başlık
+      Unit 4 Lesson 5 Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      Unit 4 Lesson 6 Introduction:
+        Cracking the Code: Kodu çözmek
+      Unit 4 Lesson 6 Introduction_2018:
+        Cracking the Code: Kodu çözmek
+      Unit 5 Lesson 1:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 1 Introduction:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 1 Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 10 Introduction:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 10 Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 2 Introduction:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 2 Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 3 Introduction:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 3 Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 4 Introduction:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 4 Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 5:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 5 Introduction:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 5 Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 6:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 6 Introduction:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 6 Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 7 Introduction:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 7 Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 8 Introduction:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 8 Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 9 Introduction:
+        description here: açıklama burada
+        title: başlık
+      Unit 5 Lesson 9 Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      'Variable Scope: Local vs. Global':
+        description here: açıklama burada
+      'Variable Scope: Local vs. Global_2018':
+        description here: açıklama burada
+      'Worked Example: If-statements and Robot':
+        description here: açıklama burada
+        title: başlık
+      'Worked Example: If-statements and Robot_2018':
+        description here: açıklama burada
+        title: başlık
+      brad-repro-bug-000:
+        description here: açıklama burada
+      brad-test-continue-buttons-in-markdown:
+        description here: açıklama burada
+      challenges sample 3:
+        Life Science Challenges: Hayat bilgisi meydan okuma
+      challenges sample 4:
+        Life Science Challenges: Hayat bilgisi meydan okuma
+      challenges sample 5:
+        Life Science Challenges: Hayat bilgisi meydan okuma
+      challenges sample 6:
+        Life Science Challenges: Hayat bilgisi meydan okuma
+      challenges sample 7:
+        Life Science Challenges: Hayat bilgisi meydan okuma
+      courseB_external_MRF:
+        description here: açıklama burada
+        title: başlık
+      courseB_external_loopMRF:
+        description here: açıklama burada
+        title: başlık
+      courseB_story_unspottedBugs10:
+        description here: açıklama burada
+        title: başlık
+      courseB_story_unspottedBugs11:
+        description here: açıklama burada
+        title: başlık
+      courseB_story_unspottedBugs12:
+        description here: açıklama burada
+        title: başlık
+      courseB_story_unspottedBugs13:
+        description here: açıklama burada
+        title: başlık
+      courseB_story_unspottedBugs14:
+        description here: açıklama burada
+        title: başlık
+      courseB_story_unspottedBugs15:
+        description here: açıklama burada
+        title: başlık
+      courseB_story_unspottedBugs16:
+        description here: açıklama burada
+        title: başlık
+      courseB_story_unspottedBugs17:
+        description here: açıklama burada
+        title: başlık
+      courseB_story_unspottedBugs18:
+        description here: açıklama burada
+        title: başlık
+      courseB_story_unspottedBugs2:
+        description here: açıklama burada
+        title: başlık
+      courseB_story_unspottedBugs3:
+        description here: açıklama burada
+        title: başlık
+      courseB_story_unspottedBugs4:
+        description here: açıklama burada
+        title: başlık
+      courseB_story_unspottedBugs5:
+        description here: açıklama burada
+        title: başlık
+      courseB_story_unspottedBugs6:
+        description here: açıklama burada
+        title: başlık
+      courseB_story_unspottedBugs7:
+        description here: açıklama burada
+        title: başlık
+      courseB_story_unspottedBugs8:
+        description here: açıklama burada
+        title: başlık
+      courseB_story_unspottedBugs9:
+        description here: açıklama burada
+        title: başlık
+      courseB_unplugged_mrfProgramming:
+        description here: açıklama burada
+        title: başlık
+      courseC_screenoutthemean:
+        description here: açıklama burada
+        title: başlık
+      courseF_firstFunctions_map:
+        description here: açıklama burada
+        title: başlık
+      coursef_functionsSummary_map:
+        description here: açıklama burada
+        title: başlık
+      coursef_powerofwords:
+        description here: açıklama burada
+        title: başlık
+      csd deeper learning timeline:
+        description here: açıklama burada
+      csd deeper learning timeline 2018-2019:
+        description here: açıklama burada
+      csd-post-survey-unit1-preamble:
+        description here: açıklama burada
+        title: başlık
+      csd-post-survey-unit2-preamble:
+        description here: açıklama burada
+        title: başlık
+      csd-post-survey-unit3-preamble:
+        description here: açıklama burada
+        title: başlık
+      csd-post-survey-unit4-preamble:
+        description here: açıklama burada
+        title: başlık
+      csd-post-survey-unit5-preamble:
+        description here: açıklama burada
+        title: başlık
+      csd-post-survey-unit6-preamble:
+        description here: açıklama burada
+        title: başlık
+      csp deeper learning timeline:
+        description here: açıklama burada
+      csp-post-survey-2018-AP-preamble:
+        description here: açıklama burada
+        title: başlık
+      csp-post-survey-2018-topics-preamble:
+        description here: açıklama burada
+        title: başlık
+      csp-post-survey-2018-unit-feedback-preamble:
+        description here: açıklama burada
+        title: başlık
+      csp-post-survey-createPT-preamble:
+        description here: açıklama burada
+        title: başlık
+      csp-post-survey-explorePT-preamble:
+        description here: açıklama burada
+        title: başlık
+      csp-post-survey-unit1-preamble:
+        description here: açıklama burada
+        title: başlık
+      csp-post-survey-unit2-preamble:
+        description here: açıklama burada
+        title: başlık
+      csp-post-survey-unit3-preamble:
+        description here: açıklama burada
+        title: başlık
+      csp-post-survey-unit4-preamble:
+        description here: açıklama burada
+        title: başlık
+      csp-post-survey-unit5-preamble:
+        description here: açıklama burada
+        title: başlık
+      csp_unit5_finalassessment_overview:
+        description here: açıklama burada
+        title: başlık
+      csp_unit5_finalassessment_overview_2018:
+        description here: açıklama burada
+        title: başlık
+      csp_unit5_finalassessment_overview_exam_prep:
+        description here: açıklama burada
+        title: başlık
+      csp_unit_assessment_overview:
+        description here: açıklama burada
+        title: başlık
+      csp_unit_assessment_overview_2018:
+        description here: açıklama burada
+        title: başlık
+      csp_unit_assessment_overview_exam_prep:
+        description here: açıklama burada
+        title: başlık
+      deeper learning:
+        description here: açıklama burada
+      deeper learning recommendations- csd:
+        description here: açıklama burada
+      deeper learning recommendations- csp:
+        description here: açıklama burada
+      deeper learning recommendations- csp - 2018:
+        description here: açıklama burada
+      dlp supports - csd:
+        description here: açıklama burada
+      dsl link test:
+        description here: açıklama burada
+        title: başlık
+      equity discussion:
+        description here: açıklama burada
+      grade2_maze_intro1:
+        description here: açıklama burada
+        title: başlık
+      grade2_unplugged_neighborhood:
+        description here: açıklama burada
+        title: başlık
+      grade4_project_design:
+        description here: açıklama burada
+        title: başlık
+      grade4_project_design_image:
+        description here: açıklama burada
+        title: başlık
+      grade4_project_presentation:
+        description here: açıklama burada
+        title: başlık
+      grade5_project_design:
+        description here: açıklama burada
+        title: başlık
+      grade5_project_presentation:
+        description here: açıklama burada
+        title: başlık
+      gradeK_unplugged_loops:
+        Loops Unplugged: Bağımsız (Unplugged) Döngüler
+      more encryption algorithms:
+        description here: açıklama burada
+        title: başlık
+      newCSFsample:
+        Intro: Giriş
+        description here: açıklama burada
+      post-assessment survey heading4:
+        description here: açıklama burada
+        title: başlık
+      pwc_appdev:
+        description here: açıklama burada
+        title: başlık
+      pwc_appdevunplugged:
+        description here: açıklama burada
+        title: başlık
+      pwc_cybersecurity:
+        description here: açıklama burada
+        title: başlık
+      pwc_data:
+        description here: açıklama burada
+      pwc_internetofthings:
+        description here: açıklama burada
+        title: başlık
+      pwc_problemsolving:
+        description here: açıklama burada
+      pwc_programming:
+        description here: açıklama burada
+        title: başlık
+      pwc_technologyfoundations:
+        description here: açıklama burada
+      pwc_webdevelopment:
+        description here: açıklama burada
+        title: başlık
+      sciPD StarLogo intro video:
+        Introduction to StarLogo Nova: StarLogo Nova giriş
+      sciPD class models video:
+        Using Models in the Classroom: Sınıfta modelleri kullanma
+      sciPD computer models forum:
+        Using Computer Models in Science: Bilimde Bilgisayar Modellerini Kullanma
+      sciPD computer models video:
+        Using Computer Models in Science: Bilimde Bilgisayar Modellerini Kullanma
+      sciPD culture forum:
+        Dispositions and Classroom Culture: Düzenlemeler ve sınıf kültürü
+      sciPD framework video:
+        Framework: Taslak
+      sciPD what to expect:
+        What to Expect: Ne sunuyoruz
+      sciPD what to expect 16-17:
+        What to Expect: Ne sunuyoruz
+      sciPD2 mods:
+        Reviewing the Modules: Modülleri Gözden Geçirme
+      sciPD2Part4_S1_L3:
+        description here: açıklama burada
+        title: başlık
+      sciPD2Part4_S2_L1:
+        description here: açıklama burada
+        title: başlık
+      sciPD2Part4_S2_L2:
+        description here: açıklama burada
+        title: başlık
+      sciPD2Part4_S3_L1:
+        description here: açıklama burada
+        title: başlık
+      sciPD2Part4_S3_L2:
+        description here: açıklama burada
+        title: başlık
+      sciPD2Part4_S3_L3:
+        description here: açıklama burada
+        title: başlık
+      sciPD3 mods:
+        Reviewing the Modules: Modülleri Gözden Geçirme
+      sciPD3 mods2:
+        description here: açıklama burada
+        title: başlık
+      sciPD33 earth1:
+        description here: açıklama burada
+        title: başlık
+      sciPD33 earth2:
+        description here: açıklama burada
+        title: başlık
+      sciPDpart4_S1_L1:
+        description here: açıklama burada
+        title: başlık
+      swipeRightPassThrough:
+        Recruitment Scenarios Session: İşe Alma Senaryoları Toplantısı
+      swipeRightPassThrough-test123:
+        Recruitment Scenarios Session: İşe Alma Senaryoları Toplantısı
+      test cb level:
+        description here: açıklama burada
+      test discourse level type:
+        title: başlık
+      v1 U1L13 Student Lesson Introduction:
+        The Need for DNS: DNS için ihtiyaç
+      v2 U1 Internet is for Everyone Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      v2 U1 Internet is for Everyone Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U1L11 Student Lesson Introduction:
+        Packets and Making a Reliable Internet: Paketler ve güvenilir bir Internet
+          oluşturma
+      v2 U1L11 Student Lesson Introduction_2018:
+        Packets and Making a Reliable Internet: Paketler ve güvenilir bir Internet
+          oluşturma
+      v2 U1L12 Student Lesson Introduction:
+        The Need for DNS: DNS için ihtiyaç
+      v2 U1L12 Student Lesson Introduction_2018:
+        The Need for DNS: DNS için ihtiyaç
+      v2 U1L13 Student Lesson Introduction:
+        HTTP and Abstraction: HTTP ve soyutlama
+      v2 U1L13 Student Lesson Introduction_2018:
+        HTTP and Abstraction: HTTP ve soyutlama
+      v2 U1L14 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      v2 U1L14 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U1L2 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      v2 U1L2 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U1L3 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      v2 U1L3 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U1L4 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      v2 U1L4 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U1L5 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      v2 U1L5 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U1L6 Student Lesson Introduction:
+        Sending Numbers: Sayı gönderme
+        description here: açıklama burada
+      v2 U1L6 Student Lesson Introduction_2018:
+        Sending Numbers: Sayı gönderme
+        description here: açıklama burada
+      v2 U1L8 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      v2 U1L8 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U1L9 Student Lesson Introduction:
+        The Need for Addressing: Adresleme için ihtiyaç
+      v2 U1L9 Student Lesson Introduction_2018:
+        The Need for Addressing: Adresleme için ihtiyaç
+      v2 U2L1 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L1 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L10 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L10 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L11 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L11 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L12 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L12 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L13 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L13 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L14 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L14 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L15 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L15 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L2 Student Lesson Summary:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L2 Student Lesson Summary_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L3 Student Lesson Summary:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L3 Student Lesson Summary_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L4 Student Lesson Summary:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L4 Student Lesson Summary_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L5 Student Lesson Introduction:
+        Lossy Compression and File Formats: Kayıplı sıkıştırma ve dosya formatları
+        description here: açıklama burada
+      v2 U2L5 Student Lesson Introduction_2018:
+        Lossy Compression and File Formats: Kayıplı sıkıştırma ve dosya formatları
+        description here: açıklama burada
+      v2 U2L6 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L6 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L7 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L7 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L8 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L8 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L9 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      v2 U2L9 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U3L02 Student Lesson Introduction:
+        The Need for Algorithms: Algoritmalara ihtiyaç
+      v2 U3L02 Student Lesson Introduction_2018:
+        The Need for Algorithms: Algoritmalara ihtiyaç
+      v2 U3L03 Student Lesson Introduction:
+        Creativity in Algorithms: Yaratıcılık ve algoritmalar
+      v2 U3L03 Student Lesson Introduction_2018:
+        Creativity in Algorithms: Yaratıcılık ve algoritmalar
+      v2 U3L04 Student Lesson Introduction:
+        description here: açıklama burada
+        title: başlık
+      v2 U3L04 Student Lesson Introduction_2018:
+        description here: açıklama burada
+        title: başlık
+      v2 U3L05 Student Lesson Introduction:
+        Creating Functions: Fonksiyonları Oluşturma
+      v2 U3L05 Student Lesson Introduction_2018:
+        Creating Functions: Fonksiyonları Oluşturma
+      v2 U3L07 Student Lesson Introduction:
+        APIs and Function Parameters: API'lar ve fonksiyon parametreleri
+      v2 U3L07 Student Lesson Introduction_2018:
+        APIs and Function Parameters: API'lar ve fonksiyon parametreleri
+      v2 U3L08 Student Lesson Introduction:
+        Creating Functions with Parameters: Parametreli Fonksiyonlar yaratma
+      v2 U3L08 Student Lesson Introduction_2018:
+        Creating Functions with Parameters: Parametreli Fonksiyonlar yaratma
+      v2 U3L09 Student Lesson Introduction:
+        Looping and Random Numbers: Döngü ve rastgele sayılar
+      v2 U3L09 Student Lesson Introduction_2018:
+        Looping and Random Numbers: Döngü ve rastgele sayılar
+      v2 U3L6 Student Lesson Introduction:
+        Functions and Top-Down Design: Fonksiyonlar ve yukarıdan aşağıya tasarım
+      v2 U3L6 Student Lesson Introduction_2018:
+        Functions and Top-Down Design: Fonksiyonlar ve yukarıdan aşağıya tasarım
+      v2 U4L05 Student Lesson Intro Encryption Caesar:
+        description here: açıklama burada
+        title: başlık
+      v2 U4L06 Student Lesson Introduction Encryption Vigenere:
+        Cracking the Code: Kodu çözmek
+    match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: Dans hareketleri için düğme
+          kombinasyonlarını eşleştir.
+        Matching: Eşleştirme
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: Eşleştirme
+        Use the key to match each code to its letter: Her kodu ilgili harf ile eşleştirmek
+          için anahtarı kullan
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: Kılavuzla programı eşleştir.
+        Matching: Eşleştirme
+      2-3 Maze Match 2:
+        Instructions: Talimatlar
+        Match the puzzles to the blocks: bloklar için bulmacaları eşleştir
+        Maze Match: Labirent eşleştirme
+      2-3 Relay Programming Match 1:
+        Matching: Eşleştirme
+      2-3 artist loops match 1:
+        Match the loop to the shape: Şekil için döngü eşleştir
+      2-3 artist match 1:
+        Artist Matching: Sanatçı Eşleştirme
+        Match the shape with the blocks that complete it.: Tamamlamak için bloklarla
+          şekilleri eşleştir.
+      2-3 bounce match 1:
+        Matching: Eşleştirme
+      2-3 flappy match 1:
+        Matching: Eşleştirme
+      2-3 maze match 1:
+        Match the puzzles to the blocks: bloklar için bulmacaları eşleştir
+        Maze Match One: Labirent eşleştirme
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4> Player 1 oyuncusunu toplam
+          skora ekle</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>Kazananı görmek için
+          oyuncuların puanlarını karşılaştır.</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>Oynama sırası 1. Oyuncuda</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>1. Oyuncu puanını 0 yap</h4>"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Zar
+          Yarışı oyununun algoritmasının çalışması için adımları doğru şekilde yerleştirin.
+        Matching: Eşleştirme
+      4-5 Computational Thinking Match 1:
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Teker/Kenar: 2<br/>Pencere/Kenar:
+          0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Teker/Kenar: 2<br/>Pencere/Kenar:
+          1 </h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Teker/Kenar: 2<br/>Pencere/Kenar:
+          6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Teker/Kenar: 3<br/>Pencere/Kenar:
+          2</h3>"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Her
+          araçta daha küçük parçalar var. Listedeki parçaları doğru şekilde eşleştir.
+        Matching: Eşleştirme
+      4-5 Suncatchers Match 1:
+        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
+        "<h4>STACK</h4>": "<h4>STACK</h4>"
+        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
+        "<h4>STAR</h4>": "<h4>STAR</h4>"
+        Match each program to the word it makes, using the provided group of skills.: Beceriler
+          tablosuna bakarak kelimeler ile oluşturan programları eşleştirin.
+        Matching: Eşleştirme
+      4-5 maze match 1:
+        Instructions: Talimatlar
+        Match the puzzles to the blocks: bloklar için bulmacaları eşleştir
+        Maze Match: Labirent eşleştirme
+      CSD U3 CSS Vocab Match:
+        '1': '1'
+        '2': '2'
+      CSD U3 keyinput match:
+        Question: Soru
+      CSDU2 Match RGB Colors:
+        Question: Soru
+      CSPU5_U3L14 - Matching Events to Description:
+        click: tıkla
+      ECSPD Growth Mindset Reflection Q:
+        Growth Mindset: Büyüme zihniyeti
+      K-1 Artist 2 Match 1:
+        Matching: Eşleştirme
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: türüne göre şekil temellerini eşleştir.
+        Matching: Eşleştirme
+      K-1 Artist 2 Match 3:
+        Match the shapes based on type.: türüne göre şekil temellerini eşleştir.
+        Matching: Eşleştirme
+      K-1 Artist Loops Match 1:
+        Matching: Eşleştirme
+      K-1 Bee Loops Match 1:
+        Match the blocks: Blokları eşleştir
+        Matching: Eşleştirme
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: Dans hareketleri için düğme
+          kombinasyonlarını eşleştir.
+        Matching: Eşleştirme
+      K-1 Flappy Match 1:
+        Match the blocks: Blokları eşleştir
+        Matching: Eşleştirme
+      K-1 Happy Maps Match 1:
+        Matching: Eşleştirme
+      K-1 Maze Match 1:
+        Instructions: Talimatlar
+        Match the puzzles and blocks: bloklarla bulmacaları eşleştir
+        Matching: Eşleştirme
+      K-1 Move It Match 1:
+        Matching: Eşleştirme
+      PDAlg Design Recipe Video:
+        Definition: Tanım
+      PDAlg Types Video:
+        Number: Sayı
+        String: Dize
+      PDK5 What is unplugged:
+        Question: Soru
+      'U2L06 - Matching: Label the Diagram':
+        A: A
+        B: B
+        C: C
+        D: D
+        E: D
+      U3L14 - Matching Events to Description:
+        click: tıkla
+      U3L19 - MATCH what are values of abc:
+        '10': '10'
+        '12': '12'
+        '13': '13'
+        '15': '15'
+        '16': '16'
+        '21': '21'
+        '3': '3'
+        '5': '5'
+        '7': '7'
+        '8': '8'
+        description here: açıklama burada
+        title: başlık
+      U3L19 - MC what are values of abc:
+        description here: açıklama burada
+        title: başlık
+      U4L06 Create Record Id Matching Q:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      parts of contract:
+        image: görüntü
+      test matching image:
+        Instructions: Talimatlar
+      test matching text:
+        Matching: Eşleştirme
+        blue: mavi
+      unique level name here:
+        Question: Soru
+        description here: açıklama burada
+        title: başlık
+    multi:
+      2-3 Algorithms Multi 1:
+        Choose an algorithm for the image provided.: Sağlanan görüntü için bir algoritma
+          seçin.
+        Multiple Choice: Çoktan Seçmeli
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Kare
+          ile başla<br/>Karenin üzerine bir paralelkenar koy<br/>Paralelkenarın sağına
+          bir üçgen koy
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Kare
+          ile başlayın<br/>Karenin üstünü üçgen yerleştirin<br/>Karenin altına üçgen
+          yerleştirin
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Kare
+          ile başla<br/>Karenin üzerine bir üçgen koy<br/>Üçgenin sağına bir paralelkenar
+          koy
+        0: "? Kare ile başla<br/>Karenin sağına bir üçgen koy<br/>Karenin altına bir
+          paralel kenar koy<br/>Paralelkenarın sağına üçgen koy"
+        1: ": Kare ile başla<br/>Karenin sağına bir üçgen koy<br/>Karenin altında
+          bir paralel kenar koy<br/>Paralelkenarın sağına üçgen koy"
+      2-3 Algorithms Multi 2:
+        Multiple Choice: Çoktan Seçmeli
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Üçgen
+          ile başlayın<br/>Üçgenin altına kare yerleştirin<br/>Karenin altına başka
+          bir üçgen daha yerleştirin
+        Which image does <em>not</em> follow this algorithm?: Hangi resim bu algoritmayı
+          <em>takip etmez</em>?
+      2-3 Binary Multi 1:
+        Multiple Choice: Çoktan Seçmeli
+        Which program makes this image?: Bu resim hangi programla yapılmıştır?
+      2-3 Conditionals Multi 1:
+        According to the rules of the game, which set of cards is scored correctly?: Oyun
+          kurallarına uygun olarak, hangi kağıt seti doğru olarak puan alır?
+        Multiple Choice: Çoktan Seçmeli
+      2-3 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Bu bölümü döngüler ile nasıl
+          basitleştirebilirsin?
+        Multiple Choice: Çoktan Seçmeli
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: Çoktan Seçmeli
+        Which program makes this image?: Bu resim hangi programla yapılmıştır?
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: Labirent çoktan seçmeli
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: Çoktan Seçmeli
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: Çoktan Seçmeli
+        Which image-program combo does not contain mistakes?: Hangi resim-program
+          ikilisi hata içermez?
+      2-3 artist functions multi 1:
+        Artist Functions Multiple Choice One: 'Sanatçı: Fonksiyonlarla İlgili Çoktan
+          Seçmeli Sorular 1'
+        Pick the correct blocks to draw this image using the given functions: Verilen
+          fonksiyonları kullanarak  resmi çizmek için doğru blokları seçin
+      2-3 artist loops multi 1:
+        Artist Loops Multiple Choice: 'Sanatçı: Döngülerle İlgili Çoktan Seçmeli Sorular'
+        Which shape is made by this loop?: Hangi şekil bu döngü tarafından yapılmıştır?
+      2-3 artist loops multi 2:
+        Artist Loops Multiple Choice: 'Sanatçı: Döngülerle İlgili Çoktan Seçmeli Sorular'
+        Which shape is made by this program?: Hangi şekil bu program tarafından yapılmıştır?
+      2-3 bee conditionals multi 1:
+        Which comparison below is true?: Aşağıdaki karşılaştırmalardan hangisi doğru?
+      2-3 bee conditionals multi 2:
+        Choose the best blocks.: En iyi blokları seç.
+      2-3 bee conditionals multi 3:
+        Choose the best blocks.: En iyi blokları seç.
+      2-3 bee loops multi 1:
+        Bee Loops Multiple Choice One: Arı döngüleri çoktan seçmeli Bir
+        Which blocks collect all of the nectar?: Hangi blok tüm nektarı toplar?
+      2-3 maze multi 1:
+        Maze Multiple Choice One: Labirent çoktan seçmeli Bir
+        Which set of blocks is the correct answer?: Hangi blok seti doğru cevap?
+      4-5 Algorithms Multi 1:
+        Baking cookies: Tanımlama bilgileri
+        Banana: Muz
+        Brushing your teeth: Dişini fırçalıyor
+        Multiple Choice: Çoktan Seçmeli
+        Shopping from a grocery list: Alışveriş listesinden alışveriş
+        Which one of these items is hardest to describe an algorithm for?: Bu öğelerden
+          hangisi algoritmayı en zor açıklayandır?
+      4-5 Computational Thinking Multi 1:
+        Eugene is a _____ city.: Eugene _____ şehirdir.
+        0: "? Cümleler burada. Aşağıdaki şablonlardan hangisi kesin olarak diğer üç
+          parça şablona uyar?"
+        1: ": Burada üç cümle var. Aşağıdaki şablonlardan hangisi en iyi şekilde özetler,
+          yani aynı desenlerin üçünü birden şablonla eşleştirir?"
+        Multiple Choice: Çoktan Seçmeli
+        Seattle _____ a _____ _____.: Seattle _____ bir _____ _____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
+          büyük bir şehirdir. <br/> Eugene orta bir şehirdir <br/> Hillview küçük
+          bir şehirdir.
+        _____ is _____ a _____.: "<h4>_____  _____ bir _____.</h4>"
+        _____ is a _____ city.: _____ bir _____ şehirdir.
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: Çoktan Seçmeli
+        Which of these pictures best represents crowdsourcing?: Bu resimlerden hangisi
+          kitlesel kaynağı en iyi şekilde temsil eder?
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: Saçını fırçala
+        Cleaning your room: Odanı temizle
+        Eating your dessert: Tatlını ye
+        Multiple Choice: Çoktan Seçmeli
+        Washing your face: Yüzünü yıka
+        Which one of these activities would be best for practicing crowdsourcing?: Bu
+          faaliyetlerden hangisi kitlesel kaynağı uygulamak için en iyisi olurdu?
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: Çoktan Seçmeli
+        Which piece of information listed below is okay to share on the internet?: Aşağıda
+          listelenen bilgilerden hangisini internette paylaşmak uygundur?
+        Your address: Adresin
+        Your birthday: Doğum günün
+        Your favorite food: Favori yiyeceğin
+        Your parent's credit card number: Ailenin kredi kartı numarası
+      4-5 Internet Multi 1:
+        Multiple Choice: Çoktan Seçmeli
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Code.org'ta
+          oturum açmaya çalıştığında, hangi IP adresi sizi büyük ihtimalle DNS'e götürüyor?
+      4-5 Internet Multi 2:
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Eğer
+          DNS (alan adı hizmeti) sizi 100.42.50.110 nolu IP adresini gönderirse hangi
+          sitede olursunuz?
+        Multiple Choice: Çoktan Seçmeli
+      4-5 Songwriting Multi 1:
+        0: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin."
+        1: ": Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin."
+        Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
+          Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip
+          to my Lou, <br/>Skip to my Lou, my darlin.
+        2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,"
+        3: ": Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,"
+        Multiple Choice: Çoktan Seçmeli
+        4: "? Bu şarkının her çağrıldığında tekrarlanan, koro olarak tanımlayabileceğiniz
+          en büyük parçası nedir?"
+        5: "? Bu şarkının her çağrıldığında tekrarlanan, koro olarak tanımlayabileceğiniz
+          en büyük parçası nedir?"
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: Çoktan Seçmeli
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Aşağıdaki
+          programlardan hangisi program 1 ile aynı sırayı oluşturmaz?
+      4-5 artist loops multi 1:
+        Artist Loops Multiple Choice: 'Sanatçı: Döngülerle İlgili Çoktan Seçmeli Sorular'
+        Which blocks will create the design?: Hangi bloklar dizaynı oluşturur?
+      4-5 artist multi 1:
+        Artist Multiple Choice: Sanatçı Çoktan Seçmeli
+        Which blocks draw a rectangle with a perimeter of 100?: Hangi bloklar çevre
+          100 olan bir dikdörtgen çizer?
+      4-5 artist multi 2:
+        Artist Multiple Choice: Sanatçı Çoktan Seçmeli
+        Which drawing is symmetric?: Hangi çizim simetriktir?
+      4-5 bee conditionals multi 1:
+        0: "? Mor çiçek 3, 2 veya 1 arasında değişen nektar içerebilir, ancak sen
+          kaç tane olduğunu bilmiyorsun. Hangi blok mor çiçeği doğru biçimde kontrol
+          ederek tüm nektarları toplar?"
+        1: ": Mor çiçek 3, 2 veya 1 arasında değişen nektar içerebilir, ancak sen
+          kaç tane olduğunu bilmiyorsun. Hangi blok mor çiçeği doğru biçimde kontrol
+          ederek tüm nektarları toplar?"
+        Bee Conditionals Multiple Choice: Arı Koşullar çoktan seçmeli
+        Choose the best blocks.: En iyi blokları seç.
+      4-5 bee debug multi 1:
+        Bee Debug Multiple Choice: Arı Hata ayıklama çoktan seçmeli
+        Which version of the function will work?: Fonksiyonun hangi versiyonu çalışır?
+      4-5 bee loops multi 1:
+        Bee Loops Multiple Choice: Arı Döngüler çoktan seçmeli
+        Which blocks will solve the puzzle?: Hangi bloklar yapbozu çözecek?
+      4-5 farmer loops multi 1:
+        Which blocks solve the puzzle?: Hangi bloklar yapbozu çözer?
+      4-5 maze conditionals multi 1:
+        Maze Conditionals Multiple Choice: Labirent Koşullar Çoktan Seçmeli
+        Which blocks solve the puzzle?: Hangi bloklar yapbozu çözer?
+      4-5 maze multi 1:
+        Maze Multiple Choice: Labirent çoktan seçmeli
+        Which blocks solve the puzzle?: Hangi bloklar yapbozu çözer?
+      CB_Question_3:
+        A: A
+        Y: true
+      CSD Prediction Header Size:
+        Question: Soru
+      CSD U3 Boolean MC:
+        title: başlık
+      CSD U3 Boolean MC_2018:
+        title: başlık
+      CSDU4 Screens Predict Multi:
+        About: Hakkında
+        Contact Us: Bize Ulaşın
+      'CSP U4L04 Assessment 1 ':
+        Question: Soru
+      CSP Unit 1 Ch 1 MC binary to dec simple:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_2018:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_exam_prep:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP verify 18:
+        'No': Hayır
+        'Yes': Evet
+      CSPU5_predict_mc_whichOfTwoEvents:
+        title: başlık
+      CSPU5_predict_onEvent_withWrongID:
+        Question: Soru
+        title: başlık
+      CommuteAssess - loops 1 - block:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block B:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_2018:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_exam_prep:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 2 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_2018:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_exam_prep:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      Destroy me multi test:
+        description here: açıklama burada
+      ECSPD unit:
+        ECS Curriculum: ECS müfredat
+      ECSPD2 question:
+        Question: Soru
+        title: başlık
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: Çoktan Seçmeli
+        Which blocks solve this puzzle?: Hangi bloklar bulmacayı çözer?
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: Çoktan Seçmeli
+        Which blocks draw the square?: Hangi bloklar kare çizer?
+      K-1 Artist 2 Multi 1:
+        Multiple Choice: Çoktan Seçmeli
+      K-1 Artist Loops Multi 1:
+        Multiple Choice: Çoktan Seçmeli
+      K-1 Bee 1 Multi 1:
+        How many nectars is this?: Bunun içinde ne kadar nektar var?
+        Multiple Choice: Çoktan Seçmeli
+      K-1 Bee 1 Multi 2:
+        How many nectars is this?: Bunun içinde ne kadar nektar var?
+        Multiple Choice: Çoktan Seçmeli
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: Çoktan Seçmeli
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Hayvanlardan
+          hangisi kendisini <strong>en güvensiz</strong> durumda bırakan dijital ayak
+          izine sahiptir?
+      K-1 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Bu bölümü döngüler ile nasıl
+          basitleştirebilirsin?
+        Multiple Choice: Çoktan Seçmeli
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: Çoktan Seçmeli
+        Which arrow gets the Flurb to the treasure?: Hangi ok Flurb' u hazineye ulaştırır?
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: Çoktan Seçmeli
+        Which information should you <strong>not</strong> share online?: Hangi bilgiyi
+          çevrimiçi ortamlarda (internette) <strong>paylaşmamalıyız?</strong>
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: Çoktan Seçmeli
+        Which choice should be the final block?: Son blok hangisi olmalı?
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: Çoktan Seçmeli
+        Which repeat block is the same?: Aynı olan tekrar blokları hangileridir?
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: Çoktan Seçmeli
+        Pick the correct repeat block.: Doğru olan tekrar bloğunu seçiniz.
+      K-1 Maze Multiple Choice 2:
+        Maze: Labirent
+        Which answer solves this level?: Bu seviyenin çözümü hangi cevaptır?
+      K-1 Move It Multi 1:
+        Multiple Choice: Çoktan Seçmeli
+        Which algorithm gets the Flurb to the flowers?: Hangi algoritma Flurb' u çiçeklere
+          götürür?
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: Çoktan Seçmeli
+        Which step should go at the beginning of this algorithm?: Bu algoritmanın
+          başlangıç adımı hangisi olabilir?
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: Çoktan Seçmeli
+        Which step should fill in the blank for this algorithm?: Bu algoritmada boş
+          olan yere hangi adım gelmeli?
+      K-1 Word Search Multi 1:
+        Multiple Choice: Çoktan Seçmeli
+        Which blocks spell "MOVE"?: Hangi bloklar "MOVE" kelimesini heceler?
+      K-1 Word Search Multi 2:
+        Multiple Choice: Çoktan Seçmeli
+      K-1 Word Search Multi 3:
+        Multiple Choice: Çoktan Seçmeli
+        SOUTH: GÜNEY
+        Which word is spelled?: Hangi kelime hecelenmiş?
+      Multi Define Funcs 1:
+        '3': '3'
+        y: true
+      Multi Define Funcs 2:
+        '3': '3'
+        y: true
+      Multi Define Funcs 3:
+        '5': '5'
+        '6': '6'
+        y: true
+      PDAlg Blocks Video:
+        Toolbox: Araç kutusu
+      PDAlg DR Multi 1:
+        Domain: Alan
+        Name: İsim
+        Range: Aralık
+        0: "? The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+        1: ": The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+      PDAlg PreQ 1:
+        'No': Hayır
+        'Yes': Evet
+      PDAlg PreQ 2:
+        'No': Hayır
+        'Yes': Evet
+      PDAlg functional:
+        'No': Hayır
+      PDK5 Blockly Intro:
+        'Yes': Evet
+      PDK5 Classroom Culture:
+        'Yes': Evet
+      PDK5 Course Maps:
+        'Yes': Evet
+      PDK5 Course Overview:
+        'Yes': Evet
+      PDK5 Glossary:
+        Glossary: Sözlük
+        'Yes': Evet
+      PDK5 Intro:
+        'No': Hayır
+        Welcome!: Hoşgeldiniz!
+        'Yes': Evet
+      PDK5 Teacher Dashboard:
+        Teacher Dashboard: Öğretmen Panosu
+        'Yes': Evet
+      PDK5 Test1:
+        Question: Soru
+        description here: açıklama burada
+        title: başlık
+      PDK5 UVideo Overview:
+        'Yes': Evet
+      PDK5 Unplugged Intro:
+        'Yes': Evet
+      PS U3-bakertest:
+        description here: açıklama burada
+        title: başlık
+      SG U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      Submittable Multi:
+        blue: mavi
+        green: yeşil
+        red: kırmızı
+      Test Contained Multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '4': '4'
+      U1L07 Assessment 1:
+        A: A
+        B: B
+        C: C
+        D: D
+        E: D
+      U1L6 Assessment multiple choice:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L6 Assessment multiple choice_2018:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L8 Multiple Choice:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      U1L8 Multiple Choice_2018:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      'U2L06 - MC: Which is an MST?':
+        0: ': "<p>The images below all show the same map (or graph) but have different
+          paths between the points highlighted.</p>\n<p>Please choose the image that
+          is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The
+          “distance” between points is depicted by the number of line segments connecting
+          any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
+        A: A
+        B: B
+        C: C
+        D: D
+        E: D
+      U2L08 Assessment 1:
+        '11': '11'
+        '5': '5'
+        '6': '6'
+        '8': '8'
+        '9': '9'
+      U2L13 Assessment4:
+        '26': '26'
+      U2L13 Assessment4_2018:
+        '26': '26'
+      U2L14 Assessment3:
+        'false': 'false'
+        'true': doğru
+      U2L19 multichoice 13 MOD 17:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      U2L19 multichoice 13 MOD 17_2018:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      'U2L19 mutlichoice ':
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15_2018:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L3 Assessment 3:
+        Invent an Addressing Protocol: Bir Adresleme Protokolü icat et
+      U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L07 - MC remove line of code loops_2018:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L13 - Making Predications MC:
+        0: '? "<h1>Make a prediction - Learning to Code Better, Faster</h1>\n<p>As
+          you are learning to program you will encounter more and more new features
+          of a language and be naturally curious about how things work.  Research
+          has shown that when you encounter a new piece of code or new situation,
+          you learn faster by simply making a prediction about what will happen before
+          you run the program for the first time.  \n</p><p>Making a prediction forces
+          you to study the code and use your intuitions based on what you already
+          know. Even experienced programmers might disagree about what a piece of
+          code would do!  So making a prediction is not like some sort of test about
+          how smart you are.  <strong>By making a prediction first, when you run the
+          code you learn so much more whether you were right, wrong or somewhere in
+          between.  You construct a stronger mental model for how code works than
+          if you just ran the program to see what happened.</strong></p>\n<p>  So
+          let''s try it...</p>\n<h1> What do you think will happen?</h1>\n<p><img
+          src=\"https://images.code.org/34f6a627f0d62b6dc015c9e318372de9-image-1444076081470.png\"
+          align=right>Here is a piece of code with two buttons and two event handlers.  Notice
+          that both buttons still have the default IDs of \"id\". You will need to
+          fix this because we know it causes a warning message.  But it turns out
+          the program can still run and it does do <i>something.</i></p>\n<p><strong>What
+          do you think will happen with this code is run?</strong></p>"'
+        1: ': "<h1>Make a prediction - Learning to Code Better, Faster</h1>\n<p>As
+          you are learning to program you will encounter more and more new features
+          of a language and be naturally curious about how things work.  Research
+          has shown that when you encounter a new piece of code or new situation,
+          you learn faster by simply making a prediction about what will happen before
+          you run the program for the first time.  \n</p><p>Making a prediction forces
+          you to study the code and use your intuitions based on what you already
+          know. Even experienced programmers might disagree about what a piece of
+          code would do!  So making a prediction is not like some sort of test about
+          how smart you are.  <strong>By making a prediction first, when you run the
+          code you learn so much more whether you were right, wrong or somewhere in
+          between.  You construct a stronger mental model for how code works than
+          if you just ran the program to see what happened.</strong></p>\n<p>  So
+          let''s try it...</p>\n<h1> What do you think will happen?</h1>\n<p><img
+          src=\"https://images.code.org/34f6a627f0d62b6dc015c9e318372de9-image-1444076081470.png\"
+          align=right>Here is a piece of code with two buttons and two event handlers.  Notice
+          that both buttons still have the default IDs of \"id\". You will need to
+          fix this because we know it causes a warning message.  But it turns out
+          the program can still run and it does do <i>something.</i></p>\n<p><strong>What
+          do you think will happen with this code is run?</strong></p>"'
+        description here: açıklama burada
+      U3L30 Assessment1:
+        '6': '6'
+        '7': '7'
+        '8': '8'
+      U3L30 Assessment2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+      U3L30 Assessment3:
+        '19': '19'
+        '20': '20'
+        '21': '21'
+      U4L01 Multiple Choice:
+        right: sağ
+      U4L02 Multiple Choice:
+        right: sağ
+      U4L03 Multiple Choice:
+        right: sağ
+      U4L04 Multiple Choice:
+        right: sağ
+      U4L05 Multiple Choice:
+        right: sağ
+      U4L06 Multiple Choice:
+        right: sağ
+      U4L06 Reflection Q 1:
+        Question: Soru
+        random: gelişigüzel
+      U4L07 Multiple Choice:
+        right: sağ
+      U4L08 Multiple Choice:
+        right: sağ
+      U4L09 Multiple Choice:
+        right: sağ
+      U4L10 Multiple Choice:
+        right: sağ
+      U4L11 Multiple Choice:
+        right: sağ
+      U4L12 Multiple Choice:
+        right: sağ
+      U4L13 Multiple Choice:
+        right: sağ
+      U4L14 Multiple Choice:
+        right: sağ
+      U4L15 Multiple Choice:
+        right: sağ
+      U4L16 Multiple Choice:
+        right: sağ
+      U4L17 Multiple Choice:
+        right: sağ
+      U4L18 Multiple Choice:
+        right: sağ
+      U4L19 Multiple Choice:
+        right: sağ
+      U4L20 Multiple Choice:
+        right: sağ
+      U4L21 Multiple Choice:
+        right: sağ
+      U4L22 Multiple Choice:
+        right: sağ
+      U4L23 Multiple Choice:
+        right: sağ
+      U4L24 Multiple Choice:
+        right: sağ
+      U4LXX Multiple Choice:
+        right: sağ
+      U5 assess_weight_v2:
+        Question: Soru
+        description here: açıklama burada
+        title: başlık
+      Warmup questions:
+        random: gelişigüzel
+      commute assess - loops 4 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        '50': '50'
+      courseC_multi_harvester_loops11_predict1:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_starWars_predict1:
+        I don't know: Bilmiyorum
+      courseC_multi_starWars_predict1_2018:
+        I don't know: Bilmiyorum
+      courseD_multi_artist_binary8_predict1:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_binary8_predict1_2018:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_nestedLoops9_predict1:
+        A: A
+        B: B
+        C: C
+      courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: A
+        B: B
+        C: C
+      courseD_multi_bee_nestedLoops9_predict2:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseE_multi_farmer_predict1:
+        I don't know: Bilmiyorum
+        0: "? Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        1: ": Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        2: "? The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+        3: ": The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+      courseE_multi_farmer_predict1_2018:
+        I don't know: Bilmiyorum
+        0: "? Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        1: ": Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        2: "? The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+        3: ": The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+      csd-post-survey-2018-topic-ai:
+        'No': Hayır
+        'Yes': Evet
+      csd-post-survey-2018-topic-cryptocurrency:
+        'No': Hayır
+        'Yes': Evet
+      csd-post-survey-2018-topic-cybersecurity:
+        Cybersecurity: Siber güvenlik
+        'No': Hayır
+        'Yes': Evet
+      csd-post-survey-2018-topic-databases:
+        'No': Hayır
+        'Yes': Evet
+      csd-post-survey-2018-topic-datascience:
+        'No': Hayır
+        'Yes': Evet
+      csd-post-survey-2018-topic-gamedev:
+        'No': Hayır
+        'Yes': Evet
+      csd-post-survey-2018-topic-hardware:
+        'No': Hayır
+        'Yes': Evet
+      csd-post-survey-2018-topic-internet:
+        'No': Hayır
+        'Yes': Evet
+      csd-post-survey-2018-topic-mobile:
+        'No': Hayır
+        'Yes': Evet
+      csd-post-survey-2018-topic-parallel:
+        'No': Hayır
+        'Yes': Evet
+      csd-post-survey-2018-topic-programming:
+        'No': Hayır
+        'Yes': Evet
+      csd-post-survey-2018-topic-robotics:
+        'No': Hayır
+        Robotics: Robotik
+        'Yes': Evet
+      csd-post-survey-2018-topic-web:
+        'No': Hayır
+        'Yes': Evet
+      csp-post-survey-2017-q64:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': Hayır
+        'Yes': Evet
+      csp-post-survey-2017-q64_2018:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': Hayır
+        'Yes': Evet
+      csp-post-survey-2017-q65:
+        I don't know: Bilmiyorum
+        'No': Hayır
+        'Yes': Evet
+      csp-post-survey-2017-q65_2018:
+        I don't know: Bilmiyorum
+        'No': Hayır
+        'Yes': Evet
+      csp-post-survey-2018-topic-ai:
+        'No': Hayır
+        'Yes': Evet
+      csp-post-survey-2018-topic-cryptocurrency:
+        'No': Hayır
+        'Yes': Evet
+      csp-post-survey-2018-topic-cybersecurity:
+        Cybersecurity: Siber güvenlik
+        'No': Hayır
+        'Yes': Evet
+      csp-post-survey-2018-topic-databases:
+        'No': Hayır
+        'Yes': Evet
+      csp-post-survey-2018-topic-datascience:
+        'No': Hayır
+        'Yes': Evet
+      csp-post-survey-2018-topic-gamedev:
+        'No': Hayır
+        'Yes': Evet
+      csp-post-survey-2018-topic-hardware:
+        'No': Hayır
+        'Yes': Evet
+      csp-post-survey-2018-topic-internet:
+        'No': Hayır
+        'Yes': Evet
+      csp-post-survey-2018-topic-mobile:
+        'No': Hayır
+        'Yes': Evet
+      csp-post-survey-2018-topic-parallel:
+        'No': Hayır
+        'Yes': Evet
+      csp-post-survey-2018-topic-programming:
+        'No': Hayır
+        'Yes': Evet
+      csp-post-survey-2018-topic-robotics:
+        'No': Hayır
+        Robotics: Robotik
+        'Yes': Evet
+      csp-post-survey-2018-topic-web:
+        'No': Hayır
+        'Yes': Evet
+      csp-pre-survey-2017-q40:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Diğer
+      csp-pre-survey-2017-q40_2018:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Diğer
+      csp_ap_exam_signup:
+        'No': Hayır
+        'Yes': Evet
+      csp_ap_previous_years:
+        'No': Hayır
+        'Yes': Evet
+      csp_ap_taking_ap_class:
+        'No': Hayır
+        'Yes': Evet
+      cspu5_assess1_fivemore:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_2018:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_exam_prep:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_flowchart:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_2018:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_exam_prep:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_increase:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_2018:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_exam_prep:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess2_addstrings:
+        result: sonuç
+      cspu5_assess2_addstrings_2018:
+        result: sonuç
+      cspu5_assess2_addstrings_exam_prep:
+        result: sonuç
+      cspu5_assess2_combineString:
+        '10': '10'
+        '55': '55'
+        result: sonuç
+      cspu5_assess2_combineString_2018:
+        '10': '10'
+        '55': '55'
+        result: sonuç
+      cspu5_assess2_combineString_exam_prep:
+        '10': '10'
+        '55': '55'
+        result: sonuç
+      cspu5_assess2_oldEnough:
+        '35': '35'
+        'false': 'false'
+        'true': doğru
+      cspu5_assess2_oldEnough_2018:
+        '35': '35'
+        'false': 'false'
+        'true': doğru
+      cspu5_assess2_oldEnough_exam_prep:
+        '35': '35'
+        'false': 'false'
+        'true': doğru
+      cspu5_assess2_weight:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_2018:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_exam_prep:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess3_array1:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_2018:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_exam_prep:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array4:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_2018:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_exam_prep:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_listAppend:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_2018:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_exam_prep:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_loopValue1:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue2:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess4_dataReturns:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_2018:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_exam_prep:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_listOutput:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_2018:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_exam_prep:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      msm variables multi 1:
+        '15': '15'
+        x: x
+      msm variables multi 10:
+        '17': '17'
+        x: x
+      msm variables multi 11:
+        '17': '17'
+        x: x
+      msm variables multi 12:
+        '17': '17'
+        x: x
+      msm variables multi 13:
+        '117': '117'
+        '17': '17'
+        x: x
+      msm variables multi 2:
+        '8': '8'
+      msm variables multi 3:
+        '5': '5'
+        x: x
+      msm variables multi 4:
+        '15': '15'
+        '3': '3'
+        '8': '8'
+      msm variables multi 5:
+        '3': '3'
+        '5': '5'
+      msm variables multi 6:
+        '1': '1'
+        '5': '5'
+        hello: merhaba
+      msm variables multi 7:
+        '3': '3'
+        x: x
+      msm variables multi 8:
+        '3': '3'
+        x: x
+      msm variables multi 9:
+        '5': '5'
+        '6': '6'
+        x: x
+      post-assessment survey q34:
+        Easy: Kolay
+        Hard: Zor
+      pre-assessment survey q24:
+        'No': Hayır
+        'Yes': Evet
+      pre-assessment survey q26:
+        0: "? Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        1: ": Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        'No': Hayır
+        'Yes': Evet
+      pre-assessment survey q27:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Diğer
+      pre-assessment survey q28:
+        '10': '10'
+        '11': '11'
+        '12': '12'
+        '8': '8'
+        '9': '9'
+        Other: Diğer
+      pre-assessment survey q29:
+        Female: Kadın
+        Male: Erkek
+        Other: Diğer
+        Prefer not to answer: Cevap vermemeyi tercih ederim
+      pre-assessment survey q30:
+        Asian: Asyalı
+        Black or African American: Siyahi veya Afrika kökenli Amerikalı
+        Other: Diğer
+        Prefer not to answer: Cevap vermemeyi tercih ederim
+        White: Beyaz
+      sarah_test_maggie:
+        Question: Soru
+        test: dene
+      sciPD PreQ 1:
+        'No': Hayır
+        'Yes': Evet
+      sciPD PreQ 2:
+        'No': Hayır
+        'Yes': Evet
+      sciPD class models 1:
+        Using Models in the Classroom: Sınıfta modelleri kullanma
+      test anonymous student survey educational:
+        'No': Hayır
+        'Yes': Evet
+      test me:
+        Question: Soru
+        description here: açıklama burada
+        title: başlık
+      unique level name here:
+        Question: Soru
+        description here: açıklama burada
+        title: başlık
+    text_match:
+      U2L07 Assessment4:
+        '43': '43'

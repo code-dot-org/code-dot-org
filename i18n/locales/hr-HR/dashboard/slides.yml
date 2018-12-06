@@ -1,0 +1,531 @@
+hr:
+  slides:
+    maze_intro:
+      1:
+        text: "Dobrodošli u svoj prvi sat koda! Bacimo se na prve korake programiranja."
+      2:
+        text: "Koristit ćemo Blockly, vizualni programski jezik gdje vučeš i ispuštaš blokove da bi napisao kôd."
+      3:
+        text: "Uglavnom se kod piše, ali Blockly je vizualan. Svaki blok odgovara jednoj liniji \"pravog\" koda."
+      4:
+        text: "Naučit ćeš osnove Informatike, pojmove koji se koriste svugdje: od izrade aplikacija do upravljanja robotskim vozilom na Marsu."
+      5:
+        text: "Program je niz naredbi koje vaše računalo izvršava."
+      6:
+        text: "Cilj vašeg prvog programa je da Angry Bird prođe kroz labirint i udari Zelenu svinju."
+      7:
+        text: "Na lijevoj strani labirinta se pokreće vaš program. Upute za svaki zadatak su ispod labirinta."
+      8:
+        text: "Alatna traka u sredini sadrži naredbe za igru Angry Bird. Njih ćeš koristiti kako bi napisao svoj kod igre."
+      9:
+        text: "Na desnoj strani je tvoja radna površina kamo trebaš dovući blokove s alatne trake da bi složio svoj program. Da bi obrisao blok, odvuci ga do smeća u kutu."
+      10:
+        text: "Svaki blok je jedna naredba. Ako dovučeš blok \"idi naprijed\" na svoju radnu površinu i pritisneš \"Pokreni program\", ptica se pomiče za jedno mjesto u labirintu."
+      11:
+        text: "Da bi napravio više od jedne radnje, možeš na radnu površinu dovući mnogo blokova i spojiti ih zajedno. Ptica će izvršavati naredbe odozgor prema dolje."
+      12:
+        text: "Ako si pokrenuo program, a želiš ispraviti pogreške i pokušati ponovno, pritisni gumb \"Ispočetka\"."
+      13:
+        text: "Idemo srediti ove svinje!"
+    artist_intro:
+      1:
+        text: "Zdravo, ja sam JR! Svaki trkaći tim treba informatičare da bi pobijedili. Oni analiziraju podatke iz automobila da bi ga poboljšali."
+      2:
+        text: "U ovim zadacima bit ćeš umjetnik koji crta linije iza sebe gdje god ide."
+      3:
+        text: "Ovaj naredba kaže \"idi naprijed\" za 100 piksela. Pikseli su jako male točkice na tvom ekranu."
+      4:
+        text: "Ovaj blok kaže \"okreni desno za 90 stupnjeva.\" On će okrenuti tvog umjetnika za isti kut kao i blok \"okreni\" u zadatku s labirintom."
+      5:
+        text: "Klikni na strelicu u bilo kojem od ovih blokova da promijeniš koliko umjetnik ide naprijed ili se okreće. Poigraj se da bi se upoznao s ovim novim blokovima."
+    farmer_intro:
+      1:
+        text: "Zdravo, ja sam Paola! U ovim zadacima, bit ćeš farmer koji mora potpuno poravnati svoje polje da bi mogao početi sijati usjeve."
+      2:
+        text: "Moraš pomoći ukloniti sve hrpe zemlje i popuniti sve rupe."
+      3:
+        text: "Novi blokovi uklanjaju jednu lopatu zemlje iz hrpe i pune jednu lopatu zemlje u rupe."
+      4:
+        text: "Hrpe i rupe su različite veličine, moraš reći farmerici koliko lopata mora koristiti."
+    flappy_intro:
+      1:
+        image: 'notes/flappy01.jpg'
+        text: "Zdravo, ja sam Katie! Jedna od najuzbudljivijih stvari u informatici je da računalni program može biti interaktivan."
+      2:
+        image: 'notes/flappy02.jpg'
+        text: "Kad god netko pritisne ili dotakne tipku na kompjuteru ili telefonu, to stvara DOGAĐAJ, i nekakav kod odlučuje što napraviti kad se dogodi DOGAĐAJ."
+      3:
+        image: 'notes/flappy03.jpg'
+        text: "Na primjer, možeš imati UPRAVITELJA DOGAĐAJA koji kaže \"kad se klikne miš, pokreni zvuk\" "
+      4:
+        image: 'notes/flappy04.jpg'
+        text: "Jesi ikad čuo za igricu FlappyBird? Koristeći upravitelje događajima, naučit ćemo kako programirati našu vlastitu verziju igrice FlappyBird!"
+      5:
+        image: 'notes/flappy05.jpg'
+        text: "Kod koji ćeš napisati uključuje povlačenje i ispuštanje blokova koji predstavljaju zapovijedi za kompjuter. Ispod haube, svaki od ovih blokova predstavlja pravi kod."
+      6:
+        image: 'notes/flappy06.jpg'
+        text: "Ako baciš pogled na radnu plohu, vidjet ćeš zelene blokove koji su već popunjeni - oni su \"upravitelji  događajima\" "
+      7:
+        image: 'notes/flappy07.jpg'
+        text: "Ako želiš da ptica MAHNE kad KLIKNEŠ mišem, možeš to ostvariti tako se prikačiš blok \"MAHNI\" na odgovarajući upravitelj događajima. Tada će u tvojoj igri kad god klikneš mišem ptica mahnuti krilima."
+      8:
+        image: 'notes/flappy08.jpg'
+        text: "U svakom zadatku u ovoj aktivnosti ćemo uvesti novi tip događaja u obliku zelenog bloka na radnoj površini, a ti ćeš odlučiti koji su odgovarajući blokovi i dodati ih kao odzive na te događaje."
+      9:
+        image: 'notes/flappy09.jpg'
+        text: "Kada vidiš strelicu padajućeg izbornika poput ove, to znači da možeš mijenjati postavke - recimo, koji zvuk se treba čuti kada ptica padne na zemlju."
+      10:
+        image: 'notes/flappy10.jpg'
+        text: "U zadnjem zadatku ćeš moći napraviti vlastitu igricu i podijeliti je sa svojim prijateljima. Uživaj!"
+    loop_times:
+      1:
+        text: "Zdravo, ja sam Mark. Naučimo sada petlje. Koristeći petlje možeš reći računalu da ponavlja bilo koju grupu radnji iznova, tisuću ili čak milijardu puta."
+      2:
+        text: "U ovom zadatku želimo da se ptica pomakne naprijed za 5 mjesta da dođe do svinje."
+      3:
+        text: "Za pomoć možemo koristiti novi \"ponovi\" blok."
+      4:
+        text: "Umjesto korištenja 5 \"idi naprijed\" blokova ..."
+      5:
+        text: "Možemo umetnuti blok \"idi naprijed\" u blok \"ponovi\" i upisati broj koji kaže koliko se puta to treba ponoviti."
+      6:
+        text: "Ovo je važno: moguće je umetnuti više od jedne naredbe u blok \"ponovi\"."
+      7:
+        text: "Uživaj koristeći novi blok \"ponovi\"!"
+    loop_until:
+      1:
+        text: "Zdravo, ja sam Chris. Prije dolaska u Miami Heat, išao sam na Georgia Tech na studij informatike. Isprobajmo naš novi blok \"ponavljaj dok ne bude\"."
+      2:
+        text: "Što ako nismo znali koliko ptica treba ići dok ne dođe do svinje?"
+      3:
+        text: "Ako stavimo blok \"idi naprijed\" unutar bloka \"ponavljaj dok ne bude\", ptica će se kretati naprijed DOK NE stigne do svinje (ili ne dođe do zida)."
+      4:
+        text: 'Ovo je važno: baš kao i prije, možemo staviti više blokova unutar bloka "ponavljaj dok ne bude" i one će se sve ponavljati.'
+    if:
+      1:
+        text: "Zdravo, ja sam Bill! Hajdemo naučiti novi osnovni pojam: naredbu \"Ako\". To je način na koji računala donose odluke."
+      2:
+        text: "\"Ako\" naredbu koristiš svakodnevno. Svako jutro prije nego izađeš iz kuće kažeš: AKO vani pada kiša, moram obući jaknu."
+      3:
+        text: "Možemo zombiju reći da provjeri ima li staze s lijeve strane, a AKO nađe stazu lijevo, možemo ga okrenuti u tom smjeru."
+      4:
+        text: "Da sastavimo kôd za to, dovucimo blok \"ako\" i stavimo blok \"okreni lijevo\" unutar njega."
+      5:
+        text: "Ako stavimo blok \"idi naprijed\" iznad njega i blok \"ponovi\" oko svega toga, svaki put kad se zombi pomakne, provjerit će postoji li staza lijevo da bi se okrenuo. Naredba \"ponovi\" je važna da bi nakon svakog koraka provjerio treba li se okrenuti."
+      6:
+        text: "Naredba Ako je stvarno veoma važna u informatici. Jedan od prvih programa koje sam napisao je bila igra Križić-kružić. Tu je bila ta naredba koja je rekla: AKO protivnik može pobijediti, zauzmi poziciju koja bi mu donijela pobjedu."
+      7:
+        text: "Zabavi se koristeći blok \"ako\"!"
+    if_else:
+      1:
+        text: "Zdravo, zovem se Saloni. Koristim računala pri rješavanju problema zdravlja i medicine. Hajdemo proučiti blok \"ako-inače\". Izgleda kao \"ako\" blok, ali ima dodatni dio na kraju koji kaže \"inače\"."
+      2:
+        text: "Ako stavim blok \"idi naprijed\" na mjesto koje kaže \"radi\" i blok \"okreni lijevo\" gdje kaže \"inače\" to znači da će zombi odabrati između dvije mogućnosti. AKO je staza ispred njega, nastavit će ići ravno, a INAČE (ako nema staze ispred njega) okrenut će se lijevo."
+      3:
+        text: "Poput bloka \"ako\" i blok \"ako-inače\" možemo staviti unutar bloka \"ponovi\". Tako će zombi nastaviti ići, a zbog \"ako-inače\" bloka će i dalje provjeravati treba li se okrenuti."
+      4:
+        text: "Stavimo te zombije tamo gdje pripadaju!"
+    if_else_scrat:
+      1:
+        text: "Naredba \"ako-inače\" je odluka između dvije stvari. Hajdemo pogledati kako je možemo koristiti s našim prijateljem vjevercom Scratom."
+      2:
+        text: "Ovaj blok izgleda isto kao i blok \"ako\", ali ima dodatni dio na dnu koji kaže \"inače\". Ako stavim blok \"idi naprijed\" u utor koji kaže \"uradi\", a blok \"okreni lijevo\" u utor \"inače\", to znači da će vjeverac Scrat ići naprijed ako ima staze ispred njega. Ako nema staze ispred njega, Scrat će se okrenuti lijevo."
+      3:
+        text: "To je donošenje odluke i izvođenje jedne od dviju radnji ovisno o toj odluci. Isto kao i s blokom \"ako\", možeš staviti blok \"ako-inače\" unutar blokova \"ponovi\"."
+      4:
+        text: "Hajdemo sada pomoći Scratu da dobije taj žir!"
+    function:
+      1:
+        text: "Zdravo, ja sam Brina, inžinjerka u Instagramu. Funkcija je određeni niz linija koda koje želiš često koristiti, pa umjesto da svaki put pišeš isti kôd, možeš jednostavno koristiti samo jedan blok."
+      2:
+        text: "Idemo naučiti kako definirati funkcije. Definicije funkcija imaju zvjezdicu u kutu. Ime funkcije se piše u najgornjem retku."
+      3:
+        text: "Blokovi koje stavljamo unutar definicije kažu nam što ona radi. Tako se ova funkcija zove \"ispuni 5\" i napravljena je od bloka \"ponovi\" i bloka \"ispuni\"."
+      4:
+        text: "Definicija se nalazi na radnoj površini, ali farmer neće izvršiti funkciju sve dok ne dovučemo funkcijski blok \"ispuni 5\" iz kategorije funkcija."
+      5:
+        text: "Zabavimo se s funkcijama! "
+    loop_while:
+      1:
+        text: "Zdravo, ja sam Makinde! Hajdemo proučiti blok \"dok\"."
+      2:
+        text: "Blok \"dok\" će raditi sve ono što stavimo unutar njega SVE DOK tvrdnja na vrhu ima vrijednost TOČNO."
+      3:
+        text: "Na primjer, ako farmer stoji na hrpi zemlje, uklanjat će po 1 lopatu zemlje DOK god ispod postoji hrpa."
+    loop_for:
+      1:
+        text: "Zdravo, ja sam Trina. Radim za Pixar. Radila sam na mnoštvu filmova, uključujući Shreka."
+      2:
+        text: "Ovo je naša nova petlja \"brojač\". Ona će opetovano izvoditi naredbe, a ti možeš napraviti da se akcije svaki put malo izmijene."
+      3:
+        text: "U ovom primjeru, petlja \"brojač\" kaže \"broji s brojačem od 50 do 90 po 10\", a unutar nje imamo poznati blok \"nacrtaj kvadrat\". Dovuci blok \"brojač\" iz grupe \"Varijable\" na mjesto \"duljina\"."
+      4:
+        text: "To znači da će naš umjetnik nacrtati kvadrat sa stranicama duljine 50, zatim će dodati 10 i nacrtati kvadrat sa stranicama duljine 60. Potom će nastaviti dodavati po 10 i crtati kvadrate dok ne dođe do 90. Tako ćemo imati kvadrate sa stranicama od 50, 60, 70, 80 i 90 piksela."
+    parameters:
+      1:
+        text: "Cao ja sam Janete, i ja sam inzinjer na Zynga."
+      2:
+        text: "Što ako želimo nacrtati niz trokuta, a da njihove stranice budu različitih duljina?"
+      3:
+        text: "Možemo napisati cijeli kôd ručno ili možemo koristiti funkciju s parametrima."
+      4:
+        text: "Da bi to napravio, klikni na plavu zvjezdicu na definiciji funkcije \"nacrtaj trokut\". Zatim dovuci \"ime unosa\" u blok \"unos\"."
+      5:
+        text: "Zatim kad napišeš \"duljina\" na mjesto gdje piše \"x\" i pritisneš \"Enter\", napravit ćeš unos duljine za svoju funkciju."
+      6:
+        text: "Potom klikni na zvjezdicu. Sada trebaš kliknuti na kategoriju Varijable i dovući blok \"duljina\" u blok \"idi naprijed\" u svojoj definiciji funkcije. Također, odvuci stari blok broja."
+      7:
+        text: "Da bi koristio svoju funkciju s parametrima, klikni na kategoriju Funkcije i izvuci svoju funkciju \"nacrtaj trokut s duljinom\"."
+      8:
+        text: "Sad možeš koristiti matematički blok da uneseš različite brojeve da nacrtaš trokute raznih veličina."
+    hoc_wrapup:
+      1:
+        text: "Čestitam! U posljednjem zadatku koji si riješio, upravo si napisao kôd kojim možeš BILO KOJEM robotu reći kako da nađe izlaz iz labirinta bez sprednih puteva ili tunela bilo koje duljine, bez obzira radi li se o zombiju, ptici, svemirskom vozilu ili čak automobilu s autopilotom."
+      2:
+        text: "Osnovni pojmovi koje si koristio nalaze se u srcu svake aplikacije koju ćeš ikada isprobati. Učili smo o petljama \"ponovi\", \"ponavljaj dok ne bude\", naredbama \"ako\" i \"ako-inače\"."
+      3:
+        text: "Ako ti se svidio tvoj prvi sat kodiranja, posjeti code.org da bi nastavio svoje učenje informatike! Kroz naš 20-satni tečaj, savladat ćeš osnove programiranja i biti spreman početi učiti kako napraviti aplikacije za mobitele, upute za robote, igrice, bilo što."
+      4:
+        text: "Tehnologija mijenja sve što radimo i nije važno jeste li mladi ili stari: programiranje je zabavno, i kreativno, i svatko ga može naučiti!"
+    20_wrapup:
+      1:
+        text: "Bilješke će stići uskoro!"
+    frozen_intro:
+      1:
+        text: "Zdravo, ja sam Lindsey. Radim kao model, glumim i pišem svoje programe. Upotrijebimo kodiranje da se pridružimo Anni i Elsi dok istražuju ljepotu i čaroliju leda."
+      2:
+        text: "Stvorit ćeš pahuljice i uzorke dok kližeš po ledu i napraviti zimsku Zemlju Čuda koju možeš podijeliti sa svojim prijateljima."
+      3:
+        text: "U sljedećih sat vremena naučit ćeš osnove izrade programa. Tradicionalno programiranje se obično svodi na tekst, no mi ćemo koristiti Blockly, koji koristi vizualne blokove koje možeš premještati i slagati da dobiješ programe. Tako čak i studenti na fakultetima uče osnove. U biti, to je isto stvaranje kôda."
+      4:
+        text: "Program je niz uputa koje računalu kažu što da uradi. Hajdemo napraviti kô, ili program, koji će Elsi pomoći da nacrta običnu liniju. To ćemo kasnije koristiti da napravimo složenije uzorke."
+      5:
+        text: "Tvoj ekran je podijeljen u tri dijela. Na lijevoj strani je ledena površina gdje će se odvijati tvoj program. Upute su na svakom nivou napisane odmah ispod nje."
+      6:
+        text: "U sredini je alatna traka, a svaki od ovih blokova je radnja koju Anna i Elsa mogu napraviti."
+      7:
+        text: "Bijeli prostor s desne strane zove se radna površina. Tu ćemo graditi naš program. Da bi se kretao po ledu, koristit ćeš blok \"idi naprijed\"."
+      8:
+        text: "Gle, blok \"idi naprijed\" kaže \"idi naprijed 100 piksela\". Kad kliknemo na \"Pokreni\", što se događa? Elsa se kreće naprijed po ekranu i to točno za 100 piksela! Pikseli su zapravo sitni kvadratići na ekranu tvog računala."
+      9:
+        text: "Drugi blok koji imamo u ovom zadatku kaže \"okreni desno za 90 stupnjeva.\" Kad upotrijebimo taj \"okreni desno \" blok, Elsa se okrene za određeni kut.  Možeš se poigrati s vrijednošću koliko želiš da se Elsa okrene. Kut se mjeri od smjera staze ispred Else. Dakle, ovo je okret za 90 stupnjeva. A ovo je okret od 120 stupnjeva."
+      10:
+        text: "Zapamtite, možete promijeniti broj piksela i stupnjeva klikom na strelice do njih."
+    frozen_loops:
+      1:
+        text: "Pozdrav, ja sam Paola! Računala su stvarno dobra u ponavljanju radnji. Vi možete brojati do 10, 20, ili 100. Ali računalo može brojati do bilijun ili trilijun. Neće mu dosaditi i bit će mu potrebno samo nekoliko sekundi. Bilo da se radi o brojanju, ili crtanju, ili bilo čemu - računala mogu ponavljati stvari sto ili čak bilijune puta."
+      2:
+        text: "U programiranju, ovo zovemo petljom. Petlja je kako ponavljaš svoj kôd opet i opet. U idućem zadatku cilj je pomoći Anni da napravi kvadrat koristeći blok \"ponovi\"."
+      3:
+        text: "Bilo koje blokove koda koje staviš unutar bloka \"ponovi\" bit će ponavljani u slijedu, onoliko puta koliko želiš."
+      4:
+        text: "Da bi nacrtao kvadrat, možeš koristiti \"idi naprijed\" i \"okreni desno\" blokove 4 puta, Ali jednostavnije je da računalu kažeš \"idi naprijed\" i \"okreni desno za 90 stupnjeva\" jednom, a potom mu kažeš da ponovi te dvije radnje 4 puta. Da bi to napravio trebaš staviti \"idi naprijed\" i \"okreni desno\" blok unutar bloka \"ponovi\"."
+      5:
+        text: "Zapamti, možeš promijeniti broj u bloku \"ponovi\" na bilo koju vrijednost i ono što je unutar tog bloka će se ponoviti toliko broj puta."
+    frozen_functions:
+      1:
+        text: "Zdravo, ja sam Chris Bosh. Ja sam profesionalni košarkaš, i kodirao sam na fakultetu."
+      2:
+        text: "Jedan od najvažnijih koncepata u informatici je kako definirati nove naredbe. Većina programskih jezika ima tek oko 100 riječi ili naredbi. Zapravo, sva umjetnost i čarolija je u izradi vlastitih novih riječi sastavljenih od ovih osnovnih kockica."
+      3:
+        text: "Jednom kad naučiš računalo kako da obavi neku radnju koristeći slijed naredbi, možeš toj akciji dati vlastito ime tako da ti bude poslije lakše ponoviti je. Kada definiraš vlastitu naredbu i daš joj ime, to se zove funkcija."
+      4:
+        text: "Zdravo, ja sam Jess. Kada programiraš s blokovima koristit ćeš funkcije ako imaš niz radnji koje želiš korisitti puno puta. Na primjer, napisao si kôd za crtanje kvadrata."
+      5:
+        text: "To možeš definirati kao funkciju zvanu \"nacrtaj kvadrat\". "
+      6:
+        text: "Sada imaš novi blok koji možeš upotrijebiti više puta da nacrtaš više kvadrata."
+      7:
+        text: "Puno jednostavnih oblika može se upotrijebiti za stvaranje složenih uzoraka. U idućem zadatku ti je kôd za crtanje kruga koji si prije napisao dostupan kao nova funkcija koja može nacrtati krugove raznih veličina. Možeš li pomoći Elsi nacrtati prekrasne zamršene uzorke u snijegu?"
+    playlab_intro:
+      1:
+        text: "Sada ćemo praviti igrice pomoću Laboratorija igara. Dobre igre imaju priču, a svaka priča ima likove. Naučit ćemo kako napraviti da naši likovi poput vještica, vanzemaljaca ili životinja govore, kreću se i uzajamno međudjeluju. Do kraja tutorijala, napravit ćeš igru počevši od nule i podijeliti je s prijateljima."
+      2:
+        text: "Tvoj ekran je podijeljen u tri glavna dijela. Na lijevoj strani je prostor u kojem će se odvijati tvoj program. Upute su za svaki nivo napisane odmah ispod njega."
+      3:
+        text: "U sredini je alatna traka, a svaki od ovih blokova je dio kôda. Bijeli prostor s desne strane zove se radna površina. Tu ćemo graditi naš program."
+      4:
+        text: "Za početak trebaš prikačiti svoje blokove za narančasti blok \"pri pokretanju\". Možeš prikačiti više blokova zajedno tako da ih vučeš blizu dok se ne pokaže žuta linija, a tada će se oni zakačiti."
+      5:
+        text: "U ovom prvom zadatku naš lik je pingvin i on će naučiti reći \"Zdravo!\" tako da ćemo izvući blok \"reći\", prikačiti ga na blok \"pri pokretanju\" i upisati \"Zdravo!\". Također možemo napraviti da se pingvin kreće tako da upotrijebimo blokove  \"pomakni lijevo\" i \"pomakni desno\". Kad smjestiš blokove, klikni na gumb \"Pokreni\" da vidiš što si isprogramirao."
+      6:
+        text: "Ovo je početak, a kad završiš bit ćeš sposoban napraviti vlastitu igru sa svim vrstama likova koji mogu međudjelovati, postati tužni ili sretni, skupljati bodove, bacati vatrene kugle ili čak izbrisati jedan drugoga. Sve ovisi o tebi i tome kakvu igru želiš napraviti."
+    playlab_events:
+      1:
+        text: "Sad idemo naučiti nešto što svi programeri svakodnevno koriste. To se zovu događaji. Događaj kaže tvom programu da pazi kada će se nešto dogoditi. Kad se to dogodi, on izvodi akciju."
+      2:
+        text: "Neki primjeri događaja su čekanje na klik mišem, pritisak na tipku sa strelicom ili dodir ekrana."
+      3:
+        text: "Sada ćemo napraviti da svemirski rocot pozdravi zemljane kada se klikne na njega. Koristit ćemo blok \"kad se klikne\" i prikačiti blok \"reći\" na njega. Kada igrač klikne na svemirca, izvest će se sve što je prikačeno na blok događaja \"kad se klikne\". Što će tvoj vanzemaljac reći?"
+      4:
+        text: "Tu su također i blokovi \"kad strelica\". Ako na njih prikačiš blokove \"pomakni\", moći ćeš pomicati svoj lik gore, dolje, lijevo ili desno. Korak po korak i tvoja igra postaje sve interaktivnija."
+    playlab_repeat_forever:
+      1:
+        text: "Ovo je blok \"ponavljaj zauvijek\". Sve što je unutar ovo bloka će se stalno ponavljati tijekom igre."
+      2:
+        text: "Ako želimo da lik nešto opetovano izvodi, bez ikakvog utjecaja igrača, stavit ćemo to unutar bloka \"ponavljaj zauvijek\"."
+      3:
+        text: "U idućem zadatku naš cilj je pomoći čarobnjaku da patrolira granicama kraljevstva idući stalno lijevo-desno. Učenje kako rade naredbe ponavljanja će ti kasnije sačuvati mnogo vremena kad budeš radio vlastitu igru."
+    C1_artist_intro:
+      1:
+        text: "Ovo su blokovi za crtanje. Upotrijebite one kojima ćete pomaknuti umjetnika tako da popuni sive crte."
+      2:
+        text: "Ovo su blokovi za skakanje. Kad ih koristite, umjetnik se pomiče, ali ne crta pa ih koristite za skok do sljedeće sive crte."
+    C1_bee_level_intro:
+      1:
+        text: "Zar pčele nisu divne? U skupu problema koji slijede, vaš cilj je pomoći pčeli da dođe do cvijeta, uzme nektar i odleti do košnice kako bi napravila med. Morat ćete upotrijebiti blokove \"uzmi nektar\" i \"napravi med\" za ovu vježbu."
+      2:
+        text: "Svaki cvijet ima drugu brojčanu oznaku meda: 1, 2, 3 i više. Prema broju u kutu znamo koliko je nektara u crvenome cvijetu. Zato pokupite sav nektar prije nego krenete dalje. Također, svako saće može sadržavati određenu količinu meda: 1, 2, 3 i više. Napravite samo onoliko meda koliko saće može sadržavati."
+      3:
+        text: "Ako uspijete skupiti sav nektar i napraviti sav med, možete krenuti na sljedeći nivo. U suprotnome, morate ponovo pokušati riješiti problem. Poigrajte se i provjerite kako je biti programer i zujati poput pčele."
+    C1_bee_loops:
+      1:
+        text: "Petlja je ponavljanje aktivnosti. Da biste provjerili košnicu, pogledate u okvir i vratite ga nazad te ponavljate radnju nekoliko puta. To je petlja, ponavljanje iste aktivnosti više puta."
+      2:
+        text: "Na ovom nivou želimo da pčela skupi tri nektra s cvijeća. Umjesto da koristiš tri bloka \"Pokupi nektar\", koristi blok \"Ponovi\". Klikni \"Pokreni\" i pogledaj što će se dogoditi. Lijepo!"
+    C1_bigevent_unplugged:
+      1:
+        text: "Ova lekcija se zove \"Veliki događaj\". Razgovarat ćemo kako možemo kontrolirati naše programe i promijeniti način na koji program radi pomoću pritiska tipke ili klikom miša."
+      2:
+        text: "U ovoj lekciji kontrolirat će vas pomoću papirnatog daljinskog upravljača. Kao da smo u stvarnoj video igrici."
+      3:
+        text: "\"Događaj\" je naredba pomoću koje se nešto dogodi. Kao kada klikneš mišem i otvori se web stranica. To je \"Događaj\". Kada dotakneš zaslon na tabletu kako bi pomaknuo sliku to je isto \"Događaj\". \"Događaji\" su odlični kako bi korisnici upravljali tvojim programom kad god žele ili je to potrebno."
+      4:
+        text: "Postoje događaji na koje svi reagiramo. Kada smo gladni, odemo do frižidera. Kada čujemo poštara kako dolazi i ostavlja poštu u sandučiću, izađemo i pokupimo poštu. To su događaji kao pritisak tipke ili pomicanje joystick-a. To je nešto što se dogodi i potakne nas da učinimo nešto."
+      5:
+        text: "U video igricama postoji događaj koji se zove \"Osvježavanje\" i odvija se 30 do 60 puta u sekundi. Za porogramere video igrica to je skoro pa važnije od događaja koje zadamo tipkom ili joystickom."
+      6:
+        text: "Glavni događaj koji gledamo je što se dogodi pri svakom osvježavanju. Provjeravamo što se dogodilo s joystickom u svakom osvježenju. Pa kažemo: \"Oh, je li netko pritisnuo tipku u ovom okviru? Da ili ne?\". Bez događaja, igrač se ne bi mogao kretati, skočiti, ne bi mogao kontrolirati što se događa. Video igrama ne bismo mogli oživjeti stvari."
+    C1_building_foundation:
+      1:
+        text: "U izradi skulptura od pijeska, neuspjeh je dio rada. Ali ako ste uporni, skulptura će postajati sve bolja i bolja i vama će biti uzbudljivije. Naziv igre je \"Upornost\". Ne odustajte, svidjet će vam se."
+      2:
+        text: "Naziv lekcije je \"Izrada temelja\". U ovoj lekciji zadatak neće biti jednostavan. Morate osmisliti strukturu visoku najmanje kao ova čaša i mora biti dovoljno čvrsta da drži ovu knjigu."
+      3:
+        text: "Biti će trenutaka kada nae djelo neće uspjeti. Bit će trenutaka kada ćemo se odjećati bespomoćno i htjeti odustati. Takvih trenutaka može biti mnogo. Ali ako nastavimo pokušavati i damo najbolje od sebe svaki put, uspjeh će sigurno doći."
+      4:
+        text: "Upornost je ne odustati kada to stvarno želimo. Ako želite nešto stvoriti, nešto novo i drugačije, puno puta ćete se naći na krivom putu."
+      5:
+        text: "Kako biste bili uporni morate nastaviti raditi i učiti iz svojih grešaka, umjesto da odustanete i osjećate se bespomoćno. Ako ste bespomoćni to smao znači da je nešto odlično iza ugla. Zato, nemojte odustati prije nego stignete do cilja. Wooo!"
+    C1_getting_loopy:
+      1:
+        text: "Bok, moje ime je Miral Kotb i osmislila sam Iluminate. U mom poslu, jednu stvar koristimo i u plesu i u programiranju svjetlećih odijela. A to je petlja. Petlje ponavljaju neku naredbu iznova."
+      2:
+        text: "Kada nešto ponavljamo više puta, kako moje pokrete kako bi se hula hop vrtio, koristimo petlju. Ovo je petlja. Ovo je petlja. I ovo je petlja."
+      3:
+        text: "Danas ćemo imati plesnu zabavu. Koristit ćemo petlje u novom plesu. Ponavljanje. Učit ćemo o petljama uz ples. Naučit ćemo nekoliko jednostavnih koraka i ponavljati ih ponovo i ponovo kako bismo dovršili ples. (koreografiju)."
+      4:
+        text: "Evo koraka koje trebate naučiti. Pljesnite rukama. Stavite ruke iza glave. Stavite ruke na bokove. Podignite lijevu ruku. Podignite desnu ruku. Jednostavno, zar ne? Otkrijmo kako skratiti upute stavljajući plesne korake u petlje."
+      5:
+        text: "Mi doista koristimo petlje u našem plesu. Plesači su odjeveni u računala, povezana u mrežu. Koristim petlju u osvjetljavanju istih plesača iznova i iznova. Mogu koristiti petlju u ponavljanju ovih šest plesača i unutar petlje povećavati brzinu svjetla. Sve je to napravljeno pomoću petlji. Petlje su važne u programiranju jer skraćuju naš posao i čine ga jednostavnijim."
+    C1_happy_maps_unplugged:
+      1:
+        text: "Ova lekcija se zove \"Sretna mapa\". Danas ćemo pomoći našim prijateljima Flurb doći do voća."
+      2:
+        text: "Pomozi Flurbu da dođe do voća. Da biste to učinili morat ćete shvatiti kojim putem Flurb treba ići i dati mu upute pomoću strelica. Kako bi Flurb došao do jabuke, kojim putem treba ići? Linija kako bi se ići. Treba ići prema gore."
+      3:
+        text: "Kako bi došao do cilja, zaokruži smjer u kojem treba ići."
+      4:
+        text: "Napravite svoj algoritam lijepeći strjelice pored mape koju rješavate. Druga je ista, ali ide prema dolje."
+      5:
+        text: "To je kao programiranje s papirom. I to je to!"
+    C1_maze_debugging:
+      1:
+        text: "Otkrivanje grešaka je traženje i otklanjanje problema. Postoji puno načina za otkrivanje grešaka. Najlakše je ići korak po korak dok ne pronađemo gdje je pogreška. Ovdje pokušavam napraviti premet unatrag na gredi, ali stalno padam."
+      2:
+        text: "Prošla sam svaki dio premeta i shvatila gdje sam griješila. Nisam pravilno stavljala ruke na gredu. Pokušala sam ponoviti premet unatrag s novim položajem ruku i uspjela sam. Jako sam sretna jer sam otkrila grešku u premetu unatrag."
+      3:
+        text: "Kako bismo naučili otkloniti greške, već imamo zadane blokove. Primjetit ćete kako vas blokovi neće dovesti do cilja. Moramo otkloniti grešku i popraviti je. Gdje je pošlo krivo? Uočite kako je potrebno upotrijebiti još jedan \"Zapad\" blok."
+      4:
+        text: "Popravimo ovo dodajući još jedan blok \"Zapad\" (W). Kliknimo \"Pokreni\" da provjerimo jesmo li uspjeli. Jee, uspjeli smo!"
+    C1_maze_intro_sequencing:
+      1:
+        text: "U ovoj slagalici trebaš pticu dovesti do svinje. Pogledaj slagalicu i vidi u kojem smjeru ptica treba ići."
+      2:
+        text: "Odvuci blokove u Radnu površinu. Provjeri jesi li tvoj blok ispod bloka \"Pri pokretanju\" i kada misliš da si napravio točno rješenje klikni \"Pokreni\" i pogledaj kako ptica ide do svinje."
+    C1_maze_loops:
+      1:
+        text: "Računala su posebno dobra u ponavljanju naredbi. Nama, ponavljanje iste naredbe iznova i iznova može biti stvarno dosadno. Ali računala mogu ponoviti istu stvar milijunima, čak i milijardama puta i nije im dosadno."
+      2:
+        text: "Na primjer, ako želim svima na Facebooku poslati e-poruku za rođendan, trebalo mi gotovo cijelo stoljeće da stvarno napišem sve te poruke i pošaljem. No, sa samo nekoliko linija koda, sustav može poslati moju poruku svima na Facebooku i poželjeti im sve najbolje za rođendan."
+      3:
+        text: "Umjesto da tri puta vučete blok \"Sjever\" u radnu površinu, na ovom nivou ćemo dovesti pticu do svinje koristeći blok \"Ponovi\". Odvuci blok \"Ponovi\" na radnu površinu, upiši broj 3. Onda odvuci blok \"Sjever\" unutar bloka \"Ponovi\" i klikni \"Pokreni\" za provjeru. Čestitam! Uspio si!"
+    C1_going_places_safely:
+      1:
+        text: "Zovem se Jeremiah. Bok! Imam sedam godina. Obožavam se igrati na maminom računalu, ali uvijek prvo dobijem dozvolu za to. \"Mama, mogu li ići na tvoje računalo? Naravno, dušo!\""
+      2:
+        text: "Volim mamino računalo jer mogu ići na internet. Internet je sličan našem susjedstvu. Možeš posjetiti zabavna mjesta, pričati s obitelji i prijateljima i naučiti puno novih stvari."
+      3:
+      4:
+      5:
+      6:
+      7:
+    C1_zuck_repeat_loop:
+      1:
+        text: "Računala su posebno dobra u ponavljanju naredbi. Nama, ponavljanje iste naredbe iznova i iznova može biti stvarno dosadno. Ali računala mogu ponoviti istu stvar milijunima, čak i milijardama puta i nije im dosadno."
+      2:
+        text: "Na primjer, ako želim svima na Facebooku poslati e-poruku za rođendan, trebalo mi gotovo cijelo stoljeće da stvarno napišem sve te poruke i pošaljem. No, sa samo nekoliko linija koda, sustav može poslati moju poruku svima na Facebooku i poželjeti im sve najbolje za rođendan."
+      3:
+      4:
+      5:
+    C2_playlab_createstory:
+      1:
+        text: "Dosad si pravio animacije ili priče koje se odvijaju posve isto svaki put kad ih pokreneš. Sada možeš napraviti interaktivnu igru koju stvarno možeš igrati."
+      2:
+        text: "Ovdje je blok \"kad strelica\" i blok \"kada lik\". Možeš staviti te blokove zajedno da bi pomicao lik uokolo pomoću tipki sa strelicama."
+    C3_playlab_create_game:
+      1:
+        text: "Dosad si pravio animacije ili priče koje se odvijaju posve isto svaki put kad ih pokreneš. Sada možeš napraviti interaktivnu igru koju stvarno možeš igrati."
+      2:
+        text: "Ovdje je blok \"kad strelica\" i blok \"kada lik\". Možeš staviti te blokove zajedno da bi pomicao lik uokolo pomoću tipki sa strelicama."
+    starwars_intro:
+      1:
+        text: "Zdravo, ja sam Kathleen Kennedy i ja producentica sam filam \"Ratova zvijezda - Sila se budi\". Danas ćemo raditi s našom zvijezdom, BB-8. BB-8 je sferni droid. Sve što on radi i svaki njegov pokret je kontroliran softverom. \nRačunalna znanost utječe na sve djelatnosti, od marketinga i zdravstva, do filma. Stotine programera radilo je zajedno da stvore film \"Sila se budi\"."
+      2:
+        text: "Ja sam Rachel Rose. Ja sam starija Inženjerka istraživanja i razvoja u tvrtci ILM i vodim razvojne timove za animaciju i likove. U filmu sam zadužena da pomažem umjetnicima da oblikuju pokretne dijelove likova, a koji omogućavaju da oni izgledaju stvarno u galaksiji tako dalekoj."
+      3:
+        text: "U slijedećem satu napravit ćemo našu igricu \"Ratovi zvijezda\" i naučiti osnovne koncepte programiranja. Najčešće, programiranje je tekstualno, ali mi ćemo koristiti blokove i povlačiti ih da napišemo programe. No zapravo vi i dalje stvarate kod. Nakon osnova s blokovima, preći ćemo na JavaScript, jedan od najpopularnijih jezika na svijetu."
+      4:
+        text: "Na početku ćemo raditi s Ray koja će programirati BB-8 da se kreće i skuplja dijelove otpada. Vaš ekran je podijeljen na tri dijela. Lijevo je prostor za igru gdje će se kod izvršavati. Upute za svaki nivo su prikazane ispod."
+      5:
+        text: "U sredini je alatna traka i svaki od ovih blokova je naredba koju BB-8 razumije."
+      6:
+        text: "Bijelo područje na desnoj strani je radna površina i to je mjesto na kojem ćemo razvijati naš program."
+      7:
+        text: "Ako dovučem blok idiLijevo(), što se događa? BB-8 se pomiče lijevo za jedno polje na mreži."
+      8:
+        text: "A što kad želimo da učini nešto nakon toga? Mogu dodati novi blok u program. Odabrala sam idiGore(); blok i dovukla ga ispod idiLijevo(); bloka dok se nije pojavila narančasta strelica. Tada puštam blok i njih dvoje se spajaju."
+      9:
+        text: "Kad kliknem \"Pokreni\" ponovo, BB-8 će izvršiti naredbe kako su poredane odozgo prema dolje. Ako želite izbrisati blok samo ga odvucite nazad u alatnu traku."
+      10:
+        text: "Kad kliknete \"Pokreni\" uvijek možete kliknuti \"Poništi\" i vratiti BB-8 na početak. Krenimo!"
+    starwars_events:
+      1:
+        text: "Zdravo, moje ime je Charita Carter. Viša sam kreativna producentica u Walt Disney Imagineeringu. Odgovorna sam za vođenje timova koji izrađuju atrakcije koje naši posjetitelji imaju priliku iskusiti. Uvijek tražimo nove načine za poboljšanje\ni pružanje boljeg iskustva našim posjetiteljima, a tehnologija je u tome ključni faktor."
+      2:
+        text: "Čestitam, uspjeli ste! Isprogramirali ste BB-8-a. Mislim da smo sada spremni za nešto teže. Krenimo. Sada kada ste naučili osnove\nprogramiranja, vraćamo se nazad kroz vrijeme kako biste izradili vlastitu igru s R2-D2-om i C-3PO-m u glavnim ulogama."
+      3:
+        text: "Za izradu igre, trebamo naučiti nešto što programeri svakodnevno koriste. Riječ je o događajima. Događaji govore programu da sluša ili čeka dok se nešto ne dogodi, a kada se dogodi izvršavaju se akcije."
+      4:
+        text: "Primjer događaja je čekanje na klik miša, pritisnutu tipku sa strelicom gore ili dodir na ekranu."
+      5:
+        text: "Mi ćemo naučiti R2-D2-a da dostavi poruku pobunjeničkom pilotu krećući se gore, a potom i dolje do drugog pobunjeničkog pilota. Koristit ćemo događaje kako bismo ga pokrenuli kada igrač pritisne tipku sa strelicom gore ili dolje, ili gumbe za gore ili dolje."
+      6:
+        text: "Koristit ćemo događaj 'kada je pritisnuta strelica prema gore' i ispod nje postaviti naredbu 'idi gore'. Kada igrač pritisne tipku sa strelicom prema gore, pokreće se dio koda ispod postavljenog događaja. Istu stvar učinit ćemo kako bismo pokrenuli R2-D2-a prema dolje."
+      7:
+      8:
+      9:
+        text: "Tako umjesto pisanja cijelog koda za kontrolu droida unaprijed, puštamo R2-D2-a da reagira na događaj pritiska tipke kako bismo ga pomaknuli po sceni. Korak po korak vaša igra postaje sve interaktivnija."
+    starwars_blocks_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+        text: "U sredini je alatna traka i svaki od ovih blokova je naredba koju BB-8 razumije."
+      6:
+      7:
+      8:
+      9:
+      10:
+    starwars_blocks_events:
+      1:
+        text: "Zdravo, moje ime je Charita Carter. Viša sam kreativna producentica u Walt Disney Imagineeringu. Odgovorna sam za vođenje timova koji izrađuju atrakcije koje naši posjetitelji imaju priliku iskusiti. Uvijek tražimo nove načine za poboljšanje\ni pružanje boljeg iskustva našim posjetiteljima, a tehnologija je u tome ključni faktor."
+      2:
+        text: "Čestitam, uspjeli ste! Isprogramirali ste BB-8-a. Mislim da smo sada spremni za nešto teže. Krenimo. Sada kada ste naučili osnove\nprogramiranja, vraćamo se nazad kroz vrijeme kako biste izradili vlastitu igru s R2-D2-om i C-3PO-m u glavnim ulogama."
+      3:
+        text: "Za izradu igre, trebamo naučiti nešto što programeri svakodnevno koriste. Riječ je o događajima. Događaji govore programu da sluša ili čeka dok se nešto ne dogodi, a kada se dogodi izvršavaju se akcije."
+      4:
+        text: "Primjer događaja je čekanje na klik miša, pritisnutu tipku sa strelicom gore ili dodir na ekranu."
+      5:
+        text: "Mi ćemo naučiti R2-D2-a da dostavi poruku pobunjeničkom pilotu krećući se gore, a potom i dolje do drugog pobunjeničkog pilota. Koristit ćemo događaje kako bismo ga pokrenuli kada igrač pritisne tipku sa strelicom gore ili dolje, ili gumbe za gore ili dolje."
+      6:
+      7:
+    mc_intro:
+      1:
+        text: "Ja sam Jens Bergensten, ali poznatiji sam kao Jeb. Glavni sam programer Minecrafta, u Mojangu u Stockholmu. Mislim da sam imao 11 ili 12 godina, kad sam počeo programirati jer sam htio raditi igrice. Jedan prijatelj mi je rekao ako želiš raditi igrice moraš najprije naučiti programirati. I tako sam počeo. Volim dizajnirati i shvaćati strukturu arhitekture igrica. To je ono što mi se sviđa kod Minecrafta."
+      2:
+        text: "U slijedećem satu naučit ćete osnove računalnih znanosti programiranjem pokreta Alexe ili Stevea u simuliranom komadiću Minecraft svijeta."
+      3:
+        text: "Tradicionalno programiranje je tekstualno, no mi ćemo danas koristiti Blockly, sustav koji koristi blokove i koje dovlačite i spuštate kako bi napisali program. No ispod \"haube\" vi pišete JavaScript kod."
+      4:
+        text: "Koncepte koje ćete danas naučiti su isti koje programeri inače svakodnevno koriste i temelj su računalne znanosti. Ovdje u Mojangu koristimo iste\nkoncepte u razvoju Minecrafta."
+      5:
+        text: "Prije nego krenemo odabrat ćemo lik. Ja ću odabrati Alexu. Napišimo sad kod koji će nam pomoći da ju pomičemo po ekranu."
+      6:
+        text: "Lijevo je Minecraft prostor, u kojem će se vaš kod izvršavati. Upute za svaki nivo se nalaze ispod njega."
+      7:
+        text: "U sredini je alatna traka i svaki ovaj blok je naredba koja Alexi određuje smjer kretanja."
+      8:
+        text: "Bijeli prostor je radna površina i to je mjesto u kojem ćemo razvijati naš program."
+      9:
+        text: "Ako dovučemo idiNaprijed(); blok u radnu površinu i kliknemo Pokreni, što se događa? Alex se pomakne za jedno polje."
+      10:
+        text: "A što ako želimo da učini nešto nakon što se pomakne jedno polje naprijed? Možemo dodati novi blok. Ja ću uzeti okretDesno() blok i dovući ga ispod idiNaprijed() bloka dok se ne pojavi narančasta linija. Tad ću ga pustiti i dva bloka će se spojiti. Kad ponovo kliknem Pokreni, Alex će izvršiti naredbe kako su poredane od vrha prema dolje."
+      11:
+        text: "Ako želimo pobrisati blok samo ga odvučemo natrag u alatnu traku."
+      12:
+        text: "Da poništimo svoje izmjene i vratimo se na početno stanje nivoa, kliknemo Ispočetka gumb gore desno. I još jedna sitnica. Vidite male strelice\nna blokovima za okret? Svaki put kad ih vidite, to znači da možete odabrati neku drugu opciju. Krenimo s programiranjem!"
+    mc_repeat:
+      1:
+        text: "Ja sam Lydia Winters, direktor u Mojangu, u kojem smo stvorili igricu zvanu Minecraft."
+      2:
+        text: "Najdraža stvar u Minecraftu mi je istraživanje. Volim istraživati pećine i pronalaziti stvari u njima. Kako ja nisam programerka, zbilja me zanimaju Minecraft lekcije i željela bih sama naučiti programirati."
+      3:
+        text: "Prethodno smo trebali mnogo idiNaprijed() blokova. Lakše bi bilo reći računalu da ponovi naredbu 4 ili 5 puta. Srećom za nas, računala su dobra u ponavljanjima naredbi pomoću petlji."
+      4:
+        text: "Kad mi gradimo u Minecraftu, koristimo petlje da postavimo početne materijale pri stvaranju novog svijeta. A to su tisuće i tisuće blokova. Također, koristimo ih i za manje stvari, npr. kad želimo da se Alex pomiče naprijed i natrag. Petlje su vrlo moćan dio programiranja."
+      5:
+        text: "Dolazi noć, i u slijedećim nivoima morat ćemo sagraditi kuću da budemo na sigurnom. Koristit ćemo petlje za ovo."
+      6:
+        text: "Za izgradnju kuće možemo reći Alex da ide naprijed i postavi daske 4 puta ili da ide naprijed i uzme tu naredbu i da ju uz pomoć \"Ponovi\"\nbloka izvrši više puta. Sad ćemo kliknuti na \"Ponovi\" blok i reći joj koliko puta da izvrši ove radnje. A sad izgradimo kuću prije nego padne noć. Zabavite se!"
+    mc_if_statements:
+      1:
+        text: "Sad ćemo učiti o uvjetnim naredbama. Uvjetne naredbe su osnovni dio učenja programiranja. One pomažu računalu da donosi odluke."
+      2:
+        text: "Sva računala ih koriste, uključujući i moj telefon. Npr. kad otključam telefon, on izvrši neke naredbe poput provjere zaporke koju sam ukucala, te ga otključa. Ako je zaporka netočna, telefon prikaže poruku o grešci."
+      3:
+        text: "Možete korisititi uvjetne naredbe u kodu da Steve i Alex reagiraju na ono što vide. Npr. ako je stijena ispred njih, mogu se okrenuti lijevo. Ili desno ako naiđu na stablo."
+      4:
+        text: "U ovom slučaju, ne želimo da upadnu u lavu. Ovo je lako napraviti za lavu, jer je možemo vidjeti. No što ako je lava skrivena ispod stijene?"
+      5:
+        text: "Nakon što iskopamo stijenu, moramo provjeriti da li je lava ispred, prije nego krenemo dalje naprijed. Ako je tu lava, moramo pomaknuti stijenu ispred našeg lika prije nego krenemo dalje. Tako možemo sigurno ići naprijed."
+    mc_congrats_share:
+      1:
+        text: "Čestitamo! Naučili ste onovne razvojne blokove u računalnoj znanosti."
+      2:
+        text: "Sada možeš koristiti ove blokove za izgradu vlastitog programa. Više nema uputa i zagonetki za rješavanje. Možeš napraviti sve god želiš. Sam(a) odaberi."
+      3:
+      4:
+        text: "Kad završiš svoj rad, odaberi \"dijeli\" (share) da dohvatiš poveznicu (link) koju možeš podijeliti sa svojim prijateljima. Zabavi se!"
+    mc_congrats_no_share:
+      1:
+        text: "Čestitamo! Naučili ste onovne razvojne blokove u računalnoj znanosti."
+      2:
+        text: "Sada možeš koristiti ove blokove za izgradu vlastitog programa. Više nema uputa i zagonetki za rješavanje. Možeš napraviti sve god želiš. Sam(a) odaberi."
+      3:
+      4:
+        text: "Sad možeš napraviti što god želiš. Zabavi se!"
+    gumball_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+        text: "Bijeli prostor je radna površina i to je mjesto u kojem ćemo razvijati naš program."
+      7:
+      8:
+      9:
+    iceage_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+        text: "Bijeli prostor je radna površina i to je mjesto u kojem ćemo razvijati naš program."
+      7:
+      8:
+      9:

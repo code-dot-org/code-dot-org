@@ -1,0 +1,29 @@
+---
+mi:
+  data:
+    function_names:
+      x: x
+      draw a circle: tāngia he porohita
+      draw a hexagon: tāngia he tapaono
+      draw a flower: tāngia he putiputi
+      draw a square: tāngia he tapawhā
+      draw a snowflake: tāngia he tarahīhuka
+      draw a tree: tāngia he rākau
+      draw a triangle: tāngia he tapatoru
+      draw a house: tāngia he whare
+      draw a star: tāngia he whetū
+      do something: mahia atu
+      jump: peke
+      set score: tautuhi whiwhinga
+      get nectar: tiki waireka
+      test: whakamātautau
+      diamond: taimana
+      move: whakaneke
+      move right: neke whakatematau
+      move up: neke ki runga
+      move down: neke ki raro
+      move left: neke whakatemauī
+      collect: kohia
+      turn left: huri whakatemauī
+      move forward: neke ki mua
+      turn right: huri whakatematau

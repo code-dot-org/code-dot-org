@@ -1,0 +1,51 @@
+---
+bg:
+  data:
+    function_names:
+      x: x
+      details: детайли
+      draw eyebrow: начертайте вежди
+      draw pupil: начертайте ученик
+      draw a circle: чертае кръг
+      draw a car: начертайте кола
+      draw square: начертайте квадрат
+      draw right leg: начертайте десния крак
+      draw head: начертайте глава
+      draw O: начертайте О
+      draw D: начертайте D
+      draw E: начертайте E
+      draw a hexagon: чертае шестоъгълник
+      draw a flower: чертае цвете
+      draw a square: чертае квадрат
+      draw a snowflake: рисува снежинка
+      draw 3 hexagons: начертайте 3 шестоъгълници
+      draw 4 hexagons: начертайте 4 шестоъгълници
+      get 2 nectar: вземи 2 пъти нектар
+      collect purple nectar: събери нектар от лилаво цвете
+      get 5: получи 5
+      move and get nectar: придвижи се и събери нектар
+      move and get 4: движи се и вземи 4
+      get 7 nectar make 7 honey: вземи 7 пъти нектар направи 7 пъти мед
+      get 7 make 7: вземи 7 направи 7
+      get 7: вземи 7
+      move and get 3: премести се и вземи 3
+      draw a tree: рисува дърво
+      draw triangle: начертайте триъгълник
+      draw a triangle: чертае триъгълник
+      draw a house: рисува къща
+      draw a star: рисува звезда
+      do something: изпълнява нещо
+      jump: скок
+      set score: задава резултат
+      get nectar: вземи нектар
+      test: тест
+      diamond: диамант
+      move: Премести
+      move right: Премести надясно
+      move up: Премести нагоре
+      move down: Премести надолу
+      move left: премести наляво
+      collect: събери
+      turn left: завий наляво
+      move forward: върви напред
+      turn right: завий надясно

@@ -1,0 +1,685 @@
+pl:
+  slides:
+    maze_intro:
+      1:
+        image: 'uwagi/hoc1_1.jpg'
+        text: "Witaj podczas swojej pierwszej Godziny Kodowania! Zanurkuj w swoją pierwszą przygodę z programowaniem."
+      2:
+        image: 'uwagi/hoc1_2.jpg'
+        text: "Będziemy używać Blockly, wizualnego języka programowania, który umożliwia pisanie kodu za pomocą przeciągania i upuszczania bloków."
+      3:
+        image: 'uwagi/hoc1_3.jpg'
+        text: "Większość kodów jest pisana, ale Blockly jest wizualny. Każdy blok odpowiada rzeczywistej linii kodu."
+      4:
+        image: 'uwagi/hoc1_4.jpg'
+        text: "Nauczycie się podstaw informatyki, pojęć, które są używane w wielu sytuacjach, od tworzenia aplikacji komputerowych po kierowanie pojazdem na Marsie."
+      5:
+        image: 'uwagi/hoc1_5.jpg'
+        text: "Program jest zestawem poleceń, które ma wykonać komputer."
+      6:
+        image: 'uwagi/hoc1_6.jpg'
+        text: "Twój pierwszy program ma spowodować, że Angry Bird trafi w labiryncie na Zieloną Świnkę."
+      7:
+        image: 'uwagi/hoc1_7.jpg'
+        text: "Po lewej stronie znajduje się labirynt, w którym ma być uruchomiony Twój program. Polecenia dla każdej łamigłówki znajdują się obok labiryntu."
+      8:
+        image: 'uwagi/hoc1_8.jpg'
+        text: "Przybornik pośrodku ekranu zawiera polecenia dla Angry Bird. Możesz ich użyć do zbudowania swojego programu."
+      9:
+        image: 'uwagi/hoc1_9.jpg'
+        text: "Po prawej stronie znajduje się Twój obszar roboczy, do którego możesz przeciągać bloki z przybornika, by budować swój program. Aby usunąć blok z programu, przeciągnij go do kosza w rogu po prawej stronie."
+      10:
+        image: 'uwagi/hoc1_10.jpg'
+        text: "Każdy blok jest instrukcją. Jeśli przeciągniesz blok \"idź do przodu\" do obszaru roboczego i naciśniesz przycisk \"Uruchom\", to ptak przesunie się o jedno pole w labiryncie."
+      11:
+        image: 'uwagi/hoc1_11.jpg'
+        text: "Aby wykonać więcej niż jeden ruch, możesz przeciągnąć wiele bloków do swojego obszaru roboczego i połączyć je ze sobą. Angry Bird wykona wszystkie polecenia od góry do dołu."
+      12:
+        image: 'uwagi/hoc1_12.jpg'
+        text: "Jeśli uruchomiłeś program i chcesz go poprawić i uruchomić ponownie, to naciśnij przycisk \"Zresetuj\"."
+      13:
+        image: 'uwagi/hoc1_13.jpg'
+        text: "Dopadnijmy te świnie!"
+    artist_intro:
+      1:
+        image: 'uwagi/stage5_1.jpg'
+        text: "Cześć, jestem JR! Każdy zespół wyścigów samochodowych potrzebuje informatyków, aby wygrać. Analizują oni dane z samochodu i sprawiają, że jedzie szybciej."
+      2:
+        image: 'uwagi/stage5_2.jpg'
+        text: "W tych łamigłówkach będziesz artystą, który rysuje za sobą linię, wszędzie tam, gdzie idzie."
+      3:
+        image: 'uwagi/stage5_3.jpg'
+        text: "Ten blok mówi \"idź do przodu przez 100 pikseli\". Piksele to tak naprawdę małe kropki na Twoim ekranie."
+      4:
+        image: 'notes/stage5_4.jpg'
+        text: "Ten blok mówi, \"skręć w prawo o 90 stopni\". Spowoduje to obrót Twojej postaci o tyle samo, jak w bloku \"skręć\" w łamigłówkach na labiryncie."
+      5:
+        image: 'notes/stage5_5.jpg'
+        text: "Kliknij na strzałkę w jednym z tych bloków, aby zmieć, jak daleko artysta ma iść do przodu lub skręcić. Pobaw się, by zapoznać się z tymi nowymi blokami."
+    farmer_intro:
+      1:
+        image: 'notes/stage9_1.jpg'
+        text: "Witam, jestem Paola! W tych łamigłówkach Ty jesteś rolnikiem, który ma otrzymać pole całkowicie płaskie, aby rozpocząć sadzenie roślin."
+      2:
+        image: 'uwagi/stage9_2.jpg'
+        text: "Musisz pomóc jej usunąć wszystkie sterty śmieci i wypełnić wszystkie otwory."
+      3:
+        image: 'uwagi/stage9_3.jpg'
+        text: "Nowe bloki: usuń 1 szuflę śmieci ze sterty i wypełnij otwór 1 szuflą śmieci."
+      4:
+        image: 'uwagi/stage9_4.jpg'
+        text: "Sterty i otwory są różnych rozmiarów, musisz więc powiedzieć rolnikowi, ile szufli ma użyć."
+    flappy_intro:
+      1:
+        text: "Witam jestem Katie! Jedną z najbardziej ekscytujących rzeczy związanych z informatyką jest to, że program komputerowy może być interaktywny."
+      2:
+        text: "Za każdym razem, kiedy ktoś klika, stuka lub pisze na komputerze czy telefonie, generuje tym samym ZDARZENIE i jakaś część kodu decyduje, co należy zrobić, gdy występuje ZDARZENIE."
+      3:
+        text: "Na przykład, możesz stworzyć PROCEDURĘ OBSŁUGI ZDARZENIA, która mówi \"po kliknięciu myszy odtwórz dźwięk\" "
+      4:
+        text: "Czy słyszałeś kiedykolwiek o grze FlappyBird? Używając procedur obsługi zdarzeń nauczymy się, jak utworzyć własną wersję FlappyBird!"
+      5:
+        text: "Kod, który będziemy pisać, polega na przeciąganiu i upuszczaniu bloków, które reprezentują polecenia dla komputera. Każdy z tych bloków jest reprezentowany przez prawdziwy kod."
+      6:
+        text: "Jeśli przyjrzysz się obszarowi roboczemu, znajdziesz tam przygotowane dla Ciebie zielone bloki - służą one do obsługi zdarzeń "
+      7:
+        text: "Jeśli chcesz, żeby ten ptak FRUWAŁ po KLIKNIĘCIU myszką, możesz to zrobić dołączając blok \"pofruń\" do obsługi odpowiedniego zdarzenia, i teraz w Twojej grze, jeśli tylko klikniesz, ptak będzie fruwał."
+      8:
+        text: "W każdej łamigłówce tego rodzaju, będziemy wprowadzać nowe rodzaje zdarzeń w postaci zielonych bloków w obszarze roboczym. Sami będziecie decydować, które bloki dodać odpowiednio do tych zdarzeń."
+      9:
+        text: "Gdy widzisz strzałkę do dołu, jak ta, to oznacza, że możesz zmienić ustawienia - takie jak dźwięk odtwarzany, gdy Flappy spadnie na ziemię."
+      10:
+        text: "W końcowej łamigłówce będziecie mogli utworzyć własną grę i podzielić się nią ze swoimi przyjaciółmi. Bawcie się dobrze!"
+    loop_times:
+      1:
+        image: 'uwagi/hoc2_1.jpg'
+        text: "Cześć, jestem Mark! Zaczynamy naukę o pętlach. Za pomocą pętli można powiedzieć komputerowi powtarzaj jakikolwiek zestaw działań w kółko, tysiące lub nawet miliardy razy."
+      2:
+        image: 'uwagi/hoc2_2.jpg'
+        text: "W tej łamigłówce chcemy, aby ptak przesunął się 5 pól do przodu, by dosięgnąć świnkę."
+      3:
+        image: 'uwagi/hoc2_3.jpg'
+        text: "Możemy użyć nowego bloku powtórz, by sobie pomóc."
+      4:
+        image: 'uwagi/hoc2_4.jpg'
+        text: "Zamiast 5 razy przeciągać blok \"idź do przodu\"..."
+      5:
+        image: 'uwagi/hoc2_5.jpg'
+        text: "Możemy umieścić blok \"idź do przodu\" wewnątrz bloku \"powtórz\" i wpisać w nim liczbę powtórzeń, aby określić, ile razy ma powtórzyć."
+      6:
+        image: 'uwagi/hoc2_6.jpg'
+        text: "Ważna uwaga: Możesz umieścić więcej niż jedno polecenie w bloku powtórz."
+      7:
+        image: 'uwagi/hoc2_7.jpg'
+        text: "Miłego korzystania z Twojego nowego bloku powtórz!"
+    loop_until:
+      1:
+        image: 'uwagi/hoc3_1.jpg'
+        text: "Hi, jestem Chris. Przed dołączeniem do Miami Heat, wstąpiłem na Georgia Tech, by studiować informatykę. Spróbujmy użyć naszego nowego bloku powtórz aż do."
+      2:
+        image: 'uwagi/hoc3_2.jpg'
+        text: "Co zrobić, jeśli nie wiedzieliśmy, jak daleko ten ptak miał przenieść się, by dosięgnąć świnkę?"
+      3:
+        image: 'uwagi/hoc3_3.jpg'
+        text: "Jeśli umieścimy blok \"idź do przodu\" wewnątrz bloku \"powtarzaj aż\", to wtedy ptak będzie poruszał się naprzód, aż (until) dotrze do świni (lub zderzy się ze ścianą)."
+      4:
+        image: 'uwagi/hoc3_4.jpg'
+        text: 'I to jest ważne: tak jak wcześniej, możemy umieścić wiele bloków wewnątrz bloku powtórz aż do, i wszystkie będą powtarzane.'
+    if:
+      1:
+        image: 'uwagi/hoc4_1.jpg'
+        text: "Witam, jestem Bill! Nauczmy się nowego podstawowego pojęcia: instrukcji jeśli. To dzięki nim komputery podejmują decyzje."
+      2:
+        image: 'uwagi/hoc4_2.jpg'
+        text: "Bloku jeśli używasz codziennie. Przed wyjściem z domu każdego poranka, mówisz jeśli pada na zewnątrz, to muszę założyć kurtkę."
+      3:
+        image: 'uwagi/hoc4_3.jpg'
+        text: "Możemy powiedzieć, zombie, by sprawdził, czy istnieje droga w lewo, i jeśli znajdzie drogę w lewo, możemy pozwolić mu skręcić w tę stronę."
+      4:
+        image: 'uwagi/hoc4_4.jpg'
+        text: "Aby napisać kod dla tego, przeciągnijmy nasz blok \"jeśli\" i umieśćmy w nim blok \"skręć w lewo\"."
+      5:
+        image: 'uwagi/hoc4_5.jpg'
+        text: "Teraz, jeśli umieścimy blok \"idź do przodu\" nad nim i blokiem \"powtórz\" obejmiemy wszystko, wtedy za każdym razem, gdy zombie poruszy się, będzie sprawdzał, czy istnieje droga w lewo i ewentualnie skręcał. Polecenie powtórz jest ważne, by sprawdzać za każdym razem, czy można skręcić."
+      6:
+        image: 'uwagi/hoc4_6.jpg'
+        text: "Instrukcje jeśli są bardzo ważne w informatyce. Jednym z pierwszych programów, jakie napisałem, była gra w kółko i krzyżyk, i była w nim instrukcja jeśli, której zadaniem było: jeśli przeciwnik ma zaraz wygrać, to zablokuj pole, które dałoby mu wygraną."
+      7:
+        image: 'uwagi/hoc4_7.jpg'
+        text: "Miłej zabawy przy korzystaniu z bloku jeśli!"
+    if_else:
+      1:
+        image: 'uwagi/hoc5_1.jpg'
+        text: "Cześć, mam na imię Saloni. Informatyka służy mi do rozwiązywania problemów w dziedzinie zdrowia i medycyny. Nauczymy się o bloku \"jeśli-w przeciwnym razie\". Ten blok wygląda jak blok \"jeśli\", ale ma dodatkową część \"w przeciwnym razie\" na końcu."
+      2:
+        image: 'uwagi/hoc5_2.jpg'
+        text: "Jeśli umieszczę blok \"idź do przodu\" w miejscu, obok \"jeśli\", i blok \"skręć w lewo\" w miejscu obok \"w przeciwnym razie\", to zombie będzie miał do wyboru 2 opcje. Jeśli jest droga do przodu, zombie ruszy do przodu, a jeśli nie ma takiej drogi, to zombie skręci w lewo."
+      3:
+        image: 'uwagi/hoc5_3.jpg'
+        text: "Podobnie jak blok \"jeśli\", bloki \"jeśli-w przeciwnym razie\" możemy umieszczać wewnątrz bloków \"powtórz\" tak, że zombie będzie się poruszał i blok \"Jeśli-w przeciwnym razie\" będzie sprawdzał, czy nie można gdzieś skręcić."
+      4:
+        image: 'uwagi/hoc5_4.jpg'
+        text: "Teraz, zabierz te potwory (zombies), gdzie ich miejsce!"
+    if_else_scrat:
+      1:
+        text: "Instrukcja \"jeśli-w przeciwnym razie\" odpowiada podjęciu decyzji między dwiema rzeczami. Zobaczmy, jak możemy użyć tej instrukcji z naszą znajomą wiewiórką Scrat."
+      2:
+        text: "Ten blok wygląda tak samo jak blok \"jeśli\", ale zawiera dodatkową część na dole, która mówi \"w przeciwnym razie\". Jeśli umieszczę blok \"idź do przodu\", w miejscu odpowiadającym \"jeśli\" i blok \"skręć w lewo\" w miejscu obok \"w przeciwnym razie\", to wiewiórka Scrat przejdzie do przodu, jeśli jest droga przed nią, lub skręci w lewo jeśli nie ma takiej drogi."
+      3:
+        text: "Podejmuje decyzję i wykonuje jedną z dwóch czynności na podstawie tej decyzji. Podobnie jak bloki \"Jeśli\", można umieszczać bloki \"jeśli-w przeciwnym razie\" wewnątrz bloków \"powtórz\"."
+      4:
+        text: "Teraz pomóżmy wiewiórce Scrat dosięgnąć żołędzia!"
+    function:
+      1:
+        image: 'uwagi/stage13_1.jpg'
+        text: "Witam, jestem Brina, inżynier w Instagram. Funkcja składa się z pewnych linii kodu, które chcesz używać wiele razy, zamiast więc pisać ten kod za każdym razem, możesz użyć jednego bloku."
+      2:
+        image: 'uwagi/stage13_2.jpg'
+        text: "Dowiemy się, jak definiować funkcję. Definicja funkcji ma gwiazdkę w rogu. Nazwa funkcji jest zapisana w pierwszej linijce."
+      3:
+        image: 'uwagi/stage13_3.jpg'
+        text: "Bloki, które znajdują się wewnątrz definicji określają, co robi funkcja. Na przykład, to jest definicja funkcji o nazwie wypełnij 5 i zawiera bloki powtórz i wypełnij."
+      4:
+        image: 'uwagi/stage13_4.jpg'
+        text: "Definicja funkcji znajduje się na obszarze roboczym, ale nasz rolnik nie może jej uruchomić, aż nie wyciągnie bloku wypełnij 5 z kategorii Funkcje."
+      5:
+        image: 'uwagi/stage13_5.jpg'
+        text: "Umieśćmy zabawy (ang. fun) z powrotem w kategorii FUNkcje!\" "
+    loop_while:
+      1:
+        image: 'uwagi/stage9_5.jpg'
+        text: "Witam, jestem Makinde! Poznajmy blok dopóki "
+      2:
+        image: 'uwagi/stage9_6.jpg'
+        text: "Blok dopóki będzie wykonywał to, co w nim umieścisz, TAK DŁUGO, JAK DŁUGO warunek znajdujący się na górze ma wartość PRAWDA (TRUE)."
+      3:
+        image: 'uwagi/stage9_7.jpg'
+        text: "Na przykład, jeśli rolnik stoi na stercie, to tak długo będzie usuwał 1 szufelkę śmieci, dopóki pod nim znajduje się sterta śmieci."
+    loop_for:
+      1:
+        image: 'uwagi/stage11_1.jpg'
+        text: "Witam, jestem Trina, i pracuję dla Pixar. Pracowałam przy kilku filmach, w tym przy Shreku."
+      2:
+        image: 'uwagi/stage11_2.jpg'
+        text: "To jest nasza nowa pętla \"licz z\". Wykonuje wielokrotnie działania i możesz za każdym razem nieco zmienić działania."
+      3:
+        image: 'uwagi/stage11_3.jpg'
+        text: "W tym przykładzie, pętla \"licz z\" oznacza \"liczy z licznikiem od 50 do 90 co 10\", a w jej wnętrzu mamy blok rysujący kwadrat. Przeciągnij blok \"counter\" (licznik) z kategorii \"Variables\" (Zmienne) na miejsce długości."
+      4:
+        image: 'uwagi/stage11_4.jpg'
+        text: "Oznacza to, że nasz artysta narysuje kwadrat, który ma bok długości 50 pikseli, następnie doda 10 i narysuje kwadrat o boku 60 pikseli. Następnie będzie dodawał 10 i rysował kwadraty, aż osiągnie 90. Otrzymamy w ten sposób kwadraty o bokach 50, 60, 70, 80 i 90."
+    parameters:
+      1:
+        image: 'uwagi/stage15_1.jpg'
+        text: "Witam, jestem Janete i jestem inżynierem w Zynga."
+      2:
+        image: 'uwagi/stage15_2.jpg'
+        text: "Co zrobić, jeśli chcemy narysować kilka trójkąty o różnych długościach boków?"
+      3:
+        image: 'uwagi/stage15_3.jpg'
+        text: "Moglibyśmy napisać poszczególne kody lub możemy użyć funkcji z parametrami."
+      4:
+        image: 'uwagi/stage15_4.jpg'
+        text: "Aby to zrobić, kliknij przycisk blue star (niebieska gwiazda) w definicji funkcji rysuj trójkąt. Następnie przeciągnij nazwa wejścia do bloku wejście."
+      5:
+        image: 'uwagi/stage15_5.jpg'
+        text: "Następnie, jeśli wpiszesz długość w miejscu, gdzie stoi x i naciśniesz klawisz Enter, to utworzysz wejście długość w Twojej funkcji."
+      6:
+        image: 'uwagi/stage15_6.jpg'
+        text: "Następnie kliknij na gwiazdce. Teraz kliknij na kategorii \"Variables\" (Zmienne) i przeciągnij blok \"length\" (długość) do bloku \"idź do przodu\" w definicji Twojej funkcji. I usuń przez przeciągnięcie stary blok z liczbą."
+      7:
+        image: 'uwagi/stage15_7.jpg'
+        text: "Aby użyć funkcji z parametrami, kliknij na kategorię Funkcje i wyciągnij funkcję narysuj trójkąt o długości."
+      8:
+        image: 'uwagi/stage15_8.jpg'
+        text: "Teraz można użyć bloku matematyki do wprowadzenia różnych liczb, by rysować trójkąty o różnych rozmiarach."
+    hoc_wrapup:
+      1:
+        image: 'uwagi/hoc6_1.jpg'
+        text: "Gratulacje! Z ostatnimi łamigłówkami, które rozwiązałeś, napisałeś kod, który może pomóc jakiemukolwiek robotowi, jak znaleźć drogę przez labirynt bez rozgałęzień lub przez tunel o dowolnej długości, bez względu na to, czy jest to zombie, ptak, pojazd na marsie lub nawet samojezdny samochód."
+      2:
+        image: 'uwagi/hoc6_2.jpg'
+        text: "Podstawowe pojęcia, które wykorzystałeś, są sednem każdego programu lub aplikacji, które kiedykolwiek będziesz używał. Dowiedzieliśmy się o powtarzaniu w pętli, instrukcji powtórz aż do, instrukcji jeśli i instrukcji jeśli-w przeciwnym razie."
+      3:
+        image: 'uwagi/hoc6_3.jpg'
+        text: "Jeśli podoba Ci się Twoja pierwsza godzina kodowania, odwiedź code.org, aby kontynuować swoją edukację informatyczną! Po zakończeniu naszego 20-godzinnego kursu będziesz mieć opanowane podstawy programowania i będziesz mógł rozpocząć naukę, jak pisać aplikacje dla telefonów komórkowych, instrukcje dla robotów, czy nawet gry."
+      4:
+        image: 'uwagi/hoc6_4.jpg'
+        text: "Technologia zmienia wszystko, co robimy, i nie ma znaczenia czy jesteś młody czy starszy: programowanie to zabawa, jest kreatywne i każdy może się nauczyć !"
+    20_wrapup:
+      1:
+        image: 'Notes/Bird.png'
+        text: "Pokaż uwagi - wkrótce dostępne!"
+    frozen_intro:
+      1:
+        text: "Witam, nazywam się Lyndsey. Projektuję i tworzę własne aplikacje. Użyjmy kodu, aby przyłączyć się do Anny i Elsy, które odkrywają magię i piękno lodu."
+      2:
+        text: "Będziesz tworzył płatki śniegu i wzory jeżdżąc na łyżwach, by wykreować zimową krainę, którą będziesz mógł udostępnić swoim znajomym."
+      3:
+        text: "W ciągu najbliższej godziny poznasz podstawy kodowania. Tradycyjne programowanie posługuje się tekstem, ale my będziemy używać Blockly, wykorzystujący wizualne bloki, które można przeciągać i upuszczać, by tworzyć programy. Nawet studenci na uniwersytecie poznają w ten sposób podstawy programowania. Faktycznie to jest także kodowanie."
+      4:
+        text: "Program jest zestawem instrukcji (poleceń), które informują komputer, co ma robić. Utwórz kod lub program, który pomoże Elsie narysować prostą linię. Będziemy korzystać z tego później przy tworzeniu bardziej złożonych deseni."
+      5:
+        text: "Ekran jest podzielony na trzy główne części. Po lewej stronie jest powierzchnia lodu, gdzie będziesz uruchomiał swój program. Poniżej są umieszczone instrukcje dla danego poziomu."
+      6:
+        text: "Środkowy obszar zajmuje przybornik i każdy z bloków w tym obszarze odpowiada działaniu, które może wykonać Elsa i Anna."
+      7:
+        text: "Po prawej stronie znajduje się obszar roboczy, gdzie będziemy budować nasz program. Do poruszania się po powierzchni lodu będziemy używać bloku \"idź do przodu\"."
+      8:
+        text: "Tutaj, blok \"idź do przodu\" oznacza \"idź do przodu 100 pikseli\". Co się dzieje, kiedy naciśniemy \"Uruchom\"?. Elsa przesunie się do przodu o określoną odległość na ekranie, w rzeczywistości o 100 pikseli! Piksele to niewielkie kwadraciki na ekranie Twojego komputera."
+      9:
+        text: "Innym blokiem, jaki mamy w tej łamigłówce, jest \"skręć w prawo o 90 stopni\". Użycie tego bloku powoduje, że Elsa obraca się o pewien kąt. Możesz poeksperymentować z obrotami Elsy. Kąt jest mierzony od ścieżki przed Elsą. To jest obrót o 90 stopni, a to jest obrót o 120 stopni."
+      10:
+        text: "Pamiętaj, możesz zmienić liczbę pikseli i stopni klikając strzałki obok nich."
+    frozen_loops:
+      1:
+        text: "Witam jestem Paola! Komputery są naprawdę dobre w powtarzaniu czynności. Można liczyć do 10, 20 lub 100. Ale komputer może liczyć do miliarda lub biliona. Nie będzie się nudził, a zajmie mu to tylko kilka sekund. Cokolwiek robiąc, licząc lub rysując, komputery mogą powtarzać działania setki lub nawet miliardy razy."
+      2:
+        text: "W programowaniu, nazywamy to pętlą. Pętla służy do powtarzania kodu w kółko. W następnej łamigłówce, Twoim zadaniem jest pomóc Annie utworzyć kwadrat z użyciem bloku \"powtórz\"."
+      3:
+        text: "Jakikolwiek blok kodu umieszczony wewnątrz bloku \"powtórz\" będzie powtarzany tyle razy, ile zechcesz."
+      4:
+        text: "Aby narysować kwadrat, możecie 4 razy użyć bloków \"idź do przodu\" i \"skręcić w prawo\". Ale łatwiejszy sposób polega na powtórzeniu wykonania tych dwóch bloków 4 razy. Aby to zrobić, należy umieścić te dwa bloki wewnątrz bloku \"powtórz\"."
+      5:
+        text: "Pamiętajcie, w bloku \"powtórz\" można umieścić dowolną liczbę, i co jest wewnątrz bloku, zostanie powtórzone tyle razy."
+    frozen_functions:
+      1:
+        text: "Witam, jestem Chris Bosh. Jestem zawodowym koszykarzem, kodowałem, gdy byłem w koledżu."
+      2:
+        text: "Jedną z najważniejszych idei w informatyce jest definiowanie nowych poleceń dla komputera. Większość języków programowania zawiera około 100 słów i poleceń. I naprawdę, sztuką i magią jest definiowanie własnych nowych słów i poleceń złożonych z tych podstawowych bloków."
+      3:
+        text: "Jeśli już nauczyliście komputer pewnego działania przy użyciu sekwencji poleceń, to możecie nadać temu działaniu swoją nazwę tak, aby później łatwiej było je wykonać ponownie. W ten sposób definiujemy funkcję, jako własne polecenie z nazwą."
+      4:
+        text: "Witam, jestem Jess. Podczas programowania z użyciem bloków, będziecie używać funkcji, kiedy jakiś zestaw akcji chcielibyście wykonywać wiele razy. Na przykład, napisaliście kod do tworzenia kwadratów."
+      5:
+        text: "Możecie to zdefiniować w postaci funkcji o nazwie \"create a square\" (utwórz/narysuj kwadrat). "
+      6:
+        text: "Teraz macie nowy blok, który możecie użyć do tworzenia wielu kwadratów."
+      7:
+        text: "Wiele prostych kształtów może służyć do tworzenia bardziej skomplikowanych wzorów. W następnej łamigłówce, kod, który napisaliście do tworzenia okręgu, jest dostępny jako nowa funkcja, która może tworzyć okręgi o różnych rozmiarach. Czy moglibyście pomóc Elsie użyć tej funkcji do tworzenia skomplikowanych i pięknych wzorów na śniegu?"
+    playlab_intro:
+      1:
+        text: "Będziemy tworzyć gry przy użyciu Play Lab. Dobre gry są oparta na opowieści a w każdej opowieści występują aktorzy/postacie. Dowiemy się, jak spowodować, by nasze postacie, jak czarownice, obcy i zwierzęta mówiły, poruszały się i oddziaływały między sobą. Do końca tego samouczka zbudujecie grę i podzielicie się nią ze swoimi znajomymi."
+      2:
+        text: "Ekran jest podzielony na 3 części. Po lewej stronie jest miejsce, gdzie wykonywany jest program. Instrukcja dla danej łamigłówki znajduje się poniżej."
+      3:
+        text: "Środkowy obszar zajmuje przybornik, i każdy z bloków w przyborniku jest fragmentem kodu. Obszar po prawej stronie to obszar roboczy, gdzie będziecie budować programy."
+      4:
+        text: "Aby rozpocząć budowanie programu, należy podłączyć wybrane bloki do pomarańczowego bloku \"po uruchomieniu\". Można połączyć ze sobą wiele bloków przeciągając je aż pojawi się żółta linia - wtedy bloki połączą się ze sobą."
+      5:
+        text: "W tej pierwszej łamigłówce postacią jest pingwin i spowodujemy, by mówił \"Hello!\" przez przeciągnięcie bloku \"powiedz\", podłączeniem go pod blok \"po uruchomieniu\" i wpisaniu \"Hello!\". Możemy również spowodować, że pingwin porusza się za pomocą bloków \"idź\". Po skompletowaniu bloków, naciśnij przycisk \"Uruchom\", aby zobaczyć program w działaniu."
+      6:
+        text: "Zacznijcie i na końcu będziecie umieć utworzyć własną grę z różnego rodzaju postaciami, które mogą wchodzić w interakcje, stają się szczęśliwe lub smutne, zdobywają punkty, rzucają ognistymi kulami, a nawet znikają. To wszystko zależy od Ciebie i gry, jaką chcesz stworzyć."
+    playlab_events:
+      1:
+        text: "Teraz mamy zamiar dowiedzieć się o czymś, co każdy programista gier używa na co dzień. Są to zdarzenia. Zdarzenie informuje program, by nasłuchiwał, czy coś się dzieje, a gdy się to dzieje, to program wykonuje odpowiednią akcję."
+      2:
+        text: "Przykładowe zdarzenia oczekują na: kliknięcie myszy, naciśnięcie przycisku strzałki lub dotknięcie ekranu."
+      3:
+        text: "Tutaj mamy zamiar spowodować, że przybysz z kosmosu pozdrawia Ziemian, gdy gracz klika na nim. Użyjemy bloku \"po kliknięciu\" i podłączymy do niego blok \"powiedz\". Gdy gracz kliknie na przybyszu z kosmosu, to wykonane zostaną wszystkie bloki podłączone do bloku \"po kliknięciu\". Co mówi Twój obcy?"
+      4:
+        text: "Istnieją również bloki \"kiedy strzałka\". Jeśli podłączysz bloki \"idź\" do tych bloków, to możesz poruszać swoimi postaciami do góry, do dołu, w lewo lub w prawo. Krok po kroku Twoja gra staje się coraz bardziej interaktywna."
+    playlab_repeat_forever:
+      1:
+        text: "Jest to blok \"powtarzaj w nieskończoność\". Cokolwiek znajdzie się w tym bloku będzie cały czas powtarzane."
+      2:
+        text: "Jeśli chcemy, aby postać powtarzała jakąś akcję bez interwencji gracza, to bloki tej akcji należy umieścić wewnątrz bloku \"powtarzaj w nieskończoność\"."
+      3:
+        text: "W tej następnej łamigłówce naszym celem jest pomóc czarownicy w patrolowaniu granic królestwa, z lewej i prawej. Nauczyliśmy się już powtarzać polecenia, pozwoli to nam zaoszczędzić mnóstwo czasu później, kiedy będziemy tworzyć własną grę."
+    C1_artist_intro:
+      1:
+        text: "To bloki do rysowania. Użyj odpowiednich aby przemieścić artystę w miejsca, w których musi wypełnić szare linie."
+      2:
+        text: "To bloki skoku. Przy ich użyciu artysta przemieszcza się, ale nie rysuje. Wykorzystaj je, aby przeskoczyć do kolejnej szarej linii."
+    C1_bee_level_intro:
+      1:
+        text: "Czy pszczoły nie są fajne? W następnym zestawie puzzli Twoim celem będzie pomoc pszczole w dotarciu do kwiatków, zebraniu z nich nektaru i powrocie do ula w celu zrobienia miodu. W tym ćwiczeniu będziesz potrzebować bloków \"pobierz nektar\" i \"produkuj miód\"."
+      2:
+        text: "Każdy kwiatek zawiera inną ilość nektaru: 1, 2, 3 lub więcej. Informacja o jego ilości przedstawiona jest w postaci liczby w prawym dolnym narożniku czerwonych kwiatków. Upewnij się, że zebrałeś cały nektar z kwiatka zanim ruszysz dalej. Każdy ul może również pomieścić ograniczoną ilość miodu: 1, 2, 3 lub więcej. Pamiętaj aby produkować tyle miodu ile pomieści ul."
+      3:
+        text: "Jeżeli uda Ci się zebrać cały nektar i wyprodukować miód przejdziesz do kolejnego poziomu. W innym przypadku musisz spróbować jeszcze raz. Pobaw się chwilę i zobacz jak to jest być \"pszczelim\" programistą!"
+    C1_bee_loops:
+      1:
+        text: "Pętla to powtarzanie działań. Czas na przegląd ula. Wyciągam ramkę i odkładam ją z powrotem. Powtarzam tą samą czynność wiele razy. To właśnie zapętlenie, wykonywanie tych samych czynności wielokrotnie."
+      2:
+        text: "W tym poziomie chcemy aby pszczoła zebrała trzy nektary z kwiatków. Zamiast trzykrotnego użycia \"weź\" skorzystasz z bloku \"powtórz\" aby zebrać nektar trzy razy. Kliknij \"Uruchom i sprawdź czy dobrze to zrobiłeś. Nieźle!"
+    C1_bigevent_unplugged:
+      1:
+        text: "Ta lekcja nazywa się Wielkie Zdarzenie. Dotyczy ona kontrolowania programów zmian w działaniu programu \"w locie\" z wykorzystaniem zdarzeń np. wciśnięcie przycisku czy kliknięcie myszą."
+      2:
+        text: "Na tej lekcji będziesz kontrolowany za pomocą papierowego pilota zdalnego sterowania. To jest jak gra komputerowa w świecie rzeczywistym."
+      3:
+        text: "Zdarzenie jest czynnością, która powoduje, że coś się dzieje. Jak wtedy, kiedy klikniesz przycisk myszy i ładuje się strona internetowa. To właśnie jest zdarzenie. Kiedy dotykasz ekranu tabletu, żeby przewinąć jego zawartość, to również jest to zdarzenie. Zdarzenia są świetnym sposobem, umożliwiającym użytkownikom pokierowanie programem, kiedykolwiek tego potrzebują lub chcą."
+      4:
+        text: "Zdarzają się sytuacje, na które wszyscy reagujemy. Jesteśmy głodni - zaglądamy do lodówki. Słyszymy jak listonosz umieszcza pocztę w skrzynce - idziemy ją odebrać. To są zdarzenia podobne do wciskania przycisku lub poruszania dżojstikiem. Są wydarzeniami powodującymi wykonanie akcji przez nas."
+      5:
+        text: "W grach wideo istnieje zdarzenie zwane \"Uaktualnij\", które ma miejsce 30 lub 60 razy na sekundę. Dla programisty gier jest to prawie ważniejsze od zdarzeń przycisków czy dżojstika."
+      6:
+        text: "Główne zdarzenie, które obserwujemy to ciągłe wykonanie zdarzenia \"Uaktualnij\". W momencie jego wykonania sprawdzamy dżojstik i stwierdzamy \"Czy ktoś nacisnął przycisk w tej klatce? Tak czy nie?\". Bez zdarzeń gracz nie mógłby się ruszyć, nie mógłbyś podskoczyć, nie mógłbyś kontrolować tego co się dzieje. Gra wideo nie mogłaby animować czegokolwiek."
+    C1_building_foundation:
+      1:
+        text: "W rzeźbie piaskowej dowiesz się, że błędy soą częścią programu. Ale jeśli wytrwasz, to wszystko będzie już tylko lepsze bardziej porywające dla Ciebie. Wytrwałość jest częścią tej gry. Pozostań w niej, a ją pokochasz."
+      2:
+        text: "Ta lekcja zwana jest budowaniem fundamentów. W jej trakcie będziemy pracować nad zadaniem, które z założenia jest bardzo trudne. Wymyślimy jak stworzyć strukturę wysoką przynajmniej tak jak jeden z tych kubków i wystarczająco silną, aby utrzymać ciężar książki."
+      3:
+        text: "Może się zdarzyć, że coś nam nie wyszło. Może się zdarzyć, że jesteśmy sfrustrowani i chcemy się poddać. Może być wiele takich chwil. Ale jeśli będziemy próbować, starać się uzyskać najlepszy wynik w kółko, to z pewnością uda się to nam niedługo."
+      4:
+        text: "Upór tym, na czym można się oprzeć, gdy naprawdę chcesz zrezygnować. Jeśli chcesz utworzyć coś nowego i innego, to zapewne będzie dużo przeszkód i niepowodzeń na drodze."
+      5:
+        text: "Trik z uporem to wybranie kontynuowania i uczenia się na porażkach zamiast porzucenia zadania, bo jesteście sfrustrowani. Frustracja w istocie oznacza tylko, że coś wspaniałego czeka za rogiem. Więc nie kończcie zanim do tego dotrzecie. Och!"
+    C1_getting_loopy:
+      1:
+        text: "Cześć! Nazywam się Miral Kotb i jestem twórcą Illuminate. W mojej pracy jest coś, czego możemy użyć zarówno w tańcu jak i w programowaniu lightsuits. Są to pętle! Pętla to wielokrotne powtórzenie tej samej akcji."
+      2:
+        text: "Kiedy powtarzasz coś wiele razy, na przykład ruchy do utrzymania kręcącego się hula hop, to wykonujesz ruchy w kółko. To jest pętla, To jest pętla. I to też jest pętla."
+      3:
+        text: "Dziś będziemy tańczyć. Będziemy używali pętli dla nowego tańca. Iteracje to wielokrotnie powtarzane sekwencje ruchów. Nauczymy się jak używać pętli na przykładzie tańca. Nauczysz się kilku prostych kroków i powtórzysz je znów i znów, by wypełnić układ taneczny."
+      4:
+        text: "Oto kroki, których trzeba się nauczyć. Klaśnij w dłonie. Umieść ręce za głową. Połóż dłonie na biodrach. Podnieś lewą rękę. Podnieś prawą rękę. Całkiem proste, prawda? Odkryjesz, że możesz skrócić czynności, umieszczając pewne kroki taneczne w pętli."
+      5:
+        text: "My faktycznie nie wolno używać pętli w nasz taniec. Tancerze są noszenia komputery, wszystkie w tej samej sieci. Mogę owinąć wiązkę światła przez samych tancerzy wielokrotnie. W pętli i widziałaby w iteracji gdzie ja'll powiedzieć chcesz trafić pętla tych sześciu tancerzy wielokrotnie, a następnie w pętli chcesz zwiększyć prędkość światła. I czy's wszystkie utworzone przez pętle. Pętle są ważne w computer science, ponieważ czynią nasze prace krótsze i prostsze."
+    C1_happy_maps_unplugged:
+      1:
+        text: "Ta lekcja nazywa się szczęśliwe mapy. Dzisiaj mamy zamiar pomóc naszemu futrzanemu przyjacielowi dostać sie Flurb się do jej owoców."
+      2:
+        text: "\"Spraw, aby Twój Flurb dotarł do owocu. Aby to zrobić, ustal, w którą stronę musi pójść i nakieruj go tam za pomocą strzałek. W którą stronę Flurb musi pójść, aby dotrzeć do jabłka?\"."
+      3:
+        text: "Aby się tam dostać, musisz zakreślić kierunek, w którym ma pójść."
+      4:
+        text: "Utwórz swój algorytm przyklejając strzałki obok mapy, którą próbujesz rozwiązać. Druga jest taka sama, ale jest skierowana w dół."
+      5:
+        text: "To jak programowanie na papierze. I to wszystko!"
+    C1_maze_debugging:
+      1:
+        text: "Debugowanie jest to znajdowanie  i rozwiązywanie  problemów. Istnieje wiele sposobów debugowania problemów. Jedną z najłatwiejszych jest  przejść krok po kroku, dopóki nie znajdziesz błędu. Jestem tutaj, i próbuje zrobić salto w tył na belce, ale cały czas się przewracam."
+      2:
+        text: "Szedłem przez każdą część krok po kroku i zrozumiałem, gdzie był mój błąd. Nie kładłem rąk na belce poprawnie. Więc spróbowałem inne salto w tył na belce z mojej nowej pozycji rąk i mam to. Bardzo się ucieszyłem, że zdebugowałem moje salto w tył."
+      3:
+      4:
+        text: "Naprawmy to dodając inny zachodni bloki uderz go by sprawdzić czy dobrze to zrobiłeś. Yay, masz to!"
+    C1_maze_intro_sequencing:
+      1:
+        text: "W tej układance musisz dać ptaka do świnki. Popatrz na układankę i zastanów się który kierunek należy wybrać."
+      2:
+        text: "Musisz przeciągnąć blok z obszaru roboczego. Upewnij się, że jest \"po uruchomieniu\" i kiedy stwierdzisz, że rozwiązanie jest odpowiednie, kliknij przycisk \"Uruchom\" i patrz jak ptak idzie do świnki."
+    C1_maze_loops:
+      1:
+        text: "Jeden z tych komputerów jest dobry w powtarzaniu komend. Jako osoba możesz się naprawdę zmęczyć, jeśli trzeba samemu robić te same rzeczy kilka razy. Ale komputer może robić to samo miliony, a nawet miliardy razy i się nie zmęczyć trzeba więc posiadać tę zdolność."
+      2:
+        text: "Na przykład, jeśli chciałbym każdemu na Facebooku złożyć życzenia urodzinowe wysyłając mu e-mail, napisanie tych wszystkich e-maili mogłoby zająć więcej niż wiek. Ale przy pomocy zaledwie kilku linii kodu mogę sprawić, że system wyśle e-mail z życzeniami do każdej osoby na Facebooku."
+      3:
+        text: "Aby przenieść ptaka do świni na tym poziomie... zamiast przeciągać do obszaru roboczego trzy bloki \"północ\", użyjesz bloku \"powtarzaj\". Przeciągnij blok \"powtarzaj\" do obszaru roboczego i wpisz liczbę 3. Następnie przeciągnij blok \"przesuń się na północ\" do bloku \"powtarzaj\" i kliknij \"Uruchom\", aby sprawdzić, czy zrobiłeś to dobrze. Gratulacje, udało się!"
+    C1_moveitmoveit_unplugged:
+      1:
+        text: "Ta lekcja nazywa się przesuń to, przesuń to. Napiszemy wspólnie program, aby przemieścić naszych przyjaciół od początku z różą wiatrów do celu uśmiechniętej buzi."
+      2:
+        text: "Ale buźka jest zwrócona twarzą w dół i tylko jedna osoba wie, jak się tam dostać. Rozpocznijmy ten program."
+      3:
+        text: "Program to algorytm, który został zakodowany do czegoś, co może być uruchomione przez maszynę. Większość z nas myśli o programie jako o czymś, co piszemy na komputer. Programy świetnie się do tego nadają, ale są również pomocne w innych miejscach. Możesz wykonać swoją własną grę lub nawet zaprogramować robota, by robił coś dla ciebie."
+    C1_going_places_safely:
+      1:
+        text: "Cześć! Nazywam się Jeremiah. Mam siedem lat i uwielbiam grać na komputerze mojej mamy ale najpierw muszę dostać pozwolenie od mojej mamy. \"Mamo, czy mogę wejść na komputer ? Oczywiście skarbie!\""
+      2:
+        text: "Uwielbiam komputer mojej mamy ponieważ mogę korzystać na nim z internetu. Internet to taki rodzaj twojej okolicy. Możesz tu odwiedzać fajne miejsca, rozmawiać z rodzina lub przyjaciółmi no i oczywiście możesz nauczyć się wielu nowych rzeczy."
+      3:
+        text: "Wczoraj wybrałem się do zoo niedaleko mojego domu. Widziałem tam malutką zebrę. Zrobiłem jej zdjęcie, a potem zmieniłem kolor pasków, dodałem kapelusz i wrzuciłem to do mojej kolekcji szalonych zwierząt. Super! Później wybrałem się gdzieś bardzo daleko - do Kenii. To taki kraj w Afryce. Mieszka tam dużo zebr."
+      4:
+        text: "Czasami w internecie rozmawiam z ludźmi, których znam, jak moja babcia, która mieszka w innym stanie. Cześć babciu! Piecze ciasteczka, które mi wyśle na urodziny. \"Pychotka, gdyby komputery potrafiły przekazywać zapachy!\" Mogę rozmawiać z różnymi ludźmi przez Internet, jak mój kuzyn, ale rozmawiam tylko z ludźmi, których znam."
+      5:
+        text: "To, co najbardziej lubię w internecie to możliwość grania w fajne gry. Punkt! Lubię również rysować i tworzyć nowe rzeczy i dzielić się nimi z moimi przyjaciółmi. Super! Czasami odwiedzam strony, na których uczę się czegoś nowego, ale zawsze trzymam się stron, które są dla mnie odpowiednie. Wow, dinozaury!"
+      6:
+        text: "Internet to super fajne miejsce. Ale tak jak gdy przekraczasz ulicę w sąsiedztwie, musisz również być ostrożny gdy wchodzisz do internetu. Oto trzy zasady do zapamiętania. Zasada numer 1: Zawsze najpierw zapytaj rodziców. Zasada numer 2: Rozmawiaj tylko z ludźmi, których znasz. Zasada numer 3: Trzymaj się miejsc, które są w sam raz dla ciebie."
+      7:
+        text: "Wow, to było super! Czas na kolację. Wylogowuję się. Nie mogę się doczekać, kiedy zaloguję się ponownie, żeby zobaczyć, jakie strony mogę odwiedzić jako następne."
+    C1_pair_programming:
+      1:
+        text: "Dzisiaj nauczymy się o Programowaniu w Parach. W programowaniu w parach pracujecie jako zespół. Dlaczego dwie osoby miałyby używać jednego komputera? Ponieważ co dwie głowy to nie jedna. W programowaniu w parach ty i twój partner będziecie siedzieć razem przy jednym komputerze i oboje będziecie pracować nad tym samym projektem."
+      2:
+        text: "W programowaniu w parach, jedna osoba jest kierowcą, a druga jest pilotem, dokładnie jak w przypadku jazdy samochodem. Kierowca siedzi przy komputerze i to on obsługuje klawiaturę i myszkę lub ekran dotykowy i kontroluje główne akcje komputera. Druga osoba to pilot. Pilot pomaga kierowcy, odpowiadając na jego pytania i wskazując potencjalne problemy i błędy."
+      3:
+        text: "Komunikacja to klucz do udanego programowania w parach. Nie obrażaj, miej szacunek, nie wymądrzaj się, bo nikt nie lubi, gdy kierowca siedzi z tyłu. Ty i twój partner powinniście cały czas rozmawiać. Kierowca może wyjaśniać, co robi. A pilot może pomagać sugerować kolejne kroki."
+      4:
+        text: "Pilot powinien myśleć o całokształcie, a kierowca skupiać się na szczegółach. Obie role są ważne. Programowanie w parach polega na wspólnej pracy jako zespół."
+    C1_planting_seed:
+      1:
+        text: "Ta lekcja nazywa się sadzenie nasion i pomoże nam zrozumieć algorytmy. Algorytmy to specyficzne instrukcje, które wyjaśniają kolejność wykonywania czegoś. Nawet codzienne sprawy takie jak jedzenie śniadania lub mycie zębów to algorytmy, które wymagają małych kroczków prowadzących do wykonania danej czynności."
+      2:
+        text: "Komputery mogą być naprawdę mądre, ale rozumieją cię tylko wtedy, gdy powiesz im dokładnie, czego chcesz - krok po kroku. Najlepsze w algorytmach jest to, że jeśli wykonujesz instrukcje w określonym porządku, możesz zrobić coś, czego wcześniej nie umiałeś zrobić. To tak jak używanie przepisu kulinarnego."
+      3:
+        text: "Dzisiaj będziemy sadzić nasze własne nasiona, używając algorytmu. Stwórz swój własny algorytm rozcinając obrazki. Wybierz obrazki, które pokazują etapy sadzenia nasiona i ułóż te obrazki we właściwej kolejności."
+      4:
+        text: "A teraz czas zobaczyć, czy twój algorytm działa. Z uwagą wykonuj kroki opisane w algorytmie. Czy są ustawione w odpowiedniej kolejności? Czy udało ci się zasadzić nasiono, postępując zgodnie z algorytmem? To jest jak programowanie obrazkami!"
+      5:
+        text: "Kiedy chcemy zrobić czekoladę, jest wiele etapów tego procesu, a każdy etap składa się ze zbioru mniejszych kroków, ponadto jest wiele różnych przepisów lub algorytmów, w zależności od tego, jak chcemy, żeby czekolada smakowała. Każdy krok jest ważny, nawet te malutkie, a więc bez jednego kroku reszta nie może być wykonana. Tworzenie algorytmów, które inni mogą zrozumieć, jest naprawdę ważne. Dlatego każdy krok musi być zapisany w ten sposób, żeby wynik był taki sam niezależnie od tego, kto dany krok wykona."
+    C1_playlab_storytelling:
+      1:
+        text: "Czas stać się kreatywnym i użyć swoich umiejętności kodowania do opowiedzenia historyjki. Twoja historyjka będzie mieć aktorów, a ty będziesz mógł sprawić, że ci aktorzy będą mówić i oddziaływać ze sobą. Zacznij się zastanawiać, jaką historyjkę chcesz opowiedzieć."
+      2:
+        text: "Kot zawsze bał się psa, a co jeśli kot domyśli się, że pies próbuje być miły? Blok \"po uruchomieniu\" wszystko zaczyna. Blok \"przesuń\" przesunie twoją postać, a blok \"powiedz\" sprawi, że twoja postać powie, cokolwiek napiszesz."
+      3:
+        text: "To jest blok \"gdy aktorzy kolidują\", który możesz połączyć z innymi blokami."
+      4:
+        text: "Próbowałem przekonać psa, żeby przyszedł i powiedział \"Cześć\", ale kot się wystraszył i uciekł. \"Ach...\" Gdyby było więcej czasu, moglibyśmy mieć szczęśliwe zakończenie. Koniec!"
+    C1_spelling_bee_intro:
+      1:
+        text: "To jest poziom literującej pszczoły. Użyj kawałków puzzli, aby przesunąć pszczołę. Przesuwając się, zbierze litery do przeliterowania słów."
+      2:
+        text: "Zobacz, czy potrafisz przeliterować słowo, które dostajesz w ramce pod polem gry. Ale bzzządź ostrożny! Przesuwanie w złym kierunku doda litery, których nie chcesz."
+    C1_zuck_repeat_loop:
+      1:
+        text: "Jeden z tych komputerów jest dobry w powtarzaniu komend. Jako osoba możesz się naprawdę zmęczyć, jeśli trzeba samemu robić te same rzeczy kilka razy. Ale komputer może robić to samo miliony, a nawet miliardy razy i się nie zmęczyć trzeba więc posiadać tę zdolność."
+      2:
+        text: "Na przykład, jeśli chciałbym każdemu na Facebooku złożyć życzenia urodzinowe wysyłając mu e-mail, napisanie tych wszystkich e-maili mogłoby zająć więcej niż wiek. Ale przy pomocy zaledwie kilku linii kodu mogę sprawić, że system wyśle e-mail z życzeniami do każdej osoby na Facebooku."
+      3:
+        text: "W tym przykładzie, twoim celem jest przesunięcie ptaka, aby złapać świnię. A teraz będziemy mieć możliwość użyć bloku repetycyjnego, aby zrobić to z łatwością. Możesz to zrobić albo dając komputerowi komendę \"przesuń się naprzód\" pięć razy, by przesunąć ptaka w kierunku świni o jeden krok za każdym razem, albo możesz kazać komputerowi przesunąć raz, a potem kazać powtórzyć to pięć razy - efekt będzie taki sam."
+      4:
+      5:
+    C2_artist_intro:
+      1:
+      2:
+        text: "W tym zadaniu zostaniesz artystą, który używa ołówka, by narysować rożne kształty. Gdziekolwiek twój artysta pójdzie narysuje linię za sobą."
+      3:
+      4:
+      5:
+    C2_binary_bracelets:
+      1:
+      2:
+      3:
+        text: "Cześć,  jestem Orion i programuje roboty tutaj w Play-im. Wszystkie komputery i mózgi robotów na swoim fundamentalnym poziomie to małe bramki elektroniczne. Kiedy bramka jest otwarta prąd elektryczny może przez nią przejść i na odwrót gdy bramka jest zamknięta prąd nie może przez nią przechodzić."
+      4:
+    C2_conditionals_with_cards:
+      1:
+      2:
+        text: "Chcę wyjść do parku lecz najpierw muszę zdecydować na podstawie pogody czy powinienem wziąć parasolkę czy też nie. Więc wyglądam zza okno. Jeśli jest pochmurnie to muszę wziąć moją parasolkę. Jeśli jednak jest ładna pogoda to wezmę moje okulary przeciwsłoneczne. Myślę jednak, że lepszym wyborem będzie parasolka. To co widzę i słyszę definiuje to co wezmę ze sobą do parku."
+      3:
+      4:
+      5:
+    C2_playlab_createstory:
+      1:
+        text: "Do tej pory tworzyliście animację lub historyjkę, która za każdym razem działa tak samo. Teraz możecie utworzyć interaktywną grę, w którą możecie zagrać."
+      2:
+        text: "Tam są bloki \"kiedy strzałka\" i \"przenieś postać\". Możesz umieścić te bloki razem, aby poruszać postaciami za pomocą klawiszy strzałek."
+    C3_artist_intro:
+      1:
+      2:
+        text: "W tym zadaniu zostaniesz artystą, który używa ołówka, by narysować rożne kształty. Gdziekolwiek twój artysta pójdzie narysuje linię za sobą."
+      3:
+      4:
+      5:
+    C3_playlab_create_game:
+      1:
+        text: "Do tej pory tworzyliście animację lub historyjkę, która za każdym razem działa tak samo. Teraz możecie utworzyć interaktywną grę, w którą możecie zagrać."
+      2:
+        text: "Tam są bloki \"kiedy strzałka\" i \"przenieś postać\". Możesz umieścić te bloki razem, aby poruszać postaciami za pomocą klawiszy strzałek."
+    C3_songwriting_with_parameters:
+      1:
+        text: "Ta lekcja dotyczy tworzenia muzyki. Tworzenie muzyki jest trochę podobne do tworzenia programu komputerowego. Zapisane znaki i słowa mówią piosenkarzowi co ma robić. Niektórych fragmentów piosenki można użyć kilka razy."
+      2:
+      3:
+    starwars_intro:
+      1:
+        text: "Witam, jestem Kathleen Kennedy i jestem producentem filmu Star Wars: Przebudzenie Mocy (The Force Awakens). Dzisiaj będziecie pracować z jedną z naszych gwiazd, BB-8. BB-8 jest kulistym droidem. Cokolwiek robi i każdy jego ruch jest sterowany programem komputerowym. Informatyka ma wpływ na przemysł, od marketingu po ochronę zdrowia, na filmy. W rzeczywistości, setki inżynierów pracowało, aby powstał film taki, jak The Force Awakens."
+      2:
+        text: "Witam, jestem Rachel Rose. Jestem starszym inżynierem R&D w ILM i prowadzę zespół zajmujący się animacją i tworzeniem postaci. W The Force Awakens odpowiadam za pomoc artystom w doborze wyposażenia, będącego częścią postaci, dzięki czemu wyglądają bardzo wiarygodnie w galaktyce znajdującej się bardzo daleko."
+      3:
+        text: "W ciągu następnej godziny zbudujemy własną grę Star Wars, poznając przy okazji podstawowe pojęcia związane z programowaniem. Zwykle, programy mają postać tekstu, ale nasze programy będziemy tworzyć przeciągając i upuszczając bloki. Faktycznie, nadal piszemy kod programu. Po zapoznaniu się z podstawami z użyciem bloków, przełączysz się na JavaScript, na jeden z najpopularniejszych języków programowania w sieci."
+      4:
+        text: "Będziemy pracować z Reyem, który programuje BB-8, by zebrał cały złom. Ekran jest podzielony na 3 części. Po lewej stronie jest plansza gry Star Wars, na której jest wykonywany program. Poniżej znajduje się instrukcja odpowiednia do poziomu gry."
+      5:
+        text: "W środkowej części znajduje się przybornik z blokami (Toolbox), które rozumie BB-8."
+      6:
+        text: "Biała część po prawej stronie to pole robocze (Work space), gdzie będziemy budować nasz program."
+      7:
+        text: "Gdy przeciągnę blok \"idź w lewo\" na pole robocze i nacisnę Uruchom (Run), BB-8 przesunie się w lewo o jedno miejsce na siatce."
+      8:
+        text: "Jeśli chcę, aby BB-8 wykonał coś po przesunięciu się w lewo, mogę dodać kolejny blok do naszego programu. Wybieram blok \"idź do góry\" i przesuwam go pod blok \"idź w lewo\", aż pojawi się rozjaśnienie. Wtedy upuszczam go i oba bloki łączą się ze sobą."
+      9:
+        text: "Gdy ponownie nacisnę przycisk Uruchom (Run), BB-8 wykona od góry do dołu polecenia znajdujące się w polu roboczym. Jeśli chcesz usuną blok z pola roboczego, usuń go z programu i przeciągnij z powrotem do przybornika."
+      10:
+        text: "Po naciśnięciu Uruchom możesz zawsze nacisnąć przycisk Reset, by powrócić z BB-8 na początek. Milego toczenia się!"
+    starwars_typing:
+      1:
+        text: "Wewnątrz bloków, które używamy, znajdują się polecenia języka JavaScript. JavaScript jest obecnie jednym z najbardziej popularnym językiem programowania dla programistów. Bloki są świetnym sposobem, aby rozpocząć naukę programowania i w większości najlepszych uniwersytetów, takich jak np. Harvard i Berkley, naukę programowania rozpoczyna się właśnie od bloków. Jak tylko nauczymy się podstaw, zaczniemy pisać kod, gdyż jest to szybsze od pracy z blokami."
+      2:
+        text: "Możemy wpisać setki poleceń bez konieczności znajdowania ich w przyborniku lub przeciągania. Ponieważ uczysz się, pisanie może być wolniejsze, jednak warto żebyś spróbował."
+      3:
+        text: "W prawym górnym rogu na polu roboczym możesz kliknąć przycisk \"Pokaż kod\", aby przejść z bloków do pisania kodu."
+      4:
+      5:
+      6:
+      7:
+    starwars_events:
+      1:
+        text: "Hello, nazywam się Charita Carter. Jestem starszym kreatywnym producentem w Walt Disney Imagineering. Prowadzę zespoły produkujące atrakcje, którymi nasi goście mogą poeksperymentować. Cały czas szukamy sposobów, by przygotować lepsze eksperymenty dla naszych gości i technologia jest w sercu naszych działań."
+      2:
+        text: "Gratulacje, zrobiłeś to! Zaprogramowałeś BB-8. Myślę, że potrafimy zrobić coś więcej. Spróbujmy. Teraz, gdy poznałeś już podstawy programowania, wracamy w czasie, byś utworzył własną grę, w której gwiazdami będą R2-D2 i C3PO."
+      3:
+        text: "By stworzyć grę, powinniśmy poznać coś, co programiści gier komputerowych stosują na każdym kroku: są to zdarzenia (events). Zdarzenia każą Twojemu programowi nasłuchiwać lub czekać, aż coś się wydarzy, a wtedy program wykonuje odpowiednie działanie."
+      4:
+        text: "Przykładami zdarzeń jest oczekiwanie na: kliknięcie myszy, naciśnięcie klawisza ze strzałą lub dotknięcie ekranu."
+      5:
+        image: 'uwagi/starwars_events_5.JPG'
+        text: "Tutaj chcemy, aby R2-D2 przeszedł do góry i dostarczył wiadomość Pilotowi Rebeliantów a następnie przeszedł w dół do innego pilota. Wykorzystamy zdarzenia, by się poruszał, gdy gracz używa strzałek lub przycisków do góry/do dołu."
+      6:
+        text: "Użyjemy bloku zdarzenia whenUp() i podczepimy do niego blok goUp(). Gdy gracz naciska klawisz ze strzałką do góry, uruchamia kod doczepiony do bloku whenUp(). Podobnie możemy spowodować, by R2-D2 poruszał się do dołu."
+      7:
+        text: "W tym celu użyjemy polecenia o nazwie whenUp(). Podczas jego przeciągania z przybornika zauważysz, że zaczyna się i kończy nawiasami klamrowymi zamiast średnikiem. To daje nam miejsca na umieszczenie w środku innych poleceń. Każde polecenie, które umieścimy wewnątrz tych nawiasów, zostanie wykonane, gdy gracz naciśnie klawisz ze strzałką do góry."
+      8:
+        text: "Chcemy, by R2-D2 poszedł do góry, wstawmy zatem blok goUp() wewnątrz polecenia. Podobnie możemy spowodować, by R2-D2 poszedł do dołu."
+      9:
+        text: "Teraz, zamiast pisać kod, by sterował naszym droidem z wyprzedzeniem, pozwalamy R2-D2, by reagował na zdarzenia polegające na naciskaniu przycisków, które przenoszą go po ekranie. Krok po kroku Wasza gra staje się coraz bardziej interaktywna."
+    starwars_blocks_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+        text: "W środkowej części znajduje się przybornik z blokami (Toolbox), które rozumie BB-8."
+      6:
+      7:
+      8:
+      9:
+      10:
+    starwars_blocks_events:
+      1:
+        text: "Hello, nazywam się Charita Carter. Jestem starszym kreatywnym producentem w Walt Disney Imagineering. Prowadzę zespoły produkujące atrakcje, którymi nasi goście mogą poeksperymentować. Cały czas szukamy sposobów, by przygotować lepsze eksperymenty dla naszych gości i technologia jest w sercu naszych działań."
+      2:
+        text: "Gratulacje, zrobiłeś to! Zaprogramowałeś BB-8. Myślę, że potrafimy zrobić coś więcej. Spróbujmy. Teraz, gdy poznałeś już podstawy programowania, wracamy w czasie, byś utworzył własną grę, w której gwiazdami będą R2-D2 i C3PO."
+      3:
+        text: "By stworzyć grę, powinniśmy poznać coś, co programiści gier komputerowych stosują na każdym kroku: są to zdarzenia (events). Zdarzenia każą Twojemu programowi nasłuchiwać lub czekać, aż coś się wydarzy, a wtedy program wykonuje odpowiednie działanie."
+      4:
+        text: "Przykładami zdarzeń jest oczekiwanie na: kliknięcie myszy, naciśnięcie klawisza ze strzałą lub dotknięcie ekranu."
+      5:
+        text: "Tutaj chcemy, aby R2-D2 przeszedł do góry i dostarczył wiadomość Pilotowi Rebeliantów a następnie przeszedł w dół do innego pilota. Wykorzystamy zdarzenia, by się poruszał, gdy gracz używa strzałek lub przycisków do góry/do dołu."
+      6:
+      7:
+        text: "Krok po kroku Twoja gra staje się coraz bardziej interaktywna."
+    mc_intro:
+      1:
+        text: "Nazywam się Jens Bergensten, ale wszyscy mówią na mnie Jeb. Jestem liderem zespołu deweloperskiego gry Minecraft w mojang.com w Sztokholmie. Miałem 11, a może 12 lat, gdy zacząłem programować, ponieważ chciałem tworzyć gry. Jeden z kolegów taty powiedział, że aby robić gry, trzeba nauczyć się programowania. Od tego wszystko się zaczęło. Lubię projektować i odkrywać schematy różnych rzeczy. I to właśnie lubię w Minecrafcie. "
+      2:
+        text: "W ciągu następnej godziny nauczysz się podstaw informatyki, programując ruchy Alex lub Steve'a w symulowanym wycinku świata Minecraft."
+      3:
+        text: "Tradycyjnie programuje się, używając tekstu, ale dzisiaj wykorzystamy blokly: system wykorzystujący bloki, które możesz przeciągać i upuszczać, aby pisać programy. W rzeczywistości tworzysz program na bazie kodu JavaScript. "
+      4:
+        text: "Metody, których będziesz się uczyć, są używane codziennie przez programistów komputerowych i stanowią podstawy informatyki. My w Mojang wykorzystujemy te same metody, aby gra Minecraft działała. "
+      5:
+        text: "Zanim zaczniesz, wybierz swoją postać. Ja wybiorę Alex. Stwórzmy kod programu , który pomoże jej poruszać się po ekranie."
+      6:
+        text: "Twój ekran podzielony jest na trzy główne obszary. Z lewej strony znajduje się przestrzeń gry Minecraft, w której Twój program będzie działać. Instrukcje dlakażdego poziomu są podane poniżej. "
+      7:
+        text: "Ten środkowy obszar, to Twoje narzędzia, a każdy blok to polecenie, które kieruje działaniami Alex. "
+      8:
+        text: "Biały obszar z prawej strony nazywamy obszarem roboczym i tu właśnie będzie powstawał nasz program. "
+      9:
+        text: "Jeśli przeciągniemy blok \"idź do przodu\" na nasz obszar roboczy, a następnie klikniemy przycisk uruchamiania, to co się stanie? "
+      10:
+        text: "Jeśli przeciągniemy blok \"idź do przodu\" na nasz obszar roboczy, a następnie klikniemy przycisk uruchamiania, to co się stanie? Alex przesunie się w przód o jedno pole. A jeśli chcemy, żeby zrobiła coś, gdy już przesunie się w przód o jedno pole? Możemy dodać do naszego programu kolejny blok. Wybiorę blok \"skręć w prawo\" i będę przeciągać go pod blok \"idź do przodu\" dopóki nie pojawi się pomarańczowa linia. Następnie upuszczę blok i oba bloki połączą się ze sobą. Gdy znów naciśniemy przycisk uruchamiania, Alex wykona polecenia ułożone w obszarze roboczym, zaczynając od góry i posuwając się w dół. "
+      11:
+        text: "Jeśli kiedyś zechcesz skasować blok, po prostu przesuń go z obszaru roboczego na obszar narzędzi. "
+      12:
+        text: "Aby cofnąć zmiany i wrócić do etapu, od którego zaczęliśmy, użyj przycisku ponownego startu, który znajduje się w górnym prawym rogu obszaru roboczego. I jeszcze jedno - widzisz mały trójkącik na blokach do skręcania? Za każdym razem, gdy pojawiają się takie trójkąciki, możesz wybrać inną opcję. Zacznijmy tworzyć kod!"
+    mc_repeat:
+      1:
+        text: "Nazywam się Lydia Winters i jestem dyrektorem marki w firmie Mojang, w której stworzyliśmy niepozorną grę o nazwie Minecraft."
+      2:
+        text: "Moim ulubionym zajęciem w Minecrafcie jest odkrywanie. Uwielbiam zwiedzać groty i sprawdzać, co kryją. Jako osoba, która nie jest programistą bardzo cieszę się, że istnieją lekcje Minecraft i że będę mogła sama nauczyć się programowania."
+      3:
+        text: "Ostatni poziom wymagał użycia mnóstwa bloków \"idź do przodu\". Łatwiej było by, gdybyśmy mogli powiedzieć komputerowi, żeby wykonał polecenie ruchu w przód cztery lub pięć razy. Na szczęście komputery są świetne w powtarzaniu poleceń w pętlach powtórzeń. "
+      4:
+        text: "Tworząc grę Minecraft, wykorzystywaliśmy pętle powtórzeń, aby umieścić wszystkie początkowe elementy tworzące nowy świat. To setki tysięcy bloków. Poza tym wykorzystujemy pętle do prostszych zadań, na przykład poruszania stopą Alex w tył i w przód, gdy idzie. Pętle powtórzeń to bardzo ważny element programowania."
+      5:
+        text: "Nadciąga noc, więc na następnych poziomach zajmiemy się budową domu, aby zapewnić sobie bezpieczeństwo. Użyjemy bloku powtórki, aby ułatwić sobie zadanie. "
+      6:
+        text: "Aby zbudować ścianę naszego domu, możemy polecić Alex, aby przesunęła się w przód i umieściła deski cztery razy lub możemy jej powiedzieć, żeby przesunęła się w przód i umieściła jedną deskę, a potem użyć bloku powtórki, aby powtórzyła to działanie wielokrotnie. Teraz klikniemy na bloku powtórki i powiemy Alex, ile razy powinna powtórzyć to działanie. Zbudujmy nasz dom, zanim zapadnie noc! Baw się dobrze."
+    mc_if_statements:
+      1:
+        text: "Teraz dowiemy się czegoś o warunku „jeżeli”. Warunek „jeżeli” jest podstawą umiejętności programowania. Pomaga komputerowi podjąć decyzję. "
+      2:
+        text: "Wszystkie komputery wykorzystują warunek „jeżeli”, nawet mój telefon. Na przykład, gdy odblokowują mój telefon, uruchamia on program, który sprawdza, czy poprawnie wpisałam hasło, a następnie odblokowuje telefon. Albo pokazuje komunikat o błędnym haśle."
+      3:
+        text: "W swoim programie możesz użyć warunku „jeżeli”, aby Steve i Alice reagowali na to, co widzą w otaczającym ich świecie. Na przykład jeżeli widzą przed sobą kamień, skręcają w lewo. Albo skręcają w prawo, jeżeli wpadną na drzewo. "
+      4:
+        text: "W tym wypadku nie chcemy wpaść w lawę. Łatwo zaplanować reakcję na lawę. Widać ją na ekranie. Ale co z lawą, której nie widzimy, bo jest pod skałą? "
+      5:
+        text: "Po wydobyciu kamienia, musimy sprawdzić, czy nie ma lawy, zanim pójdziemy na przód. Jeśli lawa się pojawiła, chcemy umieścić przed naszą postacią kamień, zanim pójdzie dalej. W ten sposób możemy bezpiecznie się poruszać. Czas zająć się wydobyciem! I pamiętaj, aby korzystać z warunku „jeżeli”, aby kontrolować swoje kroki."
+    mc_congrats_share:
+      1:
+        text: "Gratulacje! Właśnie udało Ci się poznać podstawowe bloki, z których powstaje program. "
+      2:
+        text: "Teraz możesz wykorzystać te bloki, aby tworzyć własne dzieła. Nie ma żadnych innych instrukcji ani układanek do rozwiązania. Możesz zbudować, co tylko zechcesz. Masz wybór. "
+      3:
+        text: "[wypowiedzi uczniów] Trzeba naprawdę to zrobić. Strzyżenie. Zrobiłem L z pochodni. Ja zrobiłam A z brzozowych desek. To działa, to działa. Zbudowałyśmy dom z wełny!"
+      4:
+        text: "Gdy skończysz tworzyć swoje dzieło, wybierz opcję udostępniania, aby otrzymać łącze, które można wysyłać swoim znajomym. Baw się dobrze!"
+    mc_congrats_no_share:
+      1:
+        text: "Gratulacje! Właśnie udało Ci się poznać podstawowe bloki, z których powstaje program. "
+      2:
+        text: "Teraz możesz wykorzystać te bloki, aby tworzyć własne dzieła. Nie ma żadnych innych instrukcji ani układanek do rozwiązania. Możesz zbudować, co tylko zechcesz. Masz wybór. "
+      3:
+        text: "[wypowiedzi uczniów] Trzeba naprawdę to zrobić. Strzyżenie. Zrobiłem L z pochodni. Ja zrobiłam A z brzozowych desek. To działa, to działa. Zbudowałyśmy dom z wełny!"
+      4:
+        text: "Teraz możesz zbudować, co tylko zechcesz. Baw się dobrze!"
+    gumball_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+        text: "Biały obszar z prawej strony nazywamy obszarem roboczym i tu właśnie będzie powstawał nasz program. "
+      7:
+      8:
+      9:
+    iceage_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+        text: "Biały obszar z prawej strony nazywamy obszarem roboczym i tu właśnie będzie powstawał nasz program. "
+      7:
+      8:
+      9:

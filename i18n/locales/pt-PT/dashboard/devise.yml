@@ -1,0 +1,75 @@
+pt:
+  devise:
+    confirmations:
+      confirmed: "O teu endereço de e-mail foi confirmado com sucesso."
+      send_instructions: "Vais receber um e-mail com as instruções de confirmação da tua conta dentro de alguns minutos."
+      send_paranoid_instructions: "Se o teu endereço de e-mail existir na nossa base de dados, receberás um e-mail com instruções sobre como confirmar a tua conta em poucos minutos."
+    failure:
+      already_authenticated: "Já iniciaste sessão."
+      inactive: "A tua conta ainda não foi confirmada."
+      invalid: "O e-mail e a palavra-passe não estão corretos."
+      invalid_token: "O token de autenticação não é válido."
+      locked: "A tua conta está bloqueada."
+      not_found_in_database: "O e-mail e a palavra-passe não estão corretos."
+      timeout: "A tua sessão expirou. Por favor, volta a iniciar sessão para continuares."
+      unauthenticated: "Tens de iniciar sessão ou criar uma conta antes de continuares."
+      unconfirmed: "Tens de confirmar a tua conta antes de continuar."
+    mailer:
+      confirmation_instructions:
+        subject: "Instruções de confirmação do Code.org"
+      reset_password_instructions:
+        subject: "Instruções de reposição da palavra-passe do Code.org"
+      unlock_instructions:
+        subject: "Instruções de desbloqueio"
+    omniauth_callbacks:
+      failure: "Não foi possível autenticá-lo como %{kind} porque \"%{reason}\"."
+      success: "Autenticado com êxito com a conta  %{kind}."
+    passwords:
+      no_token: "Não podes aceder a esta página sem teres vindo de um e-mail de reposição da palavra-passe. Se vens de um e-mail de reposição da palavra-passe, certifica-te de que usaste a ligação completa."
+      send_instructions: "Vais receber um e-mail com as instruções de reposição da palavra-passe dentro de alguns minutos."
+      send_paranoid_instructions: "Se o teu endereço de e-mail existir na nossa base de dados, receberás um link de recuperação de senha no teu endereço de e-mail em poucos minutos."
+      updated: "A tua palavra-passe foi alterada e iniciaste sessão com sucesso."
+      updated_not_active: "A tua palavra-passe foi alterada com sucesso."
+    registrations:
+      destroyed: "Adeus! A tua conta foi cancelada com sucesso. Esperamos ver-te novamente em breve."
+      signed_up: "Criaste a tua conta com sucesso. O Code.org dá-te as boas-vindas!"
+      signed_up_but_inactive: "Criaste uma conta com sucesso. No entanto, não podes iniciar sessão porque a tua conta ainda não foi confirmada."
+      signed_up_but_locked: "Criaste uma conta com sucesso. No entanto, não podes iniciar sessão porque a tua conta está bloqueada."
+      signed_up_but_unconfirmed: "A mensagem com a ligação de confirmação foi enviada para o teu e-mail. Por favor, clica na ligação para ativares a tua conta."
+      update_needs_confirmation: "Atualizaste a tua conta com êxito, mas precisamos de verificar de novo o teu endereço de e-mail. Por favor verifica o teu e-mail e clica no link para finalizar a confirmação do teu novo endereço de e-mail."
+      updated: "Atualizaste a tua conta com sucesso."
+    sessions:
+      signed_out: "Terminaste sessão com sucesso."
+    unlocks:
+      send_instructions: "Vais receber um e-mail com as instruções sobre como desbloquear a tua conta dentro de poucos minutos."
+      send_paranoid_instructions: "Se a tua conta existir, receberás um e-mail com instruções sobre como desbloqueá-la dentro de poucos minutos."
+      unlocked: "A tua conta foi desbloqueada com sucesso. Por favor, Inscreve-te para continuar."
+  errors:
+    messages:
+      already_confirmed: "já foi confirmado, por favor, tenta entrar"
+      confirmation_period_expired: "tem de ser confirmado dentro de %{period}. Por favor, pede um novo"
+      expired: "caducou, por favor pede uma nova"
+      not_found: "não encontrado"
+      not_locked: "não foi bloqueado"
+      not_saved:
+        one: "1 erro proibiu este %{resource} de ser salvo:"
+        other: "%{count} erros não permite que este %{resource} seja salvo:"
+    invitations:
+      send_instructions: 'Foi enviado um convite por e-mail para %{email}.'
+      invitation_token_invalid: 'O teu convite não é válido!'
+      updated: 'A tua palavra-passe foi definida e iniciaste sessão com sucesso.'
+      no_invitations_remaining: "Nenhum convite"
+      invitation_removed: 'O teu convite foi removido.'
+      new:
+        header: "Enviar convite"
+        submit_button: "Enviar um convite"
+      edit:
+        header: "Define a tua palavra-passe"
+        submit_button: "Definir palavra-passe"
+    mailer:
+      invitation_instructions:
+        subject: 'Instruções de convite'
+        hello: 'Olá, %{email}!'
+        someone_invited_you: 'Alguém te convidou para o %{url}. Para aceitares o convite, acede à seguinte ligação.'
+        accept: 'Aceitar convite'
+        ignore: "Se não pretenderes aceitar o convite, ignora este e-mail.<br />A tua conta não será criada até que acedas à ligação deste e-mail e definas a tua palavra-passe."

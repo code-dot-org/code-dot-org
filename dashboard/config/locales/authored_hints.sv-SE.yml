@@ -1,0 +1,736 @@
+---
+sv:
+  data:
+    authored_hints:
+      2-3 Artist Debugging 2_authored_hint:
+        2-3_Artist_Debugging_2_a: 'Tips: Varje morrhår är 75 pixlar lång.'
+      2-3 Artist Debugging 3_authored_hint:
+        2-3_Artist_Debugging_3_a: En av vändna är 15 grader för liten.
+      2-3 Artist Functions 1 a_authored_hint:
+        2-3_Artist_Functions_1_a: Rutorna varje har 100 pixel sidor, det betyder att
+          du kommer att behöva flytta framåt 175 pixlar innan du ritar din andra torget.
+      2-3 Artist Functions 1_authored_hint:
+        2-3_Artist_Functions_1_a: Rutorna varje har 100 pixel sidor, det betyder att
+          du kommer att behöva flytta framåt 175 pixlar innan du ritar din andra torget.
+      2-3 Artist Functions 3 a_authored_hint:
+        2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
+      2-3 Artist Functions 3_authored_hint:
+        2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
+      2-3 Artist Nested Loops 3_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: Behöver du hjälp med vinklar?   ** 360/12 = 30
+          **
+      2-3 Artist Nested Loops 4_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: Behöver du hjälp med vinklar?   ** 360/12 = 30
+          **
+      2-3 Bee Loops 3_authored_hint:
+        2-3_Bee_Loops_3_a: Du bör ha 6 block inuti din slinga.
+      2-3 Maze 6_authored_hint:
+        2-3_Maze_6_a: Det finns två sätt att lösa detta pussel!
+      4-5 Maze 5_authored_hint:
+        4-5_Maze_5_b: Du kan använda mer än en 'Upprepa' loop i ett pussel.
+      4-5 Nested Loops 12_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
+      Dance short test 2_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Du måste göra så att bakgrundseffekten ändras någon gång under den sjunde åtgärden av låten.
+
+          *Denna nivå slutar efter 10 åtgärder.*
+        challenges: |-
+          **Valfri utmaning**
+
+          Ändra bakgrundseffekten vid olika tidpunkter under låten genom att koppla samman det nya blocket under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> händelserna.
+      Dance short test_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Du måste göra så att bakgrundseffekten ändras någon gång under den sjunde åtgärden av låten.
+
+          *Denna nivå slutar efter 10 åtgärder.*
+        challenges: |-
+          **Valfri utmaning**
+
+          Ändra bakgrundseffekten vid olika tidpunkter under låten genom att koppla samman det nya blocket under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> händelserna.
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+          * Kontrollera att en dansare visas på skärmen.
+
+          *Denna nivå slutar efter 4 åtgärder.*
+        challenges: |-
+          **Valfria utmaningar**
+          * Välj en annan sång att spela.
+          * Välj en annan som ser ut som en älg!
+          * Byt namn på din dansare.
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+          * Kontrollera att en dansare visas på skärmen.
+
+          *Denna nivå slutar efter 4 åtgärder.*
+        challenges: |-
+          **Valfria utmaningar**
+          * Välj en annan sång att spela.
+          * Välj en annan som ser ut som en älg!
+          * Byt namn på din dansare.
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+          * Dansaren måste växla till en ny rörelse efter 4 åtgärder.
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Efter 6 åtgärder måste din dansare göra en annan dans än den som gjordes efter 4 åtgärder.
+
+          *Denna nivå slutar efter 12 åtgärder.*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Du måste göra så att bakgrundseffekten ändras någon gång under den sjunde åtgärden av låten.
+
+          *Denna nivå slutar efter 10 åtgärder.*
+        challenges: |-
+          **Valfri utmaning**
+
+          Ändra bakgrundseffekten vid olika tidpunkter under låten genom att koppla samman det nya blocket under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> händelserna.
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Du måste ha minst två dansare.
+
+          *Denna nivå slutar efter 6 åtgärder.*
+        challenges: |-
+          **Valfri utmaning**
+
+          * Lägg till en tredje dansare (eller så många du vill!)
+          * Gör så att alla dina dansare utför olika rörelser vid olika tidpunkter i låten.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Två dansare måste ha en annan storlek än 100.
+
+          *Denna nivå slutar efter 6 åtgärder.*
+        challenges: |-
+          **Valfri utmaning**
+
+          * Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Ändra färgtonen på minst en dansare.
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+          * Kontrollera att en dansare visas på skärmen.
+
+          *Denna nivå slutar efter 4 åtgärder.*
+        challenges: |-
+          **Valfria utmaningar**
+          * Välj en annan sång att spela.
+          * Välj en annan som ser ut som en älg!
+          * Byt namn på din dansare.
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Egenskaper för två eller flera dansare måste ändras.
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      Dance_Party_11.5_test_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Var bara kreativ!
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Var bara kreativ!
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Var bara kreativ!
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Använd blocket ”när vänsterpilen är intryckt” för att få roboten att göra en dansrörelse när du trycker på den.
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+          * Dansaren måste växla till en ny rörelse efter 4 åtgärder.
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Efter 6 åtgärder måste din dansare göra en annan dans än den som gjordes efter 4 åtgärder.
+
+          *Denna nivå slutar efter 12 åtgärder.*
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Du måste göra så att bakgrundseffekten ändras någon gång under den sjunde åtgärden av låten.
+
+          *Denna nivå slutar efter 10 åtgärder.*
+        challenges: |-
+          **Valfri utmaning**
+
+          Ändra bakgrundseffekten vid olika tidpunkter under låten genom att koppla samman det nya blocket under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> händelserna.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Din dans måste innehålla olika rörelser under de 12 första åtgärderna av låten.
+
+          *Denna nivå slutar efter 12 åtgärder.*
+      Dance_Party_6_authored_hint:
+        challenges: |-
+          **Valfri utmaning**
+
+          * Lägg till en tredje dansare (eller så många du vill!)
+          * Gör så att alla dina dansare utför olika rörelser vid olika tidpunkter i låten.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Två dansare måste ha en annan storlek än 100.
+
+          *Denna nivå slutar efter 6 åtgärder.*
+        challenges: |-
+          **Valfri utmaning**
+
+          * Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Ändra färgtonen på minst en dansare.
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      Function intro Ryan_authored_hint:
+        Function_intro_Ryan_a: Du kan kalla på en funktion flera gånger i ditt program!  Kalla
+          på den två gånger för att lösa det här pusslet.
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_a: Du kan kalla på en funktion flera gånger i ditt program!  Kalla
+          på den två gånger för att lösa det här pusslet.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: Se **Havslyktor** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Hur kan du använda dig av villkor med dem för att ta dig igenom Havsmonumentet?
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Vilket vackert korallrev! Blå korall är den **rätta** vägen
+          att gå och kontrollera att röd korall inte är till **vänster**!
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+          * Kontrollera att en dansare visas på skärmen.
+
+          *Denna nivå slutar efter 4 åtgärder.*
+        challenges: |-
+          **Valfria utmaningar**
+          * Välj en annan sång att spela.
+          * Välj en annan som ser ut som en älg!
+          * Byt namn på din dansare.
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+          * Dansaren måste växla till en ny rörelse efter 4 åtgärder.
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Efter 6 åtgärder måste din dansare göra en annan dans än den som gjordes efter 4 åtgärder.
+
+          *Denna nivå slutar efter 12 åtgärder.*
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Du måste göra så att bakgrundseffekten ändras någon gång under den sjunde åtgärden av låten.
+
+          *Denna nivå slutar efter 10 åtgärder.*
+        challenges: |-
+          **Valfri utmaning**
+
+          Ändra bakgrundseffekten vid olika tidpunkter under låten genom att koppla samman det nya blocket under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> händelserna.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Din dans måste innehålla olika rörelser under de 12 första åtgärderna av låten.
+
+          *Denna nivå slutar efter 12 åtgärder.*
+      HOC Dance 5_draft_authored_hint:
+        challenges: |-
+          **Valfri utmaning**
+
+          * Lägg till en tredje dansare (eller så många du vill!)
+          * Gör så att alla dina dansare utför olika rörelser vid olika tidpunkter i låten.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Två dansare måste ha en annan storlek än 100.
+
+          *Denna nivå slutar efter 6 åtgärder.*
+        challenges: |-
+          **Valfri utmaning**
+
+          * Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Ändra färgtonen på minst en dansare.
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Egenskaper för två eller flera dansare måste ändras.
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Var bara kreativ!
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Var bara kreativ!
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      MC Agent Freeplay_authored_hint:
+        MC_HOC_2017_13_Cole_a: Se om du kan få agenten att bygga några broar så att
+          Alex eller Steve kan gå bortom kartans kanter.
+      MC_HOC_2017_01_Cole_authored_hint:
+        MC_HOC_2017_01_Cole_a: Använd piltangenterna för att leda spelaren in i huset.
+          Stanna på den orangefärgade rutan för att vinna.
+      MC_HOC_2017_01_RETRY_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Dra ett "gå framåt"-block från verktygslådan till
+          arbetsytan och fäst det under "vid körning"-blocket.
+        MC_HOC_2017_01_RETRY_b: Glöm inte att klicka på "Kör" för att köra agentens
+          kod.
+        MC_HOC_2017_01_RETRY_c: När agenten har kört sin kod kan du styra spelaren
+          med piltangenterna!
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Dra ett "gå framåt"-block från verktygslådan till
+          arbetsytan och fäst det under "vid körning"-blocket.
+        MC_HOC_2017_01_RETRY_b: Glöm inte att klicka på "Kör" för att köra agentens
+          kod.
+        MC_HOC_2017_01_RETRY_c: När agenten har kört sin kod kan du styra spelaren
+          med piltangenterna!
+      MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Flytta agenten två rutor framåt så att den står på
+          tryckplattan.  Det öppnar dörren åt spelaren.
+        MC_HOC_2017_02_Cole_b: "Tryck på \"Kör\"! \nDu kan köra koden även om den
+          inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad
+          som går fel."
+        MC_HOC_2017_02_Cole_c: När agenten har öppnat dörren kan du använda piltangenterna
+          för att styra spelaren till kartan!
+      MC_HOC_2017_02_Cole_2019_authored_hint:
+        MC_HOC_2017_02_Cole_a: Flytta agenten två rutor framåt så att den står på
+          tryckplattan.  Det öppnar dörren åt spelaren.
+        MC_HOC_2017_02_Cole_b: "Tryck på \"Kör\"! \nDu kan köra koden även om den
+          inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad
+          som går fel."
+        MC_HOC_2017_02_Cole_c: När agenten har öppnat dörren kan du använda piltangenterna
+          för att styra spelaren till kartan!
+      MC_HOC_2017_02_Will_authored_hint:
+        MC_HOC_2017_02_Cole_a: Flytta agenten två rutor framåt så att den står på
+          tryckplattan.  Det öppnar dörren åt spelaren.
+        MC_HOC_2017_02_Cole_b: "Tryck på \"Kör agent\"! \nDu kan köra koden även om
+          den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår
+          vad som går fel."
+        MC_HOC_2017_02_Cole_c: När agenten har öppnat dörren kan du använda piltangenterna
+          för att styra spelaren till den orangefärgade rutan.
+      MC_HOC_2017_03_Cole_authored_hint:
+        MC_HOC_2017_03_Cole_a: När agenten står på tryckplattan kan du använda piltangenterna
+          för att styra spelaren till kompassen!
+        MC_HOC_2017_03_Cole_b: Verkar koden lite för lång?  Använd "upprepa"-loopar
+          och se om du kan korta ned koden!
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_a: När agenten står på tryckplattan kan du använda piltangenterna
+          för att styra spelaren till kompassen!
+        MC_HOC_2017_03_Cole_b: Verkar koden lite för lång?  Använd "upprepa"-loopar
+          och se om du kan korta ned koden!
+      MC_HOC_2017_04POINT5_Cole_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: "Genom att passera de två tryckplattorna öppnas
+          vägen för spelaren. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
+      MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Använd "sväng vänster"-blocket för att vända
+          på agenten. '
+        MC_HOC_2017_04POINT5_RYAN_a: Agenten behöver bara ta sig till den första tryckplattan
+          för att släppa förbi Alex eller Steve till yxan.
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Använd "sväng vänster"-blocket för att vända
+          på agenten. '
+        MC_HOC_2017_04POINT5_RYAN_a: Agenten behöver bara ta sig till den första tryckplattan
+          för att släppa förbi Alex eller Steve till yxan.
+      MC_HOC_2017_04_Cole_authored_hint:
+        MC_HOC_2017_04_Cole_a: Agenten måste "gå framåt" 7 gånger.  Hur kan du använda
+          en "upprepa"-loop för att få det att hända?
+        MC_HOC_2017_04_Cole_c: "Tryck på \"Kör\"! \nDu kan köra koden även om den
+          inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad
+          som går fel."
+        MC_HOC_2017_04_Cole_b: När agenten når tryckplattan öppnar han dörren åt spelaren.
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_a: Agenten måste "gå framåt" 7 gånger.  Hur kan du använda
+          en "upprepa"-loop för att få det att hända?
+        MC_HOC_2017_04_Cole_c: "Tryck på \"Kör\"! \nDu kan köra koden även om den
+          inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad
+          som går fel."
+        MC_HOC_2017_04_Cole_b: När agenten når tryckplattan öppnar han dörren åt spelaren.
+      MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Visste du att man kan ha mer än ett kodblock i en loop?
+          Prova att sätta en planka **och** "gå framåt" inuti "upprepa" för att klara
+          av det här pusslet.
+      MC_HOC_2017_05_Cole_2019_authored_hint:
+        MC_HOC_2017_05_Cole_a: Visste du att man kan ha mer än ett kodblock i en loop?
+          Prova att sätta en planka **och** "gå framåt" inuti "upprepa" för att klara
+          av det här pusslet.
+      MC_HOC_2017_05_Josh_authored_hint:
+        MC_HOC_2017_05_Cole_a: Visste du att man kan ha mer än ett kodblock i en loop?  Prova
+          att sätta en planka **och** "gå framåt" inuti "upprepa" för att klara av
+          det här pusslet.
+      MC_HOC_2017_06_Cole_authored_hint:
+        MC_HOC_2017_06_Cole_a: Hur många gånger körs den här loopen?  Hur många gånger
+          *ska* den köras?
+      MC_HOC_2017_06_Cole_2019_authored_hint:
+        MC_HOC_2017_06_Cole_a: Hur många gånger körs den här loopen?  Hur många gånger
+          *ska* den köras?
+      MC_HOC_2017_06_Josh_authored_hint:
+        MC_HOC_2017_06_Cole_a: Prova att ha mer än en instruktion i en "upprepa"-loop!
+      MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_a: För att lösa det här pusslet måste du klura ut vad
+          "rensa väg"-funktionen gör och använda den så många gånger som nödvändigt
+          med det lilla gröna "rensa väg"-blocket i verktygslådan.
+        MC_HOC_2017_07_Cole_b: Prova att blanda funktionsblock med andra block från
+          verktygslådan för att lösa det här pusslet.
+      MC_HOC_2017_07_Cole_2019_authored_hint:
+        MC_HOC_2017_07_Cole_a: För att lösa det här pusslet måste du klura ut vad
+          "rensa väg"-funktionen gör och använda den så många gånger som nödvändigt
+          med det lilla gröna "rensa väg"-blocket i verktygslådan.
+        MC_HOC_2017_07_Cole_b: Prova att blanda funktionsblock med andra block från
+          verktygslådan för att lösa det här pusslet.
+      MC_HOC_2017_08_RY_authored_hint:
+        MC_HOC_2017_08_RY_a: "Tryck på \"Kör agent\"! \nDu kan köra koden även om
+          den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår
+          vad som går fel."
+        MC_HOC_2017_08_RY_b: Det finns MÅNGA sätt att lösa det här pusslet. Prova
+          dig fram!
+      MC_HOC_2017_08_Will_authored_hint:
+        MC_HOC_2017_08_RY_a: "Tryck på \"Kör agent\"! \nDu kan köra koden även om
+          den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår
+          vad som går fel."
+        MC_HOC_2017_08_RY_b: Det finns MÅNGA sätt att lösa det här pusslet. Prova
+          dig fram!
+      MC_HOC_2017_10_Cole_authored_hint:
+        MC_HOC_2017_10_Cole_a: Använd funktioner för att lösa det här pusslet enklare!
+      MC_HOC_2017_10_RETRY_authored_hint:
+        MC_HOC_2017_10_Cole_a: Använd funktioner för att lösa det här pusslet enklare!
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_a: Använd funktioner för att lösa det här pusslet enklare!
+      MC_HOC_2017_13_Cole_authored_hint:
+        MC_HOC_2017_13_Cole_a: Se om du kan få agenten att bygga några broar så att
+          Alex eller Steve kan gå bortom kartans kanter.
+      MC_HOC_2017_4.5v2_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: "Genom att passera de två tryckplattorna öppnas
+          vägen för spelaren. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
+      MC_HOC_2017_Ali_authored_hint:
+        MC_HOC_2017_08_RY_a: "Tryck på \"Kör\"! \nDu kan köra koden även om den inte
+          stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som
+          går fel."
+        MC_HOC_2017_08_RY_b: Det finns MÅNGA sätt att lösa det här pusslet. Prova
+          dig fram!
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: "Tryck på \"Kör\"! \nDu kan köra koden även om den inte
+          stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som
+          går fel."
+        MC_HOC_2017_08_RY_b: Det finns MÅNGA sätt att lösa det här pusslet. Prova
+          dig fram!
+      MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Se om du kan få agenten att bygga några broar så att
+          Alex eller Steve kan gå bortom kartans kanter.
+      MC_HOC_2017_FP20x20_2019_authored_hint:
+        MC_HOC_2017_13_Cole_a: Se om du kan få agenten att bygga några broar så att
+          Alex eller Steve kan gå bortom kartans kanter.
+      New Minecraft Hero Project_authored_hint:
+        MC_HOC_2017_13_Cole_a: Se om du kan få agenten att bygga några broar så att
+          Alex eller Steve kan gå bortom kartans kanter.
+      courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2a_2018_authored_hint:
+        '1': Snap both `East` blocks to the bottom of the `when run` block.
+      courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5a_2018_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have
+          been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
+          try something else!
+      courseB_Scrat_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_maze_seq8_authored_hint:
+        courseB_maze_seq8_b: Det finns två sätt att lösa detta pussel!
+      courseB_maze_seq8_2018_authored_hint:
+        courseB_maze_seq8_b: Det finns två sätt att lösa detta pussel!
+      courseC_maze_programming6_authored_hint:
+        courseC_maze_programming6_a: Det finns två sätt att lösa detta pussel!
+      courseC_maze_programming6_2018_authored_hint:
+        courseC_maze_programming6_a: Det finns två sätt att lösa detta pussel!
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: Det finns två sätt att lösa detta pussel!
+      courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_maze_ramp6_authored_hint:
+        courseC_maze_programming6_a: Det finns två sätt att lösa detta pussel!
+      courseD_scrat_ramp7_authored_hint:
+        courseD_scrat_programming6_a: Det finns två sätt att lösa detta pussel!
+      courseD_scrat_ramp7_2018_authored_hint:
+        courseD_scrat_programming6_a: Det finns två sätt att lösa detta pussel!
+      courseE_artist_functions1_authored_hint:
+        courseE_artist_functions1_a: Rutorna varje har 100 pixel sidor, det betyder
+          att du kommer att behöva flytta framåt 175 pixlar innan du ritar din andra
+          torget.
+      courseE_artist_functions1_2018_authored_hint:
+        courseE_artist_functions1_a: Rutorna varje har 100 pixel sidor, det betyder
+          att du kommer att behöva flytta framåt 175 pixlar innan du ritar din andra
+          torget.
+      courseE_maze_ramp6_authored_hint:
+        courseC_maze_programming6_a: Det finns två sätt att lösa detta pussel!
+      courseE_maze_ramp6_2018_authored_hint:
+        courseC_maze_programming6_a: Det finns två sätt att lösa detta pussel!
+      courseF_maze_ramp6_authored_hint:
+        courseF_maze_ramp6_a: Det finns två sätt att lösa detta pussel!
+      courseF_maze_ramp6_2018_authored_hint:
+        courseF_maze_ramp6_a: Det finns två sätt att lösa detta pussel!
+      grade2_CaringForNewPet_4_authored_hint:
+        2-3_Maze_6_a: Det finns två sätt att lösa detta pussel!
+      grade2_PuppyLoops_8_authored_hint:
+        2-3_Artist_Debugging_2_a: 'Tips: Varje morrhår är 75 pixlar lång.'
+      grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: Du bör ha 6 block inuti din slinga.
+      grade4_arist_nested_loop_triangles6_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
+      grade4_artist_functions1_authored_hint:
+        2-3_Artist_Functions_1_a: Rutorna varje har 100 pixel sidor, det betyder att
+          du kommer att behöva flytta framåt 175 pixlar innan du ritar din andra torget.
+      grade4_artist_nested_loop_triangles6_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
+      grade4_review_bee2_authored_hint:
+        2-3_Bee_Loops_3_a: Du bör ha 6 block inuti din slinga.
+      level 'grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: Du bör ha 6 block inuti din slinga.

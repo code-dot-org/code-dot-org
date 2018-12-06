@@ -1,0 +1,204 @@
+fa:
+  data:
+    callouts:
+      CSD U6 tugowar variables 3_callout:
+        CSD_U6_checkWin: چک کن که بازیکن برنده شده است
+      CSD U6 tugowar variables 3_2018_callout:
+        CSD_U6_checkWin: چک کن که بازیکن برنده شده است
+      Course 4 Artist 4_callout:
+        repeat_full_circle: تعداد دفعاتی که زامبی باید حرکت کند تا یک دایره کامل بسازد را وارد کنید
+      Course 4 Artist 7_callout:
+        repeat_blocks: از بلوک "repeat" استفاده کنید و آن را دور بلوک های موجود در فضای کار بپیچید
+      Course 4 Artist For Loops 4_callout:
+        place_counter_variable: شمارنده ی متغیر خود را به داخل این بلوک بکشید
+      Course 4 Artist Functions 4_callout:
+        create_function: برای باز کردن منوی " تابع ها" اینجا را کلیک کنید، سپس دکمه ی "یک تابع بساز" را کلیک کنید.
+      Course 4 Artist Functions 5 OLD_callout:
+        house_hint: اشکالی ندارد اگر تصویر هنوز مثل یک خانه به نظر نمی رسد. در معمای بعدی درستش می کنیم.
+      Course 4 Artist Functions 8_callout:
+        edit_function: اینجا را کلیک کنید تا تابع خود را ویرایش کنید.
+      Course 4 Artist Params 2_callout:
+        length_parameter: می توانید این تابع را به روز کنید به طوری که از ورودی "طول" استفاده کند?
+      Course 4 Artist Params 4_callout:
+        create_function: برای باز کردن منوی " تابع ها" اینجا را کلیک کنید، سپس دکمه ی "یک تابع بساز" را کلیک کنید.
+      Course 4 Artist Vars 1_callout:
+        repeat_blocks: از بلوک "repeat" استفاده کنید و آن را دور بلوک های موجود در فضای کار بپیچید
+      Course 4 Artist Vars 10_callout:
+        set_sides: از این بلوک برای تنظیم اضلاع به تعداد مورد نیاز برای حل معما استفاده کنید.
+      Course 4 Artist Vars 12_callout:
+        set_length: از این بلوک برای تنظیم "طول" به میزان درست استفاده کنید.
+      Course 4 Artist Vars 2_callout:
+        set_length: از این بلوک برای تنظیم "طول" به میزان درست استفاده کنید.
+      Course 4 Artist Vars 3_callout:
+        place_variable: متغیر خود را به داخل این بلوک بکشید
+      Course 4 Artist Vars 6_callout:
+        degrees_per_side: 360 را بر تعداد اضلاع تقسیم کنید تا اندازه ی هر زاویه را به درجه بدست آورید.
+      Course 4 Artist Vars 9_callout:
+        set_sides: از این بلوک برای تنظیم اضلاع به تعداد مورد نیاز برای حل معما استفاده کنید.
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: از بلوک جدید "شهد را بگیر" استفاده کن.
+      Course 4 Bee For Loops 6_callout:
+        actions_category: جعبه ابزار قیافه ی جدیدی پیدا کرده! بلوک های "کارها" حالا اینجا هستند.
+      Course 4 Bee Params 2_callout:
+        edit_get_nectar: از این دکمه برای ویرایش تابع استفاده کنید و جهتی که زنبور برای گرفتن شهد می چرخد را تغییر دهید.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: '"اجرا" را بزن تا برنامه‌ات اجرا بشه'
+      Course 4 Maze 4_callout:
+        repeat: برای تکرار دستورات بلوک ها را داخل حلقه قرار دهید
+      Course 4 Play Lab Params 3_callout:
+        edit_function: اینجا را کلیک کنید تا تابع خود را ویرایش کنید.
+      Course 4 Play Lab Params 6_callout:
+        edit_add_parameter: برای افزودن یک پارامتر به عملکرد تان ویرایش را کلیک کنید
+      Course 4 Play Lab Vars 1_callout:
+        arrows_move_actor: استفاده از فلش برای حرکت بازیگر
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: استفاده از فلش برای حرکت بازیگر
+      Eval Design Recipe .1_callout:
+        edit_function: اینجا را کلیک کنید تا تابع خود را ویرایش کنید.
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: از این منوی کشویی برای ساختن دانه های برف متفاوت استفاده کنید!
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: از این منوی کشویی برای ساختن دانه های برف متفاوت استفاده کنید!
+      Infinity_move_collide_callout:
+        Infinity_move_collide_callout: پخش صدا هنگامی که این رویداد رخ می دهد.
+      Infinity_move_directions_callout:
+        Infinity_move_directions_callout: وقتی فلش بالا فشرده میشود کدام بلوک بایمکس را به بالا حرکت میدهد؟
+        Infinity_move_directions_callout_arrow: برای هدایت کردن از این فلش ها استفاده کنید
+      Infinity_move_right_callout:
+        Infinity_move_right_runbutton: افزودن بلوک حرکت در اینجا
+      Infinity_repeat_callout:
+        Infinity_repeat_callout: بلوک های حرکت را داخل اینجا قرار دهید
+      NEW Course 4 Artist Functions 5_callout:
+        edit_function: اینجا را کلیک کنید تا تابع خود را ویرایش کنید.
+        function_editor_draw_square: این تعریف تابع شماست. این بلوک ها هر زمان که از بلوک "کشیدن یک میدان" استفاده کنید، اجرا میشوند
+      NEW Course 4 Artist Functions 7_callout:
+        edit_function: اینجا را کلیک کنید تا تابع خود را ویرایش کنید.
+      NEW Course 4 Artist Functions 8_callout:
+        edit_function: اینجا را کلیک کنید تا تابع خود را ویرایش کنید.
+      NEW Course 4 Artist Params 10_callout:
+        create_function: برای باز کردن منوی " تابع ها" اینجا را کلیک کنید، سپس دکمه ی "یک تابع بساز" را کلیک کنید.
+      NEW Course 4 Artist Params 9_callout:
+        edit_add_parameter: برای افزودن یک پارامتر به عملکرد تان ویرایش را کلیک کنید
+        add_and_drag_parameter: نام پارامتر خود را اینجا بنویسید، روی افزودن کلیک کرده، و سپس آنرا به تعریف عملکرد تان بکشید
+      NEW Course 4 Artist Vars 6_callout:
+        place_length_variable: برای جابجایی علامت سوال طول متغیر را به اینجا بکشید
+      NEW Course 4 Bee For Loops 5_callout:
+        actions_category: جعبه ابزار قیافه ی جدیدی پیدا کرده! بلوک های "کارها" حالا اینجا هستند.
+      New Frozen Project_callout:
+        snowflake_dropdown: از این منوی کشویی برای ساختن دانه های برف متفاوت استفاده کنید!
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: '"اجرا" را بزن تا برنامه‌ات اجرا بشه'
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: '"اجرا" را بزن تا برنامه‌ات اجرا بشه'
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: '"اجرا" را بزن تا برنامه‌ات اجرا بشه'
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: این کد برای گدازه (مواد مذاب) بررسی خواهد شد، می توانید برای حرکت به جلو یک دستور اضافه کنید؟
+      Underground Avoiding Lava_2018_callout:
+        craft_callout_moveforward: این کد برای گدازه (مواد مذاب) بررسی خواهد شد، می توانید برای حرکت به جلو یک دستور اضافه کنید؟
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: این کد برای گدازه (مواد مذاب) بررسی خواهد شد، می توانید برای حرکت به جلو یک دستور اضافه کنید؟
+      Underground Iron_callout:
+        craft_what_is_iron: این آهن را استخراج کنید!
+      Underground Iron_2018_callout:
+        craft_what_is_iron: این آهن را استخراج کنید!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: این آهن را استخراج کنید!
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: استفاده از بلوک "ایجاد یک دایره" و تغییر سایز.
+      frozen cross rotate_callout:
+        replace_questions_degree: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      frozen cross rotate_b_callout:
+        replace_questions_degree: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      frozen cross rotate_test_callout:
+        replace_questions_degree: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      frozen cross_callout:
+        repeat_blocks_1: "(1) از این بلوک استفاده کنید و آن را دور بلوک های خاکستری در فضای کار بگذارید"
+        repeat_blocks_2: (2) بلوک "Repeat" را به اینجا حرکت دهید، و بلوک های خاکستری را داخلش قرار دهید
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: از بلوک تکرار برای ایجاد این شکل استفاده کنید.
+      frozen diamond_callout:
+        frozen_diamond_repeat: از بلوک تکرار برای ایجاد این شکل استفاده کنید.
+      frozen freeplay_callout:
+        snowflake_dropdown: از این منوی کشویی برای ساختن دانه های برف متفاوت استفاده کنید!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: از این منوی کشویی برای ساختن دانه های برف متفاوت استفاده کنید!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: از این منوی کشویی برای ساختن دانه های برف متفاوت استفاده کنید!
+      frozen line_callout:
+        move_elsa_forward: یک بلوک "move forward" را بکشید و آن را زیر بلوک "when run" بیندازید تا السا را به جلو حرکت دهید
+      frozen line_b_callout:
+        move_elsa_forward: یک بلوک "move forward" را بکشید و آن را زیر بلوک "when run" بیندازید تا السا را به جلو حرکت دهید
+      frozen line_test_callout:
+        move_elsa_forward: یک بلوک "move forward" را بکشید و آن را زیر بلوک "when run" بیندازید تا السا را به جلو حرکت دهید
+      frozen perpendicular_callout:
+        turn_elsa: از بلوک "Turn" برای چرخاندن السا استفاده کنید. شماره ی منوی کشویی تعیین می کند که السا چقدر می چرخد
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: استفاده از بلوک "ایجاد شعبه برف ریزه"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: استفاده از بلوک "ایجاد شعبه برف ریزه"
+      frozen square iterative_callout:
+        frozen_create_square: برای ایجاد میدان بلوک های بیشتری اینجا پیوست کنید
+      frozen square iterative_b_callout:
+        frozen_create_square: برای ایجاد میدان بلوک های بیشتری اینجا پیوست کنید
+      frozen square iterative_test_callout:
+        frozen_create_square: برای ایجاد میدان بلوک های بیشتری اینجا پیوست کنید
+      frozen square loop 3x_callout:
+        replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      frozen square loop 3x_b_callout:
+        replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      frozen square loop 3x_test_callout:
+        replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      frozen square loop_callout:
+        replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      frozen square loop_b_callout:
+        replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      frozen square loop_test_callout:
+        replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      frozen square snowflake_callout:
+        replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      frozen square snowflake_b_callout:
+        replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      frozen square snowflake_test_callout:
+        replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      grade4_artist_parameters_squares1_callout:
+        edit_add_parameter: برای افزودن یک پارامتر به عملکرد تان ویرایش را کلیک کنید
+        add_and_drag_parameter: نام پارامتر خود را اینجا بنویسید، روی افزودن کلیک کرده، و سپس آنرا به تعریف عملکرد تان بکشید
+      grade4_frozen_freeplay_callout:
+        snowflake_dropdown: از این منوی کشویی برای ساختن دانه های برف متفاوت استفاده کنید!
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: استفاده از بلوک "ایجاد یک دایره" و تغییر سایز.
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: از بلوک تکرار برای ایجاد این شکل استفاده کنید.
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: از بلوک تکرار برای ایجاد این شکل استفاده کنید.
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: از بلوک تکرار برای ایجاد این شکل استفاده کنید.
+      grade4_frozen_square_callout:
+        replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      grade4_frozen_square_loop1_callout:
+        replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      grade4_frozen_square_loop2_callout:
+        replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      grade4_frozen_square_loop3_callout:
+        replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      grade5_artist_parameters_squares1_callout:
+        edit_add_parameter: برای افزودن یک پارامتر به عملکرد تان ویرایش را کلیک کنید
+        add_and_drag_parameter: نام پارامتر خود را اینجا بنویسید، روی افزودن کلیک کرده، و سپس آنرا به تعریف عملکرد تان بکشید
+      grade5_artist_parameters_triangles1aa_callout:
+        edit_add_parameter: برای افزودن یک پارامتر به عملکرد تان ویرایش را کلیک کنید
+        add_and_drag_parameter: نام پارامتر خود را اینجا بنویسید، روی افزودن کلیک کرده، و سپس آنرا به تعریف عملکرد تان بکشید
+      grade5_artist_variables_pentagons1_callout:
+        place_length_variable: برای جابجایی علامت سوال طول متغیر را به اینجا بکشید
+      grade5_artist_variables_pentagons12_callout:
+        set_length: از این بلوک برای تنظیم "طول" به میزان درست استفاده کنید.
+      grade5_artist_variables_square7_callout:
+        degrees_per_side: 360 را بر تعداد اضلاع تقسیم کنید تا اندازه ی هر زاویه را به درجه بدست آورید.
+      grade5_artist_variables_triangles2_callout:
+        set_length: از این بلوک برای تنظیم "طول" به میزان درست استفاده کنید.
+      grade5_playlab_variables1_callout:
+        arrows_move_actor: استفاده از فلش برای حرکت بازیگر
+      grade5_playlab_variables11_callout:
+        edit_add_parameter: برای افزودن یک پارامتر به عملکرد تان ویرایش را کلیک کنید
+      grade5_playlab_variables1ask_callout:
+        arrows_move_actor: استفاده از فلش برای حرکت بازیگر

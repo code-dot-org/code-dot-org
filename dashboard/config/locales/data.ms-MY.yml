@@ -1,0 +1,193 @@
+---
+ms:
+  data:
+    game:
+      name:
+        Unplug1: Pengenalan kepada Sains komputer
+        Maze: Simpang Siur
+        Unplug2: Pengiraan pemikiran
+        Unplug3: Pengaturcaraan kertas graf
+        Artist: Pelukis
+        Unplug4: Algoritma
+        Artist2: Artis 2
+        Unplug5: Fungsi
+        Farmer: Petani
+        Unplug6: Bersyarat
+        Artist3: Artis 3
+        Unplug7: Lagu
+        Farmer2: Petani 2
+        Unplug8: Abstraksi
+        Artist4: Artis 4
+        Unplug9: Pengaturcaraan penyampai
+        Farmer3: Petani 3
+        Unplug10: Internet
+        Artist5: Artis 5
+        Unplug11: Wrap-up
+        MazeEC: Simpang Siur
+        Bounce: Lantunan
+        ArtistEC: Pelukis
+        TextMatch: Padanan Teks
+    trophy:
+      name:
+        Bronze: Gangsa
+        Silver: Perak
+        Gold: Emas
+    concept:
+      description:
+        sequence: Urutan
+        if: Jika blok
+        if_else: Blok (if/else)
+        loop_times: Mengulangi masa blok
+        loop_until: Ulangi sehingga blok
+        loop_while: Sementara blok
+        loop_for: Kaunter blok
+        function: Fungsi
+        parameters: Fungsi-fungsi dengan parameter
+    level:
+      instructions:
+        maze_2_6: Cuba bawa saya ke penceroboh hijau dengan hanya menggunakan tiga
+          blok.
+        maze_2_12: OK, ini adalah sama, tetapi berbeza sedikit. Boleh lakukannya hanya
+          dengan 5 blok?
+        turtle_1_4: 'Lukis segi tiga yang berlainan warna, dengan menggunakan pilihan
+          "warna rawak" yang mengambil warna yang berlainan setiap kali. Petunjuk:
+          anda akan mengenalpasti sejauh manakah untuk membelok dengan mengklik nombor
+          dalam blok belok.'
+        turtle_1_5: Sekarang, untuk latihan, lukis segi tiga dan kemudian segi empat
+          untuk melukis sampul surat.
+        turtle_1_6: 'Bolehkah anda mengenal pasti bagaimana untuk melukis segi tiga
+          dan segi empat? Petunjuk: Pertama, buat segi tiga, kemudian kenal pasti
+          berapa kali untuk membelok sebelum melukis segi empat.'
+        turtle_1_7: Ok, mari kita buat yang lebih sukar - lihat jika anda boleh lukis
+          gelas hijau. Segi empat ini adalah 100 piksel di setiap sisi, dan terpisah
+          50 piksel. Jangan lupa untuk lukis dengan warna hijau!
+        turtle_1_8: OK, fahamkan apa yang akan berlaku jika anda menjalankan kod ini
+          (atau tekan "Main" untuk mencuba). Kemudian, ulangi dengan mencukupi masa
+          untuk menyiapkan lukisan. Warna akan berbeza setiap kali.
+        turtle_1_9: Bolehkah anda memikirkan apa nombor untuk menggantikan tanda soal
+          untuk melukis bulatan?
+        turtle_1_10: 'Anda berjaya! Sekarang, lukis apa sahaja yang anda mahu. Antara
+          idea yang menyeronokkan: rajah kayu, snowman atau lingkaran. Juga, cuba
+          blok baru "set lebar". selamat bergembira!'
+        turtle_4_4: 'Berikut adalah kod yang sama dari teka-teki yang sebelumnya,
+          tetapi dipusing hanya 36 darjah selepas melukis setiap segitiga. Berapa
+          kalikah ini perlu diulang? (Pembayang: selepas pusingan sebanyak 360 darjah,
+          lukisan akan menjadi bulatan penuh)'
+        turtle_4_5: 'Berikut adalah kod yang sama dari teka-teki yang sebelumnya,
+          tetapi diulangi pusingan sebanyak 36 kali. Berapakah darjah yang sepatutnya
+          bagi pusingan-pusingan itu? (Pembayang: selepas pusingan sebanyak 360 darjah,
+          lukisan akan menjadi bulatan penuh)'
+        turtle_4_8: Berikut adalah penyelesaian kepada teka-teki yang sebelumnya.
+          Boleh anda menambah hanya 2 lagi blok untuk menyiapkan lukisan?
+        turtle_4_9: Berikut adalah penyelesaian kepada teka-teki yang sebelumnya.
+          Berapa darjah yang perlu anda putarkan untuk menyiapkan lukisan? (Anda mungkin
+          perlu untuk meneka beberapa kali)
+        turtle_4_10: Berikut adalah penyelesaian kepada teka-teki yang sebelumnya.
+          Berapa kali anda harus ulang untuk menyiapkan lukisan?
+        maze_karel_1_1: Hai, saya ialah farmer. Saya perlukan pertolongan anda untuk
+          meratakan kawasan kebun saya supaya sedia untuk penanaman. Gerakkan saya
+          ke timbunan kotor dan gunakan "alihkan" blok utuk mengalihkannya.
+        maze_karel_1_2: Seterusnya, pindahkan saya ke lubang dan isi dengan DUA  penggali
+          kotoran, menggunakan blok "isi".
+        maze_karel_1_3: Pindahkan saya ke longgokan kotoran dan beritahu saya berapa
+          banyak penggali untuk mengalih keluar menggunakan blok-blok yang sedikit
+          mungkin.
+        maze_karel_1_4: 'Bolehkan anda membantu saya untuk membuang kesemua empat
+          longgokan kotor? Petunjuk: guna blok berulang jika boleh.'
+        maze_karel_1_5: 'Bantu saya untuk memasukkan kesemua lubang dengan 5 penggali
+          kotoran. Petunjuk: anda boleh meletakkan blok "berulang" dalam blok "sementara".'
+        maze_karel_1_6: Alihkan semua timbunan kotoran, gunakan blok yang sedikit
+          yang mungkin. Pilihan baru dalam menu dropdown di blok "manakala" beritahu
+          saya jika saya sedang berdiri di atas longgokan atau lubang.
+        maze_karel_1_7: Wow, saya mendapati lubang yang benar-benar dalam! Saya tidak
+          tahu berapa banyak penggali kotoran yang diperlukan. Bolehkah anda menulis
+          aturcara yang mengisinya sehingga dipenuhi tanah?
+        maze_karel_1_8: Bantu saya untuk mengisi lubang di hujung lapangan, gunakan
+          blok sedikit yang mungkin.
+        maze_karel_1_10: Saya lambat bekerja, semuanya gelap, dan saya tidak dapat
+          beritahu berapa besar longgokan itu. Sekarang saya tidak ada pilihan yang
+          boleh saya gunakan untuk blok semasa. Gerakkan saya sepanjang lapangan,
+          dan jika terdapat longgokan, alihkan.
+        maze_karel_1_11: 'Ianya masih gelap di luar. Gerakkan saya sepanjang lapangan.
+          Jika terdapat longgokan, keluarkan ia, dan jika ada lubang, timbuskan ia.
+          Petunjuk: gunakan menu dropdown dari pilihan di blok "Jika".'
+        turtle_2_1: 'Hello. Saya artis zombie. Saya suka melukis! Bantu saya lukis
+          segi empat dengan warna khas. Nota penting: anda mempunyai semua blok sama
+          tetapi mereka kini telah telah diaturkan dalam kategori.'
+        turtle_2_2: Selamat menggunakan fungsi, yang akan membolehkan anda mengenalpasti
+          blok baru! Cuba blok baru "lukis segi empat", yang terdapat di kategori
+          "fungsi" untuk melukis segi empat 50x50 hijau yang kecil.
+        turtle_2_3: Gunakan blok "ulang" (dalam kategori "Gelung") untuk melukis 3
+          segi empat bersaiz 100, setiap pisahan 120 darjah. Buat dalam 3 warna rawak
+          yang berbeza.
+        turtle_2_4: 'Sekarang kita akan dapat berseronok. Ubah kod untuk lukis 36
+          petak, 100 piksel lebar dan setiap 10 darjah berasingan. Petunjuk: anda
+          mungkin ingin menggunakan penggelongsor untuk membuat saya pergi dengan
+          lebih cepat.'
+        turtle_2_5: Lukis segi empat dengan sisi 50, 60, 70, 80, dan 90 pikse. Anda
+          perlu gunakan fungsi "lukis segi empat" lima kali.
+        turtle_2_6: 'Ok, aturcara ini akan menggunakan kaunter, untuk melukis segi
+          empat sama sebagai kali terakhir. Anda ingin segi empat untuk menjadi saiz
+          yang sama sebagai kaunter, jadi gunakan blok "kaunter". Petunjuk: Ianya
+          dalam kategori pembolehubah.'
+        turtle_2_7: Sini terdapat aturcara untuk melukis satu lingkaran, tetapi blok
+          telah dinyahaktif jadi ianya tidak dapat dijalankan. Buat satu aturcara
+          baru menggunakan "kira dengan" blok (dalam kategori gelung) dan blok "kaunter"
+          (dalam kategori Pembolehubah) untuk melukis lingakaran sama.
+        turtle_2_7_5: Terdapat fungsi baru "lukis satu snowman" (dalam kategori Fungsi).
+          Lukis dua snowmen, berketinggian 250 dan 100.
+        turtle_2_8: Satu helah ini agak rumit. Guna fungsi "lukis satu snowman" dan
+          blok "maju depan" baru (dalam kategori Tindakan). Lukis 3 snowmen dalam
+          warna berbeza, 100 piksel terpisah.
+        turtle_2_9: Gunakan gelung "kira dengan" baru untuk melukis keluarga snowman
+          dengan ketinggian 110, 100, 90, 80, dan 70. Semua snowman perlu 60 piksel
+          terpisah.
+        turtle_2_10: Berikut merupakan beberapa kod untuk cubaan eksperimen dengan
+          lingkaran berbeza. Apa akan terjadi jika anda mengubah pilin yang berbeza.
+          Atau set satu warna rawak dalam gelung? Lukis apa jua yang anda suka.
+        maze_karel_2_1: 'Cuba gunakan blok untuk membantu saya alihkan kesemua longgokan
+          dan penuhkan ke dalam lubang di tanah. Cuba gunakan gelung berbanding menggunakan
+          terlalu banyak blok. Hint: anda boleh simpan gelung dalam gelung lain.'
+        maze_karel_2_8: Guna fungsi baru ini, "Elak daripada lembu dan buangkan 1",
+          untuk membantu saya membuang semua timbunan.
+        maze_karel_debug_while: Bagaimanakah anda mengubah program ini untuk membantu
+          saya mengisi lubang?
+    video:
+      name:
+        maze_intro: Maze Intro
+        artist_intro: Intro artis
+        farmer_intro: Intro petani
+        if: Jika blok
+        if_else: Jika/lain blok
+        if_else_scrat: Jika/lain blok
+        function: Fungsi
+        Unplug2: Pengiraan pemikiran
+        Unplug3: Pengaturcaraan kertas graf
+        Unplug4: Algoritma
+        Unplug5: Fungsi
+        Unplug6: Bersyarat
+        Unplug8: Abstraksi
+        Unplug10: Internet
+        Unplug11: Wrap-up
+        C1_happy_maps_unplugged: Peta-peta Gembira
+        C1_artist_intro: Intro artis
+        C2_maze_intro: Maze Intro
+        C2_artist_intro: Intro artis
+        C2_artist_loops: Pusingan Artis
+        C2_artist_debugging: Pelukis Debugging
+        C2_bee_conditionals: Lebah Bersyarat
+        C2_graph_paper: Pengaturcaraan kertas graf
+        C2_conditionals_with_cards: Bersyarat
+        C2_relay_programming: Pengaturcaraan penyampai
+        C3_artist_intro: Intro artis
+        C3_artist_functions: Fungsi-fungsi Artis
+        C3_bee_conditionals: Lebah Bersyarat
+        C3_bounce: Lantunan
+        C3_computational_thinking: Pengiraan pemikiran
+        C3_dice_race: Perlumbaan Dadu
+        C3_internet: Internet
+        C4_loops_zombie: Gelung
+        C4_bee_conditional: Lebah Bersyarat
+        C4_conditionals: Bersyarat
+        csp_applab_loops: Gelung
+        CSF_loops_AB: Gelung

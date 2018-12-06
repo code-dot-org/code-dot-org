@@ -1,0 +1,95 @@
+---
+pl:
+  devise:
+    confirmations:
+      confirmed: Twój adres e-mail został pomyślnie potwierdzony.
+      send_instructions: Otrzymasz e-maila z instrukcjami, jak potwierdzić konto w
+        ciągu najbliższych kilku minut.
+      send_paranoid_instructions: Jeśli Twój adres e-mail istnieje w naszej bazie
+        danych, to otrzymasz e-mail z instrukcjami, jak potwierdzić swoje konto w
+        ciągu kilku najbliższych minut.
+    failure:
+      already_authenticated: Jesteś już zalogowany.
+      inactive: Twoje konto nie zostało jeszcze aktywowane.
+      invalid: Nieprawidłowy adres e-mail lub hasło.
+      invalid_token: Nieprawidłowy token uwierzytelnienia.
+      locked: Twoje konto jest zablokowane.
+      not_found_in_database: Nieprawidłowy adres e-mail lub hasło.
+      timeout: Twoja sesja wygasła, Proszę zaloguj się ponownie, aby kontynuować.
+      unauthenticated: Musisz się zalogować lub zarejestrować, aby kontynuować.
+      unconfirmed: Musisz potwierdzić swoje konto przed kontynuowaniem.
+    mailer:
+      confirmation_instructions:
+        subject: instrukcje potwierdzenia Code.org
+      reset_password_instructions:
+        subject: instrukcje resetowania hasła Code.org
+      unlock_instructions:
+        subject: Instrukcje odblokowania
+    omniauth_callbacks:
+      failure: Nie można uwierzytelnić Ciebie z %{kind} ponieważ "%{reason}".
+      success: Pomyślnie uwierzytelniono z konta %{kind}.
+    passwords:
+      no_token: Nie masz dostępu do tej strony, jeżeli nie wchodzisz tu z linku służącego
+        do resetowania hasła. Jeżeli wchodzisz z linku z wiadomości resetowania hasła,
+        upewnij się, że wpisałeś pełen adres URL.
+      send_instructions: Wkrótce otrzymasz wiadomość e-mail z instrukcją resetowania
+        hasła.
+      send_paranoid_instructions: Jeśli twój adres e-mail istnieje w naszej bazie
+        danych, to wkrótce otrzymasz wiadomość z linkiem do odzyskiwania hasła.
+      updated: Twoje hasło zostało zmienione. Jesteś teraz zalogowany.
+      updated_not_active: Twoje hasło zostało zmienione.
+    registrations:
+      destroyed: Do widzenia! Twoje konto zostało pomyślnie anulowane. Mamy nadzieję
+        zobaczyć Cię wkrótce ponownie.
+      signed_up: Witaj! Twoja rejestracja przebiegła pomyślnie.
+      signed_up_but_inactive: Twoja rejestracja przebiegła pomyślnie, ale nie możesz
+        się zalogować, ponieważ twoje konto nie zostało jeszcze aktywowane.
+      signed_up_but_locked: Twoja rejestracja przebiegła pomyślnie, ale nie możesz
+        się zalogować, ponieważ twoje konto jest zablokowane.
+      signed_up_but_unconfirmed: Wiadomość z linkiem potwierdzającym została wysłana
+        pod Twoim adresem e-mailowym. Otwórz link, aby aktywować swoje konto.
+      update_needs_confirmation: Pomyślnie uaktualniłeś swoje konto, ale musimy zweryfikować
+        Twój adres mailowy. Sprawdź swoją skrzynkę i kliknij na link, aby potwierdzić
+        swój nowy adres mailowy.
+      updated: Pomyślnie uaktualniłeś swoje konto.
+    sessions:
+      signed_out: Pomyślnie wylogowałeś się.
+    unlocks:
+      send_instructions: Za kilka minut otrzymasz e-mail ze wskazówkami, jak odblokować
+        swoje konto.
+      send_paranoid_instructions: Jeśli twoje konto istnieje, to za kilka minut otrzymasz
+        e-mail ze wskazówkami, jak odblokować swoje konto.
+      unlocked: Twoje konto zostało pomyślnie odblokowane. Zaloguj się, aby kontynuować.
+  errors:
+    messages:
+      already_confirmed: zostało już potwierdzone, spróbuj zalogować się
+      confirmation_period_expired: musi być potwierdzone w ciągu %{period}, poproś
+        o nowe
+      expired: wygasło, poproś o nowe
+      not_found: nie znaleziono
+      not_locked: nie było zablokowane
+      not_saved:
+        one: '1 błąd zabrania temu %{resource}, by został zapisany:'
+        other: "%{count} błędów zabrania temu %{resource}, by został zapisany:"
+    invitations:
+      send_instructions: Zaproszenie mailem zostało wysłane do %{email}.
+      invitation_token_invalid: Przesłany znacznik (token) zaproszenia nie jest ważny!
+      updated: Twoje hasło zostało zmienione. Jesteś teraz zalogowany.
+      no_invitations_remaining: Nie ma żadnego zaproszenia
+      invitation_removed: Twoje zaproszenie zostało usunięte.
+      new:
+        header: Wyślij zaproszenie
+        submit_button: Wyślij zaproszenie
+      edit:
+        header: Ustaw swoje hasło
+        submit_button: Ustaw moje hasło
+    mailer:
+      invitation_instructions:
+        subject: Instrukcje zaproszenia
+        hello: Witaj %{email}
+        someone_invited_you: Ktoś zaprosił Cię do %{url}, możesz przyjąć to zaproszenie
+          korzystając z linku poniżej.
+        accept: Przyjmij zaproszenie
+        ignore: Jeśli nie chcesz przyjąć zaproszenia, zignoruj ten mail. <br /> Twoje
+          konto nie zostanie utworzone, dopóki nie przejdziesz pod wskazany powyżej
+          link i nie ustalisz hasła.

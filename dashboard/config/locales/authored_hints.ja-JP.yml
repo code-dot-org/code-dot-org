@@ -1,0 +1,1339 @@
+---
+ja:
+  data:
+    authored_hints:
+      2-3 Artist 1 new_authored_hint:
+        2-3_Artist_1_new_a: ブロックを使って僕に「100ピクセル前に進む」ことを教えて。そうすれば自動的に線を引いてあげるよ。
+        2-3_Artist_1_new_b: カドをまがるのが、むずかしい？「90度まがる」ブロックを使ってみて。
+      2-3 Artist 11_authored_hint:
+        2-3_Artist_11_a: '角度が、むずかしい？8回まがって360度ですね。360 ÷ 8 は、いくつでしょうか？ '
+      2-3 Artist 12_authored_hint:
+        2-3_Artist_12_a: 円は 360 度で、アーティストはループごとに1度まがるから、360 回くりかえして みてください。
+      2-3 Artist 2 new_authored_hint:
+        2-3_Artist_2_new_a: アーティストは、正しい方を向いていないです。せんを かく前に、かれの向きを かえてください。
+      2-3 Artist 3new_authored_hint:
+        2-3_Artist_3new_a: 100 - 70 は、いくつですか？もんだい文では、それが帽子の高さです！
+        2-3_Artist_3new_b: アーティストは、正しい方を向いていないです。せんを かく前に、かれの向きを かえてください。
+      2-3 Artist 4_authored_hint:
+        2-3_Artist_4_a: 家を完成させるには、四角形をかいてください！
+      2-3 Artist 6_authored_hint:
+        2-3_Artist_6_a: '小さな角度にするには、この四角形で、もっと多くまがってください。   '
+        2-3_Artist_6_b: 私はすでに右に向いているので、前に進むことから始めるのが簡単です。そして三角形を作るには左に向きます。
+        2-3_Artist_6_c: 三角形のどちら側も、その四角形の辺の長さと同じ、100ピクセルです！
+      2-3 Artist 7_authored_hint:
+        2-3_Artist_7_a: このパズルを解くいちばん早い方法は、最初の四角形を描いたあと、次の四角形を描くために、キャラクターを下向きにしておくことです。
+      2-3 Artist 8_authored_hint:
+        2-3_Artist_8_a: 200の長さを半分にする場合、ひとつひとつの四角形の幅は、何ピクセルにすれば良いでしょう？
+      2-3 Artist 9 NEW_authored_hint:
+        2-3_Artist_9_a: このダイヤモンドは、その側から見るとただの四角形に見えます。
+      2-3 Artist 9 REPLACEMENT_authored_hint:
+        step_size: それぞれのステップは、幅100ピクセル、高さ100ピクセルです。
+      2-3 Artist 9_authored_hint:
+        2-3_Artist_9_a: このダイヤモンドは45度回転するとただの四角形に見えます。
+        2-3_Artist_9_b: |-
+          次の四角形を描く前にアーティストを左に45度回転させることを忘れないで！
+
+          ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
+      2-3 Artist Debugging 10_authored_hint:
+        2-3_Artist_Debugging_10_a: コントロールパネルの幅を、10ピクセル"広く"したい時は、あなたが変更した値に、10"加える"ことを忘れないでください。
+        2-3_Artist_Debugging_10_b: |-
+          "試行錯誤を繰り返すことが大切です！"
+
+          まずはひとつの数字を変えてみる事から始めましょう。
+
+          どの数字がどんな役割でしたか？
+
+          もし思ったよりも変わりすぎたなら、"はじめから"をクリックすれば、あなたのコードは最初の状態に戻ります。
+      2-3 Artist Debugging 2_authored_hint:
+        2-3_Artist_Debugging_2_a: 'ヒント: それぞれのヒゲの長さは、75ピクセルです。'
+      2-3 Artist Debugging 3_authored_hint:
+        2-3_Artist_Debugging_3_a: 回転の１つが、15度足りません。
+        2-3_Artist_Debugging_3_b: もしプログラムが速く動きすぎて何が起こっているのか分からなければ、スライダーを動かしてゆっくりにしてみてください。
+      2-3 Artist Debugging 7_authored_hint:
+        2-3_Artist_Debugging_7_a: もしアーティストが最初の線を描いた後に、後ろに動かしたり、飛び下がるとどうなるでしょう？
+      2-3 Artist Debugging 8_authored_hint:
+        2-3_Artist_Debugging_8_a: |-
+          私の形は何回繰り返していましたか？
+
+          その形は何回繰り返す"べき"でしょうか？
+
+          プログラムのどこを変えればいいでしょうか？
+      2-3 Artist Debugging 9_authored_hint:
+        2-3_Artist_Debugging_9_a: アーティストは描き始める前に、左方向にもう60度回転しておく必要があります！
+        2-3_Artist_Debugging_9_b: 完全に回転するために、他のブロックを加える必要はありません。すでにある"左に向く"ブロックに60度を足すだけで良いのです！
+      2-3 Artist Functions 1 a_authored_hint:
+        2-3_Artist_Functions_1_a: その四角形にはそれぞれ100ピクセルの側面があります。これは、2番目の四角形を描く前に175ピクセル前に動かす必要があるという事です。
+        2-3_Artist_Functions_1_b: メガネを作るために、重なり合う線を描いても大丈夫です。
+      2-3 Artist Functions 1_authored_hint:
+        2-3_Artist_Functions_1_a: その四角形にはそれぞれ100ピクセルの側面があります。これは、2番目の四角形を描く前に175ピクセル前に動かす必要があるという事です。
+        2-3_Artist_Functions_1_b: メガネを作るために、重なり合う線を描いても大丈夫です。
+      2-3 Artist Functions 11 a_authored_hint:
+        2-3_Artist_Functions_11_a: その関数の中では、辺の数字と長さだけでなく、両側でアーティストが回転する角度も変えなければなりません。
+      2-3 Artist Functions 11_authored_hint:
+        2-3_Artist_Functions_11_a: その関数の中では、辺の数字と長さだけでなく、両側でアーティストが回転する角度も変えなければなりません。
+      2-3 Artist Functions 12 a_authored_hint:
+        2-3_Artist_Functions_12_a: コードに何を出す必要があるか調べるために、まずはコードを動かしてみましょう。
+      2-3 Artist Functions 12_authored_hint:
+        2-3_Artist_Functions_12_a: コードに何を出す必要があるか調べるために、まずはコードを動かしてみましょう。
+      2-3 Artist Functions 2 a_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          プログラムの条件:
+          - 関数を使う
+          - 前に動くブロック 100 + 75 ピクセル
+          - 関数を使う
+      2-3 Artist Functions 2_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          プログラムの条件:
+          - 関数を使う
+          - 前に動くブロック 100 + 75 ピクセル
+          - 関数を使う
+      2-3 Artist Functions 3 a_authored_hint:
+        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Artist Functions 3_authored_hint:
+        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Artist Functions 4 a_authored_hint:
+        2-3_Artist_Functions_4_a: このデザインを完成させるためには、アーティストはそれぞれの四角形の間に120度回転する必要があります。
+      2-3 Artist Functions 4_authored_hint:
+        2-3_Artist_Functions_4_a: このデザインを完成させるためには、アーティストはそれぞれの四角形の間に120度回転する必要があります。
+      2-3 Artist Loops New 11_authored_hint:
+        2-3_Artist_Loops_New_11_a: |-
+          前のパズルで作ったコードはこうでした。
+
+          ![](https://images.code.org/15288d042780242ec5edeed5204c6ebb-image-1469640792081.png)
+        2-3_Artist_Loops_New_11_b: 新たな回転は、ループの中のコードの**最後**におかなければなりません。
+      2-3 Artist Loops New 12_authored_hint:
+        2-3_Artist Loops_New_12_a: 正しい道筋をたどるためには、ダイヤモンドを描き始める前に、アーティストは60度左に向く必要があります。
+        2-3_Artist Loops_New_12_b: アーティストが100ピクセル前に進んだ後、鋭角に曲がるためには、120度右に向く必要があります。
+        2-3_Artist Loops_New_12_c: アーティストがゆるやかに曲がるときは、60度だけ右に向く必要があります。
+      2-3 Artist Loops New 13_authored_hint:
+        2-3_Artist_Loops_New_13_a: |-
+          各ダイヤモンドの最後で次を始められるようアーティストは既に右側を向いています。
+
+          このため、再度始めるときに余分な「左にまがる」ブロックを追加する必要はありません。
+        2-3_Artist_Loops_New_13_b: |-
+          各ダイヤモンドを作るには、アーティストは次のことをする必要があります。
+          - うごく
+          - 右にまがる120度
+          - うごく
+          - 右にまがる60度
+
+          そしてそれ全部をもう一度やります！
+      2-3 Artist Loops New 9_authored_hint:
+        2-3_Artist_Loops_New_9_a: 書き始める前にアーティストは右に45度曲がる必要があります。
+        2-3_Artist_Loops_New_9_b: このVは実際単なる正方形の半分です。正方形の半分を描くコードは何でしょう？
+      2-3 Artist Nested Loops 1_authored_hint:
+        2-3_Artist_Nested_Loops_1_a: ループの内側に灰色のブロックをすべて入れることを覚えておいてください。
+      2-3 Artist Nested Loops 3_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: 角度わかりますか？360/12=30
+        2-3_Artist_Nested_Loops_3_b: ループの内側に灰色のコードとまがるブロックをすべて入れることを覚えておいてください。
+      2-3 Artist Nested Loops 4_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: 角度わかりますか？360/12=30
+      2-3 Artist Nested Loops 5_authored_hint:
+        2-3_Artist_Nested_Loops_5_a: |-
+          「前にジャンプ」ブロックを使って、1つの四角形の上部から次に描き始めるところまで移動させてみてください。
+
+          正方形の高さが20ピクセルでそれぞれが20ピクセル離れているとすると、どれだけジャンプすればよいでしょう？
+      2-3 Artist Nested Loops 7_authored_hint:
+        2-3_Artist_Nested_Loops_7_a: |-
+          各ループでどれだけ曲がればよいでしょう？
+
+          360/10って何ですか？
+      2-3 Artist Nested Loops 9_authored_hint:
+        2-3_Artist_Nested_Loops_9_a: |-
+          正しい角度を知る手助けが必要ですか？
+
+          **360 / 12 = 30**
+      2-3 Bee Conditionals 14_authored_hint:
+        2-3_Bee_Conditionals_14_a: ブロックの減らし方が難しいですか？赤い花を紫の花とまったく同じものとして扱ってみてください！
+        2-3_Bee_Conditionals_14_b: 赤い花が紫色だったら、追加の「くりかえし」ループを使ってコードを減らす方法が分かったでしょうか？
+        2-3_Bee_Conditionals_14_c: |-
+          2つの別のかたまりに分けてみましょう。
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) 花のミツをとるを3回
+           - 前にすすむを5回
+           - 花のミツかどうか確認して、もしそうなら花のミツをとる
+           - 左にまがる
+
+          2) ハチミツをつくる
+           - 前にすすむを1回
+           - ハチミツを2つつくる
+      2-3 Bee Conditionals 15_authored_hint:
+        2-3_Bee_Conditionals_15_a: '注意: 紫の花だけ0か1個の花のミツがあって、プログラムを実行するたびにそれが変わります。'
+      2-3 Bee Conditionals 3_authored_hint:
+        2-3_Bee_Conditionals_3_a: 前にすすむときに毎回ループを使い、他のループで花のミツをとり、そしてほかのループでハチミツをつくるとコードがもっとも短くなります。
+      2-3 Bee Conditionals 6_authored_hint:
+        2-3_Bee_Conditionals_6_a: '注意: プログラムを実行するときに紫の花のミツが0と1の間で変化します！'
+      2-3 Bee Debugging 1_authored_hint:
+        2-3_Bee_Debugging_1_a: 間違いのブロックを見つけて直すと、「くりかえし」ループを使ってよりシンプルにすることができるパターンが分かりますか？
+      2-3 Bee Debugging 2_authored_hint:
+        2-3_Bee_Debugging_2_a: 間違いのブロックを見つけて直すと、「くりかえし」ループを使ってよりシンプルにすることができるパターンが分かりますか？
+      2-3 Bee Debugging 4_authored_hint:
+        2-3_Bee_Debugging_4_a: ハチが意味のない何かをするところがありますか？そのブロックを変更すると何が起こりますか？
+      2-3 Bee Functions 4_authored_hint:
+        2-3_Bee_Functions_4_a: ループを関数と一緒に使う必要はありません。すすんで、関数を使って、そしてすすんで、もう一度関数を使ってみてください。
+      2-3 Bee Functions 6_authored_hint:
+        2-3_Bee_Functions_6_a: ループを関数と一緒に使う必要はありません。すすんで、関数を使って、そしてすすんで、もう一度関数を使ってみてください。
+      2-3 Bee Functions 8_authored_hint:
+        2-3_Bee_Functions_8_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+      2-3 Bee Functions 9_authored_hint:
+        2-3_Bee_Functions_8_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+        2-3_Bee_Functions_8_b: |-
+          緑の関数ブロックの中にコードを書くことを覚えておいてください。
+
+          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+      2-3 Bee Loops 2_authored_hint:
+        2-3_Bee_Loops_2_a: 繰り返しの中には４つのブロックが必要です。
+      2-3 Bee Loops 3_authored_hint:
+        2-3_Bee_Loops_3_a: くりかえしの中には6ブロックがひつようです。
+      2-3 Bee Loops 3B_authored_hint:
+        2-3_Bee_Loops_3B_a: 前後する別の2つの「くりかえし」ループが必要になります。
+      2-3 Bee Loops 4_authored_hint:
+        2-3_Bee_Loops_4_a: ループの中には5つのブロックが必要です。
+      2-3 Bee Loops 4A_authored_hint:
+        2-3_Bee_Loops_4A_a: 最初にミツバシの向きを変えよう。
+        2-3_Bee_Loops_4A_b: プログラムの最後の部分は、ループ外のプログラムの最後にコードを書くことで終わりにできます。
+      2-3 Bee Loops 7_authored_hint:
+        2-3_Bee_Loops_7_a: 最初にミツバシの向きを変えよう。
+      2-3 Maze 6_authored_hint:
+        2-3_Maze_6_a: このパズルの解き方は二通りあるよ。
+      4-5 Artist Patterns 2_authored_hint:
+        4-5_Artist_Patterns_2_a: 正方形の一辺は 20 ピクセルの長さですから、次の正方形を書く前に 20 ピクセル ジャンプします。
+      4-5 Artist Patterns 3_authored_hint:
+        4-5_Artist_Patterns_3_a: 4ブロックでひとつのセットです。３つのうちの、どれかが正しい答えです。
+        4-5_Artist_Patterns_3_b: ぐちゃぐちゃになったら、「最初からやりなおす」で、最初からやりなおして下さい。
+      4-5 Artist Patterns 5_authored_hint:
+        4-5_Artist_Patterns_5_a: ひとつのひし形を書き終えたとき、アーティストは進むべき方向と、180度反対を向いています。
+      4-5 Nested Loops 12_authored_hint:
+        4-5_Nested_Loops_12_a: 360÷36＝？
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: このデザインを完成させるためには、アーティストはそれぞれの四角形の間に120度回転する必要があります。
+      Course 4 Artist 11_authored_hint:
+        Course_4_Artist_11_a: '前にうごく30ピクセル、右にまがる60度を使って、六角形の半分を書いてみてね。  '
+        Course_4_Artist_11_b: '前にうごく80ピクセル、右にまがる80度を使って、三角形の3分の2を書いてみてね。 '
+      Course 4 Artist 12_authored_hint:
+        Course_4_Artist_12_b: 'それぞれの形は、前のパズルとほとんど同じですが、6角形を少し大きくします。 '
+        Course_4_Artist_12_c: "1) 始めの3回は60ピクセルの長さで、60 度まがります\n2) 次の 2 回は 80 ピクセルの長さで、120
+          度まがります "
+      Course 4 Artist Functions challenge_authored_hint:
+        Course_4_Artist_Functions_challenge_a: どの関数を使えばいいか考えて、ひとつ決めてください。
+        Course_4_Artist_Functions_challenge_b: "「カウントする」ブロックを置いて、その中に「 `counter` 回くりかえす」ブロックを入れ、入れ子のループにします。"
+        Course_4_Artist_Functions_challenge_c: ひとつ正方形を書いたら、20ピクセル前にジャンプします。
+        Course_4_Artist_Functions_challenge_d: 正方形を `counter` 回かいたら、左に90度まがります。
+      Course 4 SCF 1a_authored_hint:
+        Course_4_SCF_1a_a: ステージ16で作った関数をおぼえていますか？
+        Course_4_SCF_1a_b: |-
+          「カウントする」ブロックを使い、3から21まで3ずつ数えます。
+          くりかえしの中で、前にすすむ、右にまがる、前にすすむ、左にまがる、を行います。
+        Course_4_SCF_1a_c: "「もし左に道があるなら」「もし右にみちがあるなら」を使って、左右それぞれの花のミツをとります。花のミツは、いつも3つ先にあるはずです。花のミツの数は、`counter`
+          の数と同じですね。"
+        Course_4_SCF_1a_d: 答えは先生に聞いてくださいね。
+      Course 4 SCF 1b_authored_hint:
+        Course_4_SCF_1b_a: ハチミツの数は全て同じですね。
+        Course_4_SCF_1b_b: ハチミツを作ったら、さいしょの場所にもどりましょう。
+        Course_4_SCF_1b_c: |-
+          ハチが動く回数を決めるために、「カウントする」ブロックを使います。
+          2から４まで１ずつカウントしてみて下さい。
+        Course_4_SCF_1b_d: 答えは先生に聞いてくださいね。
+      Course 4 SCFL 1_authored_hint:
+        Course_4_SCFL_1_a: まず、花のミツを全部あつめて、そのあと、ハチミツを作りながら帰って来ます。
+        Course_4_SCFL_1_b: 花のミツをとるには、「カウントする」ブロックを使って、１から３まで１ずつカウントしてね。 `counter`
+          変数を上手く使って、ハチをうごかして、花のミツを集めよう。
+        Course_4_SCFL_1_c: ハチミツを作るには、「カウントする」ブロックを使って、2から10まで2ずつカウントしてね。 `counter`
+          変数を上手く使って、ハチミツを作ろう。
+        Course_4_SCFL_1_d: 答えは先生に聞いてくださいね。
+      Course 4 SCFL 2_authored_hint:
+        Course_4_SCFL_2_a: |-
+          1番外がわのくりかえしは、「カウントする」ブロックを使って、１から４まで１ずつカウントしてください。
+          そして、右上、右下、左下、左上のじゅんばんで、回ります。
+        Course_4_SCFL_2_b: |-
+          「カウントする」くりかえしの中では、さいしょに「 'counter` 」回、花のミツをとります。次に、「 `counter` × 3」回、ハチミツを作ります。そして、「 2 ^ `counter` 」回、花のミツをとります。
+          （ ^ は、べき乗を計算します）
+        Course_4_SCFL_2_c: "`counter` 変数を上手く使ってね。"
+        Course_4_SCFL_2_d: 答えは先生に聞いてくださいね。
+      Course 4 SCFL 3_authored_hint:
+        Course_4_SCFL_3_a: |-
+          ペンの太さは 1 です。
+          一番小さい四角形は、一辺 50 ピクセルの長さで、50 ピクセルずつ大きくなっていきます。
+        Course_4_SCFL_3_b: ペンのアルファ値（とうめいさ）は `counter` ÷ 2 です。
+        Course_4_SCFL_3_c: 四角形を一つ書いたら、後ろにジャンプします。
+        Course_4_SCFL_3_d: 答えは先生に聞いてくださいね。
+      Course 4 SCFL 4_authored_hint:
+        Course_4_SCFL_4_a: ペンの太さは１です。色は、赤が `counter`、みどりが 255 - `counter`、青が 255 、これらをまぜた色にします。
+        Course_4_SCFL_4_b: 図形は四角形の組み合わせです。一番小さい四角形の一辺は、5ピクセル、一番大きい四角形は200ピクセル、5ピクセルずつ大きくしていきます。
+        Course_4_SCFL_4_c: 四角形を一つ書いたら、左に15度まがり、つぎの四角形を書くようにします。
+        Course_4_SCFL_4_d: 答えは先生に聞いてくださいね。
+      Course 4 SCFL 6_authored_hint:
+        Course_4_SCFL_6_a: 色は、赤は 255、みどりは `counter` 、青は 255 -  `counter` で、これらをまぜた色にしてください。
+        Course_4_SCFL_6_b: 色を かえたら、 `counter`ピクセルの線を引き、右に80度まがります。
+        Course_4_SCFL_6_c: "「カウントする」ブロック使って、 5から250まで 2ずつカウントします。 "
+        Course_4_SCFL_6_d: 答えは先生に聞いてくださいね。
+      Course 4 SCFL 7_authored_hint:
+        Course_4_SCFL_7_a: |-
+          「アルファ値は20」ブロックを、はじめに一度だけ実行するようにして下さい。
+          色を かえる時は、赤が `counter`、みどりが 255 - `counter`、青が 255 、これらをまぜた色にします。
+        Course_4_SCFL_7_b: "「カウントする」ブロックを2つ使います。一つは、5から200まで2ずつ、もう一つは、200から5まで2ずつ、として下さい。 "
+        Course_4_SCFL_7_c: |-
+          さいしょの くりかえしの中では、「太さは `counter`」とし、色を かえてから 5
+           ピクセルの長さの線を引き、左に「360 ÷ `counter` 」度まがります。
+          つぎの くりかえしの中では、「太さは `counter`」とし、色を かえてから 5 ピクセルの長さの線を引き、右に「360 ÷ `counter` 」度まがります。
+        Course_4_SCFL_7_d: ２つのくりかえしの間では、左に 225 度まがります。
+        Course_4_SCFL_7_e: 答えは先生に聞いてくださいね。
+      Course 4 SCV 1_authored_hint:
+        Course_4_SCV_1_a: "「セット sides は 5」ブロックで、`sides` 変数に5を入れて下さい。\nそして、「前にうごく 500
+          ÷ sides ピクセル」と「左にまがる 360÷ sides 度」\nを sides 回くりかえすせば、五角形が書けるはずだよ。 "
+        Course_4_SCV_1_b: 五角形を一つ書いたら、「左にまがる360 ÷ sides」で向きを変えよう。これを sides 回くりかえすと、五角形が五つ書けるはずだよ。
+        Course_4_SCV_1_c: |-
+          五角形を五つ書き終わった後に、「セット sides は sides + 5」ブロックを追加しよう。そうすれば sidesは10になるはずだね。
+          そして、全体を2回くりかえせば、五角形と十角形が書けるはずだよ。
+        Course_4_SCV_1_d: 答えは、先生に聞いてね。
+      Course 4 SCV 2_authored_hint:
+        Course_4_SCV_2_a: |-
+          まず、十角形を十コ書きます。
+          十角形の一辺の長さは「length  ÷ sides」です。
+          一辺を書いたら、左に「 360 ÷ sides 」まがって下さい。
+          十角形を一つ書いたら、左に「 360 ÷ sides 」まがってから、次の十角形を書いて下さい。
+        Course_4_SCV_2_b: "「くりかえす」ブロックを3回使います。くりかえす回数は sides 回で、全部同じです。 "
+        Course_4_SCV_2_c: 十角形を一つ書いたら、左に「 360 ÷ sides 」度まがって、それから、次の十角形を書きます。
+        Course_4_SCV_2_d: 十角形を10コ書いたら、「length ÷ sides」ピクセル ジャンプして、右に「360 ÷ sides」度まがります。
+        Course_4_SCV_2_e: 答えは、先生に聞いてください。
+      Course 4 SCV 6_authored_hint:
+        Course_4_SCV_6_a: 五角形の書き方は、今までと同じです。ギザギザ線を書いたら、右に「360÷辺数」度まがりましょう。
+        Course_4_SCV_6_b: 出来るだけ、変数を使ってプログラムを書いて下さい。
+        Course_4_SCV_6_c: ギザギザ線の色は、はじめは 赤 0、みどり 175、青 200を まぜた色です。次は 赤 100、みどり 50、青
+          150を まぜた色です。
+        Course_4_SCV_6_d: 'ジグザグの角度は、72度です。 '
+        Course_4_SCV_6_e: '一番外がわの くりかえしで、ギザギザの五角形を10コ書きます。五角形を一つ書いたら、右に「360 ÷ 10」まがります。 '
+        Course_4_SCV_6_f: 答えは、先生に聞いてくださいね。
+      Dance short test 2_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *7小節目のどこかで、背景エフェクトを変更する必要があります。
+
+          *このレベルは10小節で終わります。*
+        challenges: |-
+          ** 自由選択のチャレンジ **
+
+          <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小節"</title></block></xml> イベントの下に新しいブロックをつないで、曲のあいだのいくつかのポイントで背景エフェクトを変更してみましょう。
+      Dance short test_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *7小節目のどこかで、背景エフェクトを変更する必要があります。
+
+          *このレベルは10小節で終わります。*
+        challenges: |-
+          ** 自由選択のチャレンジ **
+
+          <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小節"</title></block></xml> イベントの下に新しいブロックをつないで、曲のあいだのいくつかのポイントで背景エフェクトを変更してみましょう。
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+          * 画面にダンサーが表示されていることをたしかめてください。
+
+          *このレベルは4小節で終わります。*
+        challenges: |-
+          ** 自由選択のチャレンジ **
+          *他の曲を選んで再生してみましょう。
+          *ムースに似た別のものを選んでみましょう！
+          *ダンサーの名前を変更しましょう。
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+          * 画面にダンサーが表示されていることをたしかめてください。
+
+          *このレベルは4小節で終わります。*
+        challenges: |-
+          ** 自由選択のチャレンジ **
+          *他の曲を選んで再生してみましょう。
+          *ムースに似た別のものを選んでみましょう！
+          *ダンサーの名前を変更しましょう。
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+          *4小節後にダンサーを新しい動きに切り替える必要があります*
+
+          *このレベルは8小節で終わります。*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *6小節後、ダンサーは4小節後とは違うダンスをする必要があります。
+
+          *このレベルは12小節で終わります。*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *7小節目のどこかで、背景エフェクトを変更する必要があります。
+
+          *このレベルは10小節で終わります。*
+        challenges: |-
+          ** 自由選択のチャレンジ **
+
+          <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小節"</title></block></xml> イベントの下に新しいブロックをつないで、曲のあいだのいくつかのポイントで背景エフェクトを変更してみましょう。
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          * 少なくとも 2 人のダンサーがいなければなりません。
+
+          *このレベルは6小節で終わります。*
+        challenges: |-
+          ** 自由選択のチャレンジ **
+
+          *3人めのダンサー（または好きなだけの人数！）を追加してください
+          *すべてのダンサーが、曲の中のそれぞれ違うポイントで、違う動きをするようにしてください。
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *2人のダンサーのおおきさは100以外にしてください。
+
+          *このレベルは6小節で終わります。*
+        challenges: |-
+          ** 自由選択のチャレンジ **
+
+          *その他のプロパティ（幅、高さ、回転など）を変えて実験してみましょう
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          * 少なくとも1人のダンサーの色合いを変更してください。
+
+          *このレベルは8小節で終わります。*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+          * 画面にダンサーが表示されていることをたしかめてください。
+
+          *このレベルは4小節で終わります。*
+        challenges: |-
+          ** 自由選択のチャレンジ **
+          *他の曲を選んで再生してみましょう。
+          *ムースに似た別のものを選んでみましょう！
+          *ダンサーの名前を変更しましょう。
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          * 2人以上のダンサーのプロパティを変更しなければなりません。
+
+          *このレベルは8小節で終わります。*
+      Dance_Party_11.5_test_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *クリエイティブにやってみて！
+
+          *このレベルは8小節で終わります。*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *クリエイティブにやってみて！
+
+          *このレベルは8小節で終わります。*
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *クリエイティブにやってみて！
+
+          *このレベルは8小節で終わります。*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *`左矢印キーが押されたとき’のブロックを使って、左矢印キーを押したらロボットが踊るようにしましょう。
+
+          *このレベルは8小節で終わります。*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+          *4小節後にダンサーを新しい動きに切り替える必要があります*
+
+          *このレベルは8小節で終わります。*
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *6小節後、ダンサーは4小節後とは違うダンスをする必要があります。
+
+          *このレベルは12小節で終わります。*
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *7小節目のどこかで、背景エフェクトを変更する必要があります。
+
+          *このレベルは10小節で終わります。*
+        challenges: |-
+          ** 自由選択のチャレンジ **
+
+          <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小節"</title></block></xml> イベントの下に新しいブロックをつないで、曲のあいだのいくつかのポイントで背景エフェクトを変更してみましょう。
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *あなたのダンスでは、曲の最初の12小節の間、さまざまな動きをしなければなりません。
+
+          *このレベルは12小節で終わります。*
+      Dance_Party_6_authored_hint:
+        challenges: |-
+          ** 自由選択のチャレンジ **
+
+          *3人めのダンサー（または好きなだけの人数！）を追加してください
+          *すべてのダンサーが、曲の中のそれぞれ違うポイントで、違う動きをするようにしてください。
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *2人のダンサーのおおきさは100以外にしてください。
+
+          *このレベルは6小節で終わります。*
+        challenges: |-
+          ** 自由選択のチャレンジ **
+
+          *その他のプロパティ（幅、高さ、回転など）を変えて実験してみましょう
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          * 少なくとも1人のダンサーの色合いを変更してください。
+
+          *このレベルは8小節で終わります。*
+      Function intro Ryan_authored_hint:
+        Function_intro_Ryan_b: 関数を正しく呼び出すと、あなたはこの道を行くことになります...
+        Function_intro_Ryan_a: 関数はプログラム内で繰り返し呼び出すことができます!  関数を 2 回呼び出して、このパズルをクリアしましょう。
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_b: 関数を正しく呼び出すと、あなたはこの道を行くことになります...
+        Function_intro_Ryan_a: 関数はプログラム内で繰り返し呼び出すことができます!  関数を 2 回呼び出して、このパズルをクリアしましょう。
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "**海のランタン** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)
+          が見えますか?海のランタンと条件をどう組み合わせれば、海底遺跡を通りぬけられるでしょうか?\n\n"
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: 赤色と青色のサンゴブロックが見えますか？それぞれ左と右に曲がる道しるべにしてサンゴ礁を進みます。
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+          * 画面にダンサーが表示されていることをたしかめてください。
+
+          *このレベルは4小節で終わります。*
+        challenges: |-
+          ** 自由選択のチャレンジ **
+          *他の曲を選んで再生してみましょう。
+          *ムースに似た別のものを選んでみましょう！
+          *ダンサーの名前を変更しましょう。
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+          *4小節後にダンサーを新しい動きに切り替える必要があります*
+
+          *このレベルは8小節で終わります。*
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *6小節後、ダンサーは4小節後とは違うダンスをする必要があります。
+
+          *このレベルは12小節で終わります。*
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *7小節目のどこかで、背景エフェクトを変更する必要があります。
+
+          *このレベルは10小節で終わります。*
+        challenges: |-
+          ** 自由選択のチャレンジ **
+
+          <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小節"</title></block></xml> イベントの下に新しいブロックをつないで、曲のあいだのいくつかのポイントで背景エフェクトを変更してみましょう。
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *あなたのダンスでは、曲の最初の12小節の間、さまざまな動きをしなければなりません。
+
+          *このレベルは12小節で終わります。*
+      HOC Dance 5_draft_authored_hint:
+        challenges: |-
+          ** 自由選択のチャレンジ **
+
+          *3人めのダンサー（または好きなだけの人数！）を追加してください
+          *すべてのダンサーが、曲の中のそれぞれ違うポイントで、違う動きをするようにしてください。
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *2人のダンサーのおおきさは100以外にしてください。
+
+          *このレベルは6小節で終わります。*
+        challenges: |-
+          ** 自由選択のチャレンジ **
+
+          *その他のプロパティ（幅、高さ、回転など）を変えて実験してみましょう
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          * 少なくとも1人のダンサーの色合いを変更してください。
+
+          *このレベルは8小節で終わります。*
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          * 2人以上のダンサーのプロパティを変更しなければなりません。
+
+          *このレベルは8小節で終わります。*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *クリエイティブにやってみて！
+
+          *このレベルは8小節で終わります。*
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          *クリエイティブにやってみて！
+
+          *このレベルは8小節で終わります。*
+      K2.0 sequence pre_authored_hint:
+        K2.0_sequence_pre_a: "「実行したとき」のしたに、ブロックを くっつけてね。"
+      MC Agent Freeplay_authored_hint:
+        MC_HOC_2017_13_Cole_a: Agent に橋を作らせて、アレックス (スティーブ) がマップのはじを歩き回れるようにしましょう。
+      MC_HOC_2017_01_Cole_authored_hint:
+        MC_HOC_2017_01_Cole_a: プレイヤーを家の中へ移動させるには矢印キーを押します。プレイヤーがオレンジ色のマスにたどり着けばクリアです。
+      MC_HOC_2017_01_RETRY_authored_hint:
+        MC_HOC_2017_01_RETRY_a: ツールボックスの「前進」を 1 つだけワークスペースにドラッグして、「実行した時」ブロックの下に置きましょう。
+        MC_HOC_2017_01_RETRY_b: Agent のコードを実行するには、「実行」をクリックする必要があります。
+        MC_HOC_2017_01_RETRY_c: Agent がすべてのコードを実行したら、矢印キーでプレイヤーを動かせるようになります!
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: ツールボックスの「前進」を 1 つだけワークスペースにドラッグして、「実行した時」ブロックの下に置きましょう。
+        MC_HOC_2017_01_RETRY_b: Agent のコードを実行するには、「実行」をクリックする必要があります。
+        MC_HOC_2017_01_RETRY_c: Agent がすべてのコードを実行したら、矢印キーでプレイヤーを動かせるようになります!
+      MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Agent を前に 2 マス進ませて重量感知板の上に立たせましょう。  それによってドアが開き、プレイヤーが通れるようになります。
+        MC_HOC_2017_02_Cole_b: "「実行」を押しましょう! \nコードは間違いがあっても実行できます。何度もコードを実行/リセットして、間違っているところを見つけましょう。"
+        MC_HOC_2017_02_Cole_c: Agent がドアを開けたら、矢印キーでプレイヤーを外に出しましょう!
+      MC_HOC_2017_02_Cole_2019_authored_hint:
+        MC_HOC_2017_02_Cole_a: Agent を前に 2 マス進ませて重量感知板の上に立たせましょう。  それによってドアが開き、プレイヤーが通れるようになります。
+        MC_HOC_2017_02_Cole_b: "「実行」を押しましょう! \nコードは間違いがあっても実行できます。何度もコードを実行/リセットして、間違っているところを見つけましょう。"
+        MC_HOC_2017_02_Cole_c: Agent がドアを開けたら、矢印キーでプレイヤーを外に出しましょう!
+      MC_HOC_2017_02_Will_authored_hint:
+        MC_HOC_2017_02_Cole_a: Agent を前に 2 マス進ませて重量感知板の上に立たせましょう。  それによってドアが開き、プレイヤーが通れるようになります。
+        MC_HOC_2017_02_Cole_b: "「Agent を実行」を押しましょう! \nコードは間違いがあっても実行できます。何度もコードを実行/リセットして、間違っているところを見つけましょう。"
+        MC_HOC_2017_02_Cole_c: Agent がドアを開けたら、矢印キーでプレイヤーをオレンジのマスまで移動させましょう。
+      MC_HOC_2017_03_Cole_authored_hint:
+        MC_HOC_2017_03_Cole_a: Agent が重量感知板の上に立つと、矢印キーでプレイヤーをコンパスに向かって動かせるようになります!
+        MC_HOC_2017_03_Cole_b: コードが少し長く感じますか?  「繰り返す」ループを使ってコードをもっと短くできないか調べてみましょう!
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_a: Agent が重量感知板の上に立つと、矢印キーでプレイヤーをコンパスに向かって動かせるようになります!
+        MC_HOC_2017_03_Cole_b: コードが少し長く感じますか?  「繰り返す」ループを使ってコードをもっと短くできないか調べてみましょう!
+      MC_HOC_2017_04POINT5_Cole_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: "この 2 つの重量感知板をふむと、道が開いてプレイヤーが通れるようになります。 \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
+      MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: Agent の向きを変えるには「右を向く」ブロックを使います
+        MC_HOC_2017_04POINT5_RYAN_a: Agent を 1 つ目の重量感知板に立たせれば、アレックス (スティーブ) が斧にたどり着けます。
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: Agent の向きを変えるには「右を向く」ブロックを使います
+        MC_HOC_2017_04POINT5_RYAN_a: Agent を 1 つ目の重量感知板に立たせれば、アレックス (スティーブ) が斧にたどり着けます。
+      MC_HOC_2017_04_Cole_authored_hint:
+        MC_HOC_2017_04_Cole_a: Agent は 7 回 "前進する" 必要があります。こうするためには、「繰り返し」ループをどのように使えばよいでしょうか?
+        MC_HOC_2017_04_Cole_c: "「実行」を押しましょう! \nコードは間違いがあっても実行できます。何度もコードを実行/リセットして、間違っているところを見つけましょう。"
+        MC_HOC_2017_04_Cole_b: Agent が重量感知板の上に立つとドアが開き、プレイヤーが通れるようになります。
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_a: Agent は 7 回 "前進する" 必要があります。こうするためには、「繰り返し」ループをどのように使えばよいでしょうか?
+        MC_HOC_2017_04_Cole_c: "「実行」を押しましょう! \nコードは間違いがあっても実行できます。何度もコードを実行/リセットして、間違っているところを見つけましょう。"
+        MC_HOC_2017_04_Cole_b: Agent が重量感知板の上に立つとドアが開き、プレイヤーが通れるようになります。
+      MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: ループの中にコードをいくつも入れられるのは知っていましたか?  「繰り返す」の中に「木の板を置く」 **と**
+          「前進」を入れて、このパズルをクリアしましょう。
+        MC_HOC_2017_05_Cole_b: Agentに川を渡らせて、あなたが通れる橋をかけさせます。
+      MC_HOC_2017_05_Cole_2019_authored_hint:
+        MC_HOC_2017_05_Cole_a: ループの中にコードをいくつも入れられるのは知っていましたか?  「繰り返す」の中に「木の板を置く」 **と**
+          「前進」を入れて、このパズルをクリアしましょう。
+        MC_HOC_2017_05_Cole_b: Agentに川を渡らせて、あなたが通れる橋をかけさせます。
+      MC_HOC_2017_05_Josh_authored_hint:
+        MC_HOC_2017_05_Cole_a: ループの中にコードをいくつも入れられるのは知っていましたか?  「繰り返す」の中に「木の板を置く」 **と**「前進」を入れて、このパズルをクリアしましょう。
+      MC_HOC_2017_06_Cole_authored_hint:
+        MC_HOC_2017_06_Cole_a: このループを何回実行しますか?  何回実行する ”べき” ですか?
+        MC_HOC_2017_06_Cole_b: Agentが水を上を渡りきる橋をかけられるよう手助けしてください！
+      MC_HOC_2017_06_Cole_2019_authored_hint:
+        MC_HOC_2017_06_Cole_a: このループを何回実行しますか?  何回実行する ”べき” ですか?
+        MC_HOC_2017_06_Cole_b: Agentが水を上を渡りきる橋をかけられるよう手助けしてください！
+      MC_HOC_2017_06_Josh_authored_hint:
+        MC_HOC_2017_06_Cole_a: "「繰り返す」ループの中に 2 つ以上の命令を入れてみましょう!"
+      MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_c: Agentにさせることは、トロッコまでの道を通れるようにすることです。
+        MC_HOC_2017_07_Cole_a: このパズルをクリアするために、「通り道を作る」関数のしくみを学んで、ツールボックスにある緑色の小さな「通り道を作る」ブロックを使って、その関数を必要なだけ呼び出します。
+        MC_HOC_2017_07_Cole_b: この関数ブロックをツールボックスにある他のブロックと組み合わせて、パズルをクリアしてみましょう。
+      MC_HOC_2017_07_Cole_2019_authored_hint:
+        MC_HOC_2017_07_Cole_c: Agentにさせることは、トロッコまでの道を通れるようにすることです。
+        MC_HOC_2017_07_Cole_a: このパズルをクリアするために、「通り道を作る」関数のしくみを学んで、ツールボックスにある緑色の小さな「通り道を作る」ブロックを使って、その関数を必要なだけ呼び出します。
+        MC_HOC_2017_07_Cole_b: この関数ブロックをツールボックスにある他のブロックと組み合わせて、パズルをクリアしてみましょう。
+      MC_HOC_2017_08_RY_authored_hint:
+        MC_HOC_2017_08_RY_a: "「Agent を実行」を押しましょう! \nコードは間違いがあっても実行できます。何度もコードを実行/リセットして、間違っているところを見つけましょう。"
+        MC_HOC_2017_08_RY_b: このパズルをクリアするやり方はいくつもあります。  いろいろトライしてみましょう!
+      MC_HOC_2017_08_Will_authored_hint:
+        MC_HOC_2017_08_RY_a: "「Agent を実行」を押しましょう! \nコードは間違いがあっても実行できます。何度もコードを実行/リセットして、間違っているところを見つけましょう。"
+        MC_HOC_2017_08_RY_b: このパズルをクリアするやり方はいくつもあります。  いろいろトライしてみましょう!
+      MC_HOC_2017_10_Cole_authored_hint:
+        MC_HOC_2017_10_Cole_a: 関数を使って、このパズルをもっと簡単にクリアしてみましょう!
+      MC_HOC_2017_10_RETRY_authored_hint:
+        MC_HOC_2017_10_Cole_b: どこへ行ったらいいかわからない？点線を見つけられるかみてみて！
+        MC_HOC_2017_10_Cole_a: 関数を使って、このパズルをもっと簡単にクリアしてみましょう!
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_b: どこへ行ったらいいかわからない？点線を見つけられるかみてみて！
+        MC_HOC_2017_10_Cole_a: 関数を使って、このパズルをもっと簡単にクリアしてみましょう!
+      MC_HOC_2017_13_Cole_authored_hint:
+        MC_HOC_2017_13_Cole_a: Agent に橋を作らせて、アレックス (スティーブ) がマップのはじを歩き回れるようにしましょう。
+      MC_HOC_2017_4.5v2_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: "この 2 つの重量感知板をふむと、道が開いてプレイヤーが通れるようになります。 \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
+      MC_HOC_2017_Ali_authored_hint:
+        MC_HOC_2017_08_RY_a: "「実行」を押しましょう! \nコードは間違いがあっても実行できます。何度もコードを実行/リセットして、間違っているところを見つけましょう。"
+        MC_HOC_2017_08_RY_b: このパズルをクリアするやり方はいくつもあります。  いろいろトライしてみましょう!
+        MC_HOC_2017_08_RY_c: 溶岩を超える下の点線の道を試してみてください。
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: "「実行」を押しましょう! \nコードは間違いがあっても実行できます。何度もコードを実行/リセットして、間違っているところを見つけましょう。"
+        MC_HOC_2017_08_RY_b: このパズルをクリアするやり方はいくつもあります。  いろいろトライしてみましょう!
+        MC_HOC_2017_08_RY_c: 溶岩を超える下の点線の道を試してみてください。
+      MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Agent に橋を作らせて、アレックス (スティーブ) がマップのはじを歩き回れるようにしましょう。
+      MC_HOC_2017_FP20x20_2019_authored_hint:
+        MC_HOC_2017_13_Cole_a: Agent に橋を作らせて、アレックス (スティーブ) がマップのはじを歩き回れるようにしましょう。
+      NEW Course 4 Artist Functions 13_authored_hint:
+        NEW_Course_4_Artist_Functions_13_a: "`draw a line of squares` 関数が、正方形を12コ書くように編集しましょう。"
+        NEW_Course_4_Artist_Functions_13_c: 星を書くには、144度で曲がってみて下さい。
+      NEW Course 4 Artist Params 13_authored_hint:
+        NEW_Course_4_Artist_Params_13_a: '多角形の大きさを同じにするには、多角形の辺の長さの合計を、辺の数で わり算します。つまり、200÷sidesです。 '
+      NEW Course 4 Artist Params 14_authored_hint:
+        NEW_Course_4_Artist_Params_14_a: 何回やっても、だいじょうぶ。いろいろとパラメータをかえて ためしてね。
+      New Minecraft Hero Project_authored_hint:
+        MC_HOC_2017_13_Cole_a: Agent に橋を作らせて、アレックス (スティーブ) がマップのはじを歩き回れるようにしましょう。
+      aE3_authored_hint:
+        aE3_d: ぐちゃぐちゃになったら、「最初からやりなおす」で、最初からやりなおして下さい。
+      aE3alternate_authored_hint:
+        aE3alternate_d: ぐちゃぐちゃになったら、「最初からやりなおす」で、最初からやりなおして下さい。
+      aE3alternateB_authored_hint:
+        aE4alternateB_d: ぐちゃぐちゃになったら、「最初からやりなおす」で、最初からやりなおして下さい。
+      aE4_authored_hint:
+        aE4_d: ぐちゃぐちゃになったら、「最初からやりなおす」で、最初からやりなおして下さい。
+      course3_artist_concept_challenge1_authored_hint:
+        courseE_artist_concept_challenge1_a: '前にうごく30ピクセル、右にまがる60度を使って、六角形の半分を書いてみてね。  '
+        courseE_artist_concept_challenge1_b: '前にうごく80ピクセル、右にまがる80度を使って、三角形の3分の2を書いてみてね。 '
+      course3_bee_functions_challenge1_authored_hint:
+        courseE_bee_functions_challenge1_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+      course3_bee_functions_challenge2_authored_hint:
+        courseE_bee_functions_challenge1_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+      course4_artist_variables_challenge2_authored_hint:
+        courseF_artist_variables_challenge2_a: "「セット sides は 5」ブロックで、`sides` 変数に5を入れて下さい。\nそして、「前にうごく
+          500 ÷ sides ピクセル」と「左にまがる 360÷ sides 度」\nを sides 回くりかえすせば、五角形が書けるはずだよ。 "
+        courseF_artist_variables_challenge2_b: 五角形を一つ書いたら、「左にまがる360 ÷ sides」で向きを変えよう。これを
+          sides 回くりかえすと、五角形が五つ書けるはずだよ。
+        courseF_artist_variables_challenge2_c: |-
+          五角形を五つ書き終わった後に、「セット sides は sides + 5」ブロックを追加しよう。そうすれば sidesは10になるはずだね。
+          そして、全体を2回くりかえせば、五角形と十角形が書けるはずだよ。
+        courseF_artist_variables_challenge2_d: 答えは、先生に聞いてね。
+      courseA_collector_loops_challenge2kp_authored_hint:
+        courseA_collector_loops_challenge2kp_a: 繰り返しを使ってこのパズルをクリアしてください。
+      courseA_collector_loops_challenge2kp_2018_authored_hint:
+        courseA_collector_loops_challenge2kp_a: 繰り返しを使ってこのパズルをクリアしてください。
+      courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2a_2018_authored_hint:
+        '1': Snap both `East` blocks to the bottom of the `when run` block.
+      courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5a_2018_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have
+          been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
+          try something else!
+      courseB_Scrat_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_maze_seq8_authored_hint:
+        courseB_maze_seq8_b: このパズルの解き方は二通りあるよ。
+      courseC_artist_prog2_authored_hint:
+        courseC_artist_prog2_a: ブロックを使って僕に「100ピクセル前に進む」ことを教えて。そうすれば自動的に線を引いてあげるよ。
+        courseC_artist_prog2_b: カドをまがるのが、むずかしい？「90度まがる」ブロックを使ってみて。
+      courseC_artist_prog2_2018_authored_hint:
+        courseC_artist_prog2_a: ブロックを使って僕に「100ピクセル前に進む」ことを教えて。そうすれば自動的に線を引いてあげるよ。
+        courseC_artist_prog2_b: カドをまがるのが、むずかしい？「90度まがる」ブロックを使ってみて。
+      courseC_artist_prog2_2019_authored_hint:
+        courseC_artist_prog2_a: ブロックを使って僕に「100ピクセル前に進む」ことを教えて。そうすれば自動的に線を引いてあげるよ。
+        courseC_artist_prog2_b: カドをまがるのが、むずかしい？「90度まがる」ブロックを使ってみて。
+      courseC_maze_programming6_authored_hint:
+        courseC_maze_programming6_a: このパズルの解き方は二通りあるよ。
+      courseC_maze_programming6_2018_authored_hint:
+        courseC_maze_programming6_a: このパズルの解き方は二通りあるよ。
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: このパズルの解き方は二通りあるよ。
+      courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_functions2_authored_hint:
+        courseD_artist_functions2_a: |-
+          プログラムの条件:
+          - 関数を使う
+          - 前に動くブロック 100 + 75 ピクセル
+          - 関数を使う
+      courseD_artist_nestedLoops3_authored_hint:
+        courseD_artist_nestedLoops3_a: |-
+          「前にジャンプ」ブロックを使って、1つの四角形の上部から次に描き始めるところまで移動させてみてください。
+
+          正方形の高さが20ピクセルでそれぞれが20ピクセル離れているとすると、どれだけジャンプすればよいでしょう？
+      courseD_artist_nestedLoops3_2018_authored_hint:
+        courseD_artist_nestedLoops3_a: |-
+          「前にジャンプ」ブロックを使って、1つの四角形の上部から次に描き始めるところまで移動させてみてください。
+
+          正方形の高さが20ピクセルでそれぞれが20ピクセル離れているとすると、どれだけジャンプすればよいでしょう？
+      courseD_artist_nestedLoops3_2019_authored_hint:
+        courseD_artist_nestedLoops3_a: |-
+          「前にジャンプ」ブロックを使って、1つの四角形の上部から次に描き始めるところまで移動させてみてください。
+
+          正方形の高さが20ピクセルでそれぞれが20ピクセル離れているとすると、どれだけジャンプすればよいでしょう？
+      courseD_maze_ramp6_authored_hint:
+        courseC_maze_programming6_a: このパズルの解き方は二通りあるよ。
+      courseD_scrat_ramp7_authored_hint:
+        courseD_scrat_programming6_a: このパズルの解き方は二通りあるよ。
+      courseD_scrat_ramp7_2018_authored_hint:
+        courseD_scrat_programming6_a: このパズルの解き方は二通りあるよ。
+      courseE_artist_concept_challenge1_authored_hint:
+        courseE_artist_concept_challenge1_a: '前にうごく30ピクセル、右にまがる60度を使って、六角形の半分を書いてみてね。  '
+        courseE_artist_concept_challenge1_b: '前にうごく80ピクセル、右にまがる80度を使って、三角形の3分の2を書いてみてね。 '
+      courseE_artist_concept_challenge1_2018_authored_hint:
+        courseE_artist_concept_challenge1_a: '前にうごく30ピクセル、右にまがる60度を使って、六角形の半分を書いてみてね。  '
+        courseE_artist_concept_challenge1_b: '前にうごく80ピクセル、右にまがる80度を使って、三角形の3分の2を書いてみてね。 '
+      courseE_artist_concept_challenge1_2019_authored_hint:
+        courseE_artist_concept_challenge1_a: '前にうごく30ピクセル、右にまがる60度を使って、六角形の半分を書いてみてね。  '
+        courseE_artist_concept_challenge1_b: '前にうごく80ピクセル、右にまがる80度を使って、三角形の3分の2を書いてみてね。 '
+      courseE_artist_functions1_authored_hint:
+        courseE_artist_functions1_a: その四角形にはそれぞれ100ピクセルの側面があります。これは、2番目の四角形を描く前に175ピクセル前に動かす必要があるという事です。
+        courseE_artist_functions1_b: メガネを作るために、重なり合う線を描いても大丈夫です。
+      courseE_artist_functions1_2018_authored_hint:
+        courseE_artist_functions1_a: その四角形にはそれぞれ100ピクセルの側面があります。これは、2番目の四角形を描く前に175ピクセル前に動かす必要があるという事です。
+        courseE_artist_functions1_b: メガネを作るために、重なり合う線を描いても大丈夫です。
+      courseE_artist_functions2_authored_hint:
+        courseD_artist_functions2_a: |-
+          プログラムの条件:
+          - 関数を使う
+          - 前に動くブロック 100 + 75 ピクセル
+          - 関数を使う
+      courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_a: |-
+          プログラムの条件:
+          - 関数を使う
+          - 前に動くブロック 100 + 75 ピクセル
+          - 関数を使う
+      courseE_artist_functions2_2019_authored_hint:
+        courseD_artist_functions2_a: |-
+          プログラムの条件:
+          - 関数を使う
+          - 前に動くブロック 100 + 75 ピクセル
+          - 関数を使う
+      courseE_bee_functions6_authored_hint:
+        courseE_bee_functions6_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+      courseE_bee_functions6_2018_authored_hint:
+        courseE_bee_functions6_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+      courseE_bee_functions6test_authored_hint:
+        courseE_bee_functions6_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+      courseE_bee_functions7_authored_hint:
+        courseE_bee_functions7_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+        courseE_bee_functions7_b: |-
+          緑の関数ブロックの中にコードを書くことを覚えておいてください。
+
+          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+      courseE_bee_functions7_2018_authored_hint:
+        courseE_bee_functions7_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+        courseE_bee_functions7_b: |-
+          緑の関数ブロックの中にコードを書くことを覚えておいてください。
+
+          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+      courseE_bee_functions_challenge1_authored_hint:
+        courseE_bee_functions_challenge1_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+      courseE_bee_functions_challenge1_2018_authored_hint:
+        courseE_bee_functions_challenge1_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+      courseE_bee_functions_challenge2_authored_hint:
+        courseE_bee_functions_challenge1_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+      courseE_bee_functions_challenge2_2018_authored_hint:
+        courseE_bee_functions_challenge1_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+      courseE_farmer_concept4_authored_hint:
+        4-5_Artist_Patterns_3_a: 4ブロックでひとつのセットです。３つのうちの、どれかが正しい答えです。
+        4-5_Artist_Patterns_3_b: ぐちゃぐちゃになったら、「最初からやりなおす」で、最初からやりなおして下さい。
+      courseE_maze_ramp6_authored_hint:
+        courseC_maze_programming6_a: このパズルの解き方は二通りあるよ。
+      courseE_maze_ramp6_2018_authored_hint:
+        courseC_maze_programming6_a: このパズルの解き方は二通りあるよ。
+      courseF_artist_for_challenge1_authored_hint:
+        courseF_artist_for_challenge1_a: |-
+          ペンの太さは 1 です。
+          一番小さい四角形は、一辺 50 ピクセルの長さで、50 ピクセルずつ大きくなっていきます。
+        courseF_artist_for_challenge1_b: ペンのアルファ値（とうめいさ）は `counter` ÷ 2 です。
+        courseF_artist_for_challenge1_c: 四角形を一つ書いたら、後ろにジャンプします。
+        courseF_artist_for_challenge1_d: 答えは先生に聞いてくださいね。
+      courseF_artist_for_challenge1_2018_authored_hint:
+        courseF_artist_for_challenge1_a: |-
+          ペンの太さは 1 です。
+          一番小さい四角形は、一辺 50 ピクセルの長さで、50 ピクセルずつ大きくなっていきます。
+        courseF_artist_for_challenge1_b: ペンのアルファ値（とうめいさ）は `counter` ÷ 2 です。
+        courseF_artist_for_challenge1_c: 四角形を一つ書いたら、後ろにジャンプします。
+        courseF_artist_for_challenge1_d: 答えは先生に聞いてくださいね。
+      courseF_artist_for_challenge1_2019_authored_hint:
+        courseF_artist_for_challenge1_a: |-
+          ペンの太さは 1 です。
+          一番小さい四角形は、一辺 50 ピクセルの長さで、50 ピクセルずつ大きくなっていきます。
+        courseF_artist_for_challenge1_b: ペンのアルファ値（とうめいさ）は `counter` ÷ 2 です。
+        courseF_artist_for_challenge1_c: 四角形を一つ書いたら、後ろにジャンプします。
+        courseF_artist_for_challenge1_d: 答えは先生に聞いてくださいね。
+      courseF_artist_for_challenge2_authored_hint:
+        courseF_artist_for_challenge2_c: "「カウントする」ブロック使って、 5から250まで 2ずつカウントします。 "
+        courseF_artist_for_challenge2_a: 色は、赤は 255、みどりは `counter` 、青は 255 -  `counter`
+          で、これらをまぜた色にしてください。
+      courseF_artist_for_challenge2_2018_authored_hint:
+        courseF_artist_for_challenge2_c: "「カウントする」ブロック使って、 5から250まで 2ずつカウントします。 "
+        courseF_artist_for_challenge2_a: 色は、赤は 255、みどりは `counter` 、青は 255 -  `counter`
+          で、これらをまぜた色にしてください。
+      courseF_artist_for_challenge2_2019_authored_hint:
+        courseF_artist_for_challenge2_c: "「カウントする」ブロック使って、 5から250まで 2ずつカウントします。 "
+        courseF_artist_for_challenge2_a: 色は、赤は 255、みどりは `counter` 、青は 255 -  `counter`
+          で、これらをまぜた色にしてください。
+      courseF_artist_fwp6_authored_hint:
+        courseF_artist_fwp6_a: 何回やっても、だいじょうぶ。いろいろとパラメータをかえて ためしてね。
+      courseF_artist_fwp6_2018_authored_hint:
+        courseF_artist_fwp6_a: 何回やっても、だいじょうぶ。いろいろとパラメータをかえて ためしてね。
+      courseF_artist_variables_challenge1a_authored_hint:
+        courseF_artist_variables_challenge1_a: "「セット sides は 5」ブロックで、`sides` 変数に5を入れて下さい。\nそして、「前にうごく
+          500 ÷ sides ピクセル」と「左にまがる 360÷ sides 度」\nを sides 回くりかえすせば、五角形が書けるはずだよ。 "
+        courseF_artist_variables_challenge1_b: 五角形を一つ書いたら、「左にまがる360 ÷ sides」で向きを変えよう。これを
+          sides 回くりかえすと、五角形が五つ書けるはずだよ。
+        courseF_artist_variables_challenge1_c: |-
+          五角形を五つ書き終わった後に、「セット sides は sides + 5」ブロックを追加しよう。そうすれば sidesは10になるはずだね。
+          そして、全体を2回くりかえせば、五角形と十角形が書けるはずだよ。
+        courseF_artist_variables_challenge1_d: 答えは、先生に聞いてね。
+      courseF_artist_variables_challenge2_authored_hint:
+        courseF_artist_variables_challenge2_a: "「セット sides は 5」ブロックで、`sides` 変数に5を入れて下さい。\nそして、「前にうごく
+          500 ÷ sides ピクセル」と「左にまがる 360÷ sides 度」\nを sides 回くりかえすせば、五角形が書けるはずだよ。 "
+        courseF_artist_variables_challenge2_c: |-
+          五角形を五つ書き終わった後に、「セット sides は sides + 5」ブロックを追加しよう。そうすれば sidesは10になるはずだね。
+          そして、全体を2回くりかえせば、五角形と十角形が書けるはずだよ。
+        courseF_artist_variables_challenge2_d: 答えは、先生に聞いてね。
+      courseF_artist_variables_challenge2_2018_authored_hint:
+        courseF_artist_variables_challenge2_a: "「セット sides は 5」ブロックで、`sides` 変数に5を入れて下さい。\nそして、「前にうごく
+          500 ÷ sides ピクセル」と「左にまがる 360÷ sides 度」\nを sides 回くりかえすせば、五角形が書けるはずだよ。 "
+        courseF_artist_variables_challenge2_c: |-
+          五角形を五つ書き終わった後に、「セット sides は sides + 5」ブロックを追加しよう。そうすれば sidesは10になるはずだね。
+          そして、全体を2回くりかえせば、五角形と十角形が書けるはずだよ。
+        courseF_artist_variables_challenge2_d: 答えは、先生に聞いてね。
+      courseF_artist_variables_challenge2_2019_authored_hint:
+        courseF_artist_variables_challenge2_a: "「セット sides は 5」ブロックで、`sides` 変数に5を入れて下さい。\nそして、「前にうごく
+          500 ÷ sides ピクセル」と「左にまがる 360÷ sides 度」\nを sides 回くりかえすせば、五角形が書けるはずだよ。 "
+        courseF_artist_variables_challenge2_c: |-
+          五角形を五つ書き終わった後に、「セット sides は sides + 5」ブロックを追加しよう。そうすれば sidesは10になるはずだね。
+          そして、全体を2回くりかえせば、五角形と十角形が書けるはずだよ。
+        courseF_artist_variables_challenge2_d: 答えは、先生に聞いてね。
+      courseF_bee_for_challenge2_authored_hint:
+        courseF_bee_for_challenge2_a: まず、花のミツを全部あつめて、そのあと、ハチミツを作りながら帰って来ます。
+        courseF_bee_for_challenge2_b: 花のミツをとるには、「カウントする」ブロックを使って、１から３まで１ずつカウントしてね。
+          `counter` 変数を上手く使って、ハチをうごかして、花のミツを集めよう。
+        courseF_bee_for_challenge2_c: ハチミツを作るには、「カウントする」ブロックを使って、2から10まで2ずつカウントしてね。
+          `counter` 変数を上手く使って、ハチミツを作ろう。
+        courseF_bee_for_challenge2_d: 答えは先生に聞いてくださいね。
+      courseF_bee_for_challenge2_2018_authored_hint:
+        courseF_bee_for_challenge2_a: まず、花のミツを全部あつめて、そのあと、ハチミツを作りながら帰って来ます。
+        courseF_bee_for_challenge2_b: 花のミツをとるには、「カウントする」ブロックを使って、１から３まで１ずつカウントしてね。
+          `counter` 変数を上手く使って、ハチをうごかして、花のミツを集めよう。
+        courseF_bee_for_challenge2_c: ハチミツを作るには、「カウントする」ブロックを使って、2から10まで2ずつカウントしてね。
+          `counter` 変数を上手く使って、ハチミツを作ろう。
+        courseF_bee_for_challenge2_d: 答えは先生に聞いてくださいね。
+      courseF_bee_for_challenge2_2019_authored_hint:
+        courseF_bee_for_challenge2_a: まず、花のミツを全部あつめて、そのあと、ハチミツを作りながら帰って来ます。
+        courseF_bee_for_challenge2_b: 花のミツをとるには、「カウントする」ブロックを使って、１から３まで１ずつカウントしてね。
+          `counter` 変数を上手く使って、ハチをうごかして、花のミツを集めよう。
+        courseF_bee_for_challenge2_c: ハチミツを作るには、「カウントする」ブロックを使って、2から10まで2ずつカウントしてね。
+          `counter` 変数を上手く使って、ハチミツを作ろう。
+        courseF_bee_for_challenge2_d: 答えは先生に聞いてくださいね。
+      courseF_bee_for_challenge3_authored_hint:
+        courseF_bee_for_challenge2_a: まず、花のミツを全部あつめて、そのあと、ハチミツを作りながら帰って来ます。
+        courseF_bee_for_challenge2_b: 花のミツをとるには、「カウントする」ブロックを使って、１から３まで１ずつカウントしてね。
+          `counter` 変数を上手く使って、ハチをうごかして、花のミツを集めよう。
+        courseF_bee_for_challenge2_c: ハチミツを作るには、「カウントする」ブロックを使って、2から10まで2ずつカウントしてね。
+          `counter` 変数を上手く使って、ハチミツを作ろう。
+        courseF_bee_for_challenge2_d: 答えは先生に聞いてくださいね。
+      courseF_bee_functions6_2018_authored_hint:
+        courseF_bee_functions6_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+      courseF_bee_functions8a_authored_hint:
+        courseF_bee_functions8a_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+      courseF_bee_functions8a_2018_authored_hint:
+        courseF_bee_functions8a_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+      courseF_bee_functionsPre7_authored_hint:
+        courseF_bee_functions7_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+      courseF_bee_functionsPre7_2018_authored_hint:
+        courseF_bee_functions7_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+      courseF_bee_functions_challenge2_recursion_authored_hint:
+        courseF_bee_functions8a_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+      courseF_maze_ramp6_authored_hint:
+        courseF_maze_ramp6_a: このパズルの解き方は二通りあるよ。
+      courseF_maze_ramp6_2018_authored_hint:
+        courseF_maze_ramp6_a: このパズルの解き方は二通りあるよ。
+      grade2_CaringForNewPet_4_authored_hint:
+        2-3_Maze_6_a: このパズルの解き方は二通りあるよ。
+      grade2_MakeDogTag_1_authored_hint:
+        2-3_Artist_1_new_a: ブロックを使って僕に「100ピクセル前に進む」ことを教えて。そうすれば自動的に線を引いてあげるよ。
+        2-3_Artist_1_new_b: カドをまがるのが、むずかしい？「90度まがる」ブロックを使ってみて。
+      grade2_MakeDogTag_9_authored_hint:
+        2-3_Artist_Loops_New_11_b: 新たな回転は、ループの中のコードの**最後**におかなければなりません。
+      grade2_PuppyLoops_10_authored_hint:
+        2-3_Artist_Debugging_8_a: |-
+          私の形は何回繰り返していましたか？
+
+          その形は何回繰り返す"べき"でしょうか？
+
+          プログラムのどこを変えればいいでしょうか？
+      grade2_PuppyLoops_8_authored_hint:
+        2-3_Artist_Debugging_2_a: 'ヒント: それぞれのヒゲの長さは、75ピクセルです。'
+      grade2_PuppyLoops_9_authored_hint:
+        2-3_Artist_Debugging_7_a: もしアーティストが最初の線を描いた後に、後ろに動かしたり、飛び下がるとどうなるでしょう？
+      grade3_Conditionals_11_authored_hint:
+        2-3_Bee_Conditionals_14_a: ブロックの減らし方が難しいですか？赤い花を紫の花とまったく同じものとして扱ってみてください！
+        2-3_Bee_Conditionals_14_b: 赤い花が紫色だったら、追加の「くりかえし」ループを使ってコードを減らす方法が分かったでしょうか？
+      grade3_Conditionals_12_authored_hint:
+        2-3_Bee_Conditionals_15_a: '注意: 紫の花だけ0か1個の花のミツがあって、プログラムを実行するたびにそれが変わります。'
+      grade3_Conditionals_2_authored_hint:
+        2-3_Bee_Conditionals_3_a: 前にすすむときに毎回ループを使い、他のループで花のミツをとり、そしてほかのループでハチミツをつくるとコードがもっとも短くなります。
+      grade3_Conditionals_4_authored_hint:
+        2-3_Bee_Conditionals_6_a: '注意: プログラムを実行するときに紫の花のミツが0と1の間で変化します！'
+      grade3_Conditionals_TeacherIDo_authored_hint:
+        2-3_Bee_Conditionals_6_a: '注意: プログラムを実行するときに紫の花のミツが0と1の間で変化します！'
+      grade3_Debugging_1_authored_hint:
+        2-3_Bee_Debugging_1_a: 間違いのブロックを見つけて直すと、「くりかえし」ループを使ってよりシンプルにすることができるパターンが分かりますか？
+      grade3_Debugging_TeacherIDo_authored_hint:
+        2-3_Bee_Debugging_4_a: ハチが意味のない何かをするところがありますか？そのブロックを変更すると何が起こりますか？
+      grade3_Loops_10_authored_hint:
+        2-3_Bee_Loops_4_a: ループの中には5つのブロックが必要です。
+      grade3_Loops_4_authored_hint:
+        2-3_Bee_Loops_3B_a: 前後する別の2つの「くりかえし」ループが必要になります。
+      grade3_Loops_5_authored_hint:
+        2-3_Bee_Loops_7_a: 最初にミツバシの向きを変えよう。
+      grade3_Loops_6_authored_hint:
+        2-3_Bee_Loops_4A_a: 最初にミツバシの向きを変えよう。
+        2-3_Bee_Loops_4A_b: プログラムの最後の部分は、ループ外のプログラムの最後にコードを書くことで終わりにできます。
+      grade3_Loops_8_authored_hint:
+        2-3_Bee_Loops_2_a: 繰り返しの中には４つのブロックが必要です。
+      grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: くりかえしの中には6ブロックがひつようです。
+      grade4_arist_nested_loop_triangles6_authored_hint:
+        4-5_Nested_Loops_12_a: 360÷36＝？
+      grade4_artist_functions1_authored_hint:
+        2-3_Artist_Functions_1_a: その四角形にはそれぞれ100ピクセルの側面があります。これは、2番目の四角形を描く前に175ピクセル前に動かす必要があるという事です。
+        2-3_Artist_Functions_1_b: メガネを作るために、重なり合う線を描いても大丈夫です。
+      grade4_artist_functions2_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          プログラムの条件:
+          - 関数を使う
+          - 前に動くブロック 100 + 75 ピクセル
+          - 関数を使う
+      grade4_artist_nestedLoops_challenge2_authored_hint:
+        Course_4_Artist_11_a: '前にうごく30ピクセル、右にまがる60度を使って、六角形の半分を書いてみてね。  '
+        Course_4_Artist_11_b: '前にうごく80ピクセル、右にまがる80度を使って、三角形の3分の2を書いてみてね。 '
+      grade4_artist_nested_loop_triangles6_authored_hint:
+        4-5_Nested_Loops_12_a: 360÷36＝？
+      grade4_bee_functions7_authored_hint:
+        2-3_Bee_Functions_8_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+      grade4_bee_functions8_authored_hint:
+        2-3_Bee_Functions_8_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+        2-3_Bee_Functions_8_b: |-
+          緑の関数ブロックの中にコードを書くことを覚えておいてください。
+
+          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+      grade4_review_artist1_authored_hint:
+        2-3_Artist_1_new_a: ブロックを使って僕に「100ピクセル前に進む」ことを教えて。そうすれば自動的に線を引いてあげるよ。
+        2-3_Artist_1_new_b: カドをまがるのが、むずかしい？「90度まがる」ブロックを使ってみて。
+      grade4_review_artist2_authored_hint:
+        2-3_Artist_6_a: '小さな角度にするには、この四角形で、もっと多くまがってください。   '
+        2-3_Artist_6_b: 私はすでに右に向いているので、前に進むことから始めるのが簡単です。そして三角形を作るには左に向きます。
+        2-3_Artist_6_c: 三角形のどちら側も、その四角形の辺の長さと同じ、100ピクセルです！
+      grade4_review_bee1_authored_hint:
+        2-3_Bee_Loops_3B_a: 前後する別の2つの「くりかえし」ループが必要になります。
+      grade4_review_bee2_authored_hint:
+        2-3_Bee_Loops_3_a: くりかえしの中には6ブロックがひつようです。
+      grade4_review_bee3_authored_hint:
+        2-3_Bee_Loops_4_a: ループの中には5つのブロックが必要です。
+      grade5_artist_functionparameters9_authored_hint:
+        NEW_Course_4_Artist_Params_14_a: 何回やっても、だいじょうぶ。いろいろとパラメータをかえて ためしてね。
+      level 'grade3_Loops_10_authored_hint:
+        2-3_Bee_Loops_4_a: ループの中には5つのブロックが必要です。
+      level 'grade3_Loops_4_authored_hint:
+        2-3_Bee_Loops_3B_a: 前後する別の2つの「くりかえし」ループが必要になります。
+      level 'grade3_Loops_5_authored_hint:
+        2-3_Bee_Loops_7_a: 最初にミツバシの向きを変えよう。
+      level 'grade3_Loops_6_authored_hint:
+        2-3_Bee_Loops_4A_a: 最初にミツバシの向きを変えよう。
+        2-3_Bee_Loops_4A_b: プログラムの最後の部分は、ループ外のプログラムの最後にコードを書くことで終わりにできます。
+      level 'grade3_Loops_8_authored_hint:
+        2-3_Bee_Loops_2_a: 繰り返しの中には４つのブロックが必要です。
+      level 'grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: くりかえしの中には6ブロックがひつようです。

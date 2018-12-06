@@ -1,0 +1,396 @@
+et:
+  data:
+    callouts:
+      2-3 Artist Debugging 1_callout:
+        2-3_Artist_Debugging_1_a: Aristil ei ole nuppu "Samm/step", kuid saate lohistada liugurit vasakule, et vaadata oma käivitatud programmi hoolikamalt.
+      2-3 Bee Conditionals 5_callout:
+        Bee_Cond_5_1a: Lilladel lilledel võib olla kas 1 või 0 nektarit... kuid ei tea, kuni sa proovid (käivitad) koodi!
+      4-5 Artist Patterns Free Play_callout:
+        4-5_Artist_Patterns_Free_Play_1: Kõik teie lemmikplokid on nüüd jaotatud kategooriatesse.  Klõpsake neid sõnu, et näha, kuhu kõik läksid!
+      4-5 Bee Conditionals - FC Test_callout:
+        4_5_Bee_Conditionals_2_1: Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima.
+      4-5 Bee Conditionals 2_callout:
+        4_5_Bee_Conditionals_2_1: Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima.
+      AppLab Intro 2 - Edit place1 2_callout:
+        dragTextAreaIn: Klõpsake ja lohistage "Teksti ala" ekraanile
+        screenSelectorCallout3: Vali ekraan, mille tegid
+      AppLab Intro 2 - Edit place1_callout:
+        screenSelectorCallout2: See on ekraani valija
+        changePlace1ID: Siin saad ekraani id-d muuta.
+      AppLab Intro 2 - Edit startScreen_callout:
+        applabIntro2_1: Klõpsake rakenduse pealkirja
+        appLabIntro2_designMenu: Nende menüüde abil saate muuta oma rakenduse "teksti"
+        appLabIntro2_textColor: Kerige alla, et muuda "teksti värv"
+      AppLab Intro 2 - Edit startScreen2_callout:
+        applabIntro2storyText: Klõpsake ekraanil loo teksti
+      AppLab Intro 2 - add Button_callout:
+        designToolboxCallOut: Lohistage nupp oma ekraanile.
+        screenSelectorCallout3: Minge oma "startScreen"
+      AppLab Intro 7 - thisOrThatAddButton_callout:
+        AppLabHoCFinal11: Nüüd olete kujundusrežiimis.
+      CSD U3 Variables Predict Where X_callout:
+        CSD_U3_variables: Muuda numbrit siin
+      CSD U3 Variables Predict Where XY Embed_callout:
+        grid: Klikka siin võrgustiku näitamiseks.
+      CSD U3 Variables Predict Where XY Embed_2018_callout:
+        grid: Klikka siin võrgustiku näitamiseks.
+      CSD U3 Variables Predict Where XY_callout:
+        grid: Klikka siin võrgustiku näitamiseks.
+      CSD U3 Variables Predict Where XY_2018_callout:
+        grid: Klikka siin võrgustiku näitamiseks.
+      CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: Muuda numbrit siin
+      CSD U3 debug_callout:
+        CSD_U3_rect_c1: Siin on kood
+        CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
+      CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: Siin on kood
+        CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
+      CSD U3 ellipse_callout:
+        CSD_U3_rect_c1: Siin on kood
+        CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
+      CSD U3 ellipse_2018_callout:
+        CSD_U3_rect_c1: Siin on kood
+        CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
+      CSD U3 fill_callout:
+        CSD_U3_rect_c1: Siin on kood
+        CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
+      CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Siin on kood
+        CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
+      CSD U3 my-rect_callout:
+        CSD_U3_rect_c1: Siin on kood
+        CSD_U3_rect_c2: Siin on nupp "Käivita".
+      CSD U3 rect_callout:
+        CSD_U3_rect_c1: Siin on kood
+        CSD_U3_rect_c2: Siin on nupp "Käivita".
+      CSD U3 rect_2018_callout:
+        CSD_U3_rect_c1: Siin on kood
+      CSD U3 sequence_callout:
+        CSD_U3_rect_c1: Siin on kood
+        CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
+      CSD U3 sequence_2018_callout:
+        CSD_U3_rect_c1: Siin on kood
+        CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
+      CSD U6 tugowar variables 1_callout:
+        CSD_U6_startGame: Määratle startGame siin
+      CSD U6 tugowar variables 1_2018_callout:
+        CSD_U6_startGame: Määratle startGame siin
+      CSD U6 tugowar variables 2_callout:
+        CSD_U6_movePlayer: Määratle movePlayer() siin
+      CSD U6 tugowar variables 2_2018_callout:
+        CSD_U6_movePlayer: Määratle movePlayer() siin
+      CSD U6 tugowar variables 3_callout:
+        CSD_U6_checkWin: Kontrollige, kas mängija on võitnud
+      CSD U6 tugowar variables 3_2018_callout:
+        CSD_U6_checkWin: Kontrollige, kas mängija on võitnud
+      Course 4 Artist 4_callout:
+        repeat_full_circle: Sisesta, mitu korda peab zombi liikuma, et teha üks täisring
+      Course 4 Artist 7_callout:
+        repeat_blocks: Kasuta plokki „Korda“ ja pane see tööruumis olevate plokkide ümber
+      Course 4 Artist For Loops 4_callout:
+        place_counter_variable: Lohista oma loendurimuutuja selle ploki sisse
+      Course 4 Artist Functions 4_callout:
+        create_function: Kliki siin, et avada hüpik „Funktsioonid“ ja kliki nupul „Loo funktsioon“.
+      Course 4 Artist Functions 5 OLD_callout:
+        house_hint: Pole midagi, kui pilt pole veel päris maja moodi. Järgmises mõistatuses parandame selle ära.
+      Course 4 Artist Functions 8_callout:
+        edit_function: Funktsiooni muutmiseks kliki siin.
+      Course 4 Artist Params 2_callout:
+        length_parameter: Kas oskad seda funktsiooni uuendada, et see kasutaks parameetrit „pikkus“?
+      Course 4 Artist Params 4_callout:
+        create_function: Kliki siin, et avada hüpik „Funktsioonid“ ja kliki nupul „Loo funktsioon“.
+      Course 4 Artist Vars 1_callout:
+        repeat_blocks: Kasuta plokki „Korda“ ja pane see tööruumis olevate plokkide ümber
+      Course 4 Artist Vars 10_callout:
+        set_sides: Kasuta seda plokki, et määrata külgede arvuks see arv, mida on vaja mõistatuse lahendamiseks.
+      Course 4 Artist Vars 12_callout:
+        set_length: Kasuta seda plokk, et määrata õige pikkus.
+      Course 4 Artist Vars 2_callout:
+        set_length: Kasuta seda plokk, et määrata õige pikkus.
+      Course 4 Artist Vars 3_callout:
+        place_variable: Lohista oma muutuja selle ploki sisse
+      Course 4 Artist Vars 6_callout:
+        degrees_per_side: Jaga number 360 külgede arvuga, et saaksid iga nurga kraadide arvu.
+      Course 4 Artist Vars 9_callout:
+        set_sides: Kasuta seda plokki, et määrata külgede arvuks see arv, mida on vaja mõistatuse lahendamiseks.
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: Kasuta uut plokki „korja nektarit“.
+      Course 4 Bee For Loops 6_callout:
+        actions_category: Tööriistakastil on uus ilme. Tegevuste plokid on nüüd siin.
+      Course 4 Bee Params 2_callout:
+        edit_get_nectar: Kasuta seda nuppu funktsiooni muutmiseks ja mesilase liikumissuuna muutmiseks, kui ta nektarit korjab.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: Programmi proovimiseks vajuta nuppu „Käivita“
+      Course 4 Maze 4_callout:
+        repeat: Käskude kordamiseks aseta plokid tsükli sisse
+      Course 4 Play Lab Params 3_callout:
+        edit_function: Funktsiooni muutmiseks kliki siin.
+      Course 4 Play Lab Params 6_callout:
+        edit_add_parameter: Kliki muutmisnupul, et lisada oma funktsiooni parameeter
+      Course 4 Play Lab Vars 1_callout:
+        arrows_move_actor: Kasuta tegelaskuju liigutamiseks nooleklahve
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: Kasuta tegelaskuju liigutamiseks nooleklahve
+      Dance_Party_01_callout:
+        dance_callout_01: Lisa see plokk oma programmi!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Lisa see plokk oma programmi!
+      Dance_Party_02_callout:
+        dance_callout_02: Lisa see plokk oma programmi!
+      Dance_Party_04_callout:
+        dance_callout_04: Lisa see plokk oma programmi!
+      Dance_Party_06_callout:
+        dance_callout_06: Lisa oma uus tantsija siia
+      Dance_Party_11_callout:
+        dance_callout_11_a: Uus plokk!
+        dance_callout_11_b: Uus plokk!
+      Eval Design Recipe .1_callout:
+        edit_function: Funktsiooni muutmiseks kliki siin.
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: Kasuta seda rippmenüüd erinevate lumehelveste loomiseks.
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: Kasuta seda rippmenüüd erinevate lumehelveste loomiseks.
+      Function intro Ryan_callout:
+        Function_intro_Ryan_1: See väike juhend ütleb arvutile, et käivita SUUR kogus koodi sama nimega, mis töölaual.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: See väike juhend ütleb arvutile, et käivita SUUR kogus koodi sama nimega, mis töölaual.
+      Geometric Pattern_callout:
+        4-5_Artist_Patterns_Free_Play_1: Kõik teie lemmikplokid on nüüd jaotatud kategooriatesse.  Klõpsake neid sõnu, et näha, kuhu kõik läksid!
+      Geometric Sun_callout:
+        4-5_Artist_Patterns_Free_Play_1: Kõik teie lemmikplokid on nüüd jaotatud kategooriatesse.  Klõpsake neid sõnu, et näha, kuhu kõik läksid!
+      Geometric Sun_2018_callout:
+        4-5_Artist_Patterns_Free_Play_1: Kõik teie lemmikplokid on nüüd jaotatud kategooriatesse.  Klõpsake neid sõnu, et näha, kuhu kõik läksid!
+      Geometric Sun_2019_callout:
+        4-5_Artist_Patterns_Free_Play_1: Kõik teie lemmikplokid on nüüd jaotatud kategooriatesse.  Klõpsake neid sõnu, et näha, kuhu kõik läksid!
+      Infinity_move_collide_callout:
+        Infinity_move_collide_callout: Mängi heli, kui sündmus juhtub.
+      Infinity_move_directions_callout:
+        Infinity_move_directions_callout: Milline plokk paneb Baymaxi üles liikuma, kui üles noole klahvile on vajutatud?
+        Infinity_move_directions_callout_arrow: Noolte abil saate juhtida
+      Infinity_move_right_callout:
+        Infinity_move_right_runbutton: Lisa liigutamise plokk siia
+      Infinity_repeat_callout:
+        Infinity_repeat_callout: Aseta Liigu plokid siia sisse
+      MC HOC 2016 Level 2-2_callout:
+        craft2_run_button_callout: Kui olete valmis, vajutage "Käivita" oma programmi proovimiseks.
+      MC HOC 2016 New Walk_callout:
+        MC_HOC_2016_New_Walk_callout2: Vajuta "Käivita", et hakata liikuma.
+      MC_HOC_2017_01_Cole_callout:
+        MC_HOC_2017_01_Cole_2: Kasutage nooleklahve või klõpsake siin, et panna mängija liikuma.
+      MC_HOC_2017_02_Will_callout:
+        MC_HOC_2017_02_Cole_1: Teie mängijal on nüüd sõber!  Saate kirjutada koodi Agendile, mis aitab läbi tasemete liikuda.
+      MC_HOC_2017_03_Cole_callout:
+        MC_HOC_2017_03_Cole_1: See on "korrata" tsükkel!  Klõpsake seda töölauale ja lisage kood, mida soovite korduvalt kasutada.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: See on "korrata" tsükkel!  Klõpsake seda töölauale ja lisage kood, mida soovite korduvalt kasutada.
+      MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Agent saab hõljuda üle vee aga mängija ei saa!
+      MC_HOC_2017_04_Cole_2019_callout:
+        MC_HOC_2017_04_Cole_a: Agent saab hõljuda üle vee aga mängija ei saa!
+      MC_HOC_2017_04_Kiki_callout:
+        MC_HOC_2017_04_Kiki_1: Klõpsake seda töölauale ja lisage natukene koodi, et see kordaks ikka ja jälle!
+      MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Sa ei saa neid plokke ära visata aga sa saad neid muuta!
+      MC_HOC_2017_06_Cole_2019_callout:
+        MC_HOC_2017_06_Cole_1: Sa ei saa neid plokke ära visata aga sa saad neid muuta!
+      MC_HOC_2017_08_RY_callout:
+        MC_HOC_2017_08_RY_1: 'Agent saab hõljuda üle laava aga mängija ei saa!  '
+      MC_HOC_2017_08_Will_callout:
+        MC_HOC_2017_08_RY_1: 'Agent saab hõljuda üle laava aga mängija ei saa!  '
+      MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'Agent saab hõljuda üle laava aga Steve ja Alex ei saa!  '
+      MC_HOC_2017_Ali_2019_callout:
+        MC_HOC_2017_08_RY_1: 'Agent saab hõljuda üle laava aga Steve ja Alex ei saa!  '
+      NEW Course 4 Artist Functions 5_callout:
+        edit_function: Funktsiooni muutmiseks kliki siin.
+        function_editor_draw_square: See on sinu funktsioonimääratlus. Neid plokke käitatakse iga kord, kui kasutad plokki „joonista ruut“
+      NEW Course 4 Artist Functions 7_callout:
+        edit_function: Funktsiooni muutmiseks kliki siin.
+      NEW Course 4 Artist Functions 8_callout:
+        edit_function: Funktsiooni muutmiseks kliki siin.
+      NEW Course 4 Artist Params 10_callout:
+        create_function: Kliki siin, et avada hüpik „Funktsioonid“ ja kliki nupul „Loo funktsioon“.
+      NEW Course 4 Artist Params 9_callout:
+        edit_add_parameter: Kliki muutmisnupul, et lisada oma funktsiooni parameeter
+        add_and_drag_parameter: Kirjuta siia oma parameetri nimi, kliki lisamisnupul ja lohista see oma funktsioonimääratlusse
+      NEW Course 4 Artist Vars 6_callout:
+        place_length_variable: Küsimärkide asendamiseks lohista siia pikkusemuutuja
+      NEW Course 4 Bee For Loops 5_callout:
+        actions_category: Tööriistakastil on uus ilme. Tegevuste plokid on nüüd siin.
+      New Frozen Project_callout:
+        snowflake_dropdown: Kasuta seda rippmenüüd erinevate lumehelveste loomiseks.
+      Overworld Chop Trees_callout:
+        craft_callout_preplaced: Panime sulle alustuseks siia mõned plokid
+      Overworld Chop Trees_2018_callout:
+        craft_callout_preplaced: Panime sulle alustuseks siia mõned plokid
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Panime sulle alustuseks siia mõned plokid
+      Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: Selle koodiga alustatakse majaehitust. Kas oskad selle lõpetada?
+      Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Selle koodiga alustatakse majaehitust. Kas oskad selle lõpetada?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Selle koodiga alustatakse majaehitust. Kas oskad selle lõpetada?
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: Programmi proovimiseks vajuta nuppu „Käivita“
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: Programmi proovimiseks vajuta nuppu „Käivita“
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Programmi proovimiseks vajuta nuppu „Käivita“
+      Overworld Place Wall_callout:
+        craft_inside_repeat: Tegevuste kordamiseks panne siia plokid
+      Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Tegevuste kordamiseks panne siia plokid
+      Overworld Place Wall_2019_callout:
+        craft_inside_repeat: Tegevuste kordamiseks panne siia plokid
+      PS clone CSD U3 Variables Predict Where XY_callout:
+        grid: Klikka siin võrgustiku näitamiseks.
+      PS copy - CSD U3 Variables Predict Where XY Embed_callout:
+        grid: Klikka siin võrgustiku näitamiseks.
+      PS copy 2-3 Bee Conditionals 5_callout:
+        Bee_Cond_5_1a: Lilladel lilledel võib olla kas 1 või 0 nektarit... kuid ei tea, kuni sa proovid (käivitad) koodi!
+      PS copy CSD U3 Variables Predict Where XY_callout:
+        grid: Klikka siin võrgustiku näitamiseks.
+      Pizza on a Plate_callout:
+        4-5_Artist_Patterns_Free_Play_1: Kõik teie lemmikplokid on nüüd jaotatud kategooriatesse.  Klõpsake neid sõnu, et näha, kuhu kõik läksid!
+      Robot Drawing_callout:
+        4-5_Artist_Patterns_Free_Play_1: Kõik teie lemmikplokid on nüüd jaotatud kategooriatesse.  Klõpsake neid sõnu, et näha, kuhu kõik läksid!
+      Robot_callout:
+        4-5_Artist_Patterns_Free_Play_1: Kõik teie lemmikplokid on nüüd jaotatud kategooriatesse.  Klõpsake neid sõnu, et näha, kuhu kõik läksid!
+      Ryan - 4-5 Bee Conditionals 2_callout:
+        4_5_Bee_Conditionals_2_1: Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima.
+      Ryan - Bee Conditionals_callout:
+        4_5_Bee_Conditionals_2_1: Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima.
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: Selle koodiga otsitakse laavat. Kas oskad lisada käsu edasiliikumiseks?
+      Underground Avoiding Lava_2018_callout:
+        craft_callout_moveforward: Selle koodiga otsitakse laavat. Kas oskad lisada käsu edasiliikumiseks?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Selle koodiga otsitakse laavat. Kas oskad lisada käsu edasiliikumiseks?
+      Underground Iron_callout:
+        craft_what_is_iron: Kaevanda seda rauda!
+      Underground Iron_2018_callout:
+        craft_what_is_iron: Kaevanda seda rauda!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: Kaevanda seda rauda!
+      courseD_bee_conditionals2_callout:
+        4_5_Bee_Conditionals_2_1: Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima.
+      courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima.
+      courseD_bee_conditionals2_2019_callout:
+        4_5_Bee_Conditionals_2_1: Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima.
+      courseD_bee_conditionals2_test_callout:
+        4_5_Bee_Conditionals_2_1: Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima.
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: Kasuta " loo ring" plokki ja muuda suurus.
+      frozen cross rotate_callout:
+        replace_questions_degree: Kasuta rippmenüüd, et asendada „???“ numbriga
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Kasuta rippmenüüd, et asendada „???“ numbriga
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Kasuta rippmenüüd, et asendada „???“ numbriga
+      frozen cross_callout:
+        repeat_blocks_1: "(1) Kasuta seda plokki ja pane see tööruumis hallide plokkide ümber"
+        repeat_blocks_2: (2) Teisalda plokk „Korda“ siia ja pane hallid plokid selle sisse
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: Kasuta korduse plokki, et see kujund luua.
+      frozen diamond_callout:
+        frozen_diamond_repeat: Kasuta korduse plokki, et see kujund luua.
+      frozen freeplay_callout:
+        snowflake_dropdown: Kasuta seda rippmenüüd erinevate lumehelveste loomiseks.
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Kasuta seda rippmenüüd erinevate lumehelveste loomiseks.
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Kasuta seda rippmenüüd erinevate lumehelveste loomiseks.
+      frozen line_callout:
+        move_elsa_forward: Lohista plokk „Liigu edasi“ ploki „pärast käivitamist“ alla, et Elsa liiguks edasi
+      frozen line_b_callout:
+        move_elsa_forward: Lohista plokk „Liigu edasi“ ploki „pärast käivitamist“ alla, et Elsa liiguks edasi
+      frozen line_test_callout:
+        move_elsa_forward: Lohista plokk „Liigu edasi“ ploki „pärast käivitamist“ alla, et Elsa liiguks edasi
+      frozen perpendicular_callout:
+        turn_elsa: Kasuta plokki „Pööra“, et Elsa pööraks. Rippmenüüs valitud number näitab, mitu korda Elsa pöörab
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: Kasuta "joonista lumehelbe võrestik" plokki
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Kasuta "joonista lumehelbe võrestik" plokki
+      frozen square iterative_callout:
+        frozen_create_square: Lisa rohkem plokke, et luua ruut
+      frozen square iterative_b_callout:
+        frozen_create_square: Lisa rohkem plokke, et luua ruut
+      frozen square iterative_test_callout:
+        frozen_create_square: Lisa rohkem plokke, et luua ruut
+      frozen square loop 3x_callout:
+        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
+      frozen square loop 3x_b_callout:
+        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
+      frozen square loop 3x_test_callout:
+        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
+      frozen square loop_callout:
+        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
+      frozen square loop_b_callout:
+        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
+      frozen square loop_test_callout:
+        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
+      frozen square snowflake_callout:
+        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
+      frozen square snowflake_b_callout:
+        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
+      frozen square snowflake_test_callout:
+        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
+      grade3_ConditionalsElse_2_callout:
+        4_5_Bee_Conditionals_2_1: Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima.
+      grade3_Conditionals_3_callout:
+        Bee_Cond_5_1a: Lilladel lilledel võib olla kas 1 või 0 nektarit... kuid ei tea, kuni sa proovid (käivitad) koodi!
+      grade3_bee_conditionals_quantum2_callout:
+        4_5_Bee_Conditionals_2_1: Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima.
+      grade4_artist_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: Kõik teie lemmikplokid on nüüd jaotatud kategooriatesse.  Klõpsake neid sõnu, et näha, kuhu kõik läksid!
+      grade4_artist_functions_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: Kõik teie lemmikplokid on nüüd jaotatud kategooriatesse.  Klõpsake neid sõnu, et näha, kuhu kõik läksid!
+      grade4_artist_parameters_squares1_callout:
+        edit_add_parameter: Kliki muutmisnupul, et lisada oma funktsiooni parameeter
+        add_and_drag_parameter: Kirjuta siia oma parameetri nimi, kliki lisamisnupul ja lohista see oma funktsioonimääratlusse
+      grade4_bee_conditionals_quantum2_callout:
+        4_5_Bee_Conditionals_2_1: Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima.
+      grade4_frozen_freeplay_callout:
+        snowflake_dropdown: Kasuta seda rippmenüüd erinevate lumehelveste loomiseks.
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: Kasuta " loo ring" plokki ja muuda suurus.
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: Kasuta korduse plokki, et see kujund luua.
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: Kasuta korduse plokki, et see kujund luua.
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: Kasuta korduse plokki, et see kujund luua.
+      grade4_frozen_square_callout:
+        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
+      grade4_frozen_square_loop1_callout:
+        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
+      grade4_frozen_square_loop2_callout:
+        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
+      grade4_frozen_square_loop3_callout:
+        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
+      grade5_artist_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: Kõik teie lemmikplokid on nüüd jaotatud kategooriatesse.  Klõpsake neid sõnu, et näha, kuhu kõik läksid!
+      grade5_artist_parameters_squares1_callout:
+        edit_add_parameter: Kliki muutmisnupul, et lisada oma funktsiooni parameeter
+        add_and_drag_parameter: Kirjuta siia oma parameetri nimi, kliki lisamisnupul ja lohista see oma funktsioonimääratlusse
+      grade5_artist_parameters_triangles1aa_callout:
+        edit_add_parameter: Kliki muutmisnupul, et lisada oma funktsiooni parameeter
+        add_and_drag_parameter: Kirjuta siia oma parameetri nimi, kliki lisamisnupul ja lohista see oma funktsioonimääratlusse
+      grade5_artist_variables_pentagons1_callout:
+        place_length_variable: Küsimärkide asendamiseks lohista siia pikkusemuutuja
+      grade5_artist_variables_pentagons12_callout:
+        set_length: Kasuta seda plokk, et määrata õige pikkus.
+      grade5_artist_variables_square7_callout:
+        degrees_per_side: Jaga number 360 külgede arvuga, et saaksid iga nurga kraadide arvu.
+      grade5_artist_variables_triangles2_callout:
+        set_length: Kasuta seda plokk, et määrata õige pikkus.
+      grade5_playlab_variables1_callout:
+        arrows_move_actor: Kasuta tegelaskuju liigutamiseks nooleklahve
+      grade5_playlab_variables11_callout:
+        edit_add_parameter: Kliki muutmisnupul, et lisada oma funktsiooni parameeter
+      grade5_playlab_variables1ask_callout:
+        arrows_move_actor: Kasuta tegelaskuju liigutamiseks nooleklahve

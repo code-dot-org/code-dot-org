@@ -1,0 +1,20 @@
+---
+id:
+  data:
+    block_categories:
+      Actions: Aksi
+      Loops: Loop
+      Functions: fungsi
+      Color: Warna
+      Math: Matematika
+      Logic: Logika
+      Variables: variabel
+      Conditionals: Kondisi
+      Events: kegiatan
+      Text: Teks
+      Input: Masukan
+      Start: Mulai
+      Booleans: Boolean
+      test: test
+      Name: Nama
+      Function: Fungsi

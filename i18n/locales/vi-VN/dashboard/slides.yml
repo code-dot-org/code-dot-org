@@ -1,0 +1,649 @@
+vi:
+  slides:
+    maze_intro:
+      1:
+        text: "Chào mừng bạn đến với buổi Giờ lập trình đầu tiên! Hãy cùng tìm hiểu phần đầu tiên của việc lập trình nào."
+      2:
+        text: "Chúng ta sẽ sử dụng Blockly, một ngôn ngữ lập trình trực quan nơi mà bạn kéo và thả những khối lệnh để viết dòng lệnh."
+      3:
+        text: "Hầu hết các dòng lệnh được đánh máy, nhưng Blockly thì trực quan hơn. Mỗi khối lệnh tương ứng với 1 dòng lệnh \"thực sự\"."
+      4:
+        text: "Bạn sẽ học căn bản của khoa học máy tính, những khái niệm được sử dụng tại bất kì đâu từ tạo những ứng dụng cho đến điều khiển tàu thám hiểm sao Hỏa."
+      5:
+        text: "Một chương trình là một tập hợp các chỉ dẫn cho máy tính của bạn làm theo."
+      6:
+        text: "Mục tiêu của chương trình đầu tiên của bạn là dẫn một Chú Chim Tức Giận qua một mê cung để đến chỗ Con Lợn Xanh."
+      7:
+        text: "Phía bên trái là mê cung nơi mà chương trình của bạn chạy. Những chỉ dẫn cho mỗi câu đố ở dưới mê cung."
+      8:
+        text: "Hộp công cụ ở giữa có các dòng lệnh cho Chú Chim Tức Giận. Bạn sẽ sử dụng chúng để xây dựng đoạn code của bạn."
+      9:
+        text: "Ở bên phải là không gian làm việc nơi mà bạn sẽ kéo từng khối lệnh từ hộp công cụ để xây dựng chương trình của bạn. Để xóa một khối, kéo nó vào thùng rác ở trong góc."
+      10:
+        text: "Mỗi khối là một chỉ dẫn. Nếu bạn kéo một khối lệnh \"di chuyển về phía trước\" vào trong không gian làm việc và ấn \"Chạy chương trình\", con chim sẽ di chuyển 1 bước trong mê cung."
+      11:
+        text: "Để thực hiện nhiều hơn 1 hành động, bạn có thể kéo nhiều khối lệnh vào không gian làm việc của bạn và gắn chúng vào với nhau. Con chim sẽ thực hiện các dòng lệnh từ trên xuống dưới."
+      12:
+        text: "Nếu bạn chạy một chương trình và muốn sửa nó và thử lại, ấn nút \"Khởi động lại\"."
+      13:
+        text: "Hãy đi bắt những con lợn đó nào!"
+    artist_intro:
+      1:
+        text: "Xin chào, tôi là JR! Mỗi đội xe đua cần các nhà khoa học về máy tính để giành chiến thắng. Họ phân tích dữ liệu từ xe để giúp nó đi nhanh hơn."
+      2:
+        text: "Trong loạt câu đố này, bạn là một họa sĩ vẽ đường thẳng bên dưới chân bạn ở bất cứ nơi nào bạn đi qua."
+      3:
+        text: "Khối lệnh này nói rằng \"đi thẳng về phía trước 100 điểm ảnh.\" Điểm ảnh là những chấm nhỏ trên màn hình của bạn."
+      4:
+        text: "Khối lệnh này nói rằng \"rẽ phải 90 độ.\" Nó sẽ quay hướng họa sĩ của bạn giống như khối lệnh \"quay\" trong loạt câu đố mê cung."
+      5:
+        text: "Nhấp chuột vào mũi tên trong các khối để thay đổi số lượng các di chuyển của nghệ sĩ về phía trước hoặc quay. Chơi nhiều khối để làm quen với các khối mới."
+    farmer_intro:
+      1:
+        text: "Xin chào, tôi là Paola! Trong loạt câu đố này, bạn là một người nông dân đã san phẳng đất trên cánh đồng để bắt đầu trồng cây."
+      2:
+        text: "Bạn phải giúp cô ấy loại bỏ các cọc bị bám bẩn và cắm vào các lỗ."
+      3:
+        text: "Các block mới loại bỏ 1 xẻng bụi bẩn từ đống cọc và lấp 1 xẻng bụi bẩn vào một lỗ."
+      4:
+        text: "Cọc và lỗ có những kích cỡ khác nhau, do đó bạn cần phải hỏi người nông dân cần bao nhiêu xẻng/ cuốc để dùng."
+    flappy_intro:
+      1:
+        text: "Chào! Tôi là Katie! Bạn biết đấy, một trong những điều thú vị nhất của khoa học máy tính chính là các chương trình của máy tính có thể tương tác với nhau."
+      2:
+        text: "Bất cứ thời điểm nào khi ai đó clicks hay taps hay gõ trên máy tính hoặc điện thoại, để tạo ra một sự kiện/ EVENT, và đây là một vài mã/ code để đưa ra quyết định phải làm gì khi một sự kiện/ EVENT diễn ra."
+      3:
+        text: "Ví dụ cụ thể sau: bạn có một sự kiện trên tay/ EVENT-HANDLER có viết \"khi chuột máy tính của được bấm, hãy chơi một giai điệu\""
+      4:
+        text: "Bạn có biết trò chơi FlappyBird? Chúng ta sẽ học cách tạo ra phiên bản FlappyBird của riêng mình bằng việc Xử lý sự kiện!"
+      5:
+        text: "Những phần code bạn sẽ viết liên quan đến việc kéo và thả các khối lệnh. Các khối lệnh này diễn tả các câu lệnh cho máy tính. Thực chất bên dưới các khối này là những dòng code thật."
+      6:
+        text: "Ở khu làm việc đã đặt sẵn một số khối màu xanh lá cây, chúng chính là các lệnh \"Xử lý sự kiện\" "
+      7:
+        text: "Nếu bạn muốn chú chim vỗ cánh khi bạn nhấp chuột, gắn các khối \"FLAP\" vào cách lệnh xử lý sự kiện thích hợp, sau đó trở đi cứ khi nào bạn nhấp chuột, chú chim sẽ vỗ cánh."
+      8:
+        text: "Trong mỗi câu đố của hoạt động này, chúng tôi sẽ giới thiệu các loại sự kiện mới tương ứng với các khối xanh lá cây trong khu làm việc, và bạn sẽ quyết định gắn khối lệnh thích hợp để đáp lại các sự kiện trên."
+      9:
+        text: "Khi bạn thấy một mũi tên xổ dọc xuống như thế này, điều đó có nghĩa là bạn có thể chỉnh sửa cài đặt trong game."
+      10:
+        text: "Trong câu đố cuối cùng, có thể bạn sẽ tạo ra trò chơi của riêng bạn và chia sẻ nó với bạn bè của bạn. Chúc vui vẻ!"
+    loop_times:
+      1:
+        text: "Xin chào, tôi là Mark! Cùng tìm hiểu về vòng lặp nào. Sử dụng vòng lặp, bạn có thể nói với một cái máy tính lặp đi lặp lại bất kì tập hợp hành động nào, hàng nghìn hoặc thậm chí hàng tỉ lần."
+      2:
+        text: "Trong câu đố này, chúng tôi muốn làm con chim tiến lên phía trước 5 đoạn để trúng vào con lợn."
+      3:
+        text: "Chúng ta có thể sử dụng khối \"lặp\" mới để giúp đỡ."
+      4:
+        text: "Thay vì kéo ra 5 khối \"tiến lên phía trước\"..."
+      5:
+        text: "Chúng tôi có thể đặt các khối \"di chuyển về phía trước\" bên trong khối \"lặp lại\" và viết một số vào trong khối để cho biết nó lặp lại bao nhiêu lần."
+      6:
+        text: "Điều quan trọng: bạn có thể đặt nhiều hơn một lệnh bên trong một khối \"lặp lại\"."
+      7:
+        text: "Sử dụng khối \"lặp lại\" mới của bạn!"
+    loop_until:
+      1:
+        text: "Xin chào, tôi là Chris. Trước khi gia nhập Miami Heat, tôi đã đi đến Georgia Tech để nghiên cứu khoa học máy tính. Hãy thử khối mới của chúng tôi: \"lặp lại cho đến khi\"."
+      2:
+        text: "Phải làm gì nếu chúng tôi không biết khoảng cách những con chim phải di chuyển bao xa để đến được những con lợn?"
+      3:
+        text: "Nếu chúng ta đặt một khối \"di chuyển về phía trước\" bên trong khối \"lặp lại cho đến khi\", chim sẽ di chuyển về phía trước cho đến khi nó đi đến con lợn (hay đâm vào một bức tường)."
+      4:
+        text: 'Và điều này là quan trọng: giống như trước, chúng tôi đặt nhiều khối bên trong khối "lặp lại cho đến khi", và nó sẽ lặp đi lặp lại tất cả.'
+    if:
+      1:
+        text: "Xin chào, tôi là Bill! Hãy tìm hiểu một khái niệm cơ bản mới: \"nếu\" báo cáo. Điều này là làm thế nào để máy tính đưa ra quyết định."
+      2:
+        text: "Bạn sử dụng báo cáo \"nếu\" cho mình mỗi ngày. Trước khi bạn đi ra ngoài mỗi buổi sáng, bạn nói nếu nó mưa bên ngoài, tôi phải mặc áo của tôi."
+      3:
+        text: "Chúng tôi có thể cho các zombie biết để kiểm tra xem nếu có các con đường bên trái, và nếu anh ta tìm thấy một con đường bên trái, chúng tôi có thể có anh ta chuyển theo hướng đó."
+      4:
+        text: "Để viết mã cho việc này, hãy kéo ra khối \"nếu\" và đặt một khối \"rẽ trái\" bên trong nó."
+      5:
+        text: "Bây giờ, nếu chúng ta đặt một khối \"di chuyển về phía trước\" ở trên nó và một khối \"lặp lại\" xung quanh tất cả mọi thứ, mỗi khi zombie di chuyển, anh ta sẽ kiểm tra nếu có một con đường bên trái và quay sang. \"Lặp lại\" lệnh là rất quan trọng để kiểm tra một lần lượt tại mỗi bước."
+      6:
+        text: "Lệnh nếu rất quan trọng trong khoa học máy tính. Một trong những chương trình đầu tiên tôi đã viết là một trò chơi tic-tac-toe, Và trong trò chơi nếu có một người về đầu và dành chiến thắng, ngay lập tức chặn cái vị trí chiến thắng lại đối với những người còn lại."
+      7:
+        text: "Vui chơi bằng cách sử dụng khối \"if\"!"
+    if_else:
+      1:
+        text: "Chào, tên tôi là Saloni. Tôi sử dụng khoa học máy tính để giúp giải quyết các vấn đề sức khỏe và y học. Hãy tìm hiểu về các khối \"if else\". Cũng giống như khối \"if\", nhưng nó có một phần phụ vào cuối là \"else\"."
+      2:
+        text: "Nếu tôi đặt một khối \"di chuyển về phía trước\" ở vị trí \"làm\" và một khối \"rẽ trái\" ở vị trí \"khác\" có nghĩa là các zombie sẽ lựa chọn giữa 2 lựa chọn. Nếu có một con đường phía trước, zombie sẽ di chuyển về phía trước, và nếu không (không có một con đường phía trước), zombie sẽ rẽ trái."
+      3:
+        text: "Giống như các khối \"nếu\", chúng tôi có thể đặt khối \"nếu khác\" bên trong khối \"lặp lại\", zombie sẽ giữ di chuyển và các \"nếu khối khác\" sẽ kiểm tra nếu có một nơi nào đó để chuyển, sẽ di chuyển theo hướng đó."
+      4:
+        text: "Bây giờ, hãy đá đít lũ thây ma ấy nào!"
+    if_else_scrat:
+      1:
+        text: "Một tuyên bố khác nếu là một quyết định giữa hai điều. Chúng ta hãy xem làm thế nào chúng tôi có thể sử dụng một tuyên bố khác với bạn của chúng tôi, chú sóc Scrat."
+      2:
+        text: "Khối này trông giống như khối \"if\", nhưng có một phần phụ phía dưới cùng đó nói \"else\". nếu tôi đặt khối \"move forward\" nơi mà nó nói \"do\" và một khối \"turn left\" nơi mà nó nói \"else\". điều đó có nghĩa là con sóc Scrat sẽ di chuyển tiến về phía trước nếu đó có một đường phía trước. còn nếu không có đường phía trước, Scrat sẽ rẽ trái."
+      3:
+        text: "nó thực hiện một quyết định và làm một trong hai hành động dựa trên quyết định đó. and cũng giống như khối \"if\", bạn có thể đặt khối \"if-else\" bên trong khối \"repeat."
+      4:
+        text: "Giờ chúng ta hãy giúp chú sóc Scrat lấy được quả hạch đó!"
+    function:
+      1:
+        text: "Xin chào, tôi là Brina, một kỹ sư tại Instagram. Có một chức năng mà một số dòng mã bạn muốn sử dụng nhiều, thay vì viết mã trong mọi lúc, bạn có thể chỉ cần sử dụng một khối."
+      2:
+        text: "Chúng ta sẽ tìm hiểu làm thế nào để xác định chức năng. Định nghĩa chức năng có một ngôi sao trong góc. Tên của các chức năng được viết trên dòng trên cùng."
+      3:
+        text: "các khối mà đi bên trong định nghĩa cho chúng ta biết những gì mà nó làm. vì thế định nghĩa chức năng được gọi là \"fill5\" và nó tạo thành khối \"rêpat\" và khối \"fill\"."
+      4:
+        text: "Định nghĩa ngồi trên không gian làm việc, nhưng người nông dân của chúng ta sẽ không cho chạy các chức năng đến khi ta kéo \"fill 5\" khối chức năng từ thể loại chức năng ra."
+      5:
+        text: "Let's put the \"fun\" back in \"FUNction!\""
+    loop_while:
+      1:
+        text: "Hi, I'm Makinde! Let's learn about the \"while block.\""
+      2:
+        text: "Khối màu trắng sẽ làm mọi thứ bạn bỏ vào trong nó miễn sao các khối ở trên đều đã lập trình đúng."
+      3:
+        text: "Ví dụ, nếu người nông dân đang đứng trên một đống, cô ta sẽ tiếp tục xóa 1 đồ mang được trên xẻng khi vẫn còn một đống dưới cô."
+    loop_for:
+      1:
+        text: "Hi, I 'm Trina, và tôi làm việc cho Pixar. Tôi đã làm việc trên một loạt các phim, trong đó có Shrek."
+      2:
+        text: "Đây là vòng \"truy cập\" mới của chúng tôi. Nó sẽ biểu diễn hành động hơn và hơn nữa rồi bạn có thễ chuyển các hành động mỗi lần một chút."
+      3:
+        text: "trong ví dụ này, vòng lặp \"counter\" của chúng ta nói rằng \"count with counter from 50 to 90 by 10\" và bên trong nó, chúng ta có khối \"draw a square\". kéo khối \"counter\" từ phần \"variables\" vào trong vị trí \"length\"."
+      4:
+        text: "Có nghĩa là họa sĩ của chúng ta sẽ đi vẽ một hình vuông có cạnh dài là 50 pixel, sau đó thêm 10 vào để vẽ thêm một hình vuông có cạch dài 60 pixel. Cứ như thế, mỗi lần vẽ tăng lên 10 cho đến khi đạt 90. Như vậy, chúng ta sẽ có các hình vuông có cạnh dài 50, 60, 70, 80, và 90 pixel."
+    parameters:
+      1:
+        text: "Hi, tôi là Janete, và tôi là một kỹ sư tại Zynga."
+      2:
+        text: "Sẽ như thế nào nếu như chúng ta muốn vẽ thật nhiều hình tam giác có độ dài khác nhau?"
+      3:
+        text: "chúng ta có thể viết tất cả mã ra bằng tay hoặc chúng ta có thể sử dụng một hàm với các tham số."
+      4:
+        text: "để làm được điều này, nhấp chuột vào ngôi sao màu xanh trên định nghĩa hàm \"draw a triangle\". sau đó kéo \"input name\" vào trong khối \"input\"."
+      5:
+        text: "Sau đó, nếu bạn viết \"length\" tại chỗ nơi được nói là \"x\" và nhấn \"Enter\" bạn sẽ tạo một đầu vào độ dài cho hàm của bạn."
+      6:
+        text: "Sau đó nhấp chuộc vào ngôi sau. bây giờ, bạn muốn nhấp chuột vào loại biến và kéo khối \"length\" vào trong khối \"move forward\" của định nghĩa hàm của bạn. và kéo ra xa khối số cũ."
+      7:
+        text: "để sử dụng hàm của bạn với các tham số, nhấp chuột vào loại hàm và kéo ra ngoài hàm \"draw a triangle with length\" của bạn."
+      8:
+        text: "bây giờ bạn có thể sử dụng khối toán học để đặt đầu vào các số khác nhau để vẽ các hình tam giác có kích thước khác nhau."
+    hoc_wrapup:
+      1:
+        text: "Chúc mừng! Với câu đố cuối cùng bạn giải quyết được, bạn chỉ cần viết các đoạn mã từ đó có thể nói cho bất kỳ con robot làm thế nào để tìm thấy con đường của nó thông qua một mê cung không phân nhánh hay hầm với chiều dài bất kỳ, cho dù đó là một chú zombie, một con chim, một chiếc xe dò đường trên sao Hỏa, hoặc thậm chí là một chiếc xe hơi tự lái."
+      2:
+        text: "Các khái niệm cơ bản bạn sử dụng ở trung tâm của mọi chương trình hoặc ứng dụng bạn sẽ phải cố gắng.  Chúng tôi đã được học về vòng lặp lại, lặp lại trừ khi thực thi, nếu thực thi, và ngược lại."
+      3:
+        text: "Nếu bạn thích giờ đầu tiên của việc lập trình, hãy truy cập code.org để tiếp tục việc học của bạn vào khoa học máy tính! Khi bạn hoàn tất khóa học 20 giờ của chúng tôi, bạn sẽ nắm bắt các khái niệm cơ bản của chương trình, và có thể bắt đầu học tập làm thế nào để viết ứng dụng điện thoại, hướng dẫn robot, trò chơi, đặt tên cho nó."
+      4:
+        text: "Công nghệ đang thay đổi tất cả mọi thứ chúng ta làm và nó không quan trọng nếu bạn còn trẻ hay già: lập trình là thú vị, đó là sáng tạo, và bất cứ ai có thể tìm hiểu!"
+    20_wrapup:
+      1:
+        text: "Hiển thị ghi chú đến!"
+    frozen_intro:
+      1:
+        text: "Xin chào, tên tôi là Lyndsey. Tôi làm mô hình ,khắc phục các lỗi, và viết ứng dụng của riêng tôi. Hãy sử dụng đoạn mã để tham gia vào thế giới của Anna và Elsa cùng họ khám phá sự kỳ diệu và vẻ đẹp của băng tuyết."
+      2:
+        text: "Bạn sẽ tạo ra các bông tuyết , các mẫu như giầy trượt băng và tạo ra một sứ sở thần tiên mùa đông sau đó bạn có thể chia sẻ với bạn bè của bạn."
+      3:
+        text: "Trong những giờ tiếp theo, bạn sẽ tìm hiểu làm thế nào để lập trình một cách cơ bản. Lập trình truyền thống thường là các đoạn câu lệnh ngắn, nhưng chúng ta sẽ sử dụng các khối mã,bằng cách sử dụng các hình khối mà bạn có thể kéo và thả để viết chương trình. Đây chính là cách cơ bản để sinh viên học. Nhưng thực chất bạn vẫn đang học tạo ra các dòng mã"
+      4:
+        text: "Một chương trình là một tập hợp các chỉ dẫn để nói cho máy tính biết phải làm gì. Hãy xây dựng một đoạn mã, hoặc một chương trình, mà sẽ giúp đỡ Elsa tạo ra một con đường đơn giản. Chúng tôi sẽ sử dụng nó sau này để tạo ra các mô hình phức tạp hơn."
+      5:
+        text: "Màn hình của bạn được chia thành ba phần chính. Bên trái, là bề mặt băng nơi bạn sẽ chạy chương trình của bạn. Các chỉ dẫn cho mỗi cấp độ được viết ngay bên dưới bề mặt."
+      6:
+        text: "Ở giữa là hộp công cụ, và mỗi khối là một hành động mà Elsa và Anna có thể làm."
+      7:
+        text: "Khoảng trắng ở phía bên phải được gọi là workspace, và đây là nơi chúng ta sẽ xây dựng chương trình của chúng ta. Để di chuyển xung quanh trên bề mặt băng, bạn sẽ sử dụng khối \"Di chuyển về phía trước\" "
+      8:
+        text: "Ở đây, khối \"Di chuyển về phía trước\" nói, \"di chuyển về phía trước 100 điểm ảnh.\" Khi chúng tôi nhấn \"Chạy\", điều gì sẽ xảy ra? Elsa di chuyển về phía trước một số khoảng cách nhất định trên màn hình, 100 điểm ảnh trong thực tế! Điểm ảnh về cơ bản là một hình vuông nhỏ trên màn hình máy tính của bạn."
+      9:
+        text: "Với các khối khác, trong câu đố này chúng ta chúng ta nói \"qua phải 90 độ\". Khi chúng ta sử dụng khối \"quay phải\", điều đó làm cho Elsa quay một khoảng cách nhất định. Bạn có thể cho quay xung quanh với một khoảng bao xa bạn muốn Elsa quay. Các góc được đo từ con đường phía trước của Elsa. Vì vậy đây là quay 90 độ. Và đây là quay 120 độ."
+      10:
+        text: "Hãy nhớ rằng, bạn có thể thay đổi số lượng điểm ảnh và góc độ bằng cách nhấp vào mũi tên bên cạnh chúng."
+    frozen_loops:
+      1:
+        text: "Hi, I 'm Paola! Máy vi tính có thực sự tốt khi hành động lặp đi lặp lại. Bạn có thể đếm đến 10, 20, hoặc 100. Nhưng một máy tính có thể đếm đến một tỷ hoặc một nghìn tỷ. Nó sẽ không cảm thấy chán nản và chỉ mất một vài giây. Cho dù nó đếm, hoặc vẽ, hoặc làm bất cứ điều gì - máy tính có thể lặp lại điều đó hàng trăm hoặc thậm chí hàng tỷ lần."
+      2:
+        text: "Trong chương trình, chúng tôi gọi đây là một vòng lặp. Một vòng lặp là làm thế nào bạn lặp lại mã của bạn nhiều lần. Đối với các câu đố tiếp theo, mục tiêu của bạn là giúp Anna tạo ra một hình vuông với khối \"Lặp lại\"."
+      3:
+        text: "Bất kỳ khối mã bạn đặt bên trong khối \"Lặp lại\" sẽ được lặp lại theo thứ tự, như số lần như bạn muốn."
+      4:
+        text: "Để vẽ một hình vuông, bạn có thể sử dụng khối \"Di chuyển về phía trước\" và \"Quay phải\" 4 lần. Nhưng có một cách dễ dàng hơn là nói với máy tính \"Di chuyển về phía trước\" và \"Quay phải 90 độ\" một lần, và sau đó nói với nó để lặp lại cặp hành động này 4 lần. Để làm điều đó, bạn cần phải đặt khối \"Di chuyển về phía trước\" và \"Quay phải\" bên trong một khối \"Lặp lại\"."
+      5:
+        text: "Hãy nhớ rằng, bạn có thể thay đổi số trong khối \"Lặp lại\" chọn bất cứ số gì, và nó sẽ lặp lại số trong khối đó từng đấy lần."
+    frozen_functions:
+      1:
+        text: "Xin chào, tôi là Chris Bosh. Tôi là một cầu thủ bóng rổ chuyên nghiệp, và tôi viết mã trong trường cao đẳng."
+      2:
+        text: "Một trong những khái niệm quan trọng nhất trong khoa học máy tính là làm thế nào để xác định các lệnh mới. Hầu hết các ngôn ngữ máy tính đã chỉ khoảng 100 từ hoặc câu lệnh. Và thực sự, nghệ thuật và ma thuật là việc định nghĩa các khối mới thuộc về bạn khác những khối được xây dựng."
+      3:
+        text: "Một khi bạn đã dạy một máy tính làm thế nào để làm một hành động một lần bằng cách sử dụng dãy lệnh này, bạn có thể tạo 1 tên riêng cho hành động đó. Vì vậy ta dễ dàng lặp lại hành động đó sau này. Khi bạn định nghĩa các lệnh của riêng bạn và đặt tên cho nó, ta gọi đó là hàm."
+      4:
+        text: "Xin chào, Tôi là Jess. Khi lập trình với các khối, bạn sẽ sử dụng hàm nếu có một tập các hành động bạn muốn sử dụng nhiều lần. Ví dụ, bạn đã viết mã để tạo ra một hình vuông."
+      5:
+        text: "Bạn có thể định nghĩa nó như là một hàm với tên \"tạo ra một hình vuông.\" "
+      6:
+        text: "Bây giờ bạn có một khối mới mà bạn có thể sử dụng nhiều lần để tạo ra nhiều hình vuông."
+      7:
+        text: "Rất nhiều hình đơn giản có thể được sử dụng để tạo ra các hình phức tạp hơn. Trong trò chơi tiếp theo, mã bạn đã viết mới đây để tạo một vòng tròn sẽ được dùng để định nghĩa 1 hàm mới mà có thể tạo hình tròn với kích thước khác nhau. Bạn có thể sử dụng nó để giúp Elsa tạo ra các hình phức tạp và xinh đẹp trong tuyết?"
+    playlab_intro:
+      1:
+        text: "Chúng ta sẽ tạo ra trò chơi bằng cách sử dụng Play Lab. Một trò chơi hay cần có cốt truyện, và mọi trò chơi cần có nhân vật. Chúng ta có thể học cách xây dựng nhân vật như phù thuỷ, công chúa, giọng nói của các con thú, chuyển động, nói chuyện. Ở cuối bài học này, bạn có thể làm 1 trò chơi từ đầu tới cuối và chia sẻ với bạn bè."
+      2:
+        text: "Màn hình của bạn được chia thành ba phần chính. Ở bên trái là không gian chương trình sẽ chạy. Các lệnh cho từng cấp độ được viết bên dưới."
+      3:
+        text: "Khu vực giữa là hộp công cụ, và mỗi khối là 1 lệnh. Không gian màu trắng bên phải được gọi là không gian làm việc và đây là nơi chúng ta sẽ xây dựng chương trình của mình."
+      4:
+        text: "Để bắt đầu, bạn sẽ cần liên kết các khối với khối màu cam \"khi chạy\". Bạn có thể liên kết nhiều khối với nhau bằng cách kéo chúng cho đến khi bạn nhìn thấy đường màu vàng, và sau đó chúng sẽ nối liền với nhau."
+      5:
+        text: "Trong trò chơi đầu tiên, nhân vật của chúng ta là chim cánh cụt và chúng ta sẽ làm cho nó nói \"Xin chào!\" bằng cách kéo các khối nói ra, liên kết với khối \"khi chạy\" và gõ vào \"Xin chào.\" Chúng ta cũng có thể di chuyển chim cánh cụt bằng cách sử dụng khối đi sang phải và đi sang trái. Khi bạn đã có các khối đúng vị trí, nhấn nút Chạy để xem những gì bạn đã lập trình được."
+      6:
+        text: "Bắt đầu và kết thúc, bạn sẽ có thể tạo cho riêng bạn trò chơi mà tất cả mọi người đều có thể tương tác với nhau, vui hay buồn, điểm số, hoặc ném quả cầu lửa, hoặc thậm chí làm biến mất mọi thứ. Đó là phụ thuộc vào bạn và trò chơi bạn muốn thực hiện."
+    playlab_events:
+      1:
+        text: "Bây giờ, chúng ta sẽ tìm hiểu về một số thứ mà tất cả các lập trình viên trò chơi sử dụng hàng ngày. Đó là sự kiện. Một sự kiện nói chương trình của bạn lắng nghe khi một điều gì đó xảy ra. Khi nó xảy ra, ta thực hiện 1 hành động."
+      2:
+        text: "Một số ví dụ về các sự kiện là: đang lắng nghe cho một nhấp chuột, phím mũi tên hoặc phím tab được nhấn."
+      3:
+        text: "Ở đây, chúng tôi sẽ làm cho \"robot không gian\" chào đón các \"cư dân của hành tinh trái đất\" khi một người chơi nhấp vào anh ta. Chúng tôi sẽ sử dụng khối \"khi nhấn vào\" và đính kèm các khối \"nói\" cho nó. Khi người chơi nhấp vào \"robot không gian\", tất cả mọi thứ kèm theo sự kiện của khối \"khi nhấp vào\" sẽ được thực hiện. Người ngoài hành tinh nói điều gì vậy?"
+      4:
+        text: "Cũng có những khối \"khi mũi tên\". Nếu bạn liên kết khối \"di chuyển\" tới đây, bạn có thể bắt đầu để di chuyển các nhân vật của bạn lên, xuống, trái, hoặc bên phải. Từng bước một, trò chơi của bạn sẽ có được nhiều tương tác."
+    playlab_repeat_forever:
+      1:
+        text: "Đây là khối \"lặp lại mãi mãi\". Bất cứ điều gì bên trong khối này sẽ xảy ra mãi mãi trong trò chơi."
+      2:
+        text: "Nếu chúng ta muốn một nhân vật làm một cái gì đó nhiều lần, mà không cần người chơi phải làm bất cứ điều gì, chúng tôi sẽ đưa những khối hành động đó bên trong khối \"lặp lại mãi mãi\"."
+      3:
+        text: "Trong trò chơi tiếp theo này, mục tiêu của chúng tôi là giúp thuật sĩ tuần tra biên giới của Vương Quốc, trái và phải liên tục. Học cách lặp lại lệnh hoạt động, sẽ giúp bạn tiết kiệm một tấn thời gian sau đó bạn sẽ xây dựng trò chơi của riêng bạn."
+    C1_artist_intro:
+      1:
+        text: "Đây là khối vẽ của bạn. Sử dụng đúng để di chuyển các nhân vật mà chúng cần phải đi để điền vào các dòng màu xám."
+      2:
+        text: "Đây là những khối nhảy. Khi bạn sử dụng này, nhân vật của bạn di chuyển nhưng không đi đến gần, mà sử dụng này khối này để nhảy đến dòng màu xám kế tiếp."
+    C1_bee_level_intro:
+      1:
+        text: "Các chú ong có phải thật ngầu không? Trong này thiết lập tiếp theo của câu đố, mục tiêu của bạn là để giúp đỡ các con ong nhận được để những bông hoa và lấy mật hoa từ những bông hoa và bay qua các tổ ong để làm mật ong. Bạn sẽ cần phải sử dụng khối \"lấy mật\" và khối \"làm mật ong\" cho phần tập luyện này."
+      2:
+        text: "Mỗi bông hoa có một số mật ong khác nhau: 1, 2, 3 hoặc nhiều hơn nữa. Chúng ta biết có bao nhiêu mật hoa trong những bông hoa màu đỏ, bởi con số nhỏ trong góc. Vì vậy, hãy chắc chắn để có được tất cả mật hoa từ Hoa trước khi bạn di chuyển về phía trước. Ngoài ra, mỗi tổ ong chỉ có thể chứa rất nhiều mật ong: 1, 2, 3 hoặc nhiều hơn nữa. Vì vậy, hãy chắc chắn để làm cho càng nhiều mật ong mà các tổ ong có thể giữ."
+      3:
+        text: "Nếu bạn có thể thu thập tất cả các mật hoa và tạo ra mật ong, bạn sẽ qua cửa. Nếu không bạn sẽ phải thử lại màn này. Hãy hơi một lúc và cảm nhận mình như một \"con ong\" lập trình chăm chỉ!"
+    C1_bee_loops:
+      1:
+        text: "\"Vòng lặp\" là sự lặp lại liên tục của hoạt động. Khi tôi nhìn vào tổ ong để kiểm tra mật, tôi nhìn vào một tấm lưới và kéo nó ra, và việc này được lặp lại nhiều lần. Việc \"lặp đi lặp lại\" như vậy gọi là Vòng lặp."
+      2:
+        text: "Ở màn này, chúng ta muốn chú ong sẽ thu thập ba giọt mật từ bông hoa. Thay vì sử dụng ba khối \"lấy mật\", bạn sẽ sử dụng \"khối lặp\" để lấy mật ba lần. Bấm \"chạy\" để xem bạn có làm đúng không. Tốt lắm!"
+    C1_bigevent_unplugged:
+      1:
+        text: "Bài học này được gọi là sự kiện lớn. Nó đề cập đến việc làm sao chúng ta có thể kiểm soát các chương trình và thực tế là thay đổi cách 1 chương trình chạy tốc hành bằng việc sử dụng các sự kiện, như việc nhấn nút hoặc nhấp chuột."
+      2:
+        text: "Với bài học này, bạn sẽ được điều khiển bởi một điều khiển từ xa. Nó giống như là một trò chơi video thực tế."
+      3:
+        text: "Sự kiện là một hành động khiến một điều gì đó xảy ra. Giống như khi bạn nhấp chuột và tải một trang web. Đó là một sự kiện. Khi bạn chạm vào màn hình máy tính bảng để di chuyển, đó cũng là 1 sự kiện. Sự kiện là một cách tuyệt vời cho phép người dùng điều khiển chương trình của bạn khi họ cần hoặc muốn làm thế."
+      4:
+        text: "Chúng ta đáp ứng các sự việc xảy ra. Nếu thấy đói ta sẽ đi lục tủ lạnh. Ta nghe thấy người đưa thư đến và anh ta đặt thư vào thùng thư, sau đó chúng ta ra lấy thư. Những điều này giống như là các sự kiện nhấn nút hay di chuyển cần điều khiển. Đó là những sự việc xảy ra khiến chúng ta phải có hành động hồi đáp."
+      5:
+        text: "Trong các trò chơi video, có một sự kiện gọi là \"Cập nhật\" và nó xảy ra 30 hoặc 60 lần 1 giây. Với người lập trình video trò chơi, một sự kiện thì quan trọng hơn cái nút bấm hay cái cần điều kiển."
+      6:
+        text: "Sự kiện chính mà chúng ta đang xem là việc \"Cập nhật'' diễn ra. Và sau đó chúng ta kiểm tra nhanh cần điều khiển. Vì vậy chúng ta nói, \"Ồ, có ai đó đã ấn nút khung này phải không?\". Nếu không có khác sự kiện, người chơi không thể di chuyển, bạn không thể nhảy, bạn không thể điều khiển những gì đang diễn ra. Video trò chơi sẽ không thể tạo ra hiệu ứng gì."
+    C1_building_foundation:
+      1:
+        text: "Trong nghệ thuật điêu khắc cát, bạn phải hiểu rằng thất bại là một phần của quá trình. Nhưng nếu bạn kiên trì, mọi thứ sẽ trở nên tốt đẹp và thú vị hơn nhiều. Kiên trì là mục đích của trò chơi này. Cứ chơi rồi bạn sẽ thích nó."
+      2:
+        text: "Bài học này được gọi là xây dựng nền tảng. Trong bài học này, Chúng ta sẽ làm việc với một bài tập được coi là khó. Bạn sẽ tìm ra cách để tạo 1 cấu trúc cao tối thiểu là bằng một trong những chiếc cốc này và nó phải đủ vững chắc để đỡ được một quyển sách."
+      3:
+        text: "Có thể có những lúc sáng tạo của chúng ta không thành công. Có thể có những lúc chúng ta thấy mệt mỏi và muốn bỏ cuộc. Có thể có rất nhiều lúc như thế. Nhưng nếu chúng ta tiếp tục cố gắng, hết lần này tới lần khác cố hết sức mình, chắc chắn chúng ta sẽ sớm đạt được điều mình muốn."
+      4:
+        text: "Kiên trì chính là cố gắng tiếp tục khi bạn thực sự muốn từ bỏ. Nếu bạn muốn tạo ra điều gì đó mới lạ và khác biệt, con đường sẽ còn nhiều khó khăn, thất bại."
+      5:
+        text: "Nguyên tắc kiên trì là lựa chọn bước tiếp và học hỏi từ những thất bại của bản thân thay vì bỏ cuộc vì bạn mất phương hướng. Mất phương hướng thực chất chỉ có nghĩa là điều tuyệt vời đang sắp xảy ra. Vì vậy đừng bỏ cuộc trước khi bạn đạt được điều đó. Wooo!"
+    C1_getting_loopy:
+      1:
+        text: "Xin chào, tên tôi là Miral Kotb và tôi là nhà sáng tạo của Iluminate. Trong công việc của mình, có một thứ chúng tôi sử dụng trong cả nhảy múa và lập trình những bộ quần áo phát sáng. Và đó là các vòng lặp! Các vòng lặp tức là nhắc đi nhắc lại 1 hành động."
+      2:
+        text: "Khi bạn lặp lại 1 thứ nhiều lần, như hành động của tôi để giữ cho vòng lắc eo quay, tôi đang biểu diễn 1 vòng lặp của hành động đó. Đây là 1 vòng lặp. Đây cũng là 1 vòng lặp. Và đây cũng là 1 vòng lặp."
+      3:
+        text: "Hôm nay chúng ta sẽ có một buổi tiệc nhảy múa. Chúng ta sẽ tạo những vòng lặp bằng điệu nhảy mới. Điệu \"The Iteration\". Chúng ta sẽ học về vòng lặp bằng cách sử dụng một điệu nhảy. Bạn sẽ học 1 vài bước đơn giản và lặp đi lặp lại chúng để hoàn thành điệu nhảy."
+      4:
+        text: "Đây là những bước bạn cần học. Vỗ tay. Đặt tay ra sau đầu. Đặt tay lên eo. Nâng tay trái lên. Nâng tay phải lên. Khá đơn giản phải không? Bạn sẽ nhận ra là bạn có thể rút ngắn chỉ dẫn bằng cách ghi nhớ một số bước nhảy theo vòng lặp."
+      5:
+        text: "Chúng tôi thực ra có sử dụng vòng lặp trong các bài nhảy. Các vũ công trang bị các máy tính, tất cả trong cùng một mạng lưới. Tôi có thể tạo vòng các ánh sáng lặp đi lặp lại qua người vũ công. Trong vòng lặp đó, tôi có thể có 1 bước lặp khi tôi đặt lệnh rằng bạn muốn có vòng lặp qua người 6 vũ công này và sau đó trong vòng lặp bạn muốn tăng tốc độ của ánh sáng. Và tất cả điều này được tạo ra thông qua các vòng lặp. Vòng lặp quan trọng đối với khoa học máy tính vì chúng khiến công việc của chúng tôi tốn ít thời gian và dễ dàng hơn."
+    C1_happy_maps_unplugged:
+      1:
+        text: "Bài học này được gọi là Các Bản Đồ Vui Vẻ. Hôm nay chúng ta sẽ giúp bạn thú nhỏ Flurb lượm trái cây,."
+      2:
+        text: "Điều khiển bạn Flurb đến chỗ hoa quả. Để làm điều này bạn cần tìm ra đường đi cho Flurb và dùng mũi tên chỉ dẫn bạn ấy. Để bạn Flurb lượm được quả táo, bạn ấy phải đi theo chỉ dẫn nào? Vạch đường để điều khiển đi lên."
+      3:
+        text: "Để tới nơi, bạn khoanh tròn chỉ dẫn mà nó phải đi."
+      4:
+        text: "Tạo ra thuật toán của bạn bằng cách dán mũi tên bên cạnh bản đồ mà bạn đang cố giải quyết. Cái thứ hai giống với cái đầu nhưng nó hướng đi xuống."
+      5:
+        text: "Nó cũng giống như là lập trình trên giấy. Và thế thôi!"
+    C1_maze_debugging:
+      1:
+        text: "Gỡ lỗi là việc tìm kiếm và sửa chữa vấn đề. Có rất nhiều cách để gỡ lỗi các vấn đề. Một trong những đơn giản nhất là di chuyển từng bước cho đến khi bạn tìm thấy nơi có chỗ sai. Ở đây tôi đang cố gắng để thực hiện kỹ thuật lộn sau chống tay lên sà nhưng tôi liên tục thất bại."
+      2:
+        text: "Tôi lần theo mỗi phần từng bước một và đã nhận ra chỗ tôi sai sót. Tôi đã không đặt tay lên sà đúng cách. Vì thế tôi thử thực hiện lần nữa với vị trí tay mới và tôi đã thành công. Tôi thực sự đã rất vui vì đã gỡ được lỗi lộn sau chống tay của mình."
+      3:
+        text: "Để tìm hiểu về gỡ lỗi, chúng ta bắt đầu với 1 tập hợp các khối đã ở sẵn trong bàn. Bạn sẽ nhận thấy rằng các khối này sẽ không giúp bạn đến được mục tiêu. Chúng ta cần tháo gỡ giải pháp và sửa chữa nó. Điều gì không đúng? Bạn sẽ nhận thấy rằng bạn cần di chuyển thêm một khối nữa về hướng tây."
+      4:
+        text: "Hãy cùng khắc phục điều này bằng cách thêm 1 một khối nữa ở phía tây và bấm chạy để xem bạn đúng hay chưa. Và bạn đã làm đúng rồi!"
+    C1_maze_intro_sequencing:
+      1:
+        text: "Với trò chơi này, bạn cần đưa con chim tới con lợn. Hãy nhìn vào trò chơi và xem hướng dẫn những điều cần làm."
+      2:
+        text: "Bạn cần phải kéo các khối từ hộp công cụ đến khu thực hành. Đảm bảo nó ở dưới khối ''Khi chạy'' và khi bạn nghĩ bạn đã có lời giải chính xác, bạn có thể nhấp ''Chạy'' và xem chú chim đi tới chỗ chú lợn."
+    C1_maze_loops:
+      1:
+        text: "Một trong những điều máy tính làm rất tốt đó là nhắc lại các câu lệnh. Con người sẽ thấy rất nhàm chán nếu phải làm một việc rất nhiều lần không ngừng nghỉ. Nhưng một máy tính có thể làm một việc cả triệu thậm chí cả tỷ lần mà không thấy nhàm chán và có thể thực hiện điều đó rất tốt."
+      2:
+        text: "Ví dụ, nếu tôi muốn chúc mừng sinh nhật mọi người trên Facebook bằng cách gửi tin nhắn cho họ, tôi có thể mất hơn 1 thế kỷ để thực sự viết ra tất cả các tin nhắn đó. Nhưng với chỉ 1 vài dòng lệnh, tôi có thể có 1 hệ thống gửi tin nhắn đến từng người trên Facebook để chúc họ sinh nhật vui vẻ."
+      3:
+        text: "Để đưa con chim tới chỗ con lợn trong cấp độ này... thay vì kéo 3 khối lệnh Phía Bắc tới không gian làm việc, bạn sẽ sử dụng khối lệnh ''lặp lại''. Kéo khối lệnh ''nhắc lại'' tới không gian làm việc và nhập vào số 3. Sau đó kéo khối lệnh ''Di chuyển phía Bắc'' vào khối lệnh ''lặp lại'' và nhấn ''Chạy\" để xem bạn làm đúng chưa. Chúc mừng, bạn đã thành công!"
+    C1_moveitmoveit_unplugged:
+      1:
+        text: "Bài học này được gọi là di chuyển, di chuyển nó. Chúng ta sẽ cùng nhau viết một chương trình để đưa bạn bè của chúng ta từ điểm khởi đầu với bông hoa chỉ hướng đến mục tiêu mặt cười."
+      2:
+        text: "Nhưng biểu tượng mặt cười đang là mặt mếu và chỉ một người biết cách đi tới đó. Hãy bắt đầu chương trình này."
+      3:
+        text: "Một chương trình là một thuật toán đã được lập trình vào một thứ có thể chạy bằng máy móc. Hầu hết chúng ta đều nghĩ rằng chương trình là thứ chúng ta viết cho máy tính. Chương trình rất cần thiết cho máy tính nhưng chúng cũng rất hữu ích ở những nơi khác. Bạn có thể tự tạo ra trò chơi riêng hoặc thậm chí lập trình một con rô bốt làm việc cho bạn."
+    C1_going_places_safely:
+      1:
+        text: "Tên em là Jeremiah. Xin chào! Tôi 7 tuổi. Tôi rất thích chơi máy tính của mẹ nhưng tôi luôn phải xin phép trước. \"Mẹ ơi, con có thể dùng máy tính được không? Chắc chắn rồi con yêu!\""
+      2:
+        text: "Tôi thích máy tính của mẹ vì tôi có thể truy cập Internet. Internet giống kiểu như là bạn hàng xóm của bạn vậy. Bạn có thể thăm thú những nơi thú vị, bạn có thể trò chuyện với gia đình và bạn bè và bạn có thể học hỏi nhiều điều mới lạ."
+      3:
+        text: "Hôm qua, tôi đã đi thăm sở thú gần nhà. Tôi nhìn thấy 1 chú ngựa vằn con. Tôi đã chụp ảnh và thay đổi màu sọc vằn của chú, sau đó thêm 1 chiếc mũ và thêm hình ảnh đó vào bộ siêu tập động vật kì lạ của mình. Tuyệt vời! Sau đó, tôi đã đi thăm một nơi xa rất xa. Tôi đã đi thăm Kenya. Đó là 1 quốc gia ở châu Phi. Rất nhiều ngựa vằn sống ở đây."
+      4:
+        text: "Đôi khi trên Internet, tôi trò chuyện với những người mà tôi biết, như bà ngoại tôi người sống ở 1 bang khác. Chào bà ngoại! Bà đang làm bánh để gửi cho tôi nhân ngày sinh nhật. \"Ngon quá, cháu ước Internet có thể truyền mùi vị.\" Tôi có thể trò chuyện với nhiều người khác trên Internet, như là các anh chị em họ hàng nhà tôi, nhưng tôi chỉ trò chuyện với người mà tôi quen."
+      5:
+        text: "Điều tôi thích nhất trên Internet là tôi có thể chơi những trò chơi vui nhộn. Ghi điểm! Tôi cũng thích vẽ và sáng tạo ra những thứ mới lạ và chia sẻ với bạn bè. Tuyệt vời! Đôi khi tôi truy cập vào 1 trang web và học hỏi được những điều mới lạ, nhưng tôi luôn vào những trang phù hợp với mình. Wow, những chú khủng long!"
+      6:
+        text: "Internet là một nơi cực kì vui nhộn. Nhưng cũng như khi bạn đi qua đường trong khu phố nhà mình, bạn phải cẩn thận khi bạn truy cập trực tuyến. Đây là 3 quy tắc cần nhớ. Quy tắc số 1: Luôn xin phép bố mẹ trước tiên. Quy tắc số 2: Chỉ trò chuyện với những người mà bạn biết. Quy tắc số 3: Truy cập những trang web phù hợp với bạn."
+      7:
+        text: "Wow, vừa rồi thật vui! Đến giờ ăn tối rồi. Bây giờ tôi phải đăng xuất rồi. Tôi rất nóng lòng được đăng nhập lại và xem tiếp theo mình có thể ghé thăm nơi nào."
+    C1_pair_programming:
+      1:
+        text: "Hôm nay chúng ta sẽ học về Lập trình Đôi. Trong lập trình đôi, bạn sẽ làm việc theo nhóm. Tại sao 2 người nên sử dụng 1 máy tính? Vì 2 cái đầu thì tốt hơn là một. Trong lập trình đôi, bạn và cộng sự sẽ cùng ngồi với nhau chung một máy tính và các bạn sẽ cùng chung 1 dự án."
+      2:
+        text: "Trong lập trình đôi, một người là tài xế còn một người là hoa tiêu, giống như khi lái xe. Tài xế ngồi trước máy tính và là người sử dụng bàn phím và chuột hoặc màn hình chạm và kiểm soát hoạt động chính của máy tính. Người còn lại là hoa tiêu. Hoa tiêu giúp tài xế bằng cách trả lời các câu hỏi của tài xế và chỉ ra các vấn đề hoặc lỗi tiềm tàng."
+      3:
+        text: "Giao tiếp là chìa khoá để lập trình đôi thành công. Không công kích, tôn trọng nhau, đừng là một hoa tiêu hống hách, vì chẳng ai thích một tài xế ngồi ghế sau. Bạn và cộng sự nên luôn nói chuyện với nhau. Tài xế có thể giải thích điều họ đang làm. Và hoa tiêu có thể giúp gợi ý điều tiếp theo nên làm."
+      4:
+        text: "Hoa tiêu nên suy nghĩ về bức tranh toàn cảnh còn tài xế tập trung vào các chi tiết. Cả 2 vai trò đều quan trọng. Lập trình đôi tức là làm việc với nhau như một đội."
+    C1_planting_seed:
+      1:
+        text: "Bài học này được gọi là gieo hạt và nó sẽ giúp chúng ta hiểu về các thuật toán. Thuật toán là những hướng dẫn cụ thể mà giải thích các việc cần làm theo thứ tự. Thậm chí hàng ngày, các việc như ăn sáng hay đánh răng cũng là thuật toán yêu cầu từng bước nhỏ để hoàn thành công việc đó."
+      2:
+        text: "Máy tính có thể là rất thông minh nhưng chúng chỉ có thể hiểu bạn nếu bạn nói cho chúng chính xác điều bạn muốn từng bước một. Điều tuyệt vời về thuật toán là nếu bạn tuân theo hướng dẫn theo thứ tự, bạn có thể làm điều mà trước đây bạn chưa từng biết cách làm. Nó giống như là tuân theo một công thức."
+      3:
+        text: "Hôm nay chúng ta sẽ tự gieo hạt giống sử dụng 1 thuật toán. Tạo ra thuật toán của riêng bạn bằng cách cắt các bức trah thành từng phầm. Chọn những bức tranh mà chỉ ra các bước gieo hạt và sắp xếp các bức tranh đó theo thự tự đúng."
+      4:
+        text: "Bây giờ là lúc bạn xem liệu thuật toán của mình có hoạt động. Tuân thủ các bước trong thuật toán 1 cách thật cẩn thận. Chúng đã đúng thứ tự chưa? Bạn đã gieo hạt thành công bằng việc tuân thủ thuật toán chưa? Nó giống như là lập trình với các bức tranh!"
+      5:
+        text: "Khi chúng ta muốn làm sô cô la, có rất nhiều bước lớn trong quá trình và trong mỗi bước lớn đó lại có tập hợp những bước nhỏ hơn và có các công thức hay thuật toán khác nhau tuỳ theo chúng ta muốn sô cô la có vị như thế nào. Mỗi bước đều quan trọng, thậm chí là các bước nhỏ, vì thiếu một bước thì các bước còn lại không thể hoàn thành. Tạo ra thuật toán mà người khác có thể hiểu được là rất quan trọng. Đó là lí do tại sao mỗi bước phải được viết ra cốt để dù ai làm thì đều ra cùng kết quả."
+    C1_playlab_storytelling:
+      1:
+        text: "Giờ là lúc sáng tạo và sử dụng kỹ năng lập trình của bạn để kể chuyện. Câu chuyện của bạn sẽ có diễn viên và bạn có thể khiến các diễn viên này trò chuyện và tương tác vói nhau. Hãy bắt đầu nghĩ về loại câu chuyện mà bạn muốn kể."
+      2:
+        text: "Con mèo luôn sợ chó và nếu con mèo nhận ra rằng con chó đang cố thân thiện? Khối lệnh \"khi chạy\" khởi động mọi thứ. Khối lệnh \"di chuyển\" sẽ di chuyển nhân vật của bạn và khối lệnh \"nói\" sẽ khiến nhân vật của bạn nói bất kỳ điều gì bạn gõ."
+      3:
+        text: "Đây là khối lệnh \"khi các diễn viên gặp nhau\" mà bạn có thể liên kết tới các khối lệnh khác."
+      4:
+        text: "Tôi đã làm con chó đi ngang qua và nói \"Xin chào\" nhưng sau đó con mèo hoảng sợ nên nó chạy mất. \"Ahhh\" nếu có thêm lần nữa, có thể có kết thúc có hậu rồi. Kết thúc!"
+    C1_spelling_bee_intro:
+      1:
+        text: "Đây là cấp độ con ong đánh vần. Sử dụng các mảnh ghép để di chuyển con ong. Khi nó di chuyển, nó sẽ thu thập các chữ cái để đánh vần các từ."
+      2:
+        text: "Hãy xem liệu bạn có thể đánh vần từ họ cho ở trong ô phía dưới sân khấu. Nhưng con ong cẩn thận! Di chuyển sai hướng sẽ thêm chữ cái mà bạn không mong muốn."
+    C1_zuck_repeat_loop:
+      1:
+        text: "Một trong những điều máy tính làm rất tốt đó là nhắc lại các câu lệnh. Con người sẽ thấy rất nhàm chán nếu phải làm một việc rất nhiều lần không ngừng nghỉ. Nhưng một máy tính có thể làm một việc cả triệu thậm chí cả tỷ lần mà không thấy nhàm chán và có thể thực hiện điều đó rất tốt."
+      2:
+        text: "Ví dụ, nếu tôi muốn chúc mừng sinh nhật mọi người trên Facebook bằng cách gửi tin nhắn cho họ, tôi có thể mất hơn 1 thế kỷ để thực sự viết ra tất cả các tin nhắn đó. Nhưng với chỉ 1 vài dòng lệnh, tôi có thể có 1 hệ thống gửi tin nhắn đến từng người trên Facebook để chúc họ sinh nhật vui vẻ."
+      3:
+        text: "Trong ví dụ này, mục tiêu của bạn sẽ là di chuyển con chim tới chỗ con lợn. Bây giờ chúng ta có thể sử dụng khối lệnh lặp lại để làm điều này rất dễ dàng. Bạn có thể làm điều này bằng cách đưa vào máy tính lệnh di chuyển lên phía trước 5 lần để mỗi lần chú chim tiến một bước tới chú lợn hoặc bạn có thể yêu cầu máy tính di chuyển 1 lần, và sau đó yêu cầu nó lặp lại lệnh đó 5 lần và nó sẽ làm tương tự."
+      4:
+        text: "Để làm điều này, bạn kéo lệnh di chuyển về phía trước và sau đó bạn đặt nó vào khối lệnh lặp lại. Và bạn có thể nhấp chuột vào nó và cho biết bạn lặp lại khối lệnh bao nhiêu lần để nó biết bạn muốn nó di chuyển về phía trước bao nhiêu bước."
+      5:
+        text: "Một điều nữa là bạn có thể đặt bao nhiêu lệnh tuỳ ý vào khối lệnh lặp lại. Vì thế trong ví dụ này, bạn sẽ yêu cầu nó di chuyển về phía trước và rẽ trái và nó sẽ thực hiện 5 lần. Chúc vui!"
+    C2_artist_intro:
+      1:
+        text: "Bạn thậm chí không đủ tiêu chuẩn cho cuộc đua nếu bạn không có những người thành thạo trong khoa học máy tính vì số dữ liệu mà các xe phải thu thập và sự cần thiết của việc có những người có thể viết chương trình để tìm ra cách bạn tiếp tục xây dựng giao thức."
+      2:
+        text: "Trong các trò chơi này, bạn sẽ là một nghệ sỹ sử dụng bút chì để vẽ các hình dạng khác nhau. Nghệ sỹ của bạn đi đâu, nó sẽ vẽ 1 đường thẳng ở phía sau."
+      3:
+        text: "Để di chuyển xung quanh bức vẽ, bạn sẽ sử dụng khối lệnh di chuyển về phía trước. Đây là khối lệnh nói di chuyển về phía trước 100 điểm ảnh. Khi chúng ta nhấn chạy, điều gì sẽ xảy ra? Nghệ sỹ di chuyển 1 số bước nhất định là 100 điểm ảnh. Điểm ảnh cơ bản là những hình vuông rất nhỏ trên màn hình máy tính của bạn."
+      4:
+        text: "Khối lệnh khác chúng ta có trong trò chơi này nói \"qua phải 1 góc 90 độ\". Và khi chúng ta kéo khối lệnh sẽ khiến nghệ sỹ của chúng ta quay 1 góc nhất định. Vì vậy bạn có thể chơi và điều khiển nghệ sỹ quay theo ý muốn. Đây là một góc quay 90 độ."
+      5:
+        text: "Và đây là một góc quay 120 độ. Và nhớ là, bạn có thể thay đổi những giá trị này bằng cách nhấp vào các mũi tên bên cạnh các chỉ điểm ảnh hoặc độ. Hãy tận hưởng trò chơi!"
+    C2_bee_conditionals:
+      1:
+        text: "Đây là khối lệnh câu điều kiện. Nó nói rằng NẾU mật hoa hoặc mật ong ít hơn hoặc bằng hoặc lớn hơn 1 số nào đó, THÌ làm điều gì đó."
+      2:
+        text: "Điều này hữu ích khi chúng ta không biết cần lấy bao nhiêu mật hoa hoặc mật ong, như chúng ta thấy ở đây với dấu hỏi này."
+      3:
+        text: "Trong ví dụ này, chúng ta sẽ nói NẾU bông hoa đỏ có số mật hoa lớn hơn 0, lấy mật hoa. Nó sẽ khiến con ong lấy mật hoa với điều kiện là con ong ở chỗ bông hoa. Và đây!"
+    C2_binary_bracelets:
+      1:
+        text: "Đây là bài học vòng tay nhị phân. Chúng ta sẽ viết chữ cái đầu của tên mình bằng mật mã lên vòng đeo tay và cho bạn bè xem!"
+      2:
+        text: "Nhị phân là cách thể hiện thông tin bằng cách chỉ sử dụng 2 lựa chọn. Đôi khi mọi người nghĩ cái này chỉ bao gồm 1 và 0. Nhưng bạn có thể thể hiện nhị phân với bộ đôi bật và tắt, lên và xuống, trong và ngoài hoặc bất kỳ cặp đối lập nào."
+      3:
+        text: "Xin chào, tôi là Orion và tôi lập trình rô bốt tại đây Play-im. Tất cả não bộ của máy tính và rô bốt ở mức cơ bản nhất là các cổng điện tử nhỏ. Khi cổng mở, dòng điện có thể chạy qua và khi nó đóng, dòng điện không thể chạy."
+      4:
+        text: "Một ví dụ về nhị phân trên rô bốt là mắt của rô bốt. Những con mắt này là đèn led và đó là những bóng đèn có thể bật hoặc tắt. Nó là một hệ thống nhị phân. Chúng ta có thể sử dụng những bóng đèn này để thể hiện số nhị phân. Nếu chúng ta có một tập hợp các rô bốt, chúng ta có thể nói con rô bốt đầu tiên ở vị trí số 1, rô bốt thứ 2 ở vị trí thứ 2, rô bốt thứ 3 ở vị trí thứ 3 và tiếp tục như thế. Đó là cách bạn thể hiện số thập phân. Rô bốt sẽ làm điều đó nhờ con mắt thập phân của chúng và đếm ra cho bạn."
+    C2_conditionals_with_cards:
+      1:
+        text: "Bài học này được gọi là câu điều kiện bằng thẻ. Hàng ngày bạn đưa ra quyết định dựa trên những gì bạn nhìn và nghe thấy."
+      2:
+        text: "Tôi muốn đi bộ ra công viên nhưng trước hết tôi phải quyết định xem liệu mình có nên mang ô không. Vì thế tôi nhìn ra ngoài cửa sổ. Nếu trời nhiều mây, tôi sẽ mang ô. Ngược lại, tôi sẽ mang kính râm. Tôi nghĩ là tôi nên mang ô. Những gì tôi nhìn và nghe thấy quyết định thứ tôi sẽ mang theo."
+      3:
+        text: "Câu điều kiện cũng được sử dụng trong các trò chơi. Hôm nay chúng ta sẽ luyện tập sử dụng câu điều kiện bằng thẻ trò chơi. Trong trò chơi này, thẻ mà tôi giơ sẽ xác định việc bạn tôi sẽ làm. Nếu tôi giơ số 7, mọi người sẽ vỗ tay. Nếu là số khác, mọi người sẽ nói \"awww\". Hãy thử nào! \"Awww\" \"Chúc mừng\""
+      4:
+        text: "Tôi đố bạn có thể nghĩ ra trò chơi vui hơn với câu điều kiện. Hãy thử xem! Câu điều kiện là những gì khiến máy tính có vẻ thông minh hơn. 1 chương trình máy tính bao gồm các câu điều kiện thì có thể tương tác lại với người dùng và thay đổi tiến trình hành động của nó."
+      5:
+        text: "Hãy nghĩ về trò chơi yêu thích của bạn. Bạn có kiếm được nhiều điểm hơn cho 1 số hành động so với khi bạn làm các hành động khác? Điều này xảy ra là vì máy tính sử dụng câu điều kiện. Đây là cách máy tính ra quyết định. Thế còn nếu bạn đạt mục tiêu, bạn sẽ kiếm được 10 điểm. Nếu không, bạn mất 3 điểm. Khi bạn biết cách câu điều kiện hoạt động, bạn có thể tạo ra các loại trò chơi thú vị."
+    C2_artist_debugging:
+      1:
+        text: "Ở đây chúng ta có sẵn 1 số khối lệnh trên không gian làm việc. Nhưng có điều gì đó không đúng."
+      2:
+        text: "Hãy gỡ lỗi lập trình này bằng cách giảm tốc độ và xem nó chạy qua từng khối lệnh một."
+      3:
+        text: "Ôi có vấn đề rồi. Râu của con mèo dài 75 điểm ảnh, không phải 25."
+    C2_bee_debugging:
+      1:
+        text: "Bạn đã bao giờ nghe đến việc gỡ lỗi 1 chương trình? Đây là cách bạn tìm ra những gì không hoạt động. Khi bạn gỡ lỗi lập trình, bạn xác định và loại bỏ các lỗi sai."
+      2:
+        text: "Ở đây chúng ta được cho sẵn 1 vài khối lệnh trong không gian làm việc. Chúng ta sẽ sử dụng nút \"Bước\" để đi qua từng khối lệnh 1, xem liệu đây đã là phương pháp đúng chưa và chỗ nào chúng ta cần sửa chữa."
+      3:
+        text: "Có vẻ như đây là vấn đề rồi! Chúng ta cần thêm 1 khối lệnh tiến về phía trước nữa. Nút \"Bước\" giúp chúng ta gỡ lỗi bằng cách xác định lỗi sai ở đâu vì thế chúng ta có thể sửa chữa nó."
+    C2_digital_footprint:
+      1:
+        text: "Giữ cái mũ ở trên cái đầu và trí khôn sẽ cho bạn biết bạn đang ở đâu và hãy nghĩ về sở thú, và gật đầu để gửi lời chào! Dùng cái đầu để suy nghĩ khi bạn lên mạng để những gì của mình thì giữ cho riêng mình và để biết cách giữ an toàn, cách để có vài khoảng không gian riêng tư trong cuộc sống! Từ đầu tới chân, dừng lại, nghĩ về điều này. Từ chân lên đầu, dừng lại, hãy nghĩ về việc lên mạng!"
+      2:
+        text: "Dùng trái tim mình để lớn dần lên, và để gương mặt hồng hào khoẻ mạnh, và để làm 1 hình trái tìm và nói cho ai đó biết rằng họ sẽ là của bạn! Dùng trái tim mình khi bạn lên mạng, cảm nhận điều gì là đúng và luôn tốt bụng, và thể hiện sự tôn trọng bạn bè, hãy công bằng và tử tế khi bạn lên mạng. Từ đầu tới chân, dừng lại, nghĩ về điều này. Từ chân lên đầu, dừng lại và nghĩ về việc lên mạng!"
+      3:
+        text: "Dùng cái tay để ôm thú cưng của bạn, để giữ quần áo của bạn khỏi ướt, và để mặc chiếc áo yêu thích và để giúp bạn bay cao và tin tưởng. Dùng tay khi bạn lên mạng, để nghỉ ngơi và cân bằng thời gian, rời xa công nghệ và tìm 1 cái cây để leo trèo. Từ đầu tới chân, dừng lại, hãy nghĩ về điều này. Từ chân lên đầu, dừng lại và hãy nghĩ về việc lên mạng!"
+      4:
+        text: "Dùng cái bụng để chứa đồ ăn, và để nghe cái bụng gầm gừ, để bụng nhảy ùm xuống nước, và để cảm nhận bụng đầy bọt khí khi uống nước có gas. Dùng cái bụng khi bạn lên mạng, để biết để xem những dấu hiệu nhất định, và để nó giúp bạn biết khi có gì không ổn. Từ đầu tới chân, dừng lại, nghĩ về điều này. Từ chân lên đầu, dừng lại, hãy nghĩ về việc lên mạng!"
+      5:
+        text: "Vậy nên hãy suy nghĩ bằng đầu, và cảm nhận bằng trái tim, giữ cân bằng bằng tay, lắng nghe cái bụng khi lên mạng. Dùng đôi chân để chạy và đá, và để nhảy và bật nảy trên chiếc gậy nhún, và để nhảy đầy chuyên nghiệp, và để nhảy chân sáo với đôi tất bốc mùi. Dùng đôi chân khi bạn lên mạng, để đứng lên chống lại những kẻ xấu cư xử quá trớn, và nhớ hãy đứng thẳng, đối tốt với những người bạn nhỏ bé và tuyệt vời."
+      6:
+        text: "Từ đầu tới chân, dừng lại, hãy nghĩ về điều này. Từ chân lên đầu, dừng lại và nghĩ về việc lên mạng! Vậy nên hãy suy nghĩ bằng đầu, và cảm nhận bằng trái tim, giữ cân bằng bằng tay, lắng nghe cái bụng, đứng thẳng bằng đôi chân của mình. Từ đầu đến chân, hãy dừng lại và nghĩ về điều này. Từ chân lên đầu, dừng lại, hãy nghĩ về việc lên mạng!"
+    C2_digital_footprint_v2:
+      1:
+        text: "Mỗi lần bạn lên mạng, bạn để lại 1 dấu chân mà có thể bị tìm kiếm, sao chép, chia sẻ, phát sóng và nó là vĩnh viễn. Bạn đang để lại loại dấu chân số nào? Bạn muốn để lại loại nào?"
+    C2_graph_paper:
+      1:
+        text: "Bài học này được gọi là \"Lập trình sơ đồ giấy\" và nó đề cập tới thuật toán. Hôm nay chúng ta sẽ học cách viết chương trình giúp tái tạo lại những hình ảnh đen trắng đơn giản, chỉ sử dụng các mũi tên vẽ bằng tay."
+      2:
+        text: "Một thuật toán là 1 danh sách các chỉ dẫn để hoàn thành 1 nhiệm vụ. Chúng ta sẽ tuân theo các chỉ dẫn này để làm 1 cái bát. Thuật toán thực sự hữu ích khi bạn cần người khác hiểu cách làm cái gì đó."
+      3:
+        text: "Nếu bạn đang viết 1 thuật toán cho máy tính, bạn phải chia ra thành các bước cực kì nhỏ. Vậy nên hoàn thành hàng này rồi tới hàng tiếp, rồi hàng tiếp theo nữa, và bạn sẽ thực hiện xong."
+      4:
+        text: "Tôi sử dụng thuật toán trong công việc của mình. Nếu tôi viết ra tất cả các bước tôi có thể tái tạo lại cùng 1 việc, hoặc tôi có thể dạy người khác làm việc đó. Đặt miếng kính vào trong lò, hợp nhất lại, tuân theo phần chỉ dẫn còn lại để làm 1 chiếc bát. Thuật toán cho bạn 1 bản đồ dẫn đường để hoàn thành việc gì đó."
+    C2_artist_loops:
+      1:
+        text: "Ở đây chúng ta sẽ sử dụng khối lệnh lặp lại để giúp ta tiết kiệm các bước khi lập trình nhân vật nghệ sỹ. Chúng ta đã có sẵn 1 vài khối lệnh trên sân khấu nhưng chúng chỉ để ta khởi động."
+      2:
+        text: "Để lặp những khối lệnh này 4 lần để vẽ cả hình vuông, chúng ta chỉ cần kéo khối lệnh lặp lại và đặt khối lệnh \"di chuyển về phía trước và rẽ phải\" trong khối lệnh \"lặp lại\". Khi chúng ta nhấn Chạy, nghệ sỹ sẽ lặp lại những bước này 4 lần để hoàn thành hình vuông."
+    C2_bee_loops:
+      1:
+        text: "\"Vòng lặp\" là sự lặp lại liên tục của hành động. Khi định quan sát 1 tổ ong, tôi kéo 1 khung cầu ong ra xem, và sau đó lại đặt lại. Tôi lặp lại việc này nhiều lần. Việc \"lặp đi lặp lại\" như vậy gọi là Vòng lặp."
+      2:
+        text: "Đây là khối lệnh lặp lại. Bất kì hành động nào bạn đặt vào khối lệnh sẽ lặp lại hành động đó theo số lần mà bạn yêu cầu. Ví dụ, trong cấp độ này, thay vì kéo lệnh \"di chuyển về phía trước\" và lấy mật 3 lần, chúng ta sẽ chỉ cần kéo lệnh 1 lần và nhắc lại hành động đó 3 lần. Thật dễ dàng!"
+    C2_maze_intro:
+      1:
+        text: "Thông thường, lập trình là dưới dạng văn bản nhưng chúng ta sẽ sử dụng Blockly tức là sử dụng các hình lệnh mà bạn kéo và thả để viết các chương trình. Dưới lớp hình, thực ra bạn vẫn đang tạo câu lệnh. Để khởi động, chúng ta sẽ xây dựng câu lệnh cho chương trình mà giúp nhân vật Angry Bird này di chuyển qua một mê cung để đến được chỗ những con lợn độc ác đã ăn cắp trứng của nó."
+      2:
+        text: "Blockly được chia thành 3 phần chính. Bên trái là mê cung của chú chim, nơi chương trình của bạn sẽ chạy. Các chỉ dẫn cho mỗi cấp độ được viết bên dưới mê cung. Khu vực ở giữa là hộp công cụ và mỗi 1 khối lệnh này là 1 mệnh lệnh mà chú chim có thể hiểu được. Khu vực trống ở bên phải được gọi là không gian làm việc và đây là nơi chúng ta sẽ xây dựng chương trình."
+      3:
+        text: "Nếu tôi kéo khối lệnh Di chuyển tới không gian làm việc và nhấn \"Chạy\", điều gì sẽ xảy ra? Chú chim tiến về phía trước 1 ô trong khung. Và nếu tôi muốn chú chim làm gì khác sau khi tiến lên 1 ô? Tôi có thể thêm khối lệnh khác vào chương trình."
+      4:
+        text: "Tôi sẽ chọn khối lệnh \"rẽ phải\" và tôi sẽ kéo nó đặt xuống dưới khối lệnh di chuyển sao cho mũi tên màu vàng xuất hiện. Sau đó tôi thả lệnh và 2 khối lệnh sẽ chập lại với nhau. Khi tôi nhấn \"Chạy\", chú chim sẽ thực hiện lần lượt các lệnh được xếp từ trên xuống dưới trong không gian làm việc."
+      5:
+        text: "Nếu bạn muốn xoá 1 khối lệnh, chỉ cần bỏ nó khỏi ngăn xếp và kéo đến thùng rác. Sau khi đã nhấn chạy, bạn vẫn có thể nhấn nút \"Thiết lập lại\" để chú chim trở lại điểm khởi đầu. Bây giờ hãy đi bắt những con lợn xấu xa!"
+    C2_paper_airplanes:
+      1:
+        text: "Bài học này được gọi là Thuật toán Đời thực. Thuật toán miêu tả những gì con người làm hàng ngày. Công thức làm bánh quy và hướng dẫn xây dựng nhà cho chim đều là những thuật toán hàng ngày."
+      2:
+        text: "Hôm nay chúng ta sẽ sáng tạo ra và kiểm tra 1 thuật toán của máy bay giấy. Nhưng trước hết, chúng ta cần chia kế hoạch lớn này thành các bước nhỏ dễ làm theo. Để tạo ra 1 chiếc máy bay giấy, chúng ta cần quyết định các bước và thứ tự tiến hành các bước đó."
+      3:
+        text: "Bạn sẽ tạo ra thuật toán trước hết bằng việc cắt nhỏ các bức tranh. Tiếp theo, bạn sẽ chọn 6 bức tranh mà chỉ ra các bước cần thiết để tạo 1 chiếc máy bay giấy và sắp xếp các bức tranh này theo thứ tự đúng. Sau khi có tất cả mọi thứ theo thứ tự, bạn sẽ trao đổi thuạt toán với nhóm học sinh khác để kiểm tra xem thuật toán có hoạt động không. Một thuật toán được thiết kế tốt là rất quan trọng để tạo ra chiếc máy bay tốt nhất."
+      4:
+        text: "Khi chúng ta muốn làm sô cô la, có rất nhiều bước lớn trong quá trình đó. Và mỗi bước lớn lại chứa tập hợp các bước nhỏ hơn. Và có rất nhiều công thức hay thuật toán khác nhau, tuỳ thuộc vào việc chúng ta muốn sô cô la có vị như thế nào. Mỗi bước đều quan trọng, thậm chí là các bước nhỏ. Vậy nên thiếu 1 bước thì các bước còn lại không thể hoàn thành. Tạo ra thuật toán mà người khác có thể hiểu được là rất quan trọng. Đó là lí do mỗi thuật toán đều phải được viết ra, để dù cho là ai làm, thì kết quả cũng không đổi."
+    C2_relay_programming:
+      1:
+        text: "Hôm nay chúng ta sẽ thực hiện lập trình tiếp sức. Nó đề cập đến việc lập trình dưới áp lực và gỡ các lỗi thi thoảng xảy ra khi bạn làm việc rất nhanh hoặc làm trong nhóm. Chúng ta sử dụng lập trình sơ đồ trên giấy để mô phỏng việc mã hoá, và sử dụng đường chạy tiếp sức để mô phỏng việc có hạn chót."
+      2:
+        text: "Trong lập trình tiếp sức, các đôi sẽ cùng đua để hoàn thành 1 chương trình sơ đồ trên giấy. Bạn sẽ phải kiểm tra công việc của đồng đội, hoặc gỡ lỗi, sửa chữa nếu có lỗi, thêm mũi tên, và chạy trở lại và chạm vào đồng đội."
+      3:
+        text: "Các nhà lập trình sử dụng việc gỡ lỗi rất nhiều để tìm và sửa chữa các thuật toán hoặc mã. Có rất nhiều cách để gỡ lỗi các vấn đề. 1 trong những cách dễ nhất là di chuyển từng bước một cho đến khi bạn thấy có chỗ sai, sau đó chữa nó."
+      4:
+        text: "Ở đây tôi đang cố thực hiện động tác lộn sau chống tay, nhưng tôi cứ bị thất bại. Tôi kiểm tra lại từng bước một, và nhận ra lỗi của mình ở đâu. Huấn luyện viên chỉ ra rằng tôi đang không đặt tay trên xà đúng cách. Vì vậy tôi thử làm lại với vị trí tay đã sửa và tôi đã thành công! Tôi thực sự rất vui vì đã gỡ được lỗi động tác lộn sau chống tay. Chúng ta đã tìm ra cách! Gỡ lỗi là tìm ra và sửa chữa các vấn đề. Làm tốt lắm!"
+    C3_artist_intro:
+      1:
+        text: "Bạn thậm chí không đủ tiêu chuẩn cho cuộc đua nếu bạn không có những người thành thạo trong khoa học máy tính vì số dữ liệu mà các xe phải thu thập và sự cần thiết của việc có những người có thể viết chương trình để tìm ra cách bạn tiếp tục xây dựng giao thức."
+      2:
+        text: "Trong các trò chơi này, bạn sẽ là một nghệ sỹ sử dụng bút chì để vẽ các hình dạng khác nhau. Nghệ sỹ của bạn đi đâu, nó sẽ vẽ 1 đường thẳng ở phía sau."
+      3:
+        text: "Để di chuyển xung quanh bức vẽ, bạn sẽ sử dụng khối lệnh di chuyển về phía trước. Đây là khối lệnh nói di chuyển về phía trước 100 điểm ảnh. Khi chúng ta nhấn chạy, điều gì sẽ xảy ra? Nghệ sỹ di chuyển 1 số bước nhất định là 100 điểm ảnh. Điểm ảnh cơ bản là những hình vuông rất nhỏ trên màn hình máy tính của bạn."
+      4:
+        text: "Khối lệnh khác chúng ta có trong trò chơi này nói \"qua phải 1 góc 90 độ\". Và khi chúng ta kéo khối lệnh sẽ khiến nghệ sỹ của chúng ta quay 1 góc nhất định. Vì vậy bạn có thể chơi và điều khiển nghệ sỹ quay theo ý muốn. Đây là một góc quay 90 độ."
+      5:
+        text: "Và đây là một góc quay 120 độ. Và nhớ là, bạn có thể thay đổi những giá trị này bằng cách nhấp vào các mũi tên bên cạnh các chỉ điểm ảnh hoặc độ. Hãy tận hưởng trò chơi!"
+    C3_bee_conditionals:
+      1:
+        text: "Đây là khối lệnh câu điều kiện. Nó nói rằng NẾU mật hoa hoặc mật ong ít hơn hoặc bằng hoặc lớn hơn 1 số nào đó, THÌ làm điều gì đó."
+      2:
+        text: "Điều này hữu ích khi chúng ta không biết cần lấy bao nhiêu mật hoa hoặc mật ong, như chúng ta thấy ở đây với dấu hỏi này."
+      3:
+        text: "Trong ví dụ này, chúng ta sẽ nói NẾU bông hoa đỏ có số mật hoa lớn hơn 0, lấy mật hoa. Nó sẽ khiến con ong lấy mật hoa với điều kiện là con ong ở chỗ bông hoa. Và đây!"
+    C3_bee_debugging:
+      1:
+        text: "Bạn đã bao giờ nghe đến việc gỡ lỗi 1 chương trình? Đây là cách bạn tìm ra những gì không hoạt động. Khi bạn gỡ lỗi lập trình, bạn xác định và loại bỏ các lỗi sai."
+      2:
+        text: "Ở đây chúng ta được cho sẵn 1 vài khối lệnh trong không gian làm việc. Chúng ta sẽ sử dụng nút \"Bước\" để đi qua từng khối lệnh 1, xem liệu đây đã là phương pháp đúng chưa và chỗ nào chúng ta cần sửa chữa."
+      3:
+        text: "Có vẻ như đây là vấn đề rồi! Chúng ta cần thêm 1 khối lệnh tiến về phía trước nữa. Nút \"Bước\" giúp chúng ta gỡ lỗi bằng cách xác định lỗi sai ở đâu vì thế chúng ta có thể sửa chữa nó."
+    C4_intro:
+      1:
+        text: "Thông thường, lập trình là dưới dạng văn bản nhưng chúng ta sẽ sử dụng Blockly tức là sử dụng các hình lệnh mà bạn kéo và thả để viết các chương trình. Dưới lớp hình, thực ra bạn vẫn đang tạo câu lệnh. Để khởi động, chúng ta sẽ xây dựng câu lệnh cho chương trình mà giúp nhân vật Angry Bird này di chuyển qua một mê cung để đến được chỗ những con lợn độc ác đã ăn cắp trứng của nó."
+      2:
+        text: "Blockly được chia thành 3 phần chính. Bên trái là mê cung của chú chim, nơi chương trình của bạn sẽ chạy. Các chỉ dẫn cho mỗi cấp độ được viết bên dưới mê cung. Khu vực ở giữa là hộp công cụ và mỗi 1 khối lệnh này là 1 mệnh lệnh mà chú chim có thể hiểu được. Khu vực trống ở bên phải được gọi là không gian làm việc và đây là nơi chúng ta sẽ xây dựng chương trình."
+      3:
+      4:
+      5:
+        text: "Nếu bạn muốn xoá 1 khối lệnh, chỉ cần bỏ nó khỏi ngăn xếp và kéo đến thùng rác. Sau khi đã nhấn chạy, bạn vẫn có thể nhấn nút \"Thiết lập lại\" để chú chim trở lại điểm khởi đầu. Bây giờ hãy đi bắt những con lợn xấu xa!"
+    mc_intro:
+      1:
+        text: "Tôi tên là Jens Bergensten, nhưng tốt hơn nên gọi tôi là Jeb. Tôi là trưởng nhóm lập trình viên của Minecraft, ở đây tại Mojang, Stockholm. Tôi nghĩ lúc tôi mười bảy tuổi hay có thể là mười hai tuổi, tôi đã bắt đầu lập chương vì tôi muốn tạo ra các trò chơi. Một trong số những người bạn của cha tôi nói với tôi là để tạo ra trò chơi thì tôi cần phải học cách lập trình. Đó là cách mà tôi bắt đầu. Tôi thích thiết kế và lập cấu trúc của các trò chơi. Đó là những gì tôi thực sự thích ở Minecraft."
+      2:
+        text: "Trong một giờ tới, bạn sẽ học những khái niệm cơ bản của khoa học máy tính bằng cách lập trình Alex hoặc Steve để vượt qua một phần giả lập của thế giới Minecarft."
+      3:
+        text: "Lập trình truyền thống thường là bằng văn bản, nhưng ngày nay chúng ta sẽ sử dụng Blovkly, là một hệ thống sử dụng các khối hữu hình và bạn sẽ kéo và thẻ để viết chương trình. Nói cách khác, bạn đang tạo mã Javascript."
+      4:
+        text: "Các khái niệm mà bạn sẽ học là những gì mà các lập trình viên máy tính sử dụng hằng ngày và là nền tảng cho khoa học máy tính. Ở đây, tại Mojang, chúng tôi sử dụng các khái niệm giống nhau này để giúp Minecraft hoạt động."
+      5:
+        text: "Trước khi bắt đầu, bạn sẽ chọn nhân vật của mình. Tôi sẽ chọn Alex. Hãy xây dựng mã cho một chương trình để giúp cô ấy di chuyển quanh màn hình."
+      6:
+        text: "Màn hình của bạn được chia thành ba phần chính. Ở bên trái là không gian chơi Minecraft, là nơi chương trình của bạn sẽ hoạt động. Các hướng dẫn cho mỗi cấp độ được viết bên dưới."
+      7:
+        text: "Khu vực ở giữa là hộp công cụ và mỗi khối này là một lệnh để hướng dẫn cho các hoạt động của Alex."
+      8:
+        text: "Vùng màu trắng bên phải được gọi là không gian làm việc và đây là nơi bạn sẽ xây dựng chương trình."
+      9:
+        text: "Nếu chúng ta kéo khối moveForward(); vào không gian làm việc rồi sau đó bấm chạy, điều gì xảy ra? Alex di chuyển về phía một không gian trên lưới."
+      10:
+        text: "Và nếu chúng ta muốn làm điều gì đó sau khi cô ấy đã di chuyển về phía một không gian thì sao? Chúng ta có thể thêm một khối khác vào chương trình của chúng ta. Tôi sẽ chọn khối turnRight(); và tôi sẽ kéo nó vào bên dưới khối moveForward(); cho đến khi đường màu cam này xuất hiện. Sau đó tôi sẽ thả nó và hai khối sẽ dính lại với nhau. Khi chúng ta nhấn chạy một lần nữa, Alex sẽ thực hiện các lệnh đã được tập hợp từ đầu đến cuối trong không gian làm việc của chúng ta."
+      11:
+        text: "Nếu bạn muốn xóa một khối, chỉ cần kéo nó từ cụm lệnh trở lại hộp công cụ."
+      12:
+        text: "Để hoàn tác các thay đổi và quay lại mức ban đầu của cấp độ, hãy sử dụng nút Start Over ở góc phải trên cùng của không gian làm việc. Một điều nữa: bạn nhìn thấy hình tam giác nhỏ trên các khối rẽ không? Bất cứ khi nào bạn nhìn thấy các hình tam giác này, có nghĩa là bạn có thể chọn một tùy chọn khác. Hãy bắt đầu lập mã nào!"
+    mc_repeat:
+      1:
+        text: "Tôi là Lydia Winters, giám đốc thương hiệu của Mojang và chúng tôi đã tạo ra một trò chơi nhỏ gọi là Minecraft."
+      2:
+        text: "Điều mà tôi thích làm trong Minecraft là khám phá. Tôi yêu thích khám phá trong những hang động và quan sát những gì tôi có thể tìm thấy. Vì không phải là lập trình viên, nên tôi thực sự rất thích thú khi khám phá bài học của Minecraft và thực sự tự học được một vài cách mã hóa."
+      3:
+        text: "Cấp cuối cùng cần nhiều khối moveForward();. Sẽ dễ hơn nếu chúng ta chỉ yêu cầu máy tính thực hiện lệnh moveForward(); bốn hoặc năm lần. May là máy tính thực sự rất giỏi về khoản lặp lại các lệnh với các vòng lặp."
+      4:
+        text: "Khi xây dựng Minecraft, chúng tôi sử dụng các vòng lặp để đặt tất cả các nguyên vật liệu ban đầu để tạo nên một thế giới mới. Đó là hàng ngàn, hàng ngàn khối. Chúng tôi cũng sử dụng các vòng này cho một số mục đích khác, ví dụ như để khiến chân của Alex chuyển động ra phía trước và sau khi cô ấy bước. Các vòng lặp là một phần quan trọng khi lập trình."
+      5:
+        text: "Ban đêm đang buông xuống, vì vậy trong vài cấp độ kế tiếp, chúng ta sẽ xây một ngôi nhà để lưu trú an toàn. Chúng ta sẽ sử dụng khối lặp để làm được điều này cực dễ dàng."
+      6:
+        text: "Để xây tường của ngôi nhà, chúng ta có thể hoặc là yêu cầu Alex moveForward(); và đặt các tấm ván bốn lần hoặc chúng ta có thể yêu cầu cô ấy moveForward(); và đặt một tấm ván, sau đó nhận lệnh này và sử dụng khối lặp để yêu cầu cô ấy thực hiện hành động này nhiều lần. Bây giờ, chúng ta sẽ bấm vào khối lặp và cho cô ấy biết số lần mà chúng ta muốn cô ấy thực hiện hành động này. Bây giờ, hãy xây ngôi nhà của chúng ta trước khi trời tối! Chúc vui vẻ."
+    mc_if_statements:
+      1:
+        text: "Bây giờ, chúng ta sẽ học về các lệnh if. Lệnh if là một phần căn bản khi học lập trình. Chúng giúp máy tính đưa ra quyết định."
+      2:
+        text: "Tất cả các máy tính đều sử dụng lệnh if, bao gồm cả điện thoại của tôi. Ví dụ, khi tôi mở khóa điện thoại của mình, nó sẽ chạy một số mã nói rằng nếu tọi nhập mật khẩu chính xác, thì khi đó điện thoại sẽ mở khóa. Nếu không, nó sẽ hiển thị thông báo lỗi."
+      3:
+        text: "Bạn có thể sử dụng lệnh if trong mã của mình để khiến Steve và Alice phản ứng trước những gì mà họ nhìn thấy trong thế giới này. Ví dụ, nếu có một hòn đá ở phía trước họ, họ có thể rẽ trái. Hoặc rẽ phải nếu họ gặp một cái cây."
+      4:
+        text: "Trong trường hợp này, chúng ta không muốn rơi vào dung nham. Đối phó với dung nham dễ lắm. Chúng ta có thể nhìn thấy nó trên màn hình. Nhưng còn dung nham mà chúng ta không thể nhìn thấy ở dưới đá thì sao?"
+      5:
+        text: "Sau khi chúng ta đào hòn đá lên, chúng ta sẽ cần phải kiểm tra xem có dung nham ở đó không trước khi di chuyển về phía trước. Nếu có dung nham ở đó, chúng ta cần phải đặt một hòn đá ở phía trước nhân vật của chúng ta trước khi chúng ta có thể di chuyển về phía trước. Bằng cách đó, chúng ta có thể di chuyển tiếp một cách an toàn. Đã đến lúc khai thác thêm! Và hãy nhớ sử dụng lệnh if để di chuyển cẩn thận."
+    mc_congrats_share:
+      1:
+        text: "Xin chúc mừng! Bạn vừa học được các khối xây dựng cơ bản của khoa học máy tính."
+      2:
+        text: "Bây giờ bạn có thể sử dụng các khối này để xây dựng tác phẩm của riêng mình. Không có thêm hướng dẫn nào khác và không có câu đố để giải quyết. Bạn có thể xây bất cứ thứ gì mà bạn muốn. Bạn có sự lựa chọn."
+      3:
+        text: "[học sinh đang nói chuyện] Sắp hành hình rồi. Xén đi. Em làm được chữ L bằng đuốc rồi. Em làm được chữ A bằng ván gỗ bulo rồi. Làm được rồi, làm được rồi. Chúng em đã xây được môi ngôi nhà bằng len!"
+      4:
+        text: "Khi các bạn hoàn thành tác phẩm của mình, hãy chọn chia sẻ để nhận liên kết và chia sẻ với bạn bè của mình. Chúc vui vẻ!"
+    mc_congrats_no_share:
+      1:
+        text: "Xin chúc mừng! Bạn vừa học được các khối xây dựng cơ bản của khoa học máy tính."
+      2:
+        text: "Bây giờ bạn có thể sử dụng các khối này để xây dựng tác phẩm của riêng mình. Không có thêm hướng dẫn nào khác và không có câu đố để giải quyết. Bạn có thể xây bất cứ thứ gì mà bạn muốn. Bạn có sự lựa chọn."
+      3:
+        text: "[học sinh đang nói chuyện] Sắp hành hình rồi. Xén đi. Em làm được chữ L bằng đuốc rồi. Em làm được chữ A bằng ván gỗ bulo rồi. Làm được rồi, làm được rồi. Chúng em đã xây được môi ngôi nhà bằng len!"
+      4:
+        text: "Bây giờ bạn có thể xây dựng bất cứ thứ gì mà bạn muốn. Chúc vui vẻ!"
+    gumball_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+        text: "Vùng màu trắng bên phải được gọi là không gian làm việc và đây là nơi bạn sẽ xây dựng chương trình."
+      7:
+      8:
+      9:
+    iceage_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+        text: "Vùng màu trắng bên phải được gọi là không gian làm việc và đây là nơi bạn sẽ xây dựng chương trình."
+      7:
+      8:
+      9:

@@ -1,0 +1,545 @@
+---
+bs:
+  slides:
+    maze_intro:
+      1:
+        text: Dobrodošao/la na svoj prvi sat kodiranja! Hajde da se bacimo na tvoje
+          prvo iskustvo programiranja.
+      2:
+        text: Koristićemo Blockly, vizuelni programski jezik u kojem se vuku i spuštaju
+          blokovi koji čine programski kod.
+      3:
+        text: Programski kodovi se uglavnom pišu, ali Blockly je vizuelan. Svaki blok
+          odgovara jednoj liniji "stvarnog" koda.
+      4:
+        text: Naučiti ćeš osnove računarstva, pojmove koji se koriste od pravljenja
+          aplikacija do kontrole robotskog vozila na Marsu.
+      5:
+        text: Program sačinjava niz naredbi koje tvoj kompjuter redom izvršava.
+      6:
+        text: Cilj tvog prvog programa je da provedeš Ljutu Pticu kroz labirint i
+          udari Zelenu Svinju.
+      7:
+        text: Na lijevoj strani je labirint gdje se tvoj program izvršava. Upute za
+          svaki zadatak se nalaze ispod labirinta.
+      8:
+        text: Središnja alatna traka sadrži komande za Ljutu Pticu. Ove komande ćeš
+          koristiti za pisanje svog koda.
+      9:
+        text: Na desnoj strani je tvoja radna površina u koju ćeš za pravljene tvog
+          programa dovlačiti blokove iz alatne trake. Za brisanje određenog bloka,
+          odvuci ga u kantu smeća u uglu.
+      10:
+        text: Svaki blok je jedna naredba. Ako dovučeš "idi naprijed" blok na tvoju
+          radnu površinu i pritisneš "Pokreni Program", ptica će se pomaknuti za jedno
+          mjesto u labirintu.
+      11:
+        text: Da bi odradio/la više od jedne akcije, možeš dovući mnogo blokova na
+          tvoju radnu površinu i spojiti ih zajedno. Ptica će izvršavati naredbe of
+          vrha prema dnu.
+      12:
+        text: Ako pokreneš svoj program i želiš ga popraviti i probati ponovo, pritisni
+          dugme "Resetuj".
+      13:
+        text: Hajde da sredimo ove svinje!
+    artist_intro:
+      1:
+        text: Zdravo, ja sam JR! Svaki trkaći tim automobila treba informatičare za
+          pobjedu. Oni analiziraju podatke iz automobila da bi ga ubrzali.
+      2:
+        text: U ovim zadacima ćeš biti umjetnik koji će crtati linije iza sebe gdje
+          god da ide.
+      3:
+        text: Ovaj blok kaže "idi naprijed za 100 piksela". Pikseli su zapravo sićušne
+          tačke na tvom ekranu.
+      4:
+        text: Ovaj blok kaže "okreni desno za 90 stepeni.". Ova komanda će okrenuti
+          tvog umjetnika za isti ugao kao i "okreni" blokovi u zadatku sa labirintom.
+      5:
+        text: Klikni na strelicu u bilo kojem od ovih blokova da promijeniš za koliko
+          se umjetnik kreće naprijed ili se okreće. Poigraj se malo da bi se upoznao
+          sa ovim novim blokovima.
+    farmer_intro:
+      1:
+        text: Zdravo, ja sam Paola! U ovim zadacima, biti ćeš farmer koji mora potpuno
+          poravnati svoje polje da bi mogao početi sijati usjeve.
+      2:
+        text: Moraš joj pomoći ukloniti sve hrpe zemlje i popuniti sve rupe.
+      3:
+        text: Novi blokovi uklanjaju jednu lopatu zemlje iz hrpe i pune jednu lopatu
+          zemlje u rupe.
+      4:
+        text: Hrpe i rupe su različite veličine, tako moraš reći farmeru koliko lopata
+          mora koristiti.
+    flappy_intro:
+      1:
+        text: Zdravo, ja sam Katie! Jedna od najuzbudljivijih stvari u računarstvu
+          je da kompjuterski program može biti interaktivan.
+      2:
+        text: Kada god netko pritisne ili dotakne tipku na kompjuteru ili telefonu,
+          to stvara DOGAĐAJ, i određeni kod odlučuje što napraviti kad se dogodi DOGAĐAJ.
+      3:
+        text: 'Na primjer, možeš imati UPRAVITELJA DOGAĐAJA koji kaže "kad se klikne
+          miš, pusti zvuk" '
+      4:
+        text: Jesi ikad čuo/la za igricu FlappyBird? Koristeći upravitelje Događajima,
+          naučit ćemo kako programirati našu vlastitu verziju igrice FlappyBird!
+      5:
+        text: Kod koji ćeš napisati uključuje povlačenje i ispuštanje blokova koji
+          predstavljaju naredbe za kompjuter. Zapravo, svaki od ovih blokova predstavlja
+          pravi kod.
+      6:
+        text: 'Ako pogledaš radnu površinu, vidjeti ćeš zelene blokove koji su već
+          popunjeni - to su "upravitelji događajima" '
+      7:
+        text: Ako želiš da ptica MAHNE kad KLIKNEŠ mišem, možeš to ostvariti tako
+          da prikačiš blok "MAHNI" na odgovarajući upravitelj događajima. Tada će
+          u tvojoj igri kad god klikneš mišem ptica mahnuti krilima.
+      8:
+        text: U svakom ćemo zadatku ove aktivnosti uvesti novi tip događaja u obliku
+          zelenog bloka na radnoj površini. Ti ćeš odlučiti koji su odgovarajući blokovi
+          i dodati ih kao odgovore na te događaje.
+      9:
+        text: Kada vidiš strelicu padajućeg izbornika poput ove, to znači da možeš
+          mijenjati postavke - recimo kao koji zvuk se treba čuti kada ptica padne
+          na zemlju.
+      10:
+        text: U zadnjem zadatku ćeš moći napraviti vlastitu igricu i podijeliti je
+          sa svojim prijateljima. Uživaj!
+    loop_times:
+      1:
+        text: Zdravo, ja sam Mark. Naučimo sada petlje. Koristeći petlje možeš reći
+          kompjuteru da ponavlja bilo koju grupu radnji iznova i iznova, hiljadu ili
+          čak milijardu puta.
+      2:
+        text: U ovom zadatku želimo da se ptica pomakne naprijed za 5 mjesta da bi
+          došla do svinje.
+      3:
+        text: Za pomoć možemo koristiti novi "ponovi" blok.
+      4:
+        text: Umjesto korištenja 5 "idi naprijed" blokova...
+      5:
+        text: Možemo staviti blok "idi naprijed" unutar bloka "ponovi" i upisati broj
+          koji kaže koliko se puta to treba ponoviti.
+      6:
+        text: 'I ovo je važno: moguće je umetnuti više od jedne naredbe u blok "ponovi".'
+      7:
+        text: Uživaj koristeći novi blok "ponovi"!
+    loop_until:
+      1:
+        text: Zdravo, ja sam Chris. Prije dolaska u Miami Heat, išao sam na Georgia
+          Tech na studij računarstva. Isprobajmo naš novi blok "ponavljaj dok".
+      2:
+        text: Što da nismo znali koliko daleko ptica treba ići dok ne dođe do svinje?
+      3:
+        text: Ako stavimo blok "idi naprijed" unutar bloka "ponavljaj dok ne bude",
+          ptica će se kretati naprijed DOK NE stigne do svinje (ili ne udari u zid).
+      4:
+        text: 'I ovo je važno: baš kao i prije, možemo staviti više blokova unutar
+          bloka "ponavljaj dok ne bude" i oni će se svi ponavljati.'
+    if:
+      1:
+        text: 'Zdravo, ja sam Bill! Hajde da naučimo novi osnovni pojam: naredbu "Ako".
+          To je način na koji računala donose odluke.'
+      2:
+        text: '"Ako" naredbu koristiš svakodnevno. Svako jutro prije nego izađeš iz
+          kuće kažeš: AKO vani pada kiša, moram obući jaknu.'
+      3:
+        text: Možemo reći zombiju da provjeri ima li staze s lijeve strane, a AKO
+          nađe stazu lijevo, možemo ga okrenuti u tom smjeru.
+      4:
+        text: Da bismo napisali kôd za to, dovucimo blok "ako" i stavimo blok "okreni
+          lijevo" unutar njega.
+      5:
+        text: Sada, ako stavimo blok "idi naprijed" iznad njega i blok "ponovi" oko
+          svega toga, svaki put kad se zombi pomakne, provjeriti će postoji li staza
+          lijevo i okrenuti se. Naredba "ponovi" je veoma važna kojom zombi nakon
+          svakog koraka provjeri treba li se okrenuti.
+      6:
+        text: '"Ako" naredbe su veoma važne u računarstvu. Jedan od prvih programa
+          koji sam napisao je bila igra iks-oks. Tu je bila ta naredba koja je rekla:
+          AKO je protivnik blizu pobjede, blokiraj kvadratić koji bi mu donijeo pobjedu.'
+      7:
+        text: Zabavi se koristeći "ako" blok!
+    if_else:
+      1:
+        text: Zdravo, zovem se Saloni. Koristim kompjutere pri rješavanju problema
+          zdravlja i medicine. Hajdemo proučiti "ako-inače" blok. Izgleda kao "ako"
+          blok, ali ima dodatni dio na kraju koji kaže "inače".
+      2:
+        text: Ako stavim blok "idi naprijed" na mjesto koje kaže "radi" i ako stavim
+          blok "okreni lijevo" gdje kaže "inače" to znači da će zombi odabrati između
+          dvije mogućnosti. AKO je staza ispred njega, nastaviti će ići ravno, a INAČE
+          (ako nema staze ispred njega) okrenuti će lijevo.
+      3:
+        text: Poput "ako" bloka, možemo staviti "ako-inače" blok unutar bloka "ponovi".
+          Tako će se zombi nastaviti kretati, a zbog "ako-inače" bloka će i dalje
+          provjeravati treba li se okrenuti.
+      4:
+        text: Stavimo te zombije tamo gdje pripadaju!
+    if_else_scrat:
+      1:
+        text: Naredba "ako-inače" pravi odluku između dvije stvari. Hajdemo pogledati
+          kako je možemo koristiti s našim prijateljem vjevericom Scrat.
+      2:
+        text: Ovaj blok izgleda isto kao i blok "ako", ali ima dodatni dio na dnu
+          koji kaže "inače". Ako stavim blok "idi naprijed" tamo gdje kaže "uradi",
+          a blok "okreni lijevo" u "inače", to znači da će vjeverica Scrat ići naprijed
+          ako ima staze ispred njega. Ako nema staze ispred njega, Scrat će se okrenuti
+          lijevo.
+      3:
+        text: To je donošenje odluke i izvođenje jedne od dvije radnji ovisno o toj
+          odluci. Isto kao i s blokom "ako", možeš staviti blok "ako-inače" unutar
+          "ponovi" blokova.
+      4:
+        text: Hajdemo sada pomoći Scratu da dobije taj žir!
+    function:
+      1:
+        text: Zdravo, ja sam Brina, inžinjerka u Instagramu. Funkcija je određeni
+          niz linija koda koje želiš koristiti iznova i iznova, pa umjesto da svaki
+          put pišeš isti kôd, možeš jednostavno koristiti samo jedan blok.
+      2:
+        text: Sada ćemo naučiti kako definirati funkcije. Definicije funkcija imaju
+          zvjezdicu u uglu. Ime funkcije se piše u najgornjem redu.
+      3:
+        text: Blokovi koje stavljamo unutar definicije kažu nam što ona radi. Tako
+          se ova funkcija zove "ispuni 5" i napravljena je od bloka "ponovi" i bloka
+          "ispuni".
+      4:
+        text: Definicija se nalazi na radnoj površini, ali naš farmer neće izvršiti
+          funkciju sve dok ne dovučemo funkcijski blok "ispuni 5" iz kategorije funkcija.
+      5:
+        text: Zabavimo se sa funkcijama!
+    loop_while:
+      1:
+        text: Zdravo, ja sam Makinde! Hajdemo proučiti "dok" blok.
+      2:
+        text: Blok "dok" će raditi sve ono što ti staviš unutar njega SVE DOK izraz
+          na vrhu ima vrijednost ISTINITO.
+      3:
+        text: Na primjer, ako farmer stoji na hrpi zemlje, uklanjat će po 1 lopatu
+          zemlje DOK god ispod postoji hrpa.
+    loop_for:
+      1:
+        text: Zdravo, ja sam Trina. Radim za Pixar. Radila sam na mnoštvu filmova,
+          uključujući Shrek-a.
+      2:
+        text: Ovo je naša nova "brojač" petlja. Ona će ponavljati izvođenje naredbi,
+          a ti možeš napraviti da se akcije svaki put malo izmijene.
+      3:
+        text: U ovom primjeru, "brojač" petlja kaže "broji s brojačem od 50 do 90
+          sa pomakom 10", a unutar nje imamo poznati blok "nacrtaj kvadrat". Dovuci
+          blok "brojač" iz grupe "Varijable" na mjesto "dužina".
+      4:
+        text: To znači da će naš umjetnik nacrtati kvadrat sa stranicama dužine 50,
+          zatim će dodati 10 na to i nacrtati kvadrat sa stranicama dužine 60. Potom
+          će nastaviti dodavati po 10 i crtati kvadrate dok ne dođe do 90. Tako ćemo
+          imati kvadrate sa stranicama od 50, 60, 70, 80 i 90 piksela.
+    parameters:
+      1:
+        text: Zdravo ja sam Janete, i ja sam inžinjer u Zynga.
+      2:
+        text: Što ako želimo nacrtati nekoliko trokutova sa stranicama različitih
+          dužina?
+      3:
+        text: Možemo napisati sav taj kôd ručno ili možemo koristiti funkciju s parametrima.
+      4:
+        text: Da bi to napravio/la, klikni na plavu zvjezdicu na definiciji funkcije
+          "nacrtaj trokut". Zatim dovuci "ime unosa" u blok "unos".
+      5:
+        text: Zatim kad napišeš "dužina" na mjesto gdje piše "x" i pritisneš "Enter",
+          napraviti ćeš unos dužine za svoju funkciju.
+      6:
+        text: Zatim klikni na zvjezdicu. Sada trebaš kliknuti na varijable kategoriju
+          i dovući blok "dužina" u blok "idi naprijed" u svojoj definiciji funkcije.
+          Također, odvuci stari blok broja.
+      7:
+        text: Da bi koristio/la svoju funkciju s parametrima, klikni na funkcije kategoriju
+          i izvuci svoju funkciju "nacrtaj trokut s dužinom".
+      8:
+        text: Sad možeš koristiti matematički blok da uneseš različite brojeve za
+          crtanje trokutova raznih veličina.
+    hoc_wrapup:
+      1:
+        text: Čestitamo! U posljednjem riješenom zadatku si napisao/la kôd kojim možeš
+          BILO KOJEM robotu reći kako da nađe izlaz iz labirinta bez grananja puteva
+          ili tunela bilo koje dužine, bez obzira radi li se o zombiju, ptici, svemirskom
+          vozilu ili čak samovozećem automobilu.
+      2:
+        text: Osnovni pojmovi koje si koristio/la se nalaze u srcu svake aplikacije
+          koju ćeš ikada isprobati. Učili smo o petljama "ponovi", "ponavljaj dok
+          ne bude", naredbama "ako" i "ako-inače".
+      3:
+        text: Ako ti se svidio tvoj prvi sat kodiranja, posjeti code.org da bi nastavio/la
+          svoje učenje računarstva! Kroz naš 20-satni kurs ćeš savladati osnove programiranja
+          i početi učiti kako napraviti aplikacije za mobitele, upute za robote, igrice,
+          bilo što.
+      4:
+        text: 'Tehnologija mijenja sve što radimo i nije važno koliko godina imaš:
+          programiranje je zabavno, i kreativno, i svako ga može naučiti!'
+    20_wrapup:
+      1:
+        text: Bilješke će stići uskoro!
+    frozen_intro:
+      1:
+        text: Zdravo, ja se zovem Lindsey. Radim kao model, glumim i pišem svoje programe.
+          Upotrijebimo kodiranje da se pridružimo Anni i Elsi dok istražuju ljepotu
+          i čaroliju leda.
+      2:
+        text: Napraviti ćeš pahuljice i uzorke dok kližeš po ledu i zimsku Zemlju
+          Čuda koju možeš podijeliti sa svojim prijateljima.
+      3:
+        text: U slijedećih sat vremena naučit ćeš osnove izrade programa. Tradicionalno
+          programiranje se obično svodi na tekst, no mi ćemo koristiti Blockly, koji
+          koristi vizualne blokove koje možeš premještati i slagati da dobiješ programe.
+          Tako čak i studenti na fakultetima uče osnove. U biti, to je isto stvaranje
+          kôda.
+      4:
+        text: Program je niz instrukcija koje kompjuteru kažu šta da uradi. Hajdemo
+          napraviti kôd, ili program, koji će Elsi pomoći da nacrta običnu liniju.
+          To ćemo kasnije koristiti da napravimo složenije uzorke.
+      5:
+        text: Tvoj ekran je podijeljen u tri dijela. Na lijevoj strani je ledena površina
+          gdje će se odvijati tvoj program. Upute su na svakom nivou napisane odmah
+          ispod nje.
+      6:
+        text: U sredini je alatna traka, a svaki od ovih blokova je nešto što Anna
+          i Elsa mogu uraditi.
+      7:
+        text: Bijeli prostor s desne strane se zove adna površina. Tu ćemo graditi
+          naš program. Za kretanje po ledu, koristi blok "idi naprijed".
+      8:
+        text: Pogledaj, blok "idi naprijed" kaže "idi naprijed za 100 piksela". Kad
+          kliknemo na "Pokreni", što se događa? Elsa se kreće naprijed po ekranu i
+          to tačno za 100 piksela! Pikseli su zapravo sićušni kvadratići na ekranu
+          tvog računala.
+      9:
+        text: Drugi blok koji imamo u ovom zadatku kaže "okreni desno za 90 stepeni."
+          Kad upotrijebimo taj "okreni desno " blok, Elsa se okrene za određeni ugao.
+          Možeš se poigrati s vrijednošću koliko želiš da se Elsa okrene. Ugao se
+          mjeri od smjera staze ispred Else. Dakle, ovo je okret za 90 stepeni. A
+          ovo je okret od 120 stepeni.
+      10:
+        text: Zapamti, možeš promijeniti broj piksela i stepeni klikom na strelice
+          do njih.
+    frozen_loops:
+      1:
+        text: Pozdrav, ja se zovem Paola! Računala su stvarno dobra u ponavljanju
+          radnji. Vi možete brojati do 10, 20, ili 100. Ali računalo može brojati
+          do bilion ili trilion. Neće mu dosaditi i bit će mu potrebno samo nekoliko
+          sekundi. Bilo da se radi o brojanju, crtanju, ili bilo čemu - računala mogu
+          ponavljati stvari sto ili čak bilione puta.
+      2:
+        text: U programiranju, ovo zovemo petljom. Petljom ponavljaš svoj kôd opet
+          i opet. U slijedećem zadatku cilj je pomoći Anni da napravi kvadrat koristeći
+          blok "ponovi".
+      3:
+        text: Bilo koje blokove koda koje staviš unutar bloka "ponovi" biti će ponavljani
+          u nizu, koliko god put poželiš.
+      4:
+        text: Za crtanje kvadrata možeš koristiti "idi naprijed" i "okreni desno"
+          blokove 4 puta. Međutim jednostavnije je da kompjuteru kažeš "idi naprijed"
+          i "okreni desno za 90 stepeni" jednom, a potom mu kažeš da ponovi te dvije
+          radnje 4 puta. Za to trebaš staviti "idi naprijed" i "okreni desno" blok
+          unutar bloka "ponovi".
+      5:
+        text: Zapamti, možeš promijeniti broj u bloku "ponovi" na bilo koju vrijednost
+          i ono što je unutar tog bloka će se ponoviti toliki broj puta.
+    frozen_functions:
+      1:
+        text: Zdravo, ja sam Chris Bosh. Ja sam profesionalni košarkaš, i programirao
+          sam na fakultetu.
+      2:
+        text: Jedan od najvažnijih koncepata u računarstvu je kako definirati nove
+          naredbe. Većina programskih jezika ima tek oko 100 riječi ili naredbi. Zapravo,
+          sva umjetnost i čarolija je u izradi vlastitih novih riječi sastavljenih
+          od ovih osnovnih blokova.
+      3:
+        text: Jednom kad naučiš kompjuter kako da obavi neku radnju koristeći niž
+          naredbi, možeš toj akciji dati vlastito ime tako da ti bude poslije lakše
+          ponoviti je. Kada definiraš vlastitu naredbu i daš joj ime, to se zove funkcija.
+      4:
+        text: Zdravo, ja sam Jess. Kada programiraš s blokovima koristit ćeš funkcije
+          za niz radnji koje želiš koristiti mnogo puta. Na primjer, napisao si kôd
+          za crtanje kvadrata.
+      5:
+        text: 'Ovo možeš definirati kao funkciju zvanu "nacrtaj kvadrat" '
+      6:
+        text: Sada imaš novi blok koji možeš upotrijebiti više puta da nacrtaš više
+          kvadrata.
+      7:
+        text: Za stvaranje složenih uzoraka možeš koristiti mnogo jednostavnih oblika.
+          U idućem zadatku ti je kôd za crtanje kruga koji si prije napisao dostupan
+          kao nova funkcija koja može nacrtati krugove raznih veličina. Možeš li pomoći
+          Elsi nacrtati prekrasne zamršene uzorke u snijegu?
+    playlab_intro:
+      1:
+        text: Sada ćemo praviti igrice pomoću Laboratorija Igara. Dobre igre imaju
+          priču, a svaka priča ima likove. Naučit ćemo kako da naši likovi poput vještica,
+          vanzemaljaca ili životinja govore, kreću se i uzajamno djeluju. Do kraja
+          tutorijala, napravit ćeš igru počevši od nule i podijeliti je s prijateljima.
+      2:
+        text: Tvoj ekran je podijeljen u tri glavna dijela. Na lijevoj strani je prostor
+          u kojem će se odvijati tvoj program. Upute su za svaki nivo napisane odmah
+          ispod njega.
+      3:
+        text: U sredini je alatna traka, a svaki od ovih blokova je dio kôda. Bijeli
+          prostor s desne strane zove se radna površina. Tu ćemo graditi naš program.
+      4:
+        text: Za početak trebaš prikačiti svoje blokove za narandžast "pri pokretanju"
+          blok. Možeš prikačiti više blokova zajedno tako da ih vučeš blizu dok se
+          ne pokaže žuta linija, a tada će se oni zakačiti.
+      5:
+        text: U ovom prvom zadatku naš lik je pingvin i on će naučiti reći "Zdravo!"
+          tako da ćemo izvući blok "reći", prikačiti ga na blok "pri pokretanju" i
+          upisati "Zdravo!". Također možemo napraviti da se pingvin kreće tako da
+          upotrijebimo blokove "pomakni lijevo" i "pomakni desno". Kad smjestiš blokove,
+          klikni na gumb "Pokreni" da vidiš šta si isprogramirao.
+      6:
+        text: Započni sada, a kad završiš bit ćeš sposoban/na napraviti vlastitu igru
+          sa svim vrstama likova koji mogu međudjelovati, postati tužni ili sretni,
+          skupljati bodove, bacati vatrene kugle ili čak izbrisati jedan drugoga.
+          Sve ovisi o tebi i tome kakvu igru želiš napraviti.
+    playlab_events:
+      1:
+        text: Sad idemo naučiti nešto što svi programeri svakodnevno koriste. To se
+          zovu događaji. Događaj kaže tvom programu da sluša kada će se nešto dogoditi.
+          Kad se to dogodi, on izvodi akciju.
+      2:
+        text: Neki primjeri događaja su čekanje na klik mišem, pritisak na tipku sa
+          strelicom ili dodir ekrana.
+      3:
+        text: Sada ćemo napraviti da svemirski robot pozdravi zemljane kada se klikne
+          na njega. Koristit ćemo blok "kad se klikne" i prikačiti blok "reći" na
+          njega. Kada igrač klikne na svemirskog robota on će izvest sve ono šta je
+          prikačeno na blok događaja "kad se klikne". Šta će tvoj vanzemaljac reći?
+      4:
+        text: Tu su također i "kad strelica" blokovi. Ako na njih prikačiš blokove
+          "pomakni", moći ćeš pomicati svoj lik gore, dolje, lijevo ili desno. Korak
+          po korak i tvoja igra postaje sve interaktivnija.
+    playlab_repeat_forever:
+      1:
+        text: Ovo je blok "ponavljaj zauvijek". Sve što je unutar ovo bloka će se
+          zauvijek ponavljati tijekom igre.
+      2:
+        text: Ako želimo da lik nešto ponavlja, bez ikakvog utjecaja igrača, stavit
+          ćemo to unutar bloka "ponavljaj zauvijek".
+      3: 
+    C1_happy_maps_unplugged:
+      1: 
+      2: 
+      3: 
+      4: 
+      5:
+        text: To je kao programiranje sa papirom. I to je to!
+    C1_going_places_safely:
+      1:
+        text: Moje ime je Jeremija. Zdravo! Imam sedam godina. Volim se igrati na
+          računaru moje mama ali uvijek moram prvo dobiti dozvolu."Mama, mogu li ići
+          na računar? Naravno dušo!"
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+    C2_conditionals_with_cards:
+      1: 
+      2: 
+      3: 
+      4: 
+      5:
+        text: Razmisli o svojo najdražoj video igri. Dobivaš li više poena za jedne
+          akcije nego za druge? Ovo se događa zato što računar koristi uslove. To
+          je način na koji računar donosi odluku. Recimo, ako pogodiš metu, dobivaš
+          deset poena. Ako ne, gubiš tri poena. Kada znaš kako funkcionišu uslovi,
+          možeš kreirati sve vrste uzbudljivi igrica.
+    mc_if_statements:
+      1: 
+      2: 
+      3: 
+      4:
+        text: U ovo slučaju, ne želimo da padnemo u lavu. Lako je izbjeći lavu. Možemo
+          je vidjeti na ekranu. Ali šta je sa lavom ispod kamena koju ne možemo vidjeti?
+      5: 
+    mc_congrats_share:
+      1:
+        text: Čestitamo! Upravo ste naučili osnovne elemente računarstva.
+      2:
+        text: Sad možete koristiti ove blokove da napravite vlastitu kreaciju. Nema
+          više instrukcija i zagonetki da se riješe. Možete napraviti šta god želite.
+          Izbor je Vaš.
+      3: 
+      4:
+        text: Kada si gotov sa pravljenjem svoje kreacije, izaberi opciju podijeli
+          da dobiješ link da podijeliš sa svojim prijateljima. Zabavi se!
+    mc_congrats_no_share:
+      1:
+        text: Čestitamo! Upravo ste naučili osnovne elemente računarstva.
+      2:
+        text: Sad možete koristiti ove blokove da napravite vlastitu kreaciju. Nema
+          više instrukcija i zagonetki da se riješe. Možete napraviti šta god želite.
+          Izbor je Vaš.
+      3: 
+      4:
+        text: Sada možete napraviti što god želiš. uživaj!
+    gumball_intro:
+      1:
+        text: Ako bi želio napraviti vlastitu igru, zaista je lako. Sve što trebaš
+          je nekoliko osnova programiranja i možeš početi igrati igru koju si napravio.
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+    iceage_intro:
+      1:
+        text: Ako bi želio napraviti vlastitu igru, zaista je lako. Sve što trebaš
+          je nekoliko osnova programiranja i možeš početi igrati igru koju si napravio.
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+    mc_2016_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6:
+        text: Ako zaboraviš šta treba uraditi, upute za svako razinu su na vrhu.
+      7: 
+      8: 
+      9: 
+    mc_2017_agent_intro:
+      1: 
+      2:
+        text: Čekaj malo - na pruzi ima rupa! (vrištanje)
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+      10: 
+      11:
+        text: Ako zaboraviš šta treba uraditi, upute za svako razinu su na vrhu.
+      12: 
+    mc_2017_congratulations:
+      1: 
+      2: 
+      3:
+        text: 'Stampi: Čestitam, uspio si!'
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 

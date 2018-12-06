@@ -1,0 +1,23 @@
+---
+bn:
+  devise:
+    confirmations:
+      confirmed: Thomar email address successfully confirm hoy gatche.
+      send_instructions: কয়েক মিনিটের মধ্যে আপনার একাউন্ট কিভাবে নিশ্চিত করতে হবে
+        সে সম্পর্কে নির্দেশনা সম্বলিত একটি ইমেইল আপনি পাবেন।
+      send_paranoid_instructions: যদি আমাদের ডাটাবেসে আপনার ইমেইল ঠিকানা থাকে, তাহলে
+        কয়েক মিনিটের মধ্যে আপনার একাউন্ট কিভাবে নিশ্চিত করতে হবে সে সম্পর্কে নির্দেশনা
+        সম্বলিত একটি ইমেইল পাবেন।
+    failure:
+      inactive: আপনার একাউন্ট এখনও সক্রিয় হয়নি।
+    passwords:
+      updated_not_active: আপনার পাসওয়ার্ডটি সফলভাবে পরিবর্তন করা হয়েছে।
+  errors:
+    messages:
+      not_found: খুঁজে পাওয়া যায়নি
+      not_locked: তালাবদ্ধ ছিল না
+    invitations:
+      new:
+        header: আমন্ত্রণ প্রেরণ করুন
+      edit:
+        submit_button: আমার গুপ্ত-সংকেত (পাসওয়ার্ড) নির্ধারণ করুন

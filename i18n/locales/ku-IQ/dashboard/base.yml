@@ -1,0 +1,162 @@
+ku:
+  errors:
+    messages:
+      not_saved: 'تکایە ئەم هەڵانەی خوارەوە ڕاست بکەوە:'
+  activerecord:
+    errors:
+      messages:
+        blank: "داواکراوە"
+    attributes:
+      user:
+        name: 'ناوی پیشاندراو'
+        email: 'ئیمەیڵ'
+        username: 'ناوی بەکارهێنەر'
+        password: 'تێپەڕەوشە'
+        password_confirmation: 'پشتڕاستکردنەوەی تێپەڕەوشە'
+        current_password: 'تێپەڕەوشەی ئێستا'
+        locale: 'زمان'
+        age: 'تەمەن'
+        gender: 'ڕەگەز'
+        edit_header: 'دەستکاریکردنی وردەکارییەکانی هەژمار'
+        error:
+          future: ناکرێت لە داهاتوو بێت
+  hello: "چۆنی جیهان"
+  welcome_back: "بەخێربێیەوە، %{name}"
+  submit: بنێرە
+  previous_page: لاپەرەی پێشوو
+  next_page: لاپەرەی دواتر
+  or: "یان"
+  add_teacher_form:
+    code:
+      label: 'زیادکردنی مامۆستایەک:'
+    submit: 'زیادکردنی مامۆستا'
+  appname: "Code.org"
+  stage: "قۆناغ"
+  stage_number: "قۆناغی %{number}"
+  more: "زیاتر"
+  less: "کەمتر"
+  beta: "تاقیکاری"
+  continue: 'بەردەوام بە'
+  more_info: 'زانیاری زیاتر'
+  auth:
+    sign_in_with: 'چوونەژوورەوە لەگەڵ %{provider}'
+    google_oauth2: 'هەژماری گووگڵ'
+    twitter: 'تویتەر'
+    facebook: 'فەیسبووک'
+    windowslive: 'هەژماری مایکڕۆسۆفت'
+    microsoft_v2_auth: 'هەژماری مایکڕۆسۆفت'
+    forgot_password: 'تێپەڕەوشەت لەبیر کردووە؟'
+  signup_form:
+    age: 'تەمەن'
+    submit: 'خۆتۆمارکردن'
+    teacher: 'ئایا تۆ مامۆستای؟'
+    valid_username: "بەردەستە!"
+    taken_username: "ئەم ناوی بەکارهێنەرە بەکارهاتووە"
+    valid_password: "تێپەڕەوشەی دروست!"
+    invalid_password: "تێپەڕەوشە پێویستە لانی کەم 6 نووسە بێت"
+    user_type_teacher: "مامۆستا"
+    user_type_student: "قوتابی"
+    field_is_required: "داواکراوە"
+  school_info:
+    other: 'هی تر'
+  signin_form:
+    login: 'ئیمەیڵ'
+    password: 'تێپەڕەوشە'
+    submit: 'چوونەژوورەوە'
+  signinsection:
+    welcome: 'بەخێربێیت بۆ %{section_name}'
+    name: 'ناوەکەت هەڵبژێرە'
+    login: 'چوونەژوورەوە'
+  password:
+    reset_form:
+      title: 'تێپەڕەوشەت لەبیر کردووە؟'
+      email: 'ناونیشانی ئیمەیڵ'
+      submit: 'بنێرە'
+    change_form:
+      title: 'گۆڕینی تێپەڕەوشەکەت'
+      new_password: 'تێپەڕەوشەی نوێ'
+      confirm_password: 'پشتڕاستکردنەوەی تێپەڕەوشەی نوێ'
+      submit: 'گۆڕینی تێپەڕەوشەکەم'
+  section:
+    type:
+      email: 'ئیمەیڵ'
+  crud:
+    submit: 'بنێرە'
+    confirm: 'ئایا تۆ دڵنیایت؟'
+  nav:
+    header:
+      educate_hoc: "كاژێری كۆدنووسی"
+    user:
+      classroom: 'پەڕەی سەرەکی مامۆستا'
+      settings: 'هەژمارەکەم'
+      logout: 'دەرچوون'
+      signin: 'چوونەژوورەوە'
+      already_registered: 'پێشوو تۆمارکراویت؟'
+      create: 'ez'
+    popup:
+      close: 'داخستن'
+      puzzle_map: 'قۆناغەکان'
+  teacher:
+    title:
+      one: 'مامۆستاکەت:'
+      other: 'مامۆستاکانت:'
+    remove: '(لابردنی مامۆستا)'
+    confirm:
+      remove: 'ئایا تۆ دڵنیایت لە لابردنی ئەم مامۆستایە؟'
+    panel:
+      student: 'قوتابی'
+  home:
+    online: سەرهێڵ
+    trynow: 'زیاتر فێرببە'
+    announcement_learn_more_button: "زیاتر فێرببە"
+    announcement_try_now_button: "زیاتر فێرببە"
+  gender:
+    male: 'نێر'
+    female: 'مێ'
+  user_type:
+    student: 'قوتابی'
+    teacher: 'مامۆستا'
+  footer:
+    support: 'یارمەتی و کۆمەڵگا'
+    support_url: 'http://support.code.org'
+    tos: 'بڕگەکان'
+  reference_area:
+    title: 'یارمەتیت پێویستە؟'
+  compatibility:
+    upgrade:
+      link: "زیاتر فێرببە"
+  next_stage: 'تەواوبوو! بەردەوامبە بۆ قۆناغی دواتر'
+  pdf_download: 'داگرتنی PDF'
+  dialog:
+    startover_title: "ئایا تۆ دڵنیای دەتەوێت دووبارە دەست پێ بکەیتەوە؟"
+    startover_ok: "دەست پێبکەوە"
+  terms_interstitial:
+    tos: "بڕگەکان"
+  school_info_interstitial:
+    save: "پاشه‌كه‌وت بكە"
+  race_interstitial:
+    races:
+      other: "هی تر"
+    submit: "بنێرە"
+  project:
+    save: "پاشه‌كه‌وت بكە"
+    delete: "بسڕەوە"
+    share: "بڵاوكەوە"
+    name: "ناو"
+    really_delete: 'بسڕێتەوە؟'
+    abuse:
+      report_abuse_form:
+        abuse_type:
+          other: 'هی تر'
+  pd:
+    form_labels:
+      email: 'ئیمەیڵ'
+    form_entries:
+      gender:
+        male: 'نێر'
+        female: 'مێ'
+      subjects:
+        cs: 'زانستی كۆپیتەر'
+        math: 'بیرکاری'
+  cookie_banner:
+    accept: 'من ڕازیم'

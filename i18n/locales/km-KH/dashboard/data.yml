@@ -1,0 +1,47 @@
+km:
+  data:
+    game:
+      name:
+        Unplug1: សេចក្ដី​ណែនាំ​អំពី​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
+        Unplug2: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
+        Artist: វិចិត្រករ
+        Unplug5: អនុគមន៍
+        Farmer: កសិករ
+        Unplug6: លក្ខខណ្ឌ
+        Unplug10: អ៊ីនធឺណិត
+        Bounce: បាល់​លោត
+        Flappy: Flappy Bird
+        ArtistEC: វិចិត្រករ
+    trophy:
+      name:
+        Bronze: សំរឹទ្ធ
+        Silver: ប្រាក់
+        Gold: មាស
+    concept:
+      description:
+        function: អនុ​គមន៍
+    level:
+      instructions:
+        maze_2_14: នេះ​ដូច​ទៅ​នឹង​ល្បែង​ប្រាជ្ញា​មុន​ដែរ ប៉ុន្តែ​អ្នក​ត្រូវ​ចងចាំ​អំពី​របៀប​ដែល​អ្នក​ប្រើ​ប្លុក "បើ" និង​ប្លុក "ធ្វើ​ឡើង​វិញ" ជាមួយ​គ្នា។
+    video:
+      name:
+        function: អនុគមន៍
+        Unplug2: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
+        Unplug5: អនុគមន៍
+        Unplug6: លក្ខខណ្ឌ
+        C2_conditionals_with_cards: លក្ខខណ្ឌ
+        C3_bounce: បាល់​លោត
+        C3_computational_thinking: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
+        C4_loops_zombie: រង្វិល​ជុំ
+        C4_conditionals: លក្ខខណ្ឌ
+        csp_applab_loops: រង្វិល​ជុំ
+        mc_2016_congrats: Minecraft Hour of Code - អបអរសាទរ
+        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
+        mc_2017_repeat: Minecraft Hour of Code - រង្វិលជុំ
+        mc_2017_functions: Minecraft Hour of Code - មុខងារ
+        mc_2017_congratulations: Minecraft Hour of Code - អបអរសាទរ
+        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
+        mc_2017_puzzle_3: Minecraft Hour of Code - រង្វិលជុំ
+        mc_2017_puzzle_8: Minecraft Hour of Code - មុខងារ
+        mc_2017_puzzle_12: Minecraft Hour of Code - លេងដោយសេរី
+        CSF_loops_AB: រង្វិល​ជុំ

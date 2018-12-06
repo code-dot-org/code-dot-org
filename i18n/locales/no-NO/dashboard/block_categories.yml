@@ -1,0 +1,42 @@
+"no":
+  data:
+    block_categories:
+      Actions: Handlinger
+      Loops: Løkker
+      Functions: Funksjoner
+      Color: Farge
+      Brushes: Pensler
+      Math: Matematikk
+      Logic: Logikk
+      Variables: Variabler
+      Number: Tall
+      String: Streng
+      Image: Bilde
+      Conditionals: Betingelser
+      Events: Hendelser
+      Comments: Kommentarer
+      Category: Kategori
+      Prebuilt: Forhåndsbygde
+      Text: tekst
+      Comment: Kommentar
+      'Variables ': 'Variabler '
+      everythingelse: resten
+      numbers: tall
+      Numbers: Tall
+      Default: Standard
+      World: Verden
+      Behaviors: Oppførsler
+      Advanced: Avansert
+      Start: Start
+      Locations: Steder
+      Dancing: Dansing
+      Dancers: Dansere
+      Groups: Grupper
+      Brush: Pensel
+      Movement: Bevegelse
+      Booleans: Boolske verdier
+      test: test
+      test2: test2
+      Name: Navn
+      'Functions ': 'Funksjoner '
+      Function: Funksjon

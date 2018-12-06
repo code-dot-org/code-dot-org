@@ -1,0 +1,75 @@
+nn:
+  devise:
+    confirmations:
+      confirmed: "E-postadressa di har blitt stadfesta."
+      send_instructions: "Om nokre få minutt vil du motta ein e-post med instruksjonar om korleis du stadfestar kontoen din."
+      send_paranoid_instructions: "Derso e-postadressa di fins i databasen vår, vil du om nokre få minutt motta ein e-post med instruksjonar om korleis du stadfestar kontoen."
+    failure:
+      already_authenticated: "Du er alt pålogga."
+      inactive: "Kontoen din er ikkje aktivert enno."
+      invalid: "Ugyldig epostadresse eller passord."
+      invalid_token: "Ugyldig godkjenningstoken."
+      locked: "Kontoen din er låst."
+      not_found_in_database: "Ugyldig epostadresse eller passord."
+      timeout: "Økta er utløpt. Logg inn på nytt for å fortsette."
+      unauthenticated: "Du må logge inn eller registrere deg før du held fram."
+      unconfirmed: "Du må stadfesta kontoen før du kan halde fram."
+    mailer:
+      confirmation_instructions:
+        subject: "Code.org sine instruksjonar for stadfesting"
+      reset_password_instructions:
+        subject: "Code.org sine instruksjonar for å tilbakestille passord"
+      unlock_instructions:
+        subject: "Instruksjonar for å låse opp"
+    omniauth_callbacks:
+      failure: "Kunne ikkje godkjenne deg frå %{kind} på grunn av \"%{reason}\"."
+      success: "Godkjent frå %{kind} konto."
+    passwords:
+      no_token: "Du får ikkje tilgang til denne sida utan å komme via ein epost for tilbakestilling av passord. Dersom du kjem via ein e-post for tilbakestilling av passord, kontroller at du brukte heile URLen som var oppgitt."
+      send_instructions: "Om nokre få minutt vil du motta ein e-post med instruksjonar om korleis du tilbakestiller passordet."
+      send_paranoid_instructions: "Hvis e-postadressa di finst i databasen vår, vil du innan nokre få minutt via e-post motta ein link for gjenoppretting av passord."
+      updated: "Passordet blei endra. Du er nå innlogga."
+      updated_not_active: "Passordet ditt har blitt endra."
+    registrations:
+      destroyed: "Ha det! Kontoen din blei avslutta. Vi håper å sjå deg att snart."
+      signed_up: "Velkommen! Du er blitt registrert utan problem."
+      signed_up_but_inactive: "Du er blitt registrert, men vi kunne ikkje logge deg på då kontoen din enno ikkje er aktivert."
+      signed_up_but_locked: "Du er meldt på, men du kan ikkje logge på sidan kontoen din er låst."
+      signed_up_but_unconfirmed: "En melding med ein link for stadfesting har blitt sendt til e-postadressa di. Vennligst åpne linken for å aktivere kontoen din."
+      update_needs_confirmation: "Du har oppdatert kontoen din, men vi må verifisere den nye e-postadressa du. Sjekk e-posten din og klikk på linken for å stadfesta den nye e-postadressa."
+      updated: "Kontoen din er blitt oppdatert."
+    sessions:
+      signed_out: "Logga av utan problem."
+    unlocks:
+      send_instructions: "Du vil om nokre få minutt motta ein e-post med instruksjonar om korleis du kan låse opp kontoen din igjen."
+      send_paranoid_instructions: "Hvis kontoen din fins, så vil du om nokre få minutt motta ein e-post med instruksjonar om korleis du låser opp kontoen din."
+      unlocked: "Kontoen din har blitt låst opp. Ver snill å logge på for å fortsette."
+  errors:
+    messages:
+      already_confirmed: "var alt stadfesta. Vennligst prøv å logge på"
+      confirmation_period_expired: "må vere stadfesta innan %{period}, vennligst spør etter ein ny"
+      expired: "har gått ut på dato. Ver snill og søk om ein ny"
+      not_found: "ikkje funne"
+      not_locked: "var ikkje låst"
+      not_saved:
+        one: "1 feil hindra denne %{resource} frå å bli lagra:"
+        other: "%{count} feil hindra denne %{resource} frå å bli lagra:"
+    invitations:
+      send_instructions: 'Ein invitasjon er blitt send på e-post til %{email}.'
+      invitation_token_invalid: 'Invitasjonstokenet gitt er ikkje gyldig!'
+      updated: 'Passordet er satt. Du er nå logga inn.'
+      no_invitations_remaining: "Ingen invitasjonar att"
+      invitation_removed: 'Invitasjonen din vart fjerna.'
+      new:
+        header: "Send invitasjon"
+        submit_button: "Send ein invitasjon"
+      edit:
+        header: "Velg passord"
+        submit_button: "Velg passord"
+    mailer:
+      invitation_instructions:
+        subject: 'Invitasjonsinstruksjonar'
+        hello: 'Hei %{email}'
+        someone_invited_you: 'Nokon har invitert deg til %{url}. Du kan godta det ved å trykke på lenkja nedanfor.'
+        accept: 'Godta invitasjon'
+        ignore: "Om du ikkje vil godta invitasjonen, kan du sjå vekk frå denne e-posten.<br />Kontoen din vil ikkje bli oppretta før du har trykt på lenkja over og valt eit passord."

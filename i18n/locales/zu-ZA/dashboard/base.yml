@@ -1,0 +1,22 @@
+zu:
+  cancel: "Hoxisa"
+  continue: 'Qhubeka'
+  signup_form:
+    email_preference_no: "Cha"
+  dialog:
+    ok: "Kulungile"
+    startover_title: "Ingabe uqinisekile ufuna ukuqala phansi?"
+    startover_ok: "Qala phansi"
+    startover_cancel: "Hoxisa"
+  terms_interstitial:
+    print: "Khiphela ephepheni"
+  project:
+    delete_no: 'Cha'
+    cancel: 'Hoxisa'
+  pd:
+    form_entries:
+      subjects:
+        cs: 'Isayensi yekhompyutha'
+        math: 'Izibalo'
+      email_opt_in:
+        opt_in_no: 'Cha'

@@ -1,0 +1,891 @@
+---
+pl:
+  data:
+    game:
+      name:
+        Unplug1: Wprowadzenie do informatyki
+        Maze: Labirynt
+        Multi: Wieloraki Wybór Rzeczy
+        Unplug2: Myślenie komputacyjne
+        Unplug3: Programowanie na papierze milimetrowym
+        Artist: Artysta/Postać
+        Unplug4: Algorytmy
+        Artist2: Artysta 2
+        Unplug5: Funkcje
+        Farmer: Rolnik
+        Unplug6: Warunkowe
+        Artist3: Artysta 3
+        Unplug7: Pisanie piosenek
+        Farmer2: Rolnik 2
+        Unplug8: Abstrakcja
+        Artist4: Artysta 4
+        Unplug9: Sztafeta programowania
+        Farmer3: Rolnik 3
+        Unplug10: Internet
+        Artist5: Artysta 5
+        Unplug11: Podsumowanie
+        MazeEC: Labirynt
+        Bounce: Odbicie
+        Flappy: Flappy Bird
+        Jigsaw: Układanka
+        MazeStep: Tryb Kroczenia po Labiryncie
+        Wordsearch: WordSearch (Poszukiwanie słów)
+        Webapp: App Lab
+        ArtistEC: Artysta/Postać
+        TextMatch: Dopasowanie tekstu
+        StudioEC: Lab Gier
+        Applab: App Lab
+        NetSim: Symulator internetowy
+        Custom: Artysta
+        CustomStudio: Play Lab
+        Gamelab: Laboratorium Gier (Game Lab)
+    trophy:
+      name:
+        Bronze: Brąz
+        Silver: Srebro
+        Gold: Złoto
+    concept:
+      description:
+        sequence: Sekwencja (ciąg)
+        if: Blok jeśli
+        if_else: blok jeśli-w przeciwnym razie
+        loop_times: Blok powtórz razy
+        loop_until: Blok powtarzaj aż
+        loop_while: Blok dopóki
+        loop_for: Blok licznika
+        function: Funkcje
+        parameters: Funkcje z parametrami
+    level:
+      instructions:
+        maze_2_2: Czy możesz pomóc mi złapać niesforną świnkę? Poustawiaj na sobie
+          kilka bloków "idź do przodu" i naciśnij "Uruchom", aby pomóc mi się tam
+          dostać.
+        maze_2_1: Świnka powoduje jeżenie moich piórek. Pomóż mi ją znaleźć!
+        maze_2_2_5: Śledź drogę i doprowadzić mnie do tej głupiej świnki. Unikaj TNT,
+          bo inaczej polecą pióra!
+        maze_2_3: Prowadź mnie do tego zielonego zła! (Uważaj na pola z TNT)
+        maze_2_4: Zachowaj spokój i pomóż mi znaleźć tę złą świnkę. W przeciwnym razie
+          mogę się zezłościć!
+        maze_2_5: Istnieje sposób, abym dostał się do zielonej świnki przy użyciu
+          zaledwie 2 bloków. Czy potrafisz to zrobić?
+        maze_2_6: Spróbuj doprowadzić mnie do tego zielonego intruza używając tylko
+          trzech bloków.
+        maze_2_7: Pomóż mi pozbyć się tej złej świnki przy użyciu jak najmniejszej
+          liczby bloków. Spróbuj za pomocą więcej niż jednego bloku powtórz razy.
+        maze_2_8: 'Gdy blok jest szary, oznacza to, że nie można go usunąć. Rozwiąż
+          tę łamigłówkę za pomocą bloku "powtórz", który powtarza 3 razy. Postaraj
+          się umieścić w tym szarym bloku3 bloki: idź, idź, skręć.'
+        maze_2_9: OK, spróbuj użyć nowego bloku powtórz aż - będzie powtarzał, aż
+          dorwę irytującą świnkę.
+        maze_2_10: OK, ostatni raz na próbę - czy potrafisz rozwiązać tę łamigłówkę
+          używając jedynie 4 bloków?
+        maze_2_11: Droga osobo. Ja zombie. Ja głodny. Muszę... dostać się... do słonecznika...
+          Czy potrafisz mnie tam przeprowadzić używając zaledwie 5 bloków?
+        maze_2_12: OK, to jest podobne, ale jednak trochę inne. Czy potrafisz to wykonać
+          używając zaledwie 5 bloków?
+        maze_2_13: 'Użyj nowego bloku "jeśli", abym mógł zdecydować, kiedy mam skręcić.
+          Wskazówka: potrzebujesz do tego tylko jednego dodatkowego bloku, ale przyjrzyj
+          się jak to zrobiliśmy, abyś następnym razem potrafił zrobić to sam.'
+        maze_2_14: OK, ta łamigłówka jest podobna do poprzedniej, ale tym razem musisz
+          pamiętać, jak użyć razem bloków jeśli i powtórz.
+        maze_2_15: Ja chcieć słonecznik! Użyj bloku jeśli, abym mógł się tam dostać
+          za pomocą jak najmniejszej liczby bloków.
+        maze_2_16: OK, zróbmy to jeszcze raz dla wprawy - ta łamigłówka niewiele się
+          różni od poprzedniej, ale uważaj na chrupaczy!
+        maze_2_17: Bloki jeśli-w przeciwnym razie sprawdzają warunek i wtedy wykonują
+          pierwszą czynność ALBO drugą. Spróbuj doprowadzić mnie do słonecznika przy
+          użyciu tego nowego bloku.
+        maze_2_18: Jeszcze jedno ćwiczenie z blokiem "jeśli-w przeciwnym razie", czy
+          potrafisz je wykonać za pierwszym razem?
+        maze_2_19: Czy potrafisz dodać 3 bloki, by pomóc mi przejść bardziej skomplikowany
+          labirynt? Jeśli zrobisz to prawidłowo, to będę mógł przejść każdą krętą
+          ścieżkę bez względu na jej długość.
+        turtle_1_1: Witaj, jestem artystą. Pisząc kod możesz sprawić, że narysuję
+          niemalże wszystko. Użyj kilku bloków, abym zaczął rysować wzdłuż szarych
+          linii na obrazku.
+        turtle_1_2: 'A teraz narysuj kwadrat. Wskazówka: użyj swojego ulubionego koloru,
+          wybierając go z nowego bloku ustaw kolor.'
+        turtle_1_3: Narysuj kwadrat używając jedynie 3 bloków.
+        turtle_1_4: 'Narysuj trójkąt, którego boki są w różnych kolorach, posługując
+          się opcją losowy kolor, która wybiera za każdym razem inny kolor. Wskazówka:
+          musisz sam sprawdzić, ile należy się obrócić, w tym celu kliknij liczbę
+          w bloku obróć.'
+        turtle_1_5: Teraz dla wprawy, narysuj trójkąt a następnie kwadrat, aby narysować
+          kopertę.
+        turtle_1_6: 'Czy możesz odgadną, jak narysować ten trójkąt i kwadrat? Podpowiedź:
+          Narysuj najpierw trójkąt a później przekonaj się, o ile się obrócić przed
+          narysowaniem kwadratu.'
+        turtle_1_7: OK, utrudnijmy to nieco - przekonaj się, czy możesz narysować
+          te zielone okulary. Kwadraty mają boki po 100 pikseli i są oddalone od siebie
+          o 50 pikseli. Nie zapomnij, aby były zielone!
+        turtle_1_8: OK, przekonaj się, co się stanie, jeśli uruchomisz ten kod (naciśnij
+          przycisk Uruchom). Następnie, powtarzaj to dość razy, aby ukończyć rysowanie.
+          Kolory będą różne za każdym razem.
+        turtle_1_9: Czy możesz powiedzieć, jaką liczbę wstawić w miejsce znaku zapytania,
+          aby z narysować okrąg?
+        turtle_1_10: 'Zrobiłeś to! Teraz narysuj co chcesz. Niektóre zabawne pomysły:
+          figura z kresek, śnieżynka lub spirala. Spróbuj również użyć nowego bloku
+          ustaw szerokość. Baw się dobrze!'
+        turtle_4_1: 'Czy możesz narysować trójkąt (z bokami o długości 100 pikseli)
+          używając tylko 3 bloków? Wskazówka: Użyj bloku powtórz.'
+        turtle_4_2: Dodaj blok "skręć w prawo o 90 stopni" gdzieś w środku programu
+          na obszarze roboczym, żeby narysować te trójkąty.
+        turtle_4_3: OK,  tutaj jest kod, który napisałeś, aby narysować pojedynczy
+          trójkąt. Czy możesz dodać bloki powtórz i obróć, aby otrzymać ładny kwiat?
+        turtle_4_4: 'Tutaj jest kod z poprzedniej łamigłówki, ale wykonujący obrót
+          tylko o 36 stopni po narysowaniu każdego trójkąta. Ile razy trzeba to powtórzyć?
+          (Wskazówka: po obrocie o 360 stopni rysunek zatoczy koło)'
+        turtle_4_5: 'Tutaj jest kod z poprzedniej łamigłówki, ale z obrotem powtórzonym
+          36 razy. O ile stopni powinien być  obrót? (Wskazówka: po obrocie o 360
+          stopni rysunek zatoczy koło)'
+        turtle_4_6: Używając 3 bloków, czy możesz narysować kwadrat z bokami o długości
+          20 pikseli?
+        turtle_4_7: 'Oto kod do rysowania kwadrat z ostatniej łamigłówki. Czy potrafisz
+          go powtórzyć tak, aby narysować 10 przyległych kwadratów tworzących drabinę?
+          Wskazówka: potrzebujesz tylko 2 dodatkowych bloków.'
+        turtle_4_8: Oto rozwiązanie poprzedniej łamigłówki. Czy potrafisz dodać dokładnie
+          2 bloki, by ukończyć rysunek?
+        turtle_4_9: Oto rozwiązanie poprzedniej łamigłówki. O ile stopni należy wykonać
+          obrót w prawo, by  ukończyć rysunek? (Być może będziesz zgadywał kilka razy)
+        turtle_4_10: Oto rozwiązanie poprzedniej łamigłówki. Ile razy należy wykonać
+          powtórz, aby ukończyć rysunek?
+        turtle_4_11: Spróbuj zmieniać liczby w blokach powtórz i obróć, aby otrzymać
+          różne desenie (wzory). Możesz również spróbować wykonać inne zmiany w kodzie,
+          aby narysować, co wymyślisz.
+        maze_karel_1_1: Cześć, jestem rolnikiem. Potrzebuję twojej pomocy, aby wypoziomować
+          pola w moim gospodarstwie, by było gotowe do obsadzenia. Przenieś mnie na
+          stertę kupę śmieci i użyj bloku usuń, by ją usunąć.
+        maze_karel_1_2: Następnie, przenieś mnie do otworu i wypełnij go dwoma szufelkami
+          śmieci, stosując blok wypełnij.
+        maze_karel_1_3: Przenieś mnie do sterty śmieci i określ, ile potrzebuję szufelek,
+          by usunąć śmieci za pomocą możliwie najmniejszej liczby bloków.
+        maze_karel_1_4: 'Czy mógłbyś mi pomóc usunąć wszystkie cztery sterty śmieci?
+          Wskazówka: użyj bloku powtórz, jeśli potrafisz.'
+        maze_karel_1_5: 'Pomóż mi wypełnić wszystkie te dziury 5 szufelkami śmieci.
+          Wskazówka: można umieścić blok powtórz w bloku dopóki.'
+        maze_karel_1_6: Usuń wszystkie sterty śmieci, używając możliwie najmniejszej
+          liczby bloków. Nową możliwością w rozwijanym menu w bloku dopóki jest warunek,
+          czy tam, gdzie stoję jest sterta śmieci, czy otwór.
+        maze_karel_1_7: Wow, znalazłem naprawdę głęboki otwór! Nie wiem, ile szufelek
+          śmieci tam się zmieści. Czy mógłbyś napisać program, który wypełni otwór
+          aż do poziomu ziemi?
+        maze_karel_1_8: Pomóż mi wypełnić otwór na końcu tego pola, używając możliwie
+          najmniejszej liczby bloków.
+        maze_karel_1_9: 'Spowoduj, abym usunął wszystkie te sterty śmieci. Zrób to
+          za pomocą możliwie najmniejszej liczby bloków. Wskazówka: możesz użyć bloku
+          "dopóki".'
+        maze_karel_1_10: Pracuję do późna, zrobiło się więc ciemno i nie mogę określić,
+          jak duże są sterty śmieci. Teraz nie mam niestety wszystkich opcji w bloku
+          "dopóki". Przesuwaj mnie po polu i, jeśli jest sterta śmieci, to usuń ją.
+        maze_karel_1_11: 'Nadal jest ciemno. Przenieś mnie po polu. Jeśli jest sterta
+          śmieci, to usuń ją, a jeśli jest otwór, to wypełnij go. Wskazówka: wykorzystaj
+          rozwijane menu w bloku "jeśli".'
+        turtle_2_1: 'Cześć. Mnie zombie artysty. Mnie kochają rysunek! Pomóż mi narysować
+          kwadrat w specjalnym kolorze. Ważna Uwaga: możesz użyć tych samych bloków,
+          ale teraz zostały zgrupowane w kategorie.'
+        turtle_2_2: Zapraszamy do korzystania z funkcji, które umożliwiają definiowanie
+          nowych bloków! Spróbuj użyć nowego bloku narysuj kwadrat, znajdującego się
+          w kategorii Funkcje, aby narysować mały zielony kwadrat 50 x 50.
+        turtle_2_3: Użyj bloku powtórz (z kategorii Pętle), aby narysować 3 kwadraty
+          o boku 100, każdy obrócony o 120 stopni, w 3 różnych, losowych kolorach.
+        turtle_2_4: 'Teraz mamy zamiar uzyskać coś fantazyjnego. Zmień kod, aby narysować
+          36 kwadratów, o boku 100 pikseli, co 10 stopni. Wskazówka: możesz przyspieszyć
+          rysowanie za pomocą suwaka.'
+        turtle_2_5: Narysuj kwadraty o bokach 50, 60, 70, 80 i 90 pikseli.  Musisz
+          użyć funkcji narysuj kwadrat pięć razy.
+        turtle_2_6: 'Ten program używa licznika, by narysować te same kwadraty, co
+          poprzednio. Chcesz, by kwadraty były tej samej wielkości, co poprzednio,
+          użyj więc bloku "counter" (licznik). Wskazówka: Znajdziesz go w kategorii
+          "Variables" (Zmienne).'
+        turtle_2_7: Oto program do rysowania spirali, ale bloki są wyłączone, więc
+          nie będą działać. Utwórz nowy program używając bloku "dla" (for, z kategorii
+          Pętle) i bloku "licznik" (counter, z kategorii Zmienne), aby narysować taką
+          samą spiralę.
+        turtle_2_7_5: Jest nowa funkcja narysuj bałwana (w kategorii Funkcje). Narysuj
+          dwa bałwany o wysokość 250 i 100.
+        turtle_2_8: To jest trochę podstępne. Użyj funkcji narysuj bałwana i nowego
+          bloku przesuń do przodu  (w kategorii Działania). Narysuj 3 bałwany w różnych
+          kolorach, w odległości 100 pikseli od siebie.
+        turtle_2_9: Skorzystaj z pętli "dla", by narysować rodzinę bałwanów o wysokości
+          110, 100, 90, 80 i 70. Bałwany powinny być oddalone od siebie o 60 pikseli.
+        turtle_2_10: Tutaj mamy kawałek kodu, aby poeksperymentować z różnymi spiralami  Co
+          się stanie, jeśli zmienisz wielkość obrotu? Lub ustawisz kolor losowy w
+          pętli? Narysuj cokolwiek, co chcesz.
+        maze_karel_2_1: 'Użyj bloków, by pomóc mi usunąć wszystkie sterty i wypełnić
+          wszystkie otwory w ziemi. Postaraj się użyć pętli zamiast zbyt wielu bloków.
+          Wskazówka: możesz umieścić pętlę wewnątrz innej pętli.'
+        maze_karel_2_2: Zdefiniowaliśmy własny blok o nazwie wypełnij 5, który teraz
+          znajduje się w kategorii Funkcje. Użyj go, aby mi pomóc wypełnić ten otwór.
+        maze_karel_2_3: Użyj nowego bloku funkcyjnego wypełnij 5, aby wypełnić wszystkie
+          otwory. Będziesz musiał przeciągnąć ten blok z kategorii Funkcje.
+        maze_karel_2_4: Zdefiniuj nową funkcję, która usuwa 7 szufelek śmieci. Następnie
+          użyj jej do napisania programu, który pomoże mi usunąć wszystkie sterty
+          śmieci.
+        maze_karel_2_5: Utwórz nową funkcję, która usuwa 6 szufelek śmieci ze sterty
+          i użyj jej, by mi pomóc wyczyścić wszystkie sterty śmieci.
+        maze_karel_2_6: Użyj dwóch nowych funkcji, "fill 8" (wypełnij 8) i "remove
+          8" (usuń 8), aby wyczyścić wszystkie stery śmieci i zasypać wszystkie dziury.
+        maze_karel_2_7: Na moim polu jest krowa! Napisz nową funkcję, która pomaga
+          uniknąć krowy i usuwa stertę śmieci. Umieścić wszystkie swoje bloki wewnątrz
+          nowej funkcji.
+        maze_karel_2_8: Użyj tej nowej funkcji o nazwie "avid the cow and remove 1"
+          (unikaj krowy i usuń 1), aby usunąć wszystkie sterty.
+        maze_karel_2_9: OK, tutaj jest funkcja, która usuwa 4 różne sterty śmieci
+          znajdujące się w pionowej kolumnie. Spróbuj umieścić tę funkcję wewnątrz
+          pętli, aby usunąć wszystkie sterty śmieci przy użyciu tylko kilku nowych
+          bloków.
+        maze_karel_2_10: Przenieś mnie przez pole i usuń wszystkie sterty śmieci oraz
+          wypełnij wszystkie otwory za pomocą tych dwóch funkcji.
+        turtle_3_1: Ta łamigłówka pokazuje definicje dwóch funkcji narysuj kwadrat
+          i narysuj okrąg. Definiowanie funkcji nie powoduje wykonania jej bloków.
+          Trzeba wyciągnąć blok narysuj kwadrat, aby faktycznie narysować kwadrat.
+        turtle_3_2: Korzystają z funkcji narysuj kwadrat, jako przykładu, utwórz funkcję
+          narysuj trójkąt i użyj jej.
+        turtle_3_3: 'Narysuj trójkątne ogrodzenia wokół kotów i kwadratowe ogrodzenie
+          wokół krowy.  Wskazówka: sprawdzaj program, podczas jego tworzenia.'
+        turtle_3_4: Przekonaj się, czy potrafisz wykorzystać funkcje narysuj kwadrat
+          i narysuj trójkąt (i niektóre inne bloki), aby narysować dom w okolicy lwa.
+        turtle_3_5: 'Teraz utwórz nową funkcję narysuj dom i użyj jej, aby umieścić
+          w domu dwa koty. Wskazówka: utwórz nową funkcję przy użyciu bloku zrobić
+          coś i wpisz własną nazwę bloku.'
+        turtle_3_6: 'Na przykładzie funkcji narysuj kwadrat, dodaj wejście o nazwie
+          długość do funkcji narysuj trójkąt. Następnie narysuj trójkąty o różnych
+          rozmiarach. (Wskazówka: kliknij gwiazdkę, aby dodać wejście do funkcji)'
+        turtle_3_7: Dodaj wejście o nazwie długość do funkcji narysuj dom i zbuduj
+          duży dom dla słonia (z krawędziami o długości 150 pikseli)
+        turtle_3_8: Modyfikuj "draw a house" (narysuj dom) tak, aby rysowanie kończyło
+          się w prawym dolnym rogu. Użyj tej zmodyfikowanej funkcji do narysowania
+          trzech domów.
+        turtle_3_9: Czy mógłbyś ponownie utworzyć funkcję narysuj dom bez niczyjej
+          pomocy? Spróbuj, a następnie narysuj szereg domów.
+        turtle_3_10: Dużo się już nauczyłeś! Teraz narysuj, co chcesz. Spróbuj narysować
+          gwiazdę, spiralę lub fantazyjną śnieżynkę.
+        maze_karel_debug_seq_1: Zapraszamy do debugowania! Mój kod nie działa poprawnie.
+          Czy widzisz problem i możesz go naprawić tak, abym mógłbym oczyścić moje
+          pole i przygotować je do sadzenia?
+        maze_karel_debug_seq_2: Jaki jest błąd w tym programie? Jak go naprawić tak,
+          abym mógł usunąć stertę?
+        maze_karel_debug_repeat: Napraw ten program dla mnie, aby moje pole było posprzątane
+          i płaskie.
+        maze_karel_debug_while: Jak zmieniłbyś ten program, aby pomóc mi wypełnić
+          dziurę?
+        maze_karel_debug_if: Pomocy! Napraw program tak, by moje pole było całkowicie
+          płaskie.
+        maze_karel_debug_if_else: Napraw ten programu, abym mógł wypełnić wszystkie
+          otwory i usunąć wszystkie sterty.
+        maze_karel_debug_function_1: Co należy zmienić w tym programie, aby usuwał
+          wszystkie sterty?
+        maze_karel_debug_function_2: Czy możesz naprawić błędy w tym programie, aby
+          mógł wyrównać moje pole?
+        maze_karel_debug_function_3: 'Popraw ten program, abym mógł usunąć wszystkie
+          sterty z mojego pola. '
+        turtle_5_1: Uruchom ten program i wprowadzaj zmiany, aby zobaczyć co się dzieje.
+          Czy możesz powiedzieć, co robi ten program? (Lub usuń go i zastąp go czymś
+          zupełnie inny)
+        turtle_5_2: Uruchom ten program i wprowadzaj zmiany, aby zobaczyć co się dzieje.
+          Czy możesz powiedzieć, co robi ten program? (Lub usuń go i zastąp go czymś
+          zupełnie inny)
+        turtle_5_3: Uruchom ten program i wprowadzaj zmiany, aby zobaczyć co się dzieje.
+          Czy możesz powiedzieć, co robi ten program? (Lub usuń go i zastąp go czymś
+          zupełnie inny)
+        turtle_5_4: Uruchom ten program i wprowadzaj zmiany, aby zobaczyć co się dzieje.
+          Czy możesz powiedzieć, co robi ten program? (Lub usuń go i zastąp go czymś
+          zupełnie inny)
+        turtle_5_5: Uruchom ten program i wprowadzaj zmiany, aby zobaczyć co się dzieje.
+          Czy możesz powiedzieć, co robi ten program? (Lub usuń go i zastąp go czymś
+          zupełnie inny)
+        turtle_5_6: Uruchom ten program i wprowadzaj zmiany, aby zobaczyć co się dzieje.
+          Czy możesz powiedzieć, co robi ten program? (Lub usuń go i zastąp go czymś
+          zupełnie inny)
+        maze_3_1: Muszę dostać się do tej świnki! Wpisz kilka wywołań idź().
+        maze_3_2: Napisz mi program, abym znalazł drogę do świnki.
+        maze_3_3: Jak powinienem dostać się do świnki? Bądź pewien, że nie wpadnę
+          na pole z TNT!
+        maze_3_4: Argh! Napisz mi program, który poprowadzi mnie wokół pól z TNT i
+          doprowadzi mnie do świnki.
+        Custom_builder: Przeciągnij bloki z przybornika do obszaru roboczego, aby
+          narysować poziom, który chcesz utworzyć. Naciśnij przycisk "Uruchom", gdy
+          jesteś gotowy.
+        jigsaw_1: Kliknij blok
+        jigsaw_2: Przeciągnij blok do miejsce docelowego
+        jigsaw_3: Ułóż bloki, by utworzyć obrazek
+        jigsaw_4: Ułóż bloki, by utworzyć obrazek
+        jigsaw_5: Ułóż bloki, by utworzyć obrazek
+        jigsaw_6: Ułóż bloki, by utworzyć obrazek
+        jigsaw_7: Ułóż bloki, by utworzyć obrazek
+        jigsaw_8: Ułóż bloki, by utworzyć obrazek
+        jigsaw_9: Ułóż bloki, by utworzyć obrazek
+        jigsaw_10: Ułóż bloki, by utworzyć obrazek
+        jigsaw_11: Ułóż bloki, by utworzyć obrazek
+        jigsaw_12: Ułóż bloki, by utworzyć obrazek
+        jigsaw_13: Rozwiąż zagadkę!
+        mazestep_1: Opis kroku w labiryncie jest tutaj
+        mazestep_2: Opis kroku w labiryncie jest tutaj
+        mazestep_3: Opis kroku w labiryncie jest tutaj
+        mazestep_4: Opis kroku w labiryncie jest tutaj
+        mazestep_5: Opis kroku w labiryncie jest tutaj
+        studio_c2_1: Czy mógłbyś spowodować, by ten pies powiedział "hello world"?
+        studio_c2_2: Czy mógłbyś spowodować, by ten pies coś powiedział, a następnie
+          by kot coś powiedział po nim?
+        studio_c2_3: Czy mógłbyś napisać program, który spowoduje, że ten pies przesunie
+          się do kota?
+        studio_c2_4: Czy mógłbyś napisać program, który sprawia, że pies porusza się
+          w kierunku kota i powoduje, że kot mówi "Hello!", kiedy pies dochodzi do
+          niego?
+        studio_c2_5: Czy mógłbyś napisać program, który powoduje, że ośmiornica mówi
+          "Hello!", po kliknięciu na niej?
+        studio_c2_6: Czy mógłbyś napisać program, który powoduje, że pingwin Waddles
+          porusza się za pomocą klawiszy w górę/w dół /w lewo/w prawo, aby trafić
+          wszystkie cele?
+        studio_c2_7: Blok "powtarzaj w nieskończoność" umożliwia wykonywanie kodu
+          bez przerwy. Czy mógłbyś dołączyć bloki powodujące, że ten dinozaur porusza
+          się w górę i w dół w nieskończoność?
+        studio_c2_8: Czy mógłbyś spowodować, że Pingwin Waddles mówi "Och!" i gra
+          dźwięk trafienia, gdy wpadnie na dinozaura. Następnie przenoś go za pomocą
+          strzałek, aby się to stało?
+        studio_c2_9: Czy mógłbyś dodać blok, aby liczyć punkty, kiedy pingwin Waddles
+          wpada na ośmiornicę, a następnie przenoś go za pomocą strzałek, aż zdobędziesz
+          punkt?
+        studio_c2_10: Czy mógłbyś dodać bloki do zmiany tła i prędkości pingwina Waddles,
+          a następnie przenoś go za pomocą strzałek, aż zdobędziesz punkt?
+        studio_c2_11: Utwórz własną opowieść. Kiedy skończysz, kliknij przycisk "Zakończ",
+          aby umożliwić znajomym wypróbowanie Twojej opowieści na swoich telefonach.
+        studio_c3_story_1: Czy mógłbyś spowodować, by ten pies powiedział "hello world"?
+        studio_c3_story_2: Czy mógłbyś spowodować, by pies coś powiedział, a następnie
+          by kot, coś powiedział?
+        studio_c3_story_3: Czy mógłbyś napisać program, który spowoduje, że ten pies
+          przesunie się do kota?
+        studio_c3_story_4: Czy mógłbyś napisać program, który sprawia, że pies porusza
+          się w kierunku kota i powoduje, że kot mówi "Hello!", kiedy pies dochodzi
+          do niego?
+        studio_c3_story_5: Czy mógłbyś dodać blok powodujący, że ośmiornica poczuje
+          się szczęśliwie?
+        studio_c3_story_6: Utwórz własną opowieść. Kiedy skończysz, kliknij przycisk
+          "Zakończ", aby umożliwić znajomym wypróbowanie Twojej opowieści na swoich
+          telefonach.
+        studio_c3_game_1: Czy mógłbyś napisać program, który powoduje, że ośmiornica
+          mówi "Hello!", po kliknięciu na niej?
+        studio_c3_game_2: Czy mógłbyś napisać program, który powoduje, że pingwin
+          porusza się za pomocą przycisków w górę /w dół /w lewo/w prawo, by uderzyć
+          we wszystkie cele?
+        studio_c3_game_3: Blok "powtarzaj w nieskończoność" umożliwia wykonywanie
+          kodu bez przerwy. Czy mógłbyś dołączyć bloki powodujące, że ten dinozaur
+          porusza się w górę i w dół w nieskończoność?
+        studio_c3_game_4: Czy mógłbyś spowodować, że Pingwin mówi "Och!" i gra dźwięk
+          "hit", gdy wpadnie na dinozaura, następnie przenieś go za pomocą strzałek,
+          aby się to stało?
+        studio_c3_game_5: Czy mógłbyś dodać blok, aby liczyć punkty, kiedy pingwin
+          Waddles wpada na ośmiornicę, a następnie przenoś go za pomocą strzałek,
+          aż zdobędziesz punkt?
+        studio_c3_game_6: Czy mógłbyś dodać bloki do zmiany tła i prędkości pingwina,
+          a następnie poruszać nim za pomocą klawiszy ze strzałkami, aż osiągniesz
+          wynik?
+        studio_c3_game_7: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ,
+          aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
+        studio_playlab_1: Pingwin chce powiedzieć "hello" - czy możesz mu pomóc?
+        studio_playlab_2: Chłopiec z jaskini (postać 1) i dziewczyna z jaskini (postać
+          2) chcieliby powiedzieć "hello" do siebie. Czy mógłbyś im pomóc wykorzystując
+          dwa razy blok "powiedz"?
+        studio_playlab_3: Czy mógłbyś pomóc tenisistce dostać się do flagi?
+        studio_playlab_4: Czy możesz pomóc tenisiście (postać 1) dotrzeć do tenisistki
+          (postać 2) i odtworzyć dźwięk, kiedy tam dotrze?
+        studio_playlab_5: Czy możesz pomóc, by Spacebot powiedział "Pozdrowienia dla
+          Ziemian" po kliknięciu na nim? Nie zapomnij kliknąć na nim, po kliknięciu
+          przycisku "Uruchom"
+        studio_playlab_6: Czy mógłbyś pomóc czarownicy (Witch) poruszać się za pomocą
+          klawiszy strzałek w górę/w dół/w prawo/w lewo, aby dostać wszystkie magiczne
+          kule ogniste?
+        studio_playlab_7: Blok "powtarzaj w nieskończoność" umożliwia wykonywanie
+          kodu bez przerwy. Czy mógłbyś dołączyć do niego bloki powodujące, że czarodziej
+          porusza się w górę i w dół bez przerwy?
+        studio_playlab_8: Czy mógłbyś dodać blok zdobycia punktu i blok do odtwarzania
+          dźwięku, kiedy jednorożec wpada na kreatora, następnie przenoś go za pomocą
+          strzałek aż zdobędziesz punkt?
+        studio_playlab_9: Ustaw tło dla tej inwazji obcych i pomóż Spacebot dotrzeć
+          do obcych szybciej zmieniając jego prędkość. Następnie przenoś go za pomocą
+          klawiszy strzałek, aby dostać się do Spacebot i zaalarmować wszystkich pozostałych
+        studio_playlab_10: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ,
+          aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
+        studio_iceage_hello1: Sid chce zabrać wszystkich za nową przygodę. Pomóż mu
+          powiedzieć "Cześć!" przeciągając blok "powiedz" do obszaru roboczego i wpisując
+          w nim "Cześć!"?
+        studio_iceage_hello2: Manny (postać 1) znalazł Sida (postać 2) i chce zaprosić
+          go na przygodę. Pomóż im się przywitać, dwukrotnie używając bloku "postać
+          mówi".
+        studio_iceage_move_to_flag: Wiewiórka Scrat szuka żołędzia!  Pomóż jej przejść
+          ostatnie 200 pikseli przy użyciu bloku "idź".
+        studio_iceage_move_to_actor: Diego (postać 1) szuka Manny'ego (postać 2).
+          Pomóż Diego przejść 200 pikseli w dół do Manny'ego używając bloku "przenieś
+          postać". Następnie połącz blok ze zdarzeniem "kiedy postać dotyka", aby
+          zagrać dźwięk, gdy się odnajdą.
+        studio_iceage_repeat: Blok "powtarzaj w nieskończoność" umożliwia wykonywanie
+          kodu bez przerwy. Czy mógłbyś dołączyć do niego bloki, by pomóc Granny poćwiczyć
+          ruchy w lewo i w prawo w nieskończoność?
+        studio_iceage_click_hello: Pomóż Sidowi, aby ostatni raz zaprosił znajomych
+          po kliknięciu? Nie zapomnij kliknąć na nim po kliknięciu na "Uruchom".
+        studio_iceage_move_events: Wiewiórka Scrat nadal szuka żołędzi! Pomóż jej
+          pognać dookoła dołączając blok "idź" do każdego zdarzenia i zmieniając kierunki
+          dla każdego klawisza ze strzałkami. Kiedy skończysz, kliknij "Uruchom" i
+          postaraj się zebrać wszystkie żołędzie.
+        studio_iceage_sound_and_points: Zamieściliśmy większość kodu, który porusza
+          Granny w lewo i w prawo, jak również porusza Sida po ekranie. Ukończ ten
+          kod dodając bloki do zdarzenie "kiedy postać dotyka", aby zagrali oni dźwięk
+          i zdobyli punkt, kiedy wpadną na siebie. Naciśnij "Uruchom", by rozpocząć
+          grę.
+        studio_iceage_warn_ice_age: Wszyscy muszą poruszać się szybciej, ponieważ
+          nadchodzi era lodowcowa! Zmień tło na oblodzone tło oraz ustaw prędkość
+          Sida na szybką, a następnie naciśnij "Uruchom" i przesuń go do Diego, aby
+          go ostrzec.
+        studio_iceage_throw_hearts: Sid chce, by jego babcia Granny wiedziała, że
+          ją kocha. Użyj polecenia "rzut postaci", aby Sid (postać 1) mógł rzucić
+          sercami w bacię (postać 2)! Ustaw nastrój Granny jako pełny szczęścia, gdy
+          zostanie trafiona sercami.
+        studio_iceage_free_play: Czas, aby utworzyć własną grę lub historyjkę! Kiedy
+          skończysz, kliknij przycisk "Zakończ", aby umożliwić znajomym pograć na
+          swoich telefonach, tabletach lub komputerach!
+        studio_gumball_hello1: Anais chce poznać kilku nowych przyjaciół. Czy mógłbyś
+          jej pomóc powiedzieć "Cześć!" przeciągając blok "powiedz" do obszaru roboczego
+          i wpisując słowo "Cześć!" wewnątrz tego bloku?
+        studio_gumball_hello2: Darwin (postać 1) i jego brat Gumball (postać 2) idą
+          do szkoły.  Pomóż im pozdrowić się nawzajem używając dwa razy bloku "postać
+          mówi".
+        studio_gumball_move_to_flag: Bananowy Joe zaraz wygra bieg!  Pomóż mu przebiec
+          ostatnie 200 pikseli używając bloku "idź".
+        studio_gumball_move_to_actor: Gumball (postać 1) i Darwin (postać 2) są spóźnieni
+          na pole zabaw! Pomóż Gumball przejść 200 pikseli do dołu w kierunku Darwina
+          używając bloku "przenieś postać".  Następnie podłącz blok do zdarzenia "kiedy
+          postać dotyka", aby zagrać dźwięk, kiedy się spotkają.
+        studio_gumball_repeat: Blok "powtarzaj w nieskończoność" umożliwia ciągłe
+          wykonywanie kodu. Czy mógłbyś dołączyć do niego bloki, aby pomóc Gumball
+          rozgrzać się przez wielokrotne poruszanie się w lewo i w prawo?
+        studio_gumball_click_hello: Pomóż Antonowi rozpocząć bieg przez wypowiedzenie
+          "Do biegu, gotowi, start!" Aby przetestować swój program, nie zapomnij kliknąć
+          na Antonie po kliknięciu na "Uruchom"!
+        studio_gumball_move_events: Darwin bierze udział w konkursie zbierania flag!
+          Pomóż mu poruszać się po planszy doczepiając blok "idź" do każdego zdarzenia.
+          Gdy skończysz, naciśnij "Uruchom" i zbierz wszystkie flagi.
+        studio_gumball_sound_and_points: Mamy większość kodu, który porusza Antona
+          (postać 2) w lewo i w prawo, jak również porusza Bananowego Joe (postać
+          1).  Ukończ ten kod dodając bloki do zdarzenie "kiedy postać dotyka", aby
+          zagrali oni dźwięk i zdobyli punkt, kiedy wpadną na siebie. Naciśnij "Uruchom",
+          by rozpocząć grę.
+        studio_gumball_warn_food_fight: Darwin właśnie uniknął walki żywności! Ustaw
+          tło postaci i prędkość Darwina na szybką. Następnie naciśnij "Uruchom" i
+          przesuwaj go w kierunku Penny, by ją ostrzec.
+        studio_gumball_join_food_fight: Przyłącz się do walki żywnością! Użyj bloku
+          "rzut postaci w prawo", aby Bananowy Joe (postać 1) rzucił pożywieniem w
+          Antona (postać 2). Ustaw, by Anton się zezłościł, kiedy zostanie trafiony.
+        studio_gumball_free_play: Utwórz własną grę lub historyjkę! Kiedy skończysz,
+          kliknij przycisk "Zakończ", aby umożliwić znajomym pograć na swoich telefonach,
+          tabletach lub komputerach!
+        studio_full_sandbox: Utwórz własną grę. Kiedy skończysz, kliknij przycisk
+          Zakończ, aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
+        studio_k1_1: Czy mógłbyś spowodować, by ten pies powiedział "hello world"?
+        studio_k1_2: Czy mógłbyś spowodować, aby ten pies coś powiedzieć, a następnie,
+          by kot coś powiedział po nim?
+        studio_k1_3: Czy mógłbyś napisać program, który spowoduje, że ten pies przesunie
+          się do kota?
+        studio_k1_4: Spowoduj, że pies przesuwa się w kierunku kota i kot mówi "Hello!",
+          kiedy dociera do niego pies.
+        studio_k1_5: Czy mógłbyś dodać blok powodujący, że ośmiornica poczuje się
+          szczęśliwa?
+        studio_k1_6: Utwórz własną historię! Przesuwaj kota i psa i spraw, że będą
+          mówić.
+        maze_wordsearch_k_1: Przesuwaj mnie, żeby przeliterować słowo EAST
+        maze_wordsearch_k_2: Przesuwaj mnie, żeby przeliterować słowo  SOUTH
+        maze_wordsearch_k_3: Przesuwaj mnie, żeby przeliterować słowo WEST
+        maze_wordsearch_k_4: Przesuwaj mnie, żeby przeliterować słowo NORTH
+        maze_wordsearch_k_6: Przesuwaj mną na wschód (East) a potem na południe (South),
+          żeby przeliterować słowo JUMP
+        maze_wordsearch_k_9: Przesuwaj mnie w jedną stronę a potem w inną, żeby przeliterować
+          słowo CODE
+        maze_wordsearch_k_13: Przesuwaj mnie w jedną stronę a potem w inną, żeby przeliterować
+          słowo DEBUG
+        maze_wordsearch_k_15: Przesuwaj mnie w jedną stronę a potem w inną, żeby przeliterować
+          słowo ABOVE
+        maze_wordsearch_k_16: Przesuwaj mnie w jedną stronę a potem w inną, żeby przeliterować
+          słowo BELOW
+        maze_wordsearch_k_20: To jest test! Przenieś mnie w jedną stronę, a później
+          w inną, by przeliterować słowo STORY
+        applab_ec_simple: Utwórz własną aplikację używając bloków z przybornika.
+        turtle_ec_1_2: 'Teraz narysuj kwadrat. Uwaga: użyj ulubionego koloru, wybierając
+          go w nowym bloku "kolor pisaka".'
+        turtle_ec_1_10: 'Wykonałeś to! Teraz narysuj cokolwiek. Niektóre zabawne pomysły:
+          pałka, śnieżynka lub spirala. Wypróbuj również nowy blok "ustaw grubość
+          pisaka". Baw się dobrze!'
+        studio_ec_sandbox: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ,
+          aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
+    video:
+      name:
+        maze_intro: Labirynt - wprowadzenie
+        artist_intro: Artysta - wprowadzenie
+        farmer_intro: Rolnik - wprowadzenie
+        flappy_intro: 'Flappy: Wprowadzenie'
+        loop_times: Blok powtórz razy
+        loop_until: Blok powtarzaj aż
+        if: Blok jeśli
+        if_else: Blok jeśli-w przeciwnym razie
+        if_else_scrat: Blok jeśli-w przeciwnym razie
+        function: Funkcje
+        loop_while: Blok dopóki
+        loop_for: Blok licznika
+        parameters: Funkcje z parametrami
+        hoc_wrapup: Wrapup Godziny Kodowania (Hour of Code)
+        Unplug1: Co to jest CS (informatyka)?
+        Unplug2: Myślenie komputacyjne
+        Unplug3: Programowanie na papierze milimetrowym
+        Unplug4: Algorytmy
+        Unplug5: Funkcje
+        Unplug6: Warunkowe
+        Unplug7: Pisanie piosenek
+        Unplug8: Abstrakcja
+        Unplug9: Programowanie przekaźnika
+        Unplug10: Internet
+        Unplug11: Podsumowanie
+        C1_happy_maps_unplugged: Szczęśliwe Mapy (Happy Maps)
+        C1_moveitmoveit_unplugged: Przenieść go, przenieść go
+        C1_bigevent_unplugged: Wielkie wydarzenie
+        C1_getting_loopy: Dostać Loopy
+        C1_pair_programming: Programowanie w parach
+        C1_maze_intro_sequencing: Labirynt Sekwencji - Wprowadzenie
+        C1_maze_debugging: 'Labirynt: debugowanie'
+        C1_bee_level_intro: Poziom pszczoły - Wprowadzenie
+        C1_artist_intro: Artysta - wprowadzenie
+        C1_spelling_bee_intro: Pszczółka literuje - Wprowadzenie
+        C1_zuck_repeat_loop: 'Labirynt: Pętle'
+        C1_bee_loops: 'Pszczółka: Pętle'
+        C1_maze_loops: 'Labirynt: Pętle'
+        C1_playlab_storytelling: Play Lab - Utwórz opowieść
+        C1_planting_seed: Sadzenie nasiona
+        C1_building_foundation: Kładąc podwaliny (Building a Foundation)
+        C1_going_places_safely: Bezpiecznie dotrzeć na miejsce
+        C2_maze_intro: Labirynt - wprowadzenie
+        C2_artist_intro: Artysta - wprowadzenie
+        C2_zuck_repeat_loop: 'Labirynt: Pętle'
+        C2_artist_loops: 'Artysta: Pętle'
+        C2_artist_debugging: 'Artysta: Debugowanie'
+        C2_bee_loops: 'Pszczółka: Pętle'
+        C2_bee_debugging: Debugowanie Pszczoły
+        C2_bee_conditionals: 'Pszczółka: Wyrażenia warunkowe'
+        C2_playlab_createstory: Play Lab - Utwórz opowieść
+        C2_graph_paper: Programowanie na papierze milimetrowym
+        C2_conditionals_with_cards: Warunkowe
+        C2_binary_bracelets: Binarne bransoletki
+        C2_relay_programming: Sztafeta programowania
+        C2_paper_airplanes: Samoloty z papieru
+        C2_digital_footprint: Twój cyfrowy ślad
+        C2_digital_footprint_v2: Twój cyfrowy ślad
+        C3_maze_level_4: Pętle w labiryncie
+        C3_artist_intro: Artysta - wprowadzenie
+        C3_artist_functions: Funkcje Artysty
+        C3_bee_functions: Funkcje Pszczoły
+        C3_bee_conditionals: 'Pszczółka: Wyrażenia warunkowe'
+        C3_maze_conditionals: 'Labirynt: Wyrażenia warunkowe'
+        C3_artist_nested_loops: Zagnieżdżające się  pętle
+        C3_farmer_while: Pętle Dopóki (While)
+        C3_bee_nested_loops: Zagnieżdżające się  pętle
+        C3_bee_debugging: Debugowanie Pszczoły
+        C3_bounce: Odbicie
+        C3_playlab_create_game: Play Lab - Utwórz grę
+        C3_computational_thinking: Myślenie komputacyjne
+        C3_dice_race: Wyścig w kości
+        C3_internet: Internet
+        C3_crowdsourcing: Crowdsourcing
+        C3_functional_suncatchers: Funkcjonalne Suncatchers
+        C3_songwriting_with_parameters: Pisanie Piosenek z parametrami
+        C4_intro: Wstęp
+        C4_loops_zombie: Pętle
+        C4_bee_conditional: 'Pszczółka: Wyrażenia warunkowe'
+        C4_variables_artist: Zmienne - Artysta
+        C4_variables_playlab: Zmienne - Play Lab
+        C4_for_loops: Pętle dla (for)
+        C4_for_loops_bee: Pętle dla (for)
+        C4_for_loops_no_bee: Pętle dla (for)
+        C4_math_artist: Programowanie Artysty z pomocą matematyki
+        C4_function_edit: Edytowanie Funkcji
+        C4_function_create: Tworzenie Funkcji
+        C4_function_parameters: Funkcje z parametrami
+        C4_conditionals: Warunkowe
+        C4_unplugged_algorithms: Algorytmy z Tangramami
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Zmienne w Kopertach
+        C4_unplugged_forloops: Pętle dla (for)
+        C4_unplugged_parameters: Pisanie piosenek z parametrami
+        C4_unplugged_binary: Binarny
+        CSF_artist_angles: Kąty w Artyście
+        CSF_collector_k1_blocks: 'Podstawy Informatyki: Kolektor'
+        CSF_collector_repeat_loops: Kolektor pętli powtórz
+        CSF_collector_text_blocks: 'Podstawy Informatyki: Kolektor'
+        CSF_create_functions: Utwórz Funkcje
+        CSF_debugging_k1_blocks: Debugowanie
+        CSF_debugging_text_blocks: Debugowanie
+        CSF_EF_cs_matters: Sprawy informatyki
+        CSF_maze_intro_k1_blocks: Wprowadzenie do Code Studio
+        CSF_maze_intro_text_blocks: Wprowadzenie do Code Studio
+        CSF_my_robotic_friends: Moi przyjaciele wśród robotów
+        CSF_Power_of_Words: Moc Słów
+        CSF_Super_Digital_Citizen: Super Cyfrowy Obywatel
+        CSF_stevie_big_project: Stevie i Duży Projekt (the Big Project)
+        CSF_unspotted_bugs: Niewykryte Błędy
+        CSF_zuck_loops_short: Pętle "powtórz" (repeat)
+        frozen_intro: Wprowadzenie do Godziny Kodowania (Hour of Code)
+        frozen_loops: Wprowadzenie do Pętli
+        frozen_functions: Wprowadzenie do Funkcji
+        playlab_intro: Wprowadzenie do Play Lab
+        playlab_events: Zdarzenia Play Lab
+        playlab_repeat_forever: Play Lab - Powtarzaj w nieskończoność
+        tutorial_puzzle_challenge: Wyzwanie łamigłówek samouczka
+        infinity_playlab_intro: Play Lab - Wprowadzenie
+        infinity_playlab_events: Play Lab - Zdarzenia
+        infinity_playlab_repeat_forever: Play Lab - Powtarzaj w nieskończoność
+        csd_concept_how_computers_work: Przedstawiamy, jak działają komputery
+        csd_concept_computer: 'Jak działają komputery: Co sprawia, że komputer to
+          komputer?'
+        csd_concept_binary_data: 'Jak działają komputery: binarność i dane'
+        csd_concept_circuits_logic: 'Jak działają komputery: układy i logika'
+        csd_concept_memory_cpu_input_output: 'Jak działają komputery: pamięć, CPU,
+          wejście i wyjście'
+        csd_concept_hardware_software: 'Jak działają komputery: sprzęt i oprogramowanie'
+        csd_concept_search: Jak działa wyszukiwanie
+        csd_external_amazon_data: Jak gigadane są wykorzystane w Systemach Rekomendacji
+          Amazon, aby zmieniać nasze życie
+        csd_external_netflix_data: Jak NetFlix tworzy TV Show i Movie Suggestions?
+        csd_external_waze_data: Dlaczego tylu użytkowników ma obsesję na punkcie Waze?
+        csd_gamelab_animation_tab: Karta Animacji
+        csd_gamelab_velocity: Prędkość
+        csd_weblab_intro_1: Wprowadzenie do Web Lab - Część 1
+        csd_weblab_intro_2: Wprowadzenie do Web Lab - Część 2
+        csd_weblab_css_1: Wprowadzenie do CSS - Część 1
+        csd_weblab_css_2: Wprowadzenie do CSS - Część 2
+        csd_weblab_intro_3: Wprowadzenie do Web Lab - Część 3
+        csp_applab_functions: Wprowadzenie do Funkcji
+        csp_applab_functions_parameters: Funkcje z parametrami
+        csp_applab_loops: Pętle
+        csp_concept_rgb: Trochę o pikselach
+        csp_pixelation_color_1: Pokoloruj pikselowy gadżet - część 1
+        csp_pixelation_color_2: Pokoloruj pikselowy gadżet - część 2
+        csp_pixelation_color_3: Pokoloruj pikselowy gadżet - część 3
+        csp_pixelation_bw: Czarno-biały pikselowy gadżet
+        csp_U1L14_tipstricks: Jednostka 1 lekcja 14 Porady & Sztuczki Nauczycieli
+        csp_textcompression: Gadżet do kompresji tekstu
+        csp_textcompression_new: Gadżet do kompresji tekstu
+        alg_1_intro: Informatyka w algebrze - wprowadzenie
+        alg_2_eval_block: Informatyka w algebrze - bloki ewaluacji
+        alg_3_pemdas: Informatyka w algebrze -  kolejność operacji
+        alg_4_data_types: Informatyka w algebrze - typy danych
+        alg_5_contracts: Informatyka w algebrze - umowy
+        alg_6_variables: Informatyka w algebrze - zmienne
+        alg_7_function: Informatyka w algebrze - funkcje
+        alg_8_design_recipe: Informatyka w algebrze - przepis na projekt
+        alg_9_booleans: Informatyka w algebrze - wartości logiczne
+        alg_10_conditionals: Informatyka w algebrze - instrukcje warunkowe
+        alg_11_coordinate_plane: Informatyka w algebrze - płaszczyzna współrzędnych
+        alg_12_biggame_variables: Informatyka w Algebrze - zmienne Wielkiej Gry (Big
+          Game)
+        alg_13_biggame_animation: Informatyka w Algebrze - animacja Wielkiej Gry (Big
+          Game)
+        alg_14_biggame_booleans: Informatyka w Algebrze - wartości logiczne Wielkiej
+          Gry (Big Game)
+        alg_15_biggame_update_player: Informatyka w Algebrze - uaktualniony gracz
+          Wielkiej Gry (Big Game)
+        alg_16_biggame_collision_detection: Informatyka w Algebrze - wykrywanie kolizji
+          w Wielkiej Grze (Big Game)
+        alg_17_sambat_compound_booleans: Informatyka w Algebrze - złożone wartości
+          logiczne
+        starwars_intro: 'Star Wars: Tworzenie Galaktyki za pomocą kodu - Wstęp'
+        starwars_typing: 'Star Wars: Tworzenie Galaktyki za pomocą kodu - JavaScript'
+        starwars_events: 'Star Wars: Tworzenie Galaktyki za pomocą kodu - Zdarzenia'
+        starwars_congrats: 'Star Wars: Tworzenie Galaktyki za pomocą kodu - Gratulacje'
+        starwars_blocks_intro: 'Star Wars: Tworzenie Galaktyki za pomocą kodu - Wstęp'
+        starwars_blocks_events: 'Star Wars: Tworzenie Galaktyki za pomocą kodu - Zdarzenia'
+        starwars_blocks_congrats: 'Star Wars: Tworzenie Galaktyki za pomocą kodu -
+          Gratulacje'
+        mc_intro: Minecraft - Wstęp
+        mc_repeat: Minecraft - Powtórz
+        mc_if_statements: Minecraft - instrukcje warunkowe "Jeśli"
+        mc_congrats_share: Minecraft - Gratulacje
+        mc_congrats_no_share: Minecraft - Gratulacje
+        gumball_intro: Gumball w Godzinie Kodowania - Wprowadzenie
+        gumball_events: Gumball w Godzinie Kodowania - Zdarzenia
+        gumball_repeat: Gumball w Godzinie Kodowania - Instrukcje powtarzania
+        iceage_intro: Ice Age w Godzinie Kodowania - Wprowadzenie
+        iceage_events: Ice Age w Godzinie Kodowania - Zdarzenia
+        iceage_repeat: Ice Age w Godzinie Kodowania - Instrukcje powtarzania
+        mc_2016_intro: Minecraft w Godzinie Kodowania - Wprowadzenie
+        mc_2016_loops: Minecraft w Godzinie Kodowania - Pętle
+        mc_2016_events: Minecraft w Godzinie Kodowania - Zdarzenia
+        mc_2016_spawn: Minecraft w Godzinie Kodowania - Spawn
+        mc_2016_congrats: Minecraft w Godzinie Kodowania - Gratulacje
+        applab_hoc_welcome: Godzina Kodowania w App Lab - Witamy
+        applab_hoc_setproperty: Godzina Kodowania w App Lab - ustawWłaściwość
+        applab_hoc_onevent: Godzina Kodowania w App Lab - wReakcjiNaZdarzenie
+        applab_hoc_designmode: Godzina Kodowania w App Lab - Tryb projektowania
+        applab_hoc_share: Godzina Kodowania w App Lab - Udostępnij
+        mc_2017_agent_intro: Godzina Kodowania Minecraft - Agent
+        mc_2017_repeat: Godzina Kodowania Minecraft - Pętle Powtórz
+        mc_2017_functions: Godzina Kodowania Minecraft - Funkcje
+        mc_2017_congratulations: Minecraft w Godzinie Kodowania - Gratulacje
+        mc_2017_puzzle_1: Godzina Kodowania Minecraft - Agent
+        mc_2017_puzzle_3: Godzina Kodowania Minecraft - Pętle Powtórz
+        mc_2017_puzzle_8: Godzina Kodowania Minecraft - Funkcje
+        mc_2017_puzzle_12: Godzina Kodowania z Minecraftem - Bez ograniczeń
+        hint_videos_d_11_3_first: 'Filmy-Wskazówki: D.11.3 Pierwszy'
+        hint_videos_d_11_3_last: 'Filmy-Wskazówki: D.11.3 Ostatni'
+        hint_videos_d_11_4_first: 'Filmy-Wskazówki: D.11.4 Pierwszy'
+        hint_videos_d_11_4_last: 'Filmy-Wskazówki: D.11.4 Ostatni'
+        hint_videos_d_11_5_first: 'Filmy-Wskazówki: D.11.5 Pierwszy'
+        hint_videos_d_11_5_last: 'Filmy-Wskazówki: D.11.5 Ostatni'
+        hint_videos_d_11_6_first: 'Filmy-Wskazówki: D.11.6 Pierwszy'
+        hint_videos_d_11_6_last: 'Filmy-Wskazówki: D.11.6 Ostatni'
+        hint_videos_d_11_7_first: 'Filmy-Wskazówki: D.11.7 Pierwszy'
+        hint_videos_d_11_7_last: 'Filmy-Wskazówki: D.11.7 Ostatni'
+        hint_videos_d_11_9_first: 'Filmy-Wskazówki: D.11.9 Pierwszy'
+        hint_videos_d_11_9_last: 'Filmy-Wskazówki: D.11.9 Ostatni'
+        hint_videos_d_11_11_first: 'Filmy-Wskazówki: D.11.11 Pierwszy'
+        hint_videos_d_11_11_last: 'Filmy-Wskazówki: D.11.11 Ostatni'
+        applab_intro_welcome: App Lab - Wprowadzenie
+        applab_intro_events: App Lab - Interakcje
+        applab_intro_sounds: App Lab - Obrazy i Dźwięki
+        applab_intro_designmode: App Lab - Tryb Projektowania
+        applab_intro_share: App Lab - Udostępnij Swoją Apkę
+        csd_applab_arrays: Wprowadzenie do tablic
+        CSF_skinOverview_Harvester: Kombajn
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Pętle z BB-8
+        CSF_harvester_skinOverview_K-1: Kombajn
+        CSF_scrat_loops_K1: Pętle w Epoce Lodowcowej
+        CSF_scrat_loops_CF: Pętle w Epoce Lodowcowej
+        CSF_if_allskins: Blok If
+        CSF_ifelse_allskins: Stosowanie Bloków If/Else
+        CSF_ifelseifelse_allskins: Stosowanie Bloków If/ElseIf/Else
+        CSF_loops_AB: Pętle
+        csd_gamelab_booleans: Wyrażenia logiczne
+        csd_gamelab_conditional_statements: Instrukcje warunkowe
+        csd_gamelab_if_else: Instrukcje If/Else
+        CSF_SpriteLabIntro_CDEF: To jest Laboratorium Duszków
+        CSF_Spritelab_MakeSprite_CDEF: Jak utworzyć Duszka w Laboratorium Duszków
+        CDEF_Video_SpritesInAction: Duszki w akcji
+        CSF_SpriteLab_SpritesInAction_CDEF: Duszki w akcji
+        CSF_StarWars_ProjectIntro: Wprowadzenie do projektu Star Wars
+        mc_2018_intro: 'Minecraft: Wodna Podróż - Wprowadzenie'
+        MC_2018_loops: 'Minecraft: Wodna Podróż - Powtarzaj aż'
+        mc_2018_conditionals: 'Minecraft: Wodna Podróż - Warunki'
+        mc_2018_closing: 'Minecraft: Wodna Podróż - Gratulacje'
+        hoc_dance_events: Potańcówka - Zdarzenia
+        hoc_dance_properties: Potańcówka - Właściwości
+    callout:
+      text:
+        drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku
+        run: Kliknij na "Uruchom", aby uruchomić program
+        watch_again: Kliknij tutaj, aby ponownie obejrzeć film
+        gray_block_explanation: Nie można usunąć bloków, które są szare. Czy mógłbyś
+          jakkolwiek rozwiązać tę łamigłówkę?
+        show_code_explanation: Kliknij tutaj, aby zobaczyć kod programu, który tworzysz
+        instructions_repeat_explanation: Instrukcje dla każdej łamigłówki są powtarzane
+          tutaj
+        category_explanation: Masz te same bloki, ale teraz są one uporządkowane kategoriami
+        set_sprite_image: Dołącz blok "wstaw postać" do bloku "kiedy rozpoczyna się
+          historia", aby włączyć postać do tej historii
+        studio_say_text: W te cudzysłowy wpisz to, co ma powiedzieć Twoja postać
+        jigsaw_click: Kliknij ten blok!
+        move_elsa_forward: Złap blok "idź do przodu" i dołącz poniżej bloku "po uruchomieniu",
+          aby Elsa poszła naprzód
+        turn_elsa: Użyj bloku "skręć", aby Elsa obróciła się. Liczba wybrana z listy
+          rozwijanej, określa o ile stopni Elsa ma się obrócić
+        replace_questions: Użyj rozwijanego menu, aby zastąpić "???" przez liczbę
+        replace_questions_degree: Użyj rozwijanego menu, aby zastąpić "???" przez
+          prawidłową liczbę stopni obrotu
+        repeat_blocks: Użyj bloku "powtórz" i otocz nim inne bloki w obszarze roboczym
+        repeat_blocks_1: "(1) Użyj tego bloku i umieść go dookoła szarych bloków w
+          obszarze roboczym"
+        repeat_blocks_2: (2) Przesuń blok "powtórz" tutaj i umieść szare bloki wewnątrz
+          niego
+        snowflake_dropdown: Użyj tej listy rozwijanej, aby utworzyć różne płatki śniegu!
+        degrees_per_side: Podziel 360 przez liczbę boków, aby uzyskać miarę każdego
+          kąta w stopniach.
+        set_sides: Użyj tego bloku, aby przypisać "sides" (boki) liczbę, potrzebną
+          do ukończenia łamigłówki.
+        set_length: Użyj tego bloku, aby nadać "length" (długość) poprawną wartość.
+        which_equation: Które równanie skraca każdy bok w kształtach o większej liczbie
+          boków?
+        get_nectar: Użyj nowego bloku "zbierz nektar".
+        actions_category: Przybornik ma nowy wygląd! Pojawiły się bloki "Actions"
+          (Akcje).
+        draw_square_hint: 'Wskazówka: Użyj pętli, którą utworzyłeś w poprzedniej łamigłówce.'
+        edit_function: Kliknij tutaj, aby edytować swoją funkcję.
+        create_function: Kliknij tutaj, aby otworzyć menu "Functions" (Funkcje), następnie
+          kliknij przycisk "Utwórz funkcję".
+        house_hint: Nie przejmuj się, jeśli obrazek nie wygląda jeszcze jak dom. Poprawimy
+          go w następnej łamigłówce.
+        edit_draw_square: Użyj tego przycisku, aby edytować funkcję i dodać pętlę.
+        edit_get_nectar: Użyj tego przycisku, aby edytować funkcję i zmienić kierunek,
+          w którym pszczółka skręci, aby zebrać nektar.
+        logic_category: Otwórz "Logika", by znaleźć blok "jeśli/w przeciwnym razie".
+        length_parameter: Czy potrafisz zmodyfikować tę funkcję tak, aby używała parametru
+          "length" (długość)?
+        frozen_diamond_repeat: Użyj bloku "powtórz", aby utworzyć ten kształt.
+        frozen_circle_function_in_circle_turn: Nie zapomnij skręcić po utworzeniu
+          każdego okręgu.
+        frozen_circle_function_with_parameter_circle: Użyj bloku "utwórz okrąg" i
+          zmień rozmiar okręgu.
+        frozen_snowflake_branch: Użyj bloku "utwórz ramię śnieżynki"
+        frozen_create_square: Dołącz tutaj więcej bloków, aby utworzyć kwadrat
+        playlab_drag_say: Przeciągnij blok "powiedz" i wpisz "hello"
+        playlab_use_twice: Użyj tego bloku dwa razy i pamiętaj, aby zmienić numer
+          postaci
+        playlab_move_girl: Użyj bloku "przesuń w prawo", aby przenieść tenisistkę
+        playlab_play_sound: Dodać "Odtwórz dźwięk" blok tutaj
+        playlab_arrow_keys: Pamiętaj, aby z nich korzystać do przesuwania czarownicy
+          po kliknięciu "Uruchom"
+        playlab_add_move: Dodaj bloki "idź" wewnątrz tego bloku "powtórz"
+        playlab_add_score: Dodaj tutaj bloki wyniku
+        playlab_add_blocks: Dodaj tutaj swoje bloki
+        set_variable: Przeciągnij tutaj blok z liczbą, aby ustalić zmienną
+        place_variable: Przeciągnij zmienną do wnętrza tego bloku
+        bee_for_loop: Przeciągnij największą liczbę nektaru, jaką chcesz, by pszczółka
+          zebrała tutaj
+        place_counter_variable: Przeciągnij zmienną "counter" (licznik) do wnętrza
+          tego bloku
+        function_editor_draw_square: To jest Twoja definicja funkcji. Te bloki są
+          wykonywane za każdym razem, gdy używasz bloku "draw a square" (narysuj kwadrat)
+        change_here: Popraw tutaj
+        write_draw_square_function: Przeciągnij tutaj bloki z przybornika, które narysują
+          kwadrat
+        write_draw_triangle_function: Przeciągnij tutaj bloki z przybornika, aby narysować
+          trójkąt
+        edit_add_parameter: Kliknij przycisk "edytuj", aby dodać parametr w swojej
+          funkcji
+        add_and_drag_parameter: Wpisz tutaj nazwę swojego parametru, kliknij "dodaj"
+          (add), a następnie przeciągnij do definicji swojej funkcji
+        fill_in_actor: Wypełnij ??? liczbami, które odpowiadają każdej postaci (1,
+          2 i 3)
+        repeat: Umieść bloki wewnątrz pętli, aby powtórzyć polecenia
+        if_bee_nectar: Użyj bloku "jeśli", aby zdecydować, czy pszczółka powinna dostać
+          nektar
+        if_else_bee: Użyj bloku "jeśli-w przeciwnym razie", aby pszczółka mogła zebrać
+          nektar z kwiatu lub zrobić miód, gdy nie jest to kwiat
+        repeat_full_circle: Wpisz, ile razy zombie musi wykonać ruch, aby zrobić pełne
+          koło
+        place_length_variable: Przeciągnij tutaj zmienną "length" (długość), aby zastąpić
+          znaki zapytania
+        arrows_move_actor: Używaj strzałek, aby przesunąć postać
+        right_arrow_fireball: Użyj strzałki w prawo, aby strzelać ognistymi kulami
+        name_function: Wpisz tutaj nazwę swojej funkcji
+        Infinity_move_right_runbutton: Dodaj tutaj blok przesunięcia
+        Infinity_move_directions_callout: Który blok powoduje, że Baymax porusza się
+          do góry, po naciśnięciu strzałki w górę?
+        Infinity_move_directions_callout_arrow: Użyj tych strzałek do sterowania
+        Infinity_move_collide_callout: Odtwórz dźwięk, kiedy wystąpi to zdarzenie.
+        Infinity_repeat_callout: Umieść tutaj wewnątrz bloki przesunięcia
+        craft_run_button_callout: Wciśnij przycisk uruchamiania, aby wypróbować swój
+          program
+        craft_drag_block_callout: Przeciągnij blok "idź do przodu" i dołącz go pod
+          ostatnim blokiem
+        craft_callout_preplaced: Ułożyliśmy już kilka bloków na dobry początek
+        craft_inside_repeat: Powtarzaj działania, umieszczając tu bloki
+        craft_callout_preplaced_house: Ten kod rozpocznie budowę Twojego domu. Czy
+          potrafisz go dokończyć?
+        craft_what_is_iron: Wydobądź to żelazo!
+        craft_callout_moveforward: Ten kod sprawdza czy jest lawa, a czy mógłbyś dodać
+          polecenie, aby przejść dalej?

@@ -1,0 +1,1527 @@
+tr:
+  slides:
+    maze_intro:
+      1:
+        text: "Kod saatinin ilk dakikalarına hoş geldin! Hadi, beraber programlamanın ilk zevkli adımlarını atalım."
+      2:
+        text: "Kod yazmak için, blokları sürükleyip bırakacağınız bir görsel programlama dili olan Blockly'i kullanacağız."
+      3:
+        text: "Çoğu kod yazılır, fakat Blockly görseldir. Her blok \"gerçek\" bir kod satırına karşılık gelir."
+      4:
+        text: "Bilgisayar biliminin temellerini, Mars aracını kontrol etmekten uygulamalar yapmaya kadar her yerde kullanılan kavramları öğreneceksiniz."
+      5:
+        text: "Bir program, bilgisayarınızın takip etmesi için oluşturulmuş bir talimatlar kümesidir."
+      6:
+        text: "İlk programınızın amacı, Yeşil Domuzu vurmak için labirentten geçerek bir Kızgın Kuş elde etmektir."
+      7:
+        text: "Sol taraf programın çalıştığı labirenttir. Her bulmacanın talimatları labirentin altında yer almaktadır."
+      8:
+        text: "Ortadaki araç kutusu Kızgın Kuş için komutlara sahiptir. Kodunuzu oluşturmak için bunları kullanacaksınız."
+      9:
+        text: "Sağ taraf, programınızı inşa etmek için araç kutusundan blok sürükleyeceğiniz çalışma alanıdır. Blok silmek için, bloğu köşedeki çöp kutusuna sürükleyin."
+      10:
+        text: "Her blok bir talimattır. Eğer \"ileri taşı\" bloğunu çalışma alanına sürükleyip \"Programı Çalıştır\"a basarsanız, kuş labirent üzerinde bir boşluk kadar hareket eder."
+      11:
+        text: "Birden fazla eylemi gerçekleştirmek için, birden fazla bloğu çalışma alanına sürükleyebilir ve birbirlerine ekleyebilirsiniz. Kuş komutları yukarıdan aşağıya doğru yapacaktır."
+      12:
+        text: "Eğer bir programı çalıştırmak ve düzeltme yapıp tekrar denemek istiyorsanız \"Sıfırla\" düğmesine basın."
+      13:
+        text: "Haydi gidip oradaki domuzları alalım!"
+    artist_intro:
+      1:
+        text: "Merhaba, ben JR! Her yarış arabası takımı, kazanmak için bilgisayar mühendislerine ihtiyaç duyar. Onlar arabanın daha hızlı gitmesi için verileri analiz eder."
+      2:
+        text: "Bu bulmacalarda, gidebildikleri yere kadar giden çizgileri çizen sanatçı olacaksınız."
+      3:
+        text: "Bu blok \"100 piksel ilerle\" diyor. Pikseller, ekranındaki ufacık noktalardır."
+      4:
+        text: "Bu blok \" 90 derece dönün.\" diyor. Bu senin sanatçını bulmacada \"dönüş\" sayısı kadar döndürecek."
+      5:
+        text: "Sanatçının ileri veya dönüşler hareket sayısını değiştirmek için bu blokların birinde yer alan aşağı oka tıklayın. Bu yeni blokları tanımak için onlar ile bol miktarda oynayın."
+    farmer_intro:
+      1:
+        text: "Merhaba, ben Paola! Bu bulmacalarda sen, arazisini dümdüz yapıp ekinler ekmek isteyen bir çiftçisin."
+      2:
+        text: "Ona çamur yığınlarını kaldırmak ve tüm delikleri doldurmak için yardım etmelisin."
+      3:
+        text: "Yeni bloklar, bir kürek dolusu toprağı yığından alıp deliğe doldurur."
+      4:
+        text: "Farklı boyutlarda yığın ve delikler olduğu için çiftçiye kaç kürek dolusu toprak atması gerektiğini söylemelisin."
+    flappy_intro:
+      1:
+        text: "Merhabai Ben Katie! Bilgisayar bilimi hakkında en heyecan verici şeylerden birisi bilgisayar programının etkileşimli olabilmesidir."
+      2:
+        text: "Her zaman birileri tıkladığında veya bir bilgisayar veya telefonla musluklar veya türleri, bu bir OLAY oluşturur ve bir olay meydana geldiğinde ne yapacağını karar bazı kod var."
+      3:
+        text: "Örneğin sizin bir \"farenin tuşuna basıldığında, ses çal\" OLAY-TETİKLEYİCİ'niz olabilir "
+      4:
+        text: "FlappyBird oyununu hiç duydunuz mu? Olay tetikleyicileri kullanarak kendimize özel FlappyBird programı geliştirmeyi öğreneceğiz!"
+      5:
+        text: "Sürükle bırak yöntemi ile blokları kullanarak program geliştireceksiniz, bu bloklar bilgisayar komutlarına tekabül edecek. Esasında bu blokların arkasında gerçek kod parçacıkları bulunmaktadır. "
+      6:
+        text: "Çalışma alanına göz atarsanız, sizin için doldurulmuş olan bazı yeşil bloklar göreceksiniz - bunlar \"olay işleyicileri\"dir. "
+      7:
+        text: "Fareyi tıkladığınızda kuşun kant ÇIRPMAsını istiyorsanız, olay işleyicisine \"ÇIRP\" bloğunu ekleyerek yapabilirsiniz, bu durumda oyununuzda fare ile kuşa tıklandığında kuş kanat çırpma hareketi yapacaktır."
+      8:
+        text: "Bu faliyetin her bulmacasında size yeni yeşil bloklar ile ifade edilen yeni tür olayları tanıtacağız ve bu bloklar için siz uygun olan olayları belirleyip çalışma alanına yerleşriyor olacaksınız."
+      9:
+        text: "Aşağı açılır menüde içinde buna benzer aşağı işret eden ok gördüğünüzde, flappy yere çarptığında çıkarttığı sesi değiştirebileceğiniz anlamına gelmekte."
+      10:
+        text: "Son bulmacada kendi oyununuzu oluşturup arkadaşlarınız ile paylaşabileceksiniz.\nİyi eğlenceler!"
+    loop_times:
+      1:
+        text: "Merhaba, ben Mark! Haydi döngüleri öğrenelim. Döngüleri kullanarak, bir bilgisayara herhangi bir komut dizisini defalarca tekrar etmesini söyleyebilirsiniz, hatta binlerce ve milyarlarca kez."
+      2:
+        text: "Bu bulmacada, domuzu almak için kuşu 5 boşluk ileri hareket ettirmek istiyoruz."
+      3:
+        text: "Bize yardımcı olması için yeni \"tekrar\" bloğunu kullanabiliriz."
+      4:
+        text: "5 \"ilerle\" blogunu dışarı sürüklemek yerine..."
+      5:
+        text: "\"İlerle\" blogunu \"tekrar\" blogunun içine koyabilir ve blogun içine kaç kez tekrarlaması gerektiğini gösteren bir sayı yazabiliriz."
+      6:
+        text: "Bu önemli: \"Tekrar\" bloğunun içine birden fazla komut yerleştirebiliriz."
+      7:
+        text: "Yeni \"Tekrar\" blogunu kullanmanın keyfini çıkar!"
+    loop_until:
+      1:
+        text: "Merhaba, ben Chris . Miami Heat'e katılmadan önce Bilgisayar Bilimleri Eğitim için Georgia Tech 'e gittim. Hadi bizim yeni \"tekrar et\" bloğumuzu deneyelim."
+      2:
+        text: "Eğer kuşun domuzu alması için gitmesi gereken uzaklığı bilmeseydik?"
+      3:
+        text: "Eğer, \"ilerle\" blogunu \"kadar tekrarlayın\" blogunun içine koyarsak, kuş domuzu alana kadar (veya bir duvara çarpana kadar) ilerler."
+      4:
+        text: 'Bu önemli: önceki gibi, "kadar tekrarlayın" blogunun içine birden fazla blok yerleştirebiliriz ve bunların tamamı tekrarlanır.'
+    if:
+      1:
+        text: "Merhaba, ben Bill! Yeni bir temel kavram öğrenelim: \"Eğer\" deyimleri. Bunlar bilgisayarların nasıl karar aldığını gösterir."
+      2:
+        text: "Sen de \"eğer\" ifadesini her gün kullanıyorsun. Her sabah dışarı çıkmadan önce, EĞER dışarıda yağmur yağıyorsa ceketimi giyinmeliyim, dersin."
+      3:
+        text: "Zombiye solda bir yol olup olmadığını kontrol etmesini, ve EĞER solda bir yol bulursa o yöne dönmesi gerektiğini söyleyebiliriz."
+      4:
+        text: "Bunun için kod yazmak için, \"if\" blogunu dışarı sürükle ve bir \"sola dön\" blogunu onun içine yerleştir."
+      5:
+        text: "Şimdi, eğer bunun üzerine bir  \"ilerle\" blogu ve hepsinin çevresine bir \"takrar\" blogu koyarsak, zombi her hareket edişinde, solda bir patika olup olmadığını kontrol edecek ve dönecek. \"Tekrar\" komutu her adımda dönüşü kontrol etmek için çok önemli."
+      6:
+        text: "Eğer deyimleri Bilgisayar Biliminde çok önemli. Yazdığım ilk programlardan biri Tic Tac Toe oyunu, ve orada şöyle bir Eğer deyimi vardı:  EĞER bir kişi kazanmak üzereyse, kazanmasını engellemek üzere o noktanın önünü kes."
+      7:
+        text: "\"if\" blogunu kullanarak eğlenin!"
+    if_else:
+      1:
+        text: "Selam, benim adım Saloni. Bilgisayar bilimlerini sağlıksal ve tıbbi sorunları çözmeye yardımcı olmak için kullanıyorum. Hadi \"if else\" bloğu hakkında bir şeyler öğrenelim. \"if\" bloğu gibi görünüyor ama sonunda \"else\" diyen fazladan bir parçası var."
+      2:
+        text: "Eğer \"yap\" diyen noktaya \"ilerle\" blogu ve \"ya da\" diyen noktaya da \"sola dön\" blogu yerleştirirsem bu demektir ki zombi iki seçenekten birini seçecektir. EĞER önünde yol varsa, zombi ileri hareket edecek, aksi takdirde (önünde yol yoksa), zombi sola dönecektir."
+      3:
+        text: "\"eğer\" bloğunda olduğu gibi, tekrar bloğuna \"eğer değilse\" bloğu da ekleyebiliriz, bu durumda zombi hareket etmeye devam edecek ve \"eğer değilse\" bloğu farklı bir yöne dönüp dönemeceğini kontrol edecek."
+      4:
+        text: "Şimdi, bu zombileri ait oldukları yere yerleştir!"
+    if_else_scrat:
+      1:
+        text: "\"eğer değilse\" ifadesi iki şeyin arasında bir karardır. Dostumuz sincap Scrat ile \"eğer başka\" ifadesiniz nasıl kullanabileceğimizi görelim."
+      2:
+        text: "Bu blok \"if\" bloğunun aynısı gibi gözükmektedir fakat \"else\" diye fazladan bir bölüm bulunmaktadır. Eğer \"yap\" diyen noktaya \"ilerle\" blogu ve \"ya da\" diyen noktaya da \"sola dön\" blogu yerleştirirsem bu demektir ki sincap Scrat önünde yol varsa ilerleyecek, önünde yol yoksa Scrat sola dönecektir."
+      3:
+        text: "Bu bir karar alma eylemidir ve bu karara göre iki eylemden biri uygulanır. Ve \"Eğer\" blokları gibi \"eğer değilse\" blokları \"tekrar\" blokları içine koyabilirsin."
+      4:
+        text: "Ve şimdi sincap Scrat'a o meşe palamudunu alması için yardım edelim!"
+    function:
+      1:
+        text: "Merhaba, Ben Brina, Instagram'ın bir mühendisiyim. Kullanmak istediğiniz belirli kodları tekrar tekrar yazmak yerine, bunun için sadece bir blok kullanabilirsiniz."
+      2:
+        text: "Fonksiyonları tanımlamayı öğreneceğiz. Fonksiyon tanımları köşesinde bir yıldız vardır.  Fonksiyon isimleri üst çizgide yazılıdır."
+      3:
+        text: "İçeri giden blokların tanımlamaları bize ne yaptıklarını söyler. Yani bu işlev tanımında \"5 doldurun\" denildi ve \"tekrar\" blok ve \"doldurmak\" blok oluşdu."
+      4:
+        text: "Tanımlama çalışma alanının üzerindedir, ama çiftçimiz, biz ''5 doldur\" fonksiyonu bloğunu işlev kategorisinden sürükleyene kadar fonksiyonu çalıştıramayacaktır."
+      5:
+        text: "Let's put the \"fun\" back in \"FUNction!\""
+    loop_while:
+      1:
+        text: "Selam, ben Makinde! Hadi, \"süresince bloğu.\" hakkında bir şeyler öğrenelim. "
+      2:
+        text: "\"süresince bloğu\" bloğunun içerisine konulanlar üstündeki koşul geçerli olduğu sürece tekrarlanmaya devam eder."
+      3:
+        text: "Örnek olarak, eğer çiftçi bir yığının üstünde duruyor ise, altındaki yığını SÜRESİNCE birer birer kürekdolusu kaldırmaya devam edecek."
+    loop_for:
+      1:
+        text: "Selam, ben Trina. Pixar'da çalışıyorum. Shrek dahil bir takım film projelerinde görev aldım."
+      2:
+        text: "Bu bizim yeni \"sayaç\" döngümüz. Her eylemi tekrar ve tekrar gerçekleştirir, sen de bu eylemin her seferinde hafifçe değişmesini sağlayabilirsin."
+      3:
+        text: "Bu örnekte,\"sayaç\" döngümüz bize döngü içerisinde \"sayacın 50'de 90' a kadar 10'ar 10'ar sayacak\" oluğunu anlatıyor. \"Kare çiz\" bloğumuza sahibiz. \"Değişkenler\" bölümünden \"sayaç\" bloğunu \"uzunluk\" noktasına sürükleyin."
+      4:
+        text: "Bu, sanatçımızın 50 pixel kenar uzunluğuna sahip bir kare çizeceği, daha sonra buna 10 ekleyerek 60 pixel kenar uzunluğuna sahip bir kare çizeceği anlamına geliyor. Daha sonra 90'a ulaşıncaya kadar 10 eklemeye devam edip kare çizmeye devam eder. Böylece uzunluğu 50, 60, 70, 80 ve 90 olan karelere sahip oluruz."
+    parameters:
+      1:
+        text: "Selam, ben Janete. Zynga'da mühendisim."
+      2:
+        text: "Eğer kenar uzunlukları farklı bir grup üçgen çizmek istesek ne olur?"
+      3:
+        text: "Tüm bu kodu elimizle yazabiliriz ya da parametre ile birlikte fonksiyon kullanabiliriz."
+      4:
+        text: "Bunu yapmak için; fonksiyon tanımındaki \"draw a triangle\" butonuna tıklayın. Daha sonra \"isim giriniz\" bloğunu \"girdi\" bloğuna sürükleyin."
+      5:
+        text: "Sonrasında eğer \"x\" yazan yere \"uzunluk\" yazar ve \"Enter\" tuşuna basar iseniz uzunluk işlevi için girdi oluşturmuş olursunuz."
+      6:
+        text: "Daha sonra yıldızın üzerine tıklayın. Şimdi, istediğiniz değişkenler kategorisine tıklayın ve \"uzunluk\" blokunu fonksiyon tanımınızdaki \"ilerle\" blokunun içine sürükleyin. Ve eski numara blokunu sürükleyerek kaldırın."
+      7:
+        text: "Fonksiyonunuzu parametre ile kullanmak için, fonksiyonlar kategorisine tıkla ve \"uzunlıkla üçgen çiz\" fonksiyonunu sürükle."
+      8:
+        text: "Şimdi farklı boyutlarda üçgenler çizmek için matematik bloğunu kullanarak farklı numaralar girebilirsin."
+    hoc_wrapup:
+      1:
+        text: "Tebrikler! Çözdüğün son bulmacayla, HERHANGİ bir robota - bir zombi, bir kuş, bir mars gezgini ve hatta otomatik bir arabaya- dallara ayrılmayan bir labirentte veya herhangi bir uzunluktaki bir tünelde yolunu nasıl bulacağını söyleyen kodu yazmış oldun."
+      2:
+        text: "Kullanmış olduğun basit temeller deneyimlediğin ve deneyimleyeceğin her türlü program ve uygulamanın kalbinde yer alır. Tekrar döngülerini, 'kadar tekrarla', 'eğer' ve 'eğer değilse' ifadelerini öğrendik."
+      3:
+        text: "Eğer kod saatinin ilk dakikalarından hoşlandıysanız, bilgisayar bilimi eğitiminize devam etmek için code.org 'u ziyaret edin! 20 saat kursu tamamladığınızda, programlamanın temellerine hakim olacaksınız. Telefon uygulamalarını, robot talimatlarını ve oyunları yazmayı öğreneceksiniz. Bunlarla da sınırlı değil, hayal gücünüz ile sınırlı..."
+      4:
+        text: "Teknoloji yaptığımız her şeyi değiştiriyor ve genç ya da yaşlı olmanız hiç fark etmez: programlama keyifli ve yaratıcıdır, herkes öğrenebilir!"
+    20_wrapup:
+      1:
+        text: "Notları gösterme yakında geliyor!"
+    frozen_intro:
+      1:
+        text: "Merhaba, Benim adım Lyndsey. Kendi uygulamalarımı modelliyorum, hareket ettiriyorum ve yazıyorum. Onların buzun büyüsünü ve güzelliğini keşfettiği gibi kod kullanarak Anna ve Elsa'ya katılalım."
+      2:
+        text: "Buzda kaydıkça kar taneleri ve değişik desenler oluşturarak bir kış diyarı yaratabilir ve sonra arkadaşlarınla paylaşabilirsin."
+      3:
+        text: "Bir saat içerisinde, nasıl kod yazılacağının temellerini öğreneceksiniz. Geleneksel programlama yönteminde genellikle metin kullanılır, ama biz Blocky kullanacağız. Blocky ile görsel blokları sürükleyip bırakarak programlar yazabilirsiniz. Üniversite öğrencileri de bu yöntemle programlamanın temellerini öğrenir."
+      4:
+        text: "Program, bilgisayara ne yapacağını söyleyen komutlar dizisidir. Elsa'ya basit bir çizgi oluşturmakta yardımcı olacak bir program yazalım. Bu yazdığımız programı sonra daha karmaşık modeller oluşturmak için kullanacağız."
+      5:
+        text: "Ekranın üç ana parçaya bölünmüş haldedir. Soldaki buzlu yüzeyde programını çalıştırırsın. Her seviye için gerekli açıklamalar bu yüzeyin hemen altında yer alır."
+      6:
+        text: "Orta bölümde alet kutusu yer alır ve her bir küp Elsa ve Anna'nın yapabileceği şeylerdir."
+      7:
+        text: "Ekranın sağında yer alan beyaz alana çalışma alanı deniyor ve programlarımızı bu alanda oluşturacağız. Buzdan oluşan nesneyi hareket ettirebilmek için \"İleriye taşı\" bloğunu göreceksiniz."
+      8:
+        text: "\"İlerle\" küpü diyor ki: \"100 piksel ilerle\". Eğer \"Çalıştır\"a basarsak ne olur? Elsa ekranda belli bir miktar ileriye gider; evet tam 100 piksel! Piksel, bilgisayarınızdaki ya da televizyonunuzdaki görüntüyü oluşturan en minik karedir."
+      9:
+        text: "Bulmacadaki diğer küp diyor ki: \"sağa doğru 90 derece dön\". Bu küpü kullandığımız zaman Elsa belli bir miktar sağa döner. Elsa'nın ne kadar döneceğini değiştirmek için değerlerle biraz oynayabilirsiniz. Açı değeri, Elsa'nın önündeki hareket çizgisine göre ölçülür. Yani, bu bir 90 derecedir ve bu da bir 120 derece."
+      10:
+        text: "Hatırla, yanındaki oklara tıklayarak piksellerin sayısını ve dereceyi değiştirebilirsin."
+    frozen_loops:
+      1:
+        text: "Merhaba, Ben Paola! Bilgisayarlar tekrarlayan eylemler konusunda gerçekten çok iyiler. 10, 20 yada 100 kadar sayabilirsin. Ama bir bilgisayar milyara yada trilyona kadar sayabilir. Sıkılmazlar ve sayma işlemi birkaç saniye sürer. Sayar, çizer yada tekrarlayan bir şeyi yüzlerce hatta milyarca kez yapabilir."
+      2:
+        text: "Biz buna programlamada döngü diyoruz. Döngü bir kodunuzun nasıl tekrardan tekrar ettiğidir. Bir sonraki puzzle için hedefiniz Anna' nın \"Tekrar\" bloğu ile bir kare oluşturmasına yardımcı olmaktır."
+      3:
+        text: "'Yenile' bloğu, içine koyduğunuz her kod istediğiniz kadar sırasıyla tekrarlanır."
+      4:
+        text: "Bir kare çizmek için \"ilerle\" ve \"Sağa dön\" bloklarını 4 kez kullanabilirsiniz. Ama daha kolay şekilde yapmak için bilgisayara \"İlerle\" ve \"Sağa doğru 90 derece dön ü bir kere söyleyip aynı komutları 4 defa tekrarlamasını söyleyebilirsiniz. Bunu yapmak için \"İlerle\" ve \"Sağa dön\" bloklarını \"Tekrarla?? kez tekrarla\" bir bloğu içinde koymak gerekir."
+      5:
+        text: "Unutmayın, \"Tekrar\" bloğundaki herşey için sayıyı değiştirebilirsiniz ve bloğun içindekiler sayı kadar tekrar edecektir."
+    frozen_functions:
+      1:
+        text: "Merhaba, ben Chris Bosh. Ben bir profesyonel basketbol oyuncusuyum ve üniversitemde kodlama ile uğraşıyorum."
+      2:
+        text: "Bilgisayar Biliminde en önemli kavramlarından biri yeni komut tanımlamadır. Çoğu programlama dillerin yalnızca yaklaşık 100 komutu vardır. Ve gerçekten, işin sırrı bu yapı taşları komutların yanı sıra kendi yeni komutlarını tanımlamadır."
+      3:
+        text: "Bilgisayara bir eylemi nasıl yapacağını komutlar kullanarak öğrettin vede bu eyleme kolay hatırlanır bir isim verin. Bu isim daha sonra kolayca aynı eylemi gerçekleştirmek için kullanılabilir. Bu şekilde kendi komutunu tanımlamaya \"fonksiyon\" denir."
+      4:
+        text: "Merhaba ben Jess, bloklarla programlama yaparken fonksiyonları kullanarak aynı eylemi birçok kere yapabilirsiniz. Örneğin kare yapan bir fonksiyon yazdınız."
+      5:
+        text: "Bunu \"bir kare oluşturun.\" adında bir fonksiyona tanımlayabilirsiniz "
+      6:
+        text: "Şimdi kare yapma işlemini birçok kere yapabileceğiniz yeni bir blok oluşturdunuz."
+      7:
+        text: "Basit şekiller çok daha karmaşık desenleri oluşturmak için kullanılabilir. Sonraki Bulmacada, çember yapmak için yazdığınız fonksiyon size farklı boyutlarda çemberler çizmeniz için kullanabilirsiniz. Elsanın karda karmaşık ve güzel desenler oluşturması için bu fonksiyonu için kullanabilirsiniz?"
+    playlab_intro:
+      1:
+        text: "Play Lab'ı kullanarak oyunlar yapacağız. İyi oyunların hikayesi vardır ve her hikayenin de aktörleri vardır. Cadı, uzaylı, hayvan gibi aktörler yaratıp onların ilerlemesini ve birbiri ile iletişime geçmelerini sağlayacağız. Bu öğreticinin sonunda sıfırdan bir oyun yaratıp arkadaşlarımızla paylaşacağız."
+      2:
+        text: "Ekran 3 ana bölüme ayrılmıştır. Sol taraf programınızın çalıştırılacağı oyun alanıdır. Her düzey için talimatlar aşağıda yazılmıştır."
+      3:
+        text: "Ortadaki alan araç kutusu alanıdır. Bu alandaki her bir blok bir parça koda karşılık gelir.\nSağdaki boş alan çalışma alanıdır. Bu alanda kod yazacaksınız."
+      4:
+        text: "Kendi ekleyeceğiniz blokları \"Çalıştığı zaman\" bloğuna bağlamak gerekir. Blokları sürükleyip sarı çizgi çıkana kadar birbirine yaklaştırarak bağlayabilirsiniz."
+      5:
+        text: "Bu ilk bulmacada bizim oyuncu bir penguen ve biz ona \"Merhaba!\" dedirtmek istiyoruz. Bunun içim Söyle bloğunu çekerek \"Çalıştığı Zaman\" bloğuna birleştireceğiz. sonra Söyle bloğuna \"Merhaba.\" yazacağız. Ayrıca Sağa hareket, sola hareket bloklarını kullanarak pengueni hareket ettirebilirsiniz. Blokları yerleştirdikten sonra Çalıştır düğmesine basınız."
+      6:
+        text: "Haydi başla ve sonunda kendi oyununu yarat. Oyununda farklı oyuncular iletişim kurabilir, mutlu yada üzgün olabilir, puan kazanabilir, ateş topu atabilir ve hatta birbirini yok edebilir. Bunların hepsi senin elinde istediğin gibi oyununu yapabilirsin."
+    playlab_events:
+      1:
+        text: "Şimdi oyun programcılarının her zaman kullandığı \"Olay\" kavramını öğreneceğiz. Olay  bir şey olduğunda bunu algılayıp bu eylemle ilgili eylemi gerçekleştir."
+      2:
+        text: "Olay;  fare tıklama, yön tuşuna basma yada ekrana tıklama gibi aktivitelerdir."
+      3:
+        text: "Burada, oyuncu uzay gemisine tıkladığında \"Dünyalı,Seni Selamlıyorum!\" diyecek. \"Tıklandığında\" butonunu kullanacağız ve \"De\" butonunu ona ekleyeceğiz. Oyuncu uzay robot'una tıkladığında \"Tıklandığında\" butonuna bağlı olan her şey çalışacak. Peki, senin uzaylın ne diyor?"
+      4:
+        text: "Ayrıca \"zaman okları\" parçaları var. Eğer \"hareket\" parçalarını bunlara bağlarsanız, karakterinizi yukarı, aşağı, sola ve sağa hareket ettirmeye başlayabilirsiniz!. Git gide oyununuz daha çok interaktif oluyor."
+    playlab_repeat_forever:
+      1:
+        text: "Bu \"sonsuza dek tekrarla\" bloğu. Bu bloktaki komutlar oyun sonuna dek tekrar edecek."
+      2:
+        text: "Eğer karakterimizin bir şey yapmasına gerek kalmadan tekrar eden işleri yapmasını istiyorsak, bloklarımızı \"Sonsuz Tekrar\" bloğunun içine koyarız."
+      3:
+        text: "Sonraki bulmacada, hedefimiz büyücünün krallığın sınırlarında sürekli sol ve sağa giderek devriye gezmesidir. Tekrar komutlarının nasıl çalıştığını öğrenmek, senin kendi oyununu yaparken bir ton zaman kazanmanı sağlayacak."
+    C1_artist_intro:
+      1:
+        text: "Bunlar senin çizim blokların. Doğru olanı kullanarak sanatçıyı ilerlet ve gri çizgiyi çiz."
+      2:
+        text: "Bunlar atla blokları. Bunları kullandığın zaman sanatçı ilerler fakat çizmez. Bu bkokları bir sonraki gri çizgiye ulaşmak için kullan."
+    C1_bee_level_intro:
+      1:
+        text: "Arılar süper havalı değil mi? Bir sonraki bulmacada amacın arıyı çiçeklere ilerletip nektarları toplamak ve peteklere ilerleyip bal yapmaktır. \"Değer Al\" ve \"Yap\" bloklarını kullanacaksın."
+      2:
+        text: "Her çiçek farklı sayıda nektar içerir: 1, 2 3 yada daha fazla. Kırmızı çiçekte ne kadar nektar olduğunu alt köşesinde yazmaktadır. Bir sonraki adıma ilerlemeden bütün nektarları topla. Benzer şekilde her bir petek 1, 2, 3 yada daha fazla bal alabilir. Peteklere alabileceği kadar bal koyun."
+      3:
+        text: "Eğer bütün nektarları toplarsan ve bütün balları peteklere yaparsan başarılı olmuş olursun ve bir sonraki aşamaya geçersin. akis takdirde bulmacayı tekrar deneyin. Biraz takılarak \"arı\" programcı olmanın nasıl bir şey olduğunu görün!"
+    C1_bee_loops:
+      1:
+        text: "Döngü aktivitelerin tekrarlanmasıdır.  "
+      2:
+        text: "Bu seviyede arının üç nektar toplamasını istiyoruz. üç tane \"Nektar Al\" bloğu kullanmak yerine \"tekrarla\" bloğu kullanıp üç nektar alacağız. İpucu: \"Çalıştır\" tuşuna baş ve doğru yapılmış mı gör. Süperr!"
+    C1_bigevent_unplugged:
+      1:
+        text: "Bu derse büyük olay denir. Bunda programlarımızı nasıl denetleyeceğimizi ve aslında bir programın çalışma şeklini bir düğmeye basarak veya bir fare tıklaması gibi olayları kullanarak anında değiştirebileceğimizi göreceğiz."
+      2:
+        text: "Bu ders için bir kağıttan uzaktan kumanda ile kontrol edileceksin. Sanki gerçek zamanlı bir video oyunu gibi."
+      3:
+        text: "Bir olay bir şeyin olmasını sağlayan eylemdir. Bir butona tıkladığında bir internet sitesinin yüklenmesi gibi. Bu bir olaydır. Kaydırmak için tabletine dokunman da bir olaydır. Olaylar kullanıcı programa istediği zaman veya ihtiyacı olduğunda müdahale etmesini sağlar."
+      4:
+        text: "Karşılık vermemiz gereken olaylar vardır. Aç hissettiğimiz zaman buzdolabına gideriz. Bir postacının geldiğini duyduğumuzda ve mektupları posta kutusuna koyduğunda gider ve mektuplarımızı alırız. Bu olaylar aynı bir butona basmak veya bir oyun kolunu hareket ettirmek gibidir. Bu gibi olaylar bizim bir şeyler yapmamızı tetikler."
+      5:
+        text: "Video oyunlarında, \"Güncelle\" adlı bir olay bulunur ve bu olay saniye 30 ya da 60 kez gerçekleşir. Video oyun programcıları için bu butonlardan veya oyun kollarından neredeyse daha önemlidir."
+      6:
+        text: "Ana Karşılaşma için izliyoruz o \"Güncelleştirme\" için doğrulama oluyor. Ve biz doğrulama için joystick'i denetliyoruz. Yani biz, \"Oh, var birisi düğmeye bu çerçeve? Evet ya da Hayır?\" Olaylar, olmadan oyuncu hareket ettiremedim, seni atlamak olamaz, ne olup bittiğini kontrol etmek mümkün değil. Video oyunun da bir şey hareketlendirmek mümkün olmaz."
+    C1_building_foundation:
+      1:
+        text: "Kum heykel bu başarısızlık öğrenmem lazım programın bir parçasıdır. Ama sen devam edersen, hiçbir şey alamayacaksın ama daha iyi ve daha heyecanlı olmalısın. Oyunun adı kalıcıdır. Kalıcılığını seveceksin."
+      2:
+        text: "Bu ders temel inşa etme olarak adlandırılır. Bu derste, biz gerçekten zor olacak görevlerde çalışacağız. Siz bu bardaklardan en azından birinin uzunluğu kadar olan yapının nasıl yapılacağını ve bu yapı bir kitabın ağırlığını kaldıracak kadar yeterince güçlü olması gerektiğini anlayacaksınız."
+      3:
+        text: "Eserimizin istenilen sonucu vermediği zamanlar olabilir. Hayal kırıklığına uğradığımız ve pes etmek istediğimiz zamanlar olabilir. Böyle zamanlar çok fazla olabilir. Ama biz çalışmaya devam edersek ve elimizden gelenin en iyisini tekrar tekrar yaparsak, o zaman biz çok geçmeden karşılığını alacağımızdan eminiz."
+      4:
+        text: "Kalıcılık tamamen, gerçekten pes etmek istediğinizde pes etmemenizle ilgilidir. Eğer gerçekten yeni ve farklı birşey oluşturmak istiyorsanız, yolunuzda bir sürü hata da olacaktır."
+      5:
+        text: "Kalıcı olmanının yolu hayal kırıklığına uğrayïp bırakmaktansa yoluna devam edip hatalarından ders çıkarmaktan geçer. Hayal kırıklığı aslında yapmaya çalıştığınız şeyin mükemmel birşey olduğu anlamına gelir. Bu yüzden başarmadan işi bırakmayın. Vuhuuu!"
+    C1_getting_loopy:
+      1:
+        text: "Merhaba, benim ismim Miral Kotb ve ben iluzyonun kurucusuyum. Benim çalıstığım işte, yaptığımız danslarda ve programlarda ışıklı kıyafetler kullanıyoruz. Ve bunlar döngüler! Döngüler üzerinde tekrarlandıkca harekete geçiyor."
+      2:
+        text: "Birşeyi birçok kez yapınca \"döngü\" yapmış oluyoruz. Aynı benim bu çemberi çevirmek için yaptığım gibi. Bu bir döngü bu bir döngü Ve bu bir döngü."
+      3:
+        text: "Bugün biz bir dans partisi yapacağız. Döngü kullanarak dans edelim. Dans ederek döngüyü öğreneceğiz. Birkaç kolay dans adımı öğrenip onu tekrarlayarak dan edeceğiz."
+      4:
+        text: "İşte öğrenmen gereken adımlar. El çırp. Ellerini kafanın arkasına koy. Ellerini beline koy. Sol elini kaldır. Sağ elini kaldır. Çok kolay değil mi? Döngü kullanarak dans adımlarını azaltabileceğinizi göreceksiniz."
+      5:
+        text: "Aslında dans sırasında döngüleri kullanırız. Dansçılar bilgisayar giyiyor. Hepsi aynı ağda. Işığı aynı dansçılar üzerinde defalarca döngüleyebilirim. döngüler bilgisayar mühendisliğinin en önemli kavramları çünkü yaptığımız işi kısaltırlar."
+    C1_happy_maps_unplugged:
+      1:
+        text: "Bu derse mutlu haritalar denir. Bugün küçük tüylü arkadaşımız \"Florb\" un meyveyi almasını sağlayacağız."
+      2:
+        text: "Flurb'ünüzün meyveye ulaşmasını sağlayın. Bunu yapabilmek için önce Flurb'ün hangi yöne gideceğine karar verip onu okları kullanarak o yöne yönlendirmeniz gerekir. Flurb'ün elmaya ulaşması için hangi yönde ilerlemesi gerekir?"
+      3:
+        text: "Orada almak için gitmek zorunda olduğu yönü daire içine al."
+      4:
+        text: "Çözmeye çalıştığınız haritanın yanına okları yapıştırarak algorıtmanızı geliştirin. İkincisi de ilkinin aynısıdır, fakat aşağı doğru gider."
+      5:
+        text: "Bu kağıt ile programlama gibi. Ve bu kadar!"
+    C1_maze_debugging:
+      1:
+        text: "Hata ayıklama işlemi sorunları bulma ve giderme işlemidir. Sorunlarda hata ayıklamak için birçok yol vardır. En kolay adım adım ilerlemek ve hatalı yere kadar gelmektir. Burada ters parende yapmaya yapmaya çalışıyorum ama düşüp duruyorum."
+      2:
+        text: "Ben her bölümü adım adım yürüdüm ve nerede hatam olduğunu anladım. Denge aletinin üstüne doğru ellerimi doğru koymamıştım. Bu yüzden yeni el pozisyonu ile kiriş üzerindeki başka bir ters parende denedim ve anladım. Ters parendemdeki hatamı ayıkladığıma (bulup düzelttiğime) gerçekten sevindim."
+      3:
+        text: "Hata ayıklamayı öğrenmek için sahnede hazır bloklarla başlıyoruz. Ama bu blokların bizi hedefe ulaştırmadığını fark edeceksin. Çözüm üzerinde hata ayıklayarak düzelteceksin. Nerede hata yapılmış. Batıya doğru bir blok daha ilerlemen gerektiğini fark edeceksin."
+      4:
+        text: "Bir B (batı) bloğu daha ekleyerek hatayı düzelt. Evet öyle!"
+    C1_maze_intro_sequencing:
+      1:
+        text: "Bu bulmacada Bu bulmacada kızgın kuşu domuzcuğa götür. Bulmacaya bak ve hangi yöne gideceğine karar ver."
+      2:
+        text: "Bloklar üzerinde araç kutusundan çalışma alanına sürüklemen gerekir. Çalıştığı zaman bloğunun antında olmasına dikkat et. Doğru olduğunu düşünüyorsan \"çalıştır\" a tıklayın ve kızgın kuşun domuzcuğa gittiğini görün."
+    C1_maze_loops:
+      1:
+        text: "Bilgisayarın iyi olduğu şeylerden birisi aynı komutları tekrarlamasıdır. İnsan olarak aynı şeyleri yapmaktan sıkılabilirsin. Fakat bilgisayar aynı işlemi milyonlarca defa yapar ve sıkılmaz ve gayet güzel yapar."
+      2:
+        text: "Örneğin Eğer Facebooktaki herkese doğum günü mesajı atmak istediğimde herkese ayrı mesaj yazsam yıllarca sürer. Fakat sadece birkaç kod satırıyla Facebooktaki herkese mesaj atıp iyiki doğdun dileklerimi iletebiliyorum."
+      3:
+        text: "Kuşu domuzcuğa götürmek için... üç tane kuzeye git bloğunu kullanmak yerine \"Tekrarla\" bloğunu kullanacaksın. Tekrarla bloğu çalışma alanına sürükle ve 3 yaz. Sonra bloğun içine (K) kuzeye git bloğu ekle. Çalıştır ve doğru yapmışmısın gör. Tebrikler!"
+    C1_moveitmoveit_unplugged:
+      1:
+        text: "Bu dersin adı 'yürü yürü' dür. Beraberce bir program yazıp, arkadaşlarımızı pusuladan başlayarak gülen yüz hedefine ulaştırmaya çalışacağız."
+      2:
+        text: "Ama gülen yüz aşağı doğru ve oraya nasıl gidileceğini bilen sadece bir kişi. Bu programı başltalım."
+      3:
+        text: "Bir program bir makinanın calıştırabileceği bir kodlamanın uygulandığı algoritmadır. Biz genellikle programların bilgisayarlar için yazdığımız bir şey olduğunu düşünürüz. Programlar bunun haricinde başka şeylerde de yardımcı olabilirler. Mesela siz kendinize bir oyun yazabilir veya bir robota da istediğiniz şeyleri yaptırabilirsiniz."
+    C1_going_places_safely:
+      1:
+        text: "Benim adım Jeremiah. Merhaba! Ben yedi yaşındayım. Annemin bilgisayarında oyun oynamayı seviyorum ama her zaman önce izin alırım. \"Anne, Bilgisayarına geçebilir miyim? Tabii ki tatlım!\""
+      2:
+        text: "Annemin bilgisayarını seviyorum çünkü internete girebiliyorum. İnternet senin çevren gibidir. Hoş yerleri ziyaret edebilir, ailen ve arkadaşların ile konuşabilir ve bir çok şey öğrenebilirsin. "
+      3:
+        text: "Dün, hayvanat bahçesini ziyaret ettim. Bebek zebra gördüm. Ben onun resmini çektim. Çizgilerinin rengini değiştirdim ve sonra şapka koydum. Sonrada tuhaf hayvanlar koleksiyonuma ekledim. Harika! Daha sonra çok çok uzak bir yere gittim. Kenyayı ziyaret ettim. Afrika'da bir ülkedir. Orada Zebralar sürü olarak yaşıyor."
+      4:
+        text: "Bazen internette tanıdığım insanlarla konuşurum, başka eyalette yaşayan büyük annem gibi. Mehaba büyükanne! Büyükannem şimdi doğum günüm için göndereceği kurabiyelerden yapıyor. ''Lezzetli, İnternet keşke smelloramaya sahip olsaydı!'' İnternette farklı insanlarla konuşabilirim, kuzenim gibi ama sadece tanıdığım insanlarla konuşurum."
+      5:
+        text: "Internette en çok sevdiğim şey neşeli oyunlar oynayabilmemdir. Ne güzel! Ayrıca arkadaşlarımla kendi çizip yarattığım yeni şeyleri paylaşmaktan da hoşlanırım. Şahane! Arada bir yeni birşeyler öğreneceğim siteleri ziyaret etmeme rağmen, genellikle bana uygun olan siteleri tercih ederim. Wow, dinozorlar!"
+      6:
+        text: "İnternet süper eğlenceli bir yer. Mahallede karşıdan karşıya geçerken olduğu gibi, ayrıca çevrimiçi olduğun zamanda çok dikkatli olmalısın. Burada hatırlaman için üç kural. Kural 1: Her zaman ilk başta anne babana sor. Kural 2: Sadece tanıdığın kişilerle konuş. Kural 3: Senin sadece doğru olan yerlerde kal."
+      7:
+        text: "Vay canına! Bu çok eğlenceliydi! Şimdi yemek vakti. Oturumu kapatın. Sonraki ziyaretinizi görmek için sabırsızlanıyorum."
+    C1_pair_programming:
+      1:
+        text: "Bugün eşli programlamayı öğreneceğiz. Eşli programlamada takım halinde çalışıyorsunuz. Neden bir bilgisayarı iki kişi kullanıyor? Çünkü iki kafa bir kafadan iyidir. Eşli programlamada takım arkadaşınızla oturup aynı proje üzerinde çalışacaksınız."
+      2:
+        text: "Eşli programlamada bir kişi sürücü diğer kişi yön bulucudur. Aynı araba kullanır gibi. Sürücü ekranın karşısına geçer ve kodu yazar diğer kişide ne yazılacağına yardım eder. Yön bulucu sürücünün sorularına cevap verir ve yanlışlık gördüğünde uyarır."
+      3:
+        text: "İletişim eşli programlamanın temelidir. Aşağılamak yasak, saygılı olunmalı, patronluk taslama. Siz ve takım arkadaşınız devamlı konuşmalı.  Sürücü pozisyonunda olan kişi ne yaptığını açıklamalı. Yön bulucu ise ne yapılacağını önerir."
+      4:
+        text: "Yön bulucu büyük resmi düşünürken sürücü detaylara konsantre olmalı. Her iki rolde önemli. Eşli programlama takım olarak iş yapma yöntemidir."
+    C1_planting_seed:
+      1:
+        text: "Bu dersin adı 'tohum ekmek'tir ve bizim algoritmaları anlamamıza yardımcı olacaktır. Algoritmalar herhangi birşeyi nasıl yapmamız gerektiğini izah eden önergelerdir. Kahvaltı etmek veya diş fırçalamak gibi hergün tekrarladığımız etkinlikler bile ufak tefek adımlar gerektirir."
+      2:
+        text: "Bilgisayarlar gerçekten akıllı olabilirler fakat sadece adım adım ne söylemek istediğini tam anlamıyla ona söylersen seni anlayabilirler. Algoritmalar hakkında harika şey eğer sırayla talimatları uyarsan zamanın ötesinde nasıl yapıldığını bilmediğin bir şeyi yapabilirsin. Tıpkı tarife uymak gibi."
+      3:
+        text: "Bugün bir algoritma kullanarak tohumlarımızı ekeceğiz. Resimleri parçalara keserek kendi algoritmanızı yaratın. Tohum ekme önlemlerini gösteren resimleri seçin ve bunları doğru bir sıraya koyun."
+      4:
+        text: "Şimdi algoritmanızın çalışı çalışmadığını anlamanın zamanı gelmiştir. Algoritmanın önerdiği adımları dikkatli bir şekilde takip edin. Bunlar doğru bir sıradalar mı? Algoritmayı takip ederek tohum ekmeyi başardınız mı? Sanki resimlerle programlama gibi!"
+      5:
+        text: "Çikolata yapmak istediğimizde bu süreçte birçok büyük adımlar vardır ve her büyük adımın daha küçük adımlar kümesi vardır ve çikolatayı nasıl tatmak istediğimize bağlı olarak farklı tarifler ya da algoritmalar vardır.Her  adım önemlidir, küçük olanları bile öyle ki bir adım olmadan diğerleri tamamlanamıyor.Başkalarının anlayabileceği algoritmalar oluşturmak çok önemlidir. Bu yüzden her adım yazılmalıdır ki kim yapacak olursa olsun sonuç aynı olmalı."
+    C1_playlab_storytelling:
+      1:
+        text: "Yaratıcı kod yazma yeteneklerinizle bir hikaye anlatma zamanı geldi. Hikayenizde aktörler olacak ve bunları konuşturup birbirleriyle etkinleştireceksiniz. Nasıl bir hikaye anlatmak istediğinizi düşünmeye başlayın."
+      2:
+        text: "Kediler her zaman köpeklerden korkarlar. Kedi köpeğin iyi olmaya çalıştığını fark ettiğinde ne olacak? Çalıştığı zaman bloğu her şeyi başlatır. Hareket et bloğu karakteri ilerletir. \"Söyle\" bloğu karakterin sizin yazdığınız şeyi söylemesini sağlar."
+      3:
+        text: "\"Ne zaman çarpışırsa\" bloğu diğer bloklarla birleşebilir."
+      4:
+        text: "Köpeğin gelik \"Hi\" (merhaba) demesini sağlıyorum. Fakat sonra kedi korkuyor ve kaçıyor. \"Ahh\". Daha fazla zaman olsaydı mutlu sonla bitebilirdi. Son!"
+    C1_spelling_bee_intro:
+      1:
+        text: "Bu arının heceleme çalışmasıdır. Bulmaca parçalarını kullanarak arıyı ilerlet. İlerledikçe kelimenin harflerini toplar."
+      2:
+        text: "Kutuda verilen kelimenin harfleri üzerinden gidebilir misin? Dikkatli ol yanlış yöne ilerlemen yanlış harfleri eklemene sebep olacaktır."
+    C1_zuck_repeat_loop:
+      1:
+        text: "Bilgisayarın iyi olduğu şeylerden birisi aynı komutları tekrarlamasıdır. İnsan olarak aynı şeyleri yapmaktan sıkılabilirsin. Fakat bilgisayar aynı işlemi milyonlarca defa yapar ve sıkılmaz ve gayet güzel yapar."
+      2:
+        text: "Örneğin Eğer Facebooktaki herkese doğum günü mesajı atmak istediğimde herkese ayrı mesaj yazsam yıllarca sürer. Fakat sadece birkaç kod satırıyla Facebooktaki herkese mesaj atıp iyiki doğdun dileklerimi iletebiliyorum."
+      3:
+        text: "Bu örnekte amacın kızgın kuşu domuzcuğa götürmektir. Şimdi tekrarla bloğu kullanarak daha kolayca yazacağız. Aynı işi 5 defa ilerle komutuyla da yapabilirsin yada ilerleyip bir defa yazıp 5 defa tekrarlamasını söyleyebilirsin."
+      4:
+        text: "Bunu yapmak için ilerle bloğunu tekrarla bloğu içine sürükle ve kaç kez yapacağını yani ne kadar ilerleyeceğini yaz."
+      5:
+        text: "Tekrarla bloğu içine istediğiniz kadar komut ekleyebilirsiniz. Bu örnekte ilerle ve sola dön komutlarını 5 defa yapmasını sağlar. İyi eğlenceler!"
+    C2_artist_intro:
+      1:
+        text: "Ekibinde arabanın bilgilerini toplayan ve yazdığı programlarla aracın performansını nasıl geliştireceğini söyleyen bir bilgisayar mühendisi yoksa, yarışmada  ön elemeden bile geçemezsin. "
+      2:
+        text: "Bu bulmacada kalem kullanarak farklı şekiller çizen bir aktör olacaksın. Aktör ne yaparsa arkasında bir çizgi bırakır."
+      3:
+        text: "Tuvalde ilerlemek için \"ileriye\" bloğu kullanacaksın. Buradaki blok 100 piksel ilerlemeni sağlıyor. Çalıştırdığımız zaman ne oluyor? Aktör 100 piksel ilerliyor. Piksel demek ekrandaki minik kare noktalar demektir."
+      4:
+        text: "Bulmacadaki öteki blok 90 derece sağa dönmeni söylüyor. Artistin ne kadar döneceğine sen karar verebilirsin."
+      5:
+        text: "Bu da 120 derece döner. İlgili kısma tıklayarak piksel uzunluğunu değiştirebilirsin ve ne kadar döneceğini belirleye bilirsin!"
+    C2_bee_conditionals:
+      1:
+        text: "Bu eğer koşul bloğu. Eğer nektar yada bal bir değerden büyükse, eşitse yada küçükse bir şey yap."
+      2:
+        text: "Bu ne kadar nektar yada bal olduğunu bilmiyorsan faydalı olur. soru işareti bilinmediğini gösteriyor."
+      3:
+        text: "Bu örnekte mor çiçekte Eğer (IF) sıfırdan çok nektar varsa nektar al diyeceğiz. Bu arıya nektar olduğu sürece nektar almasını söylüyor. Da daaa!"
+    C2_binary_bracelets:
+      1:
+        text: "Bu ikili bilezik dersidir. İsmimizin baş harflerini bir bileziğe kodlayacağız ve arkadaşlarımıza göstereceğiz!"
+      2:
+        text: "İkili sistem elimizdeki bilgileri yalnız iki seçenekle tanımlamaktır. Genellikle insanlar bunu 0 (sıfır) ve 1 (bir) diye düşünürler. Fakat aç veya kapa, aşağı veya yukarı, içeri veya dışarı gibi birbirlerine ters herhangi bileşimler ikili sistem olarak tanımlanabilir."
+      3:
+        text: "Merhaba, benim adım Orion ve ben Play-im firmasında robotları programlıyorum. En temel düzeyde bilgisayar ve robot beyinleri elektronik geçitlerden oluşurlar. Geçitler açıksa elektrik akar, yoksa akmaz."
+      4:
+        text: "Robotların gözleri ikili sistemin bir örneğidir. Robot gözleri LED lerden oluşur ve bunlar ya açık ya da kapalıdırlar. Yani ikili olarak ya biri ya da ötekisidir. Bu ışıkları ikili sistemin rakamlarını tanımlamak için kullanabiliriz. Bizim bir robot kümemiz olduğunu sayarsak, birinci robotun birler hanesini, ikinci robotun ikiler hanesini ve üçüncü robotun dörtler hanesini tanımladığını vs düşünebiliriz. İkili sistemin sayıları böyle temsil edilir. Robotlar, gözlerini ikili sistem olarak kullanıp sayıları sayacaklardır."
+    C2_conditionals_with_cards:
+      1:
+        text: "Bu derse kartlarla koşullar denir. Hergün duyfuğunuz veya gördüğünüz şeylere göre karar verirsiniz. "
+      2:
+        text: "Parka gitmek isterim, fakat önce yanıma bir şemsiye alıp almayacağıma karar vermem lazım. Pencereden dışarıya bakarım. Eğer hava bulutluysa şemsiyemi alırım. Yoksa güneş gözlüğümü alırım. Belki de şemsiyeyi almak fena fikir değil. Ne görüp duyduğum parka giderken yanıma ne alacağımı düzenler."
+      3:
+        text: "Koşullar oyunlarda da çok kullanılır. Bugün bir kart oyunu ile koşulları kullanmayı öğreneceğiz. Bu oyunda benim çektiğim kart arkadaşlarımın ne yapacağına karar verir. Eğer yedi alırsam herkes alkışlayacak. Yoksa herkes 'awww' diyecek. Hadi bakalım! 'Awww' 'Hoşça kalın'"
+      4:
+        text: "Bahse girerim koşulları kullanarak daha da eğlenceli oyunlar yapabilirsin. Bir dene! Koşullar bilgisayarların zeki görünmesinin sebebidir. Koşulları kullanan bir bilgisayar programı kullanıcıya tepki verip yapacagı islemi ona göre seçebilir."
+      5:
+        text: "En çok sevdiğiniz video oyununu düşünün. Bazı eylemler ötekilerden daha fazla puan kazandırır. Bunun sebebi bilgisayarın koşullar kullanmasıdır. Bilgisayarlar böyle karar alırlar. Mesela hedefi vurduğunda on puan kazanırsın. Yoksa üç kaybedersin. Koşulların nasıl çalıştığını öğrendiğinde çok heyecanlı oyunlar yaratabilirsin."
+    C2_artist_debugging:
+      1:
+        text: "Çalışma alanında hazır bazı bloklar var. Fakat bir şeyler yanlış."
+      2:
+        text: "Yavaşlatıp adım adım ilerleyerek bu kodda hata ayıklayalım."
+      3:
+        text: "Aaa hata var! Kedinin bıyıkları 75 piksel olmalı 25 değil."
+    C2_bee_debugging:
+      1:
+        text: "Programlardan hata ayıklamayı hiç duydunuz mu? Neyin çalışmadığını bulmanıza denir. Hata ayıklarken önce hatayı bulursunuz sonra düzeltirsiniz."
+      2:
+        text: "Çalışma alanında zaten bazı bloklar var. Adım adım ilerleyeceğiz ve blokların üzerinden geçeceğiz. Böylece her bir bloğun yapması gerekeni yapıp yapmadığını göreceğiz ve gerekirse düzelteceğiz."
+      3:
+        text: "Görünüşe göre bizim problemimiz burada! İlerle bloğundan bir tane daha lazım. Adım düğmesi hatayı bulmamıza yardım eder böylelikle hatayı düzeltiriz."
+    C2_digital_footprint:
+      1:
+        text: "Şapkanı kafanda tut ve aklın sana nerede olduğunu söyleyecek ve hayvanat bahçesini düşün, ve sana merhaba için kafa sallamayı ve seni! Çevrimiçi olduğunda zihninin içindekileri tutmak ve nasıl güvende olunacağını, hayatına nasıl özel bir alan verileceğini bilmek için kafanı kullan! Başından ayak parmağına, durdur, düşün. Ayaklarından burnuna kadar, durdur ve çevrimiçi düşün!"
+      2:
+        text: "Kalbini kullanarak büyü ve büyü, ve kendine sağlıklı bir parlaklık ver, ve bir sevgiliye sahip olmak için, birine benim olacaksın de! İnternette adil ve iyi olabilmek için aktif olduğunda kalbini kullan, doğru ve kibar olanı hisset, ve arkadaşlarına saygı göster. Baştan aşağı durakla, düşün. Ayaktan başa durakla ve aktif düşün!"
+      3:
+        text: "Evcil hayvanını kucaklamak, kıyafetlerinin ıslanmasını önlemek için ve sana uçmaya yardımcı olacak ve buna inandıracak en sevdiğin kolluları giymek için kollarını kullan. Çevrimiçi iken kollarını kullan, bir mola almak ve denge zamanı için ve tekniklerini geride bırak, kendine tırmanmak için bir ağaç bul.Tepeden tırnağa durakla ve düşün. Ayaklarından burnuna kadar durakla ve çevrimiçi düşün!"
+      4:
+        text: "Mideye tüm yemekler, içindeki sese kulak ver, havuzda göbek pişirmek, sodadaki gazı hissetmek. Çevrimiçi gezerken, içindeki sese güven, bir şey ters giderse, o, sana doğru yolu gösteren. Baştan ayağa, dur ve iyi düşün. ayaktan buruna, dur ve online düşün!"
+      5:
+        text: "Kafanla düşün ve kalbinle hisset, kollarınla dengede dur, bağırsaklarını çevrimiçi dinle. Koşmak ve tekme atmak için ayaklarını kullan, ve zıpla ve sırıkla sıçra, ve kütüğün etrafında dans et, ve kokulu çoraplarınla birlikte atla. Çevrimiçi olduğunda ayaklarını kullan çizgiyi aşan zorbalara karşı dur ve uzun boylu durmayı unutma, büyük ve küçük yaratıklara karşı nazik ol."
+      6:
+        text: "Başından parmağına, duraklat, düşün. Ayaklarından burnuna kadar, duraklat ve çevrimiçi düşün! Kafanla düşün ve kalbinle hisset, kollarınla dengede dur, bağırsağını dinle, bacaklarınla ayağa kalk. Başından parmağına, durdur, düşün. Ayaklarından burnuna kadar, duraklat ve çevrimiçi düşün!"
+    C2_digital_footprint_v2:
+      1:
+        text: "Çevrimiçi eylemleriniz aranabilir kopyalanabilir paylaşılabilir yayımlanabilir ve kalıcı izler bırakır. Siz acaba nasıl dijital izler bırakıyorsunuz? Nasıl dijital izler bırakmak istersiniz?"
+    C2_graph_paper:
+      1:
+        text: "Bu dersin adı 'Grafik Kağıdıyla Programlama'dır ve tüm algoritmalar hakkındadır. Bugün yalnız elle çizilmiş okları kullanarak, basit siyah ve beyaz görüntüleri, birbirimize tekrar oluşturmayı gösteren programlar yazmayı öğreneceğiz."
+      2:
+        text: "Bu, algoritma oluşturma görevini tamamlamak için talimat listesi. Verilen işlemleri takip edin. Algoritmaların nasıl oluşturulacağını anlamanız için işlemler yardım edecektir."
+      3:
+        text: "Bilgisayar için bir algoritma yazıyorsanız ilk basamaktaki talimati yerine getirin ve aşağıdaki talimata geçin, son talimatıda uyguladığınızda bitmiş olacak."
+      4:
+        text: "İşimde algoritmalar kullanırım. Eğer tüm adımları yazarsam aynı seyi tekrar oluşturabilirim veya bunu yapmasını başka birine öğretebilirim. Camı fırına koyun, eritin, ve geriye kalan talimatları takip ederek çanağı yapın. Algoritmalar size bir işin nasıl yapılacağını gösteren bir yol haritasıdır."
+    C2_artist_loops:
+      1:
+        text: "Burada tekrarla bloğu kullanarak programlayacağız böylece daha az blok kullanacağız. Sahnede başlamamız için bazı bloklar bulunmakta."
+      2:
+        text: "Bu blokları dört defa kullanarak kareyi çizmek için önce tekrarla bloğunu sürükleyelim. Sonra Mevcut blokları tekrarla bloğu içine koyalım. Sanatçı 4 defa aynı adımları tekrarlayarak kareyi çizecek."
+    C2_bee_loops:
+      1:
+        text: "Döngü tekrarlama işlemidir. Petekleri kontrol etmek için her peteği çıkartıyorum, inceliyorum ve sonrada tekrar yerine koyuyorum. Aynı işlemi tekrar tekrar yapıyorum. Döngü demek aynı işlemi tekrarlayarak birçok kere yapmaktır."
+      2:
+        text: "Bu \"tekrarla\" bloğu. Bu bloğun içine koyduğunuz işlemleri Tekrarla bloğuna yazdığınız sayı kadar bilgisayar tekrarlar. Örneğin, ilerle ve nektar al bloklarını 3 defa sürükleyip kodu yazacağımıza, sadece birer tanesini sürükleyip aynı işlemi üç kere tekrarlayacağız. İşleri kolaylaştırıyor!"
+    C2_maze_intro:
+      1:
+        text: "Normalde kodlama yazı yazarak yapılıyor fakat biz burada blokları kullanacağız. Görsel olarak blokları sürükleyip birbirine bağlayarak kod yazacaksınız. Alt tarafta kod yazmış oluyoruz. Başlangıç olarak Kızgın kuşun ilerleyip yumurtasını çalan kötü domuzcuğa ulaşmasını sağlayacağız."
+      2:
+        text: "Çalışma alanı üç bölgeye ayrılmıştır. Soldaki kodun çalışacağı labirenttir. Ne istendiğiyle ilgili bilgiler labirentin altındadır. Ortadaki bölge araç kutusudur. Buradaki her komuta kuş anlar ve yapar. Sağdaki boş bölge çalışma alanı olarak söylenir ve buraya programını yazarsın."
+      3:
+        text: "İlerle bloğunu çalışma alanına sürükleyip Çalıştır düğmesine basınca ne olur? Kuş bir adım ilerler. Bir adım daha ilerlemesi için ne yapmalıyız? Bir ilerle bloğu daha ekleyebilirim."
+      4:
+        text: "Sağa dön bloğunu çalışma alanına sürükleyip ilerle bloğunu antına kadar getireceğim ve sarı okun gözükene kadar ilerleteceğim. bıraktığımda iki blok birleşmiş olur. Çalıştır tuşuna tekrar basacağım. Kuş programdaki adımları üstten alta doğru sırayla yapacak."
+      5:
+        text: "Bir bloğu silmek isterseniz sürükleyin ve çöp kutusuna bırakın. Çalıştır tuşu ile çalıştırdıktan sonra yeniden başla tuşu ile tekrar başlayabilirsin. Şimdi domuzcuğu yakalayalım!"
+    C2_paper_airplanes:
+      1:
+        text: "Bu derse Gerçek Hayat Algoritmaları denir. Algoritmalar insanların her gün yaptığı şeyleri açıklar. Kurabiye tarifleri ve kuş yuvası oluşturmak için yapılması gerekenlerin listesi birer algoritmadır."
+      2:
+        text: "Bugün kağıttan bir uçağı yapıp, yaratıp, test edeceğimiz bir algoritma üzerinde çalışacağız. Ama başlamadan önce bu büyük projeyi daha kolay takip edilecek basit kademelere bölmemiz gerekir. Bu kağıt uçağı yapmak için hangi önlemleri hangi sırada almamız gerektiğine karar vermemiz lazım."
+      3:
+        text: "Algoritmanızı resimleri parçalara keserek oluşturacaksınız. İkinci olarak da uçak yapmayı gösteren altı resmi doğru sıraya düzenleyeceksiniz. Herşeyi yoluna koyduktan sonra başka bir takımla algoritmanızı takas edip nasıl çalıştığını deneyeceksiniz. En iyi uçağı yapabilmek en iyi tasarlanmış algoritmayı gerektirir."
+      4:
+        text: "Çikolata yapmak istediğimiz zaman, bu süreçte birçok büyük adım vardır. Her bir büyük adım kendi küçük adımlarına sahiptir. Nasıl bir çikolata tatmak istediğimize bağlı şekilde, değişik tarifler yada algoritmalar vardır. Her adım önemlidir, küçük olanları dahi. Bu nedenle herhangi bir adım olmadan, geri kalan tamamlanamaz. Başkalarının anlayabildiği algoritmaları oluşturmak gerçekten önemlidir. Her adımın not edilmesinin gereklilik nedeni de budur, böylece kimin yaptığının önemi yoktur, sonuç aynıdır."
+    C2_playlab_createstory:
+      1:
+        text: "Şimdiye kadar animasyon yada hikaye yaptığında her çalıştırdığında aynı şeyi yapıyordu. Şimdi etkileşimli bir oyun yapabilirsiniz."
+      2:
+        text: "Denemek için bazı yeni bloklar var. \"Oka basıldığında\" ve \"hareket et\" blokları var. Bu blokları kullanarak ok tuşları ile oyuncuyu hareket ettirebilirsiniz. Ayrıca aktörler çarpıştığında yada tıklandığında blokları var. İyi eğlenceler!"
+    C2_relay_programming:
+      1:
+        text: "Bugün programlama bayrak yarışı yapacağız. Amacımız baskı altında programlama yapmak ve böyle hızlı çalışırken veya takım çalışmalarında yapılan hataları ayıklamak. Grafik kağıdı programlama metodu ile kod yazmayı ve bayrak yarışları ile son tarih kapsamlarını taslayacağız."
+      2:
+        text: "Bayrak yarışı programlamasında, takımlar kareli kağıt programını bitirmek için yarışacak. Takım arkadaşlarının çalışmalarını kontrol etmeli yada hatalarını bulmalısın, eğer çalışmalarda bir hata varsa düzeltmelisin, kendi okunu ekle, koşarak geri gel ve takım arkadaşlarını etiketle."
+      3:
+        text: "Programcılar algoritmalarındaki ve kodlarındaki hataları düzeltmek için hata ayıklama tekniğini kullanırlar. Bunu uygulamanın birçok yolu vardır. En kolayı programı adım adım çalıstırıp doğru çalışmayan kısmı bulmak ve düzeltmektir."
+      4:
+        text: "Şimdi geriye parende atmaya çalışıyorum fakat hep düşüyorum. Verilen tarifleri adım adım takip edip nerede yanlış yaptığımı buluyorum. Antrenörüm ellerimi kalasa doğru koymadığımı söyledi. Bu verilen bilgi ile parendeyi yeniden denedim ve şahane yaptım. Parendemin hatasını ayıkladığıma çok memnunum. Bunun yolunu bulduk. Hata ayıklamak problemleri bulup çözmektir. Aferin!"
+    C2_zuck_repeat_loop:
+      1:
+        text: "Bilgisayarın iyi olduğu şeylerden birisi aynı komutları tekrarlamasıdır. İnsan olarak aynı şeyleri yapmaktan sıkılabilirsin. Fakat bilgisayar aynı işlemi milyonlarca defa yapar ve sıkılmaz ve gayet güzel yapar."
+      2:
+        text: "Örneğin Eğer Facebooktaki herkese doğum günü mesajı atmak istediğimde herkese ayrı mesaj yazsam yıllarca sürer. Fakat sadece birkaç kod satırıyla Facebook taki herkese mesaj atıp iyi ki doğdun dileklerimi iletebiliyorum. Döngüler budur işte. Bilgisayarın iyi yaptığı çok faydalı şeylerdir."
+      3:
+        text: "Bu örnekte amacın kızgın kuşu domuzcuğa götürmektir. Şimdi tekrarla bloğu kullanarak daha kolayca yazacağız. Aynı işi 5 defa ilerle komutuyla da yapabilirsin yada bir defa ilerle yazıp 5 defa tekrarlamasını söyleyebilirsin."
+      4:
+        text: "Yada bilgisayara ilerlemesini bir kere söyleyip bu işi beş defa tekrarlamasını söylersin. Bunun için ilerle bloğunu sürükleyip Tekrarla bloğu içine koy. Sonra soru işaretine tıkla ve kaç kere yapacağını söyle."
+      5:
+        text: "Tekrarla bloğu içine istediğiniz kadar komut ekleyebilirsiniz. Bu örnekte ilerle ve sola dön komutlarını 5 defa yapmasını sağlar. İyi iş çıkarttın. İyi eğlenceler!"
+    C3_artist_functions:
+      1:
+        text: "Bilgisayar programlamanın harika yönlerinden birisi bilgisayara bir işi yapmayı bir defa öğretirsen bu öğrettiğin şeyi defalarca tekrar kullanabilirsin. Buna fonksiyon denir. Bir isim verirsin ve tekrar tekrar çağırırsın. Böylece yeni bir blok oluşturmuş olursun."
+      2:
+        text: "Yazdığımız programda dört defa çizgi çizip dönerek kare çizmeyi öğrendik. Biz bu kodu alıp ona isim verebiliriz. draw a square, yani kare çiz. daha sonra ne zaman draw a square bloğunu eklersek ilgili kare çizme fonksiyonunu çağırır. Programlama dilimize yeni bir yetenek eklemiş olduk."
+    C3_artist_intro:
+      1:
+        text: "Ekibinde arabanın bilgilerini toplayan ve yazdığı programlarla aracın performansını nasıl geliştireceğini söyleyen bir bilgisayar mühendisi yoksa, yarışmada  ön elemeden bile geçemezsin. "
+      2:
+        text: "Bu bulmacada kalem kullanarak farklı şekiller çizen bir aktör olacaksın. Aktör ne yaparsa arkasında bir çizgi bırakır."
+      3:
+        text: "Tuvalde ilerlemek için \"ileriye\" bloğu kullanacaksın. Buradaki blok 100 piksel ilerlemeni sağlıyor. Çalıştırdığımız zaman ne oluyor? Aktör 100 piksel ilerliyor. Piksel demek ekrandaki minik kare noktalar demektir."
+      4:
+        text: "Bulmacadaki öteki blok 90 derece sağa dönmeni söylüyor. Artistin ne kadar döneceğine sen karar verebilirsin."
+      5:
+        text: "Bu da 120 derece döner. İlgili kısma tıklayarak piksel uzunluğunu değiştirebilirsin ve ne kadar döneceğini belirleye bilirsin!"
+    C3_artist_nested_loops:
+      1:
+        text: "Bir döngüyü başka bir döngü içine koyduğumuz zaman iç içe döngü oluşturmuş oluruz. Örneğin üçgen çizmek için bir kenarını 100 piksel olarak çizen blokları döngü içine koyarız ve tekrarla içine 3 yazarız. Üçgenin her bir kenarını çizmesi için."
+      2:
+        text: "Fakat 6 üçgen çizmek istiyoruz. bunu yapmak için mevcut tekrarla bloğunu yeni bir tekrarla bloğu içine koyacağız. Çok güzel!"
+    C3_bee_conditionals:
+      1:
+        text: "Bu eğer koşul bloğu. Eğer nektar yada bal bir değerden büyükse, eşitse yada küçükse bir şey yap."
+      2:
+        text: "Bu ne kadar nektar yada bal olduğunu bilmiyorsan faydalı olur. soru işareti bilinmediğini gösteriyor."
+      3:
+        text: "Bu örnekte mor çiçekte Eğer (IF) sıfırdan çok nektar varsa nektar al diyeceğiz. Bu arıya nektar olduğu sürece nektar almasını söylüyor. Da daaa!"
+    C3_bee_debugging:
+      1:
+        text: "Programlardan hata ayıklamayı hiç duydunuz mu? Neyin çalışmadığını bulmanıza denir. Hata ayıklarken önce hatayı bulursunuz sonra düzeltirsiniz."
+      2:
+        text: "Çalışma alanında zaten bazı bloklar var. Adım adım ilerleyeceğiz ve blokların üzerinden geçeceğiz. Böylece her bir bloğun yapması gerekeni yapıp yapmadığını göreceğiz ve gerekirse düzelteceğiz."
+      3:
+        text: "Görünüşe göre bizim problemimiz burada! İlerle bloğundan bir tane daha lazım. Adım düğmesi hatayı bulmamıza yardım eder böylelikle hatayı düzeltiriz."
+    C3_bee_functions:
+      1:
+        text: "Bilgisayar Biliminde en önemli kavramlarından biri yeni komut tanımlamadır. Kendi komutunuzu bilgisayar diline ekleyebilirsiniz. Çoğu programlama dillerin yalnızca yaklaşık 100 komutu vardır. Ve gerçekten, işin sırrı bu yapı taşları komutların yanı sıra kendi yeni komutlarını tanımlamadır."
+      2:
+        text: "Bunu sporda her zaman yapıyoruz. Örneğin basketbolda nasıl ilerleyeceğimi, nasıl basket atacağımı ve nasıl ribound alacağımı öğreniyorum. Bir defa bu temel hareketleri öğrendikten sonra bu hareketleri birlikte kullanarak yeni hareketler yapıyorum. buradan daha kompleks oyunlara geçebiliyorum. Bir defa hareketi öğrenince ona isim ver ve takımdaki herkes onu yapmayı bilsin."
+      3:
+        text: "Benzer şekilde, bilgisayara bir eylemi nasıl yapacağını komutlar kullanarak öğrettin vede bu eyleme kolay hatırlanır bir isim verin. Bu isim daha sonra kolayca aynı eylemi gerçekleştirmek için kullanılabilir. Bu şekilde kendi komutunu tanımlamaya \"fonksiyon\" denir. Şimdi fonksiyon kullanarak arıya yardım edeceğiz."
+      4:
+        text: "Bu örnekte fonksiyonumuz \"get 2 nectar\" olarak adlandırılıyor ve iki nektar toplamayı sağlıyor. Ekrandaki yeşil blok. Fonksiyonun içine bakınca \"get 2 nectar\" fonksiyonunun ne yaptığını görebiliyoruz. Her zaman gri fonksiyon bloğunun içine bakarak yeşil fonksiyon bloğunun ne yaptığını anla."
+    C3_bee_nested_loops:
+      1:
+        text: "Şimdi biz arı ile iç içe geçmiş döngüleri kullanacağız. İlerleyip üç nektar alan ve sonra sağa dönen kod hazır olarak verilmiş. Bütün o kodu ve diğer tekrarla bloğu içine koyup üç defa tekrarlayalım. Bitti!"
+    C3_bounce:
+      1:
+        text: "Şimdi kendi bounce oyunun yaratıp arkadaşlarınla paylaşa bileceksin. Harika!"
+      2:
+        text: "Başlamak için kontrolleri klavyedeki ok tuşlarını bağlayacağız."
+      3:
+        text: "Sol ok tuşu ile sola ve sağ ok tuşu ile sağa hareket ettirebilirsin. Haydi yap ve kendi sektirme oyununu programla!"
+    C3_computational_thinking:
+      1:
+        text: "Bu ders hesaplamalı düşünme üzerine. Bazen yeni bir oyun öğrenmek zor gelir, değil mi? İlk başta hem karmaşık gelebilir hem de kuralları anlatacak ve yardım edecek kimse olmayabilir. Bundan dolayı bunları senin kendin yapman gerekebilir."
+      2:
+        text: "İşin iyi tarafı birkaç düşünce tüyosu ile kendin zamanla problemleri çözmeyi daha iyi becerirsin. Bu tüyolar problemlere benzersiz bir açıdan bakıp çözmekte yardımcı olurlar. Bu derste dört tüyo öğrenip arkadaşlarınla oyunun kurallarını çözeceksiniz."
+      3:
+        text: "Büyük bir problemi ufak parçalara böldüğünde beynini problemi ayrıştırmak için kullanıyorsun. Bir kere büyük problemi ufak parçalara ayrıştırdıktan sonra ikinci tüyomuza geçeriz: örüntü eşleme."
+      4:
+        text: "Bu değişik şeyler arasında benzeşim bulmak demektir. Benzer şeyleri bulur bulmaz, benzemeyenleri de anlarız. Bu benzemeyenleri ayırmaya da soyutlama denir."
+      5:
+        text: "Problemi çözme aşamalarını çözdükten sonra, bu aşamaları algoritma denilen belirli sıraya koyabilirim böylece herhangi biri problemi çözmek için benim talimatlarımı kullanabilir. Biz bu dört aşamayı kuralsız oyunun nasıl oynancağını çözmek için kullanacağız. Oyunun sonunda, buna benzer bir şeyi oynayabileceksin!"
+    C3_crowdsourcing:
+      1:
+        text: "Bu dersin adı kitle kaynak. Şimdi kartlar kullanarak bazı işleri grup halinde yapmanın tek başına uğraşmaktan ne kadar daha kolay olduğunu öğreneceğiz. Hadi bakalım, birkaç arkadaş topla ve şahane birşey yap! Kitle kaynaklama bir şeyi çabucak yapabilmek için bir sürü insandan yardım istemektir."
+      2:
+        text: "Bilgisayar biliminde kitle kaynak çok kullanılır. Binlerce amatör ve profesyoneller bilgisayarlarını bağlayarak milyarlarca bilgi öğelerini araştırırlar. Araştırdıkları şeyler yeni bir Marsen asal sayısından uzay yaratıklarının iletişimlerine kadar değişebilir."
+      3:
+        text: "Bir filim izlediğinizde filmin her saniyesi 24 resimden oluşur. Bunlara kareler deriz. Bu karelerin hepsinin teker teker düzenlenip işlenip toplanması gerekir. Ben ve takımım biz yazılım geliştiricileriyiz. Beraber çalışarak bu kareleri ve filimde görülen bitmiş ürünü yaratan bir yazılım geliştirmeye çalışıyoruz. Bu artistlerin ve diğer geliştiricilerin sahnelere çıkarmak istedikleri resimleri sonuçlandırmalarına yardımcı olacaktır."
+      4:
+        text: "Örneğin Finding Nemo (Nemoyu Bulma) filminde Crush ve Squirt ve arkadaşları doğu Avustralya akıntısında yüzüyorlar. Akıntı suları geçiyor, kaplumbağanın üstündeki renkleri izliyorsun, balıkların yanları gözüküyor. Bütün bunlar yazdığımız bilgisayar programlarında matematik uygulamalarıyla yapılıyor. Sonra bunları artistlere veriyoruz ve onlar da filmin son karelerini güzel ve eğlenceli bir hale getirmek için kullanıyorlar."
+    C3_dice_race:
+      1:
+        text: "Bu ders zar yarışı olarak adlandırılmıştır. Neredeyse herkes bilgisayar oyunları oynamayı sever. Bilgisayar programcılarının oyunların adımlarını bir programa nasıl dönüştürdüğünü hiç düşündün mü? Bilgisayar oyunlarının oluşturulmasında yada herhangi bir problemin çözülmesinde ilk adım düşünmeyi ve planlamayı gerektirir."
+      2:
+        text: "Problem çözmenin düşünme adımı bir algoritma üretir, bu problemi çözmek yada görevi bitirmek için adım adım bir plandır. Bu derste, zar yarışı için bir algoritma üreteceksin. Ardından, arkadaşlarının oyunu oynamak için adımları takip edebiliyor olduklarını görmek için, arkadaşlarından bu planı denemelerini isteyeceksin. Programcı adımların doğru olduğundan emin olduktan sonra, algoritmayı bilgisayarın anlayabileceği bir dilde programa çevirmenin zamanı gelmiştir."
+      3:
+        text: "Hemen hemen her gün yaptığımız her şey algoritma gerektirir, algoritma görevi bitirmek adına izlenen adımların listesidir. Okul için hazırlanmayı, arkadaşlarınla keyifli bir gün planlamayı veya onlarla bir şeyler atıştırmayı bir düşün. Tüm bu işlerden herhangi birini tamamlayabilmek için, işleri daha küçük parçalara ayırman gerekecek ve bazen bu adımlar kendine özgü tarzda olmak zorundadır."
+      4:
+        text: "Bir sandviç yapma hakkında düşün. Hangi dolaptan hangi malzemeyi ilk aldığın önemli değil. Ama siz kavanozu açmadan fıstık ezmesi yayamazsınız. Bilgisayar yapacakları herşey için algoritmalar ve programlara ihtiyaç duyar."
+      5:
+        text: "Bir algoritma ile bilgisayara gerçekleşmesi için gerekn yönergeler düşünülüyor. Bir algoritmanın önce bir programa çevrilmesi gerekiyor. Bir görevi adımlara bölme olan algoritma bazen zor olabiliyor. Ama herhangi bir yeni beceri gibi zamanla kolaylaşır ve uygulama ile daha kolay hale gelir."
+    C3_farmer_while:
+      1:
+        text: "Süresince döngüleri günlük hayatta yaptıklarımıza çok benziyor. Arabamızı yıkadığımızı düşünelim tam olarak temiz olana kadar yıkamaya devam ederiz. Ve yıkanan her kısım sonrasında tam olarak yıkanıp yıkanmadığını kontrol ederiz, temizlenmiş ise temizleme işlemini sonlandırırız."
+      2:
+        text: "Çiftçiye yardım etmek için yeni bir görünüm var. Ona sürece bloğu denir. Bu aslında oldukça kolaydır. Üstteki koşul doğru olduğu sürece bir şeyler yap. Örneğin, yığında birşeyler var olduğu sürece yığından al. Devam edin çiftçi ile deneyin."
+    C3_functional_suncatchers:
+      1:
+        text: "Bu derste fonksiyonel vitray var. Bu güzel vitrayı fonksiyon kullanarak oluşturacaksın. Bir vitray oluşturmak için birkaç adım var. Bazı adımları birçok kez tekrarlamak gerekir."
+      2:
+        text: "Bir vitray yapma sürecini basitleştirerek rekrar tekrar tekrarlamak zorunda olduğumuz blokları belirleyebiliriz. Bu adımları fonksiyon içinde gruplandırabilirsiniz."
+      3:
+        text: "Ama adımları izleyerek daha güzel bir vitray oluşturmak için daha fazla şey yapmak gerekir. Bazen yaratıcı olup boncuk rengini değiştirmek istiyebilirsin. Farklı renkli boncuklar kullanırsanız vitrayınız benzersiz yapabilirsiniz."
+      4:
+        text: "Boncukları değişken olarak düşünebilirsiniz. Fonksiyon ve değişkenleri kullanarak vitrayol uşturmanın tadını çıkar!"
+    C3_internet:
+      1:
+        text: "Bu ders hakkındadır. İnternet çok meşgul bir yol gibidir. Arabalar gibi mesajlar hedeflerine ulaşmak için kullanır. İletiler Internet üzerinden çok hızlı bir şekilde taşınır."
+      2:
+        text: "Lnternet nasıl çalışır bunu anlaman internet kullanırken neler olduğunuanlamanıza yardımcı olacaktır. Sevdiğiniz bir Web sitesinden yada bir arkadaşınızdan bir e-postanıza mesaj nasıl iletilir bunu nasıl öğreneceksiniz. Sahne arkasında neler olduğunu anladığınızda göreceksiniz ki internet çok karmaşık değildir."
+      3:
+        text: "İnternette iletileri gönderme iletileri posta ile gönderme gibidir. Google.com sitesindeyim. Bu Web sitesinin IP adresini bu sayıdır. IP adresini mektubun dönüş adresi olarak düşünebilirsiniz. Aşağıda ofiste birine postayla bir mesaj göndermek istediğimizi hayal edelim. URL ve IP adresi görüyor musun? Bu mesajı yazdım ve Gönder'e bastım."
+      4:
+        text: "Posta Servisi tersine İleti daha kolay gönderilebilir bu yüzden daha küçük parçalar halinde gönderir. Bu küçük parçalara paket denir. Her paket iletinin hedefine teker teker teslim edilir. Böylece alıcı iletiyi doğru okuyabilir Bu paketlerin tümü doğru sırayla bir araya gelir. Tabii ki, internetin nasıl çalıştığı hakkında bilgi edinmek için çok daha fazla şey bilmek lazım ama bu harika bir başlangıç. Bir internet kullanıcısı olma yolundasın! Aileniz ve arkadaşlarınızla ne öğrendiğinizi paylaşın!"
+      5:
+        text: "Benim adım Amanda Camp ve Google yazılım mühendisiyim. Profilleri ve kişileri depolayan bir arka sunucuda çalışıyorum. Benim işimde kişiler telefon gibi diğer aygıtlara nasıl gönderilebilir bunu çözüyoruz. Çoğu insanın bir sürü kişisi var, 1000 kişilik rehber olabilir ve biz bir ileti çok büyük olacağından bu kişilerin tümünü aynı anda telefonunuza göndermek istemiyorum. Benzer şekilde Internet büyük iletileri paketlere böler. Biz sayfa kavramıyla 100 kişiyi bir anda göndeririz ve sonraki 100 adresi telefonun istemesini bekleriz."
+      6:
+        text: "Yazılım hakkında en heyecan verici şey tüm dünyaya etkisi olmasıdır. Ben ilk on dokuz yaşındayken programlama öğrendim. İkinci sınıf ya da ilk yılımda olduğumu düşünüyorum. İlk program ile sıcaklığı Celsius biriminden Fahrenheit birimine dönüştürdüğümü hatırlıyorum. Programlamayı seviyorum Çünkü insanlara yardım etmeyi seviyorum. Google da tüm dünyadaki insanlara yardım edecek programlarınızı yazabilirsiniz. Bu gerçekten akıllara durgunluk veren ve heyecan verici bir olay."
+    C3_maze_conditionals:
+      1:
+        text: "İnsanlar her gün karar alırlarlar. Dışarı gitmeden önce Örneğin, eğerYağmur yağıyor ise, ceketimi almak gerekir diyorum. Bilgisayarlar güvenilir bir şekilde karar vermede inanılmaz hızlıdır. Bir bilgisayar programı biraz matematik ve biraz Eğer komutudur."
+      2:
+        text: "Eğer bloğu zombinin karar vermesine yardımcı olur. Bir şeyi kontrol eder. Örneğin, eğer bloğunu kullanalım ve eğer sola yol var ise sola dönmesi için sola dön bloğunu eğer bloğu içine yerleştirelim. Zombiye etrafına bakmasını ve eğer sola yol var ise sola dönmesini söylüyoruz."
+      3:
+        text: "İlerle bloğunu kadar tekrarla bloğu içine koyduğumuz zaman gitmek istediği sürece ileri gitmesini söylüyoruz. Dönüş olduğunda eğer bloğu kullanarak sola dönüş varsa sola dönmesini sağlıyoruz. Böylece sola yol olduğunda sola dönerek diğer durumlarda ilerleyerek hedefimize ulaşıyoruz."
+      4:
+        text: "eğer bloğu bilgisayar programlamanın temel konularından biridir. İlk öğrendiğim şeylerden birisi XOX oyununu programlamaktı.  Eğer bloğunu kullanarak eğer bir kişi hamle yaptığında kazanacaksa o hamleyi yapmasını söylemekti. Eğer bloğuyla iyi eğlenceler: çok temel bir kavram."
+    C3_maze_level_4:
+      1:
+        text: "Bu örnekte, hedef zombinin ayçiçeği için elde etmesidir. Beş ilerle bloğu kullanabiliriz ya da bilgisayara tekrarla bloğu içine ilerle koyarak aynı komutu 5 defa tekrarlatabilirsiniz."
+      2:
+        text: "Bu zamandan tasarruf sağlar ve daha kolay yapar. Kullanmak için sadece ilerle bloğunu tekrarla bloğu içine koy. Çalıştır tuşuna bas ve 5 defa ilerleyerek ayçiçeğine ulaştır."
+    C3_playlab_create_game:
+      1:
+        text: "Şimdiye kadar animasyon yada hikaye yaptığında her çalıştırdığında aynı şeyi yapıyordu. Şimdi etkileşimli bir oyun yapabilirsiniz."
+      2:
+        text: "Denemek için bazı yeni bloklar var. \"Oka basıldığında\" ve \"hareket et\" blokları var. Bu blokları kullanarak ok tuşları ile oyuncuyu hareket ettirebilirsiniz. Ayrıca aktörler çarpıştığında yada tıklandığında blokları var. İyi eğlenceler!"
+    C3_songwriting_with_parameters:
+      1:
+        text: "Bu şarkı yazma dersidir. Müzik  bilgisayar programı gibidir. Yazılı notalar ve kelimeler şarkıcıya tam olarak ne yapması gerektiğini söyler. Müzik bazı bölümleri tekrar tekrar kullanılır."
+      2:
+        text: "Bu koro diyoruz. Bir bilgisayar programı içinde tekrar tekrar kullanılan programın bazı bölümlere fonksiyon denir. Şarkı sözlerini okurken koro (nakarat) yazıyorsa, koro der misiniz? Hayır, hangi sözler koro (nakarat) olarak tanımlanır."
+      3:
+        text: "Bu derste, küçük tavşan foo foo adlı bir küçük şarkı öğreneceksiniz. Şarkıka birkaç kez tekrareden nakarat vardır. Fonksiyonlar tekrar tekrar kullanabileceğiniz kod parçasıdır. Fonksiyon adımlarını tekrar tekrar yazmak zorunda değilsiniz Bu yüzden daha kolay ve verimli programlama yaparsınız. Sadece bir kez yazabilirsiniz!"
+    C4_bee_conditional:
+      1:
+        text: "Burada eğer bloğu var. Eğer çiçekteysen yada petekteysen birşey yapmasını söylüyor. Ne kadar nektar yada bal olduğunu bilmediğinde kullanışlı bir bloktur. sor işareti ile ne kadar olduğunu bilmediğimizi belirtiyoruz."
+      2:
+        text: "Bu örnekte, eğer çiçekse bal al için eğer bloğunu kullan. Benzer şekilde bir tanesini de eğer petekse bal yapması için kullan. Da daa!"
+    C4_conditionals:
+      1:
+        text: "Şimdi eğer/değilse isimli yeni bloğumuz var. Bu yeni koşul ifadesi eğer bloğu gibi. Sadece şimdi altta değilse diye yeni bir yol var. eğer/değilse bloğu karar vererek iki işlemden birisini yapmamızı sağlar. Eğer arı çiçekte ise yapacağı işleri \neğer bloğu içine, çiçekte değilse yapacağı işleri değilse içine koyarız."
+      2:
+        text: "Eğer blokları bilgisayarın karar vermesini sağlar. İnsanlar bir koşul oluştuğunda ne yapılacağı ile ilgili durumları bilgisayara söyler. Değilse durumu bu koşul oluşmadığında ne yapılacağıdır. Eğer/değilse bloğunun üst kısmı çiçekse diyor. İki nektar varsa yada yol varsa gibi farklı şeylerde diyebilirdi. Eğer bloğundaki ifade doğruysa ilk kısımdaki işleri yap. Eğer yanlışsa değilse kısımındaki işleri yap."
+    C4_for_loops:
+      1:
+        text: "Tekrarla bloğu kullandığımızda ne kadar yapılacağını bilgisayar nasıl biliyor. Aslında tekrarla bloğu arkada daha karmaşık bir kod saklıyor. Bu kod başlangıç değerinden bitiş değerine kadar belirli bir seri ile sayıyor."
+      2:
+        text: "Örneğin tekrarla üç bloğu birden üçe kadar birer birer sayıyor. Her sayışın da içindeki kodu çalıştırıyor.  For (Şununla tekrarla) döngüleri ne kadar çalışacağını içindeki değişkenle biliyor. Önce değişken ilk değere ayarlanıyor ve her seferinde artırılarak döngü çalıştırılıyor. Değişken bitiş değerinden büyük olunca çalıştırma sonlanıyor."
+      3:
+        text: "Gerçek bir For (şununla tekrarla) döngüsü sayaç değişkenini gerçekten göre bilmeni ve kodun içinde kullanmayı sağlar. Örneğin, bir sıra çiçeğin varsa ve ilkinde bir tane ikincisinde 2 tane ve üçüncüsünde 3 tane nektar varsa sayaç değerini kullanabilirsiniz. Sayaç kadar nektar toplayabilirsin. İlkinde bir tane ikincisinde iki ve üçüncüde üç.sayaç"
+      4:
+        text: "Ayrıca şununla say döngüsü içinde birer birer değil farklı da sayabilirsin. İkişer, dörder sayabilirsin. Hatta her seferinde farklı sayıda sayabilirsin."
+    C4_for_loops_bee:
+      1:
+        text: "Tekrarla bloğu kullandığımızda ne kadar yapılacağını bilgisayar nasıl biliyor. Aslında tekrarla bloğu arkada daha karmaşık bir kod saklıyor. Bu kod başlangıç değerinden bitiş değerine kadar belirli bir seri ile sayıyor."
+      2:
+        text: "Örneğin tekrarla üç bloğu birden üçe kadar birer birer sayıyor. Her sayışın da içindeki kodu çalıştırıyor.  For (Şununla tekrarla) döngüleri ne kadar çalışacağını içindeki değişkenle biliyor. Önce değişken ilk değere ayarlanıyor ve her seferinde artırılarak döngü çalıştırılıyor. Değişken bitiş değerinden büyük olunca çalıştırma sonlanıyor."
+      3:
+        text: "Gerçek bir For (şununla tekrarla) döngüsü sayaç değişkenini gerçekten göre bilmeni ve kodun içinde kullanmayı sağlar. Örneğin, bir sıra çiçeğin varsa ve ilkinde bir tane ikincisinde 2 tane ve üçüncüsünde 3 tane nektar varsa sayaç değerini kullanabilirsiniz. Sayaç kadar nektar toplayabilirsin. İlkinde bir tane ikincisinde iki ve üçüncüde üç.sayaç"
+      4:
+        text: "Ayrıca şununla say döngüsü içinde birer birer değil farklı da sayabilirsin. İkişer, dörder sayabilirsin. Hatta her seferinde farklı sayıda sayabilirsin."
+    C4_for_loops_no_bee:
+      1:
+        text: "Tekrarla bloğu kullandığımızda ne kadar yapılacağını bilgisayar nasıl biliyor. Aslında tekrarla bloğu arkada daha karmaşık bir kod saklıyor. Bu kod başlangıç değerinden bitiş değerine kadar belirli bir seri ile sayıyor."
+      2:
+        text: "Örneğin tekrarla üç bloğu birden üçe kadar birer birer sayıyor. Her sayışın da içindeki kodu çalıştırıyor. For (Şununla tekrarla) döngüleri ne kadar çalışacağını içindeki değişkenle biliyor. Önce değişken ilk değere ayarlanıyor ve her seferinde artırılarak döngü çalıştırılıyor. Değişken bitiş değerinden büyük olunca çalıştırma sonlanıyor. Tekrarla döngüsü yerine şununla say döngüsü kullanmanın faydası döngü değişkenini görmendir."
+    C4_function_create:
+      1:
+        text: "Fonksiyon bloklarının içini yazmayı öğrenmiştiniz. Şimdi baştan yeni fonksiyon yazmayı öğreneceğiz. Araç kutumuzda fonksiyon diye bölüm var. buna tıkladığınızda bir fonksiyon oluştur düğmesi göreceksin. Bu düğmeye basmak yeni bir fonksiyon bloğu getirecektir."
+      2:
+        text: "Daha önce olduğu gibi fonksiyonuna isim vereceksin, ne yaptığını yazacaksın. Örneğin kare çiz, üçgen çiz gibi. sonra blokları alttaki beyaz bölüme sürükleyeceksin. Bu blokları yeşil çerçeve içine sürükle."
+      3:
+        text: "Bir kez bitirdikten sonra kaydet ve çık. Bu sizi ana çalışma alanına götürecektir. Yeni fonksiyon araç kutunda fonksiyon bölümünde olacaktır. Bunu diğer bloklar gibi sürükleyerek kullanabilir ve bulmacayı çözebilirsin."
+    C4_function_edit:
+      1:
+        text: "Bilgisayar programlamanın harika yönlerinden birisi bilgisayara bir işi yapmayı bir defa öğretirsen bu öğrettiğin şeyi defalarca tekrar kullanabilirsin. Buna fonksiyon denir. Bir isim verirsin ve tekrar tekrar çağırırsın. Böylece yeni bir blok oluşturmuş olursun."
+      2:
+        text: "Yazdığımız programda dört defa çizgi çizip dönerek kare çizmeyi öğrendik. Biz bu kodu alıp ona isim verebiliriz. draw a square, yani kare çiz. daha sonra ne zaman draw a square bloğunu eklersek ilgili kare çizme fonksiyonunu çağırır. Programlama dilimize yeni bir yetenek eklemiş olduk."
+      3:
+        text: "Bu bulmacada biz kare çiz fonksiyonunu (draw a square) sizin için yazdık. Yeşil blok olarak araç kutunda göreceksin. Şimdi daha önce yazdığın kodu bu fonksiyonu kullanarak yazacaksın. Bunun için draw a square fonksiyonu içindeki düzenle düğmesine bas. Bu fonksiyon düzenleyici açar. Fonksiyon düzenleyici üç parçadan oluşur. İsim verdiğin parça. Sonra açıklama yazdığın bölüm ve en altta fonsiyon kodu yazman gereken bölüm. "
+      4:
+        text: "Bu durumda, bunun bir kare çizmesi gerekiyor. Bunun altındaki beyaz alan fonksiyon çalışma alanıdır ve zaten kullandığın çalışma alanı gibi kullanabilirsin. Bu çalışma alanı içine ara kutusundan blok sürükle ve bırak. Bir kare fonksiyonu oluşturmak için gerekli blokları yerleştirmeyi unutmayın. Bitirdiğinde sakla düğmesine bas ve çık. Yeni fonksiyon araç kutunda fonksiyon bölümünde olacaktır. Bunu diğer bloklar gibi sürükleyerek kullanabilir ve bulmacayı çözebilirsin."
+    C4_function_parameters:
+      1:
+        text: "İşte 50 piksel kenarlara sahip bir kare çizen bir fonksiyon. Bu harika ama eğer bir kenarı 50 piksel olan bir kare ve 100 piksel olan başka bir kare çizmek istedin? Hemen hemen aynı şeyi yapmak iki ayrı fonksiyon yazmak zorunda olmamalıyız. Bunun yerine, bir parametre kullanan fonksiyon kullanabilirsiniz."
+      2:
+        text: "Parametreler fonksiyonu içinde kullanılan değişkenleri fonksiyon içine geçirmek için kullanılır. Farklı boyutlarda kareler oluşturmak için bu fonksiyona bir parametre eklemeyi deneyelim. Fonksiyon Düzenleyicisi'nde adı düzenleyebilirsiniz ve açıklama girebilirsiniz. Ama şimdi bir de parametre ekleyebilirsiniz. Boşluğa, parametrenin adını yazın ve parametre Ekle'yi tıklatın. Bu yeni oluşturduğunuz parametre adı ile kırmızı bir blok oluşturur. \nŞimdi ileriye 100 ilerle bloğu içinde boyut parametresini kullanabilirsin."
+      3:
+        text: "Kaydet ve Kapat'ı tıklatın ve araç kutusunun işlevler kategorisinde gelen bir kare blok oluşturmak yeni dışarı sürükleyin. Fonksiyonda kenar uzunluğunu soran bir boşluk var. Matematik kategorisinden bir sayı bloğunu sürükleyin ve bu alana yerleştirin. Tekrar tekrar farklı uzunluktaki farklı boyutlarda kareler yapmak için kullanabileceğiniz fonksiyonu görüyor musun? Haydi deneyin!"
+    C4_intro:
+      1:
+        text: "Normalde kodlama yazı yazarak yapılıyor fakat biz burada blokları kullanacağız. Görsel olarak blokları sürükleyip birbirine bağlayarak kod yazacaksınız. Alt tarafta kod yazmış oluyoruz. Başlangıç olarak Kızgın kuşun ilerleyip yumurtasını çalan kötü domuzcuğa ulaşmasını sağlayacağız."
+      2:
+        text: "Çalışma alanı üç bölgeye ayrılmıştır. Soldaki kodun çalışacağı labirenttir. Ne istendiğiyle ilgili bilgiler labirentin altındadır. Ortadaki bölge araç kutusudur. Buradaki her komuta kuş anlar ve yapar. Sağdaki boş bölge çalışma alanı olarak söylenir ve buraya programını yazarsın."
+      3:
+        text: "İlerle bloğunu çalışma alanına sürükleyip Çalıştır düğmesine basınca ne olur? Kuş bir adım ilerler. Bir adım daha ilerlemesi için ne yapmalıyız? Bir ilerle bloğu daha ekleyebilirim."
+      4:
+        text: "Sağa dön bloğunu çalışma alanına sürükleyip ilerle bloğunu antına kadar getireceğim ve sarı okun gözükene kadar ilerleteceğim. bıraktığımda iki blok birleşmiş olur. Çalıştır tuşuna tekrar basacağım. Kuş programdaki adımları üstten alta doğru sırayla yapacak."
+      5:
+        text: "Bir bloğu silmek isterseniz sürükleyin ve çöp kutusuna bırakın. Çalıştır tuşu ile çalıştırdıktan sonra yeniden başla tuşu ile tekrar başlayabilirsin. Şimdi domuzcuğu yakalayalım!"
+    C4_math_artist:
+      1:
+        text: "50 piksel yüksekliğinde bir dikdörtken istiyorum. Boyuda yüksekliğin iki katı olsun. Bunu bilgisayara nasıl programlarım? Sanatçı 50 git sağa dön ve, sonra 100 git diyorum. sonra bunu tekrarlıyorum. Ama bilgisayar için matematik yapıyorum."
+      2:
+        text: "Elli çarpı iki sonucunu kafadan bulmak kolay olabilir fakat mümkün olan her durumda bu tür hesapları bilgisayara bırakmanız gerekir çünkü bilgisayarlar matematiği gerçekten çok iyi yapıyor. Eğer sadece yükseklik diye parametre varsa, yukarı 50 piksel gidip yüksekliğiyaıp genişlikte yüksekliğin iki katı kadar gidebilirim."
+    C4_unplugged_algorithms:
+      1:
+        text: "Bu derse Tangram algoritmaları denir. Bir tangram yedi adet şekilden oluşur ve bunlarla şekiller oluşturulur. Sen algoritma kullanarak ortağınıza bulmacayı anlatacaksın."
+      2:
+        text: "Algoritmadır bir görevi tamamlamak için gerekli adımları listeleyen bir adımdır. Onları her gün alışveriş listeleri ve tarifler gibi şeyler için kullanıyoruz. Bir algoritmayı basit tutarsanız, onu yorumlamanın birçok yolu vardır ve her kim bu algoritmayı gerçekleştirirmeye çalıştığına tam olarak ne istediğini anlamama ihtimali vardır. Emin olmak isterseniz algoritmanızın ayrıntılı ve çok özel olması gerekir."
+      3:
+        text: "Bir resimi tamamlamak için bir algoritma kullanıyorum. Kurt resmini yapmayı denemek istedim ama ressam değilim. Neyse ki tam bana göre numaralı resm var. Kırk renk ve küçük harfler her bölümü boyamak için hangi rengkullanacağımı söylüyor. Boyayı numaraları ile kullanmak tam olarak hangi renkleri nerede kullanmam gerekiğini söylüyor."
+      4:
+        text: "Bu yüzden yönergeleri izliyorum ve resim harika oldu. Harika bir algoritma. Yönergeleri yeterince belirli olmasaydı, benim kurtlariyi görünmezdi. Gerçekten istediğin şeyi almak için son derece hassas olmak en iyisidir."
+    C4_unplugged_binary:
+      1:
+        text: "Her takım, bu kağıt tutan kişi talimat verirken kapalı ve açık işaretini bilmeleri gerekir. İkili sistem, iki harfli bir alfabe gibidir. A ve B yerine 0 ve 1 vardır."
+      2:
+        text: "İkili sistemi en yaygın kullandığınız yer eğer komutudur. Programlama için klasik bir şeydir. Program çalışır ve bir şey doğru olup olmadığını deniyor, ve doğruysa yapıyor. Ya da doğru değilse başka bir iş yapıyor. Peki biraz daha karmaşık bir şey yapmak istiyorsam. Eğer komutu yerine görüntü veya ses kullanacaksın."
+      3:
+        text: "Bir bilgisayar sadece ikili sistem bilir, fakat resim ikili değil, sıfırlar ve birler değil bu durumda nasıl anlayacak? İşte bir örnek: Bu güzel resim var. Şimdi bir resim temelde bir bilgi şeklidir. Bu bilgiyi ikili formda tutabilirsin."
+      4:
+        text: "Her kare için ve bu panda ayısının üzerine bir ızgara koyduğumuzu hayal edin, o karenin daha siyah ya da daha beyaz olup olmadığına karar vereceğiz. Ve sonra o şekilde boyayacağız. Artık ızgaradaki her hücre siyah ya da beyaz olur ve daha sonra söylediğimiz siyah kareler sıfırlar ( çift basamak), ve beyaz kareler birler, diğeri çift basamaklardır. En sonunda bir deste bir ve sıfırlarla ayrılırsınız. Bu, bu görüntüyü ikili olarak temsil etme şeklinizdir."
+    C4_unplugged_forloops:
+      1:
+        text: "Bu ders, döngü eğlencesi için çağrılır. Bu derste bir zar oyunu oynamak için bir sayı satırı kullanacağız. Her oyuncu, bir başlangıç değeri, durdurma değeri ve zaman aralığı atamak için üç kez oynar. Her dönüş sırasında başlangıç değerimizi ve aralık değerimizle aynı adımları aşan her değeri daire içine alırız. Durdurma değerimize ulaştığımızda dolaşmayı bırakırız. En yüksek skora sahip olan kişi kazanır!"
+      2:
+        text: "Döngüler birçok alanda işe yaramaktadır ve eğer bir meteorolojist olmak istiyorsanız, her zaman döngüleri kullanabilirsin. Merhaba, Ben Becky. EverPower Yenilenebilir Enerji'de rüzgar meteorolojisti olarak çalışıyorum. Şirketin rüzgar çiftliklerinin bulunduğu Columbia Nehri Kanyonunda rüzgar hızlarını tahmin ediyorum."
+      3:
+        text: "Burada ne kadar rüzgar olacağını anlamaya çalışıyoruz böylece ne kadar enerji üretilebileceğini biliriz. Bu bilgiyi gerçek enerji tüccarlarına veririz. Onlar, bizim söylediğimiz olabilecek enerji miktarına bağlı olarak enerji nakil hatları şebekesinin, ışıklarınızın bulunduğu, dengelenmiş olduğundan emin olmak için enerjiyi alırlar ve satarlar ve çiftliklerimizden sağladığımız enerji miktarını en üst seviyeye çıkarırız."
+      4:
+        text: "Biz EverPower Yenilenebilir Enerji'nin Portland'taki ulusal kontrol merkezindeyiz ve ülke çapında bütün çiftliklerimizden gelen bilgiler burada toplanıyor. Bugün en güçlü bilgisayarlar bile atmosferi taklit edememektedir. Bilgisayar tahmin modellerinde ızgara adını verdiğimiz yapılar vardır. Her ızgara noktası bir enlem ve boylamdır. Biz rüzgar hızı, sıcaklık ve basınç gibi şeyleri hesaplamak zorundayız."
+      5:
+        text: "Bunlar büsbütün büyük ızgaralar olduklarından biz bunu birçok noktada yapıyoruz bu şeyleri milyonlarca ve milyonlarca kez arka arkaya baştan yapıyoruz. Yaptığım her şeyi döngüler için kullanacağım. Mesela tam orada bir for döngüsü var. Rüzgarı önceden tahmin ederken, bir insan için oturması ve tüm o hesaplamaları yapmasının imkansız olacağını inceleyen pek çok farklı parametre vardır. Tahmin edebilmek için bir bilgisayar modeline ihtiyacımız olan rüzgarın nasıl etkileneceğini ona ne olacağını tahmin edebilmeye dair çok farklı yönler var."
+    C4_unplugged_madlibs:
+      1:
+        text: "Bu derste bazı boş hikayeleri doldurma ile oynuyor olacağız. Çok eğlenceli farklılıklar içeren benzer hikayeler oluşturmak için doldurabileceğiniz bir şablonunuz var."
+      2:
+        text: "Bu derste, biz ayrıca daha önce oluşturulmuş iki hikayeden soyutlanmış bir şablon nasıl oluşturulacağını öğrendik. Soyutlama, farklılıkların ve ayrıntıların kaldırılması sanatıdır, böylece bir çözümün birçok farklı sorun için nasıl işe yaradığını görebilirsiniz. Bu bilgisayar bilimlerinde çok faydalıdır çünkü farklı durumlarda yararlı olabilecek işlevler oluşturmamızı sağlar."
+    C4_unplugged_parameters:
+      1:
+        text: "Bu derse, parametrelerle şarkı sözü yazma deniyor. Burada bazı şarkılar yazıyor olacağız. Bazen nakarat her şarkı söylediğiniz zaman birazcık farklıdır. Old Macdonald'ın Bir Çiftliği Var'ı hatırlıyor musunuz? Nakarat, her hayvan için nispeten farklıdır. Ve çiftliğinde bir ineği vardı, i-a-i-a-o. Her nakaratta küçük bir değişiklik, parametreler dediğimiz şeyi kullanarak gösterilebilir."
+      2:
+        text: "Bazen bir işlevin bir parametreye ihtiyaç duyar. Bir parametre, özel bir ihtiyaç için onu ayarlamak amacıyla bir işleve geçirebileceğiniz ek bir bilgi parçasıdır. Arkadaşlarınızla (üstü şuruplu) dondurma yaptığınızda, bir bilgisayar programındaki parametrelere benzeyen bir işlem kullanıyorsunuz."
+      3:
+        text: "Vanilyalı dondurma çarkı her şuruplu dondurma için aynı olabilir fakat arkadaşlarınıza hangi iki üst malzemeyi istediklerini sorduğunuz zaman birçok farklı kombinasyon edinebilirsiniz. Üst malzeme işlevin adıdır, ama her üst malzeme türü bir parametredir. İşlevler ve parametreler, harika bilgisayar programları ve muhteşem şuruplu dondurmalar yapmak için birlikte çalışırlar."
+    C4_unplugged_variables:
+      1:
+        text: "Bu derse zarflardaki değişkenler deniyor. Hala bilgi parçalarını kaçırırken nasıl cümleler kurabileceğimizi öğreneceğiz. Çoğumuz halihazırda boşluk doldurma fikrine aşinayız. Bunu ödevlerimize adlarımızı koyduğumuz zaman yaparız. Kimi zaman doldurulması gereken birden fazla sözcük vardır ve bu durumda o boşluğa bir etiket veririz ki böylece hangi bilgi parçasının nereye gittiğini bilelim."
+      2:
+        text: "Değişkenler, değişebilen bilgi parçaları için yer tutucudur. Eksik bilgi için bir değişken kullanarak, yaptığımız her şey üzerinde çalışmaya devam edebilir ve başka birinin eksik bilgileri daha sonra doldurmasına izin verebiliriz. Yazılımda, değişkenleri çok kullanıyoruz. Değişkenleri ad, e-posta adresi ve kullanıcı adı için yer tutucu olarak kullanırız. Bu şekilde, kullanıcıya bunları doldurduktan sonra bu bilgilerin nerelerde görüntüleneceğini programa bildirebiliriz. Değişkenlerİ Çalışmalarımızda her zaman kullanırız."
+      3:
+        text: "Daha sonra ihtiyacımız olacak bilgileri saklamak için değişkenleri kullanırız. Diyelim ki kullanıcıların mesajlarını (tweet) saymamız gerekiyor. Kullanıcı her mesaj attıdığında değişkeni bir sayı arttırmak ve her mesaj sildiğinde değişkeni bir sayı azaltmak gerekir. Kaç mesaj olduğunu öğrenmek için bu değişkene bakarız."
+    C4_variables_artist:
+      1:
+        text: "Değişkenler içinde değer sakladığınız bir alandır. Bu değişkeni algoritma içinde kullandığınız zaman değişkenin saklandığı alan açılır ve içindeki değer kullanılır. Bu size değişkenini içindeki değere göre farklı çalışabilen daha akıllı algoritmalar yazma olanağı tanır."
+      2:
+        text: "Örneğin eğer doğum günü kutlamak için bir algoritma yazma isteseniz ve \"İyi ki doğdun küçük kardeşim, 10 yaşına girdin\" yazdınız harika oldu fakat gelecek yıl 11 olacak yine yeni mesaj yazacaksınız. Bunun yerine kardeşinizin yaşı için bir değişken kullanabilirsiniz ve \"İyi ki doğdun küçük kardeşim `yaş`yaşına girdin\" diyebilirsiniz Çünkü yaş değişkeni her yıl bir artacak bunu yaş=yaş+1 yapabileceksiniz."
+      3:
+        text: "Bu bulmacada sanatçının çizeceği çizginin boyunu belirlemek için length(uzunluk) değişkenini kullanacağız. Kodumuzda ilerle bloğu length değişkenine bakacak içindeki değeri görecek."
+    C4_variables_playlab:
+      1:
+        text: "Değişkenler içinde değer sakladığınız bir alandır. Bu değişkeni algoritma içinde kullandığınız zaman değişkenin saklandığı alan açılır ve içindeki değer kullanılır. Bu size değişkenini içindeki değere göre farklı çalışabilen daha akıllı algoritmalar yazma olanağı tanır."
+      2:
+        text: "Şimdi size farklı oyunların verildiği ve oyunu değiştirmek amacıyla hız, yükseklik, skor gibi değişken değerlerini değiştirebileceğiniz playlab'ı deneyeceksiniz. Oyunun nasıl oynanacağını değiştirmek için oyunun algoritmasını değiştirmek zorunda kalmayacaksınız, sadece uyuşmazlığı."
+      3:
+        text: "Kitaplar için X-ray ve Kindle için yaptığım çalışmada, bir çok farklı şekildeki değişkeni kullanıyoruz. Bir kitabın sayfa numaralarını saklamak değişken kullanmanın bir yolu. Kullanıcı, yazı tipi boyutunu artırabilir veya azaltabilir. Yazı tipi boyutuna bağlı olarak, kitaptaki sayfa sayısı değişebilir. Bunu, değişkene sayfa numarası girerek ayarlayabiliyoruz."
+    infinity_playlab_events:
+      1:
+        text: "Şimdi oyun programcılarının her zaman kullandığı \"Olay\" kavramını öğreneceğiz. Olay bir şey olduğunda bunu algılayıp bu eylemle ilgili eylemi gerçekleştir."
+      2:
+        text: "Burada, Baymax'ı Hiro'ya dokunacak ve yukarı / aşağı ok tuşlarını veya yukarı / aşağı düğmeleri kullandığında Rapunzel'e dokunacak şekilde hareket ettireceğiz. Yukarı ok bloğunu kullanacağız ve hareket aktörünü yukarı ok bloğuna ekleyeceğiz, böylece oyuncu yukarı ok tuşuna bastığında, \"yukarı ok olduğunda\" bloğuna eklenen her şey çalıştırılır. Baymax'ı geride bırakmak için aynı şeyi yapacağız. Adım adım oyunu daha interaktif hale geliyor."
+    infinity_playlab_intro:
+      1:
+        text: "Yani kaçıncı sınıfa gidiyorsun? İkinci. Onuncu sınıfta. Birinci sınıf. Programı öğrendiğimde sekizinci sınıftaydım. İlk bilgisayarımı altıncı sınıftayken aldım. Beni heyecanlandıran insanların problemlerini çözmenin mümkün olması. Sen kendini ifade edebilir, bir fikirden bir şeyler inşa edebilirsin."
+      2:
+        text: "Bilgisayar bilimleri, üniversite öğrencileri ve profesyonellerin sonraki yirmi ve otuz yıl için yapacakları bir çok şeyin temelidir. Ben programlamayı seviyorum çünkü insanlara yardımcı olmayı seviyorum. İnsanların hayatını kolaylaştıracak bir şeyler inşa etme fırsatı buluyorum. Bence bu süper güce sahip olmaya en yakın şey. Başlamak en önemli kısmı. Ben yeni başlayanlardanım ve kendimle öğrenmek istiyorum."
+      3:
+        text: "Ben John Vechey. PopCap Games kurucularından biriyim. Plants vs. Zombies, Bejeweled ve Peggle gibi oyunlar yapıyoruz. Oyunlar hakkında birçok şey kodun ya da sanatınızın ne kadar mükemmel olduğu değil, nasıl hissettirdiği ve ne kadar eğlenceli olduğudur. Bunu sadece oyun yapmada kendi yeteneklerinizi deneyerek, yaparak, öğrenerek, uyarlayarak ve tekrarlayarak öğrenebilirsiniz."
+      4:
+        text: "Favori bir video oyununuz var mı? Peki Play Lab'ı kullandığımız gibi oyunlar yaratmaya yönelik bir adım atacağız. İyi oyunların bir hikayesi ve her hikayede de oyuncular vardır. Oyuncular konuşmak, hareket etmek ve başkalarıyla etkileşim kurmak gibi şeyler yaparlar. Belki skor puanları bile oyunun kurallarına dayalıdır. Bugün tüm bunları nasıl yapacağımızı Anna, Elsa, Hiro, Baymax ve Rapunzel Disney karakterleri ile teker teker öğreneceğiz. Bir çizikten, telefonda oynanan ve paylaşılan bir oyun inşa edeceğiz."
+      5:
+        text: "Ekranınız üç ana bölüme ayrılmıştır. Sol taraftaki programımızın çalışacağı oyun boşluğudur. Her seviye için talimatlar aşağıda yazılmıştır.Orta alan ise araç kutusudur ve her bloklar kodun bir parçasıdır. Sağ taraftaki beyaz boşluğa ise çalışma alanı diyoruz ve burası programımızı inşa edeceğimiz yer."
+      6:
+        text: "Başlamak için bloklarınızı turuncu renkli “çalıştırma zamanı” bloğu ile bağlamanız gerekecek. Sarı çerçeveyi görene kadar sürükleyerek birçok bloğu birbirine bağlayabilirsiniz daha sonra birbirlerine yaslanacaklardır. Bu ilk bulmacada Hiro Oyuncu 1 ve Baymax Oyuncu 2’dir. Baymax’a ulaşmak için Hiro’yu, “saga taşı” bloğunu sürükleyip “çalıştırma zamanı” bloğuna bağlayarak hareket ettirmeliyiz. Bloklarınızı mevcut konuma getirdiğinizde, programladıklarınızı görmek için “Çalıştır” butonuna basın."
+      7:
+        text: "Haydi başla ve sonunda kendi oyununu yarat. Oyununda farklı oyuncular iletişim kurabilir, mutlu yada üzgün olabilir, puan kazanabilir, micro robot, vişne, buz, tencere atabilir ve hatta birbirini yok edebilirsin. Bunların hepsi senin elinde istediğin gibi oyununu yapabilirsin."
+    infinity_playlab_repeat_forever:
+      1:
+        text: "Bir şeyi sonsuza dek tekrarlamak zorunda olduğunu hayal edebiliyor musun? Bilgisayarlar şeyler yinelemekte gerçekten çok iyi olduğu için sen yapmak zorunda değilsin. Bu sürece bloğu var. Bu blok içindeki herşey sonsuza kadar oyunda olacak."
+      2:
+        text: "Eğer oyuncunun birşey yapmasına gerek kalmadan bir aktörün defalarca birşey yapmasını istediysek, bu blokları sürekli tekrarla bloğunun içine koyarız. Sıradaki bulmacada hedefimiz Anna'nın sürekli olarak yukarı ve aşağı yürümesine yardım etmek. Tekrar komutlarının nasıl çalıştığını öğrenmek, daha sonra kendi oyununuzu yaparken size çok zaman kazandıracaktır."
+    tutorial_puzzle_challenge:
+      1:
+        text: "Oliva büyüdüğünde ne olmak istiyorsun? Bir astronot. Bir bilgisayar programcısı nedir bilirmisin? Hmmm hayır. Bekle ne dedin? Nasıl açıklayacağımı bilmiyorum bilgisayar programlama gayet basittir. Bir takım yöntemleri vardır aynı yemek tarifleri gibi, istediğin sonuca ulaşmak bu yöntemleri aşama aşama takip etmen lazım."
+      2:
+        text: "Pixel sayısını ve hat uzunluğunu bu yıkma işlemi ile değiştirebilirim. Ne kadar uzun demiştin? Talimatları tekrar görmek için başlat butonun altına bakabilirsin. Şimdi bloğu ileri götürmeyi kullandım ve 100 pixeli seçicem. Bir bloğu silmel için onu çöp bidonuna sürükleyebilirim. Hadi onu geri koyalım."
+      3:
+        text: "Başlata basarak kodu başlat. Hmmm bu çalışmadı! Neyin yanlış olduğunu anlamak için yenileye basıcam. Bir bulmacayı istediğin kadar deneyebilirsin ve bırakıp tekrar gelebilirsin. Sadece elinden gelenin en iyisini yaptığına emin ol ve pes etme. Hadi bir ilerle daha ekleyelim. Hala çalışmıyor. Diğer bloklar arasına bir blok daha koyabilirim."
+      4:
+        text: "Bir tane dönüş bloğu alalım ve ilerle bloğunun içine yerleştirelim. 45 derece sola dönün. Tekrar çalıştıralım. Sıfırla, çalıştır, harika! İşte başka bir bulmaca. Tamamlamak için bazen size başlangıç kodu verilir. Burada, uygun uzunlukları ve dereceleri eklemem gerekiyor."
+      5:
+        text: "Bazen yanlışlıkla başlangıç kodunu çöpe atabilirsiniz. O zaman ne yapacaksınız? Bulmacayı temizleye basabilir ve en baştan başlayabilirsiniz. Bu sayı bloğunu farklı piksel alanlarına sürükleyeceğim. Pikseller için 100'ü, dereceler için 45'i ve tekrar pikseller için 100'ü seçin. Harika! İşte Code Studio arısı. Arıyı her çiçeğe götürmem ve nektarı almam gerekiyor."
+      6:
+        text: "İlk çiçek üç blok ötede, böyle bir durumda 3 kere ileri gitmeliyim. 1, 2, 3. Sonra nektarı al, ve başka bir nektarı daha. Meh, bu işe yaramadı! Şimdi nektar almalar arasına başka bir ileri hareket etme ekleyeceğim ve tekrar çalıştıracağım. Yuppi, çalıştı! Code Studio artist ve arı bulmacalarını nasıl kullanacağınızı öğrendiniz. Code Studio bulmaca meydan okumasında iyi şanslar."
+    unplug1:
+      1:
+        text: "Oliva büyüdüğünde ne olmak istiyorsun? Umm, astronot. Bir bilgisayar programcısının ne olduğunu biliyor musun?? Evet, umm, hayır. Umm, ne ne? Nasıl açıklayacağımı bilmiyorum bilgisayar programlama gayet basittir. Bir takım yöntemleri vardır, bir yemek tarifi gibi. İstediğin sonucu elde etmek için adım adım takip etmen gerekir."
+      2:
+        text: "Bilgisayar bilimi dünyayı etkilemek için bir yoldur. Müzik videoları olabilir, oyunlar olabilir, birisinin başkasıyla alakalı ilişkisinin olup olmadığını tespit edebilir. Bilirsiniz, insanların arkadaşları. Hayatları kurtaran her türlü çılgınlığı yapabilirsiniz. Bence bir sürücüye sahip olmak zorundasın. Benim için bir fırça gibi. Bence büyük programlama tümüyle büyük sanattan farklı değildir."
+      3:
+        text: "Sonunda birazcık olsa programlama öğrendiğimde, o boş duvar bir anda bir sürü kapıya dönüştü. Onları açarsınız ve şüphesiz arkasında birsürü kapı olan başka bir koridor bulursunuz. Programlama kolay ve eğlencelidir. Aklınızın yapmak istediği her şeyi yapabilirsiniz. Ve sonunda içeri ışığın girmesi için yeterli kapıyı açmış olursunuz. Bence, bitirilmiş bir program ışıkla dolu bir strüktüre benziyor. Tüm köşeleri aydınlatılmış. Ulaşıp iletişim kurabileceğiniz kişi sayısı dünyada görülmemiş bir şey."
+      4:
+        text: "Bu dizideki ilk dersimiz, bilgisayar biliminin ne olduğu, bir bilgisayar bilimcisinin ne yaptığı ve teknoloji kullanımınızda nasıl daha çok sorumluluk sahibi olabileceğiniz hakkında her şeydir. Bu çok önemli bir ders ancak biraz metin ağırlıklı. Sonunda, baş harflerinizi kullanarak kendi size özel kodlamanızı yapacaksınız. Bu eğlenceli bir etkinlik ve çok güçlendirici çünkü ikili değer çok teknik hissedilen o şeylerden biri, ama bir kere anladığınızda, gizli bir dili konuşuyormuşsunuz gibidir."
+    unplug2:
+      1:
+        text: "Bilgi işlemsel düşünce üzerine olan bu ders, büyük bir problemi ele alıp, bunu nasıl bir kaç küçük probleme çevireceğinizi öğretmek için hazırlanmıştır. Bu dersin amacı, ders planında yer alan canavarlardan birini çizmek için birinin takip edebileceği bir dizi talimat yazmak."
+      2:
+        text: "Öğrenciler talimatları yazmak için gruplara ayrılır. Daha sonrasında talimatları canavarı çizecek grup ile değiştirir. Gruplar bilgi işlemsel düşünmenin dört aşamasını kullanarak bu talimatları yazacaktır: ayrıştırma, desen konumu, soyutlama ve algoritmalar."
+      3:
+        text: "İlk olarak, gruplar görevi ayrıştırırlar. Bu bir oyun prlanı yapmaları anlamına geliyor. Daha sonra, katalogdaki tüm canavarlar arasında desenler aramaya başlarlar. Canavarlar arasında bir farklılığa rastlarlarsa bu detayları soyutlar veya çıkarırlar. Örneğin, katalogdaki bir canavarın vegitas gözleri var, bir diğerinin ise spritem gözleri. Ancak her ikisinin de gözleri vardır, öyleyse canavarın boş gözlerinin olduğu bir satır yazabiliriz."
+      4:
+        text: "Böylece öğrenciler, canavarların parçalarını olması gereken stillere göre boşluklarla listeleyen, algoritma adı verilen, bir dizi talimatı yazabilecek hale gelir. Bu, diğer öğrencilere kendi canavarını yeniden yaratmak için verecekleritalimatlar dizisidir."
+    unplug3:
+      1:
+        text: "Grafik kağıdı programlama ile, insanların çizimleri sadece ok yönlendirmeleri ve karalamalar ile tekrar yaratmalarını sağlayarak, kodlamanın nasıl çalıştığını açıklanmasına yardımcı oluyoruz. Bir kişiye grafik kağıdında küçük bir çizim verilir ve kişinin bu çizimi sadece belli okları kullanarak nasıl yeniden oluşturacağını anlatması gerekir."
+      2:
+        text: "Bu etkinlikte kullanabileceğiniz semboller sadece şunlar: bir kare ileri git, bir kare geri git, bir kare yukarı git, bir kare aşağı git, sıradaki renge geç, kareni renkle doldur. Bunu kodladığımızda, kod okuyabilen ve deneyip resmi tekrar oluşturabilen başka bir kişiye verebiliriz."
+    unplug4:
+      1:
+        text: "Grafik kağıdı programlama ile, insanların çizimleri sadece ok yönlendirmeleri ve karalamalar ile tekrar yaratmalarını sağlayarak, kodlamanın nasıl çalıştığını açıklanmasına yardımcı oluyoruz. Bir kişiye grafik kağıdında küçük bir çizim verilir ve kişinin bu çizimi sadece belli okları kullanarak nasıl yeniden oluşturacağını anlatması gerekir."
+      2:
+        text: "Etkinliğin ikinci yarısında, kağıda katlayıp biz kaç farklı şekilde altı aynı dikdörtgen oluşturacağız. O zaman nasıl birden çok çözümün aynı sonuça nasıl ulaşabileceğini ele alacağız. Ayrıca bazı durumlarda bazı çözümler daha iyi olabilir."
+    unplug5:
+      1:
+        text: "Grafik kağıdı programlama ile, insanların çizimleri sadece ok yönlendirmeleri ve karalamalar ile tekrar yaratmalarını sağlayarak, kodlamanın nasıl çalıştığını açıklanmasına yardımcı oluyoruz. Bir kişiye grafik kağıdında küçük bir çizim verilir ve kişinin bu çizimi sadece belli okları kullanarak nasıl yeniden oluşturacağını anlatması gerekir."
+      2:
+        text: "Etkinliğin ikinci yarısında, kağıda katlayıp biz kaç farklı şekilde altı aynı dikdörtgen oluşturacağız. O zaman nasıl birden çok çözümün aynı sonuça nasıl ulaşabileceğini ele alacağız. Ayrıca bazı durumlarda bazı çözümler daha iyi olabilir."
+    unplug6:
+      1:
+        text: "Bu aktiviteye kartlarla kodlama adı verilir ve her bir yaş için harika.  Eğer bloğunu öğrendiğin gibi, burada doğru veya yanlış olup olmadığını değerlendiriyoruz. Bu koşullar  farklı şekillerde kullanılabilir."
+      2:
+        text: "Rasgele çekilmiş oyun kartları kullanarak, kağıt üzerinde çalıştırdığımız programlar yaratarak bundan faydalanıyoruz. Eğer çektiğiniz kart 8'den büyükse bir puan kazanmanızı sağlayan bir if komutunuz olabilir. Büyük değilse, rakibiniz bir puan kazanır. Bunu istediğiniz kadar basit yapabilir veya karmaşıklaştırabilirsiniz."
+    unplug7:
+      1:
+        text: "Bir şarkı için şarkı sözlerine baktığınızda ve en baştaki koroyu tanımladıklarında ve o zaman şarkının geri kalanı için nasıl koroya geri döndüğünü biliyor musunuz? Bu senin bir fonksiyonu nasıl adlandırdığındır."
+      2:
+        text: "Bu derste, şarkımızın başına bir koro tanımlıyoruz ve sonrasında şarkımızla beraber söylüyor ve geri dönüyoruz. Ve farkediyoruz ki, sınıf kelime korosunu söylemiyor, otomatik olarak koroyu tanımladığımız ve şarkımızla beraber söylediğimiz yere atlıyorlar. Bunu, bir programın, bir fonksiyonu tanımlarken ve çağırırken ne yaptığını anlamada harika bir tanıtım olarak kullanıyoruz."
+      3:
+        text: "Nakaratın tekrar tekrar nasıl söyleneceği ve kimi zaman bir nakaratın nasıl değişeceği hakkında konuşmak için Old Macdonald'ı da kapsayan aşina şarkıları kullanıyoruz. Belirli kelimelerin değiştiği Old Macdonald gibi bir şarkınız olduğu zaman bu, parametreler fikrini tanıtmak için harika bir yerdir. İçinde belli kelimeler geçer ki böylece işlevinize fazladan bilgi gönderebilirsiniz. Bir kere herkesin anladığından emin olduğumuzda kendi aşina şarkılarınızı alabilir ve kendiniz de bölebilirsiniz. Birlikte halledebilecek misiniz bakalım."
+    unplug8:
+      1:
+        text: "Soyutlama hakkındaki dersimiz temelde bir sürü farklı kelimeyle doldurulabilen bir hikayeye boşluk eklediğiniz bilindik madlisp kavramını kullanır. Bu fikri ele alır, çocukları kendi hikayeleri için kendi kelimeleriyle gelmeye zorlarız ve soyutlama kavramını gerçekten açıklarız."
+      2:
+        text: "Bu tamamen fonksiyonlarla ve bir fonksiyona nasıl sahip olabileceğiniz ile alakalı. Aynı Ali Babanın Çiftliği'nde olduğu gibi, koronuz için bir yapıya sahipiniz, ama bir küçük değişkeniniz var, ve bu değişkeni soyutlarsınız, ve her seferinde kendi sözcüğünüzle doldurabilirsiniz. Ancak bazen değişen üç kelimeniz vardır ve bunları üç parametreyle doldurursunuz. Bu bile oldukça yararlıdır."
+      3:
+        text: "Birçok farklı problemi işleyen bir fonksiyona sahip olabilirsiniz. Birçok kere insanlar sadece küçük bir fark olduğunu fark etmeden bütün bu problemler için ayrı fonksiyonlar yazacaklar. O küçük farkı halledebilecekleri bir yol bulabilselerdi, 14 farklı fonksiyona sahip olmak yerine sadece bir işlevi defalarca yeniden kullanabilirlerdi."
+    unplug9:
+      1:
+        text: "Röle programlama, bilgisayar biliminden çok daha eğlencelidir. Bazen herkes biraz sabırsızlanmaya başlar ve onları yeniden heyecanlandırmak istersin. Bu bilgisayar bilimine biraz heyecan eklemenin bir yoludur."
+      2:
+        text: "Herkesi bir sırada bekledikleri iki gruba ayırır ve röle stilini çalıştırırsınız. Her gruptaki ilk kişi, onları bir grafik kağıdı çiziminin ve bir boş kağıdın beklediği odanın diğer tarafına geçer. Görseli oluşturmak için gereken ilk aşamayı yazarlar ve kendi sıralarına geçerler. Bir sonraki adımı yazması için sıradaki oyuncuyu etiketler."
+      3:
+        text: "Bu, hata yakalama düşüncesini benimsemek, kendi çalışmalarınızın hatalarını düzeltme gereği ve sizden önce yapmış insanların çalışmasını kontrol etme ihtiyacı için harika bir yoldur. Tüm bir ekip size bel bağladığında kodlamanızda dikkatli olmanın ne denli önemli olduğunu çabucak anlayacaksınız."
+    unplug10:
+      1:
+        text: "Bu etkinlik İnternetin nasıl çalıştığını anlaşılması kolay bir yolla açıklar. Basit dönemlerde ihtiyaç duyacağın tüm terimler dizgesini biz açıklıyoruz böylece öğrenciler gönderilen mesajların tıpkı elekronik postalar gibi benzerini yapabiliyor."
+      2:
+        text: "Öğrenciler şu üç iletim metodundan birini taklit ederek mesaj iletecekler: Kablosuz internet, DSL yada fiber optik. Wi-fi'yi taklit eden öğrenciler iletecekleri mesajları başlarına takmak zorundalardır, çünkü wifi'nin bazı bilgileri bırakma olasılığı daha yüksektir."
+      3:
+        text: "DSL yada kablo bağlantısını taklit eden öğrenciler iletileri ellerinin arkasında taşıyacaklar, çünkü bunların bilgiyi düşürme olasılığı daha düşüktür. Ve fiber optik bağlantıyı temsil eden öğrenciler iletileri her iki elleri ile taşıyacaklardır. Bu aktivite, hepimizin her gün kullandığı bir şeyi anlamanın harika bir yoludur."
+    unplug11:
+      1:
+        text: "Şimdi, yaptığın on dokuz etkinlikteki her şeye durup kuş bakışı bakarak düşünme zamanı. Bu öğrencilerin yaptıkları şeylerin ne kadar devasa bir başarı olduğunu söylemek için mükemmel bir zamandır. Öğrenciler birçok yetişkinin bilgisayar bilimi hakkında bildiğinden daha çok bu dersleri öğrenmişlerdir."
+      2:
+        text: "Sınıfça yada gruplar halinde en çok sevilen ders hakkında tartışın. Öğrendiğiniz her şeye dönüp baktığınızda, burası öğrencilerinizin yaratıcılığının parlayabileceği yerdir. Onları gruplara ayırın ve kendi bağlantısız derslerini oluşturmalarını isteyin. Her bir gruba anahtar bir kavram, fonksiyon yada algoritma gibi, atayın ve elinizde onların kullanması için birçok el yapımı materyal bulundurun. Her bir grup kendi yeni ve bağımsız aktivitesini sunsun yada bazı öğrecilerin yapılan aktiviteleri için başka bir gün ayırın."
+      3:
+        text: "Code.org'daki herkes olarak, umarız bu ders esnasında İNANILMAZ eğlenmişsinizdir. En iyi yeni uygulamayı yaratmak, programlamayı kullanarak hastalıkların iyileşmesine yardımcı olmak yada sadece yıldız problemi çözücü olmak gibi hayalleriniz varsa, bu kurs rüyalarınıza ulaşmanın ilk adımıydı."
+    starwars_intro:
+      1:
+        text: "Merhaba, ben Star Wars: Güç Uyanıyor'un yapımcısı Kathleen Kennedy. Bugün starlarımızdan biri olan BB-8 ile çalışıyor olacaksınız. BB-8 küresel bir droiddir. Yaptığı her şey, her hareketi bir bilgisayar yazılımı ile kontrol edilmektedir. Bilgisayar bilimleri, pazarlamadan sağlık hizmetine ve film yapımcılığına kadar her endüstriyi etkiler. Hatta, Güç Uyanıyor gibi bir filmin yapımında yüzlerce bilgisayar mühendisi beraber çalıştı."
+      2:
+        text: "Merhaba, ben Rachel Rose. ILM'de üst düzey bir Ar-Ge mühendisiyim, animasyon ve yaratık geliştirme takımının başındayım. Güç Uyanıyor'da sanatçıların karakterler için donanım geliştirmelerine yardımcı oluyorum. Karakterlerin hareket eden kısımları olan bu donanımlar, onların çok uzak bir galakside inandırıcı olmalarını sağlıyor."
+      3:
+        text: "Önümüzdeki bir saatte kendi Star Wars oyunumuzu inşa edeceğiz. Sana programlamanın temel konseptlerini öğreteceğiz. Normalde programlama hep yazıdır ama biz burada blokları sürükleyip bırakarak program yazacağız. Aslında hala kod yaratıyor olacaksınız. Temel blokları denedikten sonra seni internetteki en popüler programlama dillerinden biri olan JavaScript'e geçireceğiz."
+      4:
+        text: "İlk önce, Rey ile beraber BB-8'in yürüyerek hurda parçalarını toplaması için onu programlayacağız. Ekranın üç parçaya ayrılmış durumda. Solda kodun çalışacağı Star Wars oyun alanı yer alıyor. Her bölüm için yönergeler oyun alanının altında yazıyor."
+      5:
+        text: "Orta kısım araç kutusu ve burada BB-8'in anlayacağı komutlar olan bloklar yer alıyor."
+      6:
+        text: "Sağdaki beyaz kısım programı inşa edeceğimiz çalışma alanı."
+      7:
+        text: "Eğer solaİlerle(); blokunu çalışma alanına sürükleyip, oynata basarsam ne olur? BB-8 sola bir kare hareket eder."
+      8:
+        text: "Peki BB-8'in sola ilerledikten sonra başka bir şey yapmak istiyorsam ne yapmalıyım? Programımıza bir tane daha blok ekleyebilirim. yukarıİlerle(); blokunu seçip renkli ışık belirene kadar solaİlerle(); blokumun altına sürükleyeceğim. Sonra bırakacağım ve iki blok birbirine kenetlenecek."
+      9:
+        text: "Oynata bir daha bastığımda, BB-8, çalışma alanımızdaki dizilmiş komutları yukarıdan aşağıya doğru canlandıracak. Eğer bir bloğu silmek isterseniz, dizilmiş komutlardan çıkarıp alet kutusuna sürüklemeniz yeterli."
+      10:
+        text: "Oynata bastıktan sonra, her zaman sıfırla tuşuna basarak BB-8'in başa dönmesini sağlayabilirsin. Haydi şimdi başlayalım!"
+    starwars_typing:
+      1:
+        text: "Kullandığımız blokların içinde JavaScript komutları var. JavaScript, profesyonel geliştiriciler için günümüzdeki en popüler programlama dilidir. Bloklar, kodlama öğrenmeye başlamak için harika bir yol. Harvard ve Berkeley gibi en iyi üniversiteler bile bu yöntemi kullanıyor. Temel bilgileri öğrendikten sonra mühendisler yazarak kodlama yapıyor, çünkü bu bizim daha hızlı ilerlememizi sağlıyor."
+      2:
+        text: "Araç kutusundan bulup sürüklemek zorunda kalmadan yüzlerce komut yazabiliriz. Öğrenme aşamasında olduğun için başta yazmak yavaş gelebilir ama senin de denemeni istedik."
+      3:
+        text: "Çalışma alanının sağında bulunan göster düğmesine tıklayarak bloklar ya da yazı ile kod girişi yapmak arasında geçiş yapabilirsin."
+      4:
+        text: "Bir sonraki derste, şimdiki yazma modunun dışına çıkarak başlayacağız. Burada hala blokları metin kutusundan sürükleyebilir yada komut adını yazabilirsiniz. Yazmaya başladığınızda, yazdığınız yerin altında muhtemel komutların isimlerini göreceksiniz. Komut adının tamamını yazmak yerine, daha hızlı ilerlemek için bunlardan birini seçebilirsiniz. Bu otomatik tamamlama özelliğini kod yazarken ben her zaman kullanırım."
+      5:
+        text: "Kod yazarken, bilgisayar çok kesin olmanıza ihtiyaç duyar. Komut isimlerini, parantezler ve noktalı virgül dahil, tamamen doğru şekilde hecelemeniz ve büyük harfle yazmanız gerekir. En küçük yazım hatasında bile, BB-8 kodu anlayamaz ve hareket edemez."
+      6:
+        text: "Herhangi bir satırda hata yaptığında, editör senin için o satırı vurgular böylece o satırı daha kolay düzeltebilirsin."
+      7:
+        text: "Eğer mahsur kalırsanız, başa dön butonuyla her zaman baştan başlayabilirsiniz ve herhangi bir zamanda sağ üst köşeye basarak blok moduna geçebilirsiniz. Haydi yazmayı deneyelim. Eğer hata yaparsanız, üzülmeyin. Doğruyu yapmak, herkesin birkaç denemesini alır."
+    starwars_events:
+      1:
+        text: "Merhaba, benim adım Charia Carter. Ben bir kıdemli yaratıcı yapımcı olarak Walt Disney Imagineering firmasında çalışıyorum. Aslında Disney parklarındaki eğlence oyunlarından sorumluyum. Biz her zaman kendimizi geliştirmek ve daha iyi bir deneyim sağlamak için teknolojinin kalbine yolculuk ediyoruz."
+      2:
+        text: "Tebrikler, başardın! BB-8 programladın. Şimdi daha zor bir şey için hazır olduğumuzu düşünüyorum. Hadi bakalım. Programlama temellerini öğrendin, kendi oyunumuzu tasarlıyacağız ve R2-D2 ve C-3PO oyunun yıldızı olacak."
+      3:
+        text: "Şimdi oyun programcılarının her zaman kullandığı \"Olay\" kavramını öğreneceğiz. Olay bir şey olduğunda bunu algılayıp bu eylemle ilgili eylemi gerçekleştir."
+      4:
+        text: "Olayların dinlemesine bazı örnekler; fare tıklaması veya aşağı/yukarı tuşu veya ekrana bir kere dokunma."
+      5:
+        text: "R2-D2 yukarı hareket edip asi pilota mesaj iletecek ve aşağı ilerleyip diğer asi pilota gidecek. Biz onu taşımak için olayları kullanacağız. Oyuncu yukarı/aşağı ok tuşlarını veya yukarı/aşağı düğmelerini kullabilir."
+      6:
+        text: "Biz whenUp() olay bloğuna goUp() (Yukari git) bloğü ekleyebilirsin. Oyuncu yukarı ok tuşuna bastığında, whenUp() olayına iliştirilmiş kod çalıştırılır. Ve biz R2-D2 yu aşağı taşımak için aynı şeyi yapacağız."
+      7:
+        text: "Bunu yapmak için whenUp() denilen bir komutunu kullanacağız. Komut araç dışına sürüklediğinizde, bir noktalı virgül yerine küme parantezi ile başlar ve biter. Bu bizi diğer komutları araya koymak için alan sağlar. Yukarı ok tuşuna her basıldığında bu parantez içindeki komutlar çalışır."
+      8:
+        text: "R2-D2'nun yukarı çıkmasını istiyoruz, öyleyse komutun içine bir goUp(); bloğu koyalım. Ve R2-D2'unun aşağı inmesini sağlamak için aynısını tekrarlayacağız."
+      9:
+        text: "Şimdi robotumuzu kontrol etmek için gereken kodu önceden yazmak yerine, R2-D2'nun çevresinde onu hareket ettiren tuş basım olaylarına reaksiyon göstermesine izin verebiliriz. Adım adım, oyununuz dahada etkileşimli hale geliyor."
+    starwars_congrats:
+      1:
+        text: "Merhaba, benim adım Alice ve Code.org firmasında ürün ve mühendislik ekiplerini yönetiyorum. Şu anda üzerinde uğraştığınız eğitimde üzerinde çalıştım."
+      2:
+        text: "Son seviyeye geldin. Tebrikler! Kendi yıldız savaşları oyununu yapmak için bilmeniz gereken her şeyi öğrendin. Şimdi daha fazla talimat yok, Çözecek bulmaca yok. Kendi oyununu yap ve nasıl çalıştığını seçin. Bir şey daha, hatta daha fazlasını yapman için yeni komutları ve yeni sesleri açtık."
+      3:
+        text: "[öğrenciler konuşuyor] Şimdi basitçe kirpi domuzu toplayarak puan topladığınız bir oyun yaptık. Sürpriz ise her kirpi domuzu topladığınızda bir strom trooper karşınıza çıkıyor. Aslında tüm ekran kirpi domuzlarıyla dolu ve 10,000 tanesine dokunduğunuzda kazanıyorsunuz."
+      4:
+        text: "Kaybedemeyeceğin bir oyun yaptık ve bu oyunda ortadan kaldırdığın her şey sana puan verir. Programım için tuşların yerlerini değiştirdim böylece sen ne zaman yukarı tıklasan karakterin aşağı iner ve sağa gittiğinde, karakterin sola gider. Bu gerçekten zor! Bazen sadece avantaj elde edersin eğer oyunu geliştiren kişiysen adaletsiz bir avantaj. Anladım mı? Oley!"
+      5:
+        text: "Oyununuzu tamamladığınızda, arkadaşlarınızla paylaşabilir veya telefonunuzda oynayabilirsiniz. İyi eğlenceler!"
+    starwars_blocks_intro:
+      1:
+        text: "Merhaba, ben Star Wars: Güç Uyanıyor'un yapımcısı Kathleen Kennedy. Bugün starlarımızdan biri olan BB-8 ile çalışıyor olacaksınız. BB-8 küresel bir droiddir. Yaptığı her şey, her hareketi bir bilgisayar yazılımı ile kontrol edilmektedir. Bilgisayar bilimleri, pazarlamadan sağlık hizmetine ve film yapımcılığına kadar her endüstriyi etkiler. Hatta, Güç Uyanıyor gibi bir filmin yapımında yüzlerce bilgisayar mühendisi beraber çalıştı."
+      2:
+        text: "Merhaba, ben Rachel Rose. ILM'de üst düzey bir Ar-Ge mühendisiyim, animasyon ve yaratık geliştirme takımının başındayım. Güç Uyanıyor'da sanatçıların karakterler için donanım geliştirmelerine yardımcı oluyorum. Karakterlerin hareket eden kısımları olan bu donanımlar, onların çok uzak bir galakside inandırıcı olmalarını sağlıyor."
+      3:
+        text: "Bir saat içerisinde sana programlamanın temellerini öğretecek bir Star Wars oyunu oluşturacaksın. Genellikle programlama yazı yazarak yapılır fakat biz kod yazmayı blokları sürükleyerek yapacağız. BB-8 programını başlamak için Rey ile tüm hurdaları toplamaya gidiyoruz."
+      4:
+        text: "Ekranınız üç ana parçaya ayrılmıştır. Sol tarafta Star Wars oyun alanı bulunuyor, programınız işte burada çalışacak. Her bir seviyenin yönergeleri oyun alanının altında yazılıdır."
+      5:
+        text: "Orta kısım araç kutusu ve burada BB-8'in anlayacağı komutlar olan bloklar yer alıyor."
+      6:
+        text: "Sağdaki beyaz kısım programı inşa edeceğimiz çalışma alanı."
+      7:
+        text: "Eğer solaİlerle(); blokunu çalışma alanına sürükleyip, oynata basarsam ne olur? BB-8 sola bir kare hareket eder."
+      8:
+        text: "Peki BB-8'in sola ilerledikten sonra başka bir şey yapmak istiyorsam ne yapmalıyım? Programımıza bir tane daha blok ekleyebilirim. yukarıİlerle(); blokunu seçip renkli ışık belirene kadar solaİlerle(); blokumun altına sürükleyeceğim. Sonra bırakacağım ve iki blok birbirine kenetlenecek."
+      9:
+        text: "Eğer bir bloğu silmek isterseniz, dizilmiş komutlardan çıkarıp alet kutusuna sürüklemeniz yeterli."
+      10:
+        text: "Oynata bastıktan sonra, her zaman sıfırla tuşuna basarak BB-8'in başa dönmesini sağlayabilirsin. Haydi şimdi başlayalım!"
+    starwars_blocks_events:
+      1:
+        text: "Merhaba, benim adım Charia Carter. Ben bir kıdemli yaratıcı yapımcı olarak Walt Disney Imagineering firmasında çalışıyorum. Aslında Disney parklarındaki eğlence oyunlarından sorumluyum. Biz her zaman kendimizi geliştirmek ve daha iyi bir deneyim sağlamak için teknolojinin kalbine yolculuk ediyoruz."
+      2:
+        text: "Tebrikler, başardın! BB-8 programladın. Şimdi daha zor bir şey için hazır olduğumuzu düşünüyorum. Hadi bakalım. Programlama temellerini öğrendin, kendi oyunumuzu tasarlıyacağız ve R2-D2 ve C-3PO oyunun yıldızı olacak."
+      3:
+        text: "Şimdi oyun programcılarının her zaman kullandığı \"Olay\" kavramını öğreneceğiz. Olay bir şey olduğunda bunu algılayıp bu eylemle ilgili eylemi gerçekleştir."
+      4:
+        text: "Olayların dinlemesine bazı örnekler; fare tıklaması veya aşağı/yukarı tuşu veya ekrana bir kere dokunma."
+      5:
+        text: "R2-D2 yukarı hareket edip asi pilota mesaj iletecek ve aşağı ilerleyip diğer asi pilota gidecek. Biz onu taşımak için olayları kullanacağız. Oyuncu yukarı/aşağı ok tuşlarını veya yukarı/aşağı düğmelerini kullabilir."
+      6:
+        text: "Biz whenUp() etkinlik bloğunu kullanıyoruz ve goUp() bloğunu buna bağlıyoruz. Oyuncu yukarı ok tuşuna ne zaman basarsa, whenUp() bloğuna bağlı olan kod çalışır. Ve aynısını R2-D2'yu aşağı hareket ettirmek için yapacağız. Ancak bu sefer, droid'imizi kontrol etmek için tüm kodu yazmak yerine, R2-D2'yi ekranın etrafında hareket ettiren düğme basma olaylarına tepki vermesini sağlayabiliriz."
+      7:
+        text: "Adım adım oyunun daha interaktif oluyor."
+    starwars_blocks_congrats:
+      1:
+        text: "Merhaba, benim adım Alice ve Code.org firmasında ürün ve mühendislik ekiplerini yönetiyorum. Şu anda üzerinde uğraştığınız eğitimde üzerinde çalıştım."
+      2:
+        text: "Son seviyeye geldin. Tebrikler! Kendi yıldız savaşları oyununu yapmak için bilmeniz gereken her şeyi öğrendin. Şimdi daha fazla talimat yok, Çözecek bulmaca yok. Kendi oyununu yap ve nasıl çalıştığını seçin. Bir şey daha, hatta daha fazlasını yapman için yeni komutları ve yeni sesleri açtık."
+      3:
+        text: "[öğrenciler konuşuyor] Şimdi basitçe kirpi domuzu toplayarak puan topladığınız bir oyun yaptık. Sürpriz ise her kirpi domuzu topladığınızda bir strom trooper karşınıza çıkıyor. Aslında tüm ekran kirpi domuzlarıyla dolu ve 10,000 tanesine dokunduğunuzda kazanıyorsunuz."
+      4:
+        text: "Kaybedemeyeceğin bir oyun yaptık ve bu oyunda ortadan kaldırdığın her şey sana puan verir. Programım için tuşların yerlerini değiştirdim böylece sen ne zaman yukarı tıklasan karakterin aşağı iner ve sağa gittiğinde, karakterin sola gider. Bu gerçekten zor! Bazen sadece avantaj elde edersin eğer oyunu geliştiren kişiysen adaletsiz bir avantaj. Anladım mı? Oley!"
+      5:
+        text: "Oyununuzu tamamladığınızda, arkadaşlarınızla paylaşabilir veya telefonunuzda oynayabilirsiniz. İyi eğlenceler!"
+    mc_intro:
+      1:
+        text: "Benim adım Jens Bergensten ama bana daha çok Jeb derler. Minecraft mojang.com'da baş geliştirici olarak çalışıyorum. Sanırım program yazmaya başladığımda 11 ya da 12 yaşındaydım çünkü oyun yapmak istiyordum. Babamın bir arkadaşı bana oyun yapmak için program yazmayı öğrenmem gerektiğini söylemişti. İşte ben de böyle başladım. Mimari şeyleri tasarlamayı ve çözmeyi seviyorum. Minecraft'ın en sevdiğim tarafı işte bu."
+      2:
+        text: "Önümüzdeki bir saat boyunca Alex ya da Steve ile program yazarak bilgisayar biliminin temellerini ve Minecraft dünyasının simülasyonu çıkarılmış bir parçasında ilerlemeyi öğreneceksiniz."
+      3:
+        text: "Geleneksel program yazma genelde metinle olur ama bugün blok olarak yazacağız. Bu, program yazmak için sürükleyip bırakabileceğiniz blokları kullanan bir sistem. Aslında burada JavaScript kodu oluşturuyorsunuz."
+      4:
+        text: "Birazdan öğreneceğiniz konseptler bilgisayar programcılarının her gün kullandığı ve bilgisayar biliminin temelini oluşturan şeylerdir. Mojang'da biz de aynı konseptleri Minecraft'ın çalışması için kullanıyoruz."
+      5:
+        text: "Başlamadan önce karakterinizi seçeceksiniz. Ben Alex'i seçiyorum. Şimdi onun ekranda hareket etmesine yardımcı olacak bir program kodu yapalım."
+      6:
+        text: "Ekranınız üç ana parçaya ayrılmıştır. Sol tarafta Minecraft oyun alanı bulunuyor, programınız işte burada çalışacak. Her bir seviyenin talimatları aşağı yazılır."
+      7:
+        text: "Bu ortadaki alan araç kutusudur ve bu blokların her biri Alex'in hareketlerini yönlendiren bir komuttur."
+      8:
+        text: "Sağ taraftaki beyaz bölgenin adı iş alanıdır ve programınızı işte burada yaparsınız."
+      9:
+        text: "\"ileri git\" bloğunu çalışma alanımıza sürükleyip sonra Koş'a tıklarsak ne olur? Alex, panonun üzerinde bir birim ileri gider."
+      10:
+        text: "Peki Alex bir birim ileri gittikten sonra başka bir şey yapmak istersek ne mi yapacağız? Programımıza başka bir blok ekleyebiliriz. Şimdi \"sağa dön\" bloğunu seçeceğim ve bunu turuncu çizgi görünene kadar \"ileri git\" bloğunun altına sürükleyeceğim. Ardından bunu bırakacağım ve iki blok birbirine bağlanacak.  Tekrar Koş seçeneğine bastığımızda Alex çalışma alanımızda biriken komutları yukarıdan aşağı doğru gerçekleştirir."
+      11:
+        text: "Ve bir bloğu silmek isterseniz bloğu yığından alıp araç kutusuna sürüklemeniz yeterli."
+      12:
+        text: "Yaptığınız değişiklikleri geri almak ve seviyeyi başladığı hale getirmek için çalışma alanının sağ üst köşesindeki Baştan Başla düğmesini kullanın. Son bir şey daha; dönüş bloklarındaki küçük üçgeni görüyor musunuz? Bu üçgenleri gördüğünüzde farklı bir seçenek seçebilirsiniz. Şimdi kod yazmaya başlayalım!"
+    mc_repeat:
+      1:
+        text: "Ben Lydia Winters, Mojang'ın marka direktörüyüm ve Minecraft adında küçük bir oyun yaptık."
+      2:
+        text: "Minecraft'ta yapmayı en sevdiğim şey keşfetmek. Mağaralarda maceraya atılmayı ve neler bulabileceğimi görmeyi çok seviyorum. Programcı olmayan biri olarak, Minecraft dersleri görerek kendi başıma kod yazmayı öğrenmek için gerçekten sabırsızlanıyorum."
+      3:
+        text: "Son seviyede çok fazla \"ileri git\" bloğu gerekiyordu. Bilgisayara dört veya beş defa ileri git komutunu verebilseydik çok daha kolay olurdu. Neyse ki bilgisayarlar, tekrar döngüleriyle komutları tekrar etmede çok iyi."
+      4:
+        text: "Minecraft'ı yaparken yeni bir dünya yaratmak için gereken başlangıç malzemelerini yerleştirmek için tekrar döngülerini kullanıyoruz. Bu da binlerce blok anlamına gelir. Döngüleri ayrıca küçük şeyler için de, mesela Alex yürürken ayaklarını ileri geri hareket ettirmek için kullanıyoruz. Tekrar döngüleri, program yazmanın çok önemli bir parçasıdır."
+      5:
+        text: "Gece çökmek üzere, bu nedenle önümüzdeki birkaç seviyede güvende kalmak için bir ev yapacağız. Bunu çok kolay bir şekilde yapmak için tekrar bloğunu kullanacağız."
+      6:
+        text: "Evimizin duvarını yapmak için Alex'e dört defa ilerlemesini ve kalasları yerleştirmesini söyleyebilir ya da ona ileri giderek bir kalası yerleştirmesini söyleyip ardından bu komutu alıp tekrar bloğunu kullanarak bu eylemi birkaç defa gerçekleştirmesini sağlayabiliriz. Şimdi tekrar bloğuna tıklayacağız ve ona bu eylemi kaç defa gerçekleştirmesini istediğimizi söyleyeceğiz. Şimdi gece çökmeden evimizi yapalım! İyi eğlenceler."
+    mc_if_statements:
+      1:
+        text: "Şimdi eğer komutlarını öğreneceğiz. Eğer komutları, program yazmayı öğrenmenin temel bir parçasıdır. Bunlar bir bilgisayarın karar vermesine yardımcı olur."
+      2:
+        text: "Tüm bilgisayarlar eğer komutlarını kullanır, buna telefonum da dahil. Örneğin telefonumun kilidini açtığımda eğer şifreyi doğru girersem telefonun kilidi açılır diyen bir kodu çalıştırır. Aksi takdirde bir hata mesajı verir."
+      3:
+        text: "Seteve'in ve Alice'in dünyada gördükleri bir şey için tepki vermeleri için kodunuzda eğer komutlarını kullanabilirsiniz. Örneğin eğer önlerinde bir kaya varsa sola dönebilirler. Ya da eğer bir ağaçla karşılaşırsa sağa dönerler."
+      4:
+        text: "Bu durumda lavın içine düşmek de istemeyiz. Lav için de plan yapmak çok kolay. Lavı ekranda görebiliyoruz. Peki ya taşın altındaki göremediğimiz lav?"
+      5:
+        text: "Taşı çıkardıktan sonra ileri gitmeden önce orada lav olup olmadığını kontrol etmemiz gerekecek. Eğer orada lav varsa ileri gitmeden önce karakterimizin önüne bir taş yerleştirmek isteyebiliriz. Bu şekilde güvenli bir şekilde ilerleyebiliriz. Şimdi maden çıkarma zamanı! Nereye gittiğinize dikkat etmek için eğer komutlarını kullanmayı unutmayın."
+    mc_congrats_share:
+      1:
+        text: "Tebrikler! Bilgisayar biliminin temel blok yapımını öğrendiniz."
+      2:
+        text: "Şimdi bu blokları kullanarak kendi eserlerinizi yapabilirsiniz. Başka bir talimat ya da çözülecek başka bir yapboz yok. İstediğiniz her şeyi yapabilirsiniz. Seçim size kalmış."
+      3:
+        text: "[öğrenci konuşması] Gerçek olmak üzere. Kırkıyorum. Meşalelerden bir L yaptım. Huş kalaslardan bir A yaptım. Oldu, başardık. Yünden bir ev yaptık!"
+      4:
+        text: "Eserinizi tamamladığınızda arkadaşlarınızla paylaşmak için bir link almak üzere paylaş seçeneğini seçin. İyi eğlenceler!"
+    mc_congrats_no_share:
+      1:
+        text: "Tebrikler! Bilgisayar biliminin temel blok yapımını öğrendiniz."
+      2:
+        text: "Şimdi bu blokları kullanarak kendi eserlerinizi yapabilirsiniz. Başka bir talimat ya da çözülecek başka bir yapboz yok. İstediğiniz her şeyi yapabilirsiniz. Seçim size kalmış."
+      3:
+        text: "[öğrenci konuşması] Gerçek olmak üzere. Kırkıyorum. Meşalelerden bir L yaptım. Huş kalaslardan bir A yaptım. Oldu, başardık. Yünden bir ev yaptık!"
+      4:
+        text: "Şimdi istediğiniz her şeyi yapabilirsiniz. İyi eğlenceler!"
+    gumball_intro:
+      1:
+        text: "Kendi oyununuzu yapmak istiyorsanız, gerçekten kolaydır. Tüm ihtiyacınız sadece birkaç programlama temeli ve ardından oluşturduğunuz bir oyunu oynamaya başlayabilirsiniz."
+      2:
+        text: "Favori bir video oyununuz var mı? Peki Play Lab'ı kullandığımız gibi oyunlar yaratmaya yönelik bir adım atacağız. İyi oyunların bir hikayesi ve her hikayede de oyuncular vardır. Oyuncular konuşmak, hareket etmek ve başkalarıyla etkileşim kurmak gibi şeyler yaparlar. Belki skor puanları bile oyunun kurallarına dayalıdır. Bugün tüm bunları nasıl yapacağımızı eğlenceli karakterler ile teker teker öğreneceğiz. Baştan başlayarak "
+      3:
+        text: "Bugün tüm bunları nasıl yapacağımızı Ağlenceli karakterler ile teker teker öğreneceğiz. Baştan başlayarak telefonda oynanan ve paylaşılan bir oyun inşa edeceğiz."
+      4:
+        text: "Ekran 3 ana bölüme ayrılmıştır. Sol taraf programınızın çalıştırılacağı oyun alanıdır. Her düzey için talimatlar aşağıda yazılmıştır."
+      5:
+        text: "Bu orta alan araç kutusu ve buradaki her blok bir kod parçasıdır."
+      6:
+        text: "Sağ taraftaki beyaz bölgenin adı iş alanıdır ve programınızı işte burada yaparsınız."
+      7:
+        text: "Kendi ekleyeceğiniz blokları \"Çalıştığı zaman\" bloğuna bağlamak gerekir. Blokları sürükleyip sarı çizgi çıkana kadar birbirine yaklaştırarak bağlayabilirsiniz."
+      8:
+        text: "Bu ilk bulmacada, \"söyle\" bloğunu \"çalıştığı zaman\" bloğuna bağlayarak aktörlere bir şeyler söyleteceğiz. Bloklarınızı yerleştirdikten sonra, ne programladığınızı görmek için \"çalıştır\" butonuna basın."
+      9:
+        text: "Haydi başla ve sonunda kendi oyununu yarat. Oyununda farklı oyuncular iletişim kurabilir, mutlu yada üzgün olabilir, puan kazanabilir, birşeyler atabilir ve hatta birbirini yok edebilir. Bunların hepsi senin elinde istediğin gibi oyununu yapabilirsin."
+    gumball_events:
+      1:
+        text: "Şimdi oyun programcılarının her zaman kullandığı \"Olay\" kavramını öğreneceğiz. Olay  bir şey olduğunda bunu algılayıp bu eylemle ilgili eylemi gerçekleştir."
+      2:
+        text: "Olayların dinlemesine bazı örnekler; fare tıklaması veya aşağı/yukarı tuşu veya ekrana bir kere dokunma."
+      3:
+        text: "Burada, oyuncu aktöre tıkladığında aktöre bir şeyler söyleteceğiz. Tıklağında bloğunu kullanacağınız ve ona \"söyle\" bloğunu ekleyeceğiz. Oyuncu tıkladığında, bu bloğa bağlı olan tüm bloklar uygulanacak."
+      4:
+        text: "Ayrıca \"zaman okları\" parçaları var. Eğer \"hareket\" parçalarını bunlara bağlarsanız, karakterinizi yukarı, aşağı, sola ve sağa hareket ettirmeye başlayabilirsiniz!. Git gide oyununuz daha çok interaktif oluyor."
+    gumball_repeat:
+      1:
+        text: "Bir şeyi hiç durmadan daima yapman gerekiyor olduğunu hayal edebilir misin? Umarım gerekli olmamıştır çünkü bilgisayarlar nesneleri tekrarlamada gerçekten iyidir."
+      2:
+        text: "Bu sonsuza kadar tekrar et bloğu. Bu blok içerisindeki herhangi bir şey oyunda daima devam ediyor. Eğer oyunu oynayan kişi hiçbir şey yapmadığı halde bir şeyi sürekli yapan bir oyuncu istiyorsak, bu blokları sonsuza kadar tekrar et bloğu içerisine yerleştireceğiz."
+      3:
+        text: "Sıradaki bu bulmacada, hedefimiz aktöre bir işi devamlı yapması için yardım etmek. Tekrarla komutunun nasıl çalıştığını öğrendiğin zaman sana kendi oyununu yaparken tonla zaman kazandıracak."
+    iceage_intro:
+      1:
+        text: "Kendi oyununuzu yapmak istiyorsanız, gerçekten kolaydır. Tüm ihtiyacınız sadece birkaç programlama temeli ve ardından oluşturduğunuz bir oyunu oynamaya başlayabilirsiniz."
+      2:
+        text: "Favori bir video oyununuz var mı? Peki Play Lab'ı kullandığımız gibi oyunlar yaratmaya yönelik bir adım atacağız. İyi oyunların bir hikayesi ve her hikayede de oyuncular vardır. Oyuncular konuşmak, hareket etmek ve başkalarıyla etkileşim kurmak gibi şeyler yaparlar. Belki skor puanları bile oyunun kurallarına dayalıdır. Bugün tüm bunları nasıl yapacağımızı eğlenceli karakterler ile teker teker öğreneceğiz. Baştan başlayarak "
+      3:
+        text: "Bugün tüm bunları nasıl yapacağımızı Ağlenceli karakterler ile teker teker öğreneceğiz. Baştan başlayarak telefonda oynanan ve paylaşılan bir oyun inşa edeceğiz."
+      4:
+        text: "Ekran 3 ana bölüme ayrılmıştır. Sol taraf programınızın çalıştırılacağı oyun alanıdır. Her düzey için talimatlar aşağıda yazılmıştır."
+      5:
+        text: "Bu orta alan araç kutusu ve buradaki her blok bir kod parçasıdır."
+      6:
+        text: "Sağ taraftaki beyaz bölgenin adı iş alanıdır ve programınızı işte burada yaparsınız."
+      7:
+        text: "Kendi ekleyeceğiniz blokları \"Çalıştığı zaman\" bloğuna bağlamak gerekir. Blokları sürükleyip sarı çizgi çıkana kadar birbirine yaklaştırarak bağlayabilirsiniz."
+      8:
+        text: "Bu ilk bulmacada, \"söyle\" bloğunu \"çalıştığı zaman\" bloğuna bağlayarak aktörlere bir şeyler söyleteceğiz. Bloklarınızı yerleştirdikten sonra, ne programladığınızı görmek için \"çalıştır\" butonuna basın."
+      9:
+        text: "Haydi başla ve sonunda kendi oyununu yarat. Oyununda farklı oyuncular iletişim kurabilir, mutlu yada üzgün olabilir, puan kazanabilir, birşeyler atabilir ve hatta birbirini yok edebilir. Bunların hepsi senin elinde istediğin gibi oyununu yapabilirsin."
+    iceage_events:
+      1:
+        text: "Şimdi oyun programcılarının her zaman kullandığı \"Olay\" kavramını öğreneceğiz. Olay  bir şey olduğunda bunu algılayıp bu eylemle ilgili eylemi gerçekleştir."
+      2:
+        text: "Olayların dinlemesine bazı örnekler; fare tıklaması veya aşağı/yukarı tuşu veya ekrana bir kere dokunma."
+      3:
+        text: "Burada, oyuncu aktöre tıkladığında aktöre bir şeyler söyleteceğiz. Tıklağında bloğunu kullanacağınız ve ona \"söyle\" bloğunu ekleyeceğiz. Oyuncu tıkladığında, bu bloğa bağlı olan tüm bloklar uygulanacak."
+      4:
+        text: "Ayrıca \"zaman okları\" parçaları var. Eğer \"hareket\" parçalarını bunlara bağlarsanız, karakterinizi yukarı, aşağı, sola ve sağa hareket ettirmeye başlayabilirsiniz!. Git gide oyununuz daha çok interaktif oluyor."
+    iceage_repeat:
+      1:
+        text: "Bir şeyi hiç durmadan daima yapman gerekiyor olduğunu hayal edebilir misin? Umarım gerekli olmamıştır çünkü bilgisayarlar nesneleri tekrarlamada gerçekten iyidir."
+      2:
+        text: "Bu sonsuza kadar tekrar et bloğu. Bu blok içerisindeki herhangi bir şey oyunda daima devam ediyor. Eğer oyunu oynayan kişi hiçbir şey yapmadığı halde bir şeyi sürekli yapan bir oyuncu istiyorsak, bu blokları sonsuza kadar tekrar et bloğu içerisine yerleştireceğiz."
+      3:
+        text: "Sıradaki bu bulmacada, hedefimiz aktöre bir işi devamlı yapması için yardım etmek. Tekrarla komutunun nasıl çalıştığını öğrendiğin zaman sana kendi oyununu yaparken tonla zaman kazandıracak."
+    mc_2016_intro:
+      1:
+        text: "Merhaba, benim adım Jens ve Minecraft'ta baş yaratıcı tasarımcıyım. Önümüzdeki bir saatte kendi Minecraft oyununu yapacaksın. Minecraft'a benzeyecek ama dünya durmuş durumda. Koyunlar hareket etmiyor, tavuklar yumurtlamıyor ve zombiler oldukları yerde duruyorlar. Kod ekleyerek Minecraft dünyasının çalışmasını sağlamak sana bağlı."
+      2:
+        text: "Merhaba benim adım Melissa ve Minecraft'ta kullanıcı araştırmacısıyım. Benim asıl ilgimi çeken insanların teknolojiyle nasıl etkileşim kurdukları, bu nedenle bilgisayar mühendisliğini psikolojiyle birleştirmek ve insanların nasıl düşünüp davrandıklarını gözlemlemek için benim için harika bir meslek."
+      3:
+        text: "Ekranınızın üç ana kısıma ayrıldığını göreceksiniz. 1) Sol tarafta Minecraft oyunu var. Şu anda dünya donmuş durumda ama biz bunu kod yazarak düzelteceğiz."
+      4:
+        text: "2) Bu orta alan araç kutusudur. Bu bloklardan her biri tavuklar, koyunlar ve diğer Minecraft yaratıklarının anlayabileceği birer komuttur."
+      5:
+        text: "3) Sağdaki alan çalışma bölgesidir ve programımızı burada oluşturacağız."
+      6:
+        text: "Ne yapmanız gerektiğini unutursanız her bir seviyenin yönergeleri ekranın üst kısmında bulabilirsiniz."
+      7:
+        text: "Başlangıç için bir tavuğu kodlayacağız. \"ileri hareket et\" komutunu çalışma alanına taşıyalım. \"Çalıştır\" a tıklayınca tavuk ileri doğru bir adım atar. Daha sonra bir tane daha \"ileri hareket et\" bloğunu birinci \"ileri hareket et\" bloğunun altına getiriyorum ve daha sonra bırakıyorum. İki blok birbirine yapışıyor. Tekrar \"Çalıştır\" ı tıklarsam tavuk iki adım atar."
+      8:
+        text: "Eğer bir bloğu silmek isterseniz, dizilmiş komutlardan çıkarıp alet kutusuna sürüklemeniz yeterli."
+      9:
+        text: "\"Çalıştır\"ı tıkladıktan sonra oyunu sıfırlamak ve tekrar başlatmak için \"Sıfırla\" düğmesini tıklayabilirsin. Şimdi Minecraft'ın kendi versiyonunu yapmak için sıra sende. İyi eğlenceler!"
+    mc_2016_loops:
+      1:
+        text: "Merhaba, ben Lisa. Minecraft'ta yazılım geliştiriciyim ve oyun içindeki bazı hayvanlar ve düşmanlar üzerinde çalışıyorum. Üzerinde çalıştığım hayvanlardan birisi oselot. Oselot'a balık vererek onu kendi kedin kısım üzeinde çalıştım."
+      2:
+        text: "Biz insanlar tekrar tekrar aynı şeyi yapmak zorunda kalırsak gerçekten çok sıkılıyoruz. Ama bilgisayarlar hakkında en müthiş şeylerden biri onların aynı şeyi milyonlarca hatta milyarlarca kez sıkılmadan art arda yapabilmeleridir. Bu tekrara döngü denir ve Minecraft'ta her yaratık döngüleri kullanır."
+      3:
+        text: "Daha önce ekranda hareket ettirmemiz için bir tavuk vardı, ama sonra durdu. Minecraft'ta tavuklar sonsuza dek dolanırlar. Tavuklarımızın sonsuza dek ortalıkta dolanması için \"sonsuza dek yap\" döngüsünü kullanalım. Döngülerin gücü size çok zaman kazandırıp siz Minecraft'ın kendi versiyonunu oluştururken pek çok faydalı özelliklere kapı aralayacaktır."
+    mc_2016_events:
+      1:
+        text: "Bu seviyede kendinizi Alex veya Steve olarak seçebilirsiniz. Klavyenizdeki ok tuşlarına basarak yukarı, aşağı ve sağa sola hareket edebilirsiniz. Artık bir seviyede istediğiniz gibi dolaşabilirsiniz. Herhangi bir yaratığı kullanmak için ona doğru yürüyün, yüzünüzü ona dönün ve boşluk tuşuna basın."
+      2:
+        text: "Dokunmatik bir ekran kullanıyorsanız, parmağınızı sağa, sola, yukarı, aşağı sürükleyip ortalıkta gezinebilirsiniz. Daha sonra da oyun alanına dokunarak önünüzdeki nesneyi kullanabilirsiniz."
+      3:
+        text: "Ama sen onu kullanınca ne olur? Minecraft'ta, koyunlar onları kırpınca yünlerini bırakır, inekler sen onlara vurunca kaçar ve creeperlar da sen onların yanına yaklaşınca patlarlar. Bütün bu reaksiyonlar olaylar dediğimiz şeyler sayesinde gerçekleşir. Olaylar programınıza bir şeyin olmasını beklemeyi ya da dinlemeyi söyler. Ve o olay olduğunda da bir eylem gerçekleştirmelerini söyler."
+      4:
+        text: "Şu ana kadar tek bir olay kullandınız. \"spawn olduğunda\" yuvasına koydunuz kod yaratık oluştuğunda ya da oyun başladığında çalışmaya başlar. Önümüzdeki bir kaç seviyede dokunulduğunda çalışan \"dokunulduğu zaman\" yuvası veya yaratığı kullandığınızda çalışmaya başlatacak \"kullanıldığında\" komutlarını öğreneceksiniz. Ya da güneş doğduğunda zombinin yok olmasını istiyorsanız \"gün olduğunda\" yuvasını kullanın"
+    mc_2016_spawn:
+      1:
+        text: "Oyunlarda spawn demek yaratmak demekle aynı anlama gelir. Bu seviyede gelin zombilerin güneş battığında spawn olmalarını sağlayalım. Bunu yapmak için \"gece olduğunda\" bloğunu kullanacağız."
+      2:
+        text: "Zombilerin gece spawn olmalarını istediğimizden \"spawn zombi\" bloğunu \"gece olduğunda\" bloğunun altına koy. Zombiler oluşur oluşmaz \"spawn olduğunda\" bloğunun altındaki kodu çalıştırır. Zombileri oluştururken iyi eğlenceler!"
+    mc_2016_congrats:
+      1:
+        text: "Tebrikler! Bilgisayar bilimi komutlarını öğrenerek Minecraft dünyasını hayata getirmeyi öğrendin. Artık bir yazılımcısın. Bütün komutları ve yaratıkları kullandın. Ne olacağına sen karar vereceksin."
+      2:
+        text: "Oyunu yapmayı bitirdiğinde, link paylaşmak için ya da telefonunda oynamak için paylaş linkini seç. İyi eğlenceler. Senin oluşturduğun Minecraft sürümünü oynamak için sabırsızlanıyorum."
+    applab_intro_welcome:
+      1:
+        text: "Benim adım Mei'lani. Ben code.org'da bir stajyerim ve aynı zamanda bir bilgisayar bilimi öğrencisiyim. Bilgisayar bilimini severim çünkü gerçekten yaratıcıdır. Sorun çözücü olmaya başlıyorum. Herşeyin istediğim gibi çalışmasını sağlayacağım. Ama aynı zamanda tasarımcı da oluyorum. Sanatçı olacağım ve yaratıcı tarafında her şeyi seçeceğim."
+      2:
+        text: "Kendi uygulamalarınızı yapmak uygulama labıyla çok kolay! Kodlamada yeni de olsanız biraz tecrübeniz olsa da. Uygulama Laboratuarı yeni uygulamalar inşa etmek ve onları arkadaşlarınızla paylaşmak için mükemmel bir araçtır."
+      3:
+        text: "Burası program laboratuarı. Solda senin programın var. Sağda ise bu programı çalıştıracak kod mevcut. Programını alet kutusundan bloklar çekerek kurabilirsin. Başlangıç için sadece 'setProperty' yazan bloğa sahip olacaksın."
+      4:
+        text: "Belirlenen özellik bloğu, ekranınızdaki elemanların görünüşünü değiştirir. Tuşlar, etiketler ya da ekranın kendisi gibi. İlk olarak hangi elemanı değiştirmek istediğinize karar vermeniz gerekir. Uygulamanızda bir elemanın üzerinde kalıyorsanız ismi ya da kimliği burada görebilirsiniz. O halde ilk açılandan o kimliği seçin."
+      5:
+        text: "Ögeler; yazı renkleri, arkaplan renkleri ya da font büyüklükleri gibi değiştirebileceğiniz bir çok özellik barındırır. İkinci açılır listede tüm listeyi görebilir ve değiştirmek istediğiniz herhangi bir özelliği seçebilirsiniz."
+      6:
+        text: "Son açılır listede ise kullanmak istediğiniz değeri girebilirsiniz. Blok sizin için bir öneri yapacaktır. Ama her zaman farklı renklerde ve numaralarda kendiniz yazabilirsiniz."
+      7:
+        text: "İşinizi bitirdiğinizde, blok biraz cümle gibi okunabilir:'buton1'in arkaplan rengini yeşil yapın.' Kodda oluşturduğunuz değişiklikleri görmek için çalıştır'a basın. Sıfırladıysanız, uygulamanızla alakalı başka değişiklikler yapmak isterseniz içine daha çok blok sürükleyebilirsiniz!"
+      8:
+        text: "Bu eğitimde blok modunun üstünde durucaz fakat program labarotuarı yazım ile çalışmayıda destekler."
+      9:
+        text: "Her iki durumda da webin dili olan JavaScript'te programlıyor olacaksınız. Her seviyede yaratmayı amaçladığınız şeyin hedefi, açıklamaları ve görüntüsü vardır."
+      10:
+        text: "Eğer bu seviyede tıkanırsan bu resime tıkla ve sana bu seviyeyi nasıl geçeceğini göstersin. Ama önce kendin geçmeye çalış."
+      11:
+        text: "Bu hedefin amacını tamamladığında Bitir'e bas ve devam et. Hepsi işte bu kadar! Bir sonraki seviyeye geçmek ve App Lab ile maceraya atılmak için turuncu \"devam\" butonuna bas!"
+    applab_intro_events:
+      1:
+        text: "Uygulamalar gerçekten havalı çünkü bu baya kendi işinizi açmak gibi bir şey, yani demek istiyorum ki, her şeyi başından tasarlayacak, yöneteceksiniz ve kod ile daha yeni oluşturduğunuz bu iş parçasının sahibisiniz."
+      2:
+        text: "Şimdi programının görünümü değiştirebilirsin. Hadi onu etkinliklere tepki gösterecek şekilde yapalım! Etkinlikler kullanıcı eylemleridir bir tuşa tıklamak, menüde gezmek yada bir fotoğrafı yerleştirmek gibi. Etkileşimli programlar etkinliklere reaksiyon gösterecek yollara ihtiyaç duyar, bir tuşa bastığımda ses çıkması gibi. Bunu program labarotuarında yapabilmek için 'onEvent' isimli yeni bloğu kullanmalısın."
+      3:
+        text: "Bu program ekranı maviye çeviriyor. Tuşa bastığımda ekranımın yeşile dönmesini istiyorum. İlk olarak bir onEvent bloğu çekmeliyim. Bir bakışta tuşun isminin ''bigButton'' olduğunu anlıyorum ve onu ilk düşürmede seçiyorum."
+      4:
+        text: "Sıradaki etkinliği ben seçicem.Seçebileceğin birçok opsiyon var ama şuan sana sadece eski klasik bir tık bırakıcam."
+      5:
+        text: "Son olarak, etkinliğin içine ekranın arka plan rengini değiştirecek kod ekleyeceğim. Bu bloğu bir cümle olarak okuyabilirsiniz: \"Düğmenin tıklanması durumunda tüm kodu çalıştır.\""
+      6:
+        text: "Hadi test edelim. onEvent dışındaki bloklar yinede çalışmaya devam ederi yani ekran mavi başlar."
+      7:
+        text: "Ve ne zaman büyük tuşa bassam onEvent içindeki kodum çalışır ve ekranım yeşile döner."
+      8:
+        text: "Eğer etkinlikten sonra daha fazla şeyi değiştirmek istiyorsan, tıpkı ekrandaki yazı gibi. Sadece onEvent'e daha fazla kod ekle"
+      9:
+        text: "Programının daha fazla etkinliğe tepki vermesi için onEvent bloklarından daha fazlasını ekle. Sadece iç içe koymadığından emin ol. Şimdi sıra tek başına denemende iyi eğlenceler!"
+    applab_intro_sounds:
+      1:
+        text: "Sırada programına resim ve ses eklemeyi öğreniceksin. Hadi ses opsiyonlarını inceleyerek başlıyalım."
+      2:
+        text: "Alet kutusunun içinde ''playSound'' isimli bir blok görüceksin. Çalışma alanına onu çek. Drop-down tuşuna basıp ardından ''Choose'' tuşuna basarak bir sesi seçebilirsin."
+      3:
+        text: "Buradan bilgisayarınızdan bir ses dosyası yükleyebilir ya da ses kütüphanesinden bir ses arayabilirsiniz. Ses kütüphanesinin enstrümanlar, arka plan müziği ya da hayvan gibi pek çok farklı bölümü vardır."
+      4:
+        text: "İstediğiniz sesi seçtikten sonra \"Seç\" düğmesine tıklayın. Bu blok çalıştığında seçtiğiniz sesi çalar."
+      5:
+        text: "Ögelerinize görüntü eklemek için sadece setProperty bloğunu kullanabilirsiniz. İkinci açılır menüdeki resim özelliğini seçin"
+      6:
+        text: "Daha sonra üçüncü açılır listeden \"Seç\"i seçin."
+      7:
+        text: "Buradan, bilgisayarınızdan bir resim yükleyebilir ya da simgelerden oluşan büyük bir kütüphaneye simge kitaplığından göz atabilirsiniz."
+      8:
+        text: "Kod moduna döndüğünüzde simgenizin simge rengini değiştirmek için \"setProperty\" bloğunu kullanabilirsiniz. Simgenizin hangi resmi kulanacağını seçtikten sonra nasıl göründüğünü görmek için \"Çalıştır\"a tıklayın."
+      9:
+        text: "Burada yapcaklar bu kadar! Artık, uygulamalarınızı daha eğlenceli ve dinamik hale getirmek için resimler ve sesler eklemeye başlayabilirsiniz."
+    applab_intro_designmode:
+      1:
+        text: "Kendi uygulamalarınızı oluşturmak için sıfırdan ekranlar ve elemanlar tasarlamaya başlamanız gerekecek. Uygulama Laboratuarı, bunu Tasarım Modu ile kolaylaştırır."
+      2:
+        text: "Tasarım Modu'na girmek için uygulamanızın üst kısmındaki değiştirme anahtarını kullanın."
+      3:
+        text: "Yeni ögeleri onları ekrana sürükleyerek ekleyebilirsiniz. Sağ alt köşeyi çekerek onları farklı konumlara taşıyabilir ve ölçülerini değiştirebilirsiniz."
+      4:
+        text: "Bir ögenin niteliklerini değiştirmek için sağdaki denetimleri kullanın. Örneğin, bu tuşun metnini, rengini ve yazı tipi boyutunu değiştirmek hakikaten kolay."
+      5:
+        text: "Ekranınıza yeni bir öge eklediğiniz zaman buton1 gibi genel bir isim alır. Bu düğmenin ismini \"sağButon\" gibi daha anlamli bir şeyle değiştirmek iyi bir fikirdir. Böylece programa gittiğinizde hangisinin o olduğunu bileceksiniz."
+      6:
+        text: "Uygulamanıza bir ögeyi yanlışlıkla eklerseniz, delete tuşuna basın ya da sadece dışarı sürükleyin."
+      7:
+        text: "Bir ekran öğesine sürükleyerek uygulamanıza tamamen yeni ekranlar ekleyebilirsiniz"
+      8:
+        text: "Üst kısımdaki açılır menüden oluşturduğunuz ekranlar arasında hızlıca ileri ve geri geçiş yapabilirsiniz."
+      9:
+        text: "Uygulamanızın içinde tüm bu ekranlar arasında geçiş yapmak için bir yola ihtiyacınız var, bu yüzden setScreen bloğu araç setine eklendi. Bir düğmeye tıklatarak ekranları değiştirmek için \"onEvent\" bloğu içinde \"setScreen kullanın."
+      10:
+        text: "Sonraki bir kaç seviyede sadece bir proje üzerinde çalışıyor olacaksın. Önce bir düğme ekleyeceksin ve sonra yeni bir ekran ekleyeceksin ve son olarak butonun yeni bir ekrana geçmesini sağlayacak kodu yazacaksın."
+    applab_intro_share:
+      1:
+        text: "Şimdi, Uygulama Laboratuarının temellerinden bazılarını düğmeler, sesler, resimler, metinler ve yeni ekranlar ekleme gibi öğrendiniz her çeşit uygulama yapabilirsiniz."
+      2:
+        text: "Bir sonraki seviyede, oluşturmayı tamamladığınız uygulamayı bulacaksınız. Biraz yaratıcılık ile bunu arkadaşlarınız için bir kişilik testine, ailenizle paylaşabileceğiniz bir tebrik kartına veya kendi-maceranı-seç oyununa dönüştürabilirsiniz. Tüm bu uygulamalar zaten öğrenmiş olduğun becerilerin bir birleşimi, ve bahse girerim daha da fazlasını ortaya çıkarabilirsin."
+      3:
+        text: "Uygulamanız bittiğinde, nasıl göründüğünü görmek için kolayca telefonunuza gönderebilirsiniz. Sadece \"Paylaş\" ı tıklayın ve telefon numaranızı buraya girin."
+      4:
+        text: "Uygulamanızı anında açmanıza olanak sağlayacak bir kısa mesaj alırsınız."
+      5:
+        text: "Ayrıca, sosyal medya üzerinden uygulamanızın bir bağlantısını paylaşabilir ya da başkalarının oynaması ve paylaşması için code.org genel galerisinde yayınlayabilirsiniz."
+      6:
+        text: "Gördükleriniz App Lab'ın yapabileceklerinin sadece su üstündeki kısmı. Full App Lab tam donanımlı uygulamaları hızlıca oluşturmanızı sağlamak için daha gelişmiş kullanıcı etkileşimleri, yeni ekran elemanları ve hatta bir dahili veritabanı bile içeriyor. Eğer devam etmek isterseniz, \"code.org/applab\" adresinde tam aracı ve bir çok fikri bulacaksınız."
+      7:
+        text: "Yolculuk boyunca geldiğiniz için teşekkürler. Şimdi, ilk uygulamanızı kurun ve paylaşın ve Uygulama Laboratuarı'yla uygulamalar inşa etmeye devam edin!"
+    mc_2017_agent_intro:
+      1:
+        text: "Stacy: Stampy, Lizzy, Preston - benimle geldiğiniz için teşekkürler. Göstermek istediğim şey bu mesa platosunun biraz ötesinde. Bence buna bayılacaksın!"
+      2:
+        text: "Bir dakika - parkurda bir delik var! (çığlık çığlığa)"
+      3:
+        text: "Herkes iyi mi? Stampy: Ah problemi anlıyorum. Bak! Ray’da bir delik var. Stacy: Gerçekten mi Stampy? Lizzy: Belkide tamir etmek için blokları toplamalıyız. Preston: Hadi bunu bir yarışa çevirelim. İlk geri dönen kazanır. Stacy: Tamam, işaret edince, hazır ol BAŞLA! Tamam, bu toprak parçalarından birazını bir araya toplayacağım. Bekleyin. Millet kazamıyorum! Preston: Aynı. Lizzy: Bende. Stacy: Tamam, bu cidden garip. Stampy sen kazabiliyor musun? Stampy: Kazamıyorum! Stacy: Tamam, herkes sakin olsun. Stampy: Oyun bozuldu mu? Stacy: Eğer öyleyse nasıl düzelteceğiz? Lizzy: Bilmiyorum. Stampy: MineCraft codunun nasıl yazılacağını bilen biri var mı?"
+      4:
+        text: "(puff) Preston: Bu ne? Stampy: Bunlardan birini daha önce hiç görmedim. Lizzy: Çok sevimli! Stacy: Ev...evcilleştirebilinir mi? Preston: Tamam, neler oluyor? Birinin gerçek dünyaya dönmesi ve bunu düzeltmesi gerekiyor.  Hepsi: Onu değil! Stacy: O deği- (İç çeker.) Tamam, ben giderim."
+      5:
+        text: "Hah, tamam, hey, şimdi gerçek dünyadayım. Gidip Minecraft ofislerini bulmaya çalışacağım."
+      6:
+        text: "Ancak yardımınıza ihtiyacım olacak. Eğitimi yapmaya başlayın, kodlamayı öğrenmeye başlayın, ben birkaç seviye sonra size yetişirim, tamam mı? Bana şans dileyin! Bence bu yönden. Ah! Kaktüs! Ben iyiyim!"
+      7:
+        text: "Kod Saati meydan okumasını tamamlamak için Ajan'ı programlamak için kod yazmanız gerekmekte. Yolunuzdaki tüm engelleri kaldırmak için Ajan ile birlikte çalışacaksınız ki yolculuğunuz için ihtiyaç duyacağınız öğeleri alabilin. Yalnızca Ajan blokları yerleştirebilir ve kırabilir, ve öğeleri yalnızca siz toplayabilirsiniz. Ekranınız üç ana kısma ayrılmıştır. Solda Minecraft var."
+      8:
+        text: "Orta alan Ajan'ın anlayabileceği komutları içeren bir araç kutusu."
+      9:
+        text: "Ve sağ tarafta, çalışma alanı. Agent'ı kullanmak için komutları biriktireceğin yer."
+      10:
+        text: "Ajan, yürüyebilir, baskı plakalarını, döndürebilir ve etkinleştirebilir. Aynı zamanda blokları yok edebilir ve blokları yerleştirebilir. Bu minecraft rayları gibi bir bloğu yerleştirdiğinde, kendi altına yerleştirir."
+      11:
+        text: "Ne yapmanız gerektiğini unutursanız her bir seviyenin yönergeleri ekranın üst kısmında bulabilirsiniz."
+      12:
+        text: "Tekrar denemek isterseniz, her şeyi sıfırlamak için mavi sıfırlama düğmesine basabilirsiniz. Eğer bir kod bloğunu silmeniz gerekiyorsa çalışma alanından alet kutusuna sürükleyin. Ajan'ı hareket ettirmek için çalıştıra basmayı unutmayın. Tamam, durmayın ve ilk birkaç seviyeyi deneyin. İyi şanslar!"
+    mc_2017_repeat:
+      1:
+        text: "Stampy: Acaba Stacy neyin peşinde?"
+      2:
+        text: "Stacy: Vaay, sanırım doğru yerdeyim. Bu inanılmaz!"
+      3:
+        text: "Minecrafta geri döndüm gibi hissediyorum! Merhaba. Nasılsın? Merhaba?"
+      4:
+        text: "Ah, bir sarmaşık var. Hiçbir şey yapmıyorsun, değil mi? Katie: Stacy? Stacy: Merhaba, Katie? Katie: Evet, Minecraft'a hoşgeldiniz!"
+      5:
+        text: "Stacy: Bu inanılmaz. Yani sen hergün burada geliştirici olarak çalışıyorsun öyle mi? Katie: Evet, baya harika. Ben Minecraft piyasa ekibinde bir geliştiriciyim. Stacy: Kaç tane kodlama dili biliyorsun? Katie: Kariyerimde muhtemelen bir düzineden fazlasıyla çalıştım. Stacy: Bir düzine mi? Katie: Evet. Stacy: O zaman şimdi, kendisini Ajan olarak adlandıran bu küçük golem adam hakkında hiçbir şey bilmiyorsun? Katie: Ajan'ı, Steve ya da Alex'in yapamayacağı örneğin lavı geçmek gibi şeyleri yapmak için kullanıyoruz. Stacy: O zaman, kodlamayı öğrenmek istiyorum ve onlar kodlamanın nasıl yapıldığını öğrenmek istiyorlar, öyleyse öğrenirken bilmeniz gereken ilk şeylerden biri nedir?"
+      6:
+        text: "Katie: Eh, döngülerin nasıl kullanılacağını öğrenmelisin. Döngüler, geliştiricilerin bir bilgisayara komutlar vermek için yazdıkları ve tekrar tekrar çalıştırılabilen şeylerdir. Stacy: Anladım, dolayısıyla bazılarının ilerideki seviyelere geldiğini düşünüyorum., bu yüzden devam edin ve döngüleri bir deneyin."
+      7:
+        text: "Bir sonraki seviyede, Ajan'ı yol boyunca hareket ettirmek için bir döngü kullanabilirsiniz. Yineleme bloğunu çalışma alanına sürükleyin ve ilerletme bloğunu yineleme bloğunun içine yerleştirin. Bu, bir sürü bloğu çalışma alanına sürüklemeye gerek kalmadan, bilgisayara aynı şeyi bir çok kez arka arkaya yapmasını söyler. Yineleme bloğuna bir sayı koyarak kaç kez tekrarlanacağını seçebilirsiniz."
+      8:
+        text: "Yineleme bloğuna dönüşler ve birden fazla komut koyabilirsiniz, ama şimdilik Ajan'ı bir kaç adım ileri hareket ettirmek için tekrarlamayı kullanmayı deneyin. Unutmayın, bir bulmacada takılıp kaldıysanız her zaman mavi reset düğmesine basarak tekrar deneyebilirsiniz."
+      9:
+        text: "Katie's gibi harika bir iş bulmayı düşünüyorsanız, her seviyeyi bitirdiğinizde devam edin ve kodu göster düğmesine tıklayın. Bu size Katie gibi birinin Minecraft'ı programladığı sırada kullandığı Javascript kodunu gösterecektir. Katie: Evet, herkese bol şans!"
+    mc_2017_functions:
+      1:
+        text: "Preston: Övünmeye çalışmıyorum, ama parkurda oldukça iyiyim. Lizzy: Hadi uyuyalım, Stacy geri döndüğünde gün doğmuş olur."
+      2:
+        text: "Stacy: Tamam millet, Minecraft ofislerinden döndüm ve sanırım oyunda yaşadığım sorunu nasıl çözeceğini biliyorum. Sanırım bir fonksiyonu kullanabilirim. İzin ver sadece şunu açayım."
+      3:
+        text: "Yani bir fonksiyon, belirli bir görevi yerine getirmek için belirli talimatlar kümesidir, bir tür tarife benzemektedir. Sonraki birkaç seviyede, bulmacaları çözmek için kullanabileceğiniz fonksiyonlara erişiminiz olacak."
+      4:
+        text: "İşlevdeki kodun alet çantasına ne işe yaradığına bak."
+      5:
+        text: "Daha sonra o isimli bloğu alet kutusundan bulup o bloğu çalıştırmak istediğinizde dışarı sürükleyin."
+      6:
+        text: "Unutma, aynı fonksiyonu benzer talimatları uygulamaya ihtiyacın olduğunda tekrar kullanabilirsin mesela bir köprü yap. İyi şanslar, yapabiliceğini biliyorum!"
+    mc_2017_congratulations:
+      1:
+        text: "Perston: Tebrikler!"
+      2:
+        text: "Lizzy: Tebrikler!"
+      3:
+        text: "Stampy: Tebrikler, başardın!"
+      4:
+        text: "Stacy: Tebrikler çocuklar, çok iyiydin! Ve Hour of Code'u bitirdin, Minecrafta kodlamaya başlayabilirsin. Döngüler, işlevler ve bir yazılım aracı ne işe yara öğrendin."
+      5:
+        text: "Şimdi sıra senin geliştirici olduğun serbest seviyede. Kalan tüm zamanınla keşfetmek, kurulmak ve maden kazmak için kendi kodlarını yaz."
+      6:
+        text: "Bu seviyede yazdığınız kodu Minecraft: Eğitim Sürümü ile Minecraft dünyanıza ekleyebilirsiniz. Ajan ile kodlamaya devam etmek için 'Son'u tıklamanız ve dünyanızda kullanabilmeniz için oluşturulmuş linki almak için talimatları takip etmeniz yeterli. İyi eğlenceler ve güzel işler!"
+      7:
+        text: "Stacy: Ve geri döndüm! Tamam millet, bu Ajan! Size ne yapabileceğini göstereyim. Bakın, yapıyor! Ona bu terra cotta bloklarından bir merdiven inşa ettirmesini söyledim, şimdi buradan çıkmak için bunu kullanmamız yeterli. Ve millet, sadece merdivenler değil. Ajan'a istediğim her şeyi yapmasını söyleyebilirim ve bunu benim için yapar."
+      8:
+        text: "Stampy: Bunu nasıl yaptın? Stacy: Çok kolay, aslında sadece kod kullandım!"
+    csd_concept_how_computers_work:
+      1:
+        text: "Baktığın her yerde, bilgisayarlar dünyayı değiştiriyor. Masaüstülerinde, evlerimizde, ceplerimizde ya da hemen hemen her yerde. Çoğumuz bu devrimci teknolojiyi günlük kullanıyor olsa da, sıklıkla \"Bilgisayarlar nasıl çalışır\" diye sormuyoruz. Bu seride, bilgisayarların gerçekten nasıl çalıştığını, bilgisayarın bilgisayar haline getirilmesiyle başlayarak öğreneceksiniz. Ardından, bilginin akıl-almaz hızlarda açılıp kapanan minik elektrik sinyalleri kullanarak bilgisayarın içinde nasıl gösterildiğine bakacaksınız."
+      2:
+        text: "Bu işlemden sonra, bilgisayarların basit matematikten tüm sanal dünyaların benzetimine kadar her şeyi yapmak için devreleri nasıl kullandıklarını öğreneceksiniz. Hemen sonra, aslında tüm bilgilerin girişini, çıkışını ve depolanmasını yapan bir bilgisayarın farklı parçaların uzaklaştırıp bakacaksınız. En sonunda, kodun aslında ne olduğuna ve yazılımın donanımları nasıl kontrol ettiğine bir göz atacaksınız. İster sadece günlük kullandığınız cihazları merak edin ister geleceğin buluşlarını tasarlamak isteyin, ilk adım bilgisayarların nasıl çalıştıklarını öğrenmektir."
+    csd_concept_computer:
+      1:
+        text: "Benim adım May-Li Khoe, ve bir tasarımcı ve bir mucitim. Yani, tasarladığım şeylerden bazıları Apple'daydı, ve şimdi ise çocukların kullanması için okulda geçen zamanlarını kolaylaştıracak ürünler tasarlıyorum. Diğer işlerim DJ'lik ve dans sayılabilir."
+      2:
+        text: "Bilgisayarlar her yerde! İnsanların cebinde, arabaların içinde, insanların bileklerinde... Şu anda sırt çantanızda olabilirler. Ama bir bilgisayarı bilgisayar yapan şey nedir?  Bu arada bir bilgisayarı bir bilgisayar yapan nedir? Ve hatta nasıl çalışır?"
+      3:
+        text: "Merhaba ben Nat! Xbox'un orijinal tasarımcılarından biriydim. Yedi yaşımdan beri bilgisayarlarla çalışıyordum ve şimdi sanal gerçeklikte çalışıyorum. İnsanlar olarak, biz her zaman sorunları çözmemize yardımcı olacak araçlar ürettik. Aletler bir el arabası, bir çekiç veya bir matbaa veya bir traktör-römorku gibi."
+      4:
+        text: "Bu icatların hepsi manuel çalışmada bize yardımcı oldu. Zamanla insanlar, denklemleri çözme ya da gökyüzündeki yıldızları takip etme gibi yaptığımız düşünce çalışmalarında bizlere yardımcı olacak bir makinenin tasarlanıp kurulabilir olup olmadığını merak etmeye başladı. Bu makinelerin kum ve taş gibi fiziksel şeyleri hareket ettirmek ya da işlemekten ziyade, bilgi işlemek için tasarlanması gerekirdi. Bilgisayar bilimi önderleri bir düşünce makinasını nasıl tasarlayacaklarını araştırdıklarında, bu makinenin dört farklı görevi gerçekleştirmek zorunda olduğunu fark ettiler."
+      5:
+        text: "Girdi almalı, bilgiyi depolamalı, işlemeli ve daha sonra sonuçlarını çıktılamalı. Bu şimdi basit gibi gelebilir, ancak bu dört şey tüm bilgisayarlar için ortaktır. Bir bilgisayarı bilgisayar yapan şey budur."
+      6:
+        text: "Bilgisayarlar zamanında zaten harika olan basit hesap makineleri olarak başladı ve o zamanlar sadece sayıları değiştiriyorlardı. Ama şimdi onları birbirimizle konuşmak için kullanıyoruz, oyun oynamak için kullanıyoruz, robotları kontrol ediyoruz, ve muhtemelen hayal edebileceğiniz tüm çılgın şeyleri yapıyoruz. Modern bilgisayarlar ile o eski aksak makinelerin alakası yok ama yine de aynı dört şeyi yapıyorlar."
+      7:
+        text: "İlk önce, girdi hakkında konuşacağız. Bilgisayarlara klavye ile ne yapılacağını söyleyebilirsiniz, bilgisayarlara fare, mikrofon ve kamera ile ne yapılacağını söyleyebilirsiniz. Tüm bu farklı girdiler, daha sonra bellekte saklanacak bir bilgisayar bilgisi verir."
+      8:
+        text: "Bilgisayarın işlemcisi bilgileri bellekten alır. Yalnızca bir komut dizisi olan bir algoritmayı kullanarak onu değiştirir veya manipüle eder. Ve daha sonra işlenmiş bilgileri tekrar bellekte saklar İşlenmiş bilgiler çıktıya hazır olana kadar bu işlem devam eder."
+      9:
+        text: "Bir bilgisayarın bilgiyi nasıl çıkardığı bilgisayarın ne yapmak üzere tasarlandığına bağlıdır. Bilgisayar ekranı yazı, fotoğraflar, videolar yada interaktif oyunlar gösterebilir -- hatta sanal gerçeklikte buna dahil! Bir bilgisayarın çıktı birimi, bir robotu kontrol etmek gereken sinyalleri bile içerebilir."
+      10:
+        text: "Ve kim bilir yarının bilgisayarları nasıl olacak? Umudum, yarının bilgisayarlarının neye benzeyeceğini kararlaştırmaya yardım etmen. Ama tüm bilgisayarlar, kullandıkları farklı teknoloji tiplerine bakılmaksızın, her zaman aynı dört şeyi yapıyorlar. Bilgi alıyorlar, veri olarak saklıyorlar, işliyorlar ve sonuçları çıktılıyorlar."
+    csd_concept_binary_data:
+      1:
+        text: "Merhaba! Benim adım Limor Fried, ve ben Adafruit Industries'te mühendisim. Ve burada mühendislik ve tasarım yapıyor ve moda, müzik ve teknoloji devrelerini tasarlıyorum."
+      2:
+        text: "Benim adım Federico Gomez Suarez, ve Microsoft Hack for Good'da yazılım geliştiricisiyim. Ve günümüzün büyük toplumsal sorunlarından bazılarını çözmemize yardımcı olmak için teknolojiyi inceliyorum."
+      3:
+        text: "Bilgisayarların sıfır ve birler ile çalışıtığını duymuş olabilirsin. Fakat günümüzde neredeyse kimse direk olarak bu sıfır ile birler ile uğraşmaz. Fakat sıfır ve birler bilgisayarların içeride nasıl çalıştığı hakkında büyük rol oynar."
+      4:
+        text: "Bilgasayarın için elektrik kabloları ve devreler bilgisayarın içindeki bilgi akışını sağlar. Fakat bilgiyi elektrik ile nasıl saklarsın?"
+      5:
+        text: "Elektriği akan tek bir teliniz varsa, sinyal açık ya da kapalı olabilir. Bu pek çok seçenek değil, ama bu gerçekten önemli bir başlangıçtır. Tek bir tel ile, evet ya da hayır, doğru ya da yanlış, bir veya sıfır veya sadece iki seçenekli başka herhangi bir şeyi temsil edebiliriz. Tek bir teli açma/kapama durumu bit denir ve bu bilgisayarın saklayabileceği en küçük bilgidir."
+      6:
+        text: "Daha fazla kablo kullanırsanız, daha fazla bit alabilirsiniz: daha fazla ve sıfırlar. Daha fazla bit ile daha karmaşık bilgileri temsil edebilirsiniz. Ancak bunu anlamak için, ikili sayı sistemi denilen şey hakkında bilgi almalıyız."
+      7:
+        text: "Onlu sayı sisteminde, sıfırdan dokuza kadar on basamağa sahibiz ve hepimiz saymayı vb. öğrendik. İkili sayı sisteminde, sadece iki basamağımız var: sıfır ve bir. Bu iki basamak ile herhangi bir sayıyı sayabiliriz."
+      8:
+        text: "İşte böyle işler. Bir onlu sayı sistemine hepimiz alışkınızdır, bir sayıdaki her bir konumun değeri farklıdır. 1 konum, 10 konum, 100 konum vb. var. Örneğin, 100 pozisyondaki 9, 900'dür. İkili olarak, her konum bir değer taşır. Fakat, her defasında 10 ile çarpmak yerine 2 ile çarparsak, 1 konum, 2 konum, 4 konum, 8 konum vb. olur. Örneğin, ikili 9 sayısı 1001'dir. Değeri hesaplamak için, 8 kat art artı 0 kat 4 artı 0 kat 2 artı 1 kat 1 ekleriz. Bilgisayarlar bizim için bunu yaptığından dolayı neredeyse hiç kimse bu matematiğini yapmaz. Önemli olan, herhangi bir sayının yalnızca bir ve sıfırlarla veya açık veya kapalı tellerin bir demetiyle temsil edilebilmesidir. Ne kadar çok tel kullanırsanız, saklayabileceğiniz sayı da o kadar artar. 8 tel ile, 0 ile 255 arasında sayıları saklayabilirsiniz. Bu 8 olanıdır. Sadece 32 tel ile, 0'dan 4 milyondan fazla depolayabilirsiniz. İkili sayı sistemini kullanarak, istediğiniz herhangi bir sayıyı temsil edebilirsiniz."
+      9:
+        text: "Peki ya diğer bilgi türleri? Metin, görüntü, ses gibi? Tüm bu şeylerin rakamlar ile temsil edilebileceği ortaya çıkar. Alfabedeki tüm harfleri düşünün. Her harfe bir rakam atayabilirsiniz. A 1, B 2, vb. olabilir. Sonrasında, herhangi bir kelimeyi bir sıra rakam olarak gösterebilirsiniz. Ve gördüğümüz gibi, bu rakamlar elektrik sinyalleri açık ya da kapalı olarak depolanabilir. Her web sayfasında ya da telefonunuzda gördüğünüz her kelime bu şekilde bir sistem kullanılarak gösterilir."
+      10:
+        text: "Şimdi, fotoğraflar, videolar ve bir ekranda gördüğünüz tüm grafikleri düşünelim."
+      11:
+        text: "Tüm bu görüntüler piksel adı verilen küçük noktalardan oluşur ve her pikselde bir renk vardır. Her renk numaralar ile temsil edilebilir. Tipik bir görüntüyü düşündüğünüzde içinde milyonlarca pixel barındırır, ve tipik bir video saniyede 30 resim gösterir burada çok fazla veriden söz ediyoruz."
+      12:
+        text: "Her sese temelde havadaki bir dizi titreşimdir. Titreşimler grafik olarak bir dalga formu olarak gösterilebilir. Bu dalga formundaki herhangi bir nokta bir sayı ile gösterilebilir. Ve bu şekilde, herhangi bir ses bir dizi sayıya bölünebilir. Daha kaliteli bir ses istiyor iseniz, 32-bit ses ya da 8-bit ses seçersiniz. Daha çok bit, daha yüksek aralıkta sayı anlamına gelir."
+      13:
+        text: "Kod yazmak ya da kendi uygulamanızı yapmak için bir bilgisayar kullandığınız zaman, doğrudan bunlarla ve sıfırlarla uğraşmazsınız. Fakat resim, ses veya video ile uğraşacaksınız. Bundan dolayı, bilgisayarların içte nasıl işlediğini anlamak isterseniz, hepsi bu basit olanlardan, sıfırlardan ve arkasındaki devrelerdeki elektrik sinyallerinden oluşur."
+    csd_concept_circuits_logic:
+      1:
+        text: "Devreler hakkında keşfettiğim en havalı şeylerden biri de, devrim, yaratıcı bir fikrim varsa devreyi kullanarak bu yaratıcı fikri elde edebileceğim gibi bir sanat formu olabilir. Yani fikir sahibiyseniz, bu fikirleri hayata geçirmek amacıyla teknoloji kullanabilirsiniz."
+      2:
+        text: "Bir bilgisayarın her girişi veya çıkışı etkili bir şekilde elektrik sinyalleri veya birler veya sıfırlar ile gösterilebilen bir bilgi türüdür."
+      3:
+        text: "Giriş olarak gelen bilgileri işlemek ve bilgiyi çıktı yapmak için bir bilgisayarın giriş sinyallerini değiştirmesi ve birleştirmesi gerekir. Bunu yapmak için, bir bilgisayar, bir araya gelerek devreyi oluşturan milyonlarca ufacık elektronik bileşeni kullanır."
+      4:
+        text: "Devrelerin, bir ve sıfırlar ile temsil edilen bilgileri nasıl değiştirebileceğini ve işleyeceğini daha yakından inceleyelim. Bu inanılmaz basit bir devredir. Bir elektrik sinyali alıyor ya da kapanıyor ve sinyali çeviriyor. Bundan dolayı, verdiğiniz sinyal 1, devre size 0, veriyorsa ve 0'a bir devre verirseniz size 1 veriyor. Giden sinyaller çıkan sinyal ile aynı değildir ve bu yüzden bu devre DEĞİL diyoruz."
+      5:
+        text: "Daha karmaşık devreler birden fazla sinyali alıp birleştirebilir, ve size farklı bir sonuç verebilir. Bu örnekte bir devre iki elektrik sinyali alacaktır, her biri bir 1 yada bir 0 olabilir. Gelen sinyallerden herhangi biri 0 ise sonuçta 0 olur. AND dediğimiz bu devre, size ancak ilk ve ikinci sinyalin her ikiside 1 olduğu zaman 1 sonucu verebilir."
+      6:
+        text: "Bu gibi basit mantıksal hesaplamalar yapan birçok küçük devre vardır. Bu devreleri bir araya getirerek, daha karmaşık hesaplamalar yapan daha karmaşık devreler oluşturabiliriz."
+      7:
+        text: "Örneğin, toplayıcı adı verilen 2 bit’i bir araya toplayan bir devre yapabilirsiniz. Bu devre, her biri 1 veya 0 olan 2 ayrı bit alır, ve toplamı hesaplamak için onları bir araya toplar. Toplam 0 artı 0 eşittir 0, 0 artı 1 eşittir 1 veya 1 artı 1 eşittir 2 olabilir. Çıkan iki kabloya da ihtiyacınız var, çünkü toplamı temsil etmek için ikili basamak alabilir. İki bit bilgi eklemek için tek bir toplayıcıya sahip olduğunuzda, daha büyük sayıları bir araya getirmek için bu toplama devrelerinin katlarını yan yana koyabilirsiniz."
+      8:
+        text: "Örneğin, 8-bitlik bir toplayıcının 25 ve 50 sayılarını nasıl eklediği işte burada. Her numara 8'lik bitler kullanılarak temsil edilmiş ve devreye giren 16 farklı elektrik sinyali elde edilmiş. 8-bit ekleyici için olan devrenin içinde bir çok küçük toplayıcı bulunur, bunların hepsi ile toplam hesaplanır."
+      9:
+        text: "Farklı elektrik devreleri, çıkarma veya çarpma gibi diğer basit hesaplamaları gerçekleştirebilir. Aslında, bilgisayarınızın yaptığı tüm bilgi işlemleri sadece birsürü küçük operasyonun bir araya gelmesidir. Bir bilgisayar tarafından yapılan her bir işlem o kadar basittir ki bir insan tarafından yapılabilir, ama bilgisayarın içindeki bu devreler çok çok daha hızlıdır."
+      10:
+        text: "Eskiden, bu devreler ağır ve kullanışsızdı. 8 -bit toplayıcı bir buzdolabı kadar büyük olabiliyor ve basit bir hesaplama yapmaları dakikalar alabiliyordu. Günümüzde, bilgisayar devreleri mikroskobik boyutta ve daha hızlı işliyor. Daha küçük bilgisayarlar neden daha hızlıdır? Peki, devre daha küçük olduğu için elektrik sinyalinin gitmesi gereken mesafe de daha az olur. Elektrik, yaklaşık olarak ışık hızında hareket eder, modern devrelerin saniyede milyarlarca hesap yapabilmesinin nedeni de budur."
+      11:
+        text: "Oyun oynamak, video kaydetmek ya da evrenin keşfedilmesine bakmaksızın, teknolojiyle yapabileceğiniz her şey çok miktarda bilginin son derece hızlı bir biçimde işlenmesini gerektirir. Bütün bu karmaşıklığın altında ikili sistem sinyallerine, web sitelerine, videolara, müziğe ve oyunlara dönüşen küçük devreler var. Bu devreler, hastalık teşhis ve tedavi için DNA'nın şifresini çözmede bile yardımcı olabilir. Bütün bu devreler ile ne yapmak istersin?"
+    csd_concept_memory_cpu_input_output:
+      1:
+        text: "Merhaba, benim adım Madison Maxey. Loomia adında bir şirketim var ve biz akıllı kıyafetler ve akıllı yumuşak ürünler için akıllı kumaşlar üretmeye odaklanıyoruz. Tekstil söz konusu olduğunda gökyüzü limittir."
+      2:
+        text: "Benim adım Danielle Applestone, ve ben Othermachine Company'nin CEO'suyum. Biz bir masaüstü freze makinesi inşa ediyoruz. Bir freze makinesi, dönen bir kesici aleti alır ve bir 3B nesne oluşturmak için malzeme boyunca hareket ettirir."
+      3:
+        text: "Kapağının altında tüm bilgisayarlar aynı dört temel şeyi yapar. Bilgi girer, saklar ve işlerler ve sonrasında bilgileri çıktı alırlar. Bunların her biri bilgisayarın farklı bir bölümü tarafından yapılır."
+      4:
+        text: "Dış dünyadan girdiyi alıp ikili bilgiye dönüştüren giriş aygıtları var. Bu bilgiyi depolamak için bir bellek var. Tüm hesaplamaların yapıldığı bir merkezi işlem birimi veya CPU var. Ve son olarak, bilgiyi alıp onu fiziksel çıktıya dönüştüren çıktı aygıtları var."
+      5:
+        text: "İlk olarak girdiden bahsedelim. Bilgisayarlar, bir bilgisayar klavyesi, bir telefonun dokunmatik yüzeyi, kamera, mikrofon veya GPS gibi bir çok farklı girdi türünü alabilir. Fakat bir arabadaki, termostattaki veya dronedaki sensörler bile farklı girdi cihazlarıdır."
+      6:
+        text: "Şimdi, girişin bir bilgisayarda nasıl bir yol izlediği ve çıktı haline geldiğine ilişkin basit bir örneği inceleyelim. Klavyenizdeki bir tuşa bastığınızda - hadi \"B\" harfi diyelim. Klavye harfi bir sayıya çevirir. Bu sayı bir ve sıfırlar halinde ikili olarak bilgisayara gönderilir."
+      7:
+        text: "Bu sayıdan başlayarak CPU, \"B\" harfini piksel piksel olarak nasıl göstereceğini hesaplar. CPU, \"B\" harfini çizmeyi anlatan adım-adım talimatları bellekten ister. CPU bu talimatları çalıştırır ve sonuçları piksel olarak hafızaya alır."
+      8:
+        text: "Son olarak, bu piksel bilgisi ekranda ikili olarak gönderilir. Ekran, ikili sinyalleri, gördüklerini oluşturan küçük ışıklara ve renklere dönüştüren bir çıkış aygıtıdır."
+      9:
+        text: "Bu o kadar hızlı gerçekleşir ki anlıkmış gibi hissedilir, ancak parmağınız anahtar noktaya bastığı andan itibaren bilgisayar her harfi görüntülemek için binlerce talimat çalıştırır."
+      10:
+        text: "Bu örnekte çıkış aygıtı ekran idi, ancak, bilgisayardan ikili sinyal alan ve fiziksel dünyada bir şeyler yapan birçok farklı çıktı türü vardır. Örneğin, bir hoparlör ses çıkaracaktır ve bir 3B yazıcı bir nesne basacaktır. Çıkış cihazları, bir robot kolu, bir otomobilin motoru yada şirketimin yaptığı freze makinesinin kesme aleti gibi cihazların fiziksel hareketini de kontrol edebilir. Yeni girdi ve çıktı türleri, bilgisayarların dünyayla tamamen yeni yollarla etkileşime girmesini sağladı. Bunlar, hafıza biriminin ve CPU'nun hız ve boyutundaki iyileştirmeler sayesinde oldu."
+      11:
+        text: "Bir görev ne kadar karmaşıksa ve girdi veya çıktı olarak o kadar çok bilgi vardır, bilgisayar daha fazla işlem gücü ve belleğine ihtiyaç duyar. Ekranda harf yazdırmak kolay olabilir ama, karmaşık 3d grafikler yapmak ya da yüksek çözünürlüklü bir film kaydetmek için, modern bilgisayarlar tüm bu bilgileri işleyen çoğu zaman birden çok CPU'ya ve bunları depolayan birçok gigabaytlık hafızaya sahiptirler."
+      12:
+        text: "Bilgisayarla yapmak istediğiniz ne olursa olsun, her bir eylem şu şekildedir: fiziksel dünyadan bilgi girmek, bu bilgiyi depolamak ve işlemek, ve bazı çıktıları fiziksel dünyaya geri getirmek."
+    csd_concept_hardware_software:
+      1:
+        text: "Merhaba, adım Erica Gomez ve Amazon.com'da mühendislik müdürüyüm. Teknolojide ve özellikle Amazon'da çalışmakla ilgili en iyi şeylerden biri köpeğimi her gün çalışmak için yanıma almamdır. Benim işim yazılımın kapıyı açtığından emin olmaktır ve onun işi ise masamın altında uyumak ve çok yüksek sesle horlamaktır."
+      2:
+        text: "Benim adım Jerome Holman ve Team Xbox'ta Program Yöneticisiyim ve çok eğlenceli bir işim var: Xbox'ınızdaki sevdiğiniz tüm oyunları size getirebilmek için basitçe donanımı ve yazılımı bir araya getiriyorum."
+      3:
+        text: "Bir bilgi işlem cihazına baktığınızda, devreler, çipler, kablolar, hoparlörler, fişler ve diğer her türlü şeyi görürsünüz. Bu donanımdır."
+      4:
+        text: "Ama görmediğiniz şey yazılımdır. Yazılım, bu makinede çalışan tüm bilgisayar programları veya kodlarıdır. Yazılım, uygulamalar ve oyunlardan web sayfalarına, ve ekibimin ve benim müşterilerin nasıl davrandığını anlamak için Amazon'da kullandığımız veri bilim yazılımına kadar her şey olabilir."
+      5:
+        text: "Peki, donanım ve yazılım birbirleriyle nasıl etkileşim kurar? Bir bilgisayarın merkezi işlem birimine yani CPU'ya bir göz atalım."
+      6:
+        text: "CPU, bilgisayarın diğer tüm bölümlerini kontrol eden ana yongadır. \nBir CPU'nun farklı şeyler yapması gerekir, bu nedenle içinde özel görevleri yerine getiren daha küçük, daha basit parçalar bulunur. Basit matematik ve mantık işlemleri yapan devrelere sahiptir. Bilgisayarın farklı bölümlerine bilgi göndermek ve almak için başka devreleri de vardır."
+      7:
+        text: "İşlemcinin gerçek büyüsü, hangi devrelerin kullanılacağını ve ne zaman kullanılacağını nasıl bildiğidir. CPU belirli bir işi yapmak için hangi devrenin kullanılacağını söyleyen basit bir komut alır. Örneğin, bir \"add\" komutu, CPU'ya yeni bir sayı hesaplamak için dış devresini kullanmasını söyler. Ve \"store\" komutu, CPU'ya bu sonucu bellekte kaydetmek için farklı bir devre kullanmasını söyler."
+      8:
+        text: "Tıpkı rakamlar gibi, bu basit komutların tümü ikili olarak, bir ve sıfırlarla yada açık ve kapalı elektrik sinyalleri ile temsil edilebilir. İkili komutlar belleğe kaydedilir ve CPU bunları sırayla birbiri ardına getirir ve çalıştırır. Aslına bakarsak bu komut dizisi çok basit bir bilgisayar programıdır."
+      9:
+        text: "İkili kodu, yazılımın en temel formu ve bir bilgisayarın tüm donanımını kontrol eder. Şu günlerde kimse ikili olarak yazılım yazmıyor. Bu daima sürer!"
+      10:
+        text: "Bugün yazdığımız yazılımlar bu (Python) gibi görünüyor, yada bu (Ruby), hatta bu (Blockly). Bunun gibi programlama dilleri, İngilizce'ye çok benzeyen bir şekilde komutlar yazmanızı sağlar."
+      11:
+        text: "Ekranda dikdörtgen çizmek için tek bir komuta ihtiyacınız vardır. Bu üst düzey komut, CPU'nun anladığı yüzlerce ya da binlerce basit ikili sistem komutuna dönüştürülür. Yazılım, CPU'ya ne yapacağını söyler; fakat müzik dinlerken, web'de gezinirken ve bir arkadaşınızla sohbet ederken bilgisayarınız birden fazla yazılım çalıştırır."
+      12:
+        text: "Peki, her şeyden önce bu programların tümü bilgisayarda nasıl olur ve CPU bunları bir defada nasıl çalıştırabilir? Öğrenmek için işletim sistemine bir göz atacağız."
+      13:
+        text: "Bilgisayarın işletim sistemi, yazılımın bilgisayarın donanımını nasıl kullanacağını yöneten temelprogramdır. Örneğin, çoğu kişisel bilgisayarda çalışan Windows işletim sisteminin yaratılmasına yardım ettim."
+      14:
+        text: "İşletim sistemi, bilgisayardaki diğer yazılımların kontrol edilmesine izin veren özel becerilere sahip bir programdır. Bilgisayar programınızın hafızasına yükleyerek yeni programlar yüklemenizi sağlar. Bir programın merkezi işlem birimi tarafından ne zaman çalıştırıldığına ve o programın bilgisayarın giriş ve çıkış aygıtlarına erişip erişemeyeceğine karar verir. Ve bilgisayarınızın bir anda birden çok programı çalıştırdığını düşündüğünüzde, gerçekte, bu CPU'yu saniyenin kesirleri için paylaşan programlar arasında hızla geçiş yapan bir işletim sistemidir."
+      15:
+        text: "Her bilgisayarın içinde, bilgisayarın donanımını kontrol eden bir işletim sistemi yönetim yazılımı vardır."
+      16:
+        text: "Yazılım, basit ikili koddan yapılmış bir dizi komuttur ve bu ikili kod sadece milyarlarca minik devrenin üzerinden akan elektrik sinyalleridir."
+      17:
+        text: "Bilgisayarlar, her türlü şaşırtıcı şeyi yapma potansiyeline sahiptir. Ancak bilgisayarın akıllı ya da faydalı olmasını sağlayan tek şey sizsiniz. Kodlama öğrendiğinizde çözmek istediğiniz sorunu tanımlar ve bu fikirleri gerçeğe dönüştüren yazılımı yazarsınız."

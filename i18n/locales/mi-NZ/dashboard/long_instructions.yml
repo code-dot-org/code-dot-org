@@ -1,0 +1,251 @@
+mi:
+  data:
+    long_instructions:
+      2-3 Artist 3.4: "Ka neke te paraka peke i te rehetoi me te kore tā.\nTāngia tētahi rārangi pīhono, e whakamahi ana i ngā paraka ‘peke whakamua’ me te ‘neke whakamua’.\n50 pika te roa o ia rārangi."
+      2-3 Artist 4: Āwhinatia mai te hanganga o te whare mō tēnei ngeru.
+      2-3 Artist 9 NEW: Whakaotia tēnei manu aute
+      2-3 Artist 9 REPLACEMENT: Tāngia ēnei arapiki kia oti!
+      2-3 Artist 9: Whakaotia tēnei manu aute
+      2-3 Artist Debugging 10: "He tino whāiti te papa aronga o taku pūwhakahaere kēmu. \\r\n\\r\nE taea rānei e koe te whakawhānui kia 10 pika nui ake?\\r\n\\r\nWhakamātauhia te waehere e tika ai."
+      2-3 Artist Debugging 11: |-
+        E ngahoro ana taku tarahī huka!\r
+        \r
+        Ka taea rānei e koe te kite i te mate?
+      2-3 Artist Debugging 2: "Kei te hē te waehere mō ngā kumikumi o te ngeru.\n\\r\n\\r\nWhakatikahia tēnei waehere, tāngia ētahi kumikumi e ōrite ana te roa."
+      2-3 Artist Debugging 3: "He rua i tōku poti! \\r\n\\r\nHe aha hei whakatika e hono anō ai ngā pito?"
+      2-3 Artist Debugging 5: "E hē ana te waehere mō te waewae. \\r\n\\r\nKa taea rānei e koe te whakatika?"
+      2-3 Artist Debugging 6: |-
+        Te āhua nei e noho ana au i tētahi tūru e mahue nei tētahi o ōna waewae!\r
+        \r
+        Whakatikahia te waehere ka tāngia ai te waewae whakamutunga.
+      2-3 Artist Debugging 7: |-
+        Te āhua nei kua tāngia kōarohia te C i te waehere!\r
+        \r
+        Māu e whakatika kia C anō tōna hanga?
+      2-3 Artist Debugging 8: |-
+        Ka kī mai taku kaiako, ki te tīmata me oti!\r
+        \r
+        Āwhinatia ahau ki te whakaoti i taku pinewīra. He aha pea te mate?
+      2-3 Artist Debugging 9: |-
+        Kua hē katoa tētahi mea!\r
+        \r
+        E hē ana waehere o tēnei rautō. Māu e whiriwhiri me pēhea te rehetoi e tuhi tika mai i te rautō?
+      2-3 Artist Free Play: He tākaro-herekore! Tāngia tāu e pai ai.
+      2-3 Artist Functions 11.5: "Anei anō taua taumahi ‘tāngia he tapawaru’ ōrite. \\r\n\\r\nKa ahatia ina koromeketia te papatono matua e ono ngā wā, ka huri mā te 60 putu ia wā e koromeke ana?"
+      2-3 Artist Functions 12 Mike: "He rawe katoa ngā taumahi mō te tā āhuatanga matatini e maha ngā wā. \\r\n\\r\nKa taea rānei e koe te taumahi ‘tāngia he putiputi’ te whakamahi ki te whakakī i te toenga o te pouaka tipu?\\r\n100 pika kei waenga i ia tipu."
+      2-3 Artist Functions 12 a: "He rawe katoa ngā taumahi mō te tā āhuatanga matatini e maha ngā wā. \\r\n\\r\nKa taea rānei e koe te taumahi ‘tāngia he putiputi’ te whakamahi ki te whakakī i te toenga o te pouaka tipu?\\r\n100 pika kei waenga i ia tipu."
+      2-3 Artist Functions 12: "He rawe katoa ngā taumahi mō te tā āhuatanga matatini e maha ngā wā. \\r\n\\r\nKa taea rānei e koe te taumahi ‘tāngia he putiputi’ te whakamahi ki te whakakī i te toenga o te pouaka tipu?\\r\n100 pika kei waenga i ia tipu."
+      2-3 Artist Functions 2: "Ko tā te taumahi he whakamahuki i ngā paraka hou! \\r\n\\r\nKua nekehia e mātou ētahi paraka tā tapawhā hei taumahi ‘tāngia he tapawhā’. I konei, whakamahia te taumahi ‘tāngia he tapawhā’ ki te tā mōhiti. \\r\n\\r\nE 75 pika kei waenga i ia tapawhā."
+      2-3 Artist Functions 3: "Whakatika i te taumahi ki te tā i tētahi tapawhā he 115 te roa o tētahi taha kia nui ake ai ngā mōwhiti. \\r.\n\\r.\nE 45 pika kei waenga i ia tapawhā."
+      2-3 Artist Functions 4: Nā, meatia atu te taumahi ki roto i tētehi koromeke hei tā i ngā tapawhā e toru nei.
+      2-3 Artist Loops New 10: Me rauhī i tētahi huinga V hei koromeke ināianei.
+      2-3 Artist Loops New 12: "Tāngia tētahi taimana e 100 pika ōna taha.\n"
+      2-3 Artist Loops New 13: "Ka tīmatahia koe ki ētahi waehere (he kiwikiwi) ki hanga i te taimana kotahi. \\r\n\\r\nKoromekehia te waehere kiwikiwi ki te hanga i tētahi tauira ngahau!"
+      2-3 Artist Loops New 2: |-
+        Anei te panga ōrite kātahi anō ka oti i a tātou, engari i tēnei wā, e whakaaea noatia te paraka kotahi 'neke whakamua' me te paraka 'huri'.\r
+        \r
+        E taea rānei e koe te paraka 'tōai' ki te whakaoti i te rapanga?
+      2-3 Artist Loops New 9: Tāngia tētahi V noa (e 50 pika ia taha) hei whakaoti i te pere.
+      2-3 Artist Nested Loops 10: Koromekehia tēnei waehere kia 12 ngā e oti pai ai te tauira.
+      2-3 Artist Nested Loops 11: Koromekehia tēnei waehere kia 4 ngā wā e oti pai ai te tauira, ka huri 90 putu i muri i ia porowhita.
+      2-3 Artist Nested Loops 12: Koromekehia tēnei waehere kia 12 ngā wā e oti pai ai ngā tōrinorino.
+      2-3 Artist Nested Loops 2: "Koromekehia ināianei te tapatoru kia 6 ngā wā. \\r\n\\r\nHei muri i ia tapatoru, i mua i tānga o muri atu, me huri 60 putu."
+      2-3 Artist Nested Loops 4: "Koromekehia tēnei taimana kia 12 ngā wā hei tā i tētehi putiputi. \\r\n\\r\nKia mataara: Ka whakamahia e tātou ngā putu ki te koromeke i ngā taimana 12 pēnā i ngā tapatoru 12. \\r\nHe pēhea te nui o te huri hei muri i ia āhua?"
+      2-3 Artist Nested Loops 5: "Whakakīia ngā matapihi o tēnei whare ki tētahi koromeke tauroto. \\r\n\\r\nE 20 pika te roa o ia matapihi, ā, e 20 pika kei waenganui i ia matapihi."
+      2-3 Artist Nested Loops 7: "Koromekehia tēnei tapatoru kia 10 ngā wā hei tā i te rā. \\r\n\\r\nMe neke, me huri hoki hei muri i ia tapatoru. \\r\n\\r\nMāu anō e wānanga ka pēhea te nui o te huri mā te whakawehe ki te rahi o ngā putu o te porohita, mā te maha o ngā tapatoru hei hanga."
+      2-3 Artist Nested Loops 8: "Ināianei me tāpiri i te pātītī ki tō whakaahua.\n\\r\n\\r\nE 50 pika te tawhiti o tētehi rake i tētahi."
+      2-3 Artist Nested Loops 9: "Ka mutu tā tātou whakaahua i te tāpiritanga o tā tātou putiputi. \\r\n\\r\nKoromekehia te taimana kia 12 ngā wā hei tā i te putiputi."
+      2-3 Artist Nested Loops Free Play: He tākaro here-kore, tāngia tētahi mea rawe ki ētahi koromeke tauroto.
+      2-3 Bee Conditionals 11: "He aha kei waho rā? \\r\n\\r\nĀwhinatia mai taku rere i te iari ki te kohi waihonga i ngā putiputi whai waihonga. "
+      2-3 Bee Conditionals 13: |-
+        Te huhua hoki o ngā kaupapa e haere ana! \r
+        \r
+        Whakamātauhia tāu i ako ai ki te kohi i te katoa o te waihonga, kātahi nā ka mahi miere.
+      2-3 Bee Conditionals 15: "Ko te tikanga e mōhio whānui ana te tauira o te whata arapiki nei. \\r\n\\r\nKa taea rānei e koe te kohi waihonga i ngā putiputi whai waihonga, mā te whakamahinga o ngā paraka iti rawa e taea?"
+      2-3 Bee Conditionals 3: "Tirohia te nui o te waihonga!\\r\n\\r\nĀwhinatia mai taku kohi waihonga me te mahi mīere ki ngā paraka iti rawa e taea.  "
+      2-3 Bee Debugging 3: |-
+        Auē, he mea wero tēnei! \r
+        \r
+        Whakatikahia te/ngā hapa kia kohia katoatia te waihonga.
+      2-3 Bee Debugging 6: |-
+        Kātahi te taki ko tēnei!\r
+        \r
+        Whakatikahia te/ngā hapa kia kohia katoatia te waihonga.
+      2-3 Bee Debugging 9: |-
+        “Pī” kia manawanui i tēnei!\r
+        \r
+        Me whakatikahia e tātou ētahi mea i tēnei papatono ki te kohi i te waihonga katoa me te mahi i te mīere katoa.
+      2-3 Bee Functions 10: "Huri ai ngā putiputi waiporoporo i waenga rānei i te 1, i te 0 i ia wā whakahaere i te panga.  \\r\n\\r\nWaihangahia tētahi taumahi e kohi waihonga i ngā putiputi pāpura whai waihonga anake."
+      2-3 Bee Functions 2: "Ko te taumahi tētahi paraka waehere whakatutuki mahi.  \\r\n\\r\nWhakamahia te taumahi ‘tiki e 5’ ki te tiki i ngā waihonga e 5 i ia wā."
+      2-3 Bee Functions 4: "Ko tā te taumahi ‘neke me te tiki waihonga’ he huri i te pī, he kohi waihonga, ā, he whakahoki i te pī ki tōna timatanga.  \\r\n\\r\nWhakamahia te taumahi ki te kohi i te waihonga katoa."
+      2-3 Bee Loops 1: |-
+        Inā ngā putiputi reka rā! \r
+        \r
+        Kohia te waihonga i ia putiputi mā ngā putiputi rua rua noa iho.
+      2-3 Bee Loops 3A: Whakamahia tētahi koromeke ‘tōai’ hei kohi i te katoa o te waihonga.
+      2-3 Bee Loops 3B: Ināianei whakamahia te paraka ‘tōai’ kia kohia katoatia te waihonga ka mahi mai i te katoa o te mīere.
+      2-3 Bee Loops 4A: "Kia hia koromeke hei āwhina i a koe i tēnei panga nei? \\r\n\\r\nHe hoa ngā koromeke ki a koe! Whakamahia kia okuoku noa iho hei whakaoti i te panga nei mā ngā paraka rua rua noa iho."
+      2-3 Bee Loops 8: "Ka rerekē te rahi o te waihonga i ngā putiputi waiporoporo nei i ia wā e whakahaere ana i te panga. \\r\n\\r\nWhakamahia te koromeke ‘waihonga mā’ ki te kohi i te waihonga katoa. \\r\n\\r\nKa whakahaerehia tēnei koromeke inā pono ana te here, arā ‘waihonga >0’."
+      2-3 Maze 15: I tēnei panga, mā te whakamahi i ngā koromeke “tōai” e rua e tae atu ai koe ki te poaka mā ngā paraka rua rua noa iho!
+      2-3 Maze Loops 18: "Aratakina au ki putiputirā mā ngā paraka rua rua noa iho. \\r\n\\r\nWhakamātauria tētahi koromeke ‘tōai’ ki roto i tētahi atu kia heke iho mai te nui o te waehere e whakamahia ana."
+      4-5 Artist 10: Pāwhiringia te "whakahaere" hei whakamātau i te waehere. Kātahi ka tōaitia kia oti rā anō te tānga. Ka rerekē ngā tae ia te wā.
+      4-5 Artist 2: Koromekehia tēnei waehere mā te paraka 'tōai' kia oti te tapawhā.
+      4-5 Artist 5: Me whakahou i te "???" ki te aha kia oti pū i te kairoro te tānga nei mā te koromeke e wātea ana ki a koe?
+      4-5 Artist 6: He koki 60, 60, me te 60 putu ōrite tā te tapatoru nei. He 200 pika ia taha. Whakaotia te tānga.
+      4-5 Artist Free Draw 1: Tā kore here! Tāngia tāu e wawatahia nei.
+      4-5 Artist Patterns 1: |-
+        Tāngia tēnei tapawhā mā te whakamahi koromeke.\r
+        \r
+        He 20 pika ia tapa.
+      4-5 Artist Patterns 12: "Mēnā ka waihangahia e koe tētahi koromeke pēnei i tēnei, engari ka huri mauī kē, kaua e huri katau, ka ahatia? \\r\n\\r\nE taea rānei e koe te tōai i te katoa o tēnā mahi hei tā i tēnei ngaru?"
+      4-5 Artist Patterns 13: "Nā, koromekehia tāu kia whā ngā wā hei waihanga i tēnei tapanga whakaahua. Kia mataara ki ngā kokonga - e kore e taea te huri kia 90 putu! /r\n/r \nKi te puta tētehi haurua porowhita i te koromeke i tētehi huringa 3 putu e 60 ngā wā, mā ēwhea paraka waehere e whakaputa i te hauwhā porowhita mō ngā kokonga?"
+      4-5 Artist Patterns 3: Ināianei ka ruku atu ki tētehi taumata hohonu kē! E noho ana te katoa o te paraka waehere ki roto i tētehi atu koromeke heoi anō tāu he tono i te rehetoi kia hoki ki te tā rārangi anō. Me whakarau i ēwhea paraka waehere ki te otinga rawatanga o te koromeke hei tuhi i te mātiti katoa?
+      4-5 Artist Patterns 8: Whakamahia tētahi koromeke hei tuhi i tēnei tapaono he 40 pika ngā tapa, ā, he koki 60 putu.
+      4-5 Artist Patterns 9: "Tōaitia ināianei tēnei waehere e 3 ngā wā ka tā mai i te rārangi katoa. \\r\n\\r\nHe 80 pika te whānui o ia tapaono mai te pito tawhiti rawa mauī ki te matau."
+      4-5 Artist Patterns Free Play: Tākaro here kore - māu anō tāu ake tauira e waihanga!
+      4-5 Bee Conditionals 2: "He kapua anō! \\r\n\\r\nTitiro ki raro i te kapua mēnā he putiputi e huna ana hei tiki waihonga. \\r\n\\r\nKia maumahara: Ehara i te mea e ōrite ana ngā mea e huna  ana i ia kapua!"
+      4-5 Bee Conditionals 5: |-
+        He putiputi, he honikoma i raro i ērā kapua!\r
+        \r
+        Whakamahia te paraka 'mēnā/kē' ki te kohi waihonga, mēnā he putiputi.\r
+        Me mahi miere rānei (nā te mea he honikoma).
+      4-5 Bee Conditionals 6: "Kāore au i te mōhio pēhea te nui o te waihonga i tēnei putiputi, engari e mōhio ana kotahi rānei, e rua rānei, e toru rānei te waihonga. \\r\n\\r\nWhakatōpūhia ngā paraka whai here ('mēnā' me te/rānei 'mēnā/kē') ki te kohi anake i te nui o te waihonga tērā kei te putiputi. \\r\n\\r\nKia maumahara, ka panonihia te nui o te waihonga i te panga e haere ana!"
+      4-5 Bee Conditionals 7: "Ko ēnei putiputi e 3, e 2, 1 rānei te waihonga. \\r\n\\r\nWhakaotia te taumahi 'tirohia te putiputi pāpura', ā, ka whakamahi ki te kohi te te katoa o te waihonga i ngā putiputi."
+      4-5 Bee Conditionals 8: "Tuhia te taumahi mō te 'taki putiputi hanga miere'.\\r\n\\r\nMe taki tō taumahi mēnā e 3, e 2, 1 rānei te waihonga o te putiputi pāpura, ā, ka kohia katoatia te waihonga. \\r\nKātahi ka neke whakamua, ā, ka mahi miere."
+      4-5 Bee Conditionals Assessment 1: "**He aromatawai:**  E huna ana i te kapua nei tētahi putiputi me tētahi waihonga rānei, tētahi honikoma me whiwhi i tētahi waihonga. \\r\n\\r\nWhakaotia te taumahi 'kohi waihonga mahi miere rānei', kātahi ka karanga kia kohi waihonga, kohi mīere rānei. \\r\n"
+      4-5 Bee Debugging 1: "Kei te mate au i ngā paraka whakahōhā nei. \\r\n\\r\nKa taea e koe te whakatika?"
+      4-5 Bee Debugging 6: "Ka rerekē te rahi o te waihonga i ngā putiputi pāpura nei ia wā ka whakahaere i te panga.\\r\n\\r\nWhakatikahia ngā paraka ki te kohi i te katoa o te waihonga i ngā putiputi i ia wā."
+      4-5 Maze Conditionals 4: Nā, me ōrite te whakautu i tēnei i tā te panga o mua, heoi me maumahara ake i kawea pēheatia ngā paraka 'kia' me te 'tōai kia'.
+      4-5 Maze Conditionals 5: "\"E hiahia putiputirā ana ahau!' \\r\n\\r\nWhakamahia tētahi kīanga 'kia' hei arataki i te kairoro ki te putiputirā mā ngā paraka rua rua noa iho."
+      4-5 Maze Conditionals 6: |-
+        "Kai putiputirā!"\r
+        \r
+        Whakamahia tētahi kīanga 'kia' hei arataki i te kairoro ki te putiputirā mā ngā paraka rua rua noa iho.
+      4-5 Maze Conditionals 8: "He mea taki te paraka 'kē/ki te' i te āhuatanga, ka pēnei ka pēnā. \\r\n\\r\nWhakamahia tēnei paraka hou nei hei arataki i au ki te putiputirā."
+      4-5 Maze Conditionals 9: |-
+        Kotahi anake te panga whakawai i te paraka 'kē/ki te'!\r
+        \r
+        Whāia ki tō matimati kia mau i a koe i tō ngana tuatahi.
+      4-5 Maze Conditionals Assessment 1: "**He aromatawai\"** Whakamahia ngā paraka 'tōaitia kia' me te 'kē/ki te' hei arataki i au ki te putiputirā mā ngā paraka rua rua noa iho."
+      4-5 Nested Loops 12: Ka taea rānei e koe ngā tapatoru nei te tā mā te koromeke tauroto?
+      4-5 Nested Loops 3: |-
+        Waihangahia tētahi rā mā te whakanoho i te waehere whakataki ki roto i tētahi atu koromeke. \r
+        \r
+        Kia riro i a koe tēnei hoahoatanga pokapū kore rawe rawa atu, me peke whakamua mā te roanga o te tapatoru i mua i te huri.
+      4-5 Nested Loops 6: Ka taea rānei e koe te tā tapaono mā te koromeke i te waehere tapatoru?
+      4-5 Nested Loops 7: "Koromekehia tēnei hoahoatanga kia 10 ngā wā. \\r\n\\r\nKia hia ngā huri i ia wā e koromekehia ana?"
+      4-5 Nested Loops 8: "Koromekehia tēnei āhua kia 6 ngā wā. \\r\n\\r\nKia hia ngā huri i ia wā e koromekehia ana? "
+      4-5 While Loops 1: Nekehia ahau ki te rua ka whakakīia ki ngā kāheru oneone e rua, mā te paraka 'whakakī'.
+      4-5 While Loops 2: Nekehia ahau ki te putu oneone ka tangohia ki ngā okooko e 5, mā te paraka 'tango1'.
+      4-5 While Loops 3: "Whakamahia ngā paraka rua rua noa iho hei whakaoti i tēnei panga! \\r\n\\r\nNekehia ahau ki te putuka ka tangohia katoatia te oneone, ka neke ki te rua ka whakakīia katoatia."
+      4-5 While Loops 4: "Anana! Tirohia atu! \\r\n\\r\nKāore au i te mōhio e hia okooko oneone mō te rua nei. \\r\nKa taea rānei e koe tētahi papatono e whakamahi tonu ana i te paraka 'whakakī' te tā kia papatahi te papa?  "
+      Artist Autorun Test: Nā, meatia atu te taumahi ki roto i tētehi koromeke hei tā i ngā tapawhā e toru nei.
+      Course 4 Artist 8: Tāngia tēnei rā mā te koromeke i te paraka waehere ki tini ngā wā.
+      Course 4 Artist 8a: Maumaharatia te āhua nei?  Ināianei e wātea ana koe ki te waihanga i te kore o ētahi paraka timatanga!
+      HOC 2018 Level_1: "Me kohia nga momo whakarato mo te rerenga. Tikina he **waka** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) mai i te **papa** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
+      HOC 2018 Level_10: "E huna ana tetahi **wheke** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) ki tenei wāhi Whakamaharatanga Moana, ka āhei e koe te kimi?\n\n"
+      HOC 2018 Level_11: Ki te **poromoana** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) hangaia he pakitara takarore ki te raima pango. Na tena ka timata ai te **roma** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) kua oti to wero!
+      HOC 2018 Level_12: Nga mihi! Kua tuwhera te ao moana ki a koe. Hangaia he akau punga moana! He maunga puia! He waka kua paea! Kei a koe te mana.
+      HOC 2018 Level_2: He māmā te whakawhiti moana ma runga waka ki te kauhoe! Haere tōtika ki te tau o te tauranga waka ki te eke.
+      HOC 2018 Level_3: Tikina nga hoe hei whakawhiti i te moana ki te rapu te **pātutuki** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Me whangai i te pātutuki ki te **aihe** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png). whakamahia he pāraka whakahoutia kia tere rawa ake te whakawhiti moana.
+      HOC 2018 Level_5: Kei reira e huna ana he **pūtātara** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)! Me whakatōmene te waka kua paea kia tae atu ki te **pouaka taonga** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      HOC 2018 Level_6: Tirohia te makariri ki waho ra! I runga to haerenga ki nga whakangaro moana, rapua he **tāmana** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+      HOC 2018 Level_7a: "Kua kitea nga whakangaro moana. Kimihia te tunaeke mo tetahi **pouaka taonga** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) kei roto he taonga **poromoana** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      HOC 2018 Level_8: "Tuatahi ko nga toka haupapa, inaianei ko te puia wera? Whakawhiti te motu Puia nei hei kimi i te **ika pārūrū** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) ki roto i te ākau punga moana.\n\n"
+      HOC 2018 Level_9b: "Kua tae koe ki te ākau punga moana, inaianei me kimihia te  **Manawa o te Moana** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! whakamahia nga punga moana kikorangi me te whero kia tae atu ki te **pouaka taonga** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
+      Testing Quantum Farmer: "Anana! Tirohia atu! \\r\n\\r\nKāore au i te mōhio e hia okooko oneone mō te rua nei. \\r\nKa taea rānei e koe tētahi papatono e whakamahi tonu ana i te paraka 'whakakī' te tā kia papatahi te papa?  "
+      course4_artist_fwp_challenge1: Whakamātauria tēnei papatono, ā, panonihia kia kitea ka aha. E mārama ana ki a koe te whakamahinga? (Mukua rānei, ā, whakakapia me tētahi mea rerekē noa atu)
+      courseD_bounce_events1: Me tae atu ki te haki! Whakapiri i tētahi paraka ki te pakara "ina pere mauī" ka pāwhiritia ai te "Whakahaerehia" ki te neke i te kaitākaro ki te haki.
+      courseD_maze_nestedLoops4: "Aratakina au ki putiputirā mā ngā paraka rua rua noa iho. \\r\n\\r\nWhakamātauria tētahi koromeke ‘tōai’ ki roto i tētahi atu kia heke iho mai te nui o te waehere e whakamahia ana."
+      courseD_maze_nestedLoops4_2018: "Aratakina au ki putiputirā mā ngā paraka rua rua noa iho. \\r\n\\r\nWhakamātauria tētahi koromeke ‘tōai’ ki roto i tētahi atu kia heke iho mai te nui o te waehere e whakamahia ana."
+      courseD_maze_nestedLoops4_2019: "Aratakina au ki putiputirā mā ngā paraka rua rua noa iho. \\r\n\\r\nWhakamātauria tētahi koromeke ‘tōai’ ki roto i tētahi atu kia heke iho mai te nui o te waehere e whakamahia ana."
+      courseE_farmer_concept4: Ināianei ka ruku atu ki tētehi taumata hohonu kē! E noho ana te katoa o te paraka waehere ki roto i tētehi atu koromeke heoi anō tāu he tono i te rehetoi kia hoki ki te tā rārangi anō. Me whakarau i ēwhea paraka waehere ki te otinga rawatanga o te koromeke hei tuhi i te mātiti katoa?
+      frozen circle: "He āhua mīharo te porohita. Ka āhei koe te matapae \nko tēhea tau ka tuhia hei whakakapi i ngā tohu pātai ki te tā porohita?"
+      grade2_MakeDogTag_8: Me rauhī i tētahi huinga V hei koromeke ināianei.
+      grade2_PuppyLoops_10: |-
+        Ka kī mai taku kaiako, ki te tīmata me oti!\r
+        \r
+        Āwhinatia ahau ki te whakaoti i taku pinewīra. He aha pea te mate?
+      grade2_PuppyLoops_4: I tēnei panga, mā te whakamahi i ngā koromeke “tōai” e rua e tae atu ai koe ki te poaka mā ngā paraka rua rua noa iho!
+      grade2_PuppyLoops_8: "Kei te hē te waehere mō ngā kumikumi o te ngeru.\n\\r\n\\r\nWhakatikahia tēnei waehere, tāngia ētahi kumikumi e ōrite ana te roa."
+      grade2_PuppyLoops_9: |-
+        Te āhua nei kua tāngia kōarohia te C i te waehere!\r
+        \r
+        Māu e whakatika kia C anō tōna hanga?
+      grade2_puppy_loops4: I tēnei panga, mā te whakamahi i ngā koromeke “tōai” e rua e tae atu ai koe ki te poaka mā ngā paraka rua rua noa iho!
+      grade3_ConditionalsElse_2: "He kapua anō! \\r\n\\r\nTitiro ki raro i te kapua mēnā he putiputi e huna ana hei tiki waihonga. \\r\n\\r\nKia maumahara: Ehara i te mea e ōrite ana ngā mea e huna  ana i ia kapua!"
+      grade3_ConditionalsElse_5: |-
+        He putiputi, he honikoma i raro i ērā kapua!\r
+        \r
+        Whakamahia te paraka 'mēnā/kē' ki te kohi waihonga, mēnā he putiputi.\r
+        Me mahi miere rānei (nā te mea he honikoma).
+      grade3_ConditionalsElse_6: "Kāore au i te mōhio pēhea te nui o te waihonga i tēnei putiputi, engari e mōhio ana kotahi rānei, e rua rānei, e toru rānei te waihonga. \\r\n\\r\nWhakatōpūhia ngā paraka whai here ('mēnā' me te/rānei 'mēnā/kē') ki te kohi anake i te nui o te waihonga tērā kei te putiputi. \\r\n\\r\nKia maumahara, ka panonihia te nui o te waihonga i te panga e haere ana!"
+      grade3_ConditionalsElse_7: "Ko ēnei putiputi e 3, e 2, 1 rānei te waihonga. \\r\n\\r\nWhakaotia te taumahi 'tirohia te putiputi pāpura', ā, ka whakamahi ki te kohi te te katoa o te waihonga i ngā putiputi."
+      grade3_ConditionalsElse_8: "Tuhia te taumahi mō te 'taki putiputi hanga miere'.\\r\n\\r\nMe taki tō taumahi mēnā e 3, e 2, 1 rānei te waihonga o te putiputi pāpura, ā, ka kohia katoatia te waihonga. \\r\nKātahi ka neke whakamua, ā, ka mahi miere."
+      grade3_ConditionalsElse_9: "**He aromatawai:**  E huna ana i te kapua nei tētahi putiputi me tētahi waihonga rānei, tētahi honikoma me whiwhi i tētahi waihonga. \\r\n\\r\nWhakaotia te taumahi 'kohi waihonga mahi miere rānei', kātahi ka karanga kia kohi waihonga, kohi mīere rānei. \\r\n"
+      grade3_ConditionalsElse_TeacherIDo: |-
+        He putiputi, he honikoma i raro i ērā kapua!\r
+        \r
+        Whakamahia te paraka 'mēnā/kē' ki te kohi waihonga, mēnā he putiputi.\r
+        Me mahi miere rānei (nā te mea he honikoma).
+      grade3_Conditionals_10: |-
+        Te huhua hoki o ngā kaupapa e haere ana! \r
+        \r
+        Whakamātauhia tāu i ako ai ki te kohi i te katoa o te waihonga, kātahi nā ka mahi miere.
+      grade3_Conditionals_12: "Ko te tikanga e mōhio whānui ana te tauira o te whata arapiki nei. \\r\n\\r\nKa taea rānei e koe te kohi waihonga i ngā putiputi whai waihonga, mā te whakamahinga o ngā paraka iti rawa e taea?"
+      grade3_Conditionals_2: "Tirohia te nui o te waihonga!\\r\n\\r\nĀwhinatia mai taku kohi waihonga me te mahi mīere ki ngā paraka iti rawa e taea.  "
+      grade3_Conditionals_8: "He aha kei waho rā? \\r\n\\r\nĀwhinatia mai taku rere i te iari ki te kohi waihonga i ngā putiputi whai waihonga. "
+      grade3_Debugging_6: |-
+        Kātahi te taki ko tēnei!\r
+        \r
+        Whakatikahia te/ngā hapa kia kohia katoatia te waihonga.
+      grade3_Debugging_9: |-
+        “Pī” kia manawanui i tēnei!\r
+        \r
+        Me whakatikahia e tātou ētahi mea i tēnei papatono ki te kohi i te waihonga katoa me te mahi i te mīere katoa.
+      grade3_Loops_3: Whakamahia tētahi koromeke ‘tōai’ hei kohi i te katoa o te waihonga.
+      grade3_Loops_4: Ināianei whakamahia te paraka ‘tōai’ kia kohia katoatia te waihonga ka mahi mai i te katoa o te mīere.
+      grade3_Loops_6: "Kia hia koromeke hei āwhina i a koe i tēnei panga nei? \\r\n\\r\nHe hoa ngā koromeke ki a koe! Whakamahia kia okuoku noa iho hei whakaoti i te panga nei mā ngā paraka rua rua noa iho."
+      grade3_Loops_7: |-
+        Inā ngā putiputi reka rā! \r
+        \r
+        Kohia te waihonga i ia putiputi mā ngā putiputi rua rua noa iho.
+      grade3_Loops_TeacherIDo: |-
+        Inā ngā putiputi reka rā! \r
+        \r
+        Kohia te waihonga i ia putiputi mā ngā putiputi rua rua noa iho.
+      grade3_bee_conditionals_quantum2: "He kapua anō! \\r\n\\r\nTitiro ki raro i te kapua mēnā he putiputi e huna ana hei tiki waihonga. \\r\n\\r\nKia maumahara: Ehara i te mea e ōrite ana ngā mea e huna  ana i ia kapua!"
+      grade3_maze_loops2: "Aratakina au ki putiputirā mā ngā paraka rua rua noa iho. \\r\n\\r\nWhakamātauria tētahi koromeke ‘tōai’ ki roto i tētahi atu kia heke iho mai te nui o te waehere e whakamahia ana."
+      grade3_maze_nestedLoops4: I tēnei panga, mā te whakamahi i ngā koromeke “tōai” e rua e tae atu ai koe ki te poaka mā ngā paraka rua rua noa iho!
+      grade4_arist_nested_loop_polygons1: "Koromekehia tēnei hoahoatanga kia 10 ngā wā. \\r\n\\r\nKia hia ngā huri i ia wā e koromekehia ana?"
+      grade4_arist_nested_loop_polygons2: "Koromekehia tēnei āhua kia 6 ngā wā. \\r\n\\r\nKia hia ngā huri i ia wā e koromekehia ana? "
+      grade4_arist_nested_loop_triangles3: Ka taea rānei e koe te tā tapaono mā te koromeke i te waehere tapatoru?
+      grade4_arist_nested_loop_triangles5: |-
+        Waihangahia tētahi rā mā te whakanoho i te waehere whakataki ki roto i tētahi atu koromeke. \r
+        \r
+        Kia riro i a koe tēnei hoahoatanga pokapū kore rawe rawa atu, me peke whakamua mā te roanga o te tapatoru i mua i te huri.
+      grade4_arist_nested_loop_triangles6: Ka taea rānei e koe ngā tapatoru nei te tā mā te koromeke tauroto?
+      grade4_artist_functions2: "Ko tā te taumahi he whakamahuki i ngā paraka hou! \\r\n\\r\nKua nekehia e mātou ētahi paraka tā tapawhā hei taumahi ‘tāngia he tapawhā’. I konei, whakamahia te taumahi ‘tāngia he tapawhā’ ki te tā mōhiti. \\r\n\\r\nE 75 pika kei waenga i ia tapawhā."
+      grade4_artist_nested_loop_polygons1: "Koromekehia tēnei hoahoatanga kia 10 ngā wā. \\r\n\\r\nKia hia ngā huri i ia wā e koromekehia ana?"
+      grade4_artist_nested_loop_triangles5: |-
+        Waihangahia tētahi rā mā te whakanoho i te waehere whakataki ki roto i tētahi atu koromeke. \r
+        \r
+        Kia riro i a koe tēnei hoahoatanga pokapū kore rawe rawa atu, me peke whakamua mā te roanga o te tapatoru i mua i te huri.
+      grade4_artist_nested_loop_triangles6: Ka taea rānei e koe ngā tapatoru nei te tā mā te koromeke tauroto?
+      grade4_bee_conditionals_quantum2: "He kapua anō! \\r\n\\r\nTitiro ki raro i te kapua mēnā he putiputi e huna ana hei tiki waihonga. \\r\n\\r\nKia maumahara: Ehara i te mea e ōrite ana ngā mea e huna  ana i ia kapua!"
+      grade4_bee_conditionals_quantum5: |-
+        He putiputi, he honikoma i raro i ērā kapua!\r
+        \r
+        Whakamahia te paraka 'mēnā/kē' ki te kohi waihonga, mēnā he putiputi.\r
+        Me mahi miere rānei (nā te mea he honikoma).
+      grade4_frozen_functions0: "He āhua mīharo te porohita. Ka āhei koe te matapae \nko tēhea tau ka tuhia hei whakakapi i ngā tohu pātai ki te tā porohita?"
+      grade4_review_artist3: "Ka neke te paraka peke i te rehetoi me te kore tā.\nTāngia tētahi rārangi pīhono, e whakamahi ana i ngā paraka ‘peke whakamua’ me te ‘neke whakamua’.\n50 pika te roa o ia rārangi."
+      grade4_review_bee1: Ināianei whakamahia te paraka ‘tōai’ kia kohia katoatia te waihonga ka mahi mai i te katoa o te mīere.
+      level 'grade3_Loops_3: Whakamahia tētahi koromeke ‘tōai’ hei kohi i te katoa o te waihonga.
+      level 'grade3_Loops_4: Ināianei whakamahia te paraka ‘tōai’ kia kohia katoatia te waihonga ka mahi mai i te katoa o te mīere.
+      level 'grade3_Loops_6: "Kia hia koromeke hei āwhina i a koe i tēnei panga nei? \\r\n\\r\nHe hoa ngā koromeke ki a koe! Whakamahia kia okuoku noa iho hei whakaoti i te panga nei mā ngā paraka rua rua noa iho."
+      level 'grade3_Loops_7: |-
+        Inā ngā putiputi reka rā! \r
+        \r
+        Kohia te waihonga i ia putiputi mā ngā putiputi rua rua noa iho.

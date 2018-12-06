@@ -1,0 +1,2915 @@
+---
+de:
+  data:
+    evaluation_multi:
+      U5 evaluation q1:
+        'No': Nein
+        'Yes': Ja
+      U5 evaluation q2:
+        0: "? Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        1: ": Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        While Loops: Solange-Schleifen
+    external:
+      AWS Demo:
+        description here: hier die Beschreibung
+      Algo How Routers Learn Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      Algo Shortest Path Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      App Lab Feedback:
+        description here: hier die Beschreibung
+      AppLab Level U3L19 - variable re-assignment challenge pt1:
+        description here: hier die Beschreibung
+      Basic mechanics of variables:
+        description here: hier die Beschreibung
+        title: Titel
+      Basic mechanics of variables_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Begin planning your project:
+        description here: hier die Beschreibung
+        title: Titel
+      Begin planning your project_2018:
+        description here: hier die Beschreibung
+      'Big Picture: If-statements':
+        description here: hier die Beschreibung
+        title: Titel
+      'Big Picture: If-statements_2018':
+        description here: hier die Beschreibung
+        title: Titel
+      Boolean Expressions and Comparison Operators:
+        description here: hier die Beschreibung
+        title: Titel
+      Boolean Expressions and Comparison Operators_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U1 Input Output C1:
+        description here: hier die Beschreibung
+      CSD U1 Input Output C2:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U1 Input Output C3:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U1 Input Output C4:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U1 Input Output Intro:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 CSS explain:
+        description here: hier die Beschreibung
+      CSD U2 Classes Introduction:
+        description here: hier die Beschreibung
+      CSD U2 Design Project:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 Design Project_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 L1 Overview:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 L1 Overview_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 L2 Overview:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 L2 Overview_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 L3 Overview:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 L3 Overview_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 L4 Overview:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 L4 Overview_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 L5 Overview:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 L5 Overview_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 L6 Overview:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 L6 Overview_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 Lesson 6 Overview:
+        description here: hier die Beschreibung
+      CSD U2 Lesson 6 Overview_2018:
+        description here: hier die Beschreibung
+      CSD U2 RGB Colors:
+        description here: hier die Beschreibung
+      CSD U2 Social Sleuth:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 expand project:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 expand project_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 layout style review:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 more CSS:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U2 project guide:
+        description here: hier die Beschreibung
+      CSD U2 project guide_2018:
+        description here: hier die Beschreibung
+      CSD U2 text style review:
+        description here: hier die Beschreibung
+      CSD U3 Card Examples_2018:
+        description here: hier die Beschreibung
+      CSD U3 Describe the Picture:
+        description here: hier die Beschreibung
+      CSD U3 L2 Challenges:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U3 SFLP Sprites and Images:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U3 abstraction intro:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U3 collisions STOP isTouching:
+        description here: hier die Beschreibung
+      CSD U3 combining rep:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U3 combining rep_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U3 game intro:
+        description here: hier die Beschreibung
+      CSD U3 game intro_2018:
+        description here: hier die Beschreibung
+      CSD U3 platform intro:
+        description here: hier die Beschreibung
+      CSD U3 platform intro_2018:
+        description here: hier die Beschreibung
+      CSD U3 setSpeed STOP:
+        description here: hier die Beschreibung
+      CSD U5 Encryption 1:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 Encryption 1_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 Encryption 2:
+        description here: hier die Beschreibung
+      CSD U5 Encryption 2_2018:
+        description here: hier die Beschreibung
+      CSD U5 L13 SFLP Interpreting Data:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 L13 SFLP Interpreting Data_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 Representing Information:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 collection UPS2:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 collection ads2:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 crosstab warmup:
+        description here: hier die Beschreibung
+      CSD U5 crosstab warmup_2018:
+        description here: hier die Beschreibung
+      CSD U5 data visualization:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 data visualization sheet:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 data visualization_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 fixed-bits:
+        description here: hier die Beschreibung
+      CSD U5 student record:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 student record_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U5 video2:
+        description here: hier die Beschreibung
+        title: Titel
+      CSD U6 LED create intro:
+        description here: hier die Beschreibung
+      CSD U6 LED create intro_2018:
+        description here: hier die Beschreibung
+      CSD U6 final intro:
+        description here: hier die Beschreibung
+      CSD U6 final intro_2018:
+        description here: hier die Beschreibung
+      CSD-U3-SFLP Drawing:
+        description here: hier die Beschreibung
+        title: Titel
+      CSDU2L01 SFLP:
+        description here: hier die Beschreibung
+        title: Titel
+      CSP ExploreL02 SFLP:
+        description here: hier die Beschreibung
+        title: Titel
+      CSP Journal Entry Placeholder2:
+        description here: hier die Beschreibung
+        title: Titel
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        description here: hier die Beschreibung
+      CSP Unit 3 - Learning JavaScript Resources:
+        description here: hier die Beschreibung
+      CSP assessment Hex interstitial:
+        description here: hier die Beschreibung
+      CSPPD impact of CS:
+        description here: hier die Beschreibung
+      CSPPD3-u2 Welcome:
+        Welcome!: Willkommen!
+      CSPStudentLessonPlanTemplate:
+        description here: hier die Beschreibung
+        title: Titel
+      CSPU5 Making a Multi Screen Chaser Game:
+        description here: hier die Beschreibung
+        title: Titel
+      CSPU5_ChoosingGoodIds:
+        description here: hier die Beschreibung
+        title: Titel
+      CSPU5_EventDrivenProgrammingPatterns:
+        description here: hier die Beschreibung
+        title: Titel
+      CSPU5_FirstTimeDesignMode:
+        description here: hier die Beschreibung
+        title: Titel
+      CSPU5_FirstTimeDesignMode_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      CSPU5_HowImagesWork:
+        description here: hier die Beschreibung
+        title: Titel
+      CSPU5_HowOnEventWorks_v2:
+        description here: hier die Beschreibung
+        title: Titel
+      CSPU5_U3L12 - Student Introduction 1:
+        Events Unplugged: Offline-Events
+      CSPU5_U3L14 - Message - Other ways to assign values:
+        description here: hier die Beschreibung
+        title: Titel
+      CSPU5_U3L14 - Message - basic mechanics of variables:
+        description here: hier die Beschreibung
+        title: Titel
+      CSPU5_U3L15 - explanation of IF and =v==:
+        description here: hier die Beschreibung
+        title: Titel
+      CSPU5_U3L15 Student Lesson Intro - new:
+        description here: hier die Beschreibung
+        title: Titel
+      CSPU5_U3L19 - variable scope explanation pt2:
+        description here: hier die Beschreibung
+      CSPU5_U3L20 - combining And and Or explanation:
+        description here: hier die Beschreibung
+        title: Titel
+      CSPU5_goodbyeTurtle_setPosition:
+        description here: hier die Beschreibung
+        title: Titel
+      CSPU5_introToDebugging:
+        description here: hier die Beschreibung
+        title: Titel
+      CSPU5_makingPredictions_ref:
+        description here: hier die Beschreibung
+        title: Titel
+      CSPU5_onEventBreakdown:
+        description here: hier die Beschreibung
+        title: Titel
+      CSP_Final_instructions:
+        description here: hier die Beschreibung
+        title: Titel
+      CSP_U4_rawMovieData:
+        description here: hier die Beschreibung
+        title: Titel
+      Color Sleuth - Epilogue:
+        description here: hier die Beschreibung
+        title: Titel
+      Color Sleuth - Epilogue_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Color Sleuth - How does it end?:
+        description here: hier die Beschreibung
+        title: Titel
+      Color Sleuth - How does it end?_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Color Sleuth - How to switch player turns:
+        description here: hier die Beschreibung
+        title: Titel
+      Color Sleuth - How to switch player turns_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Color Sleuth - Keeping score:
+        description here: hier die Beschreibung
+        title: Titel
+      Color Sleuth - Keeping score_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Color Sleuth - Planning the App:
+        description here: hier die Beschreibung
+        title: Titel
+      Color Sleuth - Planning the App_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Controlling Memory - Other ways to assign values:
+        description here: hier die Beschreibung
+        title: Titel
+      Controlling Memory - Other ways to assign values_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Cups and Beans Activity:
+        description here: hier die Beschreibung
+        title: Titel
+      Cups and Beans Activity_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Debugging with Console.log:
+        description here: hier die Beschreibung
+        title: Titel
+      Debugging with Console.log_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Deeper Learning Overview:
+        description here: hier die Beschreibung
+      Digital Footprint Chirpr lillizard:
+        description here: hier die Beschreibung
+        title: Titel
+      Digital Footprint FaceSpace Haley:
+        description here: hier die Beschreibung
+        title: Titel
+      Digital Footprint FaceSpace Lizzie:
+        description here: hier die Beschreibung
+        title: Titel
+      Digital Footprint instantframe wiz_kid_liz:
+        description here: hier die Beschreibung
+        title: Titel
+      DigitalCitizenship2:
+        Digital Citizenship: Digitalen Staatsbürgerschaft
+      ECSPD Challenge Rubric:
+        description here: hier die Beschreibung
+        title: Titel
+      ECSPD Online U1D1-2:
+        description here: hier die Beschreibung
+      ECSPD Online U1D1-2 Resources:
+        description here: hier die Beschreibung
+      ECSPD Online U1D11-14:
+        title: Titel
+      ECSPD Online U1D15-16 Forum:
+        description here: hier die Beschreibung
+        title: Titel
+      ECSPD Online intro:
+        Introduction: Einführung
+      ECSPD U2 Challenge Plan:
+        description here: hier die Beschreibung
+        title: Titel
+      ECSPD Unit 2 Stage11:
+        description here: hier die Beschreibung
+        title: Titel
+      ECSPD Unit 2 Stage13:
+        description here: hier die Beschreibung
+        title: Titel
+      ECSPD Unit 2 Stage6:
+        description here: hier die Beschreibung
+        title: Titel
+      ECSPD impact of CS:
+        description here: hier die Beschreibung
+      Encoding Numbers Real World Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      Event Driven Programming Recap:
+        description here: hier die Beschreibung
+        title: Titel
+      Event Driven Programming Recap_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Event-Driven Programming Patterns:
+        description here: hier die Beschreibung
+        title: Titel
+      Event-Driven Programming Patterns_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      External MD column Test:
+        description here: hier die Beschreibung
+        title: Titel
+      External MD column Test bootstrap:
+        description here: hier die Beschreibung
+        title: Titel
+      GoodBadVisualizations_v1:
+        description here: hier die Beschreibung
+        title: Titel
+      GoodBadVisualizations_v2:
+        description here: hier die Beschreibung
+        title: Titel
+      How "if-else-if" Works:
+        description here: hier die Beschreibung
+        title: Titel
+      How "if-else-if" Works_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      How Compound Boolean Expressions Work:
+        description here: hier die Beschreibung
+        title: Titel
+      How Compound Boolean Expressions Work_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      How Dropdown Menus Work:
+        description here: hier die Beschreibung
+        title: Titel
+      How Dropdown Menus Work_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      How If Statements Work pt 1:
+        description here: hier die Beschreibung
+        title: Titel
+      How If Statements Work pt 1_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      How If-Else Statements Work:
+        description here: hier die Beschreibung
+        title: Titel
+      How If-Else Statements Work_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      How Images Work:
+        description here: hier die Beschreibung
+        title: Titel
+      How Images Work_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      How Secure Is Your Password?:
+        description here: hier die Beschreibung
+        title: Titel
+      How Secure Is Your Password?_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      How Set Property Works:
+        description here: hier die Beschreibung
+        title: Titel
+      How Set Property Works_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      How onEvent Works:
+        description here: hier die Beschreibung
+        title: Titel
+      How onEvent Works_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      How setPosition and screen dimensions work:
+        description here: hier die Beschreibung
+        title: Titel
+      How setPosition and screen dimensions work_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      How the Boolean &&, || and ! Operators Work:
+        description here: hier die Beschreibung
+        title: Titel
+      How the Boolean &&, || and ! Operators Work_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      How to make a random color:
+        description here: hier die Beschreibung
+        title: Titel
+      How to make a random color_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      How to pick a random button:
+        description here: hier die Beschreibung
+        title: Titel
+      How to pick a random button_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Internet Simulator Setup:
+        description here: hier die Beschreibung
+      Internet Simulator Setup 2:
+        description here: hier die Beschreibung
+        title: Titel
+      Internet Simulator Setup 3:
+        description here: hier die Beschreibung
+      Intro to Debugging and Common Problems:
+        description here: hier die Beschreibung
+        title: Titel
+      Intro to Debugging and Common Problems_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Making Multiple Screens:
+        description here: hier die Beschreibung
+        title: Titel
+      Making Multiple Screens_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Making a Multi Screen Chaser Game v.2:
+        description here: hier die Beschreibung
+        title: Titel
+      Making a Multi Screen Chaser Game v.2_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Multi-Screen Apps:
+        description here: hier die Beschreibung
+        title: Titel
+      New Challenge Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      New Challenge Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      OPD-K5 Stage3aGo:
+        description here: hier die Beschreibung
+        title: Titel
+      PDAlg Facilitator Test:
+        description here: hier die Beschreibung
+        title: Titel
+      PDK5 CS Video:
+        Computer Science: Informatik
+      PDK5 Pair Programming 1:
+        Pair Programming: Paarprogrammierung
+      PDK5 Teacher Dashboard C:
+        Teacher Dashboard: Lehrer-Dashboard
+      PS - Responding to User Input:
+        description here: hier die Beschreibung
+        title: Titel
+      PS - draft - Longitudinal study description:
+        description here: hier die Beschreibung
+        title: Titel
+      Pixelation - Lesson 14 - Instructions Make Your Own:
+        description here: hier die Beschreibung
+      Pixelation - Lesson 14 - Instructions one bit error:
+        description here: hier die Beschreibung
+      Pixelation - Lesson 15 - Favicon Instructions:
+        description here: hier die Beschreibung
+      Pixelation - Lesson 15 - Task 1 instructions:
+        description here: hier die Beschreibung
+      Pixelation - Lesson 15 - Task 2 instructions:
+        description here: hier die Beschreibung
+      Pixelation - Lesson 15 - Task 3 instructions:
+        description here: hier die Beschreibung
+      Pixelation - Video - Color 1:
+        description here: hier die Beschreibung
+      Pixelation - Video - Color 2:
+        description here: hier die Beschreibung
+      Pixelation - Video - Color 3:
+        description here: hier die Beschreibung
+      Pixelation - Video - Tips and Tricks:
+        description here: hier die Beschreibung
+      Prepare for your presentation:
+        description here: hier die Beschreibung
+        title: Titel
+      Public Key Crypto Widget Instructions:
+        description here: hier die Beschreibung
+        title: Titel
+      Public Key Crypto Widget Instructions_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Rules About Choosing Good IDs:
+        description here: hier die Beschreibung
+        title: Titel
+      Rules About Choosing Good IDs_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      SG U3 whats a comment:
+        description here: hier die Beschreibung
+        title: Titel
+      SG v2 U3L01 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      SG v2 U3L02 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      SG v2 U3L03 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      SG v2 U3L05 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      SG v2 U3L07 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      SG v2 U3L08 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      Sending Bits Real World Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      Simple Decisions with if-statements:
+        description here: hier die Beschreibung
+        title: Titel
+      Simple Decisions with if-statements_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      'Technique: Frequency Analysis':
+        description here: hier die Beschreibung
+      'Technique: Frequency Analysis_2018':
+        description here: hier die Beschreibung
+      Terminology Recap:
+        description here: hier die Beschreibung
+      Terminology Recap_2018:
+        description here: hier die Beschreibung
+      Tips For Working on Your Own:
+        description here: hier die Beschreibung
+        title: Titel
+      Tips For Working on Your Own_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      U1L1 Student Lesson Introduction:
+        description here: hier die Beschreibung
+      U1L1 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+      U1L10 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U1L11 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U1L12 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U1L13 Student Lesson Summary:
+        description here: hier die Beschreibung
+        title: Titel
+      U1L14 Student Lesson Summary:
+        description here: hier die Beschreibung
+        title: Titel
+      U1L15 Student Lesson Summary:
+        description here: hier die Beschreibung
+        title: Titel
+      U1L16 Student Lesson Introduction:
+        description here: hier die Beschreibung
+      U1L17 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U1L2 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U1L3 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U1L4 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U1L4 Widget Demo - Video:
+        description here: hier die Beschreibung
+      U1L5 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U1L6 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U1L7 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U1L8 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U1L9 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U2L1 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U2L12 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U2L17 Student Lesson Introduction:
+        description here: hier die Beschreibung
+      U2L7 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U2L8 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U3 whats a comment:
+        description here: hier die Beschreibung
+        title: Titel
+      U3 whats a comment_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      U3L12 - Mission Unsortable:
+        description here: hier die Beschreibung
+        title: Titel
+      U3L12 - Student Introduction 1:
+        Events Unplugged: Offline-Events
+      U3L13 - Explanation of Ids:
+        description here: hier die Beschreibung
+        title: Titel
+      U3L13 - Make a Prediction Explanation:
+        description here: hier die Beschreibung
+        title: Titel
+      U3L13 Add Button Instrucitons:
+        description here: hier die Beschreibung
+        title: Titel
+      U3L13 Add Button Instructions:
+        description here: hier die Beschreibung
+        title: Titel
+      U3L14 - Message - Other ways to assign values:
+        description here: hier die Beschreibung
+        title: Titel
+      U3L14 - Message - basic mechanics of variables:
+        description here: hier die Beschreibung
+        title: Titel
+      U3L14 - Student Intro Page:
+        description here: hier die Beschreibung
+        title: Titel
+      U3L15 - explanation of IF and =v==:
+        description here: hier die Beschreibung
+        title: Titel
+      U3L15 Student Lesson Intro - new:
+        description here: hier die Beschreibung
+        title: Titel
+      U3L19 - Arithmetic v Concatenation:
+        description here: hier die Beschreibung
+      U3L19 - Intro to variables:
+        description here: hier die Beschreibung
+      U3L19 - concatenate string with var:
+        description here: hier die Beschreibung
+      U3L19 - done with variables finally:
+        description here: hier die Beschreibung
+        title: Titel
+      U3L19 - explanation diff between string and var name:
+        description here: hier die Beschreibung
+      U3L19 - improve your clicker game:
+        description here: hier die Beschreibung
+      U3L19 - misconception variable assignment order pt1:
+        description here: hier die Beschreibung
+      U3L19 - misconception variable assignment order pt2:
+        description here: hier die Beschreibung
+      U3L19 - variable breakdown - Assigning a value:
+        description here: hier die Beschreibung
+      U3L19 - variable breakdown - common mistake - declaring twice:
+        description here: hier die Beschreibung
+      U3L19 - variable breakdown - declaration:
+        description here: hier die Beschreibung
+      U3L19 - variable breakdown - setText in label:
+        description here: hier die Beschreibung
+      U3L19 - variable breakdown - ways to read pt1:
+        description here: hier die Beschreibung
+      U3L19 - variable breakdown intro:
+        description here: hier die Beschreibung
+      U3L19 - variable scope explanation:
+        description here: hier die Beschreibung
+      U3L19 - variable scope explanation pt2:
+        description here: hier die Beschreibung
+      U3L19 - variable scope explanation pt3:
+        description here: hier die Beschreibung
+      U3L20 - combining And and Or explanation:
+        description here: hier die Beschreibung
+        title: Titel
+      U4 - Cleaning Data - Activity Guide:
+        description here: hier die Beschreibung
+        title: Titel
+      U4 - Making Data Visualizations - Bar Chart:
+        description here: hier die Beschreibung
+        title: Titel
+      U4 - Making Data Visualizations - Edit Chart Appearance:
+        description here: hier die Beschreibung
+        title: Titel
+      U4 - Making Data Visualizations - Free Play:
+        description here: hier die Beschreibung
+        title: Titel
+      U4 - Making Data Visualizations - Free Play_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      U4 - Making Data Visualizations - Getting Started:
+        description here: hier die Beschreibung
+        title: Titel
+      U4 - Making Data Visualizations - Line Chart:
+        description here: hier die Beschreibung
+        title: Titel
+      U4 - Making Data Visualizations - Scatter Plot:
+        description here: hier die Beschreibung
+        title: Titel
+      U4 - Making Data Visualizations - Student Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4 - Privacy Abandoned - Hot On Your Trail Video:
+        description here: hier die Beschreibung
+        title: Titel
+      U4 - Unique Ids Explanation:
+        title: Titel
+      U4 - Unique Ids Explanation_2018:
+        title: Titel
+      U4 Cleaning Data Activity Guide Pt2:
+        description here: hier die Beschreibung
+        title: Titel
+      U4 Cleaning Data Activity Guide Pt3:
+        description here: hier die Beschreibung
+        title: Titel
+      U4 caesar cipher interstitial:
+        description here: hier die Beschreibung
+      U4 how to crack substitution cipher:
+        description here: hier die Beschreibung
+      U4L01 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L02 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L02 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L02v2 - Finding Trends:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L03 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L03 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L03v2 - Student Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L04 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L04 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L04v2 - Student Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L05 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L06 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L06v2 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L07 Public Key Crypto Interstitial:
+        description here: hier die Beschreibung
+      U4L07 Student Introduction public key crypto:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L07 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L08 - mod clock instructions:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L08 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L08v2 Making Pivot Tables:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L08v2 Making Pivot Tables Part 2:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L08v2 Making Pivot Tables Part 3:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L08v2 Making Pivot Tables Part 3_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L08v2 Student Intro:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L09 Student Lesson Intro Practice PT big data dilemma:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L09 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L10 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L11 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L12 - Student Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L12 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L13 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L14 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L15 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L16 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L17 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L18 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L19 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L20 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L21 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L22 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L23 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L24 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L5 random subst challenge page:
+        description here: hier die Beschreibung
+        title: Titel
+      U5 - Create PT - Student Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U5 - Create PT Prep - Student Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U5 - Create PT review - Student Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U5 - Explore PT - Student Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U5 - Explore PT Prep - Student Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U5 - Explore PT Review - Student Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U5 - PT Prep - Digital Portfolio and tech setup:
+        description here: hier die Beschreibung
+        title: Titel
+      U5 color sleuth check correct:
+        description here: hier die Beschreibung
+        title: Titel
+      U5 color sleuth check correct_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      U5L08 - Student Intro If statements:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 - Charts - Student Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 - Charts - Student Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 - Final Project - Student Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 - Final Project - Student Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 - ImportExport - Student Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 - ImportExport - Student Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 - Sample Apps - Student Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 - Sample Apps - Student Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 - deleteRecord - Student Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 - deleteRecord - Student Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 - updateRecord - Student Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 - updateRecord - Student Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 AP Performance Task Tech Setup - Student Links:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 Create PT - Complete the Task - Student Links:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 Create PT - Complete the Task - Student Links_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 Create PT Review - Student Links:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 Create PT Review - Student Links_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 Explore PT - Complete the Task - Student Links:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 Explore PT - Complete the Task - Student Links_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 Explore PT - Make a Plan - Student Links:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 Explore PT - Make a Plan - Student Links_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 Explore PT Review - Student Links:
+        description here: hier die Beschreibung
+        title: Titel
+      U6 Explore PT Review - Student Links_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 2 Lesson 1 Overview Clone:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 4 Lesson 1 Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 4 Lesson 1 Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 4 Lesson 2 Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 4 Lesson 2 Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 4 Lesson 5 Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 4 Lesson 5 Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 1:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 1 Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 1 Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 10 Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 10 Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 2 Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 2 Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 3 Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 3 Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 4 Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 4 Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 5:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 5 Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 5 Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 6:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 6 Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 6 Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 7 Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 7 Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 8 Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 8 Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 9 Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      Unit 5 Lesson 9 Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      'Variable Scope: Local vs. Global':
+        description here: hier die Beschreibung
+      'Variable Scope: Local vs. Global_2018':
+        description here: hier die Beschreibung
+      'Worked Example: If-statements and Robot':
+        description here: hier die Beschreibung
+        title: Titel
+      'Worked Example: If-statements and Robot_2018':
+        description here: hier die Beschreibung
+        title: Titel
+      brad-repro-bug-000:
+        description here: hier die Beschreibung
+      brad-test-continue-buttons-in-markdown:
+        description here: hier die Beschreibung
+      courseB_external_MRF:
+        description here: hier die Beschreibung
+        title: Titel
+      courseB_external_loopMRF:
+        description here: hier die Beschreibung
+        title: Titel
+      courseB_story_unspottedBugs10:
+        description here: hier die Beschreibung
+        title: Titel
+      courseB_story_unspottedBugs11:
+        description here: hier die Beschreibung
+        title: Titel
+      courseB_story_unspottedBugs12:
+        description here: hier die Beschreibung
+        title: Titel
+      courseB_story_unspottedBugs13:
+        description here: hier die Beschreibung
+        title: Titel
+      courseB_story_unspottedBugs14:
+        description here: hier die Beschreibung
+        title: Titel
+      courseB_story_unspottedBugs15:
+        description here: hier die Beschreibung
+        title: Titel
+      courseB_story_unspottedBugs16:
+        description here: hier die Beschreibung
+        title: Titel
+      courseB_story_unspottedBugs17:
+        description here: hier die Beschreibung
+        title: Titel
+      courseB_story_unspottedBugs18:
+        description here: hier die Beschreibung
+        title: Titel
+      courseB_story_unspottedBugs2:
+        description here: hier die Beschreibung
+        title: Titel
+      courseB_story_unspottedBugs3:
+        description here: hier die Beschreibung
+        title: Titel
+      courseB_story_unspottedBugs4:
+        description here: hier die Beschreibung
+        title: Titel
+      courseB_story_unspottedBugs5:
+        description here: hier die Beschreibung
+        title: Titel
+      courseB_story_unspottedBugs6:
+        description here: hier die Beschreibung
+        title: Titel
+      courseB_story_unspottedBugs7:
+        description here: hier die Beschreibung
+        title: Titel
+      courseB_story_unspottedBugs8:
+        description here: hier die Beschreibung
+        title: Titel
+      courseB_story_unspottedBugs9:
+        description here: hier die Beschreibung
+        title: Titel
+      courseB_unplugged_mrfProgramming:
+        description here: hier die Beschreibung
+        title: Titel
+      courseC_screenoutthemean:
+        description here: hier die Beschreibung
+        title: Titel
+      courseF_firstFunctions_map:
+        description here: hier die Beschreibung
+        title: Titel
+      coursef_functionsSummary_map:
+        description here: hier die Beschreibung
+        title: Titel
+      coursef_powerofwords:
+        description here: hier die Beschreibung
+        title: Titel
+      csd deeper learning timeline:
+        description here: hier die Beschreibung
+      csd deeper learning timeline 2018-2019:
+        description here: hier die Beschreibung
+      csd-post-survey-unit1-preamble:
+        description here: hier die Beschreibung
+        title: Titel
+      csd-post-survey-unit2-preamble:
+        description here: hier die Beschreibung
+        title: Titel
+      csd-post-survey-unit3-preamble:
+        description here: hier die Beschreibung
+        title: Titel
+      csd-post-survey-unit4-preamble:
+        description here: hier die Beschreibung
+        title: Titel
+      csd-post-survey-unit5-preamble:
+        description here: hier die Beschreibung
+        title: Titel
+      csd-post-survey-unit6-preamble:
+        description here: hier die Beschreibung
+        title: Titel
+      csp deeper learning timeline:
+        description here: hier die Beschreibung
+      csp-post-survey-2018-AP-preamble:
+        description here: hier die Beschreibung
+        title: Titel
+      csp-post-survey-2018-topics-preamble:
+        description here: hier die Beschreibung
+        title: Titel
+      csp-post-survey-2018-unit-feedback-preamble:
+        description here: hier die Beschreibung
+        title: Titel
+      csp-post-survey-createPT-preamble:
+        description here: hier die Beschreibung
+        title: Titel
+      csp-post-survey-explorePT-preamble:
+        description here: hier die Beschreibung
+        title: Titel
+      csp-post-survey-unit1-preamble:
+        description here: hier die Beschreibung
+        title: Titel
+      csp-post-survey-unit2-preamble:
+        description here: hier die Beschreibung
+        title: Titel
+      csp-post-survey-unit3-preamble:
+        description here: hier die Beschreibung
+        title: Titel
+      csp-post-survey-unit4-preamble:
+        description here: hier die Beschreibung
+        title: Titel
+      csp-post-survey-unit5-preamble:
+        description here: hier die Beschreibung
+        title: Titel
+      csp_unit5_finalassessment_overview:
+        description here: hier die Beschreibung
+        title: Titel
+      csp_unit5_finalassessment_overview_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      csp_unit5_finalassessment_overview_exam_prep:
+        description here: hier die Beschreibung
+        title: Titel
+      csp_unit_assessment_overview:
+        description here: hier die Beschreibung
+        title: Titel
+      csp_unit_assessment_overview_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      csp_unit_assessment_overview_exam_prep:
+        description here: hier die Beschreibung
+        title: Titel
+      deeper learning:
+        description here: hier die Beschreibung
+      deeper learning recommendations- csd:
+        description here: hier die Beschreibung
+      deeper learning recommendations- csp:
+        description here: hier die Beschreibung
+      deeper learning recommendations- csp - 2018:
+        description here: hier die Beschreibung
+      dlp supports - csd:
+        description here: hier die Beschreibung
+      dsl link test:
+        description here: hier die Beschreibung
+        title: Titel
+      equity discussion:
+        description here: hier die Beschreibung
+      grade2_maze_intro1:
+        description here: hier die Beschreibung
+        title: Titel
+      grade2_unplugged_neighborhood:
+        description here: hier die Beschreibung
+        title: Titel
+      grade4_project_design:
+        description here: hier die Beschreibung
+        title: Titel
+      grade4_project_design_image:
+        description here: hier die Beschreibung
+        title: Titel
+      grade4_project_presentation:
+        description here: hier die Beschreibung
+        title: Titel
+      grade5_project_design:
+        description here: hier die Beschreibung
+        title: Titel
+      grade5_project_presentation:
+        description here: hier die Beschreibung
+        title: Titel
+      more encryption algorithms:
+        description here: hier die Beschreibung
+        title: Titel
+      newCSFsample:
+        Intro: Einführung
+        description here: hier die Beschreibung
+      post-assessment survey heading4:
+        description here: hier die Beschreibung
+        title: Titel
+      pwc_appdev:
+        description here: hier die Beschreibung
+        title: Titel
+      pwc_appdevunplugged:
+        description here: hier die Beschreibung
+        title: Titel
+      pwc_cybersecurity:
+        description here: hier die Beschreibung
+        title: Titel
+      pwc_data:
+        description here: hier die Beschreibung
+      pwc_internetofthings:
+        description here: hier die Beschreibung
+        title: Titel
+      pwc_problemsolving:
+        description here: hier die Beschreibung
+      pwc_programming:
+        description here: hier die Beschreibung
+        title: Titel
+      pwc_technologyfoundations:
+        description here: hier die Beschreibung
+      pwc_webdevelopment:
+        description here: hier die Beschreibung
+        title: Titel
+      sciPD framework video:
+        Framework: Rahmen
+      sciPD what to expect:
+        What to Expect: Was Sie erwartet
+      sciPD what to expect 16-17:
+        What to Expect: Was Sie erwartet
+      sciPD2Part4_S1_L3:
+        description here: hier die Beschreibung
+        title: Titel
+      sciPD2Part4_S2_L1:
+        description here: hier die Beschreibung
+        title: Titel
+      sciPD2Part4_S2_L2:
+        description here: hier die Beschreibung
+        title: Titel
+      sciPD2Part4_S3_L1:
+        description here: hier die Beschreibung
+        title: Titel
+      sciPD2Part4_S3_L2:
+        description here: hier die Beschreibung
+        title: Titel
+      sciPD2Part4_S3_L3:
+        description here: hier die Beschreibung
+        title: Titel
+      sciPD3 mods2:
+        description here: hier die Beschreibung
+        title: Titel
+      sciPD33 earth1:
+        description here: hier die Beschreibung
+        title: Titel
+      sciPD33 earth2:
+        description here: hier die Beschreibung
+        title: Titel
+      sciPDpart4_S1_L1:
+        description here: hier die Beschreibung
+        title: Titel
+      test cb level:
+        description here: hier die Beschreibung
+      test discourse level type:
+        title: Titel
+      v2 U1 Internet is for Everyone Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U1 Internet is for Everyone Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U1L14 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U1L14 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U1L2 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U1L2 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U1L3 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U1L3 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U1L4 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U1L4 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U1L5 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U1L5 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U1L6 Student Lesson Introduction:
+        Sending Numbers: Zahlen senden
+        description here: hier die Beschreibung
+      v2 U1L6 Student Lesson Introduction_2018:
+        Sending Numbers: Zahlen senden
+        description here: hier die Beschreibung
+      v2 U1L8 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U1L8 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L1 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L1 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L10 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L10 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L11 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L11 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L12 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L12 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L13 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L13 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L14 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L14 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L15 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L15 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L2 Student Lesson Summary:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L2 Student Lesson Summary_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L3 Student Lesson Summary:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L3 Student Lesson Summary_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L4 Student Lesson Summary:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L4 Student Lesson Summary_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L5 Student Lesson Introduction:
+        description here: hier die Beschreibung
+      v2 U2L5 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+      v2 U2L6 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L6 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L7 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L7 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L8 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L8 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L9 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U2L9 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U3L04 Student Lesson Introduction:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U3L04 Student Lesson Introduction_2018:
+        description here: hier die Beschreibung
+        title: Titel
+      v2 U3L05 Student Lesson Introduction:
+        Creating Functions: Funktionen erstellen
+      v2 U3L05 Student Lesson Introduction_2018:
+        Creating Functions: Funktionen erstellen
+      v2 U4L05 Student Lesson Intro Encryption Caesar:
+        description here: hier die Beschreibung
+        title: Titel
+    match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: Weise die Tastenkombination
+          den richtigen Tanzbewegungen zu.
+        Matching: Passend
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: Passend
+        Use the key to match each code to its letter: Nutze den Schlüssel, um jedem
+          Code einen Buchstaben zuzuweisen
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: Passe das Raster dem Programm an.
+        Matching: Passend
+      2-3 Maze Match 2:
+        Instructions: Anweisungen
+        Match the puzzles to the blocks: Weise die Puzzle den Blöcken zu.
+        Maze Match: Labyrinth Übereinstimmung
+      2-3 Relay Programming Match 1:
+        Matching: Passend
+      2-3 artist loops match 1:
+        Match the loop to the shape: Weise die Schleife der Form zu.
+      2-3 artist match 1:
+        Artist Matching: Künstler Übereinstimmung
+        Match the shape with the blocks that complete it.: Weise die Form den Bausteinen
+          zu, die sie fertig zeichnen.
+      2-3 bounce match 1:
+        Matching: Passend
+      2-3 flappy match 1:
+        Matching: Passend
+      2-3 maze match 1:
+        Match the puzzles to the blocks: Weise die Puzzle den Blöcken zu.
+        Maze Match One: Labyrinth Übereinstimmung Eins
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>Füge den Wurf von Spieler
+          1 zum Gesamtergebnis hinzu</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>Vergleiche die Punktstände
+          der Mitspieler, um zu sehen, wer gewinnt</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>Spieler 1 würfelt</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>Setze das Ergebnis von Spieler 1
+          auf 0</h4>"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Weise
+          die Schritte des Würfel-Rennspiels der Ordnung zu, in der sie im Algorithmus
+          erscheinen sollte.
+        Matching: Passend
+      4-5 Computational Thinking Match 1:
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Räder/Seite: 2<br/>Fenster/Seite:
+          0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Räder/Seite: 2<br/>Fenster/Seite:
+          1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Räder/Seite: 2<br/>Fenster/Seite:
+          6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Räder/Seite: 3<br/>Fenster/Seite:
+          2</h3>"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Jedes
+          dieser Fahrzeuge wurde in kleinere Einzelteile zerlegt. Weise die Fahrzeuge
+          der Einzelteilliste zu.
+        Matching: Passend
+      4-5 Suncatchers Match 1:
+        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
+        "<h4>STACK</h4>": "<h4>STACK</h4>"
+        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
+        "<h4>STAR</h4>": "<h4>STAR</h4>"
+        Match each program to the word it makes, using the provided group of skills.: Weise
+          jedem Programm die Wörter zu, die es bildet, mithilfe der vorhandenen Fähigkeitsgruppen.
+        Matching: Passend
+      4-5 maze match 1:
+        Instructions: Anweisungen
+        Match the puzzles to the blocks: Weise die Puzzle den Blöcken zu.
+        Maze Match: Labyrinth Übereinstimmung
+      CSD U3 CSS Vocab Match:
+        '1': '1'
+        '2': '2'
+      CSD U3 keyinput match:
+        Question: Frage
+      CSDU2 Match RGB Colors:
+        Question: Frage
+      K-1 Artist 2 Match 1:
+        Matching: Passend
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: Weise die Formen je nach Typ zu.
+        Matching: Passend
+      K-1 Artist 2 Match 3:
+        Match the shapes based on type.: Weise die Formen je nach Typ zu.
+        Matching: Passend
+      K-1 Artist Loops Match 1:
+        Matching: Passend
+      K-1 Bee Loops Match 1:
+        Match the blocks: Ordne die Blöcke zu
+        Matching: Passend
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: Weise die Tastenkombination
+          den richtigen Tanzbewegungen zu.
+        Matching: Passend
+      K-1 Flappy Match 1:
+        Match the blocks: Ordne die Blöcke zu
+        Matching: Passend
+      K-1 Happy Maps Match 1:
+        Matching: Passend
+      K-1 Maze Match 1:
+        Instructions: Anweisungen
+        Match the puzzles and blocks: Ordne die Puzzle den Blöcken zu
+        Matching: Passend
+      K-1 Move It Match 1:
+        Matching: Passend
+      PDAlg Design Recipe Video:
+        Definition: Definition
+      PDAlg Types Video:
+        Image: Bild
+        Number: Nummer
+        String: String
+      PDK5 What is unplugged:
+        Question: Frage
+      'U2L06 - Matching: Label the Diagram':
+        A: A
+        B: B
+        C: C
+        D: D
+        E: O
+      U3L19 - MATCH what are values of abc:
+        '10': '10'
+        '12': '12'
+        '13': '13'
+        '15': '15'
+        '16': '16'
+        '21': '21'
+        '3': '3'
+        '5': '5'
+        '7': '7'
+        '8': '8'
+        description here: hier die Beschreibung
+        title: Titel
+      U3L19 - MC what are values of abc:
+        description here: hier die Beschreibung
+        title: Titel
+      U4L06 Create Record Id Matching Q:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      test matching image:
+        Instructions: Anweisungen
+      test matching text:
+        Matching: Passend
+        blue: blau
+      unique level name here:
+        Question: Frage
+        description here: hier die Beschreibung
+        title: Titel
+    multi:
+      2-3 Algorithms Multi 1:
+        Choose an algorithm for the image provided.: Wähle einen Algorithmus für das
+          gezeigte Bild.
+        Multiple Choice: Multiple-Choice
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Beginne
+          mit einem Quadrat.<br/> Setze ein Parallelogramm über das Quadrat.<br/>
+          Setze nun noch ein Dreieck rechts neben das Parallelogramm.
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Beginne
+          mit einem Quadrat<br/>Setze ein Dreieck auf das Quadrat<br/>Setze ein Dreieck
+          unter das Quadrat
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Beginne
+          mit einem Quadrat.<br/> Setze ein Dreieck unter das Quadrat. <br/>Setze
+          nun noch ein Parallelogramm rechts neben das Dreieck.
+        0: Beginne mit einem Quadrat. Platziere dann ein Dreieck rechts vom Quadrat.
+          Platziere anschliessend ein Parallelogramm unter das Quadrat. Setze schließlich
+          ein Dreieck rechts vom Parallelogramm
+        1: Starte mit einem Qudrat. Setze ein Dreieck rechts neben das Quadrat. Setze
+          nun das Parallelogramm unter das Quadrat. Sezte schliesslich ein Dreieck
+          rechts neben das Parallelogramm
+      2-3 Algorithms Multi 2:
+        Multiple Choice: Multiple-Choice
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Beginne
+          mit einem Dreieck<br/>Setze ein Quadrat unter das Dreieck<br/>Setze ein
+          weiteres Dreieck unter das Quadrat
+        Which image does <em>not</em> follow this algorithm?: Welches Bild folgt <em>nicht</em>
+          diesem Algorithmus?
+      2-3 Binary Multi 1:
+        Multiple Choice: Multiple-Choice
+        Which program makes this image?: Welches Programm erzeugt dieses Bild?
+      2-3 Conditionals Multi 1:
+        According to the rules of the game, which set of cards is scored correctly?: Welcher
+          Kartensatz ist nach den Regeln des Spiels richtig ausgewertet?
+        Multiple Choice: Multiple-Choice
+      2-3 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Wie kann man diese Sequenz
+          mit Schleifen vereinfachen?
+        Multiple Choice: Multiple-Choice
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: Multiple-Choice
+        Which program makes this image?: Welches Programm erzeugt dieses Bild?
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: Labyrinth Multiple-Choice
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: Multiple-Choice
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: Multiple-Choice
+        Which image-program combo does not contain mistakes?: Welche Bild-Programm-Kombination
+          enthält keine Fehler?
+      2-3 artist functions multi 1:
+        Artist Functions Multiple Choice One: 'Der Künstler: Funktionen Multiple-Choice
+          Eins'
+        Pick the correct blocks to draw this image using the given functions: Wähle
+          die richtigen Bausteine, um dieses Bild mit den vorhandenen Funktionen zu
+          zeichnen
+      2-3 artist loops multi 1:
+        Artist Loops Multiple Choice: Künstler Schleifen Multiple-Choice
+        Which shape is made by this loop?: Welche Form wird durch diese Schleife erzeugt?
+      2-3 artist loops multi 2:
+        Artist Loops Multiple Choice: Künstler Schleifen Multiple-Choice
+        Which shape is made by this program?: Welche Form wird durch dieses Programm
+          erzeugt?
+      2-3 bee conditionals multi 1:
+        Which comparison below is true?: Welcher Vergleich unten ist wahr?
+      2-3 bee conditionals multi 2:
+        Choose the best blocks.: Wähle die besten Bausteine.
+      2-3 bee conditionals multi 3:
+        Choose the best blocks.: Wähle die besten Bausteine.
+      2-3 bee loops multi 1:
+        Bee Loops Multiple Choice One: Biene Schleifen Multiple-Choice Eins
+        Which blocks collect all of the nectar?: Welche Bausteine sammeln den gesamten
+          Nektar?
+      2-3 maze multi 1:
+        Maze Multiple Choice One: Multiple-Choice Labyrinth Eins
+        Which set of blocks is the correct answer?: Welche Gruppe von Bausteinen ist
+          richtig?
+      4-5 Algorithms Multi 1:
+        Baking cookies: Kekse backen
+        Banana: Banane
+        Brushing your teeth: Zähneputzen
+        Multiple Choice: Multiple-Choice
+        Shopping from a grocery list: Einkaufen nach einer Einkaufsliste
+        Which one of these items is hardest to describe an algorithm for?: Welches
+          dieser Elemente ist am schwersten mit einem Algorithmus zu beschreiben?
+      4-5 Computational Thinking Multi 1:
+        Eugene is a _____ city.: Bielefeld ist eine _____ Stadt.
+        0: "? Hier sind drei Sätze. Welche der  Vorlagen unten abstrahiert richtig,
+          so dass alle drei das gleiche Muster als Vorlage benutzen?"
+        1: ': "Hier sind drei Sätze. Welche der Vorlagen unten abstrahiert richtig,
+          sodass alle drei mit dem Muster der Vorlage übereinstimmen?"'
+        Multiple Choice: Multiple-Choice
+        Seattle _____ a _____ _____.: Berlin _____ eine _____ _____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Berlin
+          ist eine große Stadt. <br/> Bielefeld ist eine mittelgroße Stadt. <br/>
+          Werl ist eine kleine Stadt.
+        _____ is _____ a _____.: _____ ist _____ eine _____.
+        _____ is a _____ city.: _____ ist eine _____ Stadt.
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: Multiple-Choice
+        Which of these pictures best represents crowdsourcing?: Welches dieser Bilder
+          repräsentiert Crowdsourcing am besten?
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: Deine Haare bürsten
+        Cleaning your room: Dein Zimmer putzen
+        Eating your dessert: Dein Dessert essen
+        Multiple Choice: Multiple-Choice
+        Washing your face: Dein Gesicht waschen
+        Which one of these activities would be best for practicing crowdsourcing?: Welche
+          dieser Aktivitäten ist am besten für Crowdsourcing?
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: Multiple-Choice
+        Which piece of information listed below is okay to share on the internet?: Welche
+          der unten genannten Informationen kannst du gefahrlos im Internet teilen?
+        Your address: Deine Adresse
+        Your birthday: Deinen Geburtstag
+        Your favorite food: Dein Lieblingsessen
+        Your parent's credit card number: Die Kreditkartennummer deiner Eltern
+      4-5 Internet Multi 1:
+        Multiple Choice: Multiple-Choice
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Wenn
+          du versuchst, dich bei code.org anzumelden, zu welcher IP-Adresse bringt
+          der DNS dich am wahrscheinlichsten?
+      4-5 Internet Multi 2:
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Wenn
+          der DNS sie zu der Seite mit der IP-Adresse 100.42.50.110 geleitet hat,
+          auf welcher Seite sind sie?
+        Multiple Choice: Multiple-Choice
+      4-5 Songwriting Multi 1:
+        0: "? Fliegen in der Buttermilch, <br/> Husch, fliege, Husch, <br/> Fliege
+          in der Buttermilch, <br/> Husch, fliege, Husch, <br/> Fliege in der Buttermilch,
+          <br/> Husch, fliege, Husch, <br/> spring zu my Lou, mein Liebling."
+        1: ": Fly in der Buttermilch, <br/> Husch, fliegen, Husch, <br/> Fly in der
+          Buttermilch, <br/> Husch, fliegen, Husch, <br/> Fly in der Buttermilch,
+          <br/> Husch, fliegen, Husch, <br/> Skip to my Lou, mein Liebling."
+        Lou, Lou, skip to my Lou,: Lou, Lou, spring zu my Lou,
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
+          Lou, spring zu my Lou <br/> Lou, Lou, spring zu my Lou <br/> Lou, Lou, sspring
+          zu Lou <br/> spring zu my Lou, mein Liebling.
+        2: "? Lou, Lou, spring zu my Lou <br/> Lou, Lou, spring zu Lou <br/> Lou,
+          Lou, spring zu my Lou <br/> spring zu my Lou, mein Schätzchen. <br/> <br/><p>Fly
+          in der Buttermilch, <br/>Fliege Husch, Husch,"
+        3: ": Lou, Lou, spring zu my Lou <br/> Lou, Lou, spring zu my Lou <br/> Lou,
+          Lou, spring zu my Lou <br/> spring zu my Lou, mein Schätzchen. <br/> <br/><p>Flige
+          in der Buttermilch, <br/>Flieg Husch, Husch,"
+        Multiple Choice: Multiple-Choice
+        4: "? Was ist der größte Brocken dieses Liedes, den Sie als Refrain definieren
+          können, so dass der REfrain genau jedes Mal gleich ist?"
+        5: ": Was ist der größte Brocken dieses Liedes, den Sie als Refrain definieren
+          können, so dass er sich exakt so jedes mal wiederhohlt?"
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: Multiple-Choice
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Welches
+          der unteren Programme <em>erstellt nicht</em> genau dieselbe Sequenz wie
+          das Programm 1?
+      4-5 artist loops multi 1:
+        Artist Loops Multiple Choice: Künstler Schleifen Multiple-Choice
+        Which blocks will create the design?: Welche Bausteine erstellen das Design?
+      4-5 artist multi 1:
+        Artist Multiple Choice: Künstler Multiple-Choice
+        Which blocks draw a rectangle with a perimeter of 100?: Welche Bausteine zeichnen
+          ein Rechteck mit einen Umfang von 100?
+      4-5 artist multi 2:
+        Artist Multiple Choice: Künstler Multiple-Choice
+        Which drawing is symmetric?: Welche Zeichnung ist symmetrisch?
+      4-5 bee conditionals multi 1:
+        0: "? Eine lila Blume nimmtentweder 3, 2 oder 1 Nektar auf, aber man weiß
+          nicht wie viele. Welche Bausteine prüfen und sammeln allen Nektar aus einer
+          lila Blume?"
+        1: ': "Eine lila Blume kann entweder 3, 2 oder 1 Portion Nektar haben, aber
+          du weißt nicht genau, wie viele. Welche Bausteine überprüfen und sammeln
+          den gesamten Nektar einer lila Blume?"'
+        Bee Conditionals Multiple Choice: Biene Bedingungen Multiple-Choice
+        Choose the best blocks.: Wähle die besten Bausteine.
+      4-5 bee debug multi 1:
+        Bee Debug Multiple Choice: Biene Debug Multiple-Choice
+        Which version of the function will work?: Welche Version der Funktion funktioniert?
+      4-5 bee loops multi 1:
+        Bee Loops Multiple Choice: Biene Schleifen Multiple-Choice
+        Which blocks will solve the puzzle?: Welche Bausteine werden die Aufgabe lösen?
+      4-5 farmer loops multi 1:
+        Which blocks solve the puzzle?: Welche Bausteine lösen die Aufgabe?
+      4-5 maze conditionals multi 1:
+        Maze Conditionals Multiple Choice: Labyrinth Bedingungen Multiple-Choice
+        Which blocks solve the puzzle?: Welche Bausteine lösen die Aufgabe?
+      4-5 maze multi 1:
+        Maze Multiple Choice: Labyrinth Multiple-Choice
+        Which blocks solve the puzzle?: Welche Bausteine lösen die Aufgabe?
+      CB_Question_3:
+        A: A
+        Y: true
+      CSD Prediction Header Size:
+        Question: Frage
+      CSD U3 Boolean MC:
+        title: Titel
+      CSD U3 Boolean MC_2018:
+        title: Titel
+      CSDU4 Screens Predict Multi:
+        About: Über
+        Contact Us: Kontaktieren Sie uns
+      'CSP U4L04 Assessment 1 ':
+        Question: Frage
+      CSP Unit 1 Ch 1 MC binary to dec simple:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_2018:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_exam_prep:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP verify 18:
+        'No': Nein
+        'Yes': Ja
+      CSPU5_predict_mc_whichOfTwoEvents:
+        title: Titel
+      CSPU5_predict_onEvent_withWrongID:
+        Question: Frage
+        title: Titel
+      CommuteAssess - loops 1 - block:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block B:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_2018:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_exam_prep:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 2 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_2018:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_exam_prep:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      Destroy me multi test:
+        description here: hier die Beschreibung
+      ECSPD2 question:
+        Question: Frage
+        title: Titel
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: Multiple-Choice
+        Which blocks solve this puzzle?: Welche Bausteine lösen dieses Rätsel?
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: Multiple-Choice
+        Which blocks draw the square?: Welcher Baustein zeichnet das Quadrat?
+      K-1 Artist 2 Multi 1:
+        Multiple Choice: Multiple-Choice
+      K-1 Artist Loops Multi 1:
+        Multiple Choice: Multiple-Choice
+      K-1 Bee 1 Multi 1:
+        How many nectars is this?: Wie viele Portionen Nektar sind das?
+        Multiple Choice: Multiple-Choice
+      K-1 Bee 1 Multi 2:
+        How many nectars is this?: Wie viele Portionen Nektar sind das?
+        Multiple Choice: Multiple-Choice
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: Multiple-Choice
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Welches
+          Tier hat den <strong>unsichersten</strong> digitalen Fußabdruck?
+      K-1 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Wie kann man diese Sequenz
+          mit Schleifen vereinfachen?
+        Multiple Choice: Multiple-Choice
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: Multiple-Choice
+        Which arrow gets the Flurb to the treasure?: Welcher Pfeil bringt den Flurb
+          zum Schatz?
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: Multiple-Choice
+        Which information should you <strong>not</strong> share online?: Welche Informationen
+          sollte man <strong>nicht</strong> online teilen?
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: Multiple-Choice
+        Which choice should be the final block?: Welche Wahl sollte der letzte Baustein
+          sein?
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: Multiple-Choice
+        Which repeat block is the same?: Welcher Wiederhole-Baustein ist derselbe?
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: Multiple-Choice
+        Pick the correct repeat block.: Wähle den richtigen Wiederhole-Baustein.
+      K-1 Maze Multiple Choice 2:
+        Maze: Labyrinth
+        Which answer solves this level?: Welche Antwort löst das Problem?
+      K-1 Move It Multi 1:
+        Multiple Choice: Multiple-Choice
+        Which algorithm gets the Flurb to the flowers?: Welcher Algorithmus bringt
+          den Flurb zu den Blumen?
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: Multiple-Choice
+        Which step should go at the beginning of this algorithm?: Welcher Schritt
+          gehört an den Anfang dieses Algorithmus?
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: Multiple-Choice
+        Which step should fill in the blank for this algorithm?: Welcher Schritt sollte
+          die Lücke in diesem Algorithmus füllen?
+      K-1 Word Search Multi 1:
+        Multiple Choice: Multiple-Choice
+        Which blocks spell "MOVE"?: Welche Bausteine schreiben "MOVE" (bewegen)?
+      K-1 Word Search Multi 2:
+        Multiple Choice: Multiple-Choice
+      K-1 Word Search Multi 3:
+        Multiple Choice: Multiple-Choice
+        SET: SET (SATZ)
+        SOUTH: SOUTH (SÜD)
+        SQUARE: SQUARE (QUADRAT)
+        Which word is spelled?: Welches Wort wird geschrieben?
+      Multi Define Funcs 1:
+        '3': '3'
+        y: true
+      Multi Define Funcs 2:
+        '3': '3'
+        y: true
+      Multi Define Funcs 3:
+        '5': '5'
+        '6': '6'
+        y: true
+      PDAlg Blocks Video:
+        Toolbox: Werkzeugkiste
+      PDAlg DR Multi 1:
+        Domain: Domäne
+        Name: Name
+        Range: Bereich
+        0: "? The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+        1: ": The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+      PDAlg PreQ 1:
+        'No': Nein
+        'Yes': Ja
+      PDAlg PreQ 2:
+        'No': Nein
+        'Yes': Ja
+      PDAlg functional:
+        'No': Nein
+      PDK5 Blockly Intro:
+        'Yes': Ja
+      PDK5 Classroom Culture:
+        'Yes': Ja
+      PDK5 Course Maps:
+        'Yes': Ja
+      PDK5 Course Overview:
+        'Yes': Ja
+      PDK5 Glossary:
+        Glossary: Glossar
+        'Yes': Ja
+      PDK5 Intro:
+        'No': Nein
+        Welcome!: Willkommen!
+        'Yes': Ja
+      PDK5 Teacher Dashboard:
+        Teacher Dashboard: Lehrer-Dashboard
+        'Yes': Ja
+      PDK5 Test1:
+        Question: Frage
+        description here: hier die Beschreibung
+        title: Titel
+      PDK5 UVideo Overview:
+        'Yes': Ja
+      PDK5 Unplugged Intro:
+        'Yes': Ja
+      PS U3-bakertest:
+        description here: hier die Beschreibung
+        title: Titel
+      SG U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      Submittable Multi:
+        blue: blau
+        green: grün
+        red: rot
+      Test Contained Multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '4': '4'
+      U1L07 Assessment 1:
+        A: A
+        B: B
+        C: C
+        D: D
+        E: O
+      U1L6 Assessment multiple choice:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L6 Assessment multiple choice_2018:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L8 Multiple Choice:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      U1L8 Multiple Choice_2018:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      'U2L06 - MC: Which is an MST?':
+        0: ': "<p>The images below all show the same map (or graph) but have different
+          paths between the points highlighted.</p>\n<p>Please choose the image that
+          is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The
+          “distance” between points is depicted by the number of line segments connecting
+          any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
+        A: A
+        B: B
+        C: C
+        D: D
+        E: O
+      U2L08 Assessment 1:
+        '11': '11'
+        '5': '5'
+        '6': '6'
+        '8': '8'
+        '9': '9'
+      U2L13 Assessment4:
+        '26': '26'
+      U2L13 Assessment4_2018:
+        '26': '26'
+      U2L14 Assessment3:
+        'false': falsch
+        'true': wahr
+      U2L19 multichoice 13 MOD 17:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      U2L19 multichoice 13 MOD 17_2018:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      'U2L19 mutlichoice ':
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15_2018:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L07 - MC remove line of code loops_2018:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L13 - Making Predications MC:
+        0: '? "<h1>Make a prediction - Learning to Code Better, Faster</h1>\n<p>As
+          you are learning to program you will encounter more and more new features
+          of a language and be naturally curious about how things work.  Research
+          has shown that when you encounter a new piece of code or new situation,
+          you learn faster by simply making a prediction about what will happen before
+          you run the program for the first time.  \n</p><p>Making a prediction forces
+          you to study the code and use your intuitions based on what you already
+          know. Even experienced programmers might disagree about what a piece of
+          code would do!  So making a prediction is not like some sort of test about
+          how smart you are.  <strong>By making a prediction first, when you run the
+          code you learn so much more whether you were right, wrong or somewhere in
+          between.  You construct a stronger mental model for how code works than
+          if you just ran the program to see what happened.</strong></p>\n<p>  So
+          let''s try it...</p>\n<h1> What do you think will happen?</h1>\n<p><img
+          src=\"https://images.code.org/34f6a627f0d62b6dc015c9e318372de9-image-1444076081470.png\"
+          align=right>Here is a piece of code with two buttons and two event handlers.  Notice
+          that both buttons still have the default IDs of \"id\". You will need to
+          fix this because we know it causes a warning message.  But it turns out
+          the program can still run and it does do <i>something.</i></p>\n<p><strong>What
+          do you think will happen with this code is run?</strong></p>"'
+        1: ': "<h1>Make a prediction - Learning to Code Better, Faster</h1>\n<p>As
+          you are learning to program you will encounter more and more new features
+          of a language and be naturally curious about how things work.  Research
+          has shown that when you encounter a new piece of code or new situation,
+          you learn faster by simply making a prediction about what will happen before
+          you run the program for the first time.  \n</p><p>Making a prediction forces
+          you to study the code and use your intuitions based on what you already
+          know. Even experienced programmers might disagree about what a piece of
+          code would do!  So making a prediction is not like some sort of test about
+          how smart you are.  <strong>By making a prediction first, when you run the
+          code you learn so much more whether you were right, wrong or somewhere in
+          between.  You construct a stronger mental model for how code works than
+          if you just ran the program to see what happened.</strong></p>\n<p>  So
+          let''s try it...</p>\n<h1> What do you think will happen?</h1>\n<p><img
+          src=\"https://images.code.org/34f6a627f0d62b6dc015c9e318372de9-image-1444076081470.png\"
+          align=right>Here is a piece of code with two buttons and two event handlers.  Notice
+          that both buttons still have the default IDs of \"id\". You will need to
+          fix this because we know it causes a warning message.  But it turns out
+          the program can still run and it does do <i>something.</i></p>\n<p><strong>What
+          do you think will happen with this code is run?</strong></p>"'
+        description here: hier die Beschreibung
+      U3L30 Assessment1:
+        '6': '6'
+        '7': '7'
+        '8': '8'
+      U3L30 Assessment2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+      U3L30 Assessment3:
+        '19': '19'
+        '20': '20'
+        '21': '21'
+      U4L01 Multiple Choice:
+        right: rechts
+      U4L02 Multiple Choice:
+        right: rechts
+      U4L03 Multiple Choice:
+        right: rechts
+      U4L04 Multiple Choice:
+        right: rechts
+      U4L05 Multiple Choice:
+        right: rechts
+      U4L06 Multiple Choice:
+        right: rechts
+      U4L06 Reflection Q 1:
+        Question: Frage
+        random: zufällig
+      U4L07 Multiple Choice:
+        right: rechts
+      U4L08 Multiple Choice:
+        right: rechts
+      U4L09 Multiple Choice:
+        right: rechts
+      U4L10 Multiple Choice:
+        right: rechts
+      U4L11 Multiple Choice:
+        right: rechts
+      U4L12 Multiple Choice:
+        right: rechts
+      U4L13 Multiple Choice:
+        right: rechts
+      U4L14 Multiple Choice:
+        right: rechts
+      U4L15 Multiple Choice:
+        right: rechts
+      U4L16 Multiple Choice:
+        right: rechts
+      U4L17 Multiple Choice:
+        right: rechts
+      U4L18 Multiple Choice:
+        right: rechts
+      U4L19 Multiple Choice:
+        right: rechts
+      U4L20 Multiple Choice:
+        right: rechts
+      U4L21 Multiple Choice:
+        right: rechts
+      U4L22 Multiple Choice:
+        right: rechts
+      U4L23 Multiple Choice:
+        right: rechts
+      U4L24 Multiple Choice:
+        right: rechts
+      U4LXX Multiple Choice:
+        right: rechts
+      U5 assess_weight_v2:
+        Question: Frage
+        description here: hier die Beschreibung
+        title: Titel
+      Warmup questions:
+        random: zufällig
+      commute assess - loops 4 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        '50': '50'
+      courseC_multi_harvester_loops11_predict1:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_starWars_predict1:
+        I don't know: Ich weiß nicht
+      courseC_multi_starWars_predict1_2018:
+        I don't know: Ich weiß nicht
+      courseD_multi_artist_binary8_predict1:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_binary8_predict1_2018:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_nestedLoops9_predict1:
+        A: A
+        B: B
+        C: C
+      courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: A
+        B: B
+        C: C
+      courseD_multi_bee_nestedLoops9_predict2:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseE_multi_farmer_predict1:
+        I don't know: Ich weiß nicht
+        0: "? Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        1: ": Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        2: "? The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+        3: ": The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+      courseE_multi_farmer_predict1_2018:
+        I don't know: Ich weiß nicht
+        0: "? Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        1: ": Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        2: "? The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+        3: ": The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+      csd-post-survey-2018-topic-ai:
+        'No': Nein
+        'Yes': Ja
+      csd-post-survey-2018-topic-cryptocurrency:
+        'No': Nein
+        'Yes': Ja
+      csd-post-survey-2018-topic-cybersecurity:
+        Cybersecurity: Cyber-Sicherheit
+        'No': Nein
+        'Yes': Ja
+      csd-post-survey-2018-topic-databases:
+        'No': Nein
+        'Yes': Ja
+      csd-post-survey-2018-topic-datascience:
+        'No': Nein
+        'Yes': Ja
+      csd-post-survey-2018-topic-gamedev:
+        'No': Nein
+        'Yes': Ja
+      csd-post-survey-2018-topic-hardware:
+        'No': Nein
+        'Yes': Ja
+      csd-post-survey-2018-topic-internet:
+        'No': Nein
+        'Yes': Ja
+      csd-post-survey-2018-topic-mobile:
+        'No': Nein
+        'Yes': Ja
+      csd-post-survey-2018-topic-parallel:
+        'No': Nein
+        'Yes': Ja
+      csd-post-survey-2018-topic-programming:
+        'No': Nein
+        'Yes': Ja
+      csd-post-survey-2018-topic-robotics:
+        'No': Nein
+        Robotics: Robotik
+        'Yes': Ja
+      csd-post-survey-2018-topic-web:
+        'No': Nein
+        'Yes': Ja
+      csp-post-survey-2017-q64:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': Nein
+        'Yes': Ja
+      csp-post-survey-2017-q64_2018:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': Nein
+        'Yes': Ja
+      csp-post-survey-2017-q65:
+        I don't know: Ich weiß nicht
+        'No': Nein
+        'Yes': Ja
+      csp-post-survey-2017-q65_2018:
+        I don't know: Ich weiß nicht
+        'No': Nein
+        'Yes': Ja
+      csp-post-survey-2018-topic-ai:
+        'No': Nein
+        'Yes': Ja
+      csp-post-survey-2018-topic-cryptocurrency:
+        'No': Nein
+        'Yes': Ja
+      csp-post-survey-2018-topic-cybersecurity:
+        Cybersecurity: Cyber-Sicherheit
+        'No': Nein
+        'Yes': Ja
+      csp-post-survey-2018-topic-databases:
+        'No': Nein
+        'Yes': Ja
+      csp-post-survey-2018-topic-datascience:
+        'No': Nein
+        'Yes': Ja
+      csp-post-survey-2018-topic-gamedev:
+        'No': Nein
+        'Yes': Ja
+      csp-post-survey-2018-topic-hardware:
+        'No': Nein
+        'Yes': Ja
+      csp-post-survey-2018-topic-internet:
+        'No': Nein
+        'Yes': Ja
+      csp-post-survey-2018-topic-mobile:
+        'No': Nein
+        'Yes': Ja
+      csp-post-survey-2018-topic-parallel:
+        'No': Nein
+        'Yes': Ja
+      csp-post-survey-2018-topic-programming:
+        'No': Nein
+        'Yes': Ja
+      csp-post-survey-2018-topic-robotics:
+        'No': Nein
+        Robotics: Robotik
+        'Yes': Ja
+      csp-post-survey-2018-topic-web:
+        'No': Nein
+        'Yes': Ja
+      csp-pre-survey-2017-q40:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Andere
+      csp-pre-survey-2017-q40_2018:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Andere
+      csp_ap_exam_signup:
+        'No': Nein
+        'Yes': Ja
+      csp_ap_previous_years:
+        'No': Nein
+        'Yes': Ja
+      csp_ap_taking_ap_class:
+        'No': Nein
+        'Yes': Ja
+      cspu5_assess1_fivemore:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_2018:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_exam_prep:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_flowchart:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_2018:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_exam_prep:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_increase:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_2018:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_exam_prep:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess2_addstrings:
+        result: Ergebnis
+      cspu5_assess2_addstrings_2018:
+        result: Ergebnis
+      cspu5_assess2_addstrings_exam_prep:
+        result: Ergebnis
+      cspu5_assess2_combineString:
+        '10': '10'
+        '55': '55'
+        result: Ergebnis
+      cspu5_assess2_combineString_2018:
+        '10': '10'
+        '55': '55'
+        result: Ergebnis
+      cspu5_assess2_combineString_exam_prep:
+        '10': '10'
+        '55': '55'
+        result: Ergebnis
+      cspu5_assess2_oldEnough:
+        '35': '35'
+        'false': falsch
+        'true': wahr
+      cspu5_assess2_oldEnough_2018:
+        '35': '35'
+        'false': falsch
+        'true': wahr
+      cspu5_assess2_oldEnough_exam_prep:
+        '35': '35'
+        'false': falsch
+        'true': wahr
+      cspu5_assess2_weight:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_2018:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_exam_prep:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess3_array1:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_2018:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_exam_prep:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array4:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_2018:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_exam_prep:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_listAppend:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_2018:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_exam_prep:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_loopValue1:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue2:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess4_dataReturns:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_2018:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_exam_prep:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_listOutput:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_2018:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_exam_prep:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      msm variables multi 1:
+        '15': '15'
+        x: x
+      msm variables multi 10:
+        '17': '17'
+        x: x
+      msm variables multi 11:
+        '17': '17'
+        x: x
+      msm variables multi 12:
+        '17': '17'
+        x: x
+      msm variables multi 13:
+        '117': '117'
+        '17': '17'
+        x: x
+      msm variables multi 2:
+        '8': '8'
+      msm variables multi 3:
+        '5': '5'
+        x: x
+      msm variables multi 4:
+        '15': '15'
+        '3': '3'
+        '8': '8'
+      msm variables multi 5:
+        '3': '3'
+        '5': '5'
+      msm variables multi 6:
+        '1': '1'
+        '5': '5'
+        hello: Hallo
+      msm variables multi 7:
+        '3': '3'
+        x: x
+      msm variables multi 8:
+        '3': '3'
+        x: x
+      msm variables multi 9:
+        '5': '5'
+        '6': '6'
+        x: x
+      post-assessment survey q34:
+        Easy: Einfach
+        Hard: Schwer
+      pre-assessment survey q24:
+        'No': Nein
+        'Yes': Ja
+      pre-assessment survey q26:
+        0: "? Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        1: ": Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        'No': Nein
+        'Yes': Ja
+      pre-assessment survey q27:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Andere
+      pre-assessment survey q28:
+        '10': '10'
+        '11': '11'
+        '12': '12'
+        '8': '8'
+        '9': '9'
+        Other: Andere
+      pre-assessment survey q29:
+        Female: Weiblich
+        Male: Männlich
+        Other: Andere
+        Prefer not to answer: Möchte ich nicht beantworten
+      pre-assessment survey q30:
+        Asian: Asiatisch
+        Black or African American: Schwarz
+        Other: Andere
+        Prefer not to answer: Möchte ich nicht beantworten
+        White: Weiß
+      sarah_test_maggie:
+        Question: Frage
+        test: prüfe
+      sciPD PreQ 1:
+        'No': Nein
+        'Yes': Ja
+      sciPD PreQ 2:
+        'No': Nein
+        'Yes': Ja
+      test anonymous student survey educational:
+        'No': Nein
+        'Yes': Ja
+      test me:
+        Question: Frage
+        description here: hier die Beschreibung
+        title: Titel
+      unique level name here:
+        Question: Frage
+        description here: hier die Beschreibung
+        title: Titel
+    text_match:
+      U2L07 Assessment4:
+        '43': '43'

@@ -1,0 +1,21 @@
+---
+nl:
+  data:
+    block_categories:
+      Actions: Acties
+      Loops: Lussen
+      Functions: Functies
+      Color: Kleur
+      Math: wiskundige
+      Logic: Logica
+      Variables: Variabelen
+      Conditionals: Voorwaardelijke instructies
+      Events: Gebeurtenissen
+      Text: Tekst
+      Start: Start
+      Dancers: Dansers
+      Groups: Groepen
+      Booleans: Booleans
+      test: test
+      Name: naam
+      Function: Functie

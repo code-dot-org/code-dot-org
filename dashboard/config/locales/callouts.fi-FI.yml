@@ -1,0 +1,337 @@
+---
+fi:
+  data:
+    callouts:
+      CSD U3 Variables Predict Where X_callout:
+        CSD_U3_variables: Vaihda numeroa tässä
+      CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: Vaihda numeroa tässä
+      CSD U3 debug_callout:
+        CSD_U3_rect_c1: Tässä on koodi
+      CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: Tässä on koodi
+      CSD U3 ellipse_callout:
+        CSD_U3_rect_c1: Tässä on koodi
+      CSD U3 ellipse_2018_callout:
+        CSD_U3_rect_c1: Tässä on koodi
+      CSD U3 fill_callout:
+        CSD_U3_rect_c1: Tässä on koodi
+      CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Tässä on koodi
+      CSD U3 my-rect_callout:
+        CSD_U3_rect_c1: Tässä on koodi
+        CSD_U3_rect_c2: Tässä on "Suorita"-painike.
+      CSD U3 rect_callout:
+        CSD_U3_rect_c1: Tässä on koodi
+        CSD_U3_rect_c2: Tässä on "Suorita"-painike.
+      CSD U3 rect_2018_callout:
+        CSD_U3_rect_c1: Tässä on koodi
+      CSD U3 sequence_callout:
+        CSD_U3_rect_c1: Tässä on koodi
+      CSD U3 sequence_2018_callout:
+        CSD_U3_rect_c1: Tässä on koodi
+      Course 4 Artist 4_callout:
+        repeat_full_circle: Syötä se määrä kertoja, jonka zombin pitää liikkua tehdäkseen
+          täysi ympyrä
+      Course 4 Artist 7_callout:
+        repeat_blocks: Käytä "Toista" lohkoa ja laita se työtilassa olevien toisten
+          lohkojen ympärille
+      Course 4 Artist For Loops 4_callout:
+        place_counter_variable: Raahaa laskurimuuttujasi tähän lohkoon
+      Course 4 Artist Functions 4_callout:
+        create_function: Napsauta täällä avataksesi "Toiminnot" kohta, ja napsauta
+          sitten "Luo funktio" -painiketta.
+      Course 4 Artist Functions 5 OLD_callout:
+        house_hint: On ihan Ok, vaikka kuva ei näyttäisikään vielä talolta. Korjaamme
+          sen seuraavassa tehtävässä.
+      Course 4 Artist Functions 8_callout:
+        edit_function: Muokkaa funktiotasi napsauttamalla tästä.
+      Course 4 Artist Params 2_callout:
+        length_parameter: Osaatko päivittää tämän funktion niin, että se käyttää "pituus"
+          parametria?
+      Course 4 Artist Params 4_callout:
+        create_function: Napsauta täällä avataksesi "Toiminnot" kohta, ja napsauta
+          sitten "Luo funktio" -painiketta.
+      Course 4 Artist Vars 1_callout:
+        repeat_blocks: Käytä "Toista" lohkoa ja laita se työtilassa olevien toisten
+          lohkojen ympärille
+      Course 4 Artist Vars 10_callout:
+        set_sides: Käytä tätä lohkoa asettaaksesi sivujen lukumäärän tehtävän ratkaisun
+          mukaiseksi.
+      Course 4 Artist Vars 12_callout:
+        set_length: Käytä tätä lohkoa asettaaksesi pituuden oikean arvon.
+      Course 4 Artist Vars 2_callout:
+        set_length: Käytä tätä lohkoa asettaaksesi pituuden oikean arvon.
+      Course 4 Artist Vars 3_callout:
+        place_variable: Vedä muuttujasi tähän lohkoon
+      Course 4 Artist Vars 6_callout:
+        degrees_per_side: Jaa 360 sivujen määrällä saadaksesi kunkin kulman koko asteissa.
+      Course 4 Artist Vars 8_callout:
+        Course_4_Artist_Vars_8_a: Tarvitsetko lisää tilaa?  Vedä tätä palkkia tehdäksesi
+          koodausalueesta laajempi.
+      Course 4 Artist Vars 9_callout:
+        set_sides: Käytä tätä lohkoa asettaaksesi sivujen lukumäärän tehtävän ratkaisun
+          mukaiseksi.
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: Käytä uutta "kerää mesi" -lohkoa.
+      Course 4 Bee For Loops 6_callout:
+        actions_category: Työkaluilla on uusi ulkoasu! "Toiminnot" -lohkot löytyvät
+          nyt täältä.
+      Course 4 Bee Params 2_callout:
+        edit_get_nectar: Käytä tätä nappia muokataksesi funktiota. Muuta suuntaa,
+          jonne mehiläinen kääntyy keräämään mettä.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: Kokeile ohjelmaa painamalla "Run" ["Suorita"]
+      Course 4 Maze 4_callout:
+        repeat: Toistaaksesi lohkojen komennot, aseta ne silmukan sisään
+      Course 4 Play Lab Params 3_callout:
+        edit_function: Muokkaa funktiotasi napsauttamalla tästä.
+      Course 4 Play Lab Params 6_callout:
+        edit_add_parameter: Lisää funktioosi parametreja napsauttamalla muokkaa
+      Course 4 Play Lab Vars 1_callout:
+        arrows_move_actor: Käytä nuolia liikuttaaksesi hahmoa
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: Käytä nuolia liikuttaaksesi hahmoa
+      Eval Design Recipe .1_callout:
+        edit_function: Muokkaa funktiotasi napsauttamalla tästä.
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: Käytä tätä alasvetovalikkoa luodaksesi erilaisia lumihiutaleita!
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: Käytä tätä alasvetovalikkoa luodaksesi erilaisia lumihiutaleita!
+      Function intro Ryan_callout:
+        Function_intro_Ryan_1: Tämä pieni ohje saa tietokoneen suorittamaan ISON möhkäleen
+          samannimistä koodia työtilassa.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Tämä pieni ohje saa tietokoneen suorittamaan ISON möhkäleen
+          samannimistä koodia työtilassa.
+      Infinity_move_collide_callout:
+        Infinity_move_collide_callout: Anna äänimerkki, kun tämä tapahtuma toteutuu.
+      Infinity_move_directions_callout:
+        Infinity_move_directions_callout: Mikä lohko siirtää Baymaxiä ylös kun nuoli
+          ylös nappia painetaan?
+        Infinity_move_directions_callout_arrow: Käytä näitä nuolia ohjaamiseen
+      Infinity_move_right_callout:
+        Infinity_move_right_runbutton: Lisää liikuta lohko tänne
+      Infinity_repeat_callout:
+        Infinity_repeat_callout: Aseta liikuta lohkoja tänne
+      MC_HOC_2017_01_Cole_callout:
+        MC_HOC_2017_01_Cole_2: Aloita pelaajan liikuttaminen käyttämällä nuolinäppäimiä
+          tai napsauttamalla tätä.
+      MC_HOC_2017_02_Will_callout:
+        MC_HOC_2017_02_Cole_1: Nyt pelaajallasi on kaveri! Voit kirjoittaa koodia
+          Agentille avuksi tasojen selvittämiseen.
+      MC_HOC_2017_03_Cole_callout:
+        MC_HOC_2017_03_Cole_1: Tämä on toisto-silmukka!  Napsauta sitä työtilassa
+          ja lisää koodia, jota haluat toistaa yhä uudelleen.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Tämä on toisto-silmukka!  Napsauta sitä työtilassa
+          ja lisää koodia, jota haluat toistaa yhä uudelleen.
+      MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Agent voi leijua veden päällä, mutta pelaaja ei!
+      MC_HOC_2017_04_Cole_2019_callout:
+        MC_HOC_2017_04_Cole_a: Agent voi leijua veden päällä, mutta pelaaja ei!
+      MC_HOC_2017_04_Kiki_callout:
+        MC_HOC_2017_04_Kiki_1: Napsauta tämä työtilaan ja lisää siihen koodia, jotta
+          se toistuu yhä uudelleen!
+      MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Et voi heittää näitä kuutioita pois, mutta voit muokata
+          niitä!
+      MC_HOC_2017_06_Cole_2019_callout:
+        MC_HOC_2017_06_Cole_1: Et voi heittää näitä kuutioita pois, mutta voit muokata
+          niitä!
+      MC_HOC_2017_08_RY_callout:
+        MC_HOC_2017_08_RY_1: 'Agent voi leijua laavan päällä, mutta pelaaja ei!  '
+      MC_HOC_2017_08_Will_callout:
+        MC_HOC_2017_08_RY_1: 'Agent voi leijua laavan päällä, mutta pelaaja ei!  '
+      MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'Agent voi leijua laavan päällä, mutta pelaaja ei!  '
+      MC_HOC_2017_Ali_2019_callout:
+        MC_HOC_2017_08_RY_1: 'Agent voi leijua laavan päällä, mutta pelaaja ei!  '
+      NEW Course 4 Artist Functions 5_callout:
+        edit_function: Muokkaa funktiotasi napsauttamalla tästä.
+        function_editor_draw_square: Tämä on funktionsi määritelmä. Nämä lohkot ajetaan
+          joka kerta kun käytät "piirrä neliö" -lohkoa
+      NEW Course 4 Artist Functions 7_callout:
+        edit_function: Muokkaa funktiotasi napsauttamalla tästä.
+      NEW Course 4 Artist Functions 8_callout:
+        edit_function: Muokkaa funktiotasi napsauttamalla tästä.
+      NEW Course 4 Artist Params 10_callout:
+        create_function: Napsauta täällä avataksesi "Toiminnot" kohta, ja napsauta
+          sitten "Luo funktio" -painiketta.
+      NEW Course 4 Artist Params 9_callout:
+        edit_add_parameter: Lisää funktioosi parametreja napsauttamalla muokkaa
+        add_and_drag_parameter: Kirjoita parametrisi nimi tähän, napsauta lisää ja
+          sitten vedä se funktiosi määrittelyyn
+      NEW Course 4 Artist Vars 6_callout:
+        place_length_variable: Korvaa kysymysmerkit vetämällä pituusmuuttuja tähän
+      NEW Course 4 Bee For Loops 5_callout:
+        actions_category: Työkaluilla on uusi ulkoasu! "Toiminnot" -lohkot löytyvät
+          nyt täältä.
+      New Frozen Project_callout:
+        snowflake_dropdown: Käytä tätä alasvetovalikkoa luodaksesi erilaisia lumihiutaleita!
+      Overworld Chop Trees_callout:
+        craft_callout_preplaced: Olemme koonneet sinulle muutamia palikoita
+      Overworld Chop Trees_2018_callout:
+        craft_callout_preplaced: Olemme koonneet sinulle muutamia palikoita
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Olemme koonneet sinulle muutamia palikoita
+      Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: Tämä koodi aloittaa talosi rakentamisen. Saatko
+          sen viimeisteltyä?
+      Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Tämä koodi aloittaa talosi rakentamisen. Saatko
+          sen viimeisteltyä?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Tämä koodi aloittaa talosi rakentamisen. Saatko
+          sen viimeisteltyä?
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: Kokeile ohjelmaa painamalla "Run" ["Suorita"]
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: Kokeile ohjelmaa painamalla "Run" ["Suorita"]
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Kokeile ohjelmaa painamalla "Run" ["Suorita"]
+      Overworld Place Wall_callout:
+        craft_inside_repeat: Toista toimintoja asettamalla palikoita tänne
+      Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Toista toimintoja asettamalla palikoita tänne
+      Overworld Place Wall_2019_callout:
+        craft_inside_repeat: Toista toimintoja asettamalla palikoita tänne
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö
+          etenemiskomennon?
+      Underground Avoiding Lava_2018_callout:
+        craft_callout_moveforward: Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö
+          etenemiskomennon?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö
+          etenemiskomennon?
+      Underground Iron_callout:
+        craft_what_is_iron: Louhi tämä rauta!
+      Underground Iron_2018_callout:
+        craft_what_is_iron: Louhi tämä rauta!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: Louhi tämä rauta!
+      aE3_callout:
+        aE3_1: Vain kourallinen näitä saatavilla
+      aE3alternate_callout:
+        aE3_1: Vain kourallinen näitä saatavilla
+      aE3alternateB_callout:
+        aE3_1: Vain kourallinen näitä saatavilla
+      aE4_callout:
+        aE3_1: Vain kourallinen näitä saatavilla
+      aE5_callout:
+        aE3_1: Vain kourallinen näitä saatavilla
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: Käytä "Luo ympyrä"-lohkoa ja
+          muuta kokoa.
+      frozen cross rotate_callout:
+        replace_questions_degree: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen cross_callout:
+        repeat_blocks_1: "(1) Käytä tätä lohkoa ja laita se harmaiden lohkojen ympärille
+          työtilassa"
+        repeat_blocks_2: (2) Vedä "Toista"-lohko tähän, ja laita harmaat lohkot sen
+          sisälle
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: Käytä "toista"-lohkoa luodaksesi tämä muoto.
+      frozen diamond_callout:
+        frozen_diamond_repeat: Käytä "toista"-lohkoa luodaksesi tämä muoto.
+      frozen freeplay_callout:
+        snowflake_dropdown: Käytä tätä alasvetovalikkoa luodaksesi erilaisia lumihiutaleita!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Käytä tätä alasvetovalikkoa luodaksesi erilaisia lumihiutaleita!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Käytä tätä alasvetovalikkoa luodaksesi erilaisia lumihiutaleita!
+      frozen line_callout:
+        move_elsa_forward: Saat Elsan siirtymään eteenpäin, kun vedät "liiku eteenpäin"
+          -lohkoa ja kiinnität sen "suoritettaessa" -lohkon alle
+      frozen line_b_callout:
+        move_elsa_forward: Saat Elsan siirtymään eteenpäin, kun vedät "liiku eteenpäin"
+          -lohkoa ja kiinnität sen "suoritettaessa" -lohkon alle
+      frozen line_test_callout:
+        move_elsa_forward: Saat Elsan siirtymään eteenpäin, kun vedät "liiku eteenpäin"
+          -lohkoa ja kiinnität sen "suoritettaessa" -lohkon alle
+      frozen perpendicular_callout:
+        turn_elsa: Käytä "käänny" lohkoa niin saat Elsan kääntymään. Alasvetovalikossa
+          oleva numero määrittää kuinka paljon Elsa kääntyy
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: Käytä "luo lumihiutalehaara" -lohkoa
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Käytä "luo lumihiutalehaara" -lohkoa
+      frozen square iterative_callout:
+        frozen_create_square: Luo neliö liittämällä tähän lisää lohkoja
+      frozen square iterative_b_callout:
+        frozen_create_square: Luo neliö liittämällä tähän lisää lohkoja
+      frozen square iterative_test_callout:
+        frozen_create_square: Luo neliö liittämällä tähän lisää lohkoja
+      frozen square loop 3x_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen square loop 3x_b_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen square loop 3x_test_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen square loop_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen square loop_b_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen square loop_test_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen square snowflake_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen square snowflake_b_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen square snowflake_test_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      grade4_artist_parameters_squares1_callout:
+        edit_add_parameter: Lisää funktioosi parametreja napsauttamalla muokkaa
+        add_and_drag_parameter: Kirjoita parametrisi nimi tähän, napsauta lisää ja
+          sitten vedä se funktiosi määrittelyyn
+      grade4_frozen_freeplay_callout:
+        snowflake_dropdown: Käytä tätä alasvetovalikkoa luodaksesi erilaisia lumihiutaleita!
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: Käytä "Luo ympyrä"-lohkoa ja
+          muuta kokoa.
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: Käytä "toista"-lohkoa luodaksesi tämä muoto.
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: Käytä "toista"-lohkoa luodaksesi tämä muoto.
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: Käytä "toista"-lohkoa luodaksesi tämä muoto.
+      grade4_frozen_square_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      grade4_frozen_square_loop1_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      grade4_frozen_square_loop2_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      grade4_frozen_square_loop3_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      grade5_artist_parameters_squares1_callout:
+        edit_add_parameter: Lisää funktioosi parametreja napsauttamalla muokkaa
+        add_and_drag_parameter: Kirjoita parametrisi nimi tähän, napsauta lisää ja
+          sitten vedä se funktiosi määrittelyyn
+      grade5_artist_parameters_triangles1aa_callout:
+        edit_add_parameter: Lisää funktioosi parametreja napsauttamalla muokkaa
+        add_and_drag_parameter: Kirjoita parametrisi nimi tähän, napsauta lisää ja
+          sitten vedä se funktiosi määrittelyyn
+      grade5_artist_variables_freeplay10_callout:
+        Course_4_Artist_Vars_8_a: Tarvitsetko lisää tilaa?  Vedä tätä palkkia tehdäksesi
+          koodausalueesta laajempi.
+      grade5_artist_variables_pentagons1_callout:
+        place_length_variable: Korvaa kysymysmerkit vetämällä pituusmuuttuja tähän
+      grade5_artist_variables_pentagons12_callout:
+        set_length: Käytä tätä lohkoa asettaaksesi pituuden oikean arvon.
+      grade5_artist_variables_square7_callout:
+        degrees_per_side: Jaa 360 sivujen määrällä saadaksesi kunkin kulman koko asteissa.
+      grade5_artist_variables_triangles2_callout:
+        set_length: Käytä tätä lohkoa asettaaksesi pituuden oikean arvon.
+      grade5_playlab_variables1_callout:
+        arrows_move_actor: Käytä nuolia liikuttaaksesi hahmoa
+      grade5_playlab_variables11_callout:
+        edit_add_parameter: Lisää funktioosi parametreja napsauttamalla muokkaa
+      grade5_playlab_variables1ask_callout:
+        arrows_move_actor: Käytä nuolia liikuttaaksesi hahmoa
+      testing code callout_callout:
+        testing_code_callout: Tämä saa spriten liikkumaan!

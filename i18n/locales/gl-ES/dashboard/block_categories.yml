@@ -1,0 +1,18 @@
+gl:
+  data:
+    block_categories:
+      Actions: Accións
+      Loops: Bucles
+      Functions: Funcións
+      Color: Cor
+      Math: Matemáticas
+      Logic: Lóxica
+      Variables: Variables
+      Conditionals: Condicionais
+      Events: Eventos
+      Text: Texto
+      Start: Comezar
+      Booleans: Valores booleanos
+      test: test
+      Name: Nome
+      Function: Función

@@ -1,0 +1,28 @@
+se:
+  data:
+    script:
+      name:
+        events:
+          title: Dáhpáhusaid
+          description: Dáhpáhusaid
+          description_short: Dáhpáhusaid
+        starwars:
+          title: 'Násttiid soahti: Hukse galákssa kodemiin'
+          description: Oahpahala kodet droidaid ja hukse gáiddus galáksii iežat Násttiid soahti -spealu.
+          description_short: Oahpahala kodet droidaid ja hukse gáiddus galáksii iežat Násttiid soahti -spealu.
+        starwarsblocks:
+          title: 'Násttiid soahti: Hukse galákssa kodemiin'
+          description: Oahpahala kodet droidaid ja hukse gáiddus galáksii iežat Násttiid soahti -spealu.
+          description_short: Oahpahala kodet droidaid ja hukse gáiddus galáksii iežat Násttiid soahti -spealu.
+        gradeKinder:
+          stages:
+            Events:
+              name: Dáhpáhusaid
+        grade1:
+          stages:
+            Events:
+              name: Dáhpáhusaid
+        k5concepts:
+          stages:
+            Events:
+              name: Dáhpáhusaid

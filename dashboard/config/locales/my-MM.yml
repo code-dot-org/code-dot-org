@@ -1,0 +1,72 @@
+---
+my:
+  activerecord:
+    attributes:
+      user:
+        email: email လိပ္စာ
+        gender: က်ား/မ
+  hello: မဂၤလာပါ ကမာၻၾကီး
+  submit: ပေးပို့ပါ
+  cancel: ပယ်ဖျတ်သည်
+  or: သို့မဟုတ်
+  continue: ဆက်လုပ်ပါ
+  auth:
+    clever: Clever
+  signin_form:
+    login: email လိပ္စာ
+  password:
+    reset_form:
+      submit: ပေးပို့ပါ
+  section:
+    type:
+      email: email လိပ္စာ
+      google_classroom: Google Classroom
+      clever: Clever
+  crud:
+    submit: ပေးပို့ပါ
+  nav:
+    header:
+      my_dashboard: ကျွန်ုပ်ကျောက်သင်ပုံး
+      professional_learning: Professional Learning
+    user:
+      create: ဖန်တီးပါ
+  teacher:
+    panel:
+      answer_viewer: ဆရာအဖွဲ့
+  home:
+    announcement_learn_more_button: ဆက်သင်ယူရန်
+  compatibility:
+    upgrade:
+      link: ဆက်သင်ယူရန်
+  upsell:
+    hero:
+      body: Minecraftက လုပ်ရှားမှုအသစ်များနဲ့အတူ Hour of Codeအတွက်ပြန်လာပါပြီ။ Minecraftနှင့်code
+        မှတစ်ဆင့်ခရီးစဉ်
+  dialog:
+    ok: "​ကောင်းပြီ"
+    startover_title: အစက ပြန်စချင်တာ သေချာရဲ့လား?
+    startover_ok: အစက ပြန်စပါ
+    startover_cancel: ပယ်ဖျတ်သည်
+  terms_interstitial:
+    print: ပုံနှိပ်သည်
+  race_interstitial:
+    submit: ပေးပို့ပါ
+  project:
+    import: ထည့်သွင်းပါ
+    share_link_import_bad_link_header: share link ကို မသိပါဘူး
+    share_link_import_bad_link_body: ဒီ share link ကို ထည့်လို့မရပါဘူး Minecraft:Agent
+      puzzle က link ဆိုတာသေချာလား link အပြည့်အစုံကို ကူးခဲ့လား ပြန်စစ်ကြည့်ပါ
+    share_link_import_error_header: တစ်ခုခုမှားယွင်းနေတယ်
+    share_link_import_error_body: share link ကို project ထဲထည့်သွင်းရမှာ ပြသနာတက်နေပါတယ်
+      နောက်တစ်ခေါက်ကြိုးစားပါ
+    name: အမည္
+    saved: သိမ်းထားပြီးပါပြီ
+    cancel: ပယ်ဖျတ်သည်
+  pd:
+    form_labels:
+      email: email လိပ္စာ
+      school_city: ကျောင်းမြို့
+    form_entries:
+      subjects:
+        cs: ကွန်ပျုတာသိပ္ပံ
+        math: သင်္ချာ

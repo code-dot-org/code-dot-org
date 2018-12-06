@@ -1,0 +1,39 @@
+---
+ko:
+  data:
+    function_names:
+      x: x
+      draw a circle: 원 그리기
+      draw a hexagon: 6각형 그리기
+      draw a flower: 꽃 그리기
+      draw a square: 사각형 그리기
+      draw a snowflake: 해바라기 그리기
+      draw a tree: 나무 그리기
+      draw a triangle: 삼각형 그리기
+      draw a house: 집 그리기
+      draw a star: 별 그리기
+      do something: 함수 이름
+      jump: 점프
+      set score: 점수 등록
+      get nectar: 꽃꿀 얻기
+      empty function: 빈 함수
+      test: 검사
+      build bridge: 다리 짓기
+      diamond: 다이아몬드
+      move: 움직이기
+      function 1: 함수 1
+      function 2: 함수 2
+      clear path: 경로 확보하기
+      build short bridge: 짧은 다리 짓기
+      build long bridge: 긴 다리 짓기
+      fix long path: 긴 길 고치기
+      fix short path: 짧은 길 고치기
+      move right: 오른쪽으로 이동하기
+      move up: 위로 올라가기
+      move down: 아래로 이동하기
+      move left: 왼쪽으로 이동하기
+      my function: 나의 함수
+      collect: 모으세요.
+      turn left: 왼쪽으로 회전
+      move forward: 앞으로 이동
+      turn right: 오른쪽으로 회전

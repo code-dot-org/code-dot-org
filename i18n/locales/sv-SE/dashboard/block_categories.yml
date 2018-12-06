@@ -1,0 +1,20 @@
+sv:
+  data:
+    block_categories:
+      Actions: Åtgärder
+      Loops: loopar
+      Functions: funktioner
+      Color: Färg
+      Math: Matte
+      Logic: Logik
+      Variables: variabler
+      Conditionals: Villkor
+      Events: Händelser
+      Text: text
+      Start: Start
+      Dancers: Dansare
+      Groups: Grupper
+      Booleans: Booleska värden
+      test: test
+      Name: Namn
+      Function: Funktion

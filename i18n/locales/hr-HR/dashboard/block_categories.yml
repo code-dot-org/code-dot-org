@@ -1,0 +1,18 @@
+hr:
+  data:
+    block_categories:
+      Actions: Akcije
+      Loops: Petlje
+      Functions: Funkcije
+      Color: Boja
+      Math: Matematika
+      Logic: Logika
+      Variables: Varijable
+      Conditionals: Uvjeti
+      Events: Događaji
+      Text: tekst
+      Start: Početak
+      Booleans: Logičke varijable
+      test: provjera
+      Name: Ime
+      Function: Funkcija

@@ -1,0 +1,1744 @@
+---
+en:
+  data:
+    evaluation_multi:
+      U5 evaluation q1:
+        'No': 'Ne'
+        'Yes': 'Taip'
+      U5 evaluation q2:
+        0: '? Modules in this unit are organized based on lessons that build towards a common project. Once a programming concept is introduced, we will use that again concept in later lessons. Which concept are you least familiar with?'
+        1: ': Modules in this unit are organized based on lessons that build towards a common project. Once a programming concept is introduced, we will use that again concept in later lessons. Which concept are you least familiar with?'
+        While Loops: '„Kol“ kartojimas'
+    external:
+      Algo How Routers Learn Student Lesson Introduction:
+        title: pavadinimas
+      Algo Shortest Path Student Lesson Introduction:
+        title: pavadinimas
+      Basic mechanics of variables:
+        title: pavadinimas
+      Basic mechanics of variables_2018:
+        title: pavadinimas
+      Begin planning your project:
+        title: pavadinimas
+      'Big Picture: If-statements':
+        title: pavadinimas
+      'Big Picture: If-statements_2018':
+        title: pavadinimas
+      Boolean Expressions and Comparison Operators:
+        title: pavadinimas
+      Boolean Expressions and Comparison Operators_2018:
+        title: pavadinimas
+      CSD U1 Input Output C2:
+        title: pavadinimas
+      CSD U1 Input Output C3:
+        title: pavadinimas
+      CSD U1 Input Output C4:
+        title: pavadinimas
+      CSD U1 Input Output Intro:
+        title: pavadinimas
+      CSD U2 Design Project:
+        title: pavadinimas
+      CSD U2 Design Project_2018:
+        title: pavadinimas
+      CSD U2 L1 Overview:
+        title: pavadinimas
+      CSD U2 L1 Overview_2018:
+        title: pavadinimas
+      CSD U2 L2 Overview:
+        title: pavadinimas
+      CSD U2 L2 Overview_2018:
+        title: pavadinimas
+      CSD U2 L3 Overview:
+        title: pavadinimas
+      CSD U2 L3 Overview_2018:
+        title: pavadinimas
+      CSD U2 L4 Overview:
+        title: pavadinimas
+      CSD U2 L4 Overview_2018:
+        title: pavadinimas
+      CSD U2 L5 Overview:
+        title: pavadinimas
+      CSD U2 L5 Overview_2018:
+        title: pavadinimas
+      CSD U2 L6 Overview:
+        title: pavadinimas
+      CSD U2 L6 Overview_2018:
+        title: pavadinimas
+      CSD U2 Social Sleuth:
+        title: pavadinimas
+      CSD U2 expand project:
+        title: pavadinimas
+      CSD U2 expand project_2018:
+        title: pavadinimas
+      CSD U2 layout style review:
+        title: pavadinimas
+      CSD U2 more CSS:
+        title: pavadinimas
+      CSD U3 L2 Challenges:
+        title: pavadinimas
+      CSD U3 SFLP Sprites and Images:
+        title: pavadinimas
+      CSD U3 abstraction intro:
+        title: pavadinimas
+      CSD U3 combining rep:
+        title: pavadinimas
+      CSD U3 combining rep_2018:
+        title: pavadinimas
+      CSD U5 Encryption 1:
+        title: pavadinimas
+      CSD U5 Encryption 1_2018:
+        title: pavadinimas
+      CSD U5 L13 SFLP Interpreting Data:
+        title: pavadinimas
+      CSD U5 L13 SFLP Interpreting Data_2018:
+        title: pavadinimas
+      CSD U5 Representing Information:
+        title: pavadinimas
+      CSD U5 collection UPS2:
+        title: pavadinimas
+      CSD U5 collection ads2:
+        title: pavadinimas
+      CSD U5 data visualization:
+        title: pavadinimas
+      CSD U5 data visualization sheet:
+        title: pavadinimas
+      CSD U5 data visualization_2018:
+        title: pavadinimas
+      CSD U5 student record:
+        title: pavadinimas
+      CSD U5 student record_2018:
+        title: pavadinimas
+      CSD U5 video2:
+        title: pavadinimas
+      CSD-U3-SFLP Drawing:
+        title: pavadinimas
+      CSDU2L01 SFLP:
+        title: pavadinimas
+      CSP ExploreL02 SFLP:
+        title: pavadinimas
+      CSP Journal Entry Placeholder2:
+        title: pavadinimas
+      CSPPD3-u2 Welcome:
+        Welcome!: Sveiki atvykę!
+      CSPStudentLessonPlanTemplate:
+        title: pavadinimas
+      CSPU5 Making a Multi Screen Chaser Game:
+        title: pavadinimas
+      CSPU5_ChoosingGoodIds:
+        title: pavadinimas
+      CSPU5_EventDrivenProgrammingPatterns:
+        title: pavadinimas
+      CSPU5_FirstTimeDesignMode:
+        title: pavadinimas
+      CSPU5_FirstTimeDesignMode_2018:
+        title: pavadinimas
+      CSPU5_HowImagesWork:
+        title: pavadinimas
+      CSPU5_HowOnEventWorks_v2:
+        title: pavadinimas
+      CSPU5_U3L14 - Message - Other ways to assign values:
+        title: pavadinimas
+      CSPU5_U3L14 - Message - basic mechanics of variables:
+        title: pavadinimas
+      CSPU5_U3L15 - explanation of IF and =v==:
+        title: pavadinimas
+      CSPU5_U3L15 Student Lesson Intro - new:
+        title: pavadinimas
+      CSPU5_U3L20 - combining And and Or explanation:
+        title: pavadinimas
+      CSPU5_goodbyeTurtle_setPosition:
+        title: pavadinimas
+      CSPU5_introToDebugging:
+        title: pavadinimas
+      CSPU5_makingPredictions_ref:
+        title: pavadinimas
+      CSPU5_onEventBreakdown:
+        title: pavadinimas
+      CSP_Final_instructions:
+        title: pavadinimas
+      CSP_U4_rawMovieData:
+        title: pavadinimas
+      Color Sleuth - Epilogue:
+        title: pavadinimas
+      Color Sleuth - Epilogue_2018:
+        title: pavadinimas
+      Color Sleuth - How does it end?:
+        title: pavadinimas
+      Color Sleuth - How does it end?_2018:
+        title: pavadinimas
+      Color Sleuth - How to switch player turns:
+        title: pavadinimas
+      Color Sleuth - How to switch player turns_2018:
+        title: pavadinimas
+      Color Sleuth - Keeping score:
+        title: pavadinimas
+      Color Sleuth - Keeping score_2018:
+        title: pavadinimas
+      Color Sleuth - Planning the App:
+        title: pavadinimas
+      Color Sleuth - Planning the App_2018:
+        title: pavadinimas
+      Controlling Memory - Other ways to assign values:
+        title: pavadinimas
+      Controlling Memory - Other ways to assign values_2018:
+        title: pavadinimas
+      Cups and Beans Activity:
+        title: pavadinimas
+      Cups and Beans Activity_2018:
+        title: pavadinimas
+      Debugging with Console.log:
+        title: pavadinimas
+      Debugging with Console.log_2018:
+        title: pavadinimas
+      Digital Footprint Chirpr lillizard:
+        title: pavadinimas
+      Digital Footprint FaceSpace Haley:
+        title: pavadinimas
+      Digital Footprint FaceSpace Lizzie:
+        title: pavadinimas
+      Digital Footprint instantframe wiz_kid_liz:
+        title: pavadinimas
+      DigitalCitizenship2:
+        Digital Citizenship: Virtuali pilietybė
+      ECSPD Challenge Rubric:
+        title: pavadinimas
+      ECSPD Online U1D11-14:
+        title: pavadinimas
+      ECSPD Online U1D15-16 Forum:
+        title: pavadinimas
+      ECSPD Online intro:
+        Introduction: Įvadas
+      ECSPD U2 Challenge Plan:
+        title: pavadinimas
+      ECSPD Unit 2 Stage11:
+        title: pavadinimas
+      ECSPD Unit 2 Stage13:
+        title: pavadinimas
+      ECSPD Unit 2 Stage6:
+        title: pavadinimas
+      Encoding Numbers Real World Student Lesson Introduction:
+        title: pavadinimas
+      Event Driven Programming Recap:
+        title: pavadinimas
+      Event Driven Programming Recap_2018:
+        title: pavadinimas
+      Event-Driven Programming Patterns:
+        title: pavadinimas
+      Event-Driven Programming Patterns_2018:
+        title: pavadinimas
+      External MD column Test:
+        title: pavadinimas
+      External MD column Test bootstrap:
+        title: pavadinimas
+      GoodBadVisualizations_v1:
+        title: pavadinimas
+      GoodBadVisualizations_v2:
+        title: pavadinimas
+      How "if-else-if" Works:
+        title: pavadinimas
+      How "if-else-if" Works_2018:
+        title: pavadinimas
+      How Compound Boolean Expressions Work:
+        title: pavadinimas
+      How Compound Boolean Expressions Work_2018:
+        title: pavadinimas
+      How Dropdown Menus Work:
+        title: pavadinimas
+      How Dropdown Menus Work_2018:
+        title: pavadinimas
+      How If Statements Work pt 1:
+        title: pavadinimas
+      How If Statements Work pt 1_2018:
+        title: pavadinimas
+      How If-Else Statements Work:
+        title: pavadinimas
+      How If-Else Statements Work_2018:
+        title: pavadinimas
+      How Images Work:
+        title: pavadinimas
+      How Images Work_2018:
+        title: pavadinimas
+      How Secure Is Your Password?:
+        title: pavadinimas
+      How Secure Is Your Password?_2018:
+        title: pavadinimas
+      How Set Property Works:
+        title: pavadinimas
+      How Set Property Works_2018:
+        title: pavadinimas
+      How onEvent Works:
+        title: pavadinimas
+      How onEvent Works_2018:
+        title: pavadinimas
+      How setPosition and screen dimensions work:
+        title: pavadinimas
+      How setPosition and screen dimensions work_2018:
+        title: pavadinimas
+      How the Boolean &&, || and ! Operators Work:
+        title: pavadinimas
+      How the Boolean &&, || and ! Operators Work_2018:
+        title: pavadinimas
+      How to make a random color:
+        title: pavadinimas
+      How to make a random color_2018:
+        title: pavadinimas
+      How to pick a random button:
+        title: pavadinimas
+      How to pick a random button_2018:
+        title: pavadinimas
+      Internet Simulator Setup 2:
+        title: pavadinimas
+      Intro to Debugging and Common Problems:
+        title: pavadinimas
+      Intro to Debugging and Common Problems_2018:
+        title: pavadinimas
+      Making Multiple Screens:
+        title: pavadinimas
+      Making Multiple Screens_2018:
+        title: pavadinimas
+      Making a Multi Screen Chaser Game v.2:
+        title: pavadinimas
+      Making a Multi Screen Chaser Game v.2_2018:
+        title: pavadinimas
+      Multi-Screen Apps:
+        title: pavadinimas
+      New Challenge Introduction:
+        title: pavadinimas
+      New Challenge Introduction_2018:
+        title: pavadinimas
+      OPD-K5 Stage3aGo:
+        title: pavadinimas
+      PDAlg Facilitator Test:
+        title: pavadinimas
+      PDK5 CS Video:
+        Computer Science: Informatika
+      PDK5 Pair Programming 1:
+        Pair Programming: Programavimas poroje
+      PDK5 Teacher Dashboard C:
+        Teacher Dashboard: Mokytojo prietaisų skydelis
+      PS - Responding to User Input:
+        title: pavadinimas
+      PS - draft - Longitudinal study description:
+        title: pavadinimas
+      Prepare for your presentation:
+        title: pavadinimas
+      Public Key Crypto Widget Instructions:
+        title: pavadinimas
+      Public Key Crypto Widget Instructions_2018:
+        title: pavadinimas
+      Rules About Choosing Good IDs:
+        title: pavadinimas
+      Rules About Choosing Good IDs_2018:
+        title: pavadinimas
+      SG U3 whats a comment:
+        title: pavadinimas
+      SG v2 U3L01 Student Lesson Introduction:
+        title: pavadinimas
+      SG v2 U3L02 Student Lesson Introduction:
+        title: pavadinimas
+      SG v2 U3L03 Student Lesson Introduction:
+        title: pavadinimas
+      SG v2 U3L05 Student Lesson Introduction:
+        title: pavadinimas
+      SG v2 U3L07 Student Lesson Introduction:
+        title: pavadinimas
+      SG v2 U3L08 Student Lesson Introduction:
+        title: pavadinimas
+      Sending Bits Real World Student Lesson Introduction:
+        title: pavadinimas
+      Simple Decisions with if-statements:
+        title: pavadinimas
+      Simple Decisions with if-statements_2018:
+        title: pavadinimas
+      Tips For Working on Your Own:
+        title: pavadinimas
+      Tips For Working on Your Own_2018:
+        title: pavadinimas
+      U1L10 Student Lesson Introduction:
+        title: pavadinimas
+      U1L11 Student Lesson Introduction:
+        title: pavadinimas
+      U1L12 Student Lesson Introduction:
+        title: pavadinimas
+      U1L13 Student Lesson Summary:
+        title: pavadinimas
+      U1L14 Student Lesson Summary:
+        title: pavadinimas
+      U1L15 Student Lesson Summary:
+        title: pavadinimas
+      U1L17 Student Lesson Introduction:
+        title: pavadinimas
+      U1L2 Student Lesson Introduction:
+        title: pavadinimas
+      U1L3 Student Lesson Introduction:
+        title: pavadinimas
+      U1L4 Student Lesson Introduction:
+        title: pavadinimas
+      U1L5 Student Lesson Introduction:
+        title: pavadinimas
+      U1L6 Student Lesson Introduction:
+        title: pavadinimas
+      U1L7 Student Lesson Introduction:
+        title: pavadinimas
+      U1L8 Student Lesson Introduction:
+        title: pavadinimas
+      U1L9 Student Lesson Introduction:
+        title: pavadinimas
+      U2L1 Student Lesson Introduction:
+        title: pavadinimas
+      U2L12 Student Lesson Introduction:
+        title: pavadinimas
+      U2L7 Student Lesson Introduction:
+        title: pavadinimas
+      U2L8 Student Lesson Introduction:
+        title: pavadinimas
+      U3 whats a comment:
+        title: pavadinimas
+      U3 whats a comment_2018:
+        title: pavadinimas
+      U3L12 - Mission Unsortable:
+        title: pavadinimas
+      U3L13 - Explanation of Ids:
+        title: pavadinimas
+      U3L13 - Make a Prediction Explanation:
+        title: pavadinimas
+      U3L13 Add Button Instrucitons:
+        title: pavadinimas
+      U3L13 Add Button Instructions:
+        title: pavadinimas
+      U3L14 - Message - Other ways to assign values:
+        title: pavadinimas
+      U3L14 - Message - basic mechanics of variables:
+        title: pavadinimas
+      U3L14 - Student Intro Page:
+        title: pavadinimas
+      U3L15 - explanation of IF and =v==:
+        title: pavadinimas
+      U3L15 Student Lesson Intro - new:
+        title: pavadinimas
+      U3L19 - done with variables finally:
+        title: pavadinimas
+      U3L20 - combining And and Or explanation:
+        title: pavadinimas
+      U4 - Cleaning Data - Activity Guide:
+        title: pavadinimas
+      U4 - Making Data Visualizations - Bar Chart:
+        title: pavadinimas
+      U4 - Making Data Visualizations - Edit Chart Appearance:
+        title: pavadinimas
+      U4 - Making Data Visualizations - Free Play:
+        title: pavadinimas
+      U4 - Making Data Visualizations - Free Play_2018:
+        title: pavadinimas
+      U4 - Making Data Visualizations - Getting Started:
+        title: pavadinimas
+      U4 - Making Data Visualizations - Line Chart:
+        title: pavadinimas
+      U4 - Making Data Visualizations - Scatter Plot:
+        title: pavadinimas
+      U4 - Making Data Visualizations - Student Introduction:
+        title: pavadinimas
+      U4 - Privacy Abandoned - Hot On Your Trail Video:
+        title: pavadinimas
+      U4 - Unique Ids Explanation:
+        title: pavadinimas
+      U4 - Unique Ids Explanation_2018:
+        title: pavadinimas
+      U4 Cleaning Data Activity Guide Pt2:
+        title: pavadinimas
+      U4 Cleaning Data Activity Guide Pt3:
+        title: pavadinimas
+      U4L01 Student Lesson Introduction:
+        title: pavadinimas
+      U4L02 Student Lesson Introduction:
+        title: pavadinimas
+      U4L02 Student Lesson Introduction_2018:
+        title: pavadinimas
+      U4L02v2 - Finding Trends:
+        title: pavadinimas
+      U4L03 Student Lesson Introduction:
+        title: pavadinimas
+      U4L03 Student Lesson Introduction_2018:
+        title: pavadinimas
+      U4L03v2 - Student Introduction:
+        title: pavadinimas
+      U4L04 Student Lesson Introduction:
+        title: pavadinimas
+      U4L04 Student Lesson Introduction_2018:
+        title: pavadinimas
+      U4L04v2 - Student Introduction:
+        title: pavadinimas
+      U4L05 Student Lesson Introduction:
+        title: pavadinimas
+      U4L06 Student Lesson Introduction:
+        title: pavadinimas
+      U4L06v2 Student Lesson Introduction:
+        title: pavadinimas
+      U4L07 Student Introduction public key crypto:
+        title: pavadinimas
+      U4L07 Student Lesson Introduction:
+        title: pavadinimas
+      U4L08 - mod clock instructions:
+        title: pavadinimas
+      U4L08 Student Lesson Introduction:
+        title: pavadinimas
+      U4L08v2 Making Pivot Tables:
+        title: pavadinimas
+      U4L08v2 Making Pivot Tables Part 2:
+        title: pavadinimas
+      U4L08v2 Making Pivot Tables Part 3:
+        title: pavadinimas
+      U4L08v2 Making Pivot Tables Part 3_2018:
+        title: pavadinimas
+      U4L08v2 Student Intro:
+        title: pavadinimas
+      U4L09 Student Lesson Intro Practice PT big data dilemma:
+        title: pavadinimas
+      U4L09 Student Lesson Introduction:
+        title: pavadinimas
+      U4L10 Student Lesson Introduction:
+        title: pavadinimas
+      U4L11 Student Lesson Introduction:
+        title: pavadinimas
+      U4L12 - Student Introduction:
+        title: pavadinimas
+      U4L12 Student Lesson Introduction:
+        title: pavadinimas
+      U4L13 Student Lesson Introduction:
+        title: pavadinimas
+      U4L14 Student Lesson Introduction:
+        title: pavadinimas
+      U4L15 Student Lesson Introduction:
+        title: pavadinimas
+      U4L16 Student Lesson Introduction:
+        title: pavadinimas
+      U4L17 Student Lesson Introduction:
+        title: pavadinimas
+      U4L18 Student Lesson Introduction:
+        title: pavadinimas
+      U4L19 Student Lesson Introduction:
+        title: pavadinimas
+      U4L20 Student Lesson Introduction:
+        title: pavadinimas
+      U4L21 Student Lesson Introduction:
+        title: pavadinimas
+      U4L22 Student Lesson Introduction:
+        title: pavadinimas
+      U4L23 Student Lesson Introduction:
+        title: pavadinimas
+      U4L24 Student Lesson Introduction:
+        title: pavadinimas
+      U4L5 random subst challenge page:
+        title: pavadinimas
+      U5 - Create PT - Student Introduction:
+        title: pavadinimas
+      U5 - Create PT Prep - Student Introduction:
+        title: pavadinimas
+      U5 - Create PT review - Student Introduction:
+        title: pavadinimas
+      U5 - Explore PT - Student Introduction:
+        title: pavadinimas
+      U5 - Explore PT Prep - Student Introduction:
+        title: pavadinimas
+      U5 - Explore PT Review - Student Introduction:
+        title: pavadinimas
+      U5 - PT Prep - Digital Portfolio and tech setup:
+        title: pavadinimas
+      U5 color sleuth check correct:
+        title: pavadinimas
+      U5 color sleuth check correct_2018:
+        title: pavadinimas
+      U5L08 - Student Intro If statements:
+        title: pavadinimas
+      U6 - Charts - Student Introduction:
+        title: pavadinimas
+      U6 - Charts - Student Introduction_2018:
+        title: pavadinimas
+      U6 - Final Project - Student Introduction:
+        title: pavadinimas
+      U6 - Final Project - Student Introduction_2018:
+        title: pavadinimas
+      U6 - ImportExport - Student Introduction:
+        title: pavadinimas
+      U6 - ImportExport - Student Introduction_2018:
+        title: pavadinimas
+      U6 - Sample Apps - Student Introduction:
+        title: pavadinimas
+      U6 - Sample Apps - Student Introduction_2018:
+        title: pavadinimas
+      U6 - deleteRecord - Student Introduction:
+        title: pavadinimas
+      U6 - deleteRecord - Student Introduction_2018:
+        title: pavadinimas
+      U6 - updateRecord - Student Introduction:
+        title: pavadinimas
+      U6 - updateRecord - Student Introduction_2018:
+        title: pavadinimas
+      U6 AP Performance Task Tech Setup - Student Links:
+        title: pavadinimas
+      U6 Create PT - Complete the Task - Student Links:
+        title: pavadinimas
+      U6 Create PT - Complete the Task - Student Links_2018:
+        title: pavadinimas
+      U6 Create PT Review - Student Links:
+        title: pavadinimas
+      U6 Create PT Review - Student Links_2018:
+        title: pavadinimas
+      U6 Explore PT - Complete the Task - Student Links:
+        title: pavadinimas
+      U6 Explore PT - Complete the Task - Student Links_2018:
+        title: pavadinimas
+      U6 Explore PT - Make a Plan - Student Links:
+        title: pavadinimas
+      U6 Explore PT - Make a Plan - Student Links_2018:
+        title: pavadinimas
+      U6 Explore PT Review - Student Links:
+        title: pavadinimas
+      U6 Explore PT Review - Student Links_2018:
+        title: pavadinimas
+      Unit 2 Lesson 1 Overview Clone:
+        title: pavadinimas
+      Unit 4 Lesson 1 Introduction:
+        title: pavadinimas
+      Unit 4 Lesson 1 Introduction_2018:
+        title: pavadinimas
+      Unit 4 Lesson 2 Introduction:
+        title: pavadinimas
+      Unit 4 Lesson 2 Introduction_2018:
+        title: pavadinimas
+      Unit 4 Lesson 5 Introduction:
+        title: pavadinimas
+      Unit 4 Lesson 5 Introduction_2018:
+        title: pavadinimas
+      Unit 5 Lesson 1:
+        title: pavadinimas
+      Unit 5 Lesson 1 Introduction:
+        title: pavadinimas
+      Unit 5 Lesson 1 Introduction_2018:
+        title: pavadinimas
+      Unit 5 Lesson 10 Introduction:
+        title: pavadinimas
+      Unit 5 Lesson 10 Introduction_2018:
+        title: pavadinimas
+      Unit 5 Lesson 2 Introduction:
+        title: pavadinimas
+      Unit 5 Lesson 2 Introduction_2018:
+        title: pavadinimas
+      Unit 5 Lesson 3 Introduction:
+        title: pavadinimas
+      Unit 5 Lesson 3 Introduction_2018:
+        title: pavadinimas
+      Unit 5 Lesson 4 Introduction:
+        title: pavadinimas
+      Unit 5 Lesson 4 Introduction_2018:
+        title: pavadinimas
+      Unit 5 Lesson 5:
+        title: pavadinimas
+      Unit 5 Lesson 5 Introduction:
+        title: pavadinimas
+      Unit 5 Lesson 5 Introduction_2018:
+        title: pavadinimas
+      Unit 5 Lesson 6:
+        title: pavadinimas
+      Unit 5 Lesson 6 Introduction:
+        title: pavadinimas
+      Unit 5 Lesson 6 Introduction_2018:
+        title: pavadinimas
+      Unit 5 Lesson 7 Introduction:
+        title: pavadinimas
+      Unit 5 Lesson 7 Introduction_2018:
+        title: pavadinimas
+      Unit 5 Lesson 8 Introduction:
+        title: pavadinimas
+      Unit 5 Lesson 8 Introduction_2018:
+        title: pavadinimas
+      Unit 5 Lesson 9 Introduction:
+        title: pavadinimas
+      Unit 5 Lesson 9 Introduction_2018:
+        title: pavadinimas
+      'Worked Example: If-statements and Robot':
+        title: pavadinimas
+      'Worked Example: If-statements and Robot_2018':
+        title: pavadinimas
+      courseB_external_MRF:
+        title: pavadinimas
+      courseB_external_loopMRF:
+        title: pavadinimas
+      courseB_story_unspottedBugs10:
+        title: pavadinimas
+      courseB_story_unspottedBugs11:
+        title: pavadinimas
+      courseB_story_unspottedBugs12:
+        title: pavadinimas
+      courseB_story_unspottedBugs13:
+        title: pavadinimas
+      courseB_story_unspottedBugs14:
+        title: pavadinimas
+      courseB_story_unspottedBugs15:
+        title: pavadinimas
+      courseB_story_unspottedBugs16:
+        title: pavadinimas
+      courseB_story_unspottedBugs17:
+        title: pavadinimas
+      courseB_story_unspottedBugs18:
+        title: pavadinimas
+      courseB_story_unspottedBugs2:
+        title: pavadinimas
+      courseB_story_unspottedBugs3:
+        title: pavadinimas
+      courseB_story_unspottedBugs4:
+        title: pavadinimas
+      courseB_story_unspottedBugs5:
+        title: pavadinimas
+      courseB_story_unspottedBugs6:
+        title: pavadinimas
+      courseB_story_unspottedBugs7:
+        title: pavadinimas
+      courseB_story_unspottedBugs8:
+        title: pavadinimas
+      courseB_story_unspottedBugs9:
+        title: pavadinimas
+      courseB_unplugged_mrfProgramming:
+        title: pavadinimas
+      courseC_screenoutthemean:
+        title: pavadinimas
+      courseF_firstFunctions_map:
+        title: pavadinimas
+      coursef_functionsSummary_map:
+        title: pavadinimas
+      coursef_powerofwords:
+        title: pavadinimas
+      csd-post-survey-unit1-preamble:
+        title: pavadinimas
+      csd-post-survey-unit2-preamble:
+        title: pavadinimas
+      csd-post-survey-unit3-preamble:
+        title: pavadinimas
+      csd-post-survey-unit4-preamble:
+        title: pavadinimas
+      csd-post-survey-unit5-preamble:
+        title: pavadinimas
+      csd-post-survey-unit6-preamble:
+        title: pavadinimas
+      csp-post-survey-2018-AP-preamble:
+        title: pavadinimas
+      csp-post-survey-2018-topics-preamble:
+        title: pavadinimas
+      csp-post-survey-2018-unit-feedback-preamble:
+        title: pavadinimas
+      csp-post-survey-createPT-preamble:
+        title: pavadinimas
+      csp-post-survey-explorePT-preamble:
+        title: pavadinimas
+      csp-post-survey-unit1-preamble:
+        title: pavadinimas
+      csp-post-survey-unit2-preamble:
+        title: pavadinimas
+      csp-post-survey-unit3-preamble:
+        title: pavadinimas
+      csp-post-survey-unit4-preamble:
+        title: pavadinimas
+      csp-post-survey-unit5-preamble:
+        title: pavadinimas
+      csp_unit5_finalassessment_overview:
+        title: pavadinimas
+      csp_unit5_finalassessment_overview_2018:
+        title: pavadinimas
+      csp_unit5_finalassessment_overview_exam_prep:
+        title: pavadinimas
+      csp_unit_assessment_overview:
+        title: pavadinimas
+      csp_unit_assessment_overview_2018:
+        title: pavadinimas
+      csp_unit_assessment_overview_exam_prep:
+        title: pavadinimas
+      dsl link test:
+        title: pavadinimas
+      grade2_maze_intro1:
+        title: pavadinimas
+      grade2_unplugged_neighborhood:
+        title: pavadinimas
+      grade4_project_design:
+        title: pavadinimas
+      grade4_project_design_image:
+        title: pavadinimas
+      grade4_project_presentation:
+        title: pavadinimas
+      grade5_project_design:
+        title: pavadinimas
+      grade5_project_presentation:
+        title: pavadinimas
+      more encryption algorithms:
+        title: pavadinimas
+      newCSFsample:
+        Intro: Įvadas
+      post-assessment survey heading4:
+        title: pavadinimas
+      pwc_appdev:
+        title: pavadinimas
+      pwc_appdevunplugged:
+        title: pavadinimas
+      pwc_cybersecurity:
+        title: pavadinimas
+      pwc_internetofthings:
+        title: pavadinimas
+      pwc_programming:
+        title: pavadinimas
+      pwc_webdevelopment:
+        title: pavadinimas
+      sciPD framework video:
+        Framework: Sistema
+      sciPD2Part4_S1_L3:
+        title: pavadinimas
+      sciPD2Part4_S2_L1:
+        title: pavadinimas
+      sciPD2Part4_S2_L2:
+        title: pavadinimas
+      sciPD2Part4_S3_L1:
+        title: pavadinimas
+      sciPD2Part4_S3_L2:
+        title: pavadinimas
+      sciPD2Part4_S3_L3:
+        title: pavadinimas
+      sciPD3 mods2:
+        title: pavadinimas
+      sciPD33 earth1:
+        title: pavadinimas
+      sciPD33 earth2:
+        title: pavadinimas
+      sciPDpart4_S1_L1:
+        title: pavadinimas
+      test discourse level type:
+        title: pavadinimas
+      v2 U1 Internet is for Everyone Student Lesson Introduction:
+        title: pavadinimas
+      v2 U1 Internet is for Everyone Student Lesson Introduction_2018:
+        title: pavadinimas
+      v2 U1L14 Student Lesson Introduction:
+        title: pavadinimas
+      v2 U1L14 Student Lesson Introduction_2018:
+        title: pavadinimas
+      v2 U1L2 Student Lesson Introduction:
+        title: pavadinimas
+      v2 U1L2 Student Lesson Introduction_2018:
+        title: pavadinimas
+      v2 U1L3 Student Lesson Introduction:
+        title: pavadinimas
+      v2 U1L3 Student Lesson Introduction_2018:
+        title: pavadinimas
+      v2 U1L4 Student Lesson Introduction:
+        title: pavadinimas
+      v2 U1L4 Student Lesson Introduction_2018:
+        title: pavadinimas
+      v2 U1L5 Student Lesson Introduction:
+        title: pavadinimas
+      v2 U1L5 Student Lesson Introduction_2018:
+        title: pavadinimas
+      v2 U1L8 Student Lesson Introduction:
+        title: pavadinimas
+      v2 U1L8 Student Lesson Introduction_2018:
+        title: pavadinimas
+      v2 U2L1 Student Lesson Introduction:
+        title: pavadinimas
+      v2 U2L1 Student Lesson Introduction_2018:
+        title: pavadinimas
+      v2 U2L10 Student Lesson Introduction:
+        title: pavadinimas
+      v2 U2L10 Student Lesson Introduction_2018:
+        title: pavadinimas
+      v2 U2L11 Student Lesson Introduction:
+        title: pavadinimas
+      v2 U2L11 Student Lesson Introduction_2018:
+        title: pavadinimas
+      v2 U2L12 Student Lesson Introduction:
+        title: pavadinimas
+      v2 U2L12 Student Lesson Introduction_2018:
+        title: pavadinimas
+      v2 U2L13 Student Lesson Introduction:
+        title: pavadinimas
+      v2 U2L13 Student Lesson Introduction_2018:
+        title: pavadinimas
+      v2 U2L14 Student Lesson Introduction:
+        title: pavadinimas
+      v2 U2L14 Student Lesson Introduction_2018:
+        title: pavadinimas
+      v2 U2L15 Student Lesson Introduction:
+        title: pavadinimas
+      v2 U2L15 Student Lesson Introduction_2018:
+        title: pavadinimas
+      v2 U2L2 Student Lesson Summary:
+        title: pavadinimas
+      v2 U2L2 Student Lesson Summary_2018:
+        title: pavadinimas
+      v2 U2L3 Student Lesson Summary:
+        title: pavadinimas
+      v2 U2L3 Student Lesson Summary_2018:
+        title: pavadinimas
+      v2 U2L4 Student Lesson Summary:
+        title: pavadinimas
+      v2 U2L4 Student Lesson Summary_2018:
+        title: pavadinimas
+      v2 U2L6 Student Lesson Introduction:
+        title: pavadinimas
+      v2 U2L6 Student Lesson Introduction_2018:
+        title: pavadinimas
+      v2 U2L7 Student Lesson Introduction:
+        title: pavadinimas
+      v2 U2L7 Student Lesson Introduction_2018:
+        title: pavadinimas
+      v2 U2L8 Student Lesson Introduction:
+        title: pavadinimas
+      v2 U2L8 Student Lesson Introduction_2018:
+        title: pavadinimas
+      v2 U2L9 Student Lesson Introduction:
+        title: pavadinimas
+      v2 U2L9 Student Lesson Introduction_2018:
+        title: pavadinimas
+      v2 U3L04 Student Lesson Introduction:
+        title: pavadinimas
+      v2 U3L04 Student Lesson Introduction_2018:
+        title: pavadinimas
+      v2 U3L05 Student Lesson Introduction:
+        Creating Functions: Komandų kūrimas
+      v2 U3L05 Student Lesson Introduction_2018:
+        Creating Functions: Komandų kūrimas
+      v2 U4L05 Student Lesson Intro Encryption Caesar:
+        title: pavadinimas
+    match:
+      2-3 Maze Match 2:
+        Instructions: Instrukcijos
+      4-5 maze match 1:
+        Instructions: Instrukcijos
+      CSD U3 CSS Vocab Match:
+        '1': '1'
+        '2': '2'
+      CSD U3 keyinput match:
+        Question: Klausimas
+      CSDU2 Match RGB Colors:
+        Question: Klausimas
+      K-1 Maze Match 1:
+        Instructions: Instrukcijos
+      PDAlg Design Recipe Video:
+        Definition: Apibrėžimas
+      PDK5 What is unplugged:
+        Question: Klausimas
+      'U2L06 - Matching: Label the Diagram':
+        E: R
+      U3L19 - MATCH what are values of abc:
+        '10': '10'
+        '12': '12'
+        '13': '13'
+        '15': '15'
+        '16': '16'
+        '21': '21'
+        '3': '3'
+        '5': '5'
+        '7': '7'
+        '8': '8'
+        title: pavadinimas
+      U3L19 - MC what are values of abc:
+        title: pavadinimas
+      U4L06 Create Record Id Matching Q:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      parts of contract:
+        image: vaizdas
+      test matching image:
+        Instructions: Instrukcijos
+      test matching text:
+        blue: mėlyna
+      unique level name here:
+        Question: Klausimas
+        title: pavadinimas
+0:
+1:
+  CB_Question_3:
+    Y: true
+  CSD Prediction Header Size:
+    Question: Klausimas
+  CSD U3 Boolean MC:
+    title: pavadinimas
+  CSD U3 Boolean MC_2018:
+    title: pavadinimas
+  'CSP U4L04 Assessment 1 ':
+    Question: Klausimas
+  CSP Unit 1 Ch 1 MC binary to dec simple:
+    '0010': '0010'
+    '0101': '0101'
+    '0110': '0110'
+    '1010': '1010'
+  CSP Unit 1 Ch 1 MC binary to dec simple_2018:
+    '0010': '0010'
+    '0101': '0101'
+    '0110': '0110'
+    '1010': '1010'
+  CSP Unit 1 Ch 1 MC binary to dec simple_exam_prep:
+    '0010': '0010'
+    '0101': '0101'
+    '0110': '0110'
+    '1010': '1010'
+  CSP verify 18:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  CSPU5_predict_mc_whichOfTwoEvents:
+    title: pavadinimas
+  CSPU5_predict_onEvent_withWrongID:
+    Question: Klausimas
+    title: pavadinimas
+  CommuteAssess - loops 1 - block:
+    '10': '10'
+    '18': '18'
+    '3': '3'
+    '6': '6'
+  CommuteAssess - loops 1 - block B:
+    '10': '10'
+    '18': '18'
+    '3': '3'
+    '6': '6'
+  CommuteAssess - loops 1 - block_2018:
+    '10': '10'
+    '18': '18'
+    '3': '3'
+    '6': '6'
+  CommuteAssess - loops 1 - block_exam_prep:
+    '10': '10'
+    '18': '18'
+    '3': '3'
+    '6': '6'
+  CommuteAssess - loops 2 - block:
+    '0': '0'
+    '1': '1'
+    '10': '10'
+    '5': '5'
+    11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'''
+    12: ': ''How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'''
+  CommuteAssess - loops 2 - block_2018:
+    '0': '0'
+    '1': '1'
+    '10': '10'
+    '5': '5'
+    11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'''
+    12: ': ''How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'''
+  CommuteAssess - loops 2 - block_exam_prep:
+    '0': '0'
+    '1': '1'
+    '10': '10'
+    '5': '5'
+    11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'''
+    12: ': ''How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'''
+  ECSPD2 question:
+    Question: Klausimas
+    title: pavadinimas
+  K-1 Maze Multiple Choice 2:
+    Maze: Labirintas
+  Multi Define Funcs 1:
+    '3': '3'
+    y: true
+  Multi Define Funcs 2:
+    '3': '3'
+    y: true
+  Multi Define Funcs 3:
+    '5': '5'
+    '6': '6'
+    y: true
+  PDAlg Blocks Video:
+    Toolbox: Įrankinė
+  PDAlg DR Multi 1:
+    Domain: Paskirtis
+    Name: Vardas
+    Range: Intervalas
+    0: '? The first step in the Design Recipe is to create a contract based on the word problem. Which part of this contract has the student gotten wrong?'
+    1: ': The first step in the Design Recipe is to create a contract based on the word problem. Which part of this contract has the student gotten wrong?'
+  PDAlg PreQ 1:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  PDAlg PreQ 2:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  PDAlg functional:
+    'No': 'Ne'
+  PDK5 Blockly Intro:
+    'Yes': 'Taip'
+  PDK5 Classroom Culture:
+    'Yes': 'Taip'
+  PDK5 Course Maps:
+    'Yes': 'Taip'
+  PDK5 Course Overview:
+    'Yes': 'Taip'
+  PDK5 Glossary:
+    Glossary: Žodynėlis
+    'Yes': 'Taip'
+  PDK5 Intro:
+    'No': 'Ne'
+    Welcome!: Sveiki atvykę!
+    'Yes': 'Taip'
+  PDK5 Teacher Dashboard:
+    Teacher Dashboard: Mokytojo prietaisų skydelis
+    'Yes': 'Taip'
+  PDK5 Test1:
+    Question: Klausimas
+    title: pavadinimas
+  PDK5 UVideo Overview:
+    'Yes': 'Taip'
+  PDK5 Unplugged Intro:
+    'Yes': 'Taip'
+  PS U3-bakertest:
+    title: pavadinimas
+  SG U3L07 - MC remove line of code loops:
+    '1': '1'
+    '14': '14'
+    '5': '5'
+    '6': '6'
+    '7': '7'
+  Submittable Multi:
+    blue: mėlyna
+    green: žalia spalva
+    red: raudona spalva
+  Test Contained Multi:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '4': '4'
+  U1L07 Assessment 1:
+    E: R
+  U1L6 Assessment multiple choice:
+    '10': '10'
+    '12': '12'
+    '4': '4'
+    '6': '6'
+    '8': '8'
+  U1L6 Assessment multiple choice_2018:
+    '10': '10'
+    '12': '12'
+    '4': '4'
+    '6': '6'
+    '8': '8'
+  U1L8 Multiple Choice:
+    '10': '10'
+    '13': '13'
+    '14': '14'
+    '16': '16'
+    17: '? You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
+    18: ': You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
+  U1L8 Multiple Choice_2018:
+    '10': '10'
+    '13': '13'
+    '14': '14'
+    '16': '16'
+    17: '? You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
+    18: ': You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
+  'U2L06 - MC: Which is an MST?':
+    0: ': "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
+    E: R
+  U2L08 Assessment 1:
+    '11': '11'
+    '5': '5'
+    '6': '6'
+    '8': '8'
+    '9': '9'
+  U2L13 Assessment4:
+    '26': '26'
+  U2L13 Assessment4_2018:
+    '26': '26'
+  U2L14 Assessment3:
+    'false': 'klaida'
+    'true': 'Taip'
+  U2L19 multichoice 13 MOD 17:
+    '0': '0'
+    '13': '13'
+    '17': '17'
+    '4': '4'
+  U2L19 multichoice 13 MOD 17_2018:
+    '0': '0'
+    '13': '13'
+    '17': '17'
+    '4': '4'
+  'U2L19 mutlichoice ':
+    '0': '0'
+    '1.5': '1.5'
+    '15': '15'
+    '20': '20'
+    '5': '5'
+  U2L19 mutlichoice 20 mod 15:
+    '0': '0'
+    '1.5': '1.5'
+    '15': '15'
+    '20': '20'
+    '5': '5'
+  U2L19 mutlichoice 20 mod 15_2018:
+    '0': '0'
+    '1.5': '1.5'
+    '15': '15'
+    '20': '20'
+    '5': '5'
+  U3L07 - MC remove line of code loops:
+    '1': '1'
+    '14': '14'
+    '5': '5'
+    '6': '6'
+    '7': '7'
+  U3L07 - MC remove line of code loops_2018:
+    '1': '1'
+    '14': '14'
+    '5': '5'
+    '6': '6'
+    '7': '7'
+  U3L30 Assessment1:
+    '6': '6'
+    '7': '7'
+    '8': '8'
+  U3L30 Assessment2:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+  U3L30 Assessment3:
+    '19': '19'
+    '20': '20'
+    '21': '21'
+  U4L01 Multiple Choice:
+    right: dešinėn
+  U4L02 Multiple Choice:
+    right: dešinėn
+  U4L03 Multiple Choice:
+    right: dešinėn
+  U4L04 Multiple Choice:
+    right: dešinėn
+  U4L05 Multiple Choice:
+    right: dešinėn
+  U4L06 Multiple Choice:
+    right: dešinėn
+  U4L06 Reflection Q 1:
+    Question: Klausimas
+    random: atsitiktinis
+  U4L07 Multiple Choice:
+    right: dešinėn
+  U4L08 Multiple Choice:
+    right: dešinėn
+  U4L09 Multiple Choice:
+    right: dešinėn
+  U4L10 Multiple Choice:
+    right: dešinėn
+  U4L11 Multiple Choice:
+    right: dešinėn
+  U4L12 Multiple Choice:
+    right: dešinėn
+  U4L13 Multiple Choice:
+    right: dešinėn
+  U4L14 Multiple Choice:
+    right: dešinėn
+  U4L15 Multiple Choice:
+    right: dešinėn
+  U4L16 Multiple Choice:
+    right: dešinėn
+  U4L17 Multiple Choice:
+    right: dešinėn
+  U4L18 Multiple Choice:
+    right: dešinėn
+  U4L19 Multiple Choice:
+    right: dešinėn
+  U4L20 Multiple Choice:
+    right: dešinėn
+  U4L21 Multiple Choice:
+    right: dešinėn
+  U4L22 Multiple Choice:
+    right: dešinėn
+  U4L23 Multiple Choice:
+    right: dešinėn
+  U4L24 Multiple Choice:
+    right: dešinėn
+  U4LXX Multiple Choice:
+    right: dešinėn
+  U5 assess_weight_v2:
+    Question: Klausimas
+    title: pavadinimas
+  Warmup questions:
+    random: atsitiktinis
+  commute assess - loops 4 - block:
+    '0': '0'
+    '1': '1'
+    '10': '10'
+    '5': '5'
+    '50': '50'
+  courseC_multi_harvester_loops11_predict1:
+    '12': '12'
+    '15': '15'
+    '4': '4'
+  courseC_multi_harvester_loops11_predict1_2018:
+    '12': '12'
+    '15': '15'
+    '4': '4'
+  courseC_multi_starWars_predict1:
+    I don't know: Nežinau
+  courseC_multi_starWars_predict1_2018:
+    I don't know: Nežinau
+  courseD_multi_bee_nestedLoops9_predict2:
+    '12': '12'
+    '4': '4'
+    '8': '8'
+    13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+    14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+    15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+    16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+  courseD_multi_bee_nestedLoops9_predict2_2018:
+    '12': '12'
+    '4': '4'
+    '8': '8'
+    13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+    14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+    15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+    16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+  courseE_multi_farmer_predict1:
+    I don't know: Nežinau
+    0: '? Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    1: ': Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    2: '? The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    3: ': The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+  courseE_multi_farmer_predict1_2018:
+    I don't know: Nežinau
+    0: '? Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    1: ': Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    2: '? The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+    3: ': The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+  csd-post-survey-2018-topic-ai:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csd-post-survey-2018-topic-cryptocurrency:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csd-post-survey-2018-topic-cybersecurity:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csd-post-survey-2018-topic-databases:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csd-post-survey-2018-topic-datascience:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csd-post-survey-2018-topic-gamedev:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csd-post-survey-2018-topic-hardware:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csd-post-survey-2018-topic-internet:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csd-post-survey-2018-topic-mobile:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csd-post-survey-2018-topic-parallel:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csd-post-survey-2018-topic-programming:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csd-post-survey-2018-topic-robotics:
+    'No': 'Ne'
+    Robotics: Robotika
+    'Yes': 'Taip'
+  csd-post-survey-2018-topic-web:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csp-post-survey-2017-q64:
+    0: '? ''Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '''
+    1: ': ''Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '''
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csp-post-survey-2017-q64_2018:
+    0: '? ''Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '''
+    1: ': ''Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '''
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csp-post-survey-2017-q65:
+    I don't know: Nežinau
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csp-post-survey-2017-q65_2018:
+    I don't know: Nežinau
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csp-post-survey-2018-topic-ai:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csp-post-survey-2018-topic-cryptocurrency:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csp-post-survey-2018-topic-cybersecurity:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csp-post-survey-2018-topic-databases:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csp-post-survey-2018-topic-datascience:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csp-post-survey-2018-topic-gamedev:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csp-post-survey-2018-topic-hardware:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csp-post-survey-2018-topic-internet:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csp-post-survey-2018-topic-mobile:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csp-post-survey-2018-topic-parallel:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csp-post-survey-2018-topic-programming:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csp-post-survey-2018-topic-robotics:
+    'No': 'Ne'
+    Robotics: Robotika
+    'Yes': 'Taip'
+  csp-post-survey-2018-topic-web:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csp-pre-survey-2017-q40:
+    0: '? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    1: ': If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    Other: Kita
+  csp-pre-survey-2017-q40_2018:
+    0: '? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    1: ': If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    Other: Kita
+  csp_ap_exam_signup:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csp_ap_previous_years:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  csp_ap_taking_ap_class:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  cspu5_assess1_fivemore:
+    "-2": "-2"
+    '3': '3'
+    '5': '5'
+    '8': '8'
+  cspu5_assess1_fivemore_2018:
+    "-2": "-2"
+    '3': '3'
+    '5': '5'
+    '8': '8'
+  cspu5_assess1_fivemore_exam_prep:
+    "-2": "-2"
+    '3': '3'
+    '5': '5'
+    '8': '8'
+  cspu5_assess1_flowchart:
+    '10': '10'
+    '5': '5'
+  cspu5_assess1_flowchart_2018:
+    '10': '10'
+    '5': '5'
+  cspu5_assess1_flowchart_exam_prep:
+    '10': '10'
+    '5': '5'
+  cspu5_assess1_increase:
+    '10': '10'
+    '13': '13'
+    '5': '5'
+    '8': '8'
+  cspu5_assess1_increase_2018:
+    '10': '10'
+    '13': '13'
+    '5': '5'
+    '8': '8'
+  cspu5_assess1_increase_exam_prep:
+    '10': '10'
+    '13': '13'
+    '5': '5'
+    '8': '8'
+  cspu5_assess2_addstrings:
+    result: rezultatas
+  cspu5_assess2_addstrings_2018:
+    result: rezultatas
+  cspu5_assess2_addstrings_exam_prep:
+    result: rezultatas
+  cspu5_assess2_combineString:
+    '10': '10'
+    '55': '55'
+    result: rezultatas
+  cspu5_assess2_combineString_2018:
+    '10': '10'
+    '55': '55'
+    result: rezultatas
+  cspu5_assess2_combineString_exam_prep:
+    '10': '10'
+    '55': '55'
+    result: rezultatas
+  cspu5_assess2_oldEnough:
+    '35': '35'
+    'false': 'klaida'
+    'true': 'Taip'
+  cspu5_assess2_oldEnough_2018:
+    '35': '35'
+    'false': 'klaida'
+    'true': 'Taip'
+  cspu5_assess2_oldEnough_exam_prep:
+    '35': '35'
+    'false': 'klaida'
+    'true': 'Taip'
+  cspu5_assess2_weight:
+    '125': '125'
+    '200': '200'
+    '30': '30'
+    '50': '50'
+    '75': '75'
+  cspu5_assess2_weight_2018:
+    '125': '125'
+    '200': '200'
+    '30': '30'
+    '50': '50'
+    '75': '75'
+  cspu5_assess2_weight_exam_prep:
+    '125': '125'
+    '200': '200'
+    '30': '30'
+    '50': '50'
+    '75': '75'
+  cspu5_assess3_array1:
+    '10': '10'
+    '4': '4'
+    '7': '7'
+    '9': '9'
+  cspu5_assess3_array1_2018:
+    '10': '10'
+    '4': '4'
+    '7': '7'
+    '9': '9'
+  cspu5_assess3_array1_exam_prep:
+    '10': '10'
+    '4': '4'
+    '7': '7'
+    '9': '9'
+  cspu5_assess3_array2:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_array2_2018:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_array2_exam_prep:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_array4:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '8': '8'
+  cspu5_assess3_array4_2018:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '8': '8'
+  cspu5_assess3_array4_exam_prep:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '8': '8'
+  cspu5_assess3_listAppend:
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '6': '6'
+  cspu5_assess3_listAppend_2018:
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '6': '6'
+  cspu5_assess3_listAppend_exam_prep:
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '6': '6'
+  cspu5_assess3_loopValue1:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+  cspu5_assess3_loopValue1_2018:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+  cspu5_assess3_loopValue1_exam_prep:
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+  cspu5_assess3_loopValue2:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_loopValue2_2018:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_loopValue2_exam_prep:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_loopValue3:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_loopValue3_2018:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess3_loopValue3_exam_prep:
+    '0': '0'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+  cspu5_assess4_dataReturns:
+    '10': '10'
+    '16': '16'
+    '3': '3'
+    '4': '4'
+    '9': '9'
+  cspu5_assess4_dataReturns_2018:
+    '10': '10'
+    '16': '16'
+    '3': '3'
+    '4': '4'
+    '9': '9'
+  cspu5_assess4_dataReturns_exam_prep:
+    '10': '10'
+    '16': '16'
+    '3': '3'
+    '4': '4'
+    '9': '9'
+  cspu5_assess4_listOutput:
+    '17': '17'
+    '3': '3'
+    '42': '42'
+    '9': '9'
+  cspu5_assess4_listOutput_2018:
+    '17': '17'
+    '3': '3'
+    '42': '42'
+    '9': '9'
+  cspu5_assess4_listOutput_exam_prep:
+    '17': '17'
+    '3': '3'
+    '42': '42'
+    '9': '9'
+  msm variables multi 1:
+    '15': '15'
+    x: x
+  msm variables multi 10:
+    '17': '17'
+    x: x
+  msm variables multi 11:
+    '17': '17'
+    x: x
+  msm variables multi 12:
+    '17': '17'
+    x: x
+  msm variables multi 13:
+    '117': '117'
+    '17': '17'
+    x: x
+  msm variables multi 2:
+    '8': '8'
+  msm variables multi 3:
+    '5': '5'
+    x: x
+  msm variables multi 4:
+    '15': '15'
+    '3': '3'
+    '8': '8'
+  msm variables multi 5:
+    '3': '3'
+    '5': '5'
+  msm variables multi 6:
+    '1': '1'
+    '5': '5'
+    hello: labas
+  msm variables multi 7:
+    '3': '3'
+    x: x
+  msm variables multi 8:
+    '3': '3'
+    x: x
+  msm variables multi 9:
+    '5': '5'
+    '6': '6'
+    x: x
+  post-assessment survey q34:
+    Easy: Lengvas
+    Hard: Sunkus
+  pre-assessment survey q24:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  pre-assessment survey q26:
+    0: '? Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?'
+    1: ': Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?'
+    'No': 'Ne'
+    'Yes': 'Taip'
+  pre-assessment survey q27:
+    0: '? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    1: ': If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    Other: Kita
+  pre-assessment survey q28:
+    '10': '10'
+    '11': '11'
+    '12': '12'
+    '8': '8'
+    '9': '9'
+    Other: Kita
+  pre-assessment survey q29:
+    Female: Moteris
+    Male: Vyras
+    Other: Kita
+    Prefer not to answer: Nenoriu atsakyti
+  pre-assessment survey q30:
+    Asian: Azijietis
+    Black or African American: Juodasis arba Afroamerikietis
+    Other: Kita
+    Prefer not to answer: Nenoriu atsakyti
+    White: Baltasis
+  sarah_test_maggie:
+    Question: Klausimas
+    test: sąlyga
+  sciPD PreQ 1:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  sciPD PreQ 2:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  test anonymous student survey educational:
+    'No': 'Ne'
+    'Yes': 'Taip'
+  test me:
+    Question: Klausimas
+    title: pavadinimas
+  unique level name here:
+    Question: Klausimas
+    title: pavadinimas
+  text_match:
+    U2L07 Assessment4:
+      '43': '43'

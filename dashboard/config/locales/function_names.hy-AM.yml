@@ -1,0 +1,28 @@
+---
+hy:
+  data:
+    function_names:
+      x: x
+      draw a circle: draw a circle
+      draw a hexagon: draw a hexagon
+      draw a flower: draw a flower
+      draw a square: draw a square
+      draw a snowflake: draw a snowflake
+      draw a tree: draw a tree
+      draw a triangle: draw a triangle
+      draw a house: draw a house
+      draw a star: draw a star
+      do something: անել ինչ որ բան
+      jump: ցատկել
+      set score: հավաքածու հաշիվը
+      get nectar: ստանում են նեկտար
+      test: փորձ
+      diamond: ադամանդ
+      move: քայլ
+      move right: գնալ աջ
+      move up: գնալ վեր
+      move down: գնալ ներքեւ
+      move left: գնալ աջ
+      turn left: դիմել է մնացել
+      move forward: առաջ ընթանալ
+      turn right: աջ շրջադարձ

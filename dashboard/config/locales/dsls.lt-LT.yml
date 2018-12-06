@@ -1,0 +1,2868 @@
+---
+lt:
+  data:
+    evaluation_multi:
+      U5 evaluation q1:
+        'No': Ne
+        'Yes': Taip
+      U5 evaluation q2:
+        0: "? Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        1: ": Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        While Loops: "„Kol“ kartojimas"
+    external:
+      AWS Demo:
+        description here: aprašymas čia
+      Algo How Routers Learn Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      Algo Shortest Path Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      App Lab Feedback:
+        description here: aprašymas čia
+      AppLab Level U3L19 - variable re-assignment challenge pt1:
+        description here: aprašymas čia
+      Basic mechanics of variables:
+        description here: aprašymas čia
+        title: pavadinimas
+      Basic mechanics of variables_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Begin planning your project:
+        description here: aprašymas čia
+        title: pavadinimas
+      Begin planning your project_2018:
+        description here: aprašymas čia
+      'Big Picture: If-statements':
+        description here: aprašymas čia
+        title: pavadinimas
+      'Big Picture: If-statements_2018':
+        description here: aprašymas čia
+        title: pavadinimas
+      Boolean Expressions and Comparison Operators:
+        description here: aprašymas čia
+        title: pavadinimas
+      Boolean Expressions and Comparison Operators_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U1 Input Output C1:
+        description here: aprašymas čia
+      CSD U1 Input Output C2:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U1 Input Output C3:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U1 Input Output C4:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U1 Input Output Intro:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U2 CSS explain:
+        description here: aprašymas čia
+      CSD U2 Classes Introduction:
+        description here: aprašymas čia
+      CSD U2 Design Project:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U2 Design Project_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U2 L1 Overview:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U2 L1 Overview_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U2 L2 Overview:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U2 L2 Overview_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U2 L3 Overview:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U2 L3 Overview_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U2 L4 Overview:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U2 L4 Overview_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U2 L5 Overview:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U2 L5 Overview_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U2 L6 Overview:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U2 L6 Overview_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U2 Lesson 6 Overview:
+        description here: aprašymas čia
+      CSD U2 Lesson 6 Overview_2018:
+        description here: aprašymas čia
+      CSD U2 RGB Colors:
+        description here: aprašymas čia
+      CSD U2 Social Sleuth:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U2 expand project:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U2 expand project_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U2 layout style review:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U2 more CSS:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U2 project guide:
+        description here: aprašymas čia
+      CSD U2 project guide_2018:
+        description here: aprašymas čia
+      CSD U2 text style review:
+        description here: aprašymas čia
+      CSD U3 Card Examples_2018:
+        description here: aprašymas čia
+      CSD U3 Describe the Picture:
+        description here: aprašymas čia
+      CSD U3 L2 Challenges:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U3 SFLP Sprites and Images:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U3 abstraction intro:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U3 collisions STOP isTouching:
+        description here: aprašymas čia
+      CSD U3 combining rep:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U3 combining rep_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U3 game intro:
+        description here: aprašymas čia
+      CSD U3 game intro_2018:
+        description here: aprašymas čia
+      CSD U3 platform intro:
+        description here: aprašymas čia
+      CSD U3 platform intro_2018:
+        description here: aprašymas čia
+      CSD U3 setSpeed STOP:
+        description here: aprašymas čia
+      CSD U5 Encryption 1:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U5 Encryption 1_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U5 Encryption 2:
+        description here: aprašymas čia
+      CSD U5 Encryption 2_2018:
+        description here: aprašymas čia
+      CSD U5 L13 SFLP Interpreting Data:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U5 L13 SFLP Interpreting Data_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U5 Representing Information:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U5 collection UPS2:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U5 collection ads2:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U5 crosstab warmup:
+        description here: aprašymas čia
+      CSD U5 crosstab warmup_2018:
+        description here: aprašymas čia
+      CSD U5 data visualization:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U5 data visualization sheet:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U5 data visualization_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U5 fixed-bits:
+        description here: aprašymas čia
+      CSD U5 student record:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U5 student record_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U5 video2:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSD U6 LED create intro:
+        description here: aprašymas čia
+      CSD U6 LED create intro_2018:
+        description here: aprašymas čia
+      CSD U6 final intro:
+        description here: aprašymas čia
+      CSD U6 final intro_2018:
+        description here: aprašymas čia
+      CSD-U3-SFLP Drawing:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSDU2L01 SFLP:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSP ExploreL02 SFLP:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSP Journal Entry Placeholder2:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        description here: aprašymas čia
+      CSP Unit 3 - Learning JavaScript Resources:
+        description here: aprašymas čia
+      CSP assessment Hex interstitial:
+        description here: aprašymas čia
+      CSPPD impact of CS:
+        description here: aprašymas čia
+      CSPPD3-u2 Welcome:
+        Welcome!: Sveiki atvykę!
+      CSPStudentLessonPlanTemplate:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSPU5 Making a Multi Screen Chaser Game:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSPU5_ChoosingGoodIds:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSPU5_EventDrivenProgrammingPatterns:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSPU5_FirstTimeDesignMode:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSPU5_FirstTimeDesignMode_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSPU5_HowImagesWork:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSPU5_HowOnEventWorks_v2:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSPU5_U3L14 - Message - Other ways to assign values:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSPU5_U3L14 - Message - basic mechanics of variables:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSPU5_U3L15 - explanation of IF and =v==:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSPU5_U3L15 Student Lesson Intro - new:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSPU5_U3L19 - variable scope explanation pt2:
+        description here: aprašymas čia
+      CSPU5_U3L20 - combining And and Or explanation:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSPU5_goodbyeTurtle_setPosition:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSPU5_introToDebugging:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSPU5_makingPredictions_ref:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSPU5_onEventBreakdown:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSP_Final_instructions:
+        description here: aprašymas čia
+        title: pavadinimas
+      CSP_U4_rawMovieData:
+        description here: aprašymas čia
+        title: pavadinimas
+      Color Sleuth - Epilogue:
+        description here: aprašymas čia
+        title: pavadinimas
+      Color Sleuth - Epilogue_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Color Sleuth - How does it end?:
+        description here: aprašymas čia
+        title: pavadinimas
+      Color Sleuth - How does it end?_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Color Sleuth - How to switch player turns:
+        description here: aprašymas čia
+        title: pavadinimas
+      Color Sleuth - How to switch player turns_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Color Sleuth - Keeping score:
+        description here: aprašymas čia
+        title: pavadinimas
+      Color Sleuth - Keeping score_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Color Sleuth - Planning the App:
+        description here: aprašymas čia
+        title: pavadinimas
+      Color Sleuth - Planning the App_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Controlling Memory - Other ways to assign values:
+        description here: aprašymas čia
+        title: pavadinimas
+      Controlling Memory - Other ways to assign values_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Cups and Beans Activity:
+        description here: aprašymas čia
+        title: pavadinimas
+      Cups and Beans Activity_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Debugging with Console.log:
+        description here: aprašymas čia
+        title: pavadinimas
+      Debugging with Console.log_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Deeper Learning Overview:
+        description here: aprašymas čia
+      Digital Footprint Chirpr lillizard:
+        description here: aprašymas čia
+        title: pavadinimas
+      Digital Footprint FaceSpace Haley:
+        description here: aprašymas čia
+        title: pavadinimas
+      Digital Footprint FaceSpace Lizzie:
+        description here: aprašymas čia
+        title: pavadinimas
+      Digital Footprint instantframe wiz_kid_liz:
+        description here: aprašymas čia
+        title: pavadinimas
+      DigitalCitizenship2:
+        Digital Citizenship: Virtuali pilietybė
+      ECSPD Challenge Rubric:
+        description here: aprašymas čia
+        title: pavadinimas
+      ECSPD Online U1D1-2:
+        description here: aprašymas čia
+      ECSPD Online U1D1-2 Resources:
+        description here: aprašymas čia
+      ECSPD Online U1D11-14:
+        title: pavadinimas
+      ECSPD Online U1D15-16 Forum:
+        description here: aprašymas čia
+        title: pavadinimas
+      ECSPD Online intro:
+        Introduction: Įvadas
+      ECSPD U2 Challenge Plan:
+        description here: aprašymas čia
+        title: pavadinimas
+      ECSPD Unit 2 Stage11:
+        description here: aprašymas čia
+        title: pavadinimas
+      ECSPD Unit 2 Stage13:
+        description here: aprašymas čia
+        title: pavadinimas
+      ECSPD Unit 2 Stage6:
+        description here: aprašymas čia
+        title: pavadinimas
+      ECSPD impact of CS:
+        description here: aprašymas čia
+      Encoding Numbers Real World Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      Event Driven Programming Recap:
+        description here: aprašymas čia
+        title: pavadinimas
+      Event Driven Programming Recap_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Event-Driven Programming Patterns:
+        description here: aprašymas čia
+        title: pavadinimas
+      Event-Driven Programming Patterns_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      External MD column Test:
+        description here: aprašymas čia
+        title: pavadinimas
+      External MD column Test bootstrap:
+        description here: aprašymas čia
+        title: pavadinimas
+      GoodBadVisualizations_v1:
+        description here: aprašymas čia
+        title: pavadinimas
+      GoodBadVisualizations_v2:
+        description here: aprašymas čia
+        title: pavadinimas
+      How "if-else-if" Works:
+        description here: aprašymas čia
+        title: pavadinimas
+      How "if-else-if" Works_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      How Compound Boolean Expressions Work:
+        description here: aprašymas čia
+        title: pavadinimas
+      How Compound Boolean Expressions Work_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      How Dropdown Menus Work:
+        description here: aprašymas čia
+        title: pavadinimas
+      How Dropdown Menus Work_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      How If Statements Work pt 1:
+        description here: aprašymas čia
+        title: pavadinimas
+      How If Statements Work pt 1_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      How If-Else Statements Work:
+        description here: aprašymas čia
+        title: pavadinimas
+      How If-Else Statements Work_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      How Images Work:
+        description here: aprašymas čia
+        title: pavadinimas
+      How Images Work_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      How Secure Is Your Password?:
+        description here: aprašymas čia
+        title: pavadinimas
+      How Secure Is Your Password?_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      How Set Property Works:
+        description here: aprašymas čia
+        title: pavadinimas
+      How Set Property Works_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      How onEvent Works:
+        description here: aprašymas čia
+        title: pavadinimas
+      How onEvent Works_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      How setPosition and screen dimensions work:
+        description here: aprašymas čia
+        title: pavadinimas
+      How setPosition and screen dimensions work_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      How the Boolean &&, || and ! Operators Work:
+        description here: aprašymas čia
+        title: pavadinimas
+      How the Boolean &&, || and ! Operators Work_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      How to make a random color:
+        description here: aprašymas čia
+        title: pavadinimas
+      How to make a random color_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      How to pick a random button:
+        description here: aprašymas čia
+        title: pavadinimas
+      How to pick a random button_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Internet Simulator Setup:
+        description here: aprašymas čia
+      Internet Simulator Setup 2:
+        description here: aprašymas čia
+        title: pavadinimas
+      Internet Simulator Setup 3:
+        description here: aprašymas čia
+      Intro to Debugging and Common Problems:
+        description here: aprašymas čia
+        title: pavadinimas
+      Intro to Debugging and Common Problems_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Making Multiple Screens:
+        description here: aprašymas čia
+        title: pavadinimas
+      Making Multiple Screens_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Making a Multi Screen Chaser Game v.2:
+        description here: aprašymas čia
+        title: pavadinimas
+      Making a Multi Screen Chaser Game v.2_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Multi-Screen Apps:
+        description here: aprašymas čia
+        title: pavadinimas
+      New Challenge Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      New Challenge Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      OPD-K5 Stage3aGo:
+        description here: aprašymas čia
+        title: pavadinimas
+      PDAlg Facilitator Test:
+        description here: aprašymas čia
+        title: pavadinimas
+      PDK5 CS Video:
+        Computer Science: Informatika
+      PDK5 Pair Programming 1:
+        Pair Programming: Programavimas poroje
+      PDK5 Teacher Dashboard C:
+        Teacher Dashboard: Mokytojo prietaisų skydelis
+      PS - Responding to User Input:
+        description here: aprašymas čia
+        title: pavadinimas
+      PS - draft - Longitudinal study description:
+        description here: aprašymas čia
+        title: pavadinimas
+      Pixelation - Lesson 14 - Instructions Make Your Own:
+        description here: aprašymas čia
+      Pixelation - Lesson 14 - Instructions one bit error:
+        description here: aprašymas čia
+      Pixelation - Lesson 15 - Favicon Instructions:
+        description here: aprašymas čia
+      Pixelation - Lesson 15 - Task 1 instructions:
+        description here: aprašymas čia
+      Pixelation - Lesson 15 - Task 2 instructions:
+        description here: aprašymas čia
+      Pixelation - Lesson 15 - Task 3 instructions:
+        description here: aprašymas čia
+      Pixelation - Video - Color 1:
+        description here: aprašymas čia
+      Pixelation - Video - Color 2:
+        description here: aprašymas čia
+      Pixelation - Video - Color 3:
+        description here: aprašymas čia
+      Pixelation - Video - Tips and Tricks:
+        description here: aprašymas čia
+      Prepare for your presentation:
+        description here: aprašymas čia
+        title: pavadinimas
+      Public Key Crypto Widget Instructions:
+        description here: aprašymas čia
+        title: pavadinimas
+      Public Key Crypto Widget Instructions_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Rules About Choosing Good IDs:
+        description here: aprašymas čia
+        title: pavadinimas
+      Rules About Choosing Good IDs_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      SG U3 whats a comment:
+        description here: aprašymas čia
+        title: pavadinimas
+      SG v2 U3L01 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      SG v2 U3L02 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      SG v2 U3L03 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      SG v2 U3L05 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      SG v2 U3L07 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      SG v2 U3L08 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      Sending Bits Real World Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      Simple Decisions with if-statements:
+        description here: aprašymas čia
+        title: pavadinimas
+      Simple Decisions with if-statements_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      'Technique: Frequency Analysis':
+        description here: aprašymas čia
+      'Technique: Frequency Analysis_2018':
+        description here: aprašymas čia
+      Terminology Recap:
+        description here: aprašymas čia
+      Terminology Recap_2018:
+        description here: aprašymas čia
+      Tips For Working on Your Own:
+        description here: aprašymas čia
+        title: pavadinimas
+      Tips For Working on Your Own_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      U1L1 Student Lesson Introduction:
+        description here: aprašymas čia
+      U1L1 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+      U1L10 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U1L11 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U1L12 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U1L13 Student Lesson Summary:
+        description here: aprašymas čia
+        title: pavadinimas
+      U1L14 Student Lesson Summary:
+        description here: aprašymas čia
+        title: pavadinimas
+      U1L15 Student Lesson Summary:
+        description here: aprašymas čia
+        title: pavadinimas
+      U1L16 Student Lesson Introduction:
+        description here: aprašymas čia
+      U1L17 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U1L2 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U1L3 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U1L4 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U1L4 Widget Demo - Video:
+        description here: aprašymas čia
+      U1L5 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U1L6 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U1L7 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U1L8 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U1L9 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U2L1 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U2L12 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U2L17 Student Lesson Introduction:
+        description here: aprašymas čia
+      U2L7 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U2L8 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U3 whats a comment:
+        description here: aprašymas čia
+        title: pavadinimas
+      U3 whats a comment_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      U3L12 - Mission Unsortable:
+        description here: aprašymas čia
+        title: pavadinimas
+      U3L13 - Explanation of Ids:
+        description here: aprašymas čia
+        title: pavadinimas
+      U3L13 - Make a Prediction Explanation:
+        description here: aprašymas čia
+        title: pavadinimas
+      U3L13 Add Button Instrucitons:
+        description here: aprašymas čia
+        title: pavadinimas
+      U3L13 Add Button Instructions:
+        description here: aprašymas čia
+        title: pavadinimas
+      U3L14 - Message - Other ways to assign values:
+        description here: aprašymas čia
+        title: pavadinimas
+      U3L14 - Message - basic mechanics of variables:
+        description here: aprašymas čia
+        title: pavadinimas
+      U3L14 - Student Intro Page:
+        description here: aprašymas čia
+        title: pavadinimas
+      U3L15 - explanation of IF and =v==:
+        description here: aprašymas čia
+        title: pavadinimas
+      U3L15 Student Lesson Intro - new:
+        description here: aprašymas čia
+        title: pavadinimas
+      U3L19 - Arithmetic v Concatenation:
+        description here: aprašymas čia
+      U3L19 - Intro to variables:
+        description here: aprašymas čia
+      U3L19 - concatenate string with var:
+        description here: aprašymas čia
+      U3L19 - done with variables finally:
+        description here: aprašymas čia
+        title: pavadinimas
+      U3L19 - explanation diff between string and var name:
+        description here: aprašymas čia
+      U3L19 - improve your clicker game:
+        description here: aprašymas čia
+      U3L19 - misconception variable assignment order pt1:
+        description here: aprašymas čia
+      U3L19 - misconception variable assignment order pt2:
+        description here: aprašymas čia
+      U3L19 - variable breakdown - Assigning a value:
+        description here: aprašymas čia
+      U3L19 - variable breakdown - common mistake - declaring twice:
+        description here: aprašymas čia
+      U3L19 - variable breakdown - declaration:
+        description here: aprašymas čia
+      U3L19 - variable breakdown - setText in label:
+        description here: aprašymas čia
+      U3L19 - variable breakdown - ways to read pt1:
+        description here: aprašymas čia
+      U3L19 - variable breakdown intro:
+        description here: aprašymas čia
+      U3L19 - variable scope explanation:
+        description here: aprašymas čia
+      U3L19 - variable scope explanation pt2:
+        description here: aprašymas čia
+      U3L19 - variable scope explanation pt3:
+        description here: aprašymas čia
+      U3L20 - combining And and Or explanation:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4 - Cleaning Data - Activity Guide:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4 - Making Data Visualizations - Bar Chart:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4 - Making Data Visualizations - Edit Chart Appearance:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4 - Making Data Visualizations - Free Play:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4 - Making Data Visualizations - Free Play_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4 - Making Data Visualizations - Getting Started:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4 - Making Data Visualizations - Line Chart:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4 - Making Data Visualizations - Scatter Plot:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4 - Making Data Visualizations - Student Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4 - Privacy Abandoned - Hot On Your Trail Video:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4 - Unique Ids Explanation:
+        title: pavadinimas
+      U4 - Unique Ids Explanation_2018:
+        title: pavadinimas
+      U4 Cleaning Data Activity Guide Pt2:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4 Cleaning Data Activity Guide Pt3:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4 caesar cipher interstitial:
+        description here: aprašymas čia
+      U4 how to crack substitution cipher:
+        description here: aprašymas čia
+      U4L01 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L02 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L02 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L02v2 - Finding Trends:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L03 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L03 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L03v2 - Student Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L04 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L04 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L04v2 - Student Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L05 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L06 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L06v2 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L07 Public Key Crypto Interstitial:
+        description here: aprašymas čia
+      U4L07 Student Introduction public key crypto:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L07 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L08 - mod clock instructions:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L08 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L08v2 Making Pivot Tables:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L08v2 Making Pivot Tables Part 2:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L08v2 Making Pivot Tables Part 3:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L08v2 Making Pivot Tables Part 3_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L08v2 Student Intro:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L09 Student Lesson Intro Practice PT big data dilemma:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L09 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L10 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L11 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L12 - Student Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L12 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L13 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L14 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L15 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L16 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L17 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L18 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L19 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L20 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L21 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L22 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L23 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L24 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L5 random subst challenge page:
+        description here: aprašymas čia
+        title: pavadinimas
+      U5 - Create PT - Student Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U5 - Create PT Prep - Student Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U5 - Create PT review - Student Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U5 - Explore PT - Student Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U5 - Explore PT Prep - Student Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U5 - Explore PT Review - Student Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U5 - PT Prep - Digital Portfolio and tech setup:
+        description here: aprašymas čia
+        title: pavadinimas
+      U5 color sleuth check correct:
+        description here: aprašymas čia
+        title: pavadinimas
+      U5 color sleuth check correct_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      U5L08 - Student Intro If statements:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 - Charts - Student Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 - Charts - Student Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 - Final Project - Student Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 - Final Project - Student Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 - ImportExport - Student Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 - ImportExport - Student Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 - Sample Apps - Student Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 - Sample Apps - Student Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 - deleteRecord - Student Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 - deleteRecord - Student Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 - updateRecord - Student Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 - updateRecord - Student Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 AP Performance Task Tech Setup - Student Links:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 Create PT - Complete the Task - Student Links:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 Create PT - Complete the Task - Student Links_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 Create PT Review - Student Links:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 Create PT Review - Student Links_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 Explore PT - Complete the Task - Student Links:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 Explore PT - Complete the Task - Student Links_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 Explore PT - Make a Plan - Student Links:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 Explore PT - Make a Plan - Student Links_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 Explore PT Review - Student Links:
+        description here: aprašymas čia
+        title: pavadinimas
+      U6 Explore PT Review - Student Links_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 2 Lesson 1 Overview Clone:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 4 Lesson 1 Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 4 Lesson 1 Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 4 Lesson 2 Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 4 Lesson 2 Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 4 Lesson 5 Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 4 Lesson 5 Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 1:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 1 Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 1 Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 10 Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 10 Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 2 Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 2 Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 3 Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 3 Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 4 Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 4 Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 5:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 5 Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 5 Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 6:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 6 Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 6 Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 7 Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 7 Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 8 Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 8 Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 9 Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      Unit 5 Lesson 9 Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      'Variable Scope: Local vs. Global':
+        description here: aprašymas čia
+      'Variable Scope: Local vs. Global_2018':
+        description here: aprašymas čia
+      'Worked Example: If-statements and Robot':
+        description here: aprašymas čia
+        title: pavadinimas
+      'Worked Example: If-statements and Robot_2018':
+        description here: aprašymas čia
+        title: pavadinimas
+      brad-repro-bug-000:
+        description here: aprašymas čia
+      brad-test-continue-buttons-in-markdown:
+        description here: aprašymas čia
+      courseB_external_MRF:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseB_external_loopMRF:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseB_story_unspottedBugs10:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseB_story_unspottedBugs11:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseB_story_unspottedBugs12:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseB_story_unspottedBugs13:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseB_story_unspottedBugs14:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseB_story_unspottedBugs15:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseB_story_unspottedBugs16:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseB_story_unspottedBugs17:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseB_story_unspottedBugs18:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseB_story_unspottedBugs2:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseB_story_unspottedBugs3:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseB_story_unspottedBugs4:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseB_story_unspottedBugs5:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseB_story_unspottedBugs6:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseB_story_unspottedBugs7:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseB_story_unspottedBugs8:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseB_story_unspottedBugs9:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseB_unplugged_mrfProgramming:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseC_screenoutthemean:
+        description here: aprašymas čia
+        title: pavadinimas
+      courseF_firstFunctions_map:
+        description here: aprašymas čia
+        title: pavadinimas
+      coursef_functionsSummary_map:
+        description here: aprašymas čia
+        title: pavadinimas
+      coursef_powerofwords:
+        description here: aprašymas čia
+        title: pavadinimas
+      csd deeper learning timeline:
+        description here: aprašymas čia
+      csd deeper learning timeline 2018-2019:
+        description here: aprašymas čia
+      csd-post-survey-unit1-preamble:
+        description here: aprašymas čia
+        title: pavadinimas
+      csd-post-survey-unit2-preamble:
+        description here: aprašymas čia
+        title: pavadinimas
+      csd-post-survey-unit3-preamble:
+        description here: aprašymas čia
+        title: pavadinimas
+      csd-post-survey-unit4-preamble:
+        description here: aprašymas čia
+        title: pavadinimas
+      csd-post-survey-unit5-preamble:
+        description here: aprašymas čia
+        title: pavadinimas
+      csd-post-survey-unit6-preamble:
+        description here: aprašymas čia
+        title: pavadinimas
+      csp deeper learning timeline:
+        description here: aprašymas čia
+      csp-post-survey-2018-AP-preamble:
+        description here: aprašymas čia
+        title: pavadinimas
+      csp-post-survey-2018-topics-preamble:
+        description here: aprašymas čia
+        title: pavadinimas
+      csp-post-survey-2018-unit-feedback-preamble:
+        description here: aprašymas čia
+        title: pavadinimas
+      csp-post-survey-createPT-preamble:
+        description here: aprašymas čia
+        title: pavadinimas
+      csp-post-survey-explorePT-preamble:
+        description here: aprašymas čia
+        title: pavadinimas
+      csp-post-survey-unit1-preamble:
+        description here: aprašymas čia
+        title: pavadinimas
+      csp-post-survey-unit2-preamble:
+        description here: aprašymas čia
+        title: pavadinimas
+      csp-post-survey-unit3-preamble:
+        description here: aprašymas čia
+        title: pavadinimas
+      csp-post-survey-unit4-preamble:
+        description here: aprašymas čia
+        title: pavadinimas
+      csp-post-survey-unit5-preamble:
+        description here: aprašymas čia
+        title: pavadinimas
+      csp_unit5_finalassessment_overview:
+        description here: aprašymas čia
+        title: pavadinimas
+      csp_unit5_finalassessment_overview_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      csp_unit5_finalassessment_overview_exam_prep:
+        description here: aprašymas čia
+        title: pavadinimas
+      csp_unit_assessment_overview:
+        description here: aprašymas čia
+        title: pavadinimas
+      csp_unit_assessment_overview_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      csp_unit_assessment_overview_exam_prep:
+        description here: aprašymas čia
+        title: pavadinimas
+      deeper learning:
+        description here: aprašymas čia
+      deeper learning recommendations- csd:
+        description here: aprašymas čia
+      deeper learning recommendations- csp:
+        description here: aprašymas čia
+      deeper learning recommendations- csp - 2018:
+        description here: aprašymas čia
+      dlp supports - csd:
+        description here: aprašymas čia
+      dsl link test:
+        description here: aprašymas čia
+        title: pavadinimas
+      equity discussion:
+        description here: aprašymas čia
+      grade2_maze_intro1:
+        description here: aprašymas čia
+        title: pavadinimas
+      grade2_unplugged_neighborhood:
+        description here: aprašymas čia
+        title: pavadinimas
+      grade4_project_design:
+        description here: aprašymas čia
+        title: pavadinimas
+      grade4_project_design_image:
+        description here: aprašymas čia
+        title: pavadinimas
+      grade4_project_presentation:
+        description here: aprašymas čia
+        title: pavadinimas
+      grade5_project_design:
+        description here: aprašymas čia
+        title: pavadinimas
+      grade5_project_presentation:
+        description here: aprašymas čia
+        title: pavadinimas
+      more encryption algorithms:
+        description here: aprašymas čia
+        title: pavadinimas
+      newCSFsample:
+        Intro: Įvadas
+        description here: aprašymas čia
+      post-assessment survey heading4:
+        description here: aprašymas čia
+        title: pavadinimas
+      pwc_appdev:
+        description here: aprašymas čia
+        title: pavadinimas
+      pwc_appdevunplugged:
+        description here: aprašymas čia
+        title: pavadinimas
+      pwc_cybersecurity:
+        description here: aprašymas čia
+        title: pavadinimas
+      pwc_data:
+        description here: aprašymas čia
+      pwc_internetofthings:
+        description here: aprašymas čia
+        title: pavadinimas
+      pwc_problemsolving:
+        description here: aprašymas čia
+      pwc_programming:
+        description here: aprašymas čia
+        title: pavadinimas
+      pwc_technologyfoundations:
+        description here: aprašymas čia
+      pwc_webdevelopment:
+        description here: aprašymas čia
+        title: pavadinimas
+      sciPD framework video:
+        Framework: Sistema
+      sciPD2Part4_S1_L3:
+        description here: aprašymas čia
+        title: pavadinimas
+      sciPD2Part4_S2_L1:
+        description here: aprašymas čia
+        title: pavadinimas
+      sciPD2Part4_S2_L2:
+        description here: aprašymas čia
+        title: pavadinimas
+      sciPD2Part4_S3_L1:
+        description here: aprašymas čia
+        title: pavadinimas
+      sciPD2Part4_S3_L2:
+        description here: aprašymas čia
+        title: pavadinimas
+      sciPD2Part4_S3_L3:
+        description here: aprašymas čia
+        title: pavadinimas
+      sciPD3 mods2:
+        description here: aprašymas čia
+        title: pavadinimas
+      sciPD33 earth1:
+        description here: aprašymas čia
+        title: pavadinimas
+      sciPD33 earth2:
+        description here: aprašymas čia
+        title: pavadinimas
+      sciPDpart4_S1_L1:
+        description here: aprašymas čia
+        title: pavadinimas
+      test cb level:
+        description here: aprašymas čia
+      test discourse level type:
+        title: pavadinimas
+      v2 U1 Internet is for Everyone Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U1 Internet is for Everyone Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U1L14 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U1L14 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U1L2 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U1L2 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U1L3 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U1L3 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U1L4 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U1L4 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U1L5 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U1L5 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U1L6 Student Lesson Introduction:
+        description here: aprašymas čia
+      v2 U1L6 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+      v2 U1L8 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U1L8 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L1 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L1 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L10 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L10 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L11 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L11 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L12 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L12 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L13 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L13 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L14 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L14 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L15 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L15 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L2 Student Lesson Summary:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L2 Student Lesson Summary_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L3 Student Lesson Summary:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L3 Student Lesson Summary_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L4 Student Lesson Summary:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L4 Student Lesson Summary_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L5 Student Lesson Introduction:
+        description here: aprašymas čia
+      v2 U2L5 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+      v2 U2L6 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L6 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L7 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L7 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L8 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L8 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L9 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U2L9 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U3L04 Student Lesson Introduction:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U3L04 Student Lesson Introduction_2018:
+        description here: aprašymas čia
+        title: pavadinimas
+      v2 U3L05 Student Lesson Introduction:
+        Creating Functions: Komandų kūrimas
+      v2 U3L05 Student Lesson Introduction_2018:
+        Creating Functions: Komandų kūrimas
+      v2 U4L05 Student Lesson Intro Encryption Caesar:
+        description here: aprašymas čia
+        title: pavadinimas
+    match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: Susiek ženklų kombinaciją
+          su šokio judesio kombinacijomis.
+        Matching: Sujungimas
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: Sujungimas
+        Use the key to match each code to its letter: Kiekviena raidė turi savo kodavimo
+          raktą. Susiek jį su kiekviena raide apačioje.
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: Priderink tinklelį prie programos.
+        Matching: Sujungimas
+      2-3 Maze Match 2:
+        Instructions: Instrukcijos
+        Match the puzzles to the blocks: Pritaikyk kiekvienam galvosūkiui teisingus
+          sprendimus
+        Maze Match: 'Labirintas: sujungimas'
+      2-3 Relay Programming Match 1:
+        Matching: Sujungimas
+      2-3 artist loops match 1:
+        Match the loop to the shape: Priderink ciklą (kartojimą) prie figūros
+      2-3 artist match 1:
+        Artist Matching: 'Menininkas: sujungimo užduotis'
+        Match the shape with the blocks that complete it.: Parink tinkamus blokelius,
+          kurie pabaigs piešinį.
+      2-3 bounce match 1:
+        Matching: Sujungimas
+      2-3 flappy match 1:
+        Matching: Sujungimas
+      2-3 maze match 1:
+        Match the puzzles to the blocks: Pritaikyk kiekvienam galvosūkiui teisingus
+          sprendimus
+        Maze Match One: Labirinto sujungimo užduotis 1
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>Pridėk pirmo žaidėjo išridentą
+          akučių skaičių prie visų jo išridentų taškų</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>Palygink žaidėjų taškus
+          ir pažiūrėk, kuris laimėjo</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>1 žaidėjas ridena kauliuką</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>Nustatyk pirmo žaidėjo taškus į 0</h4>"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Sudėliok
+          veiksmus, kurie seka vienas po kito, žaidžiant žaidimą „ridenk kauliuką“.
+        Matching: Sujungimas
+      4-5 Computational Thinking Match 1:
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Ratai/iš_šono: 2<br/>Langai/iš_šono:
+          0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Ratai/iš_šono: 2<br/>Langai/iš_šono:
+          1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Ratai/iš_šono: 2<br/>Langai/iš_šono:
+          6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Ratai/iš_šono: 3<br/>Langai/iš_šono:
+          2</h3>"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Kiekviena
+          pavaizduota transporto priemonė gali būti išskaidyta į smulkesnes dalis.
+          Sudėliok transporto priemones taip, kad jos atitiktų tai, kas yra užrašyta
+          kairėje pusėje.
+        Matching: Sujungimas
+      4-5 Suncatchers Match 1:
+        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
+        "<h4>STACK</h4>": "<h4>STACK</h4>"
+        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
+        "<h4>STAR</h4>": "<h4>STAR</h4>"
+        Match each program to the word it makes, using the provided group of skills.: Sudėliok
+          dešinėje esančius žodžius prie kairėje esančių programų taip, kad įvykdžius
+          kairėje esančias programas, jos sudėliotų dešinėje esantį žodį.
+        Matching: Sujungimas
+      4-5 maze match 1:
+        Instructions: Instrukcijos
+        Match the puzzles to the blocks: Pritaikyk kiekvienam galvosūkiui teisingus
+          sprendimus
+        Maze Match: 'Labirintas: sujungimas'
+      CSD U3 CSS Vocab Match:
+        '1': '1'
+        '2': '2'
+      CSD U3 keyinput match:
+        Question: Klausimas
+      CSDU2 Match RGB Colors:
+        Question: Klausimas
+      K-1 Artist 2 Match 1:
+        Matching: Sujungimas
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: Sujunk figūras pagal tipą.
+        Matching: Sujungimas
+      K-1 Artist 2 Match 3:
+        Match the shapes based on type.: Sujunk figūras pagal tipą.
+        Matching: Sujungimas
+      K-1 Artist Loops Match 1:
+        Matching: Sujungimas
+      K-1 Bee Loops Match 1:
+        Match the blocks: Susiek blokelius
+        Matching: Sujungimas
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: Susiek ženklų kombinaciją
+          su šokio judesio kombinacijomis.
+        Matching: Sujungimas
+      K-1 Flappy Match 1:
+        Match the blocks: Susiek blokelius
+        Matching: Sujungimas
+      K-1 Happy Maps Match 1:
+        Matching: Sujungimas
+      K-1 Maze Match 1:
+        Instructions: Instrukcijos
+        Match the puzzles and blocks: Sujunkite dėliones ir blokelius
+        Matching: Sujungimas
+      K-1 Move It Match 1:
+        Matching: Sujungimas
+      PDAlg Design Recipe Video:
+        Definition: Apibrėžimas
+      PDK5 What is unplugged:
+        Question: Klausimas
+      'U2L06 - Matching: Label the Diagram':
+        E: R
+      U3L19 - MATCH what are values of abc:
+        '10': '10'
+        '12': '12'
+        '13': '13'
+        '15': '15'
+        '16': '16'
+        '21': '21'
+        '3': '3'
+        '5': '5'
+        '7': '7'
+        '8': '8'
+        description here: aprašymas čia
+        title: pavadinimas
+      U3L19 - MC what are values of abc:
+        description here: aprašymas čia
+        title: pavadinimas
+      U4L06 Create Record Id Matching Q:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      parts of contract:
+        image: vaizdas
+      test matching image:
+        Instructions: Instrukcijos
+      test matching text:
+        Matching: Sujungimas
+        blue: mėlyna
+      unique level name here:
+        Question: Klausimas
+        description here: aprašymas čia
+        title: pavadinimas
+    multi:
+      2-3 Algorithms Multi 1:
+        Choose an algorithm for the image provided.: Pasirink tinkamą algoritmą, su
+          kuriuo gausis duotasis vaizdas.
+        Multiple Choice: Parink teisingą atsakymą
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Pirmiausia
+          padėk kvadratą<br/>Virš jo padėk lygiagretainį<br/>Lygiagretainio dešinėje
+          padėk trikampį
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Pradėk
+          nuo kvadrato<br/>Padėk trikampį virš kvadrato<br/>Padėk trikampį po kvadratu
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Pradėk
+          nuo kvadrato<br/>Padėk trikampį po kvadratu<br/>Padėk lygiagretainį trikampio
+          dešinėje
+        0: "? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram"
+        1: ": Pradėk nuo kvadrato<br/>Padėk trikampį kvadrato dešinėje<br/>Po trikampiu
+          padėk lygiagretainį<br/>Lygiagretainio dešinėje padėk dar vieną trikampį."
+      2-3 Algorithms Multi 2:
+        Multiple Choice: Parink teisingą atsakymą
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Pradėk
+          nuo trikampio<br/>Padėk kvadratą po trikampiu<br/>Padėk kitą trikampį po
+          kvadratu
+        Which image does <em>not</em> follow this algorithm?: Kuris paveikslėlis <em>nesigaus</em>
+          naudojant šį algoritmą?
+      2-3 Binary Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which program makes this image?: Kuri programa sukuria šį vaizdą?
+      2-3 Conditionals Multi 1:
+        According to the rules of the game, which set of cards is scored correctly?: Kuri
+          kortų grupė turi teisingą taškų kiekį (pagal žaidimo taisykles kairėje)?
+        Multiple Choice: Parink teisingą atsakymą
+      2-3 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Kaip supaprastinti šią kartojimo
+          seką?
+        Multiple Choice: Parink teisingą atsakymą
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which program makes this image?: Kuri programa sukuria šį vaizdą?
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: 'Labirintas:  parink teisingą atsakymą'
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: Parink teisingą atsakymą
+        Which image-program combo does not contain mistakes?: Kuriame paveikslėlyje
+          nėra klaidų?
+      2-3 artist functions multi 1:
+        Artist Functions Multiple Choice One: 'Menininkas ir funkcijos: parink teisingą
+          atsakymą'
+        Pick the correct blocks to draw this image using the given functions: Pasirink
+          teisingą blokelių seką, kad būtų gautas parodytas vaizdas. Ką daro sudėtinė
+          komanda, yra pavaizduota kairėje pusėje
+      2-3 artist loops multi 1:
+        Artist Loops Multiple Choice: 'Menininkas: parink teisingą atsakymą'
+        Which shape is made by this loop?: Kuri figūra yra nupiešiama su šiomis kartojimo
+          komandomis?
+      2-3 artist loops multi 2:
+        Artist Loops Multiple Choice: 'Menininkas: parink teisingą atsakymą'
+        Which shape is made by this program?: Kuri figūra bus nubrėžta, įvykdžius
+          šią programą?
+      2-3 bee conditionals multi 1:
+        Which comparison below is true?: Kuri lygybė teisinga?
+      2-3 bee conditionals multi 2:
+        Choose the best blocks.: Pasirink geriausią atsakymą, kuris išsprendžia galvosūkį.
+      2-3 bee conditionals multi 3:
+        Choose the best blocks.: Pasirink geriausią atsakymą, kuris išsprendžia galvosūkį.
+      2-3 bee loops multi 1:
+        Bee Loops Multiple Choice One: 'Bitė: parink teisingą atsakymą'
+        Which blocks collect all of the nectar?: Su kuriais blokeliais galima surinkti
+          visą nektarą?
+      2-3 maze multi 1:
+        Maze Multiple Choice One: 'Labirintas: parink teisingą atsakymą'
+        Which set of blocks is the correct answer?: Kuris blokų derinys yra teisingas?
+      4-5 Algorithms Multi 1:
+        Baking cookies: Sausainių kepimas
+        Banana: Bananas
+        Brushing your teeth: Dantų valymasis
+        Multiple Choice: Parink teisingą atsakymą
+        Shopping from a grocery list: Apsipirkimas pagal duotą prekių sąrašą
+        Which one of these items is hardest to describe an algorithm for?: Kurį veiksmą
+          yra sunkiausia išskaidyti į veiksmų seką?
+      4-5 Computational Thinking Multi 1:
+        Eugene is a _____ city.: Eugene is a _____ city.
+        0: "? Here are three sentences. Which of the templates below correctly abstracts
+          so that all three match the same pattern as the template?"
+        1: ": Yra duoti trys sakiniai. Kuris iš pateiktų atsakymų su praleistais žodžiais
+          tinka visiems duotiesiems sakiniams?"
+        Multiple Choice: Parink teisingą atsakymą
+        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
+          is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.
+        _____ is _____ a _____.: _____ is _____ a _____.
+        _____ is a _____ city.: _____ is a _____ city.
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which of these pictures best represents crowdsourcing?: Kuris iš šių paveiksliukų
+          geriausiai atitinka minios bendradarbiavimą („crowdsourcing“)?
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: Tavo plaukų šukavimas
+        Cleaning your room: Tavo kambario tvarkymas
+        Eating your dessert: Tavo deserto valgymas
+        Multiple Choice: Parink teisingą atsakymą
+        Washing your face: Tavo veido prausimas
+        Which one of these activities would be best for practicing crowdsourcing?: Kuri
+          iš šių veiklų gali būti vadinama minios bendradarbiavimu (angl. „crowdsourcing“)?
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which piece of information listed below is okay to share on the internet?: Kokią
+          informaciją iš žemiau pateiktų variantų internete galima skelbti viešai?
+        Your address: Tavo adresą
+        Your birthday: Tavo gimtadienį
+        Your favorite food: Tavo mėgstamiausią patiekalą
+        Your parent's credit card number: Tavo tėvų kreditinės kortelės numerį
+      4-5 Internet Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Kai
+          bandote prisijungti prie svetainės code.org, kuriuo IP adresu kreipsis DNS,
+          kad patektumėte į šią svetainę?
+      4-5 Internet Multi 2:
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Jei
+          DNS nukreipė Jus į svetainę pagal IP adresą 100.42.50.110, kurioje svetainėje
+          Jūs atsidursite?
+        Multiple Choice: Parink teisingą atsakymą
+      4-5 Songwriting Multi 1:
+        0: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin."
+        1: ": Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin."
+        Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
+          Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip
+          to my Lou, <br/>Skip to my Lou, my darlin.
+        2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,"
+        3: ": Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,"
+        Multiple Choice: Parink teisingą atsakymą
+        4: "? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?"
+        5: ": What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?"
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Kuri
+          iš pateiktų programų žemiau <em>neatitinka</em> tos pačios sekos, kokia
+          yra programoje Program 1?
+      4-5 artist loops multi 1:
+        Artist Loops Multiple Choice: 'Menininkas: parink teisingą atsakymą'
+        Which blocks will create the design?: Kurie blokeliai sukurs šį piešinį?
+      4-5 artist multi 1:
+        Artist Multiple Choice: 'Menininkas: parink teisingą atsakymą'
+        Which blocks draw a rectangle with a perimeter of 100?: Su kuriais blokeliais
+          galima nupiešti stačiakampį, kurio perimetras lygus 100?
+      4-5 artist multi 2:
+        Artist Multiple Choice: 'Menininkas: parink teisingą atsakymą'
+        Which drawing is symmetric?: Kuris piešinys yra simetriškas?
+      4-5 bee conditionals multi 1:
+        0: "? Violetinė gėlė gali turėti 3, 2 arba 1 nektarą, tačiau nėra žinoma,
+          kiek tiksliai. Kurie blokeliai teisingai patikrina ir surenka visą nektarą
+          iš violetinės gėlės?"
+        1: ": Violetinė gėlė gali turėti 3, 2 arba 1 nektarą, tačiau nėra žinoma,
+          kiek tiksliai. Kurie blokeliai teisingai patikrina ir surenka visą nektarą
+          iš violetinės gėlės?"
+        Bee Conditionals Multiple Choice: 'Bitė: parink teisingą atsakymą'
+        Choose the best blocks.: Pasirink geriausią atsakymą, kuris išsprendžia galvosūkį.
+      4-5 bee debug multi 1:
+        Bee Debug Multiple Choice: 'Bitė: klaidų ieškojimas. Parink teisingą atsakymą'
+        Which version of the function will work?: Kurią sudėtinę komandą panaudojus
+          bus išspręstas galvosūkis?
+      4-5 bee loops multi 1:
+        Bee Loops Multiple Choice: 'Bitė: parink teisingą atsakymą'
+        Which blocks will solve the puzzle?: Su kuriais blokeliais galima išspręsti
+          šią užduotį?
+      4-5 farmer loops multi 1:
+        Which blocks solve the puzzle?: Kurie blokeliai išspręs šią užduotį?
+      4-5 maze conditionals multi 1:
+        Maze Conditionals Multiple Choice: 'Labirintas: parink teisingą atsakymą'
+        Which blocks solve the puzzle?: Kurie blokeliai išspręs šią užduotį?
+      4-5 maze multi 1:
+        Maze Multiple Choice: 'Labirintas:  parink teisingą atsakymą'
+        Which blocks solve the puzzle?: Kurie blokeliai išspręs šią užduotį?
+      CB_Question_3:
+        Y: true
+      CSD Prediction Header Size:
+        Question: Klausimas
+      CSD U3 Boolean MC:
+        title: pavadinimas
+      CSD U3 Boolean MC_2018:
+        title: pavadinimas
+      'CSP U4L04 Assessment 1 ':
+        Question: Klausimas
+      CSP Unit 1 Ch 1 MC binary to dec simple:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_2018:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_exam_prep:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP verify 18:
+        'No': Ne
+        'Yes': Taip
+      CSPU5_predict_mc_whichOfTwoEvents:
+        title: pavadinimas
+      CSPU5_predict_onEvent_withWrongID:
+        Question: Klausimas
+        title: pavadinimas
+      CommuteAssess - loops 1 - block:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block B:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_2018:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_exam_prep:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 2 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_2018:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_exam_prep:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      Destroy me multi test:
+        description here: aprašymas čia
+      ECSPD2 question:
+        Question: Klausimas
+        title: pavadinimas
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which blocks solve this puzzle?: Kurie blokeliai išspręs šią užduotį?
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: Parink teisingą atsakymą
+        Which blocks draw the square?: Kurie blokeliai nubrėš kvadratą?
+      K-1 Artist 2 Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+      K-1 Artist Loops Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+      K-1 Bee 1 Multi 1:
+        How many nectars is this?: Kiek sudėjus gausime nektaro?
+        Multiple Choice: Parink teisingą atsakymą
+      K-1 Bee 1 Multi 2:
+        How many nectars is this?: Kiek sudėjus gausime nektaro?
+        Multiple Choice: Parink teisingą atsakymą
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Kuris
+          gyvūnas palieka skaitmeninius pirštų antspaudus, kurie jam gali sukelti
+          <strong>didžiausią grėsmę</strong>?
+      K-1 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Kaip supaprastinti šią kartojimo
+          seką?
+        Multiple Choice: Parink teisingą atsakymą
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which arrow gets the Flurb to the treasure?: Kuri rodyklė nuveda pabaisiuką
+          prie lobio?
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which information should you <strong>not</strong> share online?: Kurios informacijos
+          <strong>nederėtų</strong>skelbti internete?
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which choice should be the final block?: Kuris blokelis turėtų būti paskutinis?
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which repeat block is the same?: Kurie kartojimo blokeliai atlieka tą patį?
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: Parink teisingą atsakymą
+        Pick the correct repeat block.: Pasirink teisingą kartojimo blokelį.
+      K-1 Maze Multiple Choice 2:
+        Maze: Labirintas
+        Which answer solves this level?: Kuris atsakymas išsprendžia šią užduotį?
+      K-1 Move It Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which algorithm gets the Flurb to the flowers?: Kuris algoritmas nuveda Flurbą
+          prie gėlių?
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which step should go at the beginning of this algorithm?: Kuris žingsnis turėtų
+          būti pačioje algoritmo pradžioje?
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: Parink teisingą atsakymą
+        Which step should fill in the blank for this algorithm?: Kuris žingsnis turėtų
+          užpildyti tuščia algoritmo vietą?
+      K-1 Word Search Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which blocks spell "MOVE"?: Kurie blokeliai surenka žodį „MOVE“?
+      K-1 Word Search Multi 2:
+        Multiple Choice: Parink teisingą atsakymą
+      K-1 Word Search Multi 3:
+        Multiple Choice: Parink teisingą atsakymą
+        SET: SET
+        SOUTH: SOUTH
+        SQUARE: SQUARE
+        Which word is spelled?: Kuris žodis yra surinktas?
+      Multi Define Funcs 1:
+        '3': '3'
+        y: true
+      Multi Define Funcs 2:
+        '3': '3'
+        y: true
+      Multi Define Funcs 3:
+        '5': '5'
+        '6': '6'
+        y: true
+      PDAlg Blocks Video:
+        Toolbox: Įrankinė
+      PDAlg DR Multi 1:
+        Domain: Paskirtis
+        Name: Vardas
+        Range: Intervalas
+        0: "? The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+        1: ": The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+      PDAlg PreQ 1:
+        'No': Ne
+        'Yes': Taip
+      PDAlg PreQ 2:
+        'No': Ne
+        'Yes': Taip
+      PDAlg functional:
+        'No': Ne
+      PDK5 Blockly Intro:
+        'Yes': Taip
+      PDK5 Classroom Culture:
+        'Yes': Taip
+      PDK5 Course Maps:
+        'Yes': Taip
+      PDK5 Course Overview:
+        'Yes': Taip
+      PDK5 Glossary:
+        Glossary: Žodynėlis
+        'Yes': Taip
+      PDK5 Intro:
+        'No': Ne
+        Welcome!: Sveiki atvykę!
+        'Yes': Taip
+      PDK5 Teacher Dashboard:
+        Teacher Dashboard: Mokytojo prietaisų skydelis
+        'Yes': Taip
+      PDK5 Test1:
+        Question: Klausimas
+        description here: aprašymas čia
+        title: pavadinimas
+      PDK5 UVideo Overview:
+        'Yes': Taip
+      PDK5 Unplugged Intro:
+        'Yes': Taip
+      PS U3-bakertest:
+        description here: aprašymas čia
+        title: pavadinimas
+      SG U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      Submittable Multi:
+        blue: mėlyna
+        green: žalia spalva
+        red: raudona spalva
+      Test Contained Multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '4': '4'
+      U1L07 Assessment 1:
+        E: R
+      U1L6 Assessment multiple choice:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L6 Assessment multiple choice_2018:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L8 Multiple Choice:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      U1L8 Multiple Choice_2018:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      'U2L06 - MC: Which is an MST?':
+        0: ': "<p>The images below all show the same map (or graph) but have different
+          paths between the points highlighted.</p>\n<p>Please choose the image that
+          is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The
+          “distance” between points is depicted by the number of line segments connecting
+          any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
+        E: R
+      U2L08 Assessment 1:
+        '11': '11'
+        '5': '5'
+        '6': '6'
+        '8': '8'
+        '9': '9'
+      U2L13 Assessment4:
+        '26': '26'
+      U2L13 Assessment4_2018:
+        '26': '26'
+      U2L14 Assessment3:
+        'false': klaida
+        'true': Taip
+      U2L19 multichoice 13 MOD 17:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      U2L19 multichoice 13 MOD 17_2018:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      'U2L19 mutlichoice ':
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15_2018:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L07 - MC remove line of code loops_2018:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L13 - Making Predications MC:
+        0: '? "<h1>Make a prediction - Learning to Code Better, Faster</h1>\n<p>As
+          you are learning to program you will encounter more and more new features
+          of a language and be naturally curious about how things work.  Research
+          has shown that when you encounter a new piece of code or new situation,
+          you learn faster by simply making a prediction about what will happen before
+          you run the program for the first time.  \n</p><p>Making a prediction forces
+          you to study the code and use your intuitions based on what you already
+          know. Even experienced programmers might disagree about what a piece of
+          code would do!  So making a prediction is not like some sort of test about
+          how smart you are.  <strong>By making a prediction first, when you run the
+          code you learn so much more whether you were right, wrong or somewhere in
+          between.  You construct a stronger mental model for how code works than
+          if you just ran the program to see what happened.</strong></p>\n<p>  So
+          let''s try it...</p>\n<h1> What do you think will happen?</h1>\n<p><img
+          src=\"https://images.code.org/34f6a627f0d62b6dc015c9e318372de9-image-1444076081470.png\"
+          align=right>Here is a piece of code with two buttons and two event handlers.  Notice
+          that both buttons still have the default IDs of \"id\". You will need to
+          fix this because we know it causes a warning message.  But it turns out
+          the program can still run and it does do <i>something.</i></p>\n<p><strong>What
+          do you think will happen with this code is run?</strong></p>"'
+        1: ': "<h1>Make a prediction - Learning to Code Better, Faster</h1>\n<p>As
+          you are learning to program you will encounter more and more new features
+          of a language and be naturally curious about how things work.  Research
+          has shown that when you encounter a new piece of code or new situation,
+          you learn faster by simply making a prediction about what will happen before
+          you run the program for the first time.  \n</p><p>Making a prediction forces
+          you to study the code and use your intuitions based on what you already
+          know. Even experienced programmers might disagree about what a piece of
+          code would do!  So making a prediction is not like some sort of test about
+          how smart you are.  <strong>By making a prediction first, when you run the
+          code you learn so much more whether you were right, wrong or somewhere in
+          between.  You construct a stronger mental model for how code works than
+          if you just ran the program to see what happened.</strong></p>\n<p>  So
+          let''s try it...</p>\n<h1> What do you think will happen?</h1>\n<p><img
+          src=\"https://images.code.org/34f6a627f0d62b6dc015c9e318372de9-image-1444076081470.png\"
+          align=right>Here is a piece of code with two buttons and two event handlers.  Notice
+          that both buttons still have the default IDs of \"id\". You will need to
+          fix this because we know it causes a warning message.  But it turns out
+          the program can still run and it does do <i>something.</i></p>\n<p><strong>What
+          do you think will happen with this code is run?</strong></p>"'
+        description here: aprašymas čia
+      U3L30 Assessment1:
+        '6': '6'
+        '7': '7'
+        '8': '8'
+      U3L30 Assessment2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+      U3L30 Assessment3:
+        '19': '19'
+        '20': '20'
+        '21': '21'
+      U4L01 Multiple Choice:
+        right: dešinėje
+      U4L02 Multiple Choice:
+        right: dešinėje
+      U4L03 Multiple Choice:
+        right: dešinėje
+      U4L04 Multiple Choice:
+        right: dešinėje
+      U4L05 Multiple Choice:
+        right: dešinėje
+      U4L06 Multiple Choice:
+        right: dešinėje
+      U4L06 Reflection Q 1:
+        Question: Klausimas
+        random: atsitiktinis
+      U4L07 Multiple Choice:
+        right: dešinėje
+      U4L08 Multiple Choice:
+        right: dešinėje
+      U4L09 Multiple Choice:
+        right: dešinėje
+      U4L10 Multiple Choice:
+        right: dešinėje
+      U4L11 Multiple Choice:
+        right: dešinėje
+      U4L12 Multiple Choice:
+        right: dešinėje
+      U4L13 Multiple Choice:
+        right: dešinėje
+      U4L14 Multiple Choice:
+        right: dešinėje
+      U4L15 Multiple Choice:
+        right: dešinėje
+      U4L16 Multiple Choice:
+        right: dešinėje
+      U4L17 Multiple Choice:
+        right: dešinėje
+      U4L18 Multiple Choice:
+        right: dešinėje
+      U4L19 Multiple Choice:
+        right: dešinėje
+      U4L20 Multiple Choice:
+        right: dešinėje
+      U4L21 Multiple Choice:
+        right: dešinėje
+      U4L22 Multiple Choice:
+        right: dešinėje
+      U4L23 Multiple Choice:
+        right: dešinėje
+      U4L24 Multiple Choice:
+        right: dešinėje
+      U4LXX Multiple Choice:
+        right: dešinėje
+      U5 assess_weight_v2:
+        Question: Klausimas
+        description here: aprašymas čia
+        title: pavadinimas
+      Warmup questions:
+        random: atsitiktinis
+      commute assess - loops 4 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        '50': '50'
+      courseC_multi_harvester_loops11_predict1:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_starWars_predict1:
+        I don't know: Nežinau
+      courseC_multi_starWars_predict1_2018:
+        I don't know: Nežinau
+      courseD_multi_bee_nestedLoops9_predict2:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseE_multi_farmer_predict1:
+        I don't know: Nežinau
+        0: "? Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        1: ": Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        2: "? The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+        3: ": The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+      courseE_multi_farmer_predict1_2018:
+        I don't know: Nežinau
+        0: "? Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        1: ": Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        2: "? The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+        3: ": The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+      csd-post-survey-2018-topic-ai:
+        'No': Ne
+        'Yes': Taip
+      csd-post-survey-2018-topic-cryptocurrency:
+        'No': Ne
+        'Yes': Taip
+      csd-post-survey-2018-topic-cybersecurity:
+        'No': Ne
+        'Yes': Taip
+      csd-post-survey-2018-topic-databases:
+        'No': Ne
+        'Yes': Taip
+      csd-post-survey-2018-topic-datascience:
+        'No': Ne
+        'Yes': Taip
+      csd-post-survey-2018-topic-gamedev:
+        'No': Ne
+        'Yes': Taip
+      csd-post-survey-2018-topic-hardware:
+        'No': Ne
+        'Yes': Taip
+      csd-post-survey-2018-topic-internet:
+        'No': Ne
+        'Yes': Taip
+      csd-post-survey-2018-topic-mobile:
+        'No': Ne
+        'Yes': Taip
+      csd-post-survey-2018-topic-parallel:
+        'No': Ne
+        'Yes': Taip
+      csd-post-survey-2018-topic-programming:
+        'No': Ne
+        'Yes': Taip
+      csd-post-survey-2018-topic-robotics:
+        'No': Ne
+        Robotics: Robotika
+        'Yes': Taip
+      csd-post-survey-2018-topic-web:
+        'No': Ne
+        'Yes': Taip
+      csp-post-survey-2017-q64:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': Ne
+        'Yes': Taip
+      csp-post-survey-2017-q64_2018:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': Ne
+        'Yes': Taip
+      csp-post-survey-2017-q65:
+        I don't know: Nežinau
+        'No': Ne
+        'Yes': Taip
+      csp-post-survey-2017-q65_2018:
+        I don't know: Nežinau
+        'No': Ne
+        'Yes': Taip
+      csp-post-survey-2018-topic-ai:
+        'No': Ne
+        'Yes': Taip
+      csp-post-survey-2018-topic-cryptocurrency:
+        'No': Ne
+        'Yes': Taip
+      csp-post-survey-2018-topic-cybersecurity:
+        'No': Ne
+        'Yes': Taip
+      csp-post-survey-2018-topic-databases:
+        'No': Ne
+        'Yes': Taip
+      csp-post-survey-2018-topic-datascience:
+        'No': Ne
+        'Yes': Taip
+      csp-post-survey-2018-topic-gamedev:
+        'No': Ne
+        'Yes': Taip
+      csp-post-survey-2018-topic-hardware:
+        'No': Ne
+        'Yes': Taip
+      csp-post-survey-2018-topic-internet:
+        'No': Ne
+        'Yes': Taip
+      csp-post-survey-2018-topic-mobile:
+        'No': Ne
+        'Yes': Taip
+      csp-post-survey-2018-topic-parallel:
+        'No': Ne
+        'Yes': Taip
+      csp-post-survey-2018-topic-programming:
+        'No': Ne
+        'Yes': Taip
+      csp-post-survey-2018-topic-robotics:
+        'No': Ne
+        Robotics: Robotika
+        'Yes': Taip
+      csp-post-survey-2018-topic-web:
+        'No': Ne
+        'Yes': Taip
+      csp-pre-survey-2017-q40:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Kita
+      csp-pre-survey-2017-q40_2018:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Kita
+      csp_ap_exam_signup:
+        'No': Ne
+        'Yes': Taip
+      csp_ap_previous_years:
+        'No': Ne
+        'Yes': Taip
+      csp_ap_taking_ap_class:
+        'No': Ne
+        'Yes': Taip
+      cspu5_assess1_fivemore:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_2018:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_exam_prep:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_flowchart:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_2018:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_exam_prep:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_increase:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_2018:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_exam_prep:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess2_addstrings:
+        result: rezultatas
+      cspu5_assess2_addstrings_2018:
+        result: rezultatas
+      cspu5_assess2_addstrings_exam_prep:
+        result: rezultatas
+      cspu5_assess2_combineString:
+        '10': '10'
+        '55': '55'
+        result: rezultatas
+      cspu5_assess2_combineString_2018:
+        '10': '10'
+        '55': '55'
+        result: rezultatas
+      cspu5_assess2_combineString_exam_prep:
+        '10': '10'
+        '55': '55'
+        result: rezultatas
+      cspu5_assess2_oldEnough:
+        '35': '35'
+        'false': klaida
+        'true': Taip
+      cspu5_assess2_oldEnough_2018:
+        '35': '35'
+        'false': klaida
+        'true': Taip
+      cspu5_assess2_oldEnough_exam_prep:
+        '35': '35'
+        'false': klaida
+        'true': Taip
+      cspu5_assess2_weight:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_2018:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_exam_prep:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess3_array1:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_2018:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_exam_prep:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array4:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_2018:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_exam_prep:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_listAppend:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_2018:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_exam_prep:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_loopValue1:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue2:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess4_dataReturns:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_2018:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_exam_prep:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_listOutput:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_2018:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_exam_prep:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      msm variables multi 1:
+        '15': '15'
+        x: x
+      msm variables multi 10:
+        '17': '17'
+        x: x
+      msm variables multi 11:
+        '17': '17'
+        x: x
+      msm variables multi 12:
+        '17': '17'
+        x: x
+      msm variables multi 13:
+        '117': '117'
+        '17': '17'
+        x: x
+      msm variables multi 2:
+        '8': '8'
+      msm variables multi 3:
+        '5': '5'
+        x: x
+      msm variables multi 4:
+        '15': '15'
+        '3': '3'
+        '8': '8'
+      msm variables multi 5:
+        '3': '3'
+        '5': '5'
+      msm variables multi 6:
+        '1': '1'
+        '5': '5'
+        hello: labas
+      msm variables multi 7:
+        '3': '3'
+        x: x
+      msm variables multi 8:
+        '3': '3'
+        x: x
+      msm variables multi 9:
+        '5': '5'
+        '6': '6'
+        x: x
+      post-assessment survey q34:
+        Easy: Lengvas
+        Hard: Sunkus
+      pre-assessment survey q24:
+        'No': Ne
+        'Yes': Taip
+      pre-assessment survey q26:
+        0: "? Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        1: ": Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        'No': Ne
+        'Yes': Taip
+      pre-assessment survey q27:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Kita
+      pre-assessment survey q28:
+        '10': '10'
+        '11': '11'
+        '12': '12'
+        '8': '8'
+        '9': '9'
+        Other: Kita
+      pre-assessment survey q29:
+        Female: Moteris
+        Male: Vyras
+        Other: Kita
+        Prefer not to answer: Nenoriu atsakyti
+      pre-assessment survey q30:
+        Asian: Azijietis
+        Black or African American: Juodasis arba Afroamerikietis
+        Other: Kita
+        Prefer not to answer: Nenoriu atsakyti
+        White: Baltasis
+      sarah_test_maggie:
+        Question: Klausimas
+        test: sąlyga
+      sciPD PreQ 1:
+        'No': Ne
+        'Yes': Taip
+      sciPD PreQ 2:
+        'No': Ne
+        'Yes': Taip
+      test anonymous student survey educational:
+        'No': Ne
+        'Yes': Taip
+      test me:
+        Question: Klausimas
+        description here: aprašymas čia
+        title: pavadinimas
+      unique level name here:
+        Question: Klausimas
+        description here: aprašymas čia
+        title: pavadinimas
+    text_match:
+      U2L07 Assessment4:
+        '43': '43'

@@ -1,0 +1,1258 @@
+de:
+  slides:
+    maze_intro:
+      1:
+        text: "Willkommen bei deiner ersten \"Hour of Code\"! Fangen wir gleich mit der ersten Übung an."
+      2:
+        text: "Um Programme zu schreiben, benutzen wir Blockly, eine grafische Programmiersprache, in der du Bausteine per Drag-und-drop positionierst."
+      3:
+        text: "Meist wird Code als Text geschrieben, aber Blockly ist eine visuelle Sprache. Jeder Baustein entspricht einer Zeile \"echtem\" Code."
+      4:
+        text: "Du lernst die Grundlagen der Informatik, mit Konzepten, die überall verwendet werden, von einer App-Erstellung bis hin zur Steuerung eines Mars Rovers."
+      5:
+        text: "Ein Programm ist eine Sammlung von Anweisungen, die dein Computer befolgt."
+      6:
+        text: "Das Ziel bei deinem ersten Programm ist es, Angry Bird durch ein Labyrinth zu führen, um einen grünen Schwein zu treffen."
+      7:
+        text: "Die linke Seite ist das Labyrinth, in dem dein Programm ausgeführt wird. Die Anweisungen für jede Aufgabe stehen unter dem Labyrinth."
+      8:
+        text: "Der mittlere Werkzeugkasten enthält die Befehlsbausteine für den Angry Bird. Verwende sie, um das Programm zu erstellen."
+      9:
+        text: "Rechts ist der Arbeitsbereich, wo die Bausteine aus dem Werkzeugkasten zum Programm zusammengesetzt werden. Um einen Baustein zu löschen, ziehe ihn in den Papierkorb in der Ecke."
+      10:
+        text: "Jeder Baustein ist eine Anweisung. Wenn du einen \"Vorwärts bewegen\"-Baustein auf deinen Arbeitsbereich ziehst und anschließend \"Programm starten\" drückst, dann bewegt sich der Vogel im Labyrinth einen Schritt nach vorne."
+      11:
+        text: "Um mehr als einen Schritt zu machen, kannst du viele Bausteine auf deinen Arbeitsplatz ziehen und zusammensetzen. Der Vogel wird die Anweisungen von oben nach unten ausführen."
+      12:
+        text: "Wenn Du ein Programm reparieren und es nochmals versuchen möchtest, dann drücke die Schaltfläche \"Zurücksetzen\"."
+      13:
+        text: "Holen wir die Schweine!"
+    artist_intro:
+      1:
+        text: "Hallo, ich bin JR! Jedes Rennteam braucht Informatiker, um zu gewinnen. Informatiker analysieren die Daten vom Auto, damit es noch schneller fährt."
+      2:
+        text: "Bei diesen Aufgaben bist du ein Künstler, der überall, wo er hinläuft, eine Linie zeichnet."
+      3:
+        text: "Auf diesem Baustein steht \"vorwärts bewegen um 100 Pixel\". Pixel sind kleine Punkte auf deinem Bildschirm."
+      4:
+        text: "Auf diesem Baustein steht \"nach rechts drehen um 90 Grad\". Damit dreht sich dein Künstler, genau wie beim \"Drehen\"-Baustein in den Labyrinth-Aufgaben."
+      5:
+        text: "Klicke auf den Pfeil in den Bausteinen, um zu verändern, wie weit die Künstlerfigur nach vorne läuft oder sich dreht. Spiele etwas mit diesen Bausteinen herum, um mit ihnen vertraut zu werden."
+    farmer_intro:
+      1:
+        text: "Hallo, ich bin Paola! In dieser Aufgabe bist du eine Bäuerin, die ihr Feld völlig flach bekommen muss, um mit dem Anpflanzen zu beginnen."
+      2:
+        text: "Du musst ihr helfen, alle Erdhaufen zu entfernen und alle Löcher zu füllen."
+      3:
+        text: "Die neuen Bausteine entfernen eine Schaufel Erde von einem Haufen und füllen eine Schaufel voll Erde in ein Loch."
+      4:
+        text: "Die Haufen und Löcher sind unterschiedlich groß. Deshalb musst du der Bäuerin sagen, wie viele Schaufeln sie nehmen muss."
+    flappy_intro:
+      1:
+        image: 'notes/flappy01.jpg'
+        text: "Hallo, ich bin Katie! Am Interessantesten an der Informatik ist, dass ein Computerprogramm interaktiv sein kann."
+      2:
+        image: 'notes/flappy02.jpg'
+        text: "Jedes Mal, wenn jemand auf einem Computer oder Smartphone klickt, den Bildschirm berührt oder tippt, wird ein Event erzeugt und Code wird ausgeführt, der entscheidet was bei diesem Event zu tun ist."
+      3:
+        image: 'notes/flappy03.jpg'
+        text: "Zum Beispiel könntest du einen \"Ereignis-Verarbeiter\" haben, der sagt: \"Wenn mit der Maus geklickt wird, spiele einen Ton\" "
+      4:
+        image: 'notes/flappy04.jpg'
+        text: "Kennst du das Spiel FlappyBird? Wir verwenden \"Ereignis-Verarbeiter\", um eine eigene Version von FlappyBird zu programmieren!"
+      5:
+        image: 'notes/flappy05.jpg'
+        text: "Um den Code zu schreiben, musst du per Drag-und-drop Bausteine verschieben, die Befehle für den Computer sind. Jeder der Bausteine repräsentiert in Wirklichkeit echten Code."
+      6:
+        image: 'notes/flappy06.jpg'
+        text: "Wenn du einen Blick auf den Arbeitsbereich wirfst, siehst du einige grüne Bausteine, die für dich eingefügt wurden - das sind \"Ereignis-Verarbeiter\" "
+      7:
+        image: 'notes/flappy07.jpg'
+        text: "Wenn du den Vogel beim Mausklick mit den Flügeln schlagen lassen willst, kannst du das durch Anhängen des \"flattern\"-Bausteine an den passenden \"Ereignis-Verarbeiter\" erreichen. Nun wird der Vogel jedes Mal seine Flügel bewegen, wenn mit der Maus geklickt wird."
+      8:
+        image: 'notes/flappy08.jpg'
+        text: "In jeder Aufgabe dieser Übung werden wir neue Arten von Events als grüne Bausteine im Arbeitsbereich einfügen und du kannst die passenden Bausteine für Events auswählen."
+      9:
+        image: 'notes/flappy09.jpg'
+        text: "Wenn du einen Dropdown-Pfeil wie diesen siehst, kannst du die Einstellungen ändern - zum Beispiel, was für ein Ton abgespielt werden soll, wenn der Vogel den Boden berührt."
+      10:
+        image: 'notes/flappy10.jpg'
+        text: "In der letzten Aufgabe erstellst du dein eigenes Spiel, das du deinen Freunden zeigen kannst. Viel Spaß!"
+    loop_times:
+      1:
+        text: "Hallo, ich bin Mark! Lass uns etwas über Schleifen lernen. Wenn Du Schleifen verwendest, kannst du dem Computer befehlen, dass er jede beliebige Anweisung wieder und wieder, tausendmal oder sogar milliardenmal, wiederholen soll."
+      2:
+        text: "In dieser Aufgabe möchten wir, dass sich der Vogel 5 Schritte nach vorne zum Schwein bewegt."
+      3:
+        text: "Wir können den neuen \"Wiederholen\"-Baustein verwenden, um uns zu helfen."
+      4:
+        text: "Anstatt 5 \"vorwärts gehen\"-Bausteine herauszutragen..."
+      5:
+        text: "Ziehen wir den \"Vorwärts bewegen\"-Baustein in einen \"Wiederholen\"-Baustein und geben eine Zahl im Baustein an, wie oft es wiederholt werden soll."
+      6:
+        text: "Und wichtig: Man kann mehr als einen Baustein in einen \"Wiederholen\"-Baustein ziehen."
+      7:
+        text: "Viel Spaß mit deinem neuen \"Wiederholen\"-Baustein!"
+    loop_until:
+      1:
+        text: "Hallo, ich bin Chris. Bevor ich zu Miami Heat gegangen bin, habe ich an der Georgia-Tech-Universität Informatik studiert. Probieren wir unseren neuen Baustein aus, den \" Wiederholen bis\"-Baustein."
+      2:
+        text: "Was tun wir, wenn wir nicht wissen, wie weit der Vogel laufen muss, um zum Schwein zu kommen?"
+      3:
+        text: "Wenn wir einen \"Vorwärts bewegen\"-Baustein in den \"Wiederholen bis\"-Baustein setzen, wird sich der Vogel nach vorne bewegen BIS er bei einem Schwein ankommt (oder gegen die Wand läuft)."
+      4:
+        text: 'Und das ist wichtig: wie zuvor auch, können wir in den "Wiederholen bis"-Baustein mehrere Bausteine setzen, die dann alle wiederholt werden.'
+    if:
+      1:
+        text: "Hallo, ich bin Bill! Heute lernen wir ein neues, wichtiges Konzept: \"Wenn\"-Anweisungen. So trifft ein Computer Entscheidungen."
+      2:
+        text: "Du selbst verwendest \"Wenn\"-Anweisungen täglich. Bevor du am Morgen nach draußen gehst, sagst du zu dir: WENN es draußen regnet, muss ich meine Jacke anziehen."
+      3:
+        text: "Wir können den Zombie anweisen, zu überprüfen, ob es einen Weg nach links gibt. WENN er einen Weg nach links findet, soll er sich in diese Richtung drehen."
+      4:
+        text: "Um ein Programm dafür zu schreiben, verwende zuerst den \"Wenn\"-Baustein und setze danach einen \"Nach links drehen\"-Baustein hinein."
+      5:
+        text: "Wenn wir jetzt einen \"Vorwärts bewegen\"-Baustein darüber setzen und alles in einen \"Wiederholen\"-Baustein einschließen, prüft der Zombie jedes Mal, wenn er sich bewegt, ob es links einen Weg gibt. Der Befehl \"Wiederholen\" ist sehr wichtig, damit bei jedem Schritt erneut geprüft wird."
+      6:
+        text: "\"Wenn\"-Anweisungen sind in der Informatik sehr wichtig. Eines meiner ersten Programme war \"Drei gewinnt\". Dort gab es eine \"Wenn\"-Anweisung, die sagte, WENN die andere Person beinahe gewinnt, dann blockiere das Feld, mit dem sie gewinnen kann."
+      7:
+        text: "Viel Spaß mit dem \"Wenn\"-Baustein!"
+    if_else:
+      1:
+        text: "Hallo, ich heiße Saloni. Ich verwende Informatik, um Probleme der Medizin zu lösen. Heute werden wir mehr über den \"Wenn-Ansonsten\"-Baustein lernen. Er sieht aus wie der \"Wenn\"-Baustein, hat aber einen Extrateil am Ende, auf dem \"ansonsten\" steht."
+      2:
+        text: "Wenn ich einen \"Vorwärts bewegen\"-Baustein hinter \"mache\" setze, und einen \"Nach links drehen\"-Baustein hinter \"ansonsten\" setze, wählt der Zombie zwischen zwei Optionen aus. WENN es einen Weg geradeaus gibt, bewegt sich der Zombie vorwärts, ANSONSTEN (wenn es keinen Weg geradeaus gibt), dreht sich der Zombie nach links."
+      3:
+        text: "Genau wie einen \"Wenn\"-Baustein, können wir einen \"Wenn-Ansonsten\"-Baustein in einen \"Wiederholen\"-Baustein setzen, so dass der Zombie sich weiter bewegt und der \"Wenn-Ansonsten\"-Baustein prüft, ob es einen Weg zum Drehen gibt."
+      4:
+        text: "Jetzt bring die Zombies dahin, wo sie hingehören!"
+    if_else_scrat:
+      1:
+        text: "Eine \"Wenn-Ansonsten\"-Anweisung ist eine Entscheidung zwischen zwei Möglichkeiten. Lass uns sehen, wie wir eine \"Wenn-Ansonsten\"-Anweisung bei unserem Freund Scrat verwenden können."
+      2:
+        text: "Dieser Baustein sieht fast genauso aus wie der \"Wenn\"-Baustein, aber unten ist ein Extrateil, auf dem \"ansonsten\" steht. Wenn ich einen \"Vorwärts bewegen\"-Baustein hinter \"mache\" setze, und einen \"Nach links drehen\"-Baustein hinter \"ansonsten\" setze, bewegt sich Scrat das Eichhörnchen nach vorne, wenn es einen Weg geradeaus gibt. Wenn es keinen Weg geradeaus gibt, dreht sich Scrat nach links."
+      3:
+        text: "Er trifft eine Entscheidung und wählt eine der beiden Aktionen aus. Genau wie \"Wenn\"-Bausteine können auch \"Wenn-Ansonsten\"-Bausteine in \"Wiederholen\"-Bausteine eingefügt werden."
+      4:
+        text: "Lass uns Scrat dabei helfen, die Eichel zu erreichen."
+    function:
+      1:
+        text: "Hi, bin ich Brina, Ingenieur bei Instagram. Eine Funktion ist eine Reihe bestimmter Codezeilen, die du immer wieder verwenden möchtest. Anstatt diese Zeilen immer wieder neu zu schreiben, kannst du einfach einen Baustein verwenden."
+      2:
+        text: "Wir werden lernen, wie man Funktionen definiert. Funktionsdefinitionen haben einen Stern in der Ecke. Der Name der Funktion steht in der obersten Zeile."
+      3:
+        text: "Die Bausteine in der Definition sagen, was die Funktion macht. Diese Funktionsdefinition heißt \"5 hinzufügen\" und ist aus einem \"Wiederholen\"-Baustein und einem \"hinzufügen\"-Baustein zusammengesetzt."
+      4:
+        text: "Die Definition ist auf dem Arbeitsplatz, aber die Bäuerin wird die Funktion nicht ausführen, bis wir unseren \"5 hinzufügen\"-Baustein aus der Funktionen-Kategorie hinzufügen."
+      5:
+        text: "Viel Spaß mit Funktionen! "
+    loop_while:
+      1:
+        text: "Hallo, ich bin Makinde! Ich zeige euch etwas über den \"Solange\"-Baustein. "
+      2:
+        text: "Der \"Solange\"-Baustein führt alles aus, was in ihm enthalten ist, SOLANGE die Anweisung darüber WAHR ist."
+      3:
+        text: "Wenn die Bäuerin zum Beispiel auf einem Haufen steht, wird sie immer wieder eine Schaufel Erde entfernen, SOLANGE unter ihr noch ein Haufen ist."
+    loop_for:
+      1:
+        text: "Hallo, ich bin Trina und arbeite für Pixar. Ich habe in vielen Filmen mitgearbeitet, darunter auch an Shrek."
+      2:
+        text: "Das ist unsere neue \"Zähler\"-Schleife. Sie wiederholt Befehle immer und immer wieder und du kannst die Befehle jedes mal leicht verändern."
+      3:
+        text: "In diesem Beispiel sagt die \"Zähler\"-Schleife \"Zähle mit Zähler von 50 bis 90 in 10-er-Schritte\" und in der Schleife gibt es einen \"Zeichne ein Quadrat\"-Baustein. Ziehe den \"Zähler\"-Baustein aus dem \"Variablen\"-Abschnitt auf die Stelle, wo der \"Länge\"-Baustein ist."
+      4:
+        text: "Dies bedeutet, dass unser Künstler ein Quadrat zeichnen wird, das eine Seitenlänge von 50 Pixeln hat, dann wird er 10 hinzufügen und ein Quadrat mit einer Seitenlänge von 60 Pixeln zeichnen. Er wird immer 10 hinzufügen und Quadrate malen, bis er 90 erreicht hat. Also gibt es Quadrate mit Seitenlängen von 50, 60, 70, 80 und 90."
+    parameters:
+      1:
+        text: "Hi, ich bin Janete und ich bin Ingenieurin bei Zynga."
+      2:
+        text: "Was machen wir, wenn wir ein paar Dreiecke mit verschiedenen Längen malen wollen?"
+      3:
+        text: "Wir könnten den ganzen Code per Hand schreiben, oder wir benutzen eine Funktion mit Parametern."
+      4:
+        text: "Um dies zu tun, klicke auf den blauen Stern der \"Zeichne ein Dreieck\"-Funktionsdefinition. Ziehe dann \"Name eingeben\" in den \"Eingeben\"-Baustein."
+      5:
+        text: "Wenn du nun \"Länge\" an die Stelle schreibst, wo \"x\" steht, und dann \"Enter\" drückst, erstellst du eine Längeneingabe für deine Funktion."
+      6:
+        text: "Klicke dann auf den Stern. Jetzt klickst du auf die \"Variablen\"-Kategorie und ziehst den \"Länge\"-Baustein in den \"Vorwärts bewegen\"-Baustein deiner Funktionsdefinition. Ziehe den alten Nummernbaustein weg."
+      7:
+        text: "Um deine Funktion mit Parametern zu benutzen, klicke auf die \"Funktionen\"-Kategorie und ziehe deine \"Zeichne ein Dreieck mit Länge\"-Funktion heraus."
+      8:
+        text: "Jetzt kannst du den Mathe-Baustein verändern, um Dreiecke in verschiedenen Größen zu zeichnen."
+    hoc_wrapup:
+      1:
+        text: "Herzlichen Glückwunsch! In der letzten Aufgabe hast du ein Programm geschrieben, das JEDER Roboter dazu verwenden kann, um seinen Weg durch nicht-verzweigte Labyrinthe oder Tunnel aller Längen zu finden. Ganz egal, ob es ein Zombie, ein Vogel, ein Mars-Rover, oder sogar ein selbstfahrendes Auto ist."
+      2:
+        text: "Die grundlegenden Konzepte, die du verwendet hast, sind dieselben, die in allen Programmen oder Apps verwendet werden.  Wir haben erfahren, wie \"Wiederholen\"-Schleifen, \"Wiederhole bis\"-Schleifen, \"Wenn\"-Anweisungen und \"Wenn-ansonsten\"-Anweisungen funktionieren."
+      3:
+        text: "Wenn dir deine erste \"Hour of Code\" gefallen hat, besuche Code.org, um noch mehr über Informatik zu lernen. Sobald Du unseren 20 Stunden-Kurs abgeschlossen hast, hast Du die Grundlagen des Programmierens gemeistert und kannst lernen, wie man Apps, Roboter-Anweisungen, Spiele oder andere Dinge programmiert."
+      4:
+        text: "Technologie verändert alles, was wir tun, und es ist egal, ob du jung oder alt bist: Programmieren macht Spaß, es ist kreativ, und jeder kann es lernen!"
+    20_wrapup:
+      1:
+        text: "Hinweise anzeigen kommt bald!"
+    frozen_intro:
+      1:
+        text: "Hallo, ich heiße Lyndsey. Ich bin Model, Schauspielerin und programmiere meine eigenen Apps. Verwende Code, um Anna und Elsa bei ihrer Entdeckung der Magie und Schönheit von Eis zu begleiten."
+      2:
+        text: "Du wirst Schneeflocken und Muster erschaffen, während du Schlittschuh fährst und ein Winterwunderland erstellst, das du dann mit deinen Freunden teilen kannst."
+      3:
+        text: "Während der nächsten Stunde wirst du die Grundlagen des Programmierens lernen. Traditionell wird in Textform programmiert, aber heute benutzen wir Blockly: ein System, bei dem man per Drag & Drop grafische Bausteine verschiebt und so Programme schreibt. Selbst Studenten an der Universität lernen so die Grundlagen. Im Hintergrund wird dabei nach wie vor Code erstellt."
+      4:
+        text: "Ein Programm ist eine Reihe von Anweisungen, die einem Computer sagen, was er tun soll. Wir werden einen Code oder ein Programm schreiben, mit dem Elsa eine einfache Linie zeichnet. Später werden wir kompliziertere Muster machen."
+      5:
+        text: "Dein Bildschirm ist in drei Bereiche aufgeteilt. Links ist die Eisfläche, auf der dein Programm ausgeführt wird. Die Anweisungen für jeden Level stehen direkt unter der Eisfläche."
+      6:
+        text: "Dieser mittlere Bereich ist die Werkzeugkiste, und jeder dieser Bausteine ist eine Aktion, die Elsa und Anna ausführen können."
+      7:
+        text: "Der weiße Bereich rechts ist der Arbeitsbereich, in dem wir unser Programm aufbauen. Mit dem \"Vorwärts bewegen\"-Baustein bewegst du dich auf der Eisfläche."
+      8:
+        text: "Auf diesem Baustein steht \"vorwärts bewegen um 100 Pixel\". Was passiert, wenn wir auf \"ausführen\" klicken? Elsa bewegt sich auf dem Bildschirm um eine bestimmte Strecke, nämlich 100 Pixel, nach vorne. Pixel sind sehr kleine Punkte auf deinem Bildschirm."
+      9:
+        text: "Der andere Baustein in dieser Aufgabe sagt \"nach rechts drehen um 90 Grad\". Und wenn wir diesen \"Nach rechts drehen\"-Baustein verwenden, dreht sich Elsa in einem bestimmten Winkel. Spiele mit dem Baustein und lasse Elsa sich drehen. Der Winkel wird gemessen ab dem Weg vor Elsa. Das ist eine 90-Grad-Drehung. Das ist eine 120-Grad-Drehung."
+      10:
+        text: "Denk dran, du kannst die Anzahl der Pixel und die Weite der Drehung ändern, indem du auf die Pfeile direkt daneben drückst."
+    frozen_loops:
+      1:
+        text: "Hallo, ich bin Paola! Computer sind sehr gut darin, Aktionen zu wiederholen. Du kannst bis 10, 20 oder 100 zählen. Aber ein Computer kann bis zu einer Milliarde oder einer Billion zählen. Ihm wird nicht langweilig und es dauert nur einige Sekunden. Nicht nur beim Zählen, sondern auch beim Zeichnen oder anderen Aufgaben können Computer hunderte oder sogar Millionen von Wiederholungen machen."
+      2:
+        text: "Beim Programmieren nennen wir dies eine Schleife. Eine Schleife wiederholt deinen Code wieder und wieder. Bei der nächsten Aufgabe musst du mit Anna ein Quadrat mit dem \"Wiederholen\"-Baustein zeichnen."
+      3:
+        text: "Alle Codebausteine, die du in den \"Wiederholen\"-Baustein setzt, werden der Reihe nach wiederholt, so oft du willst."
+      4:
+        text: "Um ein Quadrat zu zeichnen, kannst du die Bausteine \"vorwärts bewegen\" und \"nach rechts drehen\" 4 Mal verwenden. Aber es ist einfacher, dem Computer nur einmal zu befehlen, sich vorwärts zu bewegen und nach rechts zu drehen, und ihn dann diese beiden Aktionen 4 Mal wiederholen zu lassen. Dafür musst du die Bausteine \"vorwärts bewegen\" und \"nach rechts drehen\" in einen \"Wiederholen\"-Baustein setzen."
+      5:
+        text: "Denk dran, du kannst die Zahl in dem \"Wiederholen\"-Baustein verändern, und er wird das, was sich in dem Baustein befindet, so oft wie angegeben wiederholen."
+    frozen_functions:
+      1:
+        text: "Hallo, ich bin Chris Bosh. Ich bin ein professioneller Basketball-Spieler und ich habe an der Uni programmiert."
+      2:
+        text: "Eines der wichtigsten Konzepte der Informatik ist die Definition neuer Befehle. Die meisten Computersprachen haben nur 100 Wörter oder Befehle. Die Kunst besteht darin, aus diesen Bausteinen neue Wörter zusammenzusetzen."
+      3:
+        text: "Hast du deinem Computer erst einmal beigebracht, eine Aktion auszuführen, indem du eine Befehlssequenz verwendet hast, kannst du dieser Aktion einen eigenen Namen geben, sodass es leicht ist, sie später zu wiederholen. Definierst du einen eigenen Befehl und gibst ihm einen Namen, nennt man das eine Funktion."
+      4:
+        text: "Hallo, ich bin Jess! Beim Programmieren mit Bausteinen nutzt man Funktionen, wenn es eine Reihe von Handlungen gibt, die man öfter verwenden möchte. Ein Beispiel ist der Code, den du geschrieben hast, um ein Quadrat zu zeichnen."
+      5:
+        text: "Du kannst diese Funktion \"Zeichne ein Quadrat\" nennen. "
+      6:
+        text: "Nun hast du einen neuen Baustein, den du viele Male benutzen kannst, um mehrere Quadrate zu zeichnen."
+      7:
+        text: "Viele einfache Formen können verwendet werden, um komplexe Muster zu zeichnen. In der nächsten Aufgabe ist der Code, den du geschrieben hast, um einen Kreis zu zeichnen, als neue Funktion verfügbar, mit der du Kreise verschiedener Größen zeichnen kannst. Kannst du damit Elsa helfen, hübsche Muster in den Schnee zu zeichnen?"
+    playlab_intro:
+      1:
+        text: "Wir werden Spiele mit dem Spielelabor erstellen. Gute Spiele haben eine Geschichte, und in jeder Geschichte gibt es verschiedene Figuren. Wir bringen unseren Figuren bei zu sprechen und zu interagieren, egal ob es Hexen, Außerirdische oder Tiere sind. Am Ende dieser Anleitung kannst du selbst ein Spiel aus einen Entwurf bauen und mit deinen Freunden teilen."
+      2:
+        text: "Dein Bildschirm ist in drei Bereiche aufgeteilt. Links ist der Spielbereich, in dem dein Programm ausgeführt wird. Die Anweisungen für jeden Level stehen darunter."
+      3:
+        text: "Dieses mittlere Feld ist die Werkzeugkiste und jeder Baustein ist eine Zeile Code. Der weiße Bereich rechts ist der Arbeitsbereich, in dem wir unser Programm aufbauen."
+      4:
+        text: "Am Anfang musst du deine Bausteine an den orangefarbenen \"Beim Ausführen\"-Baustein anhängen. Du kannst mehrere Bausteine miteinander verbinden, indem du sie ziehst, bis die gelbe Linie zu sehen ist, und sie werden sich von selbst zusammenfügen."
+      5:
+        text: "In dieser ersten Aufgabe ist unsere Figur ein Pinguin. Wir lassen ihn \"Hallo!\" sagen, indem wir den \"Sage\"-Baustein herausziehen, ihn mit dem \"Beim Ausführen\"-Baustein verknüpfen, und \"Hallo\" tippen. Wir können den Pinguin auch mit den Bausteinen \"Nach links bewegen\" und \"Nach rechts bewegen\" dazu bringen, herumzulaufen. Hast du erst einmal alle deine Bausteine am richtigen Platz, drück auf \"ausführen\", um zu sehen, was du programmiert hast."
+      6:
+        text: "Fang einfach an. Am Ende kannst du dein eigenes Spiel erstellen, mit allen möglichen Arten von Spielern, die miteinander interagieren, glücklich oder traurig sind, Punkte erzielen oder einander sogar verschwinden lassen. Du kannst selbst entscheiden, wie dein Spiel aussehen soll."
+    playlab_events:
+      1:
+        text: "Jetzt lernen wir ein Element kennen, das alle Spiele-Programmierer jeden Tag benutzen. Es heißt \"Ereignisse\". Ein Ereignis sagt deinem Programm darauf zu achten, ob etwas passiert. Wenn das Ereignis passiert, führt das Programm eine Aktion aus."
+      2:
+        text: "Einige Beispiele für Ereignisse sind etwa, auf Mausklicks, Pfeiltasten oder ein Antippen den Bildschirms zu achten."
+      3:
+        text: "Hier bringen wir den Space Bot dazu, die Erdlinge zu grüßen, wenn ein Spieler auf ihn klickt. Wir verwenden den Baustein \"Wenn angeklickt wird\" und hängen den \"Sage\"-Baustein daran. Wenn der Spieler auf den Space Bot klickt, werden alle Anweisungen ausgeführt, die an diesen \"Wenn angeklickt wird\"-Baustein angehängt sind. Was sagt Dein Außerirdischer?"
+      4:
+        text: "Es gibt auch \"Wenn Pfeil\"-Bausteine. Wenn du die \"Bewegen\"-Bausteine daran hängst, kannst du deine Figuren nach oben, unten, links oder rechts bewegen. So wird dein Spiel nach und nach immer interaktiver."
+    playlab_repeat_forever:
+      1:
+        text: "Das ist der \"Ewig wiederholen\"-Baustein. Alles innerhalb dieses Bausteins wird im Spiel immer wieder passieren."
+      2:
+        text: "Willst du eine Figur dazu bringen, etwas immer wieder zu machen, ohne dass der Spieler etwas tun muss, setzen wir die Bausteine in den \"Ewig wiederholen\"-Baustein."
+      3:
+        text: "In der nächsten Aufgabe müssen wir dem Zauberer helfen, die Grenzen des Königreichs zu bewachen und immer hin und her zu laufen. Wenn du lernst, wie der „Wiederholen“-Befehl funktioniert, kannst du später viel Zeit sparen, wenn du dein eigenes Spiel programmierst."
+    C1_artist_intro:
+      1:
+        text: "Das sind deine \"Zeichnen\"-Bausteine. Verwende den richtigen Baustein, um den Künstler dorthin zu bewegen, wo er die grauen Linien ausfüllen soll."
+      2:
+        text: "Dies sind die \"Springen\"-Bausteine. Wenn du diese Bausteine verwendest, bewegt sich der Künstler, zeichnet aber nicht. Verwende sie, um zur nächsten grauen Linie zu gelangen."
+    C1_bee_level_intro:
+      1:
+        text: "Bienen sind einfach toll. In diesen Aufgaben musst du der Biene helfen, den Nektar aus den Blumen zu sammeln und zur Honigwabe zu fliegen, um dort Honig zu machen. Du musst für diese Aufgabe die Bausteine \"nimm Nektar\" und \"Honig machen\" verwenden."
+      2:
+        text: "Jede Blume enthält eine unterschiedliche Menge an Nektar: 1, 2, 3 Portionen oder mehr. Wir wissen, wie viel Nektar in den roten Blumen ist, denn in der Ecke steht eine kleine Zahl. Pass auf, dass du den ganzen Nektar aus der Blume holst, bevor du weiterfliegst. In jede Honigwabe passt nur eine bestimmte Menge Honig: 1, 2, 3 Portionen oder mehr. Pass auf, dass du die Honigwabe ganz mit Honig füllst."
+      3:
+        text: "Wenn du den gesamten Nektar eingesammelt und alles zu Honig verarbeitet hast, erreichst du den nächsten Level. Ansonsten musst du diese Aufgabe noch einmal versuchen. Probiere etwas herum und sein ein bienenfleißiger Programmierer!"
+    C1_bee_loops:
+      1:
+        text: "Eine Schleife ist die Wiederholung einer Aktion. Wenn ich einen Bienenkasten überprüfe, nehme ich einen Rahmen nach dem anderen heraus und schaue ihn an. Das bedeutet, dass ich dieselbe Aktion mehrmals wiederhole."
+      2:
+        text: "In dieser Aufgabe soll die Biene drei Portionen Nektar aus der Blume holen. Anstatt drei \"Nimm Nektar\"-Bausteine zu verwenden, kannst du den \"Wiederholen\"-Baustein verwenden, um 3-mal Nektar zu sammeln. Klicke auf \"ausführen\" und schau nach, ob du alles richtig gemacht hast. Super!"
+    C1_bigevent_unplugged:
+      1:
+        text: "Diese Lektion heißt \"Das große Ereignis\". Es geht darum, Programme zu kontrollieren und laufende Programme über Ereignisse wie einen Tastendruck oder einen Mausklick zu ändern."
+      2:
+        text: "In dieser Übung wirst du mit einer Papier-Fernbedienung gesteuert. Es ist wie ein Video-Spiel in echt."
+      3:
+        text: "Ein Ereignis ist eine Aktion, die eine Handlung auslöst. So wie wenn du die Maustaste drückst, und eine Webseite sich öffnet. Das ist ein Ereignis. Wenn du deinen Bildschirm auf dem Tablet berührst, um den Fensterinhalt zu verschieben, ist das auch ein Ereignis. Ereignisse ermöglichen den Anwendern, dein Programm zu steuern, wenn sie möchten."
+      4:
+        text: "Auf manche Ereignisse reagieren wir alle. Wenn wir hungrig sind, gehen wir zum Kühlschrank. Wenn wir hören, dass der Briefträger die Post in den Briefkasten legt, gehen wir unsere Post holen. Das sind alles Ereignisse, genauso wie das Klicken auf eine Schaltfläche oder die Bewegung eines Joysticks. Ereignisse sind etwas, das passiert, und uns dazu bewegt, etwas zu tun."
+      5:
+        text: "In Videospielen gibt es ein Ereignis namens \"Update\", das 30- oder 60-mal pro Sekunde geschieht. Für Spiele-Programmierer ist dieses Ereignis fast noch wichtiger als Schaltflächen oder Joystick."
+      6:
+        text: "Das wichtigste Ereignis, auf das wir warten, ist der \"Update\". Und dann überprüfen wir den Joystick. Wir fragen: \"Hat jemand gerade den Joystick bewegt? Ja oder nein?\" Ohne Ereignisse kann der Spieler sich nicht bewegen, nicht springen oder kontrollieren, was im Spiel passiert. Das Spiel würde nicht funktionieren."
+    C1_building_foundation:
+      1:
+        text: "Wenn du eine Sandburg baust, weißt du, dass sie früher oder später wieder kaputtgeht. Aber mit der Zeit lernst du, immer bessere und größere Sandburgen zu bauen. Du musst nur dran bleiben. Gib nicht auf, es macht wirklich sehr viel Spaß!"
+      2:
+        text: "Diese Lektion heißt „ein Fundament aufbauen“. Dabei arbeiten wir an einer Aufgabe, die wirklich schwierig ist. Du musst eine Struktur bauen, die mindestens so hoch wie eine dieser Tassen und stark genug ist, um das Gewicht eines Buchs zu halten."
+      3:
+        text: "Oft klappt ein solches Vorhaben nicht auf Anhieb. Manchmal wirst du vielleicht frustriert und möchtest aufgeben. Solche Momente können ziemlich oft vorkommen. Aber wenn wir nicht aufgeben und es immer und immer wieder versuchen, werden wir es früher oder später schaffen."
+      4:
+        text: "Beharrlichkeit bedeutet, dass du es immer wieder versuchst, auch wenn du eigentlich aufgeben möchtest. Wenn du etwas Neues und Anders schaffen willst, wirst du viele Versuche bis zum Erfolg brauchen."
+      5:
+        text: "Der Trick bei der Beharrlichkeit ist, sich dafür zu entscheiden, weiterzumachen und aus deinen Fehlern zu lernen, anstatt frustriert aufzugeben. Frustration bedeutet eigentlich nur, dass du bis zum Ziel noch ein Stück gehen musst. Also gib nicht auf, bevor du am Ziel bist. Mach einfach weiter!"
+    C1_getting_loopy:
+      1:
+        text: "Hallo, ich bin Miral Kotb und der Schöpfer von Iluminate. Bei meiner Arbeit gibt es ein Element, das sowohl beim Tanz als auch bei der Programmierung der Leuchtanzüge verwendet wird. Und zwar die Schleife. Schleifen wiederholen eine Aktion immer wieder."
+      2:
+        text: "Wenn ich mehrfach dasselbe tue - so wie ich mich bewege, um den Hula-Hoop-Reifen in Bewegung zu halten - führe ich eine Schleife aus. Dies ist eine Schleife. Dies ist eine Schleife. Und dies ist auch eine Schleife."
+      3:
+        text: "Heute haben wir eine Tanzparty. Wir werden Schleifen in einem neuen Tanz verwenden. Der Iterationstanz. Wir werden bei einem Tanz etwas über Schleifen lernen. Du wirst einige einfache Schritte lernen und diese während des Tanzes mehrfach wiederholen."
+      4:
+        text: "Hier sind die Schritte, die du lernen musst. Klatsch in die Hände. Leg deine Hände hinter deinem Kopf. Leg deine Hände auf die Hüften. Hebe deine linke Hand. Hebe deine rechte Hand. Klingt einfach, oder? Du wirst herausfinden, dass du die Anweisungen abkürzen kannst, wenn du einige Tanzschritte in Schleifen einfügst."
+      5:
+        text: "Bei unseren Tänzen verwenden wir ebenfalls Schleifen. Die Tänzer tragen Computer, die über ein Netzwerk miteinander verbunden sind. Ich kann die Lichter nun immer wieder über die Anzüge derselben Tänzer laufen lassen. In der Schleife gibt es dann eine Iteration, bei der die Lichter bei diesen sechs Tänzern wiederholt werden und dann innerhalb der Schleife die Geschwindigkeit der Lichter vergrößert wird. Und das alles läuft über Schleifen. Schleifen sind in der Informatik sehr wichtig, da sie die Arbeit abkürzen und einfacher machen."
+    C1_happy_maps_unplugged:
+      1:
+        text: "Diese Lektion heißt \"Landkartenspiel\". Heute werden wir unserem pelzigen kleinen Freund Flurb helfen, zur Frucht zu gelangen."
+      2:
+        text: "Hilf deinem Flurb, zu deiner Frucht zu gelangen. Dazu musst du herausfinden, wo der Flurb hingehen muss, und ihm den Weg mit den Pfeilen zeigen. In welche Richtungen muss der Flurb gehen, um zum Apfel zu gelangen? Wie bewegt sich der Flurb nach oben?"
+      3:
+        text: "Damit er dorthin gelangt, kreise die Richtung ein, in die er gehen muss!"
+      4:
+        text: "Erstelle deine Algorithmen, indem du die passenden Pfeile neben die Karten klebst. Die zweite Aufgabe ist ähnlich, aber hier muss der Flurb nach unten gehen."
+      5:
+        text: "Das ist wie Programmieren auf Papier. Es ist ganz einfach!"
+    C1_maze_debugging:
+      1:
+        text: "Debuggen bedeutet, Probleme zu suchen und zu reparieren. Es gibt viele Methoden, Probleme zu debuggen. Eine der einfachsten Methoden ist, Schritt für Schritt vorzugehen, bis du herausfindest, wo der Fehler liegt. Hier versuche ich, einen Handstandüberschlag rückwärts auf dem Schwebebalken zu machen, aber ich falle immer herunter."
+      2:
+        text: "Ich bin die Bewegung Schritt für Schritt durchgegangen und habe herausgefunden, wo mein Fehler liegt. Ich habe meine Hände auf dem Schwebebalken nicht richtig positioniert. Also habe ich es erneut mit einer anderen Handposition versucht, und jetzt klappt es. So habe ich das Debugging für meinen Handstandüberschlag abgeschlossen."
+      3:
+        text: "Um etwas über Debugging zu lernen, beginnen wir mit einigen Bausteinen, die bereits auf der Arbeitsfläche legen. Du wirst merken, dass diese Bausteine dich nicht zum Ziel bringen. Wir müssen ein Debugging durchführen und das Problem beheben. Was ist schief gelaufen? Du wirst bemerken, dass du einen Baustein weiter nach Westen gehen musst."
+      4:
+        text: "Fügen wir einen weiteren \"Nach-Westen\"-Baustein hinzu und klicken auf \"ausführen\", um zu sehen, ob es jetzt funktioniert. Super, du hast es geschafft!"
+    C1_maze_intro_sequencing:
+      1:
+        text: "Bei dieser Aufgabe muss der Vogel das Schwein erreichen. Schaue dir die Aufgabe an und finde heraus, in welche Richtung er gehen muss."
+      2:
+        text: "Du musst die Bausteine aus der Werkzeugkiste auf die Arbeitsfläche ziehen. Die Bausteine müssen direkt unter dem \"Beim Ausführen\"-Baustein eingefügt werden. Wenn du denkst, dass du die richtige Lösung gefunden hast, klicke auf \"ausführen\" und schaue dir an, wie der Vogel zum Schwein läuft."
+    C1_maze_loops:
+      1:
+        text: "Computer sind wirklich gut darin, Befehle zu wiederholen. Die meisten Menschen langweilen sich, wenn sie immer und immer wieder dieselben Dinge tun müssen. Aber ein Computer kann Millionen oder Milliarden Mal dasselbe tun. Er langweilt sich nicht und erledigt seine Aufgabe wirklich gut."
+      2:
+        text: "Wenn ich zum Beispiel allen Menschen auf Facebook eine E-Mail zum Geburtstag schreiben wollte, würde es mehr als ein Jahrhundert dauern, alle diese E-Mails zu schreiben und zu verschicken. Aber mit wenigen Codezeilen kann ich ein System entwickeln, das jedem auf Facebook eine E-Mail zum Geburtstag schickt."
+      3:
+        text: "Um in dieser Aufgabe den Vogel zum Schwein zu bringen, ist es besser, den \"Wiederholen\"-Baustein zu verwenden, anstatt drei \"Nach-Norden-Bausteine\" zu nehmen. Ziehe den \"Wiederholen\"-Baustein auf die Arbeitsfläche und gibt dort die Zahl 3 ein. Ziehe dann den \"Nach-Norden\"-Baustein in den \"Wiederholen\"-Baustein und klicke auf \"ausführen\", um zu sehen, ob alles stimmt. Glückwunsch. Du hast es geschafft!"
+    C1_moveitmoveit_unplugged:
+      1:
+        text: "Diese Lektion heißt \"Achtung, fertig, LOS!\". Wir werden zusammen ein Programm schreiben, um unsere Freunde vom Start mit der Kompassrose bis zum Ziel mit dem Smiley zu bringen."
+      2:
+        text: "Allerdings liegt der Smiley mit dem Gesicht nach unten, und nur eine Person weiß, wie man dorthin kommt. Lass uns anfangen mit dem Programmieren."
+      3:
+        text: "Ein Programm ist ein Algorithmus, der so codiert ist, dass er von einer Maschine ausgeführt werden kann. Die meisten von uns glauben, dass Programme nur für Computer geschrieben werden. Programme sind dafür tatsächlich sehr nützlich, funktionieren aber auch anderswo. Du kannst dein eigenes Spiel machen oder einen Roboter programmieren, der Dinge für dich erledigt."
+    C1_going_places_safely:
+      1:
+        text: "Ich heiße Jeremiah. Hallo! Ich bin sieben Jahre alt. Ich spiele gerne mit dem Computer von meiner Mama, aber ich frage vorher, ob ich darf. \"Mama, darf ich an den Computer? Alles klar, Schatz!\""
+      2:
+        text: "Ich mag den Computer von meiner Mama, weil ich da ins Internet kann. Das Internet ist wie dein Stadtviertel. Man kann dort spannende Orte besuchen, mit Familie und Freunden sprechen und viele neue Dinge lernen."
+      3:
+        text: "Gestern habe ich einen Zoo in der Nähe von meinem Zuhause besucht. Ich habe ein Baby-Zebra gesehen. Ich habe ein Bild davon genommen und die Farbe der Streifen geändert, einen Hut hinzugefügt und das Bild meiner Sammlung seltsamer Tiere hinzugefügt. Toll! Danach bin ich sehr weit gereist. Nach Kenia. Das ist ein Land in Afrika. Dort leben viele Zebras."
+      4:
+        text: "Manchmal spreche ich im Internet mit Menschen, die ich kenne, zum Beispiel mit meiner Oma, die in einer anderen Stadt wohnt. Hallo Oma! Sie backt gerade Kekse für meinen Geburtstag. \"Schade, dass man im Internet nichts riechen kann!\" Ich kann im Internet mit verschiedenen Leuten sprechen, zum Beispiel mit meinem Cousin. Aber ich spreche nur mit Leuten, die ich kenne."
+      5:
+        text: "Was ich am Internet am meisten mag, sind die tollen Spiele. Gewonnen! Ich zeichne auch gerne neue Bilder, die ich mit meinen Freunden teile. Super! Manchmal besuche ich Webseiten, auf denen ich neue Dinge lerne. Aber ich gehe nur auf Webseiten, die für mich geeignet sind. Wow, Dinosaurier!"
+      6:
+        text: "Das Internet macht echt viel Spaß! Aber genauso, wie du beim Überqueren der Straße in deinem Stadtviertel vorsichtig sein musst, musst du auch online aufpassen. Hier sind drei wichtige Regeln. Regel 1: Frag immer erst deine Eltern. Regel 2: Sprich nur mit Leuten, die du kennst. Regel 3: Halte dich nur an Orten auf, die für Kinder okay sind."
+      7:
+        text: "Das hat Spaß gemacht! Essenszeit. Ich melde mich jetzt ab. Ich freue mich schon auf mein nächstes Internet-Abenteuer."
+    C1_pair_programming:
+      1:
+        text: "Heute lernen wir etwas über Paarprogrammierung. Bei der Paarprogrammierung arbeitet ihr als Team zusammen. Warum sollten zwei Leute einen Computer teilen? Weil ihr zu zweit doppelt so schlau seid. Bei der Paarprogrammierung sitzt du zusammen mit deinem Partner an einem Computer und ihr arbeitet beide am selben Projekt."
+      2:
+        text: "Bei der Paarprogrammierung gibt es einen Fahrer und einen Copiloten, wie bei einer Autorallye. Der Fahrer sitzt am Computer und verwendet Keyboard, Maus oder Touchscreen. Er kontrolliert den Computer. Die andere Person ist der Copilot. Der Copilot hilft dem Fahrer, indem er die Fragen des Fahrers beantwortet und auf mögliche Probleme oder Fehler hinweist."
+      3:
+        text: "Kommunikation ist der Schlüssel zur erfolgreichen Paarprogrammierung. Aber Achtung! Beleidigungen sind nicht erlaubt. Und der Copilot sollte nicht rechthaberisch, sondern hilfsbereit sein. Du solltest immer mit deinem Partner im Gespräch bleiben. Der Fahrer kann erklären, was er gerade tut. Und der Copilot kann vorschlagen, was als nächstes gemacht werden soll."
+      4:
+        text: "Der Copilot sollte den Überblick behalten und der Fahrer sollte sich auf die Details konzentrieren. Beide Rollen sind wichtig. Bei der Paarprogrammierung geht es vor allem um Teamarbeit."
+    C1_planting_seed:
+      1:
+        text: "Diese Lektion heißt \"Einen Samen pflanzen\". Hier geht es um Algorithmen. Algorithmen sind spezifische Anweisungen, die angeben, in welcher Reihenfolge etwas getan werden soll. Auch alltägliche Dinge wie Frühstücken und Zähneputzen sind Algorithmen, die aus kleineren Schritten zusammengesetzt sind."
+      2:
+        text: "Computer können sehr schlau sein, aber dazu musst du ihnen Schritt für Schritt erklären, was sie tun sollen. Das Tolle an Algorithmen ist, dass du etwas machen kannst, was du vorher nicht konntest, wenn du den Anweisungen Schritt für Schritt folgst. Wie ein Kochrezept."
+      3:
+        text: "Heute pflanzen wir mit einem Algorithmus Samen ein. Erstelle deinen eigenen Algorithmus, indem du die Bilder ausschneidest. Sortiere die Bilder, damit die Schritte in der passenden Reihenfolge sind."
+      4:
+        text: "Jetzt kannst du ausprobieren, ob dein Algorithmus funktioniert. Folge den Schritten in der von dir angegebenen Reihenfolge. Stimmt die Reihenfolge? Konntest du den Samen pflanzen, indem du dem Algorithmus gefolgt bist? Das ist wie Programmieren mit Bildern!"
+      5:
+        text: "Wenn wir Schokolade machen möchten, ist das ein Prozess mit vielen großen Schritten, die jeweils aus kleineren Schritten bestehen. Es gibt verschiedene Rezepte oder Algorithmen, je nachdem, welchen Geschmack wir möchten. Jeder Schritt ist wichtig, auch die ganz kleinen Schritte. Wenn nur ein Schritt fehlt, können die anderen Schritte nicht durchgeführt werden. Es ist wichtig, Algorithmen zu erstellen, die von anderen verstanden werden. Deshalb muss jeder Schritt aufgeschrieben werden, damit das Ergebnis immer dasselbe ist, egal, wer die Schritte durchführt."
+    C1_playlab_storytelling:
+      1:
+        text: "Jetzt kannst du kreativ werden und deine Programmierkenntnisse dazu nutzen, eine Geschichte zu erzählen. Deine Geschichte enthält Figuren, die du zum Sprechen bringst und miteinander interagieren lässt. Denke darüber nach, welche Geschichte du erzählen möchtest."
+      2:
+        text: "Die Katze hatte immer Angst vor dem Hund. Was passiert, wenn die Katze merkt, dass der Hund nur spielen möchte? Der \"Beim Ausführen\"-Baustein ist immer der Startpunkt. Der \"Bewegen\"-Baustein bewegt deine Figur und der \"Sagen\"-Baustein lässt deine Figur sagen, was du im Baustein eintippst."
+      3:
+        text: "Dies ist der Baustein \"wenn die Figuren sich berühren\", den du an die anderen Bausteine anhängen kannst."
+      4:
+        text: "Ich habe es so programmiert, dass der Hund zur Katze geht und \"Hallo\" sagt, aber die Katze hat Angst bekommen und ist weggerannt. \"Aaahh!\". Wenn ich mehr Zeit hätte, hätte ich ein glückliches Ende programmiert. Das Ende."
+    C1_spelling_bee_intro:
+      1:
+        text: "Dies ist die Buchstabier-Biene. Bewege die Biene mit den Puzzleteilen. Dabei sammelt die Biene Buchstaben, um Wörter zu buchstabieren."
+      2:
+        text: "Versuche, das Wort zu buchstabieren, das im Kasten unter dem Programmfenster angezeigt wird. Und jetzt emsig an die Arbeit! Wenn du dich in die falsche Richtung bewegst, werden falsche Buchstaben hinzugefügt."
+    C1_zuck_repeat_loop:
+      1:
+        text: "Computer sind wirklich gut darin, Befehle zu wiederholen. Die meisten Menschen langweilen sich, wenn sie immer und immer wieder dieselben Dinge tun müssen. Aber ein Computer kann Millionen oder Milliarden Mal dasselbe tun. Er langweilt sich nicht und erledigt seine Aufgabe wirklich gut."
+      2:
+        text: "Wenn ich zum Beispiel allen Menschen auf Facebook eine E-Mail zum Geburtstag schreiben wollte, würde es mehr als ein Jahrhundert dauern, alle diese E-Mails zu schreiben und zu verschicken. Aber mit wenigen Codezeilen kann ich ein System entwickeln, das jedem auf Facebook eine E-Mail zum Geburtstag schickt."
+      3:
+        text: "In diesem Beispiel musst du den Vogel so bewegen, dass er das Schwein erreicht. Jetzt können wir den \"Wiederholen\"-Baustein verwenden, um uns die Arbeit zu erleichtern. Entweder kannst du dem Computer fünfmal befehlen, einen Schritt nach vorne zu gehen, damit der Vogel das Schwein erreicht, oder du gibst einmal den Befehl und wiederholst den Befehl fünf Mal. Der Computer macht beide Male genau dasselbe."
+      4:
+        text: "Dazu musst du einen \"Nach Vorne\"-Befehl auf die Arbeitsfläche ziehen und in den \"Wiederholen\"-Baustein setzen. Du kannst dann auf den Baustein klicken und angeben, wie oft der Befehl wiederholt werden soll, je nachdem, wie viele Schritte du gehen willst."
+      5:
+        text: "In den \"Wiederholen\"-Baustein kannst du so viele Befehle setzen, wie du möchtest. In diesem Beispiel befiehlst du dem Vogel, nach vorne zu gehen und sich nach links zu drehen. Das wird dann fünfmal wiederholt. Viel Spaß!"
+    C2_artist_intro:
+      1:
+        text: "Du könntest nicht am Rennen teilnehmen, wenn du keine Mitarbeiter hast, die sich mit Informatik auskennen, denn die Autos sammeln viele Daten und es werden immer Leute benötigt, die Programme schreiben, damit die Leistung des Autos verbessert wird."
+      2:
+        text: "Bei diesen Aufgaben bist du ein Künstler, der mit seinem Bleistift unterschiedliche Formen zeichnet. Der Künstler zeichnet überall, wo er hinläuft, eine Linie."
+      3:
+        text: "Mit dem \"Vorwärts bewegen\"-Baustein bewegst du dich auf der Leinwand. Auf diesem Baustein steht \"vorwärts bewegen um 100 Pixel\". Was passiert, wenn wir auf \"ausführen\" klicken? Der Künstler bewegt sich um eine bestimmte Strecke nach vorne, und zwar um 100 Pixel. Pixel sind sehr kleine Punkte auf deinem Bildschirm."
+      4:
+        text: "Der andere Baustein in dieser Aufgabe sagt \"nach rechts drehen um 90 Grad\". Wenn wir diesen Baustein verwenden, dreht sich der Künstler um eine bestimmte Strecke. Spiele mit dem Baustein und probiere aus, wie weit sich der Künstler dreht. Das ist eine 90-Grad-Drehung."
+      5:
+        text: "Das ist eine 120-Grad-Drehung. Denk dran, du kannst diese Werte ändern, indem du auf die Pfeile direkt neben den Pixel- und Grad-Werten drückst. Viel Spaß beim Zeichnen mit dem Künstler!"
+    C2_bee_conditionals:
+      1:
+        text: "Das ist der bedingte Baustein. Er bedeutet: WENN Nektar oder Honig da ist, der weniger, gleich oder größer als eine bestimmte Zahl ist, DANN führe eine Aktion aus."
+      2:
+        text: "Das ist nützlich, wenn wir nicht wissen, wie viel Nektar oder Honig wir sammeln müssen, zum Beispiel hier beim Fragezeichen."
+      3:
+        text: "Bei diesem Beispiel sagen wir, WENN in der lila Blume mehr als 0 Portionen Nektar sind, DANN hole den Nektar. Damit sagen wir unserer Biene, solange Nektar zu sammeln, bis er alle ist. Geschafft!"
+    C2_binary_bracelets:
+      1:
+        text: "Dies ist die Lektion \"Binäre Armbänder\". Wir werden unsere Initialen auf einem Armband codieren, das wir tragen und unseren Freunden zeigen können!"
+      2:
+        text: "Bei der binären Schreibweise werden Informationen mit nur zwei Optionen repräsentiert. Manche stellen sich das als Einsen und Nullen vor. Aber binäre Informationen können auch als An oder Aus, als Oben oder Unten, oder als andere Gegensätze repräsentiert werden."
+      3:
+        text: "Hallo, ich heiße Orion und ich programmiere Roboter hier bei Play-im. Alle Computer und Robotergehirne sind im Grunde genommen wie elektronische Tore. Wenn das Tor geöffnet ist, kann Elektrizität hindurchfließen, und wenn es geschlossen ist, fließt keine Elektrizität."
+      4:
+        text: "Ein Beispiel für Binärdaten beim Roboter sind die Roboteraugen. Die Augen des Roboters sind LEDs. Das sind Lichter, die entweder an oder aus sind. Das ist ein binäres System - entweder eins oder das andere. Wir können die Lichter verwenden, um binäre Zahlen zu repräsentieren. Wenn wir verschiedene Roboter haben, können wir sagen, dass der erste Roboter die Einer darstellt, der zweite Roboter die Zweier, der dritte Roboter die Vierer, und so weiter. So wird eine binäre Zahl repräsentiert. Die Roboter zählen mit ihren binären Augen für dich."
+    C2_conditionals_with_cards:
+      1:
+        text: "Diese Lektion heißt \"Bedingungen mit Karten\". Jeden Tag triffst du Entscheidungen anhand der Dinge, die du siehst und hörst."
+      2:
+        text: "Ich möchte im Park spazieren gehen, muss aber erst entscheiden, ob ich einen Regenschirm mitnehme oder nicht. Also schaue ich aus dem Fenster. Wenn der Himmel bewölkt ist, nehme ich den Schirm mit. Ansonsten setze ich eine Sonnenbrille auf. Ich glaube, ich nehme lieber den Schirm. Was ich sehe und höre, bestimmt, was ich in den Park mitnehme."
+      3:
+        text: "Bedingungen werden auch in Spielen verwendet. Heute üben wir Bedingungen mit einem Kartenspiel. Bei diesem Spiel bestimmt die Karte, die ich ziehe, was meine Freunde und ich tun werden. Wenn ich eine sieben ziehe, klatschen alle in die Hände. Wenn nicht, sagen alle \"Oooooh.\" Probieren wir es aus! \"Oooooh\" \"Jubel\""
+      4:
+        text: "Du kannst bestimmt noch spannendere Spiele mit Bedingungen erfinden. Probiere es mal! Bedingungen lassen Computer so schlau wirken. Ein Computerprogramm mit Bedingungen kann auf den Anwender reagieren und seine Funktion ändern."
+      5:
+        text: "Denke an dein Lieblings-Computerspiel. Bekommst du für manche Aktionen mehr Punkte als für andere? Das funktioniert, weil der Computer Bedingungen verwendet. So trifft der Computer Entscheidungen. Zum Beispiel: Wenn du das Ziel triffst, erhältst du zehn Punkte. Ansonsten verlierst du drei Punkte. Wenn du weißt, wie Bedingungen funktionieren, kannst du alle möglichen spannenden Spiele programmieren."
+    C2_artist_debugging:
+      1:
+        text: "Hier sind bereits einige Bausteine auf der Arbeitsfläche. Aber da stimmt etwas nicht."
+      2:
+        text: "Wir müssen den Code debuggen, indem wir die Geschwindigkeit reduzieren und beobachten, was bei jedem Baustein passiert."
+      3:
+        text: "Aha, da ist das Problem! Die Schnurrhaare der Katze sind 75 Pixel lang, nicht 25."
+    C2_bee_debugging:
+      1:
+        text: "Hast du schon einmal vom \"Debugging\" gehört? Das ist die Methode, mit der du herausfindest, was nicht funktioniert. Beim Debuggen von Code suchst und behebst du Fehler."
+      2:
+        text: "Hier liegen bereits einige Bausteine auf der Arbeitsfläche. Wir verwenden die Schritt-Schaltfläche, um jeden Baustein einzeln durchzugehen, Schritt für Schritt, um herauszufinden, ob alles stimmt, oder ob etwas repariert werden muss."
+      3:
+        text: "Sieht so aus, als sei dort unser Problem! Wir brauchen einen weiteren \"Vorwärts bewegen\"-Baustein. Die \"Schritt\"-Schaltfläche hilft uns, unser Programm zu debuggen und zu identifizieren, wo der Fehler liegt, damit wir diesen reparieren können."
+    C2_digital_footprint:
+      1:
+        text: "Auf dem Kopf da sitzt dein Hut, auch zum schlau sein ist er gut, er kann an schöne Sachen denken und anderen ein Lächeln schenken. Auch im Internet online, muss dein Kopf aufmerksam sein, um die ganz geheimen Sachen nicht dort öffentlich zu machen. Vom Kopf bis zu den Zehen: erst denken, dann gehen. Beim auf den Bildschirm blicken: erst denken, dann klicken!"
+      2:
+        text: "Dein Herz das schlägt im Takt, das macht es ganz exakt, und hast du jemand herzlich gern, spürt man das von nah und fern. Im Internet und auch online, ist Herzlichkeit auch immer fein, und viel Respekt und Freundlichkeit, die bringen dich im Netz sehr weit. Vom Kopf bis zu den Zehen: erst denken, dann gehen. Beim auf den Bildschirm blicken: erst denken, dann klicken!"
+      3:
+        text: "Die Arme, die sind lang und rund, und sie umarmen deinen Hund, sie halten feste deine Tasche und schütteln deine Limoflasche. Wer will schon immer Online sein, wenn draußen schön die Sonne scheint: mit starken Armen wie im Traum, kletterst du auf jeden Baum. Vom Kopf bis zu den Zehen: erst denken, dann gehen. Beim auf den Bildschirm blicken: erst denken, dann klicken!"
+      4:
+        text: "Im Bauch wird Essen abgebaut, bei Hunger grummelt er ganz laut, klatscht er aufs Wasser, tut es weh, und eisig kalt wird er im Schnee. Das Bauchgefühl ist für dich da, im Internet ganz wunderbar, denn dein Gefühl weiß immer gut, ob etwas gar nicht gut dir tut. Vom Kopf bis zu den Zehen: erst denken, dann gehen. Beim auf den Bildschirm blicken: erst denken, dann klicken!"
+      5:
+        text: "Denke mit dem Kopf, fühle mit dem Herz, bewege deine Arme, hör auf deinen Bauch, online. Deine Beine laufen schnell, treten gegen jeden Ball, hüpfen hoch und springen weit, latschen deine Schuhe breit. Mit den Beinen stehst du stark, wenn online jemand dich nicht mag, wenn zu anderen du freundlich bist und die Nettikette nicht vergisst."
+      6:
+        text: "Vom Kopf bis zu den Zehen: erst denken, dann gehen. Beim auf den Bildschirm blicken: erst denken, dann klicken! Denke mit dem Kopf, fühle mit dem Herz, bewege deine Arme, hör auf deinen Bauch, stehe auf deinen Beinen. Vom Kopf bis zu den Zehen: erst denken, dann gehen. Beim auf den Bildschirm blicken: erst denken, dann klicken!"
+    C2_digital_footprint_v2:
+      1:
+        text: "Immer wenn du online gehst, hinterlässt du einen Fußabdruck, der gesucht, kopiert und geteilt werden kann und so für immer im Netz bleibt. Was für einen digitalen Fußabdruck hinterlässt du? Was für einen digitalen Fußabdruck möchtest du hinterlassen?"
+    C2_graph_paper:
+      1:
+        text: "Diese Lektion heißt \"Programmieren auf Rasterpapier\" und behandelt Algorithmen. Heute lernen wir, Programme zu schreiben, mit denen wir einander nur mit gezeichneten Pfeilen zeigen, wie wir einfache schwarz-weiße Bilder zeichnen."
+      2:
+        text: "Ein Algorithmus ist eine Liste mit Anweisungen für die Durchführung einer Aufgabe. Wir befolgen diese Anweisungen, um die Schüssel zu machen. Algorithmen sind wirklich hilfreich, wenn jemand anderes verstehen soll, wie etwas getan werden muss."
+      3:
+        text: "Wenn du einen Algorithmus für einen Computer schreibst, musst du die Aufgabe in winzig kleine Schritte aufteilen. Wenn du diese Zeile durcharbeitest, dann zur nächsten Zeile gehst, dann zur nächsten, bist du fertig."
+      4:
+        text: "Ich verwende Algorithmen bei meiner Arbeit. Ich schreibe alle Schritte auf. So kann ich ein Stück genauso wieder machen, oder jemand anderem beibringen, wie man es macht. Lege das Glas in den Ofen, verschmelze es, und befolge den Rest der Anweisungen, um die Schüssel zu machen. Algorithmen sind eine Anleitung, um etwas zu erledigen."
+    C2_artist_loops:
+      1:
+        text: "Hier verwenden wir den \"Wiederholen\"-Baustein, um Schritte zu sparen, wenn wir unseren Künstler programmieren. Wir haben bereits einige Bausteine im Arbeitsbereich, aber das ist erst der Anfang."
+      2:
+        text: "Um diese Bausteine viermal zu wiederholen und ein ganzes Quadrat zu zeichnen, ziehen wir einfach den \"Wiederholen\"-Baustein auf die Arbeitsfläche und setzen die Bausteine \"vorwärts bewegen\" und \"nach rechts drehen\" in den \"Wiederholen\"-Baustein. Wenn wir auf \"ausführen\" klicken, wiederholt der Künstler diese Schritte viermal, um das Quadrat zu zeichnen."
+    C2_bee_loops:
+      1:
+        text: "Eine Schleife ist die Wiederholung einer Aktion. Wenn ich einen Bienenkasten untersuche, schaue ich mir einen Rahmen an und setze ihn dann wieder ein. Diesen Vorgang wiederhole ich mehrere Male. Das bedeutet, dass ich dieselbe Aktion mehrmals wiederhole."
+      2:
+        text: "Das ist der \"Wiederholen\"-Baustein. Was du in den \"Wiederholen\"-Baustein setzt, wird so oft wiederholt, wie im Baustein angegeben. In dieser Aufgabe könntest du \"vorwärts bewegen\" und \"nimm Nektar\" dreimal benutzen, aber es ist einfacher, sie nur einmal zu verwenden und die Aktion dreimal zu wiederholen. So ist es viel einfacher!"
+    C2_maze_intro:
+      1:
+        text: "Normalerweise wird in Textform programmiert, aber heute benutzen wir Blockly: ein System, bei dem man per Drag & Drop grafische Bausteine verschiebt und so Programme schreibt. Im Hintergrund wird dabei nach wie vor Code erstellt. Zuerst werden wir Code für ein Programm erstellen, mit dem Angry Bird sich durch ein Labyrinth bewegt, um die bösen Schweine zu schnappen, die seine Eier gestohlen haben."
+      2:
+        text: "Blockly ist in drei Bereiche aufgeteilt. Links ist das Labyrinth, in dem dein Programm ausgeführt wird. Die Anweisungen für jeden Level stehen unter dem Labyrinth. Dieses mittlere Feld ist die Werkzeugkiste und jeder Baustein ist ein Befehl, den der Vogel versteht. Der weiße Bereich rechts ist der Arbeitsbereich, in dem wir unser Programm aufbauen."
+      3:
+        text: "Wenn ich den \"Bewegen\"-Baustein in den Arbeitsbereich ziehe und auf \"ausführen\" klicke, was passiert dann? Der Vogel bewegt sich um ein Feld auf dem Raster vorwärts. Und was mache ich, wenn der Vogel etwas tun soll, nachdem er um ein Feld vorwärts gegangen ist? Ich füge dem Programm einen weiteren Baustein hinzu."
+      4:
+        text: "Ich wähle den \"Nach rechts drehen\"-Baustein und ziehe ihn unter den \"Bewegen\"-Baustein, bis der gelbe Pfeil erscheint. Dann lege ich ihn ab und die beiden Bausteine werden zusammengesetzt. Wenn ich erneut auf \"ausführen\" klicke, führt der Vogel der Reihe nach die Befehle aus, die im Arbeitsbereich zusammengesetzt sind."
+      5:
+        text: "Wenn du einen Baustein löschen möchtest, dann löse ihn von den übrigen Bausteinen und ziehe ihn in den Papierkorb. Du kannst jederzeit die Schaltfläche \"Zurücksetzen\" benutzen, um den Vogel zurück auf Start zu bringen. Holen wir die Schweine!"
+    C2_paper_airplanes:
+      1:
+        text: "Diese Lektion heißt \"Algorithmen in der realen Welt\". Algorithmen beschreiben Handlungen, die Menschen jeden Tag tun. Ein Rezept für Kekse und eine Anleitung, wie man ein Vogelhaus baut, sind Algorithmen aus dem Alltag."
+      2:
+        text: "Heute werden wir einen Algorithmus für einen Papierflieger erstellen und ausprobieren. Aber zuerst müssen wir dieses große Projekt in einfach zu befolgende, kleine Schritte aufteilen. Um einen Papierflieger zu machen, müssen wir entscheiden, welche Schritte nötig sind und in welcher Reihenfolge sie ausgeführt werden müssen."
+      3:
+        text: "Erstellt euren eigenen Algorithmus, indem ihr zuerst die Bilder ausschneidet. Wählt dann die sechs Bilder aus, auf denen die Schritte zum Falten des Papierfliegers zu sehen sind, und setzt sie in die richtige Reihenfolge. Nachdem ihr die Schritte sortiert habt, könnt ihr euren Algorithmus mit einem anderen Team tauschen, um auszuprobieren, ob der Algorithmus funktioniert. Ein guter Algorithmus ist sehr wichtig, um das beste Papierflugzeug zu falten."
+      4:
+        text: "Bei der Herstellung von Schokolade gibt es einen Prozess mit vielen großen Schritten. Und jeder dieser großen Schritte besteht aus einer Reihe kleinerer Schritte. Es gibt unterschiedliche Rezepte oder Algorithmen, je nachdem welchen Geschmack die Schokolade haben soll. Jeder Schritt ist wichtig, auch die ganz kleinen Schritte. Wenn ein Schritt fehlt, kann der Rest des Prozesses nicht abgeschlossen werden. Es ist wichtig, Algorithmen zu erstellen, die von anderen verstanden werden. Deshalb muss jeder Schritt aufgeschrieben werden, damit das Ergebnis immer dasselbe ist, egal, wer die Schritte durchführt."
+    C2_playlab_createstory:
+      1:
+        text: "Bisher hast du eine Animation oder eine Geschichte geschaffen, die jedes Mal, wenn du sie abspielst, genau dasselbe macht. Nun kannst du ein interaktives Spiel erstellen, das man tatsächlich spielen kann."
+      2:
+        text: "Es gibt einige neue Bausteine, die du ausprobieren kannst. Da ist der \"Wenn Pfeil\"-Baustein und der \"Figur bewegen\"-Baustein. Diese Bausteine kannst du zusammensetzen, um die Figuren mit den Pfeiltasten zu bewegen. Außerdem gibt es einige Bausteine, die etwas tun, wenn Figuren zusammenstoßen oder angeklickt werden. Viel Spaß beim Ausprobieren!"
+    C2_relay_programming:
+      1:
+        text: "Heute machen wir eine Staffellauf-Programmierung. Es geht darum, unter Druck zu programmieren und die Fehler zu beheben, die passieren, wenn man sehr schnell oder in einem Team zusammenarbeitet. Wir programmieren auf Rasterpapier, um Code zu simulieren. Der Staffellauf ist so, als müssten wir eine dringende Frist einhalten."
+      2:
+        text: "Bei der Staffellauf-Programmierung laufen die Teams um die Wette, um ein Programm auf Rasterpapier zu schreiben. Du musst die Arbeit deiner Teammitglieder kontrollieren, debuggen oder reparieren, deinen Pfeil hinzufügen und zurückrennen, um den nächsten Läufer abzuschlagen."
+      3:
+        text: "Programmierer nutzen Debugging, um Probleme in ihren Algorithmen oder ihrem Code zu finden und zu beheben. Es gibt viele Methoden, Probleme zu debuggen. Eine der einfachsten Methoden ist, Schritt für Schritt vorzugehen, bis du herausfindest, wo der Fehler liegt. Dann kannst du den Fehler beheben."
+      4:
+        text: "Hier versuche ich, einen Handstandüberschlag rückwärts zu machen, aber ich falle immer herunter. Ich gehe die Bewegung Schritt für Schritt durch und finde heraus, wo mein Fehler liegt. Mein Trainer hat mir gezeigt, dass ich meine Hände auf dem Schwebebalken nicht richtig positioniert habe. Also habe ich es erneut mit einer anderen Handposition versucht, und jetzt klappt es. Ich bin froh, dass ich meinen Handstandüberschlag debuggen konnte. Wir haben den Fehler gefunden! Debuggen bedeutet, Probleme zu suchen und zu reparieren. Gut gemacht!"
+    C2_zuck_repeat_loop:
+      1:
+        text: "Computer sind wirklich gut darin, Befehle zu wiederholen. Die meisten Menschen langweilen sich, wenn sie immer und immer und immer wieder dieselben Dinge tun müssen. Aber ein Computer kann Millionen oder Milliarden Mal dasselbe tun. Er langweilt sich nicht und erledigt seine Aufgabe wirklich gut."
+      2:
+        text: "Wenn ich allen Menschen auf Facebook eine E-Mail zum Geburtstag schreiben wollte, würde es sicher mehr als ein Jahrhundert dauern, alle diese E-Mails zu schreiben und zu verschicken. Aber mit wenigen Codezeilen kann ich ein System entwickeln, das jedem auf Facebook eine E-Mail zum Geburtstag schickt. So funktionieren Schleifen, und deshalb sind sie so wichtig und für Computer so einfach durchzuführen."
+      3:
+        text: "In diesem Beispiel musst du den Vogel so bewegen, dass er das Schwein erreicht.  Jetzt können wir den \"Wiederholen\"-Baustein verwenden, um uns die Arbeit zu erleichtern. Entweder kannst du dem Computer fünfmal einen \"Vorwärts bewegen\"-Befehl geben, um den Vogel Schritt für Schritt zum Schwein zu bringen."
+      4:
+        text: "Oder du gibst dem Computer einmal den \"Vorwärts bewegen\"-Befehl und lässt ihn mit \"wiederholen\" den Befehl fünfmal ausführen. Der Computer tut beide Male dasselbe. Du ziehst also deinen \"Vorwärts bewegen\"-Befehl und setzt ihn in den \"Wiederholen\"-Baustein. Dann klickst du auf den Baustein und gibst an, wie oft der Baustein wiederholt werden soll, d.h. wie viele Schritte vorwärts gegangen werden sollen."
+      5:
+        text: "In den \"Wiederholen\"-Baustein kannst du übrigens so viele Befehle setzen, wie du möchtest. In diesem Beispiel befiehlst du dem Vogel, nach vorne zu gehen und sich nach links zu drehen. Das macht er dann fünfmal. Gut gemacht! Viel Spaß noch!"
+    C3_artist_functions:
+      1:
+        text: "Die Computerprogrammierung hat einen großen Vorteil: wenn du einem Computer einmal erklärt hast, wie er eine Aktion durchführen soll, kannst du diese Funktion immer wieder aufrufen. Dazu gibst du der Funktion einfach einen Namen und rufst sie auf. Damit erweiterst du die Programmiersprache."
+      2:
+        text: "Bei unserem Programm haben wir gelernt, ein Quadrat zu zeichnen, indem wir vier Vorwärtsbewegungen und Drehbewegungen kombiniert haben. Diese Funktion können wir nehmen, ihr einen Namen wie \"Quadrat zeichnen\" geben, und jedes Mal, wenn wir ein Quadrat brauchen, wird die Funktion mit diesem Code wieder aufgerufen. Der Computer erledigt das für uns. Wir haben das Konzept zu unserer Programmiersprache hinzugefügt."
+    C3_artist_intro:
+      1:
+        text: "Du könntest nicht am Rennen teilnehmen, wenn du keine Mitarbeiter hast, die sich mit Informatik auskennen, denn die Autos sammeln viele Daten und es werden immer Leute benötigt, die Programme schreiben, damit die Leistung des Autos verbessert wird."
+      2:
+        text: "Bei diesen Aufgaben bist du ein Künstler, der mit seinem Bleistift unterschiedliche Formen zeichnet. Der Künstler zeichnet überall, wo er hinläuft, eine Linie."
+      3:
+        text: "Mit dem \"Vorwärts bewegen\"-Baustein bewegst du dich auf der Leinwand. Auf diesem Baustein steht \"vorwärts bewegen um 100 Pixel\". Was passiert, wenn wir auf \"ausführen\" klicken? Der Künstler bewegt sich um eine bestimmte Strecke nach vorne, und zwar um 100 Pixel. Pixel sind sehr kleine Punkte auf deinem Bildschirm."
+      4:
+        text: "Der andere Baustein in dieser Aufgabe sagt \"nach rechts drehen um 90 Grad\". Wenn wir diesen Baustein verwenden, dreht sich der Künstler um eine bestimmte Strecke. Spiele mit dem Baustein und probiere aus, wie weit sich der Künstler dreht. Das ist eine 90-Grad-Drehung."
+      5:
+        text: "Das ist eine 120-Grad-Drehung. Denk dran, du kannst diese Werte ändern, indem du auf die Pfeile direkt neben den Pixel- und Grad-Werten drückst. Viel Spaß beim Zeichnen mit dem Künstler!"
+    C3_artist_nested_loops:
+      1:
+        text: "Wenn du eine Schleife in eine andere Schleife einschließt, nennen wir das eine verschachtelte Schleife.  Hier haben wir zum Beispiel den Code, um ein Dreieck mit einer Seitenlänge von 100 Pixeln zu zeichnen. Der \"Wiederholen\"-Baustein steht auf \"3\", eine Wiederholung für jede Seite des Dreiecks."
+      2:
+        text: "Aber wir möchten sechs Dreiecke zeichnen. Dazu nehmen wir die Schleife und setzen sie in einen anderen \"Wiederholen\"-Baustein. Supercool!"
+    C3_bee_conditionals:
+      1:
+        text: "Das ist der bedingte Baustein. Er bedeutet: WENN Nektar oder Honig da ist, der weniger, gleich oder größer als eine bestimmte Zahl ist, DANN führe eine Aktion aus."
+      2:
+        text: "Das ist nützlich, wenn wir nicht wissen, wie viel Nektar oder Honig wir sammeln müssen, zum Beispiel hier beim Fragezeichen."
+      3:
+        text: "Bei diesem Beispiel sagen wir, WENN in der lila Blume mehr als 0 Portionen Nektar sind, DANN hole den Nektar. Damit sagen wir unserer Biene, solange Nektar zu sammeln, bis er alle ist. Geschafft!"
+    C3_bee_debugging:
+      1:
+        text: "Hast du schon einmal vom \"Debugging\" gehört? Das ist die Methode, mit der du herausfindest, was nicht funktioniert. Beim Debuggen von Code suchst und behebst du Fehler."
+      2:
+        text: "Hier liegen bereits einige Bausteine auf der Arbeitsfläche. Wir verwenden die Schritt-Schaltfläche, um jeden Baustein einzeln durchzugehen, Schritt für Schritt, um herauszufinden, ob alles stimmt, oder ob etwas repariert werden muss."
+      3:
+        text: "Sieht so aus, als sei dort unser Problem! Wir brauchen einen weiteren \"Vorwärts bewegen\"-Baustein. Die \"Schritt\"-Schaltfläche hilft uns, unser Programm zu debuggen und zu identifizieren, wo der Fehler liegt, damit wir diesen reparieren können."
+    C3_bee_functions:
+      1:
+        text: "Eines der wichtigsten Konzepte der Informatik ist die Definition neuer Befehle, mit der einer Computersprache neue Wörter hinzugefügt werden. Die meisten Computersprachen haben nur etwa hundert Wörter oder Befehle. Die Kunst besteht im Grunde darin, aus diesen Bausteinen neue Wörter zusammenzusetzen."
+      2:
+        text: "Im Sport wird das ständig so gemacht. Beim Basketball lernt man zum Beispiel erst das Dribbeln, dann Pässe, dann den Wurf auf den Korb. Nachdem du diese grundlegenden Bewegungen gelernt hast, kannst du neue Bewegungen lernen und diese wie Bausteine zusammensetzen. Von da aus beherrscht durch immer komplexere Spielzüge. Nachdem du deinen Spielzug gut beherrscht und ihm einen Namen gegeben hast, können ihn auch die anderen Spieler der Mannschaft lernen."
+      3:
+        text: "Genauso der Computer: Hast du ihm erst einmal beigebracht, eine Aktion mit einer Sequenz von Befehlen auszuführen, kannst du dieser Aktion einen eigenen Namen geben, damit sie später einfach wiederholt werden kann. Definierst du einen eigenen Befehl und gibst ihm einen Namen, nennt man das eine Funktion. Jetzt werden wir Funktionen verwenden, um der Biene zu helfen."
+      4:
+        text: "Bei diesem Beispiel heißt unsere Funktion \"nimm 2 Portionen Nektar\" – dieser grüne Baustein hier. Wir wissen, was \"nimm 2 Portionen Nektar\" macht, indem wir in diesem grauen Kasten die Funktionsdefinition lesen. Dort sehen wir, dass \"nimm 2 Portionen Nektar\" eine Portion Nektar holt und dann noch eine. Du solltest immer schauen, was im grauen Kasten steht, damit du weißt, was die grünen Funktionsbausteine tun können."
+    C3_bee_nested_loops:
+      1:
+        text: "Jetzt verwenden wir diese verschachtelten Schleifen bei der Biene. Wir haben bereits einige Bausteine auf der Arbeitsfläche, damit sich die Biene erst nach vorne bewegt, dann drei Portionen Nektar sammelt und sich dann nach rechts dreht. Diesen ganzen Code setzen wir in einen anderen \"Wiederholen\"-Baustein, den wir dreimal wiederholen. Fertig!"
+    C3_bounce:
+      1:
+        text: "Du wirst dein eigenes Bounce-Spiel entwickeln, dass du dann mit deinen Freunden teilen kannst! So cool!"
+      2:
+        text: "Zuerst müssen wir die Schläger-Steuerungen mit den Pfeiltasten auf dem Keyboard verbinden."
+      3:
+        text: "Dies können wir tun, indem wir den \"Wenn Linkspfeil\"-Baustein mit dem \"Nach links bewegen\"-Baustein verknüpfen und den \"Wenn Rechtspfeil\"-Baustein mit dem \"Nach rechts bewegen\"-Baustein. Probiere es aus, es ist gar nicht schwer, ein Bounce-Spiel zu machen!"
+    C3_computational_thinking:
+      1:
+        text: "Bei dieser Lektion geht es um computerbezogenes Denken. Manchmal kann es ganz schön schwer sein, ein neues Spiel zu lernen, nicht wahr? Zuerst ist alles fürchterlich kompliziert und manchmal gibt es keinen, der dir die Regeln erklärt, und du musst alles selbst herausfinden."
+      2:
+        text: "Das Gute ist, dass du immer besser darin wirst, Dinge selbst herauszufinden, wenn du beim Nachdenken einige Tricks verwendest. Diese Tricks sind super, um Probleme zu untersuchen und zu lösen. In dieser Lektion lernst du vier Tricks und übst sie mit deinen Freunden, um die Regeln eines Spiels herauszufinden."
+      3:
+        text: "Wenn du ein großes Problem in kleinere Teile aufteilst, nutzt du dein Gehirn, um das große Problem auseinanderzunehmen. Nachdem du ein großes Problem in mehrere kleinere Probleme aufgeteilt hast, kannst du den nächsten Trick anwenden, die Musterübereinstimmung."
+      4:
+        text: "Dabei suchen wir nach Ähnlichkeiten zwischen Dingen. Wenn ich weiß, welche Dinge gleich sind, kann ich herausfinden, welche Dinge unterschiedlich sind. Wenn ich diese Unterschiede weglasse, nennt man das Abstraktion."
+      5:
+        text: "Nachdem ich die Schritte kenne, um ein Problem zu lösen, kann ich diese in einer bestimmten Reihenfolge ordnen, um einen Algorithmus zu erstellen, damit auch andere nach meiner Anleitung das Problem lösen können. Wir werden diese vier Schritte verwenden, um herauszufinden, wie das Spiel ohne Regeln gespielt wird. Am Ende des Spiels kannst du auch andere Spiele spielen, die so ähnlich aussehen!"
+    C3_crowdsourcing:
+      1:
+        text: "Diese Lektion heißt \"Crowdsourcing\". In dieser Lektion verwenden wir ein Kartenspiel, um zu lernen, dass einige Tätigkeiten in der Gruppe viel einfacher sind als alleine. Such dir ein paar Freunde und mache etwas Tolles! Crowdsourcing bedeutet, sich Hilfe von einer großen Gruppe Personen zu suchen, um eine Aufgabe schneller zu erledigen."
+      2:
+        text: "In der Informatik wird Crowdsourcing oft genutzt. Tausende von Amateuren und Profis vernetzen ihre Computer, um Milliarden und Abermilliarden von Informationen zu durchsuchen. Zum Beispiel werden so Dinge wie die nächste Mersenne-Primzahl gesucht oder es wird nach außerirdischen Signalen geforscht."
+      3:
+        text: "Wenn du einen Film siehst, besteht jede Sekunde des Films aus 24 Einzelbildern, die wir auch Frames nennen. Jedes dieser Bilder muss erstellt, gerendert und mit den anderen Bildern zusammengesetzt werden. Mein Team und ich, wir sind alle Softwareentwickler. Wir arbeiten alle zusammen, um eine Software zu erstellen, die ein Bild erzeugt, das du dann auf dem Bildschirm siehst. Das ist ein Werkzeug, das Künstler und andere Entwickler bei ihrer Zusammenarbeit benutzen, um die Bilder zu erstellen, die auf dem Bildschirm erscheinen sollen."
+      4:
+        text: "In \"Findet Nemo\" zum Beispiel, wenn Crush und Racker und ihre Freunde durch den Ostaustralstrom schwimmen. Du siehst die Bilder vom vorbeiströmenden Wasser, die Farben auf dem Rücken der Schildkröte, und die Seiten der Fische. Alle diese Bilder werden mit Mathematik und von uns geschriebenen Computerprogrammen erzeugt, die wir den Künstlern geben und die sie verwenden, damit das Bild im Film richtig gut aussieht."
+    C3_dice_race:
+      1:
+        text: "Diese Lektion heißt \"Würfelrennen\". Fast jeder spielt gerne Computerspiele. Hast du schon einmal darüber nachgedacht, wie Programmierer die Schritte eines Spiels in ein Programm umwandeln? Der erste Schritt bei der Erstellung von Computerspielen, aber auch bei allen anderen Problemen, ist Nachdenken und Planen."
+      2:
+        text: "Das Nachdenken ist wie ein Algorithmus oder Schritt-für-Schritt-Plan, um ein Problem zu lösen oder eine Aufgabe durchzuführen. In dieser Lektion erstellst du einen Algorithmus für ein Würfelrennen. Dann bittest du deine Freunde, deinen Plan auszuprobieren, um zu sehen, ob sie die Schritte befolgen können, um das Spiel zu spielen. Nachdem der Programmierer sicher ist, dass alle Schritte stimmen, muss der Algorithmus in ein Programm übersetzt werden, in einer Sprache, die der Computer versteht."
+      3:
+        text: "Fast alles, was wir täglich tun, erfordert einen Algorithmus, oder eine Liste von Schritten, die zur Durchführung der Aufgabe befolgt werden kann. Denke zum Beispiel daran, wie du dich für die Schule bereit machst, einen Snack zubereitest oder einen Tag mit deinen Freunden planst. Um diese Aufgaben durchzuführen, musst du sie in kleinere Schritte aufteilen, die oft in einer ganz bestimmten Reihenfolge durchgeführt werden müssen."
+      4:
+        text: "Zum Beispiel die Zubereitung eines Butterbrotes. Es ist egal, welche Zutat du zuerst aus dem Schrank nimmst. Aber du kannst die Margarine erst aufs Brot streichen, nachdem du die Packung geöffnet hast. Computer brauchen Algorithmen und Programme, die ihnen sagen, wie man ganz einfache Dinge tut, über die wir gar nicht nachdenken müssen."
+      5:
+        text: "Ein Algorithmus ist der Denkprozess, der stattfindet, während das Programm die Anweisungen an den Computer befolgt. Ein Algorithmus muss in ein Programm übersetzt werden, bevor er auf einem Computer verwendet werden kann. Die Erstellung von Algorithmen, also die Aufteilung einer Aufgabe in kleinere Schritte, ist manchmal schwierig. Aber mit viel Übung wird es immer einfacher."
+    C3_farmer_while:
+      1:
+        text: "\"Solange\"-Schleifen sind vielen Prozessen im Alltag ähnlich. Wenn du zum Beispiel ein Auto wäschst, schrubbst du es so lange, bis es sauber ist. Solange es nicht sauber ist, schrubbst du weiter. Du beurteilst solche Situationen die ganze Zeit."
+      2:
+        text: "Wir haben einen neuen Baustein, der unserer Bäuerin hilft. Er heißt \"Solange\"-Baustein. Seine Funktion ist ganz einfach. Solange die Aussage oben wahr ist, wird etwas getan. Zum Beispiel: Solange ein Haufen da ist, musst du schaufeln. Probiere den Baustein bei der Bäuerin aus."
+    C3_functional_suncatchers:
+      1:
+        text: "Bei dieser Lektion geht es um funktionale Sonnenfänger. Diese hübschen Sonnenfänger werden mit Funktionen erstellt. Mehrere Schritte sind nötig, um einen dieser Sonnenfänger zu machen. Einige dieser Schritte müssen mehrmals wiederholt werden."
+      2:
+        text: "Um den Prozess zu vereinfachen, müssen wir zuerst herausfinden, welche Handlung immer wieder wiederholt wird. Diese Schritte können wir in einer sogenannten Funktion gruppieren."
+      3:
+        text: "Aber zum Erstellen eines hübschen Sonnenfängers braucht es mehr als präzise Schritte. Manchmal möchten wir auch kreativ sein und die Farbe der Perlen ändern. Wir können ganz einzigartige Sonnenfänger basteln, wenn wir Perlen in unterschiedlichen Farben verwenden."
+      4:
+        text: "Du kannst einen einzigartigen Sonnenfänger basteln, wenn du die Perlen als Variablen betrachtet ist. Eine Variable ist ein Platzhalter für Informationen, die sich ändern können. Viel Spaß beim Sonnenfänger-Basteln mit Funktionen und Variablen!"
+    C3_internet:
+      1:
+        text: "In dieser Lektion geht es um das Internet. Das Internet ist ein sehr geschäftiger Ort, fast wie eine vielbefahrene Straße. Nachrichten rauschen wie Autos vorbei, um an ihr Ziel zu gelangen. Nachrichten bewegen sich sehr schnell durchs Internet."
+      2:
+        text: "Wenn wir das Internet nachspielen, verstehen wir besser, wie es funktioniert. Du wirst erfahren, wie Nachrichten von einem Computer zu deiner Lieblingswebsite oder zum E-Mail-Posteingang deines Freundes gelangen. Und so, wie es einfacher ist, große Straßen zu überqueren, wenn du dich mit Schildern und Ampeln auskennst, ist auch das Surfen im Internet nicht schwer, wenn du weißt, was hinter den Kulissen passiert."
+      3:
+        text: "Das Senden von Nachrichten über das Internet ist fast wie das Senden von Briefen in der Post, mit einigen kleinen Unterschieden. Ich bin hier auf Google.com. Die IP-Adresse für diese Webseite ist diese Nummer. Du kannst dir eine IT-Adresse so wie eine Postadresse vorstellen. Stell dir vor, ich möchte eine Nachricht an jemanden im Büro dort unten senden. Siehst du die URL und die IP an der Tür? Ich habe diese Nachricht geschrieben und klicke auf \"Absenden\"."
+      4:
+        text: "Anders als bei der Post wird die Nachricht im Internet zuerst in kleinere Teile aufgeteilt, damit diese einfacher verschickt werden können. Diese kleineren Teile heißen Pakete. Jedes Paket der Nachricht wird einzeln am Bestimmungsort abgeliefert. Dort werden die Pakete wieder in der richtigen Reihenfolge zusammengesetzt, damit der Empfänger die Nachricht lesen kann. Natürlich gibt es noch viele andere Dinge über das Internet zu lernen, aber das ist bereits ein guter Anfang. Du bist auf dem besten Weg, ein Internetexperte zu werden! Erzähle auch deiner Familie und deinen Freunden, was du gelernt hast!"
+      5:
+        text: "Ich heiße Amanda Camp und bin Informatikerin bei Google. Ich arbeite in einem Team, das mit einem Backend-Server arbeitet, der Profile und Kontakte speichert. Bei meiner Arbeit denken wir viel darüber nach, wie Kontakte an andere Geräte, zum Beispiel an dein Telefon, gesendet werden können. Die meisten Menschen haben viele Kontakte, zum Beispiel 1000. Wir möchten nicht all diese Kontakte gleichzeitig an dein Telefon senden, weil das eine zu große Nachricht wäre. Ähnlich wie das Internet große Nachrichten in Pakete aufteilt, benutzen wir ein Konzept namens Paging, bei dem wir nur 100 Kontakte gleichzeitig an dein Telefon senden und warten, bis dein Telefon nach den nächsten 100 Kontakten fragt."
+      6:
+        text: "Was so spannend an Software ist? Sie kann die ganze Welt verändern. Ich habe mit 19 angefangen, Programmieren zu lernen. Da war ich bereits in der Mittel- oder Oberstufe. Das erste Programm, das ich geschrieben habe, konnte Celsius in Fahrenheit umwandeln. Ich programmiere gerne, weil ich gerne Leuten helfe. Ich kann bei Google Programme schreiben, die Menschen weltweit helfen, und das finde ich wirklich toll."
+    C3_maze_conditionals:
+      1:
+        text: "Menschen treffen jeden Tag Entscheidungen. Wenn du zum Beispiel rausgehst, benutzt du vorher eine \"Wenn\"-Anweisung: Wenn es regnet, muss ich meine Jacke anziehen. Computer sind großartig, wenn sie mit diesen Anweisungen arbeiten, da sie diese Anweisungen mit unglaublicher Geschwindigkeit ausführen können. Ein Computerprogramm besteht eigentlich nur aus etwas Mathematik und einigen \"Wenn\"-Anweisungen, die Entscheidungen treffen."
+      2:
+        text: "Der \"Wenn\"-Baustein hilft dem Zombie, eine Entscheidung zu treffen. Er überprüft einen Zustand. Benutzen wir zum Beispiel den Baustein, der sagt \"Wenn links ein Weg ist\". Wir setzen dort einen \"Nach links drehen\"-Befehl ein. Wir sagen dem Zombie, dass er nachschauen soll, ob es links einen Weg gibt, damit er sich in diesem Fall dreht."
+      3:
+        text: "Dann benutzen wir den \"Vorwärts bewegen\"-Baustein innerhalb der Wiederholung, damit er nach vorne läuft, solange er möchte. Sobald es aber links einen Weg gibt, sagt der \"Wenn\"-Baustein, dass er sich nach links drehen soll. Du wirst sehen, dass wir unser Ziel erreichen, wenn wir uns nach links drehen und uns sonst immer nach vorne bewegen."
+      4:
+        text: "Das ist ein Beispiel für die Verwendung einer \"Wenn\"-Anweisung – ein fundamentales Konzept der Informatik. Eines meiner ersten Computerprogramme war ein Spiel namens \"Drei gewinnt\". Dort kamen \"Wenn\"-Anweisungen vor, die sagten: Wenn die andere Person nur noch ein Feld ausfüllen muss, um zu gewinnen, blockiere dieses Feld. Viel Spaß beim Lernen der \"Wenn\"-Anweisungen. Sie sind ein sehr wichtiges Konzept."
+    C3_maze_level_4:
+      1:
+        text: "In diesem Beispiel musst du den Zombie zur Sonnenblume bringen. Dabei könntest du fünf \"Vorwärts bewegen\"-Bausteine verwenden oder dem Computer mit einem \"Wiederholen\"-Baustein befehlen, die Vorwärtsbewegung fünfmal zu wiederholen."
+      2:
+        text: "Das spart Zeit und Mühe. Ziehe den \"Vorwärts bewegen\"-Baustein einfach in den \"Wiederholen\"-Baustein. Klicke auf \"ausführen\", und der Zombie wird fünf Felder nach vorne zur leckeren Sonnenblume gehen."
+    C3_playlab_create_game:
+      1:
+        text: "Bisher hast du eine Animation oder eine Geschichte geschaffen, die jedes Mal, wenn du sie abspielst, genau dasselbe macht. Nun kannst du ein interaktives Spiel erstellen, das man tatsächlich spielen kann."
+      2:
+        text: "Es gibt einige neue Bausteine, die du ausprobieren kannst. Da ist der \"Wenn Pfeil\"-Baustein und der \"Figur bewegen\"-Baustein. Diese Bausteine kannst du zusammensetzen, um die Figuren mit den Pfeiltasten zu bewegen. Außerdem gibt es einige Bausteine, die etwas tun, wenn Figuren zusammenstoßen oder angeklickt werden. Viel Spaß beim Ausprobieren!"
+    C3_songwriting_with_parameters:
+      1:
+        text: "In dieser Lektion schreiben wir Lieder. Musik funktioniert ähnlich wie ein Computerprogramm. Die geschriebenen Noten und Worte sagen dem Sänger genau, was er tun muss. Einige Elemente der Musik werden immer wieder verwendet."
+      2:
+        text: "Wir nennen das den Refrain. In einem Computerprogramm heißen Elemente, die wieder und wieder benutzt werden, Funktionen. Wenn du Liedtexte liest und dort \"Refrain\" steht – singst du dann das Wort \"Refrain\"? Nein, du gehst wieder zum Anfang der Seite, um dort den Text für den Refrain nachzulesen."
+      3:
+        text: "In dieser Lektion singen wir ein albernes kleines Lied namens \"Kleines Häschen Foo Foo\". Dieser Song hat einen Refrain, den du immer und immer wieder singen wirst. Eine Funktion ist ein Stück Code, das du wieder und wieder verwenden kannst. Es macht das Programmieren einfacher und effizienter, damit du die Schritte deiner Funktion nicht immer wieder schreiben musst. Du musst sie nur einmal aufschreiben!"
+    C4_bee_conditional:
+      1:
+        text: "Das ist der bedingte Baustein. Er sagt: Wenn du an der Blume oder der Honigwabe bist, musst du etwas tun. Das ist nützlich, wenn wir nicht wissen, wie viel Nektar wir sammeln oder Honig machen müssen, zum Beispiel hier beim Fragezeichen."
+      2:
+        text: "Bei diesem Beispiel sagen wir: Wenn dort eine Blume ist, hole den ganzen Nektar. Mit einem anderen Baustein sagen wir: Wenn es eine Honigwabe ist, mache Honig. Geschafft!"
+    C4_conditionals:
+      1:
+        text: "Wir haben einen neuen Baustein, den \"Wenn-Ansonsten\"-Baustein. Es handelt sich dabei um eine bedingte Anweisung, wie der \"Wenn\"-Baustein der vorherigen Aufgaben. Aber jetzt gibt es ein neues Element unten. Dort steht \"ansonsten\". Mit dem \"Wenn-Ansonsten\"-Baustein kann die Biene eine Entscheidung zwischen zwei verschiedenen Aktionen treffen. Wenn die Biene bei einer Blume ist, wird sie die Aktionen im ersten Teil, hinter \"machen\", ausführen. Wenn die Biene nicht bei einer Blume ist, wird sie die Aktionen im zweiten Teil, hinter \"ansonsten\", ausführen."
+      2:
+        text: "Mit \"Wenn\"-Anweisungen können Computer Entscheidungen treffen. Menschen legen Bedingungen für den Computer fest, die sagen: Wenn beim Computer eine bestimmte Situation auftritt, mache dies. Ansonsten mache das. Oben auf dem \"Wenn-Ansonsten\"-Baustein steht \"Wenn bei einer Blume\". Aber man kann oben auch andere Sachen hinschreiben, etwa \"Wenn es 3 Portionen Nektar gibt\" oder \"Wenn geradeaus ein Weg ist\". Der Baustein wird sich ähnlich verhalten. Wenn die Aussage oben wahr ist, wird die erste Serie von Aktionen durchgeführt. Wenn die Aussage oben falsch ist, wird die zweite Serie von Aktionen durchgeführt."
+    C4_for_loops:
+      1:
+        text: "Wenn du einen \"Wiederholen\"-Baustein verwendest, um in deinem Code eine Schleife einzubauen, woher weiß der Computer, wenn er genug Wiederholungen gemacht hat? Der \"Wiederholen\"-Baustein ist in Wirklichkeit ein ziemlich komplexer Code namens \"Zähle mit\"-Schleife, der in bestimmten Schritten von einem Anfangswert bis zu einem Endwert zählt."
+      2:
+        text: "Ein \"Wiederhole 3-mal\"-Baustein zählt zum Beispiel in Einer-Schritten von 1 bis 3. Bei jeder Zählrunde wird der Code in der Schleife ausgeführt. Die \"Zähle mit\"-Schleife weiß, wie oft sie bereits ausgeführt wurde, da eine Zähler-Variable zu Beginn der Schleife auf einen Startwert gesetzt wird und bei jeder Runde der angegebene Zählschritt hinzugefügt wird. Sobald die Zähler-Variable größer als der Endwert ist, stoppt die Schleife."
+      3:
+        text: "Der Vorteil einer \"Zähle mit\"-Schleife anstelle des \"Wiederholen\"-Bausteins ist, dass du die Zähler-Variable sehen und in deiner Schleife verwenden kannst. Wenn du zum Beispiel eine Reihe von Blumen hast und die erste Blume eine Portion Nektar, die zweite zwei Portionen Nektar und die dritte drei Portionen Nektar hat, kannst du mit der \"Zähle mit\"-Schleife der Biene sagen, dass sie den Zählerwert an Nektar sammeln soll – 1 an der ersten Blume, 2 an der zweiten und 3 an der dritten."
+      4:
+        text: "Außerdem kann in einer \"Zähle mit\"- Schleife der Zähler um eine andere Zahl als eins erhöht werden. Du kannst zum Beispiel um 2, 4 oder eine variierende Menge erhöhen."
+    C4_for_loops_bee:
+      1:
+        text: "Wenn du einen \"Wiederholen\"-Baustein verwendest, um in deinem Code eine Schleife einzubauen, woher weiß der Computer, wenn er genug Wiederholungen gemacht hat? Der \"Wiederholen\"-Baustein ist in Wirklichkeit ein ziemlich komplexer Code namens \"Zähle mit\"-Schleife, der in bestimmten Schritten von einem Anfangswert bis zu einem Endwert zählt."
+      2:
+        text: "Ein \"Wiederhole 3-mal\"-Baustein zählt zum Beispiel in Einer-Schritten von 1 bis 3. Bei jeder Zählrunde wird der Code in der Schleife ausgeführt. Die \"Zähle mit\"-Schleife weiß, wie oft sie bereits ausgeführt wurde, da eine Zähler-Variable zu Beginn der Schleife auf einen Startwert gesetzt wird und bei jeder Runde der angegebene Zählschritt hinzugefügt wird. Sobald die Zähler-Variable größer als der Endwert ist, stoppt die Schleife."
+      3:
+        text: "Der Vorteil einer \"Zähle mit\"-Schleife anstelle des \"Wiederholen\"-Bausteins ist, dass du die Zähler-Variable sehen und in deiner Schleife verwenden kannst. Wenn du zum Beispiel eine Reihe von Blumen hast und die erste Blume eine Portion Nektar, die zweite zwei Portionen Nektar und die dritte drei Portionen Nektar hat, kannst du mit der \"Zähle mit\"-Schleife der Biene sagen, dass sie den Zählerwert an Nektar sammeln soll – 1 an der ersten Blume, 2 an der zweiten und 3 an der dritten."
+      4:
+        text: "Außerdem kann in einer \"Zähle mit\"- Schleife der Zähler um eine andere Zahl als eins erhöht werden. Du kannst zum Beispiel um 2, 4 oder eine variierende Menge erhöhen."
+    C4_for_loops_no_bee:
+      1:
+        text: "Wenn du einen \"Wiederholen\"-Baustein verwendest, um in deinem Code eine Schleife einzubauen, woher weiß der Computer, wenn er genug Wiederholungen gemacht hat? Der \"Wiederholen\"-Baustein ist in Wirklichkeit ein ziemlich komplexer Code namens \"Zähle mit\"-Schleife, der in bestimmten Schritten von einem Anfangswert bis zu einem Endwert zählt."
+      2:
+        text: "Ein \"Wiederhole 3-mal\"-Baustein zählt zum Beispiel in Einer-Schritten von 1 bis 3. Bei jeder Zählrunde wird der Code in der Schleife ausgeführt. Die \"Zähle mit\"-Schleife weiß, wie oft sie bereits ausgeführt wurde, da eine Zähler-Variable zu Beginn der Schleife auf einen Startwert gesetzt wird und bei jeder Runde der angegebene Zählschritt hinzugefügt wird. Sobald die Zähler-Variable größer als der Endwert ist, stoppt die Schleife. Der Vorteil einer \"Zähle mit\"-Schleife anstelle des \"Wiederholen\"-Bausteins ist, dass du die Zähler-Variable sehen und in deiner Schleife verwenden kannst."
+    C4_function_create:
+      1:
+        text: "Nachdem du jetzt einige Funktionsbausteine bearbeitet hast, ist es nun Zeit, selbst einen Funktionsbaustein zu erstellen. Das ist ganz einfach. Die Werkzeugkiste hat eine Kategorie namens \"Funktionen\". Wenn du darauf klickst, siehst du eine orangefarbene Schaltfläche namens \"Erstelle eine Funktion\". Ein Klick darauf öffnet den Funktionseditor, den du bereits verwendet hast, um vorhandene Funktionsbausteine zu bearbeiten."
+      2:
+        text: "Wie vorher, beginnst du, indem du deiner Funktion einen Namen gibst und beschreibst, was die Funktion tun soll. Das könnte zum Beispiel das Zeichnen eines Quadrats oder Dreiecks sein. Ziehe dann Bausteine aus dem Werkzeugkasten in den Arbeitsbereich unten. Denke daran, die Bausteine in den grünen Funktionsbaustein einzusetzen."
+      3:
+        text: "Wenn du fertig bist, klicke auf \"Speichern\" und du bist fertig. Damit gelangst du zurück zum Haupt-Arbeitsbereich der Aufgabe. Die neue Funktion, die du erstellt hast, erscheint als grüner Baustein in der Kategorie \"Funktionen\" in deiner Werkzeugkiste. Du kannst diesen Baustein in den Arbeitsbereich ziehen und genauso verwenden wie die anderen Bausteine, um die Aufgabe zu lösen."
+    C4_function_edit:
+      1:
+        text: "Die Computerprogrammierung hat einen großen Vorteil: wenn du einem Computer einmal erklärt hast, wie er eine Aktion durchführen soll, kannst du diese Funktion immer wieder aufrufen. Dazu gibst du der Funktion einfach einen Namen und rufst sie auf. Damit erweiterst du die Programmiersprache."
+      2:
+        text: "Bei unserem Programm haben wir gelernt, ein Quadrat zu zeichnen, indem wir vier Vorwärtsbewegungen und Drehbewegungen kombiniert haben. Diese Funktion können wir nehmen, ihr einen Namen wie \"Quadrat zeichnen\" geben, und jedes Mal, wenn wir ein Quadrat brauchen, wird die Funktion mit diesem Code wieder aufgerufen, und alles wird für uns erledigt. Wir haben das Konzept zu unserer Programmiersprache hinzugefügt."
+      3:
+        text: "Bei dieser Aufgabe haben wir bereits eine \"Quadrat zeichnen\"-Funktion für dich erstellt. Sie erscheint in der Werkzeugkiste als grüner Baustein. Du musst denselben Code schreiben, den du vorher geschrieben hast, um ein Quadrat zu zeichnen, und ihn in diese Funktion einsetzen. Klicke dazu auf die Option \"Bearbeiten\" im grünen \"Zeichne ein Quadrat\"-Baustein. Dadurch wird der Funktionseditor geöffnet. Der Funktionseditor besteht aus drei Teilen. Einen Abschnitt, in dem du deine Funktion benennst. Dieser erscheint auf dem grünen Baustein vor der Funktion. Gib dann in einer kurzen Beschreibung an, was deine Funktion tun soll."
+      4:
+        text: "In diesem Fall soll die Funktion ein Quadrat zeichnen. Der weiße Bereich unten ist der Arbeitsbereich. Er funktioniert genauso wie der Arbeitsbereich, den du bereits kennst. Ziehe die Bausteine aus der Werkzeugkiste in diesen Arbeitsbereich. Denke daran, die Bausteine zum Zeichnen des Quadrats in den grünen Funktionsbaustein einzusetzen. Wenn du fertig bist, klicke auf \"Speichern\" und du bist fertig. Damit gelangst du zurück zum Haupt-Arbeitsbereich der Aufgabe. Jetzt kannst du den Funktionsbaustein \"Zeichne ein Quadrat\" so wie jeden anderen Baustein einsetzen, um die Aufgabe zu lösen."
+    C4_function_parameters:
+      1:
+        text: "Hier ist eine Funktion, die ein Quadrat mit 50 Pixel langen Seiten zeichnet Das ist super, aber was ist, wenn ich ein Quadrat mit 50 Pixel langen Seiten und dann ein anderes mit 100 Pixel langen Seiten zeichnen möchte? Es sollte nicht nötig sein, zwei unterschiedliche Funktionen zu schreiben, die fast genau dasselbe tun. Stattdessen können wir eine Funktion mit einem Parameter verwenden."
+      2:
+        text: "Parameter ermöglichen uns, Werte in eine Funktion einzusetzen, die in der Funktion als Variablen verwendet werden. Lass uns einen Parameter namens \"Länge\" zu dieser Funktion hinzufügen, damit wir Quadrate in unterschiedlichen Größen zeichnen können. Im Funktionseditor kannst du den Namen und die Beschreibung wie vorher bearbeiten, aber jetzt kannst du auch noch einen Parameter hinzufügen. Schreibe den Namen deines Parameters in das Feld und klicke auf \"Parameter hinzufügen\". Dadurch wird ein roter Baustein mit dem Namen des Parameters erstellt. Jetzt können wir den Baustein \"vorwärts bewegen um 100\" durch den Parameter \"Länge\" ersetzen, damit sich die Figur um \"Länge\" vorwärts bewegt."
+      3:
+        text: "Klicke auf \"Speichern\" und \"Schließen\" und ziehe deinen neuen \"Quadrat zeichnen\"-Baustein aus der Funktionskategorie in die Werkzeugkiste. Du wirst bemerken, dass neben \"Länge\" ein leerer Bereich ist, weil die Funktion wissen will, welchen Wert der Parameter \"Länge\" haben sollte. Ziehe einen Zahlenbaustein aus der Kategorie \"Mathe\" und setze ihn in den leeren Bereich ein. Siehst du jetzt, wie du die Funktion immer wieder mit unterschiedlichen Längen verwenden kannst, um Quadrate unterschiedlicher Größen zu zeichnen? Probiere es selbst aus!"
+    C4_intro:
+      1:
+        text: "Normalerweise wird in Textform programmiert, aber heute benutzen wir Blockly: ein System, bei dem man per Drag & Drop grafische Bausteine verschiebt und so Programme schreibt. Im Hintergrund wird dabei nach wie vor Code erstellt. Zuerst werden wir Code für ein Programm erstellen, mit dem Angry Bird sich durch ein Labyrinth bewegt, um die bösen Schweine zu schnappen, die seine Eier gestohlen haben."
+      2:
+        text: "Blockly ist in drei Bereiche aufgeteilt. Links ist das Labyrinth, in dem dein Programm ausgeführt wird. Die Anweisungen für jeden Level stehen unter dem Labyrinth. Dieses mittlere Feld ist die Werkzeugkiste und jeder Baustein ist ein Befehl, den der Vogel versteht. Der weiße Bereich rechts ist der Arbeitsbereich, in dem wir unser Programm aufbauen."
+      3:
+        text: "Wenn ich den \"Bewegen\"-Baustein in den Arbeitsbereich ziehe und auf \"ausführen\" klicke, was passiert dann? Der Vogel bewegt sich um ein Feld auf dem Raster vorwärts. Und was mache ich, wenn der Vogel etwas tun soll, nachdem er um ein Feld vorwärts gegangen ist? Ich füge dem Programm einen weiteren Baustein hinzu."
+      4:
+        text: "Ich wähle den \"Nach rechts drehen\"-Baustein und ziehe ihn unter den \"Bewegen\"-Baustein, bis der gelbe Pfeil erscheint. Dann lege ich ihn ab und die beiden Bausteine werden zusammengesetzt. Wenn ich erneut auf \"ausführen\" klicke, führt der Vogel der Reihe nach die Befehle aus, die im Arbeitsbereich zusammengesetzt sind."
+      5:
+        text: "Wenn du einen Baustein löschen möchtest, dann löse ihn von den übrigen Bausteinen und ziehe ihn in den Papierkorb. Du kannst jederzeit die Schaltfläche \"Zurücksetzen\" benutzen, um den Vogel zurück auf Start zu bringen. Holen wir die Schweine!"
+    C4_math_artist:
+      1:
+        text: "Wenn ich ein 50 Pixel hohes Rechteck zeichnen möchte, das doppelt so breit wie hoch ist, wie kann ich das dem Computer befehlen? Nun, ich könnte dem Künstler sagen, 50 Pixel nach oben zu gehen, sich nach rechts zu drehen und dann 100 Pixel zu laufen und das zweimal wiederholen. Aber dann würde ich ja dem Computer das Rechnen abnehmen."
+      2:
+        text: "Die Multiplikation von 50 x 2 ist zwar nicht schwierig, aber Computer sind so gut in Mathe, dass wir ihnen das Rechnen überlassen sollten, wann immer das möglich ist. Wenn ich eine Variable namens \"Höhe\" verwende, kann ich für die Höhe den Wert 50 angeben und dann meinen Algorithmus so ändern, dass ich dem Künstler sage, sich um \"Höhe\" nach oben zu bewegen und dann um \"2 x Höhe\" nach rechts. So erhalte ich ein Rechteck, das doppelt so breit wie hoch ist."
+    C4_unplugged_algorithms:
+      1:
+        text: "Diese Lektion heißt \"Tangram-Algorithmen\". Ein Tangram ist ein Puzzle mit sieben Teilen, das zu anderen Formen zusammengesetzt werden kann. Du wirst einen Algorithmus verwenden, um deinem Partner zu erklären, wie er das Puzzle zusammensetzen muss."
+      2:
+        text: "Ein Algorithmus ist eine Liste von Schritten, mit der eine Aufgabe erledigt werden kann. Wir verwenden sie jeden Tag bei Einkaufslisten und Rezepten. Wenn du den Algorithmus zu einfach gestaltest, kann er auf unterschiedliche Weisen interpretiert werden, und die ausführende Person versteht eventuell nicht genau, was du willst. Wenn du ganz sicher sein willst, dass alle genau dasselbe tun, musst du einen sehr detaillierten Algorithmus erstellen."
+      3:
+        text: "Ich habe heute einen Algorithmus verwendet, um ein Bild zu malen. Ich wollte ein paar Wölfe malen, aber ich kann nicht so gut malen. Zum Glück gibt es \"Malen nach Zahlen\". Man hat 40 Farben und kleine Buchstaben und Zahlen, die angeben, wie die Felder ausgemalt werden müssen. Mit \"Malen nach Zahlen\" weiß ich genau, welche Farbe ich wo verwenden muss."
+      4:
+        text: "Die Anweisungen sind ganz deutlich, und deshalb sieht das Endergebnis richtig gut aus. Dies ist ein sehr guter Algorithmus. Wenn die Anweisungen nicht so deutlich wären, würden meine Wölfe nicht so gut aussehen. Wenn das Ergebnis genauso werden soll, wie du dir das vorgestellt hast, musst du sehr präzise sein."
+    C4_unplugged_binary:
+      1:
+        text: "In jedem Team muss die Person, die Anweisungen gibt, also die, die das Papier hält, bestimmen, was ihr \"AN\"-Symbol sein soll und was ihr \"AUS\"-Symbol sein soll. Das binäre System ist ein bisschen wie ein Alphabet mit zwei Buchstaben. Als wären A und B das gesamte Alphabet, oder 0 und 1."
+      2:
+        text: "Am häufigsten wird das binäre System in einer \"Wenn\"-Anweisung benutzt. Das ist ein klassisches Element der Programmierung. Das Programm läuft und sagt: Wenn etwas wahr ist, tue dies. Wenn nicht, tue das. Und wenn du etwas Komplizierteres machen möchtest? Zum Beispiel möchtest du anstatt einer \"Wenn\"-Anweisung mit Bildern oder Musik im Computer arbeiten."
+      3:
+        text: "Ein Computer kann nur die binäre Sprache, aber ein Bild ist nicht binär. Es besteht nicht aus Einsen und Nullen – wie geht das also? Hier ist ein Beispiel: Du hast ein schönes Bild. Ein Bild ist im Grunde eine Form von Information. Alle Informationen können als binäre Informationen codiert werden, wir müssen nur herausfinden, wie."
+      4:
+        text: "Stell dir vor, wir legen ein Raster über diesen Pandabär und entscheiden bei jedem Quadrat, ob das Quadrat eher schwarz oder eher weiß ist. Und dann färben wir es in dieser Farbe ein. Jetzt ist jedes Quadrat im Raster entweder schwarz oder weiß und wir können die schwarzen Quadrate als Nullen (eine binäre Ziffer) bezeichnen und die weißen Quadrate als Einsen (die andere binäre Ziffer). Und am Ende hast du nur eine Reihe Einsen und Nullen. So kannst du dieses Bild im Binärsystem darstellen."
+    C4_unplugged_forloops:
+      1:
+        text: "Diese Lektion heißt \"Zähle mit\"-Schleifenspaß. In dieser Lektion verwenden wir eine Zahlenreihe, um ein Würfelspiel zu machen. Jeder Spieler würfelt, um einen Startwert, einen Endwert und einen Intervall zu bestimmen. Während jeder Runde kreisen wir unseren Startwert ein und jeden Wert, den wir beim Vorwärtsgehen gemäß dem Intervallwert erreichen. Wenn wir unseren Endwert erreichen, halten wir an. Die Person mit der höchsten Punktzahl gewinnt!"
+      2:
+        text: "\"Zähle mit\"-Schleifen können sehr praktisch sein. Zum Beispiel würdest du als Meteorologe die ganze Zeit \"Zähle mit\"-Schleifen verwenden. Hallo, ich bin Becky. Ich arbeite als Wind-Meteorologin bei EverPower Renewables. Ich prognostiziere Windgeschwindigkeiten für die Columbia-River-Gorge-Region, in der unser Unternehmen Windparks besitzt."
+      3:
+        text: "Wir versuchen, zu verstehen, wie viel Wind es gibt, damit wir vorher sagen können, wie viel Energie produziert wird. Diese Informationen geben wir an Energiehändler weiter. Diese kaufen und verkaufen Energie und nutzen dabei unsere Angaben, wie viel Energie zur Verfügung stehen wird. So wird sichergestellt, dass alle genug Strom zur Verfügung haben, die Lichter in deinem Haus leuchten und wir möglichst viel Energie mit unseren Windparks produzieren."
+      4:
+        text: "Wir sind hier in der nationalen Steuerzentrale von EverPower Renewables in Portland. Die Informationen aller Windparks im ganzen Land kommen hier an. Selbst die leistungsstärksten Computer schaffen es nicht, die Atmosphäre genau zu simulieren. Bei unseren Computer-Prognosemodellen verwenden wir ein Raster. Jeder Rasterpunkt besitzt einen Breitengrad und einen Längengrad. Wir müssen die Physik berechnen und versuchen, Windgeschwindigkeit, Temperatur, Druck und so weiter zu bestimmen."
+      5:
+        text: "Da wir ziemlich große Raster verwenden und dies an vielen Orten tun, laufen dafür unsere Schleifen viele Millionen Mal. Und ich verwende dafür immer \"Zähle mit\"-Schleifen. Hier ist zum Beispiel eine \"Zähle mit\"-Schleife. Bei der Vorhersage von Wind gibt es so viele verschiedene Parameter, dass ein Mensch nicht in der Lage wäre, alle diese Berechnungen zu machen. Es gibt so viele Einflüsse, die auf den Wind einwirken, dass wir die Vorhersage nur mit einem Computermodell machen können."
+    C4_unplugged_madlibs:
+      1:
+        text: "In dieser Lektion spielen wir mit Lückengeschichten. Es gibt eine Vorlage, die du ausfüllen kannst, um ähnliche Geschichten mit verrückten Ideen zu schreiben."
+      2:
+        text: "Bei dieser Lektion haben wir gelernt, aus zwei existierenden Geschichten eine abstrahierte Vorlage zu erstellen. Abstraktion ist die Kunst, Unterschiede zu entfernen, um herauszufinden, wie eine Lösung für verschiedene Probleme verwendet werden kann. Das ist sehr hilfreich in der Informatik, da wir so Funktionen erstellen können, die in unterschiedlichen Situationen nützlich sein können."
+    C4_unplugged_parameters:
+      1:
+        text: "Diese Lektion heißt \"Komponieren mit Parametern\". Diesmal schreiben wir selbst einige Songs. Manchmal ist der Refrain nach jeder Strophe etwas anders. Kennst du \"Old Macdonald hat `ne Farm\"? Der Refrain ist bei jedem Tier etwas anders. Und auf der Farm hat er `ne Kuh, i-a-i-a-o. Die kleine Änderung in jedem Refrain kann mit einem Element namens \"Parameter\" gezeigt werden."
+      2:
+        text: "Manchmal benötigt eine Funktion einen Parameter. Ein Parameter ist eine zusätzliche Information, die du in eine Funktion einsetzen und an deine Bedürfnisse anpassen kannst. Wenn du für deine Freunde Eisbecher machst, verwendest du einen Prozess, der Parametern in einem Computerprogramm ähnelt."
+      3:
+        text: "Die Kugel mit Vanilleeis ist vielleicht bei jedem Eisbecher dieselbe, aber wenn du deine Freunde fragst, welche beiden Extrazutaten sie möchten, kann es viele verschiedene Kombinationen geben. Extrazutat ist der Funktionsname, und die verschiedenen Sorten von Zutaten sind die Parameter. Funktionen und Parameter arbeiten zusammen – für tolle Computerprogramme und tolle Eisbecher."
+    C4_unplugged_variables:
+      1:
+        text: "Diese Lektion heißt \"Variablen in Briefumschlägen\". Wir werden lernen, wie wir Sätze bauen können, wenn wir nicht alle Informationen zur Verfügung haben. Wir alle kennen Situationen, in denen wir Lücken ausfüllen. Zum Beispiel wenn wir unseren Namen auf ein Arbeitsblatt schreiben. Manchmal muss mehr als ein Wort ausgefüllt werden. In diesem Fall werden die Lücken gekennzeichnet, damit wir wissen, welche Informationen wohin gehören."
+      2:
+        text: "Variablen sind Platzhalter für Informationen, die sich ändern können. Indem wir eine Variable für die fehlende Information verwenden, können wir weiterarbeiten und jemand anderes kann die fehlende Information später ausfüllen. In Software werden viele Variablen verwendet. Wir verwenden Variablen als Platzhalter für Name, E-Mail-Adresse und Benutzername. So sagen wir dem Programm, wo diese Informationen erscheinen sollen, nachdem sie vom Anwender ausgefüllt wurden. Bei unserer Arbeit verwenden wir ständig Variablen."
+      3:
+        text: "Immer wenn du eine Information für später speichern musst, wird eine Variable verwendet. Wenn wir zum Beispiel zählen wollen, wie viele Tweets der Anwender geschrieben hat. Für jeden Tweet fügen wir dem Wert eine 1 hinzu und jedes Mal, wenn der Anwender einen Tweet löscht, ziehen wir eine 1 ab. Immer wenn wir wissen müssen, wie viele Tweets der Anwender geschrieben hat, schauen wir einfach auf die Variable."
+    C4_variables_artist:
+      1:
+        text: "Eine Variable ist wie ein Behälter, in dem du einen Wert speichern kannst. Wenn du diese Variable in einem Algorithmus verwendest, wird der Behälter geöffnet und der Wert nachgeschaut. So kannst du schlauere Algorithmen schreiben, die sich je nach dem in der Variable gespeicherten Wert unterschiedlich verhalten."
+      2:
+        text: "Zum Beispiel könnte ich ein Algorithmus schreiben, der meinem kleinen Bruder sagt: Herzlichen Glückwunsch zum 10. Geburtstag! Das funktionert dieses Jahr gut, aber nächstes Jahr müsste da stehen: Herzlichen Glückwunsch zum 11. Geburtstag! Dazu könnte ich eine Variable namens \"Alter\" erstellen, die das Alter meines Bruders speichert und einen Algorithmus schreiben, der sagt: Herzlichen Glückwunsch zum \"Alter\". Geburtstag! Weil sich Variablen ändern können, kann ich die Variable \"Alter\" jedes Jahr um den Wert 1 erhöhen."
+      3:
+        text: "In dieser Aufgabe verwenden wir eine Variable für die Länge der Linie, die unser Künstler zeichnet. Unten im Code wird der \"Vorwärts bewegen\"-Baustein sich diese Längen-Variable ansehen, um den Wert abzulesen, den du bestimmt hast."
+    C4_variables_playlab:
+      1:
+        text: "Eine Variable ist ein Behälter, in dem du einen Wert speichern kannst. Wenn du diese Variable in einem Algorithmus verwendest, wird der Behälter geöffnet und der Wert nachgeschaut. So kannst du schlauere Algorithmen schreiben, die sich je nach dem in der Variable gespeicherten Wert unterschiedlich verhalten."
+      2:
+        text: "Jetzt kannst du im Spielelabor bei verschiedenen Spielen die Werte von Variablen wie Geschwindigkeit, Höhe, Punktzahl ändern, um die Regeln oder Eigenschaften des Spiels zu ändern. Du musst nicht den Spielalgorithmus verändern, um das Spiel zu verändern, nur die Variable."
+      3:
+        text: "Bei meiner Arbeit für Kindle und X-ray für Bücher nutzen wir Variablen auf unterschiedliche Weise. Du könntest eine Variable verwenden, um die Seitenzahlen von einem Buch zu speichern. Anwender können die Schriftgröße auf einer Seite erhöhen oder verringern. Die Anzahl der Buchseiten kann sich je nach Schriftgröße verändern. Dann können wir die Seitenzahl anpassen, indem wir die Seitenzahl in der Variablen speichern."
+    infinity_playlab_events:
+      1:
+        text: "Jetzt lernen wir ein Element kennen, das Spiele-Programmierer jeden Tag benutzen. Es heißt \"Ereignisse\". Ein Ereignis sagt deinem Programm darauf zu achten, ob etwas passiert. Und wenn es passiert, wird eine Aktion durchgeführt. Einige Beispiele für Ereignisse sind etwa, auf Mausklicks, Pfeiltasten oder ein Antippen den Bildschirms zu achten."
+      2:
+        text: "Hier lassen wir Baymax nach oben gehen, um Hiro zu berühren, und nach unten, um Rapunzel zu berühren, wenn der Spieler die Pfeiltasten oder die Schaltflächen benutzt. Dazu verwenden wir den \"Nach-oben-Pfeil\"-Baustein und hängen den \"Figur-nach-oben-bewegen\"-Baustein daran. Wenn der Spieler die Pfeiltaste drückt, werden die am \"Nach-oben-Pfeil\"-Baustein hängenden Bausteine ausgeführt. Für die Bewegung nach unten machen wir dasselbe. So wird dein Spiel Schritt für Schritt immer interaktiver."
+    infinity_playlab_intro:
+      1:
+        text: "In welcher Klasse bist du? Zweite. Zehnte Klasse. Erste Klasse. Ich war in der achten Klasse, als ich gelernt habe, zu programmieren. Ich habe meinen ersten Computer gekriegt, als sich in der siebten Klasse war. Ich finde es spannend, dass ich die Probleme anderer Leute lösen kann. Du kannst deine Kreativität ausdrücken und deine Ideen verwirklichen."
+      2:
+        text: "Informatik ist die Grundlage vieler Dinge, die Studenten und Berufstätige in den nächsten 20 oder 30 Jahren tun werden. Ich programmiere gerne, weil ich gerne Leuten helfe. Ich habe die Möglichkeit, etwas zu bauen, das den Menschen das Leben erleichtert. Das ist fast so, als hätte man Superkräfte. Der Anfang ist das Wichtigste. Ich bin selbst Anfänger und möchte zusammen mit dir lernen."
+      3:
+        text: "Ich heiße John Vechey und bin einer der Mitbegründer von PopCap Games. Wir machen Spiele wie Plants vs. Zombies, Bejeweled und Peggle. Bei Spielen geht es oft weniger darum, wie perfekt der Code oder die Grafik ist, sondern darum, ob sich das Spiel gut anfühlt und Spaß macht. Und ein Gefühl dafür kann man nur entwickeln, indem man ausprobiert, lernt und seine Fähigkeiten anpasst und weiterentwickelt."
+      4:
+        text: "Hast du ein Lieblingsspiel? Heute werden wir mit dem Spielelabor die ersten Schritte machen, um solche Spiele selbst zu erstellen. Gute Spiele haben eine Geschichte, und in jeder Geschichte gibt es verschiedene Figuren. Die Figuren sprechen, bewegen sich und interagieren mit anderen. Sie holen sich Punkte, je nach den Spielregeln. Heute lernen wir Schritt für Schritt, wie das funktioniert. Dafür verwenden wir Disney-Figuren wie Anna, Elsa, Hiro, Baymax und Rapunzel. Wir werden selbst ein Spiel entwickeln, das du teilen und auf dem Smartphone spielen kannst."
+      5:
+        text: "Dein Bildschirm ist in drei Bereiche aufgeteilt. Links ist der Spielbereich, in dem dein Programm ausgeführt wird. Die Anweisungen für jeden Level stehen darunter. Dieses mittlere Feld ist die Werkzeugkiste und jeder Baustein ist ein Stück Code. Der weiße Bereich rechts ist der Arbeitsbereich, in dem wir unser Programm aufbauen."
+      6:
+        text: "Am Anfang musst du deine Bausteine an den orangefarbenen \"Beim Ausführen\"-Baustein anhängen. Du kannst mehrere Bausteine miteinander verbinden, indem du sie ziehst, bis die gelbe Umrisslinie zu sehen ist, und sie werden sich von selbst zusammenfügen. Bei dieser ersten Aufgabe ist Hiro Figur 1 und Baymax ist Figur 2. Wir müssen Hiro zu Baymax bringen. Dazu ziehen wir den \"Nach rechts bewegen\"-Baustein auf die Arbeitsfläche und verbinden ihn mit dem \"Beim Ausführen\"-Baustein. Wenn alle Bausteine am richtigen Platz sind, klicke auf \"ausführen\", um zu sehen, was du programmiert hast."
+      7:
+        text: "Wenn du alle Aufgaben durcharbeitest, kannst du am Ende dein eigenes Spiel mit all diesen Figuren erstellen, die miteinander interagieren, Punkte gewinnen, Microbots, Kirschen, Töpfe, Funken und Eis werfen und einander verschwinden lassen können. Du hast die Wahl!"
+    infinity_playlab_repeat_forever:
+      1:
+        text: "Stell dir vor, du müsstest etwas ewig wiederholen. Hoffentlich wird das nie passieren, denn Computer sind viel besser darin, Dinge zu wiederholen. Das ist der \"Ewig wiederholen\"-Baustein. Alles innerhalb dieses Bausteins wird im Spiel immer wieder passieren."
+      2:
+        text: "Willst du eine Figur dazu bringen, etwas immer wieder zu wiederholen, ohne dass der Spieler etwas tun muss, setzen wir die Bausteine in den \"Ewig wiederholen\"-Baustein. Bei der nächsten Aufgabe lassen wir Anna immer wieder nach oben und unten laufen. Wenn du lernst, wie der \"Wiederholen\"-Befehl funktioniert, kannst du später viel Zeit sparen, wenn du dein eigenes Spiel programmierst."
+    tutorial_puzzle_challenge:
+      1:
+        text: "Was möchtest du werden, wenn du groß wirst, Olivia? Astronautin. Weißt du, was ein Programmierer ist? Ähh, nein. Ein was? Ich weiß nicht, wie man es am besten erklärt, aber Programmieren ist relativ einfach. Es ist eine Reihe von Anweisungen, wie ein Rezept, denen du Schritt für Schritt folgen musst, um das gewünschte Endergebnis zu erreichen."
+      2:
+        text: "Ich kann die Anzahl der Pixel ändern, die Länge der Linie, mit diesem Dropdown-Menü. Wie lang war das noch? Die Anleitungen kannst du unter der Schaltfläche \"ausführen\" sehen. Hier habe ich den \"Vorwärts bewegen\"-Baustein verwendet und wähle 100 Pixel. Ich kann einen Baustein löschen, indem ich ihn in die Werkzeugkiste oder den Papierkorb ziehe. Legen wir ihn wieder zurück."
+      3:
+        text: "Wir lassen den Code laufen, indem wir auf \"ausführen\" klicken. Das hat nicht funktioniert! Ich drücke auf \"Zurücksetzen\" und versuche es nochmal. Du kannst eine Aufgabe so oft probieren wie du möchtest, einzelne Aufgaben überspringen oder sie später lösen. Aber du solltest immer dein Bestes geben und nicht aufgeben! Fügen wir einen weiteren \"Vorwärts bewegen\"-Baustein hinzu. Das funktioniert immer noch nicht. Ich kann einen Baustein zwischen andere Bausteine setzen."
+      4:
+        text: "Nehmen wir einen \"Drehen\"-Baustein und setzen ihn zwischen die \"Vorwärts\"-Bausteine. Um 45 Grad nach links drehen. Versuchen wir es erneut. Zurücksetzen, ausführen, super! Hier ist eine weitere Aufgabe. Manchmal erhältst du etwas fertigen Code, den du vervollständigen sollst. Hier muss ich die passenden Längen und Grade eingeben."
+      5:
+        text: "Manchmal bringst du vielleicht versehentlich den Anfangscode durcheinander. Wie kannst du das reparieren? Drücke einfach auf \"Puzzle löschen\" und beginne erneut. Ich werde diesen Zahlenbaustein in die verschiedenen Pixelbereiche ziehen. Ich wähle 100 für Pixel, 45 für Grad und nochmal 100 für Pixel. Toll! Hier ist die Code-Studio-Biene. Ich muss die Biene zu jeder Blume bringen, um Nektar zu holen."
+      6:
+        text: "Die erste Blume ist drei Felder entfernt, daher muss ich mich dreimal vorwärts bewegen. 1, 2, 3. Dann einmal Nektar holen, und nochmal Nektar holen. Das hat nicht funktioniert! Ich setze einen weiteren \"Vorwärts bewegen\"-Baustein zwischen die \"Nimm Nektar\"-Bausteine und versuche es erneut. So geht es! Du hast gerade gelernt, wie du die Aufgaben mit dem Code-Studio-Künstler und der Biene löst. Viel Glück bei der Code-Studio-Puzzle-Herausforderung"
+    unplug1:
+      1:
+        text: "Was möchtest du werden, wenn du groß wirst, Olivia? Hm... ein Astronaut! Weißt du, was ein Programmierer ist? Ääh, nein. Ein was? Ich weiß nicht, wie ich es am besten erkläre. Computer programmieren ist ziemlich einfach. Es ist eine Reihe von Anweisungen, wie ein Rezept. Du musst sie Schritt für Schritt befolgen, um das gewünschte Endergebnis zu erreichen."
+      2:
+        text: "Informatik kann die Welt verändern. Musikvideos, Spiele, oder herausfinden, ob zwei Menschen sich kennen. Zum Beispiel, Freunde von Leuten finden. Und andere richtig coole Dinge, die sogar Leben retten können. Du musst eine gute Motivation haben. Für mich ist das wie ein Pinsel. Großartige Programme sind für mich nicht anders als großartige Kunst."
+      3:
+        text: "Als ich endlich etwas über Programmierung gelernt habe, haben sich plötzlich viele Türen geöffnet und auf einmal hat man so unendlich viele Möglichkeiten, weiter zu kommen. Programmierung macht Spaß und ist gar nicht so schwer. Du kannst alles tun, was du dir vorstellst. Und wenn du genug gelernt hast, wird plötzlich alles klar. Ein fertiges Programm ist für mich wie eine Struktur voller Licht. Alle Ecken sind beleuchtet. Es ist unglaublich, wie viele Leute du damit berühren und mit wem du alles interagieren kannst."
+      4:
+        text: "Unsere erste Lektion dieser Serie erläutert, was Informatik ist, was ein Informatiker tut und wie du Technologie verantwortungsvoll benutzt. Die Lektion ist sehr wichtig, hat aber viel Text. Zum Abschluss wirst du deine eigene Verschlüsselung mit den Anfangsbuchstaben deines Namens erstellen. Das macht Spaß und ist sehr aufschlussreich, denn das binäre System kann oft sehr kompliziert wirken. Aber wenn du es erst einmal verstanden hast, ist es wie eine Geheimsprache."
+    unplug2:
+      1:
+        text: "Diese Lektion über computerbezogenes Denken zeigt dir, wie du ein großes, kompliziertes Problem nimmst und in kleinere, einfache Probleme aufteilst. Das Ziel der Lektion ist, eine Reihe von Anweisungen zu schreiben, mit denen eine andere Person eines der Monster im Unterrichtsplan zeichnen kann."
+      2:
+        text: "Die Schüler werden in Gruppen aufgeteilt, um Anweisungen zu schreiben und sie mit einer anderen Gruppe auszutauschen, die dann das Monster zeichnet. Die Gruppen schreiben Anweisungen und nutzen dabei die vier Schritte des computerbezogenen Denkens: Zerlegen, Mustererkennung, Abstraktion und Algorithmen."
+      3:
+        text: "Erst zerlegen die Gruppen die Aufgabe – das heißt, sie machen einen Spielplan. Dann suchen Sie bei den Monstern im Katalog nach ähnlichen Mustern. Dann werden Unterschiede zwischen den Monstern abstrahiert oder entfernt. Zum Beispiel hat ein Monster im Katalog \"Vegitas\"-Augen und ein anderes hat \"Spritem\"-Augen. Aber beide haben Augen, also können wir schreiben, das Monster hat \"Leerstelle\"-Augen."
+      4:
+        text: "Die Schüler lernen, eine Reihe von Anweisungen namens Algorithmus zu schreiben, auf denen die einzelnen Elemente der Monster aufgelistet werden, mit Leerstellen anstelle der jeweiligen Stile. Diese Anweisungen geben sie an andere Schüler weiter, damit diese ihr eigenes Monster erstellen können."
+    unplug3:
+      1:
+        text: "Beim Programmieren auf Rasterpapier erklären wir, wie Programmierung funktioniert, indem wir Zeichnungen anhand von Pfeilen und Skizzen erstellen. Eine Person erhält eine kleine Zeichnung auf Rasterpapier. Dann muss sie mit Pfeilen beschreiben, wie diese Zeichnung erstellt werden kann."
+      2:
+        text: "Bei dieser Aktivität dürfen nur diese Symbole verwendet werden: ein Feld vorwärts, ein Feld rückwärts, ein Feld nach oben, ein Feld nach unten, Farbe wechseln, Feld mit Farbe füllen. Nachdem wir die Anweisung codiert haben, geben wir sie einer anderen Person, die den Code liest und das Bild zeichnet."
+    unplug4:
+      1:
+        text: "Beim Programmieren auf Rasterpapier erklären wir, wie Programmierung funktioniert, indem wir Zeichnungen anhand von Pfeilen und Skizzen erstellen. Eine Person erhält eine kleine Zeichnung auf Rasterpapier. Dann muss sie mit Pfeilen beschreiben, wie diese Zeichnung erstellt werden kann."
+      2:
+        text: "Während der zweiten Hälfte der Aktivität fragen wir Schüler, auf wie viele verschiedene Arten sie ein Stück Papier falten können, um 16 gleiche Rechtecke zu erhalten. Dann sprechen wir darüber, wie verschiedene Lösungen zum selben Endergebnis führen können, und warum einige Lösungen in bestimmten Situationen besser sind."
+    unplug5:
+      1:
+        text: "Beim Programmieren auf Rasterpapier erklären wir, wie Programmierung funktioniert, indem wir Zeichnungen anhand von Pfeilen und Skizzen erstellen. Eine Person erhält eine kleine Zeichnung auf Rasterpapier. Dann muss sie mit Pfeilen beschreiben, wie diese Zeichnung erstellt werden kann."
+      2:
+        text: "Während der zweiten Hälfte der Aktivität fragen wir Schüler, auf wie viele verschiedene Arten sie ein Stück Papier falten können, um 16 gleiche Rechtecke zu erhalten. Dann sprechen wir darüber, wie verschiedene Lösungen zum selben Endergebnis führen können, und warum einige Lösungen in bestimmten Situationen besser sind."
+    unplug6:
+      1:
+        text: "Diese Aktivität heißt \"Coding mit Karten\" und eignet sich für jedes Alter. Wie du bereits in früheren Lektionen über \"Wenn\"-Anweisungen mit Blockly gelernt hast, besitzen diese Anweisungen ein Element, das überprüft wird, um herauszufinden, ob es wahr oder falsch ist. Das ist die Bedingung, die auf viele verschiedene Weisen benutzt werden kann."
+      2:
+        text: "Dies nutzen wir, indem wir Programme auf Papier erstellen, die mit zufällig gezogenen Spielkarten ausgeführt werden. Du könntest eine \"Wenn\"-Anweisung haben, die sagt: Wenn die Karte, die du ziehst, größer als 8 ist, erhältst du einen Punkt. Ansonsten erhält dein Gegner einen Punkt. Du kannst die Regeln so kompliziert oder einfach machen, wie du möchtest."
+    unplug7:
+      1:
+        text: "Du kennst sicherlich Liedtexte, in denen nach der ersten Strophe der Text des Refrains steht und zwischen den anderen Strophen nur das Wort \"Refrain\". So wird eine Funktion aufgerufen."
+      2:
+        text: "In dieser Lektion legen wir den Text des Refrains zu Beginn des Liedes fest und singen dann das Lied. Dann sprechen wir an, dass die Klasse nicht das Wort \"Refrain\" singt, sondern automatisch im oberen Textabschnitt nachschaut, wo der Text des Refrains steht. Wir nutzen das als Einführung, um zu verstehen, was ein Programm tut, wenn es eine Funktion definiert und abruft."
+      3:
+        text: "Dabei werden bekannte Lieder wie Old Macdonald verwendet, um zu besprechen, wie ein Refrain immer wieder verwendet wird, sich aber teilweise auch ändern kann. Ein Lied wie Old McDonald, bei denen sich nur einzelne Wörter ändern, ist ideal, um die Idee von Parametern einzuführen. Bestimmte Wörter werden verwendet, damit zusätzliche Informationen an deine Funktion gesendet werden können. Sobald wir sicher sind, dass jeder das Konzept verstanden hat, kannst du eigene bekannte Lieder analysieren. Schaut, ob ihr es gemeinsam herausfinden könnt."
+    unplug8:
+      1:
+        text: "Unsere Lektion über Abstraktionen nutzt das bekannte Konzept der Lückengeschichten, bei denen Lücken in einer Geschichte mit unterschiedlichen Wörtern ausgefüllt werden. Wir nehmen diese Idee, fordern die Kinder auf, eigene Wörter für ihre eigenen Geschichten zu erfinden und erläutern das Konzept der Abstraktion."
+      2:
+        text: "Dabei geht es um Funktionen, wie im Lied \"Old Macdonald\", bei dem es eine Struktur für den Refrain gibt, aber einzelne Elemente geändert werden. Du suchst das kleine Element, das sich ändert und setzt dein eigenes Wort dort ein. Manchmal ändern sich aber auch drei Worte, also ersetzt du diese mit drei Parametern und auch das ist sehr nützlich."
+      3:
+        text: "Du kannst eine einzige Funktion haben, die unterschiedliche Probleme löst. Leute schreiben oft unterschiedliche Funktionen für alle diese Probleme und merken nicht, dass es nur einen winzigen Unterschied gibt. Wenn sie lediglich herausfinden würden, wie Sie diesen kleinen Unterschied ändern, könnten sie dieselbe Funktion immer und immer wieder verwenden, statt 14 unterschiedliche Funktionen zu nutzen."
+    unplug9:
+      1:
+        text: "Staffellauf-Programmierung ist eine lustige Lektion, bei der mehr als nur Informatik vermittelt wird. Die Aktivität ist ideal, wenn Schüler etwas kribbelig werden und Bewegung brauchen. Und die manchmal trockene Informatik wird dadurch ebenfalls spannender."
+      2:
+        text: "Die Klasse wird in zwei Gruppen aufgeteilt, die zwei Schlangen bilden und einen Staffellauf machen. Die erste Person in jeder Gruppe läuft zur anderen Seite des Raums, wo eine Zeichnung auf Rasterpapier und ein leeres Stück Papier liegen. Sie schreiben den ersten Schritt auf, mit dem das Bild reproduziert werden kann, laufen zurück auf die andere Seite, schlagen den nächsten Spieler ab, der losläuft und den nächsten Schritt aufschreibt."
+      3:
+        text: "Das ist eine gute Möglichkeit, die Idee des Debuggens einzuführen, um nicht nur die eigene Arbeit zu überprüfen, sondern auch die Arbeit, die andere vor einem geleistet haben. Die Teilnehmer lernen schnell, wie wichtig es ist, beim Programmieren sorgfältig zu sein, wenn ein ganzes Team von der eigenen Arbeit abhängt."
+    unplug10:
+      1:
+        text: "Bei dieser Aktivität wird leicht verständlich erläutert, wie das Internet funktioniert. Die erforderlichen Fachbegriffe werden leicht verständlich vermittelt, sodass Schüler die Übertragung von Nachrichten simulieren können."
+      2:
+        text: "Schüler übertragen Nachrichten und geben dabei vor, eine von drei Übertragungsmethoden zu sein. Drahtloses Internet, DSL oder Faseroptik. Der Schüler, der die drahtlose Übertragung repräsentiert, muss die Nachricht auf dem Kopf tragen, da bei dieser Übertragungsmethode der Verlust einiger Informationen am wahrscheinlichsten ist."
+      3:
+        text: "Der Schüler, der vorgibt, DSL oder Kabel zu sein, trägt die Nachricht auf dem Rücken der Hand, da dort der Verlust von Informationen weniger wahrscheinlich ist. Und der Schüler, der die Faseroptik darstellt, trägt die Nachricht mit beiden Händen. Diese Aktivität ist großartig, um etwas zu verstehen, dass viele von uns jeden Tag benutzen."
+    unplug11:
+      1:
+        text: "Jetzt ist es an der Zeit, alle Aktivitäten zu rekapitulieren, die du in den letzten 19 Lektionen kennengelernt hast. Die Schüler sollten daran erinnert werden, dass sie sehr viel gelernt und erreicht haben. Sie haben in diesen Lektionen mehr über Informatik gelernt, als viele Erwachsene wissen."
+      2:
+        text: "Sprich in der Klasse oder in kleinen Gruppen über ihre Lieblingslektionen. Nachdem das Gelernte in Erinnerung gerufen wurde, ist es Zeit, kreativ zu werden. Teile die Schüler in Gruppen auf und lass sie eine eigene Offline-Lektion entwickeln. Gib jeder Gruppe ein Schlüsselkonzept wie Funktionen oder Algorithmen und Bastelmaterial, das sie verwenden können. Lasse jede Gruppe ihre neue Offline-Aktivität präsentieren oder reserviere einen weiteren Tag für einige der Schüleraktivitäten."
+      3:
+        text: "Wir von Code.org hoffen, dass dir dieser Kurs jede Menge Spaß gemacht hat. Egal, ob du die beste neue App entwickeln, mit Computerprogrammen gegen Krankheiten kämpfen, oder einfach ein hervorragender Problemlöser sein möchtest, dieser Kurs war der erste Schritt auf dem Weg zu deinem Traum."
+    starwars_intro:
+      1:
+        text: "Hallo, ich heiße Kathleen Kennedy und bin Produzentin von Star Wars: Das Erwachen der Macht. Heute arbeitest du mit einem unserer Stars, BB-8. BB-8 ist ein Kugel-Droide. Alle seine Bewegungen und Handlungen werden durch Computer-Software gesteuert. Die Informatik beeinflusst jede Industrie, vom Marketing über das Gesundheitswesen bis zum Film. Für einen Film wie \"Das Erwachen der Macht\" arbeiten Hunderte von Informatikern zusammen."
+      2:
+        text: "Hallo, ich heiße Rachel Rose und bin Entwicklungsingenieurin bei ILM. Ich leite das Team für Animation und Figurenentwicklung. In \"Das Erwachen der Macht\" unterstütze ich das Künstlerteam, welches die Knochensysteme erstellt. Dies sind Teile eines Charakters, welche sich bewegen und es der Figur erlauben, glaubwürdig auszusehen."
+      3:
+        text: "In der nächsten Stunde werden wir unser eigenes Star Wars Spiel entwickeln. Dabei lernst du die Grundlagen der Programmierung. Normalerweise werden Programme als Text geschrieben, aber hier benutzen wir Bausteine, die wir auf die Arbeitsfläche ziehen, um die Programme zu schreiben. Im Hintergrund wird dabei nach wie vor Code erstellt. Nachdem du die Grundlagen mit Bausteinen gelernt hast, wechselst du zu Javascript, eine der beliebtesten Programmiersprachen im Web."
+      4:
+        text: "Zuerst arbeiten wir mit Rey, um BB-8 zu programmieren, damit er den Metallschrott einsammelt. Dein Bildschirm ist in drei Bereiche aufgeteilt. Links ist der Star Wars Spielbereich, in dem dein Programm ausgeführt wird. Die Anweisungen für jeden Level stehen unter dem Spielbereich."
+      5:
+        text: "Dieses mittlere Feld ist die Werkzeugkiste und jeder Baustein ist ein Befehl an BB-8."
+      6:
+        text: "Der leere Bereich rechts wird Arbeitsbereich genannt. Dort werden wir unser Programm zusammenbauen."
+      7:
+        text: "Wenn ich den \"moveLeft();\"-Baustein in den Arbeitsbereich ziehe und auf \"ausführen\" klicke, was passiert dann? BB-8 bewegt sich um ein Feld auf dem Raster."
+      8:
+        text: "Und was ist, wenn BB-8 nach dem \"moveLeft();\"-Baustein noch etwas anderes tun soll? Ich füge dem Programm einen weiteren Baustein hinzu. Ich wähle den \"moveUp();\"-Baustein und ziehe ihn unter den \"moveLeft();\"-Baustein, bis die gelbe Umrandung erscheint. Dann lege ich ihn ab und die beiden Bausteine werden zusammengesetzt."
+      9:
+        text: "Wenn ich erneut auf \"ausführen\" klicke, führt BB-8 der Reihe nach die Befehle aus, die im Arbeitsbereich zusammengesetzt sind. Wenn du einen Baustein löschen möchtest, dann löse ihn von den übrigen Bausteinen und ziehe ihn zurück in die Werkzeugkiste."
+      10:
+        text: "Du kannst jederzeit die Schaltfläche „Zurücksetzen“ benutzen, um BB-8 zurück auf Start zu bringen. Los geht‘s!"
+    starwars_typing:
+      1:
+        text: "In den Bausteinen verwenden wir Javascript-Befehle. Javascript ist aktuell die beliebteste Programmiersprache für professionelle Entwickler. Bausteine sind großartig, um die Grundlagen des Programmierens zu lernen. Selbst Top-Universitäten wie Harvard und Berkeley unterrichten auf diese Weise. Aber nachdem die Grundlagen sitzen, wird Code als Text geschrieben, da das schneller geht."
+      2:
+        text: "Wir können Hunderte von Befehlen tippen, ohne sie jedesmal in der Werkzeugkiste zu suchen und auf die Arbeitsfläche ziehen zu müssen. Während du lernst, geht das Tippen etwas langsamer, aber du solltest es dennoch versuchen."
+      3:
+        text: "In der oberen rechten Ecke des Arbeitsbereichs kannst du in jeder Aufgabe die \"Zeige Quelltext\"-Schaltfläche anklicken, um von Bausteinen zu Quellcode umzuschalten und zu tippen."
+      4:
+        text: "In der nächsten Lektion werden wir mit dem Eingabe-Modus beginnen. Dort kannst du nach wie vor den Baustein aus der Werkzeugkiste ziehen, oder den Befehl per Hand eingeben. Sobald du mit der Eingabe beginnst, werden unter deiner Eingabe Namen möglicher Befehle angezeigt. Statt den gesamten Befehl zu tippen, kannst du eine dieser Optionen wählen, damit es schneller geht. In meinem Beruf benutze ich immer die Autovervollständigung, wenn ich Code schreibe."
+      5:
+        text: "Wenn du Code schreibst, musst du sehr genau sein. Du musst alles richtig schreiben, an der richtigen Stelle Groß- und Kleinschreibung verwenden und jedes Semikolon und jede Klammer richtig setzen. Selbst bei einem kleinen Tippfehler kann BB-8 den Code nicht verstehen und wird sich nicht bewegen."
+      6:
+        text: "Wenn du in einer Zeile einen Fehler machst, dann hebt der Editor ihn für dich hervor, damit du versuchen kannst, den Quelltext zu ändern und den Fehler zu beheben."
+      7:
+        text: "Wenn du nicht weiter weißt, kannst du alles mit der \"Neu Starten\"-Schaltfläche zurücksetzen oder jederzeit zum Baustein-Modus zurückkehren, indem du oben rechts klickst. Probieren wir es aus! Sei nicht frustriert, wenn du Fehler machst. Auch bei den besten Programmierern hat am Anfang nicht alles geklappt."
+    starwars_events:
+      1:
+        text: "Hallo, ich heiße Charita Carter. Ich bin Kreativproduzentin bei Walt Disney Imagineering. Ich bin für die Teams verantwortlich, die Attraktionen für unsere Gäste entwickeln. Wir versuchen immer, die Attraktionen zu verbessern, um unseren Gästen eine bessere Erlebnisse zu bieten. Die Technik spielt dabei eine große Rolle."
+      2:
+        text: "Glückwunsch. Du hast es geschafft! Du hast BB-8 programmiert. Jetzt bist du bereit für eine schwierigere Aufgabe. Lass es uns versuchen. Nachdem du die Grundlagen der Programmierung gelernt hast, reisen wir in der Zeit zurück, damit du dein eigenes Spiel mit R2-D2 und C-3PO entwickeln kannst."
+      3:
+        text: "Um ein Spiel zu programmieren, müssen wir ein Konzept lernen, dass Programmierer jeden Tag verwenden: Ereignisse. Ereignisse befehlen deinem Programm, darauf zu achten, ob etwas Bestimmtes passiert. Wenn das der Fall ist, wird eine Aktion durchgeführt."
+      4:
+        text: "Zum Beispiel wenn die Maus geklickt wird, eine Taste gedrückt oder auf den Bildschirm getippt wird."
+      5:
+        text: "Wir werden R2-D2 so programmieren, dass er zuerst dem oberen Rebellenpiloten eine Nachricht übermittelt und dann zum unteren Rebellenpiloten geht. Wir bewegen ihn mithilfe von Ereignissen. Wenn der Spieler die Pfeiltasten oder die Schaltflächen benutzt."
+      6:
+        text: "Wir verwenden den \"whenUp()\"-Ereignisbaustein und hängen den \"goUp()\"-Baustein daran. Wenn der Spieler den Nach-oben-Pfeil drückt, wird der Code unter dem \"whenUp()\"-Baustein ausgeführt. Für die Bewegung nach unten machen wir dasselbe."
+      7:
+        text: "Dazu verwenden wir einen Befehl namens \"whenUp()\". Wenn du den Befehl aus der Werkzeugkiste ziehst, siehst du, dass er mit einer geschweiften Klammer beginnt und endet, statt einem Semikolon. So können wir andere Befehle in die Mitte setzen. Jeder Befehl, den wir in diese Klammern setzen, wird ausgeführt, wenn der Spieler den Nach-oben-Pfeil drückt."
+      8:
+        text: "Wir möchten, dass sich R2-D2 nach oben bewegt, deshalb setzen wir einen \"goUp();\"-Baustein in den Befehl. Für die Bewegung nach unten machen wir dasselbe."
+      9:
+        text: "Anstatt Code zu schreiben, welcher R2-D2 bewegt, können wir ihn auf die Tasten reagieren lassen, um ihn so über den Bildschirm zu bewegen. So wird dein Spiel nach und nach immer interaktiver."
+    starwars_congrats:
+      1:
+        text: "Hallo, mein Name ist Alice und ich leite die Produkt- und Ingenieurteams hier bei Code.org und ich habe an dem Tutorial gearbeitet, dass du gerade spielst."
+      2:
+        text: "Du hast es bis zum letzten Level geschafft. Herzlichen Glückwunsch! Du weißt jetzt alles, was du zum Programmieren deines eigenen Star Wars Spiels brauchst. Jetzt gibt es keine Anleitungen und Aufgaben mehr. Du kannst dein eigenes Spiel nach deinen Vorstellungen programmieren. Und noch etwas: Jetzt stehen dir sogar neue Geräusche und Befehle zur Verfügung."
+      3:
+        text: "[Schüler spricht] Also wir haben ein Spiel gemacht, bei dem du Punkte kriegst, wenn du die Ballonsäue schnappst. Das Besondere ist, jedes Mal wenn du eine Ballonsau schnappst, erscheint ein Sturmsoldat. Der ganze Bildschirm ist voll mit Ballonsäulen und wenn du 10.000 von ihnen berührst, gewinnst du."
+      4:
+        text: "[Schüler sprechen] Wir haben ein Spiel gemacht, wo du nicht verlieren kannst und immer Punkte kriegst, egal was du tötest. Bei meinem Programm habe ich die Tasten umgedreht. Wenn du nach oben klickst, geht die Figur nach unten und wenn du nach rechts klickst, geht die Figur nach links. Das ist richtig schwierig! Manchmal hast du einen unfairen Vorteil, wenn du der Entwickler des Spiels bist. Habe ich es geschafft? Yay!"
+      5:
+        text: "Wenn du mit deinem Spiel fertig bist, wähle \"Teilen\", um einen Link zu bekommen. So kannst du es mit deinen Freunden teilen oder auf deinem Handy spielen. Viel Spaß!"
+    starwars_blocks_intro:
+      1:
+        text: "Hallo, ich heiße Kathleen Kennedy und bin Produzentin von Star Wars: Das Erwachen der Macht. Heute arbeitest du mit einem unserer Stars, BB-8. BB-8 ist ein Kugel-Droide. Alle seine Bewegungen und Handlungen werden durch Computer-Software gesteuert. Die Informatik beeinflusst jede Industrie, vom Marketing über das Gesundheitswesen bis zum Film. Für einen Film wie \"Das Erwachen der Macht\" arbeiten Hunderte von Informatikern zusammen."
+      2:
+        text: "Hallo, ich heiße Rachel Rose. Ich bin Entwicklungsingenieurin bei ILM. Ich leite das Team für Animation und Figurenentwicklung. In \"Das Erwachen der Macht\" unterstütze ich das Künstlerteam, welches die Knochensysteme erstellt. Dies sind Teile eines Charakters, welche sich bewegen und es der Figur erlauben, glaubwürdig auszusehen."
+      3:
+        text: "In der nächsten Stunde werden wir unser eigenes Star Wars Spiel entwickeln. Dabei lernst du die Grundlagen der Programmierung. Normalerweise werden Programme als Text geschrieben, aber hier benutzen wir Bausteine, die wir auf die Arbeitsfläche ziehen, um die Programme zu schreiben. Zuerst arbeiten wir mit Rey, um BB-8 zu programmieren, damit er den Metallschrott einsammelt."
+      4:
+        text: "Dein Bildschirm ist in drei Bereiche aufgeteilt. Links ist der Star Wars Spielbereich, in dem dein Programm ausgeführt wird. Die Anweisungen für jeden Level stehen unter dem Spielbereich."
+      5:
+        text: "Dieses mittlere Feld ist die Werkzeugkiste und jeder Baustein ist ein Befehl an BB-8."
+      6:
+        text: "Der leere Bereich auf der rechten Seite wird \"Arbeitsfläche\" genannt. Dort werden wir unser Programm zusammenbauen."
+      7:
+        text: "Wenn ich den \"moveLeft();\"-Baustein in den Arbeitsbereich ziehe, was passiert dann? BB-8 bewegt sich um ein Feld auf dem Raster."
+      8:
+        text: "Und was ist, wenn BB-8 nach dem \"moveLeft();\"-Baustein noch etwas anderes tun soll? Ich füge dem Programm einen weiteren Baustein hinzu. Ich wähle den \"moveUp();\"-Baustein und ziehe ihn unter den \"moveLeft();\"-Baustein, bis die gelbe Umrandung erscheint. Dann lege ich ihn ab und die beiden Bausteine werden zusammengesetzt. Wenn ich erneut auf \"ausführen\" klicke, führt BB-8 der Reihe nach die Befehle aus, die im Arbeitsbereich zusammengesetzt sind."
+      9:
+        text: "Wenn du einen Baustein löschen möchtest, dann löse ihn von den übrigen Bausteinen und ziehe ihn zurück in die Werkzeugkiste."
+      10:
+        text: "Nachdem du auf \"ausführen\" gedrückt hast, kannst du jederzeit den Zurücksetzen-Knopf benutzen, um BB-8 zurück auf Start zu bringen. Los geht‘s!"
+    starwars_blocks_events:
+      1:
+        text: "Hallo, ich heiße Charita Carter. Ich bin Kreativproduzentin bei Walt Disney Imagineering. Ich bin für die Teams verantwortlich, die Attraktionen für unsere Gäste entwickeln. Wir versuchen immer, die Attraktionen zu verbessern, um unseren Gästen eine bessere Erlebnisse zu bieten. Die Technik spielt dabei eine große Rolle."
+      2:
+        text: "Glückwunsch. Du hast es geschafft! Du hast BB-8 programmiert. Jetzt bist du bereit für eine schwierigere Aufgabe. Lass es uns versuchen. Nachdem du die Grundlagen der Programmierung gelernt hast, reisen wir in der Zeit zurück, damit du dein eigenes Spiel mit R2-D2 und C-3PO entwickeln kannst."
+      3:
+        text: "Um ein Spiel zu programmieren, müssen wir ein Konzept lernen, dass Programmierer jeden Tag verwenden: Ereignisse. Ereignisse befehlen deinem Programm, darauf zu achten, ob etwas Bestimmtes passiert. Wenn das der Fall ist, wird eine Aktion durchgeführt."
+      4:
+        text: "Zum Beispiel wenn die Maus geklickt wird, eine Taste gedrückt oder auf den Bildschirm getippt wird."
+      5:
+        text: "Wir werden R2-D2 so programmieren, dass er zuerst dem oberen Rebellenpiloten eine Nachricht übermittelt und dann zum unteren Rebellenpiloten geht. Wir bewegen ihn mithilfe von Ereignissen. Wenn der Spieler die Pfeiltasten oder die Schaltflächen benutzt."
+      6:
+        text: "Wir verwenden den \"whenUp()\"-Ereignisbaustein und hängen den \"goUp()\"-Baustein daran. Wenn der Spieler den Nach-oben-Pfeil drückt, wird der Code unter dem \"whenUp()\"-Baustein ausgeführt. Für die Bewegung nach unten machen wir dasselbe. Anstatt Code zu schreiben, welcher R2-D2 bewegt, können wir ihn auf die Tasten reagieren lassen, um ihn so über den Bildschirm zu bewegen."
+      7:
+        text: "So wird dein Spiel nach und nach immer interaktiver."
+    starwars_blocks_congrats:
+      1:
+        text: "Hallo, mein Name ist Alice und ich leite die Produkt- und Ingenieurteams hier bei Code.org und ich habe an dem Tutorial gearbeitet, dass du gerade spielst."
+      2:
+        text: "Du hast es bis zum letzten Level geschafft. Herzlichen Glückwunsch! Du weißt jetzt alles, was du zum Programmieren deines eigenen Star Wars Spiels brauchst. Jetzt gibt es keine Anleitungen und Aufgaben mehr. Du kannst dein eigenes Spiel nach deinen Vorstellungen programmieren. Und noch etwas: Jetzt stehen dir sogar neue Geräusche und Befehle zur Verfügung."
+      3:
+        text: "[Schüler spricht] Also wir haben ein Spiel gemacht, bei dem du Punkte kriegst, wenn du die Ballonsäue schnappst. Das Besondere ist, jedes Mal wenn du eine Ballonsau schnappst, erscheint ein Sturmsoldat. Der ganze Bildschirm ist voll mit Ballonsäulen und wenn du 10.000 von ihnen berührst, gewinnst du."
+      4:
+        text: "[Schüler sprechen] Wir haben ein Spiel gemacht, wo du nicht verlieren kannst und immer Punkte kriegst, egal was du tötest. Bei meinem Programm habe ich die Tasten umgedreht. Wenn du nach oben klickst, geht die Figur nach unten und wenn du nach rechts klickst, geht die Figur nach links. Das ist richtig schwierig! Manchmal hast du einen unfairen Vorteil, wenn du der Entwickler des Spiels bist. Habe ich es geschafft? Yay!"
+      5:
+        text: "Wenn du mit deinem Spiel fertig bist, wähle \"Teilen\", um einen Link zu bekommen. So kannst du es mit deinen Freunden teilen oder auf deinem Handy spielen. Viel Spaß!"
+    mc_intro:
+      1:
+        text: "Ich heiße Jens Bergensten, aber alle nennen mich Jeb. Ich bin der leitende Entwickler für Minecraft hier bei Mojang in Stockholm. Ich habe mit elf oder zwölf angefangen, zu programmieren, weil ich Spiele machen wollte. Ein Freund meines Vaters sagte mir, dass man programmieren können muss, um Spiele zu machen. So habe ich angefangen. Es macht mir Spaß, die Architektur der Spiele zu entwickeln. Das mag ich besonders bei Minecraft."
+      2:
+        text: "In der nächsten Stunde erlernst du die Grundlagen der Informatik, indem du Alex oder Steve dazu programmierst, durch einen simulierten Teil einer Minecraft-Welt zu laufen."
+      3:
+        text: "Traditionell wird in Textform programmiert, aber heute benutzen wir Blockly: ein System, bei dem man per Drag & Drop grafische Bausteine verschiebt und so Programme schreibt. Dabei erstellst du JavaScript-Code."
+      4:
+        text: "Die Konzepte, die du hier erlernst, sind die Grundlage der Informatik und werden von Programmierern tagtäglich verwendet. Hier bei Mojang nutzen wir dieselben Konzepte für Minecraft."
+      5:
+        text: "Bevor du anfängst, musst du dir eine Figur aussuchen. Ich wähle Alex. Lass uns ein Programm entwickeln, mit dem sie sich über den Bildschirm bewegt."
+      6:
+        text: "Dein Bildschirm ist in drei Bereiche aufgeteilt. Links ist der Minecraft-Spielbereich, in dem dein Programm ausgeführt wird. Die Anweisungen für jeden Level stehen darunter."
+      7:
+        text: "Der mittlere Bereich ist die Werkzeugkiste und jeder dieser Bausteine ist ein Befehl, der Alex' Aktionen steuert."
+      8:
+        text: "Der weiße Bereich rechts ist der Arbeitsbereich, in dem wir unser Programm aufbauen."
+      9:
+        text: "Was passiert, wenn wir den \"moveForward();\"-Baustein in den Arbeitsbereich ziehen und dann auf \"ausführen\" klicken? Alex bewegt sich im Raster um ein Feld nach vorn."
+      10:
+        text: "Und wenn wir möchten, dass sie noch etwas anderes macht, nachdem sie sich um ein Feld vorwärts bewegt hat? Wir fügen unsere Programm einen weiteren Baustein hinzu. Ich wähle den \"turnRight();\"-Baustein und ziehe ihn unter meinen \"moveForward();\"-Baustein, bis diese orangefarbene Linie erscheint. Dann lege ich ihn ab und die beiden Bausteine werden zusammengesetzt. Wenn wir erneut auf \"ausführen\" klicken, führt Alex der Reihe nach die Befehle aus, die im Arbeitsbereich zusammengesetzt sind."
+      11:
+        text: "Möchtest du einen Baustein löschen, ziehst du ihn einfach aus dem Stapel zurück in die Werkzeugkiste."
+      12:
+        text: "Um unsere Änderungen zu löschen und zurück zum Beginn des Levels zu gelangen, kannst du die Schaltfläche \"Neu starten\" oben rechts im Arbeitsbereich verwenden. Und noch etwas: siehst du das kleine Dreieck auf den \"Drehen\"-Bausteinen? Immer, wenn du diese Dreiecke siehst, kannst du dort eine andere Option auswählen. Lass uns Code schreiben!"
+    mc_repeat:
+      1:
+        text: "Ich bin Lydia Winters, Markendirektorin bei Mojang. Wir haben dieses kleine Spiel namens Minecraft herausgebracht."
+      2:
+        text: "Am liebsten gehe ich in der Minecraft-Welt auf Entdeckungsreise. Ich klettere gerne durch Höhlen und schaue, was ich dort finden kann. Ich bin keine Programmiererin, und deshalb freue ich mich besonders darauf, die Minecraft-Lektion durchzuarbeiten und selbst etwas Code zu lernen."
+      3:
+        text: "Im letzten Level waren sehr viele \"moveForward();\"-Bausteine nötig. Es wäre leichter, wenn wir dem Computer einfach sagen könnten, den \"moveForward();\"-Befehl vier- oder fünfmal auszuführen. Zum Glück sind Computer richtig gut darin, Befehle mit \"Wiederhole\"-Schleifen zu wiederholen."
+      4:
+        text: "Bei der Entwicklung von Minecraft verwenden wir \"Wiederhole\"-Schleifen, um die Materialien für eine neue Welt bereitzustellen. Das sind Tausende von Blöcken. Wir verwenden Schleifen auch für andere Dinge, etwa damit die Füße von Alex sich nach hinten und vorne bewegen, während sie läuft. \"Wiederhole\"-Schleifen sind ein sehr nützliches Element beim Programmieren."
+      5:
+        text: "Es wird Nacht, darum werden wir uns in den nächsten Levels ein Haus zum Schutz bauen. Das ist mithilfe der Wiederholungsschleifen ganz einfach."
+      6:
+        text: "Um eine Wand unseres Hauses zu bauen, können wir Alex entweder viermal vorwärts gehen und Bretter platzieren lassen, oder wir befehlen ihr mit \"moveForward();\", vorwärts zu gehen und ein Brett zu platzieren, und lassen sie diese Aktion mit dem \"Wiederholen\"-Baustein mehrmals ausführen. Jetzt klicken wir den \"Wiederholen\"-Baustein an und sagen ihr, wie oft sie die Aktion ausführen soll. Bauen wir schnell unser Haus, bevor es dunkel wird! Viel Spaß!"
+    mc_if_statements:
+      1:
+        text: "Jetzt lernen wir etwas über \"Wenn\"-Anweisungen. \"Wenn\"-Anweisungen sind wichtig, wenn man Programmieren lernen will. Sie helfen dem Computer, Entscheidungen zu treffen."
+      2:
+        text: "Alle Computer verwenden \"Wenn\"-Anweisungen, sogar mein Telefon. Wenn ich zum Beispiel mein Handy entsperre, läuft ein Code, der sagt: Wenn ich das Passwort richtig eingebe, dann wird das Handy entsperrt. Ansonsten wird eine Fehlermeldung angezeigt."
+      3:
+        text: "Du kannst in deinem Code \"Wenn\"-Anweisungen verwenden, damit Steve und Alex auf Ereignisse in der Minecraft-Welt reagieren. Wenn zum Beispiel ein Felsen vor ihnen liegt, können sie sich nach links drehen. Oder sie drehen sich nach rechts, wenn sie gegen einen Baum laufen."
+      4:
+        text: "In diesem Fall möchten wir nicht in die Lava fallen. Man kann einfach darum herumlaufen. Sie ist auf dem Bildschirm gut zu sehen. Aber was ist, wenn Lava unter einem Stein ist?"
+      5:
+        text: "Nachdem wir den Stein abgebaut haben, können wir nicht einfach weiterlaufen, da dort Lava sein könnte. Wenn dort Lava ist, müssen wir erst einen Stein vor unsere Figur setzen, bevor wir weiter laufen können. Nur so können wir sicher weitergehen. Lass uns noch mehr Steine abbauen! Und verwende die \"Wenn\"-Anweisung, um nicht in die Lava zu fallen."
+    mc_congrats_share:
+      1:
+        text: "Herzlichen Glückwunsch! Du hast jetzt die Grundbausteine der Informatik kennengelernt."
+      2:
+        text: "Jetzt kannst du diese Bausteine verwenden, um selbst Programme zu erstellen. Es gibt keine Anleitungen und Aufgaben mehr. Du kannst alles bauen, was du willst. Du hast die Wahl."
+      3:
+        text: "[Schüler sprechen] Wow, jetzt geht es los. Scheren! Ich habe ein \"L\" aus Fackeln gemacht. Ich habe ein \"A\" aus Birkenholzbrettern gemacht. Es hat funktioniert! Wir haben ein Haus aus Wolle gebaut!"
+      4:
+        text: "Wenn dein Werk fertig ist, hol dir über \"Teilen\" einen Link, um es mit deinen Freunden zu teilen. Viel Spaß!"
+    mc_congrats_no_share:
+      1:
+        text: "Herzlichen Glückwunsch! Du hast jetzt die Grundbausteine der Informatik kennengelernt."
+      2:
+        text: "Jetzt kannst du diese Bausteine verwenden, um selbst Programme zu erstellen. Es gibt keine Anleitungen und Aufgaben mehr. Du kannst alles bauen, was du willst. Du hast die Wahl."
+      3:
+        text: "[Schüler sprechen] Wow, jetzt geht es los. Scheren! Ich habe ein \"L\" aus Fackeln gemacht. Ich habe ein \"A\" aus Birkenholzbrettern gemacht. Es hat funktioniert! Wir haben ein Haus aus Wolle gebaut!"
+      4:
+        text: "Jetzt kannst du alles bauen, was du willst. Viel Spaß!"
+    gumball_intro:
+      1:
+        text: "Du willst ein eigenes Spiel machen? Das ist gar nicht so schwer. Du brauchst nur einige Grundlagen der Programmierung, und schon kannst du ein Spiel spielen, das du selbst entwickelt hast."
+      2:
+        text: "Hast du ein Lieblingsspiel? Heute werden wir mit dem Spielelabor die ersten Schritte machen, um solche Spiele selbst zu erstellen. Gute Spiele haben eine Geschichte, und in jeder Geschichte gibt es verschiedene Figuren. Die Figuren sprechen, bewegen sich und interagieren mit anderen. Sie holen sich Punkte, je nach den Spielregeln. Heute lernen wir mit lustigen Figuren Schritt für Schritt alle diese Dinge und bauen am Ende selbst ein Spiel, das über das Handy geteilt und gespielt werden kann."
+      3:
+        text: "Heute lernen wir mit lustigen Figuren Schritt für Schritt alle diese Dinge und bauen am Ende selbst ein Spiel, das über das Handy geteilt und gespielt werden kann."
+      4:
+        text: "Dein Bildschirm ist in drei Bereiche aufgeteilt. Links ist der Spielbereich, in dem dein Programm ausgeführt wird. Die Anweisungen für jeden Level stehen darunter."
+      5:
+        text: "Dieses mittlere Feld ist die Werkzeugkiste und jeder Baustein ist ein Stück Code."
+      6:
+        text: "Der weiße Bereich rechts ist der Arbeitsbereich, in dem wir unser Programm aufbauen."
+      7:
+        text: "Am Anfang musst du deine Bausteine an den orangefarbenen \"Beim Ausführen\"-Baustein anhängen. Du kannst mehrere Bausteine miteinander verbinden, indem du sie ziehst, bis die gelbe Linie zu sehen ist. Sie fügen sich dann von selbst zusammen."
+      8:
+        text: "In der ersten Aufgabe sollen die Figuren etwas sagen. Dazu verbinden wir den \"Sagen\"-Baustein mit dem \"Beim Ausführen\"-Baustein und geben eine Nachricht ein. Wenn alle Bausteine am richtigen Platz sind, klicke auf \"ausführen\", um zu sehen, was du programmiert hast."
+      9:
+        text: "Fang einfach an. Am Ende kannst du dein eigenes Spiel erstellen, mit allen möglichen Figuren, die miteinander interagieren, Punkte erzielen, Sachen werfen oder einander sogar verschwinden lassen. Du hast die Wahl!"
+    gumball_events:
+      1:
+        text: "Jetzt lernen wir ein Element kennen, das Spiele-Programmierer jeden Tag benutzen. Es heißt \"Ereignisse\". Ein Ereignis befiehlt deinem Programm, darauf zu achten, ob etwas Bestimmtes passiert. Wenn das der Fall ist, wird im Spiel eine Aktion durchgeführt."
+      2:
+        text: "Einige Beispiele für Ereignisse sind etwa, auf Mausklicks, Pfeiltasten oder ein Antippen des Bildschirms zu achten."
+      3:
+        text: "In diesem Fall soll die Figur etwas sagen, wenn der Spieler darauf klickt. Wir verwenden den Baustein \"Wenn angeklickt wird\" und hängen den \"Sage\"-Baustein daran. Wenn der Spieler klickt, werden alle Bausteine ausgeführt, die an diesem Baustein hängen."
+      4:
+        text: "Es gibt auch \"Wenn Pfeil\"-Bausteine. Wenn du die \"Bewegen\"-Bausteine daran hängst, kannst du deine Figuren mit den Pfeiltasten nach oben, unten, links oder rechts bewegen. So wird dein Spiel Schritt für Schritt immer interaktiver."
+    gumball_repeat:
+      1:
+        text: "Stell dir vor, du müsstest etwas ewig wiederholen. Hoffentlich wird das nie passieren, den Computer sind viel besser darin, Dinge zu wiederholen."
+      2:
+        text: "Das ist der \"Ewig wiederholen\"-Baustein. Alles innerhalb dieses Bausteins wird im Spiel immer wieder passieren. Willst du eine Figur dazu bringen, etwas immer wieder zu wiederholen, ohne dass der Spieler etwas tun muss, setzen wir die Bausteine in den \"Ewig wiederholen\"-Baustein."
+      3:
+        text: "Bei der nächsten Aufgabe lassen wir die Figur eine Aufgabe ständig wiederholen. Wenn du lernst, wie der \"Wiederholen\"-Befehl funktioniert, kannst du später viel Zeit sparen, wenn du dein eigenes Spiel programmierst."
+    iceage_intro:
+      1:
+        text: "Du willst ein eigenes Spiel machen? Das ist gar nicht so schwer. Du brauchst nur einige Grundlagen der Programmierung, und schon kannst du ein Spiel spielen, das du selbst entwickelt hast."
+      2:
+        text: "Hast du ein Lieblingsspiel? Heute werden wir mit dem Spielelabor die ersten Schritte machen, um solche Spiele selbst zu erstellen. Gute Spiele haben eine Geschichte, und in jeder Geschichte gibt es verschiedene Figuren. Die Figuren sprechen, bewegen sich und interagieren mit anderen. Sie holen sich Punkte, je nach den Spielregeln. Heute lernen wir mit lustigen Figuren Schritt für Schritt alle diese Dinge und bauen am Ende selbst ein Spiel, das über das Handy geteilt und gespielt werden kann."
+      3:
+        text: "Heute lernen wir mit lustigen Figuren Schritt für Schritt alle diese Dinge und bauen am Ende selbst ein Spiel, das über das Handy geteilt und gespielt werden kann."
+      4:
+        text: "Dein Bildschirm ist in drei Bereiche aufgeteilt. Links ist der Spielbereich, in dem dein Programm ausgeführt wird. Die Anweisungen für jeden Level stehen darunter."
+      5:
+        text: "Dieses mittlere Feld ist die Werkzeugkiste und jeder Baustein ist ein Stück Code."
+      6:
+        text: "Der weiße Bereich rechts ist der Arbeitsbereich, in dem wir unser Programm aufbauen."
+      7:
+        text: "Am Anfang musst du deine Bausteine an den orangefarbenen \"Beim Ausführen\"-Baustein anhängen. Du kannst mehrere Bausteine miteinander verbinden, indem du sie ziehst, bis die gelbe Linie zu sehen ist. Sie fügen sich dann von selbst zusammen."
+      8:
+        text: "In der ersten Aufgabe sollen die Figuren etwas sagen. Dazu verbinden wir den \"Sagen\"-Baustein mit dem \"Beim Ausführen\"-Baustein und geben eine Nachricht ein. Wenn alle Bausteine am richtigen Platz sind, klicke auf \"ausführen\", um zu sehen, was du programmiert hast."
+      9:
+        text: "Fang einfach an. Am Ende kannst du dein eigenes Spiel erstellen, mit allen möglichen Figuren, die miteinander interagieren, Punkte erzielen, Sachen werfen oder einander sogar verschwinden lassen. Du hast die Wahl!"
+    iceage_events:
+      1:
+        text: "Jetzt lernen wir ein Element kennen, das Spiele-Programmierer jeden Tag benutzen. Es heißt \"Ereignisse\". Ein Ereignis befiehlt deinem Programm, darauf zu achten, ob etwas Bestimmtes passiert. Wenn das der Fall ist, wird im Spiel eine Aktion durchgeführt."
+      2:
+        text: "Einige Beispiele für Ereignisse sind etwa, auf Mausklicks, Pfeiltasten oder ein Antippen des Bildschirms zu achten."
+      3:
+        text: "In diesem Fall soll die Figur etwas sagen, wenn der Spieler darauf klickt. Wir verwenden den Baustein \"Wenn angeklickt wird\" und hängen den \"Sage\"-Baustein daran. Wenn der Spieler klickt, werden alle Bausteine ausgeführt, die an diesem Baustein hängen."
+      4:
+        text: "Es gibt auch \"Wenn Pfeil\"-Bausteine. Wenn du die \"Bewegen\"-Bausteine daran hängst, kannst du deine Figuren mit den Pfeiltasten nach oben, unten, links oder rechts bewegen. So wird dein Spiel Schritt für Schritt immer interaktiver."
+    iceage_repeat:
+      1:
+        text: "Stell dir vor, du müsstest etwas ewig wiederholen. Hoffentlich wird das nie passieren, den Computer sind viel besser darin, Dinge zu wiederholen."
+      2:
+        text: "Das ist der \"Ewig wiederholen\"-Baustein. Alles innerhalb dieses Bausteins wird im Spiel immer wieder passieren. Willst du eine Figur dazu bringen, etwas immer wieder zu wiederholen, ohne dass der Spieler etwas tun muss, setzen wir die Bausteine in den \"Ewig wiederholen\"-Baustein."
+      3:
+        text: "Bei der nächsten Aufgabe lassen wir die Figur eine Aufgabe ständig wiederholen. Wenn du lernst, wie der \"Wiederholen\"-Befehl funktioniert, kannst du später viel Zeit sparen, wenn du dein eigenes Spiel programmierst."
+    mc_2016_intro:
+      1:
+        text: "Hi, mein Name ist Jens und ich bin der leitende Designer von Minecraft. In der nächsten Stunde erschaffst du dein eigenes Minecraft-Spiel. Das sieht wie Minecraft aus, aber die Welt steht still. Die Schafe bewegen sich nicht, die Hühner legen keine Eier und die Zombies stehen nur herum. Es liegt jetzt an dir, die Minecraft-Welt mit Code wiederzubeleben."
+      2:
+        text: "My name is Melissa and I am a user researcher at Minecraft. What I'm really interested in is how people think and interact with technology and so this job is the perfect job for me to put together the computer engineering with the psychology: wie Menschen denken und sich verhalten."
+      3:
+        text: "Dein Bildschirm ist in drei Hauptbereiche gegliedert. 1) Links befindet sich das Spiel. Im Moment steht die Welt still, aber das werden wir mithilfe von Code ändern."
+      4:
+        text: "2) In der Mitte ist die Werkzeugkiste. Jeder dieser Blöcke ist ein Befehl, den Hühner, Schafe und andere Minecraft-Kreaturen verstehen können."
+      5:
+        text: "3) Auf der rechten Seite haben wir den Arbeitsplatz, wo wir unser Programm erstellen werden."
+      6:
+        text: "Hast du vergessen, was du in einem Level tun musst, findest du oben die nötigen Anweisungen."
+      7:
+        text: "Wir werden zu Beginn ein Huhn programmieren. Ziehen wir den „vorwärts“-Befehl auf den Arbeitsplatz. Mit „Ausführen“ bewegt sich das Huhn einen Schritt vorwärts. Das kann ich mit einem weiteren „vorwärts“-Block unter dem ersten „vorwärts“-Block erweitern, wenn das Zeichen erscheint. Dann lass ich ihn los und die Blöcke verbinden sich. Klicke ich auf „Ausführen“, macht das Huhn zwei Schritte."
+      8:
+        text: "Wenn du einen Block löschen möchtest, entferne ihn vom Stapel und ziehe ihn zurück in die Werkzeugkiste."
+      9:
+        text: "Nach „Ausführen“ kannst du mit „Zurücksetzen“ das Spiel zurücksetzen und von vorne beginnen. Jetzt kannst du deine eigene Version von Minecraft erstellen. Viel Spaß!"
+    mc_2016_loops:
+      1:
+        text: "Hi, ich bin Lisa. Ich bin eine Entwicklerin von Minecraft und ich arbeite an einigen Tieren und Feinden im Spiel. Eines der Tiere, an dem ich gearbeitet habe, ist der Ozelot. Du kannst ihn mit einem Fisch füttern und ihn zu deiner eigenen Katze machen."
+      2:
+        text: "Uns Menschen wird schnell mal langweilig, wenn wir immer und immer wieder dasselbe tun müssen. Das Coole an Computern ist, dass ihnen nie langweilig wird, wenn sie unzählige Male pausenlos dasselbe wiederholen müssen. Das nennt man eine Schleife, und jede Kreatur in Minecraft verwendet sie."
+      3:
+        text: "Vorhin haben wir ein Huhn dazu gebracht, sich zu bewegen, doch dann ist es stehengeblieben. In Minecraft hören die Hühner nie auf, sich zu bewegen. Setzen wir eine „immer tun“-Schleife ein, um auch unsere Hühner nie stillstehen zu lassen. Schleifen werden dir eine Menge Zeit sparen und dir tolle Möglichkeiten beim Bauen deiner eigenen Minecraft-Version eröffnen."
+    mc_2016_events:
+      1:
+        text: "Beim nächsten Level kannst du Steve oder Alex auswählen. Drücke die Pfeiltasten deiner Tastatur und bewege dich nach oben, unten, links und rechts. So kannst du in einem Level überall hingehen. Verwende eine Kreatur, indem du hingehst, dich drehst und die Leertaste drückst."
+      2:
+        text: "Wische zum Bewegen auf einem Touchscreen nach oben, unten, links und rechts. Tippe dann auf das Feld und verwende den Gegenstand vor dir."
+      3:
+        text: "Aber was passiert dabei genau? In Minecraft lassen Schafe Wolle fallen, wenn du sie scherst. Kühen laufen bei einem Treffer fort und Creeper explodieren in deiner Nähe. Diese Reaktionen lösen sich dank sogenannter Ereignisse aus. Ereignisse lassen dein Programm zuhören oder warten, wenn etwas passiert. Wenn was passiert, führt es etwas aus."
+      4:
+        text: "Bis jetzt hast du ein Ereignis genutzt. Code im „beim Spawnen“-Platz läuft, wenn deine Kreatur erstellt wird oder das Spiel beginnt. In den nächsten Levels hast du neue Plätze für Ereignisse wie „bei Berührung“, die beim Berühren der Kreatur laufen, oder „bei Verwendung“, wenn du die Kreatur verwendest. Wenn Zombies beim Sonnenaufgang verschwinden sollen, dann nutze den „bei Tag“-Platz."
+    mc_2016_spawn:
+      1:
+        text: "In Spielen ist spawnen das Gleiche wie erschaffen. Lass uns in diesem Level Zombies beim Sonnenuntergang spawnen. Dafür brauchen wir den „bei Nacht“-Block."
+      2:
+        text: "Da die Zombies in der Nacht spawnen sollen, fügen wir den „Zombie spawnen“-Block unter dem „bei Nacht“-Block hinzu. Beim Spawnen wird jeder Zombie den Code ausführen, den du in seinem „beim Spawnen“-Ereignisplatz gewählt hast. Viel Spaß beim Spawnen!"
+    mc_2016_congrats:
+      1:
+        text: "Glückwunsch! Du hast gelernt, wie man mit Programmierbefehlen die Minecraft-Welt zum Leben erweckt. Du bist jetzt der Entwickler. Du hast alle Befehle und alle Kreaturen freigeschaltet. Du entscheidest, was passiert."
+      2:
+        text: "Wenn dein Spiel fertig ist, wähle teilen, um einen Link zu erhalten, den du mit deinen Freunden teilen kannst, oder spiele es auf deinem Handy. Viel Spaß! Ich freue mich darauf, deine Version von Minecraft zu spielen."
+    applab_intro_welcome:
+      1:
+        text: "Mein Name ist Mei'lani. Ich bin Praktikantin bei code.org und bin auch ein Informatik-Studentin. Ich mag Informatik, weil es wirklich kreativ ist. Ich werde zum Problemlöser. Ich gestalte es so, dass alles funktioniert wie ich es will. Aber ich möchte auch Designerin werden. Ich möchte die Künstlerin und alles von der kreativen Seite her angehen."
+      2:
+      3:
+        text: "Dies ist ein App-Labor. Auf der linken Seite ist Deine App. Auf der rechten Seite ist der Code der ausgeführt wird. Du baust Dein Programm indem Du Blöcke aus der Toolbox ziehst. Du startest mit einenm Block der \"SetProperty\" genannt wird."
+      4:
+      5:
+      6:
+      7:
+      8:
+      9:
+      10:
+      11:
+    mc_2017_agent_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+      9:
+      10:
+      11:
+        text: "Hast du vergessen, was du in einem Level tun musst, findest du oben die nötigen Anweisungen."
+      12:

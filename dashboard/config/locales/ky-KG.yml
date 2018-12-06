@@ -1,0 +1,166 @@
+---
+ky:
+  errors:
+    messages:
+      not_saved: 'Кийинки каталарды оңдогула:'
+  activerecord:
+    errors:
+      messages:
+        blank: милдеттүү
+        blank_plural: милдеттүү
+        invalid: жараксыз
+        invalid_plural: жараксыз
+    attributes:
+      user:
+        name: Атын көрсөт
+        name_example: Атын көрсөт<br/>(м. Мыкты кодер же Жаңыл)
+        email: Эмейл
+        username: Колдонуучунун аты
+        password: Сырсөз
+        password_confirmation: Сырсөздү тастыктоо
+        current_password: Учурдагы сырсөз
+        locale: Тили
+        age: Жашы
+  submit: Кошуу
+  cancel: Жок кыл
+  okay: Окай
+  or: же
+  already_started: 'Баштап койдуңар беле? Мындан уланткыла >> '
+  continue: Улантуу
+  auth:
+    signed_in: Киргенсиңер!
+  signup_form:
+    hoc_already_signed_up_heading: Кирбей баштоо
+    age: Жашы
+    submit: Катталуу
+    additional_information: Каттооңорду улантуу үчүн кошумча маалымат керек.
+    field_is_required: милдеттүү
+    email_preference_privacy: "(Купуялуулук саясатыбызды карагыла)"
+    email_preference_yes: Ооба
+    email_preference_no: Жок
+  school_info:
+    other: Башка
+  signin_form:
+    login: Эмейл
+    password: Сырсөз
+    submit: Кирүү
+  signinsection:
+    login: Кирүү
+  password:
+    reset_form:
+      submit: Кошуу
+    change_form:
+      new_password: Жаңы сырсөз
+      confirm_password: Жаңы сырсөздү тастыкта
+  teacher_mailer:
+    new_teacher_subject: Code.org сайтына кош келиңиз!
+  section:
+    type:
+      email: Эмейл
+      google_classroom: Google Classroom
+  crud:
+    new_model: Жаңы %{model}
+    submit: Кошуу
+  nav:
+    header:
+      my_dashboard: Менин тактам
+      educate_hoc: Код сааты
+      about_news: Жаңылыктар
+    user:
+      signin: Кирүү
+      create: Түзүү
+      applab: App Lab
+      artist: Сүрөтчү
+      gamelab: Оюн лабы
+  teacher:
+    panel:
+      section: Секция
+  home:
+    announcement_learn_more_button: Дагы кара
+    announcement_mc_launch: Эң популярдуу тапшырмаларыбыздын бирине уланды чыкты!
+      Код саатындагы Minecraft Дизайнери окуучуларга Minecraft дүйнөсүнүн эрежелерин
+      түзүүгө жол берет. Алар толугу менен жаңы Minecraft түзүп, аны достору бөлүшүп
+      же телефонунан ойной алышат. Код саатында ушуну классыңар менен чогуу кылып
+      көргүлө.
+  video:
+    notes: Видео жокпу? Эскертмелери көрсөт.
+    show_notes: Эскертмелери көрсөт
+  compatibility:
+    upgrade:
+      link: Дагы кара
+  builder:
+    level:
+      create: Жаңы деңгээл түзүү
+  upsell:
+    applab:
+      title: App Lab
+    hoc:
+      title: Классикалык лабиринт
+    flappy:
+      title: Flappy Code
+    gamelab:
+      title: Оюн лабы
+    infinity:
+      body: Play Lab колдонуп, Disney Infinity каармандары катышкан окуя же оюн түзгүлө.
+    hero:
+      body: Minecraft Код саатына жаңы тапшырма менен кайтып келди! Код жазып Minecraft
+        өткүлө.
+    unplugged_conditionals:
+      title: Шартуулар
+  landing:
+    support: Жардам ал
+  multi-submittable:
+    wrong_title: Рахмат
+    correct_title: Рахмат
+  level_group:
+    wrong_title: Рахмат
+    correct_title: Рахмат
+  level_group-submittable:
+    wrong_title: Рахмат
+    correct_title: Рахмат
+  dialog:
+    ok: OK
+    startover_title: Кайрадан баштагыңыз келгени аныкпы?
+    startover_ok: Кайра баштоо
+    startover_cancel: Жок кыл
+  terms_interstitial:
+    print: Бастыр
+  race_interstitial:
+    races:
+      other: Башка
+    submit: Кошуу
+    decline: Жабуу
+  progress:
+    not_started: баштала элек
+  studio:
+    all_courses: Бардык курстар
+  project:
+    create_a_project: 'Жаңы долбоор түзүү:'
+    new: Жаңысын түзүү
+    close: Жабуу
+    name: Аты
+    delete_yes: Ооба
+    delete_no: Жок
+    saved: Сакталды
+    cancel: Жок кыл
+    view_all: Долбоорлорумду көрүү
+    abuse:
+      report_abuse_form:
+        abuse_type:
+          other: Башка
+  view_all_units: Бардык бирдиктерди көрүү
+  pd:
+    form_labels:
+      email: Эмейл
+      school_city: Мектеп жайгашкан шаар
+    form_entries:
+      subjects:
+        cs: Информатика
+        math: Математика
+        science: Илим
+        la: Тил өнөрлөрү
+      email_opt_in:
+        opt_in_yes: Ооба
+        opt_in_no: Жок
+  gdpr_dialog:
+    true: Ооба

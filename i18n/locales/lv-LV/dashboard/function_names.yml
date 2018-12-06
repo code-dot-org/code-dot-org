@@ -1,0 +1,41 @@
+lv:
+  data:
+    function_names:
+      x: x
+      details: informācija
+      draw eyebrow: zīmēt uzaci
+      draw pupil: zīmēt skolēnu
+      draw a circle: zīmēt apli
+      draw a car: zīmēt mašīnu
+      draw_rect: zimet_cetrsturi
+      draw square: zīmēt kvadrātu
+      jump to controller top left: pārlēkt uz kontrolieri augšā pa kreisi
+      jump to middle: pārlēkt uz vidu
+      draw a button: zīmēt pogu
+      draw cord: zīmēt vadu
+      draw left leg: zīmēt kreiso kāju
+      draw right leg: zīmēt labo kāju
+      draw body and arms: zīmēt ķermeni un rokas
+      draw a head: zīmēt galvu
+      draw a hexagon: zimēt sešstūri
+      draw a flower: zīmēt puķi
+      draw a square: zīmēt kvadrātu
+      draw a snowflake: zīmēt sniegpārslu
+      draw a tree: zīmēt koku
+      draw a triangle: zīmēt trīsstūri
+      draw a house: zīmēt māju
+      draw a star: zīmet zvaigzni
+      do something: kaut ko
+      jump: lēkt
+      set score: rezultāts
+      get nectar: iegūt nektāru
+      test: pārbaude
+      move: pārvietot
+      move right: Pārvietot pa labi
+      move up: Pārvietot augšup
+      move down: pārvietot uz leju
+      move left: pārvietot pa kreisi
+      collect: iegūt
+      turn left: pagriezt pa kreisi
+      move forward: pārvietot uz priekšu
+      turn right: pagriezt pa labi

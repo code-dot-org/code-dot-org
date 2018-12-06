@@ -1,0 +1,23 @@
+ku:
+  data:
+    game:
+      name:
+        Unplug1: پێسەكی زانستی كۆمپیتەر
+        Maze: Labyrint
+        Artist: هونەرەكە
+        Artist2: هونەرەكە ٢
+        Farmer: جوتیارەكە
+        Artist3: هونەرەكە ٣
+        Unplug7: گۆرانی نووسین
+        Artist4: هونەرەكە ٤
+        Farmer3: جووتیارەكە ٣
+        Unplug10: ئینترنێت
+        Artist5: هونەرەكە ٥
+        MazeEC: Labyrint
+        ArtistEC: هونەرەكە
+    video:
+      name:
+        C1_happy_maps_unplugged: نەخشەی دڵخۆش
+        C4_loops_zombie: گرێکان
+        csp_applab_loops: گرێکان
+        CSF_loops_AB: گرێکان

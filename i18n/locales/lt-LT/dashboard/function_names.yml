@@ -1,0 +1,28 @@
+lt:
+  data:
+    function_names:
+      x: x
+      draw a circle: nubrėžk apskritimą
+      draw a hexagon: nupiešk šešiakampį
+      draw a flower: nupiešk gėlę
+      draw a square: nubrėžk kvadratą
+      draw a snowflake: nupiešk snaigę
+      draw a tree: nupiešk medį
+      draw a triangle: nubrėžk trikampį
+      draw a house: namas
+      draw a star: nupiešk žvaigždę
+      do something: daryk kažką
+      jump: šok
+      set score: taškai = 
+      get nectar: gauk nektarą
+      test: sąlyga
+      diamond: deimantą
+      move: judėk
+      move right: judėk dešinėn
+      move up: judėk aukštyn
+      move down: judėk žemyn
+      move left: judėk į kairę
+      collect: surink
+      turn left: pasisuk į kairę
+      move forward: judėk į priekį
+      turn right: pasisuk į dešinę

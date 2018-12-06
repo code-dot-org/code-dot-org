@@ -1,0 +1,16 @@
+---
+ms:
+  data:
+    function_names:
+      x: x
+      draw a square: lukis segi empat
+      do something: Buat sesuatu
+      jump: lompat
+      test: ujian
+      move right: gerak ke kanan
+      move up: gerak ke atas
+      move down: gerak ke bawah
+      move left: gerak ke kiri
+      turn left: belok kiri
+      move forward: bergerak ke hadapan
+      turn right: belok kanan

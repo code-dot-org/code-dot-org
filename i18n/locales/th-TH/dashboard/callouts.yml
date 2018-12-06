@@ -1,0 +1,178 @@
+th:
+  data:
+    callouts:
+      2-3 Artist Debugging 1_callout:
+        2-3_Artist_Debugging_1_a: ศิลปะไม่มีปุ่ม "Step" แต่คุณสามารถเลื่อนแถบไปด้านซ้ายเพื่อดูโปรแกรมที่่ทำงานอย่างละเอียด
+      4-5 Artist Patterns Free Play_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: กด "เริ่ม" เพื่อดูโปรแกรมของคุณทำงาน
+      Course 4 Maze 4_callout:
+        repeat: ใส่บล็อกไว้ข้างในลูปเพื่อทำซ้ำคำสั่งต่าง ๆ
+      Dance_Party_01_callout:
+        dance_callout_01: เพิ่มบล็อกนี้ในโปรแกรมของคุณ!
+      Dance_Party_01_low_callout:
+        dance_callout_01: เพิ่มบล็อกนี้ในโปรแกรมของคุณ!
+      Dance_Party_02_callout:
+        dance_callout_02: เพิ่มบล็อกนี้ในโปรแกรมของคุณ!
+      Dance_Party_04_callout:
+        dance_callout_04: เพิ่มบล็อกนี้ในโปรแกรมของคุณ!
+      Dance_Party_06_callout:
+        dance_callout_06: เพิ่มนักเต้นใหม่ของคุณที่นี่
+      Dance_Party_11_callout:
+        dance_callout_11_a: บล็อกใหม่!
+        dance_callout_11_b: บล็อกใหม่!
+      Geometric Pattern_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
+      Geometric Sun_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
+      Geometric Sun_2018_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
+      Geometric Sun_2019_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
+      MC HOC 2016 Level 2-2_callout:
+        craft2_run_button_callout: เมื่อคุณพร้อม ให้กด " เริ่ม " เพื่อลองใช้งานโปรแกรมของคุณ
+      MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'เอเจนท์สามารถลอยอยู่เหนือลาวา แต่สตีฟกับแอเล็กซ์ไม่สามารถทำเช่นนั้นได้!  '
+      MC_HOC_2017_Ali_2019_callout:
+        MC_HOC_2017_08_RY_1: 'เอเจนท์สามารถลอยอยู่เหนือลาวา แต่สตีฟกับแอเล็กซ์ไม่สามารถทำเช่นนั้นได้!  '
+      Overworld Chop Trees_callout:
+        craft_callout_preplaced: เราได้วางบล็อกบางส่วนไว้ที่นี่เพื่อให้คุณเริ่มต้นเล่น
+      Overworld Chop Trees_2018_callout:
+        craft_callout_preplaced: เราได้วางบล็อกบางส่วนไว้ที่นี่เพื่อให้คุณเริ่มต้นเล่น
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: เราได้วางบล็อกบางส่วนไว้ที่นี่เพื่อให้คุณเริ่มต้นเล่น
+      Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: โค้ดนี้จะเริ่มสร้างบ้านของคุณ สามารถทำให้เสร็จได้ไหม
+      Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: โค้ดนี้จะเริ่มสร้างบ้านของคุณ สามารถทำให้เสร็จได้ไหม
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: โค้ดนี้จะเริ่มสร้างบ้านของคุณ สามารถทำให้เสร็จได้ไหม
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: กด "เริ่ม" เพื่อดูโปรแกรมของคุณทำงาน
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: กด "เริ่ม" เพื่อดูโปรแกรมของคุณทำงาน
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: กด "เริ่ม" เพื่อดูโปรแกรมของคุณทำงาน
+      Overworld Place Wall_callout:
+        craft_inside_repeat: ทำซ้ำโดยวางบล็อกไที่นี่
+      Overworld Place Wall_2018_callout:
+        craft_inside_repeat: ทำซ้ำโดยวางบล็อกไที่นี่
+      Overworld Place Wall_2019_callout:
+        craft_inside_repeat: ทำซ้ำโดยวางบล็อกไที่นี่
+      Pizza on a Plate_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
+      Quantum Bee - Ryan_callout:
+        feeling_stuck_callout_test: " ถ้าติดขัด ไม่รู้ว่าจะทำอย่างไร<br />ให้คลิกที่หลอดไฟเพื่อดูคำบอกใบ้!"
+      Robot Drawing_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
+      Robot_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: รหัสนี้จะตรวจสอบลาวา คุณเพิ่มคำสั่งเดินหน้าต่อไปได้ไหม
+      Underground Avoiding Lava_2018_callout:
+        craft_callout_moveforward: รหัสนี้จะตรวจสอบลาวา คุณเพิ่มคำสั่งเดินหน้าต่อไปได้ไหม
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: รหัสนี้จะตรวจสอบลาวา คุณเพิ่มคำสั่งเดินหน้าต่อไปได้ไหม
+      Underground Iron_callout:
+        craft_what_is_iron: ระเบิดเหล็กนี้!
+      Underground Iron_2018_callout:
+        craft_what_is_iron: ระเบิดเหล็กนี้!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: ระเบิดเหล็กนี้!
+      artistLoopsK2_callout:
+        artistLoopsK2_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
+      artistLoopsK2gradek_artist_loops3_callout:
+        artistLoopsK2_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
+      course2_bee_conditionals_challenge2_callout:
+        courseD_bee_conditionals_challenge2_1: ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)
+      courseA_artist_loops4_callout:
+        courseA_artist_loops4_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
+      courseA_artist_loops4_2018_callout:
+        courseA_artist_loops4_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
+      courseA_collector_loops1_callout:
+        courseA_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseA_collector_loops1_2018_callout:
+        courseA_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseA_collector_loops3_callout:
+        gradek_adventurer_loops2_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
+      courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
+      courseA_collector_preLoops2_callout:
+        courseA_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseA_collector_preLoops3_callout:
+        courseA_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseA_collector_preLoops4_callout:
+        courseA_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseA_collector_preLoops5_callout:
+        courseA_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseA_collector_preLoops6_callout:
+        courseA_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseA_maze_seq1_callout:
+        courseA_maze_seq1_1: ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!
+      courseA_maze_seq1_2018_callout:
+        courseA_maze_seq1_1: ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!
+      courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
+      courseB_collector_loops1_callout:
+        courseB_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseB_collector_loops1_2018_callout:
+        courseB_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseB_maze_seq1_callout:
+        courseB_maze_seq1: ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!
+      courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!
+      courseC_artist_loopsPrePre1a_callout:
+        courseC_artist_loopsPrePre1a_1: เริ่มต้นด้วยการใช้บล็อกอันนี้เพื่อส่งศิลปินไปที่ใจกลางของหน้าจอ
+      courseC_artist_loopsPrePre1a_2018_callout:
+        courseC_artist_loopsPrePre1a_1: เริ่มต้นด้วยการใช้บล็อกอันนี้เพื่อส่งศิลปินไปที่ใจกลางของหน้าจอ
+      courseC_artist_loopsPrePre1a_2019_callout:
+        courseC_artist_loopsPrePre1a_1: เริ่มต้นด้วยการใช้บล็อกอันนี้เพื่อส่งศิลปินไปที่ใจกลางของหน้าจอ
+      courseC_collector_prog1_callout:
+        courseC_collector_prog1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseC_maze_debugging5_callout:
+        courseC_maze_debugging5_1: คุณไม่สามารถลบ บล็อกสีเทาทิ้งไปได้
+      courseC_maze_programming1_callout:
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
+      courseC_maze_programming1_2018_callout:
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
+      courseC_maze_programming1_2019_callout:
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
+      courseD_bee_conditionals_challenge2_callout:
+        courseD_bee_conditionals_challenge2_1: ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)
+      courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)
+      courseD_bee_conditionals_challenge2_2019_callout:
+        courseD_bee_conditionals_challenge2_1: ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)
+      courseD_maze_ramp1_callout:
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
+      courseD_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
+      courseD_maze_ramp1_2019_callout:
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
+      courseD_scrat_ramp1_callout:
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
+      courseD_scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
+      courseE_maze_ramp1_callout:
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
+      courseE_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
+      courseF_maze_ramp1_callout:
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
+      courseF_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
+      coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: หลังจากต่อบล็อกทั้งหมดเข้าด้วยกัน ให้กด " เริ่ม " เพื่อให้โปรแกรมของคุณเริ่มทำงาน
+      grade2_CaringForNewPet_0_callout:
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
+      grade4_artist_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
+      grade4_artist_functions_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
+      grade5_artist_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
+      gradek_adventurer_loops2_callout:
+        gradek_adventurer_loops2_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
+      gradek_artist_loops3_callout:
+        artistLoopsK2_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้

@@ -1,0 +1,2584 @@
+---
+cs:
+  slides:
+    maze_intro:
+      1:
+        text: Vítej na své první hodině kódu! Pojďme se ponořit do prvních kroků programování.
+      2:
+        text: Budeme používat Blockly, vizuální programovací jazyk, kde klikáš a přetahuješ
+          bloky aby jsi napsal kód.
+      3:
+        text: Většina kódů je psaná, ale Blockly je vizuální. Každý blok odpovídá
+          jednomu řádku "skutečného" kódu.
+      4:
+        text: Naučíš se základy počítačových věd, pojmy, které se používají kdekoliv
+          od vytváření aplikací až po řízení vozítka na Marsu.
+      5:
+        text: Program je sada pokynů pro počítač, kterými se řídí.
+      6:
+        text: Cílem tvého prvního programu je dostat ptáčka Angry Bird skrz bludiště
+          k Zelenému Prasátku.
+      7:
+        text: Na levé straně je bludiště, kde bude program probíhat. Instrukce pro
+          každou hádanku budou pod bludištěm.
+      8:
+        text: Prostřední panel obsahuje příkazy pro ptáčka Angry Bird. Právě z nich
+          poskládáš tvůj kód.
+      9:
+        text: Napravo je tvá pracovní plocha, kde budeš skládat program pomocí bloků
+          z panelu. Pro smazání bloku, přetáhni daný blok do koše v rohu.
+      10:
+        text: Každý blok je jeden příkaz. Pokud dáš blok "posunout vpřed" na pracovní
+          plochu a stiskneš "Spustit program", ptáček v bludišti se posune o jedno
+          políčko směrem, kam je právě natočen.
+      11:
+        text: Chceš-li více akci než jednu, můžeš přetáhnout mnoho bloků do pracovního
+          prostoru a připojit dohromady. Pták dělá příkazy od shora dolů.
+      12:
+        text: Pokud spustíš program a chceš ho opravit a zkusit znovu, klikni na tlačítko
+          "Obnovit".
+      13:
+        text: Pojďme dostat ty prasátka!
+    artist_intro:
+      1:
+        image: notes/stage5_1.jpg
+        text: Ahoj, jsem JR. Každý tým automobilových závodníků potřebuje programátory,
+          aby vyhrál. Analyzují data z auta, aby bylo příště rychlejší.
+      2:
+        image: notes/stage5_2.jpg
+        text: V těchto hádankách budeš malíř, který za sebou kreslí čáru kamkoliv
+          jde.
+      3:
+        image: notes/stage5_3.jpg
+        text: Tento blok říká "posunout vpřed" o 100 pixelů. Pixel je jedna malá tečka
+          na tvojí obrazovce.
+      4:
+        image: notes/stage5_4.jpg
+        text: Tento blok říká "otočit se vpravo o 90 stupňů". To otočí tvého malíře
+          o stejnou velikost jako bloky "otočit" v hádankách s bludištěm.
+      5:
+        text: Klikni na šipku v jednom z těchto bloků pro změnu počtu pohybu dopředu
+          či otočení malíře. Vyhraj si, aby ses s těmito novými bloky seznámil.
+    farmer_intro:
+      1:
+        text: Ahoj, já jsem Paola! V těchto hádankách jsi farmářem, který chce srovnat
+          pole, aby na něm se mohla začít pěstovat rostliny.
+      2:
+        text: Musíš jí pomoci odstranit všechny hromádky hlíny a vyplnit všechny díry.
+      3:
+        text: Nové bloky odstraní 1 lopatu hlíny z hromádky a vyplní díru 1 lopatou
+          hlíny.
+      4:
+        text: Hromádky a díry mají různé velikosti, takže musíš farmářce říct, kolik
+          lopat má použít.
+    flappy_intro:
+      1:
+        image: notes/flappy01.jpg
+        text: Ahoj, jmenuju se Katie! Jedna z nejlepších věcí na počítačové vědě je,
+          že počítač může být interaktivní.
+      2:
+        image: notes/flappy02.jpg
+        text: Kdykoliv někdo klikne nebo ťukne nebo napíše něco na počítači či mobilu,
+          vytvoří to UDÁLOST. Když je dojde k UDÁLOSTI, je tam kód, který rozhodne,
+          co dělat.
+      3:
+        image: notes/flappy03.jpg
+        text: 'Například můžeš mít MANIPULÁTOR UDÁLOSTÍ, který říká "když je myš stisknutá,
+          přehraj zvuk" '
+      4:
+        image: notes/flappy04.jpg
+        text: Už jsi někdy slyšel o hře FlappyBird? S pomocí manipulátoru událostí
+          tě naučíme naprogramovat tvou vlastní verzi FlappyBird!
+      5:
+        image: notes/flappy05.jpg
+        text: Kód, který píšeš zahranuje přetahování a pouštění bloků, které předtavují
+          příkazy pro počítač. Pod povrchem každého takového bloku je skrytý skutečný
+          kód.
+      6:
+        image: notes/flappy06.jpg
+        text: 'Pokud se podíváš na pracovní plochu, uvidíš pár zelených bloků, které
+          tam jsou pro tebe - jsou to "manipulátory událsotí" '
+      7:
+        image: notes/flappy07.jpg
+        text: Pokud chceš, aby ptáček ZAMÁVAL, když klikneš myší, musíš spojit blok
+          "ZAMÁVAT" s příslušným mnipulátorem událostí a potom, kdykoliv ve své hře
+          klikneš myší, ptáček zamává.
+      8:
+        image: notes/flappy08.jpg
+        text: V každé části této aktivity si ukážeme nové typy událostí jako zelené
+          bloky na pracovní ploše, a že se můžeš rohodnout přidat příslušné bloky,
+          jako reakci na tyto události.
+      9:
+        image: notes/flappy09.jpg
+        text: Když vidíš šipku ukazující dlů, jako je tahle, namená to, že můžeš změnit
+          nastavení - například jaký zvuk přehrát, když se Flappy dotkne země.
+      10:
+        image: notes/flappy10.jpg
+        text: V poslední části si budeš moct vytvořit vlasntí hru asdílet ji se svými
+          přáteli. Užij si to!
+    loop_times:
+      1:
+        text: Ahoj, jsem Mark! Seznámím tě se smyčkami. Pomocí smyček můžeš říct počítači,
+          aby opakoval sadu akcí znovu a znovu, tisíckrát či klidně milionkrát.
+      2:
+        text: V této hádance chceme, aby se ptáček posunul vpřed o 5 políček a dostal
+          se k prasátku.
+      3:
+        text: Můžeme použít nový blok "opakovat", aby nám trošku vypomohl.
+      4:
+        text: Místo aby si vytáhl 5 bloků "posunout vpřed"...
+      5:
+        text: Můžeme vložit blok "posunout vpřed" do bloku "opakovat" a vepsat to
+          tohoto bloku číslo, kolikrát má opakování proběhnout.
+      6:
+        text: 'Tohle je taky důležité: můžeš do bloku "opakovat" dát i více než jeden
+          příkaz.'
+      7:
+        text: Užij si používání nového bloku "opakovat"!
+    loop_until:
+      1:
+        text: Čau, jsem Chris. Než jsem se přidal k Miami Heat, studoval jsem na Georgia
+          Tech informatiku. Pojďme spolu zkusit nový blok "opakovat do".
+      2:
+        text: Co kdybychom nevěděli, jak daleko se ptáček musí posunout, aby se dostal
+          k prasátku?
+      3:
+        text: Pokud vložíme blok "posunout vpřed" do bloku "opakovat dokud", ptáček
+          se bude posouvat vpřed až do chvíle, DOKUD nenarazí na prasátko (nebo do
+          zdi).
+      4:
+        text: 'Toto je důležité: stejně jako před tím, můžeme vložit několik bloků
+          dovnitř bloku "opakovat dokud" a všechny tyto bloky se budou opakovat.'
+    if:
+      1:
+        text: 'Ahoj, já jsem Bil. Pojďme se naučit nový základní pojem: příkazy "Pokud".
+          Díky těmto příkazům počítač dělá svá rozhodnutí.'
+      2:
+        text: 'Sám používáš příkaz "Pokud" každý den. Ještě než jdeš ráno ven, řekneš
+          si: "POKUD venku prší, budu potřebovat pláštěnku."'
+      3:
+        text: Můžeme říct zombie, aby zjistila, zda je vlevo cesta a POKUD nalezne
+          cestu doleva, můžeme ji přinutit se tímto směrem otočit.
+      4:
+        text: Abychom napsali takový kód, vytáhneme náš blok "pokud" a vložíme do
+          něj blok "otočit vlevo".
+      5:
+        text: Teď, když nad něj vložíme blok "posunout vpřed" a blok "opakovat" kolem
+          všeho, pokaždé, když se zombie posune, zkontroluje, jestli je vlevo cesta
+          a zabočí. Příkaz "opakovat" je důležitý pro to, abychom kontrolovali cestu
+          pro zabočení v každém kroku.
+      6:
+        text: 'Příkazy "pokud" jsou v programování opravdu důležité. Jeden z prvních
+          programů, který jsem napsal byly piškvorky a v něm byl příkaz "pokud", který
+          říkal: POKUD to vypadá, že protivník vyhraje, zablokuj mu čtvereček, který
+          by mu umožnil vyhrát.'
+      7:
+        text: Bav se při používání bloků "pokud"!
+    if_else:
+      1:
+        text: Ahoj, jmenuji se Saloni. Programování mi pomáhá řešit problémy zdraaví
+          a lékařství. Naučím tě používat blok "if-else". Vypadá to podobně jako blok
+          "if", ale má to navíc ještě část na konci, která říká, co se stane "else".
+      2:
+        text: Když dám blok "posun vpřed" v místě, kde je napsáno "dělat" a blok "otočit
+          vlevo", kde říká "else", že zombie bude volit mezi 2 možnostmi. Když je
+          cesta vpřed, zombie se bude pohybovat vpřed a JINAK (není cesta vpřed),
+          zombie se otočí doleva.
+      3:
+        text: Stejně jako "if" blok, můžeme dát "if else" bloky dovnitř "opakování"
+          bloků tak, aby zombie byl v pohybu a "if else" blok kontroloval, kdy se
+          někde otočí.
+      4:
+        text: Teď dostaň tyhle zombie tam, kam patří!
+    if_else_scrat:
+      1:
+        text: Příkaz if-else je rozhodnutí mezi dvěma věcmi. Podívejme, jak použijeme
+          příkaz if-else s naším kamarádem Scrat s názvem veverka.
+      2:
+        text: Tento blok vypadá stejně jako blok "if", ale je tu další část na spodku,
+          které říká "else". Když jsem dal blok "posuň vpřed", kde říkají bloky "udělej"
+          a "otočit vlevo" tam, kde je napsáno "else". To znamená Scrat s názvem veverka
+          se posune kupředu, když je cesta dopředu. Když není cesta dopředu, Scrat
+          se otočí doleva.
+      3:
+        text: Provede se rozhodování s uděláním jedné z následujících dvou akcí na
+          základě tohoto rozhodnutí. A stejně jako "if" bloky, si můžete dát "if-else"
+          bloky uvnitř bloků "opakovat".
+      4:
+        text: Pomoz Scrat s názvem veverka, aby dostal žalud!
+    function:
+      1:
+        text: Ahoj, já jsem Brina, inženýrka Instagramu. Funkce jsou určité řádky
+          kódu, které chceš používat znovu a znovu, takže místo aby jsi tento kód
+          psal pokaždé, můžeš použít pouze jeden blok.
+      2:
+        text: Naučíme se definovat funkce. Definice funkcí mají v rohu hvězdu. Název
+          funkce je napsán na horním řádku.
+      3:
+        text: Bloky, které jdou dovnitř definice, nám říkají, co dělá. Takže tato
+          definice funkce se jmenuje "vyplnit 5" a skládá se z bloku "opakovat" a
+          bloku "vyplnit".
+      4:
+        text: Definice už je na pracovní ploše, ale naše farmářka nespustí funkci,
+          dokud nepřetáhneme funkční blok "vyplnit 5" z kategorie funkcí.
+      5:
+        text: Pojďme zažít trochu srandy s funkcemi!
+    loop_while:
+      1:
+        text: Čau, já jsem Makinde! Pojďme si říct něco o bloku "dokud".
+      2:
+        text: '"while blok" bude provádět cokoliv umístíš dovnitř, DOKUD bude příkaz
+          ve vrchní části bloku PRAVDA.'
+      3:
+        text: Např. když farmářka stojí na hromadě, bude odstraňovat neustále 1 lopatou,
+          POKUD pod ní je stále ještě nějaká hromádka.
+    loop_for:
+      1:
+        text: Ahoj, já jsem Trina a pracuji pro Pixar. Pracovala jsem na spoustě filmů
+          včetně Shreka.
+      2:
+        text: Toto je naše nová smyčka "čítač". Bude provádět akce znovu a znovu a
+          pokaždé můžete akci trošku pozměnit.
+      3:
+        text: V tomto případě, naše smyčka "čítač" říká, že budeme "počítat s čítačem
+          od 50 do 90 po 10" a uvnitř něj máme náš blok "nakreslit čtverec". Přetáhni
+          blok "čítač" ze sekce "Proměnné" na místo "délka".
+      4:
+        text: To znamená, že náš malíř bude kreslit čtverec, který má stranu o délce
+          50 pixelů, poté k tomu přidá 10 a nakreslí čtverec se stranou o délce 60
+          pixelů. Pak bude pokaždé přidávat 10 pixelů a kreslit čtverce dokud nedosáhne
+          90 pixelů. Takže budeme mít čtverce o velikosti 50, 60, 70, 80 a 90 pixelů.
+    parameters:
+      1:
+        text: Ahoj, já jsem Janete a jsem návrhářka v Zynga.
+      2:
+        text: Co když chceme nakreslit spoustu trojúhelníků, každý s jinou délkou
+          strany?
+      3:
+        text: Mohli bychom ten kód napsat ručně, nebo můžeme použít funkci s parametry.
+      4:
+        text: Abychom to udělali, klikni na modrou hvězdu u definice funkce "nakreslit
+          trojúhelník". Pak přetáhni "název vstupu" do bloku "vstup".
+      5:
+        text: Pak, pokud napíšeš "délka" v místě, kde je nyní "x" a stiskneš "Enter",
+          vytvoříš ve své funkci vstup pro délku.
+      6:
+        text: Poté klikni na hvězdu. Nyní musíš kliknout na kategorii proměnné a přetáhnout
+          blok "délka" do bloku "posunout vpřed" své definice funkce. A stáhni pryč
+          starý číselný blok.
+      7:
+        text: Chceš-li použít svou funkci s parametry, klikni na kategorii funkce
+          a vytáhni svoji funkci "nakreslit trojúhelník s délkou".
+      8:
+        text: Teď můžeš použít matematický blok k zadání různých čísel, abys nakreslil
+          trojúhelníky různých velikostí.
+    hoc_wrapup:
+      1:
+        text: Blahopřejeme! S poslední hádankou, kterou jsi vyřešil, jsi právě napsal
+          program, který dokáže JAKÉMUKOLIV robotovi říct, jak najít cestu skrz nerozvětvené
+          bludiště nebo skrz tunel libovolné délky, ať už je to zombie, ptáček, vozítko
+          na Marsu nebo dokonce samořídící auto.
+      2:
+        text: Základní pojmy, které jsi použil jsou srdcem každého programu nebo aplikace,
+          kterou kdy spustíš. Naučili jsme se opakovací smyčky, příkazy opakovat dokud,
+          příkazy pokud a příkazy pokud-jinak.
+      3:
+        text: Jestli se ti tvá první hodina kódu líbila, navštiv stránku code.org
+          pro další výuku programování! Jakmile dokončíš náš kurz 20 hodin, budeš
+          ovládat základy programování a můžeš se začít učit psát aplikace pro mobily,
+          instrukce pro roboty, hry...na co si jen vzpomeneš.
+      4:
+        text: 'Technika mění vše, co děláme a nezáleží na tom, jestli jsi mladý nebo
+          starý: programování je zábava, je tvořivé a každý se jej může naučit!'
+    20_wrapup:
+      1:
+        text: Zobrazení poznámek teprve bude!
+    frozen_intro:
+      1:
+        text: Ahoj, jmenuji se Lyndsey. Namodeluji, projednám a napíši vlastní aplikaci.
+          Propojíme Annu a Elsu k prozkoumání kouzla a krásy ledu pomocí kódu.
+      2:
+        text: Vytvoř sněhové vločky a vzory jak bruslíš, vytvoříš tak zimní říši divů,
+          kterou pak to můžeš sdílet se svými přáteli.
+      3:
+        text: V příští hodině se budeš učit základy kódu. Tradiční programování je
+          obvykle v textu, ale my budeme používat vizuální bloky využívající přetažení
+          k psaní programům. To je, jak se univerzitní studenti učí základy. Pod kapotou
+          se stále vytváří kód.
+      4:
+        text: Program je sada instrukcí, které říká počítači, co má dělat. Vytváříme
+          kód nebo program, který pomůže Else vytvořit jednoduchou čáru. Využijeme
+          to později k vytvoření složitějších vzorů.
+      5:
+        text: Obrazovka je rozdělena do tří hlavních částí. Na levé straně je ledová
+          plocha, kde budeš spouštět tvůj program. Pokyny pro každou úroveň jsou zapsány
+          přímo pod plochou.
+      6:
+        text: Tato střední oblast je panel nástrojů, a každý z těchto bloků je akce,
+          kterou Elsa a Anna může udělat.
+      7:
+        text: Prázdné místo na pravé straně se nazývá pracovní prostor, a to je, kde
+          se vytváří náš program. Použij blok "Posunout vpřed" k pohybu kolem povrchu
+          ledu.
+      8:
+        text: Zde blok "Posunout vpřed" říká, "Přesun o 100 pixelů." Když stiskneme
+          tlačítko "Run", co se stane? Elsa se pohybuje vpřed o určitou velikost na
+          obrazovce, ve skutečnosti 100 pixelů! Pixely jsou v podstatě velmi drobné
+          čtverečky na obrazovce počítače.
+      9:
+        text: Druhý blok, který máme v tomto puzzlu, říká "otočit doprava o 90 stupňů."
+          A když budeme používat tento blok "Otočit vpravo", který otočí Elsu o určitou
+          velikost. Můžeš si pohrát s tím, jak daleko chceš Elsu otočit. Úhel se měří
+          od cesty před Elsou. Tak to je otočení 90 stupňů. A to je otočení 120 stupňů.
+      10:
+        text: Pamatujte si, že počet pixelů a stupňů lze změnit klepnutím na šipky
+          vedle nich.
+    frozen_loops:
+      1:
+        text: Ahoj, já jsem Paola! Počítače jsou opravdu dobré na opakující se akce.
+          Lze počítat do 10, 20 nebo 100. Ale počítač umí počítat do miliardy nebo
+          bilionu. Nenudí se a bude to trvat jen pár sekund. Zda je počítání, nebo
+          kreslení, nebo cokoliv – počítače mohou opakovat věci stokrát nebo dokonce
+          miliardakrát.
+      2:
+        text: V programování se tomu říká cyklus. Cyklus je, jak můžeš zopakovat svůj
+          kód znovu a znovu. Pro další puzzle je tvůj cíl pomoci Anně vytvořit čtverec
+          s blokem "Opakovat".
+      3:
+        text: Bloky kódu, které umístíš do bloku "Opakovat", se budou opakovat v posloupnosti,
+          tolikrát, kolikrát chceš.
+      4:
+        text: Chceš-li nakreslit čtverec, můžeš použít 4X bloky "Posunout vpřed" a
+          "otočit vpravo". Ale jednodušší způsob, jak říci počítači "Posunout vpřed"
+          a "Otočit doprava o 90 stupňů" jednou, a potom mu sděl, aby opakoval 4x
+          tento pár akcí. Udělat to, je třeba dát bloky "Posunout vpřed" a "otočit
+          vpravo" dovnitř bloku "Opakovat".
+      5:
+        text: Pamatuj si, že můžeš změnit číslo v bloku "Opakovat" na nic, a to bude
+          opakovat mnohokrát, co je uvnitř bloku.
+    frozen_functions:
+      1:
+        text: Ahoj, já jsem Chris Bosh. Jsem profesionální hráč basketbalu, a jsem
+          zakódovaný ve škole.
+      2:
+        text: Jedním z nejdůležitějších konceptů v informatice je jak definovat nové
+          příkazy. Většina počítačových jazyků mají jen asi 100 slov nebo příkazů.
+          A opravdu umění a magie je v definování vlastních nových slov z těchto stavebních
+          bloků.
+      3:
+        text: Jakmile jsem naučil počítač, jak udělat akci jednou pomocí této posloupnosti
+          příkazů, můžeš si vytvořit vlastní název pro tuto akci, abys ji snadno později
+          zopakoval. Když definuješ vlastní příkaz a zadáš jméno, nazývá se to funkce.
+      4:
+        text: Ahoj, já jsem Jess. Při programování s bloky měl bys použít funkce,
+          když sadu akcí bys chtěl použít mnohokrát. Např. chtěl si napsát kód k vytvoření
+          čtverce.
+      5:
+        text: 'Můžeš definovat jako funkci nazvanou "vytvoření čtverce." '
+      6:
+        text: Nyní máš nový blok vícekrát použitelný k vytvoření více čtverců.
+      7:
+        text: Spousta jednoduchých tvarů lze použít k vytvoření složitějších vzorů.
+          Kód v dalším puzzlu nedávno napsaném představuje kruh jako nová funkce pro
+          mnohé kruhy různých velikostí. Umíš ji použít, abys pomohl Else vytvářet
+          složité a krásné vzory ve sněhu?
+    playlab_intro:
+      1:
+        text: Budeme vytvářet hry pomocí hrát Lab. Dobré hry mají příběh, a každý
+          příběh má aktéry. Naučíme se, jak udělat naše aktéry jako čarodějnice, mimozemšťané
+          a zvířata, aby mluvily, pohybovaly a komunikovaly. Na konci tohoto výukového
+          kurzu vytvoříš hru od začátku a sdílet ji s tvými přáteli.
+      2:
+        text: Obrazovka je rozdělena na 3 hlavní části. Na levé straně je herní prostor,
+          kde poběží program. Pokyny pro každou úroveň jsou níže napsané.
+      3:
+        text: Střední oblast je v panelu nástrojů, a každý z těchto bloků je kus kódu.
+          Prázdné místo na pravé straně se nazývá pracovní prostor a to je, kde budeme
+          vytvářet náš program.
+      4:
+        text: Chceš-li začít, budeš potřebovat propojit bloky na oranžové "při spuštění"
+          bloku. Můžeš dohromady propojit více bloků jejich přetažením, dokud se neuvidí
+          žlutá čára, a pak se společně přichytí.
+      5:
+        text: V toto první puzzle, náš aktér je tučňák a uděláme jej, aby řekl "Ahoj!"
+          přetažením mluvícího bloku napojeného na blok spuštění se zadáním "Ahoj."
+          Můžeme také udělat pohybujícího tučňáka pomocí pohybových bloků vpravo a
+          vlevo. Jakmile máte své bloky umístěné, stiskni na run tlačítko k zobrazení,
+          co jsi naprogramoval.
+      6:
+        text: Začínáme a do konce, budete moci vytvořit vlastní hru se všemi druhy
+          hráčů, kteří mohou komunikovat, šťastný nebo smutný, body, nebo házet ohnivé
+          koule nebo dokonce zmizí jeden druhého. Je to všechno jen na vás a hře,
+          kterou chceš udělat.
+    playlab_events:
+      1:
+        text: Nyní budeme se učit o něco, co všichni programátoři her používají denně.
+          Ty nazývají události. Událost říká, že tvůj program naslouchá na to, že
+          se něco stane. Když se to stane, provede akci.
+      2:
+        text: Některé příklady událostí naslouchají klepnutí myší, kurzorové směrové
+          tlačítko nebo dotek na obrazovku.
+      3:
+        text: Zde uděláme kosmického robota zdravícího Pozemšťany, když hráč klepne
+          na něj. Použijeme bloku "když klepnu", ke kterému se připojí blok "řeknu".
+          Když hráč klepne na kosmického robota, všechno co je připojené k událostí
+          "když klepnu" bloku se provede. Co řekne tvůj cizinec?
+      4:
+        text: Existují také "když šipky" bloky. Pokud propojíte tyto bloky "pohybu",
+          můžeš začít pohybovat s aktérem nahoru, dolů, doleva, nebo doprava. Krok
+          za krokem se stává tvá hra interaktivnější.
+    playlab_repeat_forever:
+      1:
+        text: To je blok "opakovat nekonečně". Něco co je uvnitř tohoto bloku se stane
+          ve hře vždy.
+      2:
+        text: Když chceš, aby aktér udělal něco opakovaně, aniž by hráč, který má
+          co dělat s tím, dáme tyhle bloky uvnitř bloku "opakovat věčně".
+      3:
+        text: V tomto dalším puzzlu je naším cílem pomoci čaroději neustále střežit
+          hranici království, vlevo a vpravo. Naučení, jak příkazy opakování pracují,
+          ušetří ti tuny času později při vytváření tvé vlastní hry.
+    C1_artist_intro:
+      1:
+        text: Tohle jsou tvoje kreslící bloky. Použij jeden správný k posunu umělce,
+          kde potřebuje vyplnit šedé čáry.
+      2:
+        text: Jsou bloky skoku. Použijí se k tomu, když tvůj umělec se pohybuje, ale
+          nemá kreslit, tak pomocí těchto bloku přejdeš na další šedý řádek.
+    C1_bee_level_intro:
+      1:
+        text: Nejsou Včely super cool? V této další sadě puzzlů tvým cílem je pomoci
+          včelám dostat se ke květinám a získat nektar z květů a létat do pláství
+          dělat medu, aby. Budete muset použít bloky "dostat nektar" a "udělat med"
+          pro toto cvičení.
+      2:
+        text: 'Každá květina má jiný počet nektarů: 1, 2, 3 nebo více. Víme, kolik
+          nektaru je na červeném květu malým číslem v rohu. Ujisti se, že si sesbíral
+          všechen nektar z květu, dříve, než se pohneš vpřed. Navíc každá plástev
+          může obsahovat jen tolik medu: 1, 2, 3 nebo více. Takže se ujisti, kolik
+          nejvíce medu může plástev obsahovat.'
+      3:
+        text: Když jsi schopen získat všechen nektar a udělat všechen med, uspěl si
+          a přejdi na další úroveň. V opačném případě je třeba opakovat tento puzzle.
+          Pohraj si chvíli, abys viděl, jaké je to být "včelí" programátor!
+    C1_bee_loops:
+      1:
+        text: Cyklus je opakování činnosti. Takže si to prozkoumáme dívám se na rámeček
+          a pak to pokládám zpět, tak opakuji stejnou činnost vícekrát. Je to opakování
+          dokola stejné činnosti vícekrát.
+      2:
+        text: V této úrovni chceme, aby včely sbíraly tři nektary z květiny. Namísto
+          tří bloků "získat nektar", budeš třikrát používat blok opakování k získání
+          nektaru. Stiskni "Run" a uvidíš, jestli máš pravdu. Hezké!
+    C1_bigevent_unplugged:
+      1:
+        text: V této lekci se volá velká událost, Je to všechno o tom, jak můžeme
+          řídit naše programy a skutečně změníme způsob, jakým program běží za pomocí
+          událostí, jakou je stisknutí tlačítka nebo klepnutím myší.
+      2:
+        text: Tuto lekci budeš ovládat s dálkovým papírovým ovládáním. Je to jako
+          videohra reálného života.
+      3:
+        text: Událost je akce způsobující něco, co se stane. Je to jako, když klepnete
+          na tlačítko na myši a webová stránka se načítá. To je událost. Když se dotkneš
+          obrazovky na tabletu, ta se roluje, je to také událost. Události jsou skvělý
+          způsob, jak nechat uživatele přímo řídit tvůj program, kdykoliv to potřebují
+          nebo chtějí.
+      4:
+        text: Věci se stávají, abychom na všechny reagovali. Máme hlad, a jdeme do
+          ledničky. Slyšeli jsme, pošťák přijde a dává naši poštu v poštovní schránky
+          a pak jsme dostali naši poštu. Ty jsou stejně jako události mačkání tlačítka
+          nebo přesouvání pákový joystiku. Oni jsou něco, co se stane nám, že nás
+          něco udělá.
+      5:
+        text: Ve video hrách událost "Aktualizovat" říká a to se stane 30 nebo 60
+          krát za sekundu. Pro videoherní programátory, je to snad ještě důležitější
+          událost než tlačítka nebo joystick.
+      6:
+        text: Hlavní událost, kterou pozorujeme, je výskyt "Update" tiku. A pak jsme
+          zkontrolovali joystick v tiku. Takže jsme, "Ou, někdo stiskl tlačítko tohoto
+          panelu? Ano nebo ne?" Bez událostí hráč by se nemohl pohnout, nebylo by
+          skoku, nebyl bys schopni řídit, co se děje. Videohry by nic neanimovaly.
+    C1_building_foundation:
+      1:
+        text: V pískové soše, kterou musíš znát, je selhání součástí programu. Ale
+          když na tom trváš, je to jen tak pro nic, ale lepší a zajímavější pro tebe.
+          Vytrvalost je název hry. Zůstaň s ní, bude se vám to líbit.
+      2:
+        text: Tato lekce se nazývá tvorba základu. V této lekci budeme pracovat na
+          úkolu, který by měl být opravdu těžký. Zjisti, jak vytvořit strukturu, která
+          je přinejmenším tak vysoká, jako jeden z těchto pohárů a to musí být dost
+          silné na to, aby zadržela váhu knihy.
+      3:
+        text: Mohou být doby, která naše tvorba nevyjde. Může nastat situace, že jsme
+          znepokojeni a chceme to vzdát. Může existovat mnoho těchto momentů. Ale
+          pokud budeme dál zkoušíme, dát to nejlepší zaměření znova a znova, dokud
+          jsme si jisti, že to nebude trvat dlouho.
+      4:
+        text: Vytrvalost závisí, kdy opravdu už chcete vzdát. Když chceš vytvořit
+          něco nového a jiného, bude tam spousta chyb podél cesty.
+      5:
+        text: Trik na vytrvalost je volba pokračovat dál a učit se z neúspěchů místo
+          opouštět, proto jsi znepokojený. Nespokojenost ve skutečnosti znamená, že
+          je něco úžasného za rohem. Tak pokračuj, než to dosáhneš. Wau!
+    C1_getting_loopy:
+      1:
+        text: Ahoj, jmenuji se Miral Kotbo a jsem tvůrce Iluminace. V mé práci je
+          tu něco, co používáme v obou tanci a programování lehkých obleků. A to je
+          cyklus! Cykly opakují znovu a znovu akce.
+      2:
+        text: Když něco opakuješ několikrát, stejně jako mé akce při hula hoop skákání,
+          provádím cyklus téhle akce. To je cyklus. Jedná se o cyklus. A tohle je
+          cyklus.
+      3:
+        text: Dnes budeme mít taneční večírek. Budeme vykonávat cykly s novým tancem.
+          Iterace. Budeme se učit o cyklech pomocí tance. Budeš se učit pár jednoduchých
+          kroků a opakovat je znova a znova k dokončení tance.
+      4:
+        text: Zde jsou kroky, které je třeba se naučit. Tleskat rukama. Dát ruce za
+          hlavu. Dát ruce do pasu. Zvednout levou ruku. Zvednout pravou ruku. Docela
+          jednoduché, že? Objevíš, že pokyny se mohou zkrátit tím položením některých
+          tanečních kroků do cyklů.
+      5:
+        text: V našem tanci používáme ve skutečnosti cykly. Tanečníci mají počítače,
+          vše je v téže síti. Mohl bych cyklovat světla znova a znova smyčka pro stejné
+          tanečníky. V cyklu bych mohl mít průchod, kde vám řeknu chcete jít znova
+          a znova opakovat prostřednictvím těchto šest tanečníků a pak v rámci cyklu
+          chceš zvýšit rychlost osvětlení. A který je vytvořen pomocí cyklů. Cykly
+          jsou důležité v informatice, zkracují a zjednodušují naší práci.
+    C1_happy_maps_unplugged:
+      1:
+        text: Tato lekce se nazývá Happy mapy. Dnes chceme pomoci táhnout malému Flurbu,
+          aby dostal její ovoce.
+      2:
+        text: Udělej, aby tvůj Flurb šel k tvému ovoci. K tomu budeš potřebovat zjistit
+          kudy Flurb musí jít a řídít jej pomocí šípek. Chceš-li, aby Flurb se dostal
+          k jablku, jakým směrem má jít Flurb? Nalinkujte to, aby to šlo.
+      3:
+        text: Chcete-li to tam získat, budeš kroužit směrem, kam se má jít.
+      4:
+        text: Vytvoř svůj algoritmus pomocí šipky vedle mapování, které chceš vyřešit.
+          Druhý je to stejný, ale děje se to dolů.
+      5:
+        text: Je to jako programování s papírem. A je to!
+    C1_maze_debugging:
+      1:
+        text: Ladění je nalezení a řešení potíží. Je spousta způsobů, jak ladit problémy.
+          Jedním z nejsnadnějších je přejít krok za krokem až tam, kde najdeš, kde
+          se něco pokazilo. Tady jsem se snažím udělat zpětný chod až do selhání.
+      2:
+        text: Prošel jsem každou část krok za krokem a uvědomil jsem si, kde byla
+          moje chyba. Nepostavil jsem se k tomu dobře. Tak jsem to zkusil se vrátit
+          zpět a mám to. Byl jsem opravdu rád, že jsem to odladil návratem zpět.
+      3:
+        text: Začínáme se sadou bloků již na scéně pro další informace o ladění. Všimni
+          si, že tyto bloky tě nedostanou k cíli. Je třeba ladit řešení a opravit.
+          Co se stalo špatného? Všimni si, že jsi musel jít dál na západ o jeden další
+          blok.
+      4:
+        text: Opravíme to přidáním dalšího bloku na západ a spuštěním, když máš pravdu.
+          Hurá, už to máš!
+    C1_maze_intro_sequencing:
+      1:
+        text: Pro tuto hádanku potřebuješ se dostat ptáka k prasátku. Podívej se na
+          puzzle a uvidíš, jaké pokyny je třeba použít.
+      2:
+        text: Je třeba přetáhnout bloky z panelu nástrojů přetáhněte do pracovního
+          prostoru. Přesvědč se, zda je pod blokem "když spuštění" a když si myslíš,
+          že máš správné řešení, pak můžeš klepnutím na tlačítko "Run" sledovat pochod
+          ptáka k prasátku.
+    C1_maze_loops:
+      1:
+        text: Jedno je, že počítače jsou opravdu dobré v opakovacích příkazech. Jako
+          člověk byste se opravdu nudili, kdybyste museli dělat stejnou věc mnoho
+          a mnoho krát za sebou. Ale počítač umí udělat totéž miliony nebo dokonce
+          miliardakrát a ne se nudit a umí to dělat opravdu dobře.
+      2:
+        text: Např. když chci popřát každému na Facebooku k narozeninám zasláním e-mailu,
+          mohlo by mne to trvat víc než století psát všem skutečné e-maily. Ale s
+          jen pár řádků kódu, může být systém poslat všem na Facebooku e-mail s přáním
+          šťastných narozenin.
+      3:
+        text: Dostat ptáka k prasátku v této úrovni..., spíš než přetažením tří bloků
+          na sever pomocí bloku "opakovat" do pracovního prostoru. Přetáhni blok "opakování"
+          do pracovního prostoru a zadej číslo 3. Potom přetáhni blok "Přesun" do
+          bloku "opakování" a stiskni "Run", abys viděl, jestli máš pravdu. Gratulujeme,
+          povedlo se ti!
+    C1_moveitmoveit_unplugged:
+      1:
+        text: Tato lekce se nazývá posuň to, posuň to. Napíšeme dohromady program,
+          aby naši přátelé starují s kompasem k cíli smajlíku.
+      2:
+        text: Ale smajlík je tváří dolů a jen jeden člověk ví, jak se tam dostat.
+          Spusťme tento program.
+      3:
+        text: Program je algoritmus zakódovaný do něčeho, co lze spustit strojem.
+          Většina z nás přemýšlí o programu jako o něčšem, co píšeme pro počítač.
+          Programy jsou opravdu dobré pro to, ale jsou také užitečné na jiných místech.
+          Můžeš si vytvořit vlastní hru nebo dokonce naprogramovat robota dělat věci
+          pro tebe.
+    C1_going_places_safely:
+      1:
+        text: Jmenuji se Jeremiáš. Ahoj! Je mi sedm let. Rád si hraju na počítači
+          mé mámy, ale vždycky dostanu nejdříve její povolení. "Mami, můžu jít na
+          počítač? Jistě, miláčku!"
+      2:
+        text: Mám rád mámin počítač, protože mohu jít na internetu. Internet je něco
+          jako tvoje okolí. Zde můžeš navštívit pohodová místa, promluvit si s rodinou
+          a přáteli a můžeš poznat spoustu nových věcí.
+      3:
+        text: Včera jsem navštívil zoo nedaleko nás. Viděla jsem malou zebru. Udělal
+          jsem si jeho obrázek a změnil barvu pruhů, pak přidal klobouk a dal do mé
+          sbírky nezvyklých zvířat. Skvělé! Později jsem se dostal na místo, daleko
+          dál. Navštívil jsem Keni. Je to země v Africe. Žije tam spousta zeber.
+      4:
+        text: Někdy na internetu jsem mluvit s lidmi, které znám jako moje babička,
+          která žije v jiném státě. Ahoj babi! Dělá mi sadu koláčků, které mi posílá
+          na moje narozeniny. "Mňam, přeji si, aby Internet byl pochutina!" Umím se
+          domluvit s různými lidmi na internetu, jako můj bratranec, ale mluvím jen
+          s lidmi, které znám.
+      5:
+        text: Co se mi líbí nejvíce na interentu, je hrát si hrát zábavné hry. Skórovat!
+          Rád také kreslím a vytvářím nové věci a sdílím svými přáteli. Slvělé! Někdy
+          navštívím webové stránky, kde se učím nové věci, ale vždy se držím webů,
+          které jsou zrovna pro mne. Wau, dinosaury!
+      6:
+        text: 'Internet je to super místo pro zábavu. Ale stejně, jako když přejdeš
+          ulici ve tvém okolí, musíš být také opatrní, když přejdeš do režimu online.
+          Zde jsou tři pravidla k zapamatování. Pravidlo číslo 1: vždy se nejprve
+          ptej tvých rodičů. Pravidlo číslo 2: mluv pouze s lidmi, které znáš. Pravidlo
+          číslo 3: drž se míst, která jsou právě pro tebe.'
+      7:
+        text: Wau, to byla legrace! V době večeře. Odhlásím se nyní. Nemohu se dočkat,
+          až se znovu přihlásím, abych si zjistil, co další lze navštívit.
+    C1_pair_programming:
+      1:
+        text: Dnes se budeme učit o programování ve dvojicích. V párovém programování
+          budeš pracovat jako tým. Proč by měly dva lidé používat jeden počítač? Jelikož
+          dvě hlavy jsou lepší než jedna. V párovém programování, ve které vy a tvůj
+          partner se chystáte sednout si spolu k jednomu počítači a oba budete pracovat
+          na stejném projektu.
+      2:
+        text: V párovém programování je spárovaná, kde jedna osoba je řidič a druhá
+          osoba navigátor, stejně jako se řídí auto. Řidič sedí u počítače a pomocí
+          klávesnice a myši nebo dotykové obrazovky ovládá hlavní činnosti počítače.
+          Druhá osoba je navigátor. Navigátor pomáhá řidiči zodpovídat jeho otázky
+          a poukazovat na případné problémy nebo chyby.
+      3:
+        text: Komunikace je klíčem k úspěšnému párovému programování. Neurážej, buď
+          uznalý, nebuď panovačný navigátor, protože nikdo nemá rád řidiče na zadním
+          sedadle. Ty a tvůj partner by měli vždy spolu mluvit. Řidič umí vysvětlit,
+          co dělá. A navigátor umí pomoci navrhnout, co dělat dál.
+      4:
+        text: Navigátor by měl přemýšlet o velkém obrázu a řidič by se měl zaměřit
+          na podrobnosti. Obě role jsou důležité. Párové programování je pracovat
+          společně jako tým.
+    C1_planting_seed:
+      1:
+        text: Tato lekce se nazývá výsadba stromu ze semen a to nám pomůže pochopit
+          algoritmy. Algoritmy jsou konkrétní pokyny vysvětlující pořadí, v němž něco
+          dělat. Dokonce i každodenní věci, jako je snídaně nebo čištění zubů jsou
+          algoritmy vyžadující malé kroky k udělání práce.
+      2:
+        text: Počítače mohou být opravdu chytré, ony mohou jen pochopit, co jim řeknete
+          přesně krok za krokem. Skvělá věc, co se týká algoritmy, je, že pokud budete
+          postupovat podle pokynů uvedených v objednávce, můžeš udělat něco, co jsi
+          nevěděl, jak se rozhodovat. Je to jako dodržet recept.
+      3:
+        text: Dnes budeme sázet strom pomocí algoritmu. Vytvoř si vlastní algoritmus
+          odříznutí od obrázků. Vyber obrázky ukazující kroky v výsadbě a uspořádej
+          tyto obrázky ve správném pořadí.
+      4:
+        text: Teď je čas zjistit, zda tvůj algoritmus funguje. Postupuj velice pečlivě
+          v algoritmu. Jsou ve správném pořadí? Byli jsi úspěšný ve výsadbě podle
+          algoritmu? Je to jako programování s obrázky!
+      5:
+        text: Když chceme udělat čokoládu, existuje mnoho velkých kroků k tomuto procesu
+          a každý z těchto velkých kroků má řadu menších kroků a existují různé předpisy
+          nebo algoritmy podle toho, jak chceme, aby čokoláda chutnala. Každý krok
+          je důležitý, a to i ty malé, takže bez jednoho kroku, nelze zbytek dokončit.
+          Vytváření algoritmů, které ostatní umí pochopit, je opravdu důležité. To
+          je důvod, proč každý krok musí být napsán tak, aby bez ohledu na to, kdo
+          to dělá, výsledek byl stejný.
+    C1_playlab_storytelling:
+      1:
+        text: Je čas být kreativní a použiješ schopnosti kódovat vyprávět příběh.
+          Tvůj příběh bude mít aktéry a budeš schopen udělat, aby tito aktéři mluvili
+          a jednali s ostatními. Začni přemýšlet, jaký druh příběhu chceš vyprávět.
+      2:
+        text: Kočky se vždy bojí psa a co když kočičí postavy zjistí, že pes se pokusí
+          být příjemný? Blok "Při spuštění" začíná všechno. Blok "Move" posune tvou
+          postavu a blok "říci" tvé postavy poví, co napíšeš.
+      3:
+        text: To je blok "když aktéři kolidují", který můžeš připojit k jiným blokům.
+      4:
+        text: Udělal jsem, že psa přijde a řekne "Ahoj", ale pak kočka dostala strach,
+          že utekla. "Ach" kdyby bylo víc času, byl by to šťastný konec. Konec!
+    C1_spelling_bee_intro:
+      1:
+        text: To je hláskování včelí úrovně. Pomocí kousků puzzlu k posunu včely.
+          Jak se pohybuje, bude shromažďovat dopisy k hláskování slov.
+      2:
+        text: Podívej se, kdy můžeš hláskovat slovo v poli pod jevištěm. Ale včelaa
+          je opatrný! Pohyb špatným směrem přidává dopisy, které nechcete.
+    C1_zuck_repeat_loop:
+      1:
+        text: Jedno je, že počítače jsou opravdu dobré v opakovacích příkazech. Jako
+          člověk byste se opravdu nudili, kdybyste museli dělat stejnou věc mnoho
+          a mnoho krát za sebou. Ale počítač umí udělat totéž miliony nebo dokonce
+          miliardakrát a ne se nudit a umí to dělat opravdu dobře.
+      2:
+        text: Např. když chci popřát každému na Facebooku k narozeninám zasláním e-mailu,
+          mohlo by mne to trvat víc než století psát všem skutečné e-maily. Ale s
+          jen pár řádků kódu, může být systém poslat všem na Facebooku e-mail s přáním
+          šťastných narozenin.
+      3:
+        text: V tomto příkladu je tvým cílem pohybovat ptáka k prasátku. Teď budeš
+          moci používat bloku opakování, abys to mohl udělat snadněji. Můžeš to provést
+          buď tím, že počítači uvedeš pětkrát příkaz krok vpřed, aby se pták posunul
+          pokaždé jeden krok k prasátku nebo můžeš povědět počítači pokyn, aby postoupil
+          jednou a pak povědět, aby to zopakoval pětkrát udělat stenou věc.
+      4:
+        text: Udělat toto,  přetáhni příkaz krok vpřed a pak jej polož uvnitř bloku
+          opakování. A klepni na něj a pověz mu kolikrát opakovat blok,  kroků vpřed.
+      5:
+        text: Ještě jedna další věc je, že můžeš umístit libovolný počet příkazů,
+          co chceš uvnitř bloku opakování. V tomto příkladu povíš to posunout vpřed
+          a otočit vlevo, což udělá pětkrát. Pobav se!
+    C2_artist_intro:
+      1:
+        text: Ty se ani nekvalifikuješ do závodu, když nemáš lidi, kteří jsou zdatní
+          v informatice, protože shromažďují údaje o autech a nutnost mít lidi, kteří
+          umí psát programy ke zjištění, jak přijít na to, jak vytvořit výkon.
+      2:
+        text: V těchto puzzlech budeš umělcem s tužkou kreslící různé tvary. Všude
+          tam, kam tvůj umělec jde, bude nakreslit čáru za sebou.
+      3:
+        text: K pohybu po plátně použiješ pohybu bloku krok vpřed. Zde blok pohybu
+          vpřed říká pohyb vpřed o 100 pixelů. Když jsme dosáhli běhu, co se děje?
+          Umělec se pohybuje vpřed o určitou velikost a tato velikost je 100 pixelů
+          Pixely jsou v podstatě velmi drobné čtverečky na obrazovce počítače.
+      4:
+        text: Jiný blok, který máme v tomto puzzle, říká - otoč se doprava o 90 stupňů.
+          A když to protáhneme, aby náš umělec udělal otočku o určitou velikost. Tak
+          si můžeš pohrát, jak daleko chceš otočit umělce. To je otočka o 90 stupňů.
+      5:
+        text: A to je o 120 stupňů. A pamatuj si, že tyto hodnoty lze změnit klepnutím
+          na šipky vedle čísla pro pixely a stupně. Pobav se kreslením se svým umělcem!
+    C2_bee_conditionals:
+      1:
+        text: To je podmínkový blok. Říká se IF je nektar nebo med, který je menší
+          než, rovný nebo vyšší než číslo, POTOM se něco udělá.
+      2:
+        text: To je užitečné, když nevíme, kolik nektaru a medu se získá, jak vidíme
+          zde s touto otazníkem.
+      3:
+        text: V tomto příkladu chceme říci, zda fialový květ má nektar větší než 0
+          ke sběru nektaru. To vám řekne, zda naše včely sbírají nektar čím dál, tak
+          dlouho, jak je to tam. Ta-dá!
+    C2_binary_bracelets:
+      1:
+        text: To je binární zavorkovaná lekce. Musíme kódovat naše iniciály na náramek,
+          který můžeme nosit a ukázovat všem našim přátelům!
+      2:
+        text: Binární je způsob zobrazovat informace pomocí pouze dvou možností. Někdy
+          lidé myslí na tom jako jen jedničky a nuly. Ale můžeš zobrazit binárně s
+          kombinací zapnuto nebo vypnuto, nahoru a dolů, dovnitř a ven nebo skutečně
+          nastavených protikladů.
+      3:
+        text: Ahoj, já jsem Orion a programuji roboty v Play-im. Všechny počítače
+          a robotové mozky na jejich nejzákladnější úrovni jsou malá elektronická
+          brána. Brána je otevřena, elektřina může proudit dovnitř a když je zavřená,
+          elektřina není.
+      4:
+        text: Binární příklad na robotu je jeho oči. Tyto oči jsou LED diody, jsou
+          to světla, které je buď zapnutá nebo vypnutá. To je binární systém, jedno
+          nebo druhé. Můžeme použít světla představující binární čísla. Když máme
+          řadu robotů, můžeme říci, že první robot je na prvním místě a druhé na druhém,
+          třetí robot je na třetím a tak dále. To jaksi představuje binární číslo.
+          Roboti s jejich binárními oči a to počítá s tebou.
+    C2_conditionals_with_cards:
+      1:
+        text: Tato lekci se nazývá podmínky s kartami. Každý den děláš rozhodnutí
+          podle toho, co vidíš a slyšíš.
+      2:
+        text: Chci se projít do parku, ale nejdřív se musím rozhodnout, zda bych si
+          měl vzít deštník nebo ne. Tak se dívám z okna. Pokud je zataženo, budu brát
+          deštník. Jinak si vezmu nějaké sluneční brýle. Myslím, že si raději vezmu
+          deštník. Co vidím a slyším, určuje, co beru do parku.
+      3:
+        text: Podmínky se používají také ve hrách. Dnes si procvičíme podmínky na
+          karetní hře. V této hře karta, kterou vytáhnu, určuje, co moji přátelé se
+          chystají udělat. Když vytáhnu sedmičku, všichni tleskají. Jinak všichni
+          říkají "Ach." Zkusme to! "No" "na zdraví"
+      4:
+        text: Vsadím se, že můžete vytvářet hry, které jsou ještě více zábavnější
+          než podmínky. Zkus to! Podmínky jsou, které dělají počítače zdát se chytré.
+          Počítačový program zahrnují podmínky, které mohou reagovat na uživatele
+          a změnit průběh akcí.
+      5:
+        text: Přemýšlej o své oblíbené videohře. Získáš více bodů pro některé akce
+          než u ostatních? K tomu dochází, protože počítač používá podmínky. Je to
+          způsob, jakým počítač dělá rozhodnutí. Co takhle když jsi zasáhl cíl, vyděláš
+          deset bodů. Jinak ztratíš tři. Když víš, jak fungují podmínky, můžeš vytvořit
+          všechny druhy zajímavých her.
+    C2_artist_debugging:
+      1:
+        text: Zde už máme nějaké bloky z našeho pracovního prostoru. Ale je tu něco
+          špatné.
+      2:
+        text: Začněte ladit tento kód zpomalující rychlost a sledovat, jak to projde
+          každým blokem krok za krokem.
+      3:
+        text: Ou, tady je problém! Vousy jsou dlouhý 75 pixelů, ne 25.
+    C2_bee_debugging:
+      1:
+        text: Už jsi někdy slyšel o ladění programu? To je způsob, jak přijít na tom,
+          co nefunguje. Při ladění kódu, určuješ a odstraňuje chyby.
+      2:
+        text: Zde jsme zadali již pár bloků na našem pracovišti. Chceme použít krokvé
+          tlačítko projít bloky, krok za krokem, zda je to správné řešení a kde budeme
+          muset opravit.
+      3:
+        text: Vypadá to, že je to náš problém. Potřebujeme jeden další blok krok vpřed.
+          Krokové tlačítko pomáhá nám ladit náš problém k určení, kde je chyba, tak
+          to opravíme.
+    C2_digital_footprint:
+      1:
+        text: Podrž si klobouk na hlavě, tvoje chytrosti ti poví, kde jsi a popřemýšlí
+          o zoo a přikývnout na nazdar tobě a vám! Používej hlavu, když jsi online,
+          podrž si, co je uvnitř tvého rozumu, abys byl v bezpečí, jak dát svůj život
+          do soukromého prostoru! Od hlavy dolů k tvým nohám, zastav se a přemýšlej
+          o tom. Od nohou až po tvůj nos, zastav se a přemýšlej online!
+      2:
+        text: Používej srdce, aby si rostl a rostl a dej zdravou barvu a udělej valentine,
+          abys někomu řekl, že budeš můj! Používej své srdce, když jsi online, abys
+          cítil, co je správné a vždy milé a ukaž, že tvoji přátelé respektují být
+          fér a milý na internetu. Od hlavy dolů do nohou pozastav se a přemýšlej
+          tom. Od nohou až po nos pozastav se, jsi online!
+      3:
+        text: Použij ruce k obejmutí tvého mazlíčka, k zabránění navlhnutí oblečení,
+          a nošení tvých oblíbených rukávů a pomůže vám létat a uvěřit. Používej ruce,
+          když jsi online, abys sis udělal přestávu a srovnal čas a zanechal svou
+          techniku a našel si strom k lezení. Od hlavy dolů do nohou pozastav se,
+          přemýšlej o tom. Od nohou až po nos pozastavit a si online!
+      4:
+        text: Používej svůj dům k ukládání potravin, abys naslouchal bručivou náladu,
+          udělal stojku a cítil plyn ze sodovky. Používej svůj dům, když jsi online
+          ke sledování určitých znaků a nechal se vést a pověděl, kdy to není v pořádku.
+          Od hlavy dolů do nohou se zastav, přemýšlej o tom. Od nohou až po nos zastav
+          se a přemýšlej, že jsi online!
+      5:
+        text: Jsi-li online, mysli hlavou a vnímej srdcem, vyrovnávej rukama, naslouchej
+          svému domovu. Pomocí nohou běháš, kopeš a skáčeš a odrážíš se na skákací
+          tyči a tančíš kolem bloku, přeskakuješ smradlavé ponožky. Když jsi online,
+          postav se vzpřímeně těm posměváčkům stojící za čárou, nezapomeň se postavit
+          vysoko, chovej se pěkně ke stvořením velkým i malým.
+      6:
+        text: Od hlavy dolů k nohám zastav set, přemýšlej o tom. Od nohou až po nos
+          zastav se a přemýšlej jsi online! Mysli tak si hlavou a vnímej srdcem, vyrovnávej
+          rukama, poslouchej domov, stůj na svých nohách. Od hlavy dolů do nohou zastav
+          se, přemýšlej o tom. Od nohou až po nos zastav se a přemýšlej jsi online!
+    C2_digital_footprint_v2:
+      1:
+        text: Pokaždé, když budeš online, zanecháváš za sebou stopu, kterou lze vyhledat,
+          zkopírovat, sdílet, vysílat všem a je to trvalé. Jaký druh digitální stopy
+          zanecháváš? Jaký druh digitální stopy chceš zanechávat?
+    C2_graph_paper:
+      1:
+        text: V této lekci se nazývá "Programování s milimetrovým papírem" a je to
+          vše o algoritmech. Dnes se budeme učit jak psát programy, které si navzájem
+          ukážete, jak znovu vytvořit jednoduché černobílé obrázky, pomocí jen ručně
+          kreslených šipek.
+      2:
+        text: Algoritmus je seznam instrukcí k dokončení úkolu. Provádíme této sady
+          instrukcí uděláte misku. Algoritmy jsou opravdu užitečné, když potřebuješ,
+          aby někdo jiný pochopil, jak něco udělat.
+      3:
+        text: Když píšeš algoritmus pro počítač, budeš to muset rozdělit do malé drobné
+          kroky. Až dokončíš tento řádek, přejdi dál a pak na příště to bude hotovo.
+      4:
+        text: Používám při své práci algoritmy. Když napíši všechny kroky, lze znovu
+          vytvořit ten stejný kus, nebo může poučit někoho jiného, aby to udělal.
+          Dát sklo do pece, stavit to dohromady, postupuj podle zbývajících pokynů,
+          abys udělal misku. Algoritmy ti dávají cestovní mapu, abys něco udělal.
+    C2_artist_loops:
+      1:
+        text: Zde budeme používat blok opakování, který nám pomůže ušetřit kroky,
+          když jsme programovali našeho umělce. Už máme nějaké bloky na naší scéně,
+          ale právě tam jsme začali.
+      2:
+        text: Opakováním těchto bloků čtyřikrát se nakreslí celý čtverec, natáhli
+          jsme blok opakování a položíme bloky posunutí vpřed a otočte vpravo dovnitř
+          bloku opakování. Když stiskneme tlačítko run, umělec opakuje tyto kroky
+          čtyřikrát k dokončení čtverce.
+    C2_bee_loops:
+      1:
+        text: Cyklus je opakování činnosti. Takže si to prozkoumáme jako pohled na
+          rámeček a pak vrácení zpět, tak vícekrát opakuji stejnou činnost. Je to
+          opakování dokola vícekrát stejné činnosti.
+      2:
+        text: Toto je blok opakování. Cokoli dáš dovnitř bloku opakování, bude opakovat
+          ty akce počtem opakování, které jsi pověděl. Např. v této úrovni, spíše
+          než tažením posouvat se vpřed a získat třikrát nektar, natáhni jen jednou
+          a akci zopakuj třikrát. To usnadnilo!
+    C2_maze_intro:
+      1:
+        text: Obvykle programování je celé v textu, ale my budeme používat Bloky využívané
+          vizuálně, které se přetahují k psaní programů. Pod kapotou sr tak vytváří
+          kód. Chceš-li začít vytvářet kód pro program, pomůže ti tento krok bludištěm
+          Angry Bird se dostat ke zlým prasátkům, která ukradly jejich vejce.
+      2:
+        text: Blokově se to dělí do tří hlavních částí. Na levé straně je ptačí bludiště,
+          kde bude spuštěn tvůj program. Pokyny pro každou úroveň jsou zapsané pod
+          bludištěm. Ve střední oblasti je panel nástrojů, kde každý z bloků je příkaz,
+          který pták umí pochopit. Prázdné místo na pravé straně se nazývá pracovní
+          prostor, kde budeš vytvářet náš program.
+      3:
+        text: Když přetáhnu blok do našeho pracovního prostoru a stisknu tlačítko
+          "Run", co se stane? Pták se pohybuje vpřed o jedno pole mřížky. A co když
+          ptáku něco udělat, poté se posunul vpřed o jedno pole? Mohu přidat další
+          blok do našeho programu.
+      4:
+        text: Vyberu si blok "otočit doprava" a zatáhnu jej pod můj blok, až se objeví
+          žlutá šipka. Pak to tam upustím dva bloky, které se přichytí dohromady.
+          Když stisknu znova tlačítko "Run", pták bude provádět příkazy od shora dolů
+          v našem pracovním prostoru.
+      5:
+        text: Když někdy chceš odstranit blok, prostě jej vyjmi ze zásobníku a přetáhni
+          do koše. Poté, co stiskneš tlačítko run, můžeš vždy stisknout tlačítko reset,
+          abys ptáka dal zpět na začátek. Teď pojďme dostat ty prasátka!
+    C2_paper_airplanes:
+      1:
+        text: Tato lekci se nazývá algoritmy reálného života. Algoritmy popisují věci,
+          které lidé dělají denně. Každodenní algoritmy jsou koláčkové recepty a pokyny
+          k budování holubníku.
+      2:
+        text: Dnes budeme dělat, vytvářet a testovat algoritmus pro papírové letadlo.
+          Ale nejprve si musíme rozdělit tento velký projekt na snadno sledovatelné
+          malé kroky. Pro výrobu papírového letadla si musíme rozhodnout, jaké kroky
+          učinit a v jakém pořadí je dělat.
+      3:
+        text: Vytvoříš svůj algoritmus rozstřižením obrázku na části. Dále si vyber
+          6 obrázků ukazující potřebné kroky k výrobě papírového letadla a uspořádej
+          tyto obrázky ve správném pořadí. Jakmile máš vše v pořádku, budeš obchodovat
+          algoritmy s jiným týmem studentů k otestování algoritmu zda funguje. Dobře
+          navržený algoritmus je super důležitý k výrobě nejlepšího papírového letadla.
+      4:
+        text: Když chceme udělat čokoládu, existuje mnoho velkých kroků k tomuto procesu.
+          Každý z těchto velkých kroků má řadu menších kroků a existují různé předpisy
+          nebo algoritmy podle toho, jak chceme, aby čokoláda chutnala. Každý krok
+          je důležitý, a to i ty malé, takže bez jednoho kroku, nelze zbytek dokončit.
+          Vytváření algoritmů, které umí ostatní pochopit, je opravdu důležité. To
+          je důvod, proč každý krok musí být napsán tak, aby bez ohledu na to, kdo
+          to dělá, výsledek byl stejný.
+    C2_playlab_createstory:
+      1:
+        text: Zatím jsi udělal animaci nebo příběh, který dělá přesně to samé, pokaždé,
+          když ji spustíš. Nyní můžeš vytvořit interaktivní hry, které můžeš skutečně
+          hrát.
+      2:
+        text: Jsou nějaké nové bloky k vyzkoušení. Jsou bloky "když šipka" a "posuň
+          aktéra". Můžeš dát tyto bloky dohromady, aby aktéři se pohybovali kurzorovými
+          klávesami. A existují nějaké bloky, které věci, když se aktéři srazí nebo
+          na ně se klepne. Zkontroluj a pobav se!
+    C2_relay_programming:
+      1:
+        text: Dnes budeme dělat štafetové programování. Je to všechno o programování
+          pod tlakem a ladění chyb, které se někdy stanou, když pracujete opravdu
+          rychle nebo v týmech. Použijeme grafický papír k programování pro simulaci
+          kódování a simulace a použijete k simulaci termínu štafetových závodů.
+      2:
+        text: Ve štafetovém programování týmy závodí k dokončení programu s milimetrovým
+          papírem. Musíš zkontrolovat práci tvého spoluhráče nebo ladění, opravit,
+          když je chyba, Přidat svou šipku a běžet zpátky a označit svého spoluhráče.
+      3:
+        text: Programátoři používají hodně ladění k nalezení a opravě problémů v jejich
+          algoritmy nebo kódu. Je spousta způsobů, jak odladit problémy. Jedním z
+          nejsnadnějších je posouvat se krok za krokem, až se najde, kde se něco pokazilo
+          a pak to opravit.
+      4:
+        text: Zde se snažím udělat přemet nazad, ale nespadnout. Projít každou část,
+          krok za krokem a uvědomit si, kde byla moje chyba. Můj trenér mi ukázal,
+          že nebylo správně uvedení rukou na nosníku. Tak jsem zkusil další přemet
+          vzad na nosníku s novou polohu ruky, a schoval jsem to! Byl jsem opravdu
+          rád, že jsem odladil můj přemet vzad. Přišli jsme na to! Ladění je nalezení
+          a řešení potíží. Pěkné, dobrá práce!
+    C2_zuck_repeat_loop:
+      1:
+        text: Jedna věc je, že počítače jsou opravdu dobré v opakujících příkazech.
+          Člověk by se opravdu nudil, kdyby musel dělat stejnou věc mnoho a mnoho
+          krát za sebou. Ale počítač umí udělat totéž milion krát nebo dokonce miliarda
+          krát a nenudí se a umí to dělat opravdu dobře.
+      2:
+        text: Tak napří. když chci popřát všem na Facebooku k narozeninám zasláním
+          e-mailu, mě to může trvat více než jedno století zapsat všem skutečně všechny
+          ty e-maily. Ale s jen pár řádků kódu, systém umí poslat e-mail všem na Facebooku
+          s přáním šťastných narozenin. Tak to jsou cykly a proč jsou ceněné a něco,
+          co počítače umí dělat velmi dobře.
+      3:
+        text: V tomto příkladu tým cílem je pohybovat ptaem, aby se dostal k prasátku.  Nyní
+          se pokusíme použít blok "opakovat", abychom to mohli udělat velmi snadno.
+          Můžeš to udělat buď tím, že počítači dáš  pětkrát příkaz "posunout vpřed",
+          aby se pták posunul pokaždé vpřed o jeden krok k prasátku.
+      4:
+        text: Nebo stačí počítači povědět "vpřed" jednou a pak povědět na "opakování"
+          5 krát a učiní se totéž. Tak k tomu přetáhni příkaz "vpřed" dovnitř bloku
+          "opakování". A můžeš na něj klepnou a povědět kolikrát chceš opakovat blok
+          sdělením počty kroků pro průchod.
+      5:
+        text: Ještě teď je jedna věc že můžeš dát libovolný počet příkazů dovnitř
+          bloku "opakování". Takže v tomto příkladu je to pohyb vpřed a otočit vlevo,
+          které se udělá pětkrát. Dobrá dobrá práce a pobav se!
+    C3_artist_functions:
+      1:
+        text: Jednou z velkých věcí v počítačových programech je, jakmile jsi naučil
+          počítač udělat akci, můžeš tuto funkci volat znovu. Můžeš zadat název a
+          pak volat. To je ve skutečnosti jako rozšíření jazyka.
+      2:
+        text: V budovaném programu jsme se naučili, jak nakreslit čtverec čtyřikrát
+          přesouváním a otáčení. Můžeme na to vzít tuto funkci a dát ji jméno, nakreslit
+          čtverec, tak, že kdykoliv to chceme udělat, prostě povíme nakreslit čtverec
+          a vrátí se to zpět, kde v kódu vyvoláme tuto funkci. To se udělá za nás.
+          Přidali jsme tento koncept do našeho programovacího jazyka.
+    C3_artist_intro:
+      1:
+        text: Ty se ani nekvalifikuješ do závodu, když nemáš lidi, kteří jsou zdatní
+          v informatice, protože shromažďují údaje o autech a nutnost mít lidi, kteří
+          umí psát programy ke zjištění, jak přijít na to, jak vytvořit výkon.
+      2:
+        text: V těchto puzzlech budeš umělcem s tužkou kreslící různé tvary. Všude
+          tam, kam tvůj umělec jde, bude nakreslit čáru za sebou.
+      3:
+        text: K pohybu po plátně použiješ pohybu bloku krok vpřed. Zde blok pohybu
+          vpřed říká pohyb vpřed o 100 pixelů. Když jsme dosáhli běhu, co se děje?
+          Umělec se pohybuje vpřed o určitou velikost a tato velikost je 100 pixelů
+          Pixely jsou v podstatě velmi drobné čtverečky na obrazovce počítače.
+      4:
+        text: Jiný blok, který máme v tomto puzzle, říká - otoč se doprava o 90 stupňů.
+          A když to protáhneme, aby náš umělec udělal otočku o určitou velikost. Tak
+          si můžeš pohrát, jak daleko chceš otočit umělce. To je otočka o 90 stupňů.
+      5:
+        text: A to je o 120 stupňů. A pamatuj si, že tyto hodnoty lze změnit klepnutím
+          na šipky vedle čísla pro pixely a stupně. Pobav se kreslením se svým umělcem!
+    C3_artist_nested_loops:
+      1:
+        text: Když vložíme cyklus do jiného cyklu, hovoříme o vnořených cyklech. Např.
+          tady jsme zadali kód, který už nakreslí jeden trojúhelník se stranami délky
+          100 pixelů pomocí opakování nastaveného na tři, jednou pro každou stranu
+          trojúhelníku.
+      2:
+        text: Chceme ale nakreslit šest trojúhelníků. To uděláme pomocí cyklu umístěného
+          do jiného bloku opakování. Opravdu skvělé!
+    C3_bee_conditionals:
+      1:
+        text: To je podmínkový blok. Říká se IF je nektar nebo med, který je menší
+          než, rovný nebo vyšší než číslo, POTOM se něco udělá.
+      2:
+        text: To je užitečné, když nevíme, kolik nektaru a medu se získá, jak vidíme
+          zde s touto otazníkem.
+      3:
+        text: V tomto příkladu chceme říci, zda fialový květ má nektar větší než 0
+          ke sběru nektaru. To vám řekne, zda naše včely sbírají nektar čím dál, tak
+          dlouho, jak je to tam. Ta-dá!
+    C3_bee_debugging:
+      1:
+        text: Už jsi někdy slyšel o ladění programu? To je způsob, jak přijít na tom,
+          co nefunguje. Při ladění kódu, určuješ a odstraňuje chyby.
+      2:
+        text: Zde jsme zadali již pár bloků na našem pracovišti. Chceme použít krokvé
+          tlačítko projít bloky, krok za krokem, zda je to správné řešení a kde budeme
+          muset opravit.
+      3:
+        text: Vypadá to, že je to náš problém. Potřebujeme jeden další blok krok vpřed.
+          Krokové tlačítko pomáhá nám ladit náš problém k určení, kde je chyba, tak
+          to opravíme.
+    C3_bee_functions:
+      1:
+        text: Jedním z nejdůležitějších konceptů v informatice je jak definovat nové
+          příkazy, jak přidat vlastní slova do počítačového jazyka. Většina počítačových
+          jazyků mají jen asi 100 slov nebo příkazů. Umění a kouzlo je v definování
+          vlastních nových slov z těchto stavebních bloků.
+      2:
+        text: Děláme to pořád ve sportu. Např. v basketbalu, začneš učením jak driblovat,
+          jak přerušit hru, jak se odrazit. Jakmile jsi se naučil tyto opravdu základní
+          pohyby, budeš se učit nové pohyby a dávat dohromady tyto stavební bloky,
+          stejně jako vybírat nebo kutálet nebo dávat a jít. Pak můžeš jít dělat složitější
+          hry. Jakmile se naučíš hrát a dát tomu jméno, všichni v týmu ví, jak na
+          to.
+      3:
+        text: Podobně co jsi naučil počítač udělat akci jednou pomocí těchto posloupností
+          příkazů, můžeš vytvořit vlastní název pro tuto akci a tak je snadné ji později
+          zopakovat. Když definuješ vlastní příkaz a dáš mu jméno, který se nazývá
+          funkce. Nyní budeme používat funkci, aby pomohla včele.
+      4:
+        text: V tomto příkladu naše funkce se nazývá dostat 2 nektary, Tento zelený
+          blok právě zde. Víme, jak dostat 2 nektary při pohledu na šedé pole, který
+          je v definici funkce. Když se podíváš dovnitř, dostaneš 2 nektary, získáš
+          nektar a pak zase nektar. Vždy se podívej, co je uvnitř šedého pole, abys
+          věděl, co umí udělat tyto zelené funkční bloky.
+    C3_bee_nested_loops:
+      1:
+        text: Nyní budeme používat vnořené cykly se včelou. Budeme mít nějaký počáteční
+          kód, který řekne včele, aby se pohybovala vpřed a dostala třikrát nektar
+          a pak otočila vpravo. Vezměme si tento celý kus kódu a vnořme jej dovnitř
+          jiného bloku opakování a sada se opakuje třikrát. Hotovo!
+    C3_bounce:
+      1:
+        text: Chystáš se vytvořit svoji vlastní odrazovou hra, kterou jsi schopen
+          sdílet se svými přáteli! Jak prima!
+      2:
+        text: Chcete-li začít, musíme spojit řízení pádla se šipkami na naší klávesnici.
+      3:
+        text: Umíme to udělat propojením levého šipkového bloku k posunu levého bloku
+          a pravého šipkového bloku na pravý blok. Zkus to a budeš programovat na
+          vlastní odrazové hře!
+    C3_computational_thinking:
+      1:
+        text: Toto lekce je počítačové myšlení. Někdy učení nové hry může být těžké,
+          ne? Zpočátku se to může zdát opravdu matoucí a někdy, nikdo tě nenaučil
+          pravidla, takže budeš na to musíš přijít sám.
+      2:
+        text: Dobrou zprávou je, že můžeš přijít lepší věci pomocí vlastních, když
+          znáš pár triků v myšlení. Tyto triky jsou jedinečné způsoby pohledu na řešení
+          problémů. V této lekci se naučíš čtyři triky a praxí s přáteli vymyslíš
+          pravidla hry.
+      3:
+        text: Když rozložíš velký problém na menší kousky, použiješ svůj mozek pro
+          rozložení velkého problému. Jakmile rozložíme velký problém na několik menších
+          problémů, můžeš jít na další trik, který se nazývá porovnávací vzory.
+      4:
+        text: To je, když se podíváš na podobnosti mezi věcmi. Jakmile najdu věci,
+          které jsou stejné, zjistím jaké věci se mění. Odebrání těchto rozdílů se
+          nazývá abstrakce.
+      5:
+        text: Poté, co jsem přišel na kroky k řešení problému, mohu dát tyto kroky
+          v určitém pořadí zvaném algoritmus, aby kdokoli mohl použít mé pokyny k
+          vyřešení tohoto problému. Budeme používat tyto čtyři kroky přijít na to,
+          jak hrát hru bez pravidel. Na konci hry umíš hrát něco, co vypadá jako toto!
+    C3_crowdsourcing:
+      1:
+        text: Tato lekce se nazývá crowdsourcing. V této lekci použijeme balíček karet
+          ke zjištění, o kolik jednodušší některé věci může být ve skupinách namísto
+          snaží udělat je úplně sám. Tak vem kamarády a něco super. Crowdsourcing
+          je získání nápovědy z velké skupiny lidí, něco rychleji dokončit.
+      2:
+        text: V informatice se používá crowdsourcing dlouhou dobu. Tisíce amatérů
+          a profesionálů propojují své počítače společně k prohledávání miliardy a
+          miliardy kusů informace. Při pohledu na věci jako další Marsennové prvočíslo
+          nebo dokonce možné mimozemské komunikace.
+      3:
+        text: Když uvidíš film, každá sekunda filmu je 24 jednotlivé obrázky, které
+          nazýváme snímky. Každý jeden z těchto obrázků je třeba vytvořit a vykreslit
+          a dát vše dohromady. Můj tým a já, jsme všichni vývojáři softwaru. My všichni
+          společně pracujeme na vytvoření kusu softwaru, který ve skutečnosti vytváří
+          obraz, vytvořející výsledný obraz, který uvidíš na obrazovce. To je nástroj,
+          který umělci a další vývojáři mohou použít jako součást jejich týmové práce
+          a jejich procesu k vytvoření obrázků na obrazovce.
+      4:
+        text: Např. při hledání Nema, když Crush a Veverka a všichni jejich přátelé
+          létají přes východní australské proud. Vídíš obrazy vody tekoucí do, vidíš
+          barvy na zádech želvy, vidíš po stranách ryby. Všechny tyto věci jsou generovány
+          matematickými a počítačovými programy, které píšeme, dáváme pak na umělce,
+          aby vytvořil ten konečný obraz a vyladil, aby to slušně í a zábavně vypadalo.
+    C3_dice_race:
+      1:
+        text: Tato lekce se nazývá závod v kostkách. Téměř každý si rád hraje počítačové
+          hry. Přemýšlel jsi někdy o tom, jak počítačoví programátoři přetvářejí kroky
+          hry do programu? Prvním krokem při vytváření počítačových her a při řešení
+          problémů vyžaduje myšlení a plánování.
+      2:
+        text: Krok promyšlení řešení problémů vytváří algoritmus, který krok za krokem
+          je plán pro řešení problému nebo dokončit úkol. V této lekci vytvoříš algoritmus
+          pro závodní hru skostky. Pak požádáš své přátele vyzkoušet tvůj plán, aby
+          zjistili, jestli mohou sledovat kroky pro hraní hry. Programátor se ujistí,
+          že kroky jsou správné, je čas přeložit algoritmus do programu s jazykem,
+          který počítač umí pochopit.
+      3:
+        text: Téměř vše, co denně děláme vyžaduje algoritmus, seznam kroků můžeš sledovat
+          k dokončení úkolu. Přemýšlej o připravě do školy nebo plánování zábavného
+          dne s přáteli nebo zařízení svačiny. Chceš-li provést některou z těchto
+          úloh, budeš potřebovat to rozdělit do menších kroků a někdy kroky musí být
+          v určitém pořadí.
+      4:
+        text: Přemýšlej o přípravě sendviče. Nezáleží jaké složky nejdříve dostanete
+          ze spíže. Ale nemůžeš rozstírat arašídové máslo, dokud neotevřeš sklenici.
+          Počítače potřebují algoritmy a programy, abys jim ukázali, jak udělat jednoduché
+          věci, které umíme udělat bez přemýšlení o tom.
+      5:
+        text: Algoritmus je myšlení za tím, co se má stát. Program jsou aktuální pokyny
+          počítači, aby se to stalo. Algoritmus musí být přeložen do programu předtím,
+          než počítač jej může spustit. Někdy je obtížné rozdělit úkol do kroků, nazývaných
+          algoritmus. Ale jako nové dovednosti, je to snazší a jednodušší, s praxí.
+    C3_farmer_while:
+      1:
+        text: While cykly jsou dost podobné, co můžeš dělat v každodenním životě.
+          Představ si, že myješ tvé auto, budeš drhnout, dokud není čisté. Zatímco
+          to není čisté, pokračuješ v drhnutí. Vyhodnocuješ tyto věci po celou dobu.
+      2:
+        text: Máme nový pohled na to, abys pomohl tvému farmáři. Tomu se říká while
+          blok. Je to vlastně docela jednoduché. While příkaz v horní části je pravdivý,
+          udělají něco. Např. zatímco existuje hromada přesunout jedno seno. Nestyď
+          se a zkus to s tvým farmářem.
+    C3_functional_suncatchers:
+      1:
+        text: Tato lekce jsou funkční šablony. Budeš vytvářet tyto hezké šablony pomocí
+          funkcí. Existuje několik kroků při vytváření jedné z těchto šablon. Některý
+          z kroků budeš muset opakovat mnohokrát.
+      2:
+        text: Prvním krokem ke zjednodušení procesu tvorby šablon, je přijít na to,
+          co budeme muset opakovat znova a znova. Můžeš seskupit tyto kroky do něčeho
+          nazývané funkce.
+      3:
+        text: Ale je tu více k vytvoření krásných šablon než sledovat přesné kroky.
+          Někdy chceme být kreativní a změnit barvu používaných korálků. Můžeme udělat
+          každou šablonu unikátní, použijeme-li různé barevné korálky.
+      4:
+        text: Tvoje šablona bude jednoznačně tvoje, když se naučíš myslet na korálky
+          jako proměnné, což je slovo znamenajuící zástupný symbol pro informace,
+          které lze změnit. Pobav se vytvořením krásných šablon pomocí funkcí a proměnných!
+    C3_internet:
+      1:
+        text: Tato lekce je všechno o Internetu. Internet je velmi rušné místo a podobná
+          k této rušné silnici. Zprávy, jako automobily, se přibližují k cíli. Zpráv
+          se pohybují velice rychle prostřednictvím Internetu.
+      2:
+        text: Předvádění, jak internet funguje, ti pomůže pochopit, co se děje, když
+          používáš. internet. Dozvíš se, jak dostat zprávy z tvého počítače na oblíbené
+          webové stránky nebo od přítele do složky doručené pošty. Stejně jako je
+          jednodušší navigace frekventovanými silnicemi, když znáš silnice a umíš
+          číst značky, tak cestování po internetu není tak složité, když víš,, co
+          se děje v zákulisí.
+      3:
+        text: Zaslání zpráv na internet je tak trochu jako odeslání zpráv v e-mailu
+          s několika rozdíly. Já jsem zde na webu Google.cz. Toto číslo je IP adresa
+          pro tento web. Adresy IP lze považovat jako tvou zpáteční poštovní adresu.
+          Představme si, že chci poslat zprávu do pošty někomu v kanceláři u tebe.
+          Vidíš na dveřích URL a IP adresu? Napsal Jsem tuto zprávu a stiskl posláním.
+          odeslat.
+      4:
+        text: Na rozdíl od poštovní služby první věc, co se stane. Internet rozdělí
+          zprávu na menší části, takže lze je snadno poslat. Tyto malé části se nazývají
+          pakety. Každý paket zprávy je dodáván do cíle jeden po druhém. Tyto pakety
+          jsou všechny dohromady ve správném pořadí tak, aby zprávu příjemce správně
+          přečetl. Samozřejmě existuje mnoho dalších věcí, které se dozvíš o tom,
+          jak internet funguje, ale je to skvělý start. Jsi na cestě se stát zdatným
+          uživatelem Internetu! Ujisti se, že si tvé rodině a přátelům pověděl, co
+          jsi se naučil!
+      5:
+        text: Jmenuji se Amanda Camp, jsem softwarový inženýr v Googlu. Pracuji v
+          týmu, který pracuje na backendovém serveru, který ukládá profily a kontakty.
+          V mé práci musím hodně přemýšlet, jak kontakty lze zaslat na jiná zařízení,
+          například tvůj telefon. Většina lidí má spoustu kontaktů, řekněme, 1 000
+          kontaktů a my nechceme posílat všechny kontakty najednou do telefonu, protože
+          je to příliš velká zpráva. Podobně jako internet štěpí objemné zprávy do
+          paketů, používáme koncept nazvaný stránkování, abychom mohli jen 100 telefonních
+          kontaktů a nechat tvůj telefon reagovat na nás a požádat o dalších 100.
+      6:
+        text: Nejvíce vzrušující věcí na softwaru je skutečnost, že může mít dopad
+          na celý svět. Poprvé jsem se naučil programovat, když mi bylo asi devatenáct.
+          Myslím, že jsem byl už v druháku na vysoké škole. První program pamatuji
+          psaní bylo něco, co převádělo stupně Celsia na Fahrenheita. Líbí se mi programování,
+          protože rád pomáhám lidem. Můžeš psát programy na Googlu, abys pomáhal lidem
+          po celém světě a to je opravdu šokující a vzrušující.
+    C3_maze_conditionals:
+      1:
+        text: Lidé se rozhodují denně. Např. předtím než jdeš ven, máš if příkaz,
+          který říká, když prší, potom potřebuji bundu. Počítače jsou úžasné, jakmile
+          rozhodneš tento druh příkazů, které spolehlivě provádějí tyto věci a neuvěřitelnou
+          rychlostí. Počítačový program je opravdu trochu matematiky a některé if
+          příkazy, kde se dělá rozhodnutí.
+      2:
+        text: Blok if pomáhá zombie dělat rozhodnutí. Kontroluje něco. Např. použijme
+          blok, který říká, že když je cesta dál k levému a dát příkaz otočení vlevo
+          dovnitř. Povíme zombie, aby zkontroloval své okolí. Podívat se, zda je na
+          levé straně cesty a pokud ano, provést toto otočení.
+      3:
+        text: Pak použijeme blok pohyb vpřed dovnitř tohoto opakování, tak dlouho,
+          jak chceme jít rovně. Pak když je tu zase otočka, if blok poví udělat otočku
+          doleva. Můžeš vidět, že když to uděláš, když odbočíte doleva a jinak se
+          pohybujeme dopředu, dosáhneme našeho cíle.
+      4:
+        text: To je příklad použití if příkazu, který je skutečně základním konceptem
+          v počítačových programech. Byla jednou z prvních věcí, které jsem se naučil,
+          abych napsat program k zahrání s piškvorky. Měl jsem if přikazům povědět
+          ok, je-li osoba vyhrávající pokračuje se a blokuje toto místo. Pobav se
+          učením, jak používat If příkazy, je to klíčový koncept.
+    C3_maze_level_4:
+      1:
+        text: V tomto příkladu tvým cílem je dostat zombie ke slunečnici. Mohli bychom
+          použít pět bloků pohyb vpřed, nebo mohli jste povědět počítači posunout
+          vpřed a pětkrát opakovat pomocí jednoho bloku opakování.
+      2:
+        text: To šetří čas a usnadňuje. Chcete-li použít, stačí dát blok krok vpřed
+          uvnitř bloku opakování. Stisknout run a zombie se přesune pětkrát k báječné
+          slunečnici.
+    C3_playlab_create_game:
+      1:
+        text: Zatím jsi udělal animaci nebo příběh, který dělá přesně to samé, pokaždé,
+          když ji spustíš. Nyní můžeš vytvořit interaktivní hry, které můžeš skutečně
+          hrát.
+      2:
+        text: Jsou nějaké nové bloky k vyzkoušení. Jsou bloky "když šipka" a "posuň
+          aktéra". Můžeš dát tyto bloky dohromady, aby aktéři se pohybovali kurzorovými
+          klávesami. A existují nějaké bloky, které věci, když se aktéři srazí nebo
+          na ně se klepne. Zkontroluj a pobav se!
+    C3_songwriting_with_parameters:
+      1:
+        text: Toto je lekce psaní písní. Hudba je hodně jako počítačový program. Psané
+          poznámky a slova povědět zpěvákovi přesně to, co udělá. Některé části hudby
+          jsou používány znova a znov.
+      2:
+        text: Nazýváme to sbor. V počítačovém programu, kde jeho části programu používáné
+          znova a znova se nazývají funkce. Když čteš texty písní, kde říká slovo
+          sbor, zpíváš sborem? Ne, podívej se na horní část stránky a zjisti slova,
+          co tvoří refrén.
+      3:
+        text: V této lekci se naučíte hloupou malou píseň s názvem Malý zajíček foo
+          foo. Píseň se sborem, který budete zpívat několikrát znova a znova. Funkce
+          je kus kódu, který můžeš zavolat a použít znova a znova. To dělá programování
+          jednodušší a efektivnější, není nutné psát kroky své funkce znova a znova.
+          Stačí to napsat jednou!
+    C4_bee_conditional:
+      1:
+        text: To je podmínkový blok. Říká, že když jsi u květiny nebo plástve, pak
+          něco udělej. To je užitečné, když ani nevíme, kolik medu nebo nektaru dostat,
+          jak vidíme zde s otazníkem.
+      2:
+        text: V tomto příkladu říkáme, když je to květina, získej všechen nektar a
+          jinak pak použij, když je to plástev, udělej med. Ta-dá!
+    C4_conditionals:
+      1:
+        text: Máme nový blok nazývaný if/else blok. Je to podmínkový příkaz, stejně
+          jako if blok předtím použitý v hádance. Ale teď je tu nový díl dole, který
+          říká else - jinak. blok If/else umožňuje včele se rozhodnout mezi dvěma
+          sadami akcí. Když včela je u květu, včela udělá sadu akcí vložením do první
+          části říkající co dělat. Když včela není u květiny, včela udělá sadu akcí,
+          které se dá do častí říkající else - jinak.
+      2:
+        text: Příkazy if jsou schopné učinit rozhodnutí za počítače. Lidé nastaví
+          podmínky pro počítače říkající, že počítač pro předpokládanou určitou situaci
+          udělá toto. Jinak - else blok znamená jinak udělá toto. Vrchní část našeho
+          if/else blok říká když je u květu. Ale vrchol našeho bloku může říkat i
+          jiné podmínky, jako když nektar se rovná 2 nebo cesta je vpřed, náš blok
+          se bude chovat stejným způsobem. Pokud if příkaz na začátku platí, pak se
+          provede první sada akcí. Ale pokud if příkaz v horní části je false - neplatí,
+          provede se druhá sada akcí.
+    C4_for_loops:
+      1:
+        text: Když použiješ blok opakování k cyklování kódu. Jak počítač ví, kolikrát
+          to má opakovat? V bloku opakování se ve skutečnosti skrývá propracovanější
+          kus kódu pro cyklus, která se odpočítává při každém průchodu cyklem konkrétní
+          krok z počáteční hodnoty až do koncové hodnoty.
+      2:
+        text: Např. při opakování tří bloků se odpočítá od jedné do tří po jedničce.
+          Při každém průchodu se spustí kód uvnitř cyklu. Cyklus zná počet průchodů
+          pomocí proměnné čítače nastavený na počáteční hodnotu na začátku cyklu a
+          krokem upravený po každém průchodu. Jakmile proměnná čítače je větší než
+          koncová hodnota, cyklus se ukončí.
+      3:
+        text: Výhodou použití reálného čísla pro cyklus místo bloku opakování je,
+          že uvidíte proměnnou čítače, kterou lze použít v cyklu samém. Např. pokud
+          mám řadu květin, ten první má jeden nektar, druhý dva nektary a ten třetí
+          tři, lze použít for cyklus ke sdělení včele sbírat 'čítač' nektarů při každém
+          průchodu, což by bylo jeden na první květině, dva na druhé květině a tři
+          na třetí květině.
+      4:
+        text: Rovněž for cyklus zvyšuje hodnotu čítače o jiné číslo po každém průchodu.
+          Lze počítat pod dvou, čtyřech nebo dokonce číslo měnící se po každém průchodu.
+    C4_for_loops_bee:
+      1:
+        text: Když použiješ blok opakování k cyklování kódu. Jak počítač ví, kolikrát
+          to má opakovat? V bloku opakování se ve skutečnosti skrývá propracovanější
+          kus kódu pro cyklus, která se odpočítává při každém průchodu cyklem konkrétní
+          krok z počáteční hodnoty až do koncové hodnoty.
+      2:
+        text: Např. při opakování tří bloků se odpočítá od jedné do tří po jedničce.
+          Při každém průchodu se spustí kód uvnitř cyklu. Cyklus zná počet průchodů
+          pomocí proměnné čítače nastavený na počáteční hodnotu na začátku cyklu a
+          krokem upravený po každém průchodu. Jakmile proměnná čítače je větší než
+          koncová hodnota, cyklus se ukončí.
+      3:
+        text: Výhodou použití reálného čísla pro cyklus místo bloku opakování je,
+          že uvidíte proměnnou čítače, kterou lze použít v cyklu samém. Např. pokud
+          mám řadu květin, ten první má jeden nektar, druhý dva nektary a ten třetí
+          tři, lze použít for cyklus ke sdělení včele sbírat 'čítač' nektarů při každém
+          průchodu, což by bylo jeden na první květině, dva na druhé květině a tři
+          na třetí květině.
+      4:
+        text: Rovněž for cyklus zvyšuje hodnotu čítače o jiné číslo po každém průchodu.
+          Lze počítat pod dvou, čtyřech nebo dokonce číslo měnící se po každém průchodu.
+    C4_for_loops_no_bee:
+      1:
+        text: Když použiješ blok opakování k cyklování kódu. Jak počítač ví, kolikrát
+          to má opakovat? V bloku opakování se ve skutečnosti skrývá propracovanější
+          kus kódu pro cyklus, která se odpočítává při každém průchodu cyklem konkrétní
+          krok z počáteční hodnoty až do koncové hodnoty.
+      2:
+        text: Např. opakování tří bloků se počítá od jedné do tří po jedničce. Po
+          každém průchodu se spustí kód uvnitř cyklu. Cyklus ví kolikrát se provede
+          pomocí proměnné čítače. Ten je nastaven na počáteční hodnotu na začátku
+          cyklu a přírůstek se přidá do čítače při každém průchodu. Jakmile proměnná
+          čítače je větší než koncová hodnota, cyklus se ukončí. Výhodou použití reálné
+          pro smyčku místo bloku opakování je, že jej vidíš během provádění cyklu.
+    C4_function_create:
+      1:
+        text: Nyní, když jsi upravil funkční bloky, je čas vytvořit nový funkční blok
+          od nuly. Je to opravdu jednoduché. Uvidíš, že panel má kategorii nazvanou
+          funkce. Pokud klepnete na oranžové tlačítko s názvem vytvořit funkci. Klepnutím
+          sem se zobrazí editor funkce, které jsi již použil k úpravě existujících
+          funkčních bloků.
+      2:
+        text: Stejně jako dříve založenou funkci jsi pojmenoval včetně popisu, co
+          funkce má dělat. Např. má nakreslit čtverec nebo trojúhelník, potom z panelu
+          nástrojů přetáhneš bloky do bílého pracovního prostoru. Nezapomeň, přetáhni
+          tyto bloky dovnitř zeleného orámovaného bloku pro funkci.
+      3:
+        text: Jakmile budeš hotov, klepni na uložit a ukončit. Tím se vrátíš zpět
+          do pracovního prostoru hlavního puzzlu. Nově vytvořená funkce se objeví
+          jako zelený blok v kategorii funkce v tvém panelu nástrojů. Přetažením a
+          puštěním do hlavního pracovního prostoru a použij to jako další blok k vyřešení
+          puzzlu.
+    C4_function_edit:
+      1:
+        text: Jednou z velkých věcí v počítačových programech je, jakmile jsi naučil
+          počítač udělat akci, můžeš tuto funkci volat znovu. Můžeš zadat název a
+          pak volat. To je ve skutečnosti jako rozšíření jazyka.
+      2:
+        text: V budovaném programu jsme se naučili, jak nakreslit čtverec čtyřikrát
+          přesouváním a otáčení. Můžeme vzít na to tuto funkci a dát ji jméno, nakreslit
+          čtverec, kdykoliv to chceme udělat. Povíme prostě nakreslit čtverec a vrátit
+          se zpět do kódu, kde tato funkce byla volaná. To se udělá za nás. Přidali
+          jsme tento koncept do našeho programovacího jazyka.
+      3:
+        text: V tomto puzzlu jsme již vytvořili za vás funkci kreslit čtverec. Uvidíš
+          ji v panelu nástrojů jako zelený blok. Co budeš muset udělat, je napsat
+          stejný kód, který jsi napsal předtím k nakreslení čtverce a dej to do této
+          funkce. Chceš-li to, klepni na volbu upravit v zeleném vykreslit čtverec.
+          To otevře editor funkce. Funkce editoru má tři části. Místo k pojmenování
+          funkce. To se objeví na zeleném bloku před touto funkcí. Pak zapište krátký
+          popis toho, co funkce má dělat.
+      4:
+        text: V tomto případě se předpokládá nakreslení čtverce. Prázdné místo dole
+          je pracovní prostor a funguje stejně jako pracovní prostor, který jsi již
+          používal. Bloky táhni & spusť z panelu nástrojů do tohoto pracovního prostoru.
+          Nezapomeň dát bloky vytvářející čtverec dovnitř zeleně obtékaného bloku
+          pro funkci. Jakmile jsi hotov, klepni na uložit a ukončit. Tím se vracíš
+          zpět do pracovního prostoru hlavního puzzlu. Nyní můžeš použít funkční blok
+          kreslit čtverec, stejně jako jakýkoli jiný blok k vyřešení puzzle.
+    C4_function_parameters:
+      1:
+        text: Zde je funkce k nakreslení čtverce se stranami 50 pixelů. To je skvělé,
+          ale co když chci nakreslit čtverec se stranami 50 pixelů a další čtverce
+          o stranách 100 pixelů? Neměli bychom udělat dvě samostatné funkce, které
+          dělají téměř totéž. Místo toho můžeme použít jednu funkci s parametrem.
+      2:
+        text: Parametry umožňují nám předat hodnoty do funkce, která použijí proměnné
+          uvnitř funkce. Pojďme zkusit přidat parametr s názvem jako tato funkce,
+          takže můžeme ji použít k vytvoření čtverců různých velikostí. V editoru
+          funkcí můžeš upravit název a popis jako předtím, ale nyní můžeš také přidat
+          parametr. Napište název parametru v prostoru a klepni na tlačítko Add Parameter.
+          Tím se vytvoří červený blok s názvem parametru právě vytvořeného. Teď můžeš
+          nahradit v bloku pohybu vpřed o 100 parametrem délka, tak se bude pohybovat
+          vpřed podle uvedené délky.
+      3:
+        text: Klepni na tlačítko uložit a zavřít a přetažením z nově vytvořeného bloku
+          čtverce z kategorii funkce v panelu nástrojů. Všimni si, že je prázdný prostor
+          vedle délky, protože funkce chce vědět jakou hodnotu má parametr Délka představující
+          délku. Přetáhni blok číslo z kategorie matematika a umísti do tohoto místa.
+          Vidíš, jak umíš použít funkce znova a znova s různým délkami k vytvoření
+          čtverců různých velikostí? Vyzkoušej si to sám!
+    C4_intro:
+      1:
+        text: Obvykle programování je celé v textu, ale my budeme používat Bloky využívané
+          vizuálně, které se přetahují k psaní programů. Pod kapotou sr tak vytváří
+          kód. Chceš-li začít vytvářet kód pro program, pomůže ti tento krok bludištěm
+          Angry Bird se dostat ke zlým prasátkům, která ukradly jejich vejce.
+      2:
+        text: Blokově se to dělí do tří hlavních částí. Na levé straně je ptačí bludiště,
+          kde bude spuštěn tvůj program. Pokyny pro každou úroveň jsou zapsané pod
+          bludištěm. Ve střední oblasti je panel nástrojů, kde každý z bloků je příkaz,
+          který pták umí pochopit. Prázdné místo na pravé straně se nazývá pracovní
+          prostor, kde budeš vytvářet náš program.
+      3:
+        text: Když přetáhnu blok do našeho pracovního prostoru a stisknu tlačítko
+          "Run", co se stane? Pták se pohybuje vpřed o jedno pole mřížky. A co když
+          chci, aby pták něco udělal po posunutí vpřed o jedno pole? Mohu přidat další
+          blok do našeho programu.
+      4:
+        text: Vyber si blok "otočit doprava" a zatáhni jej pod můj blok posunu, až
+          se objeví žlutá šipka. Pak upustím to a dva bloky přichytíme dohromady.
+          Když stisknu znova tlačítko "Run", pták bude provádět příkazy od shora dolů
+          v našem pracovním prostoru.
+      5:
+        text: Když někdy chceš odstranit blok, prostě jej vyjmi ze zásobníku a přetáhni
+          do koše. Poté, co stiskneš tlačítko run, můžeš vždy stisknout tlačítko reset,
+          abys ptáka dal zpět na začátek. Teď pojďme dostat ty prasátka!
+    C4_math_artist:
+      1:
+        text: Když chci nakreslit obdélník 50 pixelů vysoký a to je dvakrát jako je
+          šířka, jak naprogramuji počítač, aby to udělal? No, nohl bych říci umělci
+          jdi na padesátku, zahni doprava a pak jdi přes 100 a přesouvej celou věc
+          dvakrát. Ale pak dělám matematiku pro počítač.
+      2:
+        text: Vynásobit padesát dvěma z hlavy není možná tak těžké, ale počítače jsou
+          opravdu dobré v matematice, tak bychom to měli nechat na něm, pokud je to
+          možné. Když jsi právě použil proměnnou s názvem výška místo toho, bys mohl
+          snadno změnit výšku na padesát a pak změnit svůj algoritmus, abys sdělil
+          umělci jít nahoru o výšku, otočit se doprava a pak jít za výšku dvakrát,
+          což nám dává obdélník, který je dvakrát široký než je vysoký.
+    C4_unplugged_algorithms:
+      1:
+        text: Tati lekce se nazývá Tangram algoritmy. Tangram je puzzle se sedm kusy,
+          které lze dát dohromady k vytvoření jiných obrázků. Použiješ algoritmus
+          pro vysvětlení svému partnerovi, jak sestavit puzzle.
+      2:
+        text: Algoritmus je jen seznam kroků, které můžeš provést k dokončení úkolu.
+          Používáme je denně s věcmi, jako je nákupní seznamy a recepty. Když udržíš
+          algoritmus jednoduchý, existuje spousta způsobů, jak jej interpretovat a
+          ten, kdo jej provádí nemusí dostat přesně to, co jsi chtěl. Když chceš se
+          ujistit, že všichni skončí s přesně stejnou věcí, pak tvůj algoritmus musí
+          být podrobný a velmi konkrétní.
+      3:
+        text: Používám algoritmus denně k dokončení malování. Chtěl jsem si zkusit
+          malování některých vlků, ale nejsem vynikající malíř. Naštěstí pro lidi
+          jako já je malování s čísly. Existuje čtyřicítka barev a má malá písmena
+          a čísla, který ti napoví jakou barvou namaluješ každou část. Malování podle
+          čísel mi přesně poví jakou barvu použít a kde.
+      4:
+        text: Je to velmi specifické, že jsem schopen dodržet pokyny a obraz vypadá
+          super. Je to skvělý algoritmus. Když pokyny nebyly dostatečně konkrétní,
+          moji vlci by vypadaly stejně dobře. Když opravdu chceš, aby něco dopadlo
+          přesně tak, jak sis to naplánoval, je lepší být vysoce přesný.
+    C4_unplugged_binary:
+      1:
+        text: Každý tým má osobu, která instruuje jinou osobu držící papír, musí přijít
+          na to, jak který symbol vypnout nebo zapnout. Binárně je to něco jako abeceda
+          se dvěma písmeny. Jako A a B jsou tvou celou abecedu, ale máš 0 a 1.
+      2:
+        text: Nejčastější způsob, jak použiješ binární číslo je v if příkazu. Je to
+          klasika v programování. Program běží a říká se, že když je něco pravda,
+          pak se udělá toto. Není-li to pravda, udělá se něco jiného. Co když chceš
+          udělat něco možná trochu složitější. Místo toho if příkazu chceš pracovat
+          v počítači s něčím, jako je obraz nebo zvuk.
+      3:
+        text: 'Počítač zná jen binární hodnoty, ale obrázek není binární, Nejsou jedničky
+          a nuly tak, jak to uděláš? Zde je příklad: máš tento krásný obrázek. Obrázek
+          je v podstatě forma informací. Veškeré informace mohou být kódovány binárně.
+          Tak či onak, budeš to muset vymyslet, jak to udělat.'
+      4:
+        text: Dovedeš představit, že procházíš mřížku nad medvědem pandy a u každého
+          čtverce se rozhodneme, zda tento čtverec je víc černý nebo více bílý. A
+          pak zabarvíš to tímto způsobem. Nyní každá buňka mřížky je buď černá nebo
+          bílá a pak černé čtverce mohou říkat, že to jsou nuly (binární číslice)
+          a bílé čtverce, jsou jiná binární číslice jedničky. Na konci zůstane jen
+          trs jedniček a nul. To je, jak jsi představuji binárně tento obraz.
+    C4_unplugged_forloops:
+      1:
+        text: Tato lekce se nazývá for cyklus zábava. Naučíme se používat číselnou
+          řadu ke hraní s kostkami. Každý hráč bude házet třikrát k přiřazení startovací
+          hodnoty a našeho intervalu. V každém tahu kroužíme kolem naší startovací
+          hodnoty a každou hodnotu, která je stejný počet kroků vpřed jako naše hodnota
+          intervalu. Můžeme zastavit kroužení, když se dostaneme na naší stopovací
+          hodnotu. Osoba s nejvyšším skórem vítězí!
+      2:
+        text: Cykly for mohou přijít vhod na hodně místech, a když jsi se stal meteorolog,
+          použil bys cyklus po celou dobu. Ahoj já jsem Becky. Pracuji v EverPower
+          Renewables jako větrný meteorolog. Předpovídám rychlost větru pro oblast
+          Columbia River Gorge, kde společnost vlastní větrné elektrárny.
+      3:
+        text: Snažíme se pochopit, jaký vítr bude tam, abychom věděli, kolik energie
+          bude na výstupu. Poskytujeme reálném čase tuto informaci obchodníkům s energií.
+          Kupují a prodávají energii založené na tom, kolik energie jim řekneme, že
+          bude bude, aby se ujistili, že rozvodná síť to vyrovná, světla zůstanou
+          zapnutá a maximalizujeme množství energie dostaneme z naší větrné farmy.
+      4:
+        text: Jsme v národním řídícím centru pro obnovitelné zdroje EverPower Renewables,
+          zde v Portlandu a je to, kde máme informace přicházející ze všech našich
+          větrných farem po celé zemi. I dokonce nejvýkonnější  počítače dnes neumí
+          simulovat atmosféru všude. V počítači máme  předpovídající modely označované
+          jako sítě. Každý bod sítě je zeměpisná šířka, zeměpisná délka. Musíme vypočítat
+          fyziku, pokusit se přijít na rychlost větru, teplota, tlak, věci tohoto
+          druhu.
+      5:
+        text: Vzhledem k tomu, že se jedná o poměrně velké sítě, děláme to ve spoustě
+          bodů, kde se tyto věci milion a milion krát opakují. Všechno to dělám s
+          použitím for cyklů. Zde je příklad for cyklu. Když předpovídáš vítr, je
+          mnoho různých parametrů, které jdou v tom, to by bylo nemožné pro člověka
+          si sednout a udělat všechny tyto výpočty. Existuje tolik různých aspektů,
+          které to ovlivňují, co se děje s větrem, že budeme potřebovat počítačový
+          model pro předpověď.
+    C4_unplugged_madlibs:
+      1:
+        text: V této lekci si pohrajeme s vyplňováním v prázdných skladech. Máš šablonu,
+          kterou můžeš zadat k vytváření podobných příběhů, které mají velmi zábavné
+          rozdíly.
+      2:
+        text: V této lekci jsme také naučili, jak udělat abstraktní šablonu získávána
+          ze dvou příběhů, které již byly vytvořené. Abstrakce je umění odstranit
+          rozdíly a detaily tak, že vidíte, jak jedno řešení by mohlo fungovat pro
+          mnoho různých problémů. To je velmi užitečné v informatice, protože to nám
+          umožní vytvářet funkce užitečné v několika různých situacích.
+    C4_unplugged_parameters:
+      1:
+        text: Tato lekce se nazývá psaní písniček s parametry. Budeme zde psát některé
+          písně. Někdy refrén je pokaždé jen o trochu jiný, když si ji zazpíváme.
+          Pamatuješ si Jak měl starý Macdonald farmu? Sbor je poněkud odlišný, pro
+          každé zvíře. A na té farmě měl krávu, e-i-e-i-o. Malá změna v každém sboru
+          mohou být zobrazeny pomocí něčeho, co že nazývá parametry.
+      2:
+        text: Někdy funkce potřebuje parametr. Parametr je další kus informace předaný
+          funkci k úpravě pro zvláštní potřeby. Když vytváříš zmrzlinové poháry s
+          přáteli, používáš parametry podobné procesu v počítačovém program.
+      3:
+        text: Tvar vanilkové zmrzliny může být stejný pro každý pohár, ale když tě
+          požádají tví přátele, že by chtěli dvě zálivky, mohl bys dostat mnoho různých
+          kombinací. Zálivka je název funkce, ale každý druh zálivky má parametr.
+          Parametry a funkce spolupracují k vytváření velkých počítačových programů,
+          u velkých pohárů také.
+    C4_unplugged_variables:
+      1:
+        text: Tato lekce se nazývá proměnné v obálkách. Budeme se učit, jak můžeme
+          vytvářet věty, kde nám stále chybí informace. Většina z nás jsme již obeznámeni
+          s myšlenkou vyplňovat ty prázdné. To děláme, když dáváme naše jméno na domácí
+          úkol. Někdy je to více než jedno slovo, které je třeba vyplnit, a v tom
+          případě přidáme tento prázdný popisek, abychom věděli, o jaké informace
+          se jedná.
+      2:
+        text: Proměnné jsou zástupné symboly pro informace, které lze změnit. S použitím
+          proměnné pro chybějící informace, můžeme pokračovat v práci na všechno,
+          co jsme dělali a nechat někoho jiného vyplnit chybějící informace později.
+          V software se hodně používají proměnné. Používáme proměnné jako zástupné
+          symboly pro jméno, e-mailovou adresu a dokonce i uživatelské jméno. Tímto
+          způsobem můžeme nechat vědět, kde tyto údaje se zobrazí poté, co uživatel
+          je vyplní v programu. V naší práci používáme neustále proměnné.
+      3:
+        text: Kdykoli potřebuješ uložit později informaci, můžeš použít proměnnou.
+          Řekněme, že potřebujeme spočítat, kolikrát uživatel twýtoval. Pokaždé, když
+          uživatel twýtoval, přičteme jedničku k počtu a pokaždé, když uživatel odstraní
+          tvýt, snížíme toto číslo o jedničku. Kdykoli potřebuje vědět, kolikrát uživatel
+          twýtoval, jen se podíváme na danou proměnnou.
+    C4_variables_artist:
+      1:
+        text: Proměnná je kontejner, kde můžeš uložit hodnotu. Když použiješ tuto
+          proměnnou v algoritmu, otevře se kontejner a podívá se dovnitř na hodnotu.
+          To ti dovolí psát chytřejší algoritmy, které se chovají jinak v závislosti
+          na hodnotě uložené v proměnné.
+      2:
+        text: Např. když chceš napsat algoritmus, abys řekl všechno nejlepší k narozeninám,
+          jsou to desáté tvého malého bratra, to je skvělé,. Příštím rokem bys mu
+          řekl všechno nejlepší k narozeninám, ale jedenáctým! Mohl bych vytvořit
+          proměnnou s názvem věku k ukládání věku mého bratra a napsat algoritmus
+          říkající všechno nejlepší k narozeninám, obracející se k proměnné "věk".
+          Jelikož proměnnou lze změnit, každý rok ji aktualizuj proměnná "věk" se
+          rovná "věku" plus jedna.
+      3:
+        text: V této puzzle se použije proměnná k nastavení délky čáry, kterou náš
+          umělec kreslí. Později v našem kódu blok krok vpřed bude vypadat v proměnné
+          délce se zjistí nastavená hodnota.
+    C4_variables_playlab:
+      1:
+        text: Proměnná je kontejner, kde můžeš uložit hodnotu. Když použiješ tuto
+          proměnnou v algoritmu, otevře se kontejner a podívá se dovnitř na hodnotu.
+          To ti dovolí psát chytřejší algoritmy, které se chovají jinak v závislosti
+          na hodnotě uložené v proměnné.
+      2:
+        text: Nyní zkus playlab, kde jsou uvedené různé hry a můžeš změnit hodnoty
+          proměnných, jako je rychlost, výška, skóre ke změně hru. Nebudeš muset změnit
+          algoritmus, abys hru změnil, jen proměnné.
+      3:
+        text: Ve mé práci pro Kindle a na rentgenovém paprsku pro knihy jsme použili
+          proměnné mnoha různými způsoby. Jeden způsob, jak můžeš použít proměnnou,
+          je ukládat čísla stránek knihy. Uživatel může zvýšit a snížit velikost písma
+          na stránce. Na základě velikosti písma můžeš změnit počet stránek v knize.
+          Můžeš jej upravit uložením počtu stránek do proměnné.
+    infinity_playlab_events:
+      1:
+        text: Teď se budeme učit o něčem, co všichni programátoři her používají denně.
+          Říká se tomu události. Událost říká, že tvůj program naslouchá, když se
+          něco stane. A pak když se to stane, provede akci. Příklady událostí naslouchání
+          je klepnutí myší, tlačítko se šipkou nebo dotyk na obrazovku.
+      2:
+        text: Zde posuneme nahoru Baymax, až se dotkne Hira a posuneme dolů na dotek
+          Rapunzela, když hráč použije šipky nahoru/dolů nebo tlačítek nahoru/dolů.
+          Budeme používat při nahoru blok šipky a k ní se připojí aktér, který přesune
+          blok, takže když hráč stiskne klávesu šipka nahoru, všechno připojené k
+          bloku "když šipka nahoru", je spuštěn. Uděláme stejnou věc s Baymax dolů.
+          Krok za krokem se vaše hra stává stále více interaktivní.
+    infinity_playlab_intro:
+      1:
+        text: Tak do které třídy chodíš? Za druhé. Deváté. První. Byl jsem v osmé
+          třídě, když jsem se naučil programovat. Dostal jsem svůj první počítač,
+          když jsem byl v šesté třídě. Co mě nadchlo, je schopnost opravovat problémy
+          lidí. Můžeš se vyjádřit, můžeš budovat věci od myšlenky.
+      2:
+        text: Informatika je základem mnoha věcí, které vysokoškolské studenty a profesionály
+          budou dělat příštích dvacet nebo třicet let. Líbí se mi programování, protože
+          rád pomáhám lidem. Mám tak příležitost vybudovat něco, co usnadní lidem
+          lidem život. Myslím, že to je blízkou věcí, mít super sílu. Příručka Odstartovat
+          je nejdůležitější část. Já jsem začátečník a chci, abys ses učil se mnou.
+      3:
+        text: Jsem John Vechey, jeden ze spoluzakladatelů PopCap Games. Děláme hry
+          jako Plants vs. Zombies, Bejeweled a Peggle. Hodně o hrách není, jak dokonalý
+          je kód. Je to o tom, není jako dokonalé je tvé umění. Je to o tom, jak to
+          cítíš a jak moc tě to baví. Můžeš získat jen pocit zkoušením, praxí, učením,
+          adaptací a opakováním tvých vlastních dovednosti tvorby her.
+      4:
+        text: Máte oblíbené videohry? No budeme brát jeden krok k vytvoření hry tak
+          pomocí hrát Lab. dobré hry mají příběh a každý příběh má herci. Herci dělají
+          věci, jako mluvit, přesunout a komunikovat s ostatními. Možná i body na
+          základě pravidel hry. Dnes budeme budete se učit, jak dělat všechny tyto
+          věci, jeden po druhém, s Disney znaky jako Anna, Elsa, Hiro, Baymax a Rapunzel.
+          Budeme stavět hru od začátku, které mohou být sdílet a hrát na telefonu.
+      5:
+        text: Tvá obrazovka je rozdělena do tří hlavních částí. Na levé straně je
+          hrací prostor, kde běží tvůj program. Pokyny pro jednotlivé úrovně jsou
+          napsané dole. Tato střední čast je panel nástrojů, a každý z těchto bloků
+          je kus kódu. Prázdné místo na pravé straně se nazývá pracovní prostor, kde
+          budeme budovat náš program.
+      6:
+        text: K zahájení budeš muset propojit tvé bloky k oranžovému bloku "při spuštění".
+          Můžeš propojit více bloků dohromady jejich přetažením, dokud se nezobrazí
+          žlutý obrys, a pak stáhnou dohromady. V tomto prvním puzzlu Hiro je aktér1
+          a Baymax aktér 2. Potřebujeme přesunout Hiro, aby se dostal k Baymaxu přetažením
+          bloku "posun doprava" s napojením na blok "při spuštění". Jakmile máš své
+          bloky na místě, stiskni tlačítko "Run", abys viděl, co jsi naprogramoval.
+      7:
+        text: Začínáme a na konci budeš schopen si vytvořit vlastní hru s těmito úžasnými
+          aktéry, kteří umí interagovat, komunikovat, skórovat, házet mikroboty, třešně,
+          kastroly, jiskřit a led... a jeden druhého zničit. Je to všechno jen na
+          tobě!
+    infinity_playlab_repeat_forever:
+      1:
+        text: Umíš si představit, kdyby se něco opakovalo trvale a navždy? Doufejme,
+          že nebudeš nikdy muset, protože počítače jsou opravdu dobré na opakující
+          se věci. Je to blok opakování navždy. Něco uvnitř tohoto bloku se stane
+          vždy ve hře.
+      2:
+        text: Takže pokud chceme, aby aktér něco dělal opakovaně bez hráče, aniž musel
+          něco dělat. Dáme ty bloky dovnitř bloku opakování navždy. V tomto dalším
+          puzzlu je naším cílem pomoci Anně chodit neustále nahoru a dolů. Učení,
+          jak opakovací povely pracují, ušetří ti později tuny času při vytváření
+          vlastní hry.
+    tutorial_puzzle_challenge:
+      1:
+        text: Čím chceš být, až vyrosteš, Olivia? Astronautem. Nevíš náhodou, kdo
+          je počítačový programátor? Ano, No ne. Na co čekat? Nejsem si úplně jistý,
+          jak vysvětlit to počítačové programování, že je to velmi jednoduché. Je
+          to sada instrukcí, jako recept, musíš je následovat krok za krokem, abys
+          dostal konečný výsledek, který chceš.
+      2:
+        text: Mohu změnit počet pixelů, délku řádku pomocí tohoto rozevíracího seznamu.
+          Jak dlouho to bylo znova? Umíš zobrazit znova instrukce pod tlačítkem run.
+          Zde jsem použil blok krok vpřed a já vyberu 100 pixelů. Blok lze odstranit
+          přetažením do panelu nebo koše. Dáme jej zpátky.
+      3:
+        text: Spusť kód stisknutím tlačítkem run. Dobře to nefungovalo! Stiskni tlačítko
+          reset a zjisti, co je špatného. Můžeš zkusit puzzle tolikrát, kolikrát chceš
+          a přeskočit hádanky a vrátit se zpět k nim. Jen se ujisti, že se pokusíš
+          co nejlépe a nevzdávejte se. Dodejme další pohyb vpřed. Stále to nebylo
+          ono. Můžeš umístit blok mezi ostatní bloky.
+      4:
+        text: Vezměme si zase blok a umístěme je mezi posun dopředu. Otočte vlevo
+          45 stupňů. Udělejme to znova. Obnov, spusť, super! Zde je další puzzle.
+          Někdy je ti dán počáteční kód k dokončení. Zde je nutné přidat odpovídající
+          délky a stupně.
+      5:
+        text: Možná někdy omylem dáš startovací kód do koše. Co uděláš potom? Můžeš
+          stisknout vymazat puzzle a začít znova. Já přetáhnu tento blok číslo do
+          oblasti různých pixellových oblastí. Vyber 100 pixelů, 45 stupňů a znova
+          100 pixelů. Úžas! Zde je Code Studio včely. Potřebuji přesunout včelu na
+          každý květ a získat nektar.
+      6:
+        text: První květ je tři pole odsud, takže potřebuji tři kroky dopředu. 1,
+          2, 3. Pak dostat nektar, pak další nektar. Dobře to nefungovalo! Umístíme
+          další posun vpřed mezi dostat nektar a spusť to znova. Hurá, funguje to!
+          Právě ses naučil, jak používat Code Studio pro puzzly umělce a včely. Hodně
+          štěstí na řešení puzzlů s Code Studiem.
+    unplug1:
+      1:
+        text: Čím chceš být, až vyrosteš, Olivia? Hm, Astronaut. Nevíš náhodou, kdo
+          je počítačový programátor? Ano, No ne. Na co čekat? Nejsem si úplně jistý,
+          jak vysvětlit to počítačové programování, že je to velmi jednoduché. Je
+          to sada instrukcí, jako recept, musíš je následovat krok za krokem, abys
+          dostal konečný výsledek, který chceš.
+      2:
+        text: Informatika je cesta k ovlivnění světa. Mohou to být hudební videa,
+          hry, zjisti, zda to souvisí s někým nebo ne, někdo je vevztahu s jiným.
+          Najdeš, že poznáš přátele. Můžešte dělat všechny druhy ostatních šílených
+          věci zachraňující vlastně životy. Musíš mít chuť, si myslím. Je to pro mne
+          jako malířských štětec. Myslím si, že velké programování se moc neliší od
+          velkého umění.
+      3:
+        text: Když jsem se konečně dozvěděl něco o programování, že prázdná zeď je
+          vyřešená haldou dveří a ty je otevřeš a samozřejmě zjistíš, že za nimi je
+          další chodba zaplněné spoustou dveří. Programování je zábavné a snadné.
+          Můžeš udělat, co tvůj rozum chce udělat. Konečně můžeš začít, že otevřeš
+          dost dveře, aby světlo se dostalo dovnitř. Hotový program je pro mne jako
+          struktura vyplněná světlem. Všechny rohy jsou osvětlené. Počet lidí, s kterými
+          můžeš být v kontaktu a komunikovat, je něco, co svět ještě nikdy neviděl.
+      4:
+        text: Naše první lekce v tomto seriálu je vše okolo informatiky, co informatik
+          dělá a jak můžeš být zodpovědnější v používání technologií. Je to velmi
+          důležité ponaučení, ale je to trochu těžké čtení. Na konci se dostaneš ke
+          své vlastnímu přizpůsobenému kódování pomocí svých iniciál. Je to zábavná
+          aktivita a velmi motivující, protože binarita je jedna z těch věcí, které
+          se cítí velmi technická, ale jakmile ji pochopíte, je to jako mluvit tajným
+          jazykem.
+    unplug2:
+      1:
+        text: Lekce o počítačovém myšlení je cílená k výuce, jak velký obtížný problém
+          rozdělit do několika jednodušších problémů. Cílem lekce je napsat sadu instrukcí,
+          které někdo může sledovat, aby nakreslil jednu z příšer v plánu lekcí.
+      2:
+        text: 'Studenti se rozdělí do skupin k psaní instrukcí a potom se střídá s
+          jinou skupinou, která kreslí monstrum. Skupiny budou psát pokyny pomocí
+          čtyř kroků počítačového myšlení: dekompozice, polohování vzorů, abstrakce
+          a algoritmizace.'
+      3:
+        text: První skupiny dělají dekompozici úkolu, což znamená herní plán. Potom
+          vyhledávají mezi všemi příšerami v katalogu. Když projdou přes rozdíly mezi
+          monstra, nastoupí abstrakce nebo odstranění těchto podrobností. Např. jedno
+          monstrum v katalogu má oči vegitase a další sprita. Ale oba mají oči, takže
+          můžeme napsat řádek, který říká, monstrum má prázdné oči.
+      4:
+        text: Tak studenti umí psát sadu instrukcí, zvanou algoritmus, který dá seznam
+          příšer dílů s prázdnými poli pro požadované styly, To je sada instrukcí,
+          která se předává ostatním studentům pro znovu vytvoření jejich vlastní příšery.
+    unplug3:
+      1:
+        text: Programování s milimetrovým papírem nám pomůže vysvětlit, jak kódovací
+          práce pomáhá lidem znovu vytvářet kresby pomocí pouze pomocí šipek a klikyháků.
+          Jedna osoba vzhledem k malému kreslení na milimetrovém papíru a musí projít
+          jen pomocí určitých šipek. Pokus se popsat, jak se znova vytvoří tato kresba.
+      2:
+        text: 'V této činnosti lze použít jen tyto symboly: přesunout o jedno pole
+          vpřed, jedno pole zpět, jedno pole nahoru, jedno pole dolů, změnit další
+          barvu a vyplnit tvé pole barvou. Jakmile máme hotové kódování, předáme jiné
+          osobě, která umí číst kód a pokusit se znovu vytvořit obrázek.'
+    unplug4:
+      1:
+        text: Programování s milimetrovým papírem nám pomůže vysvětlit, jak kódovací
+          práce pomáhá lidem znovu vytvářet kresby pomocí pouze pomocí šipek a klikyháků.
+          Jedna osoba vzhledem k malému kreslení na milimetrovém papíru a musí projít
+          jen pomocí určitých šipek. Pokus se popsat, jak se znova vytvoří tato kresba.
+      2:
+        text: V druhé polovině aktivity požádáme studenty, kolika různými způsoby
+          lze složit list papíru k vytvoření šestnácti stejných obdélníků. Pak budeš
+          diskutovat jak mnoho řešení může vést ke stejnému konečnému výsledku a proč
+          některá řešení jsou lepší v určitých situacích.
+    unplug5:
+      1:
+        text: Programování s milimetrovým papírem nám pomůže vysvětlit, jak kódovací
+          práce pomáhá lidem znovu vytvářet kresby pomocí pouze pomocí šipek a klikyháků.
+          Jedna osoba vzhledem k malému kreslení na milimetrovém papíru a musí projít
+          jen pomocí určitých šipek. Pokus se popsat, jak se znova vytvoří tato kresba.
+      2:
+        text: V druhé polovině aktivity požádáme studenty, kolika různými způsoby
+          lze složit list papíru k vytvoření šestnácti stejných obdélníků. Pak budeš
+          diskutovat jak mnoho řešení může vést ke stejnému konečnému výsledku a proč
+          některá řešení jsou lepší v určitých situacích.
+    unplug6:
+      1:
+        text: Tato činnost se nazývá kódování s kartami a je skvělá pro jakýkoliv
+          věk. Stejně jako jsi se naučil blokově o if příkazech v předchozích., Příkazy
+          if mají část, kterou musíme vyhodnotit a zjistit, zda je to pravdivá nebo
+          nepravdivá. Tohle je podmínkové a lze použít mnoha různými způsoby.
+      2:
+        text: Můžeme využít výhody k vytváření programů na papíře, které spuštěné
+          náhodně kreslí hrací karty. Možná jsi měl if příkaz, která říká něco jako
+          když karta kreslení je větší než 8, dostaneš bod. Jinak dostane bod tvůj
+          soupeř. Lze to udělat jak jednoduše nebo tak složitě, jak se to bude hodit.
+    unplug7:
+      1:
+        text: Víš, jak vyhledat text skladby a definovat sbor na samém začátku a pak
+          zbytek skladby, se odkazuje zpět na refrén? To se nazývá volání funkce.
+      2:
+        text: V této lekci definujeme refrén na začátku naší píseň jsme zpívali naši
+          píseň a vrátit a vnímáme, že třída nezpívá sbor slovo, automaticky nahoru
+          na vrchol, kde jsme se definovat sboru a to zasvištělo. Můžeme použít jako
+          skvělý úvod dopochopení, co program dělá, když ji definuje a volá funkci.
+      3:
+        text: Použijeme populární písničky včetně Old Macdonald popovídat si o tom,
+          jak sbor je volán znova a znova a jak se někdy může změnit. Když máte píseň
+          jako starý Macdonald, kde mění některá slova. Je to skvělé místo k zavedení
+          pojmu parametrů. Určitá slova prostřednictvím předávání zasílají další informace
+          tvé funkci. Jakmile jsi si jist, že každý dostane to, co si bere známá píseň
+          a rozděl to. Podívej se na to, když to dáš dohromady, pokud přijdete to
+          dohromady.
+    unplug8:
+      1:
+        text: Naše lekce o abstrakci používá známý koncept madlibs, kde se v podstatě
+          vkládají prázdná místa v příběhu, které může být vyplněno spoustou různých
+          slov. Vezmeme si tuhle myšlenku, vyzvěte děti, aby přišly s vlastními slovy
+          pro jejich vlastní příběhy a vysvětlily prakticky pojem abstrakce.
+      2:
+        text: Je to všechno o funkcích a jak může mít funkci, stejně jako v Old Macdonald,
+          kde máš strukturu pro tvůj sbor, ale máš něco malého, které mění a abstrahuješ
+          maličkosti, které mění a můžeš je vyplnit pokaždé vlastním slovem. Ale někdy
+          máš tři slova, která mění, a tak ty vyplníš třemi parametry, to je ještě
+          docela užitečné.
+      3:
+        text: Můžeš mít jednu funkci zpracovávající mnoho různých problémů. Spoustu
+          případů píší lidé samostatné funkce pro všechny tyto problémy, neuvědomuje
+          si, že je jen jeden malý rozdíl. Když dokážou najít způsob, jak zvládnout
+          malý rozdíl, že jen znovu použít jednu funkci znova a znova, namísto 14
+          různých funkcí.
+    unplug9:
+      1:
+        text: Štafetové programování je velmi zábavná lekce, která se dostane napříč
+          přes informatiku. Někdy všichni jsou stále ještě trochu netrpěliví a chcejí
+          se postavit na své nohy. To je skvělý způsob, jak přidat jisté povzbuzení
+          do informatiky.
+      2:
+        text: Jste všichni rozdělení do dvou skupin, kde stojí v řadě a spustí štafetový
+          styl. První člověk v každé skupině běží na druhou stranu místnosti, kde
+          má milimetrový papír ke kreslení a čeká na ně prázdný list papíru. Poznamenej
+          si první krok k vytvoření tohoto obrazu, běží zpět do své řady, ke značce
+          dalšího hráče, až k napsání další krok.
+      3:
+        text: To je skvělý způsob, jak dostat přes myšlenku ladění, je třeba poopravit
+          vlastní práci a kontrolovat práci lidí před tebou. Rychleji pochopíš, jak
+          důležité je to, že budeš opatrný v kódování, když celý tým závisí na tobě.
+    unplug10:
+      1:
+        text: Tato aktivita vysvětluje způsob snadného porozumění, jak internet funguje.
+          Vysvětlíme celou terminologii, kterou budeš potřebovat jednoduchými pojmy
+          tak, aby studenti uměli simulovat přenášení zpráv, jako je e-mail.
+      2:
+        text: Studenti budou přenášet zprávy a zatímco předstírají, že je to jedním
+          ze tří způsobů přenosu. Bezdrátový internet DSL nebo optické vlákno. Studenti
+          představující wi-fi budou muset nosit zprávu, kterou vysílají v jejich hlavách,
+          protože wifi má největší pravděpodobnost vynechat nějaké informace.
+      3:
+        text: Studenti předstírající DSL nebo kabel budou přenášet zprávu na opačné
+          straně jejich ruky, kde jsou méně pravděpodobné, že by upadla informace.
+          A studenti reprezentující optická vlákna budou ji nosit oběma rukama. Tato
+          aktivita je skvělý způsob, jak pochopit něco, co mnozí z nás denně používá.
+    unplug11:
+      1:
+        text: Takže teď je čas vrátit se zpět a vzít ptačí pohled na vše, co jsI udělal
+          v posledních devatenáctI hodinách. Je to skvělý čas zavolat na studenty,
+          že to, co právě udělali, je obrovský úspěch. Naučil Jsem se víc přes tyto
+          lekce než většina dospělých ví o informatice.
+      2:
+        text: Diskutujte jako třída nebo v malých skupinách o jejich oblíbené lekci.
+          Jakmile se podívate zpět na všechno, co jste se naučili, je to, kde tvoje
+          studentská kreativita může zazářit. Rozdělte je do skupin a nech je vytvořit
+          si vlastní nezapojenou lekci. Přiřaďte každé skupiny klíčový koncept, jako
+          funkce nebo algoritmus a mít spoustu řemeslných materiálů pro ně při ruce.
+          Každá skupina prezentuje své nové nezapojenou aktivitu nebo dokonce nastavit
+          stranou další den udělat několik aktivit, které studenti vytvořili.
+      3:
+        text: Od každého zde na Code.org, doufáme, že už máte tuny zábavy během tohoto
+          kurzu. A zda váš sen je vytvořit nejlepší nové aplikace, použijte programování,
+          abys pomohl vyléčit nemoci, nebo jen chcete být hvězdný řešitel problému.
+          Tento kurz byl prvním krokem k dosažení těchto snů.
+    starwars_intro:
+      1:
+        text: 'Ahoj, jsem Kathleen Kennedy, producent Star Wars: Síla se probouzí.
+          Dnes budeš pracovat s jednou z našich hvězd, BB-8. BB-8 je kulovitý droid.
+          Vše, co udělá i každý jeho pohyb je řízen počítačovým softwarem. Informatika
+          má dopady na každé odvětví, od marketingu po zdravotní péči, po film. Ve
+          skutečnosti stovky počítačových inženýrů spolupracovali, aby udělali tento
+          film Síla se probouzí.'
+      2:
+        text: Ahoj, jsem Rachel Rose, vedoucí inženýr R&D v ILM, vedu vývojový tým
+          animace a tvorby postav. V Probuzené síle jsem zodpovědná za pomoc umělcům
+          k vývoji výbavy, která je součásti pohybujících postav umožňující postavě
+          vypadat velmi přesvědčive v galaxii, daleko daleko pryč.
+      3:
+        text: V další hodině budeme budovat naší vlastní Hvězdné války. Naučíme tě
+          základní koncepty programování. Obvykle programování je celé text, ale zde
+          budeme používat bloky, které přetažením a puštěním napíšeme programy. Pod
+          kapotou se vytváří kód. Pak vyzkoušíš základy s bloky, přepneme tě na JavaScript,
+          do jednoho z nejpopulárnějších programovacích jazyků na webu.
+      4:
+        text: Na začátku budeme pracovat s Reyem, abychom naprogramovali BB-8 k procházce
+          ke sběru veškerého šrotu. Tvá obrazovka je rozdělená do tří částí. Vlevo
+          je herní prostor Hvězdných válek, kde bude spuštěn kód. Pokyny pro jednotlivé
+          úrovně jsou zapsané pod herním prostorem.
+      5:
+        text: Tato střední oblast je panel nástrojů, kde každý z těchto bloků je povel
+          srozumitelný pro BB-8.
+      6:
+        text: Prázdné místo napravo se nazývá pracovní prostor, kde budeme budovat
+          náš program.
+      7:
+        text: Když jsem natáhl blok moveLeft(); do našeho pracovního prostoru, stisknu
+          run. Co se stane? BB-8 se přesune vlevo o jeden blok na mřížce.
+      8:
+        text: A co když chci, aby BB-8 udělal něco po moveLeft(); bloku? Můžeš přidat
+          další blok do našeho programu. Vyberu si blok moveUp(); přetahnu jej pod
+          můj blok moveLeft();, dokud nebude zvýrazněn. Pak jej tam hodím a dva bloky
+          se přichytí dohromady.
+      9:
+        text: Když jsem stisknu run znova, BB-8 bude provádět uložené povely od shora
+          dolů v našem prostoru. Pokud někdy chceš odstranit blok, prostě jej vyjmi
+          ze zásobníku a přetáhni jej zpět do panelu nástrojů.
+      10:
+        text: Poté, co stiskneš run, můžeš vždy stisknutím tlačítka reset k návratu
+          BB-8 na začátek. Nyní to rozjedeme!
+    starwars_typing:
+      1:
+        text: Uvnitř použitých bloků příkazy JavaScriptu, který je nejoblíbenějším
+          programovacím jazykem pro profesionální vývojáře dneška. Bloky jsou skvělý
+          způsob, jak se začít s učením kódovat. I na špičkových univerzitách jako
+          jsou Harvard a Berkeley se začíná učení tímto způsobem. Ale jakmile se naučíme
+          základy, inženýři píšou přímo kód, protože jim to umožní rychleji pracovat.
+      2:
+        text: Umíme napsat stovky povelů bez nutnosti je najít na panelu nástrojů
+          nebo je přetahovat. Jelikož se teprve učíš, psaní napoprvé může být pomalejší,
+          ale chceme ti dát možnost si to zkusit.
+      3:
+        text: Na horní pravý roh pracovního prostoru můžeš klepnout, aby se ti ukázalo
+          tlačítko text na jakékoli hádance k přepnutí z bloků na zadávání textu jako
+          kódu.
+      4:
+        text: V další lekci začneme v režimu zadávání. Zde můžeš stále přetahovat
+          blok z panelu nástrojů nebo můžeš zadat název povelu. Když začneš zadávat,
+          uvidíš jména možných povelů, které se ti ukazují dole, kde píšeš. Místo
+          zadávání názvu celého příkazu můžeš si vybrat jednu z nabízených k rychlejší
+          orientaci. V mé práci používám při psaní kódu neustále tuto funkci automatického
+          doplňování.
+      5:
+        text: Když budeš psát kód, počítač potřebuje, abys byl velmi přesný. Musíš
+          přesně uvádět písmena včetně jejich velikosti v názvu povelu, správně použít
+          povel včetně závorek a oddělování středníkem. I malá nepřesnost v zadání
+          způsobí, že BB-8 neporozumí kódu a není schopen se pohybovat.
+      6:
+        text: Když uděláš chybu na řádku, editor ji zvýrazní za tebe, můžeš se tak
+          pokusit změnit text, abys to opravil.
+      7:
+        text: Když tvrdě narazíš, vždy můžeš začít znova s tlačítkem start a můžeš
+          se kdykoli přepnout zpět do blokového režimu klepnutím na tlačítko v pravém
+          horním rohu. Ok, vyzkoušejme si, co jsi napsal! A pokud uděláš chybu, Nelekni
+          se. Každý to několikrát zkouší než uspěje.
+    starwars_events:
+      1:
+        text: Dobrý den, jmenuji se Charita Carter. Jsem senior kreativní producent
+          tady v Walt Disney Imagineering. Jsem zodpovědná za vedení týmů, které ve
+          skutečnosti produkují atrakce, které naši hosté uvádějí do praxe. Vždy hledáme
+          způsoby, jak můžeme vylepšit a udělat lepší zážitek pro naše hosty a technologie
+          je základem toho.
+      2:
+        text: Gratulujeme, povedlo se ti to udělat! Naprogramoval jsi BB-8. Teď si
+          myslím, že jsme připraveni na něco těžšího. Pojďme na to. Nyní, když jsi
+          se naučili základy programování, vrátíme se zpět v čase, abys vybudoval
+          svou vlastní hru s hvězdami R2-D2 a C3PO.
+      3:
+        text: 'Chceš-li si vytvořit hru, musíme se naučit o něčem, co programátoři
+          her používají denně: nazývají to události. Události poví tvému programu,
+          aby naslouchal nebo čekal, až se něco stane a pak když se to stane, provede
+          akci.'
+      4:
+        text: Některé příklady událostí naslouchají na klepnutí myší, kurzorové směrové
+          tlačítko nebo dotek na obrazovku.
+      5:
+        text: Zde chceme udělat, aby R2-D2 se posunul nahoru k dodání zprávy rebel
+          pilotovi a pak posunout dolů k jinému rebel pilotovi. Použijeme události,
+          abychom jej přesunuli. Když hráč používá šipky nahoru/dolů nebo tlačítka
+          nahoru/dolů.
+      6:
+        text: Použijeme blok události whenUp() a k němu připojíme blok goUp(). Když
+          hráč stiskne klávesu šipka nahoru, spustí se kód připojený k bloku whenUp().
+          A uděláme to totéž pro R2-D2 dolů.
+      7:
+        text: K tomu použijeme povel s názvem whenUp(). Když přetáhneš povel z panelu
+          nástrojů, uvidíš, že začíná a končí složenou závorkou místo středníku. To
+          nám dává prostor k vložení dalších povelů. Každý povel umístěný v těchto
+          závorkách bude spuštěn, když hráč stiskne šipku nahoru.
+      8:
+        text: Chceme, aby R2-D2 šel nahoru, tak dáme blok goUp(); uvnitř povelu. A
+          uděláme totéž, aby šel R2-D2 dolů.
+      9:
+        text: Nyní místo psaní celého kódu k řízení našeho droidu k posunu dopředu,
+          můžeme nechat R2-D2 reagovat na události stisknutí tlačítka, které jej pohybují
+          po obrazovce. Krok za krokem se stává tvoje hra interaktivnější.
+    starwars_congrats:
+      1:
+        text: Ahoj, jmenuji se Alice, řídím projektové a inženýrské týmy zde na Code.org.
+          Pracovala jsem na tomto výukovém kurzu, se kterým si právě hraješ.
+      2:
+        text: Právě jsi se dopracoval do poslední úrovně. Blahopřejeme! Právě jsi
+          se naučil vše, co potřebuješ vědět, aby sis udělal vlastní hru Hvězdné války.
+          Nyní neexistují žádné další instrukce, žádné hádanky k řešení. Můžeš si
+          vytvořit vlastní hru a zvolit, jak to bude fungovat. Ještě jedna věc, odemkni
+          si nové zvuky a příkazy, abys toho dokázal ještě víc.
+      3:
+        text: "[studenti mluví] Tak jsme si udělali hru v podstatě, kde dostaneš body,
+          když dostaneš puffer prasátka. Přetočení je pokaždé. dostaneš-li prasátko
+          a objeví se útočník. Nakonec celá obrazovka je plná prasátek a když se dotkneš
+          10 000 z nich, vyhraješ."
+      4:
+        text: "[studenti mluví] Udělali jsme hru, kde nemůžeš prohrát a všechno, co
+          jsi dostal, máš za to body. V mém programu jsem obrátil směry tak, že při
+          každém klepnutí nahoru jde tvoje postava dolů a při klepnutí na tlačítko
+          vpravo tvoje postava jde doleva. Je to opravdu těžké někdy získat výhodu!
+          Výhodou je však, pokud jsi vývojář hry. Povedlo se mi to? Hurá!"
+      5:
+        text: Až budeš hotov s hrou, vyber si pro sdílení dostat odkaz. Ten můžeš
+          pak sdílet s přáteli nebo hrát hru na telefonu. Bav se!
+    starwars_blocks_intro:
+      1:
+        text: 'Ahoj, jsem Kathleen Kennedy, producent Hvězdných válek: Síla se probouzí.
+          Dnes budeš pracovat s jednou z našich hvězd, BB-8. BB-8 je to kulovitý droid.
+          Cokoli dělá i udělaný pohyb je řízen počítačovým softwarem. Informatika
+          má dopady na každé odvětví, od marketingu na zdravotní péči, film. Ve skutečnosti
+          stovky počítačových inženýrů spolupracovali, aby udělali film Síla se probouzí.'
+      2:
+        text: Ahoj, jsem Rachel Rose, vedoucí R&D inženýr v ILM, vedu zde vývojový
+          tým animace a tvorby postav. V Síle se probouzí jsem zodpovědná za pomoc
+          umělcům k vývoji výstroje, která je části postavy tak, aby pohybující postava
+          vypadala velmi přesvědčivě v galaxii daleko daleko pryč.
+      3:
+        text: V příští hodině budeme budovat vlastní hru Hvězdné války, která tě naučí
+          základním konceptům programování. Obvykle programování je představuje text,
+          zde budeme používat bloky, kterými přetažením a spuštěním zapíšeme programy.
+          Chceš-li začít, budeme pracovat s Reyem, aby naprogramoval, že BB-8 chodí
+          ke sběru všeho šrotu.
+      4:
+        text: Obrazovka je rozdělená na tři části. Nalevo je herní prostor Hvězdných
+          válek, kde bude spuštěn kód. Pokyny pro jednotlivé úrovně jsou zapsané pod
+          herním prostorem.
+      5:
+        text: Tato střední oblast je panel nástrojů, kde každý z těchto bloků je povel
+          srozumitelný pro BB-8.
+      6:
+        text: Prázdné místo napravo se nazývá pracovní prostor, kde budeme budovat
+          náš program.
+      7:
+        text: Když natáhnu blok moveLeft(); do našeho pracovního prostoru. Co se stane?
+          BB-8 se přesune vlevo o jeden blok na mřížce.
+      8:
+        text: A co když chci, aby BB-8 udělal něco po moveLeft(); bloku? Můžeš přidat
+          další blok do našeho programu. Vyberu si moveUp(); blok a přetáhnu jej pod
+          můj moveLeft(); blok, dokud se nezvýrazní. Pak to tam vhodím a dva bloky
+          se přichytí dohromady. Když stisknu znovu run, BB-8 bude provádět naskládané
+          příkazy od shora dolů v našem pracovním prostoru.
+      9:
+        text: Když chceš někdy odstranit blok, prostě jej vyjmi ze zásobníku a přetáhni
+          jej zpět do panelu nástrojů.
+      10:
+        text: Pak stiskneš run, můžeš vždy stisknout tlačítko reset k návratu BB-8
+          na začátek. Nyní to rozjedeme!
+    starwars_blocks_events:
+      1:
+        text: Dobrý den, jmenuji se Charita Carter. Jsem senior kreativní producent
+          tady v Walt Disney Imagineering. Jsem zodpovědná za vedení týmů, které ve
+          skutečnosti produkují atrakce, které naši hosté uvádějí do praxe. Vždy hledáme
+          způsoby, jak můžeme vylepšit a udělat lepší zážitek pro naše hosty a technologie
+          je základem toho.
+      2:
+        text: Gratulujeme, povedlo se ti to udělat! Naprogramoval jsi BB-8. Teď si
+          myslím, že jsme připraveni na něco těžšího. Pojďme na to. Nyní, když jsi
+          se naučili základy programování, vrátíme se zpět v čase, abys vybudoval
+          svou vlastní hru s hvězdami R2-D2 a C3PO.
+      3:
+        text: 'Chceš-li si vytvořit hru, musíme se naučit o něčem, co programátoři
+          her používají denně: nazývají to události. Události poví tvému programu,
+          aby naslouchal nebo čekal, až se něco stane a pak když se to stane, provede
+          akci.'
+      4:
+        text: Některé příklady událostí naslouchají na klepnutí myší, kurzorové směrové
+          tlačítko nebo dotek na obrazovku.
+      5:
+        text: Zde chceme udělat, aby R2-D2 se posunul nahoru k dodání zprávy rebel
+          pilotovi a pak posunout dolů k jinému rebel pilotovi. Použijeme události,
+          abychom jej přesunuli. Když hráč používá šipky nahoru/dolů nebo tlačítka
+          nahoru/dolů.
+      6:
+        text: Použijeme blok události whenUp(), připojíme k němu goUp() blok. Když
+          hráč pak stiskne klávesu šipka nahoru, spustí se kód připojený k bloku whenUp().
+          A uděláme totéž, aby R2-D2 se posunul dolů. Místo psaní napřed celého kódu
+          k řízení našeho droida, můžeme teď nechat R2-D2 reagovat na události stisknutí
+          tlačítka pro jeho pohyb po obrazovce.
+      7:
+        text: Krok za krokem se stává tvoje hra stále interaktivnější.
+    starwars_blocks_congrats:
+      1:
+        text: Ahoj, jmenuji se Alice, řídím projektové a inženýrské týmy zde na Code.org.
+          Pracovala jsem na tomto výukovém kurzu, se kterým si právě hraješ.
+      2:
+        text: Právě jsi se dopracoval do poslední úrovně. Blahopřejeme! Právě jsi
+          se naučil vše, co potřebuješ vědět, aby sis udělal vlastní hru Hvězdné války.
+          Nyní neexistují žádné další instrukce, žádné hádanky k řešení. Můžeš si
+          vytvořit vlastní hru a zvolit, jak to bude fungovat. Ještě jedna věc, odemkni
+          si nové zvuky a příkazy, abys toho dokázal ještě víc.
+      3:
+        text: "[studenti mluví] Tak jsme si udělali hru v podstatě, kde dostaneš body,
+          když dostaneš puffer prasátka. Přetočení je pokaždé. dostaneš-li prasátko
+          a objeví se útočník. Nakonec celá obrazovka je plná prasátek a když se dotkneš
+          10 000 z nich, vyhraješ."
+      4:
+        text: "[studenti mluví] Udělali jsme hru, kde nemůžeš prohrát a všechno, co
+          jsi dostal, máš za to body. V mém programu jsem obrátil směry tak, že při
+          každém klepnutí nahoru jde tvoje postava dolů a při klepnutí na tlačítko
+          vpravo tvoje postava jde doleva. Je to opravdu těžké někdy získat výhodu!
+          Výhodou je však, pokud jsi vývojář hry. Povedlo se mi to? Hurá!"
+      5:
+        text: Až budeš hotov s hrou, vyber si pro sdílení dostat odkaz. Ten můžeš
+          pak sdílet s přáteli nebo hrát hru na telefonu. Bav se!
+    mc_intro:
+      1:
+        text: |-
+          Jmenuji se Jens Bergensten, ale jsem znám jako Jeb. Jsem vedoucí vývojář Minecraftu zde v mojang.com. Myslím, že mi bylo 11 nebo 12, když jsem programovat, protože jsem chtěl dělat hry. Jeden z přátel táty mi pověděl, že abych dělal hry, potřebuji se naučit, jak se programuje. Takže jsem se do toho dal. Rád navrhuji a zjišťuji architekturu věcí. Tohle je to, co
+          mám skutečně rád na Minecraftu.
+      2:
+        text: |-
+          Během následující hodiny se naučíš základy informatiky programováním pohybů Alex nebo Steva v simulovaném kousku světa
+          Minecraftu.
+      3:
+        text: "Tradiční programování je běžně text, ale dnes použijeme Blockly: \nvyužívání
+          bloků, které přetahujete k psaní programů. Na pozadí tvoříte\nJavaScript
+          kód."
+      4:
+        text: Pojmy, které se naučíš, počítačoví programátoři používají denně a jsou
+          základem informatiky. Tady v Mojangu používáme tyto stejné koncepty, aby
+          Minecraft pracoval.
+      5:
+        text: Než začneš, vyber si svoji postavu. Vyberu si Alexu. Budujeme kód pro
+          program, který jí pomůže se pohybovat po obrazovce.
+      6:
+        text: Tvoje obrazovka je rozdělená do tří hlavních částí. Na levé straně je
+          hrací místo pro Minecraft., Zde bude tvůj program spuštěn. Pokyny pro jednotlivé
+          úrovně jsou napsané dole.
+      7:
+        text: Tato střední oblast je panel nástrojů a každý z těchto bloků je povel
+          řídící akce Alexy.
+      8:
+        text: Prázdné místo na pravé straně se nazývá pracovní prostor. Tam budeme
+          stavět náš program.
+      9:
+        text: Když přetáhneme blok "posunout vpřed" do našeho pracovního prostoru
+          a klepneme na tlačítko Spustit. Co se stane? Alex se pohybuje vpřed o jedno
+          pole na mřížce.
+      10:
+        text: A co, když chceme udělat něco poté, co se přesune dopředu o jedno pole?
+          Můžeme přidat další blok do našeho programu. Vyberu si blok "otočit vpravo"
+          a přetáhnu jej pod "posunout vpřed", dokud se neobjeví tato oranžová čára.
+          Potom ho pustím a dva bloky se přichytí dohromady. Když stiskneme znova
+          Spustit, Alex bude provádět příkazy v našem pracovním prostoru odshora dolů.
+      11:
+        text: Když chceš někdy odstranit blok, stačí jej přetáhnout ze zásobníku zpět
+          do panelu nástrojů.
+      12:
+        text: 'Ke zrušení změn a dostat se zpět na počáteční úroveň, použij tlačítko
+          Start Over v pravém horním rohu pracovního prostoru. Ještě jedna věc: vidíš
+          malý trojúhelník na otáčecích blocích? Kdykoli uvidíš tyto trojúhelníky,
+          znamená to, že můžeš si vybrat jinou možnost. Začněme s kódováním!'
+    mc_repeat:
+      1:
+        text: Jsem Lydie Winters, ředitelka značky Mojang a udělali jsme malou hru
+          nazvanou Minecraft.
+      2:
+        text: Mojí oblíbenou věcí, co dělám v Minecraftu, je zkoumání. Mám ráda dobrodružství
+          v jeskyních a vidět, co mohu najít. Jako někdo, kdo není programátor, jsem
+          opravdu nadšená, projít lekci Minecraftu a skutečně se sama naučit kódování.
+      3:
+        text: Pro poslední úroveň je zapotřebí spousty bloků "posunout vpřed". Bylo
+          by snazší, kdyby jsme mohli jen povědět počítači, aby provedl povel "posunout
+          vpřed" čtyřikrát nebo pětkrát. Naštěstí pro nás, počítače jsou opravdu dobré
+          v opakovaných příkazech díky s cyklům.
+      4:
+        text: Při vytváření Minecraftu požíváme k opakování cykly, aby umístili počáteční
+          materiály k vytvoření nového světa. Jsou to tisíce a tisíce bloků. Používáme
+          též cyklů i v malém např. aby Alexovy nohy se pohybovaly sem a tam při chůzi.
+          Opakování pomocí cyklů je silná součást programování.
+      5:
+        text: Noc se blíží, takže v příštích několika úrovních, budeme stavět dům,
+          abychom bydleli v bezpečí. Budeme používat k tomu velmi snadno bloku opakování.
+      6:
+        text: K vybudování zdi našeho domu, můžeme buď povědět Alex "posun vpřed"
+          a umísti prkna čtyřikrát nebo jí povíme "posun vpřed" a umísti jedno prkno,
+          pak tento povel a použij blok opakování, aby to provedla tuto akci vícekrát.
+          Teď klepneme na bloku opakování a povíme jí kolikrát chceme, aby se tato
+          akci provedla. Pojďme stavět náš dům než nastane noc! Bav se!
+    mc_if_statements:
+      1:
+        text: Nyní se budeme učit o if příkazech. If příkazy jsou základní součástí
+          výuky programování. Pomáhají počítači dělat rozhodnutí.
+      2:
+        text: Všechny počítače používají if příkazy, včetně mého telefonu. Např. když
+          odemknu můj telefon, běží v něm nějaký kód, který povídá, že if - když zadám
+          správně heslo, then - pak se telefon odemkne. Else - jinak se zobrazí chybová
+          zpráva.
+      3:
+        text: Umíš použít if příkazy ve tvém kódu, aby Steve a Alice reagovali na
+          to, co vidí ve světě. Např. if - pokud je kámen před nimi, umí se otočit
+          doleva. Nebo otočit doprava, if - když běží do stromu.
+      4:
+        text: V tomto případě nechceme spadnout na lavu. Je snadné naplánovat pro
+          lavu. Můžeme to vidět na obrazovce. Ale co lava, kterou nemůžeme dát pod
+          kámen?
+      5:
+        text: Poté, co jsme vydolovali kámen, potřebujeme zkontrolovat napřed, jestli
+          je nějaká lava v daném místě před posunem dopředu. Pokud je tam lava, chceme
+          umístit kámen před naší postavu, než se posuneme dopředu. Tímto způsobem
+          můžeme se bezpečně pohybovat. Čas pro další těžbu! A nezapomeň používat
+          if příkazy, k prohlédnutí kam šlapeš.
+    mc_congrats_share:
+      1:
+        text: Blahopřejeme! Právě jsi se naučil základní stavební kameny informatiky.
+      2:
+        text: Nyní umíš použít tyto bloky k budování tvé vlastní tvorby. Neexistují
+          žádné další instrukce a puzzly k řešení. Můžeš si vybudovat, co chceš. Můžeš
+          si vybrat.
+      3:
+        text: "[studenti mluví] Jde o to, že je to skutečné. Shera. Udělal jsem L
+          z pochodní. Udělal jsem A z březových prkýnek. Fungovalo to, fungovalo.
+          Postavili jsme dům z vlny!"
+      4:
+        text: Po dokončení tvého výtvoru vyber si získat odkaz ke sdílení se svými
+          přáteli. Pobav se!
+    mc_congrats_no_share:
+      1:
+        text: Blahopřejeme! Právě jsi se naučil základní stavební kameny informatiky.
+      2:
+        text: Nyní umíš použít tyto bloky k budování tvé vlastní tvorby. Neexistují
+          žádné další instrukce a puzzly k řešení. Můžeš si vybudovat, co chceš. Můžeš
+          si vybrat.
+      3:
+        text: "[studenti mluví] Jde o to, že je to skutečné. Shera. Udělal jsem L
+          z pochodní. Udělal jsem A z březových prkýnek. Fungovalo to, fungovalo.
+          Postavili jsme dům z vlny!"
+      4:
+        text: Nyní umíš si postavit, co chceš. Pobav se!
+    gumball_intro:
+      1:
+        text: Kdybys sis chtěl vytvořit vlastní hru, je to opravdu snadné. Vše co
+          potřebuješ je jen pár základů programování a můžeš začít hrát hru, kterou
+          jsi vytvořil.
+      2:
+        text: Máš oblíbenou videohru? Projdeme jeden krok k vytvoření hry, stejně
+          jako v PlayLab. Dobré hry mají příběh a každý příběh má aktéry. Aktéři dělají
+          věci jako mluví, pohybují se a komunikují. Možná dokonce skórují na základě
+          pravidel hry. Dnes se naučíme jak udělat všechny tyto věci jednu po druhé
+          se zábavnými aktéry a pak si vytvoříme hru od začátku, kterou lze sdílet
+          a hrát na mobilu.
+      3:
+        text: Dnes se učíme, jak dělat všechny tyto věci jednu po druhé se zábavnými
+          aktéry a pak si vytvoříme hru od začátku, kterou lze sdílet a hrál na mobilu.
+      4:
+        text: Tvá obrazovka je rozdělena na 3 hlavní části. Nalevo je herní prostor,
+          kde poběží program. Pokyny pro každou úroveň jsou napsané dole.
+      5:
+        text: Ta střední oblast je panel nástrojů, a každý z těchto bloků je kus kódu.
+      6:
+        text: Prázdné místo na pravé straně se nazývá pracovní prostor. Tam budeme
+          stavět náš program.
+      7:
+        text: Chceš-li začít, budeš potřebovat propojit bloky na oranžový blok "když
+          běží blok". Můžeš dohromady propojit více bloků jejich přetažením, dokud
+          se neuvidí žlutá čára, a pak se společně přichytí.
+      8:
+        text: V této první hádance uděláme, aby si aktéři si něco řekli propojením
+          bloku "say" při spuštění bloku se zadáním zprávy. Jakmile máte své bloky
+          na místě, stiskni tlačítko run, aby se ti zobrazilo, co jsi naprogramoval.
+      9:
+        text: Začněme a na konci jsi schopen si vytvořit vlastní hru se všemi druhy
+          hráčů, kteří umí komunikovat, skórovat, házet věcmi a zmizet jeden druhého.
+          Je to všechno jen na tobě!
+    gumball_events:
+      1:
+        text: Teď jsme se dozvěděli něco, co všichni programátoři her používají každý
+          den. Říká se tomu události. Událost povídá tvému programu, aby naslouchal
+          něco a když na stane, pak to udělá, hra provede akci.
+      2:
+        text: Někteé příklady událostí jsou naslouchání klepnutí myší, nahoru nebo
+          dolů se šipkovou klávesou nebo dokonce dotyk na obrazovku.
+      3:
+        text: Tady dělat, aby aktér něco řěkl, když hráč klepne na něj. Použijeme,
+          když klepneme blok s připojením blok "say" blok. Když hráč klepne, všechny
+          bloky připojenyé k tomuto bloku se provedou.
+      4:
+        text: Existují bloky when arrows. Když propojíte bloky přesunu k těm, můžete
+          začít pohybovat s aktéry nahoru, dolů, vlevo, vpravo se šipkovými klávesami.
+          Kousek po kousku tvoje hra je stále více interaktivní.
+    gumball_repeat:
+      1:
+        text: Umíš si představit, kdybys něco měl opakovat navěky a navždy? Doufejme,
+          že to nikdy nebudeš muset, protože počítače jsou opravdu dobré na opakujících
+          se věcí.
+      2:
+        text: To je blok opakování navždy. Něco uvnitř tohoto bloku se stane pořád
+          ve hře. Když chceme, aby aktér udělal něco opakovaně bez toho, aby hráč
+          musel něco udělat. Dáme tyhle bloky dovnitř bloku repeat forever.
+      3:
+        text: V příští hádance je naším cílem pomoci aktérovi dělaat práci nepřetržitě.
+          Učení, jak povely opakování fungují, ti ušetří později tuny času, když vytváříš
+          vlastní hru.
+    iceage_intro:
+      1:
+        text: Kdybys sis chtěl vytvořit vlastní hru, je to opravdu snadné. Vše co
+          potřebuješ je jen pár základů programování a můžeš začít hrát hru, kterou
+          jsi vytvořil.
+      2:
+        text: Máš oblíbenou videohru? Projdeme jeden krok k vytvoření hry, stejně
+          jako v PlayLab. Dobré hry mají příběh a každý příběh má aktéry. Aktéři dělají
+          věci jako mluví, pohybují se a komunikují. Možná dokonce skórují na základě
+          pravidel hry. Dnes se naučíme jak udělat všechny tyto věci jednu po druhé
+          se zábavnými aktéry a pak si vytvoříme hru od začátku, kterou lze sdílet
+          a hrát na mobilu.
+      3:
+        text: Dnes se učíme, jak dělat všechny tyto věci jednu po druhé se zábavnými
+          aktéry a pak si vytvoříme hru od začátku, kterou lze sdílet a hrál na mobilu.
+      4:
+        text: Tvá obrazovka je rozdělena na 3 hlavní části. Nalevo je herní prostor,
+          kde poběží program. Pokyny pro každou úroveň jsou napsané dole.
+      5:
+        text: Ta střední oblast je panel nástrojů, a každý z těchto bloků je kus kódu.
+      6:
+        text: Prázdné místo na pravé straně se nazývá pracovní prostor. Tam budeme
+          stavět náš program.
+      7:
+        text: Chceš-li začít, budeš potřebovat propojit bloky na oranžový blok "když
+          běží blok". Můžeš dohromady propojit více bloků jejich přetažením, dokud
+          se neuvidí žlutá čára, a pak se společně přichytí.
+      8:
+        text: V této první hádance uděláme, aby si aktéři si něco řekli propojením
+          bloku "say" při spuštění bloku se zadáním zprávy. Jakmile máte své bloky
+          na místě, stiskni tlačítko run, aby se ti zobrazilo, co jsi naprogramoval.
+      9:
+        text: Začněme a na konci jsi schopen si vytvořit vlastní hru se všemi druhy
+          hráčů, kteří umí komunikovat, skórovat, házet věcmi a zmizet jeden druhého.
+          Je to všechno jen na tobě!
+    iceage_events:
+      1:
+        text: Teď jsme se dozvěděli něco, co všichni programátoři her používají každý
+          den. Říká se tomu události. Událost povídá tvému programu, aby naslouchal
+          něco a když na stane, pak to udělá, hra provede akci.
+      2:
+        text: Někteé příklady událostí jsou naslouchání klepnutí myší, nahoru nebo
+          dolů se šipkovou klávesou nebo dokonce dotyk na obrazovku.
+      3:
+        text: Tady dělat, aby aktér něco řěkl, když hráč klepne na něj. Použijeme,
+          když klepneme blok s připojením blok "say" blok. Když hráč klepne, všechny
+          bloky připojenyé k tomuto bloku se provedou.
+      4:
+        text: Existují bloky when arrows. Když propojíte bloky přesunu k těm, můžete
+          začít pohybovat s aktéry nahoru, dolů, vlevo, vpravo se šipkovými klávesami.
+          Kousek po kousku tvoje hra je stále více interaktivní.
+    iceage_repeat:
+      1:
+        text: Umíš si představit, kdybys něco měl opakovat navěky a navždy? Doufejme,
+          že to nikdy nebudeš muset, protože počítače jsou opravdu dobré na opakujících
+          se věcí.
+      2:
+        text: To je blok opakování navždy. Něco uvnitř tohoto bloku se stane pořád
+          ve hře. Když chceme, aby aktér udělal něco opakovaně bez toho, aby hráč
+          musel něco udělat. Dáme tyhle bloky dovnitř bloku repeat forever.
+      3:
+        text: V příští hádance je naším cílem pomoci aktérovi dělaat práci nepřetržitě.
+          Učení, jak povely opakování fungují, ti ušetří později tuny času, když vytváříš
+          vlastní hru.
+    mc_2016_intro:
+      1:
+        text: Ahoj, jmenuji se Jens a jsem hlavní kreativní designer Minecraftu. V
+          následující hodině si vytvoříš svou vlastní hru Minecraft. Tohle vypadá
+          jako Minecraft, ale svět se zastavil. Ovce se nehýbají, slepice přestaly
+          snášet vejce a zombie stojí stranou. Je to jen na tobě, přidej kódy a rozhýbej
+          svět Minecraftu.
+      2:
+        text: Jmenuji se Melissa a jsem výzkámný pracovník v Minecraftu. To, co mě
+          opravdu zajímá, je jak lidé přemýšlí a pracují s technologiemi. Proto je
+          pro mě tato práce ideální, propojuje výpočetní techniku a psychologii. Jak
+          lidé přemýšlí a jak se chovají.
+      3:
+        text: Uvidíte obrazovku rozdělenou do tří hlavních částí. 1) Vlevo probíhá
+          vaše hra Minecraft. Právě teď je svět zastavený, ale my to napravíme pomocí
+          kódu.
+      4:
+        text: 2) Uprostřed je prostor pro bloky kódů. Každý z těchto bloků je i příkaz,
+          kterému slepice, ovce a ostatní postavy Minecraftu rozumí.
+      5:
+        text: 3) Vpravo je pracovní prostor a přesně tady budeme pracovat.
+      6:
+        text: Pokud zapomeneš jak hru hrát, instrukce ke každé úrovni jsou nahoře.
+      7:
+        text: Začneme programováním slepice. Přetáhni blok "Posun vpřed" do pracovního
+          prostoru. Když stiskneš "Spustit" slepice udělá jeden krok vpřed. Pokud
+          chceš, aby šla slepice ještě dál, přetáhni další blok "Posun vpřed" hned
+          pod ten první. Blok se označí žlutě a hned poté se bloky spojí dohromady.
+          Když znovu stiskneš "Spustit", slepice udělá dva kroky vpřed.
+      8:
+        text: Pokud chceš blok smazat, přetáhni ho zpátky do prostřední části do prostoru
+          pro bloky.
+      9:
+        text: Po stisknutí "Spustit" vždy můžeš stisknout stejné tlačítko, tentokrát
+          se jmenuje "Obnovit" a začneš znovu. A teď už je to jen na tobě, jak si
+          Minecraft poskládáš. Hezkou zábavu!
+    mc_2016_loops:
+      1:
+        text: Ahoj, já jsem Lisa. Jsem vývojářka softwaru pro Minecraft. A v této
+          hře pracuju na některých zvířatech a nepřátelích. Jedno ze zvířat, které
+          jsem vytvořila je ocelot. Pracovala jsem na části, kde si ocelota ochočíte,
+          když ho nakrmíte rybou a on se promění v kočku.
+      2:
+        text: Lidé se nudí, když musí opakovat stejnou věc pořád dokola. Ale co je
+          skvělé na počítačích, že dokáží opakovat stejnou věc milionkrát i bilionkrát
+          za sebou a nenudí je to. Takovému opakování se říká cyklus a každá postava
+          v Minecraftu cykly používá.
+      3:
+        text: Před chvilí jsme poslali slepici přes obrazovku, ale pak se zastavila.
+          V Minecraftu se slepice procházejí bez přestání. Použitím tohoto bloku "Navždy
+          opakovat" z našeho prostoru pro bloky, rozhýbeme napořád všechny slepice.
+          Smyčky nám ušetří spoustu času a nabídnou nové možnosti jak vytvořit vlastní
+          verzi hry Minecraft.
+    mc_2016_events:
+      1:
+        text: V této další úrovni si můžeš vybrat svého hráče Steva nebo Alexe. Stiskni
+          na svojí klávesnici šipky k pohybu nahoru, dolu, doleva a doprava. Teď už
+          se můžeš volně pohybovat kamkoli chceš. Pokud chceš využít předmět, dojdi
+          až k němu a stiskni mezerník.
+      2:
+        text: "Pokud používáš dotykovou obrazovku, přejeď prstem nahoru, dolu, doleva
+          a doprava. \nKlikni kamkoli do hry pro použití předmětu před tvým hráčem."
+      3:
+        text: Ale co se stane, když předmět použiješ? V Minecraftu můžeš získat z
+          ovcí vlnu, když je ostříháš. Krávy utečou, pokud je uhodíš a creepeři explodují,
+          když se k nim přiblížíš. Tyto reakce se dějí na základě funkce události.
+          Události řeknou tvému programu dávat pozor nebo čekat až se něco stane.
+          A když se to stane, provedou akci.
+      4:
+        text: 'A když se to stane, provedou akci. Zatím jsme použili jen jednu událost.
+          Vložením kódu "Při stvoření" se spustila akce, když se objevila zvířata
+          nebo když začala hra. Během příštích několika úrovní budeš mít nové možnosti
+          událostí jako jsou "Při dotyku", které se spustí, když se dotkneš zvířete.
+          Nebo "Při použití", když použiješ předmět. Nebo když chceš, aby zombík zmizel
+          při východu slunce. Vložíš kód "Při východu slunce".
+
+'
+    mc_2016_spawn:
+      1:
+        text: |-
+          Ve hře znamená tvořit to stejné jako vyrobit. V této úrovni se při západu slunce stvoří zombíci.
+          K této akci použijeme blok "Při západu slunce".
+      2:
+        text: Jelikož chceme, aby se zombíci stvořili v noci, přidáme blok "Stvořit
+          zombíky" hned pod blok "Při západu slunce". Jakmile budou stvořeni, každý
+          se bude řídit kódem, který jim přidáš za blok "Při stvoření". Bav se tvořením
+          zombíků!
+    mc_2016_congrats:
+      1:
+        text: |-
+          Gratuluji! Naučili jste se jak využít počítačovou vědu k rozhýbání světa Minecraft! Teď už jsi vývojář/ka!
+          Použil/a jsi všechny příkazy a všechna stvoření. To ty jsi rozhodl/a co se bude dít.
+      2:
+        text: Až skončíš se svojí hrou, klikni na sdílet a dostaneš odkaz. Můžeš ho
+          sdílet se svými přáteli nebo si s ním zahraješ hru na mobilu. Užijte si
+          hru! Těším se až si zahraju právě tu tvojí verzi Minecraftu.
+    mc_2017_agent_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+      10: 
+      11:
+        text: Pokud zapomeneš jak hru hrát, instrukce ke každé úrovni jsou nahoře.
+      12: 

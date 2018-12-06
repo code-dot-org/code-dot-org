@@ -1,0 +1,45 @@
+ky:
+  data:
+    unplugged:
+      Unplug1:
+        title: Компүтер илимине киришүү
+      Unplug2:
+        title: Эсептөөчү ой жүгүртүү
+      Unplug3:
+        title: Графикалык кагазды програмдоо
+      Unplug4:
+        title: Алгоритмдер
+      Unplug5:
+        title: Функциялар
+      Unplug7:
+        title: Ыр жазуу
+      Unplug8:
+        title: Абстракция
+      Unplug9:
+        title: Релени програмдоо
+      Unplug10:
+        title: Интернет
+      RelayProgramming:
+        title: Релени програмдоо
+      Conditionals:
+        title: Шартуулар
+      GraphPaperProgramming:
+        title: Графикалык кагазды програмдоо
+      ComputationalThinking:
+        title: Эсептөөчү ой жүгүртүү
+      courseD_unplugged_graphPaperProgramming:
+        title: Графикалык кагазды програмдоо
+      courseD_unplugged_relayProgramming:
+        title: Релени програмдоо
+      GraphPaperProgramming_2018:
+        title: Графикалык кагазды програмдоо
+      Conditionals_2018:
+        title: Шартуулар
+      RelayProgramming_2018:
+        title: Релени програмдоо
+      Conditionals_2019:
+        title: Шартуулар
+      GraphPaperProgramming_2019:
+        title: Графикалык кагазды програмдоо
+      RelayProgramming_2018_2019:
+        title: Релени програмдоо

@@ -1,0 +1,41 @@
+zh-TW:
+  data:
+    block_categories:
+      Actions: 動作
+      Loops: 迴圈
+      Functions: 函式
+      Color: 顏色
+      Brushes: 筆刷
+      Math: 運算
+      Logic: 邏輯
+      Variables: 變數
+      Number: 數字
+      String: 字串
+      Image: 圖像
+      Boolean: 布林（Boolean）值
+      Conditionals: 條件判斷（Conditionals）
+      Events: 事件
+      Games/Score: 遊戲/分數
+      Comments: 評論
+      Category: 類別
+      Text: 文字
+      'Variables ': '變數 '
+      numbers: 數字
+      Numbers: 數字
+      Input: 輸入
+      Default: 預設值
+      World: 世界
+      Sprites: 角色
+      Behaviors: 行為
+      Advanced: 進階設定
+      Start: 開始
+      Music: 音樂
+      Dancers: 舞者
+      Groups: 小組
+      Booleans: 布林值
+      test: 測試
+      test2: test2
+      Foo: Foo
+      Name: 你的名字
+      Game/Score: 遊戲/分數
+      Function: 函式

@@ -1,0 +1,23 @@
+ga:
+  data:
+    course:
+      name:
+        csp-2017:
+          assignment_family_title: Foras Feasa ar an Ríomheolaíocht
+        csd-2017:
+          assignment_family_title: Fionnachtana sa Ríomheolaíocht
+          description_short: Leagan 2018-2019 den chúrsa Fionnachtana sa Ríomheolaíocht.
+        allthethingscourse:
+          title: cúrsauilechuimsitheach
+          description_short: Seo é cúrsa ina bhfuil chuile rud
+          description_student: Seo é cúrsa ina bhfuil chuile rud agus a bhfuil cur síos níos faide air do na daltaí
+          description_teacher: Seo é cúrsa ina bhfuil chuile rud agus a bhfuil cur síos níos faide air do na múinteoirí
+        csd-2018:
+          assignment_family_title: Fionnachtana sa Ríomheolaíocht
+          title: Fionnachtana sa Ríomheolaíocht ('18-'19)
+          version_title: "'18-'19"
+          description_short: Leagan 2018-2019 den chúrsa Fionnachtana sa Ríomheolaíocht.
+        csp-2018:
+          assignment_family_title: Foras Feasa ar an Ríomheolaíocht
+          title: Foras Feasa ar an Ríomheolaíocht ('18-'19)
+          version_title: "'18-'19"

@@ -1,0 +1,36 @@
+---
+cs:
+  data:
+    function_names:
+      x: x
+      details: podrobnosti
+      draw eyebrow: nakreslit obočí
+      draw a circle: nakreslete kružnici
+      draw a car: nakreslit auto
+      draw square: nakreslit čtverec
+      draw a head: nakreslit hlavu
+      draw head: nakreslit hlavu
+      draw arms: nakreslit ruce
+      draw a hexagon: nakreslete šestiúhelník
+      draw a flower: nakreslete květinu
+      draw a square: nakreslete čtverec
+      draw a snowflake: nakreslete sněhovou vločku
+      draw a tree: nakreslete strom
+      draw a triangle: nakresli trojúhelník
+      draw a house: nakresli dům
+      draw a star: nakreslete hvězdu
+      do something: proveď něco
+      jump: skoč
+      set score: nastavit body
+      get nectar: získej nektar
+      test: otestuj
+      diamond: diamant
+      move: posun
+      move right: pohnout vpravo
+      move up: pohnout nahoru
+      move down: pohyb dolů
+      move left: pohnout vlevo
+      collect: sbírat
+      turn left: otočit vlevo
+      move forward: posunout vpřed
+      turn right: otočit vpravo

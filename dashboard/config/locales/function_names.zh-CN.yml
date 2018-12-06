@@ -1,0 +1,298 @@
+---
+zh-CN:
+  data:
+    function_names:
+      x: x
+      details: 细节
+      draw eyebrow: 画眉毛
+      draw pupil: 画瞳孔
+      draw a circle: 画一个圆圈
+      draw a car: 画一辆车
+      draw_rect: draw_rect
+      draw square: 画一个正方形
+      jump to controller top left: 切换至左上角控制区
+      jump to middle: 切换至中间区域
+      draw a button: 画一个按钮
+      draw cord: 画一根线
+      draw R pad: 绘制R垫
+      draw left leg: 画左腿
+      draw right leg: 画右腿
+      draw body and arms: 绘制身体和手臂
+      draw a head: 画一个头
+      draw sitting stick figure: 画坐姿棒图
+      draw head: 画头
+      draw arms: 画手臂
+      jump to neck: 跳到颈部
+      draw O: 画一个O
+      draw D: 画一个D
+      draw E: 画一个E
+      draw ear stems: 画穗柄
+      big gear: 大齿轮
+      small gear: 小齿轮
+      draw a hexagon: draw a hexagon
+      draw a flower: 画一朵花
+      draw a square: 画一个正方形
+      draw a snowflake: 画一朵雪花
+      draw 3 hexagons: 绘制三个六边形
+      draw 4 hexagons: 绘制四个六边形
+      draw 5 hexagons: 绘制五个六边形
+      get 2 nectar: 获取两个花蜜
+      collect purple nectar: 收集紫色花蜜
+      get 5: 得到5
+      move and get nectar: 移动并得到花蜜
+      move and get 4: 移动并得到4
+      get 7 nectar make 7 honey: 获取7个花蜜并酿7个蜂蜜
+      get 7 make 7: 获取7并酿制7
+      get 7: 得到7
+      move and get 3: 移动并得到3
+      draw a tree: 画一棵树
+      draw triangle: 绘制三角形
+      draw circle: 绘制圆圈
+      draw goal: 绘制目标
+      graph: 图形
+      draw waves: 画波浪
+      draw a wave: 画一轮波浪
+      draw a small triangle: 画一个小三角形
+      draw a medium triangle: 绘制中等三角形
+      draw a large triangle: 画一个大三角形
+      draw a big triangle: 画一个大三角形
+      draw a triangle: 画一个三角形
+      draw a house: 画一个房子
+      check purple flower: 检查紫花
+      check flower make honey: 检查花并酿蜂蜜
+      get nectar or make honey: 获取花蜜或酿制蜂蜜
+      make 3 honey: 制作3个蜂蜜
+      get 5 nectar: 获取5个花蜜
+      make all honey: 制作所有蜂蜜
+      draw a star: 画一个星星
+      game has been won: 游戏胜利
+      draw: 画
+      draw bit: 绘制比特
+      draw a polygon: 画一个多边形
+      draw a shape: 画一个图形
+      get 2 and make 2: 获取2并酿制2
+      draw a pinwheel: 画一个风车
+      drawTree: 画树
+      drawHouse: 画房屋
+      drawBranch: 画分支
+      drawSky: 绘制天空
+      fillScreen: 填充屏幕
+      drawHouseLayer: 画房屋层
+      swap: 交换
+      dropR: 去掉R
+      grabL: 获取L
+      dropL: 去掉L
+      init: 初始化
+      grabR: 获取R
+      do something: 做点什么
+      filter_pixel: 过滤像素
+      draw_image: 绘图
+      witch ending: 巫婆结尾
+      story: 故事
+      starting path: 起始路径
+      jump: 跳跃
+      patrol: 巡视
+      fill in bg: 填充背景
+      draw grid1: 画方格1
+      draw lines: 画线条
+      Draw a Square Line: 画一条正方形线
+      Draw a triangle: 画一个三角形
+      Draw a Cube: 绘制一个立方体
+      draw a cube: 绘制一个立方体
+      draw an octagon 20: 画一个大小20的八边形
+      Draw a square: 画一个正方形
+      cube: 立方体
+      do something2: 做点什么2
+      jump upper right: 切换至右上方
+      draw a line of  squares: 画一条正方形线
+      draw a line of squares: 画一条正方形线
+      Draw Square Line: 画正方形线
+      jump upper left: 跳到左上方
+      draw a line of octagons: 画一条八边形线
+      draw a square line: 画一条正方形线
+      Draw a Square: 画一个正方形
+      draw a square 20: 画一个大小20的方块
+      draw a square 40: 画一个大小40的方块
+      draw a triangle with length: 给定长度画一个三角形
+      Draw a Triangle with length: 给定长度画一个三角形
+      draw a triangle wioth length: 给定长度画一个三角形
+      draw a sqaure: 画一个正方形
+      triangle: 三角形
+      draw a spiral shape: 画一个螺旋形
+      get 3 nectar: 获取三个花蜜
+      get many nectar: 获取很多花蜜
+      get nectar make honey: 获取花蜜酿蜂蜜
+      draw an octagon: 画一个八边形
+      draw octagons: 画多个八边形
+      shift down: 向下滑动
+      level_up: 升级
+      score_points: 积分
+      set score: 设置得分
+      draw a line of hexagons: 画一条八边形组成的线
+      shift down/forward: 向下/向前移动
+      shift down/backward: 向下/向后移动
+      get nectar: 采花蜜
+      make honey up and over: 酿制蜂蜜然后结束
+      setActors: 设置演员
+      popCharacter: 公众人物
+      patrol left right: 左右巡逻
+      empty function: 空函数
+      check guess: 检查猜测
+      Jump: 跳转
+      test: 测试
+      build bridge: 建一个桥
+      run right: 向右跑
+      spin right: 向右转
+      grow forever: 永远成长
+      draw grass: 画草
+      sun: 太阳
+      draw windows: 画窗户
+      square: 正方形
+      draw a door: 画一个门
+      rectangle: 矩形
+      diamond: 钻石
+      window: 窗户
+      n-sided shape: n边形
+      draw a loop: 画一个循环
+      draw spiral circle: 画螺旋圈
+      draw roof: 画屋顶
+      draw rectangle: 画一个矩形
+      move: 移动
+      function 1: 函数1
+      function 2: 函数2
+      destroy and move: 摧毁并移动
+      clear path: 清除路径
+      clear cacti: 清除仙人掌
+      place and move: 放下并移动
+      cover lava: 覆盖熔岩
+      build short bridge: 造一个短桥
+      build long bridge: 造一个长桥
+      create trail: 建一条小路
+      move and fill: 移动并填充
+      fix right corner: 固定右拐角
+      fix left corner: 固定左拐角
+      make segment: 制作片段
+      turn corner: 转弯
+      fix long path: 固定长路径
+      fix short path: 固定短路径
+      place 3 tracks: 放三条轨道
+      clear right corner: 清空右拐角
+      clear left corner: 清空左拐角
+      draw a spiral edge: 绘制一条螺旋边
+      draw a pentagon: 画一个五边形
+      artist jump around: 艺术家四处跳跃
+      Draw lenses: 画镜片
+      25 pixel square: 25像素正方形
+      draw eye: 画眼睛
+      Make a Dot: 制作一个点
+      bubble sort: 冒泡排序
+      move right: 向右移动
+      say number: 说数字
+      move up: 向上移动
+      move down: 向下移动
+      move left: 向左移动
+      kill alien: 杀死外星人
+      click: 单击
+      Send Actor 1 to opposite: 发送演员1到对面
+      blink actor 1: 演员眨眼1
+      my function: 我的函数
+      Squares row: 正方形行
+      draw first part of heart: 绘制心的第一部分
+      check win: 检查是否胜利
+      curvy corner: 圆角
+      make triangle: 制作三角形
+      my behavior: 我的行为
+      '"simple" solution': '"简单" 解决方案'
+      potential solution: 可能的解决方案
+      my design: 我的设计
+      get 3 nectar or honey: 获取3个花蜜或蜂蜜
+      move and collect: 移动并收集
+      check nectar or honey: 检查花蜜或蜂蜜
+      row of nectar: 一排花蜜
+      rowOfNectar: 一排花蜜
+      move and check: 移动并检查
+      win game: 游戏胜利
+      lose game: 游戏失败
+      keep playing: 继续玩
+      Ask a question: 提问
+      draw pinwheel: 画风车
+      draw background: 绘制背景
+      move and get nectar with counter: 用计数器移动并获取花蜜
+      pick row: 选行
+      draw flame: 绘制火焰
+      draw fire: 绘制火焰
+      booster: 助推器
+      draw line of triangles: 画一列三角形
+      draw a window: 画一个窗口
+      stop_everything: stop_everything
+      lose: 失败
+      draw a plane of squares: 画一个正方形组成的平面
+      draw hexagon: 画六边形
+      draw line of hexagons: 画一列六边形
+      staggered squares: 叠起来的正方形
+      draw line of polygons: 画一列多边形
+      draw polygon: 画多边形
+      honey nectar: 蜂蜜花蜜
+      move and make honey: 移动并制作蜂蜜
+      collect all nectar: 收集所有花蜜
+      get all nectar: 获取所有花蜜
+      get pumpkin: 获取南瓜
+      harvest: 丰收
+      get corn and come back: 摘玉米并返回
+      pick along path: 沿路径选取
+      check square for corn: 搜查广场上的玉米
+      get all pumpkins: 收获所有的南瓜
+      pumpkin square: 南瓜广场
+      navigate: 导航
+      check and pick: 检查并挑选
+      find pumpkin: 找到一个南瓜
+      wander path: 漫游路径
+      get produce: 获取产品
+      check for corn: 查看玉米
+      corn rectangle: 玉米矩形
+      lettuce stairs: 生菜梯子
+      pick veggie: 摘蔬菜
+      corn and pumpkin: 玉米和南瓜
+      go get pumpkins: 去摘南瓜
+      go get lettuce: 去摘生菜
+      garden square: 花园广场
+      get corn come back: 摘玉米并返回
+      checker: 检查
+      Make gingham: 制作格子布
+      black outline: 黑色边框
+      draw a square2: 画一个大小2的方块
+      filled square: 填充正方形
+      get only nectar: 只获取花蜜
+      only make honey: 只酿制蜂蜜
+      collect row: 按行收集
+      rowOfNectarOrHoney: 一行花蜜或蜂蜜
+      collect stairs: 手机梯子
+      collect: 收集
+      move and increment: 移动放大
+      do something3: 做点什么3
+      Robin Fly: 罗宾飞
+      Robot Jump: 机器人跳跃
+      Center Dragon: 中心龙
+      Dragon Fly: 龙飞
+      Knight Surge: 骑士冲锋
+      Stop Dragon: 停止龙
+      Knight Jump: 骑士跳跃
+      robotThinking: 机器人思考
+      fill area with color: 填色
+      draw a line of triangles: 画一条正方形线
+      check flower: 检查花朵
+      get next row: 获取下一行
+      check space: 检查空间
+      follow path: 跟随路径
+      physics: 物理
+      initialization: 初始化
+      Make Actor 1 Jump: 让一号演员跳跃
+      Choose Number: 选择一个号码
+      Move Bird: 移动鸟
+      turn left: 向左转
+      move forward: 向前移动
+      turn right: 向右转
+      drawDot: 画一个点
+      draw a rectangle: 画一个矩形
+      Which Course for My Students?: 为我的学生选择哪门课程
+      draw a heart: 画一颗心

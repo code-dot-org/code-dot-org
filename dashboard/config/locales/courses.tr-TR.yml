@@ -1,0 +1,56 @@
+---
+tr:
+  data:
+    course:
+      name:
+        csp-2017:
+          assignment_family_title: Bilgisayar Bilimleri Prensipleri
+          description_student: 2016'ı sonbaharında , Üniversite Yönetim Kurulu en
+            yeni bilgisayar bilimi ilkeleri dersini başlattı. Ders öğrencilere bilgisayar
+            bilimi temel kavramlarını tanıtır ve onların bilgisayar ve teknolojinin
+            dünyaya nasıl etkisi olabileceğini keşfetmelerini sağlar. AP bilgisayar
+            bilim ilkeleri dersi bilgisayar bilimi alanında liderler oluşturmak, temel
+            bilgisayar eğitimine ulaşımı olmayanları bilgisayar bilimi ile tanıştırmak
+            ve disiplinler arası bağ kurmak amacı ile tasarlanmıştır.
+          description_teacher: 2016'ı sonbaharında , Üniversite Yönetim Kurulu en
+            yeni bilgisayar bilimi ilkeleri dersini başlattı. Ders öğrencilere bilgisayar
+            bilimi temel kavramlarını tanıtır ve onların bilgisayar ve teknolojinin
+            dünyaya nasıl etkisi olabileceğini keşfetmelerini sağlar. AP bilgisayar
+            bilim ilkeleri dersi bilgisayar bilimi alanında liderler oluşturmak, temel
+            bilgisayar eğitimine ulaşımı olmayanları bilgisayar bilimi ile tanıştırmak
+            ve disiplinler arası bağ kurmak amacı ile tasarlanmıştır.
+          description_short: Temel bilgisayar bilim kavramlarını öğrenin.
+        csd-2017:
+          assignment_family_title: Bilgisayar Bilimi Keşifleri
+          description_short: BB Keşifleri doğrultusunda 2018-2019 sürümü.
+        allthethingscourse:
+          title: tümherşeykursu
+          description_short: Bu tümherşey için bir kurs
+          description_student: Bu tümherşey için bir kurs ve öğrenciler için daha
+            uzun bir tanıma sahip
+          description_teacher: Bu tümherşey için bir kurs ve öğretmenler için daha
+            uzun bir tanıma sahip
+        csd-2018:
+          assignment_family_title: Bilgisayar Bilimi Keşifleri
+          title: Bilgisayar Bilimi Keşifleri ('18-'19)
+          version_title: "' 18 - 19'"
+          description_short: BB Keşifleri doğrultusunda 2018-2019 sürümü.
+        csp-2018:
+          assignment_family_title: Bilgisayar Bilimleri Prensipleri
+          title: Bilgisayar Bilimi İlkeleri ('18-'19)
+          version_title: "' 18 - 19'"
+          description_short: Temel bilgisayar bilim kavramlarını öğrenin.
+          description_student: 2016'ı sonbaharında , Üniversite Yönetim Kurulu en
+            yeni bilgisayar bilimi ilkeleri dersini başlattı. Ders öğrencilere bilgisayar
+            bilimi temel kavramlarını tanıtır ve onların bilgisayar ve teknolojinin
+            dünyaya nasıl etkisi olabileceğini keşfetmelerini sağlar. AP bilgisayar
+            bilim ilkeleri dersi bilgisayar bilimi alanında liderler oluşturmak, temel
+            bilgisayar eğitimine ulaşımı olmayanları bilgisayar bilimi ile tanıştırmak
+            ve disiplinler arası bağ kurmak amacı ile tasarlanmıştır.
+          description_teacher: 2016'ı sonbaharında , Üniversite Yönetim Kurulu en
+            yeni bilgisayar bilimi ilkeleri dersini başlattı. Ders öğrencilere bilgisayar
+            bilimi temel kavramlarını tanıtır ve onların bilgisayar ve teknolojinin
+            dünyaya nasıl etkisi olabileceğini keşfetmelerini sağlar. AP bilgisayar
+            bilim ilkeleri dersi bilgisayar bilimi alanında liderler oluşturmak, temel
+            bilgisayar eğitimine ulaşımı olmayanları bilgisayar bilimi ile tanıştırmak
+            ve disiplinler arası bağ kurmak amacı ile tasarlanmıştır.

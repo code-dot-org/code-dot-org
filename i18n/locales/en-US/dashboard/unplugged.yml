@@ -1,0 +1,196 @@
+en:
+  data:
+    unplugged:
+      'Unplug1':
+        title: 'crwdns3986:0crwdne3986:0'
+        desc: 'crwdns4137:0crwdne4137:0'
+        pdfs:
+          - 'crwdns3989:0crwdne3989:0'
+        video: 'crwdns6405:0crwdne6405:0'
+      'Unplug2':
+        title: 'crwdns3990:0crwdne3990:0'
+        desc: 'crwdns4138:0crwdne4138:0'
+        pdfs:
+          - 'crwdns4140:0crwdne4140:0'
+        video: 'crwdns6406:0crwdne6406:0'
+      'Unplug3':
+        title: 'crwdns3992:0crwdne3992:0'
+        desc: "crwdns3993:0crwdne3993:0"
+        pdfs:
+          - 'crwdns4142:0crwdne4142:0'
+        video: 'crwdns6407:0crwdne6407:0'
+      'Unplug4':
+        title: 'crwdns3995:0crwdne3995:0'
+        desc: "crwdns3996:0crwdne3996:0"
+        pdfs:
+          - 'crwdns4144:0crwdne4144:0'
+        video: 'crwdns6408:0crwdne6408:0'
+      'Unplug5':
+        title: 'crwdns4145:0crwdne4145:0'
+        desc: "crwdns3999:0crwdne3999:0"
+        pdfs:
+          - 'crwdns4147:0crwdne4147:0'
+        video: 'crwdns6409:0crwdne6409:0'
+      'Unplug6':
+        title: 'crwdns4001:0crwdne4001:0'
+        desc: 'crwdns4002:0crwdne4002:0'
+        pdfs:
+          - 'crwdns4149:0crwdne4149:0'
+        video: 'crwdns6410:0crwdne6410:0'
+      'Unplug7':
+        title: 'crwdns4004:0crwdne4004:0'
+        desc: "crwdns4005:0crwdne4005:0"
+        pdfs:
+          - 'crwdns4151:0crwdne4151:0'
+        video: 'crwdns6411:0crwdne6411:0'
+      'Unplug8':
+        title: "crwdns4007:0crwdne4007:0"
+        desc: "crwdns4850:0crwdne4850:0"
+        pdfs:
+          - 'crwdns4153:0crwdne4153:0'
+        video: 'crwdns6412:0crwdne6412:0'
+      'Unplug9':
+        title: 'crwdns4010:0crwdne4010:0'
+        desc: 'crwdns4011:0crwdne4011:0'
+        pdfs:
+          - 'crwdns4155:0crwdne4155:0'
+        video: 'crwdns6413:0crwdne6413:0'
+      'Unplug10':
+        title: 'crwdns4013:0crwdne4013:0'
+        desc: 'crwdns4014:0crwdne4014:0'
+        pdfs:
+          - 'crwdns4157:0crwdne4157:0'
+        video: 'crwdns6414:0crwdne6414:0'
+      'Unplug11':
+        title: 'crwdns4016:0crwdne4016:0'
+        desc: 'crwdns4017:0crwdne4017:0'
+        pdfs:
+          - 'crwdns4159:0crwdne4159:0'
+        video: 'crwdns6415:0crwdne6415:0'
+      'UnplugHappyMaps':
+        title: 'crwdns6416:0crwdne6416:0'
+        desc: 'crwdns6417:0crwdne6417:0'
+        video: 'crwdns8745:0crwdne8745:0'
+      'MoveIt':
+        title: 'crwdns6420:0crwdne6420:0'
+        desc: 'crwdns6421:0crwdne6421:0'
+        video: 'crwdns7667:0crwdne7667:0'
+      'PlantASeed':
+        title: 'crwdns6424:0crwdne6424:0'
+        desc: 'crwdns6425:0crwdne6425:0'
+        video: 'crwdns8790:0crwdne8790:0'
+      'BuildingAFoundation':
+        title: 'crwdns6428:0crwdne6428:0'
+        desc: 'crwdns6429:0crwdne6429:0'
+        video: 'crwdns8746:0crwdne8746:0'
+      'GettingLoopy':
+        title: 'crwdns6432:0crwdne6432:0'
+        desc: 'crwdns6433:0crwdne6433:0'
+        video: 'crwdns8747:0crwdne8747:0'
+      'RelayProgramming':
+        title: 'crwdns6436:0crwdne6436:0'
+        desc: 'crwdns6437:0crwdne6437:0'
+        video: 'crwdns8748:0crwdne8748:0'
+      'Conditionals':
+        title: 'crwdns6440:0crwdne6440:0'
+        desc: 'crwdns6441:0crwdne6441:0'
+        video: 'crwdns8749:0crwdne8749:0'
+      'BigEvent':
+        title: 'crwdns6444:0crwdne6444:0'
+        desc: 'crwdns6445:0crwdne6445:0'
+        video: 'crwdns8581:0crwdne8581:0'
+      'GoingPlacesSafely':
+        title: 'crwdns6448:0crwdne6448:0'
+        desc: 'crwdns6449:0crwdne6449:0'
+        video: 'crwdns22263:0crwdne22263:0'
+      'GraphPaperProgramming':
+        title: 'crwdns6452:0crwdne6452:0'
+        desc: 'crwdns6453:0crwdne6453:0'
+        video: 'crwdns8750:0crwdne8750:0'
+      'PaperPlanes':
+        title: 'crwdns6456:0crwdne6456:0'
+        desc: 'crwdns6457:0crwdne6457:0'
+        video: 'crwdns8791:0crwdne8791:0'
+      'BinaryBracelets':
+        title: 'crwdns6460:0crwdne6460:0'
+        desc: 'crwdns6461:0crwdne6461:0'
+        video: 'crwdns8751:0crwdne8751:0'
+      'DigitalFootprint':
+        title: 'crwdns6464:0crwdne6464:0'
+        desc: 'crwdns6465:0crwdne6465:0'
+        video: 'crwdns22264:0crwdne22264:0'
+      'ComputationalThinking':
+        title: 'crwdns6468:0crwdne6468:0'
+        desc: 'crwdns6469:0crwdne6469:0'
+        video: 'crwdns8752:0crwdne8752:0'
+      'FunctionalSuncatchers':
+        title: 'crwdns6472:0crwdne6472:0'
+        desc: 'crwdns6473:0crwdne6473:0'
+        video: 'crwdns8753:0crwdne8753:0'
+      'SongwritingParameters':
+        title: 'crwdns6476:0crwdne6476:0'
+        desc: 'crwdns6477:0crwdne6477:0'
+        video: 'crwdns8754:0crwdne8754:0'
+      'DiceRace':
+        title: 'crwdns6480:0crwdne6480:0'
+        desc: 'crwdns6481:0crwdne6481:0'
+        video: 'crwdns8755:0crwdne8755:0'
+      'Internet':
+        title: 'crwdns6484:0crwdne6484:0'
+        desc: 'crwdns6485:0crwdne6485:0'
+        video: 'crwdns8756:0crwdne8756:0'
+      'Crowdsourcing':
+        title: 'crwdns6488:0crwdne6488:0'
+        desc: 'crwdns21455:0crwdne21455:0'
+        video: 'crwdns8757:0crwdne8757:0'
+      'DigitalCitizenship':
+        title: 'crwdns6492:0crwdne6492:0'
+        desc: 'crwdns6493:0crwdne6493:0'
+      'TangramAlgorithms':
+        title: 'crwdns22265:0crwdne22265:0'
+        desc: 'crwdns22266:0crwdne22266:0'
+        video: 'crwdns26137:0crwdne26137:0'
+      'EnvelopeVariables':
+        title: 'crwdns22267:0crwdne22267:0'
+        desc: 'crwdns22268:0crwdne22268:0'
+        video: 'crwdns26138:0crwdne26138:0'
+      'MadGlibs':
+        title: 'crwdns22269:0crwdne22269:0'
+        desc: 'crwdns22270:0crwdne22270:0'
+        video: 'crwdns26139:0crwdne26139:0'
+      'ForLoopFun':
+        title: 'crwdns22271:0crwdne22271:0'
+        desc: 'crwdns22272:0crwdne22272:0'
+        video: 'crwdns26140:0crwdne26140:0'
+      'SongwritingWithParameters':
+        title: 'crwdns22273:0crwdne22273:0'
+        desc: 'crwdns22274:0crwdne22274:0'
+        video: 'crwdns26141:0crwdne26141:0'
+      'BinaryImages':
+        title: 'crwdns22275:0crwdne22275:0'
+        desc: 'crwdns22276:0crwdne22276:0'
+        video: 'crwdns26142:0crwdne26142:0'
+      'VideoGamesCoordinatePlanes':
+        title: 'crwdns23715:0crwdne23715:0'
+        desc: 'crwdns35442:0crwdne35442:0'
+        video: 'crwdns36534:0crwdne36534:0'
+      'Contracts':
+        title: 'crwdns35443:0crwdne35443:0'
+        desc: "crwdns35444:0crwdne35444:0"
+        video: 'crwdns36535:0crwdne36535:0'
+      'DesignRecipe':
+        title: 'crwdns23719:0crwdne23719:0'
+        desc: 'crwdns35445:0crwdne35445:0'
+        video: 'crwdns36536:0crwdne36536:0'
+      'Booleans':
+        title: 'crwdns35446:0crwdne35446:0'
+        desc: 'crwdns35447:0crwdne35447:0'
+        video: 'crwdns36537:0crwdne36537:0'
+      'ConditionalsPiecewiseFunctions':
+        title: 'crwdns23723:0crwdne23723:0'
+        desc: 'crwdns35448:0crwdne35448:0'
+        video: 'crwdns36538:0crwdne36538:0'
+      'CollisionDetection':
+        title: 'crwdns35449:0crwdne35449:0'
+        desc: "crwdns35450:0crwdne35450:0"
+        video: 'crwdns36539:0crwdne36539:0'

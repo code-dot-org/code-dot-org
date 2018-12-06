@@ -1,0 +1,39 @@
+---
+el:
+  data:
+    function_names:
+      x: x
+      details: λεπτομέρειες
+      draw eyebrow: ζωγράφισε φρύδι
+      draw pupil: ζωγράφισε ίριδα ματιού
+      draw a circle: Σχεδίασε ένα κύκλο
+      draw a car: ζωγράφισε ένα αμάξι
+      draw_rect: draw_rect
+      draw square: σχεδίασε τετράγωνο
+      jump to controller top left: μετάβαση σε ελεγκτή επάνω αριστερά
+      jump to middle: μετάβαση στην μέση
+      draw a button: σχεδιάστε ένα κουμπί
+      draw cord: σχεδίασε καλώδιο
+      draw a hexagon: σχεδίασε ένα εξάγωνο
+      draw a flower: σχεδίασε ένα λουλούδι
+      draw a square: σχεδίασε ένα τετράγωνο
+      draw a snowflake: σχεδίασε μια νιφάδα χιονιού
+      draw a tree: σχεδίασε ένα δέντρο
+      draw a triangle: σχεδίασε ένα τρίγωνο
+      draw a house: σχεδίασε ένα σπίτι
+      draw a star: σχεδίασε ένα αστέρι
+      do something: κάνε κάτι
+      jump: πήδα
+      set score: όρισε σκορ
+      get nectar: πάρε νέκταρ
+      test: δοκιμή
+      diamond: διαμάντι
+      move: προχώρησε
+      move right: Προχώρησε δεξιά
+      move up: προχώρησε προς τα επάνω
+      move down: προχώρησε προς τα κάτω
+      move left: Προχώρησε αριστερά
+      collect: σύλλεξε
+      turn left: στρίψε αριστερά
+      move forward: προχώρησε μπροστά
+      turn right: στρίψε δεξιά

@@ -1,0 +1,68 @@
+---
+uk:
+  data:
+    function_names:
+      x: x
+      draw pupil: намалюйте учня
+      draw a circle: намалювати коло
+      draw a car: намалюйте автомобіль
+      draw square: намалюйте квадрат
+      draw a hexagon: намалювати шестикутник
+      draw a flower: намалювати квітку
+      draw a square: намалювати квадрат
+      draw a snowflake: намалювати сніжинку
+      draw a tree: намалювати дерево
+      draw a triangle: намалювати трикутник
+      draw a house: намалювати будинок
+      get 5 nectar: отримати нектар. Кількість - 5
+      draw a star: намалювати зірку
+      draw a polygon: намалюйте багатокутник
+      get 2 and make 2: отримати 2 і зробити 2
+      drawTree: намалюйте дерево
+      drawHouse: намалюйте будинок
+      init: ініціалізація
+      do something: щось зробити
+      story: історія
+      jump: стрибок
+      Draw a Cube: Намалювати Куб
+      draw a cube: намалювати куб
+      Draw a square: Намалюйте квадрат
+      cube: куб
+      do something2: робити щось
+      jump upper right: стрибнути праворуч і вгору
+      draw a line of  squares: малювати лінію квадрату
+      draw a line of squares: малювати лінію квадрату
+      jump upper left: стрибнути ліворуч і вгору
+      draw a square 20: намалювати квадрат 20
+      draw a square 40: намалювати квадрат 40
+      draw a triangle with length: намалюйте трикутник з довжиною
+      triangle: трикутник
+      get 3 nectar: отримати нектар. Кількість - 3
+      set score: встановити рахунок
+      get nectar: взяти нектар
+      test: тест
+      rectangle: прямокутник
+      diamond: діамант
+      window: вікно
+      n-sided shape: n-стороння фігура
+      draw a loop: намалювати цикл
+      draw roof: намалюйте дах
+      move: переміститись
+      function 1: функція 1
+      function 2: функція 2
+      clear path: очистити шлях
+      place and move: розмістити і рухатись
+      cover lava: покрити лавою
+      build short bridge: побудувати короткий міст
+      create trail: створити стежку
+      move and fill: перемістити і заповнити
+      fix right corner: виправити правий кут
+      fix left corner: виправити лівий кут
+      move right: рухатись праворуч
+      move up: рухатися вгору
+      move down: рухатися вниз
+      move left: рухатись ліворуч
+      collect: збирати
+      turn left: повернути ліворуч
+      move forward: рухатись вперед
+      turn right: повернути праворуч

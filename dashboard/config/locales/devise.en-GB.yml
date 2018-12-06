@@ -1,0 +1,9 @@
+---
+en-GB:
+  devise:
+    confirmations:
+      confirmed: Your email address was successfully confirmed.
+    failure:
+      already_authenticated: You are already signed in.
+      invalid: Invalid email or password.
+      not_found_in_database: Invalid email or password.

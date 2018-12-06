@@ -1,0 +1,587 @@
+---
+lv:
+  errors:
+    messages:
+      not_saved: 'Lūdzu, izlabojiet šādas kļūdas:'
+      too_young: Šim saturam ir vecuma ierobežojums, un tas nav pieejams jaunākiem
+        skolēniem.
+      pair_programmer: Pašlaik jūs programmējat parī ar kādu, kam nav piekļuves šim
+        saturam. Lai piekļūtu šim saturam, pārtrauciet programmēšanu pārī un mēģiniet
+        vēlreiz.
+  activerecord:
+    errors:
+      messages:
+        blank: ir nepieciešams
+    attributes:
+      user:
+        name: Vārds ekrānā
+        email: E-pasts
+        parent_email: Vecāka/aizbildņa e-pasts
+        username: Lietotājvārds
+        password: Parole
+        password_confirmation: Paroles apstiprinājums
+        current_password: Pašreizējā parole
+        locale: Valoda
+        age: Vecums
+        gender: Dzimums
+        edit_header: Rediģēt konta detaļas
+        error:
+          future: nevar būt nākotnē
+  hello: Sveika, pasaule
+  welcome_back: Laipni lūdzu atpakaļ, %{name}
+  submit: Iesniegt
+  unsubmit: Atcelt iesniegšanu
+  cancel: Atcelt
+  okay: Labi
+  or: vai
+  add_teacher_form:
+    code:
+      label: 'Pievienot skolotāju:'
+      placeholder: Izvēles kods (ABCDEF)
+      instructions: Lūdzu, ievadiet kodu, ko jums piešķīra skolotājs. Tas ir 6 burtu
+        kods, kā piemēram "ABCDEF".
+    submit: Pievieno skolotāju
+  add_hint_form:
+    placeholder: Lūdzu, ievadi šeit savu mājienu
+    submit: Pievieno mājienu
+  appname: Code.org
+  stage: Posms
+  stage_number: Posms%{number}
+  puzzle: Puzle
+  trophies: Trofejas
+  courses: Kursi
+  courses_page:
+    title_student: Mācies Code Studio
+  unplugged_activity: Atvienota aktivitāte
+  of: 'no'
+  more: VAIRĀK
+  less: MAZĀK
+  beta: beta
+  try_hoc: 'Izmēģini "Programmēšanas stundu", spied šeit >> '
+  try_k8intro: Izmēģini mūsu K-8 Ievadu Datorzinātņu kursos (15-25 stundas)
+  k8intro: K-8 Ievads Datorzinātņu kursos (15-25stundas)
+  already_started: 'Jau iesāki? Atsākt šeit > '
+  demos: 'Administrators: Visas demonstrācijas'
+  continue: Turpināt
+  prize: balva
+  more_info: Vairāk informācijas
+  auth:
+    sign_in_with: Pieraksīties %{provider}
+    signed_in: Pierakstījies!
+    signed_out: Izrakstījies <a href="%{url}">Code.org</a>.
+    sign_out_of: Izmantoji %{provider} ,lai pierakstītos <a href="%{url}">Spied šeit</a>
+      , lai izrakstītos %{provider}.
+    already_signedup: Jau pierakstījies?
+    notyet_signedup: Neesi pievienojies?
+    google_oauth2: Google konts
+    twitter: Twitter
+    facebook: Facebook
+    windowslive: Microsoft konts
+    microsoft_v2_auth: Microsoft konts
+    forgot_password: Aizmirsi savu paroli?
+    need_confirmation: Nesaņēmi apstiprinājuma instrukcijas?
+    need_unlock: Nesaņēmi atslēgšanas norādijumus?
+  signup_form:
+    student_count: "%{count} skolēni jau ir pierakstījušies."
+    teacher_count: "%{count} skolotāji jau ir pierakstījušies."
+    teacher_educator_guide: Skatīt pedagogu rokasgrāmatu
+    school_name: Skolas nosaukums (nav obligāts)
+    school_address: Skolas adrese (nav obligāta)
+    address_placeholder: Adrese, pilsēta, novads, pasta indekss
+    gender: Dzimums (nav obligāti)
+    birthday: Dzimšanas diena (nav obligāti)
+    age: Vecums
+    user_type: Jūs esat skolnieks vai skolotājs?
+    submit: Piereģistrēties
+    teacher: Vai jūs esat skolotājs?
+    valid_username: Pieejams!
+    invalid_username: Lietotājvārdā jābūt vismaz 5 rakstzīmēm
+    taken_username: Lietotājvārds jau ir aizņemts
+    valid_password: Derīga parole!
+    invalid_password: Parolē jābūt vismaz 6 rakstzīmēm
+    mismatch_password: Abas ievadītās paroles nesakrīt
+    additional_information: Mums nepieciešama papildus informācija, lai turpinātu
+      Tavu pieteikumu.
+    user_type_label: Konta tips
+    user_type_teacher: Skolotāja
+    user_type_student: Students
+    field_is_required: ir nepieciešams
+    error: Radusies kļūda.
+    email_preference_yes: Jā
+    email_preference_no: Nē
+  school_info:
+    select_school_type: Skolas tips
+    other: Citi
+    school: Skola
+    other_school_not_listed: Cita skola, kas nav minēta augstāk
+    school_name: Skolas nosaukums
+    school_zip: Skolas pasta indekss
+    school_address: Skolas adrese
+    school_organization_name: Skolas/organizācijas nosaukums
+  signin_form:
+    title: Jau ir konts? Pieraksties
+    login: E-pasts
+    login_username: E-pasts vai lietotājvārds
+    password: Parole
+    remember: Atcerēties mani
+    submit: Pierakstīties
+  signin:
+    try_heading: Vēlaties izmēģināt kodēšanu bez pierakstīšanās?
+    try_hoc: Sākumā izmēģināt vienu "Programmēšanas stundu"
+    try_20hours: Izmēģināt mūsu 20 stundu ievadu Datorzinātnēs
+  signinsection:
+    welcome: Esi sveicināts %{section_name}
+    name: Izvēlies savu vārdu
+    picture: Atrodi savu slepeno attēlu
+    words: Tagad ievadi savus slepenos vārdus
+    login: Pierakstīties
+  password:
+    reset_form:
+      title: Aizmirsi savu paroli?
+      email: E-pasta adrese
+      submit: Iesniegt
+    change_form:
+      title: Mainīt paroli
+      new_password: Jauna parole
+      confirm_password: Apstipriniet jauno paroli
+      submit: Mainīt paroli
+  welcome_email:
+    subject: Pievienoties manai klasei (code.org)
+    body: |
+      Uzklikšķini uz zemāk esošās hipersaites, lai pieteiktos uz datorzinātnes pamācību mājaslapā Code.org (Mani norādot kā savu "skolotāju"):
+
+      %{link}
+
+      Šīs pamācības ir jautras, vizuāli piesaistošas un, tās māca datorzinātnes pamatprincipus, izmantojot vienkāršu, vadītu, spēlei līdzīgu pieredzi. Mācies programmēt no Bill Gates, Mark Zuckerberg, Angry Birds un Plants vs. Zombies! :-)
+
+      %{name}
+  section:
+    type:
+      picture: Attēla parole
+      word: Slepenais vārds
+      email: E-pasts
+  follower:
+    invite_sent: Uzaicinājums nosūtīts
+    added_teacher: "%{name} pievienots kā jūsu skolotājs"
+    registered: Jūs esat reģistrēts %{section_name}.
+    error:
+      signed_in: Lūdzu izrakstaties pirms turpināšanas
+      username_not_found: Lietotājvārds %{username} nav atrasts
+      username_in_use: "%{username} ir jau aizņemts, lūdzu, izvēlieties citu"
+      no_teacher: Nevarēja atrast, kurš būtu pierakstījies ar '%{teacher_email_or_code}'.
+        Lūdzat viņiem piereģistrēties un mēģinat viņus pievienot vēlreiz
+      section_not_found: Nevarēja atrast sadaļu ar kodu'%{section_code}'.
+      blank_code: Lūdzu ievadi sadaļas kodu
+      cant_join_own_section: Atvainojiet, jūs nevarat pievienoties pats savai sadaļai.
+    mail:
+      student_disassociated:
+        subject: 'Code.org paziņojums: %{student_name} vairs nav jūsu students.'
+  reports:
+    error:
+      access_denied: Jums nav pieejas šīs personas statistikai
+  crud:
+    new_model: Jauns %{model}
+    show: Rādīt
+    edit: Rediģēt
+    edit_model: Labot %{model}
+    update: Atjaunināt
+    submit: Iesniegt
+    destroy: Iznīcināt
+    back: Atpakaļ
+    confirm: Vai esat pārliecināts?
+    created: "%{model} ir veiksmīgi izveidots."
+    updated: "%{model} tika veiksmīgi atjaunināts."
+    destroyed: "%{model} tika veiksmīgi izdzēsts."
+    access_denied: Tev nav pieejas šim %{model}.
+  nav:
+    header:
+      finished_hoc: Esmu pabeidzis savu "Programmēšanas Stundu"
+      sign_in_to_save: Pierakstieties, lai saglabātu savus panākumus
+      free_play:
+        playlab: Izveidot aplikāciju
+        artist: Uzzīmēt kaut ko
+        applab: Izveidot aplikāciju
+      course_catalog: Kursu katalogs
+      help_support: Palīdzība un atbalsts
+      documentation: Dokumentācija
+      educate_hoc: Programmēšanas stunda
+      about_us: Par mums
+      about_partners: Partneri
+    user:
+      classroom: Skolotāju mājas lapa
+      label: Sveiki, %{username}
+      stats: Kodu studija
+      settings: Mans konts
+      logout: Izrakstīties
+      signin: Pierakstīties
+      already_registered: Jau reģistrējies?
+      team: Komanda
+      create: Izveidot
+      applab: Aplikāciju laborotorija
+      artist: Mākslinieks
+      playlab: Spēles laboratorija
+      flappy: Flapijs
+    popup:
+      progress_for_user: "%{name} panākumi"
+      progress: Jūsu progress
+      lines: 'Kopējais koda līniju skaits: %{lines}'
+      close: AIZVĒRT
+      mastery: Jēdzieni
+      puzzle_map: Stadijas
+      prizes: Sakrāj visas %{total_trophies} trofejas un laimē balvas!
+      prize_earned: Visas %{total_trophies} Trofejas sakrātas. Balva laimēta!
+      prize_us_only: "(Tikai ASV studenti)"
+      prizes_link: Vairāk informācijas
+  teacher:
+    answer: Atbilde
+    for_teachers_only: Tikai skolotājiem
+    title:
+      one: 'Tavs skolotājs:'
+      other: 'Tavi skolotāji:'
+    remove: "(noņemt skolotāju)"
+    confirm:
+      remove: Vai tu esi drošs, ka vēlies noņemt šo skolotāju?
+    students:
+      dashboard: Doties uz Skolotāja paneli
+    user_not_found: Nevar atrast skolotāju.
+    student_teacher_disassociated: Jūs esat noņēmis sev skolotāju %{teacher_name}.
+    panel:
+      student: Students
+      viewing_solution: Apskatīt risinājumu
+      try_it_yourself: Pamēģini pats
+      section: Sadaļa
+      example: Atrisinājuma piemērs
+      example_with_number: Atrisinājuma %{solution_number} piemērs
+      submitted_on: 'Iesniegts:'
+      unsubmit: Atcelt iesniegšanu
+  user:
+    email_confirm_needed: 'E-pasta adrese nav apstiprināta:'
+    email_confirm_needed_required: 'Jūsu e-pasta adrese %{email} nav apstiprināta:'
+    email_confirm_wrong_email: "(Nepareiza e-pasta adrese?)"
+    email_resend_confirm: Atkārtoti nosūtīt apstiprinājumu instrukcijas
+    new_password_hint: "(atstājiet tukšu, ja nevēlaties mainīt to)"
+    current_password_hint: "(nepieciešama jūsu pašreizējā parole, lai apstiprinātu
+      izmaiņas)"
+    delete: Izdzēst jūsu kontu
+    delete_text: Nospiežot šo pogu, jūs izdzēsīsiet savu kontu.
+    delete_text_teacher_note: Lūdzu, ņemiet vērā, ka jūsu konta dzēšana neizdzēsīs
+      jūsu skolēnu kontus.
+    delete_confirm: Vai jūs tiešām vēlaties dzēst savu kontu?
+    deleted_user: dzēsts lietotājs
+    create_personal_login_under_13_username: Lietotājvārds (neizmanto savu īsto vārdu!)
+    create_personal_login_under_13_parent_email: Vecāka/aizbildņa e-pasta adrese
+  user_level:
+    completed: Pabeigts
+    tried: Mēģināts
+  home:
+    title: Kodu studija
+    description: Code Studio ir vietne Code.org izstrādātiem tiešsaistes kursiem
+    lines_of_code: "%{lines_count} koda rindiņas ir uzrakstījuši skolēni"
+    lines_of_code_linebreak: "%{lines_count} KODA RINDIŅAS<br/> IR UZRAKSTĪJUŠI %{students_count}
+      MILJONI SKOLĒNU"
+    all_courses: Pārskats par kursiem, 1, 2 un 3
+    lesson_plans: Nodarbību plāni
+    signin_message: Jau reģistrējies? %{link}
+    student_reg_link: Pierakstīšanās kā skolēnam
+    teacher_reg_link: Pierakstīšanās kā skolotājam
+    signin_directions: Izmantot kontu, lai izsekotu progresu. <br/> Skolotāj, pārbauda
+      visu klasi.
+    teacher_dashboard: Redzēt progresa joslu
+    teacher_student_count_one: Jums ir %{count} skolēns.
+    teacher_student_count: Jums ir %{count} skolnieki.
+    teacher_averages: Vidēji jūsu skolnieki ir ieguvuši %{trophy_average} no %{trophy_max}
+      "Vispārēja meistarība" trofejas.
+    teacher_print_certificates: Drukāt sertifikātus skolēniem, kas pabeiguši kursu
+    teacher_read_blog: Lasīt par jaunumiem un atjauninājumiem mūsu materiāliem pedagogu
+      blogā
+    classroom: Mūsu klase
+    student_progress: Tavs mācību progress
+    student_stats: Esat ieguvis %{trophy_count} no %{trophy_max} "Vispārēja meisterība"
+      trofejas.
+    student_left_off: 'Vieta, kur paliki:'
+    student_finished: Esat pabeidzis visas apmācība, izvēlaties citu klasi %{online_link}vai
+      %{local_school_link}
+    local_school: vietējā skola
+    online: tiešsaiste
+    see_details: Sīkāka informācija
+    view_course: Apskatīt kursu
+    prize_info: 'Balvas par dalību (tikai ASV valsts skolu skolotājiem): līdz $1,000
+      savā klasē.'
+    tryfirst: 'Vai vari izmēģināt sākumā un pierakstīties vēlāk:'
+    trynow: Izmēģini tūlīt
+    add_hint_help: Lūdzu palīdziet mums pievienot gudrus padomus Code.org pamācībās
+    20hour_overview: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas
+      pamatiem. Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs, bet
+      tas sagādās prieku mācīties visos vecumos.
+    test_videos_help: Izmēģinat mūsu jauno video atskaņotāju savā skolā
+    try_beta_courses: Jaunums! Izmēģinat mūsu BETA kursus K-5 (sākumskolas) skolēniem
+    use_as_teacher: Izmantojiet šo vietni, kā skolotājs
+    heading_hoc2014: "<h2>Programmēšanas stunda</h2><h1>visiem vecumiem</h1>"
+    heading_elementary: "<h2>20 stundu kurss</h2><h1>visu vecumu iesācējiem</h1>"
+    heading_apps: "<h2>Izklaide </h2><h1>visiem</h1>"
+    heading_legacy: "<h2>Mūsu galvenais kurss ir </h2><h1>visiem vecumiem</h1>"
+    your_gallery: Galerija
+    no_primary_course: Izmēģināt Code Studio kursu
+    choose_next_course: Izmēģini kādu no Code Studio kursiem izvēloties zemāk
+    print_certificate: Izdrukāt sertifikātu
+    announcement_learn_more_button: Uzzini vairāk
+    announcement_try_now_button: Izmēģini tūlīt
+  share:
+    title: Mācies Code Studio
+    description: Jebkurš var apgūt datorzinības. Izveido spēles aplikācijas un mākslu
+      ar kodu.
+    try_hour_of_code: Izmēģini Koda Stundu!
+  gender:
+    male: Vīrietis
+    female: Sieviete
+    none: Nēlos atbildēt
+  user_type:
+    student: Students
+    teacher: Skolotāja
+  footer:
+    thank_you: Mēs pateicamies mūsu <a href="https://code.org/about/donors">ziedotājiem</a>,
+      <a href="https://code.org/about/partners">partneriem</a>, mūsu<a href="https://code.org/about/team">paplašinātajai
+      komandai</a>, mūsu video veidotājiem un mūsu <a href="https://code.org/about/advisors">izglītības
+      konsultantiem</a> par atbalstu veidojot Code Studio.
+    help_from_html: Inžinieri no Google, Microsoft, Facebook un Twitter palīzēja radīt
+      šo pamācību.
+    powered_by_aws: Nodrošina Amazon Web Services
+    more: Vairāk
+    feedback: nodrošināt atsauksmes
+    translate: Palīdzi mums tulkot savā valodā
+    support: Atbalsts
+    support_url: http://support.Code.org/
+    tos: Nosacījumi
+    privacy: Privātuma politika
+    secure: Droša versija
+    try_hour_of_code: Izmēģini Koda Stundu!
+  reference_area:
+    title: Vajadzīga palīdzība?
+    subtitle: Skatīt šos video un padomus
+    teacher: Redzēt atrisinājumu
+    auth_error: Jums nav atļauts skatīt risinājumu.
+    submit: Atjaunināt izpildītāja atrašanās vietu
+    direction: Sākt virzienu (grādos)
+  video:
+    tab: Videoklips.
+    notes: Nav video? Rādīt piezīmes.
+    notes_coming_soon: Piezīmes šim video, drīzumā.
+    autoplay_option: Automātiski atskaņot videoklipu
+    download: Lejupielādēt videoklipu
+  compatibility:
+    upgrade:
+      link: Uzzini vairāk
+  slow_loading: Tas aizņem vairāk laika nekā parasti...
+  try_reloading: Pamēģini pārlādēt pašreizējo lapu
+  next_stage: Pabeigts! Turpināt ar nākamo līmeni
+  download_pdf: Atvērt nodarbību plānu
+  lesson_plan: Nodarbību plāns
+  view_lesson_plan: Apskatīt nodarbību plānu
+  pdf_download: Lejupielādēt PDF
+  download_coming_soon: Lejupielādējama aktivitāte drīzumā.
+  video_coming_soon: Video pieejams drīz!
+  share_code:
+    title: Spied 'Palaist' , lai redzētu programmu darbībā
+    bounce_og_title: Apskati manu atsitienu spēli
+    flappy_og_title: Apskati manu Flappy Spēli
+    studio_og_title: Apskati manu Spēļu laboratoriju
+    check_out_what_i_made: Apskaties, ko esmu izveidojis
+    og_description: Es uzrakstīju kodu pats ar Code.org
+    phone_number_not_allowed: Izskatās, ka tur atrodas tālruņa numurs. Mēģini mainīt
+      tekstu.
+    address_not_allowed: Izskatās, ka tā ir adrese. Mēģini mainīt tekstu.
+    email_not_allowed: Izskatās, ka tur atrodas e-pasts. Mēģint mainīt tekstu.
+    profanity_not_allowed: Izskatās, ka tur atrodas lādēšana. Mēģini mainīt tekstu.
+  builder:
+    created: Esi izveidojis jaunu skriptu.
+    destroyed: Esi iznīcinājis skriptu.
+    manage: Veidot līmeņus
+    view: Skatīt
+    back: Atpakaļ uz skriptiem
+    success: Veiskmīgi izlaboji blokus.
+    level:
+      create: Izveidot jaunu līmeni
+      current: Pašreizējie līmeņi
+      unused: Neizmantotie līmeņi
+  upsell:
+    applab:
+      title: Aplikāciju laborotorija
+      audience: Vecums 13+
+    hoc:
+      body: Mēģini datorzinātņu pamatus. Miljoniem ir mēģinājuši.
+    flappy:
+      title: Flappy kods
+      body: Vēlies izveidot pats savu spēli mazāk nekā 10 minūtēs? Izmēģini Flappy
+        koda apmācību!
+    20-hour:
+      body: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas pamatiem.
+        Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs, bet tas sagādās
+        prieku mācīties visos vecumos.
+    hoc2014:
+      try_new_tutorial: Pamēģini mūsu jauno Programmēšanas Stundas apmācību beta versijā
+      try_frozen: Zīmē kopā ar Annu un Elzu no "Ledus sirds"
+    gallery:
+      title: Galerija
+      body: Apskati lietotnes un mākslinieciskos zīmējumus, ko veidojuši citi lietotāji
+    gamelab:
+      audience: Vecums 13+
+    weblab:
+      audience: Vecums 13+
+    frozen:
+      title: Ledus sirds
+    minecraft:
+      body: Iepazīsti Minecraft pasauli, izmantojot kodu
+    unplugged:
+      audience: Vecums 4+
+    unplugged_conditionals:
+      title: Sazarojumi
+    widgets:
+      audience: Vecums 14+
+  gallery:
+    students_drew_these_with_code: Skolnieki uzzīmēja šos ar kodu!
+    students_made_these_with_code: Skolēni izveidoja šos ar kodu!
+    picture_count: Agrākās <b>%{days}</b> dienās, skolnieki zīmēja <b>%{count}</b>
+      attēlus taisot paši savas datorprogrammas. Noklikšķini uz attēla, lai apskatītu
+      katru programmu darbībā.
+    activity_count: Agrākās <b>%{days}</b> dienās, veidoja <b>%{count}</b> attēlus
+      un lietojamprogrammas  taisot paši savas datorprogrammas. Noklikšķini uz attēliem
+      un ekrānšāviņiem, lai apskatītu katru programmu darbībā.
+    want_to_make_your_own: Vēlies uzveidot pats savu?
+    more: Vēl &rarr;
+    caption_by_name_age: "%{name}, vecums %{age}"
+    caption_time_ago: "%{time_ago} pirms"
+    header: Galerija
+    header_playlab: Spēles laboratorija
+    header_artist: Mākslinieks
+  landing:
+    prerelease: Šis kurss ir <span class='betatext'>BETA stadijā</span>.  Tas nozīmē,
+      ka tā nav kursa pēdējā versija un var tikt pakļauta pārskatam pēc atsauksmju
+      saņemšanas, jo informācija ir saņemta un uzlabojumi tiek veikti.
+    prerelease_hoc2014: Šī pamācība ir <span class='betatext'>beta</span >stadijā.
+      Tā tiks pārskatīta un uzlabota, ņemot vērā lietotāju atsauksmes.
+    report_bug: Kļūdas ziņojums
+    support: Saņemt palīdzību
+    support_url: "//support.code.org"
+    help_support: Palīdzība un atbalsts
+    documentation: Dokumentācija
+  multi:
+    wrong_title: Nepareiza atbilde
+    wrong_body: Ievadītā atbilde ir nekorekta. Lūdzu mēģini vēlreiz!
+    correct_title: Pareizi
+    correct_body: Tā ir pareizā atbilde.
+  multi-submittable:
+    wrong_title: Paldies
+    correct_title: Paldies
+  level_group:
+    wrong_title: Paldies
+    correct_title: Paldies
+  level_group-submittable:
+    wrong_title: Paldies
+    correct_title: Paldies
+  match:
+    wrong_title: Nepareizs risinājums
+    wrong_body: Ievadītais risinājums nav pareizs. Lūdzu mēģini vēl!
+    correct_title: Pareizi
+    correct_body: Tā ir pareizā atbilde.
+  contract_match:
+    wrong_title: Nepareiza atbilde
+  text_match:
+    placeholder: Ievadi savu atbildi šeit
+    open_response_title: Paldies
+    open_response_body: Paldies par Tavu atbildi!
+    correct_title: Pareizi
+    correct_body: Tā ir pareizā atbilde.
+  dialog:
+    ok: Labi
+    startover_title: Vai esat pārliecināts, ka vēlaties sākt no jauna?
+    startover_ok: Sākt no sākuma
+    startover_cancel: Atcelt
+  time:
+    hour: 1 stunda
+    day: diena
+    week: nedēļa
+  age_interstitial:
+    age: Tavs vecums
+    header: Konta informācijas atjaunināšana
+    message: Mēs esam procesā, kas atjaunina mūsu pieredzi, lai nodrošinātu jūs ar
+      vēl lielāku konfidencialitātes aizsardzību. Lai to paveiktu, mums ir nepieciešams
+      esošiem lietotājiem ievadīt šeit viņu vecumu. <br/>Kā vienmēr, code.org nekad
+      iznomāt, pārdot vai koplietot šo informāciju ar trešajām pusēm.
+    sign_out: Ja nevēlaties sniegt savu vecumu, jūs varat <a href="%{url}">izrakstīties</a>.
+  terms_interstitial:
+    tos: Nosacījumi
+    privacy: Privātuma politika
+    print: Drukāt
+  school_info_interstitial:
+    save: Saglabāt
+  race_interstitial:
+    races:
+      other: Citi
+    submit: Iesniegt
+  zendesk_too_young_message: Atvainojiet, jaunākiem lietotājiem nav iespējas pierakstīties
+    mūsu atbalsta lapā. Tu vari pārlūkot <a href="http://support.code.org">support.code.org</a>
+    bez pierakstīšanās vai vari prasīt savam vecākam vai skolotājam, lai sazinās ar
+    mums tavā vietā.
+  progress:
+    completed_too_many_blocks: Pabeigts, pārāk daudz bloki
+    completed_perfect: pabeigts, ideāli
+    furthest_level_attempted: tālākais līmenis mēģināts
+  studio:
+    courses_working_on: Kursi, pie kuriem tu strādā
+    completed_courses: Pabeigtie kursi
+    all_courses: Visi kursi
+  project:
+    save: Saglabāt
+    delete: Izdzēst
+    my_projects: Mani projekti
+    share: Ieteikt
+    more: Vairāk
+    name: Vārds
+    really_delete: Izdzēst?
+    delete_yes: Jā
+    delete_no: Nē
+    saved: Saglabāts galerijā!
+    cancel: Atcelt
+    abuse:
+      report_abuse_form:
+        abuse_type:
+          other: Citi
+  flex_category:
+    required: Pārskats
+    csf_e_2: Kursa E saturs
+    csf_f_2: Kursa F saturs
+  hoc_download:
+    capsule_title: Vai Tev ir internets?
+    instructions_headline: Nav interneta?
+  pd:
+    form_labels:
+      first_name: Vārds
+      last_name: Uzvārds
+      email: E-pasts
+      school_name: Skolas nosaukums
+    form_entries:
+      gender:
+        male: Vīrietis
+        female: Sieviete
+        none: Nēlos atbildēt
+      school_country:
+        canada: Kanāda
+        chile: Čīle
+        israel: Izraēla
+        malaysia: Malaizija
+        mexico: Meksika
+        thailand: Taizeme
+      subjects:
+        cs: Datorzinātne
+        math: Matemātika
+      resources:
+        kodable: Kodable
+      robotics:
+        kodable: Kodable
+      email_opt_in:
+        opt_in_yes: Jā
+        opt_in_no: Nē
+  cookie_banner:
+    accept: es piekrītu
+  gdpr_dialog:
+    true: Jā

@@ -1,0 +1,27 @@
+ky:
+  data:
+    function_names:
+      x: x
+      draw a circle: тегерек тарткыла
+      draw a hexagon: алты бурчтук тарткыла
+      draw a flower: гүл тарткыла
+      draw a square: чарчы тарткыла
+      draw a snowflake: карча тарткыла
+      draw a tree: бак тарткыла
+      draw a triangle: үч бурчтук тарткыла
+      draw a house: саат тарткыла
+      draw a star: жылдыз тарткыла
+      do something: бирдеме кылуу
+      jump: секир
+      get nectar: шире ал
+      test: текшерүү
+      diamond: алмаз
+      move: жылдыр
+      move right: оңго жылдыр
+      move up: өйдө жылдыр
+      move down: ылдый жылдыр
+      move left: солго жылдыр
+      collect: чогулт
+      turn left: солго бурул
+      move forward: алдыга жылдыр
+      turn right: оңго бурул

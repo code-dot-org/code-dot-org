@@ -1,0 +1,1030 @@
+---
+hu:
+  data:
+    authored_hints:
+      2-3 Artist 1 new_authored_hint:
+        2-3_Artist_1_new_a: Ha használod a 'lépj előre 100 pixelt' blokkot, automatikusan
+          rajzolok egy vonalat.
+        2-3_Artist_1_new_b: Baj van a bekanyarodással a sarkon? Használd a 'fordulj
+          jobbra 90 fokot' blokkot!
+      2-3 Artist 11_authored_hint:
+        2-3_Artist_11_a: 'Baj van a szögekkel? 360 fokot kell fordulnod 8 lépésben.
+          Mennyi a 360/8? '
+      2-3 Artist 12_authored_hint:
+        2-3_Artist_12_a: A kör 360 fok, így ha a művész minden alkalommal 1 fokot
+          fordul, akkor 360-szor kell fordulnia.
+      2-3 Artist 2 new_authored_hint:
+        2-3_Artist_2_new_a: Úgy tűnik, hogy a művész nem a helyes irányba néz. Be
+          tudod állítani mielőtt megrajzolod a vonalat?
+      2-3 Artist 3new_authored_hint:
+        2-3_Artist_3new_a: Mennyi 100-70? A történet alapján annyi magasnak kell lennie
+          a kalapnak!
+        2-3_Artist_3new_b: Úgy tűnik, hogy a művész nem a helyes irányba néz. Be tudod
+          állítani mielőtt megrajzolod a vonalat?
+      2-3 Artist 4_authored_hint:
+        2-3_Artist_4_a: A ház befejezéséhez, már csak egy négyzetet kell rajzolnod!
+      2-3 Artist 6_authored_hint:
+        2-3_Artist_6_a: 'Hogy ezeket a kis angyalokat megcsináld, minden egyes alkalommal
+          többet kell elfordulnod, mint amennyit a négyzeteknél fordultál.   '
+        2-3_Artist_6_b: Mivel már elfordultam jobbra, könnyebb előremozogni, mint
+          balra fordulva elkészíteni a háromszöget.
+        2-3_Artist_6_c: A háromszög minden oldala egyforma hosszú, mint a négyzet
+          oldalai... 100 képpont!
+      2-3 Artist 7_authored_hint:
+        2-3_Artist_7_a: A legegyszerűbb módja a puzzle megoldásának, ha először befejezed
+          az első négyzetet az művésszel, és csak aztán kezded el a másodikat.
+      2-3 Artist 8_authored_hint:
+        2-3_Artist_8_a: Ha a 200 felét veszed, hány pixel szélesek lesznek a szükséges
+          a négyzetek?
+      2-3 Artist 9 NEW_authored_hint:
+        2-3_Artist_9_a: Ez a gyémánt valóban csak egy négyzet ezen az oldalán
+      2-3 Artist 9 REPLACEMENT_authored_hint:
+        step_size: Minden egyes lépés 100 képpont széles és 100 képpont magas.
+      2-3 Artist 9_authored_hint:
+        2-3_Artist_9_a: Ez a gyémánt valóban csak egy négyzet elforgatva 45 fokkal.
+        2-3_Artist_9_b: |-
+          Ne felejtsd el elfordítani a művészt 45 fokkal, mielőtt rajzolni kezded a négyzeteidet!
+
+          ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
+      2-3 Artist Debugging 10_authored_hint:
+        2-3_Artist_Debugging_10_a: Ne feledje, ha azt akartad hogy a vezérlő 10 képponttal
+          * szélesebb *... győződj meg róla, hogy ** hozzáadsz ** 10-et ahhoz a számhoz
+          amit cserélni akarsz.
+        2-3_Artist_Debugging_10_b: "** Próba és hiba teljesen elfogadott itt! **\nkezdd
+          úgy, hogy egyszerre csak egy számot változtass\nMelyik szám mit csinál?
+          \  \nHa túl belebonyolódsz, csak kattints az \"Újrakezdés\", és a kódod
+          újraindul."
+      2-3 Artist Debugging 2_authored_hint:
+        2-3_Artist_Debugging_2_a: 'Tipp: Minden egyes darukar 75 pixel hosszú.'
+      2-3 Artist Debugging 3_authored_hint:
+        2-3_Artist_Debugging_3_a: A 15 fokos elfordulás túl kicsi.
+        2-3_Artist_Debugging_3_b: Ha a program túl gyorsan fut, hogy lásd mi történik,
+          próbáld lassítani a csúszkával.
+      2-3 Artist Debugging 7_authored_hint:
+        2-3_Artist_Debugging_7_a: Mi történik, ha a művész hátra ugrik vagy hátrafelé
+          mozog, miután megrajzolja az első vonalat?
+      2-3 Artist Debugging 8_authored_hint:
+        2-3_Artist_Debugging_8_a: |-
+          Hányszor ismétlődött meg az alakzatom?
+          Hányszor kellett volna megismétlődnie az alakzatnak?
+          Hol tudod ezt módosítani a programban?
+      2-3 Artist Debugging 9_authored_hint:
+        2-3_Artist_Debugging_9_a: A művészt tovább kell forgatni 60 fokkal balra,
+          mielőtt rajzolni kezdesz!
+        2-3_Artist_Debugging_9_b: Nem kell újabb blokkot hozzáadnod a teljes körhöz,
+          csak 60 fokkal fordulj balra és már ott is lesz!
+      2-3 Artist Functions 1 a_authored_hint:
+        2-3_Artist_Functions_1_a: A négyzetek oldali 100 pixelesek, ez azt jelenti,
+          hogy 175 pixelt kell előre menned, mielőtt elkezded a második négyzet rajzolását.
+        2-3_Artist_Functions_1_b: Rajzolhatsz egymást fedő vonalakat, hogy elkészítsd
+          a szemüveged.
+      2-3 Artist Functions 1_authored_hint:
+        2-3_Artist_Functions_1_a: A négyzetek oldali 100 pixelesek, ez azt jelenti,
+          hogy 175 pixelt kell előre menned, mielőtt elkezded a második négyzet rajzolását.
+        2-3_Artist_Functions_1_b: Rajzolhatsz egymást fedő vonalakat, hogy elkészítsd
+          a szemüveged.
+      2-3 Artist Functions 11 a_authored_hint:
+        2-3_Artist_Functions_11_a: Nemcsak az oldalak hosszát kell megváltoztatnod
+          a függvényben, hanem a művész fordulási szögét minden oldal között.
+      2-3 Artist Functions 11_authored_hint:
+        2-3_Artist_Functions_11_a: Nemcsak az oldalak hosszát kell megváltoztatnod
+          a függvényben, hanem a művész fordulási szögét minden oldal között.
+      2-3 Artist Functions 12 a_authored_hint:
+        2-3_Artist_Functions_12_a: Először próbáld futtatni a kódot, hogy lásd még
+          mit kell hozzáadni.
+      2-3 Artist Functions 12_authored_hint:
+        2-3_Artist_Functions_12_a: Először próbáld futtatni a kódot, hogy lásd még
+          mit kell hozzáadni.
+      2-3 Artist Functions 2 a_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          A programodnak kell:
+          - függvényt használni
+          - előrehaladni 100 + 75 pixelt
+          - függvényt használni
+      2-3 Artist Functions 2_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          A programodnak kell:
+          - függvényt használni
+          - előrehaladni 100 + 75 pixelt
+          - függvényt használni
+      2-3 Artist Functions 3 a_authored_hint:
+        2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
+      2-3 Artist Functions 3_authored_hint:
+        2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
+      2-3 Artist Functions 4 a_authored_hint:
+        2-3_Artist_Functions_4_a: A művész el kell fordítani 120 fokkal minden négyzet
+          között, hogy elkészüljön a design.
+      2-3 Artist Functions 4_authored_hint:
+        2-3_Artist_Functions_4_a: A művész el kell fordítani 120 fokkal minden négyzet
+          között, hogy elkészüljön a design.
+      2-3 Artist Loops New 11_authored_hint:
+        2-3_Artist_Loops_New_11_a: Ne feledje, hogy az utolsó puzzle kódja:! [] (https://images.code.org/15288d042780242ec5edeed5204c6ebb-image-1469640792081.png)
+        2-3_Artist_Loops_New_11_b: Következő körben el kell jutnod a ciklusod kódjának
+          a végére.
+      2-3 Artist Loops New 12_authored_hint:
+        2-3_Artist Loops_New_12_a: Mielőtt elkezded a gyémántot, a művészt 60 fokkal
+          balra kell fordítani, hogy a helyes irányba álljon.
+        2-3_Artist Loops_New_12_b: Miután a művész előremegy 100 képpontot, jobbra
+          kell fordulnia 120 fokot, hogy elkészüljön az éles sarok.
+        2-3_Artist Loops_New_12_c: A művészt el kell fordítani 60 fokkal jobbra, hogy
+          létrejöjjön egy széles sarok.
+      2-3 Artist Loops New 13_authored_hint:
+        2-3_Artist_Loops_New_13_a: A művész minden gyémánt végén már befordul a jó
+          irányba, hogy tudja kezdeni a következőt. Emiatt nem kell egy plussz fordulj
+          balra blokkot betennünk, mielőtt újat kezdünk.
+        2-3_Artist_Loops_New_13_b: |-
+          Hogy elkészüljön az összes gyémánt, a művésznek az alábbiakat kell megtennie:
+          -mozgás
+          -jobbra fordulni 120 fokkal
+          -mozgás
+          -jobbra fordulni 60 fokkal
+
+          És ezt csináld meg újra!
+      2-3 Artist Loops New 9_authored_hint:
+        2-3_Artist_Loops_New_9_a: A művésznek 45 fokkal jobbra kell fordulnia, mielőtt
+          elkezd rajzolni.
+        2-3_Artist_Loops_New_9_b: Ez a V, csak a fele a négyszögnek. Mi legyen a kód,
+          ami egy fél négyzetet megrajzol?
+      2-3 Artist Nested Loops 1_authored_hint:
+        2-3_Artist_Nested_Loops_1_a: Emlékezz, minden szürke blokknak be kell kerülnie
+          a ciklusodba.
+      2-3 Artist Nested Loops 3_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: |-
+          Nem vágod a szögeket?
+          **360/12 = 30**
+        2-3_Artist_Nested_Loops_3_b: Emlékezz, minden szürke kódnak és elfordulás
+          blokknak be kell kerülnie a ciklusodba.
+      2-3 Artist Nested Loops 4_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: |-
+          Nem vágod a szögeket?
+          **360/12 = 30**
+      2-3 Artist Nested Loops 5_authored_hint:
+        2-3_Artist_Nested_Loops_5_a: Próbáld meg az "ugrás előre" blokkot, hogy egy
+          négyzet tetejéről oda kerülj, ahol a következő kezdődik?
+      2-3 Artist Nested Loops 7_authored_hint:
+        2-3_Artist_Nested_Loops_7_a: |-
+          Mennyit kell fordulnod minden egyes ciklusban?
+          Mennyi 360/10?
+      2-3 Artist Nested Loops 9_authored_hint:
+        2-3_Artist_Nested_Loops_9_a: |-
+          Nem vágod a megfelelő szöveg?
+          **360 / 12 = 30**
+      2-3 Bee Conditionals 14_authored_hint:
+        2-3_Bee_Conditionals_14_a: Nem vágod hogy mi kellet tenni a blokkokkal? Próbáld
+          ugyanúgy kezelni a piros virágot, mint a lilát!
+        2-3_Bee_Conditionals_14_b: Ha a piros virág lila lenne, kitalálnád hogyan
+          kell a kódba egy extra "ismétlés" ciklust tenni a levágáshoz?
+        2-3_Bee_Conditionals_14_c: "Próbáld meg ezt két külön részben:\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n1)
+          Gyűjts nektárt 3-szor\n   - Menj előre 5-ször\n   - Ellenőrizd, hogy látod-e
+          a nektárt, ha igen szerezd meg\n   - Fordulj balra\n\n2) Készíts mézet  \n
+          \ - Menj előre egyszer\n  - Készíts két mézet"
+      2-3 Bee Conditionals 15_authored_hint:
+        2-3_Bee_Conditionals_15_a: 'Emlékezz: a lila virágok csak 0 vagy 1 nektár
+          tartalmaznak és meg tudnak változni minden alkalommal, amikor futtatod a
+          programot.'
+      2-3 Bee Conditionals 3_authored_hint:
+        2-3_Bee_Conditionals_3_a: A kód akkor lesz a legrövidebb, ha ciklusokat használsz
+          minden alkalommal, amikor előre mozogsz, másik ciklust amikor nektár gyűjtesz,
+          és egy másikat amikor a mézet csinálod.
+      2-3 Bee Functions 4_authored_hint:
+        2-3_Bee_Functions_4_a: Nem kell ciklust használnod a függvénnyel! Próbáld
+          mozgatni, a függvénnyel, majd újra a függvényt használva!
+      2-3 Bee Functions 6_authored_hint:
+        2-3_Bee_Functions_6_a: Nem kell ciklust használnod a függvénnyel! Próbáld
+          mozgatni, a függvénnyel, majd újra a függvényt használva!
+      2-3 Bee Functions 9_authored_hint:
+        2-3_Bee_Functions_8_b: |-
+          Ne feledd, hogy a kódod a zöld blokkon belül építheted.
+
+          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+      2-3 Bee Loops 3_authored_hint:
+        2-3_Bee_Loops_3_a: 6 blokk kell a ciklusodba.
+      2-3 Bee Loops 3B_authored_hint:
+        2-3_Bee_Loops_3B_a: Két eltérő ismétlő ciklusra lesz szükséged egymás után.
+      2-3 Bee Loops 4_authored_hint:
+        2-3_Bee_Loops_4_a: 5 blokkal a ciklusodban kell befejezned.
+      2-3 Bee Loops 4A_authored_hint:
+        2-3_Bee_Loops_4A_a: Az első dolog inkább fordulás legyen mint mozgás.(lépés).
+      2-3 Bee Loops 7_authored_hint:
+        2-3_Bee_Loops_7_a: Az első dolog inkább fordulás legyen mint mozgás.(lépés).
+      4-5 Maze 5_authored_hint:
+        4-5_Maze_5_b: Több `repeat` ciklust is használhatsz a feladványban.
+      4-5 Maze 6_authored_hint:
+        4-5_Maze_6_a: |-
+          Próbáld követni az utat az ujjaddal!
+          Ez a legrövidebb út, amit találhatsz?
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: A művész el kell fordítani 120 fokkal minden négyzet
+          között, hogy elkészüljön a design.
+      Dance short test 2_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Meg kell adnod, hogy a háttéreffekt valamikor a dal hetedik üteménél megváltozzon.
+
+          *Ez a szint 10 ütem után ér véget.*
+        challenges: |-
+          **Választható feladat**
+
+          Módosítsd a háttéreffektet a dal különböző pontjain. Ehhez csatlakoztasd az új blokkot az <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> események alá.
+      Dance short test_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Meg kell adnod, hogy a háttéreffekt valamikor a dal hetedik üteménél megváltozzon.
+
+          *Ez a szint 10 ütem után ér véget.*
+        challenges: |-
+          **Választható feladat**
+
+          Módosítsd a háttéreffektet a dal különböző pontjain. Ehhez csatlakoztasd az új blokkot az <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> események alá.
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+          * Gondoskodj róla, hogy egy táncos megjelenjen a képernyőn.
+
+          *Ez a szint 4 ütem után ér véget.*
+        challenges: |-
+          **Választható feladatok**
+          * Válassz másik dalt a lejátszáshoz.
+          * Válassz másikat, ami úgy néz ki, mint egy jávorszarvas!
+          * Nevezd át a táncosodat.
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+          * Gondoskodj róla, hogy egy táncos megjelenjen a képernyőn.
+
+          *Ez a szint 4 ütem után ér véget.*
+        challenges: |-
+          **Választható feladatok**
+          * Válassz másik dalt a lejátszáshoz.
+          * Válassz másikat, ami úgy néz ki, mint egy jávorszarvas!
+          * Nevezd át a táncosodat.
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+          * A táncosnak 4 ütem után új mozdulatra kell váltania.
+
+          *A szint 8 ütem után ér véget.*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * 6 ütem után a táncosodnak másfajta táncot kell járnia, mint amit 4 ütem után járt.
+
+          *A szint 12 ütem után ér véget.*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Meg kell adnod, hogy a háttéreffekt valamikor a dal hetedik üteménél megváltozzon.
+
+          *Ez a szint 10 ütem után ér véget.*
+        challenges: |-
+          **Választható feladat**
+
+          Módosítsd a háttéreffektet a dal különböző pontjain. Ehhez csatlakoztasd az új blokkot az <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> események alá.
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Legalább két táncosodnak kell lennie.
+
+          *Ez a szint 6 ütem után ér véget.*
+        challenges: |-
+          **Választható feladat**
+
+          * Adj hozzá egy harmadik táncost (vagy amennyit csak akarsz!)
+          * Állítsd be, hogy a dal különböző pontjain mindegyik táncosod különböző mozdulatokat mutasson be.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Két táncosnak 100-tól eltérő méretűnek kell lennie.
+
+          *Ez a szint 6 ütem után ér véget.*
+        challenges: |-
+          **Választható feladat**
+
+          * Kísérletezz más tulajdonságok (szélesség, magasság, forgás stb.) módosításával
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Módosítsd legalább egy táncos árnyalatát.
+
+          *Ez a szint 8 ütem után ér véget.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+          * Gondoskodj róla, hogy egy táncos megjelenjen a képernyőn.
+
+          *Ez a szint 4 ütem után ér véget.*
+        challenges: |-
+          **Választható feladatok**
+          * Válassz másik dalt a lejátszáshoz.
+          * Válassz másikat, ami úgy néz ki, mint egy jávorszarvas!
+          * Nevezd át a táncosodat.
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Kettő vagy több táncos tulajdonságainak módosulnia kell.
+
+          *Ez a szint 8 ütem után ér véget.*
+      Dance_Party_11.5_test_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Egyszerűen legyél kreatív!
+
+          *Ez a szint 8 ütem után ér véget.*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Egyszerűen legyél kreatív!
+
+          *Ez a szint 8 ütem után ér véget.*
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Egyszerűen legyél kreatív!
+
+          *Ez a szint 8 ütem után ér véget.*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * A „balra nyíl megnyomásakor“ blokk használatával érd el, hogy a Robot valamilyen táncmozdulatot tegyen, amikor megnyomod.
+
+          *Ez a szint 8 ütem után ér véget.*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+          * A táncosnak 4 ütem után új mozdulatra kell váltania.
+
+          *A szint 8 ütem után ér véget.*
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * 6 ütem után a táncosodnak másfajta táncot kell járnia, mint amit 4 ütem után járt.
+
+          *A szint 12 ütem után ér véget.*
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Meg kell adnod, hogy a háttéreffekt valamikor a dal hetedik üteménél megváltozzon.
+
+          *Ez a szint 10 ütem után ér véget.*
+        challenges: |-
+          **Választható feladat**
+
+          Módosítsd a háttéreffektet a dal különböző pontjain. Ehhez csatlakoztasd az új blokkot az <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> események alá.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * A táncosodnak a dal első 12 üteme során végig különböző mozdulatokat kell bemutatnia.
+
+          *Ez a szint 12 ütem után ér véget.*
+      Dance_Party_6_authored_hint:
+        challenges: |-
+          **Választható feladat**
+
+          * Adj hozzá egy harmadik táncost (vagy amennyit csak akarsz!)
+          * Állítsd be, hogy a dal különböző pontjain mindegyik táncosod különböző mozdulatokat mutasson be.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Két táncosnak 100-tól eltérő méretűnek kell lennie.
+
+          *Ez a szint 6 ütem után ér véget.*
+        challenges: |-
+          **Választható feladat**
+
+          * Kísérletezz más tulajdonságok (szélesség, magasság, forgás stb.) módosításával
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Módosítsd legalább egy táncos árnyalatát.
+
+          *Ez a szint 8 ütem után ér véget.*
+      Function intro Ryan_authored_hint:
+        Function_intro_Ryan_a: A programodon belül többször is meghívhatsz egy funkciót.  A
+          kirakós megoldásához próbáld kétszer meghívni!
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_a: A programodon belül többször is meghívhatsz egy funkciót.  A
+          kirakós megoldásához próbáld kétszer meghívni!
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: Látod a **Tengeri lámpásokat** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Hogyan tudsz feltételt használni velük kapcsolatban, hogy átjuss a Víz alatti
+          templomon?
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Micsoda gyönyörű korallzátony! A kék korall jelzi a **jobb**
+          utat, de nehogy **balszerencsét** hozzon az itt hagyott vörös korall!
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+          * Gondoskodj róla, hogy egy táncos megjelenjen a képernyőn.
+
+          *Ez a szint 4 ütem után ér véget.*
+        challenges: |-
+          **Választható feladatok**
+          * Válassz másik dalt a lejátszáshoz.
+          * Válassz másikat, ami úgy néz ki, mint egy jávorszarvas!
+          * Nevezd át a táncosodat.
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+          * A táncosnak 4 ütem után új mozdulatra kell váltania.
+
+          *A szint 8 ütem után ér véget.*
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * 6 ütem után a táncosodnak másfajta táncot kell járnia, mint amit 4 ütem után járt.
+
+          *A szint 12 ütem után ér véget.*
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Meg kell adnod, hogy a háttéreffekt valamikor a dal hetedik üteménél megváltozzon.
+
+          *Ez a szint 10 ütem után ér véget.*
+        challenges: |-
+          **Választható feladat**
+
+          Módosítsd a háttéreffektet a dal különböző pontjain. Ehhez csatlakoztasd az új blokkot az <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> események alá.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * A táncosodnak a dal első 12 üteme során végig különböző mozdulatokat kell bemutatnia.
+
+          *Ez a szint 12 ütem után ér véget.*
+      HOC Dance 5_draft_authored_hint:
+        challenges: |-
+          **Választható feladat**
+
+          * Adj hozzá egy harmadik táncost (vagy amennyit csak akarsz!)
+          * Állítsd be, hogy a dal különböző pontjain mindegyik táncosod különböző mozdulatokat mutasson be.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Két táncosnak 100-tól eltérő méretűnek kell lennie.
+
+          *Ez a szint 6 ütem után ér véget.*
+        challenges: |-
+          **Választható feladat**
+
+          * Kísérletezz más tulajdonságok (szélesség, magasság, forgás stb.) módosításával
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Módosítsd legalább egy táncos árnyalatát.
+
+          *Ez a szint 8 ütem után ér véget.*
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Kettő vagy több táncos tulajdonságainak módosulnia kell.
+
+          *Ez a szint 8 ütem után ér véget.*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Egyszerűen legyél kreatív!
+
+          *Ez a szint 8 ütem után ér véget.*
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Egyszerűen legyél kreatív!
+
+          *Ez a szint 8 ütem után ér véget.*
+      MC Agent Freeplay_authored_hint:
+        MC_HOC_2017_13_Cole_a: Próbálj az Agenttel hidakat építtetni, hogy Alex vagy
+          Steve túl tudjanak jutni a térkép szélein.
+      MC_HOC_2017_01_Cole_authored_hint:
+        MC_HOC_2017_01_Cole_a: A játékos beirányításához a házba használd a nyílgombokat.
+          A győzelemhez végezz a narancssárga négyzeten.
+      MC_HOC_2017_01_RETRY_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Húzz egy "mozgás előre" blokkot az eszköztárból a
+          munkaterületre, és illeszd a helyére az "amikor fut" blokk mögé.
+        MC_HOC_2017_01_RETRY_b: Ne feledd megnyomni a "Futtatás" gombot az Agent kódjának
+          futtatásához.
+        MC_HOC_2017_01_RETRY_c: Miután az Agent futtatta az összes kódját, a játékost
+          a nyílgombokkal mozgathatod.
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Húzz egy "mozgás előre" blokkot az eszköztárból a
+          munkaterületre, és illeszd a helyére az "amikor fut" blokk mögé.
+        MC_HOC_2017_01_RETRY_b: Ne feledd megnyomni a "Futtatás" gombot az Agent kódjának
+          futtatásához.
+        MC_HOC_2017_01_RETRY_c: Miután az Agent futtatta az összes kódját, a játékost
+          a nyílgombokkal mozgathatod.
+      MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Vidd előre az Agentet két hellyel, hogy a nyomólapra
+          kerüljön. Ezzel kinyitod az ajtót a játékosnak.
+        MC_HOC_2017_02_Cole_b: "Nyomd meg a \"Futtatás\" gombot. \nA kódot akkor is
+          futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot újra és újra,
+          amíg rá nem jössz a hibájára."
+        MC_HOC_2017_02_Cole_c: Miután az Agent kinyitotta az ajtót, a nyílgombokkal
+          mozgathatod a játékost a térképen.
+      MC_HOC_2017_02_Cole_2019_authored_hint:
+        MC_HOC_2017_02_Cole_a: Vidd előre az Agentet két hellyel, hogy a nyomólapra
+          kerüljön. Ezzel kinyitod az ajtót a játékosnak.
+        MC_HOC_2017_02_Cole_b: "Nyomd meg a \"Futtatás\" gombot. \nA kódot akkor is
+          futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot újra és újra,
+          amíg rá nem jössz a hibájára."
+        MC_HOC_2017_02_Cole_c: Miután az Agent kinyitotta az ajtót, a nyílgombokkal
+          mozgathatod a játékost a térképen.
+      MC_HOC_2017_02_Will_authored_hint:
+        MC_HOC_2017_02_Cole_a: Vidd előre az Agentet két hellyel, hogy a nyomólapra
+          kerüljön. Ezzel kinyitod az ajtót a játékosnak.
+        MC_HOC_2017_02_Cole_b: "Nyomd meg az \"Agent futtatása\" gombot. \nA kódot
+          akkor is futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot
+          újra és újra, amíg rá nem jössz a hibájára."
+        MC_HOC_2017_02_Cole_c: Miután az Agent kinyitotta az ajtót, a nyílgombokkal
+          irányíthatod a játékost a narancssárga négyzetre.
+      MC_HOC_2017_03_Cole_authored_hint:
+        MC_HOC_2017_03_Cole_a: Miután az Agentet a nyomólapra vitted, a nyílgombokkal
+          a játékost az iránytűhöz irányíthatod.
+        MC_HOC_2017_03_Cole_b: Úgy érzed, túl sokáig tart a kódolás?  Próbáld ki az
+          "ismétlés" ciklust, és találd ki, hogyan rövidítheted le a folyamatot!
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_a: Miután az Agentet a nyomólapra vitted, a nyílgombokkal
+          a játékost az iránytűhöz irányíthatod.
+        MC_HOC_2017_03_Cole_b: Úgy érzed, túl sokáig tart a kódolás?  Próbáld ki az
+          "ismétlés" ciklust, és találd ki, hogyan rövidítheted le a folyamatot!
+      MC_HOC_2017_04POINT5_Cole_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: "A két nyomólapra lépve megnyitod az utat a játékos
+          előtt. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
+      MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Az Agent irányának módosításához használd a
+          "fordulás jobbra" blokkot '
+        MC_HOC_2017_04POINT5_RYAN_a: Az Agentnek csak az első nyomólapra kell eljutnia
+          ahhoz, hogy keresztülengedje a baltához Alexet vagy Steve-et.
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Az Agent irányának módosításához használd a
+          "fordulás jobbra" blokkot '
+        MC_HOC_2017_04POINT5_RYAN_a: Az Agentnek csak az első nyomólapra kell eljutnia
+          ahhoz, hogy keresztülengedje a baltához Alexet vagy Steve-et.
+      MC_HOC_2017_04_Cole_authored_hint:
+        MC_HOC_2017_04_Cole_a: Az Agentnek 7-szer kell "mozgás előre" parancsot végrehajtania.  Hogyan
+          használhatsz egy "ismétlés" ciklust ennek programozásához?
+        MC_HOC_2017_04_Cole_c: "Nyomd meg a \"Futtatás\" gombot. \nA kódot akkor is
+          futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot újra és újra,
+          amíg rá nem jössz a hibájára."
+        MC_HOC_2017_04_Cole_b: Amikor az Agent eljut a nyomólapra, kinyitja az ajtót
+          a játékos előtt.
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_a: Az Agentnek 7-szer kell "mozgás előre" parancsot végrehajtania.  Hogyan
+          használhatsz egy "ismétlés" ciklust ennek programozásához?
+        MC_HOC_2017_04_Cole_c: "Nyomd meg a \"Futtatás\" gombot. \nA kódot akkor is
+          futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot újra és újra,
+          amíg rá nem jössz a hibájára."
+        MC_HOC_2017_04_Cole_b: Amikor az Agent eljut a nyomólapra, kinyitja az ajtót
+          a játékos előtt.
+      MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Tudtad, hogy egy ciklusba több kóddarabot is helyezhetsz?  A
+          kirakós megoldásához próbálj egy deszkát elhelyezni **és** előremenni egy
+          "ismétlés" ciklusban.
+      MC_HOC_2017_05_Cole_2019_authored_hint:
+        MC_HOC_2017_05_Cole_a: Tudtad, hogy egy ciklusba több kóddarabot is helyezhetsz?  A
+          kirakós megoldásához próbálj egy deszkát elhelyezni **és** előremenni egy
+          "ismétlés" ciklusban.
+      MC_HOC_2017_05_Josh_authored_hint:
+        MC_HOC_2017_05_Cole_a: Tudtad, hogy egy ciklusba több kóddarabot is helyezhetsz?  A
+          kirakós megoldásához próbálj egy deszkát elhelyezni **és** előremenni egy
+          "ismétlés" ciklusban.
+      MC_HOC_2017_06_Cole_authored_hint:
+        MC_HOC_2017_06_Cole_a: Hányszor fut ez a ciklus?  És hányszor *kellene* futnia?
+      MC_HOC_2017_06_Cole_2019_authored_hint:
+        MC_HOC_2017_06_Cole_a: Hányszor fut ez a ciklus?  És hányszor *kellene* futnia?
+      MC_HOC_2017_06_Josh_authored_hint:
+        MC_HOC_2017_06_Cole_a: Próbálj több utasítást helyezni egy "ismétlés" ciklusba.
+      MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_a: A kirakós megoldásához találd ki, hogy mit csinál az
+          "út szabaddá tétele" funkció, és hívd meg annyiszor, amennyiszer szükséges
+          az eszköztár kis zöld "út szabaddá tétele" blokkjával.
+        MC_HOC_2017_07_Cole_b: A kirakós megoldásához próbáld keverni a funkciókblokkokat
+          az eszköztár más blokkjaival.
+      MC_HOC_2017_07_Cole_2019_authored_hint:
+        MC_HOC_2017_07_Cole_a: A kirakós megoldásához találd ki, hogy mit csinál az
+          "út szabaddá tétele" funkció, és hívd meg annyiszor, amennyiszer szükséges
+          az eszköztár kis zöld "út szabaddá tétele" blokkjával.
+        MC_HOC_2017_07_Cole_b: A kirakós megoldásához próbáld keverni a funkciókblokkokat
+          az eszköztár más blokkjaival.
+      MC_HOC_2017_08_RY_authored_hint:
+        MC_HOC_2017_08_RY_a: "Nyomd meg az \"Agent futtatása\" gombot. \nA kódot akkor
+          is futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot újra és
+          újra, amíg rá nem jössz a hibájára."
+        MC_HOC_2017_08_RY_b: Ezt a kirakóst RENGETEG módon meg lehet oldani.  Próbálj
+          ki néhányat!
+      MC_HOC_2017_08_Will_authored_hint:
+        MC_HOC_2017_08_RY_a: "Nyomd meg az \"Agent futtatása\" gombot. \nA kódot akkor
+          is futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot újra és
+          újra, amíg rá nem jössz a hibájára."
+        MC_HOC_2017_08_RY_b: Ezt a kirakóst RENGETEG módon meg lehet oldani.  Próbálj
+          ki néhányat!
+      MC_HOC_2017_10_Cole_authored_hint:
+        MC_HOC_2017_10_Cole_a: A kirakós megoldásának megkönnyítéséhez használd a
+          funkciókat!
+      MC_HOC_2017_10_RETRY_authored_hint:
+        MC_HOC_2017_10_Cole_a: A kirakós megoldásának megkönnyítéséhez használd a
+          funkciókat!
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_a: A kirakós megoldásának megkönnyítéséhez használd a
+          funkciókat!
+      MC_HOC_2017_13_Cole_authored_hint:
+        MC_HOC_2017_13_Cole_a: Próbálj az Agenttel hidakat építtetni, hogy Alex vagy
+          Steve túl tudjanak jutni a térkép szélein.
+      MC_HOC_2017_4.5v2_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: "A két nyomólapra lépve megnyitod az utat a játékos
+          előtt. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
+      MC_HOC_2017_Ali_authored_hint:
+        MC_HOC_2017_08_RY_a: "Nyomd meg a \"Futtatás\" gombot. \nA kódot akkor is
+          futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot újra és újra,
+          amíg rá nem jössz a hibájára."
+        MC_HOC_2017_08_RY_b: Ezt a kirakóst RENGETEG módon meg lehet oldani.  Próbálj
+          ki néhányat!
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: "Nyomd meg a \"Futtatás\" gombot. \nA kódot akkor is
+          futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot újra és újra,
+          amíg rá nem jössz a hibájára."
+        MC_HOC_2017_08_RY_b: Ezt a kirakóst RENGETEG módon meg lehet oldani.  Próbálj
+          ki néhányat!
+      MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Próbálj az Agenttel hidakat építtetni, hogy Alex vagy
+          Steve túl tudjanak jutni a térkép szélein.
+      MC_HOC_2017_FP20x20_2019_authored_hint:
+        MC_HOC_2017_13_Cole_a: Próbálj az Agenttel hidakat építtetni, hogy Alex vagy
+          Steve túl tudjanak jutni a térkép szélein.
+      New Minecraft Hero Project_authored_hint:
+        MC_HOC_2017_13_Cole_a: Próbálj az Agenttel hidakat építtetni, hogy Alex vagy
+          Steve túl tudjanak jutni a térkép szélein.
+      courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2a_2018_authored_hint:
+        '1': Snap both `East` blocks to the bottom of the `when run` block.
+      courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5a_2018_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have
+          been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
+          try something else!
+      courseB_Scrat_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseC_artist_prog2_authored_hint:
+        courseC_artist_prog2_a: Ha használod a 'lépj előre 100 pixelt' blokkot, automatikusan
+          rajzolok egy vonalat.
+        courseC_artist_prog2_b: Baj van a bekanyarodással a sarkon? Használd a 'fordulj
+          jobbra 90 fokot' blokkot!
+      courseC_artist_prog2_2018_authored_hint:
+        courseC_artist_prog2_a: Ha használod a 'lépj előre 100 pixelt' blokkot, automatikusan
+          rajzolok egy vonalat.
+        courseC_artist_prog2_b: Baj van a bekanyarodással a sarkon? Használd a 'fordulj
+          jobbra 90 fokot' blokkot!
+      courseC_artist_prog2_2019_authored_hint:
+        courseC_artist_prog2_a: Ha használod a 'lépj előre 100 pixelt' blokkot, automatikusan
+          rajzolok egy vonalat.
+        courseC_artist_prog2_b: Baj van a bekanyarodással a sarkon? Használd a 'fordulj
+          jobbra 90 fokot' blokkot!
+      courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_functions2_authored_hint:
+        courseD_artist_functions2_a: |-
+          A programodnak kell:
+          - függvényt használni
+          - előrehaladni 100 + 75 pixelt
+          - függvényt használni
+      courseD_artist_nestedLoops3_authored_hint:
+        courseD_artist_nestedLoops3_a: Próbáld meg az "ugrás előre" blokkot, hogy
+          egy négyzet tetejéről oda kerülj, ahol a következő kezdődik?
+      courseD_artist_nestedLoops3_2018_authored_hint:
+        courseD_artist_nestedLoops3_a: Próbáld meg az "ugrás előre" blokkot, hogy
+          egy négyzet tetejéről oda kerülj, ahol a következő kezdődik?
+      courseD_artist_nestedLoops3_2019_authored_hint:
+        courseD_artist_nestedLoops3_a: Próbáld meg az "ugrás előre" blokkot, hogy
+          egy négyzet tetejéről oda kerülj, ahol a következő kezdődik?
+      courseE_artist_functions1_authored_hint:
+        courseE_artist_functions1_a: A négyzetek oldali 100 pixelesek, ez azt jelenti,
+          hogy 175 pixelt kell előre menned, mielőtt elkezded a második négyzet rajzolását.
+        courseE_artist_functions1_b: Rajzolhatsz egymást fedő vonalakat, hogy elkészítsd
+          a szemüveged.
+      courseE_artist_functions1_2018_authored_hint:
+        courseE_artist_functions1_a: A négyzetek oldali 100 pixelesek, ez azt jelenti,
+          hogy 175 pixelt kell előre menned, mielőtt elkezded a második négyzet rajzolását.
+        courseE_artist_functions1_b: Rajzolhatsz egymást fedő vonalakat, hogy elkészítsd
+          a szemüveged.
+      courseE_artist_functions2_authored_hint:
+        courseD_artist_functions2_a: |-
+          A programodnak kell:
+          - függvényt használni
+          - előrehaladni 100 + 75 pixelt
+          - függvényt használni
+      courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_a: |-
+          A programodnak kell:
+          - függvényt használni
+          - előrehaladni 100 + 75 pixelt
+          - függvényt használni
+      courseE_artist_functions2_2019_authored_hint:
+        courseD_artist_functions2_a: |-
+          A programodnak kell:
+          - függvényt használni
+          - előrehaladni 100 + 75 pixelt
+          - függvényt használni
+      courseE_bee_functions7_authored_hint:
+        courseE_bee_functions7_b: |-
+          Ne feledd, hogy a kódod a zöld blokkon belül építheted.
+
+          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+      courseE_bee_functions7_2018_authored_hint:
+        courseE_bee_functions7_b: |-
+          Ne feledd, hogy a kódod a zöld blokkon belül építheted.
+
+          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+      grade2_MakeDogTag_1_authored_hint:
+        2-3_Artist_1_new_a: Ha használod a 'lépj előre 100 pixelt' blokkot, automatikusan
+          rajzolok egy vonalat.
+        2-3_Artist_1_new_b: Baj van a bekanyarodással a sarkon? Használd a 'fordulj
+          jobbra 90 fokot' blokkot!
+      grade2_MakeDogTag_9_authored_hint:
+        2-3_Artist_Loops_New_11_b: Következő körben el kell jutnod a ciklusod kódjának
+          a végére.
+      grade2_PuppyLoops_10_authored_hint:
+        2-3_Artist_Debugging_8_a: |-
+          Hányszor ismétlődött meg az alakzatom?
+          Hányszor kellett volna megismétlődnie az alakzatnak?
+          Hol tudod ezt módosítani a programban?
+      grade2_PuppyLoops_8_authored_hint:
+        2-3_Artist_Debugging_2_a: 'Tipp: Minden egyes darukar 75 pixel hosszú.'
+      grade2_PuppyLoops_9_authored_hint:
+        2-3_Artist_Debugging_7_a: Mi történik, ha a művész hátra ugrik vagy hátrafelé
+          mozog, miután megrajzolja az első vonalat?
+      grade3_Conditionals_11_authored_hint:
+        2-3_Bee_Conditionals_14_a: Nem vágod hogy mi kellet tenni a blokkokkal? Próbáld
+          ugyanúgy kezelni a piros virágot, mint a lilát!
+        2-3_Bee_Conditionals_14_b: Ha a piros virág lila lenne, kitalálnád hogyan
+          kell a kódba egy extra "ismétlés" ciklust tenni a levágáshoz?
+      grade3_Conditionals_12_authored_hint:
+        2-3_Bee_Conditionals_15_a: 'Emlékezz: a lila virágok csak 0 vagy 1 nektár
+          tartalmaznak és meg tudnak változni minden alkalommal, amikor futtatod a
+          programot.'
+      grade3_Conditionals_2_authored_hint:
+        2-3_Bee_Conditionals_3_a: A kód akkor lesz a legrövidebb, ha ciklusokat használsz
+          minden alkalommal, amikor előre mozogsz, másik ciklust amikor nektár gyűjtesz,
+          és egy másikat amikor a mézet csinálod.
+      grade3_Loops_10_authored_hint:
+        2-3_Bee_Loops_4_a: 5 blokkal a ciklusodban kell befejezned.
+      grade3_Loops_4_authored_hint:
+        2-3_Bee_Loops_3B_a: Két eltérő ismétlő ciklusra lesz szükséged egymás után.
+      grade3_Loops_5_authored_hint:
+        2-3_Bee_Loops_7_a: Az első dolog inkább fordulás legyen mint mozgás.(lépés).
+      grade3_Loops_6_authored_hint:
+        2-3_Bee_Loops_4A_a: Az első dolog inkább fordulás legyen mint mozgás.(lépés).
+      grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: 6 blokk kell a ciklusodba.
+      grade4_artist_functions1_authored_hint:
+        2-3_Artist_Functions_1_a: A négyzetek oldali 100 pixelesek, ez azt jelenti,
+          hogy 175 pixelt kell előre menned, mielőtt elkezded a második négyzet rajzolását.
+        2-3_Artist_Functions_1_b: Rajzolhatsz egymást fedő vonalakat, hogy elkészítsd
+          a szemüveged.
+      grade4_artist_functions2_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          A programodnak kell:
+          - függvényt használni
+          - előrehaladni 100 + 75 pixelt
+          - függvényt használni
+      grade4_bee_functions8_authored_hint:
+        2-3_Bee_Functions_8_b: |-
+          Ne feledd, hogy a kódod a zöld blokkon belül építheted.
+
+          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+      grade4_review_artist1_authored_hint:
+        2-3_Artist_1_new_a: Ha használod a 'lépj előre 100 pixelt' blokkot, automatikusan
+          rajzolok egy vonalat.
+        2-3_Artist_1_new_b: Baj van a bekanyarodással a sarkon? Használd a 'fordulj
+          jobbra 90 fokot' blokkot!
+      grade4_review_artist2_authored_hint:
+        2-3_Artist_6_a: 'Hogy ezeket a kis angyalokat megcsináld, minden egyes alkalommal
+          többet kell elfordulnod, mint amennyit a négyzeteknél fordultál.   '
+        2-3_Artist_6_b: Mivel már elfordultam jobbra, könnyebb előremozogni, mint
+          balra fordulva elkészíteni a háromszöget.
+        2-3_Artist_6_c: A háromszög minden oldala egyforma hosszú, mint a négyzet
+          oldalai... 100 képpont!
+      grade4_review_bee1_authored_hint:
+        2-3_Bee_Loops_3B_a: Két eltérő ismétlő ciklusra lesz szükséged egymás után.
+      grade4_review_bee2_authored_hint:
+        2-3_Bee_Loops_3_a: 6 blokk kell a ciklusodba.
+      grade4_review_bee3_authored_hint:
+        2-3_Bee_Loops_4_a: 5 blokkal a ciklusodban kell befejezned.
+      level 'grade3_Loops_10_authored_hint:
+        2-3_Bee_Loops_4_a: 5 blokkal a ciklusodban kell befejezned.
+      level 'grade3_Loops_4_authored_hint:
+        2-3_Bee_Loops_3B_a: Két eltérő ismétlő ciklusra lesz szükséged egymás után.
+      level 'grade3_Loops_5_authored_hint:
+        2-3_Bee_Loops_7_a: Az első dolog inkább fordulás legyen mint mozgás.(lépés).
+      level 'grade3_Loops_6_authored_hint:
+        2-3_Bee_Loops_4A_a: Az első dolog inkább fordulás legyen mint mozgás.(lépés).
+      level 'grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: 6 blokk kell a ciklusodba.

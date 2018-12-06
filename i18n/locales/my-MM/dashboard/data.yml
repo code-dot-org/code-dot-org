@@ -1,0 +1,16 @@
+my:
+  data:
+    video:
+      name:
+        C4_loops_zombie: Loops
+        csp_applab_loops: Loops
+        mc_2016_congrats: Minecraft Hour of Code - ဂုဏ်ယူပါတယ်
+        mc_2017_agent_intro: Minecraft Hour of Code - အေးဂျင့်
+        mc_2017_repeat: Minecraft Hour of Code - လမ်းညွှန်ချက် ထပ်ခါပြုလုပ်ခြင်း
+        mc_2017_functions: Minecraft Hour of Code - လုပ်ဆောင်ချက်များ
+        mc_2017_congratulations: Minecraft Hour of Code - ဂုဏ်ယူပါတယ်
+        mc_2017_puzzle_1: Minecraft Hour of Code - အေးဂျင့်
+        mc_2017_puzzle_3: Minecraft Hour of Code - လမ်းညွှန်ချက် ထပ်ခါပြုလုပ်ခြင်း
+        mc_2017_puzzle_8: Minecraft Hour of Code - လုပ်ဆောင်ချက်များ
+        mc_2017_puzzle_12: Minecraft Hour of Code - လွတ်လပ်စွာကစားခြင်း
+        CSF_loops_AB: Loops

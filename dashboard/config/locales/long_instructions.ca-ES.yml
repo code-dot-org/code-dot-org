@@ -1,0 +1,455 @@
+---
+ca:
+  data:
+    long_instructions:
+      2-3 Artist 3.4: El bloc de salt mou l'artista sense que dibuixi. Dibuixa la
+        línia de ratlles usant tant els blocs de saltar com els de dibuixar.
+      2-3 Artist 4: Ajuda’m a construir la casa per a aquest gat.
+      2-3 Artist 9 NEW: Acaba aquest estel
+      2-3 Artist 9: Acaba aquest estel
+      2-3 Artist Debugging 10: 'Els botons de direcció del meu comandament són massa
+        estrets. Pista: Fes-los 10 píxels més gruixuts'
+      2-3 Artist Debugging 11: Ajuda'm a acabar el meu bonic floc de neu. Quantes
+        vegades he de "repetir" per enllestir-lo?
+      2-3 Artist Debugging 2: 'El codi dels tres bigotis que veus és incorrecte. Pista:
+        cada bigoti fa 75 píxels de llarg. Arregla el codi per dibuixar els bigotis.'
+      2-3 Artist Debugging 3: 'El meu vaixell té un forat! Pots arreglar-lo canviant
+        l''angle de la línia? Pista: el darrer angle està desviat 15 graus.'
+      2-3 Artist Debugging 5: 'El codi de la cama i del peu que veus està malament.
+        Pista: El peu és massa llarg, potser necessitem eliminar un pas (joc de paraules
+        intencionat)'
+      2-3 Artist Debugging 6: Sembla que estic assegut en una cadira que li falta
+        una pota. Edita els blocs per dibuixar la pota.
+      2-3 Artist Debugging 7: Sembla que la C al codi està dibuixada al revés. Pots
+        fer que sembli una C?
+      2-3 Artist Debugging 8: El meu molinet de vent no està acabat. Quantes vegades
+        he de repetir per acabar-lo?
+      2-3 Artist Debugging 9: 'El codi d''aquesta tija és incorrecte. Pista: L''angle
+        està desviat 60 graus'
+      2-3 Artist Free Play: Joc lliure! Dibuixa el que vulguis.
+      2-3 Artist Functions 11.5: Aquí hi ha la mateixa funció "Dibuixa un hexàgon".
+        Què passa si només gires 60 graus a cada bucle?
+      2-3 Artist Functions 12 Mike: 'Les funcions són fantàstiques per dibuixar coses
+        complexes diverses vegades. Pots usar la funció "dibuixa un flor" per omplir
+        la resta de la caixa de jardiner? (Pista: Les plantes estan totes separades
+        per 100 píxels de distància)  '
+      2-3 Artist Functions 12 a: 'Les funcions són fantàstiques per dibuixar coses
+        complexes diverses vegades. Pots usar la funció "dibuixa un flor" per omplir
+        la resta de la caixa de jardiner? (Pista: Les plantes estan totes separades
+        per 100 píxels de distància)  '
+      2-3 Artist Functions 12: 'Les funcions són fantàstiques per dibuixar coses complexes
+        diverses vegades. Pots usar la funció "dibuixa un flor" per omplir la resta
+        de la caixa de jardiner? (Pista: Les plantes estan totes separades per 100
+        píxels de distància)  '
+      2-3 Artist Functions 2: Les funcions et permeten definir nous blocs! Hem mogut
+        els blocs per dibuixar un quadrat a una funció anomenada "dibuixa un quadrat".
+        Pots usar la funció "dibuixa un quadrat" per crear les ulleres? Els quadrats
+        estan separats 75 píxels.
+      2-3 Artist Functions 3: Edita la funció per dibuixar un quadrat amb un costat
+        de 115 i dibuixar unes ulleres més grans. Els quadrats estan separats ara
+        45 píxels.
+      2-3 Artist Functions 4: Usa el bloc "repeteix" per dibuixar aquests tres quadrats.
+      2-3 Artist Loops 1: Pots fer un hexagon amb costats que tinguin 100 píxels de
+        llarg per acabar la cèl.lula? Recorda que això vol dir que només cal que giris
+        60 graus!
+      2-3 Artist Loops 2: Ara usa un bloc de repetició per convertir la cèl.lula en
+        una closca.
+      2-3 Artist Loops New 10: Ara connectem un grapat de Vs totes juntes, dibuixant-les
+        amb un bucle.
+      2-3 Artist Loops New 12: 'Dibuixa un diamant amb costats de 100 píxels.
+
+'
+      2-3 Artist Loops New 13: Ara dibuixa el diamant tres cops amb un bucle.
+      2-3 Artist Loops New 2: Aquest és part del codi que has usat per dibuixar el
+        quadrat. Què passa si uses el bloc de repetició per executar aquest codi quatre
+        cops?
+      2-3 Artist Loops New 9: Dibuixa una simple V on els dos costats fan 50 píxels
+        per completar la fletxa.
+      2-3 Artist Nested Loops 10: Repeteix aquest codi 12 cops per completar el patró.
+      2-3 Artist Nested Loops 11: Repeteix el codi quatre cops per completar el patró,
+        gira 90 graus després de cada cercle.
+      2-3 Artist Nested Loops 12: Repeteix aquest codi 12 vegades per completar les
+        corbes.
+      2-3 Artist Nested Loops 2: Ara repeteix el triangle sis cops. Després de cada
+        triangle necessitaràs girar 60 graus abans de fer el següent.
+      2-3 Artist Nested Loops 4: 'Repeteix aquest diamant 12 cops per dibuixar una
+        flor. Pista: 12 diamants és just el que has fet - quant has de girar després
+        de cada figura?'
+      2-3 Artist Nested Loops 5: Omple les finestres de l'edifici amb un bucle imbricat.
+        Les finestres fa 20 píxels de llarg i estan separades 20 píxels.
+      2-3 Artist Nested Loops 7: Repeteix aquest triangle deu vegades per dibuixar
+        el sol. Et caldrà moure i girar després de cada triangle. Pots esbrinar quant
+        has de girar dividint el nombre de graus d'un cercle entre el nombre de figures
+        que el formen.
+      2-3 Artist Nested Loops 8: Ara afegirem una mica d'herba al nostre dibuix. Les
+        mates d'herba estan separades 50 píxels.
+      2-3 Artist Nested Loops 9: Acabarem el dibuix afegint una flor. Repeteix el
+        diamant dotze vegades per dibuixar la teva flor.
+      2-3 Artist Nested Loops Free Play: Joc lliure, dibuixa alguna cosa xula usant
+        bubles niuats.
+      2-3 Bee Conditionals 11: Recull el nèctar de les flors que en tenen.
+      2-3 Bee Conditionals 13: 'Recull el nèctar i fes mel. Pista: què passa si utilitzes
+        el condicional "si nèctar" en una flor vermella? Ho pots fer amb un bucle?'
+      2-3 Bee Conditionals 15: Recull el nèctar de les quatre flors.
+      2-3 Bee Conditionals 3: Ajuda'm a recollir tot el nèctar de les flors i fer
+        mel. Usa un bucle.
+      2-3 Bee Debugging 3: Aquests blocs m'estan empipant. Arregla errors per recollir
+        tot el nèctar i fer tota la mel.
+      2-3 Bee Debugging 6: 'Aquests blocs m''estan empipant. Arregla errors per recollir
+        tot el nèctar i fer tota la mel. '
+      2-3 Bee Debugging 9: Aquests blocs m'estan empipant. Arregla errors per recollir
+        tot el nèctar i fer tota la mel.
+      2-3 Bee Functions 10: Les flors liles poden tenir 1 o 0 nèctar. Crea una funció
+        que reculli nèctar només de les flors liles que en tenen.
+      2-3 Bee Functions 2: Les funcions són blocs de codi que realitzen una tasca.
+        Usa la funció "recull 5" per recollir cinc nèctars de cop. Assegura't d'usar
+        un bucle per reduir el nombre de blocs usats.
+      2-3 Bee Functions 4: La funció "moure i obtenir nèctar" fa girar l'abella, recull
+        nèctar i després retorna l'abella a on va començar. Utilitza la funció de
+        recollir tot el nèctar.
+      2-3 Bee Loops 1: 'Cada flor conté una unitat de nèctar. Recull el nèctar de
+        cada flor. '
+      2-3 Bee Loops 3A: Pots usar un bucle per recollir tot el nèctar?
+      2-3 Bee Loops 3B: Ara usa el nou bloc repeteix per recollir tot el nèctar i
+        fer tota la mel.
+      2-3 Bee Loops 4A: Què passa si repeteixes la seqüència tres cops? No oblidis
+        fer la mel a l'acabar!
+      2-3 Bee Loops 8: Aquestes flors liles tenen una quantitat indeterminada de nèctar.
+        Usa el bucle "mentre nèctar" per recollir tot el nèctar. Aquest bucle s'executarà
+        mentre la condició sigui certa, en aquest cas Nèctar > 0.
+      2-3 Maze 15: Utilitza dos bucles per arribar al porc utilitzant menys blocs.
+      2-3 Maze Loops 18: Porta'm fins al girasol!
+      4-5 Artist 10: Prem "Executa" per provar el codi. Després repeteix-lo les vegades
+        que calgui per completar el dibuix. Els colors seran diferents cada cop.
+      4-5 Artist 2: Pots repetir aquest codi per completar el quadrat?
+      4-5 Artist 3.5: |-
+        Mira d'esbrinar què passa si executes aquest programa (o prem "executa" per veure-ho).
+
+        Després, repeteix-ho prou vegades per acabar el dibuix!
+      4-5 Artist 5: Quin angle fas servir?
+      4-5 Artist 6: Aquest triangle equilàter té angles de 60, 60 i 60 graus. Cada
+        costat és de 200 píxels. Completa el dibuix.
+      4-5 Artist Free Draw 1: Dibuix lliure! Dibuixa el que et digui la inspiració.
+      4-5 Artist Patterns 8: Utilitza un bucle per dibuixar aquest hexàgon amb 40
+        píxel per costats i angles de 60 graus.
+      4-5 Bee Conditionals 5: |-
+        Hi pot haver una flor o una bresca
+        sota aquests núvols. Utilitza els blocs "if/else" per recollir nèctar "if" si hi ha una flor, o "else" fer mel (si hi ha una bresca).
+      4-5 Bee Conditionals 7: Recorda que les flors liles poden tenir 1, 2 o 3 nèctars.
+        Completa la funció "comprovar la flor lila" i utilitzar-la per recollir tots
+        els nèctar de les flors.
+      4-5 Maze 9: crea un bucle amb el bloc "repeteix fins que".
+      Artist Autorun Test: Usa el bloc "repeteix" per dibuixar aquests tres quadrats.
+      Course 4 Artist 13: Tens encara ganes de jugar? Aquí hi ha un llenç en blanc
+        perquè hi dissenyis el que prefereixis!
+      Course 4 Artist 6: Acaba el programa per dibuixar aquests tres triangles equilàters.
+      Course 4 Artist 8: Dibuixa el sol repetint diverses vegades tot el bloc.
+      Course 4 Artist 8a: Recordes aquesta forma? Ara et deixarem que la facis tu
+        sense donar-te cap bloc per començar!
+      Dance_Party_01: |-
+        *Anem a fer una festa de ball!*
+
+        Arrossega el bloc `fés-ne un de nou` al teu espai de treball, i connecta'l dins del bloc de `configuració` per crear el teu primer dansaire.
+
+        * *També pots clicar a la bombeta de l'esquerra si vols més informació o reptes extra.*
+      Dance_Party_01_low: |-
+        *Anem a fer una festa de ball!*
+
+        Arrossega el bloc `fés-ne un de nou` al teu espai de treball, i connecta'l dins del bloc de `configuració` per crear el teu primer dansaire.
+
+        * *També pots clicar a la bombeta de l'esquerra si vols més informació o reptes extra.*
+      Dance_Party_02: |-
+        Anem a fer ballar aquest ant!
+
+        Arrossega fora del <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">nou&#95;dansaire</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Bloc de provocació</title><title name="DIR">-1</title></block></xml> a l'espai de treball. Connecta'l per sota del bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"mesures"</title></block></xml>. El teu dansaire hauria de començar un nou moviment després de la quarta mesura.
+
+
+        Les **mesures** es fan servir per comptar el temps en la música. A aquest tutorial, una mesura té quatre temps de llarg.
+      Dance_Party_03: |-
+        *Ara sí que marquem el ritme!*
+
+        Afegeix un bloc de <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"mesures"</title></block></xml> al teu espai de treball. Fés que el dansaire comenci un nou moviment després de 6 mesures.
+      Dance_Party_04: |-
+        *Aquesta dansa necessita enlluernar més!*
+
+        Busca un nou bloc a la teva caixa d'eines que afegeixi un efecte de fons darrere del teu dansaire. Mira com canvien els efectes en el temps amb la música!
+      Dance_Party_05: |-
+        Fés servir un nou bloc per fer que el dansaire canviï els moviments **cada 2 mesures**!
+
+        * Si esculls `(següent)`, `(anterior)`, o `(aleatori)` li dius al dansaire que faci un moviment diferent cada cop que s'executa el codi.
+      Dance_Party_06: |-
+        *Necessitem més ballarins!*
+
+        Crea un dansaire de reserva anomenat `backup_dancer1` que balli amb el gat.
+      Dance_Party_08: |-
+        Cada ballarí té un conjunt de _propietats_ que controlen el seu aspecte.
+
+        Pots fer que sembli que un dansaire sigui al fons de la pantalla si en fas la _mida_ petita. Pots aconseguir que tots dos ballarins de reserva siguin de la mateixa mida?
+      Dance_Party_09: |-
+        Els ballarins tenen una propietat de "tinta" que pot afegir una capa de color. Prova a canviar la tinta d'un dels teus dansaires.
+        * Les tintes barrejaran el color que triïs amb els colors dels dansaires.
+      Dance_Party_10: |-
+        Ara ja sabem com canviar les propietats d'un ballarí. També podem fer que les mateixes propietats responguin automàticament a la música utilitzant aquest bloc:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">pinya_dreta</title>
+        <title name="PROPERTY">"balança"</title>
+        <title name="RANGE">"baix"</title>
+        </block></xml>
+
+        Aquest programa utilitza el volum de "baix" de la música (els sons greus) per controlar l'alçada d'un ballarí. Pots fer que l'altre dansaire respongui també a la música?
+      Dance_Party_11.5_test: |-
+        Fés una ullada a aquest bloc:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"ÀNEC"</title>
+        <title name="LAYOUT">"cercle"</title>
+        </block></xml>
+
+        Ara ja pots crear tot un grup de dansaires alhora!
+
+        Intenta utilitzar alguns dels blocs "tots els ànecs" per escriure un codi que farà que tots els ànecs dansin junts.
+      Dance_Party_11: |-
+        El bloc <xml><block type="Dancelab_whenKey"></block></xml> et permet executar un codi quan es prem la fletxa cap amunt.
+
+        Pots canviar el moviment de la dansa, les propietats d'un ballarí, o fer un moviment ràpid només una vegada. Sigues creatiu i cerca nous blocs!
+      Dance_Party_11_5: |-
+        Fés una ullada a aquest bloc:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"ÀNEC"</title>
+        <title name="LAYOUT">"cercle"</title>
+        </block></xml>
+
+        Ara ja pots crear tot un grup de dansaires alhora!
+
+        Intenta utilitzar alguns dels blocs "tots els ànecs" per escriure un codi que farà que tots els ànecs dansin junts.
+      Dance_Party_11b: És l'hora de ballar! El gat remena les potes quan prems la
+        fletxa esquerra. Fés que el robot «caigui» quan prems la fletxa dreta.
+      Dance_Party_12: Anima't i segueix el ritme! Crea una dansa pròpia per compartir
+        amb els teus amics.
+      Dance_Party_extras_battle: |-
+        # Grups de dansa
+
+        Aquí tens una dansa entre dos equips. Les tecles de fletxes controlen un dels ballarins i les tecles "w, a, s, d" controlen l'altre. Balleu amb un amic i després intenteu millorar aquesta dansa poc a poc.
+
+        * Afegir més tecles per controlar les danses
+        * Fer que els ballarins de reserva també responguin quan es premin les tecles
+        * Canvia el ballarí cada quatre mesures tot configurant-ne la visibilitat
+      Dance_Party_extras_every_beat: |-
+        # Notes negres
+
+        La majoria de les nostres danses han fet servir mesures senceres, però cada mesura està feta de quatre notes negres. Aquest ball fa servir «cada 0,25 mesures» per fer que el dansaire piqui de mans cada quart de nota.
+
+        Aquesta dansa també fa servir un_bloc_condicional per controlar quan el bloc de «cada 0,25 mesures» pot canviar la dansa. Proveu de canviar els nombres del bloc condicional per veure com canvia la dansa.
+
+        * Experimenta amb d'altres durades de notes (com ara 0,5 per una nota blanca o 0,125 per una vuitena).
+        * Afegir alguns esdeveniments `després de la mesura`.
+        * Intercanvia "mesures" amb "segons" i intenta fer quadrar el temps dels teus balls així.
+      Dance_Party_extras_layout: |-
+        # Posem-nos en formació!
+
+        Mira't aquesta dansa que fa servir el bloc `disposició` per canviar la formació dels ballarins de reserva a través de tota la dansa. Prova una d'aquestes idees per allargar-la:
+
+        * Crea un segon grup de dansaires amb una disposició diferent
+        * Canvia la disposició quan premis una tecla
+        * Canvia una propietat quan els ballarins canviïn la formació
+      Dance_Party_extras_on_beat: |-
+        # Greus, mitjans i aguts
+
+        Aquesta dansa utilitza esdeveniments "pic" per activar un codi quan diferents parts de la música fan molt soroll. Prova de jugar amb diferents cançons per veure com canvien la dansa.
+      Dance_Party_extras_speed: |-
+        # Vés més ràpid, vés més lent
+
+        Aquesta dansa final empra el bloc 'Configurar velocitat' per controlar la velocitat de cada ballarí en moure's. Prova d'experimentar amb diferents velocitats a diferents punts de la cançó. Segueix jugant a tocar coses d'aquesta dansa tant com vulguis, o torna a qualsevulla de les danses anteriors per fer-les encara més genials.
+      Dance_Party_extras_visible: |-
+        # A on han anat?
+
+        Aquesta dansa mostra i amaga dos grups diferents de ballarins. Mira-t'ho i després prova a afegir-hi el teu estil propi.
+
+        * Afegir un altre grup de ballarins
+        * Mostrar i amagar els dansaires amb les tecles de fletxes
+        * Amagar tots els ballarins i canviar a un emocionant efecte de fons
+      HOC Dance 4_draft: |-
+        Fés servir un nou bloc per fer que el dansaire canviï els moviments **cada 2 mesures**!
+
+        * Si esculls `(següent)`, `(anterior)`, o `(aleatori)` li dius al dansaire que faci un moviment diferent cada cop que s'executa el codi.
+      HOC Dance 5_draft: |-
+        *Necessitem més ballarins!*
+
+        Crea un dansaire de reserva anomenat `backup_dancer1` que balli amb el gat.
+      HOC Dance 9_draft: |-
+        El bloc <xml><block type="Dancelab_whenKey"></block></xml> et permet executar un codi quan es prem la fletxa cap amunt.
+
+        Pots canviar el moviment de la dansa, les propietats d'un ballarí, o fer un moviment ràpid només una vegada. Sigues creatiu i cerca nous blocs!
+      HOC Dance Freeplay: Anima't i segueix el ritme! Crea una dansa pròpia per compartir
+        amb els teus amics.
+      HOC Dance Freeplay_draft: Anima't i segueix el ritme! Crea una dansa pròpia
+        per compartir amb els teus amics.
+      HOC Dance Predraw: Anima't i segueix el ritme! Crea una dansa pròpia per compartir
+        amb els teus amics.
+      Overworld Move to Sheep: Afegeix una segona instrucció "avança" per arribar
+        a l'ovella.
+      Overworld Move to Sheep_2018: Afegeix una segona instrucció "avança" per arribar
+        a l'ovella.
+      Overworld Move to Sheep_2019: Afegeix una segona instrucció "avança" per arribar
+        a l'ovella.
+      course4_artist_fwp_challenge1: Intenta executar aquest programa, i fer canvis
+        per veure què passa. Pots averiguar com funciona? (O borra'l i reemplaça'l
+        amb algo totalment diferent)
+      courseD_maze_nestedLoops4: Porta'm fins al girasol!
+      courseD_maze_nestedLoops4_2018: Porta'm fins al girasol!
+      courseD_maze_nestedLoops4_2019: Porta'm fins al girasol!
+      courseE_bee_functions3: Les funcions són blocs de codi que realitzen una tasca.
+        Usa la funció "recull 5" per recollir cinc nèctars de cop. Assegura't d'usar
+        un bucle per reduir el nombre de blocs usats.
+      courseE_bee_functions3_2018: Les funcions són blocs de codi que realitzen una
+        tasca. Usa la funció "recull 5" per recollir cinc nèctars de cop. Assegura't
+        d'usar un bucle per reduir el nombre de blocs usats.
+      frozen circle function in circle: Ara anem a crear 20 cercles que es superposin,
+        girant 18 graus entre cada cercle.
+      frozen circle function with parameter: Aquí tens un bloc "Crea un cercle" que
+        pot fer cercles de diferents mides. Pots utilitzar-ho per crear un cercle
+        petit de mida 5 i un cercle més grans de mida 10?
+      frozen circle function: Utilitza el nou bloc "Crea un cercle" per fer 10 cercles
+        que es superposin. No oblidis saltar endavant entre cercles.
+      frozen circle: Un cercle és una forma especial. Pots esbrinar per quin nombre
+        necessites reemplaçar els interrogants per dibuixar un cercle?
+      frozen cross rotate dense: 'Anem a repetir-ho 90 vegades! Quantes vegades quep
+        90 a 360? Pista: És un nombre molt petit.'
+      frozen cross rotate: Ara intenta repetir-ho 10 vegades. Quants graus necessites
+        girar entre cada línia?
+      frozen cross: Utilitza un bloc "Repetir" al voltant d'aquestes comandes per
+        crear un signe de sumar. T'has fixat que na Elsa es pot moure cap endavant
+        i cap endarrera?
+      frozen diamond mini snowflake: Sabíeu que cada floc de neu és una forma diferent?
+        Anem a crear un nou floc de neu utilitzant el bloc "Repetir" per repetir un
+        paral·lelogram 4 vegades, girant a la dreta 90 graus entre cada paral·lelogram.
+      frozen diamond snowflake: Ara, anem a crear un nou floc de neu utilitzant el
+        bloc repeteix per repetir un paral·lelogram 10 vegades, girant a la dreta
+        36 graus entre cadascuna.
+      frozen diamond: Utilitza un "Repetir" al voltant d'aquestos blocs per crear
+        una parel·lolagram. És com un rectangle però te angles diferents. Aquest tá
+        angles de 60 i de 120 graus en lloc de tots els angles de 90 graus.
+      frozen freeplay: T'has convertit oficialment en una artista fabulosa! Crea un
+        meravellós món hivernal.
+      frozen perpendicular: Ara anem a veure si podem crear dues línies que estiguin
+        en un angle de 90 graus l'una de l'altre. Necessitaràs utilitzar el bloc "Gira",
+        així com el bloc "Avança".
+      frozen snowflake branch: Intenta utilitzar el bloc "Crea una branca de un floc
+        de neu" per crear tres branques, que comencin a semblar-se a un floc de neu.
+      frozen snowflake full: Ara anem a repetir-ho 8 vegades per fer un floc de neu
+        preciós!
+      frozen snowflower: Es poden crear flocs de neu amb patrons complexos fent servir
+        formes molt simples. Pots fer un patró mitjançant la repetició de 5 cercles
+        de mida 5 i 5 de mida 10?
+      frozen square iterative: Sembla que estem a mig camí per fer un quadrat. Anem
+        a posar 4 línies juntes per crear un quadrat.
+      frozen square loop 3x: Anem a crear 3 quadrats, girant després de cada quadrat.
+        Assegura't de girar 120 graus abans de cada nou quadrat.
+      frozen square loop: Hola, sóc Anna d'Arendelle! Anem a fer un quadrat amb el
+        bloc "Repetir", que fa servir menys blocs. Quantes vegades (???) haurà de
+        repetir-se el contingut del bloc "Repetir" per fer un quadrat?
+      frozen square snowflake: Pots fer un floquet de neu emprant el bloc "Repetir"
+        per fer un quadrat 10 vegades i un bloc "Girar" que giri 36 graus entre cada
+        quadrat?
+      grade2_MakeDogTag_8: Ara connectem un grapat de Vs totes juntes, dibuixant-les
+        amb un bucle.
+      grade2_PuppyLoops_10: El meu molinet de vent no està acabat. Quantes vegades
+        he de repetir per acabar-lo?
+      grade2_PuppyLoops_4: Utilitza dos bucles per arribar al porc utilitzant menys
+        blocs.
+      grade2_PuppyLoops_8: 'El codi dels tres bigotis que veus és incorrecte. Pista:
+        cada bigoti fa 75 píxels de llarg. Arregla el codi per dibuixar els bigotis.'
+      grade2_PuppyLoops_9: Sembla que la C al codi està dibuixada al revés. Pots fer
+        que sembli una C?
+      grade2_puppy_loops4: Utilitza dos bucles per arribar al porc utilitzant menys
+        blocs.
+      grade3_ConditionalsElse_5: |-
+        Hi pot haver una flor o una bresca
+        sota aquests núvols. Utilitza els blocs "if/else" per recollir nèctar "if" si hi ha una flor, o "else" fer mel (si hi ha una bresca).
+      grade3_ConditionalsElse_7: Recorda que les flors liles poden tenir 1, 2 o 3
+        nèctars. Completa la funció "comprovar la flor lila" i utilitzar-la per recollir
+        tots els nèctar de les flors.
+      grade3_ConditionalsElse_TeacherIDo: |-
+        Hi pot haver una flor o una bresca
+        sota aquests núvols. Utilitza els blocs "if/else" per recollir nèctar "if" si hi ha una flor, o "else" fer mel (si hi ha una bresca).
+      grade3_Conditionals_10: 'Recull el nèctar i fes mel. Pista: què passa si utilitzes
+        el condicional "si nèctar" en una flor vermella? Ho pots fer amb un bucle?'
+      grade3_Conditionals_12: Recull el nèctar de les quatre flors.
+      grade3_Conditionals_2: Ajuda'm a recollir tot el nèctar de les flors i fer mel.
+        Usa un bucle.
+      grade3_Conditionals_8: Recull el nèctar de les flors que en tenen.
+      grade3_Debugging_6: 'Aquests blocs m''estan empipant. Arregla errors per recollir
+        tot el nèctar i fer tota la mel. '
+      grade3_Debugging_9: Aquests blocs m'estan empipant. Arregla errors per recollir
+        tot el nèctar i fer tota la mel.
+      grade3_Loops_3: Pots usar un bucle per recollir tot el nèctar?
+      grade3_Loops_4: Ara usa el nou bloc repeteix per recollir tot el nèctar i fer
+        tota la mel.
+      grade3_Loops_6: Què passa si repeteixes la seqüència tres cops? No oblidis fer
+        la mel a l'acabar!
+      grade3_Loops_7: 'Cada flor conté una unitat de nèctar. Recull el nèctar de cada
+        flor. '
+      grade3_Loops_TeacherIDo: 'Cada flor conté una unitat de nèctar. Recull el nèctar
+        de cada flor. '
+      grade3_maze_loops2: Porta'm fins al girasol!
+      grade3_maze_nestedLoops4: Utilitza dos bucles per arribar al porc utilitzant
+        menys blocs.
+      grade4_artist_functions2: Les funcions et permeten definir nous blocs! Hem mogut
+        els blocs per dibuixar un quadrat a una funció anomenada "dibuixa un quadrat".
+        Pots usar la funció "dibuixa un quadrat" per crear les ulleres? Els quadrats
+        estan separats 75 píxels.
+      grade4_bee_conditionals_quantum5: |-
+        Hi pot haver una flor o una bresca
+        sota aquests núvols. Utilitza els blocs "if/else" per recollir nèctar "if" si hi ha una flor, o "else" fer mel (si hi ha una bresca).
+      grade4_bee_functions3: Les funcions són blocs de codi que realitzen una tasca.
+        Usa la funció "recull 5" per recollir cinc nèctars de cop. Assegura't d'usar
+        un bucle per reduir el nombre de blocs usats.
+      grade4_frozen_freeplay: T'has convertit oficialment en una artista fabulosa!
+        Crea un meravellós món hivernal.
+      grade4_frozen_functions0: Un cercle és una forma especial. Pots esbrinar per
+        quin nombre necessites reemplaçar els interrogants per dibuixar un cercle?
+      grade4_frozen_functions1a: Utilitza el nou bloc "Crea un cercle" per fer 10
+        cercles que es superposin. No oblidis saltar endavant entre cercles.
+      grade4_frozen_functions2: Ara anem a crear 20 cercles que es superposin, girant
+        18 graus entre cada cercle.
+      grade4_frozen_functions3: Aquí tens un bloc "Crea un cercle" que pot fer cercles
+        de diferents mides. Pots utilitzar-ho per crear un cercle petit de mida 5
+        i un cercle més grans de mida 10?
+      grade4_frozen_functions4: Es poden crear flocs de neu amb patrons complexos
+        fent servir formes molt simples. Pots fer un patró mitjançant la repetició
+        de 5 cercles de mida 5 i 5 de mida 10?
+      grade4_frozen_nested_loop_diamonds2: Sabíeu que cada floc de neu és una forma
+        diferent? Anem a crear un nou floc de neu utilitzant el bloc "Repetir" per
+        repetir un paral·lelogram 4 vegades, girant a la dreta 90 graus entre cada
+        paral·lelogram.
+      grade4_frozen_nested_loop_diamonds3: Ara, anem a crear un nou floc de neu utilitzant
+        el bloc repeteix per repetir un paral·lelogram 10 vegades, girant a la dreta
+        36 graus entre cadascuna.
+      grade4_frozen_square: Hola, sóc Anna d'Arendelle! Anem a fer un quadrat amb
+        el bloc "Repetir", que fa servir menys blocs. Quantes vegades (???) haurà
+        de repetir-se el contingut del bloc "Repetir" per fer un quadrat?
+      grade4_frozen_square_loop1: Hola, sóc Anna d'Arendelle! Anem a fer un quadrat
+        amb el bloc "Repetir", que fa servir menys blocs. Quantes vegades (???) haurà
+        de repetir-se el contingut del bloc "Repetir" per fer un quadrat?
+      grade4_frozen_square_loop2: Anem a crear 3 quadrats, girant després de cada
+        quadrat. Assegura't de girar 120 graus abans de cada nou quadrat.
+      grade4_frozen_square_loop3: Pots fer un floquet de neu emprant el bloc "Repetir"
+        per fer un quadrat 10 vegades i un bloc "Girar" que giri 36 graus entre cada
+        quadrat?
+      grade4_review_artist3: El bloc de salt mou l'artista sense que dibuixi. Dibuixa
+        la línia de ratlles usant tant els blocs de saltar com els de dibuixar.
+      grade4_review_bee1: Ara usa el nou bloc repeteix per recollir tot el nèctar
+        i fer tota la mel.
+      level 'grade3_Loops_3: Pots usar un bucle per recollir tot el nèctar?
+      level 'grade3_Loops_4: Ara usa el nou bloc repeteix per recollir tot el nèctar
+        i fer tota la mel.
+      level 'grade3_Loops_6: Què passa si repeteixes la seqüència tres cops? No oblidis
+        fer la mel a l'acabar!
+      level 'grade3_Loops_7: 'Cada flor conté una unitat de nèctar. Recull el nèctar
+        de cada flor. '

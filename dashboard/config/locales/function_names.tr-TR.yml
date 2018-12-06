@@ -1,0 +1,160 @@
+---
+tr:
+  data:
+    function_names:
+      x: x
+      details: detaylar
+      draw eyebrow: kaş çiz
+      draw pupil: gözbebeği çiz
+      draw a circle: bir çember çiz
+      draw a car: araba çiz
+      draw_rect: dikdörtgen çiz
+      draw square: kare çiz
+      jump to middle: ortaya atla
+      draw a button: düğme çiz
+      draw left leg: sol bacak çiz
+      draw right leg: sağ bacak çiz
+      draw body and arms: gövde ve kollar çiz
+      draw a head: kafa çiz
+      draw sitting stick figure: oturan çöp adam çiz
+      draw head: kafa çiz
+      draw arms: kollar çiz
+      jump to neck: boyna atla
+      draw O: O çiz
+      draw D: D çiz
+      draw E: E çiz
+      big gear: büyük dişli
+      small gear: küçük dişli
+      draw a hexagon: " altıgen çiz"
+      draw a flower: çiçek çiz
+      draw a square: bir kare çiz
+      draw a snowflake: bir kar tanesi çiz
+      draw 3 hexagons: 3 altıgen çiz
+      draw 4 hexagons: 4 altıgen çiz
+      draw 5 hexagons: 5 altıgen çiz
+      get 2 nectar: 2 nektar al
+      collect purple nectar: mor nektar topla
+      get 5: 5 al
+      move and get nectar: hareket et ve nektar al
+      move and get 4: hareket et ve 4 al
+      get 7 nectar make 7 honey: 7 nektar al 7 bal yap
+      get 7 make 7: 7 al 7 yap
+      get 7: 7 al
+      move and get 3: hareket et ve 3 al
+      draw a tree: bir ağaç çiz
+      draw triangle: üçgen çiz
+      draw circle: çember çiz
+      draw goal: hedef çiz
+      graph: grafik
+      draw waves: dalgalar çiz
+      draw a wave: bir dalga çiz
+      draw a small triangle: küçük bir üçgen çiz
+      draw a medium triangle: orta boy bir üçgen çiz
+      draw a large triangle: çok büyük bir üçgen çiz
+      draw a big triangle: büyük bir üçgen çiz
+      draw a triangle: bir üçgen çiz
+      draw a house: bir ev çiz
+      check purple flower: mor çiçeğe bak
+      check flower make honey: çiçeğe bak bal yap
+      get nectar or make honey: nektar al veya bal yap
+      make 3 honey: 3 bal yap
+      get 5 nectar: 5 nektar al
+      make all honey: bütün balı yap
+      draw a star: bir yıldız çiz
+      draw: çiz
+      draw bit: parça çiz
+      draw a polygon: çokgen çiz
+      draw a shape: bir şekil çiz
+      get 2 and make 2: iki al iki yap
+      drawTree: ağaç çiz
+      drawHouse: ev çiz
+      drawBranch: dalÇiz
+      drawSky: gökÇiz
+      fillScreen: ekranıDoldur
+      drawHouseLayer: EvKatmanıÇiz
+      swap: değiştir
+      do something: bir şeyler yap
+      draw_image: resim_çiz
+      story: hikaye
+      starting path: başlangıç yolu
+      jump: zıpla
+      Draw a triangle: Üçgen çiz
+      Draw a Cube: Küp Çiz
+      draw a cube: küp çiz
+      draw an octagon 20: 20lik bir sekizgen çiz
+      Draw a square: Kare çiz
+      cube: küp
+      do something2: bir şeyler yap2
+      jump upper right: sağ üste atla
+      draw a line of  squares: bir satır kareler çiz
+      draw a line of squares: bir satır kareler çiz
+      Draw Square Line: Kare Çizgisi Çiz
+      jump upper left: sol üste atla
+      draw a line of octagons: bir satır sekizgenler çiz
+      Draw a Square: Kare çiz
+      triangle: üçgen
+      get 3 nectar: 3 nektar al
+      get many nectar: çok nektar al
+      get nectar make honey: nektar al, bal yap
+      draw an octagon: bir sekizgen çiz
+      set score: skor ayarla
+      get nectar: nektarı al
+      Jump: Zıpla
+      test: dene
+      build bridge: köprü kur
+      diamond: elmas
+      move: hareket et
+      draw eye: göz çiz
+      move right: sağa ilerle
+      move up: yukarı hareket et
+      move down: aşağı yönde ilerle
+      move left: sola ilerle
+      kill alien: uzaylıyı öldür
+      click: tıkla
+      keep playing: oynamaya devam et
+      Ask a question: Bir soru sor
+      draw background: arkaplan çiz
+      draw fire: ateş çiz
+      draw line of triangles: bir satır üçgenler çiz
+      draw a window: pencere çiz
+      stop_everything: herşeyi_durdur
+      draw hexagon: altıgen çiz
+      draw line of hexagons: bir satır altıgenler çiz
+      draw polygon: çokgen çiz
+      honey nectar: bal nektar
+      move and make honey: ilerle ve bal yap
+      collect all nectar: tüm nektarı topla
+      get all nectar: bütün nektarı al
+      get pumpkin: bal kabağı al
+      harvest: hasat et
+      get corn and come back: mısır al ve geri dön
+      check square for corn: mısır için kareye bak
+      get all pumpkins: tüm bal kabaklarını al
+      pumpkin square: bal kabağı karesi
+      navigate: gezin
+      check and pick: yokla ve topla
+      find pumpkin: bal kabağı bul
+      get produce: ürün al
+      check for corn: mısır var mı bak
+      corn rectangle: mısır dikdörtgeni
+      lettuce stairs: marul merdiveni
+      pick veggie: sebze topla
+      corn and pumpkin: mısır ve bal kabağı
+      go get pumpkins: git bal kabağı al
+      go get lettuce: git marul al
+      garden square: bahçe karesi
+      get corn come back: mısır al geri gel
+      collect: topla
+      Stop Dragon: Ejderhayı durdur
+      follow path: yolu takip et
+      physics: Fizik
+      initialization: başlatma
+      Make Actor 1 Jump: Aktör 1'i Zıplat
+      Choose Number: Rakam Seç
+      Move Bird: Kuşu Hareket ettir
+      turn left: sola dön
+      move forward: ilerle
+      turn right: sağa dön
+      draw a rectangle: dikdörtgen çiz
+      Which Course for My Students?: Öğrencilerim için hangi Kurs uygun?
+      draw a heart: kalp çiz

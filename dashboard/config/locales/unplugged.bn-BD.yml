@@ -1,0 +1,86 @@
+---
+bn:
+  data:
+    unplugged:
+      Unplug1:
+        title: কম্পিউটার বিজ্ঞান পরিচিতি
+      Unplug2:
+        title: গণিতিক চিন্তা-ভাবনা
+      Unplug3:
+        title: ছক-কাগজে প্রোগ্রামিং
+      Unplug4:
+        title: অ্যালগরিদম
+      Unplug5:
+        title: ফাংশনগুলি
+      Unplug6:
+        title: শর্তসমূহ
+      Unplug7:
+        title: গান লিখা
+      Unplug8:
+        title: অপসারণ
+      Unplug9:
+        title: রিলে-স্যুইচ প্রোগ্রামিং
+      Unplug10:
+        title: ইন্টারনেট
+      Unplug11:
+        title: গুটিয়ে ফেলা
+      UnplugHappyMaps:
+        title: আনন্দের মানচিত্র
+      RelayProgramming:
+        title: রিলে-স্যুইচ প্রোগ্রামিং
+      Conditionals:
+        title: শর্তযুক্ত
+      BigEvent:
+        title: বড় ঘটনা
+      GraphPaperProgramming:
+        title: ছক-কাগজে প্রোগ্রামিং
+      ComputationalThinking:
+        title: গণিতিক চিন্তা-ভাবনা
+      SongwritingParameters:
+        title: গান লিখা
+      Internet:
+        title: ইন্টারনেট
+      BinaryImages:
+        title: দ্বিমিক ছবি
+      courseA_unplugged_happyMaps:
+        title: আনন্দের মানচিত্র
+      courseABC_unplugged_bigEvent:
+        title: বড় ঘটনা
+      courseD_unplugged_graphPaperProgramming:
+        title: ছক-কাগজে প্রোগ্রামিং
+      courseD_unplugged_relayProgramming:
+        title: রিলে-স্যুইচ প্রোগ্রামিং
+      courseD_unplugged_conditionalsCards:
+        title: কার্ড সঙ্গে শর্ত
+      courseD_unplugged_binaryImages:
+        title: দ্বিমিক ছবি
+      courseE_unplugged_internet:
+        title: ইন্টারনেট
+      courseE_unplugged_songwriting:
+        title: গান লিখা
+      courseB_unplugged_MRF_2018:
+        title: আমার রোবোটিক্স বন্ধুরা
+      UnplugHappyMaps_2018:
+        title: আনন্দের মানচিত্র
+      BigEvent_2018:
+        title: বড় ঘটনা
+      GraphPaperProgramming_2018:
+        title: ছক-কাগজে প্রোগ্রামিং
+      Conditionals_2018:
+        title: শর্তযুক্ত
+      BinaryImages_2018:
+        title: দ্বিমিক ছবি
+      RelayProgramming_2018:
+        title: রিলে-স্যুইচ প্রোগ্রামিং
+      courseB_unplugged_MRF_2019:
+        title: আমার রোবোটিক্স বন্ধুরা
+      Conditionals_2019:
+        title: শর্তযুক্ত
+      GraphPaperProgramming_2019:
+        title: ছক-কাগজে প্রোগ্রামিং
+      RelayProgramming_2018_2019:
+        title: রিলে-স্যুইচ প্রোগ্রামিং
+      BinaryImages_2019:
+        title: দ্বিমিক ছবি
+      BigEvent_2019:
+        title: বড় ঘটনা

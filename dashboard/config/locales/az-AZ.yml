@@ -1,0 +1,560 @@
+---
+az:
+  errors:
+    messages:
+      not_saved: 'Aşağıdakı səhfləri düzəldin:'
+      too_young: Bu materialın yaş məhdudiyyəti var və daha kiçik yaşlı şagirdlər
+        üçün açıq deyil.
+  activerecord:
+    errors:
+      messages:
+        blank: zəruridir
+    attributes:
+      user:
+        name: Göstərilən adınız
+        email: E-poçt
+        username: istifadəçi adı
+        password: Parol
+        password_confirmation: Parolun təsdiqi
+        current_password: Cari parol
+        locale: Dil
+        age: Yaşınız
+        gender: Cins
+        edit_header: Hesab Detallarına düzəliş edin
+        error:
+          future: gələcəkdə ola bilməz
+  hello: Salam, dünya
+  welcome_back: Bir daha xoş gəldiniz, %{name}
+  your_professional_learning_plan: Sizin peşəkar öyrənmə planınız
+  see_your_learning_plan: Öyrənmə planınıza baxın
+  submit: Göndər
+  unsubmit: Abunə olmamaq
+  previous_page: Əvvəlki səhifə
+  next_page: Növbəti səhifə
+  next_resource: Növbəti resurs
+  cancel: İmtina et
+  okay: Oldu
+  or: və ya
+  add_teacher_form:
+    code:
+      label: 'Müəllim əlavə edin:'
+      instructions: Xahiş edirik, sizin müəlliminiz tərəfindən sizin ilə paylaşılmış
+        kodu daxil edin. ABCDEF kimi 6 hərfli koddur.
+    submit: Müəllim əlavə edin
+  add_hint_form:
+    placeholder: Xahiş olunur ip-ucunu bura daxil edesiniz
+    submit: Məsləhət əlavə et
+  appname: Code.org
+  stage: mərhələ
+  stage_number: Mərhələ %{number}
+  puzzle: Tapmaca
+  trophies: kuboklar
+  courses: marşrutlar
+  unplugged_activity: Sərbəst fəaliyyət
+  of: "/"
+  more: DAHA ÇOX
+  less: DAHA AZ
+  beta: beta versiya
+  try_hoc: Kod Saatında özünüzü sınayın, buraya klikləyin >> 
+  try_k8intro: Bizim K-8 İnformatikaya Giriş kursunu (15-25 saat) sınaqdan keçirin
+  k8intro: K-8 yaş qrupu (12-13 yaşlılar) üçün İnformatikaya giriş kursu (15-25 saat)
+  already_started: 'Artıq başlamısınız? Burada davam edin >> '
+  demos: 'Admin: bütün demolar'
+  continue: Davam et
+  prize: mükafat
+  more_info: Daha ətraflı
+  auth:
+    sign_in_with: "%{provider} ilə daxil olun"
+    signed_in: Daxil oldunuz!
+    already_signedup: Artıq qeydiyyatdan keçmisiniz?
+    notyet_signedup: Hələ qoşulmamısınız?
+    google_oauth2: Google Hesabı
+    twitter: Twitter
+    facebook: Facebook
+    windowslive: Microsoft Hesabı
+    microsoft_v2_auth: Microsoft Hesabı
+    forgot_password: Parolunuzu unutmusunuz?
+    need_confirmation: Təsdiq göstərişlərini almamisiniz?
+    need_unlock: Kilidaçma göstərişlərini almamisiniz?
+  signup_form:
+    teacher_count: "%{count} müəllim artıq qeydiyyatdan keçib."
+    teacher_educator_guide: Təhsil işçisi üçün göstərişlərə baxın
+    title: Code.org da qeydiyyatdan keçin
+    school_name: Məktəbin Adı (vacib deyil)
+    school_address: Məktəbin ünvanı (vacib deyil)
+    address_placeholder: ünvan, şəhər, vilayət, poçt indeksi
+    gender: Cins (vacib deyil)
+    birthday: Ad günü (vacib deyil)
+    age: Yaşınız
+    user_type: Siz tələbəsiniz ya müəllim?
+    submit: Qeydiyyatdan keçin
+    teacher: Müəllimsiniz?
+    valid_username: Olar!
+    invalid_username: İstifadəçi adı ən azı 5 simvoldan ibarət olmalıdır
+    taken_username: Bu istifadəçi adı artıq götürülüb
+    valid_password: Düzgün parol!
+    invalid_password: Parol ən azı 6 simvol olmalıdır
+    mismatch_password: Daxil etdiyiniz iki parol üst-üstə düşmür
+    additional_information: Qeydiyyatı davam etdirmək üçün bəzi əlavə məlumatlara
+      ehtiyacımız var.
+    user_type_label: Hesab növü
+    user_type_teacher: Müəllim
+    user_type_student: şagird
+    field_is_required: zəruridir
+    email_preference_yes: Bəli
+    email_preference_no: Xeyr
+  school_info:
+    other: Digər
+    school: Məktəb
+    school_name: Məktəbin adı
+    school_zip: Məktəbin poçt indeksi
+    school_address: Məktəbin ünvanı
+    school_organization_name: Məktəb və ya təşkilatın adı
+    school_organization_zip: Məktəb və ya təşkilatın poçt indeksi
+  signin_form:
+    title: Artıq hesabınız var? Daxil olun
+    login: E-poçt
+    password: Parol
+    remember: Məni yadda saxla
+    submit: Daxil olun
+  signin:
+    try_heading: Qeydiyyatdan keçmədən özünüzü proqramlaşdırmada sınamaq istəyirsiniz?
+    try_hoc: Əvvəlcə Hour of Code yoxlayın
+    try_20hours: Bizim 20 saatliq İnformatikaya Giriş-i yoxlayın
+  signinsection:
+    welcome: "%{section_name} bölməsinə xoş gəldiniz"
+    name: Adınızı seçin
+    picture: İndi isə gizli şəkilinizi seçin
+    words: İndi isə gizli sözünüzü daxil edin
+    login: Daxil olun
+  password:
+    reset_form:
+      title: Parolunuzu unutmusunuz?
+      instructions: Aşağıda e-mail adresinizi daxil edin və biz sizə qurulmanı sıfırlamaq
+        üçün şifrə göndərəcəyik.
+      email: E-poçt ünvanı
+      submit: Göndər
+    change_form:
+      title: Parolunuzu dəyişin
+      new_password: Yeni parol
+      confirm_password: Yeni parolu təsdiqləyin
+      submit: Parolumu dəyişin
+  welcome_email:
+    subject: Sinifimizə qoşulun ("Code.org"da)
+    body: |
+      "Code.org"dakı informatika dərslərinə qeydiyyatdan keçmək üçün aşağıdakı keçidi klikləyin (mən sizin "müəlliminiz" olacağam):
+
+      %{link}
+
+      Bu dərsliklər əyləncəli, baxımlıdır və sadə, göstərişlərlə müşayiət olunan, oyunabənzər tapşırıqlar vasitəsilə informatikanın əsas anlayışlarını öyrədir. Kod yazmağı Bill Qeyts, Mark Tsukerberq, "Angry Birds" və "Plants vs. Zombies"dən öyrənin! :-)
+
+      %{name}
+  section:
+    type:
+      word: Məxfi söz
+      email: E-poçt
+  follower:
+    invite_sent: Dəvətnamə göndərildi
+    added_teacher: "%{name} müəlliminiz kimi əlavə olundu"
+    registered: Siz %{section_name} üçün qeydiyyatdan keçdiniz.
+    error:
+      signed_in: Zəhmət olmasa, davam etməzdən öncə sistemdən çıxın
+      username_not_found: "%{username} istifadəçi adı tapılmadı"
+      username_in_use: "%{username} artıq istifadə olunur, zəhmət olmasa, digərini
+        seçin"
+      no_teacher: "'%{teacher_email_or_code}' ilə daxil olan heç kim tapılmadı. Zəhmət
+        olmasa, onlardan burada qeydiyyatdan keçməyi xahiş edin və sonra onları yenidən
+        əlavə etməyə çalışın"
+      blank_code: Seçilmiş kodu daxil edin
+  reports:
+    error:
+      access_denied: Bu şəxsin statistikasına icazəniz yoxdur
+  crud:
+    new_model: Yeni %{model}
+    show: Göstər
+    edit: Düzəliş et
+    edit_model: "%{model} düzəliş et"
+    update: Yenilə
+    submit: Göndər
+    destroy: Məhv et
+    back: Geri
+    confirm: Əminsiniz?
+    created: "%{model} müvəffəqiyyətlə yaradıldı."
+    updated: "%{model} müvəffəqiyyətlə yeniləndi."
+  nav:
+    header:
+      finished_hoc: Kod Saatımı bitirdim
+      sign_in_to_save: Nəticələri itirməmək üçün daxil olun
+      free_play:
+        artist: Nə isə çəkin
+      project_gallery: Layihə qalereyası
+      sections: Bölmələr
+      teacher_community: Müəllim icması
+      professional_learning: Peşəkar təhsil
+      documentation: Təlimat və sənədlər
+      tutorials: Dərsliklər
+      educate_overview: Təlimçi üçün xülasə
+      educate_elementary: İbtidai məktəb
+      educate_middle: Orta məktəb
+      educate_high: Orta məktəbin yuxarı sinifləri
+      educate_hoc: Kod Saatı
+      educate_partner: Bizə tərəfadaş olun
+      educate_inspire: Bir şagirdi həvəsləndirin
+      educate_community: Onlayn icma
+      educate_tools: Alətlər və videolar
+      about_us: Haqqımızda
+      about_leadership: Rəhbərlik
+      about_donors: Donorlar
+      about_partners: Tərəfdaşlar
+      about_team: Tam komanda
+      about_news: Xəbər otağı
+      about_evaluation: Qiymətləndirmə
+      about_jobs: Vakansiyalar
+      about_contact: Bizimlə əlaqə saxlayın
+      about_faqs: Tez-tez verilən suallar
+      learn: Öyrənin
+      stats: Göstəricilər
+      help_us: Bizə kömək edin
+      teach: Öyrədin
+      about: Haqqımızda
+    user:
+      classroom: Müəllimin ev səhifəsi
+      label: Salam %{username}
+      stats: Mənim nəticələrim
+      settings: Mənim hesabım
+      logout: Çıxın
+      signin: Daxil olun
+      signup: Hesab yaradın
+      already_registered: Artıq qeydiyyatdan keçmisiniz?
+      team: Komanda
+      driver: Sürücü
+      create: Düzəlt
+      applab: Proqram Labı
+      artist: Rəssam
+      playlab: Oyun labı
+      minecraft: Minecraft
+      flappy: Flappy
+    popup:
+      progress_for_user: "%{name} adlı şagirdin nəticələri"
+      progress: Sizin nəticələriniz
+      lines: 'Yekun kod sətiri: %{lines}'
+      close: BAĞLA
+      mastery: Anlayışlar
+      puzzle_map: Mərhələlər
+      prizes: "%{total_trophies} kubokun hamısını yığ və hədiyyələr qazan!"
+      prize_earned: Siz %{total_trophies} kubokun hamısımı topladınız. Mükafatı qazandınız!
+      prize_us_only: "(Yalnız ABŞ-dan olan şagirdlər)"
+      prizes_link: daha ətraflı
+  teacher:
+    answer: Cavab
+    for_teachers_only: Ancaq müəllimlər üçün
+    title:
+      one: 'Müəlliminiz:'
+      other: 'Müəllimləriniz:'
+    remove: "(müəllimi sil)"
+    panel:
+      answer_viewer: Müəllim Paneli
+      student: şagird
+      try_it_yourself: özünüz edin
+      section: Bölmə
+      unsubmit: Abunə olmamaq
+      worked_with: Ilə işlədi
+      update_lock_settings: Kilid parametrlərini buradan yeniləyin.
+  user:
+    email_confirm_needed: 'E-poçt ünvanı təsdiqlənməyib:'
+    email_resend_confirm: Təsdiqləmə təlimatlarını yenidən göndər
+    new_password_hint: "(dəyişmək istəmirsinizsə, boş buraxın)"
+    current_password_hint: "(dəyişikliklərinizi təsdiq etmək üçün cari parolunuz lazımdır)"
+  user_level:
+    completed: Tamamlandı
+    tried: Yoxlanıldı
+  home:
+    title: Mənim nəticələrim
+    description: Kod Studiyası "Code.org" tərəfindən hazırlanmış onlayn kursların
+      məskənidir
+    lines_of_code: ŞAGİRDLƏR %{lines_count} SƏTİR KOD YAZIB
+    lines_of_code_linebreak: "%{students_count} MİLYON ŞAGİRD<br/>%{lines_count} SƏTİR
+      KOD YAZIB"
+    all_courses: Kurs 1, 2 və 3-ün icmalı
+    lesson_plans: Dərs planları
+    signin_message: Artıq qeydiyyatdan keçmisiniz? %{link}
+    student_reg_link: Şagird qeydiyyatı
+    teacher_reg_link: Müəllim qeydiyyatı
+    teacher_dashboard: Gedişat panelinə baxın
+    teacher_student_count_one: Sizin %{count} şagirdiniz var.
+    teacher_student_count: Sizin %{count} şagirdiniz var.
+    teacher_averages: Şagirdləriniz %{trophy_max} "Anlayışların mənimsənilməsi" kubokundan
+      orta hesabla %{trophy_average} dənəsini qazandılar.
+    classroom: Sizin sinfiniz
+    student_progress: Sizin təlim nəticələriniz
+    student_stats: Siz %{trophy_max} "Anlayışların mənimsənilməsi" kubokundan %{trophy_count}
+      dənəsini qazandınız.
+    student_left_off: 'Sonuncu qaldığınız yer:'
+    student_finished: Bütün dərslikləri başa vurdunuz, %{online_link} və ya %{local_school_link}də
+      başqa bir dərs seçin
+    local_school: yerli məktəb
+    online: onlayn
+    see_details: Təfərrüatına baxın
+    view_course: Kursu göstər
+    tryfirst: 'Yada, siz birinci dəfə üçün yoxlayın, və sonra qeydiyyatdan keçin:'
+    trynow: Elə indi sınaqdan keçirin
+    20hour_overview: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın
+      əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan
+      siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.
+    use_as_teacher: Saytı müəllim olaraq istifadə edin
+    heading_hoc2014: "<h2>Kod Saatı</h2><h1>Bütün yaşlar üçün</h1>"
+    heading_elementary: "<h2>20 saatlıq kurslar</h2><h1>Başlayanlar (bütün yaşlar)
+      üçün</h1>"
+    heading_apps: "<h2>Əyləncə üçün</h2><h1>Hərkəs</h1>"
+    heading_tools: "<h2>Növbəti addım üçün hazırsan?</h2><h1> Universitet üçün JavaScript
+      alətləri</h1>"
+    heading_legacy: "<h2>Bizim ümumi kursumuz</h2><h1>Bütün yaşlar üçün</h1>"
+    your_gallery: Qalereya
+    no_primary_course: Code Studiosu kursunu yoxla
+    print_certificate: Sertifikatı çap edin
+    announcement_title: Elanlar
+    announcement_learn_more_button: Daha ətraflı
+    announcement_try_now_button: Elə indi sınaqdan keçirin
+    announcement_petition_button: Adınızı əlavə edin
+  gender:
+    male: Kişi
+    female: Qadın
+    none: Cavab verməməyə üstünlük verirəm
+  user_type:
+    student: şagird
+    teacher: Müəllim
+  footer:
+    copyright: Müəllif Haqqı
+    more: Daha çox
+    feedback: Rəy verin
+    translate: Sizin dilinizə tərcümə etməkdə bizə kömək edin
+    support: Dəstək
+    support_url: http://support.code.org
+    tos_short: Şərtlər
+    tos: Xidmət şərtləri
+    privacy: Məxfilik siyasəti
+    secure: Təhlükəsiz versiya
+  reference_area:
+    title: Kömək lazımdır?
+    subtitle: Bu videolara və məsləhətlərə baxın
+    teacher: Həllə baxın
+    auth_error: Həlli görməyə səlahiyyətiniz yoxdur.
+  video:
+    tab: Video.
+    notes: Video yoxdur? Qeydləri göstər.
+    autoplay_option: Videoların avtoifası
+    download: Videonu endir
+  compatibility:
+    upgrade:
+      link: Daha ətraflı
+  slow_loading: Bu, adi halda olduğundan daha çox vaxt aparır...
+  try_reloading: Səhifəni yenidən yükləməyə cəhd edin
+  next_stage: Qurtardı! Növbəti mərhələyə keçin
+  download_pdf: Dərs planını aç
+  lesson_plan: Dərs Planı
+  view_lesson_plan: Dərs palnına baxın
+  pdf_download: PDF faylını endir
+  builder:
+    view: Görünüş
+    level:
+      create: Yeni səviyyə yarat
+      current: Cari Səviyyələr
+  upsell:
+    applab:
+      title: Proqram Labı
+      audience: 13+ yaş
+    hoc:
+      body: İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq
+        bu fürsətdən istifadə edib.
+    flappy:
+      title: Qanadlı Kod
+      body: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz? Qanadlı Kod
+        dərsliyimizi sınayın!
+    20-hour:
+      title: Sürətləndirilmiş kurs
+      body: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas
+        anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə
+        istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.
+      body_short: İnformatikanın əsaslarını 2-4-cü kursların sürətləndirilmiş versiyası
+        ilə öyrənin.
+    hoc2014:
+      try_frozen: '"Buzlu ürək"dən Anna və Elza ilə Rəssam'
+    gallery:
+      title: Qalereya
+      body: İstifadəçilərimizin düzəltdiyi proqram və rəsm işlərinin qalereyasına
+        baxın
+    gamelab:
+      audience: 13+ yaş
+    weblab:
+      audience: 13+ yaş
+    frozen:
+      title: Buzlu ürək
+    starwars:
+      title: Star Wars
+    minecraft:
+      title: Minecraft
+      body: Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin
+    minecraft2016:
+      title: Minecraft
+    aquatic:
+      title: Minecraft
+    hero:
+      title: Minecraft
+    unplugged:
+      audience: 4+ yaş
+    unplugged_conditionals:
+      title: Şərti ifadələr
+  gallery:
+    students_made_these_with_code: Şagirdlər bunları kod yazmaqla edib!
+    picture_count: Ötən <b>%{days}</b> gün ərzində şagirdlər öz kompüter proqramlarını
+      yazaraq <b>%{count}</b> şəkil çəkib. Hər proqramın necə işlədiyini görmək üçün
+      şəkilləri klikləyin.
+    activity_count: Ötən <b>%{days}</b> gün ərzində, şagirdlər öz kompüter proqramlarını
+      yazaraq <b>%{count}</b> mobil əlavə və şəkil düzəldib. Hər proqramın necə işlədiyini
+      görmək üçün şəkil və ekran təsvirlərini klikləyin.
+    want_to_make_your_own: Özünüz üçün də birini düzəltmək istərdiniz?
+    more: Daha çox &rarr;
+    header: Qalereya
+    header_playlab: Oyun labı
+    header_artist: Rəssam
+  landing:
+    support: Kömək istə
+    support_url: "//support.code.org"
+    documentation: Təlimat və sənədlər
+    tutorials: Dərsliklər
+  multi:
+    wrong_title: Yanlış cavab
+    wrong_body: Daxil etdiyiniz cavab yanlışdır. Lütfən, bir daha cəhd edin!
+    correct_title: Düzgün
+    correct_body: Bu düzgün cavabdır.
+  multi-submittable:
+    wrong_title: Təşəkkür
+    correct_title: Təşəkkür
+  level_group:
+    wrong_title: Təşəkkür
+    correct_title: Təşəkkür
+  level_group-submittable:
+    wrong_title: Təşəkkür
+    correct_title: Təşəkkür
+  match:
+    wrong_title: Yanlış həll
+    wrong_body: Daxil etdiyiniz həll yanlışdır. Lütfən, bir daha cəhd edin!
+    correct_title: Düzgün
+    correct_body: Bu düzgün cavabdır.
+  contract_match:
+    wrong_title: Yanlış cavab
+  text_match:
+    placeholder: Cavabınızı buraya daxil edin
+    open_response_title: Təşəkkürlər,
+    correct_title: Düzgün
+    correct_body: Bu düzgün cavabdır.
+  dialog:
+    ok: Oldu
+    startover_title: Yenidən başlamaq istədiyinizə əminsiniz?
+    startover_ok: Yenidən başla
+    startover_cancel: İmtina et
+  time:
+    hour: 1 saat
+    day: gün
+    week: həftə
+  age_interstitial:
+    age: Yaşınız
+  terms_interstitial:
+    tos: Xidmət şərtləri
+    privacy: Məxfilik siyasəti
+    accept: Qəbul et
+    print: çap
+  school_info_interstitial:
+    save: Yadda saxla
+  race_interstitial:
+    races:
+      white: Ağ
+      asian: Asyalı
+      other: Digər
+    submit: Göndər
+    decline: Bağla
+  progress:
+    not_started: başlanmayıb
+    in_progress: tamamlanmayıb
+    completed_too_many_blocks: tamamlanıb, artıq bloklar var
+    completed_perfect: tamamlanıb, əladır
+    assessment: yoxlama
+  studio:
+    courses_working_on: Üzərində işlədiyiniz kurslar
+    completed_courses: Tamamlanmış kurslar
+    all_courses: Bütün kurslar
+  project:
+    projects: Layihə qalereyası
+    create_a_project: 'Yeni bir layihə düzəlt:'
+    new: Yenisini düzəlt
+    rename: Adını dəyiş
+    save: Yadda saxla
+    delete: Sil
+    my_projects: Mənim layihələrim
+    project_gallery: Layihə qalereyası
+    share: Bölüşün
+    embed: Yerləşdir
+    close: Bağla
+    more: Daha çox
+    name: Ad
+    updated: Yeniləndi
+    really_delete: Sil?
+    delete_yes: Bəli
+    delete_no: Xeyr
+    saved: Qalereyada yadda saxlandı!
+    cancel: İmtina et
+    view_all: Layihələrimi göstər
+    remix: Remix
+    abuse:
+      go_to_code_studio: Kod Studiyasına keçin
+      report_abuse_form:
+        abuse_type:
+          other: Digər
+  peer_review:
+    accepted:
+      name: Qəbul edildi
+    rejected:
+      name: Rədd edildi
+  flex_category:
+    required: Yekun
+    content: Məzmun
+    practice: Öyrədici proqramlar
+  hoc_download:
+    title: Kod saatı yükləmələr
+    capsule_title: Internetiniz varmı?
+    instructions_headline: Əlaqə yoxdur?
+    minecraft_name: Maynkraft Kod Saatı
+    mac: Mac OS X
+  pd:
+    survey:
+      things_you_liked_s: Bu məşğələdə yerinə yetirdiyiniz tapşırıqlar barədə ən çox
+        bəyəndiyiniz iki şey və bəyənməyinizin səbəbi nə idi?
+    form_labels:
+      email: E-poçt
+      school_name: Məktəbin adı
+    form_entries:
+      gender:
+        male: Kişi
+        female: Qadın
+        none: Cavab verməməyə üstünlük verirəm
+      school_country:
+        canada: Kanada
+        chile: Çili
+        israel: İtrail
+      subjects:
+        cs: İnformatika
+        ict: IKT
+        math: Riyaziyyat
+        science: Elm
+        la: Dillər
+      resources:
+        kodable: Kodlanabilər
+      robotics:
+        kodable: Kodlanabilər
+      email_opt_in:
+        opt_in_yes: Bəli
+        opt_in_no: Xeyr
+  cookie_banner:
+    accept: Razıyam
+  gdpr_dialog:
+    true: Bəli

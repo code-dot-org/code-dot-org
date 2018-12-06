@@ -1,0 +1,74 @@
+ms:
+  data:
+    unplugged:
+      Unplug1:
+        title: Pengenalan kepada Sains komputer
+        desc: Pembelajaran ini akan memperkenalkan konsep Sains Komputer dan menerangkan apakah yang dilakukan oleh seorang Saintis Komputer. Pembelajaran ini juga akan memberikan pelajar-pelajar peluang untuk memainkan peranan sebagai seorang saintis komputer. Di penghujung aktiviti, setiap pelajar akan membawa pulang ingatan mengenai apa yang telah dipelajari. Anda mungkin cenderung untuk melangkau untuk mengajar kanak-kanak perbendaharaan kata yang berkaitan dengan pembelajaran seterusnya, tetapi dengan mempersembahkan kepada mereka dalam bentuk permainan dan menyeronokkan sekarang adalah jauh lebih produktif daripada menunggu untuk lebih banyak peluang lanjut.
+      Unplug2:
+        title: Pengiraan pemikiran
+      Unplug3:
+        title: Pengaturcaraan kertas graf
+      Unplug4:
+        title: Algoritma
+      Unplug5:
+        title: Fungsi
+      Unplug7:
+        title: Lagu
+      Unplug8:
+        title: Abstraksi
+      Unplug9:
+        title: Pengaturcaraan penyampai
+      Unplug10:
+        title: Internet
+      UnplugHappyMaps:
+        title: Peta-peta Gembira
+      RelayProgramming:
+        title: Pengaturcaraan penyampai
+      Conditionals:
+        title: Bersyarat
+      GraphPaperProgramming:
+        title: Pengaturcaraan kertas graf
+      ComputationalThinking:
+        title: Pengiraan pemikiran
+      Internet:
+        title: Internet
+      courseB_unplugged_MRF:
+        title: Cabut aktiviti
+      courseB_unplugged_loopyMRF:
+        title: Cabut aktiviti
+      courseC_Unplugged_ScreenOutTheMean:
+        title: Cabut aktiviti
+      courseD_unplugged_digitalCitizenship:
+        title: Cabut aktiviti
+      courseF_unplugged_powerOfWords:
+        title: Cabut aktiviti
+      courseA_unplugged_happyMaps:
+        title: Peta-peta Gembira
+      courseD_unplugged_graphPaperProgramming:
+        title: Pengaturcaraan kertas graf
+      courseD_unplugged_relayProgramming:
+        title: Pengaturcaraan penyampai
+      courseE_unplugged_internet:
+        title: Internet
+      UnplugHappyMaps_2018:
+        title: Peta-peta Gembira
+      GraphPaperProgramming_2018:
+        title: Pengaturcaraan kertas graf
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Cabut aktiviti
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Cabut aktiviti
+      Conditionals_2018:
+        title: Bersyarat
+      RelayProgramming_2018:
+        title: Pengaturcaraan penyampai
+      Conditionals_2019:
+        title: Bersyarat
+      GraphPaperProgramming_2019:
+        title: Pengaturcaraan kertas graf
+      RelayProgramming_2018_2019:
+        title: Pengaturcaraan penyampai
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Cabut aktiviti
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Cabut aktiviti

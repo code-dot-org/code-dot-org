@@ -1,0 +1,240 @@
+eu:
+  data:
+    callouts:
+      4-5 Bee Conditionals - FC Test_callout:
+        4_5_Bee_Conditionals_2_1: Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea.
+      4-5 Bee Conditionals 2_callout:
+        4_5_Bee_Conditionals_2_1: Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea.
+      Course 4 Artist 4_callout:
+        repeat_full_circle: Adierazi zenbatetan mugitu behar den zonbia biribil osoa egiteko.
+      Course 4 Artist 7_callout:
+        repeat_blocks: Erabili "Errepikatu" blokea eta inguratu horrekin lan eremuko blokeak
+      Course 4 Artist For Loops 4_callout:
+        place_counter_variable: Arrastatu zure kontaketa aldagaia bloke honen barrura
+      Course 4 Artist Functions 4_callout:
+        create_function: Klik egin hemen "Funtzioak" zabalgarria irekitzeko, eta ondoren "Funtzio bat sortu" botoian.
+      Course 4 Artist Functions 5 OLD_callout:
+        house_hint: Ondo da irudiak oraindik ez badu etxearen antza. Hurrengo puzlean konponduko dugu.
+      Course 4 Artist Functions 8_callout:
+        edit_function: Hemen klikatu zure funtzioa editatzeko.
+      Course 4 Artist Params 2_callout:
+        length_parameter: Funtzio hau eguneratu dezakezu "luzera" parametroa erabiltzeko moduan?
+      Course 4 Artist Params 4_callout:
+        create_function: Klik egin hemen "Funtzioak" zabalgarria irekitzeko, eta ondoren "Funtzio bat sortu" botoian.
+      Course 4 Artist Vars 1_callout:
+        repeat_blocks: Erabili "Errepikatu" blokea eta inguratu horrekin lan eremuko blokeak
+      Course 4 Artist Vars 10_callout:
+        set_sides: Erabili bloke hau ariketa osatzeko behar den zenbakia "aldeak" aldagaiari esleitzeko.
+      Course 4 Artist Vars 12_callout:
+        set_length: Erabili bloke hau "luzera"-ren balio egokia ezartzeko.
+      Course 4 Artist Vars 2_callout:
+        set_length: Erabili bloke hau "luzera"-ren balio egokia ezartzeko.
+      Course 4 Artist Vars 3_callout:
+        place_variable: Arrastatu zure aldagaia bloke honen barrura
+      Course 4 Artist Vars 6_callout:
+        degrees_per_side: Kalkula ezazu 360 zati alde kopurua, angelu bakoitza lortzeko, gradutan.
+      Course 4 Artist Vars 9_callout:
+        set_sides: Erabili bloke hau ariketa osatzeko behar den zenbakia "aldeak" aldagaiari esleitzeko.
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: Erabili "nektarra lortu" bloke berria.
+      Course 4 Bee For Loops 6_callout:
+        actions_category: Tresna kutxak look berria dauka! "Akzioak" blokeak hemen daude orain.
+      Course 4 Bee Params 2_callout:
+        edit_get_nectar: Erabili botoi hau funtzioa editatzeko eta aldatu Erlearen biraketa noranzkoa nektarra biltzeko.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: Sakatu "Hasi" zure programa probatzeko
+      Course 4 Maze 4_callout:
+        repeat: Jarri blokeak begiztaren barruan komandoak errepikatzeko
+      Course 4 Play Lab Params 3_callout:
+        edit_function: Hemen klikatu zure funtzioa editatzeko.
+      Course 4 Play Lab Params 6_callout:
+        edit_add_parameter: Klikatu "editatu" zure funtzioan parametro bat gehitzeko
+      Course 4 Play Lab Vars 1_callout:
+        arrows_move_actor: Geziak erabili aktorea mugitzeko.
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: Geziak erabili aktorea mugitzeko.
+      Eval Design Recipe .1_callout:
+        edit_function: Hemen klikatu zure funtzioa editatzeko.
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: Erabili menu zabalgarri hau elur maluta ezberdinak sortzeko!
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: Erabili menu zabalgarri hau elur maluta ezberdinak sortzeko!
+      Infinity_move_collide_callout:
+        Infinity_move_collide_callout: Gertaera honetan hots bat egin.
+      Infinity_move_directions_callout:
+        Infinity_move_directions_callout: Ze blokek mugitu araziko du gora Baymax gezia gora sakatzerakoan?
+        Infinity_move_directions_callout_arrow: Erabili gezi hauek gidatzeko
+      Infinity_move_right_callout:
+        Infinity_move_right_runbutton: Gehitu "mugitu" blokea hemen
+      Infinity_repeat_callout:
+        Infinity_repeat_callout: '"Mugitu" blokeak hemen kokatu'
+      NEW Course 4 Artist Functions 5_callout:
+        edit_function: Hemen klikatu zure funtzioa editatzeko.
+        function_editor_draw_square: Hau da zure funtzioaren definizioa. Bloke hauek egikaritzen dira "marraztu karratu bat" blokea erabiltzen duzun bakoitzean
+      NEW Course 4 Artist Functions 7_callout:
+        edit_function: Hemen klikatu zure funtzioa editatzeko.
+      NEW Course 4 Artist Functions 8_callout:
+        edit_function: Hemen klikatu zure funtzioa editatzeko.
+      NEW Course 4 Artist Params 10_callout:
+        create_function: Klik egin hemen "Funtzioak" zabalgarria irekitzeko, eta ondoren "Funtzio bat sortu" botoian.
+      NEW Course 4 Artist Params 9_callout:
+        edit_add_parameter: Klikatu "editatu" zure funtzioan parametro bat gehitzeko
+        add_and_drag_parameter: Idatzi hemen zure parametroaren izena, klikatu "gehitu" eta orduan arrastatu ezazu zure funtzioaren definiziora
+      NEW Course 4 Artist Vars 6_callout:
+        place_length_variable: Arrastatu "luzera" aldagaia hona galdera-ikurrak ordezkatzeko
+      NEW Course 4 Bee For Loops 5_callout:
+        actions_category: Tresna kutxak look berria dauka! "Akzioak" blokeak hemen daude orain.
+      New Frozen Project_callout:
+        snowflake_dropdown: Erabili menu zabalgarri hau elur maluta ezberdinak sortzeko!
+      Overworld Chop Trees_callout:
+        craft_callout_preplaced: Hona hemen hainbat bloke zu hasi ahal izateko
+      Overworld Chop Trees_2018_callout:
+        craft_callout_preplaced: Hona hemen hainbat bloke zu hasi ahal izateko
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Hona hemen hainbat bloke zu hasi ahal izateko
+      Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: Kode honen bitartez, zure etxea eraikitzen hasiko da. Bukatu dezakezu zuk?
+      Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Kode honen bitartez, zure etxea eraikitzen hasiko da. Bukatu dezakezu zuk?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Kode honen bitartez, zure etxea eraikitzen hasiko da. Bukatu dezakezu zuk?
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: Sakatu "Hasi" zure programa probatzeko
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: Sakatu "Hasi" zure programa probatzeko
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Sakatu "Hasi" zure programa probatzeko
+      Overworld Place Wall_callout:
+        craft_inside_repeat: Errepikatu ekintzak blokeak hemen txertatuz
+      Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Errepikatu ekintzak blokeak hemen txertatuz
+      Overworld Place Wall_2019_callout:
+        craft_inside_repeat: Errepikatu ekintzak blokeak hemen txertatuz
+      Ryan - 4-5 Bee Conditionals 2_callout:
+        4_5_Bee_Conditionals_2_1: Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea.
+      Ryan - Bee Conditionals_callout:
+        4_5_Bee_Conditionals_2_1: Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea.
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: Kode honek laba bilatzen du. Gehitu dezakezu agindu bat aurrera mugitzeko?
+      Underground Avoiding Lava_2018_callout:
+        craft_callout_moveforward: Kode honek laba bilatzen du. Gehitu dezakezu agindu bat aurrera mugitzeko?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Kode honek laba bilatzen du. Gehitu dezakezu agindu bat aurrera mugitzeko?
+      Underground Iron_callout:
+        craft_what_is_iron: Erauzi burdina!
+      Underground Iron_2018_callout:
+        craft_what_is_iron: Erauzi burdina!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: Erauzi burdina!
+      courseD_bee_conditionals2_callout:
+        4_5_Bee_Conditionals_2_1: Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea.
+      courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea.
+      courseD_bee_conditionals2_2019_callout:
+        4_5_Bee_Conditionals_2_1: Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea.
+      courseD_bee_conditionals2_test_callout:
+        4_5_Bee_Conditionals_2_1: Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea.
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: Erabili "sortu zirkulua" blokea eta aldatu tamaina.
+      frozen cross rotate_callout:
+        replace_questions_degree: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      frozen cross_callout:
+        repeat_blocks_1: "(1) Erabili bloke hau eta inguratu berarekin lan eremuko bloke grisak"
+        repeat_blocks_2: (2) Mugitu "Errepikatu" blokea hona, eta bloke grisak barruan jarri
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: Erabili "errepikatu" blokea irudi hau sortzeko.
+      frozen diamond_callout:
+        frozen_diamond_repeat: Erabili "errepikatu" blokea irudi hau sortzeko.
+      frozen freeplay_callout:
+        snowflake_dropdown: Erabili menu zabalgarri hau elur maluta ezberdinak sortzeko!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Erabili menu zabalgarri hau elur maluta ezberdinak sortzeko!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Erabili menu zabalgarri hau elur maluta ezberdinak sortzeko!
+      frozen line_callout:
+        move_elsa_forward: Arrastatu "Mugitu aurrera" blokea eta utzi "Martxan dagoenean" blokearen azpian Elsa aurrera mugitzeko
+      frozen line_b_callout:
+        move_elsa_forward: Arrastatu "Mugitu aurrera" blokea eta utzi "Martxan dagoenean" blokearen azpian Elsa aurrera mugitzeko
+      frozen line_test_callout:
+        move_elsa_forward: Arrastatu "Mugitu aurrera" blokea eta utzi "Martxan dagoenean" blokearen azpian Elsa aurrera mugitzeko
+      frozen perpendicular_callout:
+        turn_elsa: Erabili "Biratu" blokea Elsari birarazteko. Menu zabalgarrian ageri den zenbakiak adierazten du zenbat biratuko duen Elsak
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: Erabili "sortu elur-malutaren adarra" blokea
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Erabili "sortu elur-malutaren adarra" blokea
+      frozen square iterative_callout:
+        frozen_create_square: Gehitu bloke gehiago hemen karratu bat sortzeko
+      frozen square iterative_b_callout:
+        frozen_create_square: Gehitu bloke gehiago hemen karratu bat sortzeko
+      frozen square iterative_test_callout:
+        frozen_create_square: Gehitu bloke gehiago hemen karratu bat sortzeko
+      frozen square loop 3x_callout:
+        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      frozen square loop 3x_b_callout:
+        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      frozen square loop 3x_test_callout:
+        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      frozen square loop_callout:
+        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      frozen square loop_b_callout:
+        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      frozen square loop_test_callout:
+        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      frozen square snowflake_callout:
+        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      frozen square snowflake_b_callout:
+        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      frozen square snowflake_test_callout:
+        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      grade3_ConditionalsElse_2_callout:
+        4_5_Bee_Conditionals_2_1: Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea.
+      grade3_bee_conditionals_quantum2_callout:
+        4_5_Bee_Conditionals_2_1: Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea.
+      grade4_artist_parameters_squares1_callout:
+        edit_add_parameter: Klikatu "editatu" zure funtzioan parametro bat gehitzeko
+        add_and_drag_parameter: Idatzi hemen zure parametroaren izena, klikatu "gehitu" eta orduan arrastatu ezazu zure funtzioaren definiziora
+      grade4_bee_conditionals_quantum2_callout:
+        4_5_Bee_Conditionals_2_1: Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea.
+      grade4_frozen_freeplay_callout:
+        snowflake_dropdown: Erabili menu zabalgarri hau elur maluta ezberdinak sortzeko!
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: Erabili "sortu zirkulua" blokea eta aldatu tamaina.
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: Erabili "errepikatu" blokea irudi hau sortzeko.
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: Erabili "errepikatu" blokea irudi hau sortzeko.
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: Erabili "errepikatu" blokea irudi hau sortzeko.
+      grade4_frozen_square_callout:
+        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      grade4_frozen_square_loop1_callout:
+        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      grade4_frozen_square_loop2_callout:
+        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      grade4_frozen_square_loop3_callout:
+        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      grade5_artist_parameters_squares1_callout:
+        edit_add_parameter: Klikatu "editatu" zure funtzioan parametro bat gehitzeko
+        add_and_drag_parameter: Idatzi hemen zure parametroaren izena, klikatu "gehitu" eta orduan arrastatu ezazu zure funtzioaren definiziora
+      grade5_artist_parameters_triangles1aa_callout:
+        edit_add_parameter: Klikatu "editatu" zure funtzioan parametro bat gehitzeko
+        add_and_drag_parameter: Idatzi hemen zure parametroaren izena, klikatu "gehitu" eta orduan arrastatu ezazu zure funtzioaren definiziora
+      grade5_artist_variables_pentagons1_callout:
+        place_length_variable: Arrastatu "luzera" aldagaia hona galdera-ikurrak ordezkatzeko
+      grade5_artist_variables_pentagons12_callout:
+        set_length: Erabili bloke hau "luzera"-ren balio egokia ezartzeko.
+      grade5_artist_variables_square7_callout:
+        degrees_per_side: Kalkula ezazu 360 zati alde kopurua, angelu bakoitza lortzeko, gradutan.
+      grade5_artist_variables_triangles2_callout:
+        set_length: Erabili bloke hau "luzera"-ren balio egokia ezartzeko.
+      grade5_playlab_variables1_callout:
+        arrows_move_actor: Geziak erabili aktorea mugitzeko.
+      grade5_playlab_variables11_callout:
+        edit_add_parameter: Klikatu "editatu" zure funtzioan parametro bat gehitzeko
+      grade5_playlab_variables1ask_callout:
+        arrows_move_actor: Geziak erabili aktorea mugitzeko.

@@ -1,0 +1,29 @@
+---
+ga:
+  data:
+    function_names:
+      x: x
+      draw a circle: tarraing ciorcal
+      draw a hexagon: tarraing heicseagán
+      draw a flower: tarraing bláth
+      draw a square: tarraing cearnóg
+      draw a snowflake: tarraing calóg shneachta
+      draw a tree: tarraing crann
+      draw a triangle: tarraing triantán
+      draw a house: tarraing teach
+      draw a star: tarraing réalta
+      do something: rud éigin a dhéanamh
+      jump: léim
+      set score: socraigh an scór
+      get nectar: faigh neachtar
+      test: tástáil
+      diamond: diamant
+      move: téigh
+      move right: téigh ar dheis
+      move up: téigh suas
+      move down: téigh síos
+      move left: téigh ar chlé
+      collect: bailigh
+      turn left: cas ar chlé
+      move forward: téigh ar aghaidh
+      turn right: cas ar dheis

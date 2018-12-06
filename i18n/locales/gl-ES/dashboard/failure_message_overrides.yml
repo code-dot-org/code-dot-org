@@ -1,0 +1,5 @@
+gl:
+  data:
+    failure_message_overrides:
+      Kiki_StarWars_Test_5_failure_message_override: Rematou o xogo!
+      Kiki_StarWars_Test_5_Example_failure_message_override: Rematou o xogo!

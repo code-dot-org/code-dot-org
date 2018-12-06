@@ -1,0 +1,2645 @@
+---
+gl:
+  slides:
+    maze_intro:
+      1:
+        text: Benvido á súa primeira Hora do Código! Ímonos mergullar na súa primeira
+          experiencia con programación.
+      2:
+        text: Imos usar o Blockly, unha linguaxe de programación visual onde vostede
+          arrastra e solta bloques para escribir código.
+      3:
+        text: A programación é xeralmente en liñas de código escrito, no entanto o
+          "Blockly" é visual. Cada bloque corresponde a unha liña de código "real".
+      4:
+        text: Vostede vai aprender o básico da informática, que consiste en conceptos
+          usados no desenvolvemento de aplicacións e até mesmo para controlar unha
+          sonda en Marte.
+      5:
+        text: Un programa é un conxunto de instrucións a seren seguidas polo seu computador.
+      6:
+        text: O obxectivo do seu primeiro programa é levar o Angry Bird até un Porco
+          Verde a través do labirinto.
+      7:
+        text: O lado esquerdo é o labirinto onde o programa é executado. As instrucións
+          para cada desafío están debaixo labirinto.
+      8:
+        text: A caixa de ferramentas do medio contén os comandos do Angry Bird. Vostede
+          vai usalos para crear o seu programa.
+      9:
+        text: Á dereita vostede ten a súa área de traballo, onde vai arrastrar os
+          bloques da caixa de ferramentas para crear o seu programa. Para excluír
+          un bloque, arrástreo para a recolledora de lixo no recanto.
+      10:
+        text: Cada bloque é unha instrución. Se vostede arrastra un bloque "avance"
+          para a súa área de traballo e preme en "Executar Programa", o paxaro móvese
+          un espazo para diante no labirinto.
+      11:
+        text: Para facer máis de unha acción, vostede pode arrastrar varios bloques
+          para a súa área de traballo e conectalos os uns aos outros. O paxariño obedecerá
+          os comandos de enriba para baixo.
+      12:
+        text: Se executa un programa e quere corrixilo, clique en "Recomezar".
+      13:
+        text: Imos apañar estes porcos!
+    artist_intro:
+      1:
+        text: Ola, son o JR! Todo equipo de carreira precisa da informática para gañar.
+          Analizan os datos do coche para facelo máis rápido.
+      2:
+        text: Nestes desafíos vostede vai ser un artista que debuxa por todo lugar
+          que pasa.
+      3:
+        text: Este bloque di "avance por 100 pixels". Pixels son puntos minúsculos
+          na súa pantalla.
+      4:
+        text: Este bloque di "vire á dereita 90 graos". Este bloque funciona da mesma
+          forma que o bloque "vire" no desafío do labirinto.
+      5:
+        text: Clica na frecha en calquera un destes bloques para alterar o número
+          de movementos do artista, tanto para avanzar canto para virar. Xogue cos
+          novos bloques para ver como funcionan.
+    farmer_intro:
+      1:
+        text: Ola, eu son a Paola! Nestes desafíos, vostede é unha campesiña que precisa
+          deixar o seu terreo completamente plano para comezar o plantío.
+      2:
+        text: Precisa axudarlle a remover todos os montes de terra e cubrir todos
+          os buracos.
+      3:
+        text: Os novos bloques removen 1 pa de terra dun monte, e cobren o buraco
+          con 1 pa de terra.
+      4:
+        text: Os montes de terra e os buracos son de tamaños distintos, entón ten
+          que dicir á campesiña cantas pas usar.
+    flappy_intro:
+      1:
+        text: Ola, eu son Katie! Unha das cousas máis emocionantes da informática
+          é que un programa de computador pode ser interactivo.
+      2:
+        text: Sempre que alguén preme, teclea, ou toca na pantalla dun móbil, xérase
+          un EVENTO, e existen algúns códigos que deciden o que facer cando un EVENTO
+          ocorre.
+      3:
+        text: 'Por exemplo, vostede podería ter un MANIPULADOR DE EVENTOS que di "cando
+          se prema o rato, toque un son" '
+      4:
+        text: Vostede xa oiu falar do xogo Flappy Bird? Usando manipuladores de eventos,
+          imos aprender a programar a nosa propia versión do Flappy Bird!
+      5:
+        text: O código que vai escribir consiste en arrastrar e soltar bloques que
+          representan os comandos para o computador. Na verdade, cada un destes bloques
+          é representado polo código real.
+      6:
+        text: 'Se dá unha ollada na área de traballo, existen algúns bloques verdes
+          que son cubertos para vostede - eses son os "manipuladores de evento" '
+      7:
+        text: Se quere que o paxariño VOE cando vostede PREMER, pode anexar o bloque
+          "FLAP" ao manipulador de evento apropiado. Así, sempre que vostede prema,
+          o paxariño vai voar.
+      8:
+        text: En cada desafío desa actividade, imos introducir novos tipos de eventos,
+          como os bloques verdes na área de traballo, e pode decidir que bloques son
+          apropiados para agregar en resposta a eses eventos.
+      9:
+        text: Cando observe unha frecha suspensa como esta, significa que pode alterar
+          as configuracións, como o son a ser reproducido cando o paxaro bata no chan.
+      10:
+        text: No desafío final vai poder crear o seu propio xogo e compartir cos seus
+          amigos. Divírtete!
+    loop_times:
+      1:
+        text: Ola, eu son o Mark! Imos aprender sobre bucles. Usando bucles pode dicir
+          a un computador que repeta calquera conxunto de accións continuamente, miles
+          ou mesmo millóns de veces.
+      2:
+        text: Neste desafío, queremos facer o paxaro avanzar 5 espazos para chegar
+          ao porco.
+      3:
+        text: Podemos usar o novo bloque "repita" para nos axudar.
+      4:
+        text: En vez de arrastrar 5 bloques "avance"...
+      5:
+        text: Podemos colocar o bloque "avance" dentro do bloque "repita" e escribir
+          un número no bloque para definir o número de repeticións.
+      6:
+        text: 'E isto é importante: pode colocar máis dun comando dentro dun bloque
+          "repita".'
+      7:
+        text: Aproveite o  novo bloque "repita"!
+    loop_until:
+      1:
+        text: Ola, eu son o Chris. Antes de entrar para o Miami Heat, fun para a Georgia
+          Tech para estudar informática. Imos dar unha ollada no noso novo bloque,
+          o bloque "repita até".
+      2:
+        text: E se nós non soubesemos canto tivo que se mover o paxaro para chegar
+          ao porco?
+      3:
+        text: Se colocamos un bloque "avance" dentro do bloque "repita até", o paxaro
+          vai seguir adiante ATÉ chegar ao porco (ou se chocar contra unha parede).
+      4:
+        text: 'E iso é importante: así como antes, podemos colocar varios bloques
+          dentro do bloque "repita até", e todos eles serán repetidos.'
+    if:
+      1:
+        text: 'Ola, eu son o Bill! Imos aprender un novo concepto fundamental: instrucións
+          "se". É así como os computadores toman decisións.'
+      2:
+        text: 'Vostede usa a instrución "se" todos os días. Toda mañá, antes de saír,
+          vostede di: SE estivese chovendo alí fóra, vou precisar da miña chaqueta.'
+      3:
+        text: Podemos dicir ao zumbi que verifique SE hai camiño para a esquerda e,
+          se atopa un camiño para a esquerda, precisamos viralo naquela dirección.
+      4:
+        text: Para programar isto, imos arrastrar o noso bloque "se" e colocar un
+          bloque "vire á esquerda" dentro del.
+      5:
+        text: Agora, se colocamos un bloque "avance" por enriba del e colocamos todo
+          dentro dun bloque "repita", a cada vez que o zumbi se mova vai verificar
+          se hai un camiño para a esquerda e virar. O comando "repita" é fundamental
+          para verificar a necesidade de virar a cada paso.
+      6:
+        text: 'As instrucións "se" son moi importantes para a informática. Un dos
+          primeiros programas que escribín foi un xogo da vella, e había unha instrución
+          "se" que dicía: SE a outra persoa está a piques de gañar, bloquee a casa
+          que lle permitiría gañar.'
+      7:
+        text: Divírtete usando o bloque  "se"!
+    if_else:
+      1:
+        text: Ola, o meu nome é Saloni. A informática axúdame a resolver problemas
+          das áreas da saúde e medicina. Imos aprender sobre o bloque "se-senón".
+          Parece o bloque "se", pero cunha parte extra no final que di "senón".
+      2:
+        text: Se eu coloco un bloque "avance" na instrución "faga", e un bloque "vire
+          á esquerda" na instrución "senón", significa que o zumbi vai escoller entre
+          2 opcións. SE existe un camiño diante, o zumbi vai avanzar e, EN CASO CONTRARIO
+          (non hai un camiño adiante), o zumbi vai virar á esquerda.
+      3:
+        text: Así como o bloque "se", nós podemos colocar bloques "se-senón" dentro
+          de bloques "repita", así o zumbi continuará se movendo, e o bloque "se-senón"
+          continuará verificando se é posíbel virar para algún lugar.
+      4:
+        text: Agora coloque cada zumbi no lugar debido!
+    if_else_scrat:
+      1:
+        text: Un comando se-senón é unha decisión entre dúas opcións. Imos ver como
+          podemos usar un comando se-senón co noso amigo Scrat, o esquío.
+      2:
+        text: Este bloque parece igual ao bloque "se", pero hai unha parte extra no
+          final que di "senón". Se eu colocar un bloque "avance" na instrución "faga",
+          e un bloque "vire á esquerda" na instrución "senón", significa que o esquío
+          Scrat vai avanzar se houbese un camiño diante. Se non houbese camiño diante,
+          o Scrat vai virar á esquerda.
+      3:
+        text: Significa tomar unha decisión e facer unha das dúas accións con base
+          nesa decisión. E, así como os bloques "se", pode colocar bloques "se-senón"
+          dentro de bloques "repita".
+      4:
+        text: Agora imos axudar Scrat, o esquío, a apañar esa landra!
+    function:
+      1:
+        text: Ola, eu son a Brina, unha engeñeira do Instagram. Unha función é un
+          conxunto de liñas de código que se desexan usar varias veces. Entón, en
+          vez de escribir ese código cada vez, vostede pode usar só unha liña.
+      2:
+        text: Imos aprender a definir funcións. As definicións de función teñen unha
+          estrela no recanto. O nome da función está escrito na liña superior.
+      3:
+        text: Os bloques que van dentro da definición din o que fai. Entón, esta definición
+          de función chámase "cubra 5", e está composta por un bloque "repita" e un
+          bloque "cubra".
+      4:
+        text: A definición está na área de traballo, pero a campesiña non vai executar
+          a función até que arrastremos o bloque "cubra 5" para fóra da categoría
+          funcións.
+      5:
+        text: 'Imos actuar en "función" da diversión! '
+    loop_while:
+      1:
+        text: 'Ola, eu son o Makinde! Imos aprender sobre o bloque "mentres". '
+      2:
+        text: O bloque "mentres" vai facer todo o que vostede coloque no seu interior,
+          SEMPRE QUE a declaración na parte superior sexa CERTA.
+      3:
+        text: Por exemplo, se a campesiña está nun monte de terra continuará a remover
+          1 pa MENTRES haxa terra debaixo dela.
+    loop_for:
+      1:
+        text: Ola, eu son a Trina, e traballo para a Pixar. Xa traballei nunha cheia
+          de filmes, incluíndo o Shrek.
+      2:
+        text: Este é o noso novo bucle "contador". Executará accións repetidamente,
+          e vostede pode facer que as accións muden aos poucos.
+      3:
+        text: Neste exemplo, o noso bucle "contador" di "conte de 50 até 90, indo
+          de 10 en 10" e, dentro del, temos o noso bloque "debuxe un cadrado". Arrastre
+          o bloque "contador" da sección "Variábeis" para o sitio que indica "lonxitude".
+      4:
+        text: Iso significa que o noso artista vai debuxar un cadrado con lados de
+          50 pixels de lonxitude, e entón vai engadir 10 e debuxar un cadrado con
+          lados de 60 pixels de lonxitude. Vai continuar agregando 10 e debuxando
+          cadrados até que atinxa 90 pixels. Así, imos ter cadrados de 50, 60, 70,
+          80 e 90 pixels.
+    parameters:
+      1:
+        text: Ola, eu son a Janete, e eu son unha engeñeira da Zynga.
+      2:
+        text: E se quixéramos debuxar unha cheia de triángulos de tamaños distintos?
+      3:
+        text: Podemos escribir todo o código á man ou podemos usar unha función con
+          parámetros.
+      4:
+        text: Para facer iso, clique na estrela azul sobre a definición da función
+          "debuxe un triángulo". Arrastre o "nome de entrada" para o bloque "entrada".
+      5:
+        text: Entón, se escribe "lonxitude" no sitio onde hai un "x" e aperta "Enter",
+          vai crear unha lonxitude de entrada para a súa función.
+      6:
+        text: Entón, clique na estrela. Agora vai premer na categoría de variábeis
+          e arrastrar o bloque "lonxitude" para dentro do bloque "avance" da súa definición
+          da función. E arrastre para fóra o antigo bloque de número.
+      7:
+        text: Para usar a súa función con parámetros, clique na categoría funcións
+          e arrastre para fóra a función "debuxe un triángulo con lonxitude".
+      8:
+        text: Agora pode usar o bloque de matemáticas para entrar con números distintos
+          e debuxar triángulos de tamaños distintos.
+    hoc_wrapup:
+      1:
+        text: Parabéns! Co último desafío resolto, acabou de escribir o código que
+          pode dicir a CALQUERA robot como encontrar o o seu camiño a través dun labirinto
+          sen ramificación ou dun túnel de calquera lonxitude, sexa el un zumbi, un
+          paxaro, unha sonda en Marte ou até mesmo un coche sen condutor.
+      2:
+        text: Os conceptos básicos que usou son o corazón de calquera programa ou
+          aplicación. Aprendemos sobre bucles de repetición, instrucións de repeticións
+          condicionais, instrucións se, e instrucións se senón.
+      3:
+        text: Se gustou da primeira hora de programación, visite a code.org para continuar
+          a aprender a informática! Ao completar o noso curso de 20 horas, dominará
+          o básico de programación, e vai estar apto a aprender como programar aplicacións
+          para móbil, instrucións robóticas, xogos, e moito máis.
+      4:
+        text: 'A tecnoloxía está mudando todo o que facemos, e non importa se ti es
+          mozo ou vello: programar é divertido, é creativo, e todos poden aprender!'
+    20_wrapup:
+      1:
+        text: Mostrar notas aparecerá en breve!
+    frozen_intro:
+      1:
+        text: Ola, o meu nome é Lyndsey. Eu son modelo, actriz e tamén escribo as
+          miñas propias aplicacións. Imos usar a programación para explorar a maxia
+          e a beleza do xeo coa Anna e a Elsa.
+      2:
+        text: Vai crear flocos de neve e padróns mentres esquía, e un país das marabillas
+          invernal para compartir cos seus amigos.
+      3:
+        text: Na próxima hora, vai aprender os conceptos básicos da programación.
+          A programación tradicional é escrita, pero nós usaremos Blockly, bloques
+          visuais que pode arrastrar e soltar para escribir programas. Tamén é así
+          como os estudantes universitarios aprenden o básico. E por tras deses bloques,
+          vostede está creando códigos.
+      4:
+        text: Un programa é un conxunto de instrucións que di a un computador o que
+          debe facer. Imos construír un código, ou programa, que axudará á Elsa a
+          crear unha recta simple. Máis adiante imos usar isto para crear padróns
+          máis complexos.
+      5:
+        text: A súa pantalla está dividida en tres partes principais. Á esquerda ten
+          a superficie de xeo onde vai executar o seu programa. As instrucións de
+          cada nivel están escritas xusto abaixo da superficie.
+      6:
+        text: A parte do medio é onde fica a caixa de ferramentas, e cada un deses
+          bloques representa unha acción que pode ser realizada pola Elsa e a Anna.
+      7:
+        text: O espazo en branco á dereita é chamado de área de traballo, e é onde
+          imos crear o noso programa. Para se mover pola superficie de xeo, usará
+          o bloque "avance".
+      8:
+        text: 'Aquí, o bloque "avance" di: "avance 100 pixels". Cando prememos en
+          "Executar", o que acontece? a Elsa móvese unha correcta distancia na pantalla,
+          100 pixels, de verdade! Os pixels son, basicamente, minúsculos cadrados
+          na pantalla do seu computador.'
+      9:
+        text: O outro bloque que temos neste desafío di "vire á dereita 90 graos".
+          Cando usamos o bloque "vire á dereita", a Elsa fai unha determinada curva.
+          Pode xogar coa cantidade que desexe que a Elsa vire. O ángulo é medido a
+          partir do camiño diante da Elsa. Entón, este é un xiro de 90 graos. E este
+          é un xiro de 120 graos.
+      10:
+        text: Lémbrese de que é posíbel mudar o número de pixels e graos, premendo
+          nas frechas ao lado deles.
+    frozen_loops:
+      1:
+        text: Ola, eu son a Paola! Os computadores son realmente moi bos en repetir
+          accións. Pode contar até 10, 20 ou até 100, pero un computador pode contar
+          até un billón ou un trillón sen se cansar, e só levará algúns segundos.
+          Sexa contar, debuxar ou calquera outra actividade, os computadores poden
+          repetir accións centenares ou até billóns de veces.
+      2:
+        text: Na programación, podemos chamar a iso "bucle". Un bucle é o modo como
+          vostede repite o seu código diversas veces. No próximo desafío, a súa meta
+          é axudar á Anna a crear un cadrado co bloque "repita".
+      3:
+        text: Todos os bloques de código que colocar dentro do bloque "repita" serán
+          repetidos en secuencia, cantas veces vostede quixese.
+      4:
+        text: Para debuxar un cadrado pode usar os bloques "avance" e "vire á dereita"
+          catro veces. Pero o modo máis fácil de facer iso é dicir ao computador "avance"
+          e "vire á dereita 90 graos" unha vez e, despois, facerlle repetir este par
+          de accións catro veces. Para iso precisa colocar os bloques "avance" e "vire
+          á dereita" dentro dun bloque "repita".
+      5:
+        text: Lémbrese de que é posíbel mudar o valor no bloque "repita" a calquera
+          número, e el repetirá o que está dentro do bloque de acordo co número que
+          vostede escolla.
+    frozen_functions:
+      1:
+        text: Ola, eu son Chris Bosh. Son xogador de baloncesto profesional, e xa
+          programei cando estaba na facultade.
+      2:
+        text: Un dos conceptos máis importantes da informática é como definir novos
+          comandos. A maioría das linguaxes de computador teñen só 100 palabras ou
+          comandos. A arte e a maxia están, entón, en definir as súas propias palabras
+          novas a partir do básico.
+      3:
+        text: Despois de ensinar a un computador como facer unha acción unha vez usando
+          esta secuencia de comandos, vostede pode crear o nome que queira para esa
+          acción, así será máis fácil repetila despois. Ao definir e dar nome ao seu
+          propio comando estará creando unha función.
+      4:
+        text: Ola, eu son Jess. Na programación con bloques use funcións cando haxa
+          un conxunto de accións que quere repetir varias veces. Por exemplo, vostede
+          escribiu un código para crear un cadrado.
+      5:
+        text: 'Pode definir isto como unha función chamada "cree un cadrado". '
+      6:
+        text: Agora vostede ten un novo bloque que pode ser usado varias veces para
+          crear diversos cadrados.
+      7:
+        text: Moitas formas simples poden ser usadas para crear padróns máis complexos.
+          No próximo desafío o código que acaba de escribir para facer un círculo
+          estará dispoñíbel como unha nova función que pode facer círculos de distintos
+          tamaños. Pode usala para axudar á Elsa a crear padróns belos e intrincados
+          na neve?
+    playlab_intro:
+      1:
+        text: Nós imos crear xogos usando o Laboratorio. Os bos xogos teñen historias
+          e toda historia ten personaxes. Nós imos aprender como crear os nosos personaxes,
+          como un bruxo, alieníxenas e animais que falan, andan e interactúan os uns
+          cos outros. Ao final deste titorial poderá crear un xogo a partir do cero
+          e compartilo cos seus amigos.
+      2:
+        text: A súa pantalla está dividida en tres partes principais. Á esquerda está
+          o espazo do xogo onde o seu programa será executado. As instrucións para
+          cada nivel están escritas abaixo.
+      3:
+        text: A parte do medio é onde fica a caixa de ferramentas e cada un deses
+          bloques representa unha parte do código. O espazo en branco á dereita é
+          chamado área de traballo e é onde crearemos o noso programa.
+      4:
+        text: Para comezar terá que conectar os seus bloques ao bloque laranxa "cando
+          executar". É posíbel conectar diversos bloques os uns aos outros, arrastrándoos
+          até ver a liña amarela e, entón, eles encáixanse xuntos.
+      5:
+        text: Neste primeiro desafío o noso personaxe é un pingüín e nós faremoslle
+          dicir "Olá!", arrastrando o bloque "diga", conectándoo ao bloque "cando
+          executar" e tecleando "Ola". Nós tamén podemos facer que o pingüín se mova
+          usando os bloques "mova á dereita" e "mova á esquerda". Despois que os seus
+          bloques estean no lugar correcto prema no botón "executar" para ver o que
+          programou.
+      6:
+        text: Comece agora mesmo! Ao final conseguirá crear o seu propio xogo, con
+          todos os tipos de xogadores que poderán interactuar, ficar felices ou tristes,
+          marcar puntos ou lanzar bólas de fogo, ou até mesmo facer desaparecer uns
+          aos outros. Depende da súa imaxinación e do xogo que quere crear.
+    playlab_events:
+      1:
+        text: 'Agora imos aprender un pouco sobre algo que os programadores de xogos
+          usan todos os días: os eventos. Un evento di ao seu programa que debe estar
+          escoitando á espera de que algo aconteza. Cando tal cousa acontece, realiza
+          unha acción.'
+      2:
+        text: 'Algúns exemplos de eventos son: oir o clic do rato, presionar unha
+          tecla de dirección ou tocar a pantalla.'
+      3:
+        text: Agora imos facer que o robot espacial saúde os terráqueos cando un xogador
+          prema nel. Nós usaremos o bloque "cando premido" e conectarémoslle o bloque
+          "diga". Cando o xogador prema no robot espacial realizarase todo o que estivese
+          conectado ao bloque de evento "cando premido". O que di o seu alieníxena?
+      4:
+        text: Hai tamén os bloques "cando a frecha estivese presionada". Se lle conectas
+          os bloques "mova" será posíbel comezar a mover os seus personaxes para enriba,
+          para baixo, para a esquerda e para a dereita. Aos poucos, o seu xogo está
+          ficando cada vez máis interativo.
+    playlab_repeat_forever:
+      1:
+        text: Este é o bloque "repita infinitamente". Todo que estivese contido neste
+          bloque acontecerá repetidamente no xogo.
+      2:
+        text: Se quixéramos que un personaxe faga algo repetidamente, sen ningunha
+          acción do xogador, colocaremos eses bloques dentro do bloque "repita infinitamente".
+      3:
+        text: Neste desafío o noso obxectivo é axudar o mago a protexer as fronteiras
+          do reino, andando da esquerda para a dereita e viceversa, continuamente.
+          Aprender como repetir accións de comandos vai economizar moito do seu tempo
+          no futuro, cando vaia crear o seu propio xogo.
+    C1_artist_intro:
+      1:
+        text: Estes son os seus bloques de debuxo. Use o bloque correcto para mover
+          o artista para onde el precisa ir a cubrir as liñas grises.
+      2:
+        text: Estes son os bloques "salte". Cando os usas, o teu artista móvese pero
+          non debuxa, entón úseos para saltar para a próxima liña gris.
+    C1_bee_level_intro:
+      1:
+        text: As abellas non son super estupendas? Neste próximo conxunto de desafíos,
+          o seu obxectivo é axudar a abella a chegar até as flores, obter o seu néctar
+          e voar até a colmea para producir mel. Neste exercicio precisarás usar os
+          bloques "obteña néctar" e "faga mel".
+      2:
+        text: 'Cada flor ten un número distinto de néctares: 1, 2, 3, ou máis. Sabemos
+          a cantidade de néctar presente nas flores vermellas, por medio do pequeno
+          número no recanto. Así que lémbrese de obter todo o néctar da flor antes
+          de avanzar. Alén diso, cada colmea pode almacenar só unha cantidade correcta
+          de mel: 1, 2, 3, ou máis. Entón lémbrese de producir o máximo de mel que
+          unha colmea pode almacenar.'
+      3:
+        text: Se podes obter todo o néctar e producir todo o mel, daquela triunfaches
+          e irás ao próximo nivel. En caso contrario precisas realizar este desafío
+          novamente. Xoga un pouco e ve como a programación é doce como o mel!
+    C1_bee_loops:
+      1:
+        text: Un bucle é unha repetición dunha actividade. Ao entrar nunha colmea
+          para inspeccionar, eu miro para un cadro e colócoo dado a volta, e entón
+          eu repito esa mesma actividade varias veces. Estou repetindo, facendo a
+          mesma actividade varias veces.
+      2:
+        text: Neste nivel, queremos que a abella recade tres néctares da flor. Ao
+          contrario de usar tres bloques "obteña néctar", vas usar o bloque repita
+          para obter néctar tres veces. Clica en "Executar" e comproba se acertaches.
+          A tope!
+    C1_bigevent_unplugged:
+      1:
+        text: Esta lección chámase o gran evento. Vai de como podemos controlar os
+          nosos programas e do feito de alterar un programa en execución usando eventos,
+          como apertar un botón ou premer no rato.
+      2:
+        text: Para esta lección serás controlado por un control remoto en papel. É
+          como un vídeo-xogo na vida real.
+      3:
+        text: Un evento é unha acción que fai que algo aconteza. É como cando premes
+          no botón do rato e unha páxina cárgase. Iso é un evento. Cando tocas a pantalla
+          do teu tablet para avanzar a pantalla, iso tamén é un evento. Os eventos
+          son unha excelente maneira de deixar que o usuario dirixa o seu programa
+          para onde el queira ou precise.
+      4:
+        text: Acontecen cousas ás cales todos respondemos. Sentimos fame e imos até
+          a neveira. Escoitamos o carteiro chegar e entregar a correspondencia e imos
+          até a porta buscala. Eses eventos son como apertar un botón ou mover un
+          control de vídeo xogo. Son cousas que acontecen e que fan que realicemos
+          algo.
+      5:
+        text: Nos xogos hai un evento chamado "actualización" e acontece 30 ou 60
+          veces por segundo. Para os programadores de xogos iso é case máis importante
+          como evento que os botóns ou o control do xogo.
+      6:
+        text: O principal evento que estamos observando é a "actualización". Entón
+          miramos para o control por un momento e dicimos "ah, alguén apertou o botón
+          nese cadro? Si ou non?". Sen eventos o xogador non podería se mover, chimpar,
+          nin podería controlar o que está a acontecer. O xogo non podería animar
+          cousa algunha.
+    C1_building_foundation:
+      1:
+        text: Na escultura de area tes que saber que o fallo forma parte do programa.
+          Pero se persistes, só representará máis emoción. Persisténcia é o nome do
+          xogo. Fica con ela, non te vas a arrepentir.
+      2:
+        text: Esta lección chámase "creando unha base". Nesta lección imos traballar
+          nunha tarefa realmente difícil. Vas descubrir como crear unha estrutura
+          tan alta como un destes vasos e será forte abondo para soportar o peso dun
+          libro.
+      3:
+        text: Pode haber momentos en que a nosa creación non funcionará. Pode haber
+          momentos en que nos frustraremos e pensaremos en desistir. Pode haber varios
+          deses momentos. Pero se continuamos tentando e dando o mellor de nós, con
+          certeza teremos éxito en pouco tempo.
+      4:
+        text: Persistencia significa aguantar firme cando realmente queres desistir.
+          Se queres crear algo novo e distinto, vas ter moitos fallos no camiño.
+      5:
+        text: O truco para persistir é escoller seguir adiante e aprender cos teus
+          fracasos en vez de desistir por estar frustrado. A frustración na verdade
+          significa que hai algo marabilloso esperando por nós. Entón, non desistas
+          antes de conseguilo!
+    C1_getting_loopy:
+      1:
+        text: 'Ola, o meu nome é Miral Kotb e son o creador do Iluminate. No meu traballo,
+          hai algo que usamos en ambos os dous, na danza e na programación de traxes
+          luminosos: son os bucles! Os bucles repiten unha acción varias veces.'
+      2:
+        text: Cando repites algo varias veces, como as miñas accións para manter o
+          hulahoop xirando, realizas unha repetición daquela acción. Isto é unha repetición.
+          Isto é unha repetición. E isto é unha repetición.
+      3:
+        text: Hoxe imos ter unha festa de danza. Imos facer repeticións cunha nova
+          danza, a iteración. Imos aprender máis sobre repeticións usando unha danza.
+          Vas aprender algúns pasos fáciles e repetilos varias veces para completar
+          a danza.
+      4:
+        text: Aquí están os pasos que precisas aprender. Bate palmas. Coloca as túas
+          mans atrás da cabeza. Coloca as mans na cintura. Levanta a túa man esquerda.
+          Levanta a túa man dereita. Fácil, non é? Vas descubrir que podes acurtar
+          as instrucións colocando algúns pasos de danza en bucles de repetición.
+      5:
+        text: Na verdade usamos repeticións na nosa danza. Os bailaríns están usando
+          computadores, todos na mesma rede. Eu podo repetir as luces para os mesmos
+          bailaríns varias veces. Na repetición eu podo ter unha iteración na cal
+          vou dicir que quero iterar por eses seis bailaríns varias veces e entón,
+          dentro do bucle, aumentar a velocidade da luz. Todo isto é creado usando
+          bucles de repetición. Os bucles son importantes na informática porque eles
+          fan o noso traballo máis breve e máis fácil.
+    C1_happy_maps_unplugged:
+      1:
+        text: Esta lección chámase Mapas divertidos. Hoxe imos axudar a nosa amiguiña
+          peluda Flurb a chegar até a súa froita.
+      2:
+        text: Fai a Flurb ir até a froita. Para facer isto precisas descubrir o camiño
+          que debe percorrer e dirixila coas frechas. Para que a Flurb chegue até
+          a mazá, en que direccións precisa ir? Apunta a frecha para enriba.
+      3:
+        text: Para facela chegar até alí, pon en un círculo a dirección na cal ten
+          que ir.
+      4:
+        text: Crea o teu algoritmo colando as frechas próximas ao mapa que estás tentando
+          resolver. O segundo é igual, pero vai para baixo.
+      5:
+        text: É como programar con papel. E é iso mesmo!
+    C1_maze_debugging:
+      1:
+        text: Depurar é encontrar e corrixir problemas. Hai varias formas de depurar
+          problemas. Unha das máis doadas é avanzar paso a paso até atopares algo
+          erroneo. Estou tentando facer un salto para tras na barra de equilibrio,
+          pero continúo caendo.
+      2:
+        text: Eu fixen todo o camiño, paso a paso, e descubrín onde estaba o meu erro.
+          Eu non estaba colocando as miñas mans na barra correctamente. Entón eu tentei
+          facer un salto para tras na barra coa miña nova posición de mans e conseguino.
+          Eu fiquei realmente feliz por ter depurado o meu salto para trás.
+      3:
+        text: Para aprender sobre depuración, xa comezamos cun conxunto de bloques
+          nesta etapa. Vas entender que eses bloques non te van levar até o obxectivo.
+          Precisamos depurar a solución para corrixila. O que foi erroneo? Vas entender
+          que era preciso ir máis un bloque para o oeste.
+      4:
+        text: Imos corrixir iso agregando outro bloque para o oeste e premendo en
+          Executar para ver se foi correcto. Conseguicho!
+    C1_maze_intro_sequencing:
+      1:
+        text: Para este desafío precisas levar o paxaro até o porco. Mira o desafío
+          e ve que direccións debe tomar.
+      2:
+        text: Precisas arrastrar os bloques da caixa de ferramentas para a área de
+          traballo. Verifica se está so o bloque "cando executar" e cando penses que
+          encontraches a solución correcta clica en "Executar" e ve como o paxaro
+          vai até o porco.
+    C1_maze_loops:
+      1:
+        text: Os computadores son moi bos en repetir comandos. Como persoa, ficarías
+          realmente aborrecido se tiveses que facer a mesma cousa varias veces en
+          secuencia. Pero un computador pode facer a mesma cousa millóns, ou até mesmo
+          billóns de veces, sen ficar aborrecido e aínda facelo moi ben.
+      2:
+        text: Por exemplo, se eu quixese desexar a todos no Facebook un feliz aniversario
+          enviando un e-mail, levaría máis dun século escribir os e-mails para todos.
+          Pero con só algunhas liñas de código, eu podo facer que o sistema envíe
+          un e-mail para todos no Facebook desexando un feliz aniversario.
+      3:
+        text: Para levar o paxaro até o porco neste nivel... en vez de arrastrar tres
+          bloques para o norte na área de traballo, podes usar o bloque "repita".
+          Arrastra o bloque "repita" para a área de traballo e coloca o número 3.
+          Entón, arrastra o bloque "mova para o norte" para dentro do bloque "repita"
+          e clica en "Executar" para ver se acertaches. Parabéns, conseguicho!
+    C1_moveitmoveit_unplugged:
+      1:
+        text: Esta lección chámase Creando camiños. Xuntos, imos escribir un programa
+          para levar os nosos amigos desde inicio, co compás, até o rostriño feliz.
+      2:
+        text: Pero o rostriño feliz está volto para baixo e só unha persoa sabe como
+          chegar alí. Imos iniciar ese programa.
+      3:
+        text: Un programa é un algoritmo que foi programado en algo que pode ser executado
+          por unha máquina. A maioría pensa nun programa como algo que escribimos
+          para un computador. Os programas son realmente bos para iso, pero tamén
+          son útiles noutros lugares. Pode crear o teu propio xogo ou mesmo programar
+          un robot para realizar tarefas para ti mesmo.
+    C1_going_places_safely:
+      1:
+        text: Ola, o meu nome é Jeremiah! Teño sete anos. Adoro xogar no computador
+          da miña nai, pero sempre pido permiso primeiro. "Nai, podo usar o computador?
+          Claro, querido!"
+      2:
+        text: Adoro o computador da miña nai porque podo acceder a internet. A internet
+          é como o teu barrio. Podes visitar lugares divertidos, falar coa túa familia
+          e amigos e aprender unha chea de cousas novas.
+      3:
+        text: Onte visitei un zoolóxico preto da miña casa. Vin unha cebra bebé. Saquei
+          unha foto dela e alterei a cor das súas listras, entón eu coloqueille un
+          chapéu e agregueina á miña colección de animais estraños. Incríbel! Despois,
+          fun a un lugar moi distante. Eu visitei a Quenia, un país da África. Alá
+          viven moitas cebras.
+      4:
+        text: Ás veces uso a internet para conversar con persoas que coñezo, como
+          miña avoa, que vive noutra vila. Ola avoa! Está facendo boliños para me
+          mandar no meu aniversario. "Hmm, quería que a internet tivese cheiro!".
+          Podo conversar con persoas distintas na internet, como fai o meu primo pero
+          só converso con persoas que coñezo.
+      5:
+        text: O que máis me gusta na internet é que podo xogar xogos divertidos. Punto!
+          Tamén me gusta debuxar e crear novas cousas para compartir cos meus amigos.
+          A tope! Ás veces visito sitios web nos cales aprendo cousas novas, pero
+          sempre accedo a sitios web apropiados para min. Uau, dinosauros!
+      6:
+        text: 'A internet é un lugar superdivertido. Pero, así como cando atravesas
+          unha rúa no teu barrio, tamén tes que ter coidado cando navegas on-line.
+          Aquí hai tres regras que non podemos esquecer. Regra número 1: sempre pide
+          permiso a teus pais. Regra número 2: fala soamente con persoas coñecidas.
+          Regra número 3: navega por páxinas apropiadas á túa idade.'
+      7:
+        text: Uau, isto foi divertido! Hora da cea. Vou saír agora. Mal podo esperar
+          para me conectar novamente e ver que máis podo visitar.
+    C1_pair_programming:
+      1:
+        text: Hoxe imos aprender sobre programación en parella. Na programación en
+          parella traballades como un equipo. Por que motivo dúas persoas deberían
+          usar un único computador? Porque dúas cabezas pensan mellor que unha. Na
+          programación en parella, ti e o teu compañeiro ides sentar xuntos nun computador
+          e ambos ides traballar no mesmo proxecto.
+      2:
+        text: Na programación en parella, unha persoa é o piloto e a outra é o navegador,
+          como nun coche. O piloto senta no computador e é quen usa o teclado e o
+          rato, ou a pantalla táctil, e controla as principais accións do computador.
+          A outra persoa é o navegador. Axuda o piloto respondendo ás preguntas del
+          e apuntando posíbeis problemas ou erros.
+      3:
+        text: A comunicación é a chave para o éxito da programación en parella. Non
+          insulte, sexa respectuoso, non sexa un navegador mandón, porque a ninguén
+          lle gusta quen fica dando ordes e tentando controlar a dirección todo o
+          tempo. Ti e o teu compañeiro debedes conversar sempre. O piloto pode explicar
+          o que está a facer, e o navegador pode axudar suxerindo o seguinte que facer.
+      4:
+        text: O navegador debe pensar sobre o problema todo, mentres o piloto concéntrase
+          nos detalles. Ambos os papeis son importantes. A programación en parella
+          ten que ver co traballo en equipo.
+    C1_planting_seed:
+      1:
+        text: Esta lección chámase Plantando unha semente e vai nos axudar a entender
+          algoritmos. Os algoritmos son instrucións específicas que explican a orde
+          en que se vai facer algunha cousa. Mesmo actividades cotiás, como tomar
+          café ou lavar os dentes, son algoritmos que esixen pequenas etapas para
+          realizar o traballo.
+      2:
+        text: Os computadores poden ser moi espertos, pero eles só entenden se ti
+          lles informas exactamente do que queres, paso a paso. O máis interesante
+          sobre algoritmos é que se segues as instrucións en orde, é posíbel facer
+          algo que non sabías como facer de antemán. É como seguir unha receita.
+      3:
+        text: Hoxe imos plantar as nosas propias sementes usando un algoritmo. Crea
+          o teu propio algoritmo separando as imaxes. Selecciona as imaxes que mostran
+          etapas de plantar unha semente e organiza esas imaxes na orde correcta.
+      4:
+        text: Agora, imos ver se o teu algoritmo funciona. Sigue os pasos do algoritmo
+          coidadosamente. Están na orde correcta? Conseguiches plantar unha semente
+          seguindo o algoritmo? Isto é como programar con imaxes!
+      5:
+        text: Cando queremos facer chocolate, hai varias etapas grandes nese proceso,
+          cada unha delas ten un conxunto de pasos menores e hai distintas receitas
+          ou algoritmos, dependendo do sabor que queiramos que teña o chocolate. Cada
+          etapa é importante, mesmo as menores, se saltamos unha delas as demais non
+          poden ser rematadas. Crear algoritmos que os outros poidan entender é moi
+          importante. É por iso polo que cada etapa debe ser escrita de forma que
+          o resultado sexa sempre o mesmo, non importa quen o faga.
+    C1_playlab_storytelling:
+      1:
+        text: Hora de ser creativo e usar as túas habilidades de programación para
+          contar unha historia. A túa historia terá personaxes e vas poder facer estes
+          personaxes conversaren e interactuar os uns cos outros. Comeza pensando
+          no tipo de historia que queres contar.
+      2:
+        text: O gato está sempre con medo do can, pero e se o gato descubre que o
+          can está tentando ser amigo? O bloque "cando executar" inicia todo. O bloque
+          "mova" vai mover o teu personaxe e o bloque "diga" vai facer oteu personaxe
+          dicir o que debes teclear.
+      3:
+        text: Este é o bloque "cando os personaxes chocan" que podes conectar aos
+          outros bloques.
+      4:
+        text: Eu estaba facendo o can vir aquí e dicir "Ola", pero o gato asustouse
+          e saíu correndo. "Ahh". Se houbese máis tempo, este sería un final feliz.
+          Fin!
+    C1_spelling_bee_intro:
+      1:
+        text: Este é o nivel da abella Soletrando. Usa as pezas para mover a abella.
+          Conforme se move vai recadar letras para soletrar palabras.
+      2:
+        text: Ve se podes soletrar a palabra que aparece na caixa abaixo da fase.
+          Pero coidado! Ir para a dirección errada agregará letras que non queres.
+    C1_zuck_repeat_loop:
+      1:
+        text: Os computadores son moi bos en repetir comandos. Como persoa, ficarías
+          realmente aborrecido se tiveses que facer a mesma cousa varias veces en
+          secuencia. Pero un computador pode facer a mesma cousa millóns, ou até mesmo
+          billóns de veces, sen ficar aborrecido e aínda facelo moi ben.
+      2:
+        text: Por exemplo, se eu quixese desexar a todos no Facebook un feliz aniversario
+          enviando un e-mail, levaría máis dun século escribir os e-mails para todos.
+          Pero con só algunhas liñas de código, eu podo facer que o sistema envíe
+          un e-mail para todos no Facebook desexando un feliz aniversario.
+      3:
+        text: Neste exemplo, o teu obxectivo é levar o paxaro até o porco. Agora,
+          podemos usar o bloque repita para facer isto con máis facilidade. Podes
+          facelo pasando ao computador cinco veces un comando avance para que o paxaro
+          dea un paso en dirección ao porco cada vez, ou podes simplemente dicir ao
+          computador que avance unha vez e entón dicirlle que repita iso cinco veces.
+          En ambos os casos o ordenador vai facer a mesma cousa.
+      4:
+        text: Para facer isto, debes arrastrar o teu comando "avance" e colocalo nun
+          bloque "repita". Entón, premes e escolles cantas veces debe realizar a acción
+          de "avanzar" o bloque "repita".
+      5:
+        text: Outra cousa é que podes colocar cantos comandos queiras dentro do bloque
+          repita. Entón, netse exemplo, estás dicindo que avance e vire á esquerda,
+          o que fará cinco veces. Divírtete!
+    C2_artist_intro:
+      1:
+        text: Ti nin te clasificas para a carreira se non tes persoas solventes en
+          informática, por causa da cantidade de datos que os coches recadan e a necesidade
+          de ter persoas que poidan escribir programas para descubrir como continuar
+          a mellorar a o rendimento.
+      2:
+        text: Nestes desafíos, serás un artista que usa un lápis para debuxar formas
+          distintas. O artista vai debuxar unha liña por onde pase.
+      3:
+        text: Para se mover na pantalla vas usar o bloque avance. Aquí o bloque avance
+          di de avanzar 100 pixels. Cando prememos en Executar, o que acontece? O
+          artista avanza certa cantidade, e esa cantidade é 100 pixels. Pixels son,
+          basicamente, uns cadradiños moi pequenos na pantalla do teu computador.
+      4:
+        text: O outro bloque que temos nese desafío di de virar 90 graos á dereita.
+          Cando arrastramos iso, o artista vira unha certa cantidade de graos. Entón,
+          podes xogar con canto desexas que o artista vire. Esta é unha curva de 90
+          graos.
+      5:
+        text: E esta é unha curva de 120 graos. Lémbrate, podes alterar estes valores
+          premendo nas frechas próximas aos números de pixels e graos. Divírtete debuxando
+          co teu artista!
+    C2_bee_conditionals:
+      1:
+        text: Este é o bloque condicional. Di que SE houbese néctar ou mel menor que,
+          igual a, ou maior que un número, ENTÓN algo debe ser feito.
+      2:
+        text: Isto é útil cando non sabemos canto néctar ou mel obter, como vemos
+          aquí con este punto de interrogación.
+      3:
+        text: Neste exemplo, imos dicir que SE a flor morada ten néctar maior que
+          0, que obteña néctar. Isto fará que a nosa abella continúe recadando néctar
+          mentres fose posíbel. Bingo!
+    C2_binary_bracelets:
+      1:
+        text: Está é a lección das Pulseiras binarias. Imos programar as nosas iniciais
+          nunha pulseira que podemos usar e mostrar a todos os nosos amigos!
+      2:
+        text: A forma binária é unha maneira de representar informacións usando só
+          dúas opcións. Ás veces as persoas pensan nela como só 1s e 0s. Pero a forma
+          binária pode ser representada con combinacións de conectado e desconectado,
+          para enriba e para baixo, entrada e saída, ou calquera conxunto de cousas
+          opostas.
+      3:
+        text: Ola, o meu nome é Orion e eu programo robots aquí na Play-im. Todos
+          os computadores e cerebros de robots son basicamente pequenas portas electrónicas.
+          Cando a porta está aberta, a electricidade pode pasar e, cando está pechada,
+          ela non pode pasar.
+      4:
+        text: Un exemplo de binario en robots son os ollos. Os ollos dos robots son
+          LEDs, luces que están acendidas ou apagadas. É un sistema binario, ou unha
+          cousa, ou outra. Podemos usar luces para representar números binarios. Se
+          temos un conxunto de robots, podemos dicir que o primeiro robot está na
+          casa dos 1s, o segundo na casa dos 2s, o terceiro na casa dos 4s, e así
+          por diante. É así como se representa un número binario. Os robots fan iso
+          cos seus ollos binarios e contan para ti.
+    C2_conditionals_with_cards:
+      1:
+        text: Esta lección chámase Condicionais con cartas. Todos os días tomas decisións
+          con base no que ves e oes.
+      2:
+        text: Eu quero ir até o parque, pero primeiro preciso decidir se debo levar
+          un paraugas ou non. Entón eu miro pola xanela. Se o tempo estivese nublado,
+          vou levar o meu paraugas. Senón, vou levar as miñas gafas de sol. Penso
+          que é mellor levar o paraugas. O que eu vexo e oio determina o que vou levar
+          ao parque.
+      3:
+        text: Os condicionais tamén se usan nos xogos. Hoxe imos practicar usar condicionais
+          cun xogo de cartas. Neste xogo, a carta que eu saco determina o que os meus
+          amigos van facer. Se eu saco un sete, todos baten palmas. Senón, todos din
+          "ahhhh". Imos tentar! "Ahhhh" "aplausos"
+      4:
+        text: Aposto que consegues facer xogos aínda máis divertidos con condicionais.
+          Tente! Os condicionais fan os computadores pareceren intelixentes. Un programa
+          de computador que inclúe condicionais pode reaccionar ante o usuario e variar
+          a súa acción.
+      5:
+        text: Pensa no teu xogo preferido. Gañas máis puntos por facer algunhas accións
+          en comparación con outras? Isto ocorre porque o computador está usando condicionais.
+          Esta é a forma en que o computador toma unha decisión. Por exemplo, se atinxes
+          o obxectivo, gañas dez puntos. Senón, perdes tres. Cando sabes como funcionan
+          esas condicións é posíbel crear todo tipo de xogos emocionantes.
+    C2_artist_debugging:
+      1:
+        text: Aquí xa temos algúns bloques na nosa área de traballo. Pero hai algo
+          erróneo.
+      2:
+        text: Imos depurar ese código diminuíndo a velocidade e vendo como pasa por
+          cada bloque, paso a paso.
+      3:
+        text: Ah, aí está o problema! Os bigodes do gato teñen 75 pixels de lonxitude,
+          e non 25.
+    C2_bee_debugging:
+      1:
+        text: Xa oiches falar de depurar un programa? Esa é unha forma de descubrir
+          o que non está funcionando. Cando depuras un código identificas os erros
+          e os eliminas.
+      2:
+        text: Aquí, xa temos algúns bloques na nosa área de traballo. Imos usar o
+          botón do paso para camiñar polos bloques, paso a paso, para ver se esta
+          é a solución correcta e onde podemos corrixila.
+      3:
+        text: Parece que o noso problema está aí! Necesitamos un bloque "avance" máis.
+          O botón de paso axúdanos a depurar o noso problema, identificando onde está
+          o erro para corrixilo.
+    C2_digital_footprint:
+      1:
+        text: Na túa cabeza pos o chapéu pero a túa cabeza tamén che di onde estás
+          e tamén a usas para pensar sobre o zoolóxico, e para acenar e dicir ola!
+          Usa a cabeza cando esteas on-line para gardar o que está na túa mente e
+          para saber te protexer, para saber como darte un pouco de privacidade! Da
+          cabeza aos pés, para, pensa. Dos pés até o teu nariz, para, e pensa on-line!
+      2:
+        text: Usa o teu corazón para medrar, date a ti mesmo un brillo saudábel, e
+          para conquistar alguén, dille a ese alguén ti serás meu! Usa o teu corazón
+          cando esteas on-line, se xentil, correcto e mostra respecto polos teus amigos,
+          se xusto e bo na internet. Da cabeza aos pés, para, pensa. Dos pés até o
+          teu nariz, para, e pensa on-line!
+      3:
+        text: Usa os teus brazos para abrazar a túa mascota, para evitar que as túas
+          roupas se mollen, para usar as túas mangas favoritas e para voar e crer.
+          Usa os teus brazos cando esteas on-line, para dar un tempo, equilibrar o
+          tempo, deixar a tecnoloxía para tras e subir nunha árbore. Da cabeza aos
+          pés, para, pensa. Dos pés até o teu nariz, para, e pensa on-line!
+      4:
+        text: Usa a túa barriga para almacenar comida, para oír o teu estómago roncar,
+          para remexer a panza e para sentir o gas da gasosa. Usa os teus instintos
+          cando esteas on-line, para estar atento a algúns sinais e guiarse polo camiño,
+          dándose conta de cando as cousas non van ben. Da cabeza aos pés, para, pensa.
+          Dos pés até o teu nariz, para, e pensa on-line!
+      5:
+        text: 'Así que ten cabeza, e sinte co teu corazón, equilíbrate cos teus brazos
+          e escoita os teus instintos, on-line. Usa as túas pernas para correr e chutar,
+          para saltar, para bailar e para saltar coas túas medias suadas. Usa as túas
+          pernas cando esteas on-line, para afrontar os valentóns e lémbrate de manterte
+          en pé, de ser bo coas criaturas pequenas e grandes. (Nota da tradución:
+          todo estas frases para ter coidado na navegación por internet teñen que
+          ver con unha canción para nenos famosa en Estados Unidos).'
+      6:
+        text: Da cabeza aos pés, para, pensa. Dos pés até o teu nariz, para, e pensa
+          on-line! Entón pensa coa túa cabeza, sinte co teu corazón, equilíbrate cos
+          teus brazos, oe os teus instintos e fica de pé coas túas pernas. Da cabeza
+          aos pés, para, pensa. Dos pés até o teu nariz, para, e pensa on-line!
+    C2_digital_footprint_v2:
+      1:
+        text: Sempre que estás on-line deixas unha pegada que pode ser investigada,
+          copiada, compartida e transmitida, e ela é permanente. Que tipo de pegada
+          dixital estás a deixar? Que tipo de pegada dixital queres deixar?
+    C2_graph_paper:
+      1:
+        text: Esta lección chámase "Programación en papel cadriculado", e ela trata
+          sobre os algoritmos. Hoxe imos aprender a escribir programas que mostran
+          os uns aos outros como recrear imaxes simples en negro e branco, usando
+          só frechas debuxadas á man.
+      2:
+        text: Un algoritmo é unha lista de instrucións para realizar unha tarefa.
+          Imos seguir ese conxunto de instrucións para facer a cunca. Os algoritmos
+          son realmente útiles cando precisas que alguén entenda como facer algunha
+          cousa.
+      3:
+        text: Se estás a escribir un algoritmo para un computador, precisas dividilo
+          en pequenas etapas. Entón termina esta liña e vai para a próxima, entón
+          para a próxima, e chegarás ao fin.
+      4:
+        text: Eu uso algoritmos no meu traballo. Se eu escribo todas as etapas, eu
+          podo recrear a mesma peza novamente, ou eu podo ensinar a outra persoa a
+          facer iso. Coloca o vidro no forno, fai a fundición, sigue o resto das instrucións
+          para facer a cunca. Os algoritmos dan un mapa de como facer unha cousa.
+    C2_artist_loops:
+      1:
+        text: Aquí imos usar o bloque repita para economizar pasos cando esteamos
+          programando o noso artista. Xa temos algúns bloques, pero están aquí soamente
+          para darmos inicio ao programa.
+      2:
+        text: Para repetir eses bloques catro veces para debuxar o cadrado enteiro,
+          arrastramos o bloque repita e colocamos os bloques avance e vire á dereita
+          dentro del. Cando prememos en Executar, o artista vai repetir eses pasos
+          catro veces para completar o cadrado.
+    C2_bee_loops:
+      1:
+        text: Un bucle é unha repetición dunha actividade. Ao entrar nunha colmea
+          para inspeccionar, eu ollo para un cadro e doulle a volta. Eu repito esa
+          mesma actividade varias veces. Estou repetindo, facendo a mesma actividade
+          varias veces.
+      2:
+        text: Este é o bloque repita. Todo o que coloques dentro do bloque repita
+          será repetido o número de veces que queiras. Por exemplo, neste nivel, en
+          vez de arrastrar os bloques avance e obteña néctar tres veces, imos arrastralos
+          unha vez de cada e repetir a acción tres veces. Así fica doado!
+    C2_maze_intro:
+      1:
+        text: Normalmente a programación faise toda en texto, pero imos usar o Blockly,
+          que usa bloques visuais que poden ser arrastrados e posicionados para escribir
+          programas. Indirectamente aínda estás creando código. Para comezar, imos
+          crear o código para un programa que vai axudar a este Angry Bird a andar
+          por un labirinto para chegar até o porco malvado que roubou os seus ovos.
+      2:
+        text: O Blockly é dividido en tres partes principais. Á esquerda está o labirinto
+          do paxaro, onde o teu programa será executado. As instrucións para cada
+          nivel están escritas abaixo do labirinto. Esa área do medio é a caixa de
+          ferramentas, e cada un deses bloques é un comando que o paxaro consegue
+          entender. O espazo en branco á dereita é chamado de área de traballo, e
+          é onde imos crear o noso programa.
+      3:
+        text: Se eu arrastro un bloque "mova" para a nosa área de traballo e premo
+          en "Executar", o que acontece? O paxaro avanza un cadradiño na reixa. E
+          se eu quero que o paxaro faga algo despois de avanzar un cadradiño? Eu podo
+          agregar outro bloque ao noso programa.
+      4:
+        text: Vou escoller o bloque "vire á dereita" e vouno arrastrar para baixo
+          do meu bloque avance até que a frecha amarela apareza. Entón, vouno soltar
+          e os dous bloques van se xuntar. Cando eu aperte "Executar" novamente, o
+          paxaro vai realizar os comandos que están apiñados de enriba para abaixo
+          na nosa área de traballo.
+      5:
+        text: Se queres excluír un bloque, simplemente remóveo da pila e arrástrao
+          para a recolledora de lixo. Despois de premer en Executar, sempre podes
+          premer no botón Reiniciar para facer o paxaro volver para o inicio. Agora
+          imos apañar os porcos!
+    C2_paper_airplanes:
+      1:
+        text: Esta lección chámase Algoritmos da vida real. Os algoritmos describen
+          cousas que as persoas fan todos os días. Receitas de boliños e instrucións
+          para construír unha casa para paxariños son exemplos de algoritmos da vida
+          cotiá.
+      2:
+        text: Hoxe imos facer, crear e examinar un algoritmo para un avión de papel.
+          Pero, primeiro, precisamos dividir ese gran proxecto en pequenas etapas
+          fáciles de seguir. Para crear un avión de papel, precisamos decidir que
+          pasos dar e en que orde dalos.
+      3:
+        text: Vas crear o teu algoritmo primeiro cortando as imaxes. Daquela vas seleccionar
+          as 6 imaxes que mostran as etapas necesarias para crear un avión de papel
+          e organizar esas imaxes na orde correcta. Despois de colocar todo en orde,
+          vas trocar de algoritmo con outro equipo de alumnos para examinalo e ver
+          se funciona. Un algoritmo ben proxectado é superimportante para crear o
+          mellor avión de papel.
+      4:
+        text: Cando queremos facer chocolate, hai varias etapas grandes nese proceso.
+          Cada unha delas ten o seu propio conxunto de pasos menores. E hai distintas
+          receitas ou algoritmos, dependendo do sabor que queremos para o chocolate.
+          Todas as etapas son importantes, mesmo as menores, entón se saltamos unha
+          delas as demais non poderán ser concluídas. Crear algoritmos que os outros
+          poidan entender é moi importante. É por iso polo que cada etapa debe ser
+          escrita de forma que o resultado sexa sempre o mesmo, non importa quen o
+          faga.
+    C2_playlab_createstory:
+      1:
+        text: Até agora fixeches animacións ou historias que fan exactamente as mesmas
+          cousas cada vez que as executas. Agora podes facer un xogo interativo e
+          xogalo de verdade.
+      2:
+        text: Existen algúns novos bloques para probar. Hai os bloques "cando a frecha
+          estivese presionada" e "mova o personaxe". Podes xuntar eses bloques para
+          mover os personaxes coas frechas do teclado. E hai algúns bloques que fan
+          cousas cando os personaxes chocan ou son premidos. Dea unha ollada e divírtase!
+    C2_relay_programming:
+      1:
+        text: Hoxe imos facer programación por relevos. Iso significa programar baixo
+          presión e depurar os erros que ás veces acontecen cando traballas moi rápido
+          ou en equipo. Imos usar a programación en papel cadriculado para simular
+          a programación e usar carreiras de relevos para simular un prazo de entrega.
+      2:
+        text: Na programación por relevos, os equipos van competir para terminar un
+          programa en papel cadriculado. Precisas verificar o traballo do teu compañeiro
+          de equipo, ou depuralo, corrixilo se houbese un erro, agregar a túa frecha,
+          volver e marcar o teu compañeiro.
+      3:
+        text: Os programadores usan moito a depuración para encontrar e corrixir problemas
+          nos seus algoritmos ou códigos. Hai varias formas de depurar problemas.
+          Unha das máis fáciles é seguir a execución paso a paso até encontrar algo
+          errado, e entón corrixir o problema.
+      4:
+        text: Aquí estou tentando facer un salto para tras, pero continúo caendo.
+          Eu pasei por cada parte, paso a paso, e descubrín onde estaba o meu erro.
+          O meu adestrador mostroume que non estaba colocando as mans na trabe correctamente.
+          Entón, tentei facer outro salto para tras coa miña nova posición de mans
+          e eu conseguín! Fiquei realmente feliz por ter depurado o meu salto para
+          tras. Descubrimos o problema! Depurar é encontrar e corrixir problemas.
+          Bo traballo!
+    C2_zuck_repeat_loop:
+      1:
+        text: Unha cousa na cal os computadores son moi bos é repetir comandos. Como
+          persoa, ficarías realmente aborrecido se tiveses que facer a mesma cousa
+          varias veces en secuencia. Pero un computador pode facer a mesma cousa millóns,
+          ou até mesmo billóns de veces, sen ficar aborrecido e aínda facelo moi ben.
+      2:
+        text: Por exemplo, se eu quixese desexar a todos no Facebook un feliz aniversario
+          enviando un e-mail, levaría máis dun século escribir os e-mails para todos.
+          Pero con só algunhas liñas de código, eu podo facer que o sistema envíe
+          un e-mail para todos no Facebook desexando un feliz aniversario. É iso o
+          que son as repeticións, e é por iso polo que son valiosas, algo que os computadores
+          conseguen facer moi ben.
+      3:
+        text: Neste exemplo, o seu obxectivo é levar o paxaro até o porco. Agora sabemos
+          usar o bloque "repita" para facer isto facilmente. Tamén podes facelo dando
+          ao computador o comando "avance" cinco veces para levar o paxaro até o porco,
+          un paso por vez.
+      4:
+        text: Ou podes simplemente dicir ao computador "avance" unha única vez, e
+          entón dicirlle "repita" iso 5 veces, e el fará a mesma cousa en ambos os
+          casos. Entón, para facer iso, arrastra o teu comando "avance" e colócao
+          dentro do bloque "repita". Pode premer nel e escoller cantas veces queres
+          repetir o bloque, para dicir cantos pasos queres que avance.
+      5:
+        text: Tamén pode colocar cantos comandos queiras dentro do bloque "repita".
+          Entón, neste exemplo, estás dicíndolle que avance e vire á esquerda, o que
+          fará cinco veces. Correcto, bo traballo e divírtete!
+    C3_artist_functions:
+      1:
+        text: Unha das mellores cousas na programación é que cando ensinas a un computador
+          a realizar unha acción podes chamar a esa función novamente. Dáslle un nome
+          e entón podes chamala. Iso é o mesmo que aumentar a linguaxe.
+      2:
+        text: No programa que creamos, aprendemos como debuxar un cadrado movendo
+          e virando catro veces. Podemos chamar a esa función "debuxe un cadrado",
+          así, sempre que queiramos facer iso, simplemente dicimos "debuxe un cadrado"
+          e o código desa función será chamado. Ela fará iso por nós. Engadimos ese
+          concepto á nosa linguaxe de programación.
+    C3_artist_intro:
+      1:
+        text: Ti nin te clasificas para a carreira se non tes persoas solventes en
+          informática, por causa da cantidade de datos que os coches recadan e a necesidade
+          de ter persoas que poidan escribir programas para descubrir como continuar
+          a mellorar a o rendimento.
+      2:
+        text: Nestes desafíos, serás un artista que usa un lápis para debuxar formas
+          distintas. O artista vai debuxar unha liña por onde pase.
+      3:
+        text: Para se mover na pantalla vas usar o bloque avance. Aquí o bloque avance
+          di de avanzar 100 pixels. Cando prememos en Executar, o que acontece? O
+          artista avanza certa cantidade, e esa cantidade é 100 pixels. Pixels son,
+          basicamente, uns cadradiños moi pequenos na pantalla do teu computador.
+      4:
+        text: O outro bloque que temos nese desafío di de virar 90 graos á dereita.
+          Cando arrastramos iso, o artista vira unha certa cantidade de graos. Entón,
+          podes xogar con canto desexas que o artista vire. Esta é unha curva de 90
+          graos.
+      5:
+        text: E esta é unha curva de 120 graos. Lémbrate, podes alterar estes valores
+          premendo nas frechas próximas aos números de pixels e graos. Divírtete debuxando
+          co teu artista!
+    C3_artist_nested_loops:
+      1:
+        text: Cando colocas un bucle dentro doutro, chamamos a iso "bucle aniñado".
+          Por exemplo, xa temos aquí o código para debuxar un triángulo con lados
+          de 100 pixels usando o bloque "repita veces" configurado para tres veces,
+          unha para cada lado do triángulo.
+      2:
+        text: Pero queremos debuxar seis triángulos. Para iso, imos coller aquel bucle
+          e colocalo dentro doutro bloque "repita veces". Xenial!
+    C3_bee_conditionals:
+      1:
+        text: Este é o bloque condicional. Di que SE houbese néctar ou mel menor que,
+          igual a, ou maior que un número, ENTÓN algo debe ser feito.
+      2:
+        text: Isto é útil cando non sabemos canto néctar ou mel obter, como vemos
+          aquí con este punto de interrogación.
+      3:
+        text: Neste exemplo, imos dicir que SE a flor morada ten néctar maior que
+          0, que obteña néctar. Isto fará que a nosa abella continúe recadando néctar
+          mentres fose posíbel. Bingo!
+    C3_bee_debugging:
+      1:
+        text: Xa oiches falar de depurar un programa? Esa é unha forma de descubrir
+          o que non está funcionando. Cando depuras un código identificas os erros
+          e os eliminas.
+      2:
+        text: Aquí, xa temos algúns bloques na nosa área de traballo. Imos usar o
+          botón do paso para camiñar polos bloques, paso a paso, para ver se esta
+          é a solución correcta e onde podemos corrixila.
+      3:
+        text: Parece que o noso problema está aí! Necesitamos un bloque "avance" máis.
+          O botón de paso axúdanos a depurar o noso problema, identificando onde está
+          o erro para corrixilo.
+    C3_bee_functions:
+      1:
+        text: Un dos conceptos máis importantes da informática é como definir novos
+          comandos, como agregar as túas propias palabras nunha linguaxe de computador.
+          A maioría das linguaxes de computador ten só cen palabras ou comandos. A
+          arte e a maxia están en definir as túas propias novas palabras a partir
+          dos bloques de construción.
+      2:
+        text: Facemos isto todo o tempo nos deportes. Por exemplo, no baloncesto comezas
+          aprendendo como driblar, como pivotar e como facer un rebote. Cando aprendes
+          eses conceptos básicos, podes aprender novos conceptos e xuntar eses bloques
+          de construción, como facer unha xogada de pivot ou unha parede entre dous
+          xogadores. Entón, a partir daí podes facer xogadas máis complexas. Cando
+          aprendes a xogada e lle dás un nome, todos os do equipo saben como executala.
+      3:
+        text: Da mesma forma, despois de ensinar a un computador como facer unha acción
+          unha vez, usando esas secuencias de comandos, podes crear o nome que queiras
+          para esa acción, así será máis fácil repetila despois. Ao definir e nomear
+          o teu propio comando, creas unha función. Agora, imos usar funcións para
+          axudar a abella.
+      4:
+        text: Neste exemplo, a nosa función é chamada obteña 2 néctares, representada
+          por ese bloque verde. Sabemos o que fai "obteña 2 néctares" ollando para
+          esa caixa de cor cinza que é a definición da función. Se miramos para dentro
+          dela, a función "obteña 2 néctares" vai obter néctar, e obter néctar novamente.
+          Sempre mira para o que está dentro da caixa cinza, así sabes o que os bloques
+          de función verdes poden facer.
+    C3_bee_nested_loops:
+      1:
+        text: Agora imos usar bucles aniñados coa abella. Temos un código inicial
+          que di a abella que avance e obteña néctar tres veces, e entón vire á dereita.
+          Imos apañar todo ese fragmento de código, aniñalo dentro doutro bloque repita
+          e configuralo para repetir tres veces. Listo!
+    C3_bounce:
+      1:
+        text: Vas crear o teu propio xogo de ping-pong e vas poder compartilo cos
+          teus amigos! Estupendo!
+      2:
+        text: Para comezar, precisamos conectar os controis da raqueta ás frechas
+          do noso teclado.
+      3:
+        text: Podemos facelo conectando o bloque "cando a frecha á esquerda estea
+          presionada" ao bloque "mova á esquerda" e o bloque "cando a frecha á dereita
+          estea presionada" ao bloque "mova á dereita". Faino e vas programar o teu
+          propio xogo de ping-pong!
+    C3_computational_thinking:
+      1:
+        text: Esta lección vai do pensamento computacional. Ás veces, aprender un
+          novo xogo pode ser difícil, correcto? No comezo iso pode parecer realmente
+          confuso e, ás veces, non hai ninguén para ensinar as regras e necesitas
+          descubrir todo soíño.
+      2:
+        text: A boa noticia é que podes mellorar a túa habilidade de descubrir cousas
+          só cando coñeces algúns trucos. Eses trucos son formas únicas de mirar para
+          os problemas e resolvelos. Nesta lección, vas aprender catro trucos e adestrar
+          cos teus amigos para descubrir as regras dun xogo.
+      3:
+        text: Cando divides un problema grande en partes menores estás usando o teu
+          cerebro para descompor o problema maior. Cando teñamos decomposto o problema
+          grande en problemas menores, podemos ir para o próximo truco, o cal chamamos
+          correspondencia de padróns.
+      4:
+        text: Iso acontece cando procuramos semellanzas entre as cousas. Cando eu
+          encontro as cousas iguais, eu podo descubrir que cousas son distintas. Cando
+          eu removo esas diferenzas, chámase abstracción.
+      5:
+        text: Despois de descubrir as etapas para resolver un problema, eu podo colocalas
+          nunha orde específica chamada algoritmo, así calquera pode usar as miñas
+          instrucións para resolver aquel problema. Imos usar esas catro etapas para
+          descubrir como xogar o xogo sen regra ningunha. Ao final do xogo vas poder
+          xogar algo parecido a isto!
+    C3_crowdsourcing:
+      1:
+        text: Esta lección chámase crowdsourcing. Nesta lección, imos usar unha baralla
+          de cartas para aprender como algunhas cousas poden ser máis fáciles se son
+          feitas en grupo, en vez de individualmente. Entón reúne algúns amigos e
+          fai algo incríbel. Crowdsourcing significa obter axuda dun gran grupo de
+          persoas para terminar algo máis rápido.
+      2:
+        text: Na informática, usamos crowdsourcing todo o tempo. Miles de afeccionados
+          e profesionais conectan os seus computadores para buscar billóns e billóns
+          de fragmentos de información. Procuran cousas como o próximo número primo
+          de Mersenne, ou até mesmo a posibilidade de comunicación con alieníxenas.
+      3:
+        text: Cando asistes a un filme, cada segundo componse de 24 imaxes individuais,
+          as cales chamamos cadros. Entón, cada unha desas imaxes precisa ser creada
+          e renderizada, para que todas fiquen xuntas. O meu equipo e eu somos desenvolvedores
+          de software. Traballamos xuntos para crear un software que de feito crea
+          unha imaxe, crea a imaxe final que ves na pantalla. Esa é unha ferramenta
+          que os artistas e outros desenvolvedores poden usar como parte do seu traballo
+          e o seu proceso para crear as imaxes que queiran na pantalla.
+      4:
+        text: Por exemplo, en Procurando Nemo, cando Crush, Squirt e os seus amigos
+          están navegando pola Corrente da Australia oriental. Ves imaxes de auga
+          en movemento, ves as cores nas costas da tartaruga, ves os lados do peixe.
+          Todas esas cousas son xeradas usando matemáticas e programas de computador
+          que escribimos e daquela llas pasamos aos artistas para que as usen e creen
+          a imaxe final, facendo os axustes para que todo fique bonito e divertido.
+    C3_dice_race:
+      1:
+        text: Esa lección chámase Xogo de dados. A case todo o mundo lle gusta xogar
+          xogos de computador. Xa pensaches sobre como os programadores de computador
+          transforman as etapas dun xogo nun programa? O primeiro paso na creación
+          de xogos de computador e na resolución de calquera problema consiste en
+          pensar e planificar.
+      2:
+        text: A etapa de pensamento sobre a resolución de problemas produce un algoritmo,
+          o cal é un plan paso a paso para resolver un problema ou terminar unha tarefa.
+          Nesta lección vas crear un algoritmo para un xogo de dados. Vas pedir aos
+          teus amigos probar o teu plan e ver se conseguen seguir os pasos para xogar
+          o xogo. Cando o programador ten certeza de que os pasos están correctos,
+          é hora de traducir o algoritmo nun programa cunha linguaxe que o computador
+          poida entender.
+      3:
+        text: Case todo o que facemos todos os días require un algoritmo, unha lista
+          de pasos que podes seguir para terminar unha tarefa. Pensa en ficar listo
+          para ir á escola, ou planear un día divertido cos teus amigos, ou facer
+          uns petiscos. Para completar esas tarefas, precisas dividilas en pasos menores
+          e, ás veces, os pasos precisan estar nunha orde específica.
+      4:
+        text: Pensa como facer un sanduich. Non importa cal ingrediente saques do
+          armário primeiro. Pero non podes pasar a margarina antes de abrir o bote.
+          Os computadores necesitan algoritmos e programas para dicirlles como facer
+          mesmo cousas simples que podemos facer sen pensar.
+      5:
+        text: Un algoritmo é o pensamento que está por tras do que necesita acontecer
+          mentres o programa dá as instrucións para que o computador faga que algo
+          aconteza. Un algoritmo precisa ser traducido nun programa antes de que un
+          computador poida executalo. Dividir unha tarefa en pasos de algoritmo pode
+          ser difícil. Pero como calquera nova habilidade fica máis fácil coa práctica.
+    C3_farmer_while:
+      1:
+        text: Os bucles "mentres" son moi parecidos aos que fas na vida cotiá. Imaxina
+          que estás lavando o teu coche. Vas continuar fregando até que fique limpo.
+          Mentres non estea limpo continúas a fregar. Estás avaliando ese tipo de
+          cousas todo o tempo.
+      2:
+        text: Temos un novo bloque para axudar a túa campesiña. Chámase "bloque mentres".
+          Na verdade é moi simple. Mentres unha instrución na parte superior fose
+          certa, fai algunha cousa. Por exemplo, mentres haxa palleiro, remove un
+          grupo de pallas. Vai adiante e proba isto coa túa campesiña.
+    C3_functional_suncatchers:
+      1:
+        text: Esta lección vai de caza-soles funcionais. Vas crear eses belos caza-soles
+          usando funcións. Hai varias etapas para crear un caza-sol. Algunhas etapas
+          necesitan ser repetidas varias veces.
+      2:
+        text: O primeiro paso para simplificar o proceso de confección dun caza-sol
+          é descubrir o que precisa ser repetido varias veces. Podemos reunir eses
+          pasos no que chamamos "función".
+      3:
+        text: Pero para crear un belo caza-sol, necesitamos facer algo máis que só
+          seguir pasos precisos. Ás veces queremos ser creativos e alterar a cor das
+          doas que estamos usando. Podemos tornar cada caza-sol único se usamos doas
+          de cores distintas.
+      4:
+        text: Seu caza-sol será soamente o seu cando vostede aprender a pensar nas
+          miçangas como variábeis, que son un espazo reservado para informacións que
+          poden ser alteradas. Divírtete creando belos caza-soles usando funcións
+          e variábeis!
+    C3_internet:
+      1:
+        text: Esta vai sobre a internet. A internet é un lugar moi movido, parecido
+          con esa estrada ateigada. As mensaxes son como os coches, e pasan zunindo
+          para chegar aos seus destinos. As mensaxes móvense rapidamente pola internet.
+      2:
+        text: Pensar sobre como a internet funciona axuda a entender o que acontece
+          cando se usa a internet. Vas aprender como as mensaxes van do teu computador
+          até un dos teus sitios web favoritos ou até a caixa de e-mails dun amigo.
+          Así como é máis fácil andar por estradas ateigadas cando coñeces o camiño
+          e sabes ler os sinais de tráfico, navegar pola internet non é tan complicado
+          cando sabes o que acontece nos bastidores.
+      3:
+        text: O envío de mensaxes na internet é parecido ao envío de mensaxes polo
+          correo, pero con algunhas diferenzas. Eu estou aquí no Google.com. O enderezo
+          de IP para ese sitio web é ese número. Podes pensar nun enderezo de IP como
+          o teu enderezo de retorno no correo. Imos imaxinar que eu queira enviar
+          unha mensaxe por correo para alguén na oficina alí embaixo. Ves a URL e
+          o enderezo de IP naquela porta? Eu escribín esa mensaxe e premín en enviar.
+      4:
+        text: Diferentemente dos correos, a primeira cousa que a internet fai é dividir
+          a mensaxe en partes menores para que sexan enviadas máis facilmente. Esas
+          pequenas partes chámanse paquetes. Cada paquete da mensaxe é entregada ao
+          destino, un de cada vez. Eses paquetes son colocados na orde correcta para
+          que o destinatario poida ler a mensaxe correctamente. Claro que hai moitas
+          outras cousas para aprender como funciona a internet, pero este é un excelente
+          comezo. Estás no camiño para te facer un usuario de internet espilido! Lémbrate
+          de contar á túa familia e aos teus amigos o que aprendiches!
+      5:
+        text: O meu nome é Amanda Camp, son unha engeñeira de software na Google.
+          Eu traballo nun equipo que forma parte do servidor backend, que almacena
+          perfís e contactos. No meu traballo, pensamos moito sobre como os contactos
+          poden ser enviados para outros dispositivos, como o teu teléfono. A maioría
+          da xente ten moitos contactos, digamos uns mil contactos, e non queremos
+          enviar todos eses contactos dunha vez para o teu teléfono porque sería unha
+          mensaxe moi grande. Da mesma forma que a internet divide mensaxes grandes
+          en paquetes, usamos un concepto chamado memoria paxinada, na cal debemos
+          mandar só 100 contactos de cada vez para o teu teléfono, e despois esperamos
+          unha resposta, pedindo que enviemos os próximos 100.
+      6:
+        text: A cousa máis fantástica sobre software é o feito de que pode afectar
+          a todo o mundo. Aprendín a programar cando tiña 19 anos. Penso que xa estaba
+          no primeiro ou segundo ano da facultade. O primeiro programa que lembro
+          ter feito convertía Celsius para Fahrenheit. Gosto de programar porque me
+          gosta axudar as persoas. Eu podo escribir programas na Google que axudan
+          a persoas de todo o mundo, e iso é realmente fascinante e emocionante.
+    C3_maze_conditionals:
+      1:
+        text: 'As persoas toman decisións todos os días. Por exemplo, antes de saír
+          de casa, tes unha instrución "se" que di: se estivese a chover, entón eu
+          preciso levar a miña chaqueta. Os computadores son incríbeis, cando decides
+          ese tipo de instrución sobre a que poden executar cousas, fano a unha velocidade
+          incríbel. Un programa de computador é realmente un pequeno fragmento de
+          cálculos e algunhas instrucións "se", nas que se toman as decisións.'
+      2:
+        text: O bloque "se" axuda o zumbi a tomar unha decisión. Verifica algunha
+          cousa. Por exemplo, imos usar o bloque que di se hai un camiño á esquerda,
+          e entón colocamos un comando vire á esquerda dentro del. Estamos falando
+          para que o zumbi vexa as cousas ao seu redor, ver se hai un camiño á esquerda
+          e, no caso de que o camiño exista, facemolo virar.
+      3:
+        text: Entón usamos o bloque avance dentro do repita para que continúe avanzando,
+          xa que só quere seguir adiante. Entón, cando hai unha curva, o bloque "se"
+          dille que vire á esquerda. Podes ver que, se facemos iso, se viramos á esquerda
+          e avanzamos, imos atinxir o noso obxectivo.
+      4:
+        text: 'Este é un exemplo de uso dunha instrución "se", que é un concepto fundamental
+          na programación de computadores. Unha das primeiras cousas que eu aprendín
+          foi como escribir un programa para xogar o xogo da vella. Eu tiña instrucións
+          "se" para dicir: ok, se a outra persoa estivese a piques de gañar, vaia
+          adiante e impídao. Divírtete aprendendo a usar instrucións "se", son un
+          concepto-chave moi importante.'
+    C3_maze_level_4:
+      1:
+        text: Neste exemplo, o teu obxectivo é facer que o zumbi chegue ao xirasol.
+          Poderiamos usar cinco bloques avance, ou poderiamos dicir ao computador
+          que avance e repetir esa acción cinco veces usando un bloque "repita".
+      2:
+        text: Iso economiza tempo e torna as cousas máis fáciles. Para usalo, coloca
+          o bloque avance dentro do bloque repita. Clica en Executar e o zumbi vai
+          avanzar cinco veces para chegar ao saboroso xirasol.
+    C3_playlab_create_game:
+      1:
+        text: Até agora fixeches animacións ou historias que fan exactamente as mesmas
+          cousas cada vez que as executas. Agora podes facer un xogo interativo e
+          xogalo de verdade.
+      2:
+        text: Existen algúns novos bloques para probar. Hai os bloques "cando a frecha
+          estivese presionada" e "mova o personaxe". Podes xuntar eses bloques para
+          mover os personaxes coas frechas do teclado. E hai algúns bloques que fan
+          cousas cando os personaxes chocan ou son premidos. Dea unha ollada e divírtase!
+    C3_songwriting_with_parameters:
+      1:
+        text: Esta é a lección de composición de música. A música parécese moito cun
+          programa de computador. As notas e as palabras escritas din ao cantante
+          exactamente o que facer. Algunhas partes da música son usadas varias veces.
+      2:
+        text: En música chamámoslle retrouso. Nun programa de computador, as partes
+          do programa usadas varias veces son chamadas "funcións". Cando les a letra
+          dunha música e atopas a palabra retrouso, cantas a palabra retrouso? Non,
+          miras a parte de enriba da páxina e ves que palabras compoñen o retrouso.
+      3:
+        text: Nesta lección vas aprender unha música infantil chamada Coelliño foo
+          foo. A música ten un retrouso que vas cantar varias veces. Unha función
+          é un fragmento de código que podes chamar e usar moitas veces. Iso torna
+          a programación máis fácil e eficiente, así non precisas escribir os pasos
+          da función varias veces. Así escribes ese código só unha vez!
+    C4_bee_conditional:
+      1:
+        text: Este é un bloque condicional. Di se estás nunha flor ou nunha colmea,
+          e entón fai algunha cousa. É útil cando non sabemos canto mel ou néctar
+          apañar, como vemos aquí neste punto de interrogación.
+      2:
+        text: Neste exemplo, imos dicir se isto é unha flor, apañar todo o néctar
+          e entón usar outro para dicir se é unha colmea e facer mel. Tatachán!
+    C4_conditionals:
+      1:
+        text: Temos un novo bloque chamado de "se-senón". É unha instrución condicional
+          como o bloque "se" que usache nos desafíos anteriores. Pero agora hai unha
+          nova parte embaixo que di "senón". O bloque "se-senón" fai a abella tomar
+          a decisión entre dous tipos de acción. Se a abella estivese nunha flor,
+          fará o conxunto de accións que colocaches na primeira parte que di faga.
+          Se a abella non estivese na flor, fará o conxunto de accións que colocache
+          na parte que di "senón".
+      2:
+        text: É a partir das instrucións "se" que os computadores son capaces de tomar
+          decisións. Os humanos estabelecen condicións para o computador que din que,
+          se o computador encontra certa situación, debe facer unha cousa, senón,
+          debe facer outra cousa. O comezo do noso bloque se/senón di "se na flor".
+          Pero podería dicir outras cousas, como "se néctar igual a 2" ou "se houbese
+          un camiño diante", e o bloque se comportaría do mesmo modo. Se a instrución
+          fose certa, executará o primeiro conxunto de accións, pero se fose falsa,
+          executará o segundo conxunto de accións.
+    C4_for_loops:
+      1:
+        text: Cando usas un bloque repita para crear un bucle no teu código, como
+          sabe o computador que foi repetido o suficiente? O bloque "repita" está,
+          na verdade, escondendo un fragmento de código chamado "bucle para", que
+          conta a partir dun valor inicial até un valor final, en incrementos específicos.
+      2:
+        text: Por exemplo, un bloque "repita tres" conta de 1 até 3, de 1 en 1. Sempre
+          que conta, executa o código dentro do bucle. O bucle "para" sabe cantas
+          veces foi executado usando unha variábel contadora que é definida co valor
+          inicial do comezo do bucle e é incrementada sempre que o bucle é executado.
+          Así que a variábel contadora sexa maior que o valor final, o bucle para
+          de ser executado.
+      3:
+        text: A vantaxe de usar un bucle "para" real en vez do bloque repita é que
+          podes ver a variábel contadora, e usala no bucle. Por exemplo, se eu tivese
+          unha fileira de flores e a primeira tivese un néctar, a segunda tivese dous
+          e a terceira tivese tres, podo usar o bucle "para" para dicir á abella recoller
+          "contador" néctares por vez, o que sería un na primeira flor, dous na segunda
+          e tres na terceira.
+      4:
+        text: Tamén podes incrementar o contador un número distinto de 1 nun bucle
+          "para". Pode contar de 2 en 2, de 4 en 4, ou até mesmo un valor que varíe
+          a cada vez.
+    C4_for_loops_bee:
+      1:
+        text: Cando usas un bloque repita para crear un bucle no teu código, como
+          sabe o computador que foi repetido o suficiente? O bloque "repita" está,
+          na verdade, escondendo un fragmento de código chamado "bucle para", que
+          conta a partir dun valor inicial até un valor final, en incrementos específicos.
+      2:
+        text: Por exemplo, un bloque "repita tres" conta de 1 até 3, de 1 en 1. Sempre
+          que conta, executa o código dentro do bucle. O bucle "para" sabe cantas
+          veces foi executado usando unha variábel contadora que é definida co valor
+          inicial do comezo do bucle e é incrementada sempre que o bucle é executado.
+          Así que a variábel contadora sexa maior que o valor final, o bucle para
+          de ser executado.
+      3:
+        text: A vantaxe de usar un bucle "para" real en vez do bloque repita é que
+          podes ver a variábel contadora, e usala no bucle. Por exemplo, se eu tivese
+          unha fileira de flores e a primeira tivese un néctar, a segunda tivese dous
+          e a terceira tivese tres, podo usar o bucle "para" para dicir á abella recoller
+          "contador" néctares por vez, o que sería un na primeira flor, dous na segunda
+          e tres na terceira.
+      4:
+        text: Tamén podes incrementar o contador un número distinto de 1 nun bucle
+          "para". Pode contar de 2 en 2, de 4 en 4, ou até mesmo un valor que varíe
+          a cada vez.
+    C4_for_loops_no_bee:
+      1:
+        text: Cando usas un bloque repita para crear un bucle no teu código, como
+          sabe o computador que foi repetido o suficiente? O bloque "repita" está,
+          na verdade, escondendo un fragmento de código chamado "bucle para", que
+          conta a partir dun valor inicial até un valor final, en incrementos específicos.
+      2:
+        text: Por exemplo, un bloque "repita tres" conta de 1 até 3, de 1 en 1. Sempre
+          que conta, executa o código dentro do bucle. O bucle "para" sabe cantas
+          veces foi executado usando unha variábel contadora que é definida co valor
+          inicial do comezo do bucle e é incrementada sempre que o bucle é executado.
+          Así que a variábel contadora sexa maior que o valor final, o bucle para
+          de ser executado. A vantaxe de usar un bucle "para" en vez do bloque repita
+          é que pode ver a variábel contadora e usala no bucle.
+    C4_function_create:
+      1:
+        text: Agora que editaches bloques de función, é hora de crear un desde cero.
+          É ben simple. Verás que a caixa de ferramentas ten unha categoría chamada
+          "funcións". Se premes nela, verás un botón laranxa chamado "crear unha función".
+          Premer nel abre o editor de funcións que xa usache para editar bloques de
+          función xa existentes.
+      2:
+        text: Como antes, comezas dando un nome para a túa función, escribindo unha
+          descrición do que a función debe facer. Por exemplo, ela vai debuxar un
+          cadrado ou un triángulo. Entón, arrastre bloques da caixa de ferramentas
+          para o espazo en branco abaixo. Lémbrate de arrastrar os bloques para dentro
+          do bloque verde da función.
+      3:
+        text: Cando termines, clica en "salvar e saír". Iso te levará de volta á área
+          de traballo principal dos desafíos. A nova función que creaches vai aparecer
+          como un bloque verde na categoría "funcións" da túa caixa de ferramentas.
+          Arrástrao e sóltao na área de traballo principal e úsao como calquera outro
+          bloque para resolver o desafío.
+    C4_function_edit:
+      1:
+        text: Unha das mellores cousas na programación é que cando ensinas a un computador
+          a realizar unha acción podes chamar a esa función novamente. Dáslle un nome
+          e entón podes chamala. Iso é o mesmo que aumentar a linguaxe.
+      2:
+        text: No programa que creamos, aprendemos a debuxar un cadrado movendo e virando
+          catro veces. Podemos apañar esa función e chamala "debuxe un cadrado". Así,
+          sempre que quixéramos facer iso, simplemente dicimos "debuxe un cadrado"
+          e o código desa función será chamado e farao por nós. Engadimos este concepto
+          á nosa linguaxe de programación.
+      3:
+        text: Neste desafío xa temos creada unha función "debuxe un cadrado" para
+          ti. Ti vala ver na caixa de ferramentas como un bloque verde. O que precisas
+          facer é escribir o mesmo código que escribiches antes para debuxar un cadrado
+          e colocalo dentro desa función. Para facer isto, clica na opción editar
+          no bloque verde "debuxe un cadrado". Isto vai abrir o editor de funcións.
+          O editor ten tres partes. Un lugar no cal dás un nome para a túa función.
+          Vai aparecer no bloque verde antes da función. Despois escribe unha descrición
+          curta do que debe facer a túa función.
+      4:
+        text: Neste caso debe debuxar un cadrado. A área en branco abaixo disto é
+          a área de traballo, e funciona igual ao que xa vés usando. Arrastra e solta
+          bloques da caixa de ferramentas na área de traballo. Lémbrate de colocar
+          os bloques que crean un cadrado dentro do bloque verde da función. Cando
+          termines, clica en "salvar e saír". Iso vaite levar de volta á área de traballo
+          principal do desafío. Agora podes usar o bloque "debuxe un cadrado" como
+          calquera outro bloque para resolver o desafío.
+    C4_function_parameters:
+      1:
+        text: Aquí hai unha función que debuxa un cadrado con lados de 50 pixels.
+          Excelente, pero e se eu quixese debuxar un cadrado con lados de 50 pixels
+          e outro con lados de 100 pixels? Non precisamos facer dúas funcións separadas
+          para facer practicamente a mesma cousa. En vez diso, podemos usar unha función
+          cun parámetro.
+      2:
+        text: Os parámetros permítennos atribuír valores para unha función que son
+          usados como variábeis dentro da función. Imos tentar agregar un parámetro
+          chamado "lonxitude" a esa función para que poidamos crear cadrados de tamaños
+          distintos. No editor de funcións podes editar o nome e descrición como antes,
+          pero agora tamén podes agregar un parámetro. Escribe o nome do parámetro
+          no espazo e clica en "agregar parámetro". Isto vai crear un bloque vermello
+          co nome do parámetro que acabas de crear. Agora podemos substituír o 100
+          no bloque "avanzar 100" polo parámetro "lonxitude" para que avance a lonxitude
+          desexada.
+      3:
+        text: Clica en salvar e pechar e arrastra o teu novo bloque "cree un cadrado"
+          da categoría funcións na caixa de ferramentas. Vas ver que ao lado hai un
+          espazo baleiro de "lonxitude", porque a función quere saber cal debe ser
+          o valor do parámetro lonxitude. Arrastra un bloque numérico da categoría
+          matemática e colócao nese espazo. Ves como podes usar a función varias veces
+          con lonxitudes distintas para crear cadrados de tamaños distintos? Proba!
+    C4_intro:
+      1:
+        text: Normalmente a programación faise toda en texto, pero imos usar o Blockly,
+          que usa bloques visuais que poden ser arrastrados e posicionados para escribir
+          programas. Indirectamente aínda estás creando código. Para comezar, imos
+          crear o código para un programa que vai axudar a este Angry Bird a andar
+          por un labirinto para chegar até o porco malvado que roubou os seus ovos.
+      2:
+        text: O Blockly é dividido en tres partes principais. Á esquerda está o labirinto
+          do paxaro, onde o teu programa será executado. As instrucións para cada
+          nivel están escritas abaixo do labirinto. Esa área do medio é a caixa de
+          ferramentas, e cada un deses bloques é un comando que o paxaro consegue
+          entender. O espazo en branco á dereita é chamado de área de traballo, e
+          é onde imos crear o noso programa.
+      3:
+        text: Se eu arrastro un bloque "mova" para a nosa área de traballo e premo
+          en "Executar", o que acontece? O paxaro avanza un cadradiño na reixa. E
+          se eu quixera que o paxaro faga algo despois de avanzar un cadradiño? Podo
+          agregar outro bloque ao noso programa.
+      4:
+        text: Vou escoller o bloque "vire á dereita" e arrastralo para baixo do meu
+          bloque avance até que a frecha amarela apareza. Entón vou soltalo e os dous
+          bloques van se xuntar. Cando eu apertar "executar" novamente, o paxaro vai
+          realizar os comandos que están apiñados de enriba para baixo na nosa área
+          de traballo.
+      5:
+        text: Se queres excluír un bloque, simplemente remóveo da pila e arrástrao
+          para a recolledora de lixo. Despois de premer en Executar, sempre podes
+          premer no botón Reiniciar para facer o paxaro volver para o inicio. Agora
+          imos apañar os porcos!
+    C4_math_artist:
+      1:
+        text: Se eu quixera debuxar un retángulo con 50 pixels de altura e con lonxitude
+          igual a dúas veces a súa altura, como podo programar o computador para facer
+          iso? Ben, eu podería dicir ao artista subir cincuenta, despois 100 para
+          o lado e mover todo dúas veces. Pero nese caso eu estaría facendo as contas
+          para o computador.
+      2:
+        text: Multiplicar cincuenta por dous de cabeza pode non ser tan difícil, pero
+          os computadores son realmente bos en matemáticas, entón debemos deixalos
+          facer as contas sempre que fose posíbel. Se eu simplemente usase unha variábel
+          chamada altura, podería mudar a altura facilmente para cincuenta e entón
+          mudar o algoritmo para dicir ao artista que suba o valor da altura, vire
+          para a dereita e ande dúas veces a altura, o que nos dá un retángulo con
+          lonxitude igual a dúas veces a súa altura.
+    C4_unplugged_algorithms:
+      1:
+        text: Esta lección chámase Algoritmos de Tangram. O tangram é un creba-cabezas
+          con sete pezas que se encaixan para crear outras formas. Vas usar un algoritmo
+          para explicar ao teu compañeiro como montar o creba-cabezas.
+      2:
+        text: Un algoritmo é só unha lista de accións que deben ser tomadas para completar
+          unha tarefa. Nós usámolos todos os días, en cousas como listas de compras
+          e receitas. Se o teu algoritmo fose moi simple, haberá moitos modos de interpretalo,
+          e quen o fose executar pode non conseguir exactamente o que ti querías.
+          Se quixeras garantir que todos obteñan o mesmo resultado, o teu algoritmo
+          deberá ser detallado e específico.
+      3:
+        text: Hoxe estou usando un algoritmo para terminar unha pintura. Eu quería
+          tentar pintar algúns lobos, pero non son o mellor pintor do mundo. Felizmente
+          para persoas coma min, alguén inventou a pintura por números. Temos corenta
+          cores e pequenas letras e números que din con que cor pintar cada sección.
+          A pintura por números me di exactamente cal cor usar e onde.
+      4:
+        text: É moi específica, entón podo seguir as instrucións e a pintura ficará
+          incríbel! É un excelente algoritmo. Se as instrucións non fosen abondo específicas,
+          os meus lobos non ficarían tan bos. Cando realmente quixeras que algunha
+          cousa fique exactamente do xeito que planeaches, é mellor ser extremamente
+          preciso.
+    C4_unplugged_binary:
+      1:
+        text: En cada equipo, a persoa que está instruíndo, aquela que está co papel,
+          debe descubrir cal será o seu símbolo de "desconectado" e cal será o seu
+          símbolo de "ligado". En binario, é unha especie de alfabeto con dúas letras,
+          como se as letras A e B fosen todo o alfabeto, pero neste caso, temos 0
+          e 1.
+      2:
+        text: O modo máis común de usar binarios é nunha instrución "se". É un clásico
+          da programación. O programa é executado e, se algo fose certo, fai unha
+          cousa, ou, senón, fai outra cousa. E se quixeras facer algo un pouco máis
+          complicado? En vez dunha instrución "se", podes querer traballar con algo
+          como unha imaxe ou un son nun computador.
+      3:
+        text: 'O computador só coñece binario, pero unha imaxe non é binária. Non
+          está feita duns e ceros, entón como podes facer? Aquí está un exemplo: tes
+          esa linda imaxe. Unha imaxe é, basicamente, unha forma de informacións.
+          Todas as informacións poden ser codificadas en binario dun xeito ou doutro,
+          só tes que descubrir como.'
+      4:
+        text: Imaxina que imos colocar un cadriculado sobre ese oso panda e decidir
+          se cada cadrado é máis negro ou máis branco, e entón, imos colorar así.
+          Agora, cada célula do cadriculado é negra ou branca, e dicimos que os cadrados
+          negros son ceros (díxito binario), e os cadrados brancos son un, o outro
+          díxito binario. Ao final, o que terás é unha chea duns e ceros. É así como
+          se representa esa imaxe en binario.
+    C4_unplugged_forloops:
+      1:
+        text: Esta lección chámase diversión co bucle "para". Nesta lección imos aprender
+          a usar a recta numérica para xogar un xogo de dados. Cada xogador vai xogar
+          tres veces para definir un valor inicial, un valor final, e un intervalo.
+          En cada quenda, facemos un círculo no valor inicial, e todos os valores
+          que estean ao mesmo número de pasos por diante que o valor do noso intervalo.
+          Paramos de facer círculos cando chegamos ao noso valor final. Quen teña
+          a maior puntuación gaña!
+      2:
+        text: Os bucles "para" poden ser útiles en moitos lugares, e se vas ser un
+          meteorólogo, vas usar os bucles "para" todo o tempo. Ola, eu son Becky,
+          e traballo na EverPower Renewables como meteorólogo especializada en ventos.
+          Eu prevexo a velocidade dos ventos na área do desfiladeiro do Río Colúmbia,
+          onde a empresa ten parques eólicos.
+      3:
+        text: Estamos tentando entender a forza dos ventos alí, para que saibamos
+          canta enerxía será xerada. Fornecemos esas informacións aos comercializadores
+          de enerxía en tempo real. Eles compran e venden enerxía con base en canta
+          enerxía dicimos que será xerada, para garantir que a rede enerxética permaneza
+          equilibrada, que as luces da súa casa continúen acendidas, e que maximizemos
+          a enerxía que obtemos dos nosos parques.
+      4:
+        text: Estamos no centro nacional de control da EverPower Renewables, aquí
+          en Portland, e é aquí onde recibimos informacións de todas os nosos parques
+          por todo o país. Nin mesmo os computadores máis poderosos de hoxe poden
+          simular a atmosfera enteira. Nos modelos de previsión computadorizados,
+          temos o que chamamos malla. Cada punto da malla corresponde a unha latitude
+          e unha lonxitude. Temos que calcular a física e tentar descubrir a velocidade
+          do vento, temperatura, presión, ese tipo de cousas.
+      5:
+        text: Como esas mallas son ben grandes, e estamos a facer iso en moitos puntos,
+          estamos pasando por esas cousas millóns e millóns de veces. Eu uso bucles
+          para todo o que fago. Por exemplo, aquí hai un bucle "para". Cando estás
+          facendo previsións do vento, hai tantos parámetros distintos que sería imposíbel
+          para un ser humano se sentar e facer todas esas contas. Hai tantos aspectos
+          distintos afectando o que acontece co vento que precisamos dun modelo computadorizado
+          para prevelo.
+    C4_unplugged_madlibs:
+      1:
+        text: Nesta lección, imos xogar con algunhas historias de cubrir os ocos en
+          branco. Tes un modelo que podes cubrir para crear historias similares, pero
+          con diferenzas moi divertidas.
+      2:
+        text: Nesta lección, tamén aprendemos a crear un modelo abstraído a partir
+          de dúas historias que xa foron creadas. A abstracción é a arte de eliminar
+          diferenzas e detalles para que poidamos ver como unha solución pode funcionar
+          para problemas distintos. Isto é moi útil en informática, porque nos permite
+          crear funcións que poden ser útiles en moitas situacións distintas.
+    C4_unplugged_parameters:
+      1:
+        text: Esta lección chámase Escribindo unha canción con parámetros. Imos escribir
+          algunhas músicas. Ás veces, o retrouso é un pouquiño distinto cada vez que
+          o cantas. Coñeces a música "Old Macdonald Had a Farm"? O retrouso é un pouco
+          distinto para cada animal. E naquela facenda, el tiña unha vaca, i-á-i-á-ô.
+          A pequena mudanza no retrouso pode ser mostrada usando algo que chamamos
+          "parámetros".
+      2:
+        text: Ás veces unha función precisa dun parámetro. Un parámetro é unha información
+          adicional que podes pasar para unha función e personalizala para unha necesidade
+          especial. Cando fas xelado na casa cos teus amigos, está usando un proceso
+          similar aos parámetros nun programa de computador.
+      3:
+        text: A bóla do xelado de crema pode ser igual en todos os cucuruchos, pero
+          cando pides aos teus amigos que escollan dúas coberturas, consegues moitas
+          combinacións distintas. O nome da función é "cobertura", pero cada tipo
+          de cobertura é un parámetro. Funcións e parámetros funcionan xuntas na produción
+          de excelente programas de computador e tamén excelente sundaes.
+    C4_unplugged_variables:
+      1:
+        text: Esta lección chámase "variábeis en sobres". Imos aprender como podemos
+          construír sentenzas mesmo cando temos informacións que faltan. A maioría
+          de nós xa está familiarizado coa idea de cubrir un espazo en branco. Facemolo
+          cando colocamos o noso nome na lección de casa. Ás veces, máis dunha palabra
+          precisa ser cuberta, e, nese caso, identificamos ese espazo en branco, para
+          que saibamos que información vai aí.
+      2:
+        text: As variábeis son espazos reservados para informacións que poden mudar.
+          Usando unha variábel para a información que falta, podemos continuar a traballar
+          no que queira que esteamos a facer e deixar a alguén cubrir as informacións
+          que faltan para máis tarde. Usamos moito as variábeis nos softwares. Usamos
+          variábeis como espazos reservados para nomes, enderezos de e-mail, e até
+          mesmo nomes de usuario. Así, podemos informar ao programa que eses detalles
+          van aparecer despois que o usuario os cubrir. Usamos variábeis todo o tempo
+          no noso traballo.
+      3:
+        text: Sempre que precisamos almacenar unha información para máis tarde, usamos
+          unha variábel. Digamos que precisamos contar o número de veces que o usuario
+          escribiu un tweet. Sempre que el escribe un tweet, sumamos un a ese número,
+          e sempre que el elimina un, substraímos un dese número. Sempre que precisamos
+          saber cantas veces o usuario escribiu un tweet, simplemente miramos esa
+          variábel.
+    C4_variables_artist:
+      1:
+        text: Unha variábel é un contedor no que podes almacenar un valor. Cando usas
+          unha variábel nun algoritmo, abre o contedor e mira o valor dentro del.
+          Isto che permite escribir programas máis intelixentes, que se comportan
+          de modo distinto dependendo do valor almacenado na variábel.
+      2:
+        text: Por exemplo, se eu quixese escribir un algoritmo para dicir "Feliz aniversario
+          de 10 anos!" para o meu irmanziño, excelente, pero o ano que vén eu vou
+          querer dicir "Feliz aniversario de 11 anos!". Podo crear unha variábel chamada
+          idade para almacenar a idade do meu irmán, e escribir o meu algoritmo para
+          dicir "Feliz aniversario de 'idade' anos!". Como a variábel pode mudar,
+          eu podo atualizar a variábel 'idade' para ser igual a 'idade' máis 1 todos
+          os anos.
+      3:
+        text: Neste desafío, imos usar unha variábel que vai definir a lonxitude da
+          liña que o noso artista vai trazar. Máis diante no noso código, o bloque
+          avance vai ler esa variábel "lonxitude" para ver cal é o o seu valor.
+    C4_variables_playlab:
+      1:
+        text: Unha variábel é un contedor no que podes almacenar un valor. Cando usas
+          unha variábel nun algoritmo, abre o contedor e mira o valor dentro del.
+          Isto che permite escribir programas máis intelixentes, que se comportan
+          de modo distinto dependendo do valor almacenado na variábel.
+      2:
+        text: Agora vas probar o laboratorio, onde recibirás xogos distintos e poderás
+          mudar os valores de variábeis como velocidade, altura e puntuación para
+          mudar o xogo. Non terás que mudar o algoritmo do xogo para mudar como se
+          xoga, só as variábeis.
+      3:
+        text: No meu traballo no Kindle e no raio-x para libros, aplicamos variábeis
+          de moitos modos distintos. Un modo en como podes usar unha variábel é para
+          almacenar os números das páxinas dun libro. O usuario pode aumentar ou diminuír
+          o tamaño da fonte dun libro electrónico. Con base no tamaño da fonte, o
+          número de páxinas no libro electrónico pode mudar. Podemos axustar iso almacenando
+          o número de páxinas na variábel.
+    infinity_playlab_events:
+      1:
+        text: Agora, imos aprender a ler sobre algo que os programadores de xogos
+          usan todos os días. Son chamados eventos. Un evento di ao teu programa que
+          prestes atención a cando algunha cousa acontece. E cando acontece realiza
+          unha acción. Algúns exemplos de eventos son detectar un clic no rato, nunha
+          tecla, ou un toque na pantalla.
+      2:
+        text: Aquí imos facer Baymax se mover para enriba para tocar Hiro, e para
+          abaixo para tocar Rapunzel cando o xogador usa as frechas para enriba/paraa
+          baixo ou os botóns para enriba/para abaixo. Imos usar o bloque "cando a
+          frecha para enriba estivese presionada" e empatar co bloque "mova un personaxe
+          para enriba", para que cando o xogador presione a frecha para enriba, todo
+          o que estea ligado ao bloque "cando a frecha para enriba estivese presionada"
+          sexa executado. Faremos o mesmo para mover Baymax para abaixo. Paso a paso,
+          o seu xogo está ficando máis interativo.
+    infinity_playlab_intro:
+      1:
+        text: En que curso estás? Segundo. Sexto ano. Primeiro curso. Eu estaba no
+          primeiro curso cando aprendín a programar. Gañei o meu primeiro computador
+          cando estaba no sexto ano. O que me entusiasma é ser capaz de resolver os
+          problemas das persoas. Podes te expresar, podes construír cousas a partir
+          dunha idea.
+      2:
+        text: A informática é a base de moitas das cousas que os alumnos de facultade
+          e profesionais farán nos próximos vinte ou trinta anos. Gústame programar
+          porque me gusta axudar as persoas. Teño a oportunidade de crear algo que
+          tornará a vida das persoas máis fácil. Penso que é o máis próximo que teño
+          dun superpoder. Comezar é a parte máis importante. Considérome unha principiante
+          a min mesma, e quero que aprendas comigo.
+      3:
+        text: Eu son John Vechey, un dos cofundadores da PopCap Games. Facemos xogos
+          como Plants vs. Zombies, Bejeweled, e Peggle. O importante sobre os xogos
+          non é que o teu código sexa perfecto, nin que a túa estética sexa perfecta,
+          pero si como fai o xogo que te sintas e como é de divertido. Só consegues
+          entender iso facendo, aprendendo e adaptando e mellorando as túas propias
+          habilidades na creación de xogos.
+      4:
+        text: Tes un xogo favorito? Ben, imos dar un paso para a creación de xogos
+          como ese usando o laboratorio. Os bos xogos teñen unha historia, e toda
+          historia ten personaxes. Os personaxes fan cousas como falar, se mover e
+          interactuar os uns cos outros. Talvez até mesmo marcar puntos con base nas
+          regras do xogo. Hoxe, imos aprender como facer todas esas cousas, unha a
+          unha, con personaxes da Disney como a Anna, a Elsa, o Hiro, o Baymax, e
+          a Rapunzel. Imos crear un xogo desde cero, que pode ser compartido e xogado
+          nun móbil.
+      5:
+        text: A túa pantalla está dividida en tres partes principais. Á esquerda está
+          a área do xogo, onde o teu programa será executado. As instrucións para
+          cada nivel están escritas abaixo. A área do medio é a caixa de ferramentas,
+          e cada un deses bloques é unha parte do código. O espazo en branco á dereita
+          é chamado área de traballo, e é onde imos crear o noso programa.
+      6:
+        text: Para comezar vas precisar encaixar os teus bloques ao bloque laranxa
+          "cando executar". Podes encaixar varios bloques arrastrándoos até ver o
+          contorno amarelo, e daquela vanse encaixar. Neste primeiro desafío, o Hiro
+          é o personaxe 1 e o Baymax é o personaxe 2. Precisamos mover o Hiro para
+          chegar até o Baymax, arrastrando o bloque "mover para a dereita" e encaixándoo
+          ao bloque "cando executar". Cando os bloques estivesen no lugar, clica no
+          botón "Executar" para ver o que programaches.
+      7:
+        text: Imos comezar e cando terminemos poderás crear o teu propio xogo con
+          estes actores incríbeis que poden interactuar, marcar puntos, lanzar microrrobots,
+          cereixas, tixolas, centelas e xeo... e derrotar os uns aos outros. Depende
+          de ti!
+    infinity_playlab_repeat_forever:
+      1:
+        text: Consegues imaxinar se tiveses que repetir algunha cousa durante toda
+          a vida? Con sorte nunca terá que facer iso porque os computadores son moi
+          bos en repetir as cousas. Este é o bloque "repita infinitamente". Calquera
+          cousa dentro dese bloque vai acontecer para sempre no xogo.
+      2:
+        text: Entón se quixéramos que un actor faga algo repetidamente, sen que o
+          xogador teña que facer nada, imos colocar eses bloques dentro do bloque
+          "repita infinitamente". Neste próximo desafío o teu obxectivo é axudar a
+          Anna a andar continuamente para enriba e para abaixo. Aprender como os comandos
+          de repetición funcionan vai aforrar moito tempo máis tarde cando vaias crear
+          o teu propio xogo.
+    tutorial_puzzle_challenge:
+      1:
+        text: O que queres ser de maior, Olivia? Astronauta. Sabes o que é un programador
+          informático? Hmm non. Hmm o que? Non sei ben como explicar, a programación
+          informática é moi simple. É un conxunto de instrucións, como unha receita,
+          que tes que seguir paso a paso para obter o resultado desexado.
+      2:
+        text: Podo alterar o número de pixels ou a lonxitude da liña usando este menu.
+          Cal era a lonxitude? Podes ver as instrucións de novo procurando abaixo
+          do botón executar. Aquí usei o bloque avance e vou seleccionar 100 pixels.
+          Podo eliminar un bloque arrastrándoo para a caixa de ferramentas ou para
+          a recolledora de lixo. Imos colocalo de novo no seu sitio.
+      3:
+        text: Executa o código presionando executar. Ben, non funcionou! Vou apertar
+          reiniciar e descubrir o que está errado. Podes tentar facer un desafío cantas
+          veces queiras, e saltar desafíos e volver a eles máis tarde. Só tenta facelo
+          o mellor que poidas e non desistas. Imos agregar outro avance. Aínda non
+          funcionou. Podo colocar un bloque entre outros bloques.
+      4:
+        text: Imos apañar un bloque "vire" e colocalo entre os bloques "avance". Vire
+          á esquerda 45 graos. Imos executar de novo. Reiniciar, executar, a tope!
+          Aquí hai outro desafío. Ás veces tes un código inicial para completar. Aquí
+          preciso agregar as lonxitudes e graos apropiados.
+      5:
+        text: Ás veces podes accidentalmente estragar o código inicial. O que facer
+          nese caso? Podes presionar limpar desafío e comezar de novo. Vou arrastrar
+          este bloque numérico para as distintas áreas de pixels. Seleccione 100 para
+          pixels, 45 para graos e 100 para pixels de novo. Fantásticol! Aquí está
+          a abella do Code Studio. Necesito mover a abella para cada unha das flores
+          e recoller néctar.
+      6:
+        text: A primeira flor está a tres bloques de distancia, entón necesito tres
+          bloques avance. 1, 2, 3. Entón, un "obteña néctar", despois outro obteña
+          néctar. Ben, isto non funcionou! Vou colocar outro avance entre os obteña
+          néctar e executar o programa de novo. Toma! funcionou! Acabas de aprender
+          como usar os desafíos do artista e da abella do Code Studio. Boa sorte co
+          desafío do Code Studio.
+    unplug1:
+      1:
+        text: O que queres ser de maior, Olivia? Astronauta. Sabes o que é un programador
+          informático? Hmm non. Hmm o que? Non sei ben como explicar, a programación
+          informática é moi simple. É un conxunto de instrucións, como unha receita,
+          que tes que seguir paso a paso para obter o resultado desexado.
+      2:
+        text: A informática é un modo de termos impacto no mundo. Poden ser vídeos
+          de música, xogos ou descubrir se alguén é ou non parente de alguén. Descubrir
+          os amigos das persoas. Pode facer todo tipo de cousas tolas que na verdade
+          salvan vidas. Penso que debes probar. Para min é como un pincel. Penso que
+          a boa programación non é tan distinta da boa arte.
+      3:
+        text: Cando finalmente aprendín un pouco de programación, aquela parede baleira
+          transformouse en varias portas que podían ser abertas, e claro, o que encontras
+          atrás dela é outro corredor cheo de portas. Programar é fácil e divertido.
+          Podes facer calquera cousa que queiras. Finalmente comezas a abrir portas
+          o bastante para que a luz entre. Para min, un programa acabado é como unha
+          estrutura chea de luz. Todos os recantos están iluminados. O número de persoas
+          ás que podes chegar e interactuar é algo que o mundo nunca viu antes.
+      4:
+        text: A nosa primeira lección nesta serie é sobre o que é a informática, o
+          que un científico da computación fai, e como podes ser máis responsábel
+          usando a tecnoloxía. É unha lección moi importante, pero un pouco pesada
+          no texto. Cando acabemos poderás facer o teu propio código personalizado
+          usando as túas iniciais. É unha actividade divertida, e moi estimulante,
+          porque o binario é unha daquelas cousas que parecen ser moi técnicas, pero
+          que, cando entendes, é como se falases unha lingua secreta.
+    unplug2:
+      1:
+        text: A lección sobre pensamento computacional ten o obxectivo de ensinarlle
+          como coller un problema grande e difícil e dividilo en varios problemas
+          máis fáciles. O obxectivo desta lección é escribir un conxunto de instrucións
+          que alguén poida seguir para debuxar un dos monstros incluídos no plan da
+          lección.
+      2:
+        text: 'Os alumnos van se dividir en grupos para escribir instrucións e daquela
+          vanas trocar polas doutro grupo, que terá que debuxar o monstro. Os grupos
+          van escribir instrucións usando as catro etapas do pensamento computacional:
+          decomposición, identificación de padróns, abstracción e algoritmos.'
+      3:
+        text: Primeiro, os grupos van dividir a tarefa, o que significa facer un plan
+          de xogo. Entón van procurar padróns entre todos os monstros do catálogo.
+          Cando se decaten das diferenzas entre os monstros van abstrair ou remover
+          eses detalles. Por exemplo, un monstro do catálogo ten ollos Ranzinza e
+          outro ten ollos Trasno. Pero ambos teñen ollos, entón podemos escribir unha
+          liña que di que o monstro ten ollos en branco.
+      4:
+        text: Entón, os alumnos poderán escribir un conxunto de instrucións, chamado
+          algoritmo, que lista as partes dos monstros que están en branco para dicir
+          de que estilo deben ser. Ese é o conxunto de instrucións que van pasar aos
+          outros alumnos para recriar o seu propio monstro.
+    unplug3:
+      1:
+        text: Na programación en papel cadriculado, axudamos a explicar como funciona
+          a programación tentando axudar as persoas a recrearen debuxos usando só
+          frechas e garabatos. Unha persoa recibe un pequeno debuxo nun papel cuadriculado
+          e só necesita usar frechas específicas para tentar describir como recrear
+          ese debuxo.
+      2:
+        text: 'Nesta actividade os únicos símbolos que podes usar son estes: avance
+          un cadrado, volva un cadrado, mova un cadrado para enriba, mova un cadrado
+          para baixo, altere a próxima cor e cubra o seu cadrado con cor. Cando teñamos
+          isto programado, podemos entregar as instrucións a outra persoa e poderá
+          ler o código e tentar recrear a imaxe.'
+    unplug4:
+      1:
+        text: Na programación en papel cadriculado, axudamos a explicar como funciona
+          a programación tentando axudar as persoas a recrearen debuxos usando só
+          frechas e garabatos. Unha persoa recibe un pequeno debuxo nun papel cuadriculado
+          e só necesita usar frechas específicas para tentar describir como recrear
+          ese debuxo.
+      2:
+        text: Na segunda metade da actividade, preguntamos aos alumnos de cantas formas
+          distintas poden dobrar un pedazo de papel para crear dezaseis rectángulos
+          idénticos. Entón vas discutir cantas solucións poden levar ao mesmo resultado
+          e por que algunhas solucións son mellores en certas situacións.
+    unplug5:
+      1:
+        text: Na programación en papel cadriculado, axudamos a explicar como funciona
+          a programación tentando axudar as persoas a recrearen debuxos usando só
+          frechas e garabatos. Unha persoa recibe un pequeno debuxo nun papel cuadriculado
+          e só necesita usar frechas específicas para tentar describir como recrear
+          ese debuxo.
+      2:
+        text: Na segunda metade da actividade, preguntamos aos alumnos de cantas formas
+          distintas poden dobrar un pedazo de papel para crear dezaseis rectángulos
+          idénticos. Entón vas discutir cantas solucións poden levar ao mesmo resultado
+          e por que algunhas solucións son mellores en certas situacións.
+    unplug6:
+      1:
+        text: Esta actividade chámase programación con cartas, é excelente para todas
+          as idades. Como aprendiches coas leccións anteriores, durante o contido
+          sobre o Blockly, as instrucións "se" precisan ser avaliadas para sabermos
+          se son certas ou falsas. Iso é condicional, e pode ser usado de varias formas
+          distintas.
+      2:
+        text: 'Sacamos vantaxe disto creando programas en papel que executas usando
+          cartas escollidas aleatoriamente. Podes ter unha instrución "se" que di
+          algo como: "se a carta que sacaches é maior que 8, gañas un punto. En caso
+          contrario, o seu oponente gaña un punto". Podes facelo de formas máis simples
+          ou máis complexas segundo te sintas máis cómodo.'
+    unplug7:
+      1:
+        text: Sabes cando ves a letra dunha música e definen o retrouso no inicio
+          e despois, para o resto da música só fan referencias a el con esa palabra?
+          É así como se chama a unha función.
+      2:
+        text: Nesta lección, definimos o retrouso no comezo da música e entón comezamos
+          a cantar, e entendemos que a clase non canta a palabra "retrouso", automaticamente
+          volven para o inicio, onde definimos o retrouso e o cantan enteiro. Usamos
+          isto como unha excelente introdución para entender o que un programa fai
+          cando define e chama unha función.
+      3:
+        text: Usamos músicas coñecidas, como Old Macdonald, para falar sobre como
+          un retrouso é chamado varias veces e, ás veces, pode ser alterado. Cando
+          temos unha música como Old Macdonald, na cal certas palabras mudan, temos
+          unha excelente oportunidade de introducir a idea de parámetros. Pasando
+          certas palabras podes enviar informacións extras para a túa función. Cando
+          tiveses certeza de que todos o entenderon, podes apañar as túas propias
+          músicas e dividilas ti mesmo. Vexa se, xunto con toda a clase, conseguides
+          facer isto.
+    unplug8:
+      1:
+        text: A nosa lección sobre abstracción usa o concepto de madlibs, onde basicamente
+          inseres un espazo en branco nunha historia que pode ser cuberta con varias
+          palabras distintas. Collemos esa idea, desafiamos os nenos para que inventen
+          as súas propias palabras para as súas propias historias, e realmente explicaren
+          o concepto de abstracción.
+      2:
+        text: Isto está relacionado con funcións e como podes ter unha función, como
+          na música do Old Macdonald, na cal tes unha estrutura para o teu retrouso,
+          pero tamén tes pequenas alteracións, e as abstraes cubríndoas toda as veces
+          coa túa propia palabra. Pero ás veces tes tres palabras que mudan, entón
+          as cobres con tres parámetros, isto é moi útil.
+      3:
+        text: Podes ter unha función que se ocupe de varios problemas distintos. Moitas
+          veces, as persoas van escribir funcións separadas para todos eses problemas,
+          sen entender que hai só unha pequena diferenza. Se puidesen encontrar unha
+          maneira de manexar esa pequena diferenza, poderían reutilizar unha función
+          varias veces, en vez de ter 14 funcións distintas.
+    unplug9:
+      1:
+        text: A programación por relevos é unha lección extremadamente divertida que
+          vai moito máis alá da informática. Ás veces alguén fica un pouco impaciente
+          e queres mantelo atento. Esta é unha excelente forma de engadir un pouco
+          de emoción á informática.
+      2:
+        text: Divides a todos en dous grupos que fican nunha fila e corren no estilo
+          relevos. A primeira persoa en cada grupo corre até o outro lado da sala,
+          onde hai un papel de debuxo cadriculado e un papel en branco esperando por
+          eles. Escriben o primeiro paso para crear esa imaxe, volven correndo para
+          a fila e o próximo xogador vai correndo escribir o próximo paso.
+      3:
+        text: Esta é unha excelente maneira de introducir a idea de depuración, a
+          necesidade de revisar o teu propio traballo e o traballo que as persoas
+          fixeron antes ca ti. Vas entender rapidamente o importante de ser coidadoso
+          ao escribir o teu código cando un equipo enteiro depende de ti.
+    unplug10:
+      1:
+        text: Esta actividade explica, dunha forma fácil de entender, como funciona
+          a internet. Explicamos todas as terminoloxías que necesitarás en termos
+          simples para que os alumnos poidan simular transmisións de mensaxes, como
+          un e-mail.
+      2:
+        text: Os alumnos van transmitir mensaxes mentres finxen ser un dos tres métodos
+          de transmisión. Internet sen fío, ADSL ou fibra ótica. Os alumnos que representan
+          o wi-fi necesitan memorizar a mensaxe que están enviando, porque o wi-fi
+          ten a maior probabilidade de perder algunha información.
+      3:
+        text: Os alumnos que finxen ser o ADSL ou o cabo van levar a mensaxe nas costas
+          das súas mans, con menor probabilidade de perder a información. E os alumnos
+          que representan a fibra ótica van levar a mensaxe nas dúas mans. Esta actividade
+          é unha excelente forma de comprender algo que moitos de nós usamos todos
+          os días.
+    unplug11:
+      1:
+        text: Entón, agora é hora de dar un paso para tras e dar unha ollada a todo
+          o que fixeches nas últimas dezanove leccións. Esta é unha excelente hora
+          para dicir aos alumnos que o que fixeron xa é unha gran conquista. Aprenderon
+          máis nestas leccións do que moitos adultos saben sobre informática.
+      2:
+        text: Discute coa sala toda ou en grupos pequenos sobre as túas leccións favoritas.
+          Cando mires para todo o que aprendiches, é o momento no cal pode brillar
+          a creatividade de teus alumnos. Divídeos en grupos e pídelles que creen
+          a súa propia lección offline. Atribúe un concepto chave para cada grupo,
+          como funcións ou algoritmos, e dálles materiais para que usen. Pida que
+          cada grupo presente a súa nova actividade ou mesmo reserve outro día para
+          realizar as actividades creadas polos alumnos.
+      3:
+        text: Todos aquí da Code.org esperamos que tiveses unha TONELADA de diversión
+          durante este curso. E se o teu soño é crear a mellor nova aplicación, usar
+          a programación para axudar na cura de doenzas, ou se queres ser só un grande
+          solucionador de problemas, este curso foi o primeiro paso para alcanzar
+          eses soños.
+    starwars_intro:
+      1:
+        text: Ola, son Kathleen Kennedy, produtora de Star Wars, O Despertar da Forza.
+          Hoxe, vas traballar cun dos nosos astros, BB-8. BB-8 é un androide esférico.
+          Todo o que fai e todos os seus movementos son controlados por softwares
+          de computador. A informática ten impacto sobre todas as industrias, do marketing
+          á saúde, aos filmes. De feito, centenares de enxeñeiros da computación traballan
+          xuntos para crear un filme como O Despertar da Forza.
+      2:
+        text: Ola, son Rachel Rose, engeñeira senior de P&D na ILM, e lidero o equipo
+          de animación e desenvolvemento de criaturas. No Despertar da Forza, son
+          responsábel de axudar os artistas a desenvolver equipamentos que son as
+          partes do personaxe que se moven e permítenlle parecer moi real nunha galáxia
+          moito, moito distante.
+      3:
+        text: Durante a próxima hora, imos crear o noso propio xogo do Star Wars.
+          Imos ensinarlle os conceptos básicos da programación. Xeralmente, a programación
+          é toda feita con texto, pero aquí imos usar bloques, para que poidas arrastrar
+          e soltar para escribir os programas. Por tras disto aínda vas estar creando
+          código. Despois de que examines os conceptos básicos cos bloques, imos mudar
+          para JavaScript, unha das linguaxes de programación máis popular na web.
+      4:
+        text: Para comezar, imos traballar con Rey para programar o BB-8 para andar
+          e recoller toda a chatarra. A túa pantalla está dividida en tres partes.
+          Á esquerda, temos a área do xogo de Star Wars, onde o código será executado.
+          As instrucións para cada nivel están abaixo da área de xogo.
+      5:
+        text: A parte do medio é onde fica a caixa de ferramentas, e cada un deses
+          bloques é un comando que BB-8 pode entender.
+      6:
+        text: O espazo en branco á dereita chámase área de traballo, e é onde imos
+          crear o noso programa.
+      7:
+        text: Se eu arrastro o bloque moveLeft(); para a nosa área de traballo e presiono
+          Executar, o que acontece? O BB-8 móvese un bloque para a esquerda.
+      8:
+        text: E se eu quero que BB-8 faga algo despois do moveLeft();? Podo agregar
+          outro bloque ao noso programa. Vou escoller o bloque moveUp(); e arrastralo
+          para debaixo do bloque moveLeft(); até que fique destacado. Entón, vou soltalo,
+          e os dous bloques van se encaixar.
+      9:
+        text: Cando presiono Executar de novo, BB-8 vai obedecer aos comandos apiñados
+          de enriba para baixo na nosa área de traballo. Se queres eliminar un bloque,
+          simplemente remóveo da pila e arrástrao de volta para a caixa de ferramentas.
+      10:
+        text: Despois de presionar Executar, sempre podes presionar o botón Recomezar
+          para levar BB-8 de volta ao inicio. Imos comezar!
+    starwars_typing:
+      1:
+        text: Dentro dos bloques que temos usado existen comandos JavaScript. Actualmente,
+          JavaScript é a linguaxe de programación máis popular entre os desenvolvedores
+          profesionais. Os bloques son un excelente modo de comezar a aprender a programar,
+          e en verdade, as mellores universidades, como Harvard e Berkeley, comezan
+          a ensinar así. Pero despois de aprendermos o básico, imos escribir os códigos
+          tecleando, porque iso vólvenos máis rápidos.
+      2:
+        text: Podemos teclear centenares de comandos sen ter que encontralos na caixa
+          de ferramentas e arrastralos para a área de traballo. Como estás aprendendo,
+          teclear pode ser máis lento no comezo, pero queremos que probes.
+      3:
+        text: No recanto superior dereito da túa área de traballo, podes premer no
+          botón "Mostrar texto" en calquera desafío para alterar do modo de bloques
+          para o modo de programación na forma de texto.
+      4:
+        text: Na próxima lección, imos introducilo ao modo de tecleado. Aquí aínda
+          podes arrastrar o bloque da caixa de ferramentas ou podes teclear o nome
+          do comando. Conforme vaias tecleando vas ver nomes de comandos posíbeis
+          abaixo de onde está tecleando. En vez de teclear o nome enteiro do comando
+          podes seleccionar un deles para ser máis rápido. No meu traballo uso este
+          recurso de cubrir automaticamente todo o tempo cando estou escribindo código.
+      5:
+        text: Cando esteas tecleando código, o computador necesita que sexas moi preciso.
+          A grafía e o uso de letras maiúsculas e minúsculas no nome do comando deben
+          ser exactamente correctas, incluíndo as parénteses e o punto e coma. Mesmo
+          se houbese só un pequeno erro de tecleado, o BB-8 non vai entender o código
+          e non poderá se mover.
+      6:
+        text: Cando cometas un erro na liña, o editor vai destacalo para que poidas
+          tentar modificar o texto e corrixilo.
+      7:
+        text: Se tiveses problemas sempre podes recomezar co botón "Comezar desde
+          o inicio", e podes volver ao modo de bloques en calquera momento, premendo
+          no recanto superior dereito. Ok, imos tentar teclear! E se cometes algún
+          erro, non fiques frustrado. Todo o mundo ten que tentar algunhas veces antes
+          de acertar.
+    starwars_events:
+      1:
+        text: Ola, o meu nome é Charita Carter. Son produtora creativa senior aquí
+          na Walt Disney Imagineering. Son responsábel de liderar os equipos que producen
+          as atraccións que os nosos convidados proban. Estamos sempre procurando
+          modos de mellorar e tornar a experiencia dos nosos convidados máis agradábel,
+          e a tecnoloxía é esencial para iso.
+      2:
+        text: Parabéns, conseguichelo! Programaches o BB-8. Agora, penso que estamos
+          listos para algo máis difícil. Imos tentar. Agora que aprendiches os conceptos
+          básicos da programación, imos volver o tempo para crear o teu propio xogo,
+          protagonizado por R2-D2 e C3PO.
+      3:
+        text: 'Para facer un xogo, precisamos aprender algo que os programadores de
+          xogos usan todos os días: os eventos. Os eventos din ao seu programa o que
+          debe prestar atención para cando algo acontece, e, cando aconteza, realizar
+          unha acción.'
+      4:
+        text: 'Algúns exemplos de eventos son: detectar un clic do rato, o toque dunha
+          tecla de dirección ou un toque na pantalla.'
+      5:
+        text: Aquí, imos facer a R2-D2 se mover para enriba para entregar unha mensaxe
+          para un piloto rebelde, e entón se mover para abaixo até o outro piloto
+          rebelde. Imos usar eventos para facelo se mover cando o xogador use as teclas
+          de dirección para enriba/para abaixo ou os botóns para enriba/para abaixo.
+      6:
+        text: Usamos o bloque de evento whenUp() e encaixamos o bloque goUp() a el.
+          Cando o xogador presione a tecla de dirección para enriba, o código vinculado
+          ao bloque whenUp() é executado. Faremos a mesma cousa para o R2-D2 se mover
+          para baixo.
+      7:
+        text: Para facer isto usamos un comando chamado whenUp(). Cando arrastres
+          o comando para fóra da caixa de ferramentas, vas ver que comeza e termina
+          con chaves en vez de punto e coma. Isto dános espazo para colocar outros
+          comandos entre as chaves. Todos os comandos que colocamos entre esas chaves
+          serán executados cando o xogador presione a frecha para enriba.
+      8:
+        text: Queremos que o R2-D2 vaia para enriba, entón imos colocar un bloque
+          goUp(); dentro do comando. E imos facer a mesma cousa para que o R2-D2 vaia
+          para baixo.
+      9:
+        text: Agora, en vez de escribir anticipadamente todo o código para controlar
+          o noso androide, podemos deixar a R2-D2 reaccionar a eventos de botóns sendo
+          presionados que o fan se mover pola pantalla.
+    starwars_congrats:
+      1:
+        text: Ola, o meu nome é Alice! Eu xestiono os equipos de produto e enxeñaría
+          aquí na Code.org e traballei neste titorial que estás vendo agora.
+      2:
+        text: Acabas de chegar ao último nivel. Parabéns! Aprendiches todo o que precisas
+          saber para crear o teu propio xogo de Star Wars. Agora, non hai máis instrucións
+          nin desafíos para resolver. Podes crear o teu propio xogo e escoller como
+          vai funcionar. Unha cousa máis, desbloqueaches novos sons e comandos para
+          poder facer aínda máis.
+      3:
+        text: "[alumnos falando] Entón, fixemos un xogo no que, basicamente, marcas
+          puntos cando colle porcos inchábeis. O truco é que sempre que colles un
+          porco inchábel aparece un soldado. En verdade, a pantalla está chea de porcos
+          inchábeis e, cando toques 10.000, vences."
+      4:
+        text: "[alumnos falando] Fixemos un xogo no que non podes perder, e todo o
+          que matas dáche puntos. No meu programa, eu invertín os botóns, entón sempre
+          que premes para enriba, o teu personaxe vai para abaixo, e cando premes
+          para a dereita, vai para a esquerda. É ben difícil! Ás veces tes unha vantaxe,
+          unha vantaxe inxusta cando es ti mesmo o desenvolvedor do xogo. Conseguino?
+          Si!"
+      5:
+        text: Cando termines o teu xogo, selecciona compartir para recibir un link
+          que poderás compartir cos teus amigos ou abrir para xogar o teu xogo no
+          teu móbil. Divírtete!
+    starwars_blocks_intro:
+      1:
+        text: Ola, son Kathleen Kennedy, produtora de Star Wars, O Despertar da Forza.
+          Hoxe, vas traballar cun dos nosos astros, BB-8. BB-8 é un androide esférico.
+          Todo o que fai e todos os seus movementos son controlados por softwares
+          de computador. A informática ten impacto sobre todas as industrias, do marketing
+          á saúde, aos filmes. De feito, centenares de enxeñeiros da computación traballan
+          xuntos para crear un filme como O Despertar da Forza.
+      2:
+        text: Ola, son Rachel Rose, engeñeira senior de P&D na ILM, e lidero o equipo
+          de animación e desenvolvemento de criaturas. No Despertar da Forza, son
+          responsábel de axudar os artistas a desenvolver equipamentos que son as
+          partes do personaxe que se moven e permítenlle parecer moi real nunha galáxia
+          moito, moito distante.
+      3:
+        text: Durante a próxima hora, imos crear o noso propio xogo do Star Wars,
+          que che vai ensinar os conceptos básicos da programación. Xeralmente, a
+          programación faise con texto, pero aquí imos usar bloques, para que poidas
+          arrastrar e soltar para escribir os programas. Para comezar, imos traballar
+          con Rey para programar o BB-8 para se mover e recoller toda a chatarra.
+      4:
+        text: A túa pantalla está dividida en tres partes principais. Á esquerda está
+          a área do xogo, onde o teu programa será executado. As instrucións para
+          cada nivel están escritas abaixo da área do xogo.
+      5:
+        text: A parte do medio é onde fica a caixa de ferramentas, e cada un deses
+          bloques é un comando que BB-8 pode entender.
+      6:
+        text: O espazo en branco á dereita chámase área de traballo, e é onde imos
+          crear o noso programa.
+      7:
+        text: Se eu arrastro o bloque moveLeft(); para a nosa área de traballo, o
+          que acontece? BB-8 móvese un bloque para a esquerda.
+      8:
+        text: E se eu quixera que o BB-8 faga algo despois do moveLeft();? Podo agregar
+          outro bloque ao noso programa. Vou escoller o bloque moveUp(); e arrastralo
+          para debaixo do bloque moveLeft(); até que fique destacado. Entón, vou soltalo,
+          e os dous bloques van se encaixar. Cando eu presione Executar de novo, o
+          BB-8 vai seguir os comandos que están apiñados na nosa área de traballo
+          de enriba para baixo.
+      9:
+        text: Se queres eliminar un bloque, simplemente remóvaeo da pila e arrástrao
+          de volta para a caixa de ferramentas.
+      10:
+        text: Despois de presionar Executar sempre podes presionar o botón Recomezar
+          para levar a BB-8 de volta ao inicio. Imos comezar!
+    starwars_blocks_events:
+      1:
+        text: Ola, o meu nome é Charita Carter. Son produtora creativa senior aquí
+          na Walt Disney Imagineering. Son responsábel de liderar os equipos que producen
+          as atraccións que os nosos convidados proban. Estamos sempre procurando
+          modos de mellorar e tornar a experiencia dos nosos convidados máis agradábel,
+          e a tecnoloxía é esencial para iso.
+      2:
+        text: Parabéns, conseguichelo! Programaches o BB-8. Agora, penso que estamos
+          listos para algo máis difícil. Imos tentar. Agora que aprendiches os conceptos
+          básicos da programación, imos volver o tempo para crear o teu propio xogo,
+          protagonizado por R2-D2 e C3PO.
+      3:
+        text: 'Para facer un xogo, precisamos aprender algo que os programadores de
+          xogos usan todos os días: os eventos. Os eventos din ao seu programa o que
+          debe prestar atención para cando algo acontece, e, cando aconteza, realizar
+          unha acción.'
+      4:
+        text: 'Algúns exemplos de eventos son: detectar un clic do rato, o toque dunha
+          tecla de dirección ou un toque na pantalla.'
+      5:
+        text: Aquí, imos facer a R2-D2 se mover para enriba para entregar unha mensaxe
+          para un piloto rebelde, e entón se mover para abaixo até o outro piloto
+          rebelde. Imos usar eventos para facelo se mover cando o xogador use as teclas
+          de dirección para enriba/para abaixo ou os botóns para enriba/para abaixo.
+      6:
+        text: Usamos o bloque de evento whenUp() e encaixamos o bloque goUp() nel.
+          Cando o xogador presiona a tecla de dirección para enriba, o código do bloque
+          whenUp() é executado. Faremos a mesma cousa para facer a R2-D2 se mover
+          para baixo. Agora, en vez de escribir anticipadamente todo o código para
+          controlar o noso androide, podemos deixar a R2-D2 reaccionar a eventos de
+          botóns presionados que fan que se mova pola pantalla.
+      7:
+        text: Paso a paso, o teu xogo está ficando máis interativo.
+    starwars_blocks_congrats:
+      1:
+        text: Ola, o meu nome é Alice! Eu xestiono os equipos de produto e enxeñaría
+          aquí na Code.org e traballei neste titorial que estás vendo agora.
+      2:
+        text: Acabas de chegar ao último nivel. Parabéns! Aprendiches todo o que precisas
+          saber para crear o teu propio xogo de Star Wars. Agora, non hai máis instrucións
+          nin desafíos para resolver. Podes crear o teu propio xogo e escoller como
+          vai funcionar. Unha cousa máis, desbloqueaches novos sons e comandos para
+          poder facer aínda máis.
+      3:
+        text: "[alumnos falando] Entón, fixemos un xogo no que, basicamente, marcas
+          puntos cando colle porcos inchábeis. O truco é que sempre que colles un
+          porco inchábel aparece un soldado. En verdade, a pantalla está chea de porcos
+          inchábeis e, cando toques 10.000, vences."
+      4:
+        text: "[alumnos falando] Fixemos un xogo no que non podes perder, e todo o
+          que matas dáche puntos. No meu programa, eu invertín os botóns, entón sempre
+          que premes para enriba, o teu personaxe vai para abaixo, e cando premes
+          para a dereita, vai para a esquerda. É ben difícil! Ás veces tes unha vantaxe,
+          unha vantaxe inxusta cando es ti mesmo o desenvolvedor do xogo. Conseguino?
+          Si!"
+      5:
+        text: Cando termines o teu xogo, selecciona compartir para recibir un link
+          que poderás compartir cos teus amigos ou abrir para xogar o teu xogo no
+          teu móbil. Divírtete!
+    mc_intro:
+      1:
+        text: O meu nome é Jens Bergensten, pero me chaman Jeb. Son o desenvolvedor
+          xefe do Minecraft aquí na mojang. con. Penso que tiña 11 ou 12 anos cando
+          comecei a programar porque quería facer xogos. Un dos amigos do meu pai
+          díxome que para facer xogos necesitaba aprender a programar. Foi así como
+          comecei. Gústame deseñar e descubrir a arquitetura das cousas. Iso é o que
+          máis me gusta no Minecraft.
+      2:
+        text: Durante a próxima hora vas aprender o básico da informática, programando
+          a Alex ou o Steve para andaren por un mundo simulado de Minecraft.
+      3:
+        text: 'A programación tradicional acostuma a ser en texto, pero hoxe imos
+          usar blockly: un sistema que usa bloques que podes arrastrar e soltar para
+          escribir programas. Por baixo realmente estás creando código en JavaScript.'
+      4:
+        text: Os conceptos que vas aprender son os que os programadores usan todos
+          os días e son a base da informática. Aquí na Mojang, usamos os mesmos conceptos
+          para facer funcionar o Minecraft.
+      5:
+        text: Antes de comezar vas escoller o teu personaxe. Eu vou escoller a Alex.
+          Imos construír o código para un programa que vai axudarlle a andar pola
+          pantalla.
+      6:
+        text: A túa pantalla está dividida en tres partes principais. Na esquerda,
+          está a túa área de xogo do Minecraft, onde o programa será executado. As
+          instrucións para cada nivel escríbense abaixo.
+      7:
+        text: Esta zona intermedia é a caixa de ferramentas, e cada un destes bloques
+          é un comando que dirixe as accións da Alex.
+      8:
+        text: O espazo en branco á dereita chámase área de traballo e é aquí que imos
+          construír o noso programa.
+      9:
+        text: Se arrastramos o bloque "andar diante" até a nosa área de traballo e
+          prememos en Executar, o que acontece? Alex avanza un espazo na grade.
+      10:
+        text: E se quixéramos facer algunha cousa tras avanzar un espazo? Podemos
+          agregar un bloque máis ao noso programa. Vou escoller o bloque "virar á
+          dereita" e vou arrastralo abaixo do meu bloque "andar diante" até que esa
+          liña laranxa apareza. Entón, vou soltalo e os dous bloques van formar un
+          grupo. Cando mandamos Executar novamente, a Alex vai seguir os comandos
+          apiñados de enriba para baixo na nosa área de traballo.
+      11:
+        text: E se queres eliminar un bloque, basta arrastralo da pila de volta para
+          a caixa de ferramentas.
+      12:
+        text: Para desfacer as túas mudanzas e volver ao estado inicial da fase, usa
+          o botón Comezar de novo, no recanto superior dereito da área de traballo.
+          Unha cousa máis, estás a ver ese triángulo nos bloques de virar? Sempre
+          que vexas eses triángulos, significa que podes escoller unha opción distinta.
+          Imos comezar a programar!
+    mc_repeat:
+      1:
+        text: Son a Lydia Winters, directora de marca da Mojang, e fixemos un xoguiño
+          chamado Minecraft.
+      2:
+        text: A miña actividade preferida no Minecraft é explorar. Adoro me aventurar
+          nas cavernas e ver o que encontro. Como non son programadora, é moi fascinante
+          pasar polas leccións do Minecraft e aprender un pouco sobre programación.
+      3:
+        text: A última fase precisaba de moitos bloques "andar diante". Sería moito
+          máis fácil se puidésemos dicir ao computador que realice o comando para
+          avanzar catro ou cinco veces. Para a nosa sorte, os computadores son moi
+          bos en repetir comandos con bucles de repetición.
+      4:
+        text: Ao construír o Minecraft, usamos bucles de repetición para colocar todos
+          os materiais iniciais e crear un novo mundo. Son miles e miles de bloques.
+          Tamén usamos bucles nos detalles, por exemplo, para facer os pés da Alex
+          iren para diante e para tras cando anda. Os bucles de repetición son unha
+          parte poderosa da programación.
+      5:
+        text: A noite está chegando, entón nas próximas fases, imos construír unha
+          casa para a nosa seguranza. Imos usar o bloque de repetición para facelo
+          con facilidade.
+      6:
+        text: Para construír unha parede para a nosa casa, podemos dicir á Alex que
+          avance e coloque táboas catro veces, ou podemos dicirlle que avance e coloque
+          unha táboa, entón apañar ese comando e usar o bloque de repetición para
+          que realice esa acción varias veces. Agora, imos premer no bloque de repetición
+          e dicirlle cantas veces queremos que realice esta acción. Agora, imos construír
+          a nosa casa antes que a noite chegue! Divírtete.
+    mc_if_statements:
+      1:
+        text: Agora imos aprender sobre comandos "se". Os comandos "se" son unha parte
+          fundamental de aprender a programar. Axudan a un computador a tomar decisións.
+      2:
+        text: Todos os computadores usan comandos "se", inclusive o meu teléfono.
+          Por exemplo, cando desbloqueo o meu teléfono, executa un código onde se
+          eu tecleo o contrasinal correcto, o teléfono estará desbloqueado. En caso
+          contrario mostra unha mensaxe de erro.
+      3:
+        text: Podes usar comandos "se" no teu código para facer o Steve e a Alice
+          reaccionaren ao que ven no mundo. Por exemplo, se tivesen un penedo diante
+          deles, poden virar á esquerda. Por exemplo, se tivesen un penedo diante
+          deles, poden virar á esquerda. Ou virar á dereita se baten nunha árbore.
+      4:
+        text: Neste caso, non queremos caer na lava. É fácil facer plans contra a
+          lava. Pode ser vista na pantalla. Pero e a lava que non podemos ver baixo
+          as pedras?
+      5:
+        text: Tras escavar a pedra, precisamos verificar se existe lava naquel lugar
+          antes de avanzar. Se tivese lava, queremos colocar unha pedra diante do
+          noso personaxe antes de avanzar. Así, podemos avanzar en seguranza. Hora
+          de escavar máis! E lémbrese de usar o comando "se" para andar con coidado.
+    mc_congrats_share:
+      1:
+        text: Parabéns! Aprendiches os bloques básicos da informática.
+      2:
+        text: Agora podes usar estes bloques para facer a túa propia creación. Non
+          hai máis instrucións ou creba-cabezas para resolver. Podes construír o que
+          queiras. Ti escolles.
+      3:
+        text: "[alumnos falando] Agora hai que facelo real. Rapar. Eu fixen un L usando
+          fachos. Eu fixen un A usando tábuas de eucalipto. Foi correcto, foi correcto.
+          Construímos unha casa de lá!"
+      4:
+        text: Cando termines a túa creación, escolle compartir para recibir un link
+          para enviar aos teus amigos. Divírtete!
+    mc_congrats_no_share:
+      1:
+        text: Parabéns! Aprendiches os bloques básicos da informática.
+      2:
+        text: Agora podes usar estes bloques para facer a túa propia creación. Non
+          hai máis instrucións ou creba-cabezas para resolver. Podes construír o que
+          queiras. Ti escolles.
+      3:
+        text: "[alumnos falando] Agora hai que facelo real. Rapar. Eu fixen un L usando
+          fachos. Eu fixen un A usando tábuas de eucalipto. Foi correcto, foi correcto.
+          Construímos unha casa de lá!"
+      4:
+        text: Cando termines a a túa creación, escolle compartir para recibir un link
+          para enviar aos teus amigos. Divírtete!
+    gumball_intro:
+      1:
+        text: Se queres facer o teu propio xogo, é realmente fácil. Todo o que precisas
+          son algúns conceptos básicos de programación e podes comezar a xogar o xogo
+          que creaches.
+      2:
+        text: Tes un xogo favorito? Imos dar un paso para a creación de xogos tal
+          como o do PlayLab. Os bos xogos teñen unha historia, e toda historia ten
+          personaxes. Os personaxes fan cousas como falar, se mover e interactuar
+          os uns cos outros. Talvez até mesmo marcar puntos con base nas regras do
+          xogo. Hoxe, imos aprender como facer todas esas cousas, unha a unha, con
+          personaxes divertidos e imos crear un xogo desde cero que pode ser compartido
+          e xogado nun móbil.
+      3:
+        text: Hoxe, imos aprender a facer todas esas cousas, unha por unha, con personaxes
+          divertidos e imos crear un xogo desde cero, que pode ser compartido e xogado
+          nun móbil.
+      4:
+        text: A túa pantalla está dividida en tres partes principais. Á esquerda está
+          o espazo do xogo, onde o teu programa será executado. As instrucións para
+          cada nivel están escritas abaixo.
+      5:
+        text: Esta área do medio é a caixa de ferramentas e cada un deses bloques
+          é un fragmento de código.
+      6:
+        text: O espazo en branco á dereita chámase área de traballo e é aquí que imos
+          construír o noso programa.
+      7:
+        text: Para comezar terás que conectar os teus bloques ao bloque laranxa "cando
+          executar". É posíbel conectar diversos bloques os uns aos outros, arrastrándoos
+          até ver a liña amarela e, entón, eles se encaixam.
+      8:
+        text: Neste primeiro desafío, imos facer os personaxes diciren algo conectando
+          o bloque "diga" ao bloque "cando executar" e tecleando a túa mensaxe. Cando
+          coloques os bloques no lugar, presiona o botón Executar e mira o que programaches.
+      9:
+        text: Comeza e, cando termines, vas poder crear o teu propio xogo, con todos
+          os tipos de xogadores que poden interactuar, marcar puntos, xogar cousas
+          e facer os outros desapareceren. Ti es quen decides!
+    gumball_events:
+      1:
+        text: 'Agora, imos aprender un pouco sobre algo que todos os programadores
+          de xogos usan todos os días: os eventos. Un evento di ao programa que debe
+          oír cando algo aconteza e, cando esa cousa acontece, realiza unha acción.'
+      2:
+        text: 'Algúns exemplos de eventos son: detectar un clic do rato, o toque dunha
+          tecla de dirección ou un toque na pantalla.'
+      3:
+        text: Aquí, imos facer o personaxe dicir algunha cousa cando o xogador prema
+          nel. Imos usar o bloque "cando premido" e anexarlle o bloque "diga". Cando
+          o xogador prema, todos os bloques anexados a ese bloque serán executados.
+      4:
+        text: Hai tamén os bloques "cando a frecha estivese presionada". Se lles conectas
+          os bloques "mova", podes comezar a mover os teus personaxes para enriba,
+          para baixo, para esquerda e para a dereita coas frechas do teclado. Aos
+          poucos, o teu xogo está ficando cada vez máis interativo.
+    gumball_repeat:
+      1:
+        text: Consegues imaxinar se tiveses que repetir algo para toda vida? Felizmente
+          nunca vas precisar facer iso, porque os computadores son realmente bos en
+          repetir cousas.
+      2:
+        text: Este é o bloque "repita infinitamente". Todo dentro deste bloque vai
+          acontecer no xogo para sempre. Se queremos que un personaxe faga algo repetidamente
+          sen que o xogador faga nada, imos colocar eses bloques dentro do bloque
+          "repita infinitamente".
+      3:
+        text: Neste próximo desafío, o noso obxectivo é axudar o personaxe a realizar
+          algo continuamente. Aprender sobre o funcionamento dos comandos de repetición
+          vaiche axudar a economizar moito tempo no futuro, cando crees o teu propio
+          xogo.
+    iceage_intro:
+      1:
+        text: Se queres facer o teu propio xogo, é realmente fácil. Todo o que precisas
+          son algúns conceptos básicos de programación e podes comezar a xogar o xogo
+          que creaches.
+      2:
+        text: Tes un xogo favorito? Imos dar un paso para a creación de xogos tal
+          como o do PlayLab. Os bos xogos teñen unha historia, e toda historia ten
+          personaxes. Os personaxes fan cousas como falar, se mover e interactuar
+          os uns cos outros. Talvez até mesmo marcar puntos con base nas regras do
+          xogo. Hoxe, imos aprender como facer todas esas cousas, unha a unha, con
+          personaxes divertidos e imos crear un xogo desde cero que pode ser compartido
+          e xogado nun móbil.
+      3:
+        text: Hoxe, imos aprender a facer todas esas cousas, unha por unha, con personaxes
+          divertidos e imos crear un xogo desde cero, que pode ser compartido e xogado
+          nun móbil.
+      4:
+        text: A túa pantalla está dividida en tres partes principais. Á esquerda está
+          o espazo do xogo, onde o teu programa será executado. As instrucións para
+          cada nivel están escritas abaixo.
+      5:
+        text: Esta área do medio é a caixa de ferramentas e cada un deses bloques
+          é un fragmento de código.
+      6:
+        text: O espazo en branco á dereita chámase área de traballo e é aquí que imos
+          construír o noso programa.
+      7:
+        text: Para comezar terás que conectar os teus bloques ao bloque laranxa "cando
+          executar". É posíbel conectar diversos bloques os uns aos outros, arrastrándoos
+          até ver a liña amarela e, entón, eles se encaixam.
+      8:
+        text: Neste primeiro desafío, imos facer os personaxes diciren algo conectando
+          o bloque "diga" ao bloque "cando executar" e tecleando a túa mensaxe. Cando
+          coloques os bloques no lugar, presiona o botón Executar e mira o que programaches.
+      9:
+        text: Comeza e, cando termines, vas poder crear o teu propio xogo, con todos
+          os tipos de xogadores que poden interactuar, marcar puntos, xogar cousas
+          e facer os outros desapareceren. Ti es quen decides!
+    iceage_events:
+      1:
+        text: 'Agora, imos aprender un pouco sobre algo que todos os programadores
+          de xogos usan todos os días: os eventos. Un evento di ao programa que debe
+          oír cando algo aconteza e, cando esa cousa acontece, realiza unha acción.'
+      2:
+        text: 'Algúns exemplos de eventos son: detectar un clic do rato, o toque dunha
+          tecla de dirección ou un toque na pantalla.'
+      3:
+        text: Aquí, imos facer o personaxe dicir algunha cousa cando o xogador prema
+          nel. Imos usar o bloque "cando premido" e anexarlle o bloque "diga". Cando
+          o xogador prema, todos os bloques anexados a ese bloque serán executados.
+      4:
+        text: Hai tamén os bloques "cando a frecha estivese presionada". Se lles conectas
+          os bloques "mova", podes comezar a mover os teus personaxes para enriba,
+          para baixo, para esquerda e para a dereita coas frechas do teclado. Aos
+          poucos, o teu xogo está ficando cada vez máis interativo.
+    iceage_repeat:
+      1:
+        text: Consegues imaxinar se tiveses que repetir algo para toda vida? Felizmente
+          nunca vas precisar facer iso, porque os computadores son realmente bos en
+          repetir cousas.
+      2:
+        text: Este é o bloque "repita infinitamente". Todo dentro deste bloque vai
+          acontecer no xogo para sempre. Se queremos que un personaxe faga algo repetidamente
+          sen que o xogador faga nada, imos colocar eses bloques dentro do bloque
+          "repita infinitamente".
+      3:
+        text: Neste próximo desafío, o noso obxectivo é axudar o personaxe a realizar
+          algo continuamente. Aprender sobre o funcionamento dos comandos de repetición
+          vaiche axudar a economizar moito tempo no futuro, cando crees o teu propio
+          xogo.

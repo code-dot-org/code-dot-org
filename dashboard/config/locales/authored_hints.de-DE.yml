@@ -1,0 +1,905 @@
+---
+de:
+  data:
+    authored_hints:
+      2-3 Artist 1 new_authored_hint:
+        2-3_Artist_1_new_a: Wenn du den Codeblock "Gehe vorwärts um 100 Pixel" benutzt,
+          werde ich automatisch eine Linie zeichnen.
+        2-3_Artist_1_new_b: Hast du Probleme um die Ecke zu gehen? Benutze den `nach
+          rechts drehen um 90 Grad`-Baustein.
+      2-3 Artist 11_authored_hint:
+        2-3_Artist_11_a: 'Hast du Probleme mit den Winkeln? Du musst 360 Grad in 8
+          Drehungen machen. Wie viel ist 360/8? '
+      2-3 Artist 12_authored_hint:
+        2-3_Artist_12_a: Ein Kreis hat 360 Grad. Wenn sich der Künstler also mit jedem
+          Schleifendurchlauf einen Grad dreht, wird er die Schleife 360 mal durchlaufen
+          müssen.
+      2-3 Artist 2 new_authored_hint:
+        2-3_Artist_2_new_a: Der Künstler scheint nicht in die richtige Richtung zu
+          zeigen. Kannst du ihn drehen bevor er die Linie zeichnet?
+      2-3 Artist 3new_authored_hint:
+        2-3_Artist_3new_a: Was ergibt 100-70? Basierend auf dieses Problem der Handlung,
+          ist das die Höhenangabe die der Hut erfüllen muss!
+        2-3_Artist_3new_b: Der Künstler scheint nicht in die richtige Richtung zu
+          zeigen. Kannst du ihn drehen bevor er die Linie zeichnet?
+      2-3 Artist 4_authored_hint:
+        2-3_Artist_4_a: Um das Haus abzuschließen müssen wir lediglich ein Quadrat
+          zeichnen!
+      2-3 Artist 6_authored_hint:
+        2-3_Artist_6_b: Weil ich schon nach rechts zeige, ist es wohl am einfachsten
+          mit Vorwärtsbewegen anzufangen und dann Linksdrehungen zu machen um das
+          Dreieck zu erstellen.
+        2-3_Artist_6_c: Jede Seite des Dreiecks ist die gleiche Länge wie jede Seite
+          des Quadrates... 100 Pixel!
+      2-3 Artist 7_authored_hint:
+        2-3_Artist_7_a: Der einfachste Weg, um diese Aufgabe zu lösen ist, das erste
+          Quadrat zu zeichnen und danach mit dem Künstler nach unten zeigend das zweite
+          Quadrat zu beginnen.
+      2-3 Artist 8_authored_hint:
+        2-3_Artist_8_a: Wenn man 200 halbiert, wie viele Pixel breit muss jedes Quadrat
+          dann sein?
+      2-3 Artist 9 NEW_authored_hint:
+        2-3_Artist_9_a: Diese Raute ist einfach nur ein gedrehter Quader
+      2-3 Artist 9 REPLACEMENT_authored_hint:
+        step_size: Jeder Schritt ist 100 Pixel breit und 100 Pixel hoch.
+      2-3 Artist 9_authored_hint:
+        2-3_Artist_9_a: Diese Raute ist eigentlich nur ein um 45 Grad gedrehtes Quadrat.
+        2-3_Artist_9_b: |-
+          Vergiss nicht den Künstler um 45 Grad nach links zu drehen ehe du anfängst zu zeichnen!
+
+          ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
+      2-3 Artist Debugging 10_authored_hint:
+        2-3_Artist_Debugging_10_b: |-
+          **Die Versuch-und-Irrtum-Methode ist hier völlig Ok!**
+          Fang an, eine einzelne Zahl zu ändern.
+          Welche Nummern machen was?
+          Wenn du dich zu sehr verirrst, drück einfach "Neu starten" und dein Code wird zurückgesetzt.
+      2-3 Artist Debugging 2_authored_hint:
+        2-3_Artist_Debugging_2_a: 'Tipp: Jedes Schnurrhaar ist 75 Pixel lang.'
+      2-3 Artist Debugging 3_authored_hint:
+        2-3_Artist_Debugging_3_a: Eine der Drehungen ist 15 Grad zu klein.
+        2-3_Artist_Debugging_3_b: Wenn das Programm zu schnell läuft um zu sehen,
+          was passiert, versuchen Sie es mit dem Schieberegler zu verlangsamen.
+      2-3 Artist Functions 12 a_authored_hint:
+        2-3_Artist_Functions_12_a: Führe den Code zuerst aus um zu schauen, was hinzugefügt
+          werden muss.
+      2-3 Artist Functions 12_authored_hint:
+        2-3_Artist_Functions_12_a: Führe den Code zuerst aus um zu schauen, was hinzugefügt
+          werden muss.
+      2-3 Artist Functions 3 a_authored_hint:
+        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Artist Functions 3_authored_hint:
+        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Artist Nested Loops 3_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: "Brauchst du Hilfe mit den Winkeln?  \n**360/12
+          = 30**"
+      2-3 Artist Nested Loops 4_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: "Brauchst du Hilfe mit den Winkeln?  \n**360/12
+          = 30**"
+      2-3 Artist Nested Loops 7_authored_hint:
+        2-3_Artist_Nested_Loops_7_a: Wie weit sollten Sie sich in jedem Schleifendurchlauf
+          drehen? Was ist 360/10?
+      2-3 Bee Conditionals 15_authored_hint:
+        2-3_Bee_Conditionals_15_a: 'Denken Sie daran: Violette Blüten haben entweder
+          0 oder 1 Nektar und sie können sich bei jedem Start des Programmes ändern.'
+      2-3 Bee Conditionals 6_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'Denken Sie daran: Violette Blüten ändern zwischen
+          0 und 1 Nektar, wenn Sie das Programm ausführen!'
+      2-3 Bee Debugging 4_authored_hint:
+        2-3_Bee_Debugging_4_a: Macht die Biene etwas das keinen Sinn macht? Was passiert
+          wenn du diesen Block abänderst?
+      2-3 Bee Loops 3_authored_hint:
+        2-3_Bee_Loops_3_a: Du solltest mit 6 Bausteinen innerhalb deiner Schleife
+          enden.
+      2-3 Bee Loops 3B_authored_hint:
+        2-3_Bee_Loops_3B_a: Du benötigst zwei verschiedene "Wiederholen" Schleifen,
+          eins nach dem anderen.
+      2-3 Bee Loops 4_authored_hint:
+        2-3_Bee_Loops_4_a: Du solltest mit fünf Bausteinen innerhalb deiner Schleife
+          enden.
+      2-3 Bee Loops 4A_authored_hint:
+        2-3_Bee_Loops_4A_a: Die erste Aktion wird eher eine Drehung als eine Fortbewegung
+          sein.
+      2-3 Bee Loops 7_authored_hint:
+        2-3_Bee_Loops_7_a: Die erste Aktion wird eher eine Drehung als eine Fortbewegung
+          sein.
+      2-3 Maze 6_authored_hint:
+        2-3_Maze_6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen!
+      4-5 Artist 11_authored_hint:
+        4-5_Artist_11_a: In deiner Schleife, achte darauf dass der Künstler nach dem
+          Zeichnen jeder Linie zurück springt und nach oben springt.
+      4-5 Artist 4_authored_hint:
+        4-5_Artist_4_a: |-
+          Ein Kreis hat 360 Grad!
+
+          So oft musst du diesen Block (um 1 Grad zu drehen) wiederholen damit der Kreis komplett ist!
+      Course 4 Artist For Loops Challenge_a_authored_hint:
+        Course_4_Artist_For_Loops_Challenge_a: Das größte Polygon hat 19 Seiten.
+        Course_4_Artist_For_Loops_Challenge_b: Jedes Polygon ist unvollständig. Eine
+          Seite weniger als es im Moment hat.
+      Course 4 SCF 1_authored_hint:
+        Course_4_SCF_1_a: Jedes Hexagon hat 40 Pixel lange Seiten.
+      Course 4 SCF 1a_authored_hint:
+        Course_4_SCF_1a_a: Erinnere dich an deine Funktionen aus Level 16.
+        Course_4_SCF_1a_b: "Siehe diesen Pfad als deine Hauptroute:  \n\n![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)"
+      Course 4 SCF 2_authored_hint:
+        Course_4_SCF_2_a: Jedes Oktagon hat 40 Pixel lange Seiten.
+      Course 4 SCFL 1b_authored_hint:
+        Course_4_SCFL_1b_a: Versuch's mal mit einer "für"-Schleife.
+      Dance short test 2_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Sie müssen irgendwann im siebten Takt des Songs den Hintergrundeffekt ändern.
+
+          *Dieser Level endet nach 10 Takten.*
+        challenges: |-
+          **Optionale Herausforderung**
+
+          Ändern Sie den Hintergrundeffekt an verschiedenen Stellen des Songs, indem Sie den neuen Block unter den <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"Takte"</title></block></xml>-Ereignissen verbinden.
+      Dance short test_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Sie müssen irgendwann im siebten Takt des Songs den Hintergrundeffekt ändern.
+
+          *Dieser Level endet nach 10 Takten.*
+        challenges: |-
+          **Optionale Herausforderung**
+
+          Ändern Sie den Hintergrundeffekt an verschiedenen Stellen des Songs, indem Sie den neuen Block unter den <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"Takte"</title></block></xml>-Ereignissen verbinden.
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+          * Sorgen Sie dafür, dass ein Tänzer auf dem Bildschirm erscheint.
+
+          *Dieser Level endet nach 4 Takten.*
+        challenges: |-
+          **Optionale Herausforderungen**
+          * Wählen Sie einen anderen Song.
+          * Wählen Sie einen anderen, der aussieht wie ein Elch!
+          * Benennen Sie Ihren Tänzer um.
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+          * Sorgen Sie dafür, dass ein Tänzer auf dem Bildschirm erscheint.
+
+          *Dieser Level endet nach 4 Takten.*
+        challenges: |-
+          **Optionale Herausforderungen**
+          * Wählen Sie einen anderen Song.
+          * Wählen Sie einen anderen, der aussieht wie ein Elch!
+          * Benennen Sie Ihren Tänzer um.
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+          * Der Tänzer muss nach 4 Takten in einen neuen Tanzschritt wechseln.
+
+          *Dieser Level endet nach 8 Takten.*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Nach 6 Takten muss Ihr Tänzer einen anderen Tanz tun als nach 4 Takten.
+
+          *Dieser Level endet nach 12 Takten.*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Sie müssen irgendwann im siebten Takt des Songs den Hintergrundeffekt ändern.
+
+          *Dieser Level endet nach 10 Takten.*
+        challenges: |-
+          **Optionale Herausforderung**
+
+          Ändern Sie den Hintergrundeffekt an verschiedenen Stellen des Songs, indem Sie den neuen Block unter den <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"Takte"</title></block></xml>-Ereignissen verbinden.
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Sie müssen mindestens zwei Tänzer haben.
+
+          *Dieser Level endet nach 6 Takten.*
+        challenges: |-
+          **Optionale Herausforderung**
+
+          * Fügen Sie einen dritten Tänzer hinzu (oder so viele Sie möchten!)
+          * Lassen Sie alle Ihre Tänzer an verschiedenen Stellen in dem Song verschiedene Bewegungen ausführen.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Zwei Tänzer benötigen eine andere Größe als 100.
+
+          *Dieser Level endet nach 6 Takten.*
+        challenges: |-
+          **Optionale Herausforderung**
+
+          * Experimentieren Sie, indem Sie weitere Eigenschaften (Breite, Höhe, Rotation etc.) ändern
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Ändern Sie den Farbton mindestens eines Tänzers.
+
+          *Dieser Level endet nach 8 Takten.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+          * Sorgen Sie dafür, dass ein Tänzer auf dem Bildschirm erscheint.
+
+          *Dieser Level endet nach 4 Takten.*
+        challenges: |-
+          **Optionale Herausforderungen**
+          * Wählen Sie einen anderen Song.
+          * Wählen Sie einen anderen, der aussieht wie ein Elch!
+          * Benennen Sie Ihren Tänzer um.
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Eigenschaften für zwei oder mehr Tänzer müssen geändert werden.
+
+          *Dieser Level endet nach 8 Takten.*
+      Dance_Party_11.5_test_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Seien Sie einfach kreativ!
+
+          *Dieser Level endet nach 8 Takten.*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Seien Sie einfach kreativ!
+
+          *Dieser Level endet nach 8 Takten.*
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Seien Sie einfach kreativ!
+
+          *Dieser Level endet nach 8 Takten.*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Verwenden Sie den Block "Wenn Pfeiltaste nach links gedrückt", um den Roboter einen Tanzschritt tun zu lassen, wenn Sie sie drücken.
+
+          *Dieser Level endet nach 8 Takten.*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+          * Der Tänzer muss nach 4 Takten in einen neuen Tanzschritt wechseln.
+
+          *Dieser Level endet nach 8 Takten.*
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Nach 6 Takten muss Ihr Tänzer einen anderen Tanz tun als nach 4 Takten.
+
+          *Dieser Level endet nach 12 Takten.*
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Sie müssen irgendwann im siebten Takt des Songs den Hintergrundeffekt ändern.
+
+          *Dieser Level endet nach 10 Takten.*
+        challenges: |-
+          **Optionale Herausforderung**
+
+          Ändern Sie den Hintergrundeffekt an verschiedenen Stellen des Songs, indem Sie den neuen Block unter den <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"Takte"</title></block></xml>-Ereignissen verbinden.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Bei Ihrem Tanz müssen Sie während der ersten 12 Takte des Songs verschiedene Bewegungen ausführen.
+
+          *Dieser Level endet nach 12 Takten.*
+      Dance_Party_6_authored_hint:
+        challenges: |-
+          **Optionale Herausforderung**
+
+          * Fügen Sie einen dritten Tänzer hinzu (oder so viele Sie möchten!)
+          * Lassen Sie alle Ihre Tänzer an verschiedenen Stellen in dem Song verschiedene Bewegungen ausführen.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Zwei Tänzer benötigen eine andere Größe als 100.
+
+          *Dieser Level endet nach 6 Takten.*
+        challenges: |-
+          **Optionale Herausforderung**
+
+          * Experimentieren Sie, indem Sie weitere Eigenschaften (Breite, Höhe, Rotation etc.) ändern
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Ändern Sie den Farbton mindestens eines Tänzers.
+
+          *Dieser Level endet nach 8 Takten.*
+      Function intro Ryan_authored_hint:
+        Function_intro_Ryan_a: Du kannst eine Funktion mehrmals in deinem Programm
+          aufrufen.  Versuche, sie zweimal aufzurufen, um diese Aufgabe zu lösen.
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_a: Du kannst eine Funktion mehrmals in deinem Programm
+          aufrufen.  Versuche, sie zweimal aufzurufen, um diese Aufgabe zu lösen.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Die **Seelaternen**![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Kannst du mit ihnen eine Bedingung verwenden, um das Ozeanmonument zu erreichen?\n\n"
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Was für ein wunderschönes Korallenriff! Die blaue Koralle
+          ist der **rechte** Weg. Pass auf, dass die rote Koralle nicht **links**
+          ist!
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+          * Sorgen Sie dafür, dass ein Tänzer auf dem Bildschirm erscheint.
+
+          *Dieser Level endet nach 4 Takten.*
+        challenges: |-
+          **Optionale Herausforderungen**
+          * Wählen Sie einen anderen Song.
+          * Wählen Sie einen anderen, der aussieht wie ein Elch!
+          * Benennen Sie Ihren Tänzer um.
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+          * Der Tänzer muss nach 4 Takten in einen neuen Tanzschritt wechseln.
+
+          *Dieser Level endet nach 8 Takten.*
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Nach 6 Takten muss Ihr Tänzer einen anderen Tanz tun als nach 4 Takten.
+
+          *Dieser Level endet nach 12 Takten.*
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Sie müssen irgendwann im siebten Takt des Songs den Hintergrundeffekt ändern.
+
+          *Dieser Level endet nach 10 Takten.*
+        challenges: |-
+          **Optionale Herausforderung**
+
+          Ändern Sie den Hintergrundeffekt an verschiedenen Stellen des Songs, indem Sie den neuen Block unter den <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"Takte"</title></block></xml>-Ereignissen verbinden.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Bei Ihrem Tanz müssen Sie während der ersten 12 Takte des Songs verschiedene Bewegungen ausführen.
+
+          *Dieser Level endet nach 12 Takten.*
+      HOC Dance 5_draft_authored_hint:
+        challenges: |-
+          **Optionale Herausforderung**
+
+          * Fügen Sie einen dritten Tänzer hinzu (oder so viele Sie möchten!)
+          * Lassen Sie alle Ihre Tänzer an verschiedenen Stellen in dem Song verschiedene Bewegungen ausführen.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Zwei Tänzer benötigen eine andere Größe als 100.
+
+          *Dieser Level endet nach 6 Takten.*
+        challenges: |-
+          **Optionale Herausforderung**
+
+          * Experimentieren Sie, indem Sie weitere Eigenschaften (Breite, Höhe, Rotation etc.) ändern
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Ändern Sie den Farbton mindestens eines Tänzers.
+
+          *Dieser Level endet nach 8 Takten.*
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Eigenschaften für zwei oder mehr Tänzer müssen geändert werden.
+
+          *Dieser Level endet nach 8 Takten.*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Seien Sie einfach kreativ!
+
+          *Dieser Level endet nach 8 Takten.*
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          * Seien Sie einfach kreativ!
+
+          *Dieser Level endet nach 8 Takten.*
+      MC Agent Freeplay_authored_hint:
+        MC_HOC_2017_13_Cole_a: Versuche, den Agenten einige Brücken bauen zu lassen,
+          damit Alex oder Steve auf der Karte weiterlaufen können.
+      MC_HOC_2017_01_Cole_authored_hint:
+        MC_HOC_2017_01_Cole_a: Verwende die Pfeiltasten, um den Spieler in das Haus
+          zu führen. Um zu gewinnen, muss er auf dem orangefarbenen Quadrat stehen.
+      MC_HOC_2017_01_RETRY_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Ziehe einen "vorwärts bewegen"-Block aus der Werkzeugkiste
+          in den Arbeitsbereich und füge ihn unter dem "beim Ausführen"-Block an.
+        MC_HOC_2017_01_RETRY_b: Klicke auf "Ausführen", um den Code für den Agenten
+          auszuführen.
+        MC_HOC_2017_01_RETRY_c: Nachdem der Agent seinen gesamten Code ausgeführt
+          hat, kannst du den Spieler mit den Pfeiltasten bewegen.
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Ziehe einen "vorwärts bewegen"-Block aus der Werkzeugkiste
+          in den Arbeitsbereich und füge ihn unter dem "beim Ausführen"-Block an.
+        MC_HOC_2017_01_RETRY_b: Klicke auf "Ausführen", um den Code für den Agenten
+          auszuführen.
+        MC_HOC_2017_01_RETRY_c: Nachdem der Agent seinen gesamten Code ausgeführt
+          hat, kannst du den Spieler mit den Pfeiltasten bewegen.
+      MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Bewege den Agenten zwei Felder vorwärts, bis er auf
+          der Druckplatte steht.  Dadurch wird die Tür für deinen Spieler geöffnet.
+        MC_HOC_2017_02_Cole_b: "Wähle \"Ausführen\" aus! \nDu kannst deinen Code auch
+          dann ausführen, wenn er falsch ist.  Setze deinen Code zurück und führe
+          ihn so oft erneut aus, bis du den Fehler gefunden hast."
+        MC_HOC_2017_02_Cole_c: Bewege den Spieler mit den Pfeiltasten zur Karte, sobald
+          der Agent die Tür geöffnet hat.
+      MC_HOC_2017_02_Cole_2019_authored_hint:
+        MC_HOC_2017_02_Cole_a: Bewege den Agenten zwei Felder vorwärts, bis er auf
+          der Druckplatte steht.  Dadurch wird die Tür für deinen Spieler geöffnet.
+        MC_HOC_2017_02_Cole_b: "Wähle \"Ausführen\" aus! \nDu kannst deinen Code auch
+          dann ausführen, wenn er falsch ist.  Setze deinen Code zurück und führe
+          ihn so oft erneut aus, bis du den Fehler gefunden hast."
+        MC_HOC_2017_02_Cole_c: Bewege den Spieler mit den Pfeiltasten zur Karte, sobald
+          der Agent die Tür geöffnet hat.
+      MC_HOC_2017_02_Will_authored_hint:
+        MC_HOC_2017_02_Cole_a: Bewege den Agenten zwei Felder vorwärts, bis er auf
+          der Druckplatte steht.  Dadurch wird die Tür für deinen Spieler geöffnet.
+        MC_HOC_2017_02_Cole_b: "Wähle \"Agent ausführen\" aus! \nDu kannst deinen
+          Code auch dann ausführen, wenn er falsch ist. Setze deinen Code zurück und
+          führe ihn so oft erneut aus, bis du den Fehler gefunden hast."
+        MC_HOC_2017_02_Cole_c: Bewege den Spieler mit den Pfeiltasten zum orangefarbenen
+          Quadrat, sobald der Agent die Tür geöffnet hat.
+      MC_HOC_2017_03_Cole_authored_hint:
+        MC_HOC_2017_03_Cole_a: Sobald der Agent auf der Druckplatte steht, kannst
+          du den Spieler mit den Pfeiltasten zum Kompass steuern.
+        MC_HOC_2017_03_Cole_b: Ist dir der Code zu lang?  Versuche, ihn mit einer
+          "wiederholen"-Schleife zu verkürzen.
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_a: Sobald der Agent auf der Druckplatte steht, kannst
+          du den Spieler mit den Pfeiltasten zum Kompass steuern.
+        MC_HOC_2017_03_Cole_b: Ist dir der Code zu lang?  Versuche, ihn mit einer
+          "wiederholen"-Schleife zu verkürzen.
+      MC_HOC_2017_04POINT5_Cole_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: "Das Überqueren dieser beiden Druckplatten öffnet
+          den Weg für den Spieler. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
+      MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Verwende den "nach rechts drehen"-Block, um
+          die Richtung des Agenten zu ändern. '
+        MC_HOC_2017_04POINT5_RYAN_a: Der Agent muss nur die erste Druckplatte erreichen,
+          um Alex oder Steve durchzulassen.
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Verwende den "nach rechts drehen"-Block, um
+          die Richtung des Agenten zu ändern. '
+        MC_HOC_2017_04POINT5_RYAN_a: Der Agent muss nur die erste Druckplatte erreichen,
+          um Alex oder Steve durchzulassen.
+      MC_HOC_2017_04_Cole_authored_hint:
+        MC_HOC_2017_04_Cole_a: Der Agent muss 7 Mal "vorwärts bewegen" verwenden.
+          Kannst du das mit einer "wiederholen"-Schleife erledigen?
+        MC_HOC_2017_04_Cole_c: "Wähle \"Ausführen\" aus! \nDu kannst deinen Code auch
+          dann ausführen, wenn er falsch ist.  Setze deinen Code zurück und führe
+          ihn so oft erneut aus, bis du den Fehler gefunden hast."
+        MC_HOC_2017_04_Cole_b: Sobald der Agent die Druckplatte erreicht hat, öffnet
+          er dem Spieler die Tür.
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_a: Der Agent muss 7 Mal "vorwärts bewegen" verwenden.
+          Kannst du das mit einer "wiederholen"-Schleife erledigen?
+        MC_HOC_2017_04_Cole_c: "Wähle \"Ausführen\" aus! \nDu kannst deinen Code auch
+          dann ausführen, wenn er falsch ist.  Setze deinen Code zurück und führe
+          ihn so oft erneut aus, bis du den Fehler gefunden hast."
+        MC_HOC_2017_04_Cole_b: Sobald der Agent die Druckplatte erreicht hat, öffnet
+          er dem Spieler die Tür.
+      MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Wusstest du, dass du mehrere Code-Stücke in eine Schleife
+          packen kannst?  Versuche, in einem "wiederholen"-Block ein Brett zu platzieren
+          **und** dich vorwärts zu bewegen, um diese Aufgabe abzuschließen.
+      MC_HOC_2017_05_Cole_2019_authored_hint:
+        MC_HOC_2017_05_Cole_a: Wusstest du, dass du mehrere Code-Stücke in eine Schleife
+          packen kannst?  Versuche, in einem "wiederholen"-Block ein Brett zu platzieren
+          **und** dich vorwärts zu bewegen, um diese Aufgabe abzuschließen.
+      MC_HOC_2017_05_Josh_authored_hint:
+        MC_HOC_2017_05_Cole_a: Wusstest du, dass du mehrere Code-Stücke in eine Schleife
+          packen kannst?  Versuche, in einem "wiederholen"-Block ein Brett zu platzieren
+          **und** dich vorwärts zu bewegen, um diese Aufgabe abzuschließen.
+      MC_HOC_2017_06_Cole_authored_hint:
+        MC_HOC_2017_06_Cole_a: Wie oft wird diese Schleife ausgeführt?  Wie oft *sollte*
+          sie ausgeführt werden?
+      MC_HOC_2017_06_Cole_2019_authored_hint:
+        MC_HOC_2017_06_Cole_a: Wie oft wird diese Schleife ausgeführt?  Wie oft *sollte*
+          sie ausgeführt werden?
+      MC_HOC_2017_06_Josh_authored_hint:
+        MC_HOC_2017_06_Cole_a: Versuche, mehr als eine Anweisung in eine "wiederholen"-Schleife
+          zu packen!
+      MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_a: Um diese Aufgabe zu lösen, musst du herausfinden, was
+          die "Weg räumen"-Funktion macht, und diese mit dem kleinen, grünen "Weg
+          räumen"-Block aus der Werkzeugkiste so oft wie nötig aufrufen.
+        MC_HOC_2017_07_Cole_b: Versuche, Funktionsblöcke mit anderen Blöcken aus der
+          Werkzeugkiste zu kombinieren. So löst du diese Aufgabe.
+      MC_HOC_2017_07_Cole_2019_authored_hint:
+        MC_HOC_2017_07_Cole_a: Um diese Aufgabe zu lösen, musst du herausfinden, was
+          die "Weg räumen"-Funktion macht, und diese mit dem kleinen, grünen "Weg
+          räumen"-Block aus der Werkzeugkiste so oft wie nötig aufrufen.
+        MC_HOC_2017_07_Cole_b: Versuche, Funktionsblöcke mit anderen Blöcken aus der
+          Werkzeugkiste zu kombinieren. So löst du diese Aufgabe.
+      MC_HOC_2017_08_RY_authored_hint:
+        MC_HOC_2017_08_RY_a: "Wähle \"Agent ausführen\" aus! \nDu kannst deinen Code
+          auch dann ausführen, wenn er falsch ist. Setze deinen Code zurück und führe
+          ihn so oft erneut aus, bis du den Fehler gefunden hast."
+        MC_HOC_2017_08_RY_b: Es gibt eine MENGE Möglichkeiten, um diese Aufgabe zu
+          lösen.  Probiere ein paar aus!
+      MC_HOC_2017_08_Will_authored_hint:
+        MC_HOC_2017_08_RY_a: "Wähle \"Agent ausführen\" aus! \nDu kannst deinen Code
+          auch dann ausführen, wenn er falsch ist. Setze deinen Code zurück und führe
+          ihn so oft erneut aus, bis du den Fehler gefunden hast."
+        MC_HOC_2017_08_RY_b: Es gibt eine MENGE Möglichkeiten, um diese Aufgabe zu
+          lösen.  Probiere ein paar aus!
+      MC_HOC_2017_10_Cole_authored_hint:
+        MC_HOC_2017_10_Cole_a: Verwende Funktionen, um diese Aufgabe einfacher zu
+          lösen.
+      MC_HOC_2017_10_RETRY_authored_hint:
+        MC_HOC_2017_10_Cole_a: Verwende Funktionen, um diese Aufgabe einfacher zu
+          lösen.
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_a: Verwende Funktionen, um diese Aufgabe einfacher zu
+          lösen.
+      MC_HOC_2017_13_Cole_authored_hint:
+        MC_HOC_2017_13_Cole_a: Versuche, den Agenten einige Brücken bauen zu lassen,
+          damit Alex oder Steve auf der Karte weiterlaufen können.
+      MC_HOC_2017_4.5v2_authored_hint:
+        MC_HOC_2017_04POINT5_Cole_a: "Das Überqueren dieser beiden Druckplatten öffnet
+          den Weg für den Spieler. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
+      MC_HOC_2017_Ali_authored_hint:
+        MC_HOC_2017_08_RY_a: "Wähle \"Ausführen\" aus! \nDu kannst deinen Code auch
+          dann ausführen, wenn er falsch ist.  Setze deinen Code zurück und führe
+          ihn so oft erneut aus, bis du den Fehler gefunden hast."
+        MC_HOC_2017_08_RY_b: Es gibt eine MENGE Möglichkeiten, um diese Aufgabe zu
+          lösen.  Probiere ein paar aus!
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: "Wähle \"Ausführen\" aus! \nDu kannst deinen Code auch
+          dann ausführen, wenn er falsch ist.  Setze deinen Code zurück und führe
+          ihn so oft erneut aus, bis du den Fehler gefunden hast."
+        MC_HOC_2017_08_RY_b: Es gibt eine MENGE Möglichkeiten, um diese Aufgabe zu
+          lösen.  Probiere ein paar aus!
+      MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Versuche, den Agenten einige Brücken bauen zu lassen,
+          damit Alex oder Steve auf der Karte weiterlaufen können.
+      MC_HOC_2017_FP20x20_2019_authored_hint:
+        MC_HOC_2017_13_Cole_a: Versuche, den Agenten einige Brücken bauen zu lassen,
+          damit Alex oder Steve auf der Karte weiterlaufen können.
+      New Minecraft Hero Project_authored_hint:
+        MC_HOC_2017_13_Cole_a: Versuche, den Agenten einige Brücken bauen zu lassen,
+          damit Alex oder Steve auf der Karte weiterlaufen können.
+      Overworld Avoid Monsters_authored_hint:
+        mc_8_b: Nutze `wiederholen`-Schleifen um dein Code zu vereinfachen.
+      Overworld Avoid Monsters_2018_authored_hint:
+        mc_8_b: Nutze `wiederholen`-Schleifen um dein Code zu vereinfachen.
+      Overworld Avoid Monsters_2019_authored_hint:
+        mc_8_b: Nutze `wiederholen`-Schleifen um dein Code zu vereinfachen.
+      courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2a_2018_authored_hint:
+        '1': Snap both `East` blocks to the bottom of the `when run` block.
+      courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5a_2018_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have
+          been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
+          try something else!
+      courseB_Scrat_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_maze_seq8_authored_hint:
+        courseB_maze_seq8_b: Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen!
+      courseC_maze_programming6_authored_hint:
+        courseC_maze_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu
+          lösen!
+      courseC_maze_programming6_2018_authored_hint:
+        courseC_maze_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu
+          lösen!
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu
+          lösen!
+      courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_maze_ramp6_authored_hint:
+        courseC_maze_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu
+          lösen!
+      courseD_scrat_ramp7_authored_hint:
+        courseD_scrat_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle
+          zu lösen!
+      courseD_scrat_ramp7_2018_authored_hint:
+        courseD_scrat_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle
+          zu lösen!
+      courseE_maze_ramp6_authored_hint:
+        courseC_maze_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu
+          lösen!
+      courseE_maze_ramp6_2018_authored_hint:
+        courseC_maze_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu
+          lösen!
+      courseF_maze_ramp6_authored_hint:
+        courseF_maze_ramp6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen!
+      courseF_maze_ramp6_2018_authored_hint:
+        courseF_maze_ramp6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen!
+      grade2_CaringForNewPet_4_authored_hint:
+        2-3_Maze_6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen!
+      grade2_MakeDogTag_1_authored_hint:
+        2-3_Artist_1_new_a: Wenn du den Codeblock "Gehe vorwärts um 100 Pixel" benutzt,
+          werde ich automatisch eine Linie zeichnen.
+        2-3_Artist_1_new_b: Hast du Probleme um die Ecke zu gehen? Benutze den `nach
+          rechts drehen um 90 Grad`-Baustein.
+      grade2_PuppyLoops_8_authored_hint:
+        2-3_Artist_Debugging_2_a: 'Tipp: Jedes Schnurrhaar ist 75 Pixel lang.'
+      grade3_Conditionals_12_authored_hint:
+        2-3_Bee_Conditionals_15_a: 'Denken Sie daran: Violette Blüten haben entweder
+          0 oder 1 Nektar und sie können sich bei jedem Start des Programmes ändern.'
+      grade3_Conditionals_4_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'Denken Sie daran: Violette Blüten ändern zwischen
+          0 und 1 Nektar, wenn Sie das Programm ausführen!'
+      grade3_Conditionals_TeacherIDo_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'Denken Sie daran: Violette Blüten ändern zwischen
+          0 und 1 Nektar, wenn Sie das Programm ausführen!'
+      grade3_Debugging_TeacherIDo_authored_hint:
+        2-3_Bee_Debugging_4_a: Macht die Biene etwas das keinen Sinn macht? Was passiert
+          wenn du diesen Block abänderst?
+      grade3_Loops_10_authored_hint:
+        2-3_Bee_Loops_4_a: Du solltest mit fünf Bausteinen innerhalb deiner Schleife
+          enden.
+      grade3_Loops_4_authored_hint:
+        2-3_Bee_Loops_3B_a: Du benötigst zwei verschiedene "Wiederholen" Schleifen,
+          eins nach dem anderen.
+      grade3_Loops_5_authored_hint:
+        2-3_Bee_Loops_7_a: Die erste Aktion wird eher eine Drehung als eine Fortbewegung
+          sein.
+      grade3_Loops_6_authored_hint:
+        2-3_Bee_Loops_4A_a: Die erste Aktion wird eher eine Drehung als eine Fortbewegung
+          sein.
+      grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: Du solltest mit 6 Bausteinen innerhalb deiner Schleife
+          enden.
+      grade4_artist_functions_challenge_authored_hint:
+        Course_4_SCF_1_a: Jedes Hexagon hat 40 Pixel lange Seiten.
+      grade4_artist_functions_challenge2_authored_hint:
+        Course_4_SCF_1_a: Jedes Hexagon hat 40 Pixel lange Seiten.
+      grade4_review_artist1_authored_hint:
+        2-3_Artist_1_new_a: Wenn du den Codeblock "Gehe vorwärts um 100 Pixel" benutzt,
+          werde ich automatisch eine Linie zeichnen.
+        2-3_Artist_1_new_b: Hast du Probleme um die Ecke zu gehen? Benutze den `nach
+          rechts drehen um 90 Grad`-Baustein.
+      grade4_review_artist2_authored_hint:
+        2-3_Artist_6_b: Weil ich schon nach rechts zeige, ist es wohl am einfachsten
+          mit Vorwärtsbewegen anzufangen und dann Linksdrehungen zu machen um das
+          Dreieck zu erstellen.
+        2-3_Artist_6_c: Jede Seite des Dreiecks ist die gleiche Länge wie jede Seite
+          des Quadrates... 100 Pixel!
+      grade4_review_bee1_authored_hint:
+        2-3_Bee_Loops_3B_a: Du benötigst zwei verschiedene "Wiederholen" Schleifen,
+          eins nach dem anderen.
+      grade4_review_bee2_authored_hint:
+        2-3_Bee_Loops_3_a: Du solltest mit 6 Bausteinen innerhalb deiner Schleife
+          enden.
+      grade4_review_bee3_authored_hint:
+        2-3_Bee_Loops_4_a: Du solltest mit fünf Bausteinen innerhalb deiner Schleife
+          enden.
+      grade5_artist_for_loops10_authored_hint:
+        Course_4_Artist_For_Loops_Challenge_a: Das größte Polygon hat 19 Seiten.
+        Course_4_Artist_For_Loops_Challenge_b: Jedes Polygon ist unvollständig. Eine
+          Seite weniger als es im Moment hat.
+      level 'grade3_Loops_10_authored_hint:
+        2-3_Bee_Loops_4_a: Du solltest mit fünf Bausteinen innerhalb deiner Schleife
+          enden.
+      level 'grade3_Loops_4_authored_hint:
+        2-3_Bee_Loops_3B_a: Du benötigst zwei verschiedene "Wiederholen" Schleifen,
+          eins nach dem anderen.
+      level 'grade3_Loops_5_authored_hint:
+        2-3_Bee_Loops_7_a: Die erste Aktion wird eher eine Drehung als eine Fortbewegung
+          sein.
+      level 'grade3_Loops_6_authored_hint:
+        2-3_Bee_Loops_4A_a: Die erste Aktion wird eher eine Drehung als eine Fortbewegung
+          sein.
+      level 'grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: Du solltest mit 6 Bausteinen innerhalb deiner Schleife
+          enden.

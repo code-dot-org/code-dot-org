@@ -1,0 +1,1152 @@
+---
+si:
+  slides:
+    maze_intro:
+      1:
+        image: notes/hoc1_1.jpg
+        text: hour of code වැඩසටහන සදහා ඔබව සාදරයෙන් පිළිගනිමු.
+      2:
+        image: notes/hoc1_2.jpg
+        text: අපිට Blockly වැඩසටහන යොදාගතහැකවෙනවා, දෘශ්‍ය ක්‍රමලේකන භාෂා වල කේත ලිවීමට
+          ඇති තැන වලට අදගේනවිත් අත්හෙරිමට.
+      3:
+        image: notes/hoc1_3.jpg
+        text: බොහෝ කේත ලියා ඇති අතර, Blockly වැඩසටහන දෘශ්‍ය වේ. සෑම අච්චුවක්ම කේතනයක
+          එක් තීරුවකට අනුරුප වේ.
+      4:
+        image: notes/hoc1_4.jpg
+        text: පරිගණක විද්‍යාවේ මූලිකාංග ඔස්සේ, ඔබට පරිගණක යෙදුම් නිර්මාණයේ සිට අඟහරු
+          මත ඇති රෝවර් යානය පාලනය කිරීමට අවශ්‍ය සංකල්ප දක්වා ඉගෙනගත හැකියි.
+      5:
+        image: notes/hoc1_5.jpg
+        text: කරලේකනයක් යනු ඔබගේ පරිගණකයට අනුගමනය කිරිමටදෙන උපදෙස් මාලාවක් වේ.
+      6:
+        image: notes/hoc1_6.jpg
+        text: ඔබගේ පළමු ක්‍රමලේකනයේ අරමුණ වන්නේ වන්කගිරියකින් Angry Bird කුරුල්ලෙක්
+          ගෙන කොළ පැහැති උරෙකුට ප්‍රහාරය එල්ල කිරීමයි.
+      7:
+        image: notes/hoc1_7.jpg
+        text: වම අත පැත්තේ ඇති වන්කගිරියෙහි ඔබගේ වැඩසටහන ක්‍රියාත්මක වේ. සැම ප්‍රෙහෙලිකාවක්
+          සදහාම උපදෙස් වන්කගිරියට යටින් පෙන්වා ඇත.
+      8:
+        image: notes/hoc1_8.jpg
+        text: මැද ඇති උපකරණ කට්ටලයෙහි Angry Bird කුරුල්ලෙක් සැදීම සදහා උපදෙස් අඩංගු
+          වේ. ඔබට ඒවා ඔබගේ කේතය සැකසීමට යොදාගත හැක.
+      9:
+        image: notes/hoc1_9.jpg
+        text: ඔබගේ දකුණු පසින් දිස්වන්නේ ඔබේ පරිගණක වැඩසටහන නිර්මාණයට අවශ්‍ය blocks
+          ඇද දැමිය හැකි අවකාශයයි. මෙසේ ඇද දැමූ block එකක් ඉවත් කිරීම සදහා කෙලවරේ ඇති
+          trash bin එකට ඇද දමන්න.
+      10:
+        image: notes/hoc1_10.jpg
+      11:
+        image: notes/hoc1_11.jpg
+      12:
+        image: notes/hoc1_12.jpg
+        text: ඔබ වැඩසටහන ක්‍රියාත්මක කරන අතර එය විසින් අදාල කරුණ නිවැරදි කර නැවත උත්සාහ
+          කරන්න අවශ්‍ය නම්, "යළි පිහිටුවන්න" බොත්තම මත ඔබන්න.
+      13:
+        image: notes/hoc1_13.jpg
+        text: එහෙනම් ගිහින් ඌරන් අල්ලමු!
+    artist_intro:
+      1:
+        image: notes/stage5_1.jpg
+        text: හයි, මම JR! සැම කාර් තරග කණ්ඩායමකටම ජයග්‍රහණය කිරීමට පරිගණක විද්යාඥයන්
+          අවශ්‍ය කරනවා. ඔවුන් කාර් රථයේ දත්ත අධ්‍යනය කර එය වේගවත්ව ගමන්ව කරන සේ සකසනවා.
+      2:
+        image: notes/stage5_2.jpg
+        text: මේ ප්‍රෙහෙළිකා වලදී, ඔබ ඔවුන් යන පිටුපසින් රේඛාවක් අදින කලා කරුවෙකු
+          බවට පත් වේවි.
+      3:
+        image: notes/stage5_3.jpg
+        text: 'මෙම කොටස කියනවා" පික්සල 100කින් ඉදිරියට යොමුකරන්න." පික්සල යනු ඔබගේ
+          තිරය මත ඇති සැබැවින් කුඩා තිත් වේ. '
+      4:
+        image: notes/stage5_4.jpg
+        text: මෙම බ්ලොක් එක මගින් දකුණු දිශාවට අංශක 90ක් හැරවීම සිදුකරයි.
+      5:
+        image: notes/stage5_5.jpg
+    farmer_intro:
+      1:
+        image: notes/stage9_1.jpg
+        text: හායි, මම Paola! මෙම ප්‍රේහෙලිකාවේදී දී, ඔබ ඇයගේ වගාබිම සම්පුර්ණයෙන්ම
+          සමතලා කර නැවත පැල සිටුවීමට හැකිවෙන සේ කසන ගොවියෙක්.
+      2:
+        image: notes/stage9_2.jpg
+        text: ඔබ ඇයට උදව් කරන්න සියලු කුණු ගොඩවල් ඉවත් කිරීම හා සියලු සිදුරු පිරවීමට.
+      3:
+        image: notes/stage9_3.jpg
+        text: මේ අලුත් බ්ලොක් එක මගින් එක් කසළ කොටසක් කසළ ගොඩින් ඉවත් කර, වලකට දැමීම
+          සිදුකරයි.
+      4:
+        image: notes/stage9_4.jpg
+        text: කසළ ගොඩවල් සහ කසළ වලවල් ප්‍රමාණයෙන් වෙනස් වේ, එම නිසා ගොවියාට සවල කීපාරක්
+          භාවිතා කළ යුතු දැයි කියන්න.
+    flappy_intro:
+      1:
+        image: notes/flappy01.jpg
+        text: හායි, මම Katie! පරිගණක විද්‍යාව පිළිබඳ වඩාත් ආකර්ෂණීය දේවල් එක් පරිගණක
+          වැඩසටහනක් අන්තර් විය හැකිය.
+      2:
+        image: notes/flappy02.jpg
+      3:
+        image: notes/flappy03.jpg
+      4:
+        image: notes/flappy04.jpg
+        text: ඔබ කවද හෝ FlappyBird ක්‍රීඩාව ගැන අසා තිබේද? තත්ව පරිපාලක බාවිතය මහින්,
+          අපි ඉගනගැනීමට යන්නේ අපේම අබිරුචිය පරිදි FlappyBird ක්‍රීඩාව කේතනය කරන ආකාරයයි!
+      5:
+        image: notes/flappy05.jpg
+      6:
+        image: notes/flappy06.jpg
+      7:
+        image: notes/flappy07.jpg
+      8:
+        image: notes/flappy08.jpg
+      9:
+        image: notes/flappy09.jpg
+      10:
+        image: notes/flappy10.jpg
+    loop_times:
+      1:
+        image: notes/hoc2_1.jpg
+      2:
+        image: notes/hoc2_2.jpg
+        text: මෙම ප්‍රහේලිකාවේදි කුරුල්ලාට ඌරාව අල්ලාගැනීමට පියවර 5ක් ඉදිරියට යන්න
+          වෙනවා.
+      3:
+        image: notes/hoc2_3.jpg
+        text: අපිට මේ සඳහා අලුත් "repeat" බ්ලොක් එක උදව් කරගන්න පුළුවන්.
+      4:
+        image: notes/hoc2_4.jpg
+        text: '"move forward" කොටස් 5ක් වෙනුවට...'
+      5:
+        image: notes/hoc2_5.jpg
+      6:
+        image: notes/hoc2_6.jpg
+        text: 'වැදගත්: ඔබට "repeat" බ්ලොක් එක ඇතුලට විධාන එකකට වැඩිය ඇතුලත් කරන්න
+          පුලුවන්.'
+      7:
+        image: notes/hoc2_7.jpg
+        text: ඔබේ නව "repeat" බ්ලොක් එක අත්හදා බලන්න!
+    loop_until:
+      1:
+        image: notes/hoc3_1.jpg
+        text: හයි, මම Chris. Miami Heat සමග සම්බන්ද වීමට පෙර, මම පරිගණක විද්‍යාව ඉගෙනගැනීමට
+          Georgia Tech වෙත ගොස් තිබුනා. අපි නව බ්ලොක් එකක් සදහා උත්සහ කරමු, එය "repeat
+          until" බ්ලොක් එකයි.
+      2:
+        image: notes/hoc3_2.jpg
+        text: කුරුල්ලාට ඌරාව අල්ලගන්න කොච්චර දුරක් යන්න වෙයිද කියලා අපි දන්නේ නැතිනම්
+          මොකද කරන්නේ?
+      3:
+        image: notes/hoc3_3.jpg
+      4:
+        image: notes/hoc3_4.jpg
+    if:
+      1:
+        image: notes/hoc4_1.jpg
+        text: හායි, මම Bill! අපි දැන් තවත් අලුත් මූලික සංකල්පයක් වන "If" ප්‍රකාශනය
+          සම්බන්දයෙන් ඉගෙනගනිමු. මේ ආකාරයට තමයි පරිගණක විසින් තීරණ වලට එළඹෙන්නේ.
+      2:
+        image: notes/hoc4_2.jpg
+      3:
+        image: notes/hoc4_3.jpg
+      4:
+        image: notes/hoc4_4.jpg
+        text: 'මෙය සදහා කේත කිරීමට  "ඊෆ්" වරණ ගෙනත් අතහරින්න්න  සහ ඒය  තුල  "වමට හැරෙන්න"
+          වරණ ඇතුල් කරන්න  '
+      5:
+        image: notes/hoc4_5.jpg
+      6:
+        image: notes/hoc4_6.jpg
+      7:
+        image: notes/hoc4_7.jpg
+        text: '"if" බ්ලොක් එක භාවිතයෙන් සතුටු වන්න!'
+    if_else:
+      1:
+        image: notes/hoc5_1.jpg
+        text: ආයුබෝවන්!, මගේ නම Saloni. මම සෞඛ්‍යය සහ වෛද්‍ය විද්‍යාවේ ප්‍රශ්න විසදීම
+          සදහා පරිගණක විද්‍යාව භාවිතා කරනවා. දැන් ඉගෙනගමු "if else" කොටස ගැන. ඒක "if
+          " කොටස වගේ. නමුත් ඒකෙ අවසානයේ "else " කියල අමතර කොටසක් තියනවා.
+      2:
+        image: notes/hoc5_2.jpg
+      3:
+        image: notes/hoc5_3.jpg
+      4:
+        image: notes/hoc5_4.jpg
+        text: බූතයින්ව ඔවුන්ට අදාල තැනට ගෙනයන්න!
+    if_else_scrat:
+      1:
+        image: notes/saloni_ifelse_scrat1.jpg
+      2:
+        image: notes/saloni_ifelse_scrat2.jpg
+      3:
+        image: notes/saloni_ifelse_scrat3.jpg
+      4:
+        image: notes/saloni_ifelse_scrat4.jpg
+        text: අපි දැන් මේ ස්ක්‍රැට් කියන ලේනාට අර පලතුරු ගෙඩිය ගන්න උදව් කරමු!
+    function:
+      1:
+        image: notes/stage13_1.jpg
+      2:
+        image: notes/stage13_2.jpg
+      3:
+        image: notes/stage13_3.jpg
+      4:
+        image: notes/stage13_4.jpg
+      5:
+        image: notes/stage13_5.jpg
+        text: 'අපි නැවත "fun" යන්න "FUNction" තුලට දමමු! '
+    loop_while:
+      1:
+        image: notes/stage9_5.jpg
+        text: 'හායි, මම Makinde! අපි දැන් "while බ්ලොක්." එක සම්බන්දයෙන් ඉගෙනගනිමු '
+      2:
+        text: '"while බ්ලොක්" එකේ ඉහත ඇති ප්‍රකාශනය සත්‍ය වනතුරු ඔබ එයට ඇතුලත් කර
+          ඇති කුමක් හෝ සිදුකරයි.'
+      3:
+        image: notes/stage9_7.jpg
+    loop_for:
+      1:
+        image: notes/stage11_1.jpg
+        text: හයි, මම Trina, මම වැඩකරන්නේ Pixar ආයතනයේ, මම චිත්‍රපට සමුහයක් සම්බන්දව
+          කටයුතු කර තිබෙනවා, එයට Shrek චිත්‍රපටය ද ඇතුලත් වේ.
+      2:
+        image: notes/stage11_2.jpg
+      3:
+        image: notes/stage11_3.jpg
+      4:
+        image: notes/stage11_4.jpg
+    parameters:
+      1:
+        image: notes/stage15_1.jpg
+        text: හායි, ජැනට් නම් වන මම "Zynga" හි ඉන්ජිනේරු වරයෙකි.
+      2:
+        image: notes/stage15_2.jpg
+      3:
+        image: notes/stage15_3.jpg
+        text: අපිට මුලු කේතයම අතින් ලියන්න පුලුවන්. නැතිනම් පරාමිති සමග ශ්‍රිතයක්
+          භාවිත කරන්නත් පුලුවන්.
+      4:
+        image: notes/stage15_4.jpg
+      5:
+        image: notes/stage15_5.jpg
+      6:
+        image: notes/stage15_6.jpg
+      7:
+        image: notes/stage15_7.jpg
+      8:
+        image: notes/stage15_8.jpg
+    hoc_wrapup:
+      1:
+        image: notes/hoc6_1.jpg
+      2:
+        image: notes/hoc6_2.jpg
+      3:
+        image: notes/hoc6_3.jpg
+      4:
+        image: notes/hoc6_4.jpg
+    20_wrapup:
+      1:
+        image: notes/bird.png
+        text: සටහන් පෙන්වීම ළඟදීම පැමිණේ!
+    frozen_intro:
+      1:
+        image: notes/frozen1_1.jpg
+      2:
+        image: notes/frozen1_2.jpg
+      3:
+        image: notes/frozen1_3.jpg
+      4:
+        image: notes/frozen1_4.jpg
+      5:
+        image: notes/frozen1_5.jpg
+      6:
+        image: notes/frozen1_6.jpg
+      7:
+        image: notes/frozen1_7.jpg
+      8:
+        image: notes/frozen1_8.jpg
+      9:
+        image: notes/frozen1_9.jpg
+      10:
+        image: notes/frozen1_10.jpg
+    frozen_loops:
+      1:
+        image: notes/frozen2_1.jpg
+      2:
+        image: notes/frozen2_2.jpg
+      3:
+        image: notes/frozen2_3.jpg
+      4:
+        image: notes/frozen2_4.jpg
+      5:
+        image: notes/frozen2_5.jpg
+    frozen_functions:
+      1:
+        image: notes/frozen3_1.jpg
+        text: ආයුබෝවන්! මම Chris Bosh. මම වෘත්තිමය බාස්කට්බෝල් ක්‍රීඩයෙක්. මම ඉස්කෝලේ
+          යන කාලෙදි ක්‍රමලේඛනය කර තිබෙනවා.
+      2:
+        image: notes/frozen3_2.jpg
+      3:
+        image: notes/frozen3_3.jpg
+      4:
+        image: notes/frozen3_4.jpg
+      5:
+        image: notes/frozen3_5.jpg
+        text: 'ඔබට සමචතුරශ්‍රයක් සෑදීමට "create a square." නමැති අලුත් ශ්‍රිතයක් නිරවචනය
+          කල හැක '
+      6:
+        image: notes/frozen3_6.jpg
+      7:
+        image: notes/frozen3_7.jpg
+    playlab_events:
+      1:
+        image: notes/playlab_events_1.png
+      2:
+        image: notes/playlab_events_2.png
+      3:
+        image: notes/playlab_events_3.png
+      4:
+        image: notes/playlab_events_4.png
+    playlab_repeat_forever:
+      1:
+        image: notes/playlab_repeat_forever_1.png
+      2:
+        image: notes/playlab_repeat_forever_2.png
+      3:
+        image: notes/playlab_repeat_forever_3.png
+    C1_artist_intro:
+      1:
+        image: notes/C1_artist_intro_1.png
+      2:
+        image: notes/C1_artist_intro_2.png
+    C1_bee_level_intro:
+      1:
+        image: notes/C1_bee_level_intro_1.png
+      2:
+        image: notes/C1_bee_level_intro_2.png
+      3:
+        image: notes/C1_bee_level_intro_3.png
+    C1_bigevent_unplugged:
+      1:
+        image: notes/C1_bigevent_unplugged_1.png
+      2:
+        image: notes/C1_bigevent_unplugged_2.png
+      3:
+        image: notes/C1_bigevent_unplugged_3.png
+      4:
+        image: notes/C1_bigevent_unplugged_4.png
+      5:
+        image: notes/C1_bigevent_unplugged_5.png
+      6:
+        image: notes/C1_bigevent_unplugged_6.png
+    C1_building_foundation:
+      1:
+        image: notes/C1_building_foundation_1.jpg
+      2:
+        image: notes/C1_building_foundation_2.jpg
+      3:
+        image: notes/C1_building_foundation_3.jpg
+      4:
+        image: notes/C1_building_foundation_4.jpg
+      5:
+        image: notes/C1_building_foundation_5.jpg
+    C1_getting_loopy:
+      1:
+        image: notes/C1_getting_loopy_1.png
+      2:
+        image: notes/C1_getting_loopy_2.png
+      3:
+        image: notes/C1_getting_loopy_3.png
+      4:
+        image: notes/C1_getting_loopy_4.png
+      5:
+        image: notes/C1_getting_loopy_5.png
+    C1_happy_maps_unplugged:
+      1:
+        image: notes/C1_happy_maps_unplugged_1.png
+      2:
+        image: notes/C1_happy_maps_unplugged_2.png
+      3:
+        image: notes/C1_happy_maps_unplugged_3.png
+        text: එම ස්ථානයට ළඟා වීමට අවශ්‍ය දිශාව රවුම් කර පෙන්වන්න.
+      4:
+        image: notes/C1_happy_maps_unplugged_4.png
+      5:
+        image: notes/C1_happy_maps_unplugged_5.png
+        text: මේකත් හරියට අපි කොල වලින් ඉගෙනගන්නවා වගේමයි!
+    C1_maze_debugging:
+      1:
+        image: notes/C1_maze_debugging_1.png
+      2:
+        image: notes/C1_maze_debugging_2.png
+      3:
+        image: notes/C1_maze_debugging_3.png
+      4:
+        image: notes/C1_maze_debugging_4.png
+    C1_maze_intro_sequencing:
+      1:
+        image: notes/C1_maze_intro_sequencing_1.png
+      2:
+        image: notes/C1_maze_intro_sequencing_2.png
+    C1_moveitmoveit_unplugged:
+      1:
+        image: notes/C1_moveitmoveit_unplugged_1.png
+      2:
+        image: notes/C1_moveitmoveit_unplugged_2.png
+      3:
+        image: notes/C1_moveitmoveit_unplugged_3.png
+    C1_going_places_safely:
+      1:
+        image: notes/C1_going_places_safely_1.png
+      2:
+        image: notes/C1_going_places_safely_2.png
+      3:
+        image: notes/C1_going_places_safely_3.png
+      4:
+        image: notes/C1_going_places_safely_4.png
+      5:
+        image: notes/C1_going_places_safely_5.png
+      6:
+        image: notes/C1_going_places_safely_6.png
+      7:
+        image: notes/C1_going_places_safely_7.png
+    C1_pair_programming:
+      1: 
+      2:
+        image: notes/C1_pair_programming_2.png
+      3:
+        image: notes/C1_pair_programming_3.png
+      4:
+        image: notes/C1_pair_programming_4.png
+    C1_planting_seed:
+      1:
+        image: notes/C1_planting_seed_1.png
+      2:
+        image: notes/C1_planting_seed_2.png
+      3:
+        image: notes/C1_planting_seed_3.png
+      4:
+        image: notes/C1_planting_seed_4.png
+      5:
+        image: notes/C1_planting_seed_5.png
+    C1_playlab_storytelling:
+      1:
+        image: notes/C1_playlab_storytelling_1.png
+      2:
+        image: notes/C1_playlab_storytelling_2.png
+      3:
+        image: notes/C1_playlab_storytelling_3.png
+      4:
+        image: notes/C1_playlab_storytelling_4.png
+    C1_spelling_bee_intro:
+      1:
+        image: notes/C1_spelling_bee_intro_1.png
+      2:
+        image: notes/C1_spelling_bee_intro_2.png
+    C1_zuck_repeat_loop:
+      1:
+        image: notes/C1_zuck_repeat_loop_1.png
+      2:
+        image: notes/C1_zuck_repeat_loop_2.png
+      3:
+        image: notes/C1_zuck_repeat_loop_3.png
+      4:
+        image: notes/C1_zuck_repeat_loop_4.png
+      5:
+        image: notes/C1_zuck_repeat_loop_5.png
+    C2_artist_intro:
+      1:
+        image: notes/C2_artist_intro_1.png
+      2:
+        image: notes/C2_artist_intro_2.png
+      3:
+        image: notes/C2_artist_intro_3.png
+      4:
+        image: notes/C2_artist_intro_4.png
+      5: 
+    C2_bee_conditionals:
+      1:
+        image: notes/C2_bee_conditionals_1.png
+      2:
+        image: notes/C2_bee_conditionals_2.png
+      3:
+        image: notes/C2_bee_conditionals_3.png
+    C2_binary_bracelets:
+      1:
+        image: notes/C2_binary_bracelets_1.png
+      2:
+        image: notes/C2_binary_bracelets_2.png
+      3:
+        image: notes/C2_binary_bracelets_3.png
+      4:
+        image: notes/C2_binary_bracelets_4.png
+    C2_conditionals_with_cards:
+      1:
+        image: notes/C2_conditionals_with_cards_1.png
+      2:
+        image: notes/C2_conditionals_with_cards_2.png
+      3:
+        image: notes/C2_conditionals_with_cards_3.png
+      4:
+        image: notes/C2_conditionals_with_cards_4.png
+      5:
+        image: notes/C2_conditionals_with_cards_5.png
+    C2_artist_debugging:
+      1:
+        image: notes/C2_artist_debugging_1.png
+      2:
+        image: notes/C2_artist_debugging_2.png
+      3:
+        image: notes/C2_artist_debugging_3.png
+        text: ඔන්න පොඩි ගැටලුවක්. පූසාගේ රැවුල් ගස් පික්සල් 75ක් දිගයි. 25ක් නෙමෙයි.
+    C2_bee_debugging:
+      1:
+        image: notes/C2_bee_debugging_1.png
+      2:
+        image: notes/C2_bee_debugging_2.png
+      3:
+        image: notes/C2_bee_debugging_3.png
+    C2_digital_footprint:
+      1:
+        image: notes/C2_digital_footprint_1.png
+      2:
+        image: notes/C2_digital_footprint_2.png
+      3:
+        image: notes/C2_digital_footprint_3.png
+      4:
+        image: notes/C2_digital_footprint_4.png
+      5:
+        image: notes/C2_digital_footprint_5.png
+      6:
+        image: notes/C2_digital_footprint_6.png
+    C2_digital_footprint_v2:
+      1:
+        image: notes/C2_digital_footprint_v2_1.png
+    C2_graph_paper:
+      1:
+        image: notes/C2_graph_paper_1.png
+      2:
+        image: notes/C2_graph_paper_2.png
+      3:
+        image: notes/C2_graph_paper_3.png
+      4:
+        image: notes/C2_graph_paper_4.png
+    C2_artist_loops:
+      1:
+        image: notes/C2_artist_loops_1.png
+      2:
+        image: notes/C2_artist_loops_2.png
+    C2_maze_intro:
+      1: 
+      2: 
+      3: 
+      4:
+        image: notes/C2_maze_intro_4.png
+      5:
+        image: notes/C2_maze_intro_5.png
+    C2_paper_airplanes:
+      1:
+        image: notes/C2_paper_airplanes_1.png
+      2:
+        image: notes/C2_paper_airplanes_2.png
+      3:
+        image: notes/C2_paper_airplanes_3.png
+      4:
+        image: notes/C2_paper_airplanes_4.png
+    C2_relay_programming:
+      1:
+        image: notes/C2_relay_programming_1.png
+      2:
+        image: notes/C2_relay_programming_2.png
+      3:
+        image: notes/C2_relay_programming_3.png
+      4:
+        image: notes/C2_relay_programming_4.png
+    C2_zuck_repeat_loop:
+      1:
+        image: notes/C2_zuck_repeat_loop_1.png
+      2:
+        image: notes/C2_zuck_repeat_loop_2.png
+      3:
+        image: notes/C2_zuck_repeat_loop_3.png
+      4:
+        image: notes/C2_zuck_repeat_loop_4.png
+      5:
+        image: notes/C2_zuck_repeat_loop_5.png
+    C3_artist_functions:
+      1:
+        image: notes/C3_artist_functions_1.png
+      2:
+        image: notes/C3_artist_functions_2.png
+    C3_artist_intro:
+      1:
+        image: notes/C3_artist_intro_1.png
+      2:
+        image: notes/C3_artist_intro_2.png
+      3:
+        image: notes/C3_artist_intro_3.png
+      4:
+        image: notes/C3_artist_intro_4.png
+      5:
+        image: notes/C3_artist_intro_5.png
+    C3_artist_nested_loops:
+      1:
+        image: notes/C3_artist_nested_loops_1.png
+      2:
+        image: notes/C3_artist_nested_loops_2.png
+    C3_bee_conditionals:
+      1:
+        image: notes/C3_bee_conditionals_1.png
+      2:
+        image: notes/C3_bee_conditionals_2.png
+      3:
+        image: notes/C3_bee_conditionals_3.png
+    C3_bee_functions:
+      1:
+        image: notes/C3_bee_functions_1.png
+      2:
+        image: notes/C3_bee_functions_2.png
+      3:
+        image: notes/C3_bee_functions_3.png
+      4:
+        image: notes/C3_bee_functions_4.png
+    C3_bee_nested_loops:
+      1:
+        image: notes/C3_bee_nested_loops_1.png
+    C3_bounce:
+      1:
+        image: notes/C3_bounce_1.png
+      2:
+        image: notes/C3_bounce_2.png
+      3: 
+    C3_computational_thinking:
+      1:
+        image: notes/C3_computational_thinking_1.png
+      2:
+        image: notes/C3_computational_thinking_2.png
+      3:
+        image: notes/C3_computational_thinking_3.png
+      4:
+        image: notes/C3_computational_thinking_4.png
+      5:
+        image: notes/C3_computational_thinking_5.png
+    C3_crowdsourcing:
+      1:
+        image: notes/C3_crowdsourcing_1.png
+      2:
+        image: notes/C3_crowdsourcing_2.png
+      3:
+        image: notes/C3_crowdsourcing_3.png
+      4:
+        image: notes/C3_crowdsourcing_4.png
+    C3_farmer_while:
+      1:
+        image: notes/C3_farmer_while_1.png
+      2:
+        image: notes/C3_farmer_while_2.png
+    C3_functional_suncatchers:
+      1:
+        image: notes/C3_functional_suncatchers_1.png
+      2:
+        image: notes/C3_functional_suncatchers_2.png
+      3:
+        image: notes/C3_functional_suncatchers_3.png
+      4:
+        image: notes/C3_functional_suncatchers_4.png
+    C3_maze_conditionals:
+      1:
+        image: notes/C3_maze_conditionals_1.png
+      2:
+        image: notes/C3_maze_conditionals_2.png
+      3: 
+      4:
+        image: notes/C3_maze_conditionals_4.png
+    C3_maze_level_4:
+      1:
+        image: notes/C3_maze_level_4_1.png
+      2:
+        image: notes/C3_maze_level_4_2.png
+    C3_playlab_create_game:
+      1:
+        image: notes/C3_playlab_create_game_1.png
+      2:
+        image: notes/C3_playlab_create_game_2.png
+    C3_songwriting_with_parameters:
+      1:
+        image: notes/C3_songwriting_with_parameters_1.png
+      2:
+        image: notes/C3_songwriting_with_parameters_2.png
+      3:
+        image: notes/C3_songwriting_with_parameters_3.png
+    C4_bee_conditional:
+      1:
+        image: notes/C4_bee_conditional_1.png
+      2:
+        image: notes/C4_bee_conditional_2.png
+    C4_conditionals:
+      1:
+        image: notes/C4_conditionals_1.png
+      2:
+        image: notes/C4_conditionals_2.png
+    C4_for_loops_bee:
+      1:
+        image: notes/C4_for_loops_bee_1.png
+      2:
+        image: notes/C4_for_loops_bee_2.png
+      3:
+        image: notes/C4_for_loops_bee_3.png
+      4:
+        image: notes/C4_for_loops_bee_4.png
+    C4_for_loops_no_bee:
+      1:
+        image: notes/C4_for_loops_no_bee_1.png
+      2:
+        image: notes/C4_for_loops_no_bee_2.png
+    C4_function_create:
+      1:
+        image: notes/C4_function_create_1.png
+      2:
+        image: notes/C4_function_create_2.png
+      3:
+        image: notes/C4_function_create_3.png
+    C4_function_edit:
+      1:
+        image: notes/C4_function_edit_1.png
+      2:
+        image: notes/C4_function_edit_2.png
+      3:
+        image: notes/C4_function_edit_3.png
+      4:
+        image: notes/C4_function_edit_4.png
+    C4_function_parameters:
+      1:
+        image: notes/C4_function_parameters_1.png
+      2:
+        image: notes/C4_function_parameters_2.png
+      3:
+        image: notes/C4_function_parameters_3.png
+    C4_intro:
+      1:
+        image: notes/C4_intro_1.png
+      2:
+        image: notes/C4_intro_2.png
+      3:
+        image: notes/C4_intro_3.png
+      4:
+        image: notes/C4_intro_4.png
+      5:
+        image: notes/C4_intro_5.png
+    C4_math_artist:
+      1:
+        image: notes/C4_math_artist_1.png
+      2:
+        image: notes/C4_math_artist_2.png
+    C4_unplugged_algorithms:
+      1:
+        image: notes/C4_unplugged_algorithms_1.png
+      2:
+        image: notes/C4_unplugged_algorithms_2.png
+      3:
+        image: notes/C4_unplugged_algorithms_3.png
+      4:
+        image: notes/C4_unplugged_algorithms_4.png
+    C4_unplugged_binary:
+      1:
+        image: notes/C4_unplugged_binary_1.png
+      2:
+        image: notes/C4_unplugged_binary_2.png
+      3:
+        image: notes/C4_unplugged_binary_3.png
+      4:
+        image: notes/C4_unplugged_binary_4.png
+    C4_unplugged_forloops:
+      1:
+        image: notes/C4_unplugged_forloops_1.png
+      2:
+        image: notes/C4_unplugged_forloops_2.png
+      3:
+        image: notes/C4_unplugged_forloops_3.png
+      4:
+        image: notes/C4_unplugged_forloops_4.png
+      5:
+        image: notes/C4_unplugged_forloops_5.png
+    C4_unplugged_madlibs:
+      1:
+        image: notes/C4_unplugged_madlibs_1.png
+      2: 
+    C4_unplugged_parameters:
+      1:
+        image: notes/C4_unplugged_parameters_1.png
+      2:
+        image: notes/C4_unplugged_parameters_2.png
+      3:
+        image: notes/C4_unplugged_parameters_3.png
+    C4_unplugged_variables:
+      1:
+        image: notes/C4_unplugged_variables_1.png
+      2:
+        image: notes/C4_unplugged_variables_2.png
+      3:
+        image: notes/C4_unplugged_variables_3.png
+    C4_variables_artist:
+      1:
+        image: notes/C4_variables_artist_1.png
+      2:
+        image: notes/C4_variables_artist_2.png
+      3:
+        image: notes/C4_variables_artist_3.png
+    C4_variables_playlab:
+      1:
+        image: notes/C4_variables_playlab_1.png
+      2:
+        image: notes/C4_variables_playlab_2.png
+      3:
+        image: notes/C4_variables_playlab_3.png
+    infinity_playlab_events:
+      1:
+        image: notes/infinity_playlab_events_1.png
+      2: 
+    infinity_playlab_intro:
+      1:
+        image: notes/infinity_playlab_intro_1.png
+      2:
+        image: notes/infinity_playlab_intro_2.png
+      3:
+        image: notes/infinity_playlab_intro_3.png
+      4:
+        image: notes/infinity_playlab_intro_4.png
+      5:
+        image: notes/infinity_playlab_intro_5.png
+      6:
+        image: notes/infinity_playlab_intro_6.png
+      7:
+        image: notes/infinity_playlab_intro_7.png
+    infinity_playlab_repeat_forever:
+      1:
+        image: notes/infinity_playlab_repeat_forever_1.png
+      2:
+        image: notes/infinity_playlab_repeat_forever_2.png
+    tutorial_puzzle_challenge:
+      1:
+        image: notes/tutorial_puzzle_challenge_1.png
+      2:
+        image: notes/tutorial_puzzle_challenge_2.png
+      3:
+        image: notes/tutorial_puzzle_challenge_3.png
+      4:
+        image: notes/tutorial_puzzle_challenge_4.png
+      5:
+        image: notes/tutorial_puzzle_challenge_5.png
+      6:
+        image: notes/tutorial_puzzle_challenge_6.png
+    unplug1:
+      1:
+        image: notes/unplug1_1.png
+      2:
+        image: notes/unplug1_2.png
+      3:
+        image: notes/unplug1_3.png
+      4:
+        image: notes/unplug1_4.png
+    unplug2:
+      1:
+        image: notes/unplug2_1.png
+      2:
+        image: notes/unplug2_2.png
+      3:
+        image: notes/unplug2_3.png
+      4:
+        image: notes/unplug2_4.png
+    unplug3:
+      1:
+        image: notes/unplug3_1.png
+      2:
+        image: notes/unplug3_2.png
+    unplug4:
+      1:
+        image: notes/unplug4_1.png
+      2:
+        image: notes/unplug4_2.png
+    unplug5:
+      1:
+        image: notes/unplug5_1.png
+      2:
+        image: notes/unplug5_2.png
+    unplug6:
+      1:
+        image: notes/unplug6_1.png
+      2:
+        image: notes/unplug6_2.png
+    unplug7:
+      1:
+        image: notes/unplug7_1.png
+      2:
+        image: notes/unplug7_2.png
+      3:
+        image: notes/unplug7_3.png
+    unplug8:
+      1:
+        image: notes/unplug8_1.png
+      2:
+        image: notes/unplug8_2.png
+      3:
+        image: notes/unplug8_3.png
+    unplug9:
+      1:
+        image: notes/unplug9_1.png
+      2:
+        image: notes/unplug9_2.png
+      3:
+        image: notes/unplug9_3.png
+    unplug10:
+      1:
+        image: notes/unplug10_1.png
+      2:
+        image: notes/unplug10_2.png
+      3:
+        image: notes/unplug10_3.png
+    unplug11:
+      1:
+        image: notes/unplug11_1.png
+      2:
+        image: notes/unplug11_2.png
+      3:
+        image: notes/unplug11_3.png
+    starwars_intro:
+      1:
+        image: notes/starwars_intro_1.JPG
+      2:
+        image: notes/starwars_intro_2.JPG
+      3:
+        image: notes/starwars_intro_3.JPG
+      4:
+        image: notes/starwars_intro_4.JPG
+      5:
+        image: notes/starwars_intro_5.JPG
+      6:
+        image: notes/starwars_intro_6.JPG
+      7:
+        image: notes/starwars_intro_7.JPG
+      8:
+        image: notes/starwars_intro_8.JPG
+      9:
+        image: notes/starwars_intro_9.JPG
+      10:
+        image: notes/starwars_intro_10.JPG
+    starwars_typing:
+      1:
+        image: notes/starwars_typing_1.JPG
+      2:
+        image: notes/starwars_typing_2.JPG
+      3:
+        image: notes/starwars_typing_3.JPG
+      4:
+        image: notes/starwars_typing_4.JPG
+      5:
+        image: notes/starwars_typing_5.JPG
+      6:
+        image: notes/starwars_typing_6.JPG
+      7:
+        image: notes/starwars_typing_7.JPG
+    starwars_events:
+      1:
+        image: notes/starwars_events_1.JPG
+      2:
+        image: notes/starwars_events_2.JPG
+      3:
+        image: notes/starwars_events_3.JPG
+      4:
+        image: notes/starwars_events_4.JPG
+      5:
+        image: notes/starwars_events_5.JPG
+      6:
+        image: notes/starwars_events_6.JPG
+      7:
+        image: notes/starwars_events_7.JPG
+      8:
+        image: notes/starwars_events_8.JPG
+      9:
+        image: notes/starwars_events_9.JPG
+    starwars_congrats:
+      1:
+        image: notes/starwars_congrats_1.JPG
+      2:
+        image: notes/starwars_congrats_2.JPG
+      3:
+        image: notes/starwars_congrats_3.JPG
+      4:
+        image: notes/starwars_congrats_4.JPG
+      5:
+        image: notes/starwars_congrats_5.JPG
+    starwars_blocks_intro:
+      1:
+        image: notes/starwars_blocks_intro_1.JPG
+      2:
+        image: notes/starwars_blocks_intro_2.JPG
+      3:
+        image: notes/starwars_blocks_intro_3.JPG
+      4:
+        image: notes/starwars_blocks_intro_4.JPG
+      5:
+        image: notes/starwars_blocks_intro_5.JPG
+      6:
+        image: notes/starwars_blocks_intro_6.JPG
+      7:
+        image: notes/starwars_blocks_intro_7.JPG
+      8:
+        image: notes/starwars_blocks_intro_8.JPG
+      9:
+        image: notes/starwars_blocks_intro_9.JPG
+      10:
+        image: notes/starwars_blocks_intro_10.JPG
+    starwars_blocks_events:
+      1:
+        image: notes/starwars_blocks_events_1.JPG
+      2:
+        image: notes/starwars_blocks_events_2.JPG
+      3:
+        image: notes/starwars_blocks_events_3.JPG
+      4:
+        image: notes/starwars_blocks_events_4.JPG
+      5:
+        image: notes/starwars_blocks_events_5.JPG
+      6:
+        image: notes/starwars_blocks_events_6.JPG
+      7:
+        image: notes/starwars_blocks_events_7.JPG
+        text: පියවරෙන් පියවර ඔබේ ගේම් එක තව තවත් ක්‍රියාශීලී වේ.
+    starwars_blocks_congrats:
+      1:
+        image: notes/starwars_blocks_congrats_1.JPG
+      2:
+        image: notes/starwars_blocks_congrats_2.JPG
+      3:
+        image: notes/starwars_blocks_congrats_3.JPG
+      4:
+        image: notes/starwars_blocks_congrats_4.JPG
+      5:
+        image: notes/starwars_blocks_congrats_5.JPG
+    mc_intro:
+      1:
+        image: notes/mc_intro_1.JPG
+      2:
+        image: notes/mc_intro_2.JPG
+      3:
+        image: notes/mc_intro_3.JPG
+      4:
+        image: notes/mc_intro_4.JPG
+      5:
+        image: notes/mc_intro_5.JPG
+      6:
+        image: notes/mc_intro_6.JPG
+      7:
+        image: notes/mc_intro_7.JPG
+      8:
+        image: notes/mc_intro_8.JPG
+      9:
+        image: notes/mc_intro_9.JPG
+      10:
+        image: notes/mc_intro_10.JPG
+      11: 
+      12: 
+    mc_if_statements:
+      1:
+        image: notes/mc_if_statements_1.JPG
+      2:
+        image: notes/mc_if_statements_2.JPG
+      3:
+        image: notes/mc_if_statements_3.JPG
+      4:
+        image: notes/mc_if_statements_4.JPG
+      5:
+        image: notes/mc_if_statements_5.JPG
+    mc_congrats_share:
+      1:
+        image: notes/mc_congrats_share_1.JPG
+        text: සුබ පැතුම්! ඔබ මේ දැන් පරිගණක විද්‍යාවට අදාල මූලික කොටස් ඉගෙන ගන්නා
+          ලදි.
+      2:
+        image: notes/mc_congrats_share_2.JPG
+      3:
+        image: notes/mc_congrats_share_3.JPG
+      4:
+        image: notes/mc_congrats_share_4.JPG
+    mc_congrats_no_share:
+      1:
+        image: notes/mc_congrats_no_share_1.JPG
+        text: සුබ පැතුම්! ඔබ මේ දැන් පරිගණක විද්‍යාවට අදාල මූලික කොටස් ඉගෙන ගන්නා
+          ලදි.
+      2:
+        image: notes/mc_congrats_no_share_2.JPG
+      3:
+        image: notes/mc_congrats_no_share_3.JPG
+      4:
+        image: notes/mc_congrats_no_share_4.JPG
+        text: දැන් ඔබට අවශ්‍ය ඕනෑම දෙයක් හදන්න පුලුවන්!
+    gumball_intro:
+      1: 
+      2:
+        image: notes/gumball_intro_2.JPG
+      3:
+        image: notes/gumball_intro_3.JPG
+      4: 
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: මේ මැද තමයි ඔයාට ඕන කරන උපකරණ ඔක්කොම තියෙන්නේ. මේ හැම උපකරණයක් හෝ කොටසක්
+          කේත කොටසක් වෙනවා.
+      6:
+        image: notes/gumball_intro_6.JPG
+      7:
+        image: notes/gumball_intro_7.JPG
+      8:
+        image: notes/gumball_intro_8.JPG
+      9:
+        image: notes/gumball_intro_9.JPG
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+      2:
+        image: notes/gumball_events_2.JPG
+      3:
+        image: notes/gumball_events_3.JPG
+      4:
+        image: notes/gumball_events_4.JPG
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+      2:
+        image: notes/gumball_repeat_2.JPG
+      3:
+        image: notes/gumball_repeat_3.JPG
+    iceage_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5:
+        text: මේ මැද තමයි ඔයාට ඕන කරන උපකරණ ඔක්කොම තියෙන්නේ. මේ හැම උපකරණයක් හෝ කොටසක්
+          කේත කොටසක් වෙනවා.
+      6: 
+      7: 
+      8: 
+      9: 
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+      2:
+        image: notes/iceage_events_2.JPG
+      3:
+        image: notes/iceage_events_3.JPG
+      4:
+        image: notes/iceage_events_4.JPG
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+      2:
+        image: notes/iceage_repeat_2.JPG
+      3:
+        image: notes/iceage_repeat_3.JPG

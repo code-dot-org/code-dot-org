@@ -1,0 +1,28 @@
+fi:
+  data:
+    function_names:
+      x: x
+      draw a circle: piirrä ympyrä
+      draw a hexagon: piirrä kuusikulmio
+      draw a flower: piirrä kukka
+      draw a square: piirrä neliö
+      draw a snowflake: piirrä lumihiutale
+      draw a tree: piirrä puu
+      draw a triangle: piirrä kolmio
+      draw a house: piirrä talo
+      draw a star: piirrä tähti
+      do something: tee jotain
+      jump: hyppää
+      set score: aseta pisteet
+      get nectar: kerää mesi
+      test: ehto
+      diamond: timantti
+      move: liikuta
+      move right: siirrä oikealle
+      move up: siirrä ylös
+      move down: siirrä alas
+      move left: siirrä vasemmalle
+      collect: kerätä
+      turn left: käänny vasempaan
+      move forward: siirry eteenpäin
+      turn right: käänny oikeaan

@@ -1,0 +1,75 @@
+fil:
+  devise:
+    confirmations:
+      confirmed: "Ang iyong email address ay matagumpay na nakumpirma."
+      send_instructions: "Ikaw ay makakatanggap ng email na meron mga instruction kung paano makumpirma ang iyong account sa ilang sandali."
+      send_paranoid_instructions: "Kung ang iyong email address ay nasa aming database, ikaw ay makakatanggap ng email na meron mga instruction kung paano ma-confirm ang iyong account sa ilang sandali."
+    failure:
+      already_authenticated: "Ikaw ay naka-sign in na."
+      inactive: "Ang iyong account ay hindi pa activated."
+      invalid: "Maling email o password."
+      invalid_token: "Maling authentication token."
+      locked: "Ang iyong account ay locked."
+      not_found_in_database: "Maling email o password."
+      timeout: "Ang iyong session ay natapos na, maaaring mag-sign in ulit upang makapagpatuloy."
+      unauthenticated: "Kailangan mong mag-sign in  o  mag-sign up bago magpatuloy."
+      unconfirmed: "Kailangan mong kumpirmahin ang iyong  account bago magpatuloy."
+    mailer:
+      confirmation_instructions:
+        subject: "Pagkumpirma sa mga intstruction ng Code.org"
+      reset_password_instructions:
+        subject: "Mga instruction sa pag-reset ng password sa Code.org"
+      unlock_instructions:
+        subject: "I-unlock ang mga instruction"
+    omniauth_callbacks:
+      failure: "Hindi ma-authenticate mula sa %{kind} dahil ang \" %{reason}\"."
+      success: "Matagumpay na napatotohanan mula sa %{kind} account ."
+    passwords:
+      no_token: "Hindi mo maaaring ma-access ang pahinang ito nang hindi nagmumula sa isang password  reset email . Kung ikaw ay nagmula sa isang password  reset email , mangyaring tiyakin na ginamit mo ang buong URL na ibinigay."
+      send_instructions: "Makakatanggap ka ng isang email na may mga tagubilin tungkol sa kung paano i-reset  ang iyong  password pagkalipas ng ilang minuto."
+      send_paranoid_instructions: "Kung  ang iyong  e-mail  address ay umiiral sa aming database, makakatanggap ka ng isang password recovery link sa iyong  email  address pagkalipas ng ilang minuto."
+      updated: "Ang iyong  password ay matagumpay na nabago. Naka-sign in ngayon."
+      updated_not_active: "Ang iyong  password ay matagumpay na nabago."
+    registrations:
+      destroyed: "Paalam! Ang iyong  account ay matagumpay na kinansela. Umaasa kaming makita kang muli sa lalong madaling panahon."
+      signed_up: "Maligayang pagdating! Matagumpay mong na-sign up."
+      signed_up_but_inactive: "Matagumpay mong na-sign up. Gayunpaman, hindi namin ma-sign in ka dahil ang iyong  account ay hindi pa ginawang aktibo."
+      signed_up_but_locked: "Matagumpay mong na-sign up. Gayunpaman, hindi ka namin ma-sign in dahil ang iyong  account ay naka-lock."
+      signed_up_but_unconfirmed: "Isang message na may link ng pagpapatunay ang ipinadala sa iyong  e-mail  address . Mangyaring buksan ang link upang i-activate ang iyong  account ."
+      update_needs_confirmation: "Na update mo ang iyong  account na matagumpay, ngunit kailangan naming i-verify ang iyong bagong email address. Mangyaring tingnan ang iyong email at i-click ang link sa pagkumpirma upang i-finalize ang iyong bagong email address."
+      updated: "Ang pag-update mo ang iyong  account ay matagumpay."
+    sessions:
+      signed_out: "Matagumpay na-sign out."
+    unlocks:
+      send_instructions: "Makakatanggap ka ng isang email na may mga tagubilin tungkol sa kung paano i-unlock ang iyong  account sa loob ng ilang minuto."
+      send_paranoid_instructions: "Kung merong kang account, makakatanggap ka ng isang email na may mga instruction tungkol sa kung paano i-unlock ito sa loob ng ilang minuto."
+      unlocked: "Ang iyong  account ay matagumpay na nai-unlock. Mangyaring mag-sign in upang magpatuloy."
+  errors:
+    messages:
+      already_confirmed: "ay na-nakumpirma, mangyaring subukang mag-sign in"
+      confirmation_period_expired: "ay kinakailangan na kumpirmahin sa loob ng %{period} , mangyaring humingi ng isa pa"
+      expired: "ay nag-expire, mangyaring humingi ng isa pa"
+      not_found: "hindi nahanap"
+      not_locked: "ay hindi na lock"
+      not_saved:
+        one: "1 error ipinagbabawal ang %{resource} sa pagse-save:"
+        other: "%{count} error na ipinagbabawal ang %{resource} na ma-save:"
+    invitations:
+      send_instructions: 'May paanyayang email ang pinadala kay %{email}.'
+      invitation_token_invalid: 'Ang token ng imbistasyon na binigay ay hindi balido!'
+      updated: 'Ang iyong password ay matagumpay na natakda. Ikaw ay nakasign-in na ngayon.'
+      no_invitations_remaining: "Walang natirang mga paanyaya"
+      invitation_removed: 'Ang iyong imbitasyon ay tinanggal.'
+      new:
+        header: "Magpadala ng Imbitasyon"
+        submit_button: "Magpadala ng Imbitasyon"
+      edit:
+        header: "Magtakda ng iyong password"
+        submit_button: "Magtakda ng aking password"
+    mailer:
+      invitation_instructions:
+        subject: 'Mga tagubilin sa imbitasyon'
+        hello: 'Hello %{email}'
+        someone_invited_you: 'May isang tao na nag-imbita sa iyo sa %{url}, maari mo itong tanggapin sa pamamagitan ng link sa baba.'
+        accept: 'Tanggapin ang imbitasyon'
+        ignore: "Kung hindi mo gustong tanggapin ang imbitasyon, huwag mo lang pansinin ang email na ito.<br/>Ang iyoung account ay hindi malikha hangga't hindi mo na bisita ang link sa taas at natakda ang iyong password."

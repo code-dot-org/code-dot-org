@@ -1,0 +1,95 @@
+---
+uz:
+  data:
+    short_instructions:
+      2-3 Artist 1 new: "Salom, men artistman. Men deyarli barcha narsani chizishim
+        uchun kod yozishingi mumkin. \nMeni rasimdagi kulrang chiziqlarni ustidan
+        chizishim uchun, bir nechta bloklarni ishlating.(Har bir chiziq 100 piksel
+        uzunlikda)"
+      2-3 Artist 4: Ushbu mushukka uy qurishda yordam bering.
+      2-3 Artist 9 NEW: Bu varrakni yasang
+      2-3 Artist 9: Bu varrakni yasang
+      2-3 Artist Debugging 11: |-
+        Chiroyli qor parchamni yasashda yordam bering.
+        Buni tugatish uchun yana nechi marta "takrorlash"im kerak?
+      2-3 Artist Debugging 12: |-
+        Men bu manzaraga, okean to'lqinini qo'shishim kerak.
+        Yordam berolasizmi?
+      2-3 Artist Functions 9: Mana qor parchasi funksiyasi. Qish manzarasini yasashni
+        sinab ko'ring! Bu ochiq bosqich, ya'ni boshqotirma yo'q. vaxtingizni chog'
+        o'tqazing!
+      2-3 Maze 10: Meni yashil maxluqcha tomon boshqaring! (TNT bombachaga tega ko‘rmang)
+      2-3 Maze 4: Meni yashil maxluqcha tomon boshqaring! (TNT bombachaga tega ko‘rmang)
+      2-3 Maze 5: Meni yashil maxluqcha tomon boshqaring! (TNT bombachaga tega ko‘rmang)
+      2-3 Maze 7: Meni yashil maxluqcha tomon boshqaring! (TNT bombachaga tega ko‘rmang)
+      2-3 Maze 9: Meni yashil maxluqcha tomon boshqaring! (TNT bombachaga tega ko‘rmang)
+      2-3 Maze sq3: Meni yashil maxluqcha tomon boshqaring! (TNT bombachaga tega ko‘rmang)
+      20hr_maze_stage2_10: Endi yangi "... maguncha takrorla" blokchasi yordamida
+        bajaring. Bu blok cho‘chqachani tutmaguncha takrorlanaveradi.
+      20hr_maze_stage2_11: Xo‘sh, yana bitta mashq qilib ko‘ramiz — bunisini 4 ta
+        blok ishlatib bajarish kerak.
+      20hr_maze_stage2_13: Mayli, bunisi oson, lekin boshqacharoq. 5 ta blok bilan
+        hal qila olasanmi?
+      20hr_maze_stage2_14: 'Yangi “agar” blogini ishlatib menga qachon burilishim
+        kerakligini ayt. Yordam: sen yana bitta blok qo‘shishing kerak, lekin “agar”
+        shartini qanday qo‘shishni keyingi safar ko‘rasan.'
+      20hr_maze_stage2_15: Yaxshi, bunisi oxirgi masalaga o‘xshaydi, ammo sen "agar"
+        va "takrorla" bloklarini birga ishlatganingni eslashingga to‘g‘ri keladi.
+      20hr_maze_stage2_16: Men kungaboqarga yetishishim kerak! “agar” va boshqa bloklardan
+        eng kam foydalanib, meni uning oldiga yetkaz.
+      20hr_maze_stage2_17: Xo‘sh, yana bir mashq qilib olaylik — bunisi unchalik qiyin
+        emas. Faqat yamlovchilardan ehtiyot bo‘l!
+      20hr_maze_stage2_18: "“Agar-aks holda” blogi bitta shartni tekshiradi va natijaga
+        qarab u yoki bu amalni bajaradi. Yangi blokdan foydalanib, meni kungaboqarning
+        oldiga olib bor."
+      20hr_maze_stage2_19: "“Agar-aks holda” blogi uchun yana bitta mashq. Bir urinishdayoq
+        bajara olasanmi?"
+      20hr_maze_stage2_2: Bu cho‘chqacha asablarimni o‘ynayapti. Uni tutishga yordam
+        bering!
+      20hr_maze_stage2_20: Faqat 3 ta blokdan foydalanib, qiyinroq masalani yecha
+        olasanmi? Agar eplay olsang, undan keyin qancha uzun bo‘lmasin men har qanday
+        egri yo‘llardan yura olaman.
+      20hr_maze_stage2_3: Mani yo‘lak bo‘ylab yurgizib, ahmoq cho‘chqachani tutishimga
+        ko‘maklashing. TNT bombacha va patimni yulinishidan ehtiyot bo‘ling!
+      20hr_maze_stage2_4: Meni yashil maxluqcha tomon boshqaring! (TNT bombachaga
+        tega ko‘rmang)
+      20hr_maze_stage2_5: O‘zingizni bosib, jin urgur cho‘chqachani topishga yordamlashing.
+        Aks holda mening qonim qaynaydi!
+      20hr_maze_stage2_6: Ahmoq cho‘chqachaga 2 ta blok orqali yetish imkoni bor.
+        Qandayligini sezgandirsiz?
+      20hr_maze_stage2_7: Mani uchta blok orqali yashil buzg‘unchiga olib boring.
+      20hr_maze_stage2_8: Iloji boricha kamroq blok ishlatib, meni qing‘ir cho‘chqachani
+        tutishga yordamlashing. Bir necha marta "marta takrorlash" blogini ishlatib
+        ko‘ring.
+      20hr_maze_stage2_9: Kulrang blok siz uni o‘chira olmasligingizni bildiradi.
+        Boshqotirmani 3 marta takrorlaydigan kulrang blok amali ichida 3 ta blok joylab
+        yechishga harakat qilib ko‘ring.
+      App Lab test: test
+      Crack Random Substitution: Qo'llanmalar
+      Crack Random Substitution_2018: Qo'llanmalar
+      Crack a Caesar Cipher: Qo'llanmalar
+      Crack a Caesar Cipher_2018: Qo'llanmalar
+      KTest2: Mani yo‘lak bo‘ylab yurgizib, ahmoq cho‘chqachani tutishimga ko‘maklashing.
+        TNT bombacha va patimni yulinishidan ehtiyot bo‘ling!
+      Kiki_StarWars_Test_3: Matn
+      Kiki_StarWars_Test_4: Matn
+      Kiki_StarWars_Test_5: Matn
+      Kiki_StarWars_Test_5_Example: Matn
+      The Vigenere Cipher Widget: Qo'llanmalar
+      The Vigenere Cipher Widget_2018: Qo'llanmalar
+      The Vigenere Cipher: Qo'llanmalar
+      U2 frequency caesar: Qo'llanmalar
+      U2 frequency random sub: Qo'llanmalar
+      U2 vigenere cipher: Qo'llanmalar
+      U4 vigenere cipher 2: Qo'llanmalar
+      course2_maze_seq_challenge1: Mani yo‘lak bo‘ylab yurgizib, ahmoq cho‘chqachani
+        tutishimga ko‘maklashing. TNT bombacha va patimni yulinishidan ehtiyot bo‘ling!
+      grade2_MakeDogTag_3: Ushbu mushukka uy qurishda yordam bering.
+      grade4_review_artist1: "Salom, men artistman. Men deyarli barcha narsani chizishim
+        uchun kod yozishingi mumkin. \nMeni rasimdagi kulrang chiziqlarni ustidan
+        chizishim uchun, bir nechta bloklarni ishlating.(Har bir chiziq 100 piksel
+        uzunlikda)"
+      scrat 19 (copy 1): "“Agar-aks holda” blogi uchun yana bitta mashq. Bir urinishdayoq
+        bajara olasanmi?"
+      scrat 19: "“Agar-aks holda” blogi uchun yana bitta mashq. Bir urinishdayoq bajara
+        olasanmi?"

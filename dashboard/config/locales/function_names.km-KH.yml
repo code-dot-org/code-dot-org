@@ -1,0 +1,30 @@
+---
+km:
+  data:
+    function_names:
+      x: x
+      details: ព័ត៌មាន​លម្អិត
+      draw a circle: គូរ​រង្វង់​មួយ
+      draw a hexagon: គូរឆកោនមួយ
+      draw a flower: គូរផ្កាមួយ
+      draw a square: គូរ​ការេ​មួយ
+      draw a snowflake: គូរល្អងព្រិលមួយ
+      draw a tree: គូរ​ដើមឈើ​មួយ
+      draw a triangle: គូរ​ត្រីកោណ​មួយ
+      draw a house: គូរ​ផ្ទះ​មួយ
+      draw a star: គូរផ្កាយមួយ
+      do something: ធ្វើ​អ្វី​ម្យ៉ាង
+      jump: លោត
+      set score: សារ៉េពិន្ទុ
+      get nectar: យក​លម្អង
+      test: សាក​ល្បង
+      diamond: គ្រាប់ពេជ្រ
+      move: ផ្លាស់​​​ទី
+      move right: ផ្លាស់​ទី​ទៅ​ស្តាំ
+      move up: ផ្លាស់​ទី​ឡើង​លើ
+      move down: ផ្លាស់​ទី​ចុះ​ក្រោម
+      move left: ផ្លាស់​ទី​ទៅ​ឆ្វេង
+      collect: ប្រមូល
+      turn left: បត់​ឆ្វេង
+      move forward: រំកិល​ទៅមុខ
+      turn right: បត់​ស្ដាំ

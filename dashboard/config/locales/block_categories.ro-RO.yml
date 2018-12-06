@@ -1,0 +1,20 @@
+---
+ro:
+  data:
+    block_categories:
+      Actions: Acţiuni
+      Loops: Bucle
+      Functions: Funcţii
+      Color: Culoare
+      Math: Matematică
+      Logic: Logică
+      Variables: Variabile
+      Conditionals: Condiţionale
+      Events: Evenimente
+      Text: Text
+      Start: Începe
+      Music: Muzică
+      Booleans: Booleene
+      test: test
+      Name: Nume
+      Function: Funcţie

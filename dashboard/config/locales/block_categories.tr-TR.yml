@@ -1,0 +1,47 @@
+---
+tr:
+  data:
+    block_categories:
+      Actions: İşlemler
+      Loops: Döngüler
+      Functions: Fonksiyonlar
+      Color: Renk
+      Brushes: Fırçalar
+      Math: Matematik
+      Logic: Mantık
+      Variables: Değişkenler
+      Number: Sayı
+      String: Dize
+      Boolean: Boolean
+      Conditionals: Koşullar
+      Events: Olaylar
+      Games/Score: Oyunlar/skor
+      Comments: Yorumlar
+      Category: Kategori
+      Text: yazı
+      Picker: Seçici
+      Comment: Yorum
+      'Variables ': Değişkenler
+      everythingelse: diğerherşey
+      numbers: sayılar
+      Numbers: Sayılar
+      Input: Girdi
+      Default: Varsayılan
+      World: Dünya
+      Sprites: Hareketli Nesneler
+      Behaviors: Davranışlar
+      Start: Başlayın
+      Dancers: Dansçılar
+      Groups: Gruplar
+      Sprite: Hareketli nesne
+      Brush: Fırça
+      Make Sprite: Hareketli Nesne Oluştur
+      Movement: Hareket
+      Booleans: Boolean Değerleri
+      Predefined: Önceden Tanımlanmış
+      test: dene
+      Name: İsim
+      NEW BLOCKS: YENİ BLOKLAR
+      'Functions ': Fonksiyonlar
+      Game/Score: Oyun/Skor
+      Function: Fonksiyon

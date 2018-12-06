@@ -1,0 +1,325 @@
+---
+ro:
+  data:
+    callouts:
+      Course 4 Artist 4_callout:
+        repeat_full_circle: Introdu numărul necesar de mișcări ale zombie-ului astfel
+          încât acesta să facă un cerc complet
+      Course 4 Artist 7_callout:
+        repeat_blocks: Utilizaţi blocul "Repetă" şi aduceți-l lângă blocurile din
+          spațiul de lucru
+      Course 4 Artist For Loops 4_callout:
+        place_counter_variable: Trageți variabila contor înăuntrul acestui block
+      Course 4 Artist Functions 4_callout:
+        create_function: Click aici pentru a deschide bara de instrumente "Funcţii",
+          apoi faceţi clic pe butonul "Creează o funcţie".
+      Course 4 Artist Functions 5 OLD_callout:
+        house_hint: Este ok, chiar dacă imaginea nu arată ca o casă încă. O vom repara
+          în puzzle-ul următor.
+      Course 4 Artist Functions 8_callout:
+        edit_function: Click aici pentru a edita funcţia dumneavoastră.
+      Course 4 Artist Params 2_callout:
+        length_parameter: Puteţi actualiza această funcţie, astfel încât ea să folosească
+          parametrul "lungime"?
+      Course 4 Artist Params 4_callout:
+        create_function: Click aici pentru a deschide bara de instrumente "Funcţii",
+          apoi faceţi clic pe butonul "Creează o funcţie".
+      Course 4 Artist Vars 1_callout:
+        repeat_blocks: Utilizaţi blocul "Repetă" şi aduceți-l lângă blocurile din
+          spațiul de lucru
+      Course 4 Artist Vars 10_callout:
+        set_sides: Utilizaţi acest bloc ca să setați "laturi" la numărul necesar pentru
+          a finaliza puzzle-ul.
+      Course 4 Artist Vars 12_callout:
+        set_length: Utilizaţi acest bloc pentru a seta "lungime" la valoarea corectă.
+      Course 4 Artist Vars 2_callout:
+        set_length: Utilizaţi acest bloc pentru a seta "lungime" la valoarea corectă.
+      Course 4 Artist Vars 3_callout:
+        place_variable: Trage variabila ta în interiorul acestui block
+      Course 4 Artist Vars 6_callout:
+        degrees_per_side: Împărțiți 360 la numărul de laturi pentru a obține mărimea
+          în grade a fiecărui unghi.
+      Course 4 Artist Vars 9_callout:
+        set_sides: Utilizaţi acest bloc ca să setați "laturi" la numărul necesar pentru
+          a finaliza puzzle-ul.
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: Utilizaţi noul bloc "obţine nectar".
+      Course 4 Bee For Loops 6_callout:
+        actions_category: Caseta de instrumente are acum un nou aspect! Blocurile
+          "Acţiuni" sunt aici acum.
+      Course 4 Bee Params 2_callout:
+        edit_get_nectar: Utilizaţi acest buton pentru a edita funcţia şi pentru a
+          schimba direcţia spre care se va întoarce albina ca să obţină nectarul.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: Apasă "Run" pentru a încerca programul tău
+      Course 4 Maze 4_callout:
+        repeat: Pune blocuri în interiorul buclei pentru a repeta comenzi
+      Course 4 Play Lab Params 3_callout:
+        edit_function: Click aici pentru a edita funcţia dumneavoastră.
+      Course 4 Play Lab Params 6_callout:
+        edit_add_parameter: Clic editare pentru a adăuga un parametru în funcția ta
+      Course 4 Play Lab Vars 1_callout:
+        arrows_move_actor: Utilizează săgețile pentru a muta actorul
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: Utilizează săgețile pentru a muta actorul
+      Eval Design Recipe .1_callout:
+        edit_function: Click aici pentru a edita funcţia dumneavoastră.
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: Utilizaţi acest meniu derulant pentru a crea diferiți
+          fulgi de zăpadă!
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: Utilizaţi acest meniu derulant pentru a crea diferiți
+          fulgi de zăpadă!
+      Infinity_move_collide_callout:
+        Infinity_move_collide_callout: Emite un sunet când se produce acest eveniment.
+      Infinity_move_directions_callout:
+        Infinity_move_directions_callout: Care bloc îl va face pe Baymax să se mute
+          în sus când săgeata în sus este apăsată?
+        Infinity_move_directions_callout_arrow: Utilizează aceste săgeți pentru a
+          pune în mișcare
+      Infinity_move_right_callout:
+        Infinity_move_right_runbutton: Adaugă bloc de mutare aici
+      Infinity_repeat_callout:
+        Infinity_repeat_callout: Plasează blocuri de mutare în interior aici
+      NEW Course 4 Artist Functions 5_callout:
+        edit_function: Click aici pentru a edita funcţia dumneavoastră.
+        function_editor_draw_square: ' Acesta este definiția funcției dumneavoastră.
+          Aceste blocuri rulează în tot timpul în care dumneavoastră utilizați blocul
+          "desenează un pătrat". '
+      NEW Course 4 Artist Functions 7_callout:
+        edit_function: Click aici pentru a edita funcţia dumneavoastră.
+      NEW Course 4 Artist Functions 8_callout:
+        edit_function: Click aici pentru a edita funcţia dumneavoastră.
+      NEW Course 4 Artist Params 10_callout:
+        create_function: Click aici pentru a deschide bara de instrumente "Funcţii",
+          apoi faceţi clic pe butonul "Creează o funcţie".
+      NEW Course 4 Artist Params 2_callout:
+        create_function: "[șir gol]"
+        name_function: "[șir gol]"
+        write_draw_triangle_function: "[șir gol]"
+      NEW Course 4 Artist Params 9_callout:
+        edit_add_parameter: Clic editare pentru a adăuga un parametru în funcția ta
+        add_and_drag_parameter: Scrie numele parametrului tău aici, fă click pe "adaugă",
+          iar apoi trage-l în definiția funcției tale
+      NEW Course 4 Artist Vars 6_callout:
+        place_length_variable: Muta variabila length aici pentru a înlocui semnul
+          de interogație
+      NEW Course 4 Bee For Loops 5_callout:
+        actions_category: Caseta de instrumente are acum un nou aspect! Blocurile
+          "Acţiuni" sunt aici acum.
+      New Frozen Project_callout:
+        snowflake_dropdown: Utilizaţi acest meniu derulant pentru a crea diferiți
+          fulgi de zăpadă!
+      Overworld Chop Trees_callout:
+        craft_callout_preplaced: Am pus cateva blocuri aici pentru a incepe
+      Overworld Chop Trees_2018_callout:
+        craft_callout_preplaced: Am pus cateva blocuri aici pentru a incepe
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Am pus cateva blocuri aici pentru a incepe
+      Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: Acest cod va incepe sa construiasca casa ta.
+          Il poti termina?
+      Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Acest cod va incepe sa construiasca casa ta.
+          Il poti termina?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Acest cod va incepe sa construiasca casa ta.
+          Il poti termina?
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: Apasă "Run" pentru a încerca programul tău
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: Apasă "Run" pentru a încerca programul tău
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Apasă "Run" pentru a încerca programul tău
+      Overworld Place Wall_callout:
+        craft_inside_repeat: Repetati actiunile prin plasarea blocurilor aici
+      Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Repetati actiunile prin plasarea blocurilor aici
+      Overworld Place Wall_2019_callout:
+        craft_inside_repeat: Repetati actiunile prin plasarea blocurilor aici
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: Acest cod va cauta lava, poti adauga o comanda
+          pentru a inainta?
+      Underground Avoiding Lava_2018_callout:
+        craft_callout_moveforward: Acest cod va cauta lava, poti adauga o comanda
+          pentru a inainta?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Acest cod va cauta lava, poti adauga o comanda
+          pentru a inainta?
+      Underground Iron_callout:
+        craft_what_is_iron: Extrage acest fier!
+      Underground Iron_2018_callout:
+        craft_what_is_iron: Extrage acest fier!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: Extrage acest fier!
+      courseF_IceAge_2_callout:
+        playlab_use_twice: "[șir gol]"
+      courseF_IceAge_4_callout:
+        playlab_play_sound: "[șir gol]"
+      courseF_IceAge_5_callout:
+        playlab_add_move: "[șir gol]"
+      courseF_IceAge_7_callout:
+        arrows_move_actor: "[șir gol]"
+      courseF_IceAge_8_callout:
+        playlab_add_score: "[șir gol]"
+      courseF_IceAge_template_callout:
+        arrows_move_actor: "[șir gol]"
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: Utilizaţi blocul "crează un
+          cerc" şi modificaţi dimensiunea.
+      frozen cross rotate_callout:
+        replace_questions_degree: Utilizaţi meniul derulant pentru a înlocui "???"
+          cu un număr
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Utilizaţi meniul derulant pentru a înlocui "???"
+          cu un număr
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Utilizaţi meniul derulant pentru a înlocui "???"
+          cu un număr
+      frozen cross_callout:
+        repeat_blocks_1: "(1) Folosește acest bloc și pune-l în jurul blocurilor gri
+          în spațiul de lucru"
+        repeat_blocks_2: "(2) Mută blocul ”Repetă” aici, și plasează blocurile gri
+          în interior"
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: Utilizaţi blocul se repetă pentru a crea această formă.
+      frozen diamond_callout:
+        frozen_diamond_repeat: Utilizaţi blocul se repetă pentru a crea această formă.
+      frozen freeplay_callout:
+        snowflake_dropdown: Utilizaţi acest meniu derulant pentru a crea diferiți
+          fulgi de zăpadă!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Utilizaţi acest meniu derulant pentru a crea diferiți
+          fulgi de zăpadă!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Utilizaţi acest meniu derulant pentru a crea diferiți
+          fulgi de zăpadă!
+      frozen line_callout:
+        move_elsa_forward: Trageţi un bloc de "Mutare înainte" şi fixaţi-l sub blocul
+          "Atunci când rulaţi" pentru a o face pe Elsa să avanseze
+      frozen line_b_callout:
+        move_elsa_forward: Trageţi un bloc de "Mutare înainte" şi fixaţi-l sub blocul
+          "Atunci când rulaţi" pentru a o face pe Elsa să avanseze
+      frozen line_test_callout:
+        move_elsa_forward: Trageţi un bloc de "Mutare înainte" şi fixaţi-l sub blocul
+          "Atunci când rulaţi" pentru a o face pe Elsa să avanseze
+      frozen perpendicular_callout:
+        turn_elsa: Utilizaţi blocul "Întoarce" pentru a o face pe Elsa să se întoarcă.
+          Numărul din listă determină de câte ori se întoarce Elsa
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: Utilizaţi blocul "creaţi o ramură de fulg de Nea"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Utilizaţi blocul "creaţi o ramură de fulg de Nea"
+      frozen square iterative_callout:
+        frozen_create_square: Ataşează aici mai multe blocuri pentru a crea un pătrat
+      frozen square iterative_b_callout:
+        frozen_create_square: Ataşează aici mai multe blocuri pentru a crea un pătrat
+      frozen square iterative_test_callout:
+        frozen_create_square: Ataşează aici mai multe blocuri pentru a crea un pătrat
+      frozen square loop 3x_callout:
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un
+          număr
+      frozen square loop 3x_b_callout:
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un
+          număr
+      frozen square loop 3x_test_callout:
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un
+          număr
+      frozen square loop_callout:
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un
+          număr
+      frozen square loop_b_callout:
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un
+          număr
+      frozen square loop_test_callout:
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un
+          număr
+      frozen square snowflake_callout:
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un
+          număr
+      frozen square snowflake_b_callout:
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un
+          număr
+      frozen square snowflake_test_callout:
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un
+          număr
+      grade4_artist_parameters_squares1_callout:
+        edit_add_parameter: Clic editare pentru a adăuga un parametru în funcția ta
+        add_and_drag_parameter: Scrie numele parametrului tău aici, fă click pe "adaugă",
+          iar apoi trage-l în definiția funcției tale
+      grade4_frozen_freeplay_callout:
+        snowflake_dropdown: Utilizaţi acest meniu derulant pentru a crea diferiți
+          fulgi de zăpadă!
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: Utilizaţi blocul "crează un
+          cerc" şi modificaţi dimensiunea.
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: Utilizaţi blocul se repetă pentru a crea această formă.
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: Utilizaţi blocul se repetă pentru a crea această formă.
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: Utilizaţi blocul se repetă pentru a crea această formă.
+      grade4_frozen_square_callout:
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un
+          număr
+      grade4_frozen_square_loop1_callout:
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un
+          număr
+      grade4_frozen_square_loop2_callout:
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un
+          număr
+      grade4_frozen_square_loop3_callout:
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un
+          număr
+      grade5_artist_parameters_squares1_callout:
+        edit_add_parameter: Clic editare pentru a adăuga un parametru în funcția ta
+        add_and_drag_parameter: Scrie numele parametrului tău aici, fă click pe "adaugă",
+          iar apoi trage-l în definiția funcției tale
+      grade5_artist_parameters_triangles1aa_callout:
+        edit_add_parameter: Clic editare pentru a adăuga un parametru în funcția ta
+        add_and_drag_parameter: Scrie numele parametrului tău aici, fă click pe "adaugă",
+          iar apoi trage-l în definiția funcției tale
+      grade5_artist_variables_pentagons1_callout:
+        place_length_variable: Muta variabila length aici pentru a înlocui semnul
+          de interogație
+      grade5_artist_variables_pentagons12_callout:
+        set_length: Utilizaţi acest bloc pentru a seta "lungime" la valoarea corectă.
+      grade5_artist_variables_square7_callout:
+        degrees_per_side: Împărțiți 360 la numărul de laturi pentru a obține mărimea
+          în grade a fiecărui unghi.
+      grade5_artist_variables_triangles2_callout:
+        set_length: Utilizaţi acest bloc pentru a seta "lungime" la valoarea corectă.
+      grade5_playlab_variables1_callout:
+        arrows_move_actor: Utilizează săgețile pentru a muta actorul
+      grade5_playlab_variables11_callout:
+        edit_add_parameter: Clic editare pentru a adăuga un parametru în funcția ta
+      grade5_playlab_variables1ask_callout:
+        arrows_move_actor: Utilizează săgețile pentru a muta actorul
+      iceage_hello1_callout:
+        playlab_drag_say: "[șir gol]"
+      iceage_hello1_2018_callout:
+        playlab_drag_say: "[șir gol]"
+      iceage_hello2_callout:
+        playlab_use_twice: "[șir gol]"
+      iceage_hello2_2018_callout:
+        playlab_use_twice: "[șir gol]"
+      iceage_move_events_callout:
+        arrows_move_actor: "[șir gol]"
+      iceage_move_events_2018_callout:
+        arrows_move_actor: "[șir gol]"
+      iceage_move_to_actor_callout:
+        playlab_play_sound: "[șir gol]"
+      iceage_move_to_actor_2018_callout:
+        playlab_play_sound: "[șir gol]"
+      iceage_repeat_callout:
+        playlab_add_move: "[șir gol]"
+      iceage_repeat_2018_callout:
+        playlab_add_move: "[șir gol]"
+      iceage_sound_and_points_callout:
+        playlab_add_score: "[șir gol]"
+      iceage_sound_and_points_2018_callout:
+        playlab_add_score: "[șir gol]"
+      iceage_warn_ice_age_callout:
+        playlab_add_blocks: "[șir gol]"
+      iceage_warn_ice_age_2018_callout:
+        playlab_add_blocks: "[șir gol]"

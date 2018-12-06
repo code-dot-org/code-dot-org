@@ -1,0 +1,255 @@
+---
+ne:
+  data:
+    callouts:
+      Course 4 Artist 4_callout:
+        repeat_full_circle: Enter in the number of times the zombie has to move to
+          make a full circle
+      Course 4 Artist 7_callout:
+        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
+          workspace
+      Course 4 Artist For Loops 4_callout:
+        place_counter_variable: Drag your counter variable inside this block
+      Course 4 Artist Functions 4_callout:
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+      Course 4 Artist Functions 5 OLD_callout:
+        house_hint: It's ok if the picture doesn't look like a house yet. We will
+          fix it in the next puzzle.
+      Course 4 Artist Functions 8_callout:
+        edit_function: Click here to edit your function.
+      Course 4 Artist Params 2_callout:
+        length_parameter: Can you update this function so it uses the "length" parameter?
+      Course 4 Artist Params 4_callout:
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+      Course 4 Artist Vars 1_callout:
+        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
+          workspace
+      Course 4 Artist Vars 10_callout:
+        set_sides: Use this block to set "sides" to the number needed to complete
+          the puzzle.
+      Course 4 Artist Vars 12_callout:
+        set_length: Use this block to set "length" to the correct value.
+      Course 4 Artist Vars 2_callout:
+        set_length: Use this block to set "length" to the correct value.
+      Course 4 Artist Vars 3_callout:
+        place_variable: Drag your variable inside this block
+      Course 4 Artist Vars 6_callout:
+        degrees_per_side: Divide 360 by the number of sides to get the size of each
+          angle in degrees.
+      Course 4 Artist Vars 9_callout:
+        set_sides: Use this block to set "sides" to the number needed to complete
+          the puzzle.
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: Use the new "get nectar" block.
+      Course 4 Bee For Loops 6_callout:
+        actions_category: The tool box got a new look! The "Actions" blocks are in
+          here now.
+      Course 4 Bee Params 2_callout:
+        edit_get_nectar: Use this button to edit the function and change the direction
+          the Bee will turn to get the nectar.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: Hit "Run" to try your program
+      Course 4 Maze 4_callout:
+        repeat: Put blocks inside the loop to repeat commands
+      Course 4 Play Lab Params 3_callout:
+        edit_function: Click here to edit your function.
+      Course 4 Play Lab Params 6_callout:
+        edit_add_parameter: Click edit to add a parameter in your function
+      Course 4 Play Lab Vars 1_callout:
+        arrows_move_actor: Use the arrows to move the actor
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: Use the arrows to move the actor
+      Eval Design Recipe .1_callout:
+        edit_function: Click here to edit your function.
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: Use this drop-down to create different snowflakes!
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: Use this drop-down to create different snowflakes!
+      Infinity_move_collide_callout:
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+      Infinity_move_directions_callout:
+        Infinity_move_directions_callout: Which block will make Baymax move up when
+          the up arrow is pressed?
+        Infinity_move_directions_callout_arrow: Use these arrows to steer
+      Infinity_move_right_callout:
+        Infinity_move_right_runbutton: Add move block here
+      Infinity_repeat_callout:
+        Infinity_repeat_callout: Place Move blocks inside here
+      NEW Course 4 Artist Functions 5_callout:
+        edit_function: Click here to edit your function.
+        function_editor_draw_square: This is your function definition. These blocks
+          run everytime you use the "draw a square" block
+      NEW Course 4 Artist Functions 7_callout:
+        edit_function: Click here to edit your function.
+      NEW Course 4 Artist Functions 8_callout:
+        edit_function: Click here to edit your function.
+      NEW Course 4 Artist Params 10_callout:
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+      NEW Course 4 Artist Params 9_callout:
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add,
+          and then drag it into your function definition
+      NEW Course 4 Artist Vars 6_callout:
+        place_length_variable: Drag the length variable here to replace the question
+          marks
+      NEW Course 4 Bee For Loops 5_callout:
+        actions_category: The tool box got a new look! The "Actions" blocks are in
+          here now.
+      New Frozen Project_callout:
+        snowflake_dropdown: Use this drop-down to create different snowflakes!
+      Overworld Chop Trees_callout:
+        craft_callout_preplaced: We've put some blocks here to get you started
+      Overworld Chop Trees_2018_callout:
+        craft_callout_preplaced: We've put some blocks here to get you started
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: We've put some blocks here to get you started
+      Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: This code will start building your house. Can
+          you finish it?
+      Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: This code will start building your house. Can
+          you finish it?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: This code will start building your house. Can
+          you finish it?
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: Hit "Run" to try your program
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: Hit "Run" to try your program
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Hit "Run" to try your program
+      Overworld Place Wall_callout:
+        craft_inside_repeat: Repeat actions by placing blocks in here
+      Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Repeat actions by placing blocks in here
+      Overworld Place Wall_2019_callout:
+        craft_inside_repeat: Repeat actions by placing blocks in here
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: This code will check for lava, can you add a command
+          to move forward?
+      Underground Avoiding Lava_2018_callout:
+        craft_callout_moveforward: This code will check for lava, can you add a command
+          to move forward?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: This code will check for lava, can you add a command
+          to move forward?
+      Underground Iron_callout:
+        craft_what_is_iron: Mine this iron!
+      Underground Iron_2018_callout:
+        craft_what_is_iron: Mine this iron!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: Mine this iron!
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
+          and change the size.
+      frozen cross rotate_callout:
+        replace_questions_degree: Use the drop-down to replace "???" with a number
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Use the drop-down to replace "???" with a number
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Use the drop-down to replace "???" with a number
+      frozen cross_callout:
+        repeat_blocks_1: "(1) Use this block and put it around the grey blocks in
+          the workspace"
+        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
+          inside
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+      frozen diamond_callout:
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+      frozen freeplay_callout:
+        snowflake_dropdown: Use this drop-down to create different snowflakes!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Use this drop-down to create different snowflakes!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Use this drop-down to create different snowflakes!
+      frozen line_callout:
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
+          Run" block to make Elsa move forward
+      frozen line_b_callout:
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
+          Run" block to make Elsa move forward
+      frozen line_test_callout:
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
+          Run" block to make Elsa move forward
+      frozen perpendicular_callout:
+        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
+          determines how much Elsa turns
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: Use the "create a snowflake branch" block
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Use the "create a snowflake branch" block
+      frozen square iterative_callout:
+        frozen_create_square: Attach more blocks here to create a square
+      frozen square iterative_b_callout:
+        frozen_create_square: Attach more blocks here to create a square
+      frozen square iterative_test_callout:
+        frozen_create_square: Attach more blocks here to create a square
+      frozen square loop 3x_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      frozen square loop 3x_b_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      frozen square loop 3x_test_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      frozen square loop_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      frozen square loop_b_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      frozen square loop_test_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      frozen square snowflake_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      frozen square snowflake_b_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      frozen square snowflake_test_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      grade4_artist_parameters_squares1_callout:
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add,
+          and then drag it into your function definition
+      grade4_frozen_freeplay_callout:
+        snowflake_dropdown: Use this drop-down to create different snowflakes!
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
+          and change the size.
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+      grade4_frozen_square_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      grade4_frozen_square_loop1_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      grade4_frozen_square_loop2_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      grade4_frozen_square_loop3_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      grade5_artist_parameters_squares1_callout:
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add,
+          and then drag it into your function definition
+      grade5_artist_parameters_triangles1aa_callout:
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add,
+          and then drag it into your function definition
+      grade5_artist_variables_pentagons1_callout:
+        place_length_variable: Drag the length variable here to replace the question
+          marks
+      grade5_artist_variables_pentagons12_callout:
+        set_length: Use this block to set "length" to the correct value.
+      grade5_artist_variables_square7_callout:
+        degrees_per_side: Divide 360 by the number of sides to get the size of each
+          angle in degrees.
+      grade5_artist_variables_triangles2_callout:
+        set_length: Use this block to set "length" to the correct value.
+      grade5_playlab_variables1_callout:
+        arrows_move_actor: Use the arrows to move the actor
+      grade5_playlab_variables11_callout:
+        edit_add_parameter: Click edit to add a parameter in your function
+      grade5_playlab_variables1ask_callout:
+        arrows_move_actor: Use the arrows to move the actor

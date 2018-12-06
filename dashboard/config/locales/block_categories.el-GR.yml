@@ -1,0 +1,50 @@
+---
+el:
+  data:
+    block_categories:
+      Actions: Ενέργειες
+      Loops: Βρόχοι
+      Functions: Συναρτήσεις
+      Color: Χρώμα
+      Brushes: Πινέλα
+      Math: Μαθηματικά
+      Logic: Λογική
+      Variables: Μεταβλητές
+      Number: Αριθμός
+      String: Συμβολοσειρά
+      Image: Εικόνα
+      Boolean: Δυαδική τιμή
+      Conditionals: Συνθήκες
+      Events: Συμβάντα
+      Games/Score: Παιχνίδια/Σκορ
+      Comments: Σχόλια
+      Category: Κατηγορία
+      Prebuilt: Προχτισμένα
+      Text: κείμενο
+      Picker: Επιλέκτης
+      Comment: Σχόλιο
+      'Variables ': 'Μεταβλητές '
+      everythingelse: όλαταάλλα
+      numbers: αριθμοί
+      Numbers: Αριθμοί
+      Default: Προεπιλογή
+      World: Κόσμος
+      Behaviors: Συμπεριφορές
+      Advanced: Για προχωρημένους
+      Start: Έναρξη
+      Dancers: Χορευτές
+      Groups: Ομάδες
+      Sprite: Sprite
+      Brush: Πινέλο
+      Make Sprite: Δημιούργησε ένα Sprite
+      Movement: Κίνηση
+      Booleans: Δυαδικοί
+      Functional: Λειτουργικός
+      Predefined: Προορισμένα
+      test: δοκιμή
+      test2: δοκιμή2
+      Name: Όνομα
+      NEW BLOCKS: ΝΕΑ ΜΠΛΟΚ
+      'Functions ': 'Συναρτήσεις '
+      Game/Score: Παιχνίδι/Σκορ
+      Function: Συνάρτηση

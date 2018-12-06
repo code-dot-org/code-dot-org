@@ -1,0 +1,75 @@
+nl:
+  devise:
+    confirmations:
+      confirmed: "Je e-mailadres is succesvol bevestigd."
+      send_instructions: "Je ontvangt binnen een paar minuten een email met instructies over hoe je jouw account kunt bevestigen."
+      send_paranoid_instructions: "Als je e-mailadres bestaat in onze database dan ontvang je een email met instructies over hoe je jouw account in een paar minuten kunt bevestigen."
+    failure:
+      already_authenticated: "Je bent al ingelogd."
+      inactive: "Je account is nog niet geactiveerd."
+      invalid: "Verkeer email-adres of wachtwoord."
+      invalid_token: "Ongeldig authenticatie-token."
+      locked: "Je account is vergrendeld."
+      not_found_in_database: "Verkeer email-adres of wachtwoord."
+      timeout: "Je sessie is verlopen, log opnieuw in om verder te gaan."
+      unauthenticated: "Log in of meld je aan om verder te gaan."
+      unconfirmed: "Bevestig je account om verder te gaan."
+    mailer:
+      confirmation_instructions:
+        subject: "Instructies voor de bevestiging van code.org"
+      reset_password_instructions:
+        subject: "Instructies voor het wijzigen van je code.org wachtwoord"
+      unlock_instructions:
+        subject: "Uitleg voor deblokkeren"
+    omniauth_callbacks:
+      failure: "Kan je niet verifiëren van %{kind} omdat %{reason}."
+      success: "Ingelogd op basis van je %{kind}-account."
+    passwords:
+      no_token: "Je kunt deze pagina niet openen als je niet van een wachtwoord-reset-email komt. Wanneer je wel van een wachtwoord-reset-email komt, zorg dan dat je de volledige URL uit de mail gebruikt."
+      send_instructions: "Je krijgt binnen een paar minuten een email met uitleg hoe je je wachtwoord kunt resetten."
+      send_paranoid_instructions: "Als je email in onze database voorkomt ontvang je binnen een paar minuten een email om je wachtwoord te resetten."
+      updated: "Je wachtwoord is aangepast. Je bent nu ingelogd."
+      updated_not_active: "Je wachtwoord is met succes gewijzigd."
+    registrations:
+      destroyed: "Tot ziens! Je account is opgezegd. Hopelijk tot snel."
+      signed_up: "Welkom! Je bent met succes geregistreerd."
+      signed_up_but_inactive: "Je bent geregistreerd, maar je kunt nog niet inloggen omdat je account nog niet geactiveerd is."
+      signed_up_but_locked: "Je bent met succes geregistreerd, maar we konden je niet inloggen omdat je account vergrendeld is."
+      signed_up_but_unconfirmed: "We hebben een bericht met een bevestigingslink naar je email-adres gestuurd. Klik op de link om je account te activeren."
+      update_needs_confirmation: "Je account is met succes bijgewerkt, maar we moeten je nieuwe e-mailadres verifiëren. Check alsjeblieft je email en klik op de bevestigingslink om je nieuwe e-mailadres te bevestigen."
+      updated: "Je account is met succes bijgewerkt."
+    sessions:
+      signed_out: "Je bent uitgelogd."
+    unlocks:
+      send_instructions: "Binnen een paar minuten krijg je een email met uitleg over het deblokkeren van je account."
+      send_paranoid_instructions: "Als je account bestaat krijg je binnen een paar minuten een email waarin wordt uitgelegd hoe je het kunt deblokkeren."
+      unlocked: "Je account is met succes gedeblokkeerd. Log in om verder te gaan."
+  errors:
+    messages:
+      already_confirmed: "al bevestigd, probeer in te loggen"
+      confirmation_period_expired: "moet binnen %{period} bevestigd worden, vraag een nieuwe aan"
+      expired: "is verlopen, vraag een nieuwe aan"
+      not_found: "niet gevonden"
+      not_locked: "niet geblokkeerd"
+      not_saved:
+        one: "1 fout stopte %{resource} van opgeslagen worden:"
+        other: "Door %{count} fouten kon deze %{resource} niet worden opgeslagen:"
+    invitations:
+      send_instructions: 'Een uitnodigingsmail is verzonden naar %{email}.'
+      invitation_token_invalid: 'Het gegeven uitnodigingstoken is niet geldig!'
+      updated: 'Je wachtwoord is met succes ingesteld. Je bent nu ingelogd.'
+      no_invitations_remaining: "Geen uitnodigingen resterend"
+      invitation_removed: 'Je uitnodiging is verwijderd.'
+      new:
+        header: "Stuur uitnodiging"
+        submit_button: "Stuur een uitnodiging"
+      edit:
+        header: "Stel je wachtwoord in"
+        submit_button: "Mijn wachtwoord instellen"
+    mailer:
+      invitation_instructions:
+        subject: 'Uitnodiging instructies'
+        hello: 'Hallo %{email}'
+        someone_invited_you: 'Iemand heeft je uitgenodigd voor %{url}, je kunt dit accepteren via de onderstaande link.'
+        accept: 'Accepteer uitnodiging'
+        ignore: "Als je de uitnodiging niet wilt accepteren, negeer dan deze email. <br /> Je account zal niet worden gemaakt totdat je de link hierboven bezoekt en een wachtwoord instelt."

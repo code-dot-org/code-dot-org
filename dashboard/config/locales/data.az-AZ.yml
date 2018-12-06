@@ -1,0 +1,432 @@
+---
+az:
+  data:
+    game:
+      name:
+        Unplug1: İnformatikaya giriş
+        Maze: Labirint
+        Unplug2: Hesablama təfəkkürü
+        Unplug3: Millimetrlik kağızda proqramlaşdırma
+        Artist: Rəssam
+        Unplug4: Alqoritmlər
+        Artist2: Rəssam 2
+        Unplug5: Funksiyalar
+        Farmer: Fermer
+        Unplug6: Şərti ifadələr
+        Artist3: Rəssam 3
+        Unplug7: Mahnı bəstələmə
+        Farmer2: Fermer 2
+        Unplug8: Mücərrədlik
+        Artist4: Rəssam 4
+        Unplug9: Estafet proqramlaşdırması
+        Farmer3: Fermer 3
+        Unplug10: İnternet
+        Artist5: Rəssam 5
+        Unplug11: Yekun
+        MazeEC: Labirint
+        Bounce: Tullan
+        Flappy: Qanadlı Quş
+        Jigsaw: Mozaika
+        Webapp: Proqram Labı
+        ArtistEC: Rəssam
+        StudioEC: Oyun labı
+        Applab: Proqram Labı
+        Custom: Rəssam
+        CustomStudio: Oyun labı
+    trophy:
+      name:
+        Bronze: Bürünc
+        Silver: Gümüş
+        Gold: Qızıl
+    concept:
+      description:
+        sequence: Ardıcıllıq
+        if: '"Əgər" bloku'
+        if_else: '"Əgər-əks halda" bloku'
+        loop_times: '"Təkrar et, neçə dəfə" bloku'
+        loop_until: '"Təkrar et, ta ki" bloku'
+        loop_while: '"Hələ ki" bloku'
+        loop_for: Sayğac bloku
+        function: funksiyalar
+        parameters: Parametrli funksiyalar
+    level:
+      instructions:
+        maze_2_2: 'Nadinc donuzu tutmaqda mənə kömək edə bilərsiniz? Məni ona çatdırmaq
+          üçün bir neçə "irəli get" blokunu ard-arda düzün və "İcra et"i basın. '
+        maze_2_1: Bu donuzun əlindən lələklərim biz-biz olur. Mənə kömək edin ki,
+          onu tapım!
+        maze_2_2_5: Yolu izləyərək məni səfeh donuza tərəf aparın. Partladıcı TNT
+          qutusundan yayınaq, yoxsa lələklərim göyə sovrular!
+        maze_2_3: Məni yaşıl ziyankara aparan yola yönləndirin! (Partladıcı TNT qutusundan
+          ehtiyatlı olun)
+        maze_2_4: Təmkinli ol və pis donuzu tapmağıma kömək et. Yoxsa mən acıqlana
+          bilərəm!
+        maze_2_5: Mənim yaşıl donuza 2 blokdan istifadə edərək çatmağım üçün bir yol
+          var. Siz onu tapa bilərsinizmi?
+        maze_2_6: Məni ancaq üç blokdan istifadə edərək yaşıl cinayətkara çatıdrmağa
+          çalışın.
+        maze_2_7: Mənə kömək edin ki, ən az sayda blokdan istifadə edərək pis donuzcuğun
+          dərsini verim. Birdən çox "təkrar et, neçə dəfə" blokundan istifadə etməyə
+          çalışın.
+        maze_2_8: 'Blok boz rəngdədirsə, deməli onu poza bilməzsiniz. Bu tapmacanı
+          3 dəfə icra olunan "təkrar et" blokundan istifadə etməklə həll edin. Növbəti
+          3 bloku boz "təkrar et" blokunun içinə yerləşdirməklə cəhd edin: get, get,
+          dön.'
+        maze_2_9: Yaxşı, yeni "təkrar et, ta ki" blokunu sınaqdan keçirin - o mən
+          ta zəhlətökən donuza çatana qədər təkrarlanacaq.
+        maze_2_10: Yaxşı, sonuncu çalışma - bunu yalnız 4 blok istifadə edərək həll
+          edə bilərsinizmi?
+        maze_2_11: Hörmətli insan. Mən zombiyəm. Mən acam. Günəbaxana ... çatmalıyam
+          ... Məni yalnız 5 blok istifadə edərək ora çatdıra bilərsən?
+        maze_2_12: Yaxşı, bu oxşardır, amma bir az fərqi var. Yalnız 5 blok istifadə
+          edərək bunu edə bilərsiniz?
+        maze_2_13: 'Nə vaxt dönəcəyim barədə qərar verə bilməyim üçün yeni "əgər"
+          blokundan istifadə edin. Məsləhət: sizə yalnız əlavə bir blok lazımdır,
+          amma bizim bunu necə etdiyimizi öyrənin ki, gələn dəfə özünüz köməksiz edə
+          biləsiniz.'
+        maze_2_14: Yaxşı, bu sonuncu tapmaca kimidir, amma siz "əgər" və "təkrarla"
+          bloklarını bir yerdə necə işlətdiyinizi yadınıza salmalısınız.
+        maze_2_15: Günəbaxan istəyirəm! "əgər" blokundan ən az sayda istifadə etməklə
+          məni ora çatdır.
+        maze_2_16: Yaxşı, məşq üçün bunu bir daha edək - bu çox da fərqli deyil, amma
+          xart-xurtlardan ehtiyatlı ol!
+        maze_2_17: '"Əgər-əks halda" bloku şərti yoxlayır, sonra isə bu VƏ YA digər
+          işi yerinə yetirir. Məni günəbaxana çatdırmaq üçün bu yeni bloku istifadə
+          etməyə çalışın.'
+        maze_2_18: "\"Əgər-əks halda\" blokunu bir daha təcrübədən keçirin, \nbirinci
+          cəhdinizdən bunu düzgün edə bilərsinizmi?"
+        maze_2_19: Sadəcə 3 blok əlavə etməklə mənə daha çətin labirintdən baş çıxarmaqda
+          kömək edə bilərsinizmi? Əgər bunu düzgün etsəniz mən uzunluğundan asılı
+          olmayaraq ixtiyari əyri yolla gedə bilərəm.
+        turtle_1_1: Salam, mən rəssamam. Siz kod yazmaqla mənə, demək olar, hər şey
+          çəkdirə bilərsiniz. Şəkildəki boz xətlərin üzərini cızmağım üçün bir neçə
+          blokdan istifadə edin.
+        turtle_1_2: 'İndi bir kvadrat çəkin. QEYD: yeni "rəng seç" blokundan götürməklə
+          öz sevimli rənginizdən istifadə edin.'
+        turtle_1_3: Yalnız 3 blokdan istifadə etməklə kvadrat düzəldin.
+        turtle_1_4: 'Hər dəfə fərqli rəng seçən "təsadüfi rəng" blokundan istifadə
+          etməklə bütün tərəfləri fərqli rənglərdə olan üçbucaq çəkin. İpucu: dönmək
+          blokunu üzərindəki rəqəmi klikləməklə nə qədər dönməli olduğunuzu tapmalı
+          olacaqsınız.'
+        turtle_1_5: İndi, məşq üçün, zərf çəkməkdən ötrü bir üçbucaq və sonra bir
+          kvadrat çəkin.
+        turtle_1_6: 'Bu üçbucağı və kvadratı necə çəkmək olar? İpucu: Əvvəl üçbucağı
+          çəkin, sonra kvadratı çəkməzdən öncə nə qədər dönmək lazım olduğunu hesablayın.'
+        turtle_1_7: Yaxşı, gəlin məsələni bir az çətinləşdirək - görün bu yaşıl eynəyi
+          çəkə bilərsinizmi. Kvadratlar hər iki tərəfdən 100 pikseldir və onlar bir-birindən
+          50 piksel aralıdırlar. Yaşılla çəkməyi unutmayın!
+        turtle_1_8: Yaxşı, bu kodu çalışdırsanız nə baş verəcəyini tapmağa çalışın
+          (və ya yoxlamaq üçün "İcra et" düyməsini basın). Sonra rəsmi bitirmək üçün
+          onu kifayət qədər çalışdırın. Rənglər hər dəfə fərqli olacaq.
+        turtle_1_9: Çevrə çəkmək üçün sual işarəsini hansı rəqəmlə əvəz etmək lazım
+          olduğunu tapa bilərsinizmi?
+        turtle_1_10: 'Siz bunu bacardınız! İndi nə istəsəniz çəkə bilərsiniz. Bir
+          neçə maraqlı ideya: çubuq adam, qar dənəciyi ve ya spiral. Həm də yeni "enini
+          təyin et" blokunu sınaqdan keçirin. Əylənin!'
+        turtle_4_1: '3 blokdan istifadə edərək tərəfləri 100 piksel olan üçbucaq çəkə
+          bilərsiniz? İpucu: "təkrarla" blokundan istifadə edin.'
+        turtle_4_3: Ok, bu bir üçbucaq çəkmək üçün yazdığınız koddur. "Təkrar et"
+          və "dönmə" bloklarını əlavə etməklə gözəl bir gül düzəldə bilərsiniz mi?
+        turtle_4_4: 'Burada keçən tapmacadaki kod ilə eyni olan koddur, lakin burada
+          hər üçbucaq çəkildikdən sonra 36 dərəcə dönürülür. Bu neçə dəfə təkrarlanmalıdır?
+          (İpucu: 360 dərəcə dönüşdən sonra çəkmə prosesi bir tam dövrə edəcəkdir)'
+        turtle_4_5: 'Burada keçən tapmacadaki kod ilə eyni olan koddur, lakin burada
+          36 dəfə dönülür. Hər dəfə neçə dərəcə dönülməlidir? (İpucu: 360 dərəcə dönüşdən
+          sonra çəkmə prosesi bir tam dövrə edəcəkdir)'
+        turtle_4_6: 3 blokdan istifadə etməklə, tərəfləri 20 piksel olan kvadrat çəkə
+          bilərsiniz mi?
+        turtle_4_7: 'Burada, keçən tapmacadan, kvadratların çəkilməsi üçün istifadə
+          olunan kodu görə bilərsiz. Siz bu prosesi təkrarlamaqla, 10 bir-birinə qonşu
+          olan və nərdivanı xatırladan kvadratları çəkə bilərsiniz mi? İpucu: Sizə
+          yalnız 2 əlavə blok lazımdır.'
+        turtle_4_8: Burada əvvəlki tapmacanın həlli göstərilib. Sadəcə 2 blok əlavə
+          etməklə şəkli tamamlaya bilərsiniz?
+        turtle_4_9: Burada əvvəlki tapmacanın həllini görə bilərsiniz. Çəkmə prosesini
+          tamamlamaq üçün neçə dərəcə dönməlisiniz? (Çox güman siz bir neçə dəfə təxmin
+          etməlisiniz)
+        turtle_4_10: Burada əvvəlki tapmacanın həllidir. Bunu neçə dəfə təkrarlamaqla
+          şəkili tamamlaya bilərsiniz?
+        turtle_4_11: '"Dönmə" və "Təkrar et" bloklarındaki ədədləri dəyişməklə digər
+          nümunələr yaratmağa çalışın. Və ya, kodun qalan hissəsini dəyişməklə istədiyiniz
+          şeyi çəkməyi sınaya bilərsiniz.'
+        maze_karel_1_1: Salam, mən fermerəm.  Əkinə hazır olmağı üçün fermadakı sahəmi
+          hamarlamaqda köməyinizə ehtiyacım var. Məni torpaq təpəciyinə doğru hərəkət
+          etdirin və onu yiğışdırmaq üçün "yığışdır" blokundan istifadə edin.
+        maze_karel_1_2: Sonra məni çuxura doğru hərəkət etdirin və "doldur" blokundan
+          istifadə edərək onu İKİ kürək torpaqla doldurun.
+        maze_karel_1_3: Məni torpaq təpəciyinə doğru hərəkət etdirin və mümkün qədər
+          az blokdan istifadə edərək mənə deyin ki, neçə kürək torpağı yığışdırım.
+        maze_karel_1_4: 'Mənə dörd torpaq təpəciyinin hamısını yığışdırmaqda kömək
+          edə bilərsiniz? Məsləhət: bacarırsınızsa, "təkrar et" blokundan istifadə
+          edin.'
+        maze_karel_1_5: 'Mənə bütün bu çuxurları 5 kürək torpaqla doldurmaqda kömək
+          edin. Məsləhət: siz "təkrar et" blokunu "hələ ki" blokunun içində istifadə
+          edə bilərsiniz.'
+        maze_karel_1_6: Mümkün qədər az sayda blokdan istifadə etməklə bütün torpaq
+          təpəciklərini yığışdırın. "Hələ ki" blokunun aşağı açılan menyusundaki yeni
+          seçim imkanları mənə təpəcik və ya çuxurun üstündə dayandığımı söyləyir.
+        maze_karel_1_7: Vay, çox dərin bir çuxur tapdım! Buna neçə kürək torpağın
+          lazım olduğunu bilmirəm. Onu yer hamar olana qədər dolduracaq bir proqram
+          yaza bilərsinizmi?
+        maze_karel_1_8: Sahənin sonundaki boşluğu minimal sayda blokdan istifadə etməklə
+          doldurmaqda mənə kömək edin.
+        maze_karel_1_9: 'Torpaq təpəciklərinin hamısını mənə yığışdırtdırın. Mümkün
+          qədər az blokdan istifadə etməyə çalışın. Məsləhət: "hələ ki" blokundan
+          istifadə etməyə çalışın.'
+        maze_karel_1_10: Mən gec saata qədər işləyirəm, ona görə də çöldə qaranlıqdır
+          və mən təpəciklərin nə qədər böyük olduğunu deyə bilmirəm. Bu dəfə "hələ
+          də" blokunda əvvəlki seçimlərimin hamısı yoxdur. Məni sahə boyu hərəkət
+          etdir və əgər təpəcik varsa, onu yığışdır.
+        maze_karel_1_11: 'Bayırda hələ qaranlıqdır. Məni tarladan keçirin. Əgər bir
+          təpəcik varsa, onu yığışdırın, əgər bir çuxur varsa, onu doldurun. Məsləhət:
+          "əgər" blokunda aşağı açılan seçim menyusundan istifadə edin.'
+        turtle_2_1: 'Salam. Mən zombi rəssam. Mən şəkil çəkməyi sevir! Xüsusi rəngli
+          bir kvadrat çəkməkdə mənə kömək edir. Mühüm qeyd: əlinizdə olan bloklar
+          eynidir, amma indi onlar kateqoriyalara ayrılıb.'
+        turtle_2_2: Buyurun, yeni bloklar təyin etmək imkanı verən funksiyalardan
+          istifadə edin! Kiçik bir 50x50 ölçülü, yaşıl kvadrat çəkmək üçün "Funksiyalar"
+          kateqoriyasındakı yeni "kvadrat çək" blokunu sınaqdan keçirin.
+        turtle_2_3: '"Təkrar et" ("Dövrlər" kateqoriyasında) blokundan istifadə etməklə
+          bir birindən 120 dərəcə aralı olan və ölçüsü 100-ə bərabər 3 kvadrat çəkiniz.
+          Və bunu edərkən, 3 fərqli, təsadüfi rənglərdən istifadə edin.'
+        turtle_2_4: 'İndi daha bəzəkli olacağıq. Hər birini 10 dərəcə çevirməklə eni
+          100 pixel olan 36 kvadrat çəkmək üçün kodu dəyişin. Məsləhət: məni daha
+          sürətlə hərəkət etdirmək üçün sürüngəcdən istifadə edə bilərsiniz.'
+        turtle_2_5: Kənarları 50, 60, 70, 80 və 90 piksel olan kvadratlar çəkin. Sizə
+          "kvadrat çək" funksiyasından beş dəfə istifadə etmək lazım gələcək.
+        turtle_2_6: 'Yaxşı, bu proqram axırıncı dəfəki kimi kvadratları çəkmək üçün
+          sayğacdan istifadə edəcək. Kvadratın sayğacla eyni ölçüdə olması lazımdır,
+          buna görə də "sayğac" blokundan istifadə edin. Məsləhət: O, Dəyişənlər kateqoriyasındadır.'
+        turtle_2_7: Burada spiral çəkmək üçün bir proqram var, amma bloklar qeyri-aktiv
+          olduğuna görə icra oluna bilmir. "Say" blokundan (Dövrlər kateqoriyasında)
+          və "sayğac" blokundan (Dəyişənlər kateqoriyasında) istifadə edərək yeni
+          bir proqram yazın ki, eyni spiralı çəksin.
+        turtle_2_7_5: Yeni "qar adamı çək" funksiyası var (Funksiyalar kateqoriyasında).
+          Hündürlüyü 250 və 100 olan iki qar adamı çəkin.
+        turtle_2_8: Bu dəfə balaca fənd işlətməlisiniz. "Qar adamı çək" funksiyası
+          və yeni "irəliyə atıl" blokundan (Əmrlər kateqoriyasında) istifadə edin.
+          Bir-birindən 100 piksel aralı müxtəlif rəngdə 3 qar adamı çəkin.
+        turtle_2_9: Hündürlüyü 110, 100, 90, 80 və 70 olan qar adamları ailəsini çəkmək
+          üçün "say" dövründən istifadə edin. Qar adamları bir-birindən 60 pixel aralı
+          olmalıdır.
+        turtle_2_10: Burada müxtəlif spirallarla eksperiment aparmaq üçün bir kod
+          var. Dönmə dərəcəsini dəyişəndə nə baş verir? Bəs dövr daxilində təsadüfi
+          rəng təyin edəndə? Ürəyiniz nə istəyirsə onu çəkin.
+        maze_karel_2_1: 'Bloklardan istifadə etməklə mənə bütün topaları silməkdə
+          və yerdəki boşluqları doldurmaqda kömək edin. Çoxlu sayda blokdan istifadə
+          etmək yerinə, dövrlərdən istifadə etməyə çalışın. İpucu: Siz dövrün içinə
+          dövr qoya bilərsiniz.'
+        maze_karel_2_2: Biz indi özümüzün "5 doldur" adlı blokumuzu təyin etdik ki,
+          indi Funksiyalar kateqoriyasındadır. Bu blokdan istifadə etməklə mənə bu
+          çuxuru doldurmaqda kömək edin.
+        maze_karel_2_3: Yeni "5 doldur" funksiya blokundan istifadə etməklə mənə bütün
+          boşluqları doldurmaqda kömək edin. Siz "5 doldur" blokunu Funksiyalar kateqoriyasından
+          sürükləməli olacaqsınız.
+        maze_karel_2_4: 7 kürək siləcək yeni funksiya təyin edin. Sonra isə, bu yeni
+          funksiyadan istifadə etməklə mənə bütün topaları silməkdə kömək edəcək proqram
+          yazın.
+        maze_karel_2_5: Təpəcikdən 6 kürək torpaq götürmək üçün yeni bir funksiya
+          düzəldin və bu funksiyadan istifadə etməklə bütün təpəcikləri hamarlamaqda
+          mənə kömək edin.
+        maze_karel_2_6: İki yeni funksiya ,"8 doldur" və "8 yığışdır"dan istifadə
+          etməklə mənə təpəcikləri hamarlamaqda və çuxurları doldurmaqda kömək edin.
+        maze_karel_2_7: Mənim sahəmdə inək var! Yeni funksiya yazmaqla mənə inəkdən
+          yayınmaqda və topanı silməkdə kömək edin. Bütün bloklarınızı yeni funksiyanın
+          daxilinə qoyun.
+        maze_karel_2_8: Bu yeni funksiya, "inəyə toxunma və birini sil"dən istifadə
+          etməklə mənə bütün çuxurları yığışdırmaqda kömək edin.
+        maze_karel_2_9: Yaxşı, burada bir şaquli sütunda 4 müxtəlif torpaq təpəciyini
+          yığışdıran funksiya var. Bu funksiyanı dövr daxilində istifadə etməyə çalışın
+          ki, ancaq az sayda yeni blokdan istifadə etməklə bütün torpaq təpəciklərini
+          yığışdırasınız.
+        maze_karel_2_10: Məni sahə üzrə irəlilədin, və bu iki funksiyadan istifadə
+          etməklə mənə bütün topaları silməkdə və boşluqları doldurmaqda kömək edin.
+        turtle_3_1: Bu tapmaca sizə "kvadrat çək" və "çevrə çək" funksiyalarının necə
+          təyin olunduğunu göstərəcək. Funksiyanı təyin etmək onun bloklarını icra
+          etmir. Siz kvadratı çəkmək üçün "kvadrat çək" blokunu sürükləməlisiniz.
+        turtle_3_2: '"Kvadrat çək" funksiyasını nümunə kimi istifadə etməklə, "üçbucaq
+          çək" funksiyasını yaradın və onu işlədin.'
+        turtle_3_3: 'Pişiklərin ətrafında üçbucaq tipli çəpər və inəklərin ətrafında
+          kvadrat çəpər çəkin. İpucu: Proqramı yazdığınız müddət ərzində test edin.'
+        turtle_3_4: Görün, baş çıxarda bilirsiniz, şirin ətrafında bir ev çəkmək üçün
+          "kvadrat çək" və "üçbucaq çək"dən (və bəzi digər bloklardan) necə istifadə
+          etmək olar.
+        turtle_3_5: 'İndi yeni bir "ev çək" funksiyası düzəldin və iki pişiyi evlə
+          təmin etmək üçün istifadə edin. Məsləhət: "nə isə et" blokundan istifadə
+          etməklə yeni bir funksiya düzəldin və bloku adlandırmaq üçün öz mətninizi
+          yazın.'
+        turtle_3_6: '"Kvadrat çək"dən nümunə kimi istifadə edərək, "üçbucaq çək"ə
+          "uzunluq" adlı bir giriş əlavə edin. Sonra, müxtəlif ölçülü üçbucaqlar çəkin
+          (Məsləhət: funksiyaya bir giriş əlavə etmək üçün ulduzu klikləyin).'
+        turtle_3_7: '"Ev çək"ə "uzunluq" adlanan bir giriş əlavə edin və fil üçün
+          böyük bir ev tikin (tərəflərinin uzunluğu 150 piksel)'
+        turtle_3_9: Siz kömək olmadan "ev çək" funksiyasını yenidən yarada bilərsiniz
+          mi? Buna cəhd edin və sonra bir sıra evlər çəkin.
+        turtle_3_10: Siz artıq çoxlu məlumat öyrənmisiniz! İndi bu biliklərdən istifadə
+          etməklə istədiyiniz fiquru çəkin. Ulduz, spiral və ya qar dənəciyi çəkməyə
+          cəhd edin.
+        maze_karel_debug_seq_1: Sazlamaya xoş gəldiniz! Mənim kodum yaxşı işləmir.
+          Problemi tapıb həll edə bilərsinizmi ki, mən sahəmi hamarlayaraq əkinə hazırlaya
+          bilim?
+        maze_karel_debug_seq_2: Bu proqramda səhv nədədir? Mənim bütün topaları silə
+          bilməm üçün proqramı necə düzəldərsiniz?
+        maze_karel_debug_repeat: Bu proqramı mənim üçün sazlayın ki, tarlam qəşəng
+          və hamar olsun.
+        maze_karel_debug_while: Bu proqramı necə dəyişməlisiniz ki, mənə bütün boşluqları
+          doldurmaqda kömək etsin?
+        maze_karel_debug_if: Kömək edin! Proqramı elə düzəldin ki, mənim sahəm tamamilə
+          hamar olsun.
+        maze_karel_debug_if_else: Bu proqramı sazlayın ki, çuxurları doldurub təpəcikləri
+          yığışdıra bilim.
+        maze_karel_debug_function_1: Mənə bütün topaları silməkdə kömək etmək üçün
+          bu proqramda nəyi dəyişdirmək lazımdır?
+        maze_karel_debug_function_2: Sahəmi hamarlaya bilməyim üçün bu proqramı mənim
+          üçün sazlaya bilərsiniz?
+        maze_karel_debug_function_3: 'Bu proqrama elə düzəliş edin ki, mən sahəmdəki
+          bütün təpəcikləri yığışdırım. '
+        turtle_5_1: Bu proqramı icra etməyə çalışın və dəyişikliklər etdikdə nə baş
+          verdiyini müşahidə edin. Proqramın necə işlədiyini tapa bilərsiniz? (Və
+          ya onu silin və tamamilə fərqlisi ilə əvəzləyin)
+        turtle_5_2: Bu proqramı icra etməyə çalışın və dəyişikliklər etdikdə nə baş
+          verdiyini müşahidə edin. Proqramın necə işlədiyini tapa bilərsiniz? (Və
+          ya onu silin və tamamilə fərqlisi ilə əvəzləyin)
+        turtle_5_3: Bu proqramı icra etməyə çalışın və dəyişikliklər etdikdə nə baş
+          verdiyini müşahidə edin. Proqramın necə işlədiyini tapa bilərsiniz? (Və
+          ya onu silin və tamamilə fərqlisi ilə əvəzləyin)
+        turtle_5_4: Bu proqramı icra etməyə çalışın və dəyişikliklər etdikdə nə baş
+          verdiyini müşahidə edin. Proqramın necə işlədiyini tapa bilərsiniz? (Və
+          ya onu silin və tamamilə fərqlisi ilə əvəzləyin)
+        turtle_5_5: Bu proqramı icra etməyə çalışın və dəyişikliklər etdikdə nə baş
+          verdiyini müşahidə edin. Proqramın necə işlədiyini tapa bilərsiniz? (Və
+          ya onu silin və tamamilə fərqlisi ilə əvəzləyin)
+        turtle_5_6: Bu proqramı icra etməyə çalışın və dəyişikliklər etdikdə nə baş
+          verdiyini müşahidə edin. Proqramın necə işlədiyini tapa bilərsiniz? (Və
+          ya onu silin və tamamilə fərqlisi ilə əvəzləyin)
+        maze_3_1: Bu donuzun dərsini verməliyəm!  Bir neçə move(); əmri yazın ki,
+          yumurtalarımı geri ala bilim.
+        maze_3_2: Mənə bir proqram yazın ki, gedib düz bu donuzun yanına çıxa bilim.
+        maze_3_3: Bu donuzun yanına necə getməliyəm? Elə edin ki, partladıcı TNT qutusunun
+          üstünə çıxmayım!
+        maze_3_4: Ax! Mənim üçün elə proqram yazın ki, məni partladıcı TNT qutusundan
+          yan keçirərək donuza çatdırsın.
+        jigsaw_1: Bloka çıqqıldat
+        studio_c2_10: Arxa fonu və pinqvinin sürətini dəyişmək üçün bloklar əlavə
+          edib, sonra onu oxların köməyi ilə xal qazanana qədər hərəkər etdirə bilərsiniz?
+        studio_c3_game_6: Arxa fonu və pinqvinin sürətini dəyişmək üçün bloklar əlavə
+          edib, sonra onu oxların köməyi ilə xal qazanana qədər hərəkər etdirə bilərsiniz?
+        studio_playlab_1: Pinqvin "salam" demək istəyir - ona kömək edə bilərsiniz?
+        studio_playlab_2: Dəyənək Oğlan (personaj 1) və Dəyənək Qız (personaj 2) bir-birinə
+          "salam" demək istəyirlər. "Söylə" blokunu iki dəfə işlədərək onlara kömək
+          edə bilərsiniz?
+        studio_playlab_3: Tennisçi Qıza bayrağa çatmaqda kömək edə bilərsiniz?
+        studio_playlab_4: Tennisçi Oğlana (personaj 1) kömək edə bilərsinizmi ki,
+          Tennisçi Qızın (personaj 2) yanına getsin və oraya çatanda bir səs çalınsın?
+        studio_playlab_5: Kosmobota kömək edə bilərsinizmi ki, kliklənəndə "Yer sakinlərinə
+          salam" desin? "İcra et"i kliklədikdən sonra onu klikləməyi unutmayın
+        studio_iceage_move_to_flag: Cırmaq öz palıd qozasını axtarır! "Get" bloku
+          vasitəsi ilə ona son 200 pikseli keçməkdə kömək edin.
+    video:
+      name:
+        maze_intro: Labirint oyununa giriş
+        artist_intro: Rəssam oyununa giriş
+        farmer_intro: Fermer oyununa giriş
+        flappy_intro: Qanadlı Giriş
+        loop_times: '"Təkrar et, neçə dəfə" bloku'
+        loop_until: '"Təkrar et, ta ki" bloku'
+        if: '"Əgər" bloku'
+        if_else: '"Əgər/əks halda" bloku'
+        if_else_scrat: '"Əgər/əks halda" bloku'
+        function: Funksiyalar
+        loop_while: '"Hələ ki" bloku'
+        loop_for: Sayğac bloku
+        parameters: Parametrli funksiyalar
+        hoc_wrapup: Kod Saatının yekunu
+        Unplug1: İnformatika nədir?
+        Unplug2: Hesablama təfəkkürü
+        Unplug3: Millimetrlik kağızda proqramlaşdırma
+        Unplug4: Alqoritmlər
+        Unplug5: Funksiyalar
+        Unplug6: Şərti ifadələr
+        Unplug8: Mücərrədlik
+        Unplug9: Estafet proqramlaşdırması
+        Unplug10: İnternet
+        Unplug11: Yekun
+        C1_happy_maps_unplugged: Şən xəritələr
+        C1_artist_intro: Rəssam oyununa giriş
+        C1_zuck_repeat_loop: Labirint Dövrlər
+        C1_bee_loops: Arı Dövrlər
+        C1_maze_loops: Labirint Dövrlər
+        C2_maze_intro: Labirint oyununa giriş
+        C2_artist_intro: Rəssam oyununa giriş
+        C2_zuck_repeat_loop: Labirint Dövrlər
+        C2_artist_loops: Rəssam Dövrlər
+        C2_artist_debugging: Rəssam Sazlama
+        C2_bee_loops: Arı Dövrlər
+        C2_bee_debugging: Arı Sazlama
+        C2_bee_conditionals: Arı Şərti ifadələr
+        C2_graph_paper: Millimetrlik kağızda proqramlaşdırma
+        C2_conditionals_with_cards: Şərti ifadələr
+        C2_relay_programming: Estafet proqramlaşdırması
+        C3_maze_level_4: Labirint Dövrlər
+        C3_artist_intro: Rəssam oyununa giriş
+        C3_artist_functions: Rəssam Funksiyalar
+        C3_bee_functions: Arı Funksiyalar
+        C3_bee_conditionals: Arı Şərti ifadələr
+        C3_bee_debugging: Arı Sazlama
+        C3_bounce: Tullan
+        C3_computational_thinking: Hesablama təfəkkürü
+        C3_dice_race: Zər Yarışı
+        C3_internet: İnternet
+        C4_intro: Giriş
+        C4_loops_zombie: dövrlər
+        C4_bee_conditional: Arı Şərti ifadələr
+        C4_function_parameters: Parametrli funksiyalar
+        C4_conditionals: Şərti ifadələr
+        C4_unplugged_binary: İkilik
+        frozen_intro: Kod Saatına giriş
+        frozen_loops: Dövrlərə giriş
+        frozen_functions: Funksiyalara giriş
+        playlab_intro: Oyun Labına giriş
+        csp_applab_functions: Funksiyalara giriş
+        csp_applab_functions_parameters: Parametrli funksiyalar
+        csp_applab_loops: dövrlər
+        starwars_intro: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın - Giriş'
+        starwars_typing: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın - JavaScript'
+        starwars_events: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın - Hadisələr'
+        starwars_congrats: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın - Təbriklər'
+        starwars_blocks_intro: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın -
+          Giriş'
+        starwars_blocks_events: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın -
+          Hadisələr'
+        starwars_blocks_congrats: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın
+          - Təbriklər'
+        mc_intro: Maynkraft - Giriş
+        mc_repeat: Maynkraft - Təkrar
+        mc_if_statements: Maynkraft - Əgər ifadəsi
+        mc_congrats_share: Maynkraft - Təbriklər
+        mc_congrats_no_share: Maynkraft - Təbriklər
+        CSF_loops_AB: dövrlər
+        hoc_dance_events: Rəqs Şənliyi - Hadisələr
+        hoc_dance_properties: Rəqs Şənliyi - Xüsusiyyətlər
+    callout:
+      text:
+        drag_blocks: '"Get" blokunu sürükləyib şıqqıltı ilə digər blokun aşağısına
+          yapışdırın'
+        run: Proqramınızı sınaqdan keçirmək üçün "İcra et"i basın
+        watch_again: Videoya bir də baxmaq üçün buraya klikləyin
+        gray_block_explanation: Boz rəngli bloklar silinə bilməz. Bu tapmacanı belə
+          də həll edə bilərsiniz?
+        show_code_explanation: Hazırladığınız proqramın kodunu görmək üçün buraya
+          klikləyin
+        instructions_repeat_explanation: Hər tapmaca üçün təlimatlar burada təkrarlanır
+        category_explanation: İxtiyarınızda olan bloklar eynidir, amma indi onlar
+          kateqoriyalara ayrılıb
+        move_elsa_forward: Elzanı irəli aparmaq üçün "irəli get" blokunu sürükləyib
+          şıqqıltı ilə "icra etdikdə" blokunun aşağısına yapışdırın
+        playlab_drag_say: '"Söylə" blokunu buraya sürükləyib "salam" yazın'
+        playlab_use_twice: Bu bloku iki dəfə işlədin və personaj nömrəsini dəyişməyi
+          unutmayın
+        playlab_move_girl: Tennisçi Qızı hərəkət etdirmək üçün "sağa get" blokundan
+          istifadə edin
+        playlab_play_sound: Buraya "səs çıxart" bloku əlavə edin
+        craft_run_button_callout: Proqramınızı sınaqdan keçirmək üçün "İcra et"i basın

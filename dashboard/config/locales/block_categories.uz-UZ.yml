@@ -1,0 +1,17 @@
+---
+uz:
+  data:
+    block_categories:
+      Actions: Harakatlar
+      Loops: Sikllar
+      Functions: Funksiyalar
+      Color: Rang
+      Math: Matematik
+      Logic: Mantiq
+      Variables: O‘zgaruvchilar
+      Conditionals: Shart buyruqlari
+      Text: Matn
+      Start: Boshlash
+      test: test
+      Name: Ismi
+      Function: Funksiya

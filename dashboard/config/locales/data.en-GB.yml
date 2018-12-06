@@ -1,0 +1,21 @@
+---
+en-GB:
+  data:
+    game:
+      name:
+        Unplug1: Introduction to Computer Science
+        Maze: The Maze
+        Unplug2: Computational Thinking
+        Unplug7: Song Writing
+        MazeEC: The Maze
+    video:
+      name:
+        Unplug2: Computational Thinking
+        C3_computational_thinking: Computational Thinking
+        C4_loops_zombie: Loops
+        csp_applab_loops: Loops
+        CSF_loops_AB: Loops
+    callout:
+      text:
+        craft_drag_block_callout: Drag a "move forward" block and snap it below the
+          other block

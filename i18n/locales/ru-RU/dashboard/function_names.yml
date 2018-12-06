@@ -1,0 +1,50 @@
+ru:
+  data:
+    function_names:
+      x: x
+      details: детали
+      draw eyebrow: нарисовать бровь
+      draw pupil: нарисовать зрачок
+      draw a circle: нарисовать круг
+      draw a car: нарисовать машину
+      draw square: нарисовать квадрат
+      draw a button: нарисовать кнопку
+      draw left leg: нарисовать левую ногу
+      draw right leg: нарисовать правую ногу
+      draw body and arms: нарисовать туловище и руки
+      draw a head: нарисовать голову
+      draw O: нарисовать О
+      draw D: нарисовать Д
+      draw E: нарисовать Е
+      draw a hexagon: нарисовать шестиугольник
+      draw a flower: нарисовать цветок
+      draw a square: нарисовать квадрат
+      draw a snowflake: нарисовать снежинку
+      draw a tree: нарисовать дерево
+      draw a small triangle: нарисовать маленький треугольник
+      draw a medium triangle: нарисовать треугольник среднего размера
+      draw a large triangle: нарисовать большой треугольник
+      draw a big triangle: нарисовать большой треугольник
+      draw a triangle: нарисовать треугольник
+      draw a house: нарисовать дом
+      check purple flower: проверить фиолетовый цветок
+      check flower make honey: проверить, что цветок делает мед
+      get nectar or make honey: собрать нектар или сделай мед
+      make 3 honey: сделать мед х3
+      get 5 nectar: собрать нектар х5
+      draw a star: нарисовать звезду
+      do something: выполнить что-то
+      jump: прыгнуть
+      set score: задать счет
+      get nectar: собрать нектар
+      test: тест
+      diamond: алмаз
+      move: переместить
+      move right: Переместить вправо
+      move up: переместить вверх
+      move down: Переместить вниз
+      move left: переместить влево
+      collect: собрать
+      turn left: повернуть налево
+      move forward: двигаться вперед
+      turn right: повернуть направо

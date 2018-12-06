@@ -1,0 +1,19 @@
+---
+lt:
+  data:
+    block_categories:
+      Actions: Komandos
+      Loops: Kartojimas
+      Functions: Komandų kūrimas
+      Color: Spalva
+      Math: Matematika
+      Logic: Logika
+      Variables: Kintamieji
+      Conditionals: Sąlyginiai sakiniai
+      Events: Įvykiai
+      Text: Tekstas
+      Start: Pradėti
+      Booleans: Loginės reikšmės
+      test: sąlyga
+      Name: Vardas
+      Function: Komanda

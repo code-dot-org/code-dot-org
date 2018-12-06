@@ -1,0 +1,2093 @@
+---
+sl:
+  data:
+    evaluation_multi:
+      U5 evaluation q1:
+        'No': Ne
+        'Yes': Da
+      U5 evaluation q2:
+        0: "? Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        1: ": Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        While Loops: 'Zanka: dokler velja'
+    external:
+      Algo How Routers Learn Student Lesson Introduction:
+        title: naslov
+      Algo Shortest Path Student Lesson Introduction:
+        title: naslov
+      Basic mechanics of variables:
+        title: naslov
+      Basic mechanics of variables_2018:
+        title: naslov
+      Begin planning your project:
+        title: naslov
+      'Big Picture: If-statements':
+        title: naslov
+      'Big Picture: If-statements_2018':
+        title: naslov
+      Boolean Expressions and Comparison Operators:
+        title: naslov
+      Boolean Expressions and Comparison Operators_2018:
+        title: naslov
+      CSD U1 Input Output C2:
+        title: naslov
+      CSD U1 Input Output C3:
+        title: naslov
+      CSD U1 Input Output C4:
+        title: naslov
+      CSD U1 Input Output Intro:
+        title: naslov
+      CSD U2 Design Project:
+        title: naslov
+      CSD U2 Design Project_2018:
+        title: naslov
+      CSD U2 L1 Overview:
+        title: naslov
+      CSD U2 L1 Overview_2018:
+        title: naslov
+      CSD U2 L2 Overview:
+        title: naslov
+      CSD U2 L2 Overview_2018:
+        title: naslov
+      CSD U2 L3 Overview:
+        title: naslov
+      CSD U2 L3 Overview_2018:
+        title: naslov
+      CSD U2 L4 Overview:
+        title: naslov
+      CSD U2 L4 Overview_2018:
+        title: naslov
+      CSD U2 L5 Overview:
+        title: naslov
+      CSD U2 L5 Overview_2018:
+        title: naslov
+      CSD U2 L6 Overview:
+        title: naslov
+      CSD U2 L6 Overview_2018:
+        title: naslov
+      CSD U2 Social Sleuth:
+        title: naslov
+      CSD U2 expand project:
+        title: naslov
+      CSD U2 expand project_2018:
+        title: naslov
+      CSD U2 layout style review:
+        title: naslov
+      CSD U2 more CSS:
+        title: naslov
+      CSD U3 L2 Challenges:
+        title: naslov
+      CSD U3 SFLP Sprites and Images:
+        title: naslov
+      CSD U3 abstraction intro:
+        title: naslov
+      CSD U3 combining rep:
+        title: naslov
+      CSD U3 combining rep_2018:
+        title: naslov
+      CSD U5 Encryption 1:
+        title: naslov
+      CSD U5 Encryption 1_2018:
+        title: naslov
+      CSD U5 L13 SFLP Interpreting Data:
+        title: naslov
+      CSD U5 L13 SFLP Interpreting Data_2018:
+        title: naslov
+      CSD U5 Representing Information:
+        title: naslov
+      CSD U5 collection UPS2:
+        title: naslov
+      CSD U5 collection ads2:
+        title: naslov
+      CSD U5 data visualization:
+        title: naslov
+      CSD U5 data visualization sheet:
+        title: naslov
+      CSD U5 data visualization_2018:
+        title: naslov
+      CSD U5 student record:
+        title: naslov
+      CSD U5 student record_2018:
+        title: naslov
+      CSD U5 video2:
+        title: naslov
+      CSD-U3-SFLP Drawing:
+        title: naslov
+      CSDU2L01 SFLP:
+        title: naslov
+      CSP ExploreL02 SFLP:
+        title: naslov
+      CSP Journal Entry Placeholder2:
+        title: naslov
+      CSPStudentLessonPlanTemplate:
+        title: naslov
+      CSPU5 Making a Multi Screen Chaser Game:
+        title: naslov
+      CSPU5_ChoosingGoodIds:
+        title: naslov
+      CSPU5_EventDrivenProgrammingPatterns:
+        title: naslov
+      CSPU5_FirstTimeDesignMode:
+        title: naslov
+      CSPU5_FirstTimeDesignMode_2018:
+        title: naslov
+      CSPU5_HowImagesWork:
+        title: naslov
+      CSPU5_HowOnEventWorks_v2:
+        title: naslov
+      CSPU5_U3L14 - Message - Other ways to assign values:
+        title: naslov
+      CSPU5_U3L14 - Message - basic mechanics of variables:
+        title: naslov
+      CSPU5_U3L15 - explanation of IF and =v==:
+        title: naslov
+      CSPU5_U3L15 Student Lesson Intro - new:
+        title: naslov
+      CSPU5_U3L20 - combining And and Or explanation:
+        title: naslov
+      CSPU5_goodbyeTurtle_setPosition:
+        title: naslov
+      CSPU5_introToDebugging:
+        title: naslov
+      CSPU5_makingPredictions_ref:
+        title: naslov
+      CSPU5_onEventBreakdown:
+        title: naslov
+      CSP_Final_instructions:
+        title: naslov
+      CSP_U4_rawMovieData:
+        title: naslov
+      Color Sleuth - Epilogue:
+        title: naslov
+      Color Sleuth - Epilogue_2018:
+        title: naslov
+      Color Sleuth - How does it end?:
+        title: naslov
+      Color Sleuth - How does it end?_2018:
+        title: naslov
+      Color Sleuth - How to switch player turns:
+        title: naslov
+      Color Sleuth - How to switch player turns_2018:
+        title: naslov
+      Color Sleuth - Keeping score:
+        title: naslov
+      Color Sleuth - Keeping score_2018:
+        title: naslov
+      Color Sleuth - Planning the App:
+        title: naslov
+      Color Sleuth - Planning the App_2018:
+        title: naslov
+      Controlling Memory - Other ways to assign values:
+        title: naslov
+      Controlling Memory - Other ways to assign values_2018:
+        title: naslov
+      Cups and Beans Activity:
+        title: naslov
+      Cups and Beans Activity_2018:
+        title: naslov
+      Debugging with Console.log:
+        title: naslov
+      Debugging with Console.log_2018:
+        title: naslov
+      Digital Footprint Chirpr lillizard:
+        title: naslov
+      Digital Footprint FaceSpace Haley:
+        title: naslov
+      Digital Footprint FaceSpace Lizzie:
+        title: naslov
+      Digital Footprint instantframe wiz_kid_liz:
+        title: naslov
+      DigitalCitizenship2:
+        Digital Citizenship: Digitalno državljanstvo
+      ECSPD Challenge Rubric:
+        title: naslov
+      ECSPD Online U1D11-14:
+        title: naslov
+      ECSPD Online U1D15-16 Forum:
+        title: naslov
+      ECSPD Online intro:
+        Introduction: Uvod
+      ECSPD U2 Challenge Plan:
+        title: naslov
+      ECSPD Unit 2 Stage11:
+        title: naslov
+      ECSPD Unit 2 Stage13:
+        title: naslov
+      ECSPD Unit 2 Stage6:
+        title: naslov
+      Encoding Numbers Real World Student Lesson Introduction:
+        title: naslov
+      Event Driven Programming Recap:
+        title: naslov
+      Event Driven Programming Recap_2018:
+        title: naslov
+      Event-Driven Programming Patterns:
+        title: naslov
+      Event-Driven Programming Patterns_2018:
+        title: naslov
+      External MD column Test:
+        title: naslov
+      External MD column Test bootstrap:
+        title: naslov
+      GoodBadVisualizations_v1:
+        title: naslov
+      GoodBadVisualizations_v2:
+        title: naslov
+      How "if-else-if" Works:
+        title: naslov
+      How "if-else-if" Works_2018:
+        title: naslov
+      How Compound Boolean Expressions Work:
+        title: naslov
+      How Compound Boolean Expressions Work_2018:
+        title: naslov
+      How Dropdown Menus Work:
+        title: naslov
+      How Dropdown Menus Work_2018:
+        title: naslov
+      How If Statements Work pt 1:
+        title: naslov
+      How If Statements Work pt 1_2018:
+        title: naslov
+      How If-Else Statements Work:
+        title: naslov
+      How If-Else Statements Work_2018:
+        title: naslov
+      How Images Work:
+        title: naslov
+      How Images Work_2018:
+        title: naslov
+      How Secure Is Your Password?:
+        title: naslov
+      How Secure Is Your Password?_2018:
+        title: naslov
+      How Set Property Works:
+        title: naslov
+      How Set Property Works_2018:
+        title: naslov
+      How onEvent Works:
+        title: naslov
+      How onEvent Works_2018:
+        title: naslov
+      How setPosition and screen dimensions work:
+        title: naslov
+      How setPosition and screen dimensions work_2018:
+        title: naslov
+      How the Boolean &&, || and ! Operators Work:
+        title: naslov
+      How the Boolean &&, || and ! Operators Work_2018:
+        title: naslov
+      How to make a random color:
+        title: naslov
+      How to make a random color_2018:
+        title: naslov
+      How to pick a random button:
+        title: naslov
+      How to pick a random button_2018:
+        title: naslov
+      Internet Simulator Setup 2:
+        title: naslov
+      Intro to Debugging and Common Problems:
+        title: naslov
+      Intro to Debugging and Common Problems_2018:
+        title: naslov
+      Making Multiple Screens:
+        title: naslov
+      Making Multiple Screens_2018:
+        title: naslov
+      Making a Multi Screen Chaser Game v.2:
+        title: naslov
+      Making a Multi Screen Chaser Game v.2_2018:
+        title: naslov
+      Multi-Screen Apps:
+        title: naslov
+      New Challenge Introduction:
+        title: naslov
+      New Challenge Introduction_2018:
+        title: naslov
+      OPD-K5 Stage3aGo:
+        title: naslov
+      PDAlg Facilitator Test:
+        title: naslov
+      PDK5 CS Video:
+        Computer Science: računalniška znanost, računalništvo
+      PDK5 Pair Programming 1:
+        Pair Programming: Programiranje parov
+      PS - Responding to User Input:
+        title: naslov
+      PS - draft - Longitudinal study description:
+        title: naslov
+      Prepare for your presentation:
+        title: naslov
+      Public Key Crypto Widget Instructions:
+        title: naslov
+      Public Key Crypto Widget Instructions_2018:
+        title: naslov
+      Rules About Choosing Good IDs:
+        title: naslov
+      Rules About Choosing Good IDs_2018:
+        title: naslov
+      SG U3 whats a comment:
+        title: naslov
+      SG v2 U3L01 Student Lesson Introduction:
+        title: naslov
+      SG v2 U3L02 Student Lesson Introduction:
+        title: naslov
+      SG v2 U3L03 Student Lesson Introduction:
+        title: naslov
+      SG v2 U3L05 Student Lesson Introduction:
+        title: naslov
+      SG v2 U3L07 Student Lesson Introduction:
+        title: naslov
+      SG v2 U3L08 Student Lesson Introduction:
+        title: naslov
+      Sending Bits Real World Student Lesson Introduction:
+        title: naslov
+      Simple Decisions with if-statements:
+        title: naslov
+      Simple Decisions with if-statements_2018:
+        title: naslov
+      Tips For Working on Your Own:
+        title: naslov
+      Tips For Working on Your Own_2018:
+        title: naslov
+      U1L10 Student Lesson Introduction:
+        title: naslov
+      U1L11 Student Lesson Introduction:
+        title: naslov
+      U1L12 Student Lesson Introduction:
+        title: naslov
+      U1L13 Student Lesson Summary:
+        title: naslov
+      U1L14 Student Lesson Summary:
+        title: naslov
+      U1L15 Student Lesson Summary:
+        title: naslov
+      U1L17 Student Lesson Introduction:
+        title: naslov
+      U1L2 Student Lesson Introduction:
+        title: naslov
+      U1L3 Student Lesson Introduction:
+        title: naslov
+      U1L4 Student Lesson Introduction:
+        title: naslov
+      U1L5 Student Lesson Introduction:
+        title: naslov
+      U1L6 Student Lesson Introduction:
+        title: naslov
+      U1L7 Student Lesson Introduction:
+        title: naslov
+      U1L8 Student Lesson Introduction:
+        title: naslov
+      U1L9 Student Lesson Introduction:
+        title: naslov
+      U2L1 Student Lesson Introduction:
+        title: naslov
+      U2L12 Student Lesson Introduction:
+        title: naslov
+      U2L7 Student Lesson Introduction:
+        title: naslov
+      U2L8 Student Lesson Introduction:
+        title: naslov
+      U3 whats a comment:
+        title: naslov
+      U3 whats a comment_2018:
+        title: naslov
+      U3L12 - Mission Unsortable:
+        title: naslov
+      U3L13 - Explanation of Ids:
+        title: naslov
+      U3L13 - Make a Prediction Explanation:
+        title: naslov
+      U3L13 Add Button Instrucitons:
+        title: naslov
+      U3L13 Add Button Instructions:
+        title: naslov
+      U3L14 - Message - Other ways to assign values:
+        title: naslov
+      U3L14 - Message - basic mechanics of variables:
+        title: naslov
+      U3L14 - Student Intro Page:
+        title: naslov
+      U3L15 - explanation of IF and =v==:
+        title: naslov
+      U3L15 Student Lesson Intro - new:
+        title: naslov
+      U3L19 - done with variables finally:
+        title: naslov
+      U3L20 - combining And and Or explanation:
+        title: naslov
+      U4 - Cleaning Data - Activity Guide:
+        title: naslov
+      U4 - Making Data Visualizations - Bar Chart:
+        title: naslov
+      U4 - Making Data Visualizations - Edit Chart Appearance:
+        title: naslov
+      U4 - Making Data Visualizations - Free Play:
+        title: naslov
+      U4 - Making Data Visualizations - Free Play_2018:
+        title: naslov
+      U4 - Making Data Visualizations - Getting Started:
+        title: naslov
+      U4 - Making Data Visualizations - Line Chart:
+        title: naslov
+      U4 - Making Data Visualizations - Scatter Plot:
+        title: naslov
+      U4 - Making Data Visualizations - Student Introduction:
+        title: naslov
+      U4 - Privacy Abandoned - Hot On Your Trail Video:
+        title: naslov
+      U4 - Unique Ids Explanation:
+        title: naslov
+      U4 - Unique Ids Explanation_2018:
+        title: naslov
+      U4 Cleaning Data Activity Guide Pt2:
+        title: naslov
+      U4 Cleaning Data Activity Guide Pt3:
+        title: naslov
+      U4L01 Student Lesson Introduction:
+        title: naslov
+      U4L02 Student Lesson Introduction:
+        title: naslov
+      U4L02 Student Lesson Introduction_2018:
+        title: naslov
+      U4L02v2 - Finding Trends:
+        title: naslov
+      U4L03 Student Lesson Introduction:
+        title: naslov
+      U4L03 Student Lesson Introduction_2018:
+        title: naslov
+      U4L03v2 - Student Introduction:
+        title: naslov
+      U4L04 Student Lesson Introduction:
+        title: naslov
+      U4L04 Student Lesson Introduction_2018:
+        title: naslov
+      U4L04v2 - Student Introduction:
+        title: naslov
+      U4L05 Student Lesson Introduction:
+        title: naslov
+      U4L06 Student Lesson Introduction:
+        title: naslov
+      U4L06v2 Student Lesson Introduction:
+        title: naslov
+      U4L07 Student Introduction public key crypto:
+        title: naslov
+      U4L07 Student Lesson Introduction:
+        title: naslov
+      U4L08 - mod clock instructions:
+        title: naslov
+      U4L08 Student Lesson Introduction:
+        title: naslov
+      U4L08v2 Making Pivot Tables:
+        title: naslov
+      U4L08v2 Making Pivot Tables Part 2:
+        title: naslov
+      U4L08v2 Making Pivot Tables Part 3:
+        title: naslov
+      U4L08v2 Making Pivot Tables Part 3_2018:
+        title: naslov
+      U4L08v2 Student Intro:
+        title: naslov
+      U4L09 Student Lesson Intro Practice PT big data dilemma:
+        title: naslov
+      U4L09 Student Lesson Introduction:
+        title: naslov
+      U4L10 Student Lesson Introduction:
+        title: naslov
+      U4L11 Student Lesson Introduction:
+        title: naslov
+      U4L12 - Student Introduction:
+        title: naslov
+      U4L12 Student Lesson Introduction:
+        title: naslov
+      U4L13 Student Lesson Introduction:
+        title: naslov
+      U4L14 Student Lesson Introduction:
+        title: naslov
+      U4L15 Student Lesson Introduction:
+        title: naslov
+      U4L16 Student Lesson Introduction:
+        title: naslov
+      U4L17 Student Lesson Introduction:
+        title: naslov
+      U4L18 Student Lesson Introduction:
+        title: naslov
+      U4L19 Student Lesson Introduction:
+        title: naslov
+      U4L20 Student Lesson Introduction:
+        title: naslov
+      U4L21 Student Lesson Introduction:
+        title: naslov
+      U4L22 Student Lesson Introduction:
+        title: naslov
+      U4L23 Student Lesson Introduction:
+        title: naslov
+      U4L24 Student Lesson Introduction:
+        title: naslov
+      U4L5 random subst challenge page:
+        title: naslov
+      U5 - Create PT - Student Introduction:
+        title: naslov
+      U5 - Create PT Prep - Student Introduction:
+        title: naslov
+      U5 - Create PT review - Student Introduction:
+        title: naslov
+      U5 - Explore PT - Student Introduction:
+        title: naslov
+      U5 - Explore PT Prep - Student Introduction:
+        title: naslov
+      U5 - Explore PT Review - Student Introduction:
+        title: naslov
+      U5 - PT Prep - Digital Portfolio and tech setup:
+        title: naslov
+      U5 color sleuth check correct:
+        title: naslov
+      U5 color sleuth check correct_2018:
+        title: naslov
+      U5L08 - Student Intro If statements:
+        title: naslov
+      U6 - Charts - Student Introduction:
+        title: naslov
+      U6 - Charts - Student Introduction_2018:
+        title: naslov
+      U6 - Final Project - Student Introduction:
+        title: naslov
+      U6 - Final Project - Student Introduction_2018:
+        title: naslov
+      U6 - ImportExport - Student Introduction:
+        title: naslov
+      U6 - ImportExport - Student Introduction_2018:
+        title: naslov
+      U6 - Sample Apps - Student Introduction:
+        title: naslov
+      U6 - Sample Apps - Student Introduction_2018:
+        title: naslov
+      U6 - deleteRecord - Student Introduction:
+        title: naslov
+      U6 - deleteRecord - Student Introduction_2018:
+        title: naslov
+      U6 - updateRecord - Student Introduction:
+        title: naslov
+      U6 - updateRecord - Student Introduction_2018:
+        title: naslov
+      U6 AP Performance Task Tech Setup - Student Links:
+        title: naslov
+      U6 Create PT - Complete the Task - Student Links:
+        title: naslov
+      U6 Create PT - Complete the Task - Student Links_2018:
+        title: naslov
+      U6 Create PT Review - Student Links:
+        title: naslov
+      U6 Create PT Review - Student Links_2018:
+        title: naslov
+      U6 Explore PT - Complete the Task - Student Links:
+        title: naslov
+      U6 Explore PT - Complete the Task - Student Links_2018:
+        title: naslov
+      U6 Explore PT - Make a Plan - Student Links:
+        title: naslov
+      U6 Explore PT - Make a Plan - Student Links_2018:
+        title: naslov
+      U6 Explore PT Review - Student Links:
+        title: naslov
+      U6 Explore PT Review - Student Links_2018:
+        title: naslov
+      Unit 2 Lesson 1 Overview Clone:
+        title: naslov
+      Unit 4 Lesson 1 Introduction:
+        title: naslov
+      Unit 4 Lesson 1 Introduction_2018:
+        title: naslov
+      Unit 4 Lesson 2 Introduction:
+        title: naslov
+      Unit 4 Lesson 2 Introduction_2018:
+        title: naslov
+      Unit 4 Lesson 5 Introduction:
+        title: naslov
+      Unit 4 Lesson 5 Introduction_2018:
+        title: naslov
+      Unit 5 Lesson 1:
+        title: naslov
+      Unit 5 Lesson 1 Introduction:
+        title: naslov
+      Unit 5 Lesson 1 Introduction_2018:
+        title: naslov
+      Unit 5 Lesson 10 Introduction:
+        title: naslov
+      Unit 5 Lesson 10 Introduction_2018:
+        title: naslov
+      Unit 5 Lesson 2 Introduction:
+        title: naslov
+      Unit 5 Lesson 2 Introduction_2018:
+        title: naslov
+      Unit 5 Lesson 3 Introduction:
+        title: naslov
+      Unit 5 Lesson 3 Introduction_2018:
+        title: naslov
+      Unit 5 Lesson 4 Introduction:
+        title: naslov
+      Unit 5 Lesson 4 Introduction_2018:
+        title: naslov
+      Unit 5 Lesson 5:
+        title: naslov
+      Unit 5 Lesson 5 Introduction:
+        title: naslov
+      Unit 5 Lesson 5 Introduction_2018:
+        title: naslov
+      Unit 5 Lesson 6:
+        title: naslov
+      Unit 5 Lesson 6 Introduction:
+        title: naslov
+      Unit 5 Lesson 6 Introduction_2018:
+        title: naslov
+      Unit 5 Lesson 7 Introduction:
+        title: naslov
+      Unit 5 Lesson 7 Introduction_2018:
+        title: naslov
+      Unit 5 Lesson 8 Introduction:
+        title: naslov
+      Unit 5 Lesson 8 Introduction_2018:
+        title: naslov
+      Unit 5 Lesson 9 Introduction:
+        title: naslov
+      Unit 5 Lesson 9 Introduction_2018:
+        title: naslov
+      'Worked Example: If-statements and Robot':
+        title: naslov
+      'Worked Example: If-statements and Robot_2018':
+        title: naslov
+      courseB_external_MRF:
+        title: naslov
+      courseB_external_loopMRF:
+        title: naslov
+      courseB_story_unspottedBugs10:
+        title: naslov
+      courseB_story_unspottedBugs11:
+        title: naslov
+      courseB_story_unspottedBugs12:
+        title: naslov
+      courseB_story_unspottedBugs13:
+        title: naslov
+      courseB_story_unspottedBugs14:
+        title: naslov
+      courseB_story_unspottedBugs15:
+        title: naslov
+      courseB_story_unspottedBugs16:
+        title: naslov
+      courseB_story_unspottedBugs17:
+        title: naslov
+      courseB_story_unspottedBugs18:
+        title: naslov
+      courseB_story_unspottedBugs2:
+        title: naslov
+      courseB_story_unspottedBugs3:
+        title: naslov
+      courseB_story_unspottedBugs4:
+        title: naslov
+      courseB_story_unspottedBugs5:
+        title: naslov
+      courseB_story_unspottedBugs6:
+        title: naslov
+      courseB_story_unspottedBugs7:
+        title: naslov
+      courseB_story_unspottedBugs8:
+        title: naslov
+      courseB_story_unspottedBugs9:
+        title: naslov
+      courseB_unplugged_mrfProgramming:
+        title: naslov
+      courseC_screenoutthemean:
+        title: naslov
+      courseF_firstFunctions_map:
+        title: naslov
+      coursef_functionsSummary_map:
+        title: naslov
+      coursef_powerofwords:
+        title: naslov
+      csd-post-survey-unit1-preamble:
+        title: naslov
+      csd-post-survey-unit2-preamble:
+        title: naslov
+      csd-post-survey-unit3-preamble:
+        title: naslov
+      csd-post-survey-unit4-preamble:
+        title: naslov
+      csd-post-survey-unit5-preamble:
+        title: naslov
+      csd-post-survey-unit6-preamble:
+        title: naslov
+      csp-post-survey-2018-AP-preamble:
+        title: naslov
+      csp-post-survey-2018-topics-preamble:
+        title: naslov
+      csp-post-survey-2018-unit-feedback-preamble:
+        title: naslov
+      csp-post-survey-createPT-preamble:
+        title: naslov
+      csp-post-survey-explorePT-preamble:
+        title: naslov
+      csp-post-survey-unit1-preamble:
+        title: naslov
+      csp-post-survey-unit2-preamble:
+        title: naslov
+      csp-post-survey-unit3-preamble:
+        title: naslov
+      csp-post-survey-unit4-preamble:
+        title: naslov
+      csp-post-survey-unit5-preamble:
+        title: naslov
+      csp_unit5_finalassessment_overview:
+        title: naslov
+      csp_unit5_finalassessment_overview_2018:
+        title: naslov
+      csp_unit5_finalassessment_overview_exam_prep:
+        title: naslov
+      csp_unit_assessment_overview:
+        title: naslov
+      csp_unit_assessment_overview_2018:
+        title: naslov
+      csp_unit_assessment_overview_exam_prep:
+        title: naslov
+      dsl link test:
+        title: naslov
+      grade2_maze_intro1:
+        title: naslov
+      grade2_unplugged_neighborhood:
+        title: naslov
+      grade4_project_design:
+        title: naslov
+      grade4_project_design_image:
+        title: naslov
+      grade4_project_presentation:
+        title: naslov
+      grade5_project_design:
+        title: naslov
+      grade5_project_presentation:
+        title: naslov
+      more encryption algorithms:
+        title: naslov
+      post-assessment survey heading4:
+        title: naslov
+      pwc_appdev:
+        title: naslov
+      pwc_appdevunplugged:
+        title: naslov
+      pwc_cybersecurity:
+        title: naslov
+      pwc_internetofthings:
+        title: naslov
+      pwc_programming:
+        title: naslov
+      pwc_webdevelopment:
+        title: naslov
+      sciPD framework video:
+        Framework: Ogrodje
+      sciPD2Part4_S1_L3:
+        title: naslov
+      sciPD2Part4_S2_L1:
+        title: naslov
+      sciPD2Part4_S2_L2:
+        title: naslov
+      sciPD2Part4_S3_L1:
+        title: naslov
+      sciPD2Part4_S3_L2:
+        title: naslov
+      sciPD2Part4_S3_L3:
+        title: naslov
+      sciPD3 mods2:
+        title: naslov
+      sciPD33 earth1:
+        title: naslov
+      sciPD33 earth2:
+        title: naslov
+      sciPDpart4_S1_L1:
+        title: naslov
+      test discourse level type:
+        title: naslov
+      v2 U1 Internet is for Everyone Student Lesson Introduction:
+        title: naslov
+      v2 U1 Internet is for Everyone Student Lesson Introduction_2018:
+        title: naslov
+      v2 U1L14 Student Lesson Introduction:
+        title: naslov
+      v2 U1L14 Student Lesson Introduction_2018:
+        title: naslov
+      v2 U1L2 Student Lesson Introduction:
+        title: naslov
+      v2 U1L2 Student Lesson Introduction_2018:
+        title: naslov
+      v2 U1L3 Student Lesson Introduction:
+        title: naslov
+      v2 U1L3 Student Lesson Introduction_2018:
+        title: naslov
+      v2 U1L4 Student Lesson Introduction:
+        title: naslov
+      v2 U1L4 Student Lesson Introduction_2018:
+        title: naslov
+      v2 U1L5 Student Lesson Introduction:
+        title: naslov
+      v2 U1L5 Student Lesson Introduction_2018:
+        title: naslov
+      v2 U1L8 Student Lesson Introduction:
+        title: naslov
+      v2 U1L8 Student Lesson Introduction_2018:
+        title: naslov
+      v2 U2L1 Student Lesson Introduction:
+        title: naslov
+      v2 U2L1 Student Lesson Introduction_2018:
+        title: naslov
+      v2 U2L10 Student Lesson Introduction:
+        title: naslov
+      v2 U2L10 Student Lesson Introduction_2018:
+        title: naslov
+      v2 U2L11 Student Lesson Introduction:
+        title: naslov
+      v2 U2L11 Student Lesson Introduction_2018:
+        title: naslov
+      v2 U2L12 Student Lesson Introduction:
+        title: naslov
+      v2 U2L12 Student Lesson Introduction_2018:
+        title: naslov
+      v2 U2L13 Student Lesson Introduction:
+        title: naslov
+      v2 U2L13 Student Lesson Introduction_2018:
+        title: naslov
+      v2 U2L14 Student Lesson Introduction:
+        title: naslov
+      v2 U2L14 Student Lesson Introduction_2018:
+        title: naslov
+      v2 U2L15 Student Lesson Introduction:
+        title: naslov
+      v2 U2L15 Student Lesson Introduction_2018:
+        title: naslov
+      v2 U2L2 Student Lesson Summary:
+        title: naslov
+      v2 U2L2 Student Lesson Summary_2018:
+        title: naslov
+      v2 U2L3 Student Lesson Summary:
+        title: naslov
+      v2 U2L3 Student Lesson Summary_2018:
+        title: naslov
+      v2 U2L4 Student Lesson Summary:
+        title: naslov
+      v2 U2L4 Student Lesson Summary_2018:
+        title: naslov
+      v2 U2L6 Student Lesson Introduction:
+        title: naslov
+      v2 U2L6 Student Lesson Introduction_2018:
+        title: naslov
+      v2 U2L7 Student Lesson Introduction:
+        title: naslov
+      v2 U2L7 Student Lesson Introduction_2018:
+        title: naslov
+      v2 U2L8 Student Lesson Introduction:
+        title: naslov
+      v2 U2L8 Student Lesson Introduction_2018:
+        title: naslov
+      v2 U2L9 Student Lesson Introduction:
+        title: naslov
+      v2 U2L9 Student Lesson Introduction_2018:
+        title: naslov
+      v2 U3L04 Student Lesson Introduction:
+        title: naslov
+      v2 U3L04 Student Lesson Introduction_2018:
+        title: naslov
+      v2 U4L05 Student Lesson Intro Encryption Caesar:
+        title: naslov
+    match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: Poveži kombinacije gumbov
+          s plesnimi gibi.
+        Matching: Ujemanje
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: Ujemanje
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: Poveži mrežo s programom.
+        Matching: Ujemanje
+      2-3 Maze Match 2:
+        Instructions: Navodila
+        Match the puzzles to the blocks: Poveži ustrezne bloke z rešitvami
+        Maze Match: Labirint povezovanje
+      2-3 Relay Programming Match 1:
+        Matching: Ujemanje
+      2-3 artist loops match 1:
+        Match the loop to the shape: Poveži zanke z ustrezno obliko
+      2-3 artist match 1:
+        Artist Matching: Ujemanje umetnikov
+        Match the shape with the blocks that complete it.: Ustrezno poveži bloke z
+          liki.
+      2-3 bounce match 1:
+        Matching: Ujemanje
+      2-3 flappy match 1:
+        Matching: Ujemanje
+      2-3 maze match 1:
+        Match the puzzles to the blocks: Poveži ustrezne bloke z rešitvami
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>Dodaj Igralcu ena njegov
+          rezultat k skupnemu rezultatu</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>Primerjaj rezultate
+          igralcev, da vidiš, kdo zmaga</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>Igralec 1 vrže kocko</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>Postavi rezultat Igralca 1 na 0</h4>"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Poveži
+          korake v Igri s kocko po vrstnem redu, kot se morajo pojaviti v algoritmu.
+        Matching: Ujemanje
+      4-5 Computational Thinking Match 1:
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Kolesa/strani: 2 <br/>
+          Okna/stran: 1</h3>"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Vsako
+          od teh vozil je bilo razstavljeno na manjše dele. Poveži vsako od vozil
+          s seznamom delov.
+        Matching: Ujemanje
+      4-5 Suncatchers Match 1:
+        Match each program to the word it makes, using the provided group of skills.: Poveži
+          vsak program z besedo, ki ga naredi. Uporabi podane skupine spretnosti.
+        Matching: Ujemanje
+      4-5 maze match 1:
+        Instructions: Navodila
+        Match the puzzles to the blocks: Poveži ustrezne bloke z rešitvami
+        Maze Match: Labirint povezovanje
+      CSD U3 CSS Vocab Match:
+        '1': '1'
+        '2': '2'
+      CSD U3 keyinput match:
+        Question: Vprašanje
+      CSDU2 Match RGB Colors:
+        Question: Vprašanje
+      K-1 Artist 2 Match 1:
+        Matching: Ujemanje
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: Poveži like glede na njihovo obliko.
+        Matching: Ujemanje
+      K-1 Artist 2 Match 3:
+        Match the shapes based on type.: Poveži like glede na njihovo obliko.
+        Matching: Ujemanje
+      K-1 Artist Loops Match 1:
+        Matching: Ujemanje
+      K-1 Bee Loops Match 1:
+        Match the blocks: Poveži bloke
+        Matching: Ujemanje
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: Poveži kombinacije gumbov
+          s plesnimi gibi.
+        Matching: Ujemanje
+      K-1 Flappy Match 1:
+        Match the blocks: Poveži bloke
+        Matching: Ujemanje
+      K-1 Happy Maps Match 1:
+        Matching: Ujemanje
+      K-1 Maze Match 1:
+        Instructions: Navodila
+        Match the puzzles and blocks: Poveži ustrezene puzle in bloke
+        Matching: Ujemanje
+      K-1 Move It Match 1:
+        Matching: Ujemanje
+      PDAlg Design Recipe Video:
+        Definition: Definicija
+      PDK5 What is unplugged:
+        Question: Vprašanje
+      'U2L06 - Matching: Label the Diagram':
+        E: V
+      U3L19 - MATCH what are values of abc:
+        '10': '10'
+        '12': '12'
+        '13': '13'
+        '15': '15'
+        '16': '16'
+        '21': '21'
+        '3': '3'
+        '5': '5'
+        '7': '7'
+        '8': '8'
+        title: naslov
+      U3L19 - MC what are values of abc:
+        title: naslov
+      U4L06 Create Record Id Matching Q:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      test matching image:
+        Instructions: Navodila
+      test matching text:
+        Matching: Ujemanje
+        blue: modra
+      unique level name here:
+        Question: Vprašanje
+        title: naslov
+    multi:
+      2-3 Algorithms Multi 1:
+        Choose an algorithm for the image provided.: Izberi algoritem za dano sliko.
+        Multiple Choice: Izbirno vprašanje
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Začni
+          s kvadratom<br/>Postavi paralelogram nad kvadrat<br/>Postavi trikotnik desno
+          od paralelograma
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Začni
+          s kvadratom<br/>Postavi trikotnik nad kvadrat<br/>Postavi trikotnik pod
+          kvadrat
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Začni
+          s kvadratom<br/>Postavi trikotnik pod kvadrat<br/>Postavi paralelogram desno
+          od trikotnika
+        0: "? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram"
+        1: ": Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram"
+      2-3 Algorithms Multi 2:
+        Multiple Choice: Izbirno vprašanje
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Začni
+          s trikotnikom<br/>Postavi kvadrat pod trikotnik<br/>Postavi še en trikotnik
+          pod kvadrat
+        Which image does <em>not</em> follow this algorithm?: Katera slika <em>ne</em>
+          ustreza algoritmu?
+      2-3 Binary Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which program makes this image?: Kateri program naredi to sliko?
+      2-3 Conditionals Multi 1:
+        Multiple Choice: Izbirno vprašanje
+      2-3 Getting Loopy Multi 1:
+        Multiple Choice: Izbirno vprašanje
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which program makes this image?: Kateri program naredi to sliko?
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: Labirint izbirno vprašanje
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: Izbirno vprašanje
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: Izbirno vprašanje
+      2-3 artist functions multi 1:
+        Artist Functions Multiple Choice One: Umetnik funkcije izbirno vprašanje ena
+        Pick the correct blocks to draw this image using the given functions: Ozači
+          pravi blok z dano funkcijo, ki bo narisal dva pravokotnika
+      2-3 artist loops multi 1:
+        Artist Loops Multiple Choice: Umetnik zanke izbirno vprašanje
+        Which shape is made by this loop?: Katera oblika nastane s to zanko?
+      2-3 artist loops multi 2:
+        Artist Loops Multiple Choice: Umetnik zanke izbirno vprašanje
+        Which shape is made by this program?: Katera oblika nastane s tem programom?
+      2-3 bee conditionals multi 1:
+        Which comparison below is true?: Katera spodnja primerjava velja?
+      2-3 bee conditionals multi 2:
+        Choose the best blocks.: Izberi najboljše bloke.
+      2-3 bee conditionals multi 3:
+        Choose the best blocks.: Izberi najboljše bloke.
+      2-3 bee loops multi 1:
+        Bee Loops Multiple Choice One: Čebelica zanke izbirno vprašanje ena
+        Which blocks collect all of the nectar?: S katerim blokom lahko nabereš ves
+          nektar?
+      2-3 maze multi 1:
+        Maze Multiple Choice One: Labirint izbirno vprašanje ena
+      4-5 Algorithms Multi 1:
+        Baking cookies: Peka piškotov
+        Banana: Banana
+        Brushing your teeth: Umivanje zob
+        Multiple Choice: Izbirno vprašanje
+        Shopping from a grocery list: Nakupovanje stvari s seznama
+        Which one of these items is hardest to describe an algorithm for?: Katere
+          od teh stvari je najtežje predstaviti z algoritmom?
+      4-5 Computational Thinking Multi 1:
+        Eugene is a _____ city.: Eugene je _____ mesto.
+        0: "? Here are three sentences. Which of the templates below correctly abstracts
+          so that all three match the same pattern as the template?"
+        1: ": Here are three sentences. Which of the templates below correctly abstracts
+          so that all three match the same pattern as the template?"
+        Multiple Choice: Izbirno vprašanje
+        Seattle _____ a _____ _____.: Seattle je _____ _______.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
+          je veliko mesto.<br/>Eugene je srednje mesto.<br/>Hillview je majhno mesto.
+        _____ is _____ a _____.: _____ _____ je _____.
+        _____ is a _____ city.: _____ je _____ mesto.
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which of these pictures best represents crowdsourcing?: Katera od spodnjih
+          slik najbolje predstavlja "crowdsourcing"?
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: Česanje tvojih las
+        Cleaning your room: Čiščenje tvoje sobe
+        Eating your dessert: Jesti tvojo sladico
+        Multiple Choice: Izbirno vprašanje
+        Washing your face: Umivanje tvojega obraza
+        Which one of these activities would be best for practicing crowdsourcing?: Katera
+          od teh aktivnosti bi bila najboljša za izvajanje "crowdsourcinga"?
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which piece of information listed below is okay to share on the internet?: Katere
+          od navedenih informacij je v redu deliti na internetu?
+        Your address: Tvoj naslov
+        Your birthday: Tvoj rojstni dan
+        Your favorite food: Tvoja najljubša hrana
+        Your parent's credit card number: Številko kreditne kartice tvojih staršev
+      4-5 Internet Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Ko
+          se poskušaš prijaviti na code.org, na kateri IP naslov te bo DNS najverjetneje
+          pripeljal?
+      4-5 Internet Multi 2:
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Če
+          te je DNS poslal na stran z IP naslovom 100.42.50.110, na kateri spletni
+          strani se nahajaš?
+        Multiple Choice: Izbirno vprašanje
+      4-5 Songwriting Multi 1:
+        0: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin."
+        1: ": Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin."
+        2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,"
+        3: ": Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,"
+        Multiple Choice: Izbirno vprašanje
+        4: "? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?"
+        5: ": What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?"
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Kateri
+          od spodnjih programov <em>ne</em> naredi enakega zaporedja kot Program 1?
+      4-5 artist loops multi 1:
+        Artist Loops Multiple Choice: Umetnik zanke izbirno vprašanje
+        Which blocks will create the design?: Kateri bloki bodo ustvarili to sliko?
+      4-5 artist multi 1:
+        Artist Multiple Choice: Umetnik izbirno vprašanje
+        Which blocks draw a rectangle with a perimeter of 100?: Kateri bloki narišejo
+          pravokotnik z obsegom 100?
+      4-5 artist multi 2:
+        Artist Multiple Choice: Umetnik izbirno vprašanje
+        Which drawing is symmetric?: Katera risba je simetrična?
+      4-5 bee conditionals multi 1:
+        0: "? A purple flower may have either 3, 2 or 1 nectars, but you don't know
+          how many. Which blocks correctly check and collect all of the nectar from
+          a purple flower?"
+        1: ": Vijolična roža ima lahko 3, 2 ali 1 nektar, ampak ne veš, koliko. Kateri
+          blok pravilno preveri in dobi ves nektar iz vijoličnega cveta?"
+        Bee Conditionals Multiple Choice: Čebelica pogoji izbirno vprašanje
+        Choose the best blocks.: Izberi najboljše bloke.
+      4-5 bee debug multi 1:
+        Bee Debug Multiple Choice: Čebelica razhroščevanje izbirno vprašanje
+        Which version of the function will work?: Katera verzija funkcije bo delovala?
+      4-5 bee loops multi 1:
+        Bee Loops Multiple Choice: Čebelica zanke izbirno vprašanje
+        Which blocks will solve the puzzle?: Kateri bloki rešijo to uganko?
+      4-5 farmer loops multi 1:
+        Which blocks solve the puzzle?: Kateri bloki rešijo uganko?
+      4-5 maze conditionals multi 1:
+        Maze Conditionals Multiple Choice: Labirint pogoji izbirno vprašanje
+        Which blocks solve the puzzle?: Kateri bloki rešijo uganko?
+      4-5 maze multi 1:
+        Maze Multiple Choice: Labirint izbirno vprašanje
+        Which blocks solve the puzzle?: Kateri bloki rešijo uganko?
+      CB_Question_3:
+        Y: true
+      CSD Prediction Header Size:
+        Question: Vprašanje
+      CSD U3 Boolean MC:
+        title: naslov
+      CSD U3 Boolean MC_2018:
+        title: naslov
+      CSDU4 Screens Predict Multi:
+        About: O programu
+        Contact Us: Kontaktirajte nas
+      'CSP U4L04 Assessment 1 ':
+        Question: Vprašanje
+      CSP Unit 1 Ch 1 MC binary to dec simple:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_2018:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_exam_prep:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP verify 18:
+        'No': Ne
+        'Yes': Da
+      CSPU5_predict_mc_whichOfTwoEvents:
+        title: naslov
+      CSPU5_predict_onEvent_withWrongID:
+        Question: Vprašanje
+        title: naslov
+      CommuteAssess - loops 1 - block:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block B:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_2018:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_exam_prep:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 2 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_2018:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_exam_prep:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      ECSPD2 question:
+        Question: Vprašanje
+        title: naslov
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which blocks solve this puzzle?: Kateri bloki rešijo to uganko?
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: Izbirno vprašanje
+        Which blocks draw the square?: Kateri bloki narišejo kvadrat?
+      K-1 Artist 2 Multi 1:
+        Multiple Choice: Izbirno vprašanje
+      K-1 Artist Loops Multi 1:
+        Multiple Choice: Izbirno vprašanje
+      K-1 Bee 1 Multi 1:
+        How many nectars is this?: Koliko nektarjev je to?
+        Multiple Choice: Izbirno vprašanje
+      K-1 Bee 1 Multi 2:
+        How many nectars is this?: Koliko nektarjev je to?
+        Multiple Choice: Izbirno vprašanje
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: Izbirno vprašanje
+      K-1 Getting Loopy Multi 1:
+        Multiple Choice: Izbirno vprašanje
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which arrow gets the Flurb to the treasure?: Katera puščica pripelje Flurba
+          do zaklada?
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which information should you <strong>not</strong> share online?: Katere informacije
+          <strong>ne</strong> smeš deliti na internetu?
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which choice should be the final block?: Katera izbira bi moral biti zadnji
+          blok?
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which repeat block is the same?: Kateri blok za ponavljanje je isti?
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: Izbirno vprašanje
+        Pick the correct repeat block.: Označi pravi blok za ponavljanje.
+      K-1 Maze Multiple Choice 2:
+        Maze: Labirint
+        Which answer solves this level?: Kateri odgovor reši to uganko?
+      K-1 Move It Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which algorithm gets the Flurb to the flowers?: Kateri algoritem pripelje
+          Furba do cvetja?
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which step should go at the beginning of this algorithm?: Kateri korak bi
+          moral biti na začetku tega algoritma?
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: Izbirno vprašanje
+        Which step should fill in the blank for this algorithm?: Kateri korak bi moral
+          zapolniti praznino v algoritmu?
+      K-1 Word Search Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which blocks spell "MOVE"?: Kateri bloki črkujejo "MOVE"?
+      K-1 Word Search Multi 2:
+        Multiple Choice: Izbirno vprašanje
+      K-1 Word Search Multi 3:
+        Multiple Choice: Izbirno vprašanje
+        Which word is spelled?: Katera beseda je črkovana?
+      Multi Define Funcs 1:
+        '3': '3'
+        y: true
+      Multi Define Funcs 2:
+        '3': '3'
+        y: true
+      Multi Define Funcs 3:
+        '5': '5'
+        '6': '6'
+        y: true
+      PDAlg Blocks Video:
+        Toolbox: Orodjarna
+      PDAlg DR Multi 1:
+        Domain: Domena
+        Name: Ime
+        Range: Razpon
+        0: "? The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+        1: ": The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+      PDAlg PreQ 1:
+        'No': Ne
+        'Yes': Da
+      PDAlg PreQ 2:
+        'No': Ne
+        'Yes': Da
+      PDAlg functional:
+        'No': Ne
+      PDK5 Blockly Intro:
+        'Yes': Da
+      PDK5 Classroom Culture:
+        'Yes': Da
+      PDK5 Course Maps:
+        'Yes': Da
+      PDK5 Course Overview:
+        'Yes': Da
+      PDK5 Glossary:
+        Glossary: Slovarček
+        'Yes': Da
+      PDK5 Intro:
+        'No': Ne
+        'Yes': Da
+      PDK5 Teacher Dashboard:
+        'Yes': Da
+      PDK5 Test1:
+        Question: Vprašanje
+        title: naslov
+      PDK5 UVideo Overview:
+        'Yes': Da
+      PDK5 Unplugged Intro:
+        'Yes': Da
+      PS U3-bakertest:
+        title: naslov
+      SG U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      Submittable Multi:
+        blue: modra
+        green: zelena
+        red: rdeča
+      Test Contained Multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '4': '4'
+      U1L07 Assessment 1:
+        E: V
+      U1L6 Assessment multiple choice:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L6 Assessment multiple choice_2018:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L8 Multiple Choice:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      U1L8 Multiple Choice_2018:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      'U2L06 - MC: Which is an MST?':
+        0: ': "<p>The images below all show the same map (or graph) but have different
+          paths between the points highlighted.</p>\n<p>Please choose the image that
+          is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The
+          “distance” between points is depicted by the number of line segments connecting
+          any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
+        E: V
+      U2L08 Assessment 1:
+        '11': '11'
+        '5': '5'
+        '6': '6'
+        '8': '8'
+        '9': '9'
+      U2L13 Assessment4:
+        '26': '26'
+      U2L13 Assessment4_2018:
+        '26': '26'
+      U2L14 Assessment3:
+        'false': ne velja
+        'true': velja
+      U2L19 multichoice 13 MOD 17:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      U2L19 multichoice 13 MOD 17_2018:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      'U2L19 mutlichoice ':
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15_2018:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L07 - MC remove line of code loops_2018:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L30 Assessment1:
+        '6': '6'
+        '7': '7'
+        '8': '8'
+      U3L30 Assessment2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+      U3L30 Assessment3:
+        '19': '19'
+        '20': '20'
+        '21': '21'
+      U4L01 Multiple Choice:
+        right: desno
+      U4L02 Multiple Choice:
+        right: desno
+      U4L03 Multiple Choice:
+        right: desno
+      U4L04 Multiple Choice:
+        right: desno
+      U4L05 Multiple Choice:
+        right: desno
+      U4L06 Multiple Choice:
+        right: desno
+      U4L06 Reflection Q 1:
+        Question: Vprašanje
+        random: naključno
+      U4L07 Multiple Choice:
+        right: desno
+      U4L08 Multiple Choice:
+        right: desno
+      U4L09 Multiple Choice:
+        right: desno
+      U4L10 Multiple Choice:
+        right: desno
+      U4L11 Multiple Choice:
+        right: desno
+      U4L12 Multiple Choice:
+        right: desno
+      U4L13 Multiple Choice:
+        right: desno
+      U4L14 Multiple Choice:
+        right: desno
+      U4L15 Multiple Choice:
+        right: desno
+      U4L16 Multiple Choice:
+        right: desno
+      U4L17 Multiple Choice:
+        right: desno
+      U4L18 Multiple Choice:
+        right: desno
+      U4L19 Multiple Choice:
+        right: desno
+      U4L20 Multiple Choice:
+        right: desno
+      U4L21 Multiple Choice:
+        right: desno
+      U4L22 Multiple Choice:
+        right: desno
+      U4L23 Multiple Choice:
+        right: desno
+      U4L24 Multiple Choice:
+        right: desno
+      U4LXX Multiple Choice:
+        right: desno
+      U5 assess_weight_v2:
+        Question: Vprašanje
+        title: naslov
+      Warmup questions:
+        random: naključno
+      commute assess - loops 4 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        '50': '50'
+      courseC_multi_harvester_loops11_predict1:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseD_multi_bee_nestedLoops9_predict2:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      csd-post-survey-2018-topic-ai:
+        'No': Ne
+        'Yes': Da
+      csd-post-survey-2018-topic-cryptocurrency:
+        'No': Ne
+        'Yes': Da
+      csd-post-survey-2018-topic-cybersecurity:
+        'No': Ne
+        'Yes': Da
+      csd-post-survey-2018-topic-databases:
+        'No': Ne
+        'Yes': Da
+      csd-post-survey-2018-topic-datascience:
+        'No': Ne
+        'Yes': Da
+      csd-post-survey-2018-topic-gamedev:
+        'No': Ne
+        'Yes': Da
+      csd-post-survey-2018-topic-hardware:
+        'No': Ne
+        'Yes': Da
+      csd-post-survey-2018-topic-internet:
+        'No': Ne
+        'Yes': Da
+      csd-post-survey-2018-topic-mobile:
+        'No': Ne
+        'Yes': Da
+      csd-post-survey-2018-topic-parallel:
+        'No': Ne
+        'Yes': Da
+      csd-post-survey-2018-topic-programming:
+        'No': Ne
+        'Yes': Da
+      csd-post-survey-2018-topic-robotics:
+        'No': Ne
+        Robotics: Robotika
+        'Yes': Da
+      csd-post-survey-2018-topic-web:
+        'No': Ne
+        'Yes': Da
+      csp-post-survey-2017-q64:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': Ne
+        'Yes': Da
+      csp-post-survey-2017-q64_2018:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': Ne
+        'Yes': Da
+      csp-post-survey-2017-q65:
+        'No': Ne
+        'Yes': Da
+      csp-post-survey-2017-q65_2018:
+        'No': Ne
+        'Yes': Da
+      csp-post-survey-2018-topic-ai:
+        'No': Ne
+        'Yes': Da
+      csp-post-survey-2018-topic-cryptocurrency:
+        'No': Ne
+        'Yes': Da
+      csp-post-survey-2018-topic-cybersecurity:
+        'No': Ne
+        'Yes': Da
+      csp-post-survey-2018-topic-databases:
+        'No': Ne
+        'Yes': Da
+      csp-post-survey-2018-topic-datascience:
+        'No': Ne
+        'Yes': Da
+      csp-post-survey-2018-topic-gamedev:
+        'No': Ne
+        'Yes': Da
+      csp-post-survey-2018-topic-hardware:
+        'No': Ne
+        'Yes': Da
+      csp-post-survey-2018-topic-internet:
+        'No': Ne
+        'Yes': Da
+      csp-post-survey-2018-topic-mobile:
+        'No': Ne
+        'Yes': Da
+      csp-post-survey-2018-topic-parallel:
+        'No': Ne
+        'Yes': Da
+      csp-post-survey-2018-topic-programming:
+        'No': Ne
+        'Yes': Da
+      csp-post-survey-2018-topic-robotics:
+        'No': Ne
+        Robotics: Robotika
+        'Yes': Da
+      csp-post-survey-2018-topic-web:
+        'No': Ne
+        'Yes': Da
+      csp-pre-survey-2017-q40:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Drugi
+      csp-pre-survey-2017-q40_2018:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Drugi
+      csp_ap_exam_signup:
+        'No': Ne
+        'Yes': Da
+      csp_ap_previous_years:
+        'No': Ne
+        'Yes': Da
+      csp_ap_taking_ap_class:
+        'No': Ne
+        'Yes': Da
+      cspu5_assess1_fivemore:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_2018:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_exam_prep:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_flowchart:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_2018:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_exam_prep:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_increase:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_2018:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_exam_prep:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess2_addstrings:
+        result: rezultat
+      cspu5_assess2_addstrings_2018:
+        result: rezultat
+      cspu5_assess2_addstrings_exam_prep:
+        result: rezultat
+      cspu5_assess2_combineString:
+        '10': '10'
+        '55': '55'
+        result: rezultat
+      cspu5_assess2_combineString_2018:
+        '10': '10'
+        '55': '55'
+        result: rezultat
+      cspu5_assess2_combineString_exam_prep:
+        '10': '10'
+        '55': '55'
+        result: rezultat
+      cspu5_assess2_oldEnough:
+        '35': '35'
+        'false': ne velja
+        'true': velja
+      cspu5_assess2_oldEnough_2018:
+        '35': '35'
+        'false': ne velja
+        'true': velja
+      cspu5_assess2_oldEnough_exam_prep:
+        '35': '35'
+        'false': ne velja
+        'true': velja
+      cspu5_assess2_weight:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_2018:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_exam_prep:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess3_array1:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_2018:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_exam_prep:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array4:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_2018:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_exam_prep:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_listAppend:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_2018:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_exam_prep:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_loopValue1:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue2:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess4_dataReturns:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_2018:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_exam_prep:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_listOutput:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_2018:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_exam_prep:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      msm variables multi 1:
+        '15': '15'
+        x: x
+      msm variables multi 10:
+        '17': '17'
+        x: x
+      msm variables multi 11:
+        '17': '17'
+        x: x
+      msm variables multi 12:
+        '17': '17'
+        x: x
+      msm variables multi 13:
+        '117': '117'
+        '17': '17'
+        x: x
+      msm variables multi 2:
+        '8': '8'
+      msm variables multi 3:
+        '5': '5'
+        x: x
+      msm variables multi 4:
+        '15': '15'
+        '3': '3'
+        '8': '8'
+      msm variables multi 5:
+        '3': '3'
+        '5': '5'
+      msm variables multi 6:
+        '1': '1'
+        '5': '5'
+        hello: zdravo
+      msm variables multi 7:
+        '3': '3'
+        x: x
+      msm variables multi 8:
+        '3': '3'
+        x: x
+      msm variables multi 9:
+        '5': '5'
+        '6': '6'
+        x: x
+      post-assessment survey q34:
+        Easy: Enostavno
+        Hard: Težko
+      pre-assessment survey q24:
+        'No': Ne
+        'Yes': Da
+      pre-assessment survey q26:
+        0: "? Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        1: ": Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        'No': Ne
+        'Yes': Da
+      pre-assessment survey q27:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Drugi
+      pre-assessment survey q28:
+        '10': '10'
+        '11': '11'
+        '12': '12'
+        '8': '8'
+        '9': '9'
+        Other: Drugi
+      pre-assessment survey q29:
+        Female: Ženska
+        Male: Moški
+        Other: Drugi
+        Prefer not to answer: Raje ne bi odgovoril
+      pre-assessment survey q30:
+        Asian: Azijske
+        Black or African American: Črna ali Afroameričan
+        Other: Drugi
+        Prefer not to answer: Raje ne bi odgovoril
+        White: Bela
+      sarah_test_maggie:
+        Question: Vprašanje
+        test: preizkusi
+      sciPD PreQ 1:
+        'No': Ne
+        'Yes': Da
+      sciPD PreQ 2:
+        'No': Ne
+        'Yes': Da
+      test anonymous student survey educational:
+        'No': Ne
+        'Yes': Da
+      test me:
+        Question: Vprašanje
+        title: naslov
+      unique level name here:
+        Question: Vprašanje
+        title: naslov
+    text_match:
+      U2L07 Assessment4:
+        '43': '43'

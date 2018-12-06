@@ -1,0 +1,20 @@
+hu:
+  data:
+    block_categories:
+      Actions: Műveletek
+      Loops: hurkok
+      Functions: funkciók
+      Color: Szín
+      Math: Matematika
+      Logic: Logika
+      Variables: változók
+      Conditionals: Feltételek
+      Events: Események
+      Text: szöveg
+      Start: Kezdés
+      Dancers: Táncosok
+      Groups: Csoportok
+      Booleans: Logikai adattípus
+      test: 'kifejezés:'
+      Name: Név
+      Function: Függvény

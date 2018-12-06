@@ -1,0 +1,30 @@
+ur:
+  data:
+    game:
+      name:
+        Unplug1: کمپیوٹر سائنس کا تعارف
+        Maze: بھول بھلیا
+        Artist: مصور
+        Farmer: کسان
+        Unplug6: شرائط
+        MazeEC: بھول بھلیا
+        ArtistEC: مصور
+    video:
+      name:
+        Unplug6: شرائط
+        C2_conditionals_with_cards: شرائط
+        C4_loops_zombie: لوپس
+        C4_conditionals: شرائط
+        frozen_intro: آور-آف-کوڈ کا تعارف
+        frozen_loops: انٹروڈکشن ٹو لوپس
+        frozen_functions: انٹروڈکشن ٹو فنکشنز
+        csp_applab_functions: انٹروڈکشن ٹو فنکشنز
+        csp_applab_loops: لوپس
+        CSF_loops_AB: لوپس
+    callout:
+      text:
+        frozen_diamond_repeat: اس شیپ کو بنانے کے لیے ریپیٹ بلاک استعمال کریں۔
+        frozen_circle_function_in_circle_turn: ہر سرکل کری-ایٹ کرنے کے بعد ٹرن کرنا نہ بھولیں۔
+        frozen_circle_function_with_parameter_circle: '"کری-ایٹ اے سرکل" بلاک استعمال کریں اور سائز تبدیل کریں۔'
+        frozen_snowflake_branch: '"ایک سنوفلیک برانچ بنائیں" بلاک استعمال کریں'
+        frozen_create_square: ایک اسکوائر کری-ایٹ کرنے کے لیے یہاں مزید بلاک اَٹیچ کریں

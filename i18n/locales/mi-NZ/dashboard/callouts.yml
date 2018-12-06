@@ -1,0 +1,218 @@
+mi:
+  data:
+    callouts:
+      Course 4 Artist 4_callout:
+        repeat_full_circle: Tāurutia te nui o ngā wā me neke te kairoro ki te waihanga i tētahi porohita
+      Course 4 Artist 7_callout:
+        repeat_blocks: Whakamahia te paraka "Tōai", ka tākai ki ērā atu paraka i te papamahi
+      Course 4 Artist For Loops 4_callout:
+        place_counter_variable: Tōia tō taurangi pūtatau ki roto i tēnei paraka
+      Course 4 Artist Functions 4_callout:
+        create_function: Pāwhiri i konei ki te whakatuwhera i te rereatu "Ngā Taumahi" kātahi me pāwhiri i te pātene "Waihangahia he Taumahi".
+      Course 4 Artist Functions 5 OLD_callout:
+        house_hint: Kei te pai noa iho mēnā kāore anō te hanga kia rite ki te whare. Mā tātou e whakatika i te panga e haere ake nei.
+      Course 4 Artist Functions 8_callout:
+        edit_function: Pāwhiri i konei ki te whakatika i tō taumahi.
+      Course 4 Artist Params 2_callout:
+        length_parameter: Māu tēnei taumahi e whakahou ki te whakamahi i te tawhā "roanga"?
+      Course 4 Artist Params 4_callout:
+        create_function: Pāwhiri i konei ki te whakatuwhera i te rereatu "Ngā Taumahi" kātahi me pāwhiri i te pātene "Waihangahia he Taumahi".
+      Course 4 Artist Vars 1_callout:
+        repeat_blocks: Whakamahia te paraka "Tōai", ka tākai ki ērā atu paraka i te papamahi
+      Course 4 Artist Vars 10_callout:
+        set_sides: Whakamahia tēnei paraka ki te tautuhi i te "taha" ki te tau e tika ana kia pai ai te whakaoti i te panga.
+      Course 4 Artist Vars 12_callout:
+        set_length: Whakamahia tēnei paraka ki te tautuhi i te "roanga" ki te uara tika.
+      Course 4 Artist Vars 2_callout:
+        set_length: Whakamahia tēnei paraka ki te tautuhi i te "roanga" ki te uara tika.
+      Course 4 Artist Vars 3_callout:
+        place_variable: Tōia tō taurangi ki roto i tēnei paraka
+      Course 4 Artist Vars 6_callout:
+        degrees_per_side: Me whakawehe i te 360 mā te nui o ngā tapa kia kitea te rahi o ia koki ā-putu.
+      Course 4 Artist Vars 9_callout:
+        set_sides: Whakamahia tēnei paraka ki te tautuhi i te "taha" ki te tau e tika ana kia pai ai te whakaoti i te panga.
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: Whakamahia te paraka "tiki waireka" hou.
+      Course 4 Bee For Loops 6_callout:
+        actions_category: Kua hou katoa te hanga o te pouaka utauta! Kei reira hoki ngā paraka "Ngā Hohenga" ināianei.
+      Course 4 Bee Params 2_callout:
+        edit_get_nectar: Whakamahia tēnei pātene ki te whakatika i te taumahi me te panoni i te ahunga ka whaia e te Pī ki te tiki i te waireka.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: Pāwhiritia te "Whakahaerehia" ki te whakamātau i tō papatono
+      Course 4 Maze 4_callout:
+        repeat: Hoatu i ngā paraka ki roto i te koromeke ki te tōai i ngā whakahau
+      Course 4 Play Lab Params 3_callout:
+        edit_function: Pāwhiri i konei ki te whakatika i tō taumahi.
+      Course 4 Play Lab Params 6_callout:
+        edit_add_parameter: Pāwhiri i te whakatika ki te tāpiri i tētahi tawhā ki tō taumahi
+      Course 4 Play Lab Vars 1_callout:
+        arrows_move_actor: Whakamahia ngā pere ki te whakaneke i te kaiwhakaari
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: Whakamahia ngā pere ki te whakaneke i te kaiwhakaari
+      Eval Design Recipe .1_callout:
+        edit_function: Pāwhiri i konei ki te whakatika i tō taumahi.
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: Whakamahia te pouaka takaiho ki te waihanga i ngā tarahīhuka rerekē!
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: Whakamahia te pouaka takaiho ki te waihanga i ngā tarahīhuka rerekē!
+      Infinity_move_collide_callout:
+        Infinity_move_collide_callout: Whakatangihia mai tētahi oro ki te puta tēnei āhuatanga.
+      Infinity_move_directions_callout:
+        Infinity_move_directions_callout: Mā tēhea paraka a Baymax ka neke ki runga ina pēhia te pere runga?
+        Infinity_move_directions_callout_arrow: Whakamahia ēnei pere ki te whakatere
+      Infinity_move_right_callout:
+        Infinity_move_right_runbutton: Tāpiritia he paraka whakaneke ki konei
+      Infinity_repeat_callout:
+        Infinity_repeat_callout: Hoatu paraka Neke ki roto nei
+      NEW Course 4 Artist Functions 5_callout:
+        edit_function: Pāwhiri i konei ki te whakatika i tō taumahi.
+        function_editor_draw_square: Koinei tō whakamahukitanga taumahi. Ka rite tonu te rere o ēnei paraka i ia wā ka whakamahia e koe te paraka "tāngia he tapawhā"
+      NEW Course 4 Artist Functions 7_callout:
+        edit_function: Pāwhiri i konei ki te whakatika i tō taumahi.
+      NEW Course 4 Artist Functions 8_callout:
+        edit_function: Pāwhiri i konei ki te whakatika i tō taumahi.
+      NEW Course 4 Artist Params 10_callout:
+        create_function: Pāwhiri i konei ki te whakatuwhera i te rereatu "Ngā Taumahi" kātahi me pāwhiri i te pātene "Waihangahia he Taumahi".
+      NEW Course 4 Artist Params 9_callout:
+        edit_add_parameter: Pāwhiri i te whakatika ki te tāpiri i tētahi tawhā ki tō taumahi
+        add_and_drag_parameter: Patotuhia te ingoa o tō tawhā ki konei, ā, pāwhiritia te tāpiri kātahi ka tō atu ki roto i tō whakamahukitanga taumahi
+      NEW Course 4 Artist Vars 6_callout:
+        place_length_variable: Tōia te taurangi roanga ki konei ki te whakakapi i ngā tohu pātai
+      NEW Course 4 Bee For Loops 5_callout:
+        actions_category: Kua hou katoa te hanga o te pouaka utauta! Kei reira hoki ngā paraka "Ngā Hohenga" ināianei.
+      New Frozen Project_callout:
+        snowflake_dropdown: Whakamahia te pouaka takaiho ki te waihanga i ngā tarahīhuka rerekē!
+      Overworld Chop Trees_callout:
+        craft_callout_preplaced: Kua hoatu e mātou ētahi paraka hei tīmatanga māu
+      Overworld Chop Trees_2018_callout:
+        craft_callout_preplaced: Kua hoatu e mātou ētahi paraka hei tīmatanga māu
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Kua hoatu e mātou ētahi paraka hei tīmatanga māu
+      Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: Ka tīmata te waehere ki te hanga i tō whare. Ka taea e koe tēnā te whakamutu?
+      Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Ka tīmata te waehere ki te hanga i tō whare. Ka taea e koe tēnā te whakamutu?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Ka tīmata te waehere ki te hanga i tō whare. Ka taea e koe tēnā te whakamutu?
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: Pāwhiritia te "Whakahaerehia" ki te whakamātau i tō papatono
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: Pāwhiritia te "Whakahaerehia" ki te whakamātau i tō papatono
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Pāwhiritia te "Whakahaerehia" ki te whakamātau i tō papatono
+      Overworld Place Wall_callout:
+        craft_inside_repeat: Tōaitia ngā hohenga mā te hoatu i ngā paraka ki roto nei
+      Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Tōaitia ngā hohenga mā te hoatu i ngā paraka ki roto nei
+      Overworld Place Wall_2019_callout:
+        craft_inside_repeat: Tōaitia ngā hohenga mā te hoatu i ngā paraka ki roto nei
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: Mā tēnei waehere e taki i te tahepuia. E taea ana e koe tētahi tono neke ki mua te tāpiri?
+      Underground Avoiding Lava_2018_callout:
+        craft_callout_moveforward: Mā tēnei waehere e taki i te tahepuia. E taea ana e koe tētahi tono neke ki mua te tāpiri?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Mā tēnei waehere e taki i te tahepuia. E taea ana e koe tētahi tono neke ki mua te tāpiri?
+      Underground Iron_callout:
+        craft_what_is_iron: Mainahia tēnei rino!
+      Underground Iron_2018_callout:
+        craft_what_is_iron: Mainahia tēnei rino!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: Mainahia tēnei rino!
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: Whakamahia te paraka "waihangahia he porohita", kātahi, me panoni i tōna rahi.
+      frozen cross rotate_callout:
+        replace_questions_degree: Whakamahia te pouaka takaiho ki te whakakapi i te "???" ki tētahi tau
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Whakamahia te pouaka takaiho ki te whakakapi i te "???" ki tētahi tau
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Whakamahia te pouaka takaiho ki te whakakapi i te "???" ki tētahi tau
+      frozen cross_callout:
+        repeat_blocks_1: "(1) Whakamahia tēnei paraka, ā, hoatu kia karapotia ngā paraka kiwikiwi i te papamahi"
+        repeat_blocks_2: (2) Nekehia te paraka "Tōai" ki konei ka hoatu ai he paraka kiwikiwi ki roto
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: Whakamahia te paraka tōai ki te waihanga i tēnei āhua.
+      frozen diamond_callout:
+        frozen_diamond_repeat: Whakamahia te paraka tōai ki te waihanga i tēnei āhua.
+      frozen freeplay_callout:
+        snowflake_dropdown: Whakamahia te pouaka takaiho ki te waihanga i ngā tarahīhuka rerekē!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Whakamahia te pouaka takaiho ki te waihanga i ngā tarahīhuka rerekē!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Whakamahia te pouaka takaiho ki te waihanga i ngā tarahīhuka rerekē!
+      frozen line_callout:
+        move_elsa_forward: Tōia te paraka "Neke ki Mua" ka whakpiri ki raro i te paraka "Ina Whakahaerehia" kia neke a Elsa ki mua
+      frozen line_b_callout:
+        move_elsa_forward: Tōia te paraka "Neke ki Mua" ka whakpiri ki raro i te paraka "Ina Whakahaerehia" kia neke a Elsa ki mua
+      frozen line_test_callout:
+        move_elsa_forward: Tōia te paraka "Neke ki Mua" ka whakpiri ki raro i te paraka "Ina Whakahaerehia" kia neke a Elsa ki mua
+      frozen perpendicular_callout:
+        turn_elsa: Whakamahia te paraka "Huri" kia huri a Elsa. Mā te tau i te pouaka takaiho e tohu ka pēhea te nui o tana huri
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: Whakamahia te paraka "waihangahia he peka tarahīhuka"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Whakamahia te paraka "waihangahia he peka tarahīhuka"
+      frozen square iterative_callout:
+        frozen_create_square: Whakapiri i ētahi atu paraka ki konei ki te waihanga i tētahi tapawhā
+      frozen square iterative_b_callout:
+        frozen_create_square: Whakapiri i ētahi atu paraka ki konei ki te waihanga i tētahi tapawhā
+      frozen square iterative_test_callout:
+        frozen_create_square: Whakapiri i ētahi atu paraka ki konei ki te waihanga i tētahi tapawhā
+      frozen square loop 3x_callout:
+        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???" ki tētahi tau
+      frozen square loop 3x_b_callout:
+        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???" ki tētahi tau
+      frozen square loop 3x_test_callout:
+        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???" ki tētahi tau
+      frozen square loop_callout:
+        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???" ki tētahi tau
+      frozen square loop_b_callout:
+        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???" ki tētahi tau
+      frozen square loop_test_callout:
+        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???" ki tētahi tau
+      frozen square snowflake_callout:
+        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???" ki tētahi tau
+      frozen square snowflake_b_callout:
+        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???" ki tētahi tau
+      frozen square snowflake_test_callout:
+        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???" ki tētahi tau
+      grade4_artist_parameters_squares1_callout:
+        edit_add_parameter: Pāwhiri i te whakatika ki te tāpiri i tētahi tawhā ki tō taumahi
+        add_and_drag_parameter: Patotuhia te ingoa o tō tawhā ki konei, ā, pāwhiritia te tāpiri kātahi ka tō atu ki roto i tō whakamahukitanga taumahi
+      grade4_frozen_freeplay_callout:
+        snowflake_dropdown: Whakamahia te pouaka takaiho ki te waihanga i ngā tarahīhuka rerekē!
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: Whakamahia te paraka "waihangahia he porohita", kātahi, me panoni i tōna rahi.
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: Whakamahia te paraka tōai ki te waihanga i tēnei āhua.
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: Whakamahia te paraka tōai ki te waihanga i tēnei āhua.
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: Whakamahia te paraka tōai ki te waihanga i tēnei āhua.
+      grade4_frozen_square_callout:
+        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???" ki tētahi tau
+      grade4_frozen_square_loop1_callout:
+        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???" ki tētahi tau
+      grade4_frozen_square_loop2_callout:
+        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???" ki tētahi tau
+      grade4_frozen_square_loop3_callout:
+        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???" ki tētahi tau
+      grade5_artist_parameters_squares1_callout:
+        edit_add_parameter: Pāwhiri i te whakatika ki te tāpiri i tētahi tawhā ki tō taumahi
+        add_and_drag_parameter: Patotuhia te ingoa o tō tawhā ki konei, ā, pāwhiritia te tāpiri kātahi ka tō atu ki roto i tō whakamahukitanga taumahi
+      grade5_artist_parameters_triangles1aa_callout:
+        edit_add_parameter: Pāwhiri i te whakatika ki te tāpiri i tētahi tawhā ki tō taumahi
+        add_and_drag_parameter: Patotuhia te ingoa o tō tawhā ki konei, ā, pāwhiritia te tāpiri kātahi ka tō atu ki roto i tō whakamahukitanga taumahi
+      grade5_artist_variables_pentagons1_callout:
+        place_length_variable: Tōia te taurangi roanga ki konei ki te whakakapi i ngā tohu pātai
+      grade5_artist_variables_pentagons12_callout:
+        set_length: Whakamahia tēnei paraka ki te tautuhi i te "roanga" ki te uara tika.
+      grade5_artist_variables_square7_callout:
+        degrees_per_side: Me whakawehe i te 360 mā te nui o ngā tapa kia kitea te rahi o ia koki ā-putu.
+      grade5_artist_variables_triangles2_callout:
+        set_length: Whakamahia tēnei paraka ki te tautuhi i te "roanga" ki te uara tika.
+      grade5_playlab_variables1_callout:
+        arrows_move_actor: Whakamahia ngā pere ki te whakaneke i te kaiwhakaari
+      grade5_playlab_variables11_callout:
+        edit_add_parameter: Pāwhiri i te whakatika ki te tāpiri i tētahi tawhā ki tō taumahi
+      grade5_playlab_variables1ask_callout:
+        arrows_move_actor: Whakamahia ngā pere ki te whakaneke i te kaiwhakaari

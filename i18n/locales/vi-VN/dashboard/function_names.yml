@@ -1,0 +1,56 @@
+vi:
+  data:
+    function_names:
+      x: x
+      details: những thông tin chi tiết
+      draw eyebrow: vẽ lông mày
+      draw pupil: vẽ học sinh
+      draw a circle: vẽ một hình tròn
+      draw a car: vẽ 1 cái ô tô
+      draw_rect: vẽ_hình chữ nhật
+      draw square: vẽ hình vuông
+      jump to controller top left: nhảy đến trên bộ điều khiển bên trái
+      jump to middle: nhảy vào giữa
+      draw a button: vẽ một nút
+      draw cord: vẽ dây
+      draw R pad: vẽ đường chữ R
+      draw left leg: vẽ chân trái
+      draw right leg: vẽ chân phải
+      draw body and arms: vẽ cơ thể và cánh tay
+      draw a head: vẽ 1 cái đầu
+      draw sitting stick figure: vẽ hình que ngồi
+      draw head: vẽ đầu
+      draw arms: vẽ tay
+      jump to neck: nhảy vào cổ
+      draw O: vẽ O
+      draw D: vẽ D
+      draw E: vẽ E
+      draw ear stems: vẽ thân tai
+      big gear: bánh răng lớn
+      small gear: bánh răng nhỏ
+      draw a hexagon: vẽ một hình lục giác
+      draw a flower: vẽ một bông hoa
+      draw a square: vẽ một hình vuông
+      draw a snowflake: vẽ một bông tuyết
+      draw 3 hexagons: vẽ 3 hình lục giác
+      draw 4 hexagons: vẽ 4 hình lục giác
+      draw 5 hexagons: vẽ 5 hình lục giác
+      draw a tree: vẽ một cái cây
+      draw a triangle: vẽ một hình tam giác
+      draw a house: vẽ một căn nhà
+      draw a star: vẽ một ngôi sao
+      do something: thực hiện
+      jump: nhảy
+      set score: thiết lập điểm
+      get nectar: lấy phấn hoa
+      test: kiểm thử
+      diamond: kim cương
+      move: di chuyển/ dịch chuyển
+      move right: qua phải
+      move up: di chuyển lên
+      move down: di chuyển xuống
+      move left: qua trái
+      collect: thu thập
+      turn left: rẽ trái
+      move forward: đi thẳng
+      turn right: rẽ phải

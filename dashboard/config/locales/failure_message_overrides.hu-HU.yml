@@ -1,0 +1,42 @@
+---
+hu:
+  data:
+    failure_message_overrides:
+      Code Studio Puzzle Challenge 1 - Artist_failure_message_override: Szép próbálkozás!
+        Próbáld újra és sikerül.
+      Code Studio Puzzle Challenge 10 - Bee_failure_message_override: Szép próbálkozás!
+        Próbáld újra és sikerül.
+      Code Studio Puzzle Challenge 10b - Bee_failure_message_override: Szép próbálkozás!
+        Próbáld újra és sikerül.
+      Code Studio Puzzle Challenge 11 - Artist_failure_message_override: Szép próbálkozás!
+        Próbáld újra és sikerül.
+      Code Studio Puzzle Challenge 12 - Artist_failure_message_override: Szép próbálkozás!
+        Próbáld újra és sikerül.
+      Code Studio Puzzle Challenge 13 - Artist_failure_message_override: Szép próbálkozás!
+        Próbáld újra és sikerül.
+      Code Studio Puzzle Challenge 14 - Artist_failure_message_override: Szép próbálkozás!
+        Próbáld újra és sikerül.
+      Code Studio Puzzle Challenge 2 - Artist_failure_message_override: Szép próbálkozás!
+        Próbáld újra és sikerül.
+      Code Studio Puzzle Challenge 3 - Artist_failure_message_override: Szép próbálkozás!
+        Próbáld újra és sikerül.
+      Code Studio Puzzle Challenge 4 - Artist_failure_message_override: Szép próbálkozás!
+        Próbáld újra és sikerül.
+      Code Studio Puzzle Challenge 5 - Bee_failure_message_override: Szép próbálkozás!
+        Próbáld újra és sikerül.
+      Code Studio Puzzle Challenge 6 - Bee_failure_message_override: Szép próbálkozás!
+        Próbáld újra és sikerül.
+      Code Studio Puzzle Challenge 7 - Bee_failure_message_override: Szép próbálkozás!
+        Próbáld újra és sikerül.
+      Code Studio Puzzle Challenge 8 - Bee_failure_message_override: Szép próbálkozás!
+        Próbáld újra és sikerül.
+      Code Studio Puzzle Challenge 9 - Bee_failure_message_override: Szép próbálkozás!
+        Próbáld újra és sikerül.
+      Code Studio Puzzle Challenge Var - Artist_failure_message_override: Szép próbálkozás!
+        Próbáld újra és sikerül.
+      Course 4 Artist Vars 10_failure_message_override: Győződj meg róla, hogy az
+        oldal változót használtad!
+      Course 4 Playlab For Loops 4b_failure_message_override: Ne feledje, hogy mindkét
+        karakternek ugyanannyi lépésből kell elérnie a zászlóit!
+      Course 4 Playlab For Loops 5b_failure_message_override: Ne feledje, hogy mindkét
+        karakternek, ugyanazon a helyen kell megállnia.

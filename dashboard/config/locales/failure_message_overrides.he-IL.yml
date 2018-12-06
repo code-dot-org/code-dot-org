@@ -1,0 +1,51 @@
+---
+he:
+  data:
+    failure_message_overrides:
+      Code Studio Puzzle Challenge 1 - Artist_failure_message_override: ניסיון יפה!
+        נסה שוב כדי לעשות זאת נכון.
+      Code Studio Puzzle Challenge 10 - Bee_failure_message_override: ניסיון יפה!
+        נסה שוב כדי לעשות זאת נכון.
+      Code Studio Puzzle Challenge 10b - Bee_failure_message_override: ניסיון יפה!
+        נסה שוב כדי לעשות זאת נכון.
+      Code Studio Puzzle Challenge 11 - Artist_failure_message_override: ניסיון יפה!
+        נסה שוב כדי לעשות זאת נכון.
+      Code Studio Puzzle Challenge 12 - Artist_failure_message_override: ניסיון יפה!
+        נסה שוב כדי לעשות זאת נכון.
+      Code Studio Puzzle Challenge 13 - Artist_failure_message_override: ניסיון יפה!
+        נסה שוב כדי לעשות זאת נכון.
+      Code Studio Puzzle Challenge 14 - Artist_failure_message_override: ניסיון יפה!
+        נסה שוב כדי לעשות זאת נכון.
+      Code Studio Puzzle Challenge 2 - Artist_failure_message_override: ניסיון יפה!
+        נסה שוב כדי לעשות זאת נכון.
+      Code Studio Puzzle Challenge 3 - Artist_failure_message_override: ניסיון יפה!
+        נסה שוב כדי לעשות זאת נכון.
+      Code Studio Puzzle Challenge 4 - Artist_failure_message_override: ניסיון יפה!
+        נסה שוב כדי לעשות זאת נכון.
+      Code Studio Puzzle Challenge 5 - Bee_failure_message_override: ניסיון יפה! נסה
+        שוב כדי לעשות זאת נכון.
+      Code Studio Puzzle Challenge 6 - Bee_failure_message_override: ניסיון יפה! נסה
+        שוב כדי לעשות זאת נכון.
+      Code Studio Puzzle Challenge 7 - Bee_failure_message_override: ניסיון יפה! נסה
+        שוב כדי לעשות זאת נכון.
+      Code Studio Puzzle Challenge 8 - Bee_failure_message_override: ניסיון יפה! נסה
+        שוב כדי לעשות זאת נכון.
+      Code Studio Puzzle Challenge 9 - Bee_failure_message_override: ניסיון יפה! נסה
+        שוב כדי לעשות זאת נכון.
+      Code Studio Puzzle Challenge Var - Artist_failure_message_override: ניסיון יפה!
+        נסה שוב כדי לעשות זאת נכון.
+      Course 4 Artist Vars 10_failure_message_override: שים לב שהינך משתמש במשתני
+        הצד!
+      Course 4 Playlab For Loops 4b_failure_message_override: זכור, גם תווים צריכים
+        לקבל את הדגל שלהם באותו מספר צעדים!
+      Course 4 Playlab For Loops 5b_failure_message_override: זכור, גם תווים צריך
+        לעצור באותו מקום.
+      Eval Strings Images .2_failure_message_override: ודא כי הוספת את המילה "Universe"
+        כדי לגרום לקוד לומר "Hello, Universe"
+      Kiki_StarWars_Test_5_failure_message_override: המשחק נגמר!
+      Kiki_StarWars_Test_5_Example_failure_message_override: המשחק נגמר!
+      MC HOC 2016 Level 2-2_failure_message_override: השתמש בפקודות `זוז קדימה` ו-`פנה`
+        כדי לגרום לתרנגול לזוז.
+      MC HOC 2016 New Walk_failure_message_override: כדי לפתוח את הדלת, הקש על מקש
+        הרווח או גע בלוח המשחק שמתחת עם הפנים אליו. היכנס פנימה כדי להמשיך.
+      sample6_failure_message_override: לא בדיוק. המשך לנסות! [עבור לאיזור המשחק]

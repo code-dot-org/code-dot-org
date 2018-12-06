@@ -1,0 +1,9 @@
+bg:
+  data:
+    course:
+      name:
+        allthethingscourse:
+          title: курс за всичко
+          description_short: Това е курс за всичко
+          description_student: Това е курс за всичко и има по-дълго описание за учениците
+          description_teacher: Това е курс за всичко и има по-дълго описание за учителите

@@ -1,0 +1,1732 @@
+---
+id:
+  slides:
+    maze_intro:
+      1:
+        image: notes/hoc1_1.jpg
+        text: Selamat datang pada jam pertama belajar mengkode. Ayo coba pengalaman
+          pertama anda memprogram.
+      2:
+        image: notes/hoc1_2.jpg
+        text: Kita akan mengunakan Blockly, sebuah bahasa pemrograman dimana anda
+          tinggal menarik dan menempatkan blok untuk menuliskan kode.
+      3:
+        image: notes/hoc1_3.jpg
+        text: Kebanyakan kode harus ditulis, tetapi Blockly menggunakan visual. Setiap
+          satu blok sama dengan sebuah baris dari kode asli.
+      4:
+        image: notes/hoc1_4.jpg
+        text: Kalian akan mempelajari fondasi ilmu komputer, berdasarkan konsep-konsep
+          yang digunakan dimana-mana, mulai dari  pembuatan app sampai mengkontrol
+          rover di planet Mars.
+      5:
+        image: notes/hoc1_5.jpg
+        text: Program merupakan sekumpulan instruksi yang harus dikerjakan komputer.
+      6:
+        image: notes/hoc1_6.jpg
+        text: Tujuan dari program pertama anda adalah membuat Angry Birds melalui
+          labirin kemudian menangkap babi hijau.
+      7:
+        image: notes/hoc1_7.jpg
+        text: Pada sisi kiri merupakan labirin dimana program anda akan dijalankan.
+          Instruksi dari setiap teka-teki ada dibawah labirin.
+      8:
+        image: notes/hoc1_8.jpg
+        text: Pada kotak perkakas ditengah memiliki semua perintah untuk Angry Bird.
+          Anda akan menggunakannya untuk membangun kode anda.
+      9:
+        image: notes/hoc1_9.jpg
+        text: Pada bagian kanan adalah area kerja dimana anda akan menarik blok dari
+          kotak perkakas untuk membuat program. Untuk menghapus blok, tarik kedalam
+          tempat sampah yang berada disudut.
+      10:
+        image: notes/hoc1_10.jpg
+        text: Setiap blok berisi satu instruksi. Jika ada menarik "move forward" blok
+          kedalam area kerja anda dan menekan "Run Program", maka burung akan berpindah
+          satu petak dalam labirin.
+      11:
+        image: notes/hoc1_11.jpg
+        text: Untuk melakukan lebih dari satu aksi, kamu bisa menarik banyak blok
+          ke ruang kerjamu dan melampirkan mereka. Burung itu akan melakukan perintah
+          itu dari atas ke bawah.
+      12:
+        image: notes/hoc1_12.jpg
+        text: Jika anda menjalankan program dan ingin meperbaiki dan mencobanya kembali,
+          tekan tombol "Atur Ulang".
+      13:
+        image: notes/hoc1_13.jpg
+        text: Ayo kita ambil babi-babi tersebut!
+    artist_intro:
+      1:
+        text: Halo, Nama saya JR! Setiap tim balap mobil perlu programmer untuk dapat
+          memenangkan balapan. Mereka menganalisis data dari mobil untuk dapat membuatnya
+          meluncur lebih cepat.
+      2:
+        text: Dalam teka-teki ini, Anda akan menjadi seorang artis yang menarik garis
+          ke mana pun mereka berjalan.
+      3:
+        text: Blok ini mengatakan "Gerak maju sepanjang 100 piksel." Pixel adalah
+          titik-titik yang sangat kecil pada layar Anda.
+      4:
+        text: Blok ini mengatakan "belok kanan oleh 90 derajat." Ini akan membuat
+          artis Anda belok dengan sudut yang sama sebagai blok "belok" di teka-teki
+          labirin yang sebelumnya.
+      5:
+        text: Klik pada panah di salah satu blok ini untuk mengubah arah artis bergerak
+          maju atau belok. Cobalah mengenali cara kerja blok-blok ini.
+    farmer_intro:
+      1:
+        text: Halo, Saya Paola! Dalam teka-teki ini, Anda menjadi seorang petani yang
+          harus membuat ladangmu benar-benar datar sebelum memulai menanam tanaman.
+      2:
+        text: Anda harus membantu menghapus semua tumpukan tanah dan mengisi semua
+          lubang.
+      3:
+        text: Blok baru yang memindahkan 1 sekop tumpukan tanah dan menimbun 1 sekop
+          tanah ke sebuah lubang.
+      4:
+        text: Tumpukan dan lubang adalah ukuran yang berbeda, sehingga Anda harus
+          memberitahu petani berapa banyak sekop yang harus digunakan.
+    flappy_intro:
+      1:
+        image: notes/flappy01.jpg
+        text: Hi, I 'm Katie! Salah satu hal yang paling menarik tentang ilmu komputer
+          adalah bahwa sebuah program komputer bisa interaktif.
+      2:
+        image: notes/flappy02.jpg
+        text: Jika seseorang mengklik atau mengetuk atau mengetik di komputer atau
+          telepon, yang menghasilkan sebuah EVENT, dan ada beberapa kode yang dapat
+          memutuskan apa yang harus dilakukan ketika ini terjadi.
+      3:
+        image: notes/flappy03.jpg
+        text: 'Contohnya, Kamu bisa mendapatkan pesan ''EVEN-HANDLER'' isinya "ketika
+          maus ditekan, mainkan sebuah bunyi" '
+      4:
+        image: notes/flappy04.jpg
+        text: Pernahkan kamu mendengar permainan FlappyBird? Dengan menggunakan 'Event
+          Handlers', kita akan belajar untuk memprogram FlappyBird buatan kita sendiri!
+      5:
+        image: notes/flappy05.jpg
+        text: Kode yang Anda akan tulis melibatkan mengambil blok yang mewakili perintah
+          untuk komputer. Didalam masing-masing blok, ada kode yang nyata.
+      6:
+        image: notes/flappy06.jpg
+        text: 'Jika Anda melihat di ruang kerja (workspace), ada beberapa blok hijau
+          yang telah diisi - blok-bok ini dinamakan "event handlers" '
+      7:
+        image: notes/flappy07.jpg
+        text: Jika Anda ingin burung mengepakkan sayap ketika Anda klik maus, Anda
+          dapat melakukannya dengan melampirkan blok "kepakkan sayap" ke "event handler"
+          tertentu, dan karena itu dalam permainan Anda setiap kali Anda mengklik
+          maus, burung akan mengepakkan sayapnya.
+      8:
+        image: notes/flappy08.jpg
+        text: Dalam setiap teka-teki kegiatan ini kami akan memperkenalkan jenis baru
+          dari peristiwa sebagai blok hijau pada ruang kerja (workspace), dan Anda
+          dapat memutuskan blok mana yang harus ditempelkan sesuai "event"nya.
+      9:
+        image: notes/flappy09.jpg
+        text: Ketika Anda melihat menu seperti ini, itu berarti Anda dapat mengubah
+          pengaturan - seperti bunyi apa yang bermain ketika flappy menyentuh permukaan.
+      10:
+        image: notes/flappy10.jpg
+        text: Dalam teka-teki akhir Anda akan dapat membuat permainan Anda sendiri
+          dan berbagi dengan teman-teman Anda. Selamat bersenang-senang!
+    loop_times:
+      1:
+        image: notes/hoc2_1.jpg
+        text: Hai, Saya Mark! Ayo kita belajar mengenai perulangan (loop). Dengan
+          menggunakan perulangan anda dapat mengatakan pada komputer untuk mengulangi
+          sekumpulan aksi berulang ulang kali, ribuan kali atau bahkan milayaran kali.
+      2:
+        image: notes/hoc2_2.jpg
+        text: Dalam teka-teki ini, kita menginginkan untuk membuat burung berpindah
+          5 petak menuju babi.
+      3:
+        image: notes/hoc2_3.jpg
+        text: Kita dapat menggunakan blok "repeat" untuk membantu kita.
+      4:
+        image: notes/hoc2_4.jpg
+        text: Daripada menarik 5 blok "move forward"...
+      5:
+        image: notes/hoc2_5.jpg
+        text: Kita dapat menempatkan blok "move forward" dalam blok "repeat" dan menuliskan
+          angka dalam blok untuk menentukan berapa banyak perulangan yang harus dilakukan.
+      6:
+        image: notes/hoc2_6.jpg
+        text: 'Dan yang terpenting: anda dapat menempatkan lebih dari satu perintah
+          dalam sebuah blok "repeat".'
+      7:
+        image: notes/hoc2_7.jpg
+        text: Nikmatilah menggunakan blok "repeat" baru anda!
+    loop_until:
+      1:
+        image: notes/hoc3_1.jpg
+        text: Hai, Saya Chris. Sebelum bergabung dengan Miami Heat, saya pergi ke
+          Georgia Tech untuk mempelajari Ilmu Komputer. Ayo kita coba blok baru kita,
+          yaitu blok "repeat until".
+      2:
+        image: notes/hoc3_2.jpg
+        text: bagaimana jika kita tidak mengetahui berapa jarak untuk burung harus
+          berpindah untuk sampai kepada babi?
+      3:
+        image: notes/hoc3_3.jpg
+        text: Jika kita meletakan blok "move forward" kedalam blok "repeat until",
+          maka burung akan begerak maju sampai ia mencapai babi (atau menabrak tembok).
+      4:
+        image: notes/hoc3_4.jpg
+        text: 'Jangan lupa: sama seperti sebelumnya, kita dapat menaruh beberapa blok
+          didalam blok "Ulangi sampai" (repeat until) dan blok blok tersebut akan
+          diulang.'
+    if:
+      1:
+        image: notes/hoc4_1.jpg
+        text: 'Hai, Saya Bill! Mari kita belajar konsep fundamental yang baru: pernyataan
+          "jika" (if). Ini yang dapat membuat komputer untuk membuat keputusan.'
+      2:
+        image: notes/hoc4_2.jpg
+        text: 'Sehari-hari andapun terbiasa menggunakan menggunakan pernyataan "jika"
+          (if). Misalnya: setiap pagi sebelum keluar dari rumah , anda berkata: "jika"
+          diluar hujan, maka saya perlu menggunakan jas hujan.'
+      3:
+        image: notes/hoc4_3.jpg
+        text: Kita dapat membuat zombie untuk memeriksa jika ada jalan ke kiri, dan
+          jika ia menemukannya, kita dapat membuat ia untuk menuju ke arah tersebut.
+      4:
+        image: notes/hoc4_4.jpg
+        text: Untuk menuliskan kode seperti ini, mari kita menarik keluar blok "jika"
+          (if) dan menempatkan blok "belok kiri" (turn left) kedalamnya.
+      5:
+        image: notes/hoc4_5.jpg
+        text: Sekarang, jika kita tempatkan sebuah blok "maju kedepan" (move forward)
+          paling pertama dan sebuah blok "ulangi" (repeat) menyelimuti seluruh bagian,
+          maka setiap zombie bergerak, ia akan mengecek apakah ada jalan ke kiri dan
+          berbelok menuju arah tersebut. Perintah "ulangi" (repeat) sangatlah penting,
+          untuk melakukan pengecekan setiap belokan pada setiap langkah.
+      6:
+        image: notes/hoc4_6.jpg
+        text: Pernyataan if sangatlah penting dalam ilmu komputer. Salah satu dari
+          program yang pertama saya tulis adalah game tik-tak-tol, dan ada sebuah
+          pernyataan if yang mengatakan jika pemain yang lain hampir menang, maka
+          halangi kotak yang akan membuat ia menang.
+      7:
+        image: notes/hoc4_7.jpg
+        text: Selamat berexperimen dengan blok "jika" (if)!
+    if_else:
+      1:
+        image: notes/hoc5_1.jpg
+        text: Halo, nama saya Saloni. Saya menggunakan ilmu komputer untuk menolong
+          memecahkan masalah di kesehatan dan obat-obatan. Mari kita belajar tentang
+          blok "jika tidak" /if else. Ini terlihat blok "jika" /if,tetapi terdapat
+          bagian tambahan di akhir mengatakan "jika tidak" /else.
+      2:
+        image: notes/hoc5_2.jpg
+        text: Jika saya menaruh blok "move forward"/"gerakmaju" di tempat bertanda
+          blok  "do"/"lakukan", dan menaruh blok "turn left"/"belok kiri" ditempat
+          bertanda blok  "else"/"jika tidak"  yang berarti bahwa zombie akan memilih
+          antara 2 pilihan. Jika ada jalan ke depan, zombie akan bergerak maju, dan
+          sebaliknya (tidak ada jalan ke depan), zombie akan berbelok ke kiri.
+      3:
+        image: notes/hoc5_3.jpg
+        text: Seperti  blok "if"/"jika", kita dapat menempatkan blok "if else"/"jika
+          lain"  dalam blok "repeat"/"Ulangi" sehingga zombie terus bergerak dan blok
+          "if else"/"jika lain" akan terus menerus  memeriksa apakah ada tempat untuk
+          berbalik.
+      4:
+        image: notes/hoc5_4.jpg
+        text: Sekarang, mendapatkan mereka zombie di tempat mereka berasal!
+    if_else_scrat:
+      1:
+        text: pernyataan if-else adalah keputusan antara dua hal. Mari kita lihat
+          bagaimana kita dapat menggunakan pernyataan if-else dengan teman Scrat tupai
+          kami .
+      2:
+        text: Blok ini terlihat sama dengan blok "jika"/"if" tetapi ada bagian tambahan
+          di bawah yang mengatakan "else"/"kecuali". Jika saya menempatkan blok "move
+          forward"/"bergerak maju" di blok yang mengatakan "do"/"lakukan" dan blok
+          "turn left/ "belok kiri" di blok yang mengatakan "else"/"kecuali", itu berarti
+          Scrat si tupai akan bergerak maju jika ada jalan di depan. Jika tidak ada
+          jalan di depan, Scrat akan berbelok ke kiri.
+      3:
+        text: Hal ini membuat keputusan dan melakukan salah satu dari dua tindakan
+          berdasarkan keputusan itu. Dan seperti halnya  blok "if" / "jika", Anda
+          dapat menempatkan blok "if-else" / "kecuali-jika" dalam blok "ulangi" .
+      4:
+        text: Sekarang mari kita membantu Scrat tupai mendapatkan bijinya itu!
+    function:
+      1:
+        text: Halo, saya Brina, seorang programer dari Instagram. Fungsi adalah baris-baris
+          tertentu kode yang Anda ingin menggunakan berkali-kali. Daripada menulis
+          kode yang sama setiap kali, Anda cukup menggunakan satu blok.
+      2:
+        text: Kita akan belajar bagaimana cara membuat suatu fungsi. Suatu fungsi
+          akan memiliki sebuah tanda bintang di sudut dan nama fungsi ditulis di atas
+          blok.
+      3:
+        text: Blok yang masuk dalam fungsi menjelaskan apa yang dikerjakannya. Jadi
+          fungsi ini dinamakan "Timbunlah 5" dan itu terdiri dari blok "Ulangi" dan
+          blok "timbun".
+      4:
+        text: Fungsi terletak di area kerja, tetapi seluruh fungsi tidak akan bekerja
+          sampai Anda menarik keluar blok "fungsi isi 5" dari fungsi kategori.
+      5:
+        text: 'Mari kita bersenang-senang dengan "Fungsi"! '
+    loop_while:
+      1:
+        text: 'Hi, Saya Makinde! Mari kita belajar tentang blok "selama". '
+      2:
+        text: Blok "Selama" akan mengerjakan perintah-perintah yang Anda tempatkan
+          di dalamnya selama kondisinya berlaku.
+      3:
+        text: Misalnya, jika si petani berdiri di tumpukan, maka ia akan terus memindahkan
+          1 sekop SELAMA tumpukan masih ada.
+    loop_for:
+      1:
+        text: Halo, saya Trina, dan saya bekerja untuk Pixar. Saya telah terlibat
+          didalam produksi banyak film, termasuk Shrek.
+      2:
+        text: Ini adalah loop "counter". Loop ini akan melakukan aksi berulang kali
+          dan Anda dapat membuat aksi-aksi sedikit berbeda setiap kali.
+      3:
+        text: Dalam contoh ini, loop "counter" mendeskripsikan "Hitung dengan konter
+          dari 50 sampai 90 dengan step 10" dan di dalamnya, ada sebuah blok "Gambar
+          persegi". Taruh blok "konter" dari bagian "Variabel" ke dalam "panjang".
+      4:
+        text: Ini berarti si artis akan menggambar beberapa buah persegi, yang pertama
+          memiliki panjang 50 piksel, lalu tambahkan 10 piksel dan kemudian gambar
+          lagi sebuah persegi dengan 60 piksel panjang. Kemudian akan terus tambahkan
+          10 piksel lagi sampai kotak terakhir dengan panjang 90 piksel. Jadi kita
+          akan memiliki beberapa kotak dengan panjang 50, 60, 70, 80 dan 90 piksel.
+    parameters:
+      1:
+        text: Hi, I 'm Janete, dan saya adalah seorang programer di Zynga.
+      2:
+        text: Bagaimana jika kita ingin menarik beberapa segitiga dengan sisi yang
+          berbeda?
+      3:
+        text: Kita bisa menulis semua kode yang menggambar segitiga satu persatu atau
+          kita bisa menggunakan sebuah fungsi dengan parameter.
+      4:
+        text: Untuk dapat melakukannya, klik gambar bintang biru pada fungsi "tarik
+          segitiga". Kemudian taruhlah "masukan nama" ke dalam blok "masukan".
+      5:
+        text: Kemudian jika Anda menulis "panjang" di tempat di mana bertanda "x"
+          dan tekan "Enter" Anda akan membuat panjang sebagai masukan untuk fungsi
+          Anda.
+      6:
+        text: Kemudian klik tanda bintang. Lalu, klik pada kategori variabel dan taruhlah
+          blok "panjang" pada blok "gerak maju" dari fungsi Anda. Dan buanglah blok
+          sebelumnya.
+      7:
+        text: Untuk menggunakan fungsi Anda dengan parameter, klik pada kategori fungsi
+          dan tariklah keluar fungsi "menggambar sebuah segitiga dengan panjang".
+      8:
+        text: Sekarang Anda dapat menggunakan blok matematika untuk memasukkan nomor
+          yang berbeda untuk menggambar segitiga dengan ukuran yang berbeda.
+    hoc_wrapup:
+      1:
+        image: notes/hoc6_1.jpg
+        text: Horee! Dengan teka-teki terakhir yang anda pecahkan, anda telah menuliskan
+          kode yang dapat mengerakan robot untuk mencari jalan keluar dari labirin
+          tidak bercabang atau terowongan dengan berbagai panjang, apakah itu sebuah
+          zombie, burung, mars rover, atau bahkan pengemudi otomatis mobil.
+      2:
+        image: notes/hoc6_2.jpg
+        text: Konsep dasar yang anda gunakan merupakan jatung dari setiap pemrograman
+          atau app yang anda pernah gunakan. Kita mempelajari menangani perulangan
+          (loops), ulangi (repeat), pernyataan ulangi sampai (repeat until), pernyataan
+          jika (if) dan pernyataan jika tidak (if else).
+      3:
+        image: notes/hoc6_3.jpg
+        text: Jika anda menyukai waktu pertama anda mengkoding, maka kunjungilah code.org
+          untuk melanjutkan edukasi dalam ilmu pengetahuan komputer. Saat anda menyelesaikan
+          kursus 20 jam, maka anda akan menguasai dasar pemrograman, dan anda dapat
+          memulai belajar cara membuat aplikasi hp, instruksi robot, games, apa pun
+          yang anda ingin lakukan.
+      4:
+        image: notes/hoc6_4.jpg
+        text: 'Teknologi merubah segala sesuatu yang kita lakukan dan tidak peduli
+          apakah anda muda atau tua: Pemrograman sangat menyenangkan, kreatif dan
+          dapat dipelajari oleh semua orang.'
+    20_wrapup:
+      1:
+        text: Catatan sedang dipersiapkan!
+    frozen_intro:
+      1:
+        text: Hi, nama saya Lyndsey. Saya model, bertindak, dan menulis aplikasi saya
+          sendiri. Mari kita menggunakan kode bergabung dengan Anna dan Elsa karena
+          mereka menjelajahi keajaiban dan keindahan es.
+      2:
+        text: Anda akan menciptakan kepingan salju dan pola seperti skate es Anda
+          dan membuat wonderland musim dingin yang kemudian dapat berbagi dengan teman-teman
+          Anda.
+      3:
+        text: Dalam satu jam berikutnya, Anda akan mempelajari dasar-dasar bagaimana
+          membuat kode. Pemrograman tradisional biasanya dalam teks, tapi kami akan
+          menggunakan Blockly, yang menggunakan blok visual yang dapat Anda drag dan
+          drop dalam menulis program. Inilah cara bagaimana mahasiswa mempelajari
+          dasar-dasar pemograman. Di mana saja, Anda tetap bisa membuat kode.
+      4:
+        text: Program adalah serangkaian instruksi yang memberitahu komputer apa yang
+          harus dilakukan. Mari kita membangun kode, atau program, yang akan membantu
+          Elsa membuat garis sederhana. Kita akan menggunakannya nanti untuk membuat
+          pola-pola yang lebih kompleks.
+      5:
+        text: Layar Anda dibagi menjadi tiga bagian utama. Di sebelah kiri, adalah
+          permukaan es di mana Anda akan menjalankan program Anda. Petunjuk untuk
+          setiap tingkat ditulis tepat di bawah permukaan.
+      6:
+        text: Daerah tengah ini terdapar toolbox, dan masing-masing blok ini adalah
+          tindakan yang Elsa dan Anna dapat lakukan.
+      7:
+        text: Ruang putih di sebelah kanan disebut ruang kerja, dan ini adalah di
+          mana kita akan membangun program kita. Untuk bergerak di sekitar permukaan
+          es, Anda akan menggunakan blok "Move Forward" / "Bergerak maju".
+      8:
+        text: Di sini, blok "move fordware"/"Bergerak maju" mengatakan, "move forward
+          by 100 pixels."/"bergerak maju dengan 100 piksel." Ketika kita menekan "Run",
+          apa yang terjadi? Elsa bergerak maju dengan jumlah tertentu di layar, yang
+          sebenarnya 100 pixel ! Piksel pada dasarnya adalah kotak yang sangat kecil
+          di layar komputer Anda.
+      9:
+        text: Blok lain yang kita miliki dalam teka-teki ini mengatakan  "turn right
+          by 90 degrees."/"belok kanan oleh 90 derajat." Dan ketika kita menggunakan
+          blok  "Turn Right"/"Belok kanan" ini, yang membuat Elsa berbelok dalam jumlah
+          tertentu. Anda dapat bermain-main dengan seberapa jauh Anda inginkan Elsa
+          untuk berbelok. Sudut diukur dari jalan depan Elsa. Jadi, ini adalah berbalik
+          90 derajat. Dan ini adalah berbalik 120 derajat.
+      10:
+        text: Ingat, Anda dapat mengubah jumlah piksel dan derajat dengan mengklik
+          tanda panah di samping mereka.
+    frozen_loops:
+      1:
+        text: Hi, I 'm Paola! Komputer benar-benar baik untuk mengulangi tindakan.
+          Anda dapat menghitung sampai 10, 20, atau 100. Tapi komputer dapat dihitung
+          miliar atau triliun. Itu tidak akan bosan dan hanya terjadi beberapa detik.
+          Apakah itu menghitung, atau menggambar, atau segala hal--komputer dapat
+          mengulangi ratusan hal atau bahkan Milyaran kali.
+      2:
+        text: Dalam pemrograman, kami menyebutnya loop. Loop adalah bagaimana Anda
+          mengulangi kode Anda secara berulang kali. Untuk teka-teki berikutnya, tujuan
+          Anda adalah untuk membantu Anna membuat persegi dengan blok "Repeat"/"Ulangi".
+      3:
+        text: Setiap blok kode yang Anda masukkan ke dalam blok "Repeat"/"Ulangi"
+          akan diulang dalam urutan, sebanyak yang Anda inginkan.
+      4:
+        text: untuk mGerak majuenggambar persegi, Anda dapat menggunakan blok "Move
+          Forward"/"Bergerak maju" dan blok "Turn Right"/"Belok kanan" 4 kali. Tetapi
+          cara yang lebih mudah adalah untuk memberitahu komputer "Move Forward"/"Bergerak
+          maju" dan "Turn Right by 90 degrees"/"Belok kanan 90 derajat" sekali, dan
+          kemudian memberitahukannya untuk mengulangi sepasang tindakan sebanyak 4
+          kali. Untuk melakukan itu, Anda perlu untuk menempatkan blok "Move Forward"/"Bergerak
+          maju" dan blok "Turn Right"/"Belok kanan"  dalam blok "Repeat"/"Ulangi".
+      5:
+        text: Ingat, Anda dapat mengubah nomor di blok  "Repeat"/'"Ulangi" untuk apa
+          pun, dan itu akan mengulang apa yang ada di dalam blok yang berkali-kali.
+    frozen_functions:
+      1:
+        text: Hi, I 'm Chris Bosh. Saya pemain bola basket profesional, dan saya dikodekan
+          di perguruan tinggi.
+      2:
+        text: Salah satu konsep yang paling penting dalam ilmu komputer adalah bagaimana
+          mendefinisikan perintah baru. Kebanyakan bahasa komputer  hanya memiliki
+          sekitar 100 kata atau perintah. Dan sungguh, seni dan keajaiban dalam mendefinisikan
+          kata-kata baru Anda sendiri dari blok bangunan ini.
+      3:
+        text: Setelah Anda telah diajarkan komputer bagaimana melakukan tindakan sekali
+          menggunakan urutan perintah, Anda dapat membuat nama Anda sendiri untuk
+          tindakan tersebut sehingga mudah untuk mengulanginya nanti. Ketika Anda
+          mendefinisikan perintah Anda sendiri dan memberinya nama, hal itu disebut
+          fungsi.
+      4:
+        text: Hi, Saya Jess. Ketika pemrograman dengan blok, Anda akan menggunakan
+          fungsi jika ada serangkaian tindakan yang Anda ingin menggunakan banyak
+          kali. Misalnya, Anda telah menulis kode untuk membuat persegi.
+      5:
+        text: 'Anda bisa mendefinisikan ini sebagai fungsi yang disebut "create a
+          square." /"menciptakan sebuah persegi." '
+      6:
+        text: Sekarang Anda memiliki blok baru yang dapat Anda gunakan beberapa kali
+          untuk membuat beberapa kotak.
+      7:
+        text: Banyak bentuk sederhana dapat digunakan untuk menciptakan pola-pola
+          yang lebih kompleks. Di depan teka-teki, kode Anda baru saja menulis untuk
+          membuat lingkaran yang tersedia untuk Anda sebagai fungsi baru yang dapat
+          membuat lingkaran dengan ukuran yang berbeda. Anda dapat menggunakannya
+          untuk membantu Elsa da;a, menciptakan pola yang rumit dan indah di salju
+          ?
+    playlab_intro:
+      1:
+        text: Kita akan membuat game menggunakan Play Lab. permainan yang bagus memiliki
+          cerita, dan setiap cerita memiliki aktor. Kita akan belajar cara membuat
+          aktor seperti penyihir, alinens, dan hewan berbicara, bergerak dan berinteraksi
+          dengan satu sama lain. Pada akhir tutorial ini, Anda dapat membangun sebuah
+          game dari awal dan berbagi dengan teman-teman Anda.
+      2:
+        text: Layar Anda dibagi menjadi 3 bagian utama. Di sebelah kiri adalah ruang
+          permainan dimana program Anda akan berjalan. Petunjuk untuk setiap tingkat
+          ditulis di bawah ini.
+      3:
+        text: Wilayah tengah adalah toolbox, dan masing-masing blok ini adalah sepotong
+          kode. Ruang putih di sebelah kanan disebut ruang kerja dan ini adalah di
+          mana kita akan membangun program kita.
+      4:
+        text: Untuk memulai, Anda harus hubungkan blok anda ke blok "when run" / "ketika
+          menjalankan" yang bewarna oranye. Anda dapat menghubungkan beberapa blok
+          bersama-sama dengan menyeret mereka sampai Anda melihat garis kuning, dan
+          kemudian mereka akan merampas bersama-sama.
+      5:
+        text: Dalam teka-teki pertama ini, aktor kami adalah seekor pinguin dan kami
+          akan membuatnya mengatakan "Hello!" dengan menyeret blok katakan keluar,
+          menghubungkannya saat menjalankan blok, dan mengetikkan "Hello." Kami juga
+          dapat membuat penguin bergerak dengan menggunakan  blok move right/bergerak
+          ke kanan dan blok move left /bergerak ke kiri. Setelah anda menempatkan
+          blok anda, tekan tombol Jalankan untuk melihat apa yang teleh anda programkan.
+      6:
+        text: Mulai dan pada akhir, Anda akan dapat membuat game sendiri dengan segala
+          macam pemain yang dapat berinteraksi, berubah bahagia atau sedih, mencetak
+          poin, atau melempar bola api, atau bahkan lenyap satu sama lain. Semuanya
+          terserah pada Anda dan permainan yang ingin Anda buat.
+    playlab_events:
+      1:
+        text: Sekarang, kita akan belajar tentang sesuatu yang semua pemrogram permainan
+          menggunakan setiap hari. Mereka disebut event/peristiwa. sebuah event memberitahu
+          program Anda untuk mendengarkan ketika sesuatu terjadi. Ketika hal itu terjadi,
+          program anda melakukan tindakan.
+      2:
+        text: Beberapa contoh peristiwa seperti listening/mendengarkan sebuah mouse
+          click/klik mouse, arrow button/tombol panah atau tap on the screen/Tekan
+          pada layar.
+      3:
+        text: Di sini, kita akan membuat ruang bot menyambut para penduduk dunia saat
+          pemain mengklik dirinya. Kami akan gunakan blok "when clicked"/"saat diklik"  dan
+          memasang block "say"/"katakan"  padanya. Ketika pemain mengklik pada ruang
+          bot , segala sesuatu yang melekat pada   event blok "when clicked"/"ketika
+          diklik" ini akan dilaksanakan. Apa tanggapan alien Anda ?
+      4:
+        text: disana juga terdapat blok  "when arrow"/"ketika panah menunjukan". Jika
+          Anda menghubungkan blok "move"/"bergerak" untuk ini, Anda dapat mulai menggerakkan
+          aktor Anda ke atas, bawah, kiri, atau kanan. Langkah demi langkah, permainan
+          Anda semakin interaktif.
+    playlab_repeat_forever:
+      1:
+        text: Ini adalah blok "repeat forever"/ "Ulangi selamanya". Segala hal di
+          dalam blok ini akan terjadi selamanya dalam permainan.
+      2:
+        text: Jika kita ingin aktor untuk melakukan sesuatu yang berulang-ulang, tanpa
+          pemain harus melakukan sesuatu, kami akan menempatkan blok tersebut di dalam
+          blok "repeat forever"/"Ulangi selamanya".
+      3:
+        text: Dalam teka-teki berikutnya, tujuan kami adalah untuk membantu wizard
+          berpatroli di batas-batas kerajaan, kiri dan kanan secara terus menerus.
+          Belajar bagaimana ulangi perintah kerja, akan menghemat satu ton waktu nanti
+          ketika Anda membangun permainan Anda sendiri.
+    C1_artist_intro:
+      1:
+        text: Ini adalah balok balok gambarmu. Gunakan satu yang benar untuk memindahkan
+          artis kemana dia harus pergi untuk mengisi garis-garis abu-abu.
+      2:
+        text: Ini adalah balok-balok lompatan. Ketika kamu menggunakannya, artismu
+          pindah tapi tidak menggambar, maka gunakanlah ini untuk melompat ke garis
+          abu-abu berikutnya.
+    C1_bee_level_intro:
+      1:
+        text: Kerenkan? Pada teka-teki selanjutnya, target kamu adalah membantu lebah
+          menemukan bunga dan mendapatkan nektar dari bunga tersebut dan terbang ke
+          sarang lebah untuk membuat madu. Kamu akan memakai balok "dapatkan nektar"
+          dan balok "buat madu" untuk latihan ini.
+      2:
+        text: 'Setiap bunga memiliki jumlah nektar yang berbeda: 1, 2, 3, atau lebih.
+          Kita mengetahui berapa banyak nektar di bunga-bunga merah, dengan jumlah
+          kecil di sudut. Jadi pastikan untuk mendapatkan semua madu dari bunga sebelum
+          anda bergerak maju. Juga, setiap sarang lebah hanya dapat menampung begitu
+          banyak madu: 1, 2, 3, atau lebih. Jadi pastikan untuk membuat madu sebanyak
+          yang dapat ditampung oleh sarang lebah.'
+      3:
+        text: Jika anda dapat memperoleh semua nektar dan membuat semua madu, anda
+          telah berhasil dan pergi ke tingkat berikutnya. Jika tidak, anda perlu mencoba
+          teka-teki ini lagi. Bermain-main untuk sementara waktu dan lihat apa rasanya
+          menjadi "lebah" programmer!
+    C1_bee_loops:
+      1:
+        text: Sebuah loop adalah pengulangan aktivitas. Jadi akan menjadi sarang untuk
+          memeriksa, saya melihat sebuah frame dan kemudian saya meletakkannya kembali,
+          jadi saya ulangi bahwa aktivitas yang sama beberapa kali. Ini perulangan
+          sekitar, melakukan kegiatan yang sama beberapa kali.
+      2:
+        text: Dalam level ini, kami ingin lebah mengumpulkan tiga nektar dari bunga.
+          Alih-alih menggunakan tiga "mendapatkan nektar" blok, anda akan menggunakan
+          blok berulang untuk mendapatkan nektar tiga kali. Pencet "Jalankan" dan
+          lihat apakah anda sudah benar. Bagus!
+    C1_bigevent_unplugged:
+      1:
+        text: Pelajaran ini disebut peristiwa besar. Ini semua tentang bagaimana kami
+          dapat mengendalikan program-program kami dan sebenarnya mengubah cara sebuah
+          program berjalan dengan cepat menggunakan peristiwa-peristiwa, seperti menekan
+          sebuah tombol atau mengeklik sebuah mouse.
+      2:
+        text: Untuk pelajaran ini, anda akan dikontrol dengan sebuah remote control
+          kertas. Ini seperti permainan video dunia nyata.
+      3:
+        text: Suatu peristiwa adalah suatu tindakan yang menyebabkan sesuatu terjadi.
+          Ini seperti saat anda mengklik tombol pada sebuah mouse dan sebuah halaman
+          web yang dimuat. Itu adalah sebuah peristiwa. Saat anda menyentuh layar
+          anda di tablet untuk digulir, itu juga sebuah peristiwa. Peristiwa-peristiwa
+          adalah cara terbaik untuk membiarkan pengguna mengarahkan program anda kapan
+          pun mereka membutuhkan atau menginginkannya.
+      4:
+        text: Banyak hal terjadi yang mana kami semua meresponnya. Kami merasa lapar
+          dan kami menuju ke kulkas. Kami mendengar tukang pos datang dan dia meletakkan
+          surat kami di kotak surat dan kemudian kami membuka surat kami. Itu seperti
+          kejadian menekan tombol atau menggeser joystick. Mereka adalah sesuatu yang
+          terjadi yang memicu kita untuk melakukan sesuatu.
+      5:
+        text: Dalam video game, ada sebuah acara yang disebut "Pembaruan" dan itu
+          terjadi 30 atau 60 kali per detik. Untuk videogame programmer itu hampir
+          lebih penting sebagai event dari tombol atau joystick.
+      6:
+        text: Acara utama yang kami tonton adalah acara "Update" yang diputar tiap
+          detik. Dan kemudian kami mencontreng joystick di tiap detiknya. Jadi kami
+          berkata, "Oh, sudahkah ada yang menekan tombol gambar ini? Ya atau tidak?"
+          Tanpa kejadian apapun, pemain tersebut tidak dapat bergerak, anda tidak
+          dapat melompat, anda tidak akan dapat mengendalikan apa yang sedang terjadi.
+          Videogame tidak akan dapat menghidupkan apapun.
+    C1_building_foundation:
+      1:
+        text: Di patung pasir anda harus tahu bahwa kegagalan adalah bagian dari program.
+          Tetapi jika anda bertahan, itu hanya akan mendapatkan apa-apa tapi baik
+          dan lebih menarik untuk anda. Ketekunan adalah nama permainan. Tetap dengan
+          itu, anda akan menyukainya.
+      2:
+        text: Pelajaran ini disebut bangunan suatu fondasi. Dalam pelajaran ini, kami
+          akan mengerjakan satu tugas yang benar-benar sulit dilakukan. Anda akan
+          tahu bagaimana membuat struktur setidaknya tinggi sebuah cangkir ini dan
+          cukup kuat untuk menahan berat sebuah buku.
+      3:
+        text: Mungkin ada saatnya dimana ciptaan kita tidak berjalan dengan baik.
+          Mungkin ada saatnya dimana kita merasa frustrasi dan ingin menyerah. Mungkin
+          ada satu saat. Tapi jika kita terus mencoba, berika yang terbaik tembakan
+          berulang-ulang, maka kita pasti yakin akan mendapatkannya sebelum kian lama.
+      4:
+        text: Keteguhan adalah tentang semua ketergantungan ketika Anda benar-benar
+          ingin menyerah disana. Jika Anda ingin buat sesuatu yang baru dan berbeda,
+          akan ada suatu kegagalan di sepanjang jalan.
+      5:
+        text: Trik untuk keteguhan adalah memilih untuk terus berjalan dan belajar
+          lagi dari kegagalan Anda, bukan Anda berhenti karena frustrasi. Frustrasi
+          sebenarnya hanya berarti apabila ada sesuatu yang indah di tikungan. Jadi
+          janganlah anda berhenti sebelum anda sampai ke sana. Wooo!
+    C1_getting_loopy:
+      1:
+        text: Hi, nama saya adalah Miral Kotb dan aku pencipta Iluminate. Dalam pekerjaan
+          saya, ada sesuatu yang kita gunakan di kedua tarian dan dalam pemrograman
+          lightsuits. Dan itu adalah loop! Loop mengulang suatu tindakan berulang-ulang.
+      2:
+        text: Ketika Anda mengulangi sesuatu beberapa kali, seperti tindakan saya
+          untuk menjaga agar hula hoop tidak berputar, Saya melakukan satu lingkaran
+          dari tindakan itu. Ini adalah sebuah loop. Ini adalah sebuah loop. Dan ini
+          adalah sebuah loop.
+      3:
+        text: Hari ini kita akan mengadakan suatu pesta menari. Kami akan mengobrol
+          dengan tarian loop baru. Iterasi itu. Kita akan belajar tentang loop menggunakan
+          sebuah tarian. Anda akan belajar beberapa langkah mudah dan ulangi berulang-ulang
+          untuk lengkapi tariannya.
+      4:
+        text: Langkah-langkah inilah yang perlu untuk anda pelajari. Tepuk tanganmu.
+          Letakkan tangan Anda di belakang kepala Anda. Letakkan tangan Anda di pinggang
+          Anda. Angkat tangan kiri ke atas. Angkat tangan kanan ke atas. Cukup sederhana
+          kan? Anda akan mengetahui bahwa Anda dapat meringkaskan aturan tolakan arah
+          dengan beberapa langkah menari dalam Loops.
+      5:
+        text: Kami benar-benar menggunakan loop dalam menari. Para penari mengenakan
+          komputer, semua dalam jaringan yang sama. Aku mungkin loop lampu melalui
+          yang sama penari lagi dan lagi. Dalam lingkaran saya mungkin telah iterasi
+          dimana aku akan mengatakan anda ingin pergi loop melalui enam penari lagi
+          dan lagi dan kemudian dalam loop anda ingin meningkatkan kecepatan cahaya.
+          Dan itu semua dibuat melalui loop. Loop yang penting dalam ilmu komputer
+          karena mereka membuat kami bekerja lebih pendek dan lebih mudah.
+    C1_happy_maps_unplugged:
+      1:
+        text: Pelajaran ini disebut Bahagia Maps. Hari ini kita akan membantu kita
+          sedikit berbulu teman Flurb dapatkan untuk buah hatinya.
+      2:
+        text: Jadikan Flurb anda pergi ke buah anda. Untuk melakukan ini, anda perlu
+          mencari tahu ke arah mana Flurb harus pergi dan mengarahkannya dengan panah-panah.
+          Supaya Flurb bisa sampai ke apel, ke arah mana Flurb harus pergi? Deretkan
+          Flurb untuk membuatnya naik.
+      3:
+        text: Untuk mendapatkan itu ada lingkaran arah itu telah pergi.
+      4:
+        text: Buat algoritma dengan menempelkan panah di samping peta yang anda mencoba
+          untuk memecahkan. Yang kedua itu sama tapi itu akan turun.
+      5:
+        text: Itu seperti pemrograman dengan kertas. Dan hanya itu!
+    C1_maze_debugging:
+      1:
+        text: Debugging adalah menemukan dan memperbaiki masalah. Ada banyak cara
+          untuk men-debug masalah. Salah satu cara termudah adalah untuk memindahkan
+          langkah demi langkah sampai di mana anda menemukan di mana ada sesuatu yang
+          tidak beres. Di sini saya mencoba untuk melakukan back handspring pada balok
+          tapi aku terus jatuh.
+      2:
+        text: Aku berjalan melalui setiap bagian langkah demi langkah dan menyadari
+          di mana kesalahan saya. Aku tidak bisa meletakkan tangan saya pada balok
+          dengan benar. Jadi saya mencoba kembali lagi handspring pada balok dengan
+          posisi tangan dan saya mendapatkannya. Aku benar-benar senang saya debug
+          saya back handspring.
+      3:
+        text: Untuk belajar tentang debugging, kita mulai dengan satu set blok yang
+          sudah di atas panggung. Anda akan melihat bahwa blok ini tidak akan mendapatkan
+          anda ke tujuan. Kita perlu untuk men-debug solusi dan memperbaikinya. Apa
+          yang salah? Anda akan melihat bahwa anda perlu untuk terus west satu blok
+          lagi.
+      4:
+        text: Mari kita perbaiki hal ini dengan menambahkan blok barat dan memukul
+          run untuk melihat apakah anda sudah benar. Yay, anda mendapatkannya!
+    C1_maze_intro_sequencing:
+      1:
+        text: Untuk teka-teki ini, anda perlu untuk mendapatkan burung ke babi. Melihat
+          teka-teki dan melihat apa arah itu perlu untuk mengambil.
+      2:
+        text: Anda perlu untuk menyeret blok dari toolbox ke ruang kerja. Pastikan
+          itu di bawah "ketika menjalankan" blok dan ketika anda berpikir anda punya
+          solusi yang tepat, maka anda dapat mengklik "Run" dan menonton burung pergi
+          ke babi.
+    C1_maze_loops:
+      1:
+        text: Salah satu hal yang paling bagus pada komputer adalah mengulang banyak
+          perintah. Sebagai seorang manusia, anda akan benar-benar bosan jika anda
+          harus melakukan hal yang sama banyak dan sering kali berturut-turut. Tapi
+          komputer bisa melakukan hal yang sama jutaan bahkan milyaran kali dan tidak
+          bosan dan dapat melaksanakannya dengan sangat baik.
+      2:
+        text: Misalnya, jika saya ingin berharap semua orang di Facebook selamat ulang
+          tahun dengan mengirimkan email kepada mereka, mungkin saya lebih dari abad
+          untuk benar-benar menulis semua email-email ke semua orang. Tetapi dengan
+          hanya beberapa baris kode, saya bisa memiliki sistem kirim email ke semua
+          orang di Facebook ucapan selamat ulang tahun.
+      3:
+        text: Untuk mendapatkan burung ke babi di level ini... daripada menyeret tiga
+          Utara blok ke tempat kerja, anda akan menggunakan tombol "ulangi" blok.
+          Seret "ulangi" blok ke workspace dan masukkan nomor 3. Kemudian tarik "bergerak
+          ke Utara" blok "ulangi" blok dan tekan "Run" untuk melihat apakah anda sudah
+          benar. Selamat, anda berhasil!
+    C1_moveitmoveit_unplugged:
+      1:
+        text: Pelajaran ini disebut memindahkannya, memindahkannya. Bersama-sama kita
+          akan menulis sebuah program untuk mendapatkan teman-teman kita dari awal
+          dengan kompas naik ke wajah tersenyum gol.
+      2:
+        text: Tapi smiley face down dan hanya satu orang yang tahu bagaimana untuk
+          sampai ke sana. Mari kita mendapatkan program ini dimulai.
+      3:
+        text: Sebuah program adalah sebuah algoritma yang telah diberi kode menjadi
+          sesuatu yang bisa dijalankan oleh sebuah mesin. Kebanyakan dari kita menganggap
+          sebuah program sebagai sesuatu yang kita tulis untuk sebuah komputer. Program-program
+          benar-benar bagus untuk itu tapi juga bermanfaat di tempat-tempat lain.
+          Anda dapat menciptakan permainan sendiri atau bahkan memprogram sebuah robot
+          untuk melakukan banyak hal untuk anda.
+    C1_going_places_safely:
+      1:
+        text: Nama saya Jeremiah. Hai! Saya berumur tujuh tahun. Saya suka bermain
+          di komputer ibu saya tapi saya selalu mendapatkan izin terlebih dahulu.
+          "Bu, bisakah saya mengunakan komputer? Tentu saja sayang!"
+      2:
+        text: Saya menyukai komputer ibu saya karena saya bisa mengakses internet.
+          Internet seperti lingkungan anda. Anda dapat mengunjungi tempat-tempat yang
+          keren, anda dapat berbicara dengan keluarga dan teman-teman dan anda bisa
+          belajar banyak hal-hal baru.
+      3:
+        text: Kemarin, saya pergi ke kebun binatang yang berada di dekat rumah saya.
+          Saya melihat seekor bayi zebra. Saya mengambil fotonya dan mengganti warna
+          garis-garisnya, lalu menambahkan sebuah topi dan menambahkannya ke koleksi
+          binatang aneh saya. Mengagumkan! Kemuidan, saya pergi ke tempat yang jauh
+          sekali. Saya pergi ke Kenya. Itu merupakan sebuah negara di Afrika. Banyak
+          sekali zebra yang tinggal di sana.
+      4:
+        text: Kadang-kadang di Internet saya berbicara dengan orang-orang yang saya
+          kenal, seperti nenek saya yang tinggal di negara bagian lain. Hai nenek!
+          Dia sedang membuatkan kue untuk saya kemudian dia akan mengirimkannya untuk
+          ulang tahun saya. "Lezat, semoga internetnya berbau harum!" Saya bisa berbicara
+          dengan orang-orang yang berbeda di Internet, seperti sepupu saya tapi saya
+          hanya berbicara dengan orang yang saya kenal.
+      5:
+        text: Yang paling saya sukai di internet adalah saya dapat bermain game yang
+          menyenangkan. Skor! Saya juga suka menggambar dan menciptakan hal-hal baru
+          dan membagikannya dengan teman-teman saya. Keren! Kadang-kadang saya mengunjungi
+          situs web dimana saya mempelajari hal-hal baru namun saya tetap berpegang
+          pada situs-situs web yang tepat untuk saya. Wow, dinosaurus!
+      6:
+        text: 'Internet adalah sebuah tempat yang sangat menyenangkan. Tapi seperti
+          ketika anda menyeberang jalan di lingkungan anda, anda juga mesti berhati-hati
+          sedang online. Berikut ini adalah tiga aturan yang perlu diingat. Aturan
+          nomor 1: Selalu tanyakan pada orang tua anda terlebih dahulu. Aturan nomor
+          2: Hanya berbicara dengan orang yang anda kenal. Aturan nomor 3: Bertahan
+          pada tempat-tempat yang tepat untuk anda.'
+      7:
+        text: Wow, itu menyenangkan! Waktunya makan malam. Saya keluar sekarang. Saya
+          tidak sabar untuk masuk lagi untuk melihat kemana saya dapat berkunjung
+          selanjutnya.
+    C1_pair_programming:
+      1:
+        text: Hari ini kita akan belajar tentang Pemograman Berpasangan. Dalam pemrograman
+          berpasangan anda bekerja sebagai tim. Mengapa harus dua orang menggunakan
+          satu komputer? Karena dua kepala lebih baik dari satu. Dalam pemrograman
+          berpasangan anda dan pasangan anda akan duduk bersama di satu komputer dan
+          anda berdua akan mengerjakan proyek yang sama.
+      2:
+        text: Dalam pemrograman berpasangan, satu orang adalah supir dan orang lainnya
+          adalah navigatornya, sama seperti mengendarai sebuah mobil. Pengemudi duduk
+          di depan komputer dan menggunakan keyboard dan mouse atau layar sentuh dan
+          mengendalikan tindakan utama komputer. Orang lain adalah navigator. Navigator
+          membantu pengemudi dengan menjawab pertanyaan pengemudi dan menunjukkan
+          masalah atau potensi kesalahan-kesalahan.
+      3:
+        text: Komunikasi adalah kunci kesuksesan dalam pemrograman berpasangan. Tidak
+          ada hinaan, bersikap hormat, jangan menjadi navigator yang seperti bos,
+          karena tidak ada yang menyukai dengan sopir yang berada belakang. Anda dan
+          pasangan anda harus selalu berbicara. Sopir tersebut dapat menjelaskan apa
+          yang sedang dia lakukan. Dan navigator dapat membantu menyarankan apa yang
+          harus dilakukan berikutnya.
+      4:
+        text: Navigator harus memikirkan gambaran besar tersebut dan pengemudi memusatkan
+          perhatian pada rinciannya. Kedua peran itu penting. Pemrograman berpasangan
+          adalah tentang bekerja sama sebagai sebuah tim.
+    C1_planting_seed:
+      1:
+        text: Pelajaran ini disebut menanam sebuah benih dan ini akan membantu kita
+          memahami tentang algoritma. Algoritma adalah instruksi khusus yang menjelaskan
+          urutan tindakan. Bahkan kegiatan sehari-hari seperti makan, sarapan, atau
+          menyikat gigi adalah algoritma yang membutuhkan langkah kecil untuk menyelesaikan
+          sebuah pekerjaan.
+      2:
+        text: Komputer-komputer bisa sangat cerdas tapi komputer hanya bisa mengerti
+          anda jika anda memberi tahu mereka apa yang anda inginkan selangkah demi
+          selangkah. Hal yang hebat tentang algoritma adalah jika anda mengikuti petunjuk
+          secara tertib, anda dapat melakukan sesuatu yang tidak anda ketahui sebelumnya.
+          Ini seperti mengikuti sebuah resep.
+      3:
+        text: Hari ini kita akan menanam benih kita sendiri dengan menggunakan algoritma.
+          Ciptakan algoritma anda sendiri dengan memotong gambarnya. Pilih gambar-gambar
+          yang menunjukkan langkah-langkah menanam sebuah bibit dan mengatur gambar-gambar
+          itu dalam urutan yang benar.
+      4:
+        text: Sekarang, waktunya bagi anda untuk melihat apakah algoritma anda berfungsi.
+          Ikuti langkah-langkahnya dalam algoritma dengan sangat seksama. Apakah mereka
+          dalam urutan yang benar? Apakah anda berhasil menanam sebuah benih dengan
+          mengikuti algoritma tersebut? Ini seperti pemrograman dengan gambar-gambar!
+      5:
+        text: Ketika kita mau membuat coklat, ada banyak langkah besar untuk proses
+          tersebut dan setiap langkah besar tersebut memiliki seperangkat langkah
+          yang lebih kecil dan ada beberapa resep atau algoritma yang berbeda tergantung
+          pada bagaimana kita ingin merasakan coklat. Setiap langkah itu penting,
+          bahkan langkah kecil sekalipun, sehingga tanpa satu langkah pun, selebihnya
+          tidak bisa diselesaikan. Membuat algoritma yang bisa dimengerti oleh orang
+          lain sangat penting. Itulah sebabnya setiap langkah harus dituliskan sehingga
+          tidak jadi masalah siapa yang mengerjakannya, hasilnya tetap sama saja.
+    C1_playlab_storytelling:
+      1:
+        text: Waktunya untuk berkreasi dan menggunakan kemampuan anda bersandi untuk
+          menceritakan sebuah cerita. Cerita anda akan memiliki aktor-aktor dan anda
+          akan dapat membuat aktor-aktor ini berbicara dan berinteraksi satu sama
+          lain. Mulailah memikirkan jenis cerita yang ingin anda ceritakan.
+      2:
+        text: Kucing itu selalu takut pada anjing tersebut dan bagaimana jika kucing
+          mengetahui bahwa anjing itu mencoba bersikap baik? Blok "kapan lari" memulai
+          segalanya. Blok "pindah" akan memindahkan karakter anda dan blok "katakan"
+          akan membuat karakter anda mengatakan apapun yang anda ketik.
+      3:
+        text: Ini adalah "saat para pemain menabrak" blok yang dapat anda tautkan
+          ke blok-blok lainnya.
+      4:
+        text: Saya membuat anjing tersebut datang dan berkata "Hai" tapi kemudian
+          kucing itu merasa ketakutan sehingga kucing tersebut lari. "Ahh" Jika ada
+          lebih banyak waktu, ini akan menjadi akhir yang membahagiakan. Tamat!
+    C1_spelling_bee_intro:
+      1:
+        text: Ini merupakan tingkat ejaan lebah. Gunakan potongan-potongan teka-teki
+          untuk memindahkan lebah. Saat bergerak, potongan puzzle itu akan mengumpulkan
+          huruf-huruf untuk mengeja kata-kata.
+      2:
+        text: Lihat jika anda bisa mengeja kata-kata mereka memberi anda dalam kotak
+          di bawah panggung. Tapi bee-hati! Bergerak ke arah yang salah akan menambah
+          huruf yang tidak anda inginkan.
+    C1_zuck_repeat_loop:
+      1:
+        text: Salah satu hal yang paling bagus pada komputer adalah mengulang banyak
+          perintah. Sebagai seorang manusia, anda akan benar-benar bosan jika anda
+          harus melakukan hal yang sama banyak dan sering kali berturut-turut. Tapi
+          komputer bisa melakukan hal yang sama jutaan bahkan milyaran kali dan tidak
+          bosan dan dapat melaksanakannya dengan sangat baik.
+      2:
+        text: Misalnya, jika saya ingin berharap semua orang di Facebook selamat ulang
+          tahun dengan mengirimkan email kepada mereka, mungkin saya lebih dari abad
+          untuk benar-benar menulis semua email-email ke semua orang. Tetapi dengan
+          hanya beberapa baris kode, saya bisa memiliki sistem kirim email ke semua
+          orang di Facebook ucapan selamat ulang tahun.
+      3:
+        text: Pada contoh ini, tujuan anda adalah memindahkan burung itu untuk mendapatkan
+          babi tersebut. Sekarang, kita akan dapat menggunakan rintangan yang berulang
+          agar bisa mengerjakan ini dengan sangat mudah. Anda dapat mengerjakan ini
+          dengan memberi perintah kepada komputer untuk maju lima kali untuk memajukan
+          burung satu langkah setiap kali ke babi atau anda bisa memerintahkan komputer
+          untuk maju satu kali, dan kemudian mengatakannya untuk mengulanginya sebanyak
+          lima kali dan komputer akan melakukan hal yang sama.
+      4:
+        text: Untuk mengerjakan ini, anda menarik perintah maju anda dan kemudian
+          memasukkannya ke dalam blok berulang. Dan anda bisa mengkliknya dan memberitahukannya
+          berapa kali anda mengulang blok tersebut untuk memberitahukannya berapa
+          banyak langkah yang anda inginkan untuk membawa ke depan.
+      5:
+        text: Satu hal lagi adalah anda dapat menempatkan perintah sebanyak yang anda
+          inginkan dalam mengulang blok. Jadi dalam contoh ini, anda mengatakan itu
+          untuk bergerak maju dan belok kiri, yang akan melakukan lima kali. Bersenang-senang!
+    C2_artist_intro:
+      1: 
+      2:
+        text: Dalam teka-teki ini, anda akan menjadi seorang seniman yang menggunakan
+          pensil untuk menggambar bentuk yang berbeda. Kemanapun seniman anda pergi,
+          pencil akan menarik garis di belakang Anda.
+      3:
+        text: Untuk bergerak sekitar kanvas, anda akan menggunakan blok maju. Di sini
+          blok bergerak maju memerintahkan bergerak maju 100 piksel. Saat kita memukul
+          lari, apa yang terjadi? Para artis bergerak maju dalam jumlah tertentu dan
+          jumlahnya 100 piksel. Pixel pada dasarnya merupakan kotak yang sangat kecil
+          di layar komputer anda.
+      4:
+        text: Blok yang lain yang kita punya dalam teka-teki ini memerintahkan belok
+          kanan 90 derajat. Dan saat kita seret itu keluar membuat seniman kita membalikkan
+          jumlah tertentu. Jadi anda bisa bermain-main dengan seberapa jauh anda ingin
+          seniman itu berputar. Ini adalah putaran 90 derajat.
+      5: 
+    C2_binary_bracelets:
+      1: 
+      2:
+        text: Berpasangan merupakan cara untuk menunjukkan informasi dengan hanya
+          menggunakan dua pilihan. Terkadang orang-orang menganggap ini hanya 1s dan
+          0s. Tapi anda bisa menunjukkan berpasangan dengan kombinasi on atau off,
+          naik turun, masuk dan keluar atau benar-benar ada yang berlawanan.
+      3:
+        text: Hai, saya Orion dan saya memprogram robot-robot disini di Play-im. Semua
+          otak komputer dan otak robot pada tingkat yang paling mendasar merupakan
+          gerbang-gerbang elektronik kecil. Waktu pintu gerbang terbuka, listrik bisa
+          mengalir dan saat sudah tertutup, listrik tidak bisa mengalir lagi.
+      4:
+        text: Sebuah contoh biner pada robot adalah kedua mata robot. Mata robot adalah
+          LED dan itu merupakan lampu yang menyala atau mati. Ini merupakan sistem
+          biner, satu atau lain. Kita bisa menggunakan lampu untuk mewakili bilangan
+          biner. Jika kita memiliki satu set robot, kita bisa mengatakan bahwa robot
+          pertama adalah tempat 1s dan robot kedua adalah tempat 2s, robot ketiga
+          adalah tempat 4s dan seterusnya. Begitulah cara anda mewakili bilangan biner.
+          Robot akan melakukannya dengan mata biner mereka dan menghitungnya untuk
+          anda.
+    C2_conditionals_with_cards:
+      1: 
+      2:
+        text: Saya ingin berjalan ke taman tapi pertama-tama saya harus memutuskan
+          apakah saya harus membawa payung atau tidak. Jadi saya melihat ke luar jendela.
+          Jika mendung, saya akan mengambil payung saya. Kalau tidak, saya akan mengambil
+          beberapa kacamata hitam. saya rasa sebaiknya saya mengambil payung tersebut.
+          Apa yang saya lihat dan saya dengan dengar menentukan apa yang saya bawa
+          ke taman.
+      3:
+        text: Kodisional digunakan juga dalam permainan-permainan. Hari ini kita akan
+          berlatih menggunakan kondisional dengan permainan kartu. Dalam permainan
+          ini, kartu yang saya ambil menentukan apa yang akan teman-teman saya lakukan.
+          Jika saya ambil tujuh, setiap orang bertepuk tangan. Selain itu, semua orang
+          mengatakan "awww." Ayo coba! "Awww" "sorak sorai"
+      4:
+        text: Saya yakin anda dapat menciptakan permainan-permainan yang bahkan lebih
+          menyenangkan dengan kondisional. Cobalah! Kondisional ini yang membuat komputer-komputer
+          terlihat pintar. Sebuah program komputer yang mencakup kondisional dapat
+          bereaksi terhadap pengguna dan mengubah arah tindakannya.
+      5:
+        text: Pikirkan tentang video game favorit anda. Apakah anda mendapatkan lebih
+          banyak poin untuk beberapa aksi dibandingkan dengan yang anda lakukan untuk
+          orang lain? Hal ini terjadi karena komputer memakai kondisional. Begitulah
+          komputer membuat keputusan. Bagaimana kalau, jika anda mencapai target,
+          anda memperoleh sepuluh poin. Sebaliknya, anda kalah tiga. Bila anda mengetahui
+          bagaimana kondisional berfungsi, anda dapat menciptakan segala macam permainan
+          yang seru.
+    C2_artist_debugging:
+      1: 
+      2: 
+      3:
+        text: Oh, ada masalah! Kumis kucing panjangnya 75 piksel, bukan 25.
+    C2_digital_footprint:
+      1: 
+      2:
+        text: Gunakan hati anda untuk tumbuh dan tumbuh, dan untuk memberikan anda
+          cahaya yang sehat, dan untuk memberi sebuah valentin, beritahu seseorang
+          bahwa kamu akan menjadi milik saya! Gunakan hati anda saat anda sedang online,
+          rasakan apa yang benar dan selalu baik, dan tunjukkan rasa hormat teman-teman
+          anda, bersikap adil dan baik di Internet. Dari kepala anda sampai ke jari
+          kaki, jeda, pikirkanlah. Dari kaki sampai ke hidung anda, jeda dan pikirkan
+          secara online!
+      3:
+        text: Gunakan tangan anda untuk memeluk hewan peliharaan anda, agar pakaian
+          anda tidak basah, dan kenakan lengan favorit anda dan untuk membantu anda
+          terbang dan berfantasi. Gunakan tangan anda saat anda online, untuk beristirahat
+          dan menyeimbangkan waktu dan membiarkan teknologi anda tertinggal dan untuk
+          menemukan sendiri sebatang pohon untuk dipanjat. Dari kepala sampai ke jari
+          kaki, jeda, pikirkanlah. Dari kaki anda ke hidung anda, jeda dan pikirkan
+          secara online!
+      4:
+        text: Gunakan usus anda untuk menyimpan makanan anda, dan untuk medengarkan
+          keadaannya yang menggeram, untuk membuat sebuah perut kembung, dan untuk
+          merasakan gas didalam limun. Gunakan usus anda saat anda sedang online,
+          untuk mengetahui dan untuk melihat tanda-tanda tertentu, dan membiarkannya
+          membimbing jalan dan memberi tahu anda saat dia tidak baik. Dari kepala
+          sampai ke jari kaki anda, jeda, pikirkanlah. Dari kaki sampai ke hidung
+          anda, jeda dan pikirkan secara online!
+      5:
+        text: Jadi pikirkan dengan kepala anda, dan rasakan dengan hati anda, seimbangkan
+          dengan lengan anda, dengarkan usus anda, secara online. Gunakan kaki anda
+          untuk berlari dan menendang, dan melompat dan bangkit dengan stik pogo,
+          dan berdansa di sekitar blok, dan mengabaikan kaus kaki bau anda. Gunakan
+          kaki anda saat anda sedang online, berdiri melawan pengganggu yang melewati
+          batas, dan ingatlah untuk berdiri tegak, bersikap baik terhadap makhluk-makhluk
+          besar dan kecil.
+      6: 
+    C2_graph_paper:
+      1: 
+      2: 
+      3: 
+      4:
+        text: Saya menggunakan algoritma dalam pekerjaan saya. Jika saya menuliskan
+          semua langkah, saya dapat menciptakan kembali bagian yang sama lagi, atau
+          saya dapat mengajari orang lain untuk melakukannya. Letakkan gelas tersebut
+          di tempat pembakaran, sikat bersama-sama, ikuti sisa instruksi untuk membuat
+          mangkuk. Algoritma-algoritma memberikan anda peta jalan untuk mendapatkan
+          sesuatu.
+    C2_paper_airplanes:
+      1: 
+      2: 
+      3: 
+      4:
+        text: Ketika kami ingin membuat coklat, ada banyak langkah besar menuju proses
+          itu. Dan masing-masing langkah besar itu memiliki ukuran langkah yang lebih
+          kecil. Dan ada resep yang berbeda, atau algoritma, tergantung bagaimana
+          kita menginginkan coklat secukupnya. Setiap langkah penting, bahkan yang
+          kecil sekalipun. Jadi tanpa satu langkah pun, selebihnya tidak bisa selesai.
+          Membuat algoritma yang bisa dimengerti orang lain sangat penting. Itulah
+          sebabnya setiap langkah harus dituliskan, jadi tidak masalah siapa yang
+          melakukannya, hasilnya tetap sama saja.
+    C2_playlab_createstory:
+      1:
+        text: Sejauh ini Anda telah membuat animasi atau cerita yang melakukan hal
+          yang sama setiap kali Anda menjalankan. Sekarang Anda dapat membuat permainan
+          interaktif yang dapat benar-benar bermain.
+      2:
+        text: Ada blok "when arrow" / "ketika panah"  dan blok "move actor" / "bergerak
+          aktor". Anda dapat menempatkan blok ini bersama-sama untuk menggerakan aktor
+          dengan tombol panah.
+    C2_relay_programming:
+      1: 
+      2: 
+      3: 
+      4:
+        text: Di sini, saya mencoba memegang kembali, tapi saya terus terjatuh. Saya
+          melalui setiap bagian, selangkah demi selangkah, dan menyadari di mana letak
+          kesalahan saya. Pelatih saya menunjukkan bahwa saya tidak meletakkan tangan
+          saya di balok dengan benar. Jadi saya mencoba lagi pegangan belakang di
+          balok dengan posisi tangan baru saya, dan saya terjebak! Saya benar-benar
+          senang, saya dapat bersalto. Kami tahu itu! Penelusuran adalah menemukan
+          dan memperbaiki masalah. Bagus, kerjaan yang bagus!
+    C2_zuck_repeat_loop:
+      1: 
+      2:
+        text: Jadi misalnya jika saya ingin mengucapkan semua orang di Facebook ucapan
+          selamat ulang tahun dengan mengirimkan email kepada mereka, mungkin perlu
+          waktu lebih dari satu abad untuk benar-benar menuliskan semua email itu
+          kepada semua orang. Tapi dengan hanya beberapa baris kode, saya dapat meminta
+          sebuah sistem mengirim email ke semua orang di Facebook untuk mengucapkan
+          selamat ulang tahun kepada mereka. Jadi itulah caranya, dan mengapa itu
+          berharga, dan sesuatu yang dapat dilakukan dengan baik oleh komputer.
+      3: 
+      4:
+        text: Atau anda dapat memberitahukan komputer untuk "maju terus" sekali, lalu
+          katakan "ulangi" sebanyak 5 kali, dan itu akan melakukan hal yang sama.
+          Jadi, untuk melakukan ini, anda menyeret perintah "bergerak maju" anda,
+          lalu anda memasukkannya ke dalam blok "ulangi". Dan anda dapat mengkliknya
+          dan memberitahukannya berapa kali anda ingin mengulang blok tersebut untuk
+          memberitahukannya berapa banyak langkah yang anda inginkan untuk terus maju.
+      5: 
+    C3_artist_functions:
+      1:
+        text: Salah satu hal yang hebat dalam pemrograman komputer adalah saat anda
+          sudah mengajarkan komputer bagaimana melakukan suatu tindakan, anda dapat
+          memanggil fungsi itu lagi. Anda memberinya nama dan kemudian anda dapat
+          memanggilnya. Itu benar-benar seperti memperluas bahasa.
+      2:
+        text: Dalam program yang kami buat, kami mempelajari cara menggambar persegi
+          dengan bergerak dan berputar empat kali. Kami dapat mengambil fungsi itu
+          dan memberinya sebuah nama, menggambar persegi, sehingga setiap saat kami
+          ingin melakukannya, kami cukup mengatakan menggambar persegi dan itu akan
+          kembali dan memanggil fungsi itu, kode itu. Itu akan berhasil untuk kami.
+          Kami telah menambahkan konsep itu ke bahasa pemrograman kami.
+    C3_artist_intro:
+      1: 
+      2:
+        text: Dalam teka-teki ini, anda akan menjadi seorang seniman yang menggunakan
+          pensil untuk menggambar bentuk yang berbeda. Kemanapun seniman anda pergi,
+          pencil akan menarik garis di belakang Anda.
+      3:
+        text: Untuk bergerak sekitar kanvas, anda akan menggunakan blok maju. Di sini
+          blok bergerak maju memerintahkan bergerak maju 100 piksel. Saat kita memukul
+          lari, apa yang terjadi? Para artis bergerak maju dalam jumlah tertentu dan
+          jumlahnya 100 piksel. Pixel pada dasarnya merupakan kotak yang sangat kecil
+          di layar komputer anda.
+      4:
+        text: Blok yang lain yang kita punya dalam teka-teki ini memerintahkan belok
+          kanan 90 derajat. Dan saat kita seret itu keluar membuat seniman kita membalikkan
+          jumlah tertentu. Jadi anda bisa bermain-main dengan seberapa jauh anda ingin
+          seniman itu berputar. Ini adalah putaran 90 derajat.
+      5: 
+    C3_bee_functions:
+      1:
+        text: Salah satu konsep terpenting dalam ilmu komputer adalah bagaimana mendefinisikan
+          perintah-perintah baru, bagaimana menambahkan kata-kata anda sendiri ke
+          bahasa sebuah komputer. Sebagian besar bahasa-bahasa komputer hanya memiliki
+          sekitar seratus kata atau perintah. Seni dan sihir ada dalam mendefinisikan
+          kata-kata baru anda sendiri dari blok-blok bangunan ini.
+      2:
+        text: Kami mengerjakan ini sepanjang waktu dalam olahraga-olahraga. Misalnya,
+          di bola basket, anda mulai dengan belajar menggiring bola, bagaimana melakukan
+          lay-up, cara rebound. Begitu anda telah mempelajari gerakan-gerakan dasar
+          ini, anda akan belajar langkah-langkah baru dan mengumpulkan blok bangunan
+          ini, seperti memilih and menggulung atau memberi dan pergi. Anda kemudian
+          dapat pergi dari sana untuk melakukan drama yang lebih kompleks. Begitu
+          anda belajar bermain itu dan memberinya nama, semua orang di tim mengetahui
+          bagaimana cara melakukannya.
+      3:
+        text: Sama halnya saat anda telah memerintakan komputer bagaimana melakukan
+          suatu tindakan setelah menggunakan urutan perintah ini, anda dapat membuat
+          nama anda sendiri untuk tindakan itu sehingga mudah untuk mengulanginya
+          nanti. Bila anda mendefinisikan perintah anda sendiri dan memberinya sebuah
+          nama, itu disebut sebuah fungsi. Sekarang kita akan menggunakan fungsi-fungsi
+          tersebut untuk membantu lebah.
+      4:
+        text: Dalam contoh ini, fungsi kami disebut dapatkan 2 nektar, blok hijau
+          ada disini. Kami tahu apa yang dapat 2 nektar lakukan dengan melihat kotak
+          abu-abu ini yang merupakan definisi fungsi. Jika kami melihat ke dalam sana,
+          dapatkan 2 nektar akan mendapatkan nektar dan kemudian nektar lagi. Selalu
+          lihat apa yang ada di dalam kotak abu-abu sehingga anda mengetahui apa yang
+          dapat dilakukan oleh blok fungsi yang berwarna hijau ini.
+    C3_computational_thinking:
+      1:
+        text: Pelajaran ini merupakan pemikiran komputasi. Terkadang belajar permainan
+          baru mungkin sulit, bukan? Awalnya mungkin sangat membingungkan dan terkadang,
+          tidak ada orang di sana yang dapat mengajarkan peraturan kepada anda, jadi
+          anda harus mengetahuinya sendiri.
+      2:
+        text: Kabar baiknya adalah anda dapat menjadi lebih baik dalam memikirkan
+          semuanya sendiri saat anda mengetahui beberapa trik berpikir. Trik ini adalah
+          cara unik untuk melihat dan memecahkan masalah-masalah. Dalam pelajaran
+          ini, anda akan belajar tentang empat trik dan mempraktikkannya dengan teman-teman
+          anda untuk mengetahui peraturan-peraturan terhadap sebuah permainan.
+      3:
+        text: Saat anda memecahkan seuah masalah besar menjadi potongan-potongan yang
+          lebih kecil, anda menggunakan otak anda untuk menguraikan masalah besar
+          tersebut. Setelah kami menghancurkan masalah besar tersebut menjadi beberapa
+          masalah yang lebih kecil, kami dapat melanjutkan ke trik berikutnya, yang
+          disebut permainan pola.
+      4: 
+      5: 
+    C3_crowdsourcing:
+      1: 
+      2: 
+      3:
+        text: Saat anda menonton sebuah film, setiap detik dari film tersebut adalah
+          24 gambar individu, kami menyebutnya kerangka-kerangka. Jadi setiap gambar
+          itu perlu diciptakan dan diberikan dan disatukan. Tim saya dan saya, kami
+          semua merupakan para pengembang perangkat lunak. Kami semua bekerja sama
+          untuk membuat sebuah perangkat lunak yang benar-benar menciptakan sebuah
+          gambar, menciptakan gambar akhir yang anda lihat di layar. Itu adalah alat
+          yang bisa digunakan oleh seniman dan pengembang lainnya sebagai bagian dari
+          kerja tim mereka dan prosesnya untuk dapat membuat gambar-gambar yang mereka
+          inginkan di layar.
+      4:
+        text: Contohnya, di Finding Nemo, saat Crush and Squirt dan semua teman mereka
+          sedang berenang melintasi arus Australia Timur. Anda sedang melihat gambar
+          air yang mengalir, anda melihat warna di bagian belakang kura-kura tersebut,
+          anda melihat sisi ikan. Semua hal itu dihasilkan melalui program matematika
+          dan komputer yang kita tulis, yang kemudian kita berikan kepada seniman
+          dan mereka mengambilnya untuk menciptakan gambar terakhir dan mengolahnya
+          dan membuatnya terlihat cantik dan terlihat menyenangkan.
+    C3_dice_race:
+      1: 
+      2:
+        text: Langkah berpikir dari pemecahan masalah menghasilkan sebuah algoritma,
+          yang merupakan langkah demi langkah rencana untuk memecahkan suatu masalah
+          atau menyelesaikan sebuah tugas. Dalam pelajaran ini, anda akan membuat
+          sebuah algoritma untuk permainan balap dadu. Kemudian anda akan meminta
+          teman anda untuk mencoba rencananya untuk melihat apakah mereka dapat mengikuti
+          langkah-langkah untuk memainkan permainan. Setelah pemrogram tersebut yakin
+          langkahnya sudah benar, saatnya menerjemahkan algoritme menjadi program
+          dengan bahasa yang bisa dimengerti komputer.
+      3:
+        text: Hampir apa saja yang kita lakukan setiap hari membutuhkan sebuah algoritma,
+          daftar langkah-langkah yang bisa anda ikuti untuk menyelesaikan sebuah tugas.
+          Pikirkan tentang bersiap-siap ke sekolah atau merencanakan hari yang menyenangkan
+          bersama teman anda atau memperbaiki sebuah hal kecil. Untuk menyelesaikan
+          semua tugas tersebut, anda harus memecahnya menjadi langkah-langkah yang
+          lebih kecil dan terkadang langkah-langkahnya harus dalam urutan tertentu.
+      4: 
+      5:
+        text: Algoritma merupakan pemikiran di balik apa yang harus terjadi saat program
+          sedang memberi instruksi yang benar ke komputer untuk mewujudkannya. Algoritma
+          harus diterjemahkan ke dalam sebuah program sebelum komputer dapat menjalankannya.
+          Melanggar tugas ke dalam langkah yang disebut algoritma terkadang sulit
+          dilakukan. Tapi seperti keterampilan baru, ini terlihat lebih mudah lebih
+          mudah dan lebih mudah dengan latihan.
+    C3_internet:
+      1: 
+      2: 
+      3:
+        text: Mengirim pesan-pesan di internet hampir sama seperti mengirim pesan-pesan
+          melalui pos tapi dengan beberapa perbedaan. Saya di sini di Google.com.
+          Alamat IP untuk situs ini adalah nomor ini. Anda dapat memikirkan alamat
+          IP sebagai alamat pengirim anda melalui pos. Mari bayangkan saya yang ingin
+          mengirim pesan melalui pos ke seseorang di kantor yang ada di sana. Apakah
+          anda melihat URL dan alamat IP di pintu itu? Saya telah menulis pesan ini
+          dan tekan mengirim.
+      4:
+        text: Lain halnya dengan Pelayanan Pos, hal yang pertama terjadi adalah internet
+          memecah pesan menjadi bagian-bagian yang lebih kecil sehingga dapat dikirim
+          dengan lebih mudah. Bagian-bagian kecil ini disebut paket-paket. Setiap
+          paket pesan tersebut dikirim ke tempat tujuan satu per satu. Semua paket
+          ini disatukan dalam urutan yang benar sehingga penerima dapat membaca pesan
+          dengan benar. Tentu saja, ada lebih banyak hal-hal untuk dipelajari tentang
+          bagaimana internet bekerja tapi ini merupakan awal yang baik. Anda sedang
+          dalam perjalanan untuk menjadi seorang pengguna internet yang cerdas! Pastikan
+          untuk menceritakan kepada keluarga dan teman anda tentang apa yang telah
+          anda pelajari!
+      5:
+        text: Nama saya adalah Amanda Camp dan saya adalah seorang insinyur perangkat
+          lunak di Google. Saya bekerja pada sebuah tim yang bekerja pada server backend
+          yang menyimpan profil-profil dan kontak-kontak. Didalam pekerjaan saya,
+          kami banyak memikirkan bagaimana kontak-kontak dapat dikirim ke perangkat-perangakat
+          lain, seperti telepon anda. Kebanyakan orang-orang memiliki banyak kontak,
+          anda mungkin mennyebutkan, 1000 kontak dan kami tidak ingin mengirim semua
+          kontak tesebut sekaligus ke telepon anda karena pesan tersebut terlalu besar.
+          Sama halnya dengan cara internet yang memecah pesan besar ke dalam paket-paket,
+          kami menggunakan konsep yang dinamakan paging di mana kami hanya dapat mengirim
+          kontak 100 telepon anda sekaligus dan membiarkan telepon anda memberikan
+          respon kepada kami dan meminta 100 kontak berikutnya.
+      6:
+        text: Hal yang paling menarik tentang perangkat lunak adalah benar bahwa perangkat
+          lunak itu dapat mempengaruhi seluruh dunia. Pertama kali saya belajar memprogram
+          adalah saat berusia sekitar sembilan belas tahun. Saya rasa saya sudah menjadi
+          mahasiswa tingkat dua atau mahasiswa junior di perguruan tinggi. Saya ingat,
+          program pertama yang saya tulis adalah sesuatu yang mengubah Celsius menjadi
+          Fahrenheit. Saya menyukai pemrograman karena saya suka membantu orang-orang.
+          Saya dapat menulis program-program di Google yang menolong orang-orang di
+          seluruh dunia dan itu benar-benar membingungkan dan seru.
+    C3_maze_conditionals:
+      1:
+        text: Orang-orang membuat keputusan setiap harinya. Misalnya, sebelum anda
+          pergi ke luar, anda memiliki pernyataan pengandaian yang mengatakan jika
+          hujan turun, maka saya perlu mendapatkan jaket saya. Komputer-komputer luar
+          biasa sekali saat anda memutuskan jenis pernyataan tersebut sehingga mereka
+          dapat dengan baik melakukan hal-hal itu dengan kecepatan yang luar biasa.
+          Sebuah program komputer benar-benar sedikit matematika dan beberapa pernyataan
+          pengandaian di mana keputusan dibuat.
+      2: 
+      3: 
+      4: 
+    C3_playlab_create_game:
+      1:
+        text: Sejauh ini Anda telah membuat animasi atau cerita yang melakukan hal
+          yang sama setiap kali Anda menjalankan. Sekarang Anda dapat membuat permainan
+          interaktif yang dapat benar-benar bermain.
+      2:
+        text: Ada blok "when arrow" / "ketika panah"  dan blok "move actor" / "bergerak
+          aktor". Anda dapat menempatkan blok ini bersama-sama untuk menggerakan aktor
+          dengan tombol panah.
+    C4_function_edit:
+      1:
+        text: Salah satu hal yang hebat dalam pemrograman komputer adalah saat anda
+          sudah mengajarkan komputer bagaimana melakukan suatu tindakan, anda dapat
+          memanggil fungsi itu lagi. Anda memberinya nama dan kemudian anda dapat
+          memanggilnya. Itu benar-benar seperti memperluas bahasa.
+      2: 
+      3: 
+      4: 
+    starwars_intro:
+      1:
+        image: catatan/starwars_pengenalan_1.JPG
+        text: Hi, Saya Kathleen Kennedy dan Saya produsen dari Star Wars, The Force
+          Awakens. Hari ini Anda akan bekerja dengan salah satu bintang kami, BB-8.
+          BB-8 adalah droid berbentuk bola. Segala sesuatu yang ia lakukan dan setiap
+          gerakan yang dia buat dikendalikan oleh perangkat lunak komputer. Ilmu komputer
+          berdampak pada setiap industri, dari pemasaran untuk perawatan kesehatan
+          dalam film. Pada kenyataannya, ratusan insinyur komputer bekerja sama untuk
+          membuat sebuah film seperti The Force Awakens.
+      2:
+        image: catatan/starwars_pengenalan_2.JPG
+        text: Hi Saya Rachel Rose, Saya adalah engineer R&D senior di ILM dan Saya
+          memimpin tim pengembangan animasi dan ciptaan. Dalam Film The Force Awakens,
+          saya bertanggung jawab untuk membantu para seniman mengembangkan rig yang
+          merupakan bagian dari karakter yang bergerak yang memungkinkan karakter
+          terlihat sangat mudah dipercaya di sebuah galaksi yang jauh.
+      3:
+        image: catatan/starwars_pengenalan_3.JPG
+        text: Pada jam berikutnya, kita akan membangun permainan Star Wars kita sendiri.
+          Kami akan mengajarkan konsep-konsep dasar dalam pemrograman. Biasanya pemrograman
+          adalah semua teks tetapi kita akan menggunakan blok di sini sehingga kita
+          dapat melakukan drag dan drop untuk menulis program. Di balik itu, Anda
+          masih membuat kode. Setelah mencoba dasar-dasar dengan blok, kita akan beralih
+          ke JavaScript, salah satu bahasa pemrograman yang paling populer didalam
+          website.
+      4:
+        image: catatan/starwars_pengenalan_4.JPG
+        text: Untuk memulai, kita akan bekerjasama dengan Rey untuk memprogram BB-8
+          agar berjalan untuk mengumpulkan semua bagian berkas. Layar Anda dibagi
+          menjadi tiga bagian. Di sebelah kiri adalah Ruang Permainan Star Wars, dimana
+          kode akan dijalankan. Petunjuk untuk setiap tingkat atau level ditulis di
+          bawah ruang permainan.
+      5:
+        image: catatan/starwars_pengenalan_5.JPG
+        text: Daerah ini tengah adalah toolbox dan masing-masing blok ini adalah perintah
+          yang dapat mengerti BB-8.
+      6:
+        image: catatan/starwars_pengenalan_6.JPG
+        text: Ruang putih di sebelah kanan disebut ruang kerja dan ini adalah di mana
+          kita akan membangun program kita.
+      7:
+        image: catatan/starwars_pengenalan_7.JPG
+        text: Jika Saya menyeret blok moveLeft(); ke ruang kerja kita dan menekan
+          run, apa yang terjadi? BB-8 bergerak kiri satu blok pada grid.
+      8:
+        image: catatan/starwars_pengenalan_8.JPG
+        text: Dan bagaimana jika saya ingin BB-8 untuk melakukan sesuatu setelah blok
+          moveLeft();? Saya dapat menambahkan blok lain ke program kita. saya akan
+          memilih blok moveUp(); dan saya akan menyeret nya dibawah blok moveLeft()
+          saya; hingga cahayanya muncul. Lalu aku akan menjatuhkannya dan kedua blok
+          akan menyatu bersama-sama.
+      9:
+        image: catatan/starwars_pengenalan_9.JPG
+        text: Ketika saya menekan run lagi, BB-8 akan melakukan perintah yang disusun
+          dari atas ke bawah pada ruang kerja kita. Jika Anda pernah ingin menghapus
+          blok, hapus saja dari susunan dan drag atau tarik kembali ke dalam kotak
+          alat.
+      10:
+        image: catatan/starwars_pengenalan_10.JPG
+        text: Setelah Anda bisa menekan run, Anda juga dapat menekan tombol reset
+          untuk mengembalikan BB-8 kembali ke awal. Sekarang mari kita lakukan kebalikannya!
+    starwars_typing:
+      1:
+        image: catatan/starwars_mengetik_1.JPG
+        text: Di dalam blok kami telah menggunakanperintah JavaScript. JavaScript
+          adalah bahasa pemrograman paling populer untuk pengembang profesional saat
+          ini. Blok adalah cara yang bagus untuk memulai belajar koding dan pada kenyataannya,
+          Universitas tekenal seperti Harvard dan Berkeley mulai mengajar dengan menggunakan
+          cara ini. Tetapi setelah kita belajar dasar-dasar, engineer menulis kode
+          dengan mengetik karena hal ini memungkinkan kita untuk melakukannya lebih
+          cepat dan mudah.
+      2:
+        image: catatan/starwars_mengetik_2.JPG
+        text: Kita dapat mengetik ratusan perintah tanpa harus mencarinya di toolbox
+          atau menyeretnya keluar. Karena pelajaran mengetik Anda mungkin lebih lambat
+          pada awalnya tapi kami ingin Anda mencobanya dulu.
+      3:
+        image: catatan/starwars_mengetik_3.JPG
+      4:
+        image: catatan/starwars_mengetik_4.JPG
+      5:
+        image: catatan/starwars_mengetik_5.JPG
+      6:
+        image: catatan/starwars_mengetik_6.JPG
+      7:
+        image: catatan/starwars_mengetik_7.JPG
+    starwars_events:
+      1:
+        image: catatan/starwars_kejadian_1.JPG
+      2:
+        image: catatan/starwars_kejadian_2.JPG
+      3:
+        image: catatan/starwars_kejadian_3.JPG
+      4:
+        image: catatan/starwars_kejadian_4.JPG
+      5:
+        image: catatan/starwars_kejadian_5.JPG
+      6:
+        image: catatan/starwars_kejadian_6.JPG
+      7:
+        image: catatan/starwars_kejadian_7.JPG
+      8:
+        image: catatan/starwars_kejadian_8.JPG
+      9:
+        image: catatan/starwars_kejadian_9.JPG
+    starwars_congrats:
+      1:
+        image: catatan/starwars_selamat_1.JPG
+      2:
+        image: catatan/starwars_selamat_2.JPG
+      3:
+        image: catatan/starwars_selamat_3.JPG
+      4:
+        image: catatan/starwars_selamat_4.JPG
+        text: "[pembicaraan murid-murid} Kami membuat sebuah permainan di mana anda
+          tidak bisa kalah dan semua yang anda bunuh memberi anda poin. Untuk program
+          saya, saya membalikkan kunci sehingga setiap kali anda mengklik, karakter
+          anda akan turun dan saat anda melangkah ke kanan, karakter anda akan pindah
+          ke kiri. Ini sungguh sulit! Terkadang anda hanya mendapatkan keuntungan,
+          keuntungan yang tidak adil jika anda adalah seorang pengembang permainan
+          tersebut. Apakah saya mengerti Ya!"
+      5:
+        image: catatan/starwars_selamat_5.JPG
+    starwars_blocks_intro:
+      1:
+        image: catatan/starwars_pengenalan_blok_1.JPG
+        text: 'Hai, saya Kathleen Kennedy dan saya adalah produser Star Wars: The
+          Force Awakens. Hari ini anda akan bekerja sama dengan salah satu bintang
+          kami, BB-8. BB-8 yang merupakan robot yang berbentuk bola. Semua yang dia
+          lakukan dan setiap gerakan yang dia lakukan dikontrol oleh perangkat lunak
+          komputer. Pengetahuan komputer berdampak pada setiap industri, mulai dari
+          pemasaran hingga perawatan kesehatan hingga perfileman. Bahkan, ratusan
+          insinyur komputer bekerja sama dalam membuat film seperti The Force Awakens.'
+      2:
+        image: catatan/starwars_pengenalan_blok_2.JPG
+      3:
+        image: catatan/starwars_pengenalan_blok_3.JPG
+        text: Pada waktu berikutnya, kami akan membuat permainan Star Wars kami sendiri
+          yang akan mengajarkan anda konsep-konsep dasar pemrograman. Biasanya, pemrograman
+          adalah semua teks tapi kita akan menggunakan blok disini sehingga kami dapat
+          menarik dan mengeluarkan untuk menulis program-program. Untuk memulainya,
+          kami akan bekerja sama dengan Rey untuk memprogram BB-8 agara berjalan untuk
+          mengumpulkan semua bagian-bagian potongan.
+      4:
+        image: catatan/starwars_pengenalan_blok_4.JPG
+      5:
+        image: catatan/starwars_pengenalan_blok_5.JPG
+        text: Daerah ini tengah adalah toolbox dan masing-masing blok ini adalah perintah
+          yang dapat mengerti BB-8.
+      6:
+        image: catatan/starwars_pengenalan_blok_6.JPG
+      7:
+        image: catatan/starwars_pengenalan_blok_7.JPG
+      8:
+        image: catatan/starwars_pengenalan_blok_8.JPG
+      9:
+        image: catatan/starwars_pengenalan_blok_9.JPG
+      10:
+        image: catatan/starwars_pengenalan_blok_10.JPG
+    starwars_blocks_events:
+      1:
+        image: catatan/starwars_kejadian_blok_1.JPG
+      2:
+        image: catatan/starwars_kejadian_blok_2.JPG
+      3:
+        image: catatan/starwars_kejadian_blok_3.JPG
+      4:
+        image: catatan/starwars_kejadian_blok_4.JPG
+      5:
+        image: catatan/starwars_kejadian_blok_5.JPG
+      6:
+        image: catatan/starwars_kejadian_blok_6.JPG
+      7:
+        image: catatan/starwars_kejadian_blok_7.JPG
+    starwars_blocks_congrats:
+      1:
+        image: catatan/starwars_selamat_blok_1.JPG
+      2:
+        image: catatan/starwars_selamat_blok_2.JPG
+      3: 
+      4:
+        text: "[pembicaraan murid-murid} Kami membuat sebuah permainan di mana anda
+          tidak bisa kalah dan semua yang anda bunuh memberi anda poin. Untuk program
+          saya, saya membalikkan kunci sehingga setiap kali anda mengklik, karakter
+          anda akan turun dan saat anda melangkah ke kanan, karakter anda akan pindah
+          ke kiri. Ini sungguh sulit! Terkadang anda hanya mendapatkan keuntungan,
+          keuntungan yang tidak adil jika anda adalah seorang pengembang permainan
+          tersebut. Apakah saya mengerti Ya!"
+      5: 
+    mc_intro:
+      1:
+        text: Namaku Jens Bergensten tapi lebih dikenal sebagai Jeb. Saya adalah kepala
+          pengembang Minecraft, di Mojang, Stockholm. Saya berusia sebelas atau mungkin
+          dua belas tahun dan mulai memprogram karena ingin membuat permainan. Salah
+          satu teman ayahku mengatakan bahwa untuk membuat permainan saya harus belajar
+          cara memprogram. Begitulah saya memulainya. Saya suka merancang dan membayangkan
+          arsitektur permainan. Itulah yang paling saya sukai di Minecraft.
+      2:
+        text: Selama satu jam berikutnya kamu akan mempelajari hal-hal dasar ilmu
+          komputer dengan memprogram Alex atau Steve agar bergerak melalui potongan
+          simulasi dunia Minecraft.
+      3:
+        text: Pemrograman biasa pada umumnya dibuat berupa teks tapi kini kita akan
+          menggunakan Blockly, sebuah sistem yang menggunakan balok visual yang bisa
+          kamu seret dan jatuhkan untuk menulis program. Dengan kata lain, kamu menciptakan
+          kode Javascript.
+      4:
+        text: Konsep yang akan kamu pelajari adalah yang digunakan programer komputer
+          setiap hari dan dasar ilmu komputer. Di Mojang, kami menggunakan konsep
+          yang sama untuk membuat Minecraft berfungsi.
+      5:
+        text: Sebelum memulai, pilih karakter terlebih dahulu. Saya akan memilih Alex.
+          Ayo kita buat kode untuk program yang akan membantunya bergerak mengitari
+          layar.
+      6:
+        text: Layar kamu dibagi menjadi tiga bagian utama. Di sebelah kiri adalah
+          area bermain Minecraft di mana program kamu akan dijalankan. Instruksi untuk
+          tiap tingkat dituliskan di bawah ini.
+      7:
+        text: Area di tengah ini adalah kotak perkakas dan tiap balok merupakan perintah
+          yang mengarahkan tindakan Alex.
+      8:
+        text: Ruang putih di sebelah kanan disebut area kerja dan di sinilah kita
+          akan membuat program.
+      9:
+        text: Jika kita menyeret balok bergerak maju(); ke area kerja lalu mengeklik
+          jalankan, apa yang akan terjadi? Alex bergerak maju satu kotak di atas petak.
+      10:
+        text: Dan bagaimana jika kita ingin melakukan sesuatu setelah dia bergerak
+          maju satu kotak? Kita dapat menambahkan balok lain pada program. Saya akan
+          memilih balok belokKanan(); dan menyeretnya ke bawah balok bergerakMaju();
+          hingga garis jingga ini muncul. Lalu saya akan menjatuhkannya dan dua balok
+          akan saling menempel. Ketika kita menekan jalankan lagi, Alex akan melakukan
+          perintah yang ditumpuk dari atas ke bawah di area kerja kita.
+      11:
+        text: Jika kamu ingin menghapus sebuah balok, cukup seret balok dari tumpukan
+          kembali ke kotak perkakas.
+      12:
+        text: 'Untuk membatalkan perubahan dan kembali ke awal level, gunakan tombol
+          Mulai Lagi di sudut kanan atas area kerja. Satu hal lagi: kamu lihat segitiga
+          kecil pada balok untuk berbelok? Setiap kali kamu melihatnya, itu berarti
+          bahwa kamu bisa mengambil pilihan lain. Ayo kita coba membuat kode!'
+    mc_repeat:
+      1:
+        text: Saya Lydia Winters, direktur merek Mojang dan kami membuat game kecil
+          bernama Minecraft ini.
+      2:
+        text: Aktivitas favorit saya di Minecraft adalah menggali. Saya sangat mencintai
+          petualangan di gua dan melihat apa yang saya temukan. Karena saya bukan
+          programer, saya sangat bersemangat untuk mempelajari Minecraft dan benar-benar
+          belajar membuat kode sendiri.
+      3:
+        text: Level terakhir memerlukan banyak balok bergerakMaju();. Akan lebih mudah
+          jika kita cukup memberi tahu komputer untuk melakukan perintah bergerakMju();
+          empat atau lima kali. Untung saja komputer benar-benar hebat dalam mengulang
+          perintah menggunakan putaran pengulangan.
+      4:
+        text: Saat membuat Minecraft, kami menggunakan putaran pengulangan untuk menempatkan
+          semua materi awal dalam membuat dunia baru. Terdapat beribu-ribu balok di
+          dalamnya. Kami juga menggunakan putaran dalam hal-hal kecil, misalnya untuk
+          menggerakkan kaki Alex ke depan dan ke belakang saat ia berjalan kaki. Putaran
+          pengulangan merupakan bagian pemrograman yang hebat.
+      5:
+        text: Malam menjelang dan dalam beberapa level berikutnya kita akan membangun
+          rumah agar tetap aman. Kita akan menggunakan balok pengulangan untuk melakukannya
+          dengan sangat mudah.
+      6:
+        text: Untuk membuat dinding rumah, kita dapat meminta Alex untuk bergerakMaju();
+          dan menempatkan papan empat kali atau kita dapat memintanya agar bergerakMaju();
+          dan menempatkan satu papan lalu mengambil perintah ini dan menggunakan balok
+          pengulangan agar Alex melakukan tindakan itu berkali-kali. Sekarang kita
+          akan mengeklik balok pengulangan dan memberi tahu Alex berapa kali dia harus
+          melakukan tindakan ini. Sekarang ayo kita bangun rumah sebelum malam datang!
+          Selamat bersenang-senang.
+    mc_if_statements:
+      1:
+        text: Sekarang kita akan belajar tentang pernyataan jika. Pernyataan jika
+          adalah bagian mendasar untuk belajar memprogram. Mereka membantu komputer
+          membuat keputusan.
+      2:
+        text: Semua komputer menggunakan pernyataan jika, termasuk ponsel saya. Misalnya,
+          saat saya membuka ponsel, maka beberapa kode dijalankan yang mengatakan
+          bahwa jika saya memasukkan kata sandi dengan benar, maka ponsel akan terbuka.
+          Atau, menunjukkan pesan kesalahan.
+      3:
+        text: Kamu dapat menggunakan pernyataan jika dalam kode untuk membuat Steve
+          dan Alice menanggapi apa yang mereka lihat di dunia. Misalnya, jika ada
+          batu di depan, mereka akan berbelok ke kiri. Atau berbelok ke kanan jika
+          ada pohon di sana.
+      4:
+        text: Dalam hal ini, tentu saja kita tidak mau jatuh ke dalam lava. Mudah
+          saja untuk merencanakan lava. Kita dapat melihatnya di layar. Tapi bagaimana
+          dengan lava yang tidak dapat kita lihat di bawah batu?
+      5:
+        text: Setelah menggali batu, kita harus memeriksa apakah ada lava di tempat
+          itu sebelum bergerak maju. Jika ada lava, kita harus memindahkan batu di
+          depan karakter kita sebelum dapat bergerak maju. Dengan begitu kita dapat
+          bergerak dengan aman. Saatnya menggali lebih banyak! Dan ingatlah untuk
+          menggunakan pernyataan jika untuk memperhatikan langkahmu.
+    mc_congrats_share:
+      1:
+        text: Selamat! Kamu baru saja mempelajari balok pembangunan dasar menurut
+          ilmu komputer.
+      2:
+        text: Sekarang kamu dapat menggunakan balok ini untuk membangun kreasimu sendiri.
+          Tidak ada lagi instruksi dan teka-teki yang harus dipecahkan. Kamu bisa
+          membangun apa saja yang kamu inginkan. Kamu harus memilih.
+      3:
+        text: "[siswa berkata] Ini sungguhan. Cukur. Aku membuat huruf L dari obor.
+          Aku membuat huruf A dari papan pohon birch. Berhasil, berhasil. Kami membangun
+          rumah dari wol!"
+      4:
+        text: Setelah selesai dengan kreasimu, pilih bagikan agar mendapatkan tautan
+          untuk membagikannya dengan teman-teman kamu. Selamat bersenang-senang!
+    mc_congrats_no_share:
+      1:
+        text: Selamat! Kamu baru saja mempelajari balok pembangunan dasar menurut
+          ilmu komputer.
+      2:
+        text: Sekarang kamu dapat menggunakan balok ini untuk membangun kreasimu sendiri.
+          Tidak ada lagi instruksi dan teka-teki yang harus dipecahkan. Kamu bisa
+          membangun apa saja yang kamu inginkan. Kamu harus memilih.
+      3:
+        text: "[siswa berkata] Ini sungguhan. Cukur. Aku membuat huruf L dari obor.
+          Aku membuat huruf A dari papan pohon birch. Berhasil, berhasil. Kami membangun
+          rumah dari wol!"
+      4:
+        text: Sekarang kamu bisa membangun apa saja yang kamu inginkan. Selamat bersenang-senang!
+    gumball_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6:
+        text: Ruang putih di sebelah kanan disebut area kerja dan di sinilah kita
+          akan membuat program.
+      7: 
+      8: 
+      9: 
+    iceage_intro:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6:
+        text: Ruang putih di sebelah kanan disebut area kerja dan di sinilah kita
+          akan membuat program.
+      7: 
+      8: 
+      9: 
+    mc_2016_intro:
+      1:
+        text: Hai, nama saya Jens dan saya adalah seorang perancang kreatif terkemuka
+          dari Minecraft. Pada jam berikutnya, anda akan membuat permainan Minecraft
+          anda sendiri. Ini terlihat seperti Minecraft tapi dunia telah berhenti.
+          Domba tidak sedang bergerak, ayam tidak sedang bertelur, dan zombie hanya
+          berdiri diam. Terserah anda untuk menambahkan kode tersebut untuk membuat
+          karya dunia Minecraft.
+      2:
+        text: 'Saya Melissa dan saya adalah seorang peneliti pengguna di Minecraft.
+          Yang sangat saya sukai adalah bagaimana orang-orang berpikir dan berinteraksi
+          dengan teknologi sehingga pekerjaan ini adalah pekerjaan yang sempurna bagi
+          saya untuk mengumpulkan teknik komputer dengan psikologi: bagaimana orang
+          berpikir dan berperilaku.'
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+    mc_2016_loops:
+      1: 
+      2: 
+      3:
+        text: Sebelumnya, kami membawa ayam untuk bergerak melintasi layar tersebut
+          namun kemudian dia berhenti. Di Minecraft, ayam-ayam itu berkeliaran selamanya.
+          Mari kita gunakan loop "selamanya" dari kotak peralatan kami agar ayam kita
+          tetap bergerak selamanya. Kekuatan loop akan menghemat banyak waktu dan
+          membuka semua jenis pilihan-pilihan yang rapi saat anda membuat versi Minecraft
+          anda sendiri.
+    mc_2016_events:
+      1: 
+      2: 
+      3:
+        text: Namun apa yang terjadi ketika anda menggunakannya? Di Minecraft, domba
+          melepaskan wolnya saat anda mengguntingnya, sapi-sapi melarikan diri saat
+          anda memukulnya, dan tanaman merambat mendadak saat anda mendekati mereka.
+          Reaksi ini terjadi berkat sesuatu yang disebut peristiwa-peristiwa. Peristiwa-peristiwa
+          itu memberitahu program anda untuk mendengarkan atau menunggu kapan sesuatu
+          terjadi. Dan bila itu terjadi, lakukanlah sebuah tindakan.
+      4: 
+    applab_intro_designmode:
+      1: 
+      2: 
+      3: 
+      4: 
+      5:
+        text: Bila anda menambahkan sebuah unsur baru di layar anda, itu akan memberikan
+          ID generik seperti tombol 1. Sebaiknya ubahlah ID tombol ini menjadi sesuatu
+          yang lebih berarti seperti "Tombolkanan". Sehingga anda akan tahu yang mana
+          saat anda menggunakan program tersebut.
+      6: 
+      7: 
+      8: 
+      9: 
+      10: 
+    csd_concept_circuits_logic:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+      10: 
+      11:
+        text: Jadi apakah anda sedang bermain game, merekam video, atau menjelajahi
+          alam semesta, segala sesuatu yang mungkin anda bisa lakukan dengan teknologi
+          yang membutuhkan banyak informasi untuk diproses sangat cepat. Di balik
+          semua kompleksitas ini adalah banyak sirkuit kecil mungil yang mengubah
+          sinyal biner menjadi situs web, video, musik, dan permainan Sirkuit ini
+          bahkan dapat membantu kita memecahkan kode DNA untuk mendiagnosa dan mengobati
+          penyakit. Jadi apa yang akan anda lakukan dengan semua sirkuit ini?
+    csd_concept_memory_cpu_input_output:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9:
+        text: Ini semua terjadi begitu cepat rasanya sesaat, tapi untuk menampilkan
+          setiap huruf komputer berjalan ribuan petunjuk, mulai dari saat jari anda
+          menekan titik kunci.
+      10: 
+      11: 
+      12: 
+    csd_concept_hardware_software:
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8:
+        text: Sama seperti angka, semua ini perintah sederhana dapat direpresentasikan
+          dalam biner satu dan nol atau hidup dan mati sinyal-sinyal listrik. Biner
+          perintah-perintah yang disimpan di memori dan CPU mengambil dan mengeksekusi
+          mereka di urutan satu setelah yang lain. Urutan perintah ini, pada kenyataannya,
+          sebuah program komputer yang sangat sederhana.
+      9: 
+      10: 
+      11:
+        text: Untuk menggambar sebuah persegi panjang pada layar, anda hanya perlu
+          satu perintah. Ini tingkat tinggi perintah diubah menjadi ratusan, atau
+          ribuan, biner sederhana perintah bahwa CPU mengerti. Perangkat lunak memberitahu
+          CPU apa yang harus dilakukan, tetapi ketika anda sedang mendengarkan musik,
+          dan penjelajah web, dan mengobrol dengan teman, komputer anda menjalankan
+          beberapa buah perangkat lunak sekaligus.
+      12: 
+      13: 
+      14: 
+      15: 
+      16:
+        text: Perangkat lunak adalah serangkaian perintah yang dibuat sederhana kode
+          biner, dan kode biner adalah hanya sinyal-sinyal listrik yang mengalir melalui
+          miliaran sirkuit kecil.
+      17: 

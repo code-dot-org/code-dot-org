@@ -1,0 +1,75 @@
+mi:
+  devise:
+    confirmations:
+      confirmed: "I tutuki te whakaū i tō wāhitau īmēra."
+      send_instructions: "Ākuanei ka tae atu ki a koe tētahi īmēra me ngā tohutohu e whakamārama ana me pēhea te whakaū i tō pūkete."
+      send_paranoid_instructions: "Mehemea kei tō mātou pūtengi raraunga tō wāhitau īmēra, kāore e roa ka tae atu ki a koe tētahi īmēra me ngā tohutohu kia whakaū koe i tō pūkei."
+    failure:
+      already_authenticated: "Kua waitohungia kētia koe."
+      inactive: "Kāore anō tō pūkei kia whakahohengia."
+      invalid: "He muhu te īmēra, te kupuhipa rānei."
+      invalid_token: "He muhu te maimai motuhēhēnga."
+      locked: "Kua rakaina tō pūkei."
+      not_found_in_database: "He muhu te īmēra, te kupuhipa rānei."
+      timeout: "Kua mōnehu tō wātū, tēnā takiuru anō ki te haere tonu."
+      unauthenticated: "Me mātua takiuru, waitohu rānei kia āhei te haere tonu."
+      unconfirmed: "Me mātua whakaū i tō pūkei kia āhei te haere tonu."
+    mailer:
+      confirmation_instructions:
+        subject: "Ngā tohutohu whakaū nā Code.org"
+      reset_password_instructions:
+        subject: "Ngā tohutohu tautuhi kupuhipa anō nā Code.org"
+      unlock_instructions:
+        subject: "Wetea ngā Tohutohu"
+    omniauth_callbacks:
+      failure: "Kāore i tutuki te whakamotuhēhē i a koe i %{kind} nā te mea \"%{reason}\"."
+      success: "Kua eke te whakamotuhēhē i tō %{kind} pūkei."
+    passwords:
+      no_token: "E kore e tutuki tō whai wāhi ki tēnei whārangi ki te kore koe e uru mā te īmēra tautuhi kupuhipa anō. Ki te uru koe mā te īmēra tautuhi kupuhipa anō, me mātua whakamahi koe i te katoa o te URL i whakaratoa."
+      send_instructions: "Ākuanei ka tae atu ki a koe tētahi īmēra me ngā tohutohu e whakamārama ana me pēhea te tautuhi anō i tō kupuhipa."
+      send_paranoid_instructions: "Mehemea kei tō mātou pūtengi raraunga tō wāhitau īmēra, kāore e roa ka tae atu ki a koe tētahi īmēra ki tō wāhitau īmēra ki te whakaora i tō kupuhipa."
+      updated: "I tutuki te panonitanga o tō kupuhipa. Kua takiurua koe ināianei."
+      updated_not_active: "I tutuki te panonitanga o tō kupuhipa."
+    registrations:
+      destroyed: "Hei konei rā! Kua whakakoretia tō pūkei. Te manako ia ka kite anō tāua i a tāua ākuanei."
+      signed_up: "Nau mai! I angitu tō waitohu mai."
+      signed_up_but_inactive: "I angitu tō waitohu mai. Heoi anō, kāore anō tō pūkei kia whakahohengia, nā reira, kāore anō koe kia takiuru."
+      signed_up_but_locked: "I angitu tō waitohu mai. Heoi anō, e mau ana tō pūkei, nā reira, kāore anō koe kia takiuru."
+      signed_up_but_unconfirmed: "Kua tukuna tahitia tētahi kōrero me tētahi honongaitua whakaū ki tō wāhitau īmēra. Tēnā tūwheratia te honongaitua ki te whakahohe i tō pūkei."
+      update_needs_confirmation: "I angitu tō whakahou i tō pūkei, otirā, me manatoko mātou i tō wāhitau īmēra. Tēnā tirohia ō īmēra kātahi ka pāwhiri i te honongaitua whakaū ki te whakaoti i ngā mahi whakaū i tō wāhitau īmēra."
+      updated: "I angitu te whakahoutanga o tō pūkei."
+    sessions:
+      signed_out: "I angitu tō takiputa."
+    unlocks:
+      send_instructions: "Ākuanei ka tae atu ki a koe tētahi īmēra me ngā tohutohu e whakamārama ana me pēhea te whakawātea i tō pūkete."
+      send_paranoid_instructions: "Ākuanei ka tae atu ki a koe tētahi īmēra me ngā tohutohu ki te whakawātea i tō pūkei mēnā rā he tīari tō pūkei."
+      unlocked: "I angitu te whakawāteatanga o tō pūkei. Tēnā takiuru atu ki te haere tonu."
+  errors:
+    messages:
+      already_confirmed: "i whakaūngia kētia, me ngana ki te takiuru"
+      confirmation_period_expired: "me whakaū i roto i te %{period}, tēnā tonoa he mea hou"
+      expired: "kua mōnehu, tēnā tonoa he mea hou"
+      not_found: "kāore i kitea"
+      not_locked: "kāore i raka"
+      not_saved:
+        one: "Kāore tēnei %{resource} i tiakina, i haukotia i runga i te hē kotahi:"
+        other: "Kāore tēnei %{resource} i tiakina, i haukotia i runga i ngā hē %{count}:"
+    invitations:
+      send_instructions: 'Kua tukuna te pōhiri ā-īmērā ki %{email}.'
+      invitation_token_invalid: 'He muhu te maimai pōhiri nei!'
+      updated: 'I tutuki te tautuhitanga o tō kupuhipa. Kua takiurua koe ināianei.'
+      no_invitations_remaining: "Korekau pōhiri e toe ana"
+      invitation_removed: 'I tangohia tō pōhiri.'
+      new:
+        header: "Tuku pōhiri"
+        submit_button: "Tukuna tētahi pōhiri"
+      edit:
+        header: "Tautuhia tō kupuhipa"
+        submit_button: "Tautuhia taku kupuhipa"
+    mailer:
+      invitation_instructions:
+        subject: 'Ngā tohutohu pōhiri'
+        hello: 'Tēnā koe %{email}'
+        someone_invited_you: 'Nā tētahi koe i pōhiri ki %{url}. E āhei ana te whakaae mā te honongaitua kei raro iho nei.'
+        accept: 'Whakaae ki te pōhiri'
+        ignore: "Waiho noa iho tēnei īmēra mēnā kāore koe i te hiahia ki te whakaae ki te pōhiri.<br />Ka kore tō pūkei e waihangahia tae noa atu ki te wā kua toro atu koe ki te honongaitua nei me te tautuhi i tō kupuhipa."

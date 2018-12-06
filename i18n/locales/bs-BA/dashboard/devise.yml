@@ -1,0 +1,75 @@
+bs:
+  devise:
+    confirmations:
+      confirmed: "Tvoja e-mail adresa je potvrđena."
+      send_instructions: "Za par minuta ćeš primiti e-mail s uputama kako da potvrdiš svoj korisnički račun."
+      send_paranoid_instructions: "Ako tvoja e-mail adresa postoji u našoj bazi, za par minuta ćeš primiti e-mail s uputama kako da potvrdiš svoj korisnički račun."
+    failure:
+      already_authenticated: "Već ste prijavljeni."
+      inactive: "Tvoj korisnički račun još nije aktiviran."
+      invalid: "Neispravan e-mail ili šifra."
+      invalid_token: "Neispravan znak identifikacije."
+      locked: "Tvoj račun je zaključan."
+      not_found_in_database: "Neispravan e-mail ili šifra."
+      timeout: "Tvoja prijava je istekla. Opet se prijavi da bi nastavio/la."
+      unauthenticated: "Za nastavak je potrebno da se registrirate ili prijavite."
+      unconfirmed: "Za nastavak je potrebno da potvrdiš svoj korisnički račun."
+    mailer:
+      confirmation_instructions:
+        subject: "Code.org upute za potvrđivanje"
+      reset_password_instructions:
+        subject: "Code.org upute za ponovno postavljanje šifre"
+      unlock_instructions:
+        subject: "Upute za otključavanje"
+    omniauth_callbacks:
+      failure: "Nismo u mogućnosti da te raspoznamo od %{kind} zbog \"%{reason}\"."
+      success: "Uspješna identifikacija sa %{kind} korisničkog računa."
+    passwords:
+      no_token: "Ne možete pristupiti ovoj stranici bez da dolazite sa e-maila o ponovnom postavljanju šifre. Ako dolazite sa tog e-maila molimo provjerite da ste koristili kompletan URL."
+      send_instructions: "Za koju trenutak ćete primiti e-mail sa uputstvima kako pononovo postaviti šifru."
+      send_paranoid_instructions: "Ako vaša e-mail postoji u našoj bazi podataka, primit ćete link za poništavanje šifre u e-mail poruci za nekoliko minuta."
+      updated: "Vaša šifra je uspješno promijenjena. Sada ste prijavljeni."
+      updated_not_active: "Vaša šifra je uspješno promijenjena."
+    registrations:
+      destroyed: "Doviđenja! Vaš račun je uspješno otkazan. Nadamo se da ćemo vas vidjeti uskoro."
+      signed_up: "Dobrodošli! Uspješno ste se registrirali."
+      signed_up_but_inactive: "Uspješno ste se registrirali. Međutim, nismo vas mogli prijaviti jer vaš račun još nije aktiviran."
+      signed_up_but_locked: "Uspješno ste se prijavili, međutim nismo vas mogli prijaviti jer je vaš račun zaključan."
+      signed_up_but_unconfirmed: "Poruka sa linkom za potvrdu je poslana na vašu e-mail adresu. Molimo vas otvorite link kako biste aktivirali svoj račun."
+      update_needs_confirmation: "Uspješno ste ažurirali vaš račun, ali moramo potvrditi vašu novu e-mail adresu. Molimo vas provjerite svoju poštu i kliknite na link kako bi vaša nova e-mail adresa bila potvrđena."
+      updated: "Uspješno ste ažurirali svoj račun."
+    sessions:
+      signed_out: "Uspješno ste odjavljeni."
+    unlocks:
+      send_instructions: "Za nekoliko minuta primiti ćete e-mail sa uputama kako da otključate svoj korisnički račun."
+      send_paranoid_instructions: "Ako vaš račun postoji, za par minuta ćete dobiti e-mail sa uputama kako ga otključati."
+      unlocked: "Vaš račun je uspješno otključan. Molimo prijavite se ponovo."
+  errors:
+    messages:
+      already_confirmed: "je već potvrđen, molimo probajte se prijaviti"
+      confirmation_period_expired: "mora biti potvrđeno unutar %{period}, molimo zatražite novi"
+      expired: "je istekao, molimo zatražite novi"
+      not_found: "nije pronađeno"
+      not_locked: "nije zaključan"
+      not_saved:
+        one: "1 greška zabranjuje da se %{resource} snimi:"
+        other: "%{count} grešaka zabranjuju %{resource} da se snimi:"
+    invitations:
+      send_instructions: 'E-mail pozivnica je poslana na %{email}.'
+      invitation_token_invalid: 'Znak sa pozivnice nije valjan!'
+      updated: 'Vaša šifra je uspješno postavljena. Sada ste prijavljeni.'
+      no_invitations_remaining: "Nema više preostalih pozivnica"
+      invitation_removed: 'Vaša pozivnica je uklonjena.'
+      new:
+        header: "Pošalji pozivnicu"
+        submit_button: "Pošalji pozivnicu"
+      edit:
+        header: "Postavi šifru"
+        submit_button: "Postavi lozinku"
+    mailer:
+      invitation_instructions:
+        subject: 'Upute pozivnice'
+        hello: 'Pozdrav %{email}'
+        someone_invited_you: 'Neko vas je pozvao na %{url}, možete prihvatiti pozivnicu putem linka ispod.'
+        accept: 'Prihvati pozivnicu'
+        ignore: "Ako ne želite prihvatiti pozivnicu, molimo ignorišite ovaj e-mail.<br />Vaš račun neće biti kreiran sve dok ne kliknete na link gore i postavite svoju šifru."

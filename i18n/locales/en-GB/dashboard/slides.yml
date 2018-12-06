@@ -1,0 +1,56 @@
+en-GB:
+  slides:
+    mc_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+        text: "The white space on the right is called the workspace and this is where we'll build our program."
+      9:
+        text: "If we drag the \"move forward\" block to our workspace and then click run, what happens? Alex moves forward one space on the grid."
+      10:
+        text: "And what if we want to do something after she has moved forward one space? We can add another block to our program. I'm going to choose the \"turn right\" block and I'll drag it underneath my \"move forward\" block until this orange line appears. Then I'll drop it and the two blocks will snap together. When we press run again, Alex will perform the commands that are stacked from top to bottom in our workspace."
+      11:
+      12:
+    mc_repeat:
+      1:
+      2:
+      3:
+        text: "The last level needed lots of \"move forward\" blocks. It would be easier if we could just tell the computer to perform the \"move forward\" command four or five times. Luckily for us, computers are really good at repeating commands with repeat loops."
+      4:
+      5:
+      6:
+        text: "To build a wall of our house, we can either tell Alex to \"move forward\" and place planks four times or we can tell her to \"move forward\" and place one plank, then take this command and use the repeat block to have her perform the action multiple times. Now we'll click on the repeat block and tell her how many times we want her to perform this action. Now let's build our house before night falls! Have fun!"
+    mc_if_statements:
+      1:
+      2:
+      3:
+      4:
+        text: "In this case, we don't want to fall into the lava. It's easy to plan for the lava. We can see it on the screen. But what about the lava that we can't under the stone?"
+      5:
+    gumball_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+        text: "The white space on the right is called the workspace and this is where we'll build our program."
+      7:
+      8:
+      9:
+    iceage_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+        text: "The white space on the right is called the workspace and this is where we'll build our program."
+      7:
+      8:
+      9:

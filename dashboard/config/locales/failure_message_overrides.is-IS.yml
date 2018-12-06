@@ -1,0 +1,106 @@
+---
+is:
+  data:
+    failure_message_overrides:
+      Code Studio Puzzle Challenge 1 - Artist_failure_message_override: |-
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
+      Code Studio Puzzle Challenge 10 - Bee_failure_message_override: |-
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
+      Code Studio Puzzle Challenge 10b - Bee_failure_message_override: |-
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
+      Code Studio Puzzle Challenge 11 - Artist_failure_message_override: |-
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
+      Code Studio Puzzle Challenge 12 - Artist_failure_message_override: |-
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
+      Code Studio Puzzle Challenge 13 - Artist_failure_message_override: |-
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
+      Code Studio Puzzle Challenge 14 - Artist_failure_message_override: |-
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
+      Code Studio Puzzle Challenge 2 - Artist_failure_message_override: |-
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
+      Code Studio Puzzle Challenge 3 - Artist_failure_message_override: |-
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
+      Code Studio Puzzle Challenge 4 - Artist_failure_message_override: |-
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
+      Code Studio Puzzle Challenge 5 - Bee_failure_message_override: |-
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
+      Code Studio Puzzle Challenge 6 - Bee_failure_message_override: |-
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
+      Code Studio Puzzle Challenge 7 - Bee_failure_message_override: |-
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
+      Code Studio Puzzle Challenge 8 - Bee_failure_message_override: |-
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
+      Code Studio Puzzle Challenge 9 - Bee_failure_message_override: |-
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
+      Code Studio Puzzle Challenge Var - Artist_failure_message_override: |-
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
+      Course 4 Artist Vars 10_failure_message_override: Gættu þess að nota breytuna
+        fyrir hliðar!
+      Course 4 Playlab For Loops 4b_failure_message_override: Mundu, báðir leikmenn
+        ættu að ná flöggunum með sama fjölda hreyfinga!
+      Course 4 Playlab For Loops 5b_failure_message_override: Mundu, báðir leikmenn
+        eiga að stoppa á sama stað.
+      Eval Strings Images .2_failure_message_override: Gættu þess að bæta við strengnum
+        "Universe" til að láta kóðann búa til "Hello, Universe"
+      Kiki_StarWars_Test_5_failure_message_override: Leik lokið!
+      Kiki_StarWars_Test_5_Example_failure_message_override: Leik lokið!
+      MC HOC 2016 Level 2-2_failure_message_override: Notaðu "færa áfram" og "snúa"
+        skipanir til að hreyfa hænuna.
+      MC HOC 2016 Level 3_failure_message_override: Notaðu "gera endalaust" kubb og
+        "færa áfram" og "snúa" skipanir til að halda hænunni á hreyfingu.
+      MC HOC 2016 Level 4_failure_message_override: Ef hænurnar færast allar í sömu
+        átt, getur þú notað "snúa eitthvert" til að láta hænurnar snúa af handahófi
+        til hægri eða vinstri.
+      MC HOC 2016 Level 5_failure_message_override: Prófaðu að nota "Gera endalaust"
+        með "Færast skref í átt að leikmanni".
+      MC HOC 2016 Level 6_failure_message_override: Notaðu "kveikja uppvakning" undir
+        "þegar nótt" til að kveikja a.m.k. þrjá uppvakninga. Bættu svo "færa skref
+        í átt að leikmanni" skipun við "þegar kviknar" atburð þeirra með lykkju svo
+        þeir elti þig. Ef þeir fara of hratt, getur þú bætt við "bíða" skipun til
+        að hægja á þeim.
+      MC HOC 2016 Level 8_failure_message_override: Þú þarft að láta laumupúkann sprengja
+        vegginn svo að þú komist til kindarinnar.
+      MC HOC 2016 New Drop_failure_message_override: Notaðu örvarlyklana til að ganga
+        að kindinni og ýttu á bilslána eða smelltu á leikjaborðið til að nýta hana.
+        Og gleymdu ekki að bæta "Gefa" kubbnum við kóðann þinn.
+      MC HOC 2016 New Spawn_failure_message_override: Settu "kveikja kind" undir "þegar
+        keyrt".
+      MC HOC 2016 New Walk_failure_message_override: Dyrnar opnast ef þú snýrð að
+        þeim og ýtir á bilslána eða snertir leikjaborðið. Gakktu inn fyrir til að
+        halda áfram.
+      MC HOC 2016 SCORE LEVEL_failure_message_override: Ef þú átt erfitt með að snerta
+        5 járnþursa, getur þú prófað að breyta skorinu í 2 fyrir hverja snertingu.
+      MC HOC 2016 Village Test_failure_message_override: Til að vinna þarft þú að
+        láta járnþursinn elta og ráðast á uppvakinganna.
+      Valentine_playlab_01_failure_message_override: Næstum því!  Reyndu aftur.
+      WhileAdventure_failure_message_override: Til hamingju! Þú safnaðir X peningum!
+      courseC19_playLab_EOC3_failure_message_override: Þú verður að bæta tveimur eða
+        fleiri nýjum leikmönnum við leikinn og forrita þá svo þeir hreyfist.
+      courseE_playLab_scaffold3_failure_message_override: Þú verður að bæta tveimur
+        eða fleiri nýjum leikmönnum við leikinn og forrita þá svo þeir hreyfist.
+      courseE_playLab_scaffold3_2018_failure_message_override: Þú verður að bæta tveimur
+        eða fleiri nýjum leikmönnum við leikinn og forrita þá svo þeir hreyfist.
+      grade4_scaffolded_project3_failure_message_override: Þú verður að bæta í leikinn
+        tveimur eða fleiri nýjum leikmönnum sem hreyfast.
+      kikiTesta_failure_message_override: Til hamingju! Þú safnaðir X peningum!
+      sample1_failure_message_override: Til hamingju! Þú safnaðir X peningum!
+      sample4_failure_message_override: Til hamingju! Þú safnaðir X peningum!
+      sample6_failure_message_override: Ekki alveg, Haltu áfram að reyna! [Fara á
+        leiksvæðið]
+      sample8_failure_message_override: Til hamingju! Þú safnaðir X peningum!

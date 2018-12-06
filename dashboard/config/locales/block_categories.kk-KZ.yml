@@ -1,0 +1,19 @@
+---
+kk:
+  data:
+    block_categories:
+      Actions: Іс-әрекеттер
+      Loops: Ілмек
+      Functions: Функциялар
+      Color: Түс
+      Math: Математика
+      Logic: Логика
+      Variables: Айнымалылар
+      Conditionals: Шарттар
+      Events: Шаралар
+      Text: Мәтін
+      Start: Бастау
+      Booleans: Бульдік тип
+      test: таңдау
+      Name: Атыңыз
+      Function: Функция

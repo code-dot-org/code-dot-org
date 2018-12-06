@@ -1,0 +1,471 @@
+---
+lv:
+  data:
+    authored_hints:
+      2-3 Artist 1 new_authored_hint:
+        2-3_Artist_1_new_a: Ja izmantosi bloku 'pārvietoties uz priekšu par 100 punktiem',
+          es uzzīmēšu līniju automātiski.
+        2-3_Artist_1_new_b: Vai ir problēmas stūrī pagriezties? Izmanto bloku 'pagriezt
+          pa labi par 90 grādiem'.
+      2-3 Artist 11_authored_hint:
+        2-3_Artist_11_a: 'Vai ir problēmas ar leņķiem? Nepieciešams veikt 360 grādu
+          pagriezienu 8 reizēs. Cik ir 360/8? '
+      2-3 Artist 12_authored_hint:
+        2-3_Artist_12_a: Riņķī ir 360 grādu. Ja mākslinieks ciklā katru reizi pagriežas
+          par 1 grādu, tad viņam vajadzēs to atkārtot 360 reizes.
+      2-3 Artist 3new_authored_hint:
+        2-3_Artist_3new_a: Cik ir 100-70? Izpētot stāsta problēmu, tik augstai jābūt
+          cepurei!
+      2-3 Artist 4_authored_hint:
+        2-3_Artist_4_a: Lai pabeigtu māju, mums tikai ir jāuzzīmē kvadrāts!
+      2-3 Artist 6_authored_hint:
+        2-3_Artist_6_c: Katrai trijstūra malai ir tāds pats garums kā katrai kvadrāta
+          malai... 100 pikseļi!
+      2-3 Artist 8_authored_hint:
+        2-3_Artist_8_a: Ja 200 sadala uz pusēm, cik punktu platam jābūt katram kvadrātam?
+      2-3 Artist 9 REPLACEMENT_authored_hint:
+        step_size: Katrs solis ir 100 pikseļus plats un 100 pikseļus garš.
+      2-3 Artist Debugging 2_authored_hint:
+        2-3_Artist_Debugging_2_a: 'Padoms: Katra ūsa ir 75 punktus gara.'
+      2-3 Artist Debugging 3_authored_hint:
+        2-3_Artist_Debugging_3_b: Ja programma tiek izpildīta pārāk ātri, lai saprastu
+          kas notiek, izmēģini to palēnināt ar slīdni.
+      2-3 Artist Debugging 7_authored_hint:
+        2-3_Artist_Debugging_7_a: Kas notiks, ja mākslinieks pārvietosies vai leks
+          atpakaļ pēc tam, kad uzzīmēs pirmo līniju?
+      2-3 Artist Debugging 9_authored_hint:
+        2-3_Artist_Debugging_9_a: Māksliniekam jāpagriežas 60 grādus pa kreisi, pirms
+          viņš sāk zīmēt!
+      2-3 Artist Functions 1 a_authored_hint:
+        2-3_Artist_Functions_1_a: Kvadrātiem malas ir 100 punktu garas, tas nozīmē,
+          ka pirms sākt zīmēt otru kvadrātu nepieciešams lekt uz priekšu 175 punktus.
+        2-3_Artist_Functions_1_b: Tas nekas, ja zīmējot brilles līnijas pārklājas.
+      2-3 Artist Functions 1_authored_hint:
+        2-3_Artist_Functions_1_a: Kvadrātiem malas ir 100 punktu garas, tas nozīmē,
+          ka pirms sākt zīmēt otru kvadrātu nepieciešams lekt uz priekšu 175 punktus.
+        2-3_Artist_Functions_1_b: Tas nekas, ja zīmējot brilles līnijas pārklājas.
+      2-3 Artist Functions 12 a_authored_hint:
+        2-3_Artist_Functions_12_a: Pamēģini vispirms palaist kodu, lai apskatītos
+          ko nepieciešams pievienot.
+      2-3 Artist Functions 12_authored_hint:
+        2-3_Artist_Functions_12_a: Pamēģini vispirms palaist kodu, lai apskatītos
+          ko nepieciešams pievienot.
+      2-3 Artist Functions 2 a_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          Tavai programmai nepieciešams:
+           - izmantot funkciju
+           - pārvietoties uz priekšu 100+75 punktus
+           - izmantot funkciju
+      2-3 Artist Functions 2_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          Tavai programmai nepieciešams:
+           - izmantot funkciju
+           - pārvietoties uz priekšu 100+75 punktus
+           - izmantot funkciju
+      2-3 Artist Functions 3 a_authored_hint:
+        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Artist Functions 3_authored_hint:
+        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Artist Functions 4 a_authored_hint:
+        2-3_Artist_Functions_4_a: Māksliniekam starp katru kvadrātu nepieciešams pagriezties
+          par 120 grādiem, lai pabeigtu zīmējumu.
+      2-3 Artist Functions 4_authored_hint:
+        2-3_Artist_Functions_4_a: Māksliniekam starp katru kvadrātu nepieciešams pagriezties
+          par 120 grādiem, lai pabeigtu zīmējumu.
+      2-3 Artist Loops New 11_authored_hint:
+        2-3_Artist_Loops_New_11_a: "Atceries, ka iepriekšējā uzdevuma kods ir:\n\n<xml>\n<block
+          type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block
+          type=\"controls_repeat\">\n<title name=\"TIMES\">8</title>\n<statement name=\"DO\">\n<block
+          type=\"draw_colour\" inline=\"true\">\n<value name=\"COLOUR\">\n<block type=\"colour_random\"/>\n</value>\n<next>\n<block
+          type=\"draw_turn_by_constant_dropdown\">\n<title name=\"DIR\">turnRight</title>\n<title
+          name=\"VALUE\" config=\"45,60,90,120,180\">45</title>\n<next>\n<block type=\"draw_move_by_constant\">\n<title
+          name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">50</title>\n<next>\n<block
+          type=\"draw_turn_by_constant_dropdown\">\n<title name=\"DIR\">turnLeft</title>\n<title
+          name=\"VALUE\" config=\"45,60,90,120,180\">90</title>\n<next>\n<block type=\"draw_move_by_constant\">\n<title
+          name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">50</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</xml>\n
+          \nroot -> data -> authored_hints -> 2-3 Artist Loops New 11_authored_hint
+          -> 2-3_Artist_Loops_New_11_a\nhttps://studio.code.org/s/course2/stage/7/puzzle/9"
+      2-3 Artist Loops New 12_authored_hint:
+        2-3_Artist Loops_New_12_c: Māksliniekam jāpagriežas pa labi tikai par 60 grādiem,
+          lai veidotos plats leņķis.
+      2-3 Artist Nested Loops 1_authored_hint:
+        2-3_Artist_Nested_Loops_1_a: Atceries ciklā ievietot visus pelēkos blokus.
+      2-3 Artist Nested Loops 3_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: Vajadzīga palīdzība ar leņķiem? **360/12=30**
+        2-3_Artist_Nested_Loops_3_b: Atceries ievietot ciklā visu pelēko kodu kopā
+          ar savu pagriešanās bloku.
+      2-3 Artist Nested Loops 4_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: Vajadzīga palīdzība ar leņķiem? **360/12=30**
+      2-3 Artist Nested Loops 5_authored_hint:
+        2-3_Artist_Nested_Loops_5_a: |-
+          Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.
+
+          Ja kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?
+      2-3 Artist Nested Loops 7_authored_hint:
+        2-3_Artist_Nested_Loops_7_a: |-
+          Cik tālu nepieciešams pagriezties katrā ciklā?
+
+          Cik ir 360/10?
+      2-3 Artist Nested Loops 9_authored_hint:
+        2-3_Artist_Nested_Loops_9_a: |-
+          Vajadzīga palīdzība atrodot pareizo leņķi?
+
+          **360 / 12 = 30**
+      2-3 Bee Conditionals 6_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'Atceries: kad tiek palaista programma, violeto
+          ziedu nektāru skaits mainās starp 0 un 1!'
+      2-3 Bee Loops 3_authored_hint:
+        2-3_Bee_Loops_3_a: Ciklā jābūt 6 blokiem.
+      2-3 Bee Loops 3B_authored_hint:
+        2-3_Bee_Loops_3B_a: Vajadzīgi divi dažādi 'atkārtot' cikli, viens aiz otra.
+      2-3 Bee Loops 4_authored_hint:
+        2-3_Bee_Loops_4_a: Beigās ciklā jābūt pieciem blokiem.
+      4-5 Artist 7_authored_hint:
+        4-5_Artist_7_a: 'Kurš leņķis ir pats mazākais? Uz kura leņķa stāv mākslinieks? '
+      4-5 Artist 8_authored_hint:
+        4-5_Artist_8_a: "Garākās malas katra ir 240 punktus gara.  Tas nozīmē, ka
+          2 īsākās malas kopā ir:\n\n**800 - 240 - 240 = 320**\n\nCik ir **320/2**
+          ? "
+      4-5 Artist 9_authored_hint:
+        4-5_Artist_9_a: 'Ja trīsstūris ir vienādmalu, tad tā visas malas un visi leņķi
+          ir vienādi.
+
+'
+      4-5 Nested Loops 12_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: Māksliniekam starp katru kvadrātu nepieciešams pagriezties
+          par 120 grādiem, lai pabeigtu zīmējumu.
+      Course 4 Artist 6_authored_hint:
+        Course_4_Artist_6_a: Te ir 3 trīsstūri 360 grādu pagriezienā...cik daudz reižu
+          3 ietilpst iekš 360?
+      Course 4 Artist 9_authored_hint:
+        Course_4_Artist_9_a: "Nepieciešams uzzināt cik daudz pagriezties? \n\nCik
+          ir 360 dalīt ar 10?"
+      Course 4 Artist For Loops Challenge_a_authored_hint:
+        Course_4_Artist_For_Loops_Challenge_a: Lielākajam daudzstūrim ir 19 malas.
+      Course 4 Artist Vars 6_authored_hint:
+        Course_4_Artist_Vars_6_a: Lai uzzīmētu regulāru daudzstūri, pagriezies **360/malas**
+          katru reizi.
+      Course 4 Bee Params 7_authored_hint:
+        notice_pattern: 'Vai redzi pēc kāda principa mainās nektāru skaits? '
+      Course 4 SCF 1_authored_hint:
+        Course_4_SCF_1_a: Katram sešstūrim mala ir 40 punktus gara.
+      Course 4 SCF 2_authored_hint:
+        Course_4_SCF_2_a: Katram astoņstūrim mala ir 40 punktus gara.
+        Course_4_SCF_2_b: Katrā horizontālajā līnijā ir 136 punktu lēciens starp katru
+          astoņstūri.
+      courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2a_2018_authored_hint:
+        '1': Snap both `East` blocks to the bottom of the `when run` block.
+      courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5a_2018_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have
+          been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
+          try something else!
+      courseB_Scrat_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_functions2_authored_hint:
+        courseD_artist_functions2_a: |-
+          Tavai programmai nepieciešams:
+           - izmantot funkciju
+           - pārvietoties uz priekšu 100+75 punktus
+           - izmantot funkciju
+      courseD_artist_nestedLoops3_authored_hint:
+        courseD_artist_nestedLoops3_a: |-
+          Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.
+
+          Ja kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?
+      courseD_artist_nestedLoops3_2018_authored_hint:
+        courseD_artist_nestedLoops3_a: |-
+          Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.
+
+          Ja kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?
+      courseD_artist_nestedLoops3_2019_authored_hint:
+        courseD_artist_nestedLoops3_a: |-
+          Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.
+
+          Ja kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?
+      courseE_artist_functions1_authored_hint:
+        courseE_artist_functions1_a: Kvadrātiem malas ir 100 punktu garas, tas nozīmē,
+          ka pirms sākt zīmēt otru kvadrātu nepieciešams lekt uz priekšu 175 punktus.
+        courseE_artist_functions1_b: Tas nekas, ja zīmējot brilles līnijas pārklājas.
+      courseE_artist_functions1_2018_authored_hint:
+        courseE_artist_functions1_a: Kvadrātiem malas ir 100 punktu garas, tas nozīmē,
+          ka pirms sākt zīmēt otru kvadrātu nepieciešams lekt uz priekšu 175 punktus.
+        courseE_artist_functions1_b: Tas nekas, ja zīmējot brilles līnijas pārklājas.
+      courseE_artist_functions2_authored_hint:
+        courseD_artist_functions2_a: |-
+          Tavai programmai nepieciešams:
+           - izmantot funkciju
+           - pārvietoties uz priekšu 100+75 punktus
+           - izmantot funkciju
+      grade1_adventurer_loops3_authored_hint:
+        grade1_adventurer_loops3_a: Vai kaut kas nav labi? Mēģini izmantot soļu pogu,
+          lai izdomātu, kur ir problēma.
+      grade1_adventurer_loops4_authored_hint:
+        grade1_adventurer_loops4_a: Mēģini izmantot vairāk kā vienu cilklu, lai paveiktu
+          uzdevumu.
+      grade2_MakeDogTag_1_authored_hint:
+        2-3_Artist_1_new_a: Ja izmantosi bloku 'pārvietoties uz priekšu par 100 punktiem',
+          es uzzīmēšu līniju automātiski.
+        2-3_Artist_1_new_b: Vai ir problēmas stūrī pagriezties? Izmanto bloku 'pagriezt
+          pa labi par 90 grādiem'.
+      grade2_PuppyLoops_8_authored_hint:
+        2-3_Artist_Debugging_2_a: 'Padoms: Katra ūsa ir 75 punktus gara.'
+      grade2_PuppyLoops_9_authored_hint:
+        2-3_Artist_Debugging_7_a: Kas notiks, ja mākslinieks pārvietosies vai leks
+          atpakaļ pēc tam, kad uzzīmēs pirmo līniju?
+      grade3_Conditionals_4_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'Atceries: kad tiek palaista programma, violeto
+          ziedu nektāru skaits mainās starp 0 un 1!'
+      grade3_Conditionals_TeacherIDo_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'Atceries: kad tiek palaista programma, violeto
+          ziedu nektāru skaits mainās starp 0 un 1!'
+      grade3_Loops_10_authored_hint:
+        2-3_Bee_Loops_4_a: Beigās ciklā jābūt pieciem blokiem.
+      grade3_Loops_4_authored_hint:
+        2-3_Bee_Loops_3B_a: Vajadzīgi divi dažādi 'atkārtot' cikli, viens aiz otra.
+      grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: Ciklā jābūt 6 blokiem.
+      grade4_arist_nested_loop_triangles6_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
+      grade4_artist_functions1_authored_hint:
+        2-3_Artist_Functions_1_a: Kvadrātiem malas ir 100 punktu garas, tas nozīmē,
+          ka pirms sākt zīmēt otru kvadrātu nepieciešams lekt uz priekšu 175 punktus.
+        2-3_Artist_Functions_1_b: Tas nekas, ja zīmējot brilles līnijas pārklājas.
+      grade4_artist_functions2_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          Tavai programmai nepieciešams:
+           - izmantot funkciju
+           - pārvietoties uz priekšu 100+75 punktus
+           - izmantot funkciju
+      grade4_artist_functions_challenge_authored_hint:
+        Course_4_SCF_1_a: Katram sešstūrim mala ir 40 punktus gara.
+      grade4_artist_functions_challenge2_authored_hint:
+        Course_4_SCF_1_a: Katram sešstūrim mala ir 40 punktus gara.
+      grade4_artist_nested_loop_triangles6_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
+      grade4_review_artist1_authored_hint:
+        2-3_Artist_1_new_a: Ja izmantosi bloku 'pārvietoties uz priekšu par 100 punktiem',
+          es uzzīmēšu līniju automātiski.
+        2-3_Artist_1_new_b: Vai ir problēmas stūrī pagriezties? Izmanto bloku 'pagriezt
+          pa labi par 90 grādiem'.
+      grade4_review_artist2_authored_hint:
+        2-3_Artist_6_c: Katrai trijstūra malai ir tāds pats garums kā katrai kvadrāta
+          malai... 100 pikseļi!
+      grade4_review_bee1_authored_hint:
+        2-3_Bee_Loops_3B_a: Vajadzīgi divi dažādi 'atkārtot' cikli, viens aiz otra.
+      grade4_review_bee2_authored_hint:
+        2-3_Bee_Loops_3_a: Ciklā jābūt 6 blokiem.
+      grade4_review_bee3_authored_hint:
+        2-3_Bee_Loops_4_a: Beigās ciklā jābūt pieciem blokiem.
+      grade5_artist_for_loops10_authored_hint:
+        Course_4_Artist_For_Loops_Challenge_a: Lielākajam daudzstūrim ir 19 malas.
+      grade5_artist_variables_square7_authored_hint:
+        Course_4_Artist_Vars_6_a: Lai uzzīmētu regulāru daudzstūri, pagriezies **360/malas**
+          katru reizi.
+      grade5_artist_variables_triangles1_authored_hint:
+        grade5_artist_variables_triangles1_b: Izmanto 'atkārtot' ciklu, lai kods būtu
+          īsāks.
+      grade5_artist_variables_triangles1_2018_authored_hint:
+        grade5_artist_variables_triangles1_b: Izmanto 'atkārtot' ciklu, lai kods būtu
+          īsāks.
+      grade5_artist_variables_triangles1_2019_authored_hint:
+        grade5_artist_variables_triangles1_b: Izmanto 'atkārtot' ciklu, lai kods būtu
+          īsāks.
+      level 'grade3_Loops_10_authored_hint:
+        2-3_Bee_Loops_4_a: Beigās ciklā jābūt pieciem blokiem.
+      level 'grade3_Loops_4_authored_hint:
+        2-3_Bee_Loops_3B_a: Vajadzīgi divi dažādi 'atkārtot' cikli, viens aiz otra.
+      level 'grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: Ciklā jābūt 6 blokiem.

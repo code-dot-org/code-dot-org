@@ -1,0 +1,317 @@
+sv:
+  data:
+    callouts:
+      CSD U3 debug_callout:
+        CSD_U3_rect_c1: Här är koden
+      CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: Här är koden
+      CSD U3 ellipse_callout:
+        CSD_U3_rect_c1: Här är koden
+      CSD U3 ellipse_2018_callout:
+        CSD_U3_rect_c1: Här är koden
+      CSD U3 fill_callout:
+        CSD_U3_rect_c1: Här är koden
+      CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Här är koden
+      CSD U3 my-rect_callout:
+        CSD_U3_rect_c1: Här är koden
+        CSD_U3_rect_c2: Här är "Kör"-knappen.
+      CSD U3 rect_callout:
+        CSD_U3_rect_c1: Här är koden
+        CSD_U3_rect_c2: Här är "Kör"-knappen.
+      CSD U3 rect_2018_callout:
+        CSD_U3_rect_c1: Här är koden
+      CSD U3 sequence_callout:
+        CSD_U3_rect_c1: Här är koden
+      CSD U3 sequence_2018_callout:
+        CSD_U3_rect_c1: Här är koden
+      Course 4 Artist 4_callout:
+        repeat_full_circle: Skriv in hur många gånger zombien behöver flytta sig för göra en hel cirkel
+      Course 4 Artist 7_callout:
+        repeat_blocks: Använda blocket "Upprepa", lägg det runt blocken i arbetsytan
+      Course 4 Artist For Loops 4_callout:
+        place_counter_variable: Dra din räknare-variabel in i detta block
+      Course 4 Artist Functions 4_callout:
+        create_function: Klicka här för att öppna  menyn i "Funktioner" , klicka sedan på knappen "Skapa en funktion".
+      Course 4 Artist Functions 5 OLD_callout:
+        house_hint: Det är ok om bilden inte ser ut som ett hus ännu. Vi kommer att fixa det i nästa pussel.
+      Course 4 Artist Functions 8_callout:
+        edit_function: Klicka här om du vill redigera din funktion.
+      Course 4 Artist Params 2_callout:
+        length_parameter: Kan du uppdatera den här funktionen så att den använder parametern "längd"?
+      Course 4 Artist Params 4_callout:
+        create_function: Klicka här för att öppna  menyn i "Funktioner" , klicka sedan på knappen "Skapa en funktion".
+      Course 4 Artist Vars 1_callout:
+        repeat_blocks: Använda blocket "Upprepa", lägg det runt blocken i arbetsytan
+      Course 4 Artist Vars 10_callout:
+        set_sides: Använd detta block för att det nummer av 'sidor' som behövs för att slutföra pussel.
+      Course 4 Artist Vars 12_callout:
+        set_length: Använda detta block för att ange "längd" till rätt värde.
+      Course 4 Artist Vars 2_callout:
+        set_length: Använda detta block för att ange "längd" till rätt värde.
+      Course 4 Artist Vars 3_callout:
+        place_variable: Dra din variabel in i  detta block
+      Course 4 Artist Vars 6_callout:
+        degrees_per_side: Dela 360 med antalet sidor för att få storleken på varje vinkel i grader.
+      Course 4 Artist Vars 9_callout:
+        set_sides: Använd detta block för att det nummer av 'sidor' som behövs för att slutföra pussel.
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: Använd det nya "få nektar" blocket.
+      Course 4 Bee For Loops 6_callout:
+        actions_category: Verktygslådan fick ett nytt utseende! "Åtgärder" blocken är här nu.
+      Course 4 Bee Params 2_callout:
+        edit_get_nectar: Använd den här knappen om du vill redigera funktionen och ändra den riktning i vilken biet kommer att vända sig för att få nektar.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: Tryck på "Kör" för att prova programmet
+      Course 4 Maze 4_callout:
+        repeat: Sätt block inuti loopen för att upprepa kommandon
+      Course 4 Play Lab Params 3_callout:
+        edit_function: Klicka här om du vill redigera din funktion.
+      Course 4 Play Lab Params 6_callout:
+        edit_add_parameter: Klicka på Redigera för att lägga till en parameter i din funktion
+      Course 4 Play Lab Vars 1_callout:
+        arrows_move_actor: Använd piltangenterna för att flytta figuren
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: Använd piltangenterna för att flytta figuren
+      Dance_Party_01_callout:
+        dance_callout_01: Lägg till detta block till ditt program!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Lägg till detta block till ditt program!
+      Dance_Party_02_callout:
+        dance_callout_02: Lägg till detta block till ditt program!
+      Dance_Party_04_callout:
+        dance_callout_04: Lägg till detta block till ditt program!
+      Dance_Party_06_callout:
+        dance_callout_06: Lägg till din nya dansare här
+      Dance_Party_11_callout:
+        dance_callout_11_a: Nytt Block!
+        dance_callout_11_b: Nytt Block!
+      Eval Design Recipe .1_callout:
+        edit_function: Klicka här om du vill redigera din funktion.
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
+      Function intro Ryan_callout:
+        Function_intro_Ryan_1: Den här lilla instruktionen säger åt datorn att köra den STORA gruppen kod med samma namn i arbetsytan.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Den här lilla instruktionen säger åt datorn att köra den STORA gruppen kod med samma namn i arbetsytan.
+      Infinity_move_collide_callout:
+        Infinity_move_collide_callout: Spela upp ett ljud när händelsen inträffar.
+      Infinity_move_directions_callout:
+        Infinity_move_directions_callout: Vilket block kommer att flytta Baymax  uppåt när du trycker på uppåt-pilen?
+        Infinity_move_directions_callout_arrow: Använd dessa pilar för att styra
+      Infinity_move_right_callout:
+        Infinity_move_right_runbutton: Lägg till flytta- blocket här
+      Infinity_repeat_callout:
+        Infinity_repeat_callout: Placera flytta - block  här inne
+      MC HOC 2016 New Walk_callout:
+        MC_HOC_2016_New_Walk_callout2: Hit "Kör" för att börja flytta.
+      MC_HOC_2017_01_Cole_callout:
+        MC_HOC_2017_01_Cole_2: Använd piltangenterna eller klicka här för att börja styra spelaren.
+      MC_HOC_2017_02_Will_callout:
+        MC_HOC_2017_02_Cole_1: Din spelare har fått en kompis!  Du kan skriva kod åt agenten för att hjälpa dig på banorna.
+      MC_HOC_2017_03_Cole_callout:
+        MC_HOC_2017_03_Cole_1: Det här är en "upprepa"-loop!  Klicka på den i arbetsytan och lägg till kod som du vill köra om och om igen.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Det här är en "upprepa"-loop!  Klicka på den i arbetsytan och lägg till kod som du vill köra om och om igen.
+      MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Agenten kan sväva över vatten, men spelaren kan inte det!
+      MC_HOC_2017_04_Cole_2019_callout:
+        MC_HOC_2017_04_Cole_a: Agenten kan sväva över vatten, men spelaren kan inte det!
+      MC_HOC_2017_04_Kiki_callout:
+        MC_HOC_2017_04_Kiki_1: Klicka in den här i arbetsytan och lägg till lite kod för att upprepa den om och om igen!
+      MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Du kan inte kasta bort de här blocken, men du kan redigera dem!
+      MC_HOC_2017_06_Cole_2019_callout:
+        MC_HOC_2017_06_Cole_1: Du kan inte kasta bort de här blocken, men du kan redigera dem!
+      MC_HOC_2017_08_RY_callout:
+        MC_HOC_2017_08_RY_1: 'Agenten kan sväva över lava, men spelaren kan inte det!'
+      MC_HOC_2017_08_Will_callout:
+        MC_HOC_2017_08_RY_1: 'Agenten kan sväva över lava, men spelaren kan inte det!'
+      MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'Agenten kan sväva över lava, men spelaren kan inte det!'
+      MC_HOC_2017_Ali_2019_callout:
+        MC_HOC_2017_08_RY_1: 'Agenten kan sväva över lava, men spelaren kan inte det!'
+      NEW Course 4 Artist Functions 5_callout:
+        edit_function: Klicka här om du vill redigera din funktion.
+        function_editor_draw_square: Detta är din funktionsdefinition. Dessa block  körs varje gång du använder  blocket "Rita en fyrkant"
+      NEW Course 4 Artist Functions 7_callout:
+        edit_function: Klicka här om du vill redigera din funktion.
+      NEW Course 4 Artist Functions 8_callout:
+        edit_function: Klicka här om du vill redigera din funktion.
+      NEW Course 4 Artist Params 10_callout:
+        create_function: Klicka här för att öppna  menyn i "Funktioner" , klicka sedan på knappen "Skapa en funktion".
+      NEW Course 4 Artist Params 9_callout:
+        edit_add_parameter: Klicka på Redigera för att lägga till en parameter i din funktion
+        add_and_drag_parameter: Skriv in namnet på din parameter här, klicka på Lägg till och sedan dra den till din funktionsdefinition
+      NEW Course 4 Artist Vars 6_callout:
+        place_length_variable: Dra variabeln längd hit om du vill ersätta frågetecknen
+      NEW Course 4 Bee For Loops 5_callout:
+        actions_category: Verktygslådan fick ett nytt utseende! "Åtgärder" blocken är här nu.
+      New Frozen Project_callout:
+        snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
+      Overworld Chop Trees_callout:
+        craft_callout_preplaced: Vi har lagt ut några block för att hjälpa dig komma igång
+      Overworld Chop Trees_2018_callout:
+        craft_callout_preplaced: Vi har lagt ut några block för att hjälpa dig komma igång
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Vi har lagt ut några block för att hjälpa dig komma igång
+      Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: Den här koden kommer bygga ditt hus. Kan du avsluta det?
+      Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Den här koden kommer bygga ditt hus. Kan du avsluta det?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Den här koden kommer bygga ditt hus. Kan du avsluta det?
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: Tryck på "Kör" för att prova programmet
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: Tryck på "Kör" för att prova programmet
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Tryck på "Kör" för att prova programmet
+      Overworld Place Wall_callout:
+        craft_inside_repeat: Upprepa handlingar genom att placera block här
+      Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Upprepa handlingar genom att placera block här
+      Overworld Place Wall_2019_callout:
+        craft_inside_repeat: Upprepa handlingar genom att placera block här
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: Den här koden håller koll efter lava. Kan du lägga till ett kommando för att gå framåt?
+      Underground Avoiding Lava_2018_callout:
+        craft_callout_moveforward: Den här koden håller koll efter lava. Kan du lägga till ett kommando för att gå framåt?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Den här koden håller koll efter lava. Kan du lägga till ett kommando för att gå framåt?
+      Underground Iron_callout:
+        craft_what_is_iron: Bryt järnet!
+      Underground Iron_2018_callout:
+        craft_what_is_iron: Bryt järnet!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: Bryt järnet!
+      WebLab PS test - 1-12_callout:
+        version_history_button: Kolla in versionshistorik
+      aE3_callout:
+        aE3_1: Endast en handfull av dessa tillgängliga
+      aE3alternate_callout:
+        aE3_1: Endast en handfull av dessa tillgängliga
+      aE3alternateB_callout:
+        aE3_1: Endast en handfull av dessa tillgängliga
+      aE4_callout:
+        aE3_1: Endast en handfull av dessa tillgängliga
+      aE5_callout:
+        aE3_1: Endast en handfull av dessa tillgängliga
+      courseD_artist_ramp11_callout:
+        courseD_artist_ramp11_1: Du kan ändra detta antal.
+      courseE_artist_ramp11_callout:
+        courseD_artist_ramp11_1: Du kan ändra detta antal.
+      courseE_artist_ramp8_callout:
+        courseE_artist_ramp8_1: Du kan ändra detta antal.
+      courseE_artist_ramp8_2_callout:
+        courseE_artist_ramp8_1: Du kan ändra detta antal.
+      courseE_artist_ramp8_2018_callout:
+        courseE_artist_ramp8_1: Du kan ändra detta antal.
+      courseE_artist_ramp8_2_2018_callout:
+        courseE_artist_ramp8_1: Du kan ändra detta antal.
+      courseF_artist_ramp8_callout:
+        courseE_artist_ramp8_1: Du kan ändra detta antal.
+      courseF_artist_ramp8_2018_callout:
+        courseE_artist_ramp8_1: Du kan ändra detta antal.
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: Använd blocket "skapa en cirkel"  och ändra storleken.
+      frozen cross rotate_callout:
+        replace_questions_degree: Använd rullistan för att ersätta "???" med en siffra
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Använd rullistan för att ersätta "???" med en siffra
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Använd rullistan för att ersätta "???" med en siffra
+      frozen cross_callout:
+        repeat_blocks_1: "(1) använd detta block och lägga det runt de grå blocken på arbetsytan"
+        repeat_blocks_2: (2) flytta blocket "Upprepa" hit, och placera de grå blocken inuti
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: Använd upprepa blocket för att skapa den här formen.
+      frozen diamond_callout:
+        frozen_diamond_repeat: Använd upprepa blocket för att skapa den här formen.
+      frozen freeplay_callout:
+        snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
+      frozen line_callout:
+        move_elsa_forward: Dra ett "flytta framåt" block och fäst det under "vid start" blocket för att få Elsa att gå framåt
+      frozen line_b_callout:
+        move_elsa_forward: Dra ett "flytta framåt" block och fäst det under "vid start" blocket för att få Elsa att gå framåt
+      frozen line_test_callout:
+        move_elsa_forward: Dra ett "flytta framåt" block och fäst det under "vid start" blocket för att få Elsa att gå framåt
+      frozen perpendicular_callout:
+        turn_elsa: Använd "sväng" blocket för att få Elsa att vända sig. Siffran i rullistan bestämmer hur mycket hon svänger
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: Använd blocket "skapa en snöflinge-gren"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Använd blocket "skapa en snöflinge-gren"
+      frozen square iterative_callout:
+        frozen_create_square: Lägg till fler block här för att skapa en kvadrat
+      frozen square iterative_b_callout:
+        frozen_create_square: Lägg till fler block här för att skapa en kvadrat
+      frozen square iterative_test_callout:
+        frozen_create_square: Lägg till fler block här för att skapa en kvadrat
+      frozen square loop 3x_callout:
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
+      frozen square loop 3x_b_callout:
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
+      frozen square loop 3x_test_callout:
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
+      frozen square loop_callout:
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
+      frozen square loop_b_callout:
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
+      frozen square loop_test_callout:
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
+      frozen square snowflake_callout:
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
+      frozen square snowflake_b_callout:
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
+      frozen square snowflake_test_callout:
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
+      grade4_artist_parameters_squares1_callout:
+        edit_add_parameter: Klicka på Redigera för att lägga till en parameter i din funktion
+        add_and_drag_parameter: Skriv in namnet på din parameter här, klicka på Lägg till och sedan dra den till din funktionsdefinition
+      grade4_frozen_freeplay_callout:
+        snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: Använd blocket "skapa en cirkel"  och ändra storleken.
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: Använd upprepa blocket för att skapa den här formen.
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: Använd upprepa blocket för att skapa den här formen.
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: Använd upprepa blocket för att skapa den här formen.
+      grade4_frozen_square_callout:
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
+      grade4_frozen_square_loop1_callout:
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
+      grade4_frozen_square_loop2_callout:
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
+      grade4_frozen_square_loop3_callout:
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
+      grade5_artist_parameters_squares1_callout:
+        edit_add_parameter: Klicka på Redigera för att lägga till en parameter i din funktion
+        add_and_drag_parameter: Skriv in namnet på din parameter här, klicka på Lägg till och sedan dra den till din funktionsdefinition
+      grade5_artist_parameters_triangles1aa_callout:
+        edit_add_parameter: Klicka på Redigera för att lägga till en parameter i din funktion
+        add_and_drag_parameter: Skriv in namnet på din parameter här, klicka på Lägg till och sedan dra den till din funktionsdefinition
+      grade5_artist_variables_pentagons1_callout:
+        place_length_variable: Dra variabeln längd hit om du vill ersätta frågetecknen
+      grade5_artist_variables_pentagons12_callout:
+        set_length: Använda detta block för att ange "längd" till rätt värde.
+      grade5_artist_variables_square7_callout:
+        degrees_per_side: Dela 360 med antalet sidor för att få storleken på varje vinkel i grader.
+      grade5_artist_variables_triangles2_callout:
+        set_length: Använda detta block för att ange "längd" till rätt värde.
+      grade5_playlab_variables1_callout:
+        arrows_move_actor: Använd piltangenterna för att flytta figuren
+      grade5_playlab_variables11_callout:
+        edit_add_parameter: Klicka på Redigera för att lägga till en parameter i din funktion
+      grade5_playlab_variables1ask_callout:
+        arrows_move_actor: Använd piltangenterna för att flytta figuren
+      testing code callout_callout:
+        testing_code_callout: Detta gör spriten flytta!

@@ -1,0 +1,263 @@
+el:
+  data:
+    callouts:
+      Course 4 Artist 4_callout:
+        repeat_full_circle: Εισάγετε τον αριθμό των φορών που το ζόμπι πρέπει να κινηθεί για να κάνει έναν πλήρη κύκλο
+      Course 4 Artist 7_callout:
+        repeat_blocks: Χρησιμοποίησε το "Επανάλαβε" μπλοκ και πιάσε ένα γύρο όλα τα μπλοκ στον χώρο εργασίας
+      Course 4 Artist For Loops 4_callout:
+        place_counter_variable: Σύρε τη μεταβλητή μετρητή μέσα σε αυτό το μπλοκ
+      Course 4 Artist Functions 4_callout:
+        create_function: Πάτα εδώ να ανοίξει το μενού "Συναρτήσεις", μετά πάτα την επιλογή "Δημιουργία Συνάρτησης".
+      Course 4 Artist Functions 5 OLD_callout:
+        house_hint: Δεν πειράζει αν η εικόνα δεν μοιάζει ακόμη με  σπίτι. Θα το φτιάξουμε στο επόμενο πρόβλημα.
+      Course 4 Artist Functions 8_callout:
+        edit_function: Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου.
+      Course 4 Artist Params 2_callout:
+        length_parameter: Μπορείς να ενημερώσεις αυτή τη συνάρτηση έτσι που να χρησιμοποιεί την παράμετρο "μήκος";
+      Course 4 Artist Params 4_callout:
+        create_function: Πάτα εδώ να ανοίξει το μενού "Συναρτήσεις", μετά πάτα την επιλογή "Δημιουργία Συνάρτησης".
+      Course 4 Artist Vars 1_callout:
+        repeat_blocks: Χρησιμοποίησε το "Επανάλαβε" μπλοκ και πιάσε ένα γύρο όλα τα μπλοκ στον χώρο εργασίας
+      Course 4 Artist Vars 10_callout:
+        set_sides: Χρησιμοποίησε αυτό το μπλοκ για να θέσεις τις "πλευρές" στον αριθμό που πρέπει για να συμπληρωθεί το  παζλ.
+      Course 4 Artist Vars 12_callout:
+        set_length: Χρησιμοποίησε αυτό το μπλοκ  για να θέσεις το "μήκος" στη σωστή τιμή.
+      Course 4 Artist Vars 2_callout:
+        set_length: Χρησιμοποίησε αυτό το μπλοκ  για να θέσεις το "μήκος" στη σωστή τιμή.
+      Course 4 Artist Vars 3_callout:
+        place_variable: Σύρε τη μεταβλητή σου μέσα σε αυτό το μπλοκ
+      Course 4 Artist Vars 6_callout:
+        degrees_per_side: Διαίρεσε το 360 με το πλήθος των πλευρών για να βρεις τη γωνία σε μοίρες.
+      Course 4 Artist Vars 9_callout:
+        set_sides: Χρησιμοποίησε αυτό το μπλοκ για να θέσεις τις "πλευρές" στον αριθμό που πρέπει για να συμπληρωθεί το  παζλ.
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: Χρησιμοποίησε το νέο "πάρε νέκταρ" μπλοκ.
+      Course 4 Bee For Loops 6_callout:
+        actions_category: Η εργαλειοθήκη πήρε νέα μορφή! Τα "Δράσεις" μπλοκ είναι εδώ μέσα τώρα.
+      Course 4 Bee Params 2_callout:
+        edit_get_nectar: Χρησιμοποίησε αυτό το πλήκτρο για να διορθώσεις τη συνάρτηση και άλλαξε την κατεύθυνση της Μέλισσας να γυρίσει να πάρει το νέκταρ.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: Πάτησε "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά σου
+      Course 4 Maze 4_callout:
+        repeat: Βάλτε το μπλοκ μέσα στο βρόχο για να επαναλάβει τις εντολές
+      Course 4 Play Lab Params 3_callout:
+        edit_function: Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου.
+      Course 4 Play Lab Params 6_callout:
+        edit_add_parameter: Πάτα "επεξεργασία" για να προσθέσεις μία μια παράμετρο στην συνάρτή σου
+      Course 4 Play Lab Vars 1_callout:
+        arrows_move_actor: Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό
+      Dance_Party_01_callout:
+        dance_callout_01: Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!
+      Dance_Party_02_callout:
+        dance_callout_02: Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!
+      Dance_Party_04_callout:
+        dance_callout_04: Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!
+      Dance_Party_06_callout:
+        dance_callout_06: Προσθέστε το νέο σας χορευτή εδώ
+      Dance_Party_11_callout:
+        dance_callout_11_a: Νέο μπλοκ*!
+        dance_callout_11_b: Νέο μπλοκ*!
+      Eval Design Recipe .1_callout:
+        edit_function: Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου.
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις διαφορετικές χιονονιφάδες!
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις διαφορετικές χιονονιφάδες!
+      Function intro Ryan_callout:
+        Function_intro_Ryan_1: Αυτή η μικρή οδηγία "λέει" στον υπολογιστή να εκτελέσει το ΜΕΓΑΛΟ κομμάτι του κώδικα με το ίδιο όνομα στο χώρο εργασίας.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Αυτή η μικρή οδηγία "λέει" στον υπολογιστή να εκτελέσει το ΜΕΓΑΛΟ κομμάτι του κώδικα με το ίδιο όνομα στο χώρο εργασίας.
+      Infinity_move_collide_callout:
+        Infinity_move_collide_callout: Παίξε έναν ήχο όταν συμβαίνει αυτό το γεγονός.
+      Infinity_move_directions_callout:
+        Infinity_move_directions_callout: Ποιο μπλοκ θα κάνει τον Baymax να μετακινηθεί προς τα πάνω όταν πατιέται το πάνω βελάκι;
+        Infinity_move_directions_callout_arrow: Χρησιμοποιήστε αυτά τα βελάκια για να το κατευθύνετε
+      Infinity_move_right_callout:
+        Infinity_move_right_runbutton: Προσθέστε εδώ το μπλοκ μετακίνησης
+      Infinity_repeat_callout:
+        Infinity_repeat_callout: Τοποθετήστε τα μπλοκ μετακίνησης εδώ μέσα
+      MC_HOC_2017_01_Cole_callout:
+        MC_HOC_2017_01_Cole_2: Χρησιμοποίησε τα πλήκτρα βέλους ή κάνε κλικ εδώ για να ξεκινήσεις να μετακινείς τον παίκτη.
+      MC_HOC_2017_02_Will_callout:
+        MC_HOC_2017_02_Cole_1: Τώρα ο παίκτης σου έχει ένα φιλαράκι!  Μπορείς να γράψεις κώδικα για τον Agent, ώστε να σε βοηθήσει να περάσεις τα διάφορα επίπεδα.
+      MC_HOC_2017_03_Cole_callout:
+        MC_HOC_2017_03_Cole_1: Αυτός είναι ένας βρόχος "επανάλαβε"!  Τοποθέτησέ τον στο χώρο εργασίας και πρόσθεσε τον κώδικα που θέλεις να επαναληφθεί ξανά και ξανά.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Αυτός είναι ένας βρόχος "επανάλαβε"!  Τοποθέτησέ τον στο χώρο εργασίας και πρόσθεσε τον κώδικα που θέλεις να επαναληφθεί ξανά και ξανά.
+      MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Ο Agent μπορεί να αιωρηθεί πάνω από το νερό, αλλά ο παίκτης όχι!
+      MC_HOC_2017_04_Cole_2019_callout:
+        MC_HOC_2017_04_Cole_a: Ο Agent μπορεί να αιωρηθεί πάνω από το νερό, αλλά ο παίκτης όχι!
+      MC_HOC_2017_04_Kiki_callout:
+        MC_HOC_2017_04_Kiki_1: Τοποθέτησέ το στο χώρο εργασίας και πρόσθεσε κώδικα για να επαναληφθεί ξανά και ξανά!
+      MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Δεν μπορείς να ξεφορτωθείς αυτούς τους κύβους, αλλά μπορείς να τους επεξεργαστείς!
+      MC_HOC_2017_06_Cole_2019_callout:
+        MC_HOC_2017_06_Cole_1: Δεν μπορείς να ξεφορτωθείς αυτούς τους κύβους, αλλά μπορείς να τους επεξεργαστείς!
+      MC_HOC_2017_08_RY_callout:
+        MC_HOC_2017_08_RY_1: 'Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης όχι!  '
+      MC_HOC_2017_08_Will_callout:
+        MC_HOC_2017_08_RY_1: 'Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης όχι!  '
+      MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης όχι!  '
+      MC_HOC_2017_Ali_2019_callout:
+        MC_HOC_2017_08_RY_1: 'Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης όχι!  '
+      NEW Course 4 Artist Functions 5_callout:
+        edit_function: Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου.
+        function_editor_draw_square: Αυτός είναι ορισμός της συνάρτηση σου. Αυτά τα μπλοκ ενεργοποιούνται κάθε φορά που χρησιμοποιείς το μπλοκ «Σχεδίασε ένα τετράγωνο»
+      NEW Course 4 Artist Functions 7_callout:
+        edit_function: Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου.
+      NEW Course 4 Artist Functions 8_callout:
+        edit_function: Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου.
+      NEW Course 4 Artist Params 10_callout:
+        create_function: Πάτα εδώ να ανοίξει το μενού "Συναρτήσεις", μετά πάτα την επιλογή "Δημιουργία Συνάρτησης".
+      NEW Course 4 Artist Params 9_callout:
+        edit_add_parameter: Πάτα "επεξεργασία" για να προσθέσεις μία μια παράμετρο στην συνάρτή σου
+        add_and_drag_parameter: Γράψε το όνομα παραμέτρου σου εδώ, κάνε κλικ στο κουμπί "Προσθήκη", και στη συνέχεια σύρε το στον ορισμό της συνάρτησης
+      NEW Course 4 Artist Vars 6_callout:
+        place_length_variable: Σύρετε εδώ την μεταβλητή μήκους για να αντικαταστήσει τα ερωτηματικά
+      NEW Course 4 Bee For Loops 5_callout:
+        actions_category: Η εργαλειοθήκη πήρε νέα μορφή! Τα "Δράσεις" μπλοκ είναι εδώ μέσα τώρα.
+      New Frozen Project_callout:
+        snowflake_dropdown: Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις διαφορετικές χιονονιφάδες!
+      Overworld Chop Trees_callout:
+        craft_callout_preplaced: Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις
+      Overworld Chop Trees_2018_callout:
+        craft_callout_preplaced: Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις
+      Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι σου. Μπορείς να τον ολοκληρώσεις;
+      Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι σου. Μπορείς να τον ολοκληρώσεις;
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι σου. Μπορείς να τον ολοκληρώσεις;
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: Πάτησε "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά σου
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: Πάτησε "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά σου
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Πάτησε "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά σου
+      Overworld Place Wall_callout:
+        craft_inside_repeat: Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ
+      Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ
+      Overworld Place Wall_2019_callout:
+        craft_inside_repeat: Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να προσθέσεις μία εντολή για να προχωρήσεις μπροστά;
+      Underground Avoiding Lava_2018_callout:
+        craft_callout_moveforward: Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να προσθέσεις μία εντολή για να προχωρήσεις μπροστά;
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να προσθέσεις μία εντολή για να προχωρήσεις μπροστά;
+      Underground Iron_callout:
+        craft_what_is_iron: Εξόρυξε αυτόν τον σίδηρο!
+      Underground Iron_2018_callout:
+        craft_what_is_iron: Εξόρυξε αυτόν τον σίδηρο!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: Εξόρυξε αυτόν τον σίδηρο!
+      course_playlab_variables3_callout:
+        course_playlab_variables3_1: Έτσι μπορείτε να ορίσετε τιμή σε μία από τις μεταβλητές σας.
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: Χρησιμοποιήστε το μπλοκ "Δημιουργία κύκλου" και αλλάξτε το μέγεθος.
+      frozen cross rotate_callout:
+        replace_questions_degree: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το "???" με έναν αριθμό
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το "???" με έναν αριθμό
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το "???" με έναν αριθμό
+      frozen cross_callout:
+        repeat_blocks_1: "(1) Χρησιμοποίησε αυτό το μπλοκ και βάλε το γύρω από τα γκρι μπλοκ στο χώρο εργασίας"
+        repeat_blocks_2: (2) μετακίνησε το μπλοκ «Επανάλαβε» εδώ, και τοποθέτησε μέσα τα γκρι μπλοκ
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη.
+      frozen diamond_callout:
+        frozen_diamond_repeat: Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη.
+      frozen freeplay_callout:
+        snowflake_dropdown: Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις διαφορετικές χιονονιφάδες!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις διαφορετικές χιονονιφάδες!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις διαφορετικές χιονονιφάδες!
+      frozen line_callout:
+        move_elsa_forward: Πιάσε το "Πήγαινε μπροστά" μπλοκ και φέρ'το κάτω από το "Όταν Εκτελείται" μπλοκ για να κάνεις την Έλσα να πάει μπροστά
+      frozen line_b_callout:
+        move_elsa_forward: Πιάσε το "Πήγαινε μπροστά" μπλοκ και φέρ'το κάτω από το "Όταν Εκτελείται" μπλοκ για να κάνεις την Έλσα να πάει μπροστά
+      frozen line_test_callout:
+        move_elsa_forward: Πιάσε το "Πήγαινε μπροστά" μπλοκ και φέρ'το κάτω από το "Όταν Εκτελείται" μπλοκ για να κάνεις την Έλσα να πάει μπροστά
+      frozen perpendicular_callout:
+        turn_elsa: Χρησιμοποίησε το "Γύρισε" μπλοκ για να κάνεις την Έλσα να γυρίσει. Ο αριθμός στο αναδυόμενο μενού δείχνει πόσες φορές γυρίζει η Έλσα
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: Χρησιμοποιήστε το μπλοκ "δημιουργία κλαδιού νιφάδας χιονιού"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Χρησιμοποιήστε το μπλοκ "δημιουργία κλαδιού νιφάδας χιονιού"
+      frozen square iterative_callout:
+        frozen_create_square: Βάλτε και άλλα μπλοκ εδώ για να φτιάξετε τετράγωνο
+      frozen square iterative_b_callout:
+        frozen_create_square: Βάλτε και άλλα μπλοκ εδώ για να φτιάξετε τετράγωνο
+      frozen square iterative_test_callout:
+        frozen_create_square: Βάλτε και άλλα μπλοκ εδώ για να φτιάξετε τετράγωνο
+      frozen square loop 3x_callout:
+        replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το "???" με έναν αριθμό
+      frozen square loop 3x_b_callout:
+        replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το "???" με έναν αριθμό
+      frozen square loop 3x_test_callout:
+        replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το "???" με έναν αριθμό
+      frozen square loop_callout:
+        replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το "???" με έναν αριθμό
+      frozen square loop_b_callout:
+        replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το "???" με έναν αριθμό
+      frozen square loop_test_callout:
+        replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το "???" με έναν αριθμό
+      frozen square snowflake_callout:
+        replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το "???" με έναν αριθμό
+      frozen square snowflake_b_callout:
+        replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το "???" με έναν αριθμό
+      frozen square snowflake_test_callout:
+        replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το "???" με έναν αριθμό
+      grade4_artist_parameters_squares1_callout:
+        edit_add_parameter: Πάτα "επεξεργασία" για να προσθέσεις μία μια παράμετρο στην συνάρτή σου
+        add_and_drag_parameter: Γράψε το όνομα παραμέτρου σου εδώ, κάνε κλικ στο κουμπί "Προσθήκη", και στη συνέχεια σύρε το στον ορισμό της συνάρτησης
+      grade4_frozen_freeplay_callout:
+        snowflake_dropdown: Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις διαφορετικές χιονονιφάδες!
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: Χρησιμοποιήστε το μπλοκ "Δημιουργία κύκλου" και αλλάξτε το μέγεθος.
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη.
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη.
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη.
+      grade4_frozen_square_callout:
+        replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το "???" με έναν αριθμό
+      grade4_frozen_square_loop1_callout:
+        replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το "???" με έναν αριθμό
+      grade4_frozen_square_loop2_callout:
+        replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το "???" με έναν αριθμό
+      grade4_frozen_square_loop3_callout:
+        replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το "???" με έναν αριθμό
+      grade5_artist_parameters_squares1_callout:
+        edit_add_parameter: Πάτα "επεξεργασία" για να προσθέσεις μία μια παράμετρο στην συνάρτή σου
+        add_and_drag_parameter: Γράψε το όνομα παραμέτρου σου εδώ, κάνε κλικ στο κουμπί "Προσθήκη", και στη συνέχεια σύρε το στον ορισμό της συνάρτησης
+      grade5_artist_parameters_triangles1aa_callout:
+        edit_add_parameter: Πάτα "επεξεργασία" για να προσθέσεις μία μια παράμετρο στην συνάρτή σου
+        add_and_drag_parameter: Γράψε το όνομα παραμέτρου σου εδώ, κάνε κλικ στο κουμπί "Προσθήκη", και στη συνέχεια σύρε το στον ορισμό της συνάρτησης
+      grade5_artist_variables_pentagons1_callout:
+        place_length_variable: Σύρετε εδώ την μεταβλητή μήκους για να αντικαταστήσει τα ερωτηματικά
+      grade5_artist_variables_pentagons12_callout:
+        set_length: Χρησιμοποίησε αυτό το μπλοκ  για να θέσεις το "μήκος" στη σωστή τιμή.
+      grade5_artist_variables_square7_callout:
+        degrees_per_side: Διαίρεσε το 360 με το πλήθος των πλευρών για να βρεις τη γωνία σε μοίρες.
+      grade5_artist_variables_triangles2_callout:
+        set_length: Χρησιμοποίησε αυτό το μπλοκ  για να θέσεις το "μήκος" στη σωστή τιμή.
+      grade5_playlab_variables1_callout:
+        arrows_move_actor: Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό
+      grade5_playlab_variables11_callout:
+        edit_add_parameter: Πάτα "επεξεργασία" για να προσθέσεις μία μια παράμετρο στην συνάρτή σου
+      grade5_playlab_variables1ask_callout:
+        arrows_move_actor: Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό

@@ -1,0 +1,3043 @@
+---
+ka:
+  data:
+    evaluation_multi:
+      U5 evaluation q1:
+        'No': არა
+        'Yes': დიახ
+      U5 evaluation q2:
+        Conditionals and Boolean Logic: პირობითი ბრძანებები და ბულის ლოგიკა
+        0: "? Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        1: ": Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        Processing Arrays: მასივების დამუშავება
+        Variables and Strings: ცვლადები და რიგები
+        While Loops: '"სანამ" ციკლები'
+    external:
+      AWS Demo:
+        description here: მიუთითეთ აღწერა
+      Algo How Routers Learn Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Algo Shortest Path Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      App Lab Feedback:
+        description here: მიუთითეთ აღწერა
+      AppLab Level U3L19 - variable re-assignment challenge pt1:
+        description here: მიუთითეთ აღწერა
+      Basic mechanics of variables:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Basic mechanics of variables_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Begin planning your project:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Begin planning your project_2018:
+        Begin planning your project: დაიწწყეთ პროექტის დაგეგმვა
+        description here: მიუთითეთ აღწერა
+      'Big Picture: If-statements':
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      'Big Picture: If-statements_2018':
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Boolean Expressions and Comparison Operators:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Boolean Expressions and Comparison Operators_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U1 Input Output C1:
+        description here: მიუთითეთ აღწერა
+      CSD U1 Input Output C2:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U1 Input Output C3:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U1 Input Output C4:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U1 Input Output Intro:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U2 CSS explain:
+        description here: მიუთითეთ აღწერა
+      CSD U2 Classes Introduction:
+        description here: მიუთითეთ აღწერა
+      CSD U2 Design Project:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U2 Design Project_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U2 L1 Overview:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U2 L1 Overview_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U2 L2 Overview:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U2 L2 Overview_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U2 L3 Overview:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U2 L3 Overview_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U2 L4 Overview:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U2 L4 Overview_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U2 L5 Overview:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U2 L5 Overview_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U2 L6 Overview:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U2 L6 Overview_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U2 Lesson 6 Overview:
+        description here: მიუთითეთ აღწერა
+      CSD U2 Lesson 6 Overview_2018:
+        description here: მიუთითეთ აღწერა
+      CSD U2 RGB Colors:
+        description here: მიუთითეთ აღწერა
+      CSD U2 Social Sleuth:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U2 expand project:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U2 expand project_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U2 layout style review:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U2 more CSS:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U2 project guide:
+        description here: მიუთითეთ აღწერა
+      CSD U2 project guide_2018:
+        description here: მიუთითეთ აღწერა
+      CSD U2 text style review:
+        description here: მიუთითეთ აღწერა
+      CSD U3 Card Examples_2018:
+        description here: მიუთითეთ აღწერა
+      CSD U3 Describe the Picture:
+        description here: მიუთითეთ აღწერა
+      CSD U3 L2 Challenges:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U3 SFLP Sprites and Images:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U3 abstraction intro:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U3 collisions STOP isTouching:
+        description here: მიუთითეთ აღწერა
+      CSD U3 combining rep:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U3 combining rep_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U3 game intro:
+        description here: მიუთითეთ აღწერა
+      CSD U3 game intro_2018:
+        description here: მიუთითეთ აღწერა
+      CSD U3 platform intro:
+        description here: მიუთითეთ აღწერა
+      CSD U3 platform intro_2018:
+        description here: მიუთითეთ აღწერა
+      CSD U3 setSpeed STOP:
+        description here: მიუთითეთ აღწერა
+      CSD U5 Encryption 1:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U5 Encryption 1_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U5 Encryption 2:
+        description here: მიუთითეთ აღწერა
+      CSD U5 Encryption 2_2018:
+        description here: მიუთითეთ აღწერა
+      CSD U5 L13 SFLP Interpreting Data:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U5 L13 SFLP Interpreting Data_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U5 Representing Information:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U5 collection UPS2:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U5 collection ads2:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U5 crosstab warmup:
+        description here: მიუთითეთ აღწერა
+      CSD U5 crosstab warmup_2018:
+        description here: მიუთითეთ აღწერა
+      CSD U5 data visualization:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U5 data visualization sheet:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U5 data visualization_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U5 fixed-bits:
+        description here: მიუთითეთ აღწერა
+      CSD U5 student record:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U5 student record_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U5 video2:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSD U6 LED create intro:
+        description here: მიუთითეთ აღწერა
+      CSD U6 LED create intro_2018:
+        description here: მიუთითეთ აღწერა
+      CSD U6 final intro:
+        description here: მიუთითეთ აღწერა
+      CSD U6 final intro_2018:
+        description here: მიუთითეთ აღწერა
+      CSD-U3-SFLP Drawing:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSDU2L01 SFLP:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSP ExploreL02 SFLP:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSP Journal Entry Placeholder2:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        description here: მიუთითეთ აღწერა
+      CSP Unit 3 - Learning JavaScript Resources:
+        description here: მიუთითეთ აღწერა
+      CSP assessment Hex interstitial:
+        description here: მიუთითეთ აღწერა
+      CSPPD impact of CS:
+        Impact of Computer Science: კომპიუტერული მეცნიერების გავლენა
+        description here: მიუთითეთ აღწერა
+      CSPPD3-u2 Welcome:
+        Welcome!: კეთილი იყოს თქვენი მობრძანება!
+      CSPStudentLessonPlanTemplate:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSPU5 Making a Multi Screen Chaser Game:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSPU5_ChoosingGoodIds:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSPU5_EventDrivenProgrammingPatterns:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSPU5_FirstTimeDesignMode:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSPU5_FirstTimeDesignMode_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSPU5_HowImagesWork:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSPU5_HowOnEventWorks_v2:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSPU5_U3L14 - Message - Other ways to assign values:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSPU5_U3L14 - Message - basic mechanics of variables:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSPU5_U3L15 - explanation of IF and =v==:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSPU5_U3L15 Student Lesson Intro - new:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSPU5_U3L19 - variable scope explanation pt2:
+        description here: მიუთითეთ აღწერა
+      CSPU5_U3L20 - combining And and Or explanation:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSPU5_goodbyeTurtle_setPosition:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSPU5_introToDebugging:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSPU5_makingPredictions_ref:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSPU5_onEventBreakdown:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSP_Final_instructions:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      CSP_U4_rawMovieData:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Color Sleuth - Epilogue:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Color Sleuth - Epilogue_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Color Sleuth - How does it end?:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Color Sleuth - How does it end?_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Color Sleuth - How to switch player turns:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Color Sleuth - How to switch player turns_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Color Sleuth - Keeping score:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Color Sleuth - Keeping score_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Color Sleuth - Planning the App:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Color Sleuth - Planning the App_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Controlling Memory - Other ways to assign values:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Controlling Memory - Other ways to assign values_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Cups and Beans Activity:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Cups and Beans Activity_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Debugging with Console.log:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Debugging with Console.log_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Deeper Learning Overview:
+        description here: მიუთითეთ აღწერა
+      Digital Footprint Chirpr lillizard:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Digital Footprint FaceSpace Haley:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Digital Footprint FaceSpace Lizzie:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Digital Footprint instantframe wiz_kid_liz:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      DigitalCitizenship2:
+        Digital Citizenship: ციფრული მოქალაქეობა
+      ECSPD Challenge Rubric:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      ECSPD Online U1D1-2:
+        description here: მიუთითეთ აღწერა
+      ECSPD Online U1D1-2 Resources:
+        description here: მიუთითეთ აღწერა
+      ECSPD Online U1D11-14:
+        title: დასახელება
+      ECSPD Online U1D15-16 Forum:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      ECSPD Online intro:
+        Introduction: შესავალი
+      ECSPD U2 Challenge Plan:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      ECSPD Unit 2 Stage11:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      ECSPD Unit 2 Stage13:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      ECSPD Unit 2 Stage6:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      ECSPD impact of CS:
+        Impact of Computer Science: კომპიუტერული მეცნიერების გავლენა
+        description here: მიუთითეთ აღწერა
+      Encoding Numbers Real World Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Event Driven Programming Recap:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Event Driven Programming Recap_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Event-Driven Programming Patterns:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Event-Driven Programming Patterns_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      External MD column Test:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      External MD column Test bootstrap:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      GoodBadVisualizations_v1:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      GoodBadVisualizations_v2:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How "if-else-if" Works:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How "if-else-if" Works_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How Compound Boolean Expressions Work:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How Compound Boolean Expressions Work_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How Dropdown Menus Work:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How Dropdown Menus Work_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How If Statements Work pt 1:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How If Statements Work pt 1_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How If-Else Statements Work:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How If-Else Statements Work_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How Images Work:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How Images Work_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How Secure Is Your Password?:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How Secure Is Your Password?_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How Set Property Works:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How Set Property Works_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How onEvent Works:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How onEvent Works_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How setPosition and screen dimensions work:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How setPosition and screen dimensions work_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How the Boolean &&, || and ! Operators Work:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How the Boolean &&, || and ! Operators Work_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How to make a random color:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How to make a random color_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How to pick a random button:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      How to pick a random button_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Internet Simulator Setup:
+        description here: მიუთითეთ აღწერა
+      Internet Simulator Setup 2:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Internet Simulator Setup 3:
+        description here: მიუთითეთ აღწერა
+      Intro to Debugging and Common Problems:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Intro to Debugging and Common Problems_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Making Multiple Screens:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Making Multiple Screens_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Making a Multi Screen Chaser Game v.2:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Making a Multi Screen Chaser Game v.2_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Multi-Screen Apps:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      New Challenge Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      New Challenge Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      OPD-K5 Stage3aGo:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      PDAlg Facilitator Test:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      PDK5 CS Video:
+        Computer Science: ინფორმატიკა
+      PDK5 Glossary C:
+        Vocabulary: ლექსიკონი
+      PDK5 Pair Programming 1:
+        Pair Programming: პროგრამირება წყვილებში
+      PDK5 Teacher Dashboard C:
+        Teacher Dashboard: მასწავლებლის მართვის პანელი
+      PS - Responding to User Input:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      PS - draft - Longitudinal study description:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Pixelation - Lesson 14 - Instructions Make Your Own:
+        description here: მიუთითეთ აღწერა
+      Pixelation - Lesson 14 - Instructions one bit error:
+        description here: მიუთითეთ აღწერა
+      Pixelation - Lesson 15 - Favicon Instructions:
+        description here: მიუთითეთ აღწერა
+      Pixelation - Lesson 15 - Task 1 instructions:
+        description here: მიუთითეთ აღწერა
+      Pixelation - Lesson 15 - Task 2 instructions:
+        description here: მიუთითეთ აღწერა
+      Pixelation - Lesson 15 - Task 3 instructions:
+        description here: მიუთითეთ აღწერა
+      Pixelation - Video - Color 1:
+        description here: მიუთითეთ აღწერა
+      Pixelation - Video - Color 2:
+        description here: მიუთითეთ აღწერა
+      Pixelation - Video - Color 3:
+        description here: მიუთითეთ აღწერა
+      Pixelation - Video - Tips and Tricks:
+        description here: მიუთითეთ აღწერა
+      Prepare for your presentation:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Prepare for your presentation_2018:
+        Prepare for yur presentation: მოამზადეთ თქვენი პრეზენტაცია
+      Public Key Crypto Widget Instructions:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Public Key Crypto Widget Instructions_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Rules About Choosing Good IDs:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Rules About Choosing Good IDs_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      SG U3 whats a comment:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      SG v2 U3L01 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      SG v2 U3L02 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      SG v2 U3L03 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      SG v2 U3L05 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      SG v2 U3L07 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      SG v2 U3L08 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      SG v2 U3L09 Student Lesson Introduction:
+        Looping and Random Numbers: ციკლები და შემთხვევითი რიცხვები
+      Sending Bits Real World Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Simple Decisions with if-statements:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Simple Decisions with if-statements_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      'Technique: Frequency Analysis':
+        description here: მიუთითეთ აღწერა
+      'Technique: Frequency Analysis_2018':
+        description here: მიუთითეთ აღწერა
+      Terminology Recap:
+        description here: მიუთითეთ აღწერა
+      Terminology Recap_2018:
+        description here: მიუთითეთ აღწერა
+      Tips For Working on Your Own:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Tips For Working on Your Own_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U1L1 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+      U1L1 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+      U1L10 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U1L11 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U1L12 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U1L13 Student Lesson Summary:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U1L14 Student Lesson Summary:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U1L15 Student Lesson Summary:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U1L16 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+      U1L17 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U1L2 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U1L3 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U1L4 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U1L4 Widget Demo - Video:
+        description here: მიუთითეთ აღწერა
+      U1L5 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U1L6 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U1L7 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U1L8 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U1L9 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U2L1 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U2L11 Student Lesson Introduction:
+        HTTP and Abstraction: HTTP და აბსტრაქცია
+      U2L12 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U2L14 Student Lesson Introduction:
+        Cracking the Code: კოდის გატეხვა
+      U2L17 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+      U2L7 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U2L8 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U3 whats a comment:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U3 whats a comment_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U3L07 Student Lesson Introduction:
+        Looping and Random Numbers: ციკლები და შემთხვევითი რიცხვები
+      U3L12 - Mission Unsortable:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U3L13 - Explanation of Ids:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U3L13 - Make a Prediction Explanation:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U3L13 Add Button Instrucitons:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U3L13 Add Button Instructions:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U3L14 - Message - Other ways to assign values:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U3L14 - Message - basic mechanics of variables:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U3L14 - Student Intro Page:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U3L15 - explanation of IF and =v==:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U3L15 Student Lesson Intro - new:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U3L19 - Arithmetic v Concatenation:
+        description here: მიუთითეთ აღწერა
+      U3L19 - Intro to variables:
+        description here: მიუთითეთ აღწერა
+      U3L19 - concatenate string with var:
+        description here: მიუთითეთ აღწერა
+      U3L19 - done with variables finally:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U3L19 - explanation diff between string and var name:
+        description here: მიუთითეთ აღწერა
+      U3L19 - improve your clicker game:
+        description here: მიუთითეთ აღწერა
+      U3L19 - misconception variable assignment order pt1:
+        description here: მიუთითეთ აღწერა
+      U3L19 - misconception variable assignment order pt2:
+        description here: მიუთითეთ აღწერა
+      U3L19 - variable breakdown - Assigning a value:
+        description here: მიუთითეთ აღწერა
+      U3L19 - variable breakdown - common mistake - declaring twice:
+        description here: მიუთითეთ აღწერა
+      U3L19 - variable breakdown - declaration:
+        description here: მიუთითეთ აღწერა
+      U3L19 - variable breakdown - setText in label:
+        description here: მიუთითეთ აღწერა
+      U3L19 - variable breakdown - ways to read pt1:
+        description here: მიუთითეთ აღწერა
+      U3L19 - variable breakdown intro:
+        description here: მიუთითეთ აღწერა
+      U3L19 - variable scope explanation:
+        description here: მიუთითეთ აღწერა
+      U3L19 - variable scope explanation pt2:
+        description here: მიუთითეთ აღწერა
+      U3L19 - variable scope explanation pt3:
+        description here: მიუთითეთ აღწერა
+      U3L20 - combining And and Or explanation:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4 - Cleaning Data - Activity Guide:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4 - Making Data Visualizations - Bar Chart:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4 - Making Data Visualizations - Edit Chart Appearance:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4 - Making Data Visualizations - Free Play:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4 - Making Data Visualizations - Free Play_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4 - Making Data Visualizations - Getting Started:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4 - Making Data Visualizations - Line Chart:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4 - Making Data Visualizations - Scatter Plot:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4 - Making Data Visualizations - Student Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4 - Privacy Abandoned - Hot On Your Trail Video:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4 - Unique Ids Explanation:
+        title: დასახელება
+      U4 - Unique Ids Explanation_2018:
+        title: დასახელება
+      U4 Cleaning Data Activity Guide Pt2:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4 Cleaning Data Activity Guide Pt3:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4 caesar cipher interstitial:
+        description here: მიუთითეთ აღწერა
+      U4 how to crack substitution cipher:
+        description here: მიუთითეთ აღწერა
+      U4L01 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L02 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L02 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L02v2 - Finding Trends:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L03 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L03 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L03v2 - Student Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L04 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L04 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L04v2 - Student Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L05 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L06 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L06v2 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L07 Public Key Crypto Interstitial:
+        description here: მიუთითეთ აღწერა
+      U4L07 Student Introduction public key crypto:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L07 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L08 - mod clock instructions:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L08 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L08v2 Making Pivot Tables:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L08v2 Making Pivot Tables Part 2:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L08v2 Making Pivot Tables Part 3:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L08v2 Making Pivot Tables Part 3_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L08v2 Student Intro:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L09 Student Lesson Intro Practice PT big data dilemma:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L09 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L10 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L11 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L12 - Student Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L12 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L13 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L14 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L15 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L16 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L17 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L18 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L19 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L20 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L21 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L22 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L23 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L24 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L5 random subst challenge page:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U5 - Create PT - Student Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U5 - Create PT Prep - Student Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U5 - Create PT review - Student Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U5 - Explore PT - Student Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U5 - Explore PT Prep - Student Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U5 - Explore PT Review - Student Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U5 - PT Prep - Digital Portfolio and tech setup:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U5 color sleuth check correct:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U5 color sleuth check correct_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U5L08 - Student Intro If statements:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 - Charts - Student Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 - Charts - Student Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 - Final Project - Student Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 - Final Project - Student Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 - ImportExport - Student Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 - ImportExport - Student Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 - Sample Apps - Student Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 - Sample Apps - Student Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 - deleteRecord - Student Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 - deleteRecord - Student Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 - updateRecord - Student Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 - updateRecord - Student Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 AP Performance Task Tech Setup - Student Links:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 Create PT - Complete the Task - Student Links:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 Create PT - Complete the Task - Student Links_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 Create PT Review - Student Links:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 Create PT Review - Student Links_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 Explore PT - Complete the Task - Student Links:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 Explore PT - Complete the Task - Student Links_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 Explore PT - Make a Plan - Student Links:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 Explore PT - Make a Plan - Student Links_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 Explore PT Review - Student Links:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U6 Explore PT Review - Student Links_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 2 Lesson 1 Overview Clone:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 4 Lesson 1 Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 4 Lesson 1 Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 4 Lesson 2 Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 4 Lesson 2 Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 4 Lesson 5 Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 4 Lesson 5 Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 4 Lesson 6 Introduction:
+        Cracking the Code: კოდის გატეხვა
+      Unit 4 Lesson 6 Introduction_2018:
+        Cracking the Code: კოდის გატეხვა
+      Unit 5 Lesson 1:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 1 Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 1 Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 10 Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 10 Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 2 Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 2 Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 3 Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 3 Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 4 Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 4 Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 5:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 5 Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 5 Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 6:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 6 Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 6 Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 7 Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 7 Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 8 Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 8 Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 9 Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Unit 5 Lesson 9 Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      'Variable Scope: Local vs. Global':
+        description here: მიუთითეთ აღწერა
+      'Variable Scope: Local vs. Global_2018':
+        description here: მიუთითეთ აღწერა
+      'Worked Example: If-statements and Robot':
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      'Worked Example: If-statements and Robot_2018':
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      brad-repro-bug-000:
+        description here: მიუთითეთ აღწერა
+      brad-test-continue-buttons-in-markdown:
+        description here: მიუთითეთ აღწერა
+      courseB_external_MRF:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseB_external_loopMRF:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseB_story_unspottedBugs10:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseB_story_unspottedBugs11:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseB_story_unspottedBugs12:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseB_story_unspottedBugs13:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseB_story_unspottedBugs14:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseB_story_unspottedBugs15:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseB_story_unspottedBugs16:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseB_story_unspottedBugs17:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseB_story_unspottedBugs18:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseB_story_unspottedBugs2:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseB_story_unspottedBugs3:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseB_story_unspottedBugs4:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseB_story_unspottedBugs5:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseB_story_unspottedBugs6:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseB_story_unspottedBugs7:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseB_story_unspottedBugs8:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseB_story_unspottedBugs9:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseB_unplugged_mrfProgramming:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseC_screenoutthemean:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseD_external_binary1:
+        Binary Drawing: ორობითი ხატვა
+      courseD_external_binary1_2018:
+        Binary Drawing: ორობითი ხატვა
+      courseF_firstFunctions_map:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      courseF_markdown_algorithms_end:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_algorithms_intro:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_conditionals_end:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_conditionals_intro:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_debugging_end:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_debugging_intro:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_events_end:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_events_intro:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_forloops_end:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_forloops_intro:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_functions_end:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_functions_intro:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_functionsparam_end:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_functionsparam_intro:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_loops_end:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_loops_intro:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_nestedloops_end:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_nestedloops_intro:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_variables_end:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_variables_intro:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      coursef_functionsSummary_map:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      coursef_powerofwords:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csd deeper learning timeline:
+        description here: მიუთითეთ აღწერა
+      csd deeper learning timeline 2018-2019:
+        description here: მიუთითეთ აღწერა
+      csd-post-survey-unit1-preamble:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csd-post-survey-unit2-preamble:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csd-post-survey-unit3-preamble:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csd-post-survey-unit4-preamble:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csd-post-survey-unit5-preamble:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csd-post-survey-unit6-preamble:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csp deeper learning timeline:
+        description here: მიუთითეთ აღწერა
+      csp-post-survey-2018-AP-preamble:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csp-post-survey-2018-topics-preamble:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csp-post-survey-2018-unit-feedback-preamble:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csp-post-survey-createPT-preamble:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csp-post-survey-explorePT-preamble:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csp-post-survey-unit1-preamble:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csp-post-survey-unit2-preamble:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csp-post-survey-unit3-preamble:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csp-post-survey-unit4-preamble:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csp-post-survey-unit5-preamble:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csp_unit5_finalassessment_overview:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csp_unit5_finalassessment_overview_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csp_unit5_finalassessment_overview_exam_prep:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csp_unit_assessment_overview:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csp_unit_assessment_overview_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      csp_unit_assessment_overview_exam_prep:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      deeper learning:
+        description here: მიუთითეთ აღწერა
+      deeper learning recommendations- csd:
+        description here: მიუთითეთ აღწერა
+      deeper learning recommendations- csp:
+        description here: მიუთითეთ აღწერა
+      deeper learning recommendations- csp - 2018:
+        description here: მიუთითეთ აღწერა
+      dlp supports - csd:
+        description here: მიუთითეთ აღწერა
+      dsl link test:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      equity discussion:
+        description here: მიუთითეთ აღწერა
+      grade2_maze_intro1:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      grade2_unplugged_neighborhood:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      grade4_project_design:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      grade4_project_design_image:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      grade4_project_presentation:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      grade5_project_design:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      grade5_project_presentation:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      gradek1_activity_beNice:
+        The computer is your friend: კომპიუტერი შენი მეგობარია
+      gradek1_activity_beNice_2018:
+        The computer is your friend: კომპიუტერი შენი მეგობარია
+      markdown_textbook:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      markdown_textbook2:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      more encryption algorithms:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      newCSFsample:
+        Intro: შესავალი
+        description here: მიუთითეთ აღწერა
+      post-assessment survey heading4:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      pwc_appdev:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      pwc_appdevunplugged:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      pwc_cybersecurity:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      pwc_data:
+        description here: მიუთითეთ აღწერა
+      pwc_internetofthings:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      pwc_problemsolving:
+        description here: მიუთითეთ აღწერა
+      pwc_programming:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      pwc_technologyfoundations:
+        description here: მიუთითეთ აღწერა
+      pwc_webdevelopment:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      sciPD computer models forum:
+        Using Computer Models in Science: კომპიუტერული მოდელების გამოყენება მეცნიერებაში
+      sciPD computer models video:
+        Using Computer Models in Science: კომპიუტერული მოდელების გამოყენება მეცნიერებაში
+      sciPD framework video:
+        Framework: ჩარჩო
+      sciPD what to expect:
+        What to Expect: რას უნდა ველოდოთ
+      sciPD what to expect 16-17:
+        What to Expect: რას უნდა ველოდოთ
+      sciPD2 mods:
+        Reviewing the Modules: მოდულების მიმოხილვა
+      sciPD2Part4_S1_L3:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      sciPD2Part4_S2_L1:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      sciPD2Part4_S2_L2:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      sciPD2Part4_S3_L1:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      sciPD2Part4_S3_L2:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      sciPD2Part4_S3_L3:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      sciPD3 mods:
+        Reviewing the Modules: მოდულების მიმოხილვა
+      sciPD3 mods2:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      sciPD33 earth1:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      sciPD33 earth2:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      sciPDpart4_S1_L1:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      test cb level:
+        description here: მიუთითეთ აღწერა
+      test discourse level type:
+        title: დასახელება
+      v2 U1 Internet is for Everyone Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U1 Internet is for Everyone Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U1L13 Student Lesson Introduction:
+        HTTP and Abstraction: HTTP და აბსტრაქცია
+      v2 U1L13 Student Lesson Introduction_2018:
+        HTTP and Abstraction: HTTP და აბსტრაქცია
+      v2 U1L14 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U1L14 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U1L2 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U1L2 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U1L3 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U1L3 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U1L4 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U1L4 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U1L5 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U1L5 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U1L6 Student Lesson Introduction:
+        Sending Numbers: რიცხვების გაგზავნა
+        description here: მიუთითეთ აღწერა
+      v2 U1L6 Student Lesson Introduction_2018:
+        Sending Numbers: რიცხვების გაგზავნა
+        description here: მიუთითეთ აღწერა
+      v2 U1L8 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U1L8 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L1 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L1 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L10 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L10 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L11 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L11 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L12 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L12 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L13 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L13 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L14 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L14 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L15 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L15 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L2 Student Lesson Summary:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L2 Student Lesson Summary_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L3 Student Lesson Summary:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L3 Student Lesson Summary_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L4 Student Lesson Summary:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L4 Student Lesson Summary_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L5 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+      v2 U2L5 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+      v2 U2L6 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L6 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L7 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L7 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L8 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L8 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L9 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U2L9 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U3L02 Student Lesson Introduction:
+        The Need for Algorithms: ალგორითმების საჭიროება
+      v2 U3L02 Student Lesson Introduction_2018:
+        The Need for Algorithms: ალგორითმების საჭიროება
+      v2 U3L03 Student Lesson Introduction:
+        Creativity in Algorithms: შემოქმედებითობა ალგორითმებში
+      v2 U3L03 Student Lesson Introduction_2018:
+        Creativity in Algorithms: შემოქმედებითობა ალგორითმებში
+      v2 U3L04 Student Lesson Introduction:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U3L04 Student Lesson Introduction_2018:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U3L05 Student Lesson Introduction:
+        Creating Functions: ფუნქციების შექმნა
+      v2 U3L05 Student Lesson Introduction_2018:
+        Creating Functions: ფუნქციების შექმნა
+      v2 U3L09 Student Lesson Introduction:
+        Looping and Random Numbers: ციკლები და შემთხვევითი რიცხვები
+      v2 U3L09 Student Lesson Introduction_2018:
+        Looping and Random Numbers: ციკლები და შემთხვევითი რიცხვები
+      v2 U4L05 Student Lesson Intro Encryption Caesar:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      v2 U4L06 Student Lesson Introduction Encryption Vigenere:
+        Cracking the Code: კოდის გატეხვა
+    match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: შეუსაბამეთ ღილაკების კომბინაციები
+          ცეკვის მოძრაობებს.
+        Matching: შესაბამისობა
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: შესაბამისობა
+        Use the key to match each code to its letter: გამოიყენეთ ცხრილი და შეუსაბამეთ
+          ერთმანეთს კოდი და ასო
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: შეუსაბამეთ ბადე პროგრამას.
+        Matching: შესაბამისობა
+      2-3 Maze Match 2:
+        Instructions: ინსტრუქციები
+        Match the puzzles to the blocks: შეუსაბამეთ ბლოკები თავსატეხებს
+        Maze Match: ლაბირინთი შესაბამისობა
+      2-3 Relay Programming Match 1:
+        Matching: შესაბამისობა
+      2-3 artist loops match 1:
+        Artist Loops Matching 1: 'მხატვარი: ციკლების შესაბამისობა 1'
+        Match the loop to the shape: შეუსაბამე ფორმას ციკლი
+      2-3 artist match 1:
+        Artist Matching: 'მხატვარი: შესაბამისობა'
+        Match the shape with the blocks that complete it.: შეუსაბამეთ ფორმა და ბლოკები,
+          რომელიც მას ასრულებს.
+      2-3 bounce match 1:
+        Matching: შესაბამისობა
+      2-3 flappy match 1:
+        Matching: შესაბამისობა
+      2-3 maze match 1:
+        Match the puzzles to the blocks: შეუსაბამეთ ბლოკები თავსატეხებს
+        Maze Match One: 'ლაბირინთი: შესაბამისობა 1'
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>დაუმატე მოთამაშე 1-ის გაგორების
+          შედეგი სართო ჯამს</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>გამარჯვებულის გამოსავლენად
+          შეადარეთ მოთამაშეების შედეგები</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>მოთამაშე 1 აგორებს კამათელს</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4> დააყენეთ 1 მოთამაშის ქულა 0-ზე</h4>"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: შეუსაბამეთ
+          ნაბიჯები კამათლის თამაშში იმ თანმიმდევრობას, რომლის მიხედვითაც ისინი ალგორითმში
+          უნდა გამოჩდნენ.
+        Matching: შესაბამისობა
+      4-5 Computational Thinking Match 1:
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>ბორბლები/მხარე: 2<br/>
+          ფანჯრები/ მხარე: 0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>ბორბლები/მხარე: 2<br/>
+          ფანჯრები/მხარე: 1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>ბორბლები/მხარე: 2<br/>ფანჯრები/
+          მხარე: 6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>ბორბლები/მხარე: 3<br/>ფანჯრები/მხარე:
+          2</h3>"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: ყველა
+          ეს სატრანსპორტო საშუალება პატარა ნაწილებად დაშალეს. დაუკავშირეთ ყოველი ტრანსპორტი
+          მისი ნაწილების სიას.
+        Matching: შესაბამისობა
+      4-5 Suncatchers Match 1:
+        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
+        "<h4>STACK</h4>": "<h4>STACK</h4>"
+        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
+        "<h4>STAR</h4>": "<h4>STAR</h4>"
+        Match each program to the word it makes, using the provided group of skills.: შეუსაბამეთ
+          ყოველი პროგრამა სიტყვას, რომელსაც იგი ქმნის, უნარების ჯგუფების გამოყენებით.
+        Matching: შესაბამისობა
+      4-5 maze match 1:
+        Instructions: ინსტრუქციები
+        Match the puzzles to the blocks: შეუსაბამეთ ბლოკები თავსატეხებს
+        Maze Match: ლაბირინთი შესაბამისობა
+      CSD U3 CSS Vocab Match:
+        '1': '1'
+        '2': '2'
+      CSD U3 keyinput match:
+        Question: კითხვა
+      CSDU2 Match RGB Colors:
+        Question: კითხვა
+      CSPU5_U3L14 - Matching Events to Description:
+        click: დაწკაპუნება
+      K-1 Artist 2 Match 1:
+        Matching: შესაბამისობა
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: დააკავშირეთ ფიგურები ტიპის მიხედვით.
+        Matching: შესაბამისობა
+      K-1 Artist 2 Match 3:
+        Match the shapes based on type.: დააკავშირეთ ფიგურები ტიპის მიხედვით.
+        Matching: შესაბამისობა
+      K-1 Artist Loops Match 1:
+        Matching: შესაბამისობა
+      K-1 Bee Loops Match 1:
+        Match the blocks: ბლოკების დაკავშირება
+        Matching: შესაბამისობა
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: შეუსაბამეთ ღილაკების კომბინაციები
+          ცეკვის მოძრაობებს.
+        Matching: შესაბამისობა
+      K-1 Flappy Match 1:
+        Match the blocks: ბლოკების დაკავშირება
+        Matching: შესაბამისობა
+      K-1 Happy Maps Match 1:
+        Matching: შესაბამისობა
+      K-1 Maze Match 1:
+        Instructions: ინსტრუქციები
+        Match the puzzles and blocks: დააკავშირეთ თავსატეხები და ბლოკები
+        Matching: შესაბამისობა
+      K-1 Move It Match 1:
+        Matching: შესაბამისობა
+      PDAlg Design Recipe Video:
+        Definition: განსაზღვრება
+      PDAlg Types Video:
+        Image: სურათი
+        Number: რიცხვი
+        String: სტრიქონი
+      PDK5 What is unplugged:
+        Question: კითხვა
+      'U2L06 - Matching: Label the Diagram':
+        A: ა
+        B: ბ
+        C: გ
+        D: დ
+        E: E
+      U3L14 - Matching Events to Description:
+        click: დაწკაპუნება
+      U3L19 - MATCH what are values of abc:
+        '10': '10'
+        '12': '12'
+        '13': '13'
+        '15': '15'
+        '16': '16'
+        '21': '21'
+        '3': '3'
+        '5': '5'
+        '7': '7'
+        '8': '8'
+        a: a
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U3L19 - MC what are values of abc:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      U4L06 Create Record Id Matching Q:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      test matching image:
+        Instructions: ინსტრუქციები
+      test matching text:
+        Matching: შესაბამისობა
+        blue: ლურჯი
+      unique level name here:
+        Question: კითხვა
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+    multi:
+      2-3 Algorithms Multi 1:
+        Choose an algorithm for the image provided.: აირჩიეთ ნახატის შესამაბისი ალგორითმი.
+        Multiple Choice: მრავლობითი არჩევანი
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: დაიწყეთ
+          კვადრატით <br/>კვადრატის ზემოთ დასვით პარალელოგრამი<br/>პარალელოგრამის მარჯვნივ
+          დასვით სამკუთხედი
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: დაიწყეთ
+          კვადრატით<br/>კვადრატის ზემოთ დასვით სამკუთხედი<br/>კვადრატის ქვემოთ დასვით
+          სამკუთხედი
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: დაიწყეთ
+          კვადრატით<br/>კვადრატის ქვემოთ დასვით სამკუთხედი<br/> სამკუთხედის მარჯვნივ
+          დასვით პარალელოგრამი
+        0: "? დაიწყეთ კვადრატით<br/>კვადრატის მარჯვნივ დასვით სამკუთხედი<br/>კვადრატის
+          ქვემოთ დასვით პარალელოგრამი<br/>პარალელოგრამის მარჯვნივ დასვით სამკუთხედი"
+        1: "? დაიწყეთ კვადრატით<br/>კვადრატის მარჯვნივ დასვით სამკუთხედი<br/>კვადრატის
+          ქვემოთ დასვით პარალელოგრამი<br/>პარალელოგრამის მარჯვნივ დასვით სამკუთხედი"
+      2-3 Algorithms Multi 2:
+        Multiple Choice: მრავლობითი არჩევანი
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: დაიწყეთ
+          სამკუთხედით<br/>სამკუთხედის ქვეშ დასვით კვადრატი<br/>კვადრატის ქვეშ დასვით
+          კიდევ ერთი სამკუთხედი
+        Which image does <em>not</em> follow this algorithm?: რომელი ნახატი <em>არ</em>
+          შეესაბამება ამ ალგორითმს?
+      2-3 Binary Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which program makes this image?: რომელი პროგრამა ქმნის ამ სურათს?
+      2-3 Conditionals Multi 1:
+        According to the rules of the game, which set of cards is scored correctly?: თამაშის
+          წესების მიხედვით, კარტების რომელი დასტაა სწორად დათვლილი?
+        Multiple Choice: მრავლობითი არჩევანი
+      2-3 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: როგორ გაამარტივებდით ამ
+          თანმიმდევრობას ციკლების მეშვეობით?
+        Multiple Choice: მრავლობითი არჩევანი
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which program makes this image?: რომელი პროგრამა ქმნის ამ სურათს?
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: 'ლაბირინთი: მრავლობითი არჩევანი'
+        Which set of blocks will get me to the pig?: ბლოკების რომელი ნაკრები მიმიყვანს
+          ღორამდე?
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which program **does not** create this image?: რომელი პროგრამა **არ ქმნის**
+          ამ სურათს?
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which image-program combo does not contain mistakes?: რომელი სურათისა და პროგრამის
+          წყვილი არ შეიცავს შეცდომებს?
+      2-3 artist debug multi 1:
+        Artist Debugging Multiple Choice 1: 'მხატვარი, შეცდომების გასწორება: მრავლობითი
+          არჩევანი 1'
+        What would you need to fix to make this a finished circle?: რა უნდა შეასწოროთ,
+          რომ ეს წრე დაასრულოთ?
+      2-3 artist functions multi 1:
+        Artist Functions Multiple Choice One: 'მხატვარი, ფუნქციები: მრავლობითი არჩევანი
+          1'
+        Pick the correct blocks to draw this image using the given functions: აირჩიეთ
+          შესაბამისი ბლოკები, მოცემული ფუნქციების გამოყენებით ამ ნახატის დასახატად
+      2-3 artist loops multi 1:
+        Artist Loops Multiple Choice: 'მხატვარი, ციკლები: მრავლობითი არჩევანი'
+        Which shape is made by this loop?: რომელი ფიგურაა შექმნილი ამ ციკლით?
+      2-3 artist loops multi 2:
+        Artist Loops Multiple Choice: 'მხატვარი, ციკლები: მრავლობითი არჩევანი'
+        Which shape is made by this program?: რომელი ფიგურაა შექმნილი ამ პროგრამით?
+      2-3 bee conditionals multi 1:
+        Bee Conditionals Multiple Choice 1: 'ფუტკარი, პირობითები: მრავლობითი არჩევანი
+          1'
+        Which comparison below is true?: ქვემოთ მოყვანილი შედარებებიდან რომელია სწორი?
+      2-3 bee conditionals multi 2:
+        Choose the best blocks.: აირჩიეთ საუკეთესო ბლოკები.
+      2-3 bee conditionals multi 3:
+        Bee Conditionals Multiple Choice 2: 'ფუტკარი, პირობითები: მრავლობითი არჩევანი
+          2'
+        Choose the best blocks.: აირჩიეთ საუკეთესო ბლოკები.
+      2-3 bee loops multi 1:
+        Bee Loops Multiple Choice One: 'ფუტკარი, ციკლები: მრავლობითი არჩევანი 1'
+        Which blocks collect all of the nectar?: რომელი ბლოკები მოაგროვებენ მთელ ნექტარს?
+      2-3 maze multi 1:
+        Maze Multiple Choice One: 'ლაბირინთი: მრავლობითი არჩევანი 1'
+        Which set of blocks is the correct answer?: ბლოკების რომელი ნაკრები წარმოადგენს
+          სწორ პასუხს?
+      4-5 Algorithms Multi 1:
+        Baking cookies: ორცხობილების გამოცხობა
+        Banana: ბანანი
+        Brushing your teeth: კბილების გახეხვა
+        Multiple Choice: მრავლობითი არჩევანი
+        Shopping from a grocery list: საყიდლები სიის მიხედვით
+        Which one of these items is hardest to describe an algorithm for?: ამ ელემენტებიდან,
+          რომლის ალგორითმის აღწერაა ყველაზე რთული?
+      4-5 Computational Thinking Multi 1:
+        Eugene is a _____ city.: ეუგენი არის _____ ქალაქი.
+        0: "? მოცემულია სამი წინადადება. ქვემოთ ჩამოთვლილთაგან, რომელი შაბლონია განზოგადებული
+          იმგვარად, რომ სამივე წინადადება ერგება?"
+        1: ": მოცემულია სამი წინადადება. ქვემოთ ჩამოთვლილთაგან, რომელი შაბლონია განზოგადებული
+          იმგვარად, რომ სამივე წინადადება ერგება?"
+        Multiple Choice: მრავლობითი არჩევანი
+        Seattle _____ a _____ _____.: სიეტლი _____ _____ _____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: სიეტლი
+          დიდი ქალაქია.<br/>ეუგენი არის საშუალო ქალაქი<br/>ჰილვიუ პატარა ქალაქია.
+        _____ is _____ a _____.: _____ არის _____ _____.
+        _____ is a _____ city.: _____ არის _____ ქალაქი.
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which of these pictures best represents crowdsourcing?: ამ სურათებიდან რომელი
+          ასახავს ქრაუდსორსინგს ყველაზე კარგად?
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: თმის დავარცხნა
+        Cleaning your room: ოთახის დალაგება
+        Eating your dessert: დესერტის მირთმევა
+        Multiple Choice: მრავლობითი არჩევანი
+        Washing your face: სახის დაბანა
+        Which one of these activities would be best for practicing crowdsourcing?: ამ
+          აქტივობებიდან, რომელი იქნებოდა საუკეთესო ქრაუდსორსინგის გამოსაყენებლად?
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which piece of information listed below is okay to share on the internet?: ქვემოთ
+          ჩამოთვლილი ინფორმაციიდან, ინტერნეტში რომლის გაზიარებაა მისაღები?
+        Your address: თქვენი მისამართი
+        Your birthday: დაბადების თარიღი
+        Your favorite food: თქვენი საყვარელი საჭმელი
+        Your parent's credit card number: მშობლების საკრედიტო ბარათის ნომერი
+      4-5 Internet Multi 1:
+        23.23.224.106: 23.23.224.106
+        54.209.61.132: 54.209.61.132
+        54.243.71.82: 54.243.71.82
+        64.14.68.10: 64.14.68.10
+        Multiple Choice: მრავლობითი არჩევანი
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: რომელ
+          IP მისამართზე გადაგიყვანთ DNS-ი ყველაზე დიდი ალბათობით, როცა code.org-ზე
+          შედიხართ?
+      4-5 Internet Multi 2:
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: თუ
+          DNS-ი გაგზავნით გვერდზე IP მისამართით 100.42.50.110, რომელ ვებ-საიტზე იმყოფებით?
+        Multiple Choice: მრავლობითი არჩევანი
+        code.org: code.org
+        csisfun.com: csisfun.com
+        khanacademy.org: khanacademy.org
+        thinkersmith.org: thinkersmith.org
+      4-5 Songwriting Multi 1:
+        0: "? ბუზები დოში, <br/>ფრი ბუზო, ფრი, <br/>ბუზები დოში, <br/>ფრი ბუზო, ფრი,
+          <br/>ბუზები დოში, <br/>ფრი ბუზო, ფრი, <br/>გადახტი ჩემს სიყვარულზე ძვირფასო."
+        1: ": ბუზები დოში, <br/>ფრი ბუზო, ფრი, <br/>ბუზები დოში, <br/>ფრი ბუზო, ფრი,
+          <br/>ბუზები დოში, <br/>ფრი ბუზო, ფრი, <br/>გადახტი ჩემს სიყვარულზე ძვირფასო."
+        Lou, Lou, skip to my Lou,: ლუ, ლუ, გადახტი ჩემს სიყვარულზე,
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: ლუ,
+          ლუ, გადახტი ჩემს სიყვარულზე, <br/>ლუ, ლუ, გადახტი ჩემს სიყვარულზე, <br/>ლუ,
+          ლუ, გადახტი ჩემს სიყვარულზე, <br/>გადახტი ძვირფასო.
+        2: "? ლუ, ლუ, გადახტი ჩემს სიყვარულზე, <br/>ლუ, ლუ, გადახტი ჩემს სიყვარულზე,
+          <br/>ლუ, ლუ, გადახტი ჩემს სიყვარულზე, <br/>გადახტი ძვირფასო.<br/><br/><p>ბუზები
+          დოში, <br/>ფრი ბუზო, ფრი,"
+        3: ": ლუ, ლუ, გადახტი ჩემს სიყვარულზე, <br/>ლუ, ლუ, გადახტი ჩემს სიყვარულზე,
+          <br/>ლუ, ლუ, გადახტი ჩემს სიყვარულზე, <br/>გადახტი ძვირფასო.<br/><br/><p>ბუზები
+          დოში, <br/>ფრი ბუზო, ფრი,"
+        Multiple Choice: მრავლობითი არჩევანი
+        4: "? რომელია ამ სიმღერის ყველაზე დიდი ნაწილი, რომელიც შეიძლება მისამღერად
+          განსაზღვროთ ისე, რომ ყოველ გამოძახებაზე მისამღერი ზუსტად გამეორდეს?"
+        5: ": რომელია ამ სიმღერის ყველაზე დიდი ნაწილი, რომელიც შეიძლება მისამღერად
+          განსაზღვროთ ისე, რომ ყოველ გამოძახებაზე მისამღერი ზუსტად გამეორდეს?"
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: რომელი
+          პროგრამა <em>არ</em> ქმნის იგივე თანმიმდევრობას რაც პროგრამა 1?
+      4-5 artist loops multi 1:
+        Artist Loops Multiple Choice: 'მხატვარი, ციკლები: მრავლობითი არჩევანი'
+        Which blocks will create the design?: რომელი ბლოკები ქმნიან ასეთ დიზაინს?
+      4-5 artist multi 1:
+        Artist Multiple Choice: 'მხატვარი: მრავლობითი არჩევანი'
+        Which blocks draw a rectangle with a perimeter of 100?: რომელი ბლოკები ხატავენ
+          მართკუთხედს პერიმეტრით 100?
+      4-5 artist multi 2:
+        Artist Multiple Choice: 'მხატვარი: მრავლობითი არჩევანი'
+        Which drawing is symmetric?: რომელი ნახატია სიმეტრიული?
+      4-5 bee conditionals multi 1:
+        0: "? იასამნისფერ ყვავილს შესაძლოა ჰქონდეს 3, 2 ან 1 ნექტარი, მაგრამ თქვენ
+          არ იცით რამდენი. რომელი ბლოკები შეამოწმებენ რაოდენობას სწორად და მთლიანად
+          მოაგროვებენ ნექტარს?"
+        1: ": იასამნისფერ ყვავილს შესაძლოა ჰქონდეს 3, 2 ან 1 ნექტარი, მაგრამ თქვენ
+          არ იცით რამდენი. რომელი ბლოკები შეამოწმებენ რაოდენობას სწორად და მთლიანად
+          მოაგროვებენ ნექტარს?"
+        Bee Conditionals Multiple Choice: 'ფუტკარი, პირობითები: მრავლობითი არჩევანი'
+        Choose the best blocks.: აირჩიეთ საუკეთესო ბლოკები.
+      4-5 bee debug multi 1:
+        Bee Debug Multiple Choice: 'ფუტკარი, შეცდომების გასწორება: მრავლობითი არჩევანი'
+        Which version of the function will work?: ფუნქციის რომელი ვერსია იმუშავებს?
+      4-5 bee loops multi 1:
+        Bee Loops Multiple Choice: 'ფუტკარი, ციკლები: მრავლობითი არჩევანი'
+        Which blocks will solve the puzzle?: რომელი ბლოკები ამოხსნის თავსატეხს?
+      4-5 farmer loops multi 1:
+        Which blocks solve the puzzle?: რომელი ბლოკებით ამოიხსნება თავსატეხი?
+      4-5 maze conditionals multi 1:
+        Maze Conditionals Multiple Choice: 'ლაბირინთი, პირობითები: მრავლობითი არჩევანი'
+        Which blocks solve the puzzle?: რომელი ბლოკებით ამოიხსნება თავსატეხი?
+      4-5 maze multi 1:
+        Maze Multiple Choice: 'ლაბირინთი: მრავლობითი არჩევანი'
+        Which blocks solve the puzzle?: რომელი ბლოკებით ამოიხსნება თავსატეხი?
+      CB_Question_3:
+        A: ა
+        Y: true
+      CSD Prediction Header Size:
+        Question: კითხვა
+      CSD U3 Boolean MC:
+        title: დასახელება
+      CSD U3 Boolean MC_2018:
+        title: დასახელება
+      CSDU4 Screens Predict Multi:
+        About: გაიცანით
+        Contact Us: დაგვიკავშირდით
+      'CSP U4L04 Assessment 1 ':
+        Question: კითხვა
+      CSP Unit 1 Ch 1 MC binary to dec simple:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_2018:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_exam_prep:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP verify 18:
+        'No': არა
+        'Yes': დიახ
+      CSPU5_predict_mc_whichOfTwoEvents:
+        title: დასახელება
+      CSPU5_predict_onEvent_withWrongID:
+        Question: კითხვა
+        title: დასახელება
+      CommuteAssess - loops 1 - block:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block B:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_2018:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_exam_prep:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 2 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_2018:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_exam_prep:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      Destroy me multi test:
+        description here: მიუთითეთ აღწერა
+      ECSPD2 question:
+        Question: კითხვა
+        title: დასახელება
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which blocks solve this puzzle?: რომელი ბლოკებით ამოიხსნება ეს თავსატეხი?
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which blocks draw the square?: რომელი ბლოკებით იხატება კვადრატი?
+      K-1 Artist 2 Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+      K-1 Artist Loops Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+      K-1 Bee 1 Multi 1:
+        How many nectars is this?: რამდენი პორცია ნექტარია აქ?
+        Multiple Choice: მრავლობითი არჩევანი
+      K-1 Bee 1 Multi 2:
+        How many nectars is this?: რამდენი პორცია ნექტარია აქ?
+        Multiple Choice: მრავლობითი არჩევანი
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: რომელ
+          ცხოველს ეკუთვნის ციფრული კვალი, რომლის გამოც ის <strong>ყველაზე დიდ საფრთხეშია</strong>?
+      K-1 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: როგორ გაამარტივებდით ამ
+          თანმიმდევრობას ციკლების მეშვეობით?
+        Multiple Choice: მრავლობითი არჩევანი
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which arrow gets the Flurb to the treasure?: რომელი ისარი მიიყვანს ფლარბის
+          განძამდე?
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which information should you <strong>not</strong> share online?: რომელი ინფორმაცია
+          <strong>არ</strong> უნდა გააზიაროთ ონლაინ?
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which choice should be the final block?: რომელი ბლოკი უნდა იყოს ბოლო?
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which repeat block is the same?: Which repeat block is the same?
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: მრავლობითი არჩევანი
+        Pick the correct repeat block.: აირჩიეთ გამეორების სწორი ბლოკი.
+      K-1 Maze Multiple Choice 2:
+        Maze: ლაბირინთი
+        Which answer solves this level?: რომელი პასუხი ამოხსნის ამ დონეს?
+      K-1 Move It Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which algorithm gets the Flurb to the flowers?: რომელი ალგორითმი მიიყვანს
+          ფლარბის ყვავილებამდე?
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which step should go at the beginning of this algorithm?: რომელი ნაბიჯი უნდა
+          გადავიდეს ამ ალგორითმში პირველ ადგილზე?
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which step should fill in the blank for this algorithm?: რომელი ნაბიჯი უნდა
+          ჩაისვას ამ ალგორითმში გამოტოვებულ ადგილზე?
+      K-1 Word Search Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which blocks spell "MOVE"?: რომელი ბლოკი ჰყოფს სიტყვას "MOVE" ასო-ასო?
+      K-1 Word Search Multi 2:
+        Multiple Choice: მრავლობითი არჩევანი
+      K-1 Word Search Multi 3:
+        Multiple Choice: მრავლობითი არჩევანი
+        SET: SET
+        SOUTH: SOUTH
+        SQUARE: SQUARE
+        Which word is spelled?: რომელი სიტყვაა ჩაწერილი?
+      Multi Define Funcs 1:
+        '3': '3'
+        y: true
+      Multi Define Funcs 2:
+        '3': '3'
+        y: true
+      Multi Define Funcs 3:
+        '5': '5'
+        '6': '6'
+        y: true
+      PDAlg Blocks Video:
+        Toolbox: ინსტრუმენტების პანელი
+      PDAlg DR Multi 1:
+        Domain: დომენი
+        Name: სახელი
+        Range: დიაპაზონი
+        0: "? The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+        1: ": The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+      PDAlg PreQ 1:
+        'No': არა
+        'Yes': დიახ
+      PDAlg PreQ 2:
+        'No': არა
+        'Yes': დიახ
+      PDAlg functional:
+        'No': არა
+      PDK5 Blockly Intro:
+        'Yes': დიახ
+      PDK5 Classroom Culture:
+        'Yes': დიახ
+      PDK5 Course Maps:
+        'Yes': დიახ
+      PDK5 Course Overview:
+        'Yes': დიახ
+      PDK5 Glossary:
+        Glossary: ლექსიკონი
+        'Yes': დიახ
+      PDK5 Intro:
+        'No': არა
+        Welcome!: კეთილი იყოს თქვენი მობრძანება!
+        'Yes': დიახ
+      PDK5 Teacher Dashboard:
+        Teacher Dashboard: მასწავლებლის მართვის პანელი
+        'Yes': დიახ
+      PDK5 Test1:
+        Question: კითხვა
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      PDK5 UVideo Overview:
+        'Yes': დიახ
+      PDK5 Unplugged Intro:
+        'Yes': დიახ
+      PS U3-bakertest:
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      SG U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      Submittable Multi:
+        blue: ლურჯი
+        green: მწვანე
+        red: წითელი
+      Test Contained Multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '4': '4'
+      U1L07 Assessment 1:
+        A: ა
+        B: ბ
+        C: გ
+        D: დ
+        E: E
+      U1L6 Assessment multiple choice:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L6 Assessment multiple choice_2018:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L8 Multiple Choice:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      U1L8 Multiple Choice_2018:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      'U2L06 - MC: Which is an MST?':
+        0: ': "<p>The images below all show the same map (or graph) but have different
+          paths between the points highlighted.</p>\n<p>Please choose the image that
+          is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The
+          “distance” between points is depicted by the number of line segments connecting
+          any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
+        A: ა
+        B: ბ
+        C: გ
+        D: დ
+        E: E
+      U2L08 Assessment 1:
+        '11': '11'
+        '5': '5'
+        '6': '6'
+        '8': '8'
+        '9': '9'
+      U2L13 Assessment4:
+        '26': '26'
+      U2L13 Assessment4_2018:
+        '26': '26'
+      U2L14 Assessment3:
+        'false': მცდარი
+        'true': ჭეშმარიტი
+      U2L19 multichoice 13 MOD 17:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      U2L19 multichoice 13 MOD 17_2018:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      'U2L19 mutlichoice ':
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15_2018:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L07 - MC remove line of code loops_2018:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L13 - Making Predications MC:
+        0: '? "<h1>Make a prediction - Learning to Code Better, Faster</h1>\n<p>As
+          you are learning to program you will encounter more and more new features
+          of a language and be naturally curious about how things work.  Research
+          has shown that when you encounter a new piece of code or new situation,
+          you learn faster by simply making a prediction about what will happen before
+          you run the program for the first time.  \n</p><p>Making a prediction forces
+          you to study the code and use your intuitions based on what you already
+          know. Even experienced programmers might disagree about what a piece of
+          code would do!  So making a prediction is not like some sort of test about
+          how smart you are.  <strong>By making a prediction first, when you run the
+          code you learn so much more whether you were right, wrong or somewhere in
+          between.  You construct a stronger mental model for how code works than
+          if you just ran the program to see what happened.</strong></p>\n<p>  So
+          let''s try it...</p>\n<h1> What do you think will happen?</h1>\n<p><img
+          src=\"https://images.code.org/34f6a627f0d62b6dc015c9e318372de9-image-1444076081470.png\"
+          align=right>Here is a piece of code with two buttons and two event handlers.  Notice
+          that both buttons still have the default IDs of \"id\". You will need to
+          fix this because we know it causes a warning message.  But it turns out
+          the program can still run and it does do <i>something.</i></p>\n<p><strong>What
+          do you think will happen with this code is run?</strong></p>"'
+        1: ': "<h1>Make a prediction - Learning to Code Better, Faster</h1>\n<p>As
+          you are learning to program you will encounter more and more new features
+          of a language and be naturally curious about how things work.  Research
+          has shown that when you encounter a new piece of code or new situation,
+          you learn faster by simply making a prediction about what will happen before
+          you run the program for the first time.  \n</p><p>Making a prediction forces
+          you to study the code and use your intuitions based on what you already
+          know. Even experienced programmers might disagree about what a piece of
+          code would do!  So making a prediction is not like some sort of test about
+          how smart you are.  <strong>By making a prediction first, when you run the
+          code you learn so much more whether you were right, wrong or somewhere in
+          between.  You construct a stronger mental model for how code works than
+          if you just ran the program to see what happened.</strong></p>\n<p>  So
+          let''s try it...</p>\n<h1> What do you think will happen?</h1>\n<p><img
+          src=\"https://images.code.org/34f6a627f0d62b6dc015c9e318372de9-image-1444076081470.png\"
+          align=right>Here is a piece of code with two buttons and two event handlers.  Notice
+          that both buttons still have the default IDs of \"id\". You will need to
+          fix this because we know it causes a warning message.  But it turns out
+          the program can still run and it does do <i>something.</i></p>\n<p><strong>What
+          do you think will happen with this code is run?</strong></p>"'
+        description here: მიუთითეთ აღწერა
+      U3L20 Assessment9:
+        "=": "="
+        ">": ">"
+      U3L30 Assessment1:
+        '6': '6'
+        '7': '7'
+        '8': '8'
+      U3L30 Assessment2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+      U3L30 Assessment3:
+        '19': '19'
+        '20': '20'
+        '21': '21'
+      U4L01 Multiple Choice:
+        right: მარჯვნივ
+      U4L02 Multiple Choice:
+        right: მარჯვნივ
+      U4L03 Multiple Choice:
+        right: მარჯვნივ
+      U4L04 Multiple Choice:
+        right: მარჯვნივ
+      U4L05 Multiple Choice:
+        right: მარჯვნივ
+      U4L06 Assessment 2:
+        column: სვეტი
+        row: მწკრივი
+      U4L06 Assessment 3:
+        column: სვეტი
+        row: მწკრივი
+      U4L06 Multiple Choice:
+        right: მარჯვნივ
+      U4L06 Reflection Q 1:
+        Question: კითხვა
+        random: შემთხვევითი
+      U4L07 Multiple Choice:
+        right: მარჯვნივ
+      U4L08 Multiple Choice:
+        right: მარჯვნივ
+      U4L09 Multiple Choice:
+        right: მარჯვნივ
+      U4L10 Multiple Choice:
+        right: მარჯვნივ
+      U4L11 Multiple Choice:
+        right: მარჯვნივ
+      U4L12 Multiple Choice:
+        right: მარჯვნივ
+      U4L13 Multiple Choice:
+        right: მარჯვნივ
+      U4L14 Multiple Choice:
+        right: მარჯვნივ
+      U4L15 Multiple Choice:
+        right: მარჯვნივ
+      U4L16 Multiple Choice:
+        right: მარჯვნივ
+      U4L17 Multiple Choice:
+        right: მარჯვნივ
+      U4L18 Multiple Choice:
+        right: მარჯვნივ
+      U4L19 Multiple Choice:
+        right: მარჯვნივ
+      U4L20 Multiple Choice:
+        right: მარჯვნივ
+      U4L21 Multiple Choice:
+        right: მარჯვნივ
+      U4L22 Multiple Choice:
+        right: მარჯვნივ
+      U4L23 Multiple Choice:
+        right: მარჯვნივ
+      U4L24 Multiple Choice:
+        right: მარჯვნივ
+      U4LXX Multiple Choice:
+        right: მარჯვნივ
+      U5 assess_weight_v2:
+        Question: კითხვა
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      Warmup questions:
+        random: შემთხვევითი
+      commute assess - loops 4 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        '50': '50'
+      courseC_multi_harvester_loops11_predict1:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_starWars_predict1:
+        I don't know: არ ვიცი
+      courseC_multi_starWars_predict1_2018:
+        I don't know: არ ვიცი
+      courseD_multi_artist_binary8_predict1:
+        A: ა
+        B: ბ
+        C: გ
+        D: დ
+      courseD_multi_artist_binary8_predict1_2018:
+        A: ა
+        B: ბ
+        C: გ
+        D: დ
+      courseD_multi_artist_nestedLoops9_predict1:
+        A: ა
+        B: ბ
+        C: გ
+      courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: ა
+        B: ბ
+        C: გ
+      courseD_multi_bee_nestedLoops9_predict2:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseE_multi_farmer_predict1:
+        I don't know: არ ვიცი
+        0: "? Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        1: ": Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        2: "? The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+        3: ": The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+      courseE_multi_farmer_predict1_2018:
+        I don't know: არ ვიცი
+        0: "? Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        1: ": Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        2: "? The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+        3: ": The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+      csd-post-survey-2018-topic-ai:
+        'No': არა
+        'Yes': დიახ
+      csd-post-survey-2018-topic-cryptocurrency:
+        'No': არა
+        'Yes': დიახ
+      csd-post-survey-2018-topic-cybersecurity:
+        Cybersecurity: კიბერუსაფრთხოება
+        'No': არა
+        'Yes': დიახ
+      csd-post-survey-2018-topic-databases:
+        'No': არა
+        'Yes': დიახ
+      csd-post-survey-2018-topic-datascience:
+        'No': არა
+        'Yes': დიახ
+      csd-post-survey-2018-topic-gamedev:
+        'No': არა
+        'Yes': დიახ
+      csd-post-survey-2018-topic-hardware:
+        'No': არა
+        'Yes': დიახ
+      csd-post-survey-2018-topic-internet:
+        'No': არა
+        'Yes': დიახ
+      csd-post-survey-2018-topic-mobile:
+        'No': არა
+        'Yes': დიახ
+      csd-post-survey-2018-topic-parallel:
+        'No': არა
+        'Yes': დიახ
+      csd-post-survey-2018-topic-programming:
+        'No': არა
+        'Yes': დიახ
+      csd-post-survey-2018-topic-robotics:
+        'No': არა
+        Robotics: რობოტიკა
+        'Yes': დიახ
+      csd-post-survey-2018-topic-web:
+        'No': არა
+        'Yes': დიახ
+      csp-post-survey-2017-q64:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': არა
+        'Yes': დიახ
+      csp-post-survey-2017-q64_2018:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': არა
+        'Yes': დიახ
+      csp-post-survey-2017-q65:
+        I don't know: არ ვიცი
+        'No': არა
+        'Yes': დიახ
+      csp-post-survey-2017-q65_2018:
+        I don't know: არ ვიცი
+        'No': არა
+        'Yes': დიახ
+      csp-post-survey-2018-topic-ai:
+        'No': არა
+        'Yes': დიახ
+      csp-post-survey-2018-topic-cryptocurrency:
+        'No': არა
+        'Yes': დიახ
+      csp-post-survey-2018-topic-cybersecurity:
+        Cybersecurity: კიბერუსაფრთხოება
+        'No': არა
+        'Yes': დიახ
+      csp-post-survey-2018-topic-databases:
+        'No': არა
+        'Yes': დიახ
+      csp-post-survey-2018-topic-datascience:
+        'No': არა
+        'Yes': დიახ
+      csp-post-survey-2018-topic-gamedev:
+        'No': არა
+        'Yes': დიახ
+      csp-post-survey-2018-topic-hardware:
+        'No': არა
+        'Yes': დიახ
+      csp-post-survey-2018-topic-internet:
+        'No': არა
+        'Yes': დიახ
+      csp-post-survey-2018-topic-mobile:
+        'No': არა
+        'Yes': დიახ
+      csp-post-survey-2018-topic-parallel:
+        'No': არა
+        'Yes': დიახ
+      csp-post-survey-2018-topic-programming:
+        'No': არა
+        'Yes': დიახ
+      csp-post-survey-2018-topic-robotics:
+        'No': არა
+        Robotics: რობოტიკა
+        'Yes': დიახ
+      csp-post-survey-2018-topic-web:
+        'No': არა
+        'Yes': დიახ
+      csp-pre-survey-2017-q40:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: სხვა
+      csp-pre-survey-2017-q40_2018:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: სხვა
+      csp_ap_exam_signup:
+        'No': არა
+        'Yes': დიახ
+      csp_ap_previous_years:
+        'No': არა
+        'Yes': დიახ
+      csp_ap_taking_ap_class:
+        'No': არა
+        'Yes': დიახ
+      cspu5_assess1_fivemore:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_2018:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_exam_prep:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_flowchart:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_2018:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_exam_prep:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_increase:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_2018:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_exam_prep:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess2_addstrings:
+        result: შედეგი
+      cspu5_assess2_addstrings_2018:
+        result: შედეგი
+      cspu5_assess2_addstrings_exam_prep:
+        result: შედეგი
+      cspu5_assess2_combineString:
+        '10': '10'
+        '55': '55'
+        result: შედეგი
+      cspu5_assess2_combineString_2018:
+        '10': '10'
+        '55': '55'
+        result: შედეგი
+      cspu5_assess2_combineString_exam_prep:
+        '10': '10'
+        '55': '55'
+        result: შედეგი
+      cspu5_assess2_oldEnough:
+        '35': '35'
+        'false': მცდარი
+        'true': ჭეშმარიტი
+      cspu5_assess2_oldEnough_2018:
+        '35': '35'
+        'false': მცდარი
+        'true': ჭეშმარიტი
+      cspu5_assess2_oldEnough_exam_prep:
+        '35': '35'
+        'false': მცდარი
+        'true': ჭეშმარიტი
+      cspu5_assess2_weight:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_2018:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_exam_prep:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess3_array1:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_2018:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_exam_prep:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array4:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_2018:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_exam_prep:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_listAppend:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_2018:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_exam_prep:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_loopValue1:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue2:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_mysterySwap:
+        a: a
+        d: d
+      cspu5_assess3_mysterySwap_2018:
+        a: a
+        d: d
+      cspu5_assess3_mysterySwap_exam_prep:
+        a: a
+        d: d
+      cspu5_assess4_dataReturns:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_2018:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_exam_prep:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_listOutput:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_2018:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_exam_prep:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      msm variables multi 1:
+        '15': '15'
+        x: x
+      msm variables multi 10:
+        '17': '17'
+        x: x
+      msm variables multi 11:
+        '17': '17'
+        x: x
+      msm variables multi 12:
+        '17': '17'
+        x: x
+      msm variables multi 13:
+        '117': '117'
+        '17': '17'
+        x: x
+      msm variables multi 2:
+        '8': '8'
+      msm variables multi 3:
+        '5': '5'
+        x: x
+      msm variables multi 4:
+        '15': '15'
+        '3': '3'
+        '8': '8'
+      msm variables multi 5:
+        '3': '3'
+        '5': '5'
+      msm variables multi 6:
+        '1': '1'
+        '5': '5'
+        hello: გამარჯობა
+      msm variables multi 7:
+        '3': '3'
+        x: x
+      msm variables multi 8:
+        '3': '3'
+        x: x
+      msm variables multi 9:
+        '5': '5'
+        '6': '6'
+        x: x
+      post-assessment survey q34:
+        Easy: მარტივი
+        Hard: რთული
+      pre-assessment survey q24:
+        'No': არა
+        'Yes': დიახ
+      pre-assessment survey q26:
+        0: "? Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        1: ": Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        'No': არა
+        'Yes': დიახ
+      pre-assessment survey q27:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: სხვა
+      pre-assessment survey q28:
+        '10': '10'
+        '11': '11'
+        '12': '12'
+        '8': '8'
+        '9': '9'
+        Other: სხვა
+      pre-assessment survey q29:
+        Female: მდედრობითი
+        Male: მამრობითი
+        Other: სხვა
+        Prefer not to answer: პასუხისგან თავის შეკავება
+      pre-assessment survey q30:
+        Asian: აზიელი
+        Black or African American: შავკანიანი ან აფროამერიკელი
+        Other: სხვა
+        Prefer not to answer: პასუხისგან თავის შეკავება
+        White: თეთრკანიანი
+      sarah_test_maggie:
+        Question: კითხვა
+        test: ტესტი
+      sciPD PreQ 1:
+        'No': არა
+        'Yes': დიახ
+      sciPD PreQ 2:
+        'No': არა
+        'Yes': დიახ
+      test anonymous student survey educational:
+        'No': არა
+        'Yes': დიახ
+      test me:
+        Question: კითხვა
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+      unique level name here:
+        Question: კითხვა
+        description here: მიუთითეთ აღწერა
+        title: დასახელება
+    text_match:
+      U2L07 Assessment4:
+        '43': '43'

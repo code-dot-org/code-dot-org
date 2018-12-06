@@ -1,0 +1,461 @@
+---
+sr:
+  errors:
+    messages:
+      not_saved: 'Молим вас исправите следеће грешке:'
+      too_young: Овај садржај има старосно ограничење и није доступан млађим ученицима.
+      teacher_must_accept_terms: Овај садржај има старосно ограничење и није доступан
+        млађим ученицима. Замоли свог наставника да прихвати ажуриране Услове коришћења
+        да би ти омогућио приступ овом саджају. Наставник то може урадити тако што
+        ће се улоговати у Code Studio и кликнути дугме "Review updated terms" у горњем
+        делу Code Studio почетне стране.
+      pair_programmer: Тренутно програмирате упарени са учеником који нема дозвољен
+        приступ овом садржају. Да приступите овом садржају, зауставите упарено програмирање
+        па затим покушајте поново.
+  activerecord:
+    errors:
+      messages:
+        blank: је обавезан
+    attributes:
+      user:
+        name: Прикажи назив
+        email: Електронска пошта
+        username: корисничко име
+        password: Лозинка
+        password_confirmation: Потврдите лозинку
+        current_password: Тренутна лозинка
+        locale: Језик
+        age: Узраст
+        gender: Пол
+        edit_header: Уреди детаље налога
+        error:
+          future: не може бити у будућности
+  hello: Здраво свете
+  welcome_back: Добродошао назад, %{name}
+  see_your_learning_plan: Погледај твој план учења
+  submit: Пошаљи
+  unsubmit: Откажи предају
+  previous_page: Претходна страница
+  next_page: Следећа страница
+  cancel: Откажи
+  okay: У реду
+  or: или
+  add_teacher_form:
+    code:
+      label: 'Додај наставника:'
+      placeholder: Шифра секције(ABCDEF)
+      instructions: Молим вас унесите шифру коју вам је професор доделио. Шифра се
+        састоји од 6 слова као "ABCDEF".
+    submit: Додај наставника
+  add_hint_form:
+    placeholder: Молимо унесите ваш савет овде
+    submit: Додај савет
+  appname: Code.org
+  stage: фаза
+  stage_number: Стаза %{number}
+  puzzle: Пузла
+  trophies: трофеји
+  courses: курсеви
+  courses_page:
+    title_student: Научите о Code Studio-ју
+  unplugged_activity: Активност ван мреже
+  of: од
+  more: ВИШЕ
+  less: МАЊЕ
+  beta: пробна верзија
+  try_hoc: 'Испробајте Hour of Code. Кликните овде >> '
+  try_k8intro: Пробај наш К-8 курс Увод у рачунарство (15-25 часова)
+  k8intro: К-8 курс Увод у рачунарство (15-25 часова)
+  already_started: Већ почели? Наставите овде >>
+  demos: 'Администратор: Сви демои'
+  continue: Настави
+  prize: награда
+  more_info: Више информација
+  auth:
+    sign_in_with: Пријавите се помоћу %{provider}
+    signed_in: Пријављени сте!
+    signed_out: Одјавили сте се са <a href="%{url}">Code.org</a>.
+    sign_out_of: Користили сте %{provider} да би се пријавили. <a href="%{url}">Кликните
+      овде</a> да би се одјавили са %{provider}.
+    already_signedup: Већ сте направили налог?
+    notyet_signedup: Нисте се придружили?
+    google_oauth2: Гугл налог
+    twitter: Twitter
+    facebook: Facebook
+    windowslive: Мајкрософт налог
+    microsoft_v2_auth: Мајкрософт налог
+    forgot_password: Заборавили сте лозинку?
+    need_confirmation: Нисте примили инструкције за потврду?
+    need_unlock: Нисте примили инструкције за откључавање?
+  signup_form:
+    student_count: "%{count} ученика се већ пријавило."
+    teacher_count: "%{count} наставника се већ пријавило."
+    overview: Креирај свој налог да можеш да пратиш свој напредак или управљаш својим
+      разредом.<a href="/">Можеш претраживати разне нивое и задатке</a> без креираног
+      налога, али мораш бити пријављен да би сачувао свој напредак и пројекте.
+    hoc_already_signed_up_heading: Почни без пријаве на свој налог
+    teacher_educator_guide: Погледај водич за едукатора
+    title: Креирај свој налог за Code.org
+    school_name: Име школе (опционо)
+    school_address: Адреса школе (опционо)
+    address_placeholder: адреса, град, држава, поштански код
+    gender: Пол (опционо)
+    birthday: Датум рођења (опционо)
+    age: Узраст
+    user_type: Да ли си ученик или наставник?
+    submit: Региструј се
+    teacher: Да ли сте наставник?
+    valid_username: Доступно!
+    invalid_username: Корисничко име мора имати барем 5 знакова
+    taken_username: Корисничко име заузето
+    valid_password: Валидна лозинка!
+    invalid_password: Лозинка мора имати барем 6 знакова
+    mismatch_password: Лозинке се не поклапају
+    additional_information: Потребне су нам додатне информације како би смо могли
+      да наставимо са процесом регистрације.
+    user_type_label: Врста налога
+    user_type_teacher: Учитељ
+    user_type_student: студент
+    field_is_required: је обавезан
+    accept_terms: Морате се сложити да бисте креирали свој налог
+    email_preference_privacy: "(Погледајте нашу политику приватности)"
+    email_preference_yes: Да
+    email_preference_no: не
+  school_info:
+    other: Други
+  signin_form:
+    title: Већ имате налог? Пријавите се
+    login: Електронска пошта
+    password: Лозинка
+    remember: Запамти ме
+    submit: Пријави се
+  signin:
+    try_heading: Желиш ли да пробаш програмирање без пријављивања?
+    try_hoc: Прво испробај један Сат Кода
+    try_20hours: Испробајте наш 20-часовни увод у Рачунарство
+  signinsection:
+    welcome: Добродошли на %{section_name}
+    name: Изаберите име
+    picture: Сада пронађи своју тајну слику
+    words: Унесите ваше тајне речи
+    login: Пријави се
+    invalid_login: Неуспела пријава, молимо вас да покушате поново
+  password:
+    reset_form:
+      title: Заборавили сте лозинку?
+      email: Емаил адреса
+      submit: Пошаљи
+    change_form:
+      title: Промените вашу лозинку
+      new_password: Нова лозинка
+      confirm_password: Потврдите нову лозинку
+      submit: Промени моју лозинку
+  welcome_email:
+    subject: Придружи се мом предавању (на Code.org)
+    body: |
+      Кликни линк испод како би се пријавио за туторијале на Code.org (ја ћу ти бити "учителј"):
+
+      %{link}
+
+      Туторијали су забавни, визуелни, и уче основе програмиранја користећи једноставне примјере у облику игрица. Научите програмирати од Bill Gatesа, Mark Zuckerbergа, Angry Birds, и Plants vs. Zombies! :-)
+
+      %{name}
+  section:
+    type:
+      word: Тајна реч
+      email: Електронска пошта
+  follower:
+    invite_sent: Позивница послата
+    added_teacher: "%{name} вас је додао као предавача"
+    registered: Регистровали сте се за %{section_name}.
+    error:
+      signed_in: Молимо вас да се одјавите пре наставка
+      username_not_found: Корисничко име %{username} није пронађено
+      username_in_use: "%{username} је заузето, молимо узмите друго"
+      no_teacher: Нисмо нашли никога пријавлјеног са '%{teacher_email_or_code}'. Молимо
+        затражите да се поновно пријаве и онда их покушајте поновно додати
+      section_not_found: Није могуће наћи део кода '%{section_code}'.
+      blank_code: Упишите шифру секције
+      cant_join_own_section: Извини, није можеш се придружити својој секцији.
+    mail:
+      student_disassociated:
+        subject: 'Code.org обавештење: студент%{student_name} више се не сматра вашим
+          учеником.'
+  reports:
+    error:
+      access_denied: Немате приступ овој особи
+  crud:
+    new_model: Нови %{model}
+    show: Покажи
+    edit: Уреди
+    edit_model: Уреди %{model}
+    update: Ажурирај
+    submit: Пошаљи
+    destroy: Уништи
+    back: Назад
+    confirm: Јесте ли сигурни?
+    created: "%{model} је успешно направљен."
+    updated: "%{model} је успешно ажуриран."
+    destroyed: "%{model} је успешно избрисан."
+    access_denied: Немаш приступ овом %{model}.
+  nav:
+    header:
+      finished_hoc: Завршио сам свој Сат програмирања
+      sign_in_to_save: Пријави се да сачуваш напредак
+      free_play:
+        playlab: Направи апликацију
+        artist: Нацртај нешто
+        applab: Направи апликацију
+      educate_hoc: Час кода
+    user:
+      classroom: Почетна страница за учитеље
+      district_dashboard: Регионална огласна табла
+      label: Здраво %{username}
+      stats: Мој напредак
+      settings: Мој налог
+      logout: Одјави се
+      signin: Пријави се
+      already_registered: Већ си регистрован?
+      create: Креирај
+      artist: Уметник
+      playlab: Играоница
+      flappy: Флапи
+    popup:
+      progress_for_user: Напредак %{name}
+      progress: Напредак
+      lines: 'Укупно линија кода: %{lines}'
+      close: ЗАТВОРИ
+      mastery: Концепти
+      puzzle_map: Нивои
+      prizes: Сакупи све %{total_trophies} трофеје и освоји награде!
+      prize_earned: Сви %{total_trophies} трофеји сакуплјени. Награда освојена!
+      prize_us_only: "(Само за ученике из САД-а)"
+      prizes_link: Више информација
+  teacher:
+    answer: Одговор
+    for_teachers_only: Само за наставнике
+    title:
+      one: 'Твој учитељ:'
+      other: 'Твоји учителји:'
+    remove: "(уклони учитеља)"
+    confirm:
+      remove: Да ли си сигуран/а да желиш да уклониш овог учитеља?
+    students:
+      dashboard: Иди на страницу наставника
+    user_not_found: Наставник није пронађен.
+    student_teacher_disassociated: Уклонили сте %{teacher_name} из листе ваших наставника.
+    panel:
+      student: студент
+      viewing_solution: Види решење
+      try_it_yourself: Испробај
+      section: Секција
+      example: Пример решења
+      example_with_number: Пример решења %{solution_number}
+      submitted_on: 'Предато:'
+      unsubmit: Откажи предају
+  user:
+    email_confirm_needed: 'Електронска пошта није потврђена:'
+    email_confirm_needed_required: 'Ваша електронска пошта %{email} није потврђена:'
+    email_confirm_wrong_email: "(Погрешна електронска пошта?)"
+    email_resend_confirm: Поново пошаљи упутства о потврди
+    new_password_hint: "(остави празно ако не желиш промијенити)"
+    current_password_hint: "(потребна нам је твоја тренутна лозинка како би потврдили
+      твоје промјене)"
+    delete: Обришите ваш налог
+    delete_text: Обришите ваш налог кликом на доње дугме.
+    delete_text_teacher_note: 'Напомена: брисање вашег налога неће резултирати брисањем
+      налога ваших ученика.'
+    delete_confirm: Да ли сте сигурни да желите да обришете свој налог?
+  user_level:
+    completed: Готово
+    tried: Покушао
+  home:
+    title: Мој напредак
+    description: У Студију за кодирање се налазе сви курсеви које је креирао Code.org
+    lines_of_code: "%{lines_count} ЛИНИЈЕ КОДА КОЈЕ СУ НАПИСАЛИ УЧЕНИЦИ"
+    lines_of_code_linebreak: "%{lines_count} ЛИНИЈЕ КОДА<br/>КОЈЕ ЈЕ НАПИСАЛО %{students_count}
+      МИЛИОН УЧЕНИКА"
+    all_courses: Преглед Курса 1, 2 и 3
+    lesson_plans: План лекција
+    signin_message: Већ имаш свој налог? %{link}
+    student_reg_link: Регистрација за Ученике
+    teacher_reg_link: Регистрација за Учитеље
+    signin_directions: Користи налог како би пратио свој напредак.<br/> Наставници,
+      будите у току са својим одељењем.
+    teacher_dashboard: Видјети плочу напретка
+    teacher_student_count_one: Имате %{count} студената.
+    teacher_student_count: Ви имате %{count} студената.
+    teacher_averages: У просјеку су ваши студенти зарадили %{trophy_average} од %{trophy_max}
+      "Concept Mastery" трофеја.
+    teacher_print_certificates: Штампај потврде ученицима који су завршили курс
+    teacher_read_blog: Прочитајте о новостима и ажурирањима наших материјала на нашем
+      едукаторском блогу
+    classroom: Ваша учионица
+    student_progress: Ваш напредак у ученју
+    student_stats: Ви сте зарадили %{trophy_count} од %{trophy_max} "Concept Mastery"
+      трофеја.
+    student_left_off: 'Гдје сте оставили заднји пут:'
+    student_finished: Завршили сте све Code.org туторијале. Одаберите други курс class
+      %{online_link} или на %{local_school_link}.
+    local_school: локална школа
+    online: пријавлјен
+    see_details: Погледај деталје
+    view_course: Погледајте курс
+    prize_info: 'Награде за учествовање (само за професоре државних школа из САД-а):
+      До $1,000 за награде за учионице.'
+    tryfirst: 'Или, можеш прво да пробаш, а да се региструјеш касније:'
+    trynow: Испробај сада
+    add_hint_help: Молимо Вас да нам помогнете да додамо паметне савете на Code.org
+      туторијале
+    20hour_overview: Овај 20-часовни  курс представља срж компјутерских наука и програмерских
+      основа. Курс је дизајниран за употребу у учионицама за разреде К-8, али је забавно
+      учити у било којем животном периоду.
+    test_videos_help: Тестирајте наш нови video player у вашој школи
+    try_beta_courses: Ново! Пробајте наше бета курсеве за ученике разредне наставе
+    use_as_teacher: Користите овај сајт као наставник
+    heading_hoc2014: "<h2>Сат програмирања за</h2><h1>За све узрасте</h1>"
+    heading_elementary: "<h2>20-сатни курсеви за</h2><h1>Основе компјутерске науке
+      (за све узрасте)</h1>"
+    heading_apps: "<h2>Забава за</h2><h1>Све</h1>"
+    heading_tools: "<h2>Да ли си спреман за следећи корак?</h2><h1>JavaScript алати
+      за средњу школу</h1>"
+    heading_legacy: "<h2>Наш убрзани курс за</h2><h1>За све узрасте</h1>"
+    your_gallery: Галерија
+    no_primary_course: Испробајте Code Studio курс
+    choose_next_course: Испробајте Code Studio курс одабиром једног испод
+    print_certificate: Одштампајте сертификат
+    announcement_title: Објаве
+    announcement_learn_more_button: Сазнајте више
+    announcement_try_now_button: Испробај сада
+  share:
+    title: Научите о Code Studio-ју
+    description: Свако може да научи компјутерску науку. Да направи игрице, апликације
+      и уметност помоћу кодирања.
+    try_hour_of_code: Испробај сат програмирања!
+  gender:
+    male: Мушко
+    female: Женско
+    none: Желим задржати приватност
+  user_type:
+    student: студент
+    teacher: Учитељ
+  footer:
+    copyright: Ауторска права
+    more: Више
+    feedback: Обезбедити податке о резултатима
+    translate: Помози нам превести на твој језик
+    support: Помоћ и заједница
+    tos_short: Услови
+    tos: Услови коришћења
+    privacy: Политика приватности
+    secure: Сигурна верзија
+    report_abuse: Пријави злоупотребу
+    built_on_code_studio: Израђено на Code Studio-ју
+    make_my_own_app: Направи своју личну апликацију
+    how_it_works: Како функционише
+    try_hour_of_code: Испробај сат програмирања!
+  reference_area:
+    title: Требаш помоћ?
+    subtitle: Погледај ове снимке и савете
+    teacher: Погледај решење
+    auth_error: Ниси овлашћен/а да видиш решење.
+  video:
+    tab: Видео.
+    notes: Нема видеа? Покажи белешке.
+    autoplay_option: Аутоматски покрени видео
+    download: Преузмите видео
+  compatibility:
+    upgrade:
+      link: Сазнајте више
+  slow_loading: Ово траје дуже него што је уобичајено ...
+  try_reloading: Покушајте са поновним покретањем странице
+  next_stage: Завршено! Наставите на следећу фазу
+  download_pdf: Отворен План Лекције
+  builder:
+    level:
+      create: Направи нов ниво
+      current: Тренутни Нивои
+      unused: Неупотребљени Нивои
+  upsell:
+    20-hour:
+      body: Овај 20-часовни  курс представља срж компјутерских наука и програмерских
+        основа. Курс је дизајниран за употребу у учионицама за разреде К-8, али је
+        забавно учити у било којем животном периоду.
+    hoc2014:
+      try_frozen: Уметник са Аном и Елзом из Залеђеног краљевства
+    gallery:
+      title: Галерија
+    frozen:
+      title: Залеђено краљевство
+    infinity:
+      body: Креирај приче и игре са Дизнијевим ликовима у Играоници.
+    minecraft:
+      body: Истражите Мајнкрафт свет кроз кôд
+    minecraft2016:
+      body: Програмирај животиње и друга Minecraft створења у својој верзији Minecraft-а.
+    unplugged_conditionals:
+      title: Кондиционали
+  gallery:
+    header: Галерија
+    report_abuse: Пријави злоупотребу
+  multi-submittable:
+    wrong_title: Хвала
+    correct_title: Хвала
+  level_group:
+    wrong_title: Хвала
+    correct_title: Хвала
+  level_group-submittable:
+    wrong_title: Хвала
+    correct_title: Хвала
+  dialog:
+    ok: У реду
+    startover_title: Da li ste sigurni da želite da počnete ponovo?
+    startover_ok: Počni ponovo
+    startover_cancel: Откажи
+  terms_interstitial:
+    tos: Услови коришћења
+    privacy: Политика приватности
+    print: Одштампај
+  school_info_interstitial:
+    save: Сачувај
+  race_interstitial:
+    races:
+      other: Други
+    submit: Пошаљи
+  project:
+    save: Сачувај
+    delete: Обриши
+    share: Подели
+    more: Више
+    name: Име
+    really_delete: Желите ли да избришете?
+    delete_yes: Да
+    delete_no: не
+    saved: Сачувано у галерији!
+    cancel: Откажи
+    abuse:
+      report_abuse_form:
+        abuse_type:
+          other: Други
+  flex_category:
+    required: Преглед
+  pd:
+    form_labels:
+      email: Електронска пошта
+    form_entries:
+      gender:
+        male: Мушко
+        female: Женско
+        none: Желим задржати приватност
+      subjects:
+        cs: Информатика
+        math: Математика
+        science: Наука
+        la: Уметност језика
+      email_opt_in:
+        opt_in_yes: Да
+        opt_in_no: не
+  cookie_banner:
+    accept: Слажем се
+  gdpr_dialog:
+    true: Да

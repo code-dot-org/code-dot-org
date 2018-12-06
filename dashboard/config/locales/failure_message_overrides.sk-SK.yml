@@ -1,0 +1,89 @@
+---
+sk:
+  data:
+    failure_message_overrides:
+      Code Studio Puzzle Challenge 1 - Artist_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 10 - Bee_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 10b - Bee_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 11 - Artist_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 12 - Artist_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 13 - Artist_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 14 - Artist_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 2 - Artist_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 3 - Artist_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 4 - Artist_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 5 - Bee_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 6 - Bee_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 7 - Bee_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 8 - Bee_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 9 - Bee_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge Var - Artist_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Course 4 Artist Vars 10_failure_message_override: Ustite sa, že používate premennú
+        na strany!
+      Course 4 Playlab For Loops 4b_failure_message_override: Pamätaj si, že by sa
+        obe postavy mali dostať na ich vlajky s rovnakým počtom hlasov!
+      Course 4 Playlab For Loops 5b_failure_message_override: Pamätaj si, že sa obe
+        postavy musia zastaviť na rovnako mieste.
+      Eval Strings Images .2_failure_message_override: Uistite sa, že ste pripojili
+        reťazec "Svet", aby kód vytvoril "Ahoj, Svet"
+      Kiki_StarWars_Test_5_failure_message_override: Koniec hry!
+      Kiki_StarWars_Test_5_Example_failure_message_override: Koniec hry!
+      MC HOC 2016 Level 2-2_failure_message_override: Použite príkazy "dopredu" a
+        "otočiť sa" pre pohyb sliepočky.
+      MC HOC 2016 Level 3_failure_message_override: Použite blok "vykonať dookola"
+        a príkazy "dopredu" a "otočiť sa" pre neustále putovanie sliepočky.
+      MC HOC 2016 Level 4_failure_message_override: Ak sa všetky sliepočky pohybujú
+        rovnakým smerom, použite "otočiť sa náhodným smerom", aby sa sliepočky náhodne
+        otáčali doprava alebo doľava.
+      MC HOC 2016 Level 5_failure_message_override: Skúste použiť "vykonať dookola"
+        s "Spraviť krok smerom k hráčovi".
+      MC HOC 2016 Level 6_failure_message_override: Skúste použiť príkaz "vytvoriť
+        zombie" pod "ak je noc" pre vytvorenie aspoň troch zombákov. Potom pridajte
+        slučku "Spraviť krok smerom k hráčovi" k akcií "po vyvorení", aby Vás mohli
+        naháňať. Ak idú príliš rýchlo, pridajte príkaz "počkať" pre ich spomalenie.
+      MC HOC 2016 Level 8_failure_message_override: Musíte použiť explodujúce Strašidlo
+        pre detonáciu steny, aby ste sa mohli dostať k Vašim ovečkám.
+      MC HOC 2016 New Drop_failure_message_override: Použite klávesy so šípkami pre
+        prechod k ovečkám a stlačte medzerník alebo kliknite na hraciu plochu pre
+        použitie ovečky. A nezabudnite pridať blok "Spustiť" do Vášho kódu.
+      MC HOC 2016 New Spawn_failure_message_override: Umiestnite "vytvoriť ovečku"
+        pod "po spustení".
+      MC HOC 2016 New Walk_failure_message_override: Pre otvorenie dverí stlačte medzerník
+        alebo sa dotknite hracej plochy, keď ste k nej otočený. Vojdite dovnútra pre
+        pokračovanie.
+      MC HOC 2016 SCORE LEVEL_failure_message_override: Ak máte problem s označením
+        5 Golemov, skúste zmeniť skóre za značku na 2.
+      MC HOC 2016 Village Test_failure_message_override: Musíte donútiť Golema naháňať
+        a zaútočiť na zombíkov pre výhru.
+      Valentine_playlab_01_failure_message_override: Skoro! Skús ešte raz.
+      WhileAdventure_failure_message_override: Gratulujem!  Zhromaždil si X mincí!
+      courseC19_playLab_EOC3_failure_message_override: Musíte pridať dvoch alebo viacerých
+        hercov do Vašej hry a naprogramovať ich na pohyb.
+      courseE_playLab_scaffold3_failure_message_override: Musíte pridať dvoch alebo
+        viacerých hercov do Vašej hry a naprogramovať ich na pohyb.
+      courseE_playLab_scaffold3_2018_failure_message_override: Musíte pridať dvoch
+        alebo viacerých hercov do Vašej hry a naprogramovať ich na pohyb.
+      grade4_scaffolded_project3_failure_message_override: Musíte pridať dvoch alebo
+        viacerých hercov, ktorí sa pohybujú, do Vašej hry.
+      kikiTesta_failure_message_override: Gratulujem!  Zhromaždil si X mincí!
+      sample1_failure_message_override: Gratulujem!  Zhromaždil si X mincí!
+      sample4_failure_message_override: Gratulujem!  Zhromaždil si X mincí!
+      sample6_failure_message_override: Nie tak celkom. Skúste znova! [Presunúť sa
+        do Hernej zóny]
+      sample8_failure_message_override: Gratulujem!  Zhromaždil si X mincí!

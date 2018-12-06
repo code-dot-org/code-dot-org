@@ -1,0 +1,86 @@
+az:
+  data:
+    callouts:
+      CSD U3 Variables Predict Where X_callout:
+        CSD_U3_variables: Nömreni buradan dəyiş
+      CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: Nömreni buradan dəyiş
+      CSD U3 debug_callout:
+        CSD_U3_rect_c1: Kod burdadır
+        CSD_U3_rect_c2: Bu bloku kod sahəsinin daxilinə sürü.
+      CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: Kod burdadır
+        CSD_U3_rect_c2: Bu bloku kod sahəsinin daxilinə sürü.
+      CSD U3 ellipse_callout:
+        CSD_U3_rect_c1: Kod burdadır
+        CSD_U3_rect_c2: Bu bloku kod sahəsinin daxilinə sürü.
+      CSD U3 ellipse_2018_callout:
+        CSD_U3_rect_c1: Kod burdadır
+        CSD_U3_rect_c2: Bu bloku kod sahəsinin daxilinə sürü.
+      CSD U3 fill_callout:
+        CSD_U3_rect_c1: Kod burdadır
+        CSD_U3_rect_c2: Bu bloku kod sahəsinin daxilinə sürü.
+      CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Kod burdadır
+        CSD_U3_rect_c2: Bu bloku kod sahəsinin daxilinə sürü.
+      CSD U3 my-rect_callout:
+        CSD_U3_rect_c1: Kod burdadır
+        CSD_U3_rect_c2: Qaçış düyməsi budur.
+      CSD U3 rect_callout:
+        CSD_U3_rect_c1: Kod burdadır
+        CSD_U3_rect_c2: Qaçış düyməsi budur.
+      CSD U3 rect_2018_callout:
+        CSD_U3_rect_c1: Kod burdadır
+      CSD U3 sequence_callout:
+        CSD_U3_rect_c1: Kod burdadır
+        CSD_U3_rect_c2: Bu bloku kod sahəsinin daxilinə sürü.
+      CSD U3 sequence_2018_callout:
+        CSD_U3_rect_c1: Kod burdadır
+        CSD_U3_rect_c2: Bu bloku kod sahəsinin daxilinə sürü.
+      Counting_callout:
+        New Play Lab Project_callout2: Öz proqramını yadda saxlamaq və işlətmek üçün Qaç düyməsinə vur
+        sign_in_to_save_project: Öz layihəni sonra daxil etmək istəyirsən bu layihəni yadda saxlamaq üçün hesabına daxil ol!
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: Proqramınızı sınaqdan keçirmək üçün "İcra et"i basın
+      MC HOC 2016 New Walk_callout:
+        MC_HOC_2016_New_Walk_callout2: Hərəkətə başlamaq üçün Qaç düyməsinə vur.
+      Mike Playlab Project_callout:
+        New Play Lab Project_callout2: Öz proqramını yadda saxlamaq və işlətmek üçün Qaç düyməsinə vur
+        sign_in_to_save_project: Öz layihəni sonra daxil etmək istəyirsən bu layihəni yadda saxlamaq üçün hesabına daxil ol!
+      New Artist Project_callout:
+        New Artist Project_callout2: Öz proqramını yadda saxlamaq və işlətmek üçün Qaç düyməsinə vur
+        sign_in_to_save_project: Öz layihəni sonra daxil etmək istəyirsən bu layihəni yadda saxlamaq üçün hesabına daxil ol!
+      New Play Lab Project_callout:
+        New Play Lab Project_callout2: Öz proqramını yadda saxlamaq və işlətmek üçün Qaç düyməsinə vur
+        sign_in_to_save_project: Öz layihəni sonra daxil etmək istəyirsən bu layihəni yadda saxlamaq üçün hesabına daxil ol!
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: Proqramınızı sınaqdan keçirmək üçün "İcra et"i basın
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: Proqramınızı sınaqdan keçirmək üçün "İcra et"i basın
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Proqramınızı sınaqdan keçirmək üçün "İcra et"i basın
+      Rock Paper Scissors_callout:
+        New Play Lab Project_callout2: Öz proqramını yadda saxlamaq və işlətmek üçün Qaç düyməsinə vur
+        sign_in_to_save_project: Öz layihəni sonra daxil etmək istəyirsən bu layihəni yadda saxlamaq üçün hesabına daxil ol!
+      Test Play Lab Project With Walls_callout:
+        New Play Lab Project_callout2: Öz proqramını yadda saxlamaq və işlətmek üçün Qaç düyməsinə vur
+        sign_in_to_save_project: Öz layihəni sonra daxil etmək istəyirsən bu layihəni yadda saxlamaq üçün hesabına daxil ol!
+      WebLab PS test - 1-12_callout:
+        version_history_button: Versiyanın tarixini yoxla
+      courseF_playLab_func2_callout:
+        New Play Lab Project_callout2: Öz proqramını yadda saxlamaq və işlətmek üçün Qaç düyməsinə vur
+        sign_in_to_save_project: Öz layihəni sonra daxil etmək istəyirsən bu layihəni yadda saxlamaq üçün hesabına daxil ol!
+      frozen line_callout:
+        move_elsa_forward: Elzanı irəli aparmaq üçün "irəli get" blokunu sürükləyib şıqqıltı ilə "icra etdikdə" blokunun aşağısına yapışdırın
+      frozen line_b_callout:
+        move_elsa_forward: Elzanı irəli aparmaq üçün "irəli get" blokunu sürükləyib şıqqıltı ilə "icra etdikdə" blokunun aşağısına yapışdırın
+      frozen line_test_callout:
+        move_elsa_forward: Elzanı irəli aparmaq üçün "irəli get" blokunu sürükləyib şıqqıltı ilə "icra etdikdə" blokunun aşağısına yapışdırın
+      grade4_playLab_proj_example1_callout:
+        New Play Lab Project_callout2: Öz proqramını yadda saxlamaq və işlətmek üçün Qaç düyməsinə vur
+      grade4_playLab_proj_example2_callout:
+        New Play Lab Project_callout2: Öz proqramını yadda saxlamaq və işlətmek üçün Qaç düyməsinə vur
+        sign_in_to_save_project: Öz layihəni sonra daxil etmək istəyirsən bu layihəni yadda saxlamaq üçün hesabına daxil ol!
+      small_actors_playlab_projects_callout:
+        New Play Lab Project_callout2: Öz proqramını yadda saxlamaq və işlətmek üçün Qaç düyməsinə vur
+        sign_in_to_save_project: Öz layihəni sonra daxil etmək istəyirsən bu layihəni yadda saxlamaq üçün hesabına daxil ol!

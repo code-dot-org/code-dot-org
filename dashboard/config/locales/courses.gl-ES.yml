@@ -1,0 +1,12 @@
+---
+gl:
+  data:
+    course:
+      name:
+        allthethingscourse:
+          title: allthethingscourse
+          description_short: Este é un curso para allthethings
+          description_student: Este é un curso para allthethings e ten unha descrición
+            máis longa para o alumnado
+          description_teacher: Este é un curso para allthethings e ten unha descrición
+            máis longa para o profesorado

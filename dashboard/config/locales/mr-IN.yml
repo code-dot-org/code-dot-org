@@ -1,0 +1,16 @@
+---
+mr:
+  or: किंवा
+  signup_form:
+    user_type_student: विध्यार्थी
+  nav:
+    user:
+      create: बनवा
+  teacher:
+    panel:
+      student: विध्यार्थी
+  user_type:
+    student: विध्यार्थी
+  project:
+    share: वाटा
+    name: नाव

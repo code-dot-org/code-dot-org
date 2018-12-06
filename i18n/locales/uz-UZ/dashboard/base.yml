@@ -1,0 +1,179 @@
+uz:
+  errors:
+    messages:
+      not_saved: 'Iltimos, quyidagi xatolarni to‘g‘rilang:'
+  activerecord:
+    errors:
+      messages:
+        blank: "talab etiladi"
+    attributes:
+      user:
+        name: 'Ismni ko`rsatish'
+        email: 'Elektron pochta'
+        username: 'Foydalanuvchi nomi'
+        password: 'Kalit so`z'
+        password_confirmation: 'Kalitni so`zni tasdiqlash'
+        current_password: 'Joriy kalit so`z'
+        locale: 'Til'
+        age: 'Yoshi'
+        gender: 'Jinsi'
+        edit_header: 'Foydalanuvchi ma''lumotlarini tahrir qilish'
+        error:
+          future: yaqin orada bo`la olmaydi
+  hello: "Salom Dunyo"
+  welcome_back: "Qayta tashrifingiz bilan, %{name}"
+  submit: Taqdim qilmoq
+  cancel: "Bekor qilish"
+  or: "yoki"
+  add_teacher_form:
+    code:
+      label: 'O`qituvchi qo`shing:'
+      placeholder: "Bo`lim kodi"
+    submit: 'O`qituchi qo`shish'
+  add_hint_form:
+    placeholder: 'Iltimos, ko`makchi so`zni shu yerga kiriting'
+    submit: 'Ko`makchi so`z qo`shing'
+  appname: "Code.org"
+  stage: "Pog`ona"
+  stage_number: "Pog`ona %{number}"
+  puzzle: "Jumboq"
+  trophies: "Mukofotlar"
+  courses: 'Kurslar'
+  of: "ni"
+  more: "Ko`p"
+  less: "Oz"
+  beta: "beta"
+  already_started: "Allaqachon boshlaganmisiz? Bu yerda davom eting >> "
+  demos: "Admin: Barcha demonstratsiyalar"
+  continue: 'Davom etish'
+  prize: 'sovg''a'
+  more_info: 'Batafsil'
+  auth:
+    sign_in_with: '%{provider} orqali kirish'
+    signed_in: 'Kirgansiz!'
+    signed_out: 'Siz <a href="%{url}">saytidan</a> chiqdingiz.'
+    sign_out_of: 'Siz saytga kirish uchun %{provider} dan foydalandingiz. %{provider} dan chiqish uchun <a href="%{url}">bu yerni</a> bosing.'
+    twitter: 'Twitter'
+    facebook: 'Facebook'
+    windowslive: 'Microsoft akkaunti'
+    microsoft_v2_auth: 'Microsoft akkaunti'
+    forgot_password: 'Parolni unutdingizmi?'
+    need_confirmation: "Tasdiqlash haqidagi ko'rsatmalarni olmadingizmi?"
+  signup_form:
+    age: 'Yoshi'
+    user_type_teacher: "O'qituvchi"
+    user_type_student: "O‘quvchi"
+    field_is_required: "talab etiladi"
+  school_info:
+    other: 'Boshqa'
+  signin_form:
+    login: 'Elektron pochta'
+    password: 'Kalit so`z'
+  password:
+    reset_form:
+      title: 'Parolni unutdingizmi?'
+      submit: 'Taqdim qilmoq'
+  section:
+    type:
+      word: 'Sirli so''z'
+      email: 'Elektron pochta'
+  crud:
+    submit: 'Taqdim qilmoq'
+    confirm: 'Aminmisiz?'
+  nav:
+    header:
+      educate_hoc: "Dasturlash soati"
+    user:
+      classroom: 'O‘qituvchining bosh sahifasi'
+      create: 'Yaratmoq'
+      applab: 'Ilova labaratoriyasi'
+  teacher:
+    panel:
+      student: 'O‘quvchi'
+  home:
+    trynow: 'Hoziroq sinang'
+    announcement_learn_more_button: "Ko‘proq bilish"
+    announcement_try_now_button: "Hoziroq sinang"
+  gender:
+    none: 'Javob bermaslikni ma’qul ko‘raman'
+  user_type:
+    student: 'O‘quvchi'
+    teacher: 'O''qituvchi'
+  footer:
+    help_from_html: 'Biz, ayniqsa, ushbu materiallarni yaratishga yordam bergan Google, Microsoft, Facebook, Twitter muhandislari va boshqalarga minnatdorchilik bildirmoqchimiz.'
+    help_from_html_old: 'Ushbu materiallarn yaratishgai Google, Microsoft, Facebook va Twitter muhandislari yordam berishgan.'
+    more: 'Yana'
+    tos_short: 'Shartlar'
+    tos: 'Xizmat shartlari'
+    report_abuse: 'Nosozlik haqida xabar berish'
+  reference_area:
+    title: 'Yordam kerakmi?'
+  compatibility:
+    upgrade:
+      link: "Ko‘proq bilish"
+  next_stage: 'Tamom! Keyingi bosqichga o‘tish'
+  download_pdf: 'Dars rejasini ochish'
+  lesson_plan: 'Dars rejasi'
+  view_lesson_plan: 'Dars rejasini ko‘rish'
+  upsell:
+    applab:
+      title: 'Ilova labaratoriyasi'
+    unplugged_conditionals:
+      title: "Shart buyruqlari"
+  gallery:
+    report_abuse: "Nosozlik haqida xabar berish"
+  multi:
+    wrong_title: "Noto‘g‘ri javob"
+    wrong_body: "Siz bergan javob noto‘g‘ri. Qaytadan urinib ko‘ring!"
+    correct_title: "To‘g‘ri"
+    correct_body: "Bu to‘g‘ri javob."
+  match:
+    correct_title: "To‘g‘ri"
+    correct_body: "Bu to‘g‘ri javob."
+  contract_match:
+    wrong_title: "Noto‘g‘ri javob"
+  text_match:
+    placeholder: "Javobingizni bu yerga yozing"
+    open_response_title: "Rahmat"
+    open_response_body: "Javobingiz uchun tashakkur!"
+    correct_title: "To‘g‘ri"
+    correct_body: "Bu to‘g‘ri javob."
+  dialog:
+    ok: "Davom etish"
+    startover_title: "Rostan boshidan boshlamoqchimisiz?"
+    startover_ok: "Boshidan boshlamoq"
+    startover_cancel: "Bekor qilish"
+  time:
+    hour: '1 soat'
+    day: 'kun'
+    week: 'hafta'
+  terms_interstitial:
+    tos: "Xizmat shartlari"
+  school_info_interstitial:
+    save: "Saqlash"
+  race_interstitial:
+    races:
+      other: "Boshqa"
+    submit: "Taqdim qilmoq"
+  project:
+    save: "Saqlash"
+    delete: "O'chirish"
+    more: "Yana"
+    name: "Ismi"
+    really_delete: 'O''chirasizmi?'
+    cancel: 'Bekor qilish'
+    abuse:
+      report_abuse_form:
+        abuse_type:
+          other: 'Boshqa'
+  pd:
+    form_labels:
+      email: 'Elektron pochta'
+    form_entries:
+      gender:
+        none: 'Javob bermaslikni ma’qul ko‘raman'
+      subjects:
+        cs: 'Informatika'
+        math: 'Matematik'
+  cookie_banner:
+    accept: 'Roziman'

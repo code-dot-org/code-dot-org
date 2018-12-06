@@ -1,0 +1,272 @@
+---
+eu:
+  data:
+    authored_hints:
+      2-3 Artist 1 new_authored_hint:
+        2-3_Artist_1_new_a: Blokea erabiltzen baduzun ni `aurrera 100 pixel` eginarazteko,
+          lerro bat marraztuko dut automatikoki.
+        2-3_Artist_1_new_b: Arazoak bihurgunea hartzean? Erabili `eskuinera biratu
+          90 gradu` blokea.
+      2-3 Artist 11_authored_hint:
+        2-3_Artist_11_a: 'Angeluekin arazoak dituzu? 360 gradu 8 biratan ibili behar
+          dituzu. Zer da 360/8? '
+      2-3 Artist 12_authored_hint:
+        2-3_Artist_12_a: Badira 360 gradu zirkulo batean, beraz, artista 1 gradu aldi
+          bakoitzean biratzen bada begizta bidez, 360 aldiz egin beharko zuen.
+      2-3 Artist 2 new_authored_hint:
+        2-3_Artist_2_new_a: Artista ez dirudi norabide zuzena seinalatzen ari denik.
+          Lehen birarazi ahal duzu lerroa marraztu aurretik?
+      2-3 Artist 3new_authored_hint:
+        2-3_Artist_3new_a: Zenbat da 100-70? Istorioren probleman oinarrituta, hori
+          da kapelak zenbat luze behar du izan!
+        2-3_Artist_3new_b: Artista ez dirudi norabide zuzena seinalatzen ari denik.
+          Lehen birarazi ahal duzu lerroa marraztu aurretik?
+      2-3 Artist 4_authored_hint:
+        2-3_Artist_4_a: Etxea amaitzeko, egin behar dugun guztia da karratu bat marraztea!
+      2-3 Artist 6_authored_hint:
+        2-3_Artist_6_a: 'Angelu txiki horiek egiteko, aldi bakoitzean *hurrunago*
+          joan beharko duzu karratuarekin egin zenuen bezala.   '
+        2-3_Artist_6_b: Dagoeneko eskuin aldera begira ari naizenez, errazena da aurrera
+          hastea, eta gero ezker aldera bira egitea triangelua sortzeko.
+        2-3_Artist_6_c: Triangeluaren alde bakoitzaren luzera karratuaren aldeen luzera
+          berekoa da... 100 pixel!
+      2-3 Artist 7_authored_hint:
+        2-3_Artist_7_a: Puzzle hau konpontzeko modurik errazena da lehen karratua
+          marraztea, eta artista behera seinalatuz bukatzea zure bigarren karratua
+          hasi aurretik.
+      2-3 Artist 8_authored_hint:
+        2-3_Artist_8_a: 200 erditik ebakitzen baduzu, zenbat pixel zabal behar du
+          izan karratu bakoitza?
+      2-3 Artist 9 REPLACEMENT_authored_hint:
+        step_size: Pausu bakoitza 100 pixel zabal eta 100 pixel altuerakoa da.
+      courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2a_2018_authored_hint:
+        '1': Snap both `East` blocks to the bottom of the `when run` block.
+      courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5a_2018_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have
+          been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
+          try something else!
+      courseB_Scrat_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseC_artist_prog2_authored_hint:
+        courseC_artist_prog2_a: Blokea erabiltzen baduzun ni `aurrera 100 pixel` eginarazteko,
+          lerro bat marraztuko dut automatikoki.
+        courseC_artist_prog2_b: Arazoak bihurgunea hartzean? Erabili `eskuinera biratu
+          90 gradu` blokea.
+      courseC_artist_prog2_2018_authored_hint:
+        courseC_artist_prog2_a: Blokea erabiltzen baduzun ni `aurrera 100 pixel` eginarazteko,
+          lerro bat marraztuko dut automatikoki.
+        courseC_artist_prog2_b: Arazoak bihurgunea hartzean? Erabili `eskuinera biratu
+          90 gradu` blokea.
+      courseC_artist_prog2_2019_authored_hint:
+        courseC_artist_prog2_a: Blokea erabiltzen baduzun ni `aurrera 100 pixel` eginarazteko,
+          lerro bat marraztuko dut automatikoki.
+        courseC_artist_prog2_b: Arazoak bihurgunea hartzean? Erabili `eskuinera biratu
+          90 gradu` blokea.
+      courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      grade2_MakeDogTag_1_authored_hint:
+        2-3_Artist_1_new_a: Blokea erabiltzen baduzun ni `aurrera 100 pixel` eginarazteko,
+          lerro bat marraztuko dut automatikoki.
+        2-3_Artist_1_new_b: Arazoak bihurgunea hartzean? Erabili `eskuinera biratu
+          90 gradu` blokea.
+      grade4_review_artist1_authored_hint:
+        2-3_Artist_1_new_a: Blokea erabiltzen baduzun ni `aurrera 100 pixel` eginarazteko,
+          lerro bat marraztuko dut automatikoki.
+        2-3_Artist_1_new_b: Arazoak bihurgunea hartzean? Erabili `eskuinera biratu
+          90 gradu` blokea.
+      grade4_review_artist2_authored_hint:
+        2-3_Artist_6_a: 'Angelu txiki horiek egiteko, aldi bakoitzean *hurrunago*
+          joan beharko duzu karratuarekin egin zenuen bezala.   '
+        2-3_Artist_6_b: Dagoeneko eskuin aldera begira ari naizenez, errazena da aurrera
+          hastea, eta gero ezker aldera bira egitea triangelua sortzeko.
+        2-3_Artist_6_c: Triangeluaren alde bakoitzaren luzera karratuaren aldeen luzera
+          berekoa da... 100 pixel!
