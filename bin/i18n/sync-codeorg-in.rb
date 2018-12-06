@@ -8,15 +8,18 @@
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'fileutils'
 require 'json'
-require 'yaml'
+require 'set'
 require 'tempfile'
+require 'yaml'
 
 require_relative 'i18n_script_utils'
+require_relative '../../lib/cdo/script_constants'
 
 def sync_in
   localize_level_content
   localize_block_content
   run_bash_script "bin/i18n-codeorg/in.sh"
+  filter_script_content
   localize_pegasus_markdown_content
   # disable redaction of level content until the switch to remark is complete
   #redact_level_content
@@ -104,6 +107,30 @@ def redact_level_content
     source = "i18n/locales/source/dashboard/#{content_type}.yml"
     dest = "i18n/locales/redacted/dashboard/#{content_type}.yml"
     redact(source, dest, 'nonPedanticEmphasis')
+  end
+end
+
+def filter_script_content
+  levels_to_translate = Set.new
+  Dir.glob("dashboard/config/scripts/*.script").sort.each do |script_path|
+    script_name = File.basename(script_path, '.script')
+    next unless ScriptConstants.i18n?(script_name)
+
+    File.readlines(script_path).each do |line|
+      if match = /^(?:level|assessment|bonus|named_level) '([^']*)'$/.match(line.strip)
+        levels_to_translate.add(match.captures.first)
+      end
+    end
+  end
+
+  data = YAML.load_file("i18n/locales/source/dashboard/dsls.yml")
+  data['en']['data'].values.each do |category|
+    category.select! do |key, _value|
+      levels_to_translate.include? key
+    end
+  end
+  File.open("i18n/locales/source/dashboard/dsls.yml", "w+") do |f|
+    f.write(to_crowdin_yaml(data))
   end
 end
 
