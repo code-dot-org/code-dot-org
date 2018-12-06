@@ -85,23 +85,24 @@ class ChallengeDialog extends React.Component {
     title: PropTypes.string,
   };
 
-  getInitialState() {
-    return {
+  constructor(props) {
+    super(props);
+    this.state = {
       isOpen: this.props.isOpen === undefined || this.props.isOpen,
       confettiActive: false,
       confettiOnTop: false,
     };
   }
 
-  handlePrimary() {
+  handlePrimary = () => {
     this.props.handlePrimary && this.props.handlePrimary();
     this.setState({ isOpen: false });
-  }
+  };
 
-  handleCancel() {
+  handleCancel = () => {
     this.props.handleCancel && this.props.handleCancel();
     this.setState({ isOpen: false });
-  }
+  };
 
   componentDidMount() {
     if (this.props.complete && !this.props.isIntro) {
