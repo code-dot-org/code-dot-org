@@ -50,10 +50,6 @@ def copy_to_json(label, data)
   File.open("dashboard/config/locales/#{label}.en.json", "w+") do |f|
     f.write(JSON.pretty_generate({"en" => {"data" => {label => data}}}))
   end
-
-  File.open("i18n/locales/source/dashboard/#{label}.json", "w+") do |f|
-    f.write(JSON.pretty_generate(data))
-  end
 end
 
 # sanitize a string before uploading to crowdin. Currently only performs
