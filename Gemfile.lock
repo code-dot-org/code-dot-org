@@ -56,6 +56,14 @@ GIT
       activemodel (>= 4.0)
 
 GIT
+  remote: https://github.com/svenfuchs/i18n.git
+  revision: 40bca10382b555afcd378cbe7cb02d7f5f977864
+  ref: 40bca10
+  specs:
+    i18n (1.1.1)
+      concurrent-ruby (~> 1.0)
+
+GIT
   remote: https://github.com/wjordan/gctools.git
   revision: 729c6bbb32c4bcc2ebfed16543991e4d126f09cc
   ref: ruby-2.5
@@ -85,14 +93,6 @@ GIT
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
-
-GIT
-  remote: https://github.com/wjordan/i18n.git
-  revision: f366d62ad73bd0fee939ed9aa38ab88c9f94a8df
-  branch: cdo
-  specs:
-    i18n (1.0.1)
-      concurrent-ruby (~> 1.0)
 
 GIT
   remote: https://github.com/wjordan/image_optim.git

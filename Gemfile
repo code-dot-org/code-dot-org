@@ -13,11 +13,18 @@ end
 gem 'rails', '~> 5.0.1'
 gem 'rails-controller-testing'
 
+# Depend on a specific ref to make sure we capture these required features:
+#
 # Add CacheFile backend module.
 # Ref: https://github.com/svenfuchs/i18n/pull/423
 # Support numeric keys in Simple backend.
 # Ref: https://github.com/svenfuchs/i18n/pull/422
-gem 'i18n', github: 'wjordan/i18n', branch: 'cdo'
+# Add JSON backend support
+# Ref: https://github.com/svenfuchs/i18n/pull/429
+#
+# This can be updated to a regular versioned dependency as soon as a version
+# including these features is released
+gem 'i18n', github: 'svenfuchs/i18n', ref: '40bca10'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
 # Ref: https://github.com/rails/sprockets/pull/470
