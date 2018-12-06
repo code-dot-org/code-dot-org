@@ -64,16 +64,16 @@
             %button.primary= I18n.t(:minecraft_agent_button)
 
 .clear
-%h2.mc-header2.responsive-padding{style: "margin-top: 10px"}
+%h2.mc-header2.responsive-padding
   =I18n.t(:minecraft_no_internet)
   %a{href: CDO.studio_url("/download/mc")}= I18n.t(:minecraft_download_adventurer)
 
-%div{style: "font-size: 24px; text-align: center; margin-top: 60px"}
+.microsoft-partnership
   = hoc_s(:hoc2018_minecraft_with_microsoft)
   &nbsp;
   %img{src: "images/fit-240/avatars/microsoft.jpg"}
 
-%div{style: "font-size: 14px; text-align: center; padding-top: 20px; margin-bottom: 85px; margin-left: 18%; margin-right: 18%;"}
+.microsoft-thanks
   = hoc_s(:hoc2018_minecraft_thank_microsoft)
 
 %div{style: "clear: both; margin-top: 45px;"}
