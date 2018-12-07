@@ -52,7 +52,6 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
                   [TextFields.otherWithText] : "other"
                 })}
 
-                {this.checkBoxesFor("completedPd")}
               </div>
             }
           </div>

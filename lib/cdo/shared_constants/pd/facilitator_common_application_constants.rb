@@ -33,15 +33,10 @@ module Pd
       },
 
       section_2_choose_your_program: {
-        program: clean_multiline(
-          'We offer our Facilitator Development Program for three Code.org courses.
-         For more details about the requirements to facilitate each program, please visit the
-         [2019-20 Facilitator Development Program Description](https://code.org/files/facilitator/overview-2019-20.pdf).
-         Please choose one course for which you would like to become a facilitator this year.'
-        ),
-        code_org_facilitator: 'Are you currently or (have you been) a Code.org facilitator?',
-        code_org_facilitator_years: 'In which years did you work as a Code.org facilitator (mark all that apply)?',
-        code_org_facilitator_programs: "Please check the Code.org programs you currently facilitate, or have facilitated in the past (mark all that apply):",
+        program: 'Please choose the course for which you would like to become a facilitator.',
+        code_org_facilitator: 'Are you currently (or have you been) a Code.org facilitator?',
+        code_org_facilitator_years: 'In which years did you work as a Code.org facilitator? Mark all that apply.',
+        code_org_facilitator_programs: "Please check the Code.org programs you currently facilitate, or have facilitated in the past. Mark all that apply.",
       },
 
       section_3_experience_and_commitments: {
@@ -59,7 +54,7 @@ module Pd
         currently_involved_in_cs_education: 'How are you currently involved in CS education? Mark all that apply.',
         grades_taught: 'If you do have classroom teaching experience, what grade levels have you taught? Mark all that apply.',
         experience_teaching_this_course: 'Do you have experience teaching the full {{CS Program}} curriculum to students? Mark all that apply.',
-        plan_on_teaching: 'Do you plan on teaching this course in the 2019-20 school year?',
+        plan_on_teaching: 'Do you plan on teaching {{CS Program}} in the 2019-20 school year?',
         completed_pd: "Have you participated as a teacher in Code.org's full Professional Learning Program for {{CS Program}}?",
         facilitator_availability: 'When do you anticipate being able to facilitate? Note that depending on the program, workshops may be hosted on Saturdays or Sundays. Mark all that apply.',
       },
