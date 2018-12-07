@@ -31,19 +31,23 @@ export default class Section4LeadingStudents extends LabeledFormComponent {
       <FormGroup>
         <h3>Section 4: {SectionHeaders.section4LeadingStudents}</h3>
         {this.checkBoxesWithAdditionalTextFieldsFor("currentlyInvolvedInCsEducation", {
-          [TextFields.otherWithText] : "other"
+          [TextFields.otherPleaseDescribe] : "other"
         })}
         {this.checkBoxesFor("gradesTaught")}
-        {this.radioButtonsWithAdditionalTextFieldsFor("planOnTeaching", {
-          [TextFields.otherWithText] : "other"
-        })}
         {this.checkBoxesFor("experienceTeachingThisCourse", {
           label: `Do you have experience teaching the full ${this.program()} curriculum to students? Mark all that apply.`
         })}
-        {this.checkBoxesFor("completedPd", {
-          label: `Have you participated as a teacher in Code.org’s full Professional Learning Program for ${this.program()}?`
+        {this.radioButtonsWithAdditionalTextFieldsFor("planOnTeaching", {
+          [TextFields.otherWithText] : "other"
+        }, {
+          label: `Do you plan on teaching ${this.program()} in the 2019-20 school year?`,
         })}
-        {this.checkBoxesFor("facilitatorAvailability")}
+        {this.checkBoxesFor("completedPd", {
+          label: `Have you participated as a teacher in Code.org's full Professional Learning Program for ${this.program()}?`
+        })}
+        {this.checkBoxesWithAdditionalTextFieldsFor("facilitatorAvailability", {
+          [TextFields.otherWithText] : "other"
+        })}
       </FormGroup>
     );
   }

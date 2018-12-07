@@ -33,7 +33,8 @@ export default class Section1AboutYou extends LabeledFormComponent {
         </p>
         <p>
           This application should take 30 - 45 minutes to complete and includes both multiple choice and
-          free response questions. Fields marked with a
+          free response questions. The application should be submitted during a single session. An
+          incomplete application will not be saved. Fields marked with a
           {' '}<span style={{color: "red"}}>*</span>{' '}
           are required. If you need more information about the program before you apply, please visit
           {' '}<a href={FACILITATOR_URL} target="_blank">{FACILITATOR_URL}</a>.{' '}

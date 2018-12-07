@@ -255,7 +255,8 @@ module Pd::Application
           'Saturdays during the school year',
           'Saturdays during the summer',
           'Sundays during the school year',
-          'Sundays during the summer'
+          'Sundays during the summer',
+          TEXT_FIELDS[:other_with_text]
         ],
 
         code_org_facilitator: [YES, NO],
@@ -265,16 +266,18 @@ module Pd::Application
           '2015-16 school year',
           '2016-17 school year',
           '2017-18 school year',
-          '2018-19 school year'
+          '2018-19 school year',
+          TEXT_FIELDS[:other_with_text]
         ],
 
         code_org_facilitator_programs: [
-          'CS Discoveries',
           'CS Fundamentals',
+          'CS Discoveries',
+          'CS Principles',
           'CS in Algebra',
           'CS in Science',
-          'CS Principles',
-          'Exploring Computer Science'
+          'Exploring Computer Science',
+          TEXT_FIELDS[:other_with_text]
         ],
 
         have_led_pd: [YES, NO],
@@ -324,6 +327,11 @@ module Pd::Application
         program
         plan_on_teaching
         ability_to_meet_requirements
+        facilitator_availability
+        completed_pd
+        currently_involved_in_cs_education
+        experience_teaching_this_course
+        grades_taught
 
         led_cs_extracurriculars
         teaching_experience
@@ -424,7 +432,7 @@ module Pd::Application
     def additional_text_fields
       [
         [:institution_type],
-        [:currently_involved_in_cs_education],
+        [:currently_involved_in_cs_education, TEXT_FIELDS[:other_please_describe]],
         [:completed_cs_courses_and_activities],
         [:how_heard, TEXT_FIELDS[:how_heard_facilitator], :how_heard_facilitator],
         [:how_heard, TEXT_FIELDS[:how_heard_code_org_staff], :how_heard_code_org_staff],
