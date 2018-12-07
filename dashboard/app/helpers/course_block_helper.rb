@@ -107,21 +107,20 @@ module CourseBlockHelper
         image_url: CDO.shared_image_url("courses/logo_tall_#{id}.gif")
       },
       Script::FLAPPY_NAME => {
-        url: script_reset_url(Script::FLAPPY_NAME),
+        url: script_reset_url(id),
         teacher_guide: CDO.code_org_url("/hourofcode/flappy")
       },
       Script::FROZEN_NAME => {
         url: script_reset_url(id),
-        title: I18n.t('upsell.frozen.title'),
         body: data_t_suffix('script.name', id, 'description_short'),
         teacher_guide: CDO.code_org_url("/hourofcode/frozen")
       },
       Script::HOC_ENCRYPTION_NAME => {
-        url: script_reset_url(Script::HOC_ENCRYPTION_NAME),
+        url: script_reset_url(id),
         teacher_guide: "https://curriculum.code.org/hoc/2016/2/"
       },
       Script::HOC_NAME => {
-        url: script_reset_url(Script::HOC_NAME),
+        url: script_reset_url(id),
         title: I18n.t("upsell.hoc.title"),
         body: I18n.t("upsell.hoc.body"),
         teacher_guide: CDO.code_org_url("/hourofcode/hourofcode")
@@ -168,7 +167,7 @@ module CourseBlockHelper
         teacher_guide: CDO.code_org_url("/hourofcode/starwars")
       },
       Script::TEXT_COMPRESSION_NAME => {
-        url: script_reset_url(Script::TEXT_COMPRESSION_NAME),
+        url: script_reset_url(id),
         teacher_guide: "https://curriculum.code.org/hoc/2016/1/"
       },
       Script::TWENTY_HOUR_NAME => {
