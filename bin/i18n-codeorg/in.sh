@@ -27,13 +27,13 @@ orig_dir=dashboard/config/locales
 loc_dir=i18n/locales/source/dashboard
 mkdir -p $loc_dir
 
-# Special case the un-prefixed Yaml file.
-cp_in $orig_dir/en.yml $loc_dir/base.yml
+# Special case the un-prefixed file.
+cp_in $orig_dir/en.json $loc_dir/base.json
 
-# Copy in all the other Yaml files.
-for file in $(find $orig_dir -name '*.en.yml'); do
+# Copy in all the other files.
+for file in $(find $orig_dir -name '*.en.json'); do
   relname=${file#$orig_dir}
-  cp_in $file $loc_dir${relname%.en.yml}.yml
+  cp_in $file $loc_dir${relname%.en.json}.json
 done
 
 ### Apps
