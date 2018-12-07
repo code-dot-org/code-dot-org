@@ -1,10 +1,22 @@
-# TODO: add module description
 module CourseBlockHelper
   class << self
     include Rails.application.routes.url_helpers
     include LocaleHelper
   end
 
+  #
+  # Given a Script ID or a string, returns an object that represents
+  # a tall course block (_course_tall_block.haml), if one exists.
+  #
+  # Example return value:
+  # {
+  #   url: "https://my.url",
+  #   title: "Tall Course Block",
+  #   body: "Click to find out more!",
+  #   teacher_guide: "https://my.teacher/guide",
+  #   image_url: "https://my.image"
+  # }
+  #
   def self.get_tall_course_block(id)
     block_data = {
       Script::HOC_NAME => {
