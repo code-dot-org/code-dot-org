@@ -18,11 +18,11 @@ const styles = {
 export default class NavigationBar extends React.Component {
   static propTypes = {
     links: PropTypes.array,
-    activeLink: PropTypes.string,
+    defaultActiveLink: PropTypes.string,
   };
 
   state = {
-    activeLink: this.props.activeLink,
+    activeLink: this.props.defaultActiveLink,
   };
 
   changeActiveLink = (linkId) => {
