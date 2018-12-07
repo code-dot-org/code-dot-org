@@ -33,7 +33,7 @@ export default storybook => {
         description: 'NavigationBar used on Teacher Dashboard',
         story: () => (
           <NavigationBar
-            activeLink = "manageStudents"
+            defaultActiveLink = "manageStudents"
             links = {links}
           />
         )
