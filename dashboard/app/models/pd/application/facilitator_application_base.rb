@@ -313,44 +313,30 @@ module Pd::Application
         city
         state
         zip_code
-        gender_identity
-        race
         institution_type
         current_employer
         job_title
-        resume_link
-        worked_in_cs_job
-        completed_cs_courses_and_activities
-        diversity_training
-        how_heard
 
         program
-        plan_on_teaching
-        ability_to_meet_requirements
-        facilitator_availability
-        completed_pd
-        currently_involved_in_cs_education
-        experience_teaching_this_course
-        grades_taught
-
-        led_cs_extracurriculars
-        teaching_experience
-
         code_org_facilitator
-        have_led_pd
 
-        who_should_have_opportunity
-        how_support_equity
-        expected_teacher_needs
-        describe_adapting_lesson_plan
-        describe_strategies
-        example_how_used_feedback
-        example_how_provided_feedback
-        hope_to_learn
+        currently_involved_in_cs_education
+        grades_taught
+        experience_teaching_this_course
+        plan_on_teaching
+        completed_pd
+        facilitator_availability
+
+        why_should_all_have_access
+        skills_areas_to_improve
+        inquiry_based_learning
+        why_interested
 
         available_during_week
         travel_distance
 
+        gender_identity
+        race
         agree
       )
     end

@@ -40,14 +40,6 @@ module Pd
       },
 
       section_3_experience_and_commitments: {
-        teaching_experience: 'Do you have experience as a classroom teacher?',
-        led_cs_extracurriculars: 'Have you led or organized extracurricular computer science learning experiences? Please mark all that apply.',
-        grades_taught: 'What grade levels have you taught __in the past?__ Check all that apply.',
-        grades_currently_teaching: 'What grade levels do you __currently__ teach? Check all that apply.',
-        subjects_taught: 'Which subjects do you currently or have you previously taught? Check all that apply.',
-        years_experience: 'How many years of experience do you have teaching computer science for K-12 students or adults?',
-        experience_leading: 'Which of the following do you have experience leading __as a teacher__ (mark all that apply)?',
-        completed_pd: 'Which of the following Code.org professional learning programs did you complete __as a teacher__ (mark all that apply)?'
       },
 
       section_4_leading_students: {
@@ -60,36 +52,37 @@ module Pd
       },
 
       section_5_your_approach_to_learning_and_leading: {
-        who_should_have_opportunity: 'Who should have the opportunity to learn computer science? Why? (750 characters max)',
-        how_support_equity: 'How do you support equity in your own classroom or role? (750 characters max)',
-
-        expected_teacher_needs: clean_multiline(
-          "Teachers in Code.org's Professional Learning Program join us with a wide range of experiences
-         (ex: from brand new teachers to teachers who have taught CS for 10+ years)
-         in computer science education. What are some of the unique needs you'd expect
-         to find in a cohort of these teachers? (750 characters max)"
-        ),
-        describe_adapting_lesson_plan: clean_multiline(
-          "Describe a time when you've had to adapt a lesson plan in the moment to meet the needs of your
-         students or participants. (750 characters max)"
+        why_should_all_have_access: clean_multiline(
+          "Code.org's Professional Learning Programs are open to all teachers, regardless of their
+          experience with CS education. Why do you think Code.org believes that all teachers should
+          have access to the opportunity to teach CS? (750 characters max)"
         ),
 
-        describe_strategies: clean_multiline(
-          'Have you used “lead learner” or “inquiry-based” strategies in your work with youth and/or adults?
-         If so, briefly describe how you have used these strategies. (750 characters max)'
+        skills_areas_to_improve: clean_multiline(
+          "Please describe a workshop you've led (or a lesson you've taught, if you haven't facilitated
+          a workshop). Include a brief description  of the workshop/lesson topic and audience (one or
+          two sentences). Then describe __two strengths you demonstrated__, as well as __two facilitation skills
+          you would like to improve__. (1,500 characters max)"
         ),
 
-        example_how_used_feedback: clean_multiline(
-          "Please provide a brief example of how you've used feedback __you've received from a colleague__
-         to improve your performance. (750 characters max)"
+        inquiry_based_learning: clean_multiline(
+          "Code.org Professional Learning experiences incorporate inquiry-based learning into the workshops.
+          Please briefly define inquiry-based learning as you understand it (one or two sentences). Then, if
+          you have led an inquiry-based activity for students, provide a concrete example of an inquiry-based
+          lesson or activity you led. If you have not led an inquiry-based lesson, please write 'N/A.' (1,500
+          characters max)"
         ),
 
-        example_how_provided_feedback: clean_multiline(
-          "Please provide a brief example of how __you've provided feedback to a colleague__
-         and how that person responded to your feedback. (750 characters max)"
+        why_interested: clean_multiline(
+          "Why do you want to become a Code.org facilitator? Please describe what you hope to learn and the
+          impact you hope to make. (750 characters max)"
         ),
 
-        hope_to_learn: 'What do you hope to learn from the facilitator development program? (750 characters max)'
+        anything_else: clean_multiline(
+          "Is there anything else you would like us to know? You can provide a link to your resume, LinkedIn
+          profile, website, or summarize your relevant past experience. (750 characters max)"
+        ),
+
       },
 
       section_6_logistics: {
