@@ -1,11 +1,13 @@
 import React, {PropTypes} from 'react';
 import Pointable from 'react-pointable';
 import {connect} from 'react-redux';
+import classNames from 'classnames';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
-import * as gameLabConstants from './constants';
+import { GAME_HEIGHT, GAME_WIDTH } from './constants';
 import CompletionButton from '../templates/CompletionButton';
+import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import VisualizationOverlay from '../templates/VisualizationOverlay';
 import CrosshairOverlay from '../templates/CrosshairOverlay';
@@ -20,10 +22,9 @@ import {
   isPickingLocation,
 } from './locationPickerModule';
 import { calculateOffsetCoordinates } from '../utils';
-import dom from '../dom';
 
-const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
-const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
+export const GAMELAB_DPAD_CONTAINER_ID = 'studio-dpad-container';
+
 const MODAL_Z_INDEX = 1050;
 
 const styles = {
@@ -132,15 +133,7 @@ class GameLabVisualizationColumn extends React.Component {
   }
 
   render() {
-    const { isResponsive, isShareView, mobileControlsConfig } = this.props;
-    const { dpadVisible, spaceButtonVisible, mobileOnly } = mobileControlsConfig;
-    const mobileControlsOk = (dom.isMobile() && isShareView) ? true : !mobileOnly;
-    const dpadStyle = {
-      display: (dpadVisible && mobileControlsOk) ? 'inline' : 'none',
-    };
-    const spaceButtonStyle = {
-      display: (spaceButtonVisible && mobileControlsOk) ? 'inline' : 'none',
-    };
+    const { isResponsive, isShareView } = this.props;
     const divGameLabStyle = {
       touchAction: 'none',
       width: GAME_WIDTH,
@@ -178,17 +171,13 @@ class GameLabVisualizationColumn extends React.Component {
 
           <CompletionButton />
 
-          {!spriteLab && !this.props.isShareView && this.renderGridCheckbox()}
+          {!spriteLab && isShareView && this.renderGridCheckbox()}
         </GameButtons>
         {!spriteLab && this.renderAppSpaceCoordinates()}
-        <div id="studio-dpad-container" className={isResponsive ? "responsive" : undefined}>
-          <div id="studio-dpad">
-            <div id="studio-dpad-rim" style={dpadStyle} />
-            <div id="studio-dpad-cone" style={dpadStyle} />
-            <button id="studio-dpad-button" style={dpadStyle} />
-            <button id="studio-space-button" style={spaceButtonStyle}/>
-          </div>
-        </div>
+        <ProtectedStatefulDiv
+          id={GAMELAB_DPAD_CONTAINER_ID}
+          className={classNames({responsive: isResponsive})}
+        />
         {this.props.awaitingContainedResponse && (
           <div style={styles.containedInstructions}>
             {i18n.predictionInstructions()}

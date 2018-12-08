@@ -544,6 +544,10 @@ GameLab.prototype.afterInject_ = function (config) {
     notifyKeyCodeUp: code => this.gameLabP5.notifyKeyCodeUp(code),
     softButtonIds: this.level.softButtons,
   });
+  this.mobileControls.update(
+    this.mobileControlsConfig,
+    getStore().getState().pageConstants.isShareView
+  );
 
   if (this.studioApp_.isUsingBlockly()) {
     // Add to reserved word list: API, local variables in execution evironment
@@ -813,6 +817,7 @@ Object.defineProperty(GameLab.prototype, 'mobileControlsConfig', {
   },
   set: function (val) {
     getStore().dispatch(setMobileControlsConfig(val));
+    this.mobileControls.update(val, getStore().getState().pageConstants.isShareView);
   },
 });
 

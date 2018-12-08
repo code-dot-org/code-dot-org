@@ -1,4 +1,6 @@
 import dom from '../dom';
+import gameLabDPadHtmlEjs from '../templates/gameLabDPad.html.ejs';
+import { GAMELAB_DPAD_CONTAINER_ID } from './GameLabVisualizationColumn.jsx';
 
 const DPAD_DEAD_ZONE = 3;
 // Allows diagonal to kick in after 22.5 degrees off primary axis, giving each
@@ -50,6 +52,9 @@ export default class MobileControls {
 
   init(opts) {
     this.opts = opts || {};
+
+    document.getElementById(GAMELAB_DPAD_CONTAINER_ID).innerHTML = gameLabDPadHtmlEjs();
+
     // Connect up arrow button event handlers
     for (const btn in ArrowIds) {
       dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
@@ -65,6 +70,19 @@ export default class MobileControls {
     if (mouseUpTouchEventName) {
       document.body.addEventListener(mouseUpTouchEventName, this.onMouseUp);
     }
+  }
+
+  update(config, isShareView = true) {
+    const { dpadVisible, spaceButtonVisible, mobileOnly } = config;
+    const mobileControlsOk = (dom.isMobile() && isShareView) ? true : !mobileOnly;
+
+    const dpadDisplayStyle = (dpadVisible && mobileControlsOk) ? 'inline' : 'none';
+    document.getElementById('studio-dpad-rim').style.display = dpadDisplayStyle;
+    document.getElementById('studio-dpad-cone').style.display = dpadDisplayStyle;
+    document.getElementById('studio-dpad-button').style.display = dpadDisplayStyle;
+
+    const spaceButtonDisplayStyle = (spaceButtonVisible && mobileControlsOk) ? 'inline' : 'none';
+    document.getElementById('studio-space-button').style.display = spaceButtonDisplayStyle;
   }
 
   onArrowButtonDown(buttonId, e) {

@@ -29,7 +29,16 @@ function initMobileControls(p5Inst) {
   });
 }
 
-const allFunctions = {...audioExecutors, ...utilFunctions, initMobileControls, showMobileControls: () => {}};
+function showMobileControls(spaceButtonVisible, dpadVisible, dpadFourWay, mobileOnly) {
+  mobileControls.update({
+    spaceButtonVisible,
+    dpadVisible,
+    dpadFourWay,
+    mobileOnly,
+  });
+}
+
+const allFunctions = {...audioExecutors, ...utilFunctions, initMobileControls, showMobileControls};
 
 for (let key in allFunctions) {
   if (!window[key]) {
