@@ -6,8 +6,7 @@ import Section2ChooseYourProgram from './Section2ChooseYourProgram';
 import Section3ExperienceAndCommitments from './Section3ExperienceAndCommitments';
 import Section4LeadingStudents from './Section4LeadingStudents';
 import Section5YourApproachToLearningAndLeading from './Section5YourApproachToLearningAndLeading';
-import Section6Logistics from './Section6Logistics';
-import Section7Submission from './Section7Submission';
+import Section6Submission from './Section6Submission';
 
 export default class Facilitator1920Application extends FormController {
   static propTypes = {
@@ -29,8 +28,7 @@ export default class Facilitator1920Application extends FormController {
       Section3ExperienceAndCommitments,
       Section4LeadingStudents,
       Section5YourApproachToLearningAndLeading,
-      Section6Logistics,
-      Section7Submission
+      Section6Submission
     ];
   }
 
