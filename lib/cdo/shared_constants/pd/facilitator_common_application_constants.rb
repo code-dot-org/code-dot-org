@@ -11,8 +11,7 @@ module Pd
       section_3_experience_and_commitments: 'Experience and Commitments',
       section_4_leading_students: 'Leading Students',
       section_5_your_approach_to_learning_and_leading: 'Your Approach to Learning and Leading',
-      section_6_logistics: 'Logistics',
-      section_7_submission: 'Submission'
+      section_6_submission: 'Submission'
     }.freeze
 
     BASE_PAGE_LABELS = {
@@ -85,27 +84,10 @@ module Pd
 
       },
 
-      section_6_logistics: {
-        available_during_week:
-          'During the school year, are you available during the week (Monday - Friday) to attend phone calls or virtual meetings?',
-
-        weekly_availability: clean_multiline(
-          'During the school year, what times during the week (Monday - Friday)
-         are you available to attend phone calls or virtual meetings? (mark all that apply)'
-        ),
-
-        travel_distance: clean_multiline(
-          'What distance are you willing to travel to facilitate workshops?
-         Expenses may be covered for travel that requires overnight stays.'
-        )
-      },
-
-      section_7_submission: {
+      section_6_submission: {
         gender_identity: 'Gender Identity',
         race: 'Race',
-        additional_info:
-          "Please provide any additional information you'd like Code.org to have about your application. (500 characters max)",
-
+        how_heard: 'How did you hear about this opportunity?',
         agree: "By submitting this application, I agree to share my contact information and application with Code.org's Regional Partners."
       }
     }.freeze
@@ -120,14 +102,10 @@ module Pd
     }.freeze
 
     NUMBERED_QUESTIONS = %w(
-      workedInCsJob csRelatedJobRequirements diversityTraining program
-      abilityToMeetRequirements csfAvailability csdCspTeacherconAvailability
+      program abilityToMeetRequirements csfAvailability
       csdCspFitAvailability ledCsExtracurriculars teachingExperience gradesTaught
       gradesCurrentlyTeaching subjectsTaught yearsExperience experienceLeading completedPd
-      codeOrgFacilitator codeOrgFacilitatorYears codeOrgFacilitatorPrograms haveLedPd
-      groupsLedPd describePriorPd whoShouldHaveOpportunity howSupportEquity
-      expectedTeacherNeeds describeAdaptingLessonPlan describeStrategies
-      exampleHowUsedFeedback exampleHowProvidedFeedback hopeToLearn
+      codeOrgFacilitator codeOrgFacilitatorYears codeOrgFacilitatorPrograms whoShouldHaveOpportunity
     ).freeze
 
     TEXT_FIELDS = {

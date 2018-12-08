@@ -332,9 +332,6 @@ module Pd::Application
         inquiry_based_learning
         why_interested
 
-        available_during_week
-        travel_distance
-
         gender_identity
         race
         agree
