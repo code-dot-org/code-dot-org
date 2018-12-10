@@ -4322,20 +4322,232 @@ pt-BR:
       Overworld Chop Tree_authored_hint:
         mc_2_a: 'Você precisa "mover para frente" duas vezes para ficar em frente
           à árvore.  '
+        mc_2_b: O comando "destruir bloco" corta a árvore na sua frente.
       Overworld Chop Tree_2018_authored_hint:
         mc_2_a: 'Você precisa "mover para frente" duas vezes para ficar em frente
           à árvore.  '
+        mc_2_b: O comando "destruir bloco" corta a árvore na sua frente.
       Overworld Chop Tree_2019_authored_hint:
         mc_2_a: 'Você precisa "mover para frente" duas vezes para ficar em frente
           à árvore.  '
+        mc_2_b: O comando "destruir bloco" corta a árvore na sua frente.
+      Overworld Chop Trees_authored_hint:
+        mc_4_a: 'Você pode cortar árvores em qualquer ordem. Qual caminho usa o menor
+          número de blocos?  '
+        mc_4_b: O comando "destruir bloco" corta a árvore na sua frente.
+      Overworld Chop Trees_2018_authored_hint:
+        mc_4_a: 'Você pode cortar árvores em qualquer ordem. Qual caminho usa o menor
+          número de blocos?  '
+        mc_4_b: O comando "destruir bloco" corta a árvore na sua frente.
+      Overworld Chop Trees_2019_authored_hint:
+        mc_4_a: 'Você pode cortar árvores em qualquer ordem. Qual caminho usa o menor
+          número de blocos?  '
+        mc_4_b: O comando "destruir bloco" corta a árvore na sua frente.
+      Overworld House Frame Chosen_authored_hint:
+        mc_6_a: Clique na seta no bloco "colocar tábuas de" para escolher o que você
+          quer colocar.
+        mc_6_c: Você pode colocar mais de um bloco dentro de um "bloco de repetição".
+      Overworld House Frame Chosen_2018_authored_hint:
+        mc_6_a: Clique na seta no bloco "colocar tábuas de" para escolher o que você
+          quer colocar.
+        mc_6_c: Você pode colocar mais de um bloco dentro de um "bloco de repetição".
+      Overworld House Frame Chosen_2019_authored_hint:
+        mc_6_a: Clique na seta no bloco "colocar tábuas de" para escolher o que você
+          quer colocar.
+        mc_6_c: Você pode colocar mais de um bloco dentro de um "bloco de repetição".
+      Overworld Move to Sheep_authored_hint:
+        mc_1_a: 'O bloco "avance" está no topo da lista de blocos.  '
+        mc_1_b: 'Certifique-se que ambos os blocos "avance" estão encaixados no bloco
+          "quando executar".  '
+      Overworld Move to Sheep_2018_authored_hint:
+        mc_1_a: 'O bloco "avance" está no topo da lista de blocos.  '
+        mc_1_b: 'Certifique-se que ambos os blocos "avance" estão encaixados no bloco
+          "quando executar".  '
+      Overworld Move to Sheep_2019_authored_hint:
+        mc_1_a: 'O bloco "avance" está no topo da lista de blocos.  '
+        mc_1_b: 'Certifique-se que ambos os blocos "avance" estão encaixados no bloco
+          "quando executar".  '
+      Overworld Place Wall_authored_hint:
+        mc_5_a: Use o bloco "colocar tábuas de " primeiro, e depois o bloco "avance".
+        mc_5_b: Certifique-se que ambos os blocos estão dentro do "bloco de repetição"
+          para executar o código mais de uma vez.
+      Overworld Place Wall_2018_authored_hint:
+        mc_5_a: Use o bloco "colocar tábuas de " primeiro, e depois o bloco "avance".
+        mc_5_b: Certifique-se que ambos os blocos estão dentro do "bloco de repetição"
+          para executar o código mais de uma vez.
+      Overworld Place Wall_2019_authored_hint:
+        mc_5_a: Use o bloco "colocar tábuas de " primeiro, e depois o bloco "avance".
+        mc_5_b: Certifique-se que ambos os blocos estão dentro do "bloco de repetição"
+          para executar o código mais de uma vez.
+      Overworld Plant Crops_authored_hint:
+        mc_7_a: Use o bloco "plantar" para plantar um cultivo no bloco em que você
+          está.
+        mc_7_b: Ambas as faixas de terra umedecidas pela água precisam ser preenchidas
+          com cultivos.
+        mc_7_c: Você pode colocar mais de um bloco dentro de um "bloco de repetição".
+      Overworld Plant Crops_2018_authored_hint:
+        mc_7_a: Use o bloco "plantar" para plantar um cultivo no bloco em que você
+          está.
+        mc_7_b: Ambas as faixas de terra umedecidas pela água precisam ser preenchidas
+          com cultivos.
+        mc_7_c: Você pode colocar mais de um bloco dentro de um "bloco de repetição".
+      Overworld Plant Crops_2019_authored_hint:
+        mc_7_a: Use o bloco "plantar" para plantar um cultivo no bloco em que você
+          está.
+        mc_7_b: Ambas as faixas de terra umedecidas pela água precisam ser preenchidas
+          com cultivos.
+        mc_7_c: Você pode colocar mais de um bloco dentro de um "bloco de repetição".
       Overworld Powered Minecart_authored_hint:
+        mc_13_a: Use o bloco "colocar rail" para colocar um trilho onde você está.
         mc_13_b: Use laços `repita` para diminuir seu código.
       Overworld Powered Minecart_2018_authored_hint:
+        mc_13_a: Use o bloco "colocar rail" para colocar um trilho onde você está.
         mc_13_b: Use laços `repita` para diminuir seu código.
       Overworld Powered Minecart_2019_authored_hint:
+        mc_13_a: Use o bloco "colocar rail" para colocar um trilho onde você está.
         mc_13_b: Use laços `repita` para diminuir seu código.
+      Overworld Shear Sheep_authored_hint:
+        mc_3_a: 'O bloco "tosar" tosa as ovelhas na sua frente. Você está olhando
+          para uma ovelha?  '
+        mc_3_b: 'Se você precisar mudar a direção que você está olhando, use o bloco
+          "vire à".  '
+        mc_3_c: 'Não tenha medo de cometer um erro! Execute o código para ver o que
+          acontece, mesmo que você ainda não tenha resolvido o quebra-cabeça.  '
+      Overworld Shear Sheep_2018_authored_hint:
+        mc_3_a: 'O bloco "tosar" tosa as ovelhas na sua frente. Você está olhando
+          para uma ovelha?  '
+        mc_3_b: 'Se você precisar mudar a direção que você está olhando, use o bloco
+          "vire à".  '
+        mc_3_c: 'Não tenha medo de cometer um erro! Execute o código para ver o que
+          acontece, mesmo que você ainda não tenha resolvido o quebra-cabeça.  '
+      Overworld Shear Sheep_2019_authored_hint:
+        mc_3_a: 'O bloco "tosar" tosa as ovelhas na sua frente. Você está olhando
+          para uma ovelha?  '
+        mc_3_b: 'Se você precisar mudar a direção que você está olhando, use o bloco
+          "vire à".  '
+        mc_3_c: 'Não tenha medo de cometer um erro! Execute o código para ver o que
+          acontece, mesmo que você ainda não tenha resolvido o quebra-cabeça.  '
+      Pattern Bee 1_authored_hint:
+        conditional_pointer: 'Comece pensando por esta parte: Qual a diferença em
+          cada passo no caminho? Que tipo de bloco você deve usar para fazer uma *decisão"
+          sobre você estar em uma flor ou um favo de mel?'
+        turn_at_honeycomb_pointer: Além de fazer mel, você vê algo diferente que você
+          tem que fazer em cada favo de mel?
+      Planning Farmer_authored_hint:
+        conditional_pointer: 'Comece pensando por esta parte: Qual a diferença em
+          cada passo no caminho? Que tipo de bloco você deve usar para fazer uma *decisão"
+          sobre você estar em uma flor ou um favo de mel?'
+        turn_at_honeycomb_pointer: Além de fazer mel, você vê algo diferente que você
+          tem que fazer em cada favo de mel?
       Quantum Bee - Ryan_authored_hint:
         test_hint: Isso é uma dica-teste.
+      Underground Avoiding Lava_authored_hint:
+        mc_11_a: Todo o código está no lugar para verificar se há lava e lidar com
+          isso. Tudo o que você precisa fazer é adicionar um bloco para se mover.
+        mc_11_b: Seu comando "avançar" deve ficar dentro ou depois da decalaração
+          "if"?
+      Underground Avoiding Lava_2018_authored_hint:
+        mc_11_a: Todo o código está no lugar para verificar se há lava e lidar com
+          isso. Tudo o que você precisa fazer é adicionar um bloco para se mover.
+        mc_11_b: Seu comando "avançar" deve ficar dentro ou depois da decalaração
+          "if"?
+      Underground Avoiding Lava_2019_authored_hint:
+        mc_11_a: Todo o código está no lugar para verificar se há lava e lidar com
+          isso. Tudo o que você precisa fazer é adicionar um bloco para se mover.
+        mc_11_b: Seu comando "avançar" deve ficar dentro ou depois da decalaração
+          "if"?
+      Underground If Statements_authored_hint:
+        mc_12_a: Espaços com manchas vermelhas são onde você encontrará redstone.
+        mc_12_b: Você pode usar o bloco "repita" para encurtar seu código?
+        mc_12_c: 'Use uma declaração "se lava adiante" para verificar se há lava.
+          então coloque pedregulhos. '
+      Underground If Statements_2018_authored_hint:
+        mc_12_a: Espaços com manchas vermelhas são onde você encontrará redstone.
+        mc_12_b: Você pode usar o bloco "repita" para encurtar seu código?
+        mc_12_c: 'Use uma declaração "se lava adiante" para verificar se há lava.
+          então coloque pedregulhos. '
+      Underground If Statements_2019_authored_hint:
+        mc_12_a: Espaços com manchas vermelhas são onde você encontrará redstone.
+        mc_12_b: Você pode usar o bloco "repita" para encurtar seu código?
+        mc_12_c: 'Use uma declaração "se lava adiante" para verificar se há lava.
+          então coloque pedregulhos. '
+      Underground Iron_authored_hint:
+        mc_10_a: Os blocos de ferro são os espaços manchados atrás da tocha! Como
+          você vai chegar lá?
+        mc_10_b: Quando você estiver à beira da lava, use o comando "colocar pedregulho
+          adiante" para fazer um caminho seguro, assim você poderá passar por ele!
+      Underground Iron_2018_authored_hint:
+        mc_10_a: Os blocos de ferro são os espaços manchados atrás da tocha! Como
+          você vai chegar lá?
+        mc_10_b: Quando você estiver à beira da lava, use o comando "colocar pedregulho
+          adiante" para fazer um caminho seguro, assim você poderá passar por ele!
+      Underground Iron_2019_authored_hint:
+        mc_10_a: Os blocos de ferro são os espaços manchados atrás da tocha! Como
+          você vai chegar lá?
+        mc_10_b: Quando você estiver à beira da lava, use o comando "colocar pedregulho
+          adiante" para fazer um caminho seguro, assim você poderá passar por ele!
+      Underground Mining Coal_authored_hint:
+        mc_9_a: Você está olhando para a direção correta? O comando "destrua bloco"
+          destrói o bloco na sua frente.
+        mc_9_b: As manchas pretas na parede são carvões! Use "destrua o bloco" em
+          um destes para minerar carvão.
+        mc_9_c: Use "coloque a tocha" para colocar uma tocha no espaço em que você
+          estiver.
+      Underground Mining Coal_2018_authored_hint:
+        mc_9_a: Você está olhando para a direção correta? O comando "destrua bloco"
+          destrói o bloco na sua frente.
+        mc_9_b: As manchas pretas na parede são carvões! Use "destrua o bloco" em
+          um destes para minerar carvão.
+        mc_9_c: Use "coloque a tocha" para colocar uma tocha no espaço em que você
+          estiver.
+      Underground Mining Coal_2019_authored_hint:
+        mc_9_a: Você está olhando para a direção correta? O comando "destrua bloco"
+          destrói o bloco na sua frente.
+        mc_9_b: As manchas pretas na parede são carvões! Use "destrua o bloco" em
+          um destes para minerar carvão.
+        mc_9_c: Use "coloque a tocha" para colocar uma tocha no espaço em que você
+          estiver.
+      Valentine_artist2_01_authored_hint:
+        Valentine_artist2_01_a: Cada lado da grama possui 30 pixels de comprimento.
+          Tente usar uma escada padrão.
+        Valentine_artist2_01_b: 'Você vê algum padrão se repetindo? Você deve estar
+          usando dois blocos "avance" e dois blocos "vire à" diferentes dentro de
+          uma repetição. '
+        Valentine_artist2_01_c: |-
+          Tente esta repetição:
+
+          <xml><block type="controls_repeat">
+          <title name="TIMES">8</title>
+          <statement name="DO">
+          <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">30</title>
+          <next>
+          <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">90</title>
+          <next>
+          <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">30</title>
+          <next>
+          <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">90</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></xml>
+      Valentine_artist_01_authored_hint:
+        Valentine_artist_01_a: Para qual direção o artista precisa olhar para se mover?
+          Qual direção o artista precisa olhar para colocar um novo adesivo de Lhama?
+        Valentine_artist_01_b: O artista precisa colocar 10 adesivos de Lhama e virar
+          em 90 graus quando virar.
       aE3_authored_hint:
         aE3_d: Se seu código ficar muito confuso, você pode sempre clicar em "Começar
           do Início" e tentar novamente!
