@@ -113,9 +113,9 @@
   version "0.13.0-cdo.3"
   resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.3.tgz#dfda56a2aa8a4dbe449aac55ef81bc6762287f0c"
 
-"@code-dot-org/redactable-markdown@0.3.4":
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/redactable-markdown/-/redactable-markdown-0.3.4.tgz#99f33ff2078b0e0b23bd5ac513f3754fc384ca8f"
+"@code-dot-org/redactable-markdown@0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/redactable-markdown/-/redactable-markdown-0.4.0.tgz#18c156fc54f107a0f3640631da132631b9e7622f"
   dependencies:
     minimist "^1.2.0"
     remark-html "^9.0.0"
