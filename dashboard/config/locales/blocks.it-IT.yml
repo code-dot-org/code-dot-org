@@ -382,9 +382,10 @@ it:
             '"color_cycle"': Colori
             '"diamonds"': Rombi
             '"disco_ball"': Palla da discoteca
+            '"fireworks"': Fuochi d'artificio
             '"swirl"': Ipnotico
             '"kaleidoscope"': Caleidoscopio
-            '"lasers"': Pista da ballo del laser
+            '"lasers"': Pista da ballo laser
             '"splatter"': Schizzi di vernice
             '"rainbow"': Arcobaleno
             '"snowflakes"': Neve
@@ -396,8 +397,12 @@ it:
           PALETTE:
             '"rave"': Bianco e nero
             '"cool"': Blu
+            '"electronic"': Elettronica
+            '"iceCream"': Gelato
             '"default"': Chiaro
+            '"neon"': Neon
             '"tropical"': Tropicale
+            '"vintage"': Vintage
             '"warm"': Rossi
       Dancelab_setDanceSpeed:
         text: imposta la velocità di ballo del {SPRITE} a {SPEED}
@@ -450,9 +455,13 @@ it:
             '"hearts_red"': Cuori
             '"music_notes"': Note musicali
             '"pineapples"': Ananas
+            '"pizzas"': Pizze
+            '"smiling_poop"': Cacca
             '"rain"': Pioggia
             '"floating_rainbows"': Arcobaleno
+            '"smile_face"': Smiley
             '"spotlight"': Riflettore
+            '"color_lights"': Luci del palco
             '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'imposta la {PROPERTY} di {SPRITE} a {VAL} '
