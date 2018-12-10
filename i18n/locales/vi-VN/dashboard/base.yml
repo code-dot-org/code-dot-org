@@ -192,11 +192,11 @@ vi:
     subject: 'Tham gia lớp học của tôi ( trên Code.org)'
     body: |
       Nhấp vào liên kết dưới đây để đăng ký cho các hướng dẫn về khoa học máy tíng trên Code.org (với tôi như là "giáo viên" của bạn): 
-      
+
       %{link} 
-      
+
       Các hướng dẫn vui vẻ, trực quan hấp dẫn, và dạy các khái niệm cơ bản của khoa học máy tính bằng cách sử dụng ví dụ, hướng dẫn, trờ chơi - giống trải nghiệm. Học lập trình từ Bill Gates, Mark Zuckerberg, Angry Birds, Angry Birds và Plants vs. Zombies! :-) 
-      
+
       %{name}
   parent_mailer:
     student_associated_subject: 'Thông tin đăng nhập vào Code.org'
