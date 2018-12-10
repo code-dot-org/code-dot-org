@@ -4,14 +4,6 @@
 @pegasus_db_access
 Feature: Using the teacher dashboard
 
-  Scenario: Loading the teacher dashboard
-    Given I am on "http://code.org/"
-    And I am a teacher
-    And I am on "http://code.org/teacher-dashboard?no_home_redirect=1"
-    Then I wait to see ".outerblock"
-    Then I click selector "div.title:contains('Student Accounts and Progress')"
-    Then I wait until I am on "http://studio.code.org/home"
-
   Scenario: Loading student progress
     Given I create an authorized teacher-associated student named "Sally"
     And I give user "Teacher_Sally" hidden script access
@@ -22,8 +14,7 @@ Feature: Using the teacher dashboard
 
     # Progress tab
     When I sign in as "Teacher_Sally"
-    And I am on "http://code.org/teacher-dashboard?no_home_redirect=1"
-    And I click selector "div.title:contains('Student Accounts and Progress')" once I see it
+    And I am on "http://studio.code.org/home"
     And I click selector "a:contains('Untitled Section')" once I see it
     And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
 
@@ -86,8 +77,7 @@ Feature: Using the teacher dashboard
 
     # Progress tab
     When I sign in as "Teacher_Sally"
-    And I am on "http://code.org/teacher-dashboard?no_home_redirect=1"
-    And I click selector "div.title:contains('Student Accounts and Progress')" once I see it
+    And I am on "http://studio.code.org/home"
     And I click selector "a:contains('Untitled Section')" once I see it
     And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
     And I press the first ".uitest-summary-cell" element
@@ -189,8 +179,6 @@ Feature: Using the teacher dashboard
     # Load the section projects page
 
     When I sign in as "Teacher_Sally"
-    # Enable the showProjectThumbnails experiment on Pegasus for this test.
-    Given I am on "http://code.org/teacher-dashboard?no_home_redirect=1&enableExperiments=showProjectThumbnails"
     Then I am on "http://studio.code.org/home"
     And I click selector "a:contains('Untitled Section')" once I see it
     And I click selector "#learn-tabs a:contains('Projects')" once I see it
