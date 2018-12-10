@@ -421,6 +421,8 @@
   "dontForget": "",
   "downloadCSV": "CSV жүктеп алу",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Анимация",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "екі санды қосыңыз",
   "dropletBlock_addOperator_signatureOverride": "Операторды қосу",

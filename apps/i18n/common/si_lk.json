@@ -421,6 +421,8 @@
   "dontForget": "අමතක නොකරන්න",
   "downloadCSV": "CSV ලෙස බාගත කරන්න",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "සජීවීකරණය",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "සංඛ්‍යා දෙකක් එකතු කරන්න",
   "dropletBlock_addOperator_signatureOverride": "",

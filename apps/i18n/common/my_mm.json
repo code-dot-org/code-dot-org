@@ -421,6 +421,8 @@
   "dontForget": "မ​မေ့ပါနဲ့",
   "downloadCSV": "",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Animation",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "",
   "dropletBlock_addOperator_signatureOverride": "",
