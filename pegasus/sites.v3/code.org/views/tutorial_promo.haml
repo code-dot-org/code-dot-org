@@ -1,0 +1,24 @@
+%link{href: "/css/tutorial-promo.css", rel: "stylesheet"}
+
+.tutorial-promo-container
+  .img-container
+    %img.background-img{src: tutorial[:background_image]}
+  %h1.tutorial-heading= tutorial[:heading]
+
+  .col-25.specific-tutorial.left-tutorial{style: "display: #{tutorial[:display_second_tutorial]}"}
+    .tutorial-box{id: tutorial[:id_for_mobile_image]}
+      %h2.specific-tutorial-heading= tutorial[:left_heading]
+      .tutorial-details
+        %p.tutorial-description= tutorial[:left_description]
+        %p.tutorial-specs= tutorial[:left_specs]
+      %a{href: tutorial[:left_button_link], target: '_self'}
+        %button.tutorial-button= tutorial[:left_button_text]
+
+  .col-25.specific-tutorial.right-tutorial
+    .tutorial-box{id: tutorial[:id_for_mobile_image]}
+      %h2.specific-tutorial-heading= tutorial[:right_heading]
+      .tutorial-details
+        %p.tutorial-description= tutorial[:right_description]
+        %p.tutorial-specs= tutorial[:right_specs]
+      %a{href: tutorial[:right_button_link], target: '_self'}
+        %button.tutorial-button= tutorial[:right_button_text]
