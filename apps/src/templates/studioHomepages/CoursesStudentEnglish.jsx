@@ -25,7 +25,7 @@ class CoursesStudentEnglish extends Component {
           linkText={i18n.teacherCourseHocLinkText()}
           link={pegasus('/hourofcode/overview')}
         >
-          <CourseBlocksHoc rowCount={1}/>
+          <CourseBlocksHoc/>
         </ContentContainer>
 
         <LocalClassActionBlock
