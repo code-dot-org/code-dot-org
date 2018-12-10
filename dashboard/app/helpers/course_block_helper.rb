@@ -176,6 +176,6 @@ module CourseBlockHelper
       }
     }
 
-    default.merge!(block_override_data[id])
+    default.merge!(block_override_data[id] || {})
   end
 end
