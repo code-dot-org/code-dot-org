@@ -2883,9 +2883,9 @@ tr:
               description_student: "Bu ders boolean değerler ve mantık ile birlikte koşullu ifadeleri de tanıtmaktadır. Sınıf, kişisel özelliklerini (saç veya göz rengi, giyim türü, yaş, vb.) tanımladığı Boolean (doğru / yanlış) ifadelerini kullanarak , basit bir Ayağa kalk - Otur oyunuyla başlar. Sınıf daha sonra giderek daha karmaşık olan boolean ifadelerine dayalı nesneleri gruplar, ardından koşulların bir program akışını nasıl etkilediğine bakar.\n\nNot: Ayağa kalk - Otur oyunu, öğrencilere koşul cümleleri kullanarak oynanır. Örneğin gözlerin kahverengiyse ayağa kalk."
               description_teacher: |-
                 Bu derste öğrencilere boolean değerleri ve mantık ile koşullu ifadeler tanıtılır. Sınıf, kişisel özelliklerini (saç veya göz rengi, giyim türü, yaş, vb.) tanımladığı Boolean (doğru / yanlış) ifadelerini kullanarak , basit bir Ayağa kalk - Otur oyunuyla başlar. Bu, öğrencilere, ikili bir soru ile çoklu potansiyel değerleri olan bir özelliği (yaş gibi) nasıl çerçeveleyebileceklerini düşünmeye iter.
-                
+
                 Buradan öğrencilere, benzer ancak değişen fiziksel özelliklere sahip bir grup nesne sağlanır. Bir arkadaşıyla, VE ve VEYA ifadeleri de dahil olmak üzere giderek daha karmaşık olan boolean ifadelerine dayanan bu nesneleri gruplandırır.
-                
+
                 Son olarak, şartlı cümlelerin karar vermede ya da boolean ifadeleri girdi olarak kullanan bir program akışını etkilemek için bir araç olduğunu ifade ederiz.
             Project - Interactive Card:
               name: Proje - interaktif kart
@@ -3011,7 +3011,7 @@ tr:
               description_student: 'Bu derste sınıf, problem çözme sürecini üç farklı soruna uygular: bir kelime araması, bir doğum günü partisi için oturma düzenlemesi ve bir gezi planlama. Sorunlar giderek daha da karmaşık hale gelir ve sorun çözme sürecinin özellikle bu tür sorunlarla başa çıkarken yararlı olduğunun altını çizilir.'
               description_teacher: |-
                 Bu derste öğrenciler, her adımın değerini daha iyi anlamak için problem çözme sürecini üç farklı soruna uygulayacaktır. Bir kelime araması çözer, bir doğum günü partisi için koltuk düzenlemesi yapar ve gezi planı yapar. Sorunlar giderek daha da karmaşık hale gelir ve sorun çözme sürecinin bu tür sorunlarla başa çıkarken özellikle yararlı olduğunun altını çizer. Ders, öğrencilerin problem çözme sürecindeki deneyimlerini yansıtmalarıyla sonuca varır. Her adımın dahil edilmesinin doğru olduğu kanısına varacaklar ve açık uçlu problemleri daha iyi tanımlamalarını sağlayacak soruları veya stratejileri beyin fırtınası ile inceleyeceklerdir. Bu nokta çoğu kez en kritik adımdır.
-                
+
                 Bu ders büyük olasılıkla iki ders saatinde veya daha fazlasında tamamlanacaktır. İlk iki problem tek bir derse sığabilir, ancak üçüncü faktör ikinci bir güne taşınmalıdır.
             What is a Computer?:
               name: Bilgisayar nedir?
@@ -4752,7 +4752,7 @@ tr:
               description_student: İnternet eğlenceli ve heyecanlıdır, fakat güvende kalmak da önemlidir. Bu ders size, paylaşmanın güvenli olduğu bilgi ile özel bilgi arasındaki farkı öğretecek.
               description_teacher: |-
                 Common Sense Education tarafından geliştirilen bu ders, çevrimiçi paylaşım için güvenli olmayan bilgi ile güvenli olan bilgi arasındaki fark ile ilgilidir.
-                
+
                 Öğrenciler, kimlikleri ile ilgili bilgileri isteyen siteleri ziyaret ederken, kendilerini ve ailelerini kimlik hırsızlığından korumak için onları güçlendiren eleştirel bir araştırma sürecini öğrenirler. Özel bilgi ve kişisel bilgi arasındaki farkı öğrenmenin yanı sıra çevrimiçi paylaşmak için güvenli olan ya da güvenli olmayanı nasıl ayırt edeceklerini de öğrenirler.
             Build a Star Wars Game:
               name: Star Wars oyunu oluştur
@@ -5963,9 +5963,9 @@ tr:
               description_student: "Bu ders boolean değerler ve mantık ile birlikte koşullu ifadeleri de tanıtmaktadır. Sınıf, kişisel özelliklerini (saç veya göz rengi, giyim türü, yaş, vb.) tanımladığı Boolean (doğru / yanlış) ifadelerini kullanarak , basit bir Ayağa kalk - Otur oyunuyla başlar. Sınıf daha sonra giderek daha karmaşık olan boolean ifadelerine dayalı nesneleri gruplar, ardından koşulların bir program akışını nasıl etkilediğine bakar.\n\nNot: Ayağa kalk - Otur oyunu, öğrencilere koşul cümleleri kullanarak oynanır. Örneğin gözlerin kahverengiyse ayağa kalk."
               description_teacher: |-
                 Bu derste öğrencilere boolean değerleri ve mantık ile koşullu ifadeler tanıtılır. Sınıf, kişisel özelliklerini (saç veya göz rengi, giyim türü, yaş, vb.) tanımladığı Boolean (doğru / yanlış) ifadelerini kullanarak , basit bir Ayağa kalk - Otur oyunuyla başlar. Bu, öğrencilere, ikili bir soru ile çoklu potansiyel değerleri olan bir özelliği (yaş gibi) nasıl çerçeveleyebileceklerini düşünmeye iter.
-                
+
                 Buradan öğrencilere, benzer ancak değişen fiziksel özelliklere sahip bir grup nesne sağlanır. Bir arkadaşıyla, VE ve VEYA ifadeleri de dahil olmak üzere giderek daha karmaşık olan boolean ifadelerine dayanan bu nesneleri gruplandırır.
-                
+
                 Son olarak, şartlı cümlelerin karar vermede ya da boolean ifadeleri girdi olarak kullanan bir program akışını etkilemek için bir araç olduğunu ifade ederiz.
             Conditionals:
               name: Koşullar
@@ -6406,7 +6406,7 @@ tr:
               description_student: İnternet eğlenceli ve heyecanlıdır, fakat güvende kalmak da önemlidir. Bu ders size, paylaşmanın güvenli olduğu bilgi ile özel bilgi arasındaki farkı öğretecek.
               description_teacher: |-
                 Common Sense Education tarafından geliştirilen bu ders, çevrimiçi paylaşım için güvenli olmayan bilgi ile güvenli olan bilgi arasındaki fark ile ilgilidir.
-                
+
                 Öğrenciler, kimlikleri ile ilgili bilgileri isteyen siteleri ziyaret ederken, kendilerini ve ailelerini kimlik hırsızlığından korumak için onları güçlendiren eleştirel bir araştırma sürecini öğrenirler. Özel bilgi ve kişisel bilgi arasındaki farkı öğrenmenin yanı sıra çevrimiçi paylaşmak için güvenli olan ya da güvenli olmayanı nasıl ayırt edeceklerini de öğrenirler.
             Build a Star Wars Game:
               name: Star Wars oyunu oluştur
@@ -7268,7 +7268,7 @@ tr:
               description_student: İnternet eğlenceli ve heyecanlıdır, fakat güvende kalmak da önemlidir. Bu ders size, paylaşmanın güvenli olduğu bilgi ile özel bilgi arasındaki farkı öğretecek.
               description_teacher: |-
                 Common Sense Education tarafından geliştirilen bu ders, çevrimiçi paylaşım için güvenli olmayan bilgi ile güvenli olan bilgi arasındaki fark ile ilgilidir.
-                
+
                 Öğrenciler, kimlikleri ile ilgili bilgileri isteyen siteleri ziyaret ederken, kendilerini ve ailelerini kimlik hırsızlığından korumak için onları güçlendiren eleştirel bir araştırma sürecini öğrenirler. Özel bilgi ve kişisel bilgi arasındaki farkı öğrenmenin yanı sıra çevrimiçi paylaşmak için güvenli olan ya da güvenli olmayanı nasıl ayırt edeceklerini de öğrenirler.
             Build a Star Wars Game:
               name: Star Wars oyunu oluştur
