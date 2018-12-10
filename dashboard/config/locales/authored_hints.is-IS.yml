@@ -1447,6 +1447,24 @@ is:
           Hér eru tvö mismunandi löng snjókorn, teiknuð hvort á eftir öðru (með 30 gráðu snúningi á milli.)
 
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Hvernig klára ég þetta borð?**
+          * Láttu dansara birtast á skjánum.
+
+          *Þetta borð endar eftir 4 takta.*
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Hvernig klára ég þetta borð?**
+          * Láttu dansara birtast á skjánum.
+
+          *Þetta borð endar eftir 4 takta.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Hvernig klára ég þetta borð?**
+          * Láttu dansara birtast á skjánum.
+
+          *Þetta borð endar eftir 4 takta.*
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           Þetta er fyrsta vísbendingin.
@@ -1477,6 +1495,12 @@ is:
           munt ferðast eftir...
         Function_intro_Ryan_a: Þú getur kallað á sama fall oftar en einu sinni í forriti!
           Prófaðu að kalla á það tvisvar til að leysa þessa þraut.
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Hvernig klára ég þetta borð?**
+          * Láttu dansara birtast á skjánum.
+
+          *Þetta borð endar eftir 4 takta.*
       Harvesting_authored_hint:
         pointer_harvester_test: Hvers konar kubb get ég notað til að athuga eitthvað
           og taka ákvörðun?
@@ -3828,6 +3852,8 @@ is:
           í það sem gerist á undan horninu og það sem gerist eftir hornið.
       courseA_harvester_loops5a_authored_hint:
         courseA_harvester_loops5a_a: Þú þarft að nota tvær `endurtaka` lykkjur í röð.
+      courseA_harvester_loops5b_authored_hint:
+        courseA_harvester_loops5b_a: Smelltu á `Keyra` og sjáðu hvað gerist!
       courseA_harvester_loops6_authored_hint:
         courseA_harvester_loops6_a: Ef þú festist, er ráð að skrifa þrepin á pappír
           og leita að endurteknum mynstrum.
