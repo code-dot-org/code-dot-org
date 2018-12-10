@@ -857,6 +857,7 @@ da-DK:
   math_category_name: Matematik
   hoc_category_name: Hour of Code
   applab_name: App Lab
+  gamelab_name: Spil Laboratoriet
   applab_gradelevel: Alder 13+
   codeorg_gradelevel: For 4-104-årige
   codeintl_gradelevel: For 4-104-årige
@@ -1547,6 +1548,7 @@ da-DK:
   user_header_settings: Min konto
   user_header_logout: Log ud
   user_header_signin: Log ind
+  user_header_gamelab: Spil Laboratoriet
   user_header_playlab: Play Lab
   user_header_dance: Dansefest
   user_header_minecraft: Minecraft
