@@ -375,7 +375,7 @@ hu:
       4-5 Nested Loops 2: 'Most ágyazd be ezt a ciklust egy másik ciklus belsejébe, hogy 10 db háromszöget rajzoljon. Az ilyet  egymásba ágyazott ciklusnak nevezik. Tipp: a 10 háromszög 360°-os körben van egyenlően elosztva.  '
       4-5 Nested Loops 3: |-
         Készíts egy napocskát a kiindulási kód másik ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\r
-        
+
       4-5 Nested Loops 5: Ismételd meg a megadott kódot annyiszor, hogy szélmalmot készíts.
       4-5 Nested Loops 6: Meg tudod rajzolni a hatszöget a háromszög rajzoló kód ciklusba ágyazásával?
       4-5 Nested Loops 7: "Rajzold meg ezt az alakzatot tízszer. Hány fokot kell fordulnod minden egyes ismétlésnél? (Tipp: Mennyi 360 osztva 10-zel?)"
@@ -1325,7 +1325,7 @@ hu:
       grade4_arist_nested_loop_triangles4: Rajzold meg az alligátor alsó fogsorát!
       grade4_arist_nested_loop_triangles5: |-
         Készíts egy napocskát a kiindulási kód másik ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\r
-        
+
       grade4_arist_nested_loop_triangles6: Meg tudod rajzolni ezt a 36 darab háromszöget egymásba ágyazott ciklusok segítségével?
       grade4_artist_functions1: "Helló! Zombi művész vagyok. Szeretek rajzolni. Segíts nekem szögletes szemüveget rajzolni. Tipp: a két üveg közti összekötő 25 pixellel rövidebb, mint a négyzet oldala."
       grade4_artist_functions2: "A függvények segítségével új blokkokat határozhatsz meg! A \"rajzoljon egy négyzetet\" függvény megalkotásához belehúztuk a szükséges blokkokat. Fel tudod használni a \"rajzoljon egy négyzetet\" függvényt szemüveg készítéséhez? A négyzetek 75 pixel távolságra vannak egymástól."
@@ -1341,7 +1341,7 @@ hu:
       grade4_artist_nested_loop_triangles1: 'Egészítsd ki a kódot úgy, hogy ezeket a háromszögeket rajzolja meg.   Az első már készen is van. Tipp: a 3 db háromszög 360°-os körben van elforgatva.'
       grade4_artist_nested_loop_triangles5: |-
         Készíts egy napocskát a kiindulási kód másik ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\r
-        
+
       grade4_artist_nested_loop_triangles6: Meg tudod rajzolni ezt a 36 darab háromszöget egymásba ágyazott ciklusok segítségével?
       grade4_artist_parameters_squares1: 'Kattints a "szerkeszt" gombra, majd adj hozzá a "rajzolj egy négyzetet" függvényhez egy paramétert. Legyen egy hossz paramétere, mint a háromszögnek. Ezúttal három négyzetet rajzolj: 25, 50 és 75 képpont oldalhosszal, és egymástól 100 képpont távolságra.'
       grade4_artist_parameters_triangles2: Észreveszel valamilyen különbséget ezekben a függvényekben? Kattints a "Futtatás" gombra, és nézd meg, mi történik.
