@@ -38,6 +38,7 @@ da:
         NetSim: Internet Simulator
         Custom: Kunstner
         CustomStudio: Play Lab
+        Gamelab: Spil Laboratoriet
     trophy:
       name:
         Bronze: Bronze
@@ -599,7 +600,11 @@ da:
         C4_unplugged_forloops: For Loops
         C4_unplugged_parameters: Sangskrivning med parametre
         C4_unplugged_binary: Binære
+        CSF_create_functions: Oprettelse af funktioner
+        CSF_maze_intro_k1_blocks: Introduktion til Code Studio
+        CSF_maze_intro_text_blocks: Introduktion til Code Studio
         CSF_my_robotic_friends: Mine robot venner
+        CSF_zuck_loops_short: Gentagene løkker
         frozen_intro: Hour of Code Intro
         frozen_loops: Introduktion til løkker
         frozen_functions: Introduktion til funktioner
@@ -610,6 +615,7 @@ da:
         infinity_playlab_intro: Play Lab - introduktion
         infinity_playlab_events: Play Lab - Events
         infinity_playlab_repeat_forever: Play Lab - gentag for evigt
+        csd_concept_how_computers_work: Introduktion til hvordan computere virker
         csp_applab_functions: Introduktion til funktioner
         csp_applab_functions_parameters: Funktioner med parametre
         csp_applab_loops: Løkker
@@ -633,6 +639,8 @@ da:
         iceage_events: Ice Age kodetime - begivenheder
         iceage_repeat: Ice Age kodetime - gentagelseskommandoer
         CSF_loops_AB: Løkker
+        hoc_dance_warmup: Dansefest - Opvarmning
+        hoc_dance_congrats: Dansefest - lad festen fortsætte!
     callout:
       text:
         drag_blocks: Træk i en "flyt fremad" blok og fastgør den under den anden blok
