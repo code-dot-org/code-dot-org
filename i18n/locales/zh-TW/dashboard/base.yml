@@ -203,11 +203,11 @@ zh-TW:
     subject: '加入我的班級'
     body: |
       點選下方的連結來報名參加在 Code.org 的資訊科學課程（我會是你的老師）：
-
+      
       %{link}
-
+      
       這是一個絕對會引起你注意的有趣課程。透過遊戲式的簡易引導，你將學會有關資訊科學的基本概念。快來跟比爾‧蓋茲(Bill Gates)，馬克‧佐克伯(Mark Zuckerberg)、憤怒鳥(Angry Birds)以及植物大戰殭屍(Plants vs. Zombies)一起學習程式設計吧！ :)
-
+      
       %{name}
   parent_mailer:
     student_associated_subject: 'Code.org 的登入資訊'

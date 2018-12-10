@@ -2014,9 +2014,9 @@ es-MX:
             Booleans Unplugged:
               description_teacher: |-
                 En esta lección, se les presenta a los estudiantes los valores booleanos y la lógica, así como las declaraciones condicionales. La clase comienza jugando un juego simple de Levantarse, Sentarse en el que las afirmaciones booleanas (verdadero / falso) describen propiedades personales (color de pelo o ojos, tipo de ropa, edad, etc.). Esto hace que los estudiantes piensen cómo pueden enmarcar una propiedad con múltiples valores potenciales (como la edad) con una pregunta binaria.
-
+                
                 A partir de ahí, los estudiantes reciben un grupo de objetos con propiedades físicas similares pero variables. Con un compañero, agrupan esos objetos basándose en declaraciones booleanas cada vez más complejas, incluidos booleanos compuestos con "y" y "o".
-
+                
                 Finalmente, revelamos los Condicionales como una herramienta para tomar decisiones o afectar el flujo de un programa usando declaraciones booleanas como entrada.
             Project - Interactive Card:
               description_teacher: En este proyecto acumulativo para el Capítulo 1, los estudiantes planifican y desarrollan una tarjeta de felicitación interactiva usando todas las técnicas de programación que han aprendido hasta este momento.
@@ -2078,7 +2078,7 @@ es-MX:
               description_student: 'En esta lección, la clase aplicara el proceso de resolución de problemas a tres problemas diferentes: una búsqueda de palabras, un arreglo de asientos para una fiesta de cumpleaños y la planificación de un viaje. Los problemas se vuelven cada vez más complejos y están mal definidos para destacar cómo el proceso de resolución de problemas es particularmente útil cuando se abordan estos tipos de problemas.'
               description_teacher: |-
                 En esta lección, los estudiantes aplicara el proceso de resolución de problemas a tres problemas diferentes para comprender mejor el valor de cada paso. Resolverán una búsqueda de palabras, organizarán asientos para una fiesta de cumpleaños y planificarán un viaje. Los problemas se vuelven cada vez más complejos y están mal definidos para destacar cómo el proceso de resolución de problemas es particularmente útil cuando se abordan estos tipos de problemas. La lección concluye con los estudiantes reflexionando sobre su experiencia con el proceso de resolución de problemas. Ellos justificarán la inclusión de cada paso y harán una lluvia de ideas con preguntas o estrategias que pueden ayudarlos a definir mejor los problemas abiertos, ya que a menudo es el paso más crítico.
-
+                
                 Esta lección probablemente tomará dos períodos de clase o más para ser completado. Los dos primeros problemas pueden ocupar un solo período de clase, pero el tercero deberá trasladarse a un segundo día.
             What is a Computer?:
               description_student: En esta lección, la clase desarrollara una definición preliminar de una computadora. Después de una lluvia de ideas sobre las posibles definiciones de una computadora, la clase trabajara en grupos para clasificar las imágenes en "es una computadora" o "no es una computadora" en un papel y explicaran sus motivaciones para elegir algunas de las categorizaciones más difíciles. Luego, el profesor introduce una definición de la computadora y permite a los grupos revisar sus carteles de acuerdo con la nueva definición.
@@ -2727,7 +2727,7 @@ es-MX:
               description_student: Internet es divertida y emocionante, pero es importante mantenerse seguro también. Esta lección te enseña la diferencia entre información que es segura de compartir e información privada.
               description_teacher: |-
                 Desarrollada por Common Sense Education, esta leccíón es sobre la diferencia entre información que es segura compartir e información que no lo es.
-
+                
                 Confome un usuario visita sitios que solicitan información sobre su identidad, aprenden a adoptar un proceso de critica que los empodera a protegerse a sí mismo y sus familias del robo de identidad. En esta lección, los estudiantes aprenden a pensar criticamente sobre la información que algunos sitios solicitan o requieren. Aprenden la diferencia entre información privada y personal, así como como distinguir lo que es seguro de lo que no lo es.
             Build a Star Wars Game:
               name: Construye un juego de Star Wars
@@ -3445,9 +3445,9 @@ es-MX:
             Booleans Unplugged:
               description_teacher: |-
                 En esta lección, se les presenta a los estudiantes los valores booleanos y la lógica, así como las declaraciones condicionales. La clase comienza jugando un juego simple de Levantarse, Sentarse en el que las afirmaciones booleanas (verdadero / falso) describen propiedades personales (color de pelo o ojos, tipo de ropa, edad, etc.). Esto hace que los estudiantes piensen cómo pueden enmarcar una propiedad con múltiples valores potenciales (como la edad) con una pregunta binaria.
-
+                
                 A partir de ahí, los estudiantes reciben un grupo de objetos con propiedades físicas similares pero variables. Con un compañero, agrupan esos objetos basándose en declaraciones booleanas cada vez más complejas, incluidos booleanos compuestos con "y" y "o".
-
+                
                 Finalmente, revelamos los Condicionales como una herramienta para tomar decisiones o afectar el flujo de un programa usando declaraciones booleanas como entrada.
             Conditionals:
               name: Condicionales
@@ -3785,7 +3785,7 @@ es-MX:
               description_student: Internet es divertida y emocionante, pero es importante mantenerse seguro también. Esta lección te enseña la diferencia entre información que es segura de compartir e información privada.
               description_teacher: |-
                 Desarrollada por Common Sense Education, esta leccíón es sobre la diferencia entre información que es segura compartir e información que no lo es.
-
+                
                 Confome un usuario visita sitios que solicitan información sobre su identidad, aprenden a adoptar un proceso de critica que los empodera a protegerse a sí mismo y sus familias del robo de identidad. En esta lección, los estudiantes aprenden a pensar criticamente sobre la información que algunos sitios solicitan o requieren. Aprenden la diferencia entre información privada y personal, así como como distinguir lo que es seguro de lo que no lo es.
             Build a Star Wars Game:
               name: Construye un juego de Star Wars
@@ -4262,7 +4262,7 @@ es-MX:
               description_student: Internet es divertida y emocionante, pero es importante mantenerse seguro también. Esta lección te enseña la diferencia entre información que es segura de compartir e información privada.
               description_teacher: |-
                 Desarrollada por Common Sense Education, esta leccíón es sobre la diferencia entre información que es segura compartir e información que no lo es.
-
+                
                 Confome un usuario visita sitios que solicitan información sobre su identidad, aprenden a adoptar un proceso de critica que los empodera a protegerse a sí mismo y sus familias del robo de identidad. En esta lección, los estudiantes aprenden a pensar criticamente sobre la información que algunos sitios solicitan o requieren. Aprenden la diferencia entre información privada y personal, así como como distinguir lo que es seguro de lo que no lo es.
             Build a Star Wars Game:
               name: Construye un juego de Star Wars

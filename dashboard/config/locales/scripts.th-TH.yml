@@ -23,7 +23,7 @@ th:
             'Artist: Shapes':
               name: 'ศิลปิน: รูปร่างต่างๆ'
             'Bee: Loops':
-              name: 'ผึ้ง: ลูป (Loops)'
+              name: 'ผึ้ง: ลูป'
             'Bee: Sequence':
               name: 'ผึ้ง: การจัดลำดับ'
             Building a Foundation:
@@ -39,7 +39,7 @@ th:
             'Maze: Debugging':
               name: 'เขาวงกต: การดีบั๊ก (Debugging) จุดบกพร่อง'
             'Maze: Loops':
-              name: 'เขาวงกต: ลูป (Loops)'
+              name: 'เขาวงกต: ลูป'
             'Maze: Sequence':
               name: 'เขาวงกต: การจัดลำดับ'
             Move it, Move it:
@@ -72,7 +72,7 @@ th:
             'Bee: Debugging':
               name: 'ผึ้ง: การดีบั๊ก'
             'Bee: Loops':
-              name: 'ผึ้ง: ลูป (Loops)'
+              name: 'ผึ้ง: ลูป'
             Conditionals:
               name: เงื่อนไข
             Getting Loopy:
@@ -80,7 +80,7 @@ th:
             Graph Paper Programming:
               name: การเขียนกระดาษกราฟ
             'Maze: Loops':
-              name: 'เขาวงกต: ลูป (Loops)'
+              name: 'เขาวงกต: ลูป'
             'Maze: Sequence':
               name: 'เขาวงกต: การจัดลำดับ'
             'Real-life Algorithms: Paper Planes':
@@ -109,7 +109,7 @@ th:
             'Bee: Functions':
               name: 'ผึ้ง: ฟังก์ชั่น'
             'Bee: Nested Loops':
-              name: 'ผึ้ง: ลูปซ้อนลูป (Nested Loops)'
+              name: 'ผึ้ง: ลูปซ้อนลูป'
             Bounce:
               name: กระเด้ง
             Computational Thinking:
@@ -161,7 +161,7 @@ th:
             'Artist: Variables':
               name: 'ศิลปิน: Variables'
             'Bee: For Loops':
-              name: 'ผึ้ง: ลูป (For Loops)'
+              name: 'ผึ้ง: ลูป(For Loops)'
             'Bee: Functions with Parameters':
               name: 'ผึ้ง: ฟังก์ชั่นที่มากับพารามิเตอร์'
             Maze and Bee:
@@ -186,7 +186,7 @@ th:
             'Bee: Debugging':
               name: 'ผึ้ง: การดีบั๊ก'
             'Bee: Nested Loops':
-              name: 'ผึ้ง: ลูปซ้อนลูป (Nested Loops)'
+              name: 'ผึ้ง: ลูปซ้อนลูป'
             'Farmer: While Loops':
               name: 'เกษตรกร: ลูปขณะที่ (while loops)'
             'Maze: Sequence':
@@ -488,7 +488,7 @@ th:
         allthehiddenthings:
           stages:
             Game Lab:
-              name: เกมแล๊บ (Game Lab)
+              name: เกมแล๊ป (Game Lab)
         csp-facilitators:
           stages:
             Introduction to Text Compression:
@@ -588,7 +588,7 @@ th:
             'Farmer: While Loops':
               name: 'เกษตรกร: ลูปขณะที่ (while loops)'
             'Maze: Nested Loops':
-              name: 'เขาวงกต: ลูปซ้อนลูป (Nested Loops)'
+              name: 'เขาวงกต: ลูปซ้อนลูป'
         csd3-2017:
           stages:
             Functions:

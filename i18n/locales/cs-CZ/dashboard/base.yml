@@ -201,11 +201,11 @@ cs:
     subject: 'Připojit se do mé třídy (na Code.org)'
     body: |
       Klikni na odkaz níže, aby ses registroval do cvičení počítačových věd na Code.org (se mnou jako "učitelem"):
-
+      
       %{link}
-
+      
       Cvičení jsou zábavná, vzhledově poutavá a učí základy počítačových věd pomocí jednoduchých, řízených herních hádanek. Naučíš se programovat s pomocí Billa Gatese, Marka Zuckerberga, Angry Birds a Plants vs. Zombies! :-)
-
+      
       %{name}
   parent_mailer:
     student_associated_subject: 'Přihlašovací údaje na Code.org'
@@ -282,7 +282,6 @@ cs:
       help_support: "Pomoc a podpora"
       report_bug: "Nahlásit chybu"
       teacher_community: "Komunita učitelů"
-      professional_learning: "Odborné vzdělání"
       documentation: "Dokumentace"
       tutorials: "Návody"
       educate_overview: "Pedagogův přehled"

@@ -198,11 +198,11 @@ ko:
     subject: '내 학급 가기(on Code.org)'
     body: |
       Code.org 의 컴퓨터과학(Computer Science, 정보과학) 기초개념학습 코스에 가입하려면, 아래 링크를 누르세요.(선생님을 등록하세요)
-
+      
       %{link}
-
+      
       이 과정에서는 재미있는 퍼즐들을 통해, 컴퓨터과학(Computer Science, 정보과학)의 몇가지 기초 개념들을 배울 수 있습니다. Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies 등과 함께 경험해 보세요! :)
-
+      
       %{name}
   parent_mailer:
     student_associated_subject: 'Code.org 로그인 정보'

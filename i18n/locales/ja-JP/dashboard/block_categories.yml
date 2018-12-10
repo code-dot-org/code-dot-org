@@ -32,7 +32,6 @@ ja:
       Advanced: 詳細設定
       Start: 始める
       Locations: 場所
-      Dancing: ダンスする
       Dancers: ダンサー
       Groups: グループ
       Sprite: スプライト
@@ -40,7 +39,6 @@ ja:
       Make Sprite: スプライトを つくる
       Movement: 動作
       Functional: 関数(かんすう)の
-      While Events: イベントの間
       Predefined: あらかじめ定義（ていぎ）された
       test: テスト
       test2: テスト2

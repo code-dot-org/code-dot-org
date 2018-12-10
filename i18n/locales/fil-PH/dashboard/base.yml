@@ -185,11 +185,11 @@ fil:
     subject: 'Sumali sa aking klase (sa Code.org)'
     body: |
       I-click ang link sa ibaba para mag-sign up para sa mga computer science tutorials sa Code.org (kasama ako bilang "guro" mo):
-
+      
       %{link}
-
+      
       Ang mga tutorials ay masaya, nakatatawag-pansin at itinuturo ang mga pangunahing konsepto ng computer science gamit ang simple, ginagabayan, mala-larong karanasan. Matutong mag-code mula kay Bill Gates, Mark Zuckerberg, Angry Birds, at Plants vs. Zombies! :-)
-
+      
       %{name}
   parent_mailer:
     student_associated_subject: 'Login na impormasyon para sa Code.org'

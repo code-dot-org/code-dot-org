@@ -285,7 +285,6 @@ da:
       create: Opret
       applab: App Lab
       artist: Kunstner
-      gamelab: Spil Laboratoriet
       playlab: Play Lab
       minecraft: Minecraft
       flappy: Flappy
@@ -530,7 +529,6 @@ da:
       title: Galleri
       body: Se et galleri af app og kunstnerbilleder skabt af vores brugere
     gamelab:
-      title: Spil Laboratoriet
       audience: Alder 13+
     hoc-encryption:
       title: Enkel kryptering

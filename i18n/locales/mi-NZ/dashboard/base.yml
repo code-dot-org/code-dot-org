@@ -145,11 +145,11 @@ mi:
     subject: 'Whakapiri mai ki taku akomanga (ki Code.org)'
     body: |
       Pāwhiritia te honongaitua kei raro iho nei ki te uru ki ngā whakaakoranga pūtaiao rorohiko kei Code.org (ko au hei "pouako" mōu):
-
+      
       %{link}
-
+      
       He ngahau, he pai ā-tirohanga hoki ngā whakaakoranga, ā, ka whakaakona ngā ariā waiwai o te pūtaiao rorohiko mā ētahi wheako māmā, ārahi, rite ki te kēmu te hanga. Ka ako i ngā mahi waehere i a Bill Gates, a Mark Zuckerberg, i te kēmu Manu Takariri me Ngā Tipu ki Ngā Kairoro. :-)
-
+      
       %{name}
   section:
     type:

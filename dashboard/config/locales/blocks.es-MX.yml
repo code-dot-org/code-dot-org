@@ -368,7 +368,7 @@ es-MX:
             '"neon"': Neón
             '"warm"': Rojos
       Dancelab_setDanceSpeed:
-        text: cambiar velocidad de danza [SPRITE][0] a [velocidad][1]
+        text: cambiar velocidad de danza {SPRITE} a {SPEED}
         options:
           SPEED:
             '1': normal
@@ -469,7 +469,7 @@ es-MX:
             '"y"': posición vertical
             '"tint"': tinte
       Dancelab_setTint:
-        text: definir tinte [SPRITE][0] a [VAL][1]
+        text: definir tinte {SPRITE} a {VAL}
       Dancelab_setTintEach:
         options:
           THIS:
@@ -485,7 +485,7 @@ es-MX:
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
       Dancelab_setTintInline:
-        text: definir tinte [SPRITE][0] a [VAL][1]
+        text: definir tinte {SPRITE} a {VAL}
       Dancelab_setVisible:
         text: establecer {SPRITE} visible para {VISIBILITY}
         options:

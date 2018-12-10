@@ -112,10 +112,6 @@ ky:
         options:
           EFFECT:
             '"none"': Жок
-      Dancelab_setBackgroundEffectWithPalette:
-        options:
-          EFFECT:
-            '"none"': Жок
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -135,10 +131,6 @@ ky:
             '0.5': slow
             '0.25': very slow
       Dancelab_setForegroundEffect:
-        options:
-          EFFECT:
-            '"none"': Жок
-      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
             '"none"': Жок
@@ -186,7 +178,6 @@ ky:
             '"right"': оңго
             '"space"': космос
             '"x"': x
-            '"y"': 'y'
       gamelab_changePropBy:
         options:
           PROPERTY:

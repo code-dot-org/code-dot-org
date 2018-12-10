@@ -185,11 +185,11 @@ is:
     subject: 'Komdu í bekkinn minn (á Code.org)'
     body: |
       Smelltu á krækjuna hér fyrir neðan til að skrá þig í æfingar í tölvunarfræði hjá Code.org (með mig sem "kennara"):
-
+      
       %{link}
-
+      
       Æfingarnar eru skemmtilegar og myndrænar og kenna grunnhugtök í tölvunarfræði í gegnum leik með leiðsögn. Þú færð kennslu í forritun hjá Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies! :-)
-
+      
       %{name}
   parent_mailer:
     student_associated_subject: 'Innskráningarupplýsingar fyrir Code.org'

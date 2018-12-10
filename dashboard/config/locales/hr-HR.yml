@@ -97,7 +97,6 @@ hr:
     invalid_password: Lozinka mora biti duga najmanje 6 znakova
     mismatch_password: Dvije lozinke koje ste unijeli ne podudaraju se
     additional_information: Trebamo dodatne informacije kako bi nastavili vašu prijavu.
-    user_type_label: Vrsta računa
     user_type_teacher: Učitelj
     user_type_student: Učenik
     field_is_required: potrebno

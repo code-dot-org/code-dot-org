@@ -1418,38 +1418,6 @@ bs:
       Crack Random Substitution_2018: Upute
       Crack a Caesar Cipher: Upute
       Crack a Caesar Cipher_2018: Upute
-      Dance_Party_01: Prevuci blok `kreiranje novog` u radni prostor i spoji ga unutar
-        bloka `postavke`.
-      Dance_Party_01_low: Prevuci blok `kreiranje novog` u radni prostor i spoji ga
-        unutar bloka `postavke`.
-      Dance_Party_02: Učini da Los započne novi pokret svako 4 takta!
-      Dance_Party_03: Sada napravi da plesač započne novi pokret svako 6 taktova!
-      Dance_Party_04: Dodaj efekat pozadine u svoj program.
-      Dance_Party_05: Iskoristi drugi novi blok kako bi plesač promjenio pokrete svako
-        2 takta.
-      Dance_Party_06: Kreiraj dodatnog plesača koji se naziva `dodatni_plesac1` kako
-        bi plesao sa mačkom.
-      Dance_Party_08: Da li možeš podesiti istu visinu za oba plesača?
-      Dance_Party_09: Upotrijebi blok `podesi nijanse` da bi promjenio boju plesača.
-      Dance_Party_10: Napravi da drugi plesač reaguje na muziku korištenjem bloka
-        `započni pratiti`.
-      Dance_Party_11.5_test: Iskoristi blok "sve patke" kako bi sve patke plesale
-        skupa.
-      Dance_Party_11: Blok `kada pritisneš gore` omogučava ti da pokreneš kod kada
-        pritisneš strelicu gore. Pokušaj da napraviš da plesač uradi brzi pokret kada
-        pritisneš strelicu gore.
-      Dance_Party_11_5: Iskoristi blok "sve patke" kako bi sve patke plesale skupa.
-      Dance_Party_11b: Napravi da se robot "spusti" jednom kada pritisneš strelicu
-        desno i da "klapne" jednom kada pritisneš stralicu gore. Uradi kombinaciju
-        spusti-klapni što brže može!
-      Dance_Party_extras_battle: Plesne skupine (Klikni "Opširnije" za više detalja)
-      Dance_Party_extras_every_beat: Četvrtina nota (Klikni "Opširnije" za više detalja)
-      Dance_Party_extras_layout: Uspostavimo formaciju! (Klikni "Opširnije" za više
-        detalja)
-      Dance_Party_extras_on_beat: Basovi, Mid i Trebl (Klikni "Opširnije" za više
-        detalja)
-      Dance_Party_extras_speed: Ubrzaj, uspori (Klikni "Opširnije" za više detalja)
-      Dance_Party_extras_visible: Gdje su otišli? (Klikni "Opširnije" za više detalja)
       Eval Booleans 2: Možeš li postaviti vrijednosti tako da ovaj izraz vraća vrijednost
         "istinito"?
       Eval Booleans 3: Funkcija "dužina-niza-karaktera" vraća broj karaktera u nizu

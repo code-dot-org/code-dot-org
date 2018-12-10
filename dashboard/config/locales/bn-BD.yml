@@ -7,7 +7,6 @@ bn:
     errors:
       messages:
         blank: প্রয়োজন
-        blank_plural: প্রয়োজন
     attributes:
       user:
         name: প্রদর্শিত নাম
@@ -78,7 +77,6 @@ bn:
     student_count: "%{count} জন ছাত্রছাত্রী ইতিমধ্যে সাইন আপ করেছেন।"
     teacher_count: "%{count} জন শিক্ষক ইতোমধ্যে সাইন আপ করেছেন।"
     teacher_educator_guide: নির্দেশিকা দেখুন
-    title: Code.org এ সাইন আপ করুন।
     school_name: স্কুলের নাম (ঐচ্ছিক)
     school_address: স্কুলের ঠিকানা (ঐচ্ছিক)
     address_placeholder: ঠিকানা, শহর, রাজ্য, জিপ
@@ -87,7 +85,6 @@ bn:
     age: বয়স
     user_type: আপনি কি একজন ছাত্র বা শিক্ষক?
     submit: সাইন আপ
-    go_to_account: আমার অ্যাকাউন্টে যান
     teacher: আপনি কি শিক্ষক?
     valid_username: লভ্য!
     invalid_username: ব্যবহারকারীর নাম কমপক্ষে 5 অক্ষর হতে হবে
@@ -95,18 +92,11 @@ bn:
     valid_password: সঠিক পাসওয়ার্ড!
     invalid_password: পাসওয়ার্ডের অন্তত 6 অক্ষর হতে হবে
     mismatch_password: আপনার প্রবেশ করানো পাসওয়ার্ড দুটি মিলছে না
-    under_13_consent: আমি যদি ১৩ বছরের নিচে হই, আমি নিশ্চিত করছি যে Code.org এর সেবা
-      ব্যবহার করার ক্ষেত্রে আমার বাবা-মা অথবা বৈধ অভিভাবকের অনুমতি আছে।
-    student_consent: আমি নিশ্চিত করছি যে Code.org এর সেবা ব্যবহার করার ক্ষেত্রে আমার
-      বাবা-মা অথবা বৈধ অভিভাবকের অনুমতি আছে।
     additional_information: সাইন আপ প্রক্রিয়া চালিয়ে নিতে আমাদের আরো কিছু অতিরিক্ত
       তথ্যের প্রয়োজন।
-    user_type_button: অ্যাকাউন্ট-এর ধরন আপডেট করুন
-    user_type_label: অ্যাকাউন্ট-এর ধরন
     user_type_teacher: শিক্ষক
     user_type_student: ছাত্র
     field_is_required: প্রয়োজন
-    accept_terms: আপনার একাউন্ট তৈরি করতে সম্মত হতে হবে।
     email_preference_yes: '"হ্যাঁ"'
     email_preference_no: না
   school_info:

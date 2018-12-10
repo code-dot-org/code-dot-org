@@ -188,7 +188,7 @@ hu:
     subject: 'Csatlakozz az én órámhoz (a Code.org-on)'
     body: |
       Kattints az alábbi linkre, hogy számítógép-tudományi gyakorlatokra iratkozz fel a Code.org rendszerben (velem, mint tanár): %{link} 
-
+      
       A gyakorlatok izgalmasak, látványosak, és a számítógép-tudomány alapvető fogalmait egyszerű, irányított, játékos módon tanítják. Tanulj programozni olyan tanároktól, mint Bill Gates, Mark Zuckerberg, az Angry Birds és a zombik! :-) %{name}
   section:
     your_section:
